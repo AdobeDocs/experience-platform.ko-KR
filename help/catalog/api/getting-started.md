@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;카탈로그 서비스;카탈로그;카탈로그 서비스;카탈로그
 solution: Experience Platform
 title: 카탈로그 서비스 API 안내서
-topic-legacy: developer guide
 description: 개발자가 Catalog Service API를 사용하여 Adobe Experience Platform에서 데이터 세트 메타데이터를 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 3%

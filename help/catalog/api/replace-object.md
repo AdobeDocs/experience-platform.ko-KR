@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;카탈로그;api;개체 바꾸기
 solution: Experience Platform
 title: 카탈로그 개체 바꾸기
-topic-legacy: developer guide
 description: PUT 요청을 사용하여 Catalog 개체의 컨텐츠를 덮어쓸 수 있으며, 이때 전체 리소스는 요청 페이로드로 대체됩니다.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 2%

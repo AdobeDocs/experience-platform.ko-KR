@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;개체 삭제;카탈로그 서비스;api
 solution: Experience Platform
 title: API에서 개체 삭제
-topic-legacy: developer guide
 description: DELETE 요청 경로에 해당 ID를 제공하여 카탈로그 개체를 삭제할 수 있습니다.
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 1%

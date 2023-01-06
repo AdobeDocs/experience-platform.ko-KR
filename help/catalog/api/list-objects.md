@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;필터;필터;데이터 필터링;데이터 필터링
 solution: Experience Platform
 title: 카탈로그 객체 나열
-topic-legacy: developer guide
 description: 단일 API 호출을 통해 특정 유형의 사용 가능한 모든 개체 목록을 검색할 수 있습니다. 응답 크기를 제한하는 필터를 포함하는 것이 좋습니다.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 1%

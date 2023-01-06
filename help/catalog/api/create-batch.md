@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;일괄 처리 만들기;카탈로그 서비스;api
 solution: Experience Platform
 title: API에서 배치 만들기
-topic-legacy: developer guide
 description: 카탈로그 API의 /batches 종단점에 대한 POST 요청을 만들어 배치를 만들 수 있습니다.
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 3%

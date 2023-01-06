@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;데이터 위치;데이터 위치;데이터 관리;계보;계보;계보;데이터 유형;데이터 유형;데이터 유형;데이터 유형
 solution: Experience Platform
 title: 데이터 세트 개요
-topic-legacy: datasets
 description: 이 설명서는 Experience Platform의 데이터 세트에 대한 높은 수준의 개요를 제공합니다.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 8%

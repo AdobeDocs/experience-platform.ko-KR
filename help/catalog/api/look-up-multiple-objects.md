@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;카탈로그;여러 개체 조회;api
 solution: Experience Platform
 title: 여러 카탈로그 객체 조회
-topic-legacy: developer guide
 description: 개체당 한 개의 요청을 하는 대신 몇 개의 특정 개체를 보려는 경우 동일한 유형의 여러 개체를 요청하는 간단한 단축키를 제공합니다. 하나의 GET 요청을 사용하여 쉼표로 구분된 ID 목록을 포함하여 여러 특정 개체를 반환할 수 있습니다.
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 1%

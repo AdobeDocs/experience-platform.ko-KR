@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;카탈로그;api;개체 업데이트
 solution: Experience Platform
 title: 카탈로그 개체 업데이트
-topic-legacy: developer guide
 description: PATCH 요청 경로에 해당 ID를 포함하여 카탈로그 개체의 일부를 업데이트할 수 있습니다. 이 문서에서는 카탈로그 개체에서 PATCH 작업을 수행하기 위해 필드 사용 및 JSON 패치 표기법 사용에 대해 설명합니다.
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 3%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;데이터 세트;데이터 세트;데이터 세트 만들기;데이터 세트 만들기
 solution: Experience Platform
 title: API를 사용하여 데이터 세트 만들기
-topic-legacy: datasets
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 데이터 세트를 만들고 파일을 사용하여 데이터 세트를 채우는 일반적인 단계를 제공합니다.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1304'
 ht-degree: 1%

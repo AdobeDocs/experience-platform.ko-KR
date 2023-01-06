@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;카탈로그 서비스;카탈로그 api;부록
 solution: Experience Platform
 title: Catalog Service API 안내서 부록
-topic-legacy: developer guide
 description: 이 문서에는 Adobe Experience Platform에서 카탈로그 API 작업을 수행하는 데 도움이 되는 추가 정보가 포함되어 있습니다.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 1%
