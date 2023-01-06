@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;DULE;dule
 solution: Experience Platform
 title: 정책 서비스 API 시작
-topic-legacy: developer guide
 description: 정책 서비스 API를 사용하면 Adobe Experience Platform 데이터 거버넌스와 관련된 다양한 리소스를 만들고 관리할 수 있습니다. 이 문서에서는 정책 서비스 API를 호출하기 전에 알아야 하는 핵심 개념을 소개합니다.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 0%

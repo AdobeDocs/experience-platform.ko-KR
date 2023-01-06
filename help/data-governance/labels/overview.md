@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;데이터 거버넌스;데이터 사용 레이블 api;정책 서비스 api;데이터 사용 레이블 개요
 solution: Experience Platform
 title: 데이터 사용 레이블 개요
-topic-legacy: labels
 description: Adobe Experience Platform에서 데이터 거버넌스 규정을 준수하는 데 도움이 되는 데이터 사용 레이블을 사용하는 방법을 알아봅니다.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 0%

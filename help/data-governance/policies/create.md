@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;데이터 거버넌스;데이터 사용 정책
 solution: Experience Platform
 title: API에서 데이터 거버넌스 정책 만들기
-topic-legacy: policies
 type: Tutorial
 description: 정책 서비스 API를 사용하여 데이터 거버넌스 정책을 만드는 방법을 알아봅니다.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 2%

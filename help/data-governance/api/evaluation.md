@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;정책 적용;자동 적용;API 기반 적용;데이터 거버넌스
 solution: Experience Platform
 title: 정책 평가 API 끝점
-topic-legacy: developer guide
 description: 마케팅 작업이 생성되고 정책이 정의되면 정책 서비스 API를 사용하여 특정 작업에 의해 정책이 위반되는지 평가할 수 있습니다. 반환된 제약 조건은 데이터 사용 레이블이 포함된 지정된 데이터에 대한 마케팅 작업을 시도하여 위반될 정책 집합을 만듭니다.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: 정책 서비스 API 안내서
-topic-legacy: developer guide
 description: 정책 서비스 API를 사용하여 개발자는 Experience Platform에서 데이터 사용 레이블 및 정책을 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 3%

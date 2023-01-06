@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;정책 적용;자동 적용;API 기반 적용;데이터 거버넌스
 solution: Experience Platform
 title: 정책 적용 개요
-topic-legacy: guide
 description: Adobe Experience Platform에서 데이터 사용 정책이 적용되는 방법을 알아봅니다.
 exl-id: d19d8060-85a1-405c-856d-f59041947a33
-source-git-commit: 6f79b1a03a75558d1a25f0375e8393ad56756d80
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%

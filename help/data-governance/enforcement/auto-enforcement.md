@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;정책 적용;자동 적용;API 기반 적용;데이터 거버넌스
 solution: Experience Platform
 title: 자동 정책 적용
-topic-legacy: guide
 description: 이 문서에서는 Experience Platform의 대상에 세그먼트를 활성화할 때 데이터 사용 정책이 자동으로 적용되는 방식을 다룹니다.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 0%

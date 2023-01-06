@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;dule;DULE
 solution: Experience Platform
 title: 데이터 사용 정책 개요
-topic-legacy: policies
 description: 데이터 사용 정책은 Adobe Experience Platform 내에서 데이터를 수행할 수 있도록 허용하거나 제한하는 마케팅 작업 종류를 설명하는 규칙입니다.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 0%

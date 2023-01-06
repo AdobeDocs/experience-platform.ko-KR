@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;정책 적용;API 기반 적용;데이터 거버넌스
 solution: Experience Platform
 title: 데이터 거버넌스 정책 API 엔드포인트
-topic-legacy: developer guide
 description: 데이터 거버넌스 정책은 Experience Platform 내에서 데이터를 수행할 수 있도록 허용하거나 제한할 수 있는 마케팅 작업 종류를 설명하는 조직에서 사용하는 규칙입니다. /policy 엔드포인트는 데이터 거버넌스 정책 보기, 만들기, 업데이트 또는 삭제와 관련된 모든 API 호출에 사용됩니다.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1865'
 ht-degree: 2%

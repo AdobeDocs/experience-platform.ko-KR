@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;데이터 거버넌스;데이터 사용 레이블 api;정책 서비스 api;지원되는 데이터 사용 레이블;계약 레이블;ID 레이블;중요 레이블
 solution: Experience Platform
 title: 데이터 사용 레이블 용어집
-topic-legacy: labels
 description: 이 문서에서는 현재 Adobe Experience Platform에서 지원하는 모든 데이터 사용 레이블에 대해 간략하게 설명합니다.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 1%
