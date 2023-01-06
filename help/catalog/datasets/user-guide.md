@@ -5,7 +5,7 @@ title: 데이터 세트 UI 안내서
 topic-legacy: datasets
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1509d14c0acbf7136d5869d6de2ee2cf9fad450a
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -127,7 +127,7 @@ CSV 파일을 사용하여 데이터 세트를 만들면 임시 스키마를 만
 
 데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트와 필드를 분류할 수 있습니다. 자세한 내용은 [데이터 거버넌스 개요](../../data-governance/home.md) 레이블에 대해 자세히 알아보려면 [데이터 사용 레이블 사용 안내서](../../data-governance/labels/overview.md) 를 참조하십시오.
 
-## 데이터 집합 삭제
+## 데이터 집합 삭제 {#delete}
 
 데이터 세트에 먼저 액세스하여 데이터 세트를 삭제할 수 있습니다 **[!UICONTROL 데이터 집합 활동]** 화면. 그런 다음 **[!UICONTROL 데이터 집합 삭제]** 삭제할 수 있습니다.
 
