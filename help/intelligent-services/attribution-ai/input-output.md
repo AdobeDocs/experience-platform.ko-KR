@@ -2,10 +2,9 @@
 keywords: Experience Platform;시작하기;속성 ai;인기 항목;속성 ai 입력;속성 ai 출력;
 feature: Attribution AI
 title: Attribution AI의 입력 및 출력
-topic-legacy: Input and Output data for Attribution AI
 description: 다음 문서에서는 Attribution AI에서 사용되는 다양한 입력 및 출력에 대해 설명합니다.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2504'
 ht-degree: 3%

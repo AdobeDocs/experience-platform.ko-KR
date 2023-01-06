@@ -2,10 +2,9 @@
 keywords: 시각적 유사성;시각적 유사성;ccai api
 solution: Experience Platform
 title: 콘텐츠 및 상거래 AI API의 시각적 유사성
-topic-legacy: Developer guide
 description: 이미지가 주어지면 시각적 유사성 서비스는 카탈로그에서 시각적으로 유사한 이미지를 자동으로 찾습니다.
 exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 3%

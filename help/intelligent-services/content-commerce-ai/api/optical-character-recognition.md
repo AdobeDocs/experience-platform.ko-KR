@@ -2,10 +2,9 @@
 keywords: OCR;텍스트 유무;광학 문자 인식
 solution: Experience Platform
 title: 텍스트 유무 및 광학 문자 인식
-topic-legacy: Developer guide
 description: Content and Commerce AI API에서 텍스트 유무/OCR(Optical Character Recognition) 서비스는 지정된 이미지에 텍스트가 있는지 여부를 나타낼 수 있습니다. 텍스트가 있으면 OCR에서 텍스트를 반환할 수 있습니다.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 3%
@@ -83,7 +82,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `top-N` | 반환할 결과 수(음수가 될 수 없음). 값 사용 `0` 모든 결과를 반환합니다. 와 함께 사용하는 경우 `threshold`를 반환한 결과 수가 두 제한 집합 중 적은 수입니다. 이 속성의 기본값은 입니다. `0`. | 아니요 |
 | `custom` | 전달할 모든 사용자 지정 매개 변수입니다. 이 속성을 사용하려면 유효한 JSON 개체가 있어야 합니다. | 아니요 |
 | `content-id` | 응답에서 반환된 데이터 요소의 고유 ID입니다. 이 값이 전달되지 않으면 자동 생성된 ID가 할당됩니다. | 아니요 |
-| `content` | 컨텐츠는 원시 이미지(&#39;인라인&#39; 콘텐츠 형식)일 수 있습니다. <br> 컨텐츠가 S3(&#39;s3-bucket&#39; content-type)의 파일인 경우, 서명된 URL을 전달합니다. | 예 |
+| `content` | 컨텐츠는 원시 이미지(&#39;인라인&#39; 콘텐츠 유형)일 수 있습니다. <br> 컨텐츠가 S3(&#39;s3-bucket&#39; content-type)의 파일인 경우, 서명된 URL을 전달합니다. | 예 |
 
 **응답**
 

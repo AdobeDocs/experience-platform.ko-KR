@@ -2,10 +2,9 @@
 keywords: Experience Platform;기여도 분석 ai;액세스 점수;인기 항목;다운로드 점수;기여도 분석 ai 점수;내보내기;내보내기
 feature: Attribution AI
 title: Attribution AI에서 점수 다운로드
-topic-legacy: Downloading scores
 description: 이 문서는 Attribution AI에 대한 점수를 다운로드하는 데 필요한 지침입니다.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 2%

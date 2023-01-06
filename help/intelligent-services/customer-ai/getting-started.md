@@ -3,10 +3,9 @@ keywords: Experience Platform;시작하기;고객 ai;인기 항목
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 고객 AI에서 시작하기
-topic-legacy: Getting started
 description: 이 안내서에서는 요청의 형식을 지정하는 방법을 보여주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 올바른 형식의 요청 페이로드가 포함됩니다.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 1%

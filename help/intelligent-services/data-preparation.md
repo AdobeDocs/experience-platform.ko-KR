@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;Intelligent Services;인기 항목;지능형 서비스;Intelligent Service
 solution: Experience Platform
 title: Intelligent Services에서 사용할 데이터 준비
-topic-legacy: Intelligent Services
 description: Intelligent Services에서 마케팅 이벤트 데이터에서 통찰력을 검색하려면 데이터를 표준 구조로 의미상 보강하고 유지 관리해야 합니다. Intelligent Services는 이를 위해 XDM(Experience Data Model) 스키마를 사용합니다.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 0%

@@ -3,10 +3,9 @@ keywords: Experience Platform;통찰력;고객 ai;인기 항목;고객 ai 통찰
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Customer AI를 통해 인사이트 살펴보기
-topic-legacy: Discovering insights
 description: 이 문서는 Intelligent Services Customer AI 사용자 인터페이스의 서비스 인스턴스 인사이트와 상호 작용하기 위한 안내서의 역할을 합니다.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 1%

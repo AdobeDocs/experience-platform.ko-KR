@@ -2,10 +2,9 @@
 keywords: Experience Platform;시작하기;컨텐츠 ai;commerce ai;콘텐츠 및 상거래 ai;키워드 추출;키워드 추출
 solution: Experience Platform
 title: 콘텐츠 및 Commerce AI API의 키워드 추출
-topic-legacy: Developer guide
 description: 키워드 추출 서비스는 텍스트 문서가 지정된 경우 문서의 주제를 가장 잘 설명하는 키워드 또는 키워드 구문을 자동으로 추출합니다. 키워드를 추출하기 위해 명명된 엔터티 인식(NER) 및 비감독 키워드 추출 알고리즘의 조합이 사용됩니다.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 3%
@@ -123,7 +122,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `top-N` | 반환할 결과 수(음수가 될 수 없음). 값 사용 `0` 모든 결과를 반환합니다. 와 함께 사용하는 경우 `threshold`를 반환한 결과 수가 두 제한 집합 중 적은 수입니다. 이 속성의 기본값은 입니다. `0`. | 아니요 |
 | `custom` | 전달할 모든 사용자 지정 매개 변수입니다. 이 속성을 사용하려면 유효한 JSON 개체가 있어야 합니다. 자세한 내용은 [부록](#appendix) 를 참조하십시오. | 아니요 |
 | `content-id` | 응답에서 반환된 데이터 요소의 고유 ID입니다. 이 값이 전달되지 않으면 자동 생성된 ID가 할당됩니다. | 아니요 |
-| `content` | 키워드 추출 서비스에서 사용하는 콘텐츠입니다. 컨텐츠는 원시 텍스트(&#39;인라인&#39; 콘텐츠 형식)일 수 있습니다. <br> 컨텐츠가 S3(&#39;s3-bucket&#39; content-type)의 파일인 경우, 서명된 URL을 전달합니다. 컨텐츠가 요청 본문의 일부인 경우 데이터 요소 목록에는 개체가 하나만 있어야 합니다. 두 개 이상의 개체가 전달되면 첫 번째 개체만 처리됩니다. | 예 |
+| `content` | 키워드 추출 서비스에서 사용하는 콘텐츠입니다. 컨텐츠는 원시 텍스트(&#39;인라인&#39; 콘텐츠 유형)일 수 있습니다. <br> 컨텐츠가 S3(&#39;s3-bucket&#39; content-type)의 파일인 경우, 서명된 URL을 전달합니다. 컨텐츠가 요청 본문의 일부인 경우 데이터 요소 목록에는 개체가 하나만 있어야 합니다. 두 개 이상의 개체가 전달되면 첫 번째 개체만 처리됩니다. | 예 |
 
 **응답**
 

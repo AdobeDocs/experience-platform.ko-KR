@@ -2,10 +2,9 @@
 keywords: Experience Platform;시작하기;컨텐츠 ai;commerce ai;콘텐츠 및 상거래 ai
 solution: Experience Platform
 title: 콘텐츠 및 Commerce AI 시작하기
-topic-legacy: Getting started
 description: Content and Commerce AI는 Adobe I/O API를 사용합니다. Adobe I/O API 및 I/O 콘솔 통합을 호출하려면 먼저 인증 자습서를 완료해야 합니다.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 0%
@@ -32,7 +31,7 @@ ht-degree: 0%
 
 ## Postman 환경 만들기(선택 사항)
 
-Adobe Developer 콘솔 내에서 프로젝트 및 API를 설정하면 Postman용 환경 파일을 다운로드할 수 있습니다. 아래 **[!UICONTROL API]** 프로젝트의 왼쪽 레일에서 **[!UICONTROL 콘텐츠 및 상거래 AI]**. 레이블이 &quot;&quot;인 카드가 포함된 새 탭이 열립니다[!DNL Try it out]&quot;. 선택 **Postman용 다운로드** postman 환경을 구성하는 데 사용되는 JSON 파일을 다운로드하려면 다음을 수행하십시오.
+Adobe Developer 콘솔 내에서 프로젝트 및 API를 설정하면 Postman용 환경 파일을 다운로드할 수 있습니다. 아래 **[!UICONTROL API]** 프로젝트의 왼쪽 레일에서 **[!UICONTROL 콘텐츠 및 상거래 AI]**. 레이블이 &quot;&quot;인 카드가 포함된 새 탭이 열립니다[!DNL Try it out]&quot;. 선택 **Postman 다운로드** postman 환경을 구성하는 데 사용되는 JSON 파일을 다운로드하려면 다음을 수행하십시오.
 
 ![postman용 다운로드](./images/add-to-postman.png)
 

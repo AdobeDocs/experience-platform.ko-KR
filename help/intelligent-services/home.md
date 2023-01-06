@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;지능형 서비스;인기 항목;지능형 서비스;지능형 서비스
 solution: Experience Platform
 title: Intelligent Services 개요
-topic-legacy: Intelligent Services overview
 description: 마케팅 분석가 및 전문가가 고객 경험 사용 사례에서 인공 지능(AI) 및 머신 러닝을 활용할 수 있는 Intelligent Services를 활용할 수 있습니다. 이를 통해 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다. 또한 마케팅 전문가가 Adobe Experience Cloud, Adobe Experience Platform 및 타사 애플리케이션에서 예측을 활성화할 수 있습니다.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%

@@ -3,11 +3,10 @@ keywords: Experience Platform;시작하기;고객 ai;인기 항목;고객 ai 입
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 고객 AI 오류 문제 해결
-topic-legacy: Getting started
 description: 고객 AI에서 발생하는 일반적인 오류에 대한 답변을 확인하십시오.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%

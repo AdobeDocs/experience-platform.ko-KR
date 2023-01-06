@@ -3,11 +3,10 @@ keywords: Experience Platform;개요;고객 ai;인기 항목;고객 ai 개요
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 고객 AI 개요
-topic-legacy: Customer AI Overview
 description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 정의 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
 landing-page-description: 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 정의 성향 점수를 생성하는 데 사용됩니다.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 26%

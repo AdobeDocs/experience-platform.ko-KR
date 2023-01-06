@@ -2,19 +2,18 @@
 keywords: Experience Platform;사용 안내서;속성 ai;인기 항목;지역
 feature: Attribution AI
 title: Attribution AI UI 안내서
-topic-legacy: User guide
 description: 이 문서는 Intelligent Services 사용자 인터페이스의 Attribution AI과 상호 작용하기 위한 안내서의 역할을 합니다.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2960'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 # Attribution AI UI 안내서
 
-Attribution AI은 지능형 서비스의 일부로서 멀티 채널, 알고리즘 기반의 어트리뷰션 서비스로, 지정된 결과에 대한 고객 상호 작용의 영향과 점진적 효과를 계산합니다. 마케터는 Attribution AI를 통해 고객 여정의 각 단계에서 개별 고객과의 인터랙션이 미치는 영향을 파악하여 마케팅 및 광고 비용을 측정하고 최적화할 수 있습니다.
+Attribution AI은 지능형 서비스의 일부로서 멀티 채널, 알고리즘 기반의 어트리뷰션 서비스로, 지정된 결과에 대한 고객 상호 작용의 영향과 점진적 효과를 계산합니다. 마케터는 Attribution AI을 통해 고객 여정의 각 단계에서 개별 고객과의 상호 작용이 미치는 영향을 파악하여 마케팅 및 광고 비용을 측정하고 최적화할 수 있습니다.
 
 이 문서는 Intelligent Services 사용자 인터페이스의 Attribution AI과 상호 작용하기 위한 안내서의 역할을 합니다.
 

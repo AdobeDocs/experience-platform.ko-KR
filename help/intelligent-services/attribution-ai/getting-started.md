@@ -2,10 +2,9 @@
 keywords: Experience Platform;시작하기;기여도 분석 ai;인기 항목
 feature: Attribution AI
 title: Attribution AI 시작하기
-topic-legacy: Getting started
 description: 다음 안내서에서는 Attribution AI 사용과 관련된 다양한 Adobe Experience Platform 서비스를 이해해야 합니다. 자습서를 시작하기 전에 다음 문서를 검토하십시오.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: a14f857f87482e1468211152976530c718d56e38
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 1%

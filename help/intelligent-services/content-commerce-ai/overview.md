@@ -2,10 +2,9 @@
 keywords: Experience Cloud;시작하기;컨텐츠 및 상거래 ai;인기 항목;Intelligent Services;ccai
 solution: Experience Platform
 title: Content and Commerce AI 개요
-topic-legacy: Content and Commerce AI
 description: Content and Commerce AI는 컨텐츠에서 지능형 기능을 추출하고 컨텐츠 흐름을 구성 및 간소화하고 고객에게 더욱 효과적이고 개인화된 경험을 제공할 수 있는 AI 서비스 세트입니다.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%
