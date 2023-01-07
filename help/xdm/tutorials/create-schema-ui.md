@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: 이 튜토리얼에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 84a1b9df30da06edee093824c19f3bea338e5970
 workflow-type: tm+mt
-source-wordcount: '3754'
+source-wordcount: '3893'
 ht-degree: 0%
 
 ---
@@ -45,23 +45,19 @@ Adobe Experience Platform 사용자 인터페이스를 통해 사용자를 만�
 
 이 자습서를 사용하려면 을(를) 선택합니다. **[!UICONTROL XDM 개별 프로필]**.
 
-![](../images/tutorials/create-schema/create_schema_button.png)
-
-스키마를 기반으로 하기 위해 표준 XDM 클래스를 선택했으므로, **[!UICONTROL 필드 그룹 추가]** 스키마에 필드 추가를 즉시 시작할 수 있는 대화 상자가 나타납니다. 현재, 을(를) 선택합니다. **[!UICONTROL 취소]** 을 클릭하여 대화 상자를 종료합니다.
-
-![](../images/tutorials/create-schema/cancel-field-group.png)
+![](../images/tutorials/create-schema/create-schema-button.png)
 
 다음 [!DNL Schema Editor] 이 나타납니다. 스키마를 작성할 캔버스입니다. 제목 없는 스키마는 **[!UICONTROL 구조]** 편집기에 도착할 때 캔버스의 섹션 및 해당 클래스를 기반으로 한 모든 스키마에 포함된 표준 필드가 표시됩니다. 스키마에 대해 지정된 클래스도 아래에 나열됩니다 **[!UICONTROL 클래스]** in **[!UICONTROL 조성물]** 섹션을 참조하십시오.
 
-![](../images/tutorials/create-schema/schema_editor.png)
+![](../images/tutorials/create-schema/schema-editor.png)
 
 >[!NOTE]
 >
 >다음을 수행할 수 있습니다 [스키마 클래스 변경](#change-class) 스키마가 저장되기 전에 초기 구성 프로세스 중에 언제든지 이 작업을 수행해야 합니다. 필드 그룹은 특정 클래스와 호환되기 때문에 클래스를 변경하면 캔버스 및 추가한 필드가 재설정됩니다.
 
-편집기 오른쪽의 필드를 사용하여 스키마에 대한 표시 이름과 선택적 설명을 제공합니다. 이름을 입력하면 새 스키마 이름을 반영하도록 캔버스가 업데이트됩니다.
+아래 **[!UICONTROL 스키마 속성]**&#x200B;를 채울 때 스키마에 대한 표시 이름 및 선택적 설명을 제공합니다. 이름을 입력하면 새 스키마 이름을 반영하도록 캔버스가 업데이트됩니다.
 
-![](../images/tutorials/create-schema/name_schema.png)
+![](../images/tutorials/create-schema/name-schema.png)
 
 스키마 이름을 결정할 때 고려해야 할 몇 가지 중요한 고려 사항이 있습니다.
 
@@ -69,7 +65,7 @@ Adobe Experience Platform 사용자 인터페이스를 통해 사용자를 만�
 * 스키마 이름은 고유해야 합니다. 즉, 나중에 다시 사용할 수 없도록 충분히 구체적이어야 합니다. 예를 들어, 조직에 다양한 브랜드에 대한 별도의 충성도 프로그램이 있는 경우 나중에 정의할 수 있는 다른 충성도 관련 스키마와 쉽게 구별하도록 하려면 스키마 &quot;Brand A 충성도 멤버&quot;를 지정하는 것이 좋습니다.
 * 스키마 설명을 사용하여 스키마와 관련된 추가 컨텍스트 정보를 제공할 수도 있습니다.
 
-이 자습서에서는 충성도 프로그램 멤버와 관련된 데이터를 수집하는 스키마를 사용하므로 스키마의 이름을 &quot;충성도 멤버&quot;로 지정합니다.
+이 자습서에서는 충성도 프로그램 멤버와 관련된 데이터를 수집하기 위한 스키마를 사용하므로 스키마 이름이 &quot; &quot;입니다[!DNL Loyalty Members]&quot;.
 
 ## 필드 그룹 추가 {#field-group}
 
@@ -82,6 +78,10 @@ Adobe Experience Platform 사용자 인터페이스를 통해 사용자를 만�
 사용 가능한 필드 그룹 목록을 표시하는 새 대화 상자가 나타납니다. 각 필드 그룹은 특정 클래스에서만 사용할 수 있으므로 대화 상자에는 선택한 클래스와 호환되는 필드 그룹(이 경우 [!DNL XDM Individual Profile] 클래스). 표준 XDM 클래스를 사용하는 경우 필드 그룹 목록이 사용 인기도에 따라 지능적으로 정렬됩니다.
 
 ![](../images/tutorials/create-schema/field-group-popularity.png)
+
+왼쪽 레일에서 필터 중 하나를 선택하여 표준 필드 그룹 목록을 특정 필드로 좁힐 수 있습니다 [산업](../schema/industries/overview.md) 소매업, 금융 서비스, 의료 등
+
+![](../images/tutorials/create-schema/industry-field-groups.png)
 
 목록에서 필드 그룹을 선택하면 오른쪽 레일에 필드 그룹이 표시됩니다. 원하는 경우 여러 필드 그룹을 선택하고, 각 필드 그룹을 오른쪽 레일의 목록에 추가한 후에 확인하면 됩니다. 또한 현재 선택한 필드 그룹의 오른쪽에 아이콘이 표시되어 제공된 필드의 구조를 미리 볼 수 있습니다.
 
@@ -105,91 +105,103 @@ Adobe Experience Platform 사용자 인터페이스를 통해 사용자를 만�
 >
 >필드에서는 스칼라 유형(예: 문자열, 정수, 배열 또는 날짜)과 [!DNL Schema Registry].
 
-다음 사항에 주의하십시오. `name` 필드에 &quot;[!UICONTROL 개인 이름]&quot;은(는) 일반적인 개념을 설명하고 이름, 성, 호칭 제목 및 접미사와 같은 이름 관련 하위 필드를 포함함을 의미합니다.
+다음 사항에 주의하십시오. `name` 필드에 &quot;[!UICONTROL 전체 이름]&quot;은(는) 일반적인 개념을 설명하고 이름, 성, 호칭 제목 및 접미사와 같은 이름 관련 하위 필드를 포함함을 의미합니다.
 
 캔버스 내에서 다른 필드를 선택하여 스키마 구조에 기여하는 추가 필드를 표시합니다.
 
-## 다른 필드 그룹 추가 {#field-group-2}
+## 필드 그룹 추가 {#field-group-2}
 
 이제 동일한 단계를 반복하여 다른 필드 그룹을 추가할 수 있습니다. 를 볼 때 **[!UICONTROL 필드 그룹 추가]** 이 대화 상자에서 &quot;[!UICONTROL 인구 통계 세부 정보]&quot; 필드 그룹이 회색으로 표시되어 있고 그 옆에 있는 확인란을 선택할 수 없습니다. 따라서 현재 스키마에 이미 포함시킨 필드 그룹을 실수로 복제할 수 없습니다.
 
-이 자습서에서 &quot;[!DNL Personal Contact Details]&quot; 필드 그룹을 선택한 다음 **[!UICONTROL 필드 그룹 추가]** 를 추가하여 스키마에 추가합니다.
+이 자습서에서 표준 필드 그룹을 선택합니다 **[!UICONTROL 개인 연락처 세부 정보]** 및 **[!UICONTROL 충성도 세부 사항]** 목록에서 을(를) 선택한 다음 **[!UICONTROL 필드 그룹 추가]** 를 추가하여 스키마에 추가합니다.
 
-![](../images/tutorials/create-schema/personal-contact-details.png)
+![](../images/tutorials/create-schema/more-field-groups.png)
 
-추가한 후에는 캔버스가 다시 나타납니다. &quot;[!UICONTROL 개인 연락처 세부 정보]&quot;이(가) 이제 다음에 나열됩니다. **[!UICONTROL 필드 그룹]** 에서 **[!UICONTROL 조성물]** 섹션에 home address, mobile phone 등의 필드를 추가했습니다. **[!UICONTROL 구조]**.
+추가된 필드 그룹이 아래에 나열되고 캔버스가 다시 나타납니다 **[!UICONTROL 필드 그룹]** 에서 **[!UICONTROL 조성물]** 섹션 및 스키마 구조에 추가된 해당 복합 필드입니다.
 
-와 비슷합니다 `name` 필드에서 방금 추가한 필드는 다중 필드 개념을 나타냅니다. 예, `homeAddress` 에는 &quot;의 데이터 유형이 있습니다.[!UICONTROL 우편 주소]&quot; 및 `mobilePhone` 에는 &quot;의 데이터 유형이 있습니다.[!UICONTROL 전화 번호]&quot;. 이러한 각 필드를 선택하여 확장하고 데이터 유형에 포함된 추가 필드를 볼 수 있습니다.
-
-![](../images/tutorials/create-schema/personal-contact-details-structure.png)
+![](../images/tutorials/create-schema/updated-structure.png)
 
 ## 사용자 지정 필드 그룹 정의 {#define-field-group}
 
-&quot;[!UICONTROL 충성도 멤버]스키마는 충성도 프로그램의 멤버와 관련된 데이터를 캡처하기 위한 것으로, 따라서 몇 가지 특정 충성도 관련 필드가 필요합니다.
+다음 [!UICONTROL 충성도 멤버] 스키마는 충성도 프로그램 및 표준 멤버와 관련된 데이터를 캡처하기 위한 것입니다 [!UICONTROL 충성도 세부 사항] 스키마에 추가한 필드 그룹은 프로그램 유형, 포인트, 조인 날짜 등을 포함하여 대부분의 필드를 제공합니다.
 
-표준이 있습니다 [!UICONTROL 충성도 세부 사항] 스키마에 추가하여 충성도 프로그램과 관련된 공통 필드를 캡처할 수 있는 필드 그룹입니다. 표준 필드 그룹을 사용하여 스키마에서 캡처된 개념을 나타내는 것이 좋지만 표준 충성도 필드 그룹의 구조가 특정 충성도 프로그램에 대한 모든 관련 데이터를 캡처하지 못할 수 있습니다. 이 시나리오에서는 대신 이러한 필드를 캡처할 새 사용자 지정 필드 그룹을 정의하도록 선택할 수 있습니다.
+그러나 사용 사례를 달성하기 위해 표준 필드 그룹에서 다루지 않는 추가 사용자 지정 필드를 포함하려는 시나리오가 있을 수 있습니다. 사용자 지정 충성도 필드를 추가하는 경우 두 가지 옵션이 있습니다.
 
-를 엽니다. **[!UICONTROL 필드 그룹 추가]** 대화 상자를 다시 사용하지만 이번에는 **[!UICONTROL 새 필드 그룹 만들기]** 꼭대기 근처에요 그런 다음 필드 그룹에 대한 표시 이름과 설명을 제공해야 합니다.
+1. 이러한 필드를 캡처할 새 사용자 지정 필드 그룹을 만듭니다. 이 자습서에서는 이 메서드를 다룹니다.
+1. 표준 확장 [!UICONTROL 충성도 세부 사항] 사용자 지정 필드가 있는 필드 그룹. 원인 [!UICONTROL 충성도 세부 사항] 사용자 지정 필드 그룹으로 변환하기 위해 원래 표준 필드 그룹을 더 이상 사용할 수 없습니다. 자세한 내용은 [!UICONTROL 스키마] UI에 대한 자세한 내용은 [표준 필드 그룹의 구조에 사용자 지정 필드 추가](../ui/resources/schemas.md#custom-fields-for-standard-groups).
+
+새 필드 그룹을 만들려면 **[!UICONTROL 추가]** 에서 **[!UICONTROL 필드 그룹]** 이전 과 같이 하위 섹션을 선택하지만 이번에는 **[!UICONTROL 새 필드 그룹 만들기]** 대화 상자의 맨 위에 표시됩니다. 그런 다음 새 필드 그룹에 대한 표시 이름과 설명을 제공해야 합니다. 이 자습서에서 새 필드 그룹 이름을 &quot;로 지정합니다[!DNL Custom Loyalty Details]&quot;&quot;을(를) 선택한 다음 **[!UICONTROL 필드 그룹 추가]**.
 
 ![](../images/tutorials/create-schema/create-new-field-group.png)
 
-클래스 이름과 마찬가지로 필드 그룹 이름은 필드 그룹이 스키마에 기여하는 것을 설명하는 짧고 간단해야 합니다. 이러한 매개 변수도 고유하므로 이름을 다시 사용할 수 없으므로 고유한지 확인해야 합니다.
+>[!NOTE]
+>
+>클래스 이름과 마찬가지로 필드 그룹 이름은 필드 그룹이 스키마에 기여하는 것을 설명하는 짧고 간단해야 합니다. 이러한 매개 변수도 고유하므로 이름을 다시 사용할 수 없으므로 고유한지 확인해야 합니다.
 
-이 자습서에서 새 필드 그룹의 이름을 &quot;충성도 세부 사항&quot;으로 지정합니다.
-
-선택 **[!UICONTROL 필드 그룹 추가]** 로 돌아가기 [!DNL Schema Editor]. &quot;[!UICONTROL 충성도 세부 사항]이제 다음에 표시됩니다. **[!UICONTROL 필드 그룹]** 캔버스 왼쪽에 있지만 연결된 필드가 없으므로 아래에 새 필드가 표시되지 않습니다 **[!UICONTROL 구조]**.
+&quot;[!DNL Custom Loyalty Details]이제 다음에 표시됩니다. **[!UICONTROL 필드 그룹]** 캔버스 왼쪽에 있지만 연결된 필드가 없으므로 아래에 새 필드가 표시되지 않습니다 **[!UICONTROL 구조]**.
 
 ## 필드 그룹에 필드 추가 {#field-group-fields}
 
-충성도 세부 사항 필드 그룹을 만들었으므로 이제 필드 그룹이 스키마에 기여할 필드를 정의해야 합니다.
+이제 &quot;[!DNL Custom Loyalty Details]&quot; 필드 그룹, 필드 그룹이 스키마에 기여할 필드를 정의해야 합니다.
 
-시작하려면, **[!UICONTROL 필드 그룹]** 섹션을 참조하십시오. 이렇게 하면 필드 그룹의 속성이 편집기의 오른쪽에 표시되고 **더하기(+)** 아래의 스키마 이름 옆에 아이콘 표시 **[!UICONTROL 구조]**.
+시작하려면 **더하기(+)** 캔버스에서 스키마 이름 옆에 있는 아이콘.
 
-![](../images/tutorials/create-schema/loyalty_details_structure.png)
+![](../images/tutorials/create-schema/add-field.png)
 
-을(를) 선택합니다 **더하기(+)** 아이콘 옆에 있는 &quot;[!DNL Loyalty Members]&quot;를 눌러 구조에 새 노드를 생성합니다. 이 노드( `_tenantId` 이 예에서) 는 IMS 조직의 테넌트 ID를 나타내며 앞에 밑줄이 표시됩니다. 테넌트 ID가 있는지 여부는 추가하고 있는 필드가 조직의 네임스페이스에 포함되어 있음을 나타냅니다.
+&quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스에 표시되고 오른쪽 레일이 업데이트되어 필드에 대한 구성 옵션이 표시됩니다.
 
-즉, 추가하려는 필드는 조직에 고유하며 [!DNL Schema Registry] ( 조직에만 액세스할 수 있는 특정 영역 ) 정의한 필드는 다른 표준 클래스, 필드 그룹, 데이터 유형 및 필드에서 이름이 있는 충돌을 방지하기 위해 항상 테넌트 네임스페이스에 추가해야 합니다.
+![](../images/tutorials/create-schema/untitled-field.png)
 
-해당 네임스페이스 노드 안에는 &quot;[!UICONTROL 새 필드]&quot;. &quot;[!UICONTROL 충성도 세부 사항]&quot; 필드 그룹&quot;을 입력합니다.
+이 시나리오에서는 스키마의 현재 충성도 계층을 자세히 설명하는 객체 유형 필드가 있어야 합니다. 오른쪽 레일의 컨트롤을 사용하여 만들기 시작 `loyaltyTier` &quot; 유형이 있는 필드[!UICONTROL 개체]관련 필드를 유지하는 데 사용됩니다.
 
-![](../images/tutorials/create-schema/new_field_loyalty.png)
+아래 **[!UICONTROL 할당 대상]**&#x200B;를 지정하는 경우에는 필드 그룹을 선택하여 필드를 지정해야 합니다. 모든 스키마 필드는 클래스 또는 필드 그룹에 속하며 이 스키마에서는 표준 클래스를 사용하므로 필드 그룹을 선택하는 것이 유일한 옵션입니다. 이름 &quot;&quot;에 입력을 시작합니다.[!DNL Custom Loyalty Details]&quot; 그런 다음 목록에서 필드 그룹을 선택합니다.
 
-편집기 오른쪽의 컨트롤을 사용하여 먼저 `loyalty` &quot; 유형이 있는 필드[!UICONTROL 개체]충성도 관련 필드를 유지하는 데 사용됩니다. 완료되면 을 선택합니다 **[!UICONTROL 적용]**.
+완료되면 을 선택합니다 **[!UICONTROL 적용]**.
 
-![](../images/tutorials/create-schema/loyalty_object.png)
+![](../images/tutorials/create-schema/loyalty-tier-object.png)
 
-변경 사항이 적용되고 새로 만든 `loyalty` 개체가 나타납니다. 을(를) 선택합니다 **더하기(+)** 아이콘 옆에 추가 충성도 관련 필드를 추가합니다. A &quot;[!UICONTROL 새 필드]&quot; 이 나타나고 **[!UICONTROL 필드 속성]** 캔버스 오른쪽에 섹션이 보입니다.
+변경 사항이 적용되고 새로 만든 `loyaltyTier` 개체가 나타납니다. 이 필드는 사용자 지정 필드이므로 조직의 테넌트 ID에 지정된 객체 내에 자동으로 중첩되며 앞에 밑줄(`_tenantId` 이 예에서 ).
 
-![](../images/tutorials/create-schema/new_field_in_loyalty_object.png)
+![](../images/tutorials/create-schema/tenant-id.png)
+
+>[!NOTE]
+>
+>테넌트 ID 개체가 있으면 추가하고 있는 필드가 조직의 네임스페이스에 포함되어 있음을 나타냅니다.
+>
+>즉, 추가하려는 필드는 조직에 고유하며 [!DNL Schema Registry] ( 조직에만 액세스할 수 있는 특정 영역 ) 정의한 필드는 다른 표준 클래스, 필드 그룹, 데이터 유형 및 필드에서 이름이 있는 충돌을 방지하기 위해 항상 테넌트 네임스페이스에 추가해야 합니다.
+
+을(를) 선택합니다 **더하기(+)** 아이콘 옆에 있는 를 클릭합니다. `loyaltyTier` 하위 필드 추가를 시작할 개체입니다. 새 필드 자리 표시자가 나타나고 **[!UICONTROL 필드 속성]** 캔버스 오른쪽에 섹션이 보입니다.
+
+![](../images/tutorials/create-schema/new-field-in-loyalty-tier-object.png)
 
 각 필드에는 다음 정보가 필요합니다.
 
 * **[!UICONTROL 필드 이름]:** 낙타케이스로 쓰여진 들판의 이름입니다. 예: 충성도 수준
 * **[!UICONTROL 표시 이름]:** 제목 사례에 기록된 필드의 이름입니다. 예: 충성도 수준
 * **[!UICONTROL 유형]:** 필드의 데이터 유형입니다. 여기에는 기본 스칼라 유형과 [!DNL Schema Registry]. 예: [!UICONTROL 문자열], [!UICONTROL 정수], [!UICONTROL 부울], [!UICONTROL 개인], [!UICONTROL 주소], [!UICONTROL 전화 번호]등
-* **[!UICONTROL 설명]:** 필드에 대한 선택적 설명은 문장 대소문자를 구분하고 최대 200자를 포함해야 합니다.
+* **[!UICONTROL 설명]:** 필드에 대한 선택적 설명은 최대 200자와 함께 포함해야 합니다.
 
-에 대한 첫 번째 필드 `Loyalty` 객체는 `loyaltyId`. 새 필드의 유형을 &quot;[!UICONTROL 문자열]&quot;, **[!UICONTROL 필드 속성]** 단면에는 기본값, 형식 및 최대 길이를 포함하여 구속을 적용하는 여러 옵션이 채워집니다.
+에 대한 첫 번째 필드 `loyaltyTier` 객체는 `id`- 충성도 멤버의 현재 계층의 ID를 나타냅니다. 이 회사는 서로 다른 요인에 따라 각 고객에 대해 서로 다른 충성도 계층 포인트 임계값을 설정하므로 계층 ID는 각 충성도 멤버에 대해 고유합니다. 새 필드의 유형을 &quot;(으)로 설정합니다.[!UICONTROL 문자열]&quot; 및 **[!UICONTROL 필드 속성]** 단면에는 기본값, 형식 및 최대 길이를 포함하여 구속을 적용하는 여러 옵션이 채워집니다.
 
-![](../images/tutorials/create-schema/string_constraints.png)
+![](../images/tutorials/create-schema/string-constraints.png)
 
-선택한 데이터 유형에 따라 다른 제한 옵션을 사용할 수 있습니다. 이후 `loyaltyId` 은(는) 이메일 주소입니다. &quot;[!UICONTROL 이메일]&quot; **[!UICONTROL 형식]** 드롭다운 메뉴 아래의 제품에서 사용할 수 있습니다. 선택 **[!UICONTROL 적용]** 변경 사항을 적용하려면
+이후 `id` 은 임의로 생성된 자유 형식 문자열이며, 추가적인 제한이 필요하지 않습니다. 선택 **[!UICONTROL 적용]** 변경 사항을 적용하려면
 
-![](../images/tutorials/create-schema/loyaltyId_field.png)
+![](../images/tutorials/create-schema/id-field-added.png)
 
 ## 필드 그룹에 필드 추가 {#field-group-fields-2}
 
-이제 를 추가했으므로 `loyaltyId` 필드에서 추가 필드를 추가하여 다음과 같은 충성도 관련 정보를 캡처할 수 있습니다.
+이제 를 추가했으므로 `id` 필드를 추가하여 다음과 같은 충성도 계층 정보를 캡처할 수 있습니다.
 
-* 포인트(정수)
-* 이후 멤버(날짜)
+* 현재 점 임계값(정수): 구성원이 현재 계층에 남아 있어야 하는 최소 충성도 포인트 수입니다.
+* 다음 계층 포인트 임계값(정수): 멤버가 다음 계층으로 졸업하기 위해 발생해야 하는 충성도 포인트 수입니다.
+* 유효 날짜(날짜 시간): 충성도 멤버가 이 계층에 가입한 날짜입니다.
 
 각 필드를 스키마에 추가하려면 **더하기(+)** 아이콘 옆에 있는 를 클릭합니다. `loyalty` 개체를 입력하고 필요한 정보를 입력합니다.
 
-완료되면 충성도 개체에는 충성도 ID, 포인트 및 멤버-이후의 필드가 포함됩니다.
+완료되면, `loyaltyTier` 개체에는 `id`, `currentThreshold`, `nextThreshold`, 및 `effectiveDate`.
 
-![](../images/tutorials/create-schema/loyalty_object_fields.png)
+![](../images/tutorials/create-schema/loyalty-tier-object-fields.png)
 
 ## 필드 그룹에 열거형 필드 추가 {#enum}
 
@@ -199,7 +211,7 @@ Adobe Experience Platform 사용자 인터페이스를 통해 사용자를 만�
 | --- | --- |
 | [!UICONTROL 필수 여부] | 필드가 데이터 처리에 필수임을 나타냅니다. 이 필드를 포함하지 않는 이 스키마를 기반으로 데이터 세트에 업로드된 모든 데이터는 수집 시 실패합니다. |
 | [!UICONTROL 어레이] | 필드에 각각 데이터 유형이 지정된 값의 배열이 포함되어 있음을 나타냅니다. 예를 들어 데이터 유형이 &quot;인 필드에서 이 제약 조건 사용[!UICONTROL 문자열]&quot; 필드에 문자열 배열이 포함되도록 지정합니다. |
-| [!UICONTROL 열거형] | 이 필드에는 가능한 값을 열거한 목록에서 값 중 하나가 포함되어야 함을 나타냅니다. |
+| [!UICONTROL 열거형 및 제안된 값] | 열거형은 이 필드가 가능한 값의 열거된 목록에서 값 중 하나를 포함해야 함을 나타냅니다. 또는 이 옵션을 사용하여 해당 값으로 필드를 제한하지 않고 문자열 필드에 대해 제안된 값 목록을 제공할 수도 있습니다. |
 | [!UICONTROL 신원] | 이 필드가 ID 필드임을 나타냅니다. ID 필드에 대한 자세한 정보가 제공됩니다 [이 자습서의 후반부](#identity-field). |
 | [!UICONTROL 관계] | 스키마 관계는 결합 스키마 및 [!DNL Real-Time Customer Profile]이는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다음 [!UICONTROL 관계] 제약 조건은 이 필드가 다른 클래스를 기반으로 한 스키마의 기본 ID를 참조하며 두 스키마 간의 관계를 의미합니다. 다음에서 자습서를 참조하십시오. [관계 정의](./relationship-ui.md) 추가 정보. |
 
@@ -207,37 +219,35 @@ Adobe Experience Platform 사용자 인터페이스를 통해 사용자를 만�
 
 >[!NOTE]
 >
->필수, ID 또는 관계 필드가 왼쪽 레일에 표시되므로 스키마의 복잡성에 관계없이 이러한 필드를 쉽게 찾을 수 있습니다.
->
->![](../images/tutorials/create-schema/left-rail-special.png)
+>필수, ID 또는 관계 필드는 왼쪽 레일의 해당 섹션에 나열되므로 스키마의 복잡성에 관계없이 이러한 필드를 쉽게 찾을 수 있습니다.
 
-이 자습서의 경우 [!DNL "loyalty"] 스키마의 객체에는 고객의 &quot;충성도 수준&quot;을 설명하는 새로운 열거형 필드가 필요합니다. 이 경우 값은 가능한 4가지 옵션 중 하나일 수 있습니다. 이 필드를 스키마에 추가하려면 **더하기(+)** 아이콘 옆의 아이콘 `loyalty` 개체 및 **[!UICONTROL 필드 이름]** 및 **[!UICONTROL 표시 이름]**. 대상 **[!UICONTROL 유형]**, &quot; 선택[!UICONTROL 문자열]&quot;.
+이 자습서의 경우 `loyaltyTier` 스키마의 객체에는 계층 클래스를 설명하는 새 열거형 필드가 필요합니다. 이 경우 값은 가능한 네 가지 옵션 중 하나일 수 있습니다. 이 필드를 스키마에 추가하려면 **더하기(+)** 아이콘 옆의 아이콘 `loyaltyTier` 개체 및 **[!UICONTROL 필드 이름]** 및 **[!UICONTROL 표시 이름]**. 대상 **[!UICONTROL 유형]**, &quot; 선택[!UICONTROL 문자열]&quot;.
 
-![](../images/tutorials/create-schema/loyalty-level-type.png)
+![](../images/tutorials/create-schema/tier-class-type.png)
 
-해당 유형을 선택한 다음 필드의 확인란을 추가로 선택합니다 **[!UICONTROL 어레이]**, **[!UICONTROL 열거형]**, 및 **[!UICONTROL ID]**.
+해당 유형을 선택한 다음 필드의 확인란을 추가로 선택합니다 **[!UICONTROL 어레이]**, **[!UICONTROL 열거형 및 제안된 값]**, **[!UICONTROL ID]**, 및 **[!UICONTROL 관계]**.
 
-을(를) 선택합니다 **[!UICONTROL 열거형]** 확인란을 클릭하여 열기 **[!UICONTROL 열거형 값]** 섹션을 참조하십시오. 여기에서 을 입력할 수 있습니다 **[!UICONTROL 값]** (camelCase) 및 **[!UICONTROL 레이블]** (제목 케이스의 선택적 읽기 전용 이름)을 사용할 수 있는 각 충성도 수준에 대해 설명합니다.
+을(를) 선택합니다 **[!UICONTROL 열거형 및 제안된 값]** 확인란을 선택한 다음 **[!UICONTROL 열거형]**. 여기에서 을 입력할 수 있습니다 **[!UICONTROL 값]** (camelCase) 및 **[!UICONTROL 표시 이름]** (제목 사례의 선택적 읽기 친숙한 이름) 각 허용 가능한 충성도 계층 클래스에 대한 것입니다.
 
-모든 필드 속성을 완료했으면 을 선택합니다 **[!UICONTROL 적용]** 를 추가하려면[!DNL loyaltyLevel]&quot; 필드를 `loyalty` 개체.
+모든 필드 속성을 완료했으면 을 선택합니다 **[!UICONTROL 적용]** 를 추가하려면 `tierClass` 필드 `loyaltyTier` 개체.
 
-![](../images/tutorials/create-schema/loyalty_level_enum.png)
+![](../images/tutorials/create-schema/tier-class-enum.png)
 
 ## 다중 필드 개체를 데이터 형식으로 변환 {#datatype}
 
-다음 `loyalty` 이제 개체에는 몇 개의 충성도 관련 필드가 포함되어 있으며, 다른 스키마에서 유용할 수 있는 일반적인 데이터 구조를 나타냅니다. 다음 [!DNL Schema Editor] 이러한 개체의 구조를 데이터 형식으로 변환하여 재사용 가능한 다중 필드 개체를 쉽게 적용할 수 있습니다.
+다음 `loyaltyTier` 이제 개체에는 여러 필드가 포함되어 있으며 다른 스키마에서 유용할 수 있는 일반적인 데이터 구조를 나타냅니다. 다음 [!DNL Schema Editor] 이러한 개체의 구조를 데이터 형식으로 변환하여 재사용 가능한 다중 필드 개체를 쉽게 적용할 수 있습니다.
 
 데이터 유형을 사용하면 여러 필드 구조를 일관성 있게 사용할 수 있으며 스키마 내의 어디에서든 사용할 수 있으므로 필드 그룹보다 더 유연하게 대처할 수 있습니다. 이 작업은 필드의 **[!UICONTROL 유형]** 값에서 정의한 데이터 유형의 값 [!DNL Schema Registry].
 
-를 변환하려면 `loyalty` 개체를 데이터 형식으로 `loyalty` 아래의 필드 **[!UICONTROL 구조]**&#x200B;를 선택하고 을 선택합니다. **[!UICONTROL 새 데이터 유형으로 변환]** 편집자의 오른편에 **[!UICONTROL 필드 속성]**. 객체가 성공적으로 변환되었는지 확인하는 녹색 팝오버가 나타납니다.
+를 변환하려면 `loyaltyTier` 개체를 데이터 형식으로 `loyaltyTier` 캔버스에서 필드를 선택한 다음 **[!UICONTROL 새 데이터 유형으로 변환]** 아래의 편집기의 오른쪽에 있습니다. **[!UICONTROL 필드 속성]**.
 
 ![](../images/tutorials/create-schema/convert-data-type.png)
 
-이제, **[!UICONTROL 구조]**, 다음을 확인할 수 있습니다. `loyalty` 필드에 &quot;[!DNL Loyalty]&quot; 그리고 필드 옆에는 작은 잠금 아이콘이 있어서 개별 필드가 아니라 다중 필드 데이터 유형의 일부임을 나타냅니다.
+객체가 성공적으로 변환되었는지 확인하는 알림이 나타납니다. 이제 캔버스에서 `loyaltyTier` 이제 필드에 링크 아이콘이 있고 오른쪽 레일은 필드의 데이터 유형이 &quot;.[!DNL Loyalty Tier]&quot;.
 
-![](../images/tutorials/create-schema/loyalty_data_type.png)
+![](../images/tutorials/create-schema/loyalty-tier-data-type.png)
 
-향후 스키마에서 필드를 &quot;[!DNL Loyalty]&quot;을 입력하면 ID, 충성도 수준, 이후의 멤버 및 포인트에 대한 필드가 자동으로 포함됩니다.
+향후 스키마에서 필드를 &quot;[!DNL Loyalty Tier]&quot;을 입력하면 ID, 계층 클래스, 포인트 임계값 및 유효 날짜에 대한 필드가 자동으로 포함됩니다.
 
 >[!NOTE]
 >
@@ -263,7 +273,7 @@ Adobe Experience Platform 사용자 인터페이스를 통해 사용자를 만�
 
 [!DNL Experience Platform] 를 사용하면 **[!UICONTROL ID]** 확인란 [!DNL Schema Editor]. 하지만 데이터의 특성을 기반으로 ID로 사용할 가장 적합한 필드를 결정해야 합니다.
 
-예를 들어 동일한 &quot;충성도 수준&quot;에 속하는 충성도 프로그램 멤버가 수천 명이 있을 수 있지만 충성도 프로그램의 각 멤버에는 고유한 멤버가 있습니다 `loyaltyId` (이 인스턴스에서 개별 구성원의 이메일 주소입니다.) 사실 `loyaltyId` 는 각 구성원의 고유 식별자로 id 필드에 적합한 후보입니다. `loyaltyLevel` 은 아닙니다.
+예를 들어 동일한 충성도 수준에 속하는 수천 명의 충성도 프로그램 멤버가 있을 수 있으며, 여러 멤버가 동일한 실제 주소를 공유할 수 있습니다. 그러나 이 시나리오에서는 등록 시 충성도 프로그램의 각 멤버에게 개인 이메일 주소를 제공합니다. 개인 이메일 주소는 일반적으로 한 사람이 관리하므로 이 필드는 `personalEmail.address` (제공) [!UICONTROL 개인 연락처 세부 정보] 필드 그룹)은 ID 필드에 적합한 후보입니다.
 
 >[!IMPORTANT]
 >
@@ -271,25 +281,25 @@ Adobe Experience Platform 사용자 인터페이스를 통해 사용자를 만�
 >
 >사용할 계획이라면 `identityMap`를 추가하면 스키마에 직접 추가하는 모든 기본 ID를 재정의한다는 점을 기억하십시오. 의 섹션을 참조하십시오. `identityMap` 에서 [스키마 구성 안내서 기본 사항](../schema/composition.md#identityMap) 추가 정보.
 
-에서 **[!UICONTROL 구조]** 편집기의 섹션에서 `loyaltyId` 필드 및 **[!UICONTROL ID]** 확인란 아래에 표시됩니다. **[!UICONTROL 필드 속성]**. 상자 및 옵션을 선택하여 다음과 같이 설정합니다. **[!UICONTROL 기본 ID]** 이 나타납니다. 이 상자도 선택하십시오.
+을(를) 선택합니다 `personalEmail.address` 캔버스의 필드 및 **[!UICONTROL ID]** 확인란 아래에 표시됩니다. **[!UICONTROL 필드 속성]**. 상자 및 옵션을 선택하여 다음과 같이 설정합니다. **[!UICONTROL 기본 ID]** 이 나타납니다. 이 상자도 선택하십시오.
 
 >[!NOTE]
 >
 >각 스키마에는 기본 ID 필드가 하나만 포함될 수 있습니다. 스키마 필드를 기본 ID로 설정하면 나중에 스키마의 다른 ID 필드를 기본 ID로 설정하려고 하면 오류 메시지가 표시됩니다.
 
-다음으로, **[!UICONTROL ID 네임스페이스]** 드롭다운에서 사전 정의된 네임스페이스 목록에서 을 선택합니다. 이후 `loyaltyId` 고객의 이메일 주소입니다. &quot;[!UICONTROL 이메일]&quot;&quot;을 클릭합니다. 선택 **[!UICONTROL 적용]** 업데이트 내용을 확인하려면 `loyaltyId` 필드.
+다음으로, **[!UICONTROL ID 네임스페이스]** 드롭다운에서 사전 정의된 네임스페이스 목록에서 을 선택합니다. 이 필드는 고객의 이메일 주소이므로 &quot;[!UICONTROL 이메일]&quot;&quot;을 클릭합니다. 선택 **[!UICONTROL 적용]** 업데이트 내용을 확인하려면 `personalEmail.address` 필드.
 
-![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
+![](../images/tutorials/create-schema/primary-identity.png)
 
 >[!NOTE]
 >
 >표준 네임스페이스 및 해당 정의 목록을 보려면 [[!DNL Identity Service] 설명서](../../identity-service/troubleshooting-guide.md#standard-namespaces).
 
-변경 사항을 적용한 후 `loyaltyId` 는 이제 id 필드임을 나타내는 지문 기호를 표시합니다.
+변경 사항을 적용한 후 `personalEmail.address` 는 이제 id 필드임을 나타내는 지문 기호를 표시합니다. 필드는 아래의 왼쪽 레일에도 나열됩니다 **[!UICONTROL ID]**.
 
 ![](../images/tutorials/create-schema/identity-applied.png)
 
-이제 `loyaltyId` 필드를 사용하여 해당 개인을 식별하고 해당 고객의 단일 보기를 함께 결합합니다. 에서 ID로 작업하는 방법에 대해 자세히 알아보려면 [!DNL Experience Platform]을(를) 검토하십시오 [[!DNL Identity Service]](../../identity-service/home.md) 설명서.
+이제 `personalEmail.address` 필드를 사용하여 해당 개인을 식별하고 해당 고객의 단일 보기를 함께 결합합니다. 에서 ID로 작업하는 방법에 대해 자세히 알아보려면 [!DNL Experience Platform]을(를) 검토하십시오 [[!DNL Identity Service]](../../identity-service/home.md) 설명서.
 
 ## 에서 사용할 스키마 활성화 [!DNL Real-Time Customer Profile] {#profile}
 
@@ -297,9 +307,9 @@ Adobe Experience Platform 사용자 인터페이스를 통해 사용자를 만�
 
 에서 사용할 수 있도록 스키마를 활성화하려면 [!DNL Real-Time Customer Profile]에는 기본 ID가 정의되어 있어야 합니다. 기본 ID를 먼저 정의하지 않고 스키마를 활성화하려고 하면 오류 메시지가 표시됩니다.
 
-<img src="../images/tutorials/create-schema/missing_primary_identity.png" width="600" /><br>
+![](../images/tutorials/create-schema/missing-primary-identity.png)
 
-에서 사용할 &quot;충성도 멤버&quot; 스키마를 활성화하려면 [!DNL Profile], 을 선택하여 시작합니다.[!DNL Loyalty Members]&quot; **[!UICONTROL 구조]** 편집기의 섹션.
+에서 사용할 &quot;충성도 멤버&quot; 스키마를 활성화하려면 [!DNL Profile]캔버스에서 스키마 제목을 선택하여 시작합니다.
 
 편집기 오른쪽에는 표시 이름, 설명 및 유형을 포함한 스키마에 대한 정보가 표시됩니다. 이 정보 외에 **[!UICONTROL 프로필]** 전환 단추.
 
@@ -307,7 +317,7 @@ Adobe Experience Platform 사용자 인터페이스를 통해 사용자를 만�
 
 선택 **[!UICONTROL 프로필]** 에 대한 스키마를 활성화할지 확인하는 팝업 창이 나타납니다 [!DNL Profile].
 
-<img src="../images/tutorials/create-schema/enable-profile.png" width="700" /><br>
+![](../images/tutorials/create-schema/enable-profile.png)
 
 >[!WARNING]
 >
@@ -355,4 +365,4 @@ Adobe Experience Platform 사용자 인터페이스를 통해 사용자를 만�
 >
 >스키마에 대한 클래스 재지정은 매우 신중하게 수행해야 합니다. 필드 그룹은 특정 클래스와 호환되기 때문에 클래스를 변경하면 캔버스 및 추가한 필드가 재설정됩니다.
 
-스키마 클래스를 변경하는 방법에 대한 자세한 내용은 [UI에서 스키마 관리](../ui/resources/schemas.md).
+스키마 클래스를 변경하는 방법에 대한 자세한 내용은 [UI에서 스키마 관리](../ui/resources/schemas.md#change-class).

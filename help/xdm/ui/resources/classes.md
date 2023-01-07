@@ -5,20 +5,20 @@ title: UI에서 클래스 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 클래스를 만들고 편집하는 방법을 알아봅니다.
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 7b642744f12ec33ff45a4b41cdb57bfe37396a56
+source-git-commit: a854a40034666159fabca550227efe9f3a47fb53
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
 
 # UI에서 클래스 만들기 및 편집
 
-XDM(Experience Data Model)에서 클래스는 스키마에 포함할 데이터의 동작 측면(레코드 또는 시계열)을 정의합니다. 이 외에도 클래스는 해당 클래스를 기반으로 하는 모든 스키마에는 여러 호환 데이터 세트를 병합하는 방법을 포함하고 제공해야 하는 가장 작은 수의 공통 속성을 설명합니다.
+Adobe Experience Platform에서 스키마의 클래스는 스키마에 포함할 데이터의 행동 측면(레코드 또는 시계열)을 정의합니다. 이 외에도 클래스는 해당 클래스를 기반으로 하는 모든 스키마에는 여러 호환 데이터 세트를 병합하는 방법을 포함하고 제공해야 하는 가장 작은 수의 공통 속성을 설명합니다.
 
-Adobe은 다음을 포함한 몇 가지 표준(&quot;core&quot;) XDM 클래스를 제공합니다 [!DNL XDM Individual Profile] 및 [!DNL XDM ExperienceEvent]. 이러한 핵심 클래스 외에도 고유한 사용자 지정 클래스를 만들어 조직에 대한 더 구체적인 사용 사례를 설명할 수도 있습니다.
+Adobe은 다음을 포함한 몇 가지 표준(&quot;core&quot;) XDM(Experience Data Model) 클래스를 제공합니다 [!DNL XDM Individual Profile] 및 [!DNL XDM ExperienceEvent]. 이러한 핵심 클래스 외에도 고유한 사용자 지정 클래스를 만들어 조직에 대한 더 구체적인 사용 사례를 설명할 수도 있습니다.
 
-이 문서에서는 Adobe Experience Platform UI에서 사용자 지정 클래스를 생성, 편집 및 관리하는 방법에 대한 개요를 제공합니다.
+이 문서에서는 Experience Platform UI에서 사용자 정의 클래스를 생성, 편집 및 관리하는 방법에 대한 개요를 제공합니다.
 
 ## 전제 조건
 
@@ -32,7 +32,7 @@ Adobe은 다음을 포함한 몇 가지 표준(&quot;core&quot;) XDM 클래스�
 
 ![](../../images/ui/resources/classes/browse-classes.png)
 
-사용 가능한 클래스 목록에서 선택할 수 있는 대화 상자가 나타납니다. 대화 상자 상단에서 을 선택합니다 **[!UICONTROL 새 클래스 만들기]**. 그런 다음 새 클래스에 표시 이름(클래스의 짧고 설명적이며 고유하며 사용자에게 친숙한 이름), 설명 및 스키마에 정의되는 데이터의 동작을 지정할 수 있습니다(&quot;[!UICONTROL 레코드]&quot; 또는 &quot;[!UICONTROL 시계열]&quot;)
+사용 가능한 클래스 목록에서 선택할 수 있는 대화 상자가 나타납니다. 대화 상자 상단에서 을 선택합니다 **[!UICONTROL 새 클래스 만들기]**. 그런 다음 새 클래스에 표시 이름(클래스의 짧고 설명적이며 고유하며 사용자에게 친숙한 이름), 설명 및 스키마가 정의할 데이터(**[!UICONTROL 레코드]** 또는 **[!UICONTROL 시계열]**).
 
 완료되면 을 선택합니다 **[!UICONTROL 클래스 할당]**.
 
@@ -78,9 +78,11 @@ Adobe은 다음을 포함한 몇 가지 표준(&quot;core&quot;) XDM 클래스�
 >
 >클래스에 추가하는 모든 필드는 해당 클래스를 사용하는 모든 스키마에서 사용됩니다. 따라서 모든 스키마 사용 사례에 유용할 필드를 신중하게 고려해야 합니다. 이 클래스의 일부 스키마에서만 사용할 수 있는 필드를 추가하려는 경우 [필드 그룹 만들기](./field-groups.md#create) 을 가리키도록 업데이트하는 것이 좋습니다.
 
-A **[!UICONTROL 새 필드]** 캔버스에 표시되고 오른쪽 레일이 업데이트되어 필드의 속성을 구성하는 컨트롤을 표시합니다. 다음 안내서를 참조하십시오. [ui에서 필드 정의](../fields/overview.md#define) 를 추가하여 클래스를 구성하고 클래스에 필드를 추가하는 방법에 대한 특정 단계를 설명합니다.
+A **[!UICONTROL 새 필드]** 캔버스에 표시되고 오른쪽 레일이 업데이트되어 필드의 속성을 구성하는 컨트롤을 표시합니다. 아래 **[!UICONTROL 할당 대상]**, 선택 **[!UICONTROL 클래스]**.
 
-계속하여 클래스에 필요한 만큼 필드를 추가합니다. 완료되면 을 선택합니다 **[!UICONTROL 저장]** 스키마와 클래스를 모두 저장하려면
+![](../../images/ui/resources/classes/assign-to-class.png)
+
+다음 안내서를 참조하십시오. [ui에서 필드 정의](../fields/overview.md#define) 를 추가하여 클래스를 구성하고 클래스에 필드를 추가하는 방법에 대한 특정 단계를 설명합니다. 계속하여 클래스에 필요한 만큼 필드를 추가합니다. 완료되면 을 선택합니다 **[!UICONTROL 저장]** 스키마와 클래스를 모두 저장하려면
 
 ![](../../images/ui/resources/classes/save.png)
 

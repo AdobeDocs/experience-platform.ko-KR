@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Experience Platform 사용자 인터페이스에서 데이터 유형을 만들고 편집하는 방법을 알아봅니다.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f700f7c68ba9ff2fc0a99bf62031bf3fe0c95f
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -88,11 +88,11 @@ Adobe Experience Platform에서는 다양한 일반적인 경험 관리 사용 �
 
 데이터 유형에 필드 추가를 완료했으면 을 선택합니다 **[!UICONTROL 저장]** 변경 사항을 저장하고 데이터 유형을 [!DNL Schema Library].
 
-## 클래스 또는 필드 그룹에 데이터 형식 추가
+## 스키마에 데이터 유형 추가
 
 데이터 유형을 만들면 스키마에서 사용할 수 있습니다. XDM 스키마는 클래스와 0개 이상의 필드 그룹으로 구성되므로 데이터 형식에서 제공하는 필드를 직접 스키마에 추가할 수 없습니다. 대신 클래스 또는 필드 그룹에 포함해야 합니다.
 
-관련 단계에 따라 시작하십시오 [클래스에 필드 추가](./classes.md#add-fields) 또는 [필드 그룹에 필드 추가](./field-groups.md#add-fields). 을(를) 선택하는 경우 **[!UICONTROL 유형]** 새 필드의 경우 드롭다운 메뉴에서 데이터 유형의 이름을 선택합니다.
+관련 단계에 따라 시작하십시오 [클래스에 필드 추가](./classes.md#add-fields) 또는 [필드 그룹에 필드 추가](./field-groups.md#add-fields). 또는 다음을 시작할 수 있습니다 [스키마에 필드 직접 추가](./schemas.md#add-individual-fields) 상위 클래스 또는 필드 그룹을 선택합니다. 을(를) 선택하는 경우 **[!UICONTROL 유형]** 새 필드의 경우 드롭다운 메뉴에서 데이터 유형의 이름을 선택합니다.
 
 ## 다중 필드 개체를 데이터 형식으로 변환 {#convert}
 
@@ -102,7 +102,7 @@ Adobe Experience Platform에서는 다양한 일반적인 경험 관리 사용 �
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-캔버스는 &quot;[!UICONTROL 개체]새 데이터 형식에 대한 매핑입니다. 하위 필드 옆에는 작은 잠금 아이콘도 있어서 더 이상 개별 필드가 아니라 다중 필드 데이터 유형의 일부임을 나타냅니다. 이제 이 구조체는 **[!UICONTROL 유형]** 새 필드를 정의할 때의 드롭다운입니다.
+캔버스는 &quot;[!UICONTROL 개체]새 데이터 형식에 대한 매핑입니다. 이제 이 구조체는 **[!UICONTROL 유형]** 새 필드를 정의할 때의 드롭다운입니다.
 
 ![](../../images/ui/resources/data-types/converted.png)
 

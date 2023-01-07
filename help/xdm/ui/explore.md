@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform;홈;인기 주제;ui;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;탐색;클래스;필드 그룹;데이터 유형;스키마
 solution: Experience Platform
-title: UI에서 XDM 리소스 살펴보기
+title: UI에서 스키마 리소스 살펴보기
 description: Experience Platform 사용자 인터페이스에서 기존 스키마, 클래스, 스키마 필드 그룹 및 데이터 유형을 탐색하는 방법을 알아봅니다.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 744d87c82b7e7e06782c6c1b9db2ec46a5444d28
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
 
-# UI에서 XDM 리소스 살펴보기
+# UI에서 스키마 리소스 살펴보기
 
-Adobe Experience Platform에서 모든 XDM(Experience Data Model) 리소스는 [!DNL Schema Library]에는 Adobe에서 제공하는 표준 리소스와 조직에서 정의한 사용자 정의 리소스가 포함되어 있습니다. Experience Platform UI에서는 [!DNL Schema Library]. UI에서는 이러한 XDM 리소스에서 제공하는 각 필드의 예상 데이터 유형 및 사용 사례에 대한 정보를 제공하므로 이 기능은 데이터 수집을 계획하고 준비할 때 특히 유용합니다.
+Adobe Experience Platform에서 모든 XDM(Experience Data Model) 스키마 리소스는 [!DNL Schema Library]에는 Adobe에서 제공하는 표준 리소스와 조직에서 정의한 사용자 정의 리소스가 포함되어 있습니다. Experience Platform UI에서는 [!DNL Schema Library]. UI에서는 이러한 XDM 리소스에서 제공하는 각 필드의 예상 데이터 유형 및 사용 사례에 대한 정보를 제공하므로 이 기능은 데이터 수집을 계획하고 준비할 때 특히 유용합니다.
 
 이 자습서에서는 Experience Platform UI에서 기존 스키마, 클래스, 필드 그룹 및 데이터 유형을 탐색하는 단계를 설명합니다.
 
-## XDM 리소스 조회 {#lookup}
+## 스키마 리소스 조회 {#lookup}
 
-플랫폼 UI에서 **[!UICONTROL 스키마]** 을 클릭합니다. 다음 [!UICONTROL 스키마] 작업 공간에서 **[!UICONTROL 찾아보기]** 탐색하기 위한 추가 전용 탭과 함께 조직의 기존 XDM 리소스를 모두 탐색하려면 탭을 클릭합니다. **[!UICONTROL 클래스]**, **[!UICONTROL 필드 그룹]**, 및 **[!UICONTROL 데이터 유형]** 특히,
+플랫폼 UI에서 **[!UICONTROL 스키마]** 을 클릭합니다. 다음 [!UICONTROL 스키마] 작업 공간에서 **[!UICONTROL 찾아보기]** 탐색을 위한 추가 전용 탭과 함께 조직의 모든 스키마를 탐색하려면 탭을 클릭하십시오. **[!UICONTROL 클래스]**, **[!UICONTROL 필드 그룹]**, 및 **[!UICONTROL 데이터 유형]** 각각 사용할 수 있습니다.
 
 ![](../images/ui/explore/tabs.png)
 
-설정 [!UICONTROL 찾아보기] 탭에서 필터 아이콘(![필터 아이콘 이미지](../images/ui/explore/icon.png))를 클릭하여 나열된 결과를 좁히기 위해 왼쪽 레일에 컨트롤을 표시합니다.
+필터 아이콘(![필터 아이콘 이미지](../images/ui/explore/icon.png))를 클릭하면 나열된 결과를 좁히기 위한 왼쪽 레일의 컨트롤이 표시됩니다. 표시된 컨트롤은 나열되는 리소스 유형에 따라 다릅니다.
 
 예를 들어 Adobe이 제공하는 표준 데이터 유형만 표시하도록 목록을 필터링하려면 을(를) 선택합니다 **[!UICONTROL 데이터 유형]** 및 **[!UICONTROL Adobe]** 아래에 **[!UICONTROL 유형]** 및 **[!UICONTROL 소유자]** 섹션을 참조하십시오.
 
@@ -33,15 +33,15 @@ Adobe Experience Platform에서 모든 XDM(Experience Data Model) 리소스는 [
 
 ![](../images/ui/explore/filter.png)
 
-검색 창에서 검색 결과를 더 좁힐 수도 있습니다. 검색어를 검색할 때 상위 항목은 검색 쿼리와 이름이 일치하는 리소스를 나타냅니다. 아래의 이 항목 아래에 있습니다. **[!UICONTROL 표준 필드]**, 쿼리와 일치하는 필드를 포함하는 모든 리소스가 나열됩니다. 이렇게 하면 사전 리소스 이름을 알지 않고도 포함하는 데이터 유형에 따라 XDM 리소스를 검색할 수 있습니다.
+에서 리소스를 나열할 때 **[!UICONTROL 클래스]**, **[!UICONTROL 필드 그룹]**, 또는 **[!UICONTROL 데이터 유형]** 탭을 선택하여 **[!UICONTROL Adobe]** 표준 리소스만 표시하거나 **[!UICONTROL 고객]** 을 입력하여 조직에서 생성한 리소스만 표시합니다.
+
+![](../images/ui/explore/filter-data-type.png)
+
+검색 창에서 검색 결과를 더 좁힐 수도 있습니다.
 
 ![](../images/ui/explore/search.png)
 
 검색 결과에 표시되는 리소스는 먼저 제목 일치별로 정렬된 다음 설명별로 정렬됩니다. 따라서 이러한 범주 중 하나에서 일치하는 단어가 더 많을수록 리소스가 목록에 더 많이 나타납니다.
-
->[!NOTE]
->
->표준 XDM 리소스의 경우 검색 기능은 를 포함하는 개별 필드만 반환합니다 `xdm` 네임스페이스. 다른 네임스페이스(예: 테넌트 ID)에 있는 필드는 사용자 지정 리소스에 포함된 경우에만 반환됩니다.
 
 탐색할 리소스를 찾으면 목록에서 해당 이름을 선택하여 캔버스에서 해당 구조를 확인합니다.
 

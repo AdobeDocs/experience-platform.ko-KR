@@ -5,9 +5,9 @@ title: UI에서 스키마 필드 그룹 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마 필드 그룹을 만들고 편집하는 방법을 알아봅니다.
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 57e7386ad631f2ce3d9b28d2532655a2668bdcaa
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -34,11 +34,13 @@ Adobe Experience Platform에서는 광범위한 마케팅 사용 사례를 다�
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-조직의 기존 필드 그룹 목록을 표시하는 대화 상자가 나타납니다. 대화 상자의 맨 위에서 다음을 선택합니다 **[!UICONTROL 새 필드 그룹 만들기]**. 여기에서 다음을 제공할 수 있습니다 **[!UICONTROL 표시 이름]** 및 **[!UICONTROL 설명]** 를 입력합니다. 완료되면 을 선택합니다 **[!UICONTROL 필드 그룹 추가]**.
+대화 상자가 나타나면 **[!UICONTROL 새 필드 그룹 만들기]**. 여기에서 다음을 제공할 수 있습니다 **[!UICONTROL 표시 이름]** 및 **[!UICONTROL 설명]** 를 입력합니다. 완료되면 을 선택합니다 **[!UICONTROL 필드 그룹 추가]**.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
 다음 [!DNL Schema Editor] 왼쪽 레일에 새 필드 그룹이 나열되고 다시 나타납니다. 이 그룹은 완전히 새로운 필드 그룹이므로 현재 스키마에 필드를 제공하지 않으므로 캔버스는 변경되지 않은 상태로 유지됩니다. 이제 시작할 수 있습니다 [필드 그룹에 필드 추가](#add-fields).
+
+![](../../images/ui/resources/field-groups/field-group-added.png)
 
 ## 기존 필드 그룹 편집 {#edit}
 
@@ -58,13 +60,17 @@ Adobe Experience Platform에서는 광범위한 마케팅 사용 사례를 다�
 >
 >이 섹션에서는 사용자 지정 필드 그룹에 필드를 추가하는 데 중점을 둡니다. 표준 필드 그룹에 사용자 지정 필드를 추가하는 방법에 대한 자세한 내용은 [스키마 UI 안내서](./schemas.md#custom-fields-for-standard-groups).
 
-에서 사용자 지정 필드 그룹에 필드를 추가하려면 [!DNL Schema Editor]왼쪽 레일에서 필드 그룹 이름을 선택하여 시작한 다음 **더하기(+)** 캔버스에서 스키마 이름 옆에 있는 아이콘.
+사용자 지정 필드 그룹에 필드를 추가하려면 먼저 **더하기(+)** 캔버스에서 스키마 이름 옆에 있는 아이콘.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL 새 필드]** 캔버스에 표시되고 오른쪽 레일이 업데이트되어 필드의 속성을 구성하는 컨트롤을 표시합니다. 다음 안내서를 참조하십시오. [ui에서 필드 정의](../fields/overview.md#define) 필드 그룹에 필드를 구성하고 추가하는 방법에 대한 특정 단계에 대해 설명합니다.
+A **[!UICONTROL 새 필드]** 캔버스에 표시되고 오른쪽 레일이 업데이트되어 필드의 속성을 구성하는 컨트롤을 표시합니다. 다음 안내서를 참조하십시오. [ui에서 필드 정의](../fields/overview.md#define) 를 참조하십시오.
 
-필드 그룹에 필요한 만큼 필드를 계속 추가합니다. 완료되면 을 선택합니다 **[!UICONTROL 저장]** 스키마와 필드 그룹을 모두 저장하려면 을 클릭합니다.
+아래 **[!UICONTROL 할당 대상]**&#x200B;에서 을(를) 선택합니다. **[!UICONTROL 필드 그룹]** 옵션을 선택한 다음 드롭다운을 사용하여 목록에서 원하는 필드 그룹을 선택합니다. 필드 그룹의 이름에 입력을 시작하여 결과를 좁힐 수 있습니다.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+스키마에 필드가 추가되면 선택한 필드 그룹에 할당됩니다. 필드 그룹에 필요한 만큼 필드를 계속 추가합니다. 완료되면 을 선택합니다 **[!UICONTROL 저장]** 스키마와 필드 그룹을 모두 저장하려면 을 클릭합니다.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 

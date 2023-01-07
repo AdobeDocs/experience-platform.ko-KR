@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform B2B Edition에서 두 스키마 간의 관계 정의
 description: Adobe Real-time Customer Data Platform B2B Edition에서 두 스키마 간에 일대일 관계를 정의하는 방법을 알아봅니다.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1391'
 ht-degree: 0%
 
 ---
@@ -123,4 +123,4 @@ Adobe Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기
 
 ## 다음 단계
 
-이 자습서를 따라 를 사용하여 두 스키마 간에 다대다 관계를 만들었습니다 [!DNL Schema Editor]. 이러한 스키마를 기반으로 하는 데이터 세트를 사용하여 데이터를 수집하여 프로필 데이터 저장소에서 데이터가 활성화되면 두 스키마의 속성을 여러 클래스 세그먼테이션 사용 사례에 사용할 수 있습니다. 자세한 내용은 Real-Time CDP B2B Edition의 설명서를 참조하십시오.
+이 자습서를 따라 를 사용하여 두 스키마 간에 다대다 관계를 만들었습니다 [!DNL Schema Editor]. 이러한 스키마를 기반으로 하는 데이터 세트를 사용하여 데이터를 수집하여 프로필 데이터 저장소에서 데이터가 활성화되면 두 스키마의 속성을 다음 용도로 사용할 수 있습니다 [다중 클래스 세분화 사용 사례](../../rtcdp/segmentation/b2b.md).
