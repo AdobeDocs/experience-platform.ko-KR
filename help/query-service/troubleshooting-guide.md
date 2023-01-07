@@ -5,9 +5,9 @@ title: Query Service 문제 해결 안내서
 topic-legacy: troubleshooting
 description: 이 문서에는 Query Service와 관련된 일반적인 질문과 대답이 포함되어 있습니다. 항목에는 데이터, 내보내기, 타사 도구 및 PSQL 오류가 포함됩니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
+source-git-commit: 491aadf161bd822cb40a5ef5dd107831bca1d2c4
 workflow-type: tm+mt
-source-wordcount: '4362'
+source-wordcount: '4383'
 ht-degree: 1%
 
 ---
@@ -533,6 +533,11 @@ WHERE T2.ID IS NULL
 +++예, 구성된 경우 속성 기반 액세스 제어가 적용됩니다. 자세한 내용은 [속성 기반 액세스 제어 개요](../access-control/abac/overview.md) 추가 정보.
 +++
 
+### Query Service에서 &quot;INSERT OVERWRITE INTO&quot; 명령을 지원합니까?
+
++++아니요, Query Service는 &quot;INSERT OVERWRITE INTO&quot; 명령을 지원하지 않습니다.
++++
+
 ## 데이터 내보내기 {#exporting-data}
 
 이 섹션에서는 데이터 및 제한 내보내기에 대한 정보를 제공합니다.
@@ -665,5 +670,5 @@ Query complete in {timeframe}. 0 rows returned.
 | HTTP 상태 코드 | 설명 | 가능한 원인 |
 |------------------|-----------------------|----------------------------|
 | 400 | 잘못된 요청 | 잘못된 쿼리 또는 잘못된 쿼리 |
-| 401년 | 인증 실패 | 잘못된 인증 토큰 |
+| 401 | 인증 실패 | 잘못된 인증 토큰 |
 | 500 | 내부 서버 오류 | 내부 시스템 장애 |
