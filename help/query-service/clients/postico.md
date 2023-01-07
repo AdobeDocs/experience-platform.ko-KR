@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;리포티코;포스티코;쿼리 서비스에 연결
 solution: Experience Platform
 title: 쿼리 서비스에 Postico 연결
-topic-legacy: connect
 description: 이 문서에는 Adobe Experience Platform Query Service용 백업 클라이언트 Postico를 설치하기 위한 링크가 포함되어 있습니다.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '291'
 ht-degree: 0%

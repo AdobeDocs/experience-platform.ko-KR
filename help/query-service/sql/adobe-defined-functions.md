@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;Adobe 정의 함수;sql;
 solution: Experience Platform
 title: 쿼리 서비스의 Adobe 정의 SQL 함수
-topic-legacy: functions
 description: 이 문서에서는 Adobe Experience Platform Query Service에서 사용할 수 있는 Adobe 정의 기능에 대한 정보를 제공합니다.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1486'
 ht-degree: 3%

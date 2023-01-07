@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;쿼리
 solution: Experience Platform
 title: Query Service API 안내서
-topic-legacy: query templates
 description: Query Service API를 사용하여 개발자가 표준 SQL을 사용하여 Adobe Experience Platform 데이터를 쿼리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 9f458a327c0b72a5984161f13f02d09b7a2e610e
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 5%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;타블로;쿼리 서비스;쿼리 서비스;쿼리 서비스에 연결;
 solution: Experience Platform
 title: 쿼리 서비스에 타블로 연결
-topic-legacy: connect
 description: 이 문서에서는 Tableau와 Adobe Experience Platform 쿼리 서비스를 연결하는 단계를 설명합니다.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 2%

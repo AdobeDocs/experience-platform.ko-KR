@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;쿼리 작성;쿼리 작성;
 solution: Experience Platform
 title: Query Service의 쿼리 실행에 대한 일반 지침
-topic-legacy: queries
 type: Tutorial
 description: 이 문서에서는 Adobe Experience Platform Query Service에서 쿼리를 작성할 때 알아야 할 중요한 세부 정보에 대해 설명합니다.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 3%
@@ -308,7 +307,7 @@ LIMIT 50;
 | Android 2.3.6 | 15735.0 |
 | OSX 10.6 | 13357.0 |
 | Windows Phone 7.5 | 11054.0 |
-| Android 4.3 | 921.0 |
+| Android 4.3 | 9221.0 |
 
 ## 중복 제거
 

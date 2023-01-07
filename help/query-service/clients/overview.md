@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;연결;쿼리 서비스에 연결;아쿠아 데이터 스튜디오;Aqua 데이터 스튜디오;조회;확인기;포스티코;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;tableau;
 solution: Experience Platform
 title: 클라이언트를 쿼리 서비스에 연결
-topic-legacy: connect
 description: 이 문서에서는 다양한 데스크톱 클라이언트 응용 프로그램에서 Query Service에 연결하는 방법과 해당 연결을 확인하는 방법을 설명합니다.
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
-source-git-commit: 76687d46508ea641ecb6f9b090cea228f8bbe549
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%

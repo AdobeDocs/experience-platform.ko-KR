@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;experienceevent 쿼리;experienceevent 쿼리;Experience Event 쿼리;
 solution: Experience Platform
 title: 경험 이벤트에 대한 샘플 쿼리
-topic-legacy: queries
 type: Tutorial
 description: 다음 문서에서는 Adobe Experience Platform Query Service의 Experience Events와 관련된 쿼리의 예를 제공합니다.
 exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
-source-git-commit: d79d466602d77f8a3eb1162ee67572973b3e08c7
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%

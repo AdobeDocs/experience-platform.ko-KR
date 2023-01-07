@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;PSQL;psql;쿼리 서비스;쿼리 서비스;메타데이터;명령;메타데이터 명령
 solution: Experience Platform
 title: 쿼리 서비스의 메타데이터 PostgreSQL 명령
-topic-legacy: metadata
 description: Adobe Experience Platform Query Service에서 메타데이터를 쿼리하기 위해 현재 지원되는 PostgreSQL 명령 목록입니다.
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 0%

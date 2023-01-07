@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;준비된 문;준비된;sql;
 solution: Experience Platform
 title: 쿼리 서비스의 준비된 문
-topic-legacy: prepared statements
 description: SQL에서 준비된 문은 유사한 쿼리 또는 업데이트를 서식 지정하는 데 사용됩니다. Adobe Experience Platform 쿼리 서비스는 매개 변수가 있는 쿼리를 사용하여 준비된 문을 지원합니다.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 11%

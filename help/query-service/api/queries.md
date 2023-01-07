@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;api 안내서;쿼리;쿼리;쿼리 서비스;
 solution: Experience Platform
 title: 쿼리 API 끝점
-topic-legacy: queries
 description: 다음 섹션에서는 Query Service API에서 /queries 종단점을 사용하여 수행할 수 있는 호출을 살펴봅니다.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 2%

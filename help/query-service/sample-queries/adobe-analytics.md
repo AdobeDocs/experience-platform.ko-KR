@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;샘플 쿼리;샘플 쿼리;adobe analytics;
 solution: Experience Platform
 title: Adobe Analytics 데이터에 대한 샘플 쿼리
-topic-legacy: queries
 description: 선택한 Adobe Analytics 보고서 세트의 데이터는 XDM ExperienceEvents로 변환되고 데이터 세트로 Adobe Experience Platform으로 수집됩니다. 이 문서에서는 Query Service가 이 데이터를 사용하는 많은 사용 사례를 간략하게 설명하고 Adobe Analytics 데이터 세트에서 작동하도록 설계된 샘플 쿼리를 포함합니다.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 1%

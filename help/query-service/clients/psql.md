@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;PSQL;psqlconnect to query service;Query service;
 solution: Experience Platform
 title: PSQL을 Query Service에 연결
-topic-legacy: connect
 description: PSQL은 시스템에 PostgreSQL을 설치할 때 제공되는 명령줄 인터페이스입니다. 다음 지침에 따라 설치할 수 있습니다.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 4d9e6ce81809c6e6ee1188177a937ac8fc609996
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%

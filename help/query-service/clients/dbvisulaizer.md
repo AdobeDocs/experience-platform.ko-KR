@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;Db 시각화 도우미;Db 시각화 도우미;쿼리 서비스에 연결
 solution: Experience Platform
 title: DbVisualizer를 Query Service에 연결
-topic-legacy: connect
 description: 이 문서에서는 DbVisualizer와 Adobe Experience Platform Query Service를 연결하는 단계를 설명합니다.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 7d38488c204e28c9cfd8ea50c06f1ce781d76c59
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 1%

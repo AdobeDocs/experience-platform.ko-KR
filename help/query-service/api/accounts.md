@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;api 안내서;쿼리 서비스;쿼리 서비스 계정;계정
 solution: Experience Platform
 title: 계정 API 끝점
-topic-legacy: connection parameters
 description: 영구적 을 위한 Query Service 계정을 만들 수 있습니다.
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 4%

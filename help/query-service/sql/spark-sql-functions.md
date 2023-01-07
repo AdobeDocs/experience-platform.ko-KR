@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;스파크 sql;스파크 sql;스파크 sql 함수;함수;
 solution: Experience Platform
 title: 쿼리 서비스의 스파크 SQL 함수
-topic-legacy: spark sql functions
 description: 이 설명서에는 SQL 기능을 확장하는 Spark SQL 기능에 대한 정보가 포함되어 있습니다.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: f291c0db5b751227e979e70ea8f91a0c133ecf34
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '3866'
 ht-degree: 0%

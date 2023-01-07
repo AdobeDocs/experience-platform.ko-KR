@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;sql 구문;sql;ctas;CTAS;선택할 대로 테이블 만들기
 solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
-topic-legacy: syntax
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '3156'
 ht-degree: 2%
@@ -815,7 +814,7 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 | 2 | `integer` | `int4` | `integer` | -2,147,483,648부터 2,147,483,647까지의 정수를 4바이트로 저장하는 데 사용되는 숫자 데이터 유형입니다. |
 | 3 | `smallint` | `int2` | `smallint` | -32,768부터 215-1까지의 정수를 2바이트로 저장하는 데 사용되는 숫자 데이터 형식입니다. |
 | 4 | `tinyint` | `int1` | `tinyint` | 0부터 255까지의 정수를 1바이트로 저장하는 데 사용되는 숫자 데이터 유형입니다. |
-| 5개 | `varchar(len)` | `string` | `varchar(len)` | 변수 크기의 문자 데이터 유형입니다. `varchar` 열 데이터 항목의 크기가 상당히 다를 때 가장 잘 사용됩니다. |
+| 5 | `varchar(len)` | `string` | `varchar(len)` | 변수 크기의 문자 데이터 유형입니다. `varchar` 열 데이터 항목의 크기가 상당히 다를 때 가장 잘 사용됩니다. |
 | 6 | `double` | `float8` | `double precision` | `FLOAT8` 및 `FLOAT` 에 대한 유효한 동의어입니다. `DOUBLE PRECISION`. `double precision` 는 부동 소수점 데이터 유형입니다. 부동 소수점 값은 8바이트로 저장됩니다. |
 | 7 | `double precision` | `float8` | `double precision` | `FLOAT8` 의 유효한 동의어입니다. `double precision`.`double precision` 는 부동 소수점 데이터 유형입니다. 부동 소수점 값은 8바이트로 저장됩니다. |
 | 8 | `date` | `date` | `date` | 다음 `date` 데이터 유형은 타임스탬프 정보가 없는 4바이트 저장된 달력 날짜 값입니다. 유효한 날짜 범위는 01-01-0001부터 12-31-9999까지입니다. |

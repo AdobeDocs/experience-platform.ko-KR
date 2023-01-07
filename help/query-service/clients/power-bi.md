@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;Power BI;power bi;쿼리 서비스에 연결
 solution: Experience Platform
 title: 쿼리 서비스에 Power BI 연결
-topic-legacy: connect
 description: 이 문서에서는 Adobe Experience Platform Query Service와 Power BI을 연결하는 단계를 안내합니다.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 1%
@@ -18,7 +17,7 @@ ht-degree: 1%
 
 ## 시작하기
 
-이 안내서에서는 이미 [!DNL Power BI] 데스크탑 앱과 는 인터페이스를 탐색하는 방법을 잘 알고 있습니다. 다운로드하려면 [!DNL Power BI] 자세한 내용은 [공식 [!DNL Power BI] 설명서](https://docs.microsoft.com/ko-ko/power-bi/).
+이 안내서에서는 이미 [!DNL Power BI] 데스크탑 앱과 는 인터페이스를 탐색하는 방법을 잘 알고 있습니다. 다운로드하려면 [!DNL Power BI] 자세한 내용은 [공식 [!DNL Power BI] 설명서](https://docs.microsoft.com/ko-kr/power-bi/).
 
 >[!IMPORTANT]
 >

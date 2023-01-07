@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;쿼리
 solution: Experience Platform
 title: 쿼리 서비스 개요
-topic-legacy: overview
 description: 이 문서에서는 Experience Platform 내에서 Query Service 역할에 대한 개요를 제공합니다.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 0%
