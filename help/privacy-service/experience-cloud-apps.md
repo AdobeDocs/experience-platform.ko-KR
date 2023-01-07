@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: Privacy Service 및 Experience Cloud 애플리케이션
-topic-legacy: overview
 description: 이 문서에서는 개인 정보 관련 작업을 위해 다양한 Experience Cloud 응용 프로그램을 구성하는 방법에 대한 참조를 제공합니다.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 11%

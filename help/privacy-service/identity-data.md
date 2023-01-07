@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;ECID;ecid
 solution: Experience Platform
 title: 개인 정보 요청에 대한 ID 데이터
-topic-legacy: overview
 description: 이 문서에서는 데이터 작업을 구성하고 Adobe 기술을 활용하여 고객 개인 정보 보호 요청에 대한 적절한 ID 정보를 효과적으로 검색하는 방법에 대한 일반적인 지침을 제공합니다.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 2%
@@ -32,7 +31,7 @@ Adobe Experience Platform Identity 서비스는 전역적으로 정의된 사용
 
 Adobe Experience Cloud [!DNL Identity Service] 는 의 공통 식별 프레임워크로서 사용됩니다. [!DNL Experience Cloud], 및은 각 사이트 방문자에게 고유한 영구 ID를 할당합니다. 다음 [!DNL Experience Cloud] ECID(ID)는 자사 쿠키를 사용하여 고객의 활동을 추적하고 여러 애플리케이션에서 장치를 고유하게 식별할 수 있으며 동일한 사이트 방문자와 해당 데이터를 다른 곳에서 식별할 수 있습니다 [!DNL Experience Cloud] 응용 프로그램. 자세한 내용은 [Experience Cloud ID 서비스 개요](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) 추가 정보.
 
-옵트인 서비스, 확장 [!DNL Experience Cloud Identity Service]를 사용하면 방문자가 방문자의 장치나 브라우저에서 쿠키를 설정할 수 있는지 여부를 확인할 수 있도록 애플리케이션에 프로토콜을 설정할 수 있습니다. 애플리케이션 서비스 설정 방법 등 옵트인 서비스에 대한 자세한 내용은 다음을 참조하십시오 [옵트인 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=ko-KR).
+옵트인 서비스, 확장 [!DNL Experience Cloud Identity Service]를 사용하면 방문자가 방문자의 장치나 브라우저에서 쿠키를 설정할 수 있는지 여부를 확인할 수 있도록 애플리케이션에 프로토콜을 설정할 수 있습니다. 애플리케이션 서비스 설정 방법 등 옵트인 서비스에 대한 자세한 내용은 다음을 참조하십시오 [옵트인 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html).
 
 사이트 방문자에게 ECID가 할당되면 Adobe을 활용할 수 있습니다 [!DNL Privacy JavaScript Library] 다음 섹션에 설명된 대로 개인 정보 보호 요청에 사용할 해당 ID를 검색하기 위한 것입니다.
 

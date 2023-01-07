@@ -2,9 +2,8 @@
 keywords: Experience Platform;프로필;실시간 고객 프로필;사용자 인터페이스;UI;사용자 지정;프로필 세부 사항;세부 사항
 title: UI의 프로필 세부 사항 사용자 지정
 description: 이 안내서에서는 Adobe Experience Platform UI에 실시간 고객 프로필 데이터가 표시되는 방식을 사용자 지정하는 단계별 지침을 제공합니다.
-topic-legacy: guide
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1350'
 ht-degree: 0%

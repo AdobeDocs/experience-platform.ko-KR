@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 에지 투영 API 엔드포인트
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform을 사용하면 변경 사항이 발생하면 즉시 올바른 데이터를 이용할 수 있고 지속적으로 업데이트하여 여러 채널에서 고객을 위해 조정되고, 일관되며, 개인화된 경험을 실시간으로 제공할 수 있습니다. 이러한 작업은 데이터를 저장하고 애플리케이션에 쉽게 액세스할 수 있도록 지리적으로 배치된 서버인 Edge를 사용하여 수행됩니다.
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1959'
 ht-degree: 2%

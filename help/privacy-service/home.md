@@ -2,13 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;GDPR;gdpr;CCPA:PDPA;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
 title: Privacy Service 개요
-topic-legacy: overview
 description: Privacy Service을 사용하면 Experience Cloud 데이터 작업에서 법적 개인 정보 보호 규정을 자동으로 준수할 수 있습니다.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1389'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -29,7 +28,7 @@ Adobe Experience Platform [!DNL Privacy Service] 는 고객의 개인 데이터�
 1. **고객으로부터 어떤 정보를 수집하고 있습니까?**
    * 다음을 최대한 활용하려면 [!DNL Privacy Service], 고객으로부터 수집하는 데이터의 유형과 이러한 데이터 유형에 대한 개인 정보 보호 규정을 준수해야 합니다. 의 섹션을 참조하십시오. [개인 정보 보호 요구 사항 확인](#requirements) 추가 정보.
 1. **데이터에 올바르게 레이블을 지정했습니까?**
-   * 서비스에서 개인 정보 작업 중에 액세스하거나 삭제할 필드를 결정하려면 데이터에 적절하게 레이블이 지정 되어야 합니다. 의 섹션을 참조하십시오. [레이블 지정 데이터](#label) 추가 정보.
+   * 서비스에서 개인 정보 작업 중에 액세스하거나 삭제할 필드를 결정하려면 데이터에 레이블이 제대로 지정되어야 합니다. 의 섹션을 참조하십시오. [레이블 지정 데이터](#label) 추가 정보.
 1. **보낼 ID를 알고 있습니까? [!DNL Privacy Service]?**
    * 개인 정보 보호 요청을 보낼 때 특정 Adobe 애플리케이션별 개별 고객 ID를 제공해야 합니다. 의 섹션을 참조하십시오. [id 데이터 제공](#identity)  및 [개인 정보 보호 요청 만들기](#requests) 추가 정보.
 1. **개인 정보 보호 작업을 어떻게 추적합니까?**
@@ -39,7 +38,7 @@ Adobe Experience Platform [!DNL Privacy Service] 는 고객의 개인 데이터�
 
 ### 조직의 개인 정보 보호 요구 사항 확인 {#requirements}
 
-비즈니스의 성격과 해당 기관이 운영하는 관할 구역에 따라 데이터 운영에 법적 개인 정보 보호 규정이 적용될 수 있습니다. 이러한 규정에서는 고객에게 수집된 데이터에 대한 액세스를 요청할 수 있는 권한과 저장된 데이터의 삭제를 요청할 수 있는 권한을 부여하는 경우가 많습니다. 개인 데이터에 대한 이러한 고객 요청을 설명서 전체에서 &quot;개인 정보 보호 요청&quot;이라고 합니다.
+비즈니스의 성격과 운영되는 관할 구역에 따라 데이터 운영에 법적 개인 정보 보호 규정이 적용될 수 있습니다. 이러한 규정에서는 고객에게 수집된 데이터에 대한 액세스를 요청할 수 있는 권한과 저장된 데이터의 삭제를 요청할 수 있는 권한을 부여하는 경우가 많습니다. 개인 데이터에 대한 이러한 고객 요청을 설명서 전체에서 &quot;개인 정보 보호 요청&quot;이라고 합니다.
 
 다음과 같은 다양한 법적 개인 정보 보호 규정에 대한 자세한 내용 [!DNL Privacy Service] 는 주요 용어와 자주 묻는 질문에 대한 답변을 포함하여 요청을 관리합니다. [개인 정보 보호 규정 문서](./regulations/overview.md).
 

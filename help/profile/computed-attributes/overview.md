@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 계산된 속성 소개
-topic-legacy: guide
 type: Documentation
 description: 계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 함수입니다. 이러한 함수는 세그먼테이션, 활성화 및 개인화 간에 사용할 수 있도록 자동으로 계산됩니다.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 1%

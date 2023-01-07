@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 실시간 고객 프로필 API 시작하기
-topic-legacy: guide
 type: Documentation
 description: 프로필 API 시작 안내서에서는 실시간 고객 프로필 API 엔드포인트를 사용하여 프로필 데이터에 대한 기본 CRUD 작업을 수행하기 위해 알아야 하는 주요 개념 및 기본 기능에 대해 간략하게 설명합니다.
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%

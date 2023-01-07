@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;통합 프로필;통합 프로필;통합;프로필;rtcp;프로필 사용;프로필 사용;결합 스키마;UNION PROFILE;결합 프로필
 title: Real-Time Customer Profile UI 안내서
-topic-legacy: guide
 description: 실시간 고객 프로필은 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합함으로써 각 개별 고객에 대한 전체적인 보기를 만듭니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하는 안내서의 역할을 합니다.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 0%

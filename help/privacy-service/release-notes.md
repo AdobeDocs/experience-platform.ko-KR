@@ -2,13 +2,12 @@
 keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: Privacy Service 릴리스 노트
-topic-legacy: release notes
 description: Adobe Experience Platform Privacy Service에 대한 최신 릴리스 노트입니다.
 exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '553'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 

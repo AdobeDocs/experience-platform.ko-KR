@@ -2,13 +2,12 @@
 keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: Privacy Service 이벤트에 가입
-topic-legacy: privacy events
 description: 사전 구성된 웹 후크를 사용하여 Privacy Service 이벤트에 구독하는 방법을 알아봅니다.
 exl-id: 9bd34313-3042-46e7-b670-7a330654b178
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '440'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 

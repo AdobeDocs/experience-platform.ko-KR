@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;통합 프로필;통합 프로필;통합;프로필;rtcp;XDM 그래프
 title: 실시간 고객 프로필 개요
-topic-legacy: guide
 description: 실시간 고객 프로필은 다양한 소스의 데이터를 병합하고 개별 고객 프로필 및 관련 시계열 이벤트 형태로 해당 데이터에 대한 액세스를 제공합니다. 이 기능을 통해 마케터는 여러 채널에서 대상과 잘 조정되고 일관되며 적절한 경험을 제공할 수 있습니다.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '2046'
 ht-degree: 0%

@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API
 title: 실시간 고객 프로필 문제 해결 안내서
-topic-legacy: guide
 type: Documentation
 description: 이 문서에서는 실시간 고객 프로필에 대해 자주 묻는 질문에 대한 답변과 Adobe Experience Platform을 사용하여 프로필 데이터를 작업할 때 일반적인 오류에 대한 문제 해결 안내서를 제공합니다.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%

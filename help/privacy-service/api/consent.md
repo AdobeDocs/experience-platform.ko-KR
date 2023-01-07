@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: 동의 API 끝점
-topic-legacy: developer guide
 description: Privacy Service API를 사용하여 Experience Cloud 애플리케이션에 대한 고객 동의 요청을 관리하는 방법을 알아봅니다.
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 2%

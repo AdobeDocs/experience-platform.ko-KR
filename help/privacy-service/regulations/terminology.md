@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;GDPR;CCPA;PDPA;PDPA;LGPD;개요;개요;규정;규정;규정;규정;규정;개인 정보;개인 정보;
 solution: Experience Platform
 title: 개인 정보 보호 규정 용어
-topic-legacy: troubleshooting
 description: 이 문서에서는 Adobe Experience Cloud에서 지원하는 개인 정보 보호 규정에 관련된 주요 용어에 대한 정의를 제공합니다.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 65ff39c99eee98654daee89c86d6047dc055c196
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 4%

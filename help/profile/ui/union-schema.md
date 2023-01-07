@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;프로필;실시간 고객 프로필;통합 프로필;통합 프로필;통합;프로필;rtcp;프로필 사용;프로필 사용;결합 스키마;UNION PROFILE;결합 프로필
 title: 결합 스키마 UI 안내서
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform UI(사용자 인터페이스)에서는 조직 내의 모든 결합 스키마를 쉽게 확인하고 특정 클래스에 대한 필드, ID, 관계 및 기여 스키마를 미리 볼 수 있습니다. 이 안내서에서는 Platform UI를 사용하여 결합 스키마를 보고 탐색하는 방법에 대한 자세한 정보를 제공합니다.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 2%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: Adobe 개인 정보 JavaScript 라이브러리 개요
-topic-legacy: overview
 description: Adobe 개인 정보 JavaScript 라이브러리를 사용하면 Privacy Service에서 사용할 데이터 주체 ID를 검색할 수 있습니다.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 6%

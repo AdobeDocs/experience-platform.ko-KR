@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;내보내기;내보내기
 solution: Experience Platform
 title: Privacy Service UI의 개인 정보 작업 관리
-topic-legacy: UI guide
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 보호 요청을 조정하고 모니터링하는 방법을 알아봅니다.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: Privacy Service UI 개요
-topic-legacy: UI guide
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 요청을 조정하고 모니터링합니다.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 76e431301f961484436fe47d28079ee47dbcc8ed
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 1%

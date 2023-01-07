@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: 개인 정보 작업 API 끝점
-topic-legacy: developer guide
 description: Privacy Service API를 사용하여 Experience Cloud 애플리케이션의 개인 정보 보호 작업을 관리하는 방법을 알아봅니다.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 3%
