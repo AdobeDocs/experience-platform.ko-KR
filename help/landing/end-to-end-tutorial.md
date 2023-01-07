@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;홈;인기 항목;CJA;여정 분석;고객 여정 분석;캠페인 오케스트레이션;오케스트레이션;고객 여정;여정;여정 오케스트레이션;기능;영역
 title: Adobe Experience Platform 종단 간 예제 워크플로우
-topic-legacy: getting started
 description: 높은 수준에서 Adobe Experience Platform을 위한 기본 종단 간 워크플로우를 학습합니다.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1836'
 ht-degree: 3%

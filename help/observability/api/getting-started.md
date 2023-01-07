@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;날짜 범위
 solution: Experience Platform
 title: Observability Insights API 시작하기
-topic-legacy: developer guide
 description: Observability Insights API를 사용하면 다양한 Adobe Experience Platform 기능에 대한 지표 데이터를 검색할 수 있습니다. 이 문서에서는 Observability Insights API를 호출하기 전에 알아야 하는 핵심 개념을 소개합니다.
 exl-id: 3b120bd6-155d-467e-b98e-05478f8a4cc5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%

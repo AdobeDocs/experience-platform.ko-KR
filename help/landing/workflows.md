@@ -2,13 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;Adobe Experience Platform;사용 안내서;ui 안내서;워크플로우 ui 안내서;워크플로우;워크플로우 사용 안내서;
 solution: Experience Platform
 title: 워크플로우 UI 안내서
-topic-legacy: ui guide
 description: Adobe Experience Platform 사용자 인터페이스 내에서 일반적인 작업을 수행하기 위한 여러 단계 워크플로우를 따르는 방법을 알아봅니다.
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '307'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 

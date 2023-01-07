@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: 동의 및 기본 설정 데이터를 캡처하도록 데이터 집합 구성
-topic-legacy: getting started
 description: Adobe Experience Platform에서 동의 및 기본 설정 데이터를 캡처하도록 XDM(Experience Data Model) 스키마 및 데이터 세트를 구성하는 방법을 알아봅니다.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 0%

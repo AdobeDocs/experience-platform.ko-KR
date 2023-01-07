@@ -1,9 +1,8 @@
 ---
 title: Adobe Experience Platform의 데이터 암호화
-topic-legacy: data protection
 description: 데이터를 전송 및 Adobe Experience Platform에서 안전하게 암호화하는 방법을 알아봅니다.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: d99a9081edc483831d56af3d838b67d9aba25bea
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 3%

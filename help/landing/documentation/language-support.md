@@ -1,12 +1,10 @@
 ---
-keywords: Experience Platform;홈;인기 항목;CJA;여정 분석;고객 여정 분석;캠페인 통합 운영;고객 여정;여정;여정 통합 운영;기능;지역
+keywords: Experience Platform;홈;인기 항목;CJA;여정 분석;고객 여정 분석;캠페인 오케스트레이션;오케스트레이션;고객 여정;여정;여정 오케스트레이션;기능;영역
 solution: Experience Platform
 title: Experience Platform 설명서 언어 지원
-topic-legacy: getting started
-description: Adobe Experience Platform을 사용하면 데이터 과학 및 머신 러닝을 적용하기 전에 고객 데이터를 중앙에서 관리하고 표준화하여 개인화된 풍부한 경험을 디자인하고 전달할 수 있습니다.
+description: Adobe Experience Platform을 사용하면 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험을 더 잘 설계하고 전달하기 전에 조직 내 고객 데이터와 컨텐츠를 중앙 집중화 및 표준화할 수 있습니다.
 exl-id: 52acf8fb-8420-4fe3-8b8b-b7bfea465d25
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%

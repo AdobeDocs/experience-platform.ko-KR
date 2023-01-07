@@ -2,14 +2,13 @@
 keywords: Experience Platform;홈;인기 항목;인증;액세스
 solution: Experience Platform
 title: Experience Platform API 인증 및 액세스
-topic-legacy: tutorial
 type: Tutorial
 description: 이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1272'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -37,7 +36,7 @@ Experience Platform API를 성공적으로 호출하려면 다음을 수행해�
 
 이 자습서를 완료하려면 Adobe ID도 있어야 합니다. Adobe ID이 없는 경우 다음 단계를 사용하여 만들 수 있습니다.
 
-1. 이동 [Adobe 개발자 콘솔](https://console.adobe.io).
+1. 이동 [Adobe Developer 콘솔](https://console.adobe.io).
 2. 선택 **[!UICONTROL 새 계정 만들기]**.
 3. 등록 프로세스를 완료합니다.
 
@@ -47,9 +46,9 @@ Adobe Developer 콘솔에서 통합을 만들려면 먼저 Adobe Admin Console�
 
 ### 개발자 액세스 권한 얻기
 
-연락처 [!DNL Admin Console] 조직의 관리자가 [[!DNL Admin Console]](https://adminconsole.adobe.com/). 자세한 내용은 [!DNL Admin Console] 설명서 [제품 프로필에 대한 개발자 액세스 관리](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+연락처 [!DNL Admin Console] 조직의 관리자가 [[!DNL Admin Console]](https://adminconsole.adobe.com/). 자세한 내용은 [!DNL Admin Console] 설명서 [제품 프로필에 대한 개발자 액세스 관리](https://helpx.adobe.com/kr/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
-개발자로 할당되면에서 통합 만들기를 시작할 수 있습니다 [Adobe 개발자 콘솔](https://www.adobe.com/go/devs_console_ui). 이러한 통합은 외부 앱 및 서비스에서 Adobe API에 대한 파이프라인입니다.
+개발자로 할당되면에서 통합 만들기를 시작할 수 있습니다 [Adobe Developer 콘솔](https://www.adobe.com/go/devs_console_ui). 이러한 통합은 외부 앱 및 서비스에서 Adobe API에 대한 파이프라인입니다.
 
 ### 사용자 액세스 권한 얻기
 
@@ -65,7 +64,7 @@ Adobe Developer 콘솔에서 통합을 만들려면 먼저 Adobe Admin Console�
 
 ### 프로젝트에 Experience Platform 추가
 
-이동 [Adobe 개발자 콘솔](https://www.adobe.com/go/devs_console_ui) Adobe ID으로 로그인합니다. 다음으로, 다음의 자습서에 설명된 단계를 수행합니다 [빈 프로젝트 만들기](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 를 클릭하십시오.
+이동 [Adobe Developer 콘솔](https://www.adobe.com/go/devs_console_ui) Adobe ID으로 로그인합니다. 다음으로, 다음의 자습서에 설명된 단계를 수행합니다 [빈 프로젝트 만들기](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) ( Adobe Developer 콘솔 설명서)
 
 새 프로젝트를 만든 후 **[!UICONTROL API 추가]** on **[!UICONTROL 프로젝트 개요]** 화면.
 
@@ -197,7 +196,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 ## Postman을 사용하여 API 호출 인증 및 테스트
 
-[포스트맨](https://www.postman.com/) 는 개발자가 RESTful API를 탐색하고 테스트할 수 있도록 해주는 자주 사용하는 도구입니다. 이 [중간 게시물](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Postman을 설정하여 자동으로 JWT 인증을 수행하고 이 인증을 사용하여 플랫폼 API를 사용하는 방법에 대해 설명합니다.
+[Postman](https://www.postman.com/) 는 개발자가 RESTful API를 탐색하고 테스트할 수 있도록 해주는 자주 사용하는 도구입니다. 이 [중간 게시물](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Postman을 설정하여 자동으로 JWT 인증을 수행하고 이 인증을 사용하여 플랫폼 API를 사용하는 방법에 대해 설명합니다.
 
 ## 다음 단계
 

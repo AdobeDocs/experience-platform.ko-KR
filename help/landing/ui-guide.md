@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;Adobe Experience Platform;사용 안내서;ui 안내서;플랫폼 ui 안내서;플랫폼 소개;대시보드
 solution: Experience Platform
 title: Experience Platform UI 개요
-topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1811'
 ht-degree: 1%
