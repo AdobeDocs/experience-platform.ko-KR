@@ -1,9 +1,10 @@
 ---
 title: 메타 픽셀 확장 개요
 description: Adobe Experience Platform의 메타 픽셀 태그 확장에 대해 알아봅니다.
-source-git-commit: a47e35a1b8c7ce2b0fa4ffe30fcdc7d22fc0f4c5
+exl-id: c5127bbc-6fe7-438f-99f1-6efdbe7d092e
+source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
@@ -14,13 +15,11 @@ ht-degree: 0%
 
 다음 [!DNL Meta Pixel] 태그 확장을 사용하면 [!DNL Pixel] 기능이 포함되어 있습니다. 이 문서에서는 확장을 설치하고 [규칙](../../../ui/managing-resources/rules.md).
 
->[!NOTE]
->
->서버측 이벤트를 [!DNL Meta] 클라이언트 측에서 제공하는 대신 [[!DNL Meta Conversions API] 확장](../../server/meta/overview.md) 을 가리키도록 업데이트하는 것이 좋습니다.
-
 ## 전제 조건
 
 확장을 사용하려면 유효한 [!DNL Meta] 액세스 권한이 있는 계정 [!DNL Ads Manager]. 특히 다음을 수행해야 합니다 [새로 만들기 [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) 및 [!DNL Pixel ID] 따라서 확장을 계정에 구성할 수 있습니다. 이미 존재하는 경우 [!DNL Meta Pixel]대신 해당 ID를 사용할 수 있습니다.
+
+을 사용하는 것이 좋습니다 [!DNL Meta Pixel] 와 함께 [!DNL Meta Conversions API] 동일한 이벤트를 클라이언트 측과 서버 측에서 각각 공유 및 전송하려면 이 방법에서 선택하지 않은 이벤트를 복구하는 데 도움이 됩니다 [!DNL Meta Pixel]. 의 안내서를 참조하십시오. [[!DNL Meta Conversions API] 이벤트 전달을 위한 확장](../../client/meta/overview.md) 를 서버측 구현에 통합하는 방법에 대한 단계입니다. 조직은 [이벤트 전달](../../../ui/event-forwarding/overview.md) 서버측 확장을 사용하기 위해.
 
 ## 확장 설치
 
@@ -36,7 +35,7 @@ ht-degree: 0%
 >
 >데이터 요소를 사용하면 동적으로 변경할 수 있는 옵션이 제공됩니다 [!DNL Pixel] 빌드 환경과 같은 다른 요소에 따라 사용되는 ID입니다. 의 부록 섹션을 참조하십시오. [다른 사용 [!DNL Pixel] 다른 환경을 위한 ID](#id-data-element) 추가 정보.
 
-원할 경우 확장과 연결할 이벤트 ID를 제공할 수도 있습니다. 이 변수는 두 이벤트 간에 동일한 이벤트를 중복 제거하는 데 사용됩니다 [!DNL Meta Pixel] 그리고 [!DNL Meta Conversions API]. 자세한 내용은 [!DNL Meta] 설명서 [중복 처리 [!DNL Pixel] 및 [!DNL Conversions API] events](https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/) 자세한 내용
+원할 경우 확장과 연결할 이벤트 ID를 제공할 수도 있습니다. 이 변수는 두 이벤트 간에 동일한 이벤트를 중복 제거하는 데 사용됩니다 [!DNL Meta Pixel] 그리고 [!DNL Meta Conversions API]. 자세한 내용은 [이벤트 중복 제거](../../server/meta/overview.md#event-deduplication) 개요 [!DNL Conversions API] 확장.
 
 완료되면 을 선택합니다 **[!UICONTROL 저장]**
 
@@ -64,7 +63,9 @@ ht-degree: 0%
 
 ## 다음 단계
 
-이 안내서에서는 로 데이터를 전송하는 방법을 다룹니다 [!DNL Meta] 사용 [!DNL Meta Pixel] 태그 확장. Experience Platform의 태그에 대한 자세한 내용은 [태그 개요](../../../home.md).
+이 안내서에서는 로 데이터를 전송하는 방법을 다룹니다 [!DNL Meta] 사용 [!DNL Meta Pixel] 태그 확장. 서버측 이벤트도 [!DNL Meta]를 눌러 설치 및 구성 작업을 진행할 수 있습니다. [[!DNL Conversions API] 이벤트 전달 확장](../../server/meta/overview.md).
+
+Experience Platform의 태그에 대한 자세한 내용은 [태그 개요](../../../home.md).
 
 ## 부록: 다른 항목 사용 [!DNL Pixel] 다른 환경을 위한 ID {#id-data-element}
 
@@ -77,4 +78,3 @@ ht-degree: 0%
 ```js
 return (turbine.environment.stage === "production" ? 'exampleProductionKey' : 'exampleTestKey');
 ```
-
