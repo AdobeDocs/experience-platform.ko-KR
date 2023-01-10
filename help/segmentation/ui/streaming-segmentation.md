@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;스트리밍 세그멘테이션;세그멘테이션 서비스;세그멘테이션 서비스;ui 안내서;
 solution: Experience Platform
 title: 스트리밍 세그멘테이션 UI 안내서
-topic-legacy: ui guide
 description: Adobe Experience Platform의 스트리밍 세그멘테이션을 사용하면 데이터 다양성에 중점을 두고 거의 실시간으로 세그멘테이션을 수행할 수 있습니다. 스트리밍 세그먼테이션을 사용하면 이제 데이터가 플랫폼에 도달하면 세그먼트 자격이 발생하므로 세그먼테이션 작업을 예약하고 실행해야 하는 필요성을 완화합니다. 이 기능을 사용하면 이제 데이터가 Platform으로 전달되므로 대부분의 세그먼트 규칙을 평가할 수 있습니다. 즉, 세그먼트 멤버십은 예약된 세그먼테이션 작업을 실행하지 않고 최신 상태로 유지됩니다.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1495'
 ht-degree: 0%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;클라우드 스토리지 데이터
 solution: Experience Platform
 title: Flow Service API를 사용하여 클라우드 스토리지 소스에 대한 데이터 흐름 만들기
-topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 타사 클라우드 저장소에서 데이터를 검색하고 Platform으로 가져오는 단계를 설명합니다.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1736'
 ht-degree: 1%

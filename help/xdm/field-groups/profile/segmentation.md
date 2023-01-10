@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;개별 프로필;필드;스키마;세그먼트;세그먼트;세그먼트 멤버십;세그먼트 멤버십;스키마 디자인;맵;맵;
 solution: Experience Platform
 title: 세그먼트 멤버십 세부 정보 스키마 필드 그룹
-topic-legacy: overview
 description: 이 문서에서는 세그먼트 멤버십 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 5f28c9eceb42ee19f7a8b22604ff36f8ffbd89b1
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 2%

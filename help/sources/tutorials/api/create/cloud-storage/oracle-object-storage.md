@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;Oracle 개체 저장소;oracle 개체 저장소
 solution: Experience Platform
 title: Flow Service API를 사용하여 Oracle 개체 스토리지 기본 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Oracle 개체 저장소에 연결하는 방법을 알아봅니다.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 1%

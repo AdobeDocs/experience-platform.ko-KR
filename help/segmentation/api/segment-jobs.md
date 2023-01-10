@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼테이션 서비스;세그먼트 작업;세그먼트 작업;API;api;
 solution: Experience Platform
 title: 세그먼트 작업 API 끝점
-topic-legacy: developer guide
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 세그먼트 작업 종단점을 사용하면 조직의 세그먼트 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1511'
 ht-degree: 2%

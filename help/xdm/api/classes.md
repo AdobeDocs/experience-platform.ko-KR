@@ -3,9 +3,8 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: 클래스 API 끝점
 description: 스키마 레지스트리 API의 /classes 종단점을 사용하면 경험 애플리케이션 내에서 XDM 클래스를 프로그래밍 방식으로 관리할 수 있습니다.
-topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 3%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;salesforce marketing cloud;Salesforce Marketing Cloud;마케팅 자동화
 solution: Experience Platform
 title: Salesforce Marketing Cloud 소스 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce Marketing Cloud을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%

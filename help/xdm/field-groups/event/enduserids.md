@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;ExperienceEvent;필드;스키마;스키마;필드 디자인;필드 그룹;필드 그룹;최종 사용자;최종 사용자;id;
 solution: Experience Platform
 title: 최종 사용자 ID 세부 정보 스키마 필드 그룹
-topic-legacy: overview
 description: 이 문서에서는 최종 사용자 ID 세부 사항 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 5%

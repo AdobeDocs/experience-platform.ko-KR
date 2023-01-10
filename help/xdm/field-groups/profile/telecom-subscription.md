@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;개별 프로필;필드;스키마;스키마;통신;구독;통신;스키마 디자인;필드 그룹;필드 그룹;
 solution: Experience Platform
 title: 통신 구독 스키마 필드 그룹
-topic-legacy: overview
 description: 이 문서에서는 Telecom 구독 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
-source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 6%

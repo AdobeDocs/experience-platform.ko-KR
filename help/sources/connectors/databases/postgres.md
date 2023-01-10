@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;PostgreSQL;postgresql
 solution: Experience Platform
 title: PostgreSQL 소스 커넥터 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 PostgreSQL을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%

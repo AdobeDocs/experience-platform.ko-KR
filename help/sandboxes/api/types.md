@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;목록 샌드박스
 solution: Experience Platform
 title: 샌드박스 유형 API 끝점
-topic-legacy: developer guide
 description: /sandboxTypes 종단점에 GET 요청을 수행하여 조직에 대해 지원되는 샌드박스 유형 목록을 검색할 수 있습니다.
 exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 2%

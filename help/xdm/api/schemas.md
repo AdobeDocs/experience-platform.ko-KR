@@ -3,9 +3,8 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: 스키마 API 끝점
 description: 스키마 레지스트리 API의 /schema 종단점을 사용하면 경험 애플리케이션 내에서 XDM 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
-topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 666f424355fd1104971bb1566b72e207d00f4a56
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 4%

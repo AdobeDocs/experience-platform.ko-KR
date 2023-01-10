@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;에지 세그멘테이션;세그멘테이션 서비스;세그멘테이션 서비스;ui 안내서;스트리밍 에지;
 solution: Experience Platform
 title: Edge Segmentation UI 안내서
-topic-legacy: ui guide
 description: Edge Segmentation은 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 가능하게 하는 기능입니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '939'
 ht-degree: 0%

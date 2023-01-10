@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;Azure Blob;azure blob;Azure Blob 커넥터
 solution: Experience Platform
 title: UI에서 Azure Blob 소스 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: 플랫폼 사용자 인터페이스를 사용하여 Azure Blob 소스 커넥터를 만드는 방법을 알아봅니다.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 1%

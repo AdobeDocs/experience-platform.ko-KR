@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;그린플럼;그린플럼
 solution: Experience Platform
 title: Flow Service API를 사용하여 GreenPlum Base 연결 생성
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 GreenPlum을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 2%

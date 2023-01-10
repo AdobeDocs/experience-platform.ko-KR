@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 title: 셀프 서비스 소스(배치 SDK)에 대한 소스 사양 구성
-topic-legacy: overview
 description: 이 문서에서는 셀프 서비스 소스(배치 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: adaa0e1a63536bc1fdf751eec477e5cda9fd20ae
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1690'
 ht-degree: 1%

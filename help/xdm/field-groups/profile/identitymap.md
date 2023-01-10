@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;개별 프로필;필드;스키마;ID맵;ID 맵;스키마 디자인;맵;맵;결합 스키마;결합
 title: IdentityMap 스키마 필드 그룹
-topic-legacy: overview
 description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: c59b4bd7ccc61ef4f9dc8a963903e3ec495558ed
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%

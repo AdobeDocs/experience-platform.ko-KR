@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;Google PubSub;google pubsub
 solution: Experience Platform
 title: UI에서 Google PubSub 소스 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: 플랫폼 사용자 인터페이스를 사용하여 Google PubSub 소스 커넥터를 만드는 방법을 알아봅니다.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 1%

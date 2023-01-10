@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;데이터 사용 규정 준수;적용;데이터 사용 준수 적용;세그먼테이션 서비스;세그먼테이션;세그먼테이션;
 solution: Experience Platform
 title: API를 사용하여 대상 세그먼트에 대한 데이터 사용 규정 준수 적용
-topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 API를 사용하여 실시간 고객 프로필 대상 세그먼트에 대한 데이터 사용 규정을 적용하는 단계를 설명합니다.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 1%

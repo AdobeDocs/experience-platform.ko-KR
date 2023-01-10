@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그멘테이션;세그멘테이션 서비스;미리 보기;예측;미리 보기 및 예상;예측 및 미리 보기;api;API;
 solution: Experience Platform
 title: API 엔드포인트 미리 보기 및 예상
-topic-legacy: developer guide
 description: 세그먼트 정의가 개발되면 Adobe Experience Platform 내의 예측 및 미리 보기 도구를 사용하여 요약 수준 정보를 보고 예상 대상을 분리할 수 있습니다.
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 2%

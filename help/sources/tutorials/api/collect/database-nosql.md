@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;데이터베이스 데이터베이스;타사 데이터베이스
 solution: Experience Platform
 title: Flow Service API를 사용하여 데이터베이스 소스에 대한 데이터 흐름 만들기
-topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 데이터베이스에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 데이터를 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 1%

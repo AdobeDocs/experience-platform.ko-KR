@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 title: 셀프 서비스 소스(배치 SDK) API 안내서
-topic-legacy: overview
 description: 이 문서에서는 Flow Service API를 사용하여 새 연결 사양을 검색, 쓰기 및 제출하는 단계 등 새 소스를 생성하는 프로세스에 대한 개요를 제공합니다.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---

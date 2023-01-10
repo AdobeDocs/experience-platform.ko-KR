@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;대상;대상;API;api;
 title: 대상 API 엔드포인트
-topic-legacy: developer guide
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 대상 종단점을 사용하면 조직의 대상을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
-source-git-commit: f4ec5b82a14579de5bf228011d14a849898be9f5
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 4%

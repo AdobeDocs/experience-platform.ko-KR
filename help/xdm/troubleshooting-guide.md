@@ -3,9 +3,8 @@ keywords: Experience Platform;인기 항목;XDM;XDM 시스템;XDM 개별 프로�
 solution: Experience Platform
 title: XDM 시스템 문제 해결 안내서
 description: 일반적인 API 오류를 해결하는 단계를 포함하여 XDM(Experience Data Model)에 대해 자주 묻는 질문에 대한 답변을 찾습니다.
-topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 0%

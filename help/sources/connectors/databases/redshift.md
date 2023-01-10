@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;Amazon Redshift;Amazon Redshift;Redshift;Redshift
 solution: Experience Platform
 title: Amazon Redshift 소스 커넥터 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Amazon Redshift를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;onetrust;OneTrust
 solution: Experience Platform
 title: (베타) UI에서 OneTrust 소스 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 OneTrust 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
-source-git-commit: cfc6e7cb3877f3b5f716b7f82e7c2d308ef5ed10
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;pql;PQL;프로필 쿼리 언어;문자열 함수;문자열
 solution: Experience Platform
 title: PQL 문자열 함수
-topic-legacy: developer guide
 description: PQL(프로필 쿼리 언어)은 문자열과 보다 간편하게 상호 작용할 수 있는 기능을 제공합니다.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: 1c9ed96cdbd9e670bd1f05467e33e8dab5bc2121
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 6%

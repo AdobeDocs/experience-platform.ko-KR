@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 주제;피닉스;피닉스
 solution: Experience Platform
 title: Flow Service API를 사용하여 Phoenix Base Connection 생성
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Phoenix 데이터베이스를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%

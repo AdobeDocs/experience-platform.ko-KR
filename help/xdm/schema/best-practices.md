@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;열거형;기본 ID;기본 ID;XDM 개별 프로필;경험 이벤트;XDM 경험 이벤트;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevent;스키마 디자인;우수 사례
 solution: Experience Platform
 title: 데이터 모델링 우수 사례
-topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 XDM(Experience Data Model) 스키마와 빌딩 블록, 원칙 및 모범 사례를 소개합니다.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '2699'
 ht-degree: 2%

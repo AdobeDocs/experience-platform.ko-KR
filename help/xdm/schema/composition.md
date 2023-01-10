@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;스키마;mixin;필드 그룹;필드 그룹;mixin;데이터 유형;데이터 유형;데이터 유형;데이터 유형;기본 ID;기본 ID;XDM 개별 프로필;XDM 필드;데이터 유형;경험 이벤트;XDM 경험 이벤트;XDM ExperienceEvent;experienceevent;experienceevent;XDM ExperienceEvent;스키마;디자인;클래스;클래스;클래스;클래스;클래스;데이터 유형;데이터 유형;데이터 유형 스키마;ID ID;ID;ID 맵;스키마 디자인;맵;맵;결합 스키마;결합
 solution: Experience Platform
 title: 스키마 구성 기본 사항
-topic-legacy: overview
 description: 이 문서에서는 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 XDM(Experience Data Model) 스키마와 빌딩 블록, 원칙 및 모범 사례를 소개합니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '4103'
 ht-degree: 2%

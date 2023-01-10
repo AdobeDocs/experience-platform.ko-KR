@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;PQL;pql;프로필 쿼리 언어
 solution: Experience Platform
 title: PQL(프로필 쿼리 언어) 개요
-topic-legacy: developer guide
 description: 이 안내서에서는 PQL에 대한 일반적인 개요를 제공하고 서식 지침을 설명하고 PQL 표현식 예를 제공합니다.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 2%

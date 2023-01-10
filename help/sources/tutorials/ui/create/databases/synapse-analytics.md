@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;Azure synapse Analytics;Synapse;synapse;azure synapse 분석
 solution: Experience Platform
 title: UI에서 Azure synapse Analytics 소스 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Analytics(이하 "Synapse"라 한다) 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 1%

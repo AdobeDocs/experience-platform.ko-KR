@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Microsoft Dynamics 소스 커넥터 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Microsoft Dynamics를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: 4fbf1b9a55c755d0bac9e15efbf6bdb25fa24deb
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;결제
 solution: Experience Platform
 title: Flow Service API를 사용한 결제 시스템 탐색
-topic-legacy: overview
 description: 이 자습서에서는 Flow Service API를 사용하여 결제 애플리케이션을 탐색합니다.
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 2%

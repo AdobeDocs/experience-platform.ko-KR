@@ -2,9 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;OneTrust;onetrust;동의;동의 및 환경 설정;준수
 solution: Experience Platform
 title: (베타) OneTrust 통합 소스 커넥터 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 OneTrust 통합을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
-source-git-commit: e566f4e2a4a337abe6f09d7d2e66530a5b9baa0c
+exl-id: f2229d4d-8aa6-483a-9156-403309f80007
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%

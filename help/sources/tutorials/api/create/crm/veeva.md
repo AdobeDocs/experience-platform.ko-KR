@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;veva crm;Vevar CRM;Vevar;
 solution: Experience Platform
 title: Flow Service API를 사용하여 Vec CRM 기본 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Vec CRM에 연결하는 방법을 알아봅니다.
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
-source-git-commit: ea20a850a5d83f648c699119913aa31e2ea16233
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 2%

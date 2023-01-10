@@ -2,13 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 solution: Experience Platform
 title: Flow Service API를 사용하여 새 연결 사양을 만듭니다
-topic-legacy: tutorial
 description: 다음 문서에서는 Flow Service API를 사용하여 연결 사양을 만들고 Self-Serve Sources를 통해 새 소스를 통합하는 방법에 대해 설명합니다.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: ae5bb475bca90b31d8eb7cf6b66d4d191d36ac5c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '800'
+ht-degree: 1%
 
 ---
 

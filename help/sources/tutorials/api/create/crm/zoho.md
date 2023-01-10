@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;Zoho CRM;Zoho crm;Zoho;zoho
 solution: Experience Platform
 title: Flow Service API를 사용하여 Zoho CRM 기본 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Zoho CRM에 연결하는 방법을 알아봅니다.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 1%

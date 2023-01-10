@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;mysql;MySQL
 solution: Experience Platform
 title: UI에서 MySQL 소스 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 MySQL 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 1%

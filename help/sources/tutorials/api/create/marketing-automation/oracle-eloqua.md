@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 주제;oracle;언쇼어;oracle 웅변
 solution: Experience Platform
 title: Flow Service API를 사용하여 Oracle Eloqua Base Connection 생성
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Oracle Eloqua에 연결하는 방법을 알아봅니다.
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 1%

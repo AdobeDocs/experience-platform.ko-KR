@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;옵트아웃;세그먼테이션;세그먼테이션 서비스;세그먼테이션 서비스;옵트아웃 적용;옵트아웃;옵트아웃;옵트아웃;옵트아웃;동의;공유;수집
 solution: Experience Platform
 title: 세그먼트에서 동의 준수
-topic-legacy: overview
 description: 개인 데이터 수집 및 세그먼트 작업에서 공유에 대한 고객 동의 환경 설정을 적용하는 방법을 알아봅니다.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 0%

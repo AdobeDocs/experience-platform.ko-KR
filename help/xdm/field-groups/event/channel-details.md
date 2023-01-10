@@ -2,23 +2,22 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;경험 이벤트;필드;스키마;스키마 디자인;필드 그룹;필드 그룹;
 solution: Experience Platform
 title: 채널 세부 정보 스키마 필드 그룹
-topic-legacy: overview
 description: 이 문서에서는 채널 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 3%
 
 ---
 
-
-# [!UICONTROL 채널 ] 세부 정보스키마 필드 그룹
+# [!UICONTROL 채널 세부 사항] 스키마 필드 그룹
 
 >[!NOTE]
 >
->여러 스키마 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../name-updates.md)에 있는 문서를 참조하십시오.
+>여러 스키마 필드 그룹의 이름이 변경되었습니다. 다음 문서를 참조하십시오. [필드 그룹 이름 업데이트](../name-updates.md) 추가 정보.
 
-[!UICONTROL 채널 ] 세부 정보는 ID,  [[!DNL XDM ExperienceEvent] 채널 유형, 미디어 유형 및 위치 유형과 같은 채널 정보를 설명하는 데 사용되는 ](../../classes/experienceevent.md) 클래스의 표준 스키마 필드 그룹을 나타냅니다.
+[!UICONTROL 채널 세부 사항] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)ID, 채널 유형, 미디어 유형 및 위치 유형과 같은 채널 정보를 설명하는 데 사용됩니다.
 
 ![](../../images/field-groups/channel-details.png)
 

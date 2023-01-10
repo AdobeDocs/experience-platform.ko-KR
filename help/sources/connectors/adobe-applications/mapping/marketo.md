@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;Marketo Engage;marketo engage;Marketo;매핑
 solution: Experience Platform
 title: Marketo Engage 소스에 대한 매핑 필드
-topic-legacy: overview
 description: 아래 표에는 Marketo 데이터 세트의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '952'
 ht-degree: 4%

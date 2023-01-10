@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;고객 속성
 solution: Experience Platform
 title: UI에서 고객 속성 소스 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: UI에서 소스 연결을 만들어 고객 특성 프로필 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 4%

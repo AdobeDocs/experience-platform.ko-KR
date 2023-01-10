@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;eCommerce 커넥터;eCommerce
 solution: Experience Platform
 title: UI에서 전자 상거래 소스를 사용하여 데이터 흐름 만들기
-topic-legacy: overview
 type: Tutorial
 description: 데이터 흐름은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 플랫폼 UI를 사용하여 전자 상거래 소스용 데이터 흐름을 만드는 방법에 대해 설명합니다.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;Vevar CRM;vevar crm;vevar;crm
 solution: Experience Platform
 title: Veva CRM 소스 커넥터 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Veva CRM을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
-source-git-commit: ec0d6be6fde8ea7a0378769810079e3e62e9fd60
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%

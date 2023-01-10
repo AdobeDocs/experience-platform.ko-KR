@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 solution: Experience Platform
 title: Flow Service API를 사용하여 Mailchimp Campaign에 대한 데이터 흐름 만들기
-topic-legacy: tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 MailChimp Campaign에 연결하는 방법을 알아봅니다.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '1942'
 ht-degree: 1%

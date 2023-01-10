@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;샌드박스 개발자 안내서
 solution: Experience Platform
 title: 샌드박스 API 시작하기
-topic-legacy: developer guide
 description: Sandbox API를 통해 개발자는 Adobe Experience Platform에서 샌드박스를 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 5%

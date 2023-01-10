@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼트 빌더;세그먼트 빌더
 solution: Experience Platform
 title: 리팩터링 세그먼테이션 시간 제한 UI 안내서
-topic-legacy: ui guide
 description: 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같이 규칙을 만들고 편집하기 위한 직관적인 컨트롤을 제공합니다.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 0%

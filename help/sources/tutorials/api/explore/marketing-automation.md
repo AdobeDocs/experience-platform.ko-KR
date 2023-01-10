@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;마케팅 자동화
 solution: Experience Platform
 title: Flow Service API를 사용하여 마케팅 자동화 시스템 탐색
-topic-legacy: overview
 description: 이 자습서에서는 Flow Service API를 사용하여 마케팅 자동화 시스템을 탐색합니다.
 exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 2%

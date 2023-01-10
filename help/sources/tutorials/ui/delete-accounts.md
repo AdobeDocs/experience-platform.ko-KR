@@ -3,10 +3,9 @@ keywords: Experience Platform;홈;인기 있는 주제 계정 삭제
 description: Adobe Experience Platform의 소스 커넥터는 예약된 방식으로 외부 소스 데이터를 수집할 수 있습니다. 이 자습서에서는 소스 작업 영역에서 계정을 삭제하는 단계를 제공합니다.
 solution: Experience Platform
 title: UI에서 소스 연결 계정 삭제
-topic-legacy: overview
 type: Tutorial
 exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%

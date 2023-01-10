@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;ecommerce;eCommerce
 solution: Experience Platform
 title: Flow Service API를 사용하여 eCommerce 연결 탐색
-topic-legacy: overview
 description: 이 자습서에서는 Flow Service API를 사용하여 eCommerce 연결을 탐색합니다.
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 2%

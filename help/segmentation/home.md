@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼트 서비스;세그먼트;세그먼트;세그먼트;세그먼트
 solution: Experience Platform
 title: 세그먼테이션 서비스 개요
-topic-legacy: overview
 description: Adobe Experience Platform 세그멘테이션 서비스 및 플랫폼 생태계에서 수행하는 역할에 대해 알아봅니다.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 0%

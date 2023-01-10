@@ -2,19 +2,18 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;비콘;상호 작용 세부 사항;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: 지역 상호 작용 세부 사항 데이터 유형
-topic-legacy: overview
 description: 이 문서에서는 Geo Interaction Details XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '159'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL 지역 상호 작용 ] 세부 정보데이터 유형
+# [!UICONTROL 지역 상호 작용 세부 사항] 데이터 유형
 
-[!UICONTROL 지역 상호 작용] 은 지리적으로 정의된 영역에 포함되는 현재 상태를 설명하는 표준 XDM 데이터 유형을 자세히 설명합니다.
+[!UICONTROL 지역 상호 작용 세부 사항] 는 지리적으로 정의된 영역에 포함되는 현재 상태를 설명하는 표준 XDM 데이터 유형입니다.
 
 <img src="../images/data-types/geo-interaction-details.png" width="400" /><br />
 

@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;샌드박스 문제 해결
 solution: Experience Platform
 title: 샌드박스 문제 해결 안내서
-topic-legacy: troubleshooting guide
 description: 이 문서에서는 Adobe Experience Platform의 샌드박스에 대한 자주 묻는 질문에 대한 답변을 제공합니다.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 1%

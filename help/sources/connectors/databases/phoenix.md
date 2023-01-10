@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 주제;피닉스;피닉스
 solution: Experience Platform
 title: Phoenix Source Connector 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Phoenix를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%

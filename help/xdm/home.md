@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;XDM;XDM 시스템;XDM 개별 프로필;XDM ExperienceEvent;XDM 경험 이벤트;경험 이벤트;경험 이벤트;필드 그룹;필드 그룹;필드 그룹;경험 이벤트;XDM 경험 이벤트;XDM ExperienceEvent;experienceEvent;XDM ExperienceEvent;경험 이벤트;XDM 경험 이벤트;경험 데이터 모델;경험 데이터 모델;경험 데이터 모델;데이터 모델;레지스트리 스키마;스키마 스키마 스키마;스키마;스키마;레코드 데이터;시계열;시계열
 solution: Experience Platform
 title: XDM 시스템 개요
-topic-legacy: overview
 description: 표준화와 상호 운용성은 Adobe Experience Platform의 주요 개념입니다. Adobe 기반의 XDM(경험 데이터 모델)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하려는 노력입니다.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '2087'
 ht-degree: 2%

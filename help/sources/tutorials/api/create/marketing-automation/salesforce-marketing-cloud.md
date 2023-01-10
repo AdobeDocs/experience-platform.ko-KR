@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;salesforce marketing cloud;Salesforce Marketing Cloud
 solution: Experience Platform
 title: Flow Service API를 사용하여 Salesforce Marketing Cloud 기본 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Salesforce Marketing Cloud에 연결하는 방법을 알아봅니다.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 1%

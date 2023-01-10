@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;api;
 solution: Experience Platform
 title: 세그멘테이션 서비스 API 시작하기
-topic-legacy: developer guide
 description: 다음 설명서는 세그멘테이션 API를 성공적으로 사용하기 위해 알고 있어야 하는 추가 정보를 제공합니다.
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '353'
 ht-degree: 1%

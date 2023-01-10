@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;SFTP;sftp
 solution: Experience Platform
 title: SFTP 소스 커넥터 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 SFTP 서버를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 2db458fa335d65642549773a35ddefe602102f7f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -89,7 +88,7 @@ C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\
 
 위의 명령은 [!DNL Base64]지정한 파일 경로에 있는 -인코딩된 개인 키. 그런 다음 해당 개인 키를 사용하여 [!DNL SFTP] Platform에 연결할 수 있습니다.
 
-### [!DNL Mac] 사용자
+### [!DNL Mac] users
 
 를 사용 중인 경우 [!DNL Mac], 열기 **터미널** 다음 명령을 실행하여 개인 키를 생성합니다(이 경우 개인 키가 `/Documents/id_rsa`):
 

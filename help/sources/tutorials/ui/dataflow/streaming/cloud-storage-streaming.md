@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;스트리밍;클라우드 스토리지 커넥터;클라우드 스토리지
 solution: Experience Platform
 title: UI에서 클라우드 스토리지 소스에 대한 스트리밍 데이터 흐름 만들기
-topic-legacy: overview
 type: Tutorial
 description: 데이터 흐름은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 클라우드 저장소 기본 커넥터를 사용하여 새 데이터 흐름을 구성하는 단계를 제공합니다.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 0%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;그린플럼;그린플럼
 solution: Experience Platform
 title: UI에서 GreenPlum 소스 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 GreenPlum 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: e6c6a495-25ce-4497-b20e-91374c7bb548
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 1%

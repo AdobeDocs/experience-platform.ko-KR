@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;Azure Data Explorer;azure 데이터 탐색기
 solution: Experience Platform
 title: Azure Data Explorer 소스 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Azure Data Explorer을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%

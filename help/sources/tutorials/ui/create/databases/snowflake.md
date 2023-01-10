@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Snowflake
 title: UI에서 Snowflake 소스 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Snowflake 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ac7910c971fbedf3afebd87633f814d597260cae
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 2%

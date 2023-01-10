@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 title: 소스 제출
-topic-legacy: overview
 description: 다음 문서에서는 Flow Service API를 사용하여 새 소스를 테스트 및 확인하고 자체 서비스 소스(배치 SDK)를 통해 새 소스를 통합하는 방법에 대한 단계를 제공합니다.
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '826'
 ht-degree: 0%
 
 ---

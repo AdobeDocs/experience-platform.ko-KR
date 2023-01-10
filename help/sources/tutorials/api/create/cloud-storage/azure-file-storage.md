@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;Azure;Azure 파일 저장소;Azure 파일 저장소
 solution: Experience Platform
 title: Flow Service API를 사용하여 Azure 파일 저장소 기본 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Azure 파일 저장소를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%

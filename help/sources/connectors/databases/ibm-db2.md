@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
 title: IBM DB2 소스 커넥터 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 IBM DB2를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%

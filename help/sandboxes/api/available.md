@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;사용 가능한 샌드박스 목록;샌드박스 목록
 solution: Experience Platform
 title: 사용 가능한 샌드박스 API 끝점
-topic-legacy: developer guide
 description: 사용 가능한 샌드박스 종단점에 대한 GET 요청을 만들어 현재 사용자가 사용할 수 있는 샌드박스를 나열할 수 있습니다.
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 2%

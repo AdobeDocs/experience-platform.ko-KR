@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;bigquery;Google;google;Google BigQuery
 solution: Experience Platform
 title: Flow Service API를 사용하여 Google BigQuery Base 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Google BigQuery에 연결하는 방법을 알아봅니다.
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 015a4fa06fc2157bb8374228380bb31826add37e
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 1%

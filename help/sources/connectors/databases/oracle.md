@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;Oracle;oracle
 solution: Experience Platform
 title: Oracle 소스 커넥터 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Adobe Experience Platform에 Oracle을 연결하는 방법을 알아봅니다.
 exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%

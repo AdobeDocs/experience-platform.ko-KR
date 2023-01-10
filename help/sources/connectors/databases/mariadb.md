@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;MariaDB;마리아그룹;Maria DB;마리아 DB;db
 solution: Experience Platform
 title: MariaDB 소스 커넥터 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 MariaDB를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%

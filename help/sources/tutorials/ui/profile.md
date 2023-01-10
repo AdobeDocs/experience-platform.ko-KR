@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;인바운드 데이터 활성화;프로필 채우기;rtcp 채우기;채워진 통합 프로필
 solution: Experience Platform
 title: 인바운드 소스 데이터를 활성화하여 UI에서 고객 프로필 채우기
-topic-legacy: overview
 type: Tutorial
 description: 소스 커넥터의 인바운드 데이터를 실시간 고객 프로필 데이터를 강화 및 채우는 데 사용할 수 있습니다.
 exl-id: ddd3766a-3f55-4bbc-8358-c578eae2c629
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%

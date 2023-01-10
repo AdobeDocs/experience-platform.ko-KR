@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;샌드박스 사용 안내서;샌드박스 안내서
 solution: Experience Platform
 title: 샌드박스 UI 안내서
-topic-legacy: user guide
 description: 이 문서에서는 Adobe Experience Platform 사용자 인터페이스의 샌드박스와 관련된 다양한 작업을 수행하는 방법에 대해 설명합니다.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: df0f543b18f008b656c5e411305c5243efa744ad
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 2%

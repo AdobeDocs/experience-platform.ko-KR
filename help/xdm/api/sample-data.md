@@ -3,9 +3,8 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: 샘플 데이터 API 끝점
 description: 스키마 레지스트리 API의 /sampleddata 종단점을 사용하면 기존 XDM 스키마의 구조에 매핑되는 샘플 데이터를 생성할 수 있습니다.
-topic-legacy: developer guide
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 2%

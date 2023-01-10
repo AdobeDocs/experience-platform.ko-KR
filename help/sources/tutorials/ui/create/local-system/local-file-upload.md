@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;로컬 시스템;파일 업로드;csv 매핑;csv 파일 매핑;csv 파일을 xdm에 매핑;xdm에 csv 매핑;ui 안내서;
 solution: Experience Platform
 title: UI에서 로컬 파일 업로드 소스 커넥터 만들기
-topic-legacy: overview
 type: Tutorial
 description: 로컬 시스템을 위한 소스 연결을 만들어 로컬 파일을 Platform으로 가져오는 방법을 알아봅니다
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 1%

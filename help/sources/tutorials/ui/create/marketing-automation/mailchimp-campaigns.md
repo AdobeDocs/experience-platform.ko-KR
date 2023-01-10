@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 solution: Experience Platform
 title: Platform UI를 사용하여 MailChimp 캠페인 소스 연결 만들기
-topic-legacy: tutorial
 description: 플랫폼 UI를 사용하여 Adobe Experience Platform을 MailChimp 캠페인에 연결하는 방법을 알아봅니다.
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
-source-git-commit: 430b544835956ec0b212fb44d48beaae46afdd2e
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%

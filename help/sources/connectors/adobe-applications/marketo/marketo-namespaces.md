@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;Marketo 소스 커넥터;네임스페이스;스키마;b2b;B2B
 solution: Experience Platform
 title: B2B 네임스페이스 및 스키마
-topic-legacy: overview
 description: 이 문서에서는 B2B 소스 커넥터를 만들 때 필요한 사용자 지정 네임스페이스에 대한 개요를 제공합니다.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1707'
 ht-degree: 4%

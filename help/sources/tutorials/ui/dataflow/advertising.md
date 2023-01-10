@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;데이터 흐름 구성;광고 커넥터
 solution: Experience Platform
 title: UI에서 광고 소스를 사용하여 데이터 흐름 만들기
-topic-legacy: overview
 type: Tutorial
 description: 데이터 흐름은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 플랫폼 UI를 사용하여 광고 소스용 데이터 흐름을 만드는 방법에 대해 설명합니다.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 0%

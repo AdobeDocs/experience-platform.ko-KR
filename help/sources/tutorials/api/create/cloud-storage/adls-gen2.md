@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;Azure Data Lake Storage Gen2;azure data lake storage;Azure
 solution: Experience Platform
 title: Flow Service API를 사용하여 Azure Data Lake Storage Gen2 기본 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Azure Data Lake Storage Gen2에 연결하는 방법을 알아봅니다.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 1%

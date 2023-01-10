@@ -2,15 +2,14 @@
 keywords: Experience Platform;홈;인기 주제;소스;커넥터;oracle;oracle 웅변;웅변
 solution: Experience Platform
 title: 플랫폼 UI를 사용하여 Oracle Eloqua 소스 연결 만들기
-topic-legacy: tutorial
 description: 플랫폼 UI를 사용하여 Adobe Experience Platform을 Oracle Eloqua에 연결하는 방법을 알아봅니다.
-source-git-commit: a40a1b8fae41c495afd9cdfc3c8d68148e90f2cd
+exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 1%
 
 ---
-
 
 # 만들기 [!DNL Oracle Eloqua] 플랫폼 UI를 사용한 소스 연결
 
@@ -66,4 +65,3 @@ ht-degree: 1%
 ## 다음 단계
 
 이 자습서를 따라 사용자 간에 소스 연결을 인증하고 만들었습니다 [!DNL Oracle Eloqua] 계정 및 플랫폼. 이제 다음 자습서를 계속 진행하고 [데이터 흐름을 만들어 마케팅 자동화 데이터를 플랫폼으로 가져오기](../../dataflow/marketing-automation.md).
-

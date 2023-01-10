@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;모니터 데이터 흐름;흐름 서비스 api;흐름 서비스
 solution: Experience Platform
 title: Flow Service API를 사용하여 소스 데이터 흐름 모니터링
-topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 완벽성, 오류 및 지표에 대한 플로우 실행 데이터를 모니터링하는 단계를 설명합니다.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 2%

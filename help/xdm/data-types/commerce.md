@@ -2,19 +2,18 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;상거래;데이터 유형;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: 상거래 데이터 유형
-topic-legacy: overview
 description: 이 문서에서는 XDM(Commerce Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
 exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '341'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-#  상거래 데이터 유형
+# [!UICONTROL 상거래] 데이터 유형
 
- Commerce는 구매 및 판매 활동과 관련된 레코드를 설명하는 표준 XDM(Experience Data Model) 데이터 유형입니다.
+[!UICONTROL 상거래] 는 구매 및 판매 활동과 관련된 레코드를 설명하는 표준 XDM(Experience Data Model) 데이터 유형입니다.
 
 <img src="../images/data-types/commerce.PNG" width="400" /><br />
 

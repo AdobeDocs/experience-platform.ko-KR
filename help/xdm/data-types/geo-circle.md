@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;지역;원;데이터 유형;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: 지역 원 데이터 유형
-topic-legacy: overview
 description: 이 문서에서는 지리적 원 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 3%

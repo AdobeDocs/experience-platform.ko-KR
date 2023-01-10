@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;경험 이벤트;필드;스키마;스키마;스키마 디자인;필드 그룹;필드 그룹;환경;환경 세부 사항;
 solution: Experience Platform
 title: 환경 세부 정보 스키마 필드 그룹
-topic-legacy: overview
 description: 이 문서에서는 ExperienceEvent 환경 세부 사항 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 3%
@@ -13,13 +12,13 @@ ht-degree: 3%
 ---
 
 
-# [!UICONTROL 환경 ] 세부 정보스키마 필드 그룹
+# [!UICONTROL 환경 세부 사항] 스키마 필드 그룹
 
 >[!NOTE]
 >
->여러 스키마 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../name-updates.md)에 있는 문서를 참조하십시오.
+>여러 스키마 필드 그룹의 이름이 변경되었습니다. 다음 문서를 참조하십시오. [필드 그룹 이름 업데이트](../name-updates.md) 추가 정보.
 
-[!UICONTROL 환경 ] 세부 사항은  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) 장치 세부 사항, 브라우저 정보, 현지 시간 및 기타 지역 정보와 같은 경험 이벤트와 관련된 환경 세부 사항을 캡처하는 데 사용되는 클래스에 대한 표준 스키마 필드 그룹을 나타냅니다.
+[!UICONTROL 환경 세부 사항] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md) 장치 세부 사항, 브라우저 정보, 로컬 시간 및 기타 지역 정보와 같이, 경험 이벤트와 관련된 환경 세부 사항에 대한 정보를 캡처하는 데 사용됩니다.
 
 <img src="../../images/field-groups/environment-details.png" width="500" /><br />
 

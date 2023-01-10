@@ -2,10 +2,9 @@
 solution: Experience Platform
 title: UI에서 XDM 스키마 내보내기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 스키마를 다른 샌드박스 또는 IMS 조직으로 내보내는 방법을 알아봅니다.
-topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%

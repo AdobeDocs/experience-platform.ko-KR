@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션 서비스;세그멘테이션;데이터 세트 만들기;대상 세그먼트 내보내기;세그먼트 내보내기;
 solution: Experience Platform
 title: 대상 세그먼트 내보내기를 위한 데이터 세트 만들기
-topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 Experience Platform UI를 사용하여 대상 세그먼트를 내보내는 데 사용할 수 있는 데이터 세트를 만드는 데 필요한 단계를 안내합니다.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 0%

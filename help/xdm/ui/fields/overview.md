@@ -3,12 +3,11 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: UI에서 XDM 필드 정의
 description: Experience Platform 사용자 인터페이스에서 XDM 필드를 정의하는 방법을 알아봅니다.
-topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1374'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -54,7 +53,7 @@ UI에서 새 XDM 필드를 정의하려면 먼저 UI 내에서 스키마를 열�
 | 필드 속성 | 설명 |
 | --- | --- |
 | [!UICONTROL 필드 이름] | 필드의 고유한 수사적 이름입니다. 스키마를 저장한 후에는 필드 이름을 변경할 수 없습니다.<br><br>그 이름은 camelCase로 작성하면 이상적이다. 영숫자, 대시 또는 밑줄 문자가 포함될 수 있지만 **그렇지 않음** 밑줄로 시작합니다.<ul><li>**수정**: `fieldName`</li><li>**허용 가능:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**잘못된**: `_fieldName`</li></ul> |
-| [!UICONTROL 디스플레이 이름] | 그 필드의 이름입니다. |
+| [!UICONTROL 표시 이름] | 그 필드의 이름입니다. |
 | [!UICONTROL 유형] | 필드에 포함할 데이터 유형입니다. 이 드롭다운 메뉴에서 다음 중 하나를 선택할 수 있습니다 [표준 스칼라 유형](../../schema/field-constraints.md) XDM에서 지원하거나 다중 필드 중 하나에서 지원됩니다. [데이터 유형](../resources/data-types.md) 에 대해 이전에 [!DNL Schema Registry].<br><br>선택할 수도 있습니다 **[!UICONTROL 고급 유형 검색]** 기존 데이터 유형을 검색 및 필터링하고 원하는 유형을 쉽게 찾을 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -92,8 +91,8 @@ UI에서 새 XDM 필드를 정의하려면 먼저 UI 내에서 스키마를 열�
 | [!UICONTROL 형식] | [!UICONTROL 문자열] | 값이 준수해야 하는 문자열에 대해 미리 정의된 형식 목록에서 선택합니다. 사용 가능한 형식은 다음과 같습니다. <ul><li>[[!UICONTROL 날짜 시간]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL 이메일]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL 호스트 이름]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri 참조]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json 포인터]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL 최소 길이] | [!UICONTROL 문자열] | 섭취 중에 값을 수락하려면 문자열에 포함해야 하는 최소 문자 수입니다. |
 | [!UICONTROL 최대 길이] | [!UICONTROL 문자열] | 섭취 중에 값을 수락하려면 문자열에 포함해야 하는 최대 문자 수입니다. |
-| [!UICONTROL 최소값] | [!UICONTROL 이중] | 섭취 중 수락되는 Double에 대한 최소 값입니다. 수집된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 수락됩니다. 이 제약 조건을 사용하는 경우 &quot;[!UICONTROL 독점적 최소값]&quot; 제약 조건은 비워 두어야 합니다. |
-| [!UICONTROL 최대값] | [!UICONTROL 이중] | 섭취 중 수락할 Double의 최대 값. 수집된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 수락됩니다. 이 제약 조건을 사용하는 경우 &quot;[!UICONTROL 독점 최대값]&quot; 제약 조건은 비워 두어야 합니다. |
+| [!UICONTROL 최솟값] | [!UICONTROL 이중] | 섭취 중 수락되는 Double에 대한 최소 값입니다. 수집된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 수락됩니다. 이 제약 조건을 사용하는 경우 &quot;[!UICONTROL 독점적 최소값]&quot; 제약 조건은 비워 두어야 합니다. |
+| [!UICONTROL 최댓값] | [!UICONTROL 이중] | 섭취 중 수락할 Double의 최대 값. 수집된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 수락됩니다. 이 제약 조건을 사용하는 경우 &quot;[!UICONTROL 독점 최대값]&quot; 제약 조건은 비워 두어야 합니다. |
 | [!UICONTROL 독점적 최소값] | [!UICONTROL 이중] | 섭취 중 수락할 Double의 최대 값. 수집된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 거부됩니다. 이 제약 조건을 사용하는 경우 &quot;[!UICONTROL 최소값]&quot; (비독점적) 제약 조건은 비워 두어야 합니다. |
 | [!UICONTROL 독점 최대값] | [!UICONTROL 이중] | 섭취 중 수락할 Double의 최대 값. 수집된 값이 여기에 입력한 값과 정확히 일치하는 경우 값이 거부됩니다. 이 제약 조건을 사용하는 경우 &quot;[!UICONTROL 최대값]&quot; (비독점적) 제약 조건은 비워 두어야 합니다. |
 

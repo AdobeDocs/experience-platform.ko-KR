@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;Apache Hive;Azure HDInsights;azure hdinsights
 solution: Experience Platform
 title: UI에서 Azure HDInsights 소스 연결에 Apache 하이브를 만듭니다
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Azure HDInsights 소스 연결에서 Apache 하이브를 만드는 방법을 알아봅니다.
 exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 1%

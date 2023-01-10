@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;개별 프로필;필드;스키마;스키마;스키마 디자인;필드 그룹;필드 그룹;iab;tcf;동의;
 solution: Experience Platform
 title: 프로필 스키마에 대한 IAB TCF 2.0 동의 필드 그룹
-topic-legacy: overview
 description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 IAB TCF 2.0 동의 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
-source-git-commit: 046486d5e154b45fc2c2f5408eee235dddf46a4d
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 1%

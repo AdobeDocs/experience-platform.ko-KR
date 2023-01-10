@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;주소;xdm:주소;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: 제품 목록 항목 데이터 유형
-topic-legacy: overview
 description: 이 문서에서는 제품 목록 항목 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: 43157ed2b633561213e67f011835449d70ead4fc
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 4%

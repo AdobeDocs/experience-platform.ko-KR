@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 주제;oracle;oracle 언달리;언달라
 solution: Experience Platform
 title: Oracle Eloqua Connector 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Oracle Eloqua를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%

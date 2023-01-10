@@ -3,10 +3,9 @@ keywords: Experience Platform;홈;인기 항목;ui;XDM;XDM 시스템;경험 데�
 solution: Experience Platform
 title: 스키마 편집기를 사용하여 두 스키마 간의 관계를 정의합니다.
 description: 이 문서에서는 Experience Platform 사용자 인터페이스에서 스키마 편집기를 사용하여 두 스키마 간의 관계를 정의하는 자습서를 제공합니다.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 3b16c0766c7d54b18ceea4c9f40ccb370b9f9685
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 0%

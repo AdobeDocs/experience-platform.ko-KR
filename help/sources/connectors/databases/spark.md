@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;Apache Spark;apache spark;Azure HDInsights;azure Hdinsights
 solution: Experience Platform
 title: Azure HDInsights 소스 커넥터의 Apache Spark 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Azure HDInsights의 Apache Spark를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: c4a2a14e-5e16-44b7-b3f1-a98b7229f69e
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%

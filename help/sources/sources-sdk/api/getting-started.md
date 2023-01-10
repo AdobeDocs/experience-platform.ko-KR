@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 solution: Experience Platform
 title: 셀프 서비스 소스 시작하기(배치 SDK)
-topic-legacy: developer guide
 description: 이 문서에서는 Self-Serve Sources(배치 SDK)를 사용하여 새 소스를 만들기 전에 알아야 하는 전제 조건 정보를 소개합니다.
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%

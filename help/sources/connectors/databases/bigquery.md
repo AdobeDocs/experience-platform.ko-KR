@@ -2,12 +2,11 @@
 keywords: Experience Platform;홈;인기 항목;빅 쿼리;bigquery;Google BigQuery;google bigquery
 solution: Experience Platform
 title: Google BigQuery Source Connector 개요
-topic-legacy: overview
 description: API 또는 사용자 인터페이스를 사용하여 Google BigQuery를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 7a62dcf1e9712d3c0c0d148b953e50dc11c91f1b
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---

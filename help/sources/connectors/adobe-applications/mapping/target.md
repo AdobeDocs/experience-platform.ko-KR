@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;대상 매핑;대상 매핑
 solution: Experience Platform
 title: Adobe Target 이벤트 데이터를 XDM에 매핑
-topic-legacy: overview
 description: Adobe Experience Platform에서 사용할 XDM(Experience Data Model) 스키마에 Adobe Target 이벤트 필드를 매핑하는 방법을 알아봅니다.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 1%

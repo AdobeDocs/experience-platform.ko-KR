@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;Marketo Engage;marketo engage;marketo
 solution: Experience Platform
 title: Marketo 소스 커넥터 인증
-topic-legacy: overview
 description: 이 문서에서는 Marketo 인증 자격 증명을 생성하는 방법에 대한 정보를 제공합니다.
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%

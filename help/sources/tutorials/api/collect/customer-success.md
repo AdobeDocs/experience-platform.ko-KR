@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;고객 성공 수집;고객 성공
 solution: Experience Platform
 title: Flow Service API를 사용하여 고객 성공 소스에 대한 데이터 흐름 만들기
-topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 고객 성공 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 1%

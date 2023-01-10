@@ -3,9 +3,8 @@ keywords: Experience Platform;홈;인기 있는 주제 알림
 description: Adobe I/O 이벤트를 구독하면 웹 후크를 사용하여 소스 연결의 흐름 실행 상태에 대한 알림을 받을 수 있습니다. 이러한 알림에는 흐름 실행의 성공 또는 실행 실패에 기여한 오류에 대한 정보가 포함되어 있습니다.
 solution: Experience Platform
 title: 흐름 실행 알림
-topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼트 서비스;세그먼트;세그먼트;다중 엔티티;다중 엔티티 세그먼테이션;다중 엔티티 세그먼트;
 solution: Experience Platform
 title: 다중 엔티티 세그먼테이션 개요
-topic-legacy: overview
 description: 다중 엔티티 세그먼테이션은 제품, 스토어 또는 기타 비프로필 클래스를 기반으로 추가 데이터로 프로필 데이터를 확장하는 기능입니다. 연결되면 추가 클래스의 데이터를 프로필 스키마에 대한 기본 데이터 처럼 사용할 수 있게 됩니다.
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%

@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;플로우 서비스;광고;google adwords;광고
 solution: Experience Platform
 title: Flow Service API를 사용하여 광고 소스용 데이터 흐름 만들기
-topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 플로우 서비스 API를 사용하여 서드파티 광고 애플리케이션에서 데이터를 검색하고 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 1%

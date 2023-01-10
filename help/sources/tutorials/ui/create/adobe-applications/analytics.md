@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;Analytics 소스 커넥터;Analytics 커넥터;Analytics 소스;Analytics
 solution: Experience Platform
 title: UI에서 Adobe Analytics 소스 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '2345'
 ht-degree: 2%

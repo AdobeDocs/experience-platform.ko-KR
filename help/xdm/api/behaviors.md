@@ -3,9 +3,8 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: 비헤이비어 API 끝점
 description: 스키마 레지스트리 API의 /behaviors 종단점을 사용하면 글로벌 컨테이너에서 사용 가능한 모든 동작을 검색할 수 있습니다.
-topic-legacy: developer guide
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 3%

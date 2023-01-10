@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;일반 OData;일반 데이터
 solution: Experience Platform
 title: Flow Service API를 사용하여 일반 OData 기본 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 일반 OData를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
-source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 2%

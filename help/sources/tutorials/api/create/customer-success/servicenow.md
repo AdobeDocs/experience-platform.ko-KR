@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;servicenow;ServiceNow
 solution: Experience Platform
 title: Flow Service API를 사용하여 ServiceNow Base 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 ServiceNow 서버에 연결하는 방법을 알아봅니다.
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 1%

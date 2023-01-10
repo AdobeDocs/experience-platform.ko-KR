@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;crm;CRM
 solution: Experience Platform
 title: Flow Service API를 사용하여 CRM 소스용 데이터 흐름 만들기
-topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 타사 CRM 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Platform으로 가져오는 단계를 설명합니다.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 1%

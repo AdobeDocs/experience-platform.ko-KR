@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;스키마;xdm;경험 데이터 모델;네임스페이스;네임스페이스;호환성 모드;xed;
 solution: Experience Platform
 title: XDM(Experience Data Model)에서의 네임스페이스
-topic-legacy: overviews
 description: XDM(Experience Data Model)의 네임스페이스를 통해 스키마를 확장하고 다른 스키마 구성 요소를 함께 가져올 때 필드 충돌을 방지할 수 있는 방법을 알아봅니다.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: bcffd3d38cecba38e1e57a44ce0febfd2cf0f8fb
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 1%

@@ -2,11 +2,11 @@
 keywords: Experience Platform;홈;인기 항목;세그멘테이션 서비스;세그멘테이션 서비스;사용 안내서;ui 안내서;대상 ui 안내서;대상 빌더;대상;대상;대상 ui 안내서;
 solution: Experience Platform
 title: 대상 UI 안내서
-topic-legacy: ui guide
 description: Adobe Experience Platform UI의 Audience Builder에서는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 조직을 위한 대상을 만들고 편집하기 위한 직관적인 컨트롤을 제공합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
+exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 1%

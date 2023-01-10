@@ -2,9 +2,8 @@
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;동의;동의;환경 설정;개인 정보 보호 옵트아웃;마케팅 환경 설정;옵트아웃 유형;기준 처리;동의;동의
 title: 동의 및 기본 설정 데이터 유형
 description: 개인 정보, 개인화 및 마케팅 환경 설정에 대한 동의 데이터 유형은 CMP(동의 관리 플랫폼) 및 데이터 작업에서 생성된 고객 권한 및 환경 설정 컬렉션을 지원하기 위한 것입니다.
-topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '2058'
 ht-degree: 2%

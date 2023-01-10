@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;Marketo Engage;marketo engage;marketo
 solution: Experience Platform
 title: Marketo Engage 커넥터
-topic-legacy: overview
 description: 이 문서에서는 인증, 매핑 및 데이터 지연에 대한 정보를 포함하여 Marketo Engage 소스 커넥터에 대한 개요를 제공합니다.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '631'
 ht-degree: 0%

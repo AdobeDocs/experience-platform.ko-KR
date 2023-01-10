@@ -3,10 +3,9 @@ keywords: Experience Platform;홈;인기 있는 주제 analytics;분류
 description: UI에서 Adobe Analytics 소스 커넥터를 만들어 분류 데이터를 Adobe Experience Platform에 가져오는 방법을 알아봅니다.
 solution: Experience Platform
 title: UI에서 분류 데이터에 대한 Adobe Analytics 소스 연결 만들기
-topic-legacy: overview
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '660'
 ht-degree: 6%

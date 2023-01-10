@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;홈;인기 항목;일반 REST API
 title: UI에서 일반 REST API 소스 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 일반 REST API 소스 연결을 만드는 방법을 알아봅니다.
-source-git-commit: 94809a8e98c8de7a9a474fb5543b590fc51cb075
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 1%
@@ -28,7 +27,7 @@ ht-degree: 1%
 
 ### 필요한 자격 증명 수집
 
-에 액세스하려면 [!DNL Generic REST API] 플랫폼의 계정에서는 선택한 인증 유형에 유효한 자격 증명을 제공해야 합니다. 일반 REST API는 OAuth 2 새로 고침 코드와 기본 인증을 모두 지원합니다. 지원되는 두 가지 인증 유형에 대한 자격 증명에 대해서는 다음 표를 참조하십시오.
+에 액세스하려면 [!DNL Generic REST API] 플랫폼의 계정에서는 선택한 인증 유형에 유효한 자격 증명을 제공해야 합니다. 일반 REST API는 OAuth 2 새로 고침 코드와 기본 인증을 모두 지원합니다. 지원되는 두 가지 인증 유형에 대한 자격 증명에 대한 자세한 내용은 다음 표를 참조하십시오.
 
 #### OAuth 2 새로 고침 코드
 
@@ -48,7 +47,7 @@ ht-degree: 1%
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| 호스트 | 요청을 하는 소스의 호스트 URL입니다. |
+| Host | 요청을 하는 소스의 호스트 URL입니다. |
 | 사용자 이름 | 사용자 계정에 해당하는 사용자 이름입니다. |
 | 암호 | 사용자 계정에 해당하는 암호입니다. |
 

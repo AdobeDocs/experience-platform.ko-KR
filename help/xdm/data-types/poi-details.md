@@ -2,19 +2,18 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;poi;poi 세부 사항;관심 영역 세부 정보;데이터 유형;데이터 유형;데이터 유형
 solution: Experience Platform
 title: 관심 영역 세부 정보 데이터 유형
-topic-legacy: overview
 description: 이 문서에서는 관심 영역 세부 정보 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '204'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL 관심 영역 세부 ] 정보데이터 유형
+# [!UICONTROL 관심 영역 세부 정보] 데이터 유형
 
-[!UICONTROL 관심 영역] 은 이벤트가 관찰된 지역 관련 데이터를 설명하는 표준 XDM 데이터 유형을 자세히 설명합니다.
+[!UICONTROL 관심 영역 세부 정보] 는 이벤트가 관찰되는 지역 관련 데이터를 설명하는 표준 XDM 데이터 유형입니다.
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 

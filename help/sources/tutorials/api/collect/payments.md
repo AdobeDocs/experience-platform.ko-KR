@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;결제 데이터 수집;결제 데이터
 solution: Experience Platform
 title: Flow Service API를 사용하여 Payments 출처에 대한 데이터 흐름 생성
-topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 소스 커넥터 및 API를 사용하여 결제 애플리케이션에서 데이터를 검색하고 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 1%

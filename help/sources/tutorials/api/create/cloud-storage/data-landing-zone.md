@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: Flow Service API를 사용하여 데이터 랜딩 영역을 Adobe Experience Platform에 연결
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 데이터 랜딩 영역에 연결하는 방법을 알아봅니다.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 4%
@@ -322,7 +321,7 @@ curl -X GET \
 | True | 해당 없음 | If `determineProperties` 이 쿼리 매개 변수로 제공되면 파일 속성 감지가 발생하고 응답이 새 `properties` 파일 형식, 압축 유형 및 열 구분 기호에 대한 정보가 포함된 키입니다. |
 | 해당 없음 | True | 파일 형식, 압축 유형 및 열 구분 기호의 값이 `queryParams`를 입력하면 스키마를 생성하는 데 사용되며 동일한 속성이 응답의 일부로 반환됩니다. |
 | True | True | 두 옵션이 동시에 수행되면 오류가 반환됩니다. |
-| 해당 없음 | 해당 없음 | 두 옵션이 모두 제공되지 않으면 응답에 대한 속성을 가져올 방법이 없으므로 오류가 반환됩니다. |
+| N/A | N/A | 두 옵션이 모두 제공되지 않으면 응답에 대한 속성을 가져올 방법이 없으므로 오류가 반환됩니다. |
 
 **API 형식**
 

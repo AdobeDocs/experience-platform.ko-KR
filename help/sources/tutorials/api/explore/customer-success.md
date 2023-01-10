@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;cs;CS;고객 성공 시스템
 solution: Experience Platform
 title: Flow Service API를 사용하여 고객 성공 시스템 탐색
-topic-legacy: overview
 description: 이 자습서에서는 Flow Service API를 사용하여 CS(Customer Success) 시스템을 살펴봅니다.
 exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 2%

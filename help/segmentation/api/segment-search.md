@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;세그먼테이션;세그먼테이션 서비스;문제 해결;API;세그먼트;세그먼트;검색;세그먼트 검색;
 title: 세그먼트 검색 API 끝점
-topic-legacy: guide
 description: Adobe Experience Platform 세그멘테이션 서비스 API에서 세그먼트 검색은 다양한 데이터 소스에 포함된 필드를 검색하고 거의 실시간으로 반환하는 데 사용됩니다. 이 안내서에서는 세그먼트 검색을 더 잘 이해하는 데 도움이 되는 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 2%

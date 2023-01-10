@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;데이터 소스 연결
 solution: Experience Platform
 title: Flow Service API를 사용하여 타사 클라우드 스토리지 시스템에서 Parquet Data 수집
-topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 Flow Service API를 사용하여 타사 클라우드 스토리지 시스템에서 Apache Parquet 데이터를 수집하는 단계를 안내합니다.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 2%

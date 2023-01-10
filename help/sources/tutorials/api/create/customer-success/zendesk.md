@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 solution: Experience Platform
 title: Flow Service API를 사용하여 Zendesk용 데이터 흐름 만들기
-topic-legacy: tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Zendesk에 연결하는 방법을 알아봅니다.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: e92c2386d9f4a4709f0a749d3ed97e033f066610
+source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
 workflow-type: tm+mt
 source-wordcount: '1996'
 ht-degree: 1%

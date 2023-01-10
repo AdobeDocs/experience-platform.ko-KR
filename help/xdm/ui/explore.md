@@ -3,10 +3,9 @@ keywords: Experience Platform;홈;인기 주제;ui;XDM;XDM 시스템;경험 데�
 solution: Experience Platform
 title: UI에서 스키마 리소스 살펴보기
 description: Experience Platform 사용자 인터페이스에서 기존 스키마, 클래스, 스키마 필드 그룹 및 데이터 유형을 탐색하는 방법을 알아봅니다.
-topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 744d87c82b7e7e06782c6c1b9db2ec46a5444d28
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '957'
 ht-degree: 0%

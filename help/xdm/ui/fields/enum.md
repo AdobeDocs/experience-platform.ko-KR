@@ -3,9 +3,8 @@ keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데
 solution: Experience Platform
 title: UI에서 열거형 필드 및 제안 값 정의
 description: Experience Platform 사용자 인터페이스에서 문자열 필드에 대한 열거형 및 제안 값을 정의하는 방법을 알아봅니다.
-topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 89ada47cb6e0b204d8f2f19e7e9b6f31bf347964
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1257'
 ht-degree: 0%

@@ -2,12 +2,11 @@
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 solution: Experience Platform
 title: 셀프 서비스 소스(배치 SDK) 개요
-topic-legacy: overview
 description: Adobe Experience Platform 셀프 서비스 소스(배치 SDK)는 Experience Platform으로 데이터를 가져오기 위해 흐름 서비스 API를 사용하여 REST API 기반 소스를 통합할 수 있는 구성 API 세트입니다.
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---

@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;클라우드 스토리지 데이터;스트리밍 데이터;스트리밍
 solution: Experience Platform
 title: Flow Service API를 사용하여 원시 데이터에 대한 스트리밍 데이터 흐름 만들기
-topic-legacy: overview
 type: Tutorial
 description: 이 자습서에서는 스트리밍 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Platform으로 가져오는 단계를 설명합니다.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 2%

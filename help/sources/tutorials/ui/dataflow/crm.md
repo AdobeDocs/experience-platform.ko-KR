@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;crm 스키마;crm;CRM;데이터 흐름;데이터 흐름
 solution: Experience Platform
 title: UI에서 CRM 소스를 사용하여 데이터 흐름 만들기
-topic-legacy: overview
 type: Tutorial
 description: 데이터 흐름은 소스에서 플랫폼 데이터 집합으로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 플랫폼 UI를 사용하여 CRM 소스용 데이터 흐름을 만드는 방법에 대해 설명합니다.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 0%

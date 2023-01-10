@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;개별 프로필;필드;스키마;스키마;스키마 디자인;필드 그룹;필드 그룹;개인;개인 세부 정보;프로필 개인 세부 정보;개인;
 solution: Experience Platform
 title: 인구 통계 세부 정보 스키마 필드 그룹
-topic-legacy: overview
 description: 이 문서에서는 인구 통계 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 4%
@@ -13,13 +12,13 @@ ht-degree: 4%
 ---
 
 
-# [!UICONTROL 인구 ] 통계 세부 정보스키마 필드 그룹
+# [!UICONTROL 인구 통계 세부 정보] 스키마 필드 그룹
 
 >[!NOTE]
 >
->여러 스키마 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../name-updates.md)에 있는 문서를 참조하십시오.
+>여러 스키마 필드 그룹의 이름이 변경되었습니다. 다음 문서를 참조하십시오. [필드 그룹 이름 업데이트](../name-updates.md) 추가 정보.
 
-[!UICONTROL 인구 ] 통계 분류에 대한 표준 스키마 필드  [[!DNL XDM Individual Profile] 그룹을 자세히 설명합니다](../../classes/individual-profile.md). 필드 그룹은 루트 수준 `person` 개체를 제공하며, 이 하위 필드는 개별 사용자에 대한 정보를 설명합니다.
+[!UICONTROL 인구 통계 세부 정보] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md). 필드 그룹은 루트 수준을 제공합니다 `person` 개체입니다. 하위 필드에서 개별 개인에 대한 정보를 설명합니다.
 
 ![](../../images/field-groups/demographic-details.png)
 

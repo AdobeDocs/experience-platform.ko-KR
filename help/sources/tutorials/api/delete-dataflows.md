@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;흐름 서비스;API;api;삭제;데이터 흐름 삭제
 solution: Experience Platform
 title: Flow Service API를 사용하여 데이터 흐름 삭제
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 일괄 처리 및 스트리밍 데이터 흐름을 삭제하는 방법을 알아봅니다.
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 2%

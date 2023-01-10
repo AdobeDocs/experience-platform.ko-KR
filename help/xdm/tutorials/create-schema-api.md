@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;api;XDM;XDM 시스템;경험 데이터 모델;경험 데이터 모델;데이터 모델;데이터 모델;스키마 레지스트리;스키마 레지스트리;스키마;스키마;스키마;스키마;스키마;스키마;스키마 만들기
 solution: Experience Platform
 title: 스키마 레지스트리 API를 사용하여 스키마 만들기
-topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 스키마 레지스트리 API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '2422'
 ht-degree: 1%
@@ -38,7 +37,7 @@ ht-degree: 1%
 
 ### 클래스 할당
 
-스키마 구성 프로세스는 클래스 선택과 함께 시작됩니다. 이 클래스는 데이터의 주요 행동 측면(레코드 및 시계열)과 수집할 데이터를 설명하는 데 필요한 최소 필드를 정의합니다.
+스키마 구성 프로세스는 클래스 선택으로 시작됩니다. 이 클래스는 데이터의 주요 행동 측면(레코드 및 시계열)과 수집할 데이터를 설명하는 데 필요한 최소 필드를 정의합니다.
 
 이 자습서에서 만드는 스키마는 [!DNL XDM Individual Profile] 클래스 이름을 지정합니다. [!DNL XDM Individual Profile] 는 레코드 동작을 정의하기 위해 Adobe에서 제공하는 표준 클래스입니다. 동작에 대한 자세한 내용은 [스키마 구성 기본 사항](../schema/composition.md).
 

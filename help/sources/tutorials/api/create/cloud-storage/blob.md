@@ -2,11 +2,10 @@
 keywords: Experience Platform;홈;인기 항목;Azure;azure blob;blob;Blob
 solution: Experience Platform
 title: Flow Service API를 사용하여 Azure Blob Base 연결 만들기
-topic-legacy: overview
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Azure Blob에 연결하는 방법을 알아봅니다.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 0d891acd4e33eb7080da44e204672dc3601cf166
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '692'
 ht-degree: 1%
