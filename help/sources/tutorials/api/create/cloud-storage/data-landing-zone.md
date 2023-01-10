@@ -5,7 +5,7 @@ title: Flow Service API를 사용하여 데이터 랜딩 영역을 Adobe Experie
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 데이터 랜딩 영역에 연결하는 방법을 알아봅니다.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 249f2076dd55a589c638648eb25214036a47c05a
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 4%
@@ -80,7 +80,7 @@ curl -X GET \
 **API 형식**
 
 ```http
-GET /connectors/landingzone/credentials?type=user_drop_zone
+GET /data/foundation/connectors/landingzone/credentials?type=user_drop_zone
 ```
 
 **요청**
@@ -124,7 +124,7 @@ curl -X GET \
 **API 형식**
 
 ```http
-POST /connectors/landingzone/credentials?type=user_drop_zone&action=refresh
+POST /data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh
 ```
 
 | 헤더 | 설명 |
