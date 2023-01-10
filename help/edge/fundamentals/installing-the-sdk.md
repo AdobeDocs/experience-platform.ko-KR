@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK 설치
 description: Experience Platform 웹 SDK를 설치하는 방법을 알아봅니다.
 keywords: 웹 sdk 설치;웹 sdk 설치;internet explorer;약속;npm 패키지
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: c3476d7f9e758678cdf270ab55f8b85c0614b546
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Adobe Experience Platform Web SDK를 사용하는 세 가지 지원 방법이 �
 
 ## 옵션 1: 태그 확장 설치
 
-태그 확장에 대한 설명서는 다음을 참조하십시오. [launch 설명서](../../tags/extensions/client/sdk/overview.md)
+태그 확장에 대한 설명서는 다음을 참조하십시오. [태그 설명서](../../tags/extensions/client/sdk/overview.md)
 
 ## 옵션 2: 사전 빌드된 독립형 버전 설치
 
@@ -145,7 +145,7 @@ alloy("sendEvent", { ... });
 
 ### Internet Explorer 지원
 
-Adobe Experience Platform SDK에서는 비동기 작업 완료를 통신하는 방법인 약속을 사용합니다. 다음 [약속](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) sdk에서 사용하는 구현은 기본적으로 를 제외한 모든 Target 브라우저에서 지원됩니다 [!DNL Internet Explorer]. 에서 SDK를 사용하려면 [!DNL Internet Explorer]: `window.Promise` [폴리충진](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Adobe Experience Platform SDK에서는 비동기 작업 완료를 통신하는 방법인 약속을 사용합니다. 다음 [약속](https://developer.mozilla.org/ko-KR/docs/Web/JavaScript/Reference/Global_Objects/Promise) sdk에서 사용하는 구현은 기본적으로 를 제외한 모든 Target 브라우저에서 지원됩니다 [!DNL Internet Explorer]. 에서 SDK를 사용하려면 [!DNL Internet Explorer]: `window.Promise` [폴리충진](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 약속 폴리채우기에 사용할 수 있는 하나의 라이브러리는 promise-polyfill입니다. 자세한 내용은 [promise polyfill 설명서](https://www.npmjs.com/package/promise-polyfill) 를 참조하십시오.
 
