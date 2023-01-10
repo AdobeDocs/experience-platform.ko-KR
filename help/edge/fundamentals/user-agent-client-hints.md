@@ -2,13 +2,13 @@
 title: 사용자 에이전트 클라이언트 힌트
 description: 웹 SDK에서 사용자 에이전트 클라이언트 힌트가 작동하는 방식을 알아봅니다
 keywords: 사용자 에이전트;클라이언트 힌트; string; user-agent 문자열; 낮은 엔트로피 높은 엔트로피
-source-git-commit: 6c974d1a646ff1f3a8f7ad9d67a6840391fc739e
+exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
+source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1065'
 ht-degree: 6%
 
 ---
-
 
 # 사용자 에이전트 클라이언트 힌트
 
@@ -116,13 +116,7 @@ Adobe Experience Cloud 솔루션은 [!DNL User-Agent] 다양한 방식으로 문
 
 ### 높은 엔트로피 클라이언트 힌트를 사용하는 Adobe Analytics 보고서 {#analytics}
 
-다음 Adobe Analytics 보고서는 높은 엔트로피 클라이언트 힌트가 비활성화되어 있지만 작동하지 않습니다.
-
-* [브라우저](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser.html)
-* [브라우저 유형](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)
-* [운영 체제](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html)
-* [운영 체제 유형](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)
-* [모바일 차원](https://experienceleague.adobe.com/docs/analytics/components/dimensions/mobile-dimensions.html)
+다음 [운영 체제](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) 차원은 높은 엔트로피 클라이언트 힌트로 저장된 운영 체제 버전을 포함합니다. 높은 엔트로피 클라이언트 힌트가 활성화되지 않으면 Chromium 브라우저에서 수집된 히트에 대해 운영 체제 버전이 부정확할 수 있습니다.
 
 ### 높은 엔트로피 클라이언트 힌트에 의존하는 Audience Manager 트레이트 {#aam}
 
