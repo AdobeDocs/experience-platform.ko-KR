@@ -2,10 +2,10 @@
 title: 오디오 및 비디오 확장 프로그램용 Adobe Medium Analytics(3.x SDK) 개요
 description: Adobe Experience Platform의 오디오 및 비디오 태그 확장용 Adobe Medium Analytics(3.x SDK)에 대해 알아봅니다.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 76%
+source-wordcount: '752'
+ht-degree: 74%
 
 ---
 
@@ -24,7 +24,7 @@ MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 3.x SDK)를 추가
 
 >[!IMPORTANT]
 >
->이 확장은 Media 2.x SDK와 이전 버전과 호환되지 않는 Media 3.x SDK와 함께 배포됩니다. 페이지에서 이미 Media 2.x SDK를 사용하고 있는 경우 이 확장 대신 [Adobe Media Analytics for Audio and Video 확장](../media-analytics/overview.md)을 사용합니다.
+>이 확장은 Media 2.x SDK와 이전 버전과 호환되지 않는 Media 3.x SDK와 함께 배포됩니다. 2.x는 더 이상 사용되지 않으므로 3.x로 업데이트하십시오.
 
 태그 지원 프로젝트에서 위에 언급된 확장 세 개를 모두 포함했으면 다음 두 가지 방법 중 하나를 사용하여 진행할 수 있습니다.
 
