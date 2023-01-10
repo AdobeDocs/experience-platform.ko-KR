@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 API 끝점
 description: 다음 섹션에서는 Query Service API에서 /queries 종단점을 사용하여 수행할 수 있는 호출을 살펴봅니다.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '825'
 ht-degree: 2%
 
 ---
@@ -42,6 +42,7 @@ GET /queries?{QUERY_PARAMETERS}
 | `property` | 필드를 기반으로 결과를 필터링합니다. 필터 **반드시** HTML 이스케이프 처리됨. 쉼표는 여러 필터 세트를 결합하는 데 사용됩니다. 지원되는 필드는 다음과 같습니다 `created`, `updated`, `state`, 및 `id`. 지원되는 연산자 목록은 다음과 같습니다 `>` (보다 큼), `<` (보다 작음), `>=` (크거나 같음), `<=` (작거나 같음), `==` (같음), `!=` (같지 않음) 및 `~` (포함) 예, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` 은 지정된 ID가 있는 모든 쿼리를 반환합니다. |
 | `excludeSoftDeleted` | 소프트 삭제된 쿼리를 포함할지 여부를 나타냅니다. 예, `excludeSoftDeleted=false` will **포함** 소프트 삭제된 쿼리 (*부울, 기본값: true*) |
 | `excludeHidden` | 사용자가 아닌 제어 쿼리를 표시할지를 나타냅니다. 이 값을 false로 설정하면 **포함** CURSOR 정의, FETCH 또는 메타데이터 쿼리와 같은 사용자 기반 쿼리가 아닙니다. (*부울, 기본값: true*) |
+| `isPrevLink` | 다음 `isPrevLink` 페이지 매김에 쿼리 매개 변수가 사용됩니다. API 호출 결과는 해당 호출을 사용하여 정렬됩니다 `created` 타임스탬프 및 `orderby` 속성을 사용합니다. 결과 페이지를 탐색할 때 `isPrevLink` 는 뒤로 페이징 시 true로 설정됩니다. 쿼리의 순서를 취소합니다. 예로서 &quot;다음&quot; 및 &quot;이전&quot; 링크를 참조하십시오. |
 
 **요청**
 
@@ -128,7 +129,7 @@ POST /queries
 
 **요청**
 
-다음 요청은 페이로드에 제공된 값으로 구성된 새 쿼리를 만듭니다.
+다음 요청은 페이로드에 제공된 SQL 문을 사용하여 새 쿼리를 만듭니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -139,7 +140,27 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT * FROM accounts;",
+        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "queryParameters": {
+            $user_id : {USER_ID}
+            }
+        "name": "Sample Query",
+        "description": "Sample Description"
+    }  
+```
+
+아래 요청 예는 기존 쿼리 템플릿 ID를 사용하여 새 쿼리를 만듭니다.
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/query/queries \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+        "dbName": "prod:all",
+        "templateID": "f7cb5155-29da-4b95-8131-8c5deadfbe7f",
         "name": "Sample Query",
         "description": "Sample Description"
     }  
@@ -151,6 +172,10 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | 만들 SQL 쿼리 |
 | `name` | SQL 쿼리의 이름입니다. |
 | `description` | SQL 쿼리에 대한 설명입니다. |
+| `queryParameters` | SQL 문의 매개 변수화된 값을 대체하기 위한 키 값 쌍입니다. 필요한 경우에만 필요합니다 **if** 제공한 SQL 내에서 매개 변수 대체를 사용하고 있습니다. 이러한 키 값 쌍에는 값 유형 검사가 수행되지 않습니다. |
+| `templateId` | 기존 쿼리의 고유 식별자입니다. SQL 문 대신 이를 제공할 수 있습니다. |
+| `insertIntoParameters` | (선택 사항) 이 속성이 정의된 경우 이 쿼리는 INSERT INTO 쿼리로 변환됩니다. |
+| `ctasParameters` | (선택 사항) 이 속성이 정의된 경우 이 쿼리는 CTAS 쿼리로 변환됩니다. |
 
 **응답**
 

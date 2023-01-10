@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 쿼리 템플릿 API 끝점
 description: 이 안내서에서는 Query Service API를 사용하여 수행할 수 있는 다양한 쿼리 템플릿 API 호출에 대해 자세히 설명합니다.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 3%
+source-wordcount: '894'
+ht-degree: 2%
 
 ---
 
@@ -129,15 +129,19 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
-        "sql": "SELECT * FROM accounts;",
-        "name": "Sample query template"
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
+        "name": "Sample query template",
+        "queryParameters": {
+            user_id : {USER_ID}
+            }
     }'
 ```
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `sql` | 만들 SQL 쿼리 |
+| `sql` | 만들 SQL 쿼리 표준 SQL이나 매개 변수 대체를 사용할 수 있습니다. SQL에서 매개 변수 대체를 사용하려면 매개 변수 키를 `$`. 예, `$key`및 는 SQL에서 사용되는 매개 변수를 의 JSON 키 값 쌍으로 제공합니다. `queryParameters` 필드. 여기에 전달된 값은 템플릿에 사용되는 기본 매개 변수가 됩니다. 이러한 매개 변수를 재정의하려면 POST 요청에서 해당 매개 변수를 재정의해야 합니다. |
 | `name` | 쿼리 템플릿의 이름입니다. |
+| `queryParameters` | SQL 문의 매개 변수화된 값을 대체하기 위한 키 값 쌍입니다. 필요한 경우에만 필요합니다 **if** 제공한 SQL 내에서 매개 변수 대체를 사용하고 있습니다. 이러한 키 값 쌍에는 값 유형 검사가 수행되지 않습니다. |
 
 **응답**
 
@@ -145,7 +149,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 ```json
 {
-    "sql": "SELECT * FROM accounts;",
+    "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
     "name": "Sample query template",
     "id": "0094d000-9062-4e6a-8fdb-05606805f08f",
     "updated": "2020-01-09T00:20:09.670Z",
@@ -265,8 +269,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `sql` | 업데이트할 SQL 쿼리입니다. |
-| `name` | 예약된 쿼리의 이름입니다. |
+| `sql` | 만들 SQL 쿼리 표준 SQL이나 매개 변수 대체를 사용할 수 있습니다. SQL에서 매개 변수 대체를 사용하려면 매개 변수 키를 `$`. 예, `$key`및 는 SQL에서 사용되는 매개 변수를 의 JSON 키 값 쌍으로 제공합니다. `queryParameters` 필드. 여기에 전달된 값은 템플릿에 사용되는 기본 매개 변수가 됩니다. 이러한 매개 변수를 재정의하려면 POST 요청에서 해당 매개 변수를 재정의해야 합니다. |
+| `name` | 쿼리 템플릿의 이름입니다. |
+| `queryParameters` | SQL 문의 매개 변수화된 값을 대체하기 위한 키 값 쌍입니다. 필요한 경우에만 필요합니다 **if** 제공한 SQL 내에서 매개 변수 대체를 사용하고 있습니다. 이러한 키 값 쌍에는 값 유형 검사가 수행되지 않습니다. |
 
 **응답**
 
