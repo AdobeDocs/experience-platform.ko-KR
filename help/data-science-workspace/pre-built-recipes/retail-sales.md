@@ -2,10 +2,9 @@
 keywords: Experience Platform;소매 판매 레서피;데이터 과학 작업 공간;인기 항목;레서피;사전 작성 레서피
 solution: Experience Platform
 title: 소매 판매 레서피
-topic-legacy: overview
 description: 소매 판매 배합식을 사용하면 특정 기간 동안 초기 설정된 모든 점포에 대한 판매 예측을 예측할 수 있습니다. 정확한 예측 모델을 통해 소매업체는 수요와 가격 정책 간의 관계를 파악하고 매출과 수익을 극대화하기 위해 최적화된 가격 결정을 내릴 수 있습니다.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 2%

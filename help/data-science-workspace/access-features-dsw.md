@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;Data Science Workspace;인기 항목;액세스 제어;샌드박스;인텔리전스 팩;dsw 기능;dsw 액세스;Adobe Experience Platform Intelligence;인텔리전스;aep 인텔리전스 패키지
 solution: Experience Platform
 title: 데이터 과학 작업 공간 액세스 및 기능
-topic-legacy: Access and features for data science workspace
 description: 다음 문서에서는 Data Science Workspace 권한 및 기능에 대한 액세스를 간략하게 설명합니다.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 2%

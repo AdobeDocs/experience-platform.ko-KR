@@ -2,10 +2,9 @@
 keywords: Experience Platform;개발자 안내서;엔드포인트;데이터 과학 작업 공간;인기 항목;mlinstances;sensei 기계 학습 api
 solution: Experience Platform
 title: MLInstance API 끝점
-topic-legacy: Developer guide
 description: MLInstance는 교육 매개 변수, 점수 매개 변수 또는 하드웨어 리소스 구성을 정의하는 적절한 구성 세트와 함께 기존 엔진의 쌍입니다.
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 4%

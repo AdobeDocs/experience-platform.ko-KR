@@ -2,10 +2,9 @@
 keywords: Experience Platform;개발자 안내서;엔드포인트;데이터 과학 작업 공간;인기 항목;통찰력;sensei 기계 학습 api
 solution: Experience Platform
 title: 통찰력 API 엔드포인트
-topic-legacy: Developer guide
 description: 인사이트에는 관련 평가 지표를 표시하여 데이터 과학자가 최적 ML 모델을 평가하고 선택할 수 있도록 하는 데 사용되는 지표가 포함되어 있습니다.
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%

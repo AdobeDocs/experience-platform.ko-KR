@@ -2,11 +2,10 @@
 keywords: Experience Platform;기계 학습 모델;데이터 과학 작업 공간;인기 있는 주제;모델 작성 및 게시
 solution: Experience Platform
 title: 기계 학습 모델 만들기 및 게시
-topic-legacy: tutorial
 type: Tutorial
 description: 다음 안내서에서는 기계 학습 모델을 만들고 게시하는 데 필요한 단계를 설명합니다.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;제품 추천 레서피;데이터 과학 작업 공간;인기 항목;레서피;사전 작성 레서피
 solution: Experience Platform
 title: 제품 추천 레서피
-topic-legacy: overview
 description: 제품 Recommendations 레서피를 사용하면 고객의 요구 사항과 관심사에 맞는 개인화된 제품 추천을 제공할 수 있습니다. 정확한 예측 모델을 통해 고객의 구매 내역을 통해 고객이 관심이 있는 제품에 대한 통찰력을 얻을 수 있습니다.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 3%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;개발자 안내서;엔드포인트;데이터 과학 작업 공간;인기 항목;모델;sensei 기계 학습 api
 solution: Experience Platform
 title: 모델 API 끝점
-topic-legacy: Developer guide
 description: 모델은 비즈니스 사용 사례를 해결하기 위해 이전 데이터 및 구성을 사용하여 교육되는 기계 학습 레서피의 예입니다.
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 4%

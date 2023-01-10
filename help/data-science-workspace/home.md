@@ -2,10 +2,9 @@
 keywords: Experience Platform;홈;데이터 과학 작업 공간;인기 항목;데이터 과학 작업 공간;데이터 과학
 solution: Experience Platform
 title: 데이터 과학 작업 공간 개요
-topic-legacy: overview
 description: 이 안내서에서는 Adobe Experience Platform의 데이터 과학 작업 공간과 관련된 주요 개념에 대한 개요를 제공합니다.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 0%

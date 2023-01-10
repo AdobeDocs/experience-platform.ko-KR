@@ -2,11 +2,10 @@
 keywords: Experience Platform;기계 학습 모델;데이터 과학 작업 공간;실시간 고객 프로필;인기 항목;기계 학습 인사이트
 solution: Experience Platform
 title: 머신 러닝 인사이트로 실시간 고객 프로필 보강
-topic-legacy: tutorial
 type: Tutorial
 description: 이 문서에서는 기계 학습 인사이트로 실시간 고객 프로필을 보강하는 방법에 대한 안내서를 제공합니다.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%

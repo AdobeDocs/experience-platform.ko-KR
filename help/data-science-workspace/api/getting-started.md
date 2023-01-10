@@ -2,10 +2,9 @@
 keywords: Experience Platform;개발자 안내서;엔드포인트;데이터 과학 작업 공간;인기 항목;데이터 과학 작업 공간;데이터 과학
 solution: Experience Platform
 title: Sensei 기계 학습 API 안내서
-topic-legacy: Developer guide
 description: Sensei 기계 학습 API를 사용하여 개발자는 다양한 데이터 과학 작업 공간 리소스에 대해 CRUD 작업을 수행할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 9%

@@ -2,10 +2,9 @@
 keywords: Experience Platform;개발자 안내서;엔드포인트;데이터 과학 작업 공간;인기 항목;실험;sensei 기계 학습 api
 solution: Experience Platform
 title: 실험 API 끝점
-topic-legacy: Developer guide
 description: 모델 개발 및 교육은 실험 수준에서 수행됩니다. 실험 수준에서 실험은 MLInstance, 교육 실행 및 점수 책정 실행으로 구성됩니다.
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 4%

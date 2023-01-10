@@ -2,11 +2,10 @@
 keywords: Experience Platform;JupiterLab;노트북;Data Science Workspace;인기 항목;데이터 노트 분석;eda;예비 데이터 분석;데이터 과학
 solution: Experience Platform
 title: 예비 데이터 분석(EDA) 노트북
-topic-legacy: overview
 type: Tutorial
 description: 이 안내서에서는 EDA(Survey Data Analysis) 전자 필기장을 사용하여 웹 데이터의 패턴을 찾고, 예측 목표를 사용하여 이벤트를 집계하고, 집계된 데이터를 정리하며, 예측자와 목표 간의 관계를 이해하는 방법에 중점을 둡니다.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 0%

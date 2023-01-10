@@ -2,11 +2,10 @@
 keywords: Experience Platform;JupiterLab;레서피;노트북;데이터 과학 작업 공간;인기 항목;레서피 만들기
 solution: Experience Platform
 title: JupiterLab 노트북을 사용하여 모델 만들기
-topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 JupiterLab 노트북 레서피 빌더 템플릿을 사용하여 레서피를 만드는 데 필요한 단계를 안내합니다.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: b4dabd36f54cc571b78a6c6c9535f9f08c403b64
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 0%

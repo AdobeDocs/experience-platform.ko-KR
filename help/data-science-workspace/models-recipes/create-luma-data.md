@@ -2,11 +2,10 @@
 keywords: Experience Platform;luma 웹 데이터;Data Science Workspace;인기 항목;레서피;데모 데이터;데모 웹 데이터;luma 데이터
 solution: Experience Platform
 title: Luma 웹 스키마 및 데이터 세트 만들기
-topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 Luma 데모 성향 모델에 필요한 사전 요구 사항과 자산을 제공합니다.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: f57ca64c34f569f4402cb998af72e1e9022510ca
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 1%

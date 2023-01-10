@@ -2,11 +2,10 @@
 keywords: Experience Platform;소매 영업 레서피;데이터 과학 작업 공간;인기 있는 주제;레서피
 solution: Experience Platform
 title: 소매 판매 스키마 및 데이터 세트 만들기
-topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 다른 모든 Adobe Experience Platform Data Science Workspace 자습서에 필요한 사전 요구 사항과 자산을 제공합니다. 완료되면 Experience Platform 시 사용자와 IMS 조직의 구성원이 소매 판매 스키마 및 데이터 세트를 사용할 수 있습니다.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 1%

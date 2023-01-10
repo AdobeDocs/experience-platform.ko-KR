@@ -2,10 +2,9 @@
 keywords: Experience Platform;JupiterLab;노트북;데이터 과학 작업 공간;인기 항목;jupiterlab
 solution: Experience Platform
 title: JupiterLab UI 개요
-topic-legacy: Overview
 description: JupiterLab은 Project Jupiter용 웹 기반 사용자 인터페이스로, Adobe Experience Platform에 긴밀하게 통합되어 있습니다. 데이터 과학자들이 Jupiter Notebook, 코드 및 데이터를 사용하여 작업할 수 있는 대화형 개발 환경을 제공합니다. 이 문서에서는 JupiterLab 및 해당 기능에 대한 개요와 일반적인 작업을 수행하는 지침을 제공합니다.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: 1d3981c67c86f93394acf49b61bd29154e9653e8
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 3%

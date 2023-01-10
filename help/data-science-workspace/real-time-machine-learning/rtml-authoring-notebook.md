@@ -2,10 +2,9 @@
 keywords: Experience Platform;개발자 안내서;데이터 과학 작업 공간;인기 항목;실시간 머신 러닝;노드 참조;
 solution: Experience Platform
 title: 실시간 머신 러닝 노트북 관리
-topic-legacy: Training and scoring a ML model
 description: 다음 안내서에서는 Adobe Experience Platform JupiterLab에서 실시간 머신 러닝 애플리케이션을 구축하는 데 필요한 단계를 간략하게 설명합니다.
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 0%
@@ -409,7 +408,7 @@ print(f'Updated dsl: {updated_dsl}')
 
 ## 점수 책정 {#scoring}
 
-에 게시 후 [!DNL Edge], 점수는 클라이언트의 POST 요청에 의해 수행됩니다. 일반적으로 ML 점수가 필요한 클라이언트 응용 프로그램에서 이 작업을 수행할 수 있습니다. 포스트맨에서도 가능합니다 다음 **[!UICONTROL 실시간 ML]** 템플릿은 EdgeUtils를 사용하여 이 프로세스를 보여줍니다.
+에 게시 후 [!DNL Edge], 점수는 클라이언트의 POST 요청에 의해 수행됩니다. 일반적으로 ML 점수가 필요한 클라이언트 응용 프로그램에서 이 작업을 수행할 수 있습니다. Postman에서도 이 작업을 수행할 수 있습니다. 다음 **[!UICONTROL 실시간 ML]** 템플릿은 EdgeUtils를 사용하여 이 프로세스를 보여줍니다.
 
 >[!NOTE]
 >

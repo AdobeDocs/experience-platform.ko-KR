@@ -2,10 +2,9 @@
 keywords: Experience Platform;문제 해결;데이터 과학 작업 공간;인기 있는 주제
 solution: Experience Platform
 title: Data Science Workspace 문제 해결 안내서
-topic-legacy: Troubleshooting
 description: 이 문서에서는 Adobe Experience Platform Data Science Workspace에 대해 자주 묻는 질문과 답변을 제공합니다.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: ec42d80e695ccf57c10c539ae1b5104c7948c473
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
@@ -18,13 +17,13 @@ ht-degree: 0%
 
 ## JupiterLab Notebook 쿼리 상태가 실행 상태에서 중단되었습니다.
 
-JupiterLab Notebook은 일부 메모리 부족 조건에서 셀이 실행 중인 상태임을 나타낼 수 있습니다. 예를 들어 큰 데이터 집합을 쿼리하거나 여러 후속 쿼리를 수행할 때 JupiterLab Notebook에서 사용 가능한 메모리가 부족하여 결과 데이터 프레임 개체를 저장할 수 있습니다. 이 상황에서 볼 수 있는 몇 가지 지표가 있습니다. 먼저, 상기 셀이 상기 셀이 상기 셀이 지시하는 실행 상태로 표시되더라도 상기 커널이 상기 유휴 상태로 진입한다 [`*`] 아이콘 을 클릭하여 제품에서 사용할 수 있습니다. 또한 아래쪽 막대는 사용/사용 가능한 RAM의 양을 나타냅니다.
+JupiterLab Notebook은 일부 메모리 부족 조건에서 셀이 실행 중인 상태임을 나타낼 수 있습니다. 예를 들어 큰 데이터 집합을 쿼리하거나 여러 후속 쿼리를 수행할 때 JupiterLab Notebook에서 사용 가능한 메모리가 부족하여 결과 데이터 프레임 개체를 저장할 수 있습니다. 이 상황에서 볼 수 있는 몇 가지 지표가 있습니다. 먼저, 상기 커널은 상기 셀이 상기 셀이 지시하는 실행 상태로 표시되더라도 상기 유휴 상태로 진입한다 [`*`] 아이콘 을 클릭하여 제품에서 사용할 수 있습니다. 또한 아래쪽 막대는 사용/사용 가능한 RAM의 양을 나타냅니다.
 
 ![사용 가능한 Ram](./images/jupyterlab/user-guide/allocate-ram.png)
 
 데이터를 읽는 동안 메모리가 할당된 최대 메모리에 도달할 때까지 늘어날 수 있습니다. 최대 메모리에 도달하고 커널이 다시 시작하는 즉시 메모리가 해제됩니다. 즉, 이 시나리오에서 사용된 메모리는 커널이 다시 시작되므로 매우 낮을 수 있지만 다시 시작하기 바로 전에 메모리는 할당된 최대 RAM에 매우 근접했을 것입니다.
 
-이 문제를 해결하려면 JupiterLab의 오른쪽 상단에 있는 톱니바퀴 아이콘을 선택하고 슬라이더를 오른쪽으로 밀어서 선택합니다 **[!UICONTROL 구성 업데이트]** 추가 RAM을 할당하려면 또한 여러 쿼리를 실행하고 있고 이전 쿼리의 결과가 필요하지 않은 경우 RAM 값이 할당된 최대 양에 가까운 경우 커널을 다시 시작하여 사용 가능한 RAM 양을 재설정합니다. 이렇게 하면 현재 쿼리에 사용할 수 있는 최대 RAM 양이 확보됩니다.
+이 문제를 해결하려면 JupiterLab의 오른쪽 상단에 있는 톱니바퀴 아이콘을 선택하고 슬라이더를 오른쪽으로 밀어서 선택합니다 **[!UICONTROL 구성 업데이트]** RAM을 더 할당하려면 또한 여러 쿼리를 실행하고 있고 이전 쿼리의 결과가 필요하지 않은 경우 RAM 값이 할당된 최대 양에 가까운 경우 커널을 다시 시작하여 사용 가능한 RAM 양을 재설정합니다. 이렇게 하면 현재 쿼리에 사용할 수 있는 최대 RAM 양이 확보됩니다.
 
 ![ram 추가](./images/jupyterlab/user-guide/notebook-gpu-config.png)
 

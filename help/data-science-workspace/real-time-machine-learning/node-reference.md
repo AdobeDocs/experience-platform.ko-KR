@@ -2,10 +2,9 @@
 keywords: Experience Platform;개발자 안내서;데이터 과학 작업 공간;인기 항목;실시간 머신 러닝;노드 참조;
 solution: Experience Platform
 title: 실시간 기계 학습 노드 참조
-topic-legacy: Nodes reference
 description: 노드는 그래프가 형성된 기본 단위입니다. 각 노드는 특정 작업을 수행하며 링크를 사용하여 함께 체인으로 연결하여 ML 파이프라인을 나타내는 그래프를 구성할 수 있습니다. 노드에 의해 수행되는 작업은 데이터나 스키마의 변형 또는 학습유추와 같은 입력 데이터에 대한 작업을 나타냅니다. 이 노드는 변환 또는 유추된 값을 다음 노드에 출력합니다.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
@@ -132,7 +131,7 @@ msg6 = model_train.process(msg5)
 
 ### 분할
 
-다음 노드를 사용하여 데이터 프레임을 교육 및 테스트로 분할합니다. `train_size` 또는 `test_size`. 이렇게 하면 다중 인덱스가 있는 데이터 프레임이 반환됩니다. 다음 예를 사용하여 데이터 프레임을 교육 및 테스트할 수 있습니다. `msg5.data.xs(“train”)`.
+다음 노드를 사용하여 데이터 프레임을 교육 및 테스트로 분할합니다. `train_size` 또는 `test_size`. 이렇게 하면 다중 인덱스가 있는 데이터 프레임이 반환됩니다. 다음 예를 사용하여 데이터 프레임을 교육 및 테스트할 수 있습니다. `msg5.data.xs("train")`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})

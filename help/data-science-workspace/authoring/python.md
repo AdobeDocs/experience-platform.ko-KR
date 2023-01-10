@@ -1,24 +1,22 @@
 ---
-keywords: Experience Platform;홈;인기 항목;데이터 액세스;Python sdk;데이터 액세스 api;읽기 python;쓰기
+keywords: Experience Platform;홈;인기 항목;데이터 액세스;python sdk;데이터 액세스 api;읽기 python;쓰기 python
 solution: Experience Platform
-title: 데이터 과학 작업 공간에서 Python을 사용하여 데이터 액세스
-topic-legacy: tutorial
+title: Data Science Workspace에서 Python을 사용하여 데이터 액세스
 type: Tutorial
-description: 다음 문서에는 데이터 과학 작업 공간에서 사용하기 위해 Python의 데이터에 액세스하는 방법에 대한 예가 포함되어 있습니다.
+description: 다음 문서에는 Data Science Workspace에서 사용할 Python의 데이터에 액세스하는 방법에 대한 예가 나와 있습니다.
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
 
 ---
 
-# 데이터 과학 작업 공간에서 Python을 사용하여 데이터 액세스
+# Data Science Workspace에서 Python을 사용하여 데이터 액세스
 
-다음 문서에는 데이터 과학 작업 공간에서 사용하기 위해 Python을 사용하여 데이터에 액세스하는 방법에 대한 예가 포함되어 있습니다. JupiterLab 전자 필기장을 사용하여 데이터에 액세스하는 방법에 대한 자세한 내용은 [JupiterLab 전자 필기장 데이터 액세스](../jupyterlab/access-notebook-data.md) 설명서를 참조하십시오.
+다음 문서에는 Data Science Workspace에서 사용할 Python을 사용하여 데이터에 액세스하는 방법에 대한 예가 나와 있습니다. JupiterLab 노트북을 사용하여 데이터에 액세스하는 방법에 대한 자세한 내용은 [JupiterLab 노트북 데이터 액세스](../jupyterlab/access-notebook-data.md) 설명서.
 
-## 데이터 세트 읽기
+## 데이터 집합 읽기
 
 환경 변수를 설정하고 설치를 완료한 후 이제 데이터 세트를 판다 데이터 프레임으로 읽을 수 있습니다.
 
@@ -53,9 +51,9 @@ partitions = dataset.get_partitions_info()
 
 ### DISTINCT 절
 
-DISTINCT 절을 사용하면 모든 개별 값을 행/열 수준에서 가져와 응답에서 모든 중복 값을 제거할 수 있습니다.
+DISTINCT 절을 사용하면 행/열 레벨에서 모든 고유 값을 가져와 응답에서 모든 중복 값을 제거할 수 있습니다.
 
-`distinct()` 함수를 사용하는 예는 아래에 볼 수 있습니다.
+사용 예 `distinct()` 함수는
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
@@ -63,7 +61,7 @@ df = dataset_reader.select(['column-a']).distinct().read()
 
 ### WHERE 절
 
-Python의 특정 연산자를 사용하여 데이터 세트를 필터링할 수 있습니다.
+Python의 특정 연산자를 사용하여 데이터 집합을 필터링할 수 있습니다.
 
 >[!NOTE]
 >
@@ -79,7 +77,7 @@ And = and operator
 Or = or operator
 ```
 
-이러한 필터링 기능을 사용하는 예는 다음과 같습니다.
+이러한 필터링 함수를 사용하는 예는 다음과 같습니다.
 
 ```python
 df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experience_ds['timestamp'].lt(87879779797)).Or(experience_ds['a'].eq(123)))
@@ -87,9 +85,9 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY 절
 
-ORDER BY 절을 사용하면 수신한 결과를 특정 순서(오름차순 또는 내림차순)의 지정된 열로 정렬할 수 있습니다. 이 작업은 `sort()` 함수를 사용하여 수행합니다.
+ORDER BY 절을 사용하면 수신한 결과를 특정 순서(오름차순 또는 내림차순)로 지정된 열로 정렬할 수 있습니다. 이 작업은 `sort()` 함수 위에 있어야 합니다.
 
-`sort()` 함수를 사용하는 예는 아래에 볼 수 있습니다.
+사용 예 `sort()` 함수는
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
@@ -97,9 +95,9 @@ df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 
 ### LIMIT 절
 
-LIMIT 절을 사용하면 데이터 세트에서 수신한 레코드 수를 제한할 수 있습니다.
+LIMIT 절을 사용하면 데이터 집합에서 받은 레코드 수를 제한할 수 있습니다.
 
-`limit()` 함수를 사용하는 예는 아래에 볼 수 있습니다.
+사용 예 `limit()` 함수는
 
 ```python
 df = dataset_reader.limit(100).read()
@@ -107,19 +105,19 @@ df = dataset_reader.limit(100).read()
 
 ### OFFSET 절
 
-OFFSET 절을 사용하면 처음부터 행을 건너뛰어 이후 이후 행으로부터 행 반환을 시작할 수 있습니다. LIMIT와 함께 사용하면 블록 내의 행을 반복할 수 있습니다.
+OFFSET 절을 사용하면 처음부터 행을 건너뛸 수 있어 나중에 행으로부터 행 재전송을 시작할 수 있습니다. LIMIT와 결합하여 블록에서 행을 반복하는 데 사용할 수 있습니다.
 
-`offset()` 함수를 사용하는 예는 아래에 볼 수 있습니다.
+사용 예 `offset()` 함수는
 
 ```python
 df = dataset_reader.offset(100).read()
 ```
 
-## 데이터 세트 쓰기
+## 데이터 집합 작성
 
-데이터 세트에 기록하려면 판다에게 데이터 프레임을 제공해야 합니다.
+데이터 집합에 쓰려면 판다 데이터 프레임을 데이터 집합에 제공해야 합니다.
 
-### 판다 데이터 프레임 쓰기
+### 판다의 데이터 프레임 작성
 
 ```python
 client_context = get_client_context(config_properties)
@@ -132,13 +130,13 @@ dataset_writer = DatasetWriter(client_context, dataset)
 write_tracker = dataset_writer.write(<your_dataFrame>, file_format='json')
 ```
 
-## 사용자 공간 디렉토리(체크 포인트)
+## Userspace 디렉토리(확인)
 
-더 긴 실행 작업의 경우 중간 단계를 저장해야 할 수 있습니다. 이와 같은 경우에는 사용자 공간을 읽고 쓸 수 있습니다.
+더 오래 실행되는 작업을 위해 중간 단계를 저장해야 할 수 있습니다. 이와 같은 경우에는 사용자 공간을 읽고 쓸 수 있습니다.
 
 >[!NOTE]
 >
->데이터에 대한 경로는 **저장되지 않습니다.** 해당 데이터에 해당하는 경로를 저장해야 합니다.
+>데이터 경로는 다음과 같습니다 **not** 저장. 각 데이터에 해당 경로를 저장해야 합니다.
 
 ### 사용자 공간에 쓰기
 
@@ -160,4 +158,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## 다음 단계
 
-Adobe Experience Platform Data Science Workspace는 위 코드 샘플을 사용하여 데이터를 읽고 작성하는 레서피 샘플을 제공합니다. 데이터에 액세스하기 위해 Python을 사용하는 방법에 대한 자세한 내용은 [데이터 과학 작업 공간 Python GitHub 저장소](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail)를 참조하십시오.
+Adobe Experience Platform Data Science Workspace에서는 위의 코드 샘플을 사용하여 데이터를 읽고 쓰는 레서피 샘플을 제공합니다. 데이터 액세스에 Python을 사용하는 방법에 대해 자세히 알아보려면 [데이터 과학 작업 공간 Python GitHub 저장소](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).

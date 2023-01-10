@@ -2,11 +2,10 @@
 keywords: Experience Platform;모델 게시;데이터 과학 작업 공간;인기 항목;sensei 기계 학습 api
 solution: Experience Platform
 title: Sensei Machine Learning API를 사용하여 서비스로 모델 게시
-topic-legacy: tutorial
 type: Tutorial
 description: 이 자습서에서는 Sensei 기계 학습 API를 사용하여 모델을 서비스로 게시하는 프로세스에 대해 설명합니다.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 1%

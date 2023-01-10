@@ -2,10 +2,9 @@
 keywords: Experience Platform;개발자 안내서;엔드포인트;데이터 과학 작업 공간;인기 항목;엔진;sensei 기계 학습 api
 solution: Experience Platform
 title: 엔진 API 끝점
-topic-legacy: Developer guide
 description: 엔진은 Data Science Workspace에서 머신 러닝 모델을 위한 기반입니다. 여기에는 특정 문제를 해결하는 기계 학습 알고리즘, 기능 엔지니어링을 수행하는 기능 파이프라인 또는 둘 다 포함됩니다.
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 3%
