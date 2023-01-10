@@ -43,7 +43,7 @@ ht-degree: 26%
    * [Adobe Real-time Customer Data Platform(모든 버전)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [애플리케이션 및 지능형 서비스(비디오)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
-   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ko)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
    * [Experience Cloud과 플랫폼 통합(비디오)](video/experience-cloud-integrations.md)
 * 거버넌스, 개인 정보 및 보안 {#governance-privacy-security}

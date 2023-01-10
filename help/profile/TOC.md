@@ -1,12 +1,12 @@
 ---
 audience: user
-user-guide-title: Real-Time Customer Profile 안내서
+user-guide-title: 실시간 고객 프로필 안내서
 user-guide-description: 고객 데이터를 통합하여 다양한 채널에서 고객과의 상호 작용을 종합적으로 파악합니다.
 feature: Profiles
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 20%
+ht-degree: 23%
 
 ---
 

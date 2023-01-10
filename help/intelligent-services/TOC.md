@@ -7,7 +7,7 @@ user-guide-description: 인텔리전트 AI 서비스를 이용하여 점수를 �
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 24%
+ht-degree: 26%
 
 ---
 
