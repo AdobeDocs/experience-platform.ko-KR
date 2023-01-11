@@ -3,9 +3,9 @@ keywords: google customer match;Google 고객 일치;Google Customer Match
 title: Google Customer Match 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail 및 YouTube과 같은 Google이 소유하고 운영하는 속성에서 고객에게 도달하고 다시 참여합니다.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: b189f1b0fe29ebefb3cba9c4f820022a772ce297
+source-git-commit: d6b34f3bd3a432e1cf7d3dcce242934391b65d78
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1769'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-[Google 고객 일치](https://support.google.com/google-ads/answer/6379332?hl=en) 을 사용하면 온라인 및 오프라인 데이터를 사용하여 다음과 같은 Google의 소유물과 운영 속성에서 고객에게 도달하고 다시 참여하도록 할 수 있습니다. [!DNL Search], [!DNL Shopping], [!DNL Gmail], 및 [!DNL YouTube].
+[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) 을 사용하면 온라인 및 오프라인 데이터를 사용하여 다음과 같은 Google의 소유물과 운영 속성에서 고객에게 도달하고 다시 참여하도록 할 수 있습니다. [!DNL Search], [!DNL Shopping], [!DNL Gmail], 및 [!DNL YouTube].
 
 ![Adobe Experience Platform UI의 Google 고객 일치 대상.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
@@ -69,7 +69,7 @@ Experience Platform의 일부 대상에는 대상 플랫폼으로 전송되거�
 
 ### 허용 목록 {#allowlist}
 
-만들기 전 [!DNL Google Customer Match] Experience Platform의 대상, [!DNL Google Ads] 계정은 [Google 고객 일치 정책](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+만들기 전 [!DNL Google Customer Match] Experience Platform의 대상, [!DNL Google Ads] 계정은 [[!DNL Google Customer Match] 정책](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
 준수 계정이 있는 고객은 Google에 의해 자동으로 나열될 수 있습니다.
 
@@ -96,10 +96,10 @@ Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사�
 
 Google의 해시 요구 사항 및 활성화 기타 제한에 대한 자세한 내용은 Google 설명서에서 다음 섹션을 참조하십시오.
 
-* [[!DNL Customer Match] 이메일 주소, 주소 또는 사용자 ID 포함](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)
-* [[!DNL Customer Match] 고려 사항](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_considerations)
-* [전화 번호와 고객 일치](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_phone_number)
-* [모바일 장치 ID와 고객 일치](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_mobile_device_ids)
+* [[!DNL Customer Match] 이메일 주소, 주소 또는 사용자 ID 포함](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_email_address_address_or_user_id)
+* [[!DNL Customer Match] 고려 사항](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_considerations)
+* [[!DNL Customer Match] 전화 번호 포함](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
+* [[!DNL Customer Match] 모바일 장치 ID 사용](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
 
 Experience Platform에서 이메일 주소 섭취에 대한 자세한 내용은 [배치 수집 개요](../../../ingestion/batch-ingestion/overview.md) 그리고 [스트리밍 수집 개요](../../../ingestion/streaming-ingestion/overview.md).
@@ -209,5 +209,5 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 ## 추가 리소스 {#additional-resources}
 
-* [Google 고객 일치 통합 - 비디오 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
+* [통합 [!DNL Google Customer Match] - 비디오 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
 
