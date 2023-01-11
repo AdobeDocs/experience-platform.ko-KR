@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM(Experience Data Model)에서의 네임스페이스
 description: XDM(Experience Data Model)의 네임스페이스를 통해 스키마를 확장하고 다른 스키마 구성 요소를 함께 가져올 때 필드 충돌을 방지할 수 있는 방법을 알아봅니다.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '634'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ XDM(Experience Data Model) 스키마의 모든 필드에 연관된 네임스페�
 
 표준 XDM 구문은 스키마에서 네임스페이스가 표시되는 방식에 대한 통찰력을 제공합니다(포함) [Adobe Experience Platform에서 번역되는 방법](#compatibility)).
 
-표준 XDM 사용 [JSON-LD](https://json-ld.org/) 필드에 네임스페이스를 할당하는 구문 이 네임스페이스는 URI(예: `https://ns.adobe.com/xdm` 대상 `xdm` namespace)나 또는 `@context` 스키마 속성입니다.
+표준 XDM 사용 [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) 필드에 네임스페이스를 할당하는 구문 이 네임스페이스는 URI(예: `https://ns.adobe.com/xdm` 대상 `xdm` namespace)나 또는 `@context` 스키마 속성입니다.
 
 다음은 표준 XDM 구문의 제품에 대한 예제 스키마입니다. 을 제외하고 `@id` (JSON-LD 사양에 정의된 고유한 식별자), 아래의 각 필드 `properties` 는 네임스페이스로 시작하고 필드 이름으로 끝납니다. 에 정의된 축약형 접두사를 사용하는 경우 `@context`로 지정하는 경우 네임스페이스 및 필드 이름은 콜론(`:`). 접두사를 사용하지 않는 경우 네임스페이스 및 필드 이름은 슬래시( )로 구분됩니다`/`).
 
@@ -75,7 +75,7 @@ XDM(Experience Data Model) 스키마의 모든 필드에 연관된 네임스페�
 | 속성 | 설명 |
 | --- | --- |
 | `@context` | 전체 네임스페이스 URI 대신 사용할 수 있는 축약형 접두사를 정의하는 개체입니다. `properties`. |
-| `@id` | 에 정의된 레코드의 고유 식별자입니다. [JSON-LD 사양](https://json-ld.org/spec/latest/json-ld/#node-identifiers). |
+| `@id` | 에 정의된 레코드의 고유 식별자입니다. [JSON-LD 사양](https://www.w3.org/TR/json-ld11/#node-identifiers). |
 | `xdm:sku` | 축약형 접두사를 사용하여 네임스페이스를 나타내는 필드의 예입니다. 이 경우 `xdm` 는 네임스페이스(`https://ns.adobe.com/xdm`) 및 `sku` 는 필드 이름입니다. |
 | `https://ns.adobe.com/xdm/channels/application` | 전체 네임스페이스 URI를 사용하는 필드의 예입니다. 이 경우 `https://ns.adobe.com/xdm/channels` 는 네임스페이스이며, `application` 는 필드 이름입니다. |
 | `https://ns.adobe.com/vendorA/product/stockNumber` | 공급업체 리소스에서 제공하는 필드는 고유한 네임스페이스를 사용합니다. 이 예제에서는 `https://ns.adobe.com/vendorA/product` 는 공급업체 네임스페이스이며, `stockNumber` 는 필드 이름입니다. |

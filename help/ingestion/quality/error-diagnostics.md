@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 수집 오류 진단 검색
 description: 이 문서에서는 배치 수집 모니터링, 부분 배치 수집 오류 관리 및 부분 배치 수집 유형에 대한 참조에 대해 설명합니다.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '981'
 ht-degree: 2%
 
 ---
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **응답**
 
-성공적인 응답은 다음을 포함하는 JSON 개체를 반환합니다 `path` 진단 프로그램이 저장된 위치를 설명하는 개체입니다. 응답에서 `path` 개체 [JSON 라인](https://jsonlines.org/) 형식 지정
+성공적인 응답은 다음을 포함하는 JSON 개체를 반환합니다 `path` 진단 프로그램이 저장된 위치를 설명하는 개체입니다. 응답에서 `path` 개체 [JSON 라인](https://jsonlines.readthedocs.io/en/latest/) 형식 지정
 
 ```json
 {"path": "F1.json"}
