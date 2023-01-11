@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 용어
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '7919'
+source-wordcount: '7929'
 ht-degree: 0%
 
 ---
@@ -327,7 +327,7 @@ ht-degree: 0%
 
 **라이브러리**: 태그 컨텍스트에서 라이브러리는 태그 라이브러리가 클라이언트 장치에서 작동하는 방법에 대한 지침을 포함하는 비즈니스 논리 세트입니다.
 
-**조회 엔터티**: 데이터 모델링 컨텍스트에서 조회 엔티티는 개별 사용자와 관련될 수 있지만 개인을 식별하는 데 직접 사용할 수 없는 개념을 나타냅니다. 이 카테고리에 속하는 엔티티는 XDM(사용자 지정 Experience Data Model) 클래스를 기반으로 하여 스키마로 표시되어야 합니다.
+**조회 엔터티**: 데이터 모델링 컨텍스트에서 조회 엔티티는 개별 사용자와 관련될 수 있지만 개인을 식별하는 데 직접 사용할 수 없는 개념을 나타냅니다. 이 카테고리에 속하는 엔티티는 XDM(사용자 지정 Experience Data Model) 클래스를 기반으로 한 스키마로 나타내고 를 통해 프로필 엔티티에 연결해야 합니다 [스키마 관계](../xdm/tutorials/relationship-ui.md).
 
 ## M
 

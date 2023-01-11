@@ -4,9 +4,9 @@ title: Real-time Customer Data Platform B2B Edition의 기본 보호 기능
 type: Documentation
 description: Adobe Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다. 이 문서에서는 Adobe Real-time Customer Data Platform B2B Edition을 사용하여 최적의 시스템 성능을 위해 데이터를 모델링하는 데 도움이 되는 기본 사용 및 비율 제한을 제공합니다.
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1651'
 ht-degree: 2%
 
 ---
@@ -117,14 +117,22 @@ Real-time Customer Data Platform B2B Edition을 사용하면 실시간 고객 �
 
 ### 엔티티 유형
 
-다음 [!DNL Profile] 저장소 데이터 모델은 두 가지 핵심 엔티티 유형으로 구성됩니다.
+다음 [!DNL Profile] 저장소 데이터 모델은 두 가지 핵심 엔티티 유형으로 구성됩니다. [기본 엔티티](#primary-entity) 및 [차원 엔티티](#dimension-entity).
 
-* **기본 엔터티:** 기본 엔티티 또는 프로필 엔티티는 데이터를 함께 병합하여 개인에 대한 &quot;단일 진실의 소스&quot;를 만듭니다. 이 통합 데이터는 &quot;결합 보기&quot;라고 하는 것을 사용하여 표시됩니다. 결합 보기는 동일한 클래스를 구현하는 모든 스키마의 필드를 단일 결합 스키마에 집계합니다. 에 대한 결합 스키마 [!DNL Real-Time Customer Profile] 는 모든 프로필 속성 및 행동 이벤트에 대한 컨테이너 역할을 하는 비정규화된 하이브리드 데이터 모델입니다.
+#### 기본 엔티티
 
-   시간 독립적인 속성(&quot;레코드 데이터&quot;라고도 함)은 [!DNL XDM Individual Profile], 시간 시리즈 데이터(&quot;이벤트 데이터&quot;라고도 함)는 를 사용하여 모델링됩니다 [!DNL XDM ExperienceEvent]. 레코드 및 시계열 데이터가 Adobe Experience Platform에서 수집되면 트리거됩니다 [!DNL Real-Time Customer Profile] 사용할 수 있도록 활성화된 데이터 수집을 시작합니다. 수집된 상호 작용 및 세부 사항이 많을수록 더 강력한 개별 프로필이 생성됩니다.
+기본 엔티티 또는 프로필 엔티티는 데이터를 함께 병합하여 개인에 대한 &quot;단일 진실의 소스&quot;를 만듭니다. 이 통합 데이터는 &quot;결합 보기&quot;라고 하는 것을 사용하여 표시됩니다. 결합 보기는 동일한 클래스를 구현하는 모든 스키마의 필드를 단일 결합 스키마에 집계합니다. 에 대한 결합 스키마 [!DNL Real-Time Customer Profile] 는 모든 프로필 속성 및 행동 이벤트에 대한 컨테이너 역할을 하는 비정규화된 하이브리드 데이터 모델입니다.
 
-   ![](../profile/images/guardrails/profile-entity.png)
+시간 독립적인 속성(&quot;레코드 데이터&quot;라고도 함)은 [!DNL XDM Individual Profile], 시간 시리즈 데이터(&quot;이벤트 데이터&quot;라고도 함)는 를 사용하여 모델링됩니다 [!DNL XDM ExperienceEvent]. 레코드 및 시계열 데이터가 Adobe Experience Platform에서 수집되면 트리거됩니다 [!DNL Real-Time Customer Profile] 사용할 수 있도록 활성화된 데이터 수집을 시작합니다. 수집된 상호 작용 및 세부 사항이 많을수록 더 강력한 개별 프로필이 생성됩니다.
 
-* **Dimension 엔터티:** 프로필 데이터를 유지 관리하는 프로필 데이터 저장소는 관계형 저장소가 아니지만 Profile에서는 세그먼트를 간소화되고 직관적으로 만들 수 있도록 작은 차원 엔티티와의 통합을 허용합니다. 이 통합을 라고 합니다. [다중 엔티티 세그먼테이션](../segmentation/multi-entity-segmentation.md). 또한 조직은 저장소, 제품 또는 속성과 같이 개인 이외의 항목을 설명하는 XDM 클래스를 정의할 수 있습니다. 이러한 비지원[!DNL XDM Individual Profile] 스키마는 &quot;차원 엔티티&quot;라고 하며, 시계열 데이터를 포함하지 않습니다. Dimension 엔티티는 다중 엔티티 세그먼트 정의를 지원하고 단순화하는 조회 데이터를 제공하며, 세그먼테이션 엔진이 최적의 처리를 위해 전체 데이터 세트를 메모리에 로드할 수 있을 만큼 작아야 합니다(빠른 포인트 조회).
+![레코드 데이터와 시계열 데이터 간의 차이점을 보여주는 인포그래픽입니다.](../profile/images/guardrails/profile-entity.png)
 
-   ![](../profile/images/guardrails/profile-and-dimension-entities.png)
+#### Dimension 엔티티
+
+프로필 데이터를 유지 관리하는 프로필 데이터 저장소는 관계형 저장소가 아니지만 Profile에서는 세그먼트를 간소화되고 직관적으로 만들 수 있도록 작은 차원 엔티티와의 통합을 허용합니다. 이 통합을 라고 합니다. [다중 엔티티 세그먼테이션](../segmentation/multi-entity-segmentation.md).
+
+또한 조직은 저장소, 제품 또는 속성과 같이 개인 이외의 항목을 설명하는 XDM 클래스를 정의할 수 있습니다. 이러한 비지원[!DNL XDM Individual Profile] 스키마를 &quot;차원 엔티티&quot;라고 하며(&quot;조회 엔티티&quot;라고도 함), 시계열 데이터를 포함하지 않습니다. 차원 엔티티를 나타내는 스키마는 [스키마 관계](../xdm/tutorials/relationship-ui.md).
+
+Dimension 엔티티는 다중 엔티티 세그먼트 정의를 지원하고 단순화하는 조회 데이터를 제공하며, 세그먼테이션 엔진이 최적의 처리를 위해 전체 데이터 세트를 메모리에 로드할 수 있을 만큼 작아야 합니다(빠른 포인트 조회).
+
+![프로필 엔티티가 차원 엔티티로 구성되었음을 나타내는 인포그래픽입니다.](../profile/images/guardrails/profile-and-dimension-entities.png)
