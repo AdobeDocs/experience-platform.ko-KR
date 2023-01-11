@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 API 끝점
 description: 다음 섹션에서는 Query Service API에서 /queries 종단점을 사용하여 수행할 수 있는 호출을 살펴봅니다.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
+source-git-commit: 08e19149a84273231c6261d2a4e09584dfb6e38d
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '868'
 ht-degree: 2%
 
 ---
@@ -140,9 +140,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
         "queryParameters": {
-            $user_id : {USER_ID}
+            user_id : {USER_ID}
             }
         "name": "Sample Query",
         "description": "Sample Description"
@@ -295,9 +295,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 >
 >다음 값을 사용할 수 있습니다. `_links.cancel` to [만든 쿼리 취소](#cancel-a-query).
 
-### 쿼리 취소
+### 쿼리 취소 또는 소프트 삭제
 
-에 PATCH 요청을 작성하여 지정된 질의 삭제를 요청할 수 있습니다 `/queries` 끝점 및 쿼리 제공 `id` 값을 지정한 경우 이해할 수 있도록 해줍니다.
+에 PATCH 요청을 수행하여 지정된 쿼리를 취소 또는 소프트 삭제하도록 요청할 수 있습니다 `/queries` 끝점 및 쿼리 제공 `id` 값을 지정한 경우 이해할 수 있도록 해줍니다.
 
 **API 형식**
 
@@ -305,9 +305,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 PATCH /queries/{QUERY_ID}
 ```
 
-| 속성 | 설명 |
+| 매개 변수 | 설명 |
 | -------- | ----------- |
-| `{QUERY_ID}` | 다음 `id` 취소할 쿼리의 값입니다. |
+| `{QUERY_ID}` | 다음 `id` 작업을 수행할 쿼리의 값입니다. |
 
 
 **요청**
@@ -328,7 +328,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `op` | 쿼리를 취소하려면 값이 있는 op 매개 변수를 설정해야 합니다 `cancel `. |
+| `op` | 리소스에 대해 수행할 작업 유형입니다. 허용되는 값은 다음과 같습니다 `cancel` 및 `soft_delete`. 쿼리를 취소하려면 값으로 op 매개 변수를 설정해야 합니다 `cancel `. 소프트 삭제 작업은 GET 요청 시 쿼리가 반환되지 않도록 하지만 시스템에서 삭제되지 않습니다. |
 
 **응답**
 

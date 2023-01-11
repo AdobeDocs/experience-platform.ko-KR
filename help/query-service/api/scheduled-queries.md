@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 예약된 쿼리 API 끝점
 description: 다음 섹션에서는 Query Service API를 사용하는 예약된 쿼리에 사용할 수 있는 다양한 API 호출을 안내합니다.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1139'
 ht-degree: 2%
 
 ---
@@ -311,7 +311,7 @@ PATCH 요청은 두 개의 서로 다른 경로를 지원합니다. `/state` 및
 
 ### 예약된 쿼리 상태 업데이트
 
-다음을 사용할 수 있습니다 `/state` 선택한 예약된 쿼리의 상태를 업데이트하려면(활성화 또는 비활성화) 상태를 업데이트하려면 값을 `enable` 또는 `disable`.
+을 설정하여 선택한 예약된 쿼리의 상태를 업데이트할 수 있습니다 `path` 속성 대상 `/state` 그리고 `value` property `enable` 또는 `disable`.
 
 **API 형식**
 
@@ -347,6 +347,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | 속성 | 설명 |
 | -------- | ----------- |
+| `op` | 쿼리 일정에 대해 수행할 작업입니다. 허용되는 값은 입니다. `replace`. |
 | `path` | 패치할 값의 경로입니다. 이 경우 예약된 쿼리의 상태를 업데이트하므로 값을 설정해야 합니다 `path` to `/state`. |
 | `value` | 의 업데이트된 값 `/state`. 이 값은 로 설정할 수 있습니다. `enable` 또는 `disable` 예약된 쿼리를 활성화하거나 비활성화합니다. |
 
@@ -363,7 +364,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### 예약된 쿼리 일정 업데이트
 
-다음을 사용할 수 있습니다 `/schedule/schedule` 예약된 쿼리의 cron 일정을 업데이트하려면 크론 예약에 대한 자세한 내용은 [cron 식 형식](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 설명서.
+을 설정하여 예약된 쿼리의 cron 일정을 업데이트할 수 있습니다. `path` 속성 대상 `/schedule/schedule` 를 입력합니다. 크론 예약에 대한 자세한 내용은 [cron 식 형식](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 설명서.
 
 **API 형식**
 
@@ -398,6 +399,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | 속성 | 설명 |
 | -------- | ----------- |
+| `op` | 쿼리 일정에 대해 수행할 작업입니다. 허용되는 값은 입니다. `replace`. |
 | `path` | 패치할 값의 경로입니다. 이 경우 예약된 쿼리의 일정을 업데이트하므로 값을 설정해야 합니다 `path` to `/schedule/schedule`. |
 | `value` | 의 업데이트된 값 `/schedule`. 이 값은 크론 예약의 형식이어야 합니다. 따라서 이 예제에서 예약된 쿼리는 45분 표시에서 매시간마다 실행됩니다. |
 
