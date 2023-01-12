@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스키마 구성 기본 사항
 description: 이 문서에서는 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 XDM(Experience Data Model) 스키마와 빌딩 블록, 원칙 및 모범 사례를 소개합니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: b67349baa909cc59f3ff1d7aac22f7926f2b36ff
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '4108'
 ht-degree: 2%
@@ -76,7 +76,7 @@ ID 데이터를 Platform으로 전송하는 방법에는 두 가지가 있습니
 
 >[!NOTE]
 >
->를 사용하는 스키마 `identityMap` 는 관계에서 소스 스키마로 사용할 수 있지만 대상 스키마로 사용할 수 없습니다. 모든 대상 스키마에는 소스 스키마 내의 참조 필드에 매핑할 수 있는 표시 ID가 있어야 하기 때문입니다. 의 UI 안내서 를 참조하십시오. [관계](../tutorials/relationship-ui.md) 소스 및 대상 스키마 요구 사항에 대한 자세한 내용을 참조하십시오.
+>를 사용하는 스키마 `identityMap` 관계에서는 소스 스키마로 사용할 수 있지만 참조 스키마로 사용할 수는 없습니다. 이것은 모든 참조 스키마에 소스 스키마 내의 참조 필드에 매핑할 수 있는 표시 ID가 있어야 하기 때문입니다. 의 UI 안내서 를 참조하십시오. [관계](../tutorials/relationship-ui.md) 소스 및 참조 스키마 요구 사항에 대한 자세한 내용을 참조하십시오.
 
 그러나 ID 맵은 ID를 함께 저장하는 소스에서 데이터를 가져오는 경우 특히 유용합니다 [!DNL Airship] 또는 Adobe Audience Manager)이거나 스키마에 대한 ID가 여러 개 있는 경우 또한 를 사용하는 경우 ID 맵이 필요합니다 [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 

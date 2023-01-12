@@ -5,9 +5,9 @@ title: UI에서 스키마 리소스 살펴보기
 description: Experience Platform 사용자 인터페이스에서 기존 스키마, 클래스, 스키마 필드 그룹 및 데이터 유형을 탐색하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '958'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ ID 필드가 포함된 스키마를 검사할 때 이러한 필드는 스키마�
 
 관계 필드가 포함된 스키마를 검사하는 경우 필드는 아래의 왼쪽 레일에 나열됩니다 **[!UICONTROL 관계]**. 왼쪽 레일에서 관계 필드 이름을 선택하여 중첩된 심도에 관계없이 캔버스에서 필드를 표시합니다.
 
-관계 필드는 캔버스에서 고유하게 강조 표시되어 필드가 참조하는 대상 스키마의 이름을 표시합니다. 관계 필드의 이름을 선택하는 경우 오른쪽 레일에서 대상 스키마의 기본 ID의 ID 네임스페이스를 볼 수 있습니다.
+관계 필드는 캔버스에서 고유하게 강조 표시되어 필드가 연결되는 참조 스키마의 이름을 표시합니다. 관계 필드의 이름을 선택하는 경우 오른쪽 레일에서 참조 스키마의 기본 ID의 ID 네임스페이스를 볼 수 있습니다.
 
 ![](../images/ui/explore/relationship-field.png)
 

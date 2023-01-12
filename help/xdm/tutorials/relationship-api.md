@@ -4,9 +4,9 @@ title: 스키마 레지스트리 API를 사용하여 두 스키마 간의 관계
 description: 이 문서에서는 스키마 레지스트리 API를 사용하여 조직에서 정의한 두 스키마 간에 일대일 관계를 정의하는 자습서를 제공합니다.
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1398'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,11 @@ ht-degree: 2%
 
 다양한 채널에서 고객과의 관계와 브랜드와의 상호 작용을 파악하는 기능은 Adobe Experience Platform의 중요한 부분입니다. 구조 내에서 이러한 관계 정의 [!DNL Experience Data Model] (XDM) 스키마를 사용하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
 
-스키마 관계는 결합 스키마 및 [!DNL Real-Time Customer Profile]이는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 대상 스키마의 ID를 참조하는 소스 스키마에 전용 관계 필드를 추가해야 합니다.
+스키마 관계는 결합 스키마 및 [!DNL Real-Time Customer Profile]이는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속한 두 스키마 간의 관계를 설정하려면 전용 관계 필드를 **소스 스키마**- 별도의 **참조 스키마**.
+
+>[!NOTE]
+>
+>스키마 레지스트리 API는 참조 스키마를 &quot;대상 스키마&quot;로 참조합니다. 이러한 스키마는 의 대상 스키마와 혼동하지 않습니다 [데이터 준비 매핑 세트](../../data-prep/mapping-set.md) 또는 스키마 [대상 연결](../../destinations/home.md).
 
 이 문서에서는 다음을 사용하여 조직에서 정의한 두 스키마 간의 일대일 관계를 정의하는 자습서를 제공합니다 [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -30,11 +34,11 @@ ht-degree: 2%
 
 이 자습서를 시작하기 전에 [개발자 안내서](../api/getting-started.md) 를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보 [!DNL Schema Registry] API. 여기에는 다음이 포함됩니다 `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청을 수행하는 데 필요한 헤더입니다(에는 [!DNL Accept] 헤더 및 가능한 값).
 
-## 소스 및 대상 스키마 정의 {#define-schemas}
+## 소스 및 참조 스키마 정의 {#define-schemas}
 
 이미 관계에 정의될 두 개의 스키마를 생성한 것으로 예상됩니다. 이 자습서에서는 조직의 현재 충성도 프로그램(&quot;에 정의됨)의 멤버 간에 관계를 만듭니다[!DNL Loyalty Members]&quot; 스키마) 및 해당 즐겨찾기 호텔([!DNL Hotels]&quot; 스키마)를 만듭니다.
 
-스키마 관계는 **소스 스키마** 다음 위치에서 다른 필드를 참조하는 필드 사용 **대상 스키마**. 다음에 나오는 단계에서, &quot;[!DNL Loyalty Members]&quot; 은 소스 스키마이고 &quot;[!DNL Hotels]는 대상 스키마로 작동합니다.
+스키마 관계는 **소스 스키마** 다음 위치에서 다른 필드를 참조하는 필드 사용 **참조 스키마**. 다음에 나오는 단계에서, &quot;[!DNL Loyalty Members]&quot; 은 소스 스키마이고 &quot;[!DNL Hotels]는 참조 스키마 역할을 합니다.
 
 >[!IMPORTANT]
 >
@@ -108,13 +112,13 @@ curl -X GET \
 
 ## 소스 스키마에 대한 참조 필드 정의
 
-내 [!DNL Schema Registry], 관계 설명자는 관계형 데이터베이스 테이블의 외래 키와 비슷하게 작동합니다. 소스 스키마의 필드는 대상 스키마의 기본 id 필드에 대한 참조 역할을 합니다. 소스 스키마에 이러한 용도로 사용할 필드가 없는 경우, 새 필드로 스키마 필드 그룹을 만들어 스키마에 추가해야 할 수 있습니다. 이 새 필드에는 `type` 값 `string`.
+내 [!DNL Schema Registry], 관계 설명자는 관계형 데이터베이스 테이블의 외래 키와 비슷하게 작동합니다. 소스 스키마의 필드는 참조 스키마의 기본 id 필드에 대한 참조 역할을 합니다. 소스 스키마에 이러한 용도로 사용할 필드가 없는 경우, 새 필드로 스키마 필드 그룹을 만들어 스키마에 추가해야 할 수 있습니다. 이 새 필드에는 `type` 값 `string`.
 
 >[!IMPORTANT]
 >
 >소스 스키마는 기본 ID를 참조 필드로 사용할 수 없습니다.
 
-이 자습서에서는 대상 스키마 &quot;[!DNL Hotels]&quot;에 가 포함되어 있습니다 `hotelId` 스키마의 기본 id로 사용되는 필드입니다. 그러나 소스 스키마 &quot;[!DNL Loyalty Members]&quot;에 대한 참조로 사용할 전용 필드가 없습니다 `hotelId`를 지정하는 경우, 스키마에 새 필드를 추가하려면 사용자 지정 필드 그룹을 만들어야 합니다. `favoriteHotel`.
+이 자습서에서는 참조 스키마 &quot;[!DNL Hotels]&quot;에 가 포함되어 있습니다 `hotelId` 스키마의 기본 id로 사용되는 필드입니다. 그러나 소스 스키마 &quot;[!DNL Loyalty Members]&quot;에 대한 참조로 사용할 전용 필드가 없습니다 `hotelId`를 지정하는 경우, 스키마에 새 필드를 추가하려면 사용자 지정 필드 그룹을 만들어야 합니다. `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -378,8 +382,8 @@ curl -X POST \
 | `@type` | 정의되는 설명자의 유형입니다. 참조 설명자의 경우 값은 `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | 다음 `$id` 소스 스키마의 URL입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 버전 번호입니다. |
-| `sourceProperty` | 대상 스키마의 기본 ID를 참조하는 데 사용할 소스 스키마의 필드 경로입니다. |
-| `xdm:identityNamespace` | 참조 필드의 ID 네임스페이스입니다. 대상 스키마의 기본 ID와 동일한 네임스페이스여야 합니다. 자세한 내용은 [id 네임스페이스 개요](../../identity-service/home.md) 추가 정보. |
+| `sourceProperty` | 참조 스키마의 기본 ID를 참조하는 데 사용할 소스 스키마의 필드 경로입니다. |
+| `xdm:identityNamespace` | 참조 필드의 ID 네임스페이스입니다. 이것은 참조 스키마의 기본 ID와 동일한 네임스페이스여야 합니다. 자세한 내용은 [id 네임스페이스 개요](../../identity-service/home.md) 추가 정보. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -401,7 +405,7 @@ curl -X POST \
 
 ## 관계 설명자 만들기 {#create-descriptor}
 
-관계 설명자는 소스 스키마와 대상 스키마 간에 일대일 관계를 설정합니다. 소스 스키마의 해당 필드에 대한 참조 ID 설명자를 정의한 후에는 `/tenant/descriptors` 엔드포인트.
+관계 설명자는 소스 스키마와 참조 스키마 간에 일대일 관계를 설정합니다. 소스 스키마의 해당 필드에 대한 참조 ID 설명자를 정의한 후에는 `/tenant/descriptors` 엔드포인트.
 
 **API 형식**
 
@@ -411,7 +415,7 @@ POST /tenant/descriptors
 
 **요청**
 
-다음 요청은 &quot;[!DNL Loyalty Members]&quot; 를 소스 스키마로 사용하고 &quot;[!DNL Hotels]&quot; 를 대상 스키마로 사용합니다.
+다음 요청은 &quot;[!DNL Loyalty Members]&quot; 를 소스 스키마로 사용하고 &quot;[!DNL Hotels]&quot; 를 참조 스키마로 사용합니다.
 
 ```shell
 curl -X POST \
@@ -438,9 +442,9 @@ curl -X POST \
 | `xdm:sourceSchema` | 다음 `$id` 소스 스키마의 URL입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 버전 번호입니다. |
 | `xdm:sourceProperty` | 소스 스키마에 있는 참조 필드의 경로입니다. |
-| `xdm:destinationSchema` | 다음 `$id` 대상 스키마의 URL입니다. |
-| `xdm:destinationVersion` | 대상 스키마의 버전 번호입니다. |
-| `xdm:destinationProperty` | 대상 스키마의 기본 ID 필드에 대한 경로입니다. |
+| `xdm:destinationSchema` | 다음 `$id` 참조 스키마의 URL입니다. |
+| `xdm:destinationVersion` | 참조 스키마의 버전 번호입니다. |
+| `xdm:destinationProperty` | 참조 스키마의 기본 ID 필드에 대한 경로입니다. |
 
 {style=&quot;table-layout:auto&quot;}
 

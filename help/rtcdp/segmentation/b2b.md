@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform B2B Edition에 대한 세그멘테이션 사용 사례
 description: 사용 가능한 다양한 Adobe Real-time Customer Data Platform B2B Edition 사용 사례에 대한 개요입니다.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1283'
 ht-degree: 0%
@@ -42,7 +42,7 @@ B2B 사용 사례에 대한 세그먼트를 효과적으로 만들려면 스키�
 
 데이터 모델이 복잡할 수 있으므로 Platform UI를 사용하여 데이터 모델의 보다 자세한 시각적 표현을 보고 사용 사례와 관련된 속성을 찾을 수 있습니다. 시작하려면 플랫폼 UI로 이동하고 왼쪽 탐색에서 스키마 를 선택합니다.
 
-사용 가능한 목록에서 적절한 스키마를 선택하고 [!UICONTROL 조성물] 사이드 레일. 아래 예에서 &quot;개인&quot; 관계를 선택하면 현재 스키마에서 관련 &quot;개인&quot; 스키마를 참조하거나(관계의 소스 스키마인 경우), 또는 &quot;개인&quot; 스키마(관계의 대상 스키마인 경우)에 의해 참조되는 속성이 표시됩니다.
+사용 가능한 목록에서 적절한 스키마를 선택하고 [!UICONTROL 조성물] 사이드 레일. 아래 예에서 &quot;개인&quot; 관계를 선택하면 현재 스키마에서 관련 &quot;개인&quot; 스키마를 참조하거나(관계의 소스 스키마인 경우), 또는 &quot;개인&quot; 스키마(관계의 참조 스키마인 경우)에 의해 참조되는 속성이 표시됩니다.
 
 ![스키마 작업 공간에서 사람 관계를 사용하는 소스 키 예제](../assets/segmentation/source-key-schema-relationship-example.png)
 

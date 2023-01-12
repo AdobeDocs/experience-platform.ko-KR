@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM 시스템 문제 해결 안내서
 description: 일반적인 API 오류를 해결하는 단계를 포함하여 XDM(Experience Data Model)에 대해 자주 묻는 질문에 대한 답변을 찾습니다.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2074'
 ht-degree: 0%
 
 ---
@@ -269,7 +269,13 @@ XDM 리소스를 위한 적절한 데이터 구조에 대한 자세한 예는 �
 }
 ```
 
-에서 사용할 관계 설명자를 포함하는 스키마를 사용하기 위해 [!DNL Profile]를 채울 경우 소스 필드의 네임스페이스와 대상 필드의 기본 네임스페이스가 같아야 합니다. 이 오류 메시지는 참조 ID 설명자에 대해 일치하지 않는 네임스페이스가 포함된 스키마를 활성화하려고 할 때 표시됩니다. 다음을 확인합니다. `xdm:namespace` 대상 스키마의 id 필드 값과 `xdm:identityNamespace` 이 문제를 해결하기 위해 소스 필드의 참조 id 설명자에 있는 속성입니다.
+>[!NOTE]
+>
+>이 오류에 대해 &quot;대상 스키마&quot;는 관계의 참조 스키마를 나타냅니다.
+
+에서 사용할 관계 설명자를 포함하는 스키마를 사용하기 위해 [!DNL Profile]를 채울 때는 소스 필드의 네임스페이스와 참조 필드의 기본 네임스페이스가 같아야 합니다. 이 오류 메시지는 참조 ID 설명자에 대해 일치하지 않는 네임스페이스가 포함된 스키마를 활성화하려고 할 때 표시됩니다.
+
+다음을 확인합니다. `xdm:namespace` 참조 스키마의 id 필드 값과 `xdm:identityNamespace` 이 문제를 해결하기 위해 소스 필드의 참조 id 설명자에 있는 속성입니다.
 
 표준 ID 네임스페이스 코드 목록을 보려면 [표준 네임스페이스](../identity-service/namespaces.md) 를 참조하십시오.
 

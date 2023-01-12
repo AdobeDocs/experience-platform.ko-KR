@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform B2B Edition에서 두 스키마 간의 관계 정의
 description: Adobe Real-time Customer Data Platform B2B Edition에서 두 스키마 간에 일대일 관계를 정의하는 방법을 알아봅니다.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 0%
@@ -40,11 +40,11 @@ Adobe Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기
 * [스키마 작성 기본 사항](../schema/composition.md): XDM 스키마의 기본 구성 요소 소개.
 * [를 사용하여 스키마 만들기 [!DNL Schema Editor]](create-schema-ui.md): UI에서 스키마를 작성 및 편집하는 방법에 대한 기본 사항을 다루는 자습서입니다.
 
-## 소스 및 대상 스키마 정의
+## 소스 및 참조 스키마 정의
 
 이미 관계에 정의될 두 개의 스키마를 생성한 것으로 예상됩니다. 데모 목적으로 이 자습서에서는 비즈니스 기회(&quot;에 정의됨) 간의 관계를 만듭니다[!DNL Opportunities]&quot; 스키마) 및 관련 비즈니스 계정([!DNL Accounts]&quot; 스키마)를 만듭니다.
 
-스키마 관계는 **소스 스키마** 는 **대상 스키마**. 다음에 나오는 단계에서, &quot;[!DNL Opportunities]&quot; 은 소스 스키마 역할을 하지만 &quot;[!DNL Accounts]는 대상 스키마 역할을 합니다.
+스키마 관계는 **소스 스키마** 는 **참조 스키마**. 다음에 나오는 단계에서, &quot;[!DNL Opportunities]&quot; 은 소스 스키마 역할을 하지만 &quot;[!DNL Accounts]참조 스키마 역할을 합니다.
 
 ### B2B 관계에서의 ID 이해
 
@@ -53,7 +53,7 @@ Adobe Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기
 >title="참조 ID 네임스페이스"
 >abstract="참조 스키마의 기본 ID 필드에 대한 네임스페이스(유형)입니다. 관계에 참여하려면 참조 스키마에 설정된 기본 ID 필드가 있어야 합니다. B2B 관계의 ID에 대해 자세히 알려면 설명서를 참조하십시오."
 
-관계를 설정하려면 대상 스키마에 정의된 기본 ID가 있어야 합니다. B2B 엔티티에 대한 기본 ID를 설정할 때는 문자열 기반 엔티티 ID가 서로 다른 시스템 또는 위치에서 수집하는 경우 겹칠 수 있으므로 Platform에서 데이터 충돌이 발생할 수 있습니다.
+관계를 설정하려면 참조 스키마에 정의된 기본 ID가 있어야 합니다. B2B 엔티티에 대한 기본 ID를 설정할 때는 문자열 기반 엔티티 ID가 서로 다른 시스템 또는 위치에서 수집하는 경우 겹칠 수 있으므로 Platform에서 데이터 충돌이 발생할 수 있습니다.
 
 이를 설명하기 위해 모든 표준 B2B 클래스에는 [[!UICONTROL B2B 소스] 데이터 유형](../data-types/b2b-source.md). 이 데이터 유형은 식별자의 소스에 대한 다른 컨텍스트 정보와 함께 B2B 엔티티에 대한 문자열 식별자에 대한 필드를 제공합니다. 이 필드 중 하나는 `sourceKey`를 사용하여 데이터 유형의 다른 필드의 값을 연결하여 엔티티에 대한 완전 고유 식별자를 생성합니다. 이 필드는 항상 B2B 엔티티 스키마의 기본 ID로 사용해야 합니다.
 
@@ -75,7 +75,7 @@ Adobe Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기
 
 ### [!DNL Accounts] 스키마
 
-대상 스키마 &quot;[!DNL Accounts]&quot; [!UICONTROL XDM 계정] 클래스 이름을 지정합니다. 루트 수준 `accountKey` 필드에 다음이 포함되어 있습니다. `sourceKey` 는 [!DNL B2B Account]. 이 스키마는 프로필에서도 사용할 수 있도록 활성화되었습니다.
+참조 스키마 &quot;[!DNL Accounts]&quot; [!UICONTROL XDM 계정] 클래스 이름을 지정합니다. 루트 수준 `accountKey` 필드에 다음이 포함되어 있습니다. `sourceKey` 는 [!DNL B2B Account]. 이 스키마는 프로필에서도 사용할 수 있도록 활성화되었습니다.
 
 ![계정 스키마](../images/tutorials/relationship-b2b/accounts.png)
 
@@ -91,11 +91,11 @@ Adobe Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기
 >title="참조 스키마의 관계 이름"
 >abstract="참조 스키마에서 현재 스키마에 대한 관계를 설명하는 레이블입니다(예: &#39;관련 기회&#39;). 이 레이블은 프로필 및 세그멘테이션에서 사용하여 관련 B2B 엔티티의 데이터에 컨텍스트를 제공합니다. B2B 스키마 관계 구축에 대한 자세한 내용은 설명서를 참조하십시오."
 
-두 스키마 간의 관계를 정의하려면 소스 스키마에 대상 스키마의 기본 ID를 참조하는 전용 필드가 있어야 합니다. 표준 B2B 클래스에는 일반적으로 관련된 비즈니스 엔터티에 대한 전용 소스 키 필드가 포함됩니다. 예: [!UICONTROL XDM 비즈니스 기회] 클래스에 관련 계정의 소스 키 필드가 포함되어 있습니다(`accountKey`) 및 관련 캠페인(`campaignKey`). 하지만 다른 항목을 추가할 수도 있습니다 [!UICONTROL B2B 소스] 기본 구성 요소 이상이 필요한 경우 사용자 지정 필드 그룹을 사용하여 스키마에 필드를 추가합니다.
+두 스키마 간의 관계를 정의하려면 소스 스키마에 참조 스키마의 기본 ID를 나타내는 전용 필드가 있어야 합니다. 표준 B2B 클래스에는 일반적으로 관련된 비즈니스 엔터티에 대한 전용 소스 키 필드가 포함됩니다. 예: [!UICONTROL XDM 비즈니스 기회] 클래스에 관련 계정의 소스 키 필드가 포함되어 있습니다(`accountKey`) 및 관련 캠페인(`campaignKey`). 하지만 다른 항목을 추가할 수도 있습니다 [!UICONTROL B2B 소스] 기본 구성 요소 이상이 필요한 경우 사용자 지정 필드 그룹을 사용하여 스키마에 필드를 추가합니다.
 
 >[!NOTE]
 >
->현재 소스 스키마에서 대상 스키마로 일대일 관계만 정의할 수 있습니다. 일대다 관계의 경우 스키마에 &quot;다&quot;를 나타내는 관계 필드를 정의해야 합니다.
+>현재 소스 스키마에서 참조 스키마로 일대일 관계만 정의할 수 있습니다. 일대다 관계의 경우 스키마에 &quot;다&quot;를 나타내는 관계 필드를 정의해야 합니다.
 
 관계 필드를 설정하려면 화살표 아이콘(![화살표 아이콘](../images/tutorials/relationship-b2b/arrow.png)) 내의 해당 필드 옆에 있어야 합니다. 의 경우 [!DNL Opportunities] 스키마, 다음 `accountKey.sourceKey` 필드는 계정과 다대일 관계를 설정하는 것입니다.
 
@@ -105,11 +105,11 @@ Adobe Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기
 
 ![관계 대화 상자](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-아래 **[!UICONTROL 참조 스키마]**&#x200B;를 눌러 대상 스키마의 이름을 찾습니다. 대상 스키마의 이름을 강조 표시하는 경우 **[!UICONTROL 참조 ID 네임스페이스]** 필드는 스키마 기본 id 네임스페이스로 자동으로 업데이트됩니다.
+아래 **[!UICONTROL 참조 스키마]**&#x200B;를 검색하는 경우 검색 막대를 사용하여 참조 스키마의 이름을 찾습니다. 참조 스키마의 이름을 강조 표시하는 경우 **[!UICONTROL 참조 ID 네임스페이스]** 필드는 스키마 기본 id 네임스페이스로 자동으로 업데이트됩니다.
 
 ![참조 스키마](../images/tutorials/relationship-b2b/reference-schema.png)
 
-아래 **[!UICONTROL 현재 스키마의 관계 이름]** 및 **[!UICONTROL 참조 스키마의 관계 이름]**&#x200B;를 채울 때는 소스 및 대상 스키마 컨텍스트에서 관계 이름을 각각 제공합니다. 완료되면 을 선택합니다 **[!UICONTROL 저장]** 변경 사항을 적용하고 스키마를 저장하려면 을 클릭합니다.
+아래 **[!UICONTROL 현재 스키마의 관계 이름]** 및 **[!UICONTROL 참조 스키마의 관계 이름]**&#x200B;를 채울 때는 소스 및 참조 스키마 컨텍스트에서 관계의 친숙한 이름을 각각 제공합니다. 완료되면 을 선택합니다 **[!UICONTROL 저장]** 변경 사항을 적용하고 스키마를 저장하려면 을 클릭합니다.
 
 ![관계 이름](../images/tutorials/relationship-b2b/relationship-name.png)
 
@@ -117,7 +117,7 @@ Adobe Real-time Customer Data Platform B2B Edition은 다음을 포함하여 기
 
 ![적용된 관계](../images/tutorials/relationship-b2b/relationship-applied.png)
 
-대상 스키마의 구조를 볼 경우, 관계 마커는 스키마의 기본 ID 필드 옆에, 왼쪽 레일에 나타납니다.
+참조 스키마의 구조를 볼 경우, 관계 마커는 스키마의 기본 ID 필드 옆에, 왼쪽 레일에 나타납니다.
 
 ![대상 스키마 관계 마커](../images/tutorials/relationship-b2b/destination-relationship.png)
 
