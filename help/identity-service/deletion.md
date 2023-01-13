@@ -1,9 +1,9 @@
 ---
 title: Identity 서비스에서 삭제
 description: 이 문서에서는 Experience Platform에서 ID 데이터를 삭제하고 ID 그래프가 어떤 영향을 받을 수 있는지에 대한 명확한 설명을 제공하는 데 사용할 수 있는 다양한 메커니즘에 대한 개요를 제공합니다.
-source-git-commit: 17e39f6e9d6e62e22f867de91d571593ba945c71
+source-git-commit: da1ce4560d28d43db47318883f9656cebb2eb487
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1207'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform Identity 서비스는 개별 사용자에 대해 장�
 
 ## 단일 ID 삭제
 
-단일 ID 삭제 요청을 사용하여 그래프 내에서 ID를 삭제할 수 있으므로 ID 네임스페이스와 연결된 단일 사용자 ID에 연결된 링크가 제거됩니다. 다음을 사용할 수 있습니다 [데이터 위생](../hygiene/home.md) 데이터 정리, 익명 데이터 제거 또는 수집한 데이터에 대한 데이터 최소화 등의 작업을 수행할 수 있습니다. 고객이 데이터 삭제를 요청하고 GDPR(일반 데이터 보호 규정)과 같은 개인 정보 보호 규정을 준수하는 것과 같은 사용 사례의 경우 [Privacy Service](../privacy-service/home.md).
+단일 ID 삭제 요청을 사용하여 그래프 내에서 ID를 삭제할 수 있으므로 ID 네임스페이스와 연결된 단일 사용자 ID에 연결된 링크가 제거됩니다. 에서 제공하는 메커니즘을 사용할 수 있습니다. [Privacy Service](../privacy-service/home.md) 고객이 데이터 삭제를 요청하고 GDPR(일반 데이터 보호 규정)과 같은 개인 정보 보호 규정을 준수하는 것과 같은 사용 사례입니다.
 
 아래 섹션에서는 Experience Platform에서 단일 ID 삭제 요청에 사용할 수 있는 메커니즘에 대해 간략하게 설명합니다.
 
@@ -38,18 +38,14 @@ Adobe Experience Platform Identity 서비스는 개별 사용자에 대해 장�
 
 Privacy Service은 GDPR(General Data Protection Regulation) 및 CCPA(California Consumer Privacy Act)와 같은 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. Privacy Service을 사용하여 API 또는 UI를 사용하여 작업 요청을 제출할 수 있습니다. Experience Platform이 Privacy Service에서 삭제 요청을 받으면가 요청을 수신하고 영향을 받는 데이터가 삭제로 표시되었다는 확인을 Privacy Service에게 보냅니다. 개별 ID의 삭제는 제공된 네임스페이스 및/또는 ID 값을 기반으로 합니다. 또한 해당 조직과 연관된 모든 샌드박스에 대해서도 삭제를 수행합니다. 자세한 내용은 다음 안내서를 참조하십시오. [ID 서비스의 개인 정보 보호 요청 처리](privacy.md).
 
-### 에서 단일 ID 삭제 [!UICONTROL 데이터 위생] 작업 영역
+아래 표는 Privacy Service에서 단일 ID 삭제에 대한 분류를 제공합니다.
 
-다음 [[!UICONTROL 데이터 위생] 작업 영역](../hygiene/ui/overview.md) platform UI에서 ID 서비스 및 실시간 고객 프로필에 참여하는 소비자 레코드를 삭제할 수 있습니다. 사용 방법에 대한 포괄적인 안내서입니다. [!UICONTROL 데이터 위생] 작업 영역, 다음 자습서를 참조하십시오. [소비자 레코드 삭제](../hygiene/ui/record-delete.md).
-
-아래 표는 Privacy Service과 데이터 위생에서 단일 ID 삭제 간의 차이점을 분류합니다.
-
-| 단일 ID 삭제 | Privacy Service | 데이터 위생 |
-| --- | --- | --- |
-| 수락된 사용 사례 | 데이터 개인 정보 보호 요청(GDPR, CCPA)만 지원합니다. | Experience Platform에 저장된 데이터 관리. |
-| 예상 지연 | 일 - 주 | 일 |
-| 영향을 받는 서비스 | Privacy Service에서 단일 ID 삭제를 사용하여 데이터를 ID 서비스, 실시간 고객 프로필 또는 데이터 레이크에서 삭제할지 여부를 선택할 수 있습니다. | 데이터 위생에서 단일 ID를 삭제하면 ID 서비스, 실시간 고객 프로필 및 데이터 레이크에서 선택한 데이터가 삭제됩니다. |
-| 삭제 패턴 | ID 서비스에서 ID를 삭제합니다. | ID 서비스에서 ID를 삭제합니다. |
+| 단일 ID 삭제 | Privacy Service |
+| --- | --- |
+| 수락된 사용 사례 | 데이터 개인 정보 보호 요청(GDPR, CCPA)만 지원합니다. |
+| 예상 지연 | 일 - 주 |
+| 영향을 받는 서비스 | Privacy Service에서 단일 ID 삭제를 사용하여 데이터를 ID 서비스, 실시간 고객 프로필 또는 데이터 레이크에서 삭제할지 여부를 선택할 수 있습니다. |
+| 삭제 패턴 | ID 서비스에서 ID를 삭제합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -93,3 +89,22 @@ Privacy Service은 GDPR(General Data Protection Regulation) 및 CCPA(California 
 ## 다음 단계
 
 이 문서는 Experience Platform에서 ID 및 데이터 세트를 삭제하는 데 사용할 수 있는 다양한 메커니즘에 대해 다룹니다. 이 문서에서는 ID 및 데이터 집합 삭제가 ID 그래프에 미치는 영향을 간략하게 설명합니다. ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](home.md).
+
+<!--
+
+You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anonymous data, or data minimization for the data that you have collected.
+
+### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
+
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
+
+The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
+
+| Single identity deletion | Privacy Service | Data hygiene |
+| --- | --- | --- |
+| Accepted use cases | Data privacy requests (GDPR, CCPA) only. | Management of data stored in Experience Platform. |
+| Estimated latency | Days to weeks | Days |
+| Services impacted | Single identity deletion in Privacy Service allows you to select whether data will be deleted from Identity Service, Real-Time Customer Profile, or data lake. | Single identity deletion in Data hygiene deletes the selected data across Identity Service, Real-Time Customer Profile, and data lake. |
+| Deletion patterns | Delete an identity from Identity Service. | Delete an identity from Identity Service. |
+
+-->
