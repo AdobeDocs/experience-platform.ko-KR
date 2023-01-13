@@ -5,9 +5,9 @@ title: UI에서 Google 클라우드 스토리지 소스 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Google 클라우드 스토리지 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '567'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform의 소스 커넥터는 예약된 방식으로 외부 �
 
 [!DNL Experience Platform] 에서는 외부 저장소에서 수집할 다음 파일 형식을 지원합니다.
 
-* 구분 기호로 구분된 값(DSV): DSV 형식 데이터 파일에 대한 지원은 현재 쉼표로 구분된 값으로 제한됩니다. DSV 형식 파일 내의 필드 헤더 값은 영숫자 문자 및 밑줄로만 구성되어야 합니다. 일반적인 DSV 파일에 대한 지원은 향후에 제공됩니다.
+* 구분 기호로 구분된 값(DSV): 모든 단일 문자 값은 DSV 형식 데이터 파일의 구분 기호로 사용할 수 있습니다.
 * JavaScript 개체 표기법(JSON): JSON 형식 데이터 파일은 XDM 규격 파일이어야 합니다.
 * Apache Parquet: Parquet 형식 데이터 파일은 XDM 규격 파일이어야 합니다.
 

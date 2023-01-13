@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Google 클라우드 스토리지 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Google Cloud 저장소를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 0%
@@ -25,15 +25,15 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]
 
 Platform에 연결하려면 먼저 상호 운용성을 설정해야 합니다 [!DNL Google Cloud Storage] 계정이 필요합니다. 상호 운용성 설정에 액세스하려면 [!DNL Google Cloud Platform] 을(를) 선택합니다. **[!UICONTROL 설정]** 에서 **[!UICONTROL 클라우드 스토리지]** 옵션을 선택합니다.
 
-![](../../images/tutorials/create/google-cloud-storage/nav.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
 다음 **[!UICONTROL 설정]** 페이지가 나타납니다. 여기에서 [!DNL Google] 프로젝트 ID 및 세부 정보 [!DNL Google Cloud Storage] 계정이 필요합니다. 상호 운용성 설정에 액세스하려면 **[!UICONTROL 상호 운용성]** 상단 헤더에서
 
-![](../../images/tutorials/create/google-cloud-storage/project-access.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/project-access.png) -->
 
 다음 **[!UICONTROL 상호 운용성]** 페이지에는 인증, 액세스 키 및 서비스 계정과 연결된 기본 프로젝트에 대한 정보가 들어 있습니다. 서비스 계정에 대한 새 액세스 키 ID와 비밀 액세스 키를 생성하려면 **[!UICONTROL 서비스 계정 키 만들기]**.
 
-![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
 새로 생성된 액세스 키 ID와 비밀 액세스 키를 사용하여 [!DNL Google Cloud Storage] Platform에 계정을 설정합니다.
 
