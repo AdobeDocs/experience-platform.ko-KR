@@ -2,10 +2,10 @@
 title: 확장 패키지 끝점
 description: Reactor API에서 /extension_packages 종단점을 호출하는 방법을 알아봅니다.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 5%
+source-wordcount: '954'
+ht-degree: 4%
 
 ---
 
@@ -944,7 +944,7 @@ curl -X PATCH \
 
 확장 패키지 테스트를 완료하면 비공개로 릴리스할 수 있습니다. 이를 통해 회사 내의 모든 자산에서 사용할 수 있습니다.
 
-비공개로 릴리스한 후 을(를) 채워 공개 릴리스 프로세스를 시작할 수 있습니다. [공개 릴리스 요청 양식](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U).
+비공개로 릴리스한 후 을(를) 채워 공개 릴리스 프로세스를 시작할 수 있습니다. [공개 릴리스 요청 양식](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest).
 
 **API 형식**
 
