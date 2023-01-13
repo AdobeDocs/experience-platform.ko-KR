@@ -2,9 +2,9 @@
 title: 데이터 위생 작업 주문 찾아보기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 데이터 위생 작업 순서를 보고 관리하는 방법을 알아봅니다.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '865'
 ht-degree: 1%
 
 ---
@@ -104,4 +104,4 @@ ht-degree: 1%
 이 안내서에서는 Platform UI에서 기존 데이터 위생 작업 순서를 보고 관리하는 방법을 다룹니다. 고유한 작업 주문 생성에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [데이터 집합 만료 관리](./dataset-expiration.md)
-* [레코드 삭제 관리](./record-delete.md)
+<!-- * [Manage record deletes](./record-delete.md) -->

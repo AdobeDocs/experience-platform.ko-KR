@@ -4,18 +4,18 @@ description: Adobe Experience Platform에서 고객의 저장된 개인 데이�
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
+source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
 
 # 데이터 위생 API를 사용하여 레코드 삭제
 
->[!IMPORTANT]
+<!-- >[!IMPORTANT]
 >
->이 종단점은 레코드 삭제에 대한 베타 기능을 나타냅니다. 최신 기능은 [`/workorder` 엔드포인트](./workorder.md) 을 가리키도록 업데이트하는 것이 좋습니다.
+>This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. -->
 
 데이터 위생 API를 사용하면 Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제할 수 있습니다.
 

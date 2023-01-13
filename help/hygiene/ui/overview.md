@@ -2,9 +2,9 @@
 title: Data 위생 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 위생 작업을 관리하는 방법을 알아봅니다.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: d4073f18844de65b9181667d0332c0315ee1cc09
+source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -33,4 +33,4 @@ ht-degree: 0%
 
 * [기존 작업 지시 찾아보기](./browse.md)
 * [데이터 집합 만료 요청 만들기](./dataset-expiration.md)
-* [레코드 삭제 요청 만들기](./record-delete.md)
+<!-- * [Create a record delete request](./record-delete.md) -->
