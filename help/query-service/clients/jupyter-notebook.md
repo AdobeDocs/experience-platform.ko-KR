@@ -1,9 +1,10 @@
 ---
 title: Jupiter 전자 필기장을 Query Service에 연결
 description: Jupiter Notebook을 Adobe Experience Platform Query Service와 연결하는 방법을 알아봅니다.
-source-git-commit: af37fe3be6b9645965b7477b9b85c5e11fe6fbae
+exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
+source-git-commit: 1af89160cbf5b689396921869fec6c30a5bcfff0
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
@@ -21,16 +22,15 @@ ht-degree: 0%
 >[!TIP]
 >
 >[!DNL Anaconda Navigator] 는 일반적인 설치 및 실행 방법을 보다 쉽게 제공하는 GUI(데스크탑 그래픽 사용자 인터페이스)입니다 [!DNL Python] 같은 프로그램 [!DNL Jupyter Notebook]. 또한 명령줄 명령을 사용하지 않고 패키지, 환경 및 채널을 관리할 수 있습니다.
->다음을 수행할 수 있습니다 [선호하는 애플리케이션 버전 설치](https://docs.anaconda.com/anaconda/install/) 해당 웹 사이트에서 확인할 수 있습니다.
->안내식 설치 프로세스를 따릅니다. 아나콘다 네비게이터 홈 화면에서 다음을 선택합니다 **[!DNL Jupyter Notebook]** 지원되는 응용 프로그램 목록에서 프로그램을 시작할 수 있습니다.
->![다음 [!DNL Anaconda Navigator] 홈 화면 [!DNL Jupyter Notebook] 강조 표시되어 있습니다.](../images/clients/jupyter-notebook/anaconda-navigator-home.png)
->자세한 내용은 [공식 문서](https://docs.anaconda.com/anaconda/navigator/).
+>웹 사이트에서 안내식 설치 프로세스를 따라 다음을 수행합니다 [선호하는 애플리케이션 버전 설치](https://docs.anaconda.com/anaconda/install/).
+>아나콘다 네비게이터 홈 화면에서 다음을 선택합니다 **[!DNL Jupyter Notebook]** 지원되는 응용 프로그램 목록에서 프로그램을 시작할 수 있습니다.
+>자세한 내용은 [공식 아나콘다 설명서](https://docs.anaconda.com/anaconda/navigator/).
+
+공식 Jupiter 설명서에서는 [명령줄 인터페이스에서 전자 필기장 실행](https://docs.jupyter.org/en/latest/running.html#how-do-i-open-a-specific-notebook) (CLI).
 
 ## Launch [!DNL Jupyter Notebook]
 
-새 파일을 연 후 [!DNL Jupyter Notebook] 웹 응용 프로그램에서 **[!DNL New]** 드롭다운 후 **[!DNL Python 3]** 새 전자 필기장을 만들려면 다음 [!DNL Notebook] 편집기가 나타납니다.
-
-![다음 [!DNL Jupiter Notebook] 를 사용하는 파일 탭 [!DNL New] 드롭다운 및 [!DNL Python] 3 강조 표시됩니다.](../images/clients/jupyter-notebook/new-notebook.png)
+새 파일을 연 후 [!DNL Jupyter Notebook] 웹 응용 프로그램에서 **[!DNL New]** UI의 드롭다운, 그 다음 **[!DNL Python 3]** 새 전자 필기장을 만들려면 다음 [!DNL Notebook] 편집기가 나타납니다.
 
 의 첫 번째 줄 [!DNL Notebook] 편집기에 다음 값을 입력합니다. `pip install psycopg2-binary` 을(를) 선택합니다. **[!DNL Run]** 명령 모음에서 를 클릭합니다. 입력 줄 아래에 성공 메시지가 나타납니다.
 
@@ -38,11 +38,7 @@ ht-degree: 0%
 >
 >연결을 만들려면 이 프로세스의 일부로 **[!DNL Run]** 를 눌러 각 코드 행을 실행합니다.
 
-![다음 [!DNL Notebook] install libraries 명령이 강조 표시된 UI](../images/clients/jupyter-notebook/install-library.png)
-
 그런 다음 [!DNL PostgreSQL] 데이터베이스 어댑터 [!DNL Python]. 값을 입력합니다. `import psycopg2`을(를) 선택합니다. **[!DNL Run]**. 이 프로세스에 대한 성공 메시지가 없습니다. 오류 메시지가 없는 경우 다음 단계를 계속 진행합니다.
-
-![다음 [!DNL Notebook] 가져오기 데이터베이스 드라이버 코드가 강조 표시된 UI입니다.](../images/clients/jupyter-notebook/import-dbdriver.png)
 
 이제 값을 입력하여 Adobe Experience Platform 자격 증명을 제공해야 합니다. `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. 연결 자격 증명은 [!UICONTROL 쿼리] 섹션, 아래에 [!UICONTROL 자격 증명] 플랫폼 UI의 탭입니다. 다음 방법에 대한 설명서를 참조하십시오. [조직 자격 증명 찾기](../ui/credentials.md) 자세한 지침
 
@@ -50,9 +46,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->플랫폼 UI에서 자격 증명을 복사할 때에는 추가 자격 증명 형식이 없는지 확인합니다. 이 매개 변수는 모두 한 줄에 있어야 하며 속성과 값 사이에 공백이 하나만 있어야 합니다. 자격 증명은 따옴표로 묶여 있고 **not** 쉼표로 구분됩니다.
+>플랫폼 UI에서 자격 증명을 복사할 때에는 자격 증명을 추가로 포맷할 필요가 없습니다. 한 줄로 지정할 수 있으며, 속성과 값 사이에 하나의 공백이 있습니다. 자격 증명은 따옴표로 묶여 있고 **not** 쉼표로 구분됩니다.
 
-![다음 [!DNL Notebook] 연결 자격 증명이 강조 표시된 UI입니다.](../images/clients/jupyter-notebook/provide-credentials.png)
+```python
+conn = psycopg2.connect('''sslmode=require host=<YOUR_HOST_CREDENTIAL> port=80 dbname=prod:all user=<YOUR_ORGANIZATION_ID> password=<YOUR_PASSWORD>''')"
+```
 
 사용자 [!DNL Jupyter Notebook] 이제 인스턴스가 Query Service에 연결되어 있습니다.
 
@@ -62,29 +60,25 @@ ht-degree: 0%
 
 다음 값을 입력합니다.
 
-```console
+```python
 cur = conn.cursor()
-cur.execute('''{YOUR_QUERY_HERE}''')
+cur.execute('''<YOUR_QUERY_HERE>''')
 data = [r for r in cur]
 ```
 
 그런 다음 매개 변수(`data` 위의 예에서 ) 쿼리 결과를 형식이 지정되지 않은 응답으로 표시합니다.
-
-![다음 [!DNL Notebook] 노트북 내에서 SQL 결과를 반환하고 표시하는 명령이 있는 UI](../images/clients/jupyter-notebook/example-query.png)
 
 결과를 보다 사람이 읽을 수 있는 방식으로 포맷하려면 다음 명령을 사용합니다.
 
 - `colnames = [desc[0] for desc in cur.description]`
 - `import pandas as pd`
 - `import numpy as np`
+- `df = pd.DataFrame(samples,columns=colnames)`
+- `df.fillna(0,inplace=True)`
 
 이러한 명령은 성공 메시지를 생성하지 않습니다. 오류 메시지가 없으면 함수를 사용하여 SQL 쿼리 결과를 테이블 형식으로 출력할 수 있습니다.
 
-![SQL 결과 서식을 지정하는 데 필요한 명령입니다.](../images/clients/jupyter-notebook/format-results-commands.png)
-
 을(를) 입력하고 실행합니다. `df.head()` 테이블 처리된 쿼리 결과를 보는 함수입니다.
-
-![내에서 SQL 쿼리의 테이블 분석 결과 [!DNL Jupyter Notebook].](../images/clients/jupyter-notebook/format-results-output.png)
 
 ## 다음 단계
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aqua Data Studio를 쿼리 서비스에 연결
 description: 이 문서에서는 Aqua Data Studio와 Adobe Experience Platform 쿼리 서비스를 연결하는 단계를 설명합니다.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 3ffb535e9a6648f037678acebba0de5f2088e79e
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -27,19 +27,15 @@ ht-degree: 0%
 
 ## 서버 등록 {#register-server}
 
-설치 후 [!DNL Aqua Data Studio]로 지정하는 경우 먼저 서버를 등록해야 합니다. 주 메뉴에서 을(를) 선택합니다 **[!DNL Server]**, 그 다음 **[!DNL Register Server]**.
+설치 후 [!DNL Aqua Data Studio]로 지정하는 경우 먼저 서버를 등록해야 합니다. 방법에 대한 지침은 공식 Aqua Data Studio 설명서를 참조하십시오 [launch [!DNL Register Server] 대화 상자](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#launching_the_register_server_dialog) 및 [서버 등록](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#steps_to_register_a_server_in_aqua_data_studio).
 
-![서버 등록 서버가 강조 표시된 서버 드롭다운 메뉴](../images/clients/aqua-data-studio/register-server.png)
-
-다음 **[!DNL Register Server]** 대화 상자가 나타납니다. 아래에 **[!DNL General]** 탭, 선택 **[!DNL PostgreSQL]** 왼쪽에 있는 목록에서 대화 상자가 표시되면 서버 설정에 대해 다음 세부 정보를 제공합니다.
+한 번 **[!DNL Register Server]** PostgresSQL Server에 대한 대화 상자가 나타나고 서버 설정에 대해 다음 세부 정보를 제공합니다.
 
 - **[!DNL Name]**: 연결의 이름입니다. 연결을 인식하려면 친숙한 이름을 제공하는 것이 좋습니다.
 - **[!DNL Login Name]**: 로그인 이름은 플랫폼 조직 ID입니다. 이렇게 하려면 `ORG_ID@AdobeOrg`.
 - **[!DNL Password]**: 이 문자열은 [!DNL Query Service] 자격 증명 대시보드.
 - **[!DNL Host and Port]**: 호스트 끝점 및 해당 포트 [!DNL Query Service]. 연결할 포트 80을 사용해야 합니다. [!DNL Query Service].
 - **[!DNL Database]:** 사용할 데이터베이스입니다. 플랫폼 UI 자격 증명에 대한 값 사용 `dbname`: `prod:all`.
-
-![다음 [!DNL Aqua Data Studio] 필수 입력 필드가 강조 표시된 일반 탭](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
 ### [!DNL Query Service] 자격 증명
 
@@ -49,15 +45,13 @@ ht-degree: 0%
 
 ### SSL 모드 설정
 
-다음으로, **[!DNL Driver]** 탭. 아래 **[!DNL Parameters]**&#x200B;를 사용하여 값을 로 설정합니다. `?sslmode=require`
+다음으로, SSL 모드 값을 `?sslmode=require`. 이 작업은 [!DNL Driver] 의 탭 [!DNL Edit Server Properties] 대화 상자. 방법에 대한 지침은 공식 Aqua Data Studio 설명서를 참조하십시오 [드라이버 속성 편집](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation13/page/116/PostgreSQL#drivers) 및 [에 대한 SSL 구성 [!DNL PostgreSQL]](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation20/page/SSL-Configuration/SSL-Configuration). 검색 막대를 사용하여 `sslmode` 속성을 사용합니다.
 
 >[!IMPORTANT]
 >
 >자세한 내용은 [[!DNL Query Service] SSL 설명서](./ssl-modes.md) Adobe Experience Platform Query Service에 대한 타사 연결에 대한 SSL 지원 및 `verify-full` SSL 모드.
 
-![다음 [!DNL Aqua Data Studio] 매개 변수 필드가 강조 표시된 드라이버 탭입니다.](../images/clients/aqua-data-studio/register-server-driver-tab.png)
-
-연결 세부 정보를 입력한 후 을 선택합니다 **[!DNL Test Connection]** 자격 증명이 제대로 작동하는지 확인합니다. 연결 테스트가 성공하면 **[!DNL Save]** 서버를 등록하려면 연결을 확인하는 확인 대화 상자가 나타나고 대시보드에 연결이 나타납니다. 이제 서버에 연결하고 스키마 개체를 볼 수 있습니다.
+연결 세부 정보를 입력한 후 동일한 탭에서 을 선택합니다 **[!DNL Test Connection]** 자격 증명이 제대로 작동하는지 확인합니다. 연결 테스트가 성공하면 **[!DNL Save]** 서버를 등록하려면 연결을 확인하는 확인 대화 상자가 나타나고 연결 아이콘이 대시보드에 나타납니다. 이제 서버에 연결하고 스키마 개체를 볼 수 있습니다.
 
 ## 다음 단계
 
