@@ -5,14 +5,18 @@ title: Flow Service API를 사용하여 데이터 랜딩 영역을 Adobe Experie
 type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 데이터 랜딩 영역에 연결하는 방법을 알아봅니다.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: b1021f985626157895d7350e941238c3197db0b6
+source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1249'
 ht-degree: 4%
 
 ---
 
 # Connect [!DNL Data Landing Zone] Flow Service API를 사용하여 Adobe Experience Platform으로 이동
+
+>[!IMPORTANT]
+>
+>이 페이지는 [!DNL Data Landing Zone] *소스* Experience Platform의 커넥터. 연결 방법에 대한 자세한 내용 [!DNL Data Landing Zone] *대상* 커넥터 [[!DNL Data Landing Zone] 대상 설명서 페이지](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] 는 Adobe Experience Platform으로 파일을 가져올 수 있는 안전한 클라우드 기반 파일 저장 기능입니다. 데이터는 [!DNL Data Landing Zone] 7일 후
 

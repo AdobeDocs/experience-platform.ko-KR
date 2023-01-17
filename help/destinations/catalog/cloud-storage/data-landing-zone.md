@@ -2,10 +2,10 @@
 title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 세그먼트를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6fbf1b87becebee76f583c6e44b1c42956e561ab
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 0%
+source-wordcount: '1163'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->이 대상은 현재 베타에 있으며 제한된 수의 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 [!DNL Data Landing Zone] 연결되면 Adobe 담당자에게 연락하여 [!DNL Organization ID].
+>* 이 대상은 현재 베타에 있으며 제한된 수의 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 [!DNL Data Landing Zone] 연결되면 Adobe 담당자에게 연락하여 [!DNL Organization ID].
+>* 이 설명서 페이지는 [!DNL Data Landing Zone] *대상*. 또한 [!DNL Data Landing Zone] *소스* 소스 카탈로그에 있습니다. 자세한 내용은 [[!DNL Data Landing Zone] 소스](/help/sources/connectors/cloud-storage/data-landing-zone.md) 설명서.
+
 
 
 ## 개요 {#overview}
@@ -35,9 +37,13 @@ Platform에서는 [!DNL Data Landing Zone] 컨테이너. 7일 후 모든 파일�
 
 {style=&quot;table-layout:auto&quot;}
 
-## 의 컨텐츠를 관리합니다 [!DNL Data Landing Zone]
+## 전제 조건 {#prerequisites}
 
-다음을 사용할 수 있습니다 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) 의 컨텐츠를 관리하려면 [!DNL Data Landing Zone] 컨테이너.
+을(를) 사용하기 전에 충족해야 하는 다음 전제 조건을 확인합니다. [!DNL Data Landing Zone] 대상.
+
+### 연결 [!DNL Data Landing Zone] 컨테이너 [!DNL Azure Storage Explorer]
+
+다음을 사용할 수 있습니다 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) 의 컨텐츠를 관리하려면 [!DNL Data Landing Zone] 컨테이너. 사용을 시작하려면 [!DNL Data Landing Zone]를 채울 때는 먼저 자격 증명을 검색하고 입력해야 합니다. [!DNL Azure Storage Explorer], 및에 연결 [!DNL Data Landing Zone] 컨테이너 [!DNL Azure Storage Explorer].
 
 에서 [!DNL Azure Storage Explorer] UI의 왼쪽 탐색 막대에서 연결 아이콘을 선택합니다. 다음 **리소스 선택** 연결할 옵션을 제공하는 창이 나타납니다. 선택 **[!DNL Blob container]** 에 연결 [!DNL Data Landing Zone] 저장.
 
@@ -49,13 +55,54 @@ Platform에서는 [!DNL Data Landing Zone] 컨테이너. 7일 후 모든 파일�
 
 연결 방법을 선택한 후 **표시 이름** 그리고 **[!DNL Blob]컨테이너 SAS URL** 해당 [!DNL Data Landing Zone] 컨테이너.
 
->[!IMPORTANT]
->
->데이터 랜딩 영역 자격 증명을 검색하려면 플랫폼 API를 사용해야 합니다. 자세한 내용은 [데이터 랜딩 영역 자격 증명 검색](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html?lang=en#retrieve-data-landing-zone-credentials).
->
-> 자격 증명을 검색하고 내보낸 파일에 액세스하려면 쿼리 매개 변수를 바꿔야 합니다 `type=user_drop_zone` with `type=dlz_destination` 를 클릭합니다.
+>[!BEGINSHADEBOX]
 
-다음 사항을 제공하십시오. [!DNL Data Landing Zone] SAS URL을 선택한 후 **다음**.
+### 에 대한 자격 증명을 검색합니다. [!DNL Data Landing Zone]
+
+플랫폼 API를 사용하여 를 검색해야 합니다 [!DNL Data Landing Zone] 자격 증명. 자격 증명을 검색하기 위한 API 호출은 아래에 설명되어 있습니다. 헤더에 필요한 값을 가져오는 방법에 대한 자세한 내용은 [Adobe Experience Platform API 시작하기](/help/landing/api-guide.md) 안내서.
+
+**API 형식**
+
+```http
+GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
+```
+
+**요청**
+
+다음 요청 예는 기존 랜딩 영역에 대한 자격 증명을 검색합니다.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**응답**
+
+다음 응답에서는 현재 사용자를 포함하여 랜딩 영역에 대한 자격 증명 정보를 반환합니다 `SASToken` 및 `SASUri`뿐만 아니라 `storageAccountName` 랜딩 영역 컨테이너에 해당합니다.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "storageAccountName": "dlblobstore99hh25i3df123",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+}
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `containerName` | 랜딩 영역의 이름입니다. |
+| `SASToken` | 랜딩 영역에 대한 공유 액세스 서명 토큰. 이 문자열에는 요청을 승인하는 데 필요한 모든 정보가 들어 있습니다. |
+| `SASUri` | 랜딩 영역에 대한 공유 액세스 서명 URI입니다. 이 문자열은 인증 대상 랜딩 영역에 대한 URI와 해당 SAS 토큰의 조합입니다. |
+
+>[!ENDSHADEBOX]
+
+표시 이름(`containerName`) 및 [!DNL Data Landing Zone] 위에 설명된 API 호출에서 반환되는 SAS URL을 선택한 다음 **다음**.
 
 ![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
@@ -79,7 +126,7 @@ Platform에서는 [!DNL Data Landing Zone] 컨테이너. 7일 후 모든 파일�
 
 ### 대상에 인증 {#authenticate}
 
-왜냐면 [!DNL Data Landing Zone] 는 Adobe이 프로비저닝된 저장소이므로 대상을 인증하는 단계를 수행할 필요가 없습니다.
+에 연결되어 있는지 확인합니다. [!DNL Data Landing Zone] 컨테이너 [!DNL Azure Storage Explorer] 에 설명된 대로 [전제 조건](#prerequisites) 섹션을 참조하십시오. 왜냐면 [!DNL Data Landing Zone] 는 Adobe이 프로비저닝된 저장소이므로 대상을 인증하기 위해 Experience Platform UI에서 추가 단계를 수행할 필요가 없습니다.
 
 ### 대상 세부 사항 채우기 {#destination-details}
 

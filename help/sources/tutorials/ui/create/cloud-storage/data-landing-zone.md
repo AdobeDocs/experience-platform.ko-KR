@@ -3,14 +3,18 @@ keywords: Experience Platform;홈;인기 항목;데이터 랜딩 영역;데이�
 title: UI를 사용하여 플랫폼에 데이터 랜딩 영역 연결
 description: 플랫폼 사용자 인터페이스를 사용하여 데이터 랜딩 영역 소스 커넥터를 만드는 방법을 알아봅니다.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: fb16ea940ef394a15dd24fe703239b4487fafb18
+source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
 
 # Connect [!DNL Data Landing Zone] UI를 사용하여 플랫폼 구현
+
+>[!IMPORTANT]
+>
+>이 페이지는 [!DNL Data Landing Zone] *소스* Experience Platform의 커넥터. 연결 방법에 대한 자세한 내용 [!DNL Data Landing Zone] *대상* 커넥터 [[!DNL Data Landing Zone] 대상 설명서 페이지](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] 는 Adobe Experience Platform으로 파일을 가져올 수 있는 안전한 클라우드 기반 파일 저장 기능입니다. 데이터는 [!DNL Data Landing Zone] 7일 후
 
