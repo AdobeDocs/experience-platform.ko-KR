@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 스트리밍 대상을 구성하는 단계를 나열하고 설명합니다.
 title: Destination SDK을 사용하여 스트리밍 대상 구성
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: abc9b9857e4a93a334440e855ca0ae562c695df1
+source-git-commit: 0d58d949ff24b9059d6afe81de354da0783ec8a4
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 대상을 테스트하는 프로세스의 일부로, Experience Platform UI를 사용하여 세그먼트를 만들어 대상에 대해 활성화해야 합니다. Experience Platform에서 세그먼트를 만드는 방법에 대한 지침은 아래 두 리소스를 참조하십시오.
 
-* [세그먼트 설명서 페이지 만들기](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
+* [세그먼트 설명서 페이지 만들기](/help/segmentation/ui/overview.md#create-segment)
 * [세그먼트 만들기 비디오 연습](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
 ## 7단계: 대상 게시 {#publish-destination}
@@ -187,3 +187,11 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 >사용자가 사용할 비공개 대상을 만들고 다른 고객이 사용할 수 있도록 대상 카탈로그에 게시하려고 하지 않는 경우 이 단계는 필요하지 않습니다.
 
 ISV(Independent Software Vendor) 또는 SI(System Integrator)가 [제품 통합](./overview.md#productized-custom-integrations)를 사용하려면 [셀프 서비스 설명서 프로세스](./docs-framework/documentation-instructions.md) 에서 대상에 대한 제품 설명서 페이지를 만들려면 [Experience Platform 대상 카탈로그](/help/destinations/catalog/overview.md).
+
+## 9단계: Adobe 검토 대상 제출 {#submit-for-review}
+
+>[!NOTE]
+>
+>사용자가 사용할 비공개 대상을 만들고 다른 고객이 사용할 수 있도록 대상 카탈로그에 게시하려고 하지 않는 경우 이 단계는 필요하지 않습니다.
+
+마지막으로, 대상을 Experience Platform 카탈로그에 게시하고 모든 Experience Platform 고객이 볼 수 있으려면 먼저 Adobe의 검토를 위해 대상을 공식적으로 제출해야 합니다. 방법에 대한 전체 정보 찾기 [Destination SDK에서 작성된 생산화된 대상을 검토하기 위해 제출](/help/destinations/destination-sdk/submit-destination.md).

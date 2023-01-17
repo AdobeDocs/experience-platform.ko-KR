@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 파일 기반 대상을 구성하는 단계를 나열하고 설명합니다.
 title: Destination SDK을 사용하여 파일 기반 대상 구성
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: 0d58d949ff24b9059d6afe81de354da0783ec8a4
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -261,16 +261,16 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 * 선택한 경우 `"authenticationRule": "PLATFORM_AUTHENTICATION"`를 참조하려면 [인증 구성](./authentication-configuration.md#when-to-use).
 
 
-<!-- ## Step 5: Test your destination {#test-destination}
+## 5단계: 대상 테스트 {#test-destination}
 
-After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./create-template.md) to test the integration between Adobe Experience Platform and your destination.
+이전 단계의 구성 끝점을 사용하여 대상을 설정한 후에는 [대상 테스트 도구](./file-based-destination-testing-overview.md) Adobe Experience Platform과 대상 간의 통합을 테스트하려면 다음을 수행하십시오.
 
-As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
+대상을 테스트하는 프로세스의 일부로, Experience Platform UI를 사용하여 세그먼트를 만들어 대상에 대해 활성화해야 합니다. Experience Platform에서 세그먼트를 만드는 방법에 대한 지침은 아래 두 리소스를 참조하십시오.
 
-* [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
-* [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) -->
+* [세그먼트 설명서 페이지 만들기](/help/segmentation/ui/overview.md#create-segment)
+* [세그먼트 만들기 비디오 연습](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
-## 5단계: 대상 게시 {#publish-destination}
+## 6단계: 대상 게시 {#publish-destination}
 
 >[!NOTE]
 >
@@ -278,10 +278,18 @@ As part of the process to test your destination, you must use the Experience Pla
 
 대상을 구성하고 테스트한 후 [대상 게시 API](./destination-publish-api.md) 검토를 위해 Adobe에 구성을 제출합니다.
 
-## 6단계: 대상을 문서화합니다. {#document-destination}
+## 7단계: 대상을 문서화합니다. {#document-destination}
 
 >[!NOTE]
 >
 >사용자가 사용할 비공개 대상을 만들고 다른 고객이 사용할 수 있도록 대상 카탈로그에 게시하려고 하지 않는 경우 이 단계는 필요하지 않습니다.
 
 ISV(Independent Software Vendor) 또는 SI(System Integrator)가 [제품 통합](./overview.md#productized-custom-integrations)를 사용하려면 [셀프 서비스 설명서 프로세스](./docs-framework/documentation-instructions.md) 에서 대상에 대한 제품 설명서 페이지를 만들려면 [Experience Platform 대상 카탈로그](/help/destinations/catalog/overview.md).
+
+## 8단계: Adobe 검토 대상 제출 {#submit-for-review}
+
+>[!NOTE]
+>
+>사용자가 사용할 비공개 대상을 만들고 다른 고객이 사용할 수 있도록 대상 카탈로그에 게시하려고 하지 않는 경우 이 단계는 필요하지 않습니다.
+
+마지막으로, 대상을 Experience Platform 카탈로그에 게시하고 모든 Experience Platform 고객이 볼 수 있으려면 먼저 Adobe의 검토를 위해 대상을 공식적으로 제출해야 합니다. 방법에 대한 전체 정보 찾기 [Destination SDK에서 작성된 생산화된 대상을 검토하기 위해 제출](/help/destinations/destination-sdk/submit-destination.md).
