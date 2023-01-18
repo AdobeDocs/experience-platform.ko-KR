@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform Cloud Connector 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Cloud Connector 확장에 대한 최신 릴리스 노트입니다.
-source-git-commit: 8a478c727b3b97de53ba303fbda4dd1502ff6a0d
+source-git-commit: e232ad7a9b581e65f7f4240bbc06155aec409eb7
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 25%
+source-wordcount: '128'
+ht-degree: 22%
 
 ---
 
@@ -20,4 +20,5 @@ v1.0.1
 
 * Body Raw 텍스트 영역에 붙여넣은 유효한 JSON이 JSON 대신 문자열로 저장되는 문제를 수정했습니다.
 * GET 또는 HEAD 요청에 대해 본문을 설정할 수 없습니다.
+* 5kb보다 큰 응답을 저장하면 규칙 실행이 실패하는 버그를 수정합니다.
 
