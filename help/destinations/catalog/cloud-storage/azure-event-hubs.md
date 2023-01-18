@@ -3,9 +3,9 @@ keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure 이벤트 �
 title: Azure 이벤트 허브 연결
 description: 에 대한 실시간 아웃바운드 연결을 만듭니다. [!DNL Azure Event Hubs] Experience Platform에서 데이터를 스트리밍할 스토리지.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: fd6a9f082c830de5a46d484bccfeba3b4116d05d
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2006'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Experience Platform은 고객의 보안 및 규정 준수 요구 사항을 충�
 * **[!UICONTROL SAS 키 이름]**: SAS 키 이름이라고도 하는 인증 규칙의 이름입니다.
 * **[!UICONTROL SAS 키]**: 이벤트 허브 네임스페이스의 기본 키입니다. 다음 `sasPolicy` 저것은 `sasKey` 에 해당해야 함 **관리** 이벤트 허브 목록을 채울 수 있도록 구성된 권한. 인증 방법에 대해 알아보기 [!DNL Azure Event Hubs] SAS 키를 사용하여 [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL 네임스페이스]**: 을 입력합니다. [!DNL Azure Event Hubs] 네임스페이스. 알아보기 [!DNL Azure Event Hubs] 네임스페이스 [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
-* **[!UICONTROL 네임스페이스]**: 을 입력합니다. [!DNL Azure Event Hubs] 네임스페이스. 알아보기 [!DNL Azure Event Hubs] 네임스페이스 [Microsoft 설명서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL 이벤트 허브 이름]**: 을 입력합니다. [!DNL Azure Event Hub] name 형식이어야 합니다. 알아보기 [!DNL Azure Event Hubs] 의 이름 [Microsoft 설명서](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub).
 
 ### 대상 세부 사항 채우기 {#destination-details}
 
