@@ -5,9 +5,9 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: f2106d1e5bc0442df4d0ba84323821f6f2d9b1c7
+source-git-commit: c2312a65388e8aec7cdeb8daf20fe9de7d1fa4fc
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '967'
 ht-degree: 31%
 
 ---
@@ -208,6 +208,7 @@ ht-degree: 31%
       * [개요](./extensions/server/overview.md)
       * Adobe Experience Platform Cloud 커넥터 {#cloud-connector}
          * [개요](./extensions/server/cloud-connector/overview.md)
+         * [릴리스 정보](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL AWS] {#aws}
          * [개요](./extensions/server/aws/overview.md)
       * [Google Analytics용 클라우드 커넥터](https://exchange.adobe.com/apps/ec/106542)

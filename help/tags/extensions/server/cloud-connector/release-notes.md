@@ -1,0 +1,23 @@
+---
+title: Adobe Experience Platform Cloud Connector 확장에 대한 릴리스 노트
+description: Adobe Experience Platform의 Cloud Connector 확장에 대한 최신 릴리스 노트입니다.
+source-git-commit: 8a478c727b3b97de53ba303fbda4dd1502ff6a0d
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 25%
+
+---
+
+# Adobe Experience Platform Cloud Connector 확장 릴리스 노트
+
+>[!NOTE]
+>
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## 2023년 1월 17일
+
+v1.0.1
+
+* Body Raw 텍스트 영역에 붙여넣은 유효한 JSON이 JSON 대신 문자열로 저장되는 문제를 수정했습니다.
+* GET 또는 HEAD 요청에 대해 본문을 설정할 수 없습니다.
+
