@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 특성 기반 액세스 제어 종단간 안내서
 description: 이 문서에서는 Adobe Experience Platform의 특성 기반 액세스 제어에 대한 종단 간 안내서를 제공합니다
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: bf6fd07404ac6d937aa8660a0de024173f24f5c9
 workflow-type: tm+mt
-source-wordcount: '2427'
+source-wordcount: '2425'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 1%
 
 * [사용자의 역할에 레이블 지정](#label-roles): 마케팅 그룹이 외부 에이전시와 작동하는 의료 공급자(ACME Business Group)의 예를 사용합니다.
 * [리소스 레이블 지정(스키마 필드 및 세그먼트)](#label-resources): 을(를) 지정합니다. **[!UICONTROL PHI/규제 상태 데이터]** 스키마 리소스 및 세그먼트에 레이블을 지정합니다.
-* [함께 연결할 정책을 만듭니다](#policy): 스키마 필드 및 세그먼트에 대한 액세스를 거부하여 리소스의 레이블을 역할의 레이블에 연결하는 정책을 만듭니다. 이렇게 하면 일치하는 레이블이 없는 사용자를 위해 모든 샌드박스에서 스키마 필드 및 세그먼트에 대한 액세스를 거부합니다.
+* [함께 연결할 정책을 만듭니다](#policy): 스키마 필드 및 세그먼트에 대한 액세스를 거부하여 리소스의 레이블을 역할의 레이블에 연결하는 정책을 만듭니다. 이렇게 하면 일치하는 레이블이 있는 사용자를 위해 모든 샌드박스의 스키마 필드 및 세그먼트에 대한 액세스 권한이 부여됩니다.
 
 ## 권한
 
