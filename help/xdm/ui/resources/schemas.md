@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법에 대한 기본 사항을 배웁니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3156'
+source-wordcount: '3203'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ ht-degree: 0%
 이 안내서에서는 XDM 시스템을 작업해야 합니다. 자세한 내용은 [XDM 개요](../../home.md) Experience Platform 에코시스템 내에서 XDM의 역할을 소개합니다. [스키마 구성 기본 사항](../../schema/composition.md) 스키마 구성 방법에 대한 개요입니다.
 
 ## 새 스키마 만들기 {#create}
+
+>[!NOTE]
+>
+>이 섹션에서는 UI에서 새 스키마를 수동으로 만드는 방법을 설명합니다. Platform으로 CSV 데이터를 수집하는 경우 를 선택할 수 있습니다 [AI에서 생성한 권장 사항으로 생성된 XDM 스키마에 해당 데이터 매핑](../../../ingestion/tutorials/map-csv/recommendations.md) (현재 베타 버전) 직접 스키마를 생성할 필요가 없습니다.
 
 에서 [!UICONTROL 스키마] 작업 영역, 선택 **[!UICONTROL 스키마 만들기]** 오른쪽 상단 모서리에서 표시되는 드롭다운에서 다음 중 하나를 선택할 수 있습니다 **[!UICONTROL XDM 개별 프로필]** 및 **[!UICONTROL XDM ExperienceEvent]** 를 스키마의 기본 클래스로 사용합니다. 또는 다음을 선택할 수 있습니다 **[!UICONTROL 찾아보기]** 사용 가능한 클래스의 전체 목록에서 선택하거나 [새 사용자 지정 클래스 만들기](./classes.md#create) 을 가리키도록 업데이트하는 것이 좋습니다.
 
@@ -51,7 +55,7 @@ ht-degree: 0%
 >
 >작업 공간의 검색 및 필터링 기능을 사용하여 스키마를 보다 쉽게 찾을 수 있습니다. 다음 안내서를 참조하십시오. [xdm 리소스 탐색](../explore.md) 추가 정보.
 
-스키마를 선택하면 [!DNL Schema Editor] 캔버스에 표시된 스키마 구조와 함께 나타납니다. 이제 다음을 수행할 수 있습니다 [필드 그룹 추가](#add-field-groups) 스키마(또는 [개별 필드 추가](#add-individual-fields) 해당 그룹에서 다음을 수행합니다. [필드 표시 이름 편집](#display-names), 또는 [기존 사용자 지정 필드 그룹 편집](./field-groups.md#edit) 스키마에서 적용되는 경우.
+스키마를 선택하면 [!DNL Schema Editor] 캔버스에 표시된 스키마 구조와 함께 나타납니다. 이제 다음을 수행할 수 있습니다 [필드 그룹 추가](#add-field-groups) 스키마(또는 [개별 필드 추가](#add-individual-fields) 해당 그룹에서 [필드 표시 이름 편집](#display-names), 또는 [기존 사용자 지정 필드 그룹 편집](./field-groups.md#edit) 스키마에서 적용되는 경우.
 
 ## 스키마에 필드 그룹 추가 {#add-field-groups}
 

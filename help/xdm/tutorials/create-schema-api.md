@@ -5,9 +5,9 @@ title: 스키마 레지스트리 API를 사용하여 스키마 만들기
 type: Tutorial
 description: 이 자습서에서는 스키마 레지스트리 API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 030874e91b88b18f7de0cc2d12200243b7ed1d31
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '2556'
+source-wordcount: '2588'
 ht-degree: 1%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 1%
 다음 [!DNL Schema Registry] 이(가) [!DNL Schema Library] Adobe Experience Platform 내에서 사용할 수 있습니다. 다음 [!DNL Schema Library] Adobe이 사용할 수 있는 리소스를 포함합니다. [!DNL Experience Platform] 사용자가 사용하는 애플리케이션을 소유한 파트너 및 공급업체 레지스트리는 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스 및 RESTful API를 제공합니다.
 
 이 자습서에서는 [!DNL Schema Registry] 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내하는 API입니다. 에서 사용자 인터페이스를 사용하려면 [!DNL Experience Platform], [스키마 편집기 자습서](create-schema-ui.md) 는 스키마 편집기에서 유사한 작업을 수행하는 단계별 지침을 제공합니다.
+
+>[!NOTE]
+>
+>Platform으로 CSV 데이터를 수집하는 경우 다음을 수행할 수 있습니다 [AI에서 생성한 권장 사항으로 생성된 XDM 스키마에 해당 데이터 매핑](../../ingestion/tutorials/map-csv/recommendations.md) (현재 베타 버전) 직접 스키마를 생성할 필요가 없습니다.
 
 ## 시작하기
 

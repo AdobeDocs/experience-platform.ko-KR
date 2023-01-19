@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스키마 레지스트리 API 안내서
 description: 스키마 레지스트리 API를 사용하여 개발자는 Adobe Experience Platform 내의 모든 스키마 및 관련 XDM(Experience Data Model) 리소스를 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1118'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,9 @@ ht-degree: 2%
 
 XDM 스키마는 Platform에 수집된 데이터의 구조 및 형식을 나타내고 유효성을 검사합니다. 스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. 를 사용하여 스키마를 생성, 보기, 편집 및 삭제할 수 있습니다 `/schemas` 엔드포인트. 이 종단점을 사용하는 방법에 대해 알아보려면 [스키마 끝점 안내서](./schemas.md).
 
-필드 그룹 및 데이터 유형 만들기 및 추가 등 스키마 레지스트리 API에서 전체 스키마를 만드는 방법에 대한 단계별 안내서는 를 참조하십시오. [API 스키마 만들기 튜토리얼](../tutorials/create-schema-api.md).
+필드 그룹 및 데이터 유형 만들기 및 추가를 포함하여 스키마 레지스트리 API에서 전체 스키마를 수동으로 만드는 방법에 대한 단계별 안내서는 를 참조하십시오. [API 스키마 만들기 튜토리얼](../tutorials/create-schema-api.md).
+
+CSV 데이터를 수집하는 경우 [CSV로 스키마 변환](#csv-to-schema).
 
 ## 비헤이비어
 
@@ -62,6 +64,10 @@ Platform을 사용하면 특정 사용 사례에 대해 스키마를 작성할 �
 CSV 파일을 템플릿으로 사용하여 XDM 스키마를 자동으로 생성할 수 있으므로, 스키마 필드를 대량 가져오고 수동 API 또는 UI 작업을 줄이는 템플릿을 만들 수 있습니다.
 
 자세한 내용은 [CSV로 스키마 변환 끝점 안내서](./export.md) 추가 정보.
+
+>[!NOTE]
+>
+>UI를 사용하여 [AI에서 생성된 권장 사항을 사용하여 스키마에 CSV 매핑](../../ingestion/tutorials/map-csv/recommendations.md) (현재 베타 버전).
 
 ## 내보내기 {#export}
 

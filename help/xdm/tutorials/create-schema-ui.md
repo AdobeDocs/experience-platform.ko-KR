@@ -5,9 +5,9 @@ title: 스키마 편집기를 사용하여 스키마 만들기
 type: Tutorial
 description: 이 튜토리얼에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3893'
+source-wordcount: '3924'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,13 @@ ht-degree: 0%
 
 Adobe Experience Platform 사용자 인터페이스를 통해 사용자를 만들고 관리할 수 있습니다 [!DNL Experience Data Model] (XDM) 스키마는 [!DNL Schema Editor]. 이 자습서에서는 [!DNL Schema Editor].
 
+데모 목적으로 이 자습서의 단계에는 고객 충성도 프로그램의 구성원을 설명하는 예제 스키마를 만드는 작업이 포함됩니다. 이러한 단계를 사용하여 고유한 목적으로 다른 스키마를 생성할 수 있지만, 먼저 예제 스키마 만들기 와 함께 수행하여 의 기능을 학습하는 것이 좋습니다 [!DNL Schema Editor].
+
 >[!NOTE]
 >
->데모 목적으로 이 자습서의 단계에는 고객 충성도 프로그램의 구성원을 설명하는 예제 스키마를 만드는 작업이 포함됩니다. 이러한 단계를 사용하여 고유한 목적으로 다른 스키마를 생성할 수 있지만, 먼저 예제 스키마 만들기 와 함께 수행하여 의 기능을 학습하는 것이 좋습니다 [!DNL Schema Editor].
-
-를 사용하여 스키마를 작성하려는 경우 [!DNL Schema Registry] API를 대신, 를 참조하여 시작하십시오. [[!DNL Schema Registry] 개발자 안내서](../api/getting-started.md) 자습서를 시작하기 전에 [api를 사용하여 스키마 만들기](create-schema-api.md).
+>Platform으로 CSV 데이터를 수집하는 경우 다음을 수행할 수 있습니다 [AI에서 생성한 권장 사항으로 생성된 XDM 스키마에 해당 데이터 매핑](../../ingestion/tutorials/map-csv/recommendations.md) (현재 베타 버전) 직접 스키마를 생성할 필요가 없습니다.
+>
+>를 사용하여 스키마를 작성하려는 경우 [!DNL Schema Registry] API, 먼저 [[!DNL Schema Registry] 개발자 안내서](../api/getting-started.md) 자습서를 시작하기 전에 [api를 사용하여 스키마 만들기](create-schema-api.md).
 
 ## 시작하기
 
