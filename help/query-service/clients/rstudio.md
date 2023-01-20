@@ -4,7 +4,7 @@ solution: Experience Platform
 title: RStudio를 쿼리 서비스에 연결
 description: 이 문서에서는 R Studio와 Adobe Experience Platform 쿼리 서비스를 연결하는 단계를 안내합니다.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: d40aa52240ab8f15feea62ec5fb8de073dd6a053
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
@@ -57,7 +57,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 이제 [!DNL Query Service]를 사용하여 쿼리를 작성하여 SQL 문을 실행하고 편집할 수 있습니다. 예를 들어 `dbGetQuery(con, sql)` 쿼리를 실행하려면 `sql` 실행할 SQL 쿼리입니다.
 
-다음 쿼리는 [경험 이벤트](../sample-queries/experience-event.md) 장치의 화면 높이에 따라 웹 사이트의 페이지 보기 히스토그램을 만듭니다.
+다음 쿼리는 [경험 이벤트](../../xdm/classes/experienceevent.md) 장치의 화면 높이에 따라 웹 사이트의 페이지 보기 히스토그램을 만듭니다.
 
 ```sql
 df_pageviews <- dbGetQuery(con,

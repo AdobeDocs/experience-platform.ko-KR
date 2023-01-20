@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;데이터 세트 생성;데이터 세트 생성;데이터 세트 생성;
 solution: Experience Platform
-title: 쿼리 서비스의 결과에서 데이터 세트 생성
+title: 쿼리 결과에서 출력 데이터 세트 생성
 type: Tutorial
 description: Adobe Experience Platform 쿼리 서비스를 통해 UI에서 데이터 세트를 만들 수 있습니다. 데이터 세트를 만든 후에는 데이터 레이크에서 다른 데이터 세트와 같이 액세스할 수 있고, 다양한 사용 사례에 사용할 수 있습니다.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%
 
 ---
 
-# 결과 데이터 세트 생성 [!DNL Query Service]
+# 쿼리 결과에서 출력 데이터 세트 생성
 
 [!DNL Query Service] 쿼리를 사용하여 [!DNL Data Lake]. 그런 다음 이러한 데이터 세트를 더 많은 쿼리에 대한 입력으로 사용하거나 같은 다른 서비스에서 사용할 수 있습니다 [!DNL Data Science Workspace], 실시간 고객 프로필 또는 [!DNL Analysis Workspace].
 

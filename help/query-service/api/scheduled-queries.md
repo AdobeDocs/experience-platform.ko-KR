@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;예약된 쿼리;예약된 쿼리
 solution: Experience Platform
-title: 예약된 쿼리 API 끝점
+title: 일정 끝점
 description: 다음 섹션에서는 Query Service API를 사용하는 예약된 쿼리에 사용할 수 있는 다양한 API 호출을 안내합니다.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1136'
 ht-degree: 2%
 
 ---
 
-# 예약된 쿼리 끝점
+# 끝점 예약
 
 ## 샘플 API 호출
 

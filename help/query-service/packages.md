@@ -1,7 +1,8 @@
 ---
 title: 쿼리 서비스 패키지
 description: 다음 문서에서는 Query Service에 사용할 수 있는 기능 및 제품 패키지에 대해 간략하게 설명하고 Ad Hoc 쿼리와 배치 질의 간의 차이점을 설명합니다.
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 3%
@@ -46,7 +47,7 @@ Query Service 기능은 다음 제품 및 추가 기능과 함께 패키지되�
 
 Experience Platform에 대한 액세스 제어는 [Adobe Admin Console](https://adminconsole.adobe.com/) 여기서 제품 프로필은 사용자와 권한 및 샌드박스를 연결합니다. 자세한 내용은 [액세스 제어 개요](../access-control/home.md) 추가 정보.
 
-쿼리 서비스를 사용하려면 [!DNL Manage Queries] admin console 내에서 사용 권한을 활성화해야 합니다. 이 권한을 통해 사용자는 임시 및 배치 쿼리를 실행할 수 있습니다. 제품 프로필에 대한 액세스 요청을 위한 자세한 지침 [!DNL Manage Queries] 사용 권한은 [제품 프로필에 대한 권한 관리](../access-control/ui/permissions.md) 및 [제품 프로필의 사용자 관리](../access-control/ui/users.md) 문서.
+쿼리 서비스를 사용하려면 [!DNL Manage Queries] admin console 내에서 사용 권한을 활성화해야 합니다. 이 권한을 통해 사용자는 임시 및 배치 쿼리를 실행할 수 있습니다. 제품 프로필에 대한 액세스 요청에 대한 자세한 지침 [!DNL Manage Queries] 사용 권한은 [제품 프로필에 대한 권한 관리](../access-control/ui/permissions.md) 및 [제품 프로필의 사용자 관리](../access-control/ui/users.md) 문서.
 
 를 구입한 후 [!DNL Data Distiller] 추가 기능, [!DNL Write Dataset] 권한을 부여해야 합니다. 이 사용 권한 [!DNL Data Distiller] 사용자가 배치 쿼리를 실행할 수 있습니다.
 

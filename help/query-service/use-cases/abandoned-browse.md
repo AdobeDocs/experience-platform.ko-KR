@@ -3,7 +3,7 @@ keywords: Experience Platform;쿼리 서비스;쿼리 서비스;쿼리
 title: Adobe Experience Platform 쿼리 서비스에 대한 사용 사례 예
 description: Adobe Experience Platform Query Service의 다기능성과 이점을 보여주는 완벽한 예입니다.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%
@@ -73,11 +73,11 @@ Adobe Experience Platform은 효율적이고 안정적인 방식으로 데이터
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 [!DNL Query Service] 는 데이터의 품질 및 세그먼테이션의 용이성뿐만 아니라 전체 전체 워크플로우에 대한 데이터 아키텍처 내의 중요성에도 영향을 줍니다. Adobe Analytics과 함께 사용하는 적용 가능한 SQL 예가 필요하면 [!DNL Query Service]를 참조하고 [Adobe Analytics 샘플 쿼리 설명서](../sample-queries/adobe-analytics.md).
+이 문서를 읽은 후에는 [!DNL Query Service] 는 데이터의 품질 및 세그먼테이션의 용이성뿐만 아니라 전체 전체 워크플로우에 대한 데이터 아키텍처 내의 중요성에도 영향을 줍니다. Adobe Analytics과 함께 사용하는 적용 가능한 SQL 예가 필요하면 [!DNL Query Service]를 참조하고 [Adobe Analytics 머천다이징 변수 사용 사례](./merchandising-variables.md).
 
 다음과 같은 이점을 보여주는 기타 문서 [!DNL Query Service] 조직의 전략적 비즈니스 인사이트는 [보트 필터링 사용 사례](./bot-filtering.md) 예.
 
-또는, 이러한 문서를 통해 [!DNL Query Service] 기능:
+또는 이러한 문서를 사용하면 [!DNL Query Service] 기능:
 
 * [쿼리 실행 지침](../best-practices/writing-queries.md)
 * [데이터 자산 조직에 대한 지침](../best-practices/organize-data-assets.md).

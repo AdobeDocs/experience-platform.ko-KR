@@ -1,7 +1,8 @@
 ---
 title: Query Service의 데이터 자산 조직에 대한 우수 사례
 description: 이 문서에서는 Query Service를 사용하여 편리하게 데이터를 구성할 수 있는 논리적 방법을 간략하게 설명합니다.
-source-git-commit: ed9fa7b83f9e1c974bc74e9dde018a87823954ee
+exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
+source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 0%
@@ -169,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## 다음 단계
 
-이제 이 문서를 읽은 후 Adobe Experience Platform Query Service에서 사용할 데이터 자산의 조직 및 구조에 대한 우수 사례를 더 잘 이해할 수 있습니다. 정보를 읽어 Query Service 우수 사례에 대해 계속 학습하는 것이 좋습니다 [데이터 중복 제거 설명서](./deduplication.md).
+이제 이 문서를 읽은 후 Adobe Experience Platform Query Service에서 사용할 데이터 자산의 조직 및 구조에 대한 우수 사례를 더 잘 이해할 수 있습니다. 정보를 읽어 Query Service 우수 사례에 대해 계속 학습하는 것이 좋습니다 [데이터 중복 제거 설명서](../essential-concepts/deduplication.md).

@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 - 2022년 1월
 description: Adobe Experience Platform에 대한 2022년 1월 릴리스 노트입니다.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 3%
@@ -91,7 +91,7 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 
 
 | 기능 | 설명 |
 | --- | --- |
-| 익명 블록 | 익명 블록 SQL 구성을 사용하면 Query Service의 대규모 데이터 준비 작업을 작은 작업으로 분류한 다음 증분 데이터 로드를 위해 다시 사용하고 순서대로 실행할 수 있습니다. 자세한 내용은 [익명 블록 설명서에 대한 샘플 쿼리](../../query-service/best-practices/anonymous-block.md). |
+| 익명 블록 | 익명 블록 SQL 구성을 사용하면 Query Service의 대규모 데이터 준비 작업을 작은 작업으로 분류한 다음 증분 데이터 로드를 위해 다시 사용하고 순서대로 실행할 수 있습니다. 자세한 내용은 [익명 블록 설명서에 대한 샘플 쿼리](../../query-service/essential-concepts/anonymous-block.md). |
 | 데이터 집합 조직 | 샌드박스 내의 데이터 자산 양이 증가함에 따라 Query Service에서 사용할 데이터 자산을 정리하기 위한 일관된 논리 데이터 구조를 제공합니다. 자세한 내용은 [데이터 자산 설명서 구성](../../query-service/best-practices/organize-data-assets.md). |
 
 자세한 내용은 [!DNL Query Service]를 보려면 [[!DNL Query Service] 개요](../../query-service/home.md).

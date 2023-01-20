@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Query Service UI 안내서
 description: Adobe Experience Platform 쿼리 서비스는 쿼리를 작성 및 실행하고, 이전에 실행된 쿼리를 보고, IMS 조직 내의 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 2%
@@ -46,7 +46,7 @@ UI를 통해 쿼리를 예약하는 방법에 대해 알아보려면 [예약된 
 | **[!UICONTROL 마지막 실행 타임스탬프]** | 쿼리를 실행할 때의 가장 최근 타임스탬프입니다. 이 열에는 현재 일정에 따라 쿼리가 실행되었는지 여부가 강조 표시됩니다. |
 | **[!UICONTROL 마지막 실행 상태]** | 가장 최근 쿼리 실행의 상태입니다. 세 가지 상태 값은 다음과 같습니다. `successful` `failed` 또는 `in progress`. |
 
-방법에 대한 자세한 내용은 설명서 를 참조하십시오 [쿼리 서비스 UI를 통해 쿼리 모니터링](../monitor-queries.md).
+방법에 대한 자세한 내용은 설명서 를 참조하십시오 [쿼리 서비스 UI를 통해 쿼리 모니터링](./monitor-queries.md).
 
 ## 템플릿 {#browse}
 

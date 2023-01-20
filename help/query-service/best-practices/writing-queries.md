@@ -5,9 +5,9 @@ title: Query Service의 쿼리 실행에 대한 일반 지침
 type: Tutorial
 description: 이 문서에서는 Adobe Experience Platform Query Service에서 쿼리를 작성할 때 알아야 할 중요한 세부 정보에 대해 설명합니다.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1072'
 ht-degree: 3%
 
 ---
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## 중복 제거
 
-Query Service는 데이터 중복 제거를 지원하거나 데이터에서 중복 행을 제거할 수 있습니다. 중복 제거에 대한 자세한 내용은 [Query Service 중복 제거 안내서](./deduplication.md).
+Query Service는 데이터 중복 제거를 지원하거나 데이터에서 중복 행을 제거할 수 있습니다. 중복 제거에 대한 자세한 내용은 [Query Service 중복 제거 안내서](../essential-concepts/deduplication.md).
 
 ## 쿼리 서비스의 시간대 계산
 
@@ -325,4 +325,7 @@ Query Service에서 사용할 수 있는 쿼리 샘플을 더 보려면 다음 �
 
 - [Analytics 통찰력](../use-cases/analytics-insights.md)
 - [Adobe Target을 사용한 활동 분석](../use-cases/activity-analysis-with-adobe-target.md)
-- [ExperienceEvent 샘플 쿼리](../sample-queries/experience-event.md).
+- [이벤트의 트렌드 보고서 만들기](../use-cases/trended-report-of-events.md)
+- [방문자의 롤업 보고서 보기](../use-cases/roll-up-report-of-a-visitor.md)
+- [사용자의 페이지 보기 나열](../use-cases/list-visitor-sessions.md)
+- [페이지 보기 수별로 방문자 나열](../use-cases/visitors-by-number-of-page-views.md)

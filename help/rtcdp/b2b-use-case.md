@@ -3,7 +3,7 @@ keywords: RTCDP;CDP;Real-time Customer Data Platform;실시간 고객 데이터 
 title: Real-time Customer Data Platform B2B Edition의 사용 사례 예
 description: 이 샘플 시나리오는 Adobe Real-Time Customer Data Platform B2B 에디션 구현 구성에 대한 예제를 제공합니다.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 2%
@@ -87,7 +87,7 @@ Bodea는 Marketo Engage 및 LinkedIn 대상을 사용하여 마케팅 팀을 위
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 Real-Time CDP B2B Edition을 사용하여 해결할 수 있는 목표 및 문제 유형에 대해 소개되었습니다.
+이 문서를 읽은 후에는 Real-Time CDP B2B Edition을 사용하여 해결할 수 있는 목표 및 문제의 유형이 도입되었습니다.
 
 다음 설명서는 B2B 특정 기능에 대한 이해를 개선하기 위해 권장됩니다.
 

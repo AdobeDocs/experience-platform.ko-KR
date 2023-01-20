@@ -2,7 +2,7 @@
 title: 사용자 정의 대시보드
 description: 주요 지표를 시각화하기 위해 맞춤형 위젯을 만들고, 추가하고, 편집할 수 있는 사용자 지정 대시보드를 만들고 관리하는 방법을 알아봅니다.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 5d9428c4323e65c2605fd116160e160af7d9086d
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '956'
 ht-degree: 0%
@@ -120,7 +120,7 @@ Adobe Real-time Customer Data Platform 인사이트 대시보드에 대한 각 �
 
 ## 다음 단계 및 추가 리소스
 
-이 문서를 읽은 후에는 사용자 지정 대시보드를 만드는 방법과 해당 대시보드에 대한 사용자 지정 위젯을 만들고, 편집하고 업데이트하는 방법을 더 잘 이해할 수 있습니다.
+이 문서를 읽은 후에는 사용자 지정 대시보드를 만드는 방법과 해당 대시보드에 대한 사용자 지정 위젯을 만들고, 편집하고 업데이트하는 방법에 대해 더 잘 이해할 수 있습니다.
 
 에 대해 사용 가능한 사전 구성된 지표 및 시각화를 검색하려면 [프로필](./guides/profiles.md#standard-widgets), [세그먼트](./guides/segments.md#standard-widgets), 및 [대상](./guides/destinations.md#standard-widgets) 대시보드 각각의 설명서에서 표준 위젯 목록을 참조하십시오.
 

@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;문제 해결 가이드;faq;문제 해결;
 solution: Experience Platform
-title: Query Service 문제 해결 안내서
+title: 자주 묻는 질문
 description: 이 문서에는 Query Service와 관련된 일반적인 질문과 대답이 포함되어 있습니다. 항목에는 데이터, 내보내기, 타사 도구 및 PSQL 오류가 포함됩니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '4383'
 ht-degree: 1%
 
 ---
 
-# [!DNL Query Service] 문제 해결 안내서
+# 자주 묻는 질문
 
 이 문서에서는 Query Service에 대해 자주 묻는 질문에 대한 답변을 제공하며 Query Service를 사용할 때 자주 표시되는 오류 코드 목록을 제공합니다. Adobe Experience Platform의 다른 서비스와 관련된 질문 및 문제 해결은 다음을 참조하십시오. [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md).
 
@@ -105,7 +105,7 @@ SELECT * FROM customers LIMIT 0;
 
 ![병합된 데이터의 XDM 스키마 및 테이블 형식 보기입니다. 중첩된 데이터 세트의 열 이름이 UI에서 강조 표시됩니다.](./images/troubleshooting/column-name.png)
 
-에 대한 자세한 내용은 설명서 를 참조하십시오 [중첩 데이터 구조를 사용한 작업 방법](./best-practices/nested-data-structures.md) 쿼리 편집기 또는 타사 클라이언트 사용.
+에 대한 자세한 내용은 설명서 를 참조하십시오 [중첩 데이터 구조를 사용한 작업 방법](./essential-concepts/nested-data-structures.md) 쿼리 편집기 또는 타사 클라이언트 사용.
 +++
 
 ### 배열이 포함된 데이터 세트에 대한 쿼리 속도를 높이는 방법
@@ -142,7 +142,7 @@ SELECT * FROM customers LIMIT 0;
 
 +++답변 익명 블록 기능을 사용하면 순서대로 실행되는 하나 이상의 SQL 문을 체인 지정할 수 있습니다. 예외 처리 옵션도 허용합니다.
 
-자세한 내용은 [익명 블록 설명서](./best-practices/anonymous-block.md) 자세한 내용
+자세한 내용은 [익명 블록 설명서](./essential-concepts/anonymous-block.md) 자세한 내용
 +++
 
 ### Query Service에서 사용자 지정 속성을 구현하려면 어떻게 해야 합니까?
@@ -226,7 +226,7 @@ AS SELECT '1' as _id,
 
 ### 매일 시스템에 들어오는 새 데이터를 빠르게 처리하려면 어떻게 해야 합니까?
 
-+++ [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) 절은 스냅샷 ID를 기반으로 테이블에서 데이터를 점진적으로 읽는 데 사용할 수 있습니다. 이 기능은 와 함께 사용하는 데 이상적입니다 [증분 로드](./best-practices/incremental-load.md) 마지막 로드 실행 이후 생성 또는 수정된 데이터 세트에 있는 정보만 처리하는 디자인 패턴입니다. 따라서 처리 효율을 높이고 스트리밍 및 배치 데이터 처리와 함께 사용할 수 있습니다.
++++ [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) 절은 스냅샷 ID를 기반으로 테이블에서 데이터를 점진적으로 읽는 데 사용할 수 있습니다. 이 기능은 와 함께 사용하는 데 이상적입니다 [증분 로드](./essential-concepts/incremental-load.md) 마지막 로드 실행 이후 생성 또는 수정된 데이터 세트에 있는 정보만 처리하는 디자인 패턴입니다. 따라서 처리 효율을 높이고 스트리밍 및 배치 데이터 처리와 함께 사용할 수 있습니다.
 +++
 
 ### 프로필 UI에 표시된 숫자와 프로필 내보내기 데이터 세트에서 계산된 숫자 간에 차이가 있는 이유는 무엇입니까?

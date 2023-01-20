@@ -1,16 +1,17 @@
 ---
-title: '웹 및 모바일 상호 작용에 대한 Analytics Insights '
+title: 웹 및 모바일 상호 작용에 대한 Analytics Insights
 description: 이 문서에서는 Query Service를 사용하여 수집된 Adobe Analytics 데이터에서 실행 가능한 통찰력을 만드는 방법을 설명합니다.
-source-git-commit: cdceba9caf035831f4c376edf34356f666b79aa8
+exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '232'
 ht-degree: 1%
 
 ---
 
 # 웹 및 모바일 상호 작용에 대한 Analytics 통찰력
 
-Adobe Experience Platform을 사용하면 XDM(Experience Data Model) 필드를 사용하여 Adobe Analytics 보고서 세트에서 데이터를 수집하여 데이터 세트를 채울 수 있습니다. 그런 다음 Query Service는 SQL 쿼리를 실행하여 디지털 플랫폼에 대한 사용자 동작에서 중요한 통찰력을 생성하여 이 분석 데이터를 사용할 수 있습니다.
+Adobe Experience Platform을 사용하면 XDM(Experience Data Model) 필드를 사용하여 Adobe Analytics 보고서 세트에서 데이터를 수집하여 데이터 세트를 채울 수 있습니다. 이 분석 데이터는 [!DNL XDM ExperienceEvent] 클래스 이름을 지정합니다. 그런 다음 Query Service는 SQL 쿼리를 실행하여 디지털 플랫폼에 대한 사용자의 동작에서 중요한 통찰력을 생성하여 이 데이터를 사용할 수 있습니다.
 
 이 문서에서는 웹 및 모바일 Analytics 데이터를 통해 통찰력을 만들 때 일반적인 사용 사례를 보여주는 다양한 샘플 SQL 쿼리를 제공합니다.
 
