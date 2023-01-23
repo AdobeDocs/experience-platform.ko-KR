@@ -2,10 +2,10 @@
 title: (베타) 트레이드데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타겟팅 및 억제를 위해 프로필을 Trade Desk 계정에 활성화합니다.
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 271a9ad9848db855372a4ce5346f97cf48400901
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 2%
+source-wordcount: '1084'
+ht-degree: 1%
 
 ---
 
@@ -13,21 +13,23 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
-> [!DNL The Trade Desk - CRM] 플랫폼의 대상은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+>[!DNL The Trade Desk - CRM] 플랫폼의 대상은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+>
+>EUID(유럽 통합 ID)가 릴리스되면 이제 두 가지 기능이 표시됩니다 [!DNL The Trade Desk - CRM] 의 대상 [대상 카탈로그](/help/destinations/catalog/overview.md).
+>* EU에서 데이터를 소스에 사용하는 경우 **[!DNL The Trade Desk - CRM (EU)]** 대상.
+>* APAC 또는 NAMEER 지역에서 데이터를 가져오는 경우 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 대상.
+>
+>Experience Platform의 두 대상 모두 현재 베타에 있습니다. 이 설명서 페이지는 *[!DNL Trade Desk]* 팀 문의 사항이나 업데이트 요청이 있으면 [!DNL Trade Desk] 담당자이면 설명서 및 기능이 변경될 수 있습니다.
 
 ## 개요 {#overview}
 
->[!IMPORTANT]
->
-> 이 설명서 페이지는 *[!DNL Trade Desk]* 팀 문의 사항이나 업데이트 요청이 있으면 [!DNL Trade Desk] 담당자.
-
 이 문서는 [!DNL Trade Desk] crm 데이터를 기반으로 하여 대상 타깃팅 및 제외를 처리합니다.
+
+[!DNL The Trade Desk(TTD)] 은 언제든지 이메일 주소 업로드 파일을 직접 처리하지 않으며 [!DNL The Trade Desk] 원시(해시되지 않은) 이메일을 저장합니다.
 
 >[!TIP]
 >
->사용 [!DNL The Trade Desk] 전자 메일 또는 해시된 전자 메일 주소와 같은 CRM 데이터 매핑용 CRM 대상입니다. 를 사용하십시오 [기타 무역 센터 대상](/help/destinations/catalog/advertising/tradedesk.md) Adobe Experience Platform 카탈로그에서 쿠키 및 장치 ID 매핑을 참조하십시오.
-
-[!DNL The Trade Desk] (TTD)는 언제든지 이메일 주소 업로드 파일을 직접 처리하지 않으며, [!DNL The Trade Desk] 원시(해시되지 않은) 이메일을 저장합니다.
+>사용 [!DNL The Trade Desk] 전자 메일 또는 해시된 전자 메일 주소와 같은 CRM 데이터 매핑용 CRM 대상. 를 사용하십시오 [기타 무역 센터 대상](/help/destinations/catalog/advertising/tradedesk.md) Adobe Experience Platform 카탈로그에서 쿠키 및 장치 ID 매핑을 참조하십시오.
 
 ## 전제 조건 {#prerequisites}
 
@@ -35,7 +37,7 @@ ht-degree: 2%
 
 ## ID 일치 요구 사항 {#id-matching-requirements}
 
-Adobe Experience Platform에 수집하는 ID의 유형에 따라 해당 요구 사항을 준수해야 합니다. 자세한 내용은 [ID 네임스페이스 개요](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko) 추가 정보.
+Adobe Experience Platform에 수집하는 ID의 유형에 따라 해당 요구 사항을 준수해야 합니다. 자세한 내용은 [ID 네임스페이스 개요](/help/identity-service/namespaces.md) 추가 정보.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -45,8 +47,8 @@ Adobe Experience Platform에 수집하는 ID의 유형에 따라 해당 요구 �
 
 | Target ID | 설명 | 고려 사항 |
 |---|---|---|
-| 이메일 | 이메일 주소(텍스트 지우기) | 을(를) 선택합니다 `Email` 소스 id가 이메일 네임스페이스 또는 속성일 때 타겟 id를 지정합니다. |
-| Email_LC_SHA256 | SHA256 및 소문자로 이메일 주소를 해시해야 합니다. 아무 것도 따르세요 [전자 메일 표준화](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) 규칙이 필요합니다. 이 설정은 나중에 변경할 수 없습니다. | 을(를) 선택합니다 `Email_LC_SHA256` 소스 ID가 Email_LC_SHA256 네임스페이스 또는 속성일 경우 타겟 ID입니다. |
+| 이메일 | 이메일 주소(텍스트 지우기) | 입력 `email` 소스 ID가 이메일 네임스페이스 또는 속성인 경우 타겟 ID로서 사용됩니다. |
+| Email_LC_SHA256 | SHA256 및 소문자로 이메일 주소를 해시해야 합니다. 아무 것도 따르세요 [전자 메일 표준화](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) 규칙이 필요합니다. 이 설정은 나중에 변경할 수 없습니다. | 입력 `hashed_email` 소스 ID가 Email_LC_SHA256 네임스페이스 또는 속성인 경우 타겟 ID로서 사용됩니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -54,7 +56,7 @@ Adobe Experience Platform에 수집하는 ID의 유형에 따라 해당 요구 �
 
 Adobe Experience Platform에 수집하기 전에 이메일 주소를 해시하거나 원시 이메일 주소를 사용할 수 있습니다.
 
-Experience Platform에서 이메일 주소 섭취에 대한 자세한 내용은 [배치 수집 개요](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/overview.html?lang=en).
+Experience Platform에서 이메일 주소를 수집하는 방법에 대해 알아보려면 [배치 수집 개요](/help/ingestion/batch-ingestion/overview.md).
 
 이메일 주소를 직접 해시하도록 선택하는 경우 다음 요구 사항을 충족하는지 확인하십시오.
 
@@ -71,7 +73,7 @@ Experience Platform에서 이메일 주소 섭취에 대한 자세한 내용은 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
 | 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | 트레이스 데스크 대상에 사용되는 식별자(이메일 또는 해시된 이메일)로 세그먼트(대상)의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 일별 배치]** | Experience Platform 평가에 따라 프로필이 세그먼트 평가에서 업데이트되므로, 프로필(ID)은 대상 플랫폼에 다운스트림으로 하루에 한 번 업데이트됩니다. 자세한 내용 [배치 업로드](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=en#file-based). |
+| 내보내기 빈도 | **[!UICONTROL 일별 배치]** | Experience Platform 평가에 따라 프로필이 세그먼트 평가에서 업데이트되므로, 프로필(ID)은 대상 플랫폼에 다운스트림으로 하루에 한 번 업데이트됩니다. 자세한 내용 [배치 내보내기](/help/destinations/destination-types.md#file-based). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -90,19 +92,27 @@ Experience Platform에서 이메일 주소 섭취에 대한 자세한 내용은 
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL 광고주 ID]**: your [!DNL Trade Desk Advertiser ID]: 사용자가 공유할 수 있습니다 [!DNL Trade Desk] 계정 관리자 또는 [!DNL Advertiser Preferences] 에서 [!DNL Trade Desk] UI.
 
-대상에 연결할 때 데이터 거버넌스 정책을 설정하는 것은 완전히 선택 사항입니다. Experience Platform을 검토하십시오 [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) 자세한 내용
+![대상 세부 사항을 채우는 방법을 보여주는 Platform UI 스크린샷입니다.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+
+대상에 연결할 때 데이터 거버넌스 정책을 설정하는 것은 완전히 선택 사항입니다. Experience Platform을 검토하십시오 [데이터 거버넌스 개요](/help/data-governance/policies/overview.md) 자세한 내용
 
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
-자세한 내용은 [대상자 데이터를 묶음 프로필 내보내기 대상으로 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en) 대상 세그먼트를 대상으로 활성화하는 방법에 대한 지침입니다.
+읽기 [대상자 데이터를 묶음 프로필 내보내기 대상으로 활성화](/help/destinations/ui/activate-batch-profile-destinations.md) 대상 세그먼트를 대상으로 활성화하는 방법에 대한 지침입니다.
 
 에서 **[!UICONTROL 예약]** 페이지에서 내보낼 각 세그먼트의 일정 및 파일 이름을 구성할 수 있습니다. 예약을 구성해야 하지만 파일 이름을 구성하는 것은 선택 사항입니다.
+
+![세그먼트 활성화를 예약하는 Platform UI 스크린샷입니다.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
 >모든 세그먼트를에 활성화 [!DNL The Trade Desk] CRM 대상은 일별 빈도 및 전체 파일 내보내기로 자동으로 설정됩니다.
 
+![세그먼트 활성화를 예약하는 Platform UI 스크린샷입니다.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+
 에서 **[!UICONTROL 매핑]** 페이지에서 소스 열에서 속성 또는 ID 네임스페이스를 선택하고 대상 열에 매핑해야 합니다.
+
+![세그먼트 활성화를 매핑하기 위한 Platform UI 스크린샷](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
 다음은 세그먼트를 활성화할 때 올바른 ID 매핑의 예입니다 [!DNL The Trade Desk] CRM 대상.
 
@@ -117,8 +127,8 @@ Experience Platform에서 이메일 주소 섭취에 대한 자세한 내용은 
 
 대상 필드 선택:
 
-* 을(를) 선택합니다 `Email` 소스 네임스페이스 또는 속성이 `Email`.
-* 을(를) 선택합니다 `Email_LC_SHA256` 소스 네임스페이스 또는 속성이 `Email_LC_SHA256`.
+* 입력  `email` 소스 네임스페이스 또는 속성이 `Email`.
+* 입력  `hashed_email` 소스 네임스페이스 또는 속성이 `Email_LC_SHA256`.
 
 ## 데이터 내보내기의 유효성 검사 {#validate}
 
