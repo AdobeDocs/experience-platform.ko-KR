@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
+source-git-commit: bdc6ef162e9684065b60a13670848dac64be21fd
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '988'
 ht-degree: 6%
 
 ---
@@ -153,6 +153,7 @@ ht-degree: 6%
       * [KickFire 확장](./catalog/personalization/kickfire.md)
       * [Marketo 웹 개인화 확장](./catalog/personalization/marketo-web-personalization.md)
       * [Pega 고객 의사 결정 허브 연결](./catalog/personalization/pega.md)
+      * [Pega 프로필 연결](./catalog/personalization/pega-profile.md)
    * 소셜 대상{#social}
       * [소셜 대상 개요](./catalog/social/overview.md)
       * [Livefyre 확장 Adobe](./catalog/social/adobe-livefyre.md)
