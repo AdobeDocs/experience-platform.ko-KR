@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 클래스 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 클래스를 만들고 편집하는 방법을 알아봅니다.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3a9b97b25980d88e0fff3d71e43407b641e6454d
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,9 @@ Adobe은 다음을 포함한 몇 가지 표준(&quot;core&quot;) XDM(Experience 
 >
 >클래스에 추가하는 모든 필드는 해당 클래스를 사용하는 모든 스키마에서 사용됩니다. 따라서 모든 스키마 사용 사례에 유용할 필드를 신중하게 고려해야 합니다. 이 클래스의 일부 스키마에서만 사용할 수 있는 필드를 추가하려는 경우 [필드 그룹 만들기](./field-groups.md#create) 을 가리키도록 업데이트하는 것이 좋습니다.
 
-A **[!UICONTROL 새 필드]** 캔버스에 표시되고 오른쪽 레일이 업데이트되어 필드의 속성을 구성하는 컨트롤을 표시합니다. 아래 **[!UICONTROL 할당 대상]**, 선택 **[!UICONTROL 클래스]**.
+An **[!UICONTROL 제목 없는 필드]** 자리 표시자가 캔버스에 표시되고 오른쪽 레일이 업데이트되어 필드의 속성을 구성하는 컨트롤을 표시합니다. 아래 **[!UICONTROL 할당 대상]**, 선택 **[!UICONTROL 클래스]**.
+
+![](../../images/ui/resources/classes/assign-to-class.png)
 
 ![](../../images/ui/resources/classes/assign-to-class.png)
 

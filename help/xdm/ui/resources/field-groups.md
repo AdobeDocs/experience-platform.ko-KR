@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 스키마 필드 그룹 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마 필드 그룹을 만들고 편집하는 방법을 알아봅니다.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 542ad49f475ac9586da506a8afa5408e83262121
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,11 @@ Adobe Experience Platform에서는 광범위한 마케팅 사용 사례를 다�
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL 새 필드]** 캔버스에 표시되고 오른쪽 레일이 업데이트되어 필드의 속성을 구성하는 컨트롤을 표시합니다. 다음 안내서를 참조하십시오. [ui에서 필드 정의](../fields/overview.md#define) 를 참조하십시오.
+An **[!UICONTROL 제목 없는 필드]** 자리 표시자가 캔버스에 표시되고 오른쪽 레일이 업데이트되어 필드의 속성을 구성하는 컨트롤을 표시합니다. 다음 안내서를 참조하십시오. [ui에서 필드 정의](../fields/overview.md#define) 를 참조하십시오.
+
+아래 **[!UICONTROL 할당 대상]**&#x200B;에서 을(를) 선택합니다. **[!UICONTROL 필드 그룹]** 옵션을 선택한 다음 드롭다운을 사용하여 목록에서 원하는 필드 그룹을 선택합니다. 필드 그룹의 이름에 입력을 시작하여 결과를 좁힐 수 있습니다.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
 
 아래 **[!UICONTROL 할당 대상]**&#x200B;에서 을(를) 선택합니다. **[!UICONTROL 필드 그룹]** 옵션을 선택한 다음 드롭다운을 사용하여 목록에서 원하는 필드 그룹을 선택합니다. 필드 그룹의 이름에 입력을 시작하여 결과를 좁힐 수 있습니다.
 
