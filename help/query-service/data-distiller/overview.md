@@ -1,7 +1,7 @@
 ---
 title: 데이터 Distiller 개요
 description: 라이선스 권한과 관련된 Query Service 데이터에 대한 Data Distiller 사용 제한 요약입니다.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 Data Distiller 는 Adobe Experience Platform의 기능 하위 집합을 포함하는 패키지 서비스입니다. Data Cloud를 사용하면 Query Service에서 배치 쿼리를 실행하여 실시간 고객 프로필 또는 분석 사용 사례에 대한 사후 수집 데이터 준비(예: 청소, 쉐이핑 및 조작)를 수행할 수 있습니다. 데이터 Distiller의 사용은 다음 중 하나 이상의 현재 및 지속적인 라이센스에 따라 달라집니다. Adobe Real-time Customer Data Platform, Customer Journey Analytics 및/또는 Adobe Journey Optimizer.
 
-## 라이선스 사용 {#licence-usage}
+## 라이선스 사용 {#license-usage}
 
-자세한 내용은 [Data Distiller 라이선스 사용 문서](./licence-usage.md) 조직의 Query Service 라이선스 사용에 대한 중요한 정보를 보려면
+자세한 내용은 [Data Distiller 라이선스 사용 문서](./license-usage.md) 조직의 Query Service 라이선스 사용에 대한 중요한 정보를 보려면
 
 ## 범위 매개 변수 {#scoping-parameters}
 

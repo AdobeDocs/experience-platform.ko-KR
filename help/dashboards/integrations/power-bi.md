@@ -2,10 +2,10 @@
 title: Platform 대시보드용 Power BI 보고서 템플릿
 description: 보고서 템플릿을 사용함으로써 Power BI를 사용하여 Experience Platform 데이터를 탐색합니다.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1472'
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 
@@ -32,7 +32,7 @@ Power BI 애플리케이션 통합을 설치하려면 먼저 사용자가 다음
 
 >[!NOTE]
 >
->Platform UI의 왼쪽 탐색 영역에 [대시보드] 탭이 표시되고 대시보드 인벤토리 보기가 표시되도록 하려면 Platform 라이선스의 일부로 프로필, 세그먼테이션 또는 대상 대시보드 중 하나에 대한 액세스 권한을 보유하고 있어야 합니다.
+>대시보드 탭이 플랫폼 UI의 왼쪽 탐색에 표시되고 대시보드 인벤토리 보기를 표시하려면 플랫폼 라이센스의 일부로 프로필, 세그먼트 또는 대상 대시보드 중 하나에 액세스할 수 있어야 합니다.
 
 ## Power BI 애플리케이션 통합 설치
 

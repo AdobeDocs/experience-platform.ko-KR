@@ -2,7 +2,7 @@
 title: Query Accelerated Store Reporting Insights 안내서
 description: 가속화된 저장소 데이터 및 사용자 정의 대시보드에서 사용할 Query Service를 통해 보고 인사이트 데이터 모델을 만드는 방법을 알아봅니다.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Adobe Experience Platform의 Real-Time CDP 데이터 모델은 프로필, 세그
 
 ## 시작하기
 
-Data Distiller SKU는 보고 통찰력을 위한 사용자 지정 데이터 모델을 만들고 보강된 플랫폼 데이터를 포함하는 Real-Time CDP 데이터 모델을 확장하는 데 필요합니다. 자세한 내용은 [포장](../../packages.md), [가드 레일](../../guardrails.md#query-accelerated-store), 및 [라이선스](../../data-distiller/licence-usage.md) data Distiller SKU와 관련된 설명서입니다. Data Distiller SKU가 없는 경우 자세한 내용은 Adobe 고객 서비스 담당자에게 문의하십시오.
+Data Distiller SKU는 보고 통찰력을 위한 사용자 지정 데이터 모델을 만들고 보강된 플랫폼 데이터를 포함하는 Real-Time CDP 데이터 모델을 확장하는 데 필요합니다. 자세한 내용은 [포장](../../packages.md), [가드 레일](../../guardrails.md#query-accelerated-store), 및 [라이선스](../../data-distiller/license-usage.md) data Distiller SKU와 관련된 설명서입니다. Data Distiller SKU가 없는 경우 자세한 내용은 Adobe 고객 서비스 담당자에게 문의하십시오.
 
 ## 보고 통찰력 데이터 모델 구축
 

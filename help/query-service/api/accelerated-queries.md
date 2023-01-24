@@ -1,7 +1,8 @@
 ---
 title: 가속 쿼리 끝점
 description: 데이터를 집계하여 결과를 빠르게 반환하기 위해 상태를 저장하지 않는 방식으로 쿼리 가속 저장소에 액세스하는 방법을 알아봅니다. 이 문서에서는 Query Service 가속 쿼리 끝점에 대한 샘플 HTTP 요청 및 응답을 제공합니다.
-source-git-commit: 2a9d40fc783feb78a1d5ad7eb615ceb40097eb89
+exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 1%
@@ -16,7 +17,7 @@ Data Distiller SKU의 일부로서, [쿼리 서비스 API](https://developer.ado
 
 ## 시작하기
 
-쿼리 가속 스토어를 사용하려면 Data Distiller SKU가 필요합니다. 자세한 내용은 [포장](../packages.md), [가드 레일](../guardrails.md#query-accelerated-store), 및 [라이선스](../data-distiller/licence-usage.md) data Distiller SKU와 관련된 설명서입니다. Data Distiller SKU가 없는 경우 자세한 내용은 Adobe 고객 서비스 담당자에게 문의하십시오.
+쿼리 가속 스토어를 사용하려면 Data Distiller SKU가 필요합니다. 자세한 내용은 [포장](../packages.md), [가드 레일](../guardrails.md#query-accelerated-store), 및 [라이선스](../data-distiller/license-usage.md) data Distiller SKU와 관련된 설명서입니다. Data Distiller SKU가 없는 경우 자세한 내용은 Adobe 고객 서비스 담당자에게 문의하십시오.
 
 다음 섹션에서는 Query Service API를 통해 상태를 저장하지 않는 방식으로 쿼리 가속 저장소에 액세스하는 데 필요한 API 호출을 자세히 설명합니다. 각 호출에는 일반 API 형식, 필수 헤더를 보여주는 샘플 요청 및 샘플 응답이 포함되어 있습니다.
 
@@ -210,4 +211,3 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 | `resultsMeta._adhoc.meta:xdmType` | XDM 필드 유형에 대해 시스템에서 생성한 값입니다. 사용 가능한 유형에 대한 자세한 내용은 [사용 가능한 XDM 유형](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
 | `resultsMeta._adhoc.properties` | 쿼리된 데이터 세트의 열 이름입니다. |
 | `resultsMeta._adhoc.results` | 쿼리된 데이터 세트의 행 이름입니다. 반환된 각 열을 반영합니다. |
-

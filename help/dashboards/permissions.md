@@ -4,7 +4,7 @@ title: Experience Platform 대시보드에 대한 액세스 권한을 얻고 부
 type: Documentation
 description: Adobe Admin Console을 사용하여 Experience Platform 대시보드를 보고 편집하고 업데이트할 수 있는 권한을 사용자에게 부여합니다.
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 6%
@@ -51,13 +51,13 @@ ht-degree: 6%
 
 |  | [!UICONTROL 표준 대시보드 보기] 또는 [!UICONTROL 표준 대시보드 관리] | [!UICONTROL 프로필 보기],<br/>[!UICONTROL 세그먼트 보기],<br/> [!UICONTROL 대상 보기] | [!UICONTROL 쿼리 관리] &amp; [!UICONTROL 샌드박스 관리] | [!UICONTROL 라이선스 사용 대시보드 보기] |
 |---|---|---|---|---|
-| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] 을 클릭합니다. | 해당 없음 | **&quot;보기&quot; 또는 &quot;관리&quot; 권한이 필요합니다.** 각 대시보드 | 해당 없음 | 해당 없음 |
-| [!DNL Dashboards] 을 클릭합니다. | 활성화됨 | **하나 이상의 필수**. | 해당 없음 | 해당 없음 |
-| [!DNL Dashboards] [!DNL Inventory] <br/>(찾아보기 탭) | 활성화됨 | 해당 없음 | 해당 없음 | 해당 없음 |
-| [!DNL Dashboards] [!DNL Integrations] 탭 <br/>(Power BI 설치에 사용됨) | 활성화됨 | **하나 이상의 필수** | 해당 없음 | 해당 없음 |
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] 을 클릭합니다. | 해당 없음 | **&quot;보기&quot; 또는 &quot;관리&quot; 권한이 필요합니다.** 각 대시보드 | N/A | N/A |
+| [!DNL Dashboards] 을 클릭합니다. | 활성화됨 | **하나 이상의 필수**. | N/A | N/A |
+| [!DNL Dashboards] [!DNL Inventory] <br/>(찾아보기 탭) | 활성화됨 | N/A | N/A | N/A |
+| [!DNL Dashboards] [!DNL Integrations] 탭 <br/>(Power BI 설치에 사용됨) | 활성화됨 | **하나 이상의 필수** | N/A | N/A |
 | Power BI 설치 단추 및 워크플로우 | 활성화됨 | 해당 없음 | **필수 여부** | 해당 없음 |
-| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] 대시보드 .<br/>위젯 스키마를 편집하고 위젯 사용자 지정을 위한 새로운 특성을 추가하는 기능 | **Manage-standard-dashboard 필수** | **필수(각 대시보드에 대해)** | 해당 없음 | 해당 없음 |
-| [!DNL License Usage Dashboard] | 해당 없음 | 해당 없음 | 해당 없음 | 활성화됨 |
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] 대시보드 .<br/>위젯 스키마를 편집하고 위젯 사용자 지정을 위한 새로운 특성을 추가하는 기능 | **Manage-standard-dashboard 필수** | **필수(각 대시보드에 대해)** | N/A | N/A |
+| [!DNL License Usage Dashboard] | N/A | N/A | N/A | 활성화됨 |
 
 {style=&quot;table-layout:auto&quot;}
 
