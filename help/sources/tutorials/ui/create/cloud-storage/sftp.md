@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;홈;인기 항목;SFTP;sftp
-solution: Experience Platform
 title: UI에서 SFTP 소스 연결 만들기
-type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 SFTP 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -44,12 +41,13 @@ ht-degree: 0%
 | `privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류해야 합니다. |
 | `passPhrase` | 키 파일 또는 키 컨텐츠가 암호 구문으로 보호되는 경우 개인 키를 해독하기 위한 암호 구문 또는 암호입니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수는 PrivateKeyContent의 암호와 함께 값으로 사용해야 합니다. |
 | `maxConcurrentConnections` | 이 매개 변수를 사용하면 SFTP 서버에 연결할 때 플랫폼에서 만드는 동시 연결 수에 대한 최대 제한을 지정할 수 있습니다. 이 값은 SFTP에서 설정한 제한보다 작도록 설정해야 합니다. **참고**: 이 설정이 기존 SFTP 계정에 대해 활성화되면 기존 데이터 흐름에는 영향을 주지 않고 향후 데이터 흐름에만 영향을 줍니다. |
+| 폴더 경로 | 액세스를 제공할 폴더의 경로입니다. [!DNL SFTP] 소스 폴더 경로를 제공하여 선택한 하위 폴더에 대한 사용자 액세스를 지정할 수 있습니다. |
 
 필요한 자격 증명을 수집하면 아래 단계에 따라 새 자격 증명을 만들 수 있습니다 [!DNL SFTP] platform에 연결할 계정입니다.
 
 ## 에 연결 [!DNL SFTP] server
 
-플랫폼 UI에서 **[!UICONTROL 소스]** 왼쪽 탐색 모음에서 를 클릭하여 [!UICONTROL 소스] 작업 공간. 다음 [!UICONTROL 카탈로그] 화면에는 로 인바운드 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+플랫폼 UI에서 **[!UICONTROL 소스]** 왼쪽 탐색 모음에서 를 클릭하여 [!UICONTROL 소스] 작업 공간. 다음 [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
@@ -67,31 +65,31 @@ ht-degree: 0%
 
 ### 새 계정
 
-새 계정을 만드는 경우 **[!UICONTROL 새 계정]**&#x200B;그런 다음 이름 및 선택적 설명을 새로 만듭니다 [!DNL SFTP] 계정이 필요합니다.
-
-![SFTP에 대한 새 계정 화면입니다](../../../../images/tutorials/create/sftp/new.png)
-
-#### 암호를 사용하여 인증
-
-[!DNL SFTP] 은 액세스를 위해 다른 인증 유형을 지원합니다. 아래 **[!UICONTROL 계정 인증]** 선택 **[!UICONTROL 암호]** 그런 다음 연결할 호스트 및 포트 값을 사용자 이름과 암호와 함께 제공합니다.
-
-![기본 인증을 사용하는 SFTP 소스에 대한 새 계정 화면입니다](../../../../images/tutorials/create/sftp/password.png)
-
-#### SSH 공개 키를 사용하여 인증
-
-SSH 공개 키 기반 자격 증명을 사용하려면 **[!UICONTROL SSH 공개 키]**  그런 다음 호스트 및 포트 값과 개인 키 콘텐츠 및 암호 조합을 제공합니다.
-
 >[!IMPORTANT]
 >
 >SFTP는 RSA 또는 DSA 유형인 OpenSSH 키를 지원합니다. 주요 파일 내용이 `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` 다음으로 끝남 `"-----END [RSA/DSA] PRIVATE KEY-----"`. 개인 키 파일이 PPK 형식 파일인 경우 PuTTY 도구를 사용하여 PPK에서 OpenSSH 형식으로 변환합니다.
 
+새 계정을 만드는 경우 **[!UICONTROL 새 계정]**&#x200B;그런 다음 이름 및 선택적 설명을 새로 만듭니다 [!DNL SFTP] 계정이 필요합니다.
+
+![SFTP에 대한 새 계정 화면입니다](../../../../images/tutorials/create/sftp/new.png)
+
+다음 [!DNL SFTP] 소스는 SSH 공개 키를 통해 기본 인증 및 인증을 모두 지원합니다.
+
+>[!BEGINTABS]
+
+>[!TAB 기본 인증]
+
+기본 인증을 사용하려면 **[!UICONTROL 암호]** 그런 다음 연결할 호스트 및 포트 값을 사용자 이름과 암호와 함께 제공합니다. 이 단계에서 액세스 권한을 제공할 하위 폴더의 경로를 지정할 수도 있습니다. 완료되면 을 선택합니다 **[!UICONTROL 소스에 연결]**.
+
+![기본 인증을 사용하는 SFTP 소스에 대한 새 계정 화면입니다](../../../../images/tutorials/create/sftp/password.png)
+
+>[!TAB SSH 공개 키 인증]
+
+SSH 공개 키 기반 자격 증명을 사용하려면 **[!UICONTROL SSH 공개 키]**  그런 다음 호스트 및 포트 값과 개인 키 콘텐츠 및 암호 조합을 제공합니다. 이 단계에서 액세스 권한을 제공할 하위 폴더의 경로를 지정할 수도 있습니다. 완료되면 을 선택합니다 **[!UICONTROL 소스에 연결]**.
+
 ![SSH 공개 키를 사용하는 SFTP 소스에 대한 새 계정 화면입니다.](../../../../images/tutorials/create/sftp/ssh.png)
 
-| 자격 증명 | 설명 |
-| ---------- | ----------- |
-| 개인 키 콘텐츠 | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류해야 합니다. |
-| 암호 | 키 파일 또는 키 컨텐츠가 암호 구문으로 보호되는 경우 개인 키를 해독할 암호 구문 또는 암호를 지정합니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수는 PrivateKeyContent의 암호와 함께 해당 값으로 사용해야 합니다. |
-
+>[!ENDTABS]
 
 ## 다음 단계
 
