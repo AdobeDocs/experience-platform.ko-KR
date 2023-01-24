@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: a43947f87337e235eb059db6f497999bc4ede74d
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '265'
 ht-degree: 17%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 17%
 - 시작 {#get-started}
    - [전제 조건](get-started/prerequisites.md)
 - 데이터 Distiller {#data-distiller}
+   - [개요](data-distiller/overview.md)
    - [라이선스 사용](data-distiller/license-usage.md)
    - 쿼리 가속 저장소 {#query-accelerated-store}
       - [가속 쿼리 보내기](data-distiller/query-accelerated-store/send-accelerated-queries.md)
