@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다. 이 문서는 최적의 시스템 성능을 위해 프로필 데이터를 모델링하는 데 도움이 되는 기본 사용 및 속도 제한을 제공합니다.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: 1c092cd66a8a96623359a0e56de76e2a3d077c8d
 workflow-type: tm+mt
-source-wordcount: '1954'
+source-wordcount: '1982'
 ht-degree: 5%
 
 ---
@@ -90,6 +90,7 @@ Adobe Experience Platform을 사용하면 실시간 고객 프로필 형태로 �
 | 최대 프로필 조각 크기 | 50MB | 하드 | **단일 프로필 조각의 최대 크기는 50MB입니다.** 세그먼테이션, 내보내기 및 조회는 모든 항목에 대해 실패할 수 있습니다 [프로필 조각](#profile-fragments) 50MB보다 큽니다. |
 | 최대 프로필 저장소 크기 | 50MB | 소프트 | **저장된 프로필의 최대 크기는 50MB입니다.** 새로 추가 [프로필 조각](#profile-fragments) 50MB보다 큰 프로필은 시스템 성능에 영향을 줍니다. 예를 들어, 프로필에 50MB의 단일 조각이 포함되어 있거나 총 크기가 50MB인 여러 데이터 세트에 걸쳐 여러 조각을 포함할 수 있습니다. 50MB보다 큰 단일 조각 또는 총 50MB를 초과하는 복합 조각으로 프로필을 저장하려고 하면 시스템 성능에 영향을 줍니다. |
 | 일별로 수집된 프로필 또는 ExperienceEvent 배치 수 | 90 | 소프트 | **일별 수집된 프로필 또는 ExperienceEvent 일괄 처리의 최대 수는 90개입니다.** 즉, 매일 수집된 프로필 및 ExperienceEvent 일괄 처리의 합계는 90을 초과할 수 없습니다. 추가 배치를 섭취하는 것은 시스템 성능에 영향을 줍니다. |
+| 프로필 레코드당 ExperienceEvents 수 | 5000 | 소프트 | **프로필 레코드당 최대 ExperienceEvents 수는 5000개입니다.** 5000개 이상의 ExperienceEvent가 있는 프로필은 **not** 세그먼테이션에 고려됩니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
