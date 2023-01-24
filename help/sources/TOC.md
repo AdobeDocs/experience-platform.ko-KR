@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
+source-git-commit: 79773c35cf70bc967b29a8bcca729106bd7dd4f0
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '872'
 ht-degree: 12%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 12%
          - [Marketo Engage 커넥터](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage 인증 안내서](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B 네임스페이스 및 스키마](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - 광고 {#advertising}
+   - Advertising {#advertising}
       - [Google 광고 커넥터](connectors/advertising/ads.md)
    - Analytics {#analytics}
       - [Mixpanel 커넥터](connectors/analytics/mixpanel.md)
@@ -59,6 +59,7 @@ ht-degree: 12%
    - CRM {#crm}
       - [Microsoft Dynamics 커넥터](connectors/crm/ms-dynamics.md)
       - [Salesforce 커넥터](connectors/crm/salesforce.md)
+      - [SugarCRM 커넥터](connectors/crm/sugarcrm.md)
       - [Veva CRM 커넥터](connectors/crm/veeva.md)
       - [Zoho CRM 커넥터](connectors/crm/zoho.md)
    - 고객 성공 {#customer-success}
@@ -106,7 +107,7 @@ ht-degree: 12%
       - [HTTP API 커넥터](connectors/streaming/http.md)
 - API 자습서 {#api-tutorials}
    - 기본 연결 만들기 {#create}
-      - 광고 {#advertising}
+      - Advertising {#advertising}
          - [Google 광고](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
@@ -129,6 +130,8 @@ ht-degree: 12%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
+         - [SugarCRM 계정 및 연락처](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
+         - [SugarCRM 이벤트](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - 고객 성공 {#customer-success}
@@ -213,7 +216,7 @@ ht-degree: 12%
          - [고객 속성](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
-      - 광고 {#advertising}
+      - Advertising {#advertising}
          - [Google 광고](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
@@ -237,6 +240,8 @@ ht-degree: 12%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+         - [SugarCRM 계정 및 연락처](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
+         - [SugarCRM 이벤트](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - 고객 성공 {#customer-success}

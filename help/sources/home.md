@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 소스 커넥터 개요
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e4fa36ebbb52ba0e5b37cda8d220e571d8afa4aa
 workflow-type: tm+mt
 source-wordcount: '1123'
 ht-degree: 2%
@@ -42,7 +42,7 @@ Experience Platform을 사용하면 Adobe Analytics 및 Adobe Audience Manager�
 - [Adobe Workfront 소스 개요](connectors/adobe-applications/workfront.md)
    - [UI에서 Workfront 소스 연결 만들기](./tutorials/ui/create/adobe-applications/workfront.md)
 
-### 광고 {#advertising}
+### Advertising {#advertising}
 
 Experience Platform은 타사 광고 시스템에서 데이터 섭취를 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
@@ -84,6 +84,7 @@ CRM 시스템은 고객 관계를 구축하는 데 도움이 되는 데이터를
 
 - [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce]](connectors/crm/salesforce.md)
+- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md)
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
