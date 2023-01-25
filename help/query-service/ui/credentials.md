@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Service 자격 증명 안내서
 description: Adobe Experience Platform 쿼리 서비스는 쿼리를 작성 및 실행하고, 이전에 실행된 쿼리를 보고, IMS 조직 내의 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1330'
 ht-degree: 1%
 
 ---
@@ -28,11 +28,11 @@ Adobe Experience Platform 쿼리 서비스를 통해 외부 클라이언트와 �
 
 다음 **[!UICONTROL 만료 자격 증명]** 이 섹션에서는 다음 정보를 제공합니다.
 
-- **[!UICONTROL 호스트]**: 연결할 호스트의 이름입니다. 쿼리 서비스에 연결하려면 현재 사용 중인 IMS 조직의 이름이 포함됩니다.
+- **[!UICONTROL 호스트]**: 클라이언트를 연결할 호스트의 이름입니다. 플랫폼 UI의 위쪽 리본에 표시된 조직의 이름이 통합됩니다.
 - **[!UICONTROL 포트]**: 연결할 호스트의 포트 번호입니다.
-- **[!UICONTROL 데이터베이스]**: 연결할 데이터베이스의 이름입니다.
-- **[!UICONTROL 사용자 이름]**: Query Service에 연결하는 데 사용할 사용자 이름입니다.
-- **[!UICONTROL 암호]**: Query Service에 연결하는 데 사용할 암호입니다.
+- **[!UICONTROL 데이터베이스]**: 클라이언트를 연결할 데이터베이스의 이름입니다.
+- **[!UICONTROL 사용자 이름]**: Query Service에 연결하는 데 사용되는 사용자 이름입니다.
+- **[!UICONTROL 암호]**: Query Service에 연결하는 데 사용되는 암호입니다. UI의 암호가 보안을 위해 해시되었습니다. 복사 아이콘(![복사 아이콘.](../images/ui/credentials/copy-icon.png))을 클릭하여 해시되지 않은 전체 자격 증명을 클립보드에 복사합니다.
 - **[!UICONTROL PSQL 명령]**: 명령줄에서 PSQL을 사용하여 Query Service에 연결할 관련 정보를 모두 자동으로 삽입한 명령입니다.
 - **[!UICONTROL 만료]**: 만료 자격 증명을 위한 만료 날짜 및 시간입니다. 토큰의 기본 유효 기간은 24시간이지만 Admin Console의 고급 설정에서 변경할 수 있습니다.
 
