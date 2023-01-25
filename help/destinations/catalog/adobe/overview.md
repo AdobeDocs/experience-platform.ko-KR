@@ -3,10 +3,10 @@ keywords: 대상;experience cloud 솔루션 target;타겟 대상 ad cloud; adver
 title: Adobe 대상 개요
 description: 광고 타겟팅, 개인화, 마케팅 자동화 등을 위해 Platform의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 4ac73a83188a11900f38307ca8d743de4c186fdb
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 13%
+source-wordcount: '230'
+ht-degree: 12%
 
 ---
 
@@ -20,11 +20,14 @@ ht-degree: 13%
 
 현재 Platform은 아래에 나열된 Adobe 대상을 지원합니다.
 
-연결 및 확장 간의 차이점을 이해하려면 대상 유형 및 카테고리 페이지에서 [연결](../../destination-types.md#connections)을 참조하십시오.
+연결과 확장의 차이를 이해하려면 를 참조하십시오 [연결](../../destination-types.md#connections) 대상 유형 및 카테고리 페이지에서 을 참조하십시오.
 
 ### 연결
 
+* [Adobe Advertising Cloud DSP 연결](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
 * [Adobe Campaign 연결](../email-marketing/adobe-campaign.md)
+* [Adobe Target 연결](/help/destinations/catalog/personalization/adobe-target-connection.md)
+* [(베타) Experience Cloud 대상](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage 연결](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ### 확장
