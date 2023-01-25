@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2023년 1월
 description: Adobe Experience Platform에 대한 2023년 1월 릴리스 노트입니다.
-source-git-commit: 68e5baac9012a33d179f8ebff23deda7a8efd26b
+source-git-commit: 5657473ad10880b907a5b010fa99e08a5e45e174
 workflow-type: tm+mt
-source-wordcount: '1371'
-ht-degree: 6%
+source-wordcount: '1994'
+ht-degree: 5%
 
 ---
 
@@ -16,6 +16,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 - [보증](#assurance)
 - [데이터 수집](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [XDM(경험 데이터 모델)](#xdm)
 - [실시간 고객 프로필](#profile)
 - [세분화 서비스](#segmentation)
@@ -47,6 +48,53 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | 에 데이터 보내기 [!DNL Google Ads] 이벤트 전달 사용 | 이제 를 사용할 수 있습니다 [[!DNL Google Ads Enhanced Conversions] API 확장](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) 이벤트 전달에 대해 다음을 결합합니다. [Google Oauth 2 비밀](../../tags/ui/event-forwarding/secrets.md#google-oauth2)으로 데이터를 안전하게 [!DNL Google Ads] 실시간으로 |
 
 {style=&quot;table-layout:auto&quot;}
+
+## 대상 {#destinations}
+
+[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새 대상**
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| [(베타) Adobe Experience Cloud 대상 연결](../../destinations/catalog/adobe/experience-cloud-audiences.md) | 를 사용하십시오 [!UICONTROL (베타) Adobe Experience Cloud 대상] Experience Platform에서 Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target 또는 Marketo과 같은 다양한 Experience Platform 솔루션으로 세그먼트를 공유할 수 있는 연결입니다. |
+| [Pega 프로필 연결](../../destinations/catalog/personalization/pega-profile.md) | 를 사용하십시오 [!DNL Pega Profile Connector] Adobe Experience Platform에서 를 통해 [!DNL Amazon] S3 저장소를 사용하여 프로필 데이터를 Adobe Experience Platform의 CSV 파일로 주기적으로 S3 버킷으로 내보냅니다. in [!DNL Pega Customer Decision Hub]로 지정하는 경우 데이터 작업을 예약하여 S3 저장소에서 이 프로필 데이터를 가져와 업데이트할 수 있습니다 [!DNL Pega Customer Decision Hub] 프로필 참조. |
+| [(베타) Trade Desk CRM EU 연결](../../destinations/catalog/advertising/tradedesk-emails.md) | EUID(유럽 통합 ID)가 릴리스되면 이제 두 가지 기능이 표시됩니다 [!DNL The Trade Desk - CRM] 의 대상 [대상 카탈로그](/help/destinations/catalog/overview.md). <ul><li> EU에서 데이터를 소스에 사용하는 경우 **[!DNL The Trade Desk - CRM (EU)]** 대상.</li><li> APAC 또는 NAMEER 지역에서 데이터를 가져오는 경우 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 대상. </li></ul> |
+
+**새 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ----------- | ----------- |
+| 베타 클라우드 저장소 대상 커넥터에 대한 새로운 구분 기호 옵션 | 세 개의 새 구분 기호 옵션(콜론) `:`, 파이프 `|`, 세미콜론 `;`) 이제 새로운 베타 클라우드 스토리지 대상에 대해 사용할 수 있습니다. [(베타) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(베타) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(베타) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(베타) 데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(베타) Google 클라우드 스토리지](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(베타) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> 지원되는 항목에 대해 읽기 [파일 서식 옵션](/help/destinations/ui/batch-destinations-file-formatting-options.md) 파일 기반 대상. |
+| 에서 사용할 수 있는 새로운 선택적 매개 변수 [고객 데이터 필드](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) 구성 [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: 사용자 조직에서 설정한 모든 대상 데이터 흐름에서 값이 고유해야 하는 고객 데이터 필드를 만들어야 하는 경우 이 필드를 사용합니다. <br> 예: **[!UICONTROL 통합 별칭]** 의 필드 [[!UICONTROL 사용자 지정 개인화]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) 대상은 고유해야 합니다. 즉, 이 대상에 대해 두 개의 개별 데이터 흐름이 이 필드에 대해 동일한 값을 가질 수 없습니다. |
+
+**수정 사항 및 향상된 기능** {#fixes-and-enhancements}
+
+<!--
+
+| Fix or enhancement | Description |
+| ----------- | ----------- |
+| UI and API validation for required mappings and duplicate mappings (PLAT-123316) | Validation is now enforced as follows in the UI and API when [mapping fields](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate destinations workflow:<ul><li>**Required mappings**: If the destination has been set up by the destination developer with required mappings (for example, the [Google Ad Manager 360](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#activate) destination), then these required mappings need to be added by the user when activating data to the destination. </li><li>**Duplicate mappings**: expand on allowed and forbidden source-to-target mappings.</li></ul> |
+| Updated profile export behavior to cloud storage destinations (PLAT-123316) | We fixed an issue in the behavior of [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) when exporting data files to batch destinations. <br> Previously, every record in the output files was verified to contain both: <ol><li>A non-null value of the `mandatoryField` column and</li><li>also contain a non-null value on at least one of the other non-mandatory fields.</li></ol> The second condition has been removed. As a result, you might be seeing more output rows in your exported data files. |
+
+-->
+
+<table>
+    <tr>
+        <td><b>수정 또는 개선 사항</b></td>
+        <td><b>설명</b></td>
+    </tr>
+    <tr>
+        <td>필수 매핑 및 중복 매핑에 대한 UI 및 API 유효성 검사(PLAT-123316)</td>
+        <td>이제 다음의 경우 UI 및 API에서 유효성 검사가 다음과 같이 적용됩니다 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">매핑 필드</a> 대상 활성화 워크플로우에서:<ul><li><b>필요한 매핑</b>: 대상 개발자가 필수 매핑(예: <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> 대상)으로 지정하는 경우, 데이터를 대상에 활성화할 때 사용자가 이러한 필수 매핑을 추가해야 합니다. </li><li><b>중복 매핑</b>: 활성화 워크플로우의 매핑 단계에서 소스 필드에 중복 값을 추가할 수 있지만 대상 필드는 추가할 수 없습니다. 허용 및 금지된 매핑 조합의 예는 아래 표를 참조하십시오. <br><table><thead><tr><th>허용/금지</th><th>소스 필드</th><th>Target 필드</th></tr></thead><tbody><tr><td>허용됨</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>전자 메일 별칭2</li></ul></td></tr><tr><td>금지됨</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>
+    <tr>
+        <td>파일 기반 대상으로 내보내기 동작이 업데이트되었습니다(PLAT-123316).</td>
+        <td>의 동작에서 문제가 해결되었습니다. <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">필수 속성</a> 데이터 파일을 배치 대상으로 내보낼 때 <br> 이전에는 출력 파일의 모든 레코드에 다음 두 항목이 모두 포함되어 있는지 확인했습니다. <ol><li>Null이 아닌 값 <code>mandatoryField</code> 열 및</li><li>다른 필수 필드가 아닌 필드 중 하나 이상에 null이 아닌 값입니다.</li></ol> 두 번째 조건이 제거되었습니다. 따라서 아래 예와 같이 내보낸 데이터 파일에 더 많은 출력 행을 볼 수 있습니다.<br> <b> 2023년 1월 릴리스 전 샘플 동작 </b> <br> 필수 필드: <code>emailAddress</code> <br> <b>활성화할 데이터 입력</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>존</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>제니퍼</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>활성화 출력</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>존</td><td>john@acme.com</td></tr><tr><td>제니퍼</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> 2023년 1월 릴리스 이후 샘플 동작 </b> <br> <b>활성화 출력</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>존</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>제니퍼</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
+    </tr>
+</table>
+
+대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
 
 ## XDM(경험 데이터 모델) {#xdm}
 
