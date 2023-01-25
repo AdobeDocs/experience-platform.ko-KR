@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2023년 1월
 description: Adobe Experience Platform에 대한 2023년 1월 릴리스 노트입니다.
-source-git-commit: 3fd3e96d5db6b1e63df338efe383d209690eb1f6
+source-git-commit: 0f2ddad37db87d8818281067e3a30cc1b2fb6418
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '1316'
 ht-degree: 6%
 
 ---
@@ -14,9 +14,25 @@ ht-degree: 6%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [보증](#assurance)
 - [데이터 수집](#data-collection)
 - [XDM(경험 데이터 모델)](#xdm)
+- [실시간 고객 프로필](#profile)
 - [소스](#sources)
+
+## 보증 {#assurance}
+
+Adobe 보증을 사용하면 모바일 앱에서 데이터를 수집하거나 경험을 제공하는 방법을 검사, 증명, 시뮬레이션 및 확인할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 유효성 검사 편집기 | 유효성 검사 편집기에 대한 새로운 개선 사항이 추가되었습니다. 이러한 개선 사항에는 유효성 검사 열, 새 코드 작성 도구 및 향상된 보기가 포함됩니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Assurance에 대한 자세한 내용은 [보증 설명서](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## 데이터 수집 {#data-collection}
 
@@ -72,6 +88,29 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 {style=&quot;table-layout:auto&quot;}
 
 Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
+
+## 실시간 고객 프로필 {#profile}
+
+Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 조정되고 일관되며 적절한 경험을 제공할 수 있습니다. 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합하는 각 개별 고객을 전체적으로 확인할 수 있습니다. 프로필을 사용하면 모든 고객 상호 작용을 실행 가능하고 타임스탬프가 지정된 계정을 제공하는 통합 보기에 고객 데이터를 통합할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 플랫폼 생성 세그먼트 멤버십 만료 | 에 있는 모든 세그먼트 멤버십입니다 `Exited` 상태를 기준으로 30일 이상 `lastQualificationTime` 필드는 삭제될 수 있습니다. |
+| 외부 대상 멤버십 만료 | 기본적으로 외부 대상 멤버십은 30일 동안 유지됩니다. 이를 더 오래 보관하려면 `validUntil` 대상 데이터를 수집하는 동안 필드를 생성합니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**예정된 사용 중단** {#deprecation}
+
+세그먼트 멤버십 라이프사이클에서 중복을 제거하려면 `Existing` 상태는 [세그먼트 멤버십 맵](../../xdm/field-groups/profile/segmentation.md) 2023년 3월 말 후속 발표에는 정확한 사용 중단 날짜가 포함됩니다.
+
+사용 중단 후, 세그먼트에 자격을 갖춘 프로필은 로 표시됩니다 `Realized` 그리고 자격이 없는 프로필은 `Exited`. 이렇게 하면 다음과 같은 파일 기반 대상과 패리티가 생깁니다. `Active` 및 `Expired` 세그먼트 상태.
+
+이 변경 사항은 [엔터프라이즈 대상](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure 이벤트 허브, HTTP API)를 통해 다음을 기반으로 자동화된 다운스트림 프로세스를 배치합니다 `Existing` 상태. 이러한 경우 다운스트림 통합을 검토하십시오. 특정 시간 이후에 새로 자격을 갖춘 프로필을 식별하는 데 관심이 있는 경우 `Realized` 상태 및 `lastQualificationTime` 세그먼트 멤버십 맵에서 공유할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
+
+프로필 데이터 작업에 대한 자습서 및 모범 사례 등 실시간 고객 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md).
 
 ## 소스 {#sources}
 
