@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
+source-git-commit: 6009592d47cf8f3d0d31e919aff0552e370b2063
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1470'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,19 @@ ht-degree: 3%
 
 이 문서에서는 Adobe Experience Platform Web SDK에 대한 릴리스 노트를 다룹니다.
 웹 SDK 태그 확장에 대한 최신 릴리스 노트는 [웹 SDK 태그 확장 릴리스 노트](extension/web-sdk-ext-release-notes.md).
+
+## 버전 2.14.0 - 2023년 1월 25일
+
+**새로운 기능**
+
+* (베타) AJO 표면 및 제안에 대한 지원을 추가했습니다.
+
+**수정 사항 및 향상된 기능**
+
+* Adobe Target VEC 사용자 지정 코드 작업에서 코드가 가 아닌 대체 위치에 삽입되는 문제가 해결되었습니다. [!DNL at.js].
+* 일부 경계 사례에서 Edge Network에 대한 요청에서 &quot;referer&quot; 헤더가 제대로 설정되지 않았던 문제를 수정했습니다.
+* 다음 상황에서 [사용자 에이전트 클라이언트 힌트](fundamentals/user-agent-client-hints.md) 속성을 잘못된 형식으로 설정할 수 있습니다.
+* 다음 상황에서 `placeContext.localTime` 가 스키마와 일치하지 않습니다.
 
 ## 버전 2.13.1 - 2022년 10월 13일
 
