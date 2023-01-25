@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 릴리스 정보
 breadcrumb-title: Platform 릴리스 정보
 user-guide-description: Adobe Experience Platform에 대한 월별 릴리스 정보를 살펴보십시오.
-source-git-commit: 2dfa4f27886f64d20e6483dc31e230436d66521b
+source-git-commit: 08ed02bde056c2bf2f0d3b442fe86a44e4090dd8
 workflow-type: tm+mt
-source-wordcount: '69'
+source-wordcount: '71'
 ht-degree: 94%
 
 ---
@@ -14,6 +14,8 @@ ht-degree: 94%
 # Adobe Experience Platform 릴리스 노트 {#release-notes}
 
 * [현재 플랫폼 릴리스 노트](latest/latest.md)
+* 2023 {#2023}
+   * [2023년 1월](2023/january-2023.md)
 * 2022 {#2022}
    * [2022년 11월](2022/november-2022.md)
    * [2022년 10월](2022/october-2022.md)
