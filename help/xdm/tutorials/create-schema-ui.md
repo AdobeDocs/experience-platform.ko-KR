@@ -5,9 +5,9 @@ title: 스키마 편집기를 사용하여 스키마 만들기
 type: Tutorial
 description: 이 튜토리얼에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: 9f39130c8d470b236764993f7ebca9c1cdc748bb
 workflow-type: tm+mt
-source-wordcount: '3924'
+source-wordcount: '3947'
 ht-degree: 0%
 
 ---
@@ -212,7 +212,7 @@ Adobe Experience Platform 사용자 인터페이스를 통해 사용자를 만�
 | --- | --- |
 | [!UICONTROL 필수 여부] | 필드가 데이터 처리에 필수임을 나타냅니다. 이 필드를 포함하지 않는 이 스키마를 기반으로 데이터 세트에 업로드된 모든 데이터는 수집 시 실패합니다. |
 | [!UICONTROL 어레이] | 필드에 각각 데이터 유형이 지정된 값의 배열이 포함되어 있음을 나타냅니다. 예를 들어 데이터 유형이 &quot;인 필드에서 이 제약 조건 사용[!UICONTROL 문자열]&quot; 필드에 문자열 배열이 포함되도록 지정합니다. |
-| [!UICONTROL 열거형 및 제안된 값] | 열거형은 이 필드가 가능한 값의 열거된 목록에서 값 중 하나를 포함해야 함을 나타냅니다. 또는 이 옵션을 사용하여 해당 값으로 필드를 제한하지 않고 문자열 필드에 대해 제안된 값 목록을 제공할 수도 있습니다. |
+| [!UICONTROL 열거형 및 제안된 값] | 열거형은 이 필드가 가능한 값의 열거된 목록에서 값 중 하나를 포함해야 함을 나타냅니다. 또는 이 옵션을 사용하여 해당 값으로 필드를 제한하지 않고 문자열 필드에 대해 제안된 값 목록을 제공할 수도 있습니다. 다음 안내서를 참조하십시오. [열거형 및 제안 값 정의](../ui/fields/enum.md) 를 참조하십시오. |
 | [!UICONTROL 신원] | 이 필드가 ID 필드임을 나타냅니다. ID 필드에 대한 자세한 정보가 제공됩니다 [이 자습서의 후반부](#identity-field). |
 | [!UICONTROL 관계] | 스키마 관계는 결합 스키마 및 [!DNL Real-Time Customer Profile]이는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다음 [!UICONTROL 관계] 제약 조건은 이 필드가 다른 클래스를 기반으로 한 스키마의 기본 ID를 참조하며 두 스키마 간의 관계를 의미합니다. 다음에서 자습서를 참조하십시오. [관계 정의](./relationship-ui.md) 추가 정보. |
 

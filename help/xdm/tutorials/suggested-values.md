@@ -2,10 +2,10 @@
 title: API에서 추천 값 관리
 description: 스키마 레지스트리 API의 문자열 필드에 제안된 값을 추가하는 방법을 알아봅니다.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 2f916ea4b05ca67c2b9e603512d732a2a3f7a3b2
+source-git-commit: b1ef2de1e6f9c6168a5ee2a62b55812123783a3a
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 0%
+source-wordcount: '942'
+ht-degree: 1%
 
 ---
 
@@ -69,11 +69,11 @@ API에서 **enum** 필드는 `enum` 배열, `meta:enum` 객체에서는 해당 �
 
 문자열에 `enum` 제약 조건을 정의하는 배열 `meta:enum` 새 값을 포함하도록 속성을 확장할 수 있습니다.
 
-<!-- ## Manage suggested values for standard fields
+## 표준 필드에 대해 제안된 값 관리
 
-For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
+기존 표준 필드의 경우 다음을 수행할 수 있습니다 [추천 값 추가](#add-suggested-standard) 또는 [추천 값 비활성화](#disable-suggested-standard).
 
-## 표준 필드에 제안된 값 추가 {#add-suggested-standard}
+### 표준 필드에 제안된 값 추가 {#add-suggested-standard}
 
 확장 `meta:enum` 표준 문자열 필드의 경우 [친숙한 이름 설명자](../api/descriptors.md#friendly-name) 참조하십시오.
 
@@ -151,19 +151,25 @@ curl -X POST \
 >}
 >```
 
-<!-- ### Remove suggested values {#remove-suggested-standard}
+### 표준 필드에 대해 제안된 값 비활성화 {#disable-suggested-standard}
 
-If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
+표준 문자열 필드에 `meta:enum`, 세그먼테이션에서 보지 않으려는 모든 값을 비활성화할 수 있습니다. 이 작업은 을(를) 만들어 [친숙한 이름 설명자](../api/descriptors.md#friendly-name) 를 포함하는 스키마용 `xdm:excludeMetaEnum` 속성을 사용합니다.
 
-**API format**
+>[!IMPORTANT]
+>
+>해당 열거형 제약 조건이 없는 표준 필드에 대해 제안된 값만 비활성화할 수 있습니다. 즉, 필드에 `enum` 배열 `meta:excludeMetaEnum` 효과가 없습니다.
+>
+>의 섹션을 참조하십시오. [열거형 및 제안된 값의 진행 규칙](../ui/fields/enum.md#evolution) 기존 필드 편집 제한에 대한 자세한 내용은
+
+**API 형식**
 
 ```http
 POST /tenant/descriptors
 ```
 
-**Request**
+**요청**
 
-The following request removes the suggested values "[!DNL Web Form Filled Out]" and "[!DNL Media ping]" for `eventType` in a schema based on the [XDM ExperienceEvent class](../classes/experienceevent.md).
+다음 요청은 추천 값 &quot;을 비활성화합니다.[!DNL Web Form Filled Out]&quot; 및 &quot;[!DNL Media ping]&quot; `eventType` 를 기반으로 하는 스키마에서 [XDM ExperienceEvent 클래스](../classes/experienceevent.md).
 
 ```shell
 curl -X POST \
@@ -185,19 +191,19 @@ curl -X POST \
       }'
 ```
 
-| Property | Description |
+| 속성 | 설명 |
 | --- | --- |
-| `@type` | The type of descriptor being defined. For a friendly name descriptor, this value must be set to `xdm:alternateDisplayInfo`. |
-| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
-| `xdm:sourceVersion` | The major version of the source schema. |
-| `xdm:sourceProperty` | The path to the specific property whose suggested values you want to manage. The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
-| `meta:excludeMetaEnum` | An object that describes the suggested values that should be excluded for the field in segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |
+| `@type` | 정의되는 설명자의 유형입니다. 친숙한 이름 설명자의 경우 이 값을 `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | 다음 `$id` 설명자가 정의되는 스키마의 URI입니다. |
+| `xdm:sourceVersion` | 소스 스키마의 주 버전입니다. |
+| `xdm:sourceProperty` | 제안된 값을 관리할 특정 속성의 경로입니다. 경로는 슬래시(`/`)로 끝나는 것이 아닙니다. 포함하지 않음 `properties` 경로(예: `/personalEmail/address` 대신 `/properties/personalEmail/properties/address`). |
+| `meta:excludeMetaEnum` | 세그먼테이션의 필드에 대해 제외해야 하는 제안된 값을 설명하는 개체입니다. 각 항목의 키와 값은 원본에 포함된 키와 일치해야 합니다 `meta:enum` 을 입력합니다. |
 
-{style="table-layout:auto"}
+{style=&quot;table-layout:auto&quot;}
 
-**Response**
+**응답**
 
-A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor. The suggested values included under `xdm:excludeMetaEnum` will now be hidden from the Segmentation UI.
+성공한 응답은 HTTP 상태 201(생성됨) 및 새로 만든 설명자의 세부 정보를 반환합니다. 에 포함된 추천 값 `xdm:excludeMetaEnum` 이제 세그먼테이션 UI에서 숨겨집니다.
 
 ```json
 {
@@ -211,7 +217,7 @@ A successful response returns HTTP status 201 (Created) and the details of the n
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-``` -->
+```
 
 ## 사용자 지정 필드에 대한 권장 값 관리 {#suggested-custom}
 
