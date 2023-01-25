@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Service UI 안내서
 description: Adobe Experience Platform 쿼리 서비스는 쿼리를 작성 및 실행하고, 이전에 실행된 쿼리를 보고, IMS 조직 내의 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
+source-git-commit: 5a027200efc22051cca6d4c041e857b2abc7d96f
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1135'
 ht-degree: 2%
 
 ---
@@ -63,7 +63,7 @@ UI를 통해 쿼리를 예약하는 방법에 대해 알아보려면 [예약된 
 
 자세한 내용은 [쿼리 템플릿](./query-templates.md) 플랫폼 UI의 템플릿에 대한 자세한 내용은 설명서 를 참조하십시오.
 
-## 로그
+## 로그 {#log}
 
 다음 **[!UICONTROL 로그]** 탭에는 이전에 실행된 쿼리 목록이 제공됩니다. 기본적으로 로그에는 쿼리를 역동기식으로 나열합니다.
 
@@ -81,6 +81,8 @@ UI를 통해 쿼리를 예약하는 방법에 대해 알아보려면 [예약된 
 
 >!![Note]
 연필 아이콘(![연필 아이콘.](../images/ui/overview/edit-icon.png))을 클릭합니다. [!DNL Query Editor]. 편리한 편집을 위해 쿼리가 미리 채워집니다.
+
+자세한 내용은 [쿼리 로그 설명서](./query-logs.md) 쿼리 이벤트에 의해 자동으로 생성된 로그 파일에 대한 자세한 정보를 제공합니다.
 
 ## 자격 증명
 
