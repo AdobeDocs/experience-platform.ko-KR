@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그먼트 멤버십 세부 정보 스키마 필드 그룹
 description: 이 문서에서는 세그먼트 멤버십 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: fda47171cde3f58f48ee721357923017918a7d4e
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '470'
 ht-degree: 2%
 
 ---
@@ -75,11 +75,15 @@ ht-degree: 2%
 | --- | --- |
 | `xdm:version` | 이 프로필에서 자격이 있는 세그먼트의 버전입니다. |
 | `xdm:lastQualificationTime` | 이 프로필이 세그먼트에 대해 자격이 있는 마지막 시간의 타임스탬프입니다. |
-| `xdm:validUntil` | 세그먼트 멤버십이 더 이상 유효하다고 가정하지 않아야 하는 시간의 타임스탬프입니다. |
+| `xdm:validUntil` | 세그먼트 멤버십이 더 이상 유효하다고 가정하지 않아야 하는 시간의 타임스탬프입니다. 외부 대상의 경우, 이 필드가 설정되지 않은 경우 세그먼트 멤버십은 `lastQualificationTime`. |
 | `xdm:status` | 세그먼트 멤버십이 현재 요청의 일부로 실현되었는지 여부를 나타내는 문자열 필드입니다. 다음 값이 허용됩니다. <ul><li>`existing`: 프로필은 요청 전에 이미 세그먼트의 일부였으며 계속해서 멤버십을 유지합니다.</li><li>`realized`: 프로필이 현재 요청의 일부로 세그먼트를 입력하고 있습니다.</li><li>`exited`: 프로필이 현재 요청의 일부로 세그먼트를 종료하고 있습니다.</li></ul> |
 | `xdm:payload` | 일부 세그먼트 멤버십에는 멤버십과 직접 관련된 추가 값을 설명하는 페이로드가 포함됩니다. 각 멤버십에 대해 주어진 유형의 페이로드를 하나만 제공할 수 있습니다. `xdm:payloadType` 페이로드 유형(`boolean`, `number`, `propensity`, 또는 `string`)이고, 동위 속성은 페이로드 유형에 대한 값을 제공합니다. |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>에 있는 모든 세그먼트 멤버십입니다 `exited` 상태를 기준으로 30일 이상 `lastQualificationTime`은 삭제 대상이 됩니다.
 
 필드 그룹에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
 

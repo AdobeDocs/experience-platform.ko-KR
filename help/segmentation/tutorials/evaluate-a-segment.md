@@ -5,9 +5,9 @@ title: 세그먼트 결과 평가 및 액세스
 type: Tutorial
 description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트를 평가하고 세그먼트 결과에 액세스하는 방법을 알려면 이 자습서를 따르십시오.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 378f9260703d388976054431a76ac285724a9ae3
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -130,6 +130,10 @@ ht-degree: 0%
 | -------- | ----------- |
 | `lastQualificationTime` | 세그먼트 멤버십 검증이 이루어지고 프로필이 세그먼트에 들어오거나 종료한 타임스탬프. |
 | `status` | 현재 요청의 일부로서 세그먼트 기여도 상태입니다. 다음 알려진 값 중 하나와 같아야 합니다. <ul><li>`existing`: 엔티티는 세그먼트에 계속 있습니다.</li><li>`realized`: 엔티티가 세그먼트를 입력하고 있습니다.</li><li>`exited`: 엔티티가 세그먼트를 종료하고 있습니다.</li></ul> |
+
+>[!NOTE]
+>
+>에 있는 모든 세그먼트 멤버십입니다 `exited` 상태를 기준으로 30일 이상 `lastQualificationTime`은 삭제 대상이 됩니다.
 
 ## 세그먼트 결과 액세스
 

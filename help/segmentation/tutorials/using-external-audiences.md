@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 외부 대상 가져오기 및 사용
 description: Adobe Experience Platform에서 외부 대상을 사용하는 방법을 배우려면 이 자습서를 따르십시오.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -257,3 +257,7 @@ ID 네임스페이스를 만든 후 만들 세그먼트에 대한 새 스키마�
 | `xdmEntity._id` | 데이터 집합 내의 레코드를 고유하게 식별하는 데 사용되는 적절한 ID입니다. |
 | `{TENANT_NAME}.identities` | 이 섹션은 사용자 지정 ID 필드 그룹을 이전에 가져온 사용자와 연결하는 데 사용됩니다. |
 | `segmentMembership.{IDENTITY_NAMESPACE}` | 이전에 만든 사용자 지정 ID 네임스페이스의 레이블입니다. 따라서 예를 들어 ID 네임스페이스를 &quot;externalAudience&quot;라고 호출하면 배열의 키로 이 네임스페이스를 사용합니다. |
+
+>[!NOTE]
+>
+>기본적으로 외부 대상 멤버십은 30일 동안만 유지됩니다. 30일 이상 보관하려면 `validUntil` 대상 데이터를 수집하는 동안 필드를 작성합니다. 이 필드에 대한 자세한 내용은 [세그먼트 멤버십 세부 정보 스키마 필드 그룹](../../xdm/field-groups/profile/segmentation.md).
