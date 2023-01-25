@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google 클라우드 스토리지 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Google Cloud 저장소를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
+source-git-commit: ae22e423119bf378a068349d481f0717a75171bb
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ Platform에 연결하려면 먼저 상호 운용성을 설정해야 합니다 [!
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
 새로 생성된 액세스 키 ID와 비밀 액세스 키를 사용하여 [!DNL Google Cloud Storage] Platform에 계정을 설정합니다.
+
+자세한 내용은 다음 안내서를 참조하십시오. [서비스 계정 키 생성 및 관리](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) 에서 [!DNL Google Cloud] 설명서.
 
 ## 파일 및 디렉터리에 대한 이름 지정 제한
 

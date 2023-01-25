@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Google 클라우드 스토리지;google 클라우드 스토리지;google;Google
-solution: Experience Platform
 title: Flow Service API를 사용하여 Google Cloud Storage Base 연결 만들기
-type: Tutorial
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Google Cloud Storage 계정에 연결하는 방법을 알아봅니다.
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 3636b785d82fa2e49f76825650e6159be119f8b4
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '560'
 ht-degree: 1%
 
 ---
@@ -35,6 +32,8 @@ ht-degree: 1%
 | ---------- | ----------- |
 | `accessKeyId` | 인증을 위해 사용되는 61자의 영숫자 문자열입니다 [!DNL Google Cloud Storage] Platform에 계정을 설정합니다. |
 | `secretAccessKey` | 인증을 위해 사용되는 40자의 기본-64로 인코딩된 문자열입니다 [!DNL Google Cloud Storage] Platform에 계정을 설정합니다. |
+| `bucketName` | 사용자 이름 [!DNL Google Cloud Storage] 버킷. 클라우드 저장소의 특정 하위 폴더에 대한 액세스 권한을 제공하려면 버킷 이름을 지정해야 합니다. |
+| `folderPath` | 액세스를 제공할 폴더의 경로입니다. |
 
 이러한 값에 대한 자세한 내용은 [Google 클라우드 스토리지 HMAC 키](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) 안내서. 고유한 액세스 키 ID 및 비밀 액세스 키를 생성하는 방법에 대한 단계는 [[!DNL Google Cloud Storage] 개요](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
@@ -48,6 +47,10 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 기본 연결 ID를 만들려면 `/connections` 제공하는 동안 엔드포인트 [!DNL Google Cloud Storage] 요청 매개 변수의 일부로 인증 자격 증명.
 
+>[!TIP]
+>
+>이 단계에서는 버킷 이름과 하위 폴더에 대한 경로를 정의하여 계정에 액세스할 하위 폴더를 지정할 수도 있습니다.
+
 **API 형식**
 
 ```http
@@ -60,33 +63,37 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Google Cloud Storage connection",
-        "description": "Connector for Google Cloud Storage",
-        "auth": {
-            "specName": "Basic Authentication for google-cloud",
-            "params": {
-                "accessKeyId": "accessKeyId",
-                "secretAccessKey": "secretAccessKey"
-            }
-        },
-        "connectionSpec": {
-            "id": "32e8f412-cdf7-464c-9885-78184cb113fd",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Google Cloud Storage connection",
+      "description": "Connector for Google Cloud Storage",
+      "auth": {
+          "specName": "Basic Authentication for google-cloud",
+          "params": {
+              "accessKeyId": "accessKeyId",
+              "secretAccessKey": "secretAccessKey",
+              "bucketName": "acme-google-cloud-bucket",
+              "folderPath": "/acme/customers/sales"
+          }
+      },
+      "connectionSpec": {
+          "id": "32e8f412-cdf7-464c-9885-78184cb113fd",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | 속성 | 설명 |
 | -------- | ----------- |
 | `auth.params.accessKeyId` | 와 연결된 액세스 키 ID [!DNL Google Cloud Storage] 계정이 필요합니다. |
 | `auth.params.secretAccessKey` | 와 연결된 암호 액세스 키 [!DNL Google Cloud Storage] 계정이 필요합니다. |
+| `auth.params.bucketName` | 사용자 이름 [!DNL Google Cloud Storage] 버킷. 클라우드 저장소의 특정 하위 폴더에 대한 액세스를 제공하려면 버킷 이름을 지정해야 합니다. |
+| `auth.params.folderPath` | 액세스를 제공할 폴더의 경로입니다. |
 | `connectionSpec.id` | 다음 [!DNL Google Cloud Storage] 연결 사양 ID: `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **응답**
