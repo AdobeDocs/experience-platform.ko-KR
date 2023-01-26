@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 준비 매핑 함수
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 4a033d782c2cc4a42edacf0abc146bd128fdb07c
+source-git-commit: 9dd05980bdb360fba23b01f2b3e3ecc5d8d3e9e0
 workflow-type: tm+mt
-source-wordcount: '4398'
+source-wordcount: '4392'
 ht-degree: 4%
 
 ---
@@ -139,7 +139,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | is_empty | 개체가 비어 있는지 여부를 확인합니다. | <ul><li>입력: **필수 여부** 확인하려는 개체가 비어 있습니다.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
-| array_to_object | 개체 목록을 만듭니다. | <ul><li>입력: **필수 여부** 키 및 배열 쌍의 그룹입니다.</li></ul> | array_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\|'), 'price', [22.5,14.35])` | [{ &quot;sku&quot;: &quot;id1&quot;, &quot;price&quot;: 22.5 }, { &quot;sku&quot;: &quot;id2&quot;, &quot;price&quot;: 14.35 }] |
+| array_to_object | 개체 목록을 만듭니다. | <ul><li>입력: **필수 여부** 키 및 배열 쌍의 그룹입니다.</li></ul> | array_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
 | to_object | 제공된 플랫 키/값 쌍을 기반으로 개체를 만듭니다. | <ul><li>입력: **필수 여부** 키/값 쌍의 플랫 목록입니다.</li></ul> | to_object(INPUT) | to_&#x200B;object(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | 입력 문자열에서 개체를 만듭니다. | <ul><li>문자열: **필수 여부** 개체를 만들기 위해 구문 분석되는 문자열입니다.</li><li>VALUE_DELIMITER: *선택 사항입니다* 값과 필드를 구분하는 구분 기호입니다. 기본 구분 기호는 다음과 같습니다 `:`.</li><li>FIELD_DELIMITER: *선택 사항입니다* 필드 값 쌍을 구분하는 구분 기호입니다. 기본 구분 기호는 다음과 같습니다 `,`.</li></ul> | str_to_&#x200B;object(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **참고**: 를 사용할 수 있습니다 `get()` 함수 및 `str_to_object()` 를 입력하여 문자열의 키에 대한 값을 검색합니다. | <ul><li>예 #1: str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>예 #2: str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>예 #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>예 #2: &quot;John&quot;</li></ul> |
 | contains_key | 개체가 소스 데이터 내에 있는지 확인합니다. **참고:** 이 함수는 사용되지 않는 `is_set()` 함수 위에 있어야 합니다. | <ul><li>입력: **필수 여부** 소스 데이터 내에 있는 경우 확인할 경로입니다.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |
