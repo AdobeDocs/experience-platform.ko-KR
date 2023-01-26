@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Analytics 소스 커넥터;분석;Analytics;AAID;
 title: 보고서 세트 데이터용 Adobe Analytics 소스 커넥터
 description: 이 문서에서는 Analytics에 대한 개요를 제공하며 Analytics 데이터의 사용 사례를 설명합니다.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 486f5bdd834808c6262f41c0b0187721fc9b0799
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1040'
 ht-degree: 7%
 
 ---
@@ -20,7 +19,7 @@ Adobe Experience Platform에서는 Analytics 소스 커넥터를 통해 Adobe An
 
 [!DNL Analytics] 는 고객에 대해 자세히 알아보고 고객이 웹 자산과 상호 작용하는 방법, 디지털 마케팅 비용이 효과적인 위치를 확인하고 개선 영역을 식별하는 데 도움이 되는 강력한 엔진입니다. [!DNL Analytics] 매년 수 많은 웹 트랜잭션을 처리하고 [!DNL Analytics] 소스 커넥터를 사용하면 다양한 행동 데이터를 손쉽게 탭하고 [!DNL Real-Time Customer Profile] 몇 분 안에
 
-![](./images/analytics-data-experience-platform.png)
+![Adobe Analytics을 포함하여 다양한 Adobe 애플리케이션의 데이터 여정을 보여주는 그래픽](./images/analytics-data-experience-platform.png)
 
 높은 수준에서 [!DNL Analytics] 전 세계의 다양한 디지털 채널 및 여러 데이터 센터에서 데이터를 수집합니다. 데이터가 수집되면 들어오는 데이터를 형성하기 위해 방문자 식별, 세그먼테이션 및 변환 아키텍처(VISTA) 규칙 및 처리 규칙이 적용됩니다. 원시 데이터가 이러한 경량 처리를 거친 후에는 다음을 소비할 준비가 된 것으로 간주됩니다 [!DNL Real-Time Customer Profile]. 위에서 언급한 것과 동일한 프로세스에서 동일한 처리된 데이터는 마이크로 일괄 처리되어 다음을 소비하기 위해 플랫폼 데이터 세트에 수집됩니다 [!DNL Data Science Workspace], [!DNL Query Service], 및 기타 데이터 검색 애플리케이션
 
@@ -35,6 +34,10 @@ XDM 표준을 준수하면 데이터를 균일하게 통합할 수 있으므로 
 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../../xdm/home.md).
 
 ## Adobe Analytics에서 XDM으로 필드를 매핑하려면 어떻게 해야 합니까?
+
+>[!IMPORTANT]
+>
+>데이터 준비 변환은 전체 데이터 플로우에 지연을 추가할 수 있습니다. 추가된 추가적인 지연은 변환 로직의 복잡성에 따라 달라집니다.
 
 가져오도록 소스 연결이 설정된 경우 [!DNL Analytics] 플랫폼 사용자 인터페이스를 사용하여 데이터를 Experience Platform에 매핑하고 데이터 필드를 자동으로 [!DNL Real-Time Customer Profile] 몇 분 안에 소스 연결을 만드는 방법에 대한 지침은 [!DNL Analytics] 플랫폼 UI를 사용하여 다음을 참조하십시오. [Analytics 소스 커넥터 자습서](../../tutorials/ui/create/adobe-applications/analytics.md).
 
@@ -79,8 +82,8 @@ Analytics 채우기 작업은 기본적으로 13개월로 채워집니다. 위�
 
 이들 필드는 ID로 표시되지 않습니다. 대신 동일한 ID가 XDM의 `identityMap` 키 값 쌍으로:
 
-* `{ “key”: “AAID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
-* `{ “key”: “ECID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
-* `{ “key”: “AACUSTOMID”, “value”: [ { “id”: “<identity>”, “primary”: false } ] }`
+* `{ "key": "AAID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
+* `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
+* `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
 ID 맵에서 ECID가 있으면 이벤트의 기본 ID로 표시됩니다. 이 경우 AAID는 [ID 서비스 유예 기간](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). 그렇지 않으면 AAID가 이벤트의 기본 ID로 표시됩니다. AACUSTOMID는 이벤트의 기본 ID로 표시되지 않습니다. 그러나 AACUSTOMID가 있는 경우 작업의 Experience Cloud 순서 때문에 AAID는 AACUSTOMID를 기반으로 합니다.
