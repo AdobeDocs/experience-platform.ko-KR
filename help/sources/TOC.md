@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: 79773c35cf70bc967b29a8bcca729106bd7dd4f0
+source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '875'
 ht-degree: 12%
 
 ---
@@ -206,6 +206,7 @@ ht-degree: 12%
    - [실패한 데이터 흐름 실행 다시 시도](tutorials/api/retry-flows.md)
    - [계정 삭제](tutorials/api/delete.md)
    - [데이터 흐름 삭제](tutorials/api/delete-dataflows.md)
+   - [암호화된 데이터 수집](tutorials/api/encrypt-data.md)
 - UI 자습서 {#ui-tutorials}
    - 소스 연결 만들기 {#create}
       - Adobe 애플리케이션 {#adobe-applications}
