@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK Extension 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 47e92e4e7475a23c5c65085db57dfc7a2822b8b6
+source-git-commit: 5ec1ede39489ce48fc20739030884ec3811a8426
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 40%
@@ -14,7 +14,7 @@ ht-degree: 40%
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 노트를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## 버전 2.15.0 - 2023년 1월 25일
+## 버전 2.15.1 - 2023년 1월 26일
 
 * 데이터 세트에 액세스할 수 없는 사용자가 확장 구성을 편집할 수 없는 문제가 수정되었습니다.
 * 에서 서피스에 대한 지원을 추가했습니다. `sendEvent` 작업.
