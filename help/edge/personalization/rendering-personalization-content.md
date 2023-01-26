@@ -3,20 +3,20 @@ title: Adobe Experience Platform Web SDK를 사용하여 개인화된 컨텐츠 
 description: Adobe Experience Platform Web SDK를 사용하여 개인화된 컨텐츠를 렌더링하는 방법을 알아봅니다.
 keywords: 개인화;renderDecisions;sendEvent;decisions;proposition;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
+source-git-commit: c75a8bdeaba67259b5f4b4ce025d5e128d763040
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 1%
+source-wordcount: '962'
+ht-degree: 2%
 
 ---
 
 # 개인화된 콘텐츠 렌더링
 
-Adobe Experience Platform Web SDK는 다음을 포함한 Adobe 개인화 솔루션에서 개인화된 컨텐츠 검색을 지원합니다 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 및 [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko).
+Adobe Experience Platform Web SDK는 다음을 포함한 Adobe 개인화 솔루션에서 개인화된 컨텐츠 검색을 지원합니다 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html), [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=ko).
 
 또한 웹 SDK는 다음과 같은 Adobe Experience Platform 개인화 대상을 통한 동일한 페이지 및 다음 페이지 개인화 기능을 지원합니다 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 그리고 [사용자 지정 개인화 연결](../../destinations/catalog/personalization/custom-personalization.md). 동일한 페이지 및 다음 페이지 개인화에 대한 Experience Platform을 구성하는 방법에 대해 알아보려면 [전용 안내서](../../destinations/ui/configure-personalization-destinations.md).
 
-Adobe Target 내에서 만들어진 컨텐츠 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 는 SDK에서 자동으로 검색 및 렌더링할 수 있습니다. Adobe Target 내에서 만들어진 컨텐츠 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 또는 SDK에서 자동으로 Offer decisioning을 렌더링할 수 없습니다. 대신 SDK를 사용하여 이 콘텐츠를 요청한 다음, 직접 콘텐츠를 수동으로 렌더링해야 합니다.
+Adobe Target 내에서 만들어진 컨텐츠 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 및 Adobe Journey Optimizer [웹 캠페인 UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 는 SDK에서 자동으로 검색 및 렌더링할 수 있습니다. Adobe Target 내에서 만들어진 컨텐츠 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 또는 SDK에서 자동으로 Offer decisioning을 렌더링할 수 없습니다. 대신 SDK를 사용하여 이 콘텐츠를 요청한 다음, 직접 콘텐츠를 수동으로 렌더링해야 합니다.
 
 ## 컨텐츠 자동 렌더링
 
@@ -107,7 +107,7 @@ alloy("sendEvent", {
 
 대신 를 설정했다면 `renderDecisions` 옵션 `true` 이벤트를 전송할 때 SDK는 이전에 설명한 대로 자동 렌더링에 적합한 모든 제안을 렌더링하려고 했습니다. 따라서 각각의 제안 객체에는 `renderAttempted` 속성 설정 `true`. 이 경우 이러한 제안을 수동으로 렌더링할 필요가 없습니다.
 
-지금까지 자동 렌더링이 가능한 개인화 콘텐츠(즉, Adobe Target의 시각적 경험 작성기에서 만든 모든 콘텐츠)에만 대해 논의했습니다. 개인화 콘텐츠를 검색하려면 _not_ 자동 렌더링에 적합한 경우 `decisionScopes` 옵션을 선택합니다. 범위는 서버에서 검색할 특정 제안을 식별하는 문자열입니다.
+지금까지 자동 렌더링이 가능한 개인화 콘텐츠(즉, Adobe Target의 시각적 경험 작성기 또는 Adobe Journey Optimizer의 웹 캠페인 UI에서 만든 모든 콘텐츠)에 대해서만 논의했습니다. 개인화 콘텐츠를 검색하려면 _not_ 자동 렌더링에 적합한 경우 `decisionScopes` 옵션을 선택합니다. 범위는 서버에서 검색할 특정 제안을 식별하는 문자열입니다.
 
 다음은 한 예입니다.
 
@@ -303,7 +303,7 @@ SDK는 [플리커 관리](../personalization/manage-flicker.md) 개인화 프로
 
 >[!IMPORTANT]
 >
->에 대한 `__view__` 범위가 페이지 로드 시 렌더링되고, `renderAttempted` 플래그가 로 설정됩니다. `true`. 다음 `applyPropositions` 명령은 다시 렌더링되지 않습니다. `__view__` 범위 제안 `renderAttempted: true` 플래그.
+>에 대한 `__view__` 페이지 로드 시 범위(또는 웹 서피스)가 렌더링되었습니다. `renderAttempted` 플래그가 로 설정됩니다. `true`. 다음 `applyPropositions` 명령은 다시 렌더링되지 않습니다. `__view__` 범위(또는 웹 서피스) proposition이 `renderAttempted: true` 플래그.
 
 ### 사용 사례 1: 단일 페이지 애플리케이션 보기 제안 다시 렌더링
 
