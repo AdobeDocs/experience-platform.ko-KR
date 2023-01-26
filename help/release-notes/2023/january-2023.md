@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2023년 1월
 description: Adobe Experience Platform에 대한 2023년 1월 릴리스 노트입니다.
-source-git-commit: fbdd3a3270e8aad95cb12281bcd4623a88b13f47
+source-git-commit: 08ad27303b88826fd7e0fcc0a8b3d498de58c260
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '1848'
 ht-degree: 5%
 
 ---
@@ -74,10 +74,6 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
     <tr>
         <td><b>수정 또는 개선 사항</b></td>
         <td><b>설명</b></td>
-    </tr>
-    <tr>
-        <td>필수 매핑 및 중복 매핑에 대한 UI 및 API 유효성 검사(PLAT-123316)</td>
-        <td>이제 다음의 경우 UI 및 API에서 유효성 검사가 다음과 같이 적용됩니다 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">매핑 필드</a> 대상 활성화 워크플로우에서:<ul><li><b>필요한 매핑</b>: 대상 개발자가 필수 매핑(예: <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> 대상)으로 지정하는 경우, 데이터를 대상에 활성화할 때 사용자가 이러한 필수 매핑을 추가해야 합니다. </li><li><b>중복 매핑</b>: 활성화 워크플로우의 매핑 단계에서 소스 필드에 중복 값을 추가할 수 있지만 대상 필드는 추가할 수 없습니다. 허용 및 금지된 매핑 조합의 예는 아래 표를 참조하십시오. <br><table><thead><tr><th>허용/금지</th><th>소스 필드</th><th>Target 필드</th></tr></thead><tbody><tr><td>허용됨</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>전자 메일 별칭2</li></ul></td></tr><tr><td>금지됨</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
     </tr>
     <tr>
         <td>파일 기반 대상으로 내보내기 동작이 업데이트되었습니다(PLAT-123316).</td>
