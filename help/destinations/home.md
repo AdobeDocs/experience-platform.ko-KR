@@ -3,7 +3,7 @@ keywords: 대상;adobe experience platform;플랫폼;대상 개요;데이터 활
 title: 대상 개요
 description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. Adobe Experience Platform에서 대상 을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 842aaa7104b277cf415d1ed9ee2744a200c07ce8
+source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%
@@ -15,6 +15,13 @@ ht-degree: 1%
 ![대상 개요 배너](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]** 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 ## 대상 및 소스 {#destinations-and-sources}
 
