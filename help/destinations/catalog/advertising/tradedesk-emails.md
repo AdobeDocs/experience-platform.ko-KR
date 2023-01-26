@@ -1,8 +1,9 @@
 ---
 title: (베타) 트레이드데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타겟팅 및 억제를 위해 프로필을 Trade Desk 계정에 활성화합니다.
+last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 271a9ad9848db855372a4ce5346f97cf48400901
+source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 1%

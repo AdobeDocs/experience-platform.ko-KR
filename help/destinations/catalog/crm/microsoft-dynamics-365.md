@@ -2,13 +2,14 @@
 keywords: crm;CRM;crm 대상;Microsoft Dynamics 365;Microsoft Dynamics 365 crm 대상
 title: Microsoft Dynamics 365 연결
 description: Microsoft Dynamics 365 대상을 사용하면 계정 데이터를 내보내고 Microsoft Dynamics 365 내에서 활성화하여 비즈니스 요구 사항을 충족할 수 있습니다.
-source-git-commit: 12af2ee40d355119104d741630654d2847df6cc5
+last-substantial-update: 2022-11-08T00:00:00Z
+exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
+source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
 source-wordcount: '1790'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Microsoft Dynamics 365] 연결
 

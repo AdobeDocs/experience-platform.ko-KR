@@ -1,7 +1,8 @@
 ---
 title: (베타) Experience Cloud 대상
 description: Experience Platform에서 다양한 Experience Platform 솔루션으로 세그먼트를 공유하는 방법을 알아봅니다.
-source-git-commit: 75eb72a8325c92961d9fe26f7e86d15fecf97043
+last-substantial-update: 2023-01-25T00:00:00Z
+source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 2%

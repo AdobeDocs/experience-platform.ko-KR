@@ -2,13 +2,14 @@
 keywords: 모바일;모바일 참여 대상;LINE;LINE 모바일 참여 대상
 title: LINE 연결
 description: LINE 대상을 사용하면 프로필을 플랫폼 세그먼트에 추가하고 연결된 사용자에게 개인화된 경험을 전달할 수 있습니다.
-source-git-commit: b15ad6339cb342d754e3a78e0d68b232a94a835e
+last-substantial-update: 2022-11-08T00:00:00Z
+exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
+source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL LINE] 연결
 
