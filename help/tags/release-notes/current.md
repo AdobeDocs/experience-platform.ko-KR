@@ -2,14 +2,23 @@
 title: 태그 및 이벤트 전달을 위한 릴리스 노트
 description: Adobe Experience Platform의 태그 및 이벤트 전달에 대한 최신 릴리스 정보입니다.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
+source-git-commit: 18599d223733cb151c7517abb77b1745d2e634b7
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '497'
 ht-degree: 5%
 
 ---
 
 # 태그 및 이벤트 전달에 대한 릴리스 노트
+
+## 2022년 1월 25일
+
+* **새 홈 화면**: 데이터 수집 UI의 홈 페이지가 생산성을 간소화하기 위해 유용한 온보딩 정보 및 링크를 포함하도록 업데이트되었습니다. 여기에는 다음 항목이 포함되어 있습니다.
+   1. 시작하는 설명서 및 권장 워크플로우
+   1. 최근 속성, 규칙 및 데이터 요소
+   1. 인기 있는 확장
+   1. 빠른 설치 기능으로 새로운 확장 업데이트
+* **에 데이터 보내기 [!DNL Google Ads] 이벤트 전달 사용**: 이제 를 사용할 수 있습니다 [[!DNL Google Ads Enhanced Conversions] API 확장](../extensions/server/google-ads-enhanced-conversions/overview.md) 이벤트 전달에 대해 다음을 결합합니다. [Google Oauth 2 비밀](../ui/event-forwarding/secrets.md#google-oauth2)으로 데이터를 안전하게 [!DNL Google Ads] 실시간으로
 
 ## 2022년 11월 23일
 
