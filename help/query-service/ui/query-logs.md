@@ -1,14 +1,18 @@
 ---
 title: 쿼리 로그
 description: 쿼리 로그는 쿼리가 실행될 때마다 자동으로 생성되며 UI를 통해 문제 해결에 도움을 줄 수 있습니다. 이 문서에서는 UI의 쿼리 서비스 로그 섹션을 사용하고 탐색하는 방법을 설명합니다.
-source-git-commit: 22deca5f9bcf6bcf97cca01b97fce9d22800b767
+source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
 
 # 쿼리 로그
+
+>[!IMPORTANT]
+>
+>특정 쿼리 로그 기능은 현재 제한된 릴리스에 있으며 모든 고객에게 제공되지 않습니다. UI는 편집 아이콘 없이 약간 다르게 표시될 수 있습니다. 또한 쿼리 이름을 선택하는 프로세스는 쿼리 편집기 대신 로 이동할 수 있습니다 [!UICONTROL 쿼리 로그 세부 정보] 보기.
 
 Adobe Experience Platform은 API와 UI를 모두 통해 발생하는 모든 쿼리 이벤트의 로그를 유지합니다. 이 정보는 [!UICONTROL 로그] 탭.
 
@@ -39,6 +43,10 @@ A [각 로그 테이블 열에 대한 설명](./overview.md#log) 은 쿼리 서�
 로그 세부 정보 패널에서 새 출력 데이터 세트를 선택하고 실행에서 사용된 전체 SQL 쿼리를 보거나 복사할 수 있습니다.
 
 ![행이 선택된 쿼리 로그 작업 공간과 출력 데이터 세트 및 SQL 쿼리가 강조 표시되어 있습니다.](../images/ui/query-log/edit-output-dataset.png)
+
+>[!IMPORTANT]
+>
+>특정 쿼리 로그 기능은 현재 제한된 릴리스에 있으며 모든 고객에게 제공되지 않습니다.
 
 쿼리 템플릿 이름을 [!UICONTROL 이름] 열로 바로 이동할 수 있습니다. [!UICONTROL 쿼리 로그 세부 정보] 보기.
 

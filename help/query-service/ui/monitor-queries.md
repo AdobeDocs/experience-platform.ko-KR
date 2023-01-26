@@ -2,9 +2,9 @@
 title: 예약된 쿼리 모니터링
 description: Query Service UI를 통해 쿼리를 모니터링하는 방법을 알아봅니다.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: d4966eea90884cea8fbb4b72be8d9625d5745d57
+source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1230'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,11 @@ Adobe Experience Platform은 UI를 통해 모든 쿼리 작업의 상태에 대�
 
 ![SQL Copy 아이콘이 강조 표시된 실행 세부 정보 화면.](../images/ui/monitor-queries/copy-sql.png)
 
-### 익명 블록이 있는 쿼리에 대한 세부 정보 실행 {#anonymous-block-queries}
+### (제한된 릴리스) 익명 블록이 있는 쿼리에 대한 세부 정보를 실행합니다. {#anonymous-block-queries}
+
+>[!IMPORTANT]
+>
+>익명 블록 쿼리에 대한 실행 세부 정보를 표시하는 쿼리 모니터링 기능은 현재 제한된 릴리스에 포함되어 있으며 일부 고객은 사용할 수 없습니다.
 
 익명 블록을 사용하여 SQL 문을 구성하는 쿼리는 개별 쿼리로 구분됩니다. 이렇게 하면 각 쿼리 블록에 대한 실행 세부 사항을 개별적으로 검사할 수 있습니다.
 
