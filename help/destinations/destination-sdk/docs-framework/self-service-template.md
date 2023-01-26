@@ -2,9 +2,9 @@
 title: 설명서 셀프 서비스 템플릿 // 대상 이름으로 바꾸기
 description: 이 템플릿을 사용하여 Adobe Experience Platform 카탈로그에서 대상에 대한 공개 설명서를 만듭니다. // 개요 섹션의 단락으로 대체합니다
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 46e8f6cf3e135b31dc508274598f9d76df857c8f
+source-git-commit: 49b3553c3e408d2dfbca491b1df71be1d4aefaae
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1534'
 ht-degree: 1%
 
 ---
@@ -83,6 +83,7 @@ ht-degree: 1%
 ---------|----------|---------|
 | 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | 에서 사용되는 식별자(이름, 전화 번호 또는 기타 식별자)로 세그먼트의 모든 멤버(대상)를 내보내고 있습니다 *대상* 대상. |
 | 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다(예: 전자 메일 주소, 전화 번호, 성)을 선택한 대로 [대상 활성화 워크플로우](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| 내보내기 유형 | **[!UICONTROL 데이터 집합 내보내기]** | 대상 관심사나 자격에 따라 그룹화되거나 구조화되지 않는 원시 데이터 세트를 내보냅니다. |
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상 설정&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 | 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 다운스트림 플랫폼으로 3, 6, 8, 12 또는 24시간 단위로 내보냅니다. 자세한 내용 [배치 파일 기반 대상](/help/destinations/destination-types.md#file-based). |
 
@@ -130,11 +131,13 @@ ht-degree: 1%
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
-*적절한 삭제 - 새 스트리밍 대상을 문서화하는 경우 아래의 첫 번째 단락을 유지합니다. 새 파일 기반 대상을 문서화하는 경우 두 번째 단락을 유지합니다.*
+*적절한 삭제 - 새 스트리밍 대상을 문서화하는 경우 아래의 첫 번째 단락을 유지합니다. 새 파일 기반 대상을 문서화하는 경우 두 번째 단락을 유지합니다. 데이터 세트를 내보내는 대상을 문서화하는 경우 세 번째 단락을 유지합니다.*
 
 읽기 [스트리밍 세그먼트 내보내기 대상으로 프로필 및 세그먼트를 활성화합니다](/help/destinations/ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 
 읽기 [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](/help/destinations/ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
+
+읽기 [(베타) 데이터 세트 내보내기](/help/destinations/ui/export-datasets.md) 을 참조하십시오.
 
 ### 특성 및 ID 매핑 {#map}
 
