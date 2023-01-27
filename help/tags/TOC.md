@@ -5,9 +5,9 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: c2312a65388e8aec7cdeb8daf20fe9de7d1fa4fc
+source-git-commit: e34661f70a3550e579afe5133d85f76b1125e004
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '961'
 ht-degree: 31%
 
 ---
@@ -165,7 +165,7 @@ ht-degree: 31%
       * [Google 전역 사이트 태그(gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
       * [InMoment](https://exchange.adobe.com/apps/ec/100847)
       * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)
-      * [JW 플레이어 분석](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/sdi-toolkit)dobe.com/apps/ec/101523))
+      * [JW 플레이어 분석](https://exchange.adobe.com/apps/ec/101523)
       * [KickFire](https://exchange.adobe.com/apps/ec/101621)
       * [매핑 테이블](https://exchange.adobe.com/apps/ec/103136)
       * [!DNL Marketo Munchkin] {#marketo}
