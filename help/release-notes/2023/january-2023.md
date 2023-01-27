@@ -1,9 +1,7 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2023년 1월
 description: Adobe Experience Platform에 대한 2023년 1월 릴리스 노트입니다.
-hide: true
-hidefromtoc: true
-source-git-commit: f419856a0b75b04463ff020163bc292833fd02fd
+source-git-commit: 4d69d0dbb1dd72279a6999cf2cda94e9fb380572
 workflow-type: tm+mt
 source-wordcount: '1848'
 ht-degree: 5%
