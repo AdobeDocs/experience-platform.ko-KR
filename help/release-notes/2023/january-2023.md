@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2023년 1월
 description: Adobe Experience Platform에 대한 2023년 1월 릴리스 노트입니다.
-source-git-commit: 4d69d0dbb1dd72279a6999cf2cda94e9fb380572
+source-git-commit: 3ea2ac1b048adb14aa93b42e5b23ea70bb995414
 workflow-type: tm+mt
-source-wordcount: '1848'
-ht-degree: 5%
+source-wordcount: '1905'
+ht-degree: 4%
 
 ---
 
@@ -65,6 +65,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 기능 | 설명 |
 | ----------- | ----------- |
+| 스트리밍 대상과의 통합을 위한 유료 미디어 동의 개선 사항 | 개선 사항 [동의 정책 시행](/help/data-governance/enforcement/auto-enforcement.md) on [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations) 유료 미디어 활성화 사용 사례의 경우. 특정 경험에서 동의를 철회한 프로필은 이제 이러한 대상에서 미리 제거됩니다. <br> <b>참고</b>: 이 기능은 **[!UICONTROL 개인 정보 및 보안 차단]**, 및 **[!UICONTROL 의료 보호]**. |
 | 베타 클라우드 저장소 대상 커넥터에 대한 새로운 구분 기호 옵션 | 세 개의 새 구분 기호 옵션(콜론) `:`, 파이프, 세미콜론 `;`) 이제 새로운 베타 클라우드 스토리지 대상에 대해 사용할 수 있습니다. [(베타) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(베타) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(베타) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(베타) 데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(베타) Google 클라우드 스토리지](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(베타) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> 지원되는 항목에 대해 읽기 [파일 서식 옵션](/help/destinations/ui/batch-destinations-file-formatting-options.md) 파일 기반 대상. |
 | 에서 사용할 수 있는 새로운 선택적 매개 변수 [고객 데이터 필드](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) 구성 [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: 사용자 조직에서 설정한 모든 대상 데이터 흐름에서 값이 고유해야 하는 고객 데이터 필드를 만들어야 하는 경우 이 매개 변수를 사용하십시오. <br> 예: **[!UICONTROL 통합 별칭]** 의 필드 [[!UICONTROL 사용자 지정 개인화]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) 대상은 고유해야 합니다. 즉, 이 대상에 대해 두 개의 개별 데이터 흐름이 이 필드에 대해 동일한 값을 가질 수 없습니다. |
 
