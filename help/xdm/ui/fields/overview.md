@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 XDM 필드 정의
 description: Experience Platform 사용자 인터페이스에서 XDM 필드를 정의하는 방법을 알아봅니다.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1407'
 ht-degree: 5%
 
 ---
@@ -44,7 +44,7 @@ UI에서 새 XDM 필드를 정의하려면 먼저 UI 내에서 스키마를 열�
 
 ## 필드의 속성 정의 {#define}
 
-을(를) 선택한 후 **더하기(+)** 아이콘, **[!UICONTROL 새 필드]** 은 고유한 테넌트 ID에 지정된 객체 내에 있는 캔버스에 나타납니다(으로 표시) `_tenantId` 아래 예에서 ). 스키마에 추가된 모든 사용자 지정 필드는 Adobe 제공 클래스 및 필드 그룹에서 다른 필드와의 충돌을 방지하기 위해 자동으로 이 네임스페이스 내에 배치됩니다.
+을(를) 선택한 후 **더하기(+)** 아이콘, **[!UICONTROL 제목 없는 필드]** 자리 표시자가 캔버스에 나타납니다.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -52,8 +52,8 @@ UI에서 새 XDM 필드를 정의하려면 먼저 UI 내에서 스키마를 열�
 
 | 필드 속성 | 설명 |
 | --- | --- |
-| [!UICONTROL 필드 이름] | 필드의 고유한 수사적 이름입니다. 스키마를 저장한 후에는 필드 이름을 변경할 수 없습니다.<br><br>그 이름은 camelCase로 작성하면 이상적이다. 영숫자, 대시 또는 밑줄 문자가 포함될 수 있지만 **그렇지 않음** 밑줄로 시작합니다.<ul><li>**수정**: `fieldName`</li><li>**허용 가능:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**잘못된**: `_fieldName`</li></ul> |
-| [!UICONTROL 표시 이름] | 그 필드의 이름입니다. |
+| [!UICONTROL 필드 이름] | 필드의 고유한 수사적 이름입니다. 스키마를 저장한 후에는 필드 이름을 변경할 수 없습니다. 이 값은 코드 및 기타 다운스트림 애플리케이션에서 필드를 식별하고 참조하는 데 사용됩니다<br><br>그 이름은 camelCase로 작성하면 이상적이다. 영숫자, 대시 또는 밑줄 문자가 포함될 수 있지만 **그렇지 않음** 밑줄로 시작합니다.<ul><li>**수정**: `fieldName`</li><li>**허용 가능:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**잘못된**: `_fieldName`</li></ul> |
+| [!UICONTROL 표시 이름] | 필드의 표시 이름입니다. 스키마 편집기 캔버스 내의 필드를 나타내는 데 사용할 이름입니다. |
 | [!UICONTROL 유형] | 필드에 포함할 데이터 유형입니다. 이 드롭다운 메뉴에서 다음 중 하나를 선택할 수 있습니다 [표준 스칼라 유형](../../schema/field-constraints.md) XDM에서 지원하거나 다중 필드 중 하나에서 지원됩니다. [데이터 유형](../resources/data-types.md) 에 대해 이전에 [!DNL Schema Registry].<br><br>선택할 수도 있습니다 **[!UICONTROL 고급 유형 검색]** 기존 데이터 유형을 검색 및 필터링하고 원하는 유형을 쉽게 찾을 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -70,7 +70,7 @@ UI에서 새 XDM 필드를 정의하려면 먼저 UI 내에서 스키마를 열�
 
 ![](../../images/ui/fields/overview/field-details.png)
 
-캔버스가 업데이트되어 필드의 이름과 유형을 보여주며, 오른쪽 레일에 이제 다른 속성 외에 필드의 경로가 나열됩니다.
+캔버스는 고유한 테넌트 ID에 지정된 개체 내에 있는 새로 추가된 필드를 표시하도록 업데이트됩니다( `_tenantId` 아래 예에서 ). 스키마에 추가된 모든 사용자 지정 필드는 Adobe 제공 클래스 및 필드 그룹에서 다른 필드와의 충돌을 방지하기 위해 자동으로 이 네임스페이스 내에 배치됩니다. 이제 오른쪽 레일에 필드의 다른 속성 외에 경로가 나열됩니다.
 
 ![](../../images/ui/fields/overview/field-added.png)
 

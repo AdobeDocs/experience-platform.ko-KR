@@ -5,9 +5,9 @@ title: 스키마 편집기를 사용하여 스키마 만들기
 type: Tutorial
 description: 이 튜토리얼에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 9f39130c8d470b236764993f7ebca9c1cdc748bb
+source-git-commit: ecf757e98c3da568173d161aa5d4701881ec2337
 workflow-type: tm+mt
-source-wordcount: '3947'
+source-wordcount: '3985'
 ht-degree: 0%
 
 ---
@@ -177,8 +177,10 @@ Adobe Experience Platform 사용자 인터페이스를 통해 사용자를 만�
 
 각 필드에는 다음 정보가 필요합니다.
 
-* **[!UICONTROL 필드 이름]:** 낙타케이스로 쓰여진 들판의 이름입니다. 예: 충성도 수준
-* **[!UICONTROL 표시 이름]:** 제목 사례에 기록된 필드의 이름입니다. 예: 충성도 수준
+* **[!UICONTROL 필드 이름]:** 필드의 이름, 바람직하게는 camelCase에 기록됨. 공백 문자를 사용할 수 없습니다. 코드 및 기타 다운스트림 애플리케이션에서 필드를 참조하는 데 사용되는 이름입니다.
+   * 예: 충성도 수준
+* **[!UICONTROL 표시 이름]:** 제목 사례에 기록된 필드의 이름입니다. 스키마를 보거나 편집할 때 캔버스에 표시되는 이름입니다.
+   * 예: 충성도 수준
 * **[!UICONTROL 유형]:** 필드의 데이터 유형입니다. 여기에는 기본 스칼라 유형과 [!DNL Schema Registry]. 예: [!UICONTROL 문자열], [!UICONTROL 정수], [!UICONTROL 부울], [!UICONTROL 개인], [!UICONTROL 주소], [!UICONTROL 전화 번호]등
 * **[!UICONTROL 설명]:** 필드에 대한 선택적 설명은 최대 200자와 함께 포함해야 합니다.
 
