@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Query Service를 사용하여 속성 점수 분석
 description: Adobe Experience Platform Query Service를 사용하여 Attribution AI 점수를 분석하는 방법을 알아봅니다.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Adobe Experience Platform UI에서 **[!UICONTROL 데이터 세트]** 을 클릭합니다. 다음 **[!UICONTROL 데이터 세트]** 페이지가 나타납니다. 다음으로, **[!UICONTROL 찾아보기]** 탭하여 Attribution AI 점수에 대한 출력 데이터 세트를 찾습니다.
 
-![인스턴스에 액세스](./images/aai-query/datasets_browse.png)
+![모델 액세스](./images/aai-query/datasets_browse.png)
 
 출력 데이터 세트를 선택합니다. 데이터 집합 활동 페이지가 나타납니다.
 
@@ -305,7 +305,7 @@ Adobe Experience Platform UI에서 **[!UICONTROL 데이터 세트]** 을 클릭�
 
 >[!TIP]
 >
-> 이 예제에서는 를 `{COLUMN_NAME}` 에 `_tenantId` 및 `your_score_output_dataset`. 다음 `COLUMN_NAME` 변수는 Attribution AI 인스턴스를 구성하는 동안 추가된 선택적 전달 열 이름(보고 열) 값을 가져올 수 있습니다. 점수 출력 스키마를 검토하여 `{COLUMN_NAME}` 이 쿼리를 완료하는 데 필요한 값입니다.
+> 이 예제에서는 를 `{COLUMN_NAME}` 에 `_tenantId` 및 `your_score_output_dataset`. 다음 `COLUMN_NAME` 변수는 Attribution AI 모델을 구성하는 동안 추가된 선택적 전달 열 이름(보고 열)의 값을 가져올 수 있습니다. 점수 출력 스키마를 검토하여 `{COLUMN_NAME}` 이 쿼리를 완료하는 데 필요한 값입니다.
 
 ```sql
 SELECT 
