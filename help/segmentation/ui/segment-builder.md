@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더에서는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같이 규칙을 만들고 편집하기 위한 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
-source-wordcount: '3101'
+source-wordcount: '3258'
 ht-degree: 1%
 
 ---
@@ -125,6 +125,22 @@ ht-degree: 1%
 이 열거형 목록에서 값을 선택하면 값에 솔리드 테두리가 표시됩니다. 그러나 `meta:enum` (소프트) 열거형을 사용하여 **not** 열거형 목록 고유한 값을 만드는 경우 이 값이 열거형 목록에 없다는 경고와 함께 점선 테두리가 표시됩니다.
 
 ![열거형 목록에 포함되지 않은 값을 삽입하는 경우 표시되는 경고.](../images/ui/segment-builder/enum-warning.png)
+
+여러 값을 만드는 경우 일괄 업로드를 사용하여 모든 값을 한 번에 추가할 수 있습니다. 을(를) 선택합니다 ![더하기 아이콘](../images/ui/segment-builder/plus-icon.png) 다음을 표시합니다. **[!UICONTROL 값을 벌크로 추가합니다]** 팝오버
+
+![일괄 업로드 팝오버에 액세스하기 위해 선택할 수 있는 단추가 표시되는 더하기 아이콘이 강조 표시됩니다.](../images/ui/segment-builder/add-bulk-values.png)
+
+설정 **[!UICONTROL 값을 벌크로 추가합니다]** 팝오버에서 CSV 또는 TSV 파일을 업로드할 수 있습니다.
+
+![벌크 팝오버로 값 추가 가 표시됩니다. CSV 또는 TSV 파일을 업로드하도록 선택할 수 있는 대화 상자가 강조 표시됩니다.](../images/ui/segment-builder/bulk-values-popover.png)
+
+또는 쉼표로 구분된 값을 수동으로 추가할 수 있습니다.
+
+![벌크 팝오버로 값 추가 가 표시됩니다. 값을 삽입하는 데 사용할 수 있는 대화 상자와 추가된 값이 모두 강조 표시됩니다.](../images/ui/segment-builder/bulk-values-comma-separated.png)
+
+허용되는 값은 최대 250개입니다. 이 금액을 초과하는 경우 추가 전에 일부 값을 제거해야 합니다.
+
+![최대 값 수에 도달했음을 나타내는 경고가 표시됩니다.](../images/ui/segment-builder/maximum-values.png)
 
 ### 대상자 추가
 

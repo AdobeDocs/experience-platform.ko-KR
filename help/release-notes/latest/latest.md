@@ -1,10 +1,10 @@
 ---
-title: Adobe Experience Platform 릴리스 노트 - 2023년 1월
+title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 1월 릴리스 노트입니다.
-source-git-commit: 855ce02dc371621cd8a4b02348e1e74a573123f3
+source-git-commit: 39d00824a17fd0b72de84425e5753945ad454b20
 workflow-type: tm+mt
-source-wordcount: '1911'
-ht-degree: 4%
+source-wordcount: '1948'
+ht-degree: 5%
 
 ---
 
@@ -148,8 +148,9 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 플랫폼 생성 세그먼트 멤버십 만료 | 에 있는 모든 세그먼트 멤버십입니다 `Exited` 상태를 기준으로 30일 이상 `lastQualificationTime` 필드는 삭제될 수 있습니다. |
+| 세그먼트 빌더에서 벌크 값 가져오기 | 이제 세그먼트 빌더에서 CSV 또는 TSV 파일을 업로드하거나 쉼표로 구분된 값을 수동으로 삽입하여 여러 값 가져오기를 지원합니다. 자세한 내용은 [세그먼트 빌더 안내서](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | 외부 대상 멤버십 만료 | 기본적으로 외부 대상 멤버십은 30일 동안 유지됩니다. 이를 더 오래 보관하려면 `validUntil` 대상 데이터를 수집하는 동안 필드를 생성합니다. |
+| 플랫폼 생성 세그먼트 멤버십 만료 | 에 있는 모든 세그먼트 멤버십입니다 `Exited` 상태를 기준으로 30일 이상 `lastQualificationTime` 필드는 삭제될 수 있습니다. |
 
 {style=&quot;table-layout:auto&quot;}
 
