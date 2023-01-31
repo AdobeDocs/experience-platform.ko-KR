@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2023년 1월
 description: Adobe Experience Platform에 대한 2023년 1월 릴리스 노트입니다.
-source-git-commit: b3b496cb6c7ab82455efcbea2b08089ce8ea3184
+source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2294'
+ht-degree: 7%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 0%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [보증](#assurance)
 - [데이터 수집](#data-collection)
 - [[!DNL Destinations]](#destinations)
@@ -21,6 +22,39 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [실시간 고객 프로필](#profile)
 - [세분화 서비스](#segmentation)
 - [소스](#sources)
+
+## 인공 지능/기계 학습 서비스 {#ai-ml}
+
+마케팅 분석가 및 전문가가 인공 지능(AI) 및 머신 러닝 서비스를 통해 고객 경험 사용 사례에서 AI/ML의 기능을 활용할 수 있습니다. 이를 통해 마케팅 분석가는 비즈니스 수준 구성을 사용하여 기업의 요구에 맞는 데이터 과학 전문 지식을 필요로 하지 않고도 예측을 설정할 수 있습니다.
+
+### 기여도 AI
+
+Attribution AI은 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| HIPAA 준비 | Healthcare Shield 고객은 이제 Attribution AI 및 특정 Experience Platform 기반 애플리케이션에서 보호된 상태 정보를 수신, 사용, 유지 관리 또는 전송할 수 있습니다. Healthcare Shield는 HIPAA에 따라 OB(Covered Entity) 또는 Business Associate인 의료 고객을 위한 것입니다. 자세한 내용은 [HIPAA 및 Adobe 제품 및 서비스](https://www.adobe.com/kr/trust/compliance/hipaa-ready.html) |
+| 추가 점수 데이터 집합 열 편집 | 기존 모델을 편집할 때 점수 데이터 세트 열(보고 열)을 추가하거나 제거할 수 있습니다. 이렇게 하면 속성 점수의 유연성이 확장되어 모델이 이미 생성된 후 추가 차원에 대한 통찰력을 제공할 수 있습니다. 자세한 내용은 [Attribution UI 안내서](../../intelligent-services/attribution-ai/user-guide.md) 추가 정보 |
+
+{style=&quot;table-layout:auto&quot;}
+
+자세한 내용은 [AI/ML 서비스](../../intelligent-services/attribution-ai/overview.md) 개요 를 참조하십시오.
+
+### 고객 AI
+
+Real-time Customer Data Platform용 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| HIPAA 준비 | Healthcare Shield 고객은 이제 Real-time Customer Data Platform 및 특정 Experience Platform 기반 애플리케이션용 고객 AI에서 보호된 상태 정보를 수신, 사용, 유지 관리 또는 전송할 수 있습니다. Healthcare Shield는 HIPAA에 따라 OB(Covered Entity) 또는 Business Associate인 의료 고객을 위한 것입니다. 자세한 내용은 [HIPAA 및 Adobe 제품 및 서비스](https://www.adobe.com/kr/trust/compliance/hipaa-ready.html) |
+
+{style=&quot;table-layout:auto&quot;}
+
+자세한 내용은 [AI/ML 서비스](../../intelligent-services/customer-ai/overview.md) 개요 를 참조하십시오.
 
 ## 보증 {#assurance}
 
