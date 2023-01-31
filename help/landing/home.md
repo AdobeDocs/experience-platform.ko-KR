@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 개요
 description: Adobe Experience Platform을 사용하면 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험을 더 잘 설계하고 전달하기 전에 조직 내 고객 데이터와 컨텐츠를 중앙 집중화 및 표준화할 수 있습니다.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+source-git-commit: 48e050718b665bc297f97bf1b90a6f4517dd3af5
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -17,9 +17,11 @@ Adobe Experience Platform은 고객 경험을 이끄는 완벽한 솔루션을 �
 
 RESTful API를 기반으로 하여, [!DNL Experience Platform] 친숙한 도구를 사용하여 엔터프라이즈 솔루션을 쉽게 통합할 수 있도록 시스템의 전체 기능을 개발자에게 제공합니다. [!DNL Experience Platform] 또한 파트너가 필요에 따라 자체 제품과 기술을 구축하고 통합할 수 있도록 지원합니다. 이러한 강력한 기능과 유연성으로 인해 [!DNL Experience Platform] 시장에서 유일합니다. Adobe Campaign은 파트너, 고객 및 개발자 커뮤니티에 경험 비즈니스를 구동하는 혁신적인 기능을 구축할 수 있는 기반을 제공합니다. 고객 및 개별 선호도에 대한 360도 보기를 통해 지속적으로 개선되고 개인화된 경험을 제공함으로써 고객 기대치를 뛰어넘습니다.
 
-<div id="recs-overview-body-1"></div>
-<div id="recs-overview-body-2"></div>
-<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-wrapper-1">
+    <div id="recs-overview-body-1"></div>
+    <div id="recs-overview-body-2"></div>
+    <div id="recs-overview-body-3"></div>
+</div>
 <div id="recs-overview-body-4"></div>
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
