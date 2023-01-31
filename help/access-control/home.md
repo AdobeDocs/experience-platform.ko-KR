@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1473'
 ht-degree: 3%
 
 ---
@@ -79,6 +79,12 @@ Adobe Admin Console은 조직에 대한 Adobe 제품 권한 및 액세스를 관
 
 | 카테고리 | 사용 권한 | 설명 |
 | --- | --- | --- |
+| [!DNL Alerts] | [!UICONTROL 경고 기록 보기] | 경고 기록에 대한 읽기 전용 액세스 권한. |
+| [!DNL Alerts] | [!UICONTROL 경고 해결] | 경고를 읽고, 편집하고, 삭제할 수 있는 액세스 권한. |
+| [!DNL Alerts] | [!UICONTROL 경고 보기] | 경고에 대한 읽기 전용 액세스 권한. |
+| [!DNL Alerts] | [!UICONTROL 경고 관리] | 경고 기록을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
+| [!DNL Data Hygiene] | [!UICONTROL 데이터 위생 보기] | 데이터 위생에 대한 읽기 전용 액세스. |
+| [!DNL Data Hygiene] | [!UICONTROL 데이터 위생 관리] | 데이터 위생을 읽고, 만들고, 편집하고, 삭제할 수 있습니다. |
 | [!DNL Data Modeling] | [!UICONTROL 스키마 관리] | 스키마 및 관련 리소스를 읽기, 생성, 편집 및 삭제할 수 있는 액세스 권한. |
 | [!DNL Data Modeling] | [!UICONTROL 스키마 보기] | 스키마 및 관련 리소스에 대한 읽기 전용 액세스 권한. |
 | [!DNL Data Modeling] | [!UICONTROL 관계 관리] | 스키마 관계를 읽기, 생성, 편집 및 삭제할 수 있는 액세스 권한. |
@@ -94,9 +100,9 @@ Adobe Admin Console은 조직에 대한 Adobe 제품 권한 및 액세스를 관
 | [!DNL Profile Management] | [!UICONTROL 병합 정책 보기] | 사용 가능한 병합 정책에 대한 읽기 전용 액세스 권한입니다. |
 | [!DNL Profile Management] | [!UICONTROL 세그먼트용 대상 내보내기] | 평가된 대상 세그먼트를 데이터 세트로 내보내기 기능. |
 | [!DNL Profile Management] | [!UICONTROL 대상에 세그먼트 평가] | 세그먼트 정의를 평가하여 대상의 프로필을 생성하는 기능. |
-| [!DNL Identities] | [!UICONTROL ID 네임스페이스 관리] | ID 네임스페이스를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
-| [!DNL Identities] | [!UICONTROL ID 네임스페이스 보기] | ID 네임스페이스에 대한 읽기 전용 액세스 권한. |
-| [!DNL Identities] | [!UICONTROL ID 그래프 보기] | ID 그래프에 대한 읽기 전용 액세스 권한입니다. |
+| [!DNL Identity Management] | [!UICONTROL ID 네임스페이스 관리] | ID 네임스페이스를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
+| [!DNL Identity Management] | [!UICONTROL ID 네임스페이스 보기] | ID 네임스페이스에 대한 읽기 전용 액세스 권한. |
+| [!DNL Identity Management] | [!UICONTROL ID 그래프 보기] | ID 그래프에 대한 읽기 전용 액세스 권한입니다. |
 | [!DNL Sandbox Administration] | [!UICONTROL 샌드박스 관리] | 샌드박스를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Sandbox Administration] | [!UICONTROL 샌드박스 보기] | 조직에 속하는 샌드박스에 대한 읽기 전용 액세스 권한입니다. |
 | [!DNL Sandbox Administration] | [!UICONTROL 샌드박스 재설정] | 샌드박스를 재설정하는 기능. |
