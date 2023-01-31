@@ -4,9 +4,9 @@ title: 프로필 요청 대상에 대상 데이터 활성화
 type: Tutorial
 description: 세그먼트를 프로필 요청 대상에 매핑하여 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: cda4591021c5b0a0bd6f43765d72b5867ec59aea
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -103,15 +103,25 @@ ht-degree: 0%
 
 설정 **[!UICONTROL 검토]** 페이지에서 선택 사항에 대한 요약을 볼 수 있습니다. 선택 **[!UICONTROL 취소]** 흐름을 분해하려면 **[!UICONTROL 뒤로]** 설정을 수정하려면 **[!UICONTROL 완료]** 을(를) 클릭하여 선택 내용을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
->[!IMPORTANT]
->
->이 단계에서 Adobe Experience Platform은 데이터 사용 정책 위반을 확인합니다. 아래는 정책이 위반되는 예입니다. 위반을 해결해야 세그먼트 활성화 워크플로우를 완료할 수 있습니다. 정책 위반을 해결하는 방법에 대한 자세한 내용은 [정책 적용](../../rtcdp/privacy/data-governance-overview.md#enforcement) ( 데이터 거버넌스 설명서 섹션) 을 참조하십시오.
+![검토 단계의 선택 요약](../assets/ui/activate-profile-request-destinations/review.png)
+
+### 동의 정책 평가 {#consent-policy-evaluation}
+
+조직에서 구입한 경우 **Adobe 의료 보호** 또는 **Adobe 개인 정보 보호 및 보안 차단**, 선택 **[!UICONTROL 적용 가능한 동의 정책 보기]** 적용된 동의 정책 및 그 결과로 활성화에 포함되는 프로필 수를 확인하려면 다음을 수행하십시오. 자세한 내용 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 추가 정보.
+
+### 데이터 사용 정책 검사 {#data-usage-policy-checks}
+
+에서 **[!UICONTROL 검토]** 또한 Experience Platform은 데이터 사용 정책 위반도 확인합니다. 아래는 정책이 위반되는 예입니다. 위반을 해결해야 세그먼트 활성화 워크플로우를 완료할 수 있습니다. 정책 위반을 해결하는 방법에 대한 자세한 내용은 [데이터 사용 정책 위반](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) ( 데이터 거버넌스 설명서 섹션) 을 참조하십시오.
 
 ![데이터 정책 위반](../assets/common/data-policy-violation.png)
 
-정책 위반이 검색되지 않은 경우 **[!UICONTROL 완료]** 을(를) 클릭하여 선택 내용을 확인하고 데이터를 대상으로 보내기 시작합니다.
+### 세그먼트 필터링 {#filter-segments}
 
-![검토](../assets/ui/activate-profile-request-destinations/review.png)
+또한 이 단계에서는 페이지의 사용 가능한 필터를 사용하여 이 워크플로우의 일부로 일정이나 매핑이 업데이트된 세그먼트만 표시할 수 있습니다. 표시할 테이블 열을 전환할 수도 있습니다.
+
+![검토 단계에서 사용 가능한 세그먼트 필터를 보여주는 화면 기록](/help/destinations/assets/ui/activate-profile-request-destinations/filter-segments-review-step.gif)
+
+선택한 내용에 만족하고 정책 위반이 감지되지 않은 경우 을(를) 선택합니다 **[!UICONTROL 완료]** 을(를) 클릭하여 선택 내용을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
 <!--
 

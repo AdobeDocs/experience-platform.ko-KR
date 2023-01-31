@@ -4,9 +4,9 @@ title: 대상자 데이터를 활성화하여 묶음 프로필 내보내기 대�
 type: Tutorial
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: e2318509236fad5054ce82b384f399dd6cbbdc34
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '3414'
+source-wordcount: '3537'
 ht-degree: 0%
 
 ---
@@ -463,19 +463,29 @@ Adobe은 다음과 같은 ID 네임스페이스를 선택할 것을 권장합니
 
 설정 **[!UICONTROL 검토]** 페이지에서 선택 사항에 대한 요약을 볼 수 있습니다. 선택 **[!UICONTROL 취소]** 흐름을 분해하려면 **[!UICONTROL 뒤로]** 설정을 수정하려면 **[!UICONTROL 완료]** 을(를) 클릭하여 선택 내용을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
->[!IMPORTANT]
->
->이 단계에서 Adobe Experience Platform은 데이터 사용 정책 위반을 확인합니다. 아래는 정책이 위반되는 예입니다. 위반을 해결해야 세그먼트 활성화 워크플로우를 완료할 수 있습니다. 정책 위반을 해결하는 방법에 대한 자세한 내용은 [정책 적용](../../rtcdp/privacy/data-governance-overview.md#enforcement) ( 데이터 거버넌스 설명서 섹션) 을 참조하십시오.
+![검토 단계의 선택 요약](/help/destinations/assets/ui/activate-batch-profile-destinations/review.png)
 
-![데이터 정책 위반 예를 보여주는 이미지](../assets/common/data-policy-violation.png)
+### 동의 정책 평가 {#consent-policy-evaluation}
 
-정책 위반이 검색되지 않은 경우 **[!UICONTROL 완료]** 을(를) 클릭하여 선택 내용을 확인하고 데이터를 대상으로 보내기 시작합니다.
+조직에서 구입한 경우 **Adobe 의료 보호** 또는 **Adobe 개인 정보 보호 및 보안 차단**, 선택 **[!UICONTROL 적용 가능한 동의 정책 보기]** 적용된 동의 정책 및 그 결과로 활성화에 포함되는 프로필 수를 확인하려면 다음을 수행하십시오. 자세한 내용 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 추가 정보.
 
-![세그먼트 활성화 워크플로우의 검토 화면을 보여주는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/review.png)
+### 데이터 사용 정책 검사 {#data-usage-policy-checks}
+
+에서 **[!UICONTROL 검토]** 또한 Experience Platform은 데이터 사용 정책 위반도 확인합니다. 아래는 정책이 위반되는 예입니다. 위반을 해결해야 세그먼트 활성화 워크플로우를 완료할 수 있습니다. 정책 위반을 해결하는 방법에 대한 자세한 내용은 [데이터 사용 정책 위반](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) ( 데이터 거버넌스 설명서 섹션) 을 참조하십시오.
+
+![데이터 정책 위반](../assets/common/data-policy-violation.png)
+
+### 세그먼트 필터링 {#filter-segments}
+
+또한 이 단계에서는 페이지의 사용 가능한 필터를 사용하여 이 워크플로우의 일부로 일정이나 매핑이 업데이트된 세그먼트만 표시할 수 있습니다. 표시할 테이블 열을 전환할 수도 있습니다.
+
+![검토 단계에서 사용 가능한 세그먼트 필터를 보여주는 화면 기록](/help/destinations/assets/ui/activate-batch-profile-destinations/filter-segments-batch-review.gif)
+
+선택한 내용에 만족하고 정책 위반이 감지되지 않은 경우 을(를) 선택합니다 **[!UICONTROL 완료]** 을(를) 클릭하여 선택 내용을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
 ## 세그먼트 활성화 확인 {#verify}
 
-이메일 마케팅 대상 및 클라우드 스토리지 대상에 대해 Adobe Experience Platform은 `.csv` 파일을 입력한 저장 위치에 저장합니다. 워크플로우에서 설정한 일정에 따라 스토리지 위치에 새 파일이 생성되기를 기대합니다. 기본 파일 형식은 다음과 같습니다.
+이메일 마케팅 대상 및 클라우드 스토리지 대상에 대해 Adobe Experience Platform은 `.csv` 파일을 입력한 저장 위치에 저장합니다. 워크플로우에서 설정한 일정에 따라 스토리지 위치에 새 파일이 생성되기를 기대합니다. 기본 파일 형식은 아래에 표시되어 있지만 다음 작업을 수행할 수 있습니다 [파일 이름의 구성 요소 편집](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 예를 들어 일별 내보내기 빈도를 선택한 경우 3일 연속으로 받은 파일은 다음과 같을 수 있습니다.
