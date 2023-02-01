@@ -1,11 +1,11 @@
 ---
 keywords: 대상;대상;대상 세부 정보 페이지;대상 세부 정보 페이지
 title: 대상 세부 사항 보기
-description: '개별 대상에 대한 세부 사항 페이지에서는 대상 세부 사항에 대한 개요를 제공합니다. 대상 세부 사항에는 대상 이름, ID, 대상에 매핑된 세그먼트 및 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤이 포함됩니다. '
+description: 개별 대상에 대한 세부 사항 페이지에서는 대상 세부 사항에 대한 개요를 제공합니다. 대상 세부 사항에는 대상 이름, ID, 대상에 매핑된 세그먼트 및 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤이 포함됩니다.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 165d8719cbf5d4b0555d5b9ef84252e3cbd82d42
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '799'
 ht-degree: 2%
 
 ---
@@ -57,7 +57,7 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 | [!UICONTROL 대상] | 대상이 전송되는 대상 플랫폼을 나타냅니다. 자세한 내용은 [대상 카탈로그](../catalog/overview.md) 추가 정보. |
 | [!UICONTROL 상태] | 대상이 활성화되었는지 여부를 나타냅니다. |
 | [!UICONTROL 마케팅 작업] | 데이터 거버넌스 목적으로 이 대상에 적용되는 마케팅 작업(사용 사례)을 나타냅니다. |
-| [!UICONTROL 카테고리] | 대상 유형을 나타냅니다. 자세한 내용은 [대상 카탈로그](../catalog/overview.md) 추가 정보. |
+| [!UICONTROL 범주] | 대상 유형을 나타냅니다. 자세한 내용은 [대상 카탈로그](../catalog/overview.md) 추가 정보. |
 | [!UICONTROL 연결 유형] | 대상이 대상으로 전송되는 양식을 나타냅니다. 가능한 값은 다음과 같습니다 [!UICONTROL 쿠키] 및 [!UICONTROL 프로필 기반]. |
 | [!UICONTROL 빈도] | 대상이 대상으로 전송되는 빈도를 나타냅니다. 가능한 값은 다음과 같습니다 [!UICONTROL 스트리밍] 및 [!UICONTROL 일괄 처리]. |
 | [!UICONTROL 신원] | 대상에서 허용하는 ID 네임스페이스를 나타냅니다(예: ). `GAID`, `IDFA`, 또는 `email`. 허용되는 ID 네임스페이스에 대한 자세한 내용은 [id 네임스페이스 개요](../../identity-service/namespaces.md). |
@@ -78,11 +78,17 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 
 >[!NOTE]
 >
->* 대상 모니터링 기능은 현재 Experience Platform의 모든 대상에 대해 지원됩니다 *제외* a [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화](/help/destinations/catalog/personalization/custom-personalization.md) 대상.
+>* 대상 모니터링 기능은 현재 Experience Platform의 모든 대상에 대해 지원됩니다 *제외* a [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [사용자 지정 개인화](/help/destinations/catalog/personalization/custom-personalization.md) 및 [Experience Cloud 대상](/help/destinations/catalog/adobe/experience-cloud-audiences.md) 대상.
 >* 대상 [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure 이벤트 허브](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), 및 [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 대상, 제외된 id가 현재 표시되지 않습니다.
 
 
 ![데이터 흐름 실행 보기](../assets/ui/details-page/dataflow-runs.png)
+
+### 데이터 흐름 실행 기간 {#dataflow-runs-duration}
+
+표시된 데이터 흐름 실행 기간에 알려진 문제가 있습니다. 반면에 **[!UICONTROL 처리 기간]** 대부분의 데이터 흐름 실행에 대해 아래 이미지에 표시된 대로 약 4시간 정도가 지정되며, 모든 데이터 흐름 실행에 대한 실제 처리 시간이 훨씬 짧습니다. Experience Platform이 대상에 대한 호출을 다시 시도해야 하는 경우 데이터 흐름 실행 창이 오랫동안 열려 있습니다.
+
+![데이터 흐름 의 이미지는 처리 시간 열이 강조 표시된 채 실행됩니다.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run.png)
 
 ## [!UICONTROL 활성화 데이터] {#activation-data}
 
