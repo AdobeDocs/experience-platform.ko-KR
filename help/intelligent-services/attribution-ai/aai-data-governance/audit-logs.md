@@ -1,12 +1,11 @@
 ---
 keywords: 통찰력;기여도 분석 ai;기여도 AI 통찰력;AAI 쿼리 서비스;기여도 분석 쿼리;기여도 분석 점수
-feature: Attribution AI audit logs
-title: 감사 로그 개요
+title: Attribution AI의 감사 로그 개요
 description: Attribution AI에서 감사 로그를 보고 관리하는 방법을 알아봅니다.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: a68d4634c6341f27673fdd70d96f7e214032b5a9
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 37%
+source-wordcount: '268'
+ht-degree: 38%
 
 ---
 
@@ -16,11 +15,11 @@ ht-degree: 37%
 
 기본적으로 감사 로그는 어떤 사람이 어떤 작업을 언제 수행했는지 알려 줍니다. 로그에 기록된 각 작업에는 작업 유형, 날짜 및 시간, 작업을 수행한 사용자의 이메일 ID 및 작업 유형과 관련된 추가 속성을 나타내는 메타데이터가 포함됩니다. Attribution AI에서 사용자가 수행한 만들기, 업데이트 및 삭제 작업을 추적합니다.
 
-[Attribution AI 작업 공간에서 선택한 감사 로그](../../attribution-ai/images/data-governance/audit-logs-cai.png)
+<!-- [The audit logs selected in the Attribution AI workspace](../../../attribution-ai/aai-data-governance/images/data-governance/audit-logs-cai.png) -->
 
 ## 감사 로그 액세스
 
 조직에서 이 기능을 활성화하면 활동이 발생할 때 감사 로그가 자동으로 수집됩니다. 로그 수집을 수동으로 활성화할 필요가 없습니다.
 
-감사 로그를 보고 내보내려면 Adobe Console의 감사 로그 액세스 액세스 제어 권한이 필요합니다. Attribution AI 기능에 대한 개별 권한을 관리하는 방법에 대한 자세한 내용은 [액세스 제어 설명서](../../attribution-ai/access-controls.md).
+감사 로그를 보고 내보내려면 Adobe Console의 감사 로그 액세스 액세스 제어 권한이 필요합니다. Attribution AI 기능에 대한 개별 권한을 관리하는 방법에 대한 자세한 내용은 [액세스 제어 설명서](../aai-data-governance/access-controls.md).
 

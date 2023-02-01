@@ -1,12 +1,11 @@
 ---
 keywords: 통찰력;고객 ai;고객 ai 통찰력;AAI 쿼리 서비스;고객 ai 쿼리;고객 ai 점수; CAI의 고객 관리 키
-feature: Customer-Managed Keys in Customer AI
-title: 고객 관리 키
+title: 고객 AI의 고객 관리 키.
 description: 고객 AI용 고객 관리 키를 설정하는 방법을 알아봅니다.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 24%
+source-wordcount: '173'
+ht-degree: 21%
 
 ---
 

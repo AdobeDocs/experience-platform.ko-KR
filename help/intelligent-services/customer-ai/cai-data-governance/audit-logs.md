@@ -1,11 +1,10 @@
 ---
 keywords: 인사이트;고객 ai;고객 ai 인사이트;CAI 쿼리 서비스;고객 ai 쿼리;고객 ai 점수
-feature: Customer AI audit logs
-title: 감사 로그 개요
+title: 고객 AI의 감사 로그 개요
 description: Customer AI에서 감사 로그를 보고 관리하는 방법을 알아봅니다.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '279'
 ht-degree: 36%
 
 ---
@@ -22,4 +21,4 @@ ht-degree: 36%
 
 조직에서 이 기능을 활성화하면 활동이 발생할 때 감사 로그가 자동으로 수집됩니다. 로그 수집을 수동으로 활성화할 필요가 없습니다.
 
-감사 로그를 보고 내보내려면 Adobe Console의 감사 로그 액세스 액세스 제어 권한이 필요합니다. 고객 AI 기능에 대한 개별 권한을 관리하는 방법에 대한 자세한 내용은 [액세스 제어 설명서](../../customer-ai/user-guide/access-controls.md).
+감사 로그를 보고 내보내려면 Adobe Console의 감사 로그 액세스 액세스 제어 권한이 필요합니다. 고객 AI 기능에 대한 개별 권한을 관리하는 방법에 대한 자세한 내용은 [액세스 제어 설명서](../cai-data-governance/access-controls.md).

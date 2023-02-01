@@ -4,7 +4,7 @@ solution: Experience Platform
 feature: Customer AI
 title: 고객 AI에 대한 액세스 제어
 description: 이 문서에서는 고객 AI에 대한 속성 기반 액세스 제어에 대한 정보를 제공합니다.
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 0%
@@ -42,8 +42,8 @@ ht-degree: 0%
 
 액세스 제어를 사용하는 경우 **고객 AI 보기** 및 **고객 AI 관리** 권한은 고객 AI의 다양한 기능에 대한 액세스 권한을 부여합니다. 다음 **고객 AI 관리** 사용 권한 을 통해 **만들기**,**업데이트**, **delete**, **활성화**, 또는 **disable** 모델 **고객 AI 보기** 이를 읽거나 볼 수 있습니다. 다음 **만들기**, **업데이트** 및 **delete** 작업은 감사 로그에 기록됩니다.
 
-자세한 내용은 설명서 를 참조하십시오 [액세스 제어 권한 할당](../../../help/access-control/home.md) 또는 방법 [감사 로그를 사용하여 액세스 및 활동 모니터링](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+자세한 내용은 설명서 를 참조하십시오 [액세스 제어 권한 할당](../../../access-control/home.md) 또는 방법 [감사 로그를 사용하여 액세스 및 활동 모니터링](../../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## 다음 단계
 
-이 안내서를 읽으면에서 액세스 제어의 주요 원리를 소개합니다 [!DNL Experience Platform]. 이제 다음을 계속 수행할 수 있습니다. [액세스 제어 사용 안내서](./ui/overview.md) 를 사용하는 방법에 대한 자세한 단계 [!DNL Admin Console] 제품 프로필을 만들고 권한을 할당합니다. [!DNL Platform].
+이 안내서를 읽으면에서 액세스 제어의 주요 원리를 소개합니다 [!DNL Experience Platform]. 이제 다음을 계속 수행할 수 있습니다. [액세스 제어 사용 안내서](../overview.md) 를 사용하는 방법에 대한 자세한 단계 [!DNL Admin Console] 제품 프로필을 만들고 권한을 할당합니다. [!DNL Platform].

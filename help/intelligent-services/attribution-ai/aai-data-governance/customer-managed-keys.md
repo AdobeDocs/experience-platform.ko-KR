@@ -1,9 +1,8 @@
 ---
 keywords: 통찰력;기여도 분석 ai;기여도 AI 통찰력;AAI 쿼리 서비스;기여도 분석 쿼리;기여도 분석 점수; AAI의 고객 관리 키
-feature: Customer-Managed Keys in Attribution AI
 title: 고객 관리 키
 description: Attribution AI용 고객 관리 키를 설정하는 방법을 알아봅니다.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 24%
