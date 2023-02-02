@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2023년 1월
 description: Adobe Experience Platform에 대한 2023년 1월 릴리스 노트입니다.
-source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
+source-git-commit: 667e868f2faba3ac3f241a2e2cd04d6de67f48c7
 workflow-type: tm+mt
-source-wordcount: '2294'
-ht-degree: 7%
+source-wordcount: '2444'
+ht-degree: 6%
 
 ---
 
@@ -83,7 +83,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 {style=&quot;table-layout:auto&quot;}
 
-## 대상 {#destinations}
+## 대상(2월 2일 업데이트됨) {#destinations}
 
 [!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
@@ -114,6 +114,10 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
         <td>파일 기반 대상으로 내보내기 동작이 업데이트되었습니다(PLAT-123316).</td>
         <td>의 동작에서 문제가 해결되었습니다. <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">필수 속성</a> 데이터 파일을 배치 대상으로 내보낼 때 <br> 이전에는 출력 파일의 모든 레코드에 다음 두 항목이 모두 포함되어 있는지 확인했습니다. <ol><li>Null이 아닌 값 <code>mandatoryField</code> 열 및</li><li>다른 필수 필드가 아닌 필드 중 하나 이상에 null이 아닌 값입니다.</li></ol> 두 번째 조건이 제거되었습니다. 따라서 아래 예와 같이 내보낸 데이터 파일에 더 많은 출력 행을 볼 수 있습니다.<br> <b> 2023년 1월 릴리스 전 샘플 동작 </b> <br> 필수 필드: <code>emailAddress</code> <br> <b>활성화할 데이터 입력</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>존</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>제니퍼</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>활성화 출력</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>존</td><td>john@acme.com</td></tr><tr><td>제니퍼</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> 2023년 1월 릴리스 이후 샘플 동작 </b> <br> <b>활성화 출력</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>존</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>제니퍼</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
     </tr>
+    <tr>
+        <td>필수 매핑 및 중복 매핑에 대한 UI 및 API 유효성 검사(PLAT-123316)</td>
+        <td>이제 다음의 경우 UI 및 API에서 유효성 검사가 다음과 같이 적용됩니다 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">매핑 필드</a> 대상 활성화 워크플로우에서:<ul><li><b>필요한 매핑</b>: 대상 개발자가 필수 매핑(예: <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> 대상)으로 지정하는 경우, 데이터를 대상에 활성화할 때 사용자가 이러한 필수 매핑을 추가해야 합니다. </li><li><b>중복 매핑</b>: 활성화 워크플로우의 매핑 단계에서 소스 필드에 중복 값을 추가할 수 있지만 대상 필드는 추가할 수 없습니다. 허용 및 금지된 매핑 조합의 예는 아래 표를 참조하십시오. <br><table><thead><tr><th>허용/금지</th><th>소스 필드</th><th>Target 필드</th></tr></thead><tbody><tr><td>허용됨</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>전자 메일 별칭2</li></ul></td></tr><tr><td>금지됨</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>    
 </table>
 
 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
