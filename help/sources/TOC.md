@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
+source-git-commit: 33aeeb58e5bfa2c1553a5c49fee07dc5020f4efb
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 12%
+source-wordcount: '928'
+ht-degree: 11%
 
 ---
 
@@ -329,6 +329,15 @@ ht-degree: 12%
       - [로컬 환경에서 텍스트 편집기를 사용하여 소스 설명서 페이지를 만듭니다](sources-sdk/documentation/text-editor.md)
       - [설명서 셀프 서비스 API 템플릿](sources-sdk/documentation/template.md)
       - [설명서 셀프 서비스 UI 템플릿](sources-sdk/documentation/ui-template.md)
+   - 스트리밍 SDK {#streaming-sdk}
+      - [셀프 서비스 소스(스트리밍 SDK) 시작](sources-sdk/streaming/getting-started.md)
+      - [스트리밍 소스에 대한 연결 사양 만들기](sources-sdk/streaming/create.md)
+      - [스트리밍 소스에 대한 연결 사양 업데이트](sources-sdk/streaming/update-connection-specs.md)
+      - [스트리밍 흐름 사양 업데이트](sources-sdk/streaming/update-flow-specs.md)
+      - [확인을 위해 연결 사양을 테스트 및 제출합니다.](sources-sdk/streaming/submit.md)
+      - [소스 문서(스트리밍 SDK)](sources-sdk/streaming/document-streaming.md)
+      - [설명서 셀프 서비스 API 스트리밍 템플릿](sources-sdk/streaming/streaming-template-api.md)
+      - [설명서 셀프 서비스 UI 스트리밍 템플릿](sources-sdk/streaming/streaming-template-ui.md)
 - [흐름 실행 알림](notifications.md)
 - [IP 주소 허용 목록](ip-address-allow-list.md)
 - [자주 묻는 질문](./troubleshooting.md)
