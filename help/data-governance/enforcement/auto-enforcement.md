@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 자동 정책 적용
 description: 이 문서에서는 Experience Platform의 대상에 세그먼트를 활성화할 때 데이터 사용 정책이 자동으로 적용되는 방식을 다룹니다.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c0f077d685c688f96d1778a02b24c0959a5dd822
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1883'
 ht-degree: 0%
 
 ---
@@ -116,6 +116,16 @@ Experience Platform에서 정책집행은 다음과 같은 계보를 염려한�
 ### 동의 정책 평가 {#consent-policy-evaluation}
 
 만약 [동의 정책 만들기](../policies/user-guide.md#consent-policy) 세그먼트를 대상에 활성화할 때, 동의 정책이 활성화에 포함된 프로필 비율에 어떻게 영향을 주는지를 알 수 있습니다.
+
+#### 유료 미디어에 대한 동의 정책 개선 {#consent-policy-enhancement}
+
+유료 미디어 활동을 포함한 스트리밍 대상에 대한 동의 정책 적용에 대한 개선 사항이 수행되었습니다. Privacy and Security Shield 또는 Healthcare Shield 고객이 이러한 개선 사항을 이용할 수 있으며 동의 상태가 변경될 때 스트리밍 대상에서 프로필을 사전 예방적으로 제거합니다. 또한 동의 변경 사항이 즉시 전파되므로 올바른 대상이 항상 타겟팅되도록 합니다.
+
+이러한 개선 사항을 통해 마케터가 세그먼트 표현식에 동의 속성을 수동으로 추가할 필요가 없으므로 마케팅 전략을 보다 신뢰할 수 있습니다. 따라서 동의를 철회하거나 더 이상 동의 정책에 대한 자격이 없는 경우 무심코 모든 마케팅 경험을 대상으로 하는 프로필이 없게 됩니다. 다양한 마케팅 워크플로우에서 동의 또는 기본 설정 데이터를 관리하는 방법에 대한 규칙을 설정하는 마케팅 동의 정책은 이제 다운스트림 솔루션의 활성화 워크플로우에서 자동으로 적용됩니다.
+
+>[!NOTE]
+>
+>이 개선 사항의 결과로 UI 변경 사항이 없습니다.
 
 #### 활성화 사전 평가
 
