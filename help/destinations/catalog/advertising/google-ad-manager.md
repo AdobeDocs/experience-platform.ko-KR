@@ -3,9 +3,9 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager 연결
 description: 이전에 DoubleClick for Publishers 또는 DoubleClick AdX라고 알려진 Google Ad Manager는 비디오 및 모바일 앱을 통해 게시자가 웹 사이트에서 광고를 표시할 수 있는 방법을 제공하는 Google의 광고 서비스 플랫폼입니다.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 94cd05ca8b5c8331b1b49e5172daf499918d2320
+source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '890'
 ht-degree: 3%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 3%
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | 소스 ID가 GAID 네임스페이스이면 이 대상 ID를 선택합니다. |
 | IDFA | [!DNL Apple ID for Advertisers] | 소스 ID가 IDFA 네임스페이스인 경우 이 타겟 ID를 선택합니다. |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)라고도 함 [!DNL Device ID]. Audience Manager이 상호 작용하는 각 장치에 연결하는 38자리 숫자 장치 ID입니다. | Google 사용 [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) 를 사용 중인지 여부에 따라 Google 쿠키 ID가 다른 모든 사용자를 타깃팅하려면 를 사용해야 합니다. |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)라고도 함 [!DNL Device ID]. Audience Manager이 상호 작용하는 각 장치에 연결하는 38자리 숫자 장치 ID입니다. | Google 사용 [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=ko-KR) 를 사용 중인지 여부에 따라 Google 쿠키 ID가 다른 모든 사용자를 타깃팅하려면 를 사용해야 합니다. |
 | [!DNL Google] 쿠키 ID | [!DNL Google] 쿠키 ID | [!DNL Google] 는 이 ID를 사용하여 캘리포니아 외부의 사용자를 타깃팅합니다. |
 | RIDA | 광고용 Roku ID. 이 ID는 Roku 장치를 고유하게 식별합니다. |  |
 | 가정부 | Microsoft 광고 ID. 이 ID는 Windows 10을 실행하는 장치를 고유하게 식별합니다. |  |
@@ -58,18 +58,10 @@ ht-degree: 3%
 
 ### 허용 목록 {#allow-listing}
 
->[!NOTE]
->
->첫 번째 목록을 설정하기 전에 허용 목록이 필수입니다 [!DNL Google Ad Manager] 대상 을 참조하십시오. 아래 설명된 허용 목록 프로세스가 [!DNL Google] 대상을 만들기 전에
->이 규칙의 예외는 입니다 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 고객. Audience Manager에서 이 Google 대상에 이미 연결을 만든 경우 허용 목록 프로세스를 다시 진행할 필요가 없으며 다음 단계를 계속 진행할 수 있습니다.
+첫 번째 목록을 설정하기 전에 허용 목록이 필수입니다 [!DNL Google Ad Manager] 대상 을 참조하십시오. 대상을 만들기 전에 아래에 설명된 허용 목록 프로세스를 완료해야 합니다.
 
-만들기 전 [!DNL Google Ad Manager] 플랫폼의 대상은 [!DNL Google] Adobe이 허용된 데이터 공급자 목록에 추가되고 허용 목록에 계정이 추가되도록 하는 경우입니다. 연락처 [!DNL Google] 및 는 다음 정보를 제공합니다.
-
-* **계정 ID**: Adobe의 계정 ID와 Google. 계정 ID: 87933855.
-* **고객 ID**: Google을 사용하는 Adobe의 고객 계정 ID입니다. 고객 ID: 89690775.
-* **네트워크 코드**: 이건 네 거야 [!DNL Google Ad Manager] 네트워크 ID에 있습니다. **[!UICONTROL 관리자 > 전역 설정]** 뿐만 아니라 URL에도 포함되어 있습니다.
-* **대상 링크 ID**: 와 관련된 특정 식별자입니다 [!DNL Google Ad Manager] 네트워크(아님) [!DNL Network code]), 에도 있습니다. **[!UICONTROL 관리자 > 전역 설정]** ( Google 인터페이스)를 참조하십시오.
-* 계정 유형입니다. Google 또는 AdX 구매자의 DFP.
+1. 에 설명된 단계를 수행합니다. [Google Ad Manager 설명서](https://support.google.com/admanager/answer/3289669?hl=en) 를 연결된 DMP(데이터 관리 플랫폼)로 추가하려면,
+2. 에서 [!DNL Google Ad Manager] 인터페이스, **[!UICONTROL 관리]** > **[!UICONTROL 전역 설정]** > **[!UICONTROL 네트워크 설정]**, 활성화 **[!UICONTROL API 액세스]** 슬라이더.
 
 ## 대상에 연결 {#connect}
 
@@ -85,10 +77,11 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 
 * **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
+* **[!UICONTROL 계정 ID]**: 을(를) 입력합니다. [!DNL Audience Link ID] 다음 [!DNL Google] 계정이 필요합니다. 와 관련된 특정 식별자입니다 [!DNL Google Ad Manager] 네트워크(아님) [!DNL Network code]). 아래에서 찾을 수 있습니다 **[!UICONTROL 관리자 > 전역 설정]** 에서 [!DNL Google Ad Manager] 인터페이스.
 * **[!UICONTROL 계정 유형]**: Google을 사용하는 계정에 따라 옵션을 선택합니다.
    * 사용 `DFP by Google` 대상 [!DNL DoubleClick] 게시자
    * 사용 `AdX buyer` 대상 [!DNL Google AdX]
-* **[!UICONTROL 계정 ID]**: 대상 링크 ID를 [!DNL Google].
+
 
 >[!NOTE]
 >
@@ -111,3 +104,12 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 ## 내보낸 데이터 {#exported-data}
 
 데이터를 로 성공적으로 내보냈는지 확인하려면 [!DNL Google Ad Manager] 대상, [!DNL Google Ad Manager] 계정이 필요합니다. 활성화가 성공하면 계정에 대상이 채워집니다.
+
+## 문제 해결 {#troubleshooting}
+
+이 대상을 사용하는 동안 오류가 발생하여 Adobe 또는 Google에 연결해야 하는 경우 다음 ID를 즉시 보관하십시오.
+
+Adobe의 Google 계정 ID입니다.
+
+* **[!UICONTROL 계정 ID]**: 87933855
+* **[!UICONTROL 고객 ID]**: 89690775

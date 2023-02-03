@@ -2,10 +2,10 @@
 title: (베타) [!DNL Google Ad Manager 360] 연결
 description: Google Ad Manager 360은 게시자가 비디오 및 모바일 앱을 통해 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
+source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
 workflow-type: tm+mt
-source-wordcount: '914'
-ht-degree: 1%
+source-wordcount: '926'
+ht-degree: 2%
 
 ---
 
@@ -54,19 +54,15 @@ ht-degree: 1%
 
 ### 허용 목록 {#allow-listing}
 
+첫 번째 목록을 설정하기 전에 허용 목록이 필수입니다 [!DNL Google Ad Manager 360] 대상 을 참조하십시오. 대상을 만들기 전에 아래에 설명된 허용 목록 프로세스를 완료해야 합니다.
+
 >[!NOTE]
 >
->허용 목록은 첫 번째 설정을 수행하기 전에 필수입니다 [!DNL Google Ad Manager] 대상 을 참조하십시오. 아래 설명된 허용 목록 프로세스가 [!DNL Google] 대상을 만들기 전에
+>이 규칙의 예외는 기존 규칙입니다 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 고객. Audience Manager에서 이 Google 대상에 이미 연결을 만든 경우 허용 목록 프로세스를 다시 진행할 필요가 없으며 다음 단계를 계속 진행할 수 있습니다.
 
->[!IMPORTANT]
->
->Google은 외부 대상 관리 플랫폼을 Google Ad Manager 360에 연결하는 프로세스를 간소화했습니다. 이제 셀프서비스 방식으로 Google Ad Manager 360에 연결하는 프로세스를 진행할 수 있습니다. 읽기 [데이터 관리 플랫폼의 세그먼트](https://support.google.com/admanager/answer/3289669?hl=en) ( Google 설명서)를 참조하십시오. 바로 아래에 ID가 나열되어 있어야 합니다.
+1. 에 설명된 단계를 수행합니다. [Google Ad Manager 설명서](https://support.google.com/admanager/answer/3289669?hl=en) 를 연결된 DMP(데이터 관리 플랫폼)로 추가하려면,
+2. 에서 [!DNL Google Ad Manager] 인터페이스, **[!UICONTROL 관리]** > **[!UICONTROL 전역 설정]** > **[!UICONTROL 네트워크 설정]**, 활성화 **[!UICONTROL API 액세스]** 슬라이더.
 
-* **계정 ID**: Adobe의 계정 ID와 Google. 계정 ID: 87933855.
-* **고객 ID**: Google을 사용하는 Adobe의 고객 계정 ID입니다. 고객 ID: 89690775.
-* **네트워크 코드**: 이건 네 거야 [!DNL Google Ad Manager] 네트워크 ID에 있습니다. **[!UICONTROL 관리자 > 전역 설정]** 뿐만 아니라 URL에도 포함되어 있습니다.
-* **대상 링크 ID**: 와 관련된 특정 식별자입니다 [!DNL Google Ad Manager] 네트워크(아님) [!DNL Network code]), 에도 있습니다. **[!UICONTROL 관리자 > 전역 설정]** ( Google 인터페이스)를 참조하십시오.
-* 계정 유형입니다. Google 또는 AdX 구매자의 DFP.
 
 ## 대상에 연결 {#connect}
 
@@ -91,12 +87,12 @@ ht-degree: 1%
 
 * **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
-* **[!UICONTROL 버킷 이름]**: 이름 입력 [!DNL Google Cloud Storage] 이 대상에서 사용할 버킷입니다.
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스트할 대상 폴더의 경로를 입력합니다.
-* **[!UICONTROL 계정 ID]**: 대상 링크 ID를 [!DNL Google].
-* **[!UICONTROL 계정 유형]**: Google을 사용하는 계정에 따라 옵션을 선택합니다.
-   * 사용 `DFP by Google` 대상 [!DNL DoubleClick] 게시자
+* **[!UICONTROL 버킷 이름]**: 이름 입력 [!DNL Google Cloud Storage] 이 대상에서 사용할 버킷입니다.
+* **[!UICONTROL 계정 ID]**: 을(를) 입력합니다. [!DNL Audience Link ID] 다음 [!DNL Google] 계정이 필요합니다. 와 관련된 특정 식별자입니다 [!DNL Google Ad Manager] 네트워크(아님) [!DNL Network code]). 아래에서 찾을 수 있습니다 **[!UICONTROL 관리자 > 전역 설정]** 에서 [!DNL Google Ad Manager] 인터페이스.
+* **[!UICONTROL 계정 유형]**: 옵션에 따라 옵션을 선택합니다 [!DNL Google] 계정:
    * 사용 `AdX buyer` 대상 [!DNL Google AdX]
+   * 사용 `DFP by Google` 대상 [!DNL DoubleClick] 게시자
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -127,3 +123,12 @@ ID 매핑 단계에서 다음과 같은 미리 채워진 매핑을 볼 수 있�
 ## 내보낸 데이터 {#exported-data}
 
 데이터를 성공적으로 내보냈는지 확인하려면 [!DNL Google Cloud Storage] 버킷하고 내보낸 파일에 예상 프로필 모집단이 포함되어 있는지 확인합니다.
+
+## 문제 해결 {#troubleshooting}
+
+이 대상을 사용하는 동안 오류가 발생하여 Adobe 또는 Google에 연결해야 하는 경우 다음 ID를 즉시 보관하십시오.
+
+Adobe의 Google 계정 ID입니다.
+
+* **[!UICONTROL 계정 ID]**: 87933855
+* **[!UICONTROL 고객 ID]**: 89690775
