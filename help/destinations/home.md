@@ -3,10 +3,10 @@ keywords: 대상;adobe experience platform;플랫폼;대상 개요;데이터 활
 title: 대상 개요
 description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. Adobe Experience Platform에서 대상 을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 1%
+source-wordcount: '755'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 1%
 
 ## 대상 유형 및 카테고리 {#types-and-categories}
 
-자세한 내용은 [대상 유형 및 카테고리 개요](./destination-types.md).
+Experience Platform을 사용하면 다양한 유형의 대상에 데이터를 활성화하여 활성화 사용 사례를 충족할 수 있습니다. 대상은 API 기반 통합부터 파일 수신 시스템, 프로필 조회 대상 등과의 통합까지 다양합니다. 사용 가능한 모든 대상에 대한 자세한 내용은 [대상 유형 및 카테고리 개요](./destination-types.md).
 
 ## 대상 및 액세스 제어 {#access-controls}
 
@@ -69,6 +69,12 @@ Platform의 대상 기능은 Adobe Experience Platform 액세스 제어 권한�
 속성 기반 액세스 제어를 사용하면 권한이 있는 필드에 매핑 구성을 적용할 수 있습니다. 또한 데이터 집합에 있는 모든 필드에 액세스할 수 없는 경우 데이터를 대상으로 내보낼 수 없습니다.
 
 대상이 속성 기반 액세스 제어를 사용하여 작업하는 방법에 대한 자세한 내용은 [속성 기반 액세스 제어 개요](../access-control/abac/overview.md#destinations).
+
+## 대상 모니터링 {#destinations-monitoring}
+
+대상에 연결을 설정하고 활성화 워크플로우를 완료한 후 수신 시스템으로의 데이터 내보내기를 모니터링할 수 있습니다. 다음 문서를 참조하십시오. [UI에서 대상으로 데이터 흐름 모니터링 안내서](/help/dataflows/ui/monitor-destinations.md) 추가 정보.
+
+데이터가 대상에 성공적으로 전달되는지 확인할 수도 있습니다. 카탈로그의 대부분의 대상 설명서 페이지에는 *데이터 내보내기 섹션의 유효성 검사*: Experience Platform에서 데이터를 성공적으로 가져왔는지를 대상 플랫폼에서 확인하는 방법을 나타냅니다.
 
 ## 대상에 데이터 활성화에 대한 데이터 거버넌스 제한 {#data-governance}
 

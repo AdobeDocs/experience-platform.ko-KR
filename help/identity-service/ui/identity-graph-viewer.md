@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ID 그래프 뷰어 개요
 description: ID 그래프는 특정 고객에 대해 서로 다른 ID 간의 관계 맵으로서, 고객이 다른 채널에서 브랜드와 상호 작용하는 방법을 시각적으로 보여줍니다.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 1%
@@ -35,7 +35,7 @@ ID 그래프 뷰어로 작업하려면 관련된 다양한 Adobe Experience Plat
 - **링크(에지):** 링크 또는 에지는 ID 간의 연결을 나타냅니다.
 - **그래프(클러스터):** 그래프 또는 클러스터는 개인을 나타내는 ID 및 링크의 그룹입니다.
 
-## ID 그래프 뷰어에 액세스
+## ID 그래프 뷰어에 액세스 {#access-identity-graph-viewer}
 
 UI에서 ID 그래프 뷰어를 사용하려면 **[!UICONTROL ID]** 왼쪽 탐색에서 를 선택하고 **[!UICONTROL ID 그래프]** 탭. 에서 **[!UICONTROL ID 네임스페이스]** 화면에서 **[!UICONTROL ID 네임스페이스 선택]** 아이콘을 사용하여 사용할 네임스페이스를 검색합니다.
 

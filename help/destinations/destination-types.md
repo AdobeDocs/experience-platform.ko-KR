@@ -3,9 +3,9 @@ keywords: 대상;대상;대상 유형
 title: 대상 유형 및 카테고리
 description: Adobe Experience Platform의 다양한 대상 유형 및 카테고리에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,11 @@ Adobe Experience Platform 대상의 다양한 유형과 카테고리를 이해�
 
 ## 대상 유형 {#destination-types}
 
-Adobe Experience Platform에서는 연결과 확장의 두 대상 유형을 구별합니다. 연결 대상의 두 가지 유형인 프로필 내보내기 대상과 세그먼트 내보내기 대상이 있습니다.
+Adobe Experience Platform에서는 연결, 데이터 세트 내보내기 및 확장 등 다양한 대상 유형을 구별합니다. API 기반 대상( )으로 데이터를 내보낼 수 있는 여러 유형의 연결 대상이 있습니다.
 
-![대상 유형](./assets/destination-types/types-of-destinations.png)
+마지막으로, 대상 카탈로그의 모든 조직에서 사용할 수 있는 공용 대상과 실시간 CDP Ultimate 고객이 특정 내보내기 사용 사례를 충족하도록 만들 수 있는 개인 대상 간에 연결을 구분할 수도 있습니다.
+
+![대상 다이어그램 유형입니다.](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## 연결 {#connections}
 

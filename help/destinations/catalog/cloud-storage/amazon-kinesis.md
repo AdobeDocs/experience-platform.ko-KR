@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis 대상;kinesis
 title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
+source-git-commit: ce20c273cb6a87264363c03611ccfdfb783e595f
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1958'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Experience Platform은 프로필 내보내기 동작을 로 최적화합니다 [
 
 | 대상 내보내기를 결정하는 것은 무엇입니까? | 대상 내보내기에 포함된 항목 |
 |---------|----------|
-| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기의 단서로 사용됩니다. 즉, 매핑된 세그먼트가 상태(null에서 실현됨 또는 실현됨/존재에서 종료로)를 변경하거나 매핑된 속성을 업데이트하면 대상 내보내기가 해제됩니다.</li><li>현재 ID를 매핑할 수 없으므로 [!DNL Amazon Kinesis] 대상, 지정된 프로필의 모든 id의 변경 사항으로 대상 내보내기도 결정합니다.</li><li>속성 변경은 속성이 동일한 값이든 간에 속성에 대한 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기는 변경 사항으로 간주됩니다.</li></ul> | <ul><li>데이터 플로우에 매핑되었는지 여부에 상관없이 모든 세그먼트(최신 멤버십 상태 포함)는 `segmentMembership` 개체.</li><li>의 모든 ID `identityMap` 개체도 포함됩니다(Experience Platform은 현재 [!DNL Amazon Kinesis] 대상).</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
+| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기의 단서로 사용됩니다. 즉, 매핑된 세그먼트가 상태(null에서 실현됨 또는 실현됨/존재에서 종료로)를 변경하거나 매핑된 속성을 업데이트하면 대상 내보내기가 해제됩니다.</li><li>현재 ID를 매핑할 수 없으므로 [!DNL Amazon Kinesis] 대상, 지정된 프로필의 모든 id의 변경 사항으로 대상 내보내기도 결정합니다.</li><li>속성 변경은 속성이 동일한 값이든 간에 속성에 대한 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기는 변경 사항으로 간주됩니다.</li></ul> | <ul><li>다음 `segmentMembership` 개체에는 활성화 데이터 플로우에 매핑된 세그먼트가 포함되어 있습니다. 이 세그먼트는 자격 또는 세그먼트 종료 이벤트 후 프로필 상태가 변경되었습니다. 자격이 있는 프로파일이 동일한 세그먼트에 속하는 경우 매핑되지 않은 다른 세그먼트는 대상 내보내기의 일부일 수 있습니다 [병합 정책](/help/profile/merge-policies/overview.md) 를 활성화 데이터 플로우에 매핑된 세그먼트로 사용합니다. </li><li>의 모든 ID `identityMap` 개체도 포함됩니다(Experience Platform은 현재 [!DNL Amazon Kinesis] 대상).</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
 
 {style=&quot;table-layout:fixed&quot;}
 
@@ -177,7 +177,7 @@ Experience Platform은 프로필 내보내기 동작을 로 최적화합니다 [
 
 ![Amazon Kinesis 대상 데이터 흐름](../../assets/catalog/http/profile-export-example-dataflow.png)
 
-대상에 대한 프로필 내보내기는 하나 또는 둘 중 하나에 대해 자격이 있는 프로필로 결정할 수 있습니다 *3개의 매핑된 세그먼트*. 그러나 데이터 내보내기에서 `segmentMembership` 개체(참조 [내보낸 데이터](#exported-data) 아래 섹션)을 사용하면, 특정 프로필이 해당 세그먼트의 구성원일 경우 매핑되지 않은 다른 세그먼트가 나타날 수 있습니다. 프로가 DeLorinan Cars 세그먼트를 통해 고객 자격을 얻지만 또한 Viewed &quot;Back to the Future&quot; 영화 및 SF 팬의 멤버인 경우 다른 두 세그먼트도 함께 제공됩니다 `segmentMembership` 데이터가 데이터 플로우에 매핑되지 않더라도 데이터 내보내기의 객체입니다.
+대상에 대한 프로필 내보내기는 하나 또는 둘 중 하나에 대해 자격이 있는 프로필로 결정할 수 있습니다 *3개의 매핑된 세그먼트*. 그러나 데이터 내보내기에서 `segmentMembership` 개체(참조 [내보낸 데이터](#exported-data) 아래 섹션)에서 매핑되지 않은 다른 세그먼트가 표시될 수 있습니다. 해당 특정 프로필이 해당 세그먼트의 구성원이고, 해당 세그먼트가 내보내기를 트리거한 세그먼트와 동일한 병합 정책을 공유하는 경우 말입니다. 프로필이 **데로리안 차종 고객** 세그먼트이지만 **&quot;미래로 돌아가기&quot;를 시청했습니다** 영화 및 **SF 팬** 세그먼트를 만들면 이러한 다른 두 세그먼트가 `segmentMembership` 동일한 병합 정책을 공유하면 데이터 내보내기의 개체가 데이터 흐름에서 매핑되지 않더라도 데이터 내보내기의 개체입니다 **데로리안 차종 고객** 세그먼트.
 
 프로필 속성 POV에서 위에 매핑된 4개의 속성에 대한 변경 사항이 대상 내보내기를 결정하며 프로필에 있는 4개의 매핑된 속성이 데이터 내보내기에 표시됩니다.
 
