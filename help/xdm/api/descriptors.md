@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 종단점을 사용하면 경험 애플리케이션 내의 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1956'
-ht-degree: 2%
+source-wordcount: '1900'
+ht-degree: 3%
 
 ---
 
@@ -357,7 +357,7 @@ ID 설명자는 &quot;[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]
 | `xdm:title` | 제목 사례에 작성된 이 필드에 표시할 새 제목입니다. |
 | `xdm:description` | 선택적 설명을 제목과 함께 추가할 수 있습니다. |
 | `meta:enum` | 로 표시된 경우 `xdm:sourceProperty` 는 문자열 필드입니다. `meta:enum` 는 세그먼테이션 UI에서 필드에 대해 제안된 값을 추가하는 데 사용할 수 있습니다. 중요한 것은 `meta:enum` 은 열거형을 선언하거나 XDM 필드에 대한 데이터 유효성 검사를 제공하지 않습니다.<br><br>Adobe에 의해 정의된 코어 XDM 필드에만 사용해야 합니다. 소스 속성이 조직에서 정의한 사용자 정의 필드인 경우 대신 필드의 `meta:enum` 속성의 부모 리소스에 대한 PATCH 요청을 통해 직접 속성에 액세스할 수 있습니다. |
-| `meta:excludeMetaEnum` | 로 표시된 경우 `xdm:sourceProperty` 는 `meta:enum` 필드에서는 이 개체를 친숙한 이름 설명자에 포함하여 세그먼테이션에서 이러한 값의 일부 또는 전부를 제외할 수 있습니다. 각 항목의 키와 값은 원본에 포함된 키와 일치해야 합니다 `meta:enum` 을 입력합니다.<br><br>를 포함하는 문자열 필드의 값만 제외할 수 있습니다 **제안된 값만**. 문자열 필드에 실제 데이터가 포함되어 있으면 `enum` 제약 조건, 연결된 제안된 값은 비활성화할 수 없습니다. `enum` 조직에서 정의한 사용자 정의 리소스의 필드를 PATCH 요청을 통해 편집할 수 있지만 `enum` 표준 Adobe 정의 리소스의 필드를 제거할 수 없습니다. |
+| `meta:excludeMetaEnum` | 로 표시된 경우 `xdm:sourceProperty` 는 `meta:enum` 필드에서는 이 개체를 친숙한 이름 설명자에 포함하여 세그먼테이션에서 이러한 값의 일부 또는 전부를 제외할 수 있습니다. 각 항목의 키와 값은 원본에 포함된 키와 일치해야 합니다 `meta:enum` 을 입력합니다. |
 
 {style=&quot;table-layout:auto&quot;}
 

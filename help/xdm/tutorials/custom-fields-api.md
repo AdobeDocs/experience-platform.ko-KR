@@ -2,9 +2,9 @@
 title: 스키마 레지스트리 API에서 XDM 필드 정의
 description: 스키마 레지스트리 API에서 사용자 지정 XDM(Experience Data Model) 리소스를 만들 때 다양한 필드를 정의하는 방법을 알아봅니다.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1202'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->다음 `meta:enum` 값은 **not** 열거형을 선언하거나 데이터 유효성 검사를 직접 구동합니다. 대부분의 경우 `meta:enum` 다음 항목에서도 제공됩니다. `enum` 가 있어야 합니다. 그러나 다음과 같은 몇 가지 사용 사례가 있습니다 `meta:enum` 이(가) 해당 없이 제공됩니다 `enum` 배열입니다. 다음에서 자습서를 참조하십시오. [api에서 추천 값 정의](../tutorials/suggested-values.md) 추가 정보.
+>다음 `meta:enum` 값은 **not** 열거형을 선언하거나 데이터 유효성 검사를 직접 구동합니다. 대부분의 경우 `meta:enum` 다음 항목에서도 제공됩니다. `enum` 가 있어야 합니다. 그러나 다음과 같은 몇 가지 사용 사례가 있습니다 `meta:enum` 이(가) 해당 없이 제공됩니다 `enum` 배열입니다. 다음에서 자습서를 참조하십시오. [추천 값 정의](../tutorials/suggested-values.md) 추가 정보.
 
 원할 경우 `default` 기본값을 나타내는 속성 `enum` 값이 제공되지 않을 경우 필드에서 사용할 값입니다.
 

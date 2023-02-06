@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 열거형 필드 및 제안 값 정의
 description: Experience Platform 사용자 인터페이스에서 문자열 필드에 대한 열거형 및 제안 값을 정의하는 방법을 알아봅니다.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: f770ba8668c5154b2cf5a57ba61d771ca34ab2d8
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ XDM(Experience Data Model)에서 사전 정의된 허용 또는 제안 값 세�
 
 When [새 필드 정의](./overview.md#define) Adobe Experience Platform 사용자 인터페이스에서 유형을 [!UICONTROL 문자열]를 정의할 수 있는 옵션이 제공됩니다 [enum](#enum) 또는 [제안된 값](#suggested-values) 해당 필드에 대해 입력합니다.
 
-![UI의 문자열 필드에 대해 활성화된 열거형 및 제안된 값 옵션.](../../images/ui/fields/enum/enum-options-selected.png)
+![UI의 문자열 필드에 대해 활성화된 열거형 및 제안된 값 옵션을 보여주는 이미지](../../images/ui/fields/enum/enum-options-selected.png)
 
 이 문서에서는 [!UICONTROL 스키마] UI 작업 공간. UI에서 구성 방법 및 다운스트림 효과를 포함하여 열거형 및 제안된 값에 대한 간단한 개요를 보려면 다음 비디오를 시청하십시오.
 
@@ -36,13 +36,13 @@ When [새 필드 정의](./overview.md#define) Adobe Experience Platform 사용�
 
 선택 **[!UICONTROL 열거형 및 추천 값]**&#x200B;를 선택하고 을 선택합니다. **[!UICONTROL 열거형]**. 열거형의 값 제약 조건을 지정할 수 있도록 해주는 추가 컨트롤이 나타납니다. 구속을 추가하려면 **[!UICONTROL 행 추가]**.
 
-![UI에서 선택한 열거형 옵션.](../../images/ui/fields/enum/enum-add-row.png)
+![UI에서 선택한 열거형 옵션을 보여주는 이미지](../../images/ui/fields/enum/enum-add-row.png)
 
 아래에 **[!UICONTROL 값]** 열에서 필드를 다음으로 제한하려는 정확한 값을 제공해야 합니다. 또한, 다음과 같이 사용자에게 친숙한 기능을 제공할 수도 있습니다 **[!UICONTROL 표시 이름]** 또한, 값이 세그멘테이션에서 표시되는 방식에 영향을 주는 제한입니다.
 
 계속 사용 **[!UICONTROL 행 추가]** 원하는 제약 조건 및 선택적 레이블을 열거형에 추가하려면 또는 삭제 아이콘(![삭제 아이콘 이미지](../../images/ui/fields/enum/remove-icon.png))을 클릭하여 레코드 추가를 제거합니다. 완료되면 을 선택합니다 **[!UICONTROL 적용]** 스키마에 변경 사항을 적용하려면
 
-![UI의 문자열 필드에 대해 채워진 열거형 값 및 표시 이름.](../../images/ui/fields/enum/enum-confirm.png)
+![UI의 문자열 필드에 대해 채워진 열거형 값 및 표시 이름을 표시하는 이미지](../../images/ui/fields/enum/enum-confirm.png)
 
 캔버스가 변경 사항을 반영하도록 업데이트됩니다. 나중에 이 스키마를 탐색할 때 오른쪽 레일 내에서 열거형 필드에 대한 제한을 보고 편집할 수 있습니다.
 
@@ -50,35 +50,39 @@ When [새 필드 정의](./overview.md#define) Adobe Experience Platform 사용�
 
 선택 **[!UICONTROL 열거형 및 추천 값]**&#x200B;를 선택하고 을 선택합니다. **[!UICONTROL 제안된 값]** 추가 컨트롤을 표시하려면 여기에서 을 선택합니다. **[!UICONTROL 행 추가]** 제안 값 추가를 시작하려면 다음을 수행하십시오.
 
-![UI에서 선택한 권장 값 옵션.](../../images/ui/fields/enum/suggested-add-row.png)
+![UI에서 선택한 추천 값 옵션을 보여주는 이미지](../../images/ui/fields/enum/suggested-add-row.png)
 
 아래에 **[!UICONTROL 표시 이름]** 열에서 세분화 UI에 표시할 값에 대해 친숙한 이름을 제공합니다. 제안된 값을 추가하려면 **[!UICONTROL 행 추가]** 필요에 따라 프로세스를 다시 반복하고 반복합니다. 이전에 추가한 행을 제거하려면 ![삭제 아이콘](../../images/ui/fields/enum/remove-icon.png) 문제의 행 옆에 있습니다.
 
 완료되면 을 선택합니다 **[!UICONTROL 적용]** 스키마에 변경 사항을 적용하려면
 
-![UI의 문자열 필드에 대해 채워진 열거형 값 및 표시 이름.](../../images/ui/fields/enum/suggested-confirm.png)
+![UI의 문자열 필드에 대해 채워진 열거형 값 및 표시 이름을 표시하는 이미지](../../images/ui/fields/enum/suggested-confirm.png)
 
 >[!NOTE]
 >
 >필드의 업데이트된 제안된 값이 세그멘테이션 UI에 반영되는 경우 약 5분 지연이 있습니다.
 
-### 표준 필드에 대해 제안된 값 관리 {#standard-fields}
+### 표준 필드에 대해 제안된 값 관리
 
-표준 XDM 구성 요소의 일부 필드에는 다음과 같이 고유한 제안된 값이 포함되어 있습니다 `eventType` 에서 [[!UICONTROL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md) 또한 사용자 지정 필드에 대해 고려할 때와 동일한 방법으로 이러한 표준 필드에 대해 제안된 값을 추가로 만들 수 있습니다. 표준 제안 값 중 어떤 것도 사용 사례에 맞지 않지만 필드 정의에서 완전히 제거할 수 없습니다.
+표준 XDM 구성 요소의 일부 필드에는 다음과 같이 고유한 제안된 값이 포함되어 있습니다 `eventType` 에서 [[!UICONTROL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md). 표준 필드에 대해 추가적인 제안 값을 생성할 수 있지만, 조직에서 정의하지 않은 제안된 값은 수정하거나 제거할 수 없습니다. UI에서 표준 필드를 볼 때 해당 제안된 값이 표시되지만 읽기 전용입니다.
 
->[!IMPORTANT]
->
->해당 열거형 제약 조건이 없는 표준 필드에 대해 제안된 값만 비활성화할 수 있습니다. 즉, **[!UICONTROL 열거형]** 옵션 대신 이 활성화됩니다. **[!UICONTROL 제안된 값]**&#x200B;를 지정하는 경우 필드가 열거형으로 제한되고 해당 제약 조건은 비활성화할 수 없습니다.
->
->자세한 내용은 [아래 섹션](#evolution) 기존 스키마 필드에 대한 열거형 및 제안된 값을 업데이트하는 규칙에 대한 자세한 내용은 다음을 참조하십시오.
-
-표준 제안 값을 비활성화하려면 해당 값 옆에 있는 전환을 선택합니다. 모든 값을 포함하여 제안된 값의 조합을 비활성화할 수 있습니다.
-
-![에 대해 권장되는 일부 값 [!UICONTROL 이벤트 유형] UI에서 필드가 비활성화되어 있습니다.](../../images/ui/fields/enum/suggested-standard.png)
+![UI의 문자열 필드에 대해 채워진 열거형 값 및 표시 이름을 표시하는 이미지](../../images/ui/fields/enum/suggested-standard.png)
 
 표준 필드에 대해 제안된 새 값을 추가하려면 **[!UICONTROL 행 추가]**. 이전에 조직에서 추가한 제안 값을 제거하려면 을 선택합니다 ![삭제 아이콘](../../images/ui/fields/enum/remove-icon.png) 문제의 행 옆에 있습니다.
 
-![UI의 표준 문자열 필드에 추가된 사용자 지정 추천 값입니다.](../../images/ui/fields/enum/suggested-standard-add.png)
+![UI의 문자열 필드에 대해 채워진 열거형 값 및 표시 이름을 표시하는 이미지](../../images/ui/fields/enum/suggested-standard-add.png)
+
+<!-- ### Removing suggested values for standard fields
+
+Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
+
+For example, consider a profile schema where the a suggested value for the standard `person.gender` field is disabled:
+
+![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/standard-enum-disabled.png)
+
+In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
+
+See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
 
 ## 열거형 및 제안된 값에 대한 진행 규칙 {#evolution}
 
@@ -86,15 +90,13 @@ When [새 필드 정의](./overview.md#define) Adobe Experience Platform 사용�
 
 열거형 및 제안된 값에 대해 다음 규칙이 수집 후 적용됩니다.
 
-* 사용자 **CAN** 기존의 제안된 값이 있는 모든 필드에 제안된 값을 추가합니다.
-* 사용자 **CAN** 기존의 제안된 값이 있는 필드에서 사용자 지정 제안 값을 제거합니다.
-* 사용자 **CAN** 제안된 값만 있고 열거형 제약 조건이 없는 필드에서 표준 제안 값을 비활성화합니다.
+* 사용자 **CAN** 기존의 제안된 값과 함께 표준 및 사용자 지정 필드에 대해 제안된 값을 추가합니다.
+* 사용자 **CAN** 기존의 제안된 값을 사용하여 사용자 지정 필드에서 제안된 값을 제거합니다.
 * 사용자 **CAN** 기존 사용자 지정 열거형 필드에 대한 새 열거형 값을 추가합니다.
 * 사용자 **CAN** 사용자 지정 필드의 열거형 값을 제안되는 값으로만 전환하거나, 열거형 또는 제안된 값이 없는 문자열로 변환합니다. **이 스위치는 적용한 후에는 취소할 수 없습니다.**
-* 사용자 **CANNOT** 표준 필드에서 열거형 제약 조건을 추가하거나 제거합니다.
-* 사용자 **CANNOT** 표준 필드에서 제안된 값을 제거합니다(비활성만).
-* 사용자 **CANNOT** 기존 열거형이 없는 필드에 열거형 제약 조건을 추가합니다.
-* 사용자 **CANNOT** 사용자 지정 필드에 대한 기존의 모든 열거형 제한보다 적은 수를 제거합니다.
+* 사용자 **CANNOT** 표준 필드에서 열거형 또는 제안 값을 제거합니다.
+* 사용자 **CANNOT** 기존 열거형이 없는 필드에 열거형 값을 추가합니다.
+* 사용자 **CANNOT** 사용자 지정 필드에 대한 기존의 모든 열거형 값보다 작은 값을 제거합니다.
 * 사용자 **CANNOT** 제안된 값에서 열거형으로 전환합니다.
 
 ## 열거형 및 제안된 값에 대한 규칙 병합 {#merging}
@@ -122,4 +124,4 @@ When [새 필드 정의](./overview.md#define) Adobe Experience Platform 사용�
 
 이 안내서에서는 UI에서 문자열 필드에 대한 열거형 및 제안 값을 정의하는 방법을 다룹니다. 스키마 레지스트리 API를 사용하여 열거형 및 제안 값을 관리하는 방법에 대한 자세한 내용은 다음을 참조하십시오 [튜토리얼](../../tutorials/suggested-values.md).
 
-에서 다른 XDM 필드 유형을 정의하는 방법을 배우려면 [!DNL Schema Editor], 개요 참조 [ui에서 필드 정의.](./overview.md#special).
+에서 다른 XDM 필드 유형을 정의하는 방법을 배우려면 [!DNL Schema Editor], 개요 참조 [ui에서 필드 정의](./overview.md#special).
