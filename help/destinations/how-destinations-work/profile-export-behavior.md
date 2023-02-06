@@ -1,7 +1,7 @@
 ---
 title: 프로필 내보내기 동작
 description: Experience Platform 대상에서 지원되는 다양한 통합 패턴에 따라 프로필 내보내기 동작이 어떻게 다른지 알아봅니다.
-source-git-commit: 1c844d86834ef78d1206a8698dbcbfe2fae49661
+source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
 workflow-type: tm+mt
 source-wordcount: '2926'
 ht-degree: 0%
@@ -126,7 +126,7 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
 
 프로필 속성 POV에서 위에 매핑된 세 가지 속성을 변경하면 대상 내보내기가 결정됩니다.
 
->[!BEGINSHADEBOX]
+>[!ENDSHADEBOX]
 
 ## 배치(파일 기반) 대상 {#file-based-destinations}
 
