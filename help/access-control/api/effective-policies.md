@@ -4,14 +4,18 @@ solution: Experience Platform
 title: 유효 정책 API 끝점
 description: Adobe Experience Platform용 액세스 제어 API를 사용하여 효과적인 액세스 정책을 보는 방법을 알아봅니다.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 2%
+source-wordcount: '318'
+ht-degree: 1%
 
 ---
 
 # 효과적인 정책 엔드포인트
+
+>[!NOTE]
+>
+>사용자 토큰이 전달되면 토큰의 사용자는 요청된 조직에 대해 &quot;조직 관리자&quot; 역할이 있어야 합니다.
 
 현재 사용자에 대한 유효한 액세스 제어 정책을 보려면 `/acl/effective-policies` 의 엔드포인트 [!DNL Access Control] API. 검색할 권한 및 리소스 유형은 요청 페이로드에서 배열 형태로 제공해야 합니다. 이것은 아래 예제 API 호출에서 확인됩니다.
 

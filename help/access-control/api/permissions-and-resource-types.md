@@ -4,14 +4,18 @@ solution: Experience Platform
 title: 참조 API 끝점
 description: 액세스 제어 API의 참조 끝점을 사용하면 사용 가능한 권한 및 리소스 유형의 이름을 볼 수 있습니다. 이 이름을 사용하여 현재 사용자에 대한 효과적인 액세스 제어 정책을 볼 수 있습니다.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '188'
 ht-degree: 1%
 
 ---
 
 # 참조 끝점
+
+>[!NOTE]
+>
+>사용자 토큰이 전달되면 토큰의 사용자는 요청된 조직에 대해 &quot;조직 관리자&quot; 역할이 있어야 합니다.
 
 에 GET 요청을 수행하여 모든 권한 및 리소스 유형의 이름을 나열할 수 있습니다 `/acl/reference` 엔드포인트. 그런 다음 API 호출에서 이러한 이름을 사용할 수 있습니다 [효과적인 액세스 제어 정책 보기](./effective-policies.md) 현재 사용자의 경우
 

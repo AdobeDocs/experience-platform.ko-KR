@@ -4,14 +4,18 @@ solution: Experience Platform
 title: 제품 API 엔드포인트
 description: 속성 기반 액세스 제어 API의 /products 엔드포인트를 사용하면 Adobe Experience Platform에서 제품을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '515'
 ht-degree: 3%
 
 ---
 
 # 제품 끝점
+
+>[!NOTE]
+>
+>사용자 토큰이 전달되면 토큰의 사용자는 요청된 조직에 대해 &quot;조직 관리자&quot; 역할이 있어야 합니다.
 
 다음 `/products` 특성 기반 액세스 제어 API의 종단점을 사용하면 조직의 제품과 연결된 권한 카테고리 및 권한 세트뿐만 아니라 제품을 프로그래밍 방식으로 관리할 수 있습니다.
 
