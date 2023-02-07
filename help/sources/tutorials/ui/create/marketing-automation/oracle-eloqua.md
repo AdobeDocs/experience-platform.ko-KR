@@ -1,19 +1,17 @@
 ---
-keywords: Experience Platform;홈;인기 주제;소스;커넥터;oracle;oracle 웅변;웅변
-solution: Experience Platform
 title: 플랫폼 UI를 사용하여 Oracle Eloqua 소스 연결 만들기
 description: 플랫폼 UI를 사용하여 Adobe Experience Platform을 Oracle Eloqua에 연결하는 방법을 알아봅니다.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '521'
 ht-degree: 1%
 
 ---
 
 # 만들기 [!DNL Oracle Eloqua] 플랫폼 UI를 사용한 소스 연결
 
-이 자습서에서는 을(를) 만드는 단계를 제공합니다 [!DNL Oracle Eloqua] Adobe Experience Platform 사용자 인터페이스를 사용한 소스 커넥터.
+이 자습서에서는 을(를) 만드는 단계를 제공합니다 [!DNL Oracle Eloqua] Adobe Experience Platform 사용자 인터페이스를 사용한 소스 연결.
 
 ## 시작하기
 
@@ -30,8 +28,8 @@ ht-degree: 1%
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| 끝점 | 엔드포인트 [!DNL Oracle Eloqua]. |
-| 사용자 이름 | 사용자 이름 [!DNL Oracle Eloqua] 계정이 필요합니다. 사용자 이름은 `siteName + \\ + username`, 위치 `siteName` 은 로그인하는 데 사용한 회사 이름입니다 [!DNL Oracle Eloqua] 및 `username` 은 사용자 이름입니다. 예를 들어 로그인 사용자 이름은 다음과 같습니다. `adobe\\emily`. |
+| 끝점 | 엔드포인트 [!DNL Oracle Eloqua] server. [!DNL Oracle Eloqua] 에서는 여러 데이터 센터를 지원합니다. 끝점을 찾으려면 [[!DNL Oracle Eloqua] 인터페이스](https://login.eloqua.com) 자격 증명으로 만든 다음 리디렉션 URL에서 기본 URL 부분을 복사합니다. URL 패턴의 형식은 입니다 `xxx.xx.eloqua.com` 및 는 `http` 또는 `https`. |
+| 사용자 이름 | 사용자 이름 [!DNL Oracle Eloqua] server. 사용자 이름은 `siteName + \\ + username`, 위치 `siteName` 은 로그인하는 데 사용한 회사 이름입니다 [!DNL Oracle Eloqua] 및 `username` 은 사용자 이름입니다. 예를 들어 로그인 사용자 이름은 다음과 같습니다. `Eloqua\Andy`. **참고**: 단일 백슬래시(`\`Experience Platform UI가 추가 백슬래시( )를 자동으로 추가하므로 UI를 사용할 때`\`) 을 입력합니다. |
 | 암호 | 사용자 [!DNL Oracle Eloqua] 사용자 이름. |
 
 의 인증 자격 증명에 대한 자세한 정보 [!DNL Oracle Eloqua]를 참조하고 [[!DNL Oracle Eloqua] 인증 안내서](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
