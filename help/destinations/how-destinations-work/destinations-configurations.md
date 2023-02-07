@@ -1,9 +1,9 @@
 ---
 title: 대상의 구성 및 공통 내보내기 설정
 description: 대상 수준에서 구성할 수 있는 대상의 내보내기 설정과 수정되어 편집할 수 없는 설정을 알아봅니다.
-source-git-commit: 04322d10a88b27d5641ab9474c8387945aab9982
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
@@ -63,5 +63,7 @@ Experience Platform 대상으로 내보내기 동작을 생각할 때 어떤 구
 ## 다음 단계 {#next-steps}
 
 이 문서를 읽은 후에는 개발자가 개별 대상 수준에서 구성할 수 있는 대상 유형에 공통되는 대상에 대한 내보내기 설정과 활성화 워크플로우에서 사용자가 편집할 수 있는 설정을 알고 있습니다.
+
+다음으로, [대상 유형별 일반 내보내기 동작 패턴](/help/destinations/how-destinations-work/profile-export-behavior.md).
 
 대상 개발자의 경우 다음을 수행할 수 있습니다 [시작하기](/help/destinations/destination-sdk/getting-started.md) Destination SDK 사용. 데이터를 활성화하려는 사용자의 경우, [카탈로그](/help/destinations/catalog/overview.md).

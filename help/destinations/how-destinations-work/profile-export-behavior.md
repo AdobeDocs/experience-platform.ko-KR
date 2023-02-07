@@ -1,9 +1,9 @@
 ---
 title: 프로필 내보내기 동작
 description: Experience Platform 대상에서 지원되는 다양한 통합 패턴에 따라 프로필 내보내기 동작이 어떻게 다른지 알아봅니다.
-source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '2926'
+source-wordcount: '2944'
 ht-degree: 0%
 
 ---
@@ -87,9 +87,9 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
 
 ## 스트리밍 API 기반 대상 {#streaming-api-based-destinations}
 
-facebook, Trade Desk 및 기타 API 기반 통합과 같은 스트리밍 대상에 대한 프로필 내보내기 동작은 위와 동일합니다.
+facebook, Trade Desk 및 기타 API 기반 통합과 같은 스트리밍 대상에 대한 프로필 내보내기 동작은 엔터프라이즈 대상에 대해 위에서 설명한 동작과 매우 유사합니다.
 
-대상 예: 광고, 소셜 등
+스트리밍 대상의 예로는 [소셜 및 광고 카테고리](/help/destinations/destination-types.md#categories) 참조하십시오.
 
 Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후에 프로필에 대한 관련 업데이트가 발생한 경우에만 데이터를 스트리밍 API 기반 대상으로 내보내도록 스트리밍 대상으로의 프로필 내보내기 동작을 최적화합니다. 프로필은 다음과 같은 상황에서 대상에 내보내집니다.
 

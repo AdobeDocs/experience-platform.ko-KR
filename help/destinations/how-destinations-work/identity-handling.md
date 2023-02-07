@@ -1,9 +1,9 @@
 ---
 title: 대상 활성화 워크플로우의 ID 처리
 description: 대상 유형에 따라 활성화 워크플로우에서 ID 내보내기를 처리하는 방법을 알아봅니다
-source-git-commit: 6ccf26cbdbbe675d0d731f59cee589d63ca6f8ad
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1186'
 ht-degree: 1%
 
 ---
@@ -107,3 +107,5 @@ ht-degree: 1%
 이 문서를 읽은 후에는 개별 대상에 대해 지원되거나 필요한 ID를 확인하는 방법을 알 수 있습니다. 또한 각 대상 유형에 대해 ID 선택이 작동하는 방식을 알 수 있습니다.
 
 다음, 어떤 것을 읽을 수 있습니다 [내보내기 설정](/help/destinations/how-destinations-work/destinations-configurations.md) 대상에 대해서는 여러 대상 유형에서 일반적이며, 개발자들이 개별 대상 수준에서 구성할 수 있으며, 활성화 워크플로우에서 사용자가 편집할 수 있는 설정을 지정합니다.
+
+또한, [카탈로그](/help/destinations/catalog/overview.md).
