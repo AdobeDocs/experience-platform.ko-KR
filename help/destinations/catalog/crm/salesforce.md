@@ -3,10 +3,10 @@ keywords: crm;CRM;crm 대상;salesforce crm;salesforce crm 대상
 title: Salesforce CRM 연결
 description: Salesforce CRM 대상을 사용하면 계정 데이터를 내보내고 Salesforce CRM 내에서 활성화하여 비즈니스 요구 사항을 충족할 수 있습니다.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: b243a5f88cadc238ac3edd3bf45a54564598bbf0
+source-git-commit: edf49d8a52eeddea65a18c1dad0035ec7e5d2c12
 workflow-type: tm+mt
-source-wordcount: '2256'
-ht-degree: 1%
+source-wordcount: '3089'
+ht-degree: 0%
 
 ---
 
@@ -39,17 +39,17 @@ Salesforce CRM 대상에 데이터를 활성화하기 전에 [스키마](/help/x
 
 에서 다음 전제 조건을 확인합니다. [!DNL Salesforce CRM]를 입력하여 Platform에서 Salesforce 계정으로 데이터를 내보냅니다.
 
-#### Salesforce 계정이 있어야 합니다. {#prerequisites-account}
+#### 다음을 수행해야 합니다 [!DNL Salesforce] account {#prerequisites-account}
 
-Salesforce로 이동 [재판](https://www.salesforce.com/in/form/signup/freetrial-sales/) Salesforce 계정이 아직 없는 경우 등록하고 만들 페이지입니다.
+로 이동합니다. [!DNL Salesforce] [재판](https://www.salesforce.com/in/form/signup/freetrial-sales/) 페이지를 등록하고 만들 수 있습니다 [!DNL Salesforce] 계정, 아직 없는 경우
 
-#### 연결된 앱 구성 {#prerequisites-connected-app}
+#### 내에서 연결된 앱 구성 [!DNL Salesforce] {#prerequisites-connected-app}
 
-다음으로, [연결된 앱](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&amp;language=en_US&amp;r=https%3A%2F%2Fhelp.salesforce.com%2F&amp;type=5) Salesforce 계정 내에서, 아직 계정이 없는 경우
+먼저 다음을 구성해야 합니다 [[!DNL Salesforce] 연결된 앱](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&amp;language=en_US&amp;r=https%3A%2F%2Fhelp.salesforce.com%2F&amp;type=5) 내 [!DNL Salesforce] 계정, 아직 없는 경우 [!DNL Salesforce CRM] 은 연결된 앱을 활용하여 연결 [!DNL Salesforce].
 
-연결된 앱 내에서 [OAuth 설정](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&amp;type=5&amp;language=en_US) 이 활성화되어 있습니다.
+다음, 활성화 [!DNL OAuth Settings for API Integration] 대상 [!DNL Salesforce connected app]. 자세한 내용은 [[!DNL Salesforce]](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&amp;type=5&amp;language=en_US) 지침 설명서.
 
-또한 [범위](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&amp;type=5&amp;language=en_US) 아래에 언급된 항목이 선택되어 있습니다.
+또한 [범위](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&amp;type=5&amp;language=en_US) 아래에 언급된 항목이 [!DNL Salesforce connected app].
 
 * ``chatter_api``
 * ``lightning``
@@ -62,14 +62,36 @@ Salesforce로 이동 [재판](https://www.salesforce.com/in/form/signup/freetria
 * ``refresh_token``
 * ``offline_access``
 
-#### Salesforce 내에서 사용자 지정 필드 만들기 {#prerequisites-custom-field}
-
-유형의 사용자 지정 필드 만들기 `Text Area Long`: 내에서 세그먼트 상태를 업데이트하는 데 사용할 Experience Platform [!DNL Salesforce CRM].
-자세한 내용은 Salesforce 설명서 를 참조하십시오. [사용자 지정 필드 만들기](https://help.salesforce.com/s/articleView?id=sf.adding_fields.htm&amp;type=5) 추가 지침이 필요한 경우
+마지막으로, `password` 권한 부여가 [!DNL Salesforce] 계정이 필요합니다. 자세한 내용은 [!DNL Salesforce] [특수 시나리오에 대한 OAuth 2.0 사용자 이름-암호 흐름](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&amp;type=5) 도움이 필요한 경우 설명서.
 
 >[!IMPORTANT]
 >
->필드 이름에 공백 문자가 없는지 확인합니다. 대신 밑줄을 사용하십시오 `(_)` 문자를 구분 기호로 사용합니다.
+>만약 [!DNL Salesforce] 계정 관리자가 신뢰할 수 있는 IP 범위에 대한 액세스 권한을 제한하므로 액세스 권한을 받으려면 해당 관리자에게 문의해야 합니다 [Experience Platform IP](/help/destinations/catalog/streaming/ip-address-allow-list.md) 허용 목록에추가된. 자세한 내용은 [!DNL Salesforce] [연결된 앱에 대한 신뢰할 수 있는 IP 범위에 대한 액세스 제한](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) 추가 지침이 필요한 경우 설명서
+
+#### 내에서 사용자 지정 필드 만들기 [!DNL Salesforce] {#prerequisites-custom-field}
+
+세그먼트를 [!DNL Salesforce CRM] 대상에 값을 입력해야 합니다 **[!UICONTROL 매핑 ID]** 활성화된 각 세그먼트에 대한 필드, 즉 **[세그먼트 예약](#schedule-segment-export-example)** 단계.
+
+[!DNL Salesforce CRM] 에서는 Experience Platform에서 들어오는 세그먼트를 올바로 읽고 해석할 수 있고 내에서 세그먼트 상태를 업데이트해야 합니다 [!DNL Salesforce]. 에 대한 Experience Platform 설명서를 참조하십시오. [세그먼트 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md) 세그먼트 상태에 대한 지침이 필요한 경우.
+
+Platform에서 로 활성화하는 각 세그먼트에 대해 [!DNL Salesforce CRM]를 채울 때는 유형의 사용자 지정 필드를 만들어야 합니다 `Text Area (Long)` within [!DNL Salesforce]. 비즈니스 요구 사항에 따라 256~131,072자 사이의 모든 크기의 필드 문자 길이를 정의할 수 있습니다. 자세한 내용은 [!DNL Salesforce] [사용자 지정 필드 유형](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5) 사용자 지정 필드 유형에 대한 추가 정보를 보려면 설명서 페이지를 참조하십시오. 또한 [!DNL Salesforce] 설명서 [사용자 지정 필드 만들기](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) 필드 만들기에 대한 지원이 필요한 경우.
+
+>[!IMPORTANT]
+>
+>필드 이름에 공백 문자를 포함하지 마십시오. 대신 밑줄을 사용하십시오 `(_)` 문자를 구분 기호로 사용합니다.
+>내 [!DNL Salesforce] 사용자 정의 필드를 **[!UICONTROL 필드 이름]** 에 지정된 값과 정확히 일치합니다 **[!UICONTROL 매핑 ID]** 활성화한 각 Platform 세그먼트에 대해 해당됩니다. 예를 들어 아래 스크린샷은 이름이 인 사용자 지정 필드를 보여줍니다. `crm_2_seg`. 세그먼트를 이 대상에 활성화할 때 을(를) 추가합니다. `crm_2_seg` 로서의 **[!UICONTROL 매핑 ID]** Experience Platform의 세그먼트 대상을 이 사용자 지정 필드로 채우기 위해.
+
+의 사용자 지정 필드 작성 예 [!DNL Salesforce], *1단계 - 데이터 유형 선택*에는 아래와 같이 표시됩니다.
+![사용자 지정 필드 만들기를 보여주는 Salesforce UI 스크린샷, 1단계 - 데이터 유형을 선택합니다.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-1.png)
+
+의 사용자 지정 필드 작성 예 [!DNL Salesforce], *2단계 - 사용자 정의 필드의 세부 사항을 입력합니다*에는 아래와 같이 표시됩니다.
+![사용자 지정 필드 만들기를 보여주는 Salesforce UI 스크린샷, 2단계 - 사용자 지정 필드에 대한 세부 사항을 입력합니다.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-2.png)
+
+>[!TIP]
+>
+>* 플랫폼 세그먼트에 사용되는 사용자 지정 필드와 내의 다른 사용자 지정 필드를 구분하려면 [!DNL Salesforce] 사용자 지정 필드를 만들 때 인식할 수 있는 접두어나 접미사를 포함할 수 있습니다. 예를 들어, 대신 `test_segment`, 사용 `Adobe_test_segment` 또는 `test_segment_Adobe`
+>* 에 이미 다른 사용자 지정 필드가 있는 경우 [!DNL Salesforce], Platform 세그먼트와 동일한 이름을 사용하여 에서 세그먼트를 쉽게 식별할 수 있습니다. [!DNL Salesforce].
+
 
 >[!NOTE]
 >
@@ -78,20 +100,24 @@ Salesforce로 이동 [재판](https://www.salesforce.com/in/form/signup/freetria
 >* Salesforce 내에서 이 제한에 도달한 경우, 새 항목 전에 Experience Platform 내의 이전 세그먼트에 대한 세그먼트 상태를 저장하는 데 사용된 사용자 지정 특성을 Salesforce에서 제거해야 합니다 **[!UICONTROL 매핑 ID]** 사용할 수 있습니다.
 
 
-자세한 내용은 Adobe Experience Platform 설명서 을 참조하십시오. [세그먼트 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md) 세그먼트 상태에 대한 지침이 필요한 경우.
-
-#### Salesforce 자격 증명 수집 {#gather-credentials}
+#### 수집 [!DNL Salesforce CRM] 자격 증명 {#gather-credentials}
 
 를 인증하기 전에 아래 항목을 참고하십시오 [!DNL Salesforce CRM] 대상:
 
 | 자격 증명 | 설명 | 예 |
 | --- | --- | --- |
-| <ul><li>Salesforce 도메인 접두사</li></ul> | 자세한 내용은 [Salesforce 도메인 접두사](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) 추가 지침 | <ul><li>도메인이 다음과 같은 경우 강조 표시된 값이 필요합니다.<br> <i>`d5i000000isb4eak-dev-ed`.my.salesforce.com</i></li></ul> |
-| <ul><li>소비자 키</li><li>소비자 비밀</li></ul> | 자세한 내용은 [Salesforce 설명서](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) 추가 지침이 필요한 경우 | <ul><li>r23kxxxxxxxx0z05xxxxxx</code></li><li>ipxxxxxxxxxxT4xxxxxxxxxx</code></li></ul> |
+| `Username` | 사용자 [!DNL Salesforce] 계정 사용자 이름. |  |
+| `Password` | 사용자 [!DNL Salesforce] 계정 암호입니다. |  |
+| `Security Token` | 사용자 [!DNL Salesforce] 나중에 추가할 보안 토큰 [!DNL Salesforce] 연결된 문자열을 생성하여 **[!UICONTROL 암호]** when [대상에 인증](#authenticate).<br> 자세한 내용은 [!DNL Salesforce] 설명서 [보안 토큰 재설정](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&amp;type=5) 재생하는 방법을 배우다 [!DNL Salesforce] 보안 토큰이 없는 경우에는 인터페이스에 표시되지 않습니다. |  |
+| `Custom Domain` | 사용자 [!DNL Salesforce] 도메인 접두사. <br> 자세한 내용은 [[!DNL Salesforce] 설명서](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) 이 값을 [!DNL Salesforce] 인터페이스. | 만약 [!DNL Salesforce] 도메인:<br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> 필요한 경우 `d5i000000isb4eak-dev-ed` 를 값으로 채우는 방법을 설명합니다. |
+| `Client ID` | Salesforce `Consumer Key`. <br> 자세한 내용은 [[!DNL Salesforce] 설명서](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) 이 값을 [!DNL Salesforce] 인터페이스. |  |
+| `Client Secret` | Salesforce `Consumer Secret`. <br> 자세한 내용은 [[!DNL Salesforce] 설명서](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) 이 값을 [!DNL Salesforce] 인터페이스. |  |
 
 ### 가드레일 {#guardrails}
 
-Salesforce는 요청, 비율 및 시간 제한 제한을 적용하여 트랜잭션 로드 잔액을 조정합니다. 자세한 내용은 [API 요청 제한 및 할당](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm) 자세한 내용
+[!DNL Salesforce] 요청, 비율 및 시간 제한 제한을 적용하여 트랜잭션 로드 잔액 조정. 자세한 내용은 [API 요청 제한 및 할당](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm) 자세한 내용
+
+만약 [!DNL Salesforce] 계정 관리자가 IP 제한을 적용했습니다. [Experience Platform IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md) 아래와 같이 [!DNL Salesforce] 계정의 신뢰할 수 있는 IP 범위입니다. 자세한 내용은 [!DNL Salesforce] [연결된 앱에 대한 신뢰할 수 있는 IP 범위에 대한 액세스 제한](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) 추가 지침이 필요한 경우 설명서
 
 >[!IMPORTANT]
 >
@@ -128,26 +154,23 @@ Salesforce는 요청, 비율 및 시간 제한 제한을 적용하여 트랜잭�
 
 ### 대상에 인증 {#authenticate}
 
-대상을 인증하려면 필요한 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**.
+대상을 인증하려면 아래 필수 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**. 자세한 내용은 [수집 [!DNL Salesforce CRM] 자격 증명](#gather-credentials) 섹션을 참조하십시오.
+| 자격 증명 | 설명 | | — | — | | **[!UICONTROL 사용자 이름]** | 사용자 [!DNL Salesforce] 계정 사용자 이름. | | **[!UICONTROL 암호]** | 로 구성된 연결된 문자열 [!DNL Salesforce] 계정 암호가 추가됨 [!DNL Salesforce] 보안 토큰.<br>연결된 값은 `{PASSWORD}{TOKEN}`.<br> 중괄호나 공백은 사용하지 마십시오.<br>예를 들어 [!DNL Salesforce] 암호: `MyPa$$w0rd123` 및 [!DNL Salesforce] 보안 토큰은 `TOKEN12345....0000`와 연결된 값에서 사용할 **[!UICONTROL 암호]** 필드: `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL 사용자 지정 도메인]** | 사용자 [!DNL Salesforce] 도메인 접두사. <br>예를 들어 도메인이 *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, 다음을 제공해야 합니다. `d5i000000isb4eak-dev-ed` 를 값으로 채우는 방법을 설명합니다. | | **[!UICONTROL 클라이언트 ID]** | 사용자 [!DNL Salesforce] 연결된 앱 `Consumer Key`. | | **[!UICONTROL 클라이언트 암호]** | 사용자 [!DNL Salesforce] 연결된 앱 `Consumer Secret`. |
 
 ![인증 방법을 보여주는 Platform UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
-
-* **[!UICONTROL 암호]**: Salesforce 계정 암호입니다.
-* **[!UICONTROL 사용자 지정 도메인]**: Salesforce 도메인입니다.
-* **[!UICONTROL 클라이언트 ID]**: Salesforce에 연결된 앱 소비자 키입니다.
-* **[!UICONTROL 클라이언트 암호]**: Salesforce가 연결된 앱 소비자 암호입니다.
-* **[!UICONTROL 사용자 이름]**: Salesforce 계정 사용자 이름입니다.
 
 제공된 세부 정보가 유효한 경우 UI에 **[!UICONTROL 연결됨]** 녹색 확인 표시가 있는 상태에서 다음 단계로 진행할 수 있습니다.
 
 ### 대상 세부 사항 채우기 {#destination-details}
 
 대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
-![대상 세부 사항을 보여주는 Platform UI 스크린샷.](../../assets/catalog/crm/salesforce/destination-details.png)
-
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL Salesforce ID 유형]**: 선택 **[!UICONTROL 연락처]** 내보내거나 업데이트하려는 ID가 유형인 경우 *연락처*. 선택 **[!UICONTROL 리드]** 내보내거나 업데이트하려는 ID가 유형인 경우 *리드*.
+* **[!UICONTROL Salesforce ID 유형]**:
+   * 선택 **[!UICONTROL 연락처]** 내보내거나 업데이트하려는 ID가 유형인 경우 *연락처*.
+   * 선택 **[!UICONTROL 리드]** 내보내거나 업데이트하려는 ID가 유형인 경우 *리드*.
+
+![대상 세부 사항을 보여주는 Platform UI 스크린샷.](../../assets/catalog/crm/salesforce/destination-details.png)
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -165,68 +188,64 @@ Salesforce는 요청, 비율 및 시간 제한 제한을 적용하여 트랜잭�
 
 ### 매핑 고려 사항 및 예 {#mapping-considerations-example}
 
-대상 데이터를 Adobe Experience Platform에서 로 올바로 보내려면 [!DNL Salesforce CRM] 대상, 필드 매핑 단계를 거쳐야 합니다. 매핑은 플랫폼 계정의 Experience Data Model(XDM) 스키마 필드와 대상 대상의 해당 상당 요소 간에 링크를 만드는 작업으로 이루어집니다. XDM 필드를 [!DNL Salesforce CRM] 대상 필드: 다음 단계를 수행합니다.
+대상 데이터를 Adobe Experience Platform에서 로 올바로 보내려면 [!DNL Salesforce CRM] 대상, 필드 매핑 단계를 거쳐야 합니다. 매핑은 플랫폼 계정의 Experience Data Model(XDM) 스키마 필드와 대상 대상의 해당 상당 요소 간에 링크를 만드는 작업으로 이루어집니다.
+
+에 지정된 속성 **[!UICONTROL Target 필드]** 이 속성은 요청 본문을 형성하므로 속성 매핑 테이블에 설명된 대로 이름을 정확히 지정해야 합니다.
+
+에 지정된 속성 **[!UICONTROL 소스 필드]** 그러한 제한 사항을 따르지 마십시오. 필요에 따라 매핑할 수 있지만 입력 데이터의 형식이 [[!DNL Salesforce] 설명서](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5). 입력 데이터가 올바르지 않으면 업데이트 호출에서 [!DNL Salesforce] 에 장애가 발생하여 연락처/리드가 업데이트되지 않습니다.
+
+XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드: 다음 단계를 수행합니다.
 
 1. 에서 **[!UICONTROL 매핑]** 단계, 선택 **[!UICONTROL 새 매핑 추가]**이면 화면에 새 매핑 행이 표시됩니다.
    ![새 매핑 추가에 대한 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/add-new-mapping.png)
+1. 에서 **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 속성 선택]** 카테고리를 선택하고 XDM 속성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]** id를 선택합니다.
+1. 에서 **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]** ID를 선택하거나 **[!UICONTROL 사용자 지정 속성 선택]** 카테고리를 선택하고 속성을 선택하거나 속성을 사용하여 속성을 정의합니다 **[!UICONTROL 속성 이름]** 필요한 경우 필드를 추가합니다. 자세한 내용은 [[!DNL Salesforce CRM] 설명서](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5) 를 참조하십시오.
+   * 다음 단계를 반복하여 XDM 프로필 스키마와 [!DNL (API) Salesforce CRM]:
 
-1. 에서 **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]** 또는 **[!UICONTROL 속성 선택]** 카테고리를 선택하고 `crmID`.
-   ![소스 매핑에 대한 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/source-mapping.png)
-
-1. 에서 **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]** 카테고리를 선택하고 `SalesforceId`.
-   ![SalesforceId에 대한 Target 매핑을 보여주는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/target-mapping-salesforceid.png)
-
-   * XDM 프로필 스키마와 프로필 스키마 사이에 다음 매핑을 추가합니다 [!DNL Salesforce CRM] 인스턴스:
-   | XDM 프로필 스키마 | [!DNL Salesforce CRM] 인스턴스 | 필수입니다 |
-   |---|---|---|
-   | `crmID` | `SalesforceId` | 예 |
-
-   * **[!UICONTROL 사용자 지정 속성 선택]**: 소스 필드를 **[!UICONTROL 속성 이름]** 필드. 자세한 내용은 [[!DNL Salesforce CRM] 설명서](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5) 를 참조하십시오.
-      ![LastName에 대한 Target 매핑을 보여주는 Platform UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/target-mapping-lastname.png)
+   **연락처 작업**
 
    * 작업 중인 경우 *연락처* 세그먼트 내에서 Salesforce의 개체 참조 를 참조하십시오 [연락처](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) 업데이트할 필드에 대한 매핑을 정의하려면
    * 단어를 검색하여 필수 필드를 식별할 수 있습니다 *필수 여부*- 위의 링크에 있는 필드 설명에 나와 있습니다.
-   * 내보내거나 업데이트할 필드에 따라 XDM 프로필 스키마와 사용자 간에 매핑을 추가합니다 [!DNL Salesforce CRM] 인스턴스:
-
-   | XDM 프로필 스키마 | [!DNL Salesforce CRM] 인스턴스 | 참고 |
-   | --- | --- | --- |
-   | `person.name.lastName` | `LastName` | `Required` 질문에 답합니다. 연락처의 성은 최대 80자입니다. |
-   | `person.name.firstName` | `FirstName` | 연락처의 이름은 최대 40자입니다. |
-   | `personalEmail.address` | `Email` | 연락처의 이메일 주소입니다. |
+   * 내보내거나 업데이트할 필드에 따라 XDM 프로필 스키마와 [!DNL (API) Salesforce CRM]: |원본 필드|Target 필드| 메모 | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 연락처의 성은 최대 80자입니다. |\
+      |`xdm: person.name.firstName`|`Attribute: FirstName`| 연락처의 이름을 최대 40자까지 사용할 수 있습니다. | |`xdm: personalEmail.address`|`Attribute: Email`| 연락처의 이메일 주소입니다. |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
       ![Target 매핑을 보여주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
+   **리드 작업**
+
    * 작업 중인 경우 *리드* 세그먼트 내에서 Salesforce의 개체 참조 를 참조하십시오 [리드](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) 업데이트할 필드에 대한 매핑을 정의하려면
    * 단어를 검색하여 필수 필드를 식별할 수 있습니다 *필수 여부*- 위의 링크에 있는 필드 설명에 나와 있습니다.
-   * 내보내거나 업데이트할 필드에 따라 XDM 프로필 스키마와 사용자 간에 매핑을 추가합니다 [!DNL Salesforce CRM] 인스턴스:
-
-   | XDM 프로필 스키마 | [!DNL Salesforce CRM] 인스턴스 | 참고 |
-   | --- | --- | --- |
-   | `person.name.lastName` | `LastName` | `Required` 질문에 답합니다. 연락처의 성은 최대 80자입니다. |
-   | `b2b.companyName` | `Company` | `Required` 질문에 답합니다. 납의 회사입니다. |
-   | `personalEmail.address` | `Email` | 연락처의 이메일 주소입니다. |
+   * 내보내거나 업데이트할 필드에 따라 XDM 프로필 스키마와 [!DNL (API) Salesforce CRM]: |원본 필드|Target 필드| 메모 | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 리드의 성은 최대 80자입니다. |\
+      |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. 납의 회사입니다. | |`xdm: personalEmail.address`|`Attribute: Email`| 잠재 고객의 이메일 주소입니다. |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
       ![Target 매핑을 보여주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/mappings-leads.png)
 
 
 
+대상 연결에 대한 매핑 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
 ### 세그먼트 내보내기 예약 및 예제 {#schedule-segment-export-example}
 
-다음을 수행할 때 [세그먼트 내보내기 예약](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 단계는 Platform 세그먼트를 Salesforce의 사용자 지정 필드 속성에 수동으로 매핑해야 합니다.
+다음을 수행할 때 [세그먼트 내보내기 예약](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 단계는 Platform에서 활성화된 세그먼트를 의 해당 사용자 지정 필드에 수동으로 매핑해야 합니다. [!DNL Salesforce].
 
-이렇게 하려면 각 세그먼트를 선택한 다음 Salesforce의 해당 사용자 지정 필드 속성을 **[!UICONTROL 매핑 ID]** 필드.
+이렇게 하려면 각 세그먼트를 선택한 다음 사용자 지정 필드 이름을 입력합니다 [!DNL Salesforce] 에서 [!DNL Salesforce CRM] **[!UICONTROL 매핑 ID]** 필드. 자세한 내용은 [내에서 사용자 지정 필드 만들기 [!DNL Salesforce]](#prerequisites-custom-field) 의 사용자 지정 필드 만들기에 대한 지침 및 우수 사례 섹션을 참조하십시오. [!DNL Salesforce].
 
->[!IMPORTANT]
->
->* 에 사용되는 값 **[!UICONTROL 매핑 ID]** 는 Salesforce 내에서 만든 사용자 지정 필드 속성의 이름과 정확히 일치해야 합니다.
->* Salesforce에서 만든 사용자 지정 필드 특성의 이름이 공백 문자를 사용하지 않는지 확인합니다.
+예를 들어 [!DNL Salesforce] 사용자 지정 필드 `crm_2_seg`에서 이 값을 지정합니다. [!DNL Salesforce CRM] **[!UICONTROL 매핑 ID]** Experience Platform의 세그먼트 대상을 이 사용자 지정 필드로 채우기 위해.
 
+사용자 정의 필드 예 [!DNL Salesforce] 아래와 같이 표시됩니다.
+![[!DNL Salesforce] 사용자 지정 필드를 보여주는 UI 스크린샷.](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)
 
-예는 다음과 같습니다.
+의 위치를 나타내는 예 [!DNL Salesforce CRM] **[!UICONTROL 매핑 ID]** 아래와 같이 표시됩니다.
 ![Platform UI 스크린샷 예 - 세그먼트 내보내기 예약](../../assets/catalog/crm/salesforce/schedule-segment-export.png)
+
+위에 표시된 대로 [!DNL Salesforce] **[!UICONTROL 필드 이름]** 에 지정된 값과 정확히 일치합니다 [!DNL Salesforce CRM] **[!UICONTROL 매핑 ID]**.
+
+사용 사례에 따라 활성화된 모든 세그먼트를 동일한 세그먼트에 매핑할 수 있습니다 [!DNL Salesforce] 사용자 지정 필드 또는 다른 **[!UICONTROL 필드 이름]** in [!DNL Salesforce CRM]. 위에 표시된 이미지를 기반으로 한 일반적인 예는 일 수 있습니다.
+| [!DNL Salesforce CRM] 세그먼트 이름 | [!DNL Salesforce] **[!UICONTROL 필드 이름]** | [!DNL Salesforce CRM] **[!UICONTROL 매핑 ID]** | | — | — | — | | crm_1_seg | `crm_1_seg` | `crm_1_seg` | | crm_2_seg | `crm_2_seg` | `crm_2_seg` |
+
+활성화된 각 Platform 세그먼트에 대해 이 섹션을 반복합니다.
 
 ## 데이터 내보내기의 유효성 검사 {#exported-data}
 
@@ -245,17 +264,23 @@ Salesforce는 요청, 비율 및 시간 제한 제한을 적용하여 트랜잭�
    ![세그먼트를 보여주는 Platform UI 스크린샷 예.](../../assets/catalog/crm/salesforce/segment.png)
 
 1. 마지막으로 Salesforce 웹 사이트에 로그인하고 세그먼트의 프로필이 추가되었는지 또는 업데이트되었는지 확인합니다.
-   * 만약 *연락처* platform 세그먼트 내에서 **[!DNL Apps]** > **[!DNL Contacts]** 페이지.
+
+   **연락처 작업**
+
+   * 선택한 경우 *연락처* platform 세그먼트 내에서 **[!DNL Apps]** > **[!DNL Contacts]** 페이지.
       ![Salesforce CRM 스크린샷에서는 세그먼트의 프로필이 있는 연락처 페이지를 보여줍니다.](../../assets/catalog/crm/salesforce/contacts.png)
 
    * 선택 *연락처* 및 필드가 업데이트되었는지 확인합니다. 에서 각 세그먼트 상태를 확인할 수 있습니다. [!DNL Salesforce CRM] 이(가) **[!UICONTROL 매핑 ID]** 다음 기간 동안 제공된 값 [세그먼트 예약](#schedule-segment-export-example).
       ![업데이트된 세그먼트 상태가 있는 연락처 세부 사항 페이지를 보여주는 Salesforce CRM 스크린샷입니다.](../../assets/catalog/crm/salesforce/contact-info.png)
 
-   * 만약 *리드* platform 세그먼트 내에서 **[!DNL Apps]** > **[!DNL Leads]** 페이지.
+   **리드 작업**
+
+   * 선택한 경우 *리드* platform 세그먼트 내에서 **[!DNL Apps]** > **[!DNL Leads]** 페이지.
       ![세그먼트의 프로필이 있는 리드 페이지를 보여주는 Salesforce CRM 스크린샷입니다.](../../assets/catalog/crm/salesforce/leads.png)
 
    * 선택 *리드* 및 필드가 업데이트되었는지 확인합니다. 에서 각 세그먼트 상태를 확인할 수 있습니다. [!DNL Salesforce CRM] 이(가) **[!UICONTROL 매핑 ID]** 다음 기간 동안 제공된 값 [세그먼트 예약](#schedule-segment-export-example).
       ![업데이트된 세그먼트 상태가 있는 리드 세부 사항 페이지를 보여주는 Salesforce CRM 스크린샷입니다.](../../assets/catalog/crm/salesforce/lead-info.png)
+
 
 ## 데이터 사용 및 거버넌스 {#data-usage-governance}
 
@@ -265,11 +290,14 @@ Salesforce는 요청, 비율 및 시간 제한 제한을 적용하여 트랜잭�
 
 ### 이벤트를 대상으로 푸시하는 동안 알 수 없는 오류가 발생했습니다. {#unknown-errors}
 
-데이터 흐름 실행을 확인할 때 다음 오류 메시지가 표시되는 경우 `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
+* 데이터 흐름 실행을 확인할 때 다음 오류 메시지가 표시될 수 있습니다. `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
 
-![오류를 보여주는 Platform UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/error.png)
+   ![오류를 보여주는 Platform UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/error.png)
 
-이 오류를 해결하려면 **[!UICONTROL 매핑 ID]** 에 제공됨 [!DNL Salesforce CRM] 플랫폼 세그먼트가 유효하며 다음 내에 있음 [!DNL Salesforce CRM].
+   * 이 오류를 해결하려면 **[!UICONTROL 매핑 ID]** 활성화 워크플로우에서 [!DNL Salesforce CRM] 대상은 에서 생성한 사용자 지정 필드 유형의 값과 정확히 일치합니다 [!DNL Salesforce]. 자세한 내용은 [내에서 사용자 지정 필드 만들기 [!DNL Salesforce]](#prerequisites-custom-field) 섹션을 참조하십시오.
+
+* 세그먼트를 활성화할 때 오류 메시지가 표시될 수 있습니다. `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
+   * 이 오류를 해결하려면 [!DNL Salesforce] 계정 관리자 추가 [Experience Platform IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md) 아래와 같이 [!DNL Salesforce] 계정의 신뢰할 수 있는 IP 범위입니다. 자세한 내용은 [!DNL Salesforce] [연결된 앱에 대한 신뢰할 수 있는 IP 범위에 대한 액세스 제한](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) 추가 지침이 필요한 경우 설명서
 
 ## 추가 리소스 {#additional-resources}
 
