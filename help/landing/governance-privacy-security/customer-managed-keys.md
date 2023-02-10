@@ -2,9 +2,9 @@
 title: Adobe Experience Platform의 고객 관리 키
 description: Adobe Experience Platform에 저장된 데이터에 대해 고유한 암호화 키를 설정하는 방법을 알아봅니다.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 47b3de5035f93f8a4288a0fec0a9111a979d7442
+source-git-commit: ca92839bd2a775ae323da5d5d0750b2026f8052d
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1618'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Adobe Experience Platform의 고객 관리 키
 
 Adobe Experience Platform에 저장된 데이터는 시스템 수준 키를 사용하여 나머지 위치에서 암호화됩니다. 플랫폼 위에 구축된 응용 프로그램을 사용하는 경우 대신 고유한 암호화 키를 사용하도록 선택할 수 있으므로 데이터 보안을 더욱 강화할 수 있습니다.
+
+>[!NOTE]
+>
+>Adobe Experience Platform 데이터 레이크 및 프로필 저장소(CosmosDB)의 데이터는 CMK를 사용하여 암호화됩니다.
 
 이 문서에서는 Platform에서 고객 관리 키(CMK) 기능을 활성화하는 프로세스에 대해 설명합니다.
 
