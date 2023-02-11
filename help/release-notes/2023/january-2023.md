@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2023년 1월
 description: Adobe Experience Platform에 대한 2023년 1월 릴리스 노트입니다.
-source-git-commit: c60c58e563a324c4f8f90eac04686f2190e8448d
+source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
 workflow-type: tm+mt
-source-wordcount: '2444'
+source-wordcount: '2432'
 ht-degree: 6%
 
 ---
@@ -130,7 +130,7 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 
 | 기능 | 설명 |
 | --- | --- |
-| 문자열 필드에 대해 제안된 값 비활성화 | 이제 다음을 수행할 수 있습니다 [문자열 필드에 대해 개별 제안 값 비활성화](../../xdm/ui/fields/enum.md) 에서 [!UICONTROL 스키마] 표준 구성 요소의 작업 공간을 포함합니다. 이 기능은 제안된 값이 있는 필드에만 사용할 수 있으며 열거형 제약 조건에는 지원되지 않습니다. |
+| 스키마 트리 표시 이름 개선 | 이전에는 필드 이름이 UI에 표시되었지만 이제 스키마 캔버스에서 스키마 필드의 표시 이름을 읽기 쉽게 할 수 있었습니다. |
 
 **새로운 XDM 구성 요소**
 
