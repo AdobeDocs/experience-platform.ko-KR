@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 작성된 제품 대상 검토를 위해 제출하는 모든 정보를 제공합니다.
 title: Destination SDK에서 작성된 제품 대상 검토를 위해 제출
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 1eab40687c599d37c71b919bc3a4aeae274b0a49
+source-git-commit: 73f1faaffd4a77c9c09eccf00d5a0ff98580b232
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,8 @@ ht-degree: 0%
 
 이 페이지에는 Adobe Experience Platform Destination SDK을 사용하여 작성된 대상을 제출하거나 업데이트할 때 제공하는 모든 정보가 나열됩니다. Adobe Experience Platform에서 대상을 성공적으로 제출하려면 전자 메일을 로 보내십시오 <aepdestsdk@adobe.com> 에는 다음이 포함됩니다.
 
-* 대상이 해결하는 사용 사례에 대한 설명입니다. 기존 대상 구성을 업데이트하는 경우에는 필요하지 않습니다.
+* 대상이 해결하는 사용 사례에 대한 설명입니다. 새 대상 구성을 제출하는 경우에만 필요합니다.
+* 대상 제출 이유에 대한 설명입니다. 기존 대상 구성을 업데이트하는 경우에만 필요합니다.
 * 테스트 대상 API 종단점을 사용하여 대상에 대한 HTTP 호출을 수행한 후 결과를 테스트합니다. 대상 종단점에 대한 API 호출 및 대상 종단점에서 수신된 API 응답을 Adobe과 공유하십시오.
 * 파일 기반 대상에 대한 추가 요구 사항:
    * 테스트 API를 사용한 후 요청 및 응답 샘플을 공유하십시오. [샘플 프로필로 파일 기반 대상 테스트](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
@@ -46,6 +47,14 @@ ht-degree: 0%
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): 고객 목록, 사이트를 방문한 사람 또는 Pinterest의 콘텐츠와 이미 상호 작용한 사람으로 대상을 만듭니다.
 * [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX API는 VMG(Verizon Media)에서 이메일 주소를 키로 사용하는 특정 대상 그룹을 타겟팅하려는 광고주가 VMG의 근실시간 API를 사용하여 새로운 세그먼트를 신속하게 생성하고 원하는 대상 그룹을 푸시할 수 있습니다.
+
+## 업데이트 이유 {#reason-for-update}
+
+>[!NOTE]
+>
+>이 섹션은 기존 구성을 업데이트하는 경우에만 필요합니다.
+
+제출이 기존 대상에 대해 해결할 문제에 대한 간단한 설명을 제공합니다. 예를 들어, 베타에서 일반 가용성으로 이동할 때 제출 서류에서는 대상의 이름, 설명 및 로고를 업데이트할 수 있습니다. 또는 제출 시 대상 구성에서 발견된 버그를 수정할 수 있습니다.
 
 ## 테스트 대상 API 사용 후 결과 테스트 {#testing-api-response}
 
