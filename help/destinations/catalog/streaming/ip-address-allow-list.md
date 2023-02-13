@@ -4,7 +4,7 @@ title: 스트리밍 대상을 허용 목록에 추가하다 위한 IP 주소
 type: Documentation
 description: 이 페이지에서는 Experience Platform에서 HTTP REST API 엔드포인트, Amazon Kinesis 또는 Azure 이벤트 허브 인스턴스로 데이터를 안전하게 내보내기 위해 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 8ea871d3ba66b9ee1a864a6319cde21f518f4534
+source-git-commit: 4d71e246c8ce92cbdae4d248568cf32ab44ac82a
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 0%
@@ -68,6 +68,7 @@ Adobe은 이 페이지에서 위에 허용 목록에 추가하다 언급된 대�
 `40.74.7.208/28`
 `52.142.236.87`
 `20.50.23.153`
+`20.101.246.9`
 `40.74.4.144/28`
 `40.74.7.160/28`
 `40.74.3.176/28`
