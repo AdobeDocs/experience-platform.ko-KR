@@ -4,9 +4,9 @@ title: 대상자 데이터를 활성화하여 묶음 프로필 내보내기 대�
 type: Tutorial
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 9bde403338187409892d76de68805535de03d59f
+source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
 workflow-type: tm+mt
-source-wordcount: '3537'
+source-wordcount: '3595'
 ht-degree: 0%
 
 ---
@@ -466,6 +466,11 @@ Adobe은 다음과 같은 ID 네임스페이스를 선택할 것을 권장합니
 ![검토 단계의 선택 요약](/help/destinations/assets/ui/activate-batch-profile-destinations/review.png)
 
 ### 동의 정책 평가 {#consent-policy-evaluation}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="적용 가능한 동의 정책 보기"
+>abstract="조직에서 구입한 경우 **Adobe 의료 보호** 또는 **Adobe 개인 정보 보호 및 보안 차단**, 선택 **[!UICONTROL 적용 가능한 동의 정책 보기]** 적용된 동의 정책 및 그 결과로 활성화에 포함되는 프로필 수를 확인하려면 다음을 수행하십시오. 회사에서 위에 언급된 SKU에 액세스할 수 없는 경우 이 컨트롤을 사용할 수 없습니다."
 
 조직에서 구입한 경우 **Adobe 의료 보호** 또는 **Adobe 개인 정보 보호 및 보안 차단**, 선택 **[!UICONTROL 적용 가능한 동의 정책 보기]** 적용된 동의 정책 및 그 결과로 활성화에 포함되는 프로필 수를 확인하려면 다음을 수행하십시오. 자세한 내용 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 추가 정보.
 
