@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 경험 이벤트 만료
 description: 이 문서에서는 Adobe Experience Platform 데이터 세트 내에 있는 개별 Experience Event에 대한 만료 시간 구성에 대한 일반적인 지침을 제공합니다.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0fce883528abc62075914abc4a8f81d2bff8f2e6
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience Platform에서에 활성화된 데이터 집합에 수집되는
 프로필 사용 데이터 세트에 Experience Event 만료가 활성화되면 Platform은 두 단계 프로세스에서 캡처된 각 이벤트에 대한 만료 값을 자동으로 적용합니다.
 
 1. 데이터 집합에 수집되는 모든 새 데이터에는 이벤트 타임스탬프를 기반으로 수집 시 만료 값이 적용됩니다.
-1. 데이터 집합에 있는 모든 기존 데이터의 만료 값이 일회성 채우기 시스템 작업으로 소급하여 적용됩니다. 만료 값이 데이터 세트에 배치되면 시스템 작업이 실행되는 즉시 만료 값보다 오래된 이벤트가 삭제됩니다. 다른 모든 이벤트는 이벤트 타임스탬프에서 만료 값에 도달하는 즉시 삭제됩니다.
+1. 데이터 집합에 있는 모든 기존 데이터의 만료 값이 일회성 채우기 시스템 작업으로 소급하여 적용됩니다. 만료 값이 데이터 세트에 배치되면 시스템 작업이 실행되는 즉시 만료 값보다 오래된 이벤트가 삭제됩니다. 다른 모든 이벤트는 이벤트 타임스탬프에서 만료 값에 도달하는 즉시 삭제됩니다. 모든 경험 이벤트가 제거되면 프로필에 더 이상 프로필 속성이 없으면 프로필이 더 이상 존재하지 않습니다.
 
 >[!WARNING]
 >
