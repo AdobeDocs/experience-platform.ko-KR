@@ -1,14 +1,15 @@
 ---
-title: 데이터 스트림 구성
+title: 데이터스트림 구성
 description: 클라이언트측 Experience Platform SDK 통합 기능을 Adobe 제품 및 서드파티 대상과 연결합니다.
-source-git-commit: 82703fae72e8637bb7d5e08a6699d9e1466afd8b
+exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
+source-git-commit: aa271fed242d03ecac6025721c2566a3b550b6bb
 workflow-type: tm+mt
 source-wordcount: '1658'
 ht-degree: 3%
 
 ---
 
-# 데이터 스트림 구성
+# 데이터스트림 구성
 
 이 문서에서는 [데이터 스트림](./overview.md) ( UI) 아래에 그룹화됩니다.
 
@@ -28,7 +29,7 @@ ht-degree: 3%
 
 데이터 스트림을 만들려면 먼저 **[!UICONTROL 새 데이터 스트림]**.
 
-![새 데이터 스트림 선택](../assets/datastreams/configure/new-datastream-button.png)
+![새 데이터스트림](../assets/datastreams/configure/new-datastream-button.png)을 선택합니다
 
 구성 단계에서 시작하여 데이터 스트림 만들기 워크플로우가 나타납니다. 여기에서 데이터 스트림에 대한 이름과 선택적 설명을 제공해야 합니다.
 
@@ -38,11 +39,11 @@ Experience Platform에서 사용하도록 이 데이터 스트림을 구성하�
 
 선택 **[!UICONTROL 고급 옵션]** 데이터 스트림을 구성하는 추가 컨트롤을 표시하려면 다음을 수행하십시오.
 
-![고급 구성 옵션](../assets/datastreams/configure/advanced-options.png)
+![고급 구성 옵션](../assets/datastreams/configure/advanced-options.png) {#advanced-options}
 
 | 설정 | 설명 |
 | --- | --- |
-| [!UICONTROL 지리적 위치] | 사용자의 IP 주소를 기준으로 GPS 조회가 발생하는지 여부를 결정합니다. 기본 설정 **[!UICONTROL 없음]** GPS 조회가 비활성화되고 **[!UICONTROL 구/군/시]** 설정은 GPS 좌표를 소수점 이하 두 자리로 제공합니다. |
+| [!UICONTROL 지리적 위치] | 사용자의 IP 주소를 기준으로 지역 조회가 발생하는지 여부를 결정합니다. 기본 설정 **[!UICONTROL 없음]** 는 모든 지역 조회를 비활성화하는 반면, **[!UICONTROL 구/군/시]** 설정은 GPS 좌표를 소수점 이하 두 자리로 제공합니다. |
 | [!UICONTROL 자사 ID 쿠키] | 이 설정이 활성화되면 Edge Network에 [자사 장치 ID](../identity/first-party-device-ids.md)를 채우는 것이 좋습니다.<br><br>이 설정을 활성화할 때 ID가 저장되어야 하는 쿠키의 이름을 제공해야 합니다. |
 | [!UICONTROL 타사 ID 동기화] | ID 동기화를 컨테이너로 그룹화하여 다른 시간에 다른 ID 동기화를 실행할 수 있습니다. 이 설정을 사용하면 이 데이터 스트림에 대해 실행 중인 ID 동기화 컨테이너를 지정할 수 있습니다. |
 | [!UICONTROL 액세스 유형] | 에지 네트워크에서 데이터 스트림에 대해 허용하는 인증 유형을 정의합니다. <ul><li>**[!UICONTROL 혼합 인증]**: 이 옵션을 선택하면 Edge Network에서 인증된 요청과 인증되지 않은 요청을 모두 허용합니다. 웹 SDK를 사용할 계획이나 [Mobile SDK](https://aep-sdks.gitbook.io/docs/)와 함께 [서버 API](../../server-api/overview.md). </li><li>**[!UICONTROL 인증만]**: 이 옵션을 선택하면 에지 네트워크에서 인증된 요청만 허용합니다. 서버 API만 사용하고 인증되지 않은 요청이 Edge Network에 의해 처리되지 않도록 하려면 이 옵션을 선택합니다.</li></ul> |
