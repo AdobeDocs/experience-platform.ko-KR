@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK 도움말
 breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
-source-git-commit: 1b0f1e2e1625f6994a6e09bd086e4b63a3e8d4ab
+source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 33%
+source-wordcount: '209'
+ht-degree: 34%
 
 ---
 
@@ -29,8 +29,11 @@ ht-degree: 33%
    * [사용자 에이전트 클라이언트 힌트](fundamentals/user-agent-client-hints.md)
 * 데이터스트림 {#datastreams}
    * [개요](./datastreams/overview.md)
-   * [데이터 스트림 구성](./datastreams/configure.md)
+   * [데이터스트림 구성](./datastreams/configure.md)
    * [데이터 수집을 위한 데이터 준비](./datastreams/data-prep.md)
+   * 데이터 보강 {#data-enrichment}
+      * [기상채널별 기상정보](./datastreams/data-enrichment/weather.md)
+      * [날씨 데이터 필드 매핑](./datastreams/data-enrichment/weather-reference.md)
 * 신원 {#identity}
    * [개요](identity/overview.md)
    * [자사 장치 ID](identity/first-party-device-ids.md)
@@ -69,7 +72,7 @@ ht-degree: 33%
       * [태그와 통합](consent/iab-tcf/with-launch.md)
       * [태그 없이 통합](consent/iab-tcf/without-launch.md)
 * 웹 SDK 태그 확장 {#extension}
-   * [웹 SDK 확장](extension/web-sdk-extension-configuration.md)
+   * [Web SDK 확장](extension/web-sdk-extension-configuration.md)
    * [이벤트 유형](extension/event-types.md)
    * [작업 유형](extension/action-types.md)
    * [데이터 요소 유형](extension/data-element-types.md)
