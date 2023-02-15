@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API 엔드포인트 예약
 description: 예약은 하루에 한 번 배치 세그먼테이션 작업을 자동으로 실행하는 데 사용할 수 있는 도구입니다.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e24a2ba0321ebaa8e91f96477f58bfa4915f47ce
 workflow-type: tm+mt
 source-wordcount: '2011'
 ht-degree: 3%
@@ -307,7 +307,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
     {
         "op":"add",
         "path":"/schedule",
-        "value":"0 0 2 * *"
+        "value":"0 0 2 * * ?"
     }
 ]'
 ```
