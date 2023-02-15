@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;홈;인기 항목;ID 그래프 뷰어;ID 그래프 뷰어;그래프 뷰어;그래프 뷰어;ID 네임스페이스;ID 네임스페이스;ID;ID;ID 서비스;ID 서비스
-solution: Experience Platform
-title: ID 그래프 뷰어 개요
+title: ID 그래프 뷰어
 description: ID 그래프는 특정 고객에 대해 서로 다른 ID 간의 관계 맵으로서, 고객이 다른 채널에서 브랜드와 상호 작용하는 방법을 시각적으로 보여줍니다.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
+source-git-commit: 4bf939011e6246a553f67805ff99a70610782ea6
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1388'
 ht-degree: 1%
 
 ---
 
-# ID 그래프 뷰어 개요
+# ID 그래프 뷰어
 
 ID 그래프는 특정 고객에 대해 서로 다른 ID 간의 관계 맵으로서, 고객이 다른 채널에서 브랜드와 상호 작용하는 방법을 시각적으로 보여줍니다. 모든 고객 ID 그래프는 고객 활동에 대한 응답으로 거의 실시간으로 Adobe Experience Platform Identity Service에서 통합 관리 및 업데이트됩니다.
 
 Platform 사용자 인터페이스의 ID 그래프 뷰어를 사용하면 함께 결합되는 고객 ID와 대상을 시각화하고 더 잘 이해할 수 있습니다. 뷰어를 사용하면 그래프의 다른 부분과 드래그 및 상호 작용할 수 있으므로 복잡한 ID 관계를 살펴보고 보다 효율적으로 디버깅할 수 있으며 정보 활용 방식의 투명성 증대를 얻을 수 있습니다.
+
+다음 문서에서는 Platform UI에서 ID 그래프 뷰어에 액세스하고 사용하는 방법에 대해 설명합니다.
 
 ## 튜토리얼 비디오
 
@@ -28,28 +28,96 @@ Platform 사용자 인터페이스의 ID 그래프 뷰어를 사용하면 함께
 ID 그래프 뷰어로 작업하려면 관련된 다양한 Adobe Experience Platform 서비스를 이해해야 합니다. ID 그래프 뷰어로 작업하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [[!DNL Identity Service]](../home.md): 여러 장치와 시스템에서 ID를 브리징하여 개별 고객과 고객의 행동을 더 잘 파악할 수 있습니다.
+- [실시간 고객 프로필](../../profile/home.md): ID 그래프는 실시간 고객 프로필에서 고객 속성 및 행동의 종합적이고 단일 보기를 만드는 데 활용됩니다.
 
 ### 용어
 
-- **ID(노드):** ID 또는 노드는 일반적으로 한 엔티티에 고유한 데이터입니다. ID는 네임스페이스와 ID 값으로 구성됩니다.
-- **링크(에지):** 링크 또는 에지는 ID 간의 연결을 나타냅니다.
+- **ID(노드):** ID 또는 노드는 일반적으로 한 엔티티에 고유한 데이터입니다. ID는 ID 네임스페이스와 ID 값으로 구성됩니다. 예를 들어 정규화된 ID는 **이메일**, 의 id 값과 결합됩니다. **로빈<span>@email.com**.
+- **링크(에지):** 링크 또는 에지는 ID 간의 연결을 나타냅니다. ID 링크에는 처음 설정된 타임스탬프 및 마지막으로 업데이트된 타임스탬프와 같은 속성이 포함됩니다. 처음 설정된 타임스탬프는 새 ID가 기존 ID에 연결된 날짜 및 시간을 정의합니다. 마지막으로 업데이트된 타임스탬프는 기존 ID 링크가 마지막으로 업데이트된 날짜와 시간을 정의합니다.
 - **그래프(클러스터):** 그래프 또는 클러스터는 개인을 나타내는 ID 및 링크의 그룹입니다.
 
 ## ID 그래프 뷰어에 액세스 {#access-identity-graph-viewer}
 
-UI에서 ID 그래프 뷰어를 사용하려면 **[!UICONTROL ID]** 왼쪽 탐색에서 를 선택하고 **[!UICONTROL ID 그래프]** 탭. 에서 **[!UICONTROL ID 네임스페이스]** 화면에서 **[!UICONTROL ID 네임스페이스 선택]** 아이콘을 사용하여 사용할 네임스페이스를 검색합니다.
+플랫폼 UI에서 **[!UICONTROL ID]** 왼쪽 탐색에서 를 선택하고 을 선택합니다. **[!UICONTROL ID 그래프]** 를 클릭합니다.
 
-![namespace-screen](../images/identity-graph-viewer/identity-namespace.png)
+![ID 그래프 탭이 선택된 Experience Platform UI의 ID 작업 영역입니다.](../images/graph-viewer/identity-graph.png)
 
-다음 **[!UICONTROL ID 네임스페이스 선택]** 패널이 나타납니다. 이 화면에는 네임스페이스에 대한 정보를 포함하여 조직에서 사용할 수 있는 네임스페이스 목록이 포함되어 있습니다 **[!UICONTROL 표시 이름]**, **[!UICONTROL ID 기호]**, **[!UICONTROL 소유자]**, **[!UICONTROL 마지막 업데이트 날짜]** 날짜 및 **[!UICONTROL 설명]**. 유효한 ID 값이 연결되어 있는 한 제공된 네임스페이스를 사용할 수 있습니다.
+ID 그래프를 보려면 ID 네임스페이스와 해당 값을 제공한 다음 을(를) 선택합니다 **[!UICONTROL 보기]**.
 
-사용할 네임스페이스를 선택하고 을(를) 클릭합니다 **[!UICONTROL 선택]** 계속 진행합니다.
+>[!TIP]
+>
+>표 아이콘을 선택합니다 ![표 아이콘](../images/identity-graph-viewer/table-icon.png) 사용 가능한 모든 ID 네임스페이스 목록이 포함된 패널을 보려면 다음을 수행하십시오. 유효한 ID 값이 연결되어 있는 한 모든 ID 네임스페이스를 사용할 수 있습니다. 자세한 내용은 [identity namespace 안내서](../namespaces.md).
 
-![select-identity-namespace](../images/identity-graph-viewer/select-identity-namespace.png)
+![ID 그래프 조회 화면에서 제공되는 ID 네임스페이스 및 해당 값.](../images/graph-viewer/namespace-and-value.png)
 
-네임스페이스를 선택하면 **[!UICONTROL ID 값]** 텍스트 상자 및 선택 **[!UICONTROL 보기]**.
+## ID 그래프 뷰어 인터페이스 이해
 
-![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
+ID 그래프 뷰어 인터페이스는 ID 데이터와 상호 작용하고 더 잘 이해하는 데 사용할 수 있는 여러 요소로 구성되어 있습니다.
+
+![ID 그래프 뷰어 인터페이스입니다.](../images/graph-viewer/identity-graph-viewer-main.png)
+
+ID 그래프는 입력한 ID 네임스페이스와 값 조합에 연결된 모든 ID를 표시합니다. 각 노드는 ID 네임스페이스와 해당 값으로 구성됩니다. 그래프와 상호 작용할 노드를 선택, 보류 및 드래그할 수 있습니다. 또는 노드 위로 마우스를 가져가면 해당 ID 값에 대한 정보를 볼 수 있습니다. 선택 **[!UICONTROL 그래프 보기]** 그래프를 숨기거나 표시하려면 다음을 수행하십시오.
+
+>[!IMPORTANT]
+>
+>ID 그래프에는 연결된 ID가 최소 2개 이상 생성되어야 하며 유효한 ID 네임스페이스와 값 조합이 필요합니다. 그래프 뷰어에서 표시할 수 있는 최대 ID 수는 150개입니다. 자세한 내용은 [부록](#appendix) 자세한 내용은 아래 섹션을 참조하십시오.
+
+![5개의 연결된 ID가 있는 ID 그래프 뷰어입니다.](../images/graph-viewer/graph.png)
+
+그래프 내에서 링크를 선택하여 해당 링크에 기여하는 데이터 세트와 배치 ID를 확인합니다. 링크를 선택하면 오른쪽 레일이 업데이트되어 데이터 소스 세부 사항에 대한 자세한 정보와 처음 설정된 타임스탬프 및 마지막으로 업데이트된 타임스탬프와 같은 속성이 제공됩니다.
+
+![선택한 전자 메일과 GAID 노드 간의 ID 링크입니다.](../images/graph-viewer/identity-link.png)
+
+다음 [!UICONTROL ID] 표는 id 데이터에 대한 다른 보기를 제공하여 id 네임스페이스와 id 값 조합을 테이블 형식으로 나열합니다. 그래프에서 노드를 선택하면 [!UICONTROL ID] 테이블.
+
+![그래프 내에 연결된 ID 목록이 있는 ID 테이블.](../images/graph-viewer/identities-table.png)
+
+드롭다운 메뉴를 사용하여 그래프 데이터를 정렬하고 특정 ID 네임스페이스에 대한 정보를 강조 표시합니다. 예를 들어, **[!UICONTROL 이메일]** 메뉴에서 전자 메일 id 네임스페이스와 관련된 데이터를 볼 수 있습니다.
+
+![이메일 데이터만 표시하도록 정렬된 ID 테이블.](../images/graph-viewer/sort-email.png)
+
+오른쪽 레일에는 마지막으로 업데이트된 타임스탬프를 포함하여 선택한 ID에 대한 정보가 표시됩니다. 오른쪽 레일에는 선택한 ID에 해당하는 데이터 소스(예: 해당 배치 ID, 데이터 세트 이름, 데이터 세트 ID 및 스키마 이름)에 대한 정보도 표시됩니다.
+
+다음 표는 오른쪽 레일에 표시되는 데이터 소스 속성에 대한 추가 정보를 제공합니다.
+
+| 데이터 소스 | 설명 |
+| --- | --- | 
+| 일괄 처리 ID | 배치 데이터에 해당하는 자동 생성 식별자입니다. |
+| 데이터 세트 ID | 데이터 세트에 해당하는 자동 생성된 식별자입니다. |
+| 데이터 세트 이름 | 일괄 처리 데이터가 포함된 데이터 세트의 이름입니다. |
+| 스키마 이름 | 스키마의 이름입니다. 스키마에서는 데이터의 구조 및 형식을 나타내고 유효성을 검사하는 규칙 세트를 제공합니다. |
+
+![ID 데이터와 정보 데이터 소스를 표시하는 오른쪽 레일입니다.](../images/graph-viewer/right-rail.png)
+
+를 사용할 수도 있습니다 *[!UICONTROL 데이터 소스]* 를 클릭하여 ID에 기여하는 데이터 소스 목록을 확인합니다. 선택 [!UICONTROL 데이터 소스] 데이터 세트 및 배치 ID를 표 형식으로 볼 수 있습니다.
+
+![선택한 데이터 소스 탭입니다.](../images/graph-viewer/data-source-table.png)
+
+슬라이더를 사용하여 ID가 처음 설정된 시간까지 그래프 데이터를 필터링합니다. 기본적으로 ID 그래프 뷰어는 그래프 내에 연결된 모든 ID를 표시합니다. 슬라이더를 길게 끌어서 새 ID가 그래프에 연결된 마지막 타임스탬프로 시간을 조정합니다. 아래 예에서는 그래프에 가장 최근 ID 링크(GAID)가 **[!UICONTROL 08/19/2020, 4:29:오후 29]**.
+
+![선택한 그래프 뷰어 타임스탬프 슬라이더입니다.](../images/graph-viewer/slider-one.png)
+
+슬라이더를 조정하여 다른 ID 링크(이메일)가 설정되어 있는지 확인합니다 **[!UICONTROL 08/19/2020, 4:25:오후 30시]**.
+
+![그래프 뷰어 타임스탬프 슬라이더가 마지막으로 설정된 새 링크로 조정되었습니다.](../images/graph-viewer/slider-two.png)
+
+슬라이더를 조정하여 그래프의 가장 빠른 이터레이션을 볼 수도 있습니다. 아래 예에서는 ID 그래프 뷰어에 그래프가 처음 생성되었음을 표시합니다 **[!UICONTROL 08/19/2020, 4:11:오후 49]**, ECID, Email 및 Phone으로 연결되는 첫 번째 링크가 있습니다.
+
+![그래프 뷰어 타임스탬프 슬라이더가 처음 설정된 새 링크로 조정되었습니다.](../images/graph-viewer/slider-three.png)
+
+## 부록
+
+다음 섹션에서는 ID 그래프 뷰어 작업을 위한 추가 정보를 제공합니다.
+
+### 오류 메시지 이해
+
+ID 그래프 뷰어에 액세스할 때 오류가 발생할 수 있습니다. 다음은 ID 그래프 뷰어로 작업할 때 기억해야 할 사전 요구 사항 및 제한 사항 목록입니다.
+
+- ID 값이 선택한 네임스페이스에 있어야 합니다.
+- ID 그래프 뷰어에는 생성된 연결된 ID가 최소 2개 필요합니다. ID 값이 하나만 있고 연결된 ID가 없을 수 있으며 이 경우 값은 에만 존재할 수 있습니다 [!DNL Profile] 뷰어입니다.
+- ID 그래프 뷰어는 최대 150개의 ID를 초과할 수 없습니다.
+
+![error-screen](../images/graph-viewer/error-screen.png)
 
 ### 데이터 세트에서 ID 그래프 뷰어에 액세스
 
@@ -65,60 +133,6 @@ UI에서 ID 그래프 뷰어를 사용하려면 **[!UICONTROL ID]** 왼쪽 탐�
 
 ![지문](../images/identity-graph-viewer/fingerprint.png)
 
-ID 그래프 뷰어가 나타납니다. 화면의 왼쪽에 선택한 네임스페이스에 연결된 모든 ID와 입력한 ID 값이 표시되는 ID 그래프가 있습니다. 각 ID 노드는 네임스페이스와 해당 ID 값으로 구성됩니다. ID를 선택하고 보유하여 그래프를 드래그 및 상호 작용할 수 있습니다. 또는 ID 위로 마우스를 가져가면 ID 값에 대한 정보를 볼 수 있습니다. 그래프 출력은 또한 화면 중앙에 토프 목록으로 표시됩니다.
-
->[!IMPORTANT]
->
->ID 그래프에는 생성된 연결된 ID와 유효한 네임스페이스 및 ID 쌍이 최소 2개 필요합니다. 그래프 뷰어에서 표시할 수 있는 최대 ID 수는 150개입니다. 자세한 내용은 [부록](#appendix) 자세한 내용은 아래 섹션을 참조하십시오.
-
-![identity graph](../images/identity-graph-viewer/graph-viewer.png)
-
-ID를 선택하여 **[!UICONTROL ID]** 표 및 id의 가 포함된 오른쪽 레일에 제공된 정보를 업데이트하는 방법 **[!UICONTROL 값]**, **[!UICONTROL 배치 ID]**, 및 **[!UICONTROL 마지막 업데이트 날짜]** 날짜.
-
-![select-identity](../images/identity-graph-viewer/select-identity.png)
-
-그래프를 통해 필터링하고 **[!UICONTROL ID]** 테이블. 드롭다운 메뉴에서 강조 표시할 네임스페이스를 선택합니다.
-
-![필터 기준 네임스페이스](../images/identity-graph-viewer/filter-namespace.png)
-
-그래프 뷰어가 반환되고 선택한 네임스페이스를 강조 표시합니다. 필터 옵션은 **[!UICONTROL ID]** 선택한 네임스페이스에 대한 정보만 반환하는 테이블입니다.
-
-![필터링됨](../images/identity-graph-viewer/filtered.png)
-
-그래프 뷰어 상자의 오른쪽 상단에는 확대 옵션을 포함합니다. 을(를) 선택합니다 **(+)** 아이콘을 클릭하여 그래프 또는 **(-)** 아이콘을 클릭하여 축소합니다.
-
-![확대/축소](../images/identity-graph-viewer/zoom.png)
-
-을(를) 선택하여 배치에 대한 자세한 정보를 볼 수 있습니다 **[!UICONTROL 데이터 소스]** 헤더. 다음 **[!UICONTROL 데이터 소스]** 테이블에는 다음 목록 표시 **[!UICONTROL 배치 ID]** 그래프뿐만 아니라 그래프에도 연결됩니다. **[!UICONTROL 연결된 ID]**, 소스 스키마 및 섭취 날짜.
-
-![데이터 소스](../images/identity-graph-viewer/data-source-table.png)
-
-ID 그래프 내에서 링크를 선택하여 링크에 기여한 모든 소스 배치를 볼 수 있습니다.
-
-![select-links](../images/identity-graph-viewer/select-edge.png)
-
-또는 한 배치를 선택하여 이 배치에 기여한 모든 링크를 볼 수 있습니다.
-
-![select-links](../images/identity-graph-viewer/select-batch.png)
-
-ID 클러스터가 큰 ID 그래프도 ID 그래프 뷰어를 통해 액세스할 수 있습니다.
-
-![대규모 클러스터](../images/identity-graph-viewer/large-cluster.png)
-
-## 부록
-
-다음 섹션에서는 ID 그래프 뷰어 작업을 위한 추가 정보를 제공합니다.
-
-### 오류 메시지 이해
-
-ID 그래프 뷰어에 액세스할 때 오류가 발생할 수 있습니다. 다음은 ID 그래프 뷰어로 작업할 때 기억해야 할 사전 요구 사항 및 제한 사항 목록입니다.
-
-- ID 값이 선택한 네임스페이스에 있어야 합니다.
-- ID 그래프 뷰어에는 생성된 연결된 ID가 최소 2개 필요합니다. ID 값이 하나만 있고 연결된 ID가 없을 수 있으며 이 경우 값은 에만 존재할 수 있습니다 [!DNL Profile] 뷰어입니다.
-- ID 그래프 뷰어는 최대 150개의 ID를 초과할 수 없습니다.
-
-![error-screen](../images/identity-graph-viewer/error-screen.png)
-
 ## 다음 단계
 
 이 문서를 읽은 후에는 플랫폼 UI에서 고객의 ID 그래프를 살펴보는 방법을 알아보았습니다. 플랫폼의 ID에 대한 자세한 내용은 [ID 서비스 개요](../home.md)
@@ -129,3 +143,4 @@ ID 그래프 뷰어에 액세스할 때 오류가 발생할 수 있습니다. �
 | ---- | ------ |
 | 2021-01 | <ul><li>수집된 스트리밍 데이터 및 비프로덕션 샌드박스에 대한 지원이 추가되었습니다.</li><li>사소한 버그가 수정되었습니다.</li></ul> |
 | 2021-02 | <ul><li>ID 그래프 뷰어는 데이터 집합 미리 보기를 통해 액세스할 수 있습니다.</li><li>사소한 버그가 수정되었습니다.</li><li>ID 그래프 뷰어는 일반적으로 사용할 수 있게 됩니다.</li></ul> |
+| 2023-01 | <ul><li>UI 업데이트.</li></ul> |
