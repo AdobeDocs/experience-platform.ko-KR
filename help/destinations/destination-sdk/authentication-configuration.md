@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK에서 지원되는 인증 구성을 사용하여 사용자를 인증하고 데이터를 대상 종단점으로 활성화합니다.
 title: 인증 구성
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,7 @@ ht-degree: 0%
 Adobe Experience Platform Destination SDK은 몇 가지 인증 유형을 지원합니다.
 
 * [베어러 인증](#bearer)
+* [기본 인증](#basic)
 * [[!DNL Amazon S3] 인증](#s3)
 * [[!DNL Azure Blob] 스토리지](#blob)
 * [[!DNL Azure Data Lake Storage]](#adls)
@@ -34,6 +35,22 @@ Adobe Experience Platform Destination SDK은 몇 가지 인증 유형을 지원�
 
 * [스트리밍 대상에 대한 인증 구성](destination-configuration.md#customer-authentication-configurations)
 * [파일 기반 대상에 대한 인증 구성](file-based-destination-configuration.md#customer-authentication-configurations)
+
+## 기본 인증 {#basic}
+
+Experience Platform의 스트리밍 대상에 대해 기본 인증이 지원됩니다.
+
+기본 인증 유형을 구성할 때는 대상에 연결하려면 사용자 이름과 암호를 입력해야 합니다.
+
+대상에 대한 기본 인증을 설정하려면 다음을 구성합니다 `customerAuthenticationConfigurations` 섹션 을 통해 `/destinations` 아래에 표시된 것처럼 종단점이 있습니다.
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"BASIC"
+   }
+]
+```
 
 ## 베어러 인증 {#bearer}
 

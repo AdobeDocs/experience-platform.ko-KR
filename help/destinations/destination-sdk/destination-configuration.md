@@ -2,9 +2,9 @@
 description: 이 구성을 사용하면 대상 이름, 카테고리, 설명, 로고 등과 같은 기본 정보를 표시할 수 있습니다. 또한 이 구성의 설정은 Experience Platform 사용자가 대상을 인증하는 방법, Experience Platform 사용자 인터페이스에 표시되는 방법 및 대상으로 내보낼 수 있는 ID를 결정합니다.
 title: Destination SDK 스트리밍 대상 구성 옵션
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: f0f2ed2059cbbb017dbbbdc0d1f215abee17f514
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1907'
 ht-degree: 4%
 
 ---
@@ -152,7 +152,7 @@ bearer 인증 유형을 구성할 때 사용자는 대상에서 가져오는 bea
 | 매개 변수 | 유형 | 설명 |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | 문자열 | 서버에 Experience Platform 고객을 인증하는 데 사용되는 구성을 나타냅니다. 자세한 내용은 `authType` 아래에 나열된 값을 반환합니다. |
-| `authType` | 문자열 | 스트리밍 대상에 대해 허용되는 값은 다음과 같습니다.<ul><li>`BEARER` 질문에 답합니다. 대상이 베어러 인증을 지원하는 경우 `"authType":"Bearer"` 및  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 에서 [대상 배달 섹션](./destination-configuration.md).</li><li>`OAUTH2` 질문에 답합니다. 대상이 OAuth 2 인증을 지원하는 경우 를 설정합니다. `"authType":"OAUTH2"` 및에 표시된 대로 OAuth 2에 대한 필수 필드를 추가합니다. [Destination SDK OAuth 2 인증 페이지](./oauth2-authentication.md). 또한 `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 에서 [대상 배달 섹션](./destination-configuration.md).</li> |
+| `authType` | 문자열 | 스트리밍 대상에 대해 허용되는 값은 다음과 같습니다.<ul><li>`BASIC` 질문에 답합니다. 대상이 기본 인증을 지원하는 경우 `"authType":"Basic"` 및  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 에서 [대상 배달 섹션](./destination-configuration.md).</li><li>`BEARER` 질문에 답합니다. 대상이 베어러 인증을 지원하는 경우 `"authType":"Bearer"` 및  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 에서 [대상 배달 섹션](./destination-configuration.md).</li><li>`OAUTH2` 질문에 답합니다. 대상이 OAuth 2 인증을 지원하는 경우 를 설정합니다. `"authType":"OAUTH2"` 및에 표시된 대로 OAuth 2에 대한 필수 필드를 추가합니다. [Destination SDK OAuth 2 인증 페이지](./oauth2-authentication.md). 또한 `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 에서 [대상 배달 섹션](./destination-configuration.md).</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
