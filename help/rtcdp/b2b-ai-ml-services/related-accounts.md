@@ -3,9 +3,9 @@ title: Real-Time CDP B2B Edition의 관련 계정
 type: Documentation
 description: Real-Time CDP B2B Experience Platform의 관련 계정 기능에 대한 개요 및 추가 정보.
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '433'
 ht-degree: 6%
 
 ---
@@ -31,6 +31,16 @@ B2B 기업은 동일한 실제 비즈니스 업체에 대해 일부 또는 충�
 ![Experience Platform UI에서 관련 계정을 표시하는 화면](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 이 기능을 사용하여 Experience Platform UI에서 계정 프로필에 대한 관련 계정 프로필을 보고 세그먼트 정의에 관련 계정을 포함하여 도달 범위를 넓히거나 세그먼트에서 더 넓은 기준을 적용할 수 있습니다.
+
+## 관련 계정 서비스 활성화 {#enable}
+
+서비스를 활성화하려면 **[!UICONTROL 프로필]** 사이드바에서 **[!UICONTROL 설정]**.
+
+![프로필 및 설정을 강조 표시하는 Experience Platform UI .](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+
+옆의 전환을 선택합니다 [!UICONTROL 관련 계정 활성화] 서비스를 활성화하려면 **[!UICONTROL 저장]**.
+
+![전환 및 저장을 강조 표시하는 계정 설정 화면.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## 작동 방법 {#how-it-works}
 
