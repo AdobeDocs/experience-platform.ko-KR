@@ -1,21 +1,16 @@
 ---
-title: Adobe Experience Platform 릴리스 노트 - 2023년 1월
-description: Adobe Experience Platform에 대한 2023년 1월 릴리스 노트입니다.
-source-git-commit: 78b21c0eee2a1b29ee2d2bd647fec1ce8f535705
+title: Adobe Experience Platform 릴리스 노트 - 2023년 2월
+description: Adobe Experience Platform에 대한 2023년 2월 릴리스 노트입니다.
+source-git-commit: b14ef8783a39fc063183e385f195af473acbc33d
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 47%
+source-wordcount: '30'
+ht-degree: 53%
 
 ---
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2023년 1월 25일**
+**릴리스 날짜: 2023년 2월 22일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
-
-- [보증](#assurance)
-
-## 인공 지능 및 기계 학습 {#assurance}
-
 
