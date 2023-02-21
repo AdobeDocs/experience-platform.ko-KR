@@ -1,17 +1,19 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Marketo 소스 커넥터;네임스페이스;스키마;b2b;B2B
-solution: Experience Platform
 title: B2B 네임스페이스 및 스키마
 description: 이 문서에서는 B2B 소스 커넥터를 만들 때 필요한 사용자 지정 네임스페이스에 대한 개요를 제공합니다.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fa3f937862dd8b6078f73b2a172b3fb5db652dc7
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1727'
 ht-degree: 4%
 
 ---
 
 # B2B 네임스페이스 및 스키마
+
+>[!NOTE]
+>
+>Adobe Experience Platform UI의 템플릿을 사용하여 B2B 및 B2C 데이터에 대한 자산 생성을 가속화할 수 있습니다. 자세한 내용은 다음 안내서를 참조하십시오. [플랫폼 UI에서 템플릿 사용](../../../tutorials/ui/templates.md).
 
 이 문서에서는 B2B 소스에서 사용할 네임스페이스 및 스키마에 대한 기본 설정에 대한 정보를 제공합니다. 또한 이 문서에서는 B2B 네임스페이스 및 스키마를 생성하는 데 필요한 Postman 자동화 유틸리티 설정에 대한 세부 사항을 제공합니다.
 

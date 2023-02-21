@@ -1,21 +1,28 @@
 ---
-keywords: Experience Platform;홈;인기 있는 주제
 description: Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 데 사용할 수 있는 사전 구성된 템플릿을 제공합니다. 템플릿에는 소스에서 Experience Platform으로 데이터를 가져올 때 사용할 수 있는 스키마, 데이터 세트, 매핑 규칙, ID, ID 네임스페이스 및 데이터 흐름과 같이 자동으로 생성된 자산이 포함됩니다.
-title: (알파) UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기
+title: (베타) UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기
+badge1: "Beta"
 hide: true
 hidefromtoc: true
-source-git-commit: d6d8281d1be1468b0c2b7474b80be96949dc7d4c
+exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
+source-git-commit: c4cb3783cbbab6f9bf25ffaa5b27a200c555b181
 workflow-type: tm+mt
-source-wordcount: '1184'
-ht-degree: 1%
+source-wordcount: '1337'
+ht-degree: 0%
 
 ---
 
-# (알파) UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기
+# (베타) UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기
 
 >[!IMPORTANT]
 >
->템플릿은 알파에 있으며 현재 [[!DNL Marketo Engage] 소스](../../connectors/adobe-applications/marketo/marketo.md). 설명서 및 기능은 변경될 수 있습니다.
+>템플릿은 베타에 있으며 다음 소스에서 지원됩니다.
+>
+>* [[!DNL Marketo Engage]](../../connectors/adobe-applications/marketo/marketo.md)
+>* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
+>* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
+>
+>설명서 및 기능은 변경될 수 있습니다.
 
 Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 데 사용할 수 있는 사전 구성된 템플릿을 제공합니다. 템플릿에는 소스에서 Experience Platform으로 데이터를 가져올 때 사용할 수 있는 스키마, 데이터 세트, ID, 매핑 규칙, ID 네임스페이스 및 데이터 흐름과 같이 자동으로 생성된 자산이 포함됩니다.
 
@@ -25,7 +32,7 @@ Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 �
 * 수동 데이터 수집 프로세스 중에 발생할 수 있는 오류를 최소화합니다.
 * 사용 사례에 맞게 자동 생성된 자산을 언제든지 업데이트합니다.
 
-다음 자습서에서는 [[!DNL Marketo Engage] 소스](../../connectors/adobe-applications/marketo/marketo.md).
+다음 자습서에서는 플랫폼 UI에서 템플릿을 사용하는 방법에 대한 단계를 제공합니다.
 
 ## 시작하기
 
@@ -43,11 +50,11 @@ Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 �
 >abstract="사용 사례에 적합한 비즈니스 유형을 선택합니다. 액세스 권한은 Real-time Customer Data Platform 구독 계정에 따라 달라질 수 있습니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ko" text="Real-Time CDP 개요"
 
-플랫폼 UI에서 **[!UICONTROL 소스]** 왼쪽 탐색에서 로 이동하여 [!UICONTROL 소스] 작업 공간. 다음 [!UICONTROL 카탈로그] 화면에는 계정을 만드는 데 사용할 수 있는 다양한 소스가 표시됩니다.
+플랫폼 UI에서 **[!UICONTROL 소스]** 왼쪽 탐색에서 로 이동하여 [!UICONTROL 소스] 작업 공간 및 Experience Platform에서 사용할 수 있는 소스 카탈로그를 참조하십시오.
 
-화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 막대를 사용하여 작업할 특정 소스를 찾을 수 있습니다.
+를 사용하십시오 *[!UICONTROL 카테고리]* 메뉴를 사용하여 범주별로 소스를 필터링합니다. 또는 검색 막대에 소스 이름을 입력하여 카탈로그에서 특정 소스를 찾습니다.
 
-아래에 [!UICONTROL Adobe 애플리케이션] 카테고리, 선택 **[!UICONTROL Marketo Engage]** 그런 다음 **[!UICONTROL 데이터 추가]**.
+로 이동합니다. [!UICONTROL Adobe 애플리케이션] 카테고리를 클릭하여 [!DNL Marketo Engage] 소스 카드를 선택한 다음 [!UICONTROL 데이터 추가] 을 가리키도록 업데이트하는 것이 좋습니다.
 
 ![Marketo Engage 소스가 강조 표시된 소스 작업 공간의 카탈로그.](../../images/tutorials/templates/catalog.png)
 
@@ -64,21 +71,25 @@ Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 �
 
 새 계정을 만들거나 기존 계정을 사용하라는 인증 단계가 나타납니다.
 
-#### 기존 계정
+>[!BEGINTABS]
+
+>[!TAB 기존 계정 사용]
 
 기존 계정을 사용하려면 [!UICONTROL 기존 계정] 그런 다음 나타나는 목록에서 사용할 계정을 선택합니다.
 
 ![액세스할 수 있는 기존 계정 목록이 있는 기존 계정의 선택 페이지입니다.](../../images/tutorials/templates/existing-account.png)
 
-#### 새 계정
+>[!TAB 새 계정 만들기]
 
 새 계정을 만들려면 **[!UICONTROL 새 계정]**&#x200B;소스 연결 세부 사항 및 계정 인증 자격 증명을 제공합니다. 완료되면 을 선택합니다 **[!UICONTROL 소스에 연결]** 새 연결이 설정될 때까지 잠시 기다려 주십시오.
 
 ![소스 연결 세부 정보 및 계정 인증 자격 증명이 있는 새 계정에 대한 인증 페이지입니다.](../../images/tutorials/templates/new-account.png)
 
+>[!ENDTABS]
+
 ### 템플릿 선택
 
-계정을 인증하고 선택하면 템플릿 목록이 나타납니다. 템플릿 이름 옆에 있는 미리 보기 아이콘을 선택하여 템플릿에서 샘플 데이터를 미리 봅니다.
+선택한 비즈니스 유형에 따라 템플릿 목록이 나타납니다. 미리 보기 아이콘을 선택합니다 ![미리 보기 아이콘](../../images/tutorials/templates/preview-icon.png) 템플릿 이름 옆에 있는 를 사용하여 템플릿의 샘플 데이터를 미리 볼 수 있습니다.
 
 ![미리 보기 아이콘이 강조 표시된 템플릿 목록입니다.](../../images/tutorials/templates/templates.png)
 
@@ -95,6 +106,22 @@ Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 �
 >이미 사용된 템플릿은 선택 시 비활성화됩니다.
 
 ![Opportunity Contact Role 템플릿을 선택한 템플릿 목록입니다.](../../images/tutorials/templates/select-template.png)
+
+### 일정 설정
+
+다음 [!DNL Microsoft Dynamics] 그리고 [!DNL Salesforce] 두 소스 모두 데이터 흐름 예약을 지원합니다.
+
+예약 인터페이스를 사용하여 데이터 흐름의 수집 일정을 구성합니다. 수집 빈도를 로 설정합니다. **한 번** 를 클릭하여 일회성 수집을 생성합니다.
+
+![Dynamics 및 Salesforce 템플릿에 대한 예약 인터페이스입니다.](../../images/tutorials/templates/schedule.png)
+
+또는 수집 빈도를 로 설정할 수 있습니다 **분**, **시간**, **일**, 또는 **주**. 데이터 흐름을 여러 수집으로 예약하는 경우 각 수집 사이의 시간대를 설정하려면 간격을 설정해야 합니다. 예를 들어 수집 빈도가 **시간** 그리고 **15** 은(는) 데이터 양이 모든 데이터를 수집하도록 예약되어 있음을 의미합니다 **15시간**.
+
+이 단계 동안 다음을 활성화할 수도 있습니다 **채우기** 데이터를 증분 수집하기 위한 열을 정의합니다. 채우기(Backfill)는 이전 데이터를 수집하는 데 사용되는 반면 증분 수집에 대해 정의하는 열에서 새 데이터를 기존 데이터와 구별할 수 있습니다.
+
+수집 일정 구성을 완료했으면 을 선택합니다 **[!UICONTROL 완료]**.
+
+![채우기 기능이 활성화된 Dynamics 및 Salesforce 템플릿에 대한 예약 인터페이스입니다.](../../images/tutorials/templates/backfill.png)
 
 ### 자산 검토 {#review-assets}
 
