@@ -2,7 +2,7 @@
 title: 태그 및 이벤트 전달을 위한 릴리스 노트
 description: Adobe Experience Platform의 태그 및 이벤트 전달에 대한 최신 릴리스 정보입니다.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 18599d223733cb151c7517abb77b1745d2e634b7
+source-git-commit: 2b11fb87523c777d5c2d855e97a4af78a8483abe
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 5%
@@ -11,7 +11,7 @@ ht-degree: 5%
 
 # 태그 및 이벤트 전달에 대한 릴리스 노트
 
-## 2022년 1월 25일
+## 2023년 1월 25일
 
 * **새 홈 화면**: 데이터 수집 UI의 홈 페이지가 생산성을 간소화하기 위해 유용한 온보딩 정보 및 링크를 포함하도록 업데이트되었습니다. 여기에는 다음 항목이 포함되어 있습니다.
    1. 시작하는 설명서 및 권장 워크플로우
