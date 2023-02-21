@@ -1,17 +1,15 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Google PubSub;google pubsub
-solution: Experience Platform
-title: Google Pub Sub Source Connector 개요
+title: Google PubSub 소스 개요
 description: API 또는 사용자 인터페이스를 사용하여 Google PubSub를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
 
-# [!DNL Google PubSub] 커넥터
+# [!DNL Google PubSub]
 
 Adobe Experience Platform은 과 같은 클라우드 제공업체를 위한 기본 연결을 제공합니다 [!DNL AWS], [!DNL Google Cloud Platform], 및 [!DNL Azure]를 사용하면 이러한 시스템의 데이터를 다운스트림 서비스 및 대상에서 사용하기 위해 플랫폼으로 가져올 수 있습니다.
 

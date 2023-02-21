@@ -2,9 +2,9 @@
 title: Flow Service API를 사용하여 Google PubSub Source 연결 만들기
 description: Flow Service API를 사용하여 Adobe Experience Platform을 Google PubSub 계정에 연결하는 방법을 알아봅니다.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
+source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '896'
 ht-degree: 1%
 
 ---
@@ -31,6 +31,7 @@ ht-degree: 1%
 | `projectId` | 인증하는 데 필요한 프로젝트 ID [!DNL PubSub]. |
 | `credentials` | 인증에 필요한 자격 증명 또는 키 [!DNL PubSub]. |
 | `topicId` | 의 ID입니다 [!DNL PubSub] 메시지 피드를 나타내는 리소스입니다. 의 특정 데이터 스트림에 대한 액세스 권한을 제공하려면 항목 ID를 지정해야 합니다 [!DNL Google PubSub] 소스. |
+| `subscriptionId` | 의 ID입니다 [!DNL PubSub] 구독. in [!DNL PubSub]을(를) 구독하면 메시지가 게시된 항목을 구독하여 메시지를 받을 수 있습니다. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 타겟 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. 다음 [!DNL PubSub] 연결 사양 ID는 다음과 같습니다. `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 이러한 값에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL PubSub] 인증](https://cloud.google.com/pubsub/docs/authentication) 문서. 서비스 계정 기반 인증을 사용하려면 다음을 참조하십시오 [[!DNL PubSub] 서비스 계정 생성 가이드](https://cloud.google.com/docs/authentication/production#create_service_account) 을 참조하십시오.
@@ -79,7 +80,8 @@ curl -X POST \
           "params": {
               "projectId": "acme-project",
               "credentials": "{CREDENTIALS}",
-              "topicID": "acmeProjectAPI"
+              "topicId": "acmeProjectAPI",
+              "subscriptionId": "acme-project-api-new"
           }
       },
       "connectionSpec": {
@@ -93,7 +95,8 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.projectId` | 인증하는 데 필요한 프로젝트 ID [!DNL PubSub]. |
 | `auth.params.credentials` | 인증에 필요한 자격 증명 또는 키 [!DNL PubSub]. |
-| `auth.params.topicID` | 항목의 ID입니다 [!DNL PubSub] 액세스 권한을 제공할 소스입니다. |
+| `auth.params.topicId` | 항목의 ID입니다 [!DNL PubSub] 액세스 권한을 제공할 소스입니다. |
+| `auth.params.subscriptionId` | 에 대한 구독 ID입니다 [!DNL PubSub] 주제. |
 | `connectionSpec.id` | 다음 [!DNL PubSub] 연결 사양 ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 **응답**
