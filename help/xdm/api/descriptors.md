@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 종단점을 사용하면 경험 애플리케이션 내의 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 3%
@@ -417,7 +417,7 @@ ID 설명자는 &quot;[!UICONTROL sourceProperty]&quot;[!UICONTROL sourceSchema]
 
 #### 사용되지 않는 필드 설명자
 
-다음을 수행할 수 있습니다 [사용자 지정 XDM 리소스 내의 필드 사용 안 함](../tutorials/field-deprecation.md#custom) 추가 `meta:status` 속성 설정 `deprecated` 문제가 있는 필드에 연결합니다. 스키마에 표준 XDM 리소스에서 제공하는 필드를 사용하지 않으려면 해당 스키마에 더 이상 사용되지 않는 필드 설명자를 할당하여 동일한 효과를 얻을 수 있습니다. 사용 [올바른 `Accept` 헤더](../tutorials/field-deprecation.md#verify-deprecation)그런 다음 API에서 스키마를 찾을 때 사용 중단되는 표준 필드를 볼 수 있습니다.
+다음을 수행할 수 있습니다 [사용자 지정 XDM 리소스 내의 필드 사용 안 함](../tutorials/field-deprecation-api.md#custom) 추가 `meta:status` 속성 설정 `deprecated` 문제가 있는 필드에 연결합니다. 스키마에 표준 XDM 리소스에서 제공하는 필드를 사용하지 않으려면 해당 스키마에 더 이상 사용되지 않는 필드 설명자를 할당하여 동일한 효과를 얻을 수 있습니다. 사용 [올바른 `Accept` 헤더](../tutorials/field-deprecation-api.md#verify-deprecation)그런 다음 API에서 스키마를 찾을 때 사용 중단되는 표준 필드를 볼 수 있습니다.
 
 ```json
 {

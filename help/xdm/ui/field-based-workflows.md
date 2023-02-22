@@ -4,7 +4,7 @@ description: 기존 필드 그룹의 필드를 XDM(Experience Data Model) 스키
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
+source-git-commit: 07faf4dd749219a955df720a8c740427113a5de2
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Adobe Experience Platform은 강력한 표준화된 일련의 를 제공합니�
 
 이 자습서에서는 사용자가 [XDM 스키마 구성](../schema/composition.md) 및 플랫폼 UI에서 스키마 편집기를 사용하는 방법. 따라서 다음을 수행해야 합니다 [새 스키마 만들기](./resources/schemas.md) 이 안내서를 계속하기 전에 표준 클래스에 할당할 수 있습니다.
 
-## 표준 필드 그룹에서 추가한 필드 제거
+## 표준 필드 그룹에서 추가한 필드 제거 {#remove-field-group}
 
 스키마에 표준 필드 그룹을 추가한 후에는 필요하지 않은 표준 필드를 제거할 수 있습니다.
 

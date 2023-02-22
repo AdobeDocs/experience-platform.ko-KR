@@ -4,9 +4,9 @@ user-guide-title: 경험 데이터 모델(XDM) 시스템 도움말
 breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: 경험 데이터 모델(XDM) 클래스와 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
 feature: Schemas
-source-git-commit: fda856051af104ca6363274d93ca65807f9881a3
+source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '518'
 ht-degree: 16%
 
 ---
@@ -193,7 +193,8 @@ ht-degree: 16%
    * [스키마에 특정 필드 추가(API)](./tutorials/specific-fields-api.md)
    * [사용자 지정 필드 정의(API)](./tutorials/custom-fields-api.md)
    * [필드(API)에 추천 값 추가](tutorials/suggested-values.md)
-   * [XDM 필드 사용 안 함](tutorials/field-deprecation.md)
+   * [UI에서 XDM 필드 사용 안 함](tutorials/field-deprecation-ui.md)
+   * [API에서 XDM 필드 사용 안 함](tutorials/field-deprecation-api.md)
    * [UI에서 스키마 관계 정의](tutorials/relationship-ui.md)
    * [API에서 스키마 관계 정의](tutorials/relationship-api.md)
    * [Real-Time CDP B2B Edition에서 스키마 관계 정의](tutorials/relationship-b2b.md)
@@ -201,4 +202,4 @@ ht-degree: 16%
    * [임시 스키마 만들기](tutorials/ad-hoc.md)
 * [문제 해결 안내서](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes_kr)
