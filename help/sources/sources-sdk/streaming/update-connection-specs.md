@@ -3,7 +3,7 @@ title: Flow Service API를 사용하여 스트리밍 SDK에 대한 연결 사양
 description: 다음 문서에서는 셀프 서비스 소스(스트리밍 SDK)용 Flow Service API를 사용하여 연결 사양을 사용하는 방법에 대해 설명합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 4254e5373586399be35f4a8b8c40c83b7d60afa4
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 2%
@@ -73,6 +73,7 @@ PUT -X GET \
         "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
         "sourceSpec": {
           "attributes": {
+            "authRequired": false,
             "uiAttributes": {
               "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
               "isSource": true,
@@ -128,6 +129,7 @@ PUT -X GET \
       "type": "generic-streaming",
       "sourceSpec": {
         "attributes": {
+          "authRequired": false,
           "uiAttributes": {
             "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
             "isSource": true,

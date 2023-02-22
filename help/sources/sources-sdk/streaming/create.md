@@ -3,7 +3,7 @@ title: Flow Service API를 사용하여 스트리밍 SDK에 대한 새로운 연
 description: 다음 문서에서는 Flow Service API를 사용하여 연결 사양을 만들고 Self-Serve Sources를 통해 새 소스를 통합하는 방법에 대해 설명합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: f91ebcf8e27fd7d9019c5bb6d270b89fd08785ef
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
 source-wordcount: '751'
 ht-degree: 1%
@@ -75,9 +75,8 @@ ht-degree: 1%
       }
     }
   },
-  "authSpec": [
-
-  ],
+  "authSpec": [],
+  "name": "generic-streaming",
   "permissionsInfo": {
     "view": [
       {
@@ -98,8 +97,10 @@ ht-degree: 1%
       }
     ]
   },
+  "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
   "sourceSpec": {
     "attributes": {
+      "authRequired": false,
       "uiAttributes": {
         "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
         "isSource": true,
@@ -108,16 +109,16 @@ ht-degree: 1%
           "key": "streaming"
         },
         "icon": {
-          "key": "Generic-Streaming"
+          "key": "generic"
         },
         "description": {
-          "text": "Generic Streaming Connector"
+          "text": "Generic Streaming For Authentication Testing 2"
         },
         "label": {
-          "text": "Generic"
+          "text": "Generic Streaming For Authentication Testing 2"
         },
         "frequency": {
-          "text": "streaming"
+          "text": "Generic Streaming"
         }
       }
     }
@@ -253,6 +254,7 @@ curl -X POST \
       "type": "generic-streaming",
       "sourceSpec": {
         "attributes": {
+          "authRequired": false,
           "uiAttributes": {
             "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
             "isSource": true,

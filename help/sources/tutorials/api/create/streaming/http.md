@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;스트리밍 연결;스트리밍
 title: Flow Service API를 사용하여 HTTP API 스트리밍 연결 만들기
 description: 이 자습서에서는 Flow Service API를 사용하여 원시 및 XDM 데이터에 대한 HTTP API 소스를 사용하여 스트리밍 연결을 만드는 방법을 제공합니다
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1496'
 ht-degree: 2%
 
 ---
@@ -208,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `auth.params.sourceId` | 인증된 기본 연결을 만들 때 사용할 수 있는 추가 식별자입니다. 이 매개 변수는 선택 사항이며 와 동일한 값을 사용합니다 `name` 속성을 지정해야 합니다. |
-| `auth.params.authenticationRequired` | 생성된 스트리밍 연결을 지정하는 매개 변수입니다 |
+| `auth.params.authenticationRequired` | 이 매개 변수는 스트리밍 연결에 인증이 필요한지 여부를 지정합니다. If `authenticationRequired` 가 로 설정되어 있습니다. `true` 그런 다음 스트리밍 연결에 대한 인증을 제공해야 합니다. If `authenticationRequired` 가 로 설정되어 있습니다. `false` 그러면 인증이 필요하지 않습니다. |
 
 **응답**
 
