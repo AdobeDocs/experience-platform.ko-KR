@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
+source-git-commit: 593179cb919d464084973d154098c6fdffcc3471
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1031'
 ht-degree: 6%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 6%
       * [동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](./ui/configure-personalization-destinations.md)
       * [(베타) Experience Platform UI를 사용하여 온디맨드 파일을 배치 대상으로 내보내기](./ui/export-file-now.md)
       * [(베타) Experience Platform UI를 사용하여 데이터 세트 내보내기](./ui/export-datasets.md)
+      * [(베타) 새로운 베타 클라우드 스토리지 대상에서 마지막 자격 시간 XDM 속성을 사용합니다](./ui/activate-last-qualification-time.md)
    * [대상 세부 사항 보기](./ui/destination-details-page.md)
    * [대상 계정 업데이트](./ui/update-accounts.md)
    * [대상 계정 삭제](./ui/delete-destination-account.md)
@@ -240,4 +241,4 @@ ht-degree: 6%
       * [설명서 셀프 서비스 템플릿](./destination-sdk/docs-framework/self-service-template.md)
       * [작성 우수 사례](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [자주 묻는 질문](./destinations-faq.md)
-* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes_kr)

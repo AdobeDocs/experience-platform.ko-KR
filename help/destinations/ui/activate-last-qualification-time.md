@@ -3,7 +3,7 @@ title: 새로운 베타 클라우드 스토리지 대상에서 마지막 자격 
 description: 새로운 베타 클라우드 스토리지 대상에서 마지막 검증 시간 XDM 속성을 사용하는 방법을 알아봅니다
 hidefromtoc: y
 hide: y
-source-git-commit: 7dd525d8c71cdfb9fb2393181faa3270ad1dc4cc
+source-git-commit: 03031dcaad82932f92e76177adf3b55447c3c153
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 마지막 자격 시간 XDM 속성을 사용하는 방법 {#how-to-use}
 
-6개의 새로운 클라우드 스토리지 베타 커넥터 중 하나를 사용하는 경우, 에서 마지막 자격 시간 XDM 속성을 사용할 수 있습니다 [매핑 단계](//help/destinations/ui/activate-batch-profile-destinations.md#mapping) 활성화 워크플로우 를 사용하십시오. 이를 통해 특정 측정 또는 분석 사용 사례를 사용할 수 있을 뿐만 아니라 특정 대상을 활성화할 시점을 더 잘 알 수 있습니다.
+6개의 새로운 클라우드 스토리지 베타 커넥터 중 하나를 사용하는 경우, 에서 마지막 자격 시간 XDM 속성을 사용할 수 있습니다 [매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 활성화 워크플로우 를 사용하십시오. 이를 통해 특정 측정 또는 분석 사용 사례를 사용할 수 있을 뿐만 아니라 특정 대상을 활성화할 시점을 더 잘 알 수 있습니다.
 
 추가할 참고 사항 `lastQualificationTime` 파일 내보내기에 대해서는 현재 값을 수동으로 삽입해야 합니다 `xdm: segmentMembership.ups.seg_id.lastQualificationTime` 아래와 같이 소스 필드에 포함합니다. 대상 필드를 편집할 수도 있습니다 `lastQualificationTime` 또는 이 열의 이름을 지정할 다른 값입니다. 베타 기능이므로 `xdm: segmentMembership.ups.seg_id.lastQualificationTime` 값은 향후에 변경될 수 있습니다.
 
