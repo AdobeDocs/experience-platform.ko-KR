@@ -2,18 +2,14 @@
 title: 데이터 집합 샘플
 description: Query Service 샘플 데이터 세트를 사용하면 쿼리 정확성 비용으로 처리 시간이 크게 단축되어 빅데이터에 대해 예비 쿼리를 수행할 수 있습니다. 이 안내서에서는 대략적인 쿼리 처리를 위해 샘플을 관리하는 방법에 대한 정보를 제공합니다
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
+source-git-commit: 13779e619345c228ff2a1981efabf5b1917c4fdb
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# (제한된 릴리스) 데이터 세트 샘플
-
->[!IMPORTANT]
->
->데이터 세트 샘플 기능은 현재 제한된 릴리스에 있으며 모든 고객에게 제공되지 않습니다.
+# 데이터 집합 샘플
 
 Adobe Experience Platform Query Service는 대략적인 쿼리 처리 기능의 일부로서 샘플 데이터 세트를 제공합니다. 샘플 데이터 세트는 기존 [!DNL Azure Data Lake Storage] (ADLS) 원래 레코드의 백분율만 사용하는 데이터 세트. 이 비율을 샘플링 속도라고 합니다. 샘플링 속도를 조절하여 정확성 및 처리 시간의 균형을 제어하면 쿼리 정확성 비용으로 처리 시간이 크게 단축된 빅데이터에 대해 예비 쿼리를 수행할 수 있습니다.
 
@@ -22,14 +18,15 @@ Adobe Experience Platform Query Service는 대략적인 쿼리 처리 기능의 
 대략적인 쿼리 처리를 위해 샘플을 관리하는 데 도움이 되도록 Query Service에서는 데이터 세트 샘플에 대해 다음 작업을 지원합니다.
 
 - [균일한 임의 데이터 세트 샘플을 만듭니다.](#create-a-sample)
+- [선택적으로 필터 기준을 지정합니다](##optional-filter-criteria)
 - [ADLS 테이블의 샘플 목록을 봅니다.](#view-list-of-samples)
 - [샘플 데이터 세트를 직접 쿼리합니다.](#query-sample-datasets)
 - [샘플을 삭제합니다.](#delete-a-sample)
 - 원래 ADLS 테이블이 삭제되면 연관된 샘플을 삭제합니다.
 
-## 시작하기
+## 시작하기 {#get-started}
 
-위에 자세히 설명된 대략적인 쿼리 처리 기능을 사용하려면 세션 플래그를 로 설정해야 합니다 `true`. 쿼리 편집기 또는 PSQL 클라이언트의 명령줄에서 `SET aqp=true;` 명령.
+이 문서에 자세히 설명된 대략적인 쿼리 처리 기능을 만들고 삭제하려면 세션 플래그를 `true`. 쿼리 편집기 또는 PSQL 클라이언트의 명령줄에서 `SET aqp=true;` 명령.
 
 >[!NOTE]
 >
@@ -39,7 +36,7 @@ Adobe Experience Platform Query Service는 대략적인 쿼리 처리 기능의 
 
 ## 균일한 임의 데이터 세트 샘플 만들기 {#create-a-sample}
 
-를 사용하십시오 `ANALYZE TABLE` 해당 데이터 집합에서 균일한 임의 샘플을 만들기 위해 데이터 세트 이름을 사용하는 명령.
+를 사용하십시오 `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` 해당 데이터 집합에서 균일한 임의 샘플을 만들기 위해 데이터 세트 이름을 사용하는 명령.
 
 샘플 비율은 원래 데이터 집합에서 가져온 레코드의 백분율입니다. 를 사용하여 샘플 속도를 제어할 수 있습니다. `TABLESAMPLE SAMPLERATE` 키워드. 이 예에서 5.0의 값은 50% 샘플 속도와 같습니다. 2.5의 값은 25%와 같습니다.
 
@@ -50,6 +47,28 @@ Adobe Experience Platform Query Service는 대략적인 쿼리 처리 기능의 
 ```sql
 ANALYZE TABLE example_dataset_name TABLESAMPLE SAMPLERATE 5.0;
 ```
+
+## 선택적으로 필터 기준을 지정합니다 {#optional-filter-criteria}
+
+균일한 임의 샘플에 대한 필터 기준을 지정하도록 선택할 수 있습니다. 이렇게 하면 분석된 테이블의 필터링된 하위 집합을 기반으로 샘플을 생성할 수 있습니다.
+
+샘플을 만들 때 선택적 필터가 먼저 적용된 다음, 샘플을 데이터 세트의 필터링된 보기에서 만듭니다. 필터가 적용된 데이터 세트 샘플은 다음 쿼리 형식을 따릅니다.
+
+```sql
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition>) SAMPLERATE X.Y;
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND/OR <filter_condition_2>) SAMPLERATE X.Y;
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND (<filter_condition_2> OR <filter_condition_3>)) SAMPLERATE X.Y;
+```
+
+이러한 유형의 필터링된 샘플 데이터 세트에 대한 실질적인 예는 다음과 같습니다.
+
+```sql
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND product.name = "product1") SAMPLERATE 10;
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
+```
+
+제공된 예에서 테이블 이름은 다음과 같습니다. `large_table`를 지정하는 경우 원래 테이블의 필터 조건은 `month(to_timestamp(timestamp)) in ('8', '9')`및 샘플링 비율은 (필터링된 데이터의 X%)입니다. 이 경우, `10`.
 
 ## 샘플 목록 보기 {#view-list-of-samples}
 
