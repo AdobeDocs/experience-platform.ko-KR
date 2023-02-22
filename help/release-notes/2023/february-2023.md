@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2023년 2월
 description: Adobe Experience Platform에 대한 2023년 2월 릴리스 노트입니다.
-source-git-commit: 1c2b7f291d0f8c0845a76ba4c863a9558da1bb4f
+source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '988'
 ht-degree: 3%
 
 ---
@@ -14,10 +14,31 @@ ht-degree: 3%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [[!DNL Destinations]](#destinations)
 - [XDM(경험 데이터 모델)](#xdm)
 - [쿼리 서비스](#query-service)
 - [Real-Time CDP B2B Edition의 관련 계정](#related-accounts)
 - [소스](#sources)
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-features}
+
+| 기능 | 설명 |
+| ----------- | ----------- |
+| [동의 정책 개선 사항](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) 통합 [파일 기반(배치) 대상](/help/destinations/destination-types.md#file-based) | <p> 이제 프로필이 더 이상 동의 정책에 대한 자격이 없는 경우 Experience Platform은 정책 종료를 파일 기반 대상으로 미리 통신합니다. 다음은 다음과 같습니다 [2023년 2월 릴리스](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) 스트리밍 대상에 대해 동일한 기능을 사용할 수 있습니다. </p> <p> <b>참고</b>: 이 기능은 **[!UICONTROL 개인 정보 및 보안 차단]**, 및 **[!UICONTROL 의료 보호]**. </p> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**새 설명서 또는 업데이트된 설명서** {#destinations-new-updated-documentation}
+
+| 설명서 | 설명 |
+| ----------- | ----------- |
+| 대상 작동 방식 설명서 | <p>사용자의 일반적인 질문에 따라 대상이 작동하는 방식에 대한 세 가지 새로운 설명 문서를 게시했습니다.</p> <p><ul><li>[대상의 구성 및 공통 내보내기 설정](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[다양한 대상 유형에 대한 프로필 내보내기 동작](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[대상 활성화 워크플로우의 ID 처리](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+
+대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
 
 ## XDM(경험 데이터 모델) {#xdm}
 
