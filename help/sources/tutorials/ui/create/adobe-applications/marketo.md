@@ -1,22 +1,19 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Marketo 소스 커넥터;Marketo 커넥터;Marketo 소스;Marketo
-solution: Experience Platform
-title: UI에서 Marketo Engage 소스 커넥터 만들기
-type: Tutorial
-description: 이 자습서에서는 UI에서 B2B 데이터를 Adobe Experience Platform으로 가져오기 위해 Marketo Engage 소스 커넥터를 만드는 단계를 제공합니다.
+title: UI에서 Marketo Engage 소스 연결 및 데이터 흐름 만들기
+description: 이 자습서에서는 UI에서 Marketo Engage 소스 연결 및 데이터 흐름을 만들어 B2B 데이터를 Adobe Experience Platform으로 가져오는 단계를 제공합니다.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
 
-# 만들기 [!DNL Marketo Engage] UI의 소스 커넥터
+# 만들기 [!DNL Marketo Engage] UI의 소스 연결 및 데이터 흐름
 
 >[!IMPORTANT]
 >
->만들기 전 [!DNL Marketo Engage] 소스 연결 및 데이터 흐름을 먼저 확인해야 합니다. [adobe IMS 조직 ID를 매핑했습니다](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. 또한 다음을 완료했는지 확인해야 합니다 [자동 채우기 [!DNL Marketo] B2B 네임스페이스 및 스키마](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) 소스 연결 및 데이터 흐름을 만들기 전에
+>만들기 전 [!DNL Marketo Engage] 소스 연결 및 데이터 흐름을 먼저 확인해야 합니다. [매핑된 Adobe 조직 ID](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. 또한 다음을 완료했는지 확인해야 합니다 [자동 채우기 [!DNL Marketo] B2B 네임스페이스 및 스키마](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) 소스 연결 및 데이터 흐름을 만들기 전에
 
 이 자습서에서는 을(를) 만드는 단계를 제공합니다 [!DNL Marketo Engage] (이하 &quot;라 한다)[!DNL Marketo]&quot;) B2B 데이터를 Adobe Experience Platform으로 가져오기 위한 UI의 소스 커넥터입니다.
 
@@ -48,7 +45,7 @@ ht-degree: 0%
 
 ## 연결 [!DNL Marketo] account
 
-플랫폼 UI에서 **[!UICONTROL 소스]** 왼쪽 탐색 모음에서 를 클릭하여 [!UICONTROL 소스] 작업 공간. 다음 [!UICONTROL 카탈로그] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+플랫폼 UI에서 **[!UICONTROL 소스]** 왼쪽 탐색 모음에서 를 클릭하여 [!UICONTROL 소스] 작업 공간. 다음 [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 막대를 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
@@ -84,23 +81,27 @@ ht-degree: 0%
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## 데이터 흐름 세부 정보 제공
+## 데이터 흐름 세부 정보 제공 {#provide-dataflow-details}
 
 다음 [!UICONTROL 데이터 흐름 세부 정보] 페이지에서 기존 데이터 세트를 사용할지 새 데이터 세트를 사용할지 선택할 수 있습니다. 이 프로세스 중에 [!UICONTROL 프로필 데이터 세트], [!UICONTROL 오류 진단], [!UICONTROL 부분 수집], 및 [!UICONTROL 경고].
 
 ![데이터 흐름 세부 정보](../../../../images/tutorials/create/marketo/dataflow-details.png)
 
-### 기존 데이터 세트 사용
+>[!BEGINTABS]
+
+>[!TAB 기존 데이터 세트 사용]
 
 기존 데이터 세트에 데이터를 수집하려면 을 선택합니다 **[!UICONTROL 기존 데이터 세트]**. 를 사용하여 기존 데이터 세트를 검색할 수 있습니다 [!UICONTROL 고급 검색] 옵션을 선택하거나 드롭다운 메뉴에서 기존 데이터 세트 목록을 스크롤하여 선택합니다. 데이터 세트를 선택하면 데이터 집합에 대한 이름과 설명을 제공합니다.
 
 ![기존 데이터 세트](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
-### 새 데이터 세트 사용
+>[!TAB 새 데이터 세트 사용]
 
 새 데이터 세트에 수집하려면 을 선택합니다 **[!UICONTROL 새 데이터 세트]** 그런 다음 출력 데이터 세트 이름과 선택적 설명을 제공합니다. 다음으로 를 사용하여 매핑할 스키마를 선택합니다 [!UICONTROL 고급 검색] 옵션을 선택하거나 드롭다운 메뉴에서 기존 스키마 목록을 스크롤하여 선택합니다. 스키마를 선택했으면 데이터 흐름의 이름과 설명을 입력합니다.
 
 ![새로운 데이터 세트](../../../../images/tutorials/create/marketo/new-dataset.png)
+
+>[!ENDTABS]
 
 ### 활성화 [!DNL Profile] 및 오류 진단
 
@@ -110,7 +111,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->다음 [!DNL Marketo] 커넥터는 일괄 처리를 사용하여 모든 기록 레코드를 수집하고 실시간 업데이트를 위해 스트리밍 수집 기능을 사용합니다. 이렇게 하면 커넥터가 잘못된 레코드를 수집하는 동안 스트리밍을 계속할 수 있습니다. 를 활성화합니다 **[!UICONTROL 부분 수집]** 전환 후 설정 [!UICONTROL 오류 임계값 %] 데이터 흐름이 실패하지 않도록 최대화하려면 다음을 수행하십시오.
+>다음 [!DNL Marketo] 소스는 배치 수집 기능을 사용하여 모든 기록 레코드를 수집하고 실시간 업데이트를 위해 스트리밍 수집 기능을 사용합니다. 이렇게 하면 잘못된 레코드를 수집하는 동안 소스가 스트리밍을 계속할 수 있습니다. 를 활성화합니다 **[!UICONTROL 부분 수집]** 전환 후 설정 [!UICONTROL 오류 임계값 %] 데이터 흐름이 실패하지 않도록 최대화하려면 다음을 수행하십시오.
 
 ![프로필 및 오류](../../../../images/tutorials/create/marketo/profile-and-errors.png)
 
@@ -121,6 +122,14 @@ ht-degree: 0%
 데이터 집합에 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
 ![경고](../../../../images/tutorials/create/marketo/alerts.png)
+
+### 회사 데이터를 수집할 때 미청구 계정 건너뛰기
+
+데이터 흐름을 만들어 회사 데이터 세트에서 데이터를 수집할 때 구성할 수 있습니다 [!UICONTROL 미청구 계정 제외] 미청구 계정을 수집 대상에서 제외하거나 포함시킵니다.
+
+사람들이 양식을 작성하면 [!DNL Marketo] 다른 데이터가 포함되지 않은 회사 이름을 기준으로 가상 계정 레코드를 생성합니다. 새 데이터 흐름의 경우 미청구 계정 제외 토글이 기본적으로 활성화되어 있습니다. 기존 데이터 흐름의 경우 기존 데이터가 아닌 새로 수집된 데이터에 변경 사항이 적용되어 기능을 활성화하거나 비활성화할 수 있습니다.
+
+![미결 계정](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
 
 ## 맵 [!DNL Marketo] XDM 필드를 대상으로 하는 데이터 세트 소스 필드
 

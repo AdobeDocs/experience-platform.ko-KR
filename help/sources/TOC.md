@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: 33aeeb58e5bfa2c1553a5c49fee07dc5020f4efb
+source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '931'
 ht-degree: 11%
 
 ---
@@ -216,6 +216,7 @@ ht-degree: 11%
          - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [고객 속성](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
+         - [Marketo 사용자 지정 활동](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Advertising {#advertising}
          - [Google 광고](tutorials/ui/create/advertising/ads.md)
@@ -342,4 +343,4 @@ ht-degree: 11%
 - [IP 주소 허용 목록](ip-address-allow-list.md)
 - [자주 묻는 질문](./troubleshooting.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+- [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes_kr)
