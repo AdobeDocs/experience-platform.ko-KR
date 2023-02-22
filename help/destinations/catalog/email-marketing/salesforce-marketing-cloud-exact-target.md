@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;salesforce;api salesfor
 title: (API) Salesforce Marketing Cloud 연결
 description: Salesforce Marketing Cloud(이전의 ExactTarget) 대상을 사용하면 계정 데이터를 내보내고 Salesforce Marketing Cloud 내에서 활성화하여 비즈니스 요구 사항을 충족할 수 있습니다.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: d75c272b3c86e25d3f162c630963c10e8206bd9d
+source-git-commit: 5a9b7af3b009f8529f2e473b17f77c54de35003e
 workflow-type: tm+mt
-source-wordcount: '2434'
+source-wordcount: '2464'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,9 @@ Platform에서 사용자 [!DNL Salesforce Marketing Cloud] 계정:
 
 #### 다음을 수행해야 합니다 [!DNL Salesforce Marketing Cloud] account {#prerequisites-account}
 
-연락하여 [!DNL Salesforce Account Executive] 에 가입하다 [!DNL Salesforce Marketing Cloud Account Engagement] 아직 가지고 있지 않다면 제품을 선택하십시오.
+A [!DNL Salesforce Marketing Cloud] 을 구독하는 계정 [Marketing Cloud 계정 참여](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) 제품을 계속 진행해야 합니다.
+
+에 연결 [[!DNL Salesforce] 지원](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) 만약 [!DNL Salesforce Marketing Cloud] 계정이 없거나 계정에 [!DNL Marketing Cloud Account Engagement] 제품 구독.
 
 #### 내에서 속성 만들기 [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
