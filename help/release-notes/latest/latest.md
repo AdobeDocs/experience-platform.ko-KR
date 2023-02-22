@@ -1,198 +1,71 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
-description: Adobe Experience Platform에 대한 2023년 1월 릴리스 노트입니다.
-source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
+description: Adobe Experience Platform에 대한 2023년 2월 릴리스 노트입니다.
+source-git-commit: 38c9325e2eb5d396472ea55ca082083040d6e590
 workflow-type: tm+mt
-source-wordcount: '2431'
-ht-degree: 7%
+source-wordcount: '817'
+ht-degree: 4%
 
 ---
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2023년 1월 25일**
+**릴리스 날짜: 2023년 2월 22일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
-- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
-- [보증](#assurance)
-- [데이터 수집](#data-collection)
-- [[!DNL Destinations]](#destinations)
 - [XDM(경험 데이터 모델)](#xdm)
-- [실시간 고객 프로필](#profile)
-- [세분화 서비스](#segmentation)
+- [쿼리 서비스](#query-service)
+- [Real-Time CDP B2B Edition의 관련 계정](#related-accounts)
 - [소스](#sources)
-
-## 인공 지능/기계 학습 서비스 {#ai-ml}
-
-마케팅 분석가 및 전문가가 인공 지능(AI) 및 머신 러닝 서비스를 통해 고객 경험 사용 사례에서 AI/ML의 기능을 활용할 수 있습니다. 이를 통해 마케팅 분석가는 비즈니스 수준 구성을 사용하여 기업의 요구에 맞는 데이터 과학 전문 지식을 필요로 하지 않고도 예측을 설정할 수 있습니다.
-
-### 기여도 AI
-
-Attribution AI은 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다.
-
-**업데이트된 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| HIPAA 준비 | Healthcare Shield 고객은 이제 Attribution AI 및 특정 Experience Platform 기반 애플리케이션에서 보호된 상태 정보를 수신, 사용, 유지 관리 또는 전송할 수 있습니다. Healthcare Shield는 HIPAA에 따라 OB(Covered Entity) 또는 Business Associate인 의료 고객을 위한 것입니다. 자세한 내용은 [HIPAA 및 Adobe 제품 및 서비스](https://www.adobe.com/kr/trust/compliance/hipaa-ready.html) |
-| 추가 점수 데이터 집합 열 편집 | 기존 모델을 편집할 때 점수 데이터 세트 열(보고 열)을 추가하거나 제거할 수 있습니다. 이렇게 하면 속성 점수의 유연성이 확장되어 모델이 이미 생성된 후 추가 차원에 대한 통찰력을 제공할 수 있습니다. 자세한 내용은 [Attribution UI 안내서](../../intelligent-services/attribution-ai/user-guide.md) 추가 정보 |
-
-{style=&quot;table-layout:auto&quot;}
-
-자세한 내용은 [AI/ML 서비스](../../intelligent-services/attribution-ai/overview.md) 개요 를 참조하십시오.
-
-### 고객 AI
-
-Real-time Customer Data Platform용 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 지정 성향 점수를 생성하는 데 사용됩니다. 비즈니스 요구 사항을 머신 러닝 문제로 변환하거나 알고리즘을 선택하거나 교육 또는 배포하지 않아도 됩니다.
-
-**업데이트된 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| HIPAA 준비 | Healthcare Shield 고객은 이제 Real-time Customer Data Platform 및 특정 Experience Platform 기반 애플리케이션용 고객 AI에서 보호된 상태 정보를 수신, 사용, 유지 관리 또는 전송할 수 있습니다. Healthcare Shield는 HIPAA에 따라 OB(Covered Entity) 또는 Business Associate인 의료 고객을 위한 것입니다. 자세한 내용은 [HIPAA 및 Adobe 제품 및 서비스](https://www.adobe.com/kr/trust/compliance/hipaa-ready.html) |
-
-{style=&quot;table-layout:auto&quot;}
-
-자세한 내용은 [AI/ML 서비스](../../intelligent-services/customer-ai/overview.md) 개요 를 참조하십시오.
-
-## 보증 {#assurance}
-
-Adobe 보증을 사용하면 모바일 앱에서 데이터를 수집하거나 경험을 제공하는 방법을 검사, 증명, 시뮬레이션 및 확인할 수 있습니다.
-
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| 유효성 검사 편집기 | 유효성 검사 편집기에 대한 새로운 개선 사항이 추가되었습니다. 이러한 개선 사항에는 유효성 검사 열, 새 코드 작성 도구 및 향상된 보기가 포함됩니다. |
-
-{style=&quot;table-layout:auto&quot;}
-
-Assurance에 대한 자세한 내용은 [보증 설명서](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
-
-## 데이터 수집 {#data-collection}
-
-Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 세트를 제공합니다.
-
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 신규 홈 화면 | 데이터 수집 UI의 홈 페이지가 생산성을 간소화하기 위해 유용한 온보딩 정보 및 링크를 포함하도록 업데이트되었습니다. 여기에는 다음 항목이 포함되어 있습니다.<ol><li>시작하는 설명서 및 권장 워크플로우</li><li>최근 속성, 규칙 및 데이터 요소</li><li>인기 있는 확장</li><li>빠른 설치 기능으로 새로운 확장 업데이트</li></ol> |
-| 에 데이터 보내기 [!DNL Google Ads] 이벤트 전달 사용 | 이제 를 사용할 수 있습니다 [[!DNL Google Ads Enhanced Conversions] API 확장](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) 이벤트 전달에 대해 다음을 결합합니다. [Google Oauth 2 비밀](../../tags/ui/event-forwarding/secrets.md#google-oauth2)으로 데이터를 안전하게 [!DNL Google Ads] 실시간으로 |
-
-{style=&quot;table-layout:auto&quot;}
-
-## 대상(2월 2일 업데이트됨) {#destinations}
-
-[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
-
-**새 대상**
-
-| 대상 | 설명 |
-| ----------- | ----------- |
-| [(베타) Adobe Experience Cloud 대상 연결](../../destinations/catalog/adobe/experience-cloud-audiences.md) | 를 사용하십시오 [!UICONTROL (베타) Adobe Experience Cloud 대상] Experience Platform에서 Audience Manager, Analytics, Advertising Cloud, Adobe Campaign, Target 또는 Marketo과 같은 다양한 Experience Platform 솔루션으로 세그먼트를 공유할 수 있는 연결입니다. |
-| [Pega 프로필 연결](../../destinations/catalog/personalization/pega-profile.md) | 를 사용하십시오 [!DNL Pega Profile Connector] Adobe Experience Platform에서 를 통해 [!DNL Amazon] S3 저장소를 사용하여 프로필 데이터를 Adobe Experience Platform의 CSV 파일로 주기적으로 S3 버킷으로 내보냅니다. in [!DNL Pega Customer Decision Hub]로 지정하는 경우 데이터 작업을 예약하여 S3 저장소에서 이 프로필 데이터를 가져와 업데이트할 수 있습니다 [!DNL Pega Customer Decision Hub] 프로필 참조. |
-| [(베타) Trade Desk CRM EU 연결](../../destinations/catalog/advertising/tradedesk-emails.md) | EUID(유럽 통합 ID)가 릴리스되면 이제 두 가지 기능이 표시됩니다 [!DNL The Trade Desk - CRM] 의 대상 [대상 카탈로그](/help/destinations/catalog/overview.md). <ul><li> EU에서 데이터를 소스에 사용하는 경우 **[!DNL The Trade Desk - CRM (EU)]** 대상.</li><li> APAC 또는 NAMEER 지역에서 데이터를 가져오는 경우 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 대상. </li></ul> |
-
-**새 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
-
-| 기능 | 설명 |
-| ----------- | ----------- |
-| 스트리밍 대상과의 통합을 위한 유료 미디어 동의 정책 개선 사항 | An [동의 정책 집행 개선](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) on [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations) 유료 미디어 활성화 사용 사례의 경우. 이제 프로필이 더 이상 동의 정책에 대한 자격이 없는 경우 Experience Platform은 정책 종료를 스트리밍 대상으로 적극적으로 통신합니다. <br> <b>참고</b>: 이 기능은 **[!UICONTROL 개인 정보 및 보안 차단]**, 및 **[!UICONTROL 의료 보호]**. |
-| 베타 클라우드 저장소 대상 커넥터에 대한 새로운 구분 기호 옵션 | 세 개의 새 구분 기호 옵션(콜론) `:`, 파이프, 세미콜론 `;`) 이제 새로운 베타 클라우드 스토리지 대상에 대해 사용할 수 있습니다. [(베타) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(베타) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(베타) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(베타) 데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(베타) Google 클라우드 스토리지](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(베타) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> 지원되는 항목에 대해 읽기 [파일 서식 옵션](/help/destinations/ui/batch-destinations-file-formatting-options.md) 파일 기반 대상. |
-| 에서 사용할 수 있는 새로운 선택적 매개 변수 [고객 데이터 필드](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) 구성 [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`: 사용자 조직에서 설정한 모든 대상 데이터 흐름에서 값이 고유해야 하는 고객 데이터 필드를 만들어야 하는 경우 이 매개 변수를 사용하십시오. <br> 예: **[!UICONTROL 통합 별칭]** 의 필드 [[!UICONTROL 사용자 지정 개인화]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) 대상은 고유해야 합니다. 즉, 이 대상에 대해 두 개의 개별 데이터 흐름이 이 필드에 대해 동일한 값을 가질 수 없습니다. |
-
-**수정 사항 및 향상된 기능** {#destinations-fixes-and-enhancements}
-
-<table>
-    <tr>
-        <td><b>수정 또는 개선 사항</b></td>
-        <td><b>설명</b></td>
-    </tr>
-    <tr>
-        <td>파일 기반 대상으로 내보내기 동작이 업데이트되었습니다(PLAT-123316).</td>
-        <td>의 동작에서 문제가 해결되었습니다. <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">필수 속성</a> 데이터 파일을 배치 대상으로 내보낼 때 <br> 이전에는 출력 파일의 모든 레코드에 다음 두 항목이 모두 포함되어 있는지 확인했습니다. <ol><li>Null이 아닌 값 <code>mandatoryField</code> 열 및</li><li>다른 필수 필드가 아닌 필드 중 하나 이상에 null이 아닌 값입니다.</li></ol> 두 번째 조건이 제거되었습니다. 따라서 아래 예와 같이 내보낸 데이터 파일에 더 많은 출력 행을 볼 수 있습니다.<br> <b> 2023년 1월 릴리스 전 샘플 동작 </b> <br> 필수 필드: <code>emailAddress</code> <br> <b>활성화할 데이터 입력</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>존</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>제니퍼</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>활성화 출력</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>존</td><td>john@acme.com</td></tr><tr><td>제니퍼</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> 2023년 1월 릴리스 이후 샘플 동작 </b> <br> <b>활성화 출력</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>존</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>제니퍼</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
-    </tr>
-    <tr>
-        <td>필수 매핑 및 중복 매핑에 대한 UI 및 API 유효성 검사(PLAT-123316)</td>
-        <td>이제 다음의 경우 UI 및 API에서 유효성 검사가 다음과 같이 적용됩니다 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">매핑 필드</a> 대상 활성화 워크플로우에서:<ul><li><b>필요한 매핑</b>: 대상 개발자가 필수 매핑(예: <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> 대상)으로 지정하는 경우, 데이터를 대상에 활성화할 때 사용자가 이러한 필수 매핑을 추가해야 합니다. </li><li><b>중복 매핑</b>: 활성화 워크플로우의 매핑 단계에서 소스 필드에 중복 값을 추가할 수 있지만 대상 필드는 추가할 수 없습니다. 허용 및 금지된 매핑 조합의 예는 아래 표를 참조하십시오. <br><table><thead><tr><th>허용/금지</th><th>소스 필드</th><th>Target 필드</th></tr></thead><tbody><tr><td>허용됨</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>전자 메일 별칭2</li></ul></td></tr><tr><td>금지됨</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
-    </tr>    
-</table>
-
-대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
 
 ## XDM(경험 데이터 모델) {#xdm}
 
 XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 공통 표현으로 통합하여 보다 빠르고 통합된 방식으로 통찰력을 제공할 수 있습니다. 고객 작업을 통해 유용한 통찰력을 얻을 수 있고, 세그먼트를 통해 고객 대상을 정의하고, 개인화를 위해 고객 속성을 사용할 수 있습니다.
 
-**새로운 기능 또는 업데이트된 기능**
+**업데이트된 기능**
+&#x200B; | 기능 | 설명 | | — | — | | UI를 통한 필드 사용 중단 | 이제 데이터를 처리한 후 스키마에서 필드를 사용하지 않을 수 있습니다. XDM 필드 사용 중단 기능을 사용하면 UI 보기에서 필드를 제거할 수 있지만 필드를 사용할 수 있도록 유지할 수 있습니다. 필요한 경우 더 이상 사용되지 않는 필드를 다시 표시할 수 있으며 필드를 참조하는 모든 세그먼트, 쿼리 또는 다운스트림 솔루션은 평소대로 실행됩니다. |
+
+플랫폼의 XDM에 대한 자세한 &#x200B; 내용은 {style=&quot;table-layout:auto&quot;} [XDM 시스템 개요](../../xdm/home.md). &#x200B;
+<!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
+
+## 쿼리 서비스 {#query-service}
+
+Query Service를 사용하면 표준 SQL을 사용하여 Adobe Experience Platform에서 데이터를 쿼리할 수 있습니다 [!DNL Data Lake]. Data Lake의 모든 데이터 세트에 참여하고 쿼리 결과를 보고 또는 Data Science Workspace에 사용하거나 실시간 고객 프로필에 수집하기 위한 새 데이터 세트로 캡처할 수 있습니다.
+
+**업데이트된 기능**
+&#x200B; | 기능 | 설명 | | — | — | | SQL을 사용하여 프로필용 데이터 세트 활성화 | CTAS 쿼리의 LABEL을 사용하여 데이터 세트를 &#39;profile enabled&#39;로 만들거나, ALTER를 사용하여 프로필에 대해 활성화할 기존 데이터 세트를 업데이트합니다. | | 예약된 쿼리 모니터링 | 예약된 쿼리 탭을 사용하여 쿼리 실행에 대한 중요한 정보를 찾고 경고를 구독합니다. 실패한 경우 일정 세부 사항, 상태 및 오류 메시지/코드에 대한 쿼리를 모니터링합니다.  | | 자동 완성 기능 전환 | 쿼리 편집기 자동 완료 기능을 전환하여 특정 메타데이터 명령을 제거하고 처리 시간을 개선합니다. 이 기능은 작성할 때 쿼리에 대한 잠재적 SQL 키워드와 테이블 세부 정보를 자동으로 제안합니다. | | 데이터 집합 샘플 | 쿼리에서 샘플링 속도를 지정하고 데이터 세트 샘플을 사용하여 균일한 임의 샘플을 만들거나 특정 기준에 따라 조건부 샘플을 만듭니다. |
+
+{style=&quot;table-layout:auto&quot;} &#x200B; Query Services에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md). &#x200B;
+<!-- Links for QS feature docs after release day: -->
+<!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
+<!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
+<!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
+<!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
+
+## Real-Time CDP B2B Edition의 관련 계정 {#related-accounts}
+
+>[!NOTE]
+>
+>관련 계정 기능은 Real-Time CDP B2B Edition 고객만 사용할 수 있습니다.
+
+관련 계정, [!DNL Real-Time CDP B2B] 탐색 중인 계정과 유사한 계정 목록을 볼 수 있습니다. 세그먼트 정의에 관련 계정을 포함하여 도달 범위를 넓히거나 세그먼트에 더 넓은 기준을 적용할 수 있습니다.
+
+**업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 스키마 트리 표시 이름 개선 | 이전에는 필드 이름이 UI에 표시되었지만 이제 스키마 캔버스에서 스키마 필드의 표시 이름을 읽기 쉽게 할 수 있었습니다. |
-
-**새로운 XDM 구성 요소**
-
-| 구성 요소 유형 | 이름 | 설명 |
-| --- | --- | --- |
-| 클래스 | [[!UICONTROL 전환]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | 통화 전환과 같은 전환 데이터를 추적하는 클래스입니다. |
-| 필드 그룹 | [[!UICONTROL 통화 변환율 상세내역]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/conversion/currency-conversion-details.schema.json) | 에 대한 필드 그룹 [!UICONTROL 전환] 분류, 통화 변환과 관련된 추가 세부 정보를 캡처합니다. |
-| 필드 그룹 | [[!UICONTROL 동의 정책 평가 결과 및 메타데이터가 매핑됩니다]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.jsonn) | 동의 정책 입장 및 존재에 대한 메타데이터 정보를 포함하여 여러 동의 정책의 평가 결과에 대한 세부 정보를 캡처합니다. |
-
-**업데이트된 XDM 구성 요소**
-
-| 구성 요소 유형 | 이름 | 설명 |
-| --- | --- | --- |
-| 데이터 유형 | [[!UICONTROL 광고 세부 사항 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | 다음 `ID` 필드의 이름이 `name`, 및 이전 `name` 이제 필드 `friendlyName`. |
-| 데이터 유형 | [[!UICONTROL 의사 결정 제안 세부 정보]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | 를 추가했습니다. `selectionStrategy` 선택 전략의 세부 사항을 캡처하는 필드입니다. |
-| 필드 그룹 | [[!UICONTROL 경험 이벤트 - 제안 상호 작용]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | 이제 필드 그룹이 [!UICONTROL 여정 단계 이벤트] 클래스 이름을 지정합니다. |
-| 데이터 유형 | [[!UICONTROL 오류 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | 다음 `ID` 필드의 이름이 `name`. |
-| 데이터 유형 | [[!UICONTROL 미디어 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | 패턴의 변경 사항을 비디오 세그먼트 속성에 되돌렸습니다. |
-| 데이터 유형 | [[!UICONTROL Qoe 데이터 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | 제거된 `droppedFrameCount` 필드. |
-| 데이터 유형 | [[!UICONTROL 세션 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | 이름이 `isAuthorized` 필드 대상 `authorized`, 및 를 업데이트함 `type` 이전 JavaScript가 부울일 때 문자열로 가져와야 합니다. |
-| 데이터 유형 | [[!UICONTROL 배송]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | 다음과 같은 몇 개의 새 필드가 추가되었습니다. `shipDate`, `trackingNumber`, 및 `trackingURL`. |
-| 필드 그룹 | [[!UICONTROL AJO 엔티티 필드]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-mixins.schema.json) | 다음과 같은 몇 개의 새 필드가 추가되었습니다. `journeyNodeID`, `journeyNodeName`, 및 `journeyModeType`. |
-| 필드 그룹 | [[!UICONTROL 소비자 경험 이벤트]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/experienceevent-consumer.schema.json) | 이제 필드 그룹이 와 호환됩니다 [!UICONTROL 요약 지표] 클래스 이름을 지정합니다. |
-| 필드 그룹 | [[!UICONTROL 제품 트리거]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | 다음 `productTriggers` 이제 필드가 아래의 중첩됩니다. `weather` 개체. |
-| 필드 그룹 | [[!UICONTROL 상대 트리거]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | 다음 `relativeTriggers` 이제 필드가 아래의 중첩됩니다. `weather` 개체. |
-| 필드 그룹 | [[!UICONTROL 심각한 트리거]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | 다음 `severeTriggers` 이제 필드가 아래의 중첩됩니다. `weather` 개체. |
-| 필드 그룹 | [[!UICONTROL 날씨 트리거]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | 다음 `weatherTriggers` 이제 필드가 아래의 중첩됩니다. `weather` 개체. |
-| 필드 그룹 | [[!UICONTROL XDM 관련 비즈니스 계정]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account/related-accounts.schema.json) | 필드 그룹은 이제 안정되었습니다. |
+| 관련 계정 서비스 활성화 | 새로운 전환 기능을 사용하면 계정에서 관련 계정 서비스를 활성화할 수 있습니다. 자세한 내용은 다음 안내서를 참조하십시오. [관련 계정 서비스 활성화](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
 {style=&quot;table-layout:auto&quot;}
 
-Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
+다음 설명서 페이지에서 관련 계정 기능에 대해 자세히 알아보십시오.
 
-## 실시간 고객 프로필 {#profile}
+- [Real-Time CDP B2B Edition의 관련 계정 개요](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [계정 프로필 UI 안내서의 관련 계정 탭](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [세그먼트 정의에서 관련 계정을 사용하는 방법](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 위치와 시기에 관계없이 고객을 위해 조정되고 일관되며 적절한 경험을 제공할 수 있습니다. 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 타사 데이터를 포함하여 여러 채널의 데이터를 결합하는 각 개별 고객을 전체적으로 확인할 수 있습니다. 프로필을 사용하면 모든 고객 상호 작용을 실행 가능하고 타임스탬프가 지정된 계정을 제공하는 통합 보기에 고객 데이터를 통합할 수 있습니다.
-
-**예정된 사용 중단** {#deprecation}
-
-세그먼트 멤버십 라이프사이클에서 중복을 제거하려면 `Existing` 상태는 [세그먼트 멤버십 맵](../../xdm/field-groups/profile/segmentation.md) 2023년 3월 말 후속 발표에는 정확한 사용 중단 날짜가 포함됩니다.
-
-사용 중단 후, 세그먼트에 자격을 갖춘 프로필은 로 표시됩니다 `Realized` 그리고 자격이 없는 프로필은 `Exited`. 이렇게 하면 다음과 같은 파일 기반 대상과 패리티가 생깁니다. `Active` 및 `Expired` 세그먼트 상태.
-
-이 변경 사항은 [엔터프라이즈 대상](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure 이벤트 허브, HTTP API)를 통해 다음을 기반으로 자동화된 다운스트림 프로세스를 배치합니다 `Existing` 상태. 이러한 경우 다운스트림 통합을 검토하십시오. 특정 시간 이후에 새로 자격을 갖춘 프로필을 식별하는 데 관심이 있는 경우 `Realized` 상태 및 `lastQualificationTime` 세그먼트 멤버십 맵에서 공유할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
-
-프로필 데이터 작업에 대한 자습서 및 모범 사례 등 실시간 고객 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md).
-
-## 세분화 서비스 {#segmentation}
-
-[!DNL Segmentation Service] 고객 기반 내의 마케팅 가능한 사람 그룹을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(예: 인구 통계 정보) 또는 시계열 이벤트를 기반으로 할 수 있습니다.
-
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| 세그먼트 빌더에서 벌크 값 가져오기 | 이제 세그먼트 빌더에서 CSV 또는 TSV 파일을 업로드하거나 쉼표로 구분된 값을 수동으로 삽입하여 여러 값 가져오기를 지원합니다. 자세한 내용은 [세그먼트 빌더 안내서](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
-| 외부 대상 멤버십 만료 | 기본적으로 외부 대상 멤버십은 30일 동안 유지됩니다. 이를 더 오래 보관하려면 `validUntil` 대상 데이터를 수집하는 동안 필드를 생성합니다. |
-| 플랫폼 생성 세그먼트 멤버십 만료 | 에 있는 모든 세그먼트 멤버십입니다 `Exited` 상태를 기준으로 30일 이상 `lastQualificationTime` 필드는 삭제될 수 있습니다. |
-
-{style=&quot;table-layout:auto&quot;}
-
-자세한 내용은 [!DNL Segmentation Service]를 보려면 [세그먼테이션 개요](../../segmentation/home.md).
+Real-Time CDP B2B Edition에 대해 자세히 알아보려면 [Real-Time CDP B2B Edition 개요](../../rtcdp/overview.md).
 
 ## 소스 {#sources}
 
@@ -200,7 +73,14 @@ Adobe Experience Platform은 외부 소스에서 데이터를 수집할 수 있�
 
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스를 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
+**업데이트된 기능**
+
 | 기능 | 설명 |
 | --- | --- |
-| 클라우드 스토리지 소스의 하위 폴더에 대한 사용자 액세스 허용 | 이제 새 계정을 만들 때 클라우드 저장소 소스의 특정 하위 폴더에 대한 액세스를 정의할 수 있습니다. 만든 후에는 허용되는 하위 폴더의 데이터만 액세스할 수 있습니다. 이 기능은 다음 클라우드 스토리지 소스에서 사용할 수 있습니다. [Azure Blob 저장소](../../sources/connectors/cloud-storage/blob.md), [Google 클라우드 스토리지](../../sources/connectors/cloud-storage/google-cloud-storage.md), [Google PubSub](../../sources/connectors/cloud-storage/google-pubsub.md), 및 [SFTP](../../sources/connectors/cloud-storage/sftp.md). |
-| 베타 가용성 [!DNL SugarCRM] | [!DNL SugarCRM] 이제 소스는 베타로 제공됩니다. 를 사용하십시오 [!DNL SugarCRM Accounts & Contacts] 그리고 [!DNL SugarCRM Events] 소스에서 데이터를 가져옵니다. [!DNL SugarCRM] Experience Platform 계정. 자세한 내용은 [[!DNL SugarCRM] 개요](../../sources/connectors/crm/sugarcrm.md). |
+| 다음 방법으로 구독 수준 액세스 지정 [!DNL Google PubSub] | 이제 [!DNL Google PubSub] 인증 시 구독 ID를 제공하여 소스를 만듭니다. 자세한 내용은 [!DNL Google PubSub] 인증 자습서 [흐름 서비스 API 사용](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) 또는 [플랫폼 UI](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
+| 에서 사용자 지정 활동 데이터 수집 [!DNL Marketo] | 이제 사용자 지정 활동 데이터를 [!DNL Marketo] 인스턴스를 Experience Platform에 추가합니다. 사용자 지정 활동 데이터를 수집하려면 B2B 활동 스키마에서 사용자 지정 활동 필드 그룹을 설정하고 활동 데이터 세트를 사용하여 데이터 흐름을 만들어야 합니다. 데이터 흐름이 완료되면 수집된 데이터 세트에 표준 및 사용자 지정 활동이 모두 포함됩니다 [!DNL Marketo] 인스턴스. 그런 다음 를 사용할 수 있습니다 [쿼리 서비스](../../query-service/home.md) 을 눌러 Platform에서 사용자 지정 활동 레코드에 액세스합니다. 자세한 내용은 다음 안내서를 참조하십시오. [사용자 지정 활동 데이터에 대한 데이터 흐름 만들기](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
+| 미청구 계정 제외 [!DNL Marketo] | 이제 회사 데이터에 대한 데이터 흐름을 만들 때 미청구 계정을 수집에서 제외 또는 포함할지 여부를 구성할 수 있습니다. 자세한 내용은 다음 안내서를 참조하십시오. [소스 연결 및 데이터 흐름 만들기 [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
+
+{style=&quot;table-layout:auto&quot;}
+
+소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).
