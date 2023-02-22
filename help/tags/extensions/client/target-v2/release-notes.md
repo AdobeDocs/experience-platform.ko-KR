@@ -2,9 +2,9 @@
 title: Adobe Target v2 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장에 대한 최신 릴리스 노트입니다.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: e086359916b3aeef73ba9c98e1bfa13da5a974cd
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '628'
 ht-degree: 26%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 26%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## v0.19.2(2023년 2월 14일)
+
+- 시간 제한을 데이터 요소로 설정할 수 있는 문제를 수정했습니다.
 
 ## v0.19.0(2022년 9월 19일)
 
