@@ -3,10 +3,10 @@ title: 사용자 에이전트 클라이언트 힌트
 description: 웹 SDK에서 사용자 에이전트 클라이언트 힌트가 작동하는 방식을 알아봅니다
 keywords: 사용자 에이전트;클라이언트 힌트; string; user-agent 문자열; 낮은 엔트로피 높은 엔트로피
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
+source-git-commit: faeec4288948012fabeb25d0a0ce5a3b45f563ec
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 6%
+source-wordcount: '1132'
+ht-degree: 7%
 
 ---
 
@@ -116,16 +116,13 @@ Adobe Experience Cloud 솔루션은 [!DNL User-Agent] 다양한 방식으로 문
 
 ### 높은 엔트로피 클라이언트 힌트를 사용하는 Adobe Analytics 보고서 {#analytics}
 
-다음 [운영 체제](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) 차원은 높은 엔트로피 클라이언트 힌트로 저장된 운영 체제 버전을 포함합니다. 높은 엔트로피 클라이언트 힌트가 활성화되지 않으면 Chromium 브라우저에서 수집된 히트에 대해 운영 체제 버전이 부정확할 수 있습니다.
+다음 [운영 체제](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=ko-KR) 차원은 높은 엔트로피 클라이언트 힌트로 저장된 운영 체제 버전을 포함합니다. 높은 엔트로피 클라이언트 힌트가 활성화되지 않으면 Chromium 브라우저에서 수집된 히트에 대해 운영 체제 버전이 부정확할 수 있습니다.
 
 ### 높은 엔트로피 클라이언트 힌트에 의존하는 Audience Manager 트레이트 {#aam}
 
-Audience Manager 트레이트에서 다음 속성을 사용하는 경우 높은 엔트로피 클라이언트 힌트를 활성화해야 합니다. 그렇지 않으면 트레이트의 작동이 중지됩니다.
+[!DNL Google] 이(가) 업데이트됨 [!DNL Chrome] 를 통해 수집된 정보를 최소화하기 위한 브라우저 기능 `User-Agent` 헤더. 따라서 Audience Manager 고객은 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) 은(는) 더 이상 트레이트에 대한 신뢰할 수 있는 정보를 받지 않습니다 [플랫폼 수준 키](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=ko).
 
-* 운영 체제 버전
-* 디바이스 모델
-* 장치 제조업체
-* 장치 공급업체
+타깃팅에 플랫폼 수준 키를 사용하는 Audience Manager 고객은 [웹 SDK Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en) 대신 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en), 및 활성화 [높은 엔트로피 클라이언트 힌트](#enabling-high-entropy-client-hints) 신뢰할 수 있는 트레이트 데이터를 계속 수신하려면 다음을 수행하십시오.
 
 ## 높은 엔트로피 클라이언트 힌트 사용 {#enabling-high-entropy-client-hints}
 
