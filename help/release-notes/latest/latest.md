@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 2월 릴리스 노트입니다.
-source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
+source-git-commit: 66ca8d3972045cffe4a1614f638546f4e7838680
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 4%
+source-wordcount: '1137'
+ht-degree: 6%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [[!DNL Destinations]](#destinations)
 - [XDM(경험 데이터 모델)](#xdm)
 - [쿼리 서비스](#query-service)
-- [Real-Time CDP B2B Edition의 관련 계정](#related-accounts)
+- [Real-Time Customer Data Platform B2B 에디션](#b2b)
 - [소스](#sources)
 
 ## [!DNL Destinations] {#destinations}
@@ -45,10 +45,31 @@ Adobe Experience Platform의 기존 기능 업데이트:
 XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 공통 표현으로 통합하여 보다 빠르고 통합된 방식으로 통찰력을 제공할 수 있습니다. 고객 작업을 통해 유용한 통찰력을 얻을 수 있고, 세그먼트를 통해 고객 대상을 정의하고, 개인화를 위해 고객 속성을 사용할 수 있습니다.
 
 **업데이트된 기능**
-&#x200B; | 기능 | 설명 | | — | — | | UI를 통한 필드 사용 중단 | 이제 데이터를 처리한 후 스키마에서 필드를 사용하지 않을 수 있습니다. XDM 필드 사용 중단 기능을 사용하면 UI 보기에서 필드를 제거할 수 있지만 필드를 사용할 수 있도록 유지할 수 있습니다. 필요한 경우 더 이상 사용되지 않는 필드를 다시 표시할 수 있으며 필드를 참조하는 모든 세그먼트, 쿼리 또는 다운스트림 솔루션은 평소대로 실행됩니다. |
+&#x200B; | 기능 | 설명 | | — | — | | UI를 통한 필드 사용 중단 | 이제 다음을 수행할 수 있습니다. [데이터가 수집되면 스키마에서 필드를 사용하지 않습니다.](../../xdm/tutorials/field-deprecation-ui.md). XDM 필드 사용 중단 기능을 사용하면 UI 보기에서 필드를 제거할 수 있지만 필드를 사용할 수 있도록 유지할 수 있습니다. 필요한 경우 더 이상 사용되지 않는 필드를 다시 표시할 수 있으며 필드를 참조하는 모든 세그먼트, 쿼리 또는 다운스트림 솔루션은 평소대로 실행됩니다. |
 
-플랫폼의 XDM에 대한 자세한 &#x200B; 내용은 [XDM 시스템 개요](../../xdm/home.md). &#x200B;
-<!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
+{style=&quot;table-layout:auto&quot;}
+
+**새로운 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 |
+| --- | --- | --- |
+| 클래스 | [[!UICONTROL XDM 개별 잠재 고객 프로필]](https://github.com/adobe/xdm/pull/1669/files) | XDM 개별 잠재 고객 프로필 클래스는 파트너가 제공하는 ID를 가져옵니다. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**업데이트된 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 |
+| --- | --- | --- |
+| 필드 그룹 | [!UICONTROL 빈도 제한] | 다음 [!UICONTROL 빈도 제한] 필드 그룹이 생성되었습니다. [반복 및 사용자 지정 이벤트를 지원하도록 업데이트됨](https://github.com/adobe/xdm/pull/1641/files). |
+| 데이터 유형 | [!UICONTROL 웹 레퍼러] | 웹 레퍼러 속성이 [을 포함하도록 업데이트됨 `xdm:linkName` 및 `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). 각각 이전 페이지에서 선택한 HTML 요소의 이름과 영역입니다. |
+| 필드 그룹 | [!UICONTROL Adobe CJM ExperienceEvent - 메시지 상호 작용 세부 사항] | [다음 [!UICONTROL 추적기 URL] 필드가 추가되었습니다](https://github.com/adobe/xdm/pull/1665/files) 변환 후 [!UICONTROL Adobe CJM ExperienceEvent]. 이 추적기는 사용자가 선택한 URL을 제공합니다. |
+| 필드 그룹 | [!UICONTROL Adobe CJM ExperienceEvent - 메시지 상호 작용 세부 사항] | [빈 `meta:enum` 속성이 제거되었습니다.](https://github.com/adobe/xdm/pull/1668/files) URL에서 [!UICONTROL 추적 유형] 필드. |
+| 데이터 유형 | [!UICONTROL 미디어 정보] | [다음에서 가져온 정규식 패턴 `videoSegment` 속성 [!UICONTROL 미디어 정보] 데이터 형식이 제거되었습니다.](https://github.com/adobe/xdm/pull/1667/files). |
+
+{style=&quot;table-layout:auto&quot;}
+
+플랫폼의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
 
 ## 쿼리 서비스 {#query-service}
 
@@ -57,20 +78,16 @@ Query Service를 사용하면 표준 SQL을 사용하여 Adobe Experience Platfo
 **업데이트된 기능**
 &#x200B; | 기능 | 설명 | | — | — | | SQL을 사용하여 프로필용 데이터 세트 활성화 | CTAS 쿼리의 LABEL을 사용하여 데이터 세트를 &#39;profile enabled&#39;로 만들거나, ALTER를 사용하여 프로필에 대해 활성화할 기존 데이터 세트를 업데이트합니다. | | 예약된 쿼리 모니터링 | 예약된 쿼리 탭을 사용하여 쿼리 실행에 대한 중요한 정보를 찾고 경고를 구독합니다. 실패한 경우 일정 세부 사항, 상태 및 오류 메시지/코드에 대한 쿼리를 모니터링합니다.  | | 자동 완성 기능 전환 | 쿼리 편집기 자동 완료 기능을 전환하여 특정 메타데이터 명령을 제거하고 처리 시간을 개선합니다. 이 기능은 작성할 때 쿼리에 대한 잠재적 SQL 키워드와 테이블 세부 정보를 자동으로 제안합니다. | | 데이터 집합 샘플 | 쿼리에서 샘플링 속도를 지정하고 데이터 세트 샘플을 사용하여 균일한 임의 샘플을 만들거나 특정 기준에 따라 조건부 샘플을 만듭니다. |
 
-&#x200B; Query Services에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md). &#x200B;
+{style=&quot;table-layout:auto&quot;} &#x200B; Query Services에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md). &#x200B;
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
 <!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
 <!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
-## Real-Time CDP B2B Edition의 관련 계정 {#related-accounts}
+## Real-Time Customer Data Platform B2B 에디션 {#b2b}
 
->[!NOTE]
->
->관련 계정 기능은 Real-Time CDP B2B Edition 고객만 사용할 수 있습니다.
-
-관련 계정, [!DNL Real-Time CDP B2B] 탐색 중인 계정과 유사한 계정 목록을 볼 수 있습니다. 세그먼트 정의에 관련 계정을 포함하여 도달 범위를 넓히거나 세그먼트에 더 넓은 기준을 적용할 수 있습니다.
+Real-time Customer Data Platform(Real-Time CDP)에 구축된 Real-Time CDP B2B Edition은 비즈니스-비즈니스 서비스 모델로 운영되는 마케터를 위해 특별히 빌드되었습니다. 여러 소스의 데이터를 가져와서 사람 및 계정 프로필에 대한 단일 보기로 결합합니다. 이러한 통합 데이터를 통해 마케터는 특정 대상을 정확하게 타겟팅하고 사용 가능한 모든 채널에서 그러한 대상을 선택할 수 있습니다.
 
 **업데이트된 기능**
 
@@ -79,12 +96,6 @@ Query Service를 사용하면 표준 SQL을 사용하여 Adobe Experience Platfo
 | 관련 계정 서비스 활성화 | 새로운 전환 기능을 사용하면 계정에서 관련 계정 서비스를 활성화할 수 있습니다. 자세한 내용은 다음 안내서를 참조하십시오. [관련 계정 서비스 활성화](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
 {style=&quot;table-layout:auto&quot;}
-
-다음 설명서 페이지에서 관련 계정 기능에 대해 자세히 알아보십시오.
-
-- [Real-Time CDP B2B Edition의 관련 계정 개요](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
-- [계정 프로필 UI 안내서의 관련 계정 탭](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [세그먼트 정의에서 관련 계정을 사용하는 방법](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 Real-Time CDP B2B Edition에 대해 자세히 알아보려면 [Real-Time CDP B2B Edition 개요](../../rtcdp/overview.md).
 
