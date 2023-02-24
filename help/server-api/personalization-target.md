@@ -2,10 +2,10 @@
 title: Adobe Target을 통한 개인화
 description: 서버 API를 사용하여 Adobe Target에서 만든 개인화된 경험을 제공하고 렌더링하는 방법을 알아봅니다.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3730a9a20644291db844ecfad88355daa4a1cba7
+source-git-commit: 091d5440d7346861b7c882fa0a17bd03d528e438
 workflow-type: tm+mt
-source-wordcount: '744'
-ht-degree: 2%
+source-wordcount: '620'
+ht-degree: 1%
 
 ---
 
@@ -28,15 +28,6 @@ Adobe Target과 함께 서버 API를 사용하려면 먼저 데이터 스트림 
 데이터 스트림을 구성할 때 다음에 값을 제공할 수 있습니다(선택 사항) [!DNL Property Token], [!DNL Target Environment ID], 및 [!DNL Target Third Party ID Namespace].
 
 ![Adobe Target이 선택된 상태로 데이터 스트림 서비스 구성 화면을 보여주는 UI 이미지](assets/target-datastream.png)
-
-다음 중 하나를 선택할 수 있습니다 [!DNL Analytics Logging] 옵션:
-
-* **[!DNL Server Side]**: 에 대한 기본 옵션입니다 [[!DNL A4T]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html). 이 옵션을 선택하면 개인화 컨텐츠가 Target에 의해 반환될 때마다 관련 내용이 표시됩니다 [!DNL A4T] 데이터는 Target 개인화 엔진의 응답을 기반으로 Analytics로 자동으로 전송됩니다.
-* **[!DNL Client Side]**: 이 옵션을 선택하면 개인화 컨텐츠가 Target에 의해 반환될 때마다 관련 내용이 표시됩니다 [!DNL A4T] 데이터가 호출 애플리케이션에 반환됩니다. Analytics에 이 데이터를 기록하려는 경우에는 다음에 대한 후속 호출 시 이 데이터가 보고되는지 확인해야 합니다 [!DNL Analytics].
-
-   >[!IMPORTANT]
-   >
-   >선택 외에 **[!UICONTROL 고객측]** Target 구성에서 Edge Network에서 를 반환하려면 Analytics도 비활성화해야 합니다. [!DNL A4T] 응답으로 정보를 다시 가져옵니다.
 
 
 ## 사용자 지정 매개 변수 {#custom-parameters}
