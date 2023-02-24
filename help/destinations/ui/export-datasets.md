@@ -2,9 +2,10 @@
 title: (베타) 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 기본 설정 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
+exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
+source-git-commit: aebb1494a6ed667730997048d30a2ca3e00f9452
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1335'
 ht-degree: 1%
 
 ---
@@ -18,7 +19,9 @@ ht-degree: 1%
 >* 이 기능은 Real-Time CDP Prime 및 Ultimate 패키지를 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 
 
-이 문서에서는 내보내는 데 필요한 워크플로우에 대해 설명합니다 [데이터 세트](/help/catalog/datasets/overview.md) Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치(예: ) [!DNL Amazon S3], SFTP 위치 또는 [!DNL Google Cloud Storage].
+이 문서에서는 내보내는 데 필요한 워크플로우에 대해 설명합니다 [데이터 세트](/help/catalog/datasets/overview.md) Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치(예: ) [!DNL Amazon S3], SFTP 위치 또는 [!DNL Google Cloud Storage] Experience Platform UI 사용.
+
+Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있습니다. 다음 문서를 참조하십시오. [데이터 세트 API 내보내기 자습서](/help/destinations/api/export-datasets.md) 추가 정보.
 
 ## 세그먼트를 활성화하거나 데이터 세트를 내보내는 경우 {#when-to-activate-segments-or-activate-datasets}
 
