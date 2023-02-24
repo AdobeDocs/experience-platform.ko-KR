@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: 3c91e39958a9cba001ae0f0ac70f920263fa041d
+source-git-commit: 135691e0d2b77cc8e2581ff3a614fe26c7969cdd
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 17%
+source-wordcount: '270'
+ht-degree: 18%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 17%
       - [보고 통찰력 데이터 모델 안내서](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
    - 파생 특성 {#derived-attributes}
       - [개요](data-distiller/derived-attributes/overview.md)
+      - [원활한 SQL 흐름](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [데칠레 기반 파생 속성 만들기](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - 사용 사례 {#use-cases}
    - [찾아보기 포기](use-cases/abandoned-browse.md)
@@ -96,4 +97,4 @@ ht-degree: 17%
    - [준비된 설명](sql/prepared-statements.md)
 - [자주 묻는 질문](troubleshooting-guide.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+- [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes_kr)

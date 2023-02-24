@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c26a60f0d0fc9f5b7253851baf73e1a3edfffe0f
+source-git-commit: 3907efa2e8c20671e283c1e5834fc7224ee12f9e
 workflow-type: tm+mt
-source-wordcount: '3355'
+source-wordcount: '3406'
 ht-degree: 2%
 
 ---
@@ -173,18 +173,19 @@ SELECT statement 1
 SELECT statement 2
 ```
 
-### 선택할 때 테이블 만들기
+### 선택할 때 테이블 만들기 {#create-table-as-select}
 
 다음 구문은 `CREATE TABLE AS SELECT` (CTAS) 쿼리:
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
+CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE') ] AS (select_query)
 ```
 
 | 매개 변수 | 설명 |
 | ----- | ----- |
 | `schema` | XDM 스키마의 제목입니다. CTAS 쿼리에서 만든 새 데이터 세트에 기존 XDM 스키마를 사용하려는 경우에만 이 절을 사용합니다. |
 | `rowvalidation` | (선택 사항) 새로 생성된 데이터 세트에 대해 수집된 모든 새 배치의 행 수준 유효성 검사를 사용자가 원하는지 여부를 지정합니다. 기본값은 `true`입니다. |
+| `label` | CTAS 쿼리를 사용하여 데이터 세트를 만들 때 이 레이블을 값과 함께 사용합니다 `profile` 데이터 세트에 프로필에 대해 활성화됨으로 레이블을 지정하려면 즉, 데이터 세트가 만들 때 프로필에 대해 자동으로 표시됩니다. 의 사용에 대한 자세한 내용은 파생 특성 확장 문서 를 참조하십시오 `label`. |
 | `select_query` | A `SELECT` 문. 의 구문 `SELECT` 쿼리는 [쿼리 섹션 선택](#select-queries). |
 
 **예**
@@ -192,7 +193,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 ```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 
-CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
+CREATE TABLE Chairs WITH (schema='target schema title', label='PROFILE') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 
 CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 ```
