@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: e880a643150de5cc2d2fb3948b15888da54f7244
+source-git-commit: 0108d0dcb130e17007faeaa08f97e5c13d71578f
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '940'
 ht-degree: 11%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 11%
       - [Google 광고 커넥터](connectors/advertising/ads.md)
    - Analytics {#analytics}
       - [Mixpanel 커넥터](connectors/analytics/mixpanel.md)
+      - [펜도](connectors/analytics/pendo-webhook.md)
    - 클라우드 스토리지 {#cloud-storage}
       - [Amazon Kinesis 커넥터](connectors/cloud-storage/kinesis.md)
       - [Amazon S3 커넥터](connectors/cloud-storage/s3.md)
@@ -113,6 +114,7 @@ ht-degree: 11%
          - [Google 광고](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
+         - [펜도](tutorials/api/create/analytics/pendo-webhook.md)
       - 클라우드 스토리지 {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -226,6 +228,7 @@ ht-degree: 11%
          - [Google 광고](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
+         - [펜도](tutorials/ui/create/analytics/pendo-webhook.md)
       - 클라우드 스토리지 {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
