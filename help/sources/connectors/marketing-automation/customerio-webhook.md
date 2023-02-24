@@ -2,7 +2,7 @@
 title: Customer.io 소스 개요
 description: 웹 후크를 활용하여 API 또는 사용자 인터페이스를 사용하여 Customer.io를 Adobe Experience Platform에 연결하는 방법을 알아봅니다
 badge: "Beta"
-source-git-commit: cb4b92f4d71d42d57363e16d4764217b6de7f8ee
+source-git-commit: 516ec2cbfb954764f1a6fb2007e20acac425607d
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
@@ -21,9 +21,9 @@ Experience Platform은 스트리밍 응용 프로그램에서 데이터를 수�
 
 [[!DNL Customer.io]](https://customer.io/) 는 데이터 기반 이메일, 푸시 알림, 인앱 메시지 및 SMS를 만들고 전송하기 위한 보다 효과적인 제어 및 유연성을 원하는 마케터를 위한 자동화된 메시징 플랫폼입니다.
 
-다음 [!DNL Customer.io] 소스를 사용하면 지원되는 웹 후크 이벤트 스키마 및 관련 이벤트 데이터를 다음에서 수집할 수 있습니다 [!DNL Customer.io] 사용 [[!DNL Customer.io] 보고 Webhooks](https://customer.io/docs/api/webhooks/).
+다음 [!DNL Customer.io] 소스를 사용하면 지원되는 웹 후크 이벤트 스키마와 관련 이벤트 데이터를 [!DNL Customer.io] 사용 [[!DNL Customer.io] 보고 Webhooks](https://customer.io/docs/api/webhooks/).
 
-지원되는 Webhook 이벤트 스키마는 다음과 같습니다.
+지원되는 웹 후크 이벤트 스키마는 다음과 같습니다.
 
 * 고객 이벤트
 * 이메일 이벤트

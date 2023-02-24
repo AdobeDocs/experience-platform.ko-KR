@@ -2,9 +2,9 @@
 title: UI에서 Customer.io 소스 연결 및 데이터 흐름 만들기
 description: Adobe Experience Platform UI를 사용하여 Customer.io 소스 연결을 만드는 방법을 알아봅니다.
 badge: "Beta"
-source-git-commit: 7ec7900f8a2fe3d7ad63ac061f286657c4a6b4d8
+source-git-commit: f2f3279b5c68cd636ca7da0fe2221e1b0a94fbad
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1233'
 ht-degree: 1%
 
 ---
@@ -64,13 +64,13 @@ ht-degree: 1%
 
 를 사용하십시오 *[!UICONTROL 카테고리]* 메뉴를 사용하여 범주별로 소스를 필터링합니다. 또는 검색 막대에 소스 이름을 입력하여 카탈로그에서 특정 소스를 찾습니다.
 
-로 이동합니다. [!UICONTROL 마케팅 자동화] 카테고리를 클릭하여 [!DNL Customer.io] 소스 카드. 시작하려면 다음을 선택합니다 [!UICONTROL 데이터 추가].
+로 이동합니다. [!UICONTROL 마케팅 자동화] 카테고리를 클릭하여 [!DNL Customer.io] 소스 카드. 시작하려면 다음을 선택합니다 **[!UICONTROL 데이터 추가]**.
 
 ![Customer.io 카드가 포함된 카탈로그의 Platform UI 스크린샷](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## 데이터 선택 {#select-data}
 
-다음 **[!UICONTROL 데이터 선택]** Platform으로 가져오는 데이터를 선택할 수 있는 인터페이스를 제공하는 단계가 나타납니다.
+다음 **[!UICONTROL 데이터 선택]** Platform으로 가져올 데이터를 선택할 수 있는 인터페이스를 제공하는 단계가 나타납니다.
 
 * 인터페이스 왼쪽 부분은 계정 내에서 사용 가능한 데이터 스트림을 볼 수 있는 브라우저입니다.
 * 인터페이스의 오른쪽 부분에서 JSON 파일에서 최대 100개의 데이터 행을 미리 볼 수 있습니다.
