@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
+source-git-commit: 11fa9ca8d7044843c295126f8416e5a36600d244
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '934'
 ht-degree: 11%
 
 ---
@@ -92,6 +92,7 @@ ht-degree: 11%
    - 로컬 시스템 {#local-system}
       - [로컬 파일 업로드 커넥터](connectors/local-system/local-file-upload.md)
    - 마케팅 자동화 {#marketing-automation}
+      - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [HubSpot 커넥터](connectors/marketing-automation/hubspot.md)
       - [Mailchimp 커넥터](connectors/marketing-automation/mailchimp.md)
       - [Oracle Eloqua 커넥터](connectors/marketing-automation/oracle-eloqua.md)
@@ -162,6 +163,7 @@ ht-degree: 11%
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - 마케팅 자동화 {#marketing-automation}
+         - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [MailChimp 캠페인](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp 멤버](tutorials/api/create/marketing-automation/mailchimp-members.md)
@@ -276,6 +278,7 @@ ht-degree: 11%
       - 로컬 시스템 {#local-system}
          - [로컬 파일 업로드](tutorials/ui/create/local-system/local-file-upload.md)
       - 마케팅 자동화 {#marketing-automation}
+         - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [메일 그룹 캠페인](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [메일 그룹 구성원](tutorials/ui/create/marketing-automation/mailchimp-members.md)
