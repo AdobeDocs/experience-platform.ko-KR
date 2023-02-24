@@ -2,10 +2,10 @@
 title: Adobe Target v2 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장에 대한 최신 릴리스 노트입니다.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: e086359916b3aeef73ba9c98e1bfa13da5a974cd
+source-git-commit: ffbb68c9c84b834984e1adb2640d8806ce9f9962
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 26%
+source-wordcount: '650'
+ht-degree: 25%
 
 ---
 
@@ -18,6 +18,12 @@ ht-degree: 26%
 ## v0.19.2(2023년 2월 14일)
 
 - 시간 제한을 데이터 요소로 설정할 수 있는 문제를 수정했습니다.
+
+## v0.19.1(2023년 2월 3일)
+
+- 을 지원하도록 업데이트됨 `at.js` v2.10.1
+- 이제 클라이언트 사용자 지정 Mbox 매개 변수가 점 표기법을 올바르게 지원합니다
+- 더 이상 VEC에서 게재 호출이 수행되지 않습니다
 
 ## v0.19.0(2022년 9월 19일)
 
