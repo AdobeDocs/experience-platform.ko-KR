@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;스트리밍 연결;스트리밍
 title: Flow Service API를 사용하여 HTTP API 스트리밍 연결 만들기
 description: 이 자습서에서는 Flow Service API를 사용하여 원시 및 XDM 데이터에 대한 HTTP API 소스를 사용하여 스트리밍 연결을 만드는 방법을 제공합니다
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1544'
 ht-degree: 2%
 
 ---
@@ -475,6 +475,8 @@ POST /flows
 
 >[!TAB 변형 없이]
 
+다음 요청은 데이터 변환 없이 HTTP API에 대한 스트리밍 데이터 플로를 만듭니다.
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -500,6 +502,10 @@ curl -X POST \
 ```
 
 >[!TAB 변형 사용]
+
+다음 요청은 데이터에 적용된 매핑 변환이 있는 HTTP API용 스트리밍 데이터 플로를 만듭니다.
+
+변형을 사용하여 데이터 흐름을 만들 때 `name` 매개 변수는 변경할 수 없습니다. 이 값은 항상 `Mapping`.
 
 ```shell
 curl -X POST \
