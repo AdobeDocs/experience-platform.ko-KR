@@ -1,139 +1,140 @@
 ---
 keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 액세스 제어;ABAC
 title: 액세스 제어 정책 관리
-description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 액세스 제어 정책을 관리하는 방법에 대한 정보를 제공합니다.
+description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통한 액세스 제어 정책 관리에 대한 정보를 제공합니다.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 504c73fc73ce41f2c1b3159478fc7fe9b4d20a9d
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
 
 # 액세스 제어 정책 관리
 
-액세스 제어 정책은 허용 및 허용되지 않는 작업을 설정하기 위해 특성을 함께 가져오는 명령문입니다. 액세스 정책은 로컬 또는 글로벌 정책일 수 있으며 다른 정책을 재정의할 수 있습니다.
+액세스 제어 정책은 속성을 함께 가져와서 허용 가능한 작업과 허용 불가능한 작업을 설정하는 명령문입니다. 액세스 정책은 로컬 또는 전역일 수 있으며 다른 정책을 무시할 수 있습니다. Adobe은 조직에서 레이블을 기반으로 특정 오브젝트에 대한 액세스 제어를 시작할 준비가 될 때마다 또는 즉시 활성화할 수 있는 기본 정책을 제공합니다. 기본 정책은 사용자가 일치하는 레이블이 있는 역할에 있지 않는 한 리소스에 적용된 레이블을 활용하여 액세스를 거부합니다.
 
 >[!IMPORTANT]
 >
->액세스 정책은 데이터 사용 정책과 혼동하지 않도록 합니다. 이 정책은 조직의 사용자가 액세스 권한이 있는 대신 Adobe Experience Platform에서 데이터를 사용하는 방법을 제어합니다. 만들기에 대한 안내서를 참조하십시오 [데이터 사용 정책](../../../data-governance/policies/create.md) 추가 정보.
+>액세스 정책은 조직의 사용자가 액세스할 수 있는 Adobe Experience Platform 대신 데이터가 에서 사용되는 방식을 제어하는 데이터 사용 정책과 혼동하지 않습니다. 만들기에 대한 안내서 참조 [데이터 사용 정책](../../../data-governance/policies/create.md) 추가 정보.
 
-## 새 정책 만들기
+<!-- ## Create a new policy
 
-새 정책을 만들려면 **[!UICONTROL 정책]** 탭하고 을 선택합니다. **[!UICONTROL 정책 만들기]**.
+To create a new policy, select the **[!UICONTROL Policies]** tab in the sidebar and select **[!UICONTROL Create Policy]**.
 
-![flash-new-policy](../../images/flac-ui/flac-new-policy.png)
+![flac-new-policy](../../images/flac-ui/flac-new-policy.png)
 
-다음 **[!UICONTROL 새 정책 만들기]** 이름 및 선택적 설명을 입력하라는 대화 상자가 나타납니다. 완료되면 을 선택합니다 **[!UICONTROL 확인]**.
+The **[!UICONTROL Create a new policy]** dialog appears, prompting you to enter a name, and an optional description. When finished, select **[!UICONTROL Confirm]**.
 
 ![flac-create-new-policy](../../images/flac-ui/flac-create-new-policy.png)
 
-드롭다운 화살표를 사용하여 다음을 선택합니다 **액세스 권한 허용** (![flac-permission-access-to](../../images/flac-ui/flac-permit-access-to.png)) 리소스 또는 **액세스 거부** (![flac-deny-access-to](../../images/flac-ui/flac-deny-access-to.png)) 리소스.
+Using the dropdown arrow select if you would like to **Permit access to** (![flac-permit-access-to](../../images/flac-ui/flac-permit-access-to.png)) a resource or **Deny access to** (![flac-deny-access-to](../../images/flac-ui/flac-deny-access-to.png)) a resource.
 
-그런 다음 드롭다운 메뉴 및 검색 액세스 유형, 읽기 또는 쓰기를 사용하여 정책에 포함할 리소스를 선택합니다.
+Next, select the resource that you would like to include in the policy using the dropdown menu and search access type, read or write.
 
 ![flac-flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown.png)
 
-그런 다음 드롭다운 화살표를 사용하여 이 정책에 적용할 조건을 선택합니다. **다음 내용이 참인 경우** (![flac-policy-true](../../images/flac-ui/flac-policy-true.png)) 또는 **다음은 false입니다** (![flac-policy-false](../../images/flac-ui/flac-policy-false.png)).
+Next, using the dropdown arrow select the condition you would like to apply to this policy, **The following being true** (![flac-policy-true](../../images/flac-ui/flac-policy-true.png)) or **The following being false** (![flac-policy-false](../../images/flac-ui/flac-policy-false.png)).
 
-더하기 아이콘을 선택하여 **일치 표현식 추가** 또는 **표현식 그룹 추가** 추가 리소스
+Select the plus icon to **Add matches expression** or **Add expression group** for the resource. 
 
 ![flac-policy-expression](../../images/flac-ui/flac-policy-expression.png)
 
-드롭다운을 사용하여 **리소스**.
+Using the dropdown, select the **Resource**.
 
 ![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown-1.png)
 
-그런 다음 드롭다운을 사용하여 **일치**.
+Next, using the dropdown select the **Matches**.
 
 ![flac-policy-matches-dropdown](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-그런 다음 드롭다운을 사용하여 레이블 유형(**[!UICONTROL 코어 레이블]** 또는 **[!UICONTROL 사용자 지정 레이블]**)을 클릭하여 롤의 사용자에게 할당된 레이블과 일치시킵니다.
+Next, using the dropdown, select the type of label (**[!UICONTROL Core label]** or **[!UICONTROL Custom label]**) to match the label assigned to the User in roles.
 
 ![flac-policy-user-dropdown](../../images/flac-ui/flac-policy-user-dropdown.png)
 
-마지막으로 **샌드박스** 에 적용할 정책 조건을 지정합니다. 드롭다운 메뉴를 사용합니다.
+Finally, select the **Sandbox** that you would like the policy conditions to apply to, using the dropdown menu.
 
-![flac-policy-sandboxes-드롭다운](../../images/flac-ui/flac-policy-sandboxes-dropdown.png)
+![flac-policy-sandboxes-dropdown](../../images/flac-ui/flac-policy-sandboxes-dropdown.png)
 
-선택 **리소스 추가** 리소스를 더 추가하려면 완료되면 을 선택합니다. **[!UICONTROL 저장 및 종료]**.
+Select **Add resource** to add more resources. Once finished, select **[!UICONTROL Save and exit]**.
 
 ![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
 
-새 정책이 성공적으로 만들어지면 **[!UICONTROL 정책]** 탭에 새로 만든 정책이 목록에 표시됩니다.
+The new policy is successfully created, and you are redirected to the **[!UICONTROL Policies]** tab, where you will see the newly created policy appear in the list. 
 
 ![flac-policy-saved](../../images/flac-ui/flac-policy-saved.png)
 
-## 정책 편집
+## Edit a policy
 
-기존 정책을 편집하려면 **[!UICONTROL 정책]** 탭. 또는 필터 옵션을 사용하여 결과를 필터링하여 편집할 정책을 찾습니다.
+To edit an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to edit.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-다음으로 줄임표(`…`)를 클릭하면 해당 역할을 편집, 비활성화, 삭제 또는 복제하는 컨트롤이 드롭다운에 표시됩니다. 드롭다운에서 편집을 선택합니다.
+Next, select the ellipsis (`…`) next to the policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select edit from the dropdown.
 
 ![flac-policy-edit](../../images/flac-ui/flac-policy-edit.png)
 
-정책 권한 화면이 나타납니다. 업데이트를 만든 다음 을 선택합니다 **[!UICONTROL 저장 및 종료]**.
+The policy permissions screen appears. Make the updates then select **[!UICONTROL Save and exit]**.
 
 ![flac-policy-save-and-exit](../../images/flac-ui/flac-policy-save-and-exit.png)
 
-정책이 성공적으로 업데이트되었으며, 이(가) **[!UICONTROL 정책]** 탭.
+The policy is successfully updated, and you are redirected to the **[!UICONTROL Policies]** tab.
 
-## 정책 복제
+## Duplicate a policy
 
-기존 정책을 복제하려면 **[!UICONTROL 정책]** 탭. 또는 필터 옵션을 사용하여 결과를 필터링하여 편집할 정책을 찾습니다.
+To duplicate an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to edit.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-다음으로 줄임표(`…`)을 클릭합니다. 그러면 드롭다운에 역할을 편집, 비활성화, 삭제 또는 복제하는 컨트롤이 표시됩니다. 드롭다운에서 중복을 선택합니다.
+Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select duplicate from the dropdown.
 
-![flc-policy-duplicate](../../images/flac-ui/flac-policy-duplicate.png)
+![flac-policy-duplicate](../../images/flac-ui/flac-policy-duplicate.png)
 
-다음 **[!UICONTROL 정책 복제]** 중복을 확인하는 대화 상자가 나타납니다.
+The **[!UICONTROL Duplicate policy]** dialog appears, prompting you to confirm the duplication. 
 
 ![flac-policy-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
 
-새 정책이 목록에 원본 파일의 사본으로 나타납니다 **[!UICONTROL 정책]** 탭.
+The new policy appears in the list as a copy of the original on the **[!UICONTROL Policies]** tab.
 
-![flc-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
+![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
 
-## 정책 삭제
+## Delete a policy
 
-기존 정책을 삭제하려면 **[!UICONTROL 정책]** 탭. 또는 필터 옵션을 사용하여 결과를 필터링하여 삭제할 정책을 찾습니다.
+To delete an existing policy, select the policy from the **[!UICONTROL Policies]** tab. Alternatively, use the filter option to filter the results to find the policy you want to delete.
 
 ![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
 
-다음으로 줄임표(`…`)을 클릭합니다. 그러면 드롭다운에 역할을 편집, 비활성화, 삭제 또는 복제하는 컨트롤이 표시됩니다. 드롭다운에서 삭제 를 선택합니다.
+Next, select the ellipsis (`…`) next to a policies name, and a dropdown displays controls to edit, deactivate, delete, or duplicate the role. Select delete from the dropdown.
 
 ![flac-policy-delete](../../images/flac-ui/flac-policy-delete.png)
 
-다음 **[!UICONTROL 사용자 정책 삭제]** 대화 상자가 나타나서 삭제를 확인하는 메시지가 나타납니다.
+The **[!UICONTROL Delete user policy]** dialog appears, prompting you to confirm the deletion. 
 
 ![flac-policy-delete-confirm](../../images/flac-ui/flac-policy-delete-confirm.png)
 
-에 반환됩니다 **[!UICONTROL 정책]** 탭 및 삭제 확인 팝업이 나타납니다.
+You are returned to the **[!UICONTROL policies]** tab and a confirmation of deletion pop over appears.
 
-![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png)
+![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
 
 ## 정책 활성화
 
-기존 정책을 활성화하려면 **[!UICONTROL 정책]** 탭. 또는 필터 옵션을 사용하여 결과를 필터링하여 삭제할 정책을 찾습니다.
+기존 정책을 활성화하려면 다음에서 정책을 선택합니다 **[!UICONTROL 정책]** 탭.
 
-![flac-policy-select](../../images/flac-ui/flac-policy-select.png)
+![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-다음으로 줄임표(`…`)를 클릭하면 해당 역할이 편집, 활성화, 삭제 또는 복제되는 컨트롤이 드롭다운에 표시됩니다. 드롭다운에서 활성화 를 선택합니다.
+그런 다음 줄임표(`…`) 정책 이름 옆에 드롭다운에 역할을 편집, 활성화, 삭제 또는 복제할 컨트롤이 표시됩니다. 드롭다운에서 활성화 를 선택합니다.
 
-![flac-policy-activate](../../images/flac-ui/flac-policy-delete.png)
+![flac 정책 활성화](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-다음 **[!UICONTROL 사용자 정책 활성화]** 활성화 여부를 확인하는 대화 상자가 나타납니다.
+다음 **[!UICONTROL 정책 활성화]** 대화 상자가 나타나고 활성화를 확인하라는 메시지가 표시됩니다.
 
-![flash-policy-activate-confirm](../../images/flac-ui/flac-policy-activate-confirm.png)
+![flac 정책 활성화 확인](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
-에 반환됩니다 **[!UICONTROL 정책]** 탭 및 활성화 확인 팝업이 나타납니다. 정책 상태가 활성으로 표시됩니다.
 
-![flac-policy-activated](../../images/flac-ui/flac-policy-activated.png)
+(으)로 돌아갑니다. **[!UICONTROL 정책]** 탭과 활성화 확인 팝업이 나타납니다. 정책 상태가 활성으로 표시됩니다.
+
+![flac 정책 활성화됨](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
 ## 다음 단계
 
-새 정책을 만든 후에는 다음 단계로 진행할 수 있습니다. [역할에 대한 권한 관리](permissions.md).
+정책이 활성화되면 다음 단계로 진행할 수 있습니다 [역할에 대한 권한 관리](permissions.md).
