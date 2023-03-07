@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 데이터 준비 매핑 기능
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 2584e804674cc54f9cdd0b3a28ee6fb1600b6216
+source-git-commit: da7eff7966679635efa71cbbd33768ef4f412241
 workflow-type: tm+mt
-source-wordcount: '4392'
-ht-degree: 4%
+source-wordcount: '4557'
+ht-degree: 3%
 
 ---
 
@@ -64,7 +64,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 다음과 같음 | 두 문자열을 비교하여 동일한지 확인합니다. 이 함수는 대/소문자를 구분합니다. | <ul><li>STRING1: **필수** 비교할 첫 번째 문자열입니다.</li><li>STRING2: **필수** 비교할 두 번째 문자열입니다.</li></ul> | 문자열1&#x200B;.equals(&#x200B;STRING2) | &quot;string1&quot;. &#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
 | equalsIgnoreCase | 두 문자열을 비교하여 동일한지 확인합니다. 이 함수는 **아님** 대/소문자를 구분합니다. | <ul><li>STRING1: **필수** 비교할 첫 번째 문자열입니다.</li><li>STRING2: **필수** 비교할 두 번째 문자열입니다.</li></ul> | 문자열1&#x200B;.equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;. &#x200B;equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 정규 표현식 함수
 
@@ -73,7 +73,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | extract_regex | 정규 표현식을 기반으로 입력 문자열에서 그룹을 추출합니다. | <ul><li>문자열: **필수** 그룹을 추출하는 문자열입니다.</li><li>정규 표현식: **필수** 그룹을 일치시킬 정규 표현식입니다.</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(&quot;E259,E259B_009,1_1&quot;&#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | 문자열이 입력한 정규 표현식과 일치하는지 확인합니다. | <ul><li>문자열: **필수** 확인 중인 문자열은 정규 표현식과 일치합니다.</li><li>정규 표현식: **필수** 비교 중인 정규 표현식입니다.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 해시 함수 {#hashing}
 
@@ -89,7 +89,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | md5 | 입력을 가져오고 MD5를 사용하여 해시 값을 생성합니다. | <ul><li>입력: **필수** 해시할 일반 텍스트입니다.</li><li>문자 집합: *선택 사항* 문자 세트의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다. </li></ul> | md5(입력, 문자 집합) | md5(&quot;내 텍스트&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4&#x200B;e9bd0198d03ba6852c7 |
 | crc32 | 입력이 CRC(순환 중복 검사) 알고리즘을 사용하여 32비트 순환 코드를 생성합니다. | <ul><li>입력: **필수** 해시할 일반 텍스트입니다.</li><li>문자 집합: *선택 사항* 문자 세트의 이름입니다. 가능한 값에는 UTF-8, UTF-16, ISO-8859-1 및 US-ASCII가 포함됩니다.</li></ul> | crc32(입력, CHARSET) | crc32(&quot;내 텍스트&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### URL 함수 {#url}
 
@@ -104,8 +104,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_port | 지정된 URL의 포트를 반환합니다. 입력이 올바르지 않으면 null을 반환합니다. | <ul><li>URL: **필수** 포트를 추출해야 하는 URL입니다.</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/&#x200B;joe/employee.csv&quot;) | 22 |
 | get_url_path | 지정된 URL의 경로를 반환합니다. 기본적으로 전체 경로가 반환됩니다. | <ul><li>URL: **필수** 경로를 추출해야 하는 URL입니다.</li><li>전체 경로: *선택 사항* 전체 경로가 반환되는지 여부를 결정하는 부울 값입니다. false로 설정하면 경로의 끝만 반환됩니다.</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com//&#x200B;home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B;employee.csv&quot; |
 | get_url_query_str | 주어진 URL의 쿼리 문자열을 쿼리 문자열 이름 및 쿼리 문자열 값의 맵으로 반환합니다. | <ul><li>URL: **필수** 쿼리 문자열을 가져오려는 URL.</li><li>앵커: **필수** 쿼리 문자열에서 앵커를 사용하여 수행할 작업을 결정합니다. &quot;retain&quot;, &quot;remove&quot; 또는 &quot;append&quot;의 세 가지 값 중 하나일 수 있습니다.<br><br>값이 &quot;retain&quot;이면 앵커가 반환된 값에 첨부됩니다.<br>값이 &quot;remove&quot;이면 반환된 값에서 앵커가 제거됩니다.<br>값이 &quot;append&quot;이면 앵커가 별도의 값으로 반환됩니다.</li></ul> | get_url_query_str&#x200B;(URL, ANCHOR) | get_url_query_str&#x200B;(&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose&quot;, &quot;retain&quot;)<br>get_url_query_str&#x200B;(&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str&#x200B;(&quot;foo://example.com&#x200B;:8042/over/there&#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_encoded | 이 함수는 URL을 입력으로 취하여 특수 문자를 ASCII 문자로 바꾸거나 인코딩합니다. 특수 문자에 대한 자세한 내용은 [특수 문자 목록](#special-characters) 이 문서의 부록에서. | <ul><li>URL: **필수** ASCII 문자로 바꾸거나 인코딩할 특수 문자가 있는 입력 URL입니다.</li></ul> | get_url_encoded(URL) | get_url_encoded(&quot;https</span>://example.com/partneralliance_asia-pacific_2022&quot;) | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
+| get_url_decoded | 이 함수는 URL을 입력으로 사용하고 ASCII 문자를 특수 문자로 디코딩합니다.  특수 문자에 대한 자세한 내용은 [특수 문자 목록](#special-characters) 이 문서의 부록에서. | <ul><li>URL: **필수** 특수 문자로 디코딩할 ASCII 문자가 있는 입력 URL입니다.</li></ul> | get_url_decoded(URL) | get_url_decoded(&quot;https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022&quot;) | https</span>://example.com/partneralliance_아시아 태평양_2022 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 날짜 및 시간 함수 {#date-and-time}
 
@@ -128,7 +130,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | zone_date_to_utc | 모든 시간대의 날짜를 UTC 형식의 날짜로 변환합니다. | <ul><li>날짜: **필수** 변환하려는 날짜입니다.</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
 | zone_date_to_zone | 날짜를 한 시간대에서 다른 시간대로 변환합니다. | <ul><li>날짜: **필수** 변환하려는 날짜입니다.</li><li>영역: **필수** 날짜를 전환하려는 시간대입니다.</li></ul> | zone_date_to_&#x200B;zone(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 계층 - 객체 {#objects}
 
@@ -147,7 +149,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_keys | 키/값 쌍을 구문 분석하고 모든 키를 반환합니다. | <ul><li>개체: **필수** 키를 추출할 개체입니다.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Pride and Preference&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | 키/값 쌍을 구문 분석하고 지정된 키를 기준으로 문자열 값을 반환합니다. | <ul><li>문자열: **필수** 구문 분석할 문자열입니다.</li><li>키: **필수** 값을 추출해야 하는 키입니다.</li><li>VALUE_DELIMITER: **필수** 필드와 값을 구분하는 구분 기호입니다. 다음 중 하나의 경우: `null` 빈 문자열이 제공된 경우 이 값은 다음과 같습니다. `:`.</li><li>필드 구분 기호: *선택 사항* 필드 쌍과 값 쌍을 구분하는 구분 기호입니다. 다음 중 하나의 경우: `null` 빈 문자열이 제공된 경우 이 값은 다음과 같습니다. `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 개체 복사 기능에 대한 자세한 내용은 섹션을 참조하십시오 [아래](#object-copy).
 
@@ -169,7 +171,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | upsert_array_append | 이 함수는 전체 입력 배열의 모든 요소를 프로필의 배열 끝에 추가하는 데 사용합니다. 이 함수는 **전용** 업데이트 중에 적용할 수 있습니다. 삽입 컨텍스트에서 사용되는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>배열: **필수** 프로필에 배열을 추가할 배열입니다.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | 이 함수는 배열에서 요소를 바꾸는 데 사용합니다. 이 함수는 **전용** 업데이트 중에 적용할 수 있습니다. 삽입 컨텍스트에서 사용되는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>배열: **필수** 프로필에서 배열을 대체할 배열입니다.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 논리 연산자 {#logical-operators}
 
@@ -182,7 +184,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | decode | 키와 키 값 쌍의 목록이 배열로 병합되면 이 함수는 키가 있는 경우 값을 반환하고 배열에 있는 경우 기본값을 반환합니다. | <ul><li>키: **필수** 일치시킬 키입니다.</li><li>OPTIONS: **필수** 키/값 쌍의 병합된 배열입니다. 원할 경우 끝에 기본값을 입력할 수 있습니다.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | 지정된 stateCode가 &quot;ca&quot;, &quot;California&quot;인 경우<br>주코드가 &quot;pa&quot;이면 &quot;Pennsylvania&quot;입니다.<br>stateCode가 다음과 일치하지 않으면 &quot;N/A&quot;입니다. |
 | iif | 주어진 부울 표현식을 평가하고 결과를 기반으로 지정된 값을 반환합니다. | <ul><li>표현식: **필수** 평가 중인 부울 표현식입니다.</li><li>TRUE_값: **필수** 표현식이 true로 평가되는 경우 반환되는 값입니다.</li><li>FALSE_값: **필수** 표현식이 false로 평가되는 경우 반환되는 값입니다.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 집계 {#aggregation}
 
@@ -195,7 +197,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | min | 주어진 인수의 최소값을 반환합니다. 자연어 순서 지정을 사용합니다. | <ul><li>OPTIONS: **필수** 서로 비교할 수 있는 하나 이상의 개체입니다.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | 주어진 인수의 최대값을 반환합니다. 자연어 순서 지정을 사용합니다. | <ul><li>OPTIONS: **필수** 서로 비교할 수 있는 하나 이상의 개체입니다.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 유형 전환 {#type-conversions}
 
@@ -210,7 +212,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | to_float | 문자열을 Float로 변환합니다. | <ul><li>문자열: **필수** Float으로 변환될 문자열입니다.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
 | to_integer | 문자열을 정수로 변환합니다. | <ul><li>문자열: **필수** 정수로 변환될 문자열입니다.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### JSON 함수 {#json}
 
@@ -222,7 +224,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | 해당 문자열에서 JSON 콘텐츠를 deserialize합니다. | <ul><li>문자열: **필수** 역직렬화할 JSON 문자열.</li></ul> | json_to_&#x200B;object(STRING) | &#x200B; json_to_object({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}}) | JSON을 나타내는 개체입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 특수 작업 {#special-operations}
 
@@ -234,7 +236,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | 의사 무작위 ID를 생성합니다. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 사용자 에이전트 기능 {#user-agent}
 
@@ -258,7 +260,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | ua_agent_name | 사용자 에이전트 문자열에서 에이전트 이름을 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | 사용자 에이전트 문자열에서 장치 클래스를 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 전화 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 개체 복사 {#object-copy}
 
@@ -302,3 +304,43 @@ address.line1 -> addr.addrLine1
 * 새 속성은 소스 스키마와 XDM 스키마에서 이름이 일치해야 합니다.
 
 전제 조건 중 어느 것이든 충족되지 않으면 데이터 준비를 사용하여 소스 스키마를 XDM 스키마에 수동으로 매핑해야 합니다.
+
+## 부록
+
+다음은 데이터 준비 매핑 기능 사용에 대한 추가 정보입니다
+
+### 특수 문자 {#special-characters}
+
+아래 표는 예약 문자와 해당 인코딩 문자 목록을 간략하게 설명합니다.
+
+| 예약된 문자 | 인코딩된 문자 |
+| --- | --- |
+| 공간 | %20 |
+| ! | %21 |
+| ” | %22 |
+| # | %23 |
+| $ | %24 |
+| % | %25 |
+| &amp; | %26 |
+| &#39; | %27 |
+| ( | %28 |
+| ) | %29 |
+| * | %2A |
+| + | %2B |
+| , | %2C |
+| / | %2F |
+| : | %3A |
+| ; | %3B |
+| &lt; | %3C |
+| = | %3D |
+| > | %3E |
+| ? | %3F |
+| @ | %40 |
+| [ | %5B |
+| | | %5C |
+| ] | %5D |
+| ^ | %5E |
+| ` | %60 |
+| ~ | %7E |
+
+{style="table-layout:auto"}
