@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
-description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
+description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: 92000a9276d0ec379414de22f36865a04ab9a359
+source-git-commit: 94f682487630867aff2d1cb1898d62980055cdb4
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1038'
 ht-degree: 6%
 
 ---
@@ -15,40 +15,40 @@ ht-degree: 6%
 # 대상 {#destinations}
 
 * [대상 개요](./home.md)
-* [대상 유형 및 카테고리](./destination-types.md)
+* [대상 유형 및 범주](./destination-types.md)
 * [대상(활성화) 보호 기능](./guardrails.md)
 * 대상 작동 방식 {#how-destinations-work}
-   * [대상의 구성 및 공통 내보내기 설정](./how-destinations-work/destinations-configurations.md)
+   * [대상에서 구성 및 공통 내보내기 설정](./how-destinations-work/destinations-configurations.md)
    * [다양한 대상 유형에 대한 프로필 내보내기 동작](./how-destinations-work/profile-export-behavior.md)
-   * [대상 활성화 워크플로우의 ID 처리](./how-destinations-work/identity-handling.md)
+   * [대상 활성화 워크플로에서의 ID 처리](./how-destinations-work/identity-handling.md)
 * API 자습서 {#api}
-   * [Flow Service API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다](./api/streaming-destinations.md)
-   * [배치 클라우드 스토리지 및 이메일 마케팅 대상에 연결하고 플로우 서비스 API를 사용하여 데이터를 활성화합니다](./api/connect-activate-batch-destinations.md)
-   * [(베타) 임시 활성화 API를 통해 대상자 세그먼트를 배치 대상에 활성화합니다](./api/ad-hoc-activation-api.md)
+   * [흐름 서비스 API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다](./api/streaming-destinations.md)
+   * [일괄 클라우드 스토리지 및 이메일 마케팅 대상에 연결하고 플로우 서비스 API를 사용하여 데이터를 활성화합니다](./api/connect-activate-batch-destinations.md)
+   * [(Beta) 애드혹 활성화 API를 통해 대상 세그먼트를 배치 대상으로 활성화합니다](./api/ad-hoc-activation-api.md)
    * [대상 데이터 흐름 업데이트](./api/update-destination-dataflows.md)
    * [대상 계정 삭제](./api/delete-destination-account.md)
    * [대상 데이터 흐름 삭제](./api/delete-destination-dataflow.md)
    * [(베타) 데이터 세트 내보내기](/help/destinations/api/export-datasets.md)
 * UI 안내서 {#ui}
-   * [대상 작업 공간](./ui/destinations-workspace.md)
+   * [대상 작업 영역](./ui/destinations-workspace.md)
    * [새 대상 연결 만들기](./ui/connect-destination.md)
-   * 대상에 대상 데이터 활성화{#activate}
+   * 대상에 대한 대상 데이터 활성화{#activate}
       * [활성화 개요](./ui/activation-overview.md)
-      * [스트리밍 세그먼트 내보내기 대상으로 대상 데이터 활성화](./ui/activate-segment-streaming-destinations.md)
-      * [스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화](./ui/activate-streaming-profile-destinations.md)
-      * [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](./ui/activate-batch-profile-destinations.md)
+      * [대상 데이터를 스트리밍 세그먼트 내보내기 대상으로 활성화](./ui/activate-segment-streaming-destinations.md)
+      * [대상자 데이터를 스트리밍 프로필 내보내기 대상으로 활성화](./ui/activate-streaming-profile-destinations.md)
+      * [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](./ui/activate-batch-profile-destinations.md)
       * [프로필 요청 대상에 대상 데이터 활성화](./ui/activate-profile-request-destinations.md)
       * [동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](./ui/configure-personalization-destinations.md)
-      * [(베타) Experience Platform UI를 사용하여 온디맨드 파일을 배치 대상으로 내보내기](./ui/export-file-now.md)
+      * [(베타) Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기](./ui/export-file-now.md)
       * [(베타) Experience Platform UI를 사용하여 데이터 세트 내보내기](./ui/export-datasets.md)
-      * [(베타) 새로운 베타 클라우드 스토리지 대상에서 마지막 자격 시간 XDM 속성을 사용합니다](./ui/activate-last-qualification-time.md)
+      * [(Beta) 새 Beta 클라우드 스토리지 대상에서 마지막 선별 시간 XDM 속성 사용](./ui/activate-last-qualification-time.md)
    * [대상 세부 사항 보기](./ui/destination-details-page.md)
    * [대상 계정 업데이트](./ui/update-accounts.md)
    * [대상 계정 삭제](./ui/delete-destination-account.md)
    * [활성화 데이터 흐름 편집](./ui/edit-activation.md)
    * [대상 삭제](./ui/delete-destinations.md)
    * [데이터 흐름 모니터링](./ui/monitor-dataflows.md)
-   * [(베타) 파일 기반 대상에 대한 파일 형식 옵션을 구성합니다](./ui/batch-destinations-file-formatting-options.md)
+   * [(Beta) 파일 기반 대상에 대한 파일 형식 옵션 구성](./ui/batch-destinations-file-formatting-options.md)
    * [컨텍스트 내 대상 경고 구독](ui/alerts.md)
 * 대상 카탈로그 {#catalog}
    * [대상 카탈로그 개요](./catalog/overview.md)
@@ -56,17 +56,18 @@ ht-degree: 6%
       * [Adobe 대상 개요](./catalog/adobe/overview.md)
       * [(베타) Experience Cloud 대상](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage 연결](./catalog/adobe/marketo-engage.md)
+      * [Marketo Measure Ultimate 연결](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform 세그먼트 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * 광고 대상{#advertising}
       * [광고 대상 개요](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud 연결](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud 확장](./catalog/advertising/adobe-advertising-cloud.md)
-      * [Win Advertiser 변환 태그 확장](./catalog/advertising/awin-conversiontag.md)
-      * [Awin Advertiser Master Tag 확장](./catalog/advertising/awin-mastertag.md)
-      * [Bing Ads Universal Event Tracking (UET) 확장](./catalog/advertising/bing-ads.md)
+      * [Awin 광고주 전환 태그 확장](./catalog/advertising/awin-conversiontag.md)
+      * [Awin Advertiser Mastertag 확장](./catalog/advertising/awin-mastertag.md)
+      * [Bing Ads UET(Universal Event Tracking) 확장](./catalog/advertising/bing-ads.md)
       * [분기 확장](./catalog/advertising/branch.md)
-      * [(베타) 기준 연결](./catalog/advertising/criteo.md)
-      * [DoubleClick Floodlight(베타) 확장](./catalog/advertising/doubleclick-floodlight.md)
+      * [(베타) 크리테오 연결](./catalog/advertising/criteo.md)
+      * [DoubleClick Floodlight (Beta) 확장](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook 픽셀 확장](./catalog/advertising/facebook-pixel.md)
       * [Flashtalk OneTag 확장](./catalog/advertising/flashtalking.md)
       * [Google 광고 연결](./catalog/advertising/google-ads-destination.md)
@@ -74,15 +75,15 @@ ht-degree: 6%
       * [Google Ad Manager 연결](./catalog/advertising/google-ad-manager.md)
       * [(베타) Google Ad Manager 360 연결](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match 연결](./catalog/advertising/google-customer-match.md)
-      * [Google 디스플레이 및 비디오 360 연결](./catalog/advertising/google-dv360.md)
-      * [Google 태그 확장](./catalog/advertising/gtag-advertising.md)
-      * [linkedIn Insight Tag 확장](./catalog/advertising/linkedin.md)
+      * [Google Display &amp; Video 360 연결](./catalog/advertising/google-dv360.md)
+      * [Google gtag 확장](./catalog/advertising/gtag-advertising.md)
+      * [LinkedIn 인사이트 태그 확장](./catalog/advertising/linkedin.md)
       * [Microsoft Bing 연결](./catalog/advertising/bing.md)
       * [Pinterest 전환 추적 확장](./catalog/advertising/pinterest-extension.md)
       * [Pinterest 고객 목록 연결](./catalog/advertising/pinterest.md)
-      * [(베타) Snapchat Ads 연결](./catalog/advertising/snap-inc.md)
-      * [무역센터 연결](./catalog/advertising/tradedesk.md)
-      * [(베타) Trade Desk CRM 연결](./catalog/advertising/tradedesk-emails.md)
+      * [(Beta) Snapchat Ads 연결](./catalog/advertising/snap-inc.md)
+      * [트레이드 데스크 연결](./catalog/advertising/tradedesk.md)
+      * [(Beta) 트레이드 데스크 CRM 연결](./catalog/advertising/tradedesk-emails.md)
       * [Twitter 범용 웹 사이트 태그 확장](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX 연결](./catalog/advertising/datax.md)
    * Analytics 대상 {#analytics}
@@ -91,21 +92,21 @@ ht-degree: 6%
       * [Adobe Analytics 확장](./catalog/analytics/adobe-analytics.md)
       * [Adobe Media Analytics for Audio 및 Video 확장](./catalog/analytics/adobe-video-analytics.md)
       * [Clicktale 확장](./catalog/analytics/clicktale.md)
-      * [콘텐츠 사각형 확장](./catalog/analytics/contentsquare.md)
+      * [Contentsquare 확장](./catalog/analytics/contentsquare.md)
       * [Decibel 확장](./catalog/analytics/decibel.md)
       * [Demandbase 확장](./catalog/analytics/demandbase.md)
       * [DialogTech 확장](./catalog/analytics/dialogtech.md)
-      * [Google 글로벌 사이트 태그 확장](./catalog/analytics/gtag-analytics.md)
+      * [Google 전역 사이트 태그 확장](./catalog/analytics/gtag-analytics.md)
       * [Google Universal Analytics 확장](./catalog/analytics/google-universal-analytics.md)
-      * [JW 플레이어 분석(베타) 확장](./catalog/analytics/jw-player-analytics.md)
+      * [JW Player Analytics(베타) 확장](./catalog/analytics/jw-player-analytics.md)
       * [Nielsen BSDK 확장](./catalog/analytics/nielsen-bsdk.md)
-      * [Nielsen IMA 처리기 확장](./catalog/analytics/nielsen-ima.md)
-      * [Nielsen VideoJS 플레이어 핸들러 확장](./catalog/analytics/nielsen-videojs.md)
+      * [Nielsen IMA Handler 확장](./catalog/analytics/nielsen-ima.md)
+      * [Nielsen VideoJS Player Handler 확장](./catalog/analytics/nielsen-videojs.md)
       * [Parse.ly Analytics 확장](./catalog/analytics/parsely.md)
       * [Quantum 지표 확장](./catalog/analytics/quantum-metric.md)
       * [SessionCam 확장](./catalog/analytics/sessioncam.md)
       * [TMMData 확장](./catalog/analytics/tmmdata.md)
-      * [다음 전환 추적 확장](./catalog/analytics/yext.md)
+      * [Yext 전환 추적 확장](./catalog/analytics/yext.md)
    * 클라우드 스토리지 대상 {#cloud-storage}
       * [클라우드 스토리지 대상 개요](./catalog/cloud-storage/overview.md)
       * [Amazon Kinesis 연결](./catalog/cloud-storage/amazon-kinesis.md)
@@ -116,11 +117,11 @@ ht-degree: 6%
       * [(베타) 데이터 랜딩 영역](./catalog/cloud-storage/data-landing-zone.md)
       * [(베타) Google 클라우드 스토리지](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 연결](./catalog/cloud-storage/sftp.md)
-      * [클라우드 스토리지 허용 목록에 추가하다 대상에 대한 IP 주소](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [허용 목록에 추가하다 클라우드 스토리지 대상의 IP 주소](./catalog/cloud-storage/ip-address-allow-list.md)
    * CRM(고객 관계 관리) 대상 {#crm}
       * [Salesforce CRM 연결](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365 연결](./catalog/crm/microsoft-dynamics-365.md)
-      * [무선 연결](catalog/crm/outreach.md)
+      * [지원 연결](catalog/crm/outreach.md)
    * 데이터 관리 플랫폼 대상 {#data-management}
       * [DMP(데이터 관리 플랫폼) 대상 개요](./catalog/data-management/overview.md)
       * [Audience Manager DIL 확장](./catalog/data-management/aam-dil-extension.md)
@@ -128,7 +129,7 @@ ht-degree: 6%
       * [Bizible 확장](./catalog/email/bizible.md)
       * [Marketo 확장](./catalog/email/marketo.md)
       * [Marketo Munchkin 확장 프로그램](./catalog/email/marketo-munchkin.md)
-      * [페블포스트 연장](./catalog/email/pebblepost.md)
+      * [페블포스트 확장](./catalog/email/pebblepost.md)
    * 이메일 마케팅 대상 {#email-marketing}
       * [이메일 마케팅 대상 개요](./catalog/email-marketing/overview.md)
       * [Adobe Campaign 연결](./catalog/email-marketing/adobe-campaign.md)
@@ -142,17 +143,17 @@ ht-degree: 6%
       * [태그 확장 개요](./catalog/launch-extensions/overview.md)
    * 모바일 참여 대상 {#mobile-engagement}
       * [모바일 참여 대상 개요](./catalog/mobile-engagement/overview.md)
-      * [Airship 속성 연결](./catalog/mobile-engagement/airship-attributes.md)
-      * [Airship 태그 연결](./catalog/mobile-engagement/airship-tags.md)
-      * [연결 브레이즈](./catalog/mobile-engagement/braze.md)
-      * [라인 연결](./catalog/mobile-engagement/line.md)
+      * [비행선 속성 연결](./catalog/mobile-engagement/airship-attributes.md)
+      * [비행선 태그 연결](./catalog/mobile-engagement/airship-tags.md)
+      * [브레이즈 연결](./catalog/mobile-engagement/braze.md)
+      * [선 연결](./catalog/mobile-engagement/line.md)
    * 개인화 대상 {#personalization}
       * [개인화 대상 개요](./catalog/personalization/overview.md)
       * [(베타) Adobe Commerce 연결](./catalog/personalization/adobe-commerce.md)
       * [Adobe Target 연결](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 확장](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 확장](./catalog/personalization/adobe-target-v2.md)
-      * [Beemray 확장](./catalog/personalization/beemray.md)
+      * [빔 확장](./catalog/personalization/beemray.md)
       * [사용자 지정 개인화 연결](./catalog/personalization/custom-personalization.md)
       * [D&amp;B Visitor Intelligence 확장](./catalog/personalization/dnb.md)
       * [Experience Cloud ID 서비스 확장](./catalog/personalization/adobe-ecid.md)
@@ -163,26 +164,26 @@ ht-degree: 6%
       * [Pega 프로필 연결](./catalog/personalization/pega-profile.md)
    * 소셜 대상{#social}
       * [소셜 대상 개요](./catalog/social/overview.md)
-      * [Livefyre 확장 Adobe](./catalog/social/adobe-livefyre.md)
+      * [Adobe Livefyre 확장](./catalog/social/adobe-livefyre.md)
       * [Facebook 연결](./catalog/social/facebook.md)
-      * [linkedIn Matched Audiences 연결](./catalog/social/linkedin.md)
+      * [LinkedIn 일치하는 대상 연결](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] 연결](./catalog/social/twitter.md)
    * 스트리밍 대상 {#streaming}
       * [HTTP API 연결](./catalog/streaming/http-destination.md)
-      * [스트리밍 대상을 허용 목록에 추가하다 위한 IP 주소](./catalog/streaming/ip-address-allow-list.md)
+      * [허용 목록에 추가하다 스트리밍 대상의 IP 주소](./catalog/streaming/ip-address-allow-list.md)
    * 설문 조사 대상 {#survey}
-      * [설문 조사 대상 개요](./catalog/survey/overview.md)
+      * [Survey 대상 개요](./catalog/survey/overview.md)
       * [Foresee 확장 대상](./catalog/survey/foresee.md)
       * [InMoment 확장](./catalog/survey/inmoment.md)
       * [Qualtrics 웹 사이트 피드백 확장](./catalog/survey/qualtrics.md)
-      * [Question Pro Intercept 설문 조사 확장](./catalog/survey/web-intercept-surveys.md)
-   * 고객 대상의 음성 {#voice}
-      * [고객 대상 음성 개요](./catalog/voice/overview.md)
+      * [QuestionPro Intercept Surveys 확장](./catalog/survey/web-intercept-surveys.md)
+   * 고객 대상의 소리 {#voice}
+      * [고객의 소리 대상 개요](./catalog/voice/overview.md)
       * [디지털 피드백 확장 확인](./catalog/voice/confirmit-digital-feedback.md)
-      * [호출 태그 확장](./catalog/voice/invoca.md)
+      * [잘못된 태그 확장](./catalog/voice/invoca.md)
       * [메달리아 연결](./catalog/voice/medallia-connector.md)
       * [메달리아 확장](./catalog/voice/medallia.md)
-      * [대화 URL 받은 편지함 확장](./catalog/voice/talkurl.md)
+      * [Talk URL 받은 편지함 확장](./catalog/voice/talkurl.md)
 * 대상 SDK {#destination-sdk}
    * [개요](./destination-sdk/overview.md)
    * [통합 사전 요구 사항](./destination-sdk/integration-prerequisites.md)
@@ -194,20 +195,20 @@ ht-degree: 6%
       * [스트리밍 대상 서버 및 템플릿 사양](./destination-sdk/server-and-template-configuration.md)
       * [파일 기반 대상 서버 및 파일 사양](./destination-sdk/server-and-file-configuration.md)
       * [메시지 포맷](./destination-sdk/message-format.md)
-      * [대상 메타데이터 관리](./destination-sdk/audience-metadata-management.md)
+      * [대상자 메타데이터 관리](./destination-sdk/audience-metadata-management.md)
       * 인증 {#authentication}
          * [인증 구성](./destination-sdk/authentication-configuration.md)
          * [OAuth 2 인증](./destination-sdk/oauth2-authentication.md)
       * 개발자 도구 {#developer-tools}
-         * [메시지 변환 템플릿 만들기 및 테스트](./destination-sdk/create-template.md)
+         * [메시지 변형 템플릿 만들기 및 테스트](./destination-sdk/create-template.md)
          * [대상 구성 테스트](./destination-sdk/test-destination.md)
    * API 작업 {#api}
       * [Destination SDK(대상 작성) API 참조](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
-      * [대상 끝점 API 작업](./destination-sdk/destination-configuration-api.md)
+      * [대상 엔드포인트 API 작업](./destination-sdk/destination-configuration-api.md)
       * [대상 서버 끝점 API 작업](./destination-sdk/destination-server-api.md)
       * [대상 메타데이터 끝점 API 작업](./destination-sdk/audience-metadata-api.md)
       * [자격 증명 끝점 API 작업](./destination-sdk/credentials-configuration-api.md)
-      * [게시 끝점 API 작업](./destination-sdk/destination-publish-api.md)
+      * [엔드포인트 API 작업 게시](./destination-sdk/destination-publish-api.md)
       * 개발자 도구 참조 {#developer-tools-reference}
          * 스트리밍 대상 테스트 API {#streaming-destination-testing-api}
             * [샘플 템플릿 API 작업 가져오기](./destination-sdk/sample-template-api.md)
@@ -217,29 +218,29 @@ ht-degree: 6%
          * 파일 기반 대상 테스트 API {#file-based-destination-testing-api}
             * [파일 기반 대상 테스트 API 개요](./destination-sdk/file-based-destination-testing-overview.md)
             * [소스 스키마를 기반으로 샘플 프로필 생성](./destination-sdk/file-based-sample-profile-generation-api.md)
-            * [샘플 프로필로 파일 기반 대상 테스트](./destination-sdk/file-based-destination-testing-api.md)
+            * [샘플 프로필을 사용하여 파일 기반 대상 테스트](./destination-sdk/file-based-destination-testing-api.md)
             * [자세한 활성화 결과 보기](./destination-sdk/file-based-destination-results-api.md)
             * [템플릿화된 고객 필드의 유효성 검사](./destination-sdk/file-based-render-template-api.md)
    * 안내서 {#guides}
       * [Destination SDK을 사용하여 스트리밍 대상 구성](./destination-sdk/configure-destination-instructions.md)
       * [Destination SDK을 사용하여 파일 기반 대상 구성](./destination-sdk/configure-file-based-destination-instructions.md)
-      * [Destination SDK에서 작성된 대상을 검토하도록 제출](./destination-sdk/submit-destination.md)
+      * [Destination SDK에서 작성된 대상을 검토하기 위해 제출](./destination-sdk/submit-destination.md)
       * 파일 기반 대상 구성 {#configure-file-based-destinations}
-         * [파일 형식 옵션 구성](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
-         * [사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Amazon S3 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+         * [파일 서식 옵션 구성](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
+         * [사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성을 사용하여 Amazon S3 대상 구성](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
          * [사용자 지정 파일 이름 및 서식 옵션을 사용하여 Amazon S3 대상 구성](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
-         * [사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Azure Blob 저장소 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
-         * [사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Azure Data Lake 저장소 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
-         * [사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 DLZ(데이터 랜딩 영역) 대상 구성](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
-         * [사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 SFTP 대상 구성](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성을 사용하여 Azure Blob 저장소 대상 구성](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+         * [사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성을 사용하여 Azure Data Lake 저장소 대상 구성](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성을 사용하여 DLZ(데이터 랜딩 영역) 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
+         * [사전 정의된 파일 형식 옵션 및 사용자 정의 파일 이름 구성을 사용하여 SFTP 대상 구성](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * 참조 {#reference}
       * [스트리밍 대상에 대한 속도 제한 및 다시 시도 정책](./destination-sdk/rate-limiting-retry-policy.md)
-      * [지원되는 변형 함수](./destination-sdk/supported-functions.md)
-   * 대상을 문서화합니다. {#document-destination}
+      * [지원되는 변환 함수](./destination-sdk/supported-functions.md)
+   * 대상 문서화 {#document-destination}
       * [Adobe Experience Platform에서 대상 문서화](./destination-sdk/docs-framework/documentation-instructions.md)
       * [GitHub 웹 인터페이스를 사용하여 대상 설명서 페이지를 만듭니다](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
       * [로컬 환경에서 텍스트 편집기를 사용하여 대상 설명서 페이지를 만듭니다](./destination-sdk/docs-framework/work-in-local-environment.md)
-      * [설명서 셀프 서비스 템플릿](./destination-sdk/docs-framework/self-service-template.md)
-      * [작성 우수 사례](./destination-sdk/docs-framework/authoring-best-practices.md)
+      * [설명서 셀프서비스 템플릿](./destination-sdk/docs-framework/self-service-template.md)
+      * [작성 모범 사례](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [자주 묻는 질문](./destinations-faq.md)
-* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes_kr)
+* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes_kr)
