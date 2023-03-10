@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;시작하기;콘텐츠 ai;상거래 ai;콘텐츠 태그 지정 ai;키워드 태그 지정;키워드 태그 지정
+keywords: Experience Platform;시작하기;컨텐츠;컨텐츠 태그 지정 ai;키워드 태그 지정;키워드 태그 지정
 solution: Experience Platform
 title: 콘텐츠 태깅 API의 키워드 태깅
 description: 키워드 태그 지정 서비스는 텍스트 문서가 제공되면 문서의 주제를 가장 잘 설명하는 키워드나 키워드 구문을 자동으로 추출합니다. 키워드를 추출하기 위해 NER(Named Entity Recognition) 및 비감독 키워드 태깅(Unsupervised Keyword Tagging) 알고리즘의 조합이 사용된다.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '450'
 ht-degree: 5%
 
 ---

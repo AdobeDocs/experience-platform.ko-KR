@@ -1,12 +1,12 @@
 ---
-keywords: Experience Cloud;시작하기;콘텐츠 및 상거래 ai;인기 주제;Intelligent Services;ccai
+keywords: Experience Cloud;시작하기;컨텐츠 태그 지정;인기 있는 주제;Intelligent Services
 solution: Experience Platform
 title: 컨텐츠 태그 지정 개요
-description: 콘텐츠 및 상거래 AI는 콘텐츠에서 지능형 기능을 추출하고, 콘텐츠 흐름을 구성하고, 능률화하고, 고객에게 보다 효과적이고 개인화된 경험을 제공할 수 있는 일련의 AI 서비스입니다.
+description: 콘텐츠 태깅은 콘텐츠에서 지능형 기능을 추출하고, 콘텐츠 흐름을 구성하고, 간소화하고, 고객에게 보다 효과적이고 개인화된 경험을 제공할 수 있는 일련의 AI 서비스입니다.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '319'
 ht-degree: 1%
 
 ---

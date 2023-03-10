@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;시작하기;콘텐츠 ai;상거래 ai;콘텐츠 태깅
+keywords: Experience Platform;시작하기;컨텐츠;컨텐츠 태깅
 solution: Experience Platform
 title: 콘텐츠 태깅 시작
-description: 컨텐츠 태깅은 Adobe I/O API를 활용합니다. Adobe I/O API 및 I/O 콘솔 통합을 호출하려면 먼저 인증 자습서를 완료해야 합니다.
+description: 컨텐츠 태깅은 Adobe I/O API를 사용합니다. Adobe I/O API 및 I/O 콘솔 통합을 호출하려면 먼저 인증 자습서를 완료해야 합니다.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---

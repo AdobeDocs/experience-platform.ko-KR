@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;시작하기;콘텐츠 ai;상거래 ai;콘텐츠 태그 지정;색상 태그 지정;색상 추출;
+keywords: Experience Platform;시작하기;컨텐츠;컨텐츠 태그 지정;색상 태그 지정;색상 추출;
 solution: Experience Platform
 title: 콘텐츠 태깅 API의 색상 태깅
 description: 색상 태깅 서비스는 이미지가 제공되면 픽셀 색상의 히스토그램을 계산하고 주요 색상별로 버킷으로 정렬할 수 있습니다.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '497'
 ht-degree: 4%
 
 ---
