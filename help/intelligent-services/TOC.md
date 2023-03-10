@@ -4,10 +4,10 @@ audience: user
 user-guide-title: 인텔리전트 서비스 도움말
 breadcrumb-title: Intelligent Services 안내서
 user-guide-description: 인텔리전트 AI 서비스를 이용하여 점수를 생성하고 인사이트를 발견하며 마케팅 이벤트 데이터를 통해 세그먼트를 만들 수 있습니다.
-source-git-commit: a98639851e7245b9cbd6fe42b35b4730dd19c3f8
+source-git-commit: 56f0ea4ee1fcefecb317eb2a078b01f7a9767c52
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 31%
+source-wordcount: '140'
+ht-degree: 32%
 
 ---
 
@@ -31,13 +31,13 @@ ht-degree: 31%
       - [거버넌스 정책](attribution-ai/aai-data-governance/governance-policies.md)
    - [쿼리 서비스를 사용하여 점수 분석](attribution-ai/aai-query-service.md)
    - [오류 문제 해결](attribution-ai/troubleshooting.md)
-- 컨텐츠 태깅 {#content-tagging-ai}
-   - [개요](content-tagging/overview.md)
-   - [시작하기](content-tagging/getting-started.md)
-   - 콘텐츠 태깅 AI API{#api}
-      - [색상 태깅](content-tagging/api/color-tagging.md)
-      - [키워드 태그 지정](content-tagging/api/keyword-tagging.md)
-      - [텍스트 유무 및 시각적 문자 인식](content-tagging/api/optical-character-recognition.md)
+- 컨텐츠 태깅 {#content-commerce-ai}
+   - [개요](content-commerce-ai/overview.md)
+   - [시작하기](content-commerce-ai/getting-started.md)
+   - 컨텐츠 태그 지정 API{#api}
+      - [색상 태깅](content-commerce-ai/api/color-tagging.md)
+      - [키워드 태그 지정](content-commerce-ai/api/keyword-tagging.md)
+      - [텍스트 유무 및 시각적 문자 인식](content-commerce-ai/api/optical-character-recognition.md)
 - 고객 AI {#customer-ai}
    - [개요](customer-ai/overview.md)
    - [Customer AI 시작하기](customer-ai/getting-started.md)
