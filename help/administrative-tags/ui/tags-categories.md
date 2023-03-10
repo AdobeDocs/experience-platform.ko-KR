@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;태그 카테고리;태그;
 title: 태그 범주
-description: 이 문서에서는 Adobe Experience Cloud의 관리 태그 범주 관리에 대한 정보를 제공합니다
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+description: 이 문서에서는 Adobe Experience Cloud의 통합 태그 범주 관리에 대한 정보를 제공합니다
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 0%

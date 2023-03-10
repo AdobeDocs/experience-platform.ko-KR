@@ -1,15 +1,19 @@
 ---
-keywords: Experience Platform;홈;인기 항목;관리 태그;태그;
-title: 관리 태그 개요
-description: 이 문서에서는 Adobe Experience Platform의 관리 태그에 대한 정보를 제공합니다
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+keywords: Experience Platform;홈;인기 항목;통합 태그;태그;
+title: (Beta) 통합 태그 개요
+description: 이 문서에서는 Adobe Experience Platform의 통합 태그에 대한 정보를 제공합니다
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 2%
+source-wordcount: '607'
+ht-degree: 1%
 
 ---
 
-# 태그 개요
+# (Beta) 통합 태그 개요
+
+>[!IMPORTANT]
+>
+>통합 태그는 Beta 버전입니다. 피드백을 남기려면 태그 관리 페이지 상단에 있는 버튼을 선택하여 피드백 하세요.
 
 태그는 관리자가 비즈니스 오브젝트를 분류하여 쉽게 검색하고 분류할 수 있도록 메타데이터 분류를 관리할 수 있는 Adobe Experience Platform의 기능입니다. 태그는 검색을 통해 해당 개체 및 관련 개체를 찾을 수 있도록 하기 위해 세그먼트, 데이터 세트, 여정 또는 기타 개체에 첨부할 수 있는 키워드로 생각할 수 있는 메타데이터입니다. 태그는 범주화된 태그와 분류되지 않은 태그로 분류된다.
 
