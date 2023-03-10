@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;홈;인기 항목;통합 태그;태그;
-title: (Beta) 통합 태그 개요
+title: 통합 태그 개요(베타)
 description: 이 문서에서는 Adobe Experience Platform의 통합 태그에 대한 정보를 제공합니다
-source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
+source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 1%
 
 ---
 
-# (Beta) 통합 태그 개요
+# 통합 태그 개요(베타)
 
 >[!IMPORTANT]
 >
