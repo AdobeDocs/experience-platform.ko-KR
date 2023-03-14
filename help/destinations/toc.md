@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: 0dbd050a9057f491537777ab539bfc687f8c89cb
+source-git-commit: 09f7a3f4c1fde5d12f91308342f2c44f67ff961b
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1039'
 ht-degree: 6%
 
 ---
@@ -122,6 +122,7 @@ ht-degree: 6%
       * [Salesforce CRM 연결](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365 연결](./catalog/crm/microsoft-dynamics-365.md)
       * [지원 연결](catalog/crm/outreach.md)
+      * [Zendesk 연결](catalog/crm/zendesk.md)
    * 데이터 관리 플랫폼 대상 {#data-management}
       * [DMP(데이터 관리 플랫폼) 대상 개요](./catalog/data-management/overview.md)
       * [Audience Manager DIL 확장](./catalog/data-management/aam-dil-extension.md)
