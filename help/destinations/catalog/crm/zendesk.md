@@ -1,7 +1,8 @@
 ---
 title: Zendesk 연결
 description: Zendesk 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Zendesk 내에서 활성화할 수 있습니다.
-source-git-commit: 6a54926e47fb2364475dbf71593de97b642163d5
+last-substantial-update: 2023-03-14T00:00:00Z
+source-git-commit: 3197eddcf9fef2870589fdf9f09276a333f30cd1
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 1%
