@@ -3,9 +3,9 @@ keywords: 스트리밍; HTTP 대상
 title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 서드파티 HTTP 끝점으로 전송하여 자체 분석을 실행하거나 Experience Platform 외부로 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 01e4a32222bb94ab87751b2375ad616e5b5c0738
+source-git-commit: b6d7ae987bbc97b3f58bd10ef181145ae89aa63e
 workflow-type: tm+mt
-source-wordcount: '2535'
+source-wordcount: '2436'
 ht-degree: 0%
 
 ---
@@ -158,7 +158,7 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="세그먼트 타임스탬프 포함"
->abstract="세그먼트를 만들고 업데이트할 때 UNIX 타임스탬프와, 세그먼트가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 데이터 내보내기에 포함하도록 하려면 전환합니다. 이 옵션을 선택한 상태에서 데이터 내보내기 예제에 대한 설명서를 봅니다.<p>첫 번째 글머리 기호의 내용</p><p>두 번째 글머리 기호 콘텐츠</p><ul><li>목록 항목 1.</li><li>목록 항목 2.</li></ul> - 더 많은 텍스트 줄 - 텍스트가 더 많습니다. 테스트 형식을 지정하여 다음을 수행할 수 있는지 확인: <br>HTML 서식 사용</p><p>또는 단락 태그를 사용할 수도 있습니다. 1행입니다.</p><p>그리고 2행에 대한 추가 단락 태그.</p><p>모든 단락 태그가 표시됩니다. 3호선이요.</p>마지막으로 Markdown이 있는 링크를 포함하는 테스트 [https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html](절대 링크) 및 HTML <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=ko">링크 텍스트</a> 구문.실제로 마지막으로 markdown이 있는 링크를 포함하는 테스트입니다. [../overview.md](상대 링크) 및 HTML <a href="../overview.md">상대 링크 텍스트</a> 구문."
+>abstract="세그먼트를 만들고 업데이트할 때 UNIX 타임스탬프와, 세그먼트가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 데이터 내보내기에 포함하도록 하려면 전환합니다. 이 옵션을 선택한 상태에서 데이터 내보내기 예제에 대한 설명서를 봅니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
