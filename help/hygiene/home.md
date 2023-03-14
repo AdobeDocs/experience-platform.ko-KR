@@ -4,8 +4,8 @@ description: Adobe Experience Platform 데이터 위생에서는 오래된 레�
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '607'
-ht-degree: 2%
+source-wordcount: '604'
+ht-degree: 1%
 
 ---
 
@@ -55,7 +55,7 @@ UI에서 데이터 위생 작업을 관리하는 방법에 대한 자세한 단�
 | 여정 및 대상 업데이트 | 50시간 | [여정](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [캠페인](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), 및 [대상](../destinations/home.md) 은 관련 세그먼트의 변경 사항에 따라 업데이트됩니다. |
 | 하드 삭제 완료 | 14일 | 데이터 세트와 관련된 모든 데이터는 데이터 레이크에서 삭제되기 어렵습니다. 다음 [위생 작업 상태](./ui/browse.md#view-details) 삭제한 데이터 세트가 이를 반영하도록 업데이트됩니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 <!-- ### Record deletes {#record-delete-transparency}
 

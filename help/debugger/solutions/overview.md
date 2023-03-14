@@ -25,7 +25,7 @@ Adobe Experience Platform 웹 SDK 화면에서는 Adobe Experience Platform 웹 
 
 ## [!UICONTROL Analytics] {#section-f71dfcc22bb44c86bec328491606a482}
 
-다음 [!UICONTROL Analytics] 탭에는 [Adobe Analytics 구현](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=ko-KR).
+다음 [!UICONTROL Analytics] 탭에는 [Adobe Analytics 구현](https://experienceleague.adobe.com/docs/analytics/implementation/home.html).
 
 ## [!UICONTROL Target] {#section-988873ba5ede4317953193bd7ac5474c}
 
