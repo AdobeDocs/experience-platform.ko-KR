@@ -1,6 +1,6 @@
 ---
-title: Flow Service API를 사용하여 SFTP 기본 연결 만들기
-description: Flow Service API를 사용하여 SFTP(Secure File Transfer Protocol) 서버에 Adobe Experience Platform을 연결하는 방법을 알아봅니다.
+title: 흐름 서비스 API를 사용하여 SFTP 기본 연결 만들기
+description: Flow Service API를 사용하여 Adobe Experience Platform을 SFTP(Secure File Transfer Protocol) 서버에 연결하는 방법에 대해 알아봅니다.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
 source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
 workflow-type: tm+mt
@@ -9,56 +9,56 @@ ht-degree: 1%
 
 ---
 
-# 를 사용하여 SFTP 기본 연결 만들기 [!DNL Flow Service] API
+# 다음을 사용하여 SFTP 기본 연결 만들기 [!DNL Flow Service] API
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 다음에 대한 기본 연결을 만드는 단계를 안내합니다 [!DNL SFTP] (Secure File Transfer Protocol) [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+이 자습서에서는 기본 연결을 만드는 단계를 안내합니다. [!DNL SFTP] (Secure File Transfer Protocol) [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 시작하기
 
-이 안내서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
+이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md): Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
 * [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 >[!IMPORTANT]
 >
->를 사용하여 JSON 개체를 수집할 때 줄바꿈 또는 캐리지 리턴 발생을 방지하는 것이 좋습니다 [!DNL SFTP] 소스 연결. 제한 사항을 해결하려면 행당 단일 JSON 개체를 사용하고 후속 파일에 여러 줄을 사용합니다.
+>를 사용하여 JSON 개체를 수집할 때 줄바꿈 또는 캐리지 리턴을 피하는 것이 좋습니다. [!DNL SFTP] 소스 연결. 제한을 해결하려면 라인당 단일 JSON 개체를 사용하고 후속 파일에 여러 라인을 사용합니다.
 
-다음 섹션에서는 다음에 성공적으로 연결하기 위해 알고 있어야 하는 추가 정보를 제공합니다 [!DNL SFTP] 서버를 사용하여 [!DNL Flow Service] API.
+다음 섹션에서는 에 성공적으로 연결하기 위해 알아야 하는 추가 정보를 제공합니다 [!DNL SFTP] 를 사용하는 서버 [!DNL Flow Service] API.
 
 ### 필요한 자격 증명 수집
 
-대상 [!DNL Flow Service] 에 연결 [!DNL SFTP]를 채울 때는 다음 연결 속성에 값을 제공해야 합니다.
+주문 [!DNL Flow Service] 에 연결하려면 [!DNL SFTP], 다음 연결 속성에 대한 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `host` | 와 연결된 이름 또는 IP 주소 [!DNL SFTP] server. |
-| `port` | 연결하는 SFTP 서버 포트입니다. 지정하지 않으면 기본값은 입니다 `22`. |
-| `username` | 사용자 이름에 액세스할 수 있는 사용자 이름 [!DNL SFTP] server. |
-| `password` | 사용자 [!DNL SFTP] server. |
-| `privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류해야 합니다. |
-| `passPhrase` | 키 파일 또는 키 컨텐츠가 암호 구문으로 보호되는 경우 개인 키를 해독하기 위한 암호 구문 또는 암호입니다. 만약 `privateKeyContent` 암호로 보호되어 있는 경우, 이 매개 변수는 개인 키 컨텐츠의 암호를 값으로 사용하여 사용해야 합니다. |
-| `maxConcurrentConnections` | 이 매개 변수를 사용하면 SFTP 서버에 연결할 때 플랫폼에서 만드는 동시 연결 수에 대한 최대 제한을 지정할 수 있습니다. 이 값은 SFTP에서 설정한 제한보다 작도록 설정해야 합니다. **참고**: 이 설정이 기존 SFTP 계정에 대해 활성화되면 기존 데이터 흐름에는 영향을 주지 않고 향후 데이터 흐름에만 영향을 줍니다. |
-| `folderPath` | 액세스를 제공할 폴더의 경로입니다. [!DNL SFTP] 소스 폴더 경로를 제공하여 선택한 하위 폴더에 대한 사용자 액세스를 지정할 수 있습니다. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 생성과 관련된 인증 사양이 포함된 소스의 커넥터 등록 정보를 반환합니다. 에 대한 연결 사양 ID [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+| `host` | 와(과) 연계된 이름 또는 IP 주소 [!DNL SFTP] 서버입니다. |
+| `port` | 연결 중인 SFTP 서버 포트입니다. 제공되지 않으면 기본값은 입니다. `22`. |
+| `username` | 에 대한 액세스 권한이 있는 사용자 이름 [!DNL SFTP] 서버입니다. |
+| `password` | 에 대한 암호 [!DNL SFTP] 서버입니다. |
+| `privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류되어야 합니다. |
+| `passPhrase` | 키 파일 또는 키 콘텐츠가 암호로 보호되어 있는 경우 개인 키를 해독하기 위한 암호나 암호입니다. 다음과 같은 경우 `privateKeyContent` 은(는) 암호로 보호되어 있으므로 이 매개 변수는 개인 키 콘텐츠의 암호와 함께 값으로 사용해야 합니다. |
+| `maxConcurrentConnections` | 이 매개 변수를 사용하면 SFTP 서버에 연결할 때 플랫폼이 생성하는 동시 연결 수에 대한 최대 제한을 지정할 수 있습니다. 이 값을 SFTP에서 설정한 제한보다 작게 설정해야 합니다. **참고**: 이 설정이 기존 SFTP 계정에 대해 활성화되면 향후 데이터 흐름에만 영향을 주고 기존 데이터 흐름에는 영향을 주지 않습니다. |
+| `folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. [!DNL SFTP] 소스 폴더 경로를 제공하여 선택한 하위 폴더에 대한 사용자 액세스를 지정할 수 있습니다. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 에 대한 연결 사양 ID [!DNL SFTP] 은(는) `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
 
-### 플랫폼 API 사용
+### Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [플랫폼 API 시작](../../../../../landing/api-guide.md).
+Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../../../landing/api-guide.md).
 
 ## 기본 연결 만들기
 
-기본 연결은 소스의 인증 자격 증명, 현재 연결 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간의 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 해당 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
+기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-다음 [!DNL SFTP] 소스는 SSH 공개 키를 통해 기본 인증 및 인증을 모두 지원합니다. 이 단계에서 액세스 권한을 제공할 하위 폴더의 경로를 지정할 수도 있습니다.
+다음 [!DNL SFTP] 소스는 SSH 공개 키를 통해 기본 인증과 인증을 모두 지원합니다. 이 단계에서 액세스 권한을 제공할 하위 폴더의 경로를 지정할 수도 있습니다.
 
-기본 연결 ID를 만들려면 `/connections` 제공하는 동안 엔드포인트 [!DNL SFTP] 요청 매개 변수의 일부로 인증 자격 증명.
+POST 기본 연결 ID를 만들려면 `/connections` 을(를) 제공하는 동안 엔드포인트 [!DNL SFTP] 요청 매개 변수의 일부로 인증 자격 증명을 사용합니다.
 
 >[!IMPORTANT]
 >
->다음 [!DNL SFTP] 커넥터는 RSA 또는 DSA 유형인 OpenSSH 키를 지원합니다. 주요 파일 내용이 `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` 다음으로 끝남 `"-----END [RSA/DSA] PRIVATE KEY-----"`. 개인 키 파일이 PPK 형식 파일인 경우 PuTTY 도구를 사용하여 PPK에서 OpenSSH 형식으로 변환합니다.
+>다음 [!DNL SFTP] 커넥터가 RSA 또는 DSA 유형 OpenSSH 키를 지원합니다. 키 파일 컨텐츠가 다음으로 시작하는지 확인합니다. `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` 다음으로 끝남 `"-----END [RSA/DSA] PRIVATE KEY-----"`. 개인 키 파일이 PPK 형식 파일인 경우 PuTTY 도구를 사용하여 PPK에서 OpenSSH 형식으로 변환합니다.
 
 **API 형식**
 
@@ -106,11 +106,11 @@ curl -X POST \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `auth.params.host` | SFTP 서버의 호스트 이름입니다. |
-| `auth.params.port` | SFTP 서버의 포트입니다. 이 정수 값은 기본적으로 22로 설정됩니다. |
+| `auth.params.port` | SFTP 서버의 포트입니다. 이 정수 값은 기본적으로 22입니다. |
 | `auth.params.username` | SFTP 서버와 연결된 사용자 이름입니다. |
 | `auth.params.password` | SFTP 서버와 연결된 암호입니다. |
-| `auth.params.maxConcurrentConnections` | Platform을 SFTP에 연결할 때 지정된 최대 동시 연결 수입니다. 활성화되면 이 값을 최소 1로 설정해야 합니다. |
-| `auth.params.folderPath` | 액세스를 제공할 폴더의 경로입니다. |
+| `auth.params.maxConcurrentConnections` | 플랫폼을 SFTP에 연결할 때 지정된 최대 동시 연결 수입니다. 활성화된 경우 이 값을 1 이상으로 설정해야 합니다. |
+| `auth.params.folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. |
 | `connectionSpec.id` | SFTP 서버 연결 사양 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 >[!TAB SSH 공개 키 인증]
@@ -147,20 +147,20 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `auth.params.host` | 의 호스트 이름 [!DNL SFTP] server. |
-| `auth.params.port` | SFTP 서버의 포트입니다. 이 정수 값은 기본적으로 22로 설정됩니다. |
-| `auth.params.username` | 사용자 이름과 연결된 사용자 이름 [!DNL SFTP] server. |
-| `auth.params.privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류해야 합니다. |
-| `auth.params.passPhrase` | 키 파일 또는 키 컨텐츠가 암호 구문으로 보호되는 경우 개인 키를 해독하기 위한 암호 구문 또는 암호입니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수는 PrivateKeyContent의 암호와 함께 값으로 사용해야 합니다. |
-| `auth.params.maxConcurrentConnections` | Platform을 SFTP에 연결할 때 지정된 최대 동시 연결 수입니다. 활성화되면 이 값을 최소 1로 설정해야 합니다. |
-| `auth.params.folderPath` | 액세스를 제공할 폴더의 경로입니다. |
+| `auth.params.host` | 의 호스트 이름 [!DNL SFTP] 서버입니다. |
+| `auth.params.port` | SFTP 서버의 포트입니다. 이 정수 값은 기본적으로 22입니다. |
+| `auth.params.username` | 와(과) 연계된 사용자 이름 [!DNL SFTP] 서버입니다. |
+| `auth.params.privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류되어야 합니다. |
+| `auth.params.passPhrase` | 키 파일 또는 키 콘텐츠가 암호로 보호되어 있는 경우 개인 키를 해독하기 위한 암호나 암호입니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수는 PrivateKeyContent의 암호와 함께 값으로 사용해야 합니다. |
+| `auth.params.maxConcurrentConnections` | 플랫폼을 SFTP에 연결할 때 지정된 최대 동시 연결 수입니다. 활성화된 경우 이 값을 1 이상으로 설정해야 합니다. |
+| `auth.params.folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. |
 | `connectionSpec.id` | 다음 [!DNL SFTP] 서버 연결 사양 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 >[!ENDTABS]
 
 **응답**
 
-성공적인 응답은 고유 식별자(`id`) 내의 아무 곳에나 삽입할 수 있습니다. 이 ID는 다음 자습서에서 SFTP 서버를 탐색하는 데 필요합니다.
+성공적인 응답은 고유 식별자()를 반환합니다.`id`)을 참조하십시오. 이 ID는 다음 자습서에서 SFTP 서버를 탐색하는 데 필요합니다.
 
 ```json
 {
@@ -171,4 +171,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서에 따라 다음을 만들었습니다 [!DNL SFTP] 를 사용하여 연결 [!DNL Flow Service] API이고, 연결의 고유 ID 값을 받았습니다. 이 연결 ID를 사용하여 다음을 수행할 수 있습니다 [흐름 서비스 API를 사용하여 클라우드 스토리지 살펴보기](../../explore/cloud-storage.md).
+이 자습서를 따라 [!DNL SFTP] 을 사용한 연결 [!DNL Flow Service] API이며, 연결의 고유 ID 값을 가져왔습니다. 이 연결 ID를 사용하여 다음을 수행할 수 있습니다. [흐름 서비스 API를 사용하여 클라우드 저장소 살펴보기](../../explore/cloud-storage.md).

@@ -1,5 +1,5 @@
 ---
-title: Cloud 커넥터 확장 개요
+title: Cloud Connector 확장 개요
 description: Adobe Experience Platform의 Cloud Connector 이벤트 전달 확장에 대해 알아봅니다.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
 source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
@@ -9,13 +9,13 @@ ht-degree: 87%
 
 ---
 
-# Cloud 커넥터 확장 개요
+# Cloud Connector 확장 개요
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
-클라우드 커넥터 이벤트 전달 확장 기능을 사용하여 데이터를 대상에 전송하거나 대상에서 데이터를 검색하는 사용자 지정 HTTP 요청을 만들 수 있습니다. Cloud Connector 확장은 Adobe Experience Platform Edge Network에 우편배달부가 있는 것과 비슷하며 전용 확장이 아직 없는 엔드포인트로 데이터를 보내는 데 사용할 수 있습니다.
+Cloud Connector 이벤트 전달 확장을 사용하면 데이터를 대상에 보내거나 대상에서 데이터를 검색하는 사용자 지정 HTTP 요청을 만들 수 있습니다. Cloud Connector 확장은 Adobe Experience Platform Edge Network에 우편배달부가 있는 것과 비슷하며 전용 확장이 아직 없는 엔드포인트로 데이터를 보내는 데 사용할 수 있습니다.
 
 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -25,7 +25,7 @@ ht-degree: 87%
 
 ### 요청 유형
 
-끝점에 필요한 요청 유형을 선택하려면 [!UICONTROL 요청 유형] 드롭다운.
+엔드포인트에 필요한 요청 유형을 선택하려면 [!UICONTROL 요청 유형] 드롭다운입니다.
 
 | 메서드 | 설명 |
 |---|---|
@@ -45,15 +45,15 @@ ht-degree: 87%
 
 #### 쿼리 매개 변수
 
-쿼리 문자열 매개 변수로 전송할 각 키-값 쌍에 대한 키와 값을 정의합니다. 데이터 요소를 수동으로 입력하려면 이벤트 전달에 중괄호 데이터 요소 토큰을 사용하십시오. “siteSection”이라는 데이터 요소의 값을 키 또는 값으로 참조하려면 `{{siteSection}}`을 입력합니다. 또는 드롭다운 메뉴에서 이전에 만든 데이터 요소를 선택합니다.
+쿼리 문자열 매개 변수로 전송할 각 키-값 쌍에 대한 키와 값을 정의합니다. 데이터 요소를 수동으로 입력하려면 이벤트 전달을 위해 중괄호 데이터 요소 토큰화를 사용합니다. “siteSection”이라는 데이터 요소의 값을 키 또는 값으로 참조하려면 `{{siteSection}}`을 입력합니다. 또는 드롭다운 메뉴에서 이전에 만든 데이터 요소를 선택합니다.
 
-쿼리 매개 변수를 더 추가하려면 **[!UICONTROL 다른 추가]**.
+쿼리 매개 변수를 더 추가하려면 **[!UICONTROL 다른 항목 추가]**.
 
 #### 헤더
 
-헤더로 전송할 각 키-값 쌍의 키와 값을 정의합니다. 데이터 요소를 수동으로 입력하려면 이벤트 전달에 중괄호 데이터 요소 토큰을 사용하십시오. “pageName”이라는 데이터 요소의 값을 키 또는 값으로 참조하려면 `{{pageName}}`을 입력합니다. 또는 드롭다운 메뉴에서 이전에 만든 데이터 요소를 선택하여 선택합니다.
+헤더로 전송할 각 키-값 쌍의 키와 값을 정의합니다. 데이터 요소를 수동으로 입력하려면 이벤트 전달을 위해 중괄호 데이터 요소 토큰화를 사용합니다. “pageName”이라는 데이터 요소의 값을 키 또는 값으로 참조하려면 `{{pageName}}`을 입력합니다. 또는 드롭다운 메뉴에서 이전에 만든 데이터 요소를 선택하여 선택합니다.
 
-헤더를 추가하려면 **[!UICONTROL 다른 추가]**.
+헤더를 더 추가하려면 다음을 선택합니다. **[!UICONTROL 다른 항목 추가]**.
 
 다음 표는 사전 정의된 헤더를 나열합니다. 이러한 헤더에만 제한되지 않으며 필요한 경우 사용자 지정 헤더를 추가할 수 있지만 편의를 위해 제공되었습니다.
 
@@ -64,13 +64,13 @@ ht-degree: 87%
 | Header | 설명 |
 |---|---|
 | [A-IM](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) |  |
+| [Accept](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Headers/Accept) |  |
 | [Accept-Charset](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Headers/Accept-Charset) |  |
 | [Accept-Encoding](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Headers/Accept-Encoding) |  |
 | [Accept-Language](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Headers/Accept-Language) |  |
-| [Accept-Datetime](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) | 사용자 에이전트가 원래 리소스의 이전 상태에 액세스하려고 함을 나타내기 위해 전송됩니다. 이를 위해서 `Accept-Datetime` 헤더는 원래 리소스의 TimeGate에 대해 실행된 HTTP 요청에 전달되고, 이 값은 원래 리소스의 원하는 이전 상태에 대한 날짜/시간을 나타냅니다. |
-| Access-Control-Request-Headers | [Preflight 요청](https://developer.mozilla.org/ko-KR/docs/Glossary/preflight_request)을 실행할 때 브라우저에서 사용하며, 실제 요청이 이루어질 때 클라이언트에서 전송할 [HTTP 헤더](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)를 서버에 알립니다. |
-| Access-Control-Request-Method | [Preflight 요청](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request)을 실행할 때 브라우저에서 실제 요청이 수행될 때 사용할 [HTTP 메서드](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Methods)를 서버에 알려주는 데 사용합니다. Preflight 요청은 항상 [선택사항](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Methods/OPTIONS)이고 실제 요청과 동일한 메서드를 사용하지 않으므로 이 헤더가 필요합니다. |
+| [Accept-Datetime](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Headers/Accept) | 사용자 에이전트가 원래 리소스의 이전 상태에 액세스하려고 함을 나타내기 위해 전송됩니다. 이를 위해서 `Accept-Datetime` 헤더는 원래 리소스의 TimeGate에 대해 실행된 HTTP 요청에 전달되고, 이 값은 원래 리소스의 원하는 이전 상태에 대한 날짜/시간을 나타냅니다. |
+| Access-Control-Request-Headers | [Preflight 요청](https://developer.mozilla.org/ko-KR/docs/Glossary/preflight_request)을 실행할 때 브라우저에서 사용하며, 실제 요청이 이루어질 때 클라이언트에서 전송할 [HTTP 헤더](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Headers)를 서버에 알립니다. |
+| Access-Control-Request-Method | [Preflight 요청](https://developer.mozilla.org/ko-KR/docs/Glossary/preflight_request)을 실행할 때 브라우저에서 실제 요청이 수행될 때 사용할 [HTTP 메서드](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Methods)를 서버에 알려주는 데 사용합니다. Preflight 요청은 항상 [선택사항](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Methods/OPTIONS)이고 실제 요청과 동일한 메서드를 사용하지 않으므로 이 헤더가 필요합니다. |
 | Authorization | 서버에 사용자 에이전트를 인증하기 위한 자격 증명을 포함합니다. |
 | [Cache-Control](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Headers/Cache-Control) | 요청과 응답 모두에서 메커니즘을 캐싱하기 위한 지시문입니다. |
 | [Connection](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Headers/Connection) | 현재 트랜잭션이 완료된 후 네트워크 연결이 열려 있는지 여부를 제어합니다. |
@@ -104,19 +104,19 @@ ht-degree: 87%
 
 #### JSON 본문
 
-요청 본문에 보낼 각 키-값 쌍에 대한 키와 값을 정의합니다. 데이터 요소를 수동으로 입력하려면 이벤트 전달에 중괄호 데이터 요소 토큰을 사용하십시오. “appSection”이라는 데이터 요소의 값을 키 또는 값으로 참조하려면 `{{appSection}}`을(를) 입력합니다. 또는 드롭다운 메뉴에서 이전에 만든 데이터 요소를 선택합니다.
+요청 본문에 보낼 각 키-값 쌍에 대한 키와 값을 정의합니다. 데이터 요소를 수동으로 입력하려면 이벤트 전달을 위해 중괄호 데이터 요소 토큰화를 사용합니다. “appSection”이라는 데이터 요소의 값을 키 또는 값으로 참조하려면 `{{appSection}}`을(를) 입력합니다. 또는 드롭다운 메뉴에서 이전에 만든 데이터 요소를 선택합니다.
 
-키-값 쌍을 추가하려면 을 선택합니다 **[!UICONTROL 다른 추가]**.
+키-값 쌍을 더 추가하려면 다음을 선택합니다. **[!UICONTROL 다른 항목 추가]**.
 
 #### Raw 본문
 
-요청 본문에 보낼 각 키-값 쌍에 대한 키와 값을 정의합니다. 데이터 요소를 수동으로 입력하려면 이벤트 전달에 중괄호 데이터 요소 토큰을 사용하십시오. “appSection”이라는 데이터 요소의 값을 키 또는 값으로 참조하려면 `{{appSection}}`을(를) 입력합니다. 또는 드롭다운 메뉴에서 이전에 만든 데이터 요소를 선택하여 선택합니다. 하나 이상의 데이터 요소를 추가할 수 있습니다.
+요청 본문에 보낼 각 키-값 쌍에 대한 키와 값을 정의합니다. 데이터 요소를 수동으로 입력하려면 이벤트 전달을 위해 중괄호 데이터 요소 토큰화를 사용합니다. “appSection”이라는 데이터 요소의 값을 키 또는 값으로 참조하려면 `{{appSection}}`을(를) 입력합니다. 또는 드롭다운 메뉴에서 이전에 만든 데이터 요소를 선택하여 선택합니다. 하나 이상의 데이터 요소를 추가할 수 있습니다.
 
 ### 고급
 
-이벤트 전달에서 규칙 내의 작업은 순차적으로 실행됩니다. 클라이언트로부터 들어오는 이벤트에는 표시되지 않는 외부 소스에서 데이터를 검색한 다음 이 응답을 가져와서 단일 규칙 내의 후속 작업에서 이 데이터를 변환하거나 최종 대상으로 보내는 경우가 있을 수 있습니다. 고급 섹션의 “요청 응답 저장”을 사용하면 이 기능을 사용할 수 있습니다.
+이벤트 전달의 규칙 내 작업은 순차적으로 실행됩니다. 클라이언트로부터 들어오는 이벤트에는 표시되지 않는 외부 소스에서 데이터를 검색한 다음 이 응답을 가져와서 단일 규칙 내의 후속 작업에서 이 데이터를 변환하거나 최종 대상으로 보내는 경우가 있을 수 있습니다. 고급 섹션의 “요청 응답 저장”을 사용하면 이 기능을 사용할 수 있습니다.
 
-끝점에서 응답 본문을 저장하려면 **[!UICONTROL 요청 응답을 저장합니다]** 상자를 열고 텍스트 필드에 응답 키를 정의합니다.
+엔드포인트에서 응답 본문을 저장하려면 **[!UICONTROL 요청 응답 저장]** 텍스트 필드에 응답 키를 상자에 입력하고 정의합니다.
 
 응답 키를 `productDetails`로 정의한 경우, 데이터 요소에서 이 데이터를 참조한 다음 동일한 규칙 내의 후속 작업에서 이 데이터 요소를 참조합니다. `productDetail`을 참조하는 데이터 요소를 만들려면 `path` 유형의 데이터 요소를 만들고 다음 경로를 입력합니다.
 

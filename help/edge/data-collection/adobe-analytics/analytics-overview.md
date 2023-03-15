@@ -1,7 +1,7 @@
 ---
-title: Platform Web SDK에서 Adobe Analytics 사용
-description: Adobe Experience Platform Web SDK를 사용하여 Adobe Analytics으로 데이터를 전송하는 방법을 알아봅니다.
-keywords: adobe analytics;analytics;매핑된 데이터;매핑된 vars;
+title: Platform Web SDK로 Adobe Analytics 사용
+description: Adobe Experience Platform Web SDK를 사용하여 Adobe Analytics에 데이터를 전송하는 방법에 대해 알아봅니다.
+keywords: adobe analytics;analytics;매핑된 데이터;매핑된 변수;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
 source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
 workflow-type: tm+mt
@@ -10,27 +10,27 @@ ht-degree: 0%
 
 ---
 
-# Platform Web SDK에서 Adobe Analytics 사용
+# Platform Web SDK로 Adobe Analytics 사용
 
-Adobe Experience Platform [!DNL Web SDK] Adobe Analytics으로 데이터를 전송할 수 있습니다. 번역을 통해 작동됩니다 `xdm` 형식에서 Adobe Analytics에서 사용할 수 있습니다.
+더 Adobe Experience Platform [!DNL Web SDK] 는 Adobe Analytics에 데이터를 전송할 수 있습니다. 이는 번역에 의해 작동합니다 `xdm` Adobe Analytics에서 사용할 수 있는 형식으로 변환합니다.
 
 ## 설정
 
-Adobe Analytics에서는 고객 구성 UI에 매핑된 보고서 세트가 있는 경우 보내고 있는 데이터를 자동으로 선택합니다. 여기에서 하나 이상의 보고서를 주어진 구성에 매핑할 수 있습니다. 보고서 세트가 매핑되면 데이터 흐름이 자동으로 시작됩니다.
+고객 구성 UI에 보고서 세트가 매핑된 경우 Adobe Analytics은 보내는 데이터를 자동으로 선택합니다. 여기에서 하나 이상의 보고를 지정된 구성에 매핑할 수 있습니다. 보고서 세트가 매핑되면 데이터 흐름이 자동으로 시작됩니다.
 
 ## XDM 필드 그룹
 
-가장 일반적인 Adobe Analytics 지표를 더 쉽게 캡처할 수 있도록 하기 위해 Adobe에서는 사용할 수 있는 Analytics 필드 그룹을 제공합니다. 이 스키마에 대한 자세한 내용은 [Adobe Analytics ExperienceEvent 전체 확장 스키마 필드 그룹](../../../xdm/field-groups/event/analytics-full-extension.md)
+가장 일반적인 Adobe Analytics 지표를 더 쉽게 캡처할 수 있도록 사용할 수 있는 Analytics 필드 그룹을 제공합니다. 이 스키마에 대한 자세한 내용은 [Adobe Analytics ExperienceEvent 전체 확장 스키마 필드 그룹](../../../xdm/field-groups/event/analytics-full-extension.md)
 
 ## 자동으로 매핑된 데이터
 
-Adobe Experience Platform [!DNL Edge Network] 는 여러 XDM 변수를 자동으로 매핑합니다. 이러한 변수의 전체 목록이 표시됩니다 [여기](automatically-mapped-vars.md).
+더 Adobe Experience Platform [!DNL Edge Network] 는 여러 XDM 변수를 자동으로 매핑합니다. 이러한 변수의 전체 목록이 나열됩니다 [여기](automatically-mapped-vars.md).
 
 ## 수동으로 매핑된 데이터
 
-에 의해 자동으로 매핑되지 않는 모든 데이터 [!DNL Edge Network] 는 처리 규칙을 통해 액세스할 수 있습니다. 데이터는 점 표기법을 사용하여 변환되고 contextData로 사용할 수 있습니다.
+에서 자동으로 매핑하지 않는 모든 데이터 [!DNL Edge Network] 처리 규칙을 통해 액세스할 수 있습니다. 데이터는 점 표기법을 사용하여 변환되고 contextData로 사용할 수 있습니다.
 
-스키마는 다음과 같습니다.
+다음과 같은 스키마가 있는 경우
 
 ```javascript
 {
@@ -55,7 +55,7 @@ Adobe Experience Platform [!DNL Edge Network] 는 여러 XDM 변수를 자동으
 }
 ```
 
-컨텍스트 데이터 키가 여기에 해당합니다.
+그러면 사용할 수 있는 컨텍스트 데이터 키가 됩니다.
 
 ```javascript
 a.x.key //value
@@ -74,4 +74,4 @@ a.x.arrayofobjects.1.obj2key //objval1
 
 >[!NOTE]
 >
->Experience Edge 컬렉션을 사용하면 모든 이벤트가 Analytics와 데이터 스트림에 대해 구성한 다른 서비스로 전송됩니다. 예를 들어, Analytics와 Target이 모두 서비스로 구성되어 있고 개인화와 Analytics에 대해 별도의 호출을 하는 경우 두 이벤트가 모두 Target과 Analytics로 전송됩니다. 이러한 이벤트는 Analytics 보고에 기록되며 바운스 비율 등의 지표에 영향을 줄 수 있습니다.
+>Experience Edge 컬렉션을 사용하면 모든 이벤트가 Analytics뿐만 아니라 데이터스트림에 대해 구성한 다른 서비스로 전송됩니다. 예를 들어, Analytics와 Target이 모두 서비스로 구성되어 있고 개인화 및 Analytics를 별도로 호출하는 경우 두 이벤트가 Analytics뿐만 아니라 Target으로 전송됩니다. 이러한 이벤트는 Analytics 보고에 기록되며 바운스 비율과 같은 지표에 영향을 줄 수 있습니다.

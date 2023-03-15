@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
-title: Flow Service API를 사용하여 연결 사양 업데이트
+title: 플로우 서비스 API를 사용하여 연결 사양 업데이트
 description: PUT 작업을 통해 연결 사양의 속성을 업데이트할 수 있습니다.
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -10,9 +10,9 @@ ht-degree: 1%
 
 ---
 
-# Flow Service API를 사용하여 연결 사양 업데이트
+# 플로우 서비스 API를 사용하여 연결 사양 업데이트
 
-PUT 작업을 통해 연결 사양의 속성을 업데이트할 수 있습니다. PUT 요청을 통해 연결 사양을 업데이트할 때 본문에는 POST 요청에 새 연결 사양을 생성할 때 필요한 모든 필드가 포함되어야 합니다.
+PUT 작업을 통해 연결 사양의 속성을 업데이트할 수 있습니다. PUT 요청을 통해 연결 사양을 업데이트할 때 본문에는 POST 요청에서 새 연결 사양을 만들 때 필요한 모든 필드가 포함되어야 합니다.
 
 **API 형식**
 
@@ -22,7 +22,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **요청**
 
-다음 요청은 를 업데이트합니다 `name` 의 [!DNL MailChimp] 이전 단계에서 생성된 소스.
+다음 요청은 `name` / [!DNL MailChimp] 이전 단계에서 소스가 생성되었습니다.
 
 ```shell
 PUT -X GET \
@@ -205,7 +205,7 @@ PUT -X GET \
 
 **응답**
 
-성공적인 호출은 업데이트된 이름을 포함하여 업데이트된 연결 사양 세부 정보를 반환합니다.
+호출이 성공하면 업데이트된 이름을 포함하여 업데이트된 연결 사양 세부 정보가 반환됩니다.
 
 ```json
 {

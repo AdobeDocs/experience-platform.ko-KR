@@ -1,10 +1,11 @@
 ---
 title: Edge 확장 모듈의 컨텍스트
-description: 컨텍스트 개체 및 컨텍스트 속성의 태그 확장에서 라이브러리 모듈과 상호 작용할 때 수행하는 역할에 대해 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: 컨텍스트 개체와 이 개체가 Edge 속성의 태그 확장에서 라이브러리 모듈과 상호 작용할 때 수행하는 역할에 대해 알아봅니다.
+exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '747'
-ht-degree: 74%
+ht-degree: 77%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+> Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Edge 확장의 모든 라이브러리 모듈은 실행될 때 `context` 개체가 제공됩니다. 이 문서에서는 `context` 개체에서 제공하는 속성과 라이브러리 모듈에서 수행하는 역할에 대해 설명합니다.
 
@@ -22,7 +23,7 @@ Edge 확장의 모든 라이브러리 모듈은 실행될 때 `context` 개체�
 
 ### [!DNL event]
 
-`event` 개체는 규칙을 트리거하는 이벤트를 나타내며 다음 값을 포함합니다.
+다음 `event` object 는 규칙을 트리거한 이벤트를 나타내며 다음 값을 포함합니다.
 
 ```js
 logger.log(context.arc.event);
@@ -41,7 +42,7 @@ logger.log(context.arc.event);
 logger.log(context.arc.request)
 ```
 
-`request` 개체에는 두 개의 최상위 속성이 있습니다. `body` 및 `head`. `body` 속성은 XDM(Experience Data Model) 정보를 포함하며, **[!UICONTROL Launch]**&#x200B;로 이동하여 **[!UICONTROL Edge Trace]** 탭을 선택하면 Adobe Experience Platform Debugger에서 검사할 수 있습니다.
+`request` 개체에는 두 개의 최상위 속성이 있습니다. `body` 및 `head`. 다음 `body` 속성에는 XDM(경험 데이터 모델) 정보가 포함되어 있으며 로 이동할 때 Adobe Experience Platform Debugger에서 검사할 수 있습니다. **[!UICONTROL 시작]** 및 선택 **[!UICONTROL 에지 추적]** 탭.
 
 ### [!DNL ruleStash] {#rulestash}
 
@@ -95,15 +96,15 @@ module.exports = (context) => {
 
 >[!NOTE]
 >
->이 전략을 사용할 때 항상 전체 확장 규칙을 반환하도록 주의하십시오. 대신 값을 반환하면 설정했을 수 있는 다른 모든 속성을 덮어씁니다.
+>이 전략을 사용할 때는 항상 전체 확장 규칙 스태시를 반환하도록 주의하십시오. 대신 값만 반환하는 경우 설정한 다른 속성을 덮어씁니다.
 
 ## 유틸리티
 
-`utils` 속성은 태그 런타임과 관련된 유틸리티를 제공하는 개체를 나타냅니다.
+다음 `utils` 속성은 태그 런타임과 관련된 유틸리티를 제공하는 개체를 나타냅니다.
 
 ### [!DNL logger]
 
-`logger` 유틸리티를 사용하면 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)를 사용할 때 디버깅 세션 중에 표시될 메시지를 기록할 수 있습니다.
+다음 `logger` 유틸리티를 사용하면 를 사용할 때 디버깅 세션 중에 표시되는 메시지를 기록할 수 있습니다 [Adobe Experience Platform 디버거](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
 
 ```js
 context.utils.logger.error('Error!');
@@ -130,7 +131,7 @@ context.utils.fetch('http://example.com/movies.json')
 
 ### [!DNL getBuildInfo]
 
-이 유틸리티는 현재 태그 런타임 라이브러리 빌드에 대한 정보가 포함된 개체를 반환합니다.
+이 유틸리티는 현재 태그 런타임 라이브러리의 빌드에 대한 정보가 포함된 개체를 반환합니다.
 
 ```js
 logger.log(context.utils.getBuildInfo().turbineBuildDate);

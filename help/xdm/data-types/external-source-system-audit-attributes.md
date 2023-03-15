@@ -1,11 +1,11 @@
 ---
 title: 외부 소스 시스템 감사 속성 데이터 유형
-description: 이 문서에서는 XDM(외부 소스 시스템 감사 속성 경험 데이터 모델) 데이터 유형에 대한 개요를 제공합니다.
+description: 이 문서에서는 외부 소스 시스템 감사 속성 XDM(Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 3%
+source-wordcount: '214'
+ht-degree: 2%
 
 ---
 
@@ -13,25 +13,25 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->이 데이터 유형은 Adobe Real-time Customer Data Platform의 B2B 버전에 액세스할 수 있는 조직에만 사용할 수 있습니다.
+>이 데이터 유형은 Adobe Real-time Customer Data Platform의 B2B 에디션에 액세스할 수 있는 조직에만 사용할 수 있습니다.
 
-[!UICONTROL 외부 소스 시스템 감사 속성] 는 외부 소스 시스템에 대한 감사 세부 사항을 캡처하는 표준 XDM(Experience Data Model) 데이터 유형입니다.
+[!UICONTROL 외부 소스 시스템 감사 속성] 는 외부 소스 시스템에 대한 감사 세부 정보를 캡처하는 표준 경험 데이터 모델(XDM) 데이터 유형입니다.
 
 ![](../images/data-types/external-source-system-audit-attributes.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `externalKey` | [[!UICONTROL B2B 소스]](./b2b-source.md) | 감사에 사용되는 소스의 복합 식별자입니다. |
+| `externalKey` | [[!UICONTROL B2B 소스]](./b2b-source.md) | 감사에 사용되는 소스의 합성 식별자. |
 | `createdBy` | 문자열 | 이 레코드를 만든 사용자의 이름입니다. |
-| `createdDate` | DateTime | 이 레코드를 만든 날짜입니다. |
-| `externalID` | 문자열 | 소스의 외부 고유 식별자입니다. 이 값은 필요한 경우 식별하고 중복 제거하는 데 사용됩니다. |
+| `createdDate` | DateTime | 해당 레코드가 생성된 날짜입니다. |
+| `externalID` | 문자열 | 소스에 대한 외부 고유 식별자. 이 값은 필요한 경우 식별 및 중복 제거에 도움이 됩니다. |
 | `lastActivityDate` | DateTime | 소스 시스템의 마지막 활동 날짜입니다. |
-| `lastReferencedDate` | DateTime | 소스 시스템의 마지막 참조 날짜입니다. |
+| `lastReferencedDate` | DateTime | 소스 시스템에 대해 마지막으로 참조된 날짜입니다. |
 | `lastUpdatedBy` | 문자열 | 이 레코드를 마지막으로 업데이트한 사람의 이름입니다. |
-| `lastUpdatedDate` | DateTime | 소스 시스템에 대해 마지막으로 업데이트된 날짜입니다. |
-| `lastViewedDate` | DateTime | 소스 시스템에 대해 마지막으로 본 날짜입니다. |
+| `lastUpdatedDate` | DateTime | 소스 시스템의 마지막 업데이트 날짜. |
+| `lastViewedDate` | DateTime | 소스 시스템의 마지막 조회 날짜입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 데이터 유형에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
 

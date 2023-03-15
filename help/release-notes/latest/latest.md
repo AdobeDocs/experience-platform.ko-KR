@@ -3,8 +3,8 @@ title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 2월 릴리스 정보.
 source-git-commit: ccd3df0bc045f98306901b2d734cf17262275f18
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 6%
+source-wordcount: '1292'
+ht-degree: 5%
 
 ---
 
@@ -35,7 +35,7 @@ Adobe 보증을 통해 모바일 앱에서 데이터를 수집하거나 경험�
 | ------- | ----------- |
 | 공개 API | 이제 Adobe 보증 API를 사용할 수 있습니다. Assurance API는 Mobile SDK로 Adobe 보증 확장을 설치하면 사용자가 자신의 웹 및 모바일 앱을 테스트하고 디버깅할 수 있는 API 컬렉션입니다. Assurance API에 대한 자세한 내용은 [Assurance API 개요](https://developer.adobe.com/adobe-assurance-public-apis/). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Assurance에 대한 자세한 내용은 [보증 설명서](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
@@ -49,7 +49,7 @@ Assurance에 대한 자세한 내용은 [보증 설명서](https://developer.ado
 | ----------- | ----------- |
 | [동의 정책 개선](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) 와 통합하기 위한 [파일 기반(일괄 처리) 대상](/help/destinations/destination-types.md#file-based) | <p> 프로필이 더 이상 동의 정책에 적합하지 않을 때 이제 Experience Platform은 정책 종료를 파일 기반 대상으로 미리 전달합니다. 다음 단계를 따릅니다. [2023년 2월 릴리스](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) 스트리밍 대상에 대해 동일한 기능. </p> <p> <b>참고</b>: 이 기능은 다음 고객에게만 제공됩니다. **[!UICONTROL 개인 정보 보호 및 보안 보호]**&#x200B;및 **[!UICONTROL 헬스케어 실드]**. </p> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **신규 또는 업데이트된 설명서** {#destinations-new-updated-documentation}
 
@@ -69,7 +69,7 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 | --- | --- |
 | UI를 통한 필드 사용 중단 | 이제 다음을 수행할 수 있습니다. [데이터를 수집한 후 스키마에서 필드 사용 중단](../../xdm/tutorials/field-deprecation-ui.md). XDM 필드 사용 중단을 사용하면 필드를 그대로 유지하면서 UI 보기에서 제거할 수 있습니다. 필요한 경우 더 이상 사용되지 않는 필드를 다시 표시할 수 있으며 해당 필드를 참조하는 모든 세그먼트, 쿼리 또는 다운스트림 솔루션은 평소와 같이 실행됩니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **새로운 XDM 구성 요소**
 
@@ -77,7 +77,7 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 | --- | --- | --- |
 | 클래스 | [[!UICONTROL XDM 개별 잠재 고객 프로필]](https://github.com/adobe/xdm/pull/1669/files) | XDM 개별 잠재 고객 프로필 클래스는 파트너가 제공한 ID를 가져옵니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **업데이트된 XDM 구성 요소**
 
@@ -89,7 +89,7 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 | 필드 그룹 | [!UICONTROL Adobe CJM ExperienceEvent - 메시지 상호 작용 세부 정보] | [비어 있음 `meta:enum` 속성이 제거됨](https://github.com/adobe/xdm/pull/1668/files) URL에서 [!UICONTROL 추적 유형] 필드. |
 | 데이터 유형 | [!UICONTROL 미디어 정보] | [의 정규 표현식 패턴 `videoSegment` 의 속성 [!UICONTROL 미디어 정보] 데이터 형식이 제거되었습니다.](https://github.com/adobe/xdm/pull/1667/files). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 플랫폼의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
 
@@ -106,7 +106,7 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 | 자동 완성 기능 전환 | 다음을 통해 특정 메타데이터 명령을 제거하고 처리 시간 개선 [쿼리 편집기 자동 완성 기능 전환](../../query-service/ui/user-guide.md#auto-complete). 이 기능은 쿼리를 작성할 때 쿼리에 대한 잠재적인 SQL 키워드와 테이블 세부 정보를 자동으로 제안합니다. |
 | 데이터 세트 샘플 | 쿼리에서 샘플링 속도를 지정하고 [데이터 세트 샘플을 사용하여 균일한 무작위 샘플 만들기](../../query-service/essential-concepts/dataset-samples.md)또는 특정 기준을 기반으로 조건부 샘플을 만들 수 있습니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md).
 
@@ -120,7 +120,7 @@ Real-time Customer Data Platform(Real-Time CDP)을 기반으로 구축된 Real-T
 | --- | --- |
 | 관련 계정 서비스 활성화 | 새로운 토글 기능을 사용하면 계정에서 관련 계정 서비스를 활성화할 수 있습니다. 자세한 내용은 의 안내서를 참조하십시오. [관련 계정 서비스 활성화](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Real-Time CDP B2B 에디션에 대해 자세히 알아보려면 [Real-Time CDP B2B 에디션 개요](../../rtcdp/overview.md).
 
@@ -138,6 +138,6 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | 에서 사용자 지정 활동 데이터 수집 [!DNL Marketo] | 이제 다음에서 사용자 지정 활동 데이터를 가져올 수 있습니다. [!DNL Marketo] Experience Platform 인스턴스. 사용자 지정 활동 데이터를 수집하려면 B2B 활동 스키마에서 사용자 지정 활동 필드 그룹을 설정하고 활동 데이터 세트를 사용하여 데이터 흐름을 만들어야 합니다. 데이터 흐름이 완료되면 수집된 데이터 세트에는 의 표준 활동과 사용자 지정 활동이 모두 포함됩니다. [!DNL Marketo] 인스턴스. 그런 다음 을 사용할 수 있습니다. [쿼리 서비스](../../query-service/home.md) 를 사용하여 Platform에서 사용자 지정 활동 레코드에 액세스할 수 있습니다. 자세한 내용은 의 안내서를 참조하십시오. [사용자 지정 활동 데이터에 대한 데이터 흐름 만들기](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
 | 다음에서 미청구 계정 제외 [!DNL Marketo] | 이제 회사 데이터에 대한 데이터 흐름을 만들 때 수집에서 미청구 계정을 제외할지 또는 포함할지 여부를 구성할 수 있습니다. 자세한 내용은 의 안내서를 참조하십시오. [소스 연결 및 데이터 흐름 만들기 [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).

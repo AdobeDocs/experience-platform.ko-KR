@@ -7,7 +7,7 @@ feature: Data Access
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '38'
-ht-degree: 57%
+ht-degree: 68%
 
 ---
 
@@ -17,5 +17,5 @@ ht-degree: 57%
 - [데이터 액세스 개요](home.md)
 - [데이터 액세스 API](api.md)
 - 튜토리얼 {#tutorials}
-   - [데이터 집합 데이터 보기](tutorials/dataset-data.md)
-- [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+   - [데이터 세트 데이터 보기](tutorials/dataset-data.md)
+- [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes_kr)

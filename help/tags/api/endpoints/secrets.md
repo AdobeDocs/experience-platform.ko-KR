@@ -1,27 +1,27 @@
 ---
-title: Secret 끝점
-description: Reactor API에서 /secrets 종단점을 호출하는 방법을 알아봅니다.
+title: 암호 엔드포인트
+description: Reactor API에서 /secrets 끝점을 호출하는 방법을 알아봅니다.
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
 source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 7%
+source-wordcount: '1247'
+ht-degree: 4%
 
 ---
 
-# Secret 끝점
+# 암호 엔드포인트
 
-암호는 이벤트 전달 속성(속성이 `platform` 속성 설정 `edge`). 이를 통해 이벤트 전달에서 보안 데이터 교환을 위해 다른 시스템을 인증할 수 있습니다.
+암호는 이벤트 전달 속성(가 있는 속성) 내에만 존재하는 리소스입니다. `platform` 속성이 로 설정됨 `edge`). 이벤트 전달을 통해 안전한 데이터 교환을 위해 다른 시스템을 인증할 수 있습니다.
 
-이 안내서에서는 를 호출하는 방법을 보여 줍니다 `/secrets` reactor API의 종단점입니다. 다양한 암호 유형 및 사용 방법에 대한 자세한 내용은 [비밀](../guides/secrets.md) 이 안내서로 돌아가기 전에
+이 안내서에서는 를 호출하는 방법을 보여 줍니다. `/secrets` Reactor API의 끝점입니다. 다양한 암호 유형 및 암호 사용 방법에 대한 자세한 설명은 의 고급 개요를 참조하십시오. [비밀](../guides/secrets.md) 이 안내서로 돌아가기 전에
 
 ## 시작하기
 
-이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
+이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
 
 ## 속성에 대한 암호 목록 검색 {#list-property}
 
-GET 요청을 만들어 속성에 속하는 비밀을 나열할 수 있습니다.
+GET 요청을 통해 속성에 속하는 암호를 나열할 수 있습니다.
 
 **API 형식**
 
@@ -31,9 +31,9 @@ GET /properties/{PROPERTY_ID}/secrets
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 암호를 나열할 속성의 ID입니다. |
+| `{PROPERTY_ID}` | 비밀을 나열할 속성의 ID입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -49,7 +49,7 @@ curl -X GET \
 
 **응답**
 
-성공적으로 응답하면 속성에 속하는 기밀 목록이 반환됩니다.
+성공적인 응답은 속성에 속하는 비밀 목록을 반환합니다.
 
 ```json
 {
@@ -117,7 +117,7 @@ curl -X GET \
 
 ## 환경에 대한 암호 목록 검색 {#list-environment}
 
-GET 요청을 수행하여 환경에 속한 비밀을 나열할 수 있습니다.
+GET 요청을 통해 환경에 속한 비밀을 나열할 수 있습니다.
 
 **API 형식**
 
@@ -127,9 +127,9 @@ GET /environments/{ENVIRONMENT_ID}/secrets
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | 나열할 비밀이 있는 환경의 ID입니다. |
+| `{ENVIRONMENT_ID}` | 비밀을 나열할 환경의 ID입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -145,7 +145,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 환경에 속하는 비밀 목록을 반환합니다.
+성공적인 응답은 환경에 속한 비밀 목록을 반환합니다.
 
 ```json
 {
@@ -211,9 +211,9 @@ curl -X GET \
 }
 ```
 
-## 비밀을 찾아라 {#lookup}
+## 비밀을 찾아보세요 {#lookup}
 
-GET 요청 경로에 해당 ID를 포함하여 암호를 찾을 수 있습니다.
+GET 요청 경로에 해당 ID를 포함하여 암호를 조회할 수 있습니다.
 
 **API 형식**
 
@@ -223,9 +223,9 @@ GET /secrets/{SECRET_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SECRET_ID}` | 조회하려는 비밀의 ID입니다. |
+| `{SECRET_ID}` | 조회할 비밀의 ID입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -241,7 +241,7 @@ curl -X GET \
 
 **응답**
 
-성공적으로 응답하면 비밀의 세부 사항이 반환됩니다.
+성공한 응답은 암호의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -298,11 +298,11 @@ curl -X GET \
 
 ## 암호 만들기 {#create}
 
-POST 요청을 만들어 암호를 만들 수 있습니다.
+POST 요청을 통해 암호를 만들 수 있습니다.
 
 >[!NOTE]
 >
->새 암호를 만들 때 API는 해당 리소스에 대한 정보가 포함된 즉시 응답을 반환합니다. 동시에 비밀 교환 작업이 트리거되어 자격 증명 교환이 작동하는지 테스트합니다. 이 작업은 비동기적으로 처리되고 비밀의 상태 속성을 `succeeded` 또는 `failed` 결과에 따라
+>새 암호를 만들면 API는 해당 리소스에 대한 정보가 포함된 즉시 응답을 반환합니다. 동시에 자격 증명 교환이 작동하는지 테스트하기 위해 비밀 교환 작업이 트리거됩니다. 이 작업은 비동기적으로 처리되며 비밀의 상태 속성을 다음으로 업데이트합니다. `succeeded` 또는 `failed` 결과에 따라.
 
 **API 형식**
 
@@ -312,9 +312,9 @@ POST /properties/{PROPERTY_ID}/secrets
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 에서 암호를 정의할 속성의 ID입니다. |
+| `{PROPERTY_ID}` | 아래에서 암호를 정의할 속성의 ID입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -351,17 +351,17 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `name` | 비밀의 고유한 수사적 이름입니다. |
-| `type_of` | 비밀에서 나타내는 인증 자격 증명 유형입니다. 에는 세 개의 허용되는 값이 있습니다.<ul><li>`token`: 토큰 문자열입니다.</li><li>`simple-http`: 사용자 이름과 암호입니다.</li><li>`oauth2`: OAuth 표준을 따르는 자격 증명.</li></ul> |
-| `credentials` | 비밀의 자격 증명 값을 포함하는 객체입니다. 에 따라 `type_of` 특성은 다른 속성을 제공해야 합니다. 의 섹션을 참조하십시오. [자격 증명](../guides/secrets.md#credentials) 각 유형에 대한 요구 사항에 대한 자세한 내용은 secrets guide를 참조하십시오. |
-| `relationships.environment` | 각 암호는 처음 만들 때 환경과 연결되어야 합니다. 다음 `data` 이 속성 내의 개체는 반드시 포함해야 합니다 `id` 이 비밀과 `type` 값 `environments`. |
-| `type` | 만들어지는 리소스 유형입니다. 이 호출의 경우 값은 `secrets`. |
+| `name` | 암호에 대한 고유하고 수사적인 이름. |
+| `type_of` | 암호가 나타내는 인증 자격 증명의 유형입니다. 에는 세 가지 허용되는 값이 있습니다.<ul><li>`token`: 토큰 문자열입니다.</li><li>`simple-http`: 사용자 이름 및 암호.</li><li>`oauth2`: OAuth 표준을 준수하는 자격 증명.</li></ul> |
+| `credentials` | 암호에 대한 자격 증명 값을 포함하는 개체입니다. 에 따라 `type_of` attribute, 다른 속성을 제공해야 합니다. 의 섹션을 참조하십시오. [자격 증명](../guides/secrets.md#credentials) 각 유형의 요구 사항에 대한 자세한 내용은 비밀 안내서에서 참조하십시오. |
+| `relationships.environment` | 각 암호는 처음 만들 때 환경과 연결되어 있어야 합니다. 다음 `data` 이 속성 내의 객체에는 `id` 과(와) 함께 할당되고 있는 환경 `type` 값 `environments`. |
+| `type` | 만들어지는 리소스의 유형입니다. 이 호출의 경우 값은 다음과 같아야 합니다. `secrets`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적으로 응답하면 비밀의 세부 사항이 반환됩니다. 비밀의 유형에 따라 `credentials` 숨겨진 것일 수 있습니다.
+성공한 응답은 암호의 세부 정보를 반환합니다. 암호의 유형에 따라 다음 중 일부 속성을 사용할 수 있습니다. `credentials` 숨겨져 있을 수 있습니다.
 
 ```json
 {
@@ -417,13 +417,13 @@ curl -X POST \
 }
 ```
 
-## 테스트 및 `oauth2` 비밀 {#test}
+## 테스트 `oauth2` 비밀 {#test}
 
 >[!NOTE]
 >
->이 작업은 `type_of` 값 `oauth2`.
+>이 작업은 이(가) 있는 비밀에 대해서만 수행할 수 있습니다. `type_of` 값 `oauth2`.
 
-을(를) 테스트할 수 있습니다 `oauth2` PATCH 요청 경로에 해당 ID를 포함하여 암호를 지정합니다. 테스트 작업은 교환을 수행하며, `test_exchange` 비밀의 속성 `meta` 개체. 이 작업은 암호 자체를 업데이트하지 않습니다.
+다음을 테스트할 수 있습니다. `oauth2` PATCH 요청 경로에 해당 ID를 포함하여 보안을 설정합니다. 테스트 작업은 교환을 수행하고 인증 서비스 응답을 `test_exchange` 비밀의 속성 `meta` 개체. 이 작업은 비밀 자체를 업데이트하지 않습니다.
 
 **API 형식**
 
@@ -433,9 +433,9 @@ PATCH /secrets/{SECRET_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SECRET_ID}` | 의 ID입니다 `oauth2` 테스트할 비밀. |
+| `{SECRET_ID}` | 의 ID `oauth2` 테스트하려는 비밀입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -463,16 +463,16 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes` | 다음을 포함해야 합니다. `type_of` 값이 인 속성 `oauth2`. |
-| `meta` | 다음을 포함해야 합니다. `action` 값이 인 속성 `test`. |
-| `id` | 테스트하고 있는 비밀의 ID입니다. 이 ID는 요청 경로에 제공된 ID와 일치해야 합니다. |
-| `type` | 작동 중인 리소스 유형입니다. 을(를) 로 설정해야 합니다. `secrets`. |
+| `attributes` | 다음을 포함해야 함: `type_of` 값이 인 속성 `oauth2`. |
+| `meta` | 은(는) 다음을 포함해야 합니다. `action` 값이 인 속성 `test`. |
+| `id` | 테스트 중인 암호의 ID입니다. 요청 경로에 제공된 ID와 일치해야 합니다. |
+| `type` | 작동 중인 리소스 유형. 을(를) (으)로 설정해야 합니다. `secrets`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답으로 인증 서비스의 응답이 포함된 비밀의 세부 정보가 반환됩니다 `meta.test_exchange`.
+성공적인 응답은 비밀 정보를 반환하며, 인증 서비스의 응답은 `meta.test_exchange`.
 
 ```json
 { 
@@ -540,7 +540,7 @@ curl -X PATCH \
 
 ## 암호 다시 시도 {#retry}
 
-암호를 재시도하는 것은 암호 교환을 수동으로 트리거하는 작업입니다. PATCH 요청 경로에 해당 ID를 포함하여 암호를 다시 시도할 수 있습니다.
+암호를 다시 시도하는 것은 암호 교환을 수동으로 트리거하는 작업입니다. PATCH 요청 경로에 해당 ID를 포함하여 암호를 다시 시도할 수 있습니다.
 
 **API 형식**
 
@@ -550,9 +550,9 @@ PATCH /secrets/{SECRET_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SECRET_ID}` | 다시 시도할 비밀의 ID입니다. |
+| `{SECRET_ID}` | 다시 시도할 암호의 ID입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -580,16 +580,16 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes` | 다음을 포함해야 합니다. `type_of` 업데이트할 암호와 일치하는 속성(`token`, `simple-http`, 또는 `oauth2`). |
-| `meta` | 다음을 포함해야 합니다. `action` 값이 인 속성 `retry`. |
-| `id` | 다시 시도하는 비밀의 ID입니다. 이 ID는 요청 경로에 제공된 ID와 일치해야 합니다. |
-| `type` | 작동 중인 리소스 유형입니다. 을(를) 로 설정해야 합니다. `secrets`. |
+| `attributes` | 다음을 포함해야 함: `type_of` 업데이트 중인 비밀의 속성과 일치하는 속성(`token`, `simple-http`, 또는 `oauth2`). |
+| `meta` | 은(는) 다음을 포함해야 합니다. `action` 값이 인 속성 `retry`. |
+| `id` | 다시 시도하는 암호의 ID입니다. 요청 경로에 제공된 ID와 일치해야 합니다. |
+| `type` | 작동 중인 리소스 유형. 을(를) (으)로 설정해야 합니다. `secrets`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적으로 응답하면 비밀의 세부 정보가 반환되고 그 상태는 로 재설정됩니다 `pending`. 교환이 완료되면 비밀의 상태가 `succeeded` 또는 `failed` 결과에 따라
+성공적인 응답은 암호의 세부 사항을 반환하며 상태는 로 재설정됩니다. `pending`. 교환이 완료되면 비밀의 상태는 다음으로 업데이트됩니다. `succeeded` 또는 `failed` 결과에 따라.
 
 ```json
 {
@@ -646,9 +646,9 @@ curl -X PATCH \
 
 ## 권한 재인증 `oauth2-google` 비밀 {#reauthorize}
 
-각 `oauth2-google` 비밀 `meta.authorization_url_expires_at` 인증 URL이 만료되는 시기를 나타내는 속성입니다. 이 시간 이후에는 인증 프로세스를 갱신하려면 암호를 재승인해야 합니다.
+각 `oauth2-google` 암호에 다음 포함: `meta.authorization_url_expires_at` 인증 URL이 만료되는 시기를 나타내는 속성입니다. 이 시간이 지나면 비밀이 다시 승인되어야 인증 프로세스가 갱신됩니다.
 
-를 재승인하려면 `oauth2-google` 비밀, 문제의 비밀을 PATCH에 요청하라.
+을(를) 재승인하려면 `oauth2-google` 비밀, 해당 비밀에 대해 PATCH 요청을 합니다.
 
 **API 형식**
 
@@ -658,11 +658,11 @@ PATCH /secrets/{SECRET_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SECRET_ID}` | 다음 `id` 재승인을 원하는 비밀의 |
+| `{SECRET_ID}` | 다음 `id` 을(를) 다시 승인할 수 있습니다. |
 
 **요청**
 
-다음 `data` 요청 페이로드의 객체에는 다음이 포함되어야 합니다. `meta.action` 속성 설정 `reauthorize`.
+다음 `data` 요청 페이로드의 오브젝트에는 `meta.action` 속성이 로 설정됨 `reauthorize`.
 
 ```shell
 curl -X PATCH \
@@ -688,7 +688,7 @@ curl -X PATCH \
 
 **응답**
 
-성공적으로 응답하면 업데이트된 비밀의 세부 정보가 반환됩니다. 여기에서 을(를) 복사하여 붙여넣어야 합니다 `meta.authorization_url` 를 브라우저에서 클릭하여 인증 프로세스를 완료합니다.
+성공한 응답은 업데이트된 암호의 세부 정보를 반환합니다. 여기에서 을(를) 복사하여 붙여넣어야 합니다. `meta.authorization_url` 을 브라우저에 추가하여 인증 프로세스를 완료합니다.
 
 ```json
 {
@@ -753,13 +753,13 @@ curl -X PATCH \
 
 ## 암호 삭제 {#delete}
 
-DELETE 요청 경로에 해당 ID를 포함하여 암호를 삭제할 수 있습니다. 이 작업은 즉시 효과를 사용하여 하드 삭제되며 라이브러리를 다시 게시할 필요가 없습니다.
+DELETE 요청 경로에 해당 ID를 포함하여 암호를 삭제할 수 있습니다. 이는 즉각적인 효과가 있는 하드 삭제이며 라이브러리를 다시 게시할 필요가 없습니다.
 
-이 작업은 관련된 환경에서 암호를 제거하고 기본 리소스가 삭제됩니다.
+이 작업은 관련 환경에서 암호를 제거하고 기본 리소스를 삭제합니다.
 
 >[!WARNING]
 >
->삭제된 암호를 참조하는 규칙을 배포한 경우 해당 규칙이 즉시 작동하지 않습니다. 이 암호를 참조하는 모든 데이터 요소는 나중에 업데이트하거나 제거해야 합니다.
+>삭제된 암호를 참조하는 배포된 규칙이 있는 경우 해당 규칙은 즉시 작동하지 않습니다. 이 암호를 참조하는 모든 데이터 요소는 나중에 업데이트하거나 제거해야 합니다.
 
 **API 형식**
 
@@ -769,9 +769,9 @@ DELETE /secrets/{SECRET_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SECRET_ID}` | 삭제할 비밀의 ID입니다. |
+| `{SECRET_ID}` | 삭제할 암호의 ID입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -787,17 +787,17 @@ curl -X DELETE \
 
 **응답**
 
-성공적으로 응답하면 시스템에서 암호가 삭제되었음을 나타내는 HTTP 상태 204(컨텐츠 없음) 및 빈 응답 본문을 반환합니다.
+성공적인 응답은 시스템에서 비밀이 삭제되었음을 나타내는 HTTP 상태 204(컨텐츠 없음) 및 빈 응답 본문을 반환합니다.
 
-## 비밀의 노트 나열 {#notes}
+## 암호에 대한 메모 나열 {#notes}
 
-Reactor API를 사용하면 암호를 포함한 특정 리소스에 메모를 추가할 수 있습니다. 참고는 리소스 동작에 영향을 주지 않고 다양한 사용 사례에 사용할 수 있는 텍스트 주석입니다.
+Reactor API를 사용하면 암호를 포함하여 특정 리소스에 메모를 추가할 수 있습니다. 참고는 리소스 동작에 영향을 주지 않는 텍스트 주석이며, 다양한 사용 사례에 사용할 수 있습니다.
 
 >[!NOTE]
 >
->자세한 내용은 [참고 끝점 안내서](./notes.md) reactor API 리소스에 대한 메모를 만들고 편집하는 방법에 대한 자세한 정보입니다.
+>다음을 참조하십시오. [notes 엔드포인트 안내서](./notes.md) Reactor API 리소스에 대한 메모를 만들고 편집하는 방법에 대한 자세한 정보.
 
-GET 요청을 수행하여 비밀과 관련된 모든 메모를 검색할 수 있습니다.
+GET 요청을 통해 암호와 관련된 모든 메모를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -807,9 +807,9 @@ GET /secrets/{SECRET_ID}/notes
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SECRET_ID}` | 메모를 나열할 비밀의 ID입니다. |
+| `{SECRET_ID}` | 메모를 나열할 암호의 ID. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -825,7 +825,7 @@ curl -X GET \
 
 **응답**
 
-성공한 응답은 비밀에 속하는 메모 목록을 반환합니다.
+성공한 응답은 암호에 속하는 메모 목록을 반환합니다.
 
 ```json
 {
@@ -868,15 +868,15 @@ curl -X GET \
 }
 ```
 
-## 비밀의 관련 리소스 검색 {#related}
+## 암호에 대한 관련 리소스 검색 {#related}
 
-다음 호출에서는 암호와 관련된 리소스를 검색하는 방법을 보여 줍니다. When [비밀을 찾다](#lookup)로 설정되면 이러한 관계는 `relationships` 속성을 사용합니다.
+다음 호출은 암호에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. 날짜 [비밀 찾기](#lookup), 이러한 관계는 아래에 나열됩니다. `relationships` 속성.
 
-자세한 내용은 [관계 안내서](../guides/relationships.md) 를 참조하십시오.
+다음을 참조하십시오. [관계 안내서](../guides/relationships.md) Reactor API의 관계에 대한 자세한 정보입니다.
 
-### 관련 환경을 검색하여 암호를 확인하십시오 {#environment}
+### 관련 환경에서 암호를 찾습니다. {#environment}
 
-다음을 추가하여 암호를 사용하는 환경을 조회할 수 있습니다 `/environment` GET 요청의 경로.
+비밀을 활용하는 환경을 추가하여 조회할 수 있습니다 `/environment` GET 요청 경로로 이동합니다.
 
 **API 형식**
 
@@ -886,9 +886,9 @@ GET /secrets/{SECRET_ID}/environment
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SECRET_ID}` | 조회하려는 환경의 암호 ID입니다. |
+| `{SECRET_ID}` | 환경을 조회할 비밀의 ID입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -904,7 +904,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 환경의 세부 사항을 반환합니다.
+성공한 응답은 환경의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -983,9 +983,9 @@ curl -X GET \
 }
 ```
 
-### 비밀에서 관련 속성 검색 {#property}
+### 암호의 관련 속성을 조회합니다. {#property}
 
-다음을 추가하여 암호를 소유하는 속성을 찾을 수 있습니다 `/property` GET 요청의 경로.
+을 추가하여 암호를 소유한 속성을 조회할 수 있습니다. `/property` GET 요청 경로로 이동합니다.
 
 **API 형식**
 
@@ -995,9 +995,9 @@ GET /secrets/{SECRET_ID}/property
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SECRET_ID}` | 속성을 조회하려는 비밀의 ID입니다. |
+| `{SECRET_ID}` | 조회할 속성의 비밀 ID입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -1013,7 +1013,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 속성의 세부 정보를 반환합니다.
+성공한 응답은 속성의 세부 정보를 반환합니다.
 
 ```json
 {

@@ -3,7 +3,7 @@ title: 프로필 내보내기 동작
 description: Experience Platform 대상에서 지원되는 다양한 통합 패턴 간에 프로필 내보내기 동작이 어떻게 다른지 알아봅니다.
 source-git-commit: 90964189396b3b89f35a96eb4c04e248dc34b9b4
 workflow-type: tm+mt
-source-wordcount: '2954'
+source-wordcount: '2942'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
 |---------|----------|
 | <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기에 대한 큐 역할을 합니다. 즉, 매핑된 세그먼트가 상태를 null에서 실현됨으로, 또는 실현됨/존재됨에서 종료됨으로 변경하거나 매핑된 속성을 업데이트하면 대상 내보내기가 시작됩니다.</li><li>ID는 현재 Enterprise 대상에 매핑될 수 없으므로 주어진 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>다음 `segmentMembership` 객체에는 활성화 데이터 흐름에서 매핑된 세그먼트가 포함됩니다. 이 세그먼트의 자격 또는 세그먼트 종료 이벤트 후 프로필 상태가 변경되었습니다. 프로필의 자격이 되는 매핑되지 않은 다른 세그먼트는 대상 내보내기의 일부가 될 수 있습니다(이러한 세그먼트가 동일한 세그먼트에 속하는 경우) [병합 정책](/help/profile/merge-policies/overview.md) 활성화 데이터 흐름에서 매핑된 세그먼트로 사용됩니다. </li><li>의 모든 ID `identityMap` 객체도 포함됩니다(현재 Experience Platform은 enterprise 대상에서 id 매핑을 지원하지 않습니다.).</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!IMPORTANT]
 >
@@ -110,7 +110,7 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
 |---------|----------|
 | <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기에 대한 큐 역할을 합니다. 즉, 매핑된 세그먼트가 상태를 null에서 실현됨으로, 또는 실현됨/존재됨에서 종료됨으로 변경하거나 매핑된 속성을 업데이트하면 대상 내보내기가 시작됩니다.</li><li>ID 맵의 변경 사항은 다음에 대해 추가/제거되는 ID로 정의됩니다. [id 그래프](/help/identity-service/ui/identity-graph-viewer.md) 프로필, 내보내기 위해 매핑된 id 네임스페이스의 경우</li><li>속성에 대한 변경 사항은 대상에 매핑된 속성에 대한 모든 업데이트로 정의됩니다.</li></ul> | <ul><li>대상에 매핑되고 변경된 세그먼트는 `segmentMembership` 개체. 일부 시나리오에서는 여러 호출을 사용하여 내보낼 수 있습니다. 또한 일부 시나리오에서는 변경되지 않은 일부 세그먼트가 호출에 포함될 수도 있습니다. 어떤 경우든 매핑된 세그먼트만 내보내집니다.</li><li>의 대상에 매핑된 네임스페이스의 모든 ID `identityMap` 객체도 포함됩니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!IMPORTANT]
 >
@@ -175,7 +175,7 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
 |---------|----------|
 | <ul><li>UI 또는 API 및 사용자 작업에 설정된 내보내기 일정(선택 [지금 파일 내보내기](/help/destinations/ui/export-file-now.md) UI에서 또는 [임시 활성화 API](/help/destinations/api/ad-hoc-activation-api.md)) 대상 내보내기의 시작을 확인합니다.</li></ul> | 전체 파일 내보내기에서 최신 세그먼트 평가를 기반으로 한 세그먼트의 전체 활성 프로필 모집단은 각 파일 내보내기에 포함됩니다. 내보내기 위해 선택한 각 XDM 속성에 대한 최신 값도 각 파일의 열로 포함됩니다. 종료됨 상태의 프로필은 파일 내보내기에 포함되지 않습니다. |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 **증분 파일 내보내기**
 
@@ -185,7 +185,7 @@ Experience Platform은 세그먼트 자격 또는 기타 중요한 이벤트 후
 |---------|----------|
 | <ul><li>UI 또는 API에 설정된 내보내기 일정에 따라 대상 내보내기의 시작이 결정됩니다.</li><li>프로필의 세그먼트 멤버십이 세그먼트에 적합한지 여부에 관계없이 변경되는 경우 증분 내보내기에 포함될 프로필을 지정합니다. 프로필의 속성 또는 ID 맵 변경 *금지* 증분 내보내기에 포함할 프로필을 검증합니다.</li></ul> | <p>내보내기를 위해 선택한 각 XDM 속성에 대한 최신 정보와 함께 세그먼트 멤버십이 변경된 프로필입니다.</p><p>종료한 상태의 프로필은 다음과 같은 경우 대상 내보내기에 포함됩니다. `segmentMembership.status` 매핑 단계에서 XDM 필드를 선택합니다.</p> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!TIP]
 >

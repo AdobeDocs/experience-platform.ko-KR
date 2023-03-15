@@ -13,29 +13,29 @@ ht-degree: 40%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 **전제 조건**
 
-Adobe Experience Platform의 각 태그 속성을 사용하려면 확장 화면에서 다음 확장이 설치 및 구성되어 있어야 합니다.
+Adobe Experience Platform의 각 태그 속성을 사용하려면 확장 화면에서 다음 확장을 설치하고 구성해야 합니다.
 
 * Adobe Analytics
 * Experience Cloud Visitor ID 서비스
 * 코어 확장
 
-를 사용하십시오 [&quot;를 사용하여 플레이어 포함&lt;iframe> 태그&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) 비디오 플레이어를 렌더링할 각 웹 페이지의 HTML에 있는 Google 개발자 문서에서 코드 조각입니다.
+사용 [&quot;다음을 사용하여 플레이어 포함 \&lt;iframe> 태그&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) 비디오 플레이어를 렌더링할 각 웹 페이지의 HTML에 있는 Google 개발자 문서의 코드 조각입니다.
 
-이 확장 버전 2.0.1은 를 삽입하여 하나 이상의 YouTube 비디오를 단일 웹 페이지에 포함할 수 있도록 지원합니다 `id` iframe 스크립트 태그에 고유한 값이 있는 속성 및 추가 `enablejsapi=1` 및 `rel=0` 끝 `src` 아직 포함되지 않은 경우 속성 값입니다. 예:
+이 확장 버전 2.0.1은 를 삽입하여 단일 웹 페이지에 하나 이상의 YouTube 비디오를 포함하도록 지원합니다 `id` iframe 스크립트 태그에 고유한 값이 있는 속성 및 추가 `enablejsapi=1` 및 `rel=0` 의 끝까지 `src` 속성 값(아직 포함되지 않은 경우). 예:
 
 `<iframe id="player1" width="560" height="315" src="https://www.youtube.com/embed/xpatB77BzYE?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 
-또한 이 확장은 다음과 같은 고유한 ID 속성 값을 동적으로 확인하도록 설계되었습니다 `player1`에 대해 지속 기간을 한 번의 방문으로 설정해야 합니다. `enablejsapi` 및 `rel` 쿼리 문자열 매개 변수가 존재하고 예상 값이 정확한지 여부. 따라서 YouTube 스크립트 태그를 `id` 속성 및 해당 `enablejsapi` 및 `rel` 쿼리 문자열 매개 변수가 포함되거나 포함되지 않습니다.
+또한 이 확장은 다음과 같은 고유한 ID 속성 값을 동적으로 확인하도록 설계되었습니다. `player1`, 다음에 상관없이 `enablejsapi` 및 `rel` 쿼리 문자열 매개 변수가 있고 예상 값이 정확한지 여부. 따라서 YouTube 스크립트 태그를 사용하거나 사용하지 않고 웹 페이지에 추가할 수 있습니다. `id` 속성 및 `enablejsapi` 및 `rel` 쿼리 문자열 매개 변수가 포함되어 있거나 포함되어 있지 않습니다.
 
 >[!NOTE]
 >
 >둘 이상의 비디오가 있는 페이지의 경우 각 비디오는 해당 페이지에서 실행되는 태그 규칙에 동일한 구성 세트를 사용합니다. 예를 들어, 비디오 50%에서 완료되는 이벤트를 트리거하는 규칙을 만드는 경우 페이지의 각 비디오가 50% 큐 포인트에서 규칙을 트리거합니다.
 
-확장은 iFrames를 다시 작성하는 다음 로직을 사용합니다.
+확장은 다음 논리를 사용하여 iFrame을 다시 작성합니다.
 
 ```javascript
 document.onreadystatechange = function () {
@@ -70,7 +70,7 @@ document.onreadystatechange = function () {
 
 ## 사용
 
-각 비디오 이벤트(위에 나열된 7개 이벤트)에 대해 하나의 태그 규칙을 설정할 수 있습니다. 추적할 각 이벤트에 대해 특정 태그 규칙을 만듭니다. 이벤트를 추적하지 않으려면 규칙을 만들지 않도록 생략하면 됩니다.
+각 비디오 이벤트(위에 나열된 7개 이벤트)에 대해 하나의 태그 규칙을 설정할 수 있습니다. 추적할 각 이벤트에 대한 특정 태그 규칙을 만듭니다. 이벤트를 추적하지 않으려면 를 생략하여 규칙을 만듭니다.
 
 규칙에는 다음의 세 가지 작업이 있습니다.
 
@@ -86,19 +86,19 @@ document.onreadystatechange = function () {
 
 * **조건**: 없음
 
-* **작업**: 를 사용하십시오 **Analytics 확장** 매핑하려면 &quot;변수 설정&quot; 작업을 수행하십시오.
+* **작업**: 사용 **분석 확장** 를 &quot;변수 설정&quot; 작업에 매핑하려면 다음을 수행합니다.
 
-   * 비디오 시작에 대한 이벤트
+   * 비디오 시작 이벤트,
    * 비디오 지속 시간 데이터 요소에 대한 prop/eVar
    * 비디오 ID 데이터 요소에 대한 prop/eVar
    * 비디오 이름 데이터 요소에 대한 prop/eVar
    * 비디오 URL 데이터 요소에 대한 prop/eVar
 
-   그런 다음 &quot;비콘 보내기&quot; 작업(`s.tl`)에 대해 링크 이름을 &quot;비디오 시작&quot;으로 지정하고, 그 다음에 &quot;변수 지우기&quot; 작업이 옵니다.
+   그런 다음 &quot;비콘 보내기&quot; 작업(`s.tl`) 링크 이름 &quot;video start&quot;와 &quot;Clear Variables&quot; 작업이 차례로 표시됩니다.
 
 >[!TIP]
 > 
->각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 사용할 수 없는 구현의 경우, 데이터 요소 값을 플랫폼 내에서 연결하고, 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석할 수 있습니다. 자세한 내용은 [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html), 그런 다음 Analysis Workspace에서 세그먼트로 적용됩니다.
+>각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 사용할 수 없는 구현의 경우, 데이터 요소 값을 플랫폼 내에서 연결하고, 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석할 수 있습니다. [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)을 추가한 다음 Analysis Workspace에서 세그먼트로 적용합니다.
 
 비디오 정보 값을 연결하려면 ”비디오 메타 데이터”라는 새 데이터 요소를 만든 후 이를 프로그래밍하여 모든 비디오 데이터 요소(위에 나열됨)를 가져와서 함께 조합합니다. 예:
 

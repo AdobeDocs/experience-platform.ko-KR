@@ -17,18 +17,18 @@ ht-degree: 52%
 * [Privacy Service 개요](./home.md)
 * [Privacy Service 권한 관리](./permissions.md)
 * [Privacy Service 및 Experience Cloud 애플리케이션](./experience-cloud-apps.md)
-* [개인 정보 요청에 대한 ID 데이터](./identity-data.md)
+* [개인 정보 보호 요청에 대한 ID 데이터](./identity-data.md)
 * [개인 정보 JS 라이브러리 개요](./js-library.md)
-* Privacy Service API {#api}
+* PRIVACY SERVICE API {#api}
    * [개요](./api/overview.md)
    * [시작하기](./api/getting-started.md)
    * [개인 정보 작업](./api/privacy-jobs.md)
    * [동의](./api/consent.md)
    * [부록](./api/appendix.md)
-* Privacy Service UI {#ui}
+* PRIVACY SERVICE UI {#ui}
    * [개요](./ui/overview.md)
    * [개인 정보 작업 관리](./ui/user-guide.md)
-* [개인 정보 보호 이벤트에 가입](./privacy-events.md)
+* [개인 정보 이벤트 구독](./privacy-events.md)
 * 개인 정보 보호 규정 {#regulations}
    * [개요](./regulations/overview.md)
    * [FAQ](./regulations/faq.md)

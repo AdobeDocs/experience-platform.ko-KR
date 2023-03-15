@@ -1,8 +1,9 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Oracle 서비스 클라우드;oracle 서비스 클라우드
 title: Oracle 서비스 클라우드 소스 커넥터 개요
-description: API 또는 사용자 인터페이스를 사용하여 Adobe Experience Platform에 Service Cloud를 연결하는 방법을 알아봅니다.
-source-git-commit: 078a266967cd7b0818f958283a58a8af4c886a21
+description: API 또는 사용자 인터페이스를 사용하여 Oracle Service Cloud를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 0%
@@ -13,25 +14,25 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->oracle 서비스 클라우드 소스가 베타 버전입니다. 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions) 베타 레이블이 지정된 소스 사용에 대한 자세한 정보.
+>oracle 서비스 클라우드 소스는 베타 버전입니다. 다음을 참조하십시오. [소스 개요](../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
-Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-Experience Platform은 타사 고객 성공 시스템에서 데이터 섭취를 지원합니다. 고객 성공 공급자를 지원하는 기능에는 Oracle 서비스 클라우드가 있습니다.
+Experience Platform은 서드파티 고객 성공 시스템에서 데이터를 수집하는 데 대한 지원을 제공합니다. 고객 성공 공급자에 대한 지원에는 Oracle 서비스 클라우드가 포함됩니다.
 
 ## IP 주소 허용 목록
 
-소스 커넥터로 작업하기 전에 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스를 사용할 때 오류나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지를 참조하십시오.
+소스 커넥터로 작업하려면 먼저 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 다음을 참조하십시오. [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지 를 참조하십시오.
 
-아래 설명서에서는 API 또는 사용자 인터페이스를 사용하여 Oracle Service Cloud를 Platform에 연결하는 방법에 대해 설명합니다.
+아래 설명서는 API 또는 사용자 인터페이스를 사용하여 Oracle 서비스 클라우드를 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
 
-## API를 사용하여 Platform에 Oracle Service Cloud 연결
+## API를 사용하여 Oracle 서비스 클라우드를 플랫폼에 연결
 
-- [Flow Service API를 사용하여 Oracle 서비스 클라우드 기반 연결을 만듭니다](../../tutorials/api/create/customer-success/oracle-service-cloud.md)
-- [Flow Service API를 사용하여 데이터 테이블 탐색](../../tutorials/api/explore/tabular.md)
-- [Flow Service API를 사용하여 고객 성공 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/customer-success.md)
+- [흐름 서비스 API를 사용하여 Oracle 서비스 클라우드 기본 연결 만들기](../../tutorials/api/create/customer-success/oracle-service-cloud.md)
+- [흐름 서비스 API를 사용하여 데이터 테이블 탐색](../../tutorials/api/explore/tabular.md)
+- [흐름 서비스 API를 사용하여 고객 성공 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/customer-success.md)
 
-## UI를 사용하여 Platform에 Oracle 서비스 클라우드 연결
+## UI를 사용하여 Oracle 서비스 클라우드를 플랫폼에 연결
 
 - [UI에서 Oracle 서비스 클라우드 소스 연결 만들기](../../tutorials/ui/create/customer-success/oracle-service-cloud.md)
-- [UI에서 고객 성공 소스 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/customer-success.md)
+- [UI에서 고객 성공 소스 연결에 대한 데이터 흐름 만들기](../../tutorials/ui/dataflow/customer-success.md)

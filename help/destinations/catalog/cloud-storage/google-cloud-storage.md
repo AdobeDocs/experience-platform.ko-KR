@@ -1,10 +1,10 @@
 ---
 title: (베타) Google 클라우드 스토리지 연결
-description: Google 클라우드 스토리지에 연결하고 세그먼트를 활성화하거나 데이터 세트를 내보내는 방법을 알아봅니다.
+description: Google Cloud Storage에 연결하고 세그먼트를 활성화하거나 데이터 세트를 내보내는 방법에 대해 알아봅니다.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
 source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '905'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->이 대상은 현재 베타에 있으며 제한된 수의 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 [!DNL Google Cloud Storage] 연결되면 Adobe 담당자에게 연락하여 [!DNL Organization ID].
+>이 대상은 현재 베타 버전이며 제한된 수의 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 [!DNL Google Cloud Storage] 연결, Adobe 담당자에게 연락하여 [!DNL Organization ID].
 
 ## 개요 {#overview}
 
-에 대한 라이브 아웃바운드 연결을 만듭니다. [!DNL Google Cloud Storage] 를 통해 Adobe Experience Platform의 데이터 파일을 고유한 버킷으로 주기적으로 내보냅니다.
+에 대한 실시간 아웃바운드 연결 만들기 [!DNL Google Cloud Storage] Adobe Experience Platform의 데이터 파일을 정기적으로 고유한 버킷으로 내보냅니다.
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -25,84 +25,84 @@ ht-degree: 0%
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 세그먼트의 프로필 속성 선택 화면에서 선택한 대로 해당 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다 [대상 활성화 워크플로우](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 다운스트림 플랫폼으로 3, 6, 8, 12 또는 24시간 단위로 내보냅니다. 자세한 내용 [배치 파일 기반 대상](/help/destinations/destination-types.md#file-based). |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 의 프로필 속성 선택 화면에서 선택한 대로 적용 가능한 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다. [대상 활성화 워크플로](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. 자세한 내용 [배치 파일 기반 대상](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## 연결 필수 구성 요소 설정 [!DNL Google Cloud Storage] account {#prerequisites}
+## 연결을 위한 필수 구성 요소 설정 [!DNL Google Cloud Storage] account {#prerequisites}
 
-Platform을 [!DNL Google Cloud Storage]를 사용하려면 먼저 상호 운용성을 설정해야 합니다. [!DNL Google Cloud Storage] 계정이 필요합니다. 상호 운용성 설정에 액세스하려면 [!DNL Google Cloud Platform] 을(를) 선택합니다. **[!UICONTROL 설정]** 에서 **[!UICONTROL 클라우드 스토리지]** 옵션을 선택합니다.
+플랫폼을 연결하려면 다음을 수행하십시오. [!DNL Google Cloud Storage], 먼저 상호 운용성을 활성화해야 합니다. [!DNL Google Cloud Storage] 계정입니다. 상호 운용성 설정에 액세스하려면 [!DNL Google Cloud Platform] 및 선택 **[!UICONTROL 설정]** 다음에서 **[!UICONTROL 클라우드 스토리지]** 옵션을 선택합니다.
 
-![클라우드 스토리지 및 설정이 강조 표시된 Google Cloud Platform 대시보드 .](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
+![클라우드 스토리지 및 설정이 강조 표시된 Google 클라우드 플랫폼 대시보드.](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
-다음 **[!UICONTROL 설정]** 페이지가 나타납니다. 여기에서 [!DNL Google] 프로젝트 ID 및 세부 정보 [!DNL Google Cloud Storage] 계정이 필요합니다. 상호 운용성 설정에 액세스하려면 **[!UICONTROL 상호 운용성]** 상단 헤더에서
+다음 **[!UICONTROL 설정]** 페이지가 나타납니다. 여기에서 다음에 대한 정보를 볼 수 있습니다. [!DNL Google] 프로젝트 ID 및 세부 정보 [!DNL Google Cloud Storage] 계정입니다. 상호 운용성 설정에 액세스하려면 다음을 선택합니다 **[!UICONTROL 상호 운용성]** 맨 위 머리글에서
 
-![Google Cloud Platform 대시보드에 강조 표시된 상호 운용성 탭입니다.](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
+![Google Cloud Platform 대시보드에서 강조 표시된 상호 운용성 탭입니다.](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
 
-다음 **[!UICONTROL 상호 운용성]** 페이지에는 인증, 액세스 키 및 서비스 계정과 연결된 기본 프로젝트에 대한 정보가 들어 있습니다. 서비스 계정에 대한 새 액세스 키 ID와 비밀 액세스 키를 생성하려면 **[!UICONTROL 서비스 계정 키 만들기]**.
+다음 **[!UICONTROL 상호 운용성]** 페이지에는 서비스 계정과 연결된 인증, 액세스 키 및 기본 프로젝트에 대한 정보가 포함되어 있습니다. 서비스 계정에 대한 새 액세스 키 ID와 비밀 액세스 키를 생성하려면 다음을 선택합니다. **[!UICONTROL 서비스 계정에 대한 키 만들기]**.
 
-![Google Cloud Platform 대시보드에 강조 표시된 서비스 계정 컨트롤 키 만들기](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
+![Google Cloud Platform 대시보드에서 강조 표시된 서비스 계정 컨트롤에 대한 키 만들기 를 참조하십시오.](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
-새로 생성된 액세스 키 ID와 비밀 액세스 키를 사용하여 [!DNL Google Cloud Storage] Platform에 계정을 설정합니다.
+새로 생성된 액세스 키 ID 및 비밀 액세스 키를 사용하여 [!DNL Google Cloud Storage] 계정을 플랫폼에 추가합니다.
 
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
+>대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-이 대상에 연결하려면 [대상 구성 자습서](/help/destinations/ui/connect-destination.md). 대상 구성 워크플로우에서 아래 두 섹션에 나열된 필드를 입력합니다.
+이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](/help/destinations/ui/connect-destination.md). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상에 인증 {#authenticate}
 
-대상을 인증하려면 필요한 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**.
+대상에 인증하려면 필수 필드를 입력한 다음 을(를) 선택합니다. **[!UICONTROL 대상에 연결]**.
 
-* **[!UICONTROL 액세스 키 ID]**: 인증을 위해 사용되는 61자의 영숫자 문자열입니다 [!DNL Google Cloud Storage] Platform에 계정을 설정합니다. 이 값을 가져오는 방법에 대한 자세한 내용은 [전제 조건](#prerequisites) 섹션에 있는 마지막 항목이 될 필요가 없습니다.
-* **[!UICONTROL 비밀 액세스 키]**: 인증을 위해 사용되는 40자의 base64로 인코딩된 문자열입니다 [!DNL Google Cloud Storage] Platform에 계정을 설정합니다. 이 값을 가져오는 방법에 대한 자세한 내용은 [전제 조건](#prerequisites) 섹션에 있는 마지막 항목이 될 필요가 없습니다.
-* **[!UICONTROL 암호화 키]**: 선택적으로 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
+* **[!UICONTROL 액세스 키 ID]**: 인증을 위해 사용되는 61자 영숫자 문자열입니다. [!DNL Google Cloud Storage] 계정을 플랫폼에 추가합니다. 이 값을 얻는 방법에 대한 자세한 내용은 [전제 조건](#prerequisites) 위의 섹션.
+* **[!UICONTROL 비밀 액세스 키]**: 인증에 사용되는 40자의 base64로 인코딩된 문자열 [!DNL Google Cloud Storage] 계정을 플랫폼에 추가합니다. 이 값을 얻는 방법에 대한 자세한 내용은 [전제 조건](#prerequisites) 위의 섹션.
+* **[!UICONTROL 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-   ![UI에서 올바른 형식의 PGP 키의 예를 보여주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-이러한 값에 대한 자세한 내용은 [Google 클라우드 스토리지 HMAC 키](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) 안내서. 고유한 액세스 키 ID 및 비밀 액세스 키를 생성하는 방법에 대한 단계는 [[!DNL Google Cloud Storage] 소스 개요](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
+이러한 값에 대한 자세한 내용은 [Google 클라우드 스토리지 HMAC 키](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) 가이드. 자신의 액세스 키 ID 및 비밀 액세스 키를 생성하는 방법에 대한 단계는 [[!DNL Google Cloud Storage] 소스 개요](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
-### 대상 세부 사항 채우기 {#destination-details}
+### 대상 세부 정보 입력 {#destination-details}
 
-대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
+대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
 * **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
-* **[!UICONTROL 버킷 이름]**: 이름 입력 [!DNL Google Cloud Storage] 이 대상에서 사용할 버킷입니다.
-* **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스트할 대상 폴더의 경로를 입력합니다.
-* **[!UICONTROL 파일 유형]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 을(를) 선택할 때 [!UICONTROL CSV] 선택 사항 [파일 서식 옵션 구성](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 압축 포맷]**: 내보낸 파일에 사용할 압축 유형을 Experience Platform에서 선택합니다.
+* **[!UICONTROL 버킷 이름]**: 의 이름을 입력합니다. [!DNL Google Cloud Storage] 이 대상에서 사용할 버킷.
+* **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력합니다.
+* **[!UICONTROL 파일 유형]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 을(를) 선택할 때 [!UICONTROL CSV] 옵션을 사용하여 다음을 수행할 수도 있습니다. [파일 서식 옵션 구성](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 압축 포맷]**: 내보낸 파일에 대해 Experience Platform이 사용해야 하는 압축 유형을 선택합니다.
 
 ### 경고 활성화 {#enable-alerts}
 
-경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 다음 안내서를 참조하십시오. [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
 
-대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
+대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 세그먼트를 이 대상에 활성화 {#activate}
+## 이 대상에 대한 세그먼트 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
+>데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-자세한 내용은 [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](../../ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
+다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
 
 ### 예약
 
-에서 **[!UICONTROL 예약]** 단계를 수행하여 다음을 수행할 수 있습니다. [내보내기 스케줄 설정](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) 에 대해 [!DNL Google Cloud Storage] 대상 및 [내보낸 파일의 이름 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+다음에서 **[!UICONTROL 예약]** 단계, 다음을 수행할 수 있습니다. [내보내기 일정 설정](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) 에 대한 [!DNL Google Cloud Storage] 대상 및 다음을 수행할 수도 있습니다. [내보낸 파일의 이름 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 
-### 특성 및 ID 매핑 {#map}
+### 속성 및 ID 매핑 {#map}
 
-에서 **[!UICONTROL 매핑]** 단계: 프로파일에 대해 내보낼 속성 및 id 필드를 선택할 수 있습니다. 내보낸 파일의 헤더를 원하는 친숙한 이름으로 변경하도록 선택할 수도 있습니다. 자세한 내용은 [매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 배치 대상 활성화 UI 자습서에서 를 참조하십시오.
+다음에서 **[!UICONTROL 매핑]** 단계에서는 프로필에 내보낼 속성 및 id 필드를 선택할 수 있습니다. 내보낸 파일의 헤더를 원하는 이름으로 변경하도록 선택할 수도 있습니다. 자세한 내용은 [매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 배치 대상 활성화 UI 튜토리얼에서 다음을 수행합니다.
 
 ## (베타) 데이터 세트 내보내기 {#export-datasets}
 
-이 대상은 데이터 집합 내보내기를 지원합니다. 데이터 집합 내보내기를 설정하는 방법에 대한 자세한 내용은 [데이터 세트 내보내기 자습서](/help/destinations/ui/export-datasets.md).
+이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기를 설정하는 방법에 대한 자세한 내용은 [데이터 세트 내보내기 자습서](/help/destinations/ui/export-datasets.md).
 
-## 성공적인 데이터 내보내기의 유효성 검사 {#exported-data}
+## 성공적인 데이터 내보내기 유효성 검사 {#exported-data}
 
-데이터를 성공적으로 내보냈는지 확인하려면 [!DNL Google Cloud Storage] 버킷하고 내보낸 파일에 예상 프로필 모집단이 포함되어 있는지 확인합니다.
+데이터를 성공적으로 내보냈는지 확인하려면 [!DNL Google Cloud Storage] 버킷 을 만들고 내보낸 파일에 예상 프로필 모집단이 포함되어 있는지 확인합니다.

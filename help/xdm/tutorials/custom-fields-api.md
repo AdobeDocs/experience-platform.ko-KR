@@ -1,6 +1,6 @@
 ---
 title: 스키마 레지스트리 API에서 XDM 필드 정의
-description: 스키마 레지스트리 API에서 사용자 지정 XDM(Experience Data Model) 리소스를 만들 때 다양한 필드를 정의하는 방법을 알아봅니다.
+description: 스키마 레지스트리 API에서 사용자 지정 XDM(경험 데이터 모델) 리소스를 만들 때 다양한 필드를 정의하는 방법을 알아봅니다.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
@@ -11,19 +11,19 @@ ht-degree: 0%
 
 # 스키마 레지스트리 API에서 XDM 필드 정의
 
-모든 XDM(경험 데이터 모델) 필드는 표준을 사용하여 정의됩니다 [JSON 스키마](https://json-schema.org/) 필드 유형에 적용되는 제한 조건 및 Adobe Experience Platform에 의해 적용되는 필드 이름에 대한 추가 제한. 스키마 레지스트리 API를 사용하면 형식 및 선택적 제약 조건을 사용하여 스키마에서 사용자 지정 필드를 정의할 수 있습니다. XDM 필드 유형은 필드 수준 특성에 의해 노출됩니다. `meta:xdmType`.
+모든 XDM(경험 데이터 모델) 필드는 표준을 사용하여 정의됩니다 [JSON 스키마](https://json-schema.org/) 해당 필드 유형에 적용되는 제약 조건(Adobe Experience Platform에서 적용하는 필드 이름에 대한 추가 제약 조건 포함). 스키마 레지스트리 API를 사용하면 형식 및 선택적 제약 조건을 사용하여 스키마에서 사용자 지정 필드를 정의할 수 있습니다. XDM 필드 유형은 필드 수준 속성에 의해 노출됩니다. `meta:xdmType`.
 
 >[!NOTE]
 >
->`meta:xdmType` 는 시스템에서 생성한 값이므로 API를 사용할 때(단, [사용자 지정 맵 유형 만들기](#custom-maps)). 가장 좋은 방법은 JSON 스키마 유형(예: `string` 및 `integer`)을 클릭하여 아래 표에 정의된 대로 적절한 최소/최대 제한을 지정합니다.
+>`meta:xdmType` 는 시스템 생성 값이므로 API를 사용할 때(다음의 경우 제외) 필드의 JSON에 이 속성을 추가할 필요가 없습니다. [사용자 지정 맵 유형 만들기](#custom-maps)). 가장 좋은 방법은 JSON 스키마 유형(예: `string` 및 `integer`아래 표에 정의된 대로 적절한 최소/최대 구속을 사용합니다.
 
-이 안내서에서는 선택적 속성이 있는 필드 유형을 비롯하여 다양한 필드 유형을 정의하는 데 적합한 형식을 간략하게 설명합니다. 선택적 속성 및 유형별 키워드에 대한 자세한 내용은 [JSON 스키마 설명서](https://json-schema.org/understanding-json-schema/reference/type.html).
+이 안내서에서는 속성(선택 사항)이 있는 필드 유형을 포함하여 다양한 필드 유형을 정의하기 위한 적절한 형식을 간략하게 설명합니다. 선택적 속성 및 유형별 키워드에 대한 자세한 내용은 [JSON 스키마 설명서](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-시작하려면 원하는 필드 유형을 찾아 제공된 샘플 코드를 사용하여 API 요청을 작성합니다 [필드 그룹 만들기](../api/field-groups.md#create) 또는 [데이터 유형 만들기](../api/data-types.md#create).
+시작하려면 원하는 필드 유형을 찾고, 제공된 샘플 코드를 사용하여 API 요청을 빌드합니다. [필드 그룹 만들기](../api/field-groups.md#create) 또는 [데이터 유형 만들기](../api/data-types.md#create).
 
 ## [!UICONTROL 문자열] {#string}
 
-[!UICONTROL 문자열] 필드는 `type: string`.
+[!UICONTROL 문자열] 필드는 로 표시됩니다. `type: string`.
 
 ```json
 "sampleField": {
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 다음 추가 속성을 통해 문자열에 입력할 수 있는 값 종류를 선택적으로 제한할 수 있습니다.
 
-* `pattern`: 로 제한할 정규 표현식 패턴입니다.
+* `pattern`: 를 제한하는 정규 표현식 패턴입니다.
 * `minLength`: 문자열의 최소 길이입니다.
 * `maxLength`: 문자열의 최대 길이입니다.
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 ## [!UICONTROL URI] {#uri}
 
-[!UICONTROL URI] 필드는 `type: string` 사용 `format` 속성 설정 `uri`. 다른 속성은 허용되지 않습니다.
+[!UICONTROL URI] 필드는 로 표시됩니다. `type: string` 포함 `format` 속성이 로 설정됨 `uri`. 다른 속성은 허용되지 않습니다.
 
 ```json
 "sampleField": {
@@ -64,7 +64,7 @@ ht-degree: 0%
 
 ## [!UICONTROL 열거형] {#enum}
 
-[!UICONTROL 열거형] 필드를 사용해야 합니다. `type: string`로 설정되면, `enum` 배열:
+[!UICONTROL 열거형] 필드는 다음을 사용해야 합니다. `type: string`, 열거형 값 자체가 `enum` 배열:
 
 ```json
 "sampleField": {
@@ -79,7 +79,7 @@ ht-degree: 0%
 }
 ```
 
-원할 경우 아래의 각 값에 대해 고객 대상 레이블을 제공할 수 있습니다 `meta:enum` 각 레이블이 아래에 해당하는 값에 키로 지정된 속성 `enum`.
+각 값에 대한 고객 대면 레이블을 필요에 따라 제공할 수 있습니다. `meta:enum` 각 레이블이 아래의 해당 값에 맞춰진 속성 `enum`.
 
 ```json
 "sampleField": {
@@ -101,9 +101,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->다음 `meta:enum` 값은 **not** 열거형을 선언하거나 데이터 유효성 검사를 직접 구동합니다. 대부분의 경우 `meta:enum` 다음 항목에서도 제공됩니다. `enum` 가 있어야 합니다. 그러나 다음과 같은 몇 가지 사용 사례가 있습니다 `meta:enum` 이(가) 해당 없이 제공됩니다 `enum` 배열입니다. 다음에서 자습서를 참조하십시오. [추천 값 정의](../tutorials/suggested-values.md) 추가 정보.
+>다음 `meta:enum` 값: **아님** 열거형을 선언하거나 데이터 유효성 검사를 자체적으로 실행합니다. 대부분의 경우 아래에 제공된 문자열 `meta:enum` 아래에 제공됩니다. `enum` : 데이터가 제한되어 있는지 확인합니다. 그러나 다음과 같은 몇 가지 사용 사례가 있습니다 `meta:enum` 는 해당 항목 없이 제공됩니다 `enum` 배열입니다. 다음 튜토리얼 참조: [제안 값 정의](../tutorials/suggested-values.md) 추가 정보.
 
-원할 경우 `default` 기본값을 나타내는 속성 `enum` 값이 제공되지 않을 경우 필드에서 사용할 값입니다.
+다음을 선택적으로 제공할 수 있습니다. `default` 기본값을 나타내는 속성 `enum` 값을 제공하지 않은 경우 필드에서 사용할 값입니다.
 
 ```json
 "sampleField": {
@@ -126,11 +126,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->없는 경우 `default` 값이 제공되고 enum 필드가 `required`: 이 필드에 대해 허용된 값이 없는 레코드는 수집 시 유효성 검사가 실패합니다.
+>없는 경우 `default` 값이 제공되고 열거형 필드가 로 설정됩니다. `required`, 이 필드에 대해 허용되는 값이 없는 레코드는 수집 시 유효성 검사에 실패합니다.
 
 ## [!UICONTROL 숫자] {#number}
 
-숫자 필드는 `type: number` 및 에는 다른 필수 속성이 없습니다.
+숫자 필드는 로 표시됩니다. `type: number` 및 에는 다른 필수 속성이 없습니다.
 
 ```json
 "sampleField": {
@@ -142,11 +142,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`number` 유형은 정수 또는 부동 소수점 숫자와 같은 모든 숫자 유형에 사용되지만 [`integer` 유형](#integer) 특히 정수 계열 숫자에 사용됩니다. 자세한 내용은 [숫자 유형에 대한 JSON 스키마 설명서](https://json-schema.org/understanding-json-schema/reference/numeric.html) 를 참조하십시오.
+>`number` 형식은 정수 또는 부동 소수점 숫자와 같은 숫자 형식에 사용됩니다. [`integer` 유형](#integer) 은 정수에 특히 사용됩니다. 다음을 참조하십시오. [숫자 유형에 대한 JSON 스키마 설명서](https://json-schema.org/understanding-json-schema/reference/numeric.html) 각 유형의 사용 사례에 대한 자세한 정보를 제공합니다.
 
 ## [!UICONTROL 정수] {#integer}
 
-[!UICONTROL 정수] 필드는 `type: integer` 및 에는 다른 필수 필드가 없습니다.
+[!UICONTROL 정수] 필드는 로 표시됩니다. `type: integer` 및 에는 다른 필수 필드가 없습니다.
 
 ```json
 "sampleField": {
@@ -158,9 +158,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->While `integer` 유형은 특히 정수 숫자를 나타냅니다. [`number` 유형](#number) 정수 또는 부동 소수점 숫자인 모든 숫자 유형에 사용됩니다. 자세한 내용은 [숫자 유형에 대한 JSON 스키마 설명서](https://json-schema.org/understanding-json-schema/reference/numeric.html) 를 참조하십시오.
+>While `integer` 형식은 특히 정수를 참조합니다. [`number` 유형](#number) 정수 또는 부동 소수점 숫자 등 모든 숫자 유형에 사용됩니다. 다음을 참조하십시오. [숫자 유형에 대한 JSON 스키마 설명서](https://json-schema.org/understanding-json-schema/reference/numeric.html) 각 유형의 사용 사례에 대한 자세한 정보를 제공합니다.
 
-을 추가하여 정수 범위를 선택적으로 제한할 수 있습니다 `minimum` 및 `maximum` 속성에 값을 지정합니다. 스키마 빌더 UI에서 지원하는 몇 가지 다른 숫자 유형은 `integer` 특정 유형 `minimum` 및 `maximum` 다음과 같은 제한 [[!UICONTROL Long]](#long), [[!UICONTROL Short]](#short), 및 [[!UICONTROL 바이트]](#byte).
+을 추가하여 정수 범위를 선택적으로 제한할 수 있습니다 `minimum` 및 `maximum` 속성을 정의로 설정합니다. 스키마 빌더 UI에서 지원하는 몇 가지 다른 숫자 유형은 다음과 같습니다 `integer` 특정 유형 `minimum` 및 `maximum` 제한(예: ) [[!UICONTROL 길게]](#long), [[!UICONTROL 짧음]](#short), 및 [[!UICONTROL 바이트]](#byte).
 
 ```json
 "sampleField": {
@@ -172,9 +172,9 @@ ht-degree: 0%
 }
 ```
 
-## [!UICONTROL Long] {#long}
+## [!UICONTROL 길게] {#long}
 
-에 해당하는 [!UICONTROL Long] 스키마 빌더 UI를 통해 생성된 필드는 다음과 같습니다 [`integer` 유형 필드](#integer) 특정 `minimum` 및 `maximum` 값 (`-9007199254740992` 및 `9007199254740992`)를 반환합니다.
+의 등가물 [!UICONTROL 길게] 스키마 빌더 UI를 통해 생성된 필드는 [`integer` 필드 입력](#integer) 특정하게 `minimum` 및 `maximum` 값 (`-9007199254740992` 및 `9007199254740992`, 각각 참조).
 
 ```json
 "sampleField": {
@@ -186,9 +186,9 @@ ht-degree: 0%
 }
 ```
 
-## [!UICONTROL Short] {#short}
+## [!UICONTROL 짧음] {#short}
 
-에 해당하는 [!UICONTROL Short] 스키마 빌더 UI를 통해 생성된 필드는 다음과 같습니다 [`integer` 유형 필드](#integer) 특정 `minimum` 및 `maximum` 값 (`-32768` 및 `32768`)를 반환합니다.
+의 등가물 [!UICONTROL 짧음] 스키마 빌더 UI를 통해 생성된 필드는 [`integer` 필드 입력](#integer) 특정하게 `minimum` 및 `maximum` 값 (`-32768` 및 `32768`, 각각 참조).
 
 ```json
 "sampleField": {
@@ -202,7 +202,7 @@ ht-degree: 0%
 
 ## [!UICONTROL 바이트] {#byte}
 
-에 해당하는 [!UICONTROL 바이트] 스키마 빌더 UI를 통해 생성된 필드는 다음과 같습니다 [`integer` 유형 필드](#integer) 특정 `minimum` 및 `maximum` 값 (`-128` 및 `128`)를 반환합니다.
+의 등가물 [!UICONTROL 바이트] 스키마 빌더 UI를 통해 생성된 필드는 [`integer` 필드 입력](#integer) 특정하게 `minimum` 및 `maximum` 값 (`-128` 및 `128`, 각각 참조).
 
 ```json
 "sampleField": {
@@ -216,7 +216,7 @@ ht-degree: 0%
 
 ## [!UICONTROL 부울] {#boolean}
 
-[!UICONTROL 부울] 필드는 `type: boolean`.
+[!UICONTROL 부울] 필드는 로 표시됩니다. `type: boolean`.
 
 ```json
 "sampleField": {
@@ -226,7 +226,7 @@ ht-degree: 0%
 }
 ```
 
-원할 경우 `default` 수집 중에 명시적 값이 제공되지 않을 때 필드가 사용할 값입니다.
+다음을 선택적으로 제공할 수 있습니다. `default` 수집 중에 명시적 값이 제공되지 않을 때 필드가 사용할 값입니다.
 
 ```json
 "sampleField": {
@@ -239,11 +239,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->없는 경우 `default` 값이 제공되고 부울 필드가 `required`: 이 필드에 대해 허용된 값이 없는 레코드는 수집 시 유효성 검사가 실패합니다.
+>없는 경우 `default` 값이 제공되고 부울 필드가 로 설정됩니다. `required`, 이 필드에 대해 허용되는 값이 없는 레코드는 수집 시 유효성 검사에 실패합니다.
 
 ## [!UICONTROL 날짜] {#date}
 
-[!UICONTROL 날짜] 필드는 `type: string` 및 `format: date`. 또는 선택적으로 `examples` 데이터를 수동으로 입력하는 사용자에 대한 샘플 날짜 문자열을 표시하려는 경우 를 활용하십시오.
+[!UICONTROL 날짜] 필드는 로 표시됩니다. `type: string` 및 `format: date`. 필요한 경우 다음과 같은 배열을 제공할 수도 있습니다 `examples` 를 사용하여 데이터를 수동으로 입력하는 사용자에 대한 샘플 날짜 문자열을 표시하려는 경우 를 활용하십시오.
 
 ```json
 "sampleField": {
@@ -257,7 +257,7 @@ ht-degree: 0%
 
 ## [!UICONTROL DateTime] {#date-time}
 
-[!UICONTROL DateTime] 필드는 `type: string` 및 `format: date-time`. 또는 선택적으로 `examples` 데이터를 수동으로 입력하는 사용자를 위해 샘플 datetime 문자열을 표시하려는 경우 활용하십시오.
+[!UICONTROL DateTime] 필드는 로 표시됩니다. `type: string` 및 `format: date-time`. 필요한 경우 다음과 같은 배열을 제공할 수도 있습니다 `examples` 를 사용하여 데이터를 수동으로 입력하는 사용자의 샘플 날짜/시간 문자열을 표시하려는 경우 를 활용하십시오.
 
 ```json
 "sampleField": {
@@ -269,11 +269,11 @@ ht-degree: 0%
 }
 ```
 
-## [!UICONTROL 어레이] {#array}
+## [!UICONTROL 배열] {#array}
 
-[!UICONTROL 어레이] 필드는 `type: array` 그리고 `items` 배열이 허용할 항목의 스키마를 정의하는 개체입니다.
+[!UICONTROL 배열] 필드는 로 표시됩니다. `type: array` 및 `items` 배열이 허용할 항목의 스키마를 정의하는 개체입니다.
 
-문자열 배열처럼 기본 유형을 사용하여 배열 항목을 정의할 수 있습니다.
+문자열 배열과 같은 기본 유형을 사용하여 배열 항목을 정의할 수 있습니다.
 
 ```json
 "sampleField": {
@@ -286,7 +286,7 @@ ht-degree: 0%
 }
 ```
 
-를 참조하여 기존 데이터 유형을 기반으로 배열 항목을 정의할 수도 있습니다 `$id` 의 `$ref` 속성을 사용합니다. 다음은 [!UICONTROL 결제 항목] 개체:
+를 참조하여 기존 데이터 유형을 기반으로 배열 항목을 정의할 수도 있습니다. `$id` 다음을 통해 데이터 유형: `$ref` 속성. 다음은 배열입니다 [!UICONTROL 결제 항목] 개체:
 
 ```json
 "sampleField": {
@@ -301,9 +301,9 @@ ht-degree: 0%
 
 ## [!UICONTROL 오브젝트] {#object}
 
-[!UICONTROL 개체] 필드는 `type: object` 그리고 `properties` 스키마 필드의 하위 속성을 정의하는 객체입니다.
+[!UICONTROL 오브젝트] 필드는 로 표시됩니다. `type: object` 및 a `properties` 스키마 필드의 하위 속성을 정의하는 개체입니다.
 
-아래에 정의된 각 하위 필드 `properties` 원시 속성을 사용하여 정의할 수 있습니다 `type` 또는 `$ref` 을 가리키는 속성 `$id` 문제의 데이터 유형:
+아래에 정의된 각 하위 필드 `properties` 모든 기본 항목을 사용하여 정의할 수 있습니다. `type` 또는 를 통해 기존 데이터 유형 참조 `$ref` 을(를) 가리키는 속성 `$id` 해당 데이터 유형:
 
 ```json
 "sampleField": {
@@ -321,7 +321,7 @@ ht-degree: 0%
 }
 ```
 
-해당 데이터 유형이 `type: object`:
+문제가 되는 데이터 유형 자체가 로 정의된 경우 데이터 유형을 참조하여 전체 개체를 정의할 수도 있습니다. `type: object`:
 
 ```json
 "sampleField": {
@@ -333,9 +333,9 @@ ht-degree: 0%
 
 ## [!UICONTROL 맵] {#map}
 
-지도 필드는 기본적으로 [`object`-type 필드](#object) ( 제약 없는 키 집합 사용). 물체와 마찬가지로 지도에도 `type` 값 `object`하지만, `meta:xdmType` 은 명시적으로 로 설정됩니다. `map`.
+맵 필드는 기본적으로 입니다. [`object`-type 필드](#object) 제한 없는 키 세트 포함 오브젝트와 마찬가지로, 지도에 `type` 값 `object`, 그러나 해당 `meta:xdmType` 이(가) 명시적으로 다음으로 설정됨: `map`.
 
-맵 **필수가 아니어야 합니다.** 속성을 정의합니다. It **반드시** 단일 정의 `additionalProperties` 맵 내에 포함된 값 유형을 설명하는 스키마입니다(각 맵에는 단일 데이터 유형만 포함할 수 있음). 다음 `type` 값은 다음 중 하나여야 합니다. `string` 또는 `integer`.
+맵 **은(는) 해서는 안 됨** 속성을 정의합니다. It **필수** 단일 정의 `additionalProperties` 맵 내에 포함된 값 유형을 설명하는 스키마(각 맵에는 단일 데이터 유형만 포함될 수 있음). 다음 `type` 값은 다음 중 하나여야 합니다. `string` 또는 `integer`.
 
 예를 들어 문자열 유형 값이 있는 맵 필드는 다음과 같이 정의됩니다.
 
@@ -351,25 +351,25 @@ ht-degree: 0%
 }
 ```
 
-사용자 지정 맵 필드 만들기에 대한 자세한 내용은 아래 섹션을 참조하십시오.
+사용자 정의 맵 필드 만들기에 대한 자세한 내용은 아래 섹션을 참조하십시오.
 
-### 사용자 지정 맵 유형 만들기 {#custom-maps}
+### 사용자 정의 맵 유형 만들기 {#custom-maps}
 
-XDM에서 &quot;맵 유사&quot; 데이터를 효율적으로 지원하기 위해 개체에 주석을 달 수 있습니다 `meta:xdmType` 설정 `map` 키 세트가 제약 없는 것처럼 개체를 관리해야 함을 명확히 하려면 맵 필드에 수집되는 데이터는 문자열 키, 문자열 또는 정수 값만 사용해야 합니다(결정된 대로) `additionalProperties.type`).
+XDM에서 &quot;맵과 유사한&quot; 데이터를 효율적으로 지원하기 위해 개체에는 `meta:xdmType` 을 로 설정 `map` 키 세트가 구속되지 않은 것처럼 객체를 관리해야 한다는 점을 명확히 하기 위해 맵 필드에 수집되는 데이터는 문자열 키를 사용해야 하며 문자열 또는 정수 값(에 의해 결정됨)만 사용해야 합니다. `additionalProperties.type`).
 
-XDM에서는 이 저장소 힌트의 사용에 대해 다음과 같은 제한을 둡니다.
+XDM에서는 이 스토리지 힌트의 사용에 대해 다음과 같은 제한 사항을 적용합니다.
 
-* 맵 유형은 형식이어야 합니다. `object`.
-* 맵 유형에는 속성이 정의되어 있지 않아야 합니다(즉, &quot;빈&quot; 개체를 정의함).
-* 맵 유형은 다음을 포함해야 합니다. `additionalProperties.type` 맵 내에 배치할 수 있는 값을 설명하는 필드입니다. `string` 또는 `integer`.
+* 맵 유형은 유형이어야 합니다. `object`.
+* 맵 유형에는 속성이 정의되지 않아야 합니다(즉, &quot;빈&quot; 개체를 정의함).
+* 맵 유형에 다음을 포함해야 함: `additionalProperties.type` 맵 내에 배치할 수 있는 값을 설명하는 필드 `string` 또는 `integer`.
 
-다음 성능 단점이 있으므로 반드시 필요한 경우에만 맵 유형 필드를 사용해야 합니다.
+맵 유형 필드는 다음과 같은 성능 단점이 있으므로 반드시 필요한 경우에만 사용해야 합니다.
 
-* 응답 시간 [Adobe Experience Platform 쿼리 서비스](../../query-service/home.md) 1억 개의 레코드에 대해 3초에서 10초로 등급이 저하됩니다.
-* 맵에는 16개 미만의 키가 있어야 하며, 그렇지 않으면 더 큰 성능 저하가 발생할 수 있습니다.
+* 다음에서의 응답 시간: [Adobe Experience Platform 쿼리 서비스](../../query-service/home.md) 1억 개의 레코드에 대해 3초에서 10초로 감소합니다.
+* 맵의 키가 16개 미만이어야 합니다. 그렇지 않으면 더 이상 성능이 저하될 수 있습니다.
 
-Platform 사용자 인터페이스에는 맵 유형 필드의 키를 추출하는 방법에 대한 제한 사항도 있습니다. 객체 유형 필드를 확장할 수 있지만 맵은 대신 단일 필드로 표시됩니다.
+Platform 사용자 인터페이스에서도 맵 유형 필드의 키를 추출하는 방법에 제한이 있습니다. 개체 유형 필드는 확장할 수 있지만 맵은 대신 단일 필드로 표시됩니다.
 
 ## 다음 단계
 
-이 안내서에서는 API에서 다른 필드 유형을 정의하는 방법을 다룹니다. XDM 필드 유형의 형식 지정 방법에 대한 자세한 내용은 안내서 를 참조하십시오 [XDM 필드 유형 제한](../schema/field-constraints.md).
+이 안내서에서는 API에서 다양한 필드 유형을 정의하는 방법을 다룹니다. XDM 필드 유형의 서식이 지정되는 방법에 대한 자세한 내용은 [XDM 필드 유형 제약 조건](../schema/field-constraints.md).

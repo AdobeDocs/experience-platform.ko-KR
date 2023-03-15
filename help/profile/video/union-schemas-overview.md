@@ -1,6 +1,6 @@
 ---
 title: 결합 스키마 개요
-description: 이 비디오는 Adobe Experience Platform 내의 결합 스키마에 대한 기본적인 이해를 제공하며 플랫폼 UI를 사용하여 결합 스키마를 검색하는 방법에 대해 설명합니다.
+description: 이 비디오는 Adobe Experience Platform 내의 결합 스키마에 대한 기본 이해를 제공하며 Platform UI를 사용하여 결합 스키마를 탐색하는 방법을 간략하게 설명합니다.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -9,21 +9,20 @@ audience: all
 doc-type: video
 activity: understand
 thumbnail: null
-translation-type: tm+mt
-source-git-commit: cab7ba65cc62d8cab402bc23ea38c17d77841363
+exl-id: b3f84ed8-09e8-470e-b5e2-944a4eaf147b
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 2%
 
 ---
 
-
 # 결합 스키마 개요
 
-이 비디오는 Adobe Experience Platform 내의 결합 스키마에 대한 기본적인 이해를 제공하며 플랫폼 사용자 인터페이스를 사용하여 결합 스키마를 검색하는 방법에 대해 설명합니다. 결합 스키마에 대한 자세한 내용은 [공용 스키마 UI 안내서](../ui/union-schema.md)를 참조하십시오.
+이 비디오는 Adobe Experience Platform 내의 결합 스키마에 대한 기본 이해를 제공하며 Platform 사용자 인터페이스를 사용하여 결합 스키마를 탐색하는 방법을 간략하게 설명합니다. 유니온 스키마에 대한 자세한 내용은 [유니온 스키마 UI 안내서](../ui/union-schema.md).
 
 >[!NOTE]
 >
->Experience Platform 사용자 인터페이스는 자주 업데이트되며 이 비디오 레코딩 이후 변경되었을 수 있습니다. 최신 정보는 [공용 스키마 UI 안내서](../ui/union-schema.md)를 참조하십시오.
+>Experience Platform 사용자 인터페이스는 자주 업데이트되며, 이 비디오 녹화 이후에 변경되었을 수 있습니다. 최신 정보는 다음을 참조하십시오. [유니온 스키마 UI 안내서](../ui/union-schema.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/329940?quality=12&learn=on&captions=eng)

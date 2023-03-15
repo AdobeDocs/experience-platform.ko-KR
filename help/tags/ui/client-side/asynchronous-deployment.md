@@ -1,6 +1,6 @@
 ---
 title: 비동기 배포
-description: 웹 사이트에서 Adobe Experience Platform 태그 라이브러리를 비동기식으로 배포하는 방법을 알아봅니다.
+description: 웹 사이트에 Adobe Experience Platform 태그 라이브러리를 비동기적으로 배포하는 방법을 알아봅니다.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
@@ -14,13 +14,13 @@ ht-degree: 55%
 >[!CONTEXTUALHELP]
 >id="platform_tags_asynchronous_deployment"
 >title="비동기 배포"
->abstract="이 옵션이 활성화되어 있으면 이 스크립트 태그를 구문 분석할 때 브라우저가 JavaScript 파일 로드를 시작하지만 라이브러리가 로드되고 실행될 때까지 기다리는 대신 문서의 나머지 부분을 계속 구문 분석하고 렌더링합니다. 이렇게 하면 웹 페이지 성능이 향상될 수 있지만 특정 규칙 실행 방식에 대한 중요한 의미가 있습니다. 자세한 내용은 이 문서를 참조하십시오."
+>abstract="이 옵션이 활성화된 경우 이 스크립트 태그를 구문 분석하면 브라우저가 JavaScript 파일 로드를 시작하지만 라이브러리가 로드되고 실행될 때까지 기다리지 않고 나머지 문서를 계속 구문 분석하고 렌더링합니다. 이렇게 하면 웹 페이지 성능이 향상될 수 있지만 특정 규칙이 실행되는 방식에 있어 중요한 의미를 갖습니다. 자세한 내용은 이 문서를 참조하십시오."
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
-Adobe 제품에 필요한 JavaScript 라이브러리의 성능 및 비차단 배포는 Adobe Experience Cloud 사용자에게 점점 더 중요해지고 있습니다. 과 같은 도구 [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) 사용자가 자신의 사이트에 Adobe 라이브러리를 배포하는 방식을 변경할 것을 권장합니다. 이 문서에서는 비동기 방식으로 Adobe JavaScript 라이브러리를 사용하는 방법을 설명합니다.
+제품에 필요한 JavaScript 라이브러리의 성능과 비차단 배포는 Adobe Experience Cloud 사용자에게 점점 더 중요해지고 있습니다. 다음과 같은 도구 [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) 는 사용자가 사이트에서 Adobe 라이브러리를 배포하는 방식을 변경할 것을 권장합니다. 이 문서에서는 비동기 방식으로 Adobe JavaScript 라이브러리를 사용하는 방법을 설명합니다.
 
 ## 동기와 비동기
 
@@ -50,15 +50,15 @@ Adobe 제품에 필요한 JavaScript 라이브러리의 성능 및 비차단 배
 
 ## 비동기 배포에 대한 고려 사항
 
-위에서 설명한 것처럼, 동기 배포의 경우, 브라우저는 Adobe Experience Platform 태그 라이브러리가 로드되고 실행되는 동안 페이지 구문 분석 및 렌더링을 일시 중지합니다. 반면 비동기 배포에서는 라이브러리가 로드되는 동안 브라우저가 계속해서 페이지를 구문 분석하고 렌더링합니다. 페이지 구문 분석 및 렌더링과 관련하여 태그 라이브러리 로드가 완료될 수 있는 경우의 가변성을 고려해야 합니다.
+위에서 설명한 바와 같이, 동기 배포의 경우, 브라우저는 Adobe Experience Platform 태그 라이브러리가 로드되고 실행되는 동안 페이지 구문 분석 및 렌더링을 일시 중지합니다. 반면 비동기 배포에서는 라이브러리가 로드되는 동안 브라우저가 계속해서 페이지를 구문 분석하고 렌더링합니다. 페이지 구문 분석 및 렌더링과 관련하여 태그 라이브러리 로드가 완료될 수 있는 경우의 가변성을 고려해야 합니다.
 
-먼저, 태그 라이브러리는 페이지 하단이 구문 분석되고 실행되기 전이나 후에 로드를 완료할 수 있으므로 더 이상 호출하면 안 됩니다 `_satellite.pageBottom()` 페이지 코드(`_satellite` 는 라이브러리가 로드될 때까지 사용할 수 없습니다.) 이 내용은 [비동기적으로 태그 포함 코드 로드](#loading-the-tags-embed-code-asynchronously).
+먼저, 태그 라이브러리는 페이지 하단이 구문 분석되고 실행되기 전이나 후에 로드를 완료할 수 있으므로 더 이상 을 호출해서는 안 됩니다. `_satellite.pageBottom()` 페이지 코드(`_satellite` 는 라이브러리가 로드될 때까지 사용할 수 없습니다. 이에 대해서는 다음에서 설명합니다. [비동기적으로 태그 포함 코드 로드](#loading-the-tags-embed-code-asynchronously).
 
-둘째, 태그 라이브러리는 [`DOMContentLoaded`](https://developer.mozilla.org/ko-KR/docs/Web/Events/DOMContentLoaded) 브라우저 이벤트(DOM Ready)가 발생했습니다.
+둘째, 태그 라이브러리는 다음 이전 또는 이후에 로드를 완료할 수 있습니다. [`DOMContentLoaded`](https://developer.mozilla.org/ko-KR/docs/Web/Events/DOMContentLoaded) 브라우저 이벤트(DOM 준비)가 발생했습니다.
 
-이 두 가지 점 때문에, 어떻게 [라이브러리가 로드됨](../../extensions/client/core/overview.md#library-loaded-page-top), [페이지 하단](../../extensions/client/core/overview.md#page-bottom), [DOM 지원](../../extensions/client/core/overview.md#page-bottom), 및 [Window Loaded](../../extensions/client/core/overview.md#window-loaded) 태그 라이브러리를 비동기식으로 로드할 때 코어 확장의 이벤트 유형.
+이 두 가지 사항 때문에 [라이브러리가 로드됨](../../extensions/client/core/overview.md#library-loaded-page-top), [페이지 하단](../../extensions/client/core/overview.md#page-bottom), [DOM 지원](../../extensions/client/core/overview.md#page-bottom), 및 [Window Loaded](../../extensions/client/core/overview.md#window-loaded) 태그 라이브러리를 비동기적으로 로드할 때 코어 확장의 이벤트 유형입니다.
 
-태그 속성에 다음 네 가지 규칙이 포함되어 있는 경우:
+태그 속성에 다음 네 가지 규칙이 포함되어 있는 경우
 
 * 규칙 A: Library Loaded 이벤트 유형 사용
 * 규칙 B: Page Bottom 이벤트 유형 사용
@@ -72,8 +72,8 @@ Adobe 제품에 필요한 JavaScript 라이브러리의 성능 및 비차단 배
 이 순서가 항상 적용되지만, 일부 규칙은 태그 라이브러리 로드가 완료되면 즉시 실행될 수도 있고, 다른 규칙은 나중에 실행될 수도 있습니다. 태그 라이브러리 로드가 완료되면 다음 작업이 수행됩니다.
 
 1. 규칙 A가 즉시 실행됩니다.
-1. `DOMContentLoaded` 브라우저 이벤트(DOM Ready)가 이미 발생한 경우 규칙 B와 규칙 C가 즉시 실행됩니다. 그렇지 않으면 나중에 [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) 브라우저 이벤트가 발생할 때 규칙 B와 규칙 C가 실행됩니다.
-1. [`load`](https://developer.mozilla.org/ko-KR/docs/Web/Events/load) 브라우저 이벤트(Window Loaded)가 이미 발생한 경우 규칙 D가 바로 실행됩니다. 그렇지 않은 경우에는 나중에 [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) 브라우저 이벤트가 발생할 때 규칙 D가 실행됩니다. 지침에 따라 태그 라이브러리를 설치한 경우 태그 라이브러리입니다 *항상* 로드 완료 전에 [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) 브라우저 이벤트가 발생합니다.
+1. `DOMContentLoaded` 브라우저 이벤트(DOM Ready)가 이미 발생한 경우 규칙 B와 규칙 C가 즉시 실행됩니다. 그렇지 않으면 나중에 [`DOMContentLoaded`](https://developer.mozilla.org/ko-KR/docs/Web/Events/DOMContentLoaded) 브라우저 이벤트가 발생할 때 규칙 B와 규칙 C가 실행됩니다.
+1. [`load`](https://developer.mozilla.org/ko-KR/docs/Web/Events/load) 브라우저 이벤트(Window Loaded)가 이미 발생한 경우 규칙 D가 바로 실행됩니다. 그렇지 않은 경우에는 나중에 [`load`](https://developer.mozilla.org/ko-KR/docs/Web/Events/load) 브라우저 이벤트가 발생할 때 규칙 D가 실행됩니다. 지침에 따라 태그 라이브러리를 설치한 경우에는 태그 라이브러리를 참고하십시오 *항상* 다음 작업 전 로드 완료 [`load`](https://developer.mozilla.org/ko-KR/docs/Web/Events/load) 브라우저 이벤트가 발생합니다.
 
 이러한 원칙을 자신의 웹 사이트에 적용할 때 다음 사항을 고려하십시오.
 
@@ -84,7 +84,7 @@ Adobe 제품에 필요한 JavaScript 라이브러리의 성능 및 비차단 배
 
 ## 비동기적으로 태그 포함 코드 로드
 
-태그는 구성 시 포함 코드를 만들 때 비동기 로드를 켜는 토글 기능을 제공합니다. [환경](../publishing/environments.md). 비동기 로드를 직접 구성할 수도 있습니다.
+태그는 를 구성할 때 포함 코드를 만들 때 비동기 로드를 켜는 토글 기능을 제공합니다. [환경](../publishing/environments.md). 비동기 로드를 직접 구성할 수도 있습니다.
 
 1. 비동기 속성을 `<script>` 태그에 추가하여 스크립트를 비동기적으로 로드합니다.
 
@@ -106,4 +106,4 @@ Adobe 제품에 필요한 JavaScript 라이브러리의 성능 및 비차단 배
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   이 코드는 Platform에 브라우저 파서가 페이지 하단에 도달했음을 알려 줍니다. 이 시간 이전에 태그가 로드 및 실행되지 않아 이 호출될 수 있습니다. `_satellite.pageBottom()` 따라서 오류가 발생하고 Page Bottom 이벤트 유형이 제대로 작동하지 않을 수 있습니다.
+   이 코드는 브라우저 파서가 페이지 하단에 도달했음을 Platform에 알려줍니다. 이 시간 전에 태그가 로드 및 실행되지 않을 수 있으므로 를 호출하십시오. `_satellite.pageBottom()` 이로 인해 오류가 발생하고 Page Bottom 이벤트 유형이 예상대로 작동하지 않을 수 있습니다.

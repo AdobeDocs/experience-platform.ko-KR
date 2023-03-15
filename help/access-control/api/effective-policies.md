@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;유효 정책;액세스 제어 api
 solution: Experience Platform
 title: 유효 정책 API 끝점
-description: Adobe Experience Platform용 액세스 제어 API를 사용하여 효과적인 액세스 정책을 보는 방법을 알아봅니다.
+description: Adobe Experience Platform용 액세스 제어 API를 사용하여 효과적인 액세스 정책을 보는 방법에 대해 알아봅니다.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
 source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 1%
 
 ---
 
-# 효과적인 정책 엔드포인트
+# 유효 정책 끝점
 
 >[!NOTE]
 >
->사용자 토큰이 전달되면 토큰의 사용자는 요청된 조직에 대해 &quot;조직 관리자&quot; 역할이 있어야 합니다.
+>사용자 토큰이 전달되는 경우 토큰의 사용자는 요청된 조직에 대한 &quot;조직 관리자&quot; 역할이 있어야 합니다.
 
-현재 사용자에 대한 유효한 액세스 제어 정책을 보려면 `/acl/effective-policies` 의 엔드포인트 [!DNL Access Control] API. 검색할 권한 및 리소스 유형은 요청 페이로드에서 배열 형태로 제공해야 합니다. 이것은 아래 예제 API 호출에서 확인됩니다.
+POST 현재 사용자에 대한 유효 액세스 제어 정책을 보려면 `/acl/effective-policies` 의 엔드포인트 [!DNL Access Control] API. 검색할 권한 및 리소스 유형은 배열 형식으로 요청 페이로드에 제공해야 합니다. 이는 아래 API 호출 예제에 나와 있습니다.
 
 **API 형식**
 
@@ -27,7 +27,7 @@ POST /acl/effective-policies
 
 **요청**
 
-다음 요청은 &quot;[!UICONTROL 데이터 세트 관리]&quot; 권한 및 &quot;[!UICONTROL 스키마]현재 사용자의 리소스 유형입니다.
+다음 요청은 다음에 대한 정보를 검색합니다. &quot;[!UICONTROL 데이터 세트 관리]&quot;권한 및 &quot;&quot;에 대한 액세스 권한[!UICONTROL 스키마]&quot; 현재 사용자의 리소스 유형입니다.
 
 ```shell
 curl -X POST \
@@ -45,11 +45,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->페이로드 배열에 제공할 수 있는 권한 및 리소스 유형의 전체 목록은 의 부록 섹션을 참조하십시오 [수락된 권한 및 리소스 유형](#accepted-permissions-and-resource-types).
+>페이로드 배열에 제공할 수 있는 권한 및 리소스 유형의 전체 목록은 의 부록 섹션을 참조하십시오. [허용된 권한 및 리소스 유형](#accepted-permissions-and-resource-types).
 
 **응답**
 
-성공적인 응답은 요청에 제공된 권한 및 리소스 유형에 대한 정보를 반환합니다. 응답에는 요청에 지정된 리소스 유형에 대해 현재 사용자가 가지고 있는 활성 권한이 포함됩니다. 요청 페이로드에 포함된 권한이 현재 사용자에 대해 활성 상태인 경우 API는 별표( )가 있는 권한을 반환합니다`*`)을 클릭하여 권한이 활성 상태임을 나타냅니다. 사용자에 대해 활성화되지 않은 요청에서 제공된 모든 권한은 응답 페이로드에서 생략됩니다.
+성공적인 응답은 요청에 제공된 권한 및 리소스 유형에 대한 정보를 반환합니다. 응답에는 요청에 지정된 리소스 유형에 대해 현재 사용자가 가지고 있는 활성 권한이 포함됩니다. 요청 페이로드에 포함된 권한이 현재 사용자에 대해 활성화된 경우 API는 작업( )과 함께 권한을 반환합니다.`*`) 사용 권한이 활성화되었음을 나타냅니다. 요청에 입력한 권한 중 사용자에 대해 활성화되지 않은 권한은 응답 페이로드에서 생략됩니다.
 
 ```json
 {
@@ -68,15 +68,15 @@ curl -X POST \
 
 ## 다음 단계
 
-이 문서에서는 [!DNL Access Control] 리소스 유형에 대한 활성 권한 및 관련 액세스 정책에 대한 정보를 반환하기 위한 API입니다. 액세스 제어에 대한 자세한 정보 [!DNL Experience Platform]를 참조하고 [액세스 제어 개요](../home.md).
+이 문서에서는 [!DNL Access Control] 리소스 유형에 대한 활성 권한 및 관련 액세스 정책에 대한 정보를 반환하는 API입니다. 의 액세스 제어에 대한 자세한 내용 [!DNL Experience Platform], 다음을 참조하십시오. [액세스 제어 개요](../home.md).
 
 ## 부록
 
-이 섹션에서는 [!DNL Access Control] API.
+이 섹션에서는 다음 사용 방법에 대한 추가 정보를 제공합니다. [!DNL Access Control] API.
 
 ### 허용된 권한 및 리소스 유형
 
-다음은 POST 요청의 페이로드에 포함할 수 있는 권한 및 리소스 유형 목록입니다 `/acl/active-permissions` 엔드포인트.
+다음은 POST 요청의 페이로드에 포함할 수 있는 권한 및 리소스 유형 목록입니다. `/acl/active-permissions` 엔드포인트.
 
 **권한**
 

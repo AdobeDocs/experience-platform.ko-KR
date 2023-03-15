@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;poi;상호 작용;관심 영역;관심 영역;데이터 유형;데이터 유형;
+keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;poi;상호 작용;관심 영역;관심 영역;데이터 유형;데이터 유형;데이터 유형;
 solution: Experience Platform
-title: 관심 영역 상호 작용 데이터 유형
-description: 이 문서에서는 관심 영역 상호 작용 XDM 데이터 유형에 대한 개요를 제공합니다.
+title: 관심 영역 인터랙션 데이터 유형
+description: 이 문서에서는 관심 영역 인터랙션 XDM 데이터 유형에 대한 개요를 제공합니다.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 3%
+source-wordcount: '185'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL 관심 영역 상호 작용] 데이터 유형
+# [!UICONTROL 관심 영역 인터랙션] 데이터 유형
 
-[!UICONTROL 관심 영역 상호 작용] 는 모바일 장치가 범위 내에 있으므로 모바일 애플리케이션에 ID 정보를 전달하는 무선 장치를 설명하는 표준 XDM 데이터 유형입니다.
+[!UICONTROL 관심 영역 인터랙션] 는 모바일 장치가 범위 내에 있을 때 모바일 애플리케이션에 ID 정보를 전달하는 무선 장치를 설명하는 표준 XDM 데이터 유형입니다.
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `poiDetail` | [[!UICONTROL 관심 영역 세부 정보]](./poi-details.md) | 이벤트를 발생시킨 POI의 세부 사항을 설명합니다. |
-| `poiEntries` | 오브젝트 | 개인이 POI를 입력한 횟수를 설명합니다. 다음 두 가지 속성을 포함합니다. <ul><li>`id`: 측정에 대한 고유 식별자입니다.</li><li>`value`: 측정값의 수량화 가능한 값입니다.</li></ul> |
-| `poiExits` | 오브젝트 | 사람이 POI를 종료한 횟수를 설명합니다. 다음 두 가지 속성을 포함합니다. <ul><li>`id`: 측정에 대한 고유 식별자입니다.</li><li>`value`: 측정값의 수량화 가능한 값입니다.</li></ul> |
+| `poiDetail` | [[!UICONTROL 관심 영역 세부 정보]](./poi-details.md) | 이벤트를 발생시킨 POI에 대한 세부 정보를 설명합니다. |
+| `poiEntries` | 오브젝트 | 사용자가 POI를 입력한 횟수를 설명합니다. 다음 두 가지 속성을 포함합니다. <ul><li>`id`: 측정값에 대한 고유 식별자.</li><li>`value`: 측정값의 수량 값입니다.</li></ul> |
+| `poiExits` | 오브젝트 | 사용자가 POI를 종료한 횟수를 설명합니다. 다음 두 가지 속성을 포함합니다. <ul><li>`id`: 측정값에 대한 고유 식별자.</li><li>`value`: 측정값의 수량 값입니다.</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 데이터 유형에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
 

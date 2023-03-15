@@ -1,26 +1,27 @@
 ---
 title: 광고 브레이크 데이터 유형
 description: 이 문서에서는 XDM(광고 브레이크 경험 데이터 모델) 데이터 유형에 대한 개요를 제공합니다.
-source-git-commit: 77fb3e348c2298fc5c325fcf2d3408da084b2b19
+exl-id: dfe0c386-8459-440d-95b5-b2139fac0fc3
+source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 6%
+source-wordcount: '125'
+ht-degree: 4%
 
 ---
 
 # [!UICONTROL 광고 브레이크] 데이터 유형
 
-[!UICONTROL 광고 브레이크] 는 시간 제한 광고가 시간 미디어에 삽입되는 방법을 설명하는 표준 XDM(Experience Data Model) 데이터 유형입니다.
+[!UICONTROL 광고 브레이크] 는 시간 광고를 미디어에 삽입하는 방법을 설명하는 표준 경험 데이터 모델(XDM) 데이터 유형입니다.
 
 ![데이터 유형 구조](../images/data-types/ad-break.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `_dc.title` | 문자열 | 친숙한 광고 브레이크 이름. |
-| `_id` | 문자열 | 광고 브레이크에 대한 고유 식별자입니다. |
-| `offset` | 정수 | 기본 컨텐츠의 시작으로부터 광고 브레이크의 오프셋(초)입니다. |
+| `_dc.title` | 문자열 | 광고 브레이크에 대한 알기 쉬운 이름. |
+| `_id` | 문자열 | 광고 브레이크에 대한 고유 식별자. |
+| `offset` | 정수 | 기본 컨텐츠 시작부터 중간 광고 오프셋(초)입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 데이터 유형에 대한 자세한 내용은 공용 XDM 저장소를 참조하십시오.
 

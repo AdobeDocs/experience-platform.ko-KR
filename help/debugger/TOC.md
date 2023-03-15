@@ -12,9 +12,9 @@ ht-degree: 48%
 ---
 
 
-# Adobe Experience Platform Debugger {#debugger}
+# Adobe Experience Platform 디버거 {#debugger}
 
-* [Platform Debugger 개요](./home.md)
+* [Platform 디버거 개요](./home.md)
 * [확장 설치](./install-debugger.md)
 * [확장 프로그램 구성](./configure-debugger.md)
 * [요약 탭](./summary.md)

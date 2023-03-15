@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;홈;인기 항목;세그멘테이션;세그멘테이션 서비스;pql;PQL;프로필 쿼리 언어;집계 함수;집계;
+keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼테이션 서비스;pql;PQL;프로필 쿼리 언어;집계 함수;집계;
 solution: Experience Platform
-title: PQL 합계 함수
-description: 집계 함수는 PQL(Profile Query Language) 어레이 내에서 여러 값을 함께 그룹화하여 단일 요약 값을 구성하는 데 사용됩니다.
+title: PQL 집계 함수
+description: 집계 함수는 PQL(프로필 쿼리 언어) 배열 내에서 여러 값을 함께 그룹화하여 단일 요약 값을 구성하는 데 사용됩니다.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 6%
 
 # 집계 함수
 
-집계 함수는 내에서 여러 값을 함께 그룹화하는 데 사용됩니다 [!DNL Profile Query Language] (PQL) 어레이를 사용하여 단일 요약 값을 생성할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md).
+집계 함수는 내에서 여러 값을 함께 그룹화하는 데 사용됩니다. [!DNL Profile Query Language] (PQL) 배열을 사용하여 단일 요약 값을 구성할 수 있습니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md).
 
 ## 카운트
 
-다음 `count` 함수는 지정된 배열 내의 요소 수를 반환합니다.
+다음 `count` 함수는 특정 배열 내의 요소 수를 반환합니다.
 
 **형식**
 
@@ -35,7 +35,7 @@ orders.count()
 
 ## 합계
 
-다음 `sum` 함수는 배열 내에서 선택한 모든 값의 합계를 반환합니다.
+다음 `sum` 함수는 배열에서 선택한 모든 값의 합계를 반환합니다.
 
 **형식**
 
@@ -45,7 +45,7 @@ orders.count()
 
 **예**
 
-다음 PQL 질의는 모든 주문 가격의 합계를 반환합니다.
+다음 PQL 쿼리는 모든 주문 가격의 합계를 반환합니다.
 
 ```sql
 orders.sum(order.price)
@@ -53,7 +53,7 @@ orders.sum(order.price)
 
 ## 평균
 
-다음 `average` 함수는 배열 내에서 선택한 모든 값의 산술 평균을 반환합니다.
+다음 `average` 함수는 배열에서 선택한 모든 값의 산술 평균을 반환합니다.
 
 **형식**
 
@@ -63,7 +63,7 @@ orders.sum(order.price)
 
 **예**
 
-다음 PQL 질의는 모든 주문의 평균 가격을 반환합니다.
+다음 PQL 쿼리는 모든 주문의 평균 가격을 반환합니다.
 
 ```sql
 orders.average(order.price)
@@ -71,7 +71,7 @@ orders.average(order.price)
 
 ## 최소값
 
-다음 `min` 함수는 배열 내에서 선택한 모든 값 중 가장 작은 값을 반환합니다.
+다음 `min` 함수는 배열에서 선택한 모든 값 중 가장 작은 값을 반환합니다.
 
 **형식**
 
@@ -81,7 +81,7 @@ orders.average(order.price)
 
 **예**
 
-다음 PQL 질의는 모든 주문의 최저 가격을 반환합니다.
+다음 PQL 쿼리는 모든 주문의 최저 가격을 반환합니다.
 
 ```sql
 orders.min(order.price)
@@ -89,7 +89,7 @@ orders.min(order.price)
 
 ## 최대값
 
-다음 `max` 함수는 배열 내에서 선택한 모든 값 중 가장 큰 값을 반환합니다.
+다음 `max` 함수는 배열에서 선택한 모든 값 중 가장 큰 값을 반환합니다.
 
 **형식**
 
@@ -107,4 +107,4 @@ orders.max(order.price)
 
 ## 다음 단계
 
-이제 집계 기능에 대해 알았으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 기능에 대한 자세한 내용은 [프로필 쿼리 언어 개요](./overview.md).
+집계 함수에 대해 배웠으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 함수에 대한 자세한 내용은 다음을 참조하십시오. [프로필 쿼리 언어 개요](./overview.md).

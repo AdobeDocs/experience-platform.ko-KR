@@ -1,6 +1,6 @@
 ---
 title: Adobe Target v2 확장 개요
-description: Adobe Experience Platform의 Adobe Target v2 태그 확장에 대해 알아봅니다.
+description: Adobe Experience Platform의 Adobe Target v2 태그 확장 기능에 대해 알아봅니다.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -23,7 +23,7 @@ ht-degree: 61%
 >
 >Adobe Target 확장을 사용하려면 At.js 2.x가 필요합니다.
 
-Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음, 를 선택합니다 **[!UICONTROL Extensions > Catalog]**&#x200B;를 클릭하고 Target 확장을 마우스로 가리킨 다음 을 선택합니다. **[!UICONTROL 설치]**.
+Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음 을 선택합니다 **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 클릭하고 Target 확장을 마우스로 가리킨 다음 을 선택합니다 **[!UICONTROL 설치]**.
 
 확장을 구성하려면 Extensions 탭을 열고 확장을 마우스로 가리킨 다음 을 선택합니다 **[!UICONTROL 구성]**.
 
@@ -69,9 +69,9 @@ Target 확장은 규칙의 Then 부분에서 다음 작업을 제공합니다.
 
 구성이 필요하지 않습니다.
 
-### On-Device Decisioning을 사용하여 Target 로드
+### 온디바이스 의사 결정으로 Target 로드
 
-을 사용하여 Target을 로드하는 것이 적절할 수 있는 태그 규칙에 이 작업을 추가합니다. [on-device decisioning](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html) 규칙 컨텍스트에서 활성화됩니다. 이렇게 하면 On-Device Decisioning이 활성화된 at.js 라이브러리가 페이지에 로드됩니다. 대부분의 구현에서 사이트의 모든 페이지에 Target을 로드해야 합니다. Adobe은 On-Device Decisioning에서 Target 로드 작업이 Target 호출 앞에 있는 경우에만 을 사용하는 것이 좋습니다. 그렇지 않으면 Analytics 호출이 지연되는 것과 같은 문제가 발생할 수 있습니다.
+Target을 로드하는 것이 적절할 수 있는 태그 규칙에 이 작업을 추가합니다. [온디바이스 의사 결정](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html) 규칙 컨텍스트에서 활성화되었습니다. 온디바이스 의사 결정이 활성화된 at.js 라이브러리가 페이지에 로드됩니다. 대부분의 구현에서 사이트의 모든 페이지에 Target을 로드해야 합니다. Adobe은 Target 호출 앞에 Target 호출이 있는 경우에만 디바이스에서 의사 결정 작업과 함께 로드 의사 결정을 사용하는 것을 권장합니다. 그렇지 않으면 Analytics 호출이 지연되는 것과 같은 문제가 발생할 수 있습니다.
 
 구성이 필요하지 않습니다.
 
@@ -91,9 +91,9 @@ Target 확장은 규칙의 Then 부분에서 다음 작업을 제공합니다.
 
 ### 페이지 로드 요청 실행
 
-이 작업 유형을 사용하면 페이지가 로드될 때 Target이 요청을 실행할 수 있습니다. Target 로드 작업을 먼저 사용해야 합니다.
+이 작업 유형을 사용하면 Target이 페이지를 로드할 때 요청을 실행할 수 있습니다. Target 로드 작업을 먼저 사용해야 합니다.
 
-깜박임을 방지하기 위한 본문 숨기기와 본문 요소를 숨길 때 사용된 스타일을 활성화할지 여부를 지정해야 합니다. 다음 옵션을 사용할 수 있습니다.
+깜박임을 방지하기 위해 본문 숨김을 활성화할지 여부와 본문 요소를 숨길 때 사용되는 스타일을 지정해야 합니다. 다음 옵션을 사용할 수 있습니다.
 
 * **Body Hiding:** 이 설정을 활성화하거나 비활성화할 수 있습니다. 기본값은 Enabled로, HTML BODY가 숨겨짐을 의미합니다.
 * **Body Hidden Style:** 기본값은 body{opacity:0}입니다. 이 값은 body{display:none}과 같은 다른 값으로 변경될 수 있습니다.
@@ -102,7 +102,7 @@ Target 확장은 규칙의 Then 부분에서 다음 작업을 제공합니다.
 
 ### 트리거 보기
 
-보기 트리거 작업은 새 페이지를 로드할 때마다 또는 페이지의 구성 요소가 다시 렌더링될 때 호출할 수 있습니다. 단일 페이지 애플리케이션에 대해 트리거 보기를 구현해야 합니다.
+보기 트리거 작업은 새 페이지가 로드될 때마다 또는 페이지의 구성 요소가 다시 렌더링될 때 호출할 수 있습니다. 트리거 보기는 단일 페이지 애플리케이션에 대해 구현해야 합니다.
 
 1. 트리거해야 하는 보기 이름을 지정합니다.
 1. Page 확인란을 선택하여 보기 트리거가 보고할 노출에 도움을 주는지 여부를 지정합니다. 보기가 다시 렌더링되고 보고할 노출에 도움을 주지 않는 구성 요소와 관련이 있는 경우 Page 확인란을 선택 취소합니다.
@@ -121,7 +121,7 @@ Target 확장이 설치되면 하나 이상의 규칙을 만들어 적절하게 
 
 ## 비동기 배포를 통한 Adobe Target 확장
 
-태그를 비동기식으로 배포할 수 있습니다. Target을 통해 비동기식으로 태그 라이브러리를 로드하는 경우 Target도 비동기식으로 로드됩니다. 이 시나리오는 완벽하게 지원되지만, 처리해야 하는 한 가지 추가 고려 사항이 있습니다.
+태그는 비동기식으로 배포할 수 있습니다. Target을 통해 비동기식으로 Target 라이브러리를 로드하는 경우 태그도 비동기식으로 로드됩니다. 이 시나리오는 완벽하게 지원되지만, 처리해야 하는 한 가지 추가 고려 사항이 있습니다.
 
 비동기 배포의 경우, Target 라이브러리가 완전히 로드되고 콘텐츠 교환이 수행되기 전에 페이지에서 기본 콘텐츠 렌더링을 완료할 수 있습니다. 이렇게 하면 Target에서 지정한 개인화된 콘텐츠로 대체되기 전에 기본 콘텐츠가 잠깐 나타나는 &quot;깜박임&quot;이라고 하는 것이 나타날 수 있습니다. 이러한 깜박임이 발생하지 않도록 하려면 콘텐츠 깜박임을 방지하기 위해 코드 조각 사전 숨김을 사용하여 태그 번들을 비동기식으로 로드하는 것이 좋습니다.
 
@@ -134,7 +134,7 @@ Target 확장이 설치되면 하나 이상의 규칙을 만들어 적절하게 
    * 페이지 로드 요청이 시간 초과된 경우
    * 코드 조각 자체가 시간 초과된 경우
 * 사전 숨김 기간을 최소화하기 위해 코드 조각 사전 숨김을 사용하는 모든 페이지에서 &quot;Fire Page Load Request&quot; 작업을 사용해야 합니다.
-* Target에 사용하는 페이지 로드 규칙의 페이지 로드 요청 작업에서도 본문 숨기기가 활성화되어 있어야 합니다. 그렇지 않으면, 모든 페이지 로드는 시간 초과 기간 동안 숨겨진 상태로 유지됩니다.
+* Target에 사용하는 페이지 로드 규칙의 페이지 로드 요청 작업에서도 본문 숨기기가 활성화되어 있어야 합니다. 그렇지 않으면 모든 페이지 로드는 시간 초과 기간 동안 숨겨진 상태로 유지됩니다.
 
 코드 조각 사전 숨김은 다음과 같으며, 축소할 수 있습니다. 구성 가능한 옵션은 끝에 있습니다.
 

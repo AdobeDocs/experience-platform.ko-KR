@@ -13,7 +13,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 확장, 규칙 및 데이터 요소는 기본 구성단위입니다. 애플리케이션에서 작업을 수행하게 하려고 할 때 이 기본 구성단위가 라이브러리에 추가된 다음 &quot;빌드&quot;됩니다. 이러한 빌드는 호스팅된 위치에 전달됩니다.
 

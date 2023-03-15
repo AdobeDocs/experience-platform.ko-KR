@@ -1,10 +1,11 @@
 ---
 title: 이전 버전과의 호환성 표준
-description: 업데이트된 버전의 태그 확장이 이전 버전과 호환되도록 하는 Adobe Experience Platform의 이전 호환성 표준에 대해 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: 업데이트된 버전의 태그 확장이 이전 버전과 호환되는지 확인하는 Adobe Experience Platform의 이전 버전 호환성 표준에 대해 알아봅니다.
+exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '833'
-ht-degree: 81%
+ht-degree: 84%
 
 ---
 
@@ -12,13 +13,13 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
 
-Adobe Experience Platform에서 태그 확장에 대한 업데이트는 이전 버전의 확장과 호환되어야 합니다. 이것의 의미는 다음과 같습니다.
+Adobe Experience Platform의 태그 확장 업데이트는 이전 버전의 확장과 호환되어야 합니다. 이것의 의미는 다음과 같습니다.
 
 * 확장의 기본 구성 요소에 대한 수정한 사항은 이전 버전과 호환되어야 합니다.  이러한 구성 요소에는 확장 구성, 이벤트 유형, 조건 유형, 작업 유형, 데이터 요소 유형 및 공유 모듈이 포함됩니다.
 * 사용자가 이전 확장 버전으로 생성한 구성 요소는 최신 버전에서 제공하는 스키마에 대한 유효성 검사를 제공할 수 있어야 합니다.
-* Adobe Experience Platform 사용자는 업데이트된 버전의 확장을 설치할 수 있어야 하며 계획된 변경이 수행될 때까지 수행한 모든 작업이 그대로 계속 작동하도록 해야 합니다.
+* Adobe Experience Platform 사용자는 업데이트된 버전의 확장을 설치하고 사용자가 수행한 모든 작업이 의도한 대로 계속 작동하도록 해야 합니다.
 
 ## 허용되는 변경 사항
 

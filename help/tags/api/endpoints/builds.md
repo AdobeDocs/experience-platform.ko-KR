@@ -1,31 +1,31 @@
 ---
 title: 빌드 끝점
-description: Reactor API에서 /build 종단점을 호출하는 방법을 알아봅니다.
+description: Reactor API에서 /builds 끝점을 호출하는 방법을 알아봅니다.
 exl-id: 476abea0-efff-478a-b87f-ef6b91bfcca5
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 8%
+source-wordcount: '803'
+ht-degree: 4%
 
 ---
 
 # 빌드 끝점
 
-확장, 규칙 및 데이터 요소는 Adobe Experience Platform에서 태그의 기본 구성단위입니다. 애플리케이션이 작업을 수행하도록 만들면 이러한 기본 구성단위가 [라이브러리](./libraries.md). 경험 애플리케이션에 라이브러리를 배포하기 위해 라이브러리가 빌드에 컴파일됩니다. 다음 `/builds` reactor API의 종단점을 사용하면 experience 애플리케이션 내의 빌드를 프로그래밍 방식으로 관리할 수 있습니다.
+확장, 규칙 및 데이터 요소는 Adobe Experience Platform의 태그를 구성하는 기본 요소입니다. 응용 프로그램에서 작업을 수행하도록 하려는 경우 이러한 기본 구성단위가 [라이브러리](./libraries.md). 경험 애플리케이션에 라이브러리를 배포하기 위해 라이브러리는 빌드에 컴파일됩니다. 다음 `/builds` Reactor API의 끝점을 사용하면 experience 애플리케이션 내에서 빌드를 프로그래밍 방식으로 관리할 수 있습니다.
 
-빌드는 웹 및 모바일 애플리케이션 내에 로드되는 실제 파일(또는 파일)입니다. 각 빌드의 내용은 다음 요인에 따라 다릅니다.
+빌드는 웹 및 모바일 애플리케이션 내에 로드되는 실제 파일(또는 파일)입니다. 각 빌드의 콘텐츠는 다음 요소에 따라 다릅니다.
 
 * 라이브러리에 포함된 리소스
-* 의 구성 [환경](./environments.md) 라이브러리가 빌드되는
-* 플랫폼의 [속성](./properties.md) 빌드가 속한 대상
+* 의 구성 [환경](./environments.md) 라이브러리가 빌드되는 위치
+* 의 플랫폼 [속성](./properties.md) 빌드가 속한 대상
 
 빌드는 정확히 하나의 라이브러리에 속합니다. 라이브러리에는 여러 빌드가 있을 수 있습니다.
 
-빌드와 태그가 태그의 게시 작업 과정에 어떻게 적합한지 여부에 대한 일반적인 내용은 [게시 개요](../../ui/publishing/overview.md).
+빌드와 이러한 빌드가 태그의 게시 작업 과정에 어떻게 적합한지에 대한 자세한 내용은 [게시 개요](../../ui/publishing/overview.md).
 
 ## 시작하기
 
-이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
+이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
 
 ## 빌드 목록 검색 {#list}
 
@@ -39,13 +39,13 @@ GET /libraries/{LIBRARY_ID}/builds
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `LIBRARY_ID` | 다음 `id` 추가할 빌드가 있는 라이브러리 중에서 선택합니다. |
+| `LIBRARY_ID` | 다음 `id` 빌드를 나열할 라이브러리의 입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 빌드는 다음 속성을 기반으로 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오. [응답 필터링](../guides/filtering.md) 추가 정보.
+>쿼리 매개 변수를 사용하여 나열된 빌드를 다음 속성을 기준으로 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오 [응답 필터링](../guides/filtering.md) 추가 정보.
 
 **요청**
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 라이브러리에 대한 빌드 목록을 반환합니다.
+성공한 응답은 지정된 라이브러리에 대한 빌드 목록을 반환합니다.
 
 ```json
 {
@@ -146,7 +146,7 @@ curl -X GET \
 
 ## 빌드 조회 {#lookup}
 
-GET 요청 경로에 해당 ID를 제공하여 빌드를 조회할 수 있습니다.
+GET 요청 경로에 빌드의 ID를 제공하여 빌드를 조회할 수 있습니다.
 
 **API 형식**
 
@@ -156,9 +156,9 @@ GET /builds/{BUILD_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `BUILD_ID` | 다음 `id` 조회하려는 빌드 |
+| `BUILD_ID` | 다음 `id` 조회하려는 빌드에 대해 자세히 알아보십시오. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -248,7 +248,7 @@ curl -X GET \
 
 ## 빌드 만들기 {#create}
 
-POST 요청 경로에 라이브러리의 ID를 포함하는 라이브러리에 대한 빌드를 만들 수 있습니다.
+POST 요청 경로에 라이브러리의 ID를 포함하여 라이브러리에 대한 빌드를 만들 수 있습니다.
 
 **API 형식**
 
@@ -258,13 +258,13 @@ POST /libraries/{LIBRARY_ID}/builds
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `LIBRARY_ID` | 다음 `id` 아래에 빌드를 정의하는 라이브러리. |
+| `LIBRARY_ID` | 다음 `id` 아래에 빌드를 정의하는 라이브러리입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 요청 경로에 지정된 라이브러리에 대한 새 빌드를 만듭니다. 요청 페이로드는 필요하지 않습니다.
+다음 요청은 요청 경로에 지정된 라이브러리에 대한 새 빌드를 만듭니다. 요청 페이로드가 필요하지 않습니다.
 
 ```shell
 curl -X POST \
@@ -276,7 +276,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 새로 만든 빌드의 세부 정보를 반환합니다.
+성공적인 응답은 새로 생성된 빌드의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -350,7 +350,7 @@ curl -X POST \
 
 ## 빌드 다시 게시 {#republish}
 
-빌드를 [게시된 라이브러리](./libraries.md#publish) PATCH 요청 경로에 해당 ID를 포함하여
+다음에서 빌드를 다시 게시할 수 있습니다. [게시된 라이브러리](./libraries.md#publish) PATCH 요청 경로에 해당 ID를 포함하여.
 
 **API 형식**
 
@@ -360,13 +360,13 @@ PATCH /builds/{BUILD_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `BUILD_ID` | 다음 `id` 다시 게시할 빌드 입니다. |
+| `BUILD_ID` | 다음 `id` 다시 게시할 빌드의 입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 를 업데이트합니다 `app_id` 기존 앱 구성에 대해 설명합니다.
+다음 요청은 `app_id` 기존 앱 구성에 대해 설명합니다.
 
 ```shell
 curl -X PATCH \
@@ -388,15 +388,15 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `id` | 다음 `id` 업데이트할 빌드의 일부입니다. 이 옵션은 와 일치해야 합니다. `{BUILD_ID}` 요청 경로에 제공된 값입니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `builds`. |
-| `meta.action` | 수행할 PATCH 작업 유형입니다. 을(를) 로 설정해야 합니다. `republish`. |
+| `id` | 다음 `id` 을 참조하십시오. 다음과 일치해야 합니다. `{BUILD_ID}` 요청 경로에 제공된 값입니다. |
+| `type` | 업데이트 중인 리소스 유형. 이 끝점의 경우 값은 다음과 같아야 합니다. `builds`. |
+| `meta.action` | 수행할 PATCH 작업의 유형입니다. 을(를) (으)로 설정해야 합니다. `republish`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적으로 응답하면 다시 게시된 빌드의 세부 정보가 반환됩니다.
+성공한 응답은 다시 게시된 빌드의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -471,13 +471,13 @@ curl -X PATCH \
 
 ## 빌드에 대한 관련 리소스 검색 {#related}
 
-다음 호출에서는 빌드에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. When [빌드 조회](#lookup)로 설정되면 이러한 관계는 `relationships` 속성을 사용합니다.
+다음 호출은 빌드에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. 날짜 [빌드 조회](#lookup), 이러한 관계는 아래에 나열됩니다. `relationships` 속성.
 
-자세한 내용은 [관계 안내서](../guides/relationships.md) 를 참조하십시오.
+다음을 참조하십시오. [관계 안내서](../guides/relationships.md) Reactor API의 관계에 대한 자세한 정보입니다.
 
 ### 빌드에 대한 관련 데이터 요소 나열 {#data-elements}
 
-를 추가하여 빌드에 대한 관련 데이터 요소를 나열할 수 있습니다 `/data_elements` 조회 요청의 경로에 추가할 수 없습니다.
+를 추가하여 빌드에 대한 관련 데이터 요소를 나열할 수 있습니다 `/data_elements` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -487,9 +487,9 @@ GET  /builds/{BUILD_ID}/data_elements
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BUILD_ID}` | 다음 `id` 목록을 만들 수 있습니다. |
+| `{BUILD_ID}` | 다음 `id` 데이터 요소를 나열할 빌드의 입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -618,7 +618,7 @@ curl -X GET \
 
 ### 빌드에 대한 관련 확장 나열 {#extensions}
 
-를 추가하여 빌드에 대한 관련 확장 목록을 만들 수 있습니다 `/extensions` 조회 요청의 경로에 추가할 수 없습니다.
+를 추가하여 빌드에 대한 관련 확장을 나열할 수 있습니다 `/extensions` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -628,9 +628,9 @@ GET  /builds/{BUILD_ID}/extensions
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BUILD_ID}` | 다음 `id` 확장을 나열할 빌드 |
+| `{BUILD_ID}` | 다음 `id` 확장자를 나열할 빌드의 입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -646,7 +646,7 @@ curl -X GET \
 
 **응답**
 
-성공적으로 응답하면 빌드와 관련된 확장 목록이 반환됩니다.
+성공적인 응답은 빌드와 관련된 확장 목록을 반환합니다.
 
 ```json
 {
@@ -749,7 +749,7 @@ curl -X GET \
 
 ### 빌드에 대한 관련 규칙 나열 {#rules}
 
-를 추가하여 빌드에 대한 관련 규칙을 나열할 수 있습니다 `/rules` 조회 요청의 경로에 추가할 수 없습니다.
+를 추가하여 빌드에 대한 관련 규칙을 나열할 수 있습니다 `/rules` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -759,9 +759,9 @@ GET  /builds/{BUILD_ID}/rules
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BUILD_ID}` | 다음 `id` 규칙을 나열할 빌드 |
+| `{BUILD_ID}` | 다음 `id` 규칙을 나열할 빌드의 입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -862,7 +862,7 @@ curl -X GET \
 
 ### 빌드에 대한 관련 라이브러리 조회 {#library}
 
-를 추가하여 빌드에 대한 관련 라이브러리를 검색할 수 있습니다 `/library` 조회 요청의 경로에 추가할 수 없습니다.
+를 추가하여 빌드에 대한 관련 라이브러리를 검색할 수 있습니다 `/library` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -872,9 +872,9 @@ GET  /builds/{BUILD_ID}/library
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BUILD_ID}` | 다음 `id` 조회하려는 빌드의 라이브러리. |
+| `{BUILD_ID}` | 다음 `id` 라이브러리를 조회할 빌드의 속성입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -975,7 +975,7 @@ curl -X GET \
 
 ### 빌드에 대한 관련 환경 조회 {#environment}
 
-를 추가하여 빌드에 대한 관련 환경을 검색할 수 있습니다 `/environment` 조회 요청의 경로에 추가할 수 없습니다.
+를 추가하여 빌드에 대한 관련 환경을 검색할 수 있습니다 `/environment` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -985,9 +985,9 @@ GET  /builds/{BUILD_ID}/environment
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{BUILD_ID}` | 다음 `id` 조회하려는 환경을 만드는 중입니다. |
+| `{BUILD_ID}` | 다음 `id` 조회하려는 환경이 포함된 빌드. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 

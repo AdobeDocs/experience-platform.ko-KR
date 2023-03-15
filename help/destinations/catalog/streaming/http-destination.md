@@ -3,7 +3,7 @@ keywords: 스트리밍; HTTP 대상
 title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 서드파티 HTTP 끝점으로 전송하여 자체 분석을 실행하거나 Experience Platform 외부로 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: b6d7ae987bbc97b3f58bd10ef181145ae89aa63e
+source-git-commit: 1c844d86834ef78d1206a8698dbcbfe2fae49661
 workflow-type: tm+mt
 source-wordcount: '2436'
 ht-degree: 0%

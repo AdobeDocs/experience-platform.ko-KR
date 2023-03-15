@@ -32,11 +32,11 @@ curl -X GET \
 
 **응답**
 
-이 응답에는 사용 가능한 네임스페이스를 나타내는 각 개체가 있는 개체 배열이 포함됩니다. &quot;[!UICONTROL 사용자 지정]&quot; 값[!UICONTROL false]&quot;는 표준 네임스페이스이며,[!UICONTROL 사용자 지정]&quot; 값[!UICONTROL true]&quot; 네임스페이스는 조직이 만든 네임스페이스입니다.
+응답에는 개체 배열이 포함되며 각 개체는 사용 가능한 네임스페이스를 나타냅니다. &quot;&quot;가 있는 네임스페이스[!UICONTROL 사용자 정의]&quot; 값 &quot;[!UICONTROL false]&quot;&quot;는 표준 네임스페이스이지만 &quot;&quot;을(를) 포함하는 네임스페이스[!UICONTROL 사용자 정의]&quot; 값 &quot;[!UICONTROL true]&quot;는 조직에서 생성한 네임스페이스입니다.
 
 >[!NOTE]
 >
->이 응답은 스페이스에 대해 잘렸습니다.
+>이 응답은 공백으로 잘렸습니다.
 
 ```json
 [
@@ -78,4 +78,4 @@ curl -X GET \
 
 ## 다음 단계
 
-다음 자습서로 진행하여 [사용자 지정 네임스페이스 만들기](./create-custom-namespace.md)
+다음 튜토리얼을 진행하십시오. [사용자 지정 네임스페이스 만들기](./create-custom-namespace.md)

@@ -13,7 +13,7 @@ ht-degree: 94%
 
 # Adobe Experience Platform 릴리스 노트 {#release-notes}
 
-* [현재 플랫폼 릴리스 노트](latest/latest.md)
+* [현재 Platform 릴리스 정보](latest/latest.md)
 * 2023 {#2023}
    * [2023년 2월](2023/february-2023.md)
    * [2023년 1월](2023/january-2023.md)

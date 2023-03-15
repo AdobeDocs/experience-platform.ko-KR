@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;홈;인기 항목;쿼리 서비스;api 안내서;쿼리 서비스;쿼리 서비스 계정;계정
+keywords: Experience Platform;홈;인기 항목;쿼리 서비스;api 안내서;쿼리 서비스;쿼리 서비스 계정;계정;
 solution: Experience Platform
 title: 계정 API 끝점
-description: 영구적 을 위한 Query Service 계정을 만들 수 있습니다.
+description: 지속에 대한 쿼리 서비스 계정을 만들 수 있습니다.
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 4%
 
 ---
 
-# 계정 끝점
+# 계정 엔드포인트
 
-Adobe Experience Platform 쿼리 서비스에서 계정은 외부 SQL 클라이언트와 함께 사용할 수 있는 만료되지 않은 자격 증명을 만드는 데 사용됩니다. 를 사용할 수 있습니다 `/accounts` query Service API의 끝점입니다. Query Service 통합 계정(기술 계정이라고도 함)을 프로그래밍 방식으로 생성, 검색, 편집 및 삭제할 수 있습니다.
+Adobe Experience Platform 쿼리 서비스에서 계정은 외부 SQL 클라이언트와 함께 사용할 수 있는 만료되지 않는 자격 증명을 만드는 데 사용됩니다. 다음을 사용할 수 있습니다. `/accounts` 쿼리 서비스 통합 계정(기술 계정이라고도 함)을 프로그래밍 방식으로 만들고, 검색하고, 편집하고, 삭제할 수 있는 쿼리 서비스 API의 종단점입니다.
 
 ## 시작하기
 
-이 안내서에서 사용되는 끝점은 Query Service API의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md) 필수 헤더 및 예제 API 호출을 읽는 방법을 포함하여 API를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보입니다.
+이 안내서에 사용된 끝점은 쿼리 서비스 API의 일부입니다. 계속하기 전에 다음을 검토하십시오. [시작 안내서](./getting-started.md) 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보입니다.
 
 ## 계정 만들기
 
-에 POST 요청을 수행하여 Query Service 통합 계정을 만들 수 있습니다. `/accounts` 엔드포인트.
+에 POST 요청을 하여 쿼리 서비스 통합 계정을 만들 수 있습니다. `/accounts` 엔드포인트.
 
 **API 형식**
 
@@ -51,14 +51,14 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `accountName` | **필수 여부** Query Service 통합 계정의 이름입니다. |
-| `assignedToUser` | **필수 여부** Query Service 통합 계정이 만들어질 Adobe ID입니다. |
-| `credential` | *(선택 사항)* Query Service 통합에 사용되는 자격 증명입니다. 지정하지 않으면 시스템에서 자동으로 자격 증명을 생성합니다. |
-| `description` | *(선택 사항)* Query Service 통합 계정에 대한 설명입니다. |
+| `accountName` | **필수** 쿼리 서비스 통합 계정의 이름입니다. |
+| `assignedToUser` | **필수** Query Service 통합 계정이 생성될 Adobe ID. |
+| `credential` | *(선택 사항)* 쿼리 서비스 통합에 사용되는 자격 증명입니다. 지정하지 않으면 시스템에서 자동으로 자격 증명을 생성합니다. |
+| `description` | *(선택 사항)* Query Service 통합 계정에 대한 설명. |
 
 **응답**
 
-성공적인 응답은 새로 만든 Query Service 통합 계정의 세부 정보와 함께 HTTP 상태 200을 반환합니다. 이러한 계정 세부 정보를 사용하여 Query Service를 외부 클라이언트와 연결할 수 있습니다.
+성공한 응답은 새로 만든 Query Service 통합 계정에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다. 이러한 계정 세부 정보를 사용하여 쿼리 서비스를 외부 클라이언트와 연결할 수 있습니다.
 
 ```json
 {
@@ -71,12 +71,12 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `technicalAccountName` | Query Service 통합 계정의 이름입니다. |
-| `technicalAccountId` | Query Service 통합 계정의 ID입니다. 이것은 `credential`을 입력하여 계정에 대한 암호를 작성합니다. |
-| `credential` | Query Service 통합 계정의 자격 증명입니다. 이것은 `technicalAccountId`을 입력하여 계정에 대한 암호를 작성합니다. |
+| `technicalAccountId` | Query Service 통합 계정의 ID입니다. 이것과 `credential`: 계정의 암호를 구성합니다. |
+| `credential` | Query Service 통합 계정의 자격 증명입니다. 이것과 `technicalAccountId`: 계정의 암호를 구성합니다. |
 
 ## 계정 업데이트
 
-에 PUT 요청을 작성하여 Query Service 통합 계정을 업데이트할 수 있습니다. `/accounts` 엔드포인트.
+에 PUT 요청을 하여 Query Service 통합 계정을 업데이트할 수 있습니다 `/accounts` 엔드포인트.
 
 **API 형식**
 
@@ -108,10 +108,10 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `accountName` | *(선택 사항)* Query Service 통합 계정의 업데이트된 이름입니다. |
-| `assignedToUser` | *(선택 사항)* Query Service 통합 계정이 연결된 업데이트된 Adobe ID. |
-| `credential` | *(선택 사항)* Query Service 계정에 대해 업데이트된 자격 증명입니다. |
-| `description` | *(선택 사항)* Query Service 통합 계정에 대해 업데이트된 설명입니다. |
+| `accountName` | *(선택 사항)* Query Service 통합 계정에 대해 업데이트된 이름. |
+| `assignedToUser` | *(선택 사항)* 쿼리 서비스 통합 계정이 연결된 업데이트된 Adobe ID. |
+| `credential` | *(선택 사항)* 쿼리 서비스 계정에 대해 업데이트된 자격 증명입니다. |
+| `description` | *(선택 사항)* 쿼리 서비스 통합 계정에 대해 업데이트된 설명. |
 
 **응답**
 
@@ -134,7 +134,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
 
 ## 모든 계정 나열
 
-에 GET 요청을 수행하여 모든 Query Service 통합 계정 목록을 검색할 수 있습니다 `/accounts` 엔드포인트.
+에 GET 요청을 하여 모든 Query Service 통합 계정 목록을 검색할 수 있습니다. `/accounts` 엔드포인트.
 
 **API 형식**
 
@@ -205,7 +205,7 @@ curl -X GET https://platform.adobe.io/foundation/queryauth/accounts \
 
 ## 계정 삭제
 
-에 DELETE 요청을 작성하여 Query Service 통합 계정을 삭제할 수 있습니다. `/accounts` 엔드포인트.
+에 DELETE 요청을 하여 쿼리 서비스 통합 계정을 삭제할 수 있습니다. `/accounts` 엔드포인트.
 
 **API 형식**
 
@@ -215,7 +215,7 @@ DELETE /accounts/{ACCOUNT_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{ACCOUNT_ID}` | 삭제할 Query Service 통합 계정의 ID입니다. |
+| `{ACCOUNT_ID}` | 삭제하려는 Query Service 통합 계정의 ID입니다. |
 
 **요청**
 
@@ -229,7 +229,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/queryauth/accounts/E09A
 
 **응답**
 
-성공적인 응답은 계정이 성공적으로 삭제되었다는 메시지와 함께 HTTP 상태 200을 반환합니다.
+성공적인 응답은 계정이 성공적으로 삭제되었음을 나타내는 메시지와 함께 HTTP 상태 200을 반환합니다.
 
 ```json
 {

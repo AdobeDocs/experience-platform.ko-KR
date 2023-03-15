@@ -1,11 +1,11 @@
 ---
 title: 일반 Analytics 플러그인 확장 프로그램에 대한 릴리스 노트
-description: Adobe Experience Platform의 일반 Analytics 플러그인 태그 확장에 대한 최신 릴리스 노트입니다.
+description: Adobe Experience Platform의 일반 Analytics 플러그인 태그 확장 기능에 대한 최신 릴리스 정보입니다.
 exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '329'
-ht-degree: 56%
+ht-degree: 55%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 56%
 
 #### 기능
 
-* 쿠키를 설정하는 플러그인은 이제 보안 플래그를 사용합니다
+* 이제 쿠키를 설정하는 플러그인은 보안 플래그를 사용합니다
 
 ## 2021년 6월 23일
 
@@ -41,8 +41,8 @@ ht-degree: 56%
 
 #### 버그 수정
 
-* 창 개체에서 getPageLoadTime이 변수를 잘못 설정하는 문제가 해결되었습니다.
-* queryParam가 쿼리 문자열에 없는 경우 getQueryParam이 &quot;&quot; 대신 undefined를 반환하는 문제가 수정되었습니다
+* getPageLoadTime이 창 개체에서 변수를 잘못 설정하는 문제가 해결되었습니다.
+* queryParam이 쿼리 문자열에 없는 경우 getQueryParam이 &quot;&quot; 대신 undefined를 반환하는 문제가 해결되었습니다
 * 초기화 작업에서 잘못된 버전 번호가 표시되는 문제가 해결되었습니다.
 
 ## 2021년 3월 19일
@@ -51,8 +51,8 @@ ht-degree: 56%
 
 #### 기능
 
-* 버전 정보를 컨텍스트 데이터로 자동으로 포함하도록 업데이트된 모든 플러그인
-* getPercentPageViewed 플러그인을 추가했습니다.
+* 모든 플러그인이 버전 정보를 컨텍스트 데이터로 자동으로 포함하도록 업데이트되었습니다.
+* getPercentPageViewed 플러그인이 추가되었습니다.
 * 다음 플러그인에 대한 데이터 요소가 추가되었습니다
    * getGeoCoordinates
    * getNewRepeat
@@ -127,5 +127,5 @@ ht-degree: 56%
 
 #### 기능
 
-* 확장 프로그램 7개의 플러그인과 함께 릴리스되었습니다.
+* 7개의 플러그인과 함께 릴리스된 확장
 * 각 플러그인을 초기화하는 개별 작업

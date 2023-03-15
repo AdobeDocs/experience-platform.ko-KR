@@ -1,6 +1,6 @@
 ---
-title: Adobe Analytics 확장에 대한 릴리스 노트
-description: Adobe Experience Platform의 Adobe Analytics 태그 확장에 대한 최신 릴리스 노트입니다.
+title: Adobe Analytics 확장 기능 릴리스 노트
+description: Adobe Experience Platform의 Adobe Analytics 태그 확장 기능에 대한 최신 릴리스 정보입니다.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
@@ -15,7 +15,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->Analytics 태그 확장 프로그램(Analytics Mobile Services의 [AppMeasurement JavaScript 라이브러리](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR). 자세한 내용은 [AppMeasurement 릴리스 정보](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) 를 참조하십시오.
+>Analytics 태그 확장(종종 업데이트에 대한 응답으로 업데이트되는 경우) [AppMeasurement JavaScript 라이브러리](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR). 다음을 참조하십시오. [AppMeasurement 릴리스 정보](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) 아래에 언급된 특정 버전에 대한 자세한 내용.
 
 ## 2022년 9월 23일
 
@@ -24,7 +24,7 @@ ht-degree: 84%
 **기능**:
 
 * AppMeasurement v2.23.0으로 업그레이드되었습니다.
-* 이제 확장에서 높은 엔트로피를 수집할 수 있습니다 [사용자 에이전트 클라이언트 힌트](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 최신 버전의 AppMeasurement에서 지원하는 것입니다.
+* 확장은 이제 높은 엔트로피를 수집할 수 있다 [사용자 에이전트 클라이언트 힌트](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 최신 버전의 AppMeasurement에서 지원하는 대로.
 
 ## 2022년 2월 28일
 
@@ -32,7 +32,7 @@ ht-degree: 84%
 
 **버그 수정**:
 
-* AppMeasurement에서 일부 디버그 문이 제거되었습니다.
+* AppMeasurement에서 일부 디버그 문을 제거했습니다.
 
 ## 2021년 11월 29일
 
@@ -40,7 +40,7 @@ ht-degree: 84%
 
 **버그 수정**:
 
-* AppMeasurement를 v2.22.3으로 업그레이드했습니다.
+* AppMeasurement가 v2.22.3으로 업그레이드되었습니다.
 
 ## 2021년 9월 16일
 
@@ -48,8 +48,8 @@ ht-degree: 84%
 
 **버그 수정**:
 
-* AppMeasurement를 v2.22.2으로 업그레이드했습니다.
-* 사용되지 않는 buildInfo.environment가 제거됨
+* AppMeasurement가 v2.22.2로 업그레이드되었습니다.
+* 더 이상 사용되지 않는 buildInfo.environment가 제거되었습니다.
 
 ## 2021년 8월 24일
 
@@ -57,8 +57,8 @@ ht-degree: 84%
 
 **버그 수정**:
 
-* 업그레이드됨 [AppMeasurement에서 v2.22.1으로](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
-* innerHTML을 사용하는 대신 미러 Activity Map 로직에 대한 폴백 linkName 을 업데이트했습니다.
+* 업그레이드됨 [AppMeasurement에서 v2.22.1로](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* innerHTML을 사용하는 대신 미러 Activity Map 논리를 위한 폴백 linkName이 업데이트되었습니다.
 
 ## 2020년 8월 6일
 
@@ -172,7 +172,7 @@ ht-degree: 84%
 * Audience Manager용 DIL 9.2를 지원하도록 Adobe Analytics 확장이 업데이트됨
 
 * [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)을 지원하도록 확장이 업데이트
-* 다음 확인란이 더 이상 지원되지 않으므로 제거되었습니다. &quot;DOM 또는 Fire 대상에 대상 게시 IFRAME을 연결하지 마십시오&quot;
+* 더 이상 지원되지 않으므로 다음 확인란이 제거됨: &quot;DOM 또는 화재 대상에 대상 게시 IFRAME을 첨부하지 않음&quot;
 
 ## 2019년 6월 4일
 

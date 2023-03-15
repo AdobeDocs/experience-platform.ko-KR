@@ -11,13 +11,13 @@ ht-degree: 2%
 
 ---
 
-# ID 매핑 나열
+# 목록 ID 매핑
 
 매핑은 지정된 네임스페이스에 대한 클러스터의 모든 ID의 컬렉션입니다.
 
 ## 단일 ID에 대한 ID 매핑 가져오기
 
-ID가 주어지면 요청에서 ID로 표시되는 네임스페이스와 동일한 네임스페이스에서 모든 관련 ID를 검색합니다.
+ID가 주어지면 요청에서 ID로 표현되는 것과 동일한 네임스페이스에서 모든 관련 ID를 검색합니다.
 
 **API 형식**
 
@@ -49,7 +49,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 3: ID를 XID(`xid`). ID의 XID를 가져오는 방법에 대한 자세한 내용은 이 문서의 섹션을 참조하십시오 [id에 대한 XID 가져오기](./list-native-id.md).
+옵션 3: ID를 XID(`xid`). ID의 XID를 얻는 방법에 대한 자세한 내용은 이 문서의 다음 내용 섹션을 참조하십시오 [id에 대한 XID를 가져오는 중](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -62,11 +62,11 @@ curl -X GET \
 
 ### 여러 ID에 대한 ID 매핑 가져오기
 
-를 사용하십시오 `POST` 와 같은 일괄 처리 방법 `GET` 위에 설명된 방법으로 여러 ID에 대한 매핑을 검색할 수 있습니다.
+사용 `POST` 메서드와 동일한 일괄 처리 `GET` 위에서 설명한 여러 id에 대한 매핑을 검색하는 방법입니다.
 
 >[!NOTE]
 >
->요청은 최대 1000개의 ID를 넘지 않도록 해야 합니다. 1000개의 ID를 초과하는 요청은 400개의 상태 코드를 발생시킵니다.
+>요청은 최대 1000개의 ID를 초과하지 않아야 합니다. ID가 1000개를 초과하는 요청은 400개 상태 코드를 생성합니다.
 
 **API 형식**
 
@@ -85,7 +85,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 }
 ```
 
-옵션 2: ID 목록을 복합 ID로 제공합니다. 여기서 각 이름은 네임스페이스 ID별로 ID 값과 네임스페이스에 이름을 지정합니다. 이 예제에서는 기본값을 덮어쓰는 동안 이 메서드를 사용하는 방법을 보여 줍니다 `graph-type` Private Graph
+옵션 2: ID 목록을 복합 ID로 제공합니다. 여기서 각 ID는 네임스페이스 ID별로 ID 값 및 네임스페이스를 지정합니다. 이 예에서는 기본값을 덮어쓰면서 이 메서드를 사용하는 방법을 보여 줍니다 `graph-type` 비공개 그래프의
 
 ```shell
 {
@@ -144,7 +144,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-제공된 입력과 함께 관련 ID가 없는 경우 `HTTP 204` 응답 코드가 컨텐츠 없이 반환됩니다.
+입력한 내용과 관련된 ID가 없는 경우 `HTTP 204` 응답 코드가 내용 없이 반환됩니다.
 
 **응답**
 
@@ -182,9 +182,9 @@ curl -X POST \
 }
 ```
 
-- `lastAssociationTime`: 입력 ID가 이 ID와 마지막으로 연결된 타임스탬프입니다.
-- `regions`: 다음을 제공합니다. `regionId` 및 `lastAssociationTime` ID가 표시되는 곳
+- `lastAssociationTime`: 입력 ID가 이 ID와 마지막으로 연결된 시점의 타임스탬프입니다.
+- `regions`: 를 제공합니다. `regionId` 및 `lastAssociationTime` 신원 확인
 
 ## 다음 단계
 
-다음 자습서로 진행하여 [사용 가능한 네임스페이스 목록](./list-namespaces.md).
+다음 튜토리얼을 진행하십시오. [사용 가능한 네임스페이스 나열](./list-namespaces.md).

@@ -1,31 +1,31 @@
 ---
 title: 데이터 요소 끝점
-description: Reactor API에서 /data_elements 엔드포인트를 호출하는 방법을 알아봅니다.
+description: Reactor API에서 /data_elements 끝점을 호출하는 방법을 알아봅니다.
 exl-id: ea346682-441b-415b-af06-094158eb7c71
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1411'
-ht-degree: 6%
+source-wordcount: '1369'
+ht-degree: 4%
 
 ---
 
 # 데이터 요소 끝점
 
-데이터 요소는 애플리케이션 내의 중요한 데이터를 가리키는 변수 역할을 합니다. 데이터 요소는 내에서 사용됩니다 [규칙](./rules.md) 및 [확장](./extensions.md) 구성. 브라우저나 애플리케이션에서 런타임 시 규칙이 트리거되면 데이터 요소의 값이 확인되고 규칙 내에서 사용됩니다. 데이터 요소는 확장 구성에 대해 동일하게 작동합니다.
+데이터 요소는 애플리케이션 내의 중요한 데이터를 가리키는 변수로 작동합니다. 데이터 요소는 다음 내에서 사용됩니다. [규칙](./rules.md) 및 [확장](./extensions.md) 구성. 브라우저 또는 애플리케이션에서 런타임에 규칙이 트리거되면 데이터 요소의 값이 규칙 내에서 확인되고 사용됩니다. 데이터 요소는 확장 구성에 대해 동일하게 작동합니다.
 
 여러 데이터 요소를 함께 사용하면 데이터 사전 또는 데이터 맵이 생성됩니다. 이 사전은 Adobe Experience Platform이 알고 있으며 사용할 수 있는 데이터를 나타냅니다.
 
-데이터 요소는 정확히 하나의 항목에 속합니다 [속성](./properties.md). 속성에는 많은 데이터 요소가 있을 수 있습니다.
+데이터 요소는 정확히 하나의 요소에 속합니다. [속성](./properties.md). 속성에는 여러 데이터 요소가 있을 수 있습니다.
 
-데이터 요소 및 태그의 사용에 대한 일반적인 정보는 [데이터 요소 안내서](../../ui/managing-resources/data-elements.md) 를 참조하십시오.
+데이터 요소와 태그의 사용에 대한 일반적인 정보는 다음을 참조하십시오. [data elements 안내서](../../ui/managing-resources/data-elements.md) UI 설명서에서 확인할 수 있습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
+이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
 
 ## 데이터 요소 목록 검색 {#list}
 
-GET 요청 경로에 속성의 ID를 포함하여 속성에 대한 데이터 요소 목록을 검색할 수 있습니다.
+GET 요청의 경로에 속성 ID를 포함하여 속성에 대한 데이터 요소 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -35,13 +35,13 @@ GET /properties/{PROPERTY_ID}/data_elements
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 다음 `id` 속성 중에서 선택할 수 있습니다. |
+| `PROPERTY_ID` | 다음 `id` 데이터 요소를 소유하는 속성입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 데이터 요소는 다음 속성을 기반으로 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오. [응답 필터링](../guides/filtering.md) 추가 정보.
+>쿼리 매개 변수를 사용하여 나열된 데이터 요소를 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오 [응답 필터링](../guides/filtering.md) 추가 정보.
 
 **요청**
 
@@ -57,7 +57,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 속성에 대한 데이터 요소 목록을 반환합니다.
+성공한 응답은 지정된 속성에 대한 데이터 요소 목록을 반환합니다.
 
 ```json
 {
@@ -170,11 +170,11 @@ curl -X GET \
 
 ## 데이터 요소 조회 {#lookup}
 
-GET 요청 경로에 해당 ID를 제공하여 데이터 요소를 조회할 수 있습니다.
+GET 요청 경로에 데이터 요소의 ID를 제공하여 데이터 요소를 조회할 수 있습니다.
 
 >[!NOTE]
 >
->데이터 요소가 삭제되면 삭제된 것으로 표시되지만 실제로 시스템에서 제거되지 않습니다. 따라서 삭제된 데이터 요소를 조회할 수 있습니다. 삭제된 데이터 요소는 `data.meta.deleted_at` 속성을 사용합니다.
+>데이터 요소가 삭제되면 삭제된 것으로 표시되지만 실제로 시스템에서 제거되지 않습니다. 따라서 삭제된 데이터 요소를 조회할 수 있습니다. 삭제된 데이터 요소는 `data.meta.deleted_at` 특성.
 
 **API 형식**
 
@@ -184,9 +184,9 @@ GET /data_elements/{DATA_ELEMENT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 다음 `id` 조회하려는 데이터 요소의 수입니다. |
+| `DATA_ELEMENT_ID` | 다음 `id` 조회하려는 데이터 요소. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -304,7 +304,7 @@ curl -X GET \
 
 ## 데이터 요소 만들기 {#create}
 
-POST 요청을 만들어 새 데이터 요소를 만들 수 있습니다.
+POST 요청을 하여 새 데이터 요소를 만들 수 있습니다.
 
 **API 형식**
 
@@ -314,13 +314,13 @@ POST /properties/{PROPERTY_ID}/data_elements
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 다음 `id` 의 [속성](./properties.md) 추가 콘텐츠에서 데이터 요소를 정의합니다. |
+| `PROPERTY_ID` | 다음 `id` / [속성](./properties.md) 아래에 데이터 요소를 정의하는 경우 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 지정된 속성에 대한 새 데이터 요소를 만듭니다. 또한 호출은 `relationships` 속성을 사용합니다. 다음 안내서를 참조하십시오. [관계](../guides/relationships.md) 추가 정보.
+다음 요청은 지정된 속성에 대해 새 데이터 요소를 만듭니다. 또한 호출은 를 통해 데이터 요소를 기존 확장과 연결합니다. `relationships` 속성. 다음 안내서를 참조하십시오 [관계](../guides/relationships.md) 추가 정보.
 
 ```shell
 curl -X POST \
@@ -355,20 +355,20 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes.name` | **(필수)** 사람이 읽을 수 있는 데이터 요소의 이름입니다. |
-| `attributes.delegate_descriptor_id` | **(필수)** 데이터 요소를 확장 패키지와 연결하는 형식이 지정된 문자열입니다. 각 확장 패키지는 위임 데이터 요소에 대한 호환 유형과 의도한 동작을 정의하므로 모든 데이터 요소를 처음 만들 때 확장 패키지와 연결해야 합니다. 다음 안내서를 참조하십시오. [위임 설명자 ID](../guides/delegate-descriptor-ids.md) 추가 정보. |
-| `attributes.settings` | 문자열로 표시되는 설정 JSON 개체. |
+| `attributes.name` | **(필수)** 사람이 인식할 수 있는 데이터 요소 이름. |
+| `attributes.delegate_descriptor_id` | **(필수)** 데이터 요소를 확장 패키지와 연결하는 형식이 지정된 문자열입니다. 각 확장 패키지는 위임 데이터 요소와 의도된 동작에 대해 호환되는 유형을 정의하므로 모든 데이터 요소는 처음 생성될 때 확장 패키지와 연결되어야 합니다. 다음 안내서를 참조하십시오 [위임 설명자 ID](../guides/delegate-descriptor-ids.md) 추가 정보. |
+| `attributes.settings` | 문자열로 표시되는 설정 JSON 개체입니다. |
 | `attributes.default_value` | 데이터 요소가 로 평가되는 경우 반환할 기본값 `undefined`. |
-| `attributes.enabled` | 데이터 요소가 활성화되어 있는지 여부를 나타내는 부울 값입니다. |
+| `attributes.enabled` | 데이터 요소가 활성화되었는지 여부를 나타내는 부울 값입니다. |
 | `attributes.force_lower_case` | 저장하기 전에 데이터 요소 값을 소문자로 변환해야 하는지 여부를 나타내는 부울 값입니다. |
-| `attributes.clean_text` | 저장하기 전에 데이터 요소 값에서 선행 및 후행 공백을 제거해야 하는지 여부를 나타내는 부울 값입니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `data_elements`. |
+| `attributes.clean_text` | 저장하기 전에 선행 및 후행 공백을 데이터 요소 값에서 제거해야 하는지 여부를 나타내는 부울 값입니다. |
+| `type` | 업데이트 중인 리소스 유형. 이 끝점의 경우 값은 다음과 같아야 합니다. `data_elements`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 새로 만든 데이터 요소의 세부 정보를 반환합니다.
+성공적으로 응답하면 새로 만든 데이터 요소의 세부 정보가 반환됩니다.
 
 ```json
 {
@@ -470,7 +470,7 @@ curl -X POST \
 
 ## 데이터 요소 업데이트 {#update}
 
-PATCH 요청 경로에 해당 ID를 포함하여 데이터 요소를 업데이트할 수 있습니다.
+PATCH 요청의 경로에 해당 ID를 포함하여 데이터 요소를 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -480,13 +480,13 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 다음 `id` 업데이트하려는 데이터 요소의 수입니다. |
+| `DATA_ELEMENT_ID` | 다음 `id` 업데이트할 데이터 요소. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 를 업데이트합니다 `name` 기존 데이터 요소에 사용할 수 있습니다.
+다음 요청은 `name` 기존 데이터 요소에 사용할 수 있습니다.
 
 ```shell
 curl -X PATCH \
@@ -508,15 +508,15 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes` | 속성이 데이터 요소에 대해 업데이트할 속성을 나타내는 객체입니다. 모든 데이터 요소 속성을 업데이트할 수 있습니다. 에 대한 예제 호출을 참조하십시오. [데이터 요소 만들기](#create) 속성 목록 및 사용 사례입니다. |
-| `id` | 다음 `id` 업데이트하려는 데이터 요소 중 하나입니다. 이 옵션은 와 일치해야 합니다. `{DATA_ELEMENT_ID}` 요청 경로에 제공된 값입니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `data_elements`. |
+| `attributes` | 속성이 데이터 요소에 대해 업데이트할 속성을 나타내는 개체입니다. 모든 데이터 요소 속성을 업데이트할 수 있습니다. 에 대한 호출 예 를 참조하십시오 [데이터 요소 만들기](#create) 속성 및 해당 사용 사례의 목록입니다. |
+| `id` | 다음 `id` 을 참조하십시오. 다음과 일치해야 합니다. `{DATA_ELEMENT_ID}` 요청 경로에 제공된 값입니다. |
+| `type` | 업데이트 중인 리소스 유형. 이 끝점의 경우 값은 다음과 같아야 합니다. `data_elements`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 업데이트된 데이터 요소의 세부 정보를 반환합니다.
+성공한 응답은 업데이트된 데이터 요소의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -616,11 +616,11 @@ curl -X PATCH \
 }
 ```
 
-## 데이터 요소 수정 {#revise}
+## 데이터 요소 개정 {#revise}
 
-데이터 요소를 개정할 때 현재(head) 개정으로 데이터 요소의 새 개정이 만들어집니다. 데이터 요소의 각 수정에는 자체 ID가 있습니다. 원본 데이터 요소는 원본 링크를 통해 검색될 수 있다.
+데이터 요소를 개정하면 데이터 요소의 새 개정이 현재(헤드) 개정으로 생성됩니다. 데이터 요소의 각 개정에는 자체 ID가 있습니다. 원본 데이터 요소는 원본 링크를 통해 검색될 수 있습니다.
 
-다음을 제공하여 데이터 요소를 수정할 수 있습니다 `meta.action` 값이 인 속성 `revise` PATCH 요청 본문에서
+를 제공하여 데이터 요소를 수정할 수 있습니다. `meta.action` 값이 인 속성 `revise` PATCH 요청의 본문에서.
 
 **API 형식**
 
@@ -630,9 +630,9 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 다음 `id` 수정할 데이터 요소의 수입니다. |
+| `DATA_ELEMENT_ID` | 다음 `id` 수정할 데이터 요소의 일부입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -659,16 +659,16 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes` | 속성이 데이터 요소에 대해 업데이트할 속성을 나타내는 객체입니다. 모든 데이터 요소 속성을 업데이트할 수 있습니다. 에 대한 예제 호출을 참조하십시오. [데이터 요소 만들기](#create) 속성 목록 및 사용 사례입니다. |
-| `meta.action` | 다음 값이 포함된 경우 `revise`이고, 이 속성은 데이터 요소에 대해 새 버전을 만들어야 함을 나타냅니다. |
-| `id` | 다음 `id` 수정할 데이터 요소의 예입니다. 이 옵션은 와 일치해야 합니다. `{DATA_ELEMENT_ID}` 요청 경로에 제공된 값입니다. |
-| `type` | 수정할 리소스 유형입니다. 이 끝점의 경우 값은 `data_elements`. |
+| `attributes` | 속성이 데이터 요소에 대해 업데이트할 속성을 나타내는 개체입니다. 모든 데이터 요소 속성을 업데이트할 수 있습니다. 에 대한 호출 예 를 참조하십시오 [데이터 요소 만들기](#create) 속성 및 해당 사용 사례의 목록입니다. |
+| `meta.action` | 다음 값과 함께 포함되는 경우: `revise`, 이 속성은 데이터 요소에 대해 새 개정을 만들어야 함을 나타냅니다. |
+| `id` | 다음 `id` 수정할 데이터 요소. 다음과 일치해야 합니다. `{DATA_ELEMENT_ID}` 요청 경로에 제공된 값입니다. |
+| `type` | 수정 중인 리소스 유형. 이 끝점의 경우 값은 다음과 같아야 합니다. `data_elements`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 증가된 사용자가 지정한 대로 데이터 요소에 대한 새 개정 세부 사항을 반환합니다 `meta.latest_revision_number` 속성을 사용합니다.
+성공적인 응답은 증분 표시된 대로 데이터 요소에 대한 새 개정의 세부 정보를 반환합니다 `meta.latest_revision_number` 특성.
 
 ```json
 {
@@ -770,7 +770,7 @@ curl -X PATCH \
 
 ## 데이터 요소 삭제
 
-DELETE 요청 경로에 해당 ID를 포함하여 데이터 요소를 삭제할 수 있습니다.
+데이터 요소의 ID를 DELETE 요청 경로에 포함하여 삭제할 수 있습니다.
 
 **API 형식**
 
@@ -780,9 +780,9 @@ DELETE /data_elements/{DATA_ELEMENT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 다음 `id` 삭제할 데이터 요소입니다. |
+| `DATA_ELEMENT_ID` | 다음 `id` 삭제할 데이터 요소의 일부입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -796,21 +796,21 @@ curl -X DELETE \
 
 **응답**
 
-성공적으로 응답하면 데이터 요소가 삭제되었음을 나타내는 응답 본문이 없는 HTTP 상태 204(컨텐츠 없음)를 반환합니다.
+성공한 응답은 응답 본문이 없는 HTTP 상태 204(콘텐츠 없음)를 반환하여 데이터 요소가 삭제되었음을 나타냅니다.
 
-## 데이터 요소에 대한 참고 사항 관리 {#notes}
+## 데이터 요소에 대한 메모 관리 {#notes}
 
-데이터 요소는 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에서 텍스트 기반 메모를 만들고 검색할 수 있습니다. 자세한 내용은 [참고 끝점 안내서](./notes.md) 를 참조하십시오.
+데이터 요소는 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에 대해 텍스트 기반 메모를 만들고 검색할 수 있습니다. 다음을 참조하십시오. [notes 엔드포인트 안내서](./notes.md) 데이터 요소 및 기타 호환 리소스에 대한 메모를 관리하는 방법에 대한 자세한 정보.
 
 ## 데이터 요소에 대한 관련 리소스 검색 {#related}
 
-다음 호출에서는 데이터 요소에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. When [데이터 요소 조회](#lookup)로 설정되면 이러한 관계는 `relationships` 속성을 사용합니다.
+다음 호출은 데이터 요소에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. 날짜 [데이터 요소 조회](#lookup), 이러한 관계는 아래에 나열됩니다. `relationships` 속성.
 
-자세한 내용은 [관계 안내서](../guides/relationships.md) 를 참조하십시오.
+다음을 참조하십시오. [관계 안내서](../guides/relationships.md) Reactor API의 관계에 대한 자세한 정보입니다.
 
-### 데이터 요소에 대한 관련 라이브러리 나열 {#libraries}
+### 데이터 요소의 관련 라이브러리 나열 {#libraries}
 
-다음을 추가하여 데이터 요소를 활용하는 라이브러리를 나열할 수 있습니다 `/libraries` 조회 요청의 경로에 추가할 수 없습니다.
+를 추가하여 데이터 요소를 활용하는 라이브러리를 나열할 수 있습니다 `/libraries` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -820,9 +820,9 @@ GET  /data_elements/{DATA_ELEMENT_ID}/libraries
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 다음 `id` 라이브러리를 나열할 데이터 요소의 수입니다. |
+| `{DATA_ELEMENT_ID}` | 다음 `id` : 라이브러리를 나열할 데이터 요소의 일부입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -838,7 +838,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 데이터 요소를 사용하는 라이브러리 목록을 반환합니다.
+성공한 응답은 지정된 데이터 요소를 사용하는 라이브러리 목록을 반환합니다.
 
 ```json
 {
@@ -930,9 +930,9 @@ curl -X GET \
 }
 ```
 
-### 데이터 요소에 대한 관련 수정 버전 나열 {#revisions}
+### 데이터 요소의 관련 수정 버전 나열 {#revisions}
 
-다음을 추가하여 데이터 요소의 이전 개정 버전을 나열할 수 있습니다 `/revisions` 조회 요청의 경로에 추가할 수 없습니다.
+를 추가하여 데이터 요소의 이전 개정 버전을 나열할 수 있습니다 `/revisions` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -942,9 +942,9 @@ GET  /data_elements/{DATA_ELEMENT_ID}/revisions
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 다음 `id` 수정 사항을 나열할 데이터 요소의 수입니다. |
+| `{DATA_ELEMENT_ID}` | 다음 `id` 수정본을 나열할 데이터 요소. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -960,7 +960,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 데이터 요소의 개정 목록을 반환합니다.
+성공한 응답은 지정된 데이터 요소에 대한 개정 목록을 반환합니다.
 
 ```json
 {
@@ -1166,7 +1166,7 @@ curl -X GET \
 
 ### 데이터 요소에 대한 관련 확장 조회 {#extension}
 
-다음을 추가하여 데이터 요소를 사용하는 확장을 조회할 수 있습니다 `/extension` GET 요청의 경로.
+를 추가하여 데이터 요소를 활용하는 확장을 조회할 수 있습니다 `/extension` GET 요청 경로로 이동합니다.
 
 **API 형식**
 
@@ -1176,9 +1176,9 @@ GET  /data_elements/{DATA_ELEMENT_ID}/extension
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 다음 `id` 확장을 조회하려는 데이터 요소의 수입니다. |
+| `{DATA_ELEMENT_ID}` | 다음 `id` 조회하려는 확장자의 데이터 요소입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -1194,7 +1194,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 데이터 요소를 사용하는 확장의 세부 사항을 반환합니다.
+성공한 응답은 지정된 데이터 요소를 사용하는 확장의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -1286,7 +1286,7 @@ curl -X GET \
 
 ### 데이터 요소에 대한 관련 원본 조회 {#origin}
 
-다음을 추가하여 데이터 요소의 출처를 조회할 수 있습니다 `/origin` GET 요청의 경로. 데이터 요소의 원본은 현재 개정을 만들기 위해 업데이트된 이전 개정입니다.
+를 추가하여 데이터 요소의 원본을 조회할 수 있습니다 `/origin` GET 요청 경로로 이동합니다. 데이터 요소의 원본은 현재 개정을 만들기 위해 업데이트된 이전 개정입니다.
 
 **API 형식**
 
@@ -1296,9 +1296,9 @@ GET  /data_elements/{DATA_ELEMENT_ID}/origin
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 다음 `id` 출처를 조회하려는 데이터 요소의 수입니다. |
+| `{DATA_ELEMENT_ID}` | 다음 `id` 조회하려는 원본이 포함된 데이터 요소. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -1314,7 +1314,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 데이터 요소의 원본 세부 정보를 반환합니다.
+성공한 응답은 지정된 데이터 요소의 원본 정보를 반환합니다.
 
 ```json
 {
@@ -1416,7 +1416,7 @@ curl -X GET \
 
 ### 데이터 요소에 대한 관련 속성 조회 {#property}
 
-다음을 추가하여 데이터 요소를 소유하는 속성을 찾을 수 있습니다 `/property` GET 요청의 경로.
+를 추가하여 데이터 요소를 소유하는 속성을 조회할 수 있습니다 `/property` GET 요청 경로로 이동합니다.
 
 **API 형식**
 
@@ -1426,9 +1426,9 @@ GET  /data_elements/{DATA_ELEMENT_ID}/property
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 다음 `id` 속성을 조회하려는 데이터 요소의 수입니다. |
+| `{DATA_ELEMENT_ID}` | 다음 `id` 속성을 조회할 데이터 요소의 속성입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -1444,7 +1444,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 데이터 요소를 소유하는 속성의 세부 정보를 반환합니다.
+성공한 응답은 지정된 데이터 요소를 소유하는 속성의 세부 정보를 반환합니다.
 
 ```json
 {

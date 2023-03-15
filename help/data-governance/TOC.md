@@ -7,7 +7,7 @@ feature: Data Governance
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '97'
-ht-degree: 38%
+ht-degree: 42%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 38%
 # Adobe Experience Platform 데이터 거버넌스 {#data-governance}
 
 * [데이터 거버넌스 개요](home.md)
-* [종단 간 안내서](./e2e.md)
+* [전체 안내서](./e2e.md)
 * 데이터 사용 레이블 {#labels}
    * [개요](labels/overview.md)
    * [레이블 용어집](labels/reference.md)
@@ -25,7 +25,7 @@ ht-degree: 38%
    * [개요](policies/overview.md)
    * [UI에서 정책 관리](policies/user-guide.md)
    * [API에서 정책 만들기](policies/create.md)
-* 정책 적용 {#enforcement}
+* 정책 시행 {#enforcement}
    * [개요](enforcement/overview.md)
    * [자동 적용](enforcement/auto-enforcement.md)
    * [API 기반 적용](enforcement/api-enforcement.md)
@@ -34,7 +34,7 @@ ht-degree: 38%
    * [시작하기](api/getting-started.md)
    * [레이블](api/labels.md)
    * [정책](api/policies.md)
-   * [마케팅 작업](api/marketing-actions.md)
+   * [마케팅 액션](api/marketing-actions.md)
    * [평가](api/evaluation.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes_kr)

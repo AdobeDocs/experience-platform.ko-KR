@@ -1,10 +1,11 @@
 ---
 title: 웹 확장을 위한 핵심 라이브러리 모듈
 description: 웹 확장 내에서 사용할 수 있는 핵심 라이브러리 모듈에 대해 알아봅니다.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 7fb63208-aed0-4add-b6da-8e4aea063d0a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '350'
-ht-degree: 75%
+ht-degree: 82%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 75%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과 제품 설명서에서 몇 가지 용어 변경 사항이 롤아웃되었습니다. 용어 변경 내용을 통합 참조하려면 다음 [document](../../term-updates.md)을 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 이 문서에서는 웹 확장 내에서 사용할 수 있는 핵심 라이브러리 모듈 목록을 제공합니다. `require('@adobe/{MODULE}')`를 사용하여 이러한 모듈에 액세스할 수 있습니다. 여기서 `{MODULE}`은 핵심 모듈의 이름입니다.
 
@@ -78,7 +79,7 @@ loadScript(url).then(function() {
 
 ### [!DNL reactor-promise]
 
-`reactor-promise`는 ECMAScript 6에서 [Promise API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 네이티브를 모방하는 생성자입니다. 네이티브 Promise API를 사용할 수 있으면, 대신 해당 API가 반환됩니다.
+`reactor-promise`는 ECMAScript 6에서 [Promise API](https://developer.mozilla.org/ko-KR/docs/Web/JavaScript/Reference/Global_Objects/Promise) 네이티브를 모방하는 생성자입니다. 네이티브 Promise API를 사용할 수 있으면, 대신 해당 API가 반환됩니다.
 
 ```javascript
 var Promise = require('@adobe/reactor-promise');

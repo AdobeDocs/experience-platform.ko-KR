@@ -1,29 +1,29 @@
 ---
-title: 라이브러리 끝점
-description: Reactor API에서 /libraries 종단점을 호출하는 방법을 알아봅니다.
+title: 라이브러리 엔드포인트
+description: Reactor API에서 /libraries 끝점을 호출하는 방법을 알아봅니다.
 exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1584'
-ht-degree: 8%
+source-wordcount: '1521'
+ht-degree: 5%
 
 ---
 
-# 라이브러리 끝점
+# 라이브러리 엔드포인트
 
-라이브러리는 태그 리소스([확장](./extensions.md), [규칙](./rules.md), 및 [데이터 요소](./data-elements.md))을 클릭하여 제품에서 원하는 동작을 나타냅니다. [속성](./properties.md). 다음 `/libraries` reactor API의 종단점을 사용하면 태그 속성 내의 라이브러리를 프로그래밍 방식으로 관리할 수 있습니다.
+라이브러리는 태그 리소스의 컬렉션입니다([확장](./extensions.md), [규칙](./rules.md), 및 [데이터 요소](./data-elements.md))의 원하는 동작을 나타냅니다. [속성](./properties.md). 다음 `/libraries` Reactor API의 끝점을 사용하면 태그 속성 내에서 라이브러리를 프로그래밍 방식으로 관리할 수 있습니다.
 
 라이브러리는 정확히 하나의 속성에 속합니다. 속성에는 여러 라이브러리가 있을 수 있습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
+이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
 
-Reactor API에서 라이브러리를 사용하기 전에 라이브러리 상태와 환경이 특정 라이브러리에서 수행할 수 있는 작업을 결정할 때 수행하는 역할을 이해하는 것이 중요합니다. 의 안내서를 참조하십시오. [라이브러리 게시 흐름](../../ui/publishing/publishing-flow.md) 추가 정보.
+Reactor API의 라이브러리를 사용하기 전에 특정 라이브러리에서 수행할 수 있는 작업을 결정할 때 라이브러리 상태 및 환경이 수행하는 역할을 이해하는 것이 중요합니다. 에서 안내서 참조 [라이브러리 게시 플로우](../../ui/publishing/publishing-flow.md) 추가 정보.
 
 ## 라이브러리 목록 검색 {#list}
 
-GET 요청의 경로에 속성의 ID를 포함하여 속성에 대한 라이브러리 목록을 검색할 수 있습니다.
+GET 요청의 경로에 속성 ID를 포함하여 속성에 대한 라이브러리 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -33,13 +33,13 @@ GET /properties/{PROPERTY_ID}/libraries
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 다음 `id` 라이브러리를 소유하는 속성의 값입니다. |
+| `PROPERTY_ID` | 다음 `id` 라이브러리를 소유하는 속성의 입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 라이브러리는 다음 속성을 기반으로 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오. [응답 필터링](../guides/filtering.md) 추가 정보.
+>쿼리 매개 변수를 사용하여 나열된 라이브러리를 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오 [응답 필터링](../guides/filtering.md) 추가 정보.
 
 **요청**
 
@@ -55,7 +55,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 속성에 대한 라이브러리 목록을 반환합니다.
+성공한 응답은 지정된 속성에 대한 라이브러리 목록을 반환합니다.
 
 ```json
 {
@@ -149,7 +149,7 @@ curl -X GET \
 
 ## 라이브러리 조회 {#lookup}
 
-GET 요청 경로에 해당 ID를 제공하여 라이브러리를 찾을 수 있습니다.
+GET 요청 경로에 라이브러리 ID를 제공하여 라이브러리를 조회할 수 있습니다.
 
 **API 형식**
 
@@ -159,9 +159,9 @@ GET /libraries/{LIBRARY_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `LIBRARY_ID` | 다음 `id` 검색할 라이브러리의 일부입니다. |
+| `LIBRARY_ID` | 다음 `id` 조회할 라이브러리의 일부입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -260,7 +260,7 @@ curl -X GET \
 
 ## 라이브러리 만들기 {#create}
 
-POST 요청을 만들어 새 라이브러리를 만들 수 있습니다.
+POST 요청을 하여 새 라이브러리를 만들 수 있습니다.
 
 **API 형식**
 
@@ -270,13 +270,13 @@ POST /properties/{PROPERTY_ID}/libraries
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 다음 `id` 의 [속성](./properties.md) 추가 콘텐츠에서 라이브러리를 정의할 수 있습니다. |
+| `PROPERTY_ID` | 다음 `id` / [속성](./properties.md) 아래에 라이브러리를 정의합니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 지정된 속성에 대한 새 라이브러리를 만듭니다. 라이브러리를 처음 만들 때는 `name` 속성을 구성할 수 있습니다. 데이터 요소, 확장 및 규칙을 라이브러리에 추가하려면 관계를 만들어야 합니다. 의 섹션을 참조하십시오. [라이브러리 리소스 관리](#resources) 추가 정보.
+다음 요청은 지정된 속성에 대한 새 라이브러리를 만듭니다. 라이브러리를 처음 만들 때 `name` 속성을 구성할 수 있습니다. 데이터 요소, 확장 및 규칙을 라이브러리에 추가하려면 관계를 만들어야 합니다. 의 섹션을 참조하십시오. [라이브러리 리소스 관리](#resources) 추가 정보.
 
 ```shell
 curl -X POST \
@@ -297,14 +297,14 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes.name` | **(필수)** 사람이 읽을 수 있는 라이브러리의 이름입니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `libraries`. |
+| `attributes.name` | **(필수)** 사람이 인식할 수 있는 라이브러리 이름. |
+| `type` | 업데이트 중인 리소스 유형. 이 끝점의 경우 값은 다음과 같아야 합니다. `libraries`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 새로 만든 라이브러리의 세부 정보를 반환합니다.
+성공적으로 응답하면 새로 만든 라이브러리의 세부 정보가 반환됩니다.
 
 ```json
 {
@@ -406,11 +406,11 @@ curl -X POST \
 
 ## 라이브러리에 대한 리소스 관리 {#resources}
 
-라이브러리와 연결된 데이터 요소, 확장, 규칙 및 환경은 관계를 통해 설정됩니다. 아래 섹션에서는 API 호출을 통해 이러한 관계를 관리하는 방법을 설명합니다.
+라이브러리와 연결된 데이터 요소, 확장, 규칙 및 환경은 관계를 통해 설정됩니다. 아래 섹션에서는 API 호출을 통해 이러한 관계를 관리하는 방법을 다룹니다.
 
 ### 라이브러리에 리소스 추가 {#add-resources}
 
-를 추가하여 라이브러리에 리소스를 추가할 수 있습니다 `/relationships` POST 요청의 경로 뒤에 리소스 유형이 옵니다.
+를 추가하여 라이브러리에 리소스를 추가할 수 있습니다 `/relationships` POST 요청 경로 뒤에 리소스 유형이 옵니다.
 
 **API 형식**
 
@@ -421,9 +421,9 @@ POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | 매개 변수 | 설명 |
 | --- | --- |
 | `{LIBRARY_ID}` | 리소스를 추가할 라이브러리의 ID입니다. |
-| `{RESOURCE_TYPE}` | 라이브러리에 추가할 리소스 유형입니다. 다음 값이 허용됩니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
+| `{RESOURCE_TYPE}` | 라이브러리에 추가하는 리소스의 유형입니다. 다음 값이 허용됩니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -454,13 +454,13 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `id` | 라이브러리에 추가할 리소스의 ID입니다. |
-| `type` | 라이브러리에 추가할 리소스 유형입니다. |
+| `type` | 라이브러리에 추가하는 리소스의 유형입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적으로 응답하면 추가된 관계의 세부 정보가 반환됩니다. 수행 [조회 요청](#lookup) 의 경우 라이브러리에는 `relationships` 속성을 사용합니다.
+성공적인 응답은 추가된 관계의 세부 정보를 반환합니다. 수행 [조회 요청](#lookup) 라이브러리의 경우 아래에 추가된 관계가 표시됩니다 `relationships` 속성.
 
 ```json
 {
@@ -481,9 +481,9 @@ curl -X POST \
 }
 ```
 
-### 라이브러리에 대한 리소스 바꾸기 {#replace-resources}
+### 라이브러리의 리소스 바꾸기 {#replace-resources}
 
-를 추가하여 라이브러리에 대해 특정 유형의 기존 리소스를 모두 바꿀 수 있습니다 `/relationships` 를 PATCH 요청의 경로로 이동하고, 그 다음에 바꿀 리소스 유형을 지정합니다.
+를 추가하여 라이브러리에 대한 특정 유형의 기존 리소스를 모두 바꿀 수 있습니다 `/relationships` PATCH 요청 경로 뒤에 바꿀 리소스 유형이 옵니다.
 
 **API 형식**
 
@@ -493,14 +493,14 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{LIBRARY_ID}` | 관계를 바꾸려는 라이브러리의 ID입니다. |
-| `{RESOURCE_TYPE}` | 바꿀 리소스 유형입니다. 다음 값이 허용됩니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
+| `{LIBRARY_ID}` | 관계를 바꿀 라이브러리의 ID입니다. |
+| `{RESOURCE_TYPE}` | 교체하려는 리소스의 유형입니다. 다음 값이 허용됩니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 라이브러리에 대한 확장을 `data` 배열입니다.
+다음 요청은 라이브러리의 확장을 의 제공된 확장으로 바꿉니다. `data` 배열입니다.
 
 ```shell
 curl -X PATCH \
@@ -523,13 +523,13 @@ curl -X PATCH \
 | 속성 | 설명 |
 | --- | --- |
 | `id` | 라이브러리에 추가할 리소스의 ID입니다. |
-| `type` | 라이브러리에 추가할 리소스 유형입니다. |
+| `type` | 라이브러리에 추가하는 리소스의 유형입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 업데이트된 관계의 세부 정보를 반환합니다. 수행 [조회 요청](#lookup) 의 경우 라이브러리에는 `relationships` 속성을 사용합니다.
+성공한 응답은 업데이트된 관계의 세부 정보를 반환합니다. 수행 [조회 요청](#lookup) 라이브러리의 경우 아래 관계가 표시됩니다. `relationships` 속성.
 
 ```json
 {
@@ -548,7 +548,7 @@ curl -X PATCH \
 
 ### 라이브러리에 대한 리소스 제거 {#remove-resources}
 
-를 추가하여 라이브러리에서 기존 리소스를 제거할 수 있습니다 `/relationships` DELETE 요청의 경로와 제거할 리소스 유형이 차례로 표시됩니다.
+를 추가하여 라이브러리에서 기존 리소스를 제거할 수 있습니다 `/relationships` DELETE 요청의 경로 뒤에 제거할 리소스 유형이 옵니다.
 
 **API 형식**
 
@@ -559,13 +559,13 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 | 매개 변수 | 설명 |
 | --- | --- |
 | `{LIBRARY_ID}` | 리소스를 제거할 라이브러리의 ID입니다. |
-| `{RESOURCE_TYPE}` | 제거할 리소스 유형입니다. 다음 값이 허용됩니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
+| `{RESOURCE_TYPE}` | 제거 중인 리소스의 유형입니다. 다음 값이 허용됩니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 라이브러리에서 규칙을 제거합니다. 에 포함되지 않은 기존 규칙 `data` 배열은 삭제되지 않습니다.
+다음 요청은 라이브러리에서 규칙을 제거합니다. 에 포함되지 않은 모든 기존 규칙 `data` 배열은 삭제되지 않습니다.
 
 ```shell
 curl -X DELETE \
@@ -587,14 +587,14 @@ curl -X DELETE \
 
 | 속성 | 설명 |
 | --- | --- |
-| `id` | 라이브러리에서 제거할 리소스의 ID입니다. |
-| `type` | 라이브러리에서 제거할 리소스 유형입니다. |
+| `id` | 라이브러리에서 제거 중인 리소스의 ID입니다. |
+| `type` | 라이브러리에서 제거 중인 리소스 유형입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 리소스 유형에 대해 업데이트된 관계의 세부 정보를 반환합니다. 이 리소스 유형에 대한 관계가 없으면 `data` 속성이 빈 배열로 반환됩니다. 수행 [조회 요청](#lookup) 의 경우 라이브러리에는 `relationships` 속성을 사용합니다.
+성공한 응답은 리소스 유형에 대해 업데이트된 관계의 세부 정보를 반환합니다. 이 리소스 유형에 대한 관계가 없는 경우 `data` 속성이 빈 배열로 반환됩니다. 수행 [조회 요청](#lookup) 라이브러리의 경우 아래 관계가 표시됩니다. `relationships` 속성.
 
 ```json
 {
@@ -610,7 +610,7 @@ curl -X DELETE \
 
 ## 환경에 라이브러리 할당 {#environment}
 
-환경에 라이브러리를 할당할 수 있습니다  `/relationships/environment` POST 요청의 경로.
+환경에 라이브러리를 할당할 수 있습니다  `/relationships/environment` POST 요청 경로로 이동합니다.
 
 **API 형식**
 
@@ -622,7 +622,7 @@ POST /libraries/{LIBRARY_ID}/relationships/environment
 | --- | --- |
 | `{LIBRARY_ID}` | 할당할 라이브러리의 ID입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -644,14 +644,14 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `id` | 라이브러리를 할당하는 환경의 ID입니다. |
-| `type` | 을(를) 로 설정해야 합니다. `environments`. |
+| `id` | 라이브러리를 할당한 환경의 ID입니다. |
+| `type` | 을(를) (으)로 설정해야 합니다. `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 관계의 세부 사항을 반환합니다. 수행 [조회 요청](#lookup) 라이브러리에 대해 `relationships` 속성을 사용합니다.
+성공한 응답은 관계의 세부 정보를 반환합니다. 수행 [조회 요청](#lookup) 라이브러리의 경우 아래에 추가된 관계가 표시됩니다 `relationships` 속성.
 
 ```json
 {
@@ -668,7 +668,7 @@ curl -X POST \
 
 ## 라이브러리 전환 {#transition}
 
-PATCH 요청 경로에 해당 ID를 포함하여 적절한 기능을 제공하여 라이브러리를 다른 게시 상태로 전환할 수 있습니다 `meta.action` 값을 지정한 경우 이해할 수 있도록 해줍니다.
+PATCH 요청 경로에 ID를 포함하고 적절한 을 제공하여 라이브러리를 다른 게시 상태로 전환할 수 있습니다 `meta.action` 페이로드의 값입니다.
 
 **API 형식**
 
@@ -678,13 +678,13 @@ PATCH /libraries/{LIBRARY_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `LIBRARY_ID` | 다음 `id` 변환할 라이브러리의 고유한 랜딩 항목이 포함되어 있습니다. |
+| `LIBRARY_ID` | 다음 `id` 전환할 라이브러리의 일부입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 값을 기준으로 기존 라이브러리의 상태를 전환합니다. `meta.action` 페이로드에 제공됩니다. 라이브러리에 사용할 수 있는 작업은 아래에 요약된 대로 현재 게시 상태에 따라 다릅니다. [게시 흐름](../../ui/publishing/publishing-flow.md#state).
+다음 요청은 값을 기반으로 기존 라이브러리의 상태를 전환합니다. `meta.action` 페이로드에 제공됩니다. 라이브러리에 사용할 수 있는 작업은 다음에 요약된 대로 현재 게시 상태에 따라 다릅니다. [게시 플로우](../../ui/publishing/publishing-flow.md#state).
 
 ```shell
 curl -X PATCH \
@@ -707,14 +707,14 @@ curl -X PATCH \
 | 속성 | 설명 |
 | --- | --- |
 | `meta.action` | 라이브러리에서 수행할 특정 전환 작업입니다. 라이브러리의 현재 게시 상태에 따라 다음 작업을 사용할 수 있습니다. <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
-| `id` | 다음 `id` 업데이트할 라이브러리의 일부입니다. 이 옵션은 와 일치해야 합니다. `{LIBRARY_ID}` 요청 경로에 제공된 값입니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `libraries`. |
+| `id` | 다음 `id` 을(를) 업데이트하려고 합니다. 다음과 일치해야 합니다. `{LIBRARY_ID}` 요청 경로에 제공된 값입니다. |
+| `type` | 업데이트 중인 리소스 유형. 이 끝점의 경우 값은 다음과 같아야 합니다. `libraries`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 업데이트된 라이브러리의 세부 정보를 반환합니다.
+성공한 응답은 업데이트된 라이브러리의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -814,9 +814,9 @@ POST /libraries/{LIBRARY_ID}/builds
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `LIBRARY_ID` | 다음 `id` 게시할 라이브러리의 일부입니다. |
+| `LIBRARY_ID` | 다음 `id` 게시하려는 라이브러리의 경우입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -903,19 +903,19 @@ curl -X POST \
 }
 ```
 
-## 라이브러리에 대한 노트 관리 {#notes}
+## 라이브러리에 대한 메모 관리 {#notes}
 
-라이브러리는 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에서 텍스트 기반 메모를 만들고 검색할 수 있습니다. 자세한 내용은 [참고 끝점 안내서](./notes.md) 를 참조하십시오.
+라이브러리는 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에 대해 텍스트 기반 메모를 만들고 검색할 수 있습니다. 다음을 참조하십시오. [notes 엔드포인트 안내서](./notes.md) 라이브러리 및 기타 호환되는 리소스에 대한 메모를 관리하는 방법에 대한 자세한 내용을 보려면 를 참조하십시오.
 
 ## 라이브러리에 대한 관련 리소스 검색 {#related}
 
-다음 호출은 라이브러리에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. When [라이브러리 조회](#lookup)로 설정되면 이러한 관계는 `relationships` 속성을 사용합니다.
+다음 호출은 라이브러리에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. 날짜 [라이브러리 조회](#lookup), 이러한 관계는 아래에 나열됩니다. `relationships` 속성.
 
-자세한 내용은 [관계 안내서](../guides/relationships.md) 를 참조하십시오.
+다음을 참조하십시오. [관계 안내서](../guides/relationships.md) Reactor API의 관계에 대한 자세한 정보입니다.
 
 ### 라이브러리에 대한 관련 데이터 요소 나열 {#data-elements}
 
-다음을 추가하여 라이브러리가 사용하는 데이터 요소를 나열할 수 있습니다 `/data_elements` 조회 요청의 경로에 추가할 수 없습니다.
+라이브러리를 추가하여 사용하는 데이터 요소를 나열할 수 있습니다 `/data_elements` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -925,9 +925,9 @@ GET  /libraries/{LIBRARY_ID}/data_elements
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{LIBRARY_ID}` | 다음 `id` 목록을 만들 수 있습니다. |
+| `{LIBRARY_ID}` | 다음 `id` 데이터 요소를 나열할 라이브러리의 경우입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -943,7 +943,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 라이브러리를 사용하는 데이터 요소 목록을 반환합니다.
+성공한 응답은 지정된 라이브러리를 사용하는 데이터 요소 목록을 반환합니다.
 
 ```json
 {
@@ -1054,9 +1054,9 @@ curl -X GET \
 }
 ```
 
-### 라이브러리에 대한 관련 확장 프로그램 나열 {#extensions}
+### 라이브러리에 대한 관련 확장 나열 {#extensions}
 
-다음을 추가하여 라이브러리가 사용하는 확장을 나열할 수 있습니다 `/extensions` 조회 요청의 경로에 추가할 수 없습니다.
+라이브러리를 추가하여 사용하는 확장을 나열할 수 있습니다 `/extensions` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -1066,9 +1066,9 @@ GET  /libraries/{LIBRARY_ID}/extensions
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{LIBRARY_ID}` | 다음 `id` 확장을 나열할 라이브러리 |
+| `{LIBRARY_ID}` | 다음 `id` 확장자를 나열할 라이브러리의 경우입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -1187,7 +1187,7 @@ curl -X GET \
 
 ### 라이브러리에 대한 관련 규칙 나열 {#rules}
 
-다음을 추가하여 라이브러리가 사용하는 규칙을 나열할 수 있습니다 `/rules` 조회 요청의 경로에 추가할 수 없습니다.
+라이브러리를 추가하여 사용하는 규칙을 나열할 수 있습니다 `/rules` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -1197,9 +1197,9 @@ GET  /libraries/{LIBRARY_ID}/rules
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{LIBRARY_ID}` | 다음 `id` 규칙을 나열할 라이브러리 |
+| `{LIBRARY_ID}` | 다음 `id` 규칙을 나열할 라이브러리의 경우입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -1215,7 +1215,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 라이브러리를 사용하는 규칙 목록을 반환합니다.
+성공한 응답은 지정된 라이브러리를 사용하는 규칙 목록을 반환합니다.
 
 ```json
 {
@@ -1300,7 +1300,7 @@ curl -X GET \
 
 ### 라이브러리에 대한 관련 환경 조회 {#related-environment}
 
-를 추가하여 라이브러리가 지정된 환경을 조회할 수 있습니다 `/environment` GET 요청의 경로.
+라이브러리를 추가하여 라이브러리가 할당된 환경을 조회할 수 있습니다 `/environment` GET 요청 경로로 이동합니다.
 
 **API 형식**
 
@@ -1310,9 +1310,9 @@ GET  /libraries/{LIBRARY_ID}/environment
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{LIBRARY_ID}` | 다음 `id` 검색할 환경을 가진 라이브러리 |
+| `{LIBRARY_ID}` | 다음 `id` 검색할 환경의 라이브러리입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -1328,7 +1328,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 라이브러리가 할당된 환경의 세부 정보를 반환합니다.
+성공한 응답은 지정된 라이브러리가 할당된 환경의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -1412,7 +1412,7 @@ curl -X GET \
 
 ### 라이브러리에 대한 관련 속성 조회 {#property}
 
-다음을 추가하여 라이브러리를 소유하는 속성을 찾을 수 있습니다 `/property` GET 요청의 경로.
+를 추가하여 라이브러리를 소유한 속성을 조회할 수 있습니다 `/property` GET 요청 경로로 이동합니다.
 
 **API 형식**
 
@@ -1422,9 +1422,9 @@ GET  /libraries/{LIBRARY_ID}/property
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{LIBRARY_ID}` | 다음 `id` 속성을 조회하려는 라이브러리의 |
+| `{LIBRARY_ID}` | 다음 `id` 속성을 조회할 라이브러리의 속성입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -1440,7 +1440,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 라이브러리를 소유하는 속성의 세부 정보를 반환합니다.
+성공한 응답은 지정된 라이브러리를 소유한 속성의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -1533,9 +1533,9 @@ curl -X GET \
 }
 ```
 
-### 라이브러리를 위해 업스트림 조회 {#upstream}
+### 업스트림에서 라이브러리 찾기 {#upstream}
 
-를 추가하여 라이브러리에서 다음 라이브러리 업스트림을 조회할 수 있습니다 `/upstream_library` GET 요청의 경로.
+라이브러리를 추가하여 라이브러리에서 업스트림으로 다음 라이브러리를 조회할 수 있습니다 `/upstream_library` GET 요청 경로로 이동합니다.
 
 **API 형식**
 
@@ -1545,9 +1545,9 @@ GET  /libraries/{LIBRARY_ID}/upstream_library
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{LIBRARY_ID}` | 다음 `id` 업스트림 라이브러리를 조회하려는 라이브러리 |
+| `{LIBRARY_ID}` | 다음 `id` 업스트림 라이브러리를 조회하려는 라이브러리. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -1563,7 +1563,7 @@ curl -X GET \
 
 **응답**
 
-성공적으로 응답하면 업스트림 라이브러리의 세부 정보가 반환됩니다.
+성공한 응답은 업스트림 라이브러리의 세부 정보를 반환합니다.
 
 ```json
 {

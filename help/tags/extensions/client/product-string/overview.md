@@ -1,5 +1,5 @@
 ---
-title: Adobe Analytics 제품 문자열 확장 개요
+title: Adobe Analytics 제품 문자열 확장 프로그램 개요
 description: Adobe Experience Platform의 Adobe Analytics 제품 문자열 태그 확장에 대해 알아봅니다.
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
@@ -13,7 +13,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 `products` 변수는 사용자가 사이트에서 제품과 어떻게 상호 작용하는지를 추적합니다. 예를 들어 `products` 변수는 몇 번이나 제품을 보았는지, 장바구니에 추가했는지, 체크아웃했는지 및 구입했는지를 추적할 수 있습니다. 또한 사이트에 있는 머천다이징 카테고리의 상대적 효과를 추적할 수도 있습니다.
 
@@ -81,7 +81,7 @@ digitalData.transaction.item.productInfo.productName
 
 구현에서 사용자 지정 이벤트 또는 머천다이징 eVar를 사용하는 경우 다음 단계를 수행합니다.
 
-1. 연결된 을(를) 선택합니다 **[!UICONTROL 추가]** 버튼을 클릭합니다.
+1. 관련 항목 선택 **[!UICONTROL 추가]** 단추를 클릭합니다.
 1. 드롭다운에서 설정해야 하는 이벤트 또는 eVar를 선택합니다.
 1. 위에서 설명한 것과 동일한 구문을 사용하여 적절한 데이터 계층 변수의 경로를 입력합니다.
 

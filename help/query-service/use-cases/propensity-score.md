@@ -1,6 +1,6 @@
 ---
-title: 기계 학습에서 생성된 예측 모델을 사용하여 성향 점수 결정
-description: Query Service를 사용하여 예측 모델을 Platform 데이터에 적용하는 방법을 알아봅니다. 이 문서에서는 플랫폼 데이터를 사용하여 각 방문 시 고객의 구매 성향을 예측하는 방법을 보여줍니다.
+title: 머신 러닝에서 생성된 예측 모델을 사용하여 성향 점수 결정
+description: 쿼리 서비스를 사용하여 예측 모델을 플랫폼 데이터에 적용하는 방법에 대해 알아봅니다. 이 문서에서는 플랫폼 데이터를 사용하여 각 방문에서 고객의 구매 성향을 예측하는 방법을 보여 줍니다.
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
 source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
 workflow-type: tm+mt
@@ -9,21 +9,21 @@ ht-degree: 0%
 
 ---
 
-# 기계 학습에서 생성된 예측 모델을 사용하여 성향 점수를 결정합니다
+# 머신 러닝이 생성한 예측 모델을 사용하여 성향 점수 결정
 
-Query Service를 사용하면 시스템 학습 플랫폼에 구축된 성향 점수와 같은 예측 모델을 활용하여 Experience Platform 데이터를 분석할 수 있습니다.
+Query Service를 사용하면 머신 러닝 플랫폼에 구축된 성향 점수와 같은 예측 모델을 활용하여 Experience Platform 데이터를 분석할 수 있습니다.
 
-이 안내서에서는 계산 전자 필기장에서 모델을 교육하기 위해 Query Service를 사용하여 데이터를 기계 학습 플랫폼으로 보내는 방법을 설명합니다. 숙련된 모델은 SQL을 사용하여 데이터에 적용되어 각 방문에 대해 고객의 구매 성향을 예측할 수 있습니다.
+이 안내서에서는 컴퓨팅 전자 필기장에서 모델을 교육하기 위해 쿼리 서비스를 사용하여 데이터를 머신 러닝 플랫폼으로 보내는 방법을 설명합니다. 훈련된 모델은 SQL을 사용하여 데이터에 적용하여 각 방문에 대한 고객의 구매 성향을 예측할 수 있습니다.
 
 ## 시작하기
 
-이 프로세스의 일부로 기계 학습 모델을 교육해야 하므로 이 문서에서는 하나 이상의 기계 학습 환경에 대한 작업 지식을 가정합니다.
+이 프로세스의 일부로 머신 러닝 모델을 교육해야 하므로 이 문서에서는 하나 이상의 머신 러닝 환경에 대한 작업 지식을 가정합니다.
 
-이 예에서는 을 사용합니다 [!DNL Jupyter Notebook] 를 개발 환경으로 설정합니다. 여러 가지 옵션을 사용할 수 있지만, [!DNL Jupyter Notebook] 계산 요구 사항이 낮은 오픈 소스 웹 애플리케이션이므로 를 사용하는 것이 좋습니다. 그럴 수 있습니다 [공식 사이트에서 다운로드](https://jupyter.org/).
+이 예에서는 를 사용합니다. [!DNL Jupyter Notebook] 를 개발 환경으로 사용하십시오. 여러 가지 옵션이 있긴 하지만, [!DNL Jupyter Notebook] 은 계산 요구 사항이 낮은 오픈 소스 웹 애플리케이션이므로 권장됩니다. 다음과 같을 수 있습니다 [공식 사이트에서 다운로드됨](https://jupyter.org/).
 
-아직 수행하지 않았다면 다음 단계를 수행하십시오. [connect [!DNL Jupyter Notebook] Adobe Experience Platform 쿼리 서비스 사용](../clients/jupyter-notebook.md) 이 안내서를 계속하기 전에
+아직 수행하지 않았다면 다음 단계를 수행합니다. [연결 [!DNL Jupyter Notebook] Adobe Experience Platform 쿼리 서비스 사용](../clients/jupyter-notebook.md) 이 안내서를 계속하기 전에.
 
-이 예제에 사용되는 라이브러리는 다음과 같습니다.
+이 예제에서 사용되는 라이브러리는 다음과 같습니다.
 
 ```console
 python=3.6.7
@@ -37,17 +37,17 @@ tqdm
 
 ## Platform에서 로 분석 테이블 가져오기 [!DNL Jupyter Notebook] {#import-analytics-tables}
 
-성향 점수 모델을 생성하려면 Platform에 저장된 Analytics 데이터의 프로젝션을 [!DNL Jupyter Notebook]. 보낸 사람 [!DNL Python] 3 [!DNL Jupyter Notebook] query Service에 연결된 다음 명령은 가상 의류 저장소인 Luma에서 고객 행동 데이터 세트를 가져옵니다. 플랫폼 데이터는 XDM(Experience Data Model) 형식을 사용하여 저장되므로 스키마의 구조를 준수하는 샘플 JSON 개체를 생성해야 합니다. 방법에 대한 지침은 설명서를 참조하십시오 [샘플 JSON 개체 생성](../../xdm/ui/sample.md).
+성향 점수 모델을 생성하려면 Platform에 저장된 분석 데이터의 투영을 로 가져와야 합니다 [!DNL Jupyter Notebook]. 다음에서: [!DNL Python] 3 [!DNL Jupyter Notebook] 쿼리 서비스에 연결된 다음 명령은 가상 의류 매장인 Luma에서 고객 행동 데이터 세트를 가져옵니다. Platform 데이터가 XDM(Experience Data Model) 형식을 사용하여 저장되므로 스키마의 구조를 준수하는 샘플 JSON 개체를 생성해야 합니다. 방법에 대한 지침은 설명서 를 참조하십시오 [샘플 JSON 개체 생성](../../xdm/ui/sample.md).
 
-![다음 [!DNL Jupyter Notebook] 여러 명령이 강조 표시된 대시보드](../images/use-cases/jupyter-commands.png)
+![다음 [!DNL Jupyter Notebook] 여러 명령이 강조 표시된 대시보드.](../images/use-cases/jupyter-commands.png)
 
-출력에는 Luma의 행동 데이터 세트에서 포함된 모든 열의 테이블 분할 보기가 표시됩니다 [!DNL Jupyter Notebook] 대시보드 .
+출력은 Luma 내의 동작 데이터 세트에서 모든 열의 테이블화된 보기를 표시합니다. [!DNL Jupyter Notebook] 대시보드입니다.
 
-![내에서 Luma의 가져온 고객 행동 데이터 세트에 대한 표 화된 출력 [!DNL Jupyter Notebook].](../images/use-cases/behavioural-dataset-results.png)
+![내에서 가져온 Luma의 고객 행동 데이터 세트에 대한 표로 구분된 출력입니다. [!DNL Jupyter Notebook].](../images/use-cases/behavioural-dataset-results.png)
 
-## 기계 학습을 위한 데이터 준비 {#prepare-data-for-machine-learning}
+## 머신 러닝을 위한 데이터 준비 {#prepare-data-for-machine-learning}
 
-기계 학습 모델을 교육하려면 대상 열을 식별해야 합니다. 구매 성향 이 사용 사례의 목표는 다음과 같습니다. `analytic_action` 열이 Luma 결과에서 target 열로 선택됩니다. 값 `productPurchase` 은 고객 구매의 지표입니다. 다음 `purchase_value` 및 `purchase_num` 열이 제품 구매 작업과 직접 관련되어 있어 제거됩니다.
+머신 러닝 모델을 교육하려면 대상 열을 식별해야 합니다. 구매 성향이 이 사용 사례의 목표이므로, `analytic_action` 열은 Luma 결과에서 대상 열로 선택됩니다. 값 `productPurchase` 는 고객 구매를 나타내는 표시기입니다. 다음 `purchase_value` 및 `purchase_num` 열은 제품 구매 작업과 직접 관련이 있으므로 제거됩니다.
 
 이러한 작업을 수행하는 명령은 다음과 같습니다.
 
@@ -58,10 +58,10 @@ df['target'] = (df['analytic_action'] == 'productPurchase').astype(int)
 df.drop(['analytic_action','purchase_value'],axis=1,inplace=True)
 ```
 
-그런 다음 Luma 데이터 세트의 데이터를 적절한 표현으로 변환해야 합니다. 다음 두 단계가 필요합니다.
+다음으로, Luma 데이터 세트의 데이터는 적절한 표현들로 변환되어야 한다. 다음 두 단계가 필요합니다.
 
 1. 숫자를 나타내는 열을 숫자 열로 변환합니다. 이렇게 하려면 `dataframe`.
-1. 카테고리 열을 숫자 열로 변환합니다.
+1. 범주 열을 숫자 열로 변형할 수도 있습니다.
 
 ```python
 #convert columns that represent numbers
@@ -69,7 +69,7 @@ num_cols = ['purchase_num', 'value_cart', 'value_lifetime']
 df[num_cols] = df[num_cols].apply(pd.to_numeric, errors='coerce')
 ```
 
-이름이 *핫 인코딩* 는 기계 및 딥 학습 알고리즘에서 사용할 카테고리적 데이터 변수를 변환하는 데 사용됩니다. 이렇게 하면 모델의 분류 정확도와 예측이 향상됩니다. 를 사용하십시오 `Sklearn` 라이브러리 를 사용하여 별도의 열에 각 카테고리적 값을 나타냅니다.
+다음과 같은 기법 *1개의 핫 인코딩* 는 기계 및 딥 러닝 알고리즘과 함께 사용하기 위해 범주형 데이터 변수를 변환하는 데 사용됩니다. 이는 결과적으로 모델의 분류 정확도뿐만 아니라 예측도 향상시킵니다. 사용 `Sklearn` 라이브러리로 개별 열에 각 범주 값을 표시할 수 있습니다.
 
 ```python
 from sklearn.preprocessing import OneHotEncoder
@@ -98,14 +98,14 @@ X = pd.DataFrame( np.concatenate((enc.transform(df_cat).toarray(),df[num_cols]),
 y = df['target']
 ```
 
-로 정의된 데이터 `X` 는 테이블 분할되고 아래와 같이 표시됩니다.
+다음으로 정의된 데이터: `X` 은 표로 작성되며 다음과 같이 표시됩니다.
 
-![내의 X의 테이블 분할 출력 [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
+![다음 내에 있는 X의 표로 정리된 출력 [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
 
 
-이제 기계 학습을 위해 필요한 데이터를 사용할 수 있으므로 미리 구성된 기계 학습 모델에 [!DNL Python]s `sklearn` 라이브러리. [!DNL Logistics Regression] 는 성향 모델을 교육하는 데 사용되며 테스트 데이터의 정확도를 볼 수 있습니다. 이 경우 약 85%입니다.
+이제 머신 러닝에 필요한 데이터를 사용할 수 있으므로 사전 구성된 머신 러닝 모델에 맞출 수 있습니다. [!DNL Python]의 `sklearn` 라이브러리입니다. [!DNL Logistics Regression] 성향 모델을 교육하는 데 사용되며 테스트 데이터의 정확성을 확인할 수 있도록 해줍니다. 이 경우 약 85%입니다.
 
-다음 [!DNL Logistic Regression] 기계 학습 알고리즘의 성능을 추정하기 위해 사용되는 알고리즘 및 열차 테스트 분할 방법은 아래 코드 블록에 가져옵니다.
+다음 [!DNL Logistic Regression] 머신 러닝 알고리즘의 성능을 추정하는 데 사용되는 알고리즘과 train-test split 방법은 아래 코드 블록으로 가져옵니다.
 
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -121,9 +121,9 @@ print("Test data accuracy: {}".format(clf.score(X_test, y_test)))
 
 테스트 데이터 정확도는 0.8518518518518519입니다.
 
-물류 회귀 사용을 통해 구매의 이유를 시각화하고 내림차순에서 등급 중요도에 따라 성향을 결정하는 기능을 정렬할 수 있습니다. 첫 번째 열은 구매 행동을 유도하는 더 높은 원인을 나타냅니다. 후자 열은 구매 행동을 초래하지 않는 요소를 나타냅니다.
+물류 회귀 분석을 사용하여 구매 이유를 시각화하고 내림차순에서 등급 중요도별로 성향을 결정하는 기능을 정렬할 수 있습니다. 첫 번째 열은 구매 행동으로 이어지는 더 높은 인과관계를 나타낸다. 후자의 열들은 구매 행동으로 이어지지 않는 요인들을 나타낸다.
 
-결과를 두 개의 막대 차트로 시각화하는 코드는 다음과 같습니다.
+결과를 두 막대 차트로 시각화하는 코드는 다음과 같습니다.
 
 ```python
 from matplotlib import pyplot as plt
@@ -153,19 +153,19 @@ ax2.set_title("Top 10 features to define \n a propensity to NOT purchase")
 plt.show()
 ```
 
-아래에 결과의 세로 막대 차트 시각화가 표시됩니다.
+결과의 세로 막대 차트 시각화는 아래에 표시됩니다.
 
-![구매 또는 구매 안함을 정의하는 상위 10개 기능의 시각화.](../images/use-cases/visualized-results.png)
+![구매 성향을 정의하는 상위 10개 기능의 시각화입니다.](../images/use-cases/visualized-results.png)
 
-막대 차트에서 몇 가지 패턴을 식별할 수 있습니다. POS(Point of Sale) 및 환급 관련 통화 항목은 구매 행동을 결정하는 가장 중요한 요소입니다. 하지만 반항 및 송장으로 통화 항목을 사용할 경우 구매 행동을 정의할 수 있는 중요한 역할이 됩니다. 이러한 통찰력은 마케터가 이러한 고객의 구매 성향을 해결하기 위해 마케팅 캠페인을 수행하는 데 활용할 수 있는 수량적이고 실행 가능한 통찰력입니다.
+막대 차트에서 몇 가지 패턴을 식별할 수 있습니다. 채널 판매 지점(POS) 및 환급으로서의 콜 주제는 구매 행동을 결정하는 가장 중요한 요소입니다. Call topics as complaints 및 invoices 는 구매하지 않는 행동을 정의하는 중요한 역할입니다. 이러한 통찰력은 마케터가 마케팅 캠페인을 수행하는 데 활용하여 이러한 고객의 구매 성향을 해결할 수 있는 수량화되고 실행 가능한 통찰력입니다.
 
-## Query Service를 사용하여 교육된 모델을 적용합니다 {#use-query-service-to-apply-trained-model}
+## 쿼리 서비스를 사용하여 학습된 모델 적용 {#use-query-service-to-apply-trained-model}
 
-숙련된 모델이 만들어지면 Experience Platform에 있는 데이터에 적용되어야 합니다. 이렇게 하려면 기계 학습 파이프라인의 논리를 SQL으로 변환해야 합니다. 이 전환의 두 주요 구성 요소는 다음과 같습니다.
+훈련된 모델이 만들어지면 Experience Platform에 보관된 데이터에 적용해야 합니다. 이렇게 하려면 머신 러닝 파이프라인의 논리를 SQL로 변환해야 합니다. 이 전환의 두 가지 주요 구성 요소는 다음과 같습니다.
 
-- 먼저 SQL이 [!DNL Logistics Regression] 예측 레이블의 확률을 얻는 모듈입니다. 물류 회귀에서 생성한 모델은 회귀 모델을 생성했습니다 `y = wX + c`  가중치 `w` 및 절편 `c` 는 모델의 출력입니다. SQL 기능은 가중치를 곱하는 데 사용하여 확률을 얻을 수 있습니다.
+- 먼저 SQL에서 [!DNL Logistics Regression] 예측 레이블의 확률을 얻기 위한 모듈입니다. Logistics Regression에 의해 생성된 모형은 회귀 모형을 생성하였다 `y = wX + c`  가중치 `w` and intercept `c` 는 모델의 출력입니다. SQL 특징은 확률을 얻기 위해 가중치를 곱하는 데 사용될 수 있다.
 
-- 둘째로, 공학 프로세스는 [!DNL Python] 핫 인코딩을 한 개 사용하는 SQL에도 통합해야 합니다. 예를 들어, 원래 데이터베이스에는 `geo_county` 열을 사용하여 카운티를 저장하지만 열이 `geo_county=Bexar`, `geo_county=Dallas`, `geo_county=DeKalb`. 다음 SQL 문은 동일한 변환을 수행합니다. 여기서 `w1`, `w2`, 및 `w3` 에서 배운 가중치로 치환할 수 있습니다 [!DNL Python]:
+- 둘째, 엔지니어링 프로세스는 [!DNL Python] 핫 인코딩을 사용하여 SQL에도 통합해야 합니다. 예를 들어 원본 데이터베이스에는 `geo_county` 군을 저장하는 열이지만 열은 로 변환됩니다. `geo_county=Bexar`, `geo_county=Dallas`, `geo_county=DeKalb`. 다음 SQL 문은 동일한 변환을 수행합니다. 여기서 `w1`, `w2`, 및 `w3` 의 모델에서 학습한 가중치로 대체할 수 있습니다. [!DNL Python]:
 
 ```sql
 SELECT  CASE WHEN geo_state = 'Bexar' THEN FLOAT(w1) ELSE 0 END AS f1,
@@ -173,29 +173,29 @@ SELECT  CASE WHEN geo_state = 'Bexar' THEN FLOAT(w1) ELSE 0 END AS f1,
         CASE WHEN geo_state = 'Bexar' THEN FLOAT(w3) ELSE 0 END AS f3,
 ```
 
-숫자 기능의 경우 아래 SQL 문과 같이 가중치가 있는 열에 직접 곱할 수 있습니다.
+숫자 피쳐의 경우 아래 SQL 문에서 볼 수 있듯이 열에 가중치를 직접 곱할 수 있습니다.
 
 ```sql
 SELECT FLOAT(purchase_num) * FLOAT(w4) AS f4,
 ```
 
-숫자를 얻은 후, 물류 회귀 알고리즘에서 최종 예측을 생성하는 신호 처리 기능으로 포팅할 수 있습니다. 아래 설명서에서 `intercept` 회귀에서 절편 수입니다.
+숫자가 얻어지면 Logistics Regression 알고리즘이 최종 예측을 생성하는 시그모이드 함수로 포팅될 수 있습니다. 아래 문장에서 `intercept` 는 회귀의 절편 수입니다.
         
 
 ```sql
 SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 THEN 1 ELSE 0 END AS Prediction;
 ```
  
-### 종단 간 예
+### 전체적인 예
 
-두 개의 열(`c1` 및 `c2`) `c1` 두 가지 카테고리가 있습니다. [!DNL Logistic Regression] 알고리즘은 다음 함수를 사용하여 교육됩니다.
+열이 두 개인 경우(`c1` 및 `c2`), `c1` 에는 두 가지 범주가 있습니다. [!DNL Logistic Regression] 알고리즘은 다음 함수로 학습됩니다.
  
 
 ```python
 y = 0.1 * "c1=category 1"+ 0.2 * "c1=category 2" +0.3 * c2+0.4
 ```
  
-SQL의 해당 값은 다음과 같습니다.
+SQL에서 이와 동일한 기능은 다음과 같습니다.
 
 ```sql
 SELECT
@@ -235,7 +235,7 @@ def generate_lr_inference_sql(ohc_columns, num_cols, clf, db):
     return final_sql
 ```
 
-SQL을 사용하여 데이터베이스를 유추하면 출력은 다음과 같습니다.
+SQL을 사용하여 데이터베이스를 유추하는 경우 출력은 다음과 같습니다.
 
 ```python
 sql = generate_lr_inference_sql(ohc_columns, num_cols, clf, "fdu_luma_raw")
@@ -245,13 +245,13 @@ colnames = [desc[0] for desc in cur.description]
 pd.DataFrame(samples,columns=colnames)
 ```
 
-테이블 분석 결과는 `0` 구매 성향 없음 `1` 확실한 구매 성향을 의미합니다.
+테이블화된 결과는 의 각 고객 세션에 대한 구매 성향을 표시합니다. `0` 즉, 구매 성향이 없으며 `1` 이는 구매 성향이 확인된 것을 의미합니다.
 
-![SQL을 사용한 데이터베이스 추론의 테이블 분석 결과.](../images/use-cases/inference-results.png)
+![SQL을 사용한 데이터베이스 추론의 표로 정리된 결과입니다.](../images/use-cases/inference-results.png)
 
-## 샘플링된 데이터 작업: 부트스트랩 {#working-on-sampled-data}
+## 샘플링된 데이터 작업: 부트스트래핑 {#working-on-sampled-data}
 
-데이터 크기가 너무 커서 로컬 시스템에서 모델 교육을 위한 데이터를 저장할 수 없는 경우 쿼리 서비스의 전체 데이터 대신 샘플을 가져올 수 있습니다. 쿼리 서비스에서 샘플링하는 데 필요한 데이터의 양을 알기 위해 부트스트래핑이라는 기술을 적용할 수 있습니다. 이러한 경우 부트스트랩은 모델이 다양한 샘플로 여러 번 교육되고 다른 샘플들 간의 모델의 정확성 차이가 검사됨을 의미합니다. 위에 제시된 성향 모델 예를 조정하려면 먼저 전체 기계 학습 워크플로우를 함수로 캡슐화합니다. 코드는 다음과 같습니다.
+데이터 크기가 너무 커서 로컬 컴퓨터에서 모델 교육에 대한 데이터를 저장할 수 없는 경우 쿼리 서비스에서 전체 데이터 대신 샘플을 가져올 수 있습니다. 쿼리 서비스에서 샘플링하는 데 필요한 데이터의 양을 알려면 부트스트랩 이라는 기술을 적용할 수 있습니다. 이와 관련하여, 부트스트래핑은 모델이 다양한 샘플로 여러 번 트레이닝되고, 상이한 샘플 사이에서 모델의 정확도의 분산이 검사되는 것을 의미한다. 위에 제공된 성향 모델 예제를 조정하기 위해, 먼저 전체 기계 학습 워크플로우를 함수로 캡슐화합니다. 코드는 다음과 같습니다.
 
 ```python
 def end_to_end_pipeline(df):
@@ -295,7 +295,7 @@ def end_to_end_pipeline(df):
     return clf.score(X_test, y_test)
 ```
 
-그런 다음 이 함수는 한 루프에서 여러 번 실행할 수 있습니다(예: 10회). 이전 코드의 차이점은 이제 샘플이 전체 표에서 가져오지 않고 행 샘플만 가져왔다는 것입니다. 예를 들어 아래 샘플 코드는 1000개의 행만 사용합니다. 각 반복에 대한 정확도를 저장할 수 있습니다.
+그런 다음 이 함수는 루프에서 여러 번, 예를 들어 10번 실행할 수 있습니다. 이전 코드와 다른 점은 이제 전체 표에서 샘플을 가져오는 것이 아니라 행의 샘플에서만 샘플을 가져온다는 것입니다. 예를 들어 아래 샘플 코드는 1000개의 행만 사용합니다. 각 반복에 대한 정확도를 저장할 수 있습니다.
 
 ```python
 from tqdm import tqdm
@@ -320,8 +320,8 @@ for i in tqdm(range(100)):
 bootstrap_accuracy = np.sort(bootstrap_accuracy)
 ```
 
-그러면 부트스트랩된 모델의 정확성이 정렬됩니다. 그런 다음 모델의 정확성 10번째와 90번째 수량을 지정한 샘플 크기로 모델의 정확성에 대한 95% 신뢰 구간이 됩니다.
+그런 다음 부트스트랩 모델의 정확도가 정렬됩니다. 그 후, 모델의 정확도의 10번째 및 90번째 분위수는 주어진 샘플 크기로 모델의 정확도에 대한 95% 신뢰 구간이 된다.
 
 ![성향 점수의 신뢰 구간을 표시하는 인쇄 명령입니다.](../images/use-cases/confidence-interval.png)
 
-위의 그림에서 모델을 교육하기 위해 1000개의 행만 사용하는 경우 약 84%와 88% 사이에 정확도가 떨어질 것으로 예상할 수 있습니다. 을 조정할 수 있습니다 `LIMIT` 모델의 성능을 보장하기 위해 필요에 따라 쿼리 서비스 쿼리의 절을 참조하십시오.
+위 그림은 모델을 교육하기 위해 1000개의 행만 사용하는 경우 정확도가 약 84%와 88% 사이에 떨어질 것으로 예상할 수 있음을 나타냅니다. 다음을 조정할 수 있습니다. `LIMIT` 모델의 성능을 보장하기 위해 필요에 따라 쿼리 서비스 의 조항입니다.

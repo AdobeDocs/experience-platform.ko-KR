@@ -1,6 +1,6 @@
 ---
-title: 오디오 및 비디오 확장 프로그램용 Adobe Medium Analytics(3.x SDK) 개요
-description: Adobe Experience Platform의 오디오 및 비디오 태그 확장용 Adobe Medium Analytics(3.x SDK)에 대해 알아봅니다.
+title: 오디오 및 비디오 확장 기능용 Adobe Medium Analytics(3.x SDK) 개요
+description: Adobe Experience Platform의 오디오 및 비디오 태그 확장 기능용 Adobe Medium Analytics(3.x SDK)에 대해 알아봅니다.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
 source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
 workflow-type: tm+mt
@@ -9,15 +9,15 @@ ht-degree: 74%
 
 ---
 
-# 오디오 및 비디오 확장 프로그램용 Adobe Medium Analytics(3.x SDK) 개요
+# 오디오 및 비디오 확장 기능용 Adobe Medium Analytics(3.x SDK) 개요
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Media Analytics(3.x SDK) for Audio and Video 확장(Media Analytics 확장) 설치, 구성 및 구현 관련 정보에 대해서는 이 설명서를 참조합니다. 예제 및 샘플 링크와 함께 이 확장을 사용하여 규칙을 만들 때 사용할 수 있는 옵션이 포함되어 있습니다.
 
-MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 3.x SDK)를 추가합니다. 이 확장은 `Media` 태그를 사용할 수 있는 사이트 또는 프로젝트에 대한 추적기 인스턴스. MA 확장을 사용하려면 다음 두 개의 확장이 추가로 필요합니다.
+MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 3.x SDK)를 추가합니다. 이 확장은 다음을 추가하는 기능을 제공합니다 `Media` 태그 사용 사이트 또는 프로젝트에 대한 추적기 인스턴스. MA 확장을 사용하려면 다음 두 개의 확장이 추가로 필요합니다.
 
 * [Analytics 확장](../analytics/overview.md)
 * [Experience Cloud ID 확장](../id-service/overview.md)
@@ -26,16 +26,16 @@ MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 3.x SDK)를 추가
 >
 >이 확장은 Media 2.x SDK와 이전 버전과 호환되지 않는 Media 3.x SDK와 함께 배포됩니다. 2.x는 더 이상 사용되지 않으므로 3.x로 업데이트하십시오.
 
-태그 지원 프로젝트에서 위에 언급된 확장 세 개를 모두 포함했으면 다음 두 가지 방법 중 하나를 사용하여 진행할 수 있습니다.
+태그 활성화 프로젝트에서 위에 언급된 확장 세 개를 모두 포함했으면 다음 두 가지 방법 중 하나를 사용하여 진행할 수 있습니다.
 
 * 웹 앱의 `Media` API 사용
 * 특정 미디어 플레이어 이벤트를 `Media` 추적기 인스턴스의 API에 매핑하는 플레이어 전용 확장을 포함하거나 빌드합니다. 이 인스턴스는 MA 확장을 통해 노출됩니다.
 
 ## MA 확장 설치 및 구성
 
-* **설치:** MA 확장을 설치하려면 확장 속성을 열고 **[!UICONTROL Extensions > Catalog]**&#x200B;를 마우스로 가리키면 다음이 표시됩니다 **[!UICONTROL 오디오 및 비디오용 Adobe Medium Analytics(3.x SDK)]** 확장을 선택하고 **[!UICONTROL 설치]**.
+* **설치:** MA 확장을 설치하려면 확장 속성을 열고 **[!UICONTROL 확장 > 카탈로그]**, 마우스로 가리키기 **[!UICONTROL 오디오 및 비디오용 Adobe Medium Analytics(3.x SDK)]** 확장 및 선택 **[!UICONTROL 설치]**.
 
-* **구성:** MA 확장을 구성하려면 [!UICONTROL 확장] 탭에서 확장을 마우스로 가리킨 다음 을 선택합니다 **[!UICONTROL 구성]**:
+* **구성:** MA 확장을 구성하려면 [!UICONTROL 확장] 탭을 클릭하고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**:
 
 ![MA 확장 구성](../../../images/ext-ma-config.png)
 
@@ -58,7 +58,7 @@ MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 3.x SDK)를 추가
 
 ### 웹 페이지/JS 앱에서 사용
 
-MA 확장은 의 &quot;Export APIs to Window Object&quot; 설정을 활성화하여 글로벌 창 개체에서 Media API를 내보냅니다 [!UICONTROL 구성] 페이지. 구성된 변수 이름 아래에 API를 내보냅니다. 예를 들어 변수 이름이 `ADB`가 되도록 구성된 경우 Media API는 `window.ADB.Media`로 액세스할 수 있습니다.
+MA 확장은 의 &quot;Export APIs to Window Object&quot; 설정을 활성화하여 글로벌 창 개체에서 Media API를 내보냅니다. [!UICONTROL 구성] 페이지를 가리키도록 업데이트하는 중입니다. 구성된 변수 이름 아래에 API를 내보냅니다. 예를 들어 변수 이름이 `ADB`가 되도록 구성된 경우 Media API는 `window.ADB.Media`로 액세스할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -85,7 +85,7 @@ MA 확장은 의 &quot;Export APIs to Window Object&quot; 설정을 활성화하
 
 ### 다른 확장에서 사용
 
-MA 확장은 `media` 공유 모듈로 다른 확장에 추가할 수 있습니다. 공유 모듈에 대한 자세한 내용은 [공유 모듈 설명서](../../../extension-dev/web/shared.md)를 참조하십시오.
+MA 확장은 `media` 다른 확장에 대한 공유 모듈로 사용됩니다. 공유 모듈에 대한 자세한 내용은 [공유 모듈 설명서](../../../extension-dev/web/shared.md)를 참조하십시오.
 
 >[!IMPORTANT]
 >

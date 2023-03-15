@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;개발자 안내서;SDK;모델 작성;데이터 과학 작업 공간;인기 있는 주제;테스트
+keywords: Experience Platform;개발자 안내서;SDK;모델 작성;Data Science Workspace;인기 항목;테스트
 solution: Experience Platform
 title: 모델 작성 SDK
-description: 모델 작성 SDK를 사용하면 Adobe Experience Platform Data Science Workspace에서 사용할 수 있는 사용자 정의 기계 학습 레서피 및 기능 파이프라인을 개발하여 PySpark 및 Spark(Scala)에서 구현 가능한 템플릿을 제공할 수 있습니다.
+description: 모델 작성 SDK를 사용하면 Adobe Experience Platform Data Science Workspace에서 사용할 수 있는 사용자 정의 머신 러닝 레서피 및 기능 파이프라인을 개발하고 PySpark 및 Spark(Scala)에서 구현 가능한 템플릿을 제공할 수 있습니다.
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -13,17 +13,17 @@ ht-degree: 1%
 
 # 모델 작성 SDK
 
-모델 작성 SDK를 사용하면 사용자 정의 기계 학습 레서피 및 기능 파이프라인을 개발할 수 있습니다 [!DNL Adobe Experience Platform] Data Science Workspace에서 다음을 수행하여 구현 가능한 템플릿을 제공합니다. [!DNL PySpark] 및 [!DNL Spark (Scala)].
+모델 작성 SDK를 사용하면 다음에서 사용할 수 있는 사용자 지정 머신 러닝 레서피 및 기능 파이프라인을 개발할 수 있습니다. [!DNL Adobe Experience Platform] 데이터 과학 작업 영역, 구현 가능한 템플릿 제공 [!DNL PySpark] 및 [!DNL Spark (Scala)].
 
 이 문서에서는 모델 작성 SDK 내에 있는 다양한 클래스에 대한 정보를 제공합니다.
 
 ## DataLoader {#dataloader}
 
-DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환과 관련된 모든 것을 캡슐화합니다. 입력 데이터의 예로는 교육, 점수 책정 또는 기능 엔지니어링 등이 있습니다. 데이터 로더는 추상 클래스를 확장합니다. `DataLoader` abstract 메서드를 재정의해야 합니다. `load`.
+DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환과 관련된 모든 항목을 캡슐화합니다. 입력 데이터의 예로는 교육, 채점 또는 기능 엔지니어링을 위한 데이터가 있습니다. 데이터 로더는 추상 클래스를 확장합니다. `DataLoader` 및 은(는) abstract 메서드를 재정의해야 합니다. `load`.
 
-**PySpark**
+**PySparc**
 
-다음 표에서는 PySpark Data Loader 클래스의 추상 메서드를 설명합니다.
+다음 표에서는 PySpark 데이터 로더 클래스의 추상 메서드에 대해 설명합니다.
 
 <table>
     <thead>
@@ -36,13 +36,13 @@ DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환�
         <tr>
             <td>
                 <p><code>load(self, configProperties, spark)</code></p>
-                <p>플랫폼 데이터를 Fanda DataFrame으로 로드 및 반환</p>
+                <p>플랫폼 데이터를 Pandas DataFrame으로 로드하고 반환합니다.</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: 자체 참조</li>
                     <li><code>configProperties</code>: 구성 속성 맵</li>
-                    <li><code>spark</code>: 스파크 세션</li>
+                    <li><code>spark</code>: Spark 세션</li>
                 </ul>
             </td>
         </tr>
@@ -51,7 +51,7 @@ DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환�
 
 **스파크**
 
-다음 표에서는 [!DNL Spark] Data Loader 클래스:
+다음 표에서는 의 추상 메서드를 설명합니다. [!DNL Spark] 데이터 로더 클래스:
 
 <table>
     <thead>
@@ -69,7 +69,7 @@ DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환�
             <td>
                 <ul>
                     <li><code>configProperties</code>: 구성 속성 맵</li>
-                    <li><code>sparkSession</code>: 스파크 세션</li>
+                    <li><code>sparkSession</code>: Spark 세션</li>
                 </ul>
             </td>
         </tr>
@@ -78,9 +78,9 @@ DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환�
 
 ### 에서 데이터 로드 [!DNL Platform] 데이터 세트 {#load-data-from-a-platform-dataset}
 
-다음 예제는 [!DNL Platform] 데이터를 ID로 반환하고 데이터 세트 ID가 인 DataFrame을 반환합니다(`datasetId`)는 구성 파일에서 정의된 속성입니다.
+다음 예제는 [!DNL Platform] ID별 데이터를 반환하고 데이터 세트 ID(`datasetId`)는 구성 파일에서 정의된 속성입니다.
 
-**PySpark**
+**PySparc**
 
 ```python
 # PySpark
@@ -128,7 +128,7 @@ class MyDataLoader(DataLoader):
         return pd
 ```
 
-**스파크(스칼라)**
+**스파크(Scala)**
 
 ```scala
 // Spark
@@ -191,13 +191,13 @@ class MyDataLoader extends DataLoader {
 }
 ```
 
-## DataSaver {#datasaver}
+## 데이터 보호기 {#datasaver}
 
-DataSaver 클래스는 점수 책정 또는 기능 엔지니어링 등의 출력 데이터 저장과 관련된 모든 것을 캡슐화합니다. 데이터 저장기는 추상 클래스를 확장합니다. `DataSaver` abstract 메서드를 재정의해야 합니다. `save`.
+DataSaver 클래스는 채점 또는 기능 엔지니어링의 데이터를 포함하여 출력 데이터 저장과 관련된 모든 항목을 캡슐화합니다. 데이터 저장자는 추상 클래스를 확장합니다. `DataSaver` 및 은(는) abstract 메서드를 재정의해야 합니다. `save`.
 
-**PySpark**
+**PySparc**
 
-다음 표에서는 [!DNL PySpark] 데이터 보호기 클래스:
+다음 표에서는 의 추상 메서드를 설명합니다. [!DNL PySpark] Data Saver 클래스:
 
 <table>
     <thead>
@@ -210,22 +210,22 @@ DataSaver 클래스는 점수 책정 또는 기능 엔지니어링 등의 출력
         <tr>
             <td>
                 <p><code>save(self, configProperties, dataframe)</code></p>
-                <p>출력 데이터를 DataFrame으로 수신하여 Platform 데이터 세트에 저장합니다</p>
+                <p>출력 데이터를 DataFrame으로 수신하여 Platform 데이터 세트에 저장합니다.</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: 자체 참조</li>
                     <li><code>configProperties</code>: 구성 속성 맵</li>
-                    <li><code>dataframe</code>: DataFrame 형식으로 저장할 데이터</li>
+                    <li><code>dataframe</code>: DataFrame 형태로 저장할 데이터</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-**스파크(스칼라)**
+**스파크(Scala)**
 
-다음 표에서는 [!DNL Spark] 데이터 보호기 클래스:
+다음 표에서는 의 추상 메서드를 설명합니다. [!DNL Spark] Data Saver 클래스:
 
 <table>
     <thead>
@@ -238,12 +238,12 @@ DataSaver 클래스는 점수 책정 또는 기능 엔지니어링 등의 출력
         <tr>
             <td>
                 <p><code>save(configProperties, dataFrame)</code></p>
-                <p>출력 데이터를 DataFrame으로 수신하여 Platform 데이터 세트에 저장합니다</p>
+                <p>출력 데이터를 DataFrame으로 수신하여 Platform 데이터 세트에 저장합니다.</p>
             </td>
             <td>
                 <ul>
                     <li><code>configProperties</code>: 구성 속성 맵</li>
-                    <li><code>dataFrame</code>: DataFrame 형식으로 저장할 데이터</li>
+                    <li><code>dataFrame</code>: DataFrame 형태로 저장할 데이터</li>
                 </ul>
             </td>
         </tr>
@@ -252,15 +252,15 @@ DataSaver 클래스는 점수 책정 또는 기능 엔지니어링 등의 출력
 
 ### 에 데이터 저장 [!DNL Platform] 데이터 세트 {#save-data-to-a-platform-dataset}
 
-데이터를 [!DNL Platform] 데이터 집합에서 속성을 제공하거나 구성 파일에서 정의해야 합니다.
+에 데이터를 저장하려면 [!DNL Platform] 데이터 세트인 경우 구성 파일에 속성을 제공하거나 정의해야 합니다.
 
-- 유효한 [!DNL Platform] 데이터를 저장할 데이터 세트 ID
-- 조직에 속하는 테넌트 ID
+- 유효 [!DNL Platform] 데이터를 저장할 데이터 세트 ID
+- 조직에 속한 테넌트 ID입니다
 
-다음 예제에서는 데이터를 저장합니다(`prediction`) 위에 [!DNL Platform] 데이터 세트, 여기서 데이터 세트 ID(`datasetId`) 및 테넌트 ID(`tenantId`)는 구성 파일 내에 정의된 속성입니다.
+다음 예제에서는 데이터를 저장합니다(`prediction`)에 [!DNL Platform] 데이터 세트, 데이터 세트 ID(`datasetId`) 및 임차인 ID(`tenantId`)는 구성 파일 내에서 정의된 속성입니다.
 
 
-**PySpark**
+**PySparc**
 
 ```python
 # PySpark
@@ -325,7 +325,7 @@ class MyDataSaver(DataSaver):
             .save()
 ```
 
-**스파크(스칼라)**
+**스파크(Scala)**
 
 ```scala
 // Spark
@@ -391,15 +391,15 @@ class ScoringDataSaver extends DataSaver {
 }
 ```
 
-## 데이터 집합 변압기 {#datasettransformer}
+## 데이터 집합 변환기 {#datasettransformer}
 
-DatasetTransformer 클래스는 데이터 집합의 구조를 수정하고 변환합니다. 다음 [!DNL Sensei Machine Learning Runtime] 은 이 구성 요소를 정의할 필요가 없으며, 요구 사항을 기반으로 구현됩니다.
+DatasetTransformer 클래스는 데이터 집합의 구조를 수정하고 변환합니다. 다음 [!DNL Sensei Machine Learning Runtime] 는 이 구성 요소를 정의할 필요가 없으며, 요구 사항에 따라 구현됩니다.
 
-피쳐 파이프라인과 관련하여 피쳐 파이프라인 팩토리와 함께 데이터 세트 트랜스포머를 사용하여 피쳐 엔지니어링에 대한 데이터를 준비할 수 있습니다.
+기능 파이프라인과 관련하여 데이터 세트 변환기를 기능 파이프라인 팩토리와 함께 사용하여 기능 엔지니어링을 위한 데이터를 준비할 수 있습니다.
 
-**PySpark**
+**PySparc**
 
-다음 표에서는 PySpark 데이터 세트 변압기 클래스의 클래스 메서드를 설명합니다.
+다음 표에서는 PySpark 데이터 세트 변환기 클래스의 클래스 메서드에 대해 설명합니다.
 
 <table>
     <thead>
@@ -411,23 +411,23 @@ DatasetTransformer 클래스는 데이터 집합의 구조를 수정하고 변�
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>transform(self, configProperties, dataset)</code></p>
-                <p>데이터 세트를 입력으로 취하여 새로운 파생된 데이터 집합을 출력합니다</p>
+                <p><i>요약</i><br/><code>transform(self, configProperties, dataset)</code></p>
+                <p>데이터 세트를 입력으로 취하여 새로운 파생된 데이터 세트를 출력합니다.</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: 자체 참조</li>
                     <li><code>configProperties</code>: 구성 속성 맵</li>
-                    <li><code>dataset</code>: 변형을 위한 입력 데이터 세트</li>
+                    <li><code>dataset</code>: 변환을 위한 입력 데이터 세트</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-**스파크(스칼라)**
+**스파크(Scala)**
 
-다음 표에서는 [!DNL Spark] 데이터 세트 변압기 클래스:
+다음 표에서는 의 추상 메서드를 설명합니다. [!DNL Spark] 데이터 집합 변환기 클래스:
 
 <table>
     <thead>
@@ -440,12 +440,12 @@ DatasetTransformer 클래스는 데이터 집합의 구조를 수정하고 변�
         <tr>
             <td>
                 <p><code>transform(configProperties, dataset)</code></p>
-                <p>데이터 세트를 입력으로 취하여 새로운 파생된 데이터 집합을 출력합니다</p>
+                <p>데이터 세트를 입력으로 취하여 새로운 파생된 데이터 세트를 출력합니다.</p>
             </td>
             <td>
                 <ul>
                     <li><code>configProperties</code>: 구성 속성 맵</li>
-                    <li><code>dataset</code>: 변형을 위한 입력 데이터 세트</li>
+                    <li><code>dataset</code>: 변환을 위한 입력 데이터 세트</li>
                 </ul>
             </td>
         </tr>
@@ -454,11 +454,11 @@ DatasetTransformer 클래스는 데이터 집합의 구조를 수정하고 변�
 
 ## FeaturePipelineFactory {#featurepipelinefactory}
 
-FeaturePipelineFactory 클래스에는 피쳐 추출 알고리즘이 포함되어 있으며 피쳐 파이프라인의 단계를 처음부터 끝까지 정의합니다.
+FeaturePipelineFactory 클래스에는 기능 추출 알고리즘이 포함되어 있으며 처음부터 끝까지 기능 파이프라인의 단계를 정의합니다.
 
-**PySpark**
+**PySparc**
 
-다음 표에서는 PySpark FeaturePipelineFactory의 클래스 메서드를 설명합니다.
+다음 표에서는 PySpark FeaturePipelineFactory의 클래스 메서드에 대해 설명합니다.
 
 <table>
     <thead>
@@ -470,8 +470,8 @@ FeaturePipelineFactory 클래스에는 피쳐 추출 알고리즘이 포함되�
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>create_pipeline(self, configProperties)</code></p>
-                <p>일련의 스파크 트랜스포머가 포함된 스파크 파이프라인을 생성하고 반환합니다</p>
+                <p><i>요약</i><br/><code>create_pipeline(self, configProperties)</code></p>
+                <p>일련의 Spark 변환기가 포함된 Spark 파이프라인 생성 및 반환</p>
             </td>
             <td>
                 <ul>
@@ -482,23 +482,23 @@ FeaturePipelineFactory 클래스에는 피쳐 추출 알고리즘이 포함되�
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
-                <p>구성 속성에서 매개 변수 맵 검색 및 반환</p>
+                <p><i>요약</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
+                <p>구성 속성에서 매개변수 맵을 검색하고 반환합니다.</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: 자체 참조</li>
                     <li><code>configProperties</code>: 구성 속성</li>
-                    <li><code>sparkSession</code>: 스파크 세션</li>
+                    <li><code>sparkSession</code>: Spark 세션</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-**스파크(스칼라)**
+**스파크(Scala)**
 
-다음 표에서는 [!DNL Spark] FeaturePipelineFactory:
+다음 표에서는 [!DNL Spark] 기능 파이프라인 팩토리:
 
 <table>
     <thead>
@@ -510,8 +510,8 @@ FeaturePipelineFactory 클래스에는 피쳐 추출 알고리즘이 포함되�
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>createPipeline(configProperties)</code></p>
-                <p>일련의 트랜스포머가 포함된 파이프라인을 생성하고 반환합니다</p>
+                <p><i>요약</i><br/><code>createPipeline(configProperties)</code></p>
+                <p>일련의 변환기가 포함된 파이프라인 생성 및 반환</p>
             </td>
             <td>
                 <ul>
@@ -521,13 +521,13 @@ FeaturePipelineFactory 클래스에는 피쳐 추출 알고리즘이 포함되�
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
-                <p>구성 속성에서 매개 변수 맵 검색 및 반환</p>
+                <p><i>요약</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
+                <p>구성 속성에서 매개변수 맵을 검색하고 반환합니다.</p>
             </td>
             <td>
                 <ul>
                     <li><code>configProperties</code>: 구성 속성</li>
-                    <li><code>sparkSession</code>: 스파크 세션</li>
+                    <li><code>sparkSession</code>: Spark 세션</li>
                 </ul>
             </td>
         </tr>
@@ -536,11 +536,11 @@ FeaturePipelineFactory 클래스에는 피쳐 추출 알고리즘이 포함되�
 
 ## PipelineFactory {#pipelinefactory}
 
-PipelineFactory 클래스는 교육 논리 및 알고리즘이 [!DNL Spark] 파이프라인.
+PipelineFactory 클래스는 모델 교육 및 점수에 대한 메서드와 정의를 캡슐화합니다. 여기서 교육 논리 및 알고리즘은 [!DNL Spark] 파이프라인.
 
-**PySpark**
+**PySparc**
 
-다음 표에서는 PySpark PipelineFactory의 클래스 메서드를 설명합니다.
+다음 표에서는 PySpark PipelineFactory의 클래스 메서드에 대해 설명합니다.
 
 <table>
     <thead>
@@ -552,8 +552,8 @@ PipelineFactory 클래스는 교육 논리 및 알고리즘이 [!DNL Spark] 파�
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>apply(self, configProperties)</code></p>
-                <p>모델 교육 및 점수 책정 논리 및 알고리즘을 포함하는 스파크 파이프라인 만들기 및 반환</p>
+                <p><i>요약</i><br/><code>apply(self, configProperties)</code></p>
+                <p>모델 교육 및 채점을 위한 논리 및 알고리즘이 포함된 Spark 파이프라인 생성 및 반환</p>
             </td>
             <td>
                 <ul>
@@ -564,8 +564,8 @@ PipelineFactory 클래스는 교육 논리 및 알고리즘이 [!DNL Spark] 파�
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>train(self, configProperties, dataframe)</code></p>
-                <p>모델을 교육할 로직과 알고리즘이 포함된 사용자 지정 파이프라인을 반환합니다. 이 메서드는 스파크 파이프라인을 사용하는 경우에는 필요하지 않습니다</p>
+                <p><i>요약</i><br/><code>train(self, configProperties, dataframe)</code></p>
+                <p>모델을 교육하기 위한 논리 및 알고리즘이 포함된 사용자 지정 파이프라인을 반환합니다. Spark 파이프라인을 사용하는 경우에는 이 방법이 필요하지 않습니다</p>
             </td>
             <td>
                 <ul>
@@ -577,35 +577,35 @@ PipelineFactory 클래스는 교육 논리 및 알고리즘이 [!DNL Spark] 파�
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>score(self, configProperties, dataframe, model)</code></p>
-                <p>숙련된 모델을 사용하여 점수를 매기고 결과를 반환합니다</p>
+                <p><i>요약</i><br/><code>score(self, configProperties, dataframe, model)</code></p>
+                <p>훈련된 모델을 사용하여 점수를 매기고 결과를 반환합니다.</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: 자체 참조</li>
                     <li><code>configProperties</code>: 구성 속성</li>
-                    <li><code>dataframe</code>: 점수를 위한 입력 데이터 세트</li>
-                    <li><code>model</code>: 점수를 매기는데 사용되는 훈련된 모델</li>
+                    <li><code>dataframe</code>: 채점을 위한 입력 데이터 세트</li>
+                    <li><code>model</code>: 채점에 사용되는 훈련된 모델</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
-                <p>구성 속성에서 매개 변수 맵 검색 및 반환</p>
+                <p><i>요약</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
+                <p>구성 속성에서 매개변수 맵을 검색하고 반환합니다.</p>
             </td>
             <td>
                 <ul>
                     <li><code>self</code>: 자체 참조</li>
                     <li><code>configProperties</code>: 구성 속성</li>
-                    <li><code>sparkSession</code>: 스파크 세션</li>
+                    <li><code>sparkSession</code>: Spark 세션</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-**스파크(스칼라)**
+**스파크(Scala)**
 
 다음 표에서는 [!DNL Spark] PipelineFactory:
 
@@ -619,8 +619,8 @@ PipelineFactory 클래스는 교육 논리 및 알고리즘이 [!DNL Spark] 파�
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>apply(configProperties)</code></p>
-                <p>모델 교육 및 점수 책정 논리 및 알고리즘을 포함하는 파이프라인 만들기 및 반환</p>
+                <p><i>요약</i><br/><code>apply(configProperties)</code></p>
+                <p>모델 교육 및 채점에 대한 논리 및 알고리즘이 포함된 파이프라인 생성 및 반환</p>
             </td>
             <td>
                 <ul>
@@ -630,13 +630,13 @@ PipelineFactory 클래스는 교육 논리 및 알고리즘이 [!DNL Spark] 파�
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
-                <p>구성 속성에서 매개 변수 맵 검색 및 반환</p>
+                <p><i>요약</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
+                <p>구성 속성에서 매개변수 맵을 검색하고 반환합니다.</p>
             </td>
             <td>
                 <ul>
                     <li><code>configProperties</code>: 구성 속성</li>
-                    <li><code>sparkSession</code>: 스파크 세션</li>
+                    <li><code>sparkSession</code>: Spark 세션</li>
                 </ul>
             </td>
         </tr>
@@ -645,11 +645,11 @@ PipelineFactory 클래스는 교육 논리 및 알고리즘이 [!DNL Spark] 파�
 
 ## MLEvaluator {#mlevaluator}
 
-MLEvaluator 클래스는 평가 지표를 정의하고 교육 및 테스트 데이터 세트를 결정하는 방법을 제공합니다.
+MLEvaluator 클래스는 평가 지표를 정의하고 교육 및 테스트 데이터 세트를 결정하는 메서드를 제공합니다.
 
-**PySpark**
+**PySparc**
 
-다음 표에서는 PySpark MLEvaluator의 클래스 메서드를 설명합니다.
+다음 표에서는 PySpark MLEvaluator의 클래스 메서드에 대해 설명합니다.
 
 <table>
     <thead>
@@ -661,8 +661,8 @@ MLEvaluator 클래스는 평가 지표를 정의하고 교육 및 테스트 데�
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>split(self, configProperties, dataframe)</code></p>
-                <p>입력 데이터 세트를 교육 및 테스트 하위 집합으로 분할합니다.</p>
+                <p><i>요약</i><br/><code>split(self, configProperties, dataframe)</code></p>
+                <p>입력 데이터 세트를 교육 및 테스트 하위 집합으로 분할</p>
             </td>
             <td>
                 <ul>
@@ -674,8 +674,8 @@ MLEvaluator 클래스는 평가 지표를 정의하고 교육 및 테스트 데�
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>evaluate(self, dataframe, model, configProperties)</code></p>
-                <p>숙련된 모델을 평가하고 평가 결과를 반환합니다</p>
+                <p><i>요약</i><br/><code>evaluate(self, dataframe, model, configProperties)</code></p>
+                <p>훈련된 모델을 평가하고 평가 결과를 반환합니다.</p>
             </td>
             <td>
                 <ul>
@@ -689,7 +689,7 @@ MLEvaluator 클래스는 평가 지표를 정의하고 교육 및 테스트 데�
     </tbody>
 </table>
 
-**스파크(스칼라)**
+**스파크(Scala)**
 
 다음 표에서는 [!DNL Spark] MLEvaluator:
 
@@ -703,8 +703,8 @@ MLEvaluator 클래스는 평가 지표를 정의하고 교육 및 테스트 데�
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>split(configProperties, data)</code></p>
-                <p>입력 데이터 세트를 교육 및 테스트 하위 집합으로 분할합니다.</p>
+                <p><i>요약</i><br/><code>split(configProperties, data)</code></p>
+                <p>입력 데이터 세트를 교육 및 테스트 하위 집합으로 분할</p>
             </td>
             <td>
                 <ul>
@@ -715,8 +715,8 @@ MLEvaluator 클래스는 평가 지표를 정의하고 교육 및 테스트 데�
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code>evaluate(configProperties, model, data)</code></p>
-                <p>숙련된 모델을 평가하고 평가 결과를 반환합니다</p>
+                <p><i>요약</i><br/><code>evaluate(configProperties, model, data)</code></p>
+                <p>훈련된 모델을 평가하고 평가 결과를 반환합니다.</p>
             </td>
             <td>
                 <ul>

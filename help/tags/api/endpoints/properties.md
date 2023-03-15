@@ -1,17 +1,17 @@
 ---
 title: 속성 끝점
-description: Reactor API에서 /properties 종단점을 호출하는 방법을 알아봅니다.
+description: Reactor API에서 /properties 끝점을 호출하는 방법을 알아봅니다.
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 9%
+source-wordcount: '1104'
+ht-degree: 6%
 
 ---
 
 # 속성 끝점
 
-속성은 Reactor API 내에서 사용할 수 있는 다른 대부분의 리소스를 포함하는 컨테이너 구조입니다. 를 사용하여 속성을 프로그래밍 방식으로 관리합니다 `/properties` 엔드포인트.
+속성은 Reactor API 내에서 사용할 수 있는 다른 대부분의 리소스를 보유하는 컨테이너 구성입니다. 속성을 프로그래밍 방식으로 관리하려면 `/properties` 엔드포인트.
 
 리소스 계층에서 속성은 다음 항목의 소유자입니다.
 
@@ -25,17 +25,17 @@ ht-degree: 9%
 * [규칙 구성 요소](./rule-components.md)
 * [규칙](./rules.md)
 
-속성은 정확히 하나의 속성에 속합니다 [회사](./companies.md). 회사는 많은 재산을 가질 수 있습니다.
+속성은 정확히 하나의 속성에 속함 [회사](./companies.md). 회사는 많은 속성을 가질 수 있습니다.
 
-태그 관리에서 속성 및 해당 역할에 대한 일반적인 정보는 [회사 및 속성](../../ui/administration/companies-and-properties.md).
+속성 및 태그 관리에서의 역할에 대한 자세한 내용은 [회사 및 속성](../../ui/administration/companies-and-properties.md).
 
 ## 시작하기
 
-이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
+이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
 
 ## 속성 목록 검색 {#list}
 
-GET 요청 경로에 회사의 ID를 포함하여 회사에 속하는 속성 목록을 검색할 수 있습니다.
+GET 요청 경로에 회사 ID를 포함하여 회사에 속하는 속성 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -45,13 +45,13 @@ GET /companies/{COMPANY_ID}/properties
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `COMPANY_ID` | 다음 `id` 나열할 속성을 소유한 회사입니다. |
+| `COMPANY_ID` | 다음 `id` 나열할 속성을 소유하고 있는 회사의 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 속성을 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오. [응답 필터링](../guides/filtering.md) 추가 정보.
+>쿼리 매개 변수를 사용하여 나열된 속성을 다음 속성을 기준으로 필터링할 수 있습니다.<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오 [응답 필터링](../guides/filtering.md) 추가 정보.
 
 **요청**
 
@@ -67,7 +67,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 회사에 대한 속성 목록을 반환합니다.
+성공한 응답은 지정된 회사의 속성 목록을 반환합니다.
 
 ```json
 {
@@ -259,7 +259,7 @@ curl -X GET \
 
 ## 속성 조회 {#lookup}
 
-GET 요청 경로에 해당 ID를 제공하여 속성을 찾을 수 있습니다.
+GET 요청 경로에 속성 ID를 제공하여 속성을 조회할 수 있습니다.
 
 **API 형식**
 
@@ -269,9 +269,9 @@ GET /properties/{PROPERTY_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 다음 `id` 조회하려는 속성의 일부입니다. |
+| `PROPERTY_ID` | 다음 `id` 조회하려는 속성입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -287,7 +287,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 속성의 세부 정보를 반환합니다.
+성공한 응답은 속성의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -382,7 +382,7 @@ curl -X GET \
 
 ## 속성 만들기 {#create}
 
-POST 요청을 만들어 새 속성을 만들 수 있습니다.
+POST 요청을 수행하여 새 속성을 만들 수 있습니다.
 
 **API 형식**
 
@@ -392,13 +392,13 @@ POST /company/{COMPANY_ID}/properties
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `COMPANY_ID` | 다음 `id` 속성을 정의할 회사의 이름입니다. |
+| `COMPANY_ID` | 다음 `id` 속성 아래에 정의한 회사의 이름입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 지정된 속성에 대한 새 속성을 만듭니다. 또한 호출은 를 통해 속성을 기존 확장과 연결합니다 `relationships` 속성을 사용합니다. 다음 안내서를 참조하십시오. [관계](../guides/relationships.md) 추가 정보.
+다음 요청은 지정된 속성에 대해 새 속성을 만듭니다. 또한 호출은 를 통해 속성을 기존 확장과 연결합니다. `relationships` 속성. 다음 안내서를 참조하십시오 [관계](../guides/relationships.md) 추가 정보.
 
 ```shell
 curl -X POST \
@@ -427,17 +427,17 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes.name` | **(필수)** 사람이 읽을 수 있는 속성의 이름입니다. |
-| `attributes.platform` | **(필수)** 속성에 대한 플랫폼입니다. 다음 중 하나일 수 있습니다 `web` 웹 속성의 경우 또는 `mobile` 또는 `edge` 모바일 속성에 대해 사용할 수 있습니다. |
+| `attributes.name` | **(필수)** 사람이 인식할 수 있는 속성 이름. |
+| `attributes.platform` | **(필수)** 속성의 플랫폼입니다. 다음 중 하나일 수 있습니다. `web` 웹 속성용 또는 `mobile` 또는 `edge` 모바일 속성용. |
 | `attributes.domains` | **(웹 속성에 필요)** 속성에 대한 URL 도메인의 배열입니다. |
-| `attributes.development` | 개발 속성인지 여부를 나타내는 부울입니다. |
+| `attributes.development` | 개발 속성인지 여부를 나타내는 부울. |
 | `attributes.privacy` | 속성에 대한 개인 정보 보호 관련 고려 사항을 참조하는 데 사용할 수 있는 문자열입니다. |
-| `attributes.rule_component_sequencing_enabled` | 이 속성에 대해 규칙 구성 요소 시퀀스를 활성화할지 여부를 나타내는 부울입니다. |
-| `attributes.ssl_enabled` | 이 속성에 대해 SSL(Secure Sockets Layer)을 사용할지 여부를 나타내는 부울입니다. |
-| `attributes.undefined_vars_return_empty` | 이 속성에 대해 정의되지 않은 변수를 비워둘 것인지 여부를 나타내는 부울입니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `properties`. |
+| `attributes.rule_component_sequencing_enabled` | 이 속성에 대해 규칙 구성 요소 시퀀스를 활성화해야 하는지 여부에 대한 부울입니다. |
+| `attributes.ssl_enabled` | 이 속성에 대해 SSL(Secure Sockets Layer)을 활성화해야 하는지 여부에 대한 부울입니다. |
+| `attributes.undefined_vars_return_empty` | 정의되지 않은 변수를 이 속성에 대해 비어 있는 것으로 반환할지 여부를 나타내는 부울. |
+| `type` | 업데이트 중인 리소스 유형. 이 끝점의 경우 값은 다음과 같아야 합니다. `properties`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
@@ -546,13 +546,13 @@ PATCH /properties/{PROPERTY_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 다음 `id` 업데이트할 속성의 값입니다. |
+| `PROPERTY_ID` | 다음 `id` 를 입력합니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 를 업데이트합니다 `name` 및 `domains` 추가 콘텐츠만 사용할 수 있습니다.
+다음 요청은 `name` 및 `domains` 기존 속성의 경우.
 
 ```shell
 curl -X PATCH \
@@ -577,15 +577,15 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes` | 속성에 대해 업데이트할 속성을 나타내는 객체입니다. 속성에 대해 다음 속성을 업데이트할 수 있습니다. <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
-| `id` | 다음 `id` 업데이트할 속성의 값입니다. 이 옵션은 와 일치해야 합니다. `{PROPERTY_ID}` 요청 경로에 제공된 값입니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `properties`. |
+| `attributes` | 등록 정보가 등록 정보에 대해 업데이트할 속성을 나타내는 객체입니다. 속성에 대해 다음 속성을 업데이트할 수 있습니다. <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
+| `id` | 다음 `id` 업데이트하려는 속성. 다음과 일치해야 합니다. `{PROPERTY_ID}` 요청 경로에 제공된 값입니다. |
+| `type` | 업데이트 중인 리소스 유형. 이 끝점의 경우 값은 다음과 같아야 합니다. `properties`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적으로 응답하면 업데이트된 속성의 세부 정보가 반환됩니다.
+성공한 응답은 업데이트된 속성의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -690,9 +690,9 @@ DELETE /properties/{PROPERTY_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 다음 `id` 삭제할 속성의 일부입니다. |
+| `PROPERTY_ID` | 다음 `id` 삭제할 속성의 입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -706,21 +706,21 @@ curl -X DELETE \
 
 **응답**
 
-성공적으로 응답하면 응답 본문이 없는 HTTP 상태 204(컨텐츠 없음)를 반환하여 속성이 삭제되었음을 나타냅니다.
+성공한 응답은 응답 본문이 없는 HTTP 상태 204(콘텐츠 없음)를 반환하여 속성이 삭제되었음을 나타냅니다.
 
-## 속성에 대한 노트 관리 {#notes}
+## 속성에 대한 메모 관리 {#notes}
 
-속성은 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에서 텍스트 기반 메모를 만들고 검색할 수 있습니다. 자세한 내용은 [참고 끝점 안내서](./notes.md) 속성 및 기타 호환되는 리소스에 대한 메모를 관리하는 방법에 대한 자세한 정보입니다.
+속성은 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에 대해 텍스트 기반 메모를 만들고 검색할 수 있습니다. 다음을 참조하십시오. [notes 엔드포인트 안내서](./notes.md) 속성 및 기타 호환 리소스에 대한 메모를 관리하는 방법에 대한 자세한 정보.
 
 ## 속성에 대한 관련 리소스 검색 {#related}
 
-다음 호출에서는 속성에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. When [속성 조회](#lookup)로 설정되면 이러한 관계는 `relationships` 속성을 사용합니다.
+다음 호출에서는 속성에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. 날짜 [속성 조회](#lookup), 이러한 관계는 아래에 나열됩니다. `relationships` 속성.
 
-자세한 내용은 [관계 안내서](../guides/relationships.md) 를 참조하십시오.
+다음을 참조하십시오. [관계 안내서](../guides/relationships.md) Reactor API의 관계에 대한 자세한 정보입니다.
 
-### 속성에 대한 관련 콜백 목록 {#callbacks}
+### 속성에 대한 관련 콜백 나열 {#callbacks}
 
-다음을 나열할 수 있습니다 [콜백](./callbacks.md) 를 추가하여 속성에 등록됨 `/callbacks` 조회 요청의 경로에 추가할 수 없습니다.
+다음을 나열할 수 있습니다. [콜백](./callbacks.md) 를 추가하여 속성에 등록됨 `/callbacks` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -730,9 +730,9 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 다음 `id` 콜백을 나열할 속성의 값입니다. |
+| `{PROPERTY_ID}` | 다음 `id` 콜백을 나열할 속성의 입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -748,7 +748,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 속성이 소유한 콜백 목록을 반환합니다.
+성공한 응답은 지정된 속성이 소유한 콜백 목록을 반환합니다.
 
 ```json
 {
@@ -795,7 +795,7 @@ curl -X GET \
 
 ### 속성에 대한 관련 데이터 요소 나열 {#data-elements}
 
-다음을 나열할 수 있습니다 [데이터 요소](./data-elements.md) 속성을 추가하고 `/data_elements` 조회 요청의 경로에 추가할 수 없습니다.
+다음을 나열할 수 있습니다. [데이터 요소](./data-elements.md) 를 추가하여 속성이 소유한 경우 `/data_elements` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -805,9 +805,9 @@ GET  /properties/{PROPERTY_ID}/data_elements
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 다음 `id` 속성 중 하나를 선택합니다. |
+| `{PROPERTY_ID}` | 다음 `id` 데이터 요소를 나열할 속성의 입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -823,7 +823,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 속성이 소유한 데이터 요소 목록을 반환합니다.
+성공한 응답은 지정된 속성이 소유한 데이터 요소 목록을 반환합니다.
 
 ```json
 {
@@ -936,7 +936,7 @@ curl -X GET \
 
 ### 속성에 대한 관련 환경 나열 {#environments}
 
-다음을 나열할 수 있습니다 [환경](./environments.md) 속성을 추가하고 `/environments` 조회 요청의 경로에 추가할 수 없습니다.
+다음을 나열할 수 있습니다. [환경](./environments.md) 를 추가하여 속성이 소유한 경우 `/environments` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -946,9 +946,9 @@ GET  /properties/{PROPERTY_ID}/environments
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 다음 `id` 목록을 만들 수 있습니다. |
+| `{PROPERTY_ID}` | 다음 `id` 환경 목록을 표시할 속성입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -964,7 +964,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 속성이 소유한 환경 목록을 반환합니다.
+성공한 응답은 지정된 속성이 소유한 환경 목록을 반환합니다.
 
 ```json
 {
@@ -1054,9 +1054,9 @@ curl -X GET \
 }
 ```
 
-### 속성에 대한 관련 확장 목록 작성 {#extensions}
+### 속성에 대한 관련 확장 나열 {#extensions}
 
-다음을 나열할 수 있습니다 [확장](./extensions.md) 속성을 추가하고 `/extensions` 조회 요청의 경로에 추가할 수 없습니다.
+다음을 나열할 수 있습니다. [확장](./extensions.md) 를 추가하여 속성이 소유한 경우 `/extensions` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -1066,9 +1066,9 @@ GET  /properties/{PROPERTY_ID}/extensions
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 다음 `id` 확장을 나열할 속성의 값입니다. |
+| `{PROPERTY_ID}` | 다음 `id` 를 추가합니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -1084,7 +1084,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 속성이 소유한 확장 목록을 반환합니다.
+성공한 응답은 지정된 속성이 소유한 확장 목록을 반환합니다.
 
 ```json
 {
@@ -1187,7 +1187,7 @@ curl -X GET \
 
 ### 속성에 대한 관련 호스트 나열 {#hosts}
 
-다음을 나열할 수 있습니다 [호스트](./hosts.md) 이 값은 `/hosts` 조회 요청의 경로에 추가할 수 없습니다.
+다음을 나열할 수 있습니다. [호스트](./hosts.md) 를 추가하여 속성에서 사용하는 경우 `/hosts` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -1197,9 +1197,9 @@ GET  /properties/{PROPERTY_ID}/hosts
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 다음 `id` 호스트를 나열할 속성입니다. |
+| `{PROPERTY_ID}` | 다음 `id` : 호스트를 나열하려는 속성입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -1215,7 +1215,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 속성에 사용되는 호스트 목록을 반환합니다.
+성공한 응답은 지정된 속성에서 사용하는 호스트 목록을 반환합니다.
 
 ```json
 {
@@ -1265,7 +1265,7 @@ curl -X GET \
 
 ### 속성에 대한 관련 규칙 나열 {#rules}
 
-다음을 나열할 수 있습니다 [규칙](./rules.md) 이 값은 `/rules` 조회 요청의 경로에 추가할 수 없습니다.
+다음을 나열할 수 있습니다. [규칙](./rules.md) 를 추가하여 속성에서 사용하는 경우 `/rules` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -1275,9 +1275,9 @@ GET  /properties/{PROPERTY_ID}/rules
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 다음 `id` 규칙을 나열할 속성의 값입니다. |
+| `{PROPERTY_ID}` | 다음 `id` 규칙을 나열할 속성의 입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -1293,7 +1293,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 속성에 사용되는 규칙 목록을 반환합니다.
+성공한 응답은 지정된 속성에서 사용하는 규칙 목록을 반환합니다.
 
 ```json
 {
@@ -1376,9 +1376,9 @@ curl -X GET \
 }
 ```
 
-### 관련 회사에 자산을 찾습니다. {#company}
+### 관련 회사에서 속성을 조회합니다. {#company}
 
-다음을 추가하여 속성을 소유하는 회사를 조회할 수 있습니다 `/company` 조회 요청의 경로에 추가할 수 없습니다.
+속성을 소유한 회사를 추가하여 조회할 수 있습니다. `/company` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -1388,9 +1388,9 @@ GET /properties/{PROPERTY_ID}/company
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 다음 `id` 당신이 찾고자 하는 회사의 자산입니다. |
+| `{PROPERTY_ID}` | 다음 `id` 조회하려는 회사의 속성입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -1406,7 +1406,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 속성의 회사 세부 정보를 반환합니다.
+응답이 성공하면 지정된 속성의 회사에 대한 세부 정보가 반환됩니다.
 
 ```json
 {

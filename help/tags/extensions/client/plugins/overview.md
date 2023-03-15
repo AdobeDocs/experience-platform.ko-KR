@@ -1,6 +1,6 @@
 ---
-title: 일반 Analytics 확장 개요
-description: Adobe Experience Platform의 일반 Analytics 태그 확장에 대해 알아봅니다.
+title: 일반 Analytics 확장 프로그램 개요
+description: Adobe Experience Platform의 일반적인 Analytics 태그 확장에 대해 알아봅니다.
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 77%
 
 ---
 
-# 일반 Analytics 플러그인 확장 개요
+# 일반 Analytics 플러그인 확장 프로그램 개요
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 일반 Analytics 플러그인 확장 프로그램 구성 및 이 확장 프로그램을 사용하여 [!DNL Adobe Analytics] 확장 프로그램을 늘릴 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -56,9 +56,9 @@ ht-degree: 77%
 
 이러한 작업은 개별적으로 사용할 특정 플러그인을 초기화합니다. 속성에 사용할 플러그인을 모두 초기화하려면 해당 작업을 규칙에 추가하고 규칙을 저장하면 됩니다. 이러한 방식으로 확장 프로그램을 구성하는 데 약간 더 많은 작업이 필요하지만 코드 효율성이 향상됩니다. 따라서 이 방법을 사용하는 것이 좋습니다.
 
-## 일반 Analytics 플러그인 확장 데이터 요소
+## 일반 Analytics 플러그인 확장 프로그램 데이터 요소
 
-다음 데이터 요소는 Analytics에서 해당 플러그인을 설정하고 구성하는 태그 기능을 활용하는 일반 Analytics 플러그인 확장에서 사용할 수 있습니다.
+다음 데이터 요소는 태그 기능을 활용하여 Analytics에서 해당 플러그인을 설정하고 구성하는 일반 Analytics 플러그인 확장 프로그램에서 사용할 수 있습니다.
 
 * `getGeoCoordinates`
 * `getNewRepeat`

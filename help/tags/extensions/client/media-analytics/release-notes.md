@@ -1,6 +1,6 @@
 ---
-title: 오디오 및 비디오 확장 프로그램용 Adobe Medium 분석 릴리스 노트
-description: Adobe Experience Platform의 Analytics for Audio 및 Video 태그 확장에 대한 최신 릴리스 노트입니다.
+title: 오디오 및 비디오용 Adobe Medium Analytics 확장 기능 릴리스 노트
+description: Adobe Experience Platform의 Adobe Medium Analytics for Audio 및 Video 태그 확장에 대한 최신 릴리스 정보입니다.
 exl-id: 79d92f42-795f-4685-926f-ebe6f4125539
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 ## 2019년 10월 25일
 
@@ -42,7 +42,7 @@ ht-degree: 67%
 
 #### **기능**
 
-[Adobe Analytics for Video 확장](../media-analytics/overview.md)은 코어 Video Analytics JavaScript 라이브러리를 추가합니다. 이 라이브러리는 태그를 사용할 수 있는 사이트 또는 프로젝트에 mediaHeartbeat 인스턴스를 추가하는 기능을 제공합니다. Adobe Analytics for Video 확장(VA 확장)은 다음 두 개의 추가 확장이 필요합니다.
+[Adobe Analytics for Video 확장](../media-analytics/overview.md)은 코어 Video Analytics JavaScript 라이브러리를 추가합니다. 이 라이브러리는 태그가 활성화된 사이트 또는 프로젝트에 mediaHeartbeat 인스턴스를 추가하는 기능을 제공합니다. Adobe Analytics for Video 확장(VA 확장)은 다음 두 개의 추가 확장이 필요합니다.
 
 * Analytics 확장
 * Experience Cloud ID 확장

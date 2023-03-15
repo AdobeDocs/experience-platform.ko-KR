@@ -1,31 +1,31 @@
 ---
-title: 규칙 끝점
-description: Reactor API에서 /rules 엔드포인트를 호출하는 방법을 알아봅니다.
+title: 규칙 엔드포인트
+description: Reactor API에서 /rules 끝점을 호출하는 방법을 알아봅니다.
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '931'
-ht-degree: 8%
+source-wordcount: '898'
+ht-degree: 5%
 
 ---
 
-# 규칙 끝점
+# 규칙 엔드포인트
 
-데이터 수집 태그 컨텍스트에서 규칙은 배포된 라이브러리에 있는 리소스의 동작을 제어합니다. 규칙은 하나 이상으로 구성됩니다 [규칙 구성 요소](./rule-components.md)는 논리 방식으로 규칙 구성 요소를 함께 연결하기 위해 존재합니다. 다음 `/rules` reactor API의 종단점을 사용하면 프로그래밍 방식으로 태그 규칙을 관리할 수 있습니다.
+데이터 수집 태그의 컨텍스트에서 규칙은 배포된 라이브러리의 리소스 동작을 제어합니다. 규칙은 하나 이상으로 구성됩니다 [규칙 구성 요소](./rule-components.md)는 규칙 구성 요소를 논리적 방식으로 서로 연결하기 위해 존재합니다. 다음 `/rules` Reactor API의 끝점을 사용하면 태그 규칙을 프로그래밍 방식으로 관리할 수 있습니다.
 
 >[!NOTE]
 >
 >이 문서에서는 Reactor API에서 규칙을 관리하는 방법을 다룹니다. UI에서 규칙과 상호 작용하는 방법에 대한 자세한 내용은 [UI 안내서](../../ui/managing-resources/rules.md).
 
-규칙은 정확히 하나의 규칙에 속합니다 [속성](./properties.md). 속성에는 많은 규칙이 있을 수 있습니다.
+규칙은 정확히 하나의 규칙에 속함 [속성](./properties.md). 속성에는 여러 규칙이 있을 수 있습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
+이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
 
 ## 규칙 목록 검색 {#list}
 
-GET 요청을 작성하여 를 포함하여 속성에 속하는 규칙 목록을 검색할 수 있습니다.
+를 포함하여 속성에 속하는 규칙 목록을 GET 요청으로 검색할 수 있습니다.
 
 **API 형식**
 
@@ -35,13 +35,13 @@ GET /properties/{PROPERTY_ID}/rules
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 다음 `id` 구성 요소를 나열할 속성입니다. |
+| `PROPERTY_ID` | 다음 `id` 구성 요소를 나열할 속성의 입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 규칙을 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오. [응답 필터링](../guides/filtering.md) 추가 정보.
+>쿼리 매개 변수를 사용하여 나열된 규칙을 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오 [응답 필터링](../guides/filtering.md) 추가 정보.
 
 **요청**
 
@@ -57,7 +57,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 속성에 대한 규칙 목록을 반환합니다.
+성공한 응답은 지정된 속성에 대한 규칙 목록을 반환합니다.
 
 ```json
 {
@@ -142,11 +142,11 @@ curl -X GET \
 
 ## 규칙 조회 {#lookup}
 
-GET 요청 경로에 해당 ID를 제공하여 규칙을 찾을 수 있습니다.
+GET 요청 경로에 ID를 제공하여 규칙을 조회할 수 있습니다.
 
 >[!NOTE]
 >
->규칙이 삭제되면 삭제됨으로 표시되지만 실제로 시스템에서 제거되지 않습니다. 따라서 삭제된 규칙을 검색할 수 있습니다. 삭제된 규칙은 `meta.deleted_at` 속성을 사용합니다.
+>규칙이 삭제되면 삭제된 것으로 표시되지만 실제로 시스템에서 제거되지 않습니다. 따라서 삭제된 규칙을 검색할 수 있습니다. 삭제된 규칙은 의 존재로 식별할 수 있습니다. `meta.deleted_at` 속성.
 
 **API 형식**
 
@@ -156,9 +156,9 @@ GET /rules/{RULE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `RULE_ID` | 다음 `id` 조회하려는 규칙의 규칙입니다. |
+| `RULE_ID` | 다음 `id` 조회하려는 규칙에 대해 자세히 알아보십시오. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -248,7 +248,7 @@ curl -X GET \
 
 ## 규칙 만들기 {#create}
 
-POST 요청을 만들어 새 규칙을 만들 수 있습니다.
+POST 요청을 하여 새 규칙을 만들 수 있습니다.
 
 **API 형식**
 
@@ -258,9 +258,9 @@ POST /properties/{PROPERTY_ID}/rules
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 다음 `id` Analytics Mobile Apps 또는 Analytics Premium에서도 사용할 수 있습니다. |
+| `PROPERTY_ID` | 다음 `id` 을 사용하여 규칙을 정의할 수 있습니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -284,15 +284,15 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes.name` | **(필수)** 사용자가 읽을 수 있는 규칙의 이름입니다. |
-| `attributes.enabled` | 규칙이 활성화되어 있는지 여부를 나타내는 부울 값입니다. |
-| `type` | 만들어지는 리소스 유형입니다. 이 끝점의 경우 값은 `rules`. |
+| `attributes.name` | **(필수)** 사람이 인식할 수 있는 규칙 이름. |
+| `attributes.enabled` | 규칙이 사용되는지 여부를 나타내는 부울 값입니다. |
+| `type` | 만들어지는 리소스의 유형입니다. 이 끝점의 경우 값은 다음과 같아야 합니다. `rules`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 새로 만든 규칙의 세부 정보를 반환합니다.
+성공적인 응답은 새로 생성된 규칙의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -366,11 +366,11 @@ curl -X POST \
 
 ## 규칙에 이벤트, 조건 및 작업 추가 {#components}
 
-일단 [규칙을 만들었습니다.](#create)를 입력하면 이벤트, 조건 및 작업(집합적으로 규칙 구성 요소라고 함)을 추가하여 논리를 작성할 수 있습니다. 의 섹션을 참조하십시오. [규칙 구성 요소 만들기](./rule-components.md#create) 에서 `/rule_components` endpoint 안내서: Reactor API에서 이를 수행하는 방법 알아보기
+다음 작업을 완료하면 [이(가) 규칙을 만들었습니다.](#create), 이벤트, 조건 및 작업(통칭하여 규칙 구성 요소라고 함)을 추가하여 논리 구성을 시작할 수 있습니다. 의 섹션을 참조하십시오. [규칙 구성 요소 만들기](./rule-components.md#create) 다음에서 `/rule_components` Reactor API에서 이를 수행하는 방법에 대해 알아보려면 endpoint guide를 참조하십시오.
 
 ## 규칙 업데이트 {#update}
 
-PATCH 요청 경로에 해당 ID를 포함하여 규칙의 속성을 업데이트할 수 있습니다.
+PATCH 요청의 경로에 해당 ID를 포함하여 규칙의 속성을 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -380,13 +380,13 @@ PATCH /rules/{RULE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `RULE_ID` | 다음 `id` 업데이트할 규칙의 입니다. |
+| `RULE_ID` | 다음 `id` 업데이트할 규칙의 일부입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 를 업데이트합니다 `name` 기존 규칙의 규칙 중 하나입니다.
+다음 요청은 `name` 기존 규칙의 경우입니다.
 
 ```shell
 curl -X PATCH \
@@ -408,15 +408,15 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes` | 규칙에 대해 업데이트할 속성을 나타내는 객체입니다. 규칙에 대해 다음 속성을 업데이트할 수 있습니다. <ul><li>`name`</li><li>`enabled`</li></ul> |
-| `id` | 다음 `id` 업데이트할 규칙의 입니다. 이 옵션은 와 일치해야 합니다. `{RULE_ID}` 요청 경로에 제공된 값입니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `rules`. |
+| `attributes` | 규칙이 규칙에 대해 업데이트될 속성을 나타내는 객체입니다. 규칙에 대해 다음 속성을 업데이트할 수 있습니다. <ul><li>`name`</li><li>`enabled`</li></ul> |
+| `id` | 다음 `id` 을(를) 업데이트하려고 합니다. 다음과 일치해야 합니다. `{RULE_ID}` 요청 경로에 제공된 값입니다. |
+| `type` | 업데이트 중인 리소스 유형. 이 끝점의 경우 값은 다음과 같아야 합니다. `rules`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 업데이트된 규칙의 세부 정보를 반환합니다.
+성공한 응답은 업데이트된 규칙의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -490,7 +490,7 @@ curl -X PATCH \
 
 ## 규칙 삭제
 
-DELETE 요청 경로에 해당 ID를 포함하여 규칙을 삭제할 수 있습니다.
+DELETE 요청의 경로에 ID를 포함하여 규칙을 삭제할 수 있습니다.
 
 **API 형식**
 
@@ -500,9 +500,9 @@ DELETE /rules/{RULE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `RULE_ID` | 다음 `id` 삭제할 규칙에 대해 설명합니다. |
+| `RULE_ID` | 다음 `id` 삭제할 규칙의 일부입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -516,21 +516,21 @@ curl -X DELETE \
 
 **응답**
 
-성공적으로 응답하면 응답 본문이 없는 HTTP 상태 204(컨텐츠 없음)를 반환하여 규칙이 삭제되었음을 나타냅니다.
+성공한 응답은 응답 본문이 없는 HTTP 상태 204(콘텐츠 없음)를 반환하며, 이는 규칙이 삭제되었음을 나타냅니다.
 
-## 규칙에 대한 노트 관리 {#notes}
+## 규칙에 대한 메모 관리 {#notes}
 
-규칙은 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에서 텍스트 기반 메모를 만들고 검색할 수 있습니다. 자세한 내용은 [참고 끝점 안내서](./notes.md) 를 참조하십시오.
+규칙은 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에 대해 텍스트 기반 메모를 만들고 검색할 수 있습니다. 다음을 참조하십시오. [notes 엔드포인트 안내서](./notes.md) 규칙 및 기타 호환 리소스에 대한 메모를 관리하는 방법에 대한 자세한 정보.
 
 ## 규칙에 대한 관련 리소스 검색 {#related}
 
-다음 호출에서는 규칙에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. When [규칙 조회](#lookup)로 설정되면 이러한 관계는 `relationships` 규칙.
+다음 호출은 규칙에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. 날짜 [규칙 조회](#lookup), 이러한 관계는 아래에 나열됩니다. `relationships` 규칙.
 
-자세한 내용은 [관계 안내서](../guides/relationships.md) 를 참조하십시오.
+다음을 참조하십시오. [관계 안내서](../guides/relationships.md) Reactor API의 관계에 대한 자세한 정보입니다.
 
-### 규칙에 대한 관련 라이브러리 나열 {#libraries}
+### 규칙의 관련 라이브러리 나열 {#libraries}
 
-를 추가하여 특정 규칙을 활용하는 라이브러리 목록을 만들 수 있습니다 `/libraries` 조회 요청의 경로에 추가할 수 없습니다.
+를 추가하여 특정 규칙을 활용하는 라이브러리를 나열할 수 있습니다 `/libraries` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -540,9 +540,9 @@ GET  /rules/{RULE_ID}/libraries
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{RULE_ID}` | 다음 `id` 라이브러리를 나열할 규칙에 대한 매핑입니다. |
+| `{RULE_ID}` | 다음 `id` 라이브러리를 나열할 규칙의 일부입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -558,7 +558,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 규칙을 사용하는 라이브러리 목록을 반환합니다.
+성공한 응답은 지정된 규칙을 사용하는 라이브러리 목록을 반환합니다.
 
 ```json
 {
@@ -650,9 +650,9 @@ curl -X GET \
 }
 ```
 
-### 규칙의 관련 개정 목록 {#revisions}
+### 규칙의 관련 개정 나열 {#revisions}
 
-규칙을 추가할 때 규칙 개정을 나열할 수 있습니다 `/revisions` 조회 요청의 경로에 추가할 수 없습니다.
+를 추가하여 규칙의 개정 버전을 나열할 수 있습니다 `/revisions` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -662,9 +662,9 @@ GET  /rules/{RULE_ID}/revisions
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{RULE_ID}` | 다음 `id` 수정 사항을 나열할 규칙의 규칙입니다. |
+| `{RULE_ID}` | 다음 `id` 개정 내용을 나열할 규칙의 일부입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -828,9 +828,9 @@ curl -X GET \
 }
 ```
 
-### 규칙의 관련 원본 조회 {#origin}
+### 규칙에 대한 관련 원본 조회 {#origin}
 
-를 추가하여 규칙의 원본(이전 버전)을 조회할 수 있습니다 `/origin` 조회 요청의 경로에 추가할 수 없습니다.
+를 추가하여 규칙의 출처(이전 버전)를 조회할 수 있습니다 `/origin` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -840,9 +840,9 @@ GET /rules/{RULE_ID}/origin
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{RULE_ID}` | 다음 `id` 조회하려는 규칙의 |
+| `{RULE_ID}` | 다음 `id` 조회하려는 출처의 규칙. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -858,7 +858,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 규칙의 확장의 세부 정보를 반환합니다.
+응답이 성공하면 지정된 규칙 확장의 세부 사항이 반환됩니다.
 
 ```json
 {
@@ -932,7 +932,7 @@ curl -X GET \
 
 ### 규칙에 대한 관련 속성 조회 {#property}
 
-규칙을 소유하는 속성을 `/property` 조회 요청의 경로에 추가할 수 없습니다.
+규칙을 소유하는 속성을 추가하여 조회할 수 있습니다 `/property` 조회 요청의 경로에 매핑됩니다.
 
 **API 형식**
 
@@ -942,9 +942,9 @@ GET /rules/{RULE_ID}/property
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{RULE_ID}` | 다음 `id` 속성을 조회하려는 규칙의 규칙입니다. |
+| `{RULE_ID}` | 다음 `id` 조회할 속성의 규칙. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -960,7 +960,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 규칙의 속성에 대한 세부 정보를 반환합니다.
+성공한 응답은 지정된 규칙의 속성에 대한 세부 정보를 반환합니다.
 
 ```json
 {

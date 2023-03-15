@@ -13,7 +13,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe ContextHub 확장 구성 및 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -21,9 +21,9 @@ Adobe ContextHub 확장 구성 및 이 확장을 사용하여 규칙을 작성�
 
 이 섹션에서는 Adobe ContextHub 확장을 구성할 때 사용할 수 있는 옵션에 대한 참조를 제공합니다.
 
-Adobe ContextHub 확장이 아직 설치되지 않은 경우 속성을 연 다음, 를 선택합니다 **[!UICONTROL Extensions > Catalog]**&#x200B;를 클릭하고 Adobe ContextHub 확장을 마우스로 가리킨 다음, 을 선택합니다 **[!UICONTROL 설치]**.
+Adobe ContextHub 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**, Adobe ContextHub 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**.
 
-확장을 구성하려면 [!UICONTROL 확장] 탭에서 확장을 마우스로 가리킨 다음 을 선택합니다 **[!UICONTROL 구성]**.
+확장을 구성하려면 를 엽니다. [!UICONTROL 확장] 탭을 클릭하고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**.
 
 ![](../../../images/ext-contexthub-config.png)
 

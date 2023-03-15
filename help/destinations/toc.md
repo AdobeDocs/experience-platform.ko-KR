@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: 9fd11ecbd2d9747088a31b0f25fc8be9990292e3
+source-git-commit: 94f682487630867aff2d1cb1898d62980055cdb4
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1038'
 ht-degree: 6%
 
 ---
@@ -122,7 +122,6 @@ ht-degree: 6%
       * [Salesforce CRM 연결](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365 연결](./catalog/crm/microsoft-dynamics-365.md)
       * [지원 연결](catalog/crm/outreach.md)
-      * [Zendesk 연결](catalog/crm/zendesk.md)
    * 데이터 관리 플랫폼 대상 {#data-management}
       * [DMP(데이터 관리 플랫폼) 대상 개요](./catalog/data-management/overview.md)
       * [Audience Manager DIL 확장](./catalog/data-management/aam-dil-extension.md)
@@ -135,8 +134,7 @@ ht-degree: 6%
       * [이메일 마케팅 대상 개요](./catalog/email-marketing/overview.md)
       * [Adobe Campaign 연결](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services 연결](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [(API) Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua-api.md)
-      * [(파일) Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua.md)
+      * [Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua.md)
       * [Responsys 연결 oracle](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Salesforce Marketing Cloud 연결](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
       * [(파일) Salesforce Marketing Cloud 연결](./catalog/email-marketing/salesforce-marketing-cloud.md)
@@ -151,7 +149,7 @@ ht-degree: 6%
       * [선 연결](./catalog/mobile-engagement/line.md)
    * 개인화 대상 {#personalization}
       * [개인화 대상 개요](./catalog/personalization/overview.md)
-      * [Adobe Commerce 연결](./catalog/personalization/adobe-commerce.md)
+      * [(베타) Adobe Commerce 연결](./catalog/personalization/adobe-commerce.md)
       * [Adobe Target 연결](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 확장](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 확장](./catalog/personalization/adobe-target-v2.md)

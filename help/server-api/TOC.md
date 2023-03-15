@@ -17,11 +17,11 @@ ht-degree: 50%
 
 
 * [Edge Network Server API 개요](overview.md)
-* [Edge Network Server API에 대한 성능 보호 기능](guardrails.md)
+* [Edge Network Server API의 성능 보호 기능](guardrails.md)
 * [인증](authentication.md)
 * 데이터 수집 {#data-collection}
    * [단일 이벤트 데이터 수집](interactive-data-collection.md)
-   * [배치 이벤트 데이터 수집](non-interactive-data-collection.md)
+   * [일괄 처리 이벤트 데이터 수집](non-interactive-data-collection.md)
 * 다른 Adobe 솔루션과 상호 작용 {#interacting-other-adobe-solutions}
    * [Adobe Analytics과 상호 작용](interacting-adobe-analytics.md)
 * 개인화 {#personalization}

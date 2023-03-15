@@ -1,6 +1,6 @@
 ---
 title: Adobe Medium Analytics for Audio 및 Video 확장 개요
-description: Adobe Experience Platform의 Analytics for Audio 및 Video 태그 확장에 대해 알아봅니다.
+description: Adobe Experience Platform의 Adobe Medium Analytics for Audio 및 Video 태그 확장 기능에 대해 알아봅니다.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Media Analytics for Audio 및 Video 확장(Media Analytics 확장) 설치, 구성 및 구현 관련 정보에 대해서는 이 설명서를 참조합니다. 예제 및 샘플 링크와 함께 이 확장을 사용하여 규칙을 만들 때 사용할 수 있는 옵션이 포함되어 있습니다.
 
-MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 2.x SDK)를 추가합니다. 이 확장은 `MediaHeartbeat` 태그 사이트 또는 프로젝트에 대한 추적기 인스턴스. MA 확장을 사용하려면 다음 두 개의 확장이 추가로 필요합니다.
+MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 2.x SDK)를 추가합니다. 이 확장은 다음을 추가하는 기능을 제공합니다 `MediaHeartbeat` 태그 사이트 또는 프로젝트에 대한 추적기 인스턴스. MA 확장을 사용하려면 다음 두 개의 확장이 추가로 필요합니다.
 
 * [Analytics 확장](../analytics/overview.md)
 * [Experience Cloud ID 확장](../id-service/overview.md)
@@ -26,16 +26,16 @@ MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 2.x SDK)를 추가
 >
 > 오디오 추적을 사용하려면 Analytics 확장 v1.6 이상이 필요합니다.
 
-태그 프로젝트에 위에 언급된 확장 세 개를 모두 포함했으면 다음 두 가지 방법 중 하나를 사용하여 진행할 수 있습니다.
+태그 프로젝트에서 위에 언급된 확장 세 개를 모두 포함했으면 다음 두 가지 방법 중 하나를 사용하여 진행할 수 있습니다.
 
 * 웹 앱의 `MediaHeartbeat` API 사용
 * 특정 미디어 플레이어 이벤트를 `MediaHeartbeat` 추적기 인스턴스의 API에 매핑하는 플레이어 전용 확장을 포함하거나 빌드합니다. 이 인스턴스는 MA 확장을 통해 노출됩니다.
 
 ## MA 확장 설치 및 구성
 
-* **설치 -** MA 확장을 설치하려면 확장 속성을 열고 **[!UICONTROL Extensions > Catalog]**&#x200B;를 마우스로 가리키면 다음이 표시됩니다 **[!UICONTROL 오디오 및 비디오용 Adobe Medium 분석]** 확장을 선택하고 **[!UICONTROL 설치]**.
+* **설치 -** MA 확장을 설치하려면 확장 속성을 열고 **[!UICONTROL 확장 > 카탈로그]**, 마우스로 가리키기 **[!UICONTROL 오디오 및 비디오용 Adobe Medium 분석]** 확장 및 선택 **[!UICONTROL 설치]**.
 
-* **구성 -** MA 확장을 구성하려면 [!UICONTROL 확장] 탭에서 확장을 마우스로 가리킨 다음 을 선택합니다 **[!UICONTROL 구성]**:
+* **구성 -** MA 확장을 구성하려면 [!UICONTROL 확장] 탭을 클릭하고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**:
 
 ![MA 확장 구성](../../../images/ext-va-config.jpg)
 
@@ -59,7 +59,7 @@ MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 2.x SDK)를 추가
 
 ### 웹 페이지/JS 앱에서 사용
 
-MA 확장은 의 &quot;Export APIs to Window Object&quot; 설정을 활성화하여 글로벌 창 개체에서 MediaHeartbeat API를 내보냅니다 [!UICONTROL 구성] 페이지. 구성된 변수 이름 아래에 API를 내보냅니다. 예를 들어 변수 이름이 `ADB`가 되도록 구성된 경우 MediaHeartbeat는 `window.ADB.MediaHeartbeat`로 액세스할 수 있습니다.
+MA 확장은 의 &quot;Export APIs to Window Object&quot; 설정을 활성화하여 글로벌 창 개체에서 MediaHeartbeat API를 내보냅니다. [!UICONTROL 구성] 페이지를 가리키도록 업데이트하는 중입니다. 구성된 변수 이름 아래에 API를 내보냅니다. 예를 들어 변수 이름이 `ADB`가 되도록 구성된 경우 MediaHeartbeat는 `window.ADB.MediaHeartbeat`로 액세스할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -130,9 +130,9 @@ MA 확장은 `get-instance` 및 `media-heartbeat` 공유 모듈을 다른 확장
 
       | 속성 | 설명 | 필수 여부 |
       | :--- | :--- | :--- |
-      | 온라인 비디오 공급자 | 콘텐츠가 배포되는 온라인 비디오 플랫폼의 이름입니다. | 아니요. 있는 경우 확장 구성 중에 정의된 값을 재정의합니다. |
-      | 플레이어 이름 | 사용 중인 미디어 플레이어의 이름(예: &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) | 아니요. 있는 경우 확장 구성 중에 정의된 값을 재정의합니다. |
-      | 채널 | 채널 이름 속성입니다. | 아니요. 있는 경우 확장 구성 중에 정의된 값을 재정의합니다. |
+      | Online Video Provider | 콘텐츠가 배포되는 온라인 비디오 플랫폼의 이름입니다. | 아니요. 있는 경우 확장 구성 중에 정의된 값을 재정의합니다. |
+      | Player Name | 사용 중인 미디어 플레이어의 이름(예: &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) | 아니요. 있는 경우 확장 구성 중에 정의된 값을 재정의합니다. |
+      | Channel | 채널 이름 속성입니다. | 아니요. 있는 경우 확장 구성 중에 정의된 값을 재정의합니다. |
    **반환 값:** `MediaHeartbeat` 인스턴스로 해결되거나 오류 메시지가 표시되고 거부되는 약속입니다.
 
 1. **MediaHeartbeat 상수에 액세스:** `media-heartbeat` 공유 모듈

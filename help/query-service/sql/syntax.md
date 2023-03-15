@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;sql 구문;sql;ctas;CTAS;선택할 대로 테이블 만들기
+keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;sql 구문;sql;ctas;CTAS;선택 항목으로 테이블 만들기
 solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
-description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여줍니다.
+description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여 줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
 source-git-commit: 3907efa2e8c20671e283c1e5834fc7224ee12f9e
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # 쿼리 서비스의 SQL 구문
 
-Adobe Experience Platform Query Service에서는 표준 ANSI SQL을 `SELECT` 문 및 기타 제한된 명령. 이 문서에서는 [!DNL Query Service].
+Adobe Experience Platform Query Service는 표준 ANSI SQL을 `SELECT` 문 및 기타 제한된 명령. 이 문서에서는에서 지원하는 SQL 구문에 대해 설명합니다. [!DNL Query Service].
 
 ## 쿼리 선택 {#select-queries}
 
-다음 구문은 `SELECT` 에서 지원하는 쿼리 [!DNL Query Service]:
+다음 구문은 `SELECT` 쿼리가 다음에서 지원됨 [!DNL Query Service]:
 
 ```sql
 [ WITH with_query [, ...] ]
@@ -35,7 +35,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-여기서 `from_item` 다음 옵션 중 하나일 수 있습니다.
+위치 `from_item` 다음 옵션 중 하나일 수 있습니다.
 
 ```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -79,17 +79,17 @@ CUBE ( { expression | ( expression [, ...] ) } [, ...] )
 GROUPING SETS ( grouping_element [, ...] )
 ```
 
-및 `with_query` is:
+및 `with_query` 은(는)
 
 ```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
 ```
 
-다음 하위 섹션에서는 위에 요약된 형식을 따를 경우 질의에서 사용할 수 있는 추가 조문에 대한 세부 정보를 제공합니다.
+다음 하위 섹션은 위에 설명된 형식을 따르는 경우, 쿼리에 사용할 수 있는 추가 조항에 대한 세부 정보를 제공합니다.
 
 ### SNAPSHOT 절
 
-이 절은 스냅샷 ID를 기반으로 테이블의 데이터를 점진적으로 읽는 데 사용할 수 있습니다. 스냅샷 ID는 데이터가 기록될 때마다 데이터 레이크 테이블에 적용되는 긴 형식의 숫자로 표시되는 체크포인트 마커입니다. 다음 `SNAPSHOT` 절은 그 옆에 사용되는 테이블 관계에 첨부됩니다.
+이 절을 사용하여 스냅숏 ID를 기반으로 테이블의 데이터를 증분 읽는 데 사용할 수 있습니다. 스냅샷 ID는 데이터가 기록될 때마다 데이터 레이크 테이블에 적용되는 긴 유형 번호로 표시되는 체크포인트 마커입니다. 다음 `SNAPSHOT` 절은 그 옆에 사용되는 테이블 관계에 연결됩니다.
 
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
@@ -113,22 +113,22 @@ SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
-다음 사항에 주의하십시오. `SNAPSHOT` 절은 테이블 또는 테이블 별칭과 함께 작동하지만 하위 쿼리 또는 뷰의 맨 위에는 작동하지 않습니다. A `SNAPSHOT` 조항은 어느 곳에서나 작동합니다 `SELECT` 테이블의 쿼리를 적용할 수 있습니다.
+다음 사항에 유의하십시오. `SNAPSHOT` 절은 테이블이나 테이블 별칭과 함께 작동하지만 하위 쿼리나 뷰 위에서는 작동하지 않습니다. A `SNAPSHOT` 이 절 어디서나 사용할 수 있습니다. `SELECT` 테이블에 대한 쿼리를 적용할 수 있습니다.
 
-또한 `HEAD` 및 `TAIL` 스냅샷 절에 대한 특수 오프셋 값으로 사용됩니다. 사용 `HEAD` 는 첫 번째 스냅샷 앞의 오프셋을 참조하고 `TAIL` 는 마지막 스냅샷 이후의 오프셋을 나타냅니다.
+또한 다음을 사용할 수 있습니다 `HEAD` 및 `TAIL` 스냅샷 절의 특수 오프셋 값으로 사용됩니다. 사용 `HEAD` 는 첫 번째 스냅숏 앞의 오프셋을 나타내며 `TAIL` 마지막 스냅샷 이후의 오프셋을 나타냅니다.
 
 >[!NOTE]
 >
->두 스냅샷 ID와 시작 스냅샷 간에 쿼리하는 경우, 선택적 대체 동작 플래그(`resolve_fallback_snapshot_on_failure`)가 설정되어 있습니다.
+>두 스냅샷 ID 간에 쿼리하는 경우 시작 스냅샷이 만료되면 선택적 대체 동작 플래그(`resolve_fallback_snapshot_on_failure`)가 설정되어 있습니다.
 >
->- 옵션 대체 동작 플래그가 설정되어 있으면 Query Service에서 사용 가능한 가장 빠른 스냅샷을 선택하고 시작 스냅샷으로 설정한 다음 사용 가능한 가장 이른 스냅샷과 지정된 종료 스냅샷 사이에 데이터를 반환합니다. 이 데이터는 **포함** 사용 가능한 가장 이른 스냅샷의
+>- 선택적 대체 동작 플래그를 설정하면 쿼리 서비스가 사용 가능한 가장 이른 스냅숏을 선택하고 이를 시작 스냅숏으로 설정하며 사용 가능한 가장 이른 스냅숏과 지정된 끝 스냅숏 사이에 데이터를 반환합니다. 이 데이터는 **포괄** 사용 가능한 가장 빠른 스냅샷
 >
->- 옵션 대체 동작 플래그가 설정되지 않으면 오류가 반환됩니다.
+>- 선택적 대체 동작 플래그가 설정되지 않은 경우 오류가 반환됩니다.
 
 
 ### WHERE 절
 
-기본적으로 은 `WHERE` 에 대한 조항 `SELECT` 쿼리는 대/소문자를 구분합니다. 일치 항목을 대/소문자를 구분하지 않게 하려면 키워드를 사용할 수 있습니다 `ILIKE` 대신 `LIKE`.
+기본적으로 가 생성한 일치 항목 `WHERE` a에 대한 절 `SELECT` 쿼리는 대/소문자를 구분합니다. 일치하는 항목을 대/소문자를 구분하지 않게 하려면 키워드를 사용할 수 있습니다 `ILIKE` 대신 `LIKE`.
 
 ```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
@@ -150,11 +150,11 @@ SELECT * FROM Customers
 WHERE CustomerName ILIKE 'a%';
 ```
 
-이 쿼리는 &quot;A&quot; 또는 &quot;a&quot;에서 시작하는 이름을 사용하는 고객을 반환합니다.
+이 쿼리는 &quot;A&quot; 또는 &quot;a&quot;로 시작하는 이름을 가진 고객을 반환합니다.
 
 ### 가입
 
-A `SELECT` 조인을 사용하는 쿼리에는 다음 구문이 있습니다.
+A `SELECT` 조인을 사용하는 쿼리의 구문은 다음과 같습니다.
 
 ```sql
 SELECT statement
@@ -165,7 +165,7 @@ ON join condition
 
 ### 결합, 교차 및 제외
 
-다음 `UNION`, `INTERSECT`, 및 `EXCEPT` 절은 두 개 이상의 테이블에서 유사 행을 결합하거나 제외하는 데 사용됩니다.
+다음 `UNION`, `INTERSECT`, 및 `EXCEPT` 절은 둘 이상의 테이블에서 유사 행을 결합하거나 제외하는 데 사용됩니다.
 
 ```sql
 SELECT statement 1
@@ -173,7 +173,7 @@ SELECT statement 1
 SELECT statement 2
 ```
 
-### 선택할 때 테이블 만들기 {#create-table-as-select}
+### 선택 항목으로 표 만들기 {#create-table-as-select}
 
 다음 구문은 `CREATE TABLE AS SELECT` (CTAS) 쿼리:
 
@@ -183,10 +183,10 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 
 | 매개 변수 | 설명 |
 | ----- | ----- |
-| `schema` | XDM 스키마의 제목입니다. CTAS 쿼리에서 만든 새 데이터 세트에 기존 XDM 스키마를 사용하려는 경우에만 이 절을 사용합니다. |
-| `rowvalidation` | (선택 사항) 새로 생성된 데이터 세트에 대해 수집된 모든 새 배치의 행 수준 유효성 검사를 사용자가 원하는지 여부를 지정합니다. 기본값은 `true`입니다. |
-| `label` | CTAS 쿼리를 사용하여 데이터 세트를 만들 때 이 레이블을 값과 함께 사용합니다 `profile` 데이터 세트에 프로필에 대해 활성화됨으로 레이블을 지정하려면 즉, 데이터 세트가 만들 때 프로필에 대해 자동으로 표시됩니다. 의 사용에 대한 자세한 내용은 파생 특성 확장 문서 를 참조하십시오 `label`. |
-| `select_query` | A `SELECT` 문. 의 구문 `SELECT` 쿼리는 [쿼리 섹션 선택](#select-queries). |
+| `schema` | XDM 스키마의 제목입니다. CTAS 쿼리로 만든 새 데이터 세트에 기존 XDM 스키마를 사용하려는 경우에만 이 절을 사용합니다. |
+| `rowvalidation` | (선택 사항) 사용자가 새로 만든 데이터 세트에 대해 수집된 모든 새 배치의 행 수준 유효성 검사를 원하는지 여부를 지정합니다. 기본값은 `true`입니다. |
+| `label` | CTAS 쿼리로 데이터 세트를 만들 때 다음 값으로 이 레이블을 사용합니다. `profile` 을 입력하여 프로필에 대해 활성화된 데이터 세트에 레이블을 지정합니다. 즉, 데이터 세트가 생성될 때 프로필에 대해 자동으로 표시됩니다. 사용 방법에 대한 자세한 내용은 파생 속성 확장 문서 를 참조하십시오 `label`. |
+| `select_query` | A `SELECT` 명령문입니다. 구문 `SELECT` 쿼리는 다음에서 찾을 수 있습니다 [쿼리 섹션 선택](#select-queries). |
 
 **예**
 
@@ -200,9 +200,9 @@ CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 
 >[!NOTE]
 >
->다음 `SELECT` 문에는 다음과 같은 집계 함수에 대한 별칭이 있어야 합니다. `COUNT`, `SUM`, `MIN`등 또한 `SELECT` 문은 괄호를 사용하거나 사용하지 않고 제공할 수 있습니다(). 다음을 제공할 수 있습니다 `SNAPSHOT` 대상 테이블에 증분 델타를 읽는 절
+>다음 `SELECT` 문에는 다음과 같은 집계 함수에 대한 별칭이 있어야 합니다. `COUNT`, `SUM`, `MIN`등. 또한 `SELECT` 문은 괄호()를 사용하거나 사용하지 않고 제공할 수 있습니다. 다음을 제공할 수 있습니다. `SNAPSHOT` 조항을 사용하여 증분 델타를 대상 테이블에 읽어올 수 있습니다.
 
-## 삽입 위치
+## 에 삽입
 
 다음 `INSERT INTO` 명령은 다음과 같이 정의됩니다.
 
@@ -213,13 +213,13 @@ INSERT INTO table_name select_query
 | 매개 변수 | 설명 |
 | ----- | ----- |
 | `table_name` | 쿼리를 삽입할 테이블의 이름입니다. |
-| `select_query` | A `SELECT` 문. 의 구문 `SELECT` 쿼리는 [쿼리 섹션 선택](#select-queries). |
+| `select_query` | A `SELECT` 명령문입니다. 구문 `SELECT` 쿼리는 다음에서 찾을 수 있습니다 [쿼리 섹션 선택](#select-queries). |
 
 **예**
 
 >[!NOTE]
 >
->다음은 강의용으로 작성된 예입니다.
+>다음은 교육적 목적으로 구성된 사례입니다.
 
 ```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
@@ -229,11 +229,11 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 
 >[!INFO]
 > 
-> 다음 `SELECT` statement **필수가 아니어야 합니다.** 괄호로 묶습니다(). 또한 `SELECT` 문은 `INSERT INTO` 문. 다음을 제공할 수 있습니다 `SNAPSHOT` 대상 테이블에 증분 델타를 읽는 절
+> 다음 `SELECT` 구문 **은(는) 해서는 안 됨** 괄호로 묶어야 합니다(). 또한 결과의 스키마도 `SELECT` 문은 다음에 정의된 표의 문을 준수해야 합니다. `INSERT INTO` 명령문입니다. 다음을 제공할 수 있습니다. `SNAPSHOT` 조항을 사용하여 증분 델타를 대상 테이블에 읽어올 수 있습니다.
 
-실제 XDM 스키마의 대부분의 필드는 루트 수준에서 찾을 수 없으며 SQL에서는 점 표기법을 사용할 수 없습니다. 중첩된 필드를 사용하여 사실적인 결과를 얻으려면 `INSERT INTO` 경로.
+실제 XDM 스키마의 대부분의 필드는 루트 수준에서 찾을 수 없으며 SQL에서는 점 표기법을 사용할 수 없습니다. 중첩된 필드를 사용하여 실제 결과를 얻으려면 의 각 필드를 매핑해야 합니다 `INSERT INTO` 경로.
 
-종료 `INSERT INTO` 중첩된 경로는 다음 구문을 사용합니다.
+종료 `INSERT INTO` 중첩된 경로에는 다음 구문을 사용합니다.
 
 ```sql
 INSERT INTO [dataset]
@@ -251,7 +251,7 @@ INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCi
 
 ## 테이블 놓기
 
-다음 `DROP TABLE` 명령은 기존 테이블을 삭제하고 외부 테이블이 아닌 경우 파일 시스템에서 테이블과 연관된 디렉토리를 삭제합니다. 테이블이 없으면 예외가 발생합니다.
+다음 `DROP TABLE` 기존 테이블을 삭제하고 해당 테이블이 외부 테이블이 아닌 경우 해당 테이블과 연관된 디렉토리를 파일 시스템에서 삭제합니다. 테이블이 없으면 예외가 발생합니다.
 
 ```sql
 DROP TABLE [IF EXISTS] [db_name.]table_name
@@ -259,7 +259,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 | 매개 변수 | 설명 |
 | ------ | ------ |
-| `IF EXISTS` | 이 값을 지정하면 테이블이 지정된 경우 예외가 throw되지 않습니다 **not** 존재 |
+| `IF EXISTS` | 이를 지정하면 테이블이 다음을 수행하는 경우 예외가 throw되지 않습니다 **아님** 존재합니다. |
 
 ## 데이터베이스 만들기
 
@@ -279,7 +279,7 @@ DROP DATABASE [IF EXISTS] db_name
 
 | 매개 변수 | 설명 |
 | ------ | ------ |
-| `IF EXISTS` | 이 값을 지정하면 데이터베이스가 지정하는 경우 예외가 발생하지 않습니다 **not** 존재 |
+| `IF EXISTS` | 이 항목을 지정하면 데이터베이스에서 예외가 throw되지 않습니다 **아님** 존재합니다. |
 
 ## 스키마 삭제
 
@@ -291,9 +291,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 | 매개 변수 | 설명 |
 | ------ | ------ |
-| `IF EXISTS` | 이 값을 지정하면 스키마에 예외가 throw되지 않습니다 **not** 존재 |
-| `RESTRICT` | 모드에 대한 기본값입니다. 이 값을 지정하면 스키마가 지정된 경우에만 삭제됩니다 **does not** 표를 모두 포함합니다. |
-| `CASCADE` | 이 값을 지정하면 스키마에 있는 모든 테이블과 함께 스키마가 삭제됩니다. |
+| `IF EXISTS` | 이 항목을 지정하면 스키마에서 예외가 throw되지 않습니다 **아님** 존재합니다. |
+| `RESTRICT` | 모드의 기본값. 이 항목이 지정된 경우 스키마는 다음 경우에만 삭제됩니다 **다음과 같지 않음** 모든 테이블을 포함합니다. |
+| `CASCADE` | 이 항목을 지정하면 스키마가 스키마에 있는 모든 테이블과 함께 삭제됩니다. |
 
 ## 보기 만들기
 
@@ -305,8 +305,8 @@ CREATE VIEW view_name AS select_query
 
 | 매개 변수 | 설명 |
 | ------ | ------ |
-| `view_name` | 만들 보기의 이름입니다. |
-| `select_query` | A `SELECT` 문. 의 구문 `SELECT` 쿼리는 [쿼리 섹션 선택](#select-queries). |
+| `view_name` | 생성할 보기의 이름입니다. |
+| `select_query` | A `SELECT` 명령문입니다. 구문 `SELECT` 쿼리는 다음에서 찾을 수 있습니다 [쿼리 섹션 선택](#select-queries). |
 
 **예**
 
@@ -316,7 +316,7 @@ CREATE VIEW V1 AS SELECT color, type FROM Inventory
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
 
-## 보기 삭제
+## 놓기 보기
 
 다음 구문은 `DROP VIEW` 쿼리:
 
@@ -326,7 +326,7 @@ DROP VIEW [IF EXISTS] view_name
 
 | 매개 변수 | 설명 |
 | ------ | ------ |
-| `IF EXISTS` | 이 값이 지정된 경우 보기가 실행되는 경우 예외가 발생하지 않습니다 **not** 존재 |
+| `IF EXISTS` | 이 값을 지정하면 보기에서 예외를 throw하지 않습니다 **아님** 존재합니다. |
 | `view_name` | 삭제할 보기의 이름입니다. |
 
 **예**
@@ -338,9 +338,9 @@ DROP VIEW IF EXISTS v1
 
 ## 익명 블록
 
-익명 블록은 다음 두 섹션으로 구성됩니다. 실행 파일 및 예외 처리 섹션. 익명 블록에서는 실행 가능한 섹션이 필수입니다. 그러나 예외 처리 섹션은 선택 사항입니다.
+익명 블록은 실행 섹션과 예외 처리 섹션의 두 섹션으로 구성됩니다. 익명 블록에서는 실행 가능 섹션이 필수입니다. 그러나 예외 처리 섹션은 선택 사항입니다.
 
-다음 예에서는 함께 실행할 하나 이상의 구문을 사용하여 블록을 만드는 방법을 보여 줍니다.
+다음 예에서는 함께 실행할 하나 이상의 문으로 블록을 만드는 방법을 보여 줍니다.
 
 ```sql
 $$BEGIN
@@ -356,7 +356,7 @@ statementList:
     : (statement (';')) +
 ```
 
-다음은 익명 블록을 사용하는 예입니다.
+다음은 익명 블록을 사용하는 예제입니다.
 
 ```sql
 $$BEGIN
@@ -373,19 +373,19 @@ EXCEPTION
 $$END;
 ```
 
-### JSON에 자동 {#auto-to-json}
+### JSON으로 자동 {#auto-to-json}
 
-Query Service는 대화형 SELECT 쿼리에서 최상위 수준의 복잡한 필드를 JSON 문자열로 반환하도록 선택적 세션 수준 설정을 지원합니다. 다음 `auto_to_json` 설정을 사용하면 복잡한 필드의 데이터를 JSON으로 반환한 다음 표준 라이브러리를 사용하여 JSON 개체에 구문 분석할 수 있습니다.
+쿼리 서비스는 대화형 SELECT 쿼리의 최상위 복잡한 필드를 JSON 문자열로 반환하기 위한 선택적 세션 수준 설정을 지원합니다. 다음 `auto_to_json` 을 설정하면 복잡한 필드의 데이터를 JSON으로 반환한 다음 표준 라이브러리를 사용하여 JSON 개체로 구문 분석할 수 있습니다.
 
-기능 플래그 설정 `auto_to_json` 복합 필드가 포함된 SELECT 쿼리를 실행하기 전에 true로 설정합니다.
+기능 플래그 설정 `auto_to_json` 복잡한 필드가 포함된 SELECT 쿼리를 실행하기 전에 true로 설정합니다.
 
 ```sql
 set auto_to_json=true; 
 ```
 
-#### 설정하기 전에 `auto_to_json` 플래그
+#### 을(를) 설정하기 전에 `auto_to_json` 플래그
 
-다음 표에서는 `auto_to_json` 설정이 적용됩니다. 복잡한 필드가 있는 테이블을 타겟으로 하는 동일한 SELECT 쿼리가 두 시나리오에서 모두 사용되었습니다.
+다음 표는 다음 예제 쿼리 결과를 제공합니다. `auto_to_json` 설정이 적용됩니다. 복잡한 필드가 있는 테이블을 타겟팅하는 동일한 SELECT 쿼리(아래 참조)가 두 시나리오에서 사용되었습니다.
 
 ```sql
 SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
@@ -401,9 +401,9 @@ SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
 (2 rows)  
 ```
 
-#### 를 설정한 후 `auto_to_json` 플래그
+#### 설정 후 `auto_to_json` 플래그
 
-다음 표에서는 `auto_to_json` 설정은 결과 데이터 세트에 대해 입니다. 동일한 SELECT 쿼리가 두 시나리오에서 모두 사용되었습니다.
+다음 표는 다음과 같은 결과의 차이를 보여 줍니다. `auto_to_json` 에 대한 설정이 결과 데이터 세트에 있습니다. 두 시나리오 모두에서 동일한 SELECT 쿼리가 사용되었습니다.
 
 ```console
                 _id                |   receivedTimestamp   |       timestamp       |                                                                                                                   _experience                                                                                                                   |           application            |             commerce             |    dataSource    |                                                                  device                                                                   |                                                   endUserIDs                                                   |                                                                                                                                                                                           environment                                                                                                                                                                                            |                             identityMap                              |                                                                                            placeContext                                                                                            |      userActivityRegion      |                                                                                     web                                                                                      | _adcstageforpqs
@@ -413,17 +413,17 @@ SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
 (2 rows)
 ```
 
-### 장애 시 대체 스냅샷 해결 {#resolve-fallback-snapshot-on-failure}
+### 실패 시 대체 스냅샷 해결 {#resolve-fallback-snapshot-on-failure}
 
-다음 `resolve_fallback_snapshot_on_failure` 만료된 스냅샷 ID 문제를 해결하는 데 옵션이 사용됩니다. 스냅샷 메타데이터는 2일 후에 만료되며 만료된 스냅샷은 스크립트 논리를 무효화할 수 있습니다. 익명 블록을 사용할 때 문제가 될 수 있습니다.
+다음 `resolve_fallback_snapshot_on_failure` 옵션은 만료된 스냅샷 ID 문제를 해결하는 데 사용됩니다. 스냅샷 메타데이터는 2일 후에 만료되며 만료된 스냅샷은 스크립트 논리를 무효화할 수 있습니다. 이는 익명 블록을 사용할 때 문제가 될 수 있습니다.
 
-설정 `resolve_fallback_snapshot_on_failure` 옵션을 true 로 설정하면 이전 스냅샷 ID로 스냅샷을 재정의할 수 있습니다.
+설정 `resolve_fallback_snapshot_on_failure` 이전 스냅샷 ID로 스냅샷을 무시하려면 true로 설정합니다.
 
 ```sql
 SET resolve_fallback_snapshot_on_failure=true;
 ```
 
-다음 코드 행은 `@from_snapshot_id` 가능한 한 빨리 `snapshot_id` 메타데이터.
+다음 코드 행은 `@from_snapshot_id` 가장 빠른 시일 내에 `snapshot_id` 메타데이터.
 
 ```sql
 $$ BEGIN
@@ -454,9 +454,9 @@ $$;
 
 ## 데이터 자산 조직
 
-Adobe Experience Platform 데이터 레이크 내에서 데이터가 증가할 때 데이터 자산을 논리적으로 구성하는 것이 중요합니다. Query Service는 샌드박스 내의 데이터 자산을 논리적으로 그룹화할 수 있는 SQL 구문을 확장합니다. 이 조직 방법을 사용하면 물리적으로 이동할 필요 없이 스키마 간에 데이터 자산을 공유할 수 있습니다.
+Adobe Experience Platform 데이터 레이크 내에서 데이터 자산이 커짐에 따라 이를 논리적으로 구성하는 것이 중요합니다. Query Service는 샌드박스 내에서 데이터 자산을 논리적으로 그룹화할 수 있도록 SQL 구문을 확장합니다. 이 조직 방법을 사용하면 물리적으로 이동할 필요 없이 스키마 간에 데이터 자산을 공유할 수 있습니다.
 
-데이터를 논리적으로 구성할 수 있도록 표준 SQL 구문을 사용하는 다음 SQL 구문이 지원됩니다.
+표준 SQL 구문을 사용하는 다음 SQL 구문이 지원되므로 데이터를 논리적으로 구성할 수 있습니다.
 
 ```SQL
 CREATE DATABASE dg1;
@@ -467,13 +467,13 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-다음 안내서를 참조하십시오. [데이터 자산의 논리 조직](../best-practices/organize-data-assets.md) 쿼리 서비스 모범 사례에 대한 자세한 설명을 참조하십시오.
+다음 안내서를 참조하십시오 [데이터 자산의 논리 구성](../best-practices/organize-data-assets.md) 쿼리 서비스 모범 사례에 대한 자세한 설명은 를 참조하십시오.
 
-## 테이블이 존재함
+## 테이블이 있습니다.
 
-다음 `table_exists` SQL 명령은 현재 시스템에 테이블이 있는지 여부를 확인하는 데 사용됩니다. 이 명령은 부울 값을 반환합니다. `true` 만약 **does** 존재 및 `false` 테이블에서 **not** 존재
+다음 `table_exists` SQL 명령을 사용하여 시스템에 테이블이 현재 있는지 여부를 확인합니다. 이 명령은 부울 값을 반환합니다. `true` 테이블인 경우 **다음과 같음** 존재함, 및 `false` 테이블이 다음과 같은 경우 **아님** 존재합니다.
 
-문을 실행하기 전에 테이블이 있는지 확인하여 `table_exists` 이 기능은 익명 블록을 작성하여 두 요소를 모두 포함하는 과정을 간소화합니다 `CREATE` 및 `INSERT INTO` 사용 사례
+명령문을 실행하기 전에 테이블이 있는지 확인하여 `table_exists` 이 기능을 사용하면 익명의 블록을 작성하여 `CREATE` 및 `INSERT INTO` 활용 사례.
 
 다음 구문은 `table_exists` 명령:
 
@@ -503,15 +503,15 @@ END $$;
 
 ## 인라인 {#inline}
 
-다음 `inline` 함수는 구조체 배열의 요소를 분리하고 값을 표로 생성합니다. 이 ID는 `SELECT` 목록 또는 `LATERAL VIEW`.
+다음 `inline` 함수는 구조체 배열의 요소를 분리하고 값을 테이블로 생성합니다. 에만 배치할 수 있습니다. `SELECT` 목록 또는 `LATERAL VIEW`.
 
-다음 `inline` 함수 **사용할 수 없음** 다른 생성기 기능이 있는 선택 목록에 배치됩니다.
+다음 `inline` 함수 **할 수 없음** 다른 생성기 함수가 있는 선택 목록에 배치해야 합니다.
 
-기본적으로 생성되는 열의 이름은 &quot;col1&quot;, &quot;col2&quot; 등입니다. 표현식이 `NULL` 그러면 행이 생성되지 않습니다.
+기본적으로 생성된 열의 이름은 &quot;col1&quot;, &quot;col2&quot; 등으로 지정됩니다. 표현식이 인 경우 `NULL` 그런 다음 행이 생성되지 않습니다.
 
 >[!TIP]
 >
->열 이름은 `RENAME` 명령.
+>열 이름은 를 사용하여 변경할 수 있습니다. `RENAME` 명령입니다.
 
 **예**
 
@@ -519,16 +519,16 @@ END $$;
 > SELECT inline(array(struct(1, 'a'), struct(2, 'b'))), 'Spark SQL';
 ```
 
-이 예는 다음을 반환합니다.
+이 예제는 다음을 반환합니다.
 
 ```text
 1  a Spark SQL
 2  b Spark SQL
 ```
 
-이 두 번째 예는 의 개념 및 적용을 더 보여줍니다 `inline` 함수 위에 있어야 합니다. 이 예제의 데이터 모델은 아래 이미지에 표시되어 있습니다.
+이 두 번째 예에서는 의 개념과 적용 방법을 추가로 보여 줍니다 `inline` 함수. 아래 그림에는 예제의 데이터 모델이 나와 있습니다.
 
-![productListItems에 대한 스키마 다이어그램입니다.](../images/sql/productListItems.png)
+![productListItems의 스키마 다이어그램입니다.](../images/sql/productListItems.png)
 
 **예**
 
@@ -540,18 +540,18 @@ select inline(productListItems) from source_dataset limit 10;
 
 | SKU | _경험 | 수량 | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
-| product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;) | 5 | 10.5 |
-| product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;) |  |  |
-| product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;)&quot;) | 6 | 40 |
-| product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;) | 3 | 12 |
+| product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;) | 5 | 10.5 |
+| product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;) |  |  |
+| product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;)) | 6 | 40 |
+| product-id-4 | (&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;) | 3 | 12 |
 
 ## [!DNL Spark] SQL 명령
 
-아래 하위 섹션에서는 Query Service에서 지원하는 Spark SQL 명령을 다룹니다.
+아래 하위 섹션에서는 쿼리 서비스에서 지원하는 Spark SQL 명령을 다룹니다.
 
 ### 설정
 
-다음 `SET` 명령은 속성을 설정하고 기존 속성의 값을 반환하거나 기존 속성을 모두 나열합니다. 기존 속성 키에 값이 제공되면 이전 값이 재정의됩니다.
+다음 `SET` 명령은 속성을 설정하고 기존 속성의 값을 반환하거나 기존 속성을 모두 나열합니다. 기존 속성 키에 대한 값이 제공되면 이전 값이 재정의됩니다.
 
 ```sql
 SET property_key = property_value
@@ -560,17 +560,17 @@ SET property_key = property_value
 | 매개 변수 | 설명 |
 | ------ | ------ |
 | `property_key` | 나열하거나 변경할 속성의 이름입니다. |
-| `property_value` | 속성을 로 설정할 값입니다. |
+| `property_value` | 속성을 설정할 값입니다. |
 
 설정에 대한 값을 반환하려면 `SET [property key]` 없이 `property_value`.
 
 ## [!DNL PostgreSQL] 명령
 
-아래의 하위 섹션은 [!DNL PostgreSQL] 쿼리 서비스에서 지원하는 명령
+아래의 하위 섹션은 [!DNL PostgreSQL] 쿼리 서비스에서 지원하는 명령입니다.
 
 ### 테이블 분석
 
-다음 `ANALYZE TABLE` 명령은 가속 저장소의 테이블에 대한 통계를 계산합니다. 통계는 가속화된 저장소의 지정된 테이블에 대해 실행된 CTAS 또는 ITAS 쿼리에서 계산됩니다.
+다음 `ANALYZE TABLE` 명령은 가속화된 저장소의 테이블에 대한 통계를 계산합니다. 통계는 가속 저장소의 주어진 표에 대해 실행된 CTAS 또는 ITAS 쿼리에 대해 계산됩니다.
 
 **예**
 
@@ -578,23 +578,23 @@ SET property_key = property_value
 ANALYZE TABLE <original_table_name>
 ```
 
-다음은 를 사용한 후에 사용할 수 있는 통계 계산 목록입니다 `ANALYZE TABLE` 명령:-
+다음은 를 사용한 후 사용할 수 있는 통계 계산 목록입니다. `ANALYZE TABLE` 명령:-
 
 | 계산된 값 | 설명 |
 |---|---|
 | `field` | 테이블에 있는 열의 이름입니다. |
-| `data-type` | 각 열에 대해 허용되는 데이터 유형입니다. |
-| `count` | 이 필드에 대해 null이 아닌 값을 포함하는 행 수입니다. |
-| `distinct-count` | 이 필드에 대한 고유한 또는 개별 값의 수입니다. |
+| `data-type` | 각 열에 허용되는 데이터 유형입니다. |
+| `count` | 이 필드에 대해 null이 아닌 값이 포함된 행 수입니다. |
+| `distinct-count` | 이 필드에 대한 고유하거나 고유한 값의 수입니다. |
 | `missing` | 이 필드에 대해 null 값이 있는 행 수입니다. |
 | `max` | 분석된 테이블의 최대값입니다. |
-| `min` | 분석된 테이블의 최소값입니다. |
+| `min` | 분석된 테이블의 최소값. |
 | `mean` | 분석된 테이블의 평균 값입니다. |
-| `stdev` | 분석된 테이블의 표준 편차. |
+| `stdev` | 분석된 테이블의 표준 편차입니다. |
 
 ### 시작
 
-다음 `BEGIN` 명령 또는 또는 `BEGIN WORK` 또는 `BEGIN TRANSACTION` 트랜잭션 블록을 시작합니다. begin 명령 후에 입력된 모든 문은 명시적 COMMIT 또는 ROLLBACK 명령이 제공될 때까지 단일 트랜잭션에서 실행됩니다. 이 명령은 다음과 같습니다 `START TRANSACTION`.
+다음 `BEGIN` 명령 또는 `BEGIN WORK` 또는 `BEGIN TRANSACTION` 명령에서 트랜잭션 블록을 시작합니다. begin 명령 뒤에 입력된 모든 문은 명시적 COMMIT 또는 ROLLBACK 명령이 제공될 때까지 단일 트랜잭션에서 실행됩니다. 이 명령은 와 동일합니다. `START TRANSACTION`.
 
 ```sql
 BEGIN
@@ -604,29 +604,29 @@ BEGIN TRANSACTION
 
 ### 닫기
 
-다음 `CLOSE` 명령은 열려 있는 커서와 연결된 리소스를 해제합니다. 커서를 닫으면 후속 작업이 허용되지 않습니다. 커서가 더 이상 필요하지 않으면 닫아야 합니다.
+다음 `CLOSE` 명령은 열린 커서와 관련된 리소스를 해제합니다. 커서를 닫으면 후속 작업이 허용되지 않습니다. 더 이상 필요하지 않은 경우 커서를 닫아야 합니다.
 
 ```sql
 CLOSE name
 CLOSE ALL
 ```
 
-If `CLOSE name` 이 사용됩니다. `name` 닫아야 하는 열린 커서의 이름을 나타냅니다. If `CLOSE ALL` 를 사용하면 열려 있는 모든 커서가 닫힙니다.
+If `CLOSE name` 을 사용합니다. `name` 닫아야 하는 열린 커서의 이름을 나타냅니다. If `CLOSE ALL` 를 사용하면 열려 있는 모든 커서가 닫힙니다.
 
-### 할당 취소
+### 할당 해제
 
-다음 `DEALLOCATE` 명령을 사용하면 이전에 준비한 SQL 문을 할당 취소할 수 있습니다. 준비된 문을 명시적으로 할당 취소하지 않으면 세션이 종료될 때 이 명령문은 할당 취소됩니다. 준비된 문에 대한 자세한 내용은 [PREPARE 명령](#prepare) 섹션을 참조하십시오.
+다음 `DEALLOCATE` 명령을 사용하면 이전에 준비한 SQL 문의 할당을 취소할 수 있습니다. 준비된 문의 할당을 명시적으로 취소하지 않으면 세션이 종료될 때 할당이 취소됩니다. 준비된 문에 대한 자세한 내용은 [PREPARE 명령](#prepare) 섹션.
 
 ```sql
 DEALLOCATE name
 DEALLOCATE ALL
 ```
 
-If `DEALLOCATE name` 이 사용됩니다. `name` 할당 취소해야 하는 준비된 문의 이름을 나타냅니다. If `DEALLOCATE ALL` 이(가) 사용되면, 준비된 모든 명령문은 할당이 취소됩니다.
+If `DEALLOCATE name` 을 사용합니다. `name` 할당 해제해야 하는 준비된 문의 이름을 나타냅니다. If `DEALLOCATE ALL` 를 사용하면 준비된 모든 문이 할당 해제됩니다.
 
-### 선언
+### DECLARE
 
-다음 `DECLARE` 명령을 사용하면 커서를 만들 수 있으며 커서는 큰 쿼리에서 적은 수의 행을 검색하는 데 사용할 수 있습니다. 커서를 만들면 `FETCH`.
+다음 `DECLARE` 명령을 사용하면 커서를 만들 수 있으며, 커서는 큰 쿼리에서 적은 수의 행을 검색하는 데 사용할 수 있습니다. 커서가 만들어지면 다음 작업을 사용하여 커서에서 행을 가져옵니다. `FETCH`.
 
 ```sql
 DECLARE name CURSOR FOR query
@@ -634,14 +634,14 @@ DECLARE name CURSOR FOR query
 
 | 매개 변수 | 설명 |
 | ------ | ------ |
-| `name` | 만들 커서의 이름입니다. |
-| `query` | A `SELECT` 또는 `VALUES` 커서에서 반환할 행을 제공하는 명령입니다. |
+| `name` | 생성할 커서의 이름입니다. |
+| `query` | A `SELECT` 또는 `VALUES` 커서가 반환할 행을 제공하는 명령입니다. |
 
 ### 실행
 
-다음 `EXECUTE` 명령은 이전에 준비한 문을 실행하는 데 사용됩니다. 준비된 문은 세션 기간 동안에만 존재하므로 준비된 문은 `PREPARE` 현재 세션에서 이전에 실행된 문입니다. 준비된 문을 사용하는 방법에 대한 자세한 내용은 [`PREPARE` 명령](#prepare) 섹션을 참조하십시오.
+다음 `EXECUTE` 명령은 이전에 준비한 문을 실행하는 데 사용됩니다. 준비된 문은 세션 기간 동안만 존재하므로 준비된 문은 `PREPARE` 현재 세션에서 이전에 실행된 명령문입니다. 준비된 명령문 사용에 대한 자세한 내용은 [`PREPARE` 명령](#prepare) 섹션.
 
-만약 `PREPARE` 일부 매개 변수를 지정한 문을 만든 명령문이므로 호환되는 매개 변수 집합을 `EXECUTE` 문. 이러한 매개 변수가 전달되지 않으면 오류가 발생합니다.
+다음과 같은 경우 `PREPARE` 문을 만든 문에서 일부 매개 변수를 지정했습니다. 호환 가능한 매개 변수 집합을 `EXECUTE` 명령문입니다. 이러한 매개 변수가 전달되지 않으면 오류가 발생합니다.
 
 ```sql
 EXECUTE name [ ( parameter ) ]
@@ -650,17 +650,17 @@ EXECUTE name [ ( parameter ) ]
 | 매개 변수 | 설명 |
 | ------ | ------ |
 | `name` | 실행할 준비된 문의 이름입니다. |
-| `parameter` | 준비된 문에 대한 매개 변수의 실제 값입니다. 준비된 문을 만들 때 결정된 대로 이 매개 변수의 데이터 유형과 호환되는 값을 가져오는 표현식이어야 합니다.  준비된 문에 대해 여러 매개 변수가 있는 경우 쉼표로 구분됩니다. |
+| `parameter` | 준비된 문에 대한 매개 변수의 실제 값. 준비된 문이 생성될 때 결정된 대로 이 매개 변수의 데이터 유형과 호환되는 값을 산출하는 표현식이어야 합니다.  준비된 문에 여러 매개 변수가 있는 경우 쉼표로 구분됩니다. |
 
 ### 설명
 
-다음 `EXPLAIN` 명령에는 제공된 문에 대한 실행 계획이 표시됩니다. 실행 계획에는 문에서 참조하는 테이블을 스캔하는 방법이 표시됩니다.  여러 테이블을 참조하면 각 입력 테이블에서 필요한 행을 함께 가져오는 데 사용되는 조인 알고리즘이 표시됩니다.
+다음 `EXPLAIN` 명령은 제공된 문의 실행 계획을 표시합니다. 실행 계획에는 명령문에서 참조하는 테이블을 검사하는 방법이 표시됩니다.  여러 테이블이 참조되는 경우 각 입력 테이블에서 필수 행을 통합하는 데 사용되는 조인 알고리즘을 보여 줍니다.
 
 ```sql
 EXPLAIN statement
 ```
 
-를 사용하십시오 `FORMAT` 키워드 `EXPLAIN` 명령의 형식을 정의합니다.
+사용 `FORMAT` 키워드 포함 `EXPLAIN` 응답 형식을 정의하는 명령입니다.
 
 ```sql
 EXPLAIN FORMAT { TEXT | JSON } statement
@@ -668,16 +668,16 @@ EXPLAIN FORMAT { TEXT | JSON } statement
 
 | 매개 변수 | 설명 |
 | ------ | ------ |
-| `FORMAT` | 를 사용하십시오 `FORMAT` 출력 형식을 지정하는 명령 사용 가능한 옵션은 다음과 같습니다 `TEXT` 또는 `JSON`. 텍스트가 아닌 출력에는 텍스트 출력 형식과 동일한 정보가 포함되어 있지만 프로그램이 구문 분석하기 쉽습니다. 이 매개 변수의 기본값은 입니다. `TEXT`. |
-| `statement` | 임의 `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, 또는 `CREATE MATERIALIZED VIEW AS` 표시할 실행 계획 |
+| `FORMAT` | 사용 `FORMAT` 출력 형식을 지정하는 명령입니다. 사용 가능한 옵션은 다음과 같습니다 `TEXT` 또는 `JSON`. 텍스트가 아닌 출력에는 텍스트 출력 형식과 동일한 정보가 포함되어 있지만 프로그램이 더 쉽게 구문 분석할 수 있습니다. 이 매개 변수의 기본값은 입니다. `TEXT`. |
+| `statement` | 임의 `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, 또는 `CREATE MATERIALIZED VIEW AS` 명령문(보고 싶은 실행 계획). |
 
 >[!IMPORTANT]
 >
->모든 출력은 `SELECT` 문은 `EXPLAIN` 키워드. 그 진술의 다른 부작용들은 평상시처럼 발생한다.
+>에 해당하는 모든 출력 `SELECT` 문을 로 실행하면 문이 삭제될 수 있음 `EXPLAIN` 키워드. 그 진술의 다른 부작용들은 평소와 같이 발생한다.
 
 **예**
 
-다음 예는 단일 테이블의 단순 쿼리에 대한 계획을 보여줍니다 `integer` 열 및 10000 행:
+다음 예제에서는 단일 쿼리가 있는 테이블의 단순 쿼리에 대한 계획을 보여 줍니다 `integer` 열 및 10000 행:
 
 ```sql
 EXPLAIN SELECT * FROM foo;
@@ -701,15 +701,15 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 | 매개 변수 | 설명 |
 | ------ | ------ |
 | `num_of_rows` | 가져올 행 수입니다. |
-| `cursor_name` | 정보를 검색할 커서의 이름입니다. |
+| `cursor_name` | 정보를 검색하는 커서의 이름입니다. |
 
 ### 준비 {#prepare}
 
-다음 `PREPARE` 명령을 사용하면 준비된 문을 만들 수 있습니다. 준비된 문은 유사한 SQL 문을 템플릿 지정하는 데 사용할 수 있는 서버측 객체입니다.
+다음 `PREPARE` 명령을 사용하면 준비된 문을 만들 수 있습니다. 준비된 문은 유사한 SQL 문을 템플릿화하는 데 사용할 수 있는 서버측 개체입니다.
 
-준비된 문은 매개 변수를 사용할 수 있습니다. 이 매개 변수는 명령문이 실행될 때 명령문에 대체되는 값입니다. 매개 변수는 준비된 문을 사용할 때 $1, $2 등을 사용하여 position별로 참조됩니다.
+준비된 문은 실행 시 문에 대체되는 값인 매개 변수를 사용할 수 있습니다. 매개 변수는 준비된 문을 사용할 때 $1, $2 등을 사용하여 위치별로 참조됩니다.
 
-매개변수 데이터 유형 목록을 지정할 수도 있습니다. 매개 변수의 데이터 유형이 나열되지 않으면 컨텍스트에서 유형을 유추할 수 있습니다.
+선택적으로 매개 변수 데이터 유형 목록을 지정할 수 있습니다. 매개 변수의 데이터 유형이 나열되지 않으면 해당 유형을 컨텍스트에서 유추할 수 있습니다.
 
 ```sql
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
@@ -718,11 +718,11 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 | 매개 변수 | 설명 |
 | ------ | ------ |
 | `name` | 준비된 문의 이름입니다. |
-| `data_type` | 준비된 문의 매개 변수의 데이터 유형입니다. 매개 변수의 데이터 유형이 나열되지 않으면 컨텍스트에서 유형을 유추할 수 있습니다. 여러 데이터 유형을 추가해야 하는 경우 쉼표로 구분된 목록에 추가할 수 있습니다. |
+| `data_type` | 준비된 문 매개 변수의 데이터 형식입니다. 매개 변수의 데이터 유형이 나열되지 않으면 해당 유형을 컨텍스트에서 유추할 수 있습니다. 여러 데이터 유형을 추가해야 하는 경우 쉼표로 구분된 목록으로 추가할 수 있습니다. |
 
 ### 롤백
 
-다음 `ROLLBACK` 명령은 현재 트랜잭션을 해제하고 트랜잭션에서 수행한 모든 업데이트를 삭제합니다.
+다음 `ROLLBACK` 명령은 현재 트랜잭션을 실행 취소하고 트랜잭션에서 수행한 모든 업데이트를 삭제합니다.
 
 ```sql
 ROLLBACK
@@ -731,7 +731,7 @@ ROLLBACK WORK
 
 ### 다음으로 선택
 
-다음 `SELECT INTO` 새 테이블을 만들고 쿼리로 계산된 데이터로 채웁니다. 데이터는 일반적이므로 클라이언트에 반환되지 않습니다 `SELECT` 명령. 새 테이블의 열에는 `SELECT` 명령.
+다음 `SELECT INTO` 명령은 새 테이블을 만들고 쿼리에 의해 계산된 데이터로 채웁니다. 데이터는 정상적으로 반환되므로 클라이언트에게 반환되지 않습니다 `SELECT` 명령입니다. 새 테이블의 열에는 의 출력 열과 연관된 이름과 데이터 유형이 있습니다. `SELECT` 명령입니다.
 
 ```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
@@ -751,17 +751,17 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-표준 SELECT 쿼리 매개 변수에 대한 자세한 내용은 [쿼리 섹션 선택](#select-queries). 이 섹션에는 `SELECT INTO` 명령.
+표준 SELECT 쿼리 매개 변수에 대한 자세한 내용은 [쿼리 섹션 선택](#select-queries). 이 섹션에는 `SELECT INTO` 명령입니다.
 
 | 매개 변수 | 설명 |
 | ------ | ------ |
-| `TEMPORARY` 또는 `TEMP` | 선택적 매개 변수입니다. 지정하면 생성된 테이블이 임시 테이블이 됩니다. |
-| `UNLOGGED` | 선택적 매개 변수입니다. 지정되면 로 만들어지는 테이블은 기록되지 않은 테이블입니다. 기록되지 않은 테이블에 대한 자세한 내용은 [[!DNL PostgreSQL] 설명서](https://www.postgresql.org/docs/current/sql-createtable.html). |
-| `new_table` | 만들 테이블의 이름입니다. |
+| `TEMPORARY` 또는 `TEMP` | 선택적 매개 변수. 지정하면 만든 테이블이 임시 테이블이 됩니다. |
+| `UNLOGGED` | 선택적 매개 변수. 지정하면 로 작성된 테이블이 로깅되지 않은 테이블이 됩니다. 기록되지 않은 테이블에 대한 자세한 내용은 [[!DNL PostgreSQL] 설명서](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `new_table` | 생성할 테이블의 이름입니다. |
 
 **예**
 
-다음 쿼리는 새 테이블을 만듭니다 `films_recent` 테이블의 최근 항목만 포함하는 `films`:
+다음 쿼리는 새 테이블을 만듭니다 `films_recent` 표의 최근 항목으로만 구성됩니다. `films`:
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
@@ -769,7 +769,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### 표시
 
-다음 `SHOW` 명령은 런타임 매개 변수의 현재 설정을 표시합니다. 이러한 변수는 `SET` 문, 편집 `postgresql.conf` 구성 파일, `PGOPTIONS` Postgres 서버를 시작할 때 환경 변수(libpq 또는 libpq 기반 응용 프로그램을 사용하는 경우) 또는 명령줄 플래그를 통해 환경 변수를 사용할 수 있습니다.
+다음 `SHOW` 명령은 런타임 매개 변수의 현재 설정을 표시합니다. 이러한 변수는 `SET` 명령문, 편집 `postgresql.conf` 구성 파일, 다음을 통해 `PGOPTIONS` 환경 변수(libpq 또는 libpq 기반 응용 프로그램을 사용하는 경우) 또는 Postgres 서버를 시작할 때 명령줄 플래그를 통해 설정됩니다.
 
 ```sql
 SHOW name
@@ -778,8 +778,8 @@ SHOW ALL
 
 | 매개 변수 | 설명 |
 | ------ | ------ |
-| `name` | 정보를 지정할 런타임 매개 변수의 이름입니다. 런타임 매개 변수에 사용할 수 있는 값에는 다음 값이 포함됩니다.<br>`SERVER_VERSION`: 이 매개 변수는 서버의 버전 번호를 보여줍니다.<br>`SERVER_ENCODING`: 이 매개 변수는 서버측 문자 집합 인코딩을 보여줍니다.<br>`LC_COLLATE`: 이 매개 변수는 데이터 정렬(텍스트 순서)에 대한 데이터베이스의 로케일 설정을 보여 줍니다.<br>`LC_CTYPE`: 이 매개 변수는 문자 분류에 대한 데이터베이스의 로케일 설정을 보여 줍니다.<br>`IS_SUPERUSER`: 이 매개 변수는 현재 역할에 수퍼유저 권한이 있는지 여부를 표시합니다. |
-| `ALL` | 설명이 있는 모든 구성 매개 변수의 값을 표시합니다. |
+| `name` | 정보를 보려는 런타임 매개 변수의 이름입니다. 런타임 매개 변수에 사용할 수 있는 값은 다음과 같습니다.<br>`SERVER_VERSION`: 이 매개 변수는 서버의 버전 번호를 표시합니다.<br>`SERVER_ENCODING`: 이 매개 변수는 서버측 문자 세트 인코딩을 보여 줍니다.<br>`LC_COLLATE`: 이 매개 변수는 데이터 정렬(텍스트 정렬)에 대한 데이터베이스의 로케일 설정을 보여 줍니다.<br>`LC_CTYPE`: 이 매개 변수는 문자 분류에 대한 데이터베이스의 로케일 설정을 보여 줍니다.<br>`IS_SUPERUSER`: 이 매개 변수는 현재 역할에 수퍼유저 권한이 있는지 여부를 보여 줍니다. |
+| `ALL` | 모든 구성 매개 변수의 값을 설명과 함께 표시합니다. |
 
 **예**
 
@@ -798,7 +798,7 @@ SHOW DateStyle;
 
 ### 복사
 
-다음 `COPY` 명령은 `SELECT` 쿼리를 지정한 위치에 쿼리합니다. 이 명령을 성공하려면 이 위치에 액세스할 수 있어야 합니다.
+다음 `COPY` 명령은 의 출력을 복제합니다. `SELECT` 지정한 위치에 쿼리합니다. 이 명령을 수행하려면 사용자에게 이 위치에 대한 액세스 권한이 있어야 합니다.
 
 ```sql
 COPY query
@@ -808,21 +808,21 @@ COPY query
 
 | 매개 변수 | 설명 |
 | ------ | ------ |
-| `query` | 복사할 쿼리 |
-| `format_name` | 쿼리를 복사할 형식입니다. 다음 `format_name` 다음 중 하나일 수 있습니다. `parquet`, `csv`, 또는 `json`. 기본적으로 값은 입니다 `parquet`. |
+| `query` | 복사할 쿼리입니다. |
+| `format_name` | 쿼리를 복사할 형식입니다. 다음 `format_name` 다음 중 하나일 수 있음 `parquet`, `csv`, 또는 `json`. 기본적으로 값은 입니다. `parquet`. |
 
 >[!NOTE]
 >
->전체 출력 경로가 `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+>전체 출력 경로는 `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
-### ALTER TABLE {#alter-table}
+### 테이블 변경 {#alter-table}
 
-다음 `ALTER TABLE` 명령을 사용하면 기본 또는 외래 키 제약 조건을 추가하거나 삭제하고 테이블에 열을 추가할 수 있습니다.
+다음 `ALTER TABLE` 명령을 사용하면 기본 키 또는 외래 키 제약 조건을 추가하거나 삭제하고 테이블에 열을 추가할 수 있습니다.
 
 
-#### 제약 조건 추가 또는 삭제
+#### 제한 추가 또는 삭제
 
-다음 SQL 쿼리는 테이블에 제약 조건을 추가하거나 삭제하는 예를 보여줍니다.
+다음 SQL 쿼리는 테이블에 제약 조건을 추가하거나 삭제하는 예를 보여 줍니다.
 
 ```sql
 ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE namespace
@@ -852,31 +852,31 @@ ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 
 >[!NOTE]
 >
->테이블 스키마는 고유해야 하며 여러 테이블 간에 공유되지 않아야 합니다. 또한 네임스페이스는 기본 키, 기본 ID 및 ID 제한에 필수입니다.
+>테이블 스키마는 고유해야 하며 여러 테이블 간에 공유되지 않아야 합니다. 또한 기본 키, 기본 ID 및 ID 제약 조건에는 네임스페이스가 필수입니다.
 
 #### 기본 및 보조 ID 추가 또는 삭제
 
-다음 `ALTER TABLE` 명령을 사용하면 SQL을 통해 직접 주 ID 테이블 열과 보조 ID 테이블 열 모두에 대한 제약 조건을 추가하거나 삭제할 수 있습니다.
+다음 `ALTER TABLE` 명령을 사용하면 SQL을 통해 직접 기본 및 보조 ID 테이블 열에 대한 제약 조건을 추가하거나 삭제할 수 있습니다.
 
-다음 예에서는 제한을 추가하여 기본 ID와 보조 ID를 추가합니다.
+다음 예제에서는 제약 조건을 추가하여 기본 ID와 보조 ID를 추가합니다.
 
 ```sql
 ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
 ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
 ```
 
-아래 예와 같이 제약 조건을 드롭하여 ID를 제거할 수도 있습니다.
+아래 예와 같이 제한을 드롭하여 ID를 제거할 수도 있습니다.
 
 ```sql
 ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-다음 문서를 참조하십시오. [ad hoc 데이터 세트에서 ID 설정](../data-governance/ad-hoc-schema-identities.md) 를 참조하십시오.
+다음에 대한 문서 보기: [애드혹 데이터 세트에서 id 설정](../data-governance/ad-hoc-schema-identities.md) 를 참조하십시오.
 
 #### 열 추가
 
-다음 SQL 쿼리는 테이블에 열을 추가하는 예를 보여줍니다.
+다음 SQL 쿼리는 테이블에 열을 추가하는 예를 보여 줍니다.
 
 ```sql
 ALTER TABLE table_name ADD COLUMN column_name data_type
@@ -886,19 +886,19 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 
 ##### 지원되는 데이터 유형
 
-다음 표에는 [!DNL Postgres SQL], XDM 및 [!DNL Accelerated Database Recovery] Azure SQL의 (ADR)입니다.
+다음 표에는 열을 테이블에 추가하는 데 허용되는 데이터 형식이 나와 있습니다. [!DNL Postgres SQL], XDM 및 [!DNL Accelerated Database Recovery] Azure SQL의 (ADR)
 
-| — | PSQL 클라이언트 | XDM | ADR. | 설명 |
+| — | PSQL 클라이언트 | XDM | ADR | 설명 |
 |---|---|---|---|---|
-| 1 | `bigint` | `int8` | `bigint` | -9,223,372,036,854,775,807부터 9,223,372,036,854,775,807까지의 큰 정수를 저장하는 데 사용되는 숫자 데이터 형식입니다. |
-| 2 | `integer` | `int4` | `integer` | -2,147,483,648부터 2,147,483,647까지의 정수를 4바이트로 저장하는 데 사용되는 숫자 데이터 유형입니다. |
-| 3 | `smallint` | `int2` | `smallint` | -32,768부터 215-1까지의 정수를 2바이트로 저장하는 데 사용되는 숫자 데이터 형식입니다. |
-| 4 | `tinyint` | `int1` | `tinyint` | 0부터 255까지의 정수를 1바이트로 저장하는 데 사용되는 숫자 데이터 유형입니다. |
-| 5 | `varchar(len)` | `string` | `varchar(len)` | 변수 크기의 문자 데이터 유형입니다. `varchar` 열 데이터 항목의 크기가 상당히 다를 때 가장 잘 사용됩니다. |
-| 6 | `double` | `float8` | `double precision` | `FLOAT8` 및 `FLOAT` 에 대한 유효한 동의어입니다. `DOUBLE PRECISION`. `double precision` 는 부동 소수점 데이터 유형입니다. 부동 소수점 값은 8바이트로 저장됩니다. |
-| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` 의 유효한 동의어입니다. `double precision`.`double precision` 는 부동 소수점 데이터 유형입니다. 부동 소수점 값은 8바이트로 저장됩니다. |
+| 1 | `bigint` | `int8` | `bigint` | -9,223,372,036,854,775,807부터 9,223,372,036,854,775,807까지의 큰 정수를 8바이트로 저장하는 데 사용되는 숫자 데이터 형식입니다. |
+| 2 | `integer` | `int4` | `integer` | -2,147,483,648 - 2,147,483,647 범위의 정수를 4바이트로 저장하는 데 사용되는 숫자 데이터 형식입니다. |
+| 3 | `smallint` | `int2` | `smallint` | -32,768 ~ 215-1 32,767 범위의 정수를 2바이트로 저장하는 데 사용되는 숫자 데이터 형식입니다. |
+| 4 | `tinyint` | `int1` | `tinyint` | 0에서 255 사이의 정수를 1바이트에 저장하는 데 사용되는 숫자 데이터 형식입니다. |
+| 5 | `varchar(len)` | `string` | `varchar(len)` | 변수 크기의 문자 데이터 유형입니다. `varchar` 열 데이터 항목의 크기가 상당히 다를 때 가장 적합합니다. |
+| 6 | `double` | `float8` | `double precision` | `FLOAT8` 및 `FLOAT` 은(는) 다음에 대한 유효한 동의어입니다. `DOUBLE PRECISION`. `double precision` 은 부동 소수점 데이터 유형입니다. 부동 소수점 값은 8바이트로 저장됩니다. |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` 은(는) 의 유효한 동의어입니다. `double precision`.`double precision` 은 부동 소수점 데이터 유형입니다. 부동 소수점 값은 8바이트로 저장됩니다. |
 | 8 | `date` | `date` | `date` | 다음 `date` 데이터 유형은 타임스탬프 정보가 없는 4바이트 저장된 달력 날짜 값입니다. 유효한 날짜 범위는 01-01-0001부터 12-31-9999까지입니다. |
-| 9 | `datetime` | `datetime` | `datetime` | 달력 날짜 및 시간으로 표현되는 시간에 인스턴스를 저장하는 데 사용되는 데이터 유형입니다. `datetime` 에는 다음 큐레이터가 포함됩니다. 연도, 월, 일, 시간, 두 번째 및 분수입니다. A `datetime` 선언에는 해당 시퀀스에서 결합되는 이러한 시간 단위의 하위 집합이 포함될 수 있고 심지어 하나의 시간 단위만 포함할 수 있습니다. |
+| 9 | `datetime` | `datetime` | `datetime` | 달력 날짜 및 시간으로 표현된 인스턴트 인 타임을 저장하는 데 사용되는 데이터 유형입니다. `datetime` 연도, 월, 일, 시간, 초 및 분수의 수식자를 포함합니다. A `datetime` 선언은 그 시퀀스에서 결합되는 이들 시간 단위의 임의의 서브세트를 포함할 수 있거나, 심지어 단일 시간 단위만을 포함할 수도 있다. |
 | 10 | `char(len)` | `string` | `char(len)` | 다음 `char(len)` 키워드는 항목이 고정 길이 문자임을 나타내는 데 사용됩니다. |
 
 #### 스키마 추가
@@ -933,11 +933,11 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 | ------ | ------ |
 | `table_name` | 편집 중인 테이블의 이름입니다. |
 | `column_name` | 추가할 열의 이름입니다. |
-| `data_type` | 추가할 열의 데이터 유형입니다. 지원되는 데이터 유형에는 다음이 포함됩니다. bigint, char, string, date, datetime, double, double precision, integer, smallint, tinyint, varchar. |
+| `data_type` | 추가하려는 열의 데이터 유형입니다. 지원되는 데이터 유형은 bigint, char, string, date, datetime, double, double precision, integer, smallint, tinyint, varchar입니다. |
 
 ### 기본 키 표시
 
-다음 `SHOW PRIMARY KEYS` 명령은 지정된 데이터베이스에 대한 모든 기본 키 제약 조건을 나열합니다.
+다음 `SHOW PRIMARY KEYS` 명령은 지정된 데이터베이스에 대한 기본 키 제약 조건을 모두 나열합니다.
 
 ```sql
 SHOW PRIMARY KEYS
@@ -986,7 +986,7 @@ SHOW DATAGROUPS
 
 ### 테이블에 대한 데이터 그룹 표시
 
-다음 `SHOW DATAGROUPS FOR` &#39;table_name&#39; 명령은 매개 변수를 자식으로 포함하는 연결된 모든 데이터베이스의 테이블을 반환합니다. 각 데이터베이스에 대해 테이블에는 스키마, 그룹 유형, 하위 유형, 하위 이름 및 하위 ID가 포함됩니다.
+다음 `SHOW DATAGROUPS FOR` &#39;table_name&#39; 명령은 매개 변수를 자식으로 포함하는 모든 관련 데이터베이스의 테이블을 반환합니다. 각 데이터베이스에 대해 테이블에는 스키마, 그룹 유형, 하위 유형, 하위 이름 및 하위 ID가 포함됩니다.
 
 ```sql
 SHOW DATAGROUPS FOR 'table_name'
@@ -994,7 +994,7 @@ SHOW DATAGROUPS FOR 'table_name'
 
 **매개 변수**
 
-- `table_name`: 연관된 데이터베이스를 찾을 테이블의 이름입니다.
+- `table_name`: 연결된 데이터베이스를 찾을 테이블의 이름입니다.
 
 ```console
    Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId

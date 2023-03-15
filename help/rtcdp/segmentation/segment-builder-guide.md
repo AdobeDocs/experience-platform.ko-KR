@@ -12,6 +12,6 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform의 세그먼트 빌더
 
-Adobe Experience Platform 위에 구축된 [!DNL Adobe Real-Time Customer Data Platform] 는 의 일부인 전체 세그먼트 빌더 기능을 사용할 수 있습니다 [!DNL Experience Platform]. 세그먼트 빌더의 사용자 인터페이스 내에서 새 세그먼트를 만들고, 기존 세그먼트에 액세스하고, 기존 세그먼트를 수정할 수 있습니다.
+Adobe Experience Platform을 기반으로 구축, [!DNL Adobe Real-Time Customer Data Platform] 의 일부인 전체 세그먼트 빌더 기능을 사용할 수 있습니다. [!DNL Experience Platform]. 세그먼트 빌더의 사용자 인터페이스 내에서 새 세그먼트를 만들고, 기존 세그먼트에 액세스하고, 기존 세그먼트를 수정할 수 있습니다.
 
-세그먼트 빌더에 대한 자세한 내용은 [세그먼트 빌더 사용 안내서](../../segmentation/ui/segment-builder.md).
+세그먼트 빌더에 대한 자세한 내용은 다음을 참조하십시오. [세그먼트 빌더 사용 안내서](../../segmentation/ui/segment-builder.md).

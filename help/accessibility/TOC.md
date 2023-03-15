@@ -5,7 +5,7 @@ user-guide-description: 모든 개인에게 접근 가능하고 포괄적인 기
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 50%
+ht-degree: 58%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 50%
 
 * [접근성 개요](home.md)
 * [접근성 기능](features.md)
-* [플랫폼에 대한 사용자 지정 액세스 가능성](custom.md)
+* [플랫폼에 대한 사용자 정의 접근성](custom.md)
 * [플랫폼 설명서](https://experienceleague.adobe.com/docs/experience-platform.html)
 * [플랫폼 개요](https://www.adobe.com/go/platform-overview-en)
-* [플랫폼 릴리스 노트](https://www.adobe.com/go/platform-release-notes-en)
+* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes_kr)

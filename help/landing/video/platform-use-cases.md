@@ -1,6 +1,6 @@
 ---
-title: Experience Platform 주요 사용 사례
-description: 이 비디오에서는 Adobe Experience Platform&mdash;실시간 고객 데이터 플랫폼, 고객 여정 인텔리전스, 게재 및 크로스채널 경험, 고객 경험 애플리케이션 개발에 대한 4가지 주요 사용 사례를 간략하게 설명합니다.
+title: Experience Platform의 주요 사용 사례
+description: 이 비디오에서는 Adobe Experience Platform&mdash의 4가지 주요 사용 사례, 실시간 고객 데이터 플랫폼, 고객 여정 인텔리전스, 게재 및 크로스 채널 경험, 고객 경험 애플리케이션 개발에 대한 개요를 제공합니다.
 kt: 4337
 audience: all
 doc-type: video
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 # Experience Platform의 주요 사용 사례
 
-이 비디오에서는 Experience Platform의 4가지 주요 사용 사례에 대한 개요를 제공합니다.
+이 비디오에서는 Experience Platform의 네 가지 주요 사용 사례에 대한 개요를 제공합니다.
 
 * Adobe Real-time Customer Data Platform
 * 고객 여정 인텔리전스
-* 게재 및 크로스채널 경험
+* 게재 및 크로스 채널 경험
 * 고객 경험 애플리케이션 개발
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)

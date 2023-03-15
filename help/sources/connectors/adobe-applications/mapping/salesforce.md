@@ -5,27 +5,27 @@ description: 아래 표에는 Salesforce 소스 필드와 해당 XDM 필드 간�
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
 source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '494'
-ht-degree: 8%
+source-wordcount: '479'
+ht-degree: 6%
 
 ---
 
 # [!DNL Salesforce] 필드 매핑
 
-아래 표에는 두 테이블 간의 매핑이 포함되어 있습니다 [!DNL Salesforce] 소스 필드 및 해당 XDM(Experience Data Model) 필드.
+아래 표에는 다음 사이의 매핑이 포함되어 있습니다. [!DNL Salesforce] 소스 필드와 해당 XDM(Experience Data Model) 필드.
 
 ## 연락처 {#contact}
 
-다음 문서를 참조하십시오. [XDM 개별 프로필 개요](../../../../xdm/classes/individual-profile.md) xdm 클래스에 대한 자세한 내용을 참조하십시오. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 개인 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-details.md) 안내서 및 [XDM 비즈니스 개인 구성 요소 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-components.md) 안내서.
+읽기 [XDM 개별 프로필 개요](../../../../xdm/classes/individual-profile.md) XDM 클래스에 대한 자세한 내용. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 사용자 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-details.md) 안내서 및 [XDM 비즈니스 사용자 구성 요소 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-components.md) 가이드.
 
-| 소스 필드 | Target XDM 필드 경로 | 참고 |
+| 소스 필드 | Target XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `AccountId` | `b2b.accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `b2b.accountKey` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", AccountId, "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceAccountKey` |
 | `"Salesforce"` | `b2b.personKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | 에 대한 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | 기본 ID. 에 대한 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
+| `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | 기본 ID. 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
 | `AssistantName` | `extendedWorkDetails.assistantDetails.name.fullName` |
 | `AssistantPhone` | `extendedWorkDetails.assistantDetails.phone.number` |
 | `Birthdate` | `person.birthDate` |
@@ -72,13 +72,13 @@ ht-degree: 8%
 | `Title` | `extendedWorkDetails.jobTitle` |
 | `"Contact"` | `b2b.personType` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 리드 {#lead}
 
-다음 문서를 참조하십시오. [XDM 개별 프로필 개요](../../../../xdm/classes/individual-profile.md) xdm 클래스에 대한 자세한 내용을 참조하십시오. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 개인 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-details.md) 안내서 및 [XDM 비즈니스 개인 구성 요소 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-components.md) 안내서.
+읽기 [XDM 개별 프로필 개요](../../../../xdm/classes/individual-profile.md) XDM 클래스에 대한 자세한 내용. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 사용자 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-details.md) 안내서 및 [XDM 비즈니스 사용자 구성 요소 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-components.md) 가이드.
 
-| 소스 필드 | Target XDM 필드 경로 | 참고 |
+| 소스 필드 | Target XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
 | `ConvertedDate` | `b2b.convertedDate` |
@@ -92,7 +92,7 @@ ht-degree: 8%
 | `"Salesforce"` | `b2b.personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` |
 | `Id` | `b2b.personKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | 기본 ID. 에 대한 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `b2b.personKey.sourceKey` | 기본 ID. 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
 | `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
 | `Id` | `personComponents.sourcePersonKey.sourceID` |
@@ -123,16 +123,16 @@ ht-degree: 8%
 | `"Lead"` | `b2b.personType` |
 | `iif(ConvertedContactId != null && ConvertedContactId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", ConvertedContactId, "sourceKey", concat(ConvertedContactId,"@${CRM_ORG_ID}.Salesforce")), null)` | `personComponents.sourceConvertedContactKey` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 계정 {#account}
 
-다음 문서를 참조하십시오. [XDM 비즈니스 계정 세부 사항 개요](../../../../xdm/classes/b2b/business-account.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+읽기 [XDM 비즈니스 계정 세부 정보 개요](../../../../xdm/classes/b2b/business-account.md) XDM 클래스에 대한 자세한 내용.
 
-| 소스 필드 | Target XDM 필드 경로 | 참고 |
+| 소스 필드 | Target XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `"Salesforce"` | `accountKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | 에 대한 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
+| `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
 | `AccountNumber` | `accountNumber` |
 | `AccountSource` | `accountSourceType` |
 | `AnnualRevenue` | `accountOrganization.annualRevenue.amount` |
@@ -149,7 +149,7 @@ ht-degree: 8%
 | `Fax` | `accountFax.number` |
 | `isDeleted` | `isDeleted` |
 | `Id` | `accountKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | 기본 ID. 에 대한 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | 기본 ID. 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
 | `Industry` | `accountOrganization.industry` |
 | `Jigsaw` | `accountOrganization.jigsaw` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
@@ -179,17 +179,17 @@ ht-degree: 8%
 | `Type` | `accountType` |
 | `Website` | `accountOrganization.website` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## 기회 {#opportunity}
+## 영업 기회 {#opportunity}
 
-다음 문서를 참조하십시오. [XDM 비즈니스 기회 개요](../../../../xdm/classes/b2b/business-opportunity.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+읽기 [XDM 비즈니스 영업 기회 개요](../../../../xdm/classes/b2b/business-opportunity.md) XDM 클래스에 대한 자세한 내용.
 
-| 소스 필드 | Target XDM 필드 경로 | 참고 |
+| 소스 필드 | Target XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | 에 대한 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` | 기본 ID. 에 대한 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
+| `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` | 기본 ID. 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
 | `AccountId` | `accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` | 관계. |
 | `Amount` | `opportunityAmount.amount` |
@@ -220,23 +220,23 @@ ht-degree: 8%
 | `Type` | `opportunityType` |
 | `CurrencyIsoCode` | `opportunityAmount.currencyCode` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## 기회 연락처 역할 {#opportunity-contact-role}
+## 영업 기회 연락처 역할 {#opportunity-contact-role}
 
-다음 문서를 참조하십시오. [XDM Business Opportunity 개인 관계 클래스 개요](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+읽기 [XDM 비즈니스 영업 기회 사용자 관계 클래스 개요](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) XDM 클래스에 대한 자세한 내용.
 
-| 소스 필드 | Target XDM 필드 경로 | 참고 |
+| 소스 필드 | Target XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | 에 대한 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
+| `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
 | `"Salesforce"` | `personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `personKey.sourceInstanceID` |
 | `ContactId` | `personKey.sourceID` |
 | `concat(ContactId,"@${CRM_ORG_ID}.Salesforce")` | `personKey.sourceKey` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Id` | `opportunityPersonKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | 기본 ID. 에 대한 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | 기본 ID. 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
 | `isDeleted` | `isDeleted` |
 | `IsPrimary` | `isPrimary` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -246,19 +246,19 @@ ht-degree: 8%
 | `concat(OpportunityId,"@${CRM_ORG_ID}.Salesforce")` | `opportunityKey.sourceKey` |
 | `Role` | `personRole` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Campaign {#campaign}
 
-다음 문서를 참조하십시오. [XDM 비즈니스 캠페인 클래스 개요](../../../../xdm/classes/b2b/business-campaign.md) xdm 클래스에 대한 자세한 내용을 참조하십시오. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 캠페인 세부 사항 스키마 필드 그룹](../../../../xdm/field-groups/b2b-campaign/details.md) 안내서.
+읽기 [XDM 비즈니스 캠페인 클래스 개요](../../../../xdm/classes/b2b/business-campaign.md) XDM 클래스에 대한 자세한 내용. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 캠페인 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/b2b-campaign/details.md) 가이드.
 
-| 소스 필드 | Target XDM 필드 경로 | 참고 |
+| 소스 필드 | Target XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | 에 대한 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
+| `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
 | `isDeleted` | `isDeleted` |
 | `Id` | `campaignKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | 기본 ID. 에 대한 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | 기본 ID. 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
 | `Name` | `campaignName` |
 | `ParentId` | `parentCampaignKey.sourceID` |
 | `iif(ParentId != null && ParentId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(ParentId,"@${CRM_ORG_ID}.Salesforce")), null)` | `parentCampaignKey` |
@@ -279,17 +279,17 @@ ht-degree: 8%
 | `LastReferencedDate` | `extSourceSystemAudit.lastReferencedDate` |
 | `CurrencyIsoCode` | `actualCost.currencyCode` |
 
-## 캠페인 구성원 {#campaign-member}
+## 캠페인 멤버 {#campaign-member}
 
-다음 문서를 참조하십시오. [XDM 비즈니스 캠페인 구성원 개요](../../../../xdm/classes/b2b/business-campaign-members.md) xdm 클래스에 대한 자세한 내용을 참조하십시오. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 캠페인 구성원 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/b2b-campaign/details.md) 문서.
+읽기 [XDM 비즈니스 캠페인 멤버 개요](../../../../xdm/classes/b2b/business-campaign-members.md) XDM 클래스에 대한 자세한 내용. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 캠페인 멤버 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/b2b-campaign/details.md) 문서.
 
-| 소스 필드 | Target XDM 필드 경로 | 참고 |
+| 소스 필드 | Target XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
-| `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | 에 대한 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
+| `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
 | `isDeleted` | `isDeleted` |
 | `Id` | `campaignMemberKey.sourceID` |
-| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | 기본 ID. 에 대한 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
+| `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | 기본 ID. 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
 | `"Salesforce"` | `campaignKey.sourceType` |
 | `${CRM_ORG_ID}` | `campaignKey.sourceInstanceID` |
 | `CampaignId` | `campaignKey.sourceID` |
@@ -307,9 +307,9 @@ ht-degree: 8%
 
 ## 계정 연락처 관계 {#account-contact-relation}
 
-다음 문서를 참조하십시오. [XDM 비즈니스 계정 개인 관계 분류](../../../../xdm/classes/b2b/business-account-person-relation.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+읽기 [XDM 비즈니스 계정 사용자 관계 클래스](../../../../xdm/classes/b2b/business-account-person-relation.md) XDM 클래스에 대한 자세한 내용.
 
-| 소스 필드 | Target XDM 필드 경로 | 참고 |
+| 소스 필드 | Target XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `AccountId` | `accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` |
@@ -332,4 +332,4 @@ ht-degree: 8%
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 [!DNL Salesforce] 소스 필드 및 해당 XDM 필드. 다음 문서를 참조하십시오. [만들기 [!DNL Salesforce] 소스 연결](../../../connectors/crm/salesforce.md) 추가 정보.
+이 문서를 읽고 나면 의 매핑 관계에 대한 통찰력을 얻을 수 있습니다 [!DNL Salesforce] 소스 필드 및 해당 XDM 필드. 다음에서 설명서를 참조하십시오. [만들기 [!DNL Salesforce] 소스 연결](../../../connectors/crm/salesforce.md) 추가 정보.

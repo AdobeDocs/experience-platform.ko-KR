@@ -1,6 +1,6 @@
 ---
 title: 요약 탭
-description: Adobe Experience Platform Debugger에서 요약 탭을 사용하는 방법을 알아봅니다.
+description: Adobe Experience Platform Debugger의 요약 탭을 사용하는 방법에 대해 알아봅니다.
 keywords: debugger;experience Platform Debugger 확장 프로그램;chrome;확장 프로그램;요약;지우기;요청;요약 화면;솔루션;정보;analytics;target;dtm;audience manager;launch;id 서비스
 seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
@@ -9,13 +9,13 @@ exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
 source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
 workflow-type: tm+mt
 source-wordcount: '909'
-ht-degree: 73%
+ht-degree: 74%
 
 ---
 
 # 요약 탭
 
-Adobe Experience Platform Debugger를 실행하려면 브라우저에서 검사할 페이지를 열고 아이콘(![](images/start-icon.jpg))을 클릭하여 제품에서 사용할 수 있습니다. 확장은 **요약** 탭.
+Adobe Experience Platform Debugger를 실행하려면 브라우저에서 검사할 페이지를 연 다음 아이콘(![](images/start-icon.jpg))을 클릭하여 제품에서 사용할 수 있습니다. 확장 프로그램은 **요약** 탭.
 
 ![](images/summary.jpg)
 
@@ -89,7 +89,7 @@ Experience Platform Debugger에는 각 솔루션에 대한 다음 정보가 표�
   </tr> 
   <tr> 
    <td colname="col1"> <p>환경 </p> </td> 
-   <td colname="col2"> <p>다음 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> 환경</a> 태그 라이브러리에 의해 사용됩니다. </p> </td> 
+   <td colname="col2"> <p>다음 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> 환경</a> 태그 라이브러리에서 사용됨 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>확장 </p> </td> 

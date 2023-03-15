@@ -19,10 +19,10 @@ ht-degree: 22%
    - [API 응답 정렬 및 필터링](./api/sort-and-filter.md)
 - UI 안내서 {#ui}
    - [소스의 데이터 흐름 모니터링](./ui/monitor-sources.md)
-   - [ID로 데이터 흐름 모니터링](./ui/monitor-identities.md)
-   - [프로필에서 데이터 흐름 모니터링](./ui/monitor-profiles.md)
+   - [ID에서 데이터 흐름 모니터링](./ui/monitor-identities.md)
+   - [프로필의 데이터 흐름 모니터링](./ui/monitor-profiles.md)
    - [세그먼트의 데이터 흐름 모니터링](./ui/monitor-segments.md)
    - [대상의 데이터 흐름 모니터링](./ui/monitor-destinations.md)
    - B2B 모니터링 {#b2b}
       - [프로필 보강 작업 모니터링](./ui/b2b/monitor-profile-enrichment.md)
-- [Flow Service API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [플로우 서비스 API](https://www.adobe.io/experience-platform-apis/references/flow-service/)

@@ -16,7 +16,7 @@ ht-degree: 60%
 # 데이터 수집 {#collection}
 
 - [데이터 수집 개요](home.md)
-- [종단 간 개요](e2e.md)
+- [전체 개요](e2e.md)
 - [권한 관리](permissions.md)
 - [클라이언트 상태 관리](client-state.md)
 - 방문자 식별 {#visitor-identification}

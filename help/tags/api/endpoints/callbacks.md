@@ -1,21 +1,21 @@
 ---
 title: 콜백 끝점
-description: Reactor API에서 /callbacks 종단점을 호출하는 방법을 알아봅니다.
+description: Reactor API에서 /callbacks 끝점을 호출하는 방법을 알아봅니다.
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
-source-wordcount: '621'
-ht-degree: 8%
+source-wordcount: '600'
+ht-degree: 5%
 
 ---
 
 # 콜백 끝점
 
-콜백은 Reactor API가 특정 URL(일반적으로 조직에서 호스팅하는 URL)로 전송하는 메시지입니다.
+콜백은 Reactor API가 특정 URL(일반적으로 조직에서 호스팅하는 URL)로 보내는 메시지입니다.
 
-콜백은 [감사 이벤트](./audit-events.md) 를 눌러 Reactor API에서 활동을 추적합니다. 특정 유형의 감사 이벤트가 생성될 때마다 콜백은 지정된 URL에 일치하는 메시지를 보낼 수 있습니다.
+콜백은 와 함께 사용하기 위한 것입니다. [이벤트 감사](./audit-events.md) Reactor API에서 활동을 추적합니다. 특정 유형의 감사 이벤트가 생성될 때마다 콜백은 지정된 URL에 일치하는 메시지를 보낼 수 있습니다.
 
-콜백에 지정된 URL 뒤의 서비스는 HTTP 상태 코드 200(OK) 또는 201(생성됨)으로 응답해야 합니다. 서비스가 이러한 상태 코드로 응답하지 않으면 다음 간격으로 메시지 배달을 다시 시도합니다.
+콜백에 지정된 URL 뒤에 있는 서비스는 HTTP 상태 코드 200(OK) 또는 201(Created)로 응답해야 합니다. 서비스가 이러한 상태 코드로 응답하지 않으면 다음 간격으로 메시지 게재가 다시 시도됩니다.
 
 * 1분
 * 5분
@@ -27,19 +27,19 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->다시 시도 간격은 이전 간격에 상대적입니다. 예를 들어, 1분에 재시도가 실패하면 1분 시도가 실패한 후 5분 동안(메시지가 생성된 후 6분) 다음 시도가 예약됩니다.
+>재시도 간격은 이전 간격을 기준으로 합니다. 예를 들어 1분에서의 재시도가 실패하면 1분 시도가 실패한 후 5분(메시지가 생성된 후 6분) 동안 다음 시도가 예약됩니다.
 
-모든 배달 시도가 실패하면 메시지가 무시됩니다.
+모든 게재 시도가 실패하면 메시지가 무시됩니다.
 
-콜백은 정확히 하나의 항목에 속합니다 [속성](./properties.md). 속성에는 많은 콜백이 있을 수 있습니다.
+콜백은 정확히 하나에만 속합니다. [속성](./properties.md). 속성에는 여러 콜백이 있을 수 있습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
+이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
 
-## 콜백 나열 {#list}
+## 목록 콜백 {#list}
 
-GET 요청을 만들어 속성 아래에 모든 콜백을 나열할 수 있습니다.
+GET 요청을 통해 속성 아래에 모든 콜백을 나열할 수 있습니다.
 
 **API 형식**
 
@@ -49,13 +49,13 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 다음 `id` 콜백을 나열할 속성의 값입니다. |
+| `{PROPERTY_ID}` | 다음 `id` 콜백을 나열할 속성의 입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 콜백을 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오. [응답 필터링](../guides/filtering.md) 추가 정보.
+>쿼리 매개 변수를 사용하여 나열된 콜백을 다음 속성을 기준으로 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오 [응답 필터링](../guides/filtering.md) 추가 정보.
 
 **요청**
 
@@ -71,7 +71,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 지정된 속성에 대한 콜백 목록을 반환합니다.
+성공한 응답은 지정된 속성에 대한 콜백 목록을 반환합니다.
 
 ```json
 {
@@ -128,9 +128,9 @@ GET /callbacks/{CALLBACK_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `CALLBACK_ID` | 다음 `id` 조회하려는 콜백입니다. |
+| `CALLBACK_ID` | 다음 `id` 조회할 콜백에 대해 설명합니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -182,7 +182,7 @@ curl -X GET \
 
 ## 콜백 만들기 {#create}
 
-POST 요청을 수행하여 새 콜백을 만들 수 있습니다.
+POST 요청을 하여 새 콜백을 만들 수 있습니다.
 
 **API 형식**
 
@@ -192,9 +192,9 @@ POST /properties/{PROPERTY_ID}/callbacks
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 다음 `id` 의 [속성](./properties.md) 아래와 같이 콜백을 정의하는 것입니다. |
+| `PROPERTY_ID` | 다음 `id` / [속성](./properties.md) 콜백을 정의하는 방법을 설명합니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -221,13 +221,13 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `url` | 콜백 메시지의 URL 대상입니다. URL은 HTTPS 프로토콜 확장을 사용해야 합니다. |
-| `subscriptions` | 콜백을 트리거할 감사 이벤트 유형을 나타내는 문자열 배열입니다. 자세한 내용은 [감사 이벤트 끝점 안내서](./audit-events.md) 가능한 이벤트 유형 목록입니다. |
+| `subscriptions` | 콜백을 트리거할 감사 이벤트 유형을 나타내는 문자열 배열입니다. 다음을 참조하십시오. [감사 이벤트 끝점 안내서](./audit-events.md) 가능한 이벤트 유형 목록. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 새로 만든 콜백의 세부 정보를 반환합니다.
+성공적인 응답은 새로 생성된 콜백의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -273,13 +273,13 @@ PATCH /callbacks/{CALLBACK_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `CALLBACK_ID` | 다음 `id` 업데이트할 콜백입니다. |
+| `CALLBACK_ID` | 다음 `id` 을(를) 업데이트하려는 콜백입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 를 업데이트합니다 `subscriptions` 기존 콜백용 배열입니다.
+다음 요청은 `subscriptions` 기존 콜백에 대한 배열입니다.
 
 ```shell
 curl -X PATCH \
@@ -306,11 +306,11 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes` | 콜백용으로 업데이트할 속성을 나타내는 속성을 갖는 객체입니다. 각 키는 업데이트해야 하는 특정 콜백 속성과 해당 값을 나타냅니다.<br><br>콜백용으로 다음 속성을 업데이트할 수 있습니다.<ul><li>`subscriptions`</li><li>`url`</li></ul> |
-| `id` | 다음 `id` 업데이트할 콜백입니다. 이 옵션은 와 일치해야 합니다. `{CALLBACK_ID}` 요청 경로에 제공된 값입니다. |
-| `type` | 업데이트할 리소스 유형입니다. 이 끝점의 경우 값은 `callbacks`. |
+| `attributes` | 콜백에 대해 업데이트될 속성을 나타내는 속성을 갖는 객체입니다. 각 키는 업데이트해야 하는 해당 값과 함께 업데이트할 특정 콜백 속성을 나타냅니다.<br><br>콜백에 대해 다음 속성을 업데이트할 수 있습니다.<ul><li>`subscriptions`</li><li>`url`</li></ul> |
+| `id` | 다음 `id` 을(를) 업데이트하려는 콜백입니다. 다음과 일치해야 합니다. `{CALLBACK_ID}` 요청 경로에 제공된 값입니다. |
+| `type` | 업데이트 중인 리소스 유형. 이 끝점의 경우 값은 다음과 같아야 합니다. `callbacks`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **응답**
 
@@ -361,9 +361,9 @@ DELETE /callbacks/{CALLBACK_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `CALLBACK_ID` | 다음 `id` 삭제할 콜백입니다. |
+| `CALLBACK_ID` | 다음 `id` 삭제할 콜백의 일부입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 
@@ -379,4 +379,4 @@ curl -X DELETE \
 
 **응답**
 
-성공적인 응답은 콜백이 삭제되었음을 나타내는 응답 본문이 없는 HTTP 상태 204(컨텐츠 없음)를 반환합니다.
+성공한 응답은 응답 본문이 없는 HTTP 상태 204(콘텐츠 없음)를 반환하며, 이는 콜백이 삭제되었음을 나타냅니다.

@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;홈;인기 항목;모니터 데이터 흐름;흐름 서비스 api;흐름 서비스
+keywords: Experience Platform;홈;자주 찾는 항목;데이터 흐름 모니터링;흐름 서비스 api;흐름 서비스
 solution: Experience Platform
-title: Flow Service API를 사용하여 소스 데이터 흐름 모니터링
+title: 흐름 서비스 API를 사용하여 소스 데이터 흐름 모니터링
 type: Tutorial
-description: 이 자습서에서는 Flow Service API를 사용하여 완벽성, 오류 및 지표에 대한 플로우 실행 데이터를 모니터링하는 단계를 설명합니다.
+description: 이 자습서에서는 흐름 서비스 API를 사용하여 완전성, 오류 및 지표에 대한 흐름 실행 데이터를 모니터링하는 단계를 다룹니다.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,28 +12,28 @@ ht-degree: 2%
 
 ---
 
-# Flow Service API를 사용하여 소스 데이터 흐름 모니터링
+# 흐름 서비스 API를 사용하여 소스 데이터 흐름 모니터링
 
-이 자습서에서는 을 사용하여 흐름 실행 데이터를 완결성, 오류 및 지표를 모니터링하는 단계를 설명합니다 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+이 자습서에서는 다음을 사용하여 완전성, 오류 및 지표에 대한 흐름 실행 데이터를 모니터링하는 단계를 다룹니다. [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->이 자습서에서는 유효한 데이터 흐름의 ID 값을 지정해야 합니다. 유효한 데이터 흐름 ID가 없는 경우, [소스 개요](../../home.md) 및 이 자습서를 시작하기 전에 데이터 흐름을 만드는 설명된 단계를 따릅니다.
+>이 자습서에서는 유효한 데이터 흐름의 ID 값이 있어야 합니다. 유효한 데이터 흐름 ID가 없는 경우 [소스 개요](../../home.md) 이 자습서를 시도하기 전에 데이터 흐름을 만들기 위해 설명된 단계를 따르십시오.
 
 ## 시작하기
 
 또한 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../home.md): [!DNL Experience Platform] 을(를) 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다. [!DNL Platform] 서비스.
-* [샌드박스](../../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 생성하는 가상 샌드박스 제공 [!DNL Platform] 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 별도의 가상 환경으로 인스턴스를 구축할 수 있습니다.
+* [소스](../../home.md): [!DNL Experience Platform] 를 사용하여 수신 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다. [!DNL Platform] 서비스.
+* [샌드박스](../../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 만드는 가상 샌드박스를 제공합니다. [!DNL Platform] 인스턴스를 별도의 가상 환경으로 전환하여 디지털 경험 애플리케이션을 개발하고 발전시킵니다.
 
-### 플랫폼 API 사용
+### Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [플랫폼 API 시작](../../../landing/api-guide.md).
+Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../landing/api-guide.md).
 
 ## 데이터 흐름 모니터링
 
-데이터 흐름의 상태를 보려면 [!DNL Flow Service] API, 데이터 흐름의 해당 흐름 ID를 제공하는 동안
+GET 데이터 흐름의 상태를 보려면 [!DNL Flow Service] API, 데이터 흐름의 해당 흐름 ID 제공.
 
 **API 형식**
 
@@ -43,11 +43,11 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{FLOW_ID}` | 고유 `id` 모니터링할 데이터 흐름 값입니다. |
+| `{FLOW_ID}` | 고유 `id` 모니터링할 데이터 흐름 값. |
 
 **요청**
 
-다음 요청은 기존 데이터 흐름의 사양을 검색합니다.
+다음 요청은 기존 데이터 흐름에 대한 사양을 검색합니다.
 
 ```shell
 curl -X GET \
@@ -60,7 +60,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 생성 날짜, 소스 및 대상 연결에 대한 정보, 흐름 실행의 고유 식별자(`id`).
+성공적인 응답은 플로우 실행의 고유 식별자( )는 물론, 생성 날짜, 소스 및 타겟 연결에 대한 정보를 포함하여 플로우 실행에 대한 세부 정보를 반환합니다`id`).
 
 ```json
 {
@@ -225,14 +225,14 @@ curl -X GET \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `items` | 특정 흐름 실행과 연결된 메타데이터의 단일 페이로드를 포함합니다. |
-| `metrics` | 흐름 실행에서 데이터의 특성을 정의합니다. |
-| `activities` | 데이터가 변형되는 방법을 정의합니다. |
-| `durationSummary` | 흐름 실행의 시작 및 종료 시간을 정의합니다. |
+| `metrics` | 플로우 실행에서 데이터의 특성을 정의합니다. |
+| `activities` | 데이터가 변환되는 방식을 정의합니다. |
+| `durationSummary` | 플로우 실행의 시작 및 종료 시간을 정의합니다. |
 | `sizeSummary` | 데이터의 볼륨을 바이트 단위로 정의합니다. |
 | `recordSummary` | 데이터의 레코드 수를 정의합니다. |
 | `fileSummary` | 데이터의 파일 개수를 정의합니다. |
-| `statusSummary` | 흐름 실행이 성공인지 실패인지를 정의합니다. |
+| `statusSummary` | 플로우 실행이 성공인지 실패인지를 정의합니다. |
 
 ## 다음 단계
 
-이 자습서를 따라 다음을 사용하여 데이터 흐름에서 지표 및 오류 정보를 검색했습니다. [!DNL Flow Service] API. 이제 데이터 흐름을 수집 스케줄에 따라 계속 모니터링하여 상태 및 수집 비율을 추적할 수 있습니다. 사용자 인터페이스를 사용하여 동일한 작업을 수행하는 방법에 대한 자세한 내용은 [사용자 인터페이스를 사용하여 데이터 흐름 모니터링](../ui/monitor.md)
+이 자습서를 따라 를 사용하여 데이터 흐름에서 지표 및 오류 정보를 검색했습니다 [!DNL Flow Service] API. 이제 수집 일정에 따라 데이터 흐름을 계속 모니터링하여 데이터 흐름 상태 및 수집 비율을 추적할 수 있습니다. 사용자 인터페이스를 사용하여 동일한 작업을 수행하는 방법에 대한 자세한 내용은 [사용자 인터페이스를 사용하여 데이터 흐름 모니터링](../ui/monitor.md)

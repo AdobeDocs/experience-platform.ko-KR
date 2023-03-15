@@ -4,8 +4,8 @@ description: 데이터 랜딩 영역에 연결하여 세그먼트를 활성화�
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 source-git-commit: 6fbf1b87becebee76f583c6e44b1c42956e561ab
 workflow-type: tm+mt
-source-wordcount: '1163'
-ht-degree: 1%
+source-wordcount: '1160'
+ht-degree: 0%
 
 ---
 
@@ -13,18 +13,18 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* 이 대상은 현재 베타에 있으며 제한된 수의 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 [!DNL Data Landing Zone] 연결되면 Adobe 담당자에게 연락하여 [!DNL Organization ID].
->* 이 설명서 페이지는 [!DNL Data Landing Zone] *대상*. 또한 [!DNL Data Landing Zone] *소스* 소스 카탈로그에 있습니다. 자세한 내용은 [[!DNL Data Landing Zone] 소스](/help/sources/connectors/cloud-storage/data-landing-zone.md) 설명서.
+>* 이 대상은 현재 베타 버전이며 제한된 수의 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 [!DNL Data Landing Zone] 연결, Adobe 담당자에게 연락하여 [!DNL Organization ID].
+>* 이 설명서 페이지는 다음을 참조합니다. [!DNL Data Landing Zone] *대상*. 다음 항목도 있습니다 [!DNL Data Landing Zone] *소스* 소스 카탈로그에서. 자세한 내용은 [[!DNL Data Landing Zone] 소스](/help/sources/connectors/cloud-storage/data-landing-zone.md) 설명서를 참조하십시오.
 
 
 
 ## 개요 {#overview}
 
-[!DNL Data Landing Zone] is [!DNL Azure Blob] Adobe Experience Platform에서 프로비저닝한 스토리지 인터페이스로, Platform에서 파일을 내보낼 수 있는 안전한 클라우드 기반 파일 저장소 기능에 대한 액세스 권한을 부여합니다. 액세스 권한이 있습니다. [!DNL Data Landing Zone] 샌드박스당 컨테이너 및 모든 컨테이너의 총 데이터 볼륨은 Platform Products 및 Services 라이선스와 함께 제공된 총 데이터로 제한됩니다. Platform 및 Launch의 모든 애플리케이션 서비스(예: [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], 및 [!DNL Real-Time Customer Data Platform] 하나의 [!DNL Data Landing Zone] 샌드박스당 컨테이너. 을 통해 파일을 컨테이너에 읽고 쓸 수 있습니다 [!DNL Azure Storage Explorer] 또는 명령줄 인터페이스를 사용할 수 있습니다.
+[!DNL Data Landing Zone] 은(는) [!DNL Azure Blob] Adobe Experience Platform에서 프로비저닝한 스토리지 인터페이스로, 안전한 클라우드 기반 파일 스토리지 시설에 대한 액세스 권한을 부여하여 플랫폼 외부로 파일을 내보낼 수 있습니다. 액세스 권한이 있습니다. [!DNL Data Landing Zone] 샌드박스당 컨테이너 및 모든 컨테이너의 총 데이터 볼륨은 Platform 제품 및 서비스 라이선스와 함께 제공되는 총 데이터로 제한됩니다. Platform 및 해당 애플리케이션 서비스의 모든 고객: [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], 및 [!DNL Real-Time Customer Data Platform] 이(가) 하나로 프로비저닝됨 [!DNL Data Landing Zone] 샌드박스당 컨테이너. 다음을 통해 컨테이너에 파일을 읽고 쓸 수 있습니다. [!DNL Azure Storage Explorer] 또는 명령줄 인터페이스입니다.
 
-[!DNL Data Landing Zone] 는 SAS 기반 인증을 지원하고 데이터는 표준으로 보호됩니다 [!DNL Azure Blob] 저장 보안 메커니즘이 휴지 및 전송 중입니다. SAS 기반 인증을 통해 [!DNL Data Landing Zone] 공용 인터넷 연결을 통한 컨테이너 사용자의 [!DNL Data Landing Zone] 컨테이너. 즉, 네트워크에 대한 허용 목록 또는 지역 간 설정을 구성할 필요가 없습니다.
+[!DNL Data Landing Zone] 는 SAS 기반 인증을 지원하며 데이터는 표준으로 보호됩니다 [!DNL Azure Blob] 중단 및 전송 중인 스토리지 보안 메커니즘. SAS 기반 인증을 통해 [!DNL Data Landing Zone] 공용 인터넷 연결을 통한 컨테이너. 에 액세스하는 데 필요한 네트워크 변경 사항이 없습니다. [!DNL Data Landing Zone] 즉, 네트워크에 대한 허용 목록 또는 교차 영역 설정을 구성할 필요가 없습니다.
 
-Platform에서는 [!DNL Data Landing Zone] 컨테이너. 7일 후 모든 파일이 삭제됩니다.
+Platform은에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을 적용합니다. [!DNL Data Landing Zone] 컨테이너. 모든 파일은 7일 후에 삭제됩니다.
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -32,34 +32,34 @@ Platform에서는 [!DNL Data Landing Zone] 컨테이너. 7일 후 모든 파일�
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 세그먼트의 프로필 속성 선택 화면에서 선택한 대로 적용 가능한 스키마 필드(예: PPID)와 함께 세그먼트의 모든 구성원을 내보냅니다 [대상 활성화 워크플로우](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 다운스트림 플랫폼으로 3, 6, 8, 12 또는 24시간 단위로 내보냅니다. 자세한 내용 [배치 파일 기반 대상](/help/destinations/destination-types.md#file-based). |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 의 프로필 속성 선택 화면에서 선택한 대로 적용 가능한 스키마 필드(예: PPID)와 함께 세그먼트의 모든 멤버를 내보냅니다. [대상 활성화 워크플로](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. 자세한 내용 [배치 파일 기반 대상](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 전제 조건 {#prerequisites}
 
-을(를) 사용하기 전에 충족해야 하는 다음 전제 조건을 확인합니다. [!DNL Data Landing Zone] 대상.
+다음을 사용하려면 먼저 다음 전제 조건을 충족해야 합니다. [!DNL Data Landing Zone] 대상.
 
-### 연결 [!DNL Data Landing Zone] 컨테이너 [!DNL Azure Storage Explorer]
+### 연결 [!DNL Data Landing Zone] 컨테이너 대상 [!DNL Azure Storage Explorer]
 
-다음을 사용할 수 있습니다 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) 의 컨텐츠를 관리하려면 [!DNL Data Landing Zone] 컨테이너. 사용을 시작하려면 [!DNL Data Landing Zone]를 채울 때는 먼저 자격 증명을 검색하고 입력해야 합니다. [!DNL Azure Storage Explorer], 및에 연결 [!DNL Data Landing Zone] 컨테이너 [!DNL Azure Storage Explorer].
+다음을 사용할 수 있습니다. [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) 의 콘텐츠를 관리하려면 [!DNL Data Landing Zone] 컨테이너. 을(를) 사용하려면 [!DNL Data Landing Zone], 먼저 자격 증명을 검색하고 입력해야 합니다. [!DNL Azure Storage Explorer]및 다음을 연결합니다. [!DNL Data Landing Zone] 컨테이너 대상 [!DNL Azure Storage Explorer].
 
-에서 [!DNL Azure Storage Explorer] UI의 왼쪽 탐색 막대에서 연결 아이콘을 선택합니다. 다음 **리소스 선택** 연결할 옵션을 제공하는 창이 나타납니다. 선택 **[!DNL Blob container]** 에 연결 [!DNL Data Landing Zone] 저장.
+다음에서 [!DNL Azure Storage Explorer] UI에서 왼쪽 탐색 막대에 있는 연결 아이콘을 선택합니다. 다음 **리소스 선택** 연결 옵션을 제공하는 창이 나타납니다. 선택 **[!DNL Blob container]** 을(를) 통해 [!DNL Data Landing Zone] 스토리지.
 
 ![select-resource](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
-다음 을 선택합니다. **공유 액세스 서명 URL(SAS)** 을 연결 메서드로 사용하고 **다음**.
+그런 다음 을 선택합니다. **SAS(공유 액세스 서명 URL)** 을 연결 방법으로 선택한 다음 을 선택합니다. **다음**.
 
 ![select-connection-method](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
-연결 방법을 선택한 후 **표시 이름** 그리고 **[!DNL Blob]컨테이너 SAS URL** 해당 [!DNL Data Landing Zone] 컨테이너.
+연결 방법을 선택한 후 다음을 제공해야 합니다 **표시 이름** 및 **[!DNL Blob]컨테이너 SAS URL** 에 해당하는 [!DNL Data Landing Zone] 컨테이너.
 
 >[!BEGINSHADEBOX]
 
-### 에 대한 자격 증명을 검색합니다. [!DNL Data Landing Zone]
+### 에 대한 자격 증명 검색 [!DNL Data Landing Zone]
 
-플랫폼 API를 사용하여 를 검색해야 합니다 [!DNL Data Landing Zone] 자격 증명. 자격 증명을 검색하기 위한 API 호출은 아래에 설명되어 있습니다. 헤더에 필요한 값을 가져오는 방법에 대한 자세한 내용은 [Adobe Experience Platform API 시작하기](/help/landing/api-guide.md) 안내서.
+플랫폼 API를 사용하여 을(를) 검색해야 합니다. [!DNL Data Landing Zone] 자격 증명. 자격 증명을 검색하기 위한 API 호출에 대해서는 아래에 설명되어 있습니다. 머리글에 필요한 값을 가져오는 방법에 대한 자세한 내용은 [Adobe Experience Platform API 시작하기](/help/landing/api-guide.md) 가이드.
 
 **API 형식**
 
@@ -69,7 +69,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 
 **요청**
 
-다음 요청 예는 기존 랜딩 영역에 대한 자격 증명을 검색합니다.
+다음 요청 예제는 기존 랜딩 영역에 대한 자격 증명을 검색합니다.
 
 ```shell
 curl -X GET \
@@ -83,7 +83,7 @@ curl -X GET \
 
 **응답**
 
-다음 응답에서는 현재 사용자를 포함하여 랜딩 영역에 대한 자격 증명 정보를 반환합니다 `SASToken` 및 `SASUri`뿐만 아니라 `storageAccountName` 랜딩 영역 컨테이너에 해당합니다.
+다음 응답은 현재 위치를 포함하여 랜딩 영역에 대한 자격 증명 정보를 반환합니다 `SASToken` 및 `SASUri`, 및 `storageAccountName` 랜딩 영역 컨테이너에 해당합니다.
 
 ```json
 {
@@ -97,73 +97,73 @@ curl -X GET \
 | 속성 | 설명 |
 | --- | --- |
 | `containerName` | 랜딩 영역의 이름입니다. |
-| `SASToken` | 랜딩 영역에 대한 공유 액세스 서명 토큰. 이 문자열에는 요청을 승인하는 데 필요한 모든 정보가 들어 있습니다. |
-| `SASUri` | 랜딩 영역에 대한 공유 액세스 서명 URI입니다. 이 문자열은 인증 대상 랜딩 영역에 대한 URI와 해당 SAS 토큰의 조합입니다. |
+| `SASToken` | 랜딩 영역에 대한 공유 액세스 서명 토큰입니다. 이 문자열에는 요청을 승인하는 데 필요한 모든 정보가 포함되어 있습니다. |
+| `SASUri` | 랜딩 영역에 대한 공유 액세스 서명 URI입니다. 이 문자열은 인증 중인 랜딩 영역에 대한 URI와 해당 SAS 토큰의 조합입니다. |
 
 >[!ENDSHADEBOX]
 
-표시 이름(`containerName`) 및 [!DNL Data Landing Zone] 위에 설명된 API 호출에서 반환되는 SAS URL을 선택한 다음 **다음**.
+디스플레이 이름(`containerName`) 및 [!DNL Data Landing Zone] 위에서 설명한 API 호출에서 반환된 SAS URL을 선택한 다음 **다음**.
 
 ![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
-다음 **요약** 창이 나타나고 설정에 대한 정보를 포함하여 설정에 대한 개요를 제공합니다 [!DNL Blob] 엔드포인트 및 권한. 준비되면 을 선택합니다. **Connect**.
+다음 **요약** 창에 설정에 대한 정보를 포함하여 설정의 개요를 제공합니다. [!DNL Blob] 엔드포인트 및 권한. 준비가 되면 다음을 선택합니다. **연결**.
 
 ![요약](/help/sources/images/tutorials/create/dlz/summary.png)
 
-연결에 성공하면 [!DNL Azure Storage Explorer] 사용 중인 UI [!DNL Data Landing Zone] 컨테이너.
+연결에 성공하면 다음 항목이 업데이트됩니다. [!DNL Azure Storage Explorer] 을 통한 UI [!DNL Data Landing Zone] 컨테이너.
 
 ![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
-사용 [!DNL Data Landing Zone] 연결된 컨테이너 [!DNL Azure Storage Explorer]이제 Experience Platform에서 로 파일 내보내기를 시작할 수 있습니다. [!DNL Data Landing Zone] 컨테이너. 파일을 내보내려면 [!DNL Data Landing Zone] 아래 섹션에 설명된 대로 Experience Platform UI에 대상을 추가합니다.
+(으)로 [!DNL Data Landing Zone] 컨테이너 연결됨 [!DNL Azure Storage Explorer]이제 Experience Platform에서 로 파일 내보내기를 시작할 수 있습니다. [!DNL Data Landing Zone] 컨테이너. 파일을 내보내려면 [!DNL Data Landing Zone] 아래 섹션에 설명된 대로 Experience Platform UI의 대상
 
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
+>대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-이 대상에 연결하려면 [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). 대상 구성 워크플로우에서 아래 두 섹션에 나열된 필드를 입력합니다.
+이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상에 인증 {#authenticate}
 
-에 연결되어 있는지 확인합니다. [!DNL Data Landing Zone] 컨테이너 [!DNL Azure Storage Explorer] 에 설명된 대로 [전제 조건](#prerequisites) 섹션을 참조하십시오. 왜냐면 [!DNL Data Landing Zone] 는 Adobe이 프로비저닝된 저장소이므로 대상을 인증하기 위해 Experience Platform UI에서 추가 단계를 수행할 필요가 없습니다.
+다음을 연결했는지 확인하십시오. [!DNL Data Landing Zone] 컨테이너 대상 [!DNL Azure Storage Explorer] 에 설명된대로 [전제 조건](#prerequisites) 섹션. 이유 [!DNL Data Landing Zone] 는 Adobe이 프로비저닝된 스토리지로, Experience Platform UI에서 대상을 인증하기 위해 더 이상 단계를 수행할 필요가 없습니다.
 
-### 대상 세부 사항 채우기 {#destination-details}
+### 대상 세부 정보 입력 {#destination-details}
 
-대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
+대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
 * **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 선택 사항입니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다.
-* **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스트할 대상 폴더의 경로를 입력합니다.
-* **[!UICONTROL 파일 유형]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 을(를) 선택할 때 [!UICONTROL CSV] 선택 사항 [파일 서식 옵션 구성](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 압축 포맷]**: 내보낸 파일에 사용할 압축 유형을 Experience Platform에서 선택합니다.
+* **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력합니다.
+* **[!UICONTROL 파일 유형]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 을(를) 선택할 때 [!UICONTROL CSV] 옵션을 사용하여 다음을 수행할 수도 있습니다. [파일 서식 옵션 구성](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 압축 포맷]**: 내보낸 파일에 대해 Experience Platform이 사용해야 하는 압축 유형을 선택합니다.
 
 ### 경고 활성화 {#enable-alerts}
 
-경고를 활성화하여 대상으로 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 다음 안내서를 참조하십시오. [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
 
-대상 연결에 대한 세부 정보 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
+대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 세그먼트를 이 대상에 활성화 {#activate}
+## 이 대상에 대한 세그먼트 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
+>데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-자세한 내용은 [대상자 데이터를 활성화하여 묶음 프로필 내보내기 대상 활성화](../../ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
+다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
 
 ### 예약
 
-에서 **[!UICONTROL 예약]** 단계를 수행하여 다음을 수행할 수 있습니다. [내보내기 스케줄 설정](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) 에 대해 [!DNL Data Landing Zone] 대상 및 [내보낸 파일의 이름 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+다음에서 **[!UICONTROL 예약]** 단계, 다음을 수행할 수 있습니다. [내보내기 일정 설정](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) 에 대한 [!DNL Data Landing Zone] 대상 및 다음을 수행할 수도 있습니다. [내보낸 파일의 이름 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 
-### 특성 및 ID 매핑 {#map}
+### 속성 및 ID 매핑 {#map}
 
-에서 **[!UICONTROL 매핑]** 단계: 프로파일에 대해 내보낼 속성 및 id 필드를 선택할 수 있습니다. 내보낸 파일의 헤더를 원하는 친숙한 이름으로 변경하도록 선택할 수도 있습니다. 자세한 내용은 [매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 배치 대상 활성화 UI 자습서에서 를 참조하십시오.
+다음에서 **[!UICONTROL 매핑]** 단계에서는 프로필에 내보낼 속성 및 id 필드를 선택할 수 있습니다. 내보낸 파일의 헤더를 원하는 이름으로 변경하도록 선택할 수도 있습니다. 자세한 내용은 [매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 배치 대상 활성화 UI 튜토리얼에서 다음을 수행합니다.
 
 ## (베타) 데이터 세트 내보내기 {#export-datasets}
 
-이 대상은 데이터 집합 내보내기를 지원합니다. 데이터 집합 내보내기를 설정하는 방법에 대한 자세한 내용은 [데이터 세트 내보내기 자습서](/help/destinations/ui/export-datasets.md).
+이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기를 설정하는 방법에 대한 자세한 내용은 [데이터 세트 내보내기 자습서](/help/destinations/ui/export-datasets.md).
 
-## 성공적인 데이터 내보내기의 유효성 검사 {#exported-data}
+## 성공적인 데이터 내보내기 유효성 검사 {#exported-data}
 
-데이터를 성공적으로 내보냈는지 확인하려면 [!DNL Data Landing Zone] 저장하고 내보낸 파일에 예상 프로필 모집단이 포함되어 있는지 확인합니다.
+데이터를 성공적으로 내보냈는지 확인하려면 [!DNL Data Landing Zone] 저장소가 추가되고 내보낸 파일에 예상 프로필 모집단이 포함되어 있는지 확인합니다.

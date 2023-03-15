@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # FPID를 통한 방문자 식별
 
-[!DNL First-party IDs] (`FPIDs`)는 고객이 생성, 관리 및 저장하는 장치 ID입니다. 이를 통해 고객은 사용자 장치 식별을 제어할 수 있습니다. 보내기 `FPIDs`Edge Network는 새 브랜드를 생성하지 않습니다 `ECID` 를 포함해야 합니다.
+[!DNL First-party IDs] (`FPIDs`)는 고객이 생성, 관리 및 저장하는 장치 ID입니다. 이를 통해 고객은 사용자 장치를 식별할 수 있습니다. 전송 `FPIDs`, Edge Network는 완전히 새로운 기능을 생성하지 않습니다 `ECID` 를 포함하지 않는 요청에 대해 사용됩니다.
 
-다음 `FPID` 는 API 요청 본문에 `identityMap` 또는 쿠키로 전송할 수 있습니다.
+다음 `FPID` 의 일부로 API 요청 본문에 포함될 수 있습니다. `identityMap` 또는 쿠키로 전송할 수 있습니다.
 
-An `FPID` 결정적으로 `ECID` 에지 네트워크에서 `FPID` id는 Experience Cloud 솔루션과 완벽하게 호환됩니다. 가져오기 `ECID` 특정 `FPID` 항상 동일한 결과를 산출하므로 사용자에게 일관된 경험이 제공됩니다.
+An `FPID` 를 결정적으로 로 변환할 수 있습니다. `ECID` Edge Network에서 `FPID` id는 Experience Cloud 솔루션과 완전히 호환됩니다. 가져오기 `ECID` 특정에서 `FPID` 항상 동일한 결과를 산출하므로 사용자는 일관된 경험을 갖게 됩니다.
 
-다음 `ECID` 이 방법을 통해 검색할 수 있음 `identity.fetch` 쿼리:
+다음 `ECID` 가져온 이러한 방법은 를 통해 검색할 수 있습니다. `identity.fetch` 쿼리:
 
 ```json
 {
@@ -33,15 +33,15 @@ An `FPID` 결정적으로 `ECID` 에지 네트워크에서 `FPID` id는 Experien
 }
 ```
 
-를 모두 포함하는 요청의 경우 `FPID` 그리고 `ECID`, `ECID` 요청에 이미 있는 경우, `FPID`. 즉, 에지 네트워크는 `ECID` 이미 제공되고 있습니다. `FPID` 은 무시됩니다. 새로운 `ECID` 는 `FPID` 자체 제공됩니다.
+다음을 모두 포함하는 요청의 경우 `FPID` 및 `ECID`, `ECID` 요청에 이미 있는 이(가) 생성가능한에서 우선합니다. `FPID`. 즉, Edge Network는 `ECID` 및 이(가) 이미 제공됨 `FPID` 은(는) 무시됩니다. 새 항목 `ECID` 다음 경우에만 생성됩니다. `FPID` 은 자체적으로 제공됩니다.
 
-장치 ID와 관련하여 `server` 데이터 세트는 다음 경우에 사용해야 합니다 `FPID` 를 장치 ID로 설정합니다. 기타 ID(예: `EMAIL`)도 요청 본문 내에 제공할 수 있지만, Edge Network에서는 기본 ID를 명시적으로 제공해야 합니다. 기본 ID는 프로필 데이터가 저장되는 기본 ID입니다.
+장치 ID 측면에서 `server` 데이터 스트림은 다음을 사용해야 합니다. `FPID` 디바이스 ID로. 기타 ID(예: `EMAIL`)는 요청 본문 내에서 제공할 수도 있지만 Edge Network에서는 기본 ID를 명시적으로 제공해야 합니다. 기본 ID는 프로필 데이터가 저장될 기본 ID입니다.
 
 >[!NOTE]
 >
->각각 요청 본문 내에 명시적으로 설정된 기본 ID가 없는 요청은 실패합니다.
+>ID가 없고 각각 요청 본문 내에 기본 ID가 명시적으로 설정되지 않은 요청은 실패합니다.
 
-다음 `identityMap` 필드 그룹에 대해 올바른 형식 지정 `server` 데이터 스트림 요청:
+다음 `identityMap` 필드 그룹이 다음에 대해 올바르게 구성되었습니다. `server` 데이터 스트림 요청:
 
 ```json
 {
@@ -63,7 +63,7 @@ An `FPID` 결정적으로 `ECID` 에지 네트워크에서 `FPID` id는 Experien
 }
 ```
 
-다음 `identityMap` 필드 그룹에서는 `server` 데이터 스트림 요청:
+다음 `identityMap` 필드 그룹에 을 설정하면 오류 응답이 발생합니다. `server` 데이터 스트림 요청:
 
 ```json
 {
@@ -84,7 +84,7 @@ An `FPID` 결정적으로 `ECID` 에지 네트워크에서 `FPID` id는 Experien
 }
 ```
 
-이 경우 에지 네트워크에서 반환한 오류 응답은 다음과 유사합니다.
+이 경우 Edge Network에서 반환하는 오류 응답은 다음과 비슷합니다.
 
 ```json
 {
@@ -100,9 +100,9 @@ An `FPID` 결정적으로 `ECID` 에지 네트워크에서 `FPID` id는 Experien
 }
 ```
 
-## 방문자 식별 `FPID`
+## 을 사용한 방문자 식별 `FPID`
 
-를 통해 사용자 식별 `FPID`, `FPID` Edge Network에 요청하기 전에 쿠키가 전송되었습니다. 다음 `FPID` 는 쿠키나 의 일부로 전달할 수 있습니다 `identityMap` 요청 본문에.
+다음을 통해 사용자를 식별하려면 `FPID`, 다음을 확인합니다. `FPID` edge 네트워크에 대한 모든 요청 전에 쿠키가 전송되었습니다. 다음 `FPID` 를 쿠키에 포함하거나 의 일부로 전달할 수 있습니다. `identityMap` 를 입력합니다.
 
 <!--
 
@@ -167,9 +167,9 @@ curl -X POST 'https://edge.adobedc.net/v2/interact?dataStreamId={Data Stream ID}
 ```
 -->
 
-## 요청 대상 `FPID` 전달 `identityMap` 필드
+## 다음을 포함한 요청 `FPID` 다음으로 전달됨 `identityMap` 필드
 
-아래 예제는 [!DNL FPID] 로서의 `identityMap` 매개 변수.
+아래 예제는 [!DNL FPID] as a `identityMap` 매개 변수.
 
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"

@@ -1,23 +1,23 @@
 ---
-title: 감사 이벤트 끝점
-description: Reactor API에서 /audit_events 엔드포인트를 호출하는 방법을 알아봅니다.
+title: 감사 이벤트 엔드포인트
+description: Reactor API에서 /audit_events 끝점을 호출하는 방법을 알아봅니다.
 exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 4%
+source-wordcount: '259'
+ht-degree: 3%
 
 ---
 
-# 감사 이벤트 끝점
+# 감사 이벤트 엔드포인트
 
 >[!WARNING]
 >
->의 구현 `/audit_events` 기능이 추가, 제거 및 재작동하므로 엔드포인트는 플럭스입니다.
+>의 구현 `/audit_events` 기능이 추가, 제거 및 재작업될 때 끝점이 유동적입니다.
 
-감사 이벤트는 변경 시 생성된 Reactor API의 다른 리소스에 대한 특정 변경 사항의 레코드입니다. 이러한 이벤트는 [callback](./callbacks.md). 다음 `/audit_events` reactor API의 종단점을 사용하면 경험 애플리케이션 내에서 감사 이벤트를 프로그래밍 방식으로 관리할 수 있습니다.
+감사 이벤트는 변경 시 생성된 Reactor API의 다른 리소스에 대한 특정 변경 사항의 기록입니다. 다음은 를 사용하여 구독할 수 있는 시스템 이벤트입니다. [callback](./callbacks.md). 다음 `/audit_events` Reactor API의 끝점을 사용하면 experience 애플리케이션 내에서 감사 이벤트를 프로그래밍 방식으로 관리할 수 있습니다.
 
-감사 이벤트는 `{RESOURCE_TYPE}.{EVENT}`, 예 `build.created` 또는 `rule.updated`.
+감사 이벤트는 `{RESOURCE_TYPE}.{EVENT}`, 예: `build.created` 또는 `rule.updated`.
 
 리소스 유형은 다음 중 하나일 수 있습니다.
 
@@ -31,7 +31,7 @@ ht-degree: 4%
 * `environment`
 * `host`
 
-각 리소스 유형에 대해 다음 이벤트가 지원됩니다.
+각 리소스 유형에 대해 지원되는 이벤트는 다음과 같습니다.
 
 * `created`
 * `updated`
@@ -39,11 +39,11 @@ ht-degree: 4%
 
 ## 시작하기
 
-이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
+이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
 
 ## 감사 이벤트 목록 검색 {#list}
 
-에 GET 요청을 수행하여 조직이 소유한 모든 속성에 대한 감사 이벤트 목록을 검색할 수 있습니다 `/audit_events` 엔드포인트.
+에 GET 요청을 하여 조직에서 소유한 모든 속성에 대한 감사 이벤트 목록을 검색할 수 있습니다. `/audit_events` 엔드포인트.
 
 **API 형식**
 
@@ -65,7 +65,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 감사 이벤트 목록을 반환합니다. 아래 예제 응답은 스페이스에 대해 잘렸습니다.
+성공적인 응답이 감사 이벤트 목록을 반환합니다. 아래 예제 응답은 공백으로 잘렸습니다.
 
 ```json
 {
@@ -160,7 +160,7 @@ curl -X GET \
 
 ## 감사 이벤트 조회 {#lookup}
 
-GET 요청 경로에 해당 ID를 제공하여 감사 이벤트를 조회할 수 있습니다.
+GET 요청 경로에 ID를 제공하여 감사 이벤트를 조회할 수 있습니다.
 
 **API 형식**
 
@@ -170,9 +170,9 @@ GET /audit_events/{AUDIT_EVENT_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `AUDIT_EVENT_ID` | 다음 `id` 조회하려는 감사 이벤트 |
+| `AUDIT_EVENT_ID` | 다음 `id` 조회하려는 감사 이벤트입니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **요청**
 

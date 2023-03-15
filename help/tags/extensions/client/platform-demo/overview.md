@@ -13,15 +13,15 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 >[!NOTE]
 >
->이 확장은 더 이상 사용되지 않으며, [Adobe Experience Platform Web SDK](../sdk/overview.md).
+>이 확장은 더 이상 사용되지 않으며 [Adobe Experience Platform 웹 SDK](../sdk/overview.md).
 
 이 확장 기능은 새 확장으로 포트되고 있습니다. 다음은 현재 기능을 간단히 비교한 것입니다.
 
-| Platform 데모 확장 | Platform 웹 SDK |
+| Platform 데모 확장 | Platform Web SDK |
 | ------------------ | ----------- |
 | 사용자 지정 고객 ID 지원 | 사용자 지정 고객 ID 지원 |
 | XDM용 클라이언트측 매핑 UI | ECID로 빌드(visitor.js가 필요 없음) |
@@ -37,21 +37,21 @@ ht-degree: 72%
 
 이 섹션에서는 Adobe Experience Platform 확장을 구성할 때 사용할 수 있는 옵션에 대한 참조를 제공합니다.
 
-Adobe Experience Platform 확장이 아직 설치되지 않은 경우 속성을 연 다음, 를 선택합니다 **[!UICONTROL Extensions > Catalog]**&#x200B;를 클릭하고, Adobe Experience Platform 확장을 마우스로 가리킨 다음, **[!UICONTROL 설치]**.
+Adobe Experience Platform 확장이 아직 설치되지 않은 경우 속성을 연 다음 을 선택합니다 **[!UICONTROL 확장 > 카탈로그]**, Adobe Experience Platform 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**.
 
-확장을 구성하려면 [!UICONTROL 확장] 탭에서 확장을 마우스로 가리킨 다음 을 선택합니다 **[!UICONTROL 구성]**.
+확장을 구성하려면 를 엽니다. [!UICONTROL 확장] 탭을 클릭하고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**.
 
 ![](../../../images/adobe-experience-platform-extension-configuration.png)
 
 ### 스트리밍 연결
 
-스트리밍 연결을 선택하는 것은 Adobe Experience Platform으로 데이터 스트리밍을 시작하기 위한 첫 단계입니다. 스트리밍 연결 콤보 상자에서 하나를 선택할 수 있습니다. 스트리밍 연결은 필수 필드입니다. 만든 스트리밍 연결이 없는 경우 을(를) 선택하여 만들 수 있습니다 **[!UICONTROL 스트리밍 연결 만들기]** 버튼을 클릭합니다.
+스트리밍 연결을 선택하는 것은 Adobe Experience Platform으로 데이터 스트리밍을 시작하기 위한 첫 단계입니다. 스트리밍 연결 콤보 상자에서 하나를 선택할 수 있습니다. 스트리밍 연결은 필수 필드입니다. 만든 스트리밍 연결이 없는 경우 다음을 선택하여 만들 수 있습니다. **[!UICONTROL 스트리밍 연결 만들기]** 단추를 클릭합니다.
 
-선택하는 경우 **[!UICONTROL 스트리밍 연결 만들기]** 모달 창이 나타납니다.
+다음을 선택하는 경우 **[!UICONTROL 스트리밍 연결 만들기]** 모달 창이 나타납니다.
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-모달에는 사용자의 요구 사항에 맞게 변경할 수 있는 미리 채워진 값이 있는 필드가 포함되어 있습니다. 둘 이상의 스트리밍 연결을 만들려는 경우에는 **[!UICONTROL 데이터 소스]** 필드는 고유해야 합니다. 를 사용하여 다른 스트리밍 연결을 만들려고 합니다. **[!UICONTROL 데이터 소스]** 다른 연결에 이미 사용한 경우 실패합니다.
+모달에는 사용자의 요구 사항에 맞게 변경할 수 있는 미리 채워진 값이 있는 필드가 포함되어 있습니다. 스트리밍 연결을 두 개 이상 만들려는 경우에는 **[!UICONTROL 데이터 소스]** 필드는 고유해야 합니다. 다음을 사용하여 다른 스트리밍 연결을 만들려고 합니다. **[!UICONTROL 데이터 소스]** 다른 연결에 이미 사용한 경우 실패합니다.
 
 스트리밍 끝점을 선택하면 스트리밍 끝점 URL 및 소스가 표시됩니다.
 
@@ -116,16 +116,16 @@ ID 필드로 정의된 각 스키마 필드의 경우 스키마 매핑 섹션에
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-section.png)
 
-ID 매핑 섹션에는 여러 행이 포함될 수 있습니다. 각 행에 특정 ID 유형을 정의할 수 있습니다. ID에 대해 다음 속성을 정의할 수 있습니다. 유형, 인증된 상태, 기본 및 값.
+ID 매핑 섹션에는 여러 행이 포함될 수 있습니다. 각 행에 특정 ID 유형을 정의할 수 있습니다. ID에 대해 유형, 인증된 상태, 기본 및 값 속성을 정의할 수 있습니다.
 
 ID 매핑 섹션 내에 여러 개의 ID가 있는 경우 한 개의 ID만 기본으로 표시할 수 있습니다.
 
-스키마에 `xdm:identityMap` 필드 및 다른 필드가 기본 id 필드로 표시되면 id 매핑 섹션 내의 기본 열이 표시되지 않습니다.
+다음 항목이 있는 스키마가 있는 경우 `xdm:identityMap` 필드 및 동시에 다른 필드가 기본 id 필드로 표시되면 id 매핑 섹션 내의 기본 열이 표시되지 않습니다.
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-section-not-primary.png)
 
 ### 필수 필드
 
-일부 스키마에는 최상위 수준의 필수 필드가 있습니다. 가장 일반적인 필드는 `timestamp` 및 `_id`입니다. 이러한 필드를 정의하지 않으면 비콘이 실패합니다. 스키마 매핑 섹션 내에서 이러한 필드를 정의할 수 있습니다.
+일부 스키마에는 최상위 수준의 필수 필드가 있습니다. 가장 일반적인 필드는 `timestamp` 및 `_id`입니다. 이러한 필드를 정의하지 않으면 비콘이 실패합니다. 스키마 매핑 섹션 내에서 정의할 수 있습니다.
 
 스키마 매핑 섹션에 `timestamp` 또는 `_id`가 없지만 데이터 세트 스키마에 필요한 경우, Adobe Experience Platform 확장은 비콘이 실패하지 않도록 자동으로 생성된 값이 들어 있는 비콘을 전송합니다. 자동으로 생성된 값은 스키마 매핑 섹션 내에 그러한 필드를 정의하지 않은 경우에만 비콘 데이터에 추가됩니다.

@@ -1,38 +1,38 @@
 ---
-description: 이 페이지에서는 /testing/destinationInstance API 엔드포인트를 사용하여 파일 기반 대상이 올바르게 구성되어 있는지 테스트하고 구성된 대상으로 데이터 흐름의 무결성을 확인하는 방법에 대해 설명합니다.
-title: 샘플 프로필로 파일 기반 대상 테스트
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+description: 이 페이지에서는 /testing/destinationInstance API 끝점을 사용하여 파일 기반 대상이 올바르게 구성되었는지 테스트하고 구성된 대상에 대한 데이터 흐름의 무결성을 확인하는 방법에 대해 설명합니다.
+title: 샘플 프로필을 사용하여 파일 기반 대상 테스트
+exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '827'
 ht-degree: 2%
 
 ---
 
-
-# 샘플 프로필로 파일 기반 대상 테스트
+# 샘플 프로필을 사용하여 파일 기반 대상 테스트
 
 ## 개요 {#overview}
 
-이 페이지에서는 를 사용하는 방법을 설명합니다. `/testing/destinationInstance` 파일 기반 대상이 올바르게 구성되었는지 테스트하고 구성된 대상에 데이터 흐름의 무결성을 확인하는 API 끝점입니다.
+이 페이지에서는 사용 방법을 설명합니다. `/testing/destinationInstance` 파일 기반 대상이 올바르게 구성되었는지 테스트하고 구성된 대상에 대한 데이터 흐름의 무결성을 확인하는 API 엔드포인트.
 
-를 추가하거나 추가하지 않고 테스트 종단점에 요청을 수행할 수 있습니다 [샘플 프로필](file-based-sample-profile-generation-api.md) 호출 요청에 대해 프로필을 보내지 않는 경우 API가 샘플 프로필을 자동으로 생성하여 요청에 추가합니다.
+를 추가하거나 추가하지 않고 테스트 끝점에 요청할 수 있습니다 [샘플 프로필](file-based-sample-profile-generation-api.md) 호출에 연결합니다. 요청에 프로필을 보내지 않는 경우 API는 샘플 프로필을 자동으로 생성하여 요청에 추가합니다.
 
-자동 생성된 샘플 프로필에는 일반 데이터가 포함되어 있습니다. 보다 직관적인 사용자 지정 프로필 데이터를 사용하여 대상을 테스트하려면 [샘플 프로필 생성 API](file-based-sample-profile-generation-api.md) 샘플 프로필을 생성하려면 해당 응답을 사용자 지정하고 요청에 포함시킵니다. `/testing/destinationInstance` 엔드포인트.
+자동 생성된 샘플 프로필에는 일반 데이터가 포함되어 있습니다. 보다 직관적인 사용자 지정 프로필 데이터로 대상을 테스트하려면 [샘플 프로필 생성 API](file-based-sample-profile-generation-api.md) 샘플 프로필을 생성하려면 해당 응답을 사용자 지정하고 요청에 포함하십시오. `/testing/destinationInstance` 엔드포인트.
 
 ## 시작하기 {#getting-started}
 
-계속하기 전에 [시작 안내서](./getting-started.md) api를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보(필수 대상 작성 권한 및 필수 헤더를 가져오는 방법)입니다.
+계속하기 전에 다음을 검토하십시오. [시작 안내서](./getting-started.md) 필수 대상 작성 권한 및 필수 헤더를 가져오는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보입니다.
 
 ## 전제 조건 {#prerequisites}
 
-를 사용하기 전에 `/testing/destinationInstance` endpoint, 다음 조건을 충족하는지 확인하십시오.
+을(를) 사용하기 전에 `/testing/destinationInstance` 엔드포인트입니다. 다음 조건을 충족하는지 확인하십시오.
 
-* Destination SDK을 통해 만든 기존 파일 기반 대상이 있으며 [대상 카탈로그](../ui/destinations-workspace.md).
-* Experience Platform UI에서 대상에 대해 하나 이상의 활성화 흐름을 만들었습니다.
-* API 요청을 성공적으로 수행하려면 테스트할 대상 인스턴스에 해당하는 대상 인스턴스 ID가 필요합니다. Platform UI에서 대상과의 연결을 검색할 때 URL에서 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다.
+* Destination SDK을 통해 생성된 기존 파일 기반 대상이 있으며 [대상 카탈로그](../ui/destinations-workspace.md).
+* Experience Platform UI에서 대상에 대한 활성화 흐름을 하나 이상 만들었습니다.
+* API 요청을 성공적으로 수행하려면 테스트할 대상 인스턴스에 해당하는 대상 인스턴스 ID가 필요합니다. Platform UI에서 대상과의 연결을 검색할 때 API 호출에 사용해야 하는 대상 인스턴스 ID를 URL에서 가져옵니다.
 
-   ![URL에서 대상 인스턴스 ID를 가져오는 방법을 보여주는 UI 이미지입니다.](assets/get-destination-instance-id.png)
-* *선택 사항입니다*: API 호출에 추가된 샘플 프로필을 사용하여 대상 구성을 테스트하려면 [/sample-profiles](file-based-sample-profile-generation-api.md) 기존 소스 스키마를 기반으로 샘플 프로필을 생성하는 끝점입니다. 샘플 프로필을 제공하지 않으면 API가 샘플 프로필을 생성하여 응답으로 반환합니다.
+   ![URL에서 대상 인스턴스 ID를 가져오는 방법을 보여 주는 UI 이미지입니다.](assets/get-destination-instance-id.png)
+* *선택 사항*: API 호출에 추가된 샘플 프로필로 대상 구성을 테스트하려면 다음을 사용합니다. [/sample-profiles](file-based-sample-profile-generation-api.md) 기존 소스 스키마를 기반으로 샘플 프로필을 생성하기 위한 종단점입니다. 샘플 프로필을 제공하지 않는 경우 API가 샘플 프로필을 생성하고 응답에서 반환합니다.
 
 ## 호출에 프로필을 추가하지 않고 대상 구성을 테스트합니다 {#test-without-adding-profiles}
 
@@ -55,11 +55,11 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | 경로 매개 변수 | 설명 |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | 샘플 프로필을 생성하는 대상 인스턴스의 ID입니다. 자세한 내용은 [전제 조건](#prerequisites) 섹션을 참조하십시오. |
+| `{DESTINATION_INSTANCE_ID}` | 샘플 프로필을 생성하고 있는 대상 인스턴스의 ID입니다. 다음을 참조하십시오. [전제 조건](#prerequisites) 섹션 을 참조하십시오. |
 
 **응답**
 
-성공적인 응답은 응답 페이로드와 함께 HTTP 상태 200을 반환합니다.
+성공한 응답은 응답 페이로드와 함께 HTTP 상태 200을 반환합니다.
 
 ```json
 {
@@ -111,15 +111,15 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `activations` | 활성화된 각 세그먼트에 대한 세그먼트 ID 및 흐름 실행 ID를 반환합니다. 활성화 항목(및 연결된 생성 파일)의 수는 대상 인스턴스에 매핑된 세그먼트 수와 같습니다. <br><br> 예: 두 세그먼트를 대상 인스턴스에 매핑하면 `activations` 배열에는 두 개의 항목이 포함됩니다. 활성화된 각 세그먼트는 내보낸 하나의 파일에 해당합니다. |
-| `results` | 를 호출하는 데 사용할 수 있는 대상 인스턴스 ID와 흐름 실행 ID를 반환합니다 [결과 API](file-based-destination-results-api.md)를 눌러 통합을 추가로 테스트합니다. |
-| `inputProfiles` | API에 의해 자동으로 생성된 샘플 프로필을 반환합니다. |
+| `activations` | 활성화된 각 세그먼트에 대한 세그먼트 ID 및 흐름 실행 ID를 반환합니다. 활성화 항목(및 관련 생성 파일)의 수는 대상 인스턴스에서 매핑된 세그먼트의 수와 같습니다. <br><br> 예: 두 세그먼트를 대상 인스턴스에 매핑한 경우 `activations` 배열에 두 개의 항목이 포함됩니다. 활성화된 각 세그먼트는 내보낸 하나의 파일에 해당합니다. |
+| `results` | 대상 인스턴스 ID와 를 호출하는 데 사용할 수 있는 흐름 실행 ID를 반환합니다. [결과 API](file-based-destination-results-api.md)를 클릭하여 통합을 추가로 테스트합니다. |
+| `inputProfiles` | API에서 자동으로 생성된 샘플 프로필을 반환합니다. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## 호출에 추가된 프로필로 대상 구성을 테스트합니다 {#test-with-added-profiles}
+## 호출에 추가된 프로필을 사용하여 대상 구성 테스트 {#test-with-added-profiles}
 
-보다 직관적인 사용자 지정 프로필 데이터를 사용하여 대상을 테스트하려면 [/sample-profiles](file-based-sample-profile-generation-api.md) 선택한 값이 있는 엔드포인트 및 요청에 사용자 지정 프로필을 포함하십시오. `/testing/destinationInstance` 엔드포인트.
+보다 직관적인 사용자 지정 프로필 데이터로 대상을 테스트하려면 다음에서 얻은 응답을 사용자 지정할 수 있습니다. [/sample-profiles](file-based-sample-profile-generation-api.md) 선택한 값이 포함된 끝점이며 요청에 사용자 지정 프로필을 포함합니다. `/testing/destinationInstance` 엔드포인트.
 
 **API 형식**
 
@@ -175,12 +175,12 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | 매개 변수 | 설명 |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | 테스트할 대상의 대상 인스턴스 ID입니다.  샘플 프로필을 생성하는 대상 인스턴스의 ID입니다. 자세한 내용은 [전제 조건](#prerequisites) 섹션을 참조하십시오. |
-| `profiles` | 하나 이상의 프로필을 포함할 수 있는 배열입니다. 를 사용하십시오 [샘플 프로필 API 끝점](file-based-sample-profile-generation-api.md) 를 입력하여 이 API 호출에 사용할 프로필을 생성합니다. |
+| `{DESTINATION_INSTANCE_ID}` | 테스트 중인 대상의 대상 인스턴스 ID입니다.  샘플 프로필을 생성하고 있는 대상 인스턴스의 ID입니다. 다음을 참조하십시오. [전제 조건](#prerequisites) 섹션 을 참조하십시오. |
+| `profiles` | 하나 이상의 프로필을 포함할 수 있는 배열입니다. 사용 [샘플 프로필 API 엔드포인트](file-based-sample-profile-generation-api.md) 를 클릭하여 이 API 호출에 사용할 프로필을 생성합니다. |
 
 **응답**
 
-성공적인 응답은 응답 페이로드와 함께 HTTP 상태 200을 반환합니다.
+성공한 응답은 응답 페이로드와 함께 HTTP 상태 200을 반환합니다.
 
 ```json
 {
@@ -232,18 +232,18 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `activations` | 활성화된 각 세그먼트에 대한 세그먼트 ID 및 흐름 실행 ID를 반환합니다. 활성화 항목(및 연결된 생성 파일)의 수는 대상 인스턴스에 매핑된 세그먼트 수와 같습니다. <br><br> 예: 두 세그먼트를 대상 인스턴스에 매핑하면 `activations` 배열에는 두 개의 항목이 포함됩니다. 활성화된 각 세그먼트는 내보낸 하나의 파일에 해당합니다. |
-| `results` | 를 호출하는 데 사용할 수 있는 대상 인스턴스 ID와 흐름 실행 ID를 반환합니다 [결과 API](file-based-destination-results-api.md)를 눌러 통합을 추가로 테스트합니다. |
+| `activations` | 활성화된 각 세그먼트에 대한 세그먼트 ID 및 흐름 실행 ID를 반환합니다. 활성화 항목(및 관련 생성 파일)의 수는 대상 인스턴스에서 매핑된 세그먼트의 수와 같습니다. <br><br> 예: 두 세그먼트를 대상 인스턴스에 매핑한 경우 `activations` 배열에 두 개의 항목이 포함됩니다. 활성화된 각 세그먼트는 내보낸 하나의 파일에 해당합니다. |
+| `results` | 대상 인스턴스 ID와 를 호출하는 데 사용할 수 있는 흐름 실행 ID를 반환합니다. [결과 API](file-based-destination-results-api.md)를 클릭하여 통합을 추가로 테스트합니다. |
 | `inputProfiles` | API 요청에서 전달한 사용자 지정 샘플 프로필을 반환합니다. |
 
 ## API 오류 처리 {#api-error-handling}
 
-Destination SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../landing/troubleshooting.md#request-header-errors) 을 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오 [API 상태 코드](../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../landing/troubleshooting.md#request-header-errors) 플랫폼 문제 해결 안내서에서 확인할 수 있습니다.
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 파일 기반 대상 구성을 테스트하는 방법을 알 수 있습니다.
+이제 이 문서를 읽고 파일 기반 대상 구성을 테스트하는 방법을 이해할 수 있습니다.
 
-유효한 API 응답을 받은 경우 대상이 올바르게 작동합니다. 활성화 흐름에 대한 자세한 정보를 보려면 `results` 응답에서 로의 속성 [세부 활성화 결과 보기](file-based-destination-results-api.md).
+유효한 API 응답을 받은 경우 대상이 올바르게 작동합니다. 활성화 흐름에 대한 자세한 내용을 보려면 `results` 에 대한 응답의 속성 [세부 활성화 결과 보기](file-based-destination-results-api.md).
 
-이제 공개 대상을 만드는 경우 [대상 구성 제출](../destination-sdk/submit-destination.md) Adobe을 참조하십시오.
+공용 대상을 구축하는 경우 이제 다음 작업을 수행할 수 있습니다 [대상 구성 제출](../destination-sdk/submit-destination.md) 검토를 위해 Adobe.

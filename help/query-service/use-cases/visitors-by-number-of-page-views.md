@@ -1,6 +1,6 @@
 ---
-keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;experienceevent 쿼리;experienceevent 쿼리;Experience Event 쿼리;
-title: 페이지 보기 수별로 방문자 나열
+keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;experienceevent 쿼리;experienceevent 쿼리;경험 이벤트 쿼리;
+title: 페이지 보기 횟수별 방문자 나열
 description: 경험 이벤트를 사용하여 페이지 보기 수로 구성된 방문자 목록을 검색하는 쿼리를 작성하는 방법을 알아봅니다.
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
@@ -9,15 +9,15 @@ ht-degree: 1%
 
 ---
 
-# 페이지 보기 수별로 방문자 나열
+# 페이지 보기 횟수별 방문자 나열
 
-이 문서에서는 페이지 보기 수로 구성된 방문자 목록을 검색하는 데 필요한 SQL의 예를 제공합니다. Adobe Experience Platform 쿼리 서비스를 사용하여 [!DNL Experience Events] 다양한 사용 사례를 캡처합니다. 경험 이벤트는 사용자가 웹 사이트 또는 서비스와 상호 작용할 때 시스템의 변경할 수 없고 집계되지 않은 스냅샷을 캡처하는 XDM(Experience Data Model) ExperienceEvent 클래스로 표시됩니다. 경험 이벤트는 시간 도메인 분석에 사용할 수도 있습니다. 자세한 내용은 [다음 단계 섹션](#next-steps) 를 참조하십시오. [!DNL Experience Events] 방문자 보고서를 생성합니다.
+이 문서에서는 페이지 보기 수로 구성된 방문자 목록을 검색하는 데 필요한 SQL의 예를 제공합니다. Adobe Experience Platform 쿼리 서비스를 사용하면 다음을 사용하는 쿼리를 작성할 수 있습니다. [!DNL Experience Events] 다양한 사용 사례를 캡처합니다. 경험 이벤트는 사용자가 웹 사이트 또는 서비스와 상호 작용할 때 시스템의 변경할 수 없는 비집계 스냅샷을 캡처하는 XDM(Experience Data Model) ExperienceEvent 클래스로 표시됩니다. 경험 이벤트는 시간 도메인 분석에 사용할 수도 있습니다. 다음을 참조하십시오. [다음 단계 섹션](#next-steps) 다음을 포함하는 더 많은 사용 사례 [!DNL Experience Events] 방문자 보고서를 생성합니다.
 
-XDM 및 [!DNL Experience Events] 은 [[!DNL XDM System] 개요](../../xdm/home.md). 쿼리 서비스를 [!DNL Experience Events]를 사용하면 사용자 간의 행동 트렌드를 효과적으로 추적할 수 있습니다. 다음 문서에서는 [!DNL Experience Events].
+XDM에 대한 추가 정보 및 [!DNL Experience Events] 에서 찾을 수 있음 [[!DNL XDM System] 개요](../../xdm/home.md). 쿼리 서비스를 와 결합 [!DNL Experience Events], 사용자 간의 행동 트렌드를 효과적으로 추적할 수 있습니다. 다음 문서에서는 다음과 같은 쿼리의 예를 제공합니다. [!DNL Experience Events].
 
 ## 목표
 
-다음 예제에서는 가장 많이 본 사용자의 10ID를 나열하는 보고서를 만듭니다.
+다음 예제에서는 가장 많은 페이지를 본 사용자의 ID 10개를 나열하는 보고서를 만듭니다.
 
 ```sql
 SELECT 
@@ -49,9 +49,9 @@ LIMIT 10;
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽은 후에는 [!DNL Experience Events] 페이지를 가장 많이 본 사용자를 나열하기 위해.
+이 문서를 읽으면 쿼리 서비스를 사용하는 방법을 더 잘 이해할 수 있습니다 [!DNL Experience Events] 를 클릭하여 가장 많은 페이지를 본 사용자를 나열합니다.
 
-다른 방문자 기반 사용 사례에 대해 알아보려면 다음 사용 사례를 참조하십시오.
+다른 방문자 기반 사용 사례에 대해 알려면 다음 사용 사례를 참조하십시오.
 
 - [방문자의 이전 세션을 나열합니다.](./list-visitor-sessions.md)
 - [방문자의 롤업 보고서를 봅니다.](./roll-up-report-of-a-visitor.md)

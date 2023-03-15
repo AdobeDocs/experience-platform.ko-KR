@@ -1,6 +1,6 @@
 ---
 title: 위성 개체 참조
-description: 클라이언트측 _satellite 개체 및 태그를 사용하여 수행할 수 있는 다양한 기능에 대해 알아봅니다.
+description: 클라이언트측 _satellite 개체 및 태그에서 이 개체를 사용하여 수행할 수 있는 다양한 기능에 대해 알아봅니다.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
-이 문서는 클라이언트측의 참조 역할을 합니다 `_satellite` 개체 및 이 개체를 사용하여 수행할 수 있는 다양한 함수를 참조하십시오.
+이 문서는 클라이언트측의 참조 역할을 합니다 `_satellite` 개체와 이 개체로 수행할 수 있는 다양한 기능.
 
 ## `track`
 
@@ -31,7 +31,7 @@ _satellite.track(identifier: string [, detail: *] )
 _satellite.track('contact_submit', { name: 'John Doe' });
 ```
 
-`track` 는 코어 태그 확장의 지정된 식별자로 구성된 직접 호출 이벤트 유형을 사용하여 모든 규칙을 실행합니다. 위의 예에서는 구성된 식별자가 `contact_submit`인 Direct Call 이벤트 유형을 사용하여 모든 규칙을 트리거합니다. 관련 정보가 들어 있는 선택적 개체도 전달됩니다. 세부 개체는 조건 또는 작업의 텍스트 필드 내에 `%event.detail%`을 입력하거나, 사용자 지정 코드 조건 또는 작업에서 코드 편집기 내에 `event.detail`을 입력하여 액세스할 수 있습니다.
+`track` 코어 태그 확장의 지정된 식별자로 구성된 직접 호출 이벤트 유형을 사용하여 모든 규칙을 실행합니다. 위의 예에서는 구성된 식별자가 `contact_submit`인 Direct Call 이벤트 유형을 사용하여 모든 규칙을 트리거합니다. 관련 정보가 들어 있는 선택적 개체도 전달됩니다. 세부 개체는 조건 또는 작업의 텍스트 필드 내에 `%event.detail%`을 입력하거나, 사용자 지정 코드 조건 또는 작업에서 코드 편집기 내에 `event.detail`을 입력하여 액세스할 수 있습니다.
 
 ## `getVar`
 
@@ -47,13 +47,13 @@ _satellite.getVar(name: string) => *
 var product = _satellite.getVar('product');
 ```
 
-제공된 예에서 이름이 일치하는 데이터 요소가 있으면 데이터 요소의 값이 반환됩니다. 일치하는 데이터 요소가 없으면 `_satellite.setVar()`를 사용하여 이름이 일치하는 사용자 지정 변수를 이전에 설정했는지 확인합니다. 일치하는 사용자 지정 변수가 있으면 해당 값이 반환됩니다.
+제공된 예에서 이름이 일치하는 데이터 요소가 있는 경우 데이터 요소의 값이 반환됩니다. 일치하는 데이터 요소가 없으면 `_satellite.setVar()`를 사용하여 이름이 일치하는 사용자 지정 변수를 이전에 설정했는지 확인합니다. 일치하는 사용자 지정 변수가 있으면 해당 값이 반환됩니다.
 
 >[!NOTE]
 >
->백분율(`%`) 구문을 통해 태그 구현에서 많은 양식 필드에 대한 변수를 참조할 수 있으므로 호출의 필요성을 줄일 수 있습니다 `_satellite.getVar()`. 예를 들어 `%product%` 은 제품 데이터 요소 또는 사용자 지정 변수의 값에 액세스합니다.
+>백분율(`%`) 태그 구현의 많은 양식 필드에 대한 변수를 참조하는 구문으로 호출의 필요성을 줄였습니다. `_satellite.getVar()`. 예를 들어 `%product%` 는 제품 데이터 요소 또는 사용자 지정 변수의 값에 액세스합니다.
 
-이벤트가 규칙을 트리거할 때 규칙의 해당 규칙을 전달할 수 있습니다 `event` 개체 `_satellite.getVar()` 다음과 같습니다.
+이벤트가 규칙을 트리거할 때 해당 규칙의 를 전달할 수 있습니다 `event` 에 오브젝트 추가 `_satellite.getVar()` 다음과 같이:
 
 ```javascript
 // event refers to the calling rule's event
@@ -96,7 +96,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-[!DNL Adobe Experience Cloud ID] 확장이 속성에 설치된 경우 이 메서드는 방문자 ID 인스턴스를 반환합니다. 자세한 내용은 [Experience Cloud ID 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko-KR)를 참조하십시오.
+[!DNL Adobe Experience Cloud ID] 확장이 속성에 설치된 경우 이 메서드는 방문자 ID 인스턴스를 반환합니다. 자세한 내용은 [Experience Cloud ID 서비스 설명서](https://experienceleague.adobe.com/docs/id-service/using/home.html)를 참조하십시오.
 
 ## `logger`
 
@@ -124,7 +124,7 @@ _satellite.logger.error(message: string)
 _satellite.logger.error('No product ID found.');
 ```
 
-다음 `logger` 개체를 사용하면 브라우저 콘솔에 메시지를 기록할 수 있습니다. 이 메시지는 사용자가 태그 디버깅을 활성화한 경우( `_satellite.setDebug(true)` 또는 적절한 브라우저 확장 사용)을 참조하십시오.
+다음 `logger` 개체를 사용하면 브라우저 콘솔에 메시지를 기록할 수 있습니다. 이 메시지는 사용자가 태그 디버깅을 활성화한 경우( 를 호출하여 활성화한 경우에만 표시됩니다 `_satellite.setDebug(true)` 또는 적절한 브라우저 확장 사용).
 
 ### 사용 중단 경고 로깅
 
@@ -138,15 +138,15 @@ _satellite.logger.deprecation(message: string)
 _satellite.logger.deprecation('This method is no longer supported, please use [new example] instead.');
 ```
 
-이렇게 하면 브라우저 콘솔에 경고가 기록됩니다. 사용자가 태그 디버깅을 활성화하는지 여부를 나타내는 메시지가 표시됩니다.
+이렇게 하면 브라우저 콘솔에 경고가 기록됩니다. 사용자가 태그 디버깅을 활성화했는지 여부에 관계없이 메시지가 표시됩니다.
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` 는 쿠키를 읽고 쓰는 함수를 포함합니다. 타사 라이브러리 js-쿠키의 노출된 사본입니다. 이 라이브러리의 고급 사용에 대한 자세한 내용은 [js 쿠키 설명서](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` 쿠키를 읽고 쓰는 기능이 포함되어 있습니다. 타사 라이브러리 js-쿠키의 노출된 사본입니다. 이 라이브러리의 고급 사용에 대한 자세한 내용은 [js-cookie 설명서](https://www.npmjs.com/package/js-cookie#basic-usage).
 
 ### 쿠키 설정 {#cookie-set}
 
-쿠키를 설정하려면 `_satellite.cookie.set()`.
+쿠키를 설정하려면 를 사용합니다. `_satellite.cookie.set()`.
 
 **코드**
 
@@ -156,7 +156,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->오래된 [`setCookie`](#setCookie) 쿠키를 설정하는 방법으로서, 이 함수 호출에 대한 세 번째(선택 사항) 인수는 쿠키의 만료 시간을 일 단위로 나타내는 정수입니다. 이 새 메서드에서는 &quot;attributes&quot; 개체가 대신 세 번째 인수로 수락됩니다. 새 메서드를 사용하여 쿠키에 대한 만료를 설정하려면 다음을 제공해야 합니다 `expires` 속성 개체의 속성을 원하는 값으로 설정합니다. 이것은 아래 예제에 나와 있습니다.
+>옛날에 [`setCookie`](#setCookie) 쿠키를 설정하는 메서드입니다. 이 함수 호출에 대한 세 번째(선택 사항) 인수는 쿠키의 만료 시간(일)을 나타내는 정수입니다. 이 새 메서드에서는 &quot;attributes&quot; 개체를 세 번째 인수로 대신 사용합니다. 새 메서드를 사용하여 쿠키의 만료를 설정하려면 다음을 제공해야 합니다 `expires` 속성 객체의 속성을 설정하고 원하는 값으로 설정합니다. 아래 예제에서 이를 확인할 수 있습니다.
 
 **예**
 
@@ -196,7 +196,7 @@ _satellite.cookie.remove(name: string)
 
 **예**
 
-다음 함수 호출은 이전에 설정한 쿠키를 제거합니다.
+다음 함수 호출은 이전에 설정된 쿠키를 제거합니다.
 
 ```javascript
 _satellite.cookie.remove('product');
@@ -210,11 +210,11 @@ _satellite.cookie.remove('product');
 _satellite.buildInfo
 ```
 
-이 개체에는 현재 태그 런타임 라이브러리 빌드에 대한 정보가 들어 있습니다. 개체에는 다음 속성이 포함되어 있습니다.
+이 개체에는 현재 태그 런타임 라이브러리의 빌드에 대한 정보가 들어 있습니다. 개체에는 다음 속성이 포함되어 있습니다.
 
 ### `turbineVersion`
 
-이렇게 하면 [터빈](https://www.npmjs.com/package/@adobe/reactor-turbine) 현재 라이브러리 내에서 사용되는 버전입니다.
+다음이 제공됩니다. [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) 현재 라이브러리 내에서 사용되는 버전입니다.
 
 ### `turbineBuildDate`
 
@@ -236,7 +236,7 @@ _satellite.buildInfo
 
 ## `environment`
 
-이 개체에는 현재 태그 런타임 라이브러리가 배포되는 환경에 대한 정보가 들어 있습니다.
+이 개체에는 현재 태그 런타임 라이브러리가 배포되는 환경에 대한 정보가 포함되어 있습니다.
 
 **코드**
 
@@ -276,7 +276,7 @@ _satellite.notify(message: string[, level: number])
 _satellite.notify('Hello world!');
 ```
 
-`notify` 브라우저 콘솔에 메시지를 기록합니다. 이 메시지는 사용자가 태그 디버깅을 활성화한 경우( `_satellite.setDebug(true)` 또는 적절한 브라우저 확장 사용)을 참조하십시오.
+`notify` 브라우저 콘솔에 메시지를 기록합니다. 이 메시지는 사용자가 태그 디버깅을 활성화한 경우( 를 호출하여 활성화한 경우에만 표시됩니다 `_satellite.setDebug(true)` 또는 적절한 브라우저 확장 사용).
 
 기록되는 메시지의 스타일링 및 필터링에 영향을 주는 선택적 로깅 수준을 전달할 수 있습니다. 지원되는 수준은 다음과 같습니다.
 
@@ -306,7 +306,7 @@ _satellite.setCookie(name: string, value: string, days: number)
 _satellite.setCookie('product', 'Circuit Pro', 3);
 ```
 
-사용자의 브라우저에서 쿠키를 설정합니다. 쿠키는 지정된 일 수 동안 지속됩니다.
+사용자의 브라우저에 쿠키를 설정합니다. 쿠키는 지정된 일 수 동안 지속됩니다.
 
 ## `readCookie`
 
@@ -346,7 +346,7 @@ _satellite.removeCookie(name: string)
 _satellite.removeCookie('product');
 ```
 
-사용자의 브라우저에서 쿠키가 제거됩니다.
+이렇게 하면 사용자의 브라우저에서 쿠키가 제거됩니다.
 
 ## 디버깅 함수
 
@@ -382,7 +382,7 @@ _satellite._monitors
 
 **샘플**
 
-태그 라이브러리를 실행하는 웹 페이지에서 HTML에 코드 조각을 추가합니다. 일반적으로 이 코드는 `<head>` 요소 앞에 `<script>` 태그 라이브러리를 로드하는 요소입니다. 이렇게 하면 모니터가 태그 라이브러리에서 발생하는 가장 빠른 시스템 이벤트를 포착할 수 있습니다. 예:
+태그 라이브러리를 실행하는 웹 페이지에서 HTML에 코드 조각을 추가합니다. 일반적으로 코드는에 삽입됩니다 `<head>` 다음 앞에 있는 요소 `<script>` 태그 라이브러리를 로드하는 요소입니다. 이렇게 하면 모니터가 태그 라이브러리에서 발생하는 가장 빠른 시스템 이벤트를 포착할 수 있습니다. 예:
 
 ```html
 <!DOCTYPE html>
@@ -424,7 +424,7 @@ _satellite._monitors
 </html>
 ```
 
-첫 번째 스크립트 요소에서 태그 라이브러리가 아직 로드되지 않았으므로 초기 `_satellite` 개체를 만들고 배열이 `_satellite._monitors` 가 초기화되었습니다. 그러면 스크립트가 해당 배열에 모니터 개체를 추가합니다. 모니터 개체는 나중에 태그 라이브러리에 의해 호출되는 다음 메서드를 지정할 수 있습니다.
+첫 번째 스크립트 요소에서 태그 라이브러리가 아직 로드되지 않았으므로 는 초기입니다. `_satellite` 개체가 생성되고에 배열이 있습니다. `_satellite._monitors` 초기화되었습니다. 그러면 스크립트가 해당 배열에 모니터 개체를 추가합니다. 모니터 개체는 나중에 태그 라이브러리에 의해 호출되는 다음 메서드를 지정할 수 있습니다.
 
 ### `ruleTriggered`
 
@@ -432,11 +432,11 @@ _satellite._monitors
 
 ### `ruleCompleted`
 
-이 함수는 규칙이 완전히 처리된 후에 호출됩니다. 즉, 이벤트가 발생하고 모든 조건이 전달되고 모든 작업이 실행된 후에 호출됩니다. 에 전달된 이벤트 개체 `ruleCompleted` 완료된 규칙에 대한 정보를 포함합니다.
+이 함수는 규칙이 완전히 처리된 후에 호출됩니다. 즉, 이벤트가 발생하고 모든 조건이 전달되고 모든 작업이 실행된 후에 호출됩니다. 에 전달된 이벤트 개체 `ruleCompleted` 완료된 규칙에 대한 정보가 포함되어 있습니다.
 
 ### `ruleConditionFailed`
 
-이 함수는 규칙이 트리거되고 해당 조건 중 하나가 실패하면 호출됩니다. `ruleConditionFailed`에 전달된 이벤트 개체에는 트리거된 규칙과 실패한 조건에 대한 정보가 들어 있습니다.
+이 함수는 규칙이 트리거되고 해당 조건 중 하나가 실패한 후 호출됩니다. `ruleConditionFailed`에 전달된 이벤트 개체에는 트리거된 규칙과 실패한 조건에 대한 정보가 들어 있습니다.
 
 `ruleTriggered`가 호출되면 `ruleCompleted` 또는 `ruleConditionFailed`가 곧 호출됩니다.
 

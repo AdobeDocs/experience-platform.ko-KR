@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;모델 게시;데이터 과학 작업 공간;인기 항목;sensei 기계 학습 api
+keywords: Experience Platform;모델 게시;Data Science Workspace;인기 주제;sensei 머신 러닝 api
 solution: Experience Platform
-title: Sensei Machine Learning API를 사용하여 서비스로 모델 게시
+title: Sensei 머신 러닝 API를 사용하여 모델을 서비스로 게시
 type: Tutorial
-description: 이 자습서에서는 Sensei 기계 학습 API를 사용하여 모델을 서비스로 게시하는 프로세스에 대해 설명합니다.
+description: 이 튜토리얼에서는 Sensei 머신 러닝 API를 사용하여 모델을 서비스로 게시하는 프로세스에 대해 설명합니다.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # 를 사용하여 모델을 서비스로 게시 [!DNL Sensei Machine Learning API]
 
-이 자습서에서는 [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+이 자습서에서는 다음을 사용하여 모델을 서비스로 게시하는 프로세스에 대해 설명합니다. [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## 시작하기
 
-이 자습서에서는 Adobe Experience Platform Data Science Workspace에 대한 작업 이해를 필요로 합니다. 이 자습서를 시작하기 전에 [Data Science Workspace 개요](../home.md) 서비스에 대한 높은 수준의 소개입니다.
+이 자습서에서는 Adobe Experience Platform 데이터 과학 작업 영역에 대한 작업 이해가 필요합니다. 이 자습서를 시작하기 전에 다음을 검토하십시오. [데이터 과학 작업 영역 개요](../home.md) 를 참조하십시오.
 
-이 자습서를 따르려면 기존 ML 엔진, ML 인스턴스 및 실험이 있어야 합니다. API에서 이러한 코드를 만드는 방법에 대한 단계는 [패키지된 레시피 가져오기](./import-packaged-recipe-api.md).
+이 자습서와 함께 따르려면 기존 ML 엔진, ML 인스턴스 및 실험이 있어야 합니다. API에서 이러한 구성 요소를 만드는 방법에 대한 단계는에서 자습서를 참조하십시오. [패키지된 배합식 가져오기](./import-packaged-recipe-api.md).
 
-마지막으로 이 자습서를 시작하기 전에 [시작하기](../api/getting-started.md) 개발자 가이드의 섹션을 참조하십시오. [!DNL Sensei Machine Learning] 이 자습서 전체에서 사용되는 필수 헤더를 포함한 API입니다.
+마지막으로, 이 자습서를 시작하기 전에 [시작하기](../api/getting-started.md) 에 성공적으로 호출하기 위해 알아야 하는 중요한 정보는 개발자 안내서의 섹션 을 참조하십시오 [!DNL Sensei Machine Learning] 이 자습서 전체에서 사용되는 필수 헤더를 포함한 API:
 
 - `{ACCESS_TOKEN}`
 - `{ORG_ID}`
@@ -30,25 +30,25 @@ ht-degree: 1%
 
 모든 POST, PUT 및 PATCH 요청에는 추가 헤더가 필요합니다.
 
-- 컨텐츠 유형: application/json
+- Content-Type: application/json
 
 ### 주요 용어
 
-다음 표에서는 이 자습서에서 사용되는 몇 가지 일반적인 용어를 설명합니다.
+다음 표에서는 이 자습서에서 사용되는 몇 가지 일반적인 용어를 간략하게 설명합니다.
 
 | 용어 | 정의 |
 | --- | --- |
-| **기계 학습 인스턴스(ML 인스턴스)** | 의 인스턴스 [!DNL Sensei] 특정 데이터, 매개 변수 및 [!DNL Sensei] 코드가 있어야 합니다. |
-| **실험** | 교육 실험 실행, 점수 실험 실행 또는 둘 모두를 보유하는 우산 엔티티. |
-| **예약된 실험** | 사용자 정의 스케줄로 제어되는 교육 또는 점수 실험 실행 자동화를 설명하는 용어입니다. |
-| **실험 실행** | 교육 또는 채점 실험 의 특정 인스턴스. 특정 경험의 여러 실험 실행은 교육 또는 점수에 사용되는 데이터 세트 값에서 다를 수 있습니다. |
-| **숙련된 모델** | 검증, 평가 및 최종 모델에 도착하기 전에 실험 및 기능 엔지니어링 프로세스에 의해 생성된 기계 학습 모델입니다. |
-| **게시된 모델** | 교육, 검증 및 평가 후에 완성되고 버전이 지정된 모델이 나타납니다. |
-| **기계 학습 서비스(ML 서비스)** | API 종단점을 사용하여 교육 및 점수에 대한 온디맨드 요청을 지원하기 위해 서비스로 배포되는 ML 인스턴스. 기존의 숙련된 실험 실행을 사용하여 ML 서비스를 만들 수도 있습니다. |
+| **머신 러닝 인스턴스(ML 인스턴스)** | 의 인스턴스 [!DNL Sensei] 특정 데이터, 매개 변수 및 [!DNL Sensei] 코드. |
+| **실험** | 교육 실험 실행, 채점 실험 실행 또는 둘 다를 실행하기 위한 umbrella 엔티티입니다. |
+| **예약된 실험** | 사용자 정의 일정에 의해 관리되는 교육 또는 채점 실험 실행의 자동화를 설명하는 용어입니다. |
+| **실험 실행** | 교육 또는 채점 실험의 특정 인스턴스. 특정 실험의 여러 실험 실행은 교육 또는 채점에 사용되는 데이터 세트 값이 다를 수 있습니다. |
+| **교육된 모델** | 검증, 평가 및 최종 모델에 도달하기 전에 기능 엔지니어링을 실험하고 프로세스를 통해 생성된 머신 러닝 모델입니다. |
+| **게시된 모델** | 교육, 유효성 검사 및 평가 후에 최종 버전 모델이 도착했습니다. |
+| **머신 러닝 서비스(ML 서비스)** | API 끝점을 사용하여 교육 및 채점에 대한 온디맨드 요청을 지원하기 위해 서비스로 배포된 ML 인스턴스. 훈련된 기존 실험 실행을 사용하여 ML 서비스를 만들 수도 있습니다. |
 
-## 기존 교육 실험 실행 및 예약된 점수를 사용하여 ML 서비스 만들기
+## 기존 교육 실험 실행 및 예약된 채점으로 ML 서비스 만들기
 
-교육 실험 실행을 ML 서비스로 게시하면 점수 계산 실험 실행 POST 요청의 페이로드에 대한 세부 정보를 제공하여 점수 책정을 예약할 수 있습니다. 이렇게 하면 점수부여 예약된 실험 엔티티가 생성됩니다.
+교육 실험 실행을 ML 서비스로 게시할 때 POST 요청의 페이로드에 채점 실험 실행에 대한 세부 정보를 제공하여 채점을 예약할 수 있습니다. 그 결과 채점에 대해 예약된 실험 개체가 생성됩니다.
 
 **API 형식**
 
@@ -82,19 +82,19 @@ curl -X POST
 
 | 속성 | 설명 |
 | --- | --- |
-| `mlInstanceId` | 기존 ML 인스턴스 ID인 ML 서비스를 만드는 데 사용되는 교육 실험 실행은 이 특정 ML 인스턴스에 해당해야 합니다. |
-| `trainingExperimentId` | ML 인스턴스 식별에 해당하는 실험 식별 |
-| `trainingExperimentRunId` | ML 서비스 게시에 사용할 특정 교육 실험 실행 |
-| `scoringDataSetId` | 식별은 예약된 점수 실험 실행에 사용할 특정 데이터 세트를 나타냅니다. |
-| `scoringTimeframe` | 실험 실행 점수에 사용할 데이터 필터링에 대한 분을 나타내는 정수 값입니다. 예를 들어 값 `10080` 는 지난 10080 분 또는 168시간의 데이터가 예약된 각 점수 실험 실행에 사용됩니다. 값 `0` 는 데이터를 필터링하지 않고 데이터 세트 내의 모든 데이터를 점수 책정에 사용합니다. |
-| `scoringSchedule` | 예약된 점수 실험 실행에 대한 세부 사항을 포함합니다. |
-| `scoringSchedule.startTime` | 점수를 시작할 시기를 나타내는 날짜/시간입니다. |
-| `scoringSchedule.endTime` | 점수를 시작할 시기를 나타내는 날짜/시간입니다. |
-| `scoringSchedule.cron` | 실험 실행에 점수를 매길 간격을 나타내는 크론 값입니다. |
+| `mlInstanceId` | 기존 ML 인스턴스 식별, ML 서비스를 만드는 데 사용되는 교육 실험 실행은 이 특정 ML 인스턴스에 해당해야 합니다. |
+| `trainingExperimentId` | ML 인스턴스 식별에 해당하는 실험 식별. |
+| `trainingExperimentRunId` | ML 서비스 게시에 사용되는 특정 교육 실험 실행. |
+| `scoringDataSetId` | 예약된 채점 실험 실행에 사용될 특정 데이터 세트를 참조하는 식별. |
+| `scoringTimeframe` | 실험 실행 채점에 사용될 데이터 필터링의 시간(분)을 나타내는 정수 값입니다. (예: 값) `10080` 은(는) 각 예약된 채점 실험 실행에 대해 지난 10080분 또는 168시간의 데이터가 사용됨을 의미합니다. 값: `0` 는 데이터를 필터링하지 않으며, 데이터 세트 내의 모든 데이터는 점수에 사용됩니다. |
+| `scoringSchedule` | 예약된 채점 실험 실행에 대한 세부 정보를 포함합니다. |
+| `scoringSchedule.startTime` | 채점을 시작할 시기를 나타내는 날짜/시간입니다. |
+| `scoringSchedule.endTime` | 채점을 시작할 시기를 나타내는 날짜/시간입니다. |
+| `scoringSchedule.cron` | 실험 실행을 평가할 간격을 나타내는 크론 값. |
 
 **응답**
 
-성공적인 응답은 고유한 ML 서비스를 포함하여 새로 만든 ML 서비스의 세부 사항을 반환합니다 `id` 그리고 `scoringExperimentId` 해당 점수 실험
+성공적인 응답은 고유한 사항을 포함하여 새로 생성된 ML 서비스의 세부 사항을 반환합니다 `id` 및 `scoringExperimentId` 해당 채점 실험의 경우.
 
 
 ```JSON
@@ -120,16 +120,16 @@ curl -X POST
 
 ## 기존 ML 인스턴스에서 ML 서비스 만들기
 
-특정 사용 사례 및 요구 사항에 따라 ML 인스턴스로 ML 서비스를 만드는 것은 교육 일정 및 실험 실행 점수 책정 측면에서 유연합니다. 이 튜토리얼은 다음과 같은 특정 사례를 다룹니다.
+특정 사용 사례 및 요구 사항에 따라 ML 인스턴스로 ML 서비스를 만들면 교육 일정 조정 및 실험 실행 채점 측면에서 유연합니다. 이 튜토리얼에서는 다음과 같은 특정 사례를 살펴봅니다.
 
-- [예정된 트레이닝은 필요하지 않지만 예약된 점수가 필요합니다.](#ml-service-with-scheduled-experiment-for-scoring)
-- [교육 및 점수 모두에 대해 예약된 실험 실행이 필요합니다.](#ml-service-with-scheduled-experiments-for-training-and-scoring)
+- [예약된 교육은 필요하지 않지만, 예약된 채점이 필요합니다.](#ml-service-with-scheduled-experiment-for-scoring)
+- [교육 및 채점 모두에 대해 예약된 실험 실행이 필요합니다.](#ml-service-with-scheduled-experiments-for-training-and-scoring)
 
-ML 서비스는 교육 또는 점수 실험 예약을 하지 않고 ML 인스턴스를 사용하여 만들 수 있습니다. 이러한 ML 서비스는 일반 실험 개체를 만들고, 교육 및 점수를 위한 단일 실험 실행을 만듭니다.
+ML 서비스는 교육 또는 채점 실험 예약 없이 ML 인스턴스를 사용하여 만들 수 있습니다. 이러한 ML 서비스는 일반적인 실험 개체 및 교육 및 채점을 위한 단일 실험 실행을 만듭니다.
 
-### 점수를 위한 예약된 실험이 있는 ML 서비스 {#ml-service-with-scheduled-experiment-for-scoring}
+### 채점을 위한 실험이 예약된 ML 서비스 {#ml-service-with-scheduled-experiment-for-scoring}
 
-채점용으로 예약된 실험 실행으로 ML 인스턴스를 게시하여 ML 서비스를 만들 수 있으며, 이 경우 교육을 위한 일반 실험 개체가 생성됩니다. 교육 실험 실행이 생성되고 모든 예약된 점수 실험 실행에 사용됩니다. 다음을 확인합니다. `mlInstanceId`, `trainingDataSetId`, 및 `scoringDataSetId` ML 서비스를 만드는 데 필요하며, ML 서비스가 존재하며 유효한 값입니다.
+점수에 대해 예약된 실험 실행이 있는 ML 인스턴스를 게시하여 ML 서비스를 만들 수 있으며, 이는 교육을 위한 일반 실험 엔티티를 만듭니다. 교육 실험 실행이 생성되며 모든 예약된 채점 실험 실행에 사용됩니다. 다음을 확인합니다. `mlInstanceId`, `trainingDataSetId`, 및 `scoringDataSetId` ml 서비스를 만들고, 존재하고 유효한 값인지 확인하는 데 필요합니다.
 
 **API 형식**
 
@@ -164,19 +164,19 @@ curl -X POST
 
 | JSON 키 | 설명 |
 | --- | --- |
-| `mlInstanceId` | ML 서비스를 만드는 데 사용되는 ML 인스턴스를 나타내는 기존 ML 인스턴스 ID입니다. |
+| `mlInstanceId` | ML 서비스를 만드는 데 사용되는 ML 인스턴스를 나타내는 기존 ML 인스턴스 식별. |
 | `trainingDataSetId` | 교육 실험에 사용할 특정 데이터 세트를 참조하는 식별 |
-| `trainingTimeframe` | 교육 실험에 사용할 데이터 필터링에 대한 분을 나타내는 정수 값입니다. 예를 들어 값 `"10080"` 는 지난 10080 분 또는 168시간의 데이터가 교육 실험 실행에 사용됨을 의미합니다. 값 `"0"` 는 데이터를 필터링하지 않으며 데이터 집합 내의 모든 데이터가 교육에 사용됩니다. |
-| `scoringDataSetId` | 식별은 예약된 점수 실험 실행에 사용할 특정 데이터 세트를 나타냅니다. |
-| `scoringTimeframe` | 실험 실행 점수에 사용할 데이터 필터링에 대한 분을 나타내는 정수 값입니다. 예를 들어 값 `"10080"` 는 지난 10080 분 또는 168시간의 데이터가 예약된 각 점수 실험 실행에 사용됩니다. 값 `"0"` 는 데이터를 필터링하지 않고 데이터 세트 내의 모든 데이터를 점수 책정에 사용합니다. |
-| `scoringSchedule` | 예약된 점수 실험 실행에 대한 세부 사항을 포함합니다. |
-| `scoringSchedule.startTime` | 점수를 시작할 시기를 나타내는 날짜/시간입니다. |
-| `scoringSchedule.endTime` | 점수를 시작할 시기를 나타내는 날짜/시간입니다. |
-| `scoringSchedule.cron` | 실험 실행에 점수를 매길 간격을 나타내는 크론 값입니다. |
+| `trainingTimeframe` | 교육 실험에 사용될 데이터 필터링에 걸리는 시간을 나타내는 정수 값입니다. (예: 값) `"10080"` 은(는) 지난 10080분 또는 168시간의 데이터가 교육 실험 실행에 사용됨을 의미합니다. 값: `"0"` 는 데이터를 필터링하지 않으며, 데이터 세트 내의 모든 데이터가 교육에 사용됩니다. |
+| `scoringDataSetId` | 예약된 채점 실험 실행에 사용될 특정 데이터 세트를 참조하는 식별. |
+| `scoringTimeframe` | 실험 실행 채점에 사용될 데이터 필터링의 시간(분)을 나타내는 정수 값입니다. (예: 값) `"10080"` 은(는) 각 예약된 채점 실험 실행에 대해 지난 10080분 또는 168시간의 데이터가 사용됨을 의미합니다. 값: `"0"` 는 데이터를 필터링하지 않으며, 데이터 세트 내의 모든 데이터는 점수에 사용됩니다. |
+| `scoringSchedule` | 예약된 채점 실험 실행에 대한 세부 정보를 포함합니다. |
+| `scoringSchedule.startTime` | 채점을 시작할 시기를 나타내는 날짜/시간입니다. |
+| `scoringSchedule.endTime` | 채점을 시작할 시기를 나타내는 날짜/시간입니다. |
+| `scoringSchedule.cron` | 실험 실행을 평가할 간격을 나타내는 크론 값. |
 
 **응답**
 
-성공적인 응답은 새로 만든 ML 서비스의 세부 정보를 반환합니다. 여기에는 서비스의 고유한 기능이 포함됩니다 `id`뿐만 아니라 `trainingExperimentId` 및 `scoringExperimentId` 해당 교육 및 채점 실험용으로 각각 제공됩니다.
+성공적인 응답은 새로 생성된 ML 서비스의 세부 정보를 반환합니다. 여기에는 서비스의 고유 항목이 포함됩니다 `id`, 및 `trainingExperimentId` 및 `scoringExperimentId` 에 해당하는 교육 및 채점 실험 각각에 대해 설명합니다.
 
 ```JSON
 {
@@ -200,9 +200,9 @@ curl -X POST
 }
 ```
 
-### 교육 및 점수를 위한 예약된 실험이 포함된 ML 서비스 {#ml-service-with-scheduled-experiments-for-training-and-scoring}
+### 교육 및 채점을 위한 예약된 실험이 포함된 ML 서비스 {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
-예약된 교육 및 점수 실험 실행과 함께 기존 ML 인스턴스를 ML 서비스로 게시하려면 교육 및 점수 일정을 모두 제공해야 합니다. 이 구성의 ML 서비스를 만들면 교육 및 점수 둘 다에 대해 예약된 실험 엔티티가 생성됩니다. 교육 및 점수 지정 일정이 동일할 필요는 없습니다. 점수부여 작업 실행 중에 스케줄링된 훈련 실험 실행으로 생성된 최신 훈련 모델을 가져와 스케줄링된 점수부여 실행에 사용합니다.
+교육 및 채점 실험 실행이 예약된 기존 ML 인스턴스를 ML 서비스로 게시하려면 교육 및 채점 일정을 모두 제공해야 합니다. 이 구성의 ML 서비스가 생성되면 교육 및 채점 모두에 대해 예약된 실험 엔티티도 생성됩니다. 교육 및 채점 일정이 동일하지 않아도 됩니다. 채점 작업 실행 중에 예약된 교육 실험 실행에서 생성된 최신 교육 모델을 가져와 예약된 채점 실행에 사용합니다.
 
 **API 형식**
 
@@ -241,20 +241,20 @@ curl -X POST 'https://platform.adobe.io/data/sensei/mlServices'
 
 | JSON 키 | 설명 |
 | --- | --- |
-| `mlInstanceId` | ML 서비스를 만드는 데 사용되는 ML 인스턴스를 나타내는 기존 ML 인스턴스 ID입니다. |
+| `mlInstanceId` | ML 서비스를 만드는 데 사용되는 ML 인스턴스를 나타내는 기존 ML 인스턴스 식별. |
 | `trainingDataSetId` | 교육 실험에 사용할 특정 데이터 세트를 참조하는 식별 |
-| `trainingTimeframe` | 교육 실험에 사용할 데이터 필터링에 대한 분을 나타내는 정수 값입니다. 예를 들어 값 `"10080"` 는 지난 10080 분 또는 168시간의 데이터가 교육 실험 실행에 사용됨을 의미합니다. 값 `"0"` 는 데이터를 필터링하지 않으며 데이터 집합 내의 모든 데이터가 교육에 사용됩니다. |
-| `scoringDataSetId` | 식별은 예약된 점수 실험 실행에 사용할 특정 데이터 세트를 나타냅니다. |
-| `scoringTimeframe` | 실험 실행 점수에 사용할 데이터 필터링에 대한 분을 나타내는 정수 값입니다. 예를 들어 값 `"10080"` 는 지난 10080 분 또는 168시간의 데이터가 예약된 각 점수 실험 실행에 사용됩니다. 값 `"0"` 는 데이터를 필터링하지 않고 데이터 세트 내의 모든 데이터를 점수 책정에 사용합니다. |
+| `trainingTimeframe` | 교육 실험에 사용될 데이터 필터링에 걸리는 시간을 나타내는 정수 값입니다. (예: 값) `"10080"` 은(는) 지난 10080분 또는 168시간의 데이터가 교육 실험 실행에 사용됨을 의미합니다. 값: `"0"` 는 데이터를 필터링하지 않으며, 데이터 세트 내의 모든 데이터가 교육에 사용됩니다. |
+| `scoringDataSetId` | 예약된 채점 실험 실행에 사용될 특정 데이터 세트를 참조하는 식별. |
+| `scoringTimeframe` | 실험 실행 채점에 사용될 데이터 필터링의 시간(분)을 나타내는 정수 값입니다. (예: 값) `"10080"` 은(는) 각 예약된 채점 실험 실행에 대해 지난 10080분 또는 168시간의 데이터가 사용됨을 의미합니다. 값: `"0"` 는 데이터를 필터링하지 않으며, 데이터 세트 내의 모든 데이터는 점수에 사용됩니다. |
 | `trainingSchedule` | 예약된 교육 실험 실행에 대한 세부 정보를 포함합니다. |
-| `scoringSchedule` | 예약된 점수 실험 실행에 대한 세부 사항을 포함합니다. |
-| `scoringSchedule.startTime` | 점수를 시작할 시기를 나타내는 날짜/시간입니다. |
-| `scoringSchedule.endTime` | 점수를 시작할 시기를 나타내는 날짜/시간입니다. |
-| `scoringSchedule.cron` | 실험 실행에 점수를 매길 간격을 나타내는 크론 값입니다. |
+| `scoringSchedule` | 예약된 채점 실험 실행에 대한 세부 정보를 포함합니다. |
+| `scoringSchedule.startTime` | 채점을 시작할 시기를 나타내는 날짜/시간입니다. |
+| `scoringSchedule.endTime` | 채점을 시작할 시기를 나타내는 날짜/시간입니다. |
+| `scoringSchedule.cron` | 실험 실행을 평가할 간격을 나타내는 크론 값. |
 
 **응답**
 
-성공적인 응답은 새로 만든 ML 서비스의 세부 정보를 반환합니다. 여기에는 서비스의 고유한 기능이 포함됩니다 `id`뿐만 아니라 `trainingExperimentId` 및 `scoringExperimentId` 해당 교육 및 채점 실험 중에서 각각 선택합니다. 아래 예제 응답에는 `trainingSchedule` 및 `scoringSchedule` 교육 및 점수에 대한 실험 엔티티가 예약된 실험임을 나타냅니다.
+성공적인 응답은 새로 생성된 ML 서비스의 세부 정보를 반환합니다. 여기에는 서비스의 고유 항목이 포함됩니다 `id`, 및 `trainingExperimentId` 및 `scoringExperimentId` 각각 해당 교육 및 채점 실험. 아래 예제 응답에서 `trainingSchedule` 및 `scoringSchedule` 교육 및 채점을 위한 실험 개체가 예약된 실험임을 제안합니다.
 
 ```JSON
 {
@@ -285,7 +285,7 @@ curl -X POST 'https://platform.adobe.io/data/sensei/mlServices'
 
 ## ML 서비스 조회 {#retrieving-ml-services}
 
-기존 ML 서비스를 만들기 위해 `GET` 요청 `/mlServices` 고유한 `id` 경로에 있는 ML 서비스의 매개 변수 값을 나타냅니다.
+다음을 만들어 기존 ML 서비스를 조회할 수 있습니다. `GET` 요청 대상 `/mlServices` 및 고유한 `id` 경로에 있는 ML 서비스의 입니다.
 
 **API 형식**
 
@@ -295,7 +295,7 @@ GET /mlServices/{SERVICE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SERVICE_ID}` | 고유 `id` 조회하고 있는 ML 서비스 중 |
+| `{SERVICE_ID}` | 고유 `id` 조회하고 있는 ML 서비스 |
 
 **요청**
 
@@ -340,12 +340,12 @@ curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!NOTE]
 >
->다른 ML 서비스를 검색하면 하나 이상의 키-값 쌍이 있는 응답을 반환할 수 있습니다. 위의 응답은 [예약된 교육 및 점수 테스트 실행이 모두 포함된 ML 서비스](#ml-service-with-scheduled-experiments-for-training-and-scoring).
+>다른 ML 서비스를 검색하면 키-값 쌍이 더 많거나 적은 응답이 반환될 수 있습니다. 위의 응답은 를 나타냅니다. [예약된 교육 및 채점 실험 실행이 모두 있는 ML 서비스](#ml-service-with-scheduled-experiments-for-training-and-scoring).
 
 
-## 교육 또는 점수 책정 예약
+## 교육 또는 채점 예약
 
-이미 게시된 ML 서비스에 대한 점수 및 교육을 예약하려는 경우 기존 ML 서비스를 `PUT` 요청 시 `/mlServices`.
+이미 게시된 ML 서비스에 대한 채점 및 교육을 예약하려는 경우 `PUT` 요청 날짜: `/mlServices`.
 
 **API 형식**
 
@@ -355,11 +355,11 @@ PUT /mlServices/{SERVICE_ID}
 
 | 매개 변수 | 설명 |
 | --- | --- |
-| `{SERVICE_ID}` | 고유 `id` 업데이트하려는 ML 서비스의 HTML 서비스 중 하나를 선택합니다. |
+| `{SERVICE_ID}` | 고유 `id` 업데이트 중인 ML 서비스의 ID입니다. |
 
 **요청**
 
-다음 요청은 기존 ML 서비스에 대한 교육 및 점수를 예약하며, `trainingSchedule` 및 `scoringSchedule` 해당 `startTime`, `endTime`, 및 `cron` 키.
+다음 요청은 을 추가하여 기존 ML 서비스에 대한 교육 및 채점을 예약합니다. `trainingSchedule` 및 `scoringSchedule` 해당 키가 있는 키 `startTime`, `endTime`, 및 `cron` 키.
 
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
@@ -392,7 +392,7 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!WARNING]
 >
->수정 안 함 `startTime` 기존 예약된 교육 및 점수 책정 작업 만약 `startTime` 수정해야 합니다. 동일한 모델을 게시하고 교육 및 점수 작업 일정을 조정하십시오.
+>을(를) 수정하지 마십시오. `startTime` 기존 예약된 교육 및 채점 작업에 대해. 다음과 같은 경우 `startTime` 을(를) 수정해야 합니다. 동일한 모델을 게시하고 교육 및 채점 작업 일정을 다시 설정하는 것이 좋습니다.
 
 **응답**
 
