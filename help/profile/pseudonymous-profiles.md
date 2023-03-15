@@ -5,9 +5,9 @@ title: 익명의 프로필 데이터 만료
 description: 이 문서에서는 Adobe Experience Platform 내 익명의 프로필에 대한 데이터 만료 구성에 대한 일반적인 지침을 제공합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: ab5eb1e7a3f2c20efcb44b1699a5938f6d54fa04
+source-git-commit: 6ba219162f6fde37d8bd258c43ed1bdbbbcdf569
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,6 @@ Adobe Experience Platform에서 프로필은 다음 조건을 충족하는 경�
 - 익명의 프로필에서 삭제하도록 간주되는 ID 네임스페이스입니다.
    - 예: `ECID` 전용 `AAID` 또는 `ECID` 및 `AAID`.
 - 익명의 프로필을 삭제하기 전에 기다리는 시간입니다. 고객을 위한 기본 권장 사항은 14일입니다. 그러나 이 값은 사용 사례에 따라 다를 수 있습니다.
-- 라이선스 프로필 수와 비교한 현재 프로필 수입니다.
 
 ## 자주 묻는 질문 {#faq}
 
