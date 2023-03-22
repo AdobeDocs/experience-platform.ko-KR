@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Privacy Service 개요
 description: Privacy Service을 사용하면 Experience Cloud 데이터 작업에서 법적 개인 정보 보호 규정을 자동으로 준수할 수 있습니다.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
+source-git-commit: e09f0598e1d8dc007d0fdfcf13da11d5cad94c54
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1608'
 ht-degree: 5%
 
 ---
 
 # [!DNL Privacy Service] 개요
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Privacy Service에 대한 권한을 개선하여 세부기간 수준을 늘렸습니다. 이러한 변경 사항으로 조직 관리자는 원하는 역할 및 권한 수준을 사용하여 더 많은 사용자에게 액세스 권한을 부여할 수 있습니다. 이 임박한 업데이트가 기술 계정 사용자에게 중요한 변경 사항이므로 기술 계정 사용자는 Privacy Service 권한을 업데이트해야 합니다. 이 권한 변경의 적용은 **2023년 3월 28일**.
+>
+>기술 계정은 엔터프라이즈 고객이 사용할 수 있으며 Adobe 개발자 콘솔을 통해 만들 수 있습니다. 기술 계정 소유자의 Adobe ID은 `@techacct.adobe.com`. 기술 계정 보유자인지 확실하지 않은 경우 조직 관리자에게 문의하십시오.
 
 더 나은 고객 경험을 전달하려면 고객의 개인 데이터를 수집하고 저장해야 합니다. 이 데이터를 사용할 때는 고객의 개인 정보를 이해하고 존중하는 것이 중요합니다. 새로운 법률 및 조직 규정은 사용자가 요청 시 데이터 저장소에서 개인 데이터를 액세스하거나 삭제할 수 있는 권한을 제공합니다.
 
