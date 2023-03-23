@@ -3,10 +3,10 @@ title: (베타) 클라우드 스토리지 대상으로 데이터 세트 내보�
 type: Tutorial
 description: Adobe Experience Platform에서 기본 설정 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: aebb1494a6ed667730997048d30a2ca3e00f9452
+source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 1%
+source-wordcount: '1359'
+ht-degree: 5%
 
 ---
 
@@ -22,6 +22,19 @@ ht-degree: 1%
 이 문서에서는 내보내는 데 필요한 워크플로우에 대해 설명합니다 [데이터 세트](/help/catalog/datasets/overview.md) Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치(예: ) [!DNL Amazon S3], SFTP 위치 또는 [!DNL Google Cloud Storage] Experience Platform UI 사용.
 
 Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있습니다. 다음 문서를 참조하십시오. [데이터 세트 API 내보내기 자습서](/help/destinations/api/export-datasets.md) 추가 정보.
+
+## 지원되는 대상 {#supported-destinations}
+
+현재 스크린샷에 강조 표시되고 아래에 나열된 클라우드 스토리지 대상으로 데이터 세트를 내보낼 수 있습니다.
+
+![데이터 집합 내보내기를 지원하는 대상](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+
+* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
+* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 ## 세그먼트를 활성화하거나 데이터 세트를 내보내는 경우 {#when-to-activate-segments-or-activate-datasets}
 
@@ -74,8 +87,8 @@ Experience Platform 카탈로그의 일부 파일 기반 대상은 세그먼트 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
->title="데이터 세트에 대한 파일 내보내기 옵션"
->abstract="선택 **증분 파일 내보내기** 마지막 내보내기 이후 데이터 세트에 추가된 데이터만 내보냅니다. <br> 첫 번째 증분 파일 내보내기에는 데이터 집합에 있는 모든 데이터가 포함되며 채우기 역할을 합니다. 향후 증분 파일에는 첫 번째 내보내기 이후 데이터 세트에 추가된 데이터만 포함됩니다."
+>title="데이터 세트의 파일 내보내기 옵션"
+>abstract="**증분 파일 내보내기**&#x200B;를 선택하여 마지막 내보내기 이후 데이터 세트에 추가된 데이터만 내보냅니다. <br>첫 번째 증분 파일 내보내기에는 채우기 역할을 하는 데이터 세트의 모든 데이터가 포함됩니다. 향후 증분 파일에는 첫 번째 내보내기 이후 데이터 세트에 추가된 데이터만 포함됩니다."
 
 에서 **[!UICONTROL 예약]** 1단계에서 시작 날짜와 데이터 세트 내보내기에 대한 내보내기 간격을 설정할 수 있습니다.
 
