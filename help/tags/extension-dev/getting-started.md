@@ -1,11 +1,11 @@
 ---
 title: 확장 개발 시작
-description: Adobe Experience Platform에서 나만의 태그 확장 개발을 시작하십시오.
+description: Adobe Experience Platform에서 고유한 태그 확장 개발을 시작합니다.
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 91%
+source-wordcount: '451'
+ht-degree: 88%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
 
 확장의 실행 및 빌드를 지원하기 위해 Adobe는 오픈 소스 스캐폴딩 툴을 사용하며, 이 툴은 확장 패키지에 필요한 파일 및 파일 구조를 생성할 수 있도록 Adobe 엔지니어가 제공합니다. 그러므로 사용자가 실제로 코드를 작성해야 합니다.
 
@@ -61,3 +61,7 @@ npx @adobe/reactor-scaffold
 >* 각 이벤트, 조건, 작업 중 하나 이상을 추가할 수 있습니다.
 >* 구성 보기는 하나만 있을 수 있습니다.
 
+
+## 다음 단계
+
+* 다음을 수행합니다 [제출 프로세스 개요](./submit/overview.md) 준비 [유효성 검사](./submit/upload-and-test.md#validate) 및 [업로드](./submit/upload-and-test.md#integration) 태그 에코시스템 내에서 테스트하기 위한 확장.
