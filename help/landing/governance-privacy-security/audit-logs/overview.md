@@ -2,10 +2,10 @@
 title: 감사 로그 개요
 description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어떤 작업을 수행했는지 확인하는 방법에 대해 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: cf6ff8bcd3dfebe551ac3d7289fa8d5fb2a78079
+source-git-commit: 658cd7ec2d88d4b3633412f5c6d571351904e70b
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 35%
+source-wordcount: '1157'
+ht-degree: 29%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 35%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="설명"
->abstract=""
+>title="Platform에서 사용자 활동 모니터링"
+>abstract="<h2>설명</h2><p>감사 로그 형식에서 다양한 플랫폼 서비스 및 기능에 대한 사용자 활동을 모니터링할 수 있습니다. 이러한 로그는 레코드를 기록하는 감사 추적을 형성합니다 <b>who</b> 수행됨 <b>what</b> 작업 및 <b>when</b>. 감사 로그는 플랫폼의 문제를 해결하는 데 도움이 되며 기업의 데이터 관리 정책 및 규정 요구 사항을 효과적으로 준수하는 데 도움이 됩니다.</p><h2>지침</h2><ul><li>선택 <b>감사</b> 을 클릭합니다. 감사 작업 공간에는 기본적으로 가장 최근 항목에서 가장 최근 항목으로 정렬된 기록된 로그 목록이 표시됩니다.</li>   <li> 참고: 감사 로그는 시스템에서 삭제된 후 365일 동안 유지됩니다. 따라서 최대 365일 동안만 돌아갈 수 있습니다. 365일 이상의 데이터를 다시 확인해야 하는 경우 내부 정책 요구 사항을 충족하기 위해 정기적으로 로그를 내보내야 합니다. </li><li>목록에서 이벤트를 선택하여 오른쪽 레일에서 해당 세부 사항을 확인합니다. </li><li>단계 아이콘을 선택하여 결과 범위를 좁히는 데 도움이 되는 필터 컨트롤 목록을 표시합니다. 선택한 필터에 관계없이 마지막 1000개의 레코드만 표시됩니다. </li><li>현재 감사 로그 목록을 내보내려면 **다운로드 로그**.</li><li>이 기능에 대한 자세한 내용은 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=ko">감사 로그 개요</a> Experience League에서 확인하십시오.</li></ul>"
 
 시스템에서 수행되는 활동의 투명성과 가시성을 높이기 위해 Adobe Experience Platform을 사용하면 &quot;감사 로그&quot; 형태로 다양한 서비스 및 기능에 대한 사용자 활동을 감사할 수 있습니다. 이러한 로그는 플랫폼의 문제 해결에 도움이 될 수 있는 감사 추적을 형성하며 기업의 데이터 관리 정책 및 규정 요구 사항을 효과적으로 준수할 수 있도록 도와줍니다.
 
@@ -72,10 +72,10 @@ ht-degree: 35%
 
 ## UI에서 감사 로그 관리 {#managing-audit-logs-in-the-ui}
 
->[!CONTEXTUALHELP]
->id="platform_privacyConsole_audits_instructions"
->title="지침"
->abstract=""
+[!CONTEXTUALHELP]
+id="platform_privacyConsole_audits_instructions"
+title="지침"
+abstract=""
 
 내에서 다양한 Experience Platform 기능에 대한 감사 로그를 볼 수 있습니다 **[!UICONTROL 감사]** 플랫폼 UI의 작업 영역입니다. 작업 공간에는 기본적으로 가장 최근 항목에서 가장 최근 항목으로 정렬된 기록된 로그 목록이 표시됩니다.
 
@@ -90,8 +90,7 @@ ht-degree: 35%
 ### 감사 로그 필터링
 
 >[!NOTE]
->
->이 새로운 기능이 추가되었으므로 표시되는 데이터는 2022년 3월에만 적용됩니다. 선택한 리소스에 따라 이전 데이터를 2022년 1월부터 사용할 수 있습니다.
+이 새로운 기능이 추가되었으므로 표시되는 데이터는 2022년 3월에만 적용됩니다. 선택한 리소스에 따라 이전 데이터를 2022년 1월부터 사용할 수 있습니다.
 
 
 단계 아이콘( )을 선택합니다![필터 아이콘](../../images/audit-logs/icon.png))을 클릭하여 필터 컨트롤 목록을 표시하여 결과를 좁힐 수 있습니다. 선택한 다양한 필터에 관계없이 마지막 1000개의 레코드만 표시됩니다.

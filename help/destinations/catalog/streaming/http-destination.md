@@ -3,10 +3,10 @@ keywords: 스트리밍; HTTP 대상
 title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 타사 HTTP 엔드포인트로 보내 자체 분석을 실행하거나 Experience Platform에서 내보낸 프로필 데이터에 필요한 기타 작업을 수행할 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: e22472443eef8aa053aeb0eb35488de581e4b2bd
+source-git-commit: 658cd7ec2d88d4b3633412f5c6d571351904e70b
 workflow-type: tm+mt
-source-wordcount: '2648'
-ht-degree: 7%
+source-wordcount: '2436'
+ht-degree: 8%
 
 ---
 
@@ -158,12 +158,12 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="세그먼트 타임스탬프 포함"
->abstract="세그먼트를 생성 및 업데이트하거나 세그먼트를 대상에 매핑하여 활성화하는 경우 데이터 내보내기에 Unix 타임스탬프가 포함되도록 하려면 전환하십시오. 이 옵션을 선택한 경우 데이터 내보내기 예는 설명서를 참조하십시오.**Platform에서 사용자 활동 모니터링**<h2>설명</h2><p>감사 로그 형식에서 다양한 플랫폼 서비스 및 기능에 대한 사용자 활동을 모니터링할 수 있습니다. 이러한 로그는 레코드를 기록하는 감사 추적을 형성합니다 <b>who</b> 수행됨 <b>what</b> 작업 및 <b>when</b>. 감사 로그는 플랫폼의 문제를 해결하는 데 도움이 되며 기업의 데이터 관리 정책 및 규정 요구 사항을 효과적으로 준수하는 데 도움이 됩니다.</p><h2>지침</h2><ul><li>선택 <b>감사</b> 을 클릭합니다. 감사 작업 공간에는 기본적으로 가장 최근 항목에서 가장 최근 항목으로 정렬된 기록된 로그 목록이 표시됩니다.</li>   <li> 참고: 감사 로그는 시스템에서 삭제된 후 365일 동안 유지됩니다. 따라서 최대 365일 동안만 돌아갈 수 있습니다. 365일 이상의 데이터를 다시 확인해야 하는 경우 내부 정책 요구 사항을 충족하기 위해 정기적으로 로그를 내보내야 합니다. </li><li>목록에서 이벤트를 선택하여 오른쪽 레일에서 해당 세부 사항을 확인합니다. </li><li>단계 아이콘을 선택하여 결과 범위를 좁히는 데 도움이 되는 필터 컨트롤 목록을 표시합니다. 선택한 필터에 관계없이 마지막 1000개의 레코드만 표시됩니다. </li><li>현재 감사 로그 목록을 내보내려면 **다운로드 로그**.</li><li>이 기능에 대한 자세한 내용은 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=ko">감사 로그 개요</a> Experience League에서 확인하십시오.</li></ul>"
+>abstract="세그먼트를 생성 및 업데이트하거나 세그먼트를 대상에 매핑하여 활성화하는 경우 데이터 내보내기에 Unix 타임스탬프가 포함되도록 하려면 전환하십시오. 이 옵션을 선택한 경우 데이터 내보내기 예는 설명서를 참조하십시오."
 
-[!CONTEXTUALHELP]
-id="platform_destinations_connect_http_queryparameters"
-title="쿼리 매개변수"
-abstract="필요한 경우 쿼리 매개변수를 HTTP 엔드포인트의 URL에 추가할 수 있습니다. 사용하는 쿼리 매개변수 형식(예: `parameter1=value&parameter2=value`)을 지정합니다."
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_queryparameters"
+>title="쿼리 매개변수"
+>abstract="필요한 경우 쿼리 매개변수를 HTTP 엔드포인트의 URL에 추가할 수 있습니다. 사용하는 쿼리 매개변수 형식(예: `parameter1=value&parameter2=value`)을 지정합니다."
 
 대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
@@ -186,7 +186,8 @@ abstract="필요한 경우 쿼리 매개변수를 HTTP 엔드포인트의 URL에
 ## 세그먼트를 이 대상에 활성화 {#activate}
 
 >[!IMPORTANT]
-데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
+> 
+>데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 
 자세한 내용은 [스트리밍 프로필 내보내기 대상으로 대상 데이터 활성화](../../ui/activate-streaming-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침입니다.
 
