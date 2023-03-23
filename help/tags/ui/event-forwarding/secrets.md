@@ -5,7 +5,7 @@ exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
 source-wordcount: '1763'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -40,15 +40,15 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_eventforwarding_secrets_environments"
->title="기밀 환경"
->abstract="이벤트 전달에서 암호를 사용할 수 있도록 하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성에 대해 만든 환경이 없는 경우 계속하기 전에 구성해야 합니다."
+>title="비밀 환경"
+>abstract="비밀을 이벤트 전달에 사용하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성에 환경이 생성되지 않은 경우 계속하기 전에 환경을 구성해야 합니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="환경 개요"
 
 암호를 만들려면 **[!UICONTROL 이벤트 전달]** 왼쪽 탐색에서 암호를 추가할 이벤트 전달 속성을 엽니다. 다음 을 선택합니다. **[!UICONTROL 비밀]** 왼쪽 탐색에서 를 차례로 클릭하거나 **[!UICONTROL 새 암호 만들기]**.
 
 ![새 암호 만들기](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
-다음 화면에서는 비밀의 세부 사항을 구성할 수 있습니다. 이벤트 전달에서 암호를 사용할 수 있도록 하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성을 위해 만든 환경이 없는 경우 의 안내서를 참조하십시오 [환경](../publishing/environments.md) 계속하기 전에 구성하는 방법에 대한 지침입니다.
+다음 화면에서는 비밀의 세부 사항을 구성할 수 있습니다. 비밀을 이벤트 전달에 사용하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성을 위해 만든 환경이 없는 경우 의 안내서를 참조하십시오 [환경](../publishing/environments.md) 계속하기 전에 구성하는 방법에 대한 지침입니다.
 
 >[!NOTE]
 >

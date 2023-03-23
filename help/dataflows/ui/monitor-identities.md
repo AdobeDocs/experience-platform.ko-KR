@@ -7,7 +7,7 @@ exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
@@ -29,13 +29,13 @@ Adobe Experience Platform Identity 서비스는 장치 및 시스템 전반에�
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="ID 처리"
->abstract="ID 처리 보기에는 추가된 ID 수, 생성된 그래프 및 업데이트된 그래프를 포함하여 ID 서비스에 수집된 레코드에 대한 정보가 포함되어 있습니다. 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
+>abstract="ID 처리 보기에는 추가된 ID 수, 생성된 그래프와 업데이트된 그래프 등 ID 서비스에 수집된 레코드에 대한 정보가 포함됩니다. 지표와 그래프에 대해 자세한 내용은 지표 정의 안내서를 검토하십시오."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_identity"
 >title="데이터 흐름 실행 세부 정보"
->abstract="데이터 흐름 실행 세부 정보 페이지에는 조직 ID 및 데이터 흐름 실행 ID를 포함하여 ID 데이터 흐름 실행에 대한 자세한 정보가 표시됩니다."
+>abstract="데이터 흐름 실행 세부 정보 페이지에 조직 ID와 데이터 흐름 실행 ID 등 ID 데이터 흐름 실행에 대한 추가 정보가 표시됩니다."
 
 에 액세스하려면 **[!UICONTROL ID]** 대시보드, 선택 **[!UICONTROL 모니터링]** 을 클릭합니다. 에 한 번 **[!UICONTROL 모니터링]** 페이지에서 을 선택합니다 **[!UICONTROL ID]** 카드.
 
@@ -53,10 +53,10 @@ Adobe Experience Platform Identity 서비스는 장치 및 시스템 전반에�
 
 | ID 지표 | 설명 |
 | ---------------- | ----------- |
-| **[!UICONTROL 받은 레코드]** | 데이터 레이크에서 받은 레코드 수입니다. |
+| **[!UICONTROL 레코드 수신됨]** | 데이터 레이크에서 받은 레코드 수입니다. |
 | **[!UICONTROL 레코드 실패]** | 데이터 오류로 인해 Platform에 수집되지 않은 레코드 수입니다. |
 | **[!UICONTROL 생략된 레코드]** | 수집되었지만 수집되지 않은 레코드 수입니다. [!DNL Identity Service] 레코드 행에 식별자가 하나만 있으므로 |
-| **[!UICONTROL 수집된 레코드]** | 에 수집된 레코드 수입니다. [!DNL Identity Service]. |
+| **[!UICONTROL 레코드 수집됨]** | 에 수집된 레코드 수입니다. [!DNL Identity Service]. |
 | **[!UICONTROL 추가된 ID]** | 에 추가된 순 새 식별자 수 [!DNL Identity Service]. |
 | **[!UICONTROL 생성된 그래프]** | 에서 만들어진 새 ID 그래프의 총 수입니다. [!DNL Identity Service]. |
 | **[!UICONTROL 그래프 업데이트]** | 새 가장자리로 업데이트된 기존 ID 그래프 수입니다. |
@@ -77,10 +77,10 @@ Adobe Experience Platform Identity 서비스는 장치 및 시스템 전반에�
 | **[!UICONTROL 데이터 흐름]** | 데이터 흐름의 이름입니다. |
 | **[!UICONTROL 데이터 세트]** | 데이터 플로가 삽입하는 데이터 집합의 이름입니다. |
 | **[!UICONTROL 소스 이름]** | 데이터 흐름이 속한 소스의 이름입니다. |
-| **[!UICONTROL 받은 레코드]** | 데이터 레이크에서 받은 레코드 수입니다. |
+| **[!UICONTROL 레코드 수신됨]** | 데이터 레이크에서 받은 레코드 수입니다. |
 | **[!UICONTROL 레코드 실패]** | 데이터 오류로 인해 Platform에 수집되지 않은 레코드 수입니다. |
 | **[!UICONTROL 생략된 레코드]** | 수집되었지만 수집되지 않은 레코드 수입니다. [!DNL Identity Service] 레코드 행에 식별자가 하나만 있으므로 |
-| **[!UICONTROL 수집된 레코드]** | 에 수집된 레코드 수입니다. [!DNL Identity Service]. |
+| **[!UICONTROL 레코드 수집됨]** | 에 수집된 레코드 수입니다. [!DNL Identity Service]. |
 | **[!UICONTROL 총 레코드]** | 실패한 레코드, 생략된 레코드, 추가된 ID 및 중복 레코드를 포함한 모든 레코드의 총 수입니다. |
 | **[!UICONTROL 추가된 ID]** | 에 추가된 순 새 식별자 수 [!DNL Identity Service]. |
 | **[!UICONTROL 생성된 그래프]** | 에서 만들어진 새 ID 그래프의 총 수입니다. [!DNL Identity Service]. |
@@ -99,10 +99,10 @@ Adobe Experience Platform Identity 서비스는 장치 및 시스템 전반에�
 
 | 지표 | 설명 |
 | -------| ----------- |
-| **[!UICONTROL 받은 레코드]** | 데이터 레이크에서 받은 레코드 수입니다. |
+| **[!UICONTROL 레코드 수신됨]** | 데이터 레이크에서 받은 레코드 수입니다. |
 | **[!UICONTROL 레코드 실패]** | 데이터 오류로 인해 Platform에 수집되지 않은 레코드 수입니다. |
 | **[!UICONTROL 생략된 레코드]** | 수집되었지만 수집되지 않은 레코드 수입니다. [!DNL Identity Service] 레코드 행에 식별자가 하나만 있으므로 |
-| **[!UICONTROL 수집된 레코드]** | 에 수집된 레코드 수입니다. [!DNL Identity Service]. |
+| **[!UICONTROL 레코드 수집됨]** | 에 수집된 레코드 수입니다. [!DNL Identity Service]. |
 | **[!UICONTROL 추가된 ID]** | 에 추가된 순 새 식별자 수 [!DNL Identity Service]. |
 | **[!UICONTROL 생성된 그래프]** | 에서 만들어진 새 ID 그래프의 총 수입니다. [!DNL Identity Service]. |
 | **[!UICONTROL 그래프 업데이트]** | 새 가장자리로 업데이트된 기존 ID 그래프 수입니다. |

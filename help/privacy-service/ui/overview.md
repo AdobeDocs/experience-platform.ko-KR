@@ -7,7 +7,7 @@ exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '207'
-ht-degree: 1%
+ht-degree: 19%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacy_privacyconsole_requests"
->title="데이터 주체 요청"
->abstract="이 위젯은 지정된 일 동안 Privacy Service이 처리한 제출 및 완료된 데이터 주체 요청 수를 보여줍니다. Privacy Service 프로세스에 대한 자세한 내용은 **요청** 을 클릭합니다."
+>title="데이터 주제 요청"
+>abstract="이 위젯은 지정된 날짜에 Privacy Service에서 처리한 제출 및 완료된 데이터 주체 요청의 수를 보여 줍니다. Privacy Service 프로세스에 대한 자세한 내용을 보려면 왼쪽 탐색 메뉴의 **요청**&#x200B;을 선택합니다."
 
 Privacy Service UI [!DNL Privacy Service] 다양한 Adobe Experience Cloud 애플리케이션에서 개인 정보 보호 및 규정 준수 요청을 조정할 수 있습니다.
 

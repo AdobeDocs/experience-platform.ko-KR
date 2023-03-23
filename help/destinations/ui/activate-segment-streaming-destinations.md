@@ -7,7 +7,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
 source-wordcount: '935'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -77,12 +77,12 @@ ht-degree: 0%
 
 1. 매핑을 더 추가하려면 1~5단계를 반복합니다.
 
-### 변형 적용 {#apply-transformation}
+### 변환 적용 {#apply-transformation}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
->title="변형 적용"
->abstract="해시되지 않은 소스 필드를 사용할 때 이 옵션을 선택하여 Adobe Experience Platform에서 활성화 시 자동으로 해시하도록 합니다."
+>title="변환 적용"
+>abstract="해시되지 않은 소스 필드를 사용할 때 이 옵션을 선택하면 Adobe Experience Platform에서 활성화 시 해당 필드를 자동으로 해시할 수 있습니다."
 
 해시되지 않은 소스 속성을 대상이 해시될 대상 속성에 매핑하는 경우(예: `email_lc_sha256` 또는 `phone_sha256`), 을(를) 선택합니다. **변형 적용** Adobe Experience Platform이 활성화 시 소스 속성을 자동으로 해시하도록 하는 옵션입니다.
 
@@ -93,7 +93,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="종료 날짜"
->abstract="세그먼트 예약에 대한 종료 날짜를 추가할 수 없습니다."
+>abstract="세그먼트 예약에 종료 날짜를 추가할 수 없습니다."
 
 기본적으로 [!UICONTROL 세그먼트 예약] 페이지에는 현재 활성화 플로우에서 선택한 새로 선택한 세그먼트만 표시됩니다.
 
@@ -109,11 +109,11 @@ ht-degree: 0%
 
    * 일부 대상에서는 다음을 선택해야 합니다 **[!UICONTROL 대상의 기원]** 각 세그먼트에 대해 달력 선택기 아래에 있는 드롭다운 메뉴를 사용합니다. 대상에 이 선택기가 포함되지 않은 경우 이 단계를 건너뜁니다.
 
-      ![매핑 ID](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+      ![ID 매핑](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
    * 일부 대상을 사용하려면 수동으로 매핑해야 합니다 [!DNL Platform] 세그먼트를 타겟 대상의 상대 세그먼트에 추가합니다. 이렇게 하려면 각 세그먼트를 선택한 다음 의 대상 플랫폼에서 해당 세그먼트 ID를 입력합니다 **[!UICONTROL 매핑 ID]** 필드. 대상에 이 필드가 포함되지 않은 경우 이 단계를 건너뜁니다.
 
-      ![매핑 ID](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+      ![ID 매핑](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
    * 일부 대상의 경우 다음을 입력해야 합니다 **[!UICONTROL 앱 ID]** 활성화할 때 [!DNL IDFA] 또는 [!DNL GAID] 세그먼트 를 참조하십시오. 대상에 이 필드가 포함되지 않은 경우 이 단계를 건너뜁니다.
 
@@ -129,7 +129,7 @@ ht-degree: 0%
 
 ### 동의 정책 평가 {#consent-policy-evaluation}
 
-조직에서 구입한 경우 **Adobe 의료 보호** 또는 **Adobe 개인 정보 보호 및 보안 차단**, 선택 **[!UICONTROL 적용 가능한 동의 정책 보기]** 적용된 동의 정책 및 그 결과로 활성화에 포함되는 프로필 수를 확인하려면 다음을 수행하십시오. 자세한 내용 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 추가 정보.
+조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;를 구매한 경우 **[!UICONTROL 해당 동의 정책 보기]**&#x200B;를 선택하여 적용된 동의 정책을 조회하고 그 결과로 활성화에 포함된 프로필 수를 확인합니다. 자세한 내용 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 추가 정보.
 
 ### 데이터 사용 정책 검사 {#data-usage-policy-checks}
 

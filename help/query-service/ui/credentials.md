@@ -7,7 +7,7 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
 source-wordcount: '1330'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platform 쿼리 서비스를 통해 외부 클라이언트와 �
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_expiringcredentials"
 >title="클라이언트의 SSL 모드"
->abstract="Query Service에 연결된 클라이언트에서 SSL을 사용하도록 설정해야 합니다. SSL 모드가 &#39;필요&#39;로 설정되어 있는지 확인합니다."
+>abstract="쿼리 서비스에 연결된 클라이언트에서 SSL을 활성화해야 합니다. SSL 모드가 “필수”로 설정되어 있는지 확인합니다."
 
 만료 자격 증명을 사용하여 외부 클라이언트에 대한 연결을 빠르게 설정할 수 있습니다.
 

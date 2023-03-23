@@ -7,7 +7,7 @@ exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1164'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_restrictusage"
 >title="데이터 사용 제한"
->abstract="데이터 사용 정책 유형은 마케팅 활동에 대한 데이터 사용을 제한하기 위해 데이터 거버넌스 레이블에 적용된 특정 마케팅 작업을 평가합니다."
+>abstract="데이터 사용 정책 유형은 마케팅 활동 데이터 사용을 제한하기 위해 데이터 거버넌스 레이블에 적용되는 특정 마케팅 작업을 평가합니다."
 
 데이터 사용 레이블이 데이터 규정 준수를 효과적으로 지원하려면 데이터 사용 정책을 구현해야 합니다. 데이터 사용 정책은 내에서 데이터를 수행할 수 있도록 허용되거나 제한된 마케팅 작업 종류를 설명하는 규칙입니다 [!DNL Experience Platform].
 

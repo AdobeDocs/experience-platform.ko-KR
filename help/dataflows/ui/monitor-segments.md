@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1923'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="세그먼트"
->abstract="세그먼트 보기에는 모든 IMS 조직의 세그먼트에 대한 정보와 활성화 및 평가 작업에 대한 자세한 정보가 포함되어 있습니다."
+>abstract="세그먼트 보기에는 세그먼트 활성화 및 평가 작업에 대한 추가 정보와 함께 모든 IMS 조직의 세그먼트에 대한 정보가 포함됩니다."
 
 에 액세스하려면 **[!UICONTROL 세그먼트]** 대시보드, 선택 **[!UICONTROL 모니터링]** 을 클릭합니다. 에 한 번 **[!UICONTROL 모니터링]** 페이지에서 을 선택합니다 **[!UICONTROL 세그먼트]** 카드.
 
@@ -173,7 +173,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="세그먼트 작업"
->abstract="세그먼트 작업 보기에는 모든 세그먼트에 대한 평가 및 내보내기 작업에 대한 정보가 포함되어 있습니다."
+>abstract="세그먼트 작업 보기에는 모든 세그먼트의 평가 및 내보내기 작업에 대한 정보가 포함됩니다."
 
 에 액세스하려면 **[!UICONTROL 세그먼트 작업]** 대시보드, 선택 **[!UICONTROL 모니터링]** (![모니터링 아이콘](../assets/ui/monitor-destinations/monitoring-icon.png))을 클릭하여 제품에서 사용할 수 있습니다. 에 한 번 [!UICONTROL 모니터링] 페이지를 선택하고 **[!UICONTROL 세그먼트 작업]**. 다음 [!UICONTROL 모니터링] 대시보드에는 세그먼트 평가 및 내보내기 작업에 대한 지표와 정보가 포함되어 있습니다.
 

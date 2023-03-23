@@ -6,7 +6,7 @@ exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -45,13 +45,13 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_mapping"
 >title="대상 매핑"
->abstract="타겟 매핑은 메시지를 전달하기 위해 Campaign에서 사용하는 기술 개체이며 게재를 보내는 데 필요한 모든 기술 설정(주소, 전화 번호, 옵트인 지표, 추가 식별자...)을 포함합니다."
+>abstract="대상 매핑은 메시지를 게재할 목적으로 Campaign에서 사용하는 기술 오브젝트이고, 게재 목록(주소, 전화번호, 옵트인 표시기, 추가 식별자 등)을 전송하는 데 필요한 모든 기술 설정을 포함합니다."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_schema"
 >title="스키마 이름"
->abstract="Adobe Campaign 데이터베이스에 정의된 엔터티의 이름입니다."
+>abstract="Adobe Campaign 데이터베이스에 정의된 엔티티 이름입니다."
 >text="Learn more in documentation"
 
 다음 [!UICONTROL 데이터 선택] 단계가 나타나고 구성 인터페이스를 제공합니다. [!UICONTROL Adobe Campaign 인스턴스], [!UICONTROL 대상 매핑], 및 [!UICONTROL 스키마 이름].

@@ -6,7 +6,7 @@ exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
 source-wordcount: '1035'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -113,7 +113,7 @@ Experience Platform에서 이메일 주소 섭취에 대한 자세한 내용은 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_linkedin_accountid"
 >title="계정 ID"
->abstract="LinkedIn Campaign Manager 계정 ID입니다. 이 ID는 LinkedIn Campaign Manager 계정에서 찾을 수 있습니다."
+>abstract="LinkedIn Campaign Manager 계정 ID. LinkedIn Campaign Manager 계정에서 이 ID를 찾을 수 있습니다."
 
 대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 

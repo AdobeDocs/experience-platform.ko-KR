@@ -8,7 +8,7 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 1%
+ht-degree: 9%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
 >title="스키마 관계"
->abstract="서로 다른 클래스에 속하는 스키마는 관계 필드를 통해 컨텍스트에 따라 연결되므로 더 복잡한 세그멘테이션 규칙을 작성할 수 있습니다. 스키마 관계에 대한 자세한 내용은 설명서를 참조하십시오."
+>abstract="서로 다른 클래스에 속한 스키마는 관계 필드를 통해 컨텍스트에 따라 연결될 수 있으므로 보다 복잡한 세분화 규칙을 빌드할 수 있습니다. 스키마 관계에 대한 자세한 내용은 설명서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
@@ -27,7 +27,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
 >title="참조 신원 네임스페이스"
->abstract="참조 스키마의 기본 ID 필드에 대한 네임스페이스(유형)입니다. 관계에 참여하려면 참조 스키마에 설정된 기본 ID 필드가 있어야 합니다. 스키마 관계에 대한 자세한 내용은 설명서를 참조하십시오."
+>abstract="참조 스키마의 기본 ID 필드에 대한 네임스페이스(유형)입니다. 관계에 참여하려면 참조 스키마에 기본 ID 필드가 설정되어 있어야 합니다. 스키마 관계에 대한 자세한 내용은 설명서를 참조하십시오."
 
 다양한 채널에서 고객과의 관계와 브랜드와의 상호 작용을 파악하는 기능은 Adobe Experience Platform의 중요한 부분입니다. 구조 내에서 이러한 관계 정의 [!DNL Experience Data Model] (XDM) 스키마를 사용하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
 

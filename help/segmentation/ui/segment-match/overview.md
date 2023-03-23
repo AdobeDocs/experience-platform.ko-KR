@@ -7,7 +7,7 @@ exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1998'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -118,7 +118,7 @@ ID 데이터 및 네임스페이스, 동의 구성 및 데이터 사용 레이�
 >[!CONTEXTUALHELP]
 >id="platform_segment_match_marketing"
 >title="제한된 마케팅 사용 사례"
->abstract="제한된 마케팅 사용 사례는 데이터 거버넌스 제한에 따라 공유 세그먼트가 제대로 사용되도록 하기 위한 지침을 파트너에게 제공하는 데 도움이 됩니다."
+>abstract="제한된 마케팅 사용 사례는 공유된 세그먼트가 데이터 거버넌스 제한에 따라 적절하게 사용되도록 지침을 파트너에게 제공할 수 있습니다."
 >text="Learn more in documentation"
 
 A **피드** 는 데이터 그룹(세그먼트), 데이터를 노출하거나 사용할 수 있는 방법에 대한 규칙 및 데이터가 파트너의 데이터와 어떻게 일치하는지 결정하는 구성입니다. 피드는 를 통해 독립적으로 관리하고 다른 플랫폼 사용자와 교환할 수 있습니다 [!DNL Segment Match].

@@ -6,7 +6,7 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
 source-wordcount: '743'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -26,11 +26,11 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
 >title="지금 파일 내보내기"
->abstract="이전에 예약된 내보내기 외에 전체 파일 내보내기를 전달하려면 이 컨트롤을 선택합니다. 파일 내보내기는 즉시 트리거되며 Experience Platform 세그먼테이션 실행의 최신 결과를 선택합니다."
+>abstract="이 컨트롤을 선택하여 이전에 예약된 내보내기와 전체 파일 내보내기를 게재합니다. 파일 내보내기가 즉시 트리거되어 Experience Platform 세분화 실행에서 최신 결과를 선택합니다."
 
 이 문서에서는 Experience Platform UI를 사용하여 요청 시 파일을 배치 대상으로 내보내는 방법을 설명합니다(예: ) [클라우드 스토리지](/help/destinations/catalog/cloud-storage/overview.md) 및 [이메일 마케팅](/help/destinations/catalog/email-marketing/overview.md) 대상.
 
-다음 **[!UICONTROL 지금 파일 내보내기]** 제어로 이전에 예약된 세그먼트의 현재 내보내기 일정을 중단하지 않고 전체 파일을 내보낼 수 있습니다. 이 내보내기는 이전에 예약한 내보내기 외에 추가로 발생하며 세그먼트의 내보내기 빈도를 변경하지 않습니다. 파일 내보내기는 즉시 트리거되며 Experience Platform 세그먼테이션 실행의 최신 결과를 선택합니다.
+다음 **[!UICONTROL 지금 파일 내보내기]** 제어로 이전에 예약된 세그먼트의 현재 내보내기 일정을 중단하지 않고 전체 파일을 내보낼 수 있습니다. 이 내보내기는 이전에 예약한 내보내기 외에 추가로 발생하며 세그먼트의 내보내기 빈도를 변경하지 않습니다. 파일 내보내기가 즉시 트리거되어 Experience Platform 세분화 실행에서 최신 결과를 선택합니다.
 
 이러한 용도로 Experience Platform API를 사용할 수도 있습니다. 방법 읽기 [ad-hoc 활성화 API를 통해 요청 시 배치 대상에 대상 세그먼트 활성화](/help/destinations/api/ad-hoc-activation-api.md).
 

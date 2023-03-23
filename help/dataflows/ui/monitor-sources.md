@@ -8,11 +8,11 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1069'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
-# UI에서 소스에 대한 데이터 흐름 모니터링
+# UI에서 소스의 데이터 흐름 모니터링
 
 >[!IMPORTANT]
 >
@@ -40,13 +40,13 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="소스 수집"
->abstract="소스 수집 보기에는 수집된 레코드 및 실패한 레코드를 포함하여, 데이터 레이크 서비스의 데이터 활동 상태 및 지표에 대한 정보가 포함되어 있습니다. 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
+>abstract="소스 수집 보기에는 레코드 수집과 레코드 실패 등 데이터 레이크 서비스의 데이터 활동 상태와 지표에 대한 정보가 포함됩니다. 지표와 그래프에 대해 자세한 내용은 지표 정의 안내서를 검토하십시오."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
 >title="데이터 흐름 실행 세부 정보"
->abstract="소스 처리에는 수집된 레코드 및 실패한 레코드를 포함하여, 데이터 레이크 서비스의 데이터 활동 상태 및 지표에 대한 정보가 포함되어 있습니다. 지표 및 그래프에 대한 자세한 내용을 보려면 지표 정의 안내서를 검토하십시오."
+>abstract="소스 처리에는 레코드 수집과 레코드 실패 등 데이터 레이크 서비스의 데이터 활동 상태와 지표에 대한 정보가 포함됩니다. 지표와 그래프에 대해 자세한 내용은 지표 정의 안내서를 검토하십시오."
 >text="Learn more in documentation"
 
 에서 [플랫폼 UI](https://platform.adobe.com), 선택 **[!UICONTROL 모니터링]** 왼쪽 탐색에서 로 이동하여 [!UICONTROL 모니터링] 대시보드 . 다음 [!UICONTROL 모니터링] 대시보드에는 소스에서 로의 데이터 트래픽 상태에 대한 통찰력을 포함하여 모든 소스 데이터 흐름에 대한 지표와 정보가 포함되어 있습니다 [!DNL Identity Service], 및에 [!DNL Profile].
@@ -69,7 +69,7 @@ Adobe Experience Platform에서 데이터는 다양한 소스에서 수집되어
 
 | 소스 수집 | 설명 |
 | ---------------- | ----------- |
-| [!UICONTROL 수집된 레코드 ] | 수집된 총 레코드 수입니다. |
+| [!UICONTROL 레코드 수집됨 ] | 수집된 총 레코드 수입니다. |
 | [!UICONTROL 레코드 실패] | 데이터 오류로 인해 수집되지 않은 총 레코드 수입니다. |
 | [!UICONTROL 실패한 총 데이터 흐름 수] | 다음을 사용하는 총 데이터 흐름 수 `failed` 상태. |
 

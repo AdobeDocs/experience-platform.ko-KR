@@ -5,7 +5,7 @@ exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '956'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -38,13 +38,13 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="최대 위젯 수"
->abstract="사용자 정의 대시보드는 최대 10개의 위젯을 지원합니다. 10개의 위젯을 대시보드에 추가한 후에는 [!UICONTROL 새 위젯 추가] 옵션이 비활성화되어 회색으로 표시됩니다."
+>abstract="사용자 정의 대시보드는 최대 10개의 위젯을 지원합니다. 10개의 위젯을 대시보드에 추가하면 [!UICONTROL 새 위젯 추가] 옵션이 비활성화되어 회색으로 표시됩니다."
 
 새 대시보드 보기에서 를 선택합니다 **[!UICONTROL 새 위젯 추가]** 위젯 생성 프로세스를 시작합니다.
 
 >[!IMPORTANT]
 >
->사용자 정의 대시보드는 최대 10개의 위젯을 지원합니다. 10개의 위젯을 대시보드에 추가한 후에는 [!UICONTROL 새 위젯 추가] 옵션이 비활성화되어 회색으로 표시됩니다.
+>사용자 정의 대시보드는 최대 10개의 위젯을 지원합니다. 10개의 위젯을 대시보드에 추가하면 [!UICONTROL 새 위젯 추가] 옵션이 비활성화되어 회색으로 표시됩니다.
 
 ![새 위젯 추가 가 강조 표시된 새로운 빈 대시보드입니다.](./images/user-defined-dashboards/add-new-widget.png)
 

@@ -6,7 +6,7 @@ exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
 workflow-type: tm+mt
 source-wordcount: '1034'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -65,26 +65,26 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_received"
->title="받은 레코드"
->abstract="받은 레코드 지표는 데이터 플로우에서 받은 총 레코드 수를 나타냅니다."
+>title="레코드 수신됨"
+>abstract="기록 수신됨 지표는 데이터 흐름에서 수신된 레코드의 총 개수를 나타냅니다."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_ingested"
->title="수집된 레코드"
->abstract="수집된 레코드 지표는 데이터 레이크에 수집된 총 레코드 수를 나타냅니다."
+>title="레코드 수집됨"
+>abstract="기록 수집됨 지표는 데이터 레이크에서 수집된 레코드의 총 개수를 나타냅니다."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_failed"
 >title="레코드 실패"
->abstract="실패한 레코드 지표는 데이터의 오류로 인해 데이터 레이크에 수집되지 않은 총 레코드 수를 나타냅니다."
+>abstract="레코드 실패 지표는 데이터 오류로 인해 데이터 레이크에 수집되지 않은 레코드의 총 개수를 나타냅니다."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_warnings"
->title="경고가 있는 레코드"
->abstract="경고가 있는 레코드는 맵 변환 경고와 함께 수집된 총 레코드 수를 나타냅니다. 모든 매퍼 변환 오류는 경고로 보고되며 부분적으로 수집된 행은 경고와 함께 성공적인 것으로 간주됩니다"
+>title="경고가 포함된 레코드"
+>abstract="경고가 포함된 레코드 지표는 매퍼 변환 경고와 함께 수집된 레코드의 총 개수를 나타냅니다. 모든 매퍼 변환 오류는 경고로 보고되고, 부분적으로 수집된 행은 경고로 완료된 것으로 간주됩니다."
 >text="Learn more in documentation"
 
 각 개별 데이터 흐름 실행에는 다음 세부 정보가 표시됩니다.

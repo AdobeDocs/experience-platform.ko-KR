@@ -7,7 +7,7 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '654'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_ingestion_streaming_ingestionrate"
->title="수집 비율"
->abstract="초당 성공적으로 처리된 이벤트 수입니다."
+>title="수집 속도"
+>abstract="초당 정상적으로 처리된 이벤트 수입니다."
 >text="Learn more in the documentation"
->additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="UI에서 소스에 대한 데이터 흐름 모니터링"
+>additional-url="http://www.adobe.com/go/monitor-dataflows-kr" text="UI에서 소스의 데이터 흐름 모니터링"
 
 >[!TIP]
 >

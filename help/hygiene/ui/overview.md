@@ -5,7 +5,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 0%
+ht-degree: 37%
 
 ---
 
@@ -14,12 +14,12 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="데이터 위생 요청 상태"
->abstract="이 위젯은 생성, 실패 및 완료된 데이터 위생 레코드 삭제 작업의 총 수를 보여줍니다. 데이터 위생 프로세스에 대한 자세한 내용을 보려면 **데이터 위생** 을 클릭합니다."
+>abstract="이 위젯은 생성, 실패 및 완료된 데이터 위생 레코드 삭제 작업의 총 개수를 보여 줍니다. 데이터 위생 프로세스에 대한 자세한 내용을 보려면 왼쪽 탐색 메뉴의 **데이터 위생**&#x200B;을 선택합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
 >title="최근 데이터 위생 작업 주문"
->abstract="이 위젯은 오른쪽 상단에서 선택한 옵션에 따라 가장 최근에 만들거나 업데이트된 5개의 데이터 위생 작업 순서를 표시합니다. 데이터 위생 프로세스에 대한 자세한 내용을 보려면 **데이터 위생** 을 클릭합니다."
+>abstract="이 위젯은 오른쪽 상단에서 선택한 옵션에 따라 가장 최근에 생성 또는 업데이트된 5개의 데이터 위생 작업 주문을 보여 줍니다. 데이터 위생 프로세스에 대한 자세한 내용을 보려면 왼쪽 탐색 메뉴의 **데이터 위생**&#x200B;을 선택합니다."
 
 다음 **[!UICONTROL 데이터 위생]** Adobe Experience Platform UI의 작업 공간을 사용하면 레코드 삭제 및 데이터 세트 만료 예약 등 다양한 데이터 위생 작업을 만들고 모니터링할 수 있습니다.
 

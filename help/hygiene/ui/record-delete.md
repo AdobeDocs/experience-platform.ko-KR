@@ -7,7 +7,7 @@ hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '1184'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -65,12 +65,12 @@ Platform의 ID에 대한 자세한 내용은 다음 설명서를 참조하십시
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="기본 ID"
->abstract="기본 ID는 Experience Platform에서 소비자의 프로필에 레코드를 연결하는 속성입니다. 데이터 세트에 대한 기본 ID 필드는 데이터 세트가 기반으로 하는 스키마에 의해 정의됩니다. 이 열에서 레코드의 기본 ID에 대한 형식(또는 네임스페이스)을 제공해야 합니다(예: ) `email` 이메일 주소 및 `ecid` Experience Cloud ID용. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
+>abstract="기본 ID는 레코드를 Experience Platform의 소비자 프로필에 연결하는 속성입니다. 데이터 세트의 기본 ID 필드는 데이터 세트가 기반으로 하는 스키마에 의해 정의됩니다. 이 열에서는 이메일 주소의 경우 `email` 및 Experience Cloud ID의 경우 `ecid` 등 레코드의 기본 ID 유형(또는 네임스페이스)을 입력해야 합니다. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="ID 값"
->abstract="이 열에서 레코드의 기본 ID에 대한 값을 제공해야 합니다. 이 값은 왼쪽 열에 제공된 ID 유형과 일치해야 합니다. 기본 ID 유형이 `email`: 값은 레코드의 이메일 주소여야 합니다. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
+>abstract="이 열에서는 왼쪽 열에 입력한 ID 유형에 해당되는 레코드의 기본 ID 값을 입력해야 합니다. 기본 ID 유형이 `email`인 경우 값은 레코드의 이메일 주소이어야 합니다. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
 
 레코드를 삭제할 때 시스템에서 삭제할 레코드를 결정할 수 있도록 ID 정보를 제공해야 합니다. Platform의 모든 데이터 세트에 대해 레코드는 **기본 ID** 데이터 집합 스키마에 의해 정의된 필드입니다.
 

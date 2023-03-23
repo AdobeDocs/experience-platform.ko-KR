@@ -7,7 +7,7 @@ exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '2087'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -53,7 +53,7 @@ Platform에서 스키마를 관리하고 상호 작용하는 방법에 대한 �
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="데이터 비헤이비어"
->abstract="Experience Platform에 사용하기 위한 데이터는 다음 세 가지 동작 유형으로 그룹화됩니다. 레코드, 시계열 및 ad hoc. 레코드 스키마는 주체의 속성에 대한 정보를 제공하는 반면, 시간 시리즈 스키마는 작업을 수행할 때 시스템의 스냅샷을 캡처합니다. Ad Hoc 스키마는 단일 데이터 세트에서만 사용할 네임스페이스인 필드를 캡처합니다. Platform의 데이터 행동에 대한 자세한 내용은 설명서를 참조하십시오."
+>abstract="Experience Platform에서 사용할 데이터는 레코드, 시계열과 애드혹 등 세 가지 비헤이비어 유형으로 그룹화됩니다. 레코드 스키마는 주제 속성에 대한 정보를 제공하지만 시계열 스키마는 작업 수행 시 시스템 스냅샷을 캡처합니다. 애드혹 스키마는 단일 데이터 세트에서만 사용하는 네임스페이스인 필드를 캡처합니다. Platform의 데이터 비헤이비어에 대한 자세한 내용은 설명서를 참조하십시오."
 
 Experience Platform에 사용하기 위한 데이터는 다음 세 가지 동작 유형으로 그룹화됩니다.
 

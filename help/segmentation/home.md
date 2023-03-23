@@ -7,7 +7,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
@@ -49,20 +49,20 @@ API를 사용하여 세그먼트 정의 작성에 대한 자세한 내용은 [ap
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
->title="평가 방법"
->abstract="Platform은 현재 세 가지 세그먼트 평가 방법을 지원합니다. 스트리밍 세그멘테이션, 배치 세그멘테이션 및 에지 세그먼테이션."
+>title="평가 메서드"
+>abstract="Platform은 스트리밍 세분화, 배치 세분화와 에지 세분화 등 현재 세그먼트를 평가하는 세 가지 메서드를 지원합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="스트리밍 평가"
->abstract="스트리밍 세그먼테이션은 사용자 활동에 대한 응답으로 세그먼트를 업데이트하는 지속적인 데이터 선택 프로세스입니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="스트리밍 세그먼테이션을 통해 거의 실시간으로 이벤트 평가"
+>abstract="스트리밍 세분화는 사용자 활동에 대응하여 세그먼트를 업데이트하는 진행 중인 데이터 선택 프로세스입니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=ko" text="스트리밍 세분화를 통해 거의 실시간으로 이벤트 평가"
 
-Platform은 현재 세 가지 세그먼트 평가 방법을 지원합니다. 스트리밍 세그멘테이션, 배치 세그멘테이션 및 에지 세그먼테이션.
+Platform은 스트리밍 세분화, 배치 세분화와 에지 세분화 등 현재 세그먼트를 평가하는 세 가지 메서드를 지원합니다.
 
 ### 스트리밍 세그멘테이션 {#streaming}
 
-스트리밍 세그먼테이션은 사용자 활동에 대한 응답으로 세그먼트를 업데이트하는 지속적인 데이터 선택 프로세스입니다. 세그먼트가 만들어지고 저장되면, 들어오는 데이터에 대해 세그먼트 정의가 적용됩니다. [!DNL Real-Time Customer Profile]. 세그먼트 추가 및 제거는 정기적으로 처리되므로 타겟 대상이 적절하도록 합니다.
+스트리밍 세분화는 사용자 활동에 대응하여 세그먼트를 업데이트하는 진행 중인 데이터 선택 프로세스입니다. 세그먼트가 만들어지고 저장되면, 들어오는 데이터에 대해 세그먼트 정의가 적용됩니다. [!DNL Real-Time Customer Profile]. 세그먼트 추가 및 제거는 정기적으로 처리되므로 타겟 대상이 적절하도록 합니다.
 
 스트리밍 세그멘테이션에 대한 자세한 내용은 [스트리밍 세그멘테이션 설명서](./api/streaming-segmentation.md).
 
@@ -70,10 +70,10 @@ Platform은 현재 세 가지 세그먼트 평가 방법을 지원합니다. 스
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
->title="일괄 평가"
->abstract="일괄 처리 세그먼테이션은 진행 중인 데이터 선택 프로세스의 대안으로서, 세그먼트 정의를 통해 모든 프로필 데이터를 한 번에 이동하여 해당 대상을 생성합니다. 세그먼트가 만들어지면 저장되고 저장되므로 사용할 수 있도록 내보낼 수 있습니다."
+>title="배치 평가"
+>abstract="진행 중인 데이터 선택 프로세스를 사용하는 대신 배치 세분화는 세그먼트 정의를 통해 한 번에 모든 프로필 데이터를 이동하여 해당 대상자를 생성합니다. 세그먼트가 생성되면 내보내기에 사용할 수 있도록 저장합니다."
 
-일괄 처리 세그먼테이션은 진행 중인 데이터 선택 프로세스의 대안으로서, 세그먼트 정의를 통해 모든 프로필 데이터를 한 번에 이동하여 해당 대상을 생성합니다. 세그먼트가 만들어지면 저장되고 저장되므로 사용할 수 있도록 내보낼 수 있습니다.
+진행 중인 데이터 선택 프로세스를 사용하는 대신 배치 세분화는 세그먼트 정의를 통해 한 번에 모든 프로필 데이터를 이동하여 해당 대상자를 생성합니다. 세그먼트가 만들어지면 저장되고 저장되므로 사용할 수 있도록 내보낼 수 있습니다.
 
 배치 세그먼트는 24시간 간격으로 자동 평가됩니다. 요청 시 배치 세그먼트를 평가하려면 세그먼트 작업을 사용할 수 있습니다. 세그먼트 작업에 대한 자세한 내용은 [세그먼트 작업 설명서](./api/segment-jobs.md).
 
@@ -82,8 +82,8 @@ Platform은 현재 세 가지 세그먼트 평가 방법을 지원합니다. 스
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="에지 평가"
->abstract="Edge 세그멘테이션은 Experience Edge에서 즉시 세그먼트를 평가하여 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Edge Segmentation UI 안내서"
+>abstract="에지 세분화는 Experience Edge에서 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지의 개인화 사용 사례를 활성화하는 기능입니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=ko" text="에지 세분화 UI 안내서"
 
 Edge 세그멘테이션은 즉시 Platform의 세그먼트를 평가하는 기능입니다 [Experience Edge에서](../edge/home.md), 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
 

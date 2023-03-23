@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -30,8 +30,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"
->title="데이터 집합 활동의 음수"
->abstract="수집된 레코드의 음수는 사용자가 선택한 시간 범위에서 특정 배치를 삭제했음을 의미합니다."
+>title="데이터 세트 활동에 포함된 음수"
+>abstract="수집된 레코드에 포함된 음수는 사용자가 선택한 시간 범위에서 특정 배치를 삭제했음을 의미합니다."
 >text="Learn more in documentation"
 
 에서 [!DNL Experience Platform] UI, 선택 **[!UICONTROL 데이터 세트]** 왼쪽 탐색에서 를 클릭하여 **[!UICONTROL 데이터 세트]** 대시보드 . 대시보드는 조직에 대해 사용 가능한 모든 데이터 세트를 나열합니다. 세부 사항은 해당 이름, 데이터 세트가 준수하는 스키마 및 가장 최근 수집 실행 상태를 포함하여 나열된 각 데이터 세트에 대해 표시됩니다.

@@ -7,7 +7,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
 source-wordcount: '3258'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="필드"
->abstract="세그먼트를 구성하는 세 가지 필드 유형은 속성, 이벤트 및 대상입니다. 속성을 사용하면 XDM 개별 프로필 클래스에 속하는 프로필 속성을 사용할 수 있고, 이벤트를 사용하면 XDM ExperienceEvent 데이터 요소를 사용하여 발생하는 작업 또는 이벤트에 따라 대상을 만들 수 있으며, 대상은 외부 소스에서 가져온 대상을 사용할 수 있습니다."
+>abstract="세그먼트를 구성하는 세 가지 필드 유형은 속성, 이벤트와 대상자입니다. 속성을 통해 XDM 개별 프로필 클래스에 속한 프로필 속성을 사용하고, 이벤트를 통해 XDM ExperienceEvent 데이터 요소로 인해 발생하는 작업 또는 이벤트를 기반으로 대상자를 만들고, 대상자를 통해 외부 소스에서 가져온 대상자를 사용할 수 있습니다."
 
 세그먼트 정의의 기본 구성 요소는 속성 및 이벤트입니다. 또한 기존 대상에 포함된 속성 및 이벤트를 새 정의에 구성 요소로 사용할 수 있습니다.
 
@@ -235,13 +235,13 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="세그먼트 속성"
->abstract="세그먼트 속성 섹션에는 결과 세그먼트의 예상 크기가 표시되며, 총 프로필 수와 비교하여 정규화된 프로필 수가 표시됩니다. 이렇게 하면 대상 자체를 작성하기 전에 필요에 따라 세그먼트 정의를 조정할 수 있습니다."
+>abstract="세그먼트 속성 섹션에는 총 프로필 개수와 비교하여 적격 프로필 개수를 표시하는 최종 세그먼트 예상 크기가 표시됩니다. 필요에 따라 대상자 자체를 빌드하기 전에 세그먼트 정의를 조정할 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
->title="예상 새로 고침"
->abstract="세그먼트의 예상 수를 새로 고쳐 제안된 세그먼트에 자격을 부여할 프로필 수에 대한 미리 보기를 즉시 볼 수 있습니다. 대상 추정은 해당 날의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="대상 예측 및 미리 보기"
+>title="예상치 새로 고침"
+>abstract="세그먼트의 예상치를 새로 고쳐 제안된 세그먼트에 적합한 프로필 개수를 미리 볼 수 있습니다. 당일 샘플 데이터의 샘플 크기를 사용하여 대상자 예상치를 생성합니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
 
 세그먼트 정의를 작성할 때 **[!UICONTROL 세그먼트 속성]** 작업 공간 오른쪽의 섹션에 결과 세그먼트의 예상 크기가 표시되므로 대상 자체를 작성하기 전에 필요에 따라 세그먼트 정의를 조정할 수 있습니다.
 
@@ -253,7 +253,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->대상 추정은 해당 날의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다. 프로필 저장소에 100만 개 미만의 엔티티가 있는 경우 전체 데이터 세트가 사용됩니다. 100만~2000만 개 업체가 이용한다. 그리고 2천만 개 이상의 개체들에 대해서, 전체 개체 중 5%가 사용됩니다. 세그먼트 예상 생성에 대한 자세한 내용은 [생성 예상](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 세그먼트 만들기 자습서입니다.
+>당일 샘플 데이터의 샘플 크기를 사용하여 대상자 예상치를 생성합니다. 프로필 저장소에 100만 개 미만의 엔티티가 있는 경우 전체 데이터 세트가 사용됩니다. 100만~2000만 개 업체가 이용한다. 그리고 2천만 개 이상의 개체들에 대해서, 전체 개체 중 5%가 사용됩니다. 세그먼트 예상 생성에 대한 자세한 내용은 [생성 예상](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 세그먼트 만들기 자습서입니다.
 
 평가 방법을 선택할 수도 있습니다. 사용할 평가 방법을 알고 있는 경우 드롭다운 목록을 사용하여 원하는 평가 방법을 선택할 수 있습니다. 이 세그먼트가 어떤 평가 유형에 적합한지를 알려면 찾아보기 아이콘을 선택할 수 있습니다 ![돋보기가 있는 폴더 아이콘](../images/ui/segment-builder/segment-evaluation-select-icon.png) 사용 가능한 세그먼트 평가 방법 목록을 보려면 다음을 수행하십시오.
 

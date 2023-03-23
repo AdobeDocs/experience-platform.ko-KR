@@ -7,7 +7,7 @@ exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1839'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Platform Identity 서비스는 장치 및 시스템 전반에�
 | --- | --- |
 | 신원 | ID는 엔티티에 고유한 데이터(일반적으로 개별 개인)입니다. 로그인 ID, ECID 또는 충성도 ID와 같은 ID를 &quot;알려진 ID&quot;라고도 합니다. |
 | ECID | ECID(Experience Cloud ID)는 Experience Platform 및 Adobe Experience Cloud 애플리케이션에서 사용되는 공유 ID 네임스페이스입니다. ECID는 고객 ID의 기반을 제공하며 장치의 기본 ID로 사용되고 ID 그래프의 기본 노드로 사용됩니다. 자세한 내용은 [ECID 개요](./ecid.md) 추가 정보. |
-| ID 네임스페이스 | ID 네임스페이스는 ID의 컨텍스트 또는 유형을 구분하는 데 사용됩니다. 예를 들어, ID는 &quot;name&quot;을 구분합니다<span>@email.com&quot; 을 이메일 주소로 보내거나 &quot;443522&quot;을 숫자 CRM ID로 사용합니다. ID 네임스페이스는 개별 ID를 조회하고 ID 값에 대한 컨텍스트를 제공하는 데 사용됩니다. 이를 통해 다음 두 가지 사항을 확인할 수 있습니다 [!DNL Profile] 다른 기본 ID를 포함하지만 동일한 값을 공유하는 조각. `email` id 네임스페이스는 사실상 동일한 개인입니다. 자세한 내용은 [id 네임스페이스 개요](./namespaces.md) 추가 정보. |
+| ID 네임스페이스 | ID 네임스페이스는 ID의 컨텍스트 또는 유형을 구분하는 역할을 합니다. 예를 들어 ID는 “name<span>@email.com”을 이메일 주소로 구분하거나 “443522”를 숫자 CRM ID로 구분합니다. ID 네임스페이스는 개별 ID를 조회하고 ID 값에 대한 컨텍스트를 제공하는 데 사용됩니다. 이를 통해 다음 두 가지 사항을 확인할 수 있습니다 [!DNL Profile] 다른 기본 ID를 포함하지만 동일한 값을 공유하는 조각. `email` id 네임스페이스는 사실상 동일한 개인입니다. 자세한 내용은 [id 네임스페이스 개요](./namespaces.md) 추가 정보. |
 | ID 그래프 | ID 그래프는 서로 다른 ID 간의 관계 맵으로, 함께 결합되는 고객 ID와 방법을 시각화하고 더 잘 이해할 수 있도록 해줍니다. 다음에서 자습서를 참조하십시오. [id 그래프 뷰어 사용](./ui/identity-graph-viewer.md) 추가 정보. |
 | 개인 식별 정보(PII) | PII는 이메일 주소 또는 전화 번호와 같이 고객을 직접 식별할 수 있는 정보입니다. PII 값은 종종 일치하지 않습니다. 다양한 시스템에서 고객의 여러 ID입니다. |
 | 알 수 없음 또는 익명 ID | 알 수 없음 또는 익명 ID는 장치를 사용하여 실제 사람을 식별하지 않고 장치를 분리하는 표시입니다. 알 수 없고 익명의 ID에는 방문자의 IP 주소 및 쿠키 ID와 같은 정보가 포함됩니다. 알 수 없고 익명의 ID가 행동 데이터를 제공할 수 있지만 고객이 PII를 제공할 때까지 제한됩니다. |
@@ -67,13 +67,13 @@ Adobe Experience Platform Identity 서비스는 장치 및 시스템 전반에�
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
 >title="ID 네임스페이스"
->abstract="ID 네임스페이스는 ID의 컨텍스트 또는 유형을 구분하는 데 사용됩니다. 예를 들어, ID는 &quot;name&quot;을 구분합니다<span>@email.com&quot; 을 이메일 주소로 보내거나 &quot;443522&quot;을 숫자 CRM ID로 사용합니다."
+>abstract="ID 네임스페이스는 ID의 컨텍스트 또는 유형을 구분하는 역할을 합니다. 예를 들어 ID는 “name<span>@email.com”을 이메일 주소로 구분하거나 “443522”를 숫자 CRM ID로 구분합니다."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
 >title="ID 값"
->abstract="ID 값은 고유한 개인, 조직 또는 자산을 나타내는 식별자입니다. 값이 나타내는 ID의 컨텍스트 또는 유형은 해당 ID 네임스페이스로 정의됩니다. 프로필 조각에서 레코드 데이터를 일치시킬 때 네임스페이스 및 ID 값이 일치해야 합니다.프로필 조각에서 레코드 데이터를 일치시킬 때 네임스페이스 및 ID 값이 일치해야 합니다."
+>abstract="ID 값은 고유 개인, 조직 또는 에셋을 나타내는 식별자입니다. 값이 표시하는 ID의 컨텍스트 또는 유형은 해당 ID 네임스페이스에 의해 정의됩니다. 프로필 조각에서 레코드 데이터를 일치시킬 때 네임스페이스와 ID 값은 일치해야 합니다."
 >text="Learn more in documentation"
 
 &quot;신분증이 무엇입니까?&quot;라고 물으셨다면 더 이상의 문맥이 없다면, 그들이 유용한 답을 제공하기가 어려울 것이다. 동일한 논리에서는 시스템 생성 ID이든 이메일 주소이든 ID 값을 나타내는 문자열 값은 문자열 값 컨텍스트를 제공하는 한정자와 함께 제공된 경우에만 완료됩니다. id 네임스페이스입니다.

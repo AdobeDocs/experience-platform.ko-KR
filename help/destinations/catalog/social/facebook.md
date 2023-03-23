@@ -6,7 +6,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
 source-wordcount: '1856'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -145,13 +145,13 @@ Experience Platform에서 이메일 주소 섭취에 대한 자세한 내용은 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_facebook_accountid"
 >title="계정 ID"
->abstract="facebook 광고 계정 ID입니다. 이 ID는 Facebook Ads Manager 계정에서 찾을 수 있습니다. 이 ID를 입력할 때 항상 접두사로 붙입니다 `act_`."
+>abstract="Facebook 광고 계정 ID. Facebook Ads Manager 계정에서 이 ID를 찾을 수 있습니다. 이 ID를 입력할 때 항상 `act_`로 접두사가 붙습니다."
 
 대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 계정 ID]**: 사용자 [!DNL Facebook Ad Account ID]. 이 ID는 [!DNL Facebook Ads Manager] 계정이 필요합니다. 이 ID를 입력할 때 항상 접두사로 붙입니다 `act_`.
+* **[!UICONTROL 계정 ID]**: 사용자 [!DNL Facebook Ad Account ID]. 이 ID는 [!DNL Facebook Ads Manager] 계정이 필요합니다. 이 ID를 입력할 때 항상 `act_`로 접두사가 붙습니다.
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -163,23 +163,23 @@ Experience Platform에서 이메일 주소 섭취에 대한 자세한 내용은 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
->title="대상의 기원"
->abstract="원래 세그먼트에서 고객 데이터를 수집한 방법을 선택합니다. 사용자가 세그먼트에 의해 타깃팅되면 데이터가 Facebook에 표시됩니다"
+>title="대상자 원본"
+>abstract="원래 세그먼트의 고객 데이터를 수집하는 방법을 선택합니다. 사용자가 세그먼트에 타겟팅되면 데이터가 Facebook에 표시됩니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
->title="대상의 기원"
+>title="대상자 원본"
 >abstract="광고주는 고객으로부터 직접 데이터를 수집했습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_partners"
->title="대상의 기원"
->abstract="광고주는 파트너로부터 직접 데이터를 수집합니다."
+>title="대상자 원본"
+>abstract="광고주는 파트너로부터 직접 데이터를 수집했습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
->title="대상의 기원"
->abstract="광고주는 고객 및 파트너로부터 직접 데이터를 수집합니다."
+>title="대상자 원본"
+>abstract="광고주는 고객과 파트너로부터 직접 데이터를 수집했습니다."
 
 >[!IMPORTANT]
 > 

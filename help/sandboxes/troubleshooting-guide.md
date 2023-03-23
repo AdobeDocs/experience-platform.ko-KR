@@ -7,7 +7,7 @@ exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '857'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtypes"
 >title="샌드박스 유형"
->abstract="샌드박스 유형은 프로덕션 또는 개발 샌드박스인지를 나타냅니다. 프로덕션 샌드박스에는 테스트 및 개발에 사용되는 라이브 데이터 및 개발 샌드박스가 포함되어 있습니다."
+>abstract="샌드박스 유형은 프로덕션인지 또는 개발 샌드박스인지 여부를 나타냅니다. 프로덕션 샌드박스에는 라이브 데이터가 포함되고 개발 샌드박스는 테스트와 개발 목적으로 사용됩니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="UI에서 샌드박스 만들기"
 
 Experience Platform에는 두 가지 샌드박스 유형이 있습니다.

@@ -7,7 +7,7 @@ exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '2108'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_policies_labeltype"
 >title="레이블 유형"
->abstract="데이터 사용 레이블에는 몇 가지 카테고리가 있습니다. Adobe 정의 레이블에는 계약 레이블, ID 레이블 및 중요 레이블이 포함됩니다. 조직에서 정의한 레이블은 사용자 지정 레이블로 분류됩니다."
+>abstract="데이터 사용 레이블 범주가 몇 가지 있습니다. Adobe에서 정의한 레이블에는 약정 레이블, ID 레이블과 중요 레이블이 포함됩니다. 조직에서 정의한 레이블은 사용자 정의 레이블로 분류됩니다."
 >text="See the data usage labels glossary for more information on these label types."
 
 데이터 사용 레이블을 사용하여 데이터 세트와 필드를 [거버넌스 정책](../policies/overview.md) 및 [액세스 제어 정책](../../access-control/abac/overview.md) 해당 데이터에 적용됩니다. Adobe Experience Platform에서는 데이터 분류를 시작하는 데 사용할 수 있는 몇 가지 핵심 데이터 사용 레이블을 제공합니다.

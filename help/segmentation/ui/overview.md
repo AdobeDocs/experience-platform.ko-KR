@@ -7,7 +7,7 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '2647'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -49,17 +49,17 @@ Experience Platform UI에서 **[!UICONTROL 세그먼트]** 왼쪽 탐색에서 �
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="이탈"
->abstract="이탈은 세그먼트 작업이 마지막으로 실행된 시간과 비교하여 세그먼트 정의 내에서 변경되는 프로필의 비율을 나타냅니다."
+>abstract="이탈은 세그먼트 작업이 마지막으로 실행된 시간과 비교하여 세그먼트 정의에서 변경되는 프로필의 백분율을 나타냅니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
->title="평가 방법"
->abstract="세그먼트에 대한 평가 방법에는 일괄 처리, 스트리밍 및 가장자리가 포함됩니다."
+>title="평가 메서드"
+>abstract="세그먼트 평가 메서드에는 배치, 스트리밍과 에지가 포함됩니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
 >title="예약에 모든 세그먼트 추가"
->abstract="일별 스케줄 갱신에 모든 배치 평가 세그먼트를 포함하려면 활성화합니다. 예약된 업데이트에서 모든 세그먼트를 제거하려면 을 비활성화합니다."
+>abstract="활성화하여 매일 예약된 업데이트에 모든 배치 평가 세그먼트를 포함합니다. 비활성화하여 예약된 업데이트에서 모든 세그먼트를 제거합니다."
 
 을(를) 선택합니다 **[!UICONTROL 찾아보기]** 탭의 을 클릭하여 조직의 모든 세그먼트 정의 목록을 확인합니다.
 

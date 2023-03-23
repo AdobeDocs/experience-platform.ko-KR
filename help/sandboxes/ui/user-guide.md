@@ -7,7 +7,7 @@ exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '816'
-ht-degree: 2%
+ht-degree: 8%
 
 ---
 
@@ -40,12 +40,12 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxname"
 >title="샌드박스 이름"
->abstract="샌드박스 이름은 이 샌드박스에 대한 고유 ID를 만들기 위해 백 엔드에서 사용되는 텍스트입니다."
+>abstract="샌드박스 이름은 이 샌드박스의 고유 ID를 만들기 위해 백엔드에서 사용되는 텍스트입니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtitle"
 >title="샌드박스 제목"
->abstract="샌드박스 제목은 Experience Platform UI 전체에서 메뉴 및 드롭다운의 샌드박스를 나타내는 표시 이름입니다."
+>abstract="샌드박스 제목은 Experience Platform UI 전반에 걸쳐 메뉴와 드롭다운의 샌드박스를 나타내는 디스플레이 이름입니다."
 
 >[!NOTE]
 >
