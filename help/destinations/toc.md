@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 5095ba2a2c40194aac3b9b0c985d36fd9fca864b
+source-git-commit: 80864c67bc80f3c2ef12e9571adc2c065512e61f
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1065'
 ht-degree: 6%
 
 ---
@@ -22,12 +22,14 @@ ht-degree: 6%
    * [다양한 대상 유형에 대한 프로필 내보내기 동작](./how-destinations-work/profile-export-behavior.md)
    * [대상 활성화 워크플로우의 ID 처리](./how-destinations-work/identity-handling.md)
 * API 자습서 {#api}
+   * [클라우드 스토리지 대상에 대한 API 마이그레이션 안내서](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [Flow Service API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다](./api/streaming-destinations.md)
    * [배치 클라우드 스토리지 및 이메일 마케팅 대상에 연결하고 플로우 서비스 API를 사용하여 데이터를 활성화합니다](./api/connect-activate-batch-destinations.md)
    * [(베타) 임시 활성화 API를 통해 대상자 세그먼트를 배치 대상에 활성화합니다](./api/ad-hoc-activation-api.md)
    * [대상 데이터 흐름 업데이트](./api/update-destination-dataflows.md)
    * [대상 계정 삭제](./api/delete-destination-account.md)
    * [대상 데이터 흐름 삭제](./api/delete-destination-dataflow.md)
+   * [(베타) Flow Service API를 사용하여 파일 기반 대상으로 데이터를 활성화합니다](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [(베타) 데이터 세트 내보내기](/help/destinations/api/export-datasets.md)
 * UI 안내서 {#ui}
    * [대상 작업 공간](./ui/destinations-workspace.md)
