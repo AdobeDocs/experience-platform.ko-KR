@@ -7,9 +7,9 @@ landing-page-description: 자주 묻는 질문에 대한 답변과 Experience Pl
 short-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
-source-wordcount: '1851'
+source-wordcount: '1861'
 ht-degree: 4%
 
 ---
@@ -209,12 +209,13 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 | 서비스 | API 참조 | 문제 해결 |
 | --- | --- | --- |
 | 액세스 제어 | [액세스 제어 API](https://www.adobe.io/experience-platform-apis/references/access-control/) | [액세스 제어 문제 해결 가이드](../access-control/troubleshooting-guide.md) |
-| Adobe Experience Platform 데이터 수집 | [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) | [일괄 수집 문제 해결 안내서](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[스트리밍 수집 문제 해결 안내서](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Adobe Experience Platform 데이터 수집 | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [일괄 수집 문제 해결 안내서](../ingestion/batch-ingestion/troubleshooting.md) |
+| Adobe Experience Platform 데이터 수집 | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [스트리밍 수집 문제 해결 안내서](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform 데이터 과학 작업 공간 | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] 문제 해결 안내서](../data-science-workspace/troubleshooting-guide.md) |
 | Adobe Experience Platform 데이터 거버넌스 | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
 | Adobe Experience Platform ID 서비스 | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] 문제 해결 안내서](../identity-service/troubleshooting-guide.md) |
 | Adobe Experience Platform 쿼리 서비스 | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | [[!DNL Query Service] 문제 해결 안내서](../query-service/troubleshooting-guide.md) |
-| Adobe Experience Platform Segmentation | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) |
+| Adobe Experience Platform 세그멘테이션 | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) |
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQ 및 문제 해결 안내서](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] 및 [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) |  |
