@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 세그먼트를 파일 기반 대상으로 활성화합니다
 description: Flow Service API를 사용하여 자격 조건을 갖춘 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
-source-git-commit: 6ed78a96f099fb4552716ac4a598c43f4d65cf37
+source-git-commit: d925802489d5da006cd9cfacb89b3e880663edaf
 workflow-type: tm+mt
 source-wordcount: '4337'
 ht-degree: 2%
@@ -3645,6 +3645,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 다음으로 내보내기를 위한 출력 스키마를 설정해야 합니다. 먼저 기존 파트너 스키마를 찾아 검사해야 합니다.
 
+>[!BEGINSHADEBOX]
+
 **요청**
 
 +++출력 스키마에 대한 파트너 스키마 가져오기 요청
@@ -3957,7 +3959,7 @@ Inspect에서 위의 호출을 수행할 때 발생하는 응답입니다. 객�
 
 **요청**
 
-+++ 출력 스키마 만들기 - 요청
++++출력 스키마 만들기 - 요청
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas' \
@@ -3977,7 +3979,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **응답**
 
-+++ 출력 스키마 만들기 - 응답
++++출력 스키마 만들기 - 응답
 
 ```json
 {
@@ -4287,7 +4289,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 >[!ENDSHADEBOX]
 
-### 매핑 집합 만들기
+### 매핑 세트 만들기 {#create-mapping-set}
 
 다음으로, [데이터 준비 API](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) 입력 스키마 ID, 출력 스키마 ID 및 원하는 필드 매핑을 사용하여 매핑 세트를 생성합니다.
 
@@ -4295,7 +4297,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **요청**
 
-+++ 매핑 집합 만들기 - 요청
++++매핑 세트 만들기 - 요청
 
 >[!IMPORTANT]
 >
@@ -4304,7 +4306,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 >* 아래의 예제 구성에도 `Email` 및 `Phone_E.164`를 지정하는 경우 데이터 플로우당 하나의 id 속성만 내보낼 수 있습니다.
 
 
-```shell{line-numbers="true" start-line="1" highlight="16-38"}
+```shell {line-numbers="true" start-line="1" highlight="16-38"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
