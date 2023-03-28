@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: c19982ad18b04a8fe039f90ff4ada1fbf5a2dee1
+source-git-commit: 840ad16b3762afee0b36bdd93c5be566c5a29b18
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 12%
+source-wordcount: '952'
+ht-degree: 11%
 
 ---
 
@@ -37,6 +37,7 @@ ht-degree: 12%
          - [B2B 네임스페이스 및 스키마](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Advertising {#advertising}
       - [Google 광고 커넥터](connectors/advertising/ads.md)
+      - [Pinterest 광고](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
       - [Mixpanel 커넥터](connectors/analytics/mixpanel.md)
       - [펜도](connectors/analytics/pendo-webhook.md)
@@ -112,6 +113,7 @@ ht-degree: 12%
    - 기본 연결 만들기 {#create}
       - Advertising {#advertising}
          - [Google 광고](tutorials/api/create/advertising/ads.md)
+         - [Pinterest 광고](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
          - [펜도](tutorials/api/create/analytics/pendo-webhook.md)
@@ -227,6 +229,7 @@ ht-degree: 12%
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Advertising {#advertising}
          - [Google 광고](tutorials/ui/create/advertising/ads.md)
+         - [Pinterest 광고](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [펜도](tutorials/ui/create/analytics/pendo-webhook.md)
