@@ -2,14 +2,27 @@
 title: 태그 및 이벤트 전달을 위한 릴리스 노트
 description: Adobe Experience Platform의 태그 및 이벤트 게재에 대한 최신 릴리스 정보입니다.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 2b11fb87523c777d5c2d855e97a4af78a8483abe
+source-git-commit: f2f2f9abc50f2016e41fd23bfbb66553fadf6fce
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 5%
+source-wordcount: '679'
+ht-degree: 4%
 
 ---
 
 # 태그 및 이벤트 전달에 대한 릴리스 노트
+
+## 2023년 3월 29일
+
+**빠른 스타크 워크플로우(베타)**
+
+데이터 수집 홈 화면에서 &quot;시작하기&quot;에서 새로운 빠른 시작 워크플로우에 액세스합니다. 이제 고객에게 공개 베타로 다음 워크플로우를 사용할 수 있습니다.
+* **[메타 전환 API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: 이벤트 전달 고객은 몇 가지 간단한 단계로 이벤트 데이터를 빠르게 수집 및 전송할 수 있으며 광고 전환을 위해 서버측에서 Meta로 전달할 수 있습니다.
+* **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: 고객은 몇 가지 간단한 단계로 Mobile SDK를 신속하게 구현하고 기본 모바일 이벤트의 유효성을 확인할 수 있습니다.
+
+새로운 확장이 릴리스되었습니다.
+
+* **[!DNL Braze]이벤트 전달 확장**: 다음 [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 이벤트 전달 확장을 사용하면 Adobe Experience Platform Edge Network에서 캡처한 데이터를 활용하여 로 보낼 수 있습니다 [!DNL Braze] 를 사용하여 서버측 이벤트 형태로 [!DNL Braze] 사용자 추적 API.
+* **[!DNL Mixpanel]이벤트 전달 확장**: 다음 [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 확장 기능을 사용하면 이벤트 전달을 활용하여 Adobe Experience Platform Edge Network에서 이벤트 정보를 캡처하고 이벤트 추적 API를 사용하여 Mixpanel에 전송할 수 있습니다.
 
 ## 2023년 1월 25일
 
