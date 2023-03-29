@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 3월 릴리스 노트입니다.
-source-git-commit: 2a7ff5d56ccc1a0b4c86018936d139f2e6d46cd6
+source-git-commit: c5061a759f1098ce1dcc7e3f00c52e064239d7c5
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '663'
 ht-degree: 6%
 
 ---
@@ -53,7 +53,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 기능 | 설명 |
 | --- | --- |
-| 프로필 지표 | 프로필 지표를 더 정확하게 표현하기 위해 멤버십 분류 및 이탈 지표가 결합되고 이제 24시간 동안 계산됩니다. 에서 사용할 수 있는 추가 정보 [세그멘테이션 UI 안내서](../../segmentation/ui/overview.md) |
+| 프로필 지표 | 프로필 지표를 더 정확하게 표현하기 위해 멤버십 분류 및 이탈 지표가 결합되고 이제 24시간 동안 계산됩니다. 자세한 내용은 [세그멘테이션 UI 안내서](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}
 
