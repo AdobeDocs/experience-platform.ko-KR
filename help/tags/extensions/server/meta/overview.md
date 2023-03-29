@@ -2,9 +2,9 @@
 title: 메타 전환 API 확장 개요
 description: Adobe Experience Platform의 이벤트 전달을 위한 메타 전환 API 확장에 대해 알아봅니다.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: ec1e2b792ff827fd791576d904858ef9abb98947
+source-git-commit: fcc8e794bdfc3c6287d12c35e7d837d2f697239c
 workflow-type: tm+mt
-source-wordcount: '2261'
+source-wordcount: '2256'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 다음 비디오에서는 빠른 시작 기능을 소개합니다.
 
->[!VIDEO](https://publish.tv.adobe.com/bucket/1/category/5138/video/3416939/)
+>[!VIDEO](https://video.tv.adobe.com/v/3416939?quality=12&learn=on)
 
 ### 빠른 시작 기능 설치
 
