@@ -4,9 +4,9 @@ title: 대상자 데이터를 활성화하여 묶음 프로필 내보내기 대�
 type: Tutorial
 description: 세그먼트를 배치 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
+source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
-source-wordcount: '3592'
+source-wordcount: '3629'
 ht-degree: 10%
 
 ---
@@ -15,9 +15,12 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 > 
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
+> * 데이터를 활성화하고 를 활성화하려면 [매핑 단계](#mapping) 워크플로우의 경우 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions).
+> * 를 거치지 않고 데이터를 활성화하려면 [매핑 단계](#mapping) 워크플로우의 경우 **[!UICONTROL 대상 관리]**, **[!UICONTROL 매핑 없이 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions).
+> 
+> 다음 문서를 참조하십시오. [액세스 제어 개요](/help/access-control/ui/overview.md) 또는 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
 >
->향상된 파일 내보내기 기능 베타 프로그램에 참여하는 일부 고객이 새로운 기능을 살펴보고 있습니다 **[!UICONTROL 매핑]** 활성화 워크플로우에서 의 일부로 단계 [새로운 베타 클라우드 스토리지 대상](/help/release-notes/2022/october-2022.md#destinations). 또한 [알려진 제한 사항](#known-limitations) 릴리스의 일부로 사용됩니다.
+> 향상된 파일 내보내기 기능 베타 프로그램에 참여하는 일부 고객이 새로운 기능을 살펴보고 있습니다 **[!UICONTROL 매핑]** 활성화 워크플로우에서 의 일부로 단계 [새로운 베타 클라우드 스토리지 대상](/help/release-notes/2022/october-2022.md#destinations). 또한 [알려진 제한 사항](#known-limitations) 릴리스의 일부로 사용됩니다.
 
 ## 개요 {#overview}
 
