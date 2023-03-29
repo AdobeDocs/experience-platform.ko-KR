@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 3월 릴리스 노트입니다.
-source-git-commit: 38c3461f1d84fca83fd04eef57aae28de4744e17
+source-git-commit: 74b609572b6e5e9b5e641fe497f53f3463b900c4
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1057'
 ht-degree: 4%
 
 ---
@@ -42,7 +42,8 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 기능 | 설명 |
 | --- | --- |
-| 신규 URL 문자열 인코딩 및 디코딩 함수 | <ul><li>다음 `get_url_encoded` 함수는 URL을 입력으로 사용하고 특수 문자를 ASCII 문자로 바꾸거나 인코딩합니다.</li><li>다음 `get_url_decoded` 함수는 URL을 입력으로 사용하고 ASCII 문자를 특수 문자로 디코딩합니다.</li></ul> 자세한 내용은 [데이터 준비 함수 안내서](../../data-prep/functions.md). 예약된 문자와 해당 인코딩된 문자의 전체 목록을 보려면 다음 안내서를 읽어 보십시오 [특수 문자](../../data-prep/functions.md#special-characters). |
+| Adobe Analytics 데이터 필터링의 일반 가용성 | 이제 데이터 준비 기능을 사용하여 규칙 및 조건을 적용하여 실시간 고객 프로필에 수집하기 전에 Analytics 데이터를 필터링할 수 있습니다. 자세한 내용은 다음 안내서를 참조하십시오. [프로필 수집을 위한 Analytics 데이터 필터링](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-profile). |
+| URL 문자열 인코딩 및 디코딩의 새로운 함수 | <ul><li>다음 `get_url_encoded` 함수는 URL을 입력으로 사용하고 특수 문자를 ASCII 문자로 바꾸거나 인코딩합니다.</li><li>다음 `get_url_decoded` 함수는 URL을 입력으로 사용하고 ASCII 문자를 특수 문자로 디코딩합니다.</li></ul> 자세한 내용은 [데이터 준비 함수 안내서](../../data-prep/functions.md). 예약된 문자와 해당 인코딩된 문자의 전체 목록을 보려면 다음 안내서를 읽어 보십시오 [특수 문자](../../data-prep/functions.md#special-characters). |
 
 데이터 준비에 대한 자세한 내용은 [데이터 준비 개요](../../data-prep/home.md).
 
