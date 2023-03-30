@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 3월 릴리스 노트입니다.
-source-git-commit: 74b609572b6e5e9b5e641fe497f53f3463b900c4
+source-git-commit: 582305583aa5869d8cc29f871aeb3fa0ef0b6ab1
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1671'
 ht-degree: 4%
 
 ---
@@ -14,11 +14,29 @@ ht-degree: 4%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [대시보드](#dashboards)
 - [데이터 수집](#data-collection)
 - [데이터 준비](#data-prep)
 - [대상](#destinations)
+- [경험 데이터 모델](#xdm)
+- [쿼리 서비스](#query-service)
+- [Real-Time Customer Data Platform B2B 에디션](#b2b)
 - [세분화 서비스](#segmentation)
 - [소스](#sources)
+
+## 대시보드 {#dashboards}
+
+Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 데이터에 대한 중요한 통찰력을 볼 수 있는 여러 개의 대시보드를 제공합니다.
+
+**새로운 기능 또는 업데이트된 기능** {#dashboards-new-updated-features}
+
+| 기능 | 설명 |
+| --- | --- |
+| 사용자 정의 대시보드 | 이제 다음을 수행할 수 있습니다 **샘플 속성 값** 사용자 정의 대시보드 위젯 작성기에서 위젯에 속성을 추가하기 전에 위젯을 만들 때 해당 속성 열의 몇 가지 샘플 값을 개별 속성에 사용할 수 있습니다.<br>이제 다음을 수행할 수 있습니다 **X축과 Y축 교체** 위젯에서 축 교체 단추를 사용합니다. 따라서 시간을 절약할 수 있고, 위젯에 속성을 추가할 때 보다 인체공학적 경험을 제공할 수 있습니다. 이렇게 하면 속성 패널에서 두 속성을 다시 찾아야 합니다.<br>이제 다음을 수행할 수 있습니다 **범례의 위치 및 제목 변경** 위젯 내에서 사용할 수 있습니다. 위젯에 범례가 있으면 차트 주위의 어느 곳에서든 해당 범례를 재배치하고 축 레이블과 위젯 제목을 사용할 수 있으므로 범례 제목도 다시 지정할 수 있습니다. |
+
+{style="table-layout:auto"}
+
+액세스 권한을 부여하고 사용자 지정 위젯을 만드는 방법 등 대시보드에 대한 자세한 내용은 [대시보드 개요](../../dashboards/home.md).
 
 ## 데이터 수집 {#data-collection}
 
@@ -81,6 +99,48 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 - 암호화 사용 시 향후 확장: `filename.csv.gpg`
 
 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
+
+## XDM(경험 데이터 모델) {#xdm}
+
+XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 공통 표현으로 통합하여 보다 빠르고 통합된 방식으로 통찰력을 제공할 수 있습니다. 고객 작업을 통해 유용한 통찰력을 얻을 수 있고, 세그먼트를 통해 고객 대상을 정의하고, 개인화를 위해 고객 속성을 사용할 수 있습니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| CSV로 스키마 권장 사항 | 이제 로컬 파일을 업로드하여 기계 학습을 통해 생성된 스키마를 만들어 수동으로 스키마를 생성할 필요가 없습니다. 에서 [!UICONTROL 소스] 작업 공간, 샘플 CSV 파일 업로드 및 Adobe 기계 학습 알고리즘은 대상 필드를 기반으로 하는 스키마를 제안합니다. 자세한 내용은 [설명서](../../ingestion/tutorials/map-csv/recommendations.md)를 참조하십시오.&quot; |
+
+{style="table-layout:auto"}
+
+플랫폼의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
+
+## 쿼리 서비스 {#query-service}
+
+Query Service를 사용하면 표준 SQL을 사용하여 Adobe Experience Platform에서 데이터를 쿼리할 수 있습니다 [!DNL Data Lake]. Data Lake의 모든 데이터 세트에 참여하고 쿼리 결과를 보고 또는 Data Science Workspace에 사용하거나 실시간 고객 프로필에 수집하기 위한 새 데이터 세트로 캡처할 수 있습니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 가속 스토어의 속성 기반 액세스 제어 | Data Distiller과 함께 속성 기반 액세스 제어 를 사용하여 가속화된 저장소의 모든 데이터 세트에 대한 액세스 제어를 정의합니다. 사용자가 만들고 가속 스토어에 저장된 사용자 정의 데이터 모델에 대한 액세스를 제어하여 사용자 정의 대시보드를 구현합니다. |
+
+{style="table-layout:auto"}
+
+쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md).
+
+## Real-Time Customer Data Platform B2B 에디션 {#b2b}
+
+Real-time Customer Data Platform(Real-Time CDP)에 구축된 Real-Time CDP B2B Edition은 비즈니스-비즈니스 서비스 모델로 운영되는 마케터를 위해 특별히 빌드되었습니다. 여러 소스의 데이터를 가져와서 사람 및 계정 프로필에 대한 단일 보기로 결합합니다. 이러한 통합 데이터를 통해 마케터는 특정 대상을 정확하게 타겟팅하고 사용 가능한 모든 채널에서 그러한 대상을 선택할 수 있습니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 버그 수정 | 시스템에서 프로필을 보다 정확하게 표시하기 위해 시스템은 더 이상 총 프로필 수 또는 Real-time Customer Data Platform B2B Edition에 대한 지정 대상 지표에 내부 프로필을 포함하지 않습니다. 오늘부터 총 프로필 수/대응 가능 대상 지표에 1회 감소가 표시될 수 있습니다. 데이터가 지워지지 않은 상태이며 이는 카운트의 변경입니다. 우려사항이 있으면 Adobe 담당자에게 문의하십시오 |
+
+{style="table-layout:auto"}
+
+Real-Time CDP B2B Edition에 대해 자세히 알아보려면 [Real-Time CDP B2B Edition 개요](../../rtcdp/overview.md).
 
 ## 세분화 서비스 {#segmentation}
 
