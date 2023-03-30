@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 소스 커넥터 개요
 description: Adobe Experience Platform을 사용하면 Platform 서비스를 사용하여 들어오는 데이터를 구조화, 레이블 지정 및 향상시키는 기능을 제공하면서 외부 소스에서 데이터를 수집할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 등과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+source-git-commit: ac5eb6467d0fcaf13c27c31a9bcdfb57d3b90e01
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1320'
 ht-degree: 2%
 
 ---
@@ -189,7 +189,7 @@ Adobe 권한을 통해 부여된 사용 가능한 권한에 대한 자세한 내
 
 속성 기반 액세스 제어를 사용하면 권한이 있는 필드에 매핑 구성을 적용할 수 있습니다. 또한 데이터 집합에 있는 모든 필드에 액세스할 수 없는 경우 데이터를 데이터 집합에 수집할 수 없습니다.
 
-#### 소스에서 속성 기반 액세스 제어 지원 [!BADGE 새로운 기능]
+#### 소스에서 속성 기반 액세스 제어 지원
 
 >[!TIP]
 >
