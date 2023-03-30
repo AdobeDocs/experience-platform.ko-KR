@@ -1,18 +1,18 @@
 ---
 title: 쿼리 서비스의 유사 일치
 description: 선택한 문자열과 거의 일치시켜 여러 데이터 세트의 결과를 결합하는 플랫폼 데이터에 대해 일치 기능을 수행하는 방법을 알아봅니다.
-source-git-commit: a3a4ca4179610348eba73cf1239861265d2bf887
+source-git-commit: 633210fe5e824d8686a23b877a406db3780ebdd4
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
 
-# 퍼지 일치
+# 쿼리 서비스의 유사 일치
 
-플랫폼 데이터에서 &#39;퍼지&#39; 일치를 사용하여 동일한 문자가 있는 문자열을 검색할 필요 없이 거의 일치하는 항목을 반환할 수 있습니다. 이를 통해 보다 유연하게 데이터를 검색할 수 있고 시간과 노력을 절약할 수 있으므로 데이터에 보다 쉽게 액세스할 수 있습니다.
+Adobe Experience Platform 데이터에서 &#39;퍼지&#39; 일치를 사용하여 동일한 문자가 있는 문자열을 검색할 필요 없이 거의 가능한 대략적인 일치 항목을 반환합니다. 이를 통해 보다 유연하게 데이터를 검색할 수 있고 시간과 노력을 절약할 수 있으므로 데이터에 보다 쉽게 액세스할 수 있습니다.
 
-유사 항목 일치는 검색 문자열을 일치시키기 위해 다시 서식을 지정하려고 하지 않고 두 시퀀스 간의 유사성 비율을 분석하고 유사성 비율을 반환합니다. [!DNL FuzzyWuzzy] 이 프로세스는 보다 복잡한 상황에서 문자열을 일치시키는 데 보다 적합하므로 이 프로세스에 대해 권장됩니다 [!DNL regex] 또는 [!DNL difflib].
+유사 항목 일치는 검색 문자열을 일치시키기 위해 다시 서식을 지정하려고 하지 않고 두 시퀀스 간의 유사성 비율을 분석하고 유사성 비율을 반환합니다. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) 이 프로세스는 보다 복잡한 상황에서 문자열을 일치시키는 데 보다 적합하므로 이 프로세스에 대해 권장됩니다 [!DNL regex] 또는 [!DNL difflib].
 
 이 사용 사례에 제공된 예는 서로 다른 두 여행 에이전시 데이터 세트에서 호텔 룸 검색과 유사한 속성을 일치시키는 데 중점을 둡니다. 이 문서에서는 큰 별도의 데이터 소스와 비슷한 정도에 따라 문자열을 일치시키는 방법을 보여 줍니다. 이 예에서 퍼지 매치는 Luma 및 Acme 여행 에이전시의 룸의 기능에 대한 검색 결과를 비교합니다.
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 이 프로세스의 일부로 기계 학습 모델을 교육해야 하므로 이 문서에서는 하나 이상의 기계 학습 환경에 대한 작업 지식을 가정합니다.
 
-이 예에서는 을 사용합니다 [!DNL Python] 그리고 [!DNL Jupyter Notebook] 개발 환경. 여러 가지 옵션을 사용할 수 있지만, [!DNL Jupyter Notebook] 계산 요구 사항이 낮은 오픈 소스 웹 애플리케이션이므로 를 사용하는 것이 좋습니다. 그럴 수 있습니다 [공식 Jupiter 사이트에서 다운로드](https://jupyter.org/).
+이 예에서는 을 사용합니다 [!DNL Python] 그리고 [!DNL Jupyter Notebook] 개발 환경. 여러 가지 옵션을 사용할 수 있지만, [!DNL Jupyter Notebook] 계산 요구 사항이 낮은 오픈 소스 웹 애플리케이션이므로 를 사용하는 것이 좋습니다. 다음 위치에서 다운로드할 수 있습니다. [공식 주피터 현장](https://jupyter.org/).
 
 시작하기 전에 필요한 라이브러리를 가져와야 합니다. [!DNL FuzzyWuzzy] 오픈 소스 [!DNL Python] 의 맨 위에 빌드된 라이브러리 [!DNL difflib] 라이브러리 및 를 사용하여 문자열을 일치시킵니다. 사용 [!DNL Levenshtein Distance] 시퀀스와 패턴 간의 차이를 계산하기 위해 [!DNL FuzzyWuzzy] 에는 다음 요구 사항이 있습니다.
 
@@ -43,7 +43,7 @@ pip install fuzzywuzzy[speedup]
 
 ### 쿼리 서비스에 연결
 
-연결 자격 증명을 제공하여 기계 학습 모델을 Query Service에 연결해야 합니다. 만료 자격 증명과 만료 전 자격 증명을 모두 제공할 수 있습니다. 자세한 내용은 [자격 증명 안내서](../ui/credentials.md) 를 참조하십시오. 사용 중인 경우 [!DNL Jupyter Notebook]에 대한 전체 안내서를 참조하십시오. [Query Service에 연결하는 방법](../clients/jupyter-notebook.md).
+연결 자격 증명을 제공하여 기계 학습 모델을 Query Service에 연결해야 합니다. 만료 자격 증명과 만료 전 자격 증명을 모두 제공할 수 있습니다. 자세한 내용은 [자격 증명 안내서](../ui/credentials.md) 를 참조하십시오. 사용 중인 경우 [!DNL Jupyter Notebook]에 대한 전체 안내서를 읽어 보십시오. [Query Service에 연결하는 방법](../clients/jupyter-notebook.md).
 
 또한 를 가져와야 합니다 [!DNL numpy] 에 [!DNL Python] 선형 대수를 활성화하는 환경.
 
