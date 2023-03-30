@@ -2,9 +2,9 @@
 title: 데이터 집합 만료 관리
 description: Adobe Experience Platform UI에서 데이터 세트 만료를 예약하는 방법을 알아봅니다.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
->title="설명"
->abstract=""
+>title="원치 않거나 만료된 고객 레코드 및 데이터 세트 삭제"
+>abstract="<h2>설명</h2><p>규정 준수와 관련 없는 Experience Platform 데이터의 라이프사이클을 관리하기 위해 소비자 레코드를 삭제하고 데이터 세트에 대한 만료 날짜를 예약할 수 있습니다. 데이터 주체 요청을 만들거나 관리하려면 &#39;데이터 주체 개인 정보 보호 요청 적용&#39; 사용 사례 블록을 참조하십시오.</p>"
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="지침"
->abstract=""
+>abstract="<ul><li>선택 <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html">데이터 위생</a> 왼쪽 탐색에서 를 선택하고 <b>요청 만들기</b>.</li><li>레코드를 삭제하려면</li>   <li>선택 <b>레코드</b>.</li>   <li>레코드를 삭제할 특정 데이터 세트를 선택하거나 옵션을 선택하여 모든 데이터 세트에서 삭제합니다.</li>   <li>레코드를 삭제할 소비자의 ID를 제공합니다. 선택 <b>ID 추가</b> ID를 한 번에 하나씩 제공하거나 <b>파일 선택</b> 를 업로드하는 대신 ID의 JSON 파일을 업로드합니다.</li>   <li>필요한 경우 을 선택합니다. <b>템플릿</b> JSON 파일의 예상 형식을 보려면 를 클릭하십시오.</li><li>필요한 경우 설명서를 참조하십시오 <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">데이터 세트에 대한 만료 날짜 예약</a>.</li></ul>"
 
 새 요청을 만들려면 **[!UICONTROL 요청 만들기]** 작업 공간의 기본 페이지에서 을 참조하십시오.
 
@@ -54,8 +54,7 @@ ht-degree: 0%
 ![선택한 데이터 세트를 보여주는 이미지](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
->
->현재 샌드박스에 속하는 데이터 세트만 표시됩니다.
+현재 샌드박스에 속하는 데이터 세트만 표시됩니다.
 
 ### 요청 제출
 
@@ -68,8 +67,7 @@ ht-degree: 0%
 요청이 제출되면 작업 순서가 만들어지고 의 기본 탭에 표시됩니다 [!UICONTROL 데이터 위생] 작업 공간. 여기에서 요청을 처리할 때 작업 주문의 상태를 모니터링할 수 있습니다.
 
 >[!NOTE]
->
->의 개요 섹션을 참조하십시오. [타임라인 및 투명도](../home.md#dataset-expiration-transparency) 데이터 세트 만료를 실행한 후 처리하는 방법에 대한 자세한 내용은
+의 개요 섹션을 참조하십시오. [타임라인 및 투명도](../home.md#dataset-expiration-transparency) 데이터 세트 만료를 실행한 후 처리하는 방법에 대한 자세한 내용은
 
 ## 데이터 세트 만료 편집 또는 취소
 

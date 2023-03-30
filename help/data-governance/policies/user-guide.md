@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 데이터 사용 정책 관리
 description: Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 Experience Platform 사용자 인터페이스의 정책 작업 영역에서 수행할 수 있는 작업에 대한 개요를 제공합니다.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1618'
 ht-degree: 7%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 7%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
->title="설명"
->abstract=""
+>title="프로필 데이터에 고객 동의 통합 및 적용"
+>abstract="<h2>설명</h2><p>플랫폼 을(를) 사용하면 고객으로부터 수집한 동의 데이터를 각각의 프로필에 통합할 수 있습니다. 그런 다음 동의 정책을 설정하여 이 데이터를 특정 대상에 활성화된 세그먼트에 포함할 수 있는지 여부를 결정할 수 있습니다.</p>"
 
 이 문서에서는 **[!UICONTROL 정책]** 작업 공간 을 사용하여 데이터 사용 정책을 만들고 관리합니다.
 
@@ -92,7 +92,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="지침"
->abstract=""
+>abstract="<ul><li>동의를 위해 OneTrust 소스 커넥터 또는 표준 XDM 스키마를 통해 기본 설정 데이터를 결합 스키마에 수집해야 합니다.</li><li>선택 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ko">정책</a> 왼쪽 탐색에서 를 선택하고 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">정책 만들기</a>.</li><li>아래에 <b>If</b> 섹션에서 정책 검사를 트리거할 조건 또는 작업을 설명합니다.</li><li>아래에 <b>Then</b> 섹션에서 정책을 트리거한 작업에 프로필을 포함하기 위해 존재해야 하는 동의 속성을 입력합니다.</li><li>선택 <b>저장</b> 정책을 만들려면 정책을 활성화하려면 <b>상태</b> 오른쪽 레일에서 전환합니다.</li><li>Experience Platform은 세그먼트를 대상으로 활성화할 때 활성화된 동의 정책을 자동으로 적용하고, 각 정책이 대상 크기에 미치는 영향에 대한 세부 정보를 제공합니다.</li><li>이 기능에 대한 자세한 내용은 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy">동의 정책 만들기</a> Experience League에서 확인하십시오.</li></ul>"
 
 >[!IMPORTANT]
 >

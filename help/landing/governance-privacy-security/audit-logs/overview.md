@@ -2,10 +2,10 @@
 title: 감사 로그 개요
 description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어떤 작업을 수행했는지 확인하는 방법에 대해 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 658cd7ec2d88d4b3633412f5c6d571351904e70b
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1157'
-ht-degree: 29%
+source-wordcount: '1156'
+ht-degree: 50%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 29%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
 >title="Platform에서 사용자 활동 모니터링"
->abstract="<h2>설명</h2><p>감사 로그 형식에서 다양한 플랫폼 서비스 및 기능에 대한 사용자 활동을 모니터링할 수 있습니다. 이러한 로그는 레코드를 기록하는 감사 추적을 형성합니다 <b>who</b> 수행됨 <b>what</b> 작업 및 <b>when</b>. 감사 로그는 플랫폼의 문제를 해결하는 데 도움이 되며 기업의 데이터 관리 정책 및 규정 요구 사항을 효과적으로 준수하는 데 도움이 됩니다.</p><h2>지침</h2><ul><li>선택 <b>감사</b> 을 클릭합니다. 감사 작업 공간에는 기본적으로 가장 최근 항목에서 가장 최근 항목으로 정렬된 기록된 로그 목록이 표시됩니다.</li>   <li> 참고: 감사 로그는 시스템에서 삭제된 후 365일 동안 유지됩니다. 따라서 최대 365일 동안만 돌아갈 수 있습니다. 365일 이상의 데이터를 다시 확인해야 하는 경우 내부 정책 요구 사항을 충족하기 위해 정기적으로 로그를 내보내야 합니다. </li><li>목록에서 이벤트를 선택하여 오른쪽 레일에서 해당 세부 사항을 확인합니다. </li><li>단계 아이콘을 선택하여 결과 범위를 좁히는 데 도움이 되는 필터 컨트롤 목록을 표시합니다. 선택한 필터에 관계없이 마지막 1000개의 레코드만 표시됩니다. </li><li>현재 감사 로그 목록을 내보내려면 **다운로드 로그**.</li><li>이 기능에 대한 자세한 내용은 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=ko">감사 로그 개요</a> Experience League에서 확인하십시오.</li></ul>"
+>abstract="<h2>설명</h2><p>“감사 로그” 형식으로 다양한 Platform 서비스 및 기능에 대한 사용자 활동을 모니터링할 수 있습니다. 이러한 로그는 <b>누가</b> <b>언제</b> <b>어떤</b> 작업을 수행했는지 기록하는 감사 추적을 형성합니다. 이러한 로그는 Platform의 문제 해결에 도움이 되며, 기업 데이터 관리 정책 및 규제 요구 사항을 효과적으로 준수하는 데 도움이 됩니다.</p>"
 
 시스템에서 수행되는 활동의 투명성과 가시성을 높이기 위해 Adobe Experience Platform을 사용하면 &quot;감사 로그&quot; 형태로 다양한 서비스 및 기능에 대한 사용자 활동을 감사할 수 있습니다. 이러한 로그는 플랫폼의 문제 해결에 도움이 될 수 있는 감사 추적을 형성하며 기업의 데이터 관리 정책 및 규정 요구 사항을 효과적으로 준수할 수 있도록 도와줍니다.
 
@@ -72,10 +72,10 @@ ht-degree: 29%
 
 ## UI에서 감사 로그 관리 {#managing-audit-logs-in-the-ui}
 
-[!CONTEXTUALHELP]
-id="platform_privacyConsole_audits_instructions"
-title="지침"
-abstract=""
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_audits_instructions"
+>title="지침"
+>abstract="<ul><li>왼쪽 탐색 영역에서 <b>감사</b>를 선택합니다. 감사 작업 영역에는 기록된 로그 목록이 기본적으로 가장 최근 항목 순으로 정렬되어 표시됩니다.</li>   <li> 참고: 감사 로그는 365일 동안 유지되며 그 후에는 시스템에서 삭제됩니다. 따라서 최대 365일 동안만 돌아갈 수 있습니다. 365일 이상 지난 데이터를 다시 확인해야 하는 경우 내부 정책 요구 사항을 충족하도록 정기적으로 로그를 내보내야 합니다. </li><li>오른쪽 레일에서 세부 정보를 보려면 목록에서 이벤트를 선택하십시오. </li><li>깔때기 아이콘을 선택하여 필터 컨트롤 목록을 표시하면 결과 범위를 좁힐 수 있습니다. 선택한 필터에 관계없이 마지막 1000개의 레코드만 표시됩니다. </li><li>현재 감사 로그 목록을 내보내려면 **로그 다운로드**&#x200B;를 선택합니다.</li><li>이 기능에 대한 자세한 내용은 Experience League의 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=ko">감사 로그 개요</a>를 참조하십시오.</li></ul>"
 
 내에서 다양한 Experience Platform 기능에 대한 감사 로그를 볼 수 있습니다 **[!UICONTROL 감사]** 플랫폼 UI의 작업 영역입니다. 작업 공간에는 기본적으로 가장 최근 항목에서 가장 최근 항목으로 정렬된 기록된 로그 목록이 표시됩니다.
 
@@ -83,7 +83,7 @@ abstract=""
 
 감사 로그는 시스템에서 삭제된 후 365일 동안 유지됩니다. 따라서 최대 365일 동안만 돌아갈 수 있습니다. 365일 이상의 데이터가 필요한 경우 내부 정책 요구 사항을 충족하려면 정기적으로 로그를 내보내야 합니다.
 
-목록에서 이벤트를 선택하여 오른쪽 레일에서 해당 세부 사항을 확인합니다.
+오른쪽 레일에서 세부 정보를 보려면 목록에서 이벤트를 선택하십시오.
 
 ![이벤트 세부 사항](../../images/audit-logs/select-event.png)
 
@@ -113,7 +113,7 @@ UI의 감사 이벤트에 사용할 수 있는 필터는 다음과 같습니다.
 
 ### 감사 로그 내보내기
 
-현재 감사 로그 목록을 내보내려면 **[!UICONTROL 다운로드 로그]**.
+현재 감사 로그 목록을 내보내려면 **[!UICONTROL 로그 다운로드]**&#x200B;를 선택합니다.
 
 ![다운로드 로그](../../images/audit-logs/download.png)
 
