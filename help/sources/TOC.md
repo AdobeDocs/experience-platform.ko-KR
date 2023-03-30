@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: 840ad16b3762afee0b36bdd93c5be566c5a29b18
+source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 11%
+source-wordcount: '963'
+ht-degree: 12%
 
 ---
 
@@ -352,6 +352,9 @@ ht-degree: 11%
       - [소스 문서(스트리밍 SDK)](sources-sdk/streaming/document-streaming.md)
       - [설명서 셀프 서비스 API 스트리밍 템플릿](sources-sdk/streaming/streaming-template-api.md)
       - [설명서 셀프 서비스 UI 스트리밍 템플릿](sources-sdk/streaming/streaming-template-ui.md)
+- 오류 메시지 {#errors}
+   - [소스의 오류 메시지](./errors/sources-errors.md)
+   - [Flow Service의 오류 메시지](./errors/flow-service-errors.md)
 - [흐름 실행 알림](notifications.md)
 - [IP 주소 허용 목록](ip-address-allow-list.md)
 - [자주 묻는 질문](./troubleshooting.md)
