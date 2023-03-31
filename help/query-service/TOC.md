@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: 9df75958d3945a52c219e96f18f9fc07f8036076
+source-git-commit: 83d1889450ba292573a6f995120691fc57cb6cfa
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '275'
 ht-degree: 18%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 18%
    - [속성 분석](use-cases/attribution-analysis.md)
    - [보트 필터링](use-cases/bot-filtering.md)
    - [이벤트의 트렌드 보고서 만들기](use-cases/trended-report-of-events.md)
+   - [고객 생애 가치](use-cases/customer-lifetime-value.md)
    - [데칠레 기반 파생 속성](use-cases/deciles-use-case.md)
    - [퍼지 일치](use-cases/fuzzy-match.md)
    - [사용자의 페이지 보기 나열](use-cases/list-visitor-sessions.md)
