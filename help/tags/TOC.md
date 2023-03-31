@@ -5,9 +5,9 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: 83ac7ba5bcdb0b0f728b42c709eef11b25fb3cef
+source-git-commit: 95a56982d38bd1e2c72dd84e2fa48b9de659741f
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '970'
 ht-degree: 31%
 
 ---
@@ -216,6 +216,7 @@ ht-degree: 31%
       * [Google Analytics용 클라우드 커넥터](https://exchange.adobe.com/apps/ec/106542)
       * 코어 {#core}
          * [개요](./extensions/server/core/overview.md)
+      * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)
       * Google 광고 향상된 전환 {#google-ads-enhanced-conversions}
          * [개요](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
