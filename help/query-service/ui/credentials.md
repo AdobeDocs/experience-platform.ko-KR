@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Service 자격 증명 안내서
 description: Adobe Experience Platform 쿼리 서비스는 쿼리를 작성 및 실행하고, 이전에 실행된 쿼리를 보고, IMS 조직 내의 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
+source-git-commit: 879f3eb1f6856470e8e2d87537ca12438ca25d22
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1338'
 ht-degree: 3%
 
 ---
@@ -123,13 +123,15 @@ Adobe Experience Platform 쿼리 서비스를 통해 외부 클라이언트와 �
 >만료되지 않은 자격 증명을 사용하여 호스트에 연결할 때에도 [!UICONTROL 만료 자격 증명] 암호 및 사용자 이름을 제외한 섹션을 참조하십시오.
 >사용자 이름과 암호를 입력하는 형식은 이 예제에서 보듯이 콜론 구분 값을 사용합니다 `username:{your_username}` 및 `password:{password_string}`.
 
-| 매개 변수 | 설명 |
-|---|---|
-| **서버/호스트** | 연결할 서버/호스트의 이름입니다. <ul><li>이 값은 만료 자격 증명과 만료 전 자격 증명 모두에 사용되며 `server.adobe.io`. 값은 **[!UICONTROL 호스트]** 에서 [!UICONTROL 만료 자격 증명] 섹션을 참조하십시오.</ul></li> |
-| **포트** | 연결할 서버/호스트의 포트입니다. <ul><li>이 값은 만료 자격 증명과 만료 전 자격 증명 모두에 사용되며 **[!UICONTROL 포트]** 에서 [!UICONTROL 만료 자격 증명] 섹션을 참조하십시오. 포트의 예제 값은 다음과 같습니다. `80`.</ul></li> |
-| **데이터베이스** | 연결할 데이터베이스입니다. <ul><li>이 값은 만료 자격 증명과 만료되지 않은 자격 증명 모두에 사용되며 **[!UICONTROL 데이터베이스]** 에서 [!UICONTROL 만료 자격 증명] 섹션을 참조하십시오. 데이터베이스의 예제 값은 다음과 같습니다. `prod:all`.</ul></li> |
-| **사용자 이름** | 외부 클라이언트에 연결하는 사용자의 사용자 이름입니다. <ul><li>이 값은 만료 자격 증명과 만료 전 자격 증명 모두에 사용됩니다. 이전 영숫자 문자열을 사용합니다 `@AdobeOrg`. 이 값은 **[!UICONTROL 사용자 이름]**.</li></ul> |
-| **암호** | 외부 클라이언트에 연결하는 사용자의 암호입니다. <ul><li>만료 자격 증명을 사용하는 경우 다음 위치에서 찾을 수 있습니다. **[!UICONTROL 암호]** 내 [!UICONTROL 만료 자격 증명] 섹션을 참조하십시오.</li><li>만료되지 않은 자격 증명을 사용하는 경우 이 값은 technicalAccountID에서 연결된 인수와 구성 JSON 파일에서 가져온 자격 증명입니다. 암호 값은 다음 형식을 사용합니다. `{technicalAccountId}:{credential}`.</li></ul> |
+| 매개 변수 | 설명 | 예 |
+|---|---|---|
+| **서버/호스트** | 연결할 서버/호스트의 이름입니다. <ul><li>이 값은 만료 자격 증명과 만료 전 자격 증명 모두에 사용되며 `server.adobe.io`. 값은 **[!UICONTROL 호스트]** 에서 [!UICONTROL 만료 자격 증명] 섹션을 참조하십시오.</ul></li> | `acme.platform.adobe.io` |
+| **포트** | 연결할 서버/호스트의 포트입니다. <ul><li>이 값은 만료 자격 증명과 만료 전 자격 증명 모두에 사용되며 **[!UICONTROL 포트]** 에서 [!UICONTROL 만료 자격 증명] 섹션을 참조하십시오.</ul></li> | `80` |
+| **데이터베이스** | 연결할 데이터베이스입니다. <ul><li>이 값은 만료 자격 증명과 만료되지 않은 자격 증명 모두에 사용되며 **[!UICONTROL 데이터베이스]** 에서 [!UICONTROL 만료 자격 증명] 섹션을 참조하십시오. </ul></li> | `prod:all` |
+| **사용자 이름** | 외부 클라이언트에 연결하는 사용자의 사용자 이름입니다. <ul><li>이 값은 만료 자격 증명과 만료 전 자격 증명 모두에 사용됩니다. 이전 영숫자 문자열을 사용합니다 `@AdobeOrg`. 이 값은 **[!UICONTROL 사용자 이름]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
+| **암호** | 외부 클라이언트에 연결하는 사용자의 암호입니다. <ul><li>만료 자격 증명을 사용하는 경우 다음 위치에서 찾을 수 있습니다. **[!UICONTROL 암호]** 내 [!UICONTROL 만료 자격 증명] 섹션을 참조하십시오.</li><li>만료되지 않은 자격 증명을 사용하는 경우 이 값은 technicalAccountID에서 연결된 인수와 구성 JSON 파일에서 가져온 자격 증명입니다. 암호 값은 다음 형식을 사용합니다. `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>만료 자격 증명 암호는 1,000자 이상의 영숫자 문자열입니다. 예가 없습니다.</li><li>만료되지 않은 자격 증명 암호는 다음과 같습니다.`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+
+{style="table-layout:auto"}
 
 ## 다음 단계
 
