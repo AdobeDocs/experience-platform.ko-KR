@@ -2,9 +2,9 @@
 title: Privacy Service 권한 관리
 description: Adobe Admin Console을 사용하여 Adobe Experience Platform Privacy Service의 사용자 권한을 관리하는 방법을 알아봅니다.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: 37a67b19fa0cb38e9e34066c869dd9dc49edefd6
+source-git-commit: fc6c22ab1185b9692ece86de75149102ce020474
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1095'
 ht-degree: 1%
 
 ---
@@ -34,6 +34,10 @@ Privacy Service에 대한 액세스 제어를 구성하려면 Adobe Experience P
 ## 사용 가능한 권한
 
 다음 표에서는 Privacy Service이 액세스 권한을 부여하는 특정 기능에 대한 설명과 함께 사용 가능한 권한에 대해 설명합니다.
+
+>[!NOTE]
+>
+>모든 Privacy Service 및 [!UICONTROL 판매 거부] 권한은 서로 구분되고, 기능적 겹치지 않는 서로 구분됩니다. Privacy Service API가 idempotent로 간주되므로 가능한 작업입니다.
 
 | 카테고리 | 사용 권한 | 설명 |
 | --- | --- | --- |
