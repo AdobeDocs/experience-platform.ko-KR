@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 3월 릴리스 노트입니다.
-source-git-commit: 1ead97aa9b197cd1c046175bdcd06c03fd35ac17
+source-git-commit: e597656949ba81b4a07c2962a02ddd94c6dc23e3
 workflow-type: tm+mt
-source-wordcount: '1709'
-ht-degree: 4%
+source-wordcount: '2153'
+ht-degree: 5%
 
 ---
 
@@ -110,6 +110,38 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 | 기능 | 설명 |
 | --- | --- |
 | CSV로 스키마 권장 사항 | 이제 로컬 파일을 업로드하여 기계 학습을 통해 생성된 스키마를 만들어 수동으로 스키마를 생성할 필요가 없습니다. 에서 [!UICONTROL 소스] 작업 공간, 샘플 CSV 파일 업로드 및 Adobe 기계 학습 알고리즘은 대상 필드를 기반으로 하는 스키마를 제안합니다. 자세한 내용은 [설명서](../../ingestion/tutorials/map-csv/recommendations.md)를 참조하십시오.&quot; |
+
+{style="table-layout:auto"}
+
+**새로운 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 |
+| --- | --- | --- |
+| 클래스 | [[!UICONTROL 오퍼 항목]](https://github.com/adobe/xdm/pull/1678/files) | 오퍼를 나타내는 클래스입니다. |
+| 클래스 | [[!UICONTROL 의사 결정 항목]](https://github.com/adobe/xdm/pull/1678/files) | 의사 결정을 내릴 수 있는 항목입니다. 의사 결정 프로세스의 출력은 하나 이상의 의사 결정 항목입니다. |
+| 클래스 | [[!UICONTROL 미디어 세션 서버 시간 초과]](https://github.com/adobe/xdm/pull/1676/files) | 이는 사용자의 마지막으로 알려진 상호 작용과 세션이 닫히는 시간(초)을 나타냅니다. |
+| 필드 그룹 | [[!UICONTROL XDM 프로필 계산 속성]](https://github.com/adobe/xdm/pull/1686/files) | 이렇게 하면 내부 Adobe 서비스에서 계산된 속성이 들어오는 고객 데이터에 추가됩니다. 고객이 데이터를 수집하는 데 사용해서는 안 됩니다. |
+| 데이터 형식 | [[!UICONTROL 환불 품목]](https://github.com/adobe/xdm/pull/1685/files) | 환불이 주문과 연관되어 있는지 여부를 나타내며 환불 유형, 금액 및 관련 통화를 정의합니다. |
+| 데이터 형식 | [[!UICONTROL 카테고리 데이터]](https://github.com/adobe/xdm/pull/1677/files) | 이 새 데이터 유형은 제품의 카테고리를 나타냅니다. |
+| 스키마 | [[!UICONTROL Adobe Target 분류 필드]](https://github.com/adobe/xdm/pull/1682/files) | Target 분류 데이터 세트에 대한 새 XDM 스키마를 만들었습니다. 여기에는 Target 활동 및 경험을 분류하는 메타데이터 필드 세트가 포함되어 있습니다. |
+
+{style="table-layout:auto"}
+
+**업데이트된 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 |
+| --- | --- | --- |
+| 필드 그룹 | [[!UICONTROL 컨텐츠 구성 요소 세부 사항]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` 에서 제거됨 [!UICONTROL 컨텐츠 구성 요소 세부 사항] |
+| 필드 그룹 | [[!UICONTROL AJO 엔티티 태그]](https://github.com/adobe/xdm/pull/1672/files) | 에 AJO 엔티티 태그가 추가되었습니다. [!UICONTROL AJO 엔티티 필드]여정 또는 캠페인에 해당하는 경우 |
+| 필드 그룹 | (복수) | 에 대한 여러 필드가 추가되었습니다 [[!UICONTROL Journey Orchestration 단계 이벤트 공통 필드]](https://github.com/adobe/xdm/pull/1671/files) |
+| 필드 그룹 | (복수) | [에 대한 여러 XDM 이벤트 유형이 추가되었습니다. [!UICONTROL 미디어 보고]](https://github.com/adobe/xdm/pull/1670/files). |
+| 필드 그룹 | [!UICONTROL Workfront 변경 이벤트] | 다음 `Full Record` 및 `Accessor Employee Ids` 필드 그룹이 추가되었습니다. |
+| 데이터 형식 | [[!UICONTROL 제품 목록 항목]](https://github.com/adobe/xdm/pull/1685/files) | 다음 [!UICONTROL 환불 금액] 가 추가되어 있는 경우 해당 품목에 대해 환급된 금액이 있습니다. |
+| 데이터 형식 | [[!UICONTROL 주문 ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL 환불 목록] 이 주문에 대한 환불 목록에 추가되었습니다. |
+| 데이터 형식 | [[!UICONTROL 제품 목록 항목 ]](https://github.com/adobe/xdm/pull/1677/files) | 제품 카테고리가 이 제품의 카테고리 데이터 목록에 추가되었습니다. |
+| 데이터 유형 | [!UICONTROL 세션 세부 정보] | 가 추가되었습니다. `pev3` 문자열 필드 [보고에 사용되는 미디어 스트림의 유형을 나타냅니다](https://github.com/adobe/xdm/pull/1676/files). 또한 `pccr` 속성은 리디렉션이 발생했는지 여부를 나타냅니다. |
+| 데이터 유형 | [!UICONTROL 구매요청 목록] | 다음을 제공합니다. [구매요청 목록 등록 정보](https://github.com/adobe/xdm/pull/1675/files). 여기에는 이름, ID 및 설명이 포함됩니다. |
+| 데이터 유형 | [!UICONTROL Commerce] | 다음 [상거래 데이터 유형이 업데이트되었습니다](https://github.com/adobe/xdm/pull/1675/files) 다음을 포함합니다. `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`, 및 `requisitionList`. |
 
 {style="table-layout:auto"}
 
