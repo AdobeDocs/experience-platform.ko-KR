@@ -7,7 +7,7 @@ exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '1463'
-ht-degree: 1%
+ht-degree: 14%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
->title="데이터 주체 개인 정보 보호 요청 적용"
->abstract="<h2>설명</h2><p>Adobe Experience Platform Privacy Service을 사용하면 법적 개인 정보 보호 규정에 따라 개인 데이터에 액세스하거나 삭제하려는 고객을 대신하여 개인 정보 보호 요청을 만들고 관리할 수 있습니다.</p>"
+>title="데이터 주체 개인 정보 보호 요청 이행"
+>abstract="<h2>설명</h2><p>Adobe Experience Platform Privacy Service를 사용하면 법적 개인 정보 보호 규정에 따라 개인 데이터에 액세스하거나 삭제하려는 고객을 대신하여 개인 정보 보호 요청을 생성하고 관리할 수 있습니다.</p>"
 
 이 문서에서는 [!DNL Privacy Service] 사용자 인터페이스.
 
@@ -109,7 +109,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"
 >title="지침"
->abstract="<ul><li>선택 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform">요청</a> 왼쪽 탐색에서 개인 정보 URL을 연 다음 을 선택합니다 <b>요청 만들기</b>.</li><li>여기에서 요청 빌더를 사용하거나 데이터 주체의 JSON 파일을 업로드할 수 있습니다.</li><li>요청 빌더를 사용하는 경우 작업 유형(액세스 및/또는 삭제)을 선택한 다음 제공할 ID 유형(이메일, ECID 또는 AAID)을 선택하거나 사용자 지정 ID 네임스페이스를 입력합니다. 고객에 대한 적절한 ID 값을 입력하고 <b>만들기</b> 완료됨.</li><li>JSON 파일을 업로드하는 경우 요청 만들기 옆에 있는 화살표를 선택합니다. 옵션 목록에서 <b>JSON 업로드</b> 파일을 업로드합니다. 업로드할 JSON 파일이 없다면 를 선택합니다. <b>Adobe-GDPR-Request.json 다운로드</b> 을 눌러 채울 수 있는 템플릿을 다운로드합니다. JSON을 업로드하고 를 선택합니다 <b>만들기</b> 완료됨.</li><li>이 기능에 대한 자세한 내용은 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=ko">Privacy Service 사용 안내서</a> Experience League에서 확인하십시오.</li></ul>"
+>abstract="<ul><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform">요청</a>을 선택하여 Privacy Ul를 연 다음 <b>요청 만들기</b>를 선택합니다.</li><li>여기에서 요청 빌더를 사용하거나 데이터 주체의 JSON 파일을 업로드할 수 있습니다.</li><li>요청 빌더를 사용하는 경우 작업 유형(액세스 및/또는 삭제)을 선택한 다음 제공하는 자격 증명 유형(이메일, ECID 또는 AAID)을 선택하거나 사용자 정의 자격 증명 네임스페이스를 입력합니다. 고객에 대한 적절한 ID 값을 입력하고 완료되면 <b>만들기</b>를 선택합니다.</li><li>JSON 파일을 업로드하는 경우 요청 만들기 옆에 있는 화살표를 선택합니다. 옵션 목록에서 <b>JSON 업로드</b>를 선택하고 파일을 업로드합니다. 업로드할 JSON 파일이 없는 경우 <b>Adobe-GDPR-Request.json 다운로드</b>를 선택하여 작성할 수 있는 템플릿을 다운로드합니다. JSON을 업로드하고 완료되면 <b>만들기</b>를 선택합니다.</li><li>이 기능에 대한 자세한 내용은 Experience League의 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=ko">Privacy Service 사용 안내서</a>를 참조하십시오.</li></ul>"
 
 >[!NOTE]
 >

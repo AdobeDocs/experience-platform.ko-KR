@@ -7,7 +7,7 @@ exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '794'
-ht-degree: 1%
+ht-degree: 15%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"
->title="민감하고 보호된 데이터에 대한 액세스 제어"
->abstract="<h2>설명</h2><p>특정 데이터 속성 및/또는 세그먼트에 대한 액세스를 제어하여 Experience Platform 사용 사례를 운영하는 다양한 성향 및 팀에 대해 유연한 워크플로우를 디자인할 수 있습니다.</p>"
+>title="중요하고 보호된 데이터에 대한 액세스 제어"
+>abstract="<h2>설명</h2><p>특정 데이터 속성 및/또는 세그먼트에 대한 액세스를 제어하여 Experience Platform 사용 사례를 운영하는 다양한 페르소나 및 팀을 위한 유연한 워크플로를 설계할 수 있습니다.</p>"
 
 Adobe Experience Platform을 사용하면 데이터 세트 및 필드에 데이터 사용 레이블을 적용하여 각 세그먼트를 관련 항목에 따라 분류할 수 있습니다 [데이터 거버넌스 정책](../policies/overview.md) 및 [액세스 제어 정책](../../access-control/abac/ui/policies.md).
 
@@ -51,7 +51,7 @@ Platform에서 자동 적용 작동 방식에 대한 자세한 내용은 [자동
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
 >title="지침"
->abstract="<ul><li>XDM 필드 및 세그먼트에 레이블을 지정하여 액세스를 제한할 필드 및 세그먼트를 분류합니다.</li><li>레이블 역할, 역할에 레이블을 추가하면 이 역할의 레이블 구성원에게 제한 사항이 있는 레이블을 정의할 수 있습니다.</li><li>정책을 만들면 정책이 XDM 필드 및 세그먼트 와 같은 레이블이 지정된 객체의 레이블과 역할의 레이블 간에 관계를 만듭니다. 레이블이 일치하면 허용 또는 제한 액세스를 정의할 수 있습니다.</li></ul>"
+>abstract="<ul><li>XDM 필드 및 세그먼트에 레이블을 지정하여 액세스를 제한하려는 필드 및/또는 세그먼트를 분류합니다.</li><li>역할에 레이블 지정, 즉 레이블을 역할에 추가하면 해당 역할을 가진 구성원들이 제한할 수 있는 레이블을 정의할 수 있습니다.</li><li>정책 만들기, 즉 정책은 XDM 필드 및 세그먼트와 같은 레이블이 지정된 오브젝트의 레이블과 역할의 레이블 간의 관계를 생성합니다. 레이블이 일치하면 허용 또는 제한 액세스를 정의할 수 있습니다.</li></ul>"
 
 다음을 사용하여 데이터 사용 레이블을 관리할 수 있습니다 [!DNL Experience Platform] API 또는 사용자 인터페이스. 각각에 대한 자세한 내용은 아래 하위 섹션을 참조하십시오.
 
