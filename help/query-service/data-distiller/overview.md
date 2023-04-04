@@ -1,10 +1,10 @@
 ---
 title: 데이터 Distiller 개요
 description: 라이선스 권한과 관련된 Query Service 데이터에 대한 Data Distiller 사용 제한 요약입니다.
-source-git-commit: e4337dcebaf313365ed9e403a5891f49decb29e9
+source-git-commit: 5958a9764ebe749a6c945c984a6e9979c444d4dc
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 2%
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
@@ -12,13 +12,14 @@ ht-degree: 2%
 
 Data Distiller 는 Adobe Experience Platform의 기능 하위 집합을 포함하는 패키지 서비스입니다. Data Cloud를 사용하면 Query Service에서 배치 쿼리를 실행하여 실시간 고객 프로필 또는 분석 사용 사례에 대한 사후 수집 데이터 준비(예: 청소, 쉐이핑 및 조작)를 수행할 수 있습니다. 데이터 Distiller의 사용은 플랫폼 기반 애플리케이션에 대한 사용 권한에 따라 다릅니다.
 
-## 라이선스 사용 {#license-usage}
-
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
-The [Data Distiller license usage dashboard](./license-usage.md) is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours. See the [Data Distiller license usage document](./license-usage.md) to view important information about your organization's Query Service license usage. 
--->
+## License usage {#license-usage}
 
-Data Distiller 계산 시간을 구입한 후에는 Data Analytics 라이선스 사용 대시보드를 사용할 수 있습니다. 라이선스 사용 대시보드는 권한이 있는 컴퓨팅 시간의 소비를 모니터링하는 데 도움이 됩니다.
+
+The [Data Distiller license usage dashboard](./license-usage.md) is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours. See the [Data Distiller license usage document](./license-usage.md) to view important information about your organization's Query Service license usage. 
+
+The Data Distiller license usage dashboard is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours.
+-->
 
 <!-- Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
