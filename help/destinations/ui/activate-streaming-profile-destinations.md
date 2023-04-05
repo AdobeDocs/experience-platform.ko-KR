@@ -4,7 +4,7 @@ title: 스트리밍 프로필 내보내기 대상으로 대상 데이터 활성�
 type: Tutorial
 description: 세그먼트를 스트리밍 프로필 기반 대상으로 보내 Adobe Experience Platform에서 보유한 대상 데이터를 활성화하는 방법을 알아봅니다.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: 5bb2981b8187fcd3de46f80ca6c892421b3590f6
 workflow-type: tm+mt
 source-wordcount: '780'
 ht-degree: 5%
@@ -120,7 +120,7 @@ ht-degree: 5%
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
         "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },

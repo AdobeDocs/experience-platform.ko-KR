@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 세그먼트를 파일 기반 대상으로 활성화합니다
 description: Flow Service API를 사용하여 자격 조건을 갖춘 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
-source-git-commit: d925802489d5da006cd9cfacb89b3e880663edaf
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
 source-wordcount: '4337'
 ht-degree: 2%
@@ -3750,7 +3750,6 @@ Inspect에서 위의 호출을 수행할 때 발생하는 응답입니다. 객�
                "properties":{
                   "status":{
                      "enum":[
-                        "existing",
                         "realized",
                         "exited"
                      ],
@@ -3759,7 +3758,6 @@ Inspect에서 위의 호출을 수행할 때 발생하는 응답입니다. 객�
                      "default":"realized",
                      "meta:enum":{
                         "exited":"Entity is exiting the segment.",
-                        "existing":"Entity continues to be in the segment.",
                         "realized":"Entity is entering the segment."
                      },
                      "description":"Is the segment participation realized as part of the current request.",
@@ -4066,11 +4064,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                 "meta:xdmType": "string",
                                 "meta:enum": {
                                     "exited": "Entity is exiting the segment.",
-                                    "realized": "Entity is entering the segment.",
-                                    "existing": "Entity continues to be in the segment."
+                                    "realized": "Entity is entering the segment."
                                 },
                                 "enum": [
-                                    "existing",
                                     "realized",
                                     "exited"
                                 ],

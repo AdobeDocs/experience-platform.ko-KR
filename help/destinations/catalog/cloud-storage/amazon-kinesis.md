@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis 대상;kinesis
 title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 만들어 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: ce20c273cb6a87264363c03611ccfdfb783e595f
+source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
 workflow-type: tm+mt
-source-wordcount: '1949'
+source-wordcount: '1944'
 ht-degree: 4%
 
 ---
@@ -169,7 +169,7 @@ Experience Platform은 프로필 내보내기 동작을 로 최적화합니다 [
 
 | 대상 내보내기를 결정하는 것은 무엇입니까? | 대상 내보내기에 포함된 항목 |
 |---------|----------|
-| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기의 단서로 사용됩니다. 즉, 매핑된 세그먼트가 상태(null에서 실현됨 또는 실현됨/존재에서 종료로)를 변경하거나 매핑된 속성을 업데이트하면 대상 내보내기가 해제됩니다.</li><li>현재 ID를 매핑할 수 없으므로 [!DNL Amazon Kinesis] 대상, 지정된 프로필의 모든 id의 변경 사항으로 대상 내보내기도 결정합니다.</li><li>속성 변경은 속성이 동일한 값이든 간에 속성에 대한 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기는 변경 사항으로 간주됩니다.</li></ul> | <ul><li>다음 `segmentMembership` 개체에는 활성화 데이터 플로우에 매핑된 세그먼트가 포함되어 있습니다. 이 세그먼트는 자격 또는 세그먼트 종료 이벤트 후 프로필 상태가 변경되었습니다. 자격이 있는 프로파일이 동일한 세그먼트에 속하는 경우 매핑되지 않은 다른 세그먼트는 대상 내보내기의 일부일 수 있습니다 [병합 정책](/help/profile/merge-policies/overview.md) 를 활성화 데이터 플로우에 매핑된 세그먼트로 사용합니다. </li><li>의 모든 ID `identityMap` 개체도 포함됩니다(Experience Platform은 현재 [!DNL Amazon Kinesis] 대상).</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
+| <ul><li>매핑된 속성 및 세그먼트는 대상 내보내기의 단서로 사용됩니다. 즉, 매핑된 세그먼트가 상태( `null` to `realized` 또는 `realized` to `exiting`) 또는 매핑된 속성이 업데이트되면 대상 내보내기가 해제됩니다.</li><li>현재 ID를 매핑할 수 없으므로 [!DNL Amazon Kinesis] 대상, 지정된 프로필의 모든 id의 변경 사항으로 대상 내보내기도 결정합니다.</li><li>속성 변경은 속성이 동일한 값이든 간에 속성에 대한 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기는 변경 사항으로 간주됩니다.</li></ul> | <ul><li>다음 `segmentMembership` 개체에는 활성화 데이터 플로우에 매핑된 세그먼트가 포함되어 있습니다. 이 세그먼트는 자격 또는 세그먼트 종료 이벤트 후 프로필 상태가 변경되었습니다. 자격이 있는 프로파일이 동일한 세그먼트에 속하는 경우 매핑되지 않은 다른 세그먼트는 대상 내보내기의 일부일 수 있습니다 [병합 정책](/help/profile/merge-policies/overview.md) 를 활성화 데이터 플로우에 매핑된 세그먼트로 사용합니다. </li><li>의 모든 ID `identityMap` 개체도 포함됩니다(Experience Platform은 현재 [!DNL Amazon Kinesis] 대상).</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -209,11 +209,11 @@ Experience Platform은 프로필 내보내기 동작을 로 최적화합니다 [
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae":{
          "lastQualificationTime":"2022-01-02T23:37:33Z",
-         "status":"existing"
+         "status":"realized"
       },
       "947c1c46-008d-40b0-92ec-3af86eaf41c1":{
          "lastQualificationTime":"2021-08-25T23:37:33Z",
-         "status":"existing"
+         "status":"realized"
       },
       "5114d758-ce71-43ba-b53e-e2a91d67b67f":{
          "lastQualificationTime":"2022-01-11T23:37:33Z",
@@ -251,7 +251,7 @@ Experience Platform은 프로필 내보내기 동작을 로 최적화합니다 [
         "ups": {
           "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
             "lastQualificationTime": "2019-04-15T02:41:50+0000",
-            "status": "existing",
+            "status": "realized",
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,
@@ -271,7 +271,7 @@ Experience Platform은 프로필 내보내기 동작을 로 최적화합니다 [
         "ups": {
           "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
             "lastQualificationTime": "2019-04-15T02:41:50+0000",
-            "status": "existing",
+            "status": "realized",
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,
