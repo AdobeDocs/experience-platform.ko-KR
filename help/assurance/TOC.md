@@ -1,18 +1,18 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform 보증
-breadcrumb-title: 보증 안내서
-user-guide-description: Adobe Experience Platform Assurance를 사용하면 모바일 애플리케이션 내에서 데이터를 수집하거나 경험을 제공하는 방법을 검사, 증명, 시뮬레이션 및 확인할 수 있습니다.
+user-guide-title: Adobe Experience Platform Assurance
+breadcrumb-title: Assurance 안내서
+user-guide-description: Adobe Experience Platform Assurance를 사용하면 모바일 애플리케이션 내에서 데이터를 수집하거나 경험을 제공하는 방식을 검사하고, 증명하고, 시뮬레이트하고, 검증할 수 있습니다.
 feature: Assurance
 source-git-commit: 5778d4db27d0f57281821dc8e042a31b69745514
 workflow-type: tm+mt
 source-wordcount: '65'
-ht-degree: 16%
+ht-degree: 66%
 
 ---
 
 
-# Adobe Experience Platform 보증 {#assurance}
+# Adobe Experience Platform Assurance {#assurance}
 
 - [보증 개요](./home.md)
 - [사용자 액세스](./user-access.md)
