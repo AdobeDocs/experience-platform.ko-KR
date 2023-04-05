@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 3월 릴리스 노트입니다.
-source-git-commit: 1aeaf832f6cb2acf65c25199693b06669682883b
+source-git-commit: 5f7cc08d48b7cf7d057fe199882be011607e51e6
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2397'
 ht-degree: 4%
 
 ---
@@ -51,6 +51,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | 기능 | 설명 |
 | --- | --- |
 | 신규 메타 전환 API(베타)에 대한 빠른 시작 워크플로우 | 데이터 수집 홈 화면에서 &quot;시작하기&quot;에서 새로운 빠른 시작 워크플로우에 액세스합니다. 다음 [메타 전환 API에 대한 빠른 시작 워크플로우](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) 에서는 몇 가지 간단한 단계로 이벤트 데이터를 서버 측에서 Meta로 수집하여 전송할 수 있습니다. |
+| Mobile SDK(베타)를 위한 새로운 빠른 시작 워크플로우 | 데이터 수집 홈 화면에서 &quot;시작하기&quot;에서 새로운 빠른 시작 워크플로우에 액세스합니다. 다음 [모바일 SDK용 빠른 시작 워크플로우](https://developer.adobe.com/client-sdks/documentation/) 에서는 몇 가지 간단한 단계로 Mobile SDK를 신속하게 구현하고 기본 모바일 이벤트의 유효성을 확인할 수 있습니다. |
 | [!DNL Braze] 이벤트 전달 확장 | 다음 [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 이벤트 전달 확장을 사용하면 Adobe Experience Platform Edge Network에서 캡처한 데이터를 활용하여 로 보낼 수 있습니다 [!DNL Braze] 를 사용하여 서버측 이벤트 형태로 [!DNL Braze] 사용자 추적 API. |
 | [!DNL Epsilon] 이벤트 전달 확장 | 다음 [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) 확장 기능을 사용하면 이벤트 전달을 활용하여 Adobe Experience Platform Edge Network에서 이벤트 정보를 캡처하고 로 전송할 수 있습니다 [!DNL Epsilon] 사용 [!DNL Epsilon] 이벤트 API. |
 | [!DNL Mixpanel] 이벤트 전달 확장 | 다음 [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 확장 을 사용하면 이벤트 전달을 활용하여 Adobe Experience Platform Edge Network에서 이벤트 정보를 캡처하고 이벤트 추적 API를 사용하여 Mixpanel에 전송할 수 있습니다. |
