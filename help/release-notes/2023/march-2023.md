@@ -1,18 +1,14 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2023년 3월
 description: Adobe Experience Platform에 대한 2023년 3월 릴리스 노트입니다.
-source-git-commit: 1aeaf832f6cb2acf65c25199693b06669682883b
+source-git-commit: 5b8dd4b295f9363fd7e848070b1ec21ff519c524
 workflow-type: tm+mt
-source-wordcount: '2398'
+source-wordcount: '2206'
 ht-degree: 4%
 
 ---
 
 # Adobe Experience Platform 릴리스 노트
-
->[!IMPORTANT]
->
->2023년 4월 5일부터 `Existing` 세그먼트 멤버십 라이프사이클에서 중복을 제거하기 위해 상태는 세그먼트 멤버십 맵에서 더 이상 사용되지 않습니다. 이 변경 후 세그먼트에 자격을 갖춘 프로필은 로 표시됩니다 `Realized` 그리고 자격이 없는 프로필은 `Exited`. 이 변경 사항에 대한 자세한 내용은 [세분화 서비스 섹션](#segmentation).
 
 **릴리스 일자: 2023년 3월 29일**
 
@@ -189,7 +185,6 @@ Real-Time CDP B2B Edition에 대해 자세히 알아보려면 [Real-Time CDP B2B
 | 기능 | 설명 |
 | ------- | ----------- |
 | 프로필 지표 | 프로필 지표를 더 정확하게 표현하기 위해 멤버십 분류 및 이탈 지표가 결합되고 이제 24시간 동안 계산됩니다. 자세한 내용은 [세그멘테이션 UI 안내서](../../segmentation/ui/overview.md#browse) |
-| 세그먼트 멤버십 맵 | 2023년 4월 5일 2월의 이전 발표에 대한 후속 발표로서, `Existing` 세그먼트 멤버십 라이프사이클에서 중복을 제거하기 위해 상태는 세그먼트 멤버십 맵에서 더 이상 사용되지 않습니다. 이 변경 후 세그먼트에 자격을 갖춘 프로필은 로 표시됩니다 `Realized` 그리고 자격이 없는 프로필은 `Exited`.<br/><br/>  이 변경 사항은 [엔터프라이즈 대상](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure 이벤트 허브, HTTP API) 및 은(는) `Existing` 상태. 이러한 경우 다운스트림 통합을 검토하십시오. 특정 시간 이후에 새로 자격을 갖춘 프로필을 식별하는 데 관심이 있는 경우 `Realized` 상태 및 `lastQualificationTime` 세그먼트 멤버십 맵에서 공유할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오. |
 
 {style="table-layout:auto"}
 
