@@ -2,26 +2,27 @@
 title: (API) Oracle Eloqua 연결
 description: (API) Oracle Eloqua 대상을 사용하면 비즈니스 요구 사항에 맞게 Oracle Eloqua 내에서 계정 데이터를 내보내고 활성화할 수 있습니다.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: 3197eddcf9fef2870589fdf9f09276a333f30cd1
+source-git-commit: e8aa09545c95595e98b4730188bd8a528ca299a9
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1642'
 ht-degree: 0%
 
 ---
+
 
 # [!DNL (API) Oracle Eloqua] 연결
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) 은 마케터가 잠재 고객을 위해 개인화된 고객 경험을 제공하면서 캠페인을 계획 및 실행할 수 있도록 해줍니다. 통합된 리드 관리 및 쉬운 캠페인 만들기 기능을 통해 마케터는 구매자의 여정에서 적시에 올바른 대상을 참여시킬 수 있고 이메일, 디스플레이 검색, 비디오 및 모바일을 포함한 다양한 채널에서 대상에게 우아한 규모로 이동할 수 있습니다. 영업 팀은 더 많은 거래를 더 빠른 비율로 종결할 수 있으므로 실시간 통찰력을 통해 마케팅 ROI를 높일 수 있습니다.
 
-이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md) 활용 [연락처 업데이트](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) 작업 [!DNL Oracle Eloqua] 세그먼트 내의 ID를 [!DNL Oracle Eloqua].
+이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md) 활용 [연락처 업데이트](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) 작업 [!DNL Oracle Eloqua] REST API. **id 업데이트** 세그먼트 내에서 [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] 사용 [기본 인증](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) 와 통신하다 [!DNL Oracle Eloqua] REST API. 인증 지침 [!DNL Oracle Eloqua] 인스턴스는 아래에 있습니다. [대상에 인증](#authenticate) 섹션을 참조하십시오.
 
 ## 사용 사례 {#use-cases}
 
-마케터는 Adobe Experience Platform 프로필의 속성에 따라 사용자에게 개인화된 경험을 제공할 수 있습니다. 오프라인 데이터에서 세그먼트를 작성하고 이러한 세그먼트를 [!DNL Oracle Eloqua]: 세그먼트 및 프로필이 Adobe Experience Platform에서 업데이트되는 즉시 사용자 피드에 표시됩니다.
+온라인 플랫폼의 마케팅 부서에서 선별된 리드 대상으로 이메일 기반 마케팅 캠페인을 브로드캐스트하려고 합니다. 플랫폼의 마케팅 팀은 Adobe Experience Platform을 통해 기존 리드 정보를 업데이트하고, 오프라인 데이터에서 세그먼트를 작성하고, 이러한 세그먼트를 로 보낼 수 있습니다 [!DNL Oracle Eloqua]: 마케팅 캠페인 이메일을 전송하는 데 사용할 수 있습니다.
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 
@@ -54,15 +55,26 @@ Platform에서 로 데이터를 내보내려면 [!DNL Oracle Eloqua] 계정이 �
 * 이 제한을 초과하는 경우 Experience Platform 오류가 발생합니다. 이것은 [!DNL Oracle Eloqua] API가 요청의 유효성을 검사하지 못하며, -에 응답합니다. *400: 유효성 검사 오류가 발생했습니다.* - 문제를 설명하는 오류 메시지.
 * 위에 지정된 제한에 도달한 경우 대상에서 기존 매핑을 제거하고 대상에서 해당 사용자 지정 연락처 필드를 삭제해야 합니다 [!DNL Oracle Eloqua] 더 많은 세그먼트를 내보내기 전에 계정을 사용하십시오.
 
-* 자세한 내용은 [대화 상대 필드 생성 oracle](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) 추가 제한에 대한 자세한 내용은 페이지를 참조하십시오.
+* 자세한 내용은 [[!DNL Oracle Eloqua] 연락처 필드 만들기](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) 추가 제한에 대한 자세한 내용은 페이지를 참조하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
 [!DNL Oracle Eloqua] 은 아래 표에 설명된 id 업데이트를 지원합니다. 추가 정보 [id](/help/identity-service/namespaces.md).
 
-| Target ID | 예 | 설명 | 필수입니다 |
-|---|---|---|---|
-| `EloquaId` | `111111` | 연락처의 고유 식별자입니다. | 예 |
+| Target ID | 설명 | 필수입니다 |
+|---|---|---|
+| `EloquaId` | 연락처의 고유 식별자입니다. | 예 |
+
+## 내보내기 유형 및 빈도 {#export-type-frequency}
+
+대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
+
+| 항목 | 유형 | 참고 |
+---------|----------|---------|
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>원하는 스키마 필드와 함께 세그먼트의 모든 구성원을 내보냅니다 *(예: 이메일 주소, 전화 번호, 성)*: 사용자 필드 매핑에 따라 다릅니다.</li><li> Platform에서 선택한 각 세그먼트에 대해 해당 [!DNL Oracle Eloqua] 세그먼트 상태는 Platform의 세그먼트 상태로 업데이트됩니다.</li></ul> |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | <ul><li>스트리밍 대상은 &quot;항상 설정&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+
+{style="table-layout:auto"}
 
 ## 대상에 연결 {#connect}
 
@@ -111,42 +123,37 @@ Platform에서 로 데이터를 내보내려면 [!DNL Oracle Eloqua] 계정이 �
 
 대상 데이터를 Adobe Experience Platform에서 로 올바로 보내려면 [!DNL Oracle Eloqua] 대상, 필드 매핑 단계를 거쳐야 합니다. 매핑은 플랫폼 계정의 Experience Data Model(XDM) 스키마 필드와 대상 대상의 해당 상당 요소 간에 링크를 만드는 작업으로 이루어집니다.
 
-`EloquaID` 는 ID에 해당하는 속성을 업데이트하는 데 필요합니다. 다음 `emailAddress` 가 필요 없는 경우에도 API에 아래와 같이 오류가 발생합니다.
-
-```json
-{
-   "type":"ObjectValidationError",
-   "container":{
-      "type":"ObjectKey",
-      "objectType":"Contact"
-   },
-   "property":"emailAddress",
-   "requirement":{
-      "type":"EmailAddressRequirement"
-   },
-   "value":"<null>"
-}
-```
-
-에 지정된 속성 **[!UICONTROL Target 필드]** 이 속성은 요청 본문을 형성하므로 속성 매핑 테이블에 설명된 대로 이름을 정확히 지정해야 합니다.
-
-에 지정된 속성 **[!UICONTROL 소스 필드]** 그러한 제한 사항을 따르지 마십시오. 필요에 따라 매핑할 수 있지만 데이터 형식이 올바르지 않은 경우 [!DNL Oracle Eloqua] 오류가 발생합니다.
-
-예를 들어 매핑할 수 있습니다 **[!UICONTROL 소스 필드]** id 네임스페이스 `contact key`, `ABC ID` 등. to **[!UICONTROL Target 필드]** : `EloquaID` ID 값이 [!DNL Oracle Eloqua].
-
 XDM 필드를 [!DNL Oracle Eloqua] 대상 필드: 다음 단계를 수행합니다.
 
 1. 에서 **[!UICONTROL 매핑]** 단계, 선택 **[!UICONTROL 새 매핑 추가]**. 화면에 새 매핑 행이 표시됩니다.
 1. 에서 **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 속성 선택]** 카테고리를 선택하고 XDM 속성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]** id를 선택합니다.
-1. 에서 **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]** ID를 선택하거나 **[!UICONTROL 사용자 지정 속성 선택]** 카테고리를 선택하고 필요에 따라 속성을 선택합니다.
-   * XDM 프로필 스키마와 사용자 프로필 스키마 사이에 다음 매핑을 추가하려면 이 단계를 반복합니다 [!DNL Oracle Eloqua] 인스턴스: |원본 필드|Target 필드| 필수| |—|—|—| |`xdm: personalEmail.address`|`Attribute: emailAddress`| 예 | |`IdentityMap: Eid`|`Identity: EloquaId`| 예 |
+1. 에서 **[!UICONTROL 대상 필드 선택]** 창, **[!UICONTROL ID 네임스페이스 선택]** ID를 선택하거나 **[!UICONTROL 사용자 지정 속성 선택]** 을 입력하고 **[!UICONTROL 속성 이름]** 필드. 제공하는 속성 이름은 의 기존 연락처 속성과 일치해야 합니다 [!DNL Oracle Eloqua]. 자세한 내용은 [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) 에 사용할 수 있는 정확한 속성 이름 [!DNL Oracle Eloqua].
+   * 다음 단계를 반복하여 XDM 프로필 스키마와 [!DNL Oracle Eloqua]: | 소스 필드 | Target 필드 | 필수 | |—|—|—| |`IdentityMap: Eid`|`Identity: EloquaId`| 예 | |`xdm: personalEmail.address`|`Attribute: emailAddress`| 예 | |`xdm: personName.firstName`|`Attribute: firstName`| | |`xdm: personName.lastName`|`Attribute: lastName`| | |`xdm: workAddress.street1`|`Attribute: address1`| | |`xdm: workAddress.street2`|`Attribute: address2`| | |`xdm: workAddress.street3`|`Attribute: address3`| | |`xdm: workAddress.postalCode`|`Attribute: postalCode`| | |`xdm: workAddress.country`|`Attribute: country`| | |`xdm: workAddress.city`|`Attribute: city`| |
 
-   * 이러한 매핑을 사용하는 예는 다음과 같습니다.
+   * 위의 매핑에 대한 예는 다음과 같습니다.
       ![속성 매핑이 있는 Platform UI 스크린샷 예.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
-      >[!IMPORTANT]
-      >
-      >둘 다 `emailAddress` 및 `EloquaId` target 속성 매핑은 필수입니다.
+>[!IMPORTANT]
+>
+>* 에 지정된 속성 **[!UICONTROL Target 필드]** 는 [[!DNL Create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) 이러한 특성이 요청 본문을 형성할 수 있습니다.
+>* 에 지정된 속성 **[!UICONTROL 소스 필드]** 그러한 제한 사항을 따르지 마십시오. 필요에 따라 매핑할 수 있지만 데이터 형식이 올바르지 않은 경우 [!DNL Oracle Eloqua] 오류가 발생합니다. 예를 들어 **[!UICONTROL 소스 필드]** id 네임스페이스 `contact key`, `ABC ID` 등. to **[!UICONTROL Target 필드]** : `EloquaId` ID 값이 [!DNL Oracle Eloqua].
+>* 다음 `EloquaID` 매핑은 id에 해당하는 속성을 업데이트하는 데 필수입니다.
+>* 다음 `emailAddress` 매핑이 필요합니다. 없는 경우, API에 아래와 같이 오류가 발생합니다.
+>
+>```json
+>{
+>     "type":"ObjectValidationError",
+>     "container":{
+>           "type":"ObjectKey",
+>           "objectType":"Contact"
+>     },
+>     "property":"emailAddress",
+>     "requirement":{
+>           "type":"EmailAddressRequirement"
+>     },
+>     "value":"<null>"
+>}
+>```
 
 대상 연결에 대한 매핑 제공을 마치면 를 선택합니다 **[!UICONTROL 다음]**.
 
@@ -182,6 +189,7 @@ XDM 필드를 [!DNL Oracle Eloqua] 대상 필드: 다음 단계를 수행합니�
 
 ## 추가 리소스 {#additional-resources}
 
-유용한 추가 정보는 [!DNL Oracle ELoqua] 설명서는 아래와 같습니다.
+자세한 내용은 [!DNL Oracle Eloqua] 설명서:
+
 * [Eloqua Marketing Automation oracle](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [oracle Eloqua Marketing Cloud 서비스를 위한 REST API](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
