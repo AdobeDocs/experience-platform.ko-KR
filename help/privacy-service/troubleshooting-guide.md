@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service 문제 해결 안내서
 description: 이 문서에서는 Privacy Service에 대해 자주 묻는 질문에 대한 답변과 API에서 일반적으로 발생하는 오류에 대한 정보를 제공합니다.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: fc115801ac8e75cd58356060ad98f1e340d2494a
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 1%
@@ -69,7 +69,7 @@ Adobe이 [!DNL Privacy Service] 실수로 제품에 제출된 데이터를 지�
 
 개인 정보 보호 요청은 시간에 따라 처리되며, 해당 개인 정보 보호법과 관련하여 완료됩니다. 데이터 주체/소비자 액세스 또는 삭제 요청이 아닌 요청 제출은 모든 영향을 줍니다. [!DNL Privacy Service] 고객 및 [!DNL Privacy Service] 적절한 법적 일정을 지원하기 위해 서비스 남용을 방지하기 위해 이제 하루 동안 하드 업로드 제한이 적용됩니다.
 
-계정 관리자에게 문의(CDM)하여 PII 또는 데이터 문제를 없애는 데 필요한 노력을 조정하거나 제공하십시오.
+PII 또는 데이터 문제를 제거하기 위한 노력을 조정하고 제공하려면 Adobe 계정 팀에 문의하십시오.
 
 ## 개인 정보 보호 요청 또는 작업의 상태에 대한 정보를 가져오려면 어떻게 해야 합니까?
 

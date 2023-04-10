@@ -2,9 +2,9 @@
 title: (베타) Experience Cloud 대상
 description: Experience Platform에서 다양한 Experience Platform 솔루션으로 세그먼트를 공유하는 방법을 알아봅니다.
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: 32222aa1c96537b51cd0db35d9cdabce9210f64a
+source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
 workflow-type: tm+mt
-source-wordcount: '1512'
+source-wordcount: '1509'
 ht-degree: 2%
 
 ---
@@ -67,7 +67,7 @@ Note: briefly talk about when to share segments to these destinations using the 
 
 ### 기존 세그먼트 공유 솔루션을 사용하는 고객의 경우
 
-이미 세그먼트를 Experience Platform에서 Audience Manager 및 을 통해 기타 Experience Cloud 솔루션으로 공유하는 경우 [이전 세그먼트 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam)로 지정하는 경우 고객 지원 센터 또는 고객 성공 관리자에게 문의하여 이전 통합을 비활성화해야 합니다. 고객 지원 및 고객 지원 관리 팀은 통합을 비활성화하려면 Jira 티켓을 파일(템플릿 티켓 AAM-52354 참조)해야 합니다.
+이미 세그먼트를 Experience Platform에서 Audience Manager 및 을 통해 기타 Experience Cloud 솔루션으로 공유하는 경우 [이전 세그먼트 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), 이전 통합을 비활성화하려면 고객 지원 센터 또는 Adobe 계정 팀에 문의해야 합니다. 고객 지원 및 Adobe 계정 팀은 통합을 비활성화하려면 Jira 티켓을 파일(템플릿 티켓 AAM-52354 참조)해야 합니다.
 
 베타 고객의 프로비저닝 해제 티켓을 해결하는 데 걸리는 시간은 영업일 기준으로 6일 이하입니다. 기존 레거시 통합이 비활성화된 후 다음을 진행할 수 있습니다 [연결 만들기](#connect) 셀프 서비스 대상 카드를 통해
 

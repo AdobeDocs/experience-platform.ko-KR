@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;데이터 관리;라이선스 �
 title: 데이터 관리 라이선스 자격 모범 사례
 description: Adobe Experience Platform을 사용하여 라이선스 권한을 보다 효율적으로 관리하는 데 사용할 수 있는 모범 사례 및 도구에 대해 알아봅니다.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 252ca6c62b6b95e3a01211c15d7361146dee5116
+source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
 workflow-type: tm+mt
-source-wordcount: '2130'
+source-wordcount: '2133'
 ht-degree: 2%
 
 ---
@@ -156,7 +156,7 @@ Platform에서 하나 이상의 시스템으로 데이터를 수집할 수 있�
 | 기능 | 설명 |
 | --- | --- |
 | [프로필에 대한 데이터 세트 활성화/비활성화](../../catalog/datasets/user-guide.md) | 실시간 고객 프로필에 데이터 세트 수집을 활성화하거나 비활성화합니다. |
-| [경험 이벤트 만료](../../profile/event-expirations.md) | 프로필 사용 데이터 세트에 수집된 모든 이벤트에 대해 만료 시간을 적용합니다. 이 기능을 사용하려면 Adobe 지원 담당자에게 문의하십시오. |
+| [경험 이벤트 만료](../../profile/event-expirations.md) | 프로필 사용 데이터 세트에 수집된 모든 이벤트에 대해 만료 시간을 적용합니다. 이 기능을 활성화하려면 Adobe 계정 팀이나 고객 지원 팀에 문의하십시오. |
 | [Adobe Analytics 데이터 준비 필터](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | 적용 [!DNL Kafka] 불필요한 데이터를 수집에서 제외하는 필터 |
 | [Adobe Audience Manager 소스 커넥터 필터](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Audience Manager 소스 연결 필터를 적용하여 불필요한 데이터를 수집에서 제외 |
 | [Alloy SDK 데이터 필터](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | 합금 필터를 적용하여 불필요한 데이터를 수집에서 제외 |

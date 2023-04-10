@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 세그먼트 일치 개요
 description: 세그먼트 일치 는 두 명 이상의 플랫폼 사용자가 안전하고 제어되며 개인 정보에 친숙한 방식으로 세그먼트 데이터를 교환할 수 있도록 해주는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 2%
@@ -56,7 +56,7 @@ ID 네임스페이스는 [Adobe Experience Platform Identity 서비스](../../..
 
 옵트인 및 옵트아웃 동의 확인은 기본적으로 사용자 데이터를 공유하는 동의로 작동할 수 있는지 여부를 결정합니다. 동의 구성 기본값이 로 설정된 경우 `opt-out`로 설정되면 사용자가 명시적으로 옵트아웃하지 않는 한 사용자 데이터를 공유할 수 있습니다. 기본값이 로 설정된 경우 `opt-in`로 설정되면 사용자가 명시적으로 옵트인을 선택하지 않는 한 사용자 데이터를 공유할 수 없습니다.
 
-에 대한 기본 동의 구성 [!DNL Segment Match] 가 로 설정되어 있습니다. `opt-out`. 데이터에 옵트인 모델을 적용하려면 Adobe 계정 관리자에게 이메일 요청을 보내십시오.
+에 대한 기본 동의 구성 [!DNL Segment Match] 가 로 설정되어 있습니다. `opt-out`. 데이터에 옵트인 모델을 적용하려면 Adobe 계정 팀에 이메일 요청을 보내십시오.
 
 에 대한 자세한 내용은 `share` 데이터 공유 동의 값을 설정하는 데 사용되는 속성은 다음 설명서를 참조하십시오. [개인 정보 및 동의 필드 그룹](../../../xdm/field-groups/profile/consents.md). 개인 정보, 개인화 및 마케팅 환경 설정과 관련된 데이터의 수집 및 사용에 대한 소비자 동의를 캡처하는 데 사용되는 특정 필드 그룹에 대한 자세한 내용은 다음을 참조하십시오 [개인 정보, 개인화 및 마케팅 환경 설정에 대한 동의 GitHub 예](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
