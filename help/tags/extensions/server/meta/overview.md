@@ -2,7 +2,7 @@
 title: 메타 전환 API 확장 개요
 description: Adobe Experience Platform의 이벤트 전달을 위한 메타 전환 API 확장에 대해 알아봅니다.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: fcc8e794bdfc3c6287d12c35e7d837d2f697239c
+source-git-commit: 6538599e10d4980c3890a8fba65c8ef51c24496a
 workflow-type: tm+mt
 source-wordcount: '2256'
 ht-degree: 0%
@@ -165,7 +165,7 @@ ht-degree: 0%
 
 구성하려는 다른 메타 변환 이벤트에 대해 이러한 단계를 반복합니다.
 
-#### 데이터 레이어 구성
+#### 데이터 레이어 구성 {#configuration}
 
 >[!IMPORTANT]
 >
