@@ -2,9 +2,9 @@
 keywords: 이벤트 전달 확장;브레이즈;브레이징 이벤트 전달 확장
 title: 이벤트 전달 확장 브레이징
 description: 이 Adobe Experience Platform 이벤트 전달 확장은 Adobe Experience Edge Network 이벤트를 Braze에 전송합니다.
-source-git-commit: 88e589eb17c249a8bdc82fe7a041a5581a60c7e6
+source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1863'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 - 마케팅 및 홍보 캠페인에 대해 특정 사용자를 Target 하여 반복 고객 수를 늘립니다.
 - 사용자 지정 메시지로 특정 대상을 타깃팅하는 사용자 행동 및 패턴을 학습하여 매출을 높일 수 있습니다.
 
-다음 [!DNL Braze Track Events API] [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장을 사용하면 Adobe Experience Platform Edge Network에서 캡처한 데이터를 활용하여 로 보낼 수 있습니다 [!DNL Braze] 를 사용하여 서버측 이벤트 형태로 [[!DNL Braze User Identify]](https://www.braze.com/docs/api/endpoints/user_data/post_user_identify) 및 [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
+다음 [!DNL Braze Track Events API] [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장을 사용하면 Adobe Experience Platform Edge Network에서 캡처한 데이터를 활용하여 로 보낼 수 있습니다 [!DNL Braze] 를 사용하여 서버측 이벤트 형태로 [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
 
 이 문서에서는 확장의 사용 사례, 이벤트 전달 라이브러리에 확장 프로그램을 설치하는 방법 및 이벤트 전달에서 해당 기능을 사용하는 방법에 대해 설명합니다 [규칙](../../../ui/managing-resources/rules.md).
 
