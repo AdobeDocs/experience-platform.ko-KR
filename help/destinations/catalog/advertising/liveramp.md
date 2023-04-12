@@ -3,9 +3,9 @@ title: (알파) [!DNL LiveRamp SFTP] 연결
 description: LiveRamp 커넥터를 사용하여 Adobe Real-time Customer Data Platform에서 LiveRamp Connect로 대상을 온보딩하는 방법을 알아봅니다.
 hidefromtoc: true
 hide: true
-source-git-commit: 875610178449ddade78462dc74ea4e3dbadb2907
+source-git-commit: b308def0e9b9643cfc1dcc8ac7db19eb733750ea
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1738'
 ht-degree: 0%
 
 ---
@@ -224,7 +224,7 @@ Platform은 각 CSV 파일에 대해 하나의 CSV 파일을 생성하므로 [�
 
 데이터를 로 성공적으로 내보낸 후 [!DNL LiveRamp - SFTP] 저장 영역에서에 데이터를 업로드해야 합니다 [!DNL LiveRamp] 플랫폼.
 
-자세한 내용은 **다음 단계** 의 섹션 [liveRamp로 데이터 가져오기](https://docs.liveramp.com/connect/en/getting-your-data-into-liveramp.html) 추가 지침은 설명서입니다.
+에서 파일을 업로드하는 방법에 대한 자세한 내용은 [!DNL LiveRamp - SFTP] 스토리지 [!DNL LiveRamp] 대상. 다음 설명서를 참조하십시오. [대상으로 첫 번째 파일을 업로드할 때의 고려 사항](https://docs.liveramp.com/connect/en/considerations-when-uploading-the-first-file-to-an-audience.html#considerations-when-uploading-the-first-file-to-an-audience).
 
 ## 데이터 사용 및 거버넌스 {#data-usage-governance}
 
