@@ -2,7 +2,8 @@
 keywords: 이벤트 전달 확장;브레이즈;브레이징 이벤트 전달 확장
 title: 이벤트 전달 확장 브레이징
 description: 이 Adobe Experience Platform 이벤트 전달 확장은 Adobe Experience Edge Network 이벤트를 Braze에 전송합니다.
-source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
+last-substantial-update: 2023-03-29T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 4%

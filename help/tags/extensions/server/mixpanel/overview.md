@@ -2,7 +2,8 @@
 keywords: 이벤트 전달 확장;mixpanel;mixpanel 이벤트 전달 확장
 title: Mixpanel 추적 이벤트 API 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장은 Adobe Experience Edge Network 이벤트를 Mixpanel에 전송합니다.
-source-git-commit: 8538e3a2899c3e2451519996cabeffc4b42d706c
+last-substantial-update: 2023-03-29T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 1%
