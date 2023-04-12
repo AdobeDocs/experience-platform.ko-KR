@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 배치 수집 API 안내서
 description: 이 문서에서는 Adobe Experience Platform용 배치 수집 API를 사용하는 개발자를 위한 포괄적인 안내서를 제공합니다.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2412'
+source-wordcount: '2411'
 ht-degree: 4%
 
 ---
@@ -549,7 +549,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{TENANT_ID}` | 이 ID는 사용자가 만드는 리소스가 제대로 식별되고 IMS 조직 내에 포함되어 있는지 확인하는 데 사용됩니다. |
+| `{TENANT_ID}` | 이 ID는 사용자가 만드는 리소스가 제대로 식별되고 조직 내에 포함되어 있는지 확인하는 데 사용됩니다. |
 | `{SCHEMA_ID}` | 생성한 스키마의 ID입니다. |
 
 ### 일괄 처리 만들기

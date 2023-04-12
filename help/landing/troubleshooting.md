@@ -7,9 +7,9 @@ landing-page-description: 자주 묻는 질문에 대한 답변과 Experience Pl
 short-description: 자주 묻는 질문에 대한 답변과 Experience Platform에서 일반적인 오류를 해결하기 위한 안내서를 확인하십시오.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1868'
 ht-degree: 5%
 
 ---
@@ -32,9 +32,9 @@ ht-degree: 5%
 
 API 요청 서식에 대한 자세한 내용은 플랫폼 API 시작 안내서를 참조하십시오 [샘플 API 호출 읽기](./api-guide.md#sample-api) 섹션을 참조하십시오.
 
-## IMS 조직이란 무엇입니까? {#what-is-my-ims-organization}
+## 조직이란 무엇입니까? {#what-is-my-ims-organization}
 
-IMS 조직은 고객의 Adobe 표현입니다. 라이센스가 있는 모든 Adobe 솔루션은 이 고객 조직과 통합됩니다. IMS 조직에서 다음 권한을 받을 수 있는 경우 [!DNL Experience Platform]로 설정되면 개발자에게 액세스 권한을 할당할 수 있습니다. IMS 조직 ID(`x-gw-ims-org-id`)은 API 호출을 실행해야 하는 조직을 나타내며, 따라서 모든 API 요청의 헤더로 필요합니다. 이 ID는 [Adobe Developer 콘솔](https://www.adobe.com/go/devs_console_ui): 에서 **통합** 탭으로 이동하여 **개요** 특정 통합에 대한 섹션을 참조 하여 **클라이언트 자격 증명**. 인증 방법에 대한 단계별 연습 [!DNL Platform]를 참조하고 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en).
+조직은 고객의 Adobe 표현입니다. 라이센스가 있는 모든 Adobe 솔루션은 이 고객 조직과 통합됩니다. 조직에서 [!DNL Experience Platform]로 설정되면 개발자에게 액세스 권한을 할당할 수 있습니다. 조직 ID(`x-gw-ims-org-id`)은 API 호출을 실행해야 하는 조직을 나타내며, 따라서 모든 API 요청의 헤더로 필요합니다. 이 ID는 [Adobe Developer 콘솔](https://www.adobe.com/go/devs_console_ui): 에서 **통합** 탭으로 이동하여 **개요** 특정 통합에 대한 섹션을 참조 하여 **클라이언트 자격 증명**. 인증 방법에 대한 단계별 연습 [!DNL Platform]를 참조하고 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## API 키는 어디에서 찾을 수 있습니까? {#where-can-i-find-my-api-key}
 
@@ -42,7 +42,7 @@ API 키는 모든 API 요청의 헤더로 필요합니다. URL은 [Adobe Develop
 
 ## 액세스 토큰을 받으려면 어떻게 해야 합니까? {#how-do-i-get-an-access-token}
 
-액세스 토큰은 모든 API 호출의 인증 헤더에 필요합니다. URL은 `curl` 명령을 사용할 수 있습니다. 액세스 토큰은 24시간 동안만 유효하며 이후 API를 계속 사용하려면 새 토큰을 생성해야 합니다. 액세스 토큰 생성에 대한 자세한 내용은 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en).
+액세스 토큰은 모든 API 호출의 인증 헤더에 필요합니다. 조직에 대한 통합에 액세스할 수 있는 경우 CURL 명령을 사용하여 생성할 수 있습니다. 액세스 토큰은 24시간 동안만 유효하며 이후 API를 계속 사용하려면 새 토큰을 생성해야 합니다. 액세스 토큰 생성에 대한 자세한 내용은 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## 쿼리 매개 변수를 사용하는 방법 {#how-do-i-user-query-parameters}
 
@@ -151,7 +151,7 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 }
 ```
 
-이 오류 메시지는 IMS 조직 헤더(`x-gw-ims-org-id`)이 API 요청에서 누락되었습니다. 다시 시도하기 전에 헤더가 IMS 조직의 ID에 포함되어 있는지 확인하십시오.
+이 오류 메시지는 조직 헤더(`x-gw-ims-org-id`)이 API 요청에서 누락되었습니다. 다시 시도하기 전에 헤더가 조직의 ID에 포함되어 있는지 확인하십시오.
 
 ### 프로필이 잘못되었습니다. {#profile-is-not-valid}
 
@@ -162,7 +162,7 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 }
 ```
 
-이 오류 메시지는 사용자 또는 Adobe I/O 통합( [액세스 토큰](#how-do-i-get-an-access-token) 에서 `Authorization` header)에 대한 호출을 수행할 수 없습니다. [!DNL Experience Platform] 에 제공된 IMS 조직에 대한 API `x-gw-ims-org-id` 헤더. 다시 시도하기 전에 헤더에서 IMS 조직에 올바른 ID를 제공했는지 확인하십시오. 조직 ID를 모를 경우, [Adobe I/O 콘솔](https://console.adobe.io): 에서 **통합** 탭으로 이동하여 **개요** 섹션에서 ID를 찾아 특정 통합 섹션을 참조하십시오. **클라이언트 자격 증명**.
+이 오류 메시지는 사용자 또는 Adobe I/O 통합( [액세스 토큰](#how-do-i-get-an-access-token) 에서 `Authorization` header)에 대한 호출을 수행할 수 없습니다. [!DNL Experience Platform] 에서 제공하는 조직에 대한 API입니다 `x-gw-ims-org-id` 헤더. 헤더에서 조직에 올바른 ID를 제공한 후 다시 시도하십시오. 조직 ID를 모를 경우, [Adobe I/O 콘솔](https://console.adobe.io): 에서 **통합** 탭으로 이동하여 **개요** 섹션에서 ID를 찾아 특정 통합 섹션을 참조하십시오. **클라이언트 자격 증명**.
 
 ### 태그 새로 고침 오류 {#refresh-etag-error}
 
@@ -199,7 +199,7 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 ```
 
 이 오류 메시지는 아래 두 가지 사례 중 하나로 표시됩니다.
-- 올바르지 않거나 잘못된 포맷의 IMS 조직 헤더(`x-gw-ims-org-id`)가 API 요청에서 전달됩니다. 다시 시도하기 전에 IMS 조직의 올바른 ID가 포함되어 있는지 확인하십시오.
+- 올바르지 않거나 잘못된 조직 ID 헤더(`x-gw-ims-org-id`)가 API 요청에서 전달됩니다. 다시 시도하기 전에 조직의 올바른 ID가 포함되어 있는지 확인하십시오.
 - 제공된 인증 자격 증명으로 표시되는 계정이 Experience Platform을 위한 제품 프로필과 연결되어 있지 않은 경우. 다음 단계를 수행합니다 [액세스 자격 증명 생성](./api-authentication.md#authentication-for-each-session) platform API 인증 자습서에서 계정에 Platform을 추가하고 그에 따라 인증 자격 증명을 업데이트합니다.
 
 ## 서비스 문제 해결 디렉터리 {#service-troubleshooting-directory}

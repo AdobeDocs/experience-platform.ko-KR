@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 개인 정보 작업 API 끝점
 description: Privacy Service API를 사용하여 Experience Cloud 애플리케이션의 개인 정보 보호 작업을 관리하는 방법을 알아봅니다.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1547'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 **요청**
 
-다음 요청은 페이지 크기가 50인 세 번째 페이지에서 시작하여 IMS 조직 내의 모든 작업의 페이지 지정 목록을 검색합니다.
+다음 요청은 페이지 크기가 50인 세 번째 페이지에서 시작하여 조직 내의 모든 작업의 페이지 번호를 매긴 목록을 검색합니다.
 
 ```shell
 curl -X GET \
@@ -159,7 +159,7 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `companyContexts` **(필수 여부)** | 조직에 대한 인증 정보가 포함된 배열입니다. 나열된 각 식별자는 다음 속성을 포함합니다. <ul><li>`namespace`: 식별자의 네임스페이스입니다.</li><li>`value`: 식별자의 값입니다.</li></ul>그렇습니다 **필수** 식별자 중 하나에서 `imsOrgId` 로서의 `namespace`, `value` 는 IMS 조직에 대한 고유 ID를 포함합니다. <br/><br/>추가 식별자는 제품별 회사 한정자일 수 있습니다(예: `Campaign`)을 클릭하여 조직에 속하는 Adobe 애플리케이션과의 통합을 식별합니다. 잠재적 값에는 계정 이름, 클라이언트 코드, 테넌트 ID 또는 기타 애플리케이션 식별자가 포함됩니다. |
+| `companyContexts` **(필수 여부)** | 조직에 대한 인증 정보가 포함된 배열입니다. 나열된 각 식별자는 다음 속성을 포함합니다. <ul><li>`namespace`: 식별자의 네임스페이스입니다.</li><li>`value`: 식별자의 값입니다.</li></ul>그렇습니다 **필수** 식별자 중 하나에서 `imsOrgId` 로서의 `namespace`, `value` 에는 조직에 대한 고유 ID가 포함되어 있습니다. <br/><br/>추가 식별자는 제품별 회사 한정자일 수 있습니다(예: `Campaign`)을 클릭하여 조직에 속하는 Adobe 애플리케이션과의 통합을 식별합니다. 잠재적 값에는 계정 이름, 클라이언트 코드, 테넌트 ID 또는 기타 애플리케이션 식별자가 포함됩니다. |
 | `users` **(필수 여부)** | 액세스하거나 삭제할 정보가 있는 하나 이상의 사용자 컬렉션이 포함된 배열입니다. 단일 요청으로 최대 1000개의 사용자 ID를 제공할 수 있습니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`: 응답 데이터에서 개별 작업 ID를 평가하는 데 사용되는 사용자의 식별자입니다. 쉽게 참조되거나 나중에 조회할 수 있도록 이 값에 대해 고유하고 쉽게 식별 가능한 문자열을 선택하는 것이 좋습니다.</li><li>`action`: 사용자의 데이터에 수행할 원하는 작업을 나열하는 배열입니다. 수행할 작업에 따라 이 배열에 다음이 포함되어야 합니다 `access`, `delete`또는 둘 다 사용할 수 있습니다.</li><li>`userIDs`: 사용자의 ID 컬렉션입니다. 한 사용자가 사용할 수 있는 ID의 수는 9개로 제한됩니다. 각 ID는 `namespace`, `value`, 및 네임스페이스 한정자(`type`). 자세한 내용은 [부록](appendix.md) 를 참조하십시오.</li></ul> 자세한 내용은 `users` 및 `userIDs`를 참조하고 [문제 해결 안내서](../troubleshooting-guide.md#user-ids). |
 | `include` **(필수 여부)** | 처리에 포함할 Adobe 제품 배열입니다. 이 값이 없거나 비어 있는 경우 요청이 거부됩니다. 조직이 통합하는 제품만 포함합니다. 의 섹션을 참조하십시오. [수락된 제품 값](appendix.md) 자세한 내용은 부록에서 확인하십시오. |
 | `expandIDs` | 로 설정된 경우 `true`는 애플리케이션의 ID 처리를 위한 최적화를 나타냅니다(현재 [!DNL Analytics]). 생략하면 이 값의 기본값은 입니다. `false`. |

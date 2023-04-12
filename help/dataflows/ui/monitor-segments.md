@@ -4,10 +4,10 @@ description: 세그먼테이션을 사용하면 실시간 고객 프로필 데�
 title: UI에서 세그먼트에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1923'
-ht-degree: 4%
+source-wordcount: '1919'
+ht-degree: 3%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="세그먼트"
->abstract="세그먼트 보기에는 세그먼트 활성화 및 평가 작업에 대한 추가 정보와 함께 모든 IMS 조직의 세그먼트에 대한 정보가 포함됩니다."
+>abstract="세그먼트 보기에는 조직의 모든 세그먼트에 대한 정보가 포함되어 있으며 활성화 및 평가 작업에 대한 자세한 정보가 포함되어 있습니다."
 
 에 액세스하려면 **[!UICONTROL 세그먼트]** 대시보드, 선택 **[!UICONTROL 모니터링]** 을 클릭합니다. 에 한 번 **[!UICONTROL 모니터링]** 페이지에서 을 선택합니다 **[!UICONTROL 세그먼트]** 카드.
 
@@ -48,7 +48,7 @@ ht-degree: 4%
 >
 >현재, [배치(파일 기반) 대상](../../destinations/destination-types.md#file-based) 모니터링 세그먼트 대시보드에 대해 지원됩니다.
 
-![세그먼트 대시보드. IMS 조직 및 샌드박스의 다양한 세그먼트에 대한 정보가 표시됩니다.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
+![세그먼트 대시보드. 조직 및 샌드박스의 다양한 세그먼트에 대한 정보가 표시됩니다.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
 
 이 대시보드 보기에 다음 지표를 사용할 수 있습니다.
 
@@ -109,7 +109,7 @@ ht-degree: 4%
 | **[!UICONTROL 데이터 흐름 실행 시작]** | 활성화 작업이 시작된 날짜 및 시간입니다. |
 | **[!UICONTROL 데이터 흐름 실행 종료]** | 활성화 작업이 종료된 날짜 및 시간입니다. |
 | **[!UICONTROL 데이터 흐름 실행 ID]** | 현재 활성화 작업의 ID입니다. |
-| **[!UICONTROL IMS 조직 ID]** | 활성화 작업이 속한 IMS 조직의 ID입니다. |
+| **[!UICONTROL IMS 조직 ID]** | 활성화 작업이 속한 조직의 ID입니다. |
 | **[!UICONTROL 대상 이름]** | 데이터가 활성화되는 대상의 이름입니다. |
 
 지표 아래에 데이터 흐름 실행 오류 간에 선택하는 토글이 표시되고 세그먼트가 표시됩니다.
@@ -151,7 +151,7 @@ ht-degree: 4%
 | **[!UICONTROL 작업 유형]** | 세그먼트 작업의 유형입니다. 이 경우 항상 세그먼트 평가 작업입니다. |
 | **[!UICONTROL 평가 유형]** | 수행 중인 평가의 유형입니다. 다음 중 하나일 수 있습니다 **[!UICONTROL 일괄 처리]** 또는 **[!UICONTROL 스트리밍]**. |
 | **[!UICONTROL 작업 ID]** | 평가 작업의 ID입니다. |
-| **[!UICONTROL IMS 조직 ID]** | 평가 작업이 속한 IMS 조직의 ID입니다. |
+| **[!UICONTROL IMS 조직 ID]** | 평가 작업이 속한 조직의 ID입니다. |
 | **[!UICONTROL 세그먼트 이름]** | 평가되는 세그먼트의 이름입니다. |
 | **[!UICONTROL 세그먼트 ID]** | 평가되는 세그먼트의 ID입니다. |
 

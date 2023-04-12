@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service 문제 해결 안내서
 description: 이 문서에서는 Adobe Experience Platform Identity 서비스에 대해 자주 묻는 질문과 일반적인 오류에 대한 문제 해결 안내서를 제공합니다.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2180'
+source-wordcount: '2176'
 ht-degree: 0%
 
 ---
@@ -204,7 +204,7 @@ Internal solutions|Preferred|Common
 }
 ```
 
-이 오류 메시지는 IMS 조직에 적절한 권한이 제공되지 않은 경우에 표시됩니다 [!DNL Identity Service]. 이 문제를 해결하려면 시스템 관리자에게 문의하십시오.
+이 오류 메시지는 조직에 적절한 권한이 제공되지 않은 경우에 표시됩니다 [!DNL Identity Service]. 이 문제를 해결하려면 시스템 관리자에게 문의하십시오.
 
 ### 게이트웨이 서비스 토큰이 잘못되었습니다.
 
@@ -264,7 +264,7 @@ When [!DNL Identity Service] 는 ID를 유지하면 ID의 ID 및 관련 네임�
 }
 ```
 
-이 오류 메시지는 IMS 조직에 적절한 권한이 제공되지 않은 경우에 표시됩니다 [!DNL Identity Service]. 이 문제를 해결하려면 시스템 관리자에게 문의하십시오.
+이 오류 메시지는 조직에 적절한 권한이 제공되지 않은 경우에 표시됩니다 [!DNL Identity Service]. 이 문제를 해결하려면 시스템 관리자에게 문의하십시오.
 
 ### 내부 서버 오류
 
@@ -330,7 +330,7 @@ When [!DNL Identity Service] 는 ID를 유지하면 ID의 ID 및 관련 네임�
 }
 ```
 
-이 오류는 수집된 레코드가 연결된 네임스페이스가 없거나 IMS 조직에서 액세스할 수 없는 ID를 나타낼 때 표시됩니다.
+이 오류는 수집된 레코드가 연결된 네임스페이스가 없거나 조직에서 액세스할 수 없는 ID를 나타낼 때 표시됩니다.
 
 ### IMS 조직이 비공개 ID 그래프에 대해 제공되지 않았으므로 일괄 처리를 건너뜁니다.
 
@@ -342,7 +342,7 @@ When [!DNL Identity Service] 는 ID를 유지하면 ID의 ID 및 관련 네임�
 }
 ```
 
-배치 데이터를 섭취할 때 IMS 조직에 적절한 권한이 제공되지 않은 경우 이 오류 메시지가 표시됩니다 [!DNL Identity Service]. 이 문제를 해결하려면 시스템 관리자에게 문의하십시오.
+배치 데이터를 섭취할 때 조직에 적절한 권한이 제공되지 않은 경우에 이 오류 메시지가 표시됩니다 [!DNL Identity Service]. 이 문제를 해결하려면 시스템 관리자에게 문의하십시오.
 
 ### 내부 오류
 

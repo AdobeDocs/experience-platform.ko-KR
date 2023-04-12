@@ -2,9 +2,9 @@
 title: Reactor API 시작하기
 description: 필요한 액세스 자격 증명을 생성하는 단계를 포함하여 Reactor API를 시작하는 방법을 알아봅니다.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1049'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Adobe Developer 콘솔을 사용하여 다음 세 가지 액세스 자격 증명
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-IMS 조직의 ID(`{ORG_ID}`) 및 API 키(`{API_KEY}`)은 처음 생성된 후 향후 API 호출에서 재사용할 수 있습니다. 그러나 액세스 토큰(`{ACCESS_TOKEN}`)는 일시적이며 24시간마다 다시 생성해야 합니다.
+조직의 ID(`{ORG_ID}`) 및 API 키(`{API_KEY}`)은 처음 생성된 후 향후 API 호출에서 재사용할 수 있습니다. 그러나 액세스 토큰(`{ACCESS_TOKEN}`)는 일시적이며 24시간마다 다시 생성해야 합니다.
 
 이러한 값을 생성하는 단계는 아래에 자세히 설명되어 있습니다.
 

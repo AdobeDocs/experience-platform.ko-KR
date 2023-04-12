@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그먼트 일치 개요
 description: 세그먼트 일치 는 두 명 이상의 플랫폼 사용자가 안전하고 제어되며 개인 정보에 친숙한 방식으로 세그먼트 데이터를 교환할 수 있도록 해주는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1998'
+source-wordcount: '1997'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,7 @@ ID 네임스페이스는 [Adobe Experience Platform Identity 서비스](../../..
 
 | 사용 권한 | 설명 |
 | --- | --- |
-| 대상 공유 연결 관리 | 이 권한을 사용하면 두 IMS 조직을 연결하는 파트너 핸드셰이크 프로세스를 완료하여 [!DNL Segment Match] 흐름. |
+| 대상 공유 연결 관리 | 이 권한을 사용하면 두 조직을 연결하여 사용할 수 있는 파트너 핸드셰이크 프로세스를 완료할 수 있습니다 [!DNL Segment Match] 흐름. |
 | 대상 공유 관리 | 이 권한을 사용하면 피드(에 사용되는 데이터 패키지)를 만들고, 편집하고, 게시할 수 있습니다 [!DNL Segment Match]) 활성 파트너(관리자 사용자가 **[!UICONTROL 대상 공유 연결]** 액세스). |
 
 자세한 내용은 [액세스 제어 개요](../../../access-control/home.md) 액세스 제어 및 권한에 대한 자세한 정보.

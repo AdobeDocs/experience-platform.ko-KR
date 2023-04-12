@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service 문제 해결 안내서
 description: 이 문서에서는 Privacy Service에 대해 자주 묻는 질문에 대한 답변과 API에서 일반적으로 발생하는 오류에 대한 정보를 제공합니다.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '916'
 ht-degree: 1%
 
 ---
@@ -107,7 +107,7 @@ PII 또는 데이터 문제를 제거하기 위한 노력을 조정하고 제공
 | 잘못된 네임스페이스 | 사용자 ID에 대해 제공된 ID 네임스페이스가 잘못되었습니다. 의 섹션을 참조하십시오. [표준 id 네임스페이스](./api/appendix.md#standard-namespaces) 에서 [!DNL Privacy Service] 허용되는 네임스페이스 목록은 API 안내서 부록 을 참조하십시오. 사용자 지정 네임스페이스를 사용하는 경우 ID의 `type` 속성을 &quot;custom&quot;에 추가합니다. |
 | 부분적으로 완료됨 | 작업이 완료되었지만 일부 데이터는 지정된 요청에 적용할 수 없으며 건너뛰었습니다. |
 | 데이터가 필요한 형식이 아닙니다. | 지정한 응용 프로그램의 데이터 값 중 하나 이상의 형식이 잘못되었습니다. 자세한 내용은 작업 세부 사항을 확인하십시오. |
-| IMS 조직이 프로비저닝되지 않았습니다. | 이 메시지는 IMS 조직에 이 프로비저닝되지 않은 경우에 발생합니다 [!DNL Privacy Service]. 자세한 내용은 관리자에게 문의하십시오. |
+| IMS 조직이 프로비저닝되지 않았습니다. | 이 메시지는 조직이 프로비저닝되지 않은 경우에 발생합니다 [!DNL Privacy Service]. 자세한 내용은 관리자에게 문의하십시오. |
 | 액세스 및 권한이 필요합니다. | 사용하려면 액세스 및 권한이 필요합니다 [!DNL Privacy Service]. 액세스 권한을 얻으려면 관리자에게 문의하십시오. |
 | 액세스 데이터를 업로드하고 보관하는 동안 문제가 발생했습니다. | 이 오류가 발생하면 액세스 데이터를 다시 업로드하고 다시 시도하십시오. |
 | 현재 문서 비율 제한에 대해 작업 로드가 초과되었습니다. | 이 오류가 발생하면 제출 속도를 줄이고 다시 시도하십시오. |

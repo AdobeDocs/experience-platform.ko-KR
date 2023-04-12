@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1540'
 ht-degree: 3%
 
 ---
@@ -55,7 +55,7 @@ Adobe Admin Console은 조직에 대한 Adobe 제품 권한 및 액세스를 관
 
 ## 샌드박스 및 권한
 
-비프로덕션 샌드박스는 다른 샌드박스에서 데이터를 분리할 수 있도록 해주는 데이터 가상화 형태이며 일반적으로 개발 실험, 테스트 또는 평가에 사용됩니다. 제품 프로필의 권한을 통해 프로필의 사용자에게 [!DNL Platform] 액세스 권한이 부여된 샌드박스 환경 내의 기능입니다. 기본 Experience Platform 라이센스는 5개의 샌드박스(프로덕션 1개와 비프로덕션 4개)를 부여합니다. 비프로덕션 샌드박스 10개의 팩을 총 75개의 샌드박스에 추가할 수 있습니다. 자세한 내용은 IMS 조직 관리자 또는 Adobe 영업 담당자에게 문의하십시오.
+비프로덕션 샌드박스는 다른 샌드박스에서 데이터를 분리할 수 있도록 해주는 데이터 가상화 형태이며 일반적으로 개발 실험, 테스트 또는 평가에 사용됩니다. 제품 프로필의 권한을 통해 프로필의 사용자에게 [!DNL Platform] 액세스 권한이 부여된 샌드박스 환경 내의 기능입니다. 기본 Experience Platform 라이센스는 5개의 샌드박스(프로덕션 1개와 비프로덕션 4개)를 부여합니다. 비프로덕션 샌드박스 10개의 팩을 총 75개의 샌드박스에 추가할 수 있습니다. 자세한 내용은 조직의 관리자 또는 Adobe 영업 담당자에게 문의하십시오.
 
 샌드박스에 대한 자세한 내용은 [!DNL Experience Platform]을(를) 참조하십시오. [샌드박스 개요](../sandboxes/home.md).
 
@@ -114,7 +114,7 @@ Adobe Admin Console은 조직에 대한 Adobe 제품 권한 및 액세스를 관
 | [!DNL Destinations] | [!UICONTROL 대상 작성] | 을 사용하여 대상을 작성할 수 있는 기능 [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL 소스 관리] | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있는 액세스 권한. |
 | [!DNL Data Ingestion] | [!UICONTROL 소스 보기] | 에서 사용 가능한 소스에 대한 읽기 전용 액세스 권한 **[!UICONTROL 카탈로그]** 의 탭 및 인증된 소스 **[!UICONTROL 찾아보기]** 탭. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 두 IMS 조직을 연결하고 활성화하기 위해 파트너 핸드셰이크를 생성, 수락 및 거부할 수 있는 액세스 권한 [!DNL Segment Match] 흐름. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 파트너 핸드셰이크를 생성, 수락 및 거절하여 두 조직을 연결하고 [!DNL Segment Match] 흐름. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | 읽기, 만들기, 편집 및 게시에 대한 액세스 권한 [!DNL Segment Match] 활성 파트너가 피드를 제공합니다. |
 | [!DNL Data Science Workspace] | [!UICONTROL 데이터 과학 작업 공간 관리] | 에서 읽기, 만들기, 편집 및 삭제할 수 있는 액세스 권한 [!DNL Data Science Workspace]. |
 | 데이터 거버넌스 | [!UICONTROL 데이터 사용 레이블 적용] | 사용 레이블을 읽고, 만들고, 삭제할 수 있는 액세스 권한. |

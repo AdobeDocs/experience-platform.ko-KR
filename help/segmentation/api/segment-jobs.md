@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그먼트 작업 API 끝점
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 세그먼트 작업 종단점을 사용하면 조직의 세그먼트 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1497'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **응답**
 
-성공적인 응답은 지정된 IMS 조직에 대한 세그먼트 작업 목록과 함께 HTTP 상태 200을 JSON으로 반환합니다. 하지만 세그먼트 작업 내의 세그먼트 수에 따라 응답이 달라집니다.
+성공적인 응답은 지정된 조직의 세그먼트 작업 목록과 함께 HTTP 상태 200을 JSON으로 반환합니다. 하지만 세그먼트 작업 내의 세그먼트 수에 따라 응답이 달라집니다.
 
 **세그먼트 작업의 세그먼트 수 1500개 이하**
 

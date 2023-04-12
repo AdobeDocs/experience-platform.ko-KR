@@ -5,9 +5,9 @@ title: Experience Platform API 인증 및 액세스
 type: Tutorial
 description: 이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1267'
 ht-degree: 7%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 7%
 
 Experience Platform API를 성공적으로 호출하려면 다음을 수행해야 합니다.
 
-* Adobe Experience Platform에 액세스할 수 있는 IMS 조직.
+* Adobe Experience Platform에 액세스할 수 있는 조직.
 * 사용자를 제품 프로필에 대한 개발자 및 사용자로 추가할 수 있는 Admin Console 관리자
 
 이 자습서를 완료하려면 Adobe ID도 있어야 합니다. Adobe ID이 없는 경우 다음 단계를 사용하여 만들 수 있습니다.
@@ -54,7 +54,7 @@ Adobe Developer 콘솔에서 통합을 만들려면 먼저 Adobe Admin Console�
 
 사용자 [!DNL Admin Console] 관리자는 사용자를 동일한 제품 프로필에 사용자로 추가해야 합니다. 다음 안내서를 참조하십시오. [의 사용자 그룹 관리 [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) 추가 정보.
 
-## API 키, IMS 조직 ID 및 클라이언트 암호 생성 {#api-ims-secret}
+## API 키, 조직 ID 및 클라이언트 암호 생성 {#api-ims-secret}
 
 >[!NOTE]
 >

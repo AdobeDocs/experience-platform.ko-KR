@@ -1,56 +1,56 @@
 ---
-keywords: Experience Platform;교육 및 평가;Data Science Workspace;인기 주제;Sensei 머신 러닝 API
+keywords: Experience Platform;교육 및 평가;데이터 과학 작업 공간;인기 항목;Sensei 기계 학습 API
 solution: Experience Platform
-title: Sensei 머신 러닝 API를 사용하여 모델 교육 및 평가
+title: Sensei 기계 학습 API를 사용하여 모델 교육 및 평가
 type: Tutorial
-description: 이 자습서에서는 Sensei 머신 러닝 API 호출을 사용하여 모델을 만들고, 교육하고, 평가하는 방법을 보여줍니다.
+description: 이 자습서에서는 Sensei 기계 학습 API 호출을 사용하여 모델을 생성, 교육 및 평가하는 방법을 보여줍니다.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1227'
 ht-degree: 1%
 
 ---
 
-# 다음을 사용하여 모델 교육 및 평가 [!DNL Sensei Machine Learning] API
+# 를 사용하여 모델 교육 및 평가 [!DNL Sensei Machine Learning] API
 
 
-이 자습서에서는 API 호출을 사용하여 모델을 만들고, 교육하고, 평가하는 방법을 보여줍니다. 을(를) 참조하십시오 [이 문서](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) API 설명서의 세부 목록을 참조하십시오.
+이 자습서에서는 API 호출을 사용하여 모델을 생성, 교육 및 평가하는 방법을 보여줍니다. 을(를) 참조하십시오. [이 문서](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 를 참조하십시오.
 
-## 전제 조건
+## 사전 요구 사항
 
-다음 [API를 사용하여 패키지된 레시피 가져오기](./import-packaged-recipe-api.md) API를 사용하여 모델을 교육하고 평가하는 데 필요한 엔진 생성.
+다음을 수행합니다 [API를 사용하여 패키지된 레서피 가져오기](./import-packaged-recipe-api.md) api를 사용하여 모델을 교육하고 평가하는 데 필요한 엔진 생성.
 
-다음 [Experience Platform API 인증 자습서](https://www.adobe.com/go/platform-api-authentication-en) API 호출을 시작합니다.
+다음을 수행합니다 [Experience Platform API 인증 자습서](https://www.adobe.com/go/platform-api-authentication-en) api 호출 만들기를 시작합니다.
 
-이제 자습서에서 다음 값을 가져야 합니다.
+이제 자습서에서 다음 값을 포함해야 합니다.
 
-- `{ACCESS_TOKEN}`: 인증 후 제공된 특정 전달자 토큰 값입니다.
-- `{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.
-- `{API_KEY}`: 고유한 Adobe Experience Platform 통합에서 찾은 특정 API 키 값.
+- `{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값입니다.
+- `{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 조직 자격 증명입니다.
+- `{API_KEY}`: 고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.
 
-- 지능형 서비스의 도커 이미지에 대한 링크
+- 지능형 서비스의 Docker 이미지에 연결
 
 ## API 워크플로우
 
-교육용 실험 실행을 만들기 위해 API를 사용할 예정입니다. 이 자습서에서는 엔진, 인스턴스 및 실험 끝점에 중점을 둡니다. 다음 차트는 세 가지 간의 관계를 간략하게 설명하고 실행 및 모델에 대한 개념도 소개합니다.
+Adobe에서는 교육을 위한 실험 실행을 만드는 API를 사용하게 됩니다. 이 자습서에서는 엔진, 인스턴스 및 실험 종단점에 중점을 둡니다. 다음 차트는 세 가지 요소 간의 관계를 간략하게 설명하고 실행 과 모델의 개념을 소개합니다.
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
 >[!NOTE]
 >
->용어 &quot;엔진&quot;, &quot;MLInstance&quot;, &quot;MLService&quot;, &quot;실험&quot; 및 &quot;모델&quot;은 UI에서 다른 용어로 지칭됩니다. UI에서 가져오는 경우 다음 표에서 차이점을 매핑합니다.
+>&quot;Engine&quot;, &quot;MLInstance&quot;, &quot;MLService&quot;, &quot;Experiment&quot; 및 &quot;Model&quot;이라는 용어는 UI에서 다른 용어라고 합니다. UI에서 오는 경우 다음 표에서 차이점을 매핑합니다.
 
 | UI 용어 | API 용어 |
 | --- | --- |
-| 레시피 | 엔진 |
+| 레서피 | 엔진 |
 | 모델 | MLInstance |
 | 교육 실행 | 실험 |
-| 서비스 | MLSservice |
+| 서비스 | MLService |
 
-### 인스턴스 만들기
+### MLInstance 만들기
 
-다음 요청을 사용하여 MLInstance를 만들 수 있습니다. 다음을 사용하게 됩니다. `{ENGINE_ID}` 에서 엔진을 만들 때 반환됨 [API를 사용하여 패키지된 레시피 가져오기](./import-packaged-recipe-ui.md) 튜토리얼.
+MLInstance 만들기는 다음 요청을 사용하여 수행할 수 있습니다. 을(를) 사용합니다 `{ENGINE_ID}` 에서 엔진을 만들 때 반환되는 [API를 사용하여 패키지된 레서피 가져오기](./import-packaged-recipe-ui.md) 자습서입니다.
 
 **요청**
 
@@ -64,10 +64,10 @@ curl -X POST \
   -d `{JSON_PAYLOAD}`
 ```
 
-`{ACCESS_TOKEN}`: 인증 후 제공된 특정 전달자 토큰 값입니다.\
-`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.\
-`{API_KEY}`: 고유한 Adobe Experience Platform 통합에서 찾은 특정 API 키 값.\
-`{JSON_PAYLOAD}`: MLInstance 구성 자습서에서 사용하는 예는 다음과 같습니다.
+`{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값입니다.\
+`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 조직 자격 증명입니다.\
+`{API_KEY}`: 고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.\
+`{JSON_PAYLOAD}`: MLInstance의 구성입니다. 자습서에서 사용하는 예는 다음과 같습니다.
 
 ```JSON
 {
@@ -122,9 +122,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->다음에서 `{JSON_PAYLOAD}`, 에서는 교육 및 채점에 사용되는 매개 변수를 정의합니다. `tasks` 배열입니다. 다음 `{ENGINE_ID}` 는 사용하려는 엔진의 ID이고 `tag` 필드는 인스턴스를 식별하는 데 사용되는 선택적 매개 변수입니다.
+>에서 `{JSON_PAYLOAD}`에서는 교육 및 점수에 사용되는 매개 변수를 정의합니다. `tasks` 배열입니다. 다음 `{ENGINE_ID}` 은 사용할 엔진의 ID이고 `tag` 필드는 인스턴스를 식별하는 데 사용되는 선택적 매개 변수입니다.
 
-응답에는 `{INSTANCE_ID}` 생성된 MLInstance를 나타냅니다. 구성이 다른 여러 모델 인스턴스를 만들 수 있습니다.
+응답에는 다음이 포함됩니다 `{INSTANCE_ID}` 는 만들어지는 MLInstance를 나타냅니다. 구성이 다른 여러 모델 MLInstance를 만들 수 있습니다.
 
 **응답**
 
@@ -157,12 +157,12 @@ curl -X POST \
 }
 ```
 
-`{ENGINE_ID}`: MLInstance가 생성되는 엔진을 나타내는 이 ID입니다.\
+`{ENGINE_ID}`: MLInstance가 생성된 엔진을 나타내는 이 ID입니다.\
 `{INSTANCE_ID}`: MLInstance를 나타내는 ID입니다.
 
 ### 실험 만들기
 
-실험은 데이터 과학자가 훈련하는 동안 성과가 좋은 모델에 도달하기 위해 사용합니다. 여러 실험에는 데이터 세트, 기능, 학습 매개 변수 및 하드웨어 변경이 포함됩니다. 다음은 실험을 만드는 예제입니다.
+실험은 데이터 과학자가 훈련을 하면서 성과가 좋은 모델에 도달하기 위해 사용됩니다. 데이터 세트, 기능, 학습 매개 변수 및 하드웨어 변경이 여러 가지 실험으로 이루어집니다. 다음은 실험을 만드는 예입니다.
 
 **요청**
 
@@ -176,10 +176,10 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.\
-`{ACCESS_TOKEN}`: 인증 후 제공된 특정 전달자 토큰 값입니다.\
-`{API_KEY}`: 고유한 Adobe Experience Platform 통합에서 찾은 특정 API 키 값.\
-`{JSON_PAYLOAD}`: 만들어진 실험 개체입니다. 자습서에서 사용하는 예는 다음과 같습니다.
+`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 조직 자격 증명입니다.\
+`{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값입니다.\
+`{API_KEY}`: 고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.\
+`{JSON_PAYLOAD}`: 만들어진 실험 개체. 자습서에서 사용하는 예는 다음과 같습니다.
 
 ```JSON
 {
@@ -214,11 +214,11 @@ curl -X POST \
 `{EXPERIMENT_ID}`: 방금 만든 실험을 나타내는 ID입니다.
 `{INSTANCE_ID}`: MLInstance를 나타내는 ID입니다.
 
-### 교육을 위해 예약된 실험 만들기
+### 교육을 위한 예약된 실험 만들기
 
-예약된 실험은 API 호출을 통해 각 단일 실험 실행을 만들 필요가 없도록 사용됩니다. 대신 실험 생성 중에 필요한 모든 매개 변수를 제공하고 각 실행은 주기적으로 생성됩니다.
+예약된 실험은 API 호출을 통해 각 단일 실험 실행을 생성할 필요가 없도록 사용됩니다. 대신, 실험 생성 중에 필요한 모든 매개 변수를 제공하고 각 실행이 주기적으로 생성됩니다.
 
-예약된 실험 생성을 나타내려면 다음을 추가해야 합니다. `template` 섹션 을 참조하십시오. 위치 `template`, 실행 예약에 필요한 모든 매개 변수가 포함됩니다. `tasks`, (어떤 작업을 수행하는지 나타냄) `schedule`: 예약된 실행의 타이밍을 나타냅니다.
+예약된 실험의 만들기를 나타내려면 `template` 섹션에 있는 마지막 항목이 될 필요가 없습니다. in `template`를 채울 때 실행 예약에 필요한 모든 매개 변수가 포함됩니다(예: ). `tasks`, 작업 및 `schedule`- 예약된 실행의 타이밍을 나타냅니다.
 
 **요청**
 
@@ -232,10 +232,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.\
-`{ACCESS_TOKEN}`: 인증 후 제공된 특정 전달자 토큰 값입니다.\
-`{API_KEY}`: 고유한 Adobe Experience Platform 통합에서 찾은 특정 API 키 값.\
-`{JSON_PAYLOAD}`: 게시할 데이터 세트입니다. 자습서에서 사용하는 예는 다음과 같습니다.
+`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 조직 자격 증명입니다.\
+`{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값입니다.\
+`{API_KEY}`: 고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.\
+`{JSON_PAYLOAD}`: 게시할 데이터 집합입니다. 자습서에서 사용하는 예는 다음과 같습니다.
 
 ```JSON
 {
@@ -265,7 +265,7 @@ curl -X POST \
 }
 ```
 
-우리가 실험과 몸을 만들 때 `{JSON_PAYLOAD}`는 다음 중 하나를 포함해야 합니다. `mlInstanceId` 또는 `mlInstanceQuery` 매개 변수. 이 예에서 예약된 실험은 20분마다 실행을 호출하며 `cron` 매개 변수, 다음에서 시작 `startTime` 종료 시간: `endTime`.
+실험, 몸체를 만들 때 `{JSON_PAYLOAD}`에는 다음 중 하나를 포함해야 합니다. `mlInstanceId` 또는 `mlInstanceQuery` 매개 변수. 이 예제에서 설정된 예약된 실험은 20분마다 `cron` 매개 변수(다음부터 시작) `startTime` 까지 `endTime`.
 
 **응답**
 
@@ -305,7 +305,7 @@ curl -X POST \
 
 ### 교육을 위한 실험 실행 만들기
 
-실험 엔터티가 만들어지면 아래 호출을 사용하여 교육 실행을 만들고 실행할 수 있습니다. 다음이 필요합니다. `{EXPERIMENT_ID}` 무엇에 대해 말하라 `mode` 요청 본문에서 를 트리거하려고 합니다.
+실험 개체를 만들면 아래 호출을 사용하여 교육 실행을 만들고 실행할 수 있습니다. 다음을 수행해야 합니다. `{EXPERIMENT_ID}` 다음을 명시합니다. `mode` 요청 본문에서 트리거하려고 합니다.
 
 **요청**
 
@@ -319,10 +319,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{EXPERIMENT_ID}`: 타깃팅할 실험에 해당하는 ID입니다. 이는 실험을 생성할 때 응답에서 찾을 수 있습니다.\
-`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.\
-`{ACCESS_TOKEN}`: 인증 후 제공된 특정 전달자 토큰 값입니다.\
-`{API_KEY}`: 고유한 Adobe Experience Platform 통합에서 찾은 특정 API 키 값.\
+`{EXPERIMENT_ID}`: 타겟팅할 실험에 해당하는 ID입니다. 실험을작성할 때 응답에서 찾을 수 있습니다.\
+`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 조직 자격 증명입니다.\
+`{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값입니다.\
+`{API_KEY}`: 고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.\
 `{JSON_PAYLOAD}`: 교육 실행을 만들려면 본문에 다음 내용을 포함해야 합니다.
 
 ```JSON
@@ -331,7 +331,7 @@ curl -X POST \
 }
 ```
 
-다음을 포함하여 구성 매개 변수를 재정의할 수도 있습니다. `tasks` 배열:
+를 포함하여 구성 매개 변수를 재정의할 수도 있습니다 `tasks` 배열:
 
 ```JSON
 {
@@ -350,7 +350,7 @@ curl -X POST \
 }
 ```
 
-다음 응답을 받게 되어 사용자에게 다음이 표시됩니다. `{EXPERIMENT_RUN_ID}` 및 아래의 구성 `tasks`.
+다음과 같은 응답을 받게 되며, `{EXPERIMENT_RUN_ID}` 그리고 `tasks`.
 
 **응답**
 
@@ -372,11 +372,11 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_RUN_ID}`: 실험 실행을 나타내는 ID입니다.\
-`{EXPERIMENT_ID}`: 실험 실행이 진행 중인 실험을 나타내는 ID입니다.
+`{EXPERIMENT_ID}`: 실험 실행 아래에 있는 실험을 나타내는 ID입니다.
 
 ### 실험 실행 상태 검색
 
-실험 실행의 상태는 다음을 사용하여 쿼리할 수 있습니다. `{EXPERIMENT_RUN_ID}`.
+실험 실행의 상태는 `{EXPERIMENT_RUN_ID}`.
 
 **요청**
 
@@ -390,13 +390,13 @@ curl -X GET \
 
 `{EXPERIMENT_ID}`: 실험을 나타내는 ID입니다.\
 `{EXPERIMENT_RUN_ID}`: 실험 실행을 나타내는 ID입니다.\
-`{ACCESS_TOKEN}`: 인증 후 제공된 특정 전달자 토큰 값입니다.\
-`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.\
-`{API_KEY}`: 고유한 Adobe Experience Platform 통합에서 찾은 특정 API 키 값.
+`{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값입니다.\
+`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 조직 자격 증명입니다.\
+`{API_KEY}`: 고유한 Adobe Experience Platform 통합에 있는 특정 API 키 값입니다.
 
 **응답**
 
-GET 호출은에서 상태를 제공합니다. `state` 아래와 같은 매개 변수:
+GET 호출은 의 상태를 제공합니다. `state` 매개 변수 를 참조하십시오.
 
 ```JSON
 {
@@ -430,18 +430,18 @@ GET 호출은에서 상태를 제공합니다. `state` 아래와 같은 매개 �
 ```
 
 `{EXPERIMENT_RUN_ID}`: 실험 실행을 나타내는 ID입니다.\
-`{EXPERIMENT_ID}`: 실험 실행이 진행 중인 실험을 나타내는 ID입니다.
+`{EXPERIMENT_ID}`: 실험 실행 아래에 있는 실험을 나타내는 ID입니다.
 
-이외에도 `DONE` state, 기타 상태는 다음과 같습니다.
+추가 `DONE` 주, 기타 상태는 다음과 같습니다.
 - `PENDING`
 - `RUNNING`
 - `FAILED`
 
-자세한 내용은 아래에서 확인할 수 있습니다. `tasklogs` 매개 변수.
+자세한 내용은 `tasklogs` 매개 변수.
 
-### 훈련된 모델 검색
+### 숙련된 모델 검색
 
-교육 중에 위에서 만든 훈련된 모델을 가져오려면 다음 요청을 수행합니다.
+교육 중에 위에서 생성된 훈련 모델을 얻기 위해 다음과 같은 요청을 수행합니다.
 
 **요청**
 
@@ -453,10 +453,10 @@ curl -X GET \
 ```
 
 `{EXPERIMENT_RUN_ID}`: 타깃팅할 실험 실행에 해당하는 ID입니다. 실험 실행을 만들 때 응답에서 찾을 수 있습니다.\
-`{ACCESS_TOKEN}`: 인증 후 제공된 특정 전달자 토큰 값입니다.\
-`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.
+`{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값입니다.\
+`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 조직 자격 증명입니다.
 
-응답은 생성된 훈련된 모델을 나타냅니다.
+이 응답은 생성된 훈련된 모델을 나타냅니다.
 
 **응답**
 
@@ -482,13 +482,13 @@ curl -X GET \
 }
 ```
 
-`{MODEL_ID}`: 모델에 해당하는 ID.\
-`{EXPERIMENT_ID}`: 실험 실행이 포함된 실험에 해당하는 ID입니다.\
+`{MODEL_ID}`: 모델에 해당하는 ID입니다.\
+`{EXPERIMENT_ID}`: 실험 실행 대상 실험에 해당하는 ID입니다.\
 `{EXPERIMENT_RUN_ID}`: 실험 실행에 해당하는 ID입니다.
 
 ### 예약된 실험 중지 및 삭제
 
-다음 시간 이전에 예약된 실험의 실행을 중지하려면 `endTime`에 대한 DELETE 요청을 쿼리하여 이 작업을 수행할 수 있습니다. `{EXPERIMENT_ID}`
+예약된 실험 실행 전에 실행을 중지하려면 `endTime`에 DELETE 요청을 쿼리하여 수행할 수 있습니다. `{EXPERIMENT_ID}`
 
 **요청**
 
@@ -499,13 +499,13 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-`{EXPERIMENT_ID}`: 실험에 해당하는 ID.\
-`{ACCESS_TOKEN}`: 인증 후 제공된 특정 전달자 토큰 값입니다.\
-`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 IMS 조직 자격 증명입니다.
+`{EXPERIMENT_ID}`: 실험에 해당하는 ID입니다.\
+`{ACCESS_TOKEN}`: 인증 후 제공된 특정 베어러 토큰 값입니다.\
+`{ORG_ID}`: 고유한 Adobe Experience Platform 통합에 있는 조직 자격 증명입니다.
 
 >[!NOTE]
 >
->API 호출로 새 실험 실행 생성이 비활성화됩니다. 하지만 이미 실행 중인 실험 실행의 실행은 중지되지 않습니다.
+>API 호출을 사용하면 새 실험 실행 만들기가 비활성화됩니다. 그러나 이미 실행 중인 실험 실행의 실행을 중지하지는 않습니다.
 
 다음은 실험이 성공적으로 삭제되었음을 알리는 응답입니다.
 
@@ -521,4 +521,4 @@ curl -X DELETE \
 
 ## 다음 단계
 
-이 튜토리얼에서는 API를 사용하여 엔진, 실험, 예약된 실험 실행 및 훈련된 모델을 만드는 방법을 살펴보았습니다. 다음에서 [다음 연습](./score-model-api.md), 가장 성과가 좋은 훈련된 모델을 사용하여 새 데이터 세트에 점수를 매겨 예측을 수행할 수 있습니다.
+이 자습서에서는 API를 사용하여 엔진, 실험, 예약된 실험 실행 및 숙련된 모델을 만드는 방법을 설명합니다. 에서 [다음 연습](./score-model-api.md), 성과가 가장 좋은 교육 모델을 사용하여 새로운 데이터 세트를 채점하여 예측을 하게 됩니다.

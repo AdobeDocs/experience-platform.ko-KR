@@ -5,9 +5,9 @@ title: 세그먼트 결과 평가 및 액세스
 type: Tutorial
 description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트를 평가하고 세그먼트 결과에 액세스하는 방법을 알려면 이 자습서를 따르십시오.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1607'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 ## 예약된 평가 {#scheduled-evaluation}
 
-예약된 평가를 통해 IMS 조직은 내보내기 작업을 자동으로 실행하는 반복 일정을 만들 수 있습니다.
+예약된 평가를 통해 조직에서 반복 일정을 만들어 내보내기 작업을 자동으로 실행할 수 있습니다.
 
 >[!NOTE]
 >

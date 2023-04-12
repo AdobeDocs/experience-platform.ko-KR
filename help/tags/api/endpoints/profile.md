@@ -1,27 +1,27 @@
 ---
-title: 프로필 엔드포인트
-description: Reactor API에서 /profiles 엔드포인트를 호출하는 방법을 알아봅니다.
+title: 프로필 끝점
+description: Reactor API에서 /profiles 종단점을 호출하는 방법을 알아봅니다.
 exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '169'
 ht-degree: 5%
 
 ---
 
 # 프로필 끝점
 
-Reactor API에서 프로필은 Adobe Experience Platform 사용자를 나타냅니다. Reactor API는 자체 사용자 및 권한 데이터베이스를 유지 관리하지 않고 대신 에서 관리하는 Adobe ID를 사용합니다 [Adobe의 ID 관리 시스템(IMS)](https://helpx.adobe.com/kr/enterprise/using/identity.html).
+Reactor API에서 프로필은 Adobe Experience Platform 사용자를 나타냅니다. Reactor API는 자체 사용자 및 권한 데이터베이스를 유지 관리하지 않고 대신 에서 관리하는 Adobe ID에 의존합니다 [Adobe의 IMS(ID 관리 시스템)](https://helpx.adobe.com/kr/enterprise/using/identity.html).
 
-프로필에는 로그인한 사용자가 속한 모든 IMS 조직, 각 조직 내에 속한 제품 프로필, 각 제품 프로필에서 부여한 권한 등 로그인한 사용자에 대한 모든 정보가 포함되어 있습니다.
+프로필에는 자신이 속한 모든 조직, 각 조직 내에 속한 제품 프로필 및 각 제품 프로필에서 가지고 있는 권한을 포함하여 로그인한 사용자에 대한 모든 정보가 포함됩니다.
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
+이 안내서에 사용된 엔드포인트는 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 [시작 안내서](../getting-started.md) 를 참조하십시오.
 
 ## 현재 프로필 검색 {#lookup}
 
-에 GET 요청을 하여 현재 로그인한 프로필의 세부 정보를 검색할 수 있습니다. `/profile` 엔드포인트.
+에 GET 요청을 수행하여 현재 로그인한 프로필의 세부 사항을 검색할 수 있습니다 `/profile` 엔드포인트.
 
 **API 형식**
 
@@ -51,14 +51,14 @@ curl -X GET \
     "id": "UR0bd696624e844d6ba5bfc248ba1eca11",
     "type": "users",
     "attributes": {
-      "active_org": "{IMS_ORG_1}",
+      "active_org": "{ORG_1}",
       "expires_in": 0,
       "display_name": "John Smith",
       "job_function": null,
       "email": "jsmith@example.com",
       "organizations": {
-        "{IMS_ORG_1}": {
-          "name": "Example IMS Org A",
+        "{ORG_1}": {
+          "name": "Example organization A",
           "admin": true,
           "active": true,
           "login_companies": [
@@ -73,8 +73,8 @@ curl -X GET \
           ],
           "tenant_id": "{TENANT_ID_1}"
         },
-        "{IMS_ORG_2}": {
-          "name": "Example IMS Org B",
+        "{ORG_2}": {
+          "name": "Example organization B",
           "admin": false,
           "active": false,
           "login_companies": [

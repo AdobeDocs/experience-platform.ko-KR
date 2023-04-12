@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform;홈;인기 항목;데이터 준비;api 안내서;스키마;
+keywords: Experience Platform;홈;인기 항목;데이터 준비;api 안내서;스키마
 solution: Experience Platform
-title: 스키마 API 엔드포인트
-description: Adobe Experience Platform API의 "/schemas" 끝점을 사용하여 Platform의 Mapper에서 사용할 스키마를 프로그래밍 방식으로 검색, 생성 및 업데이트할 수 있습니다.
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+title: 스키마 API 끝점
+description: Adobe Experience Platform API에서 '/schemas' 종단점을 사용하여 Platform의 Mapper에서 사용할 스키마를 프로그래밍 방식으로 검색, 생성 및 업데이트할 수 있습니다.
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '611'
 ht-degree: 4%
 
 ---
 
 
 
-# 스키마 엔드포인트
+# 스키마 끝점
 
-스키마는 Mapper와 함께 사용하여 Adobe Experience Platform에 수집한 데이터가 수집하려는 데이터와 일치하는지 확인할 수 있습니다. 다음을 사용할 수 있습니다. `/schemas` platform의 Mapper에서 사용할 사용자 지정 스키마를 프로그래밍 방식으로 만들고 나열하고 가져올 종단점입니다.
+스키마를 Mapper와 함께 사용하여 Adobe Experience Platform에 수집한 데이터가 수집하려는 데이터와 일치하는지 확인할 수 있습니다. 를 사용할 수 있습니다 `/schemas` 플랫폼의 매퍼에 사용할 사용자 지정 스키마를 프로그래밍 방식으로 생성, 목록 및 가져올 수 있는 끝점입니다.
 
 >[!NOTE]
 >
->이 끝점을 사용하여 생성된 스키마는 매퍼 및 매핑 세트와 함께 단독으로 사용됩니다. 다른 Platform 서비스에서 액세스할 수 있는 스키마를 만들려면 [스키마 레지스트리 개발자 안내서](../../xdm/api/schemas.md).
+>이 끝점을 사용하여 만든 스키마는 매퍼 및 매핑 집합에서만 사용됩니다. 다른 플랫폼 서비스에서 액세스할 수 있는 스키마를 만들려면 다음을 참조하십시오 [스키마 레지스트리 개발자 안내서](../../xdm/api/schemas.md).
 
 ## 모든 스키마 가져오기
 
-에 GET 요청을 하여 IMS 조직에 사용 가능한 모든 매퍼 스키마 목록을 검색할 수 있습니다. `/schemas` 엔드포인트.
+조직에 대해 GET 요청을 수행하여 조직에 대해 사용 가능한 모든 Mapper 스키마 목록을 검색할 수 있습니다 `/schemas` 엔드포인트.
 
 **API 형식**
 
-다음 `/schemas` 엔드포인트는 결과를 필터링하는 데 도움이 되는 몇 가지 쿼리 매개 변수를 지원합니다. 이러한 매개변수의 대부분은 선택 사항이지만, 값비싼 오버헤드를 줄이는 데 도움이 되도록 이 매개변수를 사용하는 것이 좋습니다. 단, 다음 두 가지를 모두 포함해야 합니다. `start` 및 `limit` 요청의 일부로 매개 변수. 여러 매개 변수를 포함할 수 있으며 앰퍼샌드(`&`).
+다음 `/schemas` endpoint는 결과를 필터링하는 데 도움이 되는 몇 가지 쿼리 매개 변수를 지원합니다. 이러한 매개 변수 대부분은 선택 사항이지만, 고가의 오버헤드를 줄이는 데 도움이 되도록 사용하는 것이 좋습니다. 그러나 두 항목을 모두 포함해야 합니다 `start` 및 `limit` 매개 변수를 요청의 일부로 사용할 수 있습니다. 여러 매개 변수를 앰퍼샌드( )로 구분하여 포함할 수 있습니다`&`).
 
 ```http
 GET /schemas?limit={LIMIT}&start={START}
@@ -36,14 +36,14 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 | 매개 변수 | 설명 |
 | --------- | ----------- |
-| `{LIMIT}` | **필수 여부**. 반환되는 스키마 수를 지정합니다. |
-| `{START}` | **필수 여부**. 결과 페이지의 오프셋을 지정합니다. 결과의 첫 번째 페이지를 가져오려면 값을 로 설정합니다. `start=0`. |
-| `{NAME}` | 이름을 기반으로 스키마를 필터링합니다. |
-| `{ORDER_BY}` | 결과의 순서를 정렬합니다. 지원되는 필드는 다음과 같습니다. `modifiedDate` 및 `createdDate`. 속성 앞에 를 추가할 수 있습니다. `+` 또는 `-` 오름차순 또는 내림차순으로 정렬합니다. |
+| `{LIMIT}` | **필수 여부**. 반환된 스키마 수를 지정합니다. |
+| `{START}` | **필수 여부**. 결과 페이지의 오프셋을 지정합니다. 결과의 첫 페이지를 가져오려면 값을 로 설정합니다. `start=0`. |
+| `{NAME}` | 스키마를 이름에 따라 필터링합니다. |
+| `{ORDER_BY}` | 결과 순서를 정렬합니다. 지원되는 필드는 다음과 같습니다 `modifiedDate` 및 `createdDate`. 속성을 `+` 또는 `-` 오름차순 또는 내림차순으로 정렬하려면 다음을 수행합니다. |
 
 **요청**
 
-다음 요청은 IMS 조직에 대해 마지막으로 생성된 스키마 2개를 검색합니다.
+다음 요청은 조직에 대해 마지막으로 생성한 스키마 두 개를 검색합니다.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
 
 >[!NOTE]
 >
->다음 응답은 공백으로 잘렸습니다.
+>다음 응답은 스페이스에 대해 잘렸습니다.
 
 ```json
 {
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
 
 ## 스키마 만들기
 
-에 대한 POST 요청을 하여 확인할 스키마를 생성할 수 있습니다. `/schemas` 엔드포인트. 스키마를 만드는 방법에는 세 가지가 있습니다. [JSON 스키마](https://json-schema.org/), 샘플 데이터 사용 또는 기존 XDM 스키마 참조
+에 POST 요청을 수행하여 유효성을 검사할 스키마를 만들 수 있습니다 `/schemas` 엔드포인트. 스키마를 만드는 방법에는 세 가지가 있습니다. 보내기 [JSON 스키마](https://json-schema.org/)샘플 데이터 사용 또는 기존 XDM 스키마 참조.
 
 ```http
 POST /schemas
@@ -142,7 +142,7 @@ POST /schemas
 
 **요청**
 
-다음 요청을 사용하면 를 전송하여 스키마를 생성할 수 있습니다. [JSON 스키마](https://json-schema.org/).
+다음 요청을 통해 [JSON 스키마](https://json-schema.org/).
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -163,7 +163,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 **응답**
 
-성공한 응답은 새로 만든 스키마에 대한 정보와 함께 HTTP 상태 200을 반환합니다.
+성공적으로 응답하면 새로 만든 스키마에 대한 정보가 있는 HTTP 상태 200이 반환됩니다.
 
 ```json
 {
@@ -181,7 +181,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 **요청**
 
-다음 요청을 사용하면 이전에 업로드한 샘플 데이터를 사용하여 스키마를 만들 수 있습니다.
+다음 요청을 사용하면 이전에 업로드한 샘플 데이터를 사용하여 스키마를 생성할 수 있습니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -198,11 +198,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `sampleId` | 스키마를 기반으로 하는 샘플 데이터의 ID입니다. |
+| `sampleId` | 스키마의 기반이 되는 샘플 데이터의 ID입니다. |
 
 **응답**
 
-성공한 응답은 새로 만든 스키마에 대한 정보와 함께 HTTP 상태 200을 반환합니다.
+성공적으로 응답하면 새로 만든 스키마에 대한 정보가 있는 HTTP 상태 200이 반환됩니다.
 
 ```json
 {
@@ -242,11 +242,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 }
 ```
 
-### XDM 스키마 참조
+### XDM 스키마 를 참조하십시오
 
 **요청**
 
-다음 요청을 사용하면 기존 XDM 스키마를 참조하여 스키마를 만들 수 있습니다.
+다음 요청을 통해 기존 XDM 스키마를 참조하여 스키마를 생성할 수 있습니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -267,17 +267,17 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `name` | 생성하려는 스키마의 이름입니다. |
-| `schemaRef.id` | 참조 중인 스키마의 ID입니다. |
+| `name` | 만들려는 스키마의 이름입니다. |
+| `schemaRef.id` | 참조하는 스키마의 ID입니다. |
 | `schemaRef.contentType` | 참조된 스키마의 응답 형식을 결정합니다. 이 필드에 대한 자세한 내용은 [스키마 레지스트리 개발자 안내서](../../xdm/api/schemas.md#lookup) |
 
 **응답**
 
-성공한 응답은 새로 만든 스키마에 대한 정보와 함께 HTTP 상태 200을 반환합니다.
+성공적으로 응답하면 새로 만든 스키마에 대한 정보가 있는 HTTP 상태 200이 반환됩니다.
 
 >[!NOTE]
 >
->다음 응답은 공백으로 잘렸습니다.
+>다음 응답은 스페이스에 대해 잘렸습니다.
 
 ```json
 {
@@ -294,7 +294,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 ## 파일 업로드를 사용하여 스키마 만들기
 
-변환할 JSON 파일을 업로드하여 스키마를 만들 수 있습니다.
+변환할 JSON 파일을 업로드하여 스키마를 생성할 수 있습니다.
 
 **API 형식**
 
@@ -304,7 +304,7 @@ POST /schemas/upload
 
 **요청**
 
-다음 요청을 사용하면 업로드된 JSON 파일에서 스키마를 만들 수 있습니다.
+다음 요청을 통해 업로드된 JSON 파일에서 스키마를 생성할 수 있습니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload \
@@ -318,7 +318,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
 
 **응답**
 
-성공한 응답은 새로 만든 스키마에 대한 정보와 함께 HTTP 상태 200을 반환합니다.
+성공적으로 응답하면 새로 만든 스키마에 대한 정보가 있는 HTTP 상태 200이 반환됩니다.
 
 ```json
 {
@@ -334,7 +334,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
 
 ## 특정 스키마 검색
 
-에 GET 요청을 하여 특정 스키마에 대한 정보를 검색할 수 있습니다. `/schemas` 엔드포인트 및 요청 경로에서 검색할 스키마의 ID 제공.
+에 GET 요청을 수행하여 특정 스키마에 대한 정보를 검색할 수 있습니다 `/schemas` 요청 경로에서 검색할 스키마의 ID를 제공하고 끝점입니다.
 
 **API 형식**
 
@@ -344,7 +344,7 @@ GET /schemas/{SCHEMA_ID}
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{SCHEMA_ID}` | 조회 중인 스키마 ID입니다. |
+| `{SCHEMA_ID}` | 조회 중인 스키마의 ID입니다. |
 
 **요청**
 
@@ -360,7 +360,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3
 
 **응답**
 
-성공한 응답은 지정된 스키마에 대한 정보와 함께 HTTP 상태 200을 반환합니다.
+성공적인 응답은 지정된 스키마에 대한 정보와 함께 HTTP 상태 200을 반환합니다.
 
 ```json
 {

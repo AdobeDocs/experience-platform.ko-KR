@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service UI 개요
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 요청을 조정하고 모니터링합니다.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '206'
 ht-degree: 19%
 
 ---
@@ -28,7 +28,7 @@ Privacy Service UI [!DNL Privacy Service] 다양한 Adobe Experience Cloud 애�
 
 >[!IMPORTANT]
 >
->에 인증하려면 Adobe ID이 있어야 합니다 [!DNL Privacy Service] UI. 또한 IMS 조직 내에 시스템 관리자 권한이 있어야 합니다.
+>에 인증하려면 Adobe ID이 있어야 합니다 [!DNL Privacy Service] UI. 또한 조직 내에 시스템 관리자 권한이 있어야 합니다.
 
 UI에 액세스하려면 다음 위치에 로그인합니다 [Adobe Experience Cloud](https://experience.adobe.com/) 을(를) 선택합니다. **[!UICONTROL 개인 정보 UI]** 빠른 액세스 메뉴 아래에 있습니다.
 

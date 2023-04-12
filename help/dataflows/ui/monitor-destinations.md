@@ -5,9 +5,9 @@ solution: Experience Platform
 title: UI에서 대상에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 133b3e6b8074bab52f23330ac8d3efc468f29d55
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '3228'
+source-wordcount: '3227'
 ht-degree: 10%
 
 ---
@@ -289,7 +289,7 @@ When **[!UICONTROL 세그먼트]** 을 선택하면 선택한 데이터 흐름�
 데이터 흐름 실행 세부 정보 페이지에 데이터 흐름 실행 목록에 표시된 세부 정보 외에 데이터 흐름 세부 정보가 표시됩니다.
 
 - **[!UICONTROL 데이터 흐름 실행 ID]**: 데이터 흐름의 ID입니다.
-- **[!UICONTROL IMS 조직 ID]**: 데이터 흐름이 속한 IMS 조직입니다.
+- **[!UICONTROL IMS 조직 ID]**: 데이터 흐름이 속한 조직입니다.
 - **[!UICONTROL 마지막 업데이트 날짜]**: 데이터 흐름 실행이 마지막으로 업데이트된 시간입니다.
 
 또한 세부 사항 페이지에 데이터 흐름 실행 오류와 세그먼트 간을 전환할 수 있는 토글이 있습니다. 이 옵션은 일괄 처리 대상에서 데이터 흐름 실행에만 사용할 수 있습니다.

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그먼트 내보내기 작업 API 끝점
 description: 내보내기 작업은 대상 세그먼트 구성원을 데이터 세트에 유지하는 데 사용되는 비동기 프로세스입니다. Adobe Experience Platform 세그멘테이션 서비스 API에서 /export/jobs 엔드포인트를 사용할 수 있으며, 이 엔드포인트를 통해 프로그래밍 방식으로 내보내기 작업을 검색, 만들기 및 취소할 수 있습니다.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: d28cebaf4b9fe5c35240e28653e99424db08d9d2
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1629'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 ## 내보내기 작업 목록 검색 {#retrieve-list}
 
-IMS 조직에 대해 GET 요청을 수행하여 모든 내보내기 작업 목록을 검색할 수 있습니다 `/export/jobs` 엔드포인트.
+에 GET 요청을 수행하여 조직에 대한 모든 내보내기 작업 목록을 검색할 수 있습니다 `/export/jobs` 엔드포인트.
 
 **API 형식**
 
@@ -46,7 +46,7 @@ GET /export/jobs?status={STATUS}
 
 **요청**
 
-다음 요청은 IMS 조직 내에서 마지막 두 내보내기 작업을 검색합니다.
+다음 요청은 조직 내에서 마지막 두 내보내기 작업을 검색합니다.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \

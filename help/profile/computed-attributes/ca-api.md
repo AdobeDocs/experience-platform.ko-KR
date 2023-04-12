@@ -6,9 +6,9 @@ description: Adobe Experience Platform에서 계산된 속성은 이벤트 수�
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
 hide: true
 hidefromtoc: true
-source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2274'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST \
 | `name` | 계산된 속성 필드의 이름(문자열)입니다. |
 | `path` | 계산된 속성이 포함된 필드의 경로입니다. 이 경로는 `properties` 스키마 속성이며 경로에 필드 이름을 포함하지 않아야 합니다. 패스를 쓸 때는 `properties` 속성을 사용합니다. |
 | `{TENANT_ID}` | 임차인 ID에 익숙하지 않은 경우 [스키마 레지스트리 개발자 안내서](../../xdm/api/getting-started.md#know-your-tenant_id). |
-| `description` | 계산된 속성에 대한 설명입니다. 이 기능은 IMS 조직 내의 다른 사용자가 사용할 올바른 계산된 속성을 결정하는 데 도움이 되므로 여러 계산된 속성이 정의된 경우에 특히 유용합니다. |
+| `description` | 계산된 속성에 대한 설명입니다. 이 기능은 여러 계산된 속성이 정의된 경우 조직 내의 다른 사람이 사용할 올바른 계산된 속성을 결정하는 데 도움이 되므로 특히 유용합니다. |
 | `expression.value` | 유효한 [!DNL Profile Query Language] (PQL) 표현식입니다. 계산된 속성은 현재 다음 함수를 지원합니다. sum, count, min, max 및 boolean 샘플 표현식 목록은 [샘플 PQL 표현식](expressions.md) 설명서. |
 | `schema.name` | 계산된 속성 필드를 포함하는 스키마의 기반이 되는 클래스입니다. 예: `_xdm.context.experienceevent` XDM ExperienceEvent 클래스를 기반으로 한 스키마. |
 
