@@ -1,8 +1,10 @@
 ---
 title: Customer.io 소스 개요
 description: 웹 후크를 활용하여 API 또는 사용자 인터페이스를 사용하여 Customer.io를 Adobe Experience Platform에 연결하는 방법을 알아봅니다
-badge: "Beta"
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+badge: Beta
+last-substantial-update: 2023-03-29T00:00:00Z
+exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
+source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
@@ -57,4 +59,3 @@ Experience Platform은 스트리밍 응용 프로그램에서 데이터를 수�
 ### Connect [!DNL Customer.io] UI를 사용하여 플랫폼 구현 {#connect-to-platform-using-ui}
 
 * [가져올 소스 연결 및 데이터 흐름 만들기 [!DNL Customer.io] 사용자 인터페이스를 사용하여 Platform에 데이터 추가](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)
-
