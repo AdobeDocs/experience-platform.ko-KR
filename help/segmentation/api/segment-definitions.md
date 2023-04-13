@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그먼트 정의 API 끝점
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 세그먼트 정의 종단점을 사용하면 조직의 세그먼트 정의를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1216'
 ht-degree: 3%
 
 ---
@@ -209,11 +209,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.value` | 에 표시된 유형을 따르는 식입니다. `expression.format`. |
 | `description` | 사용자가 읽을 수 있는 정의 설명. |
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->세그먼트 정의 표현식은 계산된 속성을 참조할 수도 있습니다. 자세한 내용은 [계산된 특성 API 끝점 안내서](../../profile/computed-attributes/ca-api.md)
+>A segment definition expression may also reference a computed attribute. To learn more, please refer to the [computed attribute API endpoint guide](../../profile/computed-attributes/ca-api.md)
 >
->계산된 특성 기능은 알파에 있으며 모든 사용자가 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+>Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change. -->
 
 **응답**
 
