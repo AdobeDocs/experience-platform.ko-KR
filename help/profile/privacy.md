@@ -5,9 +5,9 @@ title: 실시간 고객 프로필의 개인 정보 보호 요청 처리
 type: Documentation
 description: Adobe Experience Platform Privacy Service은 다양한 개인 정보 보호 규정에 따라 지정된 대로 고객 개인 데이터에 대한 액세스, 판매 거부 또는 삭제 요청을 처리합니다. 이 문서에서는 실시간 고객 프로필의 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: e5ea0672ba8e9b5951464396a75decc5d8508ff4
+source-git-commit: 42e59ba1c7b1980d6633ced264673afcf8d80810
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1612'
 ht-degree: 0%
 
 ---
@@ -186,6 +186,10 @@ UI에서 작업 요청을 만들 때는 반드시 선택해야 합니다 **[!UIC
 ## 요청 처리 삭제 {#delete}
 
 When [!DNL Experience Platform] 에서 삭제 요청을 받습니다. [!DNL Privacy Service], [!DNL Platform] 에 확인 보내기 [!DNL Privacy Service] 요청이 수신되고 영향을 받는 데이터가 삭제로 표시되었음을 나타냅니다. 그런 다음 개인 정보 작업이 완료되면 레코드가 제거됩니다.
+
+>[!IMPORTANT]
+>
+>개인 정보 삭제 요청은 즉시 표시되지 않으며, 관련 서비스 및 지리적 위치 등 영향을 주는 요인에 따라 달라질 수 있습니다. 1545일 개인정보 보호 작업 완료 시점은 보장되지 않습니다.
 
 ID 서비스(`identity`) 및 data lake(`aepDataLake`)을 제품(`ProfileService`). 프로필과 관련된 서로 다른 데이터 세트가 잠재적으로 다른 시점에 시스템에서 제거됩니다.
 
