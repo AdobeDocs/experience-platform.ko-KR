@@ -3,7 +3,7 @@ title: (알파) [!DNL LiveRamp SFTP] 연결
 description: LiveRamp 커넥터를 사용하여 Adobe Real-time Customer Data Platform에서 LiveRamp Connect로 대상을 온보딩하는 방법을 알아봅니다.
 hidefromtoc: true
 hide: true
-source-git-commit: b308def0e9b9643cfc1dcc8ac7db19eb733750ea
+source-git-commit: 367ef59f623acc38e636a6cae0c85f186eaccfda
 workflow-type: tm+mt
 source-wordcount: '1738'
 ht-degree: 0%
@@ -91,7 +91,7 @@ LiveRamp SFTP는 공식 설명서에 설명된 PII 기반 식별자, 알려진 �
 >id="platform_destinations_liveramp_subkey"
 >title="암호화 하위 키 ID"
 >abstract="LiveRamp 공개 암호화 키를 기반으로 암호화에 사용되는 하위 키 ID입니다. 인증 단계에서 암호화 키를 제공한 경우 이 필드가 필요합니다."
->additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="하위 키 ID를 가져오는 방법을 알아봅니다."
+>additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="하위 키 ID를 가져오는 방법을 알아봅니다"
 
 대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
