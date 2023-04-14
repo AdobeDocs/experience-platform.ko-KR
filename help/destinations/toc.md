@@ -4,7 +4,7 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: 12bae2f5b3dd04eaf72e736cb1ddca4bdd0a9d52
+source-git-commit: fb1a8f3a8f78578a0c7d6b8ab4feb60d8c5da1af
 workflow-type: tm+mt
 source-wordcount: '1072'
 ht-degree: 6%
@@ -144,6 +144,7 @@ ht-degree: 6%
       * [Responsys 연결 oracle](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Salesforce Marketing Cloud 연결](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
       * [(파일) Salesforce Marketing Cloud 연결](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [SendGrid 연결](./catalog/email-marketing/sendgrid.md)
    * 태그 확장 {#launch-extensions}
       * [태그 확장 개요](./catalog/launch-extensions/overview.md)
