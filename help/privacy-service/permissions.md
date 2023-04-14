@@ -2,9 +2,9 @@
 title: Privacy Service 권한 관리
 description: Adobe Admin Console을 사용하여 Adobe Experience Platform Privacy Service의 사용자 권한을 관리하는 방법을 알아봅니다.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: fc6c22ab1185b9692ece86de75149102ce020474
+source-git-commit: 1e164166f58540cbaaa4ad789b10cdfc40fa8a70
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1634'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Privacy Service에 대한 권한을 개선하여 세부기간 수준을 늘렸습니다. 이러한 변경 사항으로 조직 관리자는 원하는 역할 및 권한 수준을 사용하여 더 많은 사용자에게 액세스 권한을 부여할 수 있습니다. 이 임박한 업데이트가 기술 계정 사용자에게 중요한 변경 사항이므로 기술 계정 사용자는 Privacy Service 권한을 업데이트해야 합니다. 이 권한 변경의 적용은 **2023년 3월 28일**.
+>Adobe Experience Platform Privacy Service에 대한 권한을 개선하여 세부기간 수준을 늘렸습니다. 이러한 변경 사항으로 조직 관리자는 원하는 역할 및 권한 수준을 사용하여 더 많은 사용자에게 액세스 권한을 부여할 수 있습니다. 이 임박한 업데이트가 기술 계정 사용자에게 중요한 변경 사항이므로 기술 계정 사용자는 Privacy Service 권한을 업데이트해야 합니다. 이 권한 변경의 적용은 **2023년 4월 13일**. 다음 문서를 참조하십시오. [레거시 API 자격 증명 마이그레이션](#migrate-tech-accounts) 이 문제 해결에 대한 지침은
 >
 >기술 계정은 엔터프라이즈 고객이 사용할 수 있으며 Adobe 개발자 콘솔을 통해 만들 수 있습니다. 기술 계정 소유자의 Adobe ID은 `@techacct.adobe.com`. 기술 계정 보유자인지 확실하지 않은 경우 조직 관리자에게 문의하십시오.
 
@@ -99,11 +99,49 @@ Privacy Service 권한을 관리하려면 로그인하십시오 [Admin Console](
 >
 >이 섹션은 Privacy Service 권한이 Adobe Admin Console에 통합되기 전에 생성된 기존 API 자격 증명에만 적용됩니다. 새 자격 증명의 경우 제품 프로필(및 해당 권한)은 [Adobe Developer 콘솔 프로젝트](https://developer.adobe.com/developer-console/docs/guides/projects/) 을 가리키도록 업데이트하는 것이 좋습니다.<br><br>의 섹션을 참조하십시오. [프로젝트에 제품 프로필 할당](./api/getting-started.md#product-profiles) 자세한 내용은 Privacy Service API 시작 안내서를 참조하십시오.
 
-레거시 API 자격 증명을 제품 프로필에 마이그레이션하려면 을 선택합니다 **[!UICONTROL API 자격 증명]**, 그 다음 **[!UICONTROL API 자격 증명 추가]**.
+이전에는 기술 계정에 통합 및 권한에 대한 제품 프로필이 필요하지 않았습니다. 그러나 Privacy Service 권한이 최근 개선되어 이제 레거시 API 자격 증명을 제품 프로필에 마이그레이션해야 합니다. 이 업데이트를 통해 기술 계정 담당자에게 세부 권한을 부여할 수 있습니다. Privacy Service에 대한 기술 계정 권한을 업데이트하려면 아래 제공된 단계를 따르십시오.
 
-![[!UICONTROL API 자격 증명 추가] Admin Console에서 선택 [!UICONTROL API 자격 증명] 제품 프로필의 탭](./images/permissions/api-credentials.png)
+#### 기술 계정 권한 업데이트 {#update-tech-account-permissions}
 
-목록에서 원하는 개발자 콘솔 프로젝트를 선택한 다음 을 선택합니다 **[!UICONTROL 저장]** 를 제품 프로필에 추가합니다. 이러한 프로젝트의 자격 증명을 사용하는 모든 API 호출은 제품 프로필에서 부여한 세부 권한을 상속합니다.
+기술 계정에 대한 권한 집합을 할당하는 첫 번째 단계는 로 이동하는 것입니다. [Adobe Admin Console](https://adminconsole.adobe.com/) Privacy Service을 위한 새 제품 프로필을 만듭니다.
+
+Admin Console UI에서 **제품** 탐색 모음에서 를 차례로 클릭합니다. **[!UICONTROL Experience Cloud]** 및 **[!UICONTROL Adobe Experience Platform Privacy Service]** 왼쪽 사이드바 다음 [!UICONTROL 제품 프로필] 탭이 나타납니다. 선택 **새 프로필** Privacy Service에 사용할 새 제품 프로필을 만들려면
+
+![새 프로필이 강조 표시된 Adobe Admin Console의 Experience Platform Privacy Service 제품 프로필 탭.](./images/permissions/create-product-profile.png)
+
+다음 [!UICONTROL 새 제품 프로필 만들기] 대화 상자가 나타납니다. 제품 프로필을 만드는 방법에 대한 전체 지침은 [프로필 작성에 대한 UI 안내서](../access-control/ui/create-profile.md).
+
+새 제품 프로필을 저장한 후 [Adobe Developer 콘솔](https://developer.adobe.com/console/home) 해당 제품이나 프로젝트에 로그인합니다. 선택 **[!UICONTROL 프로젝트]** 위쪽 탐색에서 프로젝트 카드가 옵니다.
+
+>[!NOTE]
+>
+>캐시를 지우고 새 프로젝트가 개발자 콘솔 프로젝트 목록에 나타날 때까지 잠시 기다려야 할 수 있습니다.
+
+프로젝트에 로그인한 후 을(를) 선택합니다. **[!UICONTROL Privacy Service API]** 왼쪽 사이드바에서 통합할 수 있습니다.
+
+![프로젝트 및 Privacy Service API가 강조 표시된 Adobe Developer 콘솔의 프로젝트 탭.](./images/permissions/login-to-dev-console-project.png)
+
+Privacy Service API 통합 대시보드가 나타납니다. 이 대시보드에서 해당 프로젝트와 연결된 제품 프로필을 편집할 수 있습니다. 선택 **[!UICONTROL 제품 프로필 편집]** 프로세스를 시작합니다. 다음 [!UICONTROL API 구성] 대화 상자가 나타납니다.
+
+![Adobe Developer 콘솔에서 제품 프로필 편집이 강조 표시된 Privacy Service API 통합 대시보드](./images/permissions/edit-product-profiles.png)
+
+다음 [!UICONTROL API 구성] 대화 상자에는 현재 서비스에 있는 사용 가능한 제품 프로필이 표시됩니다. 이 프로필은 Admin Console에서 만든 제품 프로필과 관련이 있습니다. 사용 가능한 제품 프로필 목록에서 Admin Console에서 기술 계정에 대해 만든 새 제품 프로필에 대한 확인란을 선택합니다. 이렇게 하면 이 기술 계정이 선택한 제품 프로필의 권한과 자동으로 연결됩니다. 선택 **[!UICONTROL 구성된 API 저장]** 설정을 확인합니다.
+
+>[!NOTE]
+>
+>기술 계정이 이미 제품 프로필과 연결된 경우 사용 가능한 제품 프로필 목록의 확인란 중 하나가 이미 선택됩니다.
+
+![제품 프로필 확인란과 구성된 API 저장 을 강조 표시한 Adobe Developer Console의 API 구성 대화 상자](./images/permissions/select-profile-for-tech-account.png)
+
+#### 설정이 적용되었는지 확인합니다 {#confirm-applied-settings}
+
+설정이 계정에 적용되었는지 확인하려면 로 돌아갑니다. [Admin Console](https://adminconsole.adobe.com/) 새로 만든 제품 프로필로 이동합니다. 을(를) 선택합니다 **[!UICONTROL API 자격 증명]** 탭하여 관련 프로젝트 목록을 확인합니다. 개발자 콘솔에 제품 프로필을 기술 계정에 할당한 프로젝트가 자격 증명 목록에 표시됩니다. 각 API 자격 증명의 이름은 끝에 허용되는 임의로 생성된 번호를 가진 프로젝트 이름으로 구성됩니다. 자격 증명을 선택하여 [!UICONTROL 세부 사항] 패널.
+
+![API 자격 증명 탭 및 프로젝트 자격 증명 행이 강조 표시된 Admin Console의 제품 프로필입니다.](./images/permissions/confirm-credentials-in-admin-console.png)
+
+다음 [!UICONTROL 세부 사항] 패널에는 관련 기술 ID, API 키, 생성 및 마지막 수정 날짜 및 관련 Adobe 제품을 포함한 API 자격 증명에 대한 정보가 포함되어 있습니다.
+
+![Admin Console 내에서 API 자격 증명의 강조 표시된 세부 사항 패널.](./images/permissions/admin-console-details-panel.png)
 
 ## 다음 단계
 
