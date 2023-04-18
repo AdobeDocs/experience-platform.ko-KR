@@ -57,7 +57,7 @@ ht-degree: 6%
 
 이러한 시스템은 외부 개인화 플랫폼, 콘텐츠 관리 시스템, 광고 서버 및 고객의 웹 및 모바일 속성에서 실행되는 기타 애플리케이션일 수 있습니다.
 
-### 동일한 페이지 개인화 {#same-page}
+### 동일 페이지 개인화 {#same-page}
 
 사용자가 웹 사이트의 페이지를 방문합니다. 고객은 현재 페이지 방문 정보(예: 참조 URL, 브라우저 언어, 포함된 제품 정보)를 사용하여 비Adobe 플랫폼에 대한 사용자 지정 개인화 연결을 사용하여 다음 작업/결정(예: 개인화)을 선택할 수 있습니다(예: [!DNL Pega], [!DNL Optimizely]등)
 
@@ -77,7 +77,7 @@ ht-degree: 6%
 >id="platform_destinations_custom_personalization_datastream"
 >title="데이터스트림 ID 정보"
 >abstract="이 옵션은 페이지에 대한 응답으로 세그먼트에 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에 대상 구성이 활성화된 데이터스트림만 표시됩니다. 대상을 구성하려면 먼저 데이터스트림을 구성해야 합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="데이터스트림을 구성하는 방법에 대해 알아보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=ko" text="데이터스트림을 구성하는 방법에 대해 알아보기"
 
 >[!IMPORTANT]
 > 

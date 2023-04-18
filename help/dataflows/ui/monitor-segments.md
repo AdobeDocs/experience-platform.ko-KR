@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="세그먼트"
->abstract="세그먼트 보기에는 조직의 모든 세그먼트에 대한 정보가 포함되어 있으며 활성화 및 평가 작업에 대한 자세한 정보가 포함되어 있습니다."
+>abstract="세그먼트 보기에는 조직의 모든 세그먼트에 대한 정보와 해당 세그먼트의 활성화 및 평가 작업에 대한 추가 정보가 포함됩니다."
 
 에 액세스하려면 **[!UICONTROL 세그먼트]** 대시보드, 선택 **[!UICONTROL 모니터링]** 을 클릭합니다. 에 한 번 **[!UICONTROL 모니터링]** 페이지에서 을 선택합니다 **[!UICONTROL 세그먼트]** 카드.
 
