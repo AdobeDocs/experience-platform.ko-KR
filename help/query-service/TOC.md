@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: 83d1889450ba292573a6f995120691fc57cb6cfa
+source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '270'
 ht-degree: 18%
 
 ---
@@ -31,7 +31,6 @@ ht-degree: 18%
       - [데칠레 기반 파생 속성 만들기](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - 사용 사례 {#use-cases}
    - [찾아보기 포기](use-cases/abandoned-browse.md)
-   - [Adobe Target을 사용한 활동 분석](use-cases/activity-analysis-with-adobe-target.md)
    - [속성 분석](use-cases/attribution-analysis.md)
    - [보트 필터링](use-cases/bot-filtering.md)
    - [이벤트의 트렌드 보고서 만들기](use-cases/trended-report-of-events.md)
