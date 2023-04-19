@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 컨텐츠 태깅 API의 색상 태깅
 description: 색상 태깅 서비스에서는 이미지가 지정된 경우 픽셀 색상의 히스토그램을 계산하고 우세한 색상을 버킷으로 정렬할 수 있습니다.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: e6ea347252b898f73c2bc495b0324361ee6cae9b
+source-git-commit: fd8891bdc7d528e327d2a72c2427f7bbc6dc8a03
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '653'
 ht-degree: 5%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 5%
 
 **톤 추출**
 
-위에 언급된 변형 외에도, 다음에 대한 색상 히스토그램을 검색하도록 서비스를 구성할 수 있습니다.
+위에 언급된 변형 외에도, 다음과 같은 색상 히스토그램을 검색하도록 서비스를 구성할 수 있습니다.
 
 - 전체 이미지(전체 이미지 변형을 사용할 때)
 - 전체 이미지, 전경 및 배경 영역(마스크와 함께 변형을 사용할 때)
@@ -161,7 +161,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **요청 - 마스킹된 이미지 변형**
 
-다음 예제 요청에서는 색상 태깅에 마스킹 방법을 사용합니다. 이 설정을 `enable_mask` 매개 변수 대상 `true` 참조하십시오.
+다음 예제 요청에서는 색상 태깅에 마스킹 방법을 사용합니다. 이 기능은 `enable_mask` 매개 변수 대상 `true` 참조하십시오.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -202,7 +202,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
->참고: 또한 `retrieve_tone` 매개 변수 대상 `true` 위의 요청에서. 이렇게 하면 이미지의 전체, 전경 및 배경 영역에서 따뜻한 색상, 중립적이고 시원한 톤 위에 색조 분포 히스토그램을 검색할 수 있습니다.
+>[!NOTE]
+>
+>또한 `retrieve_tone` 매개 변수도 `true` 위의 요청에서. 이렇게 하면 이미지의 전체, 전경 및 배경 영역에서 따뜻한 톤, 중성면 및 시원한 톤 위에 색조 분포 히스토그램을 검색할 수 있습니다.
 
 **응답 - 마스킹된 이미지 변형**
 
@@ -352,16 +354,16 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 }]
 ```
 
-이제 전체 이미지의 색상 외에도 전경 영역과 배경 영역에서 색상을 볼 수 있습니다. 위의 각 영역에 대해 톤 검색을 활성화하므로 톤 히스토그램도 검색할 수 있습니다.
+이제 전체 이미지의 색상 외에도 전경 영역과 배경 영역에서 색상을 볼 수 있습니다. 위의 각 영역에 대해 톤 검색이 활성화되므로 톤 히스토그램도 검색할 수 있습니다.
 
 **입력 매개 변수**
 
 | 이름 | 데이터 형식 | 필수 여부 | 기본값 | 값 | 설명 |
 | --- | --- | --- | --- | --- | --- |
-| `documents` | 배열(Document-Object) | 예 | - | 아래를 참조하십시오 | 목록에 있는 각 항목이 하나의 문서를 나타내는 json 요소 목록입니다. |
+| `documents` | 배열(Document-Object) | 예 | - | 아래를 참조하십시오 | 목록에 있는 각 항목이 하나의 문서를 나타내는 JSON 요소 목록입니다. |
 | `top_n` | 숫자 | 아니요 | 0 | 음수가 아닌 정수 | 반환할 결과 수입니다. 0, 모든 결과를 반환합니다. 임계값과 함께 사용하는 경우 반환되는 결과 수가 두 제한 중 하나가 되지 않습니다. |
 | `min_coverage` | 숫자 | 아니요 | 0.05 | 실수 | 결과를 반환해야 하는 범위 위의 임계값입니다. 모든 결과를 반환하려면 매개 변수를 제외하십시오. |
-| `resize_image` | 숫자 | 아니요 | True | True/False | 입력 이미지의 크기를 조정할지 여부를 지정합니다. 기본적으로 색상 추출을 수행하기 전에 이미지 크기가 320*320픽셀로 조정됩니다. 디버깅을 위해 이 값을 False로 설정하여 코드가 전체 이미지에서도 실행되도록 허용할 수 있습니다. |
+| `resize_image` | 숫자 | 아니요 | True | True/False | 입력 이미지의 크기를 조정할지 여부를 지정합니다. 기본적으로 색상 추출을 수행하기 전에 이미지 크기가 320*320픽셀로 조정됩니다. 디버깅을 위해 다음을 설정하여 코드가 전체 이미지에서도 실행되도록 허용할 수 있습니다 `False`. |
 | `enable_mask` | 숫자 | 아니요 | False | True/False | 색상 추출 활성화/비활성화 |
 | `retrieve_tone` | 숫자 | 아니요 | False | True/False | 톤 추출 활성화/비활성화 |
 
@@ -369,7 +371,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 | 이름 | 데이터 형식 | 필수 여부 | 기본값 | 값 | 설명 |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | 문자열 | - | - | - | 키 구문을 추출할 문서의 사전 서명된 URL입니다. |
-| `sensei:repoType` | 문자열 | - | - | HTTPS | 문서가 저장되는 리포지토리 유형입니다. |
-| `sensei:multipart_field_name` | 문자열 | - | - | - | 사전 서명된 URL을 사용하는 대신 문서를 다중 부분 인수로 전달할 때 이를 사용합니다. |
-| `dc:format` | 문자열 | 예 | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-office.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml&quot; | 문서 인코딩은 처리 전에 허용되는 입력 인코딩 유형에 대해 확인됩니다. |
+| `repo:path` | 문자열 | - | - | - | 문서의 사전 서명된 URL입니다. |
+| `sensei:repoType` | 문자열 | - | - | HTTPS | 이미지가 저장되는 리포지토리 유형입니다. |
+| `sensei:multipart_field_name` | 문자열 | - | - | - | 사전 서명된 URL을 사용하는 대신 이미지 파일을 다중 부분 인수로 전달할 때 이를 사용하십시오. |
+| `dc:format` | 문자열 | 예 | - | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | 처리 전에 허용되는 입력 인코딩 유형에 대해 이미지 인코딩을 검사합니다. |
