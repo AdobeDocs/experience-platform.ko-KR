@@ -1,34 +1,34 @@
 ---
-keywords: Experience Platform;시작하기;컨텐츠;컨텐츠 태그 지정 ai;키워드 태그 지정;키워드 태그 지정
+keywords: Experience Platform;시작하기;컨텐츠;컨텐츠 태깅 ai;키워드 태깅;키워드 태깅
 solution: Experience Platform
-title: 콘텐츠 태깅 API의 키워드 태깅
-description: 키워드 태그 지정 서비스는 텍스트 문서가 제공되면 문서의 주제를 가장 잘 설명하는 키워드나 키워드 구문을 자동으로 추출합니다. 키워드를 추출하기 위해 NER(Named Entity Recognition) 및 비감독 키워드 태깅(Unsupervised Keyword Tagging) 알고리즘의 조합이 사용된다.
+title: 컨텐츠 태깅 API의 키워드 태깅
+description: 키워드 태깅 서비스는 텍스트 문서가 지정된 경우 문서의 주제를 가장 잘 설명하는 키워드 또는 키워드 구문을 자동으로 추출합니다. 키워드를 추출하기 위해 명명된 엔티티 인식(NER) 및 비감독 키워드 태그 지정 알고리즘의 조합이 사용됩니다.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
+source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '447'
 ht-degree: 5%
 
 ---
 
-# 키워드 태그 지정
+# 키워드 태깅
 
-키워드 태깅 서비스는 텍스트 문서가 주어지면 해당 문서의 주제를 가장 잘 설명하는 키워드나 핵심 구문을 자동으로 추출합니다. 키워드를 추출하기 위해 NER(Named Entity Recognition) 및 비감독 키워드 태깅(Unsupervised Keyword Tagging) 알고리즘의 조합이 사용된다.
+텍스트 문서가 지정된 경우 키워드 태그 지정 서비스는 문서의 주제를 가장 잘 설명하는 키워드 또는 키 구문을 자동으로 추출합니다. 키워드를 추출하기 위해 명명된 엔티티 인식(NER) 및 비감독 키워드 태그 지정 알고리즘의 조합이 사용됩니다.
 
-다음 표에는 이름이 지정된 엔티티가 나열되어 있습니다. [!DNL Content Tagging] 이(가) 식별함:
+다음 표에는 [!DNL Content Tagging] 다음을 식별할 수 있습니다.
 
 | 엔티티 이름 | 설명 |
 | --- | --- |
-| 개인 | 허구적인 사람들을 포함해서. |
+| 개인 | 허구적인 사람들을 포함해서 |
 | GPE | 국가, 도시 및 주. |
-| 위치 | 비GPE 위치, 산맥, 수역. |
+| LOC | GPE가 아닌 위치, 산맥, 물의 시체. |
 | FAC | 건물, 공항, 고속도로, 다리 등 |
-| ORG | 회사, 에이전시, 기관 등 |
-| 제품 | 물건, 차량, 음식 등 (서비스 아님) |
-| 이벤트 | 허리케인, 전투, 전쟁, 스포츠 행사 등 |
-| 작업 영역(_O) | 책, 노래 등의 제목 |
-| 법 | 명명한 문서들이 법으로 만들어졌다. |
-| 언어 | 모든 명명된 언어. |
+| 조직 | 회사, 기관, 기관 등 |
+| 제품 | 물체, 차량, 식품 등 (서비스 아님) |
+| 이벤트 | 이름이 허리케인, 전투, 전쟁, 스포츠 행사 등입니다. |
+| WORK_OF_ART | 책, 노래 등의 제목 |
+| 법률 | 법으로 만들어진 명명된 문서. |
+| 언어 | 이름이 지정된 언어 |
 
 **API 형식**
 
@@ -38,7 +38,7 @@ POST /services/v2/predict
 
 **요청**
 
-다음 요청은 페이로드에 제공된 입력 매개변수를 기반으로 문서에서 키워드를 추출합니다.
+다음 요청은 페이로드에 제공된 입력 매개 변수를 기반으로 문서에서 키워드를 추출합니다.
 
 표시된 입력 매개 변수에 대한 자세한 내용은 예제 페이로드 아래의 표를 참조하십시오.
 
@@ -86,26 +86,29 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@simple-text.pdf'
 ```
 
+**입력 매개 변수**
+
 | 속성 | 설명 | 필수입니다 |
 | --- | --- | --- |
-| `application-id` | 생성된 애플리케이션의 ID입니다. | 예 |
-| `top_n` | 반환할 결과 수. 0: 모든 결과를 반환합니다. 임계값과 함께 사용할 경우 반환되는 결과 수는 제한보다 작습니다. | 아니요 |
-| `min_relevance` | 결과가 반환되어야 하는 점수 임계값. 매개 변수를 제외하여 모든 결과를 반환합니다. | 아니요 |
+| `top_n` | 반환할 결과 수입니다. 0, 모든 결과를 반환합니다. 임계값과 함께 사용하는 경우 반환되는 결과 수가 두 제한 값보다 작습니다. | 아니요 |
+| `min_relevance` | 결과를 반환해야 하는 점수 임계값입니다. 모든 결과를 반환하려면 매개 변수를 제외하십시오. | 아니요 |
 | `min_key_phrase_length` | 주요 구문에 필요한 최소 단어 수입니다. | 아니요 |
-| `max_key_phrase_length` | 주요 구문에 필요한 최대 단어 수. | 아니요 |
-| `last_semantic_unit_type` | 계층 구조 응답에서 의미 단위만 지정된 수준까지 반환합니다. &quot;key_phrase&quot;는 주요 구문만 반환하고, &quot;linked_entity&quot;는 주요 구문과 해당 연결된 엔티티만 반환하며, &quot;concept&quot;는 주요 구문, 연결된 엔티티 및 개념을 반환합니다. | 아니요 |
-| `entity_types` | 키 구문으로 반환될 엔티티의 유형입니다. | 아니요 |
+| `max_key_phrase_length` | 주요 구문에 필요한 최대 단어 수입니다. | 아니요 |
+| `last_semantic_unit_type` | 계층 응답에서 지정된 수준까지 의미 단위만 반환합니다. &quot;key_phrase&quot;는 키 구문만 반환하고, &quot;linked_entity&quot;는 키 구문과 해당 연결된 엔티티만 반환하고, &quot;concept&quot;는 키 구문, 연결된 엔티티 및 개념을 반환합니다. | 아니요 |
+| `entity_types` | 주요 구문으로 반환될 엔티티 유형입니다. | 아니요 |
+
+**문서 객체**
 
 | 이름 | 데이터 형식 | 필수 여부 | 기본값 | 값 | 설명 |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | 문자열 | - | - | - | 주요 구문을 추출할 문서의 사전 서명된 URL입니다. |
-| `sensei:repoType` | 문자열 | - | - | HTTPS | 문서가 저장되는 저장소 유형입니다. |
-| `sensei:multipart_field_name` | 문자열 | - | - | - | 사전 서명된 URL을 사용하는 대신 문서를 다중 부분 인수로 전달할 때 사용합니다. |
-| `dc:format` | 문자열 | 예 | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | 문서 인코딩이 처리되기 전에 허용된 입력 인코딩 유형에 대해 확인됩니다. |
+| `repo:path` | 문자열 | - | - | - | 키 구문을 추출할 문서의 사전 서명된 URL입니다. |
+| `sensei:repoType` | 문자열 | - | - | HTTPS | 문서가 저장되는 리포지토리 유형입니다. |
+| `sensei:multipart_field_name` | 문자열 | - | - | - | 사전 서명된 URL을 사용하는 대신 문서를 다중 부분 인수로 전달할 때 이를 사용합니다. |
+| `dc:format` | 문자열 | 예 | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-office.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml&quot; | 문서 인코딩은 처리 전에 허용되는 입력 인코딩 유형에 대해 확인됩니다. |
 
 **응답**
 
-성공적인 응답은 추출된 키워드가 포함된 JSON 개체를 반환합니다. `response` 배열입니다.
+성공적인 응답은 `response` 배열입니다.
 
 ```json
 {
