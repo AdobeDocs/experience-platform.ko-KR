@@ -1,13 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Analytics 소스 커넥터;Analytics 커넥터;Analytics 소스;Analytics
-solution: Experience Platform
+keywords: Experience Platform;홈;인기 항목;Analytics 소스 커넥터;Analytics 소스;분석;필터링;프로필 필터링;실시간 고객 프로필;필터;프로필 데이터 필터링;행 수준 필터링;열 수준 필터링
 title: UI에서 Adobe Analytics 소스 연결 만들기
-type: Tutorial
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 9c2ede973aa4348f15362ba80fdcd7a231577909
+source-git-commit: 23a99a46cfd6e42dd0f4815bb972dbe46104b60f
 workflow-type: tm+mt
-source-wordcount: '2365'
+source-wordcount: '2380'
 ht-degree: 5%
 
 ---
