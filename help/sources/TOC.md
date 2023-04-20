@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
+source-git-commit: 33a660800e3202d9969c4e44eba8419e22db57a3
 workflow-type: tm+mt
-source-wordcount: '963'
-ht-degree: 12%
+source-wordcount: '968'
+ht-degree: 11%
 
 ---
 
@@ -90,7 +90,8 @@ ht-degree: 12%
       - [Snowflake 커넥터](connectors/databases/snowflake.md)
       - [Teradata 밴티지 커넥터](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
-      - [Shopify 커넥터](connectors/ecommerce/shopify.md)
+      - [Shopify](connectors/ecommerce/shopify.md)
+      - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
    - 로컬 시스템 {#local-system}
       - [로컬 파일 업로드 커넥터](connectors/local-system/local-file-upload.md)
    - 마케팅 자동화 {#marketing-automation}
@@ -167,6 +168,7 @@ ht-degree: 12%
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
+         - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
       - 마케팅 자동화 {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -284,6 +286,7 @@ ht-degree: 12%
          - [Teradata 밴티지](tutorials/ui/create/databases/teradata-vantage.md)
       - eCommerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+         - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - 로컬 시스템 {#local-system}
          - [로컬 파일 업로드](tutorials/ui/create/local-system/local-file-upload.md)
       - 마케팅 자동화 {#marketing-automation}
