@@ -2,9 +2,9 @@
 title: (베타) [!DNL Google Ad Manager 360] 연결
 description: Google Ad Manager 360은 게시자가 비디오 및 모바일 앱을 통해 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '947'
 ht-degree: 1%
 
 ---
@@ -83,6 +83,11 @@ ht-degree: 1%
 
 ### 대상 세부 사항 채우기 {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gam360_appendSegmentID"
+>title="세그먼트 이름에 세그먼트 ID 추가"
+>abstract="다음과 같이 Google Ad Manager 360의 세그먼트 이름에 Experience Platform의 세그먼트 ID가 포함되도록 하려면 이 옵션을 선택합니다. `Segment Name (Segment ID)`"
+
 대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
 * **[!UICONTROL 이름]**: 이 대상의 기본 이름을 입력합니다.
@@ -93,6 +98,12 @@ ht-degree: 1%
 * **[!UICONTROL 계정 유형]**: 옵션에 따라 옵션을 선택합니다 [!DNL Google] 계정:
    * 사용 `AdX buyer` 대상 [!DNL Google AdX]
    * 사용 `DFP by Google` 대상 [!DNL DoubleClick] 게시자
+
+<!--
+
+*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager 360 include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
+
+-->
 
 ### 경고 활성화 {#enable-alerts}
 
