@@ -2,10 +2,10 @@
 description: 파일 기반 대상으로 데이터를 활성화할 때 파일 형식 옵션을 구성하는 방법을 알아봅니다
 title: (베타) 파일 기반 대상에 대한 파일 형식 옵션을 구성합니다
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 379a3769965bb425ca2c8df195b99a98f0b5398d
+source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 1%
+source-wordcount: '1214'
+ht-degree: 2%
 
 ---
 
@@ -27,7 +27,7 @@ Experience Platform UI를 사용하여 내보낸 파일에 대한 다양한 파�
 * To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 -->
 
-## 파일 형식 구성 {#file-configuration}
+## CSV 파일에 대한 파일 형식 구성 {#file-configuration}
 
 파일 서식 옵션을 표시하려면 [대상에 연결](/help/destinations/ui/connect-destination.md) 워크플로우. 선택 **데이터 유형: 세그먼트** 및 **파일 형식: CSV** 내보낸 파일에 사용할 수 있는 파일 형식 설정을 표시하려면 `CSV` 파일.
 
@@ -41,7 +41,12 @@ Experience Platform UI를 사용하여 내보낸 파일에 대한 다양한 파�
 
 ### 구분 기호 {#delimiter}
 
-각 필드 및 값에 대해 구분자를 설정합니다. 사용 가능한 옵션은 다음과 같습니다.
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_delimiter"
+>title="구분 기호"
+>abstract="이 컨트롤을 사용하여 각 필드 및 값에 대한 구분자를 설정합니다. 각 선택에 대한 예제에 대한 설명서를 봅니다."
+
+이 컨트롤을 사용하여 내보낸 CSV 파일의 각 필드 및 값에 대한 구분자를 설정합니다. 사용 가능한 옵션은 다음과 같습니다.
 
 * 콜론 `(:)`
 * 쉼표 `(,)`
@@ -49,29 +54,108 @@ Experience Platform UI를 사용하여 내보낸 파일에 대한 다양한 파�
 * 세미콜론 `(;)`
 * 탭 `(\t)`
 
-### 따옴표 문자
+#### 예시
 
-구분 기호가 값의 일부가 될 수 있는 따옴표 붙은 값을 이스케이프하는 데 사용되는 단일 문자를 설정합니다.
+내보낸 CSV 파일에서 UI에서 각 항목을 선택하여 컨텐츠의 아래 예를 보십시오.
 
-### 이스케이프 문자
+* 출력 예 **[!UICONTROL 콜론`(:)`]** 선택: `male:John:Doe`
+* 출력 예 **[!UICONTROL 쉼표`(,)`]** 선택: `male,John,Doe`
+* 출력 예 **[!UICONTROL 파이프`(|)`]** 선택: `male|John|Doe`
+* 출력 예 **[!UICONTROL 세미콜론`(;)`]** 선택: `male;John;Doe`
+* 출력 예 **[!UICONTROL 탭`(\t)`]** 선택: `male \t John \t Doe`
 
-이미 따옴표로 묶인 값 내에 따옴표를 이스케이프 처리하는 데 사용되는 단일 문자를 설정합니다.
+### 따옴표 문자 {#quote-character}
 
-### 빈 값 출력
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_quoteCharacter"
+>title="따옴표 문자"
+>abstract="내보낸 문자열에서 큰 따옴표를 제거하려면 이 옵션을 사용합니다. 각 선택에 대한 예제에 대한 설명서를 봅니다."
 
-빈 값의 문자열 표현을 설정합니다.
+내보낸 문자열에서 큰 따옴표를 제거하려면 이 옵션을 사용합니다. 사용 가능한 옵션은 다음과 같습니다.
 
-### Null 값 출력
+* **[!UICONTROL Null 문자(\0000)]**. 내보낸 CSV 파일에서 큰 따옴표를 제거하려면 이 옵션을 사용합니다.
+* **[!UICONTROL 큰따옴표(&quot;)]**. 내보낸 CSV 파일에 큰 따옴표를 유지하려면 이 옵션을 사용하십시오.
 
-내보낸 파일 내에서 null 값의 문자열 표현을 설정합니다.
+#### 예시
 
-출력 예 **[!UICONTROL null]** 선택: `male,NULL,TestLastName`
-출력 예 **&quot;&quot;** 선택: `male,"",TestLastName`
-출력 예 **[!UICONTROL 빈 문자열]** 선택: `male,,TestLastName`
+UI에서 각 항목을 선택하여 내보낸 CSV 파일의 컨텐츠 아래 예를 확인합니다.
 
-### 압축 포맷
+* 출력 예 **[!UICONTROL Null 문자(\0000)]** 선택: `Test,John,LastName`
+* 출력 예 **[!UICONTROL 큰따옴표(&quot;)]** 선택: `"Test","John","LastName"`
 
-데이터를 파일에 저장할 때 사용할 압축 코덱을 설정합니다. 지원되는 옵션은 GZIP 및 NONE입니다.
+### 이스케이프 문자 {#escape-character}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_escapeCharacter"
+>title="이스케이프 문자"
+>abstract="이미 따옴표로 묶인 값 내에 따옴표를 이스케이프 처리하는 데 사용되는 단일 문자를 설정합니다. 각 선택에 대한 예제에 대한 설명서를 봅니다."
+
+이 옵션을 사용하여 이미 따옴표가 있는 값 내에 따옴표를 이스케이프 처리할 단일 문자를 설정합니다. 예를 들어 이 옵션은 문자열의 일부가 이미 큰 따옴표로 묶여 있는 문자열을 큰 따옴표로 묶은 경우에 유용합니다. 이 옵션은 내부 큰따옴표를 바꿀 문자를 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
+
+* 슬래시 `(\)`
+* 작은 따옴표 `(')`
+
+#### 예시
+
+UI에서 각 항목을 선택하여 내보낸 CSV 파일의 컨텐츠 아래 예를 확인합니다.
+
+* 출력 예 **[!UICONTROL 슬래시`(\)`]** 선택: `"Test,\"John\",LastName"`
+* 출력 예 **[!UICONTROL 작은 따옴표`(')`]** 선택: `"Test,'"John'",LastName"`
+
+### 빈 값 출력 {#empty-value-output}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_emptyValueOutput"
+>title="빈 값 출력"
+>abstract="이 옵션을 사용하여 내보낸 CSV 파일에 빈 값을 표시하는 방법을 설정합니다. 각 선택에 대한 예제에 대한 설명서를 봅니다."
+
+이 컨트롤을 사용하여 빈 값의 문자열 표현을 설정합니다. 이 옵션은 내보낸 CSV 파일에 빈 값이 표시되는 방식을 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
+
+* **[!UICONTROL null]**
+* **&quot;&quot;**
+* **[!UICONTROL 빈 문자열]**
+
+#### 예시
+
+UI에서 각 항목을 선택하여 내보낸 CSV 파일의 컨텐츠 아래 예를 확인합니다.
+
+* 출력 예 **[!UICONTROL null]** 선택: `male,NULL,TestLastName`. 이 경우 Experience Platform은 빈 값을 null 값으로 변환합니다.
+* 출력 예 **&quot;&quot;** 선택: `male,"",TestLastName`. 이 경우 Experience Platform은 빈 값을 큰 따옴표 쌍으로 변환합니다.
+* 출력 예 **[!UICONTROL 빈 문자열]** 선택: `male,,TestLastName`. 이 경우 Experience Platform은 빈 값을 유지하고 있는 그대로(큰따옴표 없이) 내보냅니다.
+
+>[!TIP]
+>
+>아래 섹션에서 빈 값 출력과 null 값 출력 간의 차이는 빈 값에 비어 있는 실제 값이 있다는 것입니다. NULL 값에 값이 없습니다. 빈 값을 테이블의 빈 유리로, null 값은 표에 유리가 전혀 없는 것으로 간주합니다.
+
+### Null 값 출력 {#null-value-output}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_nullValueOutput"
+>title="Null 값 출력"
+>abstract="이 컨트롤을 사용하여 내보낸 파일 내에서 null 값의 문자열 표현을 설정합니다. 각 선택에 대한 예제에 대한 설명서를 봅니다."
+
+이 컨트롤을 사용하여 내보낸 파일 내에서 null 값의 문자열 표현을 설정합니다. 이 옵션은 내보낸 CSV 파일에 null 값이 표시되는 방식을 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
+
+* **[!UICONTROL null]**
+* **&quot;&quot;**
+* **[!UICONTROL 빈 문자열]**
+
+#### 예시
+
+UI에서 각 항목을 선택하여 내보낸 CSV 파일의 컨텐츠 아래 예를 확인합니다.
+
+* 출력 예 **[!UICONTROL null]** 선택: `male,NULL,TestLastName`. 이 경우 변환이 발생하지 않고 CSV 파일에 null 값이 포함되어 있습니다.
+* 출력 예 **&quot;&quot;** 선택: `male,"",TestLastName`. 이 경우 Experience Platform은 null 값을 빈 문자열 주위에 큰 따옴표로 바꿉니다.
+* 출력 예 **[!UICONTROL 빈 문자열]** 선택: `male,,TestLastName`. 이 경우 Experience Platform은 null 값을 큰따옴표 없이 빈 문자열로 바꿉니다.
+
+### 압축 포맷 {#compression-format}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_compressionFormat"
+>title="압축 포맷"
+>abstract="데이터를 파일에 저장할 때 사용할 압축 유형을 설정합니다. 지원되는 옵션은 GZIP 및 NONE입니다. 각 선택에 대한 예제에 대한 설명서를 봅니다."
+
+데이터를 파일에 저장할 때 사용할 압축 유형을 설정합니다. 지원되는 옵션은 GZIP 및 NONE입니다. 이 옵션은 압축 파일을 내보낼 것인지 여부를 결정합니다.
 
 ### 인코딩
 
