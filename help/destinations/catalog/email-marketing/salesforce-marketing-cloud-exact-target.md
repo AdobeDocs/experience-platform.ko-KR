@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;salesforce;api salesfor
 title: (API) Salesforce Marketing Cloud 연결
 description: Salesforce Marketing Cloud(이전의 ExactTarget) 대상을 사용하면 계정 데이터를 내보내고 Salesforce Marketing Cloud 내에서 활성화하여 비즈니스 요구 사항을 충족할 수 있습니다.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 017ccadc1689663059aa1214c5440549b509e81b
+source-git-commit: 877bf4886e563e8a571f067c06107776a0c81d5d
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2911'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,13 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/overview/) (이전에는 [!DNL ExactTarget])은 방문자 및 고객이 자신의 경험을 개인화할 수 있는 여정을 작성하고 사용자 지정할 수 있는 디지털 마케팅 세트입니다.
+[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/engagement/) (이전에는 [!DNL ExactTarget])은 방문자 및 고객이 자신의 경험을 개인화할 수 있는 여정을 작성하고 사용자 지정할 수 있는 디지털 마케팅 세트입니다.
 
 >[!IMPORTANT]
 >
 >이 연결과 다른 연결의 차이점을 확인합니다 [[!DNL Salesforce Marketing Cloud] 연결](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) 이메일 마케팅 카탈로그 섹션에 있습니다. 다른 Salesforce Marketing Cloud 연결을 사용하면 파일을 지정된 저장소 위치로 내보낼 수 있지만 API 기반 스트리밍 연결입니다.
+
+비교 대상 [!DNL Salesforce Marketing Cloud Account Engagement] 어느 쪽이 더 **B2B** 마케팅, [!DNL (API) Salesforce Marketing Cloud] 대상에 적합 **B2C** 트랜잭션 의사 결정 주기가 짧은 사용 사례 타겟 대상의 행동을 나타내는 더 큰 데이터 세트를 통합하여 특히 외부 데이터 세트에서 연락처를 우선 지정하고 세그먼트화하여 마케팅 캠페인을 조정 및 개선할 수 있습니다 [!DNL Salesforce]. *참고: Experience Platform에 [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
 이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md) 활용 [!DNL Salesforce Marketing Cloud] [연락처 업데이트](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API. 다음을 수행할 수 있습니다. **연락처 추가 및 연락처 데이터 업데이트** 활성화한 후 새로운 [!DNL Salesforce Marketing Cloud] 세그먼트.
 
@@ -44,9 +46,9 @@ Platform에서 사용자 [!DNL Salesforce Marketing Cloud] 계정:
 
 #### 다음을 수행해야 합니다 [!DNL Salesforce Marketing Cloud] account {#prerequisites-account}
 
-A [!DNL Salesforce Marketing Cloud] 을 구독하는 계정 [Marketing Cloud 계정 참여](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) 제품을 계속 진행해야 합니다.
+A [!DNL Salesforce Marketing Cloud] 을 구독하는 계정 [[!DNL Marketing Cloud Engagement]](https://www.salesforce.com/products/marketing-cloud/engagement/) 제품을 계속 진행해야 합니다.
 
-에 연결 [[!DNL Salesforce] 지원](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) 만약 [!DNL Salesforce Marketing Cloud] 계정이 없거나 계정에 [!DNL Marketing Cloud Account Engagement] 제품 구독.
+에 연결 [[!DNL Salesforce] 지원](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) 만약 [!DNL Salesforce Marketing Cloud] 계정이 없거나 계정에 [!DNL Marketing Cloud Engagement] 제품 구독.
 
 #### 내에서 속성 만들기 [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
@@ -81,6 +83,21 @@ Platform에서 로 활성화하는 각 세그먼트에 대해 [!DNL Salesforce M
 >* 플랫폼 세그먼트에 사용되는 속성과 내의 다른 속성을 구별하려면 [!DNL Salesforce Marketing Cloud], Adobe 세그먼트에 사용되는 특성에 인식할 수 있는 접두사 또는 접미사를 포함할 수 있습니다. 예를 들어, 대신 `test_segment`, 사용 `Adobe_test_segment` 또는 `test_segment_Adobe`.
 >* 에 이미 다른 속성을 만든 경우 [!DNL Salesforce Marketing Cloud], Platform 세그먼트와 동일한 이름을 사용하여 에서 세그먼트를 쉽게 식별할 수 있습니다. [!DNL Salesforce Marketing Cloud].
 
+
+#### 내에서 사용자 역할 및 권한 할당 [!DNL Salesforce Marketing Cloud] {#prerequisites-roles-permissions}
+
+로서의 [!DNL Salesforce Marketing Cloud] 은 사용 사례에 따라 사용자 지정 역할을 지원하지만, 사용자 내에 속성을 업데이트하려면 관련 역할을 할당해야 합니다 [!DNL Salesforce Marketing Cloud] attribute-sets. 사용자에게 할당된 역할의 예는 다음과 같습니다.
+![선택한 사용자에게 할당된 역할을 표시하는 Salesforce Marketing Cloud UI입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-edit-roles.png)
+
+사용자의 역할에 따라 [!DNL Salesforce Marketing Cloud] 사용자가 할당되었으므로 [!DNL Salesforce Marketing Cloud] 업데이트할 필드가 포함된 속성 집합입니다.
+
+이 대상을 사용하려면 `[!DNL Email Demographics system attribute-set]`: 다음을 허용해야 합니다. `Email` 아래와 같이 아래와 같습니다.
+![허용되는 권한이 있는 이메일 속성 세트를 보여주는 Salesforce Marketing Cloud UI입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
+
+액세스 수준을 제한하려면 세부적인 권한을 사용하여 개별 액세스를 무시할 수도 있습니다.
+![Salesforce Marketing Cloud UI에 세부 권한이 있는 이메일 속성 세트를 표시합니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
+
+자세한 내용은 [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5) 및 [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5) 페이지를 참조하십시오.
 
 #### 수집 [!DNL Salesforce Marketing Cloud] 자격 증명 {#gather-credentials}
 
@@ -269,7 +286,8 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에서 아래
 
 | 릴리스 시기 | 업데이트 유형 | 설명 |
 |---|---|---|
-| 2023년 2월 | 설명서 업데이트 | Adobe는 [Salesforce Marketing Cloud의 사전 요구 사항](#prerequisites-destination) 섹션에 다음을 호출하는 참조 링크가 포함되어 있습니다. [!DNL Salesforce Marketing Cloud Account Engagement] 는 이 대상을 사용할 필수 구독입니다. |
+| 2023년 4월 | 설명서 업데이트 | <ul><li>에서 문 및 참조 링크를 수정했습니다. [Salesforce Marketing Cloud의 사전 요구 사항](#prerequisites-destination) 해당 섹션을 참조하십시오. [!DNL Salesforce Marketing Cloud Engagement] 는 이 대상을 사용할 필수 구독입니다. 이전에 호출된 섹션이 Marketing Cloud에 가입해야 한다고 잘못 판단되었습니다 **계정** 참여 진행.</li> <li>아래에 섹션을 추가했습니다. [전제 조건](#prerequisites) 대상 [역할 및 권한](#prerequisites-roles-permissions) 에 지정됨 [!DNL Salesforce] 이 대상의 사용자입니다. (PLATIR-26299)</li></ul> |
+| 2023년 2월 | 설명서 업데이트 | Adobe는 [Salesforce Marketing Cloud의 사전 요구 사항](#prerequisites-destination) 섹션에 다음을 호출하는 참조 링크가 포함되어 있습니다. [!DNL Salesforce Marketing Cloud Engagement] 는 이 대상을 사용할 필수 구독입니다. |
 | 2023년 2월 | 기능 업데이트 | 대상에서 잘못된 구성이 있어 잘못된 형식의 JSON이 Salesforce에 전송되는 문제가 해결되었습니다. 이로 인해 일부 사용자는 활성화 시 많은 ID가 실패하게 되었습니다. (PLATIR-26299) |
 | 2023년 1월 | 설명서 업데이트 | <ul><li>Adobe는 [의 사전 요구 사항 [!DNL Salesforce]](#prerequisites-destination) 섹션에 해당 속성을 만들어야 합니다. [!DNL Salesforce] 합니다. 이제 이 섹션에서는에서 속성 이름을 지정하는 것에 대한 자세한 지침과 우수 사례가 포함됩니다 [!DNL Salesforce]. (PLATIR-25602)</li><li>에서 활성화된 각 세그먼트에 대해 매핑 ID를 사용하는 방법에 대한 명확한 지침을 추가했습니다 [세그먼트 예약](#schedule-segment-export-example) 단계. (PLATIR-25602)</li></ul> |
 | 2022년 10월 | 초기 릴리스 | 초기 대상 릴리스 및 설명서 게시. |
