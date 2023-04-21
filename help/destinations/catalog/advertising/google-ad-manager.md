@@ -6,7 +6,7 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
 workflow-type: tm+mt
 source-wordcount: '911'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -76,7 +76,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
 >title="세그먼트 이름에 세그먼트 ID 추가"
->abstract="다음과 같이 Google Ad Manager의 세그먼트 이름에 Experience Platform의 세그먼트 ID가 포함되도록 하려면 이 옵션을 선택합니다. `Segment Name (Segment ID)`"
+>abstract="Google Ad Manager에서 세그먼트 이름에 다음과 같이 Experience Platform의 세그먼트 ID가 포함되도록 하려면 이 옵션을 선택하십시오. `Segment Name (Segment ID)`"
 
 While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 다음 정보를 제공해야 합니다.
 

@@ -5,7 +5,7 @@ exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
 workflow-type: tm+mt
 source-wordcount: '947'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -86,7 +86,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
 >title="세그먼트 이름에 세그먼트 ID 추가"
->abstract="다음과 같이 Google Ad Manager 360의 세그먼트 이름에 Experience Platform의 세그먼트 ID가 포함되도록 하려면 이 옵션을 선택합니다. `Segment Name (Segment ID)`"
+>abstract="Google Ad Manager 360에서 세그먼트 이름에 다음과 같이 Experience Platform의 세그먼트 ID가 포함되도록 하려면 이 옵션을 선택하십시오. `Segment Name (Segment ID)`"
 
 대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
