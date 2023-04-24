@@ -5,9 +5,9 @@ title: Experience Platform API 인증 및 액세스
 type: Tutorial
 description: 이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1581'
 ht-degree: 7%
 
 ---
@@ -198,8 +198,70 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 [Postman](https://www.postman.com/) 는 개발자가 RESTful API를 탐색하고 테스트할 수 있도록 해주는 자주 사용하는 도구입니다. 이 [중간 게시물](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Postman을 설정하여 자동으로 JWT 인증을 수행하고 이 인증을 사용하여 플랫폼 API를 사용하는 방법에 대해 설명합니다.
 
+## Experience Platform 권한을 사용하는 개발자 및 API 액세스 제어
+
+>[!NOTE]
+>
+>시스템 관리자만 권한에서 API 자격 증명을 보고 관리할 수 있습니다.
+
+Adobe Developer 콘솔에서 통합을 만들려면 먼저 Adobe Admin Console의 Experience Platform 제품 프로필에 대한 개발자 및 사용자 권한이 계정에 있어야 합니다.
+
+### 제품 프로필에 개발자 추가
+
+[[!DNL Admin Console]](https://adminconsole.adobe.com/)으로 이동한 뒤 Adobe ID로 로그인합니다.
+
+선택 **[!UICONTROL 제품]**&#x200B;를 선택하고 을 선택합니다. **[!UICONTROL Adobe Experience Platform]** 를 클릭합니다.
+
+![Admin Console의 제품 목록](././images/api-authentication/products.png)
+
+에서 **[!UICONTROL 제품 프로필]** 탭, 선택 **[!UICONTROL AEP-Default-All-Users]**. 또는 검색 막대를 사용하여 이름을 입력하여 제품 프로필을 검색합니다.
+
+![제품 프로필 검색](././images/api-authentication/select-product-profile.png)
+
+을(를) 선택합니다 **[!UICONTROL 개발자]** 탭을 선택하고 **[!UICONTROL 개발자 추가]**.
+
+![개발자 탭에서 개발자 추가](././images/api-authentication/add-developer1.png)
+
+개발자의 **[!UICONTROL 이메일 또는 사용자 이름]**. 유효한 [!UICONTROL 이메일 또는 사용자 이름] 개발자 세부 사항이 표시됩니다. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+
+![이메일 또는 사용자 이름을 사용하여 개발자 추가](././images/api-authentication/add-developer-email.png)
+
+개발자가 성공적으로 추가되었으며 [!UICONTROL 개발자] 탭.
+
+![개발자 탭에 나열된 개발자](././images/api-authentication/developer-added.png)
+
+### API 설정
+
+개발자는 Adobe Developer 콘솔에서 프로젝트 내에 API를 추가하고 구성할 수 있습니다.
+
+프로젝트를 선택한 다음 을 선택합니다 **[!UICONTROL API 추가]**.
+
+![프로젝트에 API 추가](././images/api-authentication/add-api-project.png)
+
+에서 **[!UICONTROL API 추가]** 대화 상자 선택 **[!UICONTROL Adobe Experience Platform]**&#x200B;를 선택하고 을 선택합니다. **[!UICONTROL Experience Platform API]**.
+
+![Experience Platform에서 API 추가](././images/api-authentication/add-api-platform.png)
+
+에서 **[!UICONTROL API 구성]** 화면, 선택 **[!UICONTROL AEP-Default-All-Users]**.
+
+### 역할에 API 할당
+
+시스템 관리자는 Experience Platform UI에서 역할에 API를 할당할 수 있습니다.
+
+선택 **[!UICONTROL 권한]** 및 API를 추가할 역할입니다. 을(를) 선택합니다 **[!UICONTROL API 자격 증명]** 탭을 선택하고 **[!UICONTROL API 자격 증명 추가]**.
+
+![선택한 역할의 API 자격 증명 탭](././images/api-authentication/api-credentials.png)
+
+역할에 추가할 API를 선택하고 을 선택합니다 **[!UICONTROL 저장]**.
+
+![선택할 수 있는 API 목록](././images/api-authentication/select-api.png)
+
+에 반환됩니다 [!UICONTROL API 자격 증명] 탭. 여기서 새로 추가된 API가 나열됩니다.
+
+![새로 추가된 API의 API 자격 증명 탭](././images/api-authentication/api-credentials-with-added-api.png)
+
 ## 다음 단계
 
 이 문서를 읽은 후에는 플랫폼 API에 대한 액세스 자격 증명을 수집하여 테스트했습니다. 이제 다음을 통해 전체에서 제공된 예제 API 호출을 따를 수 있습니다 [설명서](../landing/documentation/overview.md).
 
-이 자습서에서 수집한 인증 값 외에도 많은 Platform API에 유효한 가 필요합니다 `{SANDBOX_NAME}` 을 헤더로 제공합니다. 자세한 내용은 [샌드박스 개요](../sandboxes/home.md) 추가 정보.
+이 자습서에서 수집한 인증 값 외에도 많은 Platform API에 유효한 가 필요합니다 `{SANDBOX_NAME}` 을 헤더로 제공합니다. 자세한 내용은 [샌드박스 개요](../sandboxes/home.md)를 참조하십시오.
