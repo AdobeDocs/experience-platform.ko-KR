@@ -1,10 +1,9 @@
 ---
 title: Ui에서 Shopify 스트리밍 연결 및 데이터 흐름 만들기
 description: 플랫폼 사용자 인터페이스를 사용하여 Shopify 스트리밍 소스 연결 및 데이터 흐름을 만드는 방법을 알아봅니다
-badge: "Beta"
-hidefromtoc: y
-hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+badge: Beta
+exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -95,4 +94,3 @@ ht-degree: 1%
 ## 다음 단계
 
 이 자습서에 따라 소스 연결 및 데이터 흐름을 [!DNL Shopify Streaming] 계정이 필요합니다. 연결 방법에 대한 지침은 [!DNL Shopify Streaming] api를 사용하는 계정은 다음 위치에서 자습서를 참조하십시오. [스트리밍할 소스 연결 및 데이터 흐름 만들기 [!DNL Shopify] 흐름 서비스 API를 사용한 데이터](../../../api/create/ecommerce/shopify-streaming.md).
-

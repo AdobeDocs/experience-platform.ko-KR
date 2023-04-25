@@ -2,9 +2,9 @@
 title: UI에서 Adobe Analytics 소스 연결 만들기
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 3b86c071c4b5dc151bf83ad0042c10ac7a5648db
+source-git-commit: 1839e67d86a04762d93a5c35050e261fb1d1cf50
 workflow-type: tm+mt
-source-wordcount: '2352'
+source-wordcount: '2406'
 ht-degree: 5%
 
 ---
@@ -31,6 +31,14 @@ ht-degree: 5%
 * **친숙한 이름**: 친숙한 이름은 에서 사용자 지정 변수에 대해 사용자가 제공하는 레이블입니다 [!DNL Analytics] 구현 을 참조하십시오. 다음을 참조하십시오 [[!DNL Analytics] 전환 변수에 대한 설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) 친숙한 이름에 대한 자세한 정보.
 
 ## Adobe Analytics과 소스 연결 만들기
+
+>[!NOTE]
+>
+>프로덕션 샌드박스에서 Analytics 소스 데이터 흐름을 만들 때 다음 두 개의 데이터 흐름이 만들어집니다.
+>
+>* 13개월 동안의 내역 보고서 세트 데이터를 데이터 레이크에 채우는 데이터 흐름. 이 데이터 흐름은 채우기 완료가 완료되면 종료됩니다.
+>* 데이터 레이크와 로 라이브 데이터를 전송하는 데이터 흐름 [!DNL Real-Time Customer Profile]. 이 데이터 흐름은 계속 실행됩니다.
+
 
 플랫폼 UI에서 **[!UICONTROL 소스]** 왼쪽 탐색에서 로 이동하여 [!UICONTROL 소스] 작업 공간. 다음 [!UICONTROL 카탈로그] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 

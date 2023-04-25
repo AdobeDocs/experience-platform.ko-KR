@@ -1,10 +1,9 @@
 ---
 title: Flow Service API를 사용하여 데이터를 배포할 스트리밍 소스 연결 및 데이터 흐름 만들기
 description: Flow Service API를 사용하여 Shopify 데이터를 위한 스트리밍 소스 연결 및 데이터 흐름을 만드는 방법을 알아봅니다.
-badge: "Beta"
-hidefromtoc: y
-hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+badge: Beta
+exl-id: d44414a1-48fb-41e2-8cec-23cad867ba7d
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 1%
