@@ -5,7 +5,7 @@ exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
 workflow-type: tm+mt
 source-wordcount: '1214'
-ht-degree: 2%
+ht-degree: 19%
 
 ---
 
@@ -44,7 +44,7 @@ Experience Platform UI를 사용하여 내보낸 파일에 대한 다양한 파�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_delimiter"
 >title="구분 기호"
->abstract="이 컨트롤을 사용하여 각 필드 및 값에 대한 구분자를 설정합니다. 각 선택에 대한 예제에 대한 설명서를 봅니다."
+>abstract="이 컨트롤을 사용하여 각 필드 및 값에 대한 구분 기호를 설정합니다. 각 선택 항목에 대한 예제는 설명서를 참조하십시오."
 
 이 컨트롤을 사용하여 내보낸 CSV 파일의 각 필드 및 값에 대한 구분자를 설정합니다. 사용 가능한 옵션은 다음과 같습니다.
 
@@ -64,14 +64,14 @@ Experience Platform UI를 사용하여 내보낸 파일에 대한 다양한 파�
 * 출력 예 **[!UICONTROL 세미콜론`(;)`]** 선택: `male;John;Doe`
 * 출력 예 **[!UICONTROL 탭`(\t)`]** 선택: `male \t John \t Doe`
 
-### 따옴표 문자 {#quote-character}
+### 인용 부호 {#quote-character}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_quoteCharacter"
->title="따옴표 문자"
->abstract="내보낸 문자열에서 큰 따옴표를 제거하려면 이 옵션을 사용합니다. 각 선택에 대한 예제에 대한 설명서를 봅니다."
+>title="인용 부호"
+>abstract="내보낸 문자열에서 큰따옴표를 제거하려면 이 옵션을 사용하십시오. 각 선택 항목에 대한 예제는 설명서를 참조하십시오."
 
-내보낸 문자열에서 큰 따옴표를 제거하려면 이 옵션을 사용합니다. 사용 가능한 옵션은 다음과 같습니다.
+내보낸 문자열에서 큰따옴표를 제거하려면 이 옵션을 사용하십시오. 사용 가능한 옵션은 다음과 같습니다.
 
 * **[!UICONTROL Null 문자(\0000)]**. 내보낸 CSV 파일에서 큰 따옴표를 제거하려면 이 옵션을 사용합니다.
 * **[!UICONTROL 큰따옴표(&quot;)]**. 내보낸 CSV 파일에 큰 따옴표를 유지하려면 이 옵션을 사용하십시오.
@@ -83,12 +83,12 @@ UI에서 각 항목을 선택하여 내보낸 CSV 파일의 컨텐츠 아래 예
 * 출력 예 **[!UICONTROL Null 문자(\0000)]** 선택: `Test,John,LastName`
 * 출력 예 **[!UICONTROL 큰따옴표(&quot;)]** 선택: `"Test","John","LastName"`
 
-### 이스케이프 문자 {#escape-character}
+### 문자 이스케이프 {#escape-character}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_escapeCharacter"
->title="이스케이프 문자"
->abstract="이미 따옴표로 묶인 값 내에 따옴표를 이스케이프 처리하는 데 사용되는 단일 문자를 설정합니다. 각 선택에 대한 예제에 대한 설명서를 봅니다."
+>title="문자 이스케이프"
+>abstract="이미 인용된 값 내에서 인용 부호를 이스케이프하는 데 사용되는 단일 문자를 설정합니다. 각 선택 항목에 대한 예제는 설명서를 참조하십시오."
 
 이 옵션을 사용하여 이미 따옴표가 있는 값 내에 따옴표를 이스케이프 처리할 단일 문자를 설정합니다. 예를 들어 이 옵션은 문자열의 일부가 이미 큰 따옴표로 묶여 있는 문자열을 큰 따옴표로 묶은 경우에 유용합니다. 이 옵션은 내부 큰따옴표를 바꿀 문자를 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
 
@@ -107,7 +107,7 @@ UI에서 각 항목을 선택하여 내보낸 CSV 파일의 컨텐츠 아래 예
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_emptyValueOutput"
 >title="빈 값 출력"
->abstract="이 옵션을 사용하여 내보낸 CSV 파일에 빈 값을 표시하는 방법을 설정합니다. 각 선택에 대한 예제에 대한 설명서를 봅니다."
+>abstract="내보낸 CSV 파일에서 빈 값을 표시하는 방법을 설정하려면 이 옵션을 사용합니다. 각 선택 항목에 대한 예제는 설명서를 참조하십시오."
 
 이 컨트롤을 사용하여 빈 값의 문자열 표현을 설정합니다. 이 옵션은 내보낸 CSV 파일에 빈 값이 표시되는 방식을 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
 
@@ -132,9 +132,9 @@ UI에서 각 항목을 선택하여 내보낸 CSV 파일의 컨텐츠 아래 예
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_nullValueOutput"
 >title="Null 값 출력"
->abstract="이 컨트롤을 사용하여 내보낸 파일 내에서 null 값의 문자열 표현을 설정합니다. 각 선택에 대한 예제에 대한 설명서를 봅니다."
+>abstract="내보낸 파일 내에서 null 값의 문자열 표현을 설정하려면 이 컨트롤을 사용합니다. 각 선택 항목에 대한 예제는 설명서를 참조하십시오."
 
-이 컨트롤을 사용하여 내보낸 파일 내에서 null 값의 문자열 표현을 설정합니다. 이 옵션은 내보낸 CSV 파일에 null 값이 표시되는 방식을 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
+내보낸 파일 내에서 null 값의 문자열 표현을 설정하려면 이 컨트롤을 사용합니다. 이 옵션은 내보낸 CSV 파일에 null 값이 표시되는 방식을 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
 
 * **[!UICONTROL null]**
 * **&quot;&quot;**
@@ -153,7 +153,7 @@ UI에서 각 항목을 선택하여 내보낸 CSV 파일의 컨텐츠 아래 예
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_compressionFormat"
 >title="압축 포맷"
->abstract="데이터를 파일에 저장할 때 사용할 압축 유형을 설정합니다. 지원되는 옵션은 GZIP 및 NONE입니다. 각 선택에 대한 예제에 대한 설명서를 봅니다."
+>abstract="데이터를 파일에 저장할 때 사용할 압축 유형을 설정합니다. 지원되는 옵션은 GZIP 및 NONE입니다. 각 선택 항목에 대한 예제는 설명서를 참조하십시오."
 
 데이터를 파일에 저장할 때 사용할 압축 유형을 설정합니다. 지원되는 옵션은 GZIP 및 NONE입니다. 이 옵션은 압축 파일을 내보낼 것인지 여부를 결정합니다.
 
