@@ -2,20 +2,15 @@
 keywords: 지표 개요. rtcdp 지표 개요
 title: Real-time Customer Data Platform 홈페이지 및 대시보드
 description: 대시보드, 홈페이지 및 Adobe Experience Platform의 최초 사용자 경험
-badge: "Beta"
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: cc6d962e1c4a9afe1b608dfa06e9812b33dc7e6d
+source-git-commit: 8ea657e379248616d3140bc0a7b0c25a918bc857
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '802'
 ht-degree: 1%
 
 ---
 
 # [!DNL Real-Time Customer Data Platform] 홈 페이지
-
->[!NOTE]
->
->다음 [!DNL Real-Time Customer Data Platform] 홈 페이지가 베타 버전입니다. 해당 기능과 설명서는 변경될 수 있습니다.
 
 Adobe Real-time Customer Data Platform(Real-Time CDP) 홈 페이지는 Real-Time CDP에 로그인한 후 나타나는 첫 번째 페이지입니다.
 
