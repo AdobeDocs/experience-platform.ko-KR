@@ -4,9 +4,9 @@ title: UI에서 XDM 스키마 내보내기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 스키마를 다른 샌드박스 또는 조직으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -25,17 +25,17 @@ ht-degree: 0%
 
 Platform UI를 통해 XDM 리소스를 내보낼 수 있지만, 스키마 레지스트리 API를 사용하여 이러한 리소스를 다른 샌드박스 또는 조직으로 가져와서 워크플로우를 완료해야 합니다. 다음 안내서를 참조하십시오. [스키마 레지스트리 API 시작](../api/getting-started.md) 을 참조하십시오.
 
-## 내보내기 페이로드 생성
+## 내보내기 페이로드 생성 {#generate-export-payload}
 
-플랫폼 UI에서 **[!UICONTROL 스키마]** 을 클릭합니다. 내 [!UICONTROL 스키마] 작업 공간에서 내보낼 스키마를 찾아 [!DNL Schema Editor].
+플랫폼 UI에서 **[!UICONTROL 스키마]** 을 클릭합니다. 내 [!UICONTROL 스키마] 작업 영역에서 내보내려는 스키마의 행을 선택하여 오른쪽 사이드바의 스키마 세부 사항을 표시합니다.
 
 >[!TIP]
 >
 >다음 안내서를 참조하십시오. [xdm 리소스 탐색](./explore.md) 찾고 있는 XDM 리소스를 찾는 방법에 대한 자세한 내용을 참조하십시오.
 
-스키마를 연 후에는 **[!UICONTROL JSON 복사]** 아이콘 (![복사 아이콘](../images/ui/export/icon.png))을 클릭하여 제품에서 사용할 수 있습니다.
+다음으로, **[!UICONTROL JSON 복사]** 아이콘 (![복사 아이콘](../images/ui/export/icon.png))을 클릭하여 제품에서 사용할 수 있습니다.
 
-![](../images/ui/export/copy-json.png)
+![스키마 행 및 [!UICONTROL JSON에 복사] 강조 표시되어 있습니다.](../images/ui/export/copy-json.png)
 
 스키마 구조를 기반으로 생성된 JSON 페이로드를 클립보드에 복사합니다. 에 대해[!DNL Loyalty Members]위에 표시된 &quot;스키마, 다음 JSON이 생성됩니다.
 

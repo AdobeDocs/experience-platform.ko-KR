@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법에 대한 기본 사항을 배웁니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '3203'
+source-wordcount: '3340'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,18 @@ ht-degree: 1%
 
 스키마를 선택하면 [!DNL Schema Editor] 캔버스에 표시된 스키마 구조와 함께 나타납니다. 이제 다음을 수행할 수 있습니다 [필드 그룹 추가](#add-field-groups) 스키마(또는 [개별 필드 추가](#add-individual-fields) 해당 그룹에서 다음을 수행합니다. [필드 표시 이름 편집](#display-names), 또는 [기존 사용자 지정 필드 그룹 편집](./field-groups.md#edit) 스키마에서 적용되는 경우.
 
+## 이름 표시 전환 {#display-name-toggle}
+
+편의를 위해 스키마 편집기는 원래 필드 이름과 사람이 읽기 쉬운 표시 이름 간에 전환하는 토글 기능을 제공합니다. 이러한 유연성을 통해 필드 검색 및 스키마 편집을 향상시킬 수 있습니다. 토글은 스키마 편집기 보기의 오른쪽 상단에 있습니다.
+
+>[!NOTE]
+>
+>필드 이름에서 표시 이름을 변경해도 단순한 코스메틱이며 다운스트림 리소스는 변경되지 않습니다.
+
+![스키마 편집기 [!UICONTROL 필드의 표시 이름 표시] 강조 표시되어 있습니다.](../../images/ui/resources/schemas/display-name-toggle.png)
+
+표준 필드 그룹의 표시 이름은 시스템에서 생성되지만 [이름 표시](#display-names) 섹션을 참조하십시오. 표시 이름은 매핑 및 데이터 세트 미리 보기를 포함하여 여러 UI 보기에 반영됩니다. 기본 설정은 꺼져 있으며, 필드 이름을 원래 값으로 표시합니다.
+
 ## 스키마에 필드 그룹 추가 {#add-field-groups}
 
 >[!NOTE]
@@ -65,7 +77,7 @@ ht-degree: 1%
 
 스키마 내에서 를 연 후 [!DNL Schema Editor]를 채울 때는 필드 그룹을 사용하여 스키마에 필드를 추가할 수 있습니다. 시작하려면 다음을 선택합니다 **[!UICONTROL 추가]** 다음 **[!UICONTROL 필드 그룹]** 왼쪽 레일에 있습니다.
 
-![](../../images/ui/resources/schemas/add-field-group-button.png)
+![를 사용하는 스키마 편집기 [!UICONTROL 추가] 에서 [!UICONTROL 필드 그룹] 섹션이 강조 표시됩니다.](../../images/ui/resources/schemas/add-field-group-button.png)
 
 스키마에 대해 선택할 수 있는 필드 그룹 목록이 표시되는 대화 상자가 나타납니다. 필드 그룹은 한 클래스와만 호환되므로 스키마의 선택한 클래스와 연결된 필드 그룹만 나열됩니다. 기본적으로 나열된 필드 그룹은 조직 내의 사용 인기도에 따라 정렬됩니다.
 
