@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 009475c8bab3eb29a5d8a97763967d49ccf0999d
+source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1517'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 3%
 
 이 문서에서는 Adobe Experience Platform Web SDK에 대한 릴리스 노트를 다룹니다.
 웹 SDK 태그 확장에 대한 최신 릴리스 노트는 [웹 SDK 태그 확장 릴리스 노트](extension/web-sdk-ext-release-notes.md).
+
+## 버전 2.16.0 - 2023년 4월 25일
+
+**새로운 기능**
+
+* 데이터 스트림 구성 재정의에 대한 지원이 추가되었습니다.
 
 ## 버전 2.15.0 - 2023년 3월 30일
 

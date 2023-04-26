@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK Extension 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 52c6420a7fba6474dd2e9e97c9b2f49b5208be1d
+source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
 workflow-type: tm+mt
-source-wordcount: '1620'
-ht-degree: 39%
+source-wordcount: '1654'
+ht-degree: 38%
 
 ---
 
@@ -13,6 +13,17 @@ ht-degree: 39%
 # Adobe Experience Platform Web SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 노트를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 버전 2.17.0 - 2023년 4월 25일
+
+**새로운 기능**
+
+* 데이터 스트림 구성 재정의에 대한 지원이 추가되었습니다.
+* 에 사용 중단 알림 추가 `datasetId` 옵션 `sendEvent` 명령.
+
+**수정 사항 및 개선 사항**
+
+* Safari에서 스크롤하면 데이터 스트림 선택기가 닫히는 문제가 해결되었습니다.
 
 ## 버전 2.16.1 - 2023년 4월 14일
 
