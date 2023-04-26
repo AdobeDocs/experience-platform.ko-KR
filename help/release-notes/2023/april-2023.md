@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 - 2023년 4월
 description: Adobe Experience Platform에 대한 2023년 4월 릴리스 노트입니다.
-source-git-commit: 938b4ba7affadc7ad0eca086d7cc2c9ce1a54a83
+source-git-commit: f8ef0c6fb949cb5c9071e84d88a9151a5558848f
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 5%
+source-wordcount: '1275'
+ht-degree: 4%
 
 ---
 
@@ -16,6 +16,8 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 - [대시보드](#dashboards)
 - [데이터 준비](#data-prep)
+- [데이터 수집](#data-collection)
+- [대상](#destinations)
 - [경험 데이터 모델](#xdm)
 - [실시간 고객 프로필](#profile)
 - [소스](#sources)
@@ -48,6 +50,60 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 
 {style="table-layout:auto"}
 
 데이터 준비에 대한 자세한 내용은 [데이터 준비 개요](../../data-prep/home.md).
+
+## 데이터 수집 {#data-collection}
+
+Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하고 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 세트를 제공합니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 데이터 세트에 대한 IP 주소 난독화 | 이제 에서 부분 또는 전체 데이터 스트림 수준 IP 난독화 옵션을 정의할 수 있습니다 [데이터 스트림 구성 UI](../../edge/datastreams/configure.md). <br><br>데이터 스트림 수준 IP 난독화 설정은 Adobe Target 및 Audience Manager에 구성된 모든 IP 난독화보다 우선합니다. <br><br>Adobe Analytics으로 전송된 데이터는 데이터 스트림 수준의 영향을 받지 않습니다 [!UICONTROL IP 난독화] 설정 Adobe Analytics이 현재 난독화되지 않은 IP 주소를 수신합니다. Analytics에서 난독화된 IP 주소를 수신하려면 Adobe Analytics에서 별도로 IP 난독화를 구성해야 합니다. 이 동작은 향후 릴리스에서 업데이트됩니다.<br><br> IP 난독화에 대한 자세한 내용과 구성 방법에 대한 지침은 를 참조하십시오. [데이터 스트림 구성 설명서](../../edge/datastreams/configure.md#advanced-options). |
+| 데이터 스트림 구성 무시 | 이제 이벤트 데이터 세트, Target 속성 토큰, ID 동기화 컨테이너 및 Analytics 보고서 세트와 같은 특정 설정을 재정의하는 데 사용할 수 있는 데이터 세트에 대한 추가 구성 옵션을 정의할 수 있습니다. <br><br>데이터 스트림 구성을 재정의하는 것은 두 단계로 구성됩니다. 먼저 데이터 스트림 UI에서 데이터 스트림 구성 무시를 정의해야 합니다. 그런 다음 웹 SDK 명령을 통해 Edge Network에 무시를 보내야 합니다. |
+
+{style="table-layout:auto"}
+
+## 대상 {#destinations}
+
+[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 구축된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새 대상** {#new-destinations}
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| [[!DNL Salesforce Marketing Cloud Account Engagement] 연결](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | Salesforce Marketing Cloud 계정 참여(이전의 Pardot) 대상을 사용하여 리드를 캡처, 추적, 점수 및 등급화합니다. 판매 및 의사 결정 주기를 더 오래 필요로 하는 여러 부서 및 의사 결정자와 관련된 B2B 사용 사례에 대해 이 대상을 사용합니다. |
+
+{style="table-layout:auto"}
+
+**새 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
+
+| 기능 | 설명 |
+| ----------- | ----------- |
+| 데이터 흐름 모니터링 [!DNL Custom Personalization] 및 [!DNL Adobe Commerce] 대상 | <p> 이제 에 대한 활성화 지표를 볼 수 있습니다. [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [사용자 지정 개인화](../../destinations/catalog/personalization/custom-personalization.md) 그리고 [속성을 사용한 사용자 지정 개인화](../../destinations/catalog/personalization/custom-personalization.md) 연결. </p> <p>![Adobe Commerce 이미지](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce 지표"){width="100" zoomable="yes"}</p>  자세한 내용은 [대상 작업 공간에서 데이터 흐름 모니터링](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) 자세한 내용 |
+| 새로 만들기 **[!UICONTROL 세그먼트 이름에 세그먼트 ID 추가]** 에 대한 필드 [!DNL Google Ad Manager] 및 [!DNL Google Ad Manager 360] 대상 | 이제 세그먼트 이름을에 사용할 수 있습니다. [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) 및 [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 다음과 같이 Experience Platform의 세그먼트 ID를 포함합니다. `Segment Name (Segment ID)`. |
+
+{style="table-layout:auto"}
+
+<!--
+
+| New **[!UICONTROL Append segment ID to segment name]** field for the [!DNL Google Ad Manager] and [!DNL Google Ad Manager 360] destinations | You can now have the segment name in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) and [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`. |
+| Scheduled audience backfills | <p>For the [!DNL Google Display & Video 360] destination, the activation of audience backfills to the destination is scheduled to occur 24-48 hours after a segment is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and will improve match rates between Real-time CDP and [!DNL Google Display & Video 360].</p> <p>Note that this is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.</p> |
+
+-->
+
+
+**수정 사항 및 향상된 기능** {#destinations-fixes-and-enhancements}
+
+- 에서 문제가 해결되었습니다. **제외된 ID** 파일 기반 대상 내보내기에 대한 보고 지표. 고객은 예상대로 활성화된 내보내기에서 내보낸 모든 ID를 수신했습니다. 하지만, **제외된 ID** 내보내지 않아야 하는 ID를 잘못 계산하여 UI의 보고 지표가 제외된 높은 ID를 잘못 표시했습니다. (PLAT-149774)
+- 활성화 워크플로우의 예약 단계에서 문제를 수정했습니다. 매핑 ID가 필요한 대상의 경우, 고객은 기존 대상 연결에 추가된 세그먼트에 대한 매핑 ID를 추가할 수 없었습니다. (PLAT-148808)
+
+<!--
+- We have fixed an issue with the beta SFTP destination where the port number was previously hardcoded to 22. The port is now configurable for this destination. 
+
+-->
+
+대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
 
 ## XDM(경험 데이터 모델) {#xdm}
 
