@@ -2,9 +2,10 @@
 title: (API) Oracle Eloqua 연결
 description: (API) Oracle Eloqua 대상을 사용하면 비즈니스 요구 사항에 맞게 Oracle Eloqua 내에서 계정 데이터를 내보내고 활성화할 수 있습니다.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: e8aa09545c95595e98b4730188bd8a528ca299a9
+exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
+source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '2125'
 ht-degree: 0%
 
 ---
@@ -34,14 +35,20 @@ ht-degree: 0%
 
 Platform에서 로 데이터를 내보내려면 [!DNL Oracle Eloqua] 계정이 있어야 합니다. [!DNL Oracle Eloqua] 계정이 필요합니다.
 
+또한, 최소한 *&quot;고급 사용자 - 마케팅 권한&quot;* 에 대해 [!DNL Oracle Eloqua] 인스턴스. 자세한 내용은 *&quot;보안 그룹&quot;* 섹션에 [보안 사용자 액세스](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) 페이지를 참조하십시오. 대상이 프로그래밍 방식으로 액세스해야 합니다 [기본 URL 확인](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) 호출 시 [!DNL Oracle Eloqua] API.
+
 #### 수집 [!DNL Oracle Eloqua] 자격 증명 {#gather-credentials}
 
 를 인증하기 전에 아래 항목을 참고하십시오 [!DNL Oracle Eloqua] 대상:
 
 | 자격 증명 | 설명 |
 | --- | --- |
+| `Company Name` | 와 연결된 회사 이름 [!DNL Oracle Eloqua] 계정이 필요합니다. <br>나중에 를 사용합니다 `Company Name` 및 [!DNL Oracle Eloqua] `Username` 를 **[!UICONTROL 사용자 이름]** when [대상에 인증](#authenticate). |
 | `Username` | 사용자 이름 [!DNL Oracle Eloqua] 계정이 필요합니다. |
 | `Password` | 사용자의 암호 [!DNL Oracle Eloqua] 계정이 필요합니다. |
+| `Pod` | [!DNL Oracle Eloqua] 은 각각 고유한 도메인 이름을 사용하는 여러 데이터 센터를 지원합니다. [!DNL Oracle Eloqua] 이들을 &quot;pods&quot;로 지칭하며 현재 총 7개가 있습니다 - p01, p02, p03, p04, p06, p07 및 p08. 사용 중인 POD를 가져오려면 로그인하십시오 [!DNL Oracle Eloqua] 및 로그인한 후 브라우저에서 URL을 확인합니다. 예를 들어 브라우저 URL이 `secure.p01.eloqua.com` your `pod` is `p01`. 자세한 내용은 [pod 확인](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) 페이지를 참조하십시오. |
+
+자세한 내용은 [에 로그인 [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing) 참조하십시오.
 
 ## 가드레일 {#guardrails}
 
@@ -88,9 +95,14 @@ Platform에서 로 데이터를 내보내려면 [!DNL Oracle Eloqua] 계정이 �
 
 ### 대상에 인증 {#authenticate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_apioracleeloqua_companyname_username"
+>title="회사 이름\사용자 이름"
+>abstract="oracle Eloqua의 회사 이름과 사용자 이름으로 이 필드를 양식에 입력합니다 `{COMPANY_NAME}\{USERNAME}`"
+
 아래 필수 필드를 입력합니다. 자세한 내용은 [수집 [!DNL Oracle Eloqua] 자격 증명](#gather-credentials) 섹션을 참조하십시오.
 * **[!UICONTROL 암호]**: 사용자의 암호 [!DNL Oracle Eloqua] 계정이 필요합니다.
-* **[!UICONTROL 사용자 이름]**: 사용자 이름 [!DNL Oracle Eloqua] 계정이 필요합니다.
+* **[!UICONTROL 사용자 이름]**: 로 구성된 연결된 문자열 [!DNL Oracle Eloqua] 회사 이름 및 [!DNL Oracle Eloqua] 사용자 이름.<br>연결된 값은 `{COMPANY_NAME}\{USERNAME}`.<br> 중괄호나 공백은 사용하지 말고 `\`. <br>예를 들어 [!DNL Oracle Eloqua] 회사 이름: `MyCompany` 및 [!DNL Oracle Eloqua] 사용자 이름: `Username`와 연결된 값에서 사용할 **[!UICONTROL 사용자 이름]** 필드: `MyCompany\Username`.
 
 대상을 인증하려면 **[!UICONTROL 대상에 연결]**.
 ![인증 방법을 보여주는 Platform UI 스크린샷입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
@@ -99,11 +111,18 @@ Platform에서 로 데이터를 내보내려면 [!DNL Oracle Eloqua] 계정이 �
 
 ### 대상 세부 사항 채우기 {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_apioracleeloqua_pod"
+>title="Pod"
+>abstract="pod 번호를 찾으려면 Oracle Eloqua에 로그인하십시오. 성공적으로 로그인하면 브라우저의 URL을 확인합니다. "
+>additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle 기술 자료 - Pod 번호 찾기"
+
 대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 ![대상 세부 사항을 보여주는 Platform UI 스크린샷.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL Pod]**: 어느 것을 얻을까 `pod` 설정, 로그인 [!DNL Oracle Eloqua] 및 로그인한 후 브라우저에서 URL을 확인합니다. 예를 들어 브라우저 URL이 `secure.p01.eloqua.com` a `pod` 선택해야 하는 값은 다음과 같습니다. `p01`. 자세한 내용은 [수집 [!DNL Oracle Eloqua] 자격 증명](#gather-credentials) 섹션을 참조하십시오.
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -193,3 +212,18 @@ XDM 필드를 [!DNL Oracle Eloqua] 대상 필드: 다음 단계를 수행합니�
 
 * [Eloqua Marketing Automation oracle](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [oracle Eloqua Marketing Cloud 서비스를 위한 REST API](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
+
+### 창로그
+
+이 섹션에서는 이 대상 커넥터에 대한 기능 및 중요한 설명서 업데이트를 캡처합니다.
+
++++ 변경 로그 보기
+
+| 릴리스 시기 | 업데이트 유형 | 설명 |
+|---|---|---|
+| 2023년 4월 | 설명서 업데이트 | <ul><li>Adobe는 [사용 사례](#use-cases) 고객이 이 대상을 사용할 수 있는 이점이 있는 경우를 보다 명확하게 보여주는 예입니다.</li> <li>Adobe는 [매핑](#mapping-considerations-example) 필수 및 선택적 매핑에 대한 명확한 예가 있는 섹션.</li> <li>Adobe는 [대상에 연결](#connect) 섹션에 대해 연결된 값을 구성하는 방법에 대한 예를 들어 섹션을 참조하십시오 **[!UICONTROL 사용자 이름]** 필드를 사용하여 [!DNL Oracle Eloqua] 회사 이름 및 [!DNL Oracle Eloqua] 사용자 이름. (PLATIR-28343)</li><li>Adobe는 [수집 [!DNL Oracle Eloqua] 자격 증명](#gather-credentials) 그리고 [대상 세부 사항 채우기](#destination-details) 지침과 함께 [!DNL Oracle Eloqua] **[!UICONTROL Pod]** 선택. 다음 *&quot;Pod&quot;* 값은 대상이 API 호출에 대한 기본 URL을 구성하는 데 사용됩니다. 다음 [[!DNL Oracle Eloqua] 전제 조건](#prerequisites-destination) 섹션에 할당 지침도 업데이트되었습니다 *&quot;고급 사용자 - 마케팅 권한&quot;* 필요에 따라 *&quot;보안 그룹&quot;* 에 대해 [!DNL Oracle Eloqua] 인스턴스.</li></ul> |
+| 2023년 3월 | 초기 릴리스 | 초기 대상 릴리스 및 설명서 게시. |
+
+{style="table-layout:auto"}
+
++++
