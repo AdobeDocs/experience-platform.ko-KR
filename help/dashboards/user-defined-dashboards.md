@@ -2,10 +2,10 @@
 title: 사용자 정의 대시보드
 description: 주요 지표를 시각화하기 위해 맞춤형 위젯을 만들고, 추가하고, 편집할 수 있는 사용자 지정 대시보드를 만들고 관리하는 방법을 알아봅니다.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: a0be2f8625ca60f9c8f355c1230a889002436d6d
+source-git-commit: 8507ecceca47fac3d321b89e4fed018ee9784777
 workflow-type: tm+mt
-source-wordcount: '1307'
-ht-degree: 4%
+source-wordcount: '1608'
+ht-degree: 3%
 
 ---
 
@@ -112,6 +112,20 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ![위젯의 값을 필터링하는 필터 대화 상자](./images/user-defined-dashboards/filter-dialog.png)
 
+#### 내역 데이터 필터링 {#filter-historical-data}
+
+위젯에서 생성된 인사이트에서 이전 데이터를 필터링하려면 `date_key` 속성을 필터로 사용하고 **[!UICONTROL 최근 날짜]** 후 **[!UICONTROL 적용]**. 이 필터를 사용하면 인사이트를 도출하는 데 사용되는 데이터를 최신 시스템 스냅샷에서 가져올 수 있습니다.
+
+![다음 [!UICONTROL 필터: date_key] 대화 상자 [!UICONTROL 최근 날짜] 및 [!UICONTROL 적용] 강조 표시되어 있습니다.](./images/user-defined-dashboards/recent-date.png)
+
+또는 사용자 지정 기간을 만들어 데이터를 기준으로 필터링할 수 있습니다. 선택 **[!UICONTROL 날짜 선택]** 을 클릭하여 사용 가능한 날짜 목록으로 대화 상자를 확장합니다. 를 사용하십시오 **[!UICONTROL 모두 선택]** 확인란을 선택하여 사용 가능한 모든 옵션을 활성화하거나 비활성화하거나 각 날의 확인란을 개별적으로 선택합니다. 마지막으로 다음을 선택합니다. **[!UICONTROL 적용]** 선택 사항을 확인합니다.
+
+>[!NOTE]
+>
+>만약 `date_key` 속성이 이미 필터로 추가되었다면, 그 다음에 를 클릭하십시오 **[!UICONTROL 편집]** 드롭다운 옵션에서 필터 기간을 변경할 수 있습니다.
+
+![다음 [!UICONTROL 필터: date_key] 개별 일 확인란이 선택되어 있고 선택 취소되어 있는 대화 상자](./images/user-defined-dashboards/select-dates.png)
+
 ### 위젯 속성
 
 속성 아이콘(![속성 아이콘.](./images/user-defined-dashboards/properties-icon.png))을 클릭하여 속성 패널을 엽니다. 에서 [!UICONTROL 속성] 패널에서 위젯의 이름을 [!UICONTROL 위젯 제목] 텍스트 필드.
@@ -135,6 +149,22 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 ![사용자 지정 위젯과 저장 단추가 강조 표시된 사용자 정의 대시보드.](./images/user-defined-dashboards/user-defined-dashboard.png)
 
 Adobe Real-time Customer Data Platform 인사이트 대시보드에 대한 각 쿼리에 효율적으로 실행할 수 있는 리소스가 충분하도록, API는 각 쿼리에 동시성 슬롯을 할당하여 리소스 사용을 추적합니다. 시스템은 최대 4개의 동시 쿼리를 처리할 수 있으므로 지정된 시간에 4개의 동시 쿼리 슬롯을 사용할 수 있습니다. 쿼리는 동시성 슬롯을 기반으로 큐에 넣은 다음 충분한 동시성 슬롯을 사용할 수 있을 때까지 대기열에서 대기합니다.
+
+### 위젯 복제
+
+위젯을 만든 후에는 처음부터 시작하지 않고도 전체 위젯을 복제하고 해당 속성을 사용자 지정하여 고유한 위젯을 만들 수 있습니다. 위젯을 복제하려면 먼저 대시보드 인벤토리로 이동합니다. 그런 다음 재고 목록에서 대시보드 이름을 선택합니다. 사용자 지정된 대시보드가 나타납니다.
+
+![대시보드 및 사용자 지정 대시보드 이름이 강조 표시된 플랫폼 UI .](./images/user-defined-dashboards/dashbaord-inventory.png)
+
+연필 아이콘(![연필 아이콘.](./images/user-defined-dashboards/edit-icon.png))을 클릭하여 편집 모드로 전환합니다.
+
+![연필 아이콘이 강조 표시된 사용자 지정 대시보드.](./images/user-defined-dashboards/edit-mode.png)
+
+다음으로, 복사할 위젯의 오른쪽 상단에 있는 줄임표를 선택하고 그 다음에 를 선택합니다 **[!UICONTROL 복제]** 사용 가능한 옵션 목록에서 을 선택합니다.
+
+![생략 부호 및 복제 위젯이 강조 표시된 사용자 정의 대시보드의 위젯.](./images/user-defined-dashboards/duplicate.png)
+
+사용자 정의 대시보드에 중복 위젯이 나타납니다. 새 위젯의 줄임표를 선택하고 다음에 을(를) 선택합니다 **[!UICONTROL 편집]**: 새 위젯을 사용자 지정합니다.
 
 ## 다음 단계 및 추가 리소스
 
