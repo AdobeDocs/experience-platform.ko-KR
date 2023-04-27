@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK Extension 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
+source-git-commit: edd1745467a95804681b5d6c6d33458329641c39
 workflow-type: tm+mt
-source-wordcount: '1654'
+source-wordcount: '1663'
 ht-degree: 38%
 
 ---
@@ -18,8 +18,10 @@ ht-degree: 38%
 
 **새로운 기능**
 
+* Adobe Experience Platform 웹 SDK 버전 2.16.0을 포함합니다.
 * 에 대한 지원이 추가되었습니다 [데이터 스트림 구성 무시](../datastreams/overrides.md).
 * 에 사용 중단 알림 추가 `datasetId` 옵션 `sendEvent` 명령.
+
 
 **수정 사항 및 개선 사항**
 
