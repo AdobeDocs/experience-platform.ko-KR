@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 4월 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8b77b3a91d8724591ec389aa214c81c4bef6baf8
+source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
 workflow-type: tm+mt
-source-wordcount: '1372'
+source-wordcount: '1421'
 ht-degree: 4%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처된 대로 조직의 
 
 | 기능 | 설명 |
 | --- | --- |
-| 사용자 정의 대시보드 | 이제 다음을 수행할 수 있습니다 **내역 데이터 필터링** 위젯 인사이트에서 최근 데이터 또는 사용자 지정 분석 기간을 사용합니다.<br>이제 다음을 수행할 수도 있습니다 **기존 위젯 복제**. 복제를 사용자 지정하고 해당 속성을 편집함으로써 고유한 새 위젯을 만들 때 처음부터 다시 시작하지 않도록 할 수 있습니다. |
+| 사용자 정의 대시보드 | 이제 다음을 수행할 수 있습니다 **내역 데이터 필터링** 위젯 인사이트에서 최근 데이터 또는 사용자 지정 분석 기간을 사용합니다. 자세한 내용은 [사용자 정의 대시보드 안내서](../../dashboards/user-defined-dashboards.md#filter-historical-data) 추가 정보.<br>이제 다음을 수행할 수도 있습니다 **기존 위젯 복제**. 복제를 사용자 지정하고 해당 속성을 편집함으로써 고유한 새 위젯을 만들 때 처음부터 다시 시작하지 않도록 할 수 있습니다. 다음 문서를 참조하십시오. [위젯 복제 안내서](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) 추가 정보 |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 
 | 기능 | 설명 |
 | --- | --- |
-| 이름 표시 전환 | 이제 스키마 편집기에서 원래 필드 이름과 더 사람이 읽을 수 있는 표시 이름 간에 전환할 수 있습니다. 이러한 유연성을 통해 필드 검색 및 스키마 편집을 향상시킬 수 있습니다. 표준 필드 그룹의 표시 이름은 시스템에서 생성되지만 필요한 경우 UI를 통해 사용자 지정할 수도 있습니다. |
+| 이름 표시 전환 | 이제 스키마 편집기에서 원래 필드 이름과 더 사람이 읽을 수 있는 표시 이름 간에 전환할 수 있습니다.<br>![표시 이름이 강조 표시된 스키마 편집기 입니다.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "스키마 편집기 표시 이름 전환"){width="100" zoomable="yes"}<br>이러한 유연성을 통해 필드 검색 및 스키마 편집을 향상시킬 수 있습니다. 표준 필드 그룹의 표시 이름은 시스템에서 생성되지만 필요한 경우 UI를 통해 사용자 지정할 수도 있습니다. 자세한 내용은 [표시 이름 전환 설명서](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) 추가 정보 |
 
 {style="table-layout:auto"}
 
