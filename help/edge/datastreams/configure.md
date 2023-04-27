@@ -2,12 +2,13 @@
 title: 데이터스트림 구성
 description: 클라이언트 측 웹 SDK 통합을 다른 Adobe 제품 및 타사 대상과 연결하는 방법을 알아봅니다.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 611b80f2444ea86ef008f761c5d46976c55b864d
+source-git-commit: 3de929fb17f8b0b6ca4f6f2c7dd0c5a9a26001b2
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2116'
 ht-degree: 2%
 
 ---
+
 
 # 데이터스트림 구성
 
@@ -47,6 +48,8 @@ Experience Platform에서 사용하도록 이 데이터 스트림을 구성하�
 | [!UICONTROL IP 난독화] | 데이터 스트림에 적용할 IP 난독화 유형을 나타냅니다. 고객 IP를 기반으로 하는 모든 처리는 IP 난독화 설정의 영향을 받습니다. 여기에는 데이터 스트림에서 데이터를 받는 모든 Experience Cloud 서비스가 포함됩니다. <p>사용 가능한 옵션:</p> <ul><li>**[!UICONTROL 없음]**: IP 난독화를 비활성화합니다. 전체 사용자 IP 주소가 데이터 스트림을 통해 전송됩니다.</li><li>**[!UICONTROL 부분]**: IPv4 주소의 경우 은 사용자 IP 주소의 마지막 8진수를 난독화합니다. IPv6 주소의 경우 은 주소의 마지막 80비트를 난독화합니다. <p>예:</p> <ul><li>IPv4: `1.2.3.4` -> `1.2.3.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL 전체]**: 전체 IP 주소를 난독화합니다. <p>예:</p> <ul><li>IPv4: `1.2.3.4` -> `0.0.0.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `::/128`</li></ul></li></ul> IP 난독화는 다른 Adobe 제품에 영향을 줍니다. <ul><li>**Adobe Target**: 데이터 스트림 수준 [!UICONTROL IP 난독화] 설정은 Adobe Target에 설정된 IP 난독화 옵션보다 우선합니다. 예를 들어 데이터 스트림 수준이 [!UICONTROL IP 난독화] 옵션이 **[!UICONTROL 전체]** 및 Adobe Target IP 난독화 옵션이 **[!UICONTROL 마지막 8진수 난독화]**: Adobe Target은 완전히 난독화되는 IP를 수신합니다. 다음에서 Adobe Target 설명서를 참조하십시오. [IP 난독화](https://developer.adobe.com/target/before-implement/privacy/privacy/) 및 [지리적 위치](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=en) 자세한 내용</li><li>**Audience Manager**: 데이터 스트림 수준 IP 난독화 설정은 Audience Manager에 설정된 모든 IP 난독화 옵션보다 우선하며 모든 IP 주소에 적용됩니다. Audience Manager에서 수행한 모든 지리적 위치 조회는 데이터 스트림 수준의 영향을 받습니다 [!UICONTROL IP 난독화] 선택 사항입니다. 완전히 난독화된 IP를 기반으로 하는 Audience Manager의 지리적 위치 조회는 알 수 없는 영역을 가져오며, 결과 지리적 위치 데이터를 기반으로 하는 모든 세그먼트는 실현되지 않습니다. 다음에서 Audience Manager 설명서를 참조하십시오. [IP 난독화](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=en) 자세한 내용</li><li>**Adobe Analytics**: Adobe Analytics으로 전송된 데이터는 데이터 스트림 수준의 영향을 받지 않습니다 [!UICONTROL IP 난독화] 설정 Adobe Analytics이 현재 난독화되지 않은 IP 주소를 수신합니다. Analytics에서 난독화된 IP 주소를 수신하려면 Adobe Analytics에서 별도로 IP 난독화를 구성해야 합니다. 이 동작은 향후 릴리스에서 업데이트됩니다. Adobe Analytics 를 참조하십시오 [설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html) 를 참조하십시오.</li></ul> |
 | [!UICONTROL 자사 ID 쿠키] | 이 설정이 활성화되면 Edge Network에 [자사 장치 ID](../identity/first-party-device-ids.md)를 채우는 것이 좋습니다.<br><br>이 설정을 활성화할 때 ID가 저장되어야 하는 쿠키의 이름을 제공해야 합니다. |
 | [!UICONTROL 타사 ID 동기화] | ID 동기화를 컨테이너로 그룹화하여 다른 시간에 다른 ID 동기화를 실행할 수 있습니다. 이 설정을 사용하면 이 데이터 스트림에 대해 실행 중인 ID 동기화 컨테이너를 지정할 수 있습니다. |
+| [!UICONTROL 타사 ID 동기화 컨테이너 ID] | 타사 ID 동기화에 사용할 컨테이너의 숫자 ID입니다. |
+| [!UICONTROL 컨테이너 ID 무시] | 이 섹션에서는 기본 ID를 무시하는 데 사용할 수 있는 추가 타사 ID 동기화 컨테이너 ID를 정의할 수 있습니다. |
 | [!UICONTROL 액세스 유형] | 에지 네트워크에서 데이터 스트림에 대해 허용하는 인증 유형을 정의합니다. <ul><li>**[!UICONTROL 혼합 인증]**: 이 옵션을 선택하면 Edge Network에서 인증된 요청과 인증되지 않은 요청을 모두 허용합니다. 웹 SDK를 사용할 계획이나 [Mobile SDK](https://aep-sdks.gitbook.io/docs/)와 함께 [서버 API](../../server-api/overview.md). </li><li>**[!UICONTROL 인증만]**: 이 옵션을 선택하면 에지 네트워크에서 인증된 요청만 허용합니다. 서버 API만 사용하고 인증되지 않은 요청이 Edge Network에 의해 처리되지 않도록 하려면 이 옵션을 선택합니다.</li></ul> |
 
 여기에서 Experience Platform을 위해 데이터 스트림을 구성하는 경우 다음 자습서를 따르십시오. [데이터 수집을 위한 데이터 준비](./data-prep.md) 이 안내서로 돌아가기 전에 Platform 이벤트 스키마에 데이터를 매핑하려면 다음을 수행하십시오. 그렇지 않으면 을 선택합니다. **[!UICONTROL 저장]** 그리고 다음 섹션으로 계속하십시오.
@@ -88,6 +91,7 @@ Experience Platform에서 사용하도록 이 데이터 스트림을 구성하�
 | 설정 | 설명 |
 | --- | --- |
 | [!UICONTROL 보고서 세트 ID] | **(필수)** 데이터를 전송할 Analytics 보고서 세트의 ID입니다. 이 ID는 아래의 Adobe Analytics UI에서 찾을 수 있습니다 [!UICONTROL 관리] > [!UICONTROL 보고서 세트]. 여러 보고서 세트를 지정하면 데이터가 각 보고서 세트에 복사됩니다. |
+| [!UICONTROL 보고서 세트 무시] | 이 섹션에서는 기본 보고서 세트를 재정의하는 데 사용할 수 있는 보고서 세트 ID를 추가할 수 있습니다. |
 
 ### Adobe Audience Manager 설정 {#audience-manager}
 
@@ -116,7 +120,7 @@ Experience Platform에서 사용하도록 이 데이터 스트림을 구성하�
 
 | 설정 | 설명 |
 |---| --- |
-| [!UICONTROL 이벤트 데이터 세트] | **(필수)** 고객 이벤트 데이터를 스트리밍할 플랫폼 데이터 세트를 선택합니다. 이 스키마는 [XDM ExperienceEvent 클래스](../../xdm/classes/experienceevent.md). |
+| [!UICONTROL 이벤트 데이터 세트] | **(필수)** 고객 이벤트 데이터를 스트리밍할 플랫폼 데이터 세트를 선택합니다. 이 스키마는 [XDM ExperienceEvent 클래스](../../xdm/classes/experienceevent.md). 데이터 세트를 더 추가하려면 을 선택합니다 **[!UICONTROL 이벤트 데이터 세트 추가]**. |
 | [!UICONTROL 프로필 데이터 세트] | 고객 특성 데이터를 전송할 Platform 데이터 세트를 선택합니다. 이 스키마는 [XDM 개별 프로필 클래스](../../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Platform Web SDK 구현에 Offer decisioning을 활성화하려면 이 확인란을 선택하십시오. 다음 안내서를 참조하십시오. [platform Web SDK에서 Offer decisioning 사용](../personalization/offer-decisioning/offer-decisioning-overview.md) 를 참조하십시오.<br><br>offer decisioning 기능에 대한 자세한 내용은 [Adobe Journey Optimizer 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=ko-KR). |
 | [!UICONTROL 에지 세그멘테이션] | 이 확인란을 선택하여 [에지 세분화](../../segmentation/ui/edge-segmentation.md) 이 데이터 스트림에 대해 설명합니다. SDK가 에지 세그먼테이션이 활성화된 데이터 스트림을 통해 데이터를 전송하면 해당 프로필에 대해 업데이트된 세그먼트 멤버십이 응답으로 다시 전송됩니다.<br><br>이 옵션은 [!UICONTROL 개인화 대상] 대상 [다음 페이지 개인화 사용 사례](../../destinations/ui/configure-personalization-destinations.md). |
@@ -134,6 +138,7 @@ Experience Platform에서 사용하도록 이 데이터 스트림을 구성하�
 | [!UICONTROL 속성 토큰] | [!DNL Target] 을 사용하면 고객이 속성을 사용하여 권한을 제어할 수 있습니다. 속성에 대한 자세한 내용은 [enterprise 권한 구성](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) 에서 [!DNL Target] 설명서.<br><br>속성 토큰은 아래의 Adobe Target UI에 있습니다 [!UICONTROL 설정] > [!UICONTROL 속성]. |
 | [!UICONTROL Target 환경 ID] | [Adobe Target의 환경](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) 은 모든 개발 단계를 통해 구현을 관리하는 데 도움이 됩니다. 이 설정은 이 데이터 스트림에 사용할 환경을 지정합니다.<br><br>가장 좋은 방법은 각 사용자 `dev`, `stage`, 및 `prod` 데이터 스트림 환경을 통해 작업을 단순화할 수 있습니다. 그러나 이미 Adobe Target 환경이 정의된 경우 해당 환경을 사용할 수 있습니다. |
 | [!UICONTROL Target 타사 ID 네임스페이스] | 에 대한 ID 네임스페이스 `mbox3rdPartyId` 이 데이터 스트림에 를 사용하려는 경우 다음 안내서를 참조하십시오. [구현 `mbox3rdPartyId` 웹 SDK 사용](../personalization/adobe-target/using-mbox-3rdpartyid.md) 추가 정보. |
+| [!UICONTROL 속성 토큰 무시] | 이 섹션에서는 기본 속성 토큰을 재정의하는 데 사용할 수 있는 추가 속성 토큰을 정의할 수 있습니다. |
 
 ### [!UICONTROL 이벤트 전달] 설정
 
