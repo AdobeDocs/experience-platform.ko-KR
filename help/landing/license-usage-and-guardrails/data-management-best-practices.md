@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;데이터 관리;라이선스 �
 title: 데이터 관리 라이선스 자격 모범 사례
 description: Adobe Experience Platform을 사용하여 라이선스 권한을 보다 효율적으로 관리하는 데 사용할 수 있는 모범 사례 및 도구에 대해 알아봅니다.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
+source-git-commit: fd594e19e13ca6e7f9f92674107d8ac6dabac9d6
 workflow-type: tm+mt
-source-wordcount: '2133'
+source-wordcount: '2169'
 ht-degree: 2%
 
 ---
@@ -122,8 +122,6 @@ Platform에서 하나 이상의 시스템으로 데이터를 수집할 수 있�
 
 {style="table-layout:auto"}
 
-
-
 #### 프로필 저장소 구성 보고서
 
 프로필 저장소의 구성을 이해하는 데 도움이 되는 많은 보고서를 사용할 수 있습니다. 이러한 보고서는 라이선스 사용을 더 잘 최적화하기 위해 경험 이벤트 만료를 설정하는 방법 및 위치에 대한 올바른 결정을 내리는 데 도움이 됩니다.
@@ -132,6 +130,10 @@ Platform에서 하나 이상의 시스템으로 데이터를 수집할 수 있�
 * **ID Overlap Report API**: 대응 가능 대상에 가장 많이 기여하는 ID 네임스페이스를 노출합니다. 다음에서 자습서를 참조하십시오. [id 중복 보고서 생성](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) 추가 정보.
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
+
+#### 익명의 프로필 데이터 만료 {#pseudonymous-profile-expirations}
+
+이 기능을 사용하면 프로필 스토어에서 오래된 익명의 프로필을 자동으로 제거할 수 있습니다. 이 기능에 대한 자세한 내용은 [익명의 프로필 데이터 만료 개요](../../profile/pseudonymous-profiles.md).
 
 #### 경험 이벤트 만료 {#event-expirations}
 
@@ -144,7 +146,7 @@ Platform에서 하나 이상의 시스템으로 데이터를 수집할 수 있�
 * 를 사용하십시오 [라이선스 사용 대시보드](../../dashboards/guides/license-usage.md) 고객 사용 트렌드를 추적 및 모니터링합니다. 이를 통해 발생할 수 있는 모든 잠재적인 초과 상황을 미리 파악할 수 있습니다.
 * 구성 [수집 필터](#ingestion-filters) 세그먼테이션 및 개인화 사용 사례에 필요한 이벤트 식별 이를 통해 사용 사례에 필요한 중요한 이벤트만 보낼 수 있습니다.
 * 다음과 같은 경우에만 [프로필에 대해 활성화된 데이터 세트](#ingestion-filters) 세그먼테이션 및 개인화 사용 사례에 필요합니다.
-* 구성 [경험 이벤트 만료](#event-expirations) 웹 데이터와 같은 빈도가 높은 데이터의 경우.
+* 구성 [경험 이벤트 만료](#event-expirations) 및 [익명의 프로필 데이터 만료](#pseudonymous-profile-expirations) 웹 데이터와 같은 빈도가 높은 데이터의 경우.
 * 정기적으로 [프로필 구성 보고서](#profile-store-composition-reports) 프로필 저장소 컴포지션을 이해하기 위한 것입니다. 이를 통해 라이선스 사용에 가장 많이 기여하는 데이터 소스를 파악할 수 있습니다.
 
 ## 기능 요약 및 가용성 {#feature-summary}
