@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 - 2023년 4월
 description: Adobe Experience Platform에 대한 2023년 4월 릴리스 노트입니다.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+source-git-commit: efd69011f1ba81ece0a1c270cc71b9706ab7b88f
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1297'
 ht-degree: 4%
 
 ---
@@ -82,7 +82,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | 기능 | 설명 |
 | ----------- | ----------- |
 | 데이터 흐름 모니터링 [!DNL Custom Personalization] 및 [!DNL Adobe Commerce] 대상 | <p> 이제 에 대한 활성화 지표를 볼 수 있습니다. [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [사용자 지정 개인화](../../destinations/catalog/personalization/custom-personalization.md) 그리고 [속성을 사용한 사용자 지정 개인화](../../destinations/catalog/personalization/custom-personalization.md) 연결. </p> <p>![Adobe Commerce 이미지](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce 지표"){width="100" zoomable="yes"}</p>  자세한 내용은 [대상 작업 공간에서 데이터 흐름 모니터링](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) 자세한 내용 |
-| 새로 만들기 **[!UICONTROL 세그먼트 이름에 세그먼트 ID 추가]** 에 대한 필드 [!DNL Google Ad Manager] 및 [!DNL Google Ad Manager 360] 대상 | 이제 세그먼트 이름을에 사용할 수 있습니다. [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) 및 [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 다음과 같이 Experience Platform의 세그먼트 ID를 포함합니다. `Segment Name (Segment ID)`. |
+| 새로 만들기 **[!UICONTROL 세그먼트 이름에 세그먼트 ID 추가]** 에 대한 필드 [!DNL Google Ad Manager] 및 [!DNL Google Ad Manager 360] 대상 | <p>이제 세그먼트 이름을에 사용할 수 있습니다. [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) 및 [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 다음과 같이 Experience Platform의 세그먼트 ID를 포함합니다. `Segment Name (Segment ID)`.</p><p>![세그먼트 ID 이미지 추가](/help/destinations/assets/common/append-segment-id-to-segment-name.png "새 세그먼트 이름 필드에 세그먼트 ID 추가 "){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
@@ -97,7 +97,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 **수정 사항 및 향상된 기능** {#destinations-fixes-and-enhancements}
 
 - 에서 문제가 해결되었습니다. **제외된 ID** 파일 기반 대상 내보내기에 대한 보고 지표. 고객은 예상대로 활성화된 내보내기에서 내보낸 모든 ID를 수신했습니다. 하지만, **제외된 ID** 내보내지 않아야 하는 ID를 잘못 계산하여 UI의 보고 지표가 제외된 높은 ID를 잘못 표시했습니다. (PLAT-149774)
-- 활성화 워크플로우의 예약 단계에서 문제를 수정했습니다. 매핑 ID가 필요한 대상의 경우, 고객은 기존 대상 연결에 추가된 세그먼트에 대한 매핑 ID를 추가할 수 없었습니다. (PLAT-148808)
+- 에서 문제가 해결되었습니다. **예약** 활성화 워크플로우의 단계입니다. 매핑 ID가 필요한 대상의 경우, 고객은 기존 대상 연결에 추가된 세그먼트에 대한 매핑 ID를 추가할 수 없었습니다. (PLAT-148808)
 
 <!--
 - We have fixed an issue with the beta SFTP destination where the port number was previously hardcoded to 22. The port is now configurable for this destination. 
