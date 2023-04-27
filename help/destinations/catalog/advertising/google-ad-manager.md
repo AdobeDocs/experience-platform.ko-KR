@@ -3,9 +3,9 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager 연결
 description: 이전에 DoubleClick for Publishers 또는 DoubleClick AdX라고 알려진 Google Ad Manager는 비디오 및 모바일 앱을 통해 게시자가 웹 사이트에서 광고를 표시할 수 있는 방법을 제공하는 Google의 광고 서비스 플랫폼입니다.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
+source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '938'
 ht-degree: 5%
 
 ---
@@ -86,12 +86,7 @@ While [설정](../../ui/connect-destination.md) 이 대상을 사용하려면 �
 * **[!UICONTROL 계정 유형]**: Google을 사용하는 계정에 따라 옵션을 선택합니다.
    * 사용 `DFP by Google` 대상 [!DNL DoubleClick] 게시자
    * 사용 `AdX buyer` 대상 [!DNL Google AdX]
-
-<!--
-
-*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
-
--->
+* **[!UICONTROL 세그먼트 이름에 세그먼트 ID 추가]**: 다음과 같이 Google Ad Manager의 세그먼트 이름에 Experience Platform의 세그먼트 ID가 포함되도록 하려면 이 옵션을 선택합니다. `Segment Name (Segment ID)`.
 
 >[!NOTE]
 >

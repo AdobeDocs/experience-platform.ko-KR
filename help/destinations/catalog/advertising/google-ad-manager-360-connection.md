@@ -2,9 +2,9 @@
 title: (베타) [!DNL Google Ad Manager 360] 연결
 description: Google Ad Manager 360은 게시자가 비디오 및 모바일 앱을 통해 웹 사이트에서 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 서비스 플랫폼입니다.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
+source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '974'
 ht-degree: 4%
 
 ---
@@ -98,12 +98,7 @@ ht-degree: 4%
 * **[!UICONTROL 계정 유형]**: 옵션에 따라 옵션을 선택합니다 [!DNL Google] 계정:
    * 사용 `AdX buyer` 대상 [!DNL Google AdX]
    * 사용 `DFP by Google` 대상 [!DNL DoubleClick] 게시자
-
-<!--
-
-*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager 360 include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
-
--->
+* **[!UICONTROL 세그먼트 이름에 세그먼트 ID 추가]**: 다음과 같이 Google Ad Manager 360의 세그먼트 이름에 Experience Platform의 세그먼트 ID가 포함되도록 하려면 이 옵션을 선택합니다. `Segment Name (Segment ID)`.
 
 ### 경고 활성화 {#enable-alerts}
 
