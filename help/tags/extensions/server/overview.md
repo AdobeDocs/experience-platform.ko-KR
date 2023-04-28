@@ -2,7 +2,7 @@
 title: 이벤트 전달 확장 참조
 description: Adobe Experience Platform에서 이벤트 전달 확장에 대한 설명서를 찾습니다.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: e0c1b4e2cc7444ab97d0eae6ff4f3455b0017d4a
+source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 17%
@@ -39,6 +39,7 @@ ht-degree: 17%
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
 * [[!DNL Mixpanel]](./mixpanel/overview.md)
 * [Pega 고객 결정 허브](https://exchange.adobe.com/apps/ec/107597)*
+* [[!DNL Pinterest]](./pinterest/overview.md)
 * [스냅 전환 API](https://exchange.adobe.com/apps/ec/108550)*
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Zendesk] 이벤트 API](./zendesk/overview.md)

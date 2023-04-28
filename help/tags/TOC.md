@@ -5,9 +5,9 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
+source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '984'
 ht-degree: 31%
 
 ---
@@ -229,6 +229,8 @@ ht-degree: 31%
       * [!DNL Mixpanel] {#mixpanel}
          * [개요](./extensions/server/mixpanel/overview.md)
       * [Pega 고객 결정 허브](https://exchange.adobe.com/apps/ec/107597)
+      * [!DNL Pinterest] {#pinterest}
+         * [개요](./extensions/server/pinterest/overview.md)
       * [스냅 전환 API](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
          * [개요](./extensions/server/splunk/overview.md)
