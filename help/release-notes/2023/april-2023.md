@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 - 2023년 4월
 description: Adobe Experience Platform에 대한 2023년 4월 릴리스 노트입니다.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '1422'
-ht-degree: 4%
+source-wordcount: '1492'
+ht-degree: 3%
 
 ---
 
@@ -62,6 +62,8 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | --- | --- |
 | 데이터 세트에 대한 IP 주소 난독화 | 이제 에서 부분 또는 전체 데이터 스트림 수준 IP 난독화 옵션을 정의할 수 있습니다 [데이터 스트림 구성 UI](../../edge/datastreams/configure.md). <br><br>데이터 스트림 수준 IP 난독화 설정은 Adobe Target 및 Audience Manager에 구성된 모든 IP 난독화보다 우선합니다. <br><br>Adobe Analytics으로 전송된 데이터는 데이터 스트림 수준의 영향을 받지 않습니다 [!UICONTROL IP 난독화] 설정 Adobe Analytics이 현재 난독화되지 않은 IP 주소를 수신합니다. Analytics에서 난독화된 IP 주소를 수신하려면 Adobe Analytics에서 별도로 IP 난독화를 구성해야 합니다. 이 동작은 향후 릴리스에서 업데이트됩니다.<br><br> IP 난독화에 대한 자세한 내용과 구성 방법에 대한 지침은 를 참조하십시오. [데이터 스트림 구성 설명서](../../edge/datastreams/configure.md#advanced-options). |
 | [데이터 스트림 구성 무시](../../edge/datastreams/overrides.md) | 이제 이벤트 데이터 세트, Target 속성 토큰, ID 동기화 컨테이너 및 Analytics 보고서 세트와 같은 특정 설정을 재정의하는 데 사용할 수 있는 데이터 세트에 대한 추가 구성 옵션을 정의할 수 있습니다. <br><br>데이터 스트림 구성을 재정의하는 것은 두 단계로 구성됩니다. <ol><li>먼저, [데이터 스트림 구성 페이지](../../edge/datastreams/configure.md).</li><li>그런 다음 웹 SDK 명령을 통해 또는 웹 SDK를 사용하여 Edge Network에 무시를 보내야 합니다 [태그 확장](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
+| OAuth JWT 암호 | 다음 [OAuth JWT 암호](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) 고객이 Adobe 및 Google 서비스 토큰을 사용하여 이벤트 전달에서 서버 간 상호 작용을 지원할 수 있습니다. |
+| [!DNL Pinterest Conversions API] 확장 | 다음 [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) 이벤트 전달 확장을 사용하면 Adobe Experience Platform Edge Network에서 캡처한 데이터를 활용하여 로 보낼 수 있습니다 [!DNL Pinterest] 를 사용하여 서버측 이벤트 형태로 [!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}
 
