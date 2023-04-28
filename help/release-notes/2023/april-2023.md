@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 - 2023년 4월
 description: Adobe Experience Platform에 대한 2023년 4월 릴리스 노트입니다.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
+source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
 workflow-type: tm+mt
 source-wordcount: '1422'
 ht-degree: 4%
@@ -122,6 +122,8 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 | 기능 | 설명 |
 | ------- | ----------- |
 | 익명의 프로필 데이터 만료 | 일반적으로 익명의 프로필 데이터 만료 기능을 사용할 수 있습니다. 이 릴리스는 활성화되면 Experience Platform 인스턴스에서 오래된 익명의 프로필을 계속 제거합니다. 이 기능 및 익명의 프로필에 대한 자세한 내용은 [익명의 프로필 데이터 만료 안내서](../../profile/pseudonymous-profiles.md). |
+
+{style="table-layout:auto"}
 
 ## 소스 {#sources}
 
