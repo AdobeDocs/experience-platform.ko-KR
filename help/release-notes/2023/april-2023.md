@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 - 2023년 4월
 description: Adobe Experience Platform에 대한 2023년 4월 릴리스 노트입니다.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
+source-git-commit: 3594b20ee495dadf91d745958eac1a06647cae24
 workflow-type: tm+mt
-source-wordcount: '1492'
-ht-degree: 3%
+source-wordcount: '1662'
+ht-degree: 4%
 
 ---
 
@@ -110,6 +110,26 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 | 기능 | 설명 |
 | --- | --- |
 | 이름 표시 전환 | 이제 스키마 편집기에서 원래 필드 이름과 더 사람이 읽을 수 있는 표시 이름 간에 전환할 수 있습니다.<br>![표시 이름이 강조 표시된 스키마 편집기 입니다.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "스키마 편집기 표시 이름 전환"){width="100" zoomable="yes"}<br>이러한 유연성을 통해 필드 검색 및 스키마 편집을 향상시킬 수 있습니다. 표준 필드 그룹의 표시 이름은 시스템에서 생성되지만 필요한 경우 UI를 통해 사용자 지정할 수도 있습니다. 자세한 내용은 [표시 이름 전환 설명서](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) 추가 정보 |
+
+{style="table-layout:auto"}
+
+**새로운 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 |
+| --- | --- | --- |
+| 스키마 | [[!UICONTROL Adobe Target 분류 필드]](https://github.com/adobe/xdm/pull/1719/files) | Target 활동 및 경험을 분류하기 위한 일련의 메타 데이터 필드가 포함된 Target 분류 데이터 세트에 대한 새로운 XDM 스키마. |
+
+{style="table-layout:auto"}
+
+**업데이트된 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 |
+| --- | --- | --- |
+| 필드 그룹 | [[!UICONTROL Adobe 통합 프로필 서비스 계정 조합 확장]](https://github.com/adobe/xdm/pull/1696/files) | 사용자가 계정 조합에서 세그먼트 멤버십을 추가할 수 있는 실시간 고객 프로필에 대한 계정 확장 필드 그룹을 추가했습니다. |
+| 스키마 | [[!UICONTROL 계산된 특성 시스템 스키마]](https://github.com/adobe/xdm/pull/1696/files) | 실시간 고객 프로필에서 사용하는 계산된 특성 필드 그룹이 시스템 읽기 전용 글로벌 스키마로 업데이트되었습니다. |
+| 필드 그룹 | 다중 | 여러 이벤트를 의 필드로 추가했습니다. [[!UICONTROL 시계열 스키마]](https://github.com/adobe/xdm/pull/1718/files). |
+| 필드 그룹 | 프로필 충성도 세부 사항 | [제목이 수정되었습니다.](https://github.com/adobe/xdm/pull/1717/files) 대상 `xdm:upgradeDate` &quot;프로그램 이름&quot;에서 &quot;업그레이드 날짜&quot;로 이동합니다. |
+| 필드 그룹 | 다중 | 의 여러 필드 [[!UICONTROL 의사 결정 항목]](https://github.com/adobe/xdm/pull/1714/files) 이중 중첩 계층을 제거하도록 가 업데이트되었습니다. |
 
 {style="table-layout:auto"}
 
