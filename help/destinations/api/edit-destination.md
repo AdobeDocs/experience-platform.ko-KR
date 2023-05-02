@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Flow Service API를 사용하여 대상 연결 편집
 type: Tutorial
 description: Flow Service API를 사용하여 대상 연결의 다양한 구성 요소를 편집하는 방법을 알아봅니다.
-source-git-commit: 52fe0ef2ab195756c381b3ef0a5792dffe459b8d
+source-git-commit: 956ac5d210d54526e886e57b8ea37ab4b3fbab8a
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1565'
 ht-degree: 2%
 
 ---
@@ -196,9 +196,6 @@ curl -X GET \
 PATCH /targetConnections/{TARGET_CONNECTION_ID}
 ```
 
->[!ENDSHADEBOX]
-
-
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
@@ -244,11 +241,11 @@ curl -X PATCH \
 }
 ```
 
->[!TAB Google Ad Manager 360]
+>[!TAB Google Ad Manager 및 Google Ad Manager 360]
 
 **요청**
 
-다음 요청은 의 매개 변수를 업데이트합니다 [[!DNL Google Ad Manager 360] 대상](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 세그먼트 이름에 새 세그먼트 ID 추가 필드를 추가하기 위한 연결입니다.
+다음 요청은 의 매개 변수를 업데이트합니다 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) 또는 [[!DNL Google Ad Manager 360] 대상](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 새 [**[!UICONTROL 세그먼트 이름에 세그먼트 ID 추가]**](/help/release-notes/2023/april-2023.md#destinations) 필드.
 
 ```shell
 curl -X PATCH \
@@ -328,6 +325,8 @@ curl -X PATCH \
 
 >[!ENDTABS]
 
+>[!ENDSHADEBOX]
+
 ## 기본 연결 구성 요소(인증 매개 변수 및 기타 구성 요소) 편집 {#patch-base-connection}
 
 기본 연결의 구성 요소는 대상에 따라 다릅니다. 예, 예 [!DNL Amazon S3] 대상, 액세스 키 및 비밀 키를 [!DNL Amazon S3] 위치.
@@ -340,11 +339,13 @@ curl -X PATCH \
 >
 >다음 `If-Match` PATCH 요청을 만들 때는 헤더가 필요합니다. 이 헤더의 값은 업데이트할 기본 연결의 고유한 버전입니다. 태그 값은 데이터 흐름, 기본 연결 등과 같은 흐름 엔터티를 성공적으로 업데이트할 때마다 업데이트됩니다.
 >
-> 최신 버전의 태그 값을 얻으려면 `/connections/{BASE_CONNECTION_ID}` 엔드포인트, 위치 `{BASE_CONNECTION_ID}` 는 업데이트할 기본 연결 ID입니다.
+> 최신 버전의 Tag 값을 가져오려면 다음 항목에 GET 요청을 수행하십시오 `/connections/{BASE_CONNECTION_ID}` 엔드포인트, 위치 `{BASE_CONNECTION_ID}` 는 업데이트할 기본 연결 ID입니다.
 
 다음은 다양한 유형의 대상에 대한 기본 연결 사양에서 매개 변수를 업데이트하는 몇 가지 예입니다. 그러나 대상에 대한 매개 변수를 업데이트하는 일반적인 규칙은 다음과 같습니다.
 
 연결의 데이터 흐름 ID를 가져오고 > 기본 연결 ID 가져오기 > 원하는 매개 변수에 대해 업데이트된 값으로 기본 연결을 PATCH 합니다.
+
+>[!BEGINSHADEBOX]
 
 **API 형식**
 
@@ -440,6 +441,8 @@ curl -X PATCH \
 ```
 
 >[!ENDTABS]
+
+>[!ENDSHADEBOX]
 
 ## API 오류 처리 {#api-error-handling}
 
