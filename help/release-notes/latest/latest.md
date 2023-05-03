@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 4월 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3594b20ee495dadf91d745958eac1a06647cae24
+source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1841'
 ht-degree: 4%
 
 ---
@@ -20,6 +20,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [데이터 수집](#data-collection)
 - [대상](#destinations)
 - [경험 데이터 모델](#xdm)
+- [Real-Time Customer Data Platform](#rtcdp)
 - [실시간 고객 프로필](#profile)
 - [소스](#sources)
 
@@ -134,6 +135,19 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 {style="table-layout:auto"}
 
 플랫폼의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
+
+## Real-Time Customer Data Platform
+
+Experience Platform, Real-time Customer Data Platform(영어) 기본 제공[!DNL Real-Time CDP])은 회사에서 알려진 데이터와 알 수 없는 데이터를 함께 가져와서 고객 여정 전체에서 지능형 의사 결정을 사용하여 고객 프로필을 활성화하는 데 도움이 됩니다. [!DNL Real-Time CDP] 여러 엔터프라이즈 데이터 소스를 결합하여 고객 프로필을 실시간으로 만듭니다. 그런 다음 이러한 프로필에서 작성한 세그먼트를 다운스트림 대상으로 전송하여 모든 채널 및 장치에서 개인화된 고객 경험을 일대일로 제공할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 향상된 Real-Time CDP 홈 페이지 | 다음 [Real-Time CDP 홈 페이지](https://experience.adobe.com) 향상된 모양과 향상된 성능으로 기능이 향상되었습니다. 이제 홈 페이지는 사용 권한을 인식하며 액세스 권한이 있는 기능과 관련된 위젯을 표시합니다. 자세한 내용은 [Real-Time CDP 홈페이지 대시보드 개요](../../rtcdp/home-page-dashboards.md). |
+| 자기 식별 설문 조사 | 자체 식별 설문 조사는 Adobe Experience Platform UI 홈 페이지에 나와 있는 간단한 설문 조사입니다. 자체 식별 설문 조사를 사용하여 Experience Platform 개인 프로필을 빌드하고 선택한 내용에 따라 맞춤 지침을 받습니다. 자세한 내용은 [자체 식별 설문 조사 개요](../../landing/self-identification.md). |
+
+자세한 내용은 [!DNL Real-Time CDP]를 참조하고 [[!DNL Real-Time CDP] 개요](../../rtcdp/overview.md).
 
 ## 실시간 고객 프로필 {#profile}
 

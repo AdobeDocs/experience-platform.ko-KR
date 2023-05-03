@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 - 2022년 10월
 description: Adobe Experience Platform에 대한 2022년 10월 릴리스 노트입니다.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: cd99ccb7b026565814dd6f268b2a92dda34bc7f0
+source-git-commit: 8bbac729324ad5bd701f8609c443092ddb045b96
 workflow-type: tm+mt
-source-wordcount: '1343'
-ht-degree: 3%
+source-wordcount: '1328'
+ht-degree: 2%
 
 ---
 
@@ -14,16 +14,11 @@ ht-degree: 3%
 **릴리스 날짜: 2022년 10월 26일**
 
 - [고객 관리 키](#cmk)
-
-Adobe Experience Platform의 기존 기능 업데이트:
-
-- [Adobe Experience Platform 릴리스 노트](#adobe-experience-platform-release-notes)
-   - [고객 관리 키 {#cmk}](#customer-managed-keys-cmk)
-   - [데이터 수집 {#data-collection}](#data-collection-data-collection)
-   - [\[!DNL Destinations\] {#destinations}](#dnl-destinations-destinations)
-   - [XDM(경험 데이터 모델) {#xdm}](#experience-data-model-xdm-xdm)
-   - [쿼리 서비스 {#query-service}](#query-service-query-service)
-   - [소스 {#sources}](#sources-sources)
+- [데이터 수집](#data-collection)
+- [대상](#destinations)
+- [경험 데이터 모델](#xdm)
+- [쿼리 서비스](#query-service)
+- [소스](#sources-sources)
 
 ## 고객 관리 키 {#cmk}
 
