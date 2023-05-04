@@ -6,7 +6,7 @@ exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
 workflow-type: tm+mt
 source-wordcount: '2125'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -98,7 +98,7 @@ Platform에서 로 데이터를 내보내려면 [!DNL Oracle Eloqua] 계정이 �
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
 >title="회사 이름\사용자 이름"
->abstract="oracle Eloqua의 회사 이름과 사용자 이름으로 이 필드를 양식에 입력합니다 `{COMPANY_NAME}\{USERNAME}`"
+>abstract="이 필드에 `{COMPANY_NAME}\{USERNAME}` 양식으로 Oracle Eloqua의 회사 이름과 사용자 이름을 입력합니다."
 
 아래 필수 필드를 입력합니다. 자세한 내용은 [수집 [!DNL Oracle Eloqua] 자격 증명](#gather-credentials) 섹션을 참조하십시오.
 * **[!UICONTROL 암호]**: 사용자의 암호 [!DNL Oracle Eloqua] 계정이 필요합니다.
@@ -114,7 +114,7 @@ Platform에서 로 데이터를 내보내려면 [!DNL Oracle Eloqua] 계정이 �
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_pod"
 >title="Pod"
->abstract="pod 번호를 찾으려면 Oracle Eloqua에 로그인하십시오. 성공적으로 로그인하면 브라우저의 URL을 확인합니다. "
+>abstract="Pod 번호를 찾으려면 Oracle Eloqua에 로그인하십시오. 정상적으로 로그인하고 나면 브라우저의 URL을 기록해 둡니다. "
 >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle 기술 자료 - Pod 번호 찾기"
 
 대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
