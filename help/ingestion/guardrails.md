@@ -3,9 +3,9 @@ keywords: Experience Platform;문제 해결;보호 기능;지침
 title: 데이터 수집 보호 기능
 description: 이 문서에서는 Adobe Experience Platform의 데이터 수집을 위한 보호 기능에 대한 지침을 제공합니다
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 96ab28f9f909cedd1148d6b27610aebb7cf61b29
+source-git-commit: 582f6ffdea6fa1978f6af6f0f0f92e50a12f6200
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '534'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 | 수집 유형 | 지침 | 참고 |
 | --- | --- | --- |
-| 스트리밍 수집 | <ul><li>최대 레코드 크기는 1MB이며 권장 크기는 10KB입니다.</li><li>1분 이내에 프로필에 대한 초당 20000 요청을 처리할 수 있습니다.</li><li>15분 이내에 데이터 레이크에 대한 최대 20000 요청을 처리할 수 있습니다.</li></ul> | 더 높은 데이터 처리량이 필요한 경우 배치 수집 API를 사용합니다. |
+| 스트리밍 수집 | <ul><li>최대 레코드 크기는 1MB이며 권장 크기는 10KB입니다.</li><li>프로필에 대해 초당 최대 2500개의 요청을 처리할 수 있습니다.</li><li>15분 이내에 데이터 레이크에 대한 최대 20000 요청을 처리할 수 있습니다.</li></ul> | 더 높은 데이터 처리량이 필요한 경우 배치 수집 API를 사용합니다. |
 | 스트리밍 소스 | <ul><li>최대 레코드 크기는 1MB이며 권장 크기는 10KB입니다.</li><li>스트리밍 소스는 새로운 소스 연결을 만들 때 초당 4000~5000개의 요청을 지원합니다. **참고**: 데이터 레이크에 스트리밍 데이터를 완전히 처리하는 데 최대 30분이 걸릴 수 있습니다.</li><li>Data Lake에 초당 4000~5000개의 요청을 처리할 수 있습니다. **참고**: 데이터 레이크에 스트리밍 데이터를 완전히 처리하는 데 최대 30분이 걸릴 수 있습니다.</li></ul> | 과 같은 스트리밍 소스 [!DNL Kafka], [!DNL Azure Event Hubs], 및 [!DNL Amazon Kinesis] 를 사용하지 않음 [!DNL Data Collection Core Service] (DCCS) 경로 및 처리량 제한이 다를 수 있습니다. 자세한 내용은 [소스 개요](../sources/home.md) 소스 카탈로그의 경우 데이터 처리에 를 사용할 수 있습니다. |
 
 ## 다음 단계
