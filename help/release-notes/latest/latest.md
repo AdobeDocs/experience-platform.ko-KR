@@ -2,14 +2,18 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 4월 릴리스 노트입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
+source-git-commit: e3fc587d924b2183806918f91e5ae3aa3fee52f3
 workflow-type: tm+mt
-source-wordcount: '1841'
+source-wordcount: '2094'
 ht-degree: 4%
 
 ---
 
 # Adobe Experience Platform 릴리스 노트
+
+>[!IMPORTANT]
+>
+>2023년 5월 15일부터 `Existing` 세그먼트 멤버십 라이프사이클에서 중복을 제거하기 위해 상태는 세그먼트 멤버십 맵에서 더 이상 사용되지 않습니다. 이 변경 후 세그먼트에 자격을 갖춘 프로필은 로 표시됩니다 `Realized` 그리고 자격이 없는 프로필은 `Exited`. 이 변경 사항에 대한 자세한 내용은 [세분화 서비스 섹션](#segmentation).
 
 **릴리스 일자: 2023년 4월 26일**
 
@@ -22,6 +26,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [경험 데이터 모델](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [실시간 고객 프로필](#profile)
+- [세분화 서비스](#segmentation)
 - [소스](#sources)
 
 ## 대시보드 {#dashboards}
@@ -160,6 +165,20 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 | 익명의 프로필 데이터 만료 | 일반적으로 익명의 프로필 데이터 만료 기능을 사용할 수 있습니다. 이 릴리스는 활성화되면 Experience Platform 인스턴스에서 오래된 익명의 프로필을 계속 제거합니다. 이 기능 및 익명의 프로필에 대한 자세한 내용은 [익명의 프로필 데이터 만료 안내서](../../profile/pseudonymous-profiles.md). |
 
 {style="table-layout:auto"}
+
+## 세분화 서비스 {#segmentation}
+
+[!DNL Segmentation Service] 고객 기반 내의 마케팅 가능한 사람 그룹을 구분하는 기준을 설명하여 특정 프로필 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(예: 인구 통계 정보) 또는 시계열 이벤트를 기반으로 할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 세그먼트 멤버십 맵 | 2023년 5월 15일에 있었던 이전 발표 이후, `Existing` 세그먼트 멤버십 라이프사이클에서 중복을 제거하기 위해 상태는 세그먼트 멤버십 맵에서 더 이상 사용되지 않습니다. 이 변경 후 세그먼트에 자격을 갖춘 프로필은 로 표시됩니다 `Realized` 그리고 자격이 없는 프로필은 `Exited`.<br/><br/> 이 변경 사항은 [엔터프라이즈 대상](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure 이벤트 허브, HTTP API) 및 은(는) `Existing` 상태. 이 경우 다운스트림 통합을 검토하십시오. 특정 시간 이후에 새로 자격을 갖춘 프로필을 식별하는 데 관심이 있는 경우 `Realized` 상태 및 `lastQualificationTime` 세그먼트 멤버십 맵에서 공유할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오. |
+
+{style="table-layout:auto"}
+
+자세한 내용은 [!DNL Segmentation Service]를 보려면 [세그먼테이션 개요](../../segmentation/home.md).
 
 ## 소스 {#sources}
 
