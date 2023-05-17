@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Adobe Experience Platform Destination SDK 인증 및 사용 시작 방법에 대해 설명합니다. 여기에는 Adobe I/O 인증 자격 증명, 샌드박스 이름 및 대상 작성 액세스 제어 권한을 가져오는 방법에 대한 지침이 포함되어 있습니다.
 title: Destination SDK 시작
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '627'
 ht-degree: 4%
 
 ---
@@ -56,7 +56,7 @@ Adobe Exchange 팀에서는 Destination SDK API 엔드포인트 호출에 사용
 
 ## 역할 기반 액세스 제어(RBAC) {#rbac}
 
-에 설명된 Destination SDK API 엔드포인트를 사용하려면 [참조 설명서](./configuration-options.md), 다음을 수행해야 합니다. **[!UICONTROL 대상 작성]** 액세스 제어 권한. Adobe Exchange 팀과 협력하여 이 권한을 할당받으십시오. [Adobe Admin Console](https://adminconsole.adobe.com/).
+에 설명된 Destination SDK API 엔드포인트를 사용하려면 [참조 설명서](functionality/configuration-options.md), 다음을 수행해야 합니다. **[!UICONTROL 대상 작성]** 액세스 제어 권한. Adobe Exchange 팀과 협력하여 이 권한을 할당받으십시오. [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![대상 작성 권한](./assets/destination-authoring-permission.png)
 
@@ -68,7 +68,7 @@ Adobe Exchange 팀에서는 Destination SDK API 엔드포인트 호출에 사용
 
 ## 추가 고려 사항 {#additional-considerations}
 
-* 대상 구성을 만들거나 편집하든 Adobe이 하든 대상 구성에 수행한 모든 변경 사항을 검토하고 승인해야 합니다. 검토를 수행한 후에만 변경 사항이 대상에 반영됩니다.
+* 프로덕션/공개 대상의 경우 대상 구성을 만들거나 편집하든 상관없이 Adobe이 대상 구성을 변경하고 검토해야 합니다. 검토를 수행한 후에만 변경 사항이 대상에 반영됩니다. 이 기능은 사용자만 사용할 수 있는 개인 대상에는 적용되지 않습니다.
 * 동일한 조직에 속하고 샌드박스에 액세스할 수 있는 사용자만 대상 구성을 편집할 수 있습니다.
 
 ## 다음 단계 {#next-steps}
@@ -77,8 +77,8 @@ Adobe Exchange 팀에서는 Destination SDK API 엔드포인트 호출에 사용
 
 * 대상 유형에 따라 다음 구성 안내서를 읽어 보십시오.
 
-   * [Destination SDK을 사용하여 스트리밍 대상 구성](./configure-destination-instructions.md)
-   * [Destination SDK을 사용하여 파일 기반 대상 구성](./configure-file-based-destination-instructions.md)
+   * [Destination SDK을 사용하여 스트리밍 대상 구성](guides/configure-destination-instructions.md)
+   * [Destination SDK을 사용하여 파일 기반 대상 구성](guides/configure-file-based-destination-instructions.md)
 
 * 모든 작업에 대해서는 [대상 작성 API 설명서](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
 * 를 사용하십시오 [대상 작성 API Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) Destination SDK API 엔드포인트를 사용하여 대상을 구성하기 위해 Postman을 시작하려면 다음을 참조하십시오. [환경 및 컬렉션 가져오기 절차](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) 그리고 [Postman 환경 만들기를 위한 비디오 안내서](https://video.tv.adobe.com/v/28832).

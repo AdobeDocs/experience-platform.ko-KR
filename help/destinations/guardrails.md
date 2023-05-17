@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용량 및 비율 제한에 대해 자세히 알아보십시오 .
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 1132c5166f1271f1b8eb0c618b83d028b413b991
+source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
 source-wordcount: '1177'
 ht-degree: 2%
@@ -102,7 +102,7 @@ ht-degree: 2%
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
 | 최대 개수 [개인 사용자 지정 대상](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | 소프트 | Destination SDK을 사용하여 최대 5개의 개인 사용자 지정 스트리밍 또는 배치 대상을 만들 수 있습니다. 5개 이상의 그러한 대상을 만들어야 하는 경우 사용자 지정 지원 담당자에게 문의하십시오. |
-| Destination SDK에 대한 프로필 내보내기 정책 | <ul><li>`maxBatchAgeInSecs` (최소 1.800 및 최대 3.600)</li><li>`maxNumEventsInBatch` (최소 1.000, 최대 10.000)</li></ul> | 하드 | 를 사용할 때 [구성 가능한 합계](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation) 대상에 대한 옵션을 고려할 때 API 기반 대상으로 HTTP 메시지를 보내는 빈도와 메시지에 포함해야 하는 프로필 수를 결정하는 최소 및 최대 값을 고려해야 합니다. |
+| Destination SDK에 대한 프로필 내보내기 정책 | <ul><li>`maxBatchAgeInSecs` (최소 1.800 및 최대 3.600)</li><li>`maxNumEventsInBatch` (최소 1.000, 최대 10.000)</li></ul> | 하드 | 를 사용할 때 [구성 가능한 합계](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 대상에 대한 옵션을 고려할 때 API 기반 대상으로 HTTP 메시지를 보내는 빈도와 메시지에 포함해야 하는 프로필 수를 결정하는 최소 및 최대 값을 고려해야 합니다. |
 
 {style="table-layout:auto"}
 

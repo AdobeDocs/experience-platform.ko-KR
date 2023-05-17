@@ -1,29 +1,31 @@
 ---
-description: Destination SDK을 사용하여 사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 SFTP 대상을 구성하는 방법을 알아봅니다.
-title: 사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성을 사용하여 SFTP 대상을 구성합니다.
+description: 미리 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 SFTP 대상을 구성하는 방법을 Destination SDK으로 알아봅니다.
+title: 사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 SFTP 대상을 구성합니다.
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
-source-git-commit: bdeebca9608e7c1ff3ae0cb1aeb444dccb78028f
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '706'
 ht-degree: 0%
 
 ---
 
-# 사전 정의된 파일 형식 옵션 및 사용자 정의 파일 이름 구성을 사용하여 SFTP 대상 구성
+# 사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 SFTP 대상 구성
 
 ## 개요 {#overview}
 
-이 페이지에서는 Destination SDK을 사용하여 사전 정의된 기본값으로 SFTP 대상을 구성하는 방법에 대해 설명합니다 [파일 서식 옵션](../../server-and-file-configuration.md#file-configuration) 및 사용자 지정 [파일 이름 구성](../../file-based-destination-configuration.md#file-name-configuration).
+이 페이지에서는 Destination SDK을 사용하여 사전 정의된 기본값으로 SFTP 대상을 구성하는 방법을 설명합니다 [파일 서식 옵션](configure-file-formatting-options.md) 및 사용자 지정 [파일 이름 구성](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 이 페이지에는 SFTP 대상에 사용할 수 있는 모든 구성 옵션이 표시됩니다. 아래 단계에 표시된 구성을 편집하거나 필요에 따라 구성의 특정 부분을 삭제할 수 있습니다.
 
-## 전제 조건 {#prerequisites}
+아래에 사용되는 매개 변수에 대한 자세한 설명은 를 참조하십시오 [대상 SDK의 구성 옵션](../../functionality/configuration-options.md).
 
-아래 설명된 단계로 진행하기 전에 다음을 읽어 보십시오. [Destination SDK 시작](../../getting-started.md) Destination SDK API를 사용하여 작업하는 데 필요한 Adobe I/O 인증 자격 증명 및 기타 전제 조건을 얻는 방법에 대한 자세한 내용을 보려면 페이지 를 참조하십시오.
+## 사전 요구 사항 {#prerequisites}
+
+아래 요약된 단계로 이동하기 전에 다음을 참조하십시오. [Destination SDK 시작](../../getting-started.md) 페이지 를 참조하십시오.
 
 ## 1단계: 서버 및 파일 구성 만들기 {#create-server-file-configuration}
 
-를 사용하여 시작 `/destination-server` 서버 및 파일 구성을 만드는 끝점입니다. HTTP 요청의 매개 변수에 대한 자세한 설명은 [파일 기반 대상에 대한 서버 및 파일 구성 사양](../../server-and-file-configuration.md#sftp-example) 및 관련 항목 [파일 형식 지정 구성](../../server-and-file-configuration.md#file-configuration).
+을 사용하여 시작합니다 `/destination-server` 엔드포인트 [서버 및 파일 구성 만들기](../../authoring-api/destination-server/create-destination-server.md).
 
 **API 형식**
 
@@ -34,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **요청**
 
 다음 요청은 페이로드에 제공된 매개 변수로 구성된 새 대상 서버 구성을 만듭니다.
-아래 페이로드에는 사전 정의된 기본값이 있는 일반 SFTP 구성이 포함됩니다 [CSV 파일 형식 지정](../../server-and-file-configuration.md#file-configuration) 사용자가 Experience Platform UI에서 정의할 수 있는 구성 매개 변수입니다.
+아래의 페이로드에는 사전 정의된 기본 SFTP 구성이 포함되어 있습니다 [CSV 파일 형식](../../functionality/destination-server/file-formatting.md) 사용자가 Experience Platform UI에서 정의할 수 있는 구성 매개 변수입니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -121,19 +123,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-성공적인 응답은 고유 식별자( )를 포함하여 새 대상 서버 구성을 반환합니다.`instanceId`)을 참조하십시오. 다음 단계에서 필요한 대로 이 값을 저장합니다.
+성공적인 응답은 고유 식별자( )를 포함하여 새 대상 서버 구성을 반환합니다`instanceId`) 내의 아무 곳에나 삽입할 수 있습니다. 이 값은 다음 단계에서 필요에 따라 저장합니다.
 
 ## 2단계: 대상 구성 만들기 {#create-destination-configuration}
 
-이전 단계에서 대상 서버 및 파일 형식 지정 구성을 만든 후 `/destinations` 대상 구성을 만들기 위한 API 엔드포인트.
+이전 단계에서 대상 서버와 파일 형식 구성을 만든 후 이제 `/destinations` 대상 구성을 만들기 위한 API 엔드포인트.
 
-에서 서버 구성을 연결하려면 [1단계](#create-server-file-configuration) 이 대상 구성을 사용하려면 `destinationServerId` 에서 대상 서버를 만들 때 얻은 값과 함께 아래 API 요청의 값 [1단계](#create-server-file-configuration).
-
-아래 사용된 매개변수에 대한 자세한 설명은 다음 페이지를 참조하십시오.
-
-* [인증 구성](../../authentication-configuration.md#sftp)
-* [일괄 처리 대상 구성](../../file-based-destination-configuration.md#batch-configuration)
-* [파일 기반 대상 구성 API 작업](../../destination-configuration-api.md#create-file-based)
+에서 서버 구성을 연결하려면 [1단계](#create-server-file-configuration) 이 대상 구성에 대해 `destinationServerId` 에서 대상 서버를 만들 때 얻은 값으로 아래의 API 요청에 있는 값 [1단계](#create-server-file-configuration).
 
 **API 형식**
 
@@ -154,7 +150,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"SFTP destination with predefined CSV formatting options",
    "description":"SFTP destination with predefined CSV formatting options",
-   "releaseNotes":"",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
@@ -252,48 +247,48 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-성공적인 응답은 고유 식별자( )를 포함하여 새 대상 구성을 반환합니다.`instanceId`)을 참조하십시오. 대상 구성을 업데이트하기 위해 추가 HTTP 요청을 수행해야 하는 경우 이 값을 필요에 따라 저장합니다.
+성공적인 응답은 고유 식별자( )를 포함하여 새 대상 구성을 반환합니다`instanceId`) 내의 아무 곳에나 삽입할 수 있습니다. 대상 구성을 업데이트하기 위해 추가 HTTP 요청을 수행해야 하는 경우 이 값을 필요에 따라 저장합니다.
 
 ## 3단계: Experience Platform UI 확인 {#verify-ui}
 
 위의 구성에 따라 이제 Experience Platform 카탈로그에 사용할 새 개인 대상 카드가 표시됩니다.
 
-![선택한 대상 카드가 있는 대상 카탈로그 페이지를 보여 주는 화면 레코딩입니다.](../../assets/destination-card.gif)
+![선택한 대상 카드가 있는 대상 카탈로그 페이지를 표시하는 화면 기록](../../assets/guides/batch/destination-card.gif)
 
-아래 이미지 및 녹화에서 [파일 기반 대상에 대한 활성화 워크플로](/help/destinations/ui/activate-batch-profile-destinations.md) 대상 구성에서 선택한 옵션과 일치합니다.
+아래 이미지 및 레코딩에서 [파일 기반 대상에 대한 활성화 워크플로우](/help/destinations/ui/activate-batch-profile-destinations.md) 대상 구성에서 선택한 옵션과 일치시킵니다.
 
-대상에 대한 세부 정보를 입력할 때 필드가 구성에서 설정한 사용자 정의 데이터 필드인지 확인합니다.
+대상에 대한 세부 사항을 입력할 때 구성 시 설정한 사용자 지정 데이터 필드가 어떻게 표시되는지 확인하십시오.
 
 >[!TIP]
 >
->사용자 지정 데이터 필드를 대상 구성에 추가하는 순서는 UI에 반영되지 않습니다. 사용자 지정 데이터 필드는 항상 아래 화면 녹화에 표시된 순서로 표시됩니다.
+>대상 구성에 사용자 지정 데이터 필드를 추가하는 순서는 UI에 반영되지 않습니다. 사용자 지정 데이터 필드는 항상 아래 화면 기록에 표시되는 순서대로 표시됩니다.
 
-![대상 세부 사항 입력](../../assets/file-configuration-options.gif)
+![대상 세부 사항 채우기](../../assets/guides/batch/file-configuration-options.gif)
 
-내보내기 간격을 예약할 때 에서 설정한 필드가 어떻게 표시되는지 확인합니다. `batchConfig` 구성.
-![내보내기 예약 옵션](../../assets/file-export-scheduling.png)
+내보내기 간격을 예약할 때 표시되는 필드가 `batchConfig` 구성.
+![예약 옵션 내보내기](../../assets/guides/batch/file-export-scheduling.png)
 
-파일 이름 구성 옵션을 볼 때 필드가 어떻게 표시되는지 확인합니다 `filenameConfig` 구성에서 설정한 옵션입니다.
-![파일 이름 구성 옵션](../../assets/file-naming-options.gif)
+파일 이름 구성 옵션을 볼 때 표시되는 필드가 `filenameConfig` 구성에 설정한 옵션입니다.
+![파일 구성 옵션](../../assets/guides/batch/file-naming-options.gif)
 
-위에서 언급한 필드를 조정하려면 다음을 반복합니다 [1단계](#create-server-file-configuration) 및 [2](#create-destination-configuration) 필요에 따라 구성을 수정합니다.
+위에 언급된 필드를 조정하려면 을 반복합니다 [단계 1](#create-server-file-configuration) 및 [2개](#create-destination-configuration) 필요에 따라 구성을 수정합니다.
 
-## 4단계: (선택 사항) 대상 게시 {#publish-destination}
-
->[!NOTE]
->
->이 단계는 직접 사용할 개인 대상을 만들고 다른 고객이 사용할 대상 카탈로그에 게시하려고 하지 않는 경우에는 필요하지 않습니다.
-
-대상을 구성한 후 [대상 게시 API](../../destination-publish-api.md) Adobe에 구성을 제출하여 검토합니다.
-
-## 5단계: (선택 사항) 대상 문서화 {#document-destination}
+## 4단계: (선택 사항) 대상을 게시합니다 {#publish-destination}
 
 >[!NOTE]
 >
->이 단계는 직접 사용할 개인 대상을 만들고 다른 고객이 사용할 대상 카탈로그에 게시하려고 하지 않는 경우에는 필요하지 않습니다.
+>사용자가 사용할 비공개 대상을 만들고 다른 고객이 사용할 수 있도록 대상 카탈로그에 게시하려고 하지 않는 경우 이 단계는 필요하지 않습니다.
 
-ISV(Independent Software Vendor) 또는 SI(System Integrator)가 [제품화 통합](../../overview.md#productized-custom-integrations), 사용 [셀프서비스 설명서 프로세스](../../docs-framework/documentation-instructions.md) 에서 대상에 대한 제품 설명서 페이지를 만들려면 [Experience Platform 대상 카탈로그](../../../catalog/overview.md).
+대상을 구성한 후 [대상 게시 API](../../publishing-api/create-publishing-request.md) 검토를 위해 Adobe에 구성을 제출합니다.
+
+## 5단계: (선택 사항) 대상을 문서화합니다 {#document-destination}
+
+>[!NOTE]
+>
+>사용자가 사용할 비공개 대상을 만들고 다른 고객이 사용할 수 있도록 대상 카탈로그에 게시하려고 하지 않는 경우 이 단계는 필요하지 않습니다.
+
+ISV(Independent Software Vendor) 또는 SI(System Integrator)가 [제품 통합](../../overview.md#productized-custom-integrations)를 사용하려면 [셀프 서비스 설명서 프로세스](../../docs-framework/documentation-instructions.md) 에서 대상에 대한 제품 설명서 페이지를 만들려면 [Experience Platform 대상 카탈로그](../../../catalog/overview.md).
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽으면 이제 Destination SDK을 사용하여 사용자 지정 SFTP 대상을 작성하는 방법을 알 수 있습니다. 다음으로, 팀은 [파일 기반 대상에 대한 활성화 워크플로](../../../ui/activate-batch-profile-destinations.md) 데이터를 대상으로 내보냅니다.
+이 문서를 다 읽으면 이제 Destination SDK을 사용하여 사용자 지정 SFTP 대상을 작성하는 방법을 알 수 있습니다. 다음으로, 팀이 [파일 기반 대상에 대한 활성화 워크플로우](../../../ui/activate-batch-profile-destinations.md) 데이터를 대상으로 내보내려면 다음을 수행하십시오.

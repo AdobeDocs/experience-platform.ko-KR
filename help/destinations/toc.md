@@ -4,10 +4,10 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에서는 Adobe Experience Platform 대상의 목차 목록을 설명합니다
 feature: Destinations
-source-git-commit: eb261675ffbd131a00aaa5d526d03e966b94c7c7
+source-git-commit: 36d4908fc19916c5e107eb4883d741ba1904b5a4
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 6%
+source-wordcount: '1178'
+ht-degree: 5%
 
 ---
 
@@ -196,44 +196,34 @@ ht-degree: 6%
 * 대상 SDK {#destination-sdk}
    * [개요](./destination-sdk/overview.md)
    * [통합 사전 요구 사항](./destination-sdk/integration-prerequisites.md)
-   * [시작하기](./destination-sdk/getting-started.md)
-   * Destination SDK 기능 {#functionality}
-      * [구성 옵션](./destination-sdk/configuration-options.md)
-      * [스트리밍 대상 구성](./destination-sdk/destination-configuration.md)
-      * [파일 기반 대상 구성](./destination-sdk/file-based-destination-configuration.md)
-      * [스트리밍 대상 서버 및 템플릿 사양](./destination-sdk/server-and-template-configuration.md)
-      * [파일 기반 대상 서버 및 파일 사양](./destination-sdk/server-and-file-configuration.md)
-      * [메시지 포맷](./destination-sdk/message-format.md)
-      * [대상 메타데이터 관리](./destination-sdk/audience-metadata-management.md)
-      * 인증 {#authentication}
-         * [인증 구성](./destination-sdk/authentication-configuration.md)
-         * [OAuth 2 인증](./destination-sdk/oauth2-authentication.md)
-      * 개발자 도구 {#developer-tools}
-         * [메시지 변환 템플릿 만들기 및 테스트](./destination-sdk/create-template.md)
-         * [대상 구성 테스트](./destination-sdk/test-destination.md)
-   * API 작업 {#api}
-      * [Destination SDK(대상 작성) API 참조](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
-      * [대상 끝점 API 작업](./destination-sdk/destination-configuration-api.md)
-      * [대상 서버 끝점 API 작업](./destination-sdk/destination-server-api.md)
-      * [대상 메타데이터 끝점 API 작업](./destination-sdk/audience-metadata-api.md)
-      * [자격 증명 끝점 API 작업](./destination-sdk/credentials-configuration-api.md)
-      * [게시 끝점 API 작업](./destination-sdk/destination-publish-api.md)
-      * 개발자 도구 참조 {#developer-tools-reference}
-         * 스트리밍 대상 테스트 API {#streaming-destination-testing-api}
-            * [샘플 템플릿 API 작업 가져오기](./destination-sdk/sample-template-api.md)
-            * [템플릿 API 작업 렌더링](./destination-sdk/render-template-api.md)
-            * [대상 테스트 API 작업](./destination-sdk/destination-testing-api.md)
-            * [샘플 프로필 생성 API 작업](./destination-sdk/sample-profile-generation-api.md)
-         * 파일 기반 대상 테스트 API {#file-based-destination-testing-api}
-            * [파일 기반 대상 테스트 API 개요](./destination-sdk/file-based-destination-testing-overview.md)
-            * [소스 스키마를 기반으로 샘플 프로필 생성](./destination-sdk/file-based-sample-profile-generation-api.md)
-            * [샘플 프로필로 파일 기반 대상 테스트](./destination-sdk/file-based-destination-testing-api.md)
-            * [자세한 활성화 결과 보기](./destination-sdk/file-based-destination-results-api.md)
-            * [템플릿화된 고객 필드의 유효성 검사](./destination-sdk/file-based-render-template-api.md)
+   * [Destination SDK 시작](./destination-sdk/getting-started.md)
+   * 기능 {#functionality}
+      * [구성 옵션](./destination-sdk/functionality/configuration-options.md)
+      * 대상 서버 구성 요소 {#destination-server}
+         * [서버 사양](./destination-sdk/functionality/destination-server/server-specs.md)
+         * [템플릿 사양](./destination-sdk/functionality/destination-server/templating-specs.md)
+         * [메시지 포맷](./destination-sdk/functionality/destination-server/message-format.md)
+         * [지원되는 변형 함수](./destination-sdk/functionality/destination-server/supported-functions.md)
+         * [파일 형식 구성](./destination-sdk/functionality/destination-server/file-formatting.md)
+      * 대상 구성 구성 요소 {#destination-configuration}
+         * [고객 인증 구성](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
+         * [OAuth2 인증](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
+         * [고객 데이터 필드](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
+         * [UI 속성](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
+         * [파트너 스키마 구성](./destination-sdk/functionality/destination-configuration/schema-configuration.md)
+         * [ID 네임스페이스 구성](./destination-sdk/functionality/destination-configuration/identity-namespace-configuration.md)
+         * [지원되는 매핑 구성](./destination-sdk/functionality/destination-configuration/supported-mapping-configurations.md)
+         * [대상 게재](./destination-sdk/functionality/destination-configuration/destination-delivery.md)
+         * [대상 메타데이터 구성](./destination-sdk/functionality/destination-configuration/audience-metadata-configuration.md)
+         * [집계 정책](./destination-sdk/functionality/destination-configuration/aggregation-policy.md)
+         * [배치 구성](./destination-sdk/functionality/destination-configuration/batch-configuration.md)
+         * [내역 프로필 자격](./destination-sdk/functionality/destination-configuration/historical-profile-qualifications.md)
+      * [스트리밍 대상에 대한 속도 제한 및 다시 시도 정책](./destination-sdk/functionality/rate-limiting-retry-policy.md)
+      * [대상 메타데이터 관리](./destination-sdk/functionality/audience-metadata-management.md)
    * 안내서 {#guides}
-      * [Destination SDK을 사용하여 스트리밍 대상 구성](./destination-sdk/configure-destination-instructions.md)
-      * [Destination SDK을 사용하여 파일 기반 대상 구성](./destination-sdk/configure-file-based-destination-instructions.md)
-      * [Destination SDK에서 작성된 대상을 검토하도록 제출](./destination-sdk/submit-destination.md)
+      * [Destination SDK을 사용하여 스트리밍 대상 구성](./destination-sdk/guides/configure-destination-instructions.md)
+      * [Destination SDK을 사용하여 파일 기반 대상 구성](./destination-sdk/guides/configure-file-based-destination-instructions.md)
+      * [Destination SDK에서 작성된 대상을 검토하도록 제출](./destination-sdk/guides/submit-destination.md)
       * 파일 기반 대상 구성 {#configure-file-based-destinations}
          * [파일 형식 옵션 구성](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
          * [사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Amazon S3 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
@@ -242,9 +232,45 @@ ht-degree: 6%
          * [사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 Azure Data Lake 저장소 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 DLZ(데이터 랜딩 영역) 대상 구성](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [사전 정의된 파일 형식 옵션 및 사용자 지정 파일 이름 구성으로 SFTP 대상 구성](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
-   * 참조 {#reference}
-      * [스트리밍 대상에 대한 속도 제한 및 다시 시도 정책](./destination-sdk/rate-limiting-retry-policy.md)
-      * [지원되는 변형 함수](./destination-sdk/supported-functions.md)
+   * 대상 작성 API 참조 {#authoring-api}
+      * [Destination SDK(대상 작성) API 참조](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * 대상 서버 작업 {#server-operations}
+         * [대상 서버 구성 만들기](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
+         * [대상 서버 구성 검색](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
+         * [대상 서버 구성 업데이트](./destination-sdk/authoring-api/destination-server/update-destination-server.md)
+         * [대상 서버 구성 삭제](./destination-sdk/authoring-api/destination-server/delete-destination-server.md)
+      * 대상 구성 작업 {#destination-operations}
+         * [대상 구성 만들기](./destination-sdk/authoring-api/destination-configuration/create-destination-configuration.md)
+         * [대상 구성 검색](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
+         * [대상 구성 업데이트](./destination-sdk/authoring-api/destination-configuration/update-destination-configuration.md)
+         * [대상 구성 삭제](./destination-sdk/authoring-api/destination-configuration/delete-destination-configuration.md)
+   * 대상 메타데이터 API 참조 {#audience-template-api}
+      * [대상 템플릿 만들기](./destination-sdk/metadata-api/create-audience-template.md)
+      * [대상 템플릿 검색](./destination-sdk/metadata-api/retrieve-audience-template.md)
+      * [대상 템플릿 업데이트](./destination-sdk/metadata-api/update-audience-template.md)
+      * [대상 템플릿 삭제](./destination-sdk/metadata-api/delete-audience-template.md)
+   * 자격 증명 구성 API 참조 {#credentials-api}
+      * [자격 증명 구성 만들기](./destination-sdk/credentials-api/create-credential-configuration.md)
+      * [자격 증명 구성 검색](./destination-sdk/credentials-api/retrieve-credential-configuration.md)
+      * [자격 증명 구성 업데이트](./destination-sdk/credentials-api/update-credential-configuration.md)
+      * [자격 증명 구성 삭제](./destination-sdk/credentials-api/delete-credential-configuration.md)
+   * 대상 테스트 API 참조 {#testing-api}
+      * 스트리밍 대상 테스트 API {#streaming-destinations}
+         * [스트리밍 대상 테스트 API 개요](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
+         * [소스 스키마를 기반으로 샘플 프로필 생성](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
+         * [샘플 메시지 변환 템플릿 생성 ](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
+         * [내보낸 프로필 구조 유효성 검사](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
+         * [샘플 프로필을 사용하여 스트리밍 대상 테스트](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
+         * [메시지 변환 템플릿 만들기 및 테스트](./destination-sdk/testing-api/streaming-destinations/create-template.md)
+      * 파일 기반 대상 테스트 API {#batch-destinations}
+         * [파일 기반 대상 테스트 API 개요](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
+         * [소스 스키마를 기반으로 샘플 프로필 생성](./destination-sdk/testing-api/batch-destinations/file-based-sample-profile-generation-api.md)
+         * [샘플 프로필로 파일 기반 대상 테스트](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-api.md)
+         * [자세한 활성화 결과 보기](./destination-sdk/testing-api/batch-destinations/file-based-destination-results-api.md)
+         * [템플릿화된 고객 필드의 유효성 검사](./destination-sdk/testing-api/batch-destinations/file-based-render-template-api.md)
+   * 대상 게시 API 참조 {#publishing-api}
+      * [대상 게시 요청 만들기](./destination-sdk/publishing-api/create-publishing-request.md)
+      * [대상 게시 요청 검색](./destination-sdk/publishing-api/retrieve-publishing-request.md)
    * 대상을 문서화합니다. {#document-destination}
       * [Adobe Experience Platform에서 대상 문서화](./destination-sdk/docs-framework/documentation-instructions.md)
       * [GitHub 웹 인터페이스를 사용하여 대상 설명서 페이지를 만듭니다](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)

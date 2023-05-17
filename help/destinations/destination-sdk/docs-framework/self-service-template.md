@@ -2,7 +2,7 @@
 title: 설명서 셀프 서비스 템플릿 // 대상 이름으로 바꾸기
 description: 이 템플릿을 사용하여 Adobe Experience Platform 카탈로그에서 대상에 대한 공개 설명서를 만듭니다. // 개요 섹션의 단락으로 대체합니다
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >* 템플릿에 요약된 순서대로 이 템플릿의 모든 섹션을 입력합니다.
->* 이 템플릿은 파트너 피드백을 기반으로 자주 업데이트됩니다. 대상에 대한 문서 작성을 시작하기 전에 [템플릿의 최신 버전](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+>* 이 템플릿은 파트너 피드백을 기반으로 자주 업데이트됩니다. 대상에 대한 문서 작성을 시작하기 전에 [템플릿의 최신 버전](../assets/docs-framework/yourdestination-template.zip).
 
 
 ## 개요 {#overview}
@@ -103,7 +103,7 @@ ht-degree: 1%
 
 대상을 인증하려면 필요한 필드를 입력하고 을(를) 선택합니다 **[!UICONTROL 대상에 연결]**.
 
-![대상에 인증하는 방법을 보여주는 샘플 스크린샷](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![대상에 인증하는 방법을 보여주는 샘플 스크린샷](../assets/docs-framework/authenticate-destination.png)
 
 * **[!UICONTROL 베어러 토큰]**: 대상을 인증하려면 베어러 토큰을 입력합니다.
 
@@ -113,7 +113,7 @@ ht-degree: 1%
 
 대상에 대한 세부 사항을 구성하려면 아래 필수 및 선택적 필드를 입력합니다. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-![대상에 대한 세부 사항을 채우는 방법을 보여주는 샘플 스크린샷](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![대상에 대한 세부 사항을 채우는 방법을 보여주는 샘플 스크린샷](../assets/docs-framework/configure-destination-details.png)
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식하는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.

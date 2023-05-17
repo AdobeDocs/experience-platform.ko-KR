@@ -1,7 +1,8 @@
 ---
 title: 프로필 내보내기 동작
 description: Experience Platform 대상에서 지원되는 다양한 통합 패턴에 따라 프로필 내보내기 동작이 어떻게 다른지 알아봅니다.
-source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
+exl-id: 2be62843-0644-41fa-a860-ccd65472562e
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '2933'
 ht-degree: 0%
@@ -26,16 +27,16 @@ Experience Platform 대상은 데이터를 HTTPS 호출로 API 기반 통합으�
 
 대상 API 종단점으로 발송되기 전에 프로필이 HTTPS 메시지로 집계되는 프로세스를 호출합니다 *마이크로바칭*.
 
-다음 [Facebook 대상](/help/destinations/catalog/social/facebook.md) 사용 *[구성 가능한 합계](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation)* 예제 의 정책 - 데이터가 집계된 방식으로 전송됩니다. 여기서 대상 서비스는 프로필 서비스 업스트림에서 들어오는 모든 데이터를 가져와 다음 중 하나를 수행하여 Facebook에 발송합니다.
+다음 [Facebook 대상](/help/destinations/catalog/social/facebook.md) 사용 *[구성 가능한 합계](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 예제 의 정책 - 데이터가 집계된 방식으로 전송됩니다. 여기서 대상 서비스는 프로필 서비스 업스트림에서 들어오는 모든 데이터를 가져와 다음 중 하나를 수행하여 Facebook에 발송합니다.
 
 * 레코드 수(최대 10.000) 또는
 * 시간 창 간격(30분)
 
 위의 임계값 중 처음 충족되는 것과 관계없이 Facebook으로 내보내기를 트리거합니다. 그래서, [!DNL Facebook Custom Audiences] 대시보드에는 10.000개 레코드 증가에서 Experience Platform에서 들어오는 대상이 표시될 수 있습니다. 데이터가 30분 내보내기 간격보다 빨리 처리 및 집계되고 더 빨리 전송되므로 모든 레코드가 처리될 때까지 10~15분마다 10.000개의 레코드가 표시될 수 있습니다. 10.000 배치를 구성하는 데 레코드가 충분하지 않은 경우 시간 창 임계값이 충족될 때와 같이 현재 레코드 수가 전송되므로 Facebook으로 전송되는 작은 배치도 볼 수 있습니다.
 
-다른 예로, [HTTP API 대상](/help/destinations/catalog/streaming/http-destination.md): *[최상의 작업 집계](/help/destinations/destination-sdk/destination-configuration.md#best-effort-aggregation)* 정책, `maxUsersPerRequest: 10`. 즉, 최대 10개의 프로필을 집계하여 HTTP 호출이 이 대상으로 실행되지만 Experience Platform은 대상 서비스가 업스트림 서비스에서 업데이트된 재평가 정보를 받는 즉시 프로필을 대상으로 디스패치하려고 합니다.
+다른 예로, [HTTP API 대상](/help/destinations/catalog/streaming/http-destination.md): *[최상의 작업 집계](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 정책, `maxUsersPerRequest: 10`. 즉, 최대 10개의 프로필을 집계하여 HTTP 호출이 이 대상으로 실행되지만 Experience Platform은 대상 서비스가 업스트림 서비스에서 업데이트된 재평가 정보를 받는 즉시 프로필을 대상으로 디스패치하려고 합니다.
 
-집계 정책은 구성할 수 있으며 대상 개발자는 다운스트림의 API 끝점의 비율 제한을 가장 잘 충족하도록 집계 정책을 구성하는 방법을 결정할 수 있습니다. 자세한 내용 [집계 정책](/help/destinations/destination-sdk/destination-configuration.md#aggregation) Destination SDK 설명서에서 을 참조하십시오.
+집계 정책은 구성할 수 있으며 대상 개발자는 다운스트림의 API 끝점의 비율 제한을 가장 잘 충족하도록 집계 정책을 구성하는 방법을 결정할 수 있습니다. 자세한 내용 [집계 정책](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) Destination SDK 설명서에서 을 참조하십시오.
 
 ## 스트리밍 프로필 내보내기(엔터프라이즈) 대상 {#streaming-profile-destinations}
 

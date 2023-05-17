@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 - 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 노트입니다.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 3d829018b527aacb81c16db5e889b2e50f625e28
+source-git-commit: 8904d44cc8d289d103ec6d65116b8385ed615c4d
 workflow-type: tm+mt
 source-wordcount: '2940'
 ht-degree: 5%
@@ -126,7 +126,7 @@ Platform의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| 대상 SDK | 이제 Destination SDK은 일괄 처리(또는 파일 기반)를 만들거나 개인 대상을 만드는 파트너와 고객을 완벽하게 지원합니다. 자세한 내용은 다음 설명서 페이지를 참조하십시오. <ul><li>[Destination SDK 개요](/help/destinations/destination-sdk/overview.md)</li><li>[파일 기반 대상 구성](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[파일 기반 대상에 대한 파일 형식 옵션 구성](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[파일 기반 대상 테스트](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+| 대상 SDK | 이제 Destination SDK은 일괄 처리(또는 파일 기반)를 만들거나 개인 대상을 만드는 파트너와 고객을 완벽하게 지원합니다. 자세한 내용은 다음 설명서 페이지를 참조하십시오. <ul><li>[Destination SDK 개요](../../destinations/destination-sdk/overview.md)</li><li>[파일 기반 대상 구성](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[파일 기반 대상에 대한 파일 형식 옵션 구성](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[파일 기반 대상 테스트](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
 
 {style="table-layout:auto"}
 
