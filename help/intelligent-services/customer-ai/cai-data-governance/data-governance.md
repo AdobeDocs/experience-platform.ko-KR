@@ -5,10 +5,10 @@ feature: Customer AI
 title: 고객 AI의 데이터 거버넌스
 description: Adobe Experience Platform은 비즈니스 작업, 법적 의무 및 개발 프로세스를 준수하기 위해 수집된 경험 데이터를 자신 있게 제어할 수 있는 몇 가지 서비스 및 도구를 제공합니다.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: f0bd35d8fb592900c61ed4a1a74d05901bc32810
+source-git-commit: 0fcdb358882fba7f7923e5d6fc1a947699276e18
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 6%
+source-wordcount: '302'
+ht-degree: 9%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 6%
 
 ## 동의 정책 {#consent-policy}
 
-Customer AI는 동의 기본 설정을 적용합니다. 동의 정책을 설정하고 여기에 설명된 대로 활성화하면 고객 AI는 사용자로부터 수집된 동의 데이터를 처리합니다. 모델의 후속 실행에서 모델을 평가하는 데 동의 데이터만 사용됩니다. 새 점수는 이전 점수를 대체하며 세그먼테이션에서 사용할 수 있습니다. 이 기능은 HealthCare Shield 고객과 개인 정보 보호 및 보안 보호 고객에게만 제공됩니다.
+Customer AI는 동의 기본 설정을 적용합니다. 일단 [동의 정책 설정 및 활성화](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ko#consent-policy), 고객 AI는 사용자로부터 수집된 동의 데이터를 처리합니다. 모델의 후속 실행에서 모델을 평가하는 데 동의 데이터만 사용됩니다. 새 점수는 이전 점수를 대체하며 세그먼테이션에서 사용할 수 있습니다. 이 기능은 현재 HealthCare Shield 고객과 개인 정보 보호 및 보안 보호 고객에게만 제공됩니다.
 
 이 기능에 대한 자세한 내용은 다음을 참조하십시오.
 
