@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 - 2023년 4월
 description: Adobe Experience Platform에 대한 2023년 4월 릴리스 노트입니다.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: c95d2ab1a6f104c18c491d3a533ee2c304a0aa68
+source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2084'
 ht-degree: 4%
 
 ---
@@ -190,7 +190,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| Microsoft Dynamics, Salesforce CRM 및 Salesforce Marketing Cloud에 대한 행 수준 데이터 필터링을 위한 API 지원 | 논리 및 비교 연산자를 사용하여 Microsoft Dynamics, Salesforce CRM 및 Salesforce Marketing Cloud 소스에 대한 행 수준 데이터를 필터링합니다. 안내서 읽기 [API를 사용하여 소스에 대한 데이터 필터링](../../sources/tutorials/api/filter.md) 추가 정보. |
+| Salesforce CRM 소스에 대한 행 수준 데이터 필터링을 위한 API 지원. | 논리 및 비교 연산자를 사용하여 Salesforce CRM 소스의 행 수준 데이터를 필터링합니다. 안내서 읽기 [API를 사용하여 소스에 대한 데이터 필터링](../../sources/tutorials/api/filter.md) 추가 정보. |
 | Shopify 스트리밍 베타 가용성 | 다음 [Shopify 스트리밍 소스](../../sources/connectors/ecommerce/shopify-streaming.md) 이제 베타로 제공됩니다. Shopify 스트리밍 소스를 사용하여 Shopify 파트너 계정의 데이터를 Experience Platform으로 스트리밍합니다. |
 | OneTrust 통합의 일반 공급 | 다음 [OneTrust 통합 소스](../../sources/connectors/consent-and-preferences/onetrust.md) 은 현재 GA입니다. OneTrust 통합 소스를 사용하여 OneTrust 통합 계정의 동의 및 환경 설정 데이터를 Experience Platform으로 가져옵니다. |
 | oracle 서비스 클라우드의 일반 공급 | 다음 [Oracle 서비스 클라우드 소스](../../sources/connectors/customer-success/oracle-service-cloud.md) 은 현재 GA입니다. oracle 서비스 클라우드 소스를 사용하여 Oracle 서비스 클라우드 데이터를 Experience Platform으로 가져옵니다. |

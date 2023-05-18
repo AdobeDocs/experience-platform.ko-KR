@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;흐름 서비스;흐름 서비�
 title: Flow Service API를 사용하여 소스의 행 수준 데이터 필터링
 description: 이 자습서에서는 Flow Service API를 사용하여 소스 수준에서 데이터를 필터링하는 방법에 대해 설명합니다
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: da6f5a79b1ee16fb0d44a5c2990ed1b8be1f99e2
+source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 3%
+source-wordcount: '780'
+ht-degree: 2%
 
 ---
 
@@ -17,9 +17,7 @@ ht-degree: 3%
 >행 수준 데이터 필터링에 대한 지원은 현재 다음 소스에서만 사용할 수 있습니다.
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
->* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
->* [Salesforce Marketing Cloud](../../connectors/marketing-automation/salesforce-marketing-cloud.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
 
 
@@ -52,7 +50,7 @@ API를 사용하여 소스에 대한 행 수준 데이터를 필터링하려면 
 GET /connectionSpecs/{QUERY_PARAMS}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{QUERY_PARAMS}` | 결과를 기준으로 필터링할 선택적 쿼리 매개 변수입니다. 를 검색할 수 있습니다 [!DNL Google BigQuery] 연결 사양을 적용하여 `name` 속성 및 지정 `"google-big-query"` 검색에서 확인하십시오. |
 
@@ -165,7 +163,7 @@ curl -X GET \
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}&preview=true&filters={FILTERS}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 소스의 기본 연결 ID입니다. |
 | `{TABLE_PATH}` | 검사할 테이블의 경로 속성입니다. |
