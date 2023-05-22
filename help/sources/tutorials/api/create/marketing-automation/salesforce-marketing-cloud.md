@@ -1,33 +1,30 @@
 ---
-keywords: Experience Platform;홈;인기 항목;salesforce marketing cloud;Salesforce Marketing Cloud
-solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 Salesforce Marketing Cloud 기반 연결 만들기
-type: Tutorial
-description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Salesforce Marketing Cloud에 연결하는 방법에 대해 알아봅니다.
+description: 흐름 서비스 API를 사용하여 Experience Platform에 대해 Salesforce Marketing Cloud 계정을 인증하는 방법을 알아봅니다.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '507'
 ht-degree: 1%
 
 ---
 
 # 만들기 [!DNL Salesforce Marketing Cloud] 를 사용한 기본 연결 [!DNL Flow Service] API
 
->[!NOTE]
+>[!IMPORTANT]
 >
->다음 [!DNL Salesforce Marketing Cloud] 소스는 베타 버전입니다. 다음을 참조하십시오. [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
+>사용자 지정 개체 수집은 현재 [!DNL Salesforce Marketing Cloud] 소스 통합.
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 기본 연결을 만드는 단계를 안내합니다. [!DNL Salesforce Marketing Cloud] 사용 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+이 자습서에서는 기본 연결을 만드는 단계를 안내합니다. [!DNL Salesforce Marketing Cloud] 사용 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## 시작하기
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md): Experience Platform을 사용하면 다양한 소스에서 데이터를 수집할 수 있으며 다음을 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. [!DNL Platform] 서비스.
-* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 파티션을 만드는 가상 샌드박스를 제공합니다 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 전환하여 디지털 경험 애플리케이션을 개발하고 발전시킵니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 ### Platform API 사용
 
@@ -41,12 +38,12 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `host` | 응용 프로그램의 호스트 서버입니다. 이는 종종 하위 도메인입니다. **참고:** 을(를) 입력할 때 `host` 값을 지정하면 전체 URL이 아닌 하위 도메인만 지정해야 합니다. 예를 들어 호스트 URL이 `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`를 선택한 다음 입력하기만 하면 됩니다. `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` 을 호스트 값으로 사용하십시오. |
+| `host` | 응용 프로그램의 호스트 서버입니다. 이는 종종 하위 도메인입니다. **참고:** 을(를) 입력할 때 `host` 값을 지정하면 전체 URL이 아닌 하위 도메인만 지정해야 합니다. 예를 들어 호스트 URL이 `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`를 선택한 다음 입력하기만 하면 됩니다. `acme-ab12c3d4e5fg6hijk7lmnop8qrst` 을 호스트 값으로 사용하십시오. |
 | `clientId` | 와 연결된 클라이언트 ID [!DNL Salesforce Marketing Cloud] 응용 프로그램. |
 | `clientSecret` | 와(과) 연결된 클라이언트 암호 [!DNL Salesforce Marketing Cloud] 응용 프로그램. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 에 대한 연결 사양 ID [!DNL Salesforce Marketing Cloud] 은(는) `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
-시작에 대한 자세한 내용은 다음을 참조하십시오. [[!DNL Salesforce Marketing Cloud] 문서](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
+시작에 대한 자세한 내용은 다음을 참조하십시오. [[!DNL Salesforce Marketing Cloud] 문서](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
 ## 기본 연결 만들기
 
@@ -66,28 +63,28 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Salesforce Marketing Cloud base connection",
-        "description": "Salesforce Marketing Cloud base connection",
-        "auth": {
-            "specName": "Client-Id-Secret Based Authentication",
-            "params": {
-                "host": "{HOST}"
-                "clientId": "{CLIENT_ID}",
-                "clientSecret": "{CLIENT_SECRET}"
-            }
-        },
-        "connectionSpec": {
-            "id": "ea1c2a08-b722-11eb-8529-0242ac130003",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Salesforce Marketing Cloud base connection",
+      "description": "Salesforce Marketing Cloud base connection",
+      "auth": {
+          "specName": "Client-Id-Secret Based Authentication",
+          "params": {
+              "host": "acme-ab12c3d4e5fg6hijk7lmnop8qrst"
+              "clientId": "acme-salesforce-marketing-cloud",
+              "clientSecret": "xxxx"
+          }
+      },
+      "connectionSpec": {
+          "id": "ea1c2a08-b722-11eb-8529-0242ac130003",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | 속성 | 설명 |

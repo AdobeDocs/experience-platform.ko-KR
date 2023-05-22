@@ -1,36 +1,35 @@
 ---
-keywords: Experience Platform;홈;인기 항목;salesforce marketing cloud;Salesforce Marketing Cloud;마케팅 자동화
 solution: Experience Platform
 title: Salesforce Marketing Cloud 소스 개요
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce Marketing Cloud을 Adobe Experience Platform에 연결하는 방법에 대해 알아봅니다.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '334'
 ht-degree: 0%
 
 ---
 
-# (베타) [!DNL Salesforce Marketing Cloud]
-
->[!NOTE]
->
->다음 [!DNL Salesforce Marketing Cloud] 소스는 베타 버전입니다. 다음을 참조하십시오. [소스 개요](../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
+# [!DNL Salesforce Marketing Cloud]
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-[!DNL Experience Platform] 는 서드파티 마케팅 자동화 시스템에서 데이터 수집을 지원합니다. 마케팅 자동화 공급자에 대한 지원은 다음과 같습니다 [!DNL Salesforce Marketing Cloud].
+Experience Platform은 서드파티 마케팅 자동화 시스템에서 데이터를 수집하는 기능을 지원합니다. 마케팅 자동화 공급자에 대한 지원은 다음과 같습니다 [!DNL Salesforce Marketing Cloud].
 
-## 전제 조건
+## 사전 요구 사항
 
 연결하기 전에 [!DNL Salesforce Marketing Cloud] source to Platform에서 다음을 확인해야 합니다. **권한 범위** 이(가) 다음에 프로비저닝되었습니다. [!DNL Salesforce Marketing Cloud] 클라이언트 ID 및 클라이언트 암호 조합:
 
 * `campaign_read`
 * `list_and_subscribers_read`
 
-을 호출하여 범위를 요청할 수 있습니다. `v2/userinfo` 의 리소스 [!DNL Salesforce Marketing Cloud] API. 다음을 참조하십시오. [[!DNL Salesforce Marketing Cloud] API 통합 권한 범위 문서](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html) 범위를 요청하고 비교하는 방법에 대한 지침을 제공합니다.
+을 호출하여 범위를 요청할 수 있습니다. `v2/userinfo` 의 리소스 [!DNL Salesforce Marketing Cloud] API. 다음을 참조하십시오. [[!DNL Salesforce Marketing Cloud] API 통합 권한 범위 문서](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) 범위를 요청하고 비교하는 방법에 대한 지침을 제공합니다.
 
-관련 권한 및 동작 목록을 포함하여 범위에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL Salesforce Marketing Cloud] REST API 문서](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html).
+관련 권한 및 동작 목록을 포함하여 범위에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL Salesforce Marketing Cloud] REST API 문서](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
+
+>[!IMPORTANT]
+>
+>사용자 지정 개체 수집은 현재 [!DNL Salesforce Marketing Cloud] 소스 통합.
 
 ## IP 주소 허용 목록
 
