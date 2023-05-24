@@ -2,10 +2,10 @@
 title: 이벤트 전달 확장 참조
 description: Adobe Experience Platform에서 이벤트 전달 확장에 대한 설명서를 찾습니다.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
+source-git-commit: 2fdaa1921110b38c7e97ed4889a238d655ef88a1
 workflow-type: tm+mt
-source-wordcount: '165'
-ht-degree: 17%
+source-wordcount: '158'
+ht-degree: 18%
 
 ---
 
@@ -33,7 +33,6 @@ ht-degree: 17%
 * [[!DNL Braze]](./braze/overview.md)
 * [코어](./core/overview.md)
 * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)*
-* [Facebook 전환 API](https://exchange.adobe.com/apps/ec/105509)
 * [Google Ads 향상된 전환](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
@@ -42,4 +41,5 @@ ht-degree: 17%
 * [[!DNL Pinterest]](./pinterest/overview.md)
 * [스냅 변환 API](https://exchange.adobe.com/apps/ec/108550)*
 * [[!DNL Splunk]](./splunk/overview.md)
+* [[!DNL Twitter]](./twitter/overview.md)
 * [[!DNL Zendesk] 이벤트 API](./zendesk/overview.md)
