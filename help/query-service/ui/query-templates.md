@@ -15,7 +15,7 @@ Adobe Experience Platform Query Service를 사용하면 SQL 코드를 쿼리 템
 
 이 문서에서는 쿼리 서비스에서 쿼리 템플릿을 만드는 데 필요한 정보를 제공합니다.
 
-## 전제 조건
+## 사전 요구 사항
 
 다음을 보유해야 합니다. [!UICONTROL 쿼리 관리] 쿼리 편집기에 액세스하고 플랫폼 UI 내에서 쿼리 대시보드를 볼 수 있는 권한이 활성화되었습니다. 권한은 Adobe을 통해 사용할 수 있습니다. [Admin Console](https://adminconsole.adobe.com/). 이 권한을 활성화하기 위한 관리자 권한이 없는 경우 조직의 관리자에게 문의하십시오. 다음에 대한 액세스 제어 설명서 참조: [Admin Console을 통한 권한 추가에 대한 전체 지침](../../access-control/home.md).
 

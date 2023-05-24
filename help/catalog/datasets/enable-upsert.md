@@ -127,7 +127,7 @@ curl -X POST \
 GET /dataSets/{DATASET_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{DATASET_ID}` | 검사할 데이터 세트의 ID입니다. |
 
@@ -208,7 +208,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
 PATCH /dataSets/{DATASET_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{DATASET_ID}` | 업데이트할 데이터 세트의 ID입니다. |
 
@@ -261,7 +261,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 PATCH /dataSets/{DATASET_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{DATASET_ID}` | 업데이트할 데이터 세트의 ID입니다. |
 

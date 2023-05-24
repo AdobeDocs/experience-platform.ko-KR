@@ -45,7 +45,7 @@ ht-degree: 31%
    * [라이브러리](./ui/publishing/libraries.md)
    * [자체 호스팅 라이브러리](./ui/publishing/hosts/self-hosting-libraries.md)
    * [라이브러리 다시 게시](./ui/publishing/republish.md)
-   * [Premium CDN 지원(베타)](./ui/publishing/premium-cdn.md)
+   * [Premium CDN 지원(Beta)](./ui/publishing/premium-cdn.md)
 * 클라이언트측 정보 {#client-side}
    * [개요](./ui/client-side/overview.md)
    * [비동기 배포](./ui/client-side/asynchronous-deployment.md)
@@ -57,14 +57,14 @@ ht-degree: 31%
    * [개요](./ui/event-forwarding/overview.md)
    * [시작하기](./ui/event-forwarding/getting-started.md)
    * [암호 구성](./ui/event-forwarding/secrets.md)
-   * [모니터링(베타)](./ui/event-forwarding/monitoring.md)
+   * [모니터링(Beta)](./ui/event-forwarding/monitoring.md)
 * 관리 {#admin}
    * [개요](./ui/administration/overview.md)
    * [회사 및 속성](./ui/administration/companies-and-properties.md)
    * [사용자 권한](./ui/administration/user-permissions.md)
 * 확장 {#extensions}
    * [개요](./extensions/overview.md)
-   * 태그 확장(클라이언트측) {#client}
+   * 태그 확장 기능 (클라이언트측) {#client}
       * [개요](./extensions/client/overview.md)
       * [액세스 가능한 사이트 속도 지표](https://exchange.adobe.com/apps/ec/103053)
       * [Activity Map 사용자 지정자](https://exchange.adobe.com/apps/ec/101531)
@@ -77,7 +77,7 @@ ht-degree: 31%
          * [릴리스 정보](./extensions/client/analytics/release-notes.md)
       * [Adobe Analytics 및 Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
       * [Adobe Analytics 및 Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
-      * [Adobe Analytics &amp; Salesforce](https://exchange.adobe.com/apps/ec/101530)
+      * [Adobe Analytics 및 Salesforce](https://exchange.adobe.com/apps/ec/101530)
       * Adobe Analytics 제품 문자열 {#product-string}
          * [개요](./extensions/client/product-string/overview.md)
          * [릴리스 정보](./extensions/client/product-string/release-notes.md)
@@ -119,21 +119,21 @@ ht-degree: 31%
          * [릴리스 정보](./extensions/client/target-v2/release-notes.md)
       * [Adobe Target 툴킷](https://exchange.adobe.com/apps/ec/100640)
       * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
-      * [AEM 자산 통찰력](https://exchange.adobe.com/apps/ec/103406)
-      * [Airbrake JS 알림](https://exchange.adobe.com/apps/ec/103342)
+      * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
+      * [Airbrake JS Notifier](https://exchange.adobe.com/apps/ec/103342)
       * [진폭](https://exchange.adobe.com/apps/ec/108010)
-      * [아폴로 액스](https://exchange.adobe.com/apps/ec/105068)
-      * [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)
-      * [Win 변환 태그](https://exchange.adobe.com/apps/ec/103240)
-      * [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)
+      * [아폴로 큐악스](https://exchange.adobe.com/apps/ec/105068)
+      * [Advertiser MasterTag 사용](https://exchange.adobe.com/apps/ec/103176)
+      * [Awin 변환 태그](https://exchange.adobe.com/apps/ec/103240)
+      * [인간의 맥락](https://exchange.adobe.com/apps/ec/101063)
       * [Bing Ads 범용 이벤트 추적](https://exchange.adobe.com/apps/ec/100154)
       * [Branch](https://exchange.adobe.com/apps/ec/101382)
       * [!DNL BrightCove] 비디오 추적 {#brightcove}
          * [개요](./extensions/client/brightcove/overview.md)
          * [릴리스 정보](./extensions/client/brightcove/release-notes.md)
-      * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
+      * [호출 추적 지표](https://exchange.adobe.com/apps/ec/107695)
       * [채널 소스 식별자](https://exchange.adobe.com/apps/ec/101412)
-      * [Cheetah 경험](https://exchange.adobe.com/apps/ec/102759)
+      * [치타 경험](https://exchange.adobe.com/apps/ec/102759)
       * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
       * 일반 Analytics 플러그인 {#plugins}
          * [개요](./extensions/client/plugins/overview.md)
@@ -151,23 +151,23 @@ ht-degree: 31%
       * [고객 인식](https://exchange.adobe.com/apps/ec/100688)
       * [DEA(데이터 요소 지원)](https://exchange.adobe.com/apps/ec/101413)
       * [데이터 레이어 관리자](https://exchange.adobe.com/apps/ec/101462)
-      * [Decibel](https://exchange.adobe.com/apps/ec/100913)
+      * [데시벨](https://exchange.adobe.com/apps/ec/100913)
       * [Demandbase](https://exchange.adobe.com/apps/ec/101605)
-      * [차등 개인 정보](https://exchange.adobe.com/apps/ec/104535)
+      * [차등 개인 정보 보호](https://exchange.adobe.com/apps/ec/104535)
       * [Dynamic Media 뷰어](https://exchange.adobe.com/apps/ec/103048)
       * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
-      * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
-      * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
+      * [OneTag 플래시토킹](https://exchange.adobe.com/apps/ec/101392)
+      * [ForeSe](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
-      * [예측 참여 생성](https://exchange.adobe.com/apps/ec/106148)
+      * [Genesys 예측 참여](https://exchange.adobe.com/apps/ec/106148)
       * Google 데이터 레이어 {#google-data-layer}
          * [개요](./extensions/client/google-data-layer/overview.md)
          * [릴리스 정보](./extensions/client/google-data-layer/release-notes.md)
-      * [Google 전역 사이트 태그(gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
+      * [Google 글로벌 사이트 태그(gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
       * [InMoment](https://exchange.adobe.com/apps/ec/100847)
-      * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)
+      * [JSON 도우미](https://exchange.adobe.com/apps/ec/106449)
       * [JW 플레이어 분석](https://exchange.adobe.com/apps/ec/101523)
-      * [KickFire](https://exchange.adobe.com/apps/ec/101621)
+      * [킥파이어](https://exchange.adobe.com/apps/ec/101621)
       * [매핑 테이블](https://exchange.adobe.com/apps/ec/103136)
       * [!DNL Marketo Munchkin] {#marketo}
          * [개요](./extensions/client/marketo/overview.md)
@@ -175,7 +175,7 @@ ht-degree: 31%
       * [기본 속성 관리자](https://exchange.adobe.com/apps/ec/102992)
       * [!DNL Meta Pixel] {#meta}
          * [개요](./extensions/client/meta/overview.md)
-      * [모니터링](https://exchange.adobe.com/apps/ec/106544)
+      * [모니타](https://exchange.adobe.com/apps/ec/106544)
       * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
       * [쿠키에 대한 OneTrust 동의 관리](https://exchange.adobe.com/apps/ec/100340)
       * [페퍼잼](https://exchange.adobe.com/apps/ec/103587)
@@ -190,24 +190,24 @@ ht-degree: 31%
       * [SDI 툴킷](https://exchange.adobe.com/apps/ec/101460)
       * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
       * [SPA 보기 변경 이벤트](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
-      * [스토리지 스패너](https://exchange.adobe.com/apps/ec/102990)
-      * [루프 수평선별 태그](https://exchange.adobe.com/apps/ec/106092)
-      * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
-      * [데이터 데이터 보강](https://exchange.adobe.com/apps/ec/104217)
+      * [저장소 스패너](https://exchange.adobe.com/apps/ec/102990)
+      * [Loop Horizon별 태그](https://exchange.adobe.com/apps/ec/106092)
+      * [티리움 콜렉트](https://exchange.adobe.com/apps/ec/104217)
+      * [Tealium 데이터 보강](https://exchange.adobe.com/apps/ec/104217)
       * [TMMData Foundation 플랫폼](https://exchange.adobe.com/apps/ec/100148)
       * [TrustArc 쿠키 동의 관리자](https://exchange.adobe.com/apps/ec/107037)
       * [Vimeo 재생](https://exchange.adobe.com/apps/ec/108937)
       * [웹 바이탈](https://exchange.adobe.com/apps/ec/106769)
       * [XDM 작성기](https://exchange.adobe.com/apps/ec/106062)
-      * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
-      * [다음 전환 추적](https://exchange.adobe.com/apps/ec/103174)
+      * [야후 도트](https://exchange.adobe.com/apps/ec/106062)
+      * [Yext 전환 추적](https://exchange.adobe.com/apps/ec/103174)
       * [[!DNL Youtube] 재생](https://exchange.adobe.com/apps/ec/103174)
       * [!DNL YouTube] 비디오 추적 {#youtube}
          * [개요](./extensions/client/youtube/overview.md)
          * [릴리스 정보](./extensions/client/youtube/release-notes.md)
-   * 이벤트 전달 확장(서버측) {#server}
+   * 이벤트 전달 확장 (서버측) {#server}
       * [개요](./extensions/server/overview.md)
-      * Adobe Experience Platform Cloud 커넥터 {#cloud-connector}
+      * Adobe Experience Platform 클라우드 커넥터 {#cloud-connector}
          * [개요](./extensions/server/cloud-connector/overview.md)
          * [릴리스 정보](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL AWS] {#aws}
@@ -218,7 +218,7 @@ ht-degree: 31%
       * 코어 {#core}
          * [개요](./extensions/server/core/overview.md)
       * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)
-      * Google 광고 향상된 전환 {#google-ads-enhanced-conversions}
+      * Google Ads 향상된 전환 {#google-ads-enhanced-conversions}
          * [개요](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [개요](./extensions/server/mailchimp/overview.md)
@@ -228,10 +228,10 @@ ht-degree: 31%
          * [개요](./extensions/server/azure/overview.md)
       * [!DNL Mixpanel] {#mixpanel}
          * [개요](./extensions/server/mixpanel/overview.md)
-      * [Pega 고객 결정 허브](https://exchange.adobe.com/apps/ec/107597)
+      * [Pega 고객 의사 결정 허브](https://exchange.adobe.com/apps/ec/107597)
       * [!DNL Pinterest] {#pinterest}
          * [개요](./extensions/server/pinterest/overview.md)
-      * [스냅 전환 API](https://exchange.adobe.com/apps/ec/108550)
+      * [스냅 변환 API](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
          * [개요](./extensions/server/splunk/overview.md)
       * [!DNL Zendesk] 이벤트 API {#zendesk}
@@ -286,7 +286,7 @@ ht-degree: 31%
       * [환경](./api/endpoints/environments.md)
       * [호스트](./api/endpoints/hosts.md)
       * [앱 구성](./api/endpoints/app-configurations.md)
-      * [감사 이벤트](./api/endpoints/audit-events.md)
+      * [이벤트 감사](./api/endpoints/audit-events.md)
       * [콜백](./api/endpoints/callbacks.md)
       * [참고](./api/endpoints/notes.md)
       * [프로필](./api/endpoints/profile.md)
@@ -297,10 +297,10 @@ ht-degree: 31%
       * [값 암호화](./api/guides/encrypting-values.md)
       * [오류 처리](./api/guides/error-handling.md)
       * [응답 필터링](./api/guides/filtering.md)
-      * [응답 페이지 매김](./api/guides/pagination.md)
+      * [응답 페이지 지정](./api/guides/pagination.md)
       * [응답 정렬](./api/guides/sorting.md)
       * [관계](./api/guides/relationships.md)
-      * [리소스 검색](./api/guides/search.md)
+      * [리소스 검색 중](./api/guides/search.md)
       * [비밀](./api/guides/secrets.md)
 * [FAQ](./faq.md)
 * [용어 업데이트](./term-updates.md)

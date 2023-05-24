@@ -60,7 +60,7 @@ B2B 마케터는 마케팅 단계의 맨 위에서 여러 가지 문제에 직�
 | `extSourceSystemAudit.createdDate` | 필수 여부 |
 | `accountOrganization.industry` | 선택 사항입니다 |
 | `accountOrganization.numberOfEmployees` | 선택 사항입니다 |
-| `accountOrganization.annualRevenue.amount` | 선택 사항입니다 |
+| `accountOrganization.annualRevenue.amount` | 선택 사항 |
 
 * 경험 이벤트
 

@@ -18,7 +18,7 @@ Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자
 
 Adobe Campaign Managed Cloud Services 소스를 사용하면 Adobe Campaign v8 게재 로그 및 추적 로그 데이터를 Adobe Experience Platform으로 가져올 수 있습니다.
 
-## 전제 조건
+## 사전 요구 사항
 
 소스 연결을 만들어 Campaign v8을 Experience Platform 상태로 만들려면 먼저 다음 사전 요구 사항을 완료해야 합니다.
 

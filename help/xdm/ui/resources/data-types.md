@@ -20,7 +20,7 @@ Adobe Experience Platform은 광범위한 일반적인 경험 관리 사용 사�
 
 이 자습서에서는 Platform 사용자 인터페이스에서 사용자 지정 데이터 유형을 만들고 편집하는 단계를 다룹니다.
 
-## 전제 조건
+## 사전 요구 사항
 
 이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. 다음을 참조하십시오. [XDM 개요](../../home.md) Experience Platform 생태계 내에서 XDM의 역할에 대한 소개 및 [스키마 컴포지션 기본 사항](../../schema/composition.md) 데이터 유형이 XDM 스키마에 기여하는 방식에 대한 설명.
 

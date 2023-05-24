@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # Adobe Experience Platform 릴리스 노트
 
-**릴리스 날짜: 2022년 1월 26일**
+**릴리스 일자: 2022년 1월 26일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 

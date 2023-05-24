@@ -8,7 +8,7 @@ exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '453'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 드롭다운 메뉴가 나타나고 다음에 대한 옵션을 제공합니다. **[!UICONTROL 데이터 추가]**, **[!UICONTROL 세부 정보 편집]**, 및 **[!UICONTROL 삭제]**. 선택 **[!UICONTROL 세부 정보 편집]** 을 클릭하여 계정을 업데이트합니다.
 
-![업데이트](../../images/tutorials/update/update.png)
+![update](../../images/tutorials/update/update.png)
 
 다음 **[!UICONTROL 계정 세부 정보 편집]** 대화 상자에서는 계정의 이름, 설명 및 인증 자격 증명을 업데이트할 수 있습니다. 원하는 정보를 업데이트했으면 다음을 선택합니다 **[!UICONTROL 저장]**.
 

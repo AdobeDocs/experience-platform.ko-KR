@@ -5,7 +5,7 @@ exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
 source-wordcount: '762'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -35,7 +35,7 @@ Reactor API의 리소스는 서로 관련이 있는 경우가 많습니다. 이 
 POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{PROPERTY_ID}` | 리소스가 속한 속성의 ID입니다. |
 | `{RESOURCE_TYPE}` | 만들 리소스의 유형입니다. |
@@ -104,7 +104,7 @@ curl -X POST \
 POST /properties/{PROPERTY_ID}/libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{PROPERTY_ID}` | 라이브러리가 속한 속성의 ID입니다. |
 | `{LIBRARY_ID}` | 관계를 만들 라이브러리의 ID입니다. |

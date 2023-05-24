@@ -15,7 +15,7 @@ ht-degree: 5%
 
 이 문서에서는 UI에서 확장을 설치하고 구성하는 방법을 다룹니다.
 
-## 전제 조건
+## 사전 요구 사항
 
 이 확장을 사용하려면 Zendesk 계정이 있어야 합니다. 에서 Zendesk 계정을 등록할 수 있습니다. [Zendesk 웹 사이트](https://www.zendesk.com/register/).
 

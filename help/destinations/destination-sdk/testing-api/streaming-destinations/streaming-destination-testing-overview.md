@@ -1,5 +1,5 @@
 ---
-description: 대상 테스트 API를 사용하여 스트리밍 대상 구성을 테스트한 후 게시하기 방법을 알아봅니다.
+description: 대상 테스트 API를 사용하여 스트리밍 대상 구성을 게시하기 전에 테스트하는 방법을 알아봅니다.
 title: 스트리밍 대상 테스트 API 개요
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
@@ -12,25 +12,25 @@ ht-degree: 1%
 
 # 스트리밍 대상 테스트 API 개요
 
-Adobe은 Destination SDK의 일부로서 대상을 구성하고 테스트하는 데 도움이 되는 개발자 도구를 제공합니다. 이 페이지에서는 대상 구성을 테스트하는 방법을 설명합니다. 메시지 변환 템플릿을 만드는 방법에 대한 자세한 내용은 [메시지 변환 템플릿 만들기 및 테스트](../../testing-api/streaming-destinations/create-template.md).
+Adobe은 Destination SDK의 일부로 대상을 구성하고 테스트하는 데 도움이 되는 개발자 도구를 제공합니다. 이 페이지에서는 대상 구성을 테스트하는 방법을 설명합니다. 메시지 변환 템플릿을 만드는 방법에 대한 자세한 내용은 다음을 참조하십시오. [메시지 변형 템플릿 만들기 및 테스트](../../testing-api/streaming-destinations/create-template.md).
 
-종료 **대상이 올바르게 구성되었는지 테스트하고 구성된 대상에 데이터 흐름의 무결성을 확인합니다.**&#x200B;를 사용하려면 *대상 테스트 도구*. 이 도구를 사용하여 REST API 엔드포인트로 메시지를 보내 대상 구성을 테스트할 수 있습니다.
+종료 **대상이 올바르게 구성되었는지 테스트하고 구성된 대상에 대한 데이터 흐름의 무결성을 확인합니다.**, 사용 *대상 테스트 도구*. 이 도구를 사용하면 REST API 끝점에 메시지를 전송하여 대상 구성을 테스트할 수 있습니다.
 
-아래에 나와 있는 그림은 대상에 맞는 테스트를 [대상 구성 워크플로우](../../guides/configure-destination-instructions.md) Destination SDK:
+다음은 대상에 대한 테스트 방법을 보여줍니다. [대상 구성 워크플로](../../guides/configure-destination-instructions.md) Destination SDK:
 
-![대상 테스트 단계가 대상 구성 워크플로우에 맞는 위치의 그래픽](../../assets/testing-api/test-destination-step.png)
+![대상 테스트 단계가 대상 구성 워크플로에 맞는 위치에 대한 그래픽](../../assets/testing-api/test-destination-step.png)
 
 ## 대상 테스트 도구 - 목적 및 사전 요구 사항 {#destination-testing-tool}
 
-대상 테스트 도구를 사용하여 [서버 구성](../../authoring-api/destination-server/create-destination-server.md).
+대상 테스트 도구를 사용하여에서 제공한 파트너 끝점에 메시지를 전송하여 대상 구성을 테스트합니다. [서버 구성](../../authoring-api/destination-server/create-destination-server.md).
 
 도구를 사용하기 전에 다음을 확인하십시오.
-* 에 요약된 단계에 따라 대상을 구성합니다. [대상 구성 워크플로우](../../authoring-api/destination-configuration/create-destination-configuration.md) 및
-* 에 자세히 설명된 대로 대상에 연결을 설정합니다. [대상 인스턴스 ID를 가져오는 방법](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id).
+* 다음에 설명된 단계에 따라 대상을 구성합니다. [대상 구성 워크플로](../../authoring-api/destination-configuration/create-destination-configuration.md) 및
+* 에 자세히 설명된 대로 대상에 대한 연결을 설정하십시오. [대상 인스턴스 ID를 가져오는 방법](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id).
 
 이 도구를 사용하여 대상을 구성한 후 다음을 수행할 수 있습니다.
-* 대상이 올바르게 구성되었는지 테스트합니다;
-* 구성된 대상으로 데이터 흐름의 무결성을 확인합니다.
+* 대상이 올바르게 구성되었는지 테스트합니다.
+* 구성된 대상에 대한 데이터 흐름의 무결성을 확인합니다.
 
 ### 사용 방법 {#how-to-use}
 
@@ -38,18 +38,18 @@ Adobe은 Destination SDK의 일부로서 대상을 구성하고 테스트하는 
 >
 >전체 API 참조 설명서는 다음을 참조하십시오. [대상 테스트 API 작업](../../testing-api/streaming-destinations/destination-testing-api.md).
 
-요청에 프로필을 추가하거나 사용하지 않고 대상 테스트 API 엔드포인트를 호출할 수 있습니다.
+요청에 프로필을 추가하거나 추가하지 않고 대상 테스트 API 끝점을 호출할 수 있습니다.
 
-요청에 프로필을 추가하지 않으면 Adobe에서 내부적으로 해당 프로필을 생성하여 요청에 추가합니다. 이 요청에서 사용할 프로필을 생성하려면 다음을 참조하십시오. [샘플 프로필 생성 API 참조](../../testing-api/streaming-destinations/sample-profile-generation-api.md). 에 표시된 대로 소스 XDM 스키마를 기반으로 프로필을 생성해야 합니다 [API 참조](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). 소스 스키마는 [조합 스키마](../../../../profile/ui/union-schema.md) 사용 중인 샌드박스의 예입니다.
+요청에 프로필을 추가하지 않으면 Adobe이 내부적으로 프로필을 생성하여 요청에 추가합니다. 이 요청에 사용할 프로필을 생성하려면 다음을 참조하십시오. [샘플 프로필 생성 API 참조](../../testing-api/streaming-destinations/sample-profile-generation-api.md). 에 표시된 대로 소스 XDM 스키마를 기반으로 프로필을 생성해야 합니다. [API 참조](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). 소스 스키마는 [유니온 스키마](../../../../profile/ui/union-schema.md) 사용 중인 샌드박스의 일부.
 
-응답에는 대상 요청 처리 결과가 포함됩니다. 요청에는 다음과 같은 세 가지 주요 섹션이 포함됩니다.
-* 대상에 대한 Adobe에 의해 생성된 요청입니다.
+응답에는 대상 요청 처리 결과가 포함됩니다. 이 요청에는 다음 세 가지 기본 섹션이 포함됩니다.
+* 대상에 대해 Adobe이 생성한 요청입니다.
 * 대상에서 받은 응답입니다.
-* 요청에서 보낸 프로필 목록, 프로필이 [요청에 사용자가 추가](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles), 또는 Adobe이 생성하는 경우 [대상 테스트 요청의 본문이 비어 있습니다.](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
+* 요청에서 전송된 프로필 목록(프로필이 [이(가) 요청에 귀하가 추가함](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles), 또는 다음과 같은 경우에 Adobe에서 생성됨 [대상 테스트 요청의 본문이 비어 있음](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
 
 >[!NOTE]
 >
->Adobe은 여러 요청 및 응답 쌍을 생성할 수 있습니다. 예를 들어 프로필이 있는 대상으로 10개의 프로필을 보내는 경우 `maxUsersPerRequest` 값이 7이면 7개의 프로필과 3개의 프로필이 있는 또 다른 요청이 있습니다.
+>Adobe은 여러 요청 및 응답 쌍을 생성할 수 있습니다. 예를 들어 가 있는 대상에 10개의 프로필을 전송하는 경우 `maxUsersPerRequest` 값 7 이면 7개의 프로필이 있는 요청과 3개의 프로필이 있는 요청이 각각 있습니다.
 
 **본문에 프로필 매개 변수가 있는 샘플 요청**
 
@@ -124,7 +124,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **샘플 응답**
 
-컨텐츠는 `results.httpCalls` 매개 변수는 REST API에 따라 다릅니다.
+의 콘텐츠를 참고하십시오. `results.httpCalls` 매개 변수는 REST API에 따라 다릅니다.
 
 ```json
 {
@@ -228,8 +228,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }
 ```
 
-요청 및 응답 매개 변수에 대한 설명은 다음을 참조하십시오 [대상 테스트 API 작업](../../testing-api/streaming-destinations/destination-testing-api.md).
+요청 및 응답 매개 변수에 대한 설명은 을 참조하십시오. [대상 테스트 API 작업](../../testing-api/streaming-destinations/destination-testing-api.md).
 
 ## 다음 단계
 
-대상을 테스트하고 올바르게 구성되었는지 확인한 후 [대상 게시 API](../../publishing-api/create-publishing-request.md) 검토를 위해 Adobe에 구성을 제출합니다.
+대상을 테스트하고 올바르게 구성되었는지 확인한 후 [대상 게시 API](../../publishing-api/create-publishing-request.md) Adobe에 구성을 제출하여 검토합니다.

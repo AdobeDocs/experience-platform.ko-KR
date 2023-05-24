@@ -3,7 +3,8 @@ title: 흐름 서비스 API를 사용하여 Streaming SDK에 대한 연결 사�
 description: 다음 문서에서는 셀프서비스 소스(Streaming SDK)용 흐름 서비스 API를 사용하여 연결을 지정하는 방법에 대한 단계를 제공합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 2%

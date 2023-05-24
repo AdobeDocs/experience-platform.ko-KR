@@ -1,5 +1,5 @@
 ---
-description: 이 페이지에서는 Adobe Experience Platform Destination SDK을 통해 대상 구성을 검색하는 데 사용되는 API 호출을 보여줍니다.
+description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 구성을 검색하는 데 사용되는 API 호출을 예시합니다.
 title: 대상 구성 검색
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
@@ -11,19 +11,19 @@ ht-degree: 2%
 
 # 대상 구성 검색
 
-이 페이지는 를 사용하여 기존 대상 구성에 대한 정보를 검색하는 데 사용할 수 있는 API 요청 및 페이로드를 보여줍니다 `/authoring/destination` API 엔드포인트.
+이 페이지는 기존 대상 구성에 대한 정보를 검색하는 데 사용할 수 있는 API 요청 및 페이로드를 다음과 같이 구현합니다. `/authoring/destination` API 엔드포인트.
 
 >[!IMPORTANT]
 >
->Destination SDK에서 지원하는 모든 매개 변수 이름 및 값은 **대소문자 구분**. 대/소문자 구분 오류가 발생하지 않도록 하려면 설명서에 표시된 대로 매개 변수 이름과 값을 정확히 사용하십시오.
+>Destination SDK에서 지원하는 모든 매개변수 이름 및 값은 다음과 같습니다. **대소문자 구분**. 대소문자 구분 오류를 방지하려면 설명서에 표시된 대로 매개 변수 이름과 값을 정확히 사용하십시오.
 
 ## 대상 구성 API 작업 시작 {#get-started}
 
-계속하기 전에 [시작 안내서](../../getting-started.md) api를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보(필수 대상 작성 권한 및 필수 헤더를 가져오는 방법)입니다.
+계속하기 전에 다음을 검토하십시오. [시작 안내서](../../getting-started.md) 필수 대상 작성 권한 및 필수 헤더를 가져오는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보입니다.
 
 ## 대상 구성 검색 {#retrieve}
 
-를 검색할 수 있습니다 [기존](create-destination-configuration.md) 대상 구성을 `GET` 에 요청 `/authoring/destination` 엔드포인트.
+다음을 검색할 수 있습니다. [기존](create-destination-configuration.md) 다음을 수행하여 대상 구성: `GET` 에 대한 요청 `/authoring/destination` 엔드포인트.
 
 >[!TIP]
 >
@@ -32,21 +32,21 @@ ht-degree: 2%
 
 **API 형식**
 
-계정에 대한 모든 대상 구성을 검색하려면 다음 API 형식을 사용하십시오.
+다음 API 형식을 사용하여 계정에 대한 모든 대상 구성을 검색합니다.
 
 ```http
 GET /authoring/destinations
 ```
 
-다음 API 형식을 사용하여 `{INSTANCE_ID}` 매개 변수.
+다음 API 형식을 사용하여 로 정의된 특정 대상 구성을 검색합니다. `{INSTANCE_ID}` 매개 변수.
 
 ```http
 GET /authoring/destinations/{INSTANCE_ID}
 ```
 
-다음 두 요청은 전달 여부에 따라 IMS 조직 또는 특정 대상 구성에 대한 모든 대상 구성을 검색합니다 `INSTANCE_ID` 매개 변수를 채우는 방법을 설명합니다.
+다음 두 요청은 전달 여부에 따라 IMS 조직의 모든 대상 구성 또는 특정 대상 구성을 검색합니다. `INSTANCE_ID` 요청의 매개 변수입니다.
 
-아래의 각 탭을 선택하여 해당 페이로드를 확인합니다.
+아래에서 각 탭을 선택하여 해당 페이로드를 확인합니다.
 
 >[!BEGINTABS]
 
@@ -66,7 +66,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++응답
 
-성공적인 응답은 다음을 기반으로 액세스 권한이 있는 대상 구성 목록과 함께 HTTP 상태 200을 반환합니다 [!DNL IMS Org ID] 및 사용한 샌드박스 이름을 지정합니다. 1개 `instanceId` 는 하나의 대상 구성에 해당합니다.
+성공적인 응답은 다음을 기반으로 액세스 권한이 있는 대상 구성 목록과 함께 HTTP 상태 200을 반환합니다. [!DNL IMS Org ID] 및 사용한 샌드박스 이름입니다. 1개 `instanceId` 는 하나의 대상 구성에 해당합니다.
 
 ```json
 {
@@ -194,7 +194,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++응답
 
-성공적인 응답은 다음에 해당하는 대상 구성의 세부 정보와 함께 HTTP 상태 200을 반환합니다 `{INSTANCE_ID}` 호출에 제공됩니다.
+성공적인 응답은 HTTP 상태 200을 반환하며, 다음에 해당하는 대상 구성의 세부 정보를 함께 반환합니다. `{INSTANCE_ID}` 호출에 제공됩니다.
 
 ```json
 {
@@ -306,13 +306,13 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## API 오류 처리 {#error-handling}
 
-Destination SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors) 을 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors) 플랫폼 문제 해결 안내서에서 확인할 수 있습니다.
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 Destination SDK을 통해 대상 구성을 검색하는 방법을 알 수 있습니다 `/authoring/destinations` API 엔드포인트.
+이 문서를 읽고 나면 이제 Destination SDK을 통해 대상 구성을 검색하는 방법을 알 수 있습니다 `/authoring/destinations` API 엔드포인트.
 
-이 종단점으로 수행할 수 있는 작업에 대한 자세한 내용은 다음 문서를 참조하십시오.
+이 끝점으로 수행할 수 있는 작업에 대한 자세한 내용은 다음 문서를 참조하십시오.
 
 * [대상 구성 만들기](create-destination-configuration.md)
 * [대상 구성 업데이트](update-destination-configuration.md)

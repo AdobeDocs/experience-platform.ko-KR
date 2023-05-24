@@ -17,7 +17,7 @@ ht-degree: 3%
 
 이 개발자 안내서에서는 다음을 사용하는 데 도움이 되는 단계를 제공합니다. [!DNL Catalog] API. 안내서에서는 를 사용하여 주요 작업을 수행하기 위한 샘플 API 호출을 제공합니다 [!DNL Catalog].
 
-## 전제 조건
+## 사전 요구 사항
 
 [!DNL Catalog] 내에서 여러 종류의 리소스 및 작업을 위한 메타데이터를 추적합니다. [!DNL Experience Platform]. 이 개발자 안내서를 사용하려면 여러 가지 사항에 대한 작업 이해가 필요합니다 [!DNL Experience Platform] 다음 리소스를 만들고 관리하는 데 관련된 서비스:
 

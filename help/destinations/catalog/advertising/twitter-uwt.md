@@ -22,7 +22,7 @@ ht-degree: 3%
 
 ![Twitter 범용 웹 사이트 태그 확장](../../assets/catalog/advertising/twitter-uwt/catalog.png)
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 이 확장 프로그램은 다음에서 사용할 수 있습니다. [!DNL Destinations] Platform을 구입한 모든 고객을 위한 카탈로그.
 

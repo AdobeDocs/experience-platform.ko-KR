@@ -30,7 +30,7 @@ Adobe Experience Platform은 엔터프라이즈 솔루션 전반에 걸쳐 고�
 데이터를 시스템으로 가져온 후 [사용하지 않을 때 암호화](#at-rest)그런 다음 Platform 서비스로 보강하고 다음 방법으로 시스템에서 가져올 수 있습니다.
 
 * [대상](../../destinations/home.md) 을 사용하면 Adobe 애플리케이션 및 파트너 애플리케이션에 데이터를 활성화할 수 있습니다.
-* 과 같은 기본 플랫폼 애플리케이션 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ko-KR) 또한 데이터를 사용할 수 있습니다.
+* 과 같은 기본 플랫폼 애플리케이션 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) 또한 데이터를 사용할 수 있습니다.
 
 ## 유휴 상태 데이터 {#at-rest}
 

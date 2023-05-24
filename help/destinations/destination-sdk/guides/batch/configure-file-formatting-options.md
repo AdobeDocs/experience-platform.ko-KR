@@ -1,6 +1,6 @@
 ---
-description: 파일 기반 대상에 대한 파일 형식 옵션 구성
-title: Destination SDK을 사용하여 파일 기반 대상의 파일 형식 옵션을 구성하는 방법을 알아봅니다.
+description: 파일 기반 대상에 대한 파일 서식 옵션 구성
+title: Destination SDK을 사용하여 파일 기반 대상에 대한 파일 서식 옵션을 구성하는 방법에 대해 알아봅니다.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
 source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
@@ -9,28 +9,28 @@ ht-degree: 1%
 
 ---
 
-# 파일 기반 대상에 대한 파일 형식 옵션 구성
+# 파일 기반 대상에 대한 파일 서식 옵션 구성
 
 ## 개요 {#overview}
 
-Destination SDK을 사용하면 내보낸 파일의 형식 지정 및 압축 옵션을 저장소 위치의 다운스트림 요구 사항과 일치하도록 광범위하게 조정할 수 있습니다.
+Destination SDK을 사용하면 내보낸 파일의 형식 지정 및 압축 옵션을 스토리지 위치의 다운스트림 요구 사항에 맞게 광범위하게 조정할 수 있습니다.
 
-이 페이지에서는 Destination SDK을 사용하여 파일 기반 대상에 대한 파일 형식 옵션을 구성하는 방법에 대해 설명합니다.
+이 페이지에서는 Destination SDK을 사용하여 파일 기반 대상에 대한 파일 서식 옵션을 구성하는 방법에 대해 설명합니다.
 
 ## 사전 요구 사항 {#prerequisites}
 
-아래 요약된 단계로 이동하기 전에 다음을 참조하십시오. [Destination SDK 시작](../../getting-started.md) 페이지 를 참조하십시오.
+아래 설명된 단계로 진행하기 전에 다음을 읽어 보십시오. [Destination SDK 시작](../../getting-started.md) Destination SDK API를 사용하여 작업하는 데 필요한 Adobe I/O 인증 자격 증명 및 기타 전제 조건을 얻는 방법에 대한 자세한 내용을 보려면 페이지 를 참조하십시오.
 
-또한 계속하기 전에 다음 설명서를 읽고 숙지할 것을 권장합니다.
+또한 Adobe은 계속하기 전에 다음 설명서를 읽고 숙지하는 것이 좋습니다.
 
-* 사용 가능한 모든 파일 형식 옵션은 [파일 형식 구성](../../functionality/destination-server/file-formatting.md) 섹션을 참조하십시오.
-* 다음 단계 완료 [파일 기반 대상 구성](../../guides/configure-file-based-destination-instructions.md) Destination SDK 사용.
+* 사용 가능한 모든 파일 서식 지정 옵션은 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 섹션.
+* 다음 단계를 완료합니다. [파일 기반 대상 구성](../../guides/configure-file-based-destination-instructions.md) Destination SDK 사용.
 
 ## 서버 및 파일 구성 만들기 {#create-server-file-configuration}
 
-을 사용하여 시작합니다 `/destination-server` 내보낸 파일에 대해 설정할 파일 형식 구성 옵션을 결정하는 끝점입니다.
+를 사용하여 시작 `/destination-server` 내보낸 파일에 대해 설정할 파일 형식 지정 구성 옵션을 결정하는 끝점입니다.
 
-다음은 대상 서버 구성의 예입니다 [!DNL Amazon S3] 대상(여러 파일 형식 옵션 선택)
+다음은 의 대상 서버 구성 예입니다. [!DNL Amazon S3] 대상(여러 파일 형식 옵션 선택)
 
 **API 형식**
 
@@ -98,27 +98,27 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-## 대상 구성에 파일 형식 옵션을 추가합니다 {#create-destination-configuration}
+## 대상 구성에 파일 형식 옵션 추가 {#create-destination-configuration}
 
 >[!TIP]
 >
->**Experience Platform UI 확인**. 아래 섹션에 설명된 구성으로 파일 서식 옵션을 구성할 때 Experience Platform UI에서 이러한 옵션이 렌더링되는 방식을 확인해야 합니다.
+>**Experience Platform UI 확인**. 아래 섹션에 설명된 구성으로 파일 형식 지정 옵션을 구성할 때 이러한 옵션이 렌더링되는 방법에 대한 Experience Platform UI를 확인해야 합니다.
 
-원하는 파일 형식 옵션을 대상 서버에 추가하고 이전 단계에서 파일 형식 구성을 추가한 후 `/destinations` 원하는 필드를 대상 구성에 고객 데이터 필드로 추가하는 API 엔드포인트.
+이전 단계에서 대상 서버 및 파일 형식 구성에 원하는 파일 형식 지정 옵션을 추가한 후 다음을 사용할 수 있습니다. `/destinations` 원하는 필드를 대상 구성에 고객 데이터 필드로 추가하기 위한 API 엔드포인트.
 
 >[!IMPORTANT]
 >
->이 단계는 선택 사항이며 Experience Platform UI에서 사용자에게 표시되어야 하는 파일 형식 옵션만 결정합니다. 고객 데이터 필드로 파일 형식 지정 옵션을 설정하지 않으면 파일 내보내기는 [서버 및 파일 구성](#create-server-file-configuration).
+>이 단계는 선택 사항이며 Experience Platform UI에서 사용자에게 표시되는 파일 형식 옵션 중 하나만 결정합니다. 파일 형식 지정 옵션을 고객 데이터 필드로 설정하지 않으면 파일 내보내기가 [서버 및 파일 구성](#create-server-file-configuration).
 
-이 단계에서 표시된 옵션을 원하는 순서대로 그룹화하고, 선택한 파일 유형을 기반으로 사용자 지정 그룹화, 드롭다운 필드 및 조건부 그룹화를 만들 수 있습니다. 이러한 모든 설정은 기록 및 아래의 추가 섹션에 나와 있습니다.
+이 단계에서는 표시된 옵션을 원하는 순서로 그룹화할 수 있으며, 선택한 파일 유형을 기반으로 사용자 정의 그룹화, 드롭다운 필드 및 조건부 그룹화를 만들 수 있습니다. 이러한 모든 설정은 녹음/녹화 및 아래 섹션에 표시됩니다.
 
-![배치 파일에 대한 다양한 파일 형식 옵션을 보여주는 화면 기록.](../../assets/guides/batch/file-formatting-options.gif)
+![배치 파일에 대한 다양한 파일 서식 옵션을 보여 주는 화면 기록입니다.](../../assets/guides/batch/file-formatting-options.gif)
 
-### 파일 형식 옵션 순서 지정 {#ordering}
+### 파일 서식 옵션 순서 지정 {#ordering}
 
-대상 구성의 고객 데이터 필드로 파일 형식 옵션을 추가하는 순서는 UI에 반영됩니다. 예를 들어, 아래 구성은 UI에 그에 따라 반영되며, 선택 사항은 순서대로 표시됩니다 **[!UICONTROL 구분 기호]**, **[!UICONTROL 따옴표 문자]**, **[!UICONTROL 이스케이프 문자]**, **[!UICONTROL 빈 값]**, **[!UICONTROL Null 값]**.
+파일 형식 옵션을 대상 구성의 고객 데이터 필드로 추가하는 순서는 UI에 반영됩니다. 예를 들어 아래 구성은 옵션이 순서대로 표시되는 UI에 그에 따라 반영됩니다 **[!UICONTROL 구분 기호]**, **[!UICONTROL 인용 문자]**, **[!UICONTROL 문자 이스케이프 처리]**, **[!UICONTROL 빈 값]**, **[!UICONTROL Null 값]**.
 
-![Experience Platform UI의 파일 형식 옵션 순서를 보여주는 이미지입니다.](../../assets/guides/batch/file-formatting-order.png)
+![Experience Platform UI에서 파일 형식 옵션 순서를 보여 주는 이미지입니다.](../../assets/guides/batch/file-formatting-order.png)
 
 ```json
         {
@@ -237,11 +237,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
                 }
 ```
 
-### 파일 서식 옵션을 그룹화합니다 {#grouping}
+### 파일 서식 옵션 그룹화 {#grouping}
 
-하나의 섹션 내에 여러 파일 형식 옵션을 그룹화할 수 있습니다. UI에서 대상에 대한 연결을 설정할 때 사용자는 유사한 필드를 시각적으로 그룹화하여 이점을 얻을 수 있습니다.
+한 섹션 내에서 여러 파일 서식 옵션을 그룹화할 수 있습니다. UI에서 대상에 대한 연결을 설정할 때 사용자는 유사한 필드를 시각적으로 그룹화할 수 있습니다.
 
-이렇게 하려면 `"type": "object"` 그룹을 만들고 `properties` 아래 예와 같이 그룹화된 매개 변수입니다. **[!UICONTROL CSV 옵션]** 이 강조 표시됩니다.
+이렇게 하려면 다음을 사용합니다. `"type": "object"` 을 클릭하여 그룹을 만들고 파일 형식 지정 옵션을 `properties` 아래 예에 표시된 대로 매개 변수를 사용하여 **[!UICONTROL CSV 옵션]** 강조 표시됩니다.
 
 ```json {line-numbers="true" start-number="100" highlight="106-128"}
 "customerDataFields":[
@@ -279,13 +279,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 ]
 ```
 
-![UI에서 CSV 옵션 그룹을 보여주는 이미지.](../../assets/guides/batch/file-formatting-grouping.png)
+![UI의 CSV 옵션 그룹화를 보여 주는 이미지입니다.](../../assets/guides/batch/file-formatting-grouping.png)
 
-### 파일 형식 옵션에 대한 드롭다운 선택기를 만듭니다 {#dropdown-selectors}
+### 파일 형식 옵션에 대한 드롭다운 선택기 만들기 {#dropdown-selectors}
 
-사용자가 여러 옵션 중에서 선택할 수 있도록 허용하려는 경우(예: CSV 파일의 필드를 구분하기 위해 사용해야 하는 문자), UI에 드롭다운 필드를 추가할 수 있습니다.
+사용자가 여러 옵션(예: CSV 파일의 필드를 구분하는 데 사용해야 하는 문자) 중에서 선택할 수 있도록 하려는 경우, 드롭다운 필드를 UI에 추가할 수 있습니다.
 
-이렇게 하려면 `namedEnum` 아래에 표시된 대로 개체를 구성하고 `default` 사용자가 선택할 수 있는 옵션에 대한 값입니다.
+이렇게 하려면 `namedEnum` 아래 표시된 대로 개체 및 구성 `default` 사용자가 선택할 수 있는 옵션의 값입니다.
 
 ```json {line-numbers="true" start-number="100" highlight="114-124"}
 [...]
@@ -324,13 +324,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 ]
 ```
 
-![위에 표시된 구성으로 생성된 드롭다운 선택기의 예를 보여주는 화면 기록.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
+![위에 표시된 구성으로 생성된 드롭다운 선택기의 예를 보여 주는 화면 레코딩입니다.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
-### 조건부 파일 서식 선택 사항 만들기 {#conditional-options}
+### 조건부 파일 서식 옵션 만들기 {#conditional-options}
 
-조건부 파일 서식 옵션을 만들 수 있습니다. 이 옵션은 사용자가 내보낼 특정 파일 유형을 선택한 경우에만 활성화 워크플로우에 표시됩니다. 예를 들어, 아래 구성은 CSV 파일 옵션에 대한 조건부 그룹을 만듭니다. CSV 파일 옵션은 사용자가 내보낼 파일 유형으로 CSV를 선택하는 경우에만 표시됩니다.
+사용자가 내보낼 특정 파일 유형을 선택한 경우에만 활성화 워크플로에 표시되는 조건부 파일 서식 옵션을 만들 수 있습니다. 예를 들어 아래 구성은 CSV 파일 옵션에 대한 조건부 그룹화를 만듭니다. CSV 파일 옵션은 사용자가 내보내기에 원하는 파일 유형으로 CSV를 선택할 때만 표시됩니다.
 
-필드를 조건부 필드로 설정하려면 `conditional` 매개 변수 를 참조하십시오.
+필드를 조건부로 설정하려면 `conditional` 아래와 같은 매개 변수:
 
 ```json
             "conditional": {
@@ -340,7 +340,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             }
 ```
 
-더 넓은 컨텍스트에서 다음을 볼 수 있습니다 `conditional` 아래의 대상 구성에서 사용되고 있는 필드, `fileType` 문자열 및 `csvOptions` 정의된 객체입니다.
+더 넓은 맥락에서 다음을 볼 수 있습니다. `conditional` 아래 대상 구성에서 사용할 필드 및 `fileType` 문자열 및 `csvOptions` 개체가 정의된 개체입니다.
 
 ```json
         {
@@ -483,13 +483,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
         }
 ```
 
-아래에서는 위의 구성에 따라 결과 UI 화면을 볼 수 있습니다. 사용자가 파일 유형 CSV를 선택하면 CSV 파일 유형을 참조하는 추가 파일 형식 옵션이 UI에 표시됩니다.
+위의 구성을 기반으로 하는 결과 UI 화면을 아래에서 확인할 수 있습니다. 사용자가 파일 유형 CSV를 선택하면 CSV 파일 유형을 참조하는 추가 파일 형식 옵션이 UI에 표시됩니다.
 
-![CSV 파일에 대한 조건부 파일 형식 옵션을 보여주는 화면 기록.](../../assets/guides/batch/conditional-file-formatting.gif)
+![CSV 파일에 대한 조건부 파일 형식 지정 옵션을 보여 주는 화면 기록입니다.](../../assets/guides/batch/conditional-file-formatting.gif)
 
 ### 위에 표시된 모든 옵션을 포함하는 전체 API 요청
 
-아래 API 요청은 위의 섹션에 설명된 모든 옵션을 하나의 구성으로 결합합니다.
+아래 API 요청은 위의 섹션에 설명된 모든 옵션을 한 구성에 결합합니다.
 
 **요청**
 
@@ -711,12 +711,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-성공적인 응답은 고유 식별자( )를 포함하는 대상 구성을 반환합니다`instanceId`) 내의 아무 곳에나 삽입할 수 있습니다.
+성공적인 응답은 고유 식별자( )를 포함하여 대상 구성을 반환합니다.`instanceId`)을 참조하십시오.
 
 ## 알려진 제한 사항 {#known-limitations}
 
-파일 형식 옵션을 함께 사용하면 원치 않는 파일 내보내기 결과가 발생할 수 있습니다.
-Adobe은 다음 CSV 옵션 조합을 선택하지 않는 것이 좋습니다.
+특정 파일 형식 옵션 조합을 사용하면 원하지 않는 파일 내보내기 결과가 발생할 수 있습니다.
+Adobe은 다음 CSV 옵션 조합을 선택하지 않는 것을 권장합니다.
 
 ```
 nullValue -> ""
@@ -724,16 +724,16 @@ quote -> "
 emptyValue -> ""
 ```
 
-제한 사항을 보려면 아래 값이 있는 파일의 내보내기를 고려하십시오.
+제한을 예시하려면 아래 값이 있는 파일의 내보내기를 고려하십시오.
 
-| 이름 | lastname | 국가 | state |
+| 이름 | 성 | 국가 | state |
 |---------|----------|---------|--------|
-| 마이클 | 로즈 | 미국 | NY |
+| Michael | 로즈 | 미국 | 뉴욕 |
 | 제임스 | Smith |  | null |
 
 {style="table-layout:auto"}
 
-이렇게 하면 아래와 같이 출력이 생성됩니다. 테이블에서 null 값을 이스케이프 처리된 따옴표로 잘못 내보내는 방법을 확인합니다.
+이렇게 하면 아래와 같이 출력이 생성됩니다. 테이블의 null 값이 이스케이프 처리된 견적으로 잘못 내보내지는 방식을 확인합니다.
 
 ```csv
 Michael,Rose,USA,NY 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽은 후에는 Destination SDK을 사용하여 내보낸 파일에 대한 사용자 지정 파일 형식 옵션을 설정하는 방법을 알 수 있습니다. 다음으로, 팀이 [파일 기반 대상에 대한 활성화 워크플로우](../../../ui/activate-batch-profile-destinations.md) 데이터를 대상으로 내보내려면 다음을 수행하십시오.
+이 문서를 읽으면 이제 Destination SDK을 사용하여 내보낸 파일에 대한 사용자 정의 파일 서식 옵션을 설정하는 방법을 알 수 있습니다. 다음으로, 팀은 [파일 기반 대상에 대한 활성화 워크플로](../../../ui/activate-batch-profile-destinations.md) 데이터를 대상으로 내보냅니다.

@@ -31,7 +31,7 @@ ht-degree: 1%
 GET /rpc/auditlog/{RESOURCE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{RESOURCE_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 감사 로그를 검색할 리소스의 입니다. |
 

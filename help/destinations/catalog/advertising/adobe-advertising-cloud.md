@@ -22,7 +22,7 @@ Adobe Advertising Cloud은 Adobe Experience Platform의 광고 확장 프로그�
 
 ![Adobe Advertising Cloud 확장](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 이 확장은 Platform을 구입한 모든 고객의 대상 카탈로그에서 사용할 수 있습니다.
 

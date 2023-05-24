@@ -29,7 +29,7 @@ ht-degree: 4%
 GET /companies/{COMPANY_ID}/app_configurations
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `COMPANY_ID` | 다음 `id` / [회사](./companies.md) 앱 구성을 소유합니다. |
 
@@ -109,7 +109,7 @@ GET 요청의 경로에 ID를 제공하여 앱 구성을 조회할 수 있습니
 GET /app_configurations/{APP_CONFIGURATION_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `APP_CONFIGURATION_ID` | 다음 `id` 조회하려는 앱 구성. |
 
@@ -174,7 +174,7 @@ POST 요청을 하여 새 앱 구성을 만들 수 있습니다.
 POST /companies/{COMPANY_ID}/app_configurations
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `COMPANY_ID` | 다음 `id` / [회사](./companies.md) 아래에 앱 구성을 정의하는 경우. |
 
@@ -266,7 +266,7 @@ PATCH 요청의 경로에 ID를 포함하여 앱 구성을 업데이트할 수 �
 PATCH /app_configurations/{APP_CONFIGURATION_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `APP_CONFIGURATION_ID` | 다음 `id` 업데이트하려는 앱 구성. |
 
@@ -350,7 +350,7 @@ DELETE 요청의 경로에 ID를 포함하여 앱 구성을 삭제할 수 있습
 DELETE /app_configurations/{APP_CONFIGURATION_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `APP_CONFIGURATION_ID` | 다음 `id` / 삭제하려는 앱 구성입니다. |
 

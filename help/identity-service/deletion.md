@@ -1,7 +1,8 @@
 ---
 title: ID 서비스에서 삭제
 description: 이 문서에서는 Experience Platform에서 ID 데이터를 삭제하는 데 사용할 수 있는 다양한 메커니즘에 대한 개요를 제공하고 ID 그래프가 영향을 받는 방법에 대한 명확한 설명을 제공합니다.
-source-git-commit: da1ce4560d28d43db47318883f9656cebb2eb487
+exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1198'
 ht-degree: 1%

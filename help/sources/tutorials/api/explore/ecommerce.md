@@ -62,7 +62,7 @@ ht-degree: 2%
 GET /connections/{CONNECTION_ID}/explore?objectType=root
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{CONNECTION_ID}` | 사용자 **[!UICONTROL 전자 상거래]** 연결 ID. |
 
@@ -124,7 +124,7 @@ curl -X GET \
 GET /connections/{CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | 의 연결 ID **[!UICONTROL 전자 상거래]** 연결. |
 | `{TABLE_PATH}` | 내 표의 경로 **[!UICONTROL 전자 상거래]** 연결. |

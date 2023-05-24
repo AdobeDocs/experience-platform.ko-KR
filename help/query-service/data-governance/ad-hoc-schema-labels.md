@@ -5,7 +5,7 @@ exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
 source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
 source-wordcount: '1040'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [경험 데이터 모델(XDM) 시스템](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ko-KR): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html): Platform UI에서 스키마 및 기타 리소스를 만들고 관리하는 방법을 알아봅니다.
+   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=ko): Platform UI에서 스키마 및 기타 리소스를 만들고 관리하는 방법을 알아봅니다.
 * [[!DNL Data Governance]](../../data-governance/home.md): 방법 알아보기 [!DNL Data Governance] 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다.
 * [속성 기반 액세스 제어](../../access-control/abac/overview.md): 속성 기반 액세스 제어는 관리자가 속성에 따라 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있도록 해 주는 Adobe Experience Platform의 기능입니다. 속성은 Ad Hoc 또는 일반 스키마 필드에 추가된 레이블과 같이 객체에 추가된 메타데이터일 수 있습니다. 관리자는 사용자 액세스 권한을 관리하기 위해 속성이 포함된 액세스 정책을 정의합니다.
 

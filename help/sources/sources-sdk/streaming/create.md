@@ -3,7 +3,8 @@ title: 흐름 서비스 API를 사용하여 Streaming SDK에 대한 새 연결 �
 description: 다음 문서에서는 Flow Service API를 사용하여 연결 사양을 만들고 셀프 서비스 소스를 통해 새 소스를 통합하는 방법에 대한 단계를 제공합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 1%

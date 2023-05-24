@@ -425,7 +425,7 @@ curl -X GET \
 GET /access/{NEXT_URI}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 |---|---|
 | `{NEXT_URI}` | 다음에서 가져온 URI 값 `_links.next.href`. |
 
@@ -897,7 +897,7 @@ curl -X GET \
 
 에 대한 GET 요청의 경로에는 다음 매개 변수가 사용됩니다 `/access/entities` 엔드포인트. 액세스하려는 프로필 엔티티를 식별하고 응답에서 반환되는 데이터를 필터링합니다. 필수 매개 변수에는 레이블이 지정되고 나머지는 선택 사항입니다.
 
-| 매개 변수 | 설명 | 예 |
+| 매개변수 | 설명 | 예 |
 |---|---|---|
 | `schema.name` | **(필수)** 검색할 엔티티의 XDM 스키마 | `schema.name=_xdm.context.experienceevent` |
 | `relatedSchema.name` | If `schema.name` 는 &quot;_xdm.context.experienceevent&quot;이며 이 값은 시계열 이벤트와 관련된 프로필 엔티티에 대한 스키마를 지정해야 합니다. | `relatedSchema.name=_xdm.context.profile` |

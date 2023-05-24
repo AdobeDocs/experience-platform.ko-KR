@@ -37,7 +37,7 @@ Platform은에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을
 
 {style="table-layout:auto"}
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 다음을 사용하려면 먼저 다음 전제 조건을 충족해야 합니다. [!DNL Data Landing Zone] 대상.
 

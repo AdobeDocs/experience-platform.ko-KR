@@ -15,7 +15,7 @@ ht-degree: 25%
 
 Adobe Experience Platform [!DNL Web SDK] 은 특정 변수를 자동으로 매핑할 수 있지만 사용자 지정 변수는 수동으로 매핑해야 합니다.
 
-자동으로 매핑되지 않는 XDM 데이터의 경우 [!DNL Analytics], 다음을 사용할 수 있습니다 [컨텍스트 데이터](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html?lang=ko-KR) 을(를) 일치시키려면 [스키마](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko-KR-KR). 그런 다음 로 매핑할 수 있습니다. [!DNL Analytics] 사용 [처리 규칙](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html?lang=ko-KR) 채우려면 [!DNL Analytics] 변수를 채우는 방법에 따라 페이지를 순서대로 표시합니다.
+자동으로 매핑되지 않는 XDM 데이터의 경우 [!DNL Analytics], 다음을 사용할 수 있습니다 [컨텍스트 데이터](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html?lang=ko-KR) 을(를) 일치시키려면 [스키마](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko). 그런 다음 로 매핑할 수 있습니다. [!DNL Analytics] 사용 [처리 규칙](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html?lang=ko-KR) 채우려면 [!DNL Analytics] 변수를 채우는 방법에 따라 페이지를 순서대로 표시합니다.
 
 또한 기본 작업 세트 및 제품 목록을 사용하여 Adobe Experience Platform Web SDK로 데이터를 전송하거나 검색할 수 있습니다. 이렇게 하려면 다음을 참조하십시오. [상거래 및 제품 정보 수집](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html).
 

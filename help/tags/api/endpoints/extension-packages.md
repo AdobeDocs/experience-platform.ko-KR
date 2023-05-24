@@ -245,7 +245,7 @@ curl -X GET \
 GET /extension_packages/{EXTENSION_PACKAGE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | 다음 `id` 조회하려는 확장 패키지의 경우. |
 
@@ -713,7 +713,7 @@ PATCH 요청 경로에 해당 ID를 포함하여 확장 패키지를 업데이�
 PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | 다음 `id` 업데이트하려는 확장 패키지의 경우. |
 
@@ -952,7 +952,7 @@ curl -X PATCH \
 PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | 다음 `id` 비공개 릴리스할 확장 패키지 |
 
@@ -1197,7 +1197,7 @@ curl -X PATCH \
 PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | 다음 `id` 중단하려는 확장 패키지의 일부입니다. |
 
@@ -1290,7 +1290,7 @@ curl -X PATCH \
 GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `EXTENSION_PACKAGE_ID` | 다음 `id` 나열할 버전의 확장 패키지 |
 

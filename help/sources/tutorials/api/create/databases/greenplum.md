@@ -78,7 +78,7 @@ curl -X POST \
     }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `auth.params.connectionString` | 에 연결하는 데 사용되는 연결 문자열 [!DNL GreenPlum] 계정입니다. 연결 문자열 패턴은 다음과 같습니다. `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | 다음 [!DNL GreenPlum] 연결 사양 ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |

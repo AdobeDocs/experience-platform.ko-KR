@@ -3,7 +3,8 @@ title: 스트리밍 SDK UI용 설명서 셀프서비스 템플릿
 description: UI를 사용하여 소스에서 Adobe Experience Platform으로 스트리밍 데이터를 가져오는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: eba86ab8aa7d4deac967f5dfb13b2a691bc7c773
+exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1193'
 ht-degree: 1%
@@ -26,7 +27,7 @@ ht-degree: 1%
 >
 >이 설명서 페이지는 다음 사용자가 만들었습니다. *소스* 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. *업데이트를 위해 연락할 수 있는 링크 또는 이메일 주소 삽입*.
 
-## 전제 조건
+## 사전 요구 사항
 
 *이 섹션에서 Adobe Experience Platform 사용자 인터페이스에서 소스 설정을 시작하기 전에 고객이 알아야 할 사항에 대한 정보를 추가합니다. 이 작업은 다음에 대해 수행할 수 있습니다.*
 

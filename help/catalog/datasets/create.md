@@ -305,7 +305,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BATCH_ID}` | 다음 `id` 을(를) 업로드하려는 배치의 일부입니다. |
 | `{DATASET_ID}` | 다음 `id` / 데이터 세트에서 배치가 지속됩니다. |
@@ -336,7 +336,7 @@ curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc7
 POST /batches/{BATCH_ID}?action=COMPLETE
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BATCH_ID}` | 다음 `id` 완료된 것으로 표시하는 배치. |
 
@@ -363,7 +363,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc
 GET /batches?batch={BATCH_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BATCH_ID}` | 다음 `id` 모니터링할 일괄 처리 중 |
 

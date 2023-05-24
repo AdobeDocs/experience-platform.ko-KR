@@ -115,7 +115,7 @@ curl -X GET \
 GET /insights/{INSIGHT_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{INSIGHT_ID}` | Sensei 인사이트에 대한 고유 식별자입니다. |
 
@@ -272,7 +272,7 @@ GET /insights/metrics
 GET /insights/metrics?algorithm={ALGORITHM}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{ALGORITHM}` | 알고리즘 유형의 식별자. |
 

@@ -231,7 +231,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 GET /flowservice/connections/{BASE_CONNECTION_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 다음 `id` 이전에 만든 연결의 값입니다. |
 
@@ -573,7 +573,7 @@ curl -X POST \
 POST /collection/{INLET_URL}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{INLET_URL}` | 스트리밍 끝점 URL. 에 GET 요청을 하여 이 URL을 검색할 수 있습니다. `/connections` 기본 연결 ID를 제공하는 동안 끝점이 발생했습니다. |
 

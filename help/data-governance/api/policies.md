@@ -160,7 +160,7 @@ GET /policies/core/{POLICY_ID}
 GET /policies/custom/{POLICY_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{POLICY_ID}` | 다음 `id` 조회하려는 정책. |
 
@@ -389,7 +389,7 @@ curl -X POST \
 PUT /policies/custom/{POLICY_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{POLICY_ID}` | 다음 `id` 업데이트할 정책 |
 
@@ -491,7 +491,7 @@ curl -X PUT \
 PATCH /policies/custom/{POLICY_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{POLICY_ID}` | 다음 `id` 속성을 업데이트할 정책. |
 
@@ -587,7 +587,7 @@ curl -X PATCH \
 DELETE /policies/custom/{POLICY_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{POLICY_ID}` | 삭제할 정책의 ID입니다. |
 

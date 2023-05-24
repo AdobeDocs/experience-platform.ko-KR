@@ -94,7 +94,7 @@ firstScriptElement.parentNode.insertBefore(
 다음 방법을 설명합니다.
 
 - [타사 라이브러리 구현](#implementing-third-party-libraries)
-   - [전제 조건](#prerequisites)
+   - [사전 요구 사항](#prerequisites)
    - [기본 코드 로드 프로세스](#base-code-loading-process)
       - [기본 코드 예](#base-code-example)
    - [태그 구현 옵션](#tags-implementation-options)

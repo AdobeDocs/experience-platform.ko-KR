@@ -187,7 +187,7 @@ curl -X POST \
 GET /config/destinations/{DESTINATION_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 |---|---|
 | `{DESTINATION_ID}` | 보려는 프로젝션 대상의 고유 ID. |
 
@@ -238,7 +238,7 @@ curl -X GET \
 PUT /config/destinations/{DESTINATION_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 |---|---|
 | `{DESTINATION_ID}` | 업데이트하려는 프로젝션 대상의 고유 ID. |
 
@@ -308,7 +308,7 @@ curl -X PUT \
 DELETE /config/destinations/{DESTINATION_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 |---|---|
 | `{DESTINATION_ID}` | 삭제하려는 프로젝션 대상의 고유 ID. |
 
@@ -330,7 +330,7 @@ curl -X DELETE \
 
 ## 투영 구성
 
-투영 구성은 각 에지에서 사용할 수 있어야 하는 데이터에 관한 정보를 제공합니다. 완전한 것으로 투영하지 않고 [!DNL Experience Data Model] (XDM) 스키마부터 에지까지 프로젝션은 스키마의 특정 데이터 또는 필드만 제공합니다. 조직은 각 XDM 스키마에 대해 둘 이상의 투영 구성을 정의할 수 있습니다.
+투영 구성은 각 에지에서 사용할 수 있어야 하는 데이터에 관한 정보를 제공합니다. 완전한 것으로 투영하지 않고 [!DNL Experience Data Model] (XDM) 스키마부터 에지까지 프로젝션은 스키마의 특정 데이터 또는 필드만 제공합니다. 조직은 각 XDM 스키마에 대해 두 개 이상의 투영 구성을 정의할 수 있습니다.
 
 ### 모든 투영 구성 나열
 
@@ -344,7 +344,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}
 GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 |---|---|
 | `{SCHEMA_NAME}` | 액세스하려는 투영 구성과 연관된 스키마 클래스의 이름입니다. |
 | `{PROJECTION_NAME}` | 액세스하려는 투영 구성의 이름입니다. |
@@ -428,7 +428,7 @@ curl -X GET \
 POST /config/projections?schemaName={SCHEMA_NAME}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 |---|---|
 | `{SCHEMA_NAME}` | 액세스하려는 투영 구성과 연관된 스키마 클래스의 이름입니다. |
 

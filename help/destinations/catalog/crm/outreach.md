@@ -24,7 +24,7 @@ ht-degree: 1%
 
 마케터는 Adobe Experience Platform 프로필의 속성에 따라 잠재 고객에게 개인화된 경험을 제공할 수 있습니다. 오프라인 데이터에서 세그먼트를 작성하고 이러한 세그먼트를 로 보낼 수 있습니다. [!DNL Outreach]: Adobe Experience Platform에서 세그먼트 및 프로필이 업데이트되는 즉시 잠재 고객의 피드에 표시할 수 있습니다.
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 

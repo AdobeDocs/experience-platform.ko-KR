@@ -1,7 +1,8 @@
 ---
 title: 흐름 서비스 API를 사용하여 SugarCRM 계정 및 연락처에 대한 소스 연결 및 데이터 흐름을 만듭니다.
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 SugarCRM 계정 및 연락처에 연결하는 방법을 알아봅니다.
-source-git-commit: e3ae650c70b07e8682ea77f94791d5b320d89425
+exl-id: 2b422b39-5b86-4313-a214-725044d9812c
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '2181'
 ht-degree: 1%
@@ -116,7 +117,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 소스의 파일 구조 및 컨텐츠를 탐색하기 위해 GET 요청을 수행할 때 아래 표에 나열된 쿼리 매개 변수를 포함해야 합니다.
 
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 이전 단계에서 생성된 기본 연결 ID입니다. |
 | `objectType=rest` | 탐색하려는 오브젝트의 유형입니다. 현재 이 값은 항상 로 설정됩니다. `rest`. |
@@ -890,7 +891,7 @@ curl -X POST \
 
 * [소스 연결 ID](#source-connection)
 * [Target 연결 ID](#target-connection)
-* [매핑 ID](#mapping)
+* [ID 매핑](#mapping)
 
 데이터 흐름은 소스에서 데이터를 예약하고 수집합니다. 페이로드 내에 이전에 언급된 값을 제공하면서 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.
 

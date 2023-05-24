@@ -104,7 +104,7 @@ GET /tenant/unions/{UNION_ID}
 GET /tenant/schemas/{UNION_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{UNION_ID}` | URL로 인코딩됨 `$id` 조회할 조합의 URI입니다. 유니온 스키마의 URI에 &quot;union__이 추가됩니다. |
 
@@ -192,7 +192,7 @@ GET 특정 유니온에 포함된 스키마를 확인하기 위해 `/tenant/sche
 GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLASS_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{CLASS_ID}` | 다음 `$id` 유니온 활성화 스키마를 나열할 클래스의 입니다. |
 

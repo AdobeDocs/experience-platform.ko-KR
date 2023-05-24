@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Marketo Engage;marketo engage;Marketo;매핑
 solution: Experience Platform
-title: Marketo Engage 소스에 대한 매핑 필드
+title: Marketo Engage 소스에 대한 필드 매핑
 description: 아래 표에는 Marketo 데이터 세트의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -18,25 +18,25 @@ ht-degree: 7%
 >title="Marketo 소스 필드 매핑"
 >abstract="Marketo와 플랫폼 사이에 소스 연결을 설정하려면 플랫폼에 수집되기 전에 Marketo 소스 데이터 필드를 적합한 대상 XDM 필드에 매핑해야 합니다."
 
-아래 표에는 9개의 필드에 대한 매핑이 포함되어 있습니다 [!DNL Marketo] 데이터 세트 및 해당 XDM(Experience Data Model) 필드를 포함합니다.
+아래 표에는 9개 필드 간의 매핑이 포함되어 있습니다 [!DNL Marketo] 데이터 세트 및 해당 XDM(경험 데이터 모델) 필드.
 
 >[!TIP]
 >
->모두 [!DNL Marketo] 데이터 세트를 제외한 데이터 세트 `Activities` 이제 지원 `isDeleted`. 기존 데이터 흐름에는 자동으로 포함됩니다 `isDeleted`하지만 는 새로 수집된 데이터에 대해서만 플래그를 섭취합니다. 모든 이전 데이터에 플래그를 적용하려면 기존 데이터 흐름을 중지하고 새 매핑으로 다시 만들어야 합니다. 제거할 경우 `isDeleted`로 설정되면 더 이상 기능에 액세스할 수 없습니다. 매핑이 자동 채워진 후에 유지되어야 합니다.
+>모두 [!DNL Marketo] 데이터 세트 제외 `Activities` 지금 지원 `isDeleted`. 기존 데이터 흐름에 자동으로 다음이 포함됩니다. `isDeleted`는 새로 수집된 데이터에 대한 플래그만 수집합니다. 모든 이전 데이터에 플래그를 적용하려면 기존 데이터 흐름을 중지하고 새 매핑을 사용하여 다시 만들어야 합니다. 다음을 제거할 경우 참고 `isDeleted`를 클릭하면 더 이상 기능에 액세스할 수 없습니다. 매핑은 자동으로 채워진 후에도 유지되어야 합니다.
 
 ## 활동 {#activities}
 
-다음 [!DNL Marketo] 이제 소스가 추가 표준 활동을 지원합니다. 표준 활동을 사용하려면 [스키마 자동 생성 유틸리티](../marketo/marketo-namespaces.md) 새 `activities` 데이터 흐름에서 스키마를 업데이트하지 않으면 새 대상 필드가 스키마에 없으므로 매핑 템플릿이 실패합니다. 스키마를 업데이트하지 않도록 선택하더라도 새 데이터 흐름을 생성하고 오류를 취소할 수 있습니다. 하지만 새 필드나 업데이트된 필드는 Platform에 수집되지 않습니다.
+다음 [!DNL Marketo] 이제 source에서 추가 표준 활동을 지원합니다. 표준 활동을 사용하려면 를 사용하여 스키마를 업데이트해야 합니다. [스키마 자동 생성 유틸리티](../marketo/marketo-namespaces.md) 새 항목을 만들면 `activities` 스키마를 업데이트하지 않으면 매핑 템플릿이 실패하고 스키마에 새 대상 필드가 없습니다. 스키마를 업데이트하지 않도록 선택하는 경우에도 새 데이터 흐름을 만들고 오류를 무시할 수 있습니다. 그러나 새 필드나 업데이트된 필드는 Platform에 수집되지 않습니다.
 
-다음 문서를 참조하십시오. [XDM 경험 이벤트 클래스](../../../../xdm/classes/experienceevent.md) xdm 클래스 및 XDM 필드 그룹에 대한 자세한 내용을 참조하십시오.
+다음에서 설명서를 참조하십시오. [XDM 경험 이벤트 클래스](../../../../xdm/classes/experienceevent.md) XDM 클래스 및 XDM 필드 그룹에 대한 자세한 정보입니다.
 
-| 소스 데이터 세트 | XDM 대상 필드 | 참고 |
+| 소스 데이터 세트 | XDM 타겟 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
 | `"Marketo"` | `personKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
 | `personID` | `personKey.sourceID` |
-| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | 기본 ID. 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | 기본 ID. 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
 | `eventType` | `eventType` |
 | `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
@@ -137,15 +137,15 @@ ht-degree: 7%
 
 ## 프로그램 {#programs}
 
-다음 문서를 참조하십시오. [XDM 비즈니스 캠페인 개요](../../../../xdm/classes/b2b/business-campaign.md) xdm 클래스에 대한 자세한 내용을 참조하십시오. XDM 필드 그룹에 대한 자세한 내용은 [비즈니스 캠페인 세부 사항 스키마 필드 그룹](../../../../xdm/field-groups/b2b-campaign/details.md) 안내서.
+읽기 [XDM 비즈니스 캠페인 개요](../../../../xdm/classes/b2b/business-campaign.md) XDM 클래스에 대한 자세한 내용. XDM 필드 그룹에 대한 자세한 내용은 [비즈니스 캠페인 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/b2b-campaign/details.md) 가이드.
 
-| 소스 데이터 세트 | XDM 대상 필드 | 참고 |
+| 소스 데이터 세트 | XDM 타겟 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
 | `id` | `campaignKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | 기본 ID. 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
-| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 다음  `extSourceSystemAudit.externalKey` 는 보조 ID입니다. 에 대한 값 `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 자동으로 교체됩니다. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | 기본 ID. 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 다음  `extSourceSystemAudit.externalKey` 는 보조 ID입니다. 값 `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 자동으로 교체됩니다. |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -168,14 +168,14 @@ ht-degree: 7%
 
 ## 프로그램 멤버십 {#program-memberships}
 
-다음 문서를 참조하십시오. [XDM 비즈니스 캠페인 구성원 개요](../../../../xdm/classes/b2b/business-campaign-members.md) xdm 클래스에 대한 자세한 내용을 참조하십시오. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 캠페인 구성원 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/b2b-campaign-members/details.md) 안내서.
+읽기 [XDM 비즈니스 캠페인 멤버 개요](../../../../xdm/classes/b2b/business-campaign-members.md) XDM 클래스에 대한 자세한 내용. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 캠페인 멤버 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/b2b-campaign-members/details.md) 가이드.
 
-| 소스 데이터 세트 | XDM 대상 필드 | 참고 |
+| 소스 데이터 세트 | XDM 타겟 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignMemberKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
 | `id` | `campaignMemberKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | 기본 ID. 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | 기본 ID. 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
 | `iif(programId != null && programId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", programId, "sourceKey", concat(programId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | 관계 |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 관계 |
 | `iif(acquiredByCampaignID != null && acquiredByCampaignID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", acquiredByCampaignID, "sourceKey", concat(acquiredByCampaignID,"@${MUNCHKIN_ID}.Marketo")), null)` | `acquiredByCampaignKey` |
@@ -189,7 +189,7 @@ ht-degree: 7%
 | `webinarUrl` | `webinarConfirmationUrl` |
 | `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
-| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 다음 `extSourceSystemAudit.externalKey` 는 보조 ID입니다. 에 대한 값 `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 자동으로 교체됩니다. |
+| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 다음 `extSourceSystemAudit.externalKey` 는 보조 ID입니다. 값 `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 자동으로 교체됩니다. |
 | `sfdc.lastStatus` | `lastStatus` |
 | `sfdc.hasResponded` | `hasResponded` |
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
@@ -201,15 +201,15 @@ ht-degree: 7%
 
 ## 회사 {#companies}
 
-다음 문서를 참조하십시오. [XDM 비즈니스 계정 개요](../../../../xdm/classes/b2b/business-account.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+읽기 [XDM 비즈니스 계정 개요](../../../../xdm/classes/b2b/business-account.md) XDM 클래스에 대한 자세한 내용.
 
-| 소스 데이터 세트 | XDM 대상 필드 | 참고 |
+| 소스 데이터 세트 | XDM 타겟 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
 | `concat(id, ".mkto_org")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | 기본 ID. 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
-| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId, "sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | 다음 `extSourceSystemAudit.externalKey` 는 보조 ID입니다. 에 대한 값 `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 자동으로 교체됩니다. |
+| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | 기본 ID. 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId, "sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | 다음 `extSourceSystemAudit.externalKey` 는 보조 ID입니다. 값 `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 자동으로 교체됩니다. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -233,14 +233,14 @@ ht-degree: 7%
 
 ## 정적 목록 {#static-lists}
 
-다음 문서를 참조하십시오. [XDM 비즈니스 마케팅 목록 개요](../../../../xdm/classes/b2b/business-marketing-list.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+읽기 [XDM 비즈니스 마케팅 목록 개요](../../../../xdm/classes/b2b/business-marketing-list.md) XDM 클래스에 대한 자세한 내용.
 
-| 소스 데이터 세트 | XDM 대상 필드 | 참고 |
+| 소스 데이터 세트 | XDM 타겟 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` 은 Explore API의 일부로 대체됩니다. |
+| `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` 은 API 탐색의 일부로 대체됩니다. |
 | `id` | `marketingListKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | 기본 ID. 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | 기본 ID. 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
 | `name` | `marketingListName` |
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -249,16 +249,16 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-## 정적 목록 구성원 {#static-list-memberships}
+## 정적 목록 멤버십 {#static-list-memberships}
 
-다음 문서를 참조하십시오. [XDM 비즈니스 마케팅 목록 구성원 개요](../../../../xdm/classes/b2b/business-marketing-list-members.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+읽기 [XDM 비즈니스 마케팅 목록 멤버 개요](../../../../xdm/classes/b2b/business-marketing-list-members.md) XDM 클래스에 대해 자세히 알아보십시오.
 
-| 소스 데이터 세트 | XDM 대상 필드 | 참고 |
+| 소스 데이터 세트 | XDM 타겟 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListMemberKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
 | `staticListMemberID` | `marketingListMemberKey.sourceID` |
-| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | 기본 ID. 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | 기본 ID. 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
 | `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | 관계 |
 | `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 관계 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -270,17 +270,17 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->명명된 계정 데이터 세트는 Marketo의 ABM(계정 기반 마케팅) 기능에서만 필요합니다. ABM을 사용하지 않는 경우 명명된 계정에 대한 매핑을 설정할 필요가 없습니다.
+>명명된 계정 데이터 세트는 Marketo의 계정 기반 마케팅(ABM) 기능에만 필요합니다. ABM을 사용하지 않는 경우에는 명명된 계정에 대한 매핑을 설정할 필요가 없습니다.
 
-다음 문서를 참조하십시오. [XDM 비즈니스 계정 개요](../../../../xdm/classes/b2b/business-account.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+읽기 [XDM 비즈니스 계정 개요](../../../../xdm/classes/b2b/business-account.md) XDM 클래스에 대한 자세한 내용.
 
-| 소스 데이터 세트 | XDM 대상 필드 | 참고 |
+| 소스 데이터 세트 | XDM 타겟 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | 기본 ID. 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
-| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 다음 `extSourceSystemAudit.externalKey` 는 보조 ID입니다. 에 대한 값 `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 자동으로 교체됩니다. |
+| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | 기본 ID. 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 다음 `extSourceSystemAudit.externalKey` 는 보조 ID입니다. 값 `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 자동으로 교체됩니다. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -298,17 +298,17 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-## 기회 {#opportunities}
+## 영업 기회 {#opportunities}
 
-다음 문서를 참조하십시오. [XDM 비즈니스 기회 개요](../../../../xdm/classes/b2b/business-opportunity.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+읽기 [XDM 비즈니스 영업 기회 개요](../../../../xdm/classes/b2b/business-opportunity.md) XDM 클래스에 대한 자세한 내용.
 
-| 소스 데이터 세트 | XDM 대상 필드 | 참고 |
+| 소스 데이터 세트 | XDM 타겟 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
 | `id` | `opportunityKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | 기본 ID. 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
-| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | 보조 ID. 에 대한 값 `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 자동으로 교체됩니다. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | 기본 ID. 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | 보조 ID. 값 `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 자동으로 교체됩니다. |
 | `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | 관계 |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
@@ -327,7 +327,7 @@ ht-degree: 7%
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | 이 소스 데이터 세트는 [!DNL Salesforce] 통합. |
+| `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | 이 소스 데이터 세트는 를 사용하는 사용자만 사용할 수 있습니다. [!DNL Salesforce] 통합. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -335,17 +335,17 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-## 기회 연락처 역할 {#opportunity-contact-roles}
+## 영업 기회 연락처 역할 {#opportunity-contact-roles}
 
-다음 문서를 참조하십시오. [XDM 비즈니스 기회 개인 관계 개요](../../../../xdm/classes/b2b/business-account-person-relation.md) xdm 클래스에 대한 자세한 내용을 참조하십시오.
+읽기 [XDM 비즈니스 영업 기회 사용자 관계 개요](../../../../xdm/classes/b2b/business-account-person-relation.md) XDM 클래스에 대한 자세한 내용.
 
-| 소스 데이터 세트 | XDM 대상 필드 | 참고 |
+| 소스 데이터 세트 | XDM 타겟 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
 | `id` | `opportunityPersonKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityPersonKey.sourceKey` | 기본 ID. 에 대한 값 `"${MUNCHKIN_ID}"` 은 Explore API의 일부로 대체됩니다. |
-| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 다음 `extSourceSystemAudit.externalKey` 는 보조 ID입니다. 에 대한 값 `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 자동으로 교체됩니다. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityPersonKey.sourceKey` | 기본 ID. 값 `"${MUNCHKIN_ID}"` 은 API 탐색의 일부로 대체됩니다. |
+| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 다음 `extSourceSystemAudit.externalKey` 는 보조 ID입니다. 값 `{CRM_ORG_ID}` 및 `{CRM_TYPE}` 자동으로 교체됩니다. |
 | `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | 관계 |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 관계 |
 | `role` | `personRole` |
@@ -356,17 +356,17 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-## 사람 {#persons}
+## 개인 {#persons}
 
-다음 문서를 참조하십시오. [XDM 개별 프로필 개요](../../../../xdm/classes/individual-profile.md) xdm 클래스에 대한 자세한 내용을 참조하십시오. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 개인 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-details.md) 안내서 및 [XDM 비즈니스 개인 구성 요소 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-components.md) 안내서.
+읽기 [XDM 개별 프로필 개요](../../../../xdm/classes/individual-profile.md) XDM 클래스에 대한 자세한 내용. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 사용자 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-details.md) 안내서 및 [XDM 비즈니스 사용자 구성 요소 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-components.md) 가이드.
 
-| 소스 데이터 세트 | XDM 대상 필드 | 참고 |
+| 소스 데이터 세트 | XDM 타겟 필드 | 참고 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `b2b.personKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
 | `id` | `b2b.personKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | 기본 ID. 에 대한 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
-| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | 가입 해지된 경우 `true` (예: 값 = `1`) 한 다음 설정합니다. `consents.marketing.email.val` 로서의(`n`). 가입 해지된 경우 `false` (예: 값 = `0`) 한 다음 설정합니다. `consents.marketing.email.val` 로서의 `null`. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | 기본 ID. 값 `"${MUNCHKIN_ID}"` 자동으로 교체됩니다. |
+| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | 구독 취소한 경우: `true` (예: 값 = `1`), 그런 다음 설정 `consents.marketing.email.val` as (`n`). 구독 취소한 경우: `false` (예: 값 = `0`), 그런 다음 설정 `consents.marketing.email.val` 다음으로: `null`. |
 | `iif(unsubscribedReason != null && unsubscribedReason != "", substr(unsubscribedReason, 0, 100), null)` | `consents.marketing.email.reason` |
 | `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
@@ -416,8 +416,8 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->다음 `to_object('ECID',arrays_to_objects('id',explode(ecids)))` 소스 필드는 를 사용하여 추가해야 하는 계산된 필드입니다 [!UICONTROL 계산된 필드 추가] 플랫폼 UI에 있는 옵션. 다음에서 자습서를 참조하십시오. [계산된 필드 추가](../../../../data-prep/ui/mapping.md#calculated-fields) 추가 정보.
+>다음 `to_object('ECID',arrays_to_objects('id',explode(ecids)))` 소스 필드는 를 사용하여 추가해야 하는 계산된 필드입니다. [!UICONTROL 계산된 필드 추가] Platform UI의 옵션입니다. 다음 튜토리얼 참조: [계산된 필드 추가](../../../../data-prep/ui/mapping.md#calculated-fields) 추가 정보.
 
 ## 다음 단계
 
-이 문서를 읽으면 두 문서 간의 매핑 관계에 대한 통찰력을 얻을 수 있습니다 [!DNL Marketo] 데이터 세트 및 해당 XDM 필드. 다음에서 자습서를 참조하십시오. [만들기 [!DNL Marketo] 소스 연결](../../../tutorials/ui/create/adobe-applications/marketo.md) 완료하기 [!DNL Marketo] 데이터 흐름.
+이 문서를 읽고 나면 사용자 간의 매핑 관계에 대한 통찰력을 얻을 수 있습니다 [!DNL Marketo] 데이터 세트 및 해당 XDM 필드. 다음 튜토리얼 참조: [만들기 [!DNL Marketo] 소스 연결](../../../tutorials/ui/create/adobe-applications/marketo.md) 을(를) 완료하려면 [!DNL Marketo] 데이터 흐름.

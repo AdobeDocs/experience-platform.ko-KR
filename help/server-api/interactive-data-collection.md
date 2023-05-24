@@ -60,7 +60,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 }'
 ```
 
-| 매개 변수 | 유형 | 필수 여부 | 설명 |
+| 매개변수 | 유형 | 필수 여부 | 설명 |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | 예. | 데이터 스트림 ID입니다. |
 | `requestId` | `String` | 아니요 | 내부 서버 요청의 상관 관계를 확인하기 위해 클라이언트 임의 ID를 제공합니다. 아무 것도 제공되지 않으면 Edge Network가 하나를 생성하고 응답에 반환합니다. |

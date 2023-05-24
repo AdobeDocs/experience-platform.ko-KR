@@ -24,7 +24,7 @@ ht-degree: 0%
 >
 >이 설명서 페이지는 다음 사용자가 만들었습니다. [!DNL Airship] 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. [support.airship.com](https://support.airship.com/).
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 대상 세그먼트를 보낼 수 있으려면 먼저 [!DNL Airship], 다음을 수행해야 합니다.
 

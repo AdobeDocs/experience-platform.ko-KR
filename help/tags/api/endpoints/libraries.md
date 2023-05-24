@@ -31,7 +31,7 @@ GET 요청의 경로에 속성 ID를 포함하여 속성에 대한 라이브러�
 GET /properties/{PROPERTY_ID}/libraries
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `PROPERTY_ID` | 다음 `id` 라이브러리를 소유하는 속성의 입니다. |
 
@@ -157,7 +157,7 @@ GET 요청 경로에 라이브러리 ID를 제공하여 라이브러리를 조�
 GET /libraries/{LIBRARY_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `LIBRARY_ID` | 다음 `id` 조회할 라이브러리의 일부입니다. |
 
@@ -268,7 +268,7 @@ POST 요청을 하여 새 라이브러리를 만들 수 있습니다.
 POST /properties/{PROPERTY_ID}/libraries
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `PROPERTY_ID` | 다음 `id` / [속성](./properties.md) 아래에 라이브러리를 정의합니다. |
 
@@ -418,7 +418,7 @@ curl -X POST \
 POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{LIBRARY_ID}` | 리소스를 추가할 라이브러리의 ID입니다. |
 | `{RESOURCE_TYPE}` | 라이브러리에 추가하는 리소스의 유형입니다. 다음 값이 허용됩니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
@@ -491,7 +491,7 @@ curl -X POST \
 PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{LIBRARY_ID}` | 관계를 바꿀 라이브러리의 ID입니다. |
 | `{RESOURCE_TYPE}` | 교체하려는 리소스의 유형입니다. 다음 값이 허용됩니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
@@ -556,7 +556,7 @@ curl -X PATCH \
 DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{LIBRARY_ID}` | 리소스를 제거할 라이브러리의 ID입니다. |
 | `{RESOURCE_TYPE}` | 제거 중인 리소스의 유형입니다. 다음 값이 허용됩니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
@@ -618,7 +618,7 @@ curl -X DELETE \
 POST /libraries/{LIBRARY_ID}/relationships/environment
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{LIBRARY_ID}` | 할당할 라이브러리의 ID입니다. |
 
@@ -676,7 +676,7 @@ PATCH 요청 경로에 ID를 포함하고 적절한 을 제공하여 라이브�
 PATCH /libraries/{LIBRARY_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `LIBRARY_ID` | 다음 `id` 전환할 라이브러리의 일부입니다. |
 
@@ -812,7 +812,7 @@ curl -X PATCH \
 POST /libraries/{LIBRARY_ID}/builds
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `LIBRARY_ID` | 다음 `id` 게시하려는 라이브러리의 경우입니다. |
 
@@ -923,7 +923,7 @@ curl -X POST \
 GET  /libraries/{LIBRARY_ID}/data_elements
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{LIBRARY_ID}` | 다음 `id` 데이터 요소를 나열할 라이브러리의 경우입니다. |
 
@@ -1064,7 +1064,7 @@ curl -X GET \
 GET  /libraries/{LIBRARY_ID}/extensions
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{LIBRARY_ID}` | 다음 `id` 확장자를 나열할 라이브러리의 경우입니다. |
 
@@ -1195,7 +1195,7 @@ curl -X GET \
 GET  /libraries/{LIBRARY_ID}/rules
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{LIBRARY_ID}` | 다음 `id` 규칙을 나열할 라이브러리의 경우입니다. |
 
@@ -1308,7 +1308,7 @@ curl -X GET \
 GET  /libraries/{LIBRARY_ID}/environment
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{LIBRARY_ID}` | 다음 `id` 검색할 환경의 라이브러리입니다. |
 
@@ -1420,7 +1420,7 @@ curl -X GET \
 GET  /libraries/{LIBRARY_ID}/property
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{LIBRARY_ID}` | 다음 `id` 속성을 조회할 라이브러리의 속성입니다. |
 
@@ -1543,7 +1543,7 @@ curl -X GET \
 GET  /libraries/{LIBRARY_ID}/upstream_library
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{LIBRARY_ID}` | 다음 `id` 업스트림 라이브러리를 조회하려는 라이브러리. |
 

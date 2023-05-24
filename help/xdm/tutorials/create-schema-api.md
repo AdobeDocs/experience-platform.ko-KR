@@ -137,7 +137,7 @@ curl -X POST \
 GET /tenant/schemas/{SCHEMA_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 조회하려는 스키마의 수입니다. |
 
@@ -215,7 +215,7 @@ curl -X GET \
 PATCH /tenant/schemas/{SCHEMA_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 필드 그룹을 추가할 스키마의 수입니다. |
 
@@ -318,7 +318,7 @@ curl -X PATCH \
 PATCH /tenant/schemas/{SCHEMA_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 업데이트 중인 스키마의 입니다. |
 
@@ -597,7 +597,7 @@ curl -X POST\
 PATCH /tenant/schemas/{SCHEMA_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 스키마의 입니다. |
 
@@ -709,7 +709,7 @@ curl -X PATCH \
 GET /tenant/schemas/{SCHEMA_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 스키마의 입니다. |
 
@@ -968,7 +968,7 @@ curl -X POST \
 PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{FIELD_GROUP_ID}` | 다음 `meta:altId` 또는 URL 인코딩됨 `$id` 업데이트할 필드 그룹의 |
 
@@ -1194,7 +1194,7 @@ curl -X POST \
 PATCH /tenant/schemas/{SCHEMA_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 프로필에 대해 활성화하려는 스키마. |
 

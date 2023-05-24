@@ -15,7 +15,7 @@ ht-degree: 2%
 
 감사 로그 사용자 인터페이스에 대한 자세한 내용은 [감사 로그 개요 문서](../../landing/governance-privacy-security/audit-logs/overview.md). Platform API를 호출하는 방법에 대한 자세한 내용은 [감사 로그 API 안내서](../../landing/api-guide.md).
 
-## 전제 조건
+## 사전 요구 사항
 
 다음을 보유해야 합니다. [!DNL Data Governance] [!UICONTROL 사용자 활동 로그 보기] platform UI 내에서 감사 로그 대시보드를 볼 수 있는 권한이 활성화되었습니다. 권한은 Adobe을 통해 사용할 수 있습니다. [Admin Console](https://adminconsole.adobe.com/). 이 권한을 활성화하기 위한 관리자 권한이 없는 경우 조직의 관리자에게 문의하십시오. 다음에 대한 액세스 제어 설명서 참조: [Admin Console을 통한 권한 추가에 대한 전체 지침](../../access-control/home.md).
 

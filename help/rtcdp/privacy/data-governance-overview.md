@@ -6,13 +6,13 @@ exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '690'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
 # Real-Time CDP의 데이터 거버넌스
 
-[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP)는 여러 엔터프라이즈 시스템의 데이터를 함께 가져와서 마케터가 고객을 더 잘 식별하고, 이해하고, 참여하도록 합니다. 이 데이터는 조직 또는 법적 규정에 의해 정의된 사용 제한이 적용될 수 있습니다. 따라서 데이터를 처리할 때는 Real-Time CDP이 사용 정책을 준수하는지 확인하는 것이 중요합니다.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP)는 여러 엔터프라이즈 시스템의 데이터를 함께 가져와서 마케터가 고객을 더 잘 식별하고, 이해하고, 참여하도록 합니다. 이 데이터에는 조직 규정이나 법적 규정에 따른 사용 제한이 적용될 수 있습니다. 따라서 데이터를 처리할 때는 Real-Time CDP이 사용 정책을 준수하는지 확인하는 것이 중요합니다.
 
 Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. Real-Time CDP 내에서 중요한 역할을 하며, 이를 통해 사용 정책을 정의하고, 이러한 정책을 기반으로 데이터를 분류하고, 특정 마케팅 작업을 수행할 때 정책 위반이 있는지 확인할 수 있습니다.
 

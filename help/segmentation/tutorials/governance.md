@@ -198,7 +198,7 @@ POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
 POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | 평가 중인 데이터 세트 사용 정책과 연관된 마케팅 액션의 이름입니다. 정책이 Adobe 또는 조직에서 정의되었는지 여부에 따라 다음을 사용해야 합니다. `/marketingActions/core` 또는 `/marketingActions/custom`, 각각 |
 

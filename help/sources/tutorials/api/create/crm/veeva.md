@@ -88,7 +88,7 @@ curl -X POST \
     }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `name` | 의 이름 [!DNL Veeva CRM] 기본 연결. 이 이름을 사용하여 [!DNL Veeva CRM] 기본 연결. |
 | `description` | 다음에 대한 선택적 설명 [!DNL Veeva CRM] 기본 연결. |

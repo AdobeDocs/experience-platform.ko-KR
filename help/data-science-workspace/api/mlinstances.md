@@ -139,7 +139,7 @@ GET /mlInstances?{QUERY_PARAMETER}={VALUE}
 GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{QUERY_PARAMETER}` | 다음 중 하나 [사용 가능한 쿼리 매개 변수](./appendix.md#query) 결과를 필터링하는 데 사용됩니다. |
 | `{VALUE}` | 이전 쿼리 매개 변수의 값입니다. |
@@ -205,7 +205,7 @@ curl -X GET \
 GET /mlInstances/{MLINSTANCE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MLINSTANCE_ID}` | 원하는 MLInstance의 ID입니다. |
 
@@ -317,7 +317,7 @@ curl -X GET \
 PUT /mlInstances/{MLINSTANCE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MLINSTANCE_ID}` | 유효한 MLInstance ID입니다. |
 
@@ -412,7 +412,7 @@ curl -X PUT \
 DELETE /mlInstances?engineId={ENGINE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{ENGINE_ID}` | 유효한 엔진 ID입니다. |
 
@@ -447,7 +447,7 @@ curl -X DELETE \
 DELETE /mlInstances/{MLINSTANCE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MLINSTANCE_ID}` | 유효한 MLInstance ID입니다. |
 

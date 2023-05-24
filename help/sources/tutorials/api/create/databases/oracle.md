@@ -78,7 +78,7 @@ curl -X POST \
     }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `auth.params.connectionString` | 에 연결하는 데 사용되는 연결 문자열 [!DNL Oracle] 데이터베이스. 다음 [!DNL Oracle] 연결 문자열 패턴: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | 다음 [!DNL Oracle] 연결 사양 ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |

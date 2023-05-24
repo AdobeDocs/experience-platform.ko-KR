@@ -82,7 +82,7 @@ curl -X POST \
     }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `auth.params.connectionString` | 에 연결하는 데 사용되는 연결 문자열 [!DNL Synapse]. 다음 [!DNL Synapse] 연결 문자열 패턴 `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 | `connectionSpec.id` | 다음 [!DNL Synapse] 연결 사양 ID: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |

@@ -3,7 +3,8 @@ title: 소스 문서화(Streaming SDK)
 description: Adobe Experience Platform에서 새 소스를 라이브로 만들 수 있는 마지막 단계는 새 소스를 문서화하는 것입니다.
 hide: true
 hidefromtoc: true
-source-git-commit: a9879530a8911d77dfc4cde3824834e03fa5e0a9
+exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%
@@ -21,7 +22,7 @@ Adobe Experience Platform에서 새 소스를 라이브로 설정하기 전 마�
 * [기술 설명서 작성에 Markdown을 사용하는 방법에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
 * [Adobe Markdown 기능 이해에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions).
 
-## 전제 조건
+## 사전 요구 사항
 
 새 소스 문서화를 시작하려면 먼저 다음 항목이 필요합니다.
 

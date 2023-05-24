@@ -77,7 +77,7 @@ curl -X GET \
 GET /products/{PRODUCT_ID}/categories
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | {PRODUCT_ID} | 조회할 권한 범주와 연관된 제품의 ID입니다. |
 
@@ -152,7 +152,7 @@ curl -X GET \
 GET /products/{PRODUCT_ID}/permission-sets
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | {PRODUCT_ID} | 조회할 권한 세트와 연관된 제품의 ID입니다. |
 

@@ -8,7 +8,7 @@ exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -57,7 +57,7 @@ Adobe Experience Platform의 소스 커넥터는 일정에 따라 외부 소스 
 
 최종 확인 대화 상자가 나타나면 다음을 선택합니다. **[!UICONTROL 삭제]** 을 클릭하여 프로세스를 완료합니다.
 
-![삭제](../../images/tutorials/delete-accounts/confirm.png)
+![delete](../../images/tutorials/delete-accounts/confirm.png)
 
 ## 다음 단계
 

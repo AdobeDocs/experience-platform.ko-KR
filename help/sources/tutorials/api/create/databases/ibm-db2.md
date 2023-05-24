@@ -89,7 +89,7 @@ curl -X POST \
     }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `auth.params.connectionString` | 와(과) 연결된 연결 문자열 [!DNL IBM DB2] 계정입니다. |
 | `connectionSpec.id` | 다음 [!DNL IBM DB2] 연결 사양 ID: `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |

@@ -7,7 +7,7 @@ hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '1011'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -109,7 +109,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `workorderId` | 삭제 주문 ID. 나중에 삭제 상태를 조회하는 데 사용할 수 있습니다. |
-| `orgId` | 조직 ID입니다. |
+| `orgId` | 자신의 조직 ID. |
 | `bundleId` | 이 삭제 순서가 연결된 번들의 ID로, 디버깅 목적으로 사용됩니다. 여러 삭제 주문이 함께 번들로 포함되어 다운스트림 서비스에서 처리됩니다. |
 | `action` | 작업 주문에 의해 수행되는 작업입니다. 레코드 삭제의 경우 값은 다음과 같습니다. `identity-delete`. |
 | `createdAt` | 삭제 순서가 생성된 시점의 타임스탬프입니다. |
@@ -130,7 +130,7 @@ curl -X POST \
 GET /workorder/{WORK_ORDER_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{WORK_ORDER_ID}` | 다음 `workorderId` 조회 중인 레코드 삭제. |
 
@@ -187,7 +187,7 @@ curl -X GET \
 | 속성 | 설명 |
 | --- | --- |
 | `workorderId` | 삭제 주문 ID. 나중에 삭제 상태를 조회하는 데 사용할 수 있습니다. |
-| `orgId` | 조직 ID입니다. |
+| `orgId` | 자신의 조직 ID. |
 | `bundleId` | 이 삭제 순서가 연결된 번들의 ID로, 디버깅 목적으로 사용됩니다. 여러 삭제 주문이 함께 번들로 포함되어 다운스트림 서비스에서 처리됩니다. |
 | `action` | 작업 주문에 의해 수행되는 작업입니다. 레코드 삭제의 경우 값은 다음과 같습니다. `identity-delete`. |
 | `createdAt` | 삭제 순서가 생성된 시점의 타임스탬프입니다. |
@@ -207,7 +207,7 @@ curl -X GET \
 PUT /workorder{WORK_ORDER_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{WORK_ORDER_ID}` | 다음 `workorderId` 조회 중인 레코드 삭제. |
 
@@ -275,7 +275,7 @@ curl -X GET \
 | 속성 | 설명 |
 | --- | --- |
 | `workorderId` | 삭제 주문 ID. 나중에 삭제 상태를 조회하는 데 사용할 수 있습니다. |
-| `orgId` | 조직 ID입니다. |
+| `orgId` | 자신의 조직 ID. |
 | `bundleId` | 이 삭제 순서가 연결된 번들의 ID로, 디버깅 목적으로 사용됩니다. 여러 삭제 주문이 함께 번들로 포함되어 다운스트림 서비스에서 처리됩니다. |
 | `action` | 작업 주문에 의해 수행되는 작업입니다. 레코드 삭제의 경우 값은 다음과 같습니다. `identity-delete`. |
 | `createdAt` | 삭제 순서가 생성된 시점의 타임스탬프입니다. |

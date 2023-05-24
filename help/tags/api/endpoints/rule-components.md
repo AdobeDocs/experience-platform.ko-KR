@@ -45,7 +45,7 @@ GET 요청의 경로에 규칙 ID를 포함하여 규칙에 속하는 규칙 구
 GET /rules/{RULE_ID}/rule_components
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `RULE_ID` | 다음 `id` 구성 요소를 나열할 규칙의 경우 |
 
@@ -184,7 +184,7 @@ GET 요청의 경로에 ID를 제공하여 규칙 구성 요소를 조회할 수
 GET /rule_components/{RULE_COMPONENT_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `RULE_COMPONENT_ID` | 다음 `id` 조회하려는 규칙 구성 요소. |
 
@@ -308,7 +308,7 @@ POST 요청을 수행하여 새 규칙 구성 요소를 만들 수 있습니다.
 POST /properties/{PROPERTY_ID}/rule_components
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `PROPERTY_ID` | 다음 `id` 아래에 규칙 구성 요소를 정의하는 속성입니다. |
 
@@ -481,7 +481,7 @@ curl -X POST \
 PATCH /rule_components/{RULE_COMPONENT_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `RULE_COMPONENT_ID` | 다음 `id` 업데이트하려는 규칙 구성 요소. |
 
@@ -624,7 +624,7 @@ DELETE 요청의 경로에 ID를 포함하여 규칙 구성 요소를 삭제할 
 DELETE /rule_components/{RULE_COMPONENT_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `RULE_COMPONENT_ID` | 다음 `id` 삭제할 규칙 구성 요소의 일부입니다. |
 
@@ -664,7 +664,7 @@ curl -X DELETE \
 GET  /rule_components/{RULE_COMPONENT_ID}/rules
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | 다음 `id` 규칙을 나열할 규칙 구성 요소. |
 
@@ -768,7 +768,7 @@ curl -X GET \
 GET /rule_components/{RULE_COMPONENT_ID}/extension
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | 다음 `id` 확장자가 조회하려는 규칙 구성 요소. |
 
@@ -888,7 +888,7 @@ curl -X GET \
 GET /rule_components/{RULE_COMPONENT_ID}/origin
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | 다음 `id` 조회하려는 원본이 있는 규칙 구성 요소. |
 

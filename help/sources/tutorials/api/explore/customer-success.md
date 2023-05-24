@@ -63,7 +63,7 @@ CS 시스템에 대한 기본 연결을 사용하여 GET 요청을 수행하여 
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | CS 기본 연결의 ID입니다. |
 
@@ -125,7 +125,7 @@ CS 시스템에서 테이블 구조를 검사하려면 테이블의 경로를 �
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | CS 기본 연결의 ID입니다. |
 | `{TABLE_PATH}` | 표의 경로입니다. |

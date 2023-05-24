@@ -22,7 +22,7 @@ Get [!DNL Demandbase] 업계, 수익 및 타겟 계정별로 트래픽 및 동�
 
 ![Demandbase 확장](../../assets/catalog/analytics/demandbase/catalog.png)
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 이 확장은 Platform을 구입한 모든 고객의 대상 카탈로그에서 사용할 수 있습니다.
 

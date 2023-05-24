@@ -47,7 +47,7 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 >[!IMPORTANT]
 >

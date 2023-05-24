@@ -62,7 +62,7 @@ ht-degree: 2%
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 프로토콜 기본 연결의 ID입니다. |
 
@@ -124,7 +124,7 @@ curl -X GET \
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 프로토콜 애플리케이션의 연결 ID. |
 | `{TABLE_PATH}` | 프로토콜 응용 프로그램 내의 테이블 경로입니다. |

@@ -32,7 +32,7 @@ Adobe Experience Platform에서 태그를 사용하는 경우 일부 워크플�
 gpg --import {KEY_NAME}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{KEY_NAME}` | 공개 키 파일의 이름입니다. |
 

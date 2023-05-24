@@ -7,7 +7,7 @@ exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -81,7 +81,7 @@ Experience Platform은 글로벌 규모로 디지털 경험 애플리케이션�
 
 개발 유연성에 대한 요구를 해결하기 위해 Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 자체 개발 라이프사이클을 기반으로 디지털 경험 애플리케이션을 발전시키는 데 도움이 되는 샌드박스를 제공합니다.
 
-다음을 참조하십시오. [샌드박스 개요](../../sandboxes/home.md) 추가 정보.
+자세한 내용은 [샌드박스 개요](../../sandboxes/home.md)를 참조하십시오.
 
 ## 다음 단계
 

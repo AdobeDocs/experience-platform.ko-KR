@@ -13,7 +13,7 @@ ht-degree: 1%
 
 이 안내서에서는 Adobe Experience Platform Privacy Service API를 호출하기 전에 알아야 하는 핵심 개념에 대해 소개합니다.
 
-## 전제 조건
+## 사전 요구 사항
 
 이 안내서를 사용하려면 의 작업 이해를 필요로 합니다. [Privacy Service](../home.md) 및 을 통해 Adobe Experience Cloud 애플리케이션에서 데이터 주체(고객)의 액세스 및 삭제 요청을 관리하는 방법을 설명합니다.
 

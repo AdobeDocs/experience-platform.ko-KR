@@ -4,7 +4,8 @@ solution: Experience Platform
 feature: Attribution AI
 title: Attribution AI의 데이터 거버넌스
 description: Adobe Experience Platform은 비즈니스 사례, 법적 의무 및 개발 프로세스를 준수하기 위해 수집된 경험 데이터를 자신 있게 제어할 수 있는 몇 가지 서비스와 도구를 제공합니다.
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+exl-id: 70b04061-0cb0-4b3e-9dfa-d49cc0ef1be0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 9%

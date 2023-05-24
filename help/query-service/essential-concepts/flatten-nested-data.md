@@ -18,7 +18,7 @@ Adobe Experience Platform 쿼리 서비스 는 `FLATTEN` 타사 BI 도구를 통
 
 다음 `FLATTEN` 를 설정하면 각 리프 필드의 구조가 테이블의 루트로 가져오고 원래 네임스페이스 뒤에 필드 이름이 지정됩니다. 이렇게 하면 필드의 컨텍스트를 유지하면서 점 표기법을 사용하여 필드를 해당 XDM(Experience Data Model) 경로와 일치시킬 수 있습니다.
 
-## 전제 조건
+## 사전 요구 사항
 
 사용 `FLATTEN` 설정을 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 

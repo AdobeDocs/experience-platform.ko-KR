@@ -21,7 +21,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]
 >
 >다음에 대한 척도 요소 [!DNL Kinesis] 대용량 데이터를 수집해야 하는 경우 늘려야 합니다. 현재, 에서 가져올 수 있는 최대 데이터 볼륨입니다 [!DNL Kinesis] platform에 대한 계정은 초당 4000개의 레코드입니다. 더 많은 볼륨 데이터를 확장 및 수집하려면 Adobe 담당자에게 문의하십시오.
 
-## 전제 조건
+## 사전 요구 사항
 
 다음 단원에서는 다음을 만들기 전에 필요한 필수 구성 요소 설정에 대해 자세히 설명합니다. [!DNL Kinesis] 소스 연결.
 

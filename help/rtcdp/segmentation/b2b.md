@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >이러한 세그먼테이션 사용 사례에 필요한 속성은 Real-time Customer Data Platform B2B 에디션 고객만 사용할 수 있습니다. Real-time Customer Data Platform B2B 에디션을 사용하지 않는 경우 [세그먼테이션 개요](./segmentation-overview.md) 대신,
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 B2B 클래스에 대한 세분화 속성을 사용하려면 먼저 다음 단계를 완료해야 합니다.
 

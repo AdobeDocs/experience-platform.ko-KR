@@ -26,7 +26,7 @@ Google gtag는 Adobe Experience Platform의 광고 확장 프로그램입니다.
 
 ![Google gtag 확장](../../assets/catalog/advertising/gtag-advertising/catalog.png)
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 이 확장 프로그램은 다음에서 사용할 수 있습니다. [!DNL Destinations] Platform을 구입한 모든 고객을 위한 카탈로그.
 

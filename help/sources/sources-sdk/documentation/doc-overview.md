@@ -22,7 +22,7 @@ Adobe Experience Platform에서 새 소스를 라이브로 설정하기 전 마�
 * [기술 설명서 작성에 Markdown을 사용하는 방법에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
 * [Adobe Markdown 기능 이해에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions).
 
-## 전제 조건
+## 사전 요구 사항
 
 새 소스 문서화를 시작하려면 먼저 다음 항목이 필요합니다.
 

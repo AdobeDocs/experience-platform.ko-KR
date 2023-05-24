@@ -1,6 +1,6 @@
 ---
 description: Destination SDK으로 빌드된 대상에서 지원하는 내역 프로필 자격에 대해 알아봅니다.
-title: 내역 프로필 자격
+title: 과거 프로필 자격 요건
 source-git-commit: 65a658208b48a50184e55a6d64cdf7ad6de0f04f
 workflow-type: tm+mt
 source-wordcount: '214'
@@ -9,15 +9,15 @@ ht-degree: 1%
 ---
 
 
-# 내역 프로필 자격
+# 과거 프로필 자격 요건
 
-Destination SDK을 통해 생성된 모든 대상은 기본적으로 이전 프로필 자격을 지원합니다. 즉, 사용자가 대상에 대해 활성화 데이터 플로우를 처음 설정할 때 첫 번째 내보내기에 해당 세그먼트에 대해 자격이 있는 세그먼트의 모든 구성원이 포함됩니다.
+Destination SDK을 통해 생성된 모든 대상은 기본적으로 내역 프로필 자격을 지원합니다. 즉, 사용자가 대상에 대한 활성화 데이터 흐름을 처음 설정할 때 첫 번째 내보내기에 해당 세그먼트에 대해 자격이 부여된 세그먼트의 모든 멤버가 포함됩니다.
 
-이 동작은 `"backfillHistoricalProfileData":true` 매개 변수 를 참조하십시오.
+이 동작은 `"backfillHistoricalProfileData":true` 대상 구성의 매개 변수입니다.
 
 >[!IMPORTANT]
 >
->Destination SDK 및 `backfillHistoricalProfileData` 매개 변수는 사용자가 구성할 수 없습니다.
+>내역 프로필 자격은 Destination SDK 및 를 통해 생성된 모든 대상에 대해 활성화됩니다. `backfillHistoricalProfileData` 매개 변수는 사용자가 구성할 수 없습니다.
 
 ## 지원되는 통합 유형 {#supported-integration-types}
 
@@ -26,7 +26,7 @@ Destination SDK을 통해 생성된 모든 대상은 기본적으로 이전 프�
 | 통합 유형 | 기능 지원 |
 |---|---|
 | 실시간(스트리밍) 통합 | 예 |
-| 파일 기반(일괄 처리) 통합 | 예 |
+| 파일 기반 (일괄 처리) 통합 | 예 |
 
 
 
@@ -40,9 +40,9 @@ Destination SDK을 통해 생성된 모든 대상은 기본적으로 이전 프�
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽은 후에는 세그먼트를 대상으로 처음 내보낼 때 Experience Platform에서 활성화된 세그먼트에 자격을 부여받은 모든 프로필의 내역 모집단을 자동으로 내보내내는지 확인해야 합니다. 이 옵션은 Destination SDK 또는 Experience Platform UI에서 구성할 수 없습니다.
+이 문서를 읽은 후에는 세그먼트를 대상으로 처음 내보낼 때 활성화된 세그먼트에 대해 자격이 부여된 모든 프로필의 내역 모집단을 Experience Platform이 자동으로 내보낸다는 것을 알고 있어야 합니다. 이 옵션은 Destination SDK 또는 Experience Platform UI에서 구성할 수 없습니다.
 
-다른 대상 구성 요소에 대해 자세히 알려면 다음 문서를 참조하십시오.
+다른 대상 구성 요소에 대한 자세한 내용은 다음 문서를 참조하십시오.
 
 * [고객 인증](customer-authentication.md)
 * [OAuth2 인증](oauth2-authentication.md)
@@ -54,4 +54,4 @@ Destination SDK을 통해 생성된 모든 대상은 기본적으로 이전 프�
 * [대상 게재](destination-delivery.md)
 * [대상 메타데이터 구성](audience-metadata-configuration.md)
 * [집계 정책](aggregation-policy.md)
-* [배치 구성](batch-configuration.md)
+* [일괄 처리 구성](batch-configuration.md)

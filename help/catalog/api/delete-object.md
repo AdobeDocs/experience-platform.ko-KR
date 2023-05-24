@@ -29,7 +29,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 >
 >다음 `DELETE /batches/{ID}` 끝점이 더 이상 사용되지 않습니다. 배치를 삭제하려면 다음을 사용해야 합니다. [일괄 처리 수집 API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 삭제할 개체입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 업데이트할 특정 개체의 식별자입니다. |

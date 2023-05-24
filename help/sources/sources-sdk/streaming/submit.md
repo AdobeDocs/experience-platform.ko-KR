@@ -3,7 +3,8 @@ title: 소스 테스트 및 제출
 description: 다음 문서에서는 Flow Service API를 사용하여 새 소스를 테스트 및 확인하고 셀프서비스 소스(Streaming SDK)를 통해 새 소스를 통합하는 방법에 대한 단계를 제공합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 7744fef9751212a40f8f20df52812d38130c42fc
+exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 0%
@@ -33,7 +34,7 @@ API를 사용하여 소스를 테스트하려면 [셀프 서비스 소스 확인
 >
 >아래의 모든 예제 변수는 업데이트해야 하는 자리 표시자 값이며, 단, `flowSpecificationId` 및 `targetConnectionSpecId`- 고정 값입니다.
 
-| 매개 변수 | 설명 | 예 |
+| 매개변수 | 설명 | 예 |
 | --- | --- | --- |
 | `x-api-key` | Experience Platform API 호출을 인증하는 데 사용되는 고유 식별자입니다. 다음 튜토리얼 참조: [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md) 을(를) 검색하는 방법에 대한 자세한 내용은 `x-api-key`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | 제품 및 서비스를 소유하거나 라이선스를 부여하고 해당 구성원에 대한 액세스를 허용할 수 있는 법인 엔티티입니다. 다음 튜토리얼 참조: [개발자 콘솔 설정 및 [!DNL Postman]](../../../landing/postman.md) 을(를) 검색하는 방법에 대한 지침을 보려면 `x-gw-ims-org-id` 정보. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |

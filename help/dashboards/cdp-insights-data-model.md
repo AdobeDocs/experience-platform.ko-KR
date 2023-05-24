@@ -5,7 +5,7 @@ exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Real-time Customer Data Platform 인사이트 데이터 모델 기능은 다양한 프로필, 대상 및 세그멘테이션 위젯에 대한 인사이트를 제공하는 데이터 모델과 SQL을 노출합니다. 이러한 SQL 쿼리 템플릿을 사용자 정의하여 마케팅 및 주요 성능 지표(KPI) 사용 사례에 대한 Real-Time CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 인사이트를 사용자 정의 대시보드에 대한 사용자 정의 위젯으로 사용할 수 있습니다. 자세한 내용은 쿼리 가속 스토어 보고 인사이트 설명서 를 참조하십시오 [가속화된 스토어 데이터 및 사용자 정의 대시보드와 함께 사용하기 위해 쿼리 서비스를 통해 보고 인사이트 데이터 모델을 구축하는 방법](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
-## 전제 조건
+## 사전 요구 사항
 
 이 안내서를 사용하려면 다음을 이해할 수 있어야 합니다 [사용자 정의 대시보드 기능](./user-defined-dashboards.md). 이 안내서를 계속하기 전에 설명서를 읽어 보십시오.
 
@@ -239,7 +239,7 @@ FROM
 
 #### 최근에 활성화된 세그먼트 사용 사례
 
-에 대한 논리 [!UICONTROL 최근에 활성화된 세그먼트] 위젯은 대상에 가장 최근에 매핑된 세그먼트의 목록을 제공합니다. 이 목록은 시스템에서 사용 중인 세그먼트 및 대상의 스냅샷을 제공하며 잘못된 매핑을 해결하는 데 도움이 됩니다. 다음을 참조하십시오. [[!UICONTROL 최근에 활성화된 세그먼트] 위젯 설명서](./guides/destinations.md#recently-activated-segments) 추가 정보.
+에 대한 논리 [!UICONTROL 최근에 활성화된 세그먼트] 위젯은 대상에 가장 최근에 매핑된 세그먼트의 목록을 제공합니다. 이 목록은 시스템에서 활성화되는 세그먼트와 대상에 대한 스냅샷을 제공하고 잘못된 매핑 문제를 해결하는 데 도움이 됩니다. 다음을 참조하십시오. [[!UICONTROL 최근에 활성화된 세그먼트] 위젯 설명서](./guides/destinations.md#recently-activated-segments) 추가 정보.
 
 다음을 생성하는 SQL [!UICONTROL 최근에 활성화된 세그먼트] 위젯은 아래의 축소 가능한 섹션에 표시됩니다.
 

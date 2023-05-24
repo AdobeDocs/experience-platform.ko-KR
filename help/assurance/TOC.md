@@ -20,7 +20,7 @@ ht-degree: 66%
    - [이벤트 트랜잭션](./views/event-transactions.md)
    - [확장 버전](./views/extension-versions.md)
    - [In-App 메시징](./views/in-app-messaging.md)
-   - [장치 보기 시](./views/on-device-views.md)
+   - [장치 보기에서](./views/on-device-views.md)
    - [장소 서비스](./views/places-service.md)
    - [푸시 디버그 보기](./views/push-debug-view.md)
    - [유효성 검사 요약](./views/validation-summary.md)

@@ -91,7 +91,7 @@ curl -X POST \
     }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `auth.params.host` | 의 호스트 [!DNL Spark] 서버입니다. |
 | `auth.params.username` | 와(과) 연계된 사용자 이름 [!DNL Spark] 연결. |

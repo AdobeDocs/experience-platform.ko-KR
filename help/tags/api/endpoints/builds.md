@@ -37,7 +37,7 @@ GET 요청의 경로에 라이브러리의 ID를 포함하여 특정 라이브�
 GET /libraries/{LIBRARY_ID}/builds
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `LIBRARY_ID` | 다음 `id` 빌드를 나열할 라이브러리의 입니다. |
 
@@ -154,7 +154,7 @@ GET 요청 경로에 빌드의 ID를 제공하여 빌드를 조회할 수 있습
 GET /builds/{BUILD_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `BUILD_ID` | 다음 `id` 조회하려는 빌드에 대해 자세히 알아보십시오. |
 
@@ -256,7 +256,7 @@ POST 요청 경로에 라이브러리의 ID를 포함하여 라이브러리에 �
 POST /libraries/{LIBRARY_ID}/builds
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `LIBRARY_ID` | 다음 `id` 아래에 빌드를 정의하는 라이브러리입니다. |
 
@@ -358,7 +358,7 @@ curl -X POST \
 PATCH /builds/{BUILD_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `BUILD_ID` | 다음 `id` 다시 게시할 빌드의 입니다. |
 
@@ -485,7 +485,7 @@ curl -X PATCH \
 GET  /builds/{BUILD_ID}/data_elements
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BUILD_ID}` | 다음 `id` 데이터 요소를 나열할 빌드의 입니다. |
 
@@ -626,7 +626,7 @@ curl -X GET \
 GET  /builds/{BUILD_ID}/extensions
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BUILD_ID}` | 다음 `id` 확장자를 나열할 빌드의 입니다. |
 
@@ -757,7 +757,7 @@ curl -X GET \
 GET  /builds/{BUILD_ID}/rules
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BUILD_ID}` | 다음 `id` 규칙을 나열할 빌드의 입니다. |
 
@@ -870,7 +870,7 @@ curl -X GET \
 GET  /builds/{BUILD_ID}/library
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BUILD_ID}` | 다음 `id` 라이브러리를 조회할 빌드의 속성입니다. |
 
@@ -983,7 +983,7 @@ curl -X GET \
 GET  /builds/{BUILD_ID}/environment
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BUILD_ID}` | 다음 `id` 조회하려는 환경이 포함된 빌드. |
 

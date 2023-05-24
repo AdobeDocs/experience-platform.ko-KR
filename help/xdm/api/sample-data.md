@@ -33,7 +33,7 @@ ht-degree: 1%
 GET /rpc/sampledata/{SCHEMA_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 샘플 데이터를 생성할 스키마의 수입니다. |
 

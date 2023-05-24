@@ -97,7 +97,7 @@ curl -X GET \
 GET /global/behaviors/{BEHAVIOR_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BEHAVIOR_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 조회하려는 비헤이비어 중 하나. |
 

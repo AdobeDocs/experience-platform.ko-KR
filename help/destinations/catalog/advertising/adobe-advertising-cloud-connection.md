@@ -31,7 +31,7 @@ Advertising Cloud DSP 대상을 사용하는 방법과 시기를 더 잘 이해�
 
 DSP 계정이 있는 미디어 에이전시는 호스피탈리티 업계의 상위 브랜드인 고객을 대신하여 리타겟팅 캠페인을 실행하고 있습니다. 그 브랜드는 새로운 판촉 오퍼와 함께 작년에 있었던 모든 손님들을 다시 타겟팅하고 싶어한다. 브랜드는에서 모든 게스트 정보를 호스팅합니다. [!DNL Real-Time CDP]. 브랜드는 해당 브랜드에서 게스트의 해시된 이메일 ID로 구성된 세그먼트를 공유할 수 있습니다 [!DNL Real-Time CDP] 미디어 캠페인을 통해 게스트를 재타겟팅하기 위해 미디어 에이전시의 DSP 계정에 연결합니다.
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 * 와 세그먼트 공유를 활성화하는 DSP 계정 수준 및 캠페인 수준 설정 [!DNL LiveRamp RampID]고객 데이터를 로 변환합니다. [!DNL RampIDs] 타겟팅 가능한 세그먼트를 만듭니다. DSP 계정 팀이 이 구성을 수행합니다. [!DNL RampID] 는 DSP과 간의 파트너십을 통해 사용할 수 있습니다. [!DNL LiveRamp], 그리고 자신의 것은 필요 없습니다 [!DNL LiveRamp] 멤버십을 사용하여 쿠키를 사용할 수 있습니다.
 * Experience Platform 계정용 Experience Cloud 조직 ID입니다. ID는 [!DNL Real-Time CDP] 사용자 프로필 페이지입니다.

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;예약된 쿼리;예약된 쿼리
+keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;예약된 쿼리;예약된 쿼리;
 solution: Experience Platform
 title: 일정 끝점
-description: 다음 섹션에서는 Query Service API를 사용하는 예약된 쿼리에 사용할 수 있는 다양한 API 호출을 안내합니다.
+description: 다음 섹션에서는 쿼리 서비스 API를 사용하여 예약된 쿼리에 대해 수행할 수 있는 다양한 API 호출을 안내합니다.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 2%
 
 ---
 
-# 끝점 예약
+# 일정 끝점
 
 ## 샘플 API 호출
 
-이제 사용할 헤더를 이해하므로 을 호출할 준비가 되었습니다. [!DNL Query Service] API. 다음 섹션에서는 를 사용하여 수행할 수 있는 다양한 API 호출을 살펴봅니다 [!DNL Query Service] API. 각 호출에는 일반 API 형식, 필수 헤더를 보여주는 샘플 요청 및 샘플 응답이 포함되어 있습니다.
+사용할 헤더를 이해했으므로 이제 [!DNL Query Service] API. 다음 섹션에서는 를 사용하여 수행할 수 있는 다양한 API 호출을 살펴봅니다 [!DNL Query Service] API. 각 호출에는 일반 API 형식, 필요한 헤더를 보여주는 샘플 요청 및 샘플 응답이 포함됩니다.
 
 ### 예약된 쿼리 목록 검색
 
-에 GET 요청을 작성하여 조직에 대해 예약된 모든 질의 목록을 검색할 수 있습니다 `/schedules` 엔드포인트.
+에 GET 요청을 하여 조직에 대해 모든 예약된 쿼리 목록을 검색할 수 있습니다. `/schedules` 엔드포인트.
 
 **API 형식**
 
@@ -30,22 +30,22 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*선택 사항입니다*) 응답에서 반환된 결과를 구성하는 요청 경로에 매개 변수가 추가되었습니다. 여러 매개 변수를 앰퍼샌드( )로 구분하여 포함할 수 있습니다`&`). 사용 가능한 매개 변수는 아래에 나와 있습니다. |
+| `{QUERY_PARAMETERS}` | (*선택 사항*) 응답에서 반환된 결과를 구성하는 요청 경로에 추가된 매개 변수입니다. 여러 매개 변수를 포함할 수 있으며 앰퍼샌드(`&`). 사용 가능한 매개 변수는 아래에 나와 있습니다. |
 
 **쿼리 매개 변수**
 
-다음은 예약된 쿼리를 나열할 수 있는 사용 가능한 쿼리 매개 변수 목록입니다. 이러한 매개 변수는 모두 선택 사항입니다. 매개 변수 없이 이 종단점을 호출하면 조직에 사용할 수 있는 예약된 쿼리를 모두 검색합니다.
+다음은 예약된 쿼리를 나열하기 위해 사용할 수 있는 쿼리 매개 변수의 목록입니다. 이러한 매개 변수는 모두 선택 사항입니다. 매개 변수 없이 이 끝점을 호출하면 조직에서 사용할 수 있는 모든 예약된 쿼리를 검색합니다.
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
-| `orderby` | 결과를 정렬할 필드를 지정합니다. 지원되는 필드는 다음과 같습니다 `created` 및 `updated`. 예, `orderby=created` 은(는) 결과를 오름차순으로 정렬하게 됩니다. 추가 `-` 생성 전(`orderby=-created`)은 내림차순으로 만든 항목을 정렬합니다. |
-| `limit` | 페이지에 포함된 결과 수를 제어할 페이지 크기 제한을 지정합니다. (*기본값: 20년*) |
-| `start` | 영(0) 기반 번호 지정을 사용하여 응답 목록을 오프셋합니다. 예, `start=2` 세 번째 나열된 쿼리에서 시작하는 목록을 반환합니다. (*기본값: 0*) |
-| `property` | 필드를 기반으로 결과를 필터링합니다. 필터 **반드시** HTML 이스케이프 처리됨. 쉼표는 여러 필터 세트를 결합하는 데 사용됩니다. 지원되는 필드는 다음과 같습니다 `created`, `templateId`, 및 `userId`. 지원되는 연산자 목록은 다음과 같습니다 `>` (보다 큼), `<` (보다 작음), 및 `==` (같음). 예, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` 은 사용자 ID가 지정된 대로 예약된 쿼리를 모두 반환합니다. |
+| `orderby` | 결과를 정렬하는 데 사용할 필드를 지정합니다. 지원되는 필드는 다음과 같습니다. `created` 및 `updated`. 예를 들어, `orderby=created` 생성된 항목별로 오름차순으로 결과를 정렬합니다. 추가 `-` 만들기 전(`orderby=-created`)은 만들어진 항목별로 내림차순으로 정렬합니다. |
+| `limit` | 페이지에 포함된 결과 수를 제어할 페이지 크기 제한을 지정합니다. (*기본값: 20*) |
+| `start` | 0 기반 번호 매기기를 사용하여 응답 목록을 오프셋합니다. 예를 들어, `start=2` 세 번째로 나열된 쿼리에서 시작하는 목록을 반환합니다. (*기본값: 0*) |
+| `property` | 필드를 기반으로 결과를 필터링합니다. 필터 **필수** HTML 이스케이프 처리. 쉼표는 여러 필터 세트를 결합하는 데 사용됩니다. 지원되는 필드는 다음과 같습니다. `created`, `templateId`, 및 `userId`. 지원되는 연산자 목록은 다음과 같습니다 `>` (보다 큼), `<` (보다 작음) 및 `==` (와 같음). 예를 들어, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` 은 사용자 ID가 지정된 대로 모든 예약된 쿼리를 반환합니다. |
 
 **요청**
 
-다음 요청은 조직에 대해 만들어진 최신 예약된 쿼리를 검색합니다.
+다음 요청은 조직에 대해 생성된 가장 최근의 예약된 쿼리를 검색합니다.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **응답**
 
-성공적인 응답은 지정된 조직에 대해 예약된 쿼리 목록과 함께 HTTP 상태 200을 반환합니다. 다음 응답은 조직에 대해 작성된 최신 예약된 쿼리를 반환합니다.
+성공적인 응답은 지정된 조직에 대해 예약된 쿼리 목록과 함께 HTTP 상태 200을 반환합니다. 다음 응답은 조직에 대해 생성된 가장 최근의 예약된 쿼리를 반환합니다.
 
 ```json
 {
@@ -123,7 +123,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 ### 새 예약된 쿼리 만들기
 
-에 POST 요청을 만들어 예약된 새 쿼리를 만들 수 있습니다 `/schedules` 엔드포인트. API에서 예약된 쿼리를 만들면 쿼리 편집기에서 볼 수도 있습니다. UI의 예약된 쿼리에 대한 자세한 내용은 [쿼리 편집기 설명서](../ui/user-guide.md#scheduled-queries).
+에 POST 요청을 하여 새 예약된 쿼리를 만들 수 있습니다. `/schedules` 엔드포인트. API에서 예약된 쿼리를 만들면 쿼리 편집기에서도 볼 수 있습니다. UI의 예약된 쿼리에 대한 자세한 내용은 [쿼리 편집기 설명서](../ui/user-guide.md#scheduled-queries).
 
 **API 형식**
 
@@ -157,15 +157,15 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `query.dbName` | 예약된 쿼리를 만들 데이터베이스의 이름입니다. |
-| `query.sql` | 만들 SQL 쿼리 |
+| `query.dbName` | 예약된 쿼리를 만드는 데이터베이스의 이름입니다. |
+| `query.sql` | 만들려는 SQL 쿼리입니다. |
 | `query.name` | 예약된 쿼리의 이름입니다. |
-| `schedule.schedule` | 쿼리의 크론 일정입니다. 크론 예약에 대한 자세한 내용은 [cron 식 형식](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 설명서. 이 예에서 &quot;30 * * * *&quot;는 쿼리가 30분 표시에서 매시간마다 실행됨을 의미합니다.<br><br>또는 다음 축약식을 사용할 수 있습니다.<ul><li>`@once`: 쿼리는 한 번만 실행됩니다.</li><li>`@hourly`: 쿼리는 매시간 시작 시 실행됩니다. 이는 cron 표현식과 같습니다 `0 * * * *`.</li><li>`@daily`: 쿼리는 하루에 한 번 자정에 실행됩니다. 이는 cron 표현식과 같습니다 `0 0 * * *`.</li><li>`@weekly`: 이 쿼리는 매주 한 번, 일요일, 자정에 실행됩니다. 이는 cron 표현식과 같습니다 `0 0 * * 0`.</li><li>`@monthly`: 쿼리는 한 달에 한 번, 그 달의 첫 번째 날, 자정에 실행됩니다. 이는 cron 표현식과 같습니다 `0 0 1 * *`.</li><li>`@yearly`: 이 쿼리는 1월 1일 자정, 1년에 한 번 실행됩니다. 이는 cron 표현식과 같습니다 `1 0 0 1 1 *`. |
+| `schedule.schedule` | 쿼리에 대한 cron 일정. cron 일정에 대한 자세한 내용은 [cron 표현식 형식](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 설명서를 참조하십시오. 이 예에서 &quot;30 * * * *&quot;는 쿼리가 매 시간마다 30분 표시에 실행됨을 의미합니다.<br><br>또는 다음과 같은 축약 표현식을 사용할 수 있습니다.<ul><li>`@once`: 쿼리가 한 번만 실행됩니다.</li><li>`@hourly`: 쿼리가 매시간 시작 시간에 실행됩니다. 이는 cron 표현식과 같습니다 `0 * * * *`.</li><li>`@daily`: 쿼리가 매일 자정에 한 번 실행됩니다. 이는 cron 표현식과 같습니다 `0 0 * * *`.</li><li>`@weekly`: 쿼리가 일주일에 한 번, 일요일 자정에 실행됩니다. 이는 cron 표현식과 같습니다 `0 0 * * 0`.</li><li>`@monthly`: 쿼리가 한 달에 한 번, 그 달의 첫날 자정에 실행됩니다. 이는 cron 표현식과 같습니다 `0 0 1 * *`.</li><li>`@yearly`: 쿼리가 1년에 한 번, 1월 1일 자정에 실행됩니다. 이는 cron 표현식과 같습니다 `1 0 0 1 1 *`. |
 | `schedule.startDate` | UTC 타임스탬프로 작성된 예약된 쿼리의 시작 날짜입니다. |
 
 **응답**
 
-성공적인 응답은 새로 만든 예약된 쿼리의 세부 정보와 함께 HTTP 상태 202(허용됨)를 반환합니다. 예약된 쿼리 활성화가 끝나면 `state` 이(가) `REGISTERING` to `ENABLED`.
+성공적인 응답은 새로 생성된 예약된 쿼리의 세부 정보와 함께 HTTP 상태 202(허용됨)를 반환합니다. 예약된 쿼리의 활성화가 완료되면 `state` 다음에서 변경됨: `REGISTERING` 끝 `ENABLED`.
 
 ```json
 {
@@ -218,11 +218,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 >[!NOTE]
 >
->다음 값을 사용할 수 있습니다. `_links.delete` to [만든 예약된 쿼리 삭제](#delete-a-specified-scheduled-query).
+>다음 값을 사용할 수 있습니다. `_links.delete` 끝 [생성된 예약된 쿼리 삭제](#delete-a-specified-scheduled-query).
 
-### 지정된 예약된 쿼리의 요청 세부 정보
+### 지정된 예약된 쿼리의 세부 정보 요청
 
-에 GET 요청을 수행하여 특정 예약된 쿼리에 대한 정보를 검색할 수 있습니다 `/schedules` 엔드포인트 및 요청 경로에 해당 ID 제공.
+에 GET 요청을 하여 특정 예약된 쿼리에 대한 정보를 검색할 수 있습니다. `/schedules` 엔드포인트 및 요청 경로에 해당 ID 제공
 
 **API 형식**
 
@@ -301,17 +301,17 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 >[!NOTE]
 >
->다음 값을 사용할 수 있습니다. `_links.delete` to [만든 예약된 쿼리 삭제](#delete-a-specified-scheduled-query).
+>다음 값을 사용할 수 있습니다. `_links.delete` 끝 [생성된 예약된 쿼리 삭제](#delete-a-specified-scheduled-query).
 
 ### 지정된 예약된 쿼리의 세부 정보 업데이트
 
-에 PATCH 요청을 수행하여 지정된 예약된 쿼리의 세부 사항을 업데이트할 수 있습니다 `/schedules` 엔드포인트 및 요청 경로에 해당 ID를 제공하여 채워집니다.
+에 PATCH 요청을 하여 지정된 예약된 쿼리에 대한 세부 정보를 업데이트할 수 있습니다. `/schedules` 엔드포인트 및 요청 경로에 해당 ID를 제공
 
 PATCH 요청은 두 개의 서로 다른 경로를 지원합니다. `/state` 및 `/schedule/schedule`.
 
 ### 예약된 쿼리 상태 업데이트
 
-을 설정하여 선택한 예약된 쿼리의 상태를 업데이트할 수 있습니다 `path` 속성 대상 `/state` 그리고 `value` property `enable` 또는 `disable`.
+다음을 설정하여 선택한 예약된 쿼리의 상태를 업데이트할 수 있습니다. `path` 다음으로 속성: `/state` 및 `value` 다음 중 하나의 속성 `enable` 또는 `disable`.
 
 **API 형식**
 
@@ -326,7 +326,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 **요청**
 
-이 API 요청은 페이로드에 JSON 패치 구문을 사용합니다. JSON 패치 작동 방식에 대한 자세한 내용은 API 기본 사항 문서를 참조하십시오.
+이 API 요청은 페이로드에 JSON 패치 구문을 사용합니다. JSON 패치의 작동 방식에 대한 자세한 내용은 API 기본 사항 문서를 참조하십시오.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm
@@ -348,8 +348,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 | 속성 | 설명 |
 | -------- | ----------- |
 | `op` | 쿼리 일정에 대해 수행할 작업입니다. 허용되는 값은 입니다. `replace`. |
-| `path` | 패치할 값의 경로입니다. 이 경우 예약된 쿼리의 상태를 업데이트하므로 값을 설정해야 합니다 `path` to `/state`. |
-| `value` | 의 업데이트된 값 `/state`. 이 값은 로 설정할 수 있습니다. `enable` 또는 `disable` 예약된 쿼리를 활성화하거나 비활성화합니다. |
+| `path` | 패치할 값의 경로입니다. 이 경우 예약된 쿼리의 상태를 업데이트하므로 값을 설정해야 합니다. `path` 끝 `/state`. |
+| `value` | 의 업데이트된 값 `/state`. 이 값은 다음으로 설정할 수 있습니다. `enable` 또는 `disable` 예약된 쿼리를 활성화하거나 비활성화합니다. |
 
 **응답**
 
@@ -364,7 +364,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### 예약된 쿼리 일정 업데이트
 
-을 설정하여 예약된 쿼리의 cron 일정을 업데이트할 수 있습니다. `path` 속성 대상 `/schedule/schedule` 를 입력합니다. 크론 예약에 대한 자세한 내용은 [cron 식 형식](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 설명서.
+다음을 설정하여 예약된 쿼리의 cron 일정을 업데이트할 수 있습니다. `path` 다음으로 속성: `/schedule/schedule` 를 입력합니다. cron 일정에 대한 자세한 내용은 [cron 표현식 형식](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 설명서를 참조하십시오.
 
 **API 형식**
 
@@ -378,7 +378,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 **요청**
 
-이 API 요청은 페이로드에 JSON 패치 구문을 사용합니다. JSON 패치 작동 방식에 대한 자세한 내용은 API 기본 사항 문서를 참조하십시오.
+이 API 요청은 페이로드에 JSON 패치 구문을 사용합니다. JSON 패치의 작동 방식에 대한 자세한 내용은 API 기본 사항 문서를 참조하십시오.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm
@@ -400,8 +400,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 | 속성 | 설명 |
 | -------- | ----------- |
 | `op` | 쿼리 일정에 대해 수행할 작업입니다. 허용되는 값은 입니다. `replace`. |
-| `path` | 패치할 값의 경로입니다. 이 경우 예약된 쿼리의 일정을 업데이트하므로 값을 설정해야 합니다 `path` to `/schedule/schedule`. |
-| `value` | 의 업데이트된 값 `/schedule`. 이 값은 크론 예약의 형식이어야 합니다. 따라서 이 예제에서 예약된 쿼리는 45분 표시에서 매시간마다 실행됩니다. |
+| `path` | 패치할 값의 경로입니다. 이 경우 예약된 쿼리의 일정을 업데이트하므로 값을 설정해야 합니다. `path` 끝 `/schedule/schedule`. |
+| `value` | 의 업데이트된 값 `/schedule`. 이 값은 cron schedule 형식이어야 합니다. 따라서 이 예에서는 예약된 쿼리가 매 시간 45분 표시에 실행됩니다. |
 
 **응답**
 
@@ -416,11 +416,11 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### 지정된 예약된 쿼리 삭제
 
-에 DELETE 요청을 수행하여 지정된 예약된 쿼리를 삭제할 수 있습니다 `/schedules` 끝점을 제공하고 요청 경로에서 삭제할 예약된 쿼리의 ID를 제공합니다.
+에 DELETE 요청을 하여 지정된 예약된 쿼리를 삭제할 수 있습니다. `/schedules` 엔드포인트 및 요청 경로에서 삭제하려는 예약된 쿼리의 ID 제공
 
 >[!NOTE]
 >
->예약 **반드시** 삭제하기 전에 비활성화하십시오.
+>일정 **필수** 삭제하기 전에 비활성화하십시오.
 
 **API 형식**
 

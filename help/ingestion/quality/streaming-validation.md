@@ -79,7 +79,7 @@ ht-degree: 3%
 POST /collection/{CONNECTION_ID}?syncValidation=true
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | 다음 `id` 이전에 만든 스트리밍 연결의 값입니다. |
 
@@ -93,7 +93,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
   -d '{JSON_PAYLOAD}'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{JSON_PAYLOAD}` | 수집하려는 데이터의 JSON 본문. |
 
@@ -156,7 +156,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 POST /collection/{CONNECTION_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | 다음 `id` 이전에 만든 스트리밍 연결의 값입니다. |
 
@@ -170,7 +170,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
   -d '{JSON_PAYLOAD}'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{JSON_PAYLOAD}` | 수집하려는 데이터의 JSON 본문. |
 

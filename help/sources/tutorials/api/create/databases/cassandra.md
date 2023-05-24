@@ -102,7 +102,7 @@ curl -X POST \
     }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `auth.params.host` | 의 IP 주소 또는 호스트 이름 [!DNL Cassandra] 서버입니다. |
 | `auth.params.port` | 이 작동하는 TCP 포트 [!DNL Cassandra] 서버는 를 사용하여 클라이언트 연결을 수신합니다. 기본 포트는 입니다. `9042`. |

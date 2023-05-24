@@ -1,5 +1,5 @@
 ---
-description: 이 페이지에서는 /testing/destinationInstance API 엔드포인트를 사용하여 테스트 결과의 전체 세부 사항을 보는 방법에 대해 설명합니다. 이 API 종단점은 Flow Service API를 사용하여 데이터 흐름을 모니터링할 때 얻을 것과 동일한 결과를 반환합니다.
+description: 이 페이지에서는 /testing/destinationInstance API 끝점을 사용하여 테스트 결과에 대한 전체 세부 정보를 보는 방법에 대해 설명합니다. 이 API 끝점은 흐름 서비스 API를 사용하여 데이터 흐름을 모니터링할 때 얻는 것과 동일한 결과를 반환합니다.
 title: 자세한 활성화 결과 보기
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
 source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
@@ -13,36 +13,36 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-이 페이지에서는 를 사용하는 방법을 설명합니다. `/testing/destinationInstance` 파일 기반 대상 테스트 결과의 전체 세부 사항을 보는 API 엔드포인트.
+이 페이지에서는 사용 방법을 설명합니다. `/testing/destinationInstance` 파일 기반 대상 테스트 결과의 전체 세부 정보를 보기 위한 API 엔드포인트.
 
-이미 [대상을 테스트했습니다.](file-based-destination-testing-api.md) 유효한 API 응답을 수신했습니다. 대상이 올바르게 작동합니다.
+이미 가지고 있다면 [대상을 테스트했습니다.](file-based-destination-testing-api.md) 유효한 API 응답을 받았으며, 대상이 올바르게 작동합니다.
 
-활성화 흐름에 대한 자세한 정보를 보려면 `results` 속성 [대상 테스트](file-based-destination-testing-api.md) 아래에 자세히 설명된 대로 엔드포인트 응답.
+활성화 흐름에 대한 자세한 정보를 보려면 `results` 의 속성 [대상 테스트](file-based-destination-testing-api.md) 아래 더 설명된 대로 엔드포인트 응답.
 
 >[!NOTE]
 >
->이 API 종단점은 를 사용할 때와 동일한 결과를 반환합니다 [Flow Service API](../../../api/update-destination-dataflows.md) 데이터 흐름을 모니터링하려면 다음을 수행하십시오.
+>이 API 끝점은 를 사용할 때 얻은 것과 동일한 결과를 반환합니다. [플로우 서비스 API](../../../api/update-destination-dataflows.md) 데이터 흐름을 모니터링합니다.
 
 ## 시작하기 {#getting-started}
 
-계속하기 전에 [시작 안내서](../../getting-started.md) api를 성공적으로 호출하기 위해 알고 있어야 하는 중요한 정보(필수 대상 작성 권한 및 필수 헤더를 가져오는 방법)입니다.
+계속하기 전에 다음을 검토하십시오. [시작 안내서](../../getting-started.md) 필수 대상 작성 권한 및 필수 헤더를 가져오는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보입니다.
 
 ## 사전 요구 사항 {#prerequisites}
 
-를 사용하기 전에 `/testing/destinationInstance` endpoint, 다음 조건을 충족하는지 확인하십시오.
+을(를) 사용하기 전에 `/testing/destinationInstance` 엔드포인트입니다. 다음 조건을 충족하는지 확인하십시오.
 
-* Destination SDK을 통해 만든 기존 파일 기반 대상이 있으며 [대상 카탈로그](../../../ui/destinations-workspace.md).
-* Experience Platform UI에서 대상에 대해 하나 이상의 활성화 흐름을 만들었습니다.
-* API 요청을 성공적으로 수행하려면 테스트할 대상 인스턴스에 해당하는 대상 인스턴스 ID가 필요합니다. Platform UI에서 대상과의 연결을 검색할 때 URL에서 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다.
+* Destination SDK을 통해 생성된 기존 파일 기반 대상이 있으며 [대상 카탈로그](../../../ui/destinations-workspace.md).
+* Experience Platform UI에서 대상에 대한 활성화 흐름을 하나 이상 만들었습니다.
+* API 요청을 성공적으로 수행하려면 테스트할 대상 인스턴스에 해당하는 대상 인스턴스 ID가 필요합니다. Platform UI에서 대상과의 연결을 검색할 때 API 호출에 사용해야 하는 대상 인스턴스 ID를 URL에서 가져옵니다.
 
-   ![URL에서 대상 인스턴스 ID를 가져오는 방법을 보여주는 UI 이미지입니다.](../../assets/testing-api/get-destination-instance-id.png)
-* 이전에 [대상 구성을 테스트했습니다.](file-based-destination-testing-api.md), 및 가 다음을 포함한 유효한 API 응답을 수신했습니다. `results` 속성을 사용합니다. 다음 항목을 사용합니다 `results` 값을 사용하여 대상을 추가로 테스트할 수 있습니다.
+   ![URL에서 대상 인스턴스 ID를 가져오는 방법을 보여 주는 UI 이미지입니다.](../../assets/testing-api/get-destination-instance-id.png)
+* 이전에 다음을 수행했습니다. [대상 구성을 테스트했습니다.](file-based-destination-testing-api.md)및 이(가) 다음을 포함하는 유효한 API 응답을 수신했습니다. `results` 속성. 이 항목을 사용합니다. `results` 대상을 추가로 테스트할 값입니다.
 
 ## 자세한 대상 테스트 결과 보기 {#test-activation-results}
 
-한번 드시면 [대상 구성을 검증했습니다.](file-based-destination-testing-api.md)에 대한 GET 요청을 수행하여 세부 활성화 결과를 볼 수 있습니다. `authoring/testing/destinationInstance/` 테스트할 대상의 대상 인스턴스 ID와 활성화된 세그먼트의 흐름 실행 ID를 제공하는 종단점입니다.
+다음 작업을 완료하면 [대상 구성을 확인했습니다.](file-based-destination-testing-api.md)에 GET 요청을 하여 자세한 활성화 결과를 볼 수 있습니다. `authoring/testing/destinationInstance/` 엔드포인트 및 테스트 중인 대상의 대상 인스턴스 ID 제공과 활성화된 세그먼트의 흐름 실행 ID.
 
-에서 사용해야 하는 전체 API URL을 찾을 수 있습니다. `results` 에서 반환된 속성 [대상 테스트 호출 응답](file-based-destination-testing-api.md).
+에서 사용해야 하는 전체 API URL을 찾을 수 있습니다. `results` 에서 반환된 속성 [대상 테스트 호출의 응답](file-based-destination-testing-api.md).
 
 **API 형식**
 
@@ -52,11 +52,11 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | 경로 매개 변수 | 설명 |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | 샘플 프로필을 생성하는 대상 인스턴스의 ID입니다. 자세한 내용은 [전제 조건](#prerequisites) 섹션을 참조하십시오. |
+| `{DESTINATION_INSTANCE_ID}` | 샘플 프로필을 생성하고 있는 대상 인스턴스의 ID입니다. 다음을 참조하십시오. [전제 조건](#prerequisites) 섹션 을 참조하십시오. |
 
 | 쿼리 문자열 매개 변수 | 설명 |
 | -------- | ----------- |
-| `flowRunIds` | 활성화된 세그먼트에 해당하는 흐름 실행 ID입니다. 흐름 실행 ID는 `results` 에서 반환된 속성 [대상 테스트 호출 응답](file-based-destination-testing-api.md). |
+| `flowRunIds` | 활성화된 세그먼트에 해당하는 흐름 실행 ID입니다. 흐름 실행 ID는에서 찾을 수 있습니다. `results` 에서 반환된 속성 [대상 테스트 호출의 응답](file-based-destination-testing-api.md). |
 
 **요청**
 
@@ -71,7 +71,7 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/testing/de
 
 **응답**
 
-응답에는 활성화 흐름의 전체 세부 정보가 포함되어 있습니다. 를 호출하여 동일한 응답을 얻을 수 있습니다 [Flow Service API](../../../api/update-destination-dataflows.md) 데이터 흐름을 모니터링하려면 다음을 수행하십시오.
+응답에는 활성화 흐름에 대한 전체 세부 정보가 포함됩니다. 를 호출하여 동일한 응답을 얻을 수 있습니다. [플로우 서비스 API](../../../api/update-destination-dataflows.md) 데이터 흐름을 모니터링합니다.
 
 ```json
 {
@@ -213,10 +213,10 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/testing/de
 
 ## API 오류 처리 {#api-error-handling}
 
-Destination SDK API 엔드포인트는 일반 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오. [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors) 을 참조하십시오.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors) 플랫폼 문제 해결 안내서에서 확인할 수 있습니다.
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 파일 기반 대상 구성을 테스트하고 활성화 결과의 전체 세부 사항을 확인하는 방법을 알 수 있습니다.
+이제 이 문서를 읽고 파일 기반 대상 구성을 테스트하고 활성화 결과에 대한 전체 세부 정보를 확인하는 방법을 알 수 있습니다.
 
-이제 공개 대상을 만드는 경우 [대상 구성 제출](../../guides/submit-destination.md) Adobe을 참조하십시오.
+공용 대상을 구축하는 경우 이제 다음 작업을 수행할 수 있습니다 [대상 구성 제출](../../guides/submit-destination.md) 검토를 위해 Adobe.

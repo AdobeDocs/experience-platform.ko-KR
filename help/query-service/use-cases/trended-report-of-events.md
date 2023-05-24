@@ -2,7 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;experienceevent 쿼리;experienceevent 쿼리;경험 이벤트 쿼리;
 title: 이벤트의 트렌드 보고서 만들기
 description: Experience Events 를 사용하여 날짜별로 그룹화된, 지정된 날짜 범위 동안의 이벤트에 대한 트렌드 보고서를 만드는 쿼리를 작성하는 방법에 대해 알아봅니다.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%

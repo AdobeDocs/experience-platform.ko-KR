@@ -2,13 +2,13 @@
 title: Pega 프로필 커넥터
 description: Adobe Experience Platform의 Amazon S3용 Pega Profile Connector를 사용하여 전체 또는 증분, 또는 둘 다 프로필 데이터를 Amazon S3 클라우드 스토리지로 내보냅니다. Pega 고객 의사 결정 허브에서 고객 프로필 디자이너에서 데이터 작업을 예약하여 Amazon S3 스토리지에서 정기적으로 프로필 데이터를 가져올 수 있습니다.
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+exl-id: f422f21b-174a-4b93-b05d-084b42623314
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1080'
 ht-degree: 0%
 
 ---
-
 
 # Pega 프로필 커넥터
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 마케터는에서 사용할 수 있는 Adobe Experience Platform의 최신 프로필 데이터를 원합니다. [!DNL Pega Customer Decision Hub] 이를 통해 고객 프로필에 대한 페가의 통찰력이 지속적으로 향상됩니다.
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 이 대상을 사용하여 Adobe Experience Platform에서 데이터를 내보내고 프로필을 로 가져오기 전에 [!DNL Pega Customer Decision Hub]를 설치한 후 다음 사전 요구 사항을 완료하십시오.
 
@@ -131,6 +131,3 @@ S3에서 프로필 데이터를 성공적으로 가져오면 데이터가 [!DNL 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
 모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스 시행, 다음을 참조하십시오. [데이터 거버넌스 개요](/help/data-governance/home.md).
-
-
-

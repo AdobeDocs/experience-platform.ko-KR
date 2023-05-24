@@ -336,7 +336,7 @@ curl -X GET \
 GET /engines/{ENGINE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{ENGINE_ID}` | 기존 엔진의 ID. |
 
@@ -413,7 +413,7 @@ curl -X GET \
 PUT /engines/{ENGINE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{ENGINE_ID}` | 기존 엔진의 ID. |
 
@@ -481,7 +481,7 @@ curl -X PUT \
 DELETE /engines/{ENGINE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{ENGINE_ID}` | 기존 엔진의 ID. |
 

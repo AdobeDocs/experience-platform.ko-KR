@@ -3,7 +3,8 @@ title: 셀프서비스 소스 시작하기(Streaming SDK)
 description: 이 문서에서는 셀프서비스 소스(Streaming SDK)를 사용하여 새 소스를 만들기 전에 알아야 하는 전제 조건 정보에 대해 소개합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 7744fef9751212a40f8f20df52812d38130c42fc
+exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%
@@ -37,7 +38,7 @@ Experience Platform에서 소스를 구성하는 단계별 프로세스는 아�
 * [API 설명서 템플릿](../assets/streaming/streaming-template-api.zip)
 * [UI 설명서 템플릿](../assets/streaming/streaming-template-ui.zip)
 
-## 전제 조건
+## 사전 요구 사항
 
 >[!IMPORTANT]
 >

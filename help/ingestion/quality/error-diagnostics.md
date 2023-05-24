@@ -154,7 +154,7 @@ GET /catalog/batches/{BATCH_ID}
 GET /catalog/batches/{BATCH_ID}?{FILTER}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{BATCH_ID}` | 다음 `id` 상태를 확인할 배치 값입니다. |
 | `{FILTER}` | 응답에서 반환된 결과를 필터링하는 데 사용되는 쿼리 매개 변수입니다. 여러 매개 변수는 앰퍼샌드(`&`). 자세한 내용은 의 안내서를 참조하십시오. [카탈로그 데이터 필터링](../../catalog/api/filter-data.md). |
@@ -327,7 +327,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 GET /export/batches/{BATCH_ID}/meta?path=row_errors
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{BATCH_ID}` | 다음 `id` 오류 정보를 검색 중인 일괄 처리의 값입니다. |
 

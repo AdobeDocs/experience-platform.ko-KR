@@ -40,7 +40,7 @@ Mixin은 개인, 메일 주소 또는 웹 브라우저 환경과 같이 특정 �
 GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{CONTAINER_ID}` | Mixin을 검색할 컨테이너: `global` Adobe 생성 mixin 또는 `tenant` 조직에서 소유한 mixin용. |
 | `{QUERY_PARAMS}` | 결과를 필터링 기준으로 사용할 선택적 쿼리 매개 변수입니다. 다음을 참조하십시오. [부록 문서](./appendix.md#query) 사용 가능한 매개 변수 목록입니다. |
@@ -126,7 +126,7 @@ GET 요청 경로에 mixin의 ID를 포함하여 특정 mixin을 조회할 수 �
 GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{CONTAINER_ID}` | 검색할 mixin을 저장하는 컨테이너입니다. `global` Adobe 생성 mixin 또는 `tenant` 조직 소유의 mixin. |
 | `{MIXIN_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 찾아보려는 mixin의 |
@@ -407,7 +407,7 @@ PUT 작업을 통해 전체 mixin을 바꾸고 리소스를 다시 작성할 수
 PUT /tenant/mixins/{MIXIN_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MIXIN_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 다시 작성하려는 mixin의 일부. |
 
@@ -592,7 +592,7 @@ PATCH 요청을 사용하여 mixin의 일부를 업데이트할 수 있습니다
 PATCH /tenant/mixin/{MIXIN_ID} 
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MIXIN_ID}` | URL로 인코딩됨 `$id` URI 또는 `meta:altId` 업데이트할 mixin의 |
 
@@ -731,7 +731,7 @@ curl -X PATCH \
 DELETE /tenant/mixins/{MIXIN_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MIXIN_ID}` | URL로 인코딩됨 `$id` URI 또는 `meta:altId` 삭제할 mixin의 일부입니다. |
 

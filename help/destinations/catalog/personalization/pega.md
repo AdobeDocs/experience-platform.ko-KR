@@ -33,7 +33,7 @@ Adobe Experience Platform의 프로필 세그먼트 멤버십( 로 로드됨) [!
 
 마케터는 연금 제도 또는 퇴직 연금 제도 뉴스레터를 구독하거나 구독 취소한 고객을 위해 오퍼를 최적화하려고 합니다. 금융 서비스 회사는 자체 CRM에서 여러 고객 ID를 Adobe Experience Platform으로 수집하고, 자체 오프라인 데이터에서 세그먼트를 작성하고, 세그먼트를 입력 및 종료하는 프로필을 로 보낼 수 있습니다. [!DNL Pega Customer Decision Hub] 아웃바운드 채널의 다음 베스트 액션(NBA) 의사 결정용.
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 이 대상을 사용하여 Adobe Experience Platform에서 데이터를 내보내려면 먼저 의 다음 사전 요구 사항을 완료해야 합니다. [!DNL Pega Customer Decision Hub]:
 

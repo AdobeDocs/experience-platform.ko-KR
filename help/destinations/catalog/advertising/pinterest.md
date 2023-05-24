@@ -19,7 +19,7 @@ ht-degree: 3%
 >
 >이 대상은 Pinterest 팀이 빌드했습니다. 문의 사항이나 업데이트 요청은 https://help.pinterest.com/en/contact으로 직접 문의하시기 바랍니다.
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 * 사용자는 대상을 추가하려는 광고주 계정에 액세스할 수 있는 Pinterest 계정을 사용하여 인증해야 합니다. 광고주 계정 공유에 대한 세부 정보를 찾을 수 있습니다 [여기](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). 특히, 사용자는 &quot;대상&quot; 액세스 수준이 필요합니다.
 * 고객 목록 ID 형식에 대한 자세한 내용을 찾을 수 있습니다. [여기](https://help.pinterest.com/en/business/article/audience-targeting).

@@ -1,7 +1,8 @@
 ---
 title: 분석 데이터의 머천다이징 변수 반환 및 사용
 description: Analytics 데이터 세트의 머천다이징 변수에 액세스할 수 있는 XDM 필드 및 샘플 쿼리를 제공하는 방법에 대해 알아봅니다.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1112'
 ht-degree: 4%

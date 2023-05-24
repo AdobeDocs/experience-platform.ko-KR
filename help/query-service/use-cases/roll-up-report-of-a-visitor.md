@@ -2,7 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;experienceevent 쿼리;experienceevent 쿼리;경험 이벤트 쿼리;
 title: 특정 방문자에 대한 롤업 보고서 보기
 description: 다음 문서에서는 Adobe Experience Platform 쿼리 서비스의 Experience 이벤트와 관련된 쿼리의 예를 제공합니다.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 1348503f-65c1-41f9-b111-1284a49449a1
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 1%

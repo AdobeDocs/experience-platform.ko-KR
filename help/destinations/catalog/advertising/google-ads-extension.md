@@ -22,7 +22,7 @@ ht-degree: 3%
 
 ![Google 광고 확장](../../assets/catalog/advertising/google-ads-extension/catalog.png)
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 이 확장은 Platform을 구입한 모든 고객의 대상 카탈로그에서 사용할 수 있습니다.
 

@@ -2,7 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;experienceevent 쿼리;experienceevent 쿼리;경험 이벤트 쿼리;
 title: 사용자의 페이지 보기 나열
 description: Experience Events를 사용하여 지정된 사용자가 사용한 마지막 100개 페이지의 목록을 만드는 쿼리를 작성하는 방법에 대해 알아봅니다.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 1%

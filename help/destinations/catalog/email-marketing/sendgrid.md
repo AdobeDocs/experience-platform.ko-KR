@@ -20,7 +20,7 @@ ht-degree: 2%
 
 SendGrid는 API 전달자 토큰을 인증 메커니즘으로 사용하여 SendGrid API와 통신합니다.
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 대상 구성을 시작하기 전에 다음 항목이 필요합니다.
 
@@ -34,7 +34,7 @@ SendGrid는 API 전달자 토큰을 인증 메커니즘으로 사용하여 SendG
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-SendGrid 대상으로 데이터를 활성화하기 전에 [스키마](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko-KR-KR), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 생성 위치 [!DNL Experience Platform]. 또한 다음을 참조하십시오 [제한](#limits) 이 페이지의 아래 섹션에 자세히 설명되어 있습니다.
+SendGrid 대상으로 데이터를 활성화하기 전에 [스키마](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 생성 위치 [!DNL Experience Platform]. 또한 다음을 참조하십시오 [제한](#limits) 이 페이지의 아래 섹션에 자세히 설명되어 있습니다.
 
 >[!IMPORTANT]
 >

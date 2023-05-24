@@ -246,7 +246,7 @@ curl -X POST\
 PATCH /tenant/schemas/{SCHEMA_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | URL로 인코딩됨 `$id` URI 또는 `meta:altId` 소스 스키마. |
 
@@ -377,7 +377,7 @@ curl -X POST \
   }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `@type` | 정의 중인 설명자 유형. 참조 설명자의 경우 값은 다음과 같아야 합니다. `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | 다음 `$id` 소스 스키마 URL. |
@@ -436,7 +436,7 @@ curl -X POST \
   }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `@type` | 생성할 설명자 유형. 다음 `@type` 관계 설명자의 값은 다음과 같습니다. `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | 다음 `$id` 소스 스키마 URL. |

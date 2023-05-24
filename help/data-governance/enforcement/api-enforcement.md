@@ -44,7 +44,7 @@ GET /marketingActions/core/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABEL
 GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABEL_1},{LABEL_2}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | 평가 중인 데이터 사용 정책과 연결된 마케팅 작업의 이름입니다. |
 | `{LABEL_1}` | 마케팅 작업을 테스트할 데이터 사용 레이블. 레이블을 하나 이상 제공해야 합니다. 여러 레이블을 제공할 때는 쉼표로 구분해야 합니다. |
@@ -141,7 +141,7 @@ POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
 POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | 평가 중인 정책과 연관된 마케팅 작업의 이름입니다. |
 

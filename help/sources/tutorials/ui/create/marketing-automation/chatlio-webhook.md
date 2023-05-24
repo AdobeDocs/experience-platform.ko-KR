@@ -1,8 +1,9 @@
 ---
 title: UI에서 Chatlio 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Chatlio 소스 연결을 만드는 방법을 알아봅니다.
-badge: "Beta"
-source-git-commit: c35daa60db315f1ed04ed6424464f1ae7bfb4243
+badge: 베타
+exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 1%
@@ -26,7 +27,7 @@ ht-degree: 1%
    * [스키마 편집기 튜토리얼](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 정의 스키마를 만드는 방법을 알아봅니다.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 다음 섹션에서는 다음을 만들기 전에 완료해야 하는 전제 조건에 대한 정보를 제공합니다. [!DNL Chatlio] 소스 연결.
 

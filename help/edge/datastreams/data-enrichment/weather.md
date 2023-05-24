@@ -1,13 +1,13 @@
 ---
 title: DNL The Weather Channel 의 날씨 데이터 사용
 description: DNL The Weather Channel의 날씨 데이터를 사용하여 데이터스트림을 통해 수집하는 데이터를 향상시킵니다.
-source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
+exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '672'
 ht-degree: 3%
 
 ---
-
 
 # 다음의 날씨 데이터 사용 [!DNL The Weather Channel]
 
@@ -23,7 +23,7 @@ Adobe은 [!DNL [The Weather Company]](https://www.ibm.com/weather) 데이터스�
    * **[!UICONTROL 제품 트리거]**: 다양한 유형의 제품을 구매하는 조건입니다. 예를 들어, 추운 날씨 예보는 비 코트 구입이 더 가능성이 높다는 것을 의미할 수 있습니다.
    * **[!UICONTROL 악천후 유발인자]**: 겨울 폭풍 또는 허리케인 경고와 같은 심각한 기상 경고입니다.
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 날씨 데이터를 사용하기 전에 다음 사전 요구 사항을 충족하는지 확인하십시오.
 

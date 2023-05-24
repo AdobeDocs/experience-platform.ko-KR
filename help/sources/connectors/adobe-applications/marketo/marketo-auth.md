@@ -83,7 +83,7 @@ ht-degree: 0%
 
 새 서비스에 설명 표시 이름을 입력한 다음 을(를) 선택합니다. **[!DNL Custom]** 다음에서 **[!DNL Service]** 드롭다운 메뉴. 적절한 설명을 제공한 다음 **[!DNL API Only User]** 드롭다운 메뉴. 필요한 세부 정보를 입력한 후 다음을 선택합니다. **[!DNL Create]** 새 사용자 정의 서비스를 만듭니다.
 
-![만들기](../images/marketo/create.png)
+![create](../images/marketo/create.png)
 
 ## 클라이언트 ID 및 클라이언트 암호 가져오기
 

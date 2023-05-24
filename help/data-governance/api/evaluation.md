@@ -38,7 +38,7 @@ GET /marketingActions/core/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABEL
 GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABELS_LIST}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | 데이터 사용 레이블 세트에 대해 테스트할 마케팅 작업의 이름입니다. 다음을 수행하여 사용 가능한 마케팅 작업 목록을 검색할 수 있습니다. [마케팅 작업 끝점에 대한 GET 요청](./marketing-actions.md#list). |
 | `{LABELS_LIST}` | 마케팅 작업을 테스트할 데이터 사용 레이블 이름의 쉼표로 구분된 목록입니다. 예: `duleLabels=C1,C2,C3`<br><br>레이블 이름은 대소문자를 구분합니다. 에 대/소문자를 나열할 때 올바른 대/소문자를 사용하고 있는지 확인하십시오. `duleLabels` 매개 변수. |
@@ -131,7 +131,7 @@ POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
 POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | 하나 이상의 데이터 세트에 대해 테스트할 마케팅 작업의 이름입니다. 다음을 수행하여 사용 가능한 마케팅 작업 목록을 검색할 수 있습니다. [마케팅 작업 끝점에 대한 GET 요청](./marketing-actions.md#list). |
 
@@ -362,7 +362,7 @@ POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
 POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | 데이터 세트 필드의 하위 집합에 대해 테스트할 마케팅 작업의 이름입니다. 다음을 수행하여 사용 가능한 마케팅 작업 목록을 검색할 수 있습니다. [마케팅 작업 끝점에 대한 GET 요청](./marketing-actions.md#list). |
 

@@ -37,7 +37,7 @@ ht-degree: 1%
 GET /datasets/{DATASET_ID}/labels
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{DATASET_ID}` | 고유 `id` 레이블을 조회할 데이터 세트의 값입니다. |
 
@@ -91,7 +91,7 @@ POST /datasets/{DATASET_ID}/labels
 PUT /datasets/{DATASET_ID}/labels
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{DATASET_ID}` | 고유 `id` 레이블을 만드는 데이터 세트의 값입니다. |
 

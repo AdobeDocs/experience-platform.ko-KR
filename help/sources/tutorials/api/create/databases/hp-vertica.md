@@ -87,7 +87,7 @@ curl -X POST \
     }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `auth.params.connectionString` | 와(과) 연결된 연결 문자열 [!DNL HP Vertica] 계정입니다. 에 대한 연결 문자열 패턴입니다 [!DNL HP Vertica] 은(는) `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | 다음 [!DNL HP Vertica] 연결 사양 ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |

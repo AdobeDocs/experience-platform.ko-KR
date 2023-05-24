@@ -2,18 +2,18 @@
 keywords: Experience Platform;홈;인기 항목;DULE;dule
 solution: Experience Platform
 title: 데이터 거버넌스 개요
-description: Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. 카탈로그 작성, 데이터 계보, 데이터 사용 레이블 지정, 데이터 사용 정책, 마케팅 작업을 위한 데이터 사용 제어 등 다양한 수준에서 Experience Platform 내에서 중요한 역할을 합니다
+description: Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. 이 기능은 Experience Platform 내 카탈로그 작성, 데이터 계통 확인, 데이터 사용 라벨링, 데이터 사용 정책, 마케팅 작업을 위한 데이터 사용 제어 등 다양한 수준에서 주요 역할을 합니다
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1479'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
 # 데이터 거버넌스 개요
 
-Adobe Experience Platform의 핵심 기능 중 하나는 마케터가 고객을 식별하고, 이해하고, 참여시킬 수 있도록 여러 엔터프라이즈 시스템의 데이터를 통합하는 것입니다. 이 데이터는 조직 또는 법적 규정에 의해 정의된 사용 제한이 적용될 수 있습니다. 따라서 내에서 데이터 작업을 수행하는 것이 중요합니다 [!DNL Platform] 는 데이터 사용 정책을 준수합니다.
+Adobe Experience Platform의 핵심 기능 중 하나는 마케터가 고객을 식별하고, 이해하고, 참여시킬 수 있도록 여러 엔터프라이즈 시스템의 데이터를 통합하는 것입니다. 이 데이터에는 조직 규정이나 법적 규정에 따른 사용 제한이 적용될 수 있습니다. 따라서 내에서 데이터 작업을 수행하는 것이 중요합니다 [!DNL Platform] 는 데이터 사용 정책을 준수합니다.
 
 Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. 내에서 중요한 역할을 합니다. [!DNL Experience Platform] 카탈로그 작성, 데이터 계보, 데이터 사용 레이블 지정, 데이터 사용 정책 및 마케팅 작업을 위한 데이터 사용 제어 등 다양한 수준에서 사용됩니다.
 

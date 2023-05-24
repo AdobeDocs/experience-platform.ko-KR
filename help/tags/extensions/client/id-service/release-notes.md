@@ -5,7 +5,7 @@ exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '634'
-ht-degree: 64%
+ht-degree: 65%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 64%
 
 * 이 버전에는 다음과 같은 새 업데이트가 있는 최신 Visitor 5.3.0이 포함되어 있습니다.
 
-   * 로컬 ECID를 생성하는 알고리즘이 업데이트되었습니다.
+   * 로컬 ECID를 생성하도록 알고리즘이 업데이트됩니다
    * 을 사용한 최신 옵트인 `Secure` 및 `SameSite` 개인 정보 쿠키에 대한 플래그
    * 페이지가 하위 iFrame에 로드될 때 Firefox 브라우저 문제가 해결되었습니다.
 

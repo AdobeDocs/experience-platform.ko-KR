@@ -7,13 +7,13 @@ exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '296'
-ht-degree: 3%
+ht-degree: 9%
 
 ---
 
 # [!UICONTROL 스키마] UI 개요
 
-다음 [!UICONTROL 스키마] Adobe Experience Platform 사용자 인터페이스의 작업 영역에서는 스키마, 클래스, 스키마 필드 그룹 및 데이터 유형을 포함하여 XDM(Experience Data Model) 리소스를 관리할 수 있습니다. Adobe에서 제공하는 핵심 리소스를 보고 탐색할 수 있으며, 조직에 대한 사용자 지정 리소스 및 스키마를 만들 수 있습니다.
+다음 [!UICONTROL 스키마] Adobe Experience Platform 사용자 인터페이스의 작업 영역에서는 스키마, 클래스, 스키마 필드 그룹 및 데이터 유형을 포함하여 XDM(Experience Data Model) 리소스를 관리할 수 있습니다. Adobe에서 제공하는 핵심 리소스를 보고 탐색하며 조직의 사용자 정의 리소스와 스키마를 만들 수 있습니다.
 
 Platform UI의 작업 영역에 액세스하려면 다음을 선택합니다. **[!UICONTROL 스키마]** 왼쪽 레일에서.
 

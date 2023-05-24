@@ -195,21 +195,21 @@ Experience Platform의 JupyterLab 통합은 아키텍처 변경 사항, 디자�
     </tr>
     <tr>
         <th><strong>[!DNL Python]</strong></th>
-        <td >yes</td>
-        <td >yes</td>
-        <td >yes</td>
-        <td >yes</td>
-        <td >yes</td>
-        <td >yes</td>
+        <td >예</td>
+        <td >예</td>
+        <td >예</td>
+        <td >예</td>
+        <td >예</td>
+        <td >예</td>
         <td >아니요</td>
         <td >아니요</td>
         <td >아니요</td>
     </tr>
     <tr>
         <th ><strong>R</strong></th>
-        <td >yes</td>
-        <td >yes</td>
-        <td >yes</td>
+        <td >예</td>
+        <td >예</td>
+        <td >예</td>
         <td >아니요</td>
         <td >아니요</td>
         <td >아니요</td>
@@ -220,26 +220,26 @@ Experience Platform의 JupyterLab 통합은 아키텍처 변경 사항, 디자�
       <tr>
         <th  ><strong>PySpark 3 ([!DNL Spark] 2.4)</strong></th>
         <td >아니요</td>
-        <td >yes</td>
+        <td >예</td>
         <td >아니요</td>
         <td >아니요</td>
         <td >아니요</td>
         <td >아니요</td>
-        <td >yes</td>
-        <td >yes</td>
+        <td >예</td>
+        <td >예</td>
         <td >아니요</td>
     </tr>
     <tr>
         <th ><strong>스칼라</strong></th>
-        <td >yes</td>
-        <td >yes</td>
+        <td >예</td>
+        <td >예</td>
         <td >아니요</td>
         <td >아니요</td>
         <td >아니요</td>
         <td >아니요</td>
         <td >아니요</td>
         <td >아니요</td>
-        <td >yes</td>
+        <td >예</td>
     </tr>
 </table>
 

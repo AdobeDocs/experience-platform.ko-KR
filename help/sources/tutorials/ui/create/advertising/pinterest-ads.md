@@ -2,10 +2,11 @@
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 title: UI에서 Pinterest Ads 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Pinterest Ads 소스 연결을 만드는 방법을 알아봅니다.
-badge: "Beta"
+badge: 베타
 hide: true
 hidefromtoc: true
-source-git-commit: a16264da68d9e5e9aeac86b1a3083c701407febb
+exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 2%
@@ -16,44 +17,44 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->다음 [!DNL Pinterest Ads] 소스가 베타 버전입니다. 다음 문서를 참조하십시오. [소스 개요](../../../../home.md#terms-and-conditions) 베타 레이블이 지정된 소스 사용에 대한 자세한 정보.
+>다음 [!DNL Pinterest Ads] 소스는 베타 버전입니다. 읽기 [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
-이 자습서에서는 을(를) 만드는 단계를 제공합니다 [!DNL Pinterest Ads] Adobe Experience Platform 사용자 인터페이스를 사용한 소스 커넥터.
+이 자습서에서는 다음을 만드는 단계를 제공합니다 [!DNL Pinterest Ads] Adobe Experience Platform 사용자 인터페이스를 사용하는 소스 커넥터입니다.
 
 ## 시작하기 {#getting-started}
 
-이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-   * [스키마 작성 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 빌딩 블록에 대해 알아봅니다.
-   * [스키마 편집기 자습서](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아보십시오.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 소스에서 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+   * [스키마 컴포지션 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
+   * [스키마 편집기 튜토리얼](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 정의 스키마를 만드는 방법을 알아봅니다.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
 
 ## 사전 요구 사항 {#prerequisites}
 
-연결하려면 [!DNL Pinterest Ads] Experience Platform을 수행하려면 다음 연결 속성에 값을 제공해야 합니다.
+연결하려면 [!DNL Pinterest Ads] Experience Platform을 수행하려면 다음 연결 속성에 대한 값을 제공해야 합니다.
 
-* 다음 [!DNL Pinterest] 액세스 토큰.
+* 다음 [!DNL Pinterest] 액세스 토큰입니다.
 * 다음 [!DNL Pinterest] 광고 계정 ID.
-* 다음 중 하나 [!DNL Pinterest] 캠페인, 광고 그룹 또는 광고 ID는 필요에 따라 다릅니다.
+* 다음 중 하나 [!DNL Pinterest] 필요에 따라 캠페인, 광고 그룹 또는 광고 ID입니다.
 
 이러한 연결 속성에 대한 자세한 내용은 [[!DNL Pinterest Ads] 개요](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 
 ### 플랫폼 스키마 만들기 {#create-platform-schema}
 
-또한 를 위해 사용할 플랫폼 스키마를 먼저 만들어야 합니다 [!DNL Pinterst Ads] 소스. 에서 자습서 읽기 [플랫폼 스키마 만들기](../../../../../xdm/schema/composition.md) 를 참조하십시오.
+에 사용할 플랫폼 스키마를 먼저 만들어야 합니다. [!DNL Pinterst Ads] 소스. 다음에 대한 자습서 읽기: [플랫폼 스키마 생성](../../../../../xdm/schema/composition.md) 스키마를 만드는 방법에 대한 포괄적인 단계를 설명합니다.
 
-![pinterest 광고를 위한 플랫폼 스키마 예](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
+![pinterest 광고에 대한 예제 플랫폼 스키마](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
 
-에서 지원하는 필드 목록 [!DNL Pinterest] campaign, 광고 그룹 및 광고 API는 [[!DNL Pinterest] 필드](#pinterest-fields) 섹션을 참조하십시오.
+에서 지원하는 필드 목록 [!DNL Pinterest] 캠페인, 광고 그룹 및 광고 API는 다음을 참조하십시오. [[!DNL Pinterest] 필드](#pinterest-fields) 섹션.
 
 ## 연결 [!DNL Pinterest Ads] account {#connect-account}
 
-플랫폼 UI에서 **[!UICONTROL 소스]** 왼쪽 탐색 모음에서 를 클릭하여 [!UICONTROL 소스] 작업 공간. 다음 [!UICONTROL 카탈로그] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 왼쪽 탐색 모음에서 다음 위치에 액세스: [!UICONTROL 소스] 작업 영역. 다음 [!UICONTROL 카탈로그] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-아래에 *광고* 카테고리, 선택 **[!UICONTROL Pinterest 광고]**&#x200B;를 선택한 다음 을 선택합니다. **[!UICONTROL 데이터 추가]**.
+아래 *광고* 범주, 선택 **[!UICONTROL Pinterest 광고]**&#x200B;을 선택한 다음 을 선택합니다 **[!UICONTROL 데이터 추가]**.
 
 ![Experience Platform의 소스 카탈로그.](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
 
@@ -61,13 +62,13 @@ ht-degree: 2%
 
 ### 기존 계정 {#existing-account}
 
-기존 계정을 사용하려면 [!DNL Pinterest Ads] 새 데이터 흐름을 만들 계정을 선택한 다음 **[!UICONTROL 다음]** 계속 진행합니다.
+기존 계정을 사용하려면 [!DNL Pinterest Ads] 새 데이터 흐름을 만들 계정 을 선택합니다. **[!UICONTROL 다음]** 계속합니다.
 
 ![소스 워크플로우의 기존 계정 단계입니다.](../../../../images/tutorials/create/advertising/pinterest-ads/existing.png)
 
 ### 새 계정 {#new-account}
 
-새 계정을 만드는 경우 **[!UICONTROL 새 계정]**, 그런 다음 이름, 선택적 설명 및 자격 증명을 제공합니다. 완료되면 을 선택합니다 **[!UICONTROL 소스에 연결]** 그런 다음 새 연결이 설정될 시간을 허용합니다.
+새 계정을 만드는 경우 다음을 선택합니다 **[!UICONTROL 새 계정]**&#x200B;을 누르고 이름, 설명(선택 사항) 및 자격 증명을 제공합니다. 완료되면 다음을 선택합니다. **[!UICONTROL 소스에 연결]** 그런 다음 새 연결을 설정하는 데 시간이 걸릴 수 있습니다.
 
 ![소스 워크플로우의 새 계정 단계입니다.](../../../../images/tutorials/create/advertising/pinterest-ads/new.png)
 
@@ -75,54 +76,54 @@ ht-degree: 2%
 
 ## 데이터 선택 {#select-data}
 
-다음 **[!UICONTROL 데이터 선택]** API로 전달되어 플랫폼에 가져올 데이터를 가져올 정보를 입력할 수 있는 인터페이스를 제공하는 단계가 나타납니다.
+다음 **[!UICONTROL 데이터 선택]** 원하는 데이터를 플랫폼으로 가져오기 위해 API에 전달되는 정보를 입력할 수 있는 인터페이스를 제공하는 단계가 나타납니다.
 
 | 필드 | 설명 |
 | --- | --- |
-| [!UICONTROL ad_account_id] | 사용자 [!DNL Pinterest Ads] 광고 계정 ID. 자세한 내용은 [[!DNL Pinterest] 광고 관리자에서 ID 찾기에 대한 안내서](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) 도움이 필요하시면 |
-| [!UICONTROL object_type] | 다음 중 하나를 선택합니다 **캠페인**, **광고 그룹** 또는 **광고** 다음 중 [!DNL Pinterest] 정보를 얻을 Analytics API입니다. |
-| [!UICONTROL object_ids] | 선택한 개체의 ID입니다. 로 이동합니다 [!DNL Pinterest] 페이지 **Pinterest 비즈니스 허브** > **광고 계정 요약** > **캠페인** / **광고 그룹** / **광고** 및 각 이름 바로 아래에 언급된 필수 ID를 복사합니다. |
+| [!UICONTROL ad_account_id] | 사용자 [!DNL Pinterest Ads] 광고 계정 ID. 다음을 참조하십시오. [[!DNL Pinterest] 광고 관리자에서 ID 찾기에 대한 안내서](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) 도움이 필요하시면 |
+| [!UICONTROL object_type] | 다음 중 하나 선택 **캠페인**, **광고 그룹** 또는 **광고** 다음 중 하나에 따라 [!DNL Pinterest] 정보를 얻으려는 Analytics API입니다. |
+| [!UICONTROL object_ids] | 선택한 개체의 ID입니다. 다음 위치로 이동 [!DNL Pinterest] 페이지 **Pinterest 비즈니스 허브** > **광고 계정 요약** > **캠페인** / **광고 그룹** / **광고** 그리고 각 이름 바로 아래에 언급된 필수 ID를 복사합니다. |
 
 >[!TIP]
 >
->여러 항목을 제공할 수 있습니다 `object_ids` 쉼표로 구분된 값을 전달하는 데 사용됩니다. 단일 요청으로 전달할 수 있는 최대 ID 수는 100개입니다. 잘못된 값이 전달되면 Platform에 다음 메시지가 표시됩니다. `The request could not be processed. Error from flow provider: Unknown error while processing request.`
+>여러 을(를) 제공할 수 있습니다 `object_ids` 쉼표로 구분된 값을 전달합니다. 단일 요청에서 전달할 수 있는 최대 ID 수는 100개입니다. 잘못된 값이 전달되면 Platform에 다음 메시지가 표시됩니다. `The request could not be processed. Error from flow provider: Unknown error while processing request.`
 
-값을 제공한 후 을(를) 선택합니다 **[!UICONTROL 선택]**. 제공된 값이 유효하면 인터페이스의 오른쪽 부분인 미리 보기 데이터가 채워집니다.
+값을 제공한 후 을(를) 선택합니다 **[!UICONTROL 선택]**. 제공된 값이 유효하면 인터페이스의 오른쪽 부분인 미리보기 데이터가 채워집니다.
 
 ![소스 워크플로우의 데이터 선택 단계입니다.](../../../../images/tutorials/create/advertising/pinterest-ads/select-data.png)
 
 ## 다음 단계 {#next-steps}
 
-이 자습서에 따라 [!DNL Pinterest Ads] 계정이 필요합니다. 이제 다음 자습서를 계속 진행하고 [광고 데이터를 플랫폼으로 가져오도록 데이터 흐름 구성](../../dataflow/advertising.md).
+이 자습서를 따라 [!DNL Pinterest Ads] 계정입니다. 이제 다음 튜토리얼을 계속 진행하여 [advertising 데이터를 Platform으로 가져오는 데이터 흐름 구성](../../dataflow/advertising.md).
 
 ## 추가 리소스 {#additional-resources}
 
-아래 섹션에서는 를 사용할 때 참조할 수 있는 추가 리소스를 제공합니다. [!DNL Pinterest Ads] 소스.
+아래 섹션에서는 사용 시 참조할 수 있는 추가 리소스를 제공합니다. [!DNL Pinterest Ads] 소스.
 
 ## 예약 {#scheduling}
 
-예약할 때 [!DNL Pinterest Ads] 데이터 흐름을 수집하려면 다음 빈도 및 간격 구성 중 하나를 선택해야 합니다.
+예약 시 [!DNL Pinterest Ads] 수집을 위해 다음 빈도 및 간격 구성 중 하나를 선택해야 합니다.
 
 | 빈도 | 간격 |
 | --- | --- |
 | `Day` | 1 |
 | `Hour` | 24 |
 
-예약에 대한 자세한 내용은 [!DNL Pinterest Ads] 데이터 흐름, 읽기 [가드 레일 섹션 [!DNL Pinterest Ads] 개요](../../../../connectors/advertising/pinterest-ads.md#guardrails).
+일정 조정에 대한 자세한 내용 [!DNL Pinterest Ads] 데이터 흐름, 다음을 읽음 [의 보호 기능 섹션 [!DNL Pinterest Ads] 개요](../../../../connectors/advertising/pinterest-ads.md#guardrails).
 
-예약에 대한 값을 제공했으면 을 선택합니다 **[!UICONTROL 다음]**.
+예약에 대한 값을 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
 ![소스 워크플로우의 예약 단계입니다.](../../../../images/tutorials/create/advertising/pinterest-ads/scheduling.png)
 
 ### 유효성 검사 {#validation}
 
-소스 및 [!DNL Pinterest Ads] 데이터를 수집하는 중입니다. 아래 단계를 수행하십시오.
+소스 및 를 올바르게 설정했는지 확인하려면 [!DNL Pinterest Ads] 데이터를 수집하는 중입니다. 아래 단계를 따르십시오.
 
-플랫폼 UI에서 **[!UICONTROL 데이터 흐름 보기]** 옆에 [!DNL Pinterest Ads] 카탈로그 페이지의 카드 메뉴 그런 다음 을(를) 선택할 수 있습니다 [!UICONTROL 데이터 세트 미리 보기] 수집된 데이터를 확인하려면
+Platform UI에서 를 선택합니다. **[!UICONTROL 데이터 흐름 보기]** 의 옆에 [!DNL Pinterest Ads] 카탈로그 페이지의 카드 메뉴 그런 다음 을(를) 선택할 수 있습니다 [!UICONTROL 데이터 세트 미리 보기] 수집된 데이터를 확인합니다.
 
-![pinterest 광고 미리 보기 데이터 세트에 대한 Platform UI 스크린샷입니다.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
+![pinterest 광고 미리 보기 데이터 세트용 Platform UI 스크린샷](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 
-에 표시되는 카운트에 대해 데이터를 확인할 수 있습니다 [!DNL Pinterest] UI
+에 표시되는 카운트에 대해 데이터를 확인할 수 있습니다. [!DNL Pinterest] UI
 
 >[!BEGINTABS]
 
@@ -143,7 +144,7 @@ ht-degree: 2%
 
 ### [!DNL Pinterest] 필드 {#pinterest-fields}
 
-에서 지원하는 필드 [!DNL Pinterest] campaign, 광고 그룹 및 광고 API는 아래에 있습니다.
+에서 지원하는 필드 [!DNL Pinterest] 캠페인, 광고 그룹 및 광고 API는 다음과 같습니다.
 
 +++ 페이로드 보기
 

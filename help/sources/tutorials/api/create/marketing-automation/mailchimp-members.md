@@ -15,7 +15,7 @@ ht-degree: 1%
 
 다음 자습서에서는 가져올 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다 [!DNL Mailchimp Members] 를 사용하여 데이터를 플랫폼에 전송 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## 전제 조건
+## 사전 요구 사항
 
 연결하기 전에 [!DNL Mailchimp] oauth 2 새로 고침 코드를 사용하는 Adobe Experience Platform에 대해 먼저 액세스 토큰을 검색해야 합니다. [!DNL MailChimp.] 다음을 참조하십시오. [[!DNL Mailchimp] OAuth 2 안내서](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) 액세스 토큰 찾기에 대한 자세한 지침은 을 참조하십시오.
 
@@ -163,7 +163,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 
 소스의 파일 구조 및 컨텐츠를 탐색하기 위해 GET 요청을 수행할 때 아래 표에 나열된 쿼리 매개 변수를 포함해야 합니다.
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 이전 단계에서 생성된 기본 연결 ID입니다. |
 | `{OBJECT_TYPE}` | 탐색하려는 오브젝트의 유형입니다. REST 소스의 경우 이 값의 기본값은 `rest`. |
@@ -538,7 +538,7 @@ curl -X POST \
 
 * [소스 연결 ID](#source-connection)
 * [Target 연결 ID](#target-connection)
-* [매핑 ID](#mapping)
+* [ID 매핑](#mapping)
 
 데이터 흐름은 소스에서 데이터를 예약하고 수집합니다. 페이로드 내에 이전에 언급된 값을 제공하면서 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.
 

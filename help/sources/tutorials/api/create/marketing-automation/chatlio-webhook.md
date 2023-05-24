@@ -1,8 +1,9 @@
 ---
 title: 흐름 서비스 API를 사용하여 Chatlio에 대한 소스 연결 및 데이터 흐름 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Chatlio에 연결하는 방법을 알아봅니다.
-badge: "Beta"
-source-git-commit: 4a2ed14a55736a9dde1adbb8c7996a5659216ec8
+badge: 베타
+exl-id: 867b8096-0841-4462-9888-e60c97c2115e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 1%
@@ -255,7 +256,7 @@ curl -X POST \
 
 * [소스 연결 ID](#source-connection)
 * [Target 연결 ID](#target-connection)
-* [매핑 ID](#mapping)
+* [ID 매핑](#mapping)
 
 데이터 흐름은 소스에서 데이터를 예약하고 수집합니다. 페이로드 내에 이전에 언급된 값을 제공하면서 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.
 

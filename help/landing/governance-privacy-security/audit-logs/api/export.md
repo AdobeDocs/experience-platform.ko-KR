@@ -11,7 +11,7 @@ ht-degree: 5%
 
 # 감사 이벤트 목록 내보내기
 
-에 GET 요청을 하여 이벤트 데이터를 검색할 수 있습니다. `/audit/export` 페이로드에서 검색할 이벤트를 지정하는 끝점입니다.
+에 GET 요청을 하여 이벤트 데이터를 검색할 수 있습니다. `/audit/export` 페이로드에서 검색할 이벤트를 지정하는 엔드포인트.
 
 **API 형식**
 
@@ -19,7 +19,7 @@ ht-degree: 5%
 GET /audit/export
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `timestamp` | 타임스탬프로 필터링할 때는 정확한 값이 아닌 > 및 &lt; 연산자를 사용하여 범위를 사용하는 것이 좋습니다. <br/>예: `?property=timestamp<2020-02-08T02:46:48.610862Z&property=timestamp>2020-01-01T02:46:48.610862Z`. |
 | `status` | 작업의 상태입니다. 상태는 다음 중 하나일 수 있습니다. </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul><br/>예: `?property=status==Deny`. |

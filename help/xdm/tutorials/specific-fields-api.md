@@ -1,7 +1,8 @@
 ---
 title: 스키마 레지스트리 API를 사용하여 스키마에 특정 필드 추가
 description: 스키마 레지스트리 API를 사용하여 기존 필드 그룹의 개별 필드를 Experience Data Model(XDM) 스키마에 추가하는 방법을 알아봅니다.
-source-git-commit: 4bcd949e901c11bb933000f7ae76f17134dda496
+exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 2%
@@ -18,7 +19,7 @@ XDM(Experience Data Model) 스키마는 기본 클래스로 구성되며 Adobe�
 >
 >Adobe Experience Platform UI에서 개별 스키마 필드를 추가 및 제거하는 방법에 대한 자세한 내용은 [필드 기반 워크플로](../ui/field-based-workflows.md) (현재 베타 버전).
 
-## 전제 조건
+## 사전 요구 사항
 
 이 튜토리얼에는 [스키마 레지스트리 API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). 시작하기 전에 다음을 검토하십시오 [개발자 안내서](../api/getting-started.md) 를 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보 `{TENANT_ID}`, 컨테이너의 개념 및 요청을 하는 데 필요한 헤더입니다.
 
@@ -106,7 +107,7 @@ PUT 요청을 사용하여 전체 스키마를 재작성하고 아래에 포함�
 PUT /tenant/schemas/{SCHEMA_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 다시 작성할 스키마의 수입니다. |
 
@@ -201,7 +202,7 @@ PATCH 요청을 사용하여 다른 필드를 덮어쓰지 않고 스키마에 �
 PATCH /tenant/schemas/{SCHEMA_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 다시 작성할 스키마의 수입니다. |
 

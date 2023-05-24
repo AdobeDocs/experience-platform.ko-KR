@@ -44,7 +44,7 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 광고 시스템에 대한 기본 연결의 ID입니다. |
 
@@ -106,7 +106,7 @@ curl -X GET \
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 광고 시스템의 연결 ID입니다. |
 | `{TABLE_PATH}` | 광고 시스템 내 표의 경로입니다. |

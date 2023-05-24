@@ -183,7 +183,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 }'
 ```
 
-| 매개 변수 | 유형 | 필수 여부 | 설명 |
+| 매개변수 | 유형 | 필수 여부 | 설명 |
 | --- | --- | --- | --- |
 | `configId` | 문자열 | 예 | 데이터 스트림 ID입니다. |
 | `requestId` | 문자열 | 아니요 | 외부 요청 추적 ID를 제공합니다. 아무 것도 제공되지 않으면 Edge Network가 자동으로 생성한 후 응답 본문/헤더로 다시 반환합니다. |
@@ -307,7 +307,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 }'
 ```
 
-| 매개 변수 | 유형 | 필수 여부 | 설명 |
+| 매개변수 | 유형 | 필수 여부 | 설명 |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | 예 | 데이터 수집 끝점에서 사용하는 데이터 스트림의 ID입니다. |
 | `requestId` | `String` | 아니요 | 외부 외부 요청 추적 ID. 아무 것도 제공되지 않으면 Edge Network가 자동으로 생성한 후 응답 본문/헤더로 다시 반환합니다. |

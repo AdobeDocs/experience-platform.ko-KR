@@ -96,7 +96,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 }
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `flowId` | 데이터 흐름을 식별하는 고유 ID입니다. 이 데이터 흐름 ID는 로 만든 소스 연결에 해당해야 합니다. [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], 또는 [!DNL HTTP API]. 이 데이터 흐름에는 [!DNL Profile]-타겟 데이터 세트로 활성화된 데이터 세트. **참고**: 의 ID입니다 [!DNL Profile]-enabled target 데이터 세트는 `datasetId` 매개 변수. |
 | `imsOrgId` | 조직에 해당하는 ID입니다. |

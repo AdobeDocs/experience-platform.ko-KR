@@ -1,6 +1,6 @@
 ---
-description: 이 페이지에서는 Destination SDK을 사용하여 작성된 제품 대상 검토를 위해 제출하는 모든 정보를 제공합니다.
-title: Destination SDK에서 작성된 제품 대상 검토를 위해 제출
+description: 이 페이지에서는 Destination SDK을 사용하여 작성된 제품화된 대상을 검토하기 위해 제출해야 하는 모든 정보를 제공합니다.
+title: Destination SDK에서 작성된 제품화된 대상을 검토하기 위해 제출
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
 source-git-commit: 8c8026b1180775dddd9517fc88727749678a5613
 workflow-type: tm+mt
@@ -9,59 +9,59 @@ ht-degree: 0%
 
 ---
 
-# Destination SDK에서 작성된 제품 대상 검토를 위해 제출
+# Destination SDK에서 작성된 제품화된 대상을 검토하기 위해 제출
 
 ## 개요 {#overview}
 
 >[!IMPORTANT]
 >
->* 여기에 설명된 프로세스는 제품(공개) 대상을 제출하는 파트너에게만 필요합니다. 직접 사용할 전용 대상을 만드는 경우 이러한 자료를 만들고 Adobe과 공유할 필요가 없습니다.
+>* 여기에 설명된 프로세스는 제품화된(공개) 대상을 제출하는 파트너에게만 필요합니다. 직접 사용할 수 있는 개인 대상을 만드는 경우 이러한 자료를 제작하여 Adobe과 공유할 필요가 없습니다.
 >
->* 대상 게시 요청을 검토하는 Adobe의 표준 응답 시간은 5영업일.
+>* Adobe이 대상 게시 요청을 검토하는 데 걸리는 표준 응답 시간은 영업일 기준으로 5일입니다.
 >
->* Adobe 팀이 초기 제출 시 구성에 대한 업데이트를 수행하도록 요청하는 경우 업데이트를 수행한 후 다른 대상 게시 요청을 제출해야 합니다.
+>* Adobe 팀이 초기 제출 후 구성을 업데이트하라는 요청을 받으면 업데이트를 수행한 후 다른 대상 게시 요청을 제출해야 합니다.
 >
->* 대상이 Experience Platform 카탈로그에 라이브 상태가 된 후에도 구성을 업데이트해야 하는 경우 구성에 반영되도록 새 대상 게시 요청을 제출해야 합니다.
+>* 대상이 Experience Platform 카탈로그에 라이브된 후에도 구성을 업데이트해야 하는 경우 구성에 반영될 업데이트에 대해 새 대상 게시 요청을 제출해야 합니다.
 
 
-대상을 [Experience Platform 대상 카탈로그](/help/destinations/catalog/overview.md)를 채울 때는 Adobe이 데이터를 플랫폼에 활성화할 때 최상의 경험을 누릴 수 있도록 대상 및 수행한 테스트에 대한 특정 정보를 제공해야 합니다.
+대상을 다음에 게시하기 전 [Experience Platform 대상 카탈로그](/help/destinations/catalog/overview.md), Adobe에게 대상 및 수행한 테스트에 대한 특정 정보를 제공하여 사용자가 플랫폼으로 데이터를 활성화할 때 최상의 경험을 누릴 수 있도록 해야 합니다.
 
-이 페이지에는 Adobe Experience Platform Destination SDK을 사용하여 작성된 대상을 제출하거나 업데이트할 때 제공하는 모든 정보가 나열됩니다. Adobe Experience Platform에서 대상을 성공적으로 제출하려면 전자 메일을 로 보내십시오 <aepdestsdk@adobe.com> 에는 다음이 포함됩니다.
+이 페이지에는 Adobe Experience Platform Destination SDK을 사용하여 작성한 대상을 제출하거나 업데이트할 때 제공해야 하는 모든 정보가 나열됩니다. Adobe Experience Platform에서 대상을 성공적으로 제출하려면 다음으로 이메일 보내기 <aepdestsdk@adobe.com> 여기에는 다음이 포함됩니다.
 
 * 대상이 해결하는 사용 사례에 대한 설명입니다. 새 대상 구성을 제출하는 경우에만 필요합니다.
-* 대상 제출 이유에 대한 설명입니다. 기존 대상 구성을 업데이트하는 경우에만 필요합니다.
-* 테스트 대상 API 종단점을 사용하여 대상에 대한 HTTP 호출을 수행한 후 결과를 테스트합니다. 대상 종단점에 대한 API 호출 및 대상 종단점에서 수신된 API 응답을 Adobe과 공유하십시오.
+* 대상을 제출하는 이유에 대한 설명입니다. 기존 대상 구성을 업데이트하는 경우에만 필요합니다.
+* 테스트 대상 API 끝점을 사용하여 대상에 대한 HTTP 호출을 수행한 후 결과를 테스트합니다. 대상 엔드포인트에 대한 API 호출 및 대상 엔드포인트에서 수신된 API 응답을 Adobe과 공유하십시오.
 * 파일 기반 대상에 대한 추가 요구 사항:
-   * 테스트 API를 사용한 후 요청 및 응답 샘플을 공유하십시오. [샘플 프로필로 파일 기반 대상 테스트](../testing-api/batch-destinations/file-based-destination-testing-api.md).
-   * 대상에서 생성한 샘플 파일을 첨부하여 저장소 위치에 내보냅니다.
-   * 내보낸 파일을 스토리지 위치에서 시스템으로 성공적으로 가져왔다는 몇 가지 증명을 제출합니다.
-* 를 사용하여 대상에 대한 대상 게시 요청을 제출했는지 확인 [대상 게시 API](../publishing-api/create-publishing-request.md).
-* 에 설명된 지침에 따라 설명서 PR(끌어오기 요청) [셀프 서비스 설명서 프로세스](../docs-framework/documentation-instructions.md).
-* Experience Platform 대상 카탈로그에 대상 카드에 대한 로고로 표시되는 이미지 파일입니다.
+   * 테스트 API를 사용한 후 요청 및 응답 샘플 공유 [샘플 프로필을 사용하여 파일 기반 대상 테스트](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+   * 대상에서 생성하여 저장소 위치로 내보낸 샘플 파일을 첨부합니다.
+   * 내보낸 파일을 저장소 위치에서 시스템으로 성공적으로 수집했음을 입증하는 일부 양식을 제출합니다.
+* 다음을 사용하여 대상에 대한 대상 게시 요청을 제출했음을 증명합니다. [대상 게시 API](../publishing-api/create-publishing-request.md).
+* 에 설명된 지침에 따른 설명서 PR(끌어오기 요청) [셀프서비스 설명서 프로세스](../docs-framework/documentation-instructions.md).
+* Experience Platform 대상 카탈로그에서 대상 카드의 로고로 표시되는 이미지 파일입니다.
 
-아래 섹션에서 각 항목에 대한 자세한 정보를 찾을 수 있습니다.
+각 항목에 대한 자세한 내용은 아래 섹션에서 확인할 수 있습니다.
 
 ## 사용 사례 설명 {#use-case-description}
 
-대상이 Experience Platform 고객을 위해 해결하는 사용 사례에 대한 설명을 제공합니다. 설명은 기존 파트너의 사용 사례와 비슷합니다.
+Experience Platform 고객이 대상에서 해결하는 사용 사례에 대한 설명을 제공합니다. 설명은 기존 파트너의 사용 사례와 유사할 수 있습니다.
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): 고객 목록, 사이트를 방문한 사람 또는 Pinterest의 콘텐츠와 이미 상호 작용한 사람으로 대상을 만듭니다.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX API는 VMG(Verizon Media)에서 이메일 주소를 키로 사용하는 특정 대상 그룹을 타겟팅하려는 광고주가 VMG의 근실시간 API를 사용하여 새로운 세그먼트를 신속하게 생성하고 원하는 대상 그룹을 푸시할 수 있습니다.
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): 고객 목록, 사이트를 방문한 사람 또는 Pinterest에서 콘텐츠와 이미 상호 작용한 사람에서 대상을 만듭니다.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX API는 Verizon Media(VMG)의 이메일 주소를 키로 사용하는 특정 대상 그룹을 타깃팅하려는 광고주가 새 세그먼트를 빠르게 생성하고 VMG의 거의 실시간 API를 사용하여 원하는 대상 그룹을 푸시할 수 있도록 제공됩니다.
 
 ## 업데이트 이유 {#reason-for-update}
 
 >[!NOTE]
 >
->이 섹션은 기존 구성을 업데이트하는 경우에만 필요합니다.
+>이 섹션은 기존 구성을 업데이트할 때만 필요합니다.
 
-제출이 기존 대상에 대해 해결할 문제에 대한 간단한 설명을 제공합니다. 예를 들어, 베타에서 일반 가용성으로 이동할 때 제출 서류에서는 대상의 이름, 설명 및 로고를 업데이트할 수 있습니다. 또는 제출 시 대상 구성에서 발견된 버그를 수정할 수 있습니다.
+제출이 기존 대상에 대해 해결하는 문제에 대한 간단한 설명을 제공합니다. 예를 들어 Beta에서 일반 출시로 이동할 때 제출 시 대상의 이름, 설명 및 로고가 업데이트될 수 있습니다. 또는 제출 시 대상 구성에서 발견된 버그가 수정될 수 있습니다.
 
-## 테스트 대상 API 사용 후 결과 테스트 {#testing-api-response}
+## 테스트 대상 API 사용 후 테스트 결과 {#testing-api-response}
 
-를 사용한 후 테스트 결과 제공 [테스트 대상 API](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) 대상에 대한 HTTP 호출을 수행하는 끝점입니다. 여기에는 다음 항목이 포함되어 있습니다.
+을(를) 사용한 후 테스트 결과 제공 [테스트 대상 API](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) 대상에 대한 HTTP 호출을 수행할 종단점입니다. 여기에는 다음 항목이 포함되어 있습니다.
 
-* 테스트 API를 사용하여 대상 종단점에 대한 전체 API 요청(헤더 및 본문)입니다.
-* 대상 종단점에서 받은 API 응답입니다.
+* 테스트 API를 사용하여 대상 엔드포인트에 대한 전체 API 요청(헤더 및 본문)입니다.
+* 대상 끝점에서 받은 API 응답입니다.
 
 예를 들어 요청 및 응답은 아래 샘플과 유사할 수 있습니다.
 
@@ -228,33 +228,33 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## 파일 기반 대상에 대한 추가 요구 사항 {#additional-file-based-destination-requirements}
 
-파일 기반 대상의 경우 대상을 올바르게 설정했음을 추가 증명을 제공해야 합니다. 아래 항목을 포함해야 합니다.
+파일 기반 대상의 경우 대상을 올바로 설정했다는 추가 증명을 제공해야 합니다. 아래 항목을 포함해야 합니다.
 
 ### API 응답 테스트 {#testing-api-response-file-based}
 
-테스트 API를 사용한 후 요청 및 응답 샘플을 포함하십시오. [샘플 프로필로 파일 기반 대상 테스트](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+테스트 API를 사용한 후 요청 및 응답 샘플 포함 [샘플 프로필을 사용하여 파일 기반 대상 테스트](../testing-api/batch-destinations/file-based-destination-testing-api.md).
 
 ### 내보낸 파일 첨부 {#attach-exported-file}
 
-사용자 [제출 전자 메일](#download-sample-email)를 설정하는 대상에 의해 저장소 위치로 내보낸 CSV 파일을 첨부합니다.
+내 [제출 이메일](#download-sample-email)를 클릭하고 설정한 대상이 스토리지 위치로 내보낸 CSV 파일을 첨부합니다.
 
-### 성공적인 수집 증명 {#proof-of-successful-ingestion}
+### 수집 성공 증명 {#proof-of-successful-ingestion}
 
-마지막으로 입력한 스토리지 위치로 데이터를 내보낸 후 시스템에 데이터를 성공적으로 수집했다는 증명을 제공해야 합니다. 아래 항목을 입력하십시오.
+마지막으로, 제공한 저장 위치로 데이터를 내보낸 후 데이터가 시스템에 성공적으로 수집되었다는 몇 가지 증명 양식을 제공해야 합니다. 아래 항목을 입력하십시오.
 
-* 스토리지 위치에서 파일을 수동으로 가져와서 시스템으로 수집할 수 있는 스크린샷 또는 간단한 스크린샷 비디오입니다.
-* 시스템의 UI에서 생성한 파일 이름을 시스템에 성공적으로 수집했음을 확인하는 스크린샷 또는 간단한 스크린샷 비디오입니다.
-* Adobe이 파일 이름 또는 Experience Platform에서 생성된 데이터와 상호 연관시킬 수 있는 시스템의 로그 줄입니다.
+* 스토리지 위치에서 파일을 수동으로 가져와서 시스템에 수집하는 스크린샷 또는 간단한 화면 캡처 비디오
+* Experience Platform에서 생성된 파일 이름이 시스템에 성공적으로 수집되었음을 시스템의 UI에서 확인하는 스크린샷 또는 간단한 화면 캡처 비디오.
+* Adobe이 파일 이름 또는 Experience Platform에서 생성된 데이터와 상호 연관시킬 수 있는 시스템의 로그 라인입니다.
 
-## 대상 게시 요청을 제출했는지 확인 {#destination-publishing-request-proof}
+## 대상 게시 요청을 제출했다는 증명 {#destination-publishing-request-proof}
 
-대상을 성공적으로 테스트한 후에는 [대상 게시 API](../publishing-api/create-publishing-request.md) 검토 및 게시를 위해 Adobe에 대상을 제출하려면 다음을 수행하십시오.
+대상을 성공적으로 테스트한 후 다음을 사용해야 합니다. [대상 게시 API](../publishing-api/create-publishing-request.md) 검토 및 게시를 위해 Adobe에 대상을 제출합니다.
 
-대상에 대한 게시 요청의 ID를 제공합니다. 게시 요청 ID를 검색하는 방법에 대한 자세한 내용은 다음 방법을 참조하십시오 [대상 게시 요청 검색](../publishing-api/retrieve-publishing-request.md).
+대상에 대한 게시 요청의 ID를 입력합니다. 게시 요청 ID를 검색하는 방법에 대한 자세한 내용은 방법 을 참조하십시오. [대상 게시 요청 검색](../publishing-api/retrieve-publishing-request.md).
 
 ## 프로덕션 통합을 위한 대상 설명서 PR(끌어오기 요청) {#documentation-pr}
 
-ISV(Independent Software Vendor) 또는 SI(System Integrator)가 [제품 통합](../overview.md#productized-custom-integrations)를 사용하려면 [셀프 서비스 설명서 프로세스](../docs-framework/documentation-instructions.md) 를 클릭하여 대상에 대한 제품 설명서 페이지를 만듭니다. 제출 프로세스의 일부로 대상 설명서에 대한 PR(끌어오기 요청)을 제공합니다.
+ISV(Independent Software Vendor) 또는 SI(System Integrator)가 [제품화 통합](../overview.md#productized-custom-integrations), 다음을 사용해야 합니다. [셀프서비스 설명서 프로세스](../docs-framework/documentation-instructions.md) 을 클릭하여 대상에 대한 제품 설명서 페이지를 만듭니다. 제출 프로세스의 일부로 대상 문서에 대한 가져오기 요청(PR)을 제공합니다.
 
 ## 대상의 로고 {#logo}
 
@@ -266,4 +266,4 @@ ISV(Independent Software Vendor) 또는 SI(System Integrator)가 [제품 통합]
 
 ## 샘플 이메일 다운로드 {#download-sample-email}
 
-[다운로드](../assets/guides/sample-email-submit-destination.rtf) Adobe에 제공해야 하는 모든 정보가 포함된 샘플 이메일.
+[다운로드](../assets/guides/sample-email-submit-destination.rtf) Adobe에게 제공해야 하는 모든 정보가 포함된 샘플 이메일.

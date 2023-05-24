@@ -2,13 +2,13 @@
 title: Marketo Measure Ultimate 대상
 description: Marketo Measure Ultimate 대상에 데이터를 연결하고 활성화하는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-03-07T00:00:00Z
-source-git-commit: c2c7a4cd860fed2c8124fe46fe3fd405ba49ecf4
+exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 1%
 
 ---
-
 
 # Marketo Measure Ultimate 대상 {#mmu-destination}
 
@@ -26,7 +26,7 @@ Marketo Measure 대상을 사용하는 방법과 시기를 더 잘 이해할 수
 * 여러 CRM 및 마케팅 자동화 시스템을 사용하여 B2B 속성 보고를 활성화합니다.
 * 서드파티 오프라인 터치포인트 데이터를 쉽게 가져올 수 있습니다.
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 Marketo Measure 대상에 대한 다음 사전 요구 사항을 참조하십시오.
 
@@ -83,5 +83,3 @@ Marketo Measure 대상에 대한 다음 사전 요구 사항을 참조하십시�
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
 모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스 적용, 다음을 읽습니다. [데이터 거버넌스 개요](/help/data-governance/home.md).
-
-

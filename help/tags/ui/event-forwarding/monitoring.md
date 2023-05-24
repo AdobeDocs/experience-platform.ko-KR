@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ![데이터 수집 UI의 모니터링 탭을 보여주는 이미지](../../images/ui/event-forwarding/monitoring/monitoring-tab.png)
 
-## 전제 조건
+## 사전 요구 사항
 
 이 안내서에서는 사용자가 이벤트 전달을 구매했으며 이벤트 전달이 작동하는 방식을 잘 알고 있다고 가정합니다. 다음을 참조하십시오. [이벤트 전달 개요](./overview.md) 추가 정보.
 

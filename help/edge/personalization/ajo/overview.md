@@ -2,8 +2,8 @@
 title: Platform Web SDK로 Adobe Journey Optimizer 사용
 description: Adobe Journey Optimizer을 사용하여 Experience Platform Web SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다
 keywords: ajo;ajo web;adobe 여정 optimizer;renderDecisions;surfaces;decisions;제안;범위;스키마
-exl-id: e608952c-9598-11ed-b382-d72064651cac
-source-git-commit: 1b0f1e2e1625f6994a6e09bd086e4b63a3e8d4ab
+exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -148,5 +148,3 @@ ht-degree: 0%
 Adobe Journey Optimizer 개인화 구현을 디버깅하려면 [[!DNL Web SDK] 디버깅](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html). [!DNL Adobe Journey Optimizer] 다음을 사용하여 문제를 해결할 때 디버그 추적을 사용할 수 있습니다. [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). 다음을 사용하여 이벤트 확인 `AJO:` 접두사입니다.
 
 ![assurance-ajo-trace](./assets/assurance-ajo-trace.png)
-
-

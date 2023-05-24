@@ -334,7 +334,7 @@ LIMIT 100;
 
 Query Service는 특정 타임스탬프를 UTC 형식으로 변환하는 기본 제공 SQL 함수를 지원합니다. 두 가지 모두 `to_utc_timestamp()` 및 `from_utc_timestamp()` 메서드에는 timestamp와 timezone의 두 매개 변수가 사용됩니다.
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 |-----------|---------------|
 | 타임스탬프 | 타임스탬프는 UTC 형식이나 간단한 형식으로 작성할 수 있습니다 `{year-month-day}` 포맷. 시간을 제공하지 않은 경우 기본값은 지정된 날 아침의 자정입니다. |
 | 표준 시간대 | 시간대는 `{continent/city})` 포맷. 에 있는 인식된 시간대 코드 중 하나여야 합니다. [공개 도메인 TZ 데이터베이스](https://data.iana.org/time-zones/tz-link.html#tzdb). |

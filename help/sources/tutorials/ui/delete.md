@@ -47,7 +47,7 @@ ht-degree: 1%
 
 선택 **[!UICONTROL 삭제]** 데이터 흐름을 삭제합니다.
 
-![삭제](../../images/tutorials/delete/delete.png)
+![delete](../../images/tutorials/delete/delete.png)
 
 마지막 확인 대화 상자가 나타납니다. 선택 **[!UICONTROL 삭제]** 을 클릭하여 프로세스를 완료합니다.
 

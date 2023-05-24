@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [!DNL Git] 는 소프트웨어 개발 중 소스 코드의 변경 사항을 추적하기 위한 분산 버전 제어 시스템입니다. Git이 [!DNL Data Science Workspace JupyterLab] 환경.
 
-## 전제 조건
+## 사전 요구 사항
 
 >[!NOTE]
 >

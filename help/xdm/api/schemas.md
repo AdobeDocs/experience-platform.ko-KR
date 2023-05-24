@@ -33,7 +33,7 @@ ht-degree: 2%
 GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{CONTAINER_ID}` | 검색할 스키마를 저장하는 컨테이너입니다. `global` Adobe 생성 스키마 또는 `tenant` 조직에서 소유한 스키마용. |
 | `{QUERY_PARAMS}` | 결과를 필터링 기준으로 사용할 선택적 쿼리 매개 변수입니다. 다음을 참조하십시오. [부록 문서](./appendix.md#query) 사용 가능한 매개 변수 목록입니다. |
@@ -107,7 +107,7 @@ curl -X GET \
 GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{CONTAINER_ID}` | 검색할 스키마를 저장하는 컨테이너입니다. `global` Adobe 생성 스키마 또는 `tenant` 조직 소유의 스키마용입니다. |
 | `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 조회하려는 스키마의 수입니다. |
@@ -293,7 +293,7 @@ PUT 작업을 통해 전체 스키마를 바꿀 수 있으며, 기본적으로 �
 PUT /tenant/schemas/{SCHEMA_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 다시 쓸 스키마의 수입니다. |
 
@@ -376,7 +376,7 @@ PATCH 요청을 사용하여 스키마의 일부를 업데이트할 수 있습�
 PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | URL로 인코딩됨 `$id` URI 또는 `meta:altId` 업데이트할 스키마의 이름입니다. |
 
@@ -467,7 +467,7 @@ curl -X PATCH\
 PATCH /tenant/schemas/{SCHEMA_ID} 
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | URL로 인코딩됨 `$id` URI 또는 `meta:altId` 을(를) 활성화하려는 스키마에 대해 설명합니다. |
 
@@ -550,7 +550,7 @@ curl -X PATCH\
 DELETE /tenant/schemas/{SCHEMA_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | URL로 인코딩됨 `$id` URI 또는 `meta:altId` 을(를) 삭제하려는 스키마에 대해 설명합니다. |
 

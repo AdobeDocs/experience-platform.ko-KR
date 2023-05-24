@@ -32,7 +32,7 @@ ht-degree: 0%
 >
 >사용 [!DNL The Trade Desk] 이메일 또는 해시된 이메일 주소와 같은 CRM 데이터 매핑을 위한 CRM 대상. 사용 [기타 무역 데스크 대상](/help/destinations/catalog/advertising/tradedesk.md) 쿠키 및 장치 ID 매핑을 위한 Adobe Experience Platform 카탈로그에서.
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 세그먼트를 활성화하기 전에 [!DNL The Trade Desk], 다음으로 문의해야 합니다. [!DNL The Trade Desk] 계정 관리자가 CRM 온보딩 계약에 서명합니다. [!DNL The Trade Desk] 그런 다음 권한을 부여하고 광고주 ID를 공유하여 대상을 구성합니다.
 

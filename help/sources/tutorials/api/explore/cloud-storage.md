@@ -35,7 +35,7 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 클라우드 스토리지를 탐색하기 위해 GET 요청을 수행할 때 아래 표에 나열된 쿼리 매개 변수를 포함해야 합니다.
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `objectType` | 탐색하려는 오브젝트의 유형입니다. 이 값을 다음 중 하나로 설정합니다. <ul><li>`folder`: 특정 디렉터리 탐색</li><li>`root`: 루트 디렉터리를 탐색합니다.</li></ul> |
 | `object` | 이 매개 변수는 특정 디렉터리를 볼 때만 필요합니다. 해당 값은 탐색하려는 디렉터리의 경로를 나타냅니다. |
@@ -48,7 +48,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object={PATH}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 클라우드 스토리지 소스의 기본 연결 ID입니다. |
 | `{PATH}` | 디렉터리의 경로입니다. |
@@ -109,7 +109,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&ileType=delimited&encoding=ISO-8859-1;
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 클라우드 저장소 소스 커넥터의 연결 ID입니다. |
 | `{FILE_PATH}` | 검사할 파일의 경로입니다. |
@@ -160,7 +160,7 @@ curl -X GET \
 
 다음 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) 에서는 쿼리 매개 변수를 사용하여 다양한 파일 형식을 미리 보고 검사할 수 있습니다.
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `columnDelimiter` | CSV 또는 TSV 파일을 검사하기 위해 열 구분 기호로 지정한 단일 문자 값입니다. 매개 변수를 제공하지 않으면 기본값은 쉼표로 설정됩니다 `(,)`. |
 | `compressionType` | 압축된 구분 기호 또는 JSON 파일을 미리 보기 위한 필수 쿼리 매개 변수입니다. 지원되는 압축 파일은 다음과 같습니다. <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |

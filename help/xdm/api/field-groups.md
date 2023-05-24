@@ -33,7 +33,7 @@ ht-degree: 2%
 GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{CONTAINER_ID}` | 필드 그룹을 검색할 컨테이너: `global` Adobe 생성 필드 그룹 또는 `tenant` (조직에서 소유한 필드 그룹). |
 | `{QUERY_PARAMS}` | 결과를 필터링 기준으로 사용할 선택적 쿼리 매개 변수입니다. 다음을 참조하십시오. [부록 문서](./appendix.md#query) 사용 가능한 매개 변수 목록입니다. |
@@ -119,7 +119,7 @@ GET 요청의 경로에 필드 그룹의 ID를 포함하여 특정 필드 그룹
 GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{CONTAINER_ID}` | 검색할 필드 그룹을 저장하는 컨테이너입니다. `global` Adobe 생성 필드 그룹 또는 `tenant` (조직이 소유한 필드 그룹). |
 | `{FIELD_GROUP_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 조회할 필드 그룹의 이름입니다. |
@@ -400,7 +400,7 @@ PUT 작업을 통해 전체 필드 그룹을 바꿀 수 있으며, 기본적으�
 PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{FIELD_GROUP_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 다시 쓸 필드 그룹의 이름입니다. |
 
@@ -585,7 +585,7 @@ PATCH 요청을 사용하여 필드 그룹의 일부를 업데이트할 수 있�
 PATCH /tenant/fieldgroups/{FIELD_GROUP_ID} 
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{FIELD_GROUP_ID}` | URL로 인코딩됨 `$id` URI 또는 `meta:altId` 업데이트하려는 필드 그룹의 이름입니다. |
 
@@ -724,7 +724,7 @@ curl -X PATCH \
 DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{FIELD_GROUP_ID}` | URL로 인코딩됨 `$id` URI 또는 `meta:altId` 을(를) 삭제하려는 필드 그룹의 일부로 지정합니다. |
 

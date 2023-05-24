@@ -168,7 +168,7 @@ GET 요청 경로에 ID를 제공하여 감사 이벤트를 조회할 수 있습
 GET /audit_events/{AUDIT_EVENT_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `AUDIT_EVENT_ID` | 다음 `id` 조회하려는 감사 이벤트입니다. |
 

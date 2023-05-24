@@ -1,57 +1,58 @@
 ---
-title: 쿼리 서비스의 유사 일치
-description: 선택한 문자열과 거의 일치시켜 여러 데이터 세트의 결과를 결합하는 플랫폼 데이터에 대해 일치 기능을 수행하는 방법을 알아봅니다.
-source-git-commit: 633210fe5e824d8686a23b877a406db3780ebdd4
+title: 쿼리 서비스의 유사 항목 일치
+description: 선택한 문자열과 거의 일치하여 여러 데이터 세트의 결과를 결합하는 Platform 데이터에 대해 일치 작업을 수행하는 방법을 알아봅니다.
+exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '813'
 ht-degree: 0%
 
 ---
 
-# 쿼리 서비스의 유사 일치
+# 쿼리 서비스의 유사 항목 일치
 
-Adobe Experience Platform 데이터에서 &#39;퍼지&#39; 일치를 사용하여 동일한 문자가 있는 문자열을 검색할 필요 없이 거의 가능한 대략적인 일치 항목을 반환합니다. 이를 통해 보다 유연하게 데이터를 검색할 수 있고 시간과 노력을 절약할 수 있으므로 데이터에 보다 쉽게 액세스할 수 있습니다.
+Adobe Experience Platform 데이터에서 &#39;유사 항목&#39; 일치를 사용하여 동일한 문자가 있는 문자열을 검색할 필요 없이 가장 가능성이 높고 대략적인 일치를 반환합니다. 이를 통해 데이터를 보다 유연하게 검색할 수 있으며, 시간과 노력을 절약하여 데이터에 보다 쉽게 액세스할 수 있습니다.
 
-유사 항목 일치는 검색 문자열을 일치시키기 위해 다시 서식을 지정하려고 하지 않고 두 시퀀스 간의 유사성 비율을 분석하고 유사성 비율을 반환합니다. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) 이 프로세스는 보다 복잡한 상황에서 문자열을 일치시키는 데 보다 적합하므로 이 프로세스에 대해 권장됩니다 [!DNL regex] 또는 [!DNL difflib].
+유사 항목 일치는 검색 문자열의 포맷을 다시 지정하는 대신 두 시퀀스 간의 유사성 비율을 분석하고 유사성 백분율을 반환합니다. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) 보다 복잡한 상황에서 문자열을 일치시키는 데 도움이 되는 함수가 더 적합하기 때문에 이 프로세스에 대해 가 권장됩니다. [!DNL regex] 또는 [!DNL difflib].
 
-이 사용 사례에 제공된 예는 서로 다른 두 여행 에이전시 데이터 세트에서 호텔 룸 검색과 유사한 속성을 일치시키는 데 중점을 둡니다. 이 문서에서는 큰 별도의 데이터 소스와 비슷한 정도에 따라 문자열을 일치시키는 방법을 보여 줍니다. 이 예에서 퍼지 매치는 Luma 및 Acme 여행 에이전시의 룸의 기능에 대한 검색 결과를 비교합니다.
+이 사용 사례에서 제공하는 예제는 두 개의 서로 다른 여행사 데이터 세트에서 호텔 객실 검색의 유사한 속성을 일치시키는 데 중점을 둡니다. 이 문서에서는 별도의 큰 데이터 소스로부터의 유사성 정도별로 문자열을 일치시키는 방법을 보여 줍니다. 이 예에서 퍼지 일치는 Luma 및 Acme 여행사의 룸 기능에 대한 검색 결과를 비교합니다.
 
 ## 시작하기 {#getting-started}
 
-이 프로세스의 일부로 기계 학습 모델을 교육해야 하므로 이 문서에서는 하나 이상의 기계 학습 환경에 대한 작업 지식을 가정합니다.
+이 프로세스의 일부로 머신 러닝 모델을 교육해야 하므로 이 문서에서는 하나 이상의 머신 러닝 환경에 대한 작업 지식을 가정합니다.
 
-이 예에서는 을 사용합니다 [!DNL Python] 그리고 [!DNL Jupyter Notebook] 개발 환경. 여러 가지 옵션을 사용할 수 있지만, [!DNL Jupyter Notebook] 계산 요구 사항이 낮은 오픈 소스 웹 애플리케이션이므로 를 사용하는 것이 좋습니다. 다음 위치에서 다운로드할 수 있습니다. [공식 주피터 현장](https://jupyter.org/).
+이 예에서는 를 사용합니다. [!DNL Python] 및 [!DNL Jupyter Notebook] 개발 환경. 여러 가지 옵션이 있긴 하지만, [!DNL Jupyter Notebook] 은 계산 요구 사항이 낮은 오픈 소스 웹 애플리케이션이므로 권장됩니다. 다음에서 다운로드할 수 있습니다 [공식 Jupyter 사이트](https://jupyter.org/).
 
-시작하기 전에 필요한 라이브러리를 가져와야 합니다. [!DNL FuzzyWuzzy] 오픈 소스 [!DNL Python] 의 맨 위에 빌드된 라이브러리 [!DNL difflib] 라이브러리 및 를 사용하여 문자열을 일치시킵니다. 사용 [!DNL Levenshtein Distance] 시퀀스와 패턴 간의 차이를 계산하기 위해 [!DNL FuzzyWuzzy] 에는 다음 요구 사항이 있습니다.
+시작하기 전에 필요한 라이브러리를 가져와야 합니다. [!DNL FuzzyWuzzy] 은(는) 오픈 소스 [!DNL Python] 라이브러리를 빌드했습니다. [!DNL difflib] 라이브러리를 만들고 문자열을 일치시키는 데 사용됩니다. 다음을 사용합니다 [!DNL Levenshtein Distance] 시퀀스 및 패턴 간의 차이를 계산합니다. [!DNL FuzzyWuzzy] 에는 다음 요구 사항이 있습니다.
 
 - [!DNL Python] 2.4 이상
 - [!DNL Python-Levenshtein]
 
-명령줄에서 다음 명령을 사용하여 [!DNL FuzzyWuzzy]:
+명령줄에서 다음 명령을 사용하여 설치합니다 [!DNL FuzzyWuzzy]:
 
 ```console
 pip install fuzzywuzzy
 ```
 
-또는 다음 명령을 사용하여 [!DNL Python-Levenshtein] 또한:
+또는 다음 명령을 사용하여 설치하십시오 [!DNL Python-Levenshtein] 또한:
 
 ```console
 pip install fuzzywuzzy[speedup]
 ```
 
-에 대한 추가 기술 정보 [!DNL Fuzzywuzzy] 다음에서 찾을 수 있음 [공식 문서](https://pypi.org/project/fuzzywuzzy/).
+다음에 대한 추가 기술 정보: [!DNL Fuzzywuzzy] 에서 찾을 수 있음 [공식 문서](https://pypi.org/project/fuzzywuzzy/).
 
 ### 쿼리 서비스에 연결
 
-연결 자격 증명을 제공하여 기계 학습 모델을 Query Service에 연결해야 합니다. 만료 자격 증명과 만료 전 자격 증명을 모두 제공할 수 있습니다. 자세한 내용은 [자격 증명 안내서](../ui/credentials.md) 를 참조하십시오. 사용 중인 경우 [!DNL Jupyter Notebook]에 대한 전체 안내서를 읽어 보십시오. [Query Service에 연결하는 방법](../clients/jupyter-notebook.md).
+연결 자격 증명을 제공하여 기계 학습 모델을 쿼리 서비스에 연결해야 합니다. 만료 전 및 비만료 자격 증명을 모두 제공할 수 있습니다. 다음을 참조하십시오. [자격 증명 안내서](../ui/credentials.md) 필요한 자격 증명을 얻는 방법에 대한 자세한 내용을 보려면 여기를 클릭하십시오. 을 사용하는 경우 [!DNL Jupyter Notebook], 의 전체 안내서를 읽어 보십시오. [쿼리 서비스에 연결하는 방법](../clients/jupyter-notebook.md).
 
-또한 를 가져와야 합니다 [!DNL numpy] 에 [!DNL Python] 선형 대수를 활성화하는 환경.
+또한 을(를) 가져옵니다. [!DNL numpy] 에 패키지 추가 [!DNL Python] 선형 대수를 가능하게 하는 환경.
 
 ```python
 import numpy as np
 ```
 
-다음 명령을 사용하여 Query Service에 연결해야 합니다. [!DNL Jupyter Notebook]:
+다음에서 쿼리 서비스에 연결하려면 아래 명령이 필요합니다. [!DNL Jupyter Notebook]:
 
 ```python
 import psycopg2
@@ -66,11 +67,11 @@ password=<YOUR_QUERY_SERVICE_PASSWORD>
 cur = conn.cursor()
 ```
 
-사용자 [!DNL Jupyter Notebook] 이제 인스턴스가 Query Service에 연결되어 있습니다. 연결에 성공하면 메시지가 표시되지 않습니다. 연결에 실패하면 오류가 표시됩니다.
+사용자 [!DNL Jupyter Notebook] 이제 인스턴스가 쿼리 서비스에 연결되어 있습니다. 연결에 성공하면 메시지가 표시되지 않습니다. 연결에 실패하면 오류가 표시됩니다.
 
 ### Luma 데이터 세트에서 데이터 그리기 {#luma-dataset}
 
-분석을 위한 데이터는 다음 명령을 사용하여 첫 번째 데이터 세트에서 도출됩니다. 간결성을 위해 예제는 열의 처음 10개 결과로 제한되었습니다.
+분석할 데이터는 다음 명령을 사용하여 첫 번째 데이터 세트에서 가져옵니다. 간결성을 위해, 예들은 컬럼의 처음 10개의 결과들로 제한되었다.
 
 ```python
 cur.execute('''SELECT * FROM luma;
@@ -95,9 +96,9 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Acme 데이터 집합에서 데이터 그리기 {#acme-dataset}
+### Acme 데이터 세트에서 데이터 가져오기 {#acme-dataset}
 
-이제 분석을 위한 데이터가 다음 명령을 사용하여 두 번째 데이터 세트에서 도출됩니다. 다시, 간결성을 위해 예제는 열의 처음 10개의 결과로 제한되었습니다.
+이제 다음 명령을 사용하여 두 번째 데이터 세트에서 분석용 데이터를 가져옵니다. 다시, 간결성을 위해, 예들은 컬럼의 처음 10개의 결과들로 제한되었다.
 
 ```python
 cur.execute('''SELECT * FROM acme;
@@ -122,11 +123,11 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### 퍼지 점수 책정 기능 만들기 {#fuzzy-scoring}
+### 흐릿한 채점 함수 만들기 {#fuzzy-scoring}
 
-다음으로, `fuzz` FuzzyWuzy 라이브러리에서 문자열을 부분 비율로 비교하여 실행합니다. 부분 비율 함수를 사용하면 하위 문자열 일치를 수행할 수 있습니다. 이 문자열은 가장 짧은 문자열을 사용하고 길이가 같은 모든 하위 문자열과 일치합니다. 함수는 최대 100%의 유사성 비율을 반환합니다. 예를 들어, 부분 비율 함수는 &#39;Deluxe Room&#39;, &#39;1 King Bed&#39;, &#39;Deluxe King Room&#39;과 같은 문자열을 비교하여 유사성 점수 69%를 반환합니다.
+그런 다음 을(를) 가져와야 합니다 `fuzz` FuzzyWuzzy 라이브러리에서 문자열의 부분 비율 비교를 실행합니다. 부분 비율 함수를 사용하면 하위 문자열 일치를 수행할 수 있습니다. 이렇게 하면 가장 짧은 문자열이 사용되며 길이가 같은 모든 하위 문자열과 일치합니다. 이 함수는 최대 100%의 백분율 유사성 비율을 반환합니다. 예를 들어, 부분 비율 함수는 다음 문자열 &#39;Deluxe Room&#39;, &#39;1 King Bed&#39; 및 &#39;Deluxe King Room&#39;을 비교하고 69%의 유사성 점수를 반환합니다.
 
-이 작업은 호텔 룸 일치 사용 사례에서 다음 명령을 사용하여 수행됩니다.
+호텔 룸 일치 사용 사례에서는 다음 명령을 사용하여 이 작업을 수행합니다.
 
 ```python
 from fuzzywuzzy import fuzz
@@ -134,16 +135,16 @@ def compute_match_score(x,y):
     return fuzz.partial_ratio(x,y)
 ```
 
-다음, 가져오기 `cdist` 에서 [!DNL SciPy] 라이브러리 를 사용하여 두 입력 컬렉션에서 각 쌍 사이의 거리를 계산합니다. 이 계산서는 각 여행사가 제공하는 호텔 객실 쌍 중에서 점수를 계산합니다.
+다음, 가져오기 `cdist` 다음에서 [!DNL SciPy] 라이브러리 : 두 입력 컬렉션의 각 쌍 간 거리를 계산합니다. 이것은 각 여행사가 제공한 모든 호텔 객실 쌍 사이의 점수를 계산합니다.
 
 ```python
 from scipy.spatial.distance import cdist
 pairwise_distance =  cdist(luma.reshape((-1,1)),acme.reshape((-1,1)),compute_match_score)
 ```
 
-### 퍼지 조인 점수를 사용하여 두 열 간의 매핑을 만듭니다
+### 퍼지 조인 점수를 사용하여 두 열 간의 매핑 만들기
 
-이제 거리에 따라 열이 점수가 매겨졌으므로 쌍을 색인화하고 특정 비율보다 높은 점수만 유지할 수 있습니다. 이 예는 점수가 70% 이상인 쌍만 유지합니다.
+이제 열에 거리를 기준으로 점수가 매겨졌으므로 쌍을 인덱싱하고 특정 비율보다 높은 점수를 얻은 일치 항목만 유지할 수 있습니다. 이 예는 70% 이상의 점수와 일치하는 쌍만 유지합니다.
 
 ```python
 matched_pairs = []
@@ -153,7 +154,7 @@ for i,c1 in enumerate(luma):
         matched_pairs.append((luma[i].replace("'","''"),acme[j].replace("'","''")))
 ```
 
-결과는 다음 명령과 함께 표시될 수 있습니다. 간결성을 위해 결과는 10개의 행으로 제한됩니다.
+다음 명령을 사용하여 결과를 표시할 수 있습니다. 간결성을 위해 결과는 10개의 행으로 제한됩니다.
 
 ```python
 matched_pairs[:10]
@@ -178,7 +179,7 @@ matched_pairs[:10]
 
 +++
 
-그런 다음 다음 SQL을 사용하여 결과를 일치시킵니다.
+그런 다음 SQL을 사용하여 다음 명령과 일치하는 결과를 얻습니다.
 
 <!-- Q) Why and is this accurate? -->
 
@@ -186,9 +187,9 @@ matched_pairs[:10]
 matching_sql = ' OR '.join(["(e.luma = '{}' AND b.acme = '{}')".format(c1,c2) for c1,c2 in matched_pairs])
 ```
 
-## 매핑을 적용하여 Query Service에서 유사 조인을 수행합니다 {#mappings-for-query-service}
+## 매핑을 적용하여 쿼리 서비스에서 퍼지 조인 수행 {#mappings-for-query-service}
 
-다음으로, 높은 점수가 있는 일치 쌍이 SQL을 사용하여 결합하여 새 데이터 세트를 만듭니다.
+다음으로, 점수가 높은 일치 쌍이 SQL을 사용하여 연결되어 새 데이터 세트를 만듭니다.
 
 ```python
 :
@@ -201,7 +202,7 @@ WHERE
 [r for r in cur]
 ```
 
-선택 **출력** 이 조인의 결과를 확인합니다.
+선택 **출력** 을 클릭하여 이 조인의 결과를 확인합니다.
 
 +++출력
 
@@ -349,9 +350,9 @@ WHERE
 
 +++
 
-### 플랫폼에 퍼지 일치 결과 저장 {#save-to-platform}
+### 유사 항목 일치 결과를 플랫폼에 저장 {#save-to-platform}
 
-마지막으로, 퍼지 일치의 결과는 SQL을 사용하여 Adobe Experience Platform에서 사용할 데이터 세트로 저장할 수 있습니다.
+마지막으로, 유사 항목 일치 결과는 SQL을 사용하여 Adobe Experience Platform에서 사용할 데이터 세트로 저장할 수 있습니다.
 
 ```python
 cur.execute(''' 
@@ -363,5 +364,3 @@ WHERE
 {})
 '''.format(matching_sql))
 ```
-
-

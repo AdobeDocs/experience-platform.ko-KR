@@ -116,7 +116,7 @@ GET /labels/core/{LABEL_NAME}
 GET /labels/custom/{LABEL_NAME}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{LABEL_NAME}` | 다음 `name` 조회할 사용자 지정 레이블의 속성입니다. |
 
@@ -169,7 +169,7 @@ PUT 사용자 지정 레이블을 만들거나 업데이트하려면 [!DNL Polic
 PUT /labels/custom/{LABEL_NAME}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{LABEL_NAME}` | 다음 `name` 사용자 지정 레이블의 속성입니다. 이 이름을 가진 사용자 지정 레이블이 없으면 새 레이블이 만들어집니다. 레이블이 있으면 해당 레이블이 업데이트됩니다. |
 

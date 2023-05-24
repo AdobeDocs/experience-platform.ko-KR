@@ -115,7 +115,7 @@ GET /marketingActions/core/{MARKETING_ACTION_NAME}
 GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | 다음 `name` 조회할 마케팅 작업의 속성입니다. |
 
@@ -165,7 +165,7 @@ curl -X GET \
 PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | 만들거나 업데이트할 마케팅 액션의 이름입니다. 입력한 이름의 마케팅 작업이 시스템에 이미 있으면 해당 마케팅 작업이 업데이트됩니다. 마케팅 액션이 없으면 제공된 이름에 대해 새 마케팅 액션이 만들어집니다. |
 
@@ -229,7 +229,7 @@ curl -X PUT \
 DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MARKETING_ACTION_NAME}` | 삭제할 마케팅 액션의 이름입니다. |
 

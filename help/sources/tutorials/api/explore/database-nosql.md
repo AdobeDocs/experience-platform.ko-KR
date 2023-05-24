@@ -58,7 +58,7 @@ ht-degree: 2%
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 데이터베이스 소스의 연결 ID입니다. |
 
@@ -106,7 +106,7 @@ curl -X GET \
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 데이터베이스 연결의 ID입니다. |
 | `{TABLE_PATH}` | 표의 경로입니다. |

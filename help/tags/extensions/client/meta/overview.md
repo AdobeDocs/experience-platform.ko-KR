@@ -15,7 +15,7 @@ ht-degree: 0%
 
 다음 [!DNL Meta Pixel] 태그 확장을 사용하면 다음을 활용할 수 있습니다 [!DNL Pixel] 클라이언트측 태그 라이브러리의 기능입니다. 이 문서는에서 확장을 설치하고 기능을 사용하는 방법을 다룹니다. [규칙](../../../ui/managing-resources/rules.md).
 
-## 전제 조건
+## 사전 요구 사항
 
 확장을 사용하려면 가 유효해야 합니다 [!DNL Meta] 다음에 대한 액세스 권한이 있는 계정: [!DNL Ads Manager]. 특히 다음을 수행해야 합니다. [새로 만들기 [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) 및 복사 [!DNL Pixel ID] 따라서 계정에 확장을 구성할 수 있습니다. 기존 항목이 이미 있는 경우 [!DNL Meta Pixel], 대신 해당 ID를 사용할 수 있습니다.
 

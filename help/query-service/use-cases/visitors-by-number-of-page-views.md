@@ -2,7 +2,8 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;experienceevent 쿼리;experienceevent 쿼리;경험 이벤트 쿼리;
 title: 페이지 보기 횟수별 방문자 나열
 description: 경험 이벤트를 사용하여 페이지 보기 수로 구성된 방문자 목록을 검색하는 쿼리를 작성하는 방법을 알아봅니다.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 1%

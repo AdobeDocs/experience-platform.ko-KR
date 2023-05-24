@@ -21,7 +21,7 @@ ht-degree: 0%
 - **레서피**: 레시피는 모델 사양에 대한 Adobe의 용어이며 훈련된 모델을 구축하고 실행하여 특정 비즈니스 문제를 해결하는 데 필요한 특정 머신 러닝, 인공 지능 알고리즘 또는 알고리즘, 처리 논리 및 구성의 앙상블을 나타내는 최상위 컨테이너입니다.
 - **소스 파일**: 레시피의 논리가 포함된 프로젝트의 개별 파일입니다.
 
-## 전제 조건
+## 사전 요구 사항
 
 - [[!DNL Docker]](https://docs.docker.com/install/#supported-platforms)
 - [[!DNL Python 3 and pip]](https://docs.conda.io/en/latest/miniconda.html)

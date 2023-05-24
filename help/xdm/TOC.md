@@ -7,7 +7,7 @@ feature: Schemas
 source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '518'
-ht-degree: 16%
+ht-degree: 19%
 
 ---
 
@@ -173,7 +173,7 @@ ht-degree: 16%
    * [개요](api/overview.md)
    * [시작하기](api/getting-started.md)
    * [스키마](api/schemas.md)
-   * [비헤이비어](api/behaviors.md)
+   * [동작](api/behaviors.md)
    * [클래스](api/classes.md)
    * [스키마 필드 그룹](api/field-groups.md)
    * [데이터 유형](api/data-types.md)

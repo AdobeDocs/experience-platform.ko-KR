@@ -108,7 +108,7 @@ GET /models/{MODEL_ID}
 GET /models/?property=experimentRunID=={EXPERIMENT_RUN_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MODEL_ID}` | 교육되었거나 게시된 모델의 식별자입니다. |
 | `{EXPERIMENT_RUN_ID}` | 실험 실행의 식별자입니다. |
@@ -189,7 +189,7 @@ curl -X POST \
     }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `modelArtifact` | 포함하려는 전체 모델 아티팩트의 위치입니다. |
 | `model` | 만들어야 하는 Model 개체의 양식 데이터입니다. |
@@ -229,7 +229,7 @@ curl -X POST \
 PUT /models/{MODEL_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MODEL_ID}` | 교육되었거나 게시된 모델의 식별자입니다. |
 
@@ -288,7 +288,7 @@ curl -X PUT \
 DELETE /models/{MODEL_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MODEL_ID}` | 교육되었거나 게시된 모델의 식별자입니다. |
 
@@ -325,7 +325,7 @@ curl -X DELETE \
 POST /models/{MODEL_ID}/transcodings
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MODEL_ID}` | 교육되었거나 게시된 모델의 식별자입니다. |
 
@@ -380,7 +380,7 @@ curl -X POST \
 GET /models/{MODEL_ID}/transcodings
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MODEL_ID}` | 교육되었거나 게시된 모델의 식별자입니다. |
 
@@ -440,7 +440,7 @@ curl -X GET \
 GET /models/{MODEL_ID}/transcodings/{TRANSCODING_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{MODEL_ID}` | 교육되었거나 게시된 모델의 고유 식별자입니다. |
 | `{TRANSCODING_ID}` | 코드 변환된 모델의 고유 식별자입니다. |

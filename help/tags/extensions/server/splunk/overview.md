@@ -26,7 +26,7 @@ Splunk는 전달자 토큰을 인증 메커니즘으로 사용하여 Splunk 이�
 
 {style="table-layout:auto"}
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 이 확장을 사용하려면 Splunk 계정이 있어야 합니다. 에서 Splunk 계정에 등록할 수 있습니다. [Splunk 홈 페이지](https://www.splunk.com/page/sign_up).
 

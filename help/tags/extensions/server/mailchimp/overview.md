@@ -24,7 +24,7 @@ Mailchimp [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장은
 
 이 문서에서는 이벤트 추가 작업을 사용하여 확장을 설정하고 규칙을 구성하는 방법에 대해 설명합니다.
 
-## 전제 조건
+## 사전 요구 사항
 
 이 문서에서는 사용자가 확장에서 활용하는 관련 Mailchimp 제품을 잘 알고 있다고 가정합니다. 자세한 내용은 Mailchimp 도움말 설명서 를 참조하십시오. [캠페인](https://mailchimp.com/help/getting-started-with-campaigns/), [여정](https://mailchimp.com/help/about-customer-journeys/), 및 [트랜잭션](https://mailchimp.com/help/transactional/).
 

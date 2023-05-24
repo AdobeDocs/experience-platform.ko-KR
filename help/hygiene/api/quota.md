@@ -41,7 +41,7 @@ GET /quota
 GET /quota?quotaType={QUOTA_TYPE}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{QUOTA_TYPE}` | 검색할 할당량의 유형을 지정하는 선택적 쿼리 매개 변수입니다. 없는 경우 `quotaType` 매개 변수가 제공되면 모든 할당량 값이 API 응답에 반환됩니다. 허용되는 유형 값은 다음과 같습니다.<ul><li>`expirationDatasetQuota`: 데이터 세트 만료</li><li>`deleteIdentityWorkOrderDatasetQuota`: 레코드 삭제</li><li>`fieldUpdateWorkOrderDatasetQuota`: 레코드 업데이트</li></ul> |
 

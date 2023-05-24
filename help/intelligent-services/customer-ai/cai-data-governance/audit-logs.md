@@ -2,7 +2,8 @@
 keywords: 인사이트;고객 ai;고객 ai 인사이트;CAI 쿼리 서비스;고객 ai 쿼리;고객 ai 점수
 title: Customer AI의 감사 로그 개요
 description: Customer AI에서 감사 로그를 보고 관리하는 방법을 알아봅니다.
-source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
+exl-id: f5b2d0b0-b6ae-4ccc-b4c9-ac9cc6078d81
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 36%

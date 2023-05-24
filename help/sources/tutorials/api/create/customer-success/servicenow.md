@@ -86,7 +86,7 @@ curl -X POST \
     }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `auth.params.server` | 의 엔드포인트 [!DNL ServiceNow] 서버입니다. |
 | `auth.params.username` | 에 연결하는 데 사용된 사용자 이름 [!DNL ServiceNow] 인증용 서버입니다. |

@@ -91,7 +91,7 @@ curl -X POST \
     }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `auth.params.endpoint` | 의 엔드포인트 [!DNL Azure Data Explorer] 서버입니다. |
 | `auth.params.database` | 의 이름입니다. [!DNL Azure Data Explorer] 데이터베이스. |

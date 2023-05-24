@@ -612,7 +612,7 @@ curl -X GET \
 
 * [소스 연결 ID](#source)
 * [Target 연결 ID](#target)
-* [매핑 ID](#mapping)
+* [ID 매핑](#mapping)
 * [데이터 흐름 사양 ID](#specs)
 
 데이터 흐름은 소스에서 데이터를 예약하고 수집합니다. 페이로드 내에 이전에 언급된 값을 제공하면서 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.

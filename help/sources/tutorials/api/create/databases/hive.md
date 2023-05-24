@@ -88,7 +88,7 @@ curl -X POST \
     }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `auth.params.connectionString` | 와(과) 연결된 연결 문자열 [!DNL Hive] 계정입니다. |
 | `connectionSpec.id` | 다음 [!DNL Hive] 연결 사양 ID: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`. |

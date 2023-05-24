@@ -19,7 +19,7 @@ Adobe Experience Platform Web SDK는 [Adobe Experience Cloud ID (ECID)](https://
 
 이 문서에서는 Platform Web SDK 구현을 위한 자사 디바이스 ID를 구성하는 방법을 다룹니다.
 
-## 전제 조건
+## 사전 요구 사항
 
 이 안내서에서는 사용자가 ECID 및 의 역할을 포함하여 Platform Web SDK에 대해 ID 데이터가 작동하는 방식을 잘 알고 있다고 가정합니다. `identityMap`. 의 개요 보기 [웹 SDK의 ID 데이터](./overview.md) 추가 정보.
 

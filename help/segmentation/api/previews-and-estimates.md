@@ -114,7 +114,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 GET /preview/{PREVIEW_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{PREVIEW_ID}` | 다음 `previewId` 검색할 미리보기 값. |
 
@@ -191,7 +191,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 GET /estimate/{PREVIEW_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{PREVIEW_ID}` | 예상 작업은 미리 보기 작업이 만들어지고 두 작업이 조회 목적으로 동일한 ID 값을 공유하는 경우에만 트리거됩니다. 특히 다음과 같습니다 `previewId` 미리보기 작업이 생성될 때 값이 반환되었습니다. |
 

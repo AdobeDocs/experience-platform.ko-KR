@@ -3,13 +3,13 @@ keywords: Experience Platform;사용 안내서;attribution ai;인기 주제;액�
 feature: Attribution AI
 title: Attribution AI을 위한 거버넌스 정책
 description: Adobe Experience Platform은 수집된 경험 데이터를 자신 있게 제어할 수 있는 몇 가지 서비스와 도구를 제공합니다.
-source-git-commit: 2cce166592c4d4b7f9d62bc3385fb8ccdd74c958
+exl-id: 448b10c8-8eac-41cb-9b77-66aa283c0a9d
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%
 
 ---
-
 
 # 거버넌스 정책
 

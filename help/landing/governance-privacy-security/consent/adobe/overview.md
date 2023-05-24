@@ -21,7 +21,7 @@ Adobe Experience Platform을 사용하면 고객으로부터 수집한 동의 �
 >
 >이 문서는 Adobe 표준을 사용하는 동의 데이터 처리에 중점을 둡니다. IAB TCF(Transparency and Consent Framework) 2.0을 준수하여 동의 데이터를 처리하는 경우 의 안내서를 참조하십시오. [Adobe Real-time Customer Data Platform의 TCF 2.0 지원](../iab/overview.md).
 
-## 전제 조건
+## 사전 요구 사항
 
 이 안내서를 사용하려면 동의 데이터 처리와 관련된 다양한 Experience Platform 서비스에 대한 작업 이해가 필요합니다.
 

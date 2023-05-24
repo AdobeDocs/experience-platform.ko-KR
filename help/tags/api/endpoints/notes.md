@@ -53,7 +53,7 @@ Reactor API에서 참고는 특정 리소스에 추가할 수 있는 텍스트 �
 GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `RESOURCE_TYPE` | 메모를 가져오는 리소스의 유형입니다. 다음 값 중 하나여야 합니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | 다음 `id` 메모를 나열할 특정 리소스. |
@@ -129,7 +129,7 @@ GET 요청 경로에 해당 ID를 제공하여 메모를 조회할 수 있습니
 GET /notes/{NOTE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `NOTE_ID` | 다음 `id` 조회하려는 메모. |
 
@@ -195,7 +195,7 @@ curl -X GET \
 POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `RESOURCE_TYPE` | 메모를 작성 중인 리소스의 유형입니다. 다음 값 중 하나여야 합니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | 다음 `id` 메모를 만들 특정 리소스. |

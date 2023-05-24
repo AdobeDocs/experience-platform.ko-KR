@@ -19,7 +19,7 @@ ht-degree: 2%
 >
 >이 설명서 페이지는 작성자: [!DNL Verizon Media/Yahoo]의 [!DNL DataX] 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 **MDM ID**
 

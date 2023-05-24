@@ -5,7 +5,7 @@ exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 5%
+ht-degree: 9%
 
 ---
 
@@ -84,8 +84,8 @@ Experience Platform 대시보드에는 조직이 Profile Store in Profile에 가
 | 기능 | 설명 |
 | --- | --- |
 | 세분화되지 않은 프로필 위젯 | 위젯은 세그먼트에 첨부되지 않은 모든 프로필의 총 수를 제공합니다. 생성된 숫자는 마지막 스냅샷을 기준으로 정확하며 조직 전체에서 프로필 활성화 기회를 나타냅니다. 다음을 참조하십시오. [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
-| 세분화되지 않은 프로필 트렌드 위젯 | 이 위젯은 주어진 기간 동안 세그먼트에 첨부되지 않은 프로필 수에 대한 선 그래프 일러스트레이션을 제공합니다. 30일, 90일, 12개월 기간에 걸쳐 트렌드를 시각화할 수 있습니다. 다음을 참조하십시오. [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
-| ID 위젯별 세분화되지 않은 프로필 | 이 위젯은 세그먼트화되지 않은 총 프로필 수를 고유 식별자로 분류합니다. 데이터는 막대 차트로 시각화됩니다. 다음을 참조하십시오. [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
+| 세분화되지 않은 프로필 트렌드 위젯 | 이 위젯은 지정된 기간 동안 세그먼트에 연결되지 않은 프로필 개수에 대한 선 그래프 그림을 제공합니다. 30일, 90일, 12개월 기간에 걸쳐 트렌드를 시각화할 수 있습니다. 다음을 참조하십시오. [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
+| ID 위젯별 세분화되지 않은 프로필 | 이 위젯은 고유 식별자별로 분할되지 않은 총 프로필 개수를 분류합니다. 데이터는 막대 차트로 시각화됩니다. 다음을 참조하십시오. [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
 | 단일 ID 프로필 위젯 | 이 위젯에서는 ID를 만드는 한 가지 유형의 ID(이메일 또는 ECID)만 있는 조직 프로필 수를 제공합니다. 다음을 참조하십시오. [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
 
 {style="table-layout:auto"}
@@ -100,7 +100,7 @@ Experience Platform 대시보드에는 조직이 Profile Store in Profile에 가
 
 | 기능 | 설명 |
 | --- | --- |
-| 대상 수 위젯 | 위젯은 대상을 활성화하고 시스템 내에서 전달할 수 있는 사용 가능한 총 끝점 수를 제공합니다. 이 숫자는 활성 및 비활성 대상을 모두 포함합니다. 다음을 참조하십시오. [대상 표준 위젯 설명서](../../dashboards/guides/destinations.md#standard-widgets) 추가 정보. |
+| 대상 수 위젯 | 위젯은 대상을 활성화하고 시스템 내에서 전달할 수 있는 사용 가능한 총 끝점 수를 제공합니다. 이 개수에는 활성 대상과 비활성 대상이 모두 포함됩니다. 다음을 참조하십시오. [대상 표준 위젯 설명서](../../dashboards/guides/destinations.md#standard-widgets) 추가 정보. |
 
 {style="table-layout:auto"}
 

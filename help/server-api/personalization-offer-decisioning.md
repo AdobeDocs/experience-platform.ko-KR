@@ -25,7 +25,7 @@ Server API를 Offer Decisioning과 함께 사용하려면 먼저 데이터 스�
 
 ![offer decisioning이 선택된 상태에서 데이터 스트림 서비스 구성 화면을 표시하는 UI 이미지](assets/aep-od-datastream.png)
 
-## 대상자 만들기 {#audience-creation}
+## 대상자 생성 {#audience-creation}
 
 [!DNL Offer Decisioning] 은 대상자 생성을 위해 Adobe Experience Platform 세그멘테이션 서비스를 사용합니다. 다음에 대한 설명서를 찾을 수 있습니다. [!DNL Segmentation Service] [여기](../segmentation/home.md).
 

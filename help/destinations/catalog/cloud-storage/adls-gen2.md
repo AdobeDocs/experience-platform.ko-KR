@@ -30,7 +30,7 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 ## 대상에 연결 {#connect}
 

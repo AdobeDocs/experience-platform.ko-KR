@@ -237,7 +237,7 @@ curl -X POST \
 GET /tenant/schemas/{SCHEMA_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SCHEMA_ID}` | URL로 인코딩됨 `$id` URI 또는 `meta:altId` 에 대해 설명합니다. |
 

@@ -13,17 +13,17 @@ ht-degree: 75%
 
 >[!NOTE]
 >
->이벤트 전달은 Adobe Real-time Customer Data Platform 연결, Prime 또는 Ultimate 오퍼링의 일부로 포함된 유료 기능입니다.
+>이벤트 전달은 Adobe Real-time Customer Data Platform Connections, Prime 또는 Ultimate 제품의 일부로 포함된 유료 기능입니다.
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform에서 데이터 수집 기술 세트로 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](./term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](./term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform의 태그는 Adobe의 차세대 태그 관리 기능입니다. 태그를 통해 관련 고객 경험을 강화하는 데 필요한 모든 분석, 마케팅 및 광고 태그를 고 관리하는 간단한 방법을 고객에게 제공합니다.
 
-태그는 모든 사람이 *확장*. [!DNL Adobe Experience Cloud] 고객은 앱 스토어 환경에서 이러한 확장을 사용할 수 있으므로 태그를 신속하게 설치, 구성 및 배포할 수 있습니다.
+태그는 라고 하는 자체 통합을 구축하고 유지할 수 있는 권한을 누구에게나 부여합니다. *확장*. [!DNL Adobe Experience Cloud] 고객은 앱 스토어 환경에서 이러한 확장을 사용할 수 있으므로 태그를 신속하게 설치, 구성 및 배포할 수 있습니다.
 
-태그는 [!DNL Adobe Experience Cloud] 고객이 부가가치 기능으로 포함되어 있을 경우
+태그는 다음 대상에게 제공됩니다 [!DNL Adobe Experience Cloud] 부가가치 기능으로 포함된 고객.
 
 ## 주요 이점 {#key-benefits}
 
@@ -35,7 +35,7 @@ Adobe Experience Platform의 태그는 Adobe의 차세대 태그 관리 기능�
 
 ### 확장 {#extensions}
 
-확장은 태그 기능을 확장하는 코드 패키지(JavaScript, HTML 및 CSS)입니다. 사실상의 셀프 서비스 인터페이스를 사용하여 통합을 구축, 관리 및 업데이트합니다. 확장을 작업을 수행하기 위해 사용하는 앱으로 생각할 수 있습니다.
+확장은 태그 기능을 확장하는 코드 패키지(JavaScript, HTML 및 CSS)입니다. 사실상의 셀프 서비스 인터페이스를 사용하여 통합을 구축, 관리 및 업데이트합니다. 확장은 작업을 수행하는 데 사용하는 앱으로 간주할 수 있습니다.
 
 ### 확장 카탈로그 {#extension-catalog}
 
@@ -66,13 +66,13 @@ Adobe Experience Platform의 태그는 Adobe의 차세대 태그 관리 기능�
 * 코드를 배포할 위치 및 시점을 지정합니다.
 * 서로 다른 팀이 여러 라이브러리를 동시에 구축할 수 있습니다.&#x200B;
 * 개발 환경이 제한되지 않습니다.
-* 라이브러리 병합을 위한 고의적이고 권한 기반 프로세스입니다.
+* 라이브러리를 병합하기 위한 고의적인 권한 기반 프로세스입니다.
 
 ### API 열기 {#open-apis}
 
 개별 기술 또는 기술 그룹의 구현을 자동화합니다.
 
-* 태그는 Reactor API와 상호 작용합니다.
+* 태그는 반응로 API와 상호 작용합니다.
 * API를 통해 배포를 자동화할 수 있습니다.
 *  API를 자체 내부 시스템과 통합합니다.
 * 원하는 경우 자체 사용자 인터페이스를 구축할 수 있습니다.

@@ -41,7 +41,7 @@ GET 데이터 흐름의 상태를 보려면 [!DNL Flow Service] API, 데이터 �
 GET /runs?property=flowId=={FLOW_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{FLOW_ID}` | 고유 `id` 모니터링할 데이터 흐름 값. |
 

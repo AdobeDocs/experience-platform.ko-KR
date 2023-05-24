@@ -27,7 +27,7 @@ Adobe Experience Platform은 등록된 항목의 일부입니다. [IAB TCF 2.0 �
 
 이 문서에서는 CMP에서 생성된 고객 동의 데이터를 수락하도록 데이터 작업 및 프로필 스키마를 구성하는 방법 및 Platform이 세그먼트를 내보낼 때 사용자 동의 선택 사항을 전달하는 방법에 대한 개요를 제공합니다.
 
-## 전제 조건
+## 사전 요구 사항
 
 이 안내서와 함께 사용하려면 IAB TCF와 통합되고 호환되는 CMP(동의 관리 플랫폼)를 상업용이거나 소유하고 있어야 합니다. 다음을 참조하십시오. [준수 CMP 목록](https://iabeurope.eu/cmp-list/) 추가 정보.
 
@@ -61,7 +61,7 @@ Adobe Experience Platform은 등록된 항목의 일부입니다. [IAB TCF 2.0 �
 
 CMP 동의 변경 후크에서 트리거한 SDK 명령 외에도 동의 데이터는에 직접 업로드되는 고객 생성 XDM 데이터를 통해 Experience Platform으로 유입될 수 있습니다. [!DNL Profile]-활성화된 데이터 세트.
 
-Adobe Audience Manager에서 Platform과 공유한 모든 세그먼트( 를 통해) [!DNL Audience Manager] 적절한 필드가 을 통해 해당 세그먼트에 적용되는 경우 소스 커넥터 또는 기타)에도 동의 데이터가 포함될 수 있습니다. [!DNL Experience Cloud Identity Service]. 에서 동의 데이터 수집에 대한 자세한 내용 [!DNL Audience Manager]의 문서를 참조하십시오. [IAB TCF를 위한 Adobe Audience Manager 플러그인](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+Adobe Audience Manager에서 Platform과 공유한 모든 세그먼트( 를 통해) [!DNL Audience Manager] 적절한 필드가 을 통해 해당 세그먼트에 적용되는 경우 소스 커넥터 또는 기타)에도 동의 데이터가 포함될 수 있습니다. [!DNL Experience Cloud Identity Service]. 에서 동의 데이터 수집에 대한 자세한 내용 [!DNL Audience Manager]의 문서를 참조하십시오. [IAB TCF를 위한 Adobe Audience Manager 플러그인](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=ko-KR).
 
 ### 다운스트림 동의 적용
 
@@ -242,7 +242,7 @@ alloy("sendEvent", {
 
 >[!NOTE]
 >
->Adobe Audience Manager과 공유되는 모든 세그먼트에는 Platform의 대응 세그먼트와 동일한 TCF 2.0 동의 값이 포함됩니다. 다음 이후 [!DNL Audience Manager] 플랫폼(565)과 동일한 공급업체 ID를 공유합니다. 동일한 목적과 공급업체 권한이 필요합니다. 다음에서 문서 보기: [IAB TCF를 위한 Adobe Audience Manager 플러그인](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) 추가 정보.
+>Adobe Audience Manager과 공유되는 모든 세그먼트에는 Platform의 대응 세그먼트와 동일한 TCF 2.0 동의 값이 포함됩니다. 다음 이후 [!DNL Audience Manager] 플랫폼(565)과 동일한 공급업체 ID를 공유합니다. 동일한 목적과 공급업체 권한이 필요합니다. 다음에서 문서 보기: [IAB TCF를 위한 Adobe Audience Manager 플러그인](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=ko-KR) 추가 정보.
 
 ## 구현 테스트 {#test-implementation}
 

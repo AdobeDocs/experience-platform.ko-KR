@@ -293,7 +293,7 @@ curl -X POST 'https://platform.adobe.io/data/sensei/mlServices'
 GET /mlServices/{SERVICE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SERVICE_ID}` | 고유 `id` 조회하고 있는 ML 서비스 |
 
@@ -353,7 +353,7 @@ curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 PUT /mlServices/{SERVICE_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{SERVICE_ID}` | 고유 `id` 업데이트 중인 ML 서비스의 ID입니다. |
 

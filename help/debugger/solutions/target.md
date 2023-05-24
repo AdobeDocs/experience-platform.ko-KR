@@ -13,7 +13,7 @@ ht-degree: 4%
 
 Adobe Experience Platform Debugger는 Adobe Target 구현과 연결된 웹 사이트를 테스트하고 디버깅하는 데 유용한 도구 모음을 제공합니다. 이 안내서에서는 Target이 활성화된 웹 사이트에서 Platform Debugger를 사용하기 위한 몇 가지 일반적인 워크플로우 및 모범 사례를 다룹니다.
 
-## 전제 조건
+## 사전 요구 사항
 
 Target에 Platform Debugger를 사용하려면 웹 사이트에서 [at.js 라이브러리](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) 버전 1.x 이상 이전 버전은 지원되지 않습니다.
 

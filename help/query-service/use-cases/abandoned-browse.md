@@ -26,7 +26,7 @@ ht-degree: 2%
 
 * 다음 [experience Data Model(XDM) 스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md)
 * 방법 [데이터 세트 만들기 및 데이터 수집](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
-* 방법 [Adobe Analytics 소스 커넥터를 사용하여 데이터 수집](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=ko-KR)
+* 방법 [Adobe Analytics 소스 커넥터를 사용하여 데이터 수집](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
 * [세그먼테이션](../../segmentation/home.md)
 * [대상](../../destinations/home.md)
 

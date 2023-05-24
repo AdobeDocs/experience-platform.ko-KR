@@ -1,16 +1,17 @@
 ---
 title: 데이터 Distiller 개요
-description: 라이선스 권한과 관련된 Query Service 데이터에 대한 Data Distiller 사용 제한 요약입니다.
-source-git-commit: 5958a9764ebe749a6c945c984a6e9979c444d4dc
+description: 라이선스 자격과 관련된 쿼리 서비스 데이터의 데이터 Distiller 사용 제한에 대한 요약입니다.
+exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%
 
 ---
 
-# Data Distiller 개요
+# 데이터 Distiller 개요
 
-Data Distiller 는 Adobe Experience Platform의 기능 하위 집합을 포함하는 패키지 서비스입니다. Data Cloud를 사용하면 Query Service에서 배치 쿼리를 실행하여 실시간 고객 프로필 또는 분석 사용 사례에 대한 사후 수집 데이터 준비(예: 청소, 쉐이핑 및 조작)를 수행할 수 있습니다. 데이터 Distiller의 사용은 플랫폼 기반 애플리케이션에 대한 사용 권한에 따라 다릅니다.
+Data Distiller은 Adobe Experience Platform의 기능 하위 집합을 포함하는 패키지 오퍼링입니다. Data Distiller을 사용하면 쿼리 서비스에서 일괄 쿼리를 실행하여 실시간 고객 프로필 또는 분석 사용 사례에 대한 수집 후 데이터 준비(예: 청소, 셰이핑 및 조작)를 수행할 수 있습니다. Data Distiller의 사용은 플랫폼 기반 애플리케이션에 대한 권한 부여에 따라 달라집니다.
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}
@@ -34,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## 가드레일
 
-자세한 내용은 [쿼리 서비스 보호 기능](../guardrails.md) 라이선스 권한과 관련하여 Query Service 데이터의 기본 사용 제한에 대한 문서가 제공됩니다.
+다음을 참조하십시오. [쿼리 서비스 보호 기능](../guardrails.md) 라이선스 자격과 관련하여 쿼리 서비스 데이터의 기본 사용 제한에 대한 문서입니다.
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits
@@ -49,4 +50,3 @@ A static limit is the usage limit that relates to the functional boundaries of A
     * To generate meaningful insights from your data.
 * **Reporting API Call**: To ensure queries run on aggregated data using the reporting API have enough resources to execute efficiently. This includes queries that enhance existing data models such as those provided by Real-Time Customer Data Platform. The reporting API tracks resource utilization by assigning concurrency slots to each query. A maximum of four reporting API calls are available concurrently. If you access the reporting API through a BI tool and require more concurrency slots, a BI server is required.
 -->
-

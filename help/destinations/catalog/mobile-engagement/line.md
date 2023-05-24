@@ -25,7 +25,7 @@ ht-degree: 0%
 
 마케터는 세그먼트가 내장된 모바일 참여 대상의 사용자를 타깃팅할 수 있습니다 [!DNL Adobe Experience Platform]. 또한 의 속성을 기반으로 개인화된 경험을 제공할 수 있습니다 [!DNL Adobe Experience Platform] 세그먼트 및 프로필이 업데이트되는 즉시 프로필 [!DNL Adobe Experience Platform].
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 ### [!DNL LINE] 전제 조건 {#prerequisites-destination}
 

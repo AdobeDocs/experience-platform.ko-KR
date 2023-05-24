@@ -35,7 +35,7 @@ ht-degree: 3%
 OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| 매개 변수 | 설명 | 예 |
+| 매개변수 | 설명 | 예 |
 | --------- | ----------- | ------- |
 | `{PARTITION}` | 열 또는 사용 가능한 필드를 기반으로 한 행의 하위 그룹. | `PARTITION BY endUserIds._experience.mcid.id` |
 | `{ORDER}` | 하위 집합 또는 행의 순서를 지정하는 데 사용되는 열 또는 사용 가능한 필드입니다. | `ORDER BY timestamp` |
@@ -55,7 +55,7 @@ Adobe Analytics의 세션화에 대한 자세한 내용은 [컨텍스트 인식 
 SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{TIMESTAMP}` | 데이터 세트에 있는 타임스탬프 필드입니다. |
 | `{EXPIRATION_IN_SECONDS}` | 현재 세션이 끝나고 새 세션이 시작되는 것을 확인하기 위해 이벤트 사이에 필요한 초 수입니다. |
@@ -119,7 +119,7 @@ LIMIT 10
 SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{TIMESTAMP}` | 데이터 세트에 있는 타임스탬프 필드입니다. |
 | `{TEST_EXPRESSION}` | 데이터의 필드를 확인할 표현식입니다. 예: `application.launches > 0`. |
@@ -184,7 +184,7 @@ SELECT
 SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{TIMESTAMP}` | 데이터 세트에 있는 타임스탬프 필드입니다. |
 | `{TEST_EXPRESSION}` | 데이터의 필드를 확인할 표현식입니다. 예: `application.launches > 0`. |
@@ -256,7 +256,7 @@ SELECT
 PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{KEY}` | 이벤트의 열 또는 필드. |
 | `{SHIFT}` | (선택 사항) 현재 이벤트에서 벗어난 이벤트 수입니다. 기본값은 1입니다. |
@@ -307,7 +307,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{KEY}` | 이벤트의 열 또는 필드. |
 | `{SHIFT}` | (선택 사항) 현재 이벤트에서 벗어난 이벤트 수입니다. 기본값은 1입니다. |
@@ -365,7 +365,7 @@ TIME_BETWEEN_PREVIOUS_MATCH(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{TIMESTAMP}` | 모든 이벤트에 채워진 데이터 세트에 있는 타임스탬프 필드입니다. |
 | `{EVENT_DEFINITION}` | 이전 이벤트를 평가하는 표현식. |
@@ -427,7 +427,7 @@ LIMIT 10
 TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{TIMESTAMP}` | 모든 이벤트에 채워진 데이터 세트에 있는 타임스탬프 필드입니다. |
 | `{EVENT_DEFINITION}` | 다음 이벤트를 평가하는 표현식. |

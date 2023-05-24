@@ -22,7 +22,7 @@ Adobe Audience Manager Data Integration Library 확장(클라이언트측 구현
 
 ![Audience Manager DIL 확장](../../assets/catalog/data-management-platform/aam-dil-extension/configure.png)
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 이 확장 프로그램은 다음에서 사용할 수 있습니다. [!DNL Destinations] Platform을 구입한 모든 고객을 위한 카탈로그.
 

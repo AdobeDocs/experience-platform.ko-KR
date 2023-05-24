@@ -17,7 +17,7 @@ ht-degree: 6%
 
 이 문서에서는 액세스 권한을 제공하는 기능 및 활성화 기능을 포함하여 대시보드에 대해 사용 가능한 권한에 대한 요약을 제공합니다. 액세스 권한 획득 및 할당에 대한 자세한 내용은 [액세스 제어 개요](../access-control/home.md).
 
-## 전제 조건
+## 사전 요구 사항
 
 다음에 대한 액세스 제어를 구성하려면 [!DNL Experience Platform], 다음을 보유한 조직에 대한 관리자 권한이 있어야 합니다. [!DNL Experience Platform] 제품 통합. 에 대한 Adobe Help Center 문서 보기 [관리자 역할](https://helpx.adobe.com/enterprise/using/admin-roles.html) 추가 정보.
 

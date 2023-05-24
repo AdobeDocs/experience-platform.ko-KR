@@ -1,7 +1,8 @@
 ---
 title: 쿼리 일정
 description: Adobe Experience Platform UI를 통해 예약된 쿼리 실행을 자동화하고, 쿼리 일정을 삭제 또는 비활성화하고, 사용 가능한 예약 옵션을 활용하는 방법을 알아봅니다.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 0%
@@ -67,5 +68,3 @@ API를 사용하여 일정을 추가하는 방법을 알아보려면 다음을 �
 선택 **[!UICONTROL 일정 삭제]** 비활성화된 일정을 삭제하려면
 
 ![[일정 비활성화] 및 [일정 삭제]가 강조 표시된 일정 작업 영역입니다.](../images/ui/query-schedules/delete-schedule.png)
-
-

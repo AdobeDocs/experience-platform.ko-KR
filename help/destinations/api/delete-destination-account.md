@@ -160,7 +160,7 @@ DELETE 연결 ID가 있고 대상 계정에 대한 데이터 흐름이 없는지
 DELETE /connections/{CONNECTION_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | 고유 `id` 삭제할 연결의 값입니다. |
 

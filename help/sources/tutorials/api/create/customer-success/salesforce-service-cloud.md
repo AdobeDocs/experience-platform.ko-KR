@@ -86,7 +86,7 @@ curl -X POST \
     }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --------- | ----------- |
 | `auth.params.username` | 와(과) 연계된 사용자 이름 [!DNL Salesforce Service Cloud] 계정입니다. |
 | `auth.params.password` | 과(와) 연계된 암호 [!DNL Salesforce Service Cloud] 계정입니다. |

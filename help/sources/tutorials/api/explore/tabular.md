@@ -39,7 +39,7 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 소스의 기본 연결 ID입니다. |
 
@@ -87,7 +87,7 @@ GET 데이터 테이블의 내용을 검사하려면 [!DNL Flow Service] 쿼리 
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | 소스의 기본 연결 ID입니다. |
 | `{TABLE_PATH}` | 검사할 테이블의 경로 속성입니다. |

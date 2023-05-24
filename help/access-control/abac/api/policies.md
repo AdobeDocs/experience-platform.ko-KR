@@ -158,7 +158,7 @@ curl -X GET \
 GET /policies/{POLICY_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | {POLICY_ID} | 검색할 정책의 ID입니다. |
 
@@ -268,7 +268,7 @@ curl -X POST \
     }'
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | `name` | 정책의 이름입니다. |
 | `description` | (선택 사항) 특정 정책에 대한 추가 정보를 제공하기 위해 추가할 수 있는 속성입니다. |
@@ -330,7 +330,7 @@ curl -X POST \
 PUT /policies/{POLICY_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | {POLICY_ID} | 업데이트할 정책의 ID입니다. |
 
@@ -399,7 +399,7 @@ curl -X PUT \
 PATCH /policies/{POLICY_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | {POLICY_ID} | 업데이트할 정책의 ID입니다. |
 
@@ -470,7 +470,7 @@ curl -X PATCH \
 DELETE /policies/{POLICY_ID}
 ```
 
-| 매개 변수 | 설명 |
+| 매개변수 | 설명 |
 | --- | --- |
 | {POLICY_ID} | 삭제할 정책의 ID입니다. |
 

@@ -16,7 +16,7 @@ ht-degree: 1%
 
 이 문서에서는 가 제공하는 필드의 구조와 용도에 대해 설명합니다. [!UICONTROL 동의 및 환경 설정] 데이터 유형.
 
-## 전제 조건 {#prerequisites}
+## 사전 요구 사항 {#prerequisites}
 
 이 문서에서는 XDM과 의 스키마 사용에 대한 작업 이해가 필요합니다. [!DNL Experience Platform]. 계속하기 전에 다음 설명서를 검토하십시오.
 
@@ -300,7 +300,7 @@ ht-degree: 1%
 
 | 값 | 설명 |
 | --- | --- |
-| `email` | 이메일 메시지. |
+| `email` | 이메일 messages. |
 | `push` | 푸시 알림. |
 | `inApp` | 인앱 메시지. |
 | `sms` | SMS 메시지. |
