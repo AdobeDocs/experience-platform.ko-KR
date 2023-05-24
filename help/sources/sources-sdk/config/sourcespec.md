@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: 셀프서비스 소스에 대한 소스 사양 구성(일괄 SDK)
 description: 이 문서에서는 셀프서비스 소스(Batch SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b1173adb0e0c3a6460b2cb15cba9218ddad7abcb
 workflow-type: tm+mt
-source-wordcount: '1687'
-ht-degree: 1%
+source-wordcount: '1847'
+ht-degree: 0%
 
 ---
 
@@ -439,9 +439,11 @@ ht-degree: 1%
 ```json
 "paginationParams": {
   "type": "PAGE",
-  "limitName": "records",
-  "limitValue": "100",
-  "pageParamName": "pageIndex",
+  "limitName": "pageSize",
+  "limitValue": 100,
+  "initialPageIndex": 1,
+  "endPageIndex": "headers.x-pagecount",
+  "pageParamName": "pageNumber",
   "maximumRequest": 10000
 }
 ```
@@ -451,8 +453,13 @@ ht-degree: 1%
 | `type` | 데이터를 반환하는 데 사용되는 페이지 매김 유형입니다. |
 | `limitName` | API가 페이지에서 가져올 레코드 수를 지정할 수 있는 제한 이름입니다. |
 | `limitValue` | 페이지에서 가져올 레코드 수입니다. |
+| `initialPageIndex` | (선택 사항) 초기 페이지 색인은 페이지 매김이 시작될 페이지 번호를 정의합니다. 이 필드는 페이지 매김이 0부터 시작되지 않는 소스에 사용할 수 있습니다. 제공하지 않은 경우 초기 페이지 색인은 기본적으로 0으로 설정됩니다. 이 필드에는 정수가 필요합니다. |
+| `endPageIndex` | (선택 사항) 종료 페이지 색인을 사용하면 종료 조건을 설정하고 페이지 매김을 중지할 수 있습니다. 페이지 매김을 중지하는 기본 종료 조건을 사용할 수 없을 때 이 필드를 사용할 수 있습니다. 사용할 때 일반적인 응답 헤더를 통해 수집할 페이지 수 또는 마지막 페이지 번호를 제공하는 경우에도 이 필드를 사용할 수 있습니다 `PAGE` 페이지 매김을 입력하십시오. 끝 페이지 인덱스의 값은 마지막 페이지 번호이거나 응답 헤더의 문자열 유형 표현식 값일 수 있습니다. 예를 들어 다음을 사용할 수 있습니다. `headers.x-pagecount` 최종 페이지 인덱스를 `x-pagecount` 응답 헤더의 값입니다. **참고**: `x-pagecount` 는 일부 소스의 필수 응답 헤더이며 수집할 페이지 수 값을 보유합니다. |
 | `pageParamName` | 반환 데이터의 다른 페이지를 트래버스하기 위해 쿼리 매개 변수에 추가해야 하는 매개 변수의 이름입니다. 예를 들어, `https://abc.com?pageIndex=1` 는 API 반환 페이로드의 두 번째 페이지를 반환합니다. |
 | `maximumRequest` | 지정된 증분 실행에 대해 소스에서 수행할 수 있는 최대 요청 수입니다. 현재 기본 제한은 10000입니다. |
+
+{style="table-layout:auto"}
+
 
 #### `NONE`
 
