@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여 줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 3907efa2e8c20671e283c1e5834fc7224ee12f9e
+source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
 workflow-type: tm+mt
-source-wordcount: '3406'
+source-wordcount: '3706'
 ht-degree: 2%
 
 ---
@@ -568,7 +568,7 @@ SET property_key = property_value
 
 아래의 하위 섹션은 [!DNL PostgreSQL] 쿼리 서비스에서 지원하는 명령입니다.
 
-### 테이블 분석
+### 테이블 분석 {#analyze-table}
 
 다음 `ANALYZE TABLE` 명령은 가속화된 저장소의 테이블에 대한 통계를 계산합니다. 통계는 가속 저장소의 주어진 표에 대해 실행된 CTAS 또는 ITAS 쿼리에 대해 계산됩니다.
 
@@ -591,6 +591,61 @@ ANALYZE TABLE <original_table_name>
 | `min` | 분석된 테이블의 최소값. |
 | `mean` | 분석된 테이블의 평균 값입니다. |
 | `stdev` | 분석된 테이블의 표준 편차입니다. |
+
+#### 통계 계산 {#compute-statistics}
+
+이제 다음에 대한 열 수준 통계를 계산할 수 있습니다. [!DNL Azure Data Lake Storage] (ADLS) 데이터 세트 `COMPUTE STATISTICS` 및 `SHOW STATISTICS` 명령. 전체 데이터 세트, 데이터 세트의 하위 집합, 모든 열 또는 열의 하위 집합에 대한 열 통계를 계산합니다.
+
+`COMPUTE STATISTICS` 다음을 확장합니다. `ANALYZE TABLE` 명령입니다. 그러나 `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, 및 `SHOW STATISTICS` 명령은 data warehouse 테이블에서 지원되지 않습니다. 에 대한 이러한 확장 `ANALYZE TABLE` 명령은 현재 ADLS 테이블에 대해서만 지원됩니다.
+
+**예**
+
+```sql
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
+```
+
+>[!NOTE]
+>
+>`FILTER CONTEXT` 제공된 필터 조건을 기반으로 데이터 집합 하위 집합에 대한 통계를 계산합니다. `FOR COLUMNS` 분석을 위한 특정 열을 대상으로 합니다.
+
+콘솔 출력이 다음과 같이 표시됩니다.
+
+```console
+  Statistics ID 
+------------------
+ ULKQiqgUlGbTJWhO
+(1 row)
+```
+
+그런 다음 반환된 통계 ID를 사용하여 `SHOW STATISTICS` 명령입니다.
+
+```sql
+SHOW STATISTICS FOR <statistics_ID>
+```
+
+>[!NOTE]
+>
+>`COMPUTE STATISTICS` 는 배열 또는 맵 데이터 유형을 지원하지 않습니다. 다음을 설정할 수 있습니다. `skip_stats_for_complex_datatypes` 입력 데이터 프레임에 배열 및 맵 데이터 형식이 있는 열이 있는 경우 알림을 받거나 오류 발생에 대한 플래그. 기본적으로 플래그는 true로 설정됩니다. 알림 또는 오류를 활성화하려면 다음 명령을 사용합니다. `SET skip_stats_for_complex_datatypes = false`.
+
+다음을 참조하십시오. [데이터 세트 통계 설명서](../essential-concepts/dataset-statistics.md) 추가 정보.
+
+#### 테이블 샘플 {#tablesample}
+
+Adobe Experience Platform 쿼리 서비스는 대략적인 쿼리 처리 기능의 일부로 샘플 데이터 세트를 제공합니다.
+데이터 집합 샘플은 데이터 집합에 대한 집계 작업에 대해 정확한 답변이 필요하지 않을 때 사용하는 것이 가장 좋습니다. 이 기능을 사용하면 대략적인 대답을 반환하는 근사적 쿼리를 발행하여 큰 데이터 세트에 대해 보다 효율적인 탐색 쿼리를 수행할 수 있습니다.
+
+샘플 데이터 세트는 기존의 균일한 무작위 샘플로 만들어집니다 [!DNL Azure Data Lake Storage] (ADLS) 데이터 세트, 원본 레코드의 백분율만 사용. 데이터 세트 샘플 기능은 `ANALYZE TABLE` 명령을 사용하여 `TABLESAMPLE` 및 `SAMPLERATE` 명령.
+
+아래 예에서 1행은 표의 5% 샘플을 계산하는 방법을 보여줍니다. 두 번째 행은 표 내의 데이터에 대한 필터링된 보기에서 5% 샘플을 계산하는 방법을 보여 줍니다.
+
+**예**
+
+```sql {line-numbers="true"}
+ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
+```
+
+다음을 참조하십시오. [데이터 세트 샘플 설명서](../essential-concepts/dataset-samples.md) 추가 정보.
 
 ### 시작
 

@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+source-git-commit: a2b4ddae00ecdf33a12119810eca1ed19ace0c2f
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '273'
 ht-degree: 18%
 
 ---
@@ -89,6 +89,7 @@ ht-degree: 18%
    - [증분 로드](essential-concepts/incremental-load.md)
    - [데이터 중복 제거](essential-concepts/deduplication.md)
    - [데이터 세트 샘플](essential-concepts/dataset-samples.md)
+   - [데이터 세트 통계 계산](essential-concepts/dataset-statistics.md)
 - SQL 참조 {#sql}
    - [SQL 개요](sql/overview.md)
    - [SQL 구문](sql/syntax.md)

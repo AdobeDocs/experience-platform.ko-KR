@@ -2,7 +2,7 @@
 title: 데이터 세트 샘플
 description: 쿼리 서비스 샘플 데이터 세트를 사용하면 쿼리 정확도 비용으로 처리 시간을 크게 단축하면서 빅 데이터에 대한 탐색 쿼리를 수행할 수 있습니다. 이 안내서에서는 대략적인 쿼리 처리를 위해 샘플을 관리하는 방법에 대한 정보를 제공합니다
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 13779e619345c228ff2a1981efabf5b1917c4fdb
+source-git-commit: ef71371b04746bbf12ac58e91c9ecb5806f7e771
 workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 0%
@@ -63,9 +63,9 @@ ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> A
 이러한 유형의 필터링된 샘플 데이터 세트의 실제 예는 다음과 같습니다.
 
 ```sql
-Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
-Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND product.name = "product1") SAMPLERATE 10;
-Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
+ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
+ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND product.name = "product1") SAMPLERATE 10;
+ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
 ```
 
 제공된 예에서 테이블 이름은 입니다. `large_table`, 원래 테이블의 필터 조건은 다음과 같습니다. `month(to_timestamp(timestamp)) in ('8', '9')`, 샘플링 속도는 (필터링된 데이터의 X%)입니다. 이 경우 `10`.
