@@ -2,9 +2,9 @@
 title: Experience Platform의 데이터 수집에 대한 권한 관리
 description: Adobe Experience Platform에서 권한을 관리하고 데이터 수집 기능에 대한 액세스를 제어하는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 876339019b324d4483152ed6f24bd6ad749ea7ba
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1318'
 ht-degree: 5%
 
 ---
@@ -54,6 +54,7 @@ Adobe Experience Platform 데이터 수집 아래의 권한은 속성, 확장 �
 | --- | --- | --- |
 | 플랫폼 | 웹 | 에 대한 액세스 권한 부여 [웹 속성](../tags/ui/administration/companies-and-properties.md) 다른 재산권과 결합된 경우. |
 | 플랫폼 | 모바일 | 에 대한 액세스 권한 부여 [모바일 속성](../tags/ui/administration/companies-and-properties.md) 다른 재산권과 결합된 경우. |
+| 플랫폼 | Edge | 에 대한 액세스 권한 부여 [이벤트 전달 에지 속성](../tags/ui/event-forwarding/getting-started.md) 다른 재산권과 결합된 경우. |
 | 속성 | (해당 없음) | 조직에서 만든 속성에 따라 Admin Console의 이 권한 범주를 통해 각 속성에 대한 액세스를 제어할 수 있습니다.<br><br>사용자의 할당된 속성 권한은 이 권한 범주를 통해 액세스 권한이 부여된 속성에만 적용됩니다. |
 | 속성 권한 | 승인 | 라이브러리의 일부로 라이브러리 빌드를 승인하는 기능을 부여합니다. [게시 플로우](../tags/ui/publishing/publishing-flow.md). |
 | 속성 권한 | 개발 | 의 일부로 라이브러리 빌드를 개발할 수 있는 권한을 부여합니다. [게시 플로우](../tags/ui/publishing/publishing-flow.md). |
