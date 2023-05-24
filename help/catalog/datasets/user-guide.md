@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 세트 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: f0cd059683531993398f0a81d6eda486276853e2
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1485'
 ht-degree: 7%
 
 ---
@@ -122,9 +122,9 @@ CSV 파일을 사용하여 데이터 세트를 만들면 제공된 CSV 파일과
 
 ![데이터 세트 세부 사항 페이지 내에서 프로필 토글이 강조 표시됩니다.](../images/datasets/user-guide/enable-dataset-profiles.png)
 
-## 데이터 세트에 대한 데이터 거버넌스 관리 및 적용
+## 데이터 세트에 대한 데이터 거버넌스 관리 및 적용 {#manage-and-enforce-data-governance}
 
-데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트와 필드를 분류할 수 있습니다. 다음을 참조하십시오. [데이터 거버넌스 개요](../../data-governance/home.md) 레이블에 대해 자세히 알아보거나 [데이터 사용 레이블 사용 안내서](../../data-governance/labels/overview.md) 데이터 세트에 레이블을 적용하는 방법에 대한 지침입니다.
+스키마 수준에서 적용되는 데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트와 필드를 분류할 수 있습니다. 다음을 참조하십시오. [데이터 거버넌스 개요](../../data-governance/home.md) 레이블에 대해 자세히 알아보거나 [데이터 사용 레이블 사용 안내서](../../data-governance/labels/overview.md) 데이터 세트에 전달하기 위해 스키마에 레이블을 적용하는 방법에 대한 지침입니다.
 
 ## 데이터 세트 삭제 {#delete}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 데이터 사용 레이블 관리
 description: 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 사용 레이블 작업을 위한 단계를 다룹니다.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 1a4e71ee07900fb4f1581274f740ddb96cb93289
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1380'
 ht-degree: 17%
 
 ---
@@ -16,73 +16,31 @@ ht-degree: 17%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="플랫폼에서 데이터 사용 관리"
->abstract="<h2>설명</h2><p>Experience Platform의 데이터 거버넌스 프레임워크를 사용하면 데이터 사용 제한에 따라 속성 및 데이터 세트에 레이블을 지정하고 특정 마케팅 활동에 대한 이러한 제한을 식별하고 이행하는 정책을 설정할 수 있습니다.</p>"
+>abstract="<h2>설명</h2><p>Experience Platform의 데이터 거버넌스 프레임워크를 사용하면 데이터 사용 제한에 따라 속성 및 스키마에 레이블을 지정하고 특정 마케팅 작업에 대해 이러한 제한을 식별하고 준수하는 정책을 설정할 수 있습니다.</p>"
 
 이 사용 안내서에서는 내에서 데이터 사용 레이블 작업을 수행하는 단계를 다룹니다. [!DNL Experience Platform] 사용자 인터페이스.
 
-## 데이터 세트 수준에서 레이블 관리
+## 스키마 수준에서 레이블 관리
 
->[!IMPORTANT]
->
->데이터 세트 수준에서 레이블을 적용하는 것은 데이터 거버넌스 사용 사례에 대해서만 지원됩니다. 데이터에 대한 액세스 정책을 만들려면 다음을 수행해야 합니다 [스키마에 레이블 적용](../../xdm/tutorials/labels.md) 을 참조하십시오. 의 개요 보기 [속성 기반 액세스 제어](../../access-control/abac/overview.md) 추가 정보.
+스키마 수준에서 데이터 사용 레이블을 관리하려면 기존 스키마를 선택하거나 새 스키마를 만들어야 합니다. Adobe Experience Platform에 로그인한 후 다음을 선택합니다 **[!UICONTROL 스키마]** 을(를) 왼쪽 탐색에서 열어 **[!UICONTROL 스키마]** 작업 영역. 이 페이지에는 각 스키마와 관련된 유용한 세부 정보와 함께 조직에 속하는 생성된 모든 스키마가 나열됩니다.
 
-데이터 세트 수준에서 데이터 사용 레이블을 관리하려면 기존 데이터 세트를 선택하거나 새 데이터 세트를 만들어야 합니다. Adobe Experience Platform에 로그인한 후 다음을 선택합니다 **[!UICONTROL 데이터 세트]** 을(를) 왼쪽 탐색에서 열어 **[!UICONTROL 데이터 세트]** 작업 영역. 이 페이지에는 각 데이터 세트와 관련된 유용한 세부 정보와 함께 조직에 속하는 만들어진 모든 데이터 세트가 나열됩니다.
+![스키마 탭이 강조 표시된 Adobe Experience Platform UI입니다.](../images/labels/schema-tab.png)
 
-![Data Workspace 내의 데이터 세트 탭](../images/labels/datasets-tab.png)
+다음 섹션에서는 레이블을 적용할 새 스키마를 만드는 단계를 제공합니다. 기존 스키마에 대한 레이블을 편집하려면 목록에서 스키마를 선택하고 다음으로 건너뜁니다. [스키마에 데이터 사용 레이블 추가](#add-labels).
 
-다음 섹션에서는 레이블을 적용할 새 데이터 세트를 만드는 단계를 제공합니다. 기존 데이터 세트에 대한 레이블을 편집하려면 목록에서 데이터 세트를 선택한 다음 로 건너뜁니다. [데이터 세트에 데이터 사용 레이블 추가](#add-labels).
+### 새 스키마 만들기
 
-### 새 데이터 세트 만들기
+새 스키마를 생성하려면 다음을 선택합니다. **[!UICONTROL 스키마 만들기]** 의 오른쪽 위 모서리 **[!UICONTROL 스키마]** 작업 영역. 다음 안내서를 참조하십시오 [스키마 편집기를 사용하여 스키마를 만드는 방법](../../xdm/tutorials/create-schema-ui.md#create) 전체 지침 또는 다음을 수행할 수 있습니다. [스키마 레지스트리 API를 사용하여 스키마 만들기](../../xdm/tutorials/create-schema-api.md) 필요한 경우.
 
->[!NOTE]
->
->이 예제에서는 사전 구성된 을 사용하여 데이터 세트를 만듭니다 [!DNL Experience Data Model] (XDM) 스키마. XDM 스키마에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md) 및 [스키마 컴포지션 기본 사항](../../xdm/schema/composition.md).
+### 스키마에 데이터 사용 레이블 추가 {#add-labels-to-schema}
 
-새 데이터 세트를 만들려면 다음을 선택하십시오. **[!UICONTROL 데이터 세트 만들기]** 의 오른쪽 위 모서리 **[!UICONTROL 데이터 세트]** 작업 영역.
+새 스키마를 만들거나 의 목록에서 기존 스키마를 선택한 후 [!UICONTROL 찾아보기] 의 탭 [!UICONTROL 스키마] 작업 영역에서 스키마 편집기의 스키마에서 필드를 선택합니다. 다음에서 [!UICONTROL 필드 속성] 사이드바, 선택 **[!UICONTROL 액세스 및 데이터 거버넌스 레이블 적용]**.
 
-![](../images/labels/create-dataset.png)
+![스키마 작업 공간 구조 탭에는 액세스 적용 및 데이터 거버넌스 레이블이 강조 표시된 스키마의 시각화가 표시됩니다.](../images/labels/schema-label-governance.png)
 
-다음 **[!UICONTROL 데이터 세트 만들기]** 화면이 나타납니다. 여기에서 다음을 선택합니다. **[!UICONTROL 스키마에서 데이터 세트 만들기]**.
+스키마 수준 및 필드 수준에서 데이터 사용 레이블을 적용하고 관리할 수 있는 대화 상자가 나타납니다. 에 대한 전체 지침은 XDM 튜토리얼 을 참조하십시오. [xdm 스키마에 대한 데이터 사용 레이블 추가 또는 편집 방법](../../xdm/tutorials/labels.md#select-schema-field).
 
-![스키마에서 데이터 세트 만들기](../images/labels/create-from-dataset.png)
-
-다음 **[!UICONTROL 스키마 선택]** 데이터 세트를 만드는 데 사용할 수 있는 모든 사용 가능한 스키마를 나열하는 화면이 나타납니다. 스키마 옆에 있는 라디오 버튼을 선택하여 선택합니다. 다음 **[!UICONTROL 스키마]** 오른쪽의 섹션에는 선택한 스키마에 대한 추가 세부 정보가 표시됩니다. 스키마를 선택하면 를 선택합니다. **[!UICONTROL 다음]**.
-
-![데이터 세트 스키마 선택](../images/labels/select-schema.png)
-
-다음 **[!UICONTROL 데이터 세트 구성]** 화면이 나타납니다. 새 데이터 세트의 이름(필수) 및 설명(선택 사항이지만 권장됨)을 입력한 다음 을 선택합니다 **[!UICONTROL 완료]**.
-
-![이름 및 설명을 사용하여 데이터 세트 구성](../images/labels/configure-dataset.png)
-
-다음 **[!UICONTROL 데이터 세트 활동]** 새로 만든 데이터 세트에 대한 정보를 표시하는 페이지가 나타납니다. 이 예에서 데이터 세트의 이름은 &quot;충성도 멤버&quot;이므로 위쪽 탐색에 다음이 표시됩니다 **데이터 세트 > 충성도 멤버**.
-
-![데이터 세트 활동 페이지](../images/labels/dataset-created.png)
-
-### 데이터 세트에 데이터 사용 레이블 추가 {#add-labels}
-
-새 데이터 세트를 만들거나 의 목록에서 기존 데이터 세트를 선택한 후 **[!UICONTROL 데이터 세트]** 작업 영역, 선택 **[!UICONTROL 데이터 거버넌스]** 을(를) 열려면 **[!UICONTROL 데이터 거버넌스]** 작업 영역. 작업 영역에서는 데이터 세트 수준 및 필드 수준에서 데이터 사용 레이블을 관리할 수 있습니다.
-
-![데이터 세트 데이터 거버넌스 탭](../images/labels/dataset-governance.png)
-
-데이터 세트 수준에서 데이터 사용 레이블을 편집하려면 먼저 데이터 세트 이름 옆에 있는 연필 아이콘을 선택합니다.
-
-![데이터 세트 수준 레이블 편집](../images/labels/dataset-level-edit.png)
-
-다음 **[!UICONTROL 거버넌스 레이블 편집]** 대화 상자가 열립니다. 대화 상자에서 데이터 세트에 적용할 레이블 옆의 상자를 선택합니다. 이러한 레이블은 데이터 세트 내의 모든 필드에 상속됩니다. 다음 **[!UICONTROL 적용된 레이블]** 각 상자를 선택하면 헤더가 업데이트되어 선택한 레이블이 표시됩니다. 원하는 레이블을 선택하면 을(를) 선택합니다. **[!UICONTROL 변경 내용 저장]**.
-
-![데이터 세트 수준에서 거버넌스 레이블 적용](../images/labels/apply-labels-dataset.png)
-
-다음 **[!UICONTROL 데이터 거버넌스]** 데이터 세트 수준에서 적용한 레이블을 보여 주는 작업 영역이 다시 나타납니다. 레이블이 데이터 세트 내의 각 필드로 상속되는 것도 볼 수 있습니다.
-
-![필드에 의해 상속된 데이터 세트 레이블](../images/labels/dataset-labels-applied.png)
-
-데이터 세트 수준의 레이블 옆에 &quot;x&quot;가 표시되어 레이블을 제거할 수 있습니다. 각 필드 옆에 있는 상속된 레이블은 그 옆에 &quot;x&quot;가 없으며 제거하거나 편집할 수 없는 &quot;회색으로&quot; 표시됩니다. 이유는 다음과 같습니다. **상속된 필드는 읽기 전용입니다.**&#x200B;즉, 필드 수준에서 제거할 수 없습니다.
-
-다음 **[!UICONTROL 상속된 레이블 표시]** 전환은 기본적으로 설정되어 있으며, 이를 사용하면 데이터 세트에서 해당 필드로 상속된 레이블을 볼 수 있습니다. 토글을 끄면 데이터 세트 내에 상속된 모든 레이블이 숨겨집니다.
-
-![상속된 레이블 숨기기](../images/labels/inherited-labels.png)
-
-## 데이터 세트 필드 수준에서 레이블 관리 {#manage-labels-at-dataset-field-level}
+### 특정 데이터 세트에 데이터 사용 레이블 추가 {#add-labels-to-dataset}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
@@ -91,31 +49,55 @@ ht-degree: 17%
 
 >[!IMPORTANT]
 >
->데이터 세트 필드 수준에서 레이블을 적용하는 것은 데이터 거버넌스 사용 사례에 대해서만 지원됩니다. 데이터에 대한 액세스 정책을 만들려면 다음을 수행해야 합니다 [스키마에 레이블 적용](../../xdm/tutorials/labels.md) 을 참조하십시오. 의 개요 보기 [속성 기반 액세스 제어](../../access-control/abac/overview.md) 추가 정보.
+>더 이상 데이터 세트 수준의 필드에 레이블을 적용할 수 없습니다. 이 워크플로우는 더 이상 사용되지 않으며, 대신 스키마 수준에서 레이블을 적용합니다. 데이터 세트 개체 수준에서 이전에 적용된 모든 레이블은 2024년 5월 31일까지 Platform UI를 통해 계속 지원됩니다. 모든 스키마에서 레이블이 일관되도록 하려면 데이터 세트 수준의 필드에 이전에 첨부된 모든 레이블을 향후 연도에 따라 스키마 수준으로 마이그레이션해야 합니다. 에 대한 지침은 설명서 를 참조하십시오. [이전에 적용된 레이블을 데이터 세트에서 스키마 수준으로 마이그레이션하는 방법](../e2e.md#migrate-labels).
 
-워크플로 계속 [데이터 세트 수준에서 데이터 사용 레이블 추가 및 편집](#add-labels), 내에서 필드 수준 레이블을 관리할 수도 있습니다. **[!UICONTROL 데이터 거버넌스]** 해당 데이터 세트에 대한 작업 영역.
+레이블은 의 전체 데이터 세트에 적용할 수 있습니다. **[!UICONTROL 데이터 거버넌스]** 의 탭 **[!UICONTROL 데이터 세트]** 작업 영역. 작업 공간에서는 데이터 세트 수준에서 데이터 사용 레이블을 관리할 수 있습니다.
 
-개별 필드에 데이터 사용 레이블을 적용하려면 필드 이름 옆에 있는 확인란을 선택한 다음 을 선택합니다 **[!UICONTROL 거버넌스 레이블 편집]**.
+![다음 [!UICONTROL 데이터 거버넌스] 의 탭 [!UICONTROL 데이터 세트] 데이터 거버넌스가 강조 표시된 작업 영역입니다.](../images/labels/dataset-governance.png)
 
-![필드 레이블 편집](../images/labels/field-label-edit.png)
+데이터 세트 수준에서 데이터 사용 레이블을 편집하려면 먼저 연필 아이콘(![연필 아이콘.](../images/labels/edit-icon.png))을 클릭하여 제품에서 사용할 수 있습니다.
 
-다음 **[!UICONTROL 거버넌스 레이블 편집]** 대화 상자가 나타납니다. 이 대화 상자에는 선택한 필드, 적용된 레이블 및 상속된 레이블을 표시하는 헤더가 표시됩니다. 상속된 레이블(C2 및 C5)이 대화 상자에서 회색으로 표시됩니다. 이 레이블은 데이터 세트 수준에서 상속된 읽기 전용 레이블이므로 데이터 세트 수준에서만 편집할 수 있습니다.
+![다음 [!UICONTROL 데이터 거버넌스] 의 탭 [!UICONTROL 데이터 세트] 연필 편집 아이콘이 강조 표시된 작업 영역](../images/labels/dataset-level-edit.png)
 
-![개별 필드에 대한 거버넌스 레이블 편집](../images/labels/field-label-inheritance.png)
+다음 **[!UICONTROL 거버넌스 레이블 편집]** 대화 상자가 열립니다. 대화 상자에서 데이터 세트에 적용할 레이블 옆의 상자를 선택합니다. 이러한 레이블은 데이터 세트 내의 모든 필드에 상속됩니다. 다음 **[!UICONTROL 적용된 레이블]** 각 상자를 선택하면 헤더가 업데이트되어 선택한 레이블이 표시됩니다. 원하는 레이블을 선택하면 을(를) 선택합니다. **[!UICONTROL 변경 내용 저장]**.
 
-사용하려는 각 레이블 옆에 있는 확인란을 선택하여 필드 수준 레이블을 선택합니다. 레이블을 선택하면 **[!UICONTROL 적용된 레이블]** 에 표시된 필드에 적용된 레이블을 표시하는 헤더 업데이트 **[!UICONTROL 선택된 필드]** 머리글입니다. 필드 수준 레이블 선택을 마쳤으면 다음을 선택합니다. **[!UICONTROL 변경 내용 저장]**.
+![레이블 확인란과 변경 내용 저장 이 강조 표시된 거버넌스 레이블 편집 대화 상자](../images/labels/apply-labels-dataset.png)
 
-![필드 수준 레이블 적용](../images/labels/apply-labels-field.png)
+다음 **[!UICONTROL 데이터 거버넌스]** 테이블의 초기 행에 데이터 세트 수준에서 적용한 레이블을 표시하는 작업 영역이 다시 나타납니다. 또한 데이터 세트 내의 각 필드로 상속되는 개별 카드로 표시된 레이블을 볼 수 있습니다.
 
-다음 **[!UICONTROL 데이터 거버넌스]** 이제 필드 이름 옆의 행에 선택한 필드 수준 레이블이 표시되는 작업 공간이 다시 나타납니다. 필드 수준 레이블 옆에 &quot;x&quot;가 있어 레이블을 제거할 수 있습니다.
+![다음 [!UICONTROL 데이터 거버넌스] 의 탭 [!UICONTROL 데이터 세트] 적용된 데이터 세트 수준 레이블 및 상속된 데이터 세트 필드 레이블이 강조 표시된 작업 영역.](../images/labels/applied-dataset-labels.png)
 
-![필드 수준 레이블을 표시하는 필드](../images/labels/field-labels-applied.png)
+### 데이터 세트에서 레이블 제거 {#remove-labels-from-a-dataset}
 
-필드 수준 레이블을 동시에 적용할 여러 필드를 선택하는 것을 포함하여 추가 필드에 대한 필드 수준 레이블을 계속 추가 및 편집하려면 이 단계를 반복할 수 있습니다.
+데이터 세트 수준에서 추가된 레이블의 카드 옆에는 &quot;x&quot;가 있습니다. 이렇게 하면 전체 데이터 세트에서 레이블을 제거할 수 있습니다. 각 필드 옆에 상속된 레이블은 그 옆에 &quot;x&quot;가 없고 &quot;회색으로&quot; 표시됩니다. 다음 **상속된 레이블은 읽기 전용입니다.**&#x200B;즉, 필드 수준에서 제거하거나 편집할 수 없습니다.
 
-![필드 수준 레이블을 동시에 적용할 여러 필드를 선택하십시오.](../images/labels/multiple-fields.png)
+<!-- ## View labels at the dataset field level {#view-labels-at-dataset-field-level} -->
 
-상속이 최상위 수준(데이터 세트 → 필드)에서만 아래로 이동한다는 것을 기억해야 합니다. 즉, 필드 수준에서 적용된 레이블은 다른 필드 또는 데이터 세트로 전파되지 않습니다.
+<!-- To view labels inherited by the dataset from the schema level, select **[!UICONTROL Datasets]** to navigate to the datasets workspace and select the relevant dataset from the list. 
+
+![The Browse tab of the Datasets workspace with Datasets highlighted in the left sidebar.](../images/labels/dataset-navigation.png)
+
+Next, select the **[!UICONTROL Data Governance]** tab to show the labels that have been applied to the dataset. You can also see that the labels are inherited down to each of the fields within the dataset.
+
+![Dataset Labels inherited by fields](../images/labels/dataset-labels-applied.png)
+
+The inherited labels beside each field do not have an "x" next to them and appear "greyed out" with no ability to remove or edit. This is because **inherited fields are read-only**, meaning they cannot be removed at the field level. -->
+
+<!--Beleive can cut above here  -->
+
+다음 **[!UICONTROL 상속된 레이블 표시]** 토글이 기본적으로 켜져 있으며, 이를 통해 스키마에서 해당 필드로 상속된 모든 레이블을 볼 수 있습니다. 토글을 끄면 데이터 세트 내에 상속된 모든 레이블이 숨겨집니다.
+
+![상속된 레이블 표시 토글이 강조 표시된 데이터 세트 작업 영역의 데이터 거버넌스 탭](../images/labels/inherited-labels.png)
+
+<!-- Labels applied to the dataset appear in read-only form within the **[!UICONTROL Data Governance]** view for that dataset. 
+
+![The Data Governance tab of the Datasets workspace with labels highlighted.](../images/labels/read-only-governance-labels.png) -->
+
+>[!NOTE]
+>
+>데이터 세트 레이블 지정 기능이 더 이상 사용되지 않기 전에 적용된 레이블은 관련 데이터 세트를 찾고 레이블에서 취소 아이콘을 선택하여 데이터 세트에서 제거할 수 있습니다.
+>![삭제 가능한 레이블이 강조 표시된 데이터 세트 작업 영역의 데이터 거버넌스 탭](../images/labels/remove-governance-labels.png)
+>에 대한 지침은 설명서 를 참조하십시오. [이전에 적용된 레이블을 데이터 세트에서 스키마 수준으로 마이그레이션하는 방법](../e2e.md#migrate-labels).
 
 ## 스키마 수준에서 레이블 관리
 
@@ -132,25 +114,25 @@ ht-degree: 17%
 
 내에서 자신만의 사용자 지정 사용 레이블을 만들 수 있습니다. **[!UICONTROL 정책]** 의 작업 공간 [!DNL Experience Platform] UI. 선택 **[!UICONTROL 정책]** 왼쪽 탐색에서 을 선택합니다. **[!UICONTROL 레이블]** 기존 레이블 목록을 봅니다. 여기에서 다음을 선택합니다. **[!UICONTROL 레이블 만들기]**.
 
-![](../images/labels/create-label-btn.png)
+![정책 생성이 강조 표시된 정책 작업 영역입니다.](../images/labels/create-label-btn.png)
 
 다음 **[!UICONTROL 레이블 만들기]** 대화 상자가 나타납니다. 여기에서 새 레이블에 대한 다음 정보를 제공합니다.
 
-* **[!UICONTROL 식별자]**: 레이블에 대한 고유 식별자. 이 값은 조회 목적으로 사용되므로 짧고 간결해야 합니다.
-* **[!UICONTROL 이름]**: 레이블에 대한 친숙한 표시 이름입니다.
+* **[!UICONTROL 이름]**: 레이블에 대한 고유 식별자. 이 값은 조회 목적으로 사용되므로 짧고 간결해야 합니다.
+* **[!UICONTROL 알기 쉬운 이름]**: 레이블에 대한 친숙한 표시 이름입니다.
 * **[!UICONTROL 설명]**: (선택 사항) 추가 컨텍스트를 제공하기 위한 레이블에 대한 설명입니다.
 
 완료되면 다음을 선택합니다. **[!UICONTROL 만들기]**.
 
-![](../images/labels/create-label.png)
+![[정책] 작업 공간 [레이블 만들기] 대화 상자에서 [만들기]가 강조 표시됩니다.](../images/labels/create-label-dialog.png)
 
 대화 상자가 닫히고 새로 만든 사용자 지정 레이블이 **[!UICONTROL 레이블]** 탭.
 
-![](../images/labels/label-created.png)
+![새 사용자 정의 레이블이 강조 표시된 정책 작업 영역의 레이블 탭입니다.](../images/labels/label-created.png)
 
 이제 다음 위치에서 레이블을 선택할 수 있습니다. **[!UICONTROL 사용자 정의 레이블]** 데이터 세트 및 필드의 사용 레이블을 편집하거나 데이터 사용 정책을 만들 때.
 
-<img src="../images/labels/add-custom-label.png" width="600" /><br>
+![사용자 정의 레이블이 강조 표시된 액세스 및 데이터 거버넌스 레이블 적용 대화 상자](../images/labels/add-custom-label.png)
 
 ## 다음 단계
 
@@ -158,8 +140,10 @@ ht-degree: 17%
 
 이제 적용한 레이블을 기반으로 데이터 사용 정책을 정의할 수도 있습니다. 자세한 내용은 [데이터 사용 정책 개요](../policies/overview.md).
 
-## 추가 리소스
+<!-- The workflow of this video is now outdated. This can be enabled once the video has been updated
 
-다음 비디오는 데이터 거버넌스에 대한 이해를 지원하기 위해 작성되었으며 데이터 세트 및 개별 필드에 레이블을 적용하는 방법에 대해 간략하게 설명합니다.
+## Additional resources
 
->[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)
+The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) -->

@@ -2,10 +2,10 @@
 title: 스키마에 대한 데이터 사용 레이블 관리
 description: Adobe Experience Platform UI에서 XDM(Experience Data Model) 스키마 필드에 데이터 사용 레이블을 추가하는 방법을 알아봅니다.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 6%
+source-wordcount: '795'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 스키마 필드에 적용되는 레이블은 해당 특정 필드에 포함된 데이터에 적용되는 사용 정책을 나타냅니다.
 
-레이블을 개별 데이터 세트(및 해당 데이터 세트 내의 필드)에 적용할 수 있지만 스키마 수준에서 레이블을 적용할 수도 있습니다. 레이블이 스키마에 직접 적용되면 해당 레이블은 해당 스키마를 기반으로 하는 모든 기존 및 향후 데이터 세트에 전파됩니다.
+레이블은 개별 스키마 및 해당 스키마 내의 필드에 적용되는 데 적용할 수 있습니다. 레이블이 스키마에 직접 적용되면 해당 레이블은 해당 스키마를 기반으로 하는 모든 기존 및 향후 데이터 세트에 전파됩니다.
 
 또한 한 스키마에 추가하는 필드 레이블은 공유 클래스 또는 필드 그룹의 동일한 필드를 사용하는 다른 모든 스키마로 전파됩니다. 이렇게 하면 유사한 필드에 대한 사용 규칙이 전체 데이터 모델에서 일관되도록 할 수 있습니다.
 
@@ -46,11 +46,11 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 ![스키마 편집기 캔버스에서 필드 선택](../images/tutorials/labels/manage-access.png)
 
-다음을 선택할 수도 있습니다. **[!UICONTROL 레이블]** 탭을 클릭하고 목록에서 원하는 필드를 선택한 다음 를 선택합니다. **[!UICONTROL 거버넌스 레이블 편집]** 오른쪽 레일에서.
+다음을 선택할 수도 있습니다. **[!UICONTROL 레이블]** 탭을 클릭하고 목록에서 원하는 필드를 선택한 다음 를 선택합니다. **[!UICONTROL 액세스 및 데이터 거버넌스 레이블 적용]** 오른쪽 레일에서.
 
 ![다음에서 필드 선택 [!UICONTROL 레이블] 탭](../images/tutorials/labels/select-field-on-labels-tab.png)
 
-전체 스키마에 대한 레이블을 편집하려면 연필 아이콘(![](../images/tutorials/labels/pencil-icon.png))를 클릭하여 제품에서 사용할 수 있도록 합니다. **[!UICONTROL 레이블]** 탭.
+전체 스키마에 대한 레이블을 편집하려면 **[!UICONTROL 레이블]** 탭에서 필터 아이콘 아래의 확인란을 선택합니다. 스키마에서 사용 가능한 모든 필드를 선택합니다. 그런 다음 을 선택합니다. **[!UICONTROL 액세스 및 데이터 거버넌스 레이블 적용]** 오른쪽 레일에서.
 
 ![에서 스키마 이름 선택 [!UICONTROL 레이블] 탭](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
@@ -60,11 +60,11 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 >
 >![레이블 사용 면책조항](../images/tutorials/labels/disclaimer.png)
 
-## 스키마 또는 필드의 레이블 편집
+## 스키마 또는 필드의 레이블 편집 {#edit-labels}
 
 선택한 필드의 레이블을 편집할 수 있는 대화 상자가 나타납니다. 개별 객체 유형 필드를 선택한 경우 오른쪽 레일에 적용된 레이블이 전파될 하위 필드가 나열됩니다.
 
-![선택된 필드가 표시됨](../images/tutorials/labels/edit-labels.png)
+![선택한 필드가 강조 표시된 액세스 및 데이터 거버넌스 레이블 적용 대화 상자](../images/tutorials/labels/edit-labels.png)
 
 >[!NOTE]
 >
@@ -72,19 +72,19 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 표시된 목록을 사용하여 스키마나 필드에 추가할 레이블을 선택합니다. 레이블을 선택하면 **[!UICONTROL 적용된 레이블]** 지금까지 선택한 레이블을 표시하는 섹션이 업데이트되었습니다.
 
-![적용된 레이블이 표시됨](../images/tutorials/labels/applied-labels.png)
+![적용된 레이블이 강조 표시된 액세스 및 데이터 거버넌스 레이블 적용 대화 상자](../images/tutorials/labels/applied-labels.png)
 
 표시된 레이블을 유형별로 필터링하려면 왼쪽 레일에서 원하는 카테고리를 선택합니다. 새 사용자 지정 레이블을 만들려면 **[!UICONTROL 레이블 만들기]**.
 
-![표시된 레이블을 필터링하거나 새 레이블 만들기](../images/tutorials/labels/filter-and-create-custom.png)
+![레이블 유형 필터가 적용된 액세스 및 데이터 거버넌스 레이블 적용 대화 상자와 레이블 만들기 가 강조 표시됩니다.](../images/tutorials/labels/filter-and-create-custom.png)
 
 선택한 레이블이 만족스러우면 다음을 선택합니다. **[!UICONTROL 저장]** 필드 또는 스키마에 적용합니다.
 
-![선택한 레이블 저장](../images/tutorials/labels/save-labels.png)
+![저장 이 강조 표시된 액세스 및 데이터 거버넌스 레이블 적용 대화 상자](../images/tutorials/labels/save-labels.png)
 
 다음 **[!UICONTROL 레이블]** 스키마에 적용된 레이블을 표시하는 탭이 다시 나타납니다.
 
-![필드 레이블 적용됨](../images/tutorials/labels/field-labels-added.png)
+![적용된 필드 레이블이 강조 표시된 스키마 작업 영역의 레이블 탭](../images/tutorials/labels/field-labels-added.png)
 
 ## 다음 단계
 
