@@ -2,14 +2,18 @@
 title: 태그 및 이벤트 전달에 대한 릴리스 노트
 description: Adobe Experience Platform의 태그 및 이벤트 게재에 대한 최신 릴리스 정보입니다.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
+source-git-commit: 626330395c2d6b813d5d2157e92ada77ab4f96b1
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 4%
+source-wordcount: '841'
+ht-degree: 3%
 
 ---
 
 # 태그 및 이벤트 전달에 대한 릴리스 노트
+
+>[!IMPORTANT]
+>
+>태그 및 이벤트 전달 릴리스 정보를 앞으로 이동해도 이 페이지에는 더 이상 제공되지 않습니다. 최신 버전을 참조하십시오. [Adobe Experience Platform 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) 자세한 태그 및 이벤트 전달 업데이트.
 
 ## 2023년 4월 26일
 
