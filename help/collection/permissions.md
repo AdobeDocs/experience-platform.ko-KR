@@ -2,9 +2,9 @@
 title: Experience Platform의 데이터 수집에 대한 권한 관리
 description: Adobe Experience Platform에서 권한을 관리하고 데이터 수집 기능에 대한 액세스를 제어하는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 876339019b324d4483152ed6f24bd6ad749ea7ba
+source-git-commit: e24cb8ad6b714a60363bcbec26e453f6445af1ac
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1274'
 ht-degree: 5%
 
 ---
@@ -41,11 +41,6 @@ Adobe Experience Platform 아래의 권한에는 데이터 스트림, ID, 스키
 
 {style="table-layout:auto"}
 
-<!-- (Feature not yet available?)
-| Dashboards | Manage Custom Dashboards | |
-| Dashboards | View Custom Dashboards | |
--->
-
 ### Adobe Experience Platform 데이터 수집 권한
 
 Adobe Experience Platform 데이터 수집 아래의 권한은 속성, 확장 및 환경을 포함한 태그 및 이벤트 전달 기능에 대한 액세스를 제어합니다. Adobe Experience Platform 데이터 수집 권한을 구성하는 방법에 대한 단계는 [아래 섹션](#manage).
@@ -73,16 +68,16 @@ Adobe Experience Platform 데이터 수집 아래의 권한은 속성, 확장 �
 
 ## 권한 관리 {#manage}
 
-이전 섹션에 설명된 대로 데이터 수집에 대한 권한은 Admin Console에서 두 개의 제품 지정을 통해 관리됩니다. **Adobe Experience Platform** 및 **Adobe Experience Platform 데이터 수집**.
+데이터 수집에 대한 권한은 두 가지 제품 지정을 통해 관리됩니다. **Adobe Experience Platform** 및 **Adobe Experience Platform 데이터 수집**.
 
-이러한 권한을 관리하려면에 로그인하십시오. [Admin Console](https://adminconsole.adobe.com/) 및 선택 **[!UICONTROL 제품]** 위쪽 탐색에서 입니다. 여기에서 구성할 권한에 대한 제품 카드를 선택합니다. Admin Console의 각 제품에서 관련 권한을 관리하는 방법에 대한 단계는 아래 하위 섹션을 참조하십시오.
+Admin Console의 각 제품에서 관련 권한을 관리하는 방법에 대한 단계는 아래 하위 섹션을 참조하십시오.
 
 * [Adobe Experience Platform 권한](#manage-platform)
 * [Adobe Experience Platform 데이터 수집 권한](#manage-collection)
 
 ### Adobe Experience Platform에서 권한 관리 {#manage-platform}
 
-다음에서 **[!UICONTROL 제품]** Admin Console에서 보기, **[!UICONTROL Adobe Experience Platform 데이터 수집]**. 권한을 편집할 제품 프로필을 선택한 다음 **[!UICONTROL 권한]** 탭.
+다음에서 **[!UICONTROL 권한]** Adobe Experience Platform의 영역에서 편집할 역할을 선택합니다.
 
 데이터 수집 기능에 액세스하려면 의 모든 권한을 활성화해야 합니다 **[!UICONTROL 샌드박스]**, **[!UICONTROL 데이터 모델링]**, **[!UICONTROL Identity Management]**, 및 **[!UICONTROL 데이터 수집]** 카테고리.
 
@@ -96,7 +91,7 @@ Adobe Experience Platform 데이터 수집 아래의 권한은 속성, 확장 �
 
 ### Adobe Experience Platform 데이터 수집에서 권한 관리 {#manage-collection}
 
-다음에서 **[!UICONTROL 제품]** Admin Console에서 보기, **[!UICONTROL Adobe Experience Platform 데이터 수집]**.
+이러한 권한을 관리하려면 Admin Console에 로그인하고 을 선택합니다. **[!UICONTROL 제품]** 위쪽 탐색에서 를 선택하고 **[!UICONTROL Adobe Experience Platform 데이터 수집]**.
 
 ![Admin Console의 데이터 수집 제품 카드를 보여 주는 이미지](./images/permissions/data-collection-card.png)
 
