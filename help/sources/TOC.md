@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: 1a6282104af60d66c54bfb20c3c4e8eb74427461
+source-git-commit: f93ee2bc10135fee0c2d77629ee10901010b744b
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '979'
 ht-degree: 11%
 
 ---
@@ -87,6 +87,7 @@ ht-degree: 11%
       - [Oracle 커넥터](connectors/databases/oracle.md)
       - [Phoenix 커넥터](connectors/databases/phoenix.md)
       - [PostgreSQL 커넥터](connectors/databases/postgres.md)
+      - [Snowflake 스트리밍 커넥터](connectors/databases/snowflake-streaming.md)
       - [Snowflake 커넥터](connectors/databases/snowflake.md)
       - [Teradata 밴티지 커넥터](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
@@ -163,6 +164,7 @@ ht-degree: 11%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [피닉스](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [Snowflake 스트리밍](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata 밴티지](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
