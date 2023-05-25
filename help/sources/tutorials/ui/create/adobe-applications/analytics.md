@@ -2,10 +2,10 @@
 title: UI에서 Adobe Analytics 소스 연결 만들기
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 1839e67d86a04762d93a5c35050e261fb1d1cf50
+source-git-commit: b8764b4b39aba43687c7ac0540d392a3aa808df4
 workflow-type: tm+mt
-source-wordcount: '2406'
-ht-degree: 5%
+source-wordcount: '2299'
+ht-degree: 6%
 
 ---
 
@@ -120,49 +120,54 @@ Platform은 모든 친숙한 이름 충돌에 대한 매핑 세트를 자동으�
 
 ![매핑](../../../../images/tutorials/create/analytics/mapping.png)
 
-소스 보고서 세트와 선택한 스키마 간에 친숙한 이름 충돌이 있는 경우 [!DNL Analytics] 필드 설명자가 변경되지 않음을 확인하는 데이터 흐름. 또는 설명자 세트가 비어 있는 새 스키마를 만들도록 선택할 수 있습니다.
-
-선택 **[!UICONTROL 다음]** 계속합니다.
-
-![주의](../../../../images/tutorials/create/analytics/caution.png)
+>[!TIP]
+>
+>소스 보고서 세트와 선택한 스키마 간에 친숙한 이름 충돌이 있는 경우 [!DNL Analytics] 필드 설명자가 변경되지 않음을 확인하는 데이터 흐름. 또는 설명자 세트가 비어 있는 새 스키마를 만들도록 선택할 수 있습니다.
 
 #### 사용자 정의 매핑
 
-데이터 준비 함수를 사용하고 사용자 지정 속성에 대해 새 매핑 또는 계산된 필드를 추가하려면 다음을 선택합니다. **[!UICONTROL 사용자 정의 매핑 보기]**.
+데이터 준비 함수를 사용하여 새 사용자 지정 매핑 또는 사용자 지정 특성에 대한 계산된 필드를 추가할 수 있습니다. 사용자 정의 매핑을 추가하려면 다음을 선택합니다. **[!UICONTROL 사용자 정의]**.
 
-![보기-사용자 정의-매핑](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
+![사용자 정의](../../../../images/tutorials/create/analytics/custom.png)
 
-그런 다음 을 선택합니다. **[!UICONTROL 새 매핑 추가]**.
-
-필요에 따라 다음 중 하나를 선택할 수 있습니다 **[!UICONTROL 새 매핑 추가]** 또는 **[!UICONTROL 계산된 필드 추가]** 표시되는 옵션에서 선택할 수 있습니다.
-
-![새 매핑 추가](../../../../images/tutorials/create/analytics/add-new-mapping.png)
-
-빈 매핑 세트가 나타납니다. 매핑 아이콘을 선택하여 소스 필드를 추가합니다.
-
-![select-source-field](../../../../images/tutorials/create/analytics/select-source-field.png)
-
-인터페이스를 사용하여 소스 스키마 구조를 탐색하고 사용할 새 소스 필드를 식별할 수 있습니다. 매핑할 소스 필드를 선택하면 **[!UICONTROL 선택]**.
-
-![select-mapping](../../../../images/tutorials/create/analytics/select-mapping.png)
-
-그런 다음 아래의 매핑 아이콘을 선택합니다 [!UICONTROL Target 필드] 을 눌러 선택한 소스 필드를 해당 대상 필드에 매핑합니다.
-
-![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
-
-소스 스키마와 유사하게, 인터페이스를 사용하여 대상 스키마 구조를 탐색하고 매핑할 대상 필드를 선택할 수 있습니다. 적절한 타겟 필드를 선택한 후 을(를) 선택합니다. **[!UICONTROL 선택]**.
-
-![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
-
-사용자 지정 매핑 세트가 완료된 상태에서 다음을 선택합니다. **[!UICONTROL 다음]** 계속합니다.
-
-![완전한 사용자 정의 매핑](../../../../images/tutorials/create/analytics/complete-custom-mapping.png)
+필요에 따라 다음 중 하나를 선택할 수 있습니다 **[!UICONTROL 새 매핑 추가]** 또는 **[!UICONTROL 계산된 필드 추가]** 사용자 지정 특성에 대한 사용자 지정 매핑을 만듭니다. 데이터 준비 기능 사용 방법에 대한 포괄적인 단계는 [데이터 준비 UI 안내서](../../../../../data-prep/ui/mapping.md).
 
 다음 설명서는 데이터 준비, 계산된 필드 및 매핑 함수 이해에 대한 추가 리소스를 제공합니다.
 
 * [데이터 준비 개요](../../../../../data-prep/home.md)
 * [데이터 준비 매핑 함수](../../../../../data-prep/functions.md)
 * [계산된 필드 추가](../../../../../data-prep/ui/mapping.md#calculated-fields)
+
+<!-- 
+To use Data Prep functions and add new mapping or calculated fields for custom attributes, select **[!UICONTROL View custom mappings]**.
+
+![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
+
+Next, select **[!UICONTROL Add new mapping]**.
+
+Depending on your needs, you can select either **[!UICONTROL Add new mapping]** or **[!UICONTROL Add calculated field]** from the options that appear. 
+
+![add-new-mapping](../../../../images/tutorials/create/analytics/add-new-mapping.png)
+
+An empty mapping set appears. Select the mapping icon to add a source field.
+
+![select-source-field](../../../../images/tutorials/create/analytics/select-source-field.png)
+
+You can use the interface to navigate through the source schema structure and identify the new source field that you want to use. Once you have selected the source field that you want to map, select **[!UICONTROL Select]**.
+
+![select-mapping](../../../../images/tutorials/create/analytics/select-mapping.png)
+
+Next, select the mapping icon under [!UICONTROL Target Field] to map your selected source field to its appropriate target field.
+
+![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
+
+Similar to the source schema, you can use the interface to navigate through the target schema structure and select the target field you want to map to. Once you have selected the appropriate target field, select **[!UICONTROL Select]**.
+
+![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
+
+With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
+
+![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
 ### 실시간 고객 프로필 필터링 {#filtering-for-profile}
 
