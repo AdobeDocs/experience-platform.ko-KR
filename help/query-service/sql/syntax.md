@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여 줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
+source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
 workflow-type: tm+mt
-source-wordcount: '3706'
+source-wordcount: '3761'
 ht-degree: 2%
 
 ---
@@ -570,7 +570,11 @@ SET property_key = property_value
 
 ### 테이블 분석 {#analyze-table}
 
-다음 `ANALYZE TABLE` 명령은 가속화된 저장소의 테이블에 대한 통계를 계산합니다. 통계는 가속 저장소의 주어진 표에 대해 실행된 CTAS 또는 ITAS 쿼리에 대해 계산됩니다.
+다음 `ANALYZE TABLE` 명령은 명명된 테이블에 대한 분포 분석 및 통계 계산을 수행합니다. 사용 `ANALYZE TABLE` 데이터 세트가 다음에 저장되는지 여부에 따라 달라집니다. [가속 저장소](#compute-statistics-accelerated-store) 또는 [데이터 레이크](#compute-statistics-data-lake). 사용 방법에 대한 자세한 내용은 해당 섹션 을 참조하십시오.
+
+#### 가속 스토어의 통계 계산 {#compute-statistics-accelerated-store}
+
+다음 `ANALYZE TABLE` 명령은 가속화된 저장소의 테이블에 대한 통계를 계산합니다. 통계는 가속화된 저장소의 주어진 테이블에 대해 실행된 CTAS 또는 ITAS 쿼리에 대해 계산됩니다.
 
 **예**
 
@@ -592,9 +596,9 @@ ANALYZE TABLE <original_table_name>
 | `mean` | 분석된 테이블의 평균 값입니다. |
 | `stdev` | 분석된 테이블의 표준 편차입니다. |
 
-#### 통계 계산 {#compute-statistics}
+#### 데이터 레이크의 통계 계산 {#compute-statistics-data-lake}
 
-이제 다음에 대한 열 수준 통계를 계산할 수 있습니다. [!DNL Azure Data Lake Storage] (ADLS) 데이터 세트 `COMPUTE STATISTICS` 및 `SHOW STATISTICS` 명령. 전체 데이터 세트, 데이터 세트의 하위 집합, 모든 열 또는 열의 하위 집합에 대한 열 통계를 계산합니다.
+이제 의 열 수준 통계를 계산할 수 있습니다. [!DNL Azure Data Lake Storage] (ADLS) 데이터 세트 `COMPUTE STATISTICS` 및 `SHOW STATISTICS` 명령. 전체 데이터 세트, 데이터 세트의 하위 집합, 모든 열 또는 열의 하위 집합에 대한 열 통계를 계산합니다.
 
 `COMPUTE STATISTICS` 다음을 확장합니다. `ANALYZE TABLE` 명령입니다. 그러나 `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, 및 `SHOW STATISTICS` 명령은 data warehouse 테이블에서 지원되지 않습니다. 에 대한 이러한 확장 `ANALYZE TABLE` 명령은 현재 ADLS 테이블에 대해서만 지원됩니다.
 
@@ -608,7 +612,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 >
 >`FILTER CONTEXT` 제공된 필터 조건을 기반으로 데이터 집합 하위 집합에 대한 통계를 계산합니다. `FOR COLUMNS` 분석을 위한 특정 열을 대상으로 합니다.
 
-콘솔 출력이 다음과 같이 표시됩니다.
+콘솔 출력이 아래와 같이 표시됩니다.
 
 ```console
   Statistics ID 
