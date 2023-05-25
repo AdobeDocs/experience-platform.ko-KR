@@ -2,7 +2,7 @@
 title: 프로필 내보내기 동작
 description: Experience Platform 대상에서 지원되는 다양한 통합 패턴 간에 프로필 내보내기 동작이 어떻게 다른지 알아봅니다.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
+source-git-commit: c54fa206b673868ca3d0ccfa5b0936b83cfd3ed4
 workflow-type: tm+mt
 source-wordcount: '2933'
 ht-degree: 0%
@@ -29,10 +29,10 @@ Experience Platform 대상은 데이터를 HTTPS 호출로 API 기반 통합에 
 
 다음을 수행합니다. [Facebook 대상](/help/destinations/catalog/social/facebook.md) 포함 *[구성 가능한 집계](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy as a example - 데이터가 집계된 방식으로 전송됩니다. 여기서 destinations 서비스는 프로필 서비스 업스트림에서 모든 수신 데이터를 가져와서 다음 중 하나로 집계한 후 Facebook에 전달합니다.
 
-* 레코드 수(최대 10.000) 또는
+* 레코드 수(최대 10,000개) 또는
 * 시간 창 간격(30분)
 
-위의 임계값 중 어느 것이든 먼저 충족하면 Facebook으로 내보내기가 트리거됩니다. 그래서, [!DNL Facebook Custom Audiences] 대시보드에서 10.000 레코드 단위로 Experience Platform에서 들어오는 대상이 표시될 수 있습니다. 데이터가 30분 내보내기 간격보다 빨리 처리 및 집계되고, 모든 레코드가 처리될 때까지 약 10~15분마다 더 빨리 전송되므로 10~15분마다 10.000개의 레코드가 표시될 수 있습니다. 레코드가 부족하여 10.000 일괄 처리를 구성할 수 없는 경우 시간 창 임계값이 충족될 때 현재 레코드 수가 그대로 전송되므로 더 작은 일괄 처리가 Facebook으로 전송되는 것을 볼 수도 있습니다.
+위의 임계값 중 어느 것이든 먼저 충족하면 Facebook으로 내보내기가 트리거됩니다. 그래서, [!DNL Facebook Custom Audiences] 대시보드에서 10,000개 레코드 단위로 Experience Platform에서 들어오는 대상이 표시될 수 있습니다. 데이터가 30분 내보내기 간격보다 빨리 처리 및 집계되고, 모든 레코드가 처리될 때까지 약 10~15분마다 더 빨리 전송되므로 10~15분마다 10,000개의 레코드가 표시될 수 있습니다. 레코드가 부족하여 10,000개의 일괄 처리를 구성할 수 없는 경우 시간 창 임계값이 충족될 때 현재 레코드 수가 그대로 전송되므로 더 작은 일괄 처리가 Facebook으로 전송되는 것을 볼 수도 있습니다.
 
 다른 예로, [HTTP API 대상](/help/destinations/catalog/streaming/http-destination.md), 다음에 대한 *[최적 작업 집계](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 정책, 포함 `maxUsersPerRequest: 10`. 즉, 이 대상에 대한 HTTP 호출이 실행되기 전에 최대 10개의 프로필이 집계되지만, Experience Platform은 대상 서비스가 업스트림 서비스에서 업데이트된 재평가 정보를 수신하는 즉시 대상에 프로필을 디스패치하려고 합니다.
 
