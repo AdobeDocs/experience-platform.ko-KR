@@ -2,8 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;Oracle 서비스 클라우드;oracle 서비스 클라우드
 title: Oracle 서비스 클라우드 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Oracle Service Cloud를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
-source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%

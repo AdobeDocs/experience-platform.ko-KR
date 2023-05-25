@@ -3,7 +3,8 @@ title: Snowflake 스트리밍 소스 커넥터 개요
 description: 소스 연결 및 데이터 흐름을 만들어 Snowflake 인스턴스에서 Adobe Experience Platform으로 스트리밍 데이터를 수집하는 방법을 알아봅니다
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: 8ca051a92a7f39bb6ec496693fada6a0f4414754
+last-substantial-update: 2023-05-25T00:00:00Z
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 1%

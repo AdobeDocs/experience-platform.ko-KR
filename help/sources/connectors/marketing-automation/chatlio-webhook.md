@@ -2,9 +2,8 @@
 title: Chatlio 소스 개요
 description: API 또는 웹 후크를 활용하여 사용자 인터페이스를 사용하여 Chatlio를 Adobe Experience Platform에 연결하는 방법에 대해 알아봅니다
 badge: 베타
-last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
-source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%

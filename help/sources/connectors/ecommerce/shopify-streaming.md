@@ -2,8 +2,9 @@
 title: Shopify 스트리밍 소스
 description: 소스 연결 및 데이터 흐름을 만들어 Shopify 인스턴스에서 Adobe Experience Platform으로 스트리밍 데이터를 수집하는 방법을 알아봅니다
 badge: 베타
+last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 4c83c08d-c744-4167-9e3b-ed9a995943f4
-source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 2%
