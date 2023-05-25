@@ -2,7 +2,7 @@
 title: 데이터 거버넌스 전체 안내서
 description: Adobe Experience Platform의 필드 및 데이터 세트에 대한 데이터 사용 제한을 적용하는 전체 프로세스를 따르십시오.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
 source-wordcount: '1881'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Adobe Experience Platform의 특정 데이터 세트 및 필드에서 수행할 
 
 >[!NOTE]
 >
->이 안내서는 Experience Platform에서 데이터가 사용되거나 활성화되는 방법에 대한 정책을 설정하고 적용하는 방법에 중점을 둡니다. 을(를) 제한하려는 경우 **액세스** 조직 내의 특정 Platform 사용자에 대한 데이터 자체에 대해서는 의 종단 간 안내서를 참조하십시오. [속성 기반 액세스 제어](../access-control/abac/end-to-end-guide.md) 대신, 속성 기반 액세스 제어도 레이블과 정책을 사용하지만, 데이터 거버넌스와는 다른 사용 사례에 사용됩니다.
+>이 안내서는 Experience Platform에서 데이터가 사용되거나 활성화되는 방법에 대한 정책을 설정하고 적용하는 방법에 중점을 둡니다. 을(를) 제한하려는 경우 **액세스** 조직 내의 특정 Platform 사용자를 위한 데이터 자체에 대한 자세한 내용은 [속성 기반 액세스 제어](../access-control/abac/end-to-end-guide.md) 대신, 속성 기반 액세스 제어도 레이블과 정책을 사용하지만, 데이터 거버넌스와는 다른 사용 사례에 사용됩니다.
 
 ## 레이블 적용 {#labels}
 

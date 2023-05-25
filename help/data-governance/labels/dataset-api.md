@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API를 사용하여 데이터 세트의 데이터 사용 레이블 관리
 description: 데이터 세트 서비스 API를 사용하면 데이터 세트에 대한 사용 레이블을 적용하고 편집할 수 있습니다. Adobe Experience Platform의 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 카탈로그 서비스 API와 별개입니다.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 1f7a1bcf5aaf694ca2d3416c9c98f37b66adc69f
+source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1151'
 ht-degree: 1%
 
 ---
@@ -103,7 +103,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 >[!NOTE]
 >
->해당 데이터 세트에 대한 레이블이 현재 있는 경우 새 레이블은 PUT 요청을 통해서만 추가할 수 있으며, 이 경우 다음이 필요합니다. `If-Match` 머리글입니다. 레이블이 데이터 세트에 추가되면 `etag` 나중에 레이블을 업데이트하거나 제거하는 데 사용할 수 있는 값이 할당됩니다.
+>해당 데이터 세트에 대한 레이블이 현재 있는 경우 새 레이블은 PUT 요청을 통해서만 추가할 수 있으며, 이 경우 다음이 필요합니다. `If-Match` 머리글입니다. 레이블이 데이터 세트에 추가되면 가장 최근입니다 `etag` 나중에 레이블을 업데이트하거나 제거하려면 값이 필요합니다.
 
 데이터 세트 레이블 엔티티의 최신 버전을 검색하려면 [GET 요청](#look-up) (으)로 `/datasets/{DATASET_ID}/labels` 엔드포인트. 현재 값은 아래 응답에 반환됩니다. `etag` 머리글입니다. 기존 데이터 세트 레이블을 업데이트할 때 가장 좋은 방법은 최신 데이터를 가져오기 위해 먼저 데이터 세트에 대한 조회 요청을 수행하는 것입니다 `etag` 에서 해당 값을 사용하기 전의 값 `If-Match` 후속 PUT 요청의 헤더.
 
