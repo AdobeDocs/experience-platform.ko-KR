@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 5월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 85401e3abfd7d5d1d84e082d20a1a064760c4e19
+source-git-commit: fea5fdf4b4982b59fb1c4954b8f81e131af9955b
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1224'
 ht-degree: 4%
 
 ---
@@ -32,6 +32,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [데이터 수집](#data-collection)
 - [데이터 거버넌스](#data-governance)
 - [데이터 수집](#data-ingestion)
+- [대상](#destinations)
 - [쿼리 서비스](#query-service)
 - [소스](#sources)
 
@@ -75,6 +76,37 @@ Adobe Experience Platform은 모든 유형의 데이터와 지연 시간을 수�
 | 데이터 수집 템플릿의 Beta 가용성 | 데이터 수집 템플릿은 데이터 설계자 및 엔지니어에게 스키마 및 데이터 세트 생성 및 매핑 규칙 구성을 비롯한 데이터 수집 프로세스를 가속화하는 표준 템플릿 및 자동화 도구를 제공합니다. 데이터 수집 템플릿은 현재 [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md), [[!DNL Salesforce]](../../sources/connectors/crm/salesforce.md) 및 [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) 소스. 자세한 내용은 의 안내서를 참조하십시오. [UI에서 템플릿 사용](../../sources/tutorials/ui/templates.md). |
 
 데이터 수집에 대해 자세히 알아보려면 [데이터 수집 개요](../../ingestion/home.md).
+
+## 대상 {#destinations}
+
+[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새 대상** {#new-destinations}
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| **[[!UICONTROL Mailchimp 관심 범주]](../../destinations/catalog/email-marketing/mailchimp-interest-categories.md)** | **[!UICONTROL Mailchimp]** 는 메일링 목록 및 이메일 마케팅 캠페인을 사용하여 연락처(클라이언트, 고객 또는 기타 이해 당사자)를 관리하고 연락하는 데 기업에서 사용하는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다. 이 커넥터를 사용하여 관심 분야 및 환경 설정에 따라 연락처를 정렬할 수 있습니다. |
+
+{style="table-layout:auto"}
+
+<!--
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| General availability of attribute-based personalization through the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations. | Leverage profile attributes in real-time to deliver one-to-one web and mobile personalization, via Adobe Target or other custom personalization destinations in Experience Platform. See the [dedicated documentation](../../destinations/ui/activate-edge-personalization-destinations.md) for more details. |
+| Destination SDK support for grouping exported audiences based on merge policy. | When building a file-based destination with Destination SDK, you can now configure the grouping of exported audiences into one or multiple files, based on merge policy. <br><br> Additionally, you can now include the merge policy ID and merge policy name in the exported file names, by using the dedicated template macros. <br><br>See the [batch configuration documentation](../../destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md) for more details on how to use the `segmentGroupingEnabled` parameter and the new file name template macros.|
+
+{style="table-layout:auto"}
+
+-->
+
+**수정 사항 및 개선 사항** {#destinations-fixes-and-enhancements}
+
+- 사용자가 포트 매개 변수의 값을 사용자 지정할 수 없었던 (베타) SFTP 클라우드 스토리지 대상의 제한을 수정했습니다. 이제 값을 를 통해 (베타) SFTP 대상 연결을 설정할 때 편집할 수 있습니다. [API](/help/destinations/api/activate-segments-file-based-destinations.md) 또는 [UI](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information).
+
+대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md).
 
 ## 쿼리 서비스 {#query-service}
 
