@@ -4,9 +4,9 @@ title: 이메일 마케팅 대상 개요
 type: Tutorial
 description: ESP(이메일 서비스 공급자)를 사용하면 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있습니다. Experience Platform 대상으로 지원되는 ESP에 대해 알아봅니다.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 29c02cf977863a348252f9a8b40b3b6ec8a83a9c
+source-git-commit: 152786e5e994a88b19ca7af8815b33be5a732852
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '374'
 ht-degree: 4%
 
 ---
@@ -23,6 +23,7 @@ Adobe Experience Platform은 다음과 같은 이메일 마케팅 대상을 지�
 
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
+* [Mailchimp 관심 범주](mailchimp-interest-categories.md)
 * [(API) Oracle Eloqua](oracle-eloqua-api.md)
 * [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [(파일) Oracle Eloqua](oracle-eloqua.md)

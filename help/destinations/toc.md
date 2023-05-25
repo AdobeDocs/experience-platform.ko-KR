@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: 36d4908fc19916c5e107eb4883d741ba1904b5a4
+source-git-commit: 152786e5e994a88b19ca7af8815b33be5a732852
 workflow-type: tm+mt
-source-wordcount: '1178'
+source-wordcount: '1181'
 ht-degree: 5%
 
 ---
@@ -140,6 +140,7 @@ ht-degree: 5%
       * [이메일 마케팅 대상 개요](./catalog/email-marketing/overview.md)
       * [Adobe Campaign 연결](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services 연결](./catalog/email-marketing/adobe-campaign-managed-services.md)
+      * [Mailchimp 관심 범주](./catalog/email-marketing/mailchimp-interest-categories.md)
       * [(API) Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(파일) Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua.md)
       * [Responsys 연결 oracle](./catalog/email-marketing/oracle-responsys.md)
