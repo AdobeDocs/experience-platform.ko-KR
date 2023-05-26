@@ -3,14 +3,19 @@ description: Adobe Experience Platform UI에서 템플릿을 사용하여 B2B �
 title: UI의 템플릿을 사용하여 소스 데이터 흐름 만들기
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 91d6832231d75c9dd23e91a5f1152eac61558fc5
+source-git-commit: 41694a96272819652c7176793f94a2de620d1d7a
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 9%
+source-wordcount: '1601'
+ht-degree: 8%
 
 ---
 
-# UI의 템플릿을 사용하여 소스 데이터 흐름 만들기
+# UI의 템플릿을 사용하여 소스 데이터 흐름 만들기 {#create-a-sources-dataflow-using-templates-in-the-ui}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Platform UI의 소스에 대한 템플릿"
+>abstract="템플릿에는 소스에서 Experience Platform으로 데이터를 가져올 때 사용할 수 있는 스키마, 데이터 세트, ID, 매핑 규칙, ID 네임스페이스 및 데이터 흐름과 같은 자동 생성된 에셋이 포함됩니다. 사용 사례에 맞게 사용자 지정할 자동 생성된 에셋을 업데이트할 수 있습니다."
 
 >[!IMPORTANT]
 >

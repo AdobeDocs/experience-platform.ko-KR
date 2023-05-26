@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Salesforce;salesforce;필드 매핑;필드 매핑;매핑;marketo;B2B;b2b
 title: Microsoft Dynamics 매핑 필드
 description: 아래 표에는 Microsoft Dynamics 소스 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
-source-git-commit: a278f27223c9a5d0b97a0aa6b5d943caf5f6b10e
+source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '524'
 ht-degree: 9%
 
 ---

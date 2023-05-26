@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 5월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e705d6c38bc1a81ee5d2c31a3097e1dba8f5cf7f
+source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1361'
 ht-degree: 4%
 
 ---
@@ -117,7 +117,7 @@ Adobe Experience Platform Identity Service는 디바이스와 시스템 간에 I
 
 | 기능 | 설명 |
 | --- | --- |
-| Adobe Experience Cloud 애플리케이션 내에서 파트너 ID 지원 | 이제 Identity Service에서 파트너 ID를 사용할 수 있습니다. 파트너 ID는 데이터 파트너가 사람을 나타내는 데 사용하는 식별자입니다. Real-time Customer Data Platform에서 파트너 ID는 주로 확장된 대상 활성화 및 데이터 보강에 사용됩니다. 파트너 ID는 ID 그래프에 저장되지 않습니다. 자세한 내용은 [id 유형](../../identity-service/namespaces.md#identity-types). |
+| Adobe Experience Cloud 애플리케이션 내에서 파트너 ID 지원 [!BADGE 베타]{type=Informative} | 이제 Identity Service에서 파트너 ID를 사용할 수 있습니다. 파트너 ID는 데이터 파트너가 사람을 나타내는 데 사용하는 식별자입니다. Real-time Customer Data Platform에서 파트너 ID는 주로 확장된 대상 활성화 및 데이터 보강에 사용됩니다. 파트너 ID는 ID 그래프에 저장되지 않습니다. 자세한 내용은 [id 유형](../../identity-service/namespaces.md#identity-types). |
 
 ID 서비스에 대해 자세히 알아보려면 [ID 서비스 개요](../../identity-service/home.md)
 
