@@ -5,7 +5,7 @@ title: UI에서 Apache HDFS 소스 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Apache Hadoop 분산 파일 시스템 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 1%

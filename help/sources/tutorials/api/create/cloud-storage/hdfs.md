@@ -5,7 +5,7 @@ title: 흐름 서비스 API를 사용하여 Apache HDFS 기본 연결 만들기
 type: Tutorial
 description: Flow Service API를 사용하여 Apache Hadoop 분산 파일 시스템을 Adobe Experience Platform에 연결하는 방법에 대해 알아봅니다.
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 1%

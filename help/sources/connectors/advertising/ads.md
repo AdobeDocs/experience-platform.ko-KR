@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;Google 광고;google 광고
 title: Google 광고 소스 개요
 description: API 또는 사용자 인터페이스를 사용하여 Google 광고를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%

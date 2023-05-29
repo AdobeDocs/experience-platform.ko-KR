@@ -3,7 +3,7 @@ title: 흐름 서비스 API를 사용하여 Customer.io에 대한 소스 연결 
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Customer.io에 연결하는 방법을 알아봅니다.
 badge: 베타
 exl-id: 1c84d818-428f-4097-9f6f-ef0cf1a04785
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1457'
 ht-degree: 1%

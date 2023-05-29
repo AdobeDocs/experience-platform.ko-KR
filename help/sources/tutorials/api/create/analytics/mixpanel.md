@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: (베타) 흐름 서비스 API를 사용하여 Mixpanel에 대한 소스 연결 및 데이터 흐름 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Mixpanel에 연결하는 방법을 알아봅니다.
 exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
-source-git-commit: 23a6f8ee23fb67290a5bcba2673a87ce74c9e1d3
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '2050'
 ht-degree: 1%

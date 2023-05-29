@@ -3,7 +3,7 @@ title: Snowflake 스트리밍 계정을 Adobe Experience Platform에 연결
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Snowflake 스트리밍에 연결하는 방법에 대해 알아봅니다.
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: 825da75c8f98863b408477a4895cd9146d121d3d
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 2%

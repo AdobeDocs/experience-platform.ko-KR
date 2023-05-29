@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 Zendesk용 데이터 흐름 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Zendesk에 연결하는 방법을 알아봅니다.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1996'
 ht-degree: 1%

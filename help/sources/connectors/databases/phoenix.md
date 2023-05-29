@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Phoenix Source Connector 개요
 description: API 또는 사용자 인터페이스를 사용하여 Phoenix를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%

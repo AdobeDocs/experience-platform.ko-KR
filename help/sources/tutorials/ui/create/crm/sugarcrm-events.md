@@ -2,7 +2,7 @@
 title: UI에서 SugarCRM 이벤트 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 SugarCRM 이벤트 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 1%

@@ -5,7 +5,7 @@ title: 흐름 서비스 API를 사용하여 FTP 기본 연결 만들기
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 FTP(File Transfer Protocol) 서버에 연결하는 방법을 알아봅니다.
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 1%

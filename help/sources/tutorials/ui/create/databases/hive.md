@@ -5,7 +5,7 @@ title: UI의 Azure HDInsights 소스 연결에서 Apache Hive 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Azure HDInsights 소스 연결에서 Apache Hive를 만드는 방법을 알아봅니다.
 exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 1%

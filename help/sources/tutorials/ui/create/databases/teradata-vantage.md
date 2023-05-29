@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;Teradata Vantage
 title: UI에서 Teradata Vantage Source 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Teradata Vantage 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 1%

@@ -5,7 +5,7 @@ title: UI에서 Couchbase 소스 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Couchbase 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 1%

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Apache HDFS 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Apache HDFS를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 1f156f7b-a19d-4dcf-a51d-ab6cb396d8f7
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%

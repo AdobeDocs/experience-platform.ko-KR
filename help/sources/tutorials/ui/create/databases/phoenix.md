@@ -5,7 +5,7 @@ title: UI에서 Phoenix 소스 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Phoenix 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%

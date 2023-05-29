@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 있는 주제;
 title: (베타) Adobe Workfront 소스
 description: Adobe Workfront은 업무의 전체 라이프사이클을 한 곳에서 관리할 수 있도록 도와주는 마케팅 작업 관리 애플리케이션입니다. Workfront에는 조직의 작업 흐름을 더 잘 이해하고 최적화하는 데 사용할 수 있는 보고 및 분석 도구가 포함되어 있습니다.
 exl-id: ea714278-d84d-4929-9a34-81fc5fb70871
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 1%

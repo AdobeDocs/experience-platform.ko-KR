@@ -5,7 +5,7 @@ title: UI에서 IBM DB2 소스 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 IBM DB2 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Adobe Experience Platform의 소스 커넥터는 일정에 따라 외부 소스 
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-아래 **[!UICONTROL 데이터베이스]** 범주, 선택 **[!UICONTROL IBM DB2]**. 이 커넥터를 처음 사용하는 경우 다음을 선택합니다. **[!UICONTROL 구성]**. 그렇지 않으면 를 선택합니다. **[!UICONTROL 데이터 추가]** 새 DB2 커넥터를 만드는 데 사용됩니다.
+아래 **[!UICONTROL 데이터베이스]** 범주, 선택 **[!UICONTROL IBM DB2]**. 이 커넥터를 처음 사용하는 경우 다음을 선택합니다. **[!UICONTROL 구성]**. 그렇지 않으면 를 선택합니다. **[!UICONTROL 데이터 추가]** 새 DB2 커넥터를 만드는 방법.
 
 ![카탈로그](../../../../images/tutorials/create/ibm-db2/catalog.png)
 

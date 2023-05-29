@@ -2,7 +2,7 @@
 title: 흐름 서비스 API를 사용하여 SugarCRM 이벤트에 대한 소스 연결 및 데이터 흐름 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 SugarCRM 이벤트에 연결하는 방법을 알아봅니다.
 exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '2009'
 ht-degree: 1%
@@ -123,7 +123,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fi
 | `{OBJECT}` | 이 매개 변수는 특정 디렉터리를 볼 때만 필요합니다. 해당 값은 탐색하려는 디렉터리의 경로를 나타냅니다. 이 소스의 경우 값은 다음과 같습니다. `json`. |
 | `fileType=json` | Platform으로 가져올 파일의 파일 유형입니다. 현재, `json` 는 유일하게 지원되는 파일 유형입니다. |
 | `{PREVIEW}` | 연결 콘텐츠가 미리 보기를 지원하는지 여부를 정의하는 부울 값. |
-| `{SOURCE_PARAMS}` | Platform으로 가져올 소스 파일의 매개 변수를 정의합니다. 에 대해 허용된 형식 유형을 검색하려면 `{SOURCE_PARAMS}`, 전체 문자열을 base64에서 인코딩해야 합니다. <br> [!DNL SugarCRM Events] 페이로드가 필요하지 않습니다. 값 `{SOURCE_PARAMS}` 다음으로 전달됨 `{}`, base64에서 인코딩되어 다음과 같습니다. `e30=` 아래와 같이 표시됩니다. |
+| `{SOURCE_PARAMS}` | Platform으로 가져올 소스 파일의 매개 변수를 정의합니다. 에 대해 허용된 형식 유형을 검색하려면 `{SOURCE_PARAMS}`, 전체 문자열을 base64에서 인코딩해야 합니다. <br> [!DNL SugarCRM Events] 페이로드가 필요하지 않습니다. 값 `{SOURCE_PARAMS}` 다음으로 전달됨 `{}`, base64로 인코딩되어 다음과 같습니다. `e30=` 아래와 같이 표시됩니다. |
 
 **요청**
 

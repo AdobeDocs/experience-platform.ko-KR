@@ -5,7 +5,7 @@ title: 흐름 서비스 API를 사용하여 Phoenix Base 연결 만들기
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 Phoenix 데이터베이스를 Adobe Experience Platform에 연결하는 방법에 대해 알아봅니다.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%

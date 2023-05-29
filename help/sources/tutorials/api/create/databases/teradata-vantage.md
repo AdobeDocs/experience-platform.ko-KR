@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;Teradata Vantage
 title: 흐름 서비스 API를 사용하여 Teradata Vantage Base 연결 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Teradata Vantage에 연결하는 방법에 대해 알아봅니다.
 exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
-source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 1%

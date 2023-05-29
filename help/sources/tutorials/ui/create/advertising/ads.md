@@ -2,7 +2,7 @@
 title: UI에서 Google 광고 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Google Ads 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: ac87434c857a39f4be3714cba57519cbb4fa54a6
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 0%

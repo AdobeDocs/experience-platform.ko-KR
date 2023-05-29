@@ -5,7 +5,7 @@ title: IBM 만들기 [!DNL IBM DB2] 흐름 서비스 API를 사용한 기본 연
 type: Tutorial
 description: IBM 연결 방법 알아보기 [!DNL IBM DB2] 흐름 서비스 API를 사용하여 Adobe Experience Platform에 전송됩니다.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 1%

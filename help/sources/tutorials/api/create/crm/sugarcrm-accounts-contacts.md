@@ -2,7 +2,7 @@
 title: 흐름 서비스 API를 사용하여 SugarCRM 계정 및 연락처에 대한 소스 연결 및 데이터 흐름을 만듭니다.
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 SugarCRM 계정 및 연락처에 연결하는 방법을 알아봅니다.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '2181'
 ht-degree: 1%

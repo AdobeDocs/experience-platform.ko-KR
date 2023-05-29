@@ -2,7 +2,7 @@
 title: 흐름 서비스 API를 사용하여 Google Ads Base 연결 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Google 광고에 연결하는 방법을 알아봅니다.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: 7c77b0dc658ad45a25f4ead4e14f5826701cf645
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '747'
 ht-degree: 1%

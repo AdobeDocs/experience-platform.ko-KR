@@ -4,9 +4,9 @@ description: 소스 연결 및 데이터 흐름을 만들어 Snowflake 인스턴
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '684'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >* 다음 [!DNL Snowflake] 스트리밍 소스는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
->* 다음 [!DNL Snowflake] 스트리밍 소스는 Real-Time CDP Ultimate를 구매한 고객의 소스 카탈로그에서 사용할 수 있습니다.
+>* 다음 [!DNL Snowflake] 스트리밍 소스는 Real-Time CDP Ultimate를 구매한 고객을 위해 API에서 사용할 수 있습니다.
 
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.

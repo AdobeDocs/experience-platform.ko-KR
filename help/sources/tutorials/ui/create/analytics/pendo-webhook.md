@@ -3,7 +3,7 @@ title: UI에서 Pendo 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Pendo 소스 연결을 만드는 방법을 알아봅니다.
 badge: 베타
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1212'
 ht-degree: 1%
@@ -90,7 +90,7 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 �
 
 완료되면 다음을 선택합니다. **[!UICONTROL 다음]**.
 
-![소스 워크플로우의 데이터 흐름 세부 단계.](../../../../images/tutorials/create/analytics-pendo-webhook/dataflow-detail.png)
+![소스 워크플로우의 데이터 흐름 세부 사항 단계입니다.](../../../../images/tutorials/create/analytics-pendo-webhook/dataflow-detail.png)
 
 ## 매핑 {#mapping}
 

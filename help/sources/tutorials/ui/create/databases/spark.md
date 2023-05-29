@@ -5,7 +5,7 @@ title: UI에서 Azure HDInsights 소스 연결에 Apache Spark 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Azure HDInsights 소스 연결에서 Apache Spark를 만드는 방법을 알아봅니다.
 exl-id: 30d0b740-cec4-486f-9c9b-1579fd04f28b
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 1%

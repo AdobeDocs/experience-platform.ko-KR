@@ -5,7 +5,7 @@ title: 플로우 서비스 API를 사용하여 HP Vertica Base 연결 만들기
 type: Tutorial
 description: Flow Service API를 사용하여 HP Vertica를 Adobe Experience Platform에 연결하는 방법에 대해 알아봅니다.
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 1%

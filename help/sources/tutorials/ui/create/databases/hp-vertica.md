@@ -5,7 +5,7 @@ title: UI에서 HP Vertica 소스 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 HP Vertica 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: d7315ad4-9250-4e66-be33-016efabb512e
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 1%
