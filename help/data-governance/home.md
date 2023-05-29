@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 거버넌스 개요
 description: Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. 이 기능은 Experience Platform 내 카탈로그 작성, 데이터 계통 확인, 데이터 사용 라벨링, 데이터 사용 정책, 마케팅 작업을 위한 데이터 사용 제어 등 다양한 수준에서 주요 역할을 합니다
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: d45c813cf660d9bf738d09101536f1dfb41a1505
+source-git-commit: e6f003a058f50454a6fd4923510976973c6946fb
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1518'
 ht-degree: 3%
 
 ---
@@ -127,8 +127,6 @@ Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이�
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-<!-- A key section of the video is now outdated due to the deprecation of the dataset field level labelling feature.
+다음 비디오는 Experience Platform에서 스키마 및 데이터 세트에 데이터 사용 레이블을 적용하는 방법에 대한 지침을 제공합니다.
 
-The following video provides an introduction to various Data Governance features in Experience Platform.
-
->[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
