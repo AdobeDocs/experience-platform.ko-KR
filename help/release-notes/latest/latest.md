@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 5월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
+source-git-commit: 43f505c6d3871e6ebc7d644aef6ec3b71f9fc2bc
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1559'
 ht-degree: 4%
 
 ---
@@ -33,9 +33,11 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [데이터 거버넌스](#data-governance)
 - [데이터 수집](#data-ingestion)
 - [대상](#destinations)
+- [경험 데이터 모델(XDM)](#xdm)
 - [ID 서비스](#identity-service)
 - [쿼리 서비스](#query-service)
 - [소스](#sources)
+
 
 ## 데이터 수집 {#data-collection}
 
@@ -108,6 +110,24 @@ Adobe Experience Platform은 모든 유형의 데이터와 지연 시간을 수�
 - 사용자가 포트 매개 변수의 값을 사용자 지정할 수 없었던 (베타) SFTP 클라우드 스토리지 대상의 제한을 수정했습니다. 이제 값을 를 통해 (베타) SFTP 대상 연결을 설정할 때 편집할 수 있습니다. [API](/help/destinations/api/activate-segments-file-based-destinations.md) 또는 [UI](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information).
 
 대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md).
+
+## 경험 데이터 모델(XDM) {#xdm}
+
+XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 일반적인 표현에 통합하여 보다 빠르고 통합적인 방식으로 통찰력을 제공할 수 있습니다. 고객 작업에서 중요한 통찰력을 얻고, 세그먼트를 통해 고객 대상을 정의하고, 개인화 목적으로 고객 속성을 사용할 수 있습니다.
+
+**업데이트된 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 |
+| --- | --- | --- |
+| 필드 그룹 | (여러 개) | 에 대한 여러 필드 [오퍼 항목](https://github.com/adobe/xdm/pull/1720/files) 스키마에서 이중 계층 구조를 제거하도록 업데이트되었습니다. |
+| 필드 그룹 | [[!UICONTROL XDM 개별 잠재 고객 프로필]](https://github.com/adobe/xdm/pull/1721/files) | 다음 `partnerProspect` 메타데이터 태그 옵션이 [!UICONTROL XDM 개별 잠재 고객 프로필] 클래스. |
+| 데이터 형식 | (여러 개) | 에 대한 여러 필드가 추가되었습니다. [!UICONTROL 미디어 세부 정보] 데이터 유형. |
+| 데이터 형식 | [[!UICONTROL 세션 세부 정보]](https://github.com/adobe/xdm/pull/1716/files) | 리디렉션이 발생했는지 여부를 나타내는 새 필드가 추가되었습니다. |
+| 필드 그룹 | [[!UICONTROL MediaAnalytics 인터랙션 세부 정보]](https://github.com/adobe/xdm/pull/1716/files) | 미디어 보고와 관련된 새 필드가 추가되었습니다. |
+
+{style="table-layout:auto"}
+
+플랫폼의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
 
 ## ID 서비스 {#identity-service}
 
