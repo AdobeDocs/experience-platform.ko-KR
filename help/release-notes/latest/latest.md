@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 5월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 43f505c6d3871e6ebc7d644aef6ec3b71f9fc2bc
+source-git-commit: c2b9f01453ecbc3348675e59b75c81280eded5f8
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1565'
 ht-degree: 4%
 
 ---
@@ -121,7 +121,7 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 | --- | --- | --- |
 | 필드 그룹 | (여러 개) | 에 대한 여러 필드 [오퍼 항목](https://github.com/adobe/xdm/pull/1720/files) 스키마에서 이중 계층 구조를 제거하도록 업데이트되었습니다. |
 | 필드 그룹 | [[!UICONTROL XDM 개별 잠재 고객 프로필]](https://github.com/adobe/xdm/pull/1721/files) | 다음 `partnerProspect` 메타데이터 태그 옵션이 [!UICONTROL XDM 개별 잠재 고객 프로필] 클래스. |
-| 데이터 형식 | (여러 개) | 에 대한 여러 필드가 추가되었습니다. [!UICONTROL 미디어 세부 정보] 데이터 유형. |
+| 데이터 형식 | (여러 개) | 에 대한 여러 필드가 추가되었습니다. [[!UICONTROL 미디어 세부 정보]](https://github.com/adobe/xdm/pull/1716/files) 데이터 유형. |
 | 데이터 형식 | [[!UICONTROL 세션 세부 정보]](https://github.com/adobe/xdm/pull/1716/files) | 리디렉션이 발생했는지 여부를 나타내는 새 필드가 추가되었습니다. |
 | 필드 그룹 | [[!UICONTROL MediaAnalytics 인터랙션 세부 정보]](https://github.com/adobe/xdm/pull/1716/files) | 미디어 보고와 관련된 새 필드가 추가되었습니다. |
 
