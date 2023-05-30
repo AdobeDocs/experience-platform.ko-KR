@@ -73,7 +73,7 @@ Adobe Experience Platform Identity Service는 디바이스와 시스템 간에 I
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
 >title="ID 값"
->abstract="ID 값은 고유 개인, 조직 또는 에셋을 나타내는 식별자입니다. 값이 표시하는 ID의 컨텍스트 또는 유형은 해당 ID 네임스페이스에 의해 정의됩니다. 프로필 조각에서 레코드 데이터를 일치시킬 때 네임스페이스와 ID 값은 일치해야 합니다."
+>abstract="ID 값은 고유 개인, 조직 또는 자산을 나타내는 식별자입니다. 값이 표시하는 ID의 컨텍스트 또는 유형은 해당 ID 네임스페이스에 의해 정의됩니다. 프로필 조각에서 레코드 데이터를 일치시킬 때 네임스페이스와 ID 값은 일치해야 합니다."
 >text="Learn more in documentation"
 
 &quot;ID가 무엇입니까?&quot;라고 묻는 경우 더 이상의 맥락이 없다면, 그들이 유용한 답을 제공하기는 어려울 것이다. 동일한 논리에 의해 ID 값을 나타내는 문자열 값은 시스템 생성 ID이든 이메일 주소이든 간에 문자열 값 컨텍스트(ID 네임스페이스)를 제공하는 한정자와 함께 제공되는 경우에만 완료됩니다.

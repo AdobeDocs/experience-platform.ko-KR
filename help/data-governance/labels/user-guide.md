@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
 source-wordcount: '1380'
-ht-degree: 17%
+ht-degree: 19%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 17%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="플랫폼에서 데이터 사용 관리"
->abstract="<h2>설명</h2><p>Experience Platform의 데이터 거버넌스 프레임워크를 사용하면 데이터 사용 제한에 따라 속성 및 스키마에 레이블을 지정하고 특정 마케팅 작업에 대해 이러한 제한을 식별하고 준수하는 정책을 설정할 수 있습니다.</p>"
+>abstract="<h2>설명</h2><p>Experience Platform의 데이터 거버넌스 프레임워크를 사용하면 데이터 사용 제한에 따라 속성 및 스키마에 레이블을 지정하고 특정 마케팅 활동에 대한 이러한 제한을 식별하고 이행하는 정책을 설정할 수 있습니다.</p>"
 
 이 사용 안내서에서는 내에서 데이터 사용 레이블 작업을 수행하는 단계를 다룹니다. [!DNL Experience Platform] 사용자 인터페이스.
 
