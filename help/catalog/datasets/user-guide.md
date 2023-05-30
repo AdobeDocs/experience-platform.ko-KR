@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 세트 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: f0cd059683531993398f0a81d6eda486276853e2
+source-git-commit: 11d6cf09dede8c7c14bbbcd3c109e703a5d053de
 workflow-type: tm+mt
-source-wordcount: '1485'
+source-wordcount: '1504'
 ht-degree: 7%
 
 ---
@@ -33,6 +33,11 @@ ht-degree: 7%
 >title="데이터 세트 활동에 포함된 음수"
 >abstract="수집된 레코드에 포함된 음수는 사용자가 선택한 시간 범위에서 특정 배치를 삭제했음을 의미합니다."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_daysRemaining"
+>title="데이터 세트 만료"
+>abstract="이 열은 대상 데이터 세트가 자동으로 만료되기 전에 남은 일 수를 나타냅니다."
 
 다음에서 [!DNL Experience Platform] UI, 선택 **[!UICONTROL 데이터 세트]** 을(를) 왼쪽 탐색에서 열어 **[!UICONTROL 데이터 세트]** 대시보드입니다. 대시보드에는 조직에서 사용 가능한 모든 데이터 세트가 나열됩니다. 목록에 있는 각 데이터 세트에 대해 이름, 데이터 세트가 준수하는 스키마, 최근 수집 실행 상태 등 세부 정보가 표시됩니다.
 

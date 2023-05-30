@@ -5,9 +5,9 @@ solution: Experience Platform
 title: UI에서 소스 연결 데이터 흐름 업데이트
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: cef5c203acf3318445399669336166e6627ebe66
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '782'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,12 @@ ht-degree: 1%
 * [소스](../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
 * [샌드박스](../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-## 데이터 흐름 업데이트
+## 데이터 흐름 업데이트 {#update-dataflows}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_dataflows_daysRemaining"
+>title="데이터 세트 만료"
+>abstract="이 열은 대상 데이터 세트가 자동으로 만료되기 전에 남은 일 수를 나타냅니다.<br>대상 데이터 세트가 만료되면 데이터 흐름이 실패합니다. 데이터 흐름이 실패하지 않도록 하려면 대상 데이터 세트가 올바른 날짜에 만료되도록 설정되어 있는지 확인하십시오. 만료 날짜를 업데이트하는 방법에 대한 자세한 내용은 설명서를 참조하십시오."
 
 Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 탐색에서 [!UICONTROL 소스] 작업 영역. 선택 **[!UICONTROL 데이터 흐름]** 기존 데이터 흐름 목록을 보려면 위쪽 헤더에서 를 선택하십시오.
 
