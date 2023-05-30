@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 XDM 필드 정의
 description: Experience Platform 사용자 인터페이스에서 XDM 필드를 정의하는 방법을 알아봅니다.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: 765079f084dce316d321fbac5aee9e387373ba00
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1505'
 ht-degree: 4%
 
 ---
@@ -58,7 +58,7 @@ UI에서 새 XDM 필드를 정의하려면 먼저 내에서 스키마를 열어�
 
 {style="table-layout:auto"}
 
-사람이 읽을 수 있는 옵션을 제공할 수도 있습니다 **[!UICONTROL 설명]** 를 필드에 추가하여 필드의 의도된 사용 사례에 대한 추가 컨텍스트를 제공합니다.
+사람이 읽을 수 있는 옵션도 제공할 수 있습니다 **[!UICONTROL 설명]** 를 필드에 추가하여 필드의 의도된 사용 사례에 대한 추가 컨텍스트를 제공합니다.
 
 >[!NOTE]
 >
@@ -86,7 +86,7 @@ UI에서 새 XDM 필드를 정의하려면 먼저 내에서 스키마를 열어�
 
 | 필드 속성 | 호환 가능한 유형 | 설명 |
 | --- | --- | --- |
-| [!UICONTROL 기본값] | [!UICONTROL 문자열], [!UICONTROL Double], [!UICONTROL 길게], [!UICONTROL 정수], [!UICONTROL 짧음], [!UICONTROL 바이트], [!UICONTROL 부울] | 수집 중에 다른 값이 제공되지 않을 경우 이 필드에 지정될 기본값입니다. 이 값은 필드에서 선택한 유형을 준수해야 합니다. |
+| [!UICONTROL 기본값] | [!UICONTROL 문자열], [!UICONTROL Double], [!UICONTROL 길게], [!UICONTROL 정수], [!UICONTROL 짧음], [!UICONTROL 바이트], [!UICONTROL 부울] | 수집 중에 다른 값이 제공되지 않는 경우 이 필드에 할당되는 기본값입니다. 이 값은 필드에서 선택한 유형을 준수해야 합니다.<br><br>기본값은 시간이 지남에 따라 변경될 수 있으므로 수집 시 데이터 세트에 저장되지 않습니다. 스키마에 설정된 기본값은 다운스트림 플랫폼 서비스 및 애플리케이션이 데이터 세트에서 데이터를 읽을 때 추론합니다. 예를 들어 쿼리 서비스를 사용하여 데이터를 쿼리할 때 속성에 NULL 값이 있지만 기본값은 로 설정되어 있는 경우 `5` 스키마 수준에서 쿼리 서비스가 를 반환해야 합니다. `5` NULL 대신 이 동작은 현재 모든 AEP 서비스에서 균일하지 않습니다. |
 | [!UICONTROL 패턴] | [!UICONTROL 문자열] | A [정규 표현식](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) 수집 중에 수락하려면 이 필드의 값이 일치해야 합니다. |
 | [!UICONTROL 형식] | [!UICONTROL 문자열] | 값이 준수해야 하는 문자열의 사전 정의된 형식 목록에서 선택합니다. 사용 가능한 형식은 다음과 같습니다. <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL 이메일]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL 호스트 이름]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json 포인터]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL 최소 길이] | [!UICONTROL 문자열] | 수집 중에 값을 수락하기 위해 문자열에 포함해야 하는 최소 문자 수입니다. |
