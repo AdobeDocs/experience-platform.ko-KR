@@ -2,7 +2,7 @@
 title: 개인화 개요
 description: Adobe Experience Platform Edge Network Server API를 사용하여 Adobe 개인화 솔루션에서 개인화된 콘텐츠를 검색하는 방법에 대해 알아봅니다.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: f36892103b0b202550c07a70538c97b1cc673840
+source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 9%
@@ -13,7 +13,7 @@ ht-degree: 9%
 
 포함 [!DNL Server API], 다음과 같은 Adobe 개인화 솔루션에서 개인화된 콘텐츠를 검색할 수 있습니다. [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 및 [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
 
-또한 [!DNL Server API] 는 다음과 같은 Adobe Experience Platform 개인화 대상을 통해 동일한 페이지 및 다음 페이지 개인화 기능을 지원합니다. [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화 연결](../destinations/catalog/personalization/custom-personalization.md). 동일 페이지 및 다음 페이지 개인화에 대한 Experience Platform을 구성하는 방법에 대해 알아보려면 다음을 참조하십시오. [전용 안내서](../destinations/ui/configure-personalization-destinations.md).
+또한 [!DNL Server API] 는 다음과 같은 Adobe Experience Platform 개인화 대상을 통해 동일한 페이지 및 다음 페이지 개인화 기능을 지원합니다. [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화 연결](../destinations/catalog/personalization/custom-personalization.md). 동일 페이지 및 다음 페이지 개인화에 대한 Experience Platform을 구성하는 방법에 대해 알아보려면 다음을 참조하십시오. [전용 안내서](../destinations/ui/activate-edge-personalization-destinations.md).
 
 Server API를 사용하는 경우 개인화 엔진에서 제공하는 응답을 사이트의 콘텐츠를 렌더링하는 데 사용되는 논리와 통합해야 합니다. 와(과) 달리 [웹 SDK](../edge/home.md), [!DNL Server API] 은(는) 이 반환한 콘텐츠를 자동으로 적용하는 메커니즘을 가지고 있지 않습니다. [!DNL Adobe Target] 및 [!DNL Offer Decisioning].
 

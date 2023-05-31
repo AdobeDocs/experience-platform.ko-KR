@@ -3,10 +3,10 @@ keywords: target 개인화, 대상, experience platform 대상, adobe target 대
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
+source-git-commit: bee1bf0ec9cbf35ea7303921059068c01cb9f54a
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 7%
+source-wordcount: '908'
+ht-degree: 8%
 
 ---
 
@@ -14,18 +14,21 @@ ht-degree: 7%
 
 ## 대상 변경 로그 {#changelog}
 
->[!IMPORTANT]
->
->향상된 Adobe Target V2 대상 커넥터의 Beta 릴리스를 사용하면 대상 카탈로그에 Adobe Target 카드 2개가 표시될 수 있습니다.
->Adobe Target V2 대상 커넥터는 현재 베타 버전이며 일부 고객만 사용할 수 있습니다. Adobe V1 카드에서 제공하는 기능 외에도 Target V2 커넥터는 [매핑 단계](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) 프로필 속성을 Adobe Target에 매핑하여 속성 기반 동일 페이지 및 다음 페이지 개인화를 활성화하는 활성화 작업 과정입니다.
+| 릴리스 월 | 업데이트 유형 | 설명 |
+|---|---|---|
+| 2023년 4월 | 기능 및 설명서 업데이트 | 2023년 4월 현재 **[!UICONTROL Adobe Target]** 연결 지원 [속성 기반 개인화](../../ui/activate-edge-personalization-destinations.md#map-attributes) 및 는 일반적으로 모든 고객이 사용할 수 있습니다. |
 
-![나란히 표시된 두 Adobe Target 대상 카드 이미지.](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
+{style="table-layout:auto"}
 
 ## 개요 {#overview}
 
 Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 
 Adobe Target은 Adobe Experience Platform 대상 카탈로그의 개인화 연결입니다.
+
+Experience Platform에서 Adobe Target 연결을 구성하는 방법에 대한 간략한 개요는 아래 비디오를 참조하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 ## 사전 요구 사항 {#prerequisites}
 
@@ -37,7 +40,7 @@ Adobe Target은 Adobe Experience Platform 대상 카탈로그의 개인화 연�
 
 >[!IMPORTANT]
 >
->만들기 전 [!DNL Adobe Target] 연결, 방법에 대한 안내서 읽기 [동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](../../ui/configure-personalization-destinations.md). 이 안내서에서는 여러 Experience Platform 구성 요소에서 동일한 페이지 및 다음 페이지 개인화 사용 사례에 필요한 구성 단계를 안내합니다. 동일 페이지 및 다음 페이지 개인화를 사용하려면 Adobe Target 연결을 구성할 때 데이터 스트림 ID를 사용해야 합니다.
+>만들기 전 [!DNL Adobe Target] 연결, 방법에 대한 안내서 읽기 [동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](../../ui/activate-edge-personalization-destinations.md). 이 안내서에서는 여러 Experience Platform 구성 요소에서 동일한 페이지 및 다음 페이지 개인화 사용 사례에 필요한 구성 단계를 안내합니다. 동일 페이지 및 다음 페이지 개인화를 사용하려면 Adobe Target 연결을 구성할 때 데이터 스트림 ID를 사용해야 합니다.
 
 ### Adobe Target의 사전 요구 사항 {#prerequisites-in-adobe-target}
 
@@ -58,12 +61,6 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
-
-## 사용 사례 {#use-cases}
-
-**홈페이지 배너 개인화**
-
-홈 임대 및 판매 회사는 Adobe Experience Platform의 고객 세그먼트 자격을 기반으로 배너를 통해 홈 페이지를 개인화하려고 합니다. 회사는 개인화된 경험을 얻어야 하는 대상을 선택하고 Target 오퍼에 대한 타깃팅 기준으로 Adobe Target에 보낼 수 있습니다.
 
 ## 대상에 연결 {#connect}
 
@@ -92,7 +89,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 | 선택한 데이터 스트림 없음 | 데이터 스트림 선택됨 |
 |---|---|
-| <ul><li>[에지 세분화](../../../segmentation/ui/edge-segmentation.md) 은(는) 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/configure-personalization-destinations.md) 은(는) 지원되지 않습니다.</li><li>에 대해서만 Adobe Target 연결에 세그먼트를 공유할 수 있습니다. *기본 프로덕션 샌드박스*.</li><li>데이터 스트림 ID를 사용하지 않고 다음 세션 개인화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>에지 세분화는 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/configure-personalization-destinations.md) 이 지원됩니다.</li><li>다른 샌드박스에 대해 세그먼트 공유가 지원됩니다.</li></ul> |
+| <ul><li>[에지 세분화](../../../segmentation/ui/edge-segmentation.md) 은(는) 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md) 은(는) 지원되지 않습니다.</li><li>에 대해서만 Adobe Target 연결에 세그먼트를 공유할 수 있습니다. *기본 프로덕션 샌드박스*.</li><li>데이터 스트림 ID를 사용하지 않고 다음 세션 개인화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>에지 세분화는 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md) 이 지원됩니다.</li><li>다른 샌드박스에 대해 세그먼트 공유가 지원됩니다.</li></ul> |
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -106,7 +103,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-읽기 [프로필 요청 대상에 프로필 및 세그먼트 활성화](../../ui/activate-profile-request-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+읽기 [프로필 요청 대상에 프로필 및 세그먼트 활성화](../../ui/activate-edge-personalization-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
 
 ## 내보낸 데이터 {#exported-data}
 

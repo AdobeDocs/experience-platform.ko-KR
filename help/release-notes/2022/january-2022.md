@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 1월
 description: Adobe Experience Platform의 2022년 1월 릴리스 정보.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
 workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 3%
@@ -69,7 +69,7 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처한 대로 조직 데
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| 동일 페이지 및 다음 페이지 개인화 | 다음 [동일 페이지 및 다음 페이지 개인화 기능](../../destinations/ui/configure-personalization-destinations.md) 는 마케팅과 고객 채널 간의 일관성을 위해 Experience Edge의 애플리케이션에 대한 사용자를 공유 및 타깃팅할 수 있는 보기를 제공합니다. 이 개인화는 다음을 통해 가능합니다. [Adobe Target 연결](../../destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화 연결](../../destinations/catalog/personalization/custom-personalization.md). 동일 페이지 또는 다음 페이지 개인화 캠페인을 구성하려면 다음을 참조하십시오. [전용 자습서](../../destinations/ui/configure-personalization-destinations.md). |
+| 동일 페이지 및 다음 페이지 개인화 | 다음 [동일 페이지 및 다음 페이지 개인화 기능](../../destinations/ui/activate-edge-personalization-destinations.md) 는 마케팅과 고객 채널 간의 일관성을 위해 Experience Edge의 애플리케이션에 대한 사용자를 공유 및 타깃팅할 수 있는 보기를 제공합니다. 이 개인화는 다음을 통해 가능합니다. [Adobe Target 연결](../../destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화 연결](../../destinations/catalog/personalization/custom-personalization.md). 동일 페이지 또는 다음 페이지 개인화 캠페인을 구성하려면 다음을 참조하십시오. [전용 자습서](../../destinations/ui/activate-edge-personalization-destinations.md). |
 | 배치 대상 모니터링 및 세그먼트 수준 지표 | 이제 대상 모니터링 기능이 스트리밍 대상에서 활성화 데이터 흐름에 대한 배치 대상 및 세그먼트 수준 지표도 포함하도록 확장되었습니다. 자세한 내용은 다음을 참조하십시오 [모니터링 대상 대시보드](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [세그먼트 작업 대시보드 모니터링](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard), 및 [세그먼트 수준 보기](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
 | 기존 일괄 처리 활성화 데이터 흐름에 대한 UI의 편집 예약 | 이 릴리스에서는 배치 대상에 대한 기존 활성화 데이터 흐름의 일정을 편집하는 옵션이 도입되었습니다. 자세한 내용은 다음을 참조하십시오 [프로필 데이터를 프로필 대상 일괄 처리에 활성화](/help/destinations/ui/activate-batch-profile-destinations.md). |
 | Marketo 대상 개선 사항 | Marketo Engage을 사용하는 Experience Platform 고객은 를 통해 새로운 개인 레코드를 Experience Platform에서 Marketo Engage으로 푸시하는 새로운 기능을 통해 Marketo 데이터베이스를 극대화할 수 있습니다. [Marketo 대상 커넥터](/help/destinations/catalog/adobe/marketo-engage.md). <br> Experience Platform에서 Marketo Engage으로 대상 세그먼트를 보낼 때 Marketo Engage 데이터베이스에 아직 존재하지 않는 세그먼트 내의 사람도 자동으로 추가할 수 있습니다. 자세한 내용은 다음을 참조하십시오 [Adobe Experience Platform 세그먼트를 Marketo 정적 목록에 푸시](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (자습서의 9단계는 순-신규 개인 레코드를 Marketo에 푸시하는 방법을 나타냅니다.) |

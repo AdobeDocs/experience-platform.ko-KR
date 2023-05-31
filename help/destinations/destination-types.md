@@ -3,7 +3,7 @@ keywords: 대상;대상;대상 유형
 title: 대상 유형 및 범주
 description: Adobe Experience Platform의 다양한 유형과 범주에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
+source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Enterprise 대상 Data Connectors를 사용하여 데이터 동기화, 분석 �
 
 Experience Platform의 Edge 개인화 대상은 다음과 같습니다 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화 대상](/help/destinations/catalog/personalization/custom-personalization.md). 이러한 대상을 사용하면 고객에 대해 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화할 수 있습니다.
 
-방법 자세히 알아보기 [동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](/help/destinations/ui/configure-personalization-destinations.md).
+방법 자세히 알아보기 [동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
 ## 프로필 내보내기 및 세그먼트 내보내기 대상 - 비디오 개요 {#video}
 
