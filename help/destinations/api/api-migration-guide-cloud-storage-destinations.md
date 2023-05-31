@@ -4,9 +4,9 @@ title: 클라우드 스토리지 대상에 대한 API 마이그레이션 안내�
 description: 추가 기능이 있는 새 클라우드 스토리지 대상 카드로 마이그레이션하는 과정의 일부로 클라우드 스토리지 대상을 활성화하는 워크플로의 변경 사항에 대해 알아봅니다.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 8ca63586855f2c62231662906646eb8abcfdcc0e
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1444'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -433,7 +433,6 @@ API 사용자의 이전 버전과 호환 불가능한 변경 사항이 업데이
 위의 업데이트된 흐름 및 연결 사양 외에 SFTP 기본 연결을 만들 때 필요한 매개 변수에 대한 변경 사항이 있습니다.
 
 * 이전에는 SFTP 대상에 대한 기본 연결에 `host` 매개 변수. 이제 이 매개 변수의 이름이 (으)로 변경되었습니다. `domain`.
-* SSH 키를 사용한 인증 옵션의 경우 기본 연결의 인증 매개 변수에는 다음이 필요합니다. `port` 옵션을 선택합니다. 이 매개 변수는 이제 사용되지 않으며 더 이상 필요하지 않습니다.
 
 SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아래 탭에서 보고, 변경되는 줄이 강조 표시됩니다. SFTP 대상에 대한 대상 연결을 만드는 데 필요한 매개 변수는 변경되지 않습니다.
 
@@ -567,7 +566,8 @@ SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아�
       "authorizedDate": "2022-06-02",
       "domain": "ftp-out.demdex.com",
       "username": "DPID12345",
-      "password": "<your-password>"
+      "password": "<your-password>",
+      "port": 22      
     }
   },
   "encryption": {

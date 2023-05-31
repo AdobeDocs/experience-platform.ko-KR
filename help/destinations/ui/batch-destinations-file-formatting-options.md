@@ -2,9 +2,9 @@
 description: 파일 기반 대상으로 데이터를 활성화할 때 파일 서식 옵션을 구성하는 방법에 대해 알아봅니다
 title: (Beta) 파일 기반 대상에 대한 파일 형식 옵션 구성
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1226'
 ht-degree: 19%
 
 ---
@@ -111,8 +111,8 @@ UI에서 선택한 각 내용이 포함된 내보낸 CSV 파일의 콘텐츠 아
 
 이 컨트롤을 사용하여 빈 값의 문자열 표현을 설정합니다. 이 옵션은 내보낸 CSV 파일에 빈 값이 표시되는 방식을 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Null(null)]**
+* **큰따옴표(&quot;&quot;)의 빈 문자열**
 * **[!UICONTROL 빈 문자열]**
 
 #### 예시
@@ -136,8 +136,8 @@ UI에서 선택한 각 내용이 포함된 내보낸 CSV 파일의 콘텐츠 아
 
 내보낸 파일 내에서 null 값의 문자열 표현을 설정하려면 이 컨트롤을 사용합니다. 이 옵션은 내보낸 CSV 파일에 null 값이 표시되는 방식을 결정합니다. 사용 가능한 옵션은 다음과 같습니다.
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Null(null)]**
+* **큰따옴표(&quot;&quot;)의 빈 문자열**
 * **[!UICONTROL 빈 문자열]**
 
 #### 예시

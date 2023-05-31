@@ -4,10 +4,10 @@ title: 흐름 서비스 API를 사용하여 세그먼트를 파일 기반 대상
 description: 흐름 서비스 API를 사용하여 적격 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 5ab72c11a5fd73f10eef6b7bb3e0d3386098748e
 workflow-type: tm+mt
-source-wordcount: '4337'
-ht-degree: 2%
+source-wordcount: '4442'
+ht-degree: 3%
 
 ---
 
@@ -956,7 +956,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "password": "<Add password>"
+      "password": "<Add password>",
+      "port": "<Add port>"      
     }
   },
   "connectionSpec": {
@@ -965,6 +966,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| 속성 | 설명 |
+| --------- | ----------- |
+| `specName` | `SFTP with Password` 사용. |
+| `domain` | SFTP 저장소 위치의 IP 주소 또는 도메인 이름입니다. |
+| `username` | SFTP 저장소 위치에 로그인할 사용자 이름입니다. |
+| `password` | SFTP 저장소 위치에 로그인할 암호입니다. |
+| `port` | SFTP 저장소 위치에서 사용하는 포트입니다. |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -991,7 +1002,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "sshKey": "<Add SSH key>"
+      "sshKey": "<Add SSH key>",
+      "port": "<Add port>"
     }
   },
   "connectionSpec": {
@@ -1000,6 +1012,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| 속성 | 설명 |
+| --------- | ----------- |
+| `specName` | `SFTP with Password` 사용. |
+| `domain` | SFTP 저장소 위치의 IP 주소 또는 도메인 이름입니다. |
+| `username` | SFTP 저장소 위치에 로그인할 사용자 이름입니다. |
+| `sshKey` | SFTP 저장소 위치에 로그인하는 데 사용되는 개인 SSH 키입니다. 비공개 키 형식은 Base64 인코딩된 문자열로 지정하며 암호로 보호해서는 안 됩니다. |
+| `port` | SFTP 저장소 위치에서 사용하는 포트입니다. |
+
+{style="table-layout:auto"}
 
 +++
 
