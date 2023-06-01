@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: 991cd22bc28a72593512a36636806e6a8a4b2820
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1172'
 ht-degree: 5%
 
 ---
@@ -121,7 +121,7 @@ ht-degree: 5%
       * [(베타) 데이터 랜딩 영역](./catalog/cloud-storage/data-landing-zone.md)
       * [(베타) Google 클라우드 스토리지](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 연결](./catalog/cloud-storage/sftp.md)
-      * [허용 목록에 추가하다 클라우드 스토리지 대상의 IP 주소](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [허용 목록에 추가하다 SFTP 대상의 IP 주소](./catalog/cloud-storage/ip-address-allow-list.md)
    * CRM(고객 관계 관리) 대상 {#crm}
       * [Salesforce CRM 연결](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365 연결](./catalog/crm/microsoft-dynamics-365.md)

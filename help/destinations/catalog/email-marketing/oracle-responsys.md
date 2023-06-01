@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;responsys 대상 oracle
 title: Responsys 연결 oracle
 description: Responsys는 이메일, 모바일, 디스플레이 및 소셜에서 상호 작용을 개인화하기 위해 Oracle이 제공하는 크로스 채널 마케팅 캠페인을 위한 엔터프라이즈 이메일 마케팅 도구입니다.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe은 허용 목록에 특정 IP 범위를 추가할 것을 권장합니다.
 
-을(를) 참조하십시오 [클라우드 스토리지 대상에 대한 IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md) 허용 목록에 Adobe IP를 추가해야 하는 경우
+을(를) 참조하십시오 [SFTP 대상에 대한 IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md) 허용 목록에 Adobe IP를 추가해야 하는 경우
 
 ## 대상에 연결 {#connect}
 

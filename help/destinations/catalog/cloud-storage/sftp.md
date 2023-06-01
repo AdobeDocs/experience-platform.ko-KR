@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP 연결
 description: SFTP 서버에 대한 실시간 아웃바운드 연결을 생성하여 구분된 데이터 파일을 정기적으로 Adobe Experience Platform에서 내보냅니다.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '908'
 ht-degree: 7%
 
 ---
@@ -127,4 +127,4 @@ SFTP 위치에 인증 연결을 설정한 후 대상에 대해 다음 정보를 
 
 ## IP 주소 허용 목록
 
-을(를) 참조하십시오 [클라우드 스토리지 대상에 대한 IP 주소 허용 목록](ip-address-allow-list.md) 허용 목록에 Adobe IP를 추가해야 하는 경우.
+을(를) 참조하십시오 [SFTP 대상에 대한 IP 주소 허용 목록](ip-address-allow-list.md) 허용 목록에 Adobe IP를 추가해야 하는 경우.

@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;salesforce;salesforce �
 title: Salesforce Marketing Cloud 연결
 description: Salesforce Marketing Cloud은 방문자와 고객이 여정을 만들고 사용자 정의하여 경험을 개인화할 수 있도록 하는 이전 ExactTarget의 디지털 마케팅 제품군입니다.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: ba4090d95a4a476e76d946e36f8370202f26d23e
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '747'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe은 허용 목록에 특정 IP 범위를 추가할 것을 권장합니다.
 
-을(를) 참조하십시오 [클라우드 스토리지 대상에 대한 IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md) 허용 목록에 Adobe IP를 추가해야 하는 경우
+을(를) 참조하십시오 [SFTP 대상에 대한 IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md) 허용 목록에 Adobe IP를 추가해야 하는 경우
 
 ## 대상에 연결 {#connect}
 
