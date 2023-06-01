@@ -1,17 +1,16 @@
 ---
-keywords: IP 주소, IP 범위, 허용 목록 대상, 허용 목록에 추가하다
-title: 클라우드 스토리지 대상에 대한 IP 주소 허용 목록
+title: IP 주소 허용 목록 SFTP 대상
 type: Documentation
-description: 이 페이지에서는 Experience Platform에서 SFTP 서버, Amazon S3 또는 Azure Blob 저장소로 데이터를 안전하게 내보내기 위해 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
+description: 이 페이지에서는 데이터를 Experience Platform에서 SFTP 서버로 안전하게 내보내기 위해 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
+source-git-commit: 3d870975593313062d796601f0e19a0a3aec7854
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
 
-# 허용 목록에 추가하다 클라우드 스토리지 대상의 IP 주소 {#ip-address-allow-list}
+# 허용 목록에 추가하다 SFTP 대상의 IP 주소 {#ip-address-allow-list-sftp}
 
 >[!IMPORTANT]
 >
