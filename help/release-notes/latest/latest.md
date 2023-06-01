@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 5월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c2b9f01453ecbc3348675e59b75c81280eded5f8
+source-git-commit: 09d8014eea2d31649eed3814ad07172027b2c435
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 4%
+source-wordcount: '1776'
+ht-degree: 6%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->Audience Portal 기능이 일반적으로 사용할 수 있게 될 것을 대비하여 Adobe Experience Platform은 시스템 및 설명서 내에서 &quot;대상&quot; 및 &quot;세그먼트&quot;의 사용을 업데이트하고 있습니다.
+>대상자 포털 기능의 정식 출시를 대비하여 Adobe Experience Platform 시스템과 설명서에서 “대상자”와 “세그먼트”라는 단어의 사용 방식을 업데이트합니다.
 >
 >- **대상자**: 사람, 계정, 가계 또는 일반적인 특성과 행동을 공유하는 기타 엔티티의 집합입니다.
 >
->- **세그먼트 정의**: Adobe Experience Platform에서 타겟 대상의 주요 특성 또는 동작을 설명하는 데 사용되는 규칙입니다. 이 용어는 이전에 &quot;세그먼트&quot;라고도 했습니다.
+>- **세그먼트 정의**: Adobe Experience Platform에서 타겟 대상의 주요 특성 또는 동작을 설명하는 데 사용되는 규칙입니다. 전에는 이 용어를 그냥 “세그먼트”라고만 지칭했습니다.
 >
 >- **세그먼트**: 프로필을 대상자로 분리하는 작업입니다. &quot;세그먼트&quot;라는 용어는 이제 동사로만 사용됩니다.
 >
@@ -80,7 +80,7 @@ Adobe Experience Platform은 모든 유형의 데이터와 지연 시간을 수�
 
 데이터 수집에 대해 자세히 알아보려면 [데이터 수집 개요](../../ingestion/home.md).
 
-## 대상 {#destinations}
+## 대상(5월 31일에 업데이트됨) {#destinations}
 
 [!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
@@ -92,18 +92,15 @@ Adobe Experience Platform은 모든 유형의 데이터와 지연 시간을 수�
 
 {style="table-layout:auto"}
 
-<!--
+**새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
 
-**New or updated functionality** {#destinations-new-updated-functionality}
-
-| Functionality | Description |
+| 기능 | 설명 |
 | ----------- | ----------- |
-| General availability of attribute-based personalization through the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations. | Leverage profile attributes in real-time to deliver one-to-one web and mobile personalization, via Adobe Target or other custom personalization destinations in Experience Platform. See the [dedicated documentation](../../destinations/ui/activate-edge-personalization-destinations.md) for more details. |
-| Destination SDK support for grouping exported audiences based on merge policy. | When building a file-based destination with Destination SDK, you can now configure the grouping of exported audiences into one or multiple files, based on merge policy. <br><br> Additionally, you can now include the merge policy ID and merge policy name in the exported file names, by using the dedicated template macros. <br><br>See the [batch configuration documentation](../../destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md) for more details on how to use the `segmentGroupingEnabled` parameter and the new file name template macros.|
+| 다음을 통한 속성 기반 개인화의 일반 가용성 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 정의 개인화](../../destinations/catalog/personalization/custom-personalization.md) 대상. | 프로필 속성을 실시간으로 활용하여 Adobe Target 또는 Experience Platform의 다른 사용자 지정 개인화 대상을 통해 일대일 웹 및 모바일 개인화를 제공할 수 있습니다. 읽기 [전용 설명서](../../destinations/ui/activate-edge-personalization-destinations.md) 및 [FAQ](/help/destinations/destinations-faq.md#same-next-page-personalization) 을 참조하십시오. |
+| 병합 정책을 기반으로 내보낸 대상을 그룹화하기 위한 Destination SDK 지원. | 이제 Destination SDK을 사용하여 파일 기반 대상을 작성할 때 병합 정책에 따라 내보낸 대상을 하나 이상의 파일로 그룹화하여 구성할 수 있습니다. <br><br> 또한 이제 전용 템플릿 매크로를 사용하여 내보낸 파일 이름에 병합 정책 ID 및 병합 정책 이름을 포함할 수 있습니다. <br><br>다음을 참조하십시오. [일괄 처리 구성 설명서](../../destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md) 을(를) 사용하는 방법에 대한 자세한 내용은 `segmentGroupingEnabled` 매개 변수와 새 파일 이름 템플릿 매크로를 사용하여 새 파일 이름을 만듭니다. |
+| Beta 클라우드 스토리지 대상으로 내보내기에 매니페스트 파일 포함 | 이제 6개의 클라우드 스토리지 베타 대상으로 데이터를 내보낼 때 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함된 매니페스트 JSON 파일을 포함할 수 있습니다. [(베타) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(베타) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(베타) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(베타) 데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(베타) Google 클라우드 스토리지](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(베타) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br><br> 에서 추가 정보 가져오기 **[!UICONTROL 대상 세부 사항]** 위에 링크된 페이지 섹션. |
 
 {style="table-layout:auto"}
-
--->
 
 **수정 사항 및 개선 사항** {#destinations-fixes-and-enhancements}
 
