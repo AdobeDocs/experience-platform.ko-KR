@@ -3,9 +3,9 @@ title: (베타) Experience Cloud 대상
 description: Experience Platform에서 다양한 Experience Platform 솔루션으로 세그먼트를 공유하는 방법을 알아봅니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 017c8bbc19845c0f60040ba2995b5dd2b0299a8b
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1576'
 ht-degree: 2%
 
 ---
@@ -82,8 +82,15 @@ Experience Cloud 대상 카드의 베타 릴리스에 있는 다음 알려진 �
 * [데이터 흐름 모니터링](/help/dataflows/ui/monitor-destinations.md) 은(는) 지원되지 않습니다.
 * 대상에 연결할 때 다음 옵션을 볼 수 있습니다. [데이터 흐름 경고 활성화](#enable-alerts). UI에 표시되지만 **경고 활성화 옵션은 지원되지 않습니다.** 를 참조하십시오.
 * **다시 채우기는 지원되지 않습니다.**. Audience Manager 또는 기타 Experience Cloud 솔루션으로 첫 번째 내보내기에는 세그먼트의 과거 모집단이 포함되지 않습니다.
-* 베타 릴리스에서 다음을 만들 수 있습니다. **Experience Cloud 대상 대상에 대한 단일 대상 연결**, Experience Platform 조직에 속한 모든 샌드박스에서 사용할 수 있습니다.
-* 다음 항목이 있습니다. **4시간 지연** Experience Platform에서 데이터가 활성화되는 시간과 Audience Manager 및 기타 Experience Cloud 솔루션에서 데이터를 사용할 준비가 된 시간 사이에
+* 베타 릴리스에서 다음을 만들 수 있습니다. **Experience Cloud 대상 대상에 대한 단일 대상 연결**, Experience Platform 조직에 속한 모든 샌드박스 간에 매핑됩니다.
+
+### 대상자를 활성화할 때 대기 시간 {#audience-activation-latency}
+
+Experience Platform에서 대상이 처음 활성화되는 시간과 특정 사용 사례에 대한 Audience Manager 및 기타 Experience Cloud 솔루션에서 사용될 준비가 된 시간 사이에 4시간 지연이 있습니다.
+
+모든 사용 사례에 대해 Audience Manager에서 대상을 완전히 사용할 수 있도록 하는 데 최대 24시간이 소요될 수 있으며, Experience Cloud 대상의 대상이 Audience Manager 보고서에 나타나도록 하는 데 최대 48시간이 걸릴 수 있습니다.
+
+세그먼트 이름과 같은 메타데이터는 Experience Cloud 대상 대상으로 내보내기를 설정한 후 몇 분 안에 Audience Manager에서 사용할 수 있습니다.
 
 ## 지원되는 ID {#supported-identities}
 
