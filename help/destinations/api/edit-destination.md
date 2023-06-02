@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 대상 연결 편집
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 대상 연결의 다양한 구성 요소를 편집하는 방법에 대해 알아봅니다.
-source-git-commit: 956ac5d210d54526e886e57b8ea37ab4b3fbab8a
+source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1580'
 ht-degree: 2%
 
 ---
@@ -329,11 +329,11 @@ curl -X PATCH \
 
 ## 기본 연결 구성 요소 편집(인증 매개 변수 및 기타 구성 요소) {#patch-base-connection}
 
-기본 연결의 구성 요소는 대상마다 다릅니다. 예를 들어 [!DNL Amazon S3] 대상, 액세스 키 및 비밀 키를 [!DNL Amazon S3] 위치.
+대상의 자격 증명을 업데이트하려면 기본 연결을 편집합니다. 기본 연결의 구성 요소는 대상마다 다릅니다. 예를 들어 [!DNL Amazon S3] 대상, 액세스 키 및 비밀 키를 [!DNL Amazon S3] 위치.
 
 PATCH 기본 연결의 구성 요소를 업데이트하려면 `/connections` 기본 연결 ID, 버전 및 사용할 새 값을 제공하는 동안 끝점이 발생했습니다.
 
-이전 단계에서 원하는 대상으로 기존 데이터 흐름을 검사했을 때 기본 연결 ID를 얻었다는 것을 잊지 마십시오.
+에 기본 연결 ID가 있습니다. [이전 단계](#look-up-dataflow-details)매개 변수에 대해 원하는 대상으로 기존 데이터 흐름을 검사한 경우 `baseConnection`.
 
 >[!IMPORTANT]
 >
