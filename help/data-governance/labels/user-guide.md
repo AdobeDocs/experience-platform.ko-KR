@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI에서 데이터 사용 레이블 관리
 description: 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 사용 레이블 작업을 위한 단계를 다룹니다.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 19%
+source-wordcount: '1462'
+ht-degree: 18%
 
 ---
 
@@ -20,7 +20,15 @@ ht-degree: 19%
 
 이 사용 안내서에서는 내에서 데이터 사용 레이블 작업을 수행하는 단계를 다룹니다. [!DNL Experience Platform] 사용자 인터페이스.
 
+## 레이블 관리 {#manage-labels}
+
+데이터에 레이블을 적용하려면 **[!UICONTROL 사용 레이블 관리]** 프로덕션 샌드박스에 대한 사용 권한. 사용자 지정 레이블을 만들려면 제품 프로필에 대한 관리 권한도 있어야 합니다. 각 조직에는 적용 가능한 레이블 목록이 하나만 있으며 현재 레이블 삭제는 지원되지 않습니다.
+
+방법은 안내서 참조 [권한 구성](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) 또는 [액세스 제어 개요](../../access-control/home.md) 권한 할당 방법에 대한 자세한 내용을 보려면 여기를 클릭하십시오. 조직의 Admin Console에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
+
 ## 스키마 수준에서 레이블 관리
+
+해당 스키마 내의 스키마 또는 필드에 직접 레이블을 추가할 수 있습니다. 스키마 수준에서 적용된 모든 필드는 해당 스키마를 기반으로 하는 모든 데이터 세트로 전파됩니다.
 
 스키마 수준에서 데이터 사용 레이블을 관리하려면 기존 스키마를 선택하거나 새 스키마를 만들어야 합니다. Adobe Experience Platform에 로그인한 후 다음을 선택합니다 **[!UICONTROL 스키마]** 을(를) 왼쪽 탐색에서 열어 **[!UICONTROL 스키마]** 작업 영역. 이 페이지에는 각 스키마와 관련된 유용한 세부 정보와 함께 조직에 속하는 생성된 모든 스키마가 나열됩니다.
 
@@ -98,12 +106,6 @@ The inherited labels beside each field do not have an "x" next to them and appea
 >데이터 세트 레이블 지정 기능이 더 이상 사용되지 않기 전에 적용된 레이블은 관련 데이터 세트를 찾고 레이블에서 취소 아이콘을 선택하여 데이터 세트에서 제거할 수 있습니다.
 >![삭제 가능한 레이블이 강조 표시된 데이터 세트 작업 영역의 데이터 거버넌스 탭](../images/labels/remove-governance-labels.png)
 >에 대한 지침은 설명서 를 참조하십시오. [이전에 적용된 레이블을 데이터 세트에서 스키마 수준으로 마이그레이션하는 방법](../e2e.md#migrate-labels).
-
-## 스키마 수준에서 레이블 관리
-
-해당 스키마 내의 스키마 또는 필드에 직접 레이블을 추가할 수 있습니다. 스키마 수준에서 적용된 모든 필드는 해당 스키마를 기반으로 하는 모든 데이터 세트로 전파됩니다.
-
-다음 튜토리얼 참조: [스키마 수준 레이블 관리](../../xdm/tutorials/labels.md) 추가 정보.
 
 ## 사용자 정의 레이블 관리 {#manage-custom-labels}
 
