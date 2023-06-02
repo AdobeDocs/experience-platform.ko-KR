@@ -1,12 +1,11 @@
 ---
-keywords: Amazon S3;S3 대상;s3;amazon s3
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 CSV 데이터 파일을 정기적으로 자체 S3 버킷으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
+source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 13%
+source-wordcount: '983'
+ht-degree: 14%
 
 ---
 
