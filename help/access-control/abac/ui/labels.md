@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 관리 레이블
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 레이블을 관리하는 방법에 대한 정보를 제공합니다
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 4069924b4c4000192dff1f89e5cf9a9412bcd95c
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 10%
+source-wordcount: '190'
+ht-degree: 9%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->사용자 지정 레이블을 만들려면 관리 권한이 있어야 합니다. 현재 레이블 삭제는 지원되지 않습니다.
+>전체 조직에 대해 하나의 레이블 목록이 있습니다. 사용자 지정 레이블을 만들려면 다음이 필요합니다 **[!UICONTROL 사용 레이블 관리]** 프로덕션 샌드박스에 대한 권한. 레이블 삭제는 현재 지원되지 않습니다.
 
 새 레이블을 만들려면 **[!UICONTROL 레이블]** 사이드바에서 탭을 클릭하고 다음을 선택합니다. **[!UICONTROL 레이블 만들기]**.
 
