@@ -14,7 +14,7 @@ ht-degree: 22%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
 >title="원치 않거나 만료된 고객 레코드 및 데이터 세트 삭제"
->abstract="<h2>설명</h2><p>규정 준수와 관련 없는 Experience Platform 데이터의 수명 주기를 관리하기 위해 소비자 레코드를 삭제하고 데이터 세트의 만료 날짜를 예약할 수 있습니다. 데이터 주체 요청을 만들거나 관리하려면 &#39;데이터 주체 개인 정보 보호 요청 준수&#39; 사용 사례 블록을 참조하십시오.</p>"
+>abstract="<h2>설명</h2><p>규정 준수와 관련 없는 Experience Platform 데이터의 수명 주기를 관리하기 위해 소비자 레코드를 삭제하고 데이터 세트의 만료 일자를 예약할 수 있습니다. 데이터 주체 요청을 만들거나 관리하려면 &#39;데이터 주체 개인 정보 보호 요청 준수&#39; 사용 사례 블록을 참조하십시오.</p>"
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ ht-degree: 22%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="지침"
->abstract="<ul><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html">데이터 위생</a> 을 선택한 다음 <b>요청 만들기</b>를 선택합니다.</li><li>레코드 삭제를 원하는 경우:</li>   <li><b>레코드</b>를 선택합니다.</li>   <li>레코드를 삭제할 특정 데이터 세트를 선택하거나 모든 데이터 세트에서 레코드를 삭제하는 옵션을 선택합니다.</li>   <li>레코드를 삭제할 소비자의 ID를 입력합니다. <b>ID 추가</b>를 선택하여 한 번에 하나씩 ID를 입력하거나 <b>파일 선택</b>을 선택하여 대신에 ID의 JSON 파일을 업로드합니다.</li>   <li>필요한 경우 <b>템플릿</b>을 선택하여 JSON 파일의 예상 형식을 확인합니다.</li><li><a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">데이터세트의 만료 날짜를 예약</a>하려는 경우 설명서에서 지침을 참조하십시오.</li></ul>"
+>abstract="<ul><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html">데이터 위생</a> 을 선택한 다음 <b>요청 만들기</b>를 선택합니다.</li><li>레코드 삭제를 원하는 경우:</li>   <li><b>레코드</b>를 선택합니다.</li>   <li>레코드를 삭제할 특정 데이터 세트를 선택하거나 모든 데이터 세트에서 레코드를 삭제하는 옵션을 선택합니다.</li>   <li>레코드를 삭제할 소비자의 ID를 입력합니다. <b>ID 추가</b>를 선택하여 한 번에 하나씩 ID를 입력하거나 <b>파일 선택</b>을 선택하여 대신에 ID의 JSON 파일을 업로드합니다.</li>   <li>필요한 경우 <b>템플릿</b>을 선택하여 JSON 파일의 예상 형식을 확인합니다.</li><li><a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">데이터세트의 만료 일자를 예약</a>하려는 경우 설명서에서 지침을 참조하십시오.</li></ul>"
 
 새 요청을 만들려면 다음을 선택하십시오. **[!UICONTROL 요청 만들기]** 작업 공간의 기본 페이지에서 가져온 템플릿입니다.
 

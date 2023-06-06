@@ -6,7 +6,7 @@ exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
 source-wordcount: '2258'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
@@ -14,8 +14,8 @@ ht-degree: 6%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Platform UI의 소스에 대한 템플릿"
->abstract="템플릿에는 소스에서 Experience Platform으로 데이터를 가져올 때 사용할 수 있는 스키마, 데이터 세트, ID, 매핑 규칙, ID 네임스페이스 및 데이터 흐름과 같은 자동 생성된 에셋이 포함됩니다. 사용 사례에 맞게 사용자 지정할 자동 생성된 에셋을 업데이트할 수 있습니다."
+>title="Platform UI의 소스용 템플릿"
+>abstract="템플릿에는 소스에서 Experience Platform으로 데이터를 가져올 때 사용할 수 있는 스키마, 데이터 세트, ID, 매핑 규칙, ID 네임스페이스 및 데이터 흐름과 같은 자동으로 생성된 자산이 포함됩니다. 사용 사례에 적합한 맞춤화를 위해 자동 생성된 자산을 업데이트할 수 있습니다."
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ ht-degree: 6%
 >
 >설명서 및 기능은 변경될 수 있습니다.
 
-Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 데 사용할 수 있는 사전 구성된 템플릿을 제공합니다. 템플릿에는 소스에서 Experience Platform으로 데이터를 가져올 때 사용할 수 있는 스키마, 데이터 세트, ID, 매핑 규칙, ID 네임스페이스 및 데이터 흐름과 같은 자동 생성된 에셋이 포함됩니다.
+Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 데 사용할 수 있는 사전 구성된 템플릿을 제공합니다. 템플릿에는 소스에서 Experience Platform으로 데이터를 가져올 때 사용할 수 있는 스키마, 데이터 세트, ID, 매핑 규칙, ID 네임스페이스 및 데이터 흐름과 같은 자동으로 생성된 자산이 포함됩니다.
 
 템플릿을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 

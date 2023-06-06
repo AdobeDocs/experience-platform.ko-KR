@@ -8,7 +8,7 @@ exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 source-git-commit: cef5c203acf3318445399669336166e6627ebe66
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflows_daysRemaining"
 >title="데이터 세트 만료"
->abstract="이 열은 대상 데이터 세트가 자동으로 만료되기 전에 남은 일 수를 나타냅니다.<br>대상 데이터 세트가 만료되면 데이터 흐름이 실패합니다. 데이터 흐름이 실패하지 않도록 하려면 대상 데이터 세트가 올바른 날짜에 만료되도록 설정되어 있는지 확인하십시오. 만료 날짜를 업데이트하는 방법에 대한 자세한 내용은 설명서를 참조하십시오."
+>abstract="이 열은 대상 데이터 세트가 자동으로 만료되기 전에 남은 일 수를 나타냅니다.<br>대상 데이터 세트가 만료되면 데이터 흐름이 실패합니다. 데이터 흐름이 실패하지 않도록 대상 데이터 세트가 올바른 날짜에 만료되도록 설정되었는지 확인하십시오. 만료 일자를 업데이트하는 방법은 설명서를 참조하십시오."
 
 Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 탐색에서 [!UICONTROL 소스] 작업 영역. 선택 **[!UICONTROL 데이터 흐름]** 기존 데이터 흐름 목록을 보려면 위쪽 헤더에서 를 선택하십시오.
 

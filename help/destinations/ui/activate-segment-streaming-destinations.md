@@ -96,7 +96,7 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="종료 날짜"
->abstract="세그먼트 예약에 종료 날짜를 추가할 수 없습니다."
+>abstract="세그먼트 예약에 종료 일자를 추가할 수 없습니다."
 
 기본적으로 [!UICONTROL 세그먼트 일정] 페이지에는 현재 활성화 플로우에서 선택한 새로 선택한 세그먼트만 표시됩니다.
 
