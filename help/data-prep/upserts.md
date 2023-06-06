@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;홈;인기 항목;데이터 준비;데이터 준비;스트리밍;업데이트;스트리밍 업데이트
-title: 데이터 준비를 사용하여 프로필 서비스에 부분 행 업데이트 보내기
-description: 이 문서에서는 데이터 준비를 사용하여 프로필 서비스에 부분 행 업데이트를 보내는 방법에 대해 설명합니다.
+title: 데이터 준비를 사용하여 실시간 고객 프로필에 부분 행 업데이트 보내기
+description: 데이터 준비를 사용하여 실시간 고객 프로필에 부분 행 업데이트를 보내는 방법을 알아봅니다.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: d167975c9c7a267f2888153a05c5857748367822
+source-git-commit: 15aa27e19f287a39242860b91eedae87aace3d27
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1175'
 ht-degree: 1%
 
 ---
 
-# 부분 행 업데이트 보내기 대상 [!DNL Profile Service] 사용 [!DNL Data Prep]
+# 부분 행 업데이트 보내기 대상 [!DNL Real-Time Customer Profile] 사용 [!DNL Data Prep]
 
-에서 업데이트 스트리밍 [!DNL Data Prep] 부분 행 업데이트를 다음으로 보낼 수 있습니다. [!DNL Profile Service] 또한 단일 API 요청으로 새 ID 링크를 만들고 설정하는 동안 데이터가 수집됩니다.
+에서 업데이트 스트리밍 [!DNL Data Prep] 부분 행 업데이트를 다음으로 보낼 수 있습니다. [!DNL Real-Time Customer Profile] 또한 단일 API 요청으로 새 ID 링크를 만들고 설정하는 동안 데이터가 수집됩니다.
 
-업데이트를 스트리밍하면 해당 데이터를 로 번역하면서 데이터 형식을 유지할 수 있습니다 [!DNL Profile Service] 수집 중 PATCH 요청. 입력한 내용을 기반으로, [!DNL Data Prep] 을 사용하면 단일 API 페이로드를 전송하고 데이터를 두 페이로드로 번역할 수 있습니다 [!DNL Profile Service] PATCH 및 [!DNL Identity Service] 요청을 만듭니다.
+업데이트를 스트리밍하면 해당 데이터를 로 번역하면서 데이터 형식을 유지할 수 있습니다 [!DNL Real-Time Customer Profile] 수집 중 PATCH 요청. 입력한 내용을 기반으로, [!DNL Data Prep] 을 사용하면 단일 API 페이로드를 전송하고 데이터를 두 페이로드로 번역할 수 있습니다 [!DNL Real-Time Customer Profile] PATCH 및 [!DNL Identity Service] 요청을 만듭니다.
 
 이 문서는에서 업데이트를 스트리밍하는 방법에 대한 정보를 제공합니다 [!DNL Data Prep].
 
@@ -110,19 +110,19 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 | `imsOrgId` | 조직에 해당하는 ID입니다. |
 | `datasetId` | 의 ID [!DNL Profile]- 데이터 흐름의 대상 데이터 세트를 활성화했습니다. **참고**: 와 동일한 ID입니다. [!DNL Profile]-활성화된 대상 데이터 세트 ID가 데이터 흐름에 있습니다. |
 | `operations` | 이 매개 변수는 다음과 같은 작업을 간략하게 설명합니다. [!DNL Data Prep] 은(는) 수신 요청을 기반으로 을(를) 수행합니다. |
-| `operations.data` | 수행할 작업을 정의합니다. [!DNL Profile Service]. |
+| `operations.data` | 수행할 작업을 정의합니다. [!DNL Real-Time Customer Profile]. |
 | `operations.identity` | 데이터에 대해 허용되는 작업을 다음 기준으로 정의합니다. [!DNL Identity Service]. |
 | `operations.identityDatasetId` | (선택 사항) 새 ID를 연결해야 하는 경우에만 필요한 ID 데이터 세트의 ID입니다. |
 
 #### 지원되는 작업
 
-다음 작업은에서 지원됩니다. [!DNL Profile Service]:
+다음 작업은에서 지원됩니다. [!DNL Real-Time Customer Profile]:
 
 | 작업 | 설명 |
 | --- | --- | 
-| `create` | 기본 작업입니다. 에 대한 XDM 엔티티 만들기 메서드를 생성합니다. [!DNL Profile Service]. |
-| `merge` | 에 대한 XDM 엔티티 업데이트 메서드를 생성합니다. [!DNL Profile Service]. |
-| `delete` | 에 대한 XDM 엔티티 삭제 메서드를 생성합니다. [!DNL Profile Service] 및 을(를) 통해 [!DNL Profile Store]. |
+| `create` | 기본 작업입니다. 에 대한 XDM 엔티티 만들기 메서드를 생성합니다. [!DNL Real-Time Customer Profile]. |
+| `merge` | 에 대한 XDM 엔티티 업데이트 메서드를 생성합니다. [!DNL Real-Time Customer Profile]. |
+| `delete` | 에 대한 XDM 엔티티 삭제 메서드를 생성합니다. [!DNL Real-Time Customer Profile] 및 을(를) 통해 [!DNL Profile Store]. |
 
 다음 작업은에서 지원됩니다. [!DNL Identity Service]:
 
@@ -132,7 +132,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 
 ### ID 구성이 없는 페이로드
 
-새 ID를 연결할 필요가 없는 경우 `identity` 및 `identityDatasetId` 작업의 매개 변수. 이렇게 하면 데이터만 [!DNL Profile Service] 을 건너뛰고 [!DNL Identity Service]. 예를 보려면 아래 페이로드를 참조하십시오.
+새 ID를 연결할 필요가 없는 경우 `identity` 및 `identityDatasetId` 작업의 매개 변수. 이렇게 하면 데이터만 [!DNL Real-Time Customer Profile] 을 건너뛰고 [!DNL Identity Service]. 예를 보려면 아래 페이로드를 참조하십시오.
 
 ```shell
 {
@@ -157,7 +157,7 @@ XDM 업데이트의 경우 스키마를 활성화해야 합니다. [!DNL Profile
 
 ### XDM 스키마에서 정적 필드를 기본 ID 필드로 지정
 
-아래 예에서는 `state`, `homePhone.number` 및 기타 속성은 해당 지정된 값으로 다음에 업데이트됩니다. [!DNL Profile] 의 기본 ID 사용 `sampleEmail@gmail.com`. 그런 다음 XDM 엔티티 업데이트 메시지가 스트리밍에 의해 생성됩니다 [!DNL Data Prep] 구성 요소. [!DNL Profile Service] 그런 다음 프로필 레코드를 업데이트할 XDM 업데이트 메시지를 확인합니다.
+아래 예에서는 `state`, `homePhone.number` 및 기타 속성은 해당 지정된 값으로 다음에 업데이트됩니다. [!DNL Profile] 의 기본 ID 사용 `sampleEmail@gmail.com`. 그런 다음 XDM 엔티티 업데이트 메시지가 스트리밍에 의해 생성됩니다 [!DNL Data Prep] 구성 요소. [!DNL Real-Time Customer Profile] 그런 다음 프로필 레코드를 업데이트할 XDM 업데이트 메시지를 확인합니다.
 
 >[!NOTE]
 >
@@ -206,7 +206,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 ### XDM 스키마의 ID 맵 필드 그룹을 통해 ID 필드 중 하나를 기본 ID로 지정
 
-이 예에서 헤더에는 `operations` 속성이 `identity` 및 `identityDatasetId` 속성. 이렇게 하면 데이터를 병합할 수 있습니다. [!DNL Profile Service] 및 로 전달될 ID에 대해서도 [!DNL Identity Service].
+이 예에서 헤더에는 `operations` 속성이 `identity` 및 `identityDatasetId` 속성. 이렇게 하면 데이터를 병합할 수 있습니다. [!DNL Real-Time Customer Profile] 및 로 전달될 ID에 대해서도 [!DNL Identity Service].
 
 ```shell
 curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec3583275ffce4880ffc482be5a9d810c4b' \
@@ -255,10 +255,10 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 다음은 로 업데이트를 스트리밍할 때 고려할 알려진 제한 사항 목록을 간략하게 설명합니다. [!DNL Data Prep]:
 
-* 부분 행 업데이트를 로 보낼 때만 스트리밍 업데이트 메서드를 사용해야 합니다. [!DNL Profile Service]. 부분 행 업데이트는 다음과 같습니다 **아님** 데이터 레이크에서 사용됨.
+* 부분 행 업데이트를 로 보낼 때만 스트리밍 업데이트 메서드를 사용해야 합니다. [!DNL Real-Time Customer Profile]. 부분 행 업데이트는 다음과 같습니다 **아님** 데이터 레이크에서 사용됨.
 * 스트리밍 업데이트 메서드는 ID 업데이트, 바꾸기 및 제거를 지원하지 않습니다. 존재하지 않는 경우 새 ID가 생성됩니다. 따라서 `identity` 작업은 항상 만들도록 설정해야 합니다. ID가 이미 존재하는 경우 작업이 no-op입니다.
 * 스트리밍 업데이트 방법은 현재 를 지원하지 않습니다. [Adobe Experience Platform 웹 SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en) 및 [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
 ## 다음 단계
 
-이제에서 업데이트를 스트리밍하는 방법을 이해할 수 있습니다 [!DNL Data Prep] 에 부분 행 업데이트를 보내려면 [!DNL Profile Service] 데이터를 캡처하는 동시에 단일 API 요청으로 ID를 만들고 연결합니다. 기타 정보 [!DNL Data Prep] 기능, 다음을 읽으십시오. [[!DNL Data Prep] 개요](./home.md). 내에서 매핑 세트를 사용하는 방법을 알아보려면 [!DNL Data Prep] API, 다음을 읽으십시오. [[!DNL Data Prep] 개발자 안내서](./api/overview.md).
+이제에서 업데이트를 스트리밍하는 방법을 이해할 수 있습니다 [!DNL Data Prep] 에 부분 행 업데이트를 보내려면 [!DNL Real-Time Customer Profile] 데이터를 캡처하는 동시에 단일 API 요청으로 ID를 만들고 연결합니다. 기타 정보 [!DNL Data Prep] 기능, 다음을 읽으십시오. [[!DNL Data Prep] 개요](./home.md). 내에서 매핑 세트를 사용하는 방법을 알아보려면 [!DNL Data Prep] API, 다음을 읽으십시오. [[!DNL Data Prep] 개발자 안내서](./api/overview.md).
