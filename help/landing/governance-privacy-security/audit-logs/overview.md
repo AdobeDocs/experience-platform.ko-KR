@@ -2,10 +2,10 @@
 title: 감사 로그 개요
 description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어떤 작업을 수행했는지 확인하는 방법에 대해 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 7bb81a103c6b2a7d0baec22c927f575764bc3730
 workflow-type: tm+mt
-source-wordcount: '1156'
-ht-degree: 50%
+source-wordcount: '1294'
+ht-degree: 45%
 
 ---
 
@@ -79,13 +79,13 @@ Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명
 
 내에서 다양한 Experience Platform 기능에 대한 감사 로그를 볼 수 있습니다. **[!UICONTROL 감사]** Platform UI의 작업 공간 작업 공간에는 기본적으로 가장 최근에서 가장 최근으로 정렬된 기록된 로그 목록이 표시됩니다.
 
-![감사 로그 대시보드](../../images/audit-logs/audits.png)
+![왼쪽 메뉴에서 감사를 강조 표시하는 감사 대시보드.](../../images/audit-logs/audits.png)
 
 감사 로그는 365일 동안 유지되며 그 후에는 시스템에서 삭제됩니다. 따라서 최대 365일 동안만 돌아갈 수 있습니다. 365일 이상의 데이터가 필요한 경우 내부 정책 요구 사항을 충족하도록 정기적으로 로그를 내보내야 합니다.
 
 오른쪽 레일에서 세부 정보를 보려면 목록에서 이벤트를 선택하십시오.
 
-![이벤트 세부 정보](../../images/audit-logs/select-event.png)
+![이벤트 세부 사항 패널이 강조 표시된 대시보드 활동 로그 탭을 감사합니다.](../../images/audit-logs/select-event.png)
 
 ### 감사 로그 필터링
 
@@ -95,31 +95,43 @@ Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명
 
 단계 아이콘(![필터 아이콘](../../images/audit-logs/icon.png)) 필터 컨트롤 목록을 표시하여 결과의 범위를 좁힐 수 있습니다. 선택한 다양한 필터에 관계없이 마지막 1000개의 레코드만 표시됩니다.
 
-![필터](../../images/audit-logs/filters.png)
+![필터링된 활동 로그가 강조 표시된 감사 대시보드입니다.](../../images/audit-logs/filters.png)
 
 UI의 감사 이벤트에 사용할 수 있는 필터는 다음과 같습니다.
 
 | 필터 | 설명 |
 | --- | --- |
 | [!UICONTROL 범주] | 드롭다운 메뉴를 사용하여 표시된 결과 필터링 기준 [범주](#category). |
-| [!UICONTROL 작업] | 액션으로 필터링합니다. 현재는 [!UICONTROL 만들기] 및 [!UICONTROL 삭제] 작업을 필터링할 수 있습니다. |
+| [!UICONTROL 작업] | 액션으로 필터링합니다. 각 서비스에 대해 사용할 수 있는 작업은 위의 리소스 테이블에서 확인할 수 있습니다. |
 | [!UICONTROL 사용자] | 전체 사용자 ID를 입력합니다(예: `johndoe@acme.com`)을 클릭하여 사용자별로 필터링할 수 있습니다. |
 | [!UICONTROL 상태] | 작업이 허용되었는지(완료되었는지) 또는 (이)가 없어 거부되었는지 여부에 따라 필터링합니다. [액세스 제어](../../../access-control/home.md) 사용 권한. |
 | [!UICONTROL 날짜] | 시작 날짜 및/또는 종료 날짜를 선택하여 결과를 필터링할 날짜 범위를 정의합니다. 데이터는 90일 전환 확인 기간(예: 2021-12-15에서 2022-03-15)을 사용하여 내보낼 수 있습니다. 이는 이벤트 유형별로 다를 수 있습니다. |
 
 필터를 제거하려면 해당 필터의 알약 아이콘에서 &quot;X&quot;를 선택하거나 을 선택합니다 **[!UICONTROL 모두 지우기]** 모든 필터를 제거합니다.
 
-![필터 지우기](../../images/audit-logs/clear-filters.png)
+![지우기 필터가 강조 표시된 감사 대시보드.](../../images/audit-logs/clear-filters.png)
+
+반환된 감사 로그 데이터에는 선택한 필터 기준을 충족하는 모든 쿼리에 대한 다음 정보가 포함됩니다.
+
+| 열 이름 | 설명 |
+|---|---|
+| [!UICONTROL 타임스탬프] | 에서 수행된 작업의 정확한 날짜 및 시간 `month/day/year hour:minute AM/PM` 포맷. |
+| [!UICONTROL 에셋 이름] | 에 대한 값 [!UICONTROL 에셋 이름] 필드는 필터로 선택한 범주에 따라 다릅니다. |
+| [!UICONTROL 범주] | 이 필드는 필터 드롭다운에서 선택한 범주와 일치합니다. |
+| [!UICONTROL 작업] | 사용 가능한 작업은 필터로 선택한 범주에 따라 다릅니다. |
+| [!UICONTROL 사용자] | 이 필드는 쿼리를 실행한 사용자 ID를 제공합니다. |
+
+![필터링된 활동 로그가 강조 표시된 감사 대시보드입니다.](../../images/audit-logs/filtered.png)
 
 ### 감사 로그 내보내기
 
 현재 감사 로그 목록을 내보내려면 **[!UICONTROL 로그 다운로드]**&#x200B;를 선택합니다.
 
-![로그 다운로드](../../images/audit-logs/download.png)
+![감사 대시보드에 [!UICONTROL 로그 다운로드] 강조 표시됨.](../../images/audit-logs/download.png)
 
 표시되는 대화 상자에서 원하는 형식(또는 **[!UICONTROL CSV]** 또는 **[!UICONTROL JSON]**)을 선택한 다음 를 선택합니다 **[!UICONTROL 다운로드]**. 브라우저가 생성된 파일을 다운로드하여 시스템에 저장합니다.
 
-![다운로드 형식 선택](../../images/audit-logs/select-download-format.png)
+![파일 형식 선택 대화 상자 [!UICONTROL 다운로드] 강조 표시됨.](../../images/audit-logs/select-download-format.png)
 
 ## API에서 감사 로그 관리
 
