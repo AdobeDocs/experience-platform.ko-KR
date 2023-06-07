@@ -2,9 +2,9 @@
 title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 세그먼트를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1265'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,11 @@ ht-degree: 0%
 
 Platform은에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을 적용합니다. [!DNL Data Landing Zone] 컨테이너. 모든 파일은 7일 후에 삭제됩니다.
 
+## 다음에 연결 [!UICONTROL 데이터 랜딩 영역] API 또는 UI를 통한 스토리지 {#connect-api-or-ui}
+
+* 에 연결하려면 [!UICONTROL 데이터 랜딩 영역] 플랫폼 사용자 인터페이스를 사용한 저장소 위치에서 섹션을 읽습니다. [대상에 연결](#connect) 및 [이 대상에 대한 세그먼트 활성화](#activate) 아래요.
+* 에 연결하려면 [!UICONTROL 데이터 랜딩 영역] 저장소 위치를 프로그래밍 방식으로 읽고 [흐름 서비스 API 자습서를 사용하여 세그먼트를 파일 기반 대상으로 활성화](../../api/activate-segments-file-based-destinations.md).
+
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
@@ -43,7 +48,7 @@ Platform은에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을
 
 ### 연결 [!DNL Data Landing Zone] 컨테이너 대상 [!DNL Azure Storage Explorer]
 
-다음을 사용할 수 있습니다. [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) 의 콘텐츠를 관리하려면 [!DNL Data Landing Zone] 컨테이너. 을(를) 사용하려면 [!DNL Data Landing Zone], 먼저 자격 증명을 검색하고 입력해야 합니다. [!DNL Azure Storage Explorer]및 다음을 연결합니다. [!DNL Data Landing Zone] 컨테이너 대상 [!DNL Azure Storage Explorer].
+다음을 사용할 수 있습니다. [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) 의 콘텐츠를 관리하려면 [!DNL Data Landing Zone] 컨테이너. 을(를) 사용하려면 [!DNL Data Landing Zone], 먼저 자격 증명을 검색하여 입력해야 합니다. [!DNL Azure Storage Explorer]및 다음을 연결합니다. [!DNL Data Landing Zone] 컨테이너 대상 [!DNL Azure Storage Explorer].
 
 다음에서 [!DNL Azure Storage Explorer] UI에서 왼쪽 탐색 막대에 있는 연결 아이콘을 선택합니다. 다음 **리소스 선택** 연결 옵션을 제공하는 창이 나타납니다. 선택 **[!DNL Blob container]** 을(를) 통해 [!DNL Data Landing Zone] 스토리지.
 
@@ -83,7 +88,7 @@ curl -X GET \
 
 **응답**
 
-다음 응답은 현재 위치를 포함하여 랜딩 영역에 대한 자격 증명 정보를 반환합니다 `SASToken` 및 `SASUri`, 및 `storageAccountName` 랜딩 영역 컨테이너에 해당합니다.
+다음 응답은 현재 위치를 포함하여 랜딩 영역에 대한 자격 증명 정보를 반환합니다 `SASToken` 및 `SASUri`및 `storageAccountName` 랜딩 영역 컨테이너에 해당합니다.
 
 ```json
 {
@@ -163,7 +168,10 @@ curl -X GET \
 
 ## (베타) 데이터 세트 내보내기 {#export-datasets}
 
-이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기를 설정하는 방법에 대한 자세한 내용은 [데이터 세트 내보내기 자습서](/help/destinations/ui/export-datasets.md).
+이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기 설정 방법에 대한 자세한 내용은 튜토리얼을 참조하십시오.
+
+* 방법 [platform 사용자 인터페이스를 사용하여 데이터 세트 내보내기](/help/destinations/ui/export-datasets.md).
+* 방법 [흐름 서비스 API를 사용하여 프로그래밍 방식으로 데이터 세트 내보내기](/help/destinations/api/export-datasets.md).
 
 ## 성공적인 데이터 내보내기 유효성 검사 {#exported-data}
 

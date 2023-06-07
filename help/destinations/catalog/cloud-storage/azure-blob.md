@@ -2,10 +2,10 @@
 title: Azure Blob 연결
 description: Azure Blob 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 CSV 데이터 파일을 정기적으로 내보냅니다.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 4%
+source-wordcount: '1029'
+ht-degree: 3%
 
 ---
 
@@ -32,6 +32,11 @@ ht-degree: 4%
 ## 개요 {#overview}
 
 [!DNL Azure Blob] (이하 &quot;&quot;라 한다) [!DNL Blob])는 클라우드를 위한 Microsoft의 개체 스토리지 솔루션입니다. 이 자습서에서는 다음을 만드는 단계를 제공합니다 [!DNL Blob] 대상 사용 [!DNL Platform] 사용자 인터페이스.
+
+## 다음에 연결 [!UICONTROL Azure Blob] API 또는 UI를 통한 스토리지 {#connect-api-or-ui}
+
+* 에 연결하려면 [!UICONTROL Azure Blob] 플랫폼 사용자 인터페이스를 사용한 저장소 위치에서 섹션을 읽습니다. [대상에 연결](#connect) 및 [이 대상에 대한 세그먼트 활성화](#activate) 아래요.
+* 에 연결하려면 [!UICONTROL Azure Blob] 저장소 위치를 프로그래밍 방식으로 읽고 [흐름 서비스 API 자습서를 사용하여 세그먼트를 파일 기반 대상으로 활성화](../../api/activate-segments-file-based-destinations.md).
 
 ## 시작하기
 
@@ -79,7 +84,7 @@ ht-degree: 4%
 대상에 인증하려면 필수 필드를 입력한 다음 을(를) 선택합니다. **[!UICONTROL 대상에 연결]**.
 
 * **[!UICONTROL 연결 문자열]**: Blob 저장소의 데이터에 액세스하려면 연결 문자열이 필요합니다. 다음 [!DNL Blob] 연결 문자열 패턴은 다음으로 시작: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
-   * 구성에 대한 자세한 내용은 [!DNL Blob] 연결 문자열입니다. 참조 [Azure 스토리지 계정에 대한 연결 문자열 구성](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) Microsoft 설명서에서 확인할 수 있습니다.
+   * 구성에 대한 자세한 내용은 [!DNL Blob] 연결 문자열입니다. 참조 [Azure 스토리지 계정에 대한 연결 문자열 구성](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) Microsoft 설명서에서 확인할 수 있습니다.
 * **[!UICONTROL 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
    ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -112,7 +117,10 @@ ht-degree: 4%
 
 ## (베타) 데이터 세트 내보내기 {#export-datasets}
 
-이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기를 설정하는 방법에 대한 자세한 내용은 [데이터 세트 내보내기 자습서](/help/destinations/ui/export-datasets.md).
+이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기 설정 방법에 대한 자세한 내용은 튜토리얼을 참조하십시오.
+
+* 방법 [platform 사용자 인터페이스를 사용하여 데이터 세트 내보내기](/help/destinations/ui/export-datasets.md).
+* 방법 [흐름 서비스 API를 사용하여 프로그래밍 방식으로 데이터 세트 내보내기](/help/destinations/api/export-datasets.md).
 
 ## 내보낸 데이터 {#exported-data}
 
