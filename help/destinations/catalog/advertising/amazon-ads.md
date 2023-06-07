@@ -3,7 +3,7 @@ title: Amazon 광고
 description: Amazon Ads는 등록된 판매자, 공급업체, 서적 공급업체, Kindle Direct Publishing(KDP) 작성자, 앱 개발자 및/또는 에이전시에 대한 광고 목표를 달성하는 데 도움이 되는 다양한 옵션을 제공합니다. Amazon Ads와 Adobe Experience Platform의 통합은 ADSP(Amazon DSP)를 비롯한 Amazon Ads 제품에 턴키 통합을 제공합니다. Adobe Experience Platform의 Amazon 광고 대상을 사용하면 Amazon DSP에서 타깃팅 및 활성화를 위해 광고주 대상을 정의할 수 있습니다.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 9c1f3d5d5fc14941cb40adf02fd3d9acce5cf648
+source-git-commit: 147499e0b736fac7aa27942790661236be68b0a4
 workflow-type: tm+mt
 source-wordcount: '1401'
 ht-degree: 1%
@@ -81,9 +81,11 @@ Adobe Experience Platform과 Amazon Ads 연결을 사용하려면 먼저 사용�
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL Amazon 광고 광고주 ID]**: 대상에 사용되는 대상 Amazon 광고 계정의 ID를 선택합니다.
+
 >[!NOTE]
 >
 >대상 구성을 저장하면 Amazon 계정을 통해 다시 인증하더라도 Amazon 광고 광고주 ID를 변경할 수 없습니다. 다른 Amazon 광고 광고주 ID를 사용하려면 새 대상 연결을 만들어야 합니다.
+
 * **[!UICONTROL 광고주 영역]**: 광고주가 호스팅되는 적절한 영역을 선택합니다. 각 지역에서 지원하는 마켓플레이스에 대한 자세한 내용은 [Amazon 광고 설명서](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
 
@@ -136,7 +138,7 @@ Amazon 광고 연결은 ID 일치를 위해 해시된 이메일 주소와 해시
 
 * [Amazon DSP 도움말 센터](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
-### 변경 로그 {#changelog}
+## 변경 로그 {#changelog}
 
 이 섹션에서는 이 대상 커넥터에 대한 기능 및 중요 설명서 업데이트를 캡처합니다.
 
@@ -144,7 +146,7 @@ Amazon 광고 연결은 ID 일치를 위해 해시된 이메일 주소와 해시
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
-| 2023년 5월 | 기능 및 설명서 업데이트 | <ul><li>대상 연결 워크플로우에서 광고주 영역 선택에 대한 지원을 추가했습니다.</li><li>광고주 지역 선택 사항의 추가를 반영하도록 설명서를 업데이트했습니다. 올바른 광고주 영역 선택에 대한 자세한 내용은 [Amazon 설명서](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+| 2023년 5월 | 기능 및 설명서 업데이트 | <ul><li>에서 광고주 영역 선택에 대한 지원을 추가했습니다. [대상 연결 워크플로](#destination-details).</li><li>광고주 지역 선택 사항의 추가를 반영하도록 설명서를 업데이트했습니다. 올바른 광고주 영역 선택에 대한 자세한 내용은 [Amazon 설명서](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | 2023년 3월 | 초기 릴리스 | 초기 대상 릴리스 및 설명서가 게시되었습니다. |
 
 {style="table-layout:auto"}
