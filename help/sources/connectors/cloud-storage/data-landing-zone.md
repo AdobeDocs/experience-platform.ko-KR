@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 랜딩 영역 소스
 description: 데이터 랜딩 영역을 Adobe Experience Platform에 연결하는 방법 알아보기
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
+source-git-commit: c2cc734d4a5c86fecbd0dabdfe63c896f0fe0f54
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 - 잘못된 URL 경로 문자는 허용되지 않습니다. 다음과 같은 코드 포인트 `\uE000`는 NTFS 파일 이름에서 유효하지만 은 유효한 유니코드 문자가 아닙니다. 또한 제어 문자(예: `0x00` 끝 `0x1F`, `\u0081`등)도 사용할 수 없습니다. HTTP/1.1의 유니코드 문자열을 제어하는 규칙에 대해서는 다음을 참조하십시오. [RFC 2616, 섹션 2.2: 기본 규칙](https://www.ietf.org/rfc/rfc2616.txt) 및 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, 점 문자(.) 및 점 문자(..) 두 개를 사용할 수 없습니다.
 
-## 의 콘텐츠 관리 [!DNL Data Landing Zone]
+## 데이터 랜딩 영역의 콘텐츠 관리{#manage-the-contents-of-your-data-landing-zone}
 
 다음을 사용할 수 있습니다. [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) 의 콘텐츠를 관리하려면 [!DNL Data Landing Zone] 컨테이너.
 
@@ -162,3 +162,8 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 - [연결 [!DNL Data Landing Zone] UI를 사용하여 플랫폼에 연결](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [UI에서 클라우드 스토리지 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+
+>[!IMPORTANT]
+>
+>개인 링크는 현재 를 사용하여 Experience Platform에 연결할 때 지원되지 않습니다. [!DNL Data Landing Zone]. 액세스가 지원되는 메서드는 나열된 메서드뿐입니다 [여기](#manage-the-contents-of-your-data-landing-zone).
+
