@@ -4,10 +4,10 @@ solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 대상자 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
-source-git-commit: a36ec71cbec2316eaa08daf5f1edb36509271e7c
+source-git-commit: 4e4e4cad03bc23d8d25aadf54d7bebf97794a869
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 33%
+source-wordcount: '214'
+ht-degree: 31%
 
 ---
 
@@ -24,6 +24,8 @@ ht-degree: 33%
       * [예제 사용 사례](./b2b-use-case.md)
       * [전체 튜토리얼](./b2b-tutorial.md)
       * [Real-Time CDP B2B 에디션 보호 기능](b2b-guardrails.md)
+* Audience Manager 및 실시간 CDP {#evolution}
+   * [Audience Manager의 진화](aam-to-rtcdp.md)
 * 계정 프로필 {#account}
    * [계정 프로필 개요](accounts/account-profile-overview.md)
    * [계정 프로필 UI 안내서](accounts/account-profile-ui-guide.md)
