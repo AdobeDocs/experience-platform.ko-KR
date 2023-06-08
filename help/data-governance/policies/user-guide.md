@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI의 데이터 사용 정책 관리
 description: Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 Experience Platform 사용자 인터페이스의 정책 작업 영역에서 수행할 수 있는 작업에 대한 개요를 제공합니다.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
 workflow-type: tm+mt
-source-wordcount: '1618'
-ht-degree: 19%
+source-wordcount: '1788'
+ht-degree: 17%
 
 ---
 
@@ -59,7 +59,19 @@ ht-degree: 19%
 
 * Beta에 속하지 않으면 즉시 의 워크플로우로 이동합니다. [데이터 거버넌스 정책 만들기](#create-governance-policy).
 * Beta의 일부인 경우 대화 상자에서 다음에 대한 추가 옵션을 제공합니다. [동의 정책 만들기](#consent-policy).
-   ![](../images/policies/choose-policy-type.png)
+  ![](../images/policies/choose-policy-type.png)
+
+### 데이터 거버넌스 및 동의 정책을 함께 사용 {#combine-policies}
+
+>[!NOTE]
+>
+>동의 정책은 현재 Adobe Healthcare Shield 또는 Adobe Privacy &amp; Security Shield를 구입한 조직에서만 사용할 수 있습니다.
+
+거버넌스 및 동의 정책을 함께 사용하여 대상에 매핑된 대상을 제어하는 강력한 규칙을 만들 수 있습니다. 동의 정책은 기본적으로 포함되며, 이는 각 마케팅 경험에 포함될 수 있는 프로필을 지시함을 의미합니다. 반대로 거버넌스 정책은 레이블이 지정된 특정 속성의 사용을 활성화를 위해 구성되지 않도록 제외합니다.
+
+이 비헤이비어를 사용하면 올바른 프로필을 포함하는 정책 및 동의 규칙의 조합을 설정할 수 있지만, 설정된 조직 규칙과 어긋나는 데이터를 포함하지 못합니다. 예를 들어 중요한 데이터를 포함하지 않으려 하지만, 여전히 소셜 미디어를 통해 마케팅을 위해 동의한 사용자를 타겟팅할 수 있는 시나리오가 있습니다. 이 시나리오에 필요한 단계는 아래 인포그래픽에 설명되어 있습니다.
+
+![거버넌스 및 동의 정책을 함께 사용하여 통제 대상을 위한 강력한 규칙을 만드는 단계를 요약한 인포그래픽입니다.](../images/policies/governance-and-consent-policies-infographic.png)
 
 ### 데이터 거버넌스 정책 만들기 {#create-governance-policy}
 

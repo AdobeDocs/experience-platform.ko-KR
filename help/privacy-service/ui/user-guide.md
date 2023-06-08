@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service UI의 개인 정보 작업 관리
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 요청을 조정하고 모니터링하는 방법에 대해 알아봅니다.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
+source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1473'
 ht-degree: 14%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 14%
 
 각 규정 유형에 대한 직무는 별도로 추적된다. 규정 유형 간에 전환하려면 **[!UICONTROL 규정 유형]** 드롭다운 메뉴를 클릭하고 목록에서 원하는 규제를 선택합니다.
 
-![규정 유형 드롭다운](../images/user-guide/regulation.png)
+![규정 유형 드롭다운이 있는 Privacy Service 콘솔.](../images/user-guide/regulation.png)
 
 규정 유형을 변경하면 대시보드가 업데이트되어 선택한 규정에 적용되는 모든 작업, 필터, 위젯 및 작업 생성 대화 상자가 표시됩니다.
 
