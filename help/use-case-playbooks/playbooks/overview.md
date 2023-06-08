@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: 플레이북 개요
+title: 사용 사례 플레이북 개요
 description: Experience Platform의 사용 사례 플레이북 기능을 사용하여 다양한 마케팅 사용 사례를 시작하는 방법에 대해 알아봅니다
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 63ea852ca9f9a45d1c071fd1033cbd44cbb427c6
+source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '398'
 ht-degree: 2%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 2%
 이 설명서 가이드의 내용은 다음과 같습니다.
 
 * **[사용 사례 플레이북 개요](#overview)**
-* [플레이북 보기 및 에셋 생성](ui-guide.md#view-playbook-generate-assets)
-* [플레이북의 인스턴스 활성화, 사용 및 재사용 ](ui-guide.md#enable-playbook)
+* [적합한 플레이북 살펴보기](/help/use-case-playbooks/playbooks/discover.md)
+* [플레이북 인스턴스 만들기, 공유 및 재사용](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [문제 해결 및 알려진 제한 사항](troubleshooting.md)
 
 >[!ENDSHADEBOX]
@@ -48,7 +48,7 @@ Adobe Journey Optimizer 플레이북을 선택하는 경우 제품 내에서 고
 
 ## UI 안내서
 
-사용할 플레이북을 결정한 후 UI에서 해당 플레이북을 선택하고 시작합니다. 의 UI 안내서 읽기 [플레이북을 활성화하고 재사용하는 방법](/help/use-case-playbooks/playbooks/ui-guide.md) 인스턴스를 만들고 플레이북을 최대한 활용하는 방법에 대한 전체 정보.
+사용할 플레이북을 결정한 후 UI에서 해당 플레이북을 선택하고 시작합니다. 의 UI 안내서 읽기 [올바른 플레이북을 찾는 방법](/help/use-case-playbooks/playbooks/discover.md) 및 [플레이북 인스턴스를 생성, 공유 및 재사용하는 방법](/help/use-case-playbooks/playbooks/create-share-reuse.md) 인스턴스를 만들고 플레이북을 최대한 활용하는 방법에 대한 전체 정보.
 
 ## 문제 해결 및 알려진 제한 사항
 
