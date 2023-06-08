@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 카탈로그 개체 나열
 description: 단일 API 호출을 통해 특정 유형의 사용 가능한 모든 오브젝트 목록을 검색할 수 있습니다. 가장 좋은 방법은 응답 크기를 제한하는 필터를 포함하는 것입니다.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 1%
@@ -24,7 +24,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 나열할 개체입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 나열할 개체입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{FILTER}` | 응답에서 반환된 결과를 필터링하는 데 사용되는 쿼리 매개 변수입니다. 여러 매개 변수는 앰퍼샌드(`&`). 다음 안내서를 참조하십시오 [카탈로그 데이터 필터링](filter-data.md) 추가 정보. |
 
 **요청**

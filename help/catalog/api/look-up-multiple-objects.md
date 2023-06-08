@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 여러 카탈로그 개체 조회
 description: 객체당 하나의 요청을 수행하는 대신 여러 개의 특정 객체를 보려는 경우 카탈로그는 동일한 유형의 여러 객체를 요청할 수 있는 간단한 단축키를 제공합니다. 단일 GET 요청을 사용하여 쉼표로 구분된 ID 목록을 포함하여 여러 특정 개체를 반환할 수 있습니다.
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 1%
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | 매개변수 | 설명 |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 검색할 객체. 유효한 오브젝트는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 검색할 객체. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | 검색할 특정 개체 중 하나에 대한 식별자입니다. |
 
 **요청**

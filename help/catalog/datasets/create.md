@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API를 사용하여 데이터 세트 만들기
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 데이터 세트를 만들고 파일을 사용하여 데이터 세트를 채우는 일반적인 단계를 제공합니다.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1303'
 ht-degree: 1%
 
 ---
@@ -45,9 +45,7 @@ ht-degree: 1%
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Platform], 다음을 참조하십시오. [샌드박스 개요 설명서](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
-
-* Content-Type: application/json
+페이로드가 포함된 모든 요청(POST, PUT, PATCH)에는 추가 항목이 필요합니다 `Content-Type: application/json` 머리글입니다. JSON+PATCH 요청의 경우 `Content-Type` 다음이어야 함: `application/json-patch+json`.
 
 ## 튜토리얼
 
@@ -254,7 +252,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **응답**
 
-성공적인 응답은 HTTP 상태 201(생성됨)과, 해당 배치를 포함하여 새로 생성된 배치의 세부 사항이 포함된 응답 개체를 반환합니다 `id`: 시스템에서 생성한 읽기 전용 문자열입니다.
+성공적인 응답은 HTTP 상태 201(생성됨) 및 응답 개체를 반환합니다. 응답 개체는 형식으로 새로 생성된 배치의 ID가 포함된 배열로 구성됩니다 `"@/batches/{BATCH_ID}"`. 배치 ID는 API 호출에서 배치를 참조하는 데 사용되는 읽기 전용의 시스템 생성 문자열입니다.
 
 ```JSON
 {
@@ -355,12 +353,12 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc
 
 ## 수집 모니터링
 
-데이터 크기에 따라 일괄 처리에 다양한 시간이 소요됩니다. 다음을 추가하여 배치 상태를 모니터링할 수 있습니다. `batch` 배치 ID가 포함된 요청 매개변수 `GET /batches` 요청. API는 수집에서 다음 시간까지 배치 상태에 대한 데이터 세트를 폴링합니다. `status` 응답에서 완료(&quot;성공&quot; 또는 &quot;실패&quot;)를 나타냅니다.
+데이터 크기에 따라 일괄 처리에 다양한 시간이 소요됩니다. 배치의 ID를에 추가하여 배치 상태를 모니터링할 수 있습니다. `GET /batches` 요청.
 
 **API 형식**
 
 ```HTTP
-GET /batches?batch={BATCH_ID}
+GET /batches/{BATCH_ID}
 ```
 
 | 매개변수 | 설명 |

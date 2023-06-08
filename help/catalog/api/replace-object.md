@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 카탈로그 개체 바꾸기
 description: 전체 리소스가 요청 페이로드로 대체되는 PUT 요청을 사용하여 카탈로그 객체의 콘텐츠를 덮어쓸 수 있습니다.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 2%
@@ -27,7 +27,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 바꿀 개체입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 바꿀 개체입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 업데이트할 특정 개체의 식별자입니다. |
 
 **요청**
@@ -45,7 +45,6 @@ curl -X PUT \
   -d '{
         "name": "New Dataset Name",
         "description": "New description for dataset",
-        "state": "DRAFT",
         "tags": {
             "adobe/pqs/table": [
                 "sample_dataset"

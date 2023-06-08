@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 매개 변수를 사용하여 카탈로그 데이터 필터링
 description: 카탈로그 서비스 API를 사용하면 요청 쿼리 매개 변수를 사용하여 응답 데이터를 필터링할 수 있습니다. 카탈로그에 대한 모범 사례의 일부는 API에 대한 로드를 줄이고 전체 성능을 개선하는 데 도움이 되므로 모든 API 호출에 필터를 사용하는 것입니다.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
 workflow-type: tm+mt
-source-wordcount: '2120'
+source-wordcount: '2099'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 검색할 객체. 유효한 오브젝트는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 검색할 객체. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | 반환할 개체 수를 나타내는 정수로, 1개에서 100개까지 지정할 수 있습니다. |
 
 **요청**
@@ -79,7 +79,7 @@ curl -X GET \
 
 다음 `properties` 매개 변수는 응답 개체를 필터링하여 지정된 속성 집합만 반환합니다. 매개 변수는 하나 이상의 속성을 반환하도록 설정할 수 있습니다.
 
-다음 `properties` 매개 변수는 최상위 수준의 개체 속성만 허용합니다. 즉, 다음 샘플 개체에 대해 필터를 적용할 수 있습니다. `name`, `description`, 및 `subItem`, 하지만 다음에 대해서는 해당되지 않음 `sampleKey`.
+다음 `properties` 매개 변수에는 모든 레벨 개체 속성이 적용될 수 있습니다. `sampleKey` 다음을 사용하여 추출 가능 `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -103,7 +103,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 검색할 객체. 유효한 오브젝트는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 검색할 객체. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | 응답 본문에 포함할 속성의 이름입니다. |
 | `{OBJECT_ID}` | 특정 항목에 대한 고유 식별자 [!DNL Catalog] 개체를 검색 중입니다. |
 
@@ -172,7 +172,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 검색할 카탈로그 개체의 유형입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 검색할 카탈로그 개체의 유형입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OFFSET}` | 응답을 오프셋할 개체 수를 나타내는 정수입니다. |
 
 **요청**
@@ -228,17 +228,6 @@ curl -X GET \
         },
         "name": "Sample Dataset",
         "description": "Same dataset containing sample data.",
-        "dule": {
-            "identity": [
-                "I1"
-            ]
-        },
-        "statsCache": {},
-        "state": "DRAFT",
-        "lastBatchId": "ca12b29612bf4052872edad59573703c",
-        "lastBatchStatus": "success",
-        "lastSuccessfulBatch": "ca12b29612bf4052872edad59573703c",
-        "namespace": "{NAMESPACE}",
         "createdUser": "{CREATED_USER}",
         "createdClient": "{CREATED_CLIENT}",
         "updatedUser": "{UPDATED_USER}",
@@ -264,7 +253,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 검색할 객체. 유효한 오브젝트는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 검색할 객체. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | 필터링 기준으로 사용할 태그의 이름입니다. |
 | `{TAG_VALUE}` | 필터링 기준으로 사용할 태그의 값. 와일드카드 문자 지원(`*`). |
 
@@ -304,8 +293,6 @@ curl -X GET \
                     "Example tag value"
                 ]
             },
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
@@ -327,8 +314,6 @@ curl -X GET \
                     "2.0"
                 ]
             },
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -375,8 +360,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
@@ -387,8 +370,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -412,7 +393,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 검색할 카탈로그 개체의 유형입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 검색할 카탈로그 개체의 유형입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 결과를 정렬할 속성의 이름입니다. |
 
 **요청**
@@ -443,8 +424,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
@@ -455,8 +434,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.2",
@@ -467,8 +444,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -499,7 +474,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 검색할 객체. 유효한 오브젝트는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 검색할 객체. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 필터링 기준으로 사용할 값을 가진 속성의 이름입니다. |
 | `{VALUE}` | 쿼리에 따라 포함(또는 제외)할 결과를 결정하는 속성 값입니다. |
 
@@ -531,8 +506,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
@@ -543,8 +516,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -553,7 +524,7 @@ curl -X GET \
 
 다음 `property` 쿼리 매개 변수는 간단한 필터보다 속성 기반 필터링에 더 많은 유연성을 제공합니다. 속성에 특정 값이 있는지 여부에 따른 필터링 외에, `property` 매개 변수는 다른 비교 연산자(예: &quot;보다 큼&quot;(`>`) 및 &quot;보다 작음&quot;(`<`)와 속성 값을 기준으로 필터링할 정규 표현식도 포함되어 있습니다. 또한 속성의 값에 관계없이 속성의 존재 여부에 따라 필터링할 수도 있습니다.
 
-다음 `property` 매개 변수는 최상위 수준의 개체 속성만 허용합니다. 즉, 다음 샘플 개체의 경우 속성별로 필터링할 수 있습니다. `name`, `description`, 및 `subItem`, 하지만 다음에 대해서는 해당되지 않음 `sampleKey`.
+다음 `property` 매개 변수에는 모든 레벨 개체 속성이 적용될 수 있습니다. `sampleKey` 을 사용하여 필터링에 사용할 수 있습니다. `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -575,7 +546,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 검색할 객체. 유효한 오브젝트는 다음과 같습니다. <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 검색할 객체. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | 쿼리할 속성 및 해당 값의 평가 방법을 나타내는 조건부 식입니다. 예제는 아래에 나와 있습니다. |
 
 값 `property` 매개 변수는 여러 종류의 조건부 표현식을 지원합니다. 다음 표에서는 지원되는 표현식에 대한 기본 구문을 간략하게 설명합니다.
@@ -624,8 +595,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.6",
@@ -636,8 +605,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.4",
@@ -648,8 +615,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```

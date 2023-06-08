@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 카탈로그 서비스 개요
 description: 카탈로그 서비스는 Adobe Experience Platform 내의 데이터 위치와 계보를 위한 기록 시스템입니다. Experience Platform에 수집되는 모든 데이터는 파일 및 디렉터리로 데이터 레이크에 저장되지만, 카탈로그는 조회 및 모니터링을 위해 이러한 파일 및 디렉터리에 대한 메타데이터 및 설명을 포함합니다.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 0ebe9eadb1bce6252b43a50af009ce1b0f6e5d6e
 workflow-type: tm+mt
-source-wordcount: '805'
-ht-degree: 5%
+source-wordcount: '694'
+ht-degree: 6%
 
 ---
 
@@ -53,10 +53,7 @@ XDM 시스템에 대한 자세한 내용은 [XDM 시스템 개요](../xdm/home.m
 
 | 오브젝트 | API 엔드포인트 | 정의 |
 |---|---|---|
-| 계정 | `/accounts` | 소스 연결을 만들 때 인증 자격 증명을 제공해야 합니다. 계정은 특정 유형의 연결을 만드는 데 사용된 인증 자격 증명의 컬렉션을 나타냅니다. 각 연결에는 가 지속하는 고유한 매개 변수 세트가 있습니다. [!DNL Catalog] 및 보안 유지 [!DNL Azure Key Vault]. |
 | 일괄 처리 | `/batches` | 배치는 단일 단위로 수집할 하나 이상의 파일로 구성된 데이터 단위입니다. 의 배치 객체 [!DNL Catalog] 배치의 수집 지표(예: 처리된 레코드 수 또는 디스크 크기)에 대한 개요를 제공하며 데이터 세트, 보기 및 배치 작업의 영향을 받은 기타 리소스에 대한 링크도 포함할 수 있습니다. |
-| Connection | `/connections` | 연결은 조직에 고유하고 커넥터 유형에 대한 적절한 인증 자격 증명을 사용하여 구성된 소스 커넥터의 단일 인스턴스입니다. |
-| 커넥터 | `/connectors` | 커넥터는 소스 연결이 다른 Adobe 애플리케이션(예: Adobe Analytics 및 Adobe Audience Manager), 서드파티 클라우드 스토리지 소스(예: [!DNL Azure Blob], [!DNL Amazon S3], FTP 서버 및 SFTP 서버), 타사 CRM 시스템(예: [!DNL Microsoft Dynamics] 및 [!DNL Salesforce]). |
 | 데이터 세트 | `/dataSets` | 데이터 집합은 스키마(열) 및 필드(행)를 포함하는 데이터(일반적으로 테이블) 수집에 사용되는 저장소 및 관리 구성입니다. 다음을 참조하십시오. [데이터 세트 개요](./datasets/overview.md) 추가 정보. |
 | 데이터 세트 파일 | `/datasetFiles` | 데이터 세트 파일은에 저장된 데이터 블록을 나타냅니다 [!DNL Platform]. 리터럴 파일의 레코드로 파일의 크기, 파일에 포함된 레코드 수 및 파일을 수집한 일괄 처리에 대한 참조를 찾을 수 있습니다. |
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API에서 오브젝트 삭제
 description: DELETE 요청 경로에 해당 ID를 제공하여 카탈로그 개체를 삭제할 수 있습니다.
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 1%
@@ -31,7 +31,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 삭제할 개체입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 삭제할 개체입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 업데이트할 특정 개체의 식별자입니다. |
 
 **요청**
