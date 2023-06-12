@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Media Edge API 시작하기
 description: Media Edge API 시작하기
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 8592bcc7a6d6700ec9b689b98d07a15f0b9301b2
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '937'
 ht-degree: 7%
 
 ---
@@ -206,6 +206,8 @@ curl -X 'POST' \
 
 버퍼 시작 끝점 매개 변수 및 예제에 대한 자세한 내용은 Media Edge Swagger 파일을 참조하십시오.
 
+성공한 응답은 200의 상태를 나타내며 콘텐츠를 포함하지 않습니다.
+
 ## 이벤트 요청 재생
 
 재생 이벤트는 미디어 플레이어가 &quot;버퍼링&quot;, &quot;일시 중지됨&quot; 또는 &quot;오류&quot;와 같이 다른 상태에서 &quot;재생 중&quot; 상태로 변경되면 전송됩니다. 재생 이벤트를 요청하려면 `sessionId` (다음 끝점 호출 페이로드):
@@ -236,6 +238,8 @@ curl -X 'POST' \
   ]
 }'
 ```
+
+성공한 응답은 200의 상태를 나타내며 콘텐츠를 포함하지 않습니다.
 
 재생 끝점 매개 변수 및 예제에 대한 자세한 내용은 Media Edge Swagger 파일을 참조하십시오.
 
@@ -270,7 +274,7 @@ curl -X 'POST' \
 }'
 ```
 
-세션 완료 끝점 매개 변수 및 예제에 대한 자세한 내용은 Media Edge Swagger 파일을 참조하십시오.
+성공한 응답은 200의 상태를 나타내며 콘텐츠를 포함하지 않습니다.
 
 ## 응답 코드
 
