@@ -3,8 +3,7 @@ keywords: Experience Platform;미디어 에지;인기 항목;날짜 범위
 solution: Experience Platform
 title: Media Edge API 시작하기
 description: Media Edge API를 사용하면 개발자가 Media Edge Analytics 및 Customer Journey Analytics에 대한 데이터를 수집할 수 있습니다.
-exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%

@@ -3,8 +3,7 @@ keywords: Experience Platform;미디어 에지;인기 항목;날짜 범위
 solution: Experience Platform
 title: Media Edge API 시작하기
 description: Media Edge API 문제 해결 안내서
-exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 0%
