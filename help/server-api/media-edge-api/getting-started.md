@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Media Edge API 시작하기
 description: Media Edge API 시작하기
 exl-id: null
-source-git-commit: 8592bcc7a6d6700ec9b689b98d07a15f0b9301b2
+source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '963'
 ht-degree: 7%
 
 ---
@@ -101,18 +101,18 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 
 위의 예제 요청에서 `eventType` 값에 접두사 포함 `media` 에 따라 [경험 데이터 모델(XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ko-KR) 도메인을 지정합니다.
 
-또한 데이터 유형 매핑도 `eventType` 위의 예는 다음과 같습니다(보고 전용 필드는 페이로드에 없어야 함).
+또한 데이터 유형 매핑도 `eventType` 위의 예에서는 다음과 같습니다.
 
-| eventType | 데이터 형식 | 보고 전용 필드(무시됨) |
-| -------- | ------ | ---------- |
-| media세션 시작 | sessionDetails | ID, adCount, averageMinuteAudience,chapterCount, estimatedStreams, hasProgress10, hasProgress25, hasProgress50, hasProgress75, hasSegmentView, isCompleted, isDownloaded, isFederated, isPlayed, isViewed, pauseCount, pauseTime, secondsSinceLastCall, segment, timePlayed, totalTimePlayed, uniqueTimePlayed, pev3, pccr |
-| media.chapterStart | chapterDetails | ID, isCompleted, isStarted, timePlay |
-| media.adBreakStart | advertisingPodDetails | ID |
-| media.adStart | advertisingDetails | ID, isCompleted, isStarted, timePlay |
-| media.error | errorDetails | - |
-| media.statesUpdate | statesStart: 배열[playerStateData], statesEnd: 배열[playerStateData] | playerStateData.isSet, playerStateData.count, playerStateData.time |
-| media.sessionStart, media.chapterStart, media.adStart | 사용자 지정 메타데이터 | - |
-| 모두 | qoeDataDetails | bitrateAverage, bitrateAverageBucket, bitrateChangeCount, bufferTime, errorCount, externalErrors, hasBitrateChangeImpactedStreams, hasBufferImpactedStreams, hasErrorImpactedStreams, hasStallImpactedStreams, isDroppedBeforeStart, mediaSdkErrors, playerSdkErrors, stallCount, stallTime |
+| eventType | 데이터 형식 |
+| -------- | ------ |
+| media세션 시작 | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
+| media.chapterStart | [chapterDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/chapterdetails.schema.md) |
+| media.adBreakStart | [advertisingPodDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingpoddetails.schema.md) |
+| media.adStart | [advertisingDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingdetails.schema.md) |
+| media.error | [errorDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/errordetails.schema.md) |
+| media.statesUpdate | [statesStart](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmstatesstart): 배열[playerStateData], [statesEnd](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmstatesend): 배열[playerStateData] |
+| media.sessionStart, media.chapterStart, media.adStart | [사용자 지정 메타데이터](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmcustommetadata) |
+| 모두 | [qoeDataDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/qoedatadetails.schema.md) |
 
 ### 응답 예
 

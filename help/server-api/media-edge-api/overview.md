@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Media Edge API
 description: Media Edge API 개요.
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 5%
+source-wordcount: '391'
+ht-degree: 4%
 
 ---
 
@@ -25,7 +25,7 @@ Media Edge API는 Adobe Experience Platform(AEP)에 구축되어 의 프레임�
 
 ## 미디어 추적 데이터 흐름 최적화
 
-모두 [미디어 컬렉션](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en&amp;media-tracking-data-flows) API 및 Media Edge API는 미디어 추적 데이터를 RESTful 서비스로 제공합니다. 그러나 Media Edge 서비스를 사용하면 다음과 같은 이점이 있습니다.
+모두 [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en&amp;media-tracking-data-flows) 및 Media Edge API는 미디어 추적 데이터를 RESTful 서비스로 제공합니다. 그러나 Media Edge 서비스를 사용하면 다음과 같은 이점이 있습니다.
 
 * XDM 스키마를 데이터 흐름에 통합하는 가장 쉬운 방법입니다.
 
@@ -33,14 +33,14 @@ Media Edge API는 Adobe Experience Platform(AEP)에 구축되어 의 프레임�
 
 * 미디어 이벤트를 가장 효율적으로 추적합니다.
 
-다음 표는 다양한 Media Analytics 사례에 가장 적합한 Adobe API 서비스를 제공합니다.
+다음 표는 다양한 미디어 분석 사례에 대해 가능한 Adobe API 서비스를 보여 줍니다.
 
-| 사용 사례 | 플랫폼 | API 서비스 |
-| -------- | ------ | ---------- |
-| CJA | AEP | Media Edge |
-| CDP + CJA | AEP | Media Edge |
-| Analytics + CJA | AEP | Media Edge |
-| 이전 분석 | 해당 없음 | 미디어 컬렉션 |
+| 사용 사례 | API 서비스 |
+| -------- | ------ |
+| AEP 솔루션(CJA, RTDCP, AJO 등) | Media Edge |
+| CDP + CJA | Media Edge |
+| Adobe Analytics + AEP 솔루션 | Media Edge |
+| Adobe Analytics만(이미 추적) | 미디어 컬렉션 |
 
 >[!NOTE]
 >
