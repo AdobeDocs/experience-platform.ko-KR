@@ -5,7 +5,7 @@ title: 데이터를 Experience Platform에 수집
 type: Tutorial
 description: Adobe Experience Platform을 사용하면 데이터를 Parquet 파일 또는 알려진 XDM(Experience Data Model) 스키마를 준수하는 데이터의 형태로 배치 파일로 쉽게 가져올 수 있습니다.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 1%
@@ -110,7 +110,7 @@ Adobe Experience Platform을 사용하면 데이터를 로 쉽게 가져올 수 
 
 ![데이터 탭 추가](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
-## 파일 업로드
+## 파일 업로드 {#upload-file}
 
 업로드하려는 Parquet 또는 JSON 파일을 드래그 앤 드롭(또는 검색 및 선택)하면 [!DNL Platform] 은(는) 즉시 파일 및 의 처리를 시작합니다. **[!UICONTROL 업로드 중]** 대화 상자가 나타납니다. **[!UICONTROL 데이터 추가]** 파일 업로드 진행 상황을 보여 주는 탭입니다.
 

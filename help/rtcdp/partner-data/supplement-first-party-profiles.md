@@ -1,12 +1,12 @@
 ---
 title: (베타) 파트너가 제공한 속성으로 자사 프로필 보완
-description: 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완하여 데이터 기반을 개선하고, 고객 기반에 대한 새로운 통찰력을 얻고, 대상 최적화를 향상시키는 방법을 알아봅니다
+description: 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완하여 데이터 기반을 개선하고, 고객 기반에 대한 새로운 통찰력을 얻고, 대상 최적화를 향상시키는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 500475af5e7c80e670324a5c70ed18cc813199be
+source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1080'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 1. 로서의 **고객**, 다음에서 속성을 라이선스를 부여합니다. **데이터 파트너**.
 2. 로서의 **고객**, 를 포함하도록 프로필 데이터 및 거버넌스 모델을 확장합니다. **파트너**-제공된 특성입니다.
-3. 로서의 **고객**, 데이터 파트너에 보강할 대상을 온보딩합니다. 일반적으로 이러한 대상은 이메일, 이름, 주소 또는 기타 요소와 같은 PII(개인 식별 정보) 요소와 같은 입력 식별자에서 제외됩니다.
+3. 로서의 **고객**, 데이터 파트너와 함께 보강할 대상을 온보딩합니다. 일반적으로 이러한 대상은 이메일, 이름, 주소 또는 기타 요소와 같은 PII(개인 식별 정보) 요소와 같은 입력 식별자에서 제외됩니다.
 4. 다음 **파트너** 일치하는 수 있는 프로필에 대해 라이선스가 부여된 속성을 추가합니다. 필요한 경우 [파트너 ID](/help/identity-service/namespaces.md) 파트너 범위 ID 네임스페이스에 포함되고 수집될 수 있습니다.
 5. 로서의 **고객**, 데이터 파트너의 속성을 Real-Time CDP의 고객 프로필로 로드합니다.
 
@@ -50,15 +50,15 @@ ht-degree: 0%
 
 ### 파트너의 라이선스 속성 {#license-attributes-from-partner}
 
-이 단계는 전제 조건에서 다루며, Adobe은 사용자가 신뢰할 수 있는 데이터 공급업체와 적절한 계약 계약을 체결하여 자사 프로필을 보강했다고 가정합니다.
+이 단계는에서 다룹니다 [전제 조건](#prerequisites-and-planning) 및 Adobe은 사용자가 신뢰할 수 있는 데이터 공급업체와의 적절한 계약 계약을 체결하여 자사 프로필을 보강했다고 가정합니다.
 
 ### 파트너가 제공한 속성을 수용하도록 프로필 데이터 및 거버넌스 모델을 확장합니다. {#extend-governance-model}
 
 이제 파트너가 제공한 특성을 수용하도록 Real-Time CDP에서 데이터 관리 프레임워크를 확장합니다.
 
-의 새 스키마를 생성할 수 있는 옵션이 있습니다 **[!UICONTROL XDM 개별 프로필]** 파트너가 제공한 속성을 포함하도록 동일한 유형의 기존 스키마를 클래스화하거나 확장합니다. Adobe은 데이터 공급업체의 추가 속성을 가장 잘 나타내는 새 필드 그룹 세트로 새 스키마를 만들 것을 강력히 권장합니다. 이렇게 하면 데이터 스키마가 깔끔하고 서로 독립적으로 발전할 수 있습니다.
+의 새 스키마를 생성할 수 있는 옵션이 있습니다 **[!UICONTROL XDM 개별 프로필]** 파트너가 제공한 속성을 포함하도록 동일한 유형의 기존 스키마를 클래스화하거나 확장합니다. Adobe은 데이터 공급업체의 추가 속성을 가장 잘 나타내는 새 필드 그룹 세트로 새 스키마를 만들 것을 강력히 권장합니다. 이렇게 하면 데이터 스키마가 깔끔하고 서로 독립적으로 진화할 수 있습니다.
 
-Adobe에 파트너가 제공한 속성을 포함하기 위해 기대하는 속성으로 새 필드 그룹을 만들거나 파트너가 제공한 기본 필드 그룹 중 하나를 사용할 수 있습니다.
+Adobe에 파트너가 제공한 속성을 포함시키려면 기대하는 속성으로 새 필드 그룹을 생성하거나 파트너가 제공한 사전 구성된 필드 그룹 중 하나를 사용할 수 있습니다.
 
 자세한 내용은 아래 설명서 페이지를 참조하십시오.
 
@@ -79,7 +79,7 @@ Commenting out links for now
 또한 이 단계에서는 파트너가 제공한 타사 데이터를 포함하도록 데이터 관리 전략을 확장할 때 데이터 거버넌스 모델이 어떻게 변경되는지 생각해 보십시오. 아래 설명서 링크에서 고려 사항을 살펴보십시오.
 
 * (**곧 출시 예정**) 타사 데이터를 별도의 데이터 세트에 보관하여 쉽게 삭제하고 통합을 취소할 수 있습니다.
-* (**곧 출시 예정**) 데이터 위생 추가 기능을 구입한 클라이언트의 데이터 세트에서 TTL(Time-to-Live)을 사용합니다.
+* (**곧 출시 예정**) 사용 [TTL(유지 기간)](/help/hygiene/ui/dataset-expiration.md) 데이터 위생 추가 기능을 구입한 클라이언트의 데이터 세트에서.
 * (**곧 출시 예정**) 타사 데이터를 가져오는 파생 데이터 세트를 만들 때는 주의하십시오. 이렇게 하면 타사 데이터를 제거하는 유일한 솔루션은 파생된 데이터 세트 전체를 삭제하는 것이기 때문입니다.
 
 >[!TIP]
@@ -87,10 +87,9 @@ Commenting out links for now
 >데이터 공급업체의 개인 기반 식별자로 고객 프로필을 보완하도록 선택하는 경우 유형의 새 ID 유형을 만들 수 있습니다 **[[!UICONTROL 파트너 ID]](/help/identity-service/namespaces.md)**.
 >
 >에서 파트너 ID에 대해 자세히 알아보십시오. [id 유형 섹션](/help/identity-service/namespaces.md).
-> 읽어보기 [id 필드를 정의하는 방법](/help/xdm/ui/fields/identity.md) Experience Platform 사용자 인터페이스에서 다음을 수행합니다.
+>읽어보기 [id 필드를 정의하는 방법](/help/xdm/ui/fields/identity.md) Experience Platform 사용자 인터페이스에서 다음을 수행합니다.
 
-
-### PII(개인 식별 정보) 또는 해시된 PII에서 보강할 대상을 내보냅니다. {#export-audiences}
+### PII(개인 식별 정보) 또는 해시된 PII에서 처리된 경우 보강할 대상을 내보냅니다 {#export-audiences}
 
 파트너가 보강할 대상을 내보냅니다. Amazon S3 또는 SFTP와 같이 Real-Time CDP에서 제공하는 클라우드 스토리지 대상을 사용합니다. 다음 설명서 페이지를 읽고 이 단계를 완료하십시오.
 
@@ -99,10 +98,9 @@ Commenting out links for now
 * 방법 [대상에 연결](/help/destinations/ui/connect-destination.md)
 * 방법 [클라우드 스토리지 대상으로 데이터 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md)
 
+### 데이터 파트너는 일치하는 프로필에 대해 라이선스가 부여된 속성을 추가합니다. {#partner-appends-attributes}
 
-### 파트너는 일치하는 프로필에 대해 라이선스가 부여된 속성을 추가합니다. {#partner-appends-attributes}
-
-이 단계에서 파트너는 내보낸 대상에 대해 라이선스 속성을 추가합니다. 출력은 일반적으로 Real-Time CDP으로 다시 수집할 수 있는 플랫 파일로 사용할 수 있습니다.
+이 단계에서는 데이터 파트너가 내보낸 대상에 대해 라이선스 속성을 추가합니다. 출력은 일반적으로 Real-Time CDP으로 다시 수집할 수 있는 플랫 파일로 사용할 수 있습니다. 자세한 내용 [Real-Time CDP에 파일 수집](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
 
 ### Real-Time CDP은 보강된 속성을 고객 프로필에 추가합니다 {#ingest-data}
 
@@ -117,7 +115,7 @@ Commenting out links for now
 
 이 페이지에 설명된 사용 사례를 살펴볼 때 다음 제한 사항에 유의하십시오.
 
-파트너 ID를 사용하도록 선택하는 경우, 을 작성할 때 이러한 ID가 사용되지 않습니다 [id 그래프](/help/identity-service/ui/identity-graph-viewer.md).
+* 파트너 ID를 사용하도록 선택하는 경우, 을 작성할 때 이러한 ID가 사용되지 않습니다 [id 그래프](/help/identity-service/ui/identity-graph-viewer.md).
 
 ## 파트너 데이터 지원을 통해 달성한 기타 사용 사례 {#other-use-cases}
 
