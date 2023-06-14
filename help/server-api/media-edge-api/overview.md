@@ -3,10 +3,10 @@ keywords: Experience Platform;미디어 에지;인기 항목;날짜 범위
 solution: Experience Platform
 title: Media Edge API
 description: Media Edge API 개요.
-source-git-commit: 9d535c8d6524d61612581fbf82986bc5c5cf52de
+source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ Media Edge API는 Adobe Experience Platform(AEP)에 구축되어 의 프레임�
 
 * 포함 [Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko), 고객은 지속 시간, 시작 및 중지에 대한 세부 정보를 거의 실시간으로 가져와 미디어 지표를 평가하고 결합할 수 있습니다. Adobe Analytics에서 마이그레이션하는 고객은 CJA에서 모든 보고 지표를 사용할 수 있습니다.
 
-* 포함 [Adobe Real-time Customer Data Platform (CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ko), 고객은 미디어 사용량 데이터로 실시간 프로필을 보강할 수 있습니다.
+* 포함 [Adobe Real-time Customer Data Platform(RTCDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ko), 고객은 미디어 사용량 데이터로 실시간 프로필을 보강할 수 있습니다.
 
 * 포함 [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=en), 고객은 옴니채널 캠페인을 최적화하고 미디어 소비 신호로 여정을 자동화할 수 있습니다.
 
@@ -30,7 +30,7 @@ Media Edge API는 Adobe Experience Platform(AEP)에 구축되어 의 프레임�
 
 * 호출은 미디어 플레이어에서 [Experience Edge 플랫폼 네트워크](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
 
-* 미디어 이벤트를 가장 효율적으로 추적합니다.
+* 최소한의 서버 간 호출로 미디어 이벤트를 효율적으로 추적합니다.
 
 다음 표는 다양한 미디어 분석 사례에 대해 가능한 Adobe API 서비스를 보여 줍니다.
 
@@ -51,7 +51,7 @@ Media Edge API는 Adobe Experience Platform(AEP)에 구축되어 의 프레임�
 ![Media analytics 데이터 흐름](../assets/edge-api-dataflow.png)
 
 
-Media Edge API 사용에 대한 자세한 내용은 시작하기 설명서를 참조하십시오.
+Media Edge API 사용에 대한 자세한 내용은 [시작 설명서](getting-started.md).
 
 Platform Edge 작업에 대한 자세한 내용은 [Experience Platform 에지로 Media Analytics 설치](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
 

@@ -3,10 +3,10 @@ keywords: Experience Platform;미디어 에지;인기 항목;날짜 범위
 solution: Experience Platform
 title: Media Edge API 시작하기
 description: Media Edge API 시작하기
-source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
+source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
 workflow-type: tm+mt
-source-wordcount: '963'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 7%
 * sessionComplete
 * statesUpdate
 
-각 이벤트에는 자체 끝점이 있습니다. 모든 Media Edge API 끝점은 POST 메서드이며, 이벤트 데이터에 대한 JSON 요청 본문이 있습니다. Media Edge API 끝점, 매개 변수 및 예제에 대한 자세한 내용은 Media Edge Swagger 파일을 참조하십시오.
+각 이벤트에는 자체 끝점이 있습니다. 모든 Media Edge API 끝점은 POST 메서드이며, 이벤트 데이터에 대한 JSON 요청 본문이 있습니다. Media Edge API 끝점, 매개 변수 및 예제에 대한 자세한 내용은 [Media Edge Swagger 파일](swagger.md).
 
 이 안내서에서는 세션을 시작한 후 다음 이벤트를 추적하는 방법을 보여 줍니다.
 
@@ -43,7 +43,7 @@ ht-degree: 7%
 
 ## API 구현
 
-Media Edge API는 모델 및 호출된 경로의 사소한 차이점 외에도 Media Collection API와 동일합니다. Media Collection의 구현 세부 사항은 다음 설명서에 설명된 대로 Media Edge API에 계속 유효합니다.
+Media Edge API는 모델 및 호출된 경로의 사소한 차이점 외에도 Media Collection API와 동일한 구현을 가지고 있습니다. Media Collection의 구현 세부 사항은 다음 설명서에 설명된 대로 Media Edge API에 계속 유효합니다.
 
 * [플레이어에서 HTTP 요청 유형 설정](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Ping 이벤트 보내기](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
@@ -61,7 +61,7 @@ Media Edge API는 모델 및 호출된 경로의 사소한 차이점 외에도 M
 
 세션 시작 요청을 수행하기 전에 다음이 필요합니다.
 
-* 다음 `datastreamId` 는 POST 세션 시작 요청에 필요한 매개 변수입니다. 을(를) 검색하려면 `datastreamId`, 참조 [데이터 스트림 구성](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=ko-KR).
+* 다음 `datastreamId`- POST 세션 시작 요청의 필수 매개변수입니다. 을(를) 검색하려면 `datastreamId`, 참조 [데이터 스트림 구성](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=ko-KR).
 
 * 필요한 최소 데이터가 포함된 요청 페이로드에 대한 JSON 개체. (아래 예제 요청에 표시된 대로)
 
@@ -98,7 +98,7 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 }'
 ```
 
-위의 예제 요청에서 `eventType` 값에 접두사 포함 `media` 에 따라 [경험 데이터 모델(XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ko-KR) 도메인을 지정합니다.
+위의 예제 요청에서 `eventType` 값에 접두사 포함 `media.` 에 따라 [경험 데이터 모델(XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ko-KR) 도메인을 지정합니다.
 
 또한 데이터 유형 매핑도 `eventType` 위의 예에서는 다음과 같습니다.
 
@@ -165,7 +165,7 @@ x-content-type-options: nosniff
 
 위의 예제 응답에서 `sessionId` 다음으로 표시됨 `af8bb22766e458fa0eef98c48ea42c9e351c463318230e851a19946862020333`. 이 ID는 후속 이벤트 요청에서 필수 매개 변수로 사용됩니다.
 
-세션 시작 끝점 매개 변수 및 예제에 대한 자세한 내용은 Media Edge Swagger 파일을 참조하십시오.
+세션 시작 끝점 매개 변수 및 예제에 대한 자세한 내용은 [Media Edge Swagger](swagger.md) 파일.
 
 XDM 미디어 데이터 매개 변수에 대한 자세한 내용은 [미디어 세부 정보 스키마](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 
@@ -201,11 +201,12 @@ curl -X 'POST' \
 }'
 ```
 
-위의 예 요청에서도 동일합니다 `sessionId` 이전 호출에서 반환된 값은 버퍼 시작 요청에서 필수 매개 변수로 사용됩니다.
-
-버퍼 시작 끝점 매개 변수 및 예제에 대한 자세한 내용은 Media Edge Swagger 파일을 참조하십시오.
+위의 예제 요청에서도 동일합니다 `sessionId` 이전 호출에서 반환된 값은 버퍼 시작 요청에서 필수 매개 변수로 사용됩니다.
 
 성공한 응답은 200의 상태를 나타내며 콘텐츠를 포함하지 않습니다.
+
+버퍼 시작 끝점 매개 변수 및 예제에 대한 자세한 내용은 [Media Edge Swagger](swagger.md) 파일.
+
 
 ## 이벤트 요청 재생
 
@@ -240,7 +241,7 @@ curl -X 'POST' \
 
 성공한 응답은 200의 상태를 나타내며 콘텐츠를 포함하지 않습니다.
 
-재생 끝점 매개 변수 및 예제에 대한 자세한 내용은 Media Edge Swagger 파일을 참조하십시오.
+재생 끝점 매개 변수 및 예제에 대한 자세한 내용은 [Media Edge Swagger](swagger.md) 파일.
 
 ## 세션 완료 이벤트 요청
 
@@ -275,6 +276,8 @@ curl -X 'POST' \
 
 성공한 응답은 200의 상태를 나타내며 콘텐츠를 포함하지 않습니다.
 
+세션 완료 끝점 매개 변수 및 예제에 대한 자세한 내용은 [Media Edge Swagger](swagger.md) 파일.
+
 ## 응답 코드
 
 다음 표는 Media Edge API 요청으로 인해 발생할 수 있는 응답 코드를 보여 줍니다.
@@ -282,10 +285,10 @@ curl -X 'POST' \
 | 상태 | 설명 |
 | ---------- | --------- |
 | 200 | 세션이 정상적으로 생성되었습니다. |
-| 207 | Experience Edge Network에 연결된 서비스 중 하나에 문제가 있습니다(문제 해결 안내서의 자세한 내용 참조). |
+| 207 | Experience Edge Network에 연결된 서비스 중 하나에 문제가 있습니다( 자세한 내용은 [문제 해결 안내서](troubleshooting.md)) |
 | 레벨 | 잘못된 요청 |
 | 레벨 | 서버 오류 |
 
-오류 및 실패한 응답 코드 처리에 대한 자세한 내용은 Media Edge 문제 해결 안내서를 참조하십시오.
+오류 및 실패한 응답 코드 처리에 대한 자세한 내용은 [Media Edge 문제 해결 안내서](troubleshooting.md).
 
 
