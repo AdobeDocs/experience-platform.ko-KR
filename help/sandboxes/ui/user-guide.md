@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 샌드박스 UI 안내서
 description: 이 문서에서는 Adobe Experience Platform 사용자 인터페이스에서 샌드박스와 관련된 다양한 작업을 수행하는 방법에 대한 단계를 설명합니다.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
 workflow-type: tm+mt
-source-wordcount: '816'
-ht-degree: 8%
+source-wordcount: '953'
+ht-degree: 7%
 
 ---
 
@@ -77,7 +77,30 @@ Experience Platform에서 샌드박스를 사용하는 방법에 대한 빠른 �
 
 >[!WARNING]
 >
->다음은 기본 프로덕션 샌드박스 또는 사용자가 만든 프로덕션 샌드박스를 재설정하지 못하도록 할 수 있는 예외 목록입니다. <ul><li>샌드박스에서 ID 그래프가 호스팅되는 경우 Adobe Analytics이 기본 프로덕션 샌드박스를 재설정할 수 없습니다. [CDA(Cross Device Analytics)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 기능.</li><li>샌드박스에서 ID 그래프가 호스팅되는 경우 Adobe Audience Manager이 기본 프로덕션 샌드박스를 재설정할 수 없습니다. [사용자 기반 대상(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).</li><li>기본 프로덕션 샌드박스가 CDA와 PBD 기능 모두에 대한 데이터를 포함하는 경우 재설정할 수 없습니다.</li><li>Adobe Audience Manager 또는 Audience Core Service와 공유하는 양방향성 세그먼트에 사용되는 사용자가 만든 프로덕션 샌드박스는 경고 메시지 후에 재설정할 수 있습니다.</li></ul>
+>다음은 기본 프로덕션 샌드박스 또는 사용자가 만든 프로덕션 샌드박스를 재설정하지 못하도록 할 수 있는 예외 목록입니다.
+>* 샌드박스에서 ID 그래프가 호스팅되는 경우 Adobe Analytics이 기본 프로덕션 샌드박스를 재설정할 수 없습니다. [CDA(Cross Device Analytics)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 기능.
+>* 샌드박스에서 ID 그래프가 호스팅되는 경우 Adobe Audience Manager이 기본 프로덕션 샌드박스를 재설정할 수 없습니다. [사용자 기반 대상(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
+>* 기본 프로덕션 샌드박스가 CDA와 PBD 기능 모두에 대한 데이터를 포함하는 경우 재설정할 수 없습니다.
+>* Adobe Audience Manager 또는 Audience Core Service와 공유하는 양방향성 세그먼트에 사용되는 사용자가 만든 프로덕션 샌드박스는 경고 메시지 후에 재설정할 수 있습니다.
+>* 샌드박스 재설정을 시작하기 전에 관련 대상 데이터가 제대로 정리되도록 컴포지션을 수동으로 삭제해야 합니다.
+
+### 대상 구성 삭제
+
+대상 구성은 현재 샌드박스 재설정 기능과 통합되지 않았으므로 샌드박스 재설정을 수행하기 전에 대상을 수동으로 삭제해야 합니다.
+
+선택 **[!UICONTROL 대상]** 왼쪽 탐색에서 을(를) 선택한 다음 **[!UICONTROL 컴포지션]**.
+
+![다음 [!UICONTROL 컴포지션] 의 탭 [!UICONTROL 대상] 작업 영역.](../images/ui/audiences.png)
+
+그런 다음 줄임표(`...`)을 클릭하여 첫 번째 대상자 옆에 있는 다음 을 선택합니다 **[!UICONTROL 삭제]**.
+
+![을 강조 표시하는 대상 메뉴 [!UICONTROL 삭제] 옵션을 선택합니다.](../images/ui/delete-composition.png)
+
+성공적인 삭제 확인이 표시되고 로 돌아갑니다. **[!UICONTROL 컴포지션]** 탭.
+
+모든 컴포지션을 사용하여 위의 단계를 반복합니다. 이렇게 하면 대상 인벤토리에서 모든 대상이 삭제됩니다. 모든 대상이 제거되면 샌드박스를 계속 재설정할 수 있습니다.
+
+### 샌드박스 재설정
 
 프로덕션 또는 개발 샌드박스를 재설정하면 샌드박스의 이름과 관련 권한을 유지하면서 해당 샌드박스(스키마, 데이터 세트 등)와 관련된 모든 리소스가 삭제됩니다. 이 &quot;클린&quot; 샌드박스는 액세스 권한이 있는 사용자가 동일한 이름으로 계속 사용할 수 있습니다.
 
