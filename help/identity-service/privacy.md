@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 있는 주제
 title: Identity 서비스에서 개인 정보 보호 요청 처리
 description: Adobe Experience Platform Privacy Service은 수많은 개인 정보 보호 규정에 명시된 대로 개인 데이터에 액세스하거나, 판매를 거부하거나, 삭제하기 위한 고객 요청을 처리합니다. 이 문서에서는 Identity 서비스에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: 1930d235b57b59f9967f9f53c8c1faf25cea9051
+source-git-commit: 74ef1e24c2b40103ac6cafdfd22cb6036cdbfd3e
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1015'
 ht-degree: 0%
 
 ---
