@@ -2,10 +2,10 @@
 title: Mailchimp 관심 범주
 description: Mailchimp(Intuit Mailchimp라고도 함)는 기업이 메일링 목록 및 이메일 마케팅 캠페인을 사용하여 연락처(고객, 고객 또는 기타 이해 당사자)를 관리하고 상담하는 데 사용하는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다. 이 커넥터를 사용하여 관심 분야 및 환경 설정에 따라 연락처를 정렬할 수 있습니다.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: cdbbd7fa3e8c0a2128823db7279dcb606f3c74db
+source-git-commit: f8ccf9303fbcb010225881942de5e672b4111072
 workflow-type: tm+mt
-source-wordcount: '2371'
-ht-degree: 0%
+source-wordcount: '2357'
+ht-degree: 1%
 
 ---
 
@@ -110,9 +110,9 @@ API 키의 예는 다음과 같습니다. `0123456789abcdef0123456789abcde-us14`
 
 대상에 인증하려면 아래의 필수 필드를 입력한 다음 을(를) 선택합니다. **[!UICONTROL 대상에 연결]**.
 
-| [!DNL Mailchimp] 대상 | [!DNL Mailchimp] |
+| 필드 | 설명 |
 | --- | --- |
-| **[!UICONTROL 사용자 이름]** | 사용자 [!DNL Salesforce Marketing Cloud] 도메인 접두사입니다. <br>예를 들어 도메인이 입니다.<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*,<br> 다음을 제공해야 합니다. `mcq4jrssqdlyc4lph19nnqgzzs84` 을 사용자 이름 값으로 설정합니다. |
+| **[!UICONTROL 사용자 이름]** | 사용자 [!DNL Mailchimp Interest Categories] 사용자 이름. |
 | **[!UICONTROL 암호]** | 사용자 [!DNL Mailchimp] **API 키**&#x200B;을 참조하십시오. [수집 [!DNL Mailchimp] 자격 증명](#gather-credentials) 섹션.<br> API 키는 다음 형식을 사용합니다. `{KEY}-{DC}`, 여기서 `{KEY}` 부분은에 언급된 값을 나타냅니다. [[!DNL Mailchimp] API 키](#gather-credentials) 섹션 및 `{DC}` 부분은 [[!DNL Mailchimp] 데이터 센터](#identify-data-center). <br>다음 중 하나를 제공할 수 있습니다. `{KEY}` 부분 또는 전체 양식입니다.<br> 예를 들어 API 키가 <br>*`0123456789abcdef0123456789abcde-us14`*,<br> 다음 중 하나를 제공할 수 있습니다&#x200B;*`0123456789abcdef0123456789abcde`*또는&#x200B;*`0123456789abcdef0123456789abcde-us14`*을 값으로 추가합니다. |
 
 {style="table-layout:auto"}
