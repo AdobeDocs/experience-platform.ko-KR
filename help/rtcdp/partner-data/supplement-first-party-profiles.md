@@ -4,9 +4,9 @@ description: 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
+source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Commenting out links for now
 또한 이 단계에서는 파트너가 제공한 타사 데이터를 포함하도록 데이터 관리 전략을 확장할 때 데이터 거버넌스 모델이 어떻게 변경되는지 생각해 보십시오. 아래 설명서 링크에서 고려 사항을 살펴보십시오.
 
 * (**곧 출시 예정**) 타사 데이터를 별도의 데이터 세트에 보관하여 쉽게 삭제하고 통합을 취소할 수 있습니다.
-* (**곧 출시 예정**) 사용 [TTL(유지 기간)](/help/hygiene/ui/dataset-expiration.md) 데이터 위생 추가 기능을 구입한 클라이언트의 데이터 세트에서.
+* (**곧 출시 예정**) 사용 [데이터 세트 만료](/help/hygiene/ui/dataset-expiration.md) 데이터 위생 추가 기능을 구입한 클라이언트를 위한 데이터 세트에 대한 기능입니다.
 * (**곧 출시 예정**) 타사 데이터를 가져오는 파생 데이터 세트를 만들 때는 주의하십시오. 이렇게 하면 타사 데이터를 제거하는 유일한 솔루션은 파생된 데이터 세트 전체를 삭제하는 것이기 때문입니다.
 
 >[!TIP]
