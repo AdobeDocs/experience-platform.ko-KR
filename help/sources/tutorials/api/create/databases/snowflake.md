@@ -1,22 +1,24 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Snowflake;snowflake
-solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 Snowflake 기반 연결 만들기
-type: Tutorial
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Snowflake에 연결하는 방법을 알아봅니다.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 6b9e5da9e552d93ff174d1d65dabb0ffd3128c1a
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '589'
 ht-degree: 1%
 
 ---
 
 # 만들기 [!DNL Snowflake] 를 사용한 기본 연결 [!DNL Flow Service] API
 
+>[!IMPORTANT]
+>
+>다음 [!DNL Snowflake] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
+
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 기본 연결을 만드는 단계를 안내합니다. [!DNL Snowflake] 사용 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+이 자습서에서는 기본 연결을 만드는 단계를 안내합니다. [!DNL Snowflake] 사용 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## 시작하기
 
@@ -42,10 +44,15 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 | `database` | 다음 [!DNL Snowflake] 데이터베이스에는 플랫폼으로 가져올 데이터가 포함되어 있습니다. |
 | `username` | 의 사용자 이름 [!DNL Snowflake] 계정입니다. |
 | `password` | 에 대한 암호 [!DNL Snowflake] 사용자 계정입니다. |
+| `role` | 에서 사용할 기본 액세스 제어 역할 [!DNL Snowflake] 세션. 역할은 지정된 사용자에게 이미 할당된 기존 역할이어야 합니다. 기본 역할은 입니다. `PUBLIC`. |
 | `connectionString` | 에 연결하는 데 사용되는 연결 문자열 [!DNL Snowflake] 인스턴스. 에 대한 연결 문자열 패턴입니다 [!DNL Snowflake] 은(는) `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 에 대한 연결 사양 ID [!DNL Snowflake] 은(는) `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 시작에 대한 자세한 내용은 다음을 참조하십시오. [[!DNL Snowflake] 문서](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>다음을 설정해야 합니다. `PREVENT_UNLOAD_TO_INLINE_URL` 플래그 지정 대상 `FALSE` 에서 데이터 언로드를 허용하려면 [!DNL Snowflake] Experience Platform 대상 데이터베이스.
 
 ## 기본 연결 만들기
 

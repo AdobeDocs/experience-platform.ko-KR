@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;흐름 서비스;흐름 서비�
 title: 흐름 서비스 API를 사용하여 소스에 대한 행 수준 데이터 필터링
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 소스 수준에서 데이터를 필터링하는 방법에 대한 단계를 다룹니다
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
+source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 2%
+source-wordcount: '782'
+ht-degree: 3%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 2%
 >행 수준 데이터 필터링에 대한 지원은 현재 다음 소스에서만 사용할 수 있습니다.
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
-
 
 이 자습서에서는 다음을 사용하여 소스에 대해 행 수준 데이터를 필터링하는 방법에 대한 단계를 제공합니다. [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

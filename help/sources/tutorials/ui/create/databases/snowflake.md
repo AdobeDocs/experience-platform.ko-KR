@@ -1,17 +1,21 @@
 ---
-keywords: Experience Platform;홈;인기 있는 주제;Snowflake
 title: UI에서 Snowflake 소스 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Snowflake 소스 연결을 만드는 방법을 알아봅니다.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
 
 # 만들기 [!DNL Snowflake] UI의 소스 연결
+
+>[!IMPORTANT]
+>
+>다음 [!DNL Snowflake] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
 
 이 자습서에서는 다음을 만드는 단계를 제공합니다 [!DNL Snowflake] Adobe Experience Platform 사용자 인터페이스를 사용하는 소스 커넥터입니다.
 
@@ -33,9 +37,14 @@ ht-degree: 2%
 | 데이터베이스 | 다음 [!DNL Snowflake] 데이터베이스에는 플랫폼으로 가져올 데이터가 포함되어 있습니다. |
 | 사용자 이름 | 의 사용자 이름 [!DNL Snowflake] 계정입니다. |
 | 암호 | 에 대한 암호 [!DNL Snowflake] 사용자 계정입니다. |
+| 역할 | 에서 사용할 기본 액세스 제어 역할 [!DNL Snowflake] 세션. 역할은 지정된 사용자에게 이미 할당된 기존 역할이어야 합니다. 기본 역할은 입니다. `PUBLIC`. |
 | 연결 문자열 | 에 연결하는 데 사용되는 연결 문자열 [!DNL Snowflake] 인스턴스. 에 대한 연결 문자열 패턴입니다 [!DNL Snowflake] 은(는) `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 이러한 값에 대한 자세한 내용은 [이 Snowflake 문서](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>다음을 설정해야 합니다. `PREVENT_UNLOAD_TO_INLINE_URL` 플래그 지정 대상 `FALSE` 에서 데이터 언로드를 허용하려면 [!DNL Snowflake] Experience Platform 대상 데이터베이스.
 
 ## Snowflake 계정 연결
 
