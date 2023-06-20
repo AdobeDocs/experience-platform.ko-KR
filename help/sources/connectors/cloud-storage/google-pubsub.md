@@ -1,15 +1,20 @@
 ---
 title: Google PubSub 소스 개요
 description: API 또는 사용자 인터페이스를 사용하여 Google PubSub를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '182'
 ht-degree: 0%
 
 ---
 
-# [!DNL Google PubSub]
+# [!DNL Google PubSub] 소스
+
+>[!IMPORTANT]
+>
+>다음 [!DNL Google PubSub] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
 
 Adobe Experience Platform은 다음과 같은 클라우드 공급자를 위한 기본 연결을 제공합니다 [!DNL AWS], [!DNL Google Cloud Platform], 및 [!DNL Azure]를 사용하면 다운스트림 서비스 및 대상에서 사용할 수 있도록 이러한 시스템의 데이터를 플랫폼으로 가져올 수 있습니다.
 

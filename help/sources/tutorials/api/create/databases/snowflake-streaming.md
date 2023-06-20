@@ -3,9 +3,9 @@ title: Snowflake 스트리밍 계정을 Adobe Experience Platform에 연결
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Snowflake 스트리밍에 연결하는 방법에 대해 알아봅니다.
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: 8bc232034301fa713f61bd3f11fbde122afcdcf9
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '830'
 ht-degree: 2%
 
 ---
@@ -15,8 +15,7 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 >* 다음 [!DNL Snowflake] 스트리밍 소스는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
->* API 지원 [!DNL Snowflake] 스트리밍 소스는 Real-Time CDP Ultimate를 구매한 고객만 사용할 수 있습니다.
-
+>* 다음 [!DNL Snowflake] 스트리밍 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 API에서 사용할 수 있습니다.
 
 이 튜토리얼에서는 [!DNL Snowflake] 계정을 Adobe Experience Platform에 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 

@@ -1,15 +1,20 @@
 ---
 title: UI에서 Google PubSub 소스 연결 만들기
 description: Platform 사용자 인터페이스를 사용하여 Google PubSub 소스 커넥터를 만드는 방법을 알아봅니다.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 79149274c28507041ad89be9d7afdefaedb6aaa0
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
 
 # 만들기 [!DNL Google PubSub] UI의 소스 연결
+
+>[!IMPORTANT]
+>
+>다음 [!DNL Google PubSub] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
 
 이 자습서에서는 다음을 만드는 단계를 제공합니다 [!DNL Google PubSub] (이하 &quot;라고 한다)[!DNL PubSub]&quot;) Platform 사용자 인터페이스를 사용합니다.
 

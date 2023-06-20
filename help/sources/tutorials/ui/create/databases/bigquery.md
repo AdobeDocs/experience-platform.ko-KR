@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Google Big Query;google Big Query;GBQ;gbq
-solution: Experience Platform
 title: UI에서 Google Big Query 소스 연결 만들기
-type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Google Big Query 소스 연결을 만드는 방법을 알아봅니다.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '455'
 ht-degree: 1%
 
 ---
 
 # 만들기 [!DNL Google Big Query] UI의 소스 연결
+
+>[!IMPORTANT]
+>
+>다음 [!DNL Google BigQuery] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
 
 Adobe Experience Platform의 소스 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 다음을 만드는 단계를 제공합니다 [!DNL Google Big Query] 플랫폼 사용자 인터페이스를 사용한 소스 연결.
 

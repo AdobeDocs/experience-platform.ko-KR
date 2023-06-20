@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Kinesis;kinesis;Amazon Kinesis;amazon kinesis
-solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 Amazon Kinesis 소스 연결 만들기
-type: Tutorial
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Amazon Kinesis 소스에 연결하는 방법을 알아봅니다.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '736'
 ht-degree: 1%
 
 ---
 
 # 만들기 [!DNL Amazon Kinesis] 흐름 서비스 API를 사용한 소스 연결
+
+>[!IMPORTANT]
+>
+>다음 [!DNL Amazon Kinesis] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
 
 이 자습서에서는 연결하는 단계를 안내합니다 [!DNL Amazon Kinesis] (이하 &quot;라고 한다)[!DNL Kinesis]&quot;) Experience Platform 대상, 사용 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

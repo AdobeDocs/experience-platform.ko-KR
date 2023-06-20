@@ -1,17 +1,20 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Amazon Redshift;Amazon redshift;redshift;Redshift
-solution: Experience Platform
 title: Amazon Redshift 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Amazon Redshift를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
-# [!DNL Amazon Redshift] 커넥터
+# [!DNL Amazon Redshift] 소스
+
+>[!IMPORTANT]
+>
+>다음 [!DNL Amazon Redshift] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 

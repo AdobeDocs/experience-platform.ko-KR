@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;홈;인기 항목;bigquery;Google;google;Google BigQuery
-solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 Google BigQuery 기본 연결 만들기
-type: Tutorial
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Google BigQuery에 연결하는 방법을 알아봅니다.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '534'
 ht-degree: 1%
 
 ---
 
 # 만들기 [!DNL Google BigQuery] 를 사용한 기본 연결 [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>다음 [!DNL Google BigQuery] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 

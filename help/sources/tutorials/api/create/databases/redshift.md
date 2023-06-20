@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;홈;인기 항목;redshift;Redshift;Amazon Redshift;amazon redshift
-solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 Amazon Redshift 기본 연결 만들기
-type: Tutorial
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Amazon Redshift에 연결하는 방법을 알아봅니다.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '508'
 ht-degree: 1%
 
 ---
 
 # 만들기 [!DNL Amazon Redshift] 를 사용한 기본 연결 [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>다음 [!DNL Amazon Redshift] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
@@ -34,6 +36,7 @@ ht-degree: 1%
 | **자격 증명** | **설명** |
 | -------------- | --------------- |
 | `server` | 와(과) 연계된 서버 [!DNL Amazon Redshift] 계정입니다. |
+| `port` | 이(가) 지원하는 TCP 포트 [!DNL Amazon Redshift] 서버는 를 사용하여 클라이언트 연결을 수신합니다. |
 | `username` | 와(과) 연계된 사용자 이름 [!DNL Amazon Redshift] 계정입니다. |
 | `password` | 과(와) 연계된 암호 [!DNL Amazon Redshift] 계정입니다. |
 | `database` | 다음 [!DNL Amazon Redshift] 액세스 중인 데이터베이스입니다. |
@@ -67,34 +70,36 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "amazon-redshift base connection",
-        "description": "base connection for amazon-redshift,
-        "auth": {
-            "specName": "Basic Authentication",
-            "params": {
-                "server": "{SERVER}",
-                "database": "{DATABASE}",
-                "password": "{PASSWORD}",
-                "username": "{USERNAME}"
-            }
-        },
-        "connectionSpec": {
-            "id": "3416976c-a9ca-4bba-901a-1f08f66978ff",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "amazon-redshift base connection",
+      "description": "base connection for amazon-redshift,
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "{SERVER}",
+              "port": "{PORT},
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "database": "{DATABASE}"
+          }
+      },
+      "connectionSpec": {
+          "id": "3416976c-a9ca-4bba-901a-1f08f66978ff",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | 속성 | 설명 |
 | ------------- | --------------- |
 | `auth.params.server` | 사용자 [!DNL Amazon Redshift] 서버입니다. |
+| `auth.params.port` | 이 작동하는 TCP 포트 [!DNL Amazon Redshift] 서버는 를 사용하여 클라이언트 연결을 수신합니다. |
 | `auth.params.database` | 와 연계된 데이터베이스 [!DNL Amazon Redshift] 계정입니다. |
 | `auth.params.password` | 과(와) 연계된 암호 [!DNL Amazon Redshift] 계정입니다. |
 | `auth.params.username` | 와(과) 연계된 사용자 이름 [!DNL Amazon Redshift] 계정입니다. |
