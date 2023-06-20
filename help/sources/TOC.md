@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: b5a6853c13b151a8754245cd4316a0de75e23e82
+source-git-commit: 68c6d579d43b4137e3107d3ab102300dc8304c90
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '991'
 ht-degree: 11%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 11%
       - [Analytics 소스](connectors/adobe-applications/analytics.md)
       - [Audience Manager 소스](connectors/adobe-applications/audience-manager.md)
       - [Adobe Campaign Managed Cloud Services 소스](connectors/adobe-applications/campaign.md)
+      - [Adobe Commerce 소스](connectors/adobe-applications/commerce.md)
       - [고객 특성 소스](connectors/adobe-applications/customer-attributes.md)
       - [데이터 수집 소스](connectors/adobe-applications/data-collection.md)
       - [Workfront 소스](connectors/adobe-applications/workfront.md)
