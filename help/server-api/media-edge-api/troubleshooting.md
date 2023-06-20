@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;미디어 에지;인기 항목;날짜 범위
 solution: Experience Platform
 title: Media Edge API 시작하기
 description: Media Edge API 문제 해결 안내서
-source-git-commit: f723114eebc9eb6bfa2512b927c5055daf97188b
+source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -22,10 +21,10 @@ ht-degree: 0%
 
 ## 세션 시작 확인
 
-세션 시작 요청을 작성하는 데 발생하는 대부분의 문제는 207 다중 상태 응답입니다.
+세션 시작 요청과 관련된 대부분의 문제는 207 다중 상태 응답으로 이어집니다.
 페이로드는 Experience Edge Network Server API의 치명적이지 않은 오류와 유사합니다. 모든 Media Analytics 오류의 유형은 다음과 같습니다.  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. 응답에 표시된 숫자는 오류 상태에 해당합니다.
 
-다음 예는 세션 시작 요청에 대한 응답 본문을 보여줍니다. 둘 다 필수 필드가 없고 응답 본문이 잘못되었습니다.
+다음 예는 필수 필드가 없고 세션 시작 요청에 잘못된 응답 본문을 보여줍니다.
 
 ```
 {

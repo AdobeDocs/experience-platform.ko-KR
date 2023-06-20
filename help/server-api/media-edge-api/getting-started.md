@@ -1,61 +1,60 @@
 ---
-keywords: Experience Platform;미디어 에지;인기 항목;날짜 범위
 solution: Experience Platform
 title: Media Edge API 시작하기
 description: Media Edge API 시작하기
-source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
+source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '960'
+ht-degree: 6%
 
 ---
 
 
 # Media Edge API 시작
 
-이 안내서에서는 Media Edge API 서비스와 성공적인 초기 상호 작용을 수행하기 위한 지침을 제공합니다. 여기에는 미디어 세션을 시작한 다음 Customer Journey Analytics(CJA)와 같은 Adobe Experience Platform(AEP) 솔루션으로 전송된 이벤트를 추적하는 작업이 포함됩니다. Media Edge API 서비스는 세션 시작 끝점으로 시작됩니다. 세션이 시작되면 다음 이벤트 중 하나 이상을 추적할 수 있습니다.
+이 안내서에서는 Media Edge API 서비스와 성공적인 초기 상호 작용을 수행하기 위한 지침을 제공합니다. 여기에는 미디어 세션을 시작한 다음 Customer Journey Analytics(CJA)와 같은 Adobe Experience Platform 솔루션으로 전송된 이벤트를 추적하는 작업이 포함됩니다. Media Edge API 서비스는 세션 시작 끝점으로 시작됩니다. 세션이 시작되면 다음 이벤트 중 하나 이상을 추적할 수 있습니다.
 
-* play
-* ping
-* bitrateChange
-* bufferStart
-* pauseStart
-* adBreakStart
-* adStart
-* adComplete
-* adSkip
-* adBreakComplete
-* chapterStart
-* chapterComplete
-* chapterSkip
-* 라는 오류가 표시됩니다
-* sessionEnd
-* sessionComplete
-* statesUpdate
+* `play`
+* `ping`
+* `bitrateChange`
+* `bufferStart`
+* `pauseStart`
+* `adBreakStart`
+* `adStart`
+* `adComplete`
+* `adSkip`
+* `adBreakComplete`
+* `chapterStart`
+* `chapterComplete`
+* `chapterSkip`
+* `error`
+* `sessionEnd`
+* `sessionComplete`
+* `statesUpdate`
 
 각 이벤트에는 자체 끝점이 있습니다. 모든 Media Edge API 끝점은 POST 메서드이며, 이벤트 데이터에 대한 JSON 요청 본문이 있습니다. Media Edge API 끝점, 매개 변수 및 예제에 대한 자세한 내용은 [Media Edge Swagger 파일](swagger.md).
 
 이 안내서에서는 세션을 시작한 후 다음 이벤트를 추적하는 방법을 보여 줍니다.
 
-* 버퍼 시작
-* 재생
-* 세션 완료
+* [버퍼 시작](#buffer-start-event-request)
+* [재생](#play-event-request)
+* [세션 완료](#session-complete-event-request)
 
-## API 구현
+## API 구현 {#implement-api}
 
-Media Edge API는 모델 및 호출된 경로의 사소한 차이점 외에도 Media Collection API와 동일한 구현을 가지고 있습니다. Media Collection의 구현 세부 사항은 다음 설명서에 설명된 대로 Media Edge API에 계속 유효합니다.
+Media Edge API는 모델 및 호출된 경로에서 사소한 차이점을 제외하고 와 동일한 구현을 갖습니다. [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en). Media Collection의 구현 세부 사항은 다음 설명서에 설명된 대로 Media Edge API에 계속 유효합니다.
 
 * [플레이어에서 HTTP 요청 유형 설정](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Ping 이벤트 보내기](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [시간 제한 조건](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html?lang=en)
 * [이벤트 순서 제어](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html?lang=en)
 
-## Authorization
+## Authorization {#authorization}
 
 현재 Media Edge API는 요청에 인증 헤더가 필요하지 않습니다.
 
 
-## 세션 시작
+## 세션 시작 {#start-session}
 
 서버에서 미디어 세션을 시작하려면 세션 시작 끝점을 사용합니다. 성공적인 응답에는 다음이 포함됩니다. `sessionId`: 후속 이벤트 요청에 필요한 매개 변수입니다.
 
@@ -104,7 +103,7 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 
 | eventType | 데이터 형식 |
 | -------- | ------ |
-| media세션 시작 | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
+| media.SessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
 | media.chapterStart | [chapterDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/chapterdetails.schema.md) |
 | media.adBreakStart | [advertisingPodDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingpoddetails.schema.md) |
 | media.adStart | [advertisingDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingdetails.schema.md) |
@@ -170,7 +169,7 @@ x-content-type-options: nosniff
 XDM 미디어 데이터 매개 변수에 대한 자세한 내용은 [미디어 세부 정보 스키마](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 
 
-## 버퍼 시작 이벤트 요청
+## 버퍼 시작 이벤트 요청 {#buffer-start}
 
 버퍼 시작 이벤트는 미디어 플레이어에서 버퍼링이 시작될 때 신호를 보냅니다. 버퍼 다시 시작은 API 서비스의 이벤트가 아닙니다. 대신 버퍼 시작 후 재생 이벤트가 전송될 때 추론됩니다. 버퍼 시작 이벤트를 요청하려면 `sessionId` (다음 끝점 호출 페이로드):
 
@@ -208,7 +207,7 @@ curl -X 'POST' \
 버퍼 시작 끝점 매개 변수 및 예제에 대한 자세한 내용은 [Media Edge Swagger](swagger.md) 파일.
 
 
-## 이벤트 요청 재생
+## 이벤트 요청 재생 {#play-event}
 
 재생 이벤트는 미디어 플레이어가 &quot;버퍼링&quot;, &quot;일시 중지됨&quot; 또는 &quot;오류&quot;와 같이 다른 상태에서 &quot;재생 중&quot; 상태로 변경되면 전송됩니다. 재생 이벤트를 요청하려면 `sessionId` (다음 끝점 호출 페이로드):
 
@@ -243,7 +242,7 @@ curl -X 'POST' \
 
 재생 끝점 매개 변수 및 예제에 대한 자세한 내용은 [Media Edge Swagger](swagger.md) 파일.
 
-## 세션 완료 이벤트 요청
+## 세션 완료 이벤트 요청 {#session-complete}
 
 세션 완료 이벤트는 기본 콘텐츠의 끝에 도달하면 전송됩니다. 세션 완료 이벤트 요청을 수행하려면 다음을 사용하십시오. `sessionId` (다음 끝점 호출 페이로드):
 
@@ -289,6 +288,9 @@ curl -X 'POST' \
 | 레벨 | 잘못된 요청 |
 | 레벨 | 서버 오류 |
 
-오류 및 실패한 응답 코드 처리에 대한 자세한 내용은 [Media Edge 문제 해결 안내서](troubleshooting.md).
+## 이 기능에 대한 추가 도움말
+
+* [Media Edge 문제 해결 안내서](troubleshooting.md)
+* [Media Edge API 개요](overview.md)
 
 

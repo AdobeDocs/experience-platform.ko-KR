@@ -1,9 +1,8 @@
 ---
-keywords: Experience Platform;미디어 에지;인기 항목;날짜 범위
 solution: Experience Platform
 title: Media Edge API 시작하기
 description: Media Edge API를 사용하면 개발자가 Media Edge Analytics 및 Customer Journey Analytics에 대한 데이터를 수집할 수 있습니다.
-source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
+source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
@@ -15,6 +14,7 @@ ht-degree: 0%
 
 이 문서에는 JSON OAS(Open API Specification) 또는 &quot;Swagger&quot; 참조가 포함되어 있습니다. 이 사양을 복사하고 editor.swagger.io와 같은 렌더링 도구에 붙여넣어 Media Edge API 정보를 볼 수 있습니다. 이 사양은 각 끝점에 대한 매개 변수, 예 및 스키마를 포함합니다.
 
++++ Open API 사양을 보고 복사하려면 선택하십시오.
 
 ```
 {
@@ -3908,3 +3908,5 @@ ht-degree: 0%
   }
 }
 ```
+
++++
