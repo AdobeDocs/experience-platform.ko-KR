@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: f93ee2bc10135fee0c2d77629ee10901010b744b
+source-git-commit: b5a6853c13b151a8754245cd4316a0de75e23e82
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '988'
 ht-degree: 11%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 11%
    - Analytics {#analytics}
       - [Mixpanel 커넥터](connectors/analytics/mixpanel.md)
       - [펜도](connectors/analytics/pendo-webhook.md)
+      - [RainFocus](connectors/analytics/rainfocus.md)
    - 클라우드 스토리지 {#cloud-storage}
       - [Amazon Kinesis 커넥터](connectors/cloud-storage/kinesis.md)
       - [Amazon S3 커넥터](connectors/cloud-storage/s3.md)
@@ -60,6 +61,7 @@ ht-degree: 11%
       - [OneTrust 통합](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics 커넥터](connectors/crm/ms-dynamics.md)
+      - [SAP Hybris 커넥터](connectors/crm/sap-hybris.md)
       - [Salesforce 커넥터](connectors/crm/salesforce.md)
       - [SugarCRM 커넥터](connectors/crm/sugarcrm.md)
       - [Veeva CRM 커넥터](connectors/crm/veeva.md)
@@ -137,6 +139,7 @@ ht-degree: 11%
          - [OneTrust 통합](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
+         - [SAP Hybris](tutorials/api/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [SugarCRM 계정 및 연락처](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM 이벤트](tutorials/api/create/crm/sugarcrm-events.md)
@@ -237,6 +240,7 @@ ht-degree: 11%
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [펜도](tutorials/ui/create/analytics/pendo-webhook.md)
+         - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
       - 클라우드 스토리지 {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -256,6 +260,7 @@ ht-degree: 11%
          - [OneTrust 통합](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
+         - [SAP Hybris](tutorials/ui/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [SugarCRM 계정 및 연락처](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM 이벤트](tutorials/ui/create/crm/sugarcrm-events.md)
