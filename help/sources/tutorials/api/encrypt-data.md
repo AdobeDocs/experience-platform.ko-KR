@@ -1,12 +1,12 @@
 ---
 title: 암호화된 데이터 수집
-description: Adobe Experience Platform을 사용하면 클라우드 스토리지 배치 소스를 통해 암호화된 파일을 수집할 수 있습니다.
+description: API를 사용하여 클라우드 스토리지 일괄 처리 소스를 통해 암호화된 파일을 수집하는 방법에 대해 알아봅니다.
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: 8531459da97be648d0a63ffc2af77ce41124585d
+source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '1017'
 ht-degree: 2%
 
 ---
@@ -40,6 +40,29 @@ Adobe Experience Platform을 사용하면 클라우드 스토리지 배치 소�
 ### Platform API 사용
 
 Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../landing/api-guide.md).
+
+### 암호화된 파일에 대해 지원되는 파일 확장명
+
+암호화된 파일에 대해 지원되는 파일 확장자 목록은 다음과 같습니다.
+
+* .csv
+* .tsv
+* .json
+* .parquet
+* .csv.gpg
+* .tsv.gpg
+* .json.gpg
+* .parquet.gpg
+* .csv.pgp
+* .tsv.pgp
+* .json.pgp
+* .parquet.pgp
+* .gpg
+* .pgp
+
+>[!NOTE]
+>
+>Adobe Experience Platform Sources의 암호화된 파일 수집은 openPGP를 지원하며 PGP의 특정 독점 버전이 아닙니다.
 
 ## 암호화 키 쌍 만들기 {#create-encryption-key-pair}
 
@@ -112,11 +135,11 @@ curl -X POST \
 >[!NOTE]
 >
 >암호화된 데이터 수집을 위한 데이터 흐름을 만들려면 다음이 있어야 합니다.
+>
 >* [공개 키 ID](#create-encryption-key-pair)
 >* [소스 연결 ID](../api/collect/cloud-storage.md#source)
 >* [Target 연결 ID](../api/collect/cloud-storage.md#target)
 >* [ID 매핑](../api/collect/cloud-storage.md#mapping)
-
 
 데이터 흐름을 만들려면 다음에 대한 POST 요청을 만듭니다. `/flows` 의 엔드포인트 [!DNL Flow Service] API. 암호화된 데이터를 수집하려면 `encryption` 섹션에 대한 섹션 `transformations` 속성 및 포함 `publicKeyId` 이전 단계에서 만들어졌습니다.
 
