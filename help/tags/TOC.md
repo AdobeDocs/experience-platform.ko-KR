@@ -5,9 +5,9 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
+source-git-commit: 6e569ca3f83b374f88ca46fd8f2c40bbed203527
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1001'
 ht-degree: 32%
 
 ---
@@ -235,7 +235,7 @@ ht-degree: 32%
       * [!DNL Pinterest] {#pinterest}
          * [개요](./extensions/server/pinterest/overview.md)
       * [스냅 변환 API](https://exchange.adobe.com/apps/ec/108550)
-      * [Snowflake] {#snowflake}
+      * [!DNL Snowflake] {#snowflake}
          * [개요](./extensions/server/snowflake/overview.md)
       * [!DNL Splunk] {#splunk}
          * [개요](./extensions/server/splunk/overview.md)
