@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: a2b4ddae00ecdf33a12119810eca1ed19ace0c2f
+source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 18%
+source-wordcount: '278'
+ht-degree: 17%
 
 ---
 
@@ -60,6 +60,7 @@ ht-degree: 18%
    - [UI 개요](ui/overview.md)
    - [쿼리 편집기 사용 안내서](ui/user-guide.md)
    - [쿼리 템플릿](ui/query-templates.md)
+   - [매개 변수가 있는 쿼리(제한됨)](ui/parameterized-queries.md)
    - [쿼리 일정](ui/query-schedules.md)
    - [쿼리 로그](ui/query-logs.md)
    - [예약된 쿼리 모니터링](ui/monitor-queries.md)
@@ -86,6 +87,7 @@ ht-degree: 18%
    - [중첩 데이터 구조 작업](essential-concepts/nested-data-structures.md)
    - [중첩된 데이터 구조 평면화](essential-concepts/flatten-nested-data.md)
    - [익명 블록](essential-concepts/anonymous-block.md)
+   - [인라인 템플릿](essential-concepts/inline-templates.md)
    - [증분 로드](essential-concepts/incremental-load.md)
    - [데이터 중복 제거](essential-concepts/deduplication.md)
    - [데이터 세트 샘플](essential-concepts/dataset-samples.md)
