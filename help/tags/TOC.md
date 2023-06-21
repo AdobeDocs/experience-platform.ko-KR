@@ -5,10 +5,10 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: 852e0a87b93e640298c38aef7b3f1c255bf18896
+source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 31%
+source-wordcount: '1002'
+ht-degree: 32%
 
 ---
 
@@ -221,6 +221,8 @@ ht-degree: 31%
       * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)
       * Google Ads 향상된 전환 {#google-ads-enhanced-conversions}
          * [개요](./extensions/server/google-ads-enhanced-conversions/overview.md)
+      * Google Cloud 플랫폼 {#google-cloud-platform}
+         * [개요](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [개요](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
@@ -233,6 +235,8 @@ ht-degree: 31%
       * [!DNL Pinterest] {#pinterest}
          * [개요](./extensions/server/pinterest/overview.md)
       * [스냅 변환 API](https://exchange.adobe.com/apps/ec/108550)
+      * [Snowflake] {#snowflake}
+         * [개요](./extensions/server/snowflake/overview.md)
       * [!DNL Splunk] {#splunk}
          * [개요](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}

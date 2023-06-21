@@ -2,10 +2,10 @@
 title: 이벤트 전달 확장 참조
 description: Adobe Experience Platform에서 이벤트 전달 확장에 대한 설명서를 찾습니다.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 9470be59f8c84cb2b41e09010998de1ff8e5e7d9
+source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 19%
+source-wordcount: '184'
+ht-degree: 21%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 19%
 * [코어](./core/overview.md)
 * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)*
 * [Google Ads 향상된 전환](./google-ads-enhanced-conversions/overview.md)
+* [Google Cloud 플랫폼](./google-cloud-platform/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!DNL Meta] 전환 API](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
@@ -43,6 +44,7 @@ ht-degree: 19%
 * [Pega 고객 의사 결정 허브](https://exchange.adobe.com/apps/ec/107597)*
 * [[!DNL Pinterest]](./pinterest/overview.md)
 * [스냅 변환 API](https://exchange.adobe.com/apps/ec/108550)*
+* [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)
 * [[!DNL Zendesk] 이벤트 API](./zendesk/overview.md)
