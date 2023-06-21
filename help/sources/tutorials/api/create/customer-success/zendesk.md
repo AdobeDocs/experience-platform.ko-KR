@@ -1,23 +1,17 @@
 ---
-keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
-solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 Zendesk용 데이터 흐름 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Zendesk에 연결하는 방법을 알아봅니다.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '1966'
 ht-degree: 1%
 
 ---
 
-# (Beta) 데이터 흐름 만들기 [!DNL Zendesk] 사용 [!DNL Flow Service] API
+# 다음에 대한 데이터 흐름 만들기 [!DNL Zendesk] 사용 [!DNL Flow Service] API
 
->[!NOTE]
->
->다음 [!DNL Zendesk] 소스는 베타 버전입니다. 다음을 참조하십시오. [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
-
-다음 자습서에서는 가져올 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다 [!DNL Zendesk] 를 사용하여 데이터를 플랫폼에 전송 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+다음 자습서에서는 가져올 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다 [!DNL Zendesk] 를 사용하여 데이터를 플랫폼에 전송 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## 시작하기
 

@@ -1,20 +1,15 @@
 ---
-keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
-title: (베타) UI에서 Mixpanel 소스 연결 만들기
+title: UI에서 Mixpanel 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Mixpanel 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '874'
-ht-degree: 10%
+source-wordcount: '843'
+ht-degree: 11%
 
 ---
 
-# (Beta) [!DNL Mixpanel] UI의 소스 연결
-
->[!NOTE]
->
->다음 [!DNL Mixpanel] 소스는 베타 버전입니다. 다음을 참조하십시오. [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
+# 만들기 [!DNL Mixpanel] UI의 소스 연결
 
 이 자습서에서는 다음을 만드는 단계를 제공합니다 [!DNL Mixpanel] Adobe Experience Platform Platform 사용자 인터페이스를 사용한 소스 연결.
 

@@ -1,21 +1,16 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Zendesk;zendesk
-solution: Experience Platform
 title: Zendesk 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Zendesk를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '367'
 ht-degree: 2%
 
 ---
 
-# (베타) [!DNL Zendesk]
-
->[!NOTE]
->
->다음 [!DNL Zendesk] 소스는 베타 버전입니다. 다음을 참조하십시오. [소스 개요](../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
+# [!DNL Zendesk]
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
@@ -40,7 +35,7 @@ Experience Platform은 서드파티 고객 성공 애플리케이션에서 데�
 
 ![Zendesk API 토큰](../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-다음을 참조하십시오. [[!DNL Zendesk documentation on subdomains]](https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain-) 을 참조하십시오. API 토큰 생성에 대한 자세한 내용은 [[!DNL Zendesk] 새 API 토큰 생성에 대한 안내서](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token).
+다음을 참조하십시오. [[!DNL Zendesk documentation on subdomains]](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) 을 참조하십시오. API 토큰 생성에 대한 자세한 내용은 [[!DNL Zendesk] 새 API 토큰 생성에 대한 안내서](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>).
 
 아래 설명서는 연결 방법에 대한 정보를 제공합니다 [!DNL Zendesk] API 또는 사용자 인터페이스를 사용하여 Platform으로
 

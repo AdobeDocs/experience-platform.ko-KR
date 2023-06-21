@@ -1,20 +1,16 @@
 ---
-keywords: Experience Platform;홈;인기 있는 주제;
-title: (베타) Mixpanel 소스 커넥터 개요
+title: Mixpanel 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Mixpanel을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
+last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
 
-# (베타) [!DNL Mixpanel]
-
->[!NOTE]
->
->다음 [!DNL Mixpanel] 소스는 베타 버전입니다. 다음을 참조하십시오. [소스 개요](../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
+# [!DNL Mixpanel]
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
