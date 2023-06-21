@@ -3,9 +3,9 @@ title: 흐름 서비스 API를 사용하여 Azure Event Hubs 소스 연결 만�
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Azure Event Hubs 계정에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b76bc6ddb0d49bbd089627c8df8b31703d0e50b1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '773'
 ht-degree: 1%
 
 ---
@@ -104,6 +104,10 @@ curl -X POST \
 
 ## 소스 연결 만들기
 
+>[!TIP]
+>
+>An [!DNL Event Hubs] 소비자 그룹은 주어진 시간에 단일 흐름에만 사용할 수 있습니다.
+
 소스 연결은 데이터가 수집되는 외부 소스와의 연결을 만들고 관리합니다. 소스 연결은 데이터 소스, 데이터 형식 및 데이터 흐름을 만드는 데 필요한 소스 연결 ID와 같은 정보로 구성됩니다. 소스 연결 인스턴스는 테넌트 및 조직에만 해당됩니다.
 
 POST 소스 연결을 만들려면 `/sourceConnections` 의 엔드포인트 [!DNL Flow Service] API.
@@ -154,7 +158,7 @@ curl -X POST \
 | `params.eventHubName` | 에 대한 이름 [!DNL Event Hubs] 소스. |
 | `params.dataType` | 이 매개 변수는 수집되는 데이터의 유형을 정의합니다. 지원되는 데이터 유형은 다음과 같습니다. `raw` 및 `xdm`. |
 | `params.reset` | 이 매개 변수는 데이터를 읽는 방법을 정의합니다. 사용 `latest` 최신 데이터에서 읽기를 시작하고 `earliest` 스트림에서 사용 가능한 첫 번째 데이터에서 읽기를 시작합니다. 이 매개 변수는 선택 사항이며 기본값은 입니다. `earliest` 제공되지 않는 경우 |
-| `params.consumerGroup` | 에 사용할 게시 또는 구독 메커니즘 [!DNL Event Hubs]. 이 매개 변수는 선택 사항이며 기본값은 입니다. `$Default` 제공되지 않는 경우 다음을 참조하십시오. [[!DNL Event Hubs] 이벤트 소비자에 대한 안내서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) 추가 정보. |
+| `params.consumerGroup` | 에 사용할 게시 또는 구독 메커니즘 [!DNL Event Hubs]. 이 매개 변수는 선택 사항이며 기본값은 입니다. `$Default` 제공되지 않는 경우 다음을 참조하십시오. [[!DNL Event Hubs] 이벤트 소비자에 대한 안내서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) 추가 정보. **참고**: 안 [!DNL Event Hubs] 소비자 그룹은 주어진 시간에 단일 흐름에만 사용할 수 있습니다. |
 
 ## 다음 단계
 
