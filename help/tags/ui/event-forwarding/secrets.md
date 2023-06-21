@@ -2,10 +2,10 @@
 title: 이벤트 전달 시 암호 구성
 description: 이벤트 전달 속성에 사용되는 엔드포인트를 인증하도록 UI에서 보안을 구성하는 방법에 대해 알아봅니다.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
 workflow-type: tm+mt
-source-wordcount: '1763'
-ht-degree: 4%
+source-wordcount: '2182'
+ht-degree: 3%
 
 ---
 
@@ -13,14 +13,15 @@ ht-degree: 4%
 
 이벤트 전달 시 암호는 다른 시스템에 대한 인증 자격 증명을 나타내는 리소스이며, 이를 통해 데이터를 안전하게 교환할 수 있습니다. 비밀은 이벤트 전달 속성 내에서만 만들 수 있습니다.
 
-현재 지원되는 암호 유형은 다음 세 가지가 있습니다.
+현재 지원되는 비밀 유형은 다음과 같습니다.
 
 | 암호 유형 | 설명 |
 | --- | --- |
-| [!UICONTROL 토큰] | 두 시스템에서 알려지고 이해하는 인증 토큰 값을 나타내는 단일 문자 문자열입니다. |
+| [!UICONTROL Google OAuth 2] | 을(를) 지원하기 위한 몇 가지 속성을 포함합니다. [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 에서 사용할 인증 사양 [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) 및 [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
 | [!UICONTROL HTTP] | 사용자 이름과 암호에 대해 각각 두 개의 문자열 속성을 포함합니다. |
 | [!UICONTROL OAuth 2] | 을(를) 지원하기 위한 몇 가지 속성을 포함합니다. [클라이언트 자격 증명 부여 유형](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) 대상: [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 인증 사양입니다. 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
-| [!UICONTROL Google OAuth 2] | 을(를) 지원하기 위한 몇 가지 속성을 포함합니다. [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 에서 사용할 인증 사양 [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) 및 [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
+| [!UICONTROL OAuth 2 JWT] | 에 대한 JSON 웹 토큰(JWT) 프로필을 지원하는 몇 가지 속성을 포함합니다. [OAuth 2.0 인증](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) 부여됩니다. 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
+| [!UICONTROL 토큰] | 두 시스템에서 알려지고 이해하는 인증 토큰 값을 나타내는 단일 문자 문자열입니다. |
 
 {style="table-layout:auto"}
 
@@ -73,6 +74,7 @@ ht-degree: 4%
 * [[!UICONTROL 토큰]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth 2]](#oauth2)
+* [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL 토큰] {#token}
@@ -116,6 +118,40 @@ OAuth 2 암호를 만들려면 **[!UICONTROL OAuth 2]** 다음에서 **[!UICONTR
 완료되면 다음을 선택합니다. **[!UICONTROL 암호 만들기]** 비밀을 지키려고
 
 ![OAuth 2 오프셋 저장](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
+
+OAuth 2 JWT 암호를 만들려면 다음을 선택합니다. **[!UICONTROL OAuth 2 JWT]** 다음에서 **[!UICONTROL 유형]** 드롭다운입니다.
+
+![다음 [!UICONTROL 암호 만들기] 에서 OAuth 2 JWT 비밀이 강조 표시된 탭 [!UICONTROL 유형] 드롭다운입니다.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+
+>[!NOTE]
+>
+>유일한 [!UICONTROL 알고리즘] 현재 JWT에 서명하는 데 지원되는 것은 RS256입니다.
+
+아래에 표시되는 필드에서 을(를) 제공합니다. [!UICONTROL 발급자], [!UICONTROL 제목], [!UICONTROL 대상자], [!UICONTROL 사용자 정의 클레임], [!UICONTROL TL]을(를) 선택한 다음 [!UICONTROL 알고리즘] 드롭다운에서 을 클릭합니다. 다음으로, 다음을 입력합니다. [!UICONTROL 개인 키 ID], 및 [[!UICONTROL 토큰 URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 를 참조하십시오. 다음 [!UICONTROL 토큰 URL] 필드는 필수 필드가 아닙니다. 값이 제공되면 JWT는 액세스 토큰과 교환됩니다. 암호는 다음에 따라 새로 고쳐집니다. `expires_in` 응답 및 의 속성 [!UICONTROL 오프셋 새로 고침] 값. 값을 제공하지 않으면 가장자리로 밀린 비밀이 JWT입니다. 에 따라 JWT가 새로 고쳐집니다. [!UICONTROL TL] 및 [!UICONTROL 오프셋 새로 고침] 값.
+
+![다음 [!UICONTROL 암호 만들기] 선택한 입력 필드가 강조 표시된 탭입니다.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+
+아래 **[!UICONTROL 자격 증명 옵션]**, 다음과 같은 다른 자격 증명 옵션을 제공할 수 있습니다. `jwt_param` 키-값 쌍의 형식입니다. 키-값 쌍을 더 추가하려면 를 선택합니다. **[!UICONTROL 다른 항목 추가]**.
+
+![다음 [!UICONTROL 암호 만들기] 을 강조 표시하는 탭 [!UICONTROL 자격 증명 옵션] 필드.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+
+마지막으로 다음을 구성할 수 있습니다 **[!UICONTROL 오프셋 새로 고침]** 암호에 대한 값입니다. 시스템이 자동 새로 고침을 수행할 토큰 만료 전 시간(초)을 나타냅니다. 해당 시간(시간 및 분)은 필드 오른쪽에 표시되며 입력할 때 자동으로 업데이트됩니다.
+
+![다음 [!UICONTROL 암호 만들기] 을 강조 표시하는 탭 [!UICONTROL 오프셋 새로 고침] 필드.](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+
+예를 들어 새로 고침 오프셋이 기본값으로 설정된 경우 `1800` (30분) 및 액세스 토큰에 `expires_in` 값 `3600` (1시간) 시스템은 1시간 후에 암호를 자동으로 새로 고칩니다.
+
+>[!IMPORTANT]
+>
+>OAuth 2 JWT 암호는 새로 고침 사이에 최소 30분이 필요하며 최소 1시간 동안도 유효해야 합니다. 이 제한 사항은 생성된 토큰에 문제가 발생할 경우 개입할 수 있도록 최소 30분을 제공합니다.
+>
+>예를 들어 오프셋이 로 설정된 경우 `1800` (30분) 및 액세스 토큰에 `expires_in` / `2700` (45분) 30분 미만의 차이로 인해 교환이 실패합니다.
+
+완료되면 다음을 선택합니다. **[!UICONTROL 암호 만들기]** 비밀을 지키려고
+
+![다음 [!UICONTROL 암호 만들기] 탭 강조 표시 [!UICONTROL 암호 만들기]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
