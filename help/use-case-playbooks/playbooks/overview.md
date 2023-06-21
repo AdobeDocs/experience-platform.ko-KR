@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 사용 사례 플레이북 개요
 description: Experience Platform의 사용 사례 플레이북 기능을 사용하여 다양한 마케팅 사용 사례를 시작하는 방법에 대해 알아봅니다
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 2%
+source-wordcount: '400'
+ht-degree: 3%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 2%
 이 설명서 가이드의 내용은 다음과 같습니다.
 
 * **[사용 사례 플레이북 개요](#overview)**
+* [시작하기](/help/use-case-playbooks/playbooks/get-started.md)
 * [적합한 플레이북 살펴보기](/help/use-case-playbooks/playbooks/discover.md)
 * [플레이북 인스턴스 만들기, 공유 및 재사용](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [문제 해결 및 알려진 제한 사항](troubleshooting.md)

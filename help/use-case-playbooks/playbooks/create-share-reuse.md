@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 플레이북 인스턴스 만들기, 공유 및 재사용
 description: 플레이북 인스턴스를 생성, 공유 및 재사용하여 마케팅 사용 사례를 완수하는 방법을 알아봅니다.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 1%
@@ -64,11 +64,11 @@ ht-degree: 1%
 >
 >개체가 생성되면 데이터를 추가하여 개발 샌드박스에서 계속 테스트할 수 있습니다. 개발 샌드박스에서 원하는 만큼 에셋을 테스트할 수 있으며 준비가 되면 프로덕션 샌드박스에서 에셋 논리(세그먼트 정의, 여정, 스키마 등)를 복제할 수 있습니다.
 
-### 플레이북 재사용 {#reuse-playbooks}
+## 플레이북 재사용 {#reuse-playbooks}
 
 동일한 플레이북의 여러 인스턴스를 생성하면 이전 사용 사례 구현의 세부 사항을 수정하지 않고도 나중에 동일한 사용 사례를 구현할 수 있습니다.
 
-### 플레이북 및 생성된 에셋을 다른 팀 구성원과 공유 {#share-playbook}
+## 플레이북 및 생성된 에셋을 다른 팀 구성원과 공유 {#share-playbook}
 
 생성된 인스턴스 및 에셋을 다른 팀 구성원과 공유할 수 있습니다. 이렇게 하려면 브라우저에서 URL 링크를 복사하여 팀과 공유하여 생성된 에셋에 대한 개요를 제공합니다.
 
