@@ -3,9 +3,9 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 실시간 고객 프로필 API 안내서
 description: 실시간 고객 프로필 API를 통해 개발자는 프로필 보기, 병합 정책 만들기 및 업데이트, 프로필 데이터 내보내기 또는 샘플, 더 이상 필요하지 않거나 오류로 추가된 프로필 데이터 삭제 등을 포함하여 프로필 데이터를 탐색하고 작업할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '963'
 ht-degree: 1%
 
 ---
@@ -20,17 +20,17 @@ ht-degree: 1%
 
 작업에 대한 안내서용 [!DNL Real-Time Customer Profile] 의 데이터 [!DNL Experience Platform] UI, 다음을 참조하십시오. [프로필 사용 안내서](../ui/user-guide.md).
 
-<!-- ## (Alpha) Computed attributes {#computed-attributes}
+## [!BADGE 베타]{type=Informative} 계산된 속성 {#computed-attributes}
 
 >[!IMPORTANT]
 >
->Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
+>계산된 속성 기능은 Beta 버전이며 모든 사용자가 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
+계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 데 사용되는 함수입니다. 이러한 함수는 세그먼테이션, 활성화 및 개인화에서 사용할 수 있도록 자동으로 계산됩니다.
 
-Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. These computed attribute values can then be viewed in a profile, used to create a segment, or accessed through a number of different access patterns.
+계산된 각 속성에는 들어오는 데이터를 평가하고 결과 값을 프로필 속성에 저장하는 표현식 또는 &quot;규칙&quot;이 포함됩니다. 이러한 계산을 통해 정보가 필요할 때마다 복잡한 계산을 수동으로 수행하지 않고도 수명 기간 내 구매 가격, 구매 간격 또는 응용 프로그램 열기 수와 같은 질문과 관련된 질문에 쉽게 답변할 수 있습니다. 그런 다음 이러한 계산된 속성 값을 프로필에서 보거나, 세그먼트를 만드는 데 사용하거나, 다양한 액세스 패턴을 통해 액세스할 수 있습니다.
 
-You can create, view, edit, and delete computed attributes using the `config/computedAttributes` endpoint. To learn how to use computed attributes, refer to the [computed attributes overview](../computed-attributes/overview.md). For API operations, visit the [computed attributes API endpoint guide](../computed-attributes/ca-api.md). -->
+다음을 사용하여 계산된 속성을 작성, 보기, 편집 및 삭제할 수 있습니다. `ca/attributes/` 엔드포인트. 계산된 속성을 사용하는 방법에 대해 알아보려면 다음을 참조하십시오. [계산된 속성 개요](../computed-attributes/overview.md). API 작업은 다음을 참조하십시오. [계산된 속성 API 끝점 안내서](../computed-attributes/api.md).
 
 ## 가장자리 투영 {#edge-projections}
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 실시간 고객 프로필 UI 안내서
 description: 실시간 고객 프로파일은 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 다양한 채널의 데이터를 취합하여 각 개별 고객을 전체적으로 파악할 수 있도록 합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하기 위한 안내서 역할을 합니다.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 98854811e57c621a1c8de9146231f54c96e37a5d
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '2008'
 ht-degree: 0%
 
 ---
@@ -175,6 +175,14 @@ Experience Platform의 세그멘테이션에 대한 자세한 내용은 [Adobe E
 유니온 스키마에 대한 자세한 내용은 [유니온 스키마 UI 안내서](union-schema.md).
 
 ![유니온 스키마 탭이 강조 표시됩니다. 조직에 속한 결합 스키마가 표시됩니다.](../images/user-guide/union-schema.png)
+
+## 계산된 속성 {#computed-attributes}
+
+메인에서 **[!UICONTROL 프로필]** 메뉴에서 **[!UICONTROL 계산된 속성]** 조직 내에 속한 계산된 속성 목록을 보려면 탭을 사용하십시오.
+
+계산된 속성에 대한 자세한 내용은 [계산된 속성 개요](../computed-attributes/overview.md). Platform UI 내에서 계산된 속성을 사용하는 방법에 대한 자세한 내용은 [계산된 속성 UI 안내서](../computed-attributes/ui.md).
+
+이미지
 
 ## 다음 단계
 

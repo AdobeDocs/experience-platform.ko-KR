@@ -5,7 +5,7 @@ description: Adobe Experience Platform Segmentation Service API의 대상 엔드
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: f75c2c7ff07974cd0f2a5a8cc3e990c7f3eaa0a3
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 4%
@@ -62,7 +62,7 @@ GET /audiences?{QUERY_PARAMETERS}
 다음 요청은 조직에서 만든 마지막 5개의 대상을 검색합니다.
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=5 \
  -H 'Authorization:  Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id:  {IMS_ORG}' \
  -H 'x-api-key:  {API_KEY}' \
@@ -684,7 +684,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | -------- | ----------- | 
 | `audienceId` | 대상자의 ID입니다. 외부 대상자가 사용합니다. |
 | `name` | 대상자의 이름입니다. |
-| `namespace` |  |
+| `namespace` | |
 | `description` | 대상자에 대한 설명. |
 | `type` | 대상자가 플랫폼에서 생성되었는지 또는 외부에서 생성된 대상자인지 여부를 표시하는 시스템 생성 필드입니다. 가능한 값은 다음과 같습니다. `SegmentDefinition` 및 `ExternalAudience`. A `SegmentDefinition` 는 플랫폼에서 생성된 대상자를 참조하지만 `ExternalAudience` 는 플랫폼에서 생성되지 않은 대상을 나타냅니다. |
 | `lifecycle` | 대상의 상태입니다. 가능한 값은 다음과 같습니다. `draft`, `published`, `inactive`, 및 `archived`. `draft` 대상자를 만들 때 을 나타냅니다. `published` 대상자가 게시되면 `inactive` 대상이 더 이상 활성 상태가 아닌 경우 및 `archived` 대상자가 삭제되는 경우입니다. |
