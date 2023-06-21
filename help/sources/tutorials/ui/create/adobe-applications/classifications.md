@@ -5,10 +5,10 @@ solution: Experience Platform
 title: UI에서 분류 데이터에 대한 Adobe Analytics 소스 연결 만들기
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcebef97ba9cc667f80afd55980c5460912a56fb
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 6%
+source-wordcount: '628'
+ht-degree: 2%
 
 ---
 
@@ -72,12 +72,7 @@ Analytics 분류 데이터 커넥터 를 사용하려면 데이터를 새 로 �
 
 다음 **[!UICONTROL 데이터 세트 활동]** 이 페이지에는 일괄 처리 상태, 데이터 세트 ID 및 스키마에 대한 세부 정보를 포함하여 선택한 대상 데이터 세트에 대한 정보가 표시됩니다.
 
->[!IMPORTANT]
->
->다른 소스 커넥터에 대해 데이터 세트를 삭제하는 것은 가능하지만 현재 Analytics 분류 데이터 커넥터에 대해서는 이 기능이 지원되지 않습니다. 실수로 데이터 세트를 삭제하는 경우 Adobe 고객 지원 센터에 문의하십시오.
-
 ![](../../../../images/tutorials/create/classifications/dataset.png)
-
 
 ## 다음 단계
 
