@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 6월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b9d78cd726430b0c7690fdb814d0888aaad832f6
+source-git-commit: 77c7fbfba2a1ccc6df31abc2f6b926ed90942c4c
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '988'
 ht-degree: 5%
 
 ---
@@ -15,9 +15,19 @@ ht-degree: 5%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [Experience Platform API 인증](#authentication-platform-apis)
 - [데이터 수집](#data-collection)
+- [대상](#destinations)
 - [쿼리 서비스](#query-service)
 - [소스](#sources)
+
+## Experience Platform API 인증 {#authentication-platform-apis}
+
+Experience Platform API 사용자의 경우, 이제 API 끝점을 인증하고 호출하는 데 필요한 액세스 토큰을 얻는 방법이 간소화되었습니다. 액세스 토큰을 얻는 JWT 방법은 더 이상 사용되지 않으며 더 간단한 OAuth 서버 간 인증 방법으로 대체됩니다.<p>![액세스 토큰을 강조 표시하는 새로운 OAuth 인증 방법입니다.](/help/landing/images/api-authentication/oauth-authentication-method.png "액세스 토큰을 강조 표시하는 새로운 OAuth 인증 방법입니다."){width="100" zoomable="yes"}</p>
+
+JWT 인증 방법을 사용하는 기존 API 통합은 2025년 1월 1일까지 계속 작동하지만, Adobe은 해당 날짜 이전에 기존 통합을 새 OAuth 서버 간 수단으로 마이그레이션할 것을 강력히 권장합니다. 의 안내서 읽기 [서비스 계정(JWT) 자격 증명에서 OAuth 서버 간 자격 증명으로 마이그레이션](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+
+업데이트된 내용 읽기 [Experience Platform 인증 자습서](/help/landing/api-authentication.md) 추가 정보.
 
 ## 데이터 수집 {#data-collection}
 
@@ -35,6 +45,40 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 {style="table-layout:auto"}
 
 데이터 수집에 대해 자세히 알아보려면 [데이터 수집 개요](../../tags/home.md).
+
+## 대상 {#destinations}
+
+[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새 대상 또는 업데이트된 대상** {#new-updated-destinations}
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] 연결](../../destinations/catalog/advertising/amazon-ads.md) | 다음 [!DNL Amazon Ads] Adobe Experience Platform과의 통합은 이제 다양한 항목에 대한 지역 라우팅을 지원합니다 [!DNL Amazon Ads] 마켓플레이스요 자세한 내용 [대상 변경 로그](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
+
+{style="table-layout:auto"}
+
+<!-- 
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| Workspace support for [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinations. | You can now select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target for more information about workspaces. |
+
+{style="table-layout:auto"}
+
+-->
+
+<!--
+
+**Fixes and enhancements** {#destinations-fixes-and-enhancements}
+
+- Placeholder for fixes and enhancements
+
+-->
+
+대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md).
 
 ## 쿼리 서비스 {#query-service}
 
