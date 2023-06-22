@@ -3,10 +3,10 @@ keywords: target 개인화, 대상, experience platform 대상, adobe target 대
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 6ac48762dc9ea1cb77b04651275a3846411449ea
+source-git-commit: 3b2fedf4f7b17c4fb32afb5978bfac6f618f5bc3
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 8%
+source-wordcount: '1079'
+ht-degree: 7%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 8%
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
+| 2023년 6월 | 기능 및 설명서 업데이트 | 2023년 6월부터 새 Adobe Target 대상 연결을 구성할 때 대상을 공유할 Adobe Target 작업 영역을 선택할 수 있습니다. 다음을 참조하십시오. [연결 매개 변수](#parameters) 섹션에 자세히 설명되어 있습니다. 또한 다음에 대한 자습서를 참조하십시오. [작업 영역 구성](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) 작업 공간에 대한 자세한 내용은 Adobe Target을 참조하십시오. |
 | 2023년 5월 | 기능 및 설명서 업데이트 | 2023년 5월 현재 **[!UICONTROL Adobe Target]** 연결 지원 [속성 기반 개인화](../../ui/activate-edge-personalization-destinations.md#map-attributes) 및 는 일반적으로 모든 고객이 사용할 수 있습니다. |
 
 {style="table-layout:auto"}
@@ -80,12 +81,19 @@ Adobe Experience Platform은 자동으로 회사의 Adobe Target 인스턴스에
 
 ### 연결 매개 변수 {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_target_workspace"
+>title="Adobe Target 작업 영역 정보"
+>abstract="대상자를 공유할 Adobe Target 작업 영역을 선택합니다. 각 Adobe Target 연결에 대해 단일 작업 영역을 선택할 수 있습니다. 활성화하면 적용 가능한 Experience Platform 데이터 사용 레이블에 따라 대상자가 선택한 작업공간으로 라우팅됩니다."
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="Adobe Target 작업 공간에 대해 자세히 알아보기"
+
 While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정보를 제공해야 합니다.
 
 * **이름**: 이 대상의 기본 이름을 입력합니다.
 * **설명**: 대상에 대한 설명을 입력합니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다. 이 필드는 선택 사항입니다.
 * **데이터 스트림 ID**: 세그먼트를 포함할 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에는 Target 및 Adobe Experience Platform 서비스가 활성화된 데이터스트림만 표시됩니다. 다음을 참조하십시오 [데이터스트림 구성](../../../edge/datastreams/configure.md#aep) Adobe Experience Platform 및 Adobe Target용 데이터스트림을 구성하는 방법에 대한 자세한 내용
    * **[!UICONTROL 없음]**: Adobe Target 개인화를 구성해야 하지만 를 구현할 수 없는 경우 이 옵션을 선택하십시오. [Experience Platform Web SDK](../../../edge/home.md). 이 옵션을 사용하는 경우 Experience Platform에서 Target으로 내보낸 세그먼트는 다음 세션 개인화만 지원하며 에지 세분화는 비활성화됩니다. 자세한 내용은 아래 표를 참조하십시오.
+* **작업 영역**: Adobe Target 선택 [작업 영역](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) 대상자를 공유할 대상. 각 Adobe Target 연결에 대해 단일 작업 영역을 선택할 수 있습니다. 활성화 시 대상자는 적용 가능한 단계에 따라 선택한 작업공간으로 라우팅됩니다 [Experience Platform 데이터 사용 레이블](../../../data-governance/labels/overview.md).
 
 | 선택한 데이터 스트림 없음 | 데이터 스트림 선택됨 |
 |---|---|
