@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 역할 권한 관리
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 역할에 대한 권한을 구성하는 방법에 대해 설명합니다
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 9515527f5a2c250b0a9057aa37769431e3b6fa07
+source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 4%
@@ -101,7 +101,7 @@ UI의 역할에 사용할 수 있는 필터는 다음과 같습니다.
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
-## 역할에 대한 API 자격 증명 관리
+## 역할에 대한 API 자격 증명 관리 {#manage-api-credentials-for-role}
 
 다음 항목 선택 **[!UICONTROL API 자격 증명]** 탭을 사용하여 역할 API 자격 증명 페이지를 연 다음 를 선택합니다 **[!UICONTROL API 자격 증명 추가]** 을 눌러 역할에 API 자격 증명을 할당할 수 있습니다.
 
