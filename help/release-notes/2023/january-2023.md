@@ -175,7 +175,7 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 
 사용 중단 후, 세그먼트에서 적격한 프로필은 다음과 같이 표시됩니다. `Realized` 및 부적격 프로필은 계속 다음과 같이 표시됩니다. `Exited`. 이 경우 를 통해 파일 기반 대상과 동등해집니다. `Active` 및 `Expired` 세그먼트 상태.
 
-이 변경 사항은 을 사용하는 경우 사용자에게 영향을 줄 수 있습니다. [enterprise 대상](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) 및 에는 `Existing` 상태. 이러한 경우 다운스트림 통합을 검토하십시오. 특정 시간 이후에 새로 자격을 얻은 프로필을 식별하는 데 관심이 있다면 다음을 조합하여 사용하는 것을 고려해 보십시오. `Realized` 상태 및 `lastQualificationTime` 세그먼트 멤버십 맵에서 을 참조하십시오. 자세한 내용은 Adobe 담당자에게 문의하십시오.
+이 변경 사항은 을 사용하는 경우 사용자에게 영향을 줄 수 있습니다. [enterprise 대상](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) 및 에는 `Existing` 상태. 이러한 경우 다운스트림 통합을 검토하십시오. 특정 시간 이후에 새로 자격을 얻은 프로필을 식별하는 데 관심이 있는 경우 `Realized` 상태 및 `lastQualificationTime` 세그먼트 멤버십 맵에서 을 참조하십시오. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 
 프로필 데이터 작업을 위한 튜토리얼 및 모범 사례를 포함하여 실시간 고객 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md).
 
