@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 자주 묻는 질문
 description: 이 문서에는 쿼리 서비스와 관련된 일반적인 질문과 대답이 포함되어 있습니다. 주제에는 데이터 내보내기, 서드파티 도구 및 PSQL 오류가 포함됩니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '4383'
+source-wordcount: '4309'
 ht-degree: 1%
 
 ---
@@ -277,7 +277,7 @@ SELECT count(1) FROM myTableName
 
 또한 수행 방법에 대한 지침은 설명서를 확인해야 합니다 [UI의 예약된 쿼리](./ui/user-guide.md#scheduled-queries) 및 [api](./api/scheduled-queries.md).
 
-다음은 를 사용할 때 예약된 쿼리에 대한 고려 사항 목록입니다. [!DNL Query Editor]. 이 변수는 다음에 적용되지 않습니다 [!DNL Query Service] API:<br/>이미 생성, 저장 및 실행된 쿼리에만 일정을 추가할 수 있습니다.<br/>본인 **할 수 없음** 매개 변수가 있는 쿼리에 일정을 추가합니다.<br/>예약된 쿼리 **할 수 없음** 익명 블록을 포함합니다.<br/>예약만 가능합니다. **1** ui를 사용하여 템플릿을 쿼리합니다. 쿼리 템플릿에 일정을 추가하려면 API를 사용해야 합니다. API를 사용하여 일정이 이미 추가된 경우 UI를 사용하여 일정을 추가할 수 없습니다.
+을(를) 사용할 때 주의하십시오. [!DNL Query Editor] 이미 생성, 저장 및 실행된 쿼리에만 일정을 추가할 수 있습니다. 이는 에는 적용되지 않습니다. [!DNL Query Service] API.
 +++
 
 ### &quot;세션 제한에 도달했습니다.&quot; 오류는 무엇을 의미합니까?

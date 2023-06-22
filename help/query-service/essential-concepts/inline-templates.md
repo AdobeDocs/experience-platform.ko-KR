@@ -1,9 +1,9 @@
 ---
 title: 인라인 템플릿
 description: 인라인 템플릿을 사용하여 수많은 쿼리에서 여러 조건을 재사용하는 방법에 대해 알아봅니다.
-source-git-commit: f8ec94b4c93e3b36667bdb179ce12c10d20fa30f
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 1%
 
 >
 >
->Adobe Experience Platform UI 내에서 매개 변수가 있는 쿼리 형식의 인라인 템플릿은 상위 수준에서만 지원됩니다. 즉, 매개 변수가 있는 쿼리는 원래 템플릿에서 사용할 때만 작동합니다. 하위 템플릿은 정적 템플릿이어야 하며 동적 매개 변수를 가질 수 없습니다.
+>Adobe Experience Platform UI 내에서 매개 변수가 있는 쿼리 형식의 인라인 템플릿은 상위 수준에서만 지원됩니다. 즉, 매개 변수가 있는 쿼리는 원래 템플릿에서 사용할 때만 작동합니다. 하위 템플릿은 정적 템플릿이어야 하며 동적 매개 변수를 가질 수 없습니다. 다음을 참조하십시오. [매개 변수가 있는 쿼리 설명서](../ui/parameterized-queries.md) 자세히 알아보십시오.
 
 ## 다음 단계
 
