@@ -1,9 +1,9 @@
 ---
 title: 매개 변수가 있는 쿼리
 description: Adobe Experience Platform UI에서 매개 변수가 있는 쿼리를 사용하는 방법에 대해 알아봅니다.
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: d927f1f98c1f3a42907501921fcd2367241fa625
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,10 @@ UI에서 매개 변수가 있는 쿼리를 만들려면 쿼리 편집기로 이�
 
 매개 변수를 제거하고 쿼리가 이미 실행된 후 다시 실행하려고 하면 [!UICONTROL 쿼리 매개 변수] 섹션을 참조하십시오.
 
+>[!NOTE]
+>
+>쿼리에서 매개 변수를 사용하지 않는 경우에도 쿼리 편집기 내에 불필요한 매개 변수를 입력할 수 있습니다. 쿼리 편집기는 불필요한 키-값 쌍을 모두 무시하므로 쿼리 실행 또는 결과에 영향을 주지 않습니다.
+
 ![값 필드가 비어 있고 쿼리 매개 변수 오류가 강조 표시된 쿼리 편집기.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## 쿼리 로그 세부 정보를 사용하여 매개 변수 값 확인 {#check-parameter-values}
@@ -77,4 +81,4 @@ UI에서 매개 변수가 있는 쿼리를 만들려면 쿼리 편집기로 이�
 
 이 문서를 읽은 후에는 Adobe Experience Platform UI에서 쿼리를 매개 변수화하고 예약된 쿼리 실행에 사용하는 방법에 대해 알아보았습니다. 이 문서에서는 쿼리 실행에 사용되는 매개 변수 값에 대한 로그를 확인하는 방법도 강조했습니다.
 
-아직 이 문서를 보유하고 있지 않으면에 대한 안내서를 읽어 보는 것이 좋습니다 [예약된 쿼리 모니터링](./monitor-queries.md) Platform UI를 통해 모든 쿼리 작업의 상태를 더 잘 이해할 수 있습니다.
+다음으로, 의 안내서를 읽어 보시기 바랍니다. [예약된 쿼리 모니터링](./monitor-queries.md) Platform UI를 통해 모든 쿼리 작업의 상태를 더 잘 이해할 수 있습니다.
