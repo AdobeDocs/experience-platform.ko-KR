@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 6월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e56a6c2bac46778afcc24db8d51e77ec3700dd96
+source-git-commit: 5ee919390d759cc2a9418f636a46a516560fd5f0
 workflow-type: tm+mt
 source-wordcount: '1606'
 ht-degree: 5%
@@ -121,13 +121,15 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 쿼리 서비스를 사용하면 표준 SQL을 사용하여 Adobe Experience Platform 데이터 레이크의 데이터를 쿼리할 수 있습니다. 데이터 레이크에서 모든 데이터 세트에 참여하고 쿼리 결과를 보고 또는 Data Science Workspace에 사용하거나 실시간 고객 프로필에 수집하기 위한 새 데이터 세트로 캡처할 수 있습니다.
 
 **업데이트된 기능**
+
 | 기능 | 설명 |
 | --- | --- |
 | 인라인 템플릿 | 이제 쿼리 서비스에서 SQL 내의 다른 템플릿을 참조하는 템플릿 사용을 지원합니다. 쿼리에서 인라인 템플릿을 활용하여 워크로드를 줄이고 오류를 방지합니다. 명령문이나 조건을 재사용하고 중첩된 템플릿을 참조하여 SQL의 유연성을 높일 수 있습니다. 템플릿으로 저장할 수 있는 쿼리 크기나 원래 쿼리에서 참조할 수 있는 템플릿 수에는 제한이 없습니다. 자세한 내용은 [인라인 템플릿 안내서](../../query-service/essential-concepts/inline-templates.md). |
-| 예약된 쿼리 UI 업데이트 | UI의 한 위치에서 모든 예약된 쿼리를 [[!UICONTROL 예약된 쿼리 탭]](../../query-service/ui/monitor-queries.md#inline-actions). 다음 [!UICONTROL 예약된 쿼리] 인라인 쿼리 작업과 새 쿼리 상태 열의 추가로 UI가 개선되었습니다. 최근 추가 기능에는 일정을 활성화, 비활성화 및 삭제하거나, 다음에서 바로 예정된 쿼리 실행에 대한 경고를 구독할 수 있는 기능이 포함됩니다. [!UICONTROL 예약된 쿼리] 보기. <p>![인라인 작업이에서 강조 표시됨 [!UICONTROL 예약된 쿼리] 보기.](../../query-service/images/ui/monitor-queries/disable-inline.png "인라인 작업이에서 강조 표시됨 [!UICONTROL 예약된 쿼리] 보기."){width="100" zoomable="yes"}</p> |
+| 예약된 쿼리 UI 업데이트 | UI의 한 위치에서 모든 예약된 쿼리를 관리하려면 [[!UICONTROL 예약된 쿼리 탭]](../../query-service/ui/monitor-queries.md#inline-actions). 다음 [!UICONTROL 예약된 쿼리] 인라인 쿼리 작업과 새 쿼리 상태 열의 추가로 UI가 개선되었습니다. 최근 추가 기능에는 일정을 활성화, 비활성화 및 삭제하거나, 다음에서 바로 예정된 쿼리 실행에 대한 경고를 구독할 수 있는 기능이 포함됩니다. [!UICONTROL 예약된 쿼리] 보기. <p>![인라인 작업이에서 강조 표시됨 [!UICONTROL 예약된 쿼리] 보기.](../../query-service/images/ui/monitor-queries/disable-inline.png "인라인 작업이에서 강조 표시됨 [!UICONTROL 예약된 쿼리] 보기."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
-쿼리 서비스에 대한 &#x200B; 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md).
+
+쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md).
 
 ## 소스 {#sources}
 
