@@ -2,9 +2,9 @@
 title: 데이터 스트림 재정의 구성
 description: 데이터스트림 UI에서 데이터스트림 재정의를 구성하고 웹 SDK를 통해 활성화하는 방법에 대해 알아봅니다.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: d76d596818db67c99aca0606b6b6fb1a9aa977aa
+source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -121,6 +121,7 @@ alloy("sendEvent", {
     /* ... */
   },
   edgeConfigOverrides: {
+    datastreamId: "{DATASTREAM_ID}"
     com_adobe_experience_platform: {
       datasets: {
         event: {
@@ -148,6 +149,10 @@ alloy("sendEvent", {
 });
 ```
 
+| 매개변수 | 설명 |
+|---|---|
+| `edgeConfigOverrides.datastreamId` | 단일 요청이 로 정의된 데이터 스트림이 아닌 다른 데이터 스트림으로 이동할 수 있도록 하려면 이 매개 변수를 사용하십시오. `configure` 명령입니다. |
+
 ### 를 통해 구성 재정의 전송 `configure` 명령 {#send-configure}
 
 아래 예제는 다음에서 구성 재정의가 표시되는 모습을 보여 줍니다. `configure` 명령입니다.
@@ -157,7 +162,7 @@ alloy("configure", {
   defaultConsent: "in",
   edgeDomain: "etc",
   edgeBasePath: "ee",
-  edgeConfigId: "etc",
+  datastreamId: "{DATASTREAM_ID}",
   orgId: "org",
   debugEnabled: true,
   edgeConfigOverrides: {
