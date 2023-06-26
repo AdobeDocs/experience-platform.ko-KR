@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ID 서비스 API 안내서
 description: ID 서비스 API를 사용하면 개발자가 Adobe Experience Platform의 ID 그래프를 사용하여 크로스 디바이스, 크로스 채널 및 거의 실시간으로 고객을 식별할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 9f8ed1cc6460dacef7ca91b500a45c059ed1a295
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 3%
@@ -55,7 +55,7 @@ Adobe Experience Platform [!DNL Identity Service] 는 Adobe Experience Platform 
 
 현재 이 지원하는 두 개의 지역이 있습니다. [!DNL Identity Service] API: VA7 및 NLD2.
 
-아래 표는 영역을 사용하는 경로의 예를 보여 줍니다.
+아래 표는 영역을 사용하는 경로의 예를 보여줍니다.
 
 | 서비스 | 지역: VA7 | 지역: NLD2 |
 | ------ | -------- |--------- |
