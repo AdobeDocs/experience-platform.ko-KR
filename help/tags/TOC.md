@@ -5,10 +5,10 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: 6e569ca3f83b374f88ca46fd8f2c40bbed203527
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 32%
+source-wordcount: '1005'
+ht-degree: 31%
 
 ---
 
@@ -279,7 +279,7 @@ ht-degree: 32%
    * [이전 버전과의 호환성 표준](./extension-dev/backwards-compatibility.md)
 * Reactor API {#api}
    * [개요](./api/overview.md)
-   * [시작하기](./api/getting-started.md)
+   * [Reactor API 인증 및 액세스](./api/getting-started.md)
    * 엔드포인트 {#endpoints}
       * [회사](./api/endpoints/companies.md)
       * [속성](./api/endpoints/properties.md)

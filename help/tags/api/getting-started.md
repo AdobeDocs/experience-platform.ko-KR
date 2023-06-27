@@ -1,17 +1,17 @@
 ---
-title: Reactor API 시작하기
+title: Reactor API 인증 및 액세스
 description: 필요한 액세스 자격 증명을 생성하는 단계를 포함하여 Reactor API를 시작하는 방법에 대해 알아봅니다.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '921'
 ht-degree: 1%
 
 ---
 
-# Reactor API 시작하기
+# Reactor API 인증 및 액세스
 
-를 사용하려면 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/), 각 요청에는 다음 인증 헤더가 포함되어야 합니다.
+를 사용하려면 [반응기 API](https://developer.adobe.com/experience-platform-apis/references/reactor/) 태그 확장을 만들고 관리하려면 각 요청에는 다음 인증 헤더가 포함되어야 합니다.
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -19,11 +19,11 @@ ht-degree: 1%
 
 이 안내서에서는 Reactor API를 호출할 수 있도록 Adobe Developer 콘솔을 사용하여 이러한 각 헤더에 대한 값을 수집하는 방법을 다룹니다.
 
-## Adobe Experience Platform에 대한 개발자 액세스 권한 얻기
+## Adobe Experience Platform에 대한 개발자 액세스 권한 얻기 {#gain-developer-access}
 
-Reactor API에 대한 인증 값을 생성하려면 먼저 개발자에게 Experience Platform 액세스 권한이 있어야 합니다. 개발자 액세스 권한을 얻으려면 [Experience Platform 인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). &quot;사용자 액세스 권한 얻기&quot; 단계를 완료했으면 이 자습서로 돌아가서 Reactor API와 관련된 자격 증명을 생성합니다.
+Reactor API에 대한 인증 값을 생성하려면 먼저 개발자에게 Experience Platform 액세스 권한이 있어야 합니다. 개발자 액세스 권한을 얻으려면 [Experience Platform 인증 자습서](/help/landing/api-authentication.md). 을(를) 완료하면 [사용자 액세스 권한 얻기](/help/landing/api-authentication.md#gain-user-access) 단계: 이 자습서로 돌아가서 Reactor API와 관련된 자격 증명을 생성합니다.
 
-## 액세스 자격 증명 생성
+## 액세스 자격 증명 생성 {#generate-access-credentials}
 
 Adobe Developer 콘솔을 사용하여 다음 세 가지 액세스 자격 증명을 생성해야 합니다.
 
@@ -35,7 +35,7 @@ Adobe Developer 콘솔을 사용하여 다음 세 가지 액세스 자격 증명
 
 이러한 값을 생성하는 단계는 아래에 자세히 설명되어 있습니다.
 
-### 1회 설정
+### 1회 설정 {#one-time-setup}
 
 다음으로 이동 [Adobe Developer 콘솔](https://www.adobe.com/go/devs_console_ui) Adobe ID으로 로그인합니다. 다음은에 대한 자습서에 설명된 단계를 따릅니다. [빈 프로젝트 만들기](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) Developer Console 설명서에서 참조하십시오.
 
@@ -43,128 +43,83 @@ Adobe Developer 콘솔을 사용하여 다음 세 가지 액세스 자격 증명
 
 ![](../images/api/getting-started/add-api-button.png)
 
-다음 **API 추가** 화면이 나타납니다. 선택 **Experience Platform 반응기 API** 을(를) 선택하기 전에 사용 가능한 API 목록에서 **다음**.
+다음 **API 추가** 화면이 나타납니다. 선택 **EXPERIENCE PLATFORM LAUNCH API** 을(를) 선택하기 전에 사용 가능한 API 목록에서 **다음**.
 
 ![](../images/api/getting-started/add-launch-api.png)
 
-다음 화면에서는 새 키 쌍을 생성하거나 자신의 공개 키를 업로드할 때 JSON 웹 토큰(JWT) 자격 증명을 생성하라는 메시지가 표시됩니다. 이 자습서에서 **키 쌍 생성** 옵션을 선택한 다음 을 선택합니다 **키 쌍 생성** 오른쪽 하단에 있습니다.
+그런 다음 인증 유형을 선택하여 액세스 토큰을 생성하고 Experience Platform API에 액세스합니다.
 
-![](../images/api/getting-started/create-jwt.png)
-
-다음 화면에서는 키 쌍이 성공적으로 생성되었으며 공개 인증서와 개인 키가 포함된 압축 폴더가 컴퓨터에 자동으로 다운로드되었음을 확인합니다. 액세스 토큰을 생성하려면 이후 단계에서 이 개인 키가 필요합니다.
+>[!IMPORTANT]
+>
+>다음 항목 선택 **[!UICONTROL OAuth 서버 간]** 메서드, 즉 이 메서드만 향후 지원됩니다. 다음 **[!UICONTROL 서비스 계정(JWT)]** 메서드가 더 이상 사용되지 않습니다. JWT 인증 방법을 사용하는 통합은 2025년 1월 1일까지 계속 작동하지만, Adobe은 해당 날짜 이전에 기존 통합을 새 OAuth 서버 간 방법으로 마이그레이션할 것을 강력히 권장합니다. 섹션에서 추가 정보 가져오기 [!BADGE 더 이상 사용되지 않음]{type=negative}[JSON 웹 토큰(JWT) 생성](/help/landing/api-authentication.md#jwt) ( 플랫폼 API 인증 튜토리얼 ).
 
 계속하려면 **다음**&#x200B;을 선택합니다.
 
-![](../images/api/getting-started/keypair-generated.png)
+![OAuth 서버 간 인증 방법을 선택합니다.](/help/tags/images/api/getting-started/oauth-authentication-method.png)
 
 다음 화면에서는 API 통합과 연결할 제품 프로필을 하나 이상 선택하라는 메시지가 표시됩니다.
 
 >[!NOTE]
 >
->제품 프로필은 Adobe Admin Console을 통해 조직에서 관리하며 세분화된 기능에 대한 특정 권한 세트를 포함합니다. 제품 프로필 및 해당 권한은 조직 내에서 관리자 권한이 있는 사용자만 관리할 수 있습니다. API에 대해 선택할 제품 프로필을 모를 경우 관리자에게 문의하십시오.
+제품 프로필은 Adobe Admin Console을 통해 조직에서 관리하며 세분화된 기능에 대한 특정 권한 세트를 포함합니다. 제품 프로필 및 해당 권한은 조직 내에서 관리자 권한이 있는 사용자만 관리할 수 있습니다. API에 대해 선택할 제품 프로필을 모를 경우 관리자에게 문의하십시오.
 
 목록에서 원하는 제품 프로필을 선택한 다음 를 선택합니다 **구성된 API 저장** 를 클릭하여 API 등록을 완료합니다.
 
 ![](../images/api/getting-started/select-product-profile.png)
 
-API가 프로젝트에 추가되면 프로젝트 페이지가 Experience Platform Reactor API 페이지에 다시 나타납니다. 여기에서 아래로 스크롤하여 **서비스 계정(JWT)** 섹션: 모든 Reactor API 호출에 필요한 다음 액세스 자격 증명을 제공합니다.
+### 자격 증명 수집 {#gather-credentials}
 
-* **클라이언트 ID**: 클라이언트 ID는 필수입니다 `{API_KEY}` 에 제공해야 합니다. `x-api-key` 머리글입니다.
-* **조직 ID**: 조직 ID는 `{ORG_ID}` 에서 사용해야 하는 값 `x-gw-ims-org-id` 머리글입니다.
+API가 프로젝트에 추가되면 **[!UICONTROL EXPERIENCE PLATFORM API]** 프로젝트 페이지에는 모든 Experience Platform API 호출에 필요한 다음 자격 증명이 표시됩니다.
 
-![](../images/api/getting-started/access-creds.png)
+* `{API_KEY}` ([!UICONTROL 클라이언트 ID])
+* `{ORG_ID}` ([!UICONTROL 조직 ID])
 
-### 각 세션에 대한 인증
+![Developer Console에서 API 추가 후 통합 정보.](/help/tags/images/api/getting-started/api-integration-information.png)
 
-이제 다음 항목을 준비했습니다. `{API_KEY}` 및 `{ORG_ID}` 값, 마지막 단계는 `{ACCESS_TOKEN}` 값.
+### 액세스 토큰 생성 {#generate-access-token}
 
->[!NOTE]
+다음 단계는 를 생성하는 것입니다. `{ACCESS_TOKEN}` platform API 호출에 사용할 자격 증명입니다. 의 값과 다르게 `{API_KEY}` 및 `{ORG_ID}`Platform API를 계속 사용하려면 24시간마다 새 토큰을 생성해야 합니다.
+
+>[!TIP]
 >
->이러한 토큰은 24시간 후에 만료됩니다. 응용 프로그램에 이 통합을 사용하는 경우 응용 프로그램 내에서 전달자 토큰을 프로그래밍 방식으로 가져오는 것이 좋습니다.
+이러한 토큰은 24시간 후에 만료됩니다. 응용 프로그램에 이 통합을 사용하는 경우 응용 프로그램 내에서 전달자 토큰을 프로그래밍 방식으로 가져오는 것이 좋습니다.
 
 사용 사례에 따라 액세스 토큰을 생성하는 두 가지 옵션이 있습니다.
 
 * [토큰 수동 생성](#manual)
-* [프로그래밍 방식으로 토큰 생성](#program)
+* [토큰 생성 자동화](#auto-token)
 
 #### 액세스 토큰 수동으로 생성 {#manual}
 
-텍스트 편집기 또는 브라우저에서 이전에 다운로드한 개인 키를 열고 내용을 복사합니다. 그런 다음 Developer Console로 돌아가 개인 키를 **액세스 토큰 생성** 을 선택하기 전에 프로젝트에 대한 Reactor API 페이지의 섹션 **토큰 생성**.
+새 항목을 수동으로 생성하려면 `{ACCESS_TOKEN}`, 다음으로 이동 **[!UICONTROL 자격 증명]** > **[!UICONTROL OAuth 서버 간]** 및 선택 **[!UICONTROL 액세스 토큰 생성]**&#x200B;아래에 표시된 대로 를 클릭합니다.
 
-![](../images/api/getting-started/paste-private-key.png)
+![및 액세스 토큰이 Developer Console UI에서 생성되는 방식에 대한 화면 기록입니다.](/help/tags/images/api/getting-started/generate-access-token.gif)
 
-새 액세스 토큰이 생성되고, 토큰을 클립보드에 복사하기 위한 버튼이 제공된다. 이 값은 필수 항목에 사용됩니다. `Authorization` 헤더 및 를 형식으로 제공해야 합니다. `Bearer {ACCESS_TOKEN}`.
+새 액세스 토큰이 생성되고, 토큰을 클립보드에 복사하기 위한 버튼이 제공된다. 이 값은 필수 인증 헤더에 사용되며 형식으로 제공해야 합니다 `Bearer {ACCESS_TOKEN}`.
 
-![](../images/api/getting-started/token-generated.png)
+#### 토큰 생성 자동화 {#auto-token}
 
-#### 프로그래밍 방식으로 액세스 토큰 생성 {#program}
+Postman 환경 및 컬렉션을 사용하여 액세스 토큰을 생성할 수도 있습니다. 자세한 내용은 다음 섹션을 참조하십시오 [Postman을 사용하여 API 호출 인증 및 테스트](/help/landing/api-authentication.md#use-postman) Experience Platform API 인증 안내서에서 확인할 수 있습니다.
 
-응용 프로그램에 대한 통합을 사용하는 경우 API 요청을 통해 액세스 토큰을 프로그래밍 방식으로 생성할 수 있습니다. 이를 수행하려면 다음 값을 구해야 합니다.
+## API 자격 증명 테스트 {#test-api-credentials}
 
-* 클라이언트 ID(`{API_KEY}`)
-* 클라이언트 암호(`{SECRET}`)
-* JSON 웹 토큰(`{JWT}`)
-
-클라이언트 ID와 암호는 다음에서 보는 바와 같이 프로젝트의 기본 페이지에서 가져올 수 있습니다. [이전 단계](#one-time-setup).
-
-![](../images/api/getting-started/auto-access-creds.png)
-
-JWT 자격 증명을 획득하려면 다음으로 이동합니다. **서비스 계정(JWT)** 왼쪽 탐색에서 **JWT 생성** 탭. 이 페이지의 **사용자 지정 JWT 생성**&#x200B;개인 키의 내용을 제공된 텍스트 상자에 붙여 넣은 다음 을 선택합니다 **토큰 생성**.
-
-![](../images/api/getting-started/generate-jwt.png)
-
-원하는 경우 토큰을 테스트하는 데 사용할 수 있는 샘플 cURL 명령과 함께 생성된 JWT는 처리가 완료되면 아래에 표시됩니다. 사용 **복사** 단추를 클릭하여 토큰을 클립보드에 복사합니다.
-
-![](../images/api/getting-started/jwt-generated.png)
-
-자격 증명을 수집했으면 아래 API 호출을 애플리케이션에 통합하여 액세스 토큰을 프로그래밍 방식으로 생성할 수 있습니다.
-
-**요청**
-
-요청은 을(를) 보내야 합니다. `multipart/form-data` 페이로드에서 아래와 같이 인증 자격 증명을 제공합니다.
-
-```shell
-curl -X POST \
-  https://ims-na1.adobelogin.com/ims/exchange/jwt/ \
-  -H 'Content-Type: multipart/form-data' \
-  -F 'client_id={API_KEY}' \
-  -F 'client_secret={SECRET}' \
-  -F 'jwt_token={JWT}'
-```
-
-**응답**
-
-성공적인 응답은 새 액세스 토큰과 만료될 때까지 남은 시간(초)을 반환합니다.
-
-```json
-{
-  "token_type": "bearer",
-  "access_token": "{ACCESS_TOKEN}",
-  "expires_in": 86399999
-}
-```
-
-| 속성 | 설명 |
-| :-- | :-- |
-| `access_token` | 새로 생성된 액세스 토큰 값입니다. 이 값은 필수 항목에 사용됩니다. `Authorization` 헤더 및 를 형식으로 제공해야 합니다. `Bearer {ACCESS_TOKEN}`. |
-| `expires_in` | 토큰이 만료될 때까지 남은 시간(밀리초)입니다. 토큰이 만료되면 새 토큰을 생성해야 합니다. |
-
-{style="table-layout:auto"}
-
-## 다음 단계
-
-이 자습서의 단계에 따라에 대한 유효한 값이 있어야 합니다. `{ORG_ID}`, `{API_KEY}`, 및 `{ACCESS_TOKEN}`. 이제 Reactor API에 대한 간단한 cURL 요청에서 이러한 값을 사용하여 이러한 값을 테스트할 수 있습니다.
+이 자습서의 단계에 따라 다음에 대한 유효한 값이 있어야 합니다. `{ORG_ID}`, `{API_KEY}`, 및 `{ACCESS_TOKEN}`. 이제 Reactor API에 대한 간단한 cURL 요청에서 이러한 값을 사용하여 이러한 값을 테스트할 수 있습니다.
 
 에 대한 API 호출을 시도하여 시작합니다. [모든 회사 나열](./endpoints/companies.md#list).
 
 >[!NOTE]
 >
->조직에 회사가 없을 수 있으며, 이 경우 응답은 HTTP 상태 404(찾을 수 없음)가 됩니다. 403(사용할 수 없음) 오류가 발생하지 않는 한 액세스 자격 증명이 유효하며 작동합니다.
+조직에 회사가 없을 수 있으며, 이 경우 응답은 HTTP 상태 404(찾을 수 없음)가 됩니다. 403(사용할 수 없음) 오류가 발생하지 않는 한 액세스 자격 증명이 유효하며 작동합니다.
 
 액세스 자격 증명이 작동하는지 확인한 후 다른 API 참조 설명서를 계속 탐색하여 API의 다양한 기능을 알아보십시오.
 
-## 추가 리소스
+## 샘플 API 호출 읽기 {#read-sample-api-calls}
 
-JWT 라이브러리 및 SDK: [https://jwt.io/](https://jwt.io/)
+각 엔드포인트 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 포맷의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/api-guide.md#sample-api) ( Platform API 시작 안내서).
 
-Postman API 개발: [https://www.postman.com/](https://www.postman.com/)
+## 다음 단계 {#next-steps}
+
+사용할 헤더를 이해했으므로 이제 Reactor API를 호출할 준비가 되었습니다. 시작하려면 다음 끝점 안내서 중 하나를 선택하십시오.
+
+* [Reactor API 참조 설명서](https://developer.adobe.com/experience-platform-apis/references/reactor/)
+* [Reactor API 안내서 개요](/help/tags/api/overview.md)

@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Privacy Service 도움말
 breadcrumb-title: Privacy Service 안내서
 user-guide-description: GDPR 및 CPA와 같은 법적 개인정보 보호 규정을 준수하도록 고객 데이터 요청을 관리합니다.
 feature: Privacy
-source-git-commit: 5cb229b4b7609a566298d4ed8bf630447ff62700
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 52%
+source-wordcount: '93'
+ht-degree: 47%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 52%
 * [개인 정보 JS 라이브러리 개요](./js-library.md)
 * PRIVACY SERVICE API {#api}
    * [개요](./api/overview.md)
-   * [시작하기](./api/getting-started.md)
+   * [Privacy Service API 인증 및 액세스](./api/getting-started.md)
    * [개인 정보 작업](./api/privacy-jobs.md)
    * [동의](./api/consent.md)
    * [부록](./api/appendix.md)
