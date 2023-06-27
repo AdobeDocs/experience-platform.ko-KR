@@ -2,10 +2,10 @@
 title: offer decisioning을 통한 개인화
 description: Server API를 사용하여 Offer decisioning을 통해 개인화된 경험을 전달하고 렌더링하는 방법에 대해 알아봅니다.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 3047a03e7a911c48a6d4e4c07117af45fa78f678
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 2%
+source-wordcount: '580'
+ht-degree: 4%
 
 ---
 
@@ -16,6 +16,10 @@ ht-degree: 2%
 Edge Network Server API는에서 관리하는 개인화된 경험을 제공할 수 있습니다. [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) 웹 채널에 연결합니다.
 
 [!DNL Offer Decisioning] 은 활동 및 개인화 경험을 만들고, 활성화하고, 제공하기 위한 시각적이지 않은 인터페이스를 지원합니다.
+
+## 사전 요구 사항 {#prerequisites}
+
+을 통한 개인화 [!DNL Offer Decisioning] 은(는) 다음에 대한 액세스 권한이 있어야 합니다. [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=en) 통합을 구성하기 전에
 
 ## 데이터 스트림 구성 {#configure-your-datastream}
 
