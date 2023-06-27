@@ -45,7 +45,7 @@ ht-degree: 19%
 * [사용자의 역할에 레이블 지정](#label-roles): 마케팅 그룹이 외부 에이전시와 협력하는 의료 공급자(ACME 비즈니스 그룹)의 예를 사용합니다.
 * [리소스에 레이블 지정(스키마 필드 및 세그먼트)](#label-resources): 할당 **[!UICONTROL PHI/규제 상태 데이터]** 스키마 리소스 및 세그먼트에 레이블을 지정합니다.
 * 
-   * [이들을 함께 연결하는 정책을 활성화합니다. ](#policy): 리소스의 레이블을 역할의 레이블에 연결하여 스키마 필드 및 세그먼트에 대한 액세스를 금지하는 기본 정책을 활성화합니다. 그러면 레이블이 일치하는 사용자에게 모든 샌드박스의 스키마 필드 및 세그먼트에 대한 액세스 권한이 제공됩니다.
+   * [이들을 함께 연결하는 정책을 활성화합니다.](#policy): 리소스의 레이블을 역할의 레이블에 연결하여 스키마 필드 및 세그먼트에 대한 액세스를 금지하는 기본 정책을 활성화합니다. 그러면 레이블이 일치하는 사용자에게 모든 샌드박스의 스키마 필드 및 세그먼트에 대한 액세스 권한이 제공됩니다.
 
 ## 권한
 
@@ -67,25 +67,25 @@ Platform UI에 대한 권한 작업 공간이 나타나고 **[!UICONTROL 역할]
 >id="platform_permissions_labels_about"
 >title="레이블이란 무엇입니까?"
 >abstract="레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트 및 필드를 분류할 수 있습니다. Platform은 데이터 거버넌스에 적용할 수 있는 다양한 공통 제한 사항을 다루는 Adobe에서 정의한 여러 “핵심” 데이터 사용 레이블을 제공합니다. 예를 들어 RHD(규제 건강 데이터)와 같은 중요한 “S” 레이블을 사용하면 PHI(개인건강정보)를 참조하는 데이터를 분류할 수 있습니다. 조직의 요구 사항에 맞는 고유한 사용자 정의 레이블을 정의할 수도 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ko#understanding-data-usage-labels" text="데이터 사용 레이블 개요"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ko-KR#understanding-data-usage-labels" text="데이터 사용 레이블 개요"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about_create"
 >title="새 레이블 만들기"
 >abstract="조직의 요구 사항에 맞게 고유한 사용자 정의 레이블을 만들 수 있습니다. 사용자 정의 레이블을 사용하여 데이터 거버넌스와 액세스 제어 구성을 모두 데이터에 적용할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ko#manage-labels" text="사용자 정의 레이블 관리"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ko-KR#manage-labels" text="사용자 정의 레이블 관리"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="역할이란 무엇입니까?"
 >abstract="역할은 Platform 인스턴스와 상호 작용하고 액세스 제어 정책의 블록을 구성하는 사용자 유형을 분류하는 방법입니다. 역할에는 주어진 권한 집합이 있으며, 조직의 멤버들은 필요한 보기 또는 쓰기 액세스 범위에 따라 하나 이상의 역할에 할당될 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ko" text="역할 관리"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ko-KR" text="역할 관리"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="새 역할 만들기"
 >abstract="Platform 인스턴스에 액세스하는 사용자를 더 잘 분류하기 위해 새 역할을 생성할 수 있습니다. 예를 들어 내부 마케팅 팀에 대한 역할을 생성하고 해당 역할에 RHD 레이블을 적용하여 내부 마케팅 팀이 PHI(개인건강정보)에 액세스하도록 허용할 수 있습니다. 또는 외부 에이전시에 대한 역할을 생성하고 해당 역할에 RHD 레이블을 적용하지 않음으로써 PHI 데이터에 대한 해당 역할의 액세스를 거부할 수도 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ko#create-a-new-role" text="새 역할 만들기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ko-KR#create-a-new-role" text="새 역할 만들기"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"

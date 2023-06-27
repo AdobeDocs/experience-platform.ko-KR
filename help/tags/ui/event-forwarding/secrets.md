@@ -43,7 +43,7 @@ ht-degree: 3%
 >id="platform_eventforwarding_secrets_environments"
 >title="비밀 환경"
 >abstract="비밀을 이벤트 전달에 사용하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성에 환경이 생성되지 않은 경우 계속하기 전에 환경을 구성해야 합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="환경 개요"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ko-KR" text="환경 개요"
 
 암호를 생성하려면 다음을 선택합니다. **[!UICONTROL 이벤트 전달]** 왼쪽 탐색에서 암호를 추가할 이벤트 전달 속성을 엽니다. 그런 다음 을 선택합니다. **[!UICONTROL 비밀]** 왼쪽 탐색 후 **[!UICONTROL 새 암호 만들기]**.
 

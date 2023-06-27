@@ -33,7 +33,7 @@ ht-degree: 22%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="지침"
->abstract="<ul><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html">데이터 위생</a> 을 선택한 다음 <b>요청 만들기</b>를 선택합니다.</li><li>레코드 삭제를 원하는 경우:</li>   <li><b>레코드</b>를 선택합니다.</li>   <li>레코드를 삭제할 특정 데이터 세트를 선택하거나 모든 데이터 세트에서 레코드를 삭제하는 옵션을 선택합니다.</li>   <li>레코드를 삭제할 소비자의 ID를 입력합니다. <b>ID 추가</b>를 선택하여 한 번에 하나씩 ID를 입력하거나 <b>파일 선택</b>을 선택하여 대신에 ID의 JSON 파일을 업로드합니다.</li>   <li>필요한 경우 <b>템플릿</b>을 선택하여 JSON 파일의 예상 형식을 확인합니다.</li><li><a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">데이터세트의 만료 일자를 예약</a>하려는 경우 설명서에서 지침을 참조하십시오.</li></ul>"
+>abstract="<ul><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=ko-KR">데이터 위생</a> 을 선택한 다음 <b>요청 만들기</b>를 선택합니다.</li><li>레코드 삭제를 원하는 경우:</li>   <li><b>레코드</b>를 선택합니다.</li>   <li>레코드를 삭제할 특정 데이터 세트를 선택하거나 모든 데이터 세트에서 레코드를 삭제하는 옵션을 선택합니다.</li>   <li>레코드를 삭제할 소비자의 ID를 입력합니다. <b>ID 추가</b>를 선택하여 한 번에 하나씩 ID를 입력하거나 <b>파일 선택</b>을 선택하여 대신에 ID의 JSON 파일을 업로드합니다.</li>   <li>필요한 경우 <b>템플릿</b>을 선택하여 JSON 파일의 예상 형식을 확인합니다.</li><li><a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html?lang=ko-KR#schedule-dataset-expiration">데이터세트의 만료 일자를 예약</a>하려는 경우 설명서에서 지침을 참조하십시오.</li></ul>"
 
 새 요청을 만들려면 다음을 선택하십시오. **[!UICONTROL 요청 만들기]** 작업 공간의 기본 페이지에서 가져온 템플릿입니다.
 
@@ -54,6 +54,7 @@ ht-degree: 22%
 ![선택 중인 데이터 세트를 보여 주는 이미지](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
+>
 현재 샌드박스에 속하는 데이터 세트만 표시됩니다.
 
 ### 요청 제출
@@ -67,6 +68,7 @@ ht-degree: 22%
 요청이 제출되면 작업 주문이 만들어지고 의 메인 탭에 나타납니다. [!UICONTROL 데이터 위생] 작업 영역. 여기에서 요청을 처리할 때 작업 주문의 상태를 모니터링할 수 있습니다.
 
 >[!NOTE]
+>
 의 개요 섹션을 참조하십시오. [타임라인 및 투명도](../home.md#dataset-expiration-transparency) 데이터 세트 만료를 실행한 후 처리하는 방법에 대한 자세한 정보.
 
 ## 데이터 세트 만료 편집 또는 취소

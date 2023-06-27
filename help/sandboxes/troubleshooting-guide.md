@@ -27,7 +27,7 @@ ht-degree: 9%
 >id="platform_sandboxes_sandboxtypes"
 >title="샌드박스 유형"
 >abstract="샌드박스 유형은 프로덕션인지 또는 개발 샌드박스인지 여부를 나타냅니다. 프로덕션 샌드박스에는 라이브 데이터가 포함되고 개발 샌드박스는 테스트와 개발 목적으로 사용됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="UI에서 샌드박스 만들기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html?lang=ko-KR#create" text="UI에서 샌드박스 만들기"
 
 Experience Platform에서는 두 가지 샌드박스 유형을 사용할 수 있습니다.
 

@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: 3b2fedf4f7b17c4fb32afb5978bfac6f618f5bc3
 workflow-type: tm+mt
 source-wordcount: '1079'
-ht-degree: 7%
+ht-degree: 17%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 7%
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
-| 2023년 6월 | 기능 및 설명서 업데이트 | 2023년 6월부터 새 Adobe Target 대상 연결을 구성할 때 대상을 공유할 Adobe Target 작업 영역을 선택할 수 있습니다. 다음을 참조하십시오. [연결 매개 변수](#parameters) 섹션에 자세히 설명되어 있습니다. 또한 다음에 대한 자습서를 참조하십시오. [작업 영역 구성](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) 작업 공간에 대한 자세한 내용은 Adobe Target을 참조하십시오. |
+| 2023년 6월 | 기능 및 설명서 업데이트 | 2023년 6월부터 새 Adobe Target 대상 연결을 구성할 때 대상을 공유할 Adobe Target 작업 영역을 선택할 수 있습니다. 자세한 내용은 [연결 매개변수](#parameters) 섹션을 참조하십시오. 추가로 작업 영역에 대한 자세한 내용은 Adobe Target에서 [작업 공간을 구성하는 방법](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en)에 대한 튜토리얼을 참조하십시오. |
 | 2023년 5월 | 기능 및 설명서 업데이트 | 2023년 5월 현재 **[!UICONTROL Adobe Target]** 연결 지원 [속성 기반 개인화](../../ui/activate-edge-personalization-destinations.md#map-attributes) 및 는 일반적으로 모든 고객이 사용할 수 있습니다. |
 
 {style="table-layout:auto"}
@@ -69,7 +69,7 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 >id="platform_destinations_target_datastream"
 >title="데이터스트림 ID 정보"
 >abstract="이 옵션은 세그먼트에 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에 Target 구성이 활성화된 데이터스트림만 표시됩니다. 에지 세분화를 사용하려면 데이터스트림 ID를 선택해야 합니다. 없음을 선택하면 에지 세분화를 사용하는 모든 사용 사례가 비활성화됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="데이터스트림 선택에 대해 자세히 알아보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=ko-KR#parameters" text="데이터스트림 선택에 대해 자세히 알아보기"
 
 >[!IMPORTANT]
 > 
@@ -84,8 +84,8 @@ Adobe Experience Platform은 자동으로 회사의 Adobe Target 인스턴스에
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_workspace"
 >title="Adobe Target 작업 영역 정보"
->abstract="대상자를 공유할 Adobe Target 작업 영역을 선택합니다. 각 Adobe Target 연결에 대해 단일 작업 영역을 선택할 수 있습니다. 활성화하면 적용 가능한 Experience Platform 데이터 사용 레이블에 따라 대상자가 선택한 작업공간으로 라우팅됩니다."
->additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="Adobe Target 작업 공간에 대해 자세히 알아보기"
+>abstract="대상자를 공유할 Adobe Target 작업 영역을 선택하십시오. 각 Adobe Target 연결에 대해 단일 작업 영역을 선택할 수 있습니다. 활성화 시 대상자는 해당하는 Experience Platform 데이터 사용 레이블을 따르는 동안 선택한 작업 영역으로 라우팅됩니다."
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="Adobe Target 작업 영역에 대해 자세히 알아보기"
 
 While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정보를 제공해야 합니다.
 

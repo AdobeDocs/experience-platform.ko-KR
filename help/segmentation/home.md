@@ -56,7 +56,7 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >id="platform_segments_evaluation_streaming"
 >title="스트리밍 평가"
 >abstract="스트리밍 세분화는 사용자 활동에 대응하여 세그먼트를 업데이트하는 진행 중인 데이터 선택 프로세스입니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=ko" text="스트리밍 세분화를 통해 거의 실시간으로 이벤트 평가"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=ko-KR" text="스트리밍 세분화를 통해 거의 실시간으로 이벤트 평가"
 
 Platform은 스트리밍 세분화, 배치 세분화와 에지 세분화 등 현재 세그먼트를 평가하는 세 가지 메서드를 지원합니다.
 
@@ -83,7 +83,7 @@ Platform은 스트리밍 세분화, 배치 세분화와 에지 세분화 등 현
 >id="platform_segments_evaluation_edge"
 >title="에지 평가"
 >abstract="에지 세분화는 Experience Edge에서 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지의 개인화 사용 사례를 활성화하는 기능입니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=ko" text="에지 세분화 UI 안내서"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=ko-KR" text="에지 세분화 UI 안내서"
 
 에지 세그멘테이션은 플랫폼의 세그먼트를 즉시 평가하는 기능입니다 [Experience Edge에서](../edge/home.md), 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
 

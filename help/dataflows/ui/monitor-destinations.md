@@ -94,7 +94,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 - **[!UICONTROL ID 제외됨]**: 누락된 속성 및 동의 위반을 기반으로 활성화에서 제외된 총 프로필 ID 수입니다.
 - **[!UICONTROL ID 실패]** 오류로 인해 대상에 활성화되지 않은 총 프로필 ID 수입니다.
 - **[!UICONTROL 활성화 비율]**: 활성화 또는 건너뛴 수신된 ID의 백분율입니다. 다음 수식은 이 값이 계산되는 방법을 보여 줍니다.
-   ![활성화 비율 공식](../assets/ui/monitor-destinations/activation-rate-formula.png)
+  ![활성화 비율 공식](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL 상태]**: 데이터 흐름이 있는 상태를 나타냅니다. 다음 중 하나를 수행합니다. [!UICONTROL 완료됨] 또는 [!UICONTROL 처리 중]. [!UICONTROL 완료됨] 는 해당 데이터 흐름 실행에 대한 모든 id가 1시간 기간 내에 내보내졌음을 의미합니다. [!UICONTROL 처리 중] 는 데이터 흐름 실행이 아직 완료되지 않았음을 의미합니다.
 
 특정 데이터 흐름 실행의 세부 정보를 보려면 목록에서 실행 시작 시간을 선택합니다.
@@ -113,7 +113,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="데이터 흐름 실행 세부 정보"
 >abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 세그먼트의 활성화 상태 및 지표에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 검토하십시오."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=ko-KR#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -171,7 +171,6 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >
 >- 대상 모니터링 기능은 현재 Experience Platform의 모든 대상에 대해 지원됩니다 *제외* 다음 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 정의 개인화](/help/destinations/catalog/personalization/custom-personalization.md) 대상.
 >- 의 경우 [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure 이벤트 허브](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), 및 [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 대상, 제외, 실패 및 활성화된 ID와 관련된 지표를 예측합니다. 활성화 데이터의 볼륨이 높을수록 지표의 정확도가 높아집니다.
-
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
@@ -261,7 +260,6 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >세그먼트 수준 지표와 관련된 현재 제한 사항을 참고하십시오.
 >- 세그먼트 수준 보기는 현재 배치 대상에만 사용할 수 있습니다.
 >- 세그먼트 수준 지표는 현재 성공적인 데이터 흐름 실행에 대해서만 기록됩니다. 실패한 데이터 흐름 실행 및 제외된 레코드에 대해서는 기록되지 않습니다.
-
 
 ![데이터 흐름 패널의 세그먼트](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 

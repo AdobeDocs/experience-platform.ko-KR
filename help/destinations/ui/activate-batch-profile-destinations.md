@@ -78,7 +78,7 @@ ht-degree: 10%
 >id="platform_destinations_activate_exportoptions"
 >title="파일 내보내기 옵션"
 >abstract="**전체 파일 내보내기**&#x200B;를 선택하여 세그먼트 조건에 적합한 모든 프로필의 전체 스냅샷을 내보냅니다. **증분 파일 내보내기**&#x200B;를 선택하여 마지막 내보내기 이후 세그먼트 조건에 적합한 프로필만 내보냅니다. <br>첫 번째 증분 파일 내보내기에는 채우기 역할을 하는 세그먼트에 적합한 모든 프로필이 포함됩니다. 향후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 세그먼트 조건에 적합한 프로필만 포함됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="증분 파일 내보내기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko-KR#export-incremental-files" text="증분 파일 내보내기"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"

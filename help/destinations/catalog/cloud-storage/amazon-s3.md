@@ -19,7 +19,6 @@ ht-degree: 13%
 >* 이미 파일을 로 내보내고 있는 경우 **[!UICONTROL Amazon]** 대상. 새 데이터 흐름을 만드십시오. **[!UICONTROL Amazon S3 베타]** 대상.
 >* 에 대한 데이터 흐름을 아직 만들지 않은 경우 **[!UICONTROL Amazon]** 대상, 새 대상을 사용하십시오. **[!UICONTROL Amazon S3 베타]** 파일을 내보낼 카드 **[!UICONTROL Amazon]**.
 
-
 ![두 Amazon S3 대상 카드의 나란히 표시된 이미지](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
 새로운 기능 개선 [!DNL Amazon S3] 대상 카드에는 다음이 포함됩니다.
@@ -71,7 +70,7 @@ ht-degree: 13%
 * **[!DNL Amazon S3]액세스 키** 및 **[!DNL Amazon S3]비밀 키**: 위치 [!DNL Amazon S3], 생성 `access key - secret access key` 쌍으로 플랫폼에 액세스 권한 부여 [!DNL Amazon S3] 계정입니다. 다음에서 자세히 알아보기 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -84,7 +83,7 @@ ht-degree: 13%
 >id="platform_destinations_connect_s3_folderpath"
 >title="폴더 경로"
 >abstract="A-Z, a-z, 0-9 문자만 포함해야 하며 특수 문자(예: `/!-_.'()"^[]+$%.*"`)를 포함할 수 있습니다. 세그먼트 파일별로 폴더를 만들려면 매크로(예: `/%SEGMENT_NAME%` 또는 `/%SEGMENT_ID%` 또는 `/%SEGMENT_NAME%/%SEGMENT_ID%`)를 텍스트 필드에 삽입합니다. 매크로는 폴더 경로 끝에만 삽입할 수 있습니다. 설명서의 매크로 예 보기"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="매크로를 사용하여 스토리지 위치에 폴더 만들기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=ko-KR#use-macros" text="매크로를 사용하여 스토리지 위치에 폴더 만들기"
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
