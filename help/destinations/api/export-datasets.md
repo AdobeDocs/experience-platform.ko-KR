@@ -4,9 +4,9 @@ title: (베타) 흐름 서비스 API를 사용하여 데이터 세트 내보내�
 description: 흐름 서비스 API를 사용하여 데이터 세트를 내보내기 하여 대상을 선택하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4873af44f623082375fe4b2caa82475e2ba5b808
 workflow-type: tm+mt
-source-wordcount: '3347'
+source-wordcount: '3524'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 4%
 >* 데이터 세트를 내보내는 기능은 현재 베타 버전이며 일부 사용자가 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
 >* 이 베타 기능은 Real-time Customer Data Platform에 정의된 대로 1세대 데이터 내보내기를 지원합니다 [제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* 이 기능은 Real-Time CDP Prime 또는 Ultimate 패키지를 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
-
 
 이 문서에서는 을(를) 사용하는 데 필요한 워크플로에 대해 설명합니다 [!DNL Flow Service API] 내보내기 [데이터 세트](/help/catalog/datasets/overview.md) Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 [!DNL Amazon S3], SFTP 위치 또는 [!DNL Google Cloud Storage].
 
@@ -2315,6 +2314,29 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 >[!ENDSHADEBOX]
 
 다음에 대한 정보를 찾을 수 있습니다. [데이터 흐름에서 반환된 다양한 매개 변수는 API를 실행합니다.](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) API 참조 설명서에서 참조하십시오.
+
+## 데이터 세트 내보내기 성공 확인 {#verify}
+
+데이터 세트를 내보낼 때 Experience Platform에서 `.json` 또는 `.parquet` 파일을 제공한 저장소 위치에 있습니다. 제공된 내보내기 일정에 따라 새 파일이 저장소 위치에 저장됩니다. [데이터 흐름 만들기](#create-dataflow).
+
+Experience Platform은 지정한 저장소 위치에 내보낸 데이터 세트 파일을 저장하는 폴더 구조를 만듭니다. 내보내기 시간마다 아래 패턴을 따라 새 폴더가 만들어집니다.
+
+`folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
+
+기본 파일 이름은 임의로 생성되며 내보낸 파일 이름이 고유한지 확인합니다.
+
+### 샘플 데이터 세트 파일 {#sample-files}
+
+스토리지 위치에 이러한 파일이 있으면 내보내기가 성공적으로 수행되었는지 확인할 수 있습니다. 내보낸 파일의 구조를 이해하기 위해 샘플을 다운로드할 수 있습니다 [.parquet 파일](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) 또는 [.json 파일](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
+
+#### 압축된 데이터 세트 파일 {#compressed-dataset-files}
+
+의 단계에서 [target 연결 만들기](#create-target-connection)를 클릭하고, 내보낼 데이터 세트 파일을 압축하도록 선택할 수 있습니다.
+
+압축할 때 두 파일 유형 간의 파일 형식 차이를 확인합니다.
+
+* 압축된 JSON 파일을 내보낼 때 내보내는 파일 형식은 다음과 같습니다. `json.gz`
+* 압축된 Parquet 파일을 내보낼 때 내보내는 파일 형식은 다음과 같습니다. `gz.parquet`
 
 ## API 오류 처리 {#api-error-handling}
 
