@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK 확장의 데이터 요소 유형
 description: Adobe Experience Platform 웹 SDK 태그 확장에서 제공하는 다양한 데이터 요소 유형에 대해 알아봅니다.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '632'
 ht-degree: 8%
 
 ---
@@ -48,7 +48,7 @@ XDM 개체 데이터 요소를 사용하면 데이터를 XDM으로 더 쉽게 �
 >
 >수집하려는 정보만 입력하십시오. 작성되지 않은 내용은 데이터를 솔루션으로 보낼 때 생략됩니다.
 
-## (베타) 변수 {#variable}
+## 변수 {#variable}
 
 >[!IMPORTANT]
 >

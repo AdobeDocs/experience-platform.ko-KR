@@ -3,9 +3,9 @@ title: Adobe Experience Platform 웹 SDK 확장의 작업 유형
 description: Adobe Experience Platform 웹 SDK 태그 확장에서 제공하는 다양한 작업 유형에 대해 알아봅니다.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ Adobe에게 이벤트를 보냅니다. [!DNL Experience Platform] Adobe Experien
 
 페이지에서 이벤트 병합 ID를 재설정하려면 이 작업을 사용할 수 있습니다. ID를 재설정하려면 재설정할 병합 ID를 선택하고 필요에 따라 작업을 실행합니다.
 
-## (베타) 변수 업데이트 {#update-variable}
+## 변수 업데이트 {#update-variable}
 
 >[!IMPORTANT]
 >
