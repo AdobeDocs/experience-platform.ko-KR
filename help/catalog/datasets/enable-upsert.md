@@ -4,9 +4,9 @@ title: API를 사용하여 프로필 업데이트에 대한 데이터 세트 활
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform API를 사용하여 "업데이트" 기능이 있는 데이터 세트를 활성화하여 실시간 고객 프로필 데이터를 업데이트하는 방법을 보여줍니다.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 6985ebf8705130636abdc50b5c3f50299a60f2aa
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1069'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->업데이트 워크플로우는 일괄 처리 수집에만 작동합니다. 스트리밍 수집 **아님** 지원됨.
+>이 자습서에 설명된 워크플로우는 일괄 처리에 대해서만 작동합니다. 스트리밍 수집 업데이트에 대해서는 다음 안내서를 참조하십시오. [데이터 준비를 사용하여 실시간 고객 프로필에 부분 행 업데이트 보내기](../../data-prep/upserts.md).
 
 ## 시작하기
 
