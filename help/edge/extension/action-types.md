@@ -3,9 +3,9 @@ title: Adobe Experience Platform 웹 SDK 확장의 작업 유형
 description: Adobe Experience Platform 웹 SDK 태그 확장에서 제공하는 다양한 작업 유형에 대해 알아봅니다.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
+source-git-commit: eef0b50b12b0e3be34ad519f2d106392c23b7d69
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '761'
 ht-degree: 3%
 
 ---
@@ -36,10 +36,6 @@ Adobe에게 이벤트를 보냅니다. [!DNL Experience Platform] Adobe Experien
 이 작업에서는 동의를 받은 후 ID를 동기화할 수 있도록 ID 맵을 포함할 선택적 필드도 제공됩니다. 동기화는 동의 호출이 처음 실행될 수 있으므로 동의가 &quot;보류 중&quot; 또는 &quot;종료&quot;로 구성된 경우에 유용합니다.
 
 ## 변수 업데이트 {#update-variable}
-
->[!IMPORTANT]
->
->이는 현재 베타 기능이며 변경될 수 있습니다. 이후 버전에는 주요 변경 사항이 포함될 수 있습니다.
 
 이 작업을 사용하여 이벤트의 결과로 XDM 개체를 수정합니다. 이 작업은 나중에 다음에서 참조할 수 있는 개체를 작성하기 위한 것입니다. **[!UICONTROL 이벤트 보내기]** 작업: 이벤트 XDM 개체를 기록합니다.
 

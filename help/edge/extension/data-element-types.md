@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장의 데이터 요소 유형
 description: Adobe Experience Platform 웹 SDK 태그 확장에서 제공하는 다양한 데이터 요소 유형에 대해 알아봅니다.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
+source-git-commit: eef0b50b12b0e3be34ad519f2d106392c23b7d69
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 5%
+source-wordcount: '568'
+ht-degree: 6%
 
 ---
 
@@ -45,10 +45,6 @@ XDM 개체 데이터 요소를 사용하면 데이터를 XDM으로 더 쉽게 �
 >수집하려는 정보만 입력하십시오. 작성되지 않은 내용은 데이터를 솔루션으로 보낼 때 생략됩니다.
 
 ## 변수 {#variable}
-
->[!IMPORTANT]
->
->이는 현재 베타 기능이며 변경될 수 있습니다. 이후 버전에는 주요 변경 사항이 포함될 수 있습니다.
 
 XDM 개체를 만드는 또 다른 방법은 **[!UICONTROL 변수]** 데이터 요소입니다. XDM 개체 데이터 요소는 참조할 때 만들어집니다(예: `sendEvent` 명령, **[!UICONTROL 변수]** 데이터 요소는 다음을 통해 업데이트할 수 있습니다. [!UICONTROL 변수 업데이트] 작업. 데이터 요소를 사용하려면 올바른 Adobe Experience Platform 샌드박스 및 스키마를 선택합니다.
 
