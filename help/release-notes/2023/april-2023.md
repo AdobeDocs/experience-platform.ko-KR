@@ -2,14 +2,14 @@
 title: Adobe Experience Platform 릴리스 노트 2023년 4월
 description: Adobe Experience Platform에 대한 2023년 4월 릴리스 정보입니다.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '2084'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
-# Adobe Experience Platform 릴리스 노트
+# Adobe Experience Platform 릴리스 정보
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 Adobe Experience Platform은 일별 스냅샷 중에 캡처한 대로 조직 데이터에 대한 중요한 통찰력을 볼 수 있는 여러 대시보드를 제공합니다.
 
-**새 기능 또는 업데이트된 기능** {#dashboards-new-updated-features}
+**새로운 기능 또는 업데이트된 기능** {#dashboards-new-updated-features}
 
 | 기능 | 설명 |
 | --- | --- |
@@ -60,22 +60,22 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처한 대로 조직 데
 
 ## 데이터 수집 {#data-collection}
 
-Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비 Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 제품군을 제공합니다.
+Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe 또는 비 Adobe 대상으로 보강, 변환 및 배포가 가능한 Adobe Experience Platform Edge Network로 보낼 수 있는 기술 제품군을 제공합니다.
 
-**새 기능 또는 업데이트된 기능**
+**새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
 | 데이터스트림에 대한 IP 주소 난독화 | 이제에서 부분 또는 전체 데이터스트림 수준 IP 난독화 옵션을 정의할 수 있습니다. [데이터 스트림 구성 UI](../../edge/datastreams/configure.md). <br><br>데이터스트림 수준의 IP 난독화 설정은 Adobe Target 및 Audience Manager에 구성된 모든 IP 난독화보다 우선합니다. <br><br>Adobe Analytics으로 전송된 데이터는 데이터 스트림 수준의 영향을 받지 않습니다 [!UICONTROL IP 난독화] 설정. Adobe Analytics은 현재 난독화되지 않은 IP 주소를 수신합니다. Analytics가 난독화된 IP 주소를 수신하려면 Adobe Analytics에서 별도로 IP 난독화를 구성해야 합니다. 이 동작은 향후 릴리스에서 업데이트됩니다.<br><br> IP 난독화에 대한 자세한 내용 및 구성 방법에 대한 지침은 다음을 참조하십시오. [데이터 스트림 구성 설명서](../../edge/datastreams/configure.md#advanced-options). |
-| [데이터 스트림 구성 재정의](../../edge/datastreams/overrides.md) | 이제 데이터 스트림에 대한 추가 구성 옵션을 정의할 수 있습니다. 이 옵션을 사용하여 이벤트 데이터 세트, Target 속성 토큰, ID 동기화 컨테이너 및 Analytics 보고서 세트와 같은 특정 설정을 재정의할 수 있습니다. <br><br>데이터스트림 구성 재정의는 2단계 프로세스입니다. <ol><li>먼저, 에서 데이터 스트림 구성 재정의를 정의해야 합니다. [데이터스트림 구성 페이지](../../edge/datastreams/configure.md).</li><li>그런 다음 웹 SDK 명령을 사용하거나 웹 SDK를 사용하여 Edge Network에 재정의를 전송해야 합니다 [태그 확장](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
-| OAuth JWT 암호 | 다음 [OAuth JWT 암호](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) 는 고객이 Adobe 및 Google 서비스 토큰을 사용하여 이벤트 전달에서 서버 간 상호 작용을 지원할 수 있도록 합니다. |
-| [!DNL Pinterest Conversions API] 확장 | 다음 [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) 이벤트 전달 확장을 사용하면 Adobe Experience Platform Edge Network에 캡처된 데이터를 활용하여 로 전송할 수 있습니다. [!DNL Pinterest] 를 사용하는 서버측 이벤트 형식으로 [!DNL Pinterest Conversions API]. |
+| [데이터 스트림 구성 재정의](../../edge/datastreams/overrides.md) | 이제 데이터 스트림에 대한 추가 구성 옵션을 정의할 수 있습니다. 이 옵션을 사용하여 이벤트 데이터 세트, Target 속성 토큰, ID 동기화 컨테이너 및 Analytics 보고서 세트와 같은 특정 설정을 재정의할 수 있습니다. <br><br>데이터스트림 구성 재정의는 2단계 프로세스입니다. <ol><li>먼저, 에서 데이터 스트림 구성 재정의를 정의해야 합니다. [데이터스트림 구성 페이지](../../edge/datastreams/configure.md).</li><li>그런 다음 웹 SDK 명령을 사용하거나 웹 SDK를 사용하여 Edge Network에 재정의를 전송해야 합니다 [태그 확장](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).</li></ol> |
+| OAuth JWT Secret | 다음 [OAuth JWT 암호](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) 는 고객이 Adobe 및 Google 서비스 토큰을 사용하여 이벤트 전달에서 서버 간 상호 작용을 지원할 수 있도록 합니다. |
+| [!DNL Pinterest Conversions API] 확장 기능 | 다음 [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) 이벤트 전달 확장을 사용하면 Adobe Experience Platform Edge Network에 캡처된 데이터를 활용하여 로 전송할 수 있습니다. [!DNL Pinterest] 를 사용하는 서버측 이벤트 형식으로 [!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}
 
 ## 대상 {#destinations}
 
-[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새 대상** {#new-destinations}
 
@@ -105,7 +105,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 -->
 
-대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md).
+대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
 ## 경험 데이터 모델(XDM) {#xdm}
 
@@ -170,7 +170,7 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 
 [!DNL Segmentation Service] 은 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 프로필의 특정 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(예: 인구 통계학적 정보) 또는 시계열 이벤트를 기반으로 할 수 있습니다.
 
-**새 기능 또는 업데이트된 기능**
+**새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
@@ -182,9 +182,9 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 
 ## 소스 {#sources}
 
-Adobe Experience Platform은 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform은 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 라벨링하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스를 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
+Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
 **업데이트된 기능**
 
@@ -197,4 +197,4 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 {style="table-layout:auto"}
 
-소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).
+소스에 대해 자세히 알아보려면 [소스 개요 ](../../sources/home.md)를 참조하십시오.

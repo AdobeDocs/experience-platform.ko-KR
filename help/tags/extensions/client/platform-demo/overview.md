@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 데모 확장 개요
 description: Adobe Experience Platform의 Adobe Experience Platform 데모 확장에 대해 알아봅니다.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 72%
@@ -17,7 +17,7 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->이 확장은 더 이상 사용되지 않으며 [Adobe Experience Platform 웹 SDK](../sdk/overview.md).
+>이 확장은 더 이상 사용되지 않으며 [Adobe Experience Platform 웹 SDK](../web-sdk/overview.md).
 
 이 확장 기능은 새 확장으로 포트되고 있습니다. 다음은 현재 기능을 간단히 비교한 것입니다.
 
@@ -26,11 +26,11 @@ ht-degree: 72%
 | 사용자 지정 고객 ID 지원 | 사용자 지정 고객 ID 지원 |
 | XDM용 클라이언트측 매핑 UI | ECID로 빌드(visitor.js가 필요 없음) |
 | 스트리밍 연결 생성 기능 | 옵트인 지원 |
-|  | 데이터 요소로서의 XDM 지원 |
-|  | 자사 도메인 지원 |
-|  | 내장된 디버깅 툴 |
-|  | 브라우저 컨텍스트 자동 수집 |
-|  | 완전히 오픈된 소스 |
+| | 데이터 요소로서의 XDM 지원 |
+| | 자사 도메인 지원 |
+| | 내장된 디버깅 툴 |
+| | 브라우저 컨텍스트 자동 수집 |
+| | 완전히 오픈된 소스 |
 
 
 ## Adobe Experience Platform 확장 구성

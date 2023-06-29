@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK 설치
 description: Experience Platform Web SDK를 설치하는 방법을 알아봅니다.
 keywords: web sdk 설치;web sdk 설치;internet explorer;promise;npm 패키지
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: e0fc9708edec3b36bed9925f12fca9db8b477262
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Adobe Experience Platform Web SDK를 사용하는 세 가지 지원되는 방법
 
 ## 옵션 1: 태그 확장 설치
 
-태그 확장에 대한 설명서는 [태그 설명서](../../tags/extensions/client/sdk/overview.md)
+태그 확장에 대한 설명서는 [태그 설명서](../../tags/extensions/client/web-sdk/overview.md)
 
 ## 옵션 2: 미리 빌드된 독립 실행형 버전 설치
 

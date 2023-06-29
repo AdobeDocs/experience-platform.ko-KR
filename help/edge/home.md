@@ -3,7 +3,7 @@ title: Adobe Experience Platform 웹 SDK 개요
 description: Adobe Experience Platform Web SDK를 사용하여 Platform 기능을 웹 사이트에 통합하는 방법에 대해 알아봅니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;Web SDK;SDK;Web SDK;Launch;Launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 00801465435133fce29002c8bd0f2256745ba2c2
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '803'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Adobe Experience Platform Web SDK 개요 {#overview}
 
-Adobe Experience Platform Web SDK는 Adobe Experience Cloud 고객이 의 다양한 서비스와 상호 작용할 수 있도록 하는 클라이언트측 JavaScript 라이브러리입니다 [!DNL Experience Cloud] Adobe Experience Platform Edge Network를 통해 JavaScript 라이브러리 외에도 [태그 확장](./extension/web-sdk-extension-configuration.md) 웹 SDK 구성에 도움이 됩니다.
+Adobe Experience Platform Web SDK는 Adobe Experience Cloud 고객이 의 다양한 서비스와 상호 작용할 수 있도록 하는 클라이언트측 JavaScript 라이브러리입니다 [!DNL Experience Cloud] Adobe Experience Platform Edge Network를 통해 JavaScript 라이브러리 외에도 [태그 확장](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 웹 SDK 구성에 도움이 됩니다.
 
 태그를 사용하여 웹 SDK를 설정하고 솔루션으로 데이터를 전송하는 방법에 대한 단계별 안내서는 다음을 참조하십시오. [Web SDK 튜토리얼을 사용하여 Adobe Experience Cloud 구현](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=en).
 
@@ -74,7 +74,7 @@ Web SDK는 다음 SDK를 대체합니다.
 
 ### at.js에서 Web SDK로 마이그레이션 고려 사항 {#considerations}
 
-를 사용하는 페이지를 마이그레이션하기 전에 [!DNL at.js] Web SDK에 대해 다음 Web SDK 구성 옵션을 활성화해야 합니다. 이렇게 하면 를 사용하여 페이지에서 이동하는 동안 방문자 프로필이 유지됩니다. [!DNL at.js ] Web SDK를 사용하여 페이지를 만듭니다.
+를 사용하는 페이지를 마이그레이션하기 전에 [!DNL at.js] Web SDK에 대해 다음 Web SDK 구성 옵션을 활성화해야 합니다. 이렇게 하면 를 사용하여 페이지에서 이동하는 동안 방문자 프로필이 유지됩니다. [!DNL at.js] Web SDK를 사용하여 페이지를 만듭니다.
 
 * [`idMigrationEnabled`](fundamentals/configuring-the-sdk.md#id-migration-enabled)
 * [&#39;targetMigrationEnabled&#39;](fundamentals/configuring-the-sdk.md#targetMigrationEnabled)
@@ -85,7 +85,6 @@ Web SDK는 다음 SDK를 대체합니다.
 >at.js에서 Web SDK로 마이그레이션할 때 다음 Target 기능은 지원되지 않습니다.
 > * [리디렉션 오퍼](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en)
 > * [CNAME 및 도메인 간 지원](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/?lang=en)
-
 
 at.js에서 Web SDK로 마이그레이션한 후에는 `targetMigrationEnabled` 옵션입니다.
 

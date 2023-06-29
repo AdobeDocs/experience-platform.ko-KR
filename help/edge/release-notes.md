@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 97ae7002d4bacb224f7cd57cca4a0c1ede11dd26
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1549'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 # 릴리스 정보
 
 이 문서에서는 Adobe Experience Platform Web SDK에 대한 릴리스 정보를 다룹니다.
-Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확장 릴리스 노트](extension/web-sdk-ext-release-notes.md).
+Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확장 릴리스 노트](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
 ## 버전 2.16.0 - 2023년 5월 17일
 

@@ -5,9 +5,9 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1027'
 ht-degree: 31%
 
 ---
@@ -96,8 +96,16 @@ ht-degree: 31%
          * [릴리스 정보](./extensions/client/id-service/release-notes.md)
       * Adobe Experience Platform 데모 {#platform-demo}
          * [개요](./extensions/client/platform-demo/overview.md)
-      * Adobe Experience Platform 웹 SDK {#sdk}
-         * [개요](./extensions/client/sdk/overview.md)
+      * Adobe Experience Platform 웹 SDK {#web-sdk}
+         * [개요](./extensions/client/web-sdk/overview.md)
+         * [웹 SDK 태그 확장 구성](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+         * [이벤트 유형](./extensions/client/web-sdk/event-types.md)
+         * [작업 유형](./extensions/client/web-sdk/action-types.md)
+         * [데이터 요소 유형](./extensions/client/web-sdk/data-element-types.md)
+         * [ECID 액세스](./extensions/client/web-sdk/accessing-the-ecid.md)
+         * [Web SDK 플러그인](./extensions/client/web-sdk/web-sdk-plugins.md)
+         * [Web SDK 확장 릴리스 노트](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+         * [Web SDK 플러그인 릴리스 노트](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * Adobe Experience Manager 자산 통찰력 {#asset-insights}
          * [개요](./extensions/client/asset-insights/overview.md)
          * [릴리스 정보](./extensions/client/asset-insights/release-notes.md)
@@ -138,9 +146,6 @@ ht-degree: 31%
       * 일반 Analytics 플러그인 {#plugins}
          * [개요](./extensions/client/plugins/overview.md)
          * [릴리스 정보](./extensions/client/plugins/release-notes.md)
-      * 일반 웹 SDK 플러그인 {#web-sdk-plugins}
-         * [개요](./extensions/client/web-sdk-plugins/overview.md)
-         * [릴리스 정보](./extensions/client/web-sdk-plugins/release-notes.md)
       * [Concat](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
       * [Usercentrics CMP v2의 쿠키 동의 관리](https://exchange.adobe.com/apps/ec/107037)

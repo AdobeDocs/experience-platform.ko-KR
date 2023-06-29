@@ -3,7 +3,7 @@ keywords: 사용자 정의 개인화; 대상; experience platform 사용자 정�
 title: 사용자 지정 개인화 연결
 description: 이 대상은 Adobe Experience Platform에서 세그먼트 정보를 검색하는 방법을 통해 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필 세그먼트 멤버십을 기반으로 실시간 개인화를 제공합니다.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 1ffcbabe29994fb881ff622394d669c4340c94f1
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 9%
@@ -87,7 +87,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 ## 내보낸 데이터 {#exported-data}
 
-을 사용하는 경우 [Adobe Experience Platform의 태그](../../../tags/home.md) Experience Platform Web SDK를 배포하려면 [이벤트 전송 완료](../../../edge/extension/event-types.md) 기능과 사용자 지정 코드 작업은 `event.destinations` 내보낸 데이터를 보는 데 사용할 수 있는 변수.
+을 사용하는 경우 [Adobe Experience Platform의 태그](../../../tags/home.md) Experience Platform Web SDK를 배포하려면 [이벤트 전송 완료](../../../tags/extensions/client/web-sdk/event-types.md) 기능과 사용자 지정 코드 작업은 `event.destinations` 내보낸 데이터를 보는 데 사용할 수 있는 변수.
 
 다음은 의 샘플 값입니다. `event.destinations` 변수:
 

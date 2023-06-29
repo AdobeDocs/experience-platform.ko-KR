@@ -7,7 +7,7 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 5%
@@ -103,7 +103,7 @@ Mailchimp 플랜과 트랜잭션 이메일, 고객 여정 또는 기타 Mailchim
 
 ## 데이터 수집
 
-에서 이 확장을 사용할 때 [규칙](../../../ui/managing-resources/rules.md), 확장에서 각 이벤트와 함께 Mailchimp에 보내는 여러 데이터 값이 있습니다. 일반적인 구현의 경우 다음을 구성할 수 있습니다 [Adobe Experience Platform 웹 SDK 확장](../../client/sdk/overview.md) 해당 데이터를 (으)로 보내기 [!DNL Platform Edge Network] 이벤트 전달 속성에서 확장에서 사용하는 경우.
+에서 이 확장을 사용할 때 [규칙](../../../ui/managing-resources/rules.md), 확장에서 각 이벤트와 함께 Mailchimp에 보내는 여러 데이터 값이 있습니다. 일반적인 구현의 경우 다음을 구성할 수 있습니다 [Adobe Experience Platform 웹 SDK 확장](../../client/web-sdk/overview.md) 해당 데이터를 (으)로 보내기 [!DNL Platform Edge Network] 이벤트 전달 속성에서 확장에서 사용하는 경우.
 
 이 확장에 필요한 데이터는 Web SDK에서 XDM 데이터 또는 XDM이 아닌 데이터로 보낼 수 있습니다. 자세한 내용은 설명서 를 참조하십시오. [xdm 데이터 보내기](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
 

@@ -3,7 +3,7 @@ title: Platform Web SDK로 Adobe Journey Optimizer 사용
 description: Adobe Journey Optimizer을 사용하여 Experience Platform Web SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다
 keywords: ajo;ajo web;adobe 여정 optimizer;renderDecisions;surfaces;decisions;제안;범위;스키마
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -42,7 +42,7 @@ ht-degree: 0%
    })
    ```
 
-3. 이벤트에서 추가 서피스를 지정합니다(선택 사항). 기본적으로 웹 SDK는 현재 웹 페이지에 대한 웹 표면을 자동으로 생성하고 Edge Network에 대한 요청에 포함합니다. 필요한 경우 요청에서 추가 서피스를 지정하여 요청에 포함할 수 있습니다. `personalization.surfaces` 옵션 `sendEvent` 명령 또는 **[!UICONTROL 표면]** [[!UICONTROL 이벤트 보내기] 작업](../../extension/action-types.md#send-event) 웹 SDK 확장 구성.
+3. 이벤트에서 추가 서피스를 지정합니다(선택 사항). 기본적으로 웹 SDK는 현재 웹 페이지에 대한 웹 표면을 자동으로 생성하고 Edge Network에 대한 요청에 포함합니다. 필요한 경우 요청에서 추가 서피스를 지정하여 요청에 포함할 수 있습니다. `personalization.surfaces` 옵션 `sendEvent` 명령 또는 **[!UICONTROL 표면]** [[!UICONTROL 이벤트 보내기] 작업](../../../tags/extensions/client/web-sdk/action-types.md#send-event) 웹 SDK 확장 구성.
 
    ```javascript
    alloy("sendEvent", {

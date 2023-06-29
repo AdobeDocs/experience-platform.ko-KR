@@ -2,7 +2,7 @@
 title: 태그 확장 참조
 description: Adobe Experience Platform에서 태그 확장에 대한 설명서를 찾습니다.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 10%
@@ -39,7 +39,7 @@ ht-degree: 10%
 * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
 * [Adobe Experience Cloud ID 서비스](./id-service/overview.md)
 * [Adobe Experience Platform 데모](./platform-demo/overview.md)
-* [Adobe Experience Platform 웹 SDK](./sdk/overview.md)
+* [Adobe Experience Platform 웹 SDK](./web-sdk/overview.md)
 * [Adobe Experience Manager 자산 통찰력](./asset-insights/overview.md)
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
 * [오디오 및 비디오용 Adobe Medium 분석](./media-analytics/overview.md)
@@ -65,7 +65,7 @@ ht-degree: 10%
 * [치타 경험](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [일반 Analytics 플러그인](./plugins/overview.md)
-* [일반 웹 SDK 플러그인](./web-sdk-plugins/overview.md)
+* [일반 웹 SDK 플러그인](./web-sdk/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
 * [Usercentrics CMP v2의 쿠키 동의 관리](https://exchange.adobe.com/apps/ec/*107037)

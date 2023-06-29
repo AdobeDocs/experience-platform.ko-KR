@@ -2,7 +2,7 @@
 title: 데이터 스트림 재정의 구성
 description: 데이터스트림 UI에서 데이터스트림 재정의를 구성하고 웹 SDK를 통해 활성화하는 방법에 대해 알아봅니다.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 데이터 스트림 구성 재정의는 2단계 프로세스입니다.
 
 1. 먼저, 에서 데이터 스트림 구성 재정의를 정의해야 합니다. [데이터스트림 구성 페이지](configure.md).
-2. 그런 다음 웹 SDK 명령을 사용하거나 웹 SDK를 사용하여 Edge Network에 재정의를 전송해야 합니다 [태그 확장](../extension/web-sdk-extension-configuration.md).
+2. 그런 다음 웹 SDK 명령을 사용하거나 웹 SDK를 사용하여 Edge Network에 재정의를 전송해야 합니다 [태그 확장](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 이 문서에서는 지원되는 모든 재정의 유형에 대한 종단간 데이터스트림 구성 재정의 프로세스에 대해 설명합니다.
 
@@ -91,7 +91,7 @@ Experience Platform 이벤트 데이터 세트에 대한 데이터 스트림 재
 
 >[!NOTE]
 >
->웹 SDK 명령을 통해 구성 재정의를 전송하는 대신 웹 SDK에 구성 재정의를 추가할 수 있습니다 [태그 확장](../extension/web-sdk-extension-configuration.md).
+>웹 SDK 명령을 통해 구성 재정의를 전송하는 대신 웹 SDK에 구성 재정의를 추가할 수 있습니다 [태그 확장](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 다음 이후 [데이터 스트림 재정의 구성](#configure-overrides) 이제 데이터 수집 UI에서 웹 SDK를 통해 Edge Network에 재정의를 전송할 수 있습니다.
 
