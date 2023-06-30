@@ -2,10 +2,10 @@
 title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 세그먼트를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: cf89f40625bedda633ad26cf3e882983600f0d52
 workflow-type: tm+mt
-source-wordcount: '1265'
-ht-degree: 0%
+source-wordcount: '1378'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,6 @@ ht-degree: 0%
 >
 >* 이 대상은 현재 베타 버전이며 제한된 수의 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 [!DNL Data Landing Zone] 연결, Adobe 담당자에게 연락하여 [!DNL Organization ID].
 >* 이 설명서 페이지는 다음을 참조합니다. [!DNL Data Landing Zone] *대상*. 다음 항목도 있습니다 [!DNL Data Landing Zone] *소스* 소스 카탈로그에서. 자세한 내용은 [[!DNL Data Landing Zone] 소스](/help/sources/connectors/cloud-storage/data-landing-zone.md) 설명서를 참조하십시오.
-
 
 
 ## 개요 {#overview}
@@ -72,6 +71,12 @@ Platform은에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
 
+| 쿼리 매개 변수 | 설명 |
+| --- | --- |
+| `dlz_destination` | 다음 `dlz_destination` 유형 을 사용하면 API에서 랜딩 영역 대상 컨테이너를 사용 가능한 다른 유형의 컨테이너와 구별할 수 있습니다. |
+
+{style="table-layout:auto"}
+
 **요청**
 
 다음 요청 예제는 기존 랜딩 영역에 대한 자격 증명을 검색합니다.
@@ -104,6 +109,52 @@ curl -X GET \
 | `containerName` | 랜딩 영역의 이름입니다. |
 | `SASToken` | 랜딩 영역에 대한 공유 액세스 서명 토큰입니다. 이 문자열에는 요청을 승인하는 데 필요한 모든 정보가 포함되어 있습니다. |
 | `SASUri` | 랜딩 영역에 대한 공유 액세스 서명 URI입니다. 이 문자열은 인증 중인 랜딩 영역에 대한 URI와 해당 SAS 토큰의 조합입니다. |
+
+{style="table-layout:auto"}
+
+## 업데이트 [!DNL Data Landing Zone] 자격 증명
+
+원할 경우 자격 증명을 새로 고칠 수도 있습니다. 다음을 업데이트할 수 있습니다. `SASToken` 에 POST 요청을 하여 `/credentials` 의 엔드포인트 [!DNL Connectors] API.
+
+**API 형식**
+
+```http
+POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
+```
+
+| 쿼리 매개 변수 | 설명 |
+| --- | --- |
+| `dlz_destination` | 다음 `dlz_destination` 유형 을 사용하면 API에서 랜딩 영역 대상 컨테이너를 사용 가능한 다른 유형의 컨테이너와 구별할 수 있습니다. |
+| `refresh` | 다음 `refresh` 작업을 통해 랜딩 영역 자격 증명을 재설정하고 새 항목을 자동으로 생성할 수 있습니다. `SASToken`. |
+
+{style="table-layout:auto"}
+
+**요청**
+
+다음 요청은 랜딩 영역 자격 증명을 업데이트합니다.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**응답**
+
+다음 응답은 다음에 대한 업데이트된 값을 반환합니다. `SASToken` 및 `SASUri`.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "storageAccountName": "dlblobstore99hh25i3dflek",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+}
+```
 
 >[!ENDSHADEBOX]
 
