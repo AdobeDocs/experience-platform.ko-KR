@@ -2,7 +2,7 @@
 title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 세그먼트를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cf89f40625bedda633ad26cf3e882983600f0d52
+source-git-commit: 5daa92b2f488b4acb825215f4da92af51bcf7c61
 workflow-type: tm+mt
 source-wordcount: '1378'
 ht-degree: 1%
@@ -61,7 +61,7 @@ Platform은에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을
 
 >[!BEGINSHADEBOX]
 
-### 에 대한 자격 증명 검색 [!DNL Data Landing Zone]
+### 에 대한 자격 증명 검색 [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
 플랫폼 API를 사용하여 을(를) 검색해야 합니다. [!DNL Data Landing Zone] 자격 증명. 자격 증명을 검색하기 위한 API 호출에 대해서는 아래에 설명되어 있습니다. 머리글에 필요한 값을 가져오는 방법에 대한 자세한 내용은 [Adobe Experience Platform API 시작하기](/help/landing/api-guide.md) 가이드.
 
@@ -112,7 +112,7 @@ curl -X GET \
 
 {style="table-layout:auto"}
 
-## 업데이트 [!DNL Data Landing Zone] 자격 증명
+### 업데이트 [!DNL Data Landing Zone] 자격 증명 {#update-dlz-credentials}
 
 원할 경우 자격 증명을 새로 고칠 수도 있습니다. 다음을 업데이트할 수 있습니다. `SASToken` 에 POST 요청을 하여 `/credentials` 의 엔드포인트 [!DNL Connectors] API.
 
