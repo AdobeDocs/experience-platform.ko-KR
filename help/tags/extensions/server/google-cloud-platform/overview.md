@@ -2,14 +2,14 @@
 title: Google Cloud Platform 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장은 Adobe Experience Edge Network 이벤트를 Google Cloud Platform으로 보냅니다.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: d1a34a98efd24a20dc53544eeb0d79490aaf31e7
+source-git-commit: 7e26ebe6d40796174ca48367f826c7c6f1512abf
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '570'
 ht-degree: 1%
 
 ---
 
-# [!DNL Google Cloud Platform] 이벤트 전달 확장
+# [!DNL Google Cloud Platform] 이벤트 전달 확장 기능
 
 [[!DNL Google Cloud Platform]](https://cloud.google.com/) 은 분산 컴퓨팅, 데이터베이스 스토리지, 컨텐츠 전달, CRM(고객 관계 관리) 및 ERP(전사적 자원 관리)를 위한 SaaS(Software-as-a-Service) 통합 서비스 등 다양한 서비스를 제공하는 클라우드 컴퓨팅 플랫폼입니다.
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ## 사전 요구 사항
 
-이 확장을 사용하려면 [!DNL Google Cloud Platform] 기존 계정 [!DNL Cloud Pub/Sub] 주제. 기존 데이터 스트림이 없는 경우 [!DNL AWS] 설명서 [를 사용하여 새 데이터 스트림 만들기 [!DNL AWS] 관리 콘솔](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
+이 확장을 사용하려면 [!DNL Google Cloud Platform] 기존 계정 [!DNL Cloud Pub/Sub] 주제. 기존 항목이 없는 경우 다음을 참조하십시오. [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) 항목 만들기 및 관리에 대한 설명서.
 
 ### 암호 및 데이터 요소 만들기
 
