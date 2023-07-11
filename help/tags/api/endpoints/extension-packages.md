@@ -2,7 +2,7 @@
 title: 확장 패키지 끝점
 description: Reactor API에서 /extension_packages 끝점을 호출하는 방법을 알아봅니다.
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
 source-wordcount: '939'
 ht-degree: 3%
@@ -25,7 +25,7 @@ ht-degree: 3%
 
 이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
 
-Reactor API를 호출하는 방법을 이해하는 것 외에 확장 패키지의 방법을 이해하는 것도 중요합니다. `status` 및 `availability` 속성은 이 속성에서 수행할 수 있는 작업에 영향을 줍니다. 아래 섹션에 설명되어 있습니다.
+Reactor API를 호출하는 방법을 이해하는 것 외에도 확장 패키지의 상태를 이해하는 것도 중요합니다. `status` 및 `availability` 속성은 이 속성에서 수행할 수 있는 작업에 영향을 줍니다. 아래 섹션에 설명되어 있습니다.
 
 ### 상태
 
@@ -944,7 +944,7 @@ curl -X PATCH \
 
 확장 패키지 테스트를 완료한 후에는 비공개로 릴리스할 수 있습니다. 이렇게 하면 회사 내의 모든 속성에서 사용할 수 있습니다.
 
-비공개로 릴리스한 후에는 다음을 입력하여 공개 릴리스 프로세스를 시작할 수 있습니다. [공개 릴리스 요청 양식](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest).
+비공개로 릴리스한 후에는 다음을 입력하여 공개 릴리스 프로세스를 시작할 수 있습니다. [공개 릴리스 요청 양식](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest).
 
 **API 형식**
 

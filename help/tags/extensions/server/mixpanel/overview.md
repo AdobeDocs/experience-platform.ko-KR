@@ -4,9 +4,9 @@ title: Mixpanel 추적 이벤트 API 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장은 Adobe Experience Edge Network 이벤트를 Mixpanel로 보냅니다.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '950'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 에만 해당되는 사용 사례에 대한 자세한 내용은 [!DNL Mixpanel], 다음 설명서를 참조하십시오.
 
-* [새로 만들기 [!DNL Mixpanel]](https://help.mixpanel.com/hc/en-us/sections/360008533532-New-to-Mixpanel)
+* [새로 만들기 [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
 * [ [!DNL Mixpanel]란?](https://developer.mixpanel.com/docs)
 * [12개 필수 항목 [!DNL Mixpanel] 기능](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
@@ -80,10 +80,10 @@ Experience Platform을에 연결하려면 [!DNL Mixpanel] 다음 입력이 있�
 | --- | --- | --- |
 | [!UICONTROL 프로젝트 토큰] | 이 필드는 와(과) 연결된 프로젝트 토큰에 매핑되어야 합니다. [!DNL Mixpanel] 계정입니다. | 예 |
 | [!UICONTROL 이벤트 유형] | 이벤트 이름. | 예 |
-| [!UICONTROL 이벤트 시간] | 이벤트 시간. |  |
-| [!UICONTROL Mixpanel 고유 ID] | 이벤트를 수행한 사용자의 고유 식별자입니다. |  |
-| [!UICONTROL ID 삽입] | 중복 제거에 사용되는 이벤트의 고유 식별자입니다. |  |
-| [!UICONTROL 이벤트 속성] | 이벤트의 사용자 지정 속성이 포함된 JSON 개체입니다. 원시 JSON을 제공하거나 간소화된 키-값 입력 세트를 사용하여 선택하십시오. |  |
+| [!UICONTROL 이벤트 시간] | 이벤트 시간. | |
+| [!UICONTROL Mixpanel 고유 ID] | 이벤트를 수행한 사용자의 고유 식별자입니다. | |
+| [!UICONTROL ID 삽입] | 중복 제거에 사용되는 이벤트의 고유 식별자입니다. | |
+| [!UICONTROL 이벤트 속성] | 이벤트의 사용자 지정 속성이 포함된 JSON 개체입니다. 원시 JSON을 제공하거나 간소화된 키-값 입력 세트를 사용하여 선택하십시오. | |
 
 >[!NOTE]
 >

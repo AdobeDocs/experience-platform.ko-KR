@@ -4,14 +4,14 @@ title: 브레이즈 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장은 Adobe Experience Edge Network 이벤트를 브레이즈로 보냅니다.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 4%
 
 ---
 
-# [!DNL Braze Track Events API] 이벤트 전달 확장
+# [!DNL Braze Track Events API] 이벤트 전달 확장 기능
 
 [[!DNL Braze]](https://www.braze.com) 는 소비자와 브랜드 간의 고객 중심 상호 작용을 실시간으로 향상시키는 고객 참여 플랫폼입니다. 사용 [!DNL Braze], 다음 작업을 수행할 수 있습니다.
 
@@ -59,7 +59,7 @@ Edge Network를 [!DNL Braze]를 사용하려면 다음 입력이 필요합니다
 
 | 키 유형 | 설명 | 예 |
 | --- | --- | --- |
-| [!DNL Braze] 인스턴스 | 와 연결된 REST 엔드포인트 [!DNL Braze] 계정입니다. 다음을 참조하십시오. [!DNL Braze] 설명서 [인스턴스](https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances) 지침을 참조하십시오. | `https://rest.iad-03.braze.com` |
+| [!DNL Braze] 인스턴스 | 와 연결된 REST 엔드포인트 [!DNL Braze] 계정입니다. 다음을 참조하십시오. [!DNL Braze] 설명서 [인스턴스](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) 지침을 참조하십시오. | `https://rest.iad-03.braze.com` |
 | API 키 | 다음 [!DNL Braze] 와 연결된 API 키 [!DNL Braze] 계정입니다. <br/>다음을 참조하십시오. [!DNL Braze] 에 대한 설명서 [REST API 키](https://www.braze.com/docs/api/basics/#rest-api-key) 지침을 참조하십시오. | `YOUR-BRAZE-REST-API-KEY` |
 
 ### 암호 만들기
@@ -108,8 +108,8 @@ Edge Network를 [!DNL Braze]를 사용하려면 다음 입력이 필요합니다
 | 입력 | 설명 | 필수 여부 |
 | --- | --- | --- |
 | [!UICONTROL 이벤트 이름 &#x200B;] | 이벤트 이름. | 예 |
-| [!UICONTROL 이벤트 시간 ] | ISO 8601 또는 의 문자열로 표시된 날짜-시간 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 포맷. | 예 |
-| [!UICONTROL 앱 식별자] | 앱 식별자 또는 <strong>app_id</strong> 는 활동을 앱 그룹의 특정 앱과 연결하는 매개 변수입니다. 상호 작용 중인 앱 그룹 내의 앱을 지정합니다. 에 대해 자세히 알아보기 [API 식별자 유형](https://www.braze.com/docs/api/identifier_types/). |  |
+| [!UICONTROL 이벤트 시간] | ISO 8601 또는 의 문자열로 표시된 날짜-시간 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 포맷. | 예 |
+| [!UICONTROL 앱 식별자] | 앱 식별자 또는 <strong>app_id</strong> 는 활동을 앱 그룹의 특정 앱과 연결하는 매개 변수입니다. 상호 작용 중인 앱 그룹 내의 앱을 지정합니다. 에 대해 자세히 알아보기 [API 식별자 유형](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL 이벤트 &#x200B; 속성] | 이벤트의 사용자 지정 속성이 포함된 JSON 개체입니다. |  |
 
 {style="table-layout:auto"}
@@ -124,12 +124,12 @@ Edge Network를 [!DNL Braze]를 사용하려면 다음 입력이 필요합니다
 
 | 사용자 속성 | 설명 |
 | --- | --- |
-| [!UICONTROL 이름] |  |
-| [!UICONTROL 성] |  |
-| [!UICONTROL 전화] |  |
-| [!UICONTROL 이메일] |  |
+| [!UICONTROL 이름] | |
+| [!UICONTROL 성] | |
+| [!UICONTROL 전화] | |
+| [!UICONTROL 이메일] | |
 | [!UICONTROL 성별] | 다음 문자열 중 하나: &quot;M&quot;, &quot;F&quot;, &quot;O&quot;(기타), &quot;N&quot;(적용할 수 없음), &quot;P&quot;(말하지 않음). |
-| [!UICONTROL 구/군/시] |  |
+| [!UICONTROL 구/군/시] | |
 | [!UICONTROL 국가] | 의 문자열로서 국가 [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 포맷. |
 | [!UICONTROL 언어] | 의 문자열로서의 언어 [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 포맷. |
 | [!UICONTROL 생일] | &quot;YYYY-MM-DD&quot; 형식의 문자열(예: 1980-12-21). |
@@ -164,11 +164,11 @@ Edge Network를 [!DNL Braze]를 사용하려면 다음 입력이 필요합니다
 | 입력 | 설명 | 필수 여부 |
 | --- | --- | --- |
 | [!UICONTROL 제품 ID &#x200B;] | 구매용 식별자. (예: 제품 이름 또는 제품 범주) | 예 |
-| [!UICONTROL 구매 시간 ] | ISO 8601 또는 의 문자열로 표시된 날짜-시간 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 포맷. | 예 |
+| [!UICONTROL 구매 시간] | ISO 8601 또는 의 문자열로 표시된 날짜-시간 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 포맷. | 예 |
 | [!UICONTROL 통화 &#x200B;] | 의 문자열로 통화 표시 [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 알파벳 통화 코드 포맷. | 예 |
 | [!UICONTROL 가격 &#x200B;] | 가격. | 예 |
-| [!UICONTROL 수량 &#x200B;] | 제공하지 않은 경우 기본값은 1입니다. 최대값은 100보다 작아야 합니다. |  |
-| [!UICONTROL 앱 식별자] | 앱 식별자 또는 <strong>app_id</strong> 는 활동을 앱 그룹의 특정 앱과 연결하는 매개 변수입니다. 상호 작용 중인 앱 그룹 내의 앱을 지정합니다. 에 대해 자세히 알아보기 [API 식별자 유형](https://www.braze.com/docs/api/identifier_types/). |  |
+| [!UICONTROL 수량 &#x200B;] | 제공하지 않은 경우 기본값은 1입니다. 최대값은 100보다 작아야 합니다. | |
+| [!UICONTROL 앱 식별자] | 앱 식별자 또는 <strong>app_id</strong> 는 활동을 앱 그룹의 특정 앱과 연결하는 매개 변수입니다. 상호 작용 중인 앱 그룹 내의 앱을 지정합니다. 에 대해 자세히 알아보기 [API 식별자 유형](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL 구매 &#x200B; 속성] | 구매의 사용자 지정 속성을 포함하는 JSON 개체입니다. |  |
 
 {style="table-layout:auto"}
@@ -183,12 +183,12 @@ Edge Network를 [!DNL Braze]를 사용하려면 다음 입력이 필요합니다
 
 | 사용자 속성 | 설명 |
 | --- | --- |
-| [!UICONTROL 이름] |  |
-| [!UICONTROL 성] |  |
-| [!UICONTROL 전화] |  |
-| [!UICONTROL 이메일] |  |
+| [!UICONTROL 이름] | |
+| [!UICONTROL 성] | |
+| [!UICONTROL 전화] | |
+| [!UICONTROL 이메일] | |
 | [!UICONTROL 성별] | 다음 문자열 중 하나: &quot;M&quot;, &quot;F&quot;, &quot;O&quot;(기타), &quot;N&quot;(적용할 수 없음), &quot;P&quot;(말하지 않음). |
-| [!UICONTROL 구/군/시] |  |
+| [!UICONTROL 구/군/시] | |
 | [!UICONTROL 국가] | 의 문자열로서 국가 [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 포맷. |
 | [!UICONTROL 언어] | 의 문자열로서의 언어 [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 포맷. |
 | [!UICONTROL 생일] | &quot;YYYY-MM-DD&quot; 형식의 문자열(예: 1980-12-21). |
