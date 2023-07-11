@@ -4,7 +4,7 @@ description: 데이터 위생 API의 /workorder 끝점을 사용하면 ID에 대
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 54f92257d21f918b5d60c982670f96d30e879c60
 workflow-type: tm+mt
 source-wordcount: '1011'
 ht-degree: 3%
@@ -22,7 +22,7 @@ ht-degree: 3%
 >
 >레코드 삭제는 데이터 정리, 익명 데이터 제거 또는 데이터 최소화에 사용됩니다. 다음과 같습니다 **아님** GDPR(일반 데이터 보호 규정)과 같은 개인 정보 보호 규정에 관한 데이터 주체 권한 요청(준수)에 사용됩니다. 모든 규정 준수 사용 사례에 대해 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 대신,
 
-## 시작하기
+## 시작
 
 이 안내서에 사용된 끝점은 데이터 위생 API의 일부입니다. 계속하기 전에 다음을 검토하십시오. [개요](./overview.md) 관련 설명서에 대한 링크, 이 문서의 샘플 API 호출 읽기에 대한 안내서 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보입니다.
 
@@ -82,7 +82,7 @@ curl -X POST \
 | `datasetId` | 단일 데이터 세트에서 삭제하는 경우 이 값은 해당 데이터 세트의 ID여야 합니다. 모든 데이터 세트에서 삭제하는 경우 값을 로 설정하십시오. `ALL`.<br><br>단일 데이터 세트를 지정하는 경우 데이터 세트와 연결된 XDM(Experience Data Model) 스키마에 기본 ID가 정의되어 있어야 합니다. |
 | `displayName` | 레코드 삭제 요청에 대한 표시 이름입니다. |
 | `description` | 레코드 삭제 요청에 대한 설명. |
-| `identities` | 정보를 삭제하려는 하나 이상의 사용자 ID가 포함된 배열입니다. 각 ID는 [id 네임스페이스](../../identity-service/namespaces.md) 및 값:<ul><li>`namespace`: 단일 문자열 속성을 포함합니다. `code`: id 네임스페이스를 나타냅니다. </li><li>`id`: ID 값입니다.</ul>If `datasetId` 각 엔터티가 속한 단일 데이터 세트를 지정합니다. `identities` 스키마의 기본 id와 동일한 id 네임스페이스를 사용해야 합니다.<br><br>If `datasetId` 이(가) (으)로 설정됨 `ALL`, `identities` 각 데이터 세트가 다를 수 있으므로 배열이 단일 네임스페이스로 제한되지 않습니다. 그러나 요청은에서 보고한 대로 조직에서 사용할 수 있는 네임스페이스에 제약을 받습니다 [ID 서비스](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces?lang=ko). |
+| `identities` | 정보를 삭제하려는 하나 이상의 사용자 ID가 포함된 배열입니다. 각 ID는 [id 네임스페이스](../../identity-service/namespaces.md) 및 값:<ul><li>`namespace`: 단일 문자열 속성을 포함합니다. `code`: id 네임스페이스를 나타냅니다. </li><li>`id`: ID 값입니다.</ul>If `datasetId` 각 엔터티가 속한 단일 데이터 세트를 지정합니다. `identities` 스키마의 기본 id와 동일한 id 네임스페이스를 사용해야 합니다.<br><br>If `datasetId` 이(가) (으)로 설정됨 `ALL`, `identities` 각 데이터 세트가 다를 수 있으므로 배열이 단일 네임스페이스로 제한되지 않습니다. 그러나 요청은에서 보고한 대로 조직에서 사용할 수 있는 네임스페이스에 제약을 받습니다 [ID 서비스](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style="table-layout:auto"}
 
@@ -216,7 +216,7 @@ PUT /workorder{WORK_ORDER_ID}
 **요청**
 
 ```shell
-curl -X GET \
+curl -X PUT \
   https://platform.adobe.io/data/core/hygiene/workorder/BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
