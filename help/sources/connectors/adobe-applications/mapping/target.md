@@ -1,21 +1,18 @@
 ---
-keywords: Experience Platform;홈;인기 항목;대상 매핑;대상 매핑
 solution: Experience Platform
 title: XDM에 Adobe Target 이벤트 데이터 매핑
 description: Adobe Target 이벤트 필드를 Adobe Experience Platform에서 사용할 XDM(Experience Data Model) 스키마에 매핑하는 방법에 대해 알아봅니다.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
 
 # 대상 매핑 필드 매핑
 
-Adobe Experience Platform을 사용하면 Target 소스 커넥터를 통해 Adobe Target 데이터를 수집할 수 있습니다. 커넥터를 사용하는 경우 Target 필드의 모든 데이터를 [경험 데이터 모델(XDM)](../../../../xdm/home.md) xdm ExperienceEvent 클래스와 연결된 필드입니다.
-
-다음 표에서는 경험 이벤트 스키마 필드(*XDM ExperienceEvent 필드*) 및 매핑해야 하는 해당 Target 필드(*Target 요청 필드*). 일부 매핑에 대한 추가 참고도 제공됩니다.
+다음 표에서는 XDM(경험 데이터 모델) 경험 이벤트 스키마의 필드와 매핑되어야 하는 Adobe Target의 해당 필드에 대해 간략하게 설명합니다. 일부 매핑에 대한 추가 참고도 제공됩니다.
 
 >[!NOTE]
 >
@@ -24,7 +21,7 @@ Adobe Experience Platform을 사용하면 Target 소스 커넥터를 통해 Adob
 | XDM ExperienceEvent 필드 | Target 요청 필드 | 참고 |
 | ------------------------- | -------------------- | ----- |
 | **`id`** | 고유 요청 식별자 |
-| **`dataSource`** |  | 모든 클라이언트에 대해 &quot;1&quot;로 구성됩니다. |
+| **`dataSource`** | | 모든 클라이언트에 대해 &quot;1&quot;로 구성됩니다. |
 | `dataSource._id` | 요청과 함께 전달할 수 없는 시스템 생성 값입니다. | 해당 데이터 소스의 고유 ID. 데이터 소스를 만든 개인 또는 시스템에서 제공됩니다. |
 | `dataSource.code` | 요청과 함께 전달할 수 없는 시스템 생성 값입니다. | 전체 @id 바로 가기. 하나 이상의 코드 또는 @id을 사용할 수 있습니다. 경우에 따라 이 코드를 데이터 소스 통합 코드라고 합니다. |
 | `dataSource.tags` | 요청과 함께 전달할 수 없는 시스템 생성 값입니다. | 태그는 특정 데이터 소스로 표시되는 별칭이 해당 별칭을 사용하는 애플리케이션에 의해 어떻게 해석되어야 하는지 나타내는 데 사용됩니다.<br><br>예:<br><ul><li>`isAVID`: Analytics 방문자 ID를 나타내는 데이터 소스.</li><li>`isCRSKey`: CRS의 키로 사용해야 하는 별칭을 나타내는 데이터 소스입니다.</li></ul>태그는 데이터 소스가 생성될 때 설정되지만, 지정된 데이터 소스를 참조할 때 파이프라인 메시지에도 포함됩니다. |
@@ -76,7 +73,7 @@ Adobe Experience Platform을 사용하면 Target 소스 커넥터를 통해 Adob
 | `placeContext.geo.postalCode` | 요청의 IP 주소를 기반으로 해결된 우편 번호입니다. |
 | `placeContext.geo.stateProvince` | 요청의 IP 주소를 기반으로 해결된 시/도입니다. |
 | `placeContext.localTime` | `mboxRequest.offsetTime` + `mboxRequest.currentServerTime` |
-| **`commerce`** |  | 요청에 주문 세부 사항이 있는 경우에만 설정합니다. |
+| **`commerce`** | | 요청에 주문 세부 사항이 있는 경우에만 설정합니다. |
 | `commerce.order.priceTotal` | `mboxRequest.orderTotal` |
 | `commerce.order.purchaseOrderNumber` | `mboxRequest.orderId` |
 | `commerce.order.purchaseID` | `mboxRequest.orderId` |
