@@ -2,10 +2,10 @@
 title: ID 네임스페이스 개요
 description: ID 네임스페이스는 ID 서비스의 구성 요소이며 ID가 연관되는 컨텍스트의 지표 역할을 합니다. 예를 들어 이메일 주소로 "name@email.com" 값을 구별하거나 숫자 CRM ID로 "443522"값을 구별합니다.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
+source-git-commit: c456d02e746c160c1d133d0b4358415edffaa6f8
 workflow-type: tm+mt
-source-wordcount: '1719'
-ht-degree: 8%
+source-wordcount: '1766'
+ht-degree: 9%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 8%
 
 ID 네임스페이스는 의 구성 요소입니다. [[!DNL Identity Service]](./home.md) id가 연관되는 컨텍스트의 지표 역할을 합니다. 예를 들어, &quot;name&quot;의 값을 구별합니다<span>@email.com&quot; 을 이메일 주소로 사용하거나 &quot;443522&quot;를 숫자 CRM ID로 사용합니다.
 
-## 시작하기
+## 시작
 
 신원 네임스페이스를 사용하여 작업하려면 다양한 관련 Adobe Experience Platform 서비스를 이해해야 합니다. 네임스페이스 작업을 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
@@ -48,8 +48,10 @@ ID 네임스페이스는 의 구성 요소입니다. [[!DNL Identity Service]](.
 | 장치 ID | 장치 ID는 IDFA(iPhone 및 iPad), GAID(Android) 및 RIDA(Roku)와 같은 하드웨어 장치를 식별하며 가정에서 여러 사람이 공유할 수 있습니다. |
 | 이메일 주소 | 이메일 주소는 종종 단일 사용자와 연결되므로, 다양한 채널에서 해당 사용자를 식별하는 데 사용할 수 있습니다. 이 유형의 ID에는 PII(개인 식별 정보)가 포함됩니다. 다음에 대한 표시입니다. [!DNL Identity Service] 를 입력하여 값을 민감하게 처리합니다. |
 | 비인물 식별자 | 비사용자 ID는 네임스페이스가 필요하지만 개인 클러스터에 연결되지 않은 식별자를 저장하는 데 사용됩니다. 예: 제품 SKU, 제품, 조직 또는 스토어와 관련된 데이터. |
-| 파트너 ID [!BADGE 베타]{type=Informative} | 파트너 ID는 데이터 파트너가 사람을 나타내는 데 사용하는 식별자입니다. 파트너 ID는 종종 개인의 진짜 신분을 밝히지 않기 위해 가명으로 사용되며 확률적일 수 있습니다. Real-time Customer Data Platform에서 파트너 ID는 주로 확장된 대상 활성화 및 데이터 보강에 사용되며 결정론적 ID 그래프 링크 구축에는 사용되지 않습니다. |
+| 파트너 ID [!BADGE 베타]{type=Informative} | <ul><li>파트너 ID는 데이터 파트너가 사람을 나타내기 위해 사용하는 식별자입니다. 파트너 ID는 종종 개인의 진짜 신분을 밝히지 않기 위해 가명으로 사용되며 확률적일 수 있습니다. Real-time Customer Data Platform에서 파트너 ID는 ID 그래프 링크 구축이 아니라 주로 확장된 대상 활성화 및 데이터 보강에 사용됩니다.</li><li>파트너 ID 유형으로 지정된 ID 네임스페이스가 포함된 ID를 수집할 때 ID 그래프가 생성되지 않습니다.</li><li>파트너 ID의 ID 유형을 사용하여 파트너 데이터를 수집하지 않으면 ID 서비스의 시스템 그래프 제한에 도달할 수 있을 뿐만 아니라 원치 않는 프로필 병합이 발생할 수 있습니다.</li><ul> |
 | 전화번호 | 전화번호는 종종 한 사람과 연관되어 있으므로 다른 채널에서 해당 사람을 식별하는 데 사용할 수 있습니다. 이 유형의 ID에는 PII가 포함됩니다. 다음에 대한 표시입니다 [!DNL Identity Service] 를 입력하여 값을 민감하게 처리합니다. |
+
+{style="table-layout:auto"}
 
 ### 표준 네임스페이스 {#standard}
 
