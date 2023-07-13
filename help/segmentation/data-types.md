@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;데이터 유형;데이터 유형;데이터 유형;데이터 유형;세그먼테이션 데이터 유형;세그먼테이션;세그먼테이션;세그먼테이션 서비스;세그먼테이션 서비스 데이터 유형;
 solution: Experience Platform
 title: 세분화 서비스에서 지원되는 데이터 유형
 description: 모든 XDM(Experience Data Model) 데이터 유형은 Adobe 세그멘테이션 서비스 내에서 지원됩니다. 세그먼트 정의를 구성하는 규칙은 다음 데이터 유형에 의해 컨텍스트화됩니다.
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '490'
 ht-degree: 3%
 
 ---
@@ -17,7 +16,7 @@ ht-degree: 3%
 
 ## 문자열 데이터
 
-세그먼트 정의는 문자열 데이터를 사용하여 &quot;국가 이름&quot; 또는 &quot;충성도 프로그램 수준&quot;과 같은 세그먼트 대상을 위한 비숫자 제약 조건을 정의합니다.
+세그먼트 정의는 문자열 데이터를 사용하여 &quot;국가 이름&quot; 또는 &quot;충성도 프로그램 수준&quot;과 같은 대상에 대한 비숫자 제약 조건을 정의합니다.
 
 문자열 데이터는 논리, 포함/제외 및 비교 문을 사용하여 세그먼트 정의에 포함됩니다. 문자열 속성이 세그먼트 정의에 추가되면 문자열 관련 문을 사용하여 다른 문자열 필드와 비교하여 문자열 속성을 평가할 수 있습니다.
 
@@ -33,7 +32,7 @@ ht-degree: 3%
 
 | 예제 필드 | 일자 관련 명세서 | 타임라인 |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | 세그먼트가 작성된 날짜와 관련이 있습니다. |
+| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | 세그먼트 정의가 작성된 날짜와 관련이 있습니다. |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | 주어진 주/월 내에 관련성이 있습니다. |
 
 ## 경험 이벤트
@@ -45,7 +44,7 @@ Adobe Experience Platform 스키마로서 [!DNL XDM ExperienceEvents] 과 명시
 | 키워드 | Use |
 | ------- | --- |
 | 포함/제외 | 데이터의 포함 또는 누락을 통한 이벤트의 동작을 설명합니다. |
-| 임의/모두 | 자격을 부여하는 세그먼트의 수를 결정하는 데 도움이 됩니다. |
+| 임의/모두 | 자격을 부여하는 세그먼트 정의의 수를 결정하는 데 도움이 됩니다. |
 | &quot;시간 규칙 적용&quot; 토글 단추 | 날짜 데이터를 통합합니다. |
 | 같음, 같지 않음, 다음으로 시작, 다음으로 시작하지 않음, 다음으로 끝남, 다음으로 끝나지 않음, 포함, 포함하지 않음, 존재, 존재하지 않음 | 문자열 데이터를 통합합니다. |
 
@@ -55,9 +54,9 @@ Adobe Experience Platform 스키마로서 [!DNL XDM ExperienceEvents] 과 명시
 
 현재 Adobe Audience Manager만 외부 대상으로 지원되며 향후 추가 소스가 활성화됩니다. Platform과 함께 Adobe Audience Manager 대상 사용에 대한 자세한 내용은 [Adobe Audience Manager 설명서의 대상 공유 안내서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
-### 세그먼트 공유
+### 세그먼트 정의 공유
 
-플랫폼에서 생성된 세그먼트는 다른 세그먼트 내에서 사용할 수 있습니다. [Adobe Experience Cloud 핵심 서비스](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). 이 기능을 활성화하려면 솔루션 설계자나 컨설턴트에게 문의해야 합니다.
+플랫폼에서 생성된 세그먼트 정의는 다른 세그먼트 내에서 사용할 수 있습니다 [Adobe Experience Cloud 핵심 서비스](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). 이 기능을 활성화하려면 솔루션 설계자나 컨설턴트에게 문의해야 합니다.
 
 ## 기타 데이터 유형
 

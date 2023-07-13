@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼트 서비스;세그먼트;세그먼트;세그먼트;세그먼트;세그먼트
 solution: Experience Platform
 title: 세그먼테이션 서비스 개요
 description: Adobe Experience Platform 세분화 서비스 및 플랫폼 생태계에서 수행하는 역할에 대해 알아봅니다.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1629'
 ht-degree: 11%
 
 ---
 
 # [!DNL Segmentation Service] 개요
 
-Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트를 작성하고 에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. [!DNL Real-Time Customer Profile] 데이터. 이러한 세그먼트는에서 중앙 집중식으로 구성 및 유지 관리됩니다. [!DNL Platform]및 는 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
+Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트 정의나 다른 소스를 통해 대상을 만들 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. [!DNL Real-Time Customer Profile] 데이터. 이러한 대상은에서 중앙 집중식으로 구성 및 유지 관리됩니다. [!DNL Platform]및 는 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
 
 이 문서에서는 다음에 대한 개요를 제공합니다. [!DNL Segmentation Service] 그리고 Adobe Experience Platform에서 수행하는 역할입니다.
 
 ## 시작하기 [!DNL Segmentation Service]
 
-이 문서 전체에서 사용되는 다음 주요 용어를 이해하는 것이 중요합니다.
+이 문서 전체에서 사용되는 다음 주요 용어를 이해해야 합니다.
 
 - **세분화**: 유사한 트레이트를 공유하고 마케팅 전략에 유사하게 반응하는 대규모 개인 그룹(예: 고객, 잠재 고객, 사용자 또는 조직)을 더 작은 그룹으로 나눕니다.
-- **세그먼트 정의**: 타겟 대상의 주요 특성 또는 동작을 설명하는 데 사용되는 규칙 세트입니다. 개념화되면 세그먼트 정의에 요약된 규칙을 사용하여 세그먼트에 대한 자격 있는 대상 구성원을 결정합니다.
-- **대상자**: 세그먼트 정의의 기준을 충족하는 결과 프로필 세트입니다.
+- **대상자**: 유사한 행동 및/또는 특성을 공유하는 사람들의 컬렉션입니다. 이 사람 컬렉션은 Adobe Experience Platform에서 세그먼트 정의(플랫폼 생성 대상)를 사용하여 생성하거나 외부 소스(외부 생성 대상)에서 생성할 수 있습니다.
+- **세그먼트 정의**: Adobe Experience Platform이 대상 대상의 주요 특성 또는 동작을 설명하는 데 사용하는 규칙 세트입니다.
 
 ## 세그먼테이션 작동 방식
 

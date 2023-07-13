@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service 안내서
-user-guide-description: 실시간 고객 프로필 데이터에서 세그먼트를 작성하고 대상자를 생성합니다.
+user-guide-description: Adobe Experience Platform에서 생성한 세그먼트 정의 또는 외부 소스를 사용하여 실시간 고객 프로필 데이터에서 대상을 작성합니다.
 feature: Segments
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0a3dbb49948278f4fd12737938ad00f2f7abb681
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 31%
+source-wordcount: '176'
+ht-degree: 25%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 31%
    - [스트리밍 세분화](api/streaming-segmentation.md)
 - 세분화 UI {#ui}
    - [개요](ui/overview.md)
-   - [Audience Builder](ui/audience-builder.md)
+   - [대상자 구성](ui/audience-composition.md)
    - [세그먼트 대시보드](ui/segment-dashboard.md)
    - [세그먼트 빌더](ui/segment-builder.md)
    - [에지 세분화](ui/edge-segmentation.md)
@@ -65,5 +65,6 @@ ht-degree: 31%
    - [외부 대상 가져오기 및 사용](tutorials/using-external-audiences.md)
    - [데이터를 내보낼 데이터 세트 만들기](tutorials/create-dataset-export-segment.md)
    - [세그먼트에 대한 데이터 사용 규정 준수 적용](tutorials/governance.md)
+- [자주 묻는 질문](./faq.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes_kr)

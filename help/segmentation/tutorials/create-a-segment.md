@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;홈;인기 항목;세그먼트;세그먼트;세그먼트 만들기;세그먼테이션;세그먼트 만들기;세그먼테이션 서비스;
 solution: Experience Platform
-title: 세분화 서비스 API를 사용하여 세그먼트 만들기
+title: 세분화 서비스 API를 사용하여 세그먼트 정의 만들기
 type: Tutorial
 description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트 정의를 개발, 테스트, 미리 보기 및 저장하는 방법을 배우려면 이 자습서를 따르십시오.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '940'
 ht-degree: 1%
 
 ---
 
-# 세분화 서비스 API를 사용하여 세그먼트 만들기
+# 세분화 서비스 API를 사용하여 세그먼트 정의 만들기
 
 이 문서에서는 다음을 사용하여 세그먼트 정의를 개발, 테스트, 미리 보기 및 저장하는 자습서를 제공합니다. [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-사용자 인터페이스를 사용하여 세그먼트를 만드는 방법에 대한 자세한 내용은 [세그먼트 빌더 안내서](../ui/overview.md).
+사용자 인터페이스를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세한 내용은 [세그먼트 빌더 안내서](../ui/overview.md).
 
 ## 시작하기
 
-이 자습서에서는 다양한 을(를) 작업 이해해야 합니다 [!DNL Adobe Experience Platform] 대상 세그먼트 만들기와 관련된 서비스입니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
+이 자습서에서는 다양한 을(를) 작업 이해해야 합니다 [!DNL Adobe Experience Platform] 세그먼트 정의 생성과 관련된 서비스입니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): 실시간 고객 프로필 데이터에서 대상 세그먼트를 만들 수 있습니다.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): 실시간 고객 프로필 데이터에서 세그먼트 정의 또는 기타 외부 소스를 사용하여 대상을 구축할 수 있습니다.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다. 세그먼테이션을 최대한 활용하려면 데이터에 따라 프로필 및 이벤트가 수집되는지 확인하십시오. [데이터 모델링 우수 사례](../../xdm/schema/best-practices.md).
 
 다음 섹션에서는 를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다. [!DNL Platform] API.
@@ -54,11 +53,11 @@ ht-degree: 1%
 
 ## 세그먼트 정의 개발
 
-세그먼테이션의 첫 번째 단계는 세그먼트 정의라고 하는 구문에 표시되는 세그먼트를 정의하는 것입니다. 세그먼트 정의는 작성된 쿼리를 캡슐화하는 개체입니다 [!DNL Profile Query Language] (PQL). 이 개체를 PQL 술어라고도 합니다. PQL 술어는 제공하는 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트에 대한 규칙을 정의합니다 [!DNL Real-Time Customer Profile]. 다음을 참조하십시오. [PQL 안내서](../pql/overview.md) PQL 쿼리 작성에 대한 자세한 내용
+세그먼테이션의 첫 번째 단계는 세그먼트 정의를 정의하는 것입니다. 세그먼트 정의는 작성된 쿼리를 캡슐화하는 개체입니다 [!DNL Profile Query Language] (PQL). 이 개체를 PQL 술어라고도 합니다. PQL 술어는 제공하는 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트 정의에 대한 규칙을 정의합니다 [!DNL Real-Time Customer Profile]. 다음을 참조하십시오. [PQL 안내서](../pql/overview.md) PQL 쿼리 작성에 대한 자세한 내용
 
-에 POST 요청을 하여 새 세그먼트 정의를 만들 수 있습니다. `/segment/definitions` 의 엔드포인트 [!DNL Segmentation] API. 다음 예제에서는 세그먼트를 성공적으로 정의하기 위해 필요한 정보를 포함하여 정의 요청 형식을 지정하는 방법을 간략하게 설명합니다.
+에 POST 요청을 하여 새 세그먼트 정의를 만들 수 있습니다. `/segment/definitions` 의 엔드포인트 [!DNL Segmentation] API. 다음 예제에서는 세그먼트 정의를 성공적으로 정의하는 데 필요한 정보를 포함하여 정의 요청의 형식을 지정하는 방법을 간략하게 설명합니다.
 
-세그먼트 정의 방법에 대한 자세한 내용은 다음을 참조하십시오. [세그먼트 정의 개발자 안내서](../api/segment-definitions.md#create).
+세그먼트 정의를 정의하는 방법에 대한 자세한 내용은 다음을 참조하십시오. [세그먼트 정의 개발자 안내서](../api/segment-definitions.md#create).
 
 ## 대상자 예측 및 미리보기 {#estimate-and-preview-an-audience}
 
@@ -66,14 +65,14 @@ ht-degree: 1%
 
 대상자를 예측하고 미리 봄으로써 원하는 결과가 나올 때까지 PQL 술어를 테스트하고 최적화할 수 있습니다. 그런 다음 이 술어를 업데이트된 세그먼트 정의에 사용할 수 있습니다.
 
-세그먼트를 미리 보거나 예상 값을 가져오는 데 필요한 두 가지 단계가 있습니다.
+세그먼트 정의를 미리 보거나 예상 값을 가져오는 데 필요한 두 가지 단계가 있습니다.
 
 1. [미리보기 작업 만들기](#create-a-preview-job)
 2. [예상 보기 또는 미리 보기](#view-an-estimate-or-preview) 미리보기 작업의 ID 사용
 
 ### 예상 생성 방법
 
-데이터 샘플은 세그먼트를 평가하고 적격 프로필의 수를 예상하는 데 사용됩니다. 새 데이터는 매일 아침 메모리에 로드되고(12AM-2AM PT 사이, 7-9AM UTC) 모든 세그멘테이션 쿼리는 해당 날짜의 샘플 데이터를 사용하여 추정됩니다. 따라서 새 필드가 추가되거나 수집된 추가 데이터는 다음 날 추정에 반영됩니다.
+데이터 샘플은 세그먼트 정의를 평가하고 적격 프로필의 수를 예상하는 데 사용됩니다. 새 데이터는 매일 아침 메모리에 로드되고(12AM-2AM PT 사이, 7-9AM UTC) 모든 세그멘테이션 쿼리는 해당 날짜의 샘플 데이터를 사용하여 추정됩니다. 따라서 새 필드가 추가되거나 수집된 추가 데이터는 다음 날 추정에 반영됩니다.
 
 샘플 크기는 프로필 스토어에 있는 전체 엔티티 수에 따라 다릅니다. 이러한 샘플 크기는 다음 표에 나와 있습니다.
 

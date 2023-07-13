@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼테이션 서비스;에지 세그먼테이션;에지 세그먼테이션;스트리밍 에지;
 solution: Experience Platform
 title: API를 사용한 Edge 세그멘테이션
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API와 함께 에지 세그멘테이션을 사용하는 방법에 대한 예제가 포함되어 있습니다.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1169'
 ht-degree: 0%
 
 ---
@@ -17,9 +16,9 @@ ht-degree: 0%
 >
 >다음 문서에서는 API를 사용하여 에지 세분화를 수행하는 방법을 설명합니다. UI를 사용하여 에지 세분화를 수행하는 방법에 대한 자세한 내용은 [edge 세그멘테이션 UI 안내서](../ui/edge-segmentation.md).
 >
->이제 모든 Platform 사용자가 Edge 세그멘테이션을 일반적으로 사용할 수 있습니다. Beta 실행 중에 에지 세그먼트를 만든 경우 이러한 세그먼트는 계속 작동합니다.
+>이제 모든 Platform 사용자가 Edge 세그멘테이션을 일반적으로 사용할 수 있습니다. Beta 실행 중에 에지 세그먼트 정의를 생성한 경우 이러한 세그먼트 정의는 계속 작동합니다.
 
-에지 세그멘테이션은 에지에서 Adobe Experience Platform의 세그먼트를 즉시 평가하는 기능으로, 동일한 페이지와 다음 페이지 개인화 사용 사례를 활성화할 수 있습니다.
+에지 세그멘테이션은 에지에서 즉시 Adobe Experience Platform의 세그먼트 정의를 평가하는 기능으로, 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
 
 >[!IMPORTANT]
 >
@@ -32,7 +31,7 @@ ht-degree: 0%
 이 개발자 안내서를 사용하려면 여러 가지 사항에 대한 작업 이해가 필요합니다 [!DNL Adobe Experience Platform] 에지 세분화와 관련된 서비스. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계한 데이터를 기반으로 통합 소비자 프로필을 실시간으로 제공합니다.
-- [[!DNL Segmentation]](../home.md): 에서 세그먼트와 대상자를 만드는 기능을 제공합니다. [!DNL Real-Time Customer Profile] 데이터.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): 다음에서 대상자를 빌드할 수 있습니다. [!DNL Real-Time Customer Profile] 데이터.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다.
 
 Experience Platform API 엔드포인트를 성공적으로 호출하려면 의 안내서를 참조하십시오. [platform API 시작하기](../../landing/api-guide.md) 필수 헤더와 샘플 API 호출을 읽는 방법에 대해 알아봅니다.

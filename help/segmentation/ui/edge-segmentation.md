@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;에지 세그멘테이션;세그멘테이션;세그멘테이션 서비스;세그멘테이션 서비스;ui 안내서;스트리밍 에지;
 solution: Experience Platform
 title: Edge 세그멘테이션 UI 안내서
-description: 에지 세그멘테이션은 에지에서 즉시 플랫폼의 세그먼트를 평가하여 동일한 페이지와 다음 페이지 개인화 사용 사례를 활성화하는 기능입니다.
+description: 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화하면서 에지 세분화를 사용하여 에지에서 즉시 플랫폼의 세그먼트 정의를 평가하는 방법을 알아봅니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->이제 모든 Platform 사용자가 Edge 세그멘테이션을 일반적으로 사용할 수 있습니다. Beta 실행 중에 에지 세그먼트를 만든 경우 이러한 세그먼트는 계속 작동합니다.
+>이제 모든 Platform 사용자가 Edge 세그멘테이션을 일반적으로 사용할 수 있습니다. Beta 실행 중에 에지 세그먼트 정의를 생성한 경우 이러한 세그먼트 정의는 계속 작동합니다.
 
 에지 세그멘테이션은 Adobe Experience Platform의 세그먼트를 즉시 평가하는 기능입니다 [가장자리에](../../edge/home.md), 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
 
@@ -52,19 +51,19 @@ ht-degree: 0%
 | 세그먼트 | 하나 이상의 일괄 처리 또는 스트리밍 세그먼트를 포함하는 모든 세그먼트 정의입니다. | 미국에 거주하며 &quot;기존 세그먼트&quot; 세그먼트에 있는 사람. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | 맵을 참조하는 쿼리 | 속성 맵을 참조하는 모든 세그먼트 정의입니다. | 외부 세그먼트 데이터를 기반으로 장바구니에 추가한 사람입니다. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
-세그먼트 정의는 **아님** 다음 시나리오에서 edge 세그멘테이션에 대해 활성화하십시오.
+세그먼트 정의는 **아님** 다음 시나리오에서 에지 세분화에 대해 활성화하십시오.
 
 - 세그먼트 정의는 단일 이벤트와 `inSegment` 이벤트.
-   - 그러나 세그먼트에 포함된 경우 `inSegment` 이벤트는 프로필 전용이며, 세그먼트 정의는 입니다. **의지** 에지 세분화에 대해 활성화되어야 합니다.
+   - 그러나 세그먼트 정의에 가 포함된 경우 `inSegment` 이벤트는 프로필 전용이며, 세그먼트 정의는 입니다. **의지** 에지 세분화에 대해 활성화되어야 합니다.
 
 ## 다음 단계
 
-이 안내서에서는 Adobe Experience Platform에서 에지 세그멘테이션을 사용하여 세그먼트를 평가하는 방법을 설명합니다. Experience Platform 사용자 인터페이스 사용에 대한 자세한 내용은 [세그먼테이션 사용 안내서](./overview.md). Experience Platform API를 사용하여 유사한 작업을 수행하고 세그먼트를 사용하는 방법을 알아보려면 다음을 방문하십시오. [edge segmentation API 안내서](../api/edge-segmentation.md).
+이 안내서에서는 Adobe Experience Platform에서 에지 세분화를 사용하여 세그먼트 정의를 평가하는 방법을 설명합니다. Experience Platform 사용자 인터페이스 사용에 대한 자세한 내용은 [세그먼테이션 사용 안내서](./overview.md). Experience Platform API를 사용하여 유사한 작업을 수행하고 세그먼트 정의를 사용하는 방법을 알아보려면 다음을 방문하십시오. [edge segmentation API 안내서](../api/edge-segmentation.md).
 
 ## 부록
 
 다음 섹션에는 에지 세분화에 대해 자주 묻는 질문이 나와 있습니다.
 
-### Edge Network에서 세그먼트를 사용할 수 있으려면 얼마나 걸립니까?
+### Edge Network에서 세그먼트 정의를 사용하려면 얼마나 걸립니까?
 
-Edge Network에서 세그먼트를 사용할 수 있으려면 최대 1시간이 걸립니다.
+Edge Network에서 세그먼트 정의를 사용할 수 있으려면 최대 1시간이 걸립니다.

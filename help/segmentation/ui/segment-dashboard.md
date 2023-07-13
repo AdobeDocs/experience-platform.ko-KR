@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;프로필;세그먼트;세그먼트;세그먼테이션;사용자 인터페이스;UI;사용자 지정;세그먼트 대시보드;대시보드
 title: 세그먼트 대시보드
 description: Adobe Experience Platform UI는 조직에서 만들고 유지 관리하는 세그먼트와 관련된 중요한 지표를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 4a45bc3a-be5e-42b5-abd1-f0fb5795f5f4
-source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
@@ -19,4 +18,4 @@ UI에서 세그먼트 대시보드에 액세스하고 상호 작용하는 방법
 
 Experience Platform 사용자 인터페이스 내의 모든 대시보드 기능에 대한 개요를 알려면 [대시보드 개요](../../dashboards/home.md).
 
-![세그먼트 대시보드. 대상 크기 위젯, 대상 크기 변경 트렌드 위젯 및 ID별 프로필 위젯의 세 가지 위젯을 표시합니다.](../images/ui/segment-dashboard/dashboard-overview.png)
+![세그먼트 대시보드. 대상 크기 위젯, 대상 크기 변경 트렌드 위젯 및 ID별 프로필 위젯의 세 가지 위젯을 표시합니다.](../../dashboards/images/segments/dashboard-overview.png)

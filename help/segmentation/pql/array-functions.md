@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼테이션 서비스;pql;PQL;프로필 쿼리 언어;배열 함수;배열;
 solution: Experience Platform
 title: PQL 함수 배열, 목록 및 설정
 description: PQL(프로필 쿼리 언어)은 배열, 목록 및 문자열과 보다 쉽게 상호 작용할 수 있도록 하는 기능을 제공합니다.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '750'
 ht-degree: 5%
 
 ---

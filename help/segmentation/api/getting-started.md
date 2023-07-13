@@ -4,20 +4,20 @@ solution: Experience Platform
 title: 세분화 서비스 API 시작하기
 description: 다음 설명서는 Segmentation API를 성공적으로 사용하기 위해 알아야 하는 추가 정보를 제공합니다.
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '355'
 ht-degree: 1%
 
 ---
 
 # 세분화 서비스 API 시작하기 {#getting-started}
 
-Adobe Experience Platform [!DNL Segmentation Service] 을(를) 통해 Adobe Experience Platform에서 세그먼트를 작성하고 대상자를 생성할 수 있습니다. [!DNL Real-Time Customer Profile] 데이터.
+Adobe Experience Platform [!DNL Segmentation Service] 에서 세그먼트 정의 또는 Adobe Experience Platform의 다른 소스를 통해 대상자를 만들 수 있습니다. [!DNL Real-Time Customer Profile] 데이터.
 
 개발자 안내서를 사용하려면 여러 가지 사항에 대한 작업 이해가 필요합니다 [!DNL Experience Platform] 사용과 관련된 서비스 [!DNL Segmentation Service].
 
-- [[!DNL Segmentation]](../home.md): 다음에서 대상 세그먼트를 만들 수 있습니다. [!DNL Real-Time Customer Profile] 데이터.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): 다음에서 대상자를 빌드할 수 있습니다. [!DNL Real-Time Customer Profile] 데이터.
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다. 세그먼테이션을 최대한 활용하려면 데이터에 따라 프로필 및 이벤트가 수집되는지 확인하십시오. [데이터 모델링 우수 사례](../../xdm/schema/best-practices.md).
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
 - [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 만드는 가상 샌드박스를 제공합니다. [!DNL Platform] 인스턴스를 별도의 가상 환경으로 전환하여 디지털 경험 애플리케이션을 개발하고 발전시킵니다.

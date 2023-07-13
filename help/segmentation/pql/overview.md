@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;홈;인기 항목;PQL;pql;프로필 쿼리 언어
 solution: Experience Platform
 title: PQL(프로필 쿼리 언어) 개요
 description: 이 안내서에서는 서식 지정 지침에 대해 설명하고 예제 PQL 표현식을 제공하는 등 PQL에 대한 일반적인 개요를 제공합니다.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 2%
+source-wordcount: '706'
+ht-degree: 3%
 
 ---
 
@@ -67,7 +66,6 @@ PQL은 다음과 같은 리터럴 유형을 지원합니다.
 | 배열 | 다른 리터럴 값의 그룹으로 구성된 데이터 유형입니다. 대괄호를 사용하여 그룹화하고 쉼표를 사용하여 서로 다른 값 사이를 구분합니다. <br> **참고:** 배열 내의 항목 속성에 직접 액세스할 수 없습니다. 따라서 배열 내의 속성에 액세스해야 하는 경우 지원되는 메서드는 다음과 같습니다 `select X from array where X.item = ...`. <br> PQL은 `xEvent` 프로필에 연결된 경험 이벤트 배열을 참조하십시오. | `[1, 4, 7]`, `["US", "CA"]` |
 | 상대 시간 참조 | 타임스탬프 및 시간 간격 참조를 구성하는 데 사용할 수 있는 예약어입니다. <ul><li>지금, 오늘, 어제, 내일</li><li>이, 마지막, 다음</li><li>전, 후, 후</li><li>밀리초, 초, 분, 시간, 일, 주, 월, 년, 10년, 세기/세기, 천년/천년</li></ul> | `X.timestamp occurs before today`, `X.timestamp occurs last month`, `X.timestamp occurs <= 3 days before now` |
 
-
 ## PQL 함수
 
 다음 표는 자세한 내용을 보기 위한 추가 설명서에 대한 링크를 포함하여 지원되는 PQL 함수의 다양한 범주를 간략하게 설명합니다.
@@ -89,4 +87,4 @@ PQL은 다음과 같은 리터럴 유형을 지원합니다.
 
 ## 다음 단계
 
-이제 를 사용하는 방법을 배웠습니다 [!DNL Profile Query Language], 세그먼트를 만들고 수정할 때 PQL을 사용할 수 있습니다. 세그멘테이션에 대한 자세한 내용은 [세그먼테이션 개요](../home.md).
+이제 를 사용하는 방법을 배웠습니다 [!DNL Profile Query Language], 세그먼트 정의를 만들고 수정할 때 PQL을 사용할 수 있습니다. 세그멘테이션에 대한 자세한 내용은 [세그먼테이션 개요](../home.md).

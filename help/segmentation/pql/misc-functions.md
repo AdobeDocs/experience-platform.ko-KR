@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼테이션 서비스;pql;PQL;프로필 쿼리 언어;기타 함수;기타;
 solution: Experience Platform
 title: PQL 기타 함수
 description: 다음 함수는 프로필 쿼리 언어(PQL)에 대한 기타 함수입니다.
 exl-id: a6ed31a2-a649-4dc8-89b1-48c1170b7f16
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '115'
 ht-degree: 3%
 
 ---

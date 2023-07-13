@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼테이션 서비스;세그먼트 작업;세그먼트 작업;API;API;
 solution: Experience Platform
 title: 세그먼트 작업 API 엔드포인트
 description: Adobe Experience Platform Segmentation Service API의 세그먼트 작업 끝점을 사용하면 조직의 세그먼트 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1505'
 ht-degree: 2%
 
 ---
@@ -56,11 +55,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **응답**
 
-성공적인 응답은 지정된 조직에 대한 세그먼트 작업 목록이 JSON인 HTTP 상태 200을 반환합니다. 하지만 세그먼트 작업 내의 세그먼트 수에 따라 응답이 달라집니다.
+성공적인 응답은 지정된 조직에 대한 세그먼트 작업 목록이 JSON인 HTTP 상태 200을 반환합니다. 하지만 세그먼트 작업 내의 세그먼트 정의 수에 따라 응답이 달라집니다.
 
-**세그먼트 작업에서 1500개 이하의 세그먼트**
+**세그먼트 작업에서 1500개 이하의 세그먼트 정의**
 
-세그먼트 작업에서 1500개 미만의 세그먼트가 실행되는 경우 모든 세그먼트의 전체 목록이 `children.segments` 특성.
+세그먼트 작업에서 1500개 미만의 세그먼트 정의를 실행하는 경우 모든 세그먼트 정의의 전체 목록이 `children.segments` 특성.
 
 >[!NOTE]
 >
@@ -166,9 +165,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 }
 ```
 
-**1500개 이상의 세그먼트**
+**1500개 이상의 세그먼트 정의**
 
-세그먼트 작업에서 1500개가 넘는 세그먼트가 실행되는 경우 `children.segments` 속성이 표시됨 `*`모든 세그먼트가 평가됨을 나타냅니다.
+세그먼트 작업에서 1500개가 넘는 세그먼트 정의를 실행하는 경우 `children.segments` 속성이 표시됨 `*`모든 세그먼트 정의가 평가됨을 나타냅니다.
 
 >[!NOTE]
 >
@@ -272,8 +271,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `metrics.totalTime` | 세분화 작업이 시작 및 종료된 시간과 총 소요 시간에 대한 정보가 포함된 개체입니다. |
 | `metrics.profileSegmentationTime` | 세분화 평가가 시작되고 종료된 시간 및 총 소요 시간에 대한 정보가 포함된 개체입니다. |
 | `metrics.segmentProfileCounter` | 세그먼트 기준으로 적격한 프로필 수입니다. |
-| `metrics.segmentedProfileByNamespaceCounter` | 각 세그먼트 기준으로 각 ID 네임스페이스에 적합한 프로필 수입니다. |
-| `metrics.segmentProfileByStatusCounter` | 각 상태에 대한 프로필 수입니다. 다음 세 가지 상태가 지원됩니다. <ul><li>&quot;실현됨&quot; - 세그먼트에 적합한 프로필 수입니다.</li><li>&quot;종료됨&quot; - 더 이상 세그먼트에 존재하지 않는 프로필 세그먼트 수입니다.</li></ul> |
+| `metrics.segmentedProfileByNamespaceCounter` | 세그먼트 정의별로 각 ID 네임스페이스에 적합한 프로필 수입니다. |
+| `metrics.segmentProfileByStatusCounter` | 각 상태에 대한 프로필 수입니다. 다음 세 가지 상태가 지원됩니다. <ul><li>&quot;실현됨&quot; - 세그먼트 정의에 적합한 프로필 수입니다.</li><li>&quot;종료됨&quot; - 세그먼트 정의에 더 이상 존재하지 않는 프로필 수입니다.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | 병합 정책별 병합된 총 프로필 수입니다. |
 
 ## 새 세그먼트 작업 만들기 {#create}
@@ -286,9 +285,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 POST /segment/jobs
 ```
 
-새 세그먼트 작업을 만들 때 세그먼트 작업 내의 세그먼트 수에 따라 요청 및 응답이 달라집니다.
+새 세그먼트 작업을 만들 때 세그먼트 작업 내의 세그먼트 정의 수에 따라 요청 및 응답이 달라집니다.
 
-**세그먼트 작업에서 1500개 이하의 세그먼트**
+**세그먼트 작업에서 1500개 이하의 세그먼트 정의**
 
 **요청**
 
@@ -411,13 +410,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `segments.segment.id` | 제공한 세그먼트 정의의 ID입니다. |
 | `segments.segment.expression` | PQL로 작성된 세그먼트 정의의 표현식에 대한 정보가 포함된 객체입니다. |
 
-**1500개 이상의 세그먼트**
+**1500개 이상의 세그먼트 정의**
 
 **요청**
 
 >[!NOTE]
 >
->1500개가 넘는 세그먼트로 세그먼트 작업을 만들 수 있지만 이는 **매우 권장되지 않음**.
+>1500개가 넘는 세그먼트 정의를 사용하여 세그먼트 작업을 만들 수 있지만, 이는 **매우 권장되지 않음**.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -440,7 +439,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `schema.name` | 세그먼트에 대한 스키마의 이름입니다. |
+| `schema.name` | 세그먼트 정의에 대한 스키마의 이름입니다. |
 | `segments.segmentId` | 1500개가 넘는 세그먼트로 세그먼트 작업을 실행하는 경우 다음을 전달해야 합니다 `*` 모든 세그먼트에서 세그먼테이션 작업을 실행함을 나타내는 세그먼트 ID입니다. |
 
 **응답**
@@ -528,7 +527,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `id` | 새로 생성된 세그먼트 작업에 대한 시스템에서 생성한 읽기 전용 식별자입니다. |
 | `status` | 세그먼트 작업의 현재 상태입니다. 세그먼트 작업이 새로 생성되므로 상태는 항상 입니다. `NEW`. |
 | `segments` | 이 세그먼트 작업이 실행 중인 세그먼트 정의에 대한 정보를 포함하는 개체입니다. |
-| `segments.segment.id` | 다음 `*` 는 조직 내의 모든 세그먼트에 대해 이 세그먼트 작업이 실행 중임을 의미합니다. |
+| `segments.segment.id` | 다음 `*` 는 조직 내의 모든 세그먼트 정의에 대해 이 세그먼트 작업이 실행 중임을 의미합니다. |
 
 ## 특정 세그먼트 작업 검색 {#get}
 
@@ -556,11 +555,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **응답**
 
-성공한 응답은 지정된 세그먼트 작업에 대한 자세한 정보와 함께 HTTP 상태 200을 반환합니다.  하지만 세그먼트 작업 내의 세그먼트 수에 따라 응답이 달라집니다.
+성공한 응답은 지정된 세그먼트 작업에 대한 자세한 정보와 함께 HTTP 상태 200을 반환합니다.  하지만 응답은 세그먼트 작업 내의 세그먼트 정의 수에 따라 달라집니다.
 
-**세그먼트 작업에서 1500개 이하의 세그먼트**
+**세그먼트 작업에서 1500개 이하의 세그먼트 정의**
 
-세그먼트 작업에서 1500개 미만의 세그먼트가 실행되는 경우 모든 세그먼트의 전체 목록이 `children.segments` 특성.
+세그먼트 작업에서 1500개 미만의 세그먼트 정의를 실행하는 경우 모든 세그먼트 정의의 전체 목록이 `children.segments` 특성.
 
 ```json
 {
@@ -622,9 +621,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 }
 ```
 
-**1500개 이상의 세그먼트**
+**1500개 이상의 세그먼트 정의**
 
-세그먼트 작업에서 1500개가 넘는 세그먼트가 실행되는 경우 `children.segments` 속성이 표시됨 `*`모든 세그먼트가 평가됨을 나타냅니다.
+세그먼트 작업에서 1500개가 넘는 세그먼트 정의를 실행하는 경우 `children.segments` 속성이 표시됨 `*`모든 세그먼트 정의가 평가됨을 나타냅니다.
 
 ```json
 {
@@ -744,7 +743,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **응답**
 
-성공적인 응답은 요청된 세그먼트 작업과 함께 HTTP 상태 207을 반환합니다. 그러나 의 값은 `children.segments` 속성은 세그먼트 작업이 1500개 이상의 세그먼트에 대해 실행 중인지 여부에 따라 다릅니다.
+성공적인 응답은 요청된 세그먼트 작업과 함께 HTTP 상태 207을 반환합니다. 그러나 의 값은 `children.segments` 속성은 세그먼트 작업이 1500개가 넘는 세그먼트 정의에 대해 실행 중인지 여부에 따라 다릅니다.
 
 >[!NOTE]
 >

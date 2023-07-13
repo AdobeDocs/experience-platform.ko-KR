@@ -1,17 +1,20 @@
 ---
-keywords: Experience Platform;홈;인기 항목;옵트아웃;세그먼테이션;세그먼테이션 서비스;세그먼테이션 서비스;옵트아웃 준수;옵트아웃;옵트아웃;옵트아웃;동의;공유;수집;
 solution: Experience Platform
 title: 세그먼트의 동의 준수
 description: 세그먼트 작업에서 개인 데이터 수집 및 공유에 대한 고객 동의 환경 설정을 준수하는 방법에 대해 알아봅니다.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
 
 # 세그먼트의 동의 준수
+
+>[!NOTE]
+>
+>이 안내서에서는 다음 내에서 동의를 수락하는 방법을 설명합니다. **세그먼트 정의**.
 
 다음과 같은 법적 개인 정보 보호 규정 [!DNL California Consumer Privacy Act] (CCPA)는 개인정보를 수집하거나 서드파티와 공유하지 않도록 선택할 수 있는 권한을 소비자에게 제공합니다. Adobe Experience Platform은 실시간 고객 프로필 데이터에서 이러한 고객 동의 환경 설정을 캡처할 수 있도록 하는 표준 경험 데이터 모델(XDM) 구성 요소를 제공합니다.
 
@@ -23,7 +26,7 @@ ht-degree: 0%
 
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): 플랫폼이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): 여러 소스에서 집계한 데이터를 기반으로 통합 고객 프로필을 실시간으로 제공합니다.
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): 다음에서 대상 세그먼트를 만들 수 있습니다. [!DNL Real-Time Customer Profile] 데이터.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): 다음에서 대상자를 빌드할 수 있습니다. [!DNL Real-Time Customer Profile] 데이터.
 
 ## 동의 스키마 필드
 
@@ -35,7 +38,7 @@ ht-degree: 0%
 
 ## 세분화에서 동의 처리
 
-옵트아웃 프로필이 세그먼트에 포함되지 않도록 하려면 새 세그먼트를 만들 때 특수 필드를 기존 세그먼트에 추가하고 포함해야 합니다.
+옵트아웃 프로필이 세그먼트 정의에 포함되지 않도록 하려면 기존 세그먼트 정의에 특수 필드를 추가하고 새 세그먼트 정의를 생성할 때 포함해야 합니다.
 
 아래 절차에서는 두 가지 유형의 옵트아웃 플래그에 적합한 필드를 추가하는 방법을 보여줍니다.
 
@@ -44,13 +47,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->이 안내서는 위의 두 가지 옵트아웃 플래그에 중점을 두지만, 추가 동의 신호를 통합하도록 세그먼트를 구성할 수도 있습니다. 다음 [동의 및 환경 설정 참조 안내서](../xdm/field-groups/profile/consents.md) 에서는 이러한 각 옵션 및 의도한 사용 사례에 대해 자세히 설명합니다.
+>이 안내서는 위의 두 가지 옵트아웃 플래그에 중점을 두지만, 추가 동의 신호를 통합하도록 세그먼트 정의를 구성할 수도 있습니다. 다음 [동의 및 환경 설정 참조 안내서](../xdm/field-groups/profile/consents.md) 에서는 이러한 각 옵션 및 의도한 사용 사례에 대해 자세히 설명합니다.
 
-UI에서 세그먼트를 작성할 때에서 **[!UICONTROL 속성]**, 다음으로 이동 **[!UICONTROL XDM 개별 프로필]**&#x200B;을 선택한 다음 을 선택합니다. **[!UICONTROL 동의 및 환경 설정]**. 여기에서 다음에 대한 옵션을 볼 수 있습니다. **[!UICONTROL 데이터 수집]** 및 **[!UICONTROL 데이터 공유]**.
+UI에서 세그먼트 정의를 작성할 때에서 **[!UICONTROL 속성]**, 다음으로 이동 **[!UICONTROL XDM 개별 프로필]**&#x200B;을 선택한 다음 을 선택합니다. **[!UICONTROL 동의 및 환경 설정]**. 여기에서 다음에 대한 옵션을 볼 수 있습니다. **[!UICONTROL 데이터 수집]** 및 **[!UICONTROL 데이터 공유]**.
 
 ![](./images/opt-outs/consents.png)
 
-다음을 선택하여 시작 **[!UICONTROL 데이터 수집]** 범주, 드래그 **[!UICONTROL 선택 값]** 세그먼트 빌더로 이동합니다. 속성을 세그먼트에 추가할 때 [동의 값](../xdm/field-groups/profile/consents.md#choice-values) 포함 또는 제외해야 합니다.
+다음을 선택하여 시작 **[!UICONTROL 데이터 수집]** 범주, 드래그 **[!UICONTROL 선택 값]** 세그먼트 빌더로 이동합니다. 세그먼트 정의에 속성을 추가할 때 [동의 값](../xdm/field-groups/profile/consents.md#choice-values) 포함 또는 제외해야 합니다.
 
 ![](./images/opt-outs/consent-values.png)
 
@@ -66,11 +69,11 @@ UI에서 세그먼트를 작성할 때에서 **[!UICONTROL 속성]**, 다음으�
 
 ![](./images/opt-outs/share.png)
 
-두 가지 모두 사용 **[!UICONTROL 데이터 수집]** 및 **[!UICONTROL 데이터 공유]** 세그먼트에 추가된 동의 값, 데이터가 사용되지 않도록 선택한 모든 고객은 결과 대상자에서 제외됩니다. 여기에서 선택하기 전에 세그먼트 정의를 계속 사용자 지정할 수 있습니다. **[!UICONTROL 저장]** 프로세스를 완료합니다.
+두 가지 모두 사용 **[!UICONTROL 데이터 수집]** 및 **[!UICONTROL 데이터 공유]** 세그먼트 정의에 추가된 동의 값, 데이터가 사용되지 않도록 선택한 모든 고객은 결과 대상자에서 제외됩니다. 여기에서 선택하기 전에 세그먼트 정의를 계속 사용자 지정할 수 있습니다. **[!UICONTROL 저장]** 프로세스를 완료합니다.
 
 ## 다음 단계
 
-이 자습서를 따라 Experience Platform에서 세그먼트를 작성할 때 고객 동의 및 환경 설정을 적용하는 방법을 보다 잘 이해할 수 있습니다.
+이 자습서를 따라 Experience Platform에서 세그먼트 정의를 작성할 때 고객 동의 및 환경 설정을 적용하는 방법을 보다 잘 이해할 수 있습니다.
 
 Platform에서의 동의 관리에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 

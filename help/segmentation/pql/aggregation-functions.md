@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼테이션 서비스;pql;PQL;프로필 쿼리 언어;집계 함수;집계;
 solution: Experience Platform
 title: PQL 집계 함수
 description: 집계 함수는 PQL(프로필 쿼리 언어) 배열 내에서 여러 값을 함께 그룹화하여 단일 요약 값을 구성하는 데 사용됩니다.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 6%
+source-wordcount: '227'
+ht-degree: 7%
 
 ---
 

@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼테이션 서비스;일정;일정;api;API;
 solution: Experience Platform
 title: 예약 API 끝점
 description: 예약은 하루에 한 번 배치 세분화 작업을 자동으로 실행하는 데 사용할 수 있는 도구입니다.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '1996'
 ht-degree: 3%
 
 ---

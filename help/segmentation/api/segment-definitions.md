@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼테이션 서비스;세그먼트 정의;세그먼트 정의;api;API;
 solution: Experience Platform
 title: 세그먼트 정의 API 엔드포인트
 description: Adobe Experience Platform Segmentation Service API의 세그먼트 정의 엔드포인트를 사용하면 조직의 세그먼트 정의를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1209'
 ht-degree: 3%
 
 ---
 
 # 세그먼트 정의 엔드포인트
 
-Adobe Experience Platform을 사용하면 프로필 그룹에서 특정 속성이나 동작 그룹을 정의하는 세그먼트를 만들 수 있습니다. 세그먼트 정의는 작성된 쿼리를 캡슐화하는 개체입니다 [!DNL Profile Query Language] (PQL). 이 개체를 PQL 술어라고도 합니다. PQL 술어는 제공하는 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트에 대한 규칙을 정의합니다 [!DNL Real-Time Customer Profile]. 다음을 참조하십시오. [PQL 안내서](../pql/overview.md) PQL 쿼리 작성에 대한 자세한 내용
+Adobe Experience Platform을 사용하면 프로필 그룹에서 특정 속성이나 동작 그룹을 정의하는 세그먼트 정의를 만들 수 있습니다. 세그먼트 정의는 작성된 쿼리를 캡슐화하는 개체입니다 [!DNL Profile Query Language] (PQL). 세그먼트 정의는 프로필에 적용되어 대상자를 만듭니다. 이 오브젝트(세그먼트 정의)를 PQL 술어라고도 합니다. PQL 술어는 제공하는 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트 정의에 대한 규칙을 정의합니다 [!DNL Real-Time Customer Profile]. 다음을 참조하십시오. [PQL 안내서](../pql/overview.md) PQL 쿼리 작성에 대한 자세한 내용
 
 이 안내서에서는 세그먼트 정의를 더 잘 이해하는 데 도움이 되는 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 
@@ -199,15 +198,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `name` | **필수 여부.** 세그먼트를 참조할 고유한 이름. |
-| `description` | 생성 중인 세그먼트 정의에 대한 설명입니다. |
-| `evaluationInfo` | 만들고 있는 세그먼트의 유형입니다. 배치 세그먼트를 만들려면 다음을 설정하십시오. `evaluationInfo.batch.enabled` 사실입니다. 스트리밍 세그먼트를 만들려면 다음을 설정하십시오. `evaluationInfo.continuous.enabled` 사실입니다. 모서리 세그먼트를 만들려면 다음을 설정합니다. `evaluationInfo.synchronous.enabled` 사실입니다. 비워 두면 세그먼트는 로 만들어집니다. **일괄 처리** 세그먼트. |
-| `schema` | **필수 여부.** 세그먼트의 엔티티와 연결된 스키마입니다. 다음 중 하나로 구성됩니다. `id` 또는 `name` 필드. |
-| `expression` | **필수 여부.** 세그먼트 정의에 대한 필드 정보를 포함하는 엔티티입니다. |
+| `name` | 세그먼트 정의를 참조할 고유한 이름. |
+| `description` | (선택 사항입니다.) 생성 중인 세그먼트 정의에 대한 설명입니다. |
+| `evaluationInfo` | (선택 사항입니다.) 생성 중인 세그먼트 정의 유형입니다. 배치 세그먼트를 만들려면 다음을 설정하십시오. `evaluationInfo.batch.enabled` 사실입니다. 스트리밍 세그먼트를 만들려면 다음을 설정하십시오. `evaluationInfo.continuous.enabled` 사실입니다. 모서리 세그먼트를 만들려면 다음을 설정합니다. `evaluationInfo.synchronous.enabled` 사실입니다. 비워 두면 세그먼트 정의가 다음과 같이 만들어집니다. **일괄 처리** 세그먼트. |
+| `schema` | 세그먼트의 엔티티와 연결된 스키마입니다. 다음 중 하나로 구성됩니다. `id` 또는 `name` 필드. |
+| `expression` | 세그먼트 정의에 대한 필드 정보를 포함하는 엔티티입니다. |
 | `expression.type` | 표현식 유형을 지정합니다. 현재 &quot;PQL&quot;만 지원됩니다. |
 | `expression.format` | 값의 식 구조를 나타냅니다. 현재 지원되는 형식은 다음과 같습니다. <ul><li>`pql/text`: 게시된 PQL 문법에 따른 세그먼트 정의의 텍스트 표현입니다.  예: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | 에 표시된 유형을 준수하는 표현식 `expression.format`. |
-| `description` | 사람이 인식할 수 있는 정의 설명. |
 
 <!-- >[!NOTE]
 >
@@ -339,7 +337,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 | 속성 | 설명 |
 | -------- | ----------- |
 | `id` | 세그먼트 정의에 대한 시스템 생성 읽기 전용 ID입니다. |
-| `name` | 세그먼트를 참조할 고유한 이름. |
+| `name` | 세그먼트 정의를 참조할 고유한 이름. |
 | `schema` | 세그먼트의 엔티티와 연결된 스키마입니다. 다음 중 하나로 구성됩니다. `id` 또는 `name` 필드. |
 | `expression` | 세그먼트 정의에 대한 필드 정보를 포함하는 엔티티입니다. |
 | `expression.type` | 표현식 유형을 지정합니다. 현재 &quot;PQL&quot;만 지원됩니다. |
@@ -472,7 +470,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 | 속성 | 설명 |
 | -------- | ----------- |
 | `id` | 세그먼트 정의에 대한 시스템 생성 읽기 전용 ID입니다. |
-| `name` | 세그먼트를 참조할 고유한 이름. |
+| `name` | 세그먼트 정의를 참조할 고유한 이름. |
 | `schema` | 세그먼트의 엔티티와 연결된 스키마입니다. 다음 중 하나로 구성됩니다. `id` 또는 `name` 필드. |
 | `expression` | 세그먼트 정의에 대한 필드 정보를 포함하는 엔티티입니다. |
 | `expression.type` | 표현식 유형을 지정합니다. 현재 &quot;PQL&quot;만 지원됩니다. |
@@ -487,7 +485,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 
 >[!NOTE]
 >
-> 다음을 수행합니다. **아님** 대상 활성화에 사용되는 세그먼트를 삭제할 수 있습니다.
+> 대상 활성화에 사용되는 세그먼트 정의 **할 수 없음** 삭제할 수 있습니다.
 
 **API 형식**
 

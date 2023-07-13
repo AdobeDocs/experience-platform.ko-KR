@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼테이션 서비스;pql;PQL;프로필 쿼리 언어;맵 함수;맵;
 solution: Experience Platform
 title: PQL 맵 함수
 description: PQL(프로필 쿼리 언어)은 맵과의 상호 작용을 더 쉽게 만드는 기능을 제공합니다.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 6%
+source-wordcount: '156'
+ht-degree: 7%
 
 ---
 

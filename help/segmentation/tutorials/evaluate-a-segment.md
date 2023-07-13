@@ -1,27 +1,26 @@
 ---
-keywords: Experience Platform;홈;인기 항목;세그먼트 평가;세그먼테이션 서비스;세그먼테이션;세그먼테이션;세그먼트 평가;세그먼트 결과 액세스;세그먼트 평가 및 액세스;
 solution: Experience Platform
 title: 세그먼트 결과 평가 및 액세스
 type: Tutorial
-description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트를 평가하고 세그먼트 결과에 액세스하는 방법에 대해 알아보려면 이 자습서를 따르십시오.
+description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트 정의를 평가하고 세그멘테이션 결과에 액세스하는 방법에 대해 알아보려면 이 자습서를 따르십시오.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1599'
 ht-degree: 0%
 
 ---
 
-# 세그먼트 결과 평가 및 액세스
+# 세그먼트 정의 결과 평가 및 액세스
 
-이 문서에서는 [[!DNL Segmentation API]](../api/getting-started.md).
+이 문서에서는 다음을 사용하여 세그먼트 정의를 평가하고 이러한 결과에 액세스하는 자습서를 제공합니다. [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## 시작하기
 
-이 자습서에서는 다양한 을(를) 작업 이해해야 합니다 [!DNL Adobe Experience Platform] 대상 세그먼트 만들기와 관련된 서비스입니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
+이 자습서에서는 다양한 을(를) 작업 이해해야 합니다 [!DNL Adobe Experience Platform] 대상자 만들기와 관련된 서비스입니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계한 데이터를 기반으로 통합 고객 프로필을 실시간으로 제공합니다.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): 다음에서 대상 세그먼트를 만들 수 있습니다. [!DNL Real-Time Customer Profile] 데이터.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): 다음에서 대상자를 빌드할 수 있습니다. [!DNL Real-Time Customer Profile] 데이터.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 플랫폼이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다. 세그먼테이션을 최대한 활용하려면 데이터에 따라 프로필 및 이벤트가 수집되는지 확인하십시오. [데이터 모델링 우수 사례](../../xdm/schema/best-practices.md).
 - [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 만드는 가상 샌드박스를 제공합니다. [!DNL Platform] 인스턴스를 별도의 가상 환경으로 전환하여 디지털 경험 애플리케이션을 개발하고 발전시킵니다.
 
@@ -45,13 +44,13 @@ ht-degree: 0%
 
 - Content-Type: application/json
 
-## 세그먼트 평가 {#evaluate-a-segment}
+## 세그먼트 정의 평가 {#evaluate-a-segment}
 
-세그먼트 정의를 개발, 테스트 및 저장했으면 예약된 평가 또는 온디맨드 평가를 통해 세그먼트를 평가할 수 있습니다.
+세그먼트 정의를 개발, 테스트 및 저장했으면 예약된 평가 또는 온디맨드 평가를 통해 세그먼트 정의를 평가할 수 있습니다.
 
 [예약된 평가](#scheduled-evaluation) (&#39;예약된 세그먼테이션&#39;이라고도 함) 특정 시간에 내보내기 작업 실행을 위한 반복 일정을 만들 수 있지만 [온디맨드 평가](#on-demand-evaluation) 에는 대상자를 즉시 빌드하기 위한 세그먼트 작업 생성이 포함됩니다. 각 단계에 대한 단계는 아래에 요약되어 있습니다.
 
-아직 완료하지 않은 경우 [세분화 API를 사용하여 세그먼트 만들기](./create-a-segment.md) 튜토리얼 또는 을 사용하여 세그먼트 정의를 만들었습니다. [세그먼트 빌더](../ui/overview.md), 이 자습서를 계속 진행하기 전에 그렇게 하십시오.
+아직 완료하지 않은 경우 [segmentation API를 사용하여 세그먼트 정의 만들기](./create-a-segment.md) 튜토리얼 또는 을 사용하여 세그먼트 정의를 만들었습니다. [세그먼트 빌더](../ui/overview.md), 이 자습서를 계속 진행하기 전에 그렇게 하십시오.
 
 ## 예약된 평가 {#scheduled-evaluation}
 
@@ -81,11 +80,11 @@ ht-degree: 0%
 
 ## 온디맨드 평가
 
-온디맨드 평가를 통해 세그먼트 작업을 만들어 필요할 때마다 대상 세그먼트를 생성할 수 있습니다. 예약된 평가와 달리, 이 작업은 요청된 경우에만 수행되며 반복되지 않습니다.
+온디맨드 평가를 사용하면 세그먼트 작업을 만들어 필요할 때마다 대상자를 생성할 수 있습니다. 예약된 평가와 달리, 이 작업은 요청된 경우에만 수행되며 반복되지 않습니다.
 
 ### 세그먼트 작업 만들기
 
-세그먼트 작업은 요청 시 대상 세그먼트를 만드는 비동기 프로세스입니다. 세그먼트 정의와 방법을 제어하는 병합 정책을 참조합니다 [!DNL Real-Time Customer Profile] 은 프로필 조각에서 겹치는 속성을 병합합니다. 세그먼트 작업이 성공적으로 완료되면 처리 중에 발생할 수 있는 오류와 대상자의 최종 크기 등 세그먼트에 대한 다양한 정보를 수집할 수 있습니다. 현재 세그먼트 정의에 적합한 대상을 새로 고치려면 항상 세그먼트 작업을 실행해야 합니다.
+세그먼트 작업은 요청 시 대상 세그먼트를 만드는 비동기 프로세스입니다. 세그먼트 정의와 방법을 제어하는 병합 정책을 참조합니다 [!DNL Real-Time Customer Profile] 은 프로필 조각에서 겹치는 속성을 병합합니다. 세그먼트 작업이 성공적으로 완료되면 처리 중에 발생할 수 있는 오류와 대상자의 최종 크기 등 세그먼트 정의에 대한 다양한 정보를 수집할 수 있습니다. 세그먼트 정의는 현재 세그먼트 정의가 적합한 대상자를 새로 고침할 때마다 실행되어야 합니다.
 
 에 POST 요청을 하여 새 세그먼트 작업을 만들 수 있습니다. `/segment/jobs` 의 엔드포인트 [!DNL Real-Time Customer Profile] API.
 
@@ -97,9 +96,9 @@ ht-degree: 0%
 
 이 끝점 사용에 대한 자세한 내용은 [세그먼트 작업 끝점 안내서](../api/segment-jobs.md#get)
 
-## 세그먼트 결과 해석
+## 세그먼트 작업 결과 해석
 
-세그먼트 작업이 성공적으로 실행되면 `segmentMembership` 맵은 세그먼트 내에 포함된 각 프로필에 대해 업데이트됩니다. `segmentMembership` 는 또한 수집되는 사전 평가된 대상 세그먼트를 저장합니다. [!DNL Platform], 과 같은 다른 솔루션과 통합 가능 [!DNL Adobe Audience Manager].
+세그먼트 작업이 성공적으로 실행되면 `segmentMembership` 맵은 세그먼트 정의 내에 포함된 각 프로필에 대해 업데이트됩니다. `segmentMembership` 는 또한 수집되는 사전 평가된 대상자를 저장합니다. [!DNL Platform], 과 같은 다른 솔루션과 통합 가능 [!DNL Adobe Audience Manager].
 
 다음 예제는 `segmentMembership` 속성은 각 개별 프로필 레코드에 대해 다음과 같습니다.
 
@@ -128,14 +127,14 @@ ht-degree: 0%
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `lastQualificationTime` | 세그먼트 멤버십이 어설션되고 프로필이 세그먼트를 입력 또는 종료한 타임스탬프. |
-| `status` | 현재 요청의 일부로 세그먼트 기여도 상태. 은(는) 다음 알려진 값 중 하나와 같아야 합니다. <ul><li>`realized`: 엔티티가 세그먼트에 적합합니다.</li><li>`exited`: 엔티티가 세그먼트를 종료 중입니다.</li></ul> |
+| `lastQualificationTime` | 세그먼트 멤버십이 어설션되고 프로필이 세그먼트 정의를 입력 또는 종료한 시점의 타임스탬프. |
+| `status` | 현재 요청의 일부로 세그먼트 정의의 기여도 상태. 은(는) 다음 알려진 값 중 하나와 같아야 합니다. <ul><li>`realized`: 엔티티가 세그먼트 정의에 적합함.</li><li>`exited`: 엔티티가 세그먼트 정의를 종료하는 중입니다.</li></ul> |
 
 >[!NOTE]
 >
 >에 있는 모든 세그먼트 멤버십 `exited` 을(를) 기준으로 30일 이상 상태 `lastQualificationTime`이 삭제될 수 있습니다.
 
-## 세그먼트 결과 액세스
+## 세그먼트 작업 결과 액세스
 
 세그먼트 작업의 결과는 다음 두 가지 방법 중 하나로 액세스할 수 있습니다. 개별 프로필에 액세스하거나 전체 대상을 데이터 세트로 내보낼 수 있습니다.
 
@@ -160,7 +159,7 @@ ht-degree: 0%
 
 대상을 내보낼 때는 먼저 대상 데이터 세트를 만들어야 합니다. 내보내기가 성공하도록 데이터 세트를 올바르게 구성해야 합니다.
 
-주요 고려 사항 중 하나는 데이터 세트의 기반이 되는 스키마 입니다(`schemaRef.id` (아래 API 샘플 요청). 세그먼트를 내보내려면 데이터 세트가 [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). 유니온 스키마는 동일한 클래스를 공유하는 스키마의 필드를 집계하는 시스템 생성 읽기 전용 스키마입니다(이 경우 XDM 개별 프로필 클래스). 유니온 보기 스키마에 대한 자세한 내용은 다음을 참조하십시오. [스키마 레지스트리 개발자 안내서의 실시간 고객 프로필 섹션](../../xdm/api/getting-started.md).
+주요 고려 사항 중 하나는 데이터 세트의 기반이 되는 스키마 입니다(`schemaRef.id` (아래 API 샘플 요청). 세그먼트 정의를 내보내려면 데이터 세트가 [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). 유니온 스키마는 동일한 클래스를 공유하는 스키마의 필드를 집계하는 시스템 생성 읽기 전용 스키마입니다(이 경우 XDM 개별 프로필 클래스). 유니온 보기 스키마에 대한 자세한 내용은 다음을 참조하십시오. [스키마 레지스트리 개발자 안내서의 실시간 고객 프로필 섹션](../../xdm/api/getting-started.md).
 
 필요한 데이터 세트를 만드는 방법에는 두 가지가 있습니다.
 
@@ -213,7 +212,7 @@ curl -X POST \
 
 ### 대상자 구성원에 대한 프로필 생성 {#generate-profiles}
 
-유니온이 지속되는 데이터 세트가 있는 경우 POST에 요청을 하여 대상 구성원을 데이터 세트에 지속하는 내보내기 작업을 만들 수 있습니다. `/export/jobs` 의 엔드포인트 [!DNL Real-Time Customer Profile] API를 제공하고, 내보내려는 세그먼트에 대한 데이터 세트 ID 및 세그먼트 정보를 제공합니다.
+유니온이 지속되는 데이터 세트가 있는 경우 POST에 요청을 하여 대상 구성원을 데이터 세트에 지속하는 내보내기 작업을 만들 수 있습니다. `/export/jobs` 의 엔드포인트 [!DNL Real-Time Customer Profile] API를 제공하고, 내보내려는 세그먼트 정의에 대한 데이터 세트 ID와 세그먼트 정의 정보를 제공합니다.
 
 이 끝점 사용에 대한 자세한 내용은 [내보내기 작업 엔드포인트 안내서](../api/export-jobs.md#create)
 
@@ -225,10 +224,10 @@ curl -X POST \
 
 ## 다음 단계
 
-내보내기가 완료되면 데이터 를 [!DNL Data Lake] 위치: [!DNL Experience Platform]. 그런 다음 를 사용할 수 있습니다. [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) 을 사용하여 데이터에 액세스 `batchId` 내보내기와 연결되었습니다. 세그먼트의 크기에 따라, 데이터는 청크 단위일 수 있으며 배치는 여러 파일로 구성될 수 있습니다.
+내보내기가 완료되면 데이터 를 [!DNL Data Lake] 위치: [!DNL Experience Platform]. 그런 다음 를 사용할 수 있습니다. [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) 을 사용하여 데이터에 액세스 `batchId` 내보내기와 연결되었습니다. 세그먼트 정의의 크기에 따라 데이터는 청크 단위일 수 있으며 배치는 여러 파일로 구성될 수 있습니다.
 
 사용 방법에 대한 단계별 지침: [!DNL Data Access] 배치 파일에 액세스하고 다운로드하려면 API를 [데이터 액세스 자습서](../../data-access/tutorials/dataset-data.md).
 
-을 사용하여 성공적으로 내보낸 세그먼트 데이터에 액세스할 수도 있습니다. [!DNL Adobe Experience Platform Query Service]. UI 또는 RESTful API를 사용하여 [!DNL Query Service] 을(를) 사용하면 내에서 데이터에 대한 쿼리를 작성하고, 유효성을 검사하고, 실행할 수 있습니다. [!DNL Data Lake].
+을 사용하여 성공적으로 내보낸 세그먼트 정의 데이터에 액세스할 수도 있습니다. [!DNL Adobe Experience Platform Query Service]. UI 또는 RESTful API를 사용하여 [!DNL Query Service] 을(를) 사용하면 내에서 데이터에 대한 쿼리를 작성하고, 유효성을 검사하고, 실행할 수 있습니다. [!DNL Data Lake].
 
 대상 데이터를 쿼리하는 방법에 대한 자세한 내용은 [[!DNL Query Service]](../../query-service/home.md).

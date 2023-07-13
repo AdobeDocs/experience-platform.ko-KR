@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼테이션 서비스;pql;PQL;프로필 쿼리 언어;산술 함수;산술 함수;
 solution: Experience Platform
 title: PAL 산술 함수
 description: 산술 함수는 프로필 쿼리 언어(PQL)의 값에 대한 기본 계산을 수행하는 데 사용됩니다.
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 5%
+source-wordcount: '243'
+ht-degree: 6%
 
 ---
 
