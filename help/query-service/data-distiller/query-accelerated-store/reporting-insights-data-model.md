@@ -2,7 +2,7 @@
 title: Query Accelerated Store 보고 인사이트 안내서
 description: 가속화된 스토어 데이터 및 사용자 정의 대시보드와 함께 사용할 수 있도록 쿼리 서비스를 통해 보고 인사이트 데이터 모델을 구축하는 방법에 대해 알아봅니다.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 쿼리 가속 저장소를 사용하면 사용자 지정 데이터 모델을 구축하거나 기존 Adobe Real-time Customer Data Platform 데이터 모델을 확장할 수 있습니다. 그런 다음 보고 통찰력을 참여하거나 선택한 보고/시각화 프레임워크에 포함할 수 있습니다. 다음 방법에 대해 알아보려면 Real-time Customer Data Platform 통찰력 데이터 모델 설명서 를 참조하십시오 [sql 쿼리 템플릿을 사용자 정의하여 마케팅 및 KPI(주요 성능 지표) 사용 사례에 대한 Real-Time CDP 보고서를 생성합니다.](../../../dashboards/cdp-insights-data-model.md).
 
-Adobe Experience Platform의 Real-Time CDP 데이터 모델은 프로필, 세그먼트 및 대상에 대한 인사이트를 제공하며 Real-Time CDP 인사이트 대시보드를 사용할 수 있습니다. 이 문서에서는 Reporting Insights 데이터 모델을 만드는 과정을 안내하고 필요에 따라 Real-Time CDP 데이터 모델을 확장하는 방법을 안내합니다.
+Adobe Experience Platform의 Real-Time CDP 데이터 모델은 프로필, 대상 및 대상에 대한 인사이트를 제공하며 Real-Time CDP 인사이트 대시보드를 사용할 수 있습니다. 이 문서에서는 Reporting Insights 데이터 모델을 만드는 과정을 안내하고 필요에 따라 Real-Time CDP 데이터 모델을 확장하는 방법을 안내합니다.
 
 ## 사전 요구 사항
 
@@ -37,7 +37,7 @@ Please see the [packaging](../../packages.md), [guardrails](../../guardrails.md#
 
 ![Audience Insight 사용자 모델의 ERD(엔티티 관계형 다이어그램).](../../images/query-accelerated-store/audience-insight-user-model.png)
 
-이 예에서는 `externalaudiencereach` 테이블/dataset는 ID를 기반으로 하며 일치 횟수의 하한과 상한을 추적합니다. 다음 `externalaudiencemapping` 차원 테이블/데이터 세트는 외부 ID를 플랫폼의 대상 및 세그먼트에 매핑합니다.
+이 예에서는 `externalaudiencereach` 테이블/dataset는 ID를 기반으로 하며 일치 횟수의 하한과 상한을 추적합니다. 다음 `externalaudiencemapping` 차원 테이블/데이터 세트는 외부 ID를 플랫폼의 대상 및 대상에 매핑합니다.
 
 ## Data Distiller을 사용하여 보고 통찰력에 대한 모델 만들기
 
@@ -74,7 +74,7 @@ WITH ( DISTRIBUTION = REPLICATE ) AS
  
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencemapping
 WITH ( DISTRIBUTION = REPLICATE ) AS
-SELECT cast(null as int) segment_id,
+SELECT cast(null as int) audience_id,
        cast(null as int) destination_id,
        cast(null as int) ext_custom_audience_id
  WHERE false;
@@ -133,7 +133,7 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 ## Real-Time CDP 통찰력 데이터 모델을 사용하여 데이터 모델 확장
 
-추가 세부 정보로 대상 모델을 확장하여 더 풍부한 차원 테이블을 만들 수 있습니다. 예를 들어 세그먼트 이름과 대상 이름을 외부 대상 식별자에 매핑할 수 있습니다. 이렇게 하려면 쿼리 서비스 를 사용하여 새 데이터 세트를 만들거나 새로 고친 후 세그먼트 및 대상을 외부 ID와 결합하는 대상 모델에 추가하십시오. 아래 다이어그램은 이 데이터 모델 확장의 개념을 보여 줍니다.
+추가 세부 정보로 대상 모델을 확장하여 더 풍부한 차원 테이블을 만들 수 있습니다. 예를 들어 대상 이름 및 대상 이름을 외부 대상 식별자에 매핑할 수 있습니다. 이렇게 하려면 쿼리 서비스 를 사용하여 새 데이터 세트를 만들거나 새로 고친 후 대상 및 대상을 외부 ID와 결합하는 대상 모델에 추가하십시오. 아래 다이어그램은 이 데이터 모델 확장의 개념을 보여 줍니다.
 
 ![Real-Time CDP 인사이트 데이터 모델과 쿼리 가속 저장소 모델을 연결하는 ERD 다이어그램입니다.](../../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
@@ -145,13 +145,13 @@ ext_custom_audience_id | approximate_count_upper_bound
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
   SELECT ext_custom_audience_id,
          destination_name,
-         segment_name,
+         audience_name,
          destination_status,
          a.destination_id,
-         a.segment_id
+         a.audience_id
   FROM   externalaudiencemapping AS a
-         LEFT OUTER JOIN adwh_dim_segments AS b
-                      ON ( ( a.segment_id ) = ( b.segment_id ) )
+         LEFT OUTER JOIN adwh_dim_audiences AS b
+                      ON ( ( a.audience_id ) = ( b.audience_id ) )
          LEFT OUTER JOIN adwh_dim_destination AS c
                       ON ( ( a.destination_id ) = ( c.destination_id ) );
  
@@ -170,15 +170,15 @@ ALTER TABLE externalaudiencereach  ADD  CONSTRAINT FOREIGN KEY (ext_custom_audie
 
 ## 확장 가속 저장소 보고 통찰력 데이터 모델 쿼리
 
-이제 `audienceinsight` 데이터 모델이 증강되어 쿼리할 준비가 되었습니다. 다음 SQL은 매핑된 대상 및 세그먼트 목록을 보여 줍니다.
+이제 `audienceinsight` 데이터 모델이 증강되어 쿼리할 준비가 되었습니다. 다음 SQL은 매핑된 대상 및 대상 목록을 보여 줍니다.
 
 ```sql
 SELECT a.ext_custom_audience_id,
        b.destination_name,
-       b.segment_name,
+       b.audience_name,
        b.destination_status,
        b.destination_id,
-       b.segment_id
+       b.audience_id
 FROM   audiencemodel.externalaudiencereach1 AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
@@ -189,7 +189,7 @@ LIMIT  25;
 쿼리는 쿼리 가속 저장소의 모든 데이터 세트를 반환합니다.
 
 ```console
-ext_custom_audience_id | destination_name |       segment_name        | destination_status | destination_id | segment_id 
+ext_custom_audience_id | destination_name |       audience_name        | destination_status | destination_id | audience_id 
 ------------------------+------------------+---------------------------+--------------------+----------------+-------------
  23850808595110554      | FCA_Test2        | United States             | enabled            |     -605911558 | -1357046572
  23850799115800554      | FCA_Test2        | Born in 1980s             | enabled            |     -605911558 | -1224554872
@@ -211,25 +211,25 @@ ext_custom_audience_id | destination_name |       segment_name        | destinat
 
 사용자 정의 데이터 모델을 만들었으므로 이제 사용자 정의 쿼리 및 사용자 정의 대시보드를 사용하여 데이터를 시각화할 준비가 되었습니다.
 
-다음 SQL은 대상의 대상별 일치 카운트 분류와 대상의 각 대상을 세그먼트별로 분류합니다.
+다음 SQL은 대상의 대상별 일치 카운트 분류와 대상의 대상별 각 대상 분류를 제공합니다.
 
 ```sql
 SELECT b.destination_name,
        a.approximate_count_upper_bound,
-       b.segment_name
+       b.audience_name
 FROM   audiencemodel.externalaudiencereach AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
                          b.ext_custom_audience_id ) )
 GROUP  BY b.destination_name,
           a.approximate_count_upper_bound,
-          b.segment_name
+          b.audience_name
 ORDER BY b.destination_name
 LIMIT  5000
 ```
 
 아래 이미지는 Reporting Insights 데이터 모델을 사용하여 가능한 사용자 지정 시각화의 예를 제공합니다.
 
-![새 reporting insights 데이터 모델에서 생성된 대상 및 세그먼트 위젯별 일치 횟수입니다.](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
+![새 reporting insights 데이터 모델에서 만든 대상 및 대상 위젯별 일치 횟수입니다.](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
 
 사용자 지정 데이터 모델은 사용자 정의 대시보드 작업 영역의 사용 가능한 데이터 모델 목록에서 찾을 수 있습니다. 다음을 참조하십시오. [사용자 정의 대시보드 안내서](../../../dashboards/user-defined-dashboards.md) 사용자 지정 데이터 모델을 활용하는 방법에 대한 지침을 제공합니다.

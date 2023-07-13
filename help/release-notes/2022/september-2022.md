@@ -2,14 +2,14 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 정보입니다.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 8904d44cc8d289d103ec6d65116b8385ed615c4d
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2940'
-ht-degree: 5%
+ht-degree: 19%
 
 ---
 
-# Adobe Experience Platform 릴리스 노트
+# Adobe Experience Platform 릴리스 정보
 
 **릴리스 날짜: 2022년 9월 28일**
 
@@ -24,7 +24,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [[!DNL Dashboards]](#dashboards)
 - [데이터 수집](#data-collection)
 - [대상](#destinations)
-- [경험 데이터 모델(XDM)](#xdm)
+- [경험 데이터 모델 (XDM)](#xdm)
 - [ID 서비스](#identity-service)
 - [쿼리 서비스](#query-service)
 - [소스](#sources)
@@ -88,22 +88,22 @@ Platform의 감사 로그에서 추적되는 다양한 리소스별 이벤트 �
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform은 일별 스냅샷 중에 캡처한 대로 조직 데이터에 대한 중요한 통찰력을 볼 수 있는 여러 대시보드를 제공합니다.
+Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대한 중요한 인사이트를 볼 수 있는 여러 대시보드를 제공합니다.
 
 | 기능 | 설명 |
 | --- | --- |
 | 사용 중 레이블 | 위젯 라이브러리에서 볼 때 사용 중 레이블은 대시보드에 기존 위젯이 있는지 쉽게 식별합니다. 이렇게 하면 원하는 경우 동일한 위젯을 두 번 이상 추가할 수 있지만 중복을 쉽게 방지할 수 있습니다. |
 | 사용자 정의 대시보드 | 사용자 정의 대시보드를 사용하면 사용자 정의 대시보드를 작성하고 관리할 수 있으므로 신속하게 통찰력을 얻고 시각화를 맞춤화할 수 있습니다. 사용자 정의 대시보드를 사용하여 맞춤형 위젯을 만들고, 추가하고, 편집하여 조직과 관련된 주요 지표를 시각화할 수 있습니다. 읽기 [기능 안내서](../../dashboards/user-defined-dashboards.md) 자세히 알아보십시오. |
 | Customer Data Platform Insights 데이터 모델 | CDP(Customer Data Platform) Insights 데이터 모델 기능은 다양한 프로필, 대상 및 세그멘테이션 위젯에 대한 통찰력을 제공하는 데이터 모델 및 SQL을 노출합니다. 이러한 SQL 쿼리 템플릿을 사용자 정의하여 마케팅 및 주요 성능 지표 사용 사례에 대한 CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 인사이트를 사용자 정의 대시보드에 대한 사용자 정의 위젯으로 사용할 수 있습니다. 읽기 [CDP Insights 데이터 모델 기능 안내서](../../dashboards/cdp-insights-data-model.md) 자세히 알아보십시오. |
-| 대상 중복 보고서 위젯 | 이 위젯은 두 가지 모두에 사용할 수 있습니다 [!UICONTROL 프로필] 및 [!UICONTROL 세그먼트] 대시보드. 이 보고서는 선택한 세그먼트에 대해 가장 높거나 가장 낮은 오버랩 비율로 순위가 매겨진 대상자 목록을 제공합니다. 다음에서 [!UICONTROL 프로필] 대시보드 사용 가능한 모든 세그먼트의 병합 정책으로 대상 겹침을 필터링하고 볼 수 있습니다. 다음 [!UICONTROL 세그먼트] 대시보드를 사용하면 특정 세그먼트별로 대상 겹침을 필터링할 수 있습니다.<br>이 분석을 사용하여 새로운 고성능 세그먼트를 작성하고 동일한 대상자를 다른 대상으로 보내지 마십시오. 또한 이 보고서는 숨겨진 인사이트를 식별하여 세그먼테이션을 개선하거나 추적할 고유한 프로필을 찾는 데 도움이 됩니다. 해당 항목 읽기 [프로필](../../dashboards/guides/profiles.md#audience-overlap-report) 및 [세그먼트](../../dashboards/guides/segments.md#audience-overlap-report) 자세한 내용은 위젯 안내서를 참조하십시오. |
+| 대상 중복 보고서 위젯 | 이 위젯은 두 가지 모두에 사용할 수 있습니다 [!UICONTROL 프로필] 및 [!UICONTROL 세그먼트] 대시보드. 이 보고서는 선택한 세그먼트에 대해 가장 높거나 가장 낮은 오버랩 비율로 순위가 매겨진 대상자 목록을 제공합니다. 다음에서 [!UICONTROL 프로필] 대시보드 사용 가능한 모든 세그먼트의 병합 정책으로 대상 겹침을 필터링하고 볼 수 있습니다. 다음 [!UICONTROL 세그먼트] 대시보드를 사용하면 특정 세그먼트별로 대상 겹침을 필터링할 수 있습니다.<br>이 분석을 사용하여 새로운 고성능 세그먼트를 작성하고 동일한 대상자를 다른 대상으로 보내지 마십시오. 또한 이 보고서는 숨겨진 인사이트를 식별하여 세그먼테이션을 개선하거나 추적할 고유한 프로필을 찾는 데 도움이 됩니다. 해당 항목 읽기 [프로필](../../dashboards/guides/profiles.md#audience-overlap-report) 및 [세그먼트](../../dashboards/guides/audiences.md#audience-overlap-report) 자세한 내용은 위젯 안내서를 참조하십시오. |
 
 에 대한 자세한 내용 [!DNL Dashboards], 다음을 참조하십시오. [[!DNL Dashboards] 개요](../../dashboards/home.md).
 
 ## 데이터 수집 {#data-collection}
 
-Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비 Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 제품군을 제공합니다.
+Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe 또는 비 Adobe 대상으로 보강, 변환 및 배포가 가능한 Adobe Experience Platform Edge Network로 보낼 수 있는 기술 제품군을 제공합니다.
 
-**새 기능 또는 업데이트된 기능**
+**새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
@@ -120,9 +120,9 @@ Platform에서의 데이터 수집에 대한 자세한 내용은 [데이터 수�
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-**새 기능 또는 업데이트된 기능**
+**새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | ----------- | ----------- |
@@ -130,7 +130,7 @@ Platform에서의 데이터 수집에 대한 자세한 내용은 [데이터 수�
 
 {style="table-layout:auto"}
 
-**새 대상 또는 업데이트된 대상**
+**새로운 대상 또는 업데이트된 대상**
 
 | 대상 | 설명 |
 | ----------- | ----------- |
@@ -139,17 +139,17 @@ Platform에서의 데이터 수집에 대한 자세한 내용은 [데이터 수�
 
 {style="table-layout:auto"}
 
-**신규 또는 업데이트된 설명서**
+**새로운 대상 또는 업데이트된 설명서**
 
 | 설명서 | 설명 |
 | ----------- | ----------- |
 | 대상 플로우 서비스 API 설명서 | 다음 [대상 API 참조 설명서](https://developer.adobe.com/experience-platform-apis/references/destinations/) 파일 기반 대상에서 작업을 수행하는 방법에 대한 지침을 포함하도록 가 업데이트되었습니다. 스트리밍 대상에 대한 작업은 나중에 추가됩니다. |
 
-대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md).
+대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
-## 경험 데이터 모델(XDM) {#xdm}
+## 경험 데이터 모델 (XDM) {#xdm}
 
-XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 일반적인 표현에 통합하여 보다 빠르고 통합적인 방식으로 통찰력을 제공할 수 있습니다. 고객 작업에서 중요한 통찰력을 얻고, 세그먼트를 통해 고객 대상을 정의하고, 개인화 목적으로 고객 속성을 사용할 수 있습니다.
+XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
 
 **새로운 기능**
 
@@ -162,7 +162,7 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 | 구성 요소 유형 | 이름 | 설명 |
 | --- | --- | --- |
 | 필드 그룹 | [[!UICONTROL AJO 분류 필드]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | 제안 이벤트가 트리거된 와 상호 작용한 특정 요소의 속성입니다. |
-| 필드 그룹 | [[!UICONTROL MediaAnalytics 인터랙션 세부 정보]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | 시간 경과에 따른 미디어 상호 작용을 추적합니다. |
+| 필드 그룹 | [[!UICONTROL MediaAnalytics 상호 작용 세부 정보]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | 시간 경과에 따른 미디어 상호 작용을 추적합니다. |
 | 필드 그룹 | [[!UICONTROL 미디어 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | 미디어 세부 정보를 추적합니다. |
 | 필드 그룹 | [[!UICONTROL Adobe CJM ExperienceEvent - 표면]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Adobe Journey Optimizer의 경험 이벤트에 대한 표면을 설명합니다. |
 
@@ -173,24 +173,24 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 | 구성 요소 유형 | 이름 | 설명 |
 | --- | --- | --- |
 | 비헤이비어 | [[!UICONTROL 시계열]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>에 대한 값이 추가됨 `eventType`:<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>에 대한 값이 제거됨 `eventType`:<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
-| 필드 그룹 | (여러 개) | [몇 가지 필드 설명이 업데이트되었습니다.](https://github.com/adobe/xdm/pull/1628/files) Journey Orchestration 구성 요소 간에 연결할 수 있습니다. |
-| 필드 그룹 | (여러 개) | [여러 Adobe Workfront 구성 요소의 제목을 업데이트했습니다](https://github.com/adobe/xdm/pull/1634/files) 일관성을 위해 |
+| 필드 그룹 | (다수) | [몇 가지 필드 설명이 업데이트되었습니다.](https://github.com/adobe/xdm/pull/1628/files) Journey Orchestration 구성 요소 간에 연결할 수 있습니다. |
+| 필드 그룹 | (다수) | [여러 Adobe Workfront 구성 요소의 제목을 업데이트했습니다](https://github.com/adobe/xdm/pull/1634/files) 일관성을 위해 |
 | 필드 그룹 | [[!UICONTROL AJO 분류 필드]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | 여러 필드의 네임스페이스가 (으)로 업데이트됨 `xdm`. |
 | 필드 그룹 | [[!UICONTROL Journey Orchestration 단계 이벤트 공통 필드]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 새 필드 추가됨, `isReadSegmentTriggerStartEvent`. |
 | 필드 그룹 | [[!UICONTROL 일기예보된 날씨]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | 을(를) 변경함 `xdm:uvIndex` 필드를 정수 형식에 추가하고 `xdm` 이 누락된 여러 필드에 대한 네임스페이스입니다. |
 | 필드 그룹 | [[!UICONTROL 미디어 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` 및 `xdm:implementationDetails` 이(가) 필드 그룹에서 제거되었습니다. |
-| 데이터 유형 | (여러 개) | [여러 미디어 속성 이름이 업데이트되었습니다.](https://github.com/adobe/xdm/pull/1626/files) 을 참조하십시오. |
+| 데이터 유형 | (다수) | [여러 미디어 속성 이름이 업데이트되었습니다.](https://github.com/adobe/xdm/pull/1626/files) 을 참조하십시오. |
 | 데이터 유형 | [[!UICONTROL 구현 세부 사항]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | 플러터에 대해 알려진 이름이 추가되었습니다. |
 | 데이터 유형 | [[!UICONTROL 관심 영역 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | 이제 데이터 형식은 관심 영역과 연결된 메타데이터 키-값 쌍의 목록을 수락할 수 있습니다. |
 | 데이터 유형 | [[!UICONTROL 제안 작업]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | [!DNL AJO Classification Fields] 의 이름이 (으)로 변경되었습니다. [!UICONTROL 제안 작업]. |
 | 데이터 유형 | [[!UICONTROL 제안 이벤트 유형]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | [!DNL AJO Classification Fields] 의 이름이 로 변경되었습니다. [!UICONTROL 제안 작업]. |
-| (여러 개) | (여러 개) | 실험 특성은 다음과 같습니다. [모든 B2B 구성 요소에서 안정화된 상태](https://github.com/adobe/xdm/pull/1617/files). |
-| (여러 개) | (여러 개) | Adobe Journey Optimizer 엔티티가 [안정됨](https://github.com/adobe/xdm/pull/1625/files). |
-| (여러 개) | (여러 개) | 여러 실험 구성 요소에서 특정 필드의 네임스페이스는 다음과 같습니다. [일관성을 위해 업데이트됨](https://github.com/adobe/xdm/pull/1626/files). |
+| (다수) | (다수) | 실험 특성은 다음과 같습니다. [모든 B2B 구성 요소에서 안정화된 상태](https://github.com/adobe/xdm/pull/1617/files). |
+| (다수) | (다수) | Adobe Journey Optimizer 엔티티가 [안정됨](https://github.com/adobe/xdm/pull/1625/files). |
+| (다수) | (다수) | 여러 실험 구성 요소에서 특정 필드의 네임스페이스는 다음과 같습니다. [일관성을 위해 업데이트됨](https://github.com/adobe/xdm/pull/1626/files). |
 
 {style="table-layout:auto"}
 
-플랫폼의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
+Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
 ## ID 서비스 {#identity-service}
 
@@ -208,7 +208,7 @@ ID 서비스에 대해 자세히 알아보려면 [ID 서비스 개요](../../ide
 
 ## 쿼리 서비스 {#query-service}
 
-쿼리 서비스를 사용하면 표준 SQL을 사용하여 Adobe Experience Platform에서 데이터를 쿼리할 수 있습니다 [!DNL Data Lake]. 에서 모든 데이터 세트를 결합할 수 있습니다. [!DNL Data Lake] 보고, Data Science Workspace에 사용하거나 실시간 고객 프로필로 수집하기 위한 새 데이터 세트로 쿼리 결과를 캡처합니다.
+쿼리 서비스를 사용하면 표준 SQL로 Adobe Experience Platform [!DNL Data Lake]에서 데이터를 쿼리할 수 있습니다. 에서 모든 데이터 세트를 결합할 수 있습니다. [!DNL Data Lake] 보고, Data Science Workspace에 사용하거나 실시간 고객 프로필로 수집하기 위한 새 데이터 세트로 쿼리 결과를 캡처합니다.
 
 **업데이트된 기능**
 
@@ -225,7 +225,7 @@ ID 서비스에 대해 자세히 알아보려면 [ID 서비스 개요](../../ide
 
 Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스를 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
+Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
 **업데이트된 기능**
 
@@ -235,6 +235,6 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | Adobe Campaign 관리 Cloud Service 지원 | Adobe Campaign 관리 Cloud Service 소스를 사용하여 Adobe Campaign v8.4 게재 및 추적 로그 데이터를 Experience Platform으로 가져옵니다. 의 안내서 읽기 [ui에서 Adobe Campaign 관리 Cloud Service 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/campaign.md) 추가 정보. |
 | 배치 소스의 온디맨드 수집을 위한 API 지원 | 온디맨드 수집을 사용하여 주어진 데이터 흐름에 대한 애드혹 흐름 실행을 만들고 [!DNL Flow Service] API. 만들어진 흐름 실행은 일회성 수집으로 설정해야 합니다. 자세한 내용은 의 안내서를 참조하십시오. [api를 사용하여 온디맨드 수집에 대한 플로우 실행 생성](../../sources/tutorials/api/on-demand-ingestion.md) 추가 정보. |
 | 실패한 데이터 흐름을 재시도하기 위한 API 지원은 배치 소스에 대해 실행됩니다 | 사용 `re-trigger` api를 통해 실패한 데이터 흐름을 다시 시도하는 작업입니다. 의 안내서 읽기 [API를 사용하여 실패한 데이터 흐름 실행 재시도](../../sources/tutorials/api/retry-flows.md) 추가 정보. |
-| 의 행 수준 데이터 필터링을 위한 API 지원 [!DNL Google BigQuery] 및 [!DNL Snowflake] 소스 | 논리 및 비교 연산자를 사용하여 [!DNL Google BigQuery] 및 [!DNL Snowflake] 소스. 의 안내서 읽기 [api를 사용하여 소스에 대한 데이터 필터링](../../sources/tutorials/api/filter.md) 추가 정보. |
+| 의 행 수준 데이터 필터링을 위한 API 지원 [!DNL Google BigQuery] 및 [!DNL Snowflake] 소스 | 논리 및 비교 연산자를 사용하여 [!DNL Google BigQuery] 및 [!DNL Snowflake] 소스. 자세한 내용은 [API를 사용하여 소스의 데이터를 필터링](../../sources/tutorials/api/filter.md)하는 방법에 관한 안내서를 참조하십시오. |
 
-소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).
+소스에 대해 자세히 알아보려면 [소스 개요 ](../../sources/home.md)를 참조하십시오.

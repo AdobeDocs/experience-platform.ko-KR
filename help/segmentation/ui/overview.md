@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 UI 안내서
 description: Adobe Experience Platform UI에서 대상 및 세그먼트 정의를 만들고 관리하는 방법을 알아봅니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5950713c33bfb2893f24f35136acf2707ad35f1f
+source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3606'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 
 다음 **[!UICONTROL 대상]** 대시보드는 조직의 대상 데이터와 관련된 주요 지표에 대해 간략하게 설명합니다.
 
-자세한 내용은 [audiences 대시보드 안내서](../../dashboards/guides/segments.md).
+자세한 내용은 [audiences 대시보드 안내서](../../dashboards/guides/audiences.md).
 
 ![대상자 대시보드가 표시됩니다. 대상 크기, ID별 프로필, ID 중복 및 대상 크기 변경 트렌드를 포함한 다양한 위젯을 표시합니다.](../../dashboards/images/segments/dashboard-overview.png)
 

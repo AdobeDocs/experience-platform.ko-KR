@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스키마 컴포지션 기본 사항
 description: 이 문서에서는 XDM(경험 데이터 모델) 스키마와 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 구성 요소, 원칙 및 모범 사례에 대해 소개합니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
+source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
 workflow-type: tm+mt
 source-wordcount: '4140'
 ht-degree: 6%
@@ -23,7 +23,7 @@ ht-degree: 6%
 
 [!DNL Experience Platform] 스키마를 사용하여 이 의미 체계 표준화를 유지 관리합니다. 스키마는 데이터를 설명하는 표준 방법입니다. [!DNL Experience Platform]를 사용하면 스키마를 준수하는 모든 데이터를 충돌 없이 조직에서 재사용하거나 여러 조직 간에 공유할 수 있습니다.
 
-XDM 스키마는 대량의 복잡한 데이터를 자체 포함 형식으로 저장하는 데 이상적입니다. 의 섹션을 참조하십시오. [포함된 개체](#embedded) 및 [빅데이터](#big-data) xdm이 이 작업을 수행하는 방법에 대한 자세한 내용은 이 문서의 부록에서 확인할 수 있습니다.
+XDM 스키마는 자체 포함된 형식으로 대량의 복잡한 데이터를 저장하는 데 이상적입니다. 의 섹션을 참조하십시오. [포함된 개체](#embedded) 및 [빅데이터](#big-data) xdm이 이 작업을 수행하는 방법에 대한 자세한 내용은 이 문서의 부록에서 확인할 수 있습니다.
 
 ### 의 스키마 기반 워크플로 [!DNL Experience Platform]
 
@@ -285,12 +285,12 @@ While [!DNL Experience Platform] 특정 사용 사례에 맞게 스키마를 구
 
 수집되는 모든 데이터 파일 [!DNL Experience Platform] 는 XDM 스키마 구조를 준수해야 합니다. XDM 계층 구조(샘플 파일 포함)를 준수하도록 데이터 파일의 형식을 지정하는 방법에 대한 자세한 내용은 [샘플 ETL 변형](../../etl/transformations.md). 데이터 파일을에 수집하는 방법에 대한 일반적인 정보 [!DNL Experience Platform], 다음을 참조하십시오. [일괄 처리 수집 개요](../../ingestion/batch-ingestion/overview.md).
 
-## 외부 세그먼트의 스키마
+## 외부 대상자용 스키마
 
-외부 시스템의 세그먼트를 Platform으로 가져오는 경우 다음 구성 요소를 사용하여 스키마에서 캡처해야 합니다.
+외부 시스템의 대상을 Platform으로 가져오는 경우 다음 구성 요소를 사용하여 스키마에서 캡처해야 합니다.
 
 * [[!UICONTROL 세그먼트 정의] 클래스](../classes/segment-definition.md): 이 표준 클래스를 사용하여 외부 세그먼트 정의의 주요 속성을 캡처할 수 있습니다.
-* [[!UICONTROL 세그먼트 멤버십 세부 정보] 필드 그룹](../field-groups/profile/segmentation.md): 이 필드 그룹을 다음에 추가합니다. [!UICONTROL XDM 개별 프로필] 고객 프로필을 특정 세그먼트와 연결하기 위한 스키마.
+* [[!UICONTROL 세그먼트 멤버십 세부 정보] 필드 그룹](../field-groups/profile/segmentation.md): 이 필드 그룹을 다음에 추가합니다. [!UICONTROL XDM 개별 프로필] 고객 프로필을 특정 대상과 연결하기 위한 스키마.
 
 ## 다음 단계
 

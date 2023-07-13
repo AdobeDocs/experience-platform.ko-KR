@@ -4,10 +4,10 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a28c1c00fd0b33af3b797ecf2b4d45154dedc823
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '3385'
-ht-degree: 10%
+source-wordcount: '3393'
+ht-degree: 8%
 
 ---
 
@@ -49,7 +49,7 @@ Platform UI 내에서 프로필 대시보드로 이동하려면 를 선택합니
 
 ![위젯 추가 가 강조 표시된 프로필 대시보드 개요.](../images/profiles/profiles-overview-add-widget.png)
 
-위젯 라이브러리에서 표준 및 사용자 정의 세그먼트 위젯의 선택을 검색할 수 있습니다.위젯을 추가하는 방법에 대한 자세한 내용은 위젯 라이브러리 설명서 를 참조하십시오. [위젯 추가](../customize/widget-library.md#add-widgets).
+위젯 라이브러리에서 표준 및 사용자 정의 대상 위젯의 선택을 검색할 수 있습니다. 위젯을 추가하는 방법에 대한 자세한 내용은 위젯 라이브러리 설명서 를 참조하십시오. [위젯 추가](../customize/widget-library.md#add-widgets).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -67,7 +67,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## 프로필 찾아보기 {#browse-profiles}
 
-다음 [!UICONTROL 찾아보기] 탭에서는 조직에 수집된 읽기 전용 프로필을 검색하고 볼 수 있습니다. 여기에서 환경 설정, 이전 이벤트, 상호 작용 및 세그먼트와 관련하여 프로필에 속하는 중요한 정보를 볼 수 있습니다
+다음 [!UICONTROL 찾아보기] 탭에서는 조직에 수집된 읽기 전용 프로필을 검색하고 볼 수 있습니다. 여기에서 환경 설정, 이전 이벤트, 상호 작용 및 대상과 관련하여 프로필에 속하는 중요한 정보를 볼 수 있습니다.
 
 Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [Adobe Real-time Customer Data Platform에서 프로필 검색](../../rtcdp/profile/profile-browse.md).
 
@@ -256,9 +256,9 @@ ID에 대한 자세한 내용은 [Adobe Experience Platform Identity Service 설
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="분할되지 않은 프로필"
->abstract="이 위젯은 세그먼트에 연결되지 않은 모든 프로필의 총 개수를 제공하고 조직 전체의 프로필 활성화 기회를 나타냅니다."
+>abstract="이 위젯은 대상자에 첨부되지 않은 모든 프로필의 총 수를 제공하며 조직 전체의 프로필 활성화 기회를 나타냅니다."
 
-다음 [!UICONTROL 세분화되지 않은 프로필] 위젯은 세그먼트에 첨부되지 않은 모든 프로필의 총 수를 제공합니다. 생성된 숫자는 마지막 스냅샷을 기준으로 정확하며 조직 전체에서 프로필 활성화 기회를 나타냅니다. 또한 적절한 ROI를 제공하지 않는 프로필을 삭제할 수 있는 기회를 나타냅니다.
+다음 [!UICONTROL 세분화되지 않은 프로필] 위젯은 대상에 첨부되지 않은 모든 프로필의 총 수를 제공합니다. 생성된 숫자는 마지막 스냅샷을 기준으로 정확하며 조직 전체에서 프로필 활성화 기회를 나타냅니다. 또한 적절한 ROI를 제공하지 않는 프로필을 삭제할 수 있는 기회를 나타냅니다.
 
 ![세분화되지 않은 프로필 위젯.](../images/profiles/unsegmented-profiles.png)
 
@@ -267,9 +267,9 @@ ID에 대한 자세한 내용은 [Adobe Experience Platform Identity Service 설
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="분할되지 않은 프로필 추세"
->abstract="이 위젯은 지정된 기간 동안 세그먼트에 연결되지 않은 프로필 개수에 대한 선 그래프 그림을 제공합니다. 세그먼트에 연결되지 않은 프로필 추세는 30일, 90일 및 12개월 기간 동안 시각화할 수 있습니다."
+>abstract="이 위젯은 주어진 기간 동안 대상자에 첨부되지 않은 프로필 수에 대한 선 그래프 일러스트레이션을 제공합니다. 대상자에 첨부되지 않은 프로필의 트렌드는 30일, 90일 및 12개월 기간에 시각화할 수 있습니다."
 
-다음 [!UICONTROL 세분화되지 않은 프로필 변경 트렌드] 위젯은 선 그래프를 사용하여 세그먼트에 첨부되지 않은 마지막 일별 스냅샷 이후 추가된 프로필 수를 보여줍니다. 세그먼트에 첨부되지 않은 프로필의 변경 트렌드를 30일, 90일 및 12개월 기간에 시각화할 수 있습니다. 위젯의 드롭다운 메뉴에서 기간이 선택됩니다. 프로필 카운트는 y축에 반영되고 시간은 x축에 반영됩니다.
+다음 [!UICONTROL 세분화되지 않은 프로필 변경 트렌드] 위젯은 선 그래프를 사용하여 대상자에 첨부되지 않은 마지막 일별 스냅샷 이후 추가된 프로필 수를 보여줍니다. 대상자에 첨부되지 않은 프로필의 변경 트렌드를 30일, 90일 및 12개월 기간에 시각화할 수 있습니다. 위젯의 드롭다운 메뉴에서 기간이 선택됩니다. 프로필 카운트는 y축에 반영되고 시간은 x축에 반영됩니다.
 
 ![세분화되지 않은 프로필은 트렌드 위젯을 변경합니다.](../images/profiles/unsegmented-profiles-change-trend.png)
 
@@ -292,7 +292,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ### [!UICONTROL 대상자] {#audiences}
 
-이 위젯은 프로필 데이터에 적용된 선택한 병합 정책에 따라 활성화할 준비가 된 총 세그먼트 수를 제공합니다.
+이 위젯은 프로필 데이터에 적용된 선택한 병합 정책에 따라 활성화할 준비가 된 총 대상 수를 제공합니다.
 
 선택 **[!UICONTROL 대상]** 을 클릭하여 다음 위치로 이동합니다. [!UICONTROL 세그먼트] 대시보드 [!UICONTROL 찾아보기] 탭. 여기에서 조직의 모든 세그먼트 정의 목록을 볼 수 있습니다.
 
@@ -311,9 +311,9 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL 대상 중복 보고서] {#audience-overlap-report}
 
-이 위젯은 병합 정책으로 필터링된 사용 가능한 모든 세그먼트의 대상 중복 데이터를 표로 묶습니다. 화면 상단의 드롭다운 메뉴에서 선택한 병합 정책에 대해 가장 높은 오버랩 백분율부터 가장 낮은 오버랩 백분율까지 5개의 대상 목록이 제공됩니다. 분석된 두 세그먼트는 [!UICONTROL 세그먼트 A 이름] 및 [!UICONTROL 세그먼트 B 이름] 열. 백분율 겹침은 소수점 이하 12자리까지 정확한 세 번째 열에 제공됩니다.
+이 위젯은 병합 정책으로 필터링된 사용 가능한 모든 대상의 데이터 겹침을 표로 표시합니다. 화면 상단의 드롭다운 메뉴에서 선택한 병합 정책에 대해 가장 높은 오버랩 백분율부터 가장 낮은 오버랩 백분율까지 5개의 대상 목록이 제공됩니다. 분석된 두 대상이 다음에 나열됩니다. [!UICONTROL 대상자 이름] 및 [!UICONTROL 대상자 B 이름] 열. 백분율 겹침은 소수점 이하 12자리까지 정확한 세 번째 열에 제공됩니다.
 
-대상 중복 보고서는 새로운 고성능 세그먼트를 만드는 데 도움이 됩니다. 높은 비율의 겹침을 관찰하면 대상을 표시하지 않고 동일한 대상을 다른 대상으로 보내지 않을 수 있습니다. 또한 더 나은 세그멘테이션에 도움이 될 수 있는 숨겨진 인사이트를 식별하는 데 도움이 됩니다. 겹치는 비율이 낮으면 추적할 고유 프로필을 찾는 데 도움이 됩니다.
+대상 중복 보고서는 새로운 고성능 대상을 구축하는 데 도움이 됩니다. 높은 비율의 겹침을 관찰하면 대상을 표시하지 않고 동일한 대상을 다른 대상으로 보내지 않을 수 있습니다. 또한 더 나은 세그멘테이션에 도움이 될 수 있는 숨겨진 인사이트를 식별하는 데 도움이 됩니다. 겹치는 비율이 낮으면 추적할 고유 프로필을 찾는 데 도움이 됩니다.
 
 선택 **[!UICONTROL 더 보기]** 대상이 겹치는 데이터가 더 포함된 전체 화면 대화 상자를 엽니다.
 
@@ -347,23 +347,23 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL 대상자 크기] {#audiences-size}
 
-다음 [!UICONTROL 대상자 크기] 위젯은 최대 20개의 세그먼트와 각 세그먼트에 포함된 총 대상 수를 나열하는 2열 테이블을 제공합니다. 전체 대상자 수에 따라 높은 항목에서 낮은 항목까지 순서가 지정됩니다. 총 대상 크기 수는 적용된 병합 정책에 따라 다릅니다.
+다음 [!UICONTROL 대상자 크기] 위젯은 최대 20개의 대상 이름과 각 대상에 포함된 총 프로필 수를 나열하는 2열 테이블을 제공합니다. 대상자 내에 포함된 총 프로필 수에 따라 목록의 순서는 높음에서 낮음 사이입니다. 총 대상자 크기 카운트는 적용된 병합 정책에 따라 다릅니다.
 
 ![대상 크기 위젯.](../images/profiles/audiences-size.png)
 
-세그먼트에 대한 포괄적인 정보를 보려면 제공된 목록에서 세그먼트 이름을 선택하여 [!UICONTROL 세그먼트] [!UICONTROL 세부 사항] 페이지를 가리키도록 업데이트하는 중입니다. 또한 을 선택하여 **[!UICONTROL 모든 세그먼트 보기]** 위젯의 끝에서 [!UICONTROL 세그먼트] [!UICONTROL 찾아보기] 탭을 사용하여 기존 세그먼트를 찾을 수 있습니다.
+대상에 대한 포괄적인 정보를 보려면 제공된 목록에서 대상 이름을 선택하여 [!UICONTROL 대상] [!UICONTROL 세부 사항] 페이지를 가리키도록 업데이트하는 중입니다. 또한 을 선택하여 **[!UICONTROL 모든 대상자 보기]** 위젯의 끝에서 [!UICONTROL 대상] [!UICONTROL 찾아보기] 탭을 사용하여 기존 대상자를 찾을 수 있습니다.
 
-![세그먼트 이름과 강조 표시된 모든 세그먼트 텍스트가 있는 대상자 크기 위젯.](../images/profiles/audiences-size-view-all-segments.png)
+![대상자 이름 및 모든 대상자 보기 텍스트가 강조 표시된 대상자 크기 위젯.](../images/profiles/audiences-size-view-all-audiences.png)
 
-자세한 내용은 설명서 를 참조하십시오. [[!UICONTROL 세그먼트] [!UICONTROL  찾아보기] 탭](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
+자세한 내용은 설명서 를 참조하십시오. [[!UICONTROL 대상] [!UICONTROL  찾아보기] 탭](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
 
 ### [!UICONTROL 병합 정책별 대상자 중복] {#audience-overlap-by-merge-policy}
 
-이 위젯은 벤 다이어그램을 사용하여 선택한 두 세그먼트가 겹치게 표시합니다. 병합 정책은 페이지 상단의 개요 드롭다운에서 선택되고 분석을 위한 세그먼트는 위젯 내의 두 드롭다운 메뉴에서 선택됩니다. 해당 세그먼트 정의 내에 포함된 총 프로필 수는 원 또는 교차 위를 마우스로 가리키면 확인할 수 있습니다.
+이 위젯은 벤 다이어그램을 사용하여 선택한 두 대상의 겹침을 표시합니다. 병합 정책은 페이지 상단의 개요 드롭다운에서 선택하고 분석 대상은 위젯 내에서 두 개의 드롭다운 메뉴에서 선택합니다. 해당 세그먼트 정의 내에 포함된 총 프로필 수는 원 또는 교차 위를 마우스로 가리키면 확인할 수 있습니다.
 
 위젯에 세그먼트 정의의 시각적 크로스오버가 표시되므로 세그먼트 정의 간의 유사성을 연구하여 세그먼테이션 전략을 최적화할 수 있습니다.
 
-![병합 정책 드롭다운 및 위젯 세그먼트 드롭다운이 강조 표시된 Platform UI 프로필 대시보드](../images/profiles/audience-overlap-by-merge-policy.png)
+![병합 정책 드롭다운 및 위젯 대상자 드롭다운이 강조 표시된 Platform UI 프로필 대시보드](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

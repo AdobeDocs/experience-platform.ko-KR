@@ -2,10 +2,10 @@
 title: Real-time Customer Data Platform 통찰력 데이터 모델
 description: Real-time Customer Data Platform Insights 데이터 모델과 함께 SQL 쿼리를 사용하여 마케팅 및 KPI 사용 사례에 맞게 고유한 Real-Time CDP 보고서를 사용자 지정하는 방법을 알아봅니다.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ Real-time Customer Data Platform 인사이트 데이터 모델 기능은 다양�
 
 ## Real-Time CDP 인사이트 보고서 및 사용 사례
 
-Real-Time CDP 보고에서는 프로필 데이터와 세그먼트 및 대상과의 관계에 대한 통찰력을 제공합니다. 다양한 일반적인 마케팅 활용 사례에 답변할 수 있도록 다양한 스타 스키마 모델을 개발하였으며, 각 데이터 모델은 여러 활용 사례를 지원할 수 있다.
+Real-Time CDP 보고에서는 프로필 데이터와 대상 및 대상과의 관계에 대한 통찰력을 제공합니다. 다양한 일반적인 마케팅 활용 사례에 답변할 수 있도록 다양한 스타 스키마 모델을 개발하였으며, 각 데이터 모델은 여러 활용 사례를 지원할 수 있다.
 
 >[!IMPORTANT]
 >
@@ -144,9 +144,9 @@ GROUP BY
 
 +++
 
-### 세그먼트 모델 {#segment-model}
+### 대상 모델 {#audience-model}
 
-세그먼트 모델은 다음 데이터 세트로 구성됩니다.
+대상 모델은 다음 데이터 세트로 구성됩니다.
 
 - `adwh_dim_date`
 - `adwh_fact_profile_by_segment`
@@ -158,11 +158,11 @@ GROUP BY
 
 아래 이미지에는 각 데이터 세트의 관련 데이터 필드가 포함되어 있습니다.
 
-![세그먼트 모델의 ERD입니다.](./images/cdp-insights/segment-model.png)
+![대상 모델의 ERD.](./images/cdp-insights/audience-model.png)
 
 #### 대상자 크기 사용 사례
 
-에 사용되는 논리 [!UICONTROL 대상 크기] 위젯은 가장 최근의 스냅샷 시점에 선택한 세그먼트 내에서 병합된 프로필의 총 수를 반환합니다. 다음을 참조하십시오. [[!UICONTROL 대상 크기] 위젯 설명서](./guides/segments.md#audience-size) 추가 정보.
+에 사용되는 논리 [!UICONTROL 대상 크기] 위젯은 가장 최근의 스냅샷 시점에 선택한 대상 내에서 병합된 프로필의 총 수를 반환합니다. 다음을 참조하십시오. [[!UICONTROL 대상 크기] 위젯 설명서](./guides/audiences.md#audience-size) 추가 정보.
 
 다음을 생성하는 SQL [!UICONTROL 대상 크기] 위젯은 아래의 축소 가능한 섹션에 표시됩니다.
 
@@ -191,7 +191,7 @@ LIMIT 20;
 
 #### 대상자 크기 변경 트렌드 사용 사례
 
-에 사용되는 논리 [!UICONTROL 대상자 크기 변경 트렌드] 위젯은 가장 최근의 일별 스냅샷 간 주어진 세그먼트에 적합한 총 프로필 수의 차이에 대한 선 그래프 일러스트레이션을 제공합니다. 다음을 참조하십시오. [[!UICONTROL 대상자 크기 변경 트렌드] 위젯 설명서](./guides/segments.md#audience-size-change-trend) 추가 정보.
+에 사용되는 논리 [!UICONTROL 대상자 크기 변경 트렌드] 위젯은 가장 최근의 일별 스냅샷 간 주어진 대상자에 대해 자격이 있는 총 프로필 수의 차이에 대한 선 그래프 일러스트레이션을 제공합니다. 다음을 참조하십시오. [[!UICONTROL 대상자 크기 변경 트렌드] 위젯 설명서](./guides/audiences.md#audience-size-change-trend) 추가 정보.
 
 다음을 생성하는 SQL [!UICONTROL 대상자 크기 변경 트렌드] 위젯은 아래의 축소 가능한 섹션에 표시됩니다.
 
@@ -212,7 +212,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 #### 가장 많이 사용되는 대상 사용 사례
 
-에 사용되는 논리 [!UICONTROL 가장 많이 사용한 대상] 위젯은 매핑된 세그먼트의 수에 따라 조직에서 가장 많이 사용하는 대상을 나열합니다. 이 순위는 어떤 대상이 활용되고 있는지에 대한 통찰력을 제공하는 동시에 활용도가 낮을 수 있는 대상을 잠재적으로 보여 줍니다. 다음에서 설명서를 참조하십시오. [[!UICONTROL 가장 많이 사용한 대상] 위젯](./guides/destinations.md#most-used-destinations) 추가 정보.
+에 사용되는 논리 [!UICONTROL 가장 많이 사용한 대상] 위젯은 매핑된 대상자 수에 따라 조직에서 가장 많이 사용하는 대상을 나열합니다. 이 순위는 어떤 대상이 활용되고 있는지에 대한 통찰력을 제공하는 동시에 활용도가 낮을 수 있는 대상을 잠재적으로 보여 줍니다. 다음에서 설명서를 참조하십시오. [[!UICONTROL 가장 많이 사용한 대상] 위젯](./guides/destinations.md#most-used-destinations) 추가 정보.
 
 다음을 생성하는 SQL [!UICONTROL 가장 많이 사용한 대상] 위젯은 아래의 축소 가능한 섹션에 표시됩니다.
 
@@ -237,11 +237,11 @@ FROM
 
 +++
 
-#### 최근에 활성화된 세그먼트 사용 사례
+#### 최근에 활성화된 대상자 사용 사례
 
-에 대한 논리 [!UICONTROL 최근에 활성화된 세그먼트] 위젯은 대상에 가장 최근에 매핑된 세그먼트의 목록을 제공합니다. 이 목록은 시스템에서 활성화되는 세그먼트와 대상에 대한 스냅샷을 제공하고 잘못된 매핑 문제를 해결하는 데 도움이 됩니다. 다음을 참조하십시오. [[!UICONTROL 최근에 활성화된 세그먼트] 위젯 설명서](./guides/destinations.md#recently-activated-segments) 추가 정보.
+에 대한 논리 [!UICONTROL 최근에 활성화된 대상자] 위젯은 대상에 가장 최근에 매핑된 대상자의 목록을 제공합니다. 이 목록은 시스템에서 사용 중인 대상 및 대상의 스냅샷을 제공하며 잘못된 매핑을 해결하는 데 도움이 됩니다. 다음을 참조하십시오. [[!UICONTROL 최근에 활성화된 대상자] 위젯 설명서](./guides/destinations.md#recently-activated-audiences) 추가 정보.
 
-다음을 생성하는 SQL [!UICONTROL 최근에 활성화된 세그먼트] 위젯은 아래의 축소 가능한 섹션에 표시됩니다.
+다음을 생성하는 SQL [!UICONTROL 최근에 활성화된 대상자] 위젯은 아래의 축소 가능한 섹션에 표시됩니다.
 
 +++SQL 쿼리
 
@@ -255,9 +255,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 +++
 
-### 네임스페이스-세그먼트 모델
+### 네임스페이스-대상 모델
 
-네임스페이스 세그먼트 모델은 다음 데이터 세트로 구성됩니다.
+네임스페이스-대상 모델은 다음 데이터 세트로 구성됩니다.
 
 - `adwh_dim_date`
 - `adwh_dim_namespaces`
@@ -270,11 +270,11 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 아래 이미지에는 각 데이터 세트의 관련 데이터 필드가 포함되어 있습니다.
 
-![네임스페이스-세그먼트 모델의 ERD입니다.](./images/cdp-insights/namespace-segment-model.png)
+![네임스페이스-대상 모델의 ERD입니다.](./images/cdp-insights/namespace-audience-model.png)
 
-#### 세그먼트 사용 사례에 대한 ID별 프로필
+#### 대상자 사용 사례에 대한 ID별 프로필
 
-에 사용되는 논리 [!UICONTROL ID별 프로필] 위젯은 지정된 세그먼트에 대한 프로필 스토어의 병합된 모든 프로필에서 id의 분류를 제공합니다. 다음을 참조하십시오. [[!UICONTROL ID별 프로필] 위젯 설명서](./guides/segments.md#profiles-by-identity) 추가 정보.
+에 사용되는 논리 [!UICONTROL ID별 프로필] 위젯은 지정된 대상자에 대해 프로필 스토어에 있는 모든 병합된 프로필에서 id의 분류를 제공합니다. 다음을 참조하십시오. [[!UICONTROL ID별 프로필] 위젯 설명서](./guides/audiences.md#profiles-by-identity) 추가 정보.
 
 다음을 생성하는 SQL [!UICONTROL ID별 프로필] 위젯은 아래의 축소 가능한 섹션에 표시됩니다.
 
@@ -359,9 +359,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-### 세그먼트 모델별 네임스페이스 겹치기
+### 대상 모델별 Overlap Namespace
 
-세그먼트 모델별 중복 네임스페이스는 다음 데이터 세트로 구성됩니다.
+대상 모델별 중복 네임스페이스는 다음 데이터 세트로 구성됩니다.
 
 - `adwh_dim_date`
 - `adwh_dim_overlap_namespaces`
@@ -374,11 +374,11 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 아래 이미지에는 각 데이터 세트의 관련 데이터 필드가 포함되어 있습니다.
 
-![세그먼트 모델별 오버랩 네임스페이스의 ERD입니다.](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![대상 모델별 오버랩 네임스페이스의 ERD입니다.](./images/cdp-insights/overlap-namespace-by-audience-model.png)
 
-#### ID 중복(세그먼트) 사용 사례
+#### ID 중복(대상) 사용 사례
 
-에 사용되는 논리 [!UICONTROL 세그먼트] 대시보드 [!UICONTROL ID 중복] 위젯은 특정 세그먼트에 대해 선택한 두 개의 id가 포함된 프로필의 겹침을 보여 줍니다. 자세한 내용은 [[!UICONTROL ID 중복] 의 위젯 섹션 [!UICONTROL 세분화] 대시보드 설명서](./guides/segments.md#identity-overlap).
+에 사용되는 논리 [!UICONTROL 대상] 대시보드 [!UICONTROL ID 중복] 위젯은 특정 대상자에 대해 선택한 두 개의 id가 포함된 프로필의 겹침을 보여 줍니다. 자세한 내용은 [[!UICONTROL ID 중복] 의 위젯 섹션 [!UICONTROL 대상] 대시보드 설명서](./guides/audiences.md#identity-overlap).
 
 다음을 생성하는 SQL [!UICONTROL ID 중복] 위젯은 아래의 축소 가능한 섹션에 표시됩니다.
 

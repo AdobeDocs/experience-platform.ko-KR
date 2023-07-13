@@ -1,15 +1,15 @@
 ---
-title: Adobe Experience Platform 릴리스 노트 2022년 4월
-description: Adobe Experience Platform에 대한 2022년 4월 릴리스 정보입니다.
+title: Adobe Experience Platform 릴리스 정보 2022년 4월
+description: Adobe Experience Platform의 2022년 4월 릴리스 정보입니다.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2904'
-ht-degree: 6%
+ht-degree: 17%
 
 ---
 
-# Adobe Experience Platform 릴리스 노트
+# Adobe Experience Platform 릴리스 정보
 
 **릴리스 일자: 2022년 4월 27일**
 
@@ -20,7 +20,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [데이터 흐름](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [대상](#destinations)
-- [경험 데이터 모델(XDM)](#xdm)
+- [경험 데이터 모델 (XDM)](#xdm)
 - [Real-Time Customer Data Platform B2B 에디션](#B2B)
 - [소스](#sources)
 
@@ -28,7 +28,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 Platform은 일별 스냅샷 중에 캡처한 대로 조직 데이터에 대한 중요한 정보를 볼 수 있는 여러 대시보드를 제공합니다.
 
-대시보드는 조직의 데이터에 대해 사전 구성된 보고 옵션을 제공하며 플랫폼 내의 마케터 워크플로우에 직접 빌드됩니다. 이러한 대시보드는 추가적인 IT 지원이나 추가적인 데이터 웨어하우징 설계 및 구현으로 데이터를 내보내고 처리하는 데 소요되는 시간과 노력 없이 사용할 수 있습니다.
+대시보드는 조직의 데이터에 대해 사전 구성된 보고 옵션을 제공하며 Platform 내의 마케터 워크플로우에 직접 빌드됩니다. 이러한 대시보드는 추가적인 IT 지원이나 추가적인 데이터 웨어하우징 설계 및 구현으로 데이터를 내보내고 처리하는 데 소요되는 시간과 노력 없이 사용할 수 있습니다.
 
 다음 위젯은 해당 대시보드의 위젯 라이브러리를 통해 사용할 수 있습니다. 에 대한 자세한 내용은 설명서 를 참조하십시오 [위젯 라이브러리를 통해 위젯을 추가하는 방법](../../dashboards/customize/widget-library.md).
 
@@ -57,7 +57,7 @@ Platform은 일별 스냅샷 중에 캡처한 대로 조직 데이터에 대한 
 
 {style="table-layout:auto"}
 
-에 대한 자세한 내용은 설명서 를 참조하십시오 [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), 및 [[!DNL Segments]](../../dashboards/guides/segments.md) 대시보드.
+에 대한 자세한 내용은 설명서 를 참조하십시오 [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), 및 [[!DNL Segments]](../../dashboards/guides/audiences.md) 대시보드.
 
 ## 데이터 흐름 {#dataflows}
 
@@ -88,9 +88,9 @@ Platform은 일별 스냅샷 중에 캡처한 대로 조직 데이터에 대한 
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-**새 기능 또는 업데이트된 기능**
+**새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | ----------- | ----------- |
@@ -107,18 +107,18 @@ Beta 단계에서 이러한 대상을 활용하고 있는 경우 다음 사항�
 - 4월 27일부터 이러한 대상을 설정하려면 대상의 새 GA 버전으로 설정하십시오.
 - 릴리스 작업이 완료되면 더 이상 사용되지 않는 것으로 표시된 베타 카드는 4월 29일 금요일까지 제거됩니다. Experience Platform 엔지니어링 팀은 성공적인 릴리스 작업을 위해 면밀히 모니터링하고 있습니다.
 
-**새 대상**
+**새로운 대상**
 
 | 대상 | 설명 |
 | ----------- | ----------- |
 | [!DNL Criteo] | 에 데이터 연결 및 활성화 [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) 광고 플랫폼입니다. |
 | [!DNL Sendgrid] | 에 데이터 연결 및 활성화 [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) 트랜잭션 및 마케팅 이메일용 플랫폼 |
 
-대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md).
+대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
-## 경험 데이터 모델(XDM) {#xdm}
+## 경험 데이터 모델 (XDM) {#xdm}
 
-XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 일반적인 표현에 통합하여 보다 빠르고 통합적인 방식으로 통찰력을 제공할 수 있습니다. 고객 작업에서 중요한 통찰력을 얻고, 세그먼트를 통해 고객 대상을 정의하고, 개인화 목적으로 고객 속성을 사용할 수 있습니다.
+XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
 
 **새로운 기능**
 
@@ -169,11 +169,11 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 
 {style="table-layout:auto"}
 
-플랫폼의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
+Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-AI/ML 서비스는 마케팅 분석가 및 전문가가 고객 경험 사용 사례에서 인공 지능과 머신 러닝을 활용할 수 있는 권한을 부여합니다. 이를 통해 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준의 전문 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다.
+AI/ML 서비스는 마케팅 분석가 및 전문가가 고객 경험 사용 사례에서 인공 지능과 머신 러닝을 활용할 수 있는 권한을 부여합니다. 이를 통해 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준의 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다.
 
 ### 기여도 AI
 
@@ -202,7 +202,7 @@ Real-time Customer Data Platform에서 사용할 수 있는 고객 AI는 규모�
 
 ## Real-Time Customer Data Platform B2B 에디션 {#B2B}
 
-Real-time Customer Data Platform(Real-Time CDP)을 기반으로 구축된 Real-Time CDP B2B 에디션은 B2B 서비스 모델을 운영하는 마케터용으로 특별히 빌드되었습니다. 여러 소스에서 데이터를 취합하여 사람 및 계정 프로필에 대한 단일 보기에 결합합니다. 이 통합 데이터를 통해 마케터는 특정 대상을 정확하게 타겟팅하고 사용 가능한 모든 채널에서 해당 대상을 참여시킬 수 있습니다.
+Real-Time Customer Data Platform(Real-Time CDP)을 기반으로 구축된 Real-Time CDP B2B 에디션은 business-to-business 서비스 모델에서 운영하는 마케터를 위해 특별히 설계되었습니다. 여러 소스의 데이터를 함께 가져와서 사람 및 계정 프로필의 단일 보기로 결합합니다. 마케터는 이 통합 데이터를 통해 특정 대상자를 정확하게 타겟팅하고 사용 가능한 모든 채널에서 해당 대상자를 참여시킬 수 있습니다.
 
 **업데이트된 기능**
 
@@ -216,14 +216,14 @@ Real-time Customer Data Platform B2B 에디션에 대한 자세한 내용은 [B2
 
 Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스를 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
+Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
 **업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 지원 대상 [!DNL OneTrust Integration] | 이제 다음을 사용할 수 있습니다. [!DNL OneTrust Integration] 소스에서 동의 및 환경 설정 데이터를 수집할 수 있습니다 [!DNL OneTrust] 계정을 플랫폼에 추가합니다. 다음에서 설명서를 참조하십시오. [만들기 [!DNL OneTrust Integration] 소스 연결](../../sources/connectors/consent-and-preferences/onetrust.md) 추가 정보. |
-| 지원 대상 [!DNL Square] | 이제 다음을 사용할 수 있습니다. [!DNL Square] 소스에서 결제 데이터 수집 [!DNL Square] 계정을 플랫폼에 추가합니다. |
+| [!DNL OneTrust Integration] 지원 | 이제 다음을 사용할 수 있습니다. [!DNL OneTrust Integration] 소스에서 동의 및 환경 설정 데이터를 수집할 수 있습니다 [!DNL OneTrust] 계정을 플랫폼에 추가합니다. 다음에서 설명서를 참조하십시오. [만들기 [!DNL OneTrust Integration] 소스 연결](../../sources/connectors/consent-and-preferences/onetrust.md) 추가 정보. |
+| [!DNL Square] 지원 | 이제 다음을 사용할 수 있습니다. [!DNL Square] 소스에서 결제 데이터 수집 [!DNL Square] 계정을 플랫폼에 추가합니다. |
 | 고객 속성 데이터 흐름 삭제 지원 | 이제 고객 속성 소스 커넥터로 만든 데이터 흐름을 삭제할 수 있습니다. |
 
 소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).

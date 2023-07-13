@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 유니온 API 엔드포인트
 description: 스키마 레지스트리 API의 /union 끝점을 사용하면 경험 애플리케이션에서 XDM 유니온 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '897'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 ### 세그먼트 멤버십 맵
 
-다음 `segmentMembership` 맵은 세그먼트 평가 결과를 저장합니다. 다음을 사용하여 세그먼트 작업이 성공적으로 실행되는 경우 [세그먼테이션 API](https://www.adobe.io/experience-platform-apis/references/segmentation/)를 입력하면 맵이 업데이트됩니다. `segmentMembership` 또한 Platform에 수집되는 사전 평가된 대상 세그먼트를 저장하여 Adobe Audience Manager과 같은 다른 솔루션과 통합할 수 있습니다. 다음 튜토리얼 참조: [api를 사용하여 세그먼트 만들기](../../segmentation/tutorials/create-a-segment.md) 추가 정보.
+다음 `segmentMembership` 맵은 세그먼트 정의 평가 결과를 저장합니다. 다음을 사용하여 세그먼트 작업이 성공적으로 실행되는 경우 [세그먼테이션 API](https://www.adobe.io/experience-platform-apis/references/segmentation/)를 입력하면 맵이 업데이트됩니다. `segmentMembership` 또한 Platform에 수집되는 사전 평가된 모든 대상을 저장하여 Adobe Audience Manager과 같은 다른 솔루션과 통합할 수 있습니다. 다음 튜토리얼 참조: [api를 사용하여 대상자 만들기](../../segmentation/tutorials/create-a-segment.md) 추가 정보.
 
 ## 유니온 목록 검색 {#list}
 

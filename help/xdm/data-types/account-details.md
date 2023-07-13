@@ -2,7 +2,7 @@
 title: 계정 세부 정보 데이터 유형
 description: 이 문서에서는 계정 세부 사항 XDM(Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 5%
@@ -29,7 +29,7 @@ ht-degree: 5%
 | `jigsaw` | 문자열 | 조직의 Data.com 키입니다. |
 | `linkedinPageUrl` | 문자열 | 조직의 LinkedIn 계정에 대한 웹 사이트 링크입니다. |
 | `logoUrl` | 문자열 | Salesforce 인스턴스의 URL과 결합할 경로(예: `https://yourInstance.salesforce.com/`)을 클릭하여 조직과 연결된 소셜 네트워크 프로필 이미지를 요청할 URL을 생성합니다. 생성된 URL은 조직의 소셜 네트워크 프로필 이미지에 대한 HTTP 리디렉션(코드 302)을 반환합니다. |
-| `marketSegment` | 문자열 | 조직이 참여하는 지정된 시장 세그먼트입니다. 이는 자유 형식의 필드이며 쿼리에 대해 구조화된 값을 사용하거나 `xdm:identifier` 속성. |
+| `marketSegment` | 문자열 | 조직이 참여하는 지정된 시장 대상자입니다. 이는 자유 형식의 필드이며 쿼리에 대해 구조화된 값을 사용하거나 `xdm:identifier` 속성. |
 | `numberOfEmployees` | 정수 | 조직의 직원 수. |
 | `organizationType` | 문자열 | 조직 유형을 설명하는 레이블입니다. |
 | `primaryEmailDomain` | 문자열 | 조직에서 직원에게 사용하는 기본 이메일 도메인입니다. |

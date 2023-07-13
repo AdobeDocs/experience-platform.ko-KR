@@ -2,9 +2,9 @@
 title: 데이터 신호를 추적하여 고객 생애 가치 생성
 description: 이 안내서에서는 Data Distiller 및 Real-time Customer Data Platform과 함께 사용자 정의 대시보드를 사용하여 고객 생애 가치를 측정하고 시각화하는 방법에 대한 전체적인 데모를 제공합니다.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1269'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Real-time Customer Data Platform을 사용하여 고객 생애 가치(CLV)를 �
 
 ![관찰에서 분석, 실행에 이르기까지 데이터의 왕복 인포그래픽입니다.](../images/use-cases/infographic-use-case-cycle.png)
 
-이 엔드 투 엔드 사용 사례는 고객 라이프타임 값 파생 특성을 계산하기 위해 데이터 신호를 캡처하고 수정하는 방법을 보여 줍니다. 그런 다음 이러한 파생된 속성을 Real-Time CDP 프로필 데이터에 적용할 수 있으며, 통찰력 분석을 위한 대시보드를 작성하는 사용자 정의 대시보드와 함께 사용할 수 있습니다. Data Distiller을 통해 Real-Time CDP 인사이트 데이터 모델을 확장하고 CLV 파생 속성 및 대시보드 인사이트를 사용하여 새 세그먼트를 작성하고 원하는 대상으로 활성화할 수 있습니다. 그런 다음 이러한 세그먼트를 사용하여 다음 마케팅 캠페인을 지원하기 위한 고성능 대상을 만들 수 있습니다.
+이 엔드 투 엔드 사용 사례는 고객 라이프타임 값 파생 특성을 계산하기 위해 데이터 신호를 캡처하고 수정하는 방법을 보여 줍니다. 그런 다음 이러한 파생된 속성을 Real-Time CDP 프로필 데이터에 적용할 수 있으며, 통찰력 분석을 위한 대시보드를 작성하는 사용자 정의 대시보드와 함께 사용할 수 있습니다. Data Distiller을 통해 Real-Time CDP 인사이트 데이터 모델을 확장하고 CLV 파생 속성 및 대시보드 인사이트를 사용하여 새 대상을 작성하고 원하는 대상으로 활성화할 수 있습니다. 그런 다음 이러한 고성능 대상을 사용하여 다음 마케팅 캠페인을 강화할 수 있습니다.
 
 이 안내서는 CLV를 구동하는 주요 접점에서 데이터 신호를 측정하여 고객 경험을 더 잘 이해하고 환경에서 유사한 사용 사례를 구현하는 데 도움이 되도록 설계되었습니다. 전체 프로세스는 아래 이미지에 요약되어 있습니다.
 
@@ -28,7 +28,7 @@ Real-time Customer Data Platform을 사용하여 고객 생애 가치(CLV)를 �
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 잘 알고 있어야 합니다.
 
 * [쿼리 서비스](../home.md): SQL 쿼리를 사용하여 데이터를 분석하고 보강할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다.
-* [세분화 서비스](../../segmentation/home.md): 실시간 고객 프로필 데이터에서 세그먼트를 작성하고 대상자를 생성할 수 있습니다.
+* [세분화 서비스](../../segmentation/home.md): 실시간 고객 프로필 데이터에서 대상자를 생성할 수 있습니다.
 
 ## 사전 요구 사항
 
@@ -71,23 +71,23 @@ CLV를 설정하는 첫 번째 단계는 사용자 작업에서 캡처한 데이
 
 ![사용자 지정 십분위수 기반 CLTV 위젯의 컬렉션입니다.](../images/use-cases/deciles-user-defined-dashboard.png)
 
-## 세그먼트를 만들고 활성화하여 고성능 대상자 구축 {#create-and-activate-segments}
+## 고성능 대상자 만들기 및 활성화 {#create-and-activate-audiences}
 
-다음 단계는 실시간 고객 프로필 데이터에서 세그먼트를 작성하고 대상자를 생성하는 것입니다. 자세한 내용은 세그먼트 빌더 UI 안내서 를 참조하십시오 [플랫폼에서 세그먼트 생성 및 활성화](../../segmentation/ui/segment-builder.md). 이 안내서에서는 다음 방법에 대한 섹션을 제공합니다.
+다음 단계는 세그먼트 정의를 작성하고 실시간 고객 프로필 데이터에서 대상을 생성하는 것입니다. 자세한 내용은 세그먼트 빌더 UI 안내서 를 참조하십시오 [Platform에서 대상자 만들기 및 활성화](../../segmentation/ui/segment-builder.md). 이 안내서에서는 다음 방법에 대한 섹션을 제공합니다.
 
 * 속성, 이벤트 및 기존 대상의 조합을 빌딩 블록으로 사용하여 세그먼트 정의를 만듭니다.
-* 규칙 빌더 캔버스 및 컨테이너를 사용하여 세그먼트 규칙이 실행되는 순서를 제어합니다.
+* 규칙 빌더 캔버스 및 컨테이너를 사용하여 세그먼테이션 규칙이 실행되는 순서를 제어합니다.
 * 예상 대상의 예상치를 보고 필요에 따라 세그먼트 정의를 조정할 수 있습니다.
 * 예약된 세분화에 대해 모든 세그먼트 정의를 활성화합니다.
 * 스트리밍 세분화에 대해 지정된 세그먼트 정의를 활성화합니다.
 
-또는 다음 항목도 있습니다 [세그먼트 빌더 비디오 튜토리얼](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) 을 참조하십시오.
+또는 다음 항목도 있습니다 [세그먼트 빌더 비디오 튜토리얼](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) 을 참조하십시오.
 
-## 이메일 캠페인에 대한 세그먼트 활성화 {#activate-segment-for-campaign}
+## 이메일 캠페인에 대한 대상자 활성화 {#activate-audience-for-campaign}
 
-세그먼트를 빌드했으면 대상에 대해 활성화할 준비가 된 것입니다. Platform은 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있도록 해주는 다양한 이메일 서비스 공급자(ESP)를 지원합니다.
+대상을 빌드했으면 대상에 대해 활성화할 준비가 된 것입니다. Platform은 프로모션 이메일 캠페인 전송과 같은 이메일 마케팅 활동을 관리할 수 있도록 해주는 다양한 이메일 서비스 공급자(ESP)를 지원합니다.
 
-다음 확인: [이메일 마케팅 대상 개요](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/overview.html?lang=en#connect-destination) 데이터를 내보내려는 지원되는 대상 목록(예: [Oracle Eloqua](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/oracle-eloqua-api.html?lang=en) page).
+다음 확인: [이메일 마케팅 대상 개요](../../destinations/catalog/email-marketing/overview.md#connect-destination) 데이터를 내보내려는 지원되는 대상 목록(예: [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) page).
 
 ## 캠페인에서 반환된 분석 데이터를 확인합니다 {#post-campaign-data-analysis}
 
@@ -95,7 +95,7 @@ CLV를 설정하는 첫 번째 단계는 사용자 작업에서 캡처한 데이
 
 데이터 모델이 업데이트되면 사용자 정의 대시보드 위젯은 고객 생애 가치를 측정하고 시각화할 수 있는 의미 있는 신호를 제공합니다.
 
-![세그먼트 및 이메일 캠페인에 따라 열린 이메일 수를 표시하는 사용자 지정 위젯.](../images/use-cases/post-activation-and-email-response-kpis.png)
+![대상자 및 이메일 캠페인에 따라 열린 이메일 수를 표시하는 사용자 지정 위젯.](../images/use-cases/post-activation-and-email-response-kpis.png)
 
 사용자 정의 분석을 위한 다양한 시각화 옵션이 제공됩니다.
 

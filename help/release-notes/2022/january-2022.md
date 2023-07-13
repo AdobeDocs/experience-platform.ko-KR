@@ -1,15 +1,15 @@
 ---
-title: Adobe Experience Platform 릴리스 노트 2022년 1월
-description: Adobe Experience Platform의 2022년 1월 릴리스 정보.
+title: Adobe Experience Platform 릴리스 정보 2022년 1월
+description: Adobe Experience Platform의 2022년 1월 릴리스 정보입니다.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 3%
+ht-degree: 20%
 
 ---
 
-# Adobe Experience Platform 릴리스 노트
+# Adobe Experience Platform 릴리스 정보
 
 **릴리스 일자: 2022년 1월 26일**
 
@@ -21,7 +21,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [[!DNL Destinations]](#destinations)
 - [쿼리 서비스](#query-service)
 - [샌드박스](#sandboxes)
-- [세분화 서비스](#segmentation)
+- [Segmentation Service](#segmentation)
 - [소스](#sources)
 
 ## 경고 {#alerts}
@@ -39,11 +39,11 @@ Experience Platform을 사용하면 다양한 플랫폼 활동에 대한 이벤�
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform은 일별 스냅샷 중에 캡처한 대로 조직 데이터에 대한 중요한 통찰력을 볼 수 있는 여러 대시보드를 제공합니다.
+Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대한 중요한 인사이트를 볼 수 있는 여러 대시보드를 제공합니다.
 
 | 기능 | 설명 |
 | --- | --- |
-| 지능형 캡션 | 머신 러닝 알고리즘은 프로필 및 대상 데이터에 대한 통찰력을 자동으로 제공하며 30~90일 또는 12개월 동안의 패턴 및 트렌드를 보여 줍니다. 캡션에는 다음에 대한 정보가 포함되어 있습니다. <ul><li>전체 모양 및 통계</li><li>트렌드 및 갑작스러운 변경</li><li>계절별 패턴</li><li>예기치 않은 예외 항목</li></ul> 자세한 내용은 [프로필 대시보드](../../dashboards/guides/profiles.md#profiles-count-trend) 및 [세그먼트 대시보드](../../dashboards/guides/segments.md#audience-size-trend) 설명서를 참조하십시오. |
+| 지능형 캡션 | 머신 러닝 알고리즘은 프로필 및 대상 데이터에 대한 통찰력을 자동으로 제공하며 30~90일 또는 12개월 동안의 패턴 및 트렌드를 보여 줍니다. 캡션에는 다음에 대한 정보가 포함되어 있습니다. <ul><li>전체 모양 및 통계</li><li>트렌드 및 갑작스러운 변경</li><li>계절별 패턴</li><li>예기치 않은 예외 항목</li></ul> 자세한 내용은 [프로필 대시보드](../../dashboards/guides/profiles.md#profiles-count-trend) 및 [세그먼트 대시보드](../../dashboards/guides/audiences.md#audience-size-trend) 설명서를 참조하십시오. |
 | 대시보드 인벤토리 | 중앙 위치에서 PowerBI와 같은 설치된 통합을 포함하여 프로필, 세그먼트 및 대상 대시보드에 대한 사전 구성된 보고서에 액세스합니다. 자세한 내용은 [[!DNL Dashboards] 인벤토리 설명서](../../dashboards/inventory.md). |
 | PowerBI 보고서 템플릿 | 새 PowerBI 차트를 사용하여 프로필, 세그먼트 및 대상 보고 데이터 모델에서 지표를 빌드, 사용자 지정 또는 확장합니다. 자동 설치 워크플로우를 사용하면 PowerBI 환경 내에서 조직 전체에 마케팅 인사이트를 공유할 수 있습니다. 자세한 내용은 [PowerBI 보고서 템플릿 설명서](../../dashboards/integrations/power-bi.md). |
 
@@ -63,9 +63,9 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처한 대로 조직 데
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-**새 기능 또는 업데이트된 기능**
+**새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | ----------- | ----------- |
@@ -74,14 +74,14 @@ Adobe Experience Platform은 일별 스냅샷 중에 캡처한 대로 조직 데
 | 기존 일괄 처리 활성화 데이터 흐름에 대한 UI의 편집 예약 | 이 릴리스에서는 배치 대상에 대한 기존 활성화 데이터 흐름의 일정을 편집하는 옵션이 도입되었습니다. 자세한 내용은 다음을 참조하십시오 [프로필 데이터를 프로필 대상 일괄 처리에 활성화](/help/destinations/ui/activate-batch-profile-destinations.md). |
 | Marketo 대상 개선 사항 | Marketo Engage을 사용하는 Experience Platform 고객은 를 통해 새로운 개인 레코드를 Experience Platform에서 Marketo Engage으로 푸시하는 새로운 기능을 통해 Marketo 데이터베이스를 극대화할 수 있습니다. [Marketo 대상 커넥터](/help/destinations/catalog/adobe/marketo-engage.md). <br> Experience Platform에서 Marketo Engage으로 대상 세그먼트를 보낼 때 Marketo Engage 데이터베이스에 아직 존재하지 않는 세그먼트 내의 사람도 자동으로 추가할 수 있습니다. 자세한 내용은 다음을 참조하십시오 [Adobe Experience Platform 세그먼트를 Marketo 정적 목록에 푸시](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (자습서의 9단계는 순-신규 개인 레코드를 Marketo에 푸시하는 방법을 나타냅니다.) |
 
-**새 대상**
+**새로운 대상**
 
 | 대상 | 설명 |
 | ----------- | ----------- |
 | [Adobe Target 연결](../../destinations/catalog/personalization/adobe-target-connection.md) | Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험을 제공하는 애플리케이션입니다. Adobe Target은 Adobe Experience Platform의 개인화 연결입니다. |
 | [사용자 지정 개인화 연결](../../destinations/catalog/personalization/custom-personalization.md) | 이 개인화 연결은 Adobe Experience Platform에서 외부 개인화 플랫폼, 콘텐츠 관리 시스템, 광고 서버 및 고객 웹 사이트에서 실행 중인 기타 애플리케이션으로 세그먼트 정보를 검색하는 방법을 제공합니다. |
 
-대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md).
+대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
 ## 쿼리 서비스 {#query-service}
 
@@ -108,9 +108,9 @@ Adobe Experience Platform은 글로벌 규모로 디지털 경험 애플리케�
 
 샌드박스에 대한 자세한 내용은 [샌드박스 개요](../../sandboxes/home.md).
 
-## 세분화 서비스 {#segmentation}
+## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 은 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 프로필의 특정 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(예: 인구 통계학적 정보) 또는 시계열 이벤트를 기반으로 할 수 있습니다.
+[!DNL Segmentation Service]는 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 프로필의 특정 하위 집합을 정의합니다. 세그먼트는 기록 데이터(예: 인구 통계 정보) 또는 고객과 브랜드의 상호 작용을 나타내는 시계열 이벤트를 기반으로 할 수 있습니다.
 
 **새로운 기능**
 
@@ -118,13 +118,13 @@ Adobe Experience Platform은 글로벌 규모로 디지털 경험 애플리케�
 | --- | --- |
 | 세그먼트 일치 | 세그먼트 일치는 두 명 이상의 플랫폼 사용자가 안전하고 관리되며 개인정보 보호에 친화적인 방식으로 공통 식별자를 기반으로 데이터를 교환할 수 있는 데이터 공동 작업 서비스입니다. 세그먼트 일치는 Platform 개인 정보 보호 표준과 해시된 이메일, 해시된 전화번호 및 IDFA 및 GAID와 같은 장치 식별자와 같은 개인 식별자를 사용합니다. 자세한 내용은 [세그먼트 일치 개요](../../segmentation/ui/segment-match/overview.md). |
 
-에 대한 자세한 내용 [!DNL Segmentation Service], 다음을 참조하십시오. [세그먼테이션 개요](../../segmentation/home.md).
+[!DNL Segmentation Service]에 대한 자세한 내용은 [세분화 개요](../../segmentation/home.md)를 참조하십시오.
 
 ## 소스 {#sources}
 
 Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스를 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
+Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
 | 기능 | 설명 |
 | --- | --- |

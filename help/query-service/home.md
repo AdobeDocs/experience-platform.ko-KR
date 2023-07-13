@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 쿼리 서비스 개요
 description: 이 문서에서는 Experience Platform 내 쿼리 서비스의 역할에 대한 개요를 제공합니다.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] 기계 학습 및 인공
 
 ### [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] 는 사용자가 고객을 유사한 트레이트를 공유하는 더 작은 그룹으로 나눌 수 있도록 해줍니다. 이러한 세그먼트는 나중에 를 더 잘 분석하기 위해 평가될 수 있습니다. [!DNL Real-Time Customer Profile] 데이터. [!DNL Query Service] 내에서 이 세그먼트 데이터에 대한 쿼리를 실행함으로써 이 분석을 제공하는 데 사용할 수 있습니다. [!DNL Data Lake]. 다음을 읽으십시오. [!DNL Segmentation Service] 세그먼테이션 및 [!DNL Profile Query Language] 세그먼트 분석 방법에 대한 자세한 내용은 (PQL) 안내서를 참조하십시오.
+Adobe Experience Platform [!DNL Segmentation Service] 는 사용자가 고객을 유사한 트레이트를 공유하는 더 작은 그룹으로 나눌 수 있도록 해줍니다. 이러한 대상자는 다음에 대한 더 나은 분석을 제공하기 위해 평가될 수 있습니다. [!DNL Real-Time Customer Profile] 데이터. [!DNL Query Service] 내에서 이 대상 데이터에 대한 쿼리를 실행함으로써 이 분석을 제공하는 데 사용할 수 있습니다. [!DNL Data Lake]. 다음을 읽으십시오. [!DNL Segmentation Service] 세그먼테이션 및 [!DNL Profile Query Language] 대상 분석 방법에 대한 자세한 내용은 (PQL) 안내서를 참조하십시오.
 
 ## 사용 사례
 
@@ -41,7 +41,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 는 사용자가 고객을
 
 ### Adobe Analytics 찾아보기 포기
 
-이 [찾아보기 포기 예시 센터 Adobe 사용 [!DNL Analytics]](./use-cases/abandoned-browse.md) 실행 가능한 특정 대상을 만드는 데이터. [!DNL Query Service] 는 세그멘테이션을 위한 복잡한 논리를 수용하여 다운스트림에 사용할 다양한 개인화된 속성을 계산하거나 세그먼트 빌드 방법을 크게 단순화합니다.
+이 [찾아보기 포기 예시 센터 Adobe 사용 [!DNL Analytics]](./use-cases/abandoned-browse.md) 실행 가능한 특정 대상을 만드는 데이터. [!DNL Query Service] 세분화를 위한 복잡한 논리를 수용하여 다운스트림에서 사용할 다양한 개인화된 속성을 계산하거나 대상자를 구성하는 방법을 크게 간소화합니다.
 
 ### Looker BI 대시보드
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 사용 레이블 용어집
 description: 이 문서에서는 현재 Adobe Experience Platform에서 지원하는 모든 데이터 사용 레이블에 대해 간략하게 설명합니다.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2109'
 ht-degree: 3%
 
 ---
@@ -134,11 +134,11 @@ DAA: 온라인 행동 광고에는 자사, 광고 게재 또는 광고 보고 �
 
 #### C10 {#c10}
 
-일부 데이터 거버넌스 정책은 개인화를 위해 결합된 ID 데이터의 사용을 제한합니다. 병합 정책에서 &quot;비공개 그래프&quot; 옵션을 사용하는 경우 C10 레이블이 세그먼트에 자동으로 적용됩니다.
+일부 데이터 거버넌스 정책은 개인화를 위해 결합된 ID 데이터의 사용을 제한합니다. 병합 정책에서 &quot;비공개 그래프&quot; 옵션을 사용하는 경우 C10 레이블이 대상에 자동으로 적용됩니다.
 
 #### C11 {#c11}
 
-Adobe Experience Platform 세그먼트 일치를 사용하면 자사 세그먼트를 개인 정보 및 동의 환경 설정과 일치시켜 풍부한 프로파일링 및 다운스트림 인사이트를 촉진할 수 있습니다. C11 레이블은에서 사용하지 않아야 하는 데이터를 나타냅니다. [!DNL Segment Match] 프로세스. 세그먼트 일치에서 제외할 데이터 세트 및/또는 필드를 결정하고 그에 따라 C11 레이블을 추가하면 레이블이 세그먼트 일치 워크플로에 의해 자동으로 적용됩니다.
+Adobe Experience Platform 세그먼트 일치를 사용하면 Platform 생성 대상자를 개인 정보 및 동의 환경 설정과 일치시켜 풍부한 프로파일링 및 다운스트림 인사이트를 촉진할 수 있습니다. C11 레이블은에서 사용하지 않아야 하는 데이터를 나타냅니다. [!DNL Segment Match] 프로세스. 세그먼트 일치에서 제외할 데이터 세트 및/또는 필드를 결정하고 그에 따라 C11 레이블을 추가하면 레이블이 세그먼트 일치 워크플로에 의해 자동으로 적용됩니다.
 
 #### C12 {#c12}
 

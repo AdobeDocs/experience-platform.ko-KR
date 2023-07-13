@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 사용 정책 개요
 description: 데이터 사용 정책은 Adobe Experience Platform 내에서 데이터 수행을 허용하거나 제한하는 마케팅 작업 종류를 설명하는 규칙입니다.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: f292e87bb5f944a636521344b28cf02c746c0f6c
+source-git-commit: e5d90b24dad7faa9aa31c3b0670f8efa69cf0334
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 2%
@@ -55,7 +55,7 @@ ht-degree: 2%
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
-Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
+Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
 For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
@@ -99,5 +99,5 @@ API에서 마케팅 작업 및 데이터 사용 정책을 사용하는 방법에
 | 서드파티로 내보내기 | 고객과 직접적인 관계가 없는 프로세서 및 엔티티에 데이터를 내보내는 작업입니다. 많은 데이터 제공업체는 원래 수집된 곳에서 데이터를 내보내는 것을 금지하는 조건을 계약서에 명시하고 있습니다. 예를 들어 소셜 네트워크 계약은 종종 이들로부터 받는 데이터의 전송을 제한합니다. |
 | 온사이트 광고 | 조직의 웹 사이트 또는 앱에서 광고를 선택하고 게재하는 작업을 포함하여 온사이트 광고에 대한 데이터를 사용하거나 이러한 광고의 전달 및 효과를 측정하는 작업입니다. |
 | 온사이트 개인화 | 온사이트 콘텐츠 개인화에 데이터를 사용하는 작업입니다. 온사이트 개인화는 사용자의 관심 분야를 추론하는 데 사용되는 모든 데이터이며 이러한 추론을 기반으로 어떤 콘텐츠 또는 광고를 제공할지 선택하는 데 사용됩니다. |
-| 세그먼트 일치 | 두 명 이상의 Platform 사용자가 세그먼트 데이터를 교환할 수 있는 Adobe Experience Platform 세그먼트 일치에 데이터를 사용하는 작업입니다. 이 작업을 참조하는 정책을 활성화하여 세그먼트 일치에 사용되는 데이터를 제한할 수 있습니다. 예를 들어 핵심 정책 &quot;데이터 공유 제한&quot;이 활성화된 경우 [C11 레이블](../labels/reference.md#c11) 세그먼트 일치에 사용할 수 없습니다. |
+| 세그먼트 일치 | 두 명 이상의 Platform 사용자가 대상 데이터를 교환할 수 있는 Adobe Experience Platform 세그먼트 일치에 데이터를 사용하는 작업입니다. 이 작업을 참조하는 정책을 활성화하여 세그먼트 일치에 사용되는 데이터를 제한할 수 있습니다. 예를 들어 핵심 정책 &quot;데이터 공유 제한&quot;이 활성화된 경우 [C11 레이블](../labels/reference.md#c11) 세그먼트 일치에 사용할 수 없습니다. |
 | 단일 ID 개인화 | 여러 소스의 ID를 연결하는 대신 개인화 목적으로 단일 ID를 사용해야 하는 작업입니다. |
