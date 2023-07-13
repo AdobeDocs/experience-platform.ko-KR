@@ -3,10 +3,10 @@ keywords: target 개인화, 대상, experience platform 대상, adobe target 대
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 3b2fedf4f7b17c4fb32afb5978bfac6f618f5bc3
+source-git-commit: 2c3a70df57af2045f03c8d4a22cdc33f3c449fb3
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 17%
+source-wordcount: '1121'
+ht-degree: 16%
 
 ---
 
@@ -93,11 +93,18 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 * **설명**: 대상에 대한 설명을 입력합니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다. 이 필드는 선택 사항입니다.
 * **데이터 스트림 ID**: 세그먼트를 포함할 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에는 Target 및 Adobe Experience Platform 서비스가 활성화된 데이터스트림만 표시됩니다. 다음을 참조하십시오 [데이터스트림 구성](../../../edge/datastreams/configure.md#aep) Adobe Experience Platform 및 Adobe Target용 데이터스트림을 구성하는 방법에 대한 자세한 내용
    * **[!UICONTROL 없음]**: Adobe Target 개인화를 구성해야 하지만 를 구현할 수 없는 경우 이 옵션을 선택하십시오. [Experience Platform Web SDK](../../../edge/home.md). 이 옵션을 사용하는 경우 Experience Platform에서 Target으로 내보낸 세그먼트는 다음 세션 개인화만 지원하며 에지 세분화는 비활성화됩니다. 자세한 내용은 아래 표를 참조하십시오.
+
+  | 선택한 데이터 스트림 없음 | 데이터 스트림 선택됨 |
+  |---|---|
+  | <ul><li>[에지 세분화](../../../segmentation/ui/edge-segmentation.md) 은(는) 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md) 은(는) 지원되지 않습니다.</li><li>에 대해서만 Adobe Target 연결에 세그먼트를 공유할 수 있습니다. *기본 프로덕션 샌드박스*.</li><li>데이터 스트림 ID를 사용하지 않고 다음 세션 개인화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>에지 세분화는 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md) 이 지원됩니다.</li><li>다른 샌드박스에 대해 세그먼트 공유가 지원됩니다.</li></ul> |
+
 * **작업 영역**: Adobe Target 선택 [작업 영역](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) 대상자를 공유할 대상. 각 Adobe Target 연결에 대해 단일 작업 영역을 선택할 수 있습니다. 활성화 시 대상자는 적용 가능한 단계에 따라 선택한 작업공간으로 라우팅됩니다 [Experience Platform 데이터 사용 레이블](../../../data-governance/labels/overview.md).
 
-| 선택한 데이터 스트림 없음 | 데이터 스트림 선택됨 |
-|---|---|
-| <ul><li>[에지 세분화](../../../segmentation/ui/edge-segmentation.md) 은(는) 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md) 은(는) 지원되지 않습니다.</li><li>에 대해서만 Adobe Target 연결에 세그먼트를 공유할 수 있습니다. *기본 프로덕션 샌드박스*.</li><li>데이터 스트림 ID를 사용하지 않고 다음 세션 개인화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>에지 세분화는 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md) 이 지원됩니다.</li><li>다른 샌드박스에 대해 세그먼트 공유가 지원됩니다.</li></ul> |
+>[!NOTE]
+>
+>다음에 대한 사용자 지정 Target 작업 공간 사용 시 [속성을 사용한 동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md), 만 [선택한 대상자](../../ui/activate-edge-personalization-destinations.md#select-audiences) 선택한 Target 작업 영역으로 전송됩니다. 다음 [매핑된 속성](../../ui/activate-edge-personalization-destinations.md#mapping) 기본 Target 작업 영역으로 전송됩니다.
+><br>
+>이 동작은 향후 업데이트에서 변경됩니다.
 
 ### 경고 활성화 {#enable-alerts}
 
