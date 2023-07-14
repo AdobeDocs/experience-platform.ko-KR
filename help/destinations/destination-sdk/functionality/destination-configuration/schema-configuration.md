@@ -1,10 +1,10 @@
 ---
 description: Destination SDK으로 빌드된 대상에 대해 파트너 스키마를 구성하는 방법을 알아봅니다.
 title: 파트너 스키마 구성
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 5%
+source-wordcount: '1892'
+ht-degree: 4%
 
 ---
 
@@ -91,7 +91,10 @@ Destination SDK은 여러 스키마 구성을 지원합니다.
       "useCustomerSchemaForAttributeMapping":false,
       "profileRequired":true,
       "segmentRequired":true,
-      "identityRequired":true
+      "identityRequired":true,
+      "segmentNamespaceAllowList": ["someNamespace"],
+      "segmentNamespaceDenyList": ["someOtherNamespace"]
+
 }
 ```
 
@@ -102,6 +105,8 @@ Destination SDK은 여러 스키마 구성을 지원합니다.
 | `profileRequired` | 부울 | 선택 사항입니다 | 사용 `true` 사용자가 프로필의 Experience Platform 속성을 대상 플랫폼의 사용자 지정 속성에 매핑할 수 있어야 하는 경우입니다. |
 | `segmentRequired` | 부울 | 필수 여부 | 이 매개 변수는 Destination SDK에 필요하며 항상 로 설정해야 합니다. `true`. |
 | `identityRequired` | 부울 | 필수 여부 | 다음으로 설정 `true` 사용자가 매핑할 수 있어야 하는 경우 [id 유형](identity-namespace-configuration.md) Experience Platform에서 정의한 특성으로 `profileFields` 배열 . |
+| `segmentNamespaceAllowList` | 배열 | 선택 사항입니다 | 사용자가 대상을 대상에 매핑할 수 있는 특정 대상 네임스페이스를 정의합니다. 이 매개 변수를 사용하여 Platform 사용자가 배열에서 정의한 대상 네임스페이스에서만 대상을 내보내도록 제한합니다. 이 매개 변수는 함께 사용할 수 없습니다. `segmentNamespaceDenyList`.<br> <br> 예: `"segmentNamespaceAllowList": ["AudienceManager"]` 는 사용자가 의 대상자만 매핑할 수 있도록 허용합니다. `AudienceManager` 네임스페이스를 이 대상에 추가합니다. <br> <br> 사용자가 대상을 대상으로 내보낼 수 있도록 이 매개 변수를 무시할 수 있습니다. <br> <br> 둘 다인 경우 `segmentNamespaceAllowList` 및 `segmentNamespaceDenyList` 구성에서 이(가) 누락되면 사용자는 의 대상자만 내보낼 수 있습니다. [세분화 서비스](../../../../segmentation/home.md). |
+| `segmentNamespaceDenyList` | 배열 | 선택 사항입니다 | 사용자가 배열에 정의된 대상 네임스페이스에서 대상을 대상에 매핑하지 못하도록 제한합니다. 과 함께 사용할 수 없음 `segmentNamespaceAllowed`. <br> <br> 예: `"segmentNamespaceDenyList": ["AudienceManager"]` 은(는) 의 대상자 매핑에서 사용자를 차단합니다. `AudienceManager` 네임스페이스를 이 대상에 추가합니다. <br> <br> 사용자가 대상을 대상으로 내보낼 수 있도록 이 매개 변수를 무시할 수 있습니다. <br> <br> 둘 다인 경우 `segmentNamespaceAllowed` 및 `segmentNamespaceDenyList` 구성에서 이(가) 누락되면 사용자는 의 대상자만 내보낼 수 있습니다. [세분화 서비스](../../../../segmentation/home.md). <br> <br> 원본에 관계없이 모든 대상을 내보내도록 허용하려면 을 설정합니다. `"segmentNamespaceDenyList":[]`. |
 
 {style="table-layout:auto"}
 
