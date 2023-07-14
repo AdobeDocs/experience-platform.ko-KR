@@ -1,9 +1,9 @@
 ---
 title: 데이터 세트 통계 계산
 description: 이 문서에서는 SQL 명령을 사용하여 Azure ADLS(데이터 레이크 저장소) 데이터 세트에 대한 열 수준 통계를 계산하는 방법을 설명합니다.
-source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
+source-git-commit: c7bc395038906e27449c82c518bd33ede05c5691
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -49,16 +49,37 @@ This second example, is a more real-world example as it uses an alias name. See 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
 ``` -->
 
-콘솔 출력은 분석 테이블 통계 계산 명령에 대한 응답으로 통계를 표시하지 않습니다. 대신 콘솔에는 의 단일 행 열이 표시됩니다 `Statistics ID` 결과를 참조할 수 있는 범용 고유 식별자. 을(를) 성공적으로 완료하면 `COMPUTE STATISTICS` 질의, 결과는 다음과 같이 표시됩니다.
+콘솔 출력은 분석 테이블 통계 계산 명령에 대한 응답으로 통계를 표시하지 않습니다. 대신 콘솔에는 의 단일 행 열이 표시됩니다 `Statistics ID` 결과를 참조할 수 있는 범용 고유 식별자. 다음을 선택할 수도 있습니다. **에서 바로 쿼리`Statistics ID`**. 을(를) 성공적으로 완료하면 `COMPUTE STATISTICS` 질의, 결과는 다음과 같이 표시됩니다.
 
 ```console
 | Statistics ID    | 
 | ---------------- |
-| QqMtDfHQOdYJpZlb |
+| adc_geometric_stats_1 |
 (1 row)
 ```
 
-출력을 보려면 `SHOW STATISTICS` 명령입니다. 다음에 대한 지침: [통계를 표시하는 방법](#show-statistics) 문서의 후반부에 제공됩니다.
+다음을 참조하여 통계 출력을 직접 쿼리할 수 있습니다. `Statistics ID` 아래에 표시된 대로:
+
+```sql
+SELECT * FROM adc_geometric_stats_1; 
+```
+
+이 문을 사용하면 와 함께 사용할 때 SHOW STATISTICS 명령과 유사한 방식으로 출력을 볼 수 있습니다. `Statistics ID`.
+
+SHOW STATISTICS 명령을 실행하여 세션 내에서 계산된 모든 통계 목록을 볼 수 있습니다. SHOW STATISTICS 명령의 출력 예는 아래에 나와 있습니다.
+
+```console
+statsId | tableName | columnSet | filterContext | timestamp
+-----------+---------------+-----------+---------------------------------------+---------------
+adc_geometric_stats_1 |adc_geometric | (age) | | 25/06/2023 09:22:26
+demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
+```
+
+<!-- Commented out until the <alias_name> feature is released.
+
+To see the output, you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document. 
+
+-->
 
 ## 포함된 열 제한 {#limit-included-columns}
 
@@ -90,7 +111,8 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
 ```
 
-<!-- ## Create an alias name {#alias-name}
+<!-- Commented out until the <alias_name> feature is released.
+## Create an alias name {#alias-name}
 
 Since the filter condition and the column list can target a large amount of data, it is unrealistic to remember the exact values. Instead, you can provide an `<alias_name>` to store this calculated information. If you do not provide an alias name for these calculations, Query Service generates a universally unique identifier for the alias ID. You can then use this alias ID to look up the computed statistics with the `SHOW STATISTICS` command. 
 
@@ -104,22 +126,24 @@ The example below stores the output computed statistics in the `alias_name` for 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
 ```
 
-The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. -->
-
-## 통계 표시 {#show-statistics}
+The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. 
+-->
 
 <!-- Commented out until the <alias_name> feature is released.
-The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  -->
 
-필터 조건과 열 목록이 있더라도 계산은 많은 양의 데이터를 대상으로 할 수 있습니다. 쿼리 서비스는 이 계산된 정보를 저장할 통계 ID에 대한 범용 고유 식별자를 생성합니다. 그런 다음 이 통계 ID를 사용하여 `SHOW STATISTICS` 해당 세션 내에서 언제든지 명령을 실행합니다.
+## Show the statistics {#show-statistics}
 
-통계 ID 및 생성된 통계는 이 특정 세션에만 유효하며 다른 PSQL 세션에서 액세스할 수 없습니다. 계산된 통계는 현재 지속되지 않습니다. 통계를 표시하려면 아래에 표시된 명령을 사용합니다.
+The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  
+
+Even with a filter condition and a column list, the computation can target a large amount of data. Query Service generates a universally unique identifier for the statistics ID to store this calculated information. You can then use this statistics ID to look up the computed statistics with the `SHOW STATISTICS` command at any time within that session. 
+
+The statistics ID and the statistics generated are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent. To display the statistics, use the command seen below.
 
 ```sql
 SHOW STATISTICS FOR <STATISTICS_ID>;
 ```
 
-출력은 아래 예제와 유사할 수 있습니다.
+An output might look similar to the example below. 
 
 ```console
                          columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
@@ -138,6 +162,8 @@ SHOW STATISTICS FOR <STATISTICS_ID>;
  timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
 (12 rows)
 ```
+
+-->
 
 ## 다음 단계 {#next-steps}
 
