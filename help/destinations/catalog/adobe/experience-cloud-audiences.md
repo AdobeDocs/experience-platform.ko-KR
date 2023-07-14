@@ -3,7 +3,7 @@ title: (베타) Experience Cloud 대상
 description: Experience Platform에서 다양한 Experience Platform 솔루션으로 대상자를 공유하는 방법을 알아봅니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 1288652ca3b18b4adb357b2d8884f408725cb0a2
 workflow-type: tm+mt
 source-wordcount: '1631'
 ht-degree: 2%
@@ -65,7 +65,7 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 ### 기존 대상 공유 솔루션을 사용하는 고객의 경우
 
-이미 을 통해 Experience Platform에서 Audience Manager 및 기타 Experience Cloud 솔루션에 이르는 대상을 공유하고 있는 경우 [이전 대상자 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), 기존 통합을 비활성화하려면 고객 지원 센터 또는 Adobe 계정 팀에 문의해야 합니다. 통합을 비활성화하려면 고객 지원 센터 및 Adobe 계정 팀이 Jira 티켓을 제출해야 합니다(템플릿 티켓 AAM-52354 참조).
+이미 을 통해 Experience Platform에서 Audience Manager 및 기타 Experience Cloud 솔루션에 이르는 대상을 공유하고 있는 경우 [이전 대상자 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), 기존 통합을 비활성화하려면 고객 지원 센터 또는 Adobe 계정 팀에 문의해야 합니다. 고객 지원 센터 및 Adobe 계정 팀이 통합을 비활성화하려면 Jira 티켓을 제출해야 합니다(템플릿 티켓 PLAT-160986 참조).
 
 Beta 고객의 프로비저닝 취소 티켓을 해결하는 데 걸리는 시간은 영업일 기준으로 6일 이내입니다. 기존 레거시 통합을 비활성화한 후 다음 작업을 진행할 수 있습니다. [연결 만들기](#connect) 셀프서비스 대상 카드를 통해
 
@@ -80,7 +80,7 @@ Experience Cloud 대상 카드의 베타 릴리스에 있는 다음 알려진 �
 * [데이터 흐름 모니터링](/help/dataflows/ui/monitor-destinations.md) 은(는) 지원되지 않습니다.
 * 대상에 연결할 때 다음 옵션을 볼 수 있습니다. [데이터 흐름 경고 활성화](#enable-alerts). UI에 표시되지만 **경고 활성화 옵션은 지원되지 않습니다.** 를 참조하십시오.
 * **다시 채우기는 지원되지 않습니다.**. Audience Manager 또는 기타 Experience Cloud 솔루션으로 첫 번째 내보내기에는 대상의 과거 모집단이 포함되지 않습니다.
-* 베타 릴리스에서 다음을 만들 수 있습니다. **Experience Cloud 대상 대상에 대한 단일 대상 연결**, Experience Platform 조직에 속한 모든 샌드박스에서 사용할 수 있습니다.
+* 베타 릴리스에서 다음을 만들 수 있습니다. **Experience Cloud 대상 대상에 대한 단일 대상 연결**, Experience Platform 조직에 속한 모든 샌드박스 간에 매핑됩니다.
 
 ### 대상자를 활성화할 때 대기 시간 {#audience-activation-latency}
 
