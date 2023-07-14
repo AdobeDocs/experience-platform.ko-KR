@@ -1,7 +1,7 @@
 ---
 description: Destination SDK으로 빌드된 대상에서 지원하는 내역 프로필 자격에 대해 알아봅니다.
 title: 과거 프로필 자격 요건
-source-git-commit: 65a658208b48a50184e55a6d64cdf7ad6de0f04f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # 과거 프로필 자격 요건
 
-Destination SDK을 통해 생성된 모든 대상은 기본적으로 내역 프로필 자격을 지원합니다. 즉, 사용자가 대상에 대한 활성화 데이터 흐름을 처음 설정할 때 첫 번째 내보내기에 해당 세그먼트에 대해 자격이 부여된 세그먼트의 모든 멤버가 포함됩니다.
+Destination SDK을 통해 생성된 모든 대상은 기본적으로 내역 프로필 자격을 지원합니다. 즉, 사용자가 처음으로 대상에 대한 활성화 데이터 흐름을 설정할 때 첫 번째 내보내기에는 해당 세그먼트에 대해 자격이 부여된 모든 대상 멤버가 포함됩니다.
 
 이 동작은 `"backfillHistoricalProfileData":true` 대상 구성의 매개 변수입니다.
 
@@ -33,14 +33,14 @@ Destination SDK을 통해 생성된 모든 대상은 기본적으로 내역 프�
 <!-- 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
+|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
 
 {style="table-layout:auto"} -->
 
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽은 후에는 세그먼트를 대상으로 처음 내보낼 때 활성화된 세그먼트에 대해 자격이 부여된 모든 프로필의 내역 모집단을 Experience Platform이 자동으로 내보낸다는 것을 알고 있어야 합니다. 이 옵션은 Destination SDK 또는 Experience Platform UI에서 구성할 수 없습니다.
+이 문서를 읽은 후에는 대상자를 대상으로 처음 내보낼 때 활성화된 대상자에 대해 자격이 부여된 모든 프로필의 내역 모집단을 Experience Platform이 자동으로 내보냅니다. 이 옵션은 Destination SDK 또는 Experience Platform UI에서 구성할 수 없습니다.
 
 다른 대상 구성 요소에 대한 자세한 내용은 다음 문서를 참조하십시오.
 

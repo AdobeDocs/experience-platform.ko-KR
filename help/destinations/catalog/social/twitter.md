@@ -2,10 +2,10 @@
 title: 사용자 지정 대상 연결 twitter
 description: Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에서 기존 팔로우어 및 고객을 Target 하고 관련 리마케팅 캠페인을 만듭니다
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 5%
+source-wordcount: '860'
+ht-degree: 4%
 
 ---
 
@@ -33,14 +33,28 @@ Twitter에서 기존 팔로우어 및 고객을 Target 하고 Adobe Experience P
 
 {style="table-layout:auto"}
 
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+
+모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+
+| 대상자 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+
+{style="table-layout:auto"}
+
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | 사용자 지정 대상 Twitter에 사용된 식별자로 세그먼트(대상)의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | twitter 사용자 지정 대상 대상에 사용된 식별자로 대상의 모든 구성원을 내보내고 있습니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -86,13 +100,13 @@ Twitter에서 기존 팔로우어 및 고객을 Target 하고 Adobe Experience P
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-읽기 [프로필 및 세그먼트를 스트리밍 세그먼트 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
@@ -100,9 +114,9 @@ Twitter에서 기존 팔로우어 및 고객을 Target 하고 Adobe Experience P
 
 ## 추가 리소스 {#additional-resources}
 
-대상 세그먼트를 세그먼트에 매핑할 때 다음 Twitter 이름 지정 요구 사항을 충족해야 합니다.
+대상을 Twitter에 매핑할 때 다음 대상 이름 지정 요구 사항을 충족해야 합니다.
 
-1. 사람이 읽을 수 있는 세그먼트 매핑 이름을 제공합니다. Experience Platform 세그먼트에 사용한 것과 동일한 이름을 사용하는 것이 좋습니다.
-2. 특수 문자는 사용하지 마십시오 (+ &amp; , % : ; @ / = ? $) 세그먼트 및 세그먼트 매핑 이름. Experience Platform 세그먼트 이름에 이러한 문자가 포함되어 있는 경우 세그먼트를 Twitter 대상에 매핑하기 전에 제거하십시오.
+1. 사람이 읽을 수 있는 대상 매핑 이름을 제공합니다. Experience Platform 세그먼트에 사용한 것과 동일한 이름을 사용하는 것이 좋습니다.
+2. 특수 문자는 사용하지 마십시오 (+ &amp; , % : ; @ / = ? $) 대상 및 대상 매핑 이름. Experience Platform 대상 이름에 이러한 문자가 포함되어 있는 경우 대상을 Twitter 대상에 매핑하기 전에 해당 문자를 제거하십시오.
 
 다음에 대한 추가 정보: [!DNL List Custom Audiences] twitter에서 찾을 수 있음 [Twitter 설명서](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).

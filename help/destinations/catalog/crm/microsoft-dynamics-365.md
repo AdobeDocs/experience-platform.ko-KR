@@ -4,9 +4,9 @@ title: Microsoft Dynamics 365 연결
 description: Microsoft Dynamics 365 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Microsoft Dynamics 365 내에서 활성화할 수 있습니다.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1786'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 [[!DNL Microsoft Dynamics 365]](https://dynamics.microsoft.com/en-us/) 는 생산성 애플리케이션 및 AI 도구와 함께 ERP(전사적 자원 관리) 및 CRM(고객 관계 관리)을 결합하여 전체적인 원활하고 더욱 통제된 운영, 향상된 성장 잠재력 및 비용 절감을 제공하는 클라우드 기반의 비즈니스 애플리케이션 플랫폼입니다.
 
-이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md) 을 활용합니다. [[!DNL Contact Entity Reference API]](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1): 세그먼트 내의 ID를 업데이트할 수 있습니다. [!DNL Dynamics 365].
+이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md) 을 활용합니다. [[!DNL Contact Entity Reference API]](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1)대상자 내의 ID를 업데이트할 수 있는 [!DNL Dynamics 365].
 
 [!DNL Dynamics 365] 은 인증 메커니즘으로 권한 부여와 함께 OAuth 2를 사용하여 와 통신합니다. [!DNL Contact Entity Reference API]. 에 대한 인증 지침 [!DNL Dynamics 365] 인스턴스는 다음보다 아래에 있습니다. [대상에 인증](#authenticate) 섹션.
 
 ## 사용 사례 {#use-cases}
 
-마케터는 Adobe Experience Platform 프로필의 속성에 따라 개인화된 경험을 사용자에게 제공할 수 있습니다. 오프라인 데이터에서 세그먼트를 작성하고 이러한 세그먼트를 로 보낼 수 있습니다. [!DNL Dynamics 365]: Adobe Experience Platform에서 세그먼트 및 프로필이 업데이트되는 즉시 사용자의 피드에 표시합니다.
+마케터는 Adobe Experience Platform 프로필의 속성에 따라 개인화된 경험을 사용자에게 제공할 수 있습니다. 오프라인 데이터에서 대상을 작성하고 이 대상자를 (으)로 보낼 수 있습니다. [!DNL Dynamics 365]: Adobe Experience Platform에서 대상자 및 프로필이 업데이트되는 즉시 사용자의 피드에 표시할 수 있습니다.
 
 ## 사전 요구 사항 {#prerequisites}
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 에 대한 데이터를 활성화하기 전에 [!DNL Dynamics 365] 대상, 다음 항목이 있어야 합니다. [스키마](/help/xdm/schema/composition.md), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 생성 위치 [!DNL Experience Platform].
 
-다음에 대한 Adobe 설명서를 참조하십시오. [세그먼트 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md) 세그먼트 상태에 대한 지침이 필요한 경우.
+다음에 대한 Adobe 설명서를 참조하십시오. [세그먼트 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md) 대상 상태에 대한 지침이 필요한 경우.
 
 ### [!DNL Microsoft Dynamics 365] 전제 조건 {#prerequisites-destination}
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 #### 다음 범위 내에 필드 만들기 [!DNL Dynamics 365] {#prerequisites-custom-field}
 
-유형의 사용자 정의 필드 만들기 `Simple` (필드 데이터 유형 포함) `Single Line of Text` 내에서 Experience Platform 상태를 업데이트하는 데 사용할 세그먼트 [!DNL Dynamics 365].
+유형의 사용자 정의 필드 만들기 `Simple` (필드 데이터 유형 포함) `Single Line of Text` 다음 기간 내에 대상자 상태를 업데이트하는 데 사용할 Experience Platform [!DNL Dynamics 365].
 다음을 참조하십시오. [!DNL Dynamics 365] 에 대한 설명서 [필드(속성) 만들기](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) 추가 지침이 필요한 경우.
 
 내의 예제 설정 [!DNL Dynamics 365] 다음이 표시됩니다.
@@ -87,8 +87,8 @@ ht-degree: 0%
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다 *(예: 이메일 주소, 전화번호, 성)*&#x200B;를 입력합니다.</li><li> 의 각 세그먼트 상태 [!DNL Dynamics 365] 는 을 기반으로 플랫폼에서 해당 세그먼트 상태로 업데이트됩니다. **[!UICONTROL 매핑 ID]** 다음 기간 동안 제공된 값: [세그먼트 예약](#schedule-segment-export-example) 단계.</li></ul> |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | <ul><li>스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다 *(예: 이메일 주소, 전화번호, 성)*&#x200B;를 입력합니다.</li><li> 의 각 대상자 상태 [!DNL Dynamics 365] 는 을 기반으로 플랫폼에서 해당 대상 상태로 업데이트됩니다. **[!UICONTROL 매핑 ID]** 다음 기간 동안 제공된 값: [대상자 예약](#schedule-segment-export-example) 단계.</li></ul> |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | <ul><li>스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -129,13 +129,13 @@ ht-degree: 0%
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 >
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-읽기 [프로필 및 세그먼트를 스트리밍 세그먼트 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ### 매핑 고려 사항 및 예제 {#mapping-considerations-example}
 
@@ -149,25 +149,25 @@ ht-degree: 0%
 
 1. 다음에서 **[!UICONTROL 대상 필드 선택]** 창에서 소스 필드를 매핑할 대상 필드의 유형을 선택합니다.
    * **[!UICONTROL ID 네임스페이스 선택]**: 이 옵션을 선택하여 소스 필드를 목록의 id 네임스페이스에 매핑합니다.
-      ![contactId에 대한 Target 매핑을 보여 주는 플랫폼 UI 스크린샷](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+     ![contactId에 대한 Target 매핑을 보여 주는 플랫폼 UI 스크린샷](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * XDM 프로필 스키마와 사용자 간에 다음 매핑을 추가합니다 [!DNL Dynamics 365] 인스턴스: |XDM 프로필 스키마|[!DNL Dynamics 365] 인스턴스| 필수| |—|—| |`contactId`|`contactId`| 예 |
 
    * **[!UICONTROL 사용자 지정 속성 선택]**: 소스 필드를 다음에서 정의한 사용자 지정 속성에 매핑하려면 이 옵션을 선택합니다. **[!UICONTROL 속성 이름]** 필드. 을(를) 참조하십시오 [[!DNL Dynamics 365] 설명서](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) 를 참조하십시오.
-      ![LastName에 대한 Target 매핑을 보여 주는 플랫폼 UI 스크린샷](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
+     ![LastName에 대한 Target 매핑을 보여 주는 플랫폼 UI 스크린샷](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
 
-      >[!IMPORTANT]
-      >
-      >에 매핑된 날짜 또는 타임스탬프 소스 필드가 있는 경우 [!DNL Dynamics 365] [날짜 또는 타임스탬프](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) 대상 필드에서 매핑되는 값이 비어 있지 않은지 확인합니다. 전달된 값이 비어 있으면 다음이 발생합니다. *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* 오류 메시지가 표시되고 데이터가 업데이트되지 않습니다. (이)는 [!DNL Dynamics 365] 제한 사항.
+     >[!IMPORTANT]
+     >
+     >에 매핑된 날짜 또는 타임스탬프 소스 필드가 있는 경우 [!DNL Dynamics 365] [날짜 또는 타임스탬프](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) 대상 필드에서 매핑되는 값이 비어 있지 않은지 확인합니다. 전달된 값이 비어 있으면 다음이 발생합니다. *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* 오류 메시지가 표시되고 데이터가 업데이트되지 않습니다. (이)는 [!DNL Dynamics 365] 제한 사항.
 
    * 예를 들어 업데이트할 값에 따라 XDM 프로필 스키마와 [!DNL Dynamics 365] 인스턴스: |XDM 프로필 스키마|[!DNL Dynamics 365] 인스턴스| |—|—| |`person.name.firstName`|`FirstName`| |`person.name.lastName`|`LastName`| |`personalEmail.address`|`Email`|
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
-      ![Target 매핑을 보여주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+     ![Target 매핑을 보여주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
-### 세그먼트 내보내기 예약 및 예제 {#schedule-segment-export-example}
+### 대상자 내보내기 예약 및 예제 {#schedule-segment-export-example}
 
-다음에서 [[!UICONTROL 세그먼트 내보내기 예약]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 활성화 워크플로 단계에서 플랫폼 세그먼트를 의 사용자 지정 필드 속성에 수동으로 매핑해야 합니다. [!DNL Dynamics 365].
+다음에서 [[!UICONTROL 대상자 내보내기 예약]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 활성화 워크플로 단계에서 Platform 대상을 의 사용자 지정 필드 속성에 수동으로 매핑해야 합니다. [!DNL Dynamics 365].
 
 이렇게 하려면 각 세그먼트를 선택한 다음, 해당 사용자 정의 필드 속성을 다음에서 입력합니다 [!DNL Dynamics 365] 다음에서 **[!UICONTROL 매핑 ID]** 필드.
 
@@ -176,7 +176,7 @@ ht-degree: 0%
 >에 사용되는 값 **[!UICONTROL 매핑 ID]** 은(는) 내에서 만든 사용자 정의 필드 속성의 이름과 정확히 일치해야 합니다. [!DNL Dynamics 365]. 다음을 참조하십시오 [[!DNL Dynamics 365] 설명서](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) 사용자 지정 필드 속성을 찾는 방법에 대한 지침이 필요한 경우.
 
 예제는 아래에 나와 있습니다.
-![세그먼트 내보내기 예약을 보여 주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
+![대상자 내보내기 예약을 보여 주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
 
@@ -188,14 +188,14 @@ ht-degree: 0%
 1. 대상을 선택하고 상태가 다음과 같은지 확인합니다. **[!UICONTROL 활성화됨]**.
    ![데이터 흐름 실행 대상을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
 
-1. 다음으로 전환 **[!DNL Activation data]** 탭을 누른 다음 세그먼트 이름을 선택합니다.
+1. 다음으로 전환 **[!DNL Activation data]** 탭을 누른 다음 대상 이름을 선택합니다.
    ![대상 활성화 데이터를 보여주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
 
-1. 세그먼트 요약을 모니터링하고 프로필 수가 세그먼트 내에서 생성된 수에 해당하는지 확인합니다.
+1. 대상자 요약을 모니터링하고 프로필 수가 세그먼트 내에서 만든 수에 해당하는지 확인합니다.
    ![세그먼트를 보여주는 플랫폼 UI 스크린샷 예입니다.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
-1. 에 로그인합니다 [!DNL Dynamics 365] 웹 사이트를 방문한 다음 [!DNL Customers] > [!DNL Contacts] 을(를) 페이지를 만들고 세그먼트의 프로필이 추가되었는지 확인합니다. 에서 각 세그먼트 상태를 확인할 수 있습니다. [!DNL Dynamics 365] 이(가) 다음을 기반으로 플랫폼에서 해당 세그먼트 상태로 업데이트되었습니다. **[!UICONTROL 매핑 ID]** 다음 기간 동안 제공된 값: [세그먼트 예약](#schedule-segment-export-example) 단계.
-   ![업데이트된 세그먼트 상태로 연락처 페이지를 표시하는 Dynamics 365 UI 스크린샷입니다.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
+1. 에 로그인합니다 [!DNL Dynamics 365] 웹 사이트를 방문한 다음 [!DNL Customers] > [!DNL Contacts] 페이지를 만들고 대상자의 프로필이 추가되었는지 확인합니다. 에서 각 대상자 상태를 확인할 수 있습니다. [!DNL Dynamics 365] 이(가) 다음을 기반으로 플랫폼에서 해당 대상 상태로 업데이트되었습니다. **[!UICONTROL 매핑 ID]** 다음 기간 동안 제공된 값: [대상자 예약](#schedule-segment-export-example) 단계.
+   ![대상자 상태가 업데이트된 연락처 페이지를 표시하는 Dynamics 365 UI 스크린샷입니다.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
@@ -209,7 +209,7 @@ ht-degree: 0%
 
 ![잘못된 요청 오류를 표시하는 Platform UI 스크린샷입니다.](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
 
-이 오류를 수정하려면 다음을 확인하십시오. **[!UICONTROL 매핑 ID]** 에 을(를) 제공했습니다. [!DNL Dynamics 365] 플랫폼 세그먼트가 유효하고 다음 내에 있습니다. [!DNL Dynamics 365].
+이 오류를 수정하려면 다음을 확인하십시오. **[!UICONTROL 매핑 ID]** 에 을(를) 제공했습니다. [!DNL Dynamics 365] 플랫폼 대상자가 유효하고 다음 내에 존재합니다. [!DNL Dynamics 365].
 
 ## 추가 리소스 {#additional-resources}
 

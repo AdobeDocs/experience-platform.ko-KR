@@ -3,9 +3,9 @@ keywords: advertising; criteo;
 title: 크리테오 연결
 description: 크리테오는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인터넷을 통해 모든 소비자에게 더 풍부한 경험을 제공할 수 있도록 지원합니다. 세계 최대 규모의 상거래 데이터 세트와 동급 최고의 AI를 갖춘 Criteo는 쇼핑 여정의 각 접점이 적절한 시간에 적절한 광고를 통해 고객에게 도달하도록 개인화되도록 보장합니다.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
+source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1005'
 ht-degree: 3%
 
 ---
@@ -48,8 +48,8 @@ ht-degree: 3%
 
 | 항목 | 유형 | 참고 |
 | --- | --- | --- |
-| 내보내기 유형 | 세그먼트 내보내기 | 에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 세그먼트(대상자)의 모든 구성원을 내보냅니다. [!DNL Criteo] 대상. |
-| 내보내기 빈도 | 스트리밍 | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](../../destination-types.md#streaming-destinations). |
+| 내보내기 유형 | 대상자 내보내기 | 에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보냅니다. [!DNL Criteo] 대상. |
+| 내보내기 빈도 | 스트리밍 | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](../../destination-types.md#streaming-destinations). |
 
 ## 사용 사례 {#use-cases}
 
@@ -61,7 +61,7 @@ ht-degree: 3%
 
 ### 사용 사례 2 : 웹 사이트 전환 증가
 
-방문자가 웹 사이트를 떠날 때 다음 위치에 관계없이 특별 거래와 매우 연관성 있는 오퍼를 표시하여 전환을 늘리는 리타겟팅 광고에서 누락된 내용을 상기하십시오. Adobe CDP 세그먼트를 연결하여 기존 고객을 다시 참여시키거나 가장 충성도가 높은 쇼핑객과 유사한 소비자를 타겟팅합니다.
+방문자가 웹 사이트를 떠날 때 다음 위치에 관계없이 특별 거래와 매우 연관성 있는 오퍼를 표시하여 전환을 늘리는 리타겟팅 광고에서 누락된 내용을 상기하십시오. Adobe CDP 대상을 연결하여 기존 고객을 다시 참여시키거나 가장 충성도가 높은 쇼핑객과 유사한 소비자를 타겟팅합니다.
 
 ## 크리테오에 연결 {#connect}
 
@@ -107,17 +107,17 @@ ht-degree: 3%
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate-segments}
+## 이 대상에 대상자 활성화 {#activate-segments}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-읽기 [프로필 및 세그먼트를 스트리밍 세그먼트 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](../../ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ## 내보낸 데이터 {#exported-data}
 
-내보낸 세그먼트는 [크리테오 관리 센터](https://marketing.criteo.com/audience-manager/dashboard).
+내보낸 대상자는 [크리테오 관리 센터](https://marketing.criteo.com/audience-manager/dashboard).
 
 에 의해 수신된 사용자 프로필 추가에 대한 요청 본문 [!DNL Criteo] 연결은 다음과 유사합니다.
 

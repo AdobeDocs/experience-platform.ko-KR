@@ -3,9 +3,9 @@ title: Edge 개인화 대상에 대한 대상자 활성화
 description: 동일 페이지 및 다음 페이지 개인화 사용 사례를 위해 Adobe Experience Platform에서 Edge 개인화 대상으로 대상을 활성화하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c96a156c6c9c63d9ae875ee3808168d94ee7aeca
+source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1833'
 ht-degree: 2%
 
 ---
@@ -130,6 +130,14 @@ Edge 개인화 대상을 사용하면 Adobe Target과 같은 Adobe 개인화 솔
 ## 대상자 선택 {#select-audiences}
 
 대상 이름 왼쪽에 있는 확인란을 사용하여 대상에 활성화할 대상을 선택한 다음 을 선택합니다 **[!UICONTROL 다음]**.
+
+대상에 대해 활성화할 대상을 선택하려면 대상 이름 왼쪽에 있는 확인란을 사용한 다음 을 선택합니다 **[!UICONTROL 다음]**.
+
+출처에 따라 여러 유형의 대상 중에서 선택할 수 있습니다.
+
+* **[!UICONTROL 세분화 서비스]**: 세분화 서비스에 의해 Experience Platform 내에서 생성된 대상자. 다음을 참조하십시오. [세그멘테이션 설명서](../../segmentation/ui/overview.md) 을 참조하십시오.
+* **[!UICONTROL 사용자 정의 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드된 대상자 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/overview.md#import-audience).
+* 다른 Adobe 솔루션에서 가져온 다른 유형의 대상, 예: [!DNL Audience Manager].
 
 ![대상자 선택](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 

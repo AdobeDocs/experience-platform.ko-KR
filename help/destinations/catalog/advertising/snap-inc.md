@@ -1,10 +1,10 @@
 ---
 title: Snap Inc 연결
-description: Snapchat Ads Platform에 연결하고 Experience Platform에서 대상 세그먼트를 내보내는 방법에 대해 알아봅니다.
+description: Snapchat Ads Platform에 연결하고 Experience Platform에서 대상을 내보내는 방법에 대해 알아봅니다.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 988ecbed3084ef162453c9f1124998c6e9ae2e45
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '989'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 사용 사례 {#use-cases}
 
-이 대상을 사용하면 마케터가 Experience Platform에서 만든 사용자 세그먼트를 Snapchat 광고로 가져와서 사용하여 광고를 타깃팅할 수 있습니다.
+이 대상을 사용하면 마케터는 Experience Platform에서 만든 사용자 대상을 Snapchat 광고로 가져와 이 대상을 사용하여 광고를 타깃팅할 수 있습니다.
 
 ## 사전 요구 사항 {#prerequisites}
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 * Snap Inc는 특정 대상 세그먼트에 대해 여러 ID를 지원하지 않습니다. 세그먼트를 활성화할 때 하나의 ID만 매핑하십시오.
 * Snap Inc는 세그먼트 이름 변경을 지원하지 않습니다. 세그먼트의 이름을 변경하려면 세그먼트를 비활성화하고 이름을 바꾼 다음 활성화해야 합니다.
-* 대상 세그먼트 멤버에 대한 보존 기간을 정의할 수 없습니다. 모든 멤버는 라이프타임 유지가 있으며 제거될 때까지 세그먼트에 있습니다.
+* 대상 세그먼트 멤버에 대한 보존 기간을 정의할 수 없습니다. 모든 멤버는 라이프타임 유지가 있으며 제거될 때까지 대상자에 포함됩니다.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -65,8 +65,8 @@ ht-degree: 1%
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | 에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 세그먼트(대상자)의 모든 구성원을 내보냅니다. *대상* 대상. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | 에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보냅니다. *대상* 대상. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -98,11 +98,11 @@ ht-degree: 1%
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 계정 ID]**: 세그먼트를 가져올 광고 계정과 연결된 광고 계정 ID입니다. 이 항목을 찾는 방법에 대한 자세한 내용은 다음을 참조하십시오. [snapchat 비즈니스 도움말 센터에 대한 이 설명서](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL 계정 ID]**: 대상자를 가져오려는 광고 계정과 연결된 광고 계정 ID입니다. 이 항목을 찾는 방법에 대한 자세한 내용은 다음을 참조하십시오. [snapchat 비즈니스 도움말 센터에 대한 이 설명서](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 
->잘못되거나 잘못된 Snapchat 광고 계정 ID를 입력하면 세그먼트 활성화에 실패하게 됩니다. 적절한 광고 계정 ID를 입력했는지 다시 확인하십시오.
+>잘못되거나 잘못된 Snapchat 광고 계정 ID를 입력하면 대상자 활성화에 실패하게 됩니다. 적절한 광고 계정 ID를 입력했는지 다시 확인하십시오.
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -110,24 +110,24 @@ ht-degree: 1%
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-읽기 [프로필 및 세그먼트를 스트리밍 세그먼트 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
 
-세그먼트를 로 활성화한 후 *스냅* 대상: 스냅 광고 관리자의 세그먼트에 있는 세그먼트를 볼 수 있습니다 [**대상** 섹션](https://businesshelp.snapchat.com/s/article/audience-sharing). 이 섹션으로 이동하려면 다음 단계를 수행합니다.
+대상자를 활성화한 후 *스냅* 대상: 스냅 광고 관리자의 대상자를 볼 수 있습니다. [**대상** 섹션](https://businesshelp.snapchat.com/s/article/audience-sharing). 이 섹션으로 이동하려면 다음 단계를 수행합니다.
 
 1. 에 로그인합니다 [스냅 광고 관리자](https://ads.snapchat.com/)
-2. 선택 **대상** 을 클릭합니다. 대상 라이브러리의 Adobe Experience Platform에서 활성화한 세그먼트가 표시됩니다.
+2. 선택 **대상** 을 클릭합니다. Adobe Experience Platform에서 활성화한 대상이 대상 라이브러리의 대상 라이브러리에 표시됩니다.
 
 ![대상자](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Adobe 세그먼트가 Snap Inc.에 처음 활성화되면 처음에는 빈 대상자로 표시됩니다. Adobe Experience Platform은 세그먼트를 평가할 때까지 멤버 데이터를 Snap Inc로 내보내지 않기 때문입니다. 세그먼트가 Experience Platform에서 평가되는 방법에 대한 자세한 내용은 [세그먼테이션 서비스 개요](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Adobe 대상자가 Snap Inc.에 처음 활성화되면 처음에는 빈 대상자로 표시됩니다. 이는 Adobe Experience Platform이 대상자를 평가할 때까지 멤버 데이터를 Snap Inc로 내보내지 않기 때문입니다. Experience Platform에서 대상을 평가하는 방법에 대한 자세한 내용은 [세그먼테이션 서비스 개요](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

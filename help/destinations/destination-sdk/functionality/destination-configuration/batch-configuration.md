@@ -1,7 +1,7 @@
 ---
 description: Destination SDK으로 빌드된 대상에 대한 파일 내보내기 설정을 구성하는 방법에 대해 알아봅니다.
 title: 일괄 처리 구성
-source-git-commit: f2e04d6f96132aa5cee3602190375e0f3eb96c97
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 4%
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 Destination SDK을 통해 파일 기반 대상을 만들 때 기본 파일 이름 지정 및 내보내기 일정을 구성하거나, 사용자에게 Platform UI에서 이러한 설정을 구성하는 옵션을 제공할 수 있습니다. 예를 들어 다음과 같은 동작을 구성할 수 있습니다.
 
-* 세그먼트 ID, 대상 ID 또는 사용자 지정 정보 등 파일 이름에 특정 정보를 포함합니다.
+* 대상 ID, 대상 ID 또는 사용자 지정 정보와 같은 특정 정보를 파일 이름에 포함합니다.
 * 사용자가 플랫폼 UI에서 파일 이름을 사용자 정의할 수 있습니다.
 * 설정된 시간 간격으로 실행되도록 파일 내보내기를 구성합니다.
 * 사용자가 Platform UI에서 볼 수 있는 파일 이름 지정 및 내보내기 예약 사용자 지정 옵션을 정의합니다.
@@ -46,7 +46,7 @@ Destination SDK을 통해 파일 기반 대상을 만들 때 기본 파일 이�
 
 ## 지원되는 매개 변수 {#supported-parameters}
 
-여기서 설정한 값은 [세그먼트 내보내기 예약](../../../ui/activate-batch-profile-destinations.md#scheduling) 파일 기반 대상 활성화 워크플로의 단계입니다.
+여기서 설정한 값은 [대상자 내보내기 예약](../../../ui/activate-batch-profile-destinations.md#scheduling) 파일 기반 대상 활성화 워크플로의 단계입니다.
 
 ```json
 "batchConfig":{
@@ -95,7 +95,7 @@ Destination SDK을 통해 파일 기반 대상을 만들 때 기본 파일 이�
 | `allowedScheduleFrequency` | 목록 | 고객이 사용할 수 있는 파일 내보내기 빈도를 정의합니다. 지원되는 값:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
 | `defaultFrequency` | 열거형 | 기본 파일 내보내기 빈도를 정의합니다.지원되는 값:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> 기본값은 `DAILY`입니다. |
 | `defaultStartTime` | 문자열 | 파일 내보내기의 기본 시작 시간을 정의합니다. 24시간 파일 형식을 사용합니다. 기본값은 &quot;00:00&quot;입니다. |
-| `filenameConfig.allowedFilenameAppendOptions` | 문자열 | *필수 여부*. 사용자가 선택할 수 있는 사용 가능한 파일 이름 매크로 목록입니다. 내보낸 파일 이름(세그먼트 ID, 조직 이름, 내보내기 날짜 및 시간 등)에 추가될 항목을 결정합니다. 설정 시 `defaultFilename`매크로를 복제하지 않도록 하십시오. <br><br>지원되는 값: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>매크로를 정의하는 순서에 관계없이 Experience Platform UI에 항상 여기에 표시된 순서대로 표시됩니다. <br><br> If `defaultFilename` 은(는) 비어 있습니다. `allowedFilenameAppendOptions` 목록에는 하나 이상의 매크로가 있어야 합니다. |
+| `filenameConfig.allowedFilenameAppendOptions` | 문자열 | *필수 여부*. 사용자가 선택할 수 있는 사용 가능한 파일 이름 매크로 목록입니다. 내보낸 파일 이름(대상 ID, 조직 이름, 내보내기 날짜 및 시간 등)에 추가될 항목을 결정합니다. 설정 시 `defaultFilename`매크로를 복제하지 않도록 하십시오. <br><br>지원되는 값: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>매크로를 정의하는 순서에 관계없이 Experience Platform UI에 항상 여기에 표시된 순서대로 표시됩니다. <br><br> If `defaultFilename` 은(는) 비어 있습니다. `allowedFilenameAppendOptions` 목록에는 하나 이상의 매크로가 있어야 합니다. |
 | `filenameConfig.defaultFilenameAppendOptions` | 문자열 | *필수 여부*. 사용자가 선택 취소할 수 있는 기본 파일 이름 매크로가 미리 선택되었습니다.<br><br> 이 목록에 있는 매크로는에 정의된 매크로의 하위 집합입니다. `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | 문자열 | *선택 사항입니다*. 내보낸 파일의 기본 파일 이름 매크로를 정의합니다. 사용자가 덮어쓸 수 없습니다. <br><br>에 의해 정의된 모든 매크로 `allowedFilenameAppendOptions` 다음 뒤에 추가됩니다. `defaultFilename` 매크로. <br><br>If `defaultFilename` 은(는) 비어 있으므로 다음에 하나 이상의 매크로를 정의해야 합니다. `allowedFilenameAppendOptions`. |
 | `segmentGroupingEnabled` | 부울 | 대상자를 기준으로 활성화된 대상자를 단일 파일로 내보내야 하는지 아니면 여러 파일로 내보내야 하는지 정의합니다. [병합 정책](../../../../profile/merge-policies/overview.md). 지원되는 값: <ul><li>`true`: 병합 정책당 하나의 파일을 내보냅니다.</li><li>`false`: 병합 정책에 관계없이 대상당 하나의 파일을 내보냅니다. 기본 동작입니다. 이 매개 변수를 완전히 생략하면 동일한 결과를 얻을 수 있습니다.</li></ul> |
@@ -113,8 +113,8 @@ Destination SDK을 통해 파일 기반 대상을 만들 때 기본 파일 이�
 | 매크로 | UI 레이블 | 설명 | 예 |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL 대상] | UI의 대상 이름입니다. | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL 세그먼트 ID] | 플랫폼에서 생성한 고유 세그먼트 ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL 세그먼트 이름] | 사용자 정의 세그먼트 이름 | VIP 구독자 |
+| `SEGMENT_ID` | [!UICONTROL 세그먼트 ID] | 플랫폼에서 생성한 고유 대상 ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL 세그먼트 이름] | 사용자 정의 대상 이름 | VIP 구독자 |
 | `DESTINATION_INSTANCE_ID` | [!UICONTROL 대상 ID] | 대상 인스턴스에 대한 플랫폼이 생성한 고유 ID | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL 대상 이름] | 대상 인스턴스의 사용자 정의 이름입니다. | 내 2022 광고 대상 |
 | `ORGANIZATION_NAME` | [!UICONTROL 조직 이름] | Adobe Experience Platform에 있는 고객 조직의 이름입니다. | 내 조직 이름 |
@@ -122,8 +122,8 @@ Destination SDK을 통해 파일 기반 대상을 만들 때 기본 파일 이�
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL 날짜 및 시간] | `DATETIME` 및 `TIMESTAMP` 둘 다 파일 생성 시기를 정의하지만, 서로 다른 형식으로 정의됩니다. <br><br><ul><li>`DATETIME` 는 YYYYMMDD_HHMMSS 형식을 사용합니다.</li><li>`TIMESTAMP` 는 10자리 Unix 형식을 사용합니다. </li></ul> `DATETIME` 및 `TIMESTAMP` 는 함께 사용할 수 없으며 동시에 사용할 수 없습니다. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL 사용자 정의 텍스트] | 파일 이름에 포함할 사용자 정의 사용자 정의 텍스트입니다. 에서 사용할 수 없음 `defaultFilename`. | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL 날짜 및 시간] | 파일이 생성된 시간의 10자리 타임스탬프(Unix 형식)입니다. | 1652131584 |
-| `MERGE_POLICY_ID` | [!UICONTROL 병합 정책 ID] | 의 ID [병합 정책](../../../../profile/merge-policies/overview.md) 내보낸 대상을 생성하는 데 사용됩니다. 병합 정책에 따라 내보낸 세그먼트를 파일로 그룹화할 때 이 매크로를 사용합니다. 이 매크로를 함께 사용 `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
-| `MERGE_POLICY_NAME` | [!UICONTROL 병합 정책 이름] | 의 이름입니다. [병합 정책](../../../../profile/merge-policies/overview.md) 내보낸 대상을 생성하는 데 사용됩니다. 병합 정책에 따라 내보낸 세그먼트를 파일로 그룹화할 때 이 매크로를 사용합니다. 이 매크로를 함께 사용 `segmentGroupingEnabled:true`. | 내 사용자 지정 병합 정책 |
+| `MERGE_POLICY_ID` | [!UICONTROL 병합 정책 ID] | 의 ID [병합 정책](../../../../profile/merge-policies/overview.md) 내보낸 대상을 생성하는 데 사용됩니다. 내보낸 대상을 병합 정책에 따라 파일로 그룹화할 때 이 매크로를 사용합니다. 이 매크로를 함께 사용 `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL 병합 정책 이름] | 의 이름입니다. [병합 정책](../../../../profile/merge-policies/overview.md) 내보낸 대상을 생성하는 데 사용됩니다. 내보낸 대상을 병합 정책에 따라 파일로 그룹화할 때 이 매크로를 사용합니다. 이 매크로를 함께 사용 `segmentGroupingEnabled:true`. | 내 사용자 지정 병합 정책 |
 
 {style="table-layout:auto"}
 

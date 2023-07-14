@@ -4,7 +4,7 @@ title: 새 대상 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform에서 대상에 연결하고, 경고를 활성화하고, 연결된 대상에 대한 마케팅 작업을 설정하는 방법을 알아봅니다.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1107'
 ht-degree: 0%
@@ -18,10 +18,9 @@ ht-degree: 0%
 >* 대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 >* 데이터 세트 내보내기를 지원하는 대상에 연결하려면 **[!UICONTROL 데이터 세트 대상 관리 및 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-
 ## 개요 {#overview}
 
-대상 데이터를 대상으로 보내려면 먼저 대상 플랫폼에 대한 연결을 설정해야 합니다. 이 문서에서는 새 대상 연결을 설정하는 방법을 보여 줍니다. 그러면 Adobe Experience Platform 사용자 인터페이스를 사용하여 세그먼트를 활성화하거나 데이터 세트를 내보낼 수 있습니다.
+대상 데이터를 대상으로 보내려면 먼저 대상 플랫폼에 대한 연결을 설정해야 합니다. 이 문서에서는 새 대상 연결을 설정하는 방법을 보여 줍니다. 그러면 Adobe Experience Platform 사용자 인터페이스를 사용하여 대상을 활성화하거나 데이터 세트를 내보낼 수 있습니다.
 
 ## 카탈로그에서 원하는 대상 찾기 {#setup}
 
@@ -29,23 +28,23 @@ ht-degree: 0%
 
    ![대상 카탈로그 페이지를 표시하는 Experience Platform UI 스크린샷.](../assets/ui/connect-destinations/catalog.png)
 
-2. 대상에 대한 기존 연결 여부와 대상이 세그먼트 활성화, 데이터 세트 내보내기 또는 둘 다를 지원하는지 여부에 따라 카탈로그의 대상 카드에 다른 작업 제어 기능이 있을 수 있습니다. 대상 카드에 대해 다음 컨트롤이 표시될 수 있습니다.
+2. 대상에 대한 기존 연결 여부와 대상이 대상자 활성화, 데이터 세트 내보내기 또는 두 가지 모두를 지원하는지 여부에 따라 카탈로그의 대상 카드에 다른 작업 컨트롤이 있을 수 있습니다. 대상 카드에 대해 다음 컨트롤이 표시될 수 있습니다.
 
-   * **[!UICONTROL 설정]**. 세그먼트를 활성화하거나 데이터 세트를 내보내려면 먼저 이 대상에 연결을 설정해야 합니다.
-   * **[!UICONTROL 활성화]**. 이 대상에 대한 연결이 이미 설정되었습니다. 이 대상은 세그먼트 활성화 및 데이터 세트 내보내기를 지원합니다.
-   * **[!UICONTROL 세그먼트 활성화]**. 이 대상에 대한 연결이 이미 설정되었습니다. 이 대상은 세그먼트 활성화만 지원합니다.
+   * **[!UICONTROL 설정]**. 대상을 활성화하거나 데이터 세트를 내보내려면 먼저 이 대상에 연결을 설정해야 합니다.
+   * **[!UICONTROL 활성화]**. 이 대상에 대한 연결이 이미 설정되었습니다. 이 대상은 대상 활성화 및 데이터 세트 내보내기를 지원합니다.
+   * **[!UICONTROL 대상자 활성화]**. 이 대상에 대한 연결이 이미 설정되었습니다. 이 대상은 대상자 활성화만 지원합니다.
 
    이러한 컨트롤의 차이점에 대한 자세한 내용은 [카탈로그](../ui/destinations-workspace.md#catalog) 섹션( 대상 작업 영역 설명서)을 참조하십시오.
 
-   다음 중 하나를 선택합니다. **[!UICONTROL 설정]**, **[!UICONTROL 활성화]**, 또는 **[!UICONTROL 세그먼트 활성화]**&#x200B;사용 가능한 제어에 따라 다릅니다.
+   다음 중 하나를 선택합니다. **[!UICONTROL 설정]**, **[!UICONTROL 활성화]**, 또는 **[!UICONTROL 대상자 활성화]**&#x200B;사용 가능한 제어에 따라 다릅니다.
 
    ![[설정] 컨트롤이 강조 표시된 대상 카탈로그 페이지를 표시하는 Experience Platform UI의 스크린샷입니다.](../assets/ui/connect-destinations/set-up.png)
 
-   ![Experience Platform 활성화 컨트롤이 강조 표시된 대상 카탈로그 페이지를 표시하는 세그먼트 UI의 스크린샷입니다.](../assets/ui/connect-destinations/activate-segments.png)
+   ![대상자 활성화 컨트롤이 강조 표시된 대상 카탈로그 페이지를 표시하는 Experience Platform UI의 스크린샷입니다.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. 선택한 경우 **[!UICONTROL 설정]**, 다음 단계로 건너뛰기다음 단계로 이동 [인증](#authenticate) 대상에.
 
-   선택한 경우 **[!UICONTROL 활성화]**, **[!UICONTROL 세그먼트 활성화]**, 또는 **[!UICONTROL 데이터 세트 내보내기]**&#x200B;이제 기존 대상 연결 목록을 볼 수 있습니다.
+   선택한 경우 **[!UICONTROL 활성화]**, **[!UICONTROL 대상자 활성화]**, 또는 **[!UICONTROL 데이터 세트 내보내기]**&#x200B;이제 기존 대상 연결 목록을 볼 수 있습니다.
 
    선택 **[!UICONTROL 새 대상 구성]** 대상에 대한 새 연결을 설정합니다.
 
@@ -85,11 +84,11 @@ ht-degree: 0%
 
 ![CSV 파일에 대한 파일 유형 선택 및 다양한 옵션을 보여 주는 이미지입니다.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### 세그먼트 활성화 또는 데이터 세트 내보내기에 대한 대상 연결 설정 {#segment-activation-or-dataset-exports}
+### 대상 활성화 또는 데이터 세트 내보내기에 대한 대상 연결 설정 {#segment-activation-or-dataset-exports}
 
-일부 파일 기반 대상은 데이터 세트 내보내기와 세그먼트 활성화를 지원합니다. 이러한 대상의 경우 세그먼트를 활성화할 수 있는 연결을 만들지 또는 데이터 세트를 내보낼 수 있는지 여부를 선택할 수 있습니다.
+일부 파일 기반 대상은 대상 활성화와 데이터 세트 내보내기를 지원합니다. 이러한 대상의 경우 대상을 활성화하거나 데이터 세트를 내보낼 수 있는 연결을 만들지 여부를 선택할 수 있습니다.
 
-![사용자가 세그먼트 활성화와 데이터 세트 내보내기 중에서 선택할 수 있는 데이터 유형 선택 컨트롤을 보여 주는 이미지입니다.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![사용자가 대상 활성화와 데이터 세트 내보내기 중에서 선택할 수 있는 데이터 유형 선택 컨트롤을 보여 주는 이미지입니다.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
 ### 대상 경고 활성화 {#enable-alerts}
 
@@ -113,4 +112,4 @@ ht-degree: 0%
 
 이 문서를 읽고 Experience Platform UI를 사용하여 대상에 대한 연결을 설정하는 방법에 대해 알아보았습니다. 다시 말해서 사용 가능한 연결 매개 변수와 필요한 연결 매개 변수는 대상마다 다릅니다. 또한 의 대상 설명서 페이지를 참조하십시오 [대상 카탈로그](/help/destinations/catalog/overview.md) 대상 유형별 필수 입력 및 사용 가능한 옵션에 대한 특정 정보.
 
-다음으로 진행할 수 있습니다. [세그먼트 활성화](/help/destinations/ui/activation-overview.md) 또는 [데이터 세트 내보내기](/help/destinations/ui/export-datasets.md) 목적지까지.
+다음으로 진행할 수 있습니다. [대상자 활성화](/help/destinations/ui/activation-overview.md) 또는 [데이터 세트 내보내기](/help/destinations/ui/export-datasets.md) 목적지까지.

@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;sendgrid;sendgrid 대�
 title: SendGrid 연결
 description: SendGrid 대상을 사용하면 자사 데이터를 내보내고 비즈니스 요구 사항에 맞게 SendGrid 내에서 활성화할 수 있습니다.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1541'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 [SendGrid](https://www.sendgrid.com) 는 트랜잭션 및 마케팅 이메일에 대해 인기 있는 고객 커뮤니케이션 플랫폼입니다.
 
-이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md) 을 활용합니다. [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts)을(를) 통해 자사 이메일 프로필을 내보내고 비즈니스 요구 사항에 맞는 새로운 SendGrid 세그먼트 내에서 활성화할 수 있습니다.
+이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md) 을 활용합니다. [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts)을(를) 사용하면 자사 이메일 프로필을 내보내고 비즈니스 요구 사항에 맞는 새로운 SendGrid 대상 내에서 활성화할 수 있습니다.
 
 SendGrid는 API 전달자 토큰을 인증 메커니즘으로 사용하여 SendGrid API와 통신합니다.
 
@@ -34,14 +34,13 @@ SendGrid는 API 전달자 토큰을 인증 메커니즘으로 사용하여 SendG
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-SendGrid 대상으로 데이터를 활성화하기 전에 [스키마](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 생성 위치 [!DNL Experience Platform]. 또한 다음을 참조하십시오 [제한](#limits) 이 페이지의 아래 섹션에 자세히 설명되어 있습니다.
+SendGrid 대상으로 데이터를 활성화하기 전에 [스키마](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko-KR), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 생성 위치 [!DNL Experience Platform]. 또한 다음을 참조하십시오 [제한](#limits) 이 페이지의 아래 섹션에 자세히 설명되어 있습니다.
 
 >[!IMPORTANT]
 >
 >* 이메일 프로필에서 메일링 목록을 만드는 데 사용되는 SendGrid API를 사용하려면 각 프로필 내에 고유한 이메일 주소를 제공해야 합니다. 이것은 값으로 사용되는지의 여부와 관계없습니다 *이메일* 또는 *대체 이메일*. SendGrid 연결은 이메일과 대체 이메일 값 모두에 대한 매핑을 지원하므로 사용된 모든 이메일 주소가 의 각 프로필 내에서 고유해야 합니다. *데이터 세트*. 그렇지 않으면 이메일 프로필이 SendGrid로 전송될 때 오류가 발생하고 이메일 프로필이 데이터 내보내기에 표시되지 않습니다.
 >
->* Experience Platform 현재 SendGrid의 세그먼트에서 프로필을 제거할 때 SendGrid에서 프로필을 제거하는 기능은 없습니다.
-
+>* 현재 Experience Platform의 대상에서 프로필을 제거할 때 SendGrid에서 프로필을 제거하는 기능이 없습니다.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -60,7 +59,7 @@ SendGrid는 아래 표에 설명된 ID 활성화를 지원합니다. 자세히 �
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
 | 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 의 프로필 속성 선택 화면에서 선택한 대로 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성)와 함께 세그먼트의 모든 멤버를 내보냅니다. [대상 활성화 워크플로](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -112,29 +111,27 @@ While [설정 중](https://experienceleague.adobe.com/docs/experience-platform/d
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-읽기 [프로필 및 세그먼트를 스트리밍 세그먼트 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 이 대상에 대한 자세한 내용은 아래 이미지를 참조하십시오.
 
-1. SendGrid로 내보낼 세그먼트를 하나 이상 선택합니다.
+1. SendGrid로 내보낼 대상을 한 개 이상 선택합니다.
    ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
 1. 다음에서 **[!UICONTROL 매핑]** 단계, 선택 후 **[!UICONTROL 새 매핑 추가]**&#x200B;소스 XDM 필드를 SendGrid API 대상 필드에 매핑하는 매핑 페이지가 표시됩니다. 아래 이미지는 Experience Platform과 SendGrid 간에 ID 네임스페이스를 매핑하는 방법을 보여 줍니다. 다음을 확인하십시오. **[!UICONTROL 소스 필드]** *이메일* 을(를) 다음에 매핑해야 합니다. **[!UICONTROL Target 필드]** *external_id* 아래와 같이 표시됩니다.
    ![](../../assets/catalog/email-marketing/sendgrid/13.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/16.jpg)
 
 1. 마찬가지로 원하는 을 매핑합니다 [!DNL Adobe Experience Platform] SendGrid 대상으로 내보낼 특성입니다.
    ![](../../assets/catalog/email-marketing/sendgrid/17.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/18.jpg)
 
 1. 매핑을 완료한 후 다음을 선택합니다 **[!UICONTROL 다음]** 리뷰 화면으로 이동합니다.
@@ -155,7 +152,7 @@ While [설정 중](https://experienceleague.adobe.com/docs/experience-platform/d
 | identityMap:<br/> 이메일 | 신원:<br/> external_id | 문자열 | 연락처의 기본 이메일입니다. 유효한 이메일이어야 합니다. | 최대 길이:<br/> 254자 |
 | xdm:<br/> person.name.firstName | xdm:<br/> first_name | 문자열 | 연락처 이름 | 최대 길이:<br/> 50자 |
 | xdm:<br/> person.name.lastName | xdm:<br/> last_name | 문자열 | 연락처의 성 | 최대 길이:<br/> 50자 |
-| xdm:<br/> homeAddress.postalCode | xdm:<br/> postal_code | 문자열 | 연락처의 우편 번호 또는 기타 우편 번호입니다. |  |
+| xdm:<br/> homeAddress.postalCode | xdm:<br/> postal_code | 문자열 | 연락처의 우편 번호 또는 기타 우편 번호입니다. | |
 | xdm:<br/> homeAddress.stateProvince | xdm:<br/> state_province_region | 문자열 | 연락처의 주, 시/도 또는 지역입니다. | 최대 길이:<br/> 50자 |
 
 ## SendGrid 내에서 데이터 내보내기 유효성 검사 {#validate}
@@ -168,22 +165,20 @@ While [설정 중](https://experienceleague.adobe.com/docs/experience-platform/d
 1. 대상을 선택하고 상태가 다음과 같은지 확인합니다. **[!UICONTROL 활성화됨]**.
    ![](../../assets/catalog/email-marketing/sendgrid/26.jpg)
 
-1. 다음으로 전환 **[!DNL Activation data]** 탭을 누른 다음 세그먼트 이름을 선택합니다.
+1. 다음으로 전환 **[!DNL Activation data]** 탭을 누른 다음 대상 이름을 선택합니다.
    ![](../../assets/catalog/email-marketing/sendgrid/27.jpg)
 
-1. 세그먼트 요약을 모니터링하고 프로필 수가 데이터 세트 내에서 생성된 수에 해당하는지 확인합니다.
+1. 대상자 요약을 모니터링하고 프로필 수가 데이터 세트 내에서 생성된 수에 해당하는지 확인합니다.
    ![](../../assets/catalog/email-marketing/sendgrid/28.jpg)
 
 1. 다음 [SendGrid 마케팅 목록 > 목록 API 만들기](https://docs.sendgrid.com/api-reference/lists/create-list) 의 값을 조인하여 SendGrid 내에서 고유한 연락처 목록을 만드는 데 사용됩니다. *list_name* 속성 및 데이터 내보내기의 타임스탬프입니다. SendGrid 사이트로 이동하여 이름 패턴을 따르는 새 연락처 목록이 만들어졌는지 확인합니다.
    ![](../../assets/catalog/email-marketing/sendgrid/29.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/30.jpg)
 
 1. 새로 만든 연락처 목록을 선택하고 만든 데이터 세트에서 새 이메일 레코드가 새 연락처 목록 내에 채워지고 있는지 확인합니다.
 
 1. 또한 이메일 두 개를 확인하여 필드 매핑이 올바른지 확인하십시오.
    ![](../../assets/catalog/email-marketing/sendgrid/31.jpg)
-
    ![](../../assets/catalog/email-marketing/sendgrid/32.jpg)
 
 ## 데이터 사용 및 관리 {#data-usage-governance}

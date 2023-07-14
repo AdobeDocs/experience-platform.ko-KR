@@ -3,9 +3,9 @@ keywords: 광고, 무역데스크, 광고 무역데스크
 title: 트레이드 데스크 연결
 description: Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에 걸쳐 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있는 셀프서비스 플랫폼입니다.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '725'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 ## 사용 사례 {#use-cases}
 
-마케터로서 다음으로 구성된 세그먼트를 사용할 수 있기를 원합니다 [!DNL Trade Desk IDs] 또는 디바이스 ID를 사용하여 리타겟팅 또는 대상 타겟팅된 디지털 캠페인을 생성할 수 있습니다.
+마케터로서 다음으로 구성된 대상을 사용할 수 있기를 원합니다 [!DNL Trade Desk IDs] 또는 디바이스 ID를 사용하여 리타겟팅 또는 대상 타겟팅된 디지털 캠페인을 생성할 수 있습니다.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -36,14 +36,28 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+
+모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+
+| 대상자 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+
+{style="table-layout:auto"}
+
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | 세그먼트(대상자)의 모든 구성원을 대상으로 내보내고 있습니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | 대상의 모든 구성원을 대상으로 내보내고 있습니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -82,17 +96,17 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-다음을 참조하십시오 [대상 데이터를 스트리밍 세그먼트 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+다음을 참조하십시오 [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
-다음에서 [세그먼트 일정](../../ui/activate-segment-streaming-destinations.md#scheduling) 단계에서는 세그먼트를 대상 플랫폼의 해당 ID 또는 친숙한 이름에 수동으로 매핑해야 합니다.
+다음에서 [대상자 일정](../../ui/activate-segment-streaming-destinations.md#scheduling) 단계에서는 대상을 대상 플랫폼의 해당 ID 또는 친숙한 이름에 수동으로 매핑해야 합니다.
 
-세그먼트를 매핑할 때는 쉽게 사용할 수 있도록 플랫폼 세그먼트 이름 또는 더 짧은 형식을 사용하는 것이 좋습니다. 그러나 대상에 있는 세그먼트 ID 또는 이름은 Platform 계정에 있는 세그먼트 ID와 일치하지 않아도 됩니다. 매핑 필드에 삽입하는 모든 값은 대상에 의해 반영됩니다.
+세그먼트를 매핑할 때는 쉽게 사용할 수 있도록 Platform 대상 이름 또는 더 짧은 형식을 사용하는 것이 좋습니다. 그러나 대상의 대상 ID 또는 이름은 Platform 계정의 대상 ID와 일치할 필요가 없습니다. 매핑 필드에 삽입하는 모든 값은 대상에 의해 반영됩니다.
 
 여러 장치 매핑 (쿠키 ID)을 사용하는 경우 [!DNL IDFA], [!DNL GAID]) 세 가지 매핑 모두에 대해 동일한 매핑 값을 사용해야 합니다. [!DNL The Trade Desk] 는 모든 세그먼트를 장치 수준 분류와 함께 단일 세그먼트로 집계합니다.
 

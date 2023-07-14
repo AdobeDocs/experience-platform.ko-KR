@@ -2,7 +2,7 @@
 title: Adobe Commerce 대상 커넥터
 description: Adobe Commerce 및 Real-Time CDP 판매자가 Real-Time CDP 내에서 구축 및 관리되는 고객 대상에 맞게 맞춤화된, 관련성이 높은 사이트 콘텐츠 및 프로모션을 제공하여 쇼핑 경험을 개인화하는 방법을 알아봅니다.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 276224303c7a65a53ff859bcbf47f64a6925bf77
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 3%
@@ -67,7 +67,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-읽기 [프로필 요청 대상에 프로필 및 세그먼트 활성화](../../ui/activate-edge-personalization-destinations.md) 대상자를 활성화하는 방법에 대한 지침: [!DNL Commerce] 대상.
+읽기 [프로필 요청 대상에 프로필 및 대상자 활성화](../../ui/activate-edge-personalization-destinations.md) 대상자를 활성화하는 방법에 대한 지침: [!DNL Commerce] 대상.
 
 ## 의 다음 단계 [!DNL Adobe Commerce]
 

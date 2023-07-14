@@ -3,7 +3,7 @@ keywords: 대상;대상;대상 유형
 title: 대상 유형 및 범주
 description: Adobe Experience Platform의 다양한 유형과 범주에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Adobe Experience Platform에서는 서로 다른 대상 유형(연결, 데이터
 
 ## 연결 {#connections}
 
-**[!UICONTROL 프로필 내보내기]**, **[!UICONTROL 스트리밍 세그먼트 내보내기]**, 및 **[!DNL Edge Personalization]** Adobe Experience Platform의 대상은 이벤트 데이터를 캡처하고 다른 데이터 소스와 결합하여 [실시간 고객 프로필](../profile/home.md)을 클릭하고, 세그먼테이션을 적용하고 세그먼트 및 적격 프로필을 대상으로 내보냅니다.
+**[!UICONTROL 프로필 내보내기]**, **[!UICONTROL 스트리밍 대상 내보내기]**, 및 **[!DNL Edge Personalization]** Adobe Experience Platform의 대상은 이벤트 데이터를 캡처하고 다른 데이터 소스와 결합하여 [실시간 고객 프로필](../profile/home.md)을 클릭하고, 세그멘테이션을 적용하고 대상 및 자격을 갖춘 프로필을 대상으로 내보냅니다.
 
 ## 프로필 내보내기 대상 {#profile-export}
 
@@ -41,7 +41,7 @@ Adobe Experience Platform에서는 서로 다른 대상 유형(연결, 데이터
 
 Enterprise 대상 Data Connectors를 사용하여 데이터 동기화, 분석 및 추가적인 프로필 보강 사용 사례를 위해 내부 시스템 또는 다른 서드파티 시스템에 거의 실시간으로 Adobe Real-time Customer Data Platform 프로필을 제공합니다.
 
-이러한 대상은 세그먼트 및 프로필 데이터를 Experience Platform 데이터 스트림으로 수신합니다.
+이러한 대상은 대상자 및 프로필 데이터를 Experience Platform 데이터 스트림으로 수신합니다.
 
 엔터프라이즈 대상에는 다음이 포함됩니다.
 
@@ -53,9 +53,9 @@ Enterprise 대상 Data Connectors를 사용하여 데이터 동기화, 분석 �
 
 파일 기반 대상 수신 `.csv` 프로필 및/또는 속성을 포함하는 파일입니다. [Amazon](catalog/cloud-storage/amazon-s3.md) 는 프로필 내보내기가 포함된 파일을 내보낼 수 있는 대상의 예입니다.
 
-## 스트리밍 세그먼트 내보내기 대상 {#streaming-destinations}
+## 스트리밍 대상자 내보내기 대상 {#streaming-destinations}
 
-세그먼트 내보내기 대상은 Experience Platform 세그먼트 데이터를 받습니다. 이러한 대상은 세그먼트 ID 또는 사용자 ID를 사용합니다. 광고 및 소셜 대상 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), 또는 [Facebook](catalog/social/facebook.md) 는 이러한 대상의 예입니다.
+대상자 내보내기 대상은 Experience Platform 대상자 데이터를 받습니다. 이러한 대상은 대상 ID 또는 사용자 ID를 사용합니다. 광고 및 소셜 대상 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), 또는 [Facebook](catalog/social/facebook.md) 는 이러한 대상의 예입니다.
 
 ## Edge 개인화 대상 {#edge-personalization-destinations}
 
@@ -63,7 +63,7 @@ Experience Platform의 Edge 개인화 대상은 다음과 같습니다 [Adobe Ta
 
 방법 자세히 알아보기 [동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
-## 프로필 내보내기 및 세그먼트 내보내기 대상 - 비디오 개요 {#video}
+## 프로필 내보내기 및 대상자 내보내기 대상 - 비디오 개요 {#video}
 
 아래 비디오에서는 두 가지 유형의 대상에 대한 자세한 내용을 소개합니다.
 
@@ -91,7 +91,7 @@ Experience Platform의 Edge 개인화 대상은 다음과 같습니다 [Adobe Ta
 
 마케터는 연결과 확장을 함께 사용하여 사용 사례를 해결할 수 있습니다.
 
-연결은 활성화를 위해 전체 중앙 집중식 고객 프로필 또는 고객 세그먼트를 활용해야 할 때 유용합니다. 예를 들어, 업로드된 CRM 데이터와 Analytics 시스템의 동작 데이터를 결합하는 경우 연결을 사용하여 해당 사용자에게 개인화된 메시지를 전달하기 전에 사용자를 특정 세그먼트에 적합하게 합니다.
+연결은 활성화를 위해 전체 중앙 집중식 고객 프로필 또는 고객 대상을 활용해야 할 때 유용합니다. 예를 들어, 업로드된 CRM 데이터와 Analytics 시스템의 행동 데이터를 결합하여 해당 사용자에게 개인화된 메시지를 전달하기 전에 사용자를 특정 대상에 맞게 자격을 부여하는 경우 연결을 사용하십시오.
 
 확장은 이벤트 데이터를 사용하여 작업을 트리거하거나 외부 환경에서 세그멘테이션을 수행할 때 유용합니다. 예를 들어, 지정된 사용자에 대해 파일의 다른 데이터 소스에 조인되지 않고 동작 데이터를 외부 시스템으로 전달해야 하는 경우,
 

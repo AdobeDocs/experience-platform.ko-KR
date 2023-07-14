@@ -2,7 +2,7 @@
 description: 대상 테스트 API를 사용하여 대상 테스트에 사용할 수 있는 스트리밍 대상에 대한 샘플 프로필을 생성하는 방법을 알아봅니다.
 title: 소스 스키마를 기반으로 샘플 프로필 생성
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 1%
@@ -26,7 +26,6 @@ ht-degree: 1%
 >* 사용할 프로필 생성 [메시지 변환 템플릿 만들기 및 테스트](create-template.md) - 를 사용하여 *대상 ID* 를 쿼리 매개 변수로 사용하십시오.
 >* 을(를) 호출할 때 사용할 프로필 생성 [대상이 올바르게 구성되었는지 테스트](streaming-destination-testing-overview.md) - 를 사용하여 *대상 인스턴스 ID* 를 쿼리 매개 변수로 사용하십시오.
 
-
 Adobe XDM 소스 스키마(대상을 테스트할 때 사용) 또는 대상에서 지원하는 대상 스키마(템플릿을 만들 때 사용)를 기반으로 샘플 프로필을 생성할 수 있습니다. Adobe XDM 소스 스키마와 대상 스키마 간의 차이점을 이해하려면 [메시지 포맷](../../functionality/destination-server/message-format.md) 기사.
 
 샘플 프로필을 사용할 수 있는 목적은 서로 바꿀 수 없습니다. 다음을 기반으로 생성된 프로필 *대상 ID* 를 기반으로 생성된 메시지 변환 템플릿과 프로필을 만드는 데만 사용할 수 있습니다. *대상 인스턴스 ID* 은 대상 끝점을 테스트하는 데만 사용할 수 있습니다.
@@ -47,10 +46,9 @@ Adobe XDM 소스 스키마(대상을 테스트할 때 사용) 또는 대상에�
 
 >[!IMPORTANT]
 >
->* 이 API를 사용하려면 Experience Platform UI에 대상에 대한 기존 연결이 있어야 합니다. 읽기 [대상에 연결](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 및 [대상에 대한 프로필 및 세그먼트 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) 추가 정보.
+>* 이 API를 사용하려면 Experience Platform UI에 대상에 대한 기존 연결이 있어야 합니다. 읽기 [대상에 연결](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 및 [대상에 대한 프로필 및 대상자 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) 추가 정보.
 > * 대상에 대한 연결을 설정한 후에 이 끝점에 대한 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다. [대상과의 연결 검색](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
-   >![UI 이미지 대상 인스턴스 ID를 가져오는 방법](../../assets/testing-api/get-destination-instance-id.png)
-
+>![UI 이미지 대상 인스턴스 ID를 가져오는 방법](../../assets/testing-api/get-destination-instance-id.png)
 
 **API 형식**
 
@@ -82,11 +80,11 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **응답**
 
-성공적인 응답은 지정된 수의 샘플 프로필과 함께, 소스 XDM 스키마에 해당하는 세그먼트 멤버십, ID 및 프로필 속성이 포함된 HTTP 상태 200을 반환합니다.
+성공적인 응답은 지정된 수의 샘플 프로필과 함께, 소스 XDM 스키마에 해당하는 대상 멤버십, ID 및 프로필 속성이 포함된 HTTP 상태 200을 반환합니다.
 
 >[!TIP]
 >
-> 응답에서는 대상 인스턴스에 사용된 세그먼트 멤버십, ID 및 프로필 속성만 반환합니다. 소스 스키마에 다른 필드가 있더라도 무시됩니다.
+> 응답에서는 대상 인스턴스에 사용된 대상 멤버십, ID 및 프로필 속성만 반환합니다. 소스 스키마에 다른 필드가 있더라도 무시됩니다.
 
 ```json
 [
@@ -182,9 +180,9 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `segmentMembership` | 개인의 세그먼트 멤버십을 설명하는 맵 개체입니다. 에 대한 자세한 내용 `segmentMembership`, 읽기 [세그먼트 멤버십 세부 정보](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
+| `segmentMembership` | 개인의 대상 멤버십을 설명하는 맵 개체입니다. 에 대한 자세한 내용 `segmentMembership`, 읽기 [대상자 멤버십 세부 정보](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | 이 프로필이 세그먼트에 대해 마지막으로 적격한 타임스탬프입니다. |
-| `xdm:status` | 세그먼트 멤버십이 현재 요청의 일부로 실현되었는지 여부를 나타내는 문자열 필드입니다. 다음 값이 허용됩니다. <ul><li>`realized`: 프로필이 세그먼트의 일부입니다.</li><li>`exited`: 프로필이 현재 요청의 일부로 세그먼트를 종료합니다.</li></ul> |
+| `xdm:status` | 대상자 멤버십이 현재 요청의 일부로 실현되었는지 여부를 나타내는 문자열 필드입니다. 다음 값이 허용됩니다. <ul><li>`realized`: 프로필이 세그먼트의 일부입니다.</li><li>`exited`: 프로필이 현재 요청의 일부로 대상을 종료합니다.</li></ul> |
 | `identityMap` | 연관된 네임스페이스와 함께 개인에 대한 다양한 ID 값을 설명하는 맵 유형 필드입니다. 에 대한 자세한 내용 `identityMap`, 읽기 [스키마 구성 기준](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
 {style="table-layout:auto"}
@@ -200,7 +198,6 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 >[!TIP]
 >
 >* 여기에서 사용해야 하는 대상 ID는 입니다. `instanceId` 대상 구성에 해당하며 `/destinations` 엔드포인트. 을(를) 참조하십시오 [대상 구성 검색](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) 을 참조하십시오.
-
 
 **API 형식**
 
@@ -232,7 +229,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **응답**
 
-성공적인 응답은 지정된 수의 샘플 프로필과 함께, 세그먼트 멤버십, ID 및 대상 XDM 스키마에 해당하는 프로필 속성이 있는 HTTP 상태 200을 반환합니다.
+성공적인 응답은 대상 XDM 스키마에 해당하는 대상자 멤버십, ID 및 프로필 속성과 함께 지정된 수의 샘플 프로필이 포함된 HTTP 상태 200을 반환합니다.
 
 ```json
 [

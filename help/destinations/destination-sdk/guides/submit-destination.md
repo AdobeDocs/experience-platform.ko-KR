@@ -2,7 +2,7 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 작성된 제품화된 대상을 검토하기 위해 제출해야 하는 모든 정보를 제공합니다.
 title: Destination SDK에서 작성된 제품화된 대상을 검토하기 위해 제출
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 8c8026b1180775dddd9517fc88727749678a5613
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 0%
@@ -22,7 +22,6 @@ ht-degree: 0%
 >* Adobe 팀이 초기 제출 후 구성을 업데이트하라는 요청을 받으면 업데이트를 수행한 후 다른 대상 게시 요청을 제출해야 합니다.
 >
 >* 대상이 Experience Platform 카탈로그에 라이브된 후에도 구성을 업데이트해야 하는 경우 구성에 반영될 업데이트에 대해 새 대상 게시 요청을 제출해야 합니다.
-
 
 대상을 다음에 게시하기 전 [Experience Platform 대상 카탈로그](/help/destinations/catalog/overview.md), Adobe에게 대상 및 수행한 테스트에 대한 특정 정보를 제공하여 사용자가 플랫폼으로 데이터를 활성화할 때 최상의 경험을 누릴 수 있도록 해야 합니다.
 
@@ -46,7 +45,7 @@ ht-degree: 0%
 Experience Platform 고객이 대상에서 해결하는 사용 사례에 대한 설명을 제공합니다. 설명은 기존 파트너의 사용 사례와 유사할 수 있습니다.
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): 고객 목록, 사이트를 방문한 사람 또는 Pinterest에서 콘텐츠와 이미 상호 작용한 사람에서 대상을 만듭니다.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX API는 Verizon Media(VMG)의 이메일 주소를 키로 사용하는 특정 대상 그룹을 타깃팅하려는 광고주가 새 세그먼트를 빠르게 생성하고 VMG의 거의 실시간 API를 사용하여 원하는 대상 그룹을 푸시할 수 있도록 제공됩니다.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX API는 Verizon Media(VMG)의 이메일 주소를 키로 사용하는 특정 대상 그룹을 타겟팅하려는 광고주가 사용할 수 있으며, VMG의 거의 실시간 API를 사용하여 새 대상을 신속하게 만들고 원하는 대상 그룹을 푸시할 수 있습니다.
 
 ## 업데이트 이유 {#reason-for-update}
 

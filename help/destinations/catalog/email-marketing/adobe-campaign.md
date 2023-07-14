@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;adobe campaign;campaign
 title: Adobe Campaign 연결
 description: Adobe Campaign은 모든 온라인 및 오프라인 채널에서 캠페인을 개인화하고 전달하는 데 도움이 되는 솔루션 세트입니다.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '940'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,21 @@ ht-degree: 2%
 
 Adobe Campaign은 모든 온라인 및 오프라인 채널에서 캠페인을 개인화하고 전달하는 데 도움이 되는 솔루션 세트입니다. 다음을 참조하십시오 [Campaign Classic 시작](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) 추가 정보.
 
-세그먼트 데이터를 Adobe Campaign으로 보내려면 먼저 다음을 수행해야 합니다 [대상 연결](#connect-destination) Adobe Experience Platform에서 [데이터 가져오기 설정](#import-data-into-campaign) 스토리지 위치에서 Adobe Campaign으로.
+대상 데이터를 Adobe Campaign으로 전송하려면 먼저 다음을 수행해야 합니다 [대상 연결](#connect-destination) Adobe Experience Platform에서 [데이터 가져오기 설정](#import-data-into-campaign) 스토리지 위치에서 Adobe Campaign으로.
+
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+
+모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+
+| 대상자 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+
+{style="table-layout:auto"}
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -74,22 +88,22 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
 
-다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ### 대상 속성 {#destination-attributes}
 
-이 대상에 대한 세그먼트를 활성화할 때 Adobe은에서 고유 식별자를 선택할 것을 권장합니다. [유니온 스키마](../../../profile/home.md#profile-fragments-and-union-schemas). 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 다음을 참조하십시오. [이메일 마케팅 대상으로 대상자를 활성화할 때의 모범 사례](overview.md#best-practices).
+이 대상에 대한 대상을 활성화할 때 Adobe은에서 고유 식별자를 선택할 것을 권장합니다. [유니온 스키마](../../../profile/home.md#profile-fragments-and-union-schemas). 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 다음을 참조하십시오. [이메일 마케팅 대상으로 대상자를 활성화할 때의 모범 사례](overview.md#best-practices).
 
 ## 내보낸 데이터 {#exported-data}
 
-대상 [!DNL Adobe Campaign] 대상, [!DNL Platform] 다음 항목을 만듭니다. `.csv` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [세그먼트 활성화 확인](../../ui/activate-batch-profile-destinations.md#verify) 세그먼트 활성화 자습서에서 참조하십시오.
+대상 [!DNL Adobe Campaign] 대상, [!DNL Platform] 다음 항목을 만듭니다. `.csv` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [대상자 활성화 확인](../../ui/activate-batch-profile-destinations.md#verify) audience activation 튜토리얼에서 을 참조하십시오.
 
 ## Adobe Campaign으로 데이터 가져오기 설정 {#import-data-into-campaign}
 
@@ -98,7 +112,6 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 >* 다음 사항에 주의하십시오. [!DNL SFTP] 이 통합을 수행하는 동안 Adobe Campaign 계약에 따라 스토리지 제한, 데이터베이스 스토리지 제한 및 활성 프로필 제한을 실시합니다.
 >* 다음을 사용하여 Adobe Campaign에서 내보낸 세그먼트를 예약하고, 가져오고, 매핑해야 합니다. [!DNL Campaign] 워크플로. 을(를) 참조하십시오 [반복 가져오기 설정](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) Adobe Campaign Classic 설명서 및 [데이터 관리 활동 기본 정보](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) Adobe Campaign Standard 설명서에서 확인할 수 있습니다.
 >* Adobe Campaign에 데이터를 보내는 기본 방법은 [!DNL Amazon S3] 또는 [!DNL Azure Blob].
-
 
 연결 후 [!DNL Platform] (으)로 [!DNL Amazon S3] 또는 [!DNL Azure Blob] 스토리지: 스토리지 위치에서 Adobe Campaign으로 데이터 가져오기를 설정해야 합니다. 이를 수행하는 방법에 대해 알아보려면 다음 Adobe Campaign 설명서 페이지를 참조하십시오.
 * [데이터 가져오기 및 내보내기 시작](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=ko) 및 [데이터 로드 중(파일)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html) Adobe Campaign Classic 설명서에서 확인할 수 있습니다.

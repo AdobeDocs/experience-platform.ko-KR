@@ -4,7 +4,7 @@ title: 활성화 데이터 흐름 편집
 type: Tutorial
 description: 이 문서의 단계에 따라 Adobe Experience Platform에서 기존 활성화 데이터 흐름을 편집합니다.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 활성화 데이터 흐름 편집 {#edit-activation-flows}
 
-Adobe Experience Platform에서 내보낸 세그먼트 및 프로필 속성, 내보내기 빈도, 활성화 데이터 흐름의 활성화 여부 등과 같은 대상에 대한 기존 활성화 데이터 흐름의 다양한 구성 요소를 편집할 수 있습니다.
+Adobe Experience Platform에서 내보낸 대상 및 프로필 속성, 내보내기 빈도, 활성화 데이터 흐름의 활성화 여부 등과 같은 대상에 대한 기존 활성화 데이터 흐름의 다양한 구성 요소를 편집할 수 있습니다.
 
 ## 데이터 흐름 편집 {#edit-dataflows}
 
@@ -33,10 +33,11 @@ Adobe Experience Platform에서 내보낸 세그먼트 및 프로필 속성, 내
 
 4. 다음 **[!UICONTROL 데이터 흐름 실행]** 사용 가능한 컨트롤이 표시된 대상 페이지가 나타납니다. 이 시점에서 대상 데이터 흐름의 여러 구성 요소를 편집할 수 있습니다.
 
-   * 선택 **[!UICONTROL 세그먼트 활성화]** 을 클릭하여 대상으로 전송할 세그먼트 또는 프로필 속성을 변경할 수 있습니다. 이 작업을 수행하면 대상 유형에 따라 달라지는 활성화 워크플로우로 이동합니다. 자세한 내용은 다음 안내서를 참조하십시오.
-      * [대상자 데이터를 세그먼트 스트리밍 대상으로 활성화](./activate-segment-streaming-destinations.md) (예: Facebook 또는 Twitter);
+   * 선택 **[!UICONTROL 대상자 활성화]** 을 클릭하여 대상으로 전송할 대상자 또는 프로필 속성을 변경할 수 있습니다. 이 작업을 수행하면 대상 유형에 따라 달라지는 활성화 워크플로우로 이동합니다. 자세한 내용은 다음 안내서를 참조하십시오.
+      * [대상자 데이터를 대상자 스트리밍 대상으로 활성화](./activate-segment-streaming-destinations.md) (예: Facebook 또는 Twitter);
       * [대상자 데이터를 프로필 기반 대상 일괄 처리로 활성화](./activate-batch-profile-destinations.md) (예: Amazon S3 또는 Oracle Eloqua);
       * [대상자 데이터를 스트리밍 프로필 기반 대상으로 활성화](./activate-streaming-profile-destinations.md) (예: HTTP API 또는 Amazon Kinesis).
+
    * 또한 대상 데이터 흐름 이름 및 설명을 편집할 수 있습니다.
    * 다음을 사용할 수 있습니다. **[!UICONTROL 활성화됨]/[!UICONTROL 비활성화됨]** 대상으로 모든 데이터 내보내기를 시작 및 일시 중지하려면 전환하십시오.
 

@@ -4,10 +4,10 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 5%
+source-wordcount: '1167'
+ht-degree: 9%
 
 ---
 
@@ -18,14 +18,14 @@ ht-degree: 5%
 * [대상 유형 및 범주](./destination-types.md)
 * [대상(활성화) 보호 기능](./guardrails.md)
 * 대상 작동 방식 {#how-destinations-work}
-   * [대상에서 구성 및 공통 내보내기 설정](./how-destinations-work/destinations-configurations.md)
-   * [다양한 대상 유형에 대한 프로필 내보내기 동작](./how-destinations-work/profile-export-behavior.md)
-   * [대상 활성화 워크플로에서의 ID 처리](./how-destinations-work/identity-handling.md)
+   * [대상의 구성 가능한 공통 내보내기 설정](./how-destinations-work/destinations-configurations.md)
+   * [서로 다른 대상 유형에 대한 프로필 내보내기 동작](./how-destinations-work/profile-export-behavior.md)
+   * [대상 활성화 워크플로의 ID 처리](./how-destinations-work/identity-handling.md)
 * API 자습서 {#api}
    * [클라우드 스토리지 대상에 대한 API 마이그레이션 안내서](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [흐름 서비스 API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다](./api/streaming-destinations.md)
    * [일괄 클라우드 스토리지 및 이메일 마케팅 대상에 연결하고 플로우 서비스 API를 사용하여 데이터를 활성화합니다](./api/connect-activate-batch-destinations.md)
-   * [(Beta) 애드혹 활성화 API를 통해 대상 세그먼트를 배치 대상으로 활성화합니다](./api/ad-hoc-activation-api.md)
+   * [(Beta) 애드혹 활성화 API를 통해 대상자를 배치 대상으로 활성화합니다](./api/ad-hoc-activation-api.md)
    * [대상 편집](./api/edit-destination.md)
    * [대상 데이터 흐름 업데이트](./api/update-destination-dataflows.md)
    * [대상 계정 삭제](./api/delete-destination-account.md)
@@ -37,10 +37,10 @@ ht-degree: 5%
    * [새 대상 연결 만들기](./ui/connect-destination.md)
    * 대상에 대한 대상 데이터 활성화{#activate}
       * [활성화 개요](./ui/activation-overview.md)
-      * [대상 데이터를 스트리밍 세그먼트 내보내기 대상으로 활성화](./ui/activate-segment-streaming-destinations.md)
-      * [대상자 데이터를 스트리밍 프로필 내보내기 대상으로 활성화](./ui/activate-streaming-profile-destinations.md)
-      * [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](./ui/activate-batch-profile-destinations.md)
-      * [대상자 데이터를 Edge 개인화 대상으로 활성화](./ui/activate-edge-personalization-destinations.md)
+      * [스트리밍 대상자 내보내기 대상으로 대상자 활성화](./ui/activate-segment-streaming-destinations.md)
+      * [스트리밍 프로필 내보내기 대상에 대상자 활성화](./ui/activate-streaming-profile-destinations.md)
+      * [프로필 내보내기 대상을 일괄 처리하도록 대상자 활성화](./ui/activate-batch-profile-destinations.md)
+      * [Edge 개인화 대상에 대한 대상자 활성화](./ui/activate-edge-personalization-destinations.md)
       * [(베타) Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기](./ui/export-file-now.md)
       * [(베타) Experience Platform UI를 사용하여 데이터 세트 내보내기](./ui/export-datasets.md)
       * [(Beta) 새 Beta 클라우드 스토리지 대상에서 마지막 선별 시간 XDM 속성 사용](./ui/activate-last-qualification-time.md)
@@ -59,7 +59,7 @@ ht-degree: 5%
       * [(베타) Experience Cloud 대상](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage 연결](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate 연결](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform 세그먼트 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Experience Platform 대상 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * 광고 대상{#advertising}
       * [광고 대상 개요](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud 연결](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -87,7 +87,7 @@ ht-degree: 5%
       * [Pinterest 고객 목록 연결](./catalog/advertising/pinterest.md)
       * [Snapchat Ads 연결](./catalog/advertising/snap-inc.md)
       * [트레이드 데스크 연결](./catalog/advertising/tradedesk.md)
-      * [(Beta) 트레이드 데스크 CRM 연결](./catalog/advertising/tradedesk-emails.md)
+      * [(Beta) The Trade Desk CRM 연결](./catalog/advertising/tradedesk-emails.md)
       * [Twitter 범용 웹 사이트 태그 확장](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX 연결](./catalog/advertising/datax.md)
    * Analytics 대상 {#analytics}
@@ -139,7 +139,7 @@ ht-degree: 5%
       * [이메일 마케팅 대상 개요](./catalog/email-marketing/overview.md)
       * [Adobe Campaign 연결](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services 연결](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [Mailchimp 관심 범주](./catalog/email-marketing/mailchimp-interest-categories.md)
+      * [Mailchimp 관심 카테고리](./catalog/email-marketing/mailchimp-interest-categories.md)
       * [(API) Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(파일) Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua.md)
       * [Responsys 연결 oracle](./catalog/email-marketing/oracle-responsys.md)
@@ -258,7 +258,7 @@ ht-degree: 5%
       * 스트리밍 대상 테스트 API {#streaming-destinations}
          * [스트리밍 대상 테스트 API 개요](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
          * [소스 스키마를 기반으로 샘플 프로필 생성](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
-         * [샘플 메시지 변환 템플릿 생성 ](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
+         * [샘플 메시지 변환 템플릿 생성](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
          * [내보낸 프로필 구조의 유효성 검사](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
          * [샘플 프로필을 사용하여 스트리밍 대상 테스트](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
          * [메시지 변형 템플릿 만들기 및 테스트](./destination-sdk/testing-api/streaming-destinations/create-template.md)

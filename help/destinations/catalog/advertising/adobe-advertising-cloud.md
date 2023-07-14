@@ -3,10 +3,10 @@ keywords: Advertising Cloud;advertising cloud 확장; advertising cloud 대상
 title: Adobe Advertising Cloud 확장
 description: Adobe Advertising Cloud 확장은 Adobe Experience Platform의 광고 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '442'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 ## 개요 {#overview}
 
-다음 은 [!DNL Advertising Cloud] 구현을 위한 확장 [!DNL Advertising Cloud] DSP 및 검색 모두에 대한 변환 및 세그먼트 태그(DCO는 현재 지원되지 않음).
+다음 은 [!DNL Advertising Cloud] 구현을 위한 확장 [!DNL Advertising Cloud] DSP과 검색 모두에 대한 변환 및 대상 태그(DCO는 현재 지원되지 않음).
 
 Adobe Advertising Cloud은 Adobe Experience Platform의 광고 확장 프로그램입니다.
 

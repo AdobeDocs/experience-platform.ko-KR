@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;responsys 대상 oracle
 title: Responsys 연결 oracle
 description: Responsys는 이메일, 모바일, 디스플레이 및 소셜에서 상호 작용을 개인화하기 위해 Oracle이 제공하는 크로스 채널 마케팅 캠페인을 위한 엔터프라이즈 이메일 마케팅 도구입니다.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '698'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,21 @@ ht-degree: 1%
 
 [Responsys](https://www.oracle.com/cx/marketing/campaign-management/) 은 에서 제공하는 크로스 채널 마케팅 캠페인을 위한 엔터프라이즈 이메일 마케팅 도구입니다. [!DNL Oracle] 이메일, 모바일, 디스플레이 및 소셜에서 인터랙션을 개인화합니다.
 
-세그먼트 데이터를 (으)로 보내기 [!DNL Oracle Responsys], 먼저 다음을 수행해야 합니다. [대상에 연결](#connect-destination) Adobe Experience Platform에서 [데이터 가져오기 설정](#import-data-into-responsys) 스토리지 위치에서 로 [!DNL Oracle Responsys].
+대상 데이터를에 보내려면 [!DNL Oracle Responsys], 먼저 다음을 수행해야 합니다. [대상에 연결](#connect-destination) Adobe Experience Platform에서 [데이터 가져오기 설정](#import-data-into-responsys) 스토리지 위치에서 로 [!DNL Oracle Responsys].
+
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+
+모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+
+| 대상자 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+
+{style="table-layout:auto"}
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -82,21 +96,21 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ### 대상 속성 {#destination-attributes}
 
-이 대상에 대한 세그먼트를 활성화할 때 Adobe은에서 고유 식별자를 선택할 것을 권장합니다. [유니온 스키마](../../../profile/home.md#profile-fragments-and-union-schemas). 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 다음을 참조하십시오. [이메일 마케팅 대상으로 대상자를 활성화할 때의 모범 사례](overview.md#best-practices).
+이 대상에 대한 대상을 활성화할 때 Adobe은에서 고유 식별자를 선택할 것을 권장합니다. [유니온 스키마](../../../profile/home.md#profile-fragments-and-union-schemas). 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다. 자세한 내용은 다음을 참조하십시오. [이메일 마케팅 대상으로 대상자를 활성화할 때의 모범 사례](overview.md#best-practices).
 
 ## 내보낸 데이터 {#exported-data}
 
-대상 [!DNL Oracle Responsys] 대상, 플랫폼에서 다음을 생성합니다. `.csv` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [세그먼트 활성화 확인](../../ui/activate-batch-profile-destinations.md#verify) 세그먼트 활성화 자습서에서 참조하십시오.
+대상 [!DNL Oracle Responsys] 대상, 플랫폼에서 다음을 생성합니다. `.csv` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [대상자 활성화 확인](../../ui/activate-batch-profile-destinations.md#verify) audience activation 튜토리얼에서 을 참조하십시오.
 
 ## 데이터 가져오기 설정 [!DNL Oracle Responsys] {#import-data-into-responsys}
 

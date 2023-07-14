@@ -1,10 +1,10 @@
 ---
 title: Pega 고객 의사 결정 허브 연결
-description: Adobe Experience Platform의 Pega Customer Decision Hub 대상을 사용하여 프로필 속성 및 세그먼트 멤버십 데이터를 Pega Customer Decision Hub로 전송하여 다음 모범 조치 결정을 내릴 수 있습니다.
+description: Adobe Experience Platform의 Pega Customer Decision Hub 대상을 사용하여 프로필 속성 및 대상자 멤버십 데이터를 Pega Customer Decision Hub로 전송하여 다음 모범 조치 결정을 내릴 수 있습니다.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
+source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-사용 [!DNL Pega Customer Decision Hub] 프로필 속성 및 세그먼트 멤버십 데이터를 보낼 Adobe Experience Platform의 대상 [!DNL Pega Customer Decision Hub] 을 참조하십시오.
+사용 [!DNL Pega Customer Decision Hub] 프로필 속성 및 대상자 멤버십 데이터를 보낼 Adobe Experience Platform의 대상 [!DNL Pega Customer Decision Hub] 을 참조하십시오.
 
-Adobe Experience Platform의 프로필 세그먼트 멤버십( 로 로드됨) [!DNL Pega Customer Decision Hub]는 적응형 모델에서 예측 변수로 사용할 수 있으며, 차후 최선의 행동 결정을 위해 올바른 컨텍스트 및 행동 데이터를 제공하는 데 도움이 됩니다.
+Adobe Experience Platform의 프로필 대상 멤버십( 로 로드됨) [!DNL Pega Customer Decision Hub]는 적응형 모델에서 예측 변수로 사용할 수 있으며, 차후 최선의 행동 결정을 위해 올바른 컨텍스트 및 행동 데이터를 제공하는 데 도움이 됩니다.
 
 >[!IMPORTANT]
 >
@@ -31,15 +31,15 @@ Adobe Experience Platform의 프로필 세그먼트 멤버십( 로 로드됨) [!
 
 ### 금융 서비스
 
-마케터는 연금 제도 또는 퇴직 연금 제도 뉴스레터를 구독하거나 구독 취소한 고객을 위해 오퍼를 최적화하려고 합니다. 금융 서비스 회사는 자체 CRM에서 여러 고객 ID를 Adobe Experience Platform으로 수집하고, 자체 오프라인 데이터에서 세그먼트를 작성하고, 세그먼트를 입력 및 종료하는 프로필을 로 보낼 수 있습니다. [!DNL Pega Customer Decision Hub] 아웃바운드 채널의 다음 베스트 액션(NBA) 의사 결정용.
+마케터는 연금 제도 또는 퇴직 연금 제도 뉴스레터를 구독하거나 구독 취소한 고객을 위해 오퍼를 최적화하려고 합니다. 금융 서비스 회사는 자체 CRM에서 여러 고객 ID를 Adobe Experience Platform으로 수집하고, 자체 오프라인 데이터에서 대상을 작성하고, 대상을 입력 및 종료하는 프로필을 로 보낼 수 있습니다. [!DNL Pega Customer Decision Hub] 아웃바운드 채널의 다음 베스트 액션(NBA) 의사 결정용.
 
 ## 사전 요구 사항 {#prerequisites}
 
 이 대상을 사용하여 Adobe Experience Platform에서 데이터를 내보내려면 먼저 의 다음 사전 요구 사항을 완료해야 합니다. [!DNL Pega Customer Decision Hub]:
 
-* 구성 [Adobe Experience Platform 프로필 및 세그먼트 멤버십 통합 구성 요소](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) (으)로 [!DNL Pega Customer Decision Hub] 인스턴스.
+* 구성 [Adobe Experience Platform 프로필 및 대상 멤버십 통합 구성 요소](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) (으)로 [!DNL Pega Customer Decision Hub] 인스턴스.
 * OAuth 2.0 구성 [클라이언트 자격 증명을 사용한 클라이언트 등록](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) 에 유형 부여 [!DNL Pega Customer Decision Hub] 인스턴스.
-* 구성 [실시간 실행 데이터 흐름](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) 의 Adobe 세그먼트 멤버십 데이터 흐름용 [!DNL Pega Customer Decision Hub] 인스턴스.
+* 구성 [실시간 실행 데이터 흐름](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) 의 Adobe 대상 멤버십 데이터 흐름용 [!DNL Pega Customer Decision Hub] 인스턴스.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -57,8 +57,8 @@ Adobe Experience Platform의 프로필 세그먼트 멤버십( 로 로드됨) [!
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 식별자로 세그먼트의 모든 구성원 내보내기(*고객 ID*), 속성(성, 이름, 위치 등) 세그먼트 멤버십 데이터를 내보낼 수 있습니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 항상 API 기반 연결입니다. Experience Platform 평가에 따라 프로필이 세그먼트에서 업데이트되는 즉시 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용은 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 식별자를 사용하여 대상자의 모든 구성원 내보내기(*고객 ID*), 속성(성, 이름, 위치 등) 및 대상 멤버십 데이터입니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 항상 API 기반 연결입니다. Experience Platform에서 대상 평가를 기반으로 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용은 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -90,13 +90,13 @@ Adobe Experience Platform의 프로필 세그먼트 멤버십( 로 로드됨) [!
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL 호스트 이름]**: 프로필을 json 데이터로 내보내는 Pega 고객 의사 결정 허브 호스트 이름입니다.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-다음을 참조하십시오 [대상자 데이터를 스트리밍 프로필 내보내기 대상으로 활성화](../../ui/activate-streaming-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+다음을 참조하십시오 [대상자 데이터를 스트리밍 프로필 내보내기 대상으로 활성화](../../ui/activate-streaming-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ### 대상 속성 {#attributes}
 
@@ -120,14 +120,14 @@ Adobe Experience Platform의 프로필 세그먼트 멤버십( 로 로드됨) [!
 
 ## 내보낸 데이터/데이터 내보내기 유효성 검사 {#exported-data}
 
-프로필의 세그먼트 멤버십을 성공적으로 업데이트하면 페가 마케팅 세그먼트 멤버십 데이터 저장소에 세그먼트 식별자, 이름 및 상태가 삽입됩니다. 멤버십 데이터는 의 고객 프로필 디자이너를 사용하여 고객과 연결됩니다. [!DNL Pega Customer Decision Hub]아래에 표시된 대로 를 클릭합니다.
-![고객 프로필 디자이너를 사용하여 Adobe 세그먼트 멤버십 데이터를 고객에 연결할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
+프로필에 대한 대상 멤버십을 성공적으로 업데이트하면 페가 마케팅 대상 멤버십 데이터 저장소에 대상 식별자, 이름 및 상태가 삽입됩니다. 멤버십 데이터는 의 고객 프로필 디자이너를 사용하여 고객과 연결됩니다. [!DNL Pega Customer Decision Hub]아래에 표시된 대로 를 클릭합니다.
+![고객 프로필 디자이너를 사용하여 Adobe 대상 멤버십 데이터를 고객에 연결할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-세그먼트 멤버십 데이터는 아래와 같이 다음으로 가장 적합한 작업을 결정하기 위해 Pega 다음으로 적합한 작업 디자이너 참여 정책에 사용됩니다.
-![페가 다음-모범 사례 디자이너의 참여 정책에 조건으로 세그먼트 멤버십 필드를 추가할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+대상 멤버십 데이터는 아래와 같이 다음으로 가장 적합한 작업을 결정하기 위해 Pega 다음으로 적합한 작업 디자이너 참여 정책에 사용됩니다.
+![Pega Next-Best-Action Designer의 참여 정책에 조건으로 대상 멤버십 필드를 추가할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
 
-고객 세그먼트 멤버십 데이터 필드는 아래에 표시된 대로 적응형 모델에 예측 변수로 추가됩니다.
-![Prediction Studio를 사용하여 적응형 모델에서 예측 변수로 세그먼트 멤버십 필드를 추가할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
+고객 대상 멤버십 데이터 필드는 아래와 같이 적응형 모델에 예측 변수로 추가됩니다.
+![Prediction Studio를 사용하여 적응형 모델에서 대상자 멤버십 필드를 예측자로 추가할 수 있는 UI 화면의 이미지](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## 추가 리소스 {#additional-resources}
 

@@ -1,15 +1,15 @@
 ---
-title: 대상에서 구성 및 공통 내보내기 설정
+title: 대상의 구성 가능한 공통 내보내기 설정
 description: 대상 수준에서 구성할 수 있는 대상 내보내기 설정과 수정되어 편집할 수 없는 대상을 알아봅니다.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '845'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 대상에서 구성 및 공통 내보내기 설정
+# 대상의 구성 가능한 공통 내보내기 설정
 
 Experience Platform 대상으로 내보내기 동작을 고려할 때 구성이 작동하는 세 가지 개별 수준을 고려해야 합니다.
 
@@ -56,7 +56,7 @@ Experience Platform 대상으로 내보내기 동작을 고려할 때 구성이 
 
 * [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](/help/destinations/ui/activate-batch-profile-destinations.md)
 * [엔터프라이즈 대상으로 대상 데이터 활성화](/help/destinations/ui/activate-streaming-profile-destinations.md)
-* [대상 데이터를 스트리밍 세그먼트 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)
+* [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [주문형 파일을 배치 대상으로 내보내기](/help/destinations/ui/export-file-now.md)
 * [(베타) 클라우드 스토리지 대상으로 데이터 세트 내보내기](/help/destinations/ui/export-datasets.md)
 

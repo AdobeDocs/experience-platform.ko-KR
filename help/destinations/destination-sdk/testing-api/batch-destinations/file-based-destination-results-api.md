@@ -2,7 +2,7 @@
 description: 이 페이지에서는 /testing/destinationInstance API 끝점을 사용하여 테스트 결과에 대한 전체 세부 정보를 보는 방법에 대해 설명합니다. 이 API 끝점은 흐름 서비스 API를 사용하여 데이터 흐름을 모니터링할 때 얻는 것과 동일한 결과를 반환합니다.
 title: 자세한 활성화 결과 보기
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 2%
@@ -35,12 +35,12 @@ ht-degree: 2%
 * Experience Platform UI에서 대상에 대한 활성화 흐름을 하나 이상 만들었습니다.
 * API 요청을 성공적으로 수행하려면 테스트할 대상 인스턴스에 해당하는 대상 인스턴스 ID가 필요합니다. Platform UI에서 대상과의 연결을 검색할 때 API 호출에 사용해야 하는 대상 인스턴스 ID를 URL에서 가져옵니다.
 
-   ![URL에서 대상 인스턴스 ID를 가져오는 방법을 보여 주는 UI 이미지입니다.](../../assets/testing-api/get-destination-instance-id.png)
+  ![URL에서 대상 인스턴스 ID를 가져오는 방법을 보여 주는 UI 이미지입니다.](../../assets/testing-api/get-destination-instance-id.png)
 * 이전에 다음을 수행했습니다. [대상 구성을 테스트했습니다.](file-based-destination-testing-api.md)및 이(가) 다음을 포함하는 유효한 API 응답을 수신했습니다. `results` 속성. 이 항목을 사용합니다. `results` 대상을 추가로 테스트할 값입니다.
 
 ## 자세한 대상 테스트 결과 보기 {#test-activation-results}
 
-다음 작업을 완료하면 [대상 구성을 확인했습니다.](file-based-destination-testing-api.md)에 GET 요청을 하여 자세한 활성화 결과를 볼 수 있습니다. `authoring/testing/destinationInstance/` 엔드포인트 및 테스트 중인 대상의 대상 인스턴스 ID 제공과 활성화된 세그먼트의 흐름 실행 ID.
+다음 작업을 완료하면 [대상 구성을 확인했습니다.](file-based-destination-testing-api.md)에 GET 요청을 하여 자세한 활성화 결과를 볼 수 있습니다. `authoring/testing/destinationInstance/` 엔드포인트, 테스트 중인 대상의 대상 인스턴스 ID 제공 및 활성화된 대상의 흐름 실행 ID.
 
 에서 사용해야 하는 전체 API URL을 찾을 수 있습니다. `results` 에서 반환된 속성 [대상 테스트 호출의 응답](file-based-destination-testing-api.md).
 
@@ -56,7 +56,7 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | 쿼리 문자열 매개 변수 | 설명 |
 | -------- | ----------- |
-| `flowRunIds` | 활성화된 세그먼트에 해당하는 흐름 실행 ID입니다. 흐름 실행 ID는에서 찾을 수 있습니다. `results` 에서 반환된 속성 [대상 테스트 호출의 응답](file-based-destination-testing-api.md). |
+| `flowRunIds` | 활성화된 대상자에 해당하는 흐름 실행 ID입니다. 흐름 실행 ID는에서 찾을 수 있습니다. `results` 에서 반환된 속성 [대상 테스트 호출의 응답](file-based-destination-testing-api.md). |
 
 **요청**
 

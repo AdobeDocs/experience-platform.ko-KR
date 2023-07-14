@@ -2,7 +2,7 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 스트리밍 대상을 구성하는 단계를 나열하고 설명합니다.
 title: Destination SDK을 사용하여 스트리밍 대상 구성
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 0%
@@ -150,7 +150,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 3단계: 메시지 변환 템플릿 만들기 - 템플릿 언어를 사용하여 메시지 출력 형식 지정 {#create-transformation-template}
 
-대상이 지원하는 페이로드를 기반으로, 내보낸 데이터의 형식을 Adobe XDM 형식에서 대상이 지원하는 형식으로 변환하는 템플릿을 만들어야 합니다. 섹션에서 템플릿 예 를 참조하십시오 [ID, 속성 및 세그먼트 멤버십 변환에 템플릿 언어 사용](../functionality/destination-server/message-format.md#using-templating) 및 사용 [템플릿 작성 도구](../testing-api/streaming-destinations/create-template.md) Adobe 제공.
+대상이 지원하는 페이로드를 기반으로, 내보낸 데이터의 형식을 Adobe XDM 형식에서 대상이 지원하는 형식으로 변환하는 템플릿을 만들어야 합니다. 섹션에서 템플릿 예 를 참조하십시오 [ID, 속성 및 대상자 멤버십 변환에 템플릿 언어 사용](../functionality/destination-server/message-format.md#using-templating) 및 사용 [템플릿 작성 도구](../testing-api/streaming-destinations/create-template.md) Adobe 제공.
 
 자신에게 적합한 메시지 변환 템플릿을 만들었으면 1단계에서 만든 서버 및 템플릿 구성에 추가합니다.
 
@@ -273,10 +273,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 이전 단계에서 구성 끝점을 사용하여 대상을 설정한 후 [대상 테스트 도구](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) Adobe Experience Platform과 대상 간의 통합을 테스트합니다.
 
-대상을 테스트하는 프로세스의 일부로 Experience Platform UI를 사용하여 대상에 활성화할 세그먼트를 만들어야 합니다. Experience Platform에서 세그먼트를 만드는 방법에 대한 지침은 아래 두 리소스를 참조하십시오.
+대상을 테스트하는 프로세스의 일부로 Experience Platform UI를 사용하여 대상에 활성화할 세그먼트를 만들어야 합니다. Experience Platform에서 대상자를 만드는 방법에 대한 지침은 아래 두 리소스를 참조하십시오.
 
-* [세그먼트 설명서 페이지 만들기](/help/segmentation/ui/overview.md#create-segment)
-* [세그먼트 만들기 비디오 연습](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [대상 설명서 페이지 만들기](/help/segmentation/ui/overview.md#create-segment)
+* [대상 비디오 워크스루 만들기](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
 ## 7단계: 대상 게시 {#publish-destination}
 

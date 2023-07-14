@@ -2,9 +2,9 @@
 title: Marketo Engage 대상
 description: Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 엔드 투 엔드 CXM(Customer Experience Management) 솔루션입니다. CRM 리드 관리 및 고객 참여에서 계정 기반 마케팅 및 매출 기여도 분석에 이르기까지 활동을 자동화하고 관리할 수 있습니다.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: e68bbc07f7d2e4e05b725cbef37a1810a5825742
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 1%
 >* 에 대한 데이터를 이미 활성화하는 경우 **[!UICONTROL Marketo]** 대상: 다음에 대한 새 데이터 흐름을 만드십시오. **[!UICONTROL Marketo]** 대상에 대한 기존 데이터 흐름을 삭제하고 **[!UICONTROL Marketo]** 대상: 2023년 2월 해당 날짜부터 **[!UICONTROL Marketo]** 대상 카드가 제거됩니다.
 >* 에 대한 데이터 흐름을 아직 만들지 않은 경우 **[!UICONTROL Marketo]** 대상, 새 대상을 사용하십시오. **[!UICONTROL Marketo]** Marketo에 연결하고 데이터를 내보내는 카드입니다.
 
-
 ![나란히 표시된 두 Marketo 대상 카드 이미지.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 Marketo V2 대상의 개선 사항은 다음과 같습니다.
@@ -31,7 +30,7 @@ Marketo V2 대상의 개선 사항은 다음과 같습니다.
 
 [!DNL Marketo Engage] 는 마케팅, 광고, 분석 및 상거래를 위한 유일한 엔드 투 엔드 CXM(Customer Experience Management) 솔루션입니다. CRM 리드 관리 및 고객 참여에서 계정 기반 마케팅 및 매출 기여도 분석에 이르기까지 활동을 자동화하고 관리할 수 있습니다.
 
-대상을 사용하면 마케터가 Adobe Experience Platform에서 만든 세그먼트를 정적 목록으로 표시되는 Marketo으로 푸시할 수 있습니다.
+대상을 사용하면 마케터가 Adobe Experience Platform에서 만든 대상을 정적 목록으로 표시되는 Marketo으로 푸시할 수 있습니다.
 
 ## 지원되는 ID 및 속성 {#supported-identities-attributes}
 
@@ -52,28 +51,39 @@ Marketo V2 대상의 개선 사항은 다음과 같습니다.
 
 Experience Platform의 속성을 조직이 Marketo에서 액세스할 수 있는 모든 속성에 매핑할 수 있습니다. Marketo에서 [API 요청 설명](https://developers.marketo.com/rest-api/lead-database/leads/#describe) 조직에서 액세스할 수 있는 속성 필드를 검색합니다.
 
+## 외부 대상 지원 {#external-audiences-support}
+
+모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+또한 이 대상은 아래 표에 설명된 외부 대상의 활성화도 지원합니다.
+
+| 외부 대상 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+
+{style="table-layout:auto"}
+
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | 에 사용된 식별자(이메일, ECID)를 사용하여 세그먼트(대상자)의 모든 구성원을 내보냅니다. [!DNL Marketo Engage] 대상. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | 에 사용된 식별자(이메일, ECID)를 사용하여 대상의 모든 구성원을 내보내는 경우 [!DNL Marketo Engage] 대상. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## 대상 설정 및 세그먼트 활성화 {#set-up}
+## 대상 설정 및 대상 활성화 {#set-up}
 
 >[!IMPORTANT]
 > 
 >* 대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions).
 >* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
+대상을 설정하고 대상을 활성화하는 방법에 대한 자세한 지침은 다음을 참조하십시오. [Adobe Experience Platform 대상을 Marketo 정적 목록으로 푸시](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) Marketo 설명서에서 확인할 수 있습니다.
 
-대상을 설정하고 세그먼트를 활성화하는 방법에 대한 자세한 지침은 다음을 참조하십시오. [Adobe Experience Platform 세그먼트를 Marketo 정적 목록에 푸시](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) Marketo 설명서에서 확인할 수 있습니다.
-
-아래 비디오에서는 Marketo 대상을 구성하고 세그먼트를 활성화하는 단계도 보여 줍니다.
+아래 비디오에서는 Marketo 대상을 구성하고 대상을 활성화하는 단계도 보여 줍니다.
 
 >[!IMPORTANT]
 >
@@ -81,9 +91,8 @@ Experience Platform의 속성을 조직이 Marketo에서 액세스할 수 있는
 > 
 >* Experience Platform UI에서 사용해야 하는 대상 카드는 입니다. **[!UICONTROL Marketo]**.
 >* 비디오에 새 항목이 표시되지 않습니다. **[!UICONTROL 개인 생성]** 대상에 연결 워크플로의 선택기 필드.
->* 비디오에서 호출된 두 가지 제한 사항은 더 이상 적용되지 않습니다. 이제 비디오가 기록될 때 지원된 세그먼트 멤버십 정보 외에 다른 여러 프로필 속성 필드를 매핑할 수 있습니다. 아직 Marketo 정적 목록에 없는 Marketo으로 세그먼트 구성원을 내보낼 수도 있으며 이러한 구성원은 목록에 추가됩니다.
->* 다음에서 **[!UICONTROL 세그먼트 단계 예약]** Marketo V1에서 활성화 워크플로 의 **[!UICONTROL 매핑 ID]** Marketo으로 데이터를 성공적으로 내보냅니다. Marketo V2에서는 이 수동 단계가 더 이상 필요하지 않습니다.
-
+>* 비디오에서 호출된 두 가지 제한 사항은 더 이상 적용되지 않습니다. 이제 비디오가 기록될 때 지원된 대상 멤버십 정보 외에도 다른 많은 프로필 속성 필드를 매핑할 수 있습니다. 아직 Marketo 정적 목록에 없는 Marketo으로 대상 구성원을 내보낼 수도 있으며 이러한 구성원이 목록에 추가됩니다.
+>* 다음에서 **[!UICONTROL 예약 대상 단계]** Marketo V1에서 활성화 워크플로 의 **[!UICONTROL 매핑 ID]** Marketo으로 데이터를 성공적으로 내보냅니다. Marketo V2에서는 이 수동 단계가 더 이상 필요하지 않습니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
@@ -101,8 +110,8 @@ To connect to this destination, follow the steps described in the [destination c
 
 <!--
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 -->

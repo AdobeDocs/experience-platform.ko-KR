@@ -1,12 +1,12 @@
 ---
 title: TikTok 연결
-description: 광고 캠페인으로 타깃팅할 데이터를 사용하여 TikTok에서 사용자 지정 대상을 작성합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 세그먼트를 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다.
+description: 광고 캠페인의 타겟팅용 데이터로 TikTok에서 맞춤형 대상자를 구축합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 대상을 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '980'
-ht-degree: 2%
+source-wordcount: '978'
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-광고 캠페인으로 타깃팅할 데이터를 사용하여 TikTok에서 사용자 지정 대상을 작성합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 세그먼트를 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다. 방문 [TikTok 비즈니스 도움말 센터](https://ads.tiktok.com/help/article/audiences?lang=en) 추가 정보.
+광고 캠페인의 타겟팅용 데이터로 TikTok에서 맞춤형 대상자를 구축합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 대상을 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다. 방문 [TikTok 비즈니스 도움말 센터](https://ads.tiktok.com/help/article/audiences?lang=en) 추가 정보.
 
 >[!IMPORTANT]
 >
@@ -26,7 +26,7 @@ TikTok 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도�
 
 ### 사용 사례 {#use-case-1}
 
-한 스포츠 의류 브랜드는 자신의 소셜 미디어 계정을 통해 기존 고객에게 도달하기를 원합니다. 의류 브랜드는 자체 CRM에서 Adobe Experience Platform으로 이메일 주소를 수집하고, 자체 오프라인 데이터에서 세그먼트를 작성하고, 이러한 세그먼트를 TikTok으로 전송하여 고객의 소셜 미디어 피드에 광고를 표시할 수 있습니다.
+한 스포츠 의류 브랜드는 자신의 소셜 미디어 계정을 통해 기존 고객에게 도달하기를 원합니다. 의류 브랜드는 자체 CRM에서 Adobe Experience Platform으로 이메일 주소를 수집하고, 자체 오프라인 데이터에서 대상을 만들고, 이러한 대상을 TikTok으로 보내 고객의 소셜 미디어 피드에 광고를 표시할 수 있습니다.
 
 ## 사전 요구 사항 {#prerequisites}
 
@@ -51,8 +51,8 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | TikTok 대상에 사용된 식별자(이름, 전화번호 또는 기타)로 세그먼트(대상자)의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | TikTok 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -88,17 +88,17 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-읽기 [프로필 및 세그먼트를 스트리밍 세그먼트 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ### ID 매핑 {#map}
 
-다음은 TikTok Ads Manager로 세그먼트를 내보낼 때 올바른 ID 매핑의 예입니다.
+다음은 TikTok Ads Manager로 대상을 내보낼 때 올바른 ID 매핑의 예입니다.
 
 소스 필드 선택:
 
@@ -112,7 +112,7 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알
 
 ## 내보낸 데이터 {#exported-data}
 
-다음을 확인: [!DNL TikTok Ads Manager] 계정(아래) **에셋 > 대상**)을 클릭하여 Experience Platform 세그먼트를 성공적으로 내보냈는지 확인합니다. 대상자는 대상자 유형으로 채워집니다. `Partner Audience`.
+다음을 확인: [!DNL TikTok Ads Manager] 계정(아래) **에셋 > 대상**)을 클릭하여 Experience Platform 대상을 성공적으로 내보냈는지 확인합니다. 대상자는 대상자 유형으로 채워집니다. `Partner Audience`.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

@@ -1,7 +1,7 @@
 ---
 description: 대상에 대한 HTTP 요청을 그룹화하고 일괄 처리하는 방법을 결정하는 집계 정책을 설정하는 방법에 대해 알아봅니다.
 title: 집계 정책
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '996'
 ht-degree: 2%
@@ -112,8 +112,8 @@ Destination SDK을 사용하여 실시간(스트리밍) 대상을 작성할 때 
 | `configurableAggregation.maxBatchAgeInSecs` | 정수 | 와 함께 사용됩니다. `maxNumEventsInBatch`, 이 매개 변수는 API 호출을 엔드포인트로 보낼 때까지 Experience Platform이 대기하는 시간을 결정합니다. <ul><li>최소값(초): 1800</li><li>최대값(초): 3600</li></ul> 예를 들어 두 매개 변수에 모두 최대값을 사용하는 경우 Experience Platform은 API 호출을 수행하기 전에 10000개의 적격 프로필이 있을 때까지 3600초 또는 API를 대기합니다. |
 | `configurableAggregation.maxNumEventsInBatch` | 정수 | 와 함께 사용됩니다. `maxBatchAgeInSecs`, 이 매개 변수는 API 호출에서 집계해야 하는 적격 프로필 수를 결정합니다. <ul><li>최소값: 1000</li><li>최대값: 10000</li></ul> 예를 들어 두 매개 변수에 모두 최대값을 사용하는 경우 Experience Platform은 API 호출을 수행하기 전에 10000개의 적격 프로필이 있을 때까지 3600초 또는 API를 대기합니다. |
 | `configurableAggregation.aggregationKey` | - | 아래 설명된 매개 변수를 기반으로 대상에 매핑된 내보낸 프로필을 집계할 수 있습니다. |
-| `configurableAggregation.aggregationKey.includeSegmentId` | 부울 | 이 매개 변수를 다음으로 설정 `true` 대상으로 내보낸 프로필을 세그먼트 ID로 그룹화하려는 경우. |
-| `configurableAggregation.aggregationKey.includeSegmentStatus` | 부울 | 이 매개 변수와 를 모두 설정합니다. `includeSegmentId` 끝 `true`, 대상으로 내보낸 프로필을 세그먼트 ID 및 세그먼트 상태별로 그룹화하려는 경우. |
+| `configurableAggregation.aggregationKey.includeSegmentId` | 부울 | 이 매개 변수를 다음으로 설정 `true` 대상으로 내보낸 프로필을 대상 ID로 그룹화하려는 경우. |
+| `configurableAggregation.aggregationKey.includeSegmentStatus` | 부울 | 이 매개 변수와 를 모두 설정합니다. `includeSegmentId` 끝 `true`, 대상으로 내보낸 프로필을 대상 ID 및 대상 상태별로 그룹화하려는 경우. |
 | `configurableAggregation.aggregationKey.includeIdentity` | 부울 | 이 매개 변수를 다음으로 설정 `true` 대상으로 내보낸 프로필을 id 네임스페이스별로 그룹화하려는 경우. |
 | `configurableAggregation.aggregationKey.oneIdentityPerGroup` | 부울 | 이 매개 변수를 다음으로 설정 `true` 내보낸 프로필을 단일 ID(GAID, IDFA, 전화 번호, 이메일 등)를 기반으로 그룹으로 집계하려면 다음을 수행합니다. |
 | `configurableAggregation.aggregationKey.groups` | 배열 | 대상으로 내보낸 프로필을 ID 네임스페이스 그룹별로 그룹화하려면 ID 그룹 목록을 만듭니다. 예를 들어 위의 예에 표시된 구성을 사용하여 IDFA 및 GAID 모바일 식별자가 포함된 프로필을 대상에 대한 한 호출로 결합하고 이메일이 다른 호출로 결합될 수 있습니다. |

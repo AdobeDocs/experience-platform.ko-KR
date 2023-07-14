@@ -4,7 +4,7 @@ title: 클라우드 스토리지 대상에 대한 API 마이그레이션 안내�
 description: 추가 기능이 있는 새 클라우드 스토리지 대상 카드로 마이그레이션하는 과정의 일부로 클라우드 스토리지 대상을 활성화하는 워크플로의 변경 사항에 대해 알아봅니다.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: b651d15260adbcd37fa396fa0b325a9674a92133
+source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -67,7 +67,7 @@ TBD if we keep this link but will likely remove it
 [Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
 
 -->
-* [세그먼트를 클라우드 스토리지 대상으로 내보내는 API 튜토리얼](/help/destinations/api/activate-segments-file-based-destinations.md)
+* [대상을 클라우드 스토리지 대상으로 내보내는 API 튜토리얼](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [대상 플로우 서비스 API 참조 설명서](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
 ## 이전 버전과 호환 불가능한 변경 사항 요약 {#summary-backwards-incompatible-changes}
@@ -684,7 +684,7 @@ SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아�
 
 ```json{line-numbers="true" start-line="1" highlight="4-40, 45-53"}
 {
-  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
+  "segmentSelectors": { // shortened for brevity since nothing changes in the audience selectors
   },  
   "profileSelectors": {
     "selectors": [
@@ -752,7 +752,7 @@ SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아�
 
 ```json {line-numbers="true" start-line="1" highlight="4-12, 18-20"}
 {
-  "segmentSelectors": { // shortened for brevity since nothing changes in the segment selectors
+  "segmentSelectors": { // shortened for brevity since nothing changes in the audience selectors
   },  
   "mandatoryFields": [
     "CORE",

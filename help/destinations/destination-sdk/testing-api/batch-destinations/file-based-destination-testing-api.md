@@ -2,7 +2,7 @@
 description: 이 페이지에서는 /testing/destinationInstance API 끝점을 사용하여 파일 기반 대상이 올바르게 구성되었는지 테스트하고 구성된 대상에 대한 데이터 흐름의 무결성을 확인하는 방법에 대해 설명합니다.
 title: 샘플 프로필을 사용하여 파일 기반 대상 테스트
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 2%
@@ -31,7 +31,7 @@ ht-degree: 2%
 * Experience Platform UI에서 대상에 대한 활성화 흐름을 하나 이상 만들었습니다.
 * API 요청을 성공적으로 수행하려면 테스트할 대상 인스턴스에 해당하는 대상 인스턴스 ID가 필요합니다. Platform UI에서 대상과의 연결을 검색할 때 API 호출에 사용해야 하는 대상 인스턴스 ID를 URL에서 가져옵니다.
 
-   ![URL에서 대상 인스턴스 ID를 가져오는 방법을 보여 주는 UI 이미지입니다.](../../assets/testing-api/get-destination-instance-id.png)
+  ![URL에서 대상 인스턴스 ID를 가져오는 방법을 보여 주는 UI 이미지입니다.](../../assets/testing-api/get-destination-instance-id.png)
 * *선택 사항*: API 호출에 추가된 샘플 프로필로 대상 구성을 테스트하려면 다음을 사용합니다. [/sample-profiles](file-based-sample-profile-generation-api.md) 기존 소스 스키마를 기반으로 샘플 프로필을 생성하기 위한 종단점입니다. 샘플 프로필을 제공하지 않는 경우 API가 샘플 프로필을 생성하고 응답에서 반환합니다.
 
 ## 호출에 프로필을 추가하지 않고 대상 구성을 테스트합니다 {#test-without-adding-profiles}
@@ -111,7 +111,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `activations` | 활성화된 각 세그먼트에 대한 세그먼트 ID 및 흐름 실행 ID를 반환합니다. 활성화 항목(및 관련 생성 파일)의 수는 대상 인스턴스에서 매핑된 세그먼트의 수와 같습니다. <br><br> 예: 두 세그먼트를 대상 인스턴스에 매핑한 경우 `activations` 배열에 두 개의 항목이 포함됩니다. 활성화된 각 세그먼트는 내보낸 하나의 파일에 해당합니다. |
+| `activations` | 활성화된 각 대상자에 대한 대상자 ID 및 흐름 실행 ID를 반환합니다. 활성화 항목(및 관련 생성 파일)의 수는 대상 인스턴스에서 매핑된 대상자의 수와 같습니다. <br><br> 예: 두 대상을 대상 인스턴스에 매핑한 경우 `activations` 배열에 두 개의 항목이 포함됩니다. 활성화된 각 대상자는 내보낸 하나의 파일에 해당합니다. |
 | `results` | 대상 인스턴스 ID와 를 호출하는 데 사용할 수 있는 흐름 실행 ID를 반환합니다. [결과 API](file-based-destination-results-api.md)를 클릭하여 통합을 추가로 테스트합니다. |
 | `inputProfiles` | API에서 자동으로 생성된 샘플 프로필을 반환합니다. |
 
@@ -232,7 +232,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `activations` | 활성화된 각 세그먼트에 대한 세그먼트 ID 및 흐름 실행 ID를 반환합니다. 활성화 항목(및 관련 생성 파일)의 수는 대상 인스턴스에서 매핑된 세그먼트의 수와 같습니다. <br><br> 예: 두 세그먼트를 대상 인스턴스에 매핑한 경우 `activations` 배열에 두 개의 항목이 포함됩니다. 활성화된 각 세그먼트는 내보낸 하나의 파일에 해당합니다. |
+| `activations` | 활성화된 각 대상자에 대한 대상자 ID 및 흐름 실행 ID를 반환합니다. 활성화 항목(및 관련 생성 파일)의 수는 대상 인스턴스에서 매핑된 대상자의 수와 같습니다. <br><br> 예: 두 대상을 대상 인스턴스에 매핑한 경우 `activations` 배열에 두 개의 항목이 포함됩니다. 활성화된 각 대상자는 내보낸 하나의 파일에 해당합니다. |
 | `results` | 대상 인스턴스 ID와 를 호출하는 데 사용할 수 있는 흐름 실행 ID를 반환합니다. [결과 API](file-based-destination-results-api.md)를 클릭하여 통합을 추가로 테스트합니다. |
 | `inputProfiles` | API 요청에서 전달한 사용자 지정 샘플 프로필을 반환합니다. |
 

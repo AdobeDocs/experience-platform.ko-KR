@@ -4,7 +4,7 @@ title: 대상 계정 삭제
 type: Tutorial
 description: 이 자습서에는 Adobe Experience Platform UI에서 대상 계정을 삭제하는 단계가 나열되어 있습니다
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 2ea56957e122140fbc68c727e36666f8f9a71dd8
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
@@ -37,7 +37,7 @@ ht-degree: 0%
 
    ![필터 대상](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. 줄임표(`...`)를 클릭하여 제품에서 사용할 수 있습니다. 옵션을 제공하는 팝업 패널이 나타납니다. **[!UICONTROL 세그먼트 활성화]**, **[!UICONTROL 세부 정보 편집]**, 및 **[!UICONTROL 삭제]** 계정입니다. 다음 항목 선택 ![삭제 단추](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 삭제]** 단추를 클릭하여 원하는 계정을 삭제합니다.
+3. 줄임표(`...`)를 클릭하여 제품에서 사용할 수 있습니다. 옵션을 제공하는 팝업 패널이 나타납니다. **[!UICONTROL 대상자 활성화]**, **[!UICONTROL 세부 정보 편집]**, 및 **[!UICONTROL 삭제]** 계정입니다. 다음 항목 선택 ![삭제 단추](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 삭제]** 단추를 클릭하여 원하는 계정을 삭제합니다.
 
    ![대상 계정 삭제](../assets/ui/delete-accounts/delete-accounts.png)
 

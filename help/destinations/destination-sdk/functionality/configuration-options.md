@@ -1,9 +1,9 @@
 ---
 description: Adobe Experience Platform의 대상 서비스는 대상 기능을 빌드하는 여러 구성 요소에 대한 구성 끝점을 사용합니다. 이러한 구성 요소를 결합하여 Experience Platform이 대상 파트너에 연결하고, 사용자 지정 메시지를 전송하고, 디지털 에코시스템에서 프로필 데이터를 활성화하는 방법에 대해 알아봅니다.
 title: Destination SDK의 구성 옵션
-source-git-commit: 65a658208b48a50184e55a6d64cdf7ad6de0f04f
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -45,14 +45,14 @@ Adobe Experience Platform의 대상 서비스는 대상 기능을 빌드하는 �
 * [스키마 구성](destination-configuration/schema-configuration.md): 사용자가 프로필 속성 및 ID를 매핑할 수 있는 대상의 타겟 스키마를 정의하는 방법을 알아봅니다.
 * [ID 네임스페이스 구성](destination-configuration/identity-namespace-configuration.md): 대상에서 지원하는 ID를 구성하는 방법을 알아봅니다. 이 구성은 의 타겟 ID를 채웁니다. [매핑 단계](../../ui/activate-segment-streaming-destinations.md#mapping) XDM 스키마의 ID 및 속성을 대상의 스키마에 매핑하는 Experience Platform 사용자 인터페이스의 .
 * [대상 게재](destination-configuration/destination-delivery.md): 내보낸 데이터의 정확한 위치와 데이터가 도착하는 위치에서 사용되는 인증 규칙을 구성하는 방법을 알아봅니다.
-* [대상 메타데이터 구성](destination-configuration/audience-metadata-configuration.md): 세그먼트 이름 또는 ID와 같은 Experience Platform 메타데이터를 세그먼트와 대상 간에 공유하는 방법에 대해 알아봅니다.
+* [대상 메타데이터 구성](destination-configuration/audience-metadata-configuration.md): 대상 이름 또는 ID와 같은 대상 메타데이터를 Experience Platform과 대상 간에 공유하는 방법에 대해 알아봅니다.
 * [집계 정책](destination-configuration/aggregation-policy.md): 대상에 대한 HTTP 요청을 그룹화하고 일괄 처리하는 방법을 결정하는 집계 정책을 설정하는 방법에 대해 알아봅니다.
 * [일괄 처리 구성](destination-configuration/batch-configuration.md): Experience Platform 사용자 인터페이스에서 대상에 연결할 때 사용자가 사용할 수 있는 다양한 파일 이름 지정 및 내보내기 예약 설정을 구성합니다.
 * [과거 프로필 자격 요건](destination-configuration/historical-profile-qualifications.md): Destination SDK으로 빌드된 대상에서 지원하는 내역 프로필 자격에 대해 알아봅니다.
 
 ## 대상 메타데이터 구성 {#audience-metadata-configuration}
 
-이 구성 요소를 사용하여 대상에서 대상/세그먼트를 프로그래밍 방식으로 생성, 업데이트 또는 삭제하는 방법을 구성할 수 있습니다. 파일 기반 대상의 경우 파일이 대상에 성공적으로 전달될 때마다 알림을 설정할 수 있습니다. 다음을 통해 이 기능을 구성할 수 있습니다. [대상 템플릿 끝점](../metadata-api/create-audience-template.md).
+이 구성 요소를 사용하여 대상에서 대상을 프로그래밍 방식으로 만들거나, 업데이트하거나, 삭제하는 방법을 구성할 수 있습니다. 파일 기반 대상의 경우 파일이 대상에 성공적으로 전달될 때마다 알림을 설정할 수 있습니다. 다음을 통해 이 기능을 구성할 수 있습니다. [대상 템플릿 끝점](../metadata-api/create-audience-template.md).
 
 ## 다음 단계 {#next-steps}
 

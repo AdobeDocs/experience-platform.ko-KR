@@ -3,10 +3,10 @@ keywords: 광고 대상;대상;플랫폼 대상
 title: 광고 대상 개요
 description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 이러한 플랫폼에 익명 대상을 공유합니다.'
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 732e6d3d53d983f3390941f4694d2c542d882004
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '258'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -38,7 +38,7 @@ Adobe Experience Platform을 수요 측 플랫폼(DSP), 공급 측 플랫폼(SSP
 * [Pinterest 고객 목록 연결](pinterest.md)
 * [(Beta) Snapchat Ads 연결](snap-inc.md)
 * [트레이드 데스크 연결](tradedesk.md)
-* [(Beta) 트레이드 데스크 CRM 연결](tradedesk-emails.md)
+* [(Beta) The Trade Desk CRM 연결](tradedesk-emails.md)
 * [Yahoo/Verizon 데이터 X](datax.md)
 
 ### 확장
@@ -59,4 +59,4 @@ Adobe Experience Platform을 수요 측 플랫폼(DSP), 공급 측 플랫폼(SSP
 
 ## 새 광고 대상에 연결 {#connect-destination}
 
-캠페인을 위한 광고 대상으로 세그먼트를 전송하려면 먼저 Platform이 대상에 연결해야 합니다. 다음을 참조하십시오. [대상 만들기 튜토리얼](../../ui/connect-destination.md) 새 대상 설정에 대한 자세한 정보.
+캠페인을 위해 대상을 광고 대상으로 보내려면 먼저 플랫폼에서 대상에 연결해야 합니다. 다음을 참조하십시오. [대상 만들기 튜토리얼](../../ui/connect-destination.md) 새 대상 설정에 대한 자세한 정보.

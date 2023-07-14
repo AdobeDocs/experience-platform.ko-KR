@@ -4,7 +4,7 @@ title: 대상 삭제
 type: Tutorial
 description: 이 자습서에는 Adobe Experience Platform UI에서 기존 대상을 삭제하는 단계가 나열되어 있습니다
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 1ef6430b6661a2b8b5aef196b75cfaf3f6220aab
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Adobe Experience Platform 사용자 인터페이스에서 대상에 대한 기존 연결을 삭제할 수 있습니다.
 
-대상을 삭제하면 해당 대상에 대한 기존 데이터 흐름이 모두 제거됩니다. 삭제한 대상에 활성화된 모든 세그먼트는 데이터 흐름이 삭제되기 전에 매핑되지 않습니다.
+대상을 삭제하면 해당 대상에 대한 기존 데이터 흐름이 모두 제거됩니다. 삭제한 대상에 활성화된 모든 대상은 데이터 흐름이 삭제되기 전에 매핑되지 않습니다.
 
 다음 두 가지 방법으로 대상에서 대상을 삭제할 수 있습니다. [!DNL Platform] [!DNL UI]. 다음을 수행할 수 있습니다.
 
@@ -61,11 +61,11 @@ Adobe Experience Platform 사용자 인터페이스에서 대상에 대한 기�
 
    * 대상에 기존 데이터 흐름이 있는 경우 [!UICONTROL 데이터 흐름 실행] 탭.
 
-      ![데이터 흐름 실행 탭](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![데이터 흐름 실행 탭](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * 대상에 기존 데이터 흐름이 없는 경우 대상 활성화를 시작할 수 있는 빈 페이지로 이동합니다.
 
-      ![대상 세부 사항](../assets/ui/delete-destinations/destination-details-empty.png)
+     ![대상 세부 사항](../assets/ui/delete-destinations/destination-details-empty.png)
 
 4. 선택 **[!UICONTROL 삭제]** 오른쪽 레일에서.
 

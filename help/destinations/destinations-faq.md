@@ -3,10 +3,10 @@ keywords: 대상; 질문; faq; faq; 대상 faq
 title: 자주 묻는 질문
 description: Adobe Experience Platform 대상에 대해 가장 자주 묻는 질문에 대한 답변
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 784c529691f2f550176080474f5091bfb1b84279
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1396'
-ht-degree: 3%
+source-wordcount: '1395'
+ht-degree: 4%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 3%
 
 +++답변 Experience Platform이 세그먼테이션을 수행하는 방식으로 인해 발생하는 일반적인 비헤이비어입니다.
 
-스트리밍 세그먼테이션은 하루 종일 스트리밍 세그먼트의 프로필 수를 업데이트하는 반면, 배치 세그먼테이션은 24시간마다 한 번씩 배치 세그먼트의 프로필 수를 업데이트합니다.
+스트리밍 세분화는 하루 종일 스트리밍 대상의 프로필 수를 업데이트하는 반면, 배치 세분화는 24시간마다 한 번씩 배치 대상의 프로필 수를 업데이트합니다.
 
-세그먼트 내보내기 일정이 세분화 일정과 다른 경우 프로필은 UI와 내보낸 프로필 간에 계산됩니다 [!DNL CSV] 파일은 특히 세그먼트 스트리밍과 관련하여 달라집니다.
+대상자 내보내기 일정이 세분화 일정과 다를 경우 프로필은 UI와 내보낸 프로필 간에 계산됩니다 [!DNL CSV] 특히 스트리밍 대상과 관련된 파일은 다를 수 있습니다.
 
 다음을 참조하십시오. [세그먼테이션 서비스 설명서](../segmentation/home.md) 을 참조하십시오.
 +++
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 ### 에서 대상자를 활성화하려면 먼저 무엇을 해야 합니까 [!DNL Facebook Custom Audiences]?
 
-+++대상 세그먼트를 보낼 수 있으려면 먼저 답변하십시오. [!DNL Facebook], 다음 요구 사항을 충족하는지 확인하십시오.
++++대상자를 다음으로 보내려면 먼저 답변하십시오. [!DNL Facebook], 다음 요구 사항을 충족하는지 확인하십시오.
 
 * 사용자 [!DNL Facebook] 사용자 계정에는 **[!DNL Manage campaigns]** 사용하려는 광고 계정에 대해 권한이 활성화되었습니다.
 * 다음 **Adobe Experience Cloud** 비즈니스 계정을 의 광고 파트너로 추가해야 합니다. [!DNL Facebook Ad Account]. `business ID=206617933627973` 사용. 다음을 참조하십시오 [비즈니스 관리자에 파트너 추가](https://www.facebook.com/business/help/1717412048538897) 자세한 내용은 Facebook 설명서 를 참조하십시오.
@@ -91,9 +91,9 @@ ID 일치 요구 사항에 대한 자세한 내용은 [ID 일치 요구 사항](
 
 ## Google Customer Match {#google-customer-match}
 
-### 세그먼트를 Google Customer Match로 내보낼 때 Google 인터페이스에 세그먼트 이름의 끝에 추가된 숫자가 표시되는 이유는 무엇입니까?
+### 대상을 Google Customer Match로 내보낼 때 Google 인터페이스의 대상 이름 끝에 추가된 숫자가 표시되는 이유는 무엇입니까?
 
-+++답변 Google을 사용하려면 세그먼트 이름이 고유해야 합니다. 지금 보시는 숫자는 다음과 같습니다 [UNIX 타임스탬프](https://www.unixtimestamp.com/) 또한 동일한 세그먼트를 여러 Google 대상에 매핑한 경우 세그먼트 이름을 고유하게 유지하기 위해 추가됩니다.
++++답변 Google을 사용하려면 대상 이름이 고유해야 합니다. 지금 보시는 숫자는 다음과 같습니다 [UNIX 타임스탬프](https://www.unixtimestamp.com/) 그리고 동일한 대상을 여러 Google 대상에 매핑한 경우 대상 이름을 고유하게 유지하기 위해 추가됩니다.
 +++
 
 ## LinkedIn과 일치하는 대상 {#linkedin}
@@ -174,7 +174,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 +++예, Edge Network Server API는 사용자 지정 개인화 대상에서 작동합니다. 프로필 속성에 중요한 데이터가 포함될 수 있으므로 이 데이터를 보호하려면 사용자 지정 개인화 대상에서 데이터 수집에 Edge Network Server API를 사용해야 합니다. 또한 모든 API 호출은 [인증된 컨텍스트](../server-api/authentication.md).
 +++
 
-### 에지 상에서 활성 상태인 병합 정책을 하나만 가질 수 있습니다. 다른 병합 정책을 사용하는 대상을 작성하고 이를 스트리밍 세그먼트로 Adobe Target에 보낼 수 있습니까?
+### 에지 상에서 활성 상태인 병합 정책을 하나만 가질 수 있습니다. 다른 병합 정책을 사용하는 대상을 작성하고 이를 스트리밍 대상으로 Adobe Target에 보낼 수 있습니까?
 
 +++아니요. Adobe Target에 활성화하려는 모든 대상은 Active-On-Edge를 사용해야 합니다 [병합 정책](../profile/merge-policies/ui-guide.md).
 +++

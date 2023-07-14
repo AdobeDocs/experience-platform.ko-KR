@@ -2,7 +2,7 @@
 description: 대상을 게시하기 전에 대상 테스트 API를 사용하여 스트리밍 대상 메시지 변환 템플릿을 테스트하는 방법을 알아봅니다.
 title: 메시지 변형 템플릿 만들기 및 테스트
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Adobe은 Destination SDK의 일부로 대상을 구성하고 테스트하는 데
 
 ## 메시지 변형 템플릿을 만들고 테스트해야 하는 이유 {#why-create-message-transformation-template}
 
-Destination SDK에서 대상을 만드는 첫 번째 단계 중 하나는 Adobe Experience Platform에서 대상으로 내보낼 때 세그먼트 멤버십, ID 및 프로필 속성에 대한 데이터 형식이 변환되는 방법을 생각하는 것입니다. 에서 Adobe XDM 스키마와 대상 스키마 간의 변환에 대한 정보를 찾습니다. [메시지 포맷 문서](../../functionality/destination-server/message-format.md#using-templating).
+Destination SDK에서 대상을 만드는 첫 번째 단계 중 하나는 Adobe Experience Platform에서 대상으로 내보낼 때 대상 멤버십, ID 및 프로필 속성에 대한 데이터 형식이 변환되는 방법을 생각하는 것입니다. 에서 Adobe XDM 스키마와 대상 스키마 간의 변환에 대한 정보를 찾습니다. [메시지 포맷 문서](../../functionality/destination-server/message-format.md#using-templating).
 
 변환이 성공하려면 다음 예제와 유사한 변환 템플릿을 제공해야 합니다. [세그먼트, ID 및 프로필 속성을 보내는 템플릿 만들기](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
@@ -38,8 +38,8 @@ Adobe은 Adobe XDM 형식의 데이터를 대상에서 지원하는 형식으로
 템플릿을 만들기 전에 아래 단계를 완료하십시오.
 
 1. [대상 서버 구성 만들기](../../authoring-api/destination-server/create-destination-server.md). 생성할 템플릿은에 제공하는 값에 따라 다릅니다. `maxUsersPerRequest` 매개 변수.
-   * 사용 `maxUsersPerRequest=1` 대상에 대한 API 호출에 단일 프로필과 함께 해당 세그먼트 자격, ID 및 프로필 속성을 포함하려는 경우.
-   * 사용 `maxUsersPerRequest` 1보다 큰 값으로, 대상에 대한 API 호출이 세그먼트 자격, ID 및 프로필 속성과 함께 여러 프로필을 포함하도록 하려는 경우 입니다.
+   * 사용 `maxUsersPerRequest=1` 대상에 대한 API 호출에 대상 자격, ID 및 프로필 속성과 함께 단일 프로필을 포함하려는 경우.
+   * 사용 `maxUsersPerRequest` 에 대한 API 호출이 대상 자격, ID 및 프로필 속성과 함께 여러 프로필을 포함하도록 하려면 1보다 큰 값을 사용합니다.
 2. [대상 구성 만들기](../../authoring-api/destination-configuration/create-destination-configuration.md) 대상 서버 구성의 ID 추가 `destinationDelivery.destinationServerId`.
 3. [대상 구성의 ID 가져오기](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) 템플릿 만들기 도구에서 사용할 수 있도록 방금 만든 것입니다.
 4. 이해 [사용할 수 있는 함수 및 필터](../../functionality/destination-server/supported-functions.md) 를 입력합니다.
@@ -100,7 +100,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
         {% endfor %}
         ],
         "remove": [
-        {#- Alternative syntax for filtering segments by status: -#}
+        {#- Alternative syntax for filtering audiences by status: -#}
         {% for segment in removedSegments(input.profile.segmentMembership.ups) %}
             "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
         {% endfor %}
@@ -136,7 +136,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
                 {% endfor %}
                 ],
                 "remove": [
-                {#- Alternative syntax for filtering segments by status: -#}
+                {#- Alternative syntax for filtering audiences by status: -#}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
                 {% endfor %}

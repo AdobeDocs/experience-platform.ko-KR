@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 배치 대상에 연결하고 데이
 description: 플로우 서비스 API를 사용하여 Experience Platform 시 일괄 클라우드 스토리지 또는 이메일 마케팅 대상을 만들고 데이터를 활성화하는 단계별 지침
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '3402'
+source-wordcount: '3399'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 이 튜토리얼에서는 [!DNL Adobe Campaign] 대상 모든 예에서 동일하지만 단계는 모든 일괄 처리 클라우드 스토리지 및 이메일 마케팅 대상에 대해 동일합니다.
 
-![개요 - 대상을 만들고 세그먼트를 활성화하는 단계](../assets/api/email-marketing/overview.png)
+![개요 - 대상을 만들고 대상을 활성화하는 단계](../assets/api/email-marketing/overview.png)
 
 플랫폼 사용자 인터페이스를 사용하여 대상에 연결하고 데이터를 활성화하려면 다음을 참조하십시오. [대상 연결](../ui/connect-destination.md) 및 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../ui/activate-batch-profile-destinations.md) 튜토리얼.
 
@@ -35,14 +35,14 @@ ht-degree: 1%
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] 에서 세그먼트를 작성하고 대상자를 생성할 수 있습니다. [!DNL Adobe Experience Platform] (으)로부터 [!DNL Real-Time Customer Profile] 데이터.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] 에서 대상을 작성할 수 있습니다. [!DNL Adobe Experience Platform] (으)로부터 [!DNL Real-Time Customer Profile] 데이터.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 만드는 가상 샌드박스를 제공합니다. [!DNL Platform] 인스턴스를 별도의 가상 환경으로 전환하여 디지털 경험 애플리케이션을 개발하고 발전시킵니다.
 
 다음 섹션은 Platform의 배치 대상으로 데이터를 활성화하기 위해 알아야 하는 추가 정보를 제공합니다.
 
 ### 필요한 자격 증명 수집 {#gather-required-credentials}
 
-이 자습서의 단계를 완료하려면 세그먼트를 연결 및 활성화하는 대상 유형에 따라 다음 자격 증명을 준비해야 합니다.
+이 자습서의 단계를 완료하려면 대상을 연결하고 활성화하는 대상 유형에 따라 다음 자격 증명을 준비해야 합니다.
 
 * 대상 [!DNL Amazon S3] 연결: `accessId`, `secretKey`
 * 대상 [!DNL Amazon S3] 에 대한 연결 [!DNL Adobe Campaign]: `accessId`, `secretKey`
@@ -85,7 +85,7 @@ ht-degree: 1%
 
 ![대상 단계 개요 1단계](../assets/api/batch-destination/step1.png)
 
-첫 번째 단계로 데이터를 활성화할 대상을 결정해야 합니다. 시작하려면 호출을 수행하여 세그먼트를 연결 및 활성화할 수 있는 사용 가능한 대상 목록을 요청합니다. 에 다음 GET 요청을 수행합니다. `connectionSpecs` 사용 가능한 대상 목록을 반환하는 끝점:
+첫 번째 단계로 데이터를 활성화할 대상을 결정해야 합니다. 먼저, 대상자를 연결하고 활성화할 수 있는 사용 가능한 대상 목록을 요청하는 호출을 수행합니다. 에 다음 GET 요청을 수행합니다. `connectionSpecs` 사용 가능한 대상 목록을 반환하는 끝점:
 
 **API 형식**
 
@@ -107,7 +107,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **응답**
 
-성공적인 응답에는 사용 가능한 대상 목록과 해당 고유 식별자(`id`). 사용할 대상의 값을 저장합니다. 이 값은 이후 단계에서 필수입니다. 예를 들어 세그먼트를 연결하고 전달하려는 경우 [!DNL Adobe Campaign]응답에서 다음 코드 조각을 찾습니다.
+성공적인 응답에는 사용 가능한 대상 목록과 해당 고유 식별자(`id`). 사용할 대상의 값을 저장합니다. 이 값은 이후 단계에서 필수입니다. 예를 들어 대상자를 (으)로 연결하여 전달하려는 경우 [!DNL Adobe Campaign]응답에서 다음 코드 조각을 찾습니다.
 
 ```json
 {
@@ -886,8 +886,8 @@ curl -X POST \
 -H 'Content-Type: application/json' \
 -d  '{
    
-        "name": "Activate segments to Adobe Campaign",
-        "description": "This operation creates a dataflow which we will later use to activate segments to Adobe Campaign",
+        "name": "activate audiences to Adobe Campaign",
+        "description": "This operation creates a dataflow which we will later use to activate audiences to Adobe Campaign",
         "flowSpec": {
             "id": "{FLOW_SPEC_ID}",
             "version": "1.0"
@@ -921,7 +921,7 @@ curl -X POST \
 | `flowSpec.Id` | 연결할 배치 대상에 대해 흐름 사양 ID를 사용합니다. GET 흐름 사양 ID를 검색하려면 `flowspecs` 에 표시된 대로 엔드포인트 [흐름 사양 API 참조 설명서](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). 응답에서 다음을 찾습니다. `upsTo` 연결할 배치 대상의 해당 ID를 복사합니다. 예를 들어 Adobe Campaign의 경우 `upsToCampaign` 및 복사 `id` 매개 변수. |
 | `sourceConnectionIds` | 단계에서 얻은 소스 연결 ID를 사용합니다 [Experience Platform 데이터에 연결](#connect-to-your-experience-platform-data). |
 | `targetConnectionIds` | 단계에서 얻은 대상 연결 ID를 사용합니다 [배치 대상에 연결](#connect-to-batch-destination). |
-| `transformations` | 다음 단계에서는 이 섹션을 활성화할 세그먼트 및 프로필 속성으로 채웁니다. |
+| `transformations` | 다음 단계에서는 이 섹션을 활성화할 대상 및 프로필 속성으로 채웁니다. |
 
 아래 표에는 일반적으로 사용되는 배치 대상에 대한 흐름 사양 ID가 포함되어 있습니다.
 
@@ -933,7 +933,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 ID( )를 반환합니다.`id`)을 사용하여 새로 만든 데이터 흐름 및 `etag`. 세그먼트를 활성화하고 데이터 파일을 내보내려면 다음 단계에서 필요한 대로 두 값을 모두 메모하십시오.
+성공적인 응답은 ID( )를 반환합니다.`id`)을 사용하여 새로 만든 데이터 흐름 및 `etag`. 다음 단계에서 필요한 대로 두 값을 모두 기록하여 대상을 활성화하고 데이터 파일을 내보냅니다.
 
 ```json
 {
@@ -947,11 +947,11 @@ curl -X POST \
 
 ![대상 단계 개요 5단계](../assets/api/batch-destination/step5.png)
 
-모든 연결 및 데이터 흐름을 만들었으므로 이제 프로필 데이터를 대상 플랫폼에 활성화할 수 있습니다. 이 단계에서는 대상으로 내보낼 세그먼트와 프로필 속성을 선택합니다.
+모든 연결 및 데이터 흐름을 만들었으므로 이제 프로필 데이터를 대상 플랫폼에 활성화할 수 있습니다. 이 단계에서는 대상으로 내보낼 대상과 프로필 속성을 선택합니다.
 
 또한 내보낸 파일의 파일 이름 지정 형식과 사용할 특성을 결정할 수 있습니다. [중복 제거 키](../ui/activate-batch-profile-destinations.md#mandatory-keys) 또는 [필수 속성](../ui/activate-batch-profile-destinations.md#mandatory-attributes). 이 단계에서는 데이터를 대상으로 전송하는 일정을 결정할 수도 있습니다.
 
-새 대상에 세그먼트를 활성화하려면 아래 예제와 유사한 JSON PATCH 작업을 수행해야 합니다. 한 번의 호출로 여러 세그먼트 및 프로필 속성을 활성화할 수 있습니다. JSON PATCH에 대한 자세한 내용은 [RFC 사양](https://tools.ietf.org/html/rfc6902).
+새 대상에 대상을 활성화하려면 아래 예제와 유사한 JSON PATCH 작업을 수행해야 합니다. 한 번의 호출로 여러 대상과 프로필 속성을 활성화할 수 있습니다. JSON PATCH에 대한 자세한 내용은 [RFC 사양](https://tools.ietf.org/html/rfc6902).
 
 **API 형식**
 
@@ -976,8 +976,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "value": {
             "type": "PLATFORM_SEGMENT",
             "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
+                "name": "Name of the audience that you are activating",
+                "description": "Description of the audience that you are activating",
                 "id": "{SEGMENT_ID}",
                 "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
                 "exportMode": "DAILY_FULL_EXPORT",
@@ -995,8 +995,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "value": {
             "type": "PLATFORM_SEGMENT",
             "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
+                "name": "Name of the audience that you are activating",
+                "description": "Description of the audience that you are activating",
                 "id": "{SEGMENT_ID}",
                 "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
                 "exportMode": "DAILY_FULL_EXPORT",
@@ -1026,26 +1026,26 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | URL에서 이전 단계에서 생성한 데이터 흐름의 ID를 사용합니다. |
 | `{ETAG}` | 가져오기 `{ETAG}` 이전 단계의 응답에서 [데이터 흐름 만들기](#create-dataflow). 이전 단계의 응답 형식에서 따옴표를 이스케이프 처리했습니다. 요청의 헤더에서 이스케이프되지 않은 값을 사용해야 합니다. 아래 예를 참조하십시오. <br> <ul><li>응답 예: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>요청에 사용할 값: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> 데이터 흐름이 성공적으로 업데이트될 때마다 etag 값이 업데이트됩니다. |
-| `{SEGMENT_ID}` | 이 대상으로 내보낼 세그먼트 ID를 입력합니다. 활성화하려는 세그먼트의 세그먼트 ID를 검색하려면 다음을 참조하십시오. [세그먼트 정의 검색](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) Experience Platform API 참조. |
+| `{SEGMENT_ID}` | 이 대상으로 내보낼 대상 ID를 제공합니다. 활성화하려는 대상의 대상 ID를 검색하려면 을 참조하십시오. [대상 정의 검색](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) Experience Platform API 참조. |
 | `{PROFILE_ATTRIBUTE}` | 예, `"person.lastName"` |
-| `op` | 데이터 흐름을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 다음이 포함됩니다. `add`, `replace`, 및 `remove`. 데이터 흐름에 세그먼트를 추가하려면 `add` 작업. |
-| `path` | 플로우에서 업데이트할 부분을 정의합니다. 데이터 흐름에 세그먼트를 추가할 때 예제에 지정된 경로를 사용합니다. |
+| `op` | 데이터 흐름을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 다음이 포함됩니다. `add`, `replace`, 및 `remove`. 데이터 흐름에 대상을 추가하려면 `add` 작업. |
+| `path` | 플로우에서 업데이트할 부분을 정의합니다. 데이터 흐름에 대상을 추가할 때는 예제에 지정된 경로를 사용하십시오. |
 | `value` | 매개 변수를 업데이트할 새 값입니다. |
-| `id` | 대상 데이터 흐름에 추가할 세그먼트의 ID를 지정합니다. |
-| `name` | *선택 사항입니다*. 대상 데이터 흐름에 추가할 세그먼트의 이름을 지정합니다. 이 필드는 필수가 아니므로 이름을 제공하지 않고 대상 데이터 흐름에 세그먼트를 추가할 수 있습니다. |
-| `filenameTemplate` | 이 필드는 대상으로 내보내는 파일의 파일 이름 형식을 결정합니다. <br> 다음 옵션을 사용할 수 있습니다: <br> <ul><li>`%DESTINATION_NAME%`: 필수입니다. 내보낸 파일에는 대상 이름이 포함되어 있습니다.</li><li>`%SEGMENT_ID%`: 필수입니다. 내보낸 파일에는 내보낸 세그먼트의 ID가 포함되어 있습니다.</li><li>`%SEGMENT_NAME%`: 선택 사항입니다. 내보낸 파일에는 내보낸 세그먼트의 이름이 포함됩니다.</li><li>`DATETIME(YYYYMMdd_HHmmss)` 또는 `%TIMESTAMP%`: 선택 사항입니다. 다음 두 옵션 중 하나를 선택하여 Experience Platform으로 생성된 시간을 파일에 포함합니다.</li><li>`custom-text`: 선택 사항입니다. 이 자리 표시자를 파일 이름 끝에 추가할 사용자 지정 텍스트로 바꿉니다.</li></ul> <br> 파일 이름 구성에 대한 자세한 내용은 [파일 이름 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 배치 대상 활성화 자습서의 섹션입니다. |
+| `id` | 대상 데이터 흐름에 추가할 대상자의 ID를 지정합니다. |
+| `name` | *선택 사항입니다*. 대상 데이터 흐름에 추가할 대상자의 이름을 지정합니다. 이 필드는 필수가 아니므로 이름을 제공하지 않고 대상 데이터 흐름에 대상을 성공적으로 추가할 수 있습니다. |
+| `filenameTemplate` | 이 필드는 대상으로 내보내는 파일의 파일 이름 형식을 결정합니다. <br> 다음 옵션을 사용할 수 있습니다: <br> <ul><li>`%DESTINATION_NAME%`: 필수입니다. 내보낸 파일에는 대상 이름이 포함되어 있습니다.</li><li>`%SEGMENT_ID%`: 필수입니다. 내보낸 파일에는 내보낸 대상자의 ID가 들어 있습니다.</li><li>`%SEGMENT_NAME%`: 선택 사항입니다. 내보낸 파일에는 내보낸 대상자의 이름이 포함됩니다.</li><li>`DATETIME(YYYYMMdd_HHmmss)` 또는 `%TIMESTAMP%`: 선택 사항입니다. 다음 두 옵션 중 하나를 선택하여 Experience Platform으로 생성된 시간을 파일에 포함합니다.</li><li>`custom-text`: 선택 사항입니다. 이 자리 표시자를 파일 이름 끝에 추가할 사용자 지정 텍스트로 바꿉니다.</li></ul> <br> 파일 이름 구성에 대한 자세한 내용은 [파일 이름 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 배치 대상 활성화 자습서의 섹션입니다. |
 | `exportMode` | 필수입니다. `"DAILY_FULL_EXPORT"` 또는`"FIRST_FULL_THEN_INCREMENTAL"`를 선택합니다. 두 옵션에 대한 자세한 내용은 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 배치 대상 활성화 자습서에서 다음을 수행합니다. |
-| `startDate` | 세그먼트가 대상으로 프로필 내보내기를 시작할 날짜를 선택합니다. |
+| `startDate` | 대상자가 대상으로 프로필 내보내기를 시작할 날짜를 선택합니다. |
 | `frequency` | 필수입니다. <br> <ul><li>의 경우 `"DAILY_FULL_EXPORT"` 내보내기 모드에서 다음을 선택할 수 있습니다. `ONCE` 또는 `DAILY`.</li><li>의 경우 `"FIRST_FULL_THEN_INCREMENTAL"` 내보내기 모드에서 다음을 선택할 수 있습니다. `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | 대상 *일괄 처리 대상* 만 해당. 이 필드는 을(를) 선택할 때만 필요합니다. `"DAILY_FULL_EXPORT"` 의 모드 `frequency` 선택기. <br> 필수입니다. <br> <ul><li>선택 `"AFTER_SEGMENT_EVAL"` 매일 플랫폼 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행하도록 합니다. 이렇게 하면 활성화 작업이 실행될 때 가장 최신 프로필을 대상으로 내보냅니다.</li><li>선택 `"SCHEDULED"` 고정된 시간에 활성화 작업을 실행합니다. 이렇게 하면 Experience Platform 프로필 데이터를 매일 동시에 내보낼 수 있지만 활성화 작업이 시작되기 전에 배치 세분화 작업이 완료되었는지 여부에 따라 내보내는 프로필이 최신 프로필이 아닐 수 있습니다. 이 옵션을 선택할 때는 `startTime` 일별 내보내기가 발생하는 시간을 UTC로 표시합니다.</li></ul> |
-| `endDate` | 대상 *일괄 처리 대상* 만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 세그먼트를 추가할 때만 필요합니다. <br> 선택 시 적용할 수 없음 `"exportMode":"DAILY_FULL_EXPORT"` 및 `"frequency":"ONCE"`. <br> 세그먼트 멤버의 대상 내보내기를 중지할 날짜를 설정합니다. |
-| `startTime` | 대상 *일괄 처리 대상* 만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 세그먼트를 추가할 때만 필요합니다. <br> 필수입니다. 세그먼트의 멤버가 포함된 파일을 생성하여 대상으로 내보내야 하는 시간을 선택합니다. |
+| `endDate` | 대상 *일괄 처리 대상* 만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br> 선택 시 적용할 수 없음 `"exportMode":"DAILY_FULL_EXPORT"` 및 `"frequency":"ONCE"`. <br> 대상 구성원의 대상 내보내기를 중지할 날짜를 설정합니다. |
+| `startTime` | 대상 *일괄 처리 대상* 만 해당. 이 필드는 Amazon S3, SFTP 또는 Azure Blob와 같은 배치 파일 내보내기 대상의 데이터 흐름에 대상을 추가할 때만 필요합니다. <br> 필수입니다. 대상자의 멤버가 포함된 파일을 생성하여 대상으로 내보내야 하는 시간을 선택합니다. |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
-> 다음을 참조하십시오 [데이터 흐름에서 세그먼트의 구성 요소 업데이트](/help/destinations/api/update-destination-dataflows.md#update-segment) 내보낸 세그먼트의 다양한 구성 요소(파일 이름 템플릿, 내보내기 시간 등)를 업데이트하는 방법을 알아봅니다.
+> 다음을 참조하십시오 [데이터 흐름에서 대상의 구성 요소 업데이트](/help/destinations/api/update-destination-dataflows.md#update-segment) 내보낸 대상의 다양한 구성 요소(파일 이름 템플릿, 내보내기 시간 등)를 업데이트하는 방법을 알아봅니다.
 
 **응답**
 
@@ -1055,7 +1055,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ![대상 단계 개요 6단계](../assets/api/batch-destination/step6.png)
 
-자습서의 마지막 단계에서는 세그먼트 및 프로필 속성이 실제로 데이터 흐름에 올바르게 매핑되었는지 확인해야 합니다.
+자습서의 마지막 단계에서는 대상 및 프로필 속성이 실제로 데이터 흐름에 올바르게 매핑되었는지 확인해야 합니다.
 
 유효성을 검사하려면 다음 GET 요청을 수행하십시오.
 
@@ -1082,7 +1082,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **응답**
 
-반환된 응답은에 포함되어야 합니다. `transformations` 이전 단계에서 제출한 세그먼트 및 프로필 속성에 대한 매개 변수를 지정합니다. 샘플 `transformations` 응답의 매개 변수는 다음과 같습니다.
+반환된 응답은에 포함되어야 합니다. `transformations` 매개 변수는 이전 단계에서 제출한 대상자 및 프로필 속성입니다. 샘플 `transformations` 응답의 매개 변수는 다음과 같습니다.
 
 ```json
 "transformations":[

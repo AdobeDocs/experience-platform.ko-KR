@@ -3,9 +3,9 @@ keywords: google 고객 일치;Google 고객 일치;Google 고객 일치
 title: Google Customer Match 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail 및 YouTube과 같은 Google의 소유 및 운영되는 속성에서 고객에게 연락하고 다시 연결할 수 있습니다.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: d6b34f3bd3a432e1cf7d3dcce242934391b65d78
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1818'
 ht-degree: 1%
 
 ---
@@ -24,13 +24,13 @@ ht-degree: 1%
 
 ### 사용 사례 #1
 
-한 스포츠 의류 브랜드는 다음을 통해 기존 고객에게 도달하기를 원합니다. [!DNL Google Search] 및 [!DNL Google Shopping] 과거의 구매 및 검색 기록을 기반으로 오퍼와 항목을 개인화합니다. 의류 브랜드는 자체 CRM에서 Experience Platform으로 이메일 주소를 수집하고 자체 오프라인 데이터에서 세그먼트를 작성할 수 있습니다. 그런 다음 이러한 세그먼트를 로 보낼 수 있습니다 [!DNL Google Customer Match] 다음에 사용될 수 있음 [!DNL Search] 및 [!DNL Shopping], 광고 지출 최적화.
+한 스포츠 의류 브랜드는 다음을 통해 기존 고객에게 도달하기를 원합니다. [!DNL Google Search] 및 [!DNL Google Shopping] 과거의 구매 및 검색 기록을 기반으로 오퍼와 항목을 개인화합니다. 의류 브랜드는 자체 CRM에서 Experience Platform으로 이메일 주소를 수집하고 자체 오프라인 데이터에서 대상을 구축할 수 있습니다. 그런 다음 대상자를 (으)로 보낼 수 있습니다. [!DNL Google Customer Match] 다음에 사용될 수 있음 [!DNL Search] 및 [!DNL Shopping], 광고 지출 최적화.
 
 ### 사용 사례 #2
 
 한 저명한 기술 회사가 새 전화기를 출시했다. 이 새로운 폰 모델을 홍보하기 위해, 그들은 이전 폰 모델을 소유한 고객들에게 이 폰의 새로운 기능과 기능성에 대한 인지도를 높이고자 한다.
 
-릴리스를 홍보하기 위해 이메일 주소를 식별자로 사용하여 CRM 데이터베이스의 이메일 주소를 Experience Platform에 업로드합니다. 세그먼트는 이전 휴대폰 모델을 소유한 고객을 기반으로 만들어집니다. 그런 다음 세그먼트가 (으)로 전송됩니다 [!DNL Google Customer Match], 따라서 현재 고객, 이전 휴대폰 모델을 보유한 고객 및 다음과 유사한 고객을 타겟팅할 수 있습니다. [!DNL YouTube].
+릴리스를 홍보하기 위해 이메일 주소를 식별자로 사용하여 CRM 데이터베이스의 이메일 주소를 Experience Platform에 업로드합니다. 대상은 이전 휴대폰 모델을 소유한 고객을 기반으로 만들어집니다. 그러면 대상자가에 전송됩니다. [!DNL Google Customer Match], 따라서 현재 고객, 이전 휴대폰 모델을 보유한 고객 및 다음과 유사한 고객을 타겟팅할 수 있습니다. [!DNL YouTube].
 
 ## 데이터 거버넌스 [!DNL Google Customer Match] 대상 {#data-governance}
 
@@ -50,14 +50,28 @@ Experience Platform의 일부 대상에는 대상 플랫폼으로 보내거나 �
 
 {style="table-layout:auto"}
 
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+
+모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+
+| 대상자 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+
+{style="table-layout:auto"}
+
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | 에 사용된 식별자(이름, 전화번호 등)를 사용하여 세그먼트(대상자)의 모든 구성원을 내보냅니다. [!DNL Google Customer Match] 대상. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | 에 사용된 식별자(이름, 전화번호 등)를 사용하여 대상자의 모든 구성원을 내보냅니다. [!DNL Google Customer Match] 대상. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -117,7 +131,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 <!-- ## Configure destination - video walkthrough {#video}
 
-The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
+The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
@@ -141,22 +155,21 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 >
 > * 다음 **[!UICONTROL PII와 결합]** 마케팅 액션은 다음에 대해 기본적으로 선택됩니다. [!DNL Google Customer Match] 대상 및 을(를) 제거할 수 없습니다.
 
-
 ### 경고 활성화 {#enable-alerts}
 
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 다음 안내서를 참조하십시오. [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-다음을 참조하십시오 [대상 데이터를 스트리밍 세그먼트 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+다음을 참조하십시오 [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
-다음에서 **[!UICONTROL 세그먼트 일정]** 단계, 다음을 제공해야 합니다. [!UICONTROL 앱 ID] 전송 시 [!DNL IDFA] 또는 [!DNL GAID] 세그먼트 대상 [!DNL Google Customer Match].
+다음에서 **[!UICONTROL 세그먼트 일정]** 단계, 다음을 제공해야 합니다. [!UICONTROL 앱 ID] 전송 시 [!DNL IDFA] 또는 [!DNL GAID] 대상: [!DNL Google Customer Match].
 
 ![Google 고객 일치 앱 ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -191,11 +204,11 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 ![ID 매핑 변환](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
-## 세그먼트 활성화가 성공했는지 확인 {#verify-activation}
+## 대상자 활성화가 성공했는지 확인 {#verify-activation}
 
-활성화 흐름을 완료한 후 (으)로 전환합니다. **[!UICONTROL Google 광고]** 계정입니다. 활성화된 세그먼트는 Google 계정에 고객 목록으로 표시됩니다. 세그먼트 크기에 따라 제공할 활성 사용자가 100명을 넘지 않는 한 일부 대상은 채워지지 않습니다.
+활성화 흐름을 완료한 후 (으)로 전환합니다. **[!UICONTROL Google 광고]** 계정입니다. 활성화된 대상은 Google 계정에 고객 목록으로 표시됩니다. 대상 크기에 따라 제공할 활성 사용자가 100명을 넘지 않는 한 일부 대상은 채워지지 않습니다.
 
-세그먼트를 두 세그먼트 모두에 매핑할 때 [!DNL IDFA] 및 [!DNL GAID] 모바일 ID, [!DNL Google Customer Match] 는 각 ID 매핑에 대해 별도의 세그먼트를 만듭니다. 사용자 [!DNL Google Ads] account에는 두 개의 서로 다른 세그먼트가 표시되며, 하나는 [!DNL IDFA], 및 용 1개 [!DNL GAID] 매핑.
+대상자를 두 대상에 매핑할 때 [!DNL IDFA] 및 [!DNL GAID] 모바일 ID, [!DNL Google Customer Match] 는 각 ID 매핑에 대해 별도의 대상을 만듭니다. 사용자 [!DNL Google Ads] account에는 두 개의 서로 다른 세그먼트가 표시되며, 하나는 [!DNL IDFA], 및 용 1개 [!DNL GAID] 매핑.
 
 ## 문제 해결 {#troubleshooting}
 

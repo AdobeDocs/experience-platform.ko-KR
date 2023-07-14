@@ -1,7 +1,7 @@
 ---
 description: Experience Platform Destination SDK은 페블 템플릿을 사용하므로 Experience Platform에서 내보낸 데이터를 대상에 필요한 형식으로 변환할 수 있습니다.
 title: Destination SDK에서 지원되는 변환 함수
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 3%
@@ -29,7 +29,7 @@ Experience Platform [!DNL Pebble] 에서 제공하는 기본 버전에 비해 �
 
 이 참조 페이지의 개념과 기능을 이해하려면 [메시지 포맷](message-format.md) 문서 먼저. 다음을 이해해야 합니다. [프로필 구조](message-format.md#profile-structure) 을(를) 사용하기 전에 Experience Platform에서 [!DNL Pebble] 및 내보낸 데이터를 변환할 템플릿.
 
-아래 문서화된 기능으로 이동하기 전에 섹션의 템플릿 예를 검토하십시오 [ID, 속성 및 세그먼트 멤버십 변환에 템플릿 언어 사용](message-format.md#using-templating). 이 예제들의 시작은 매우 간단하고 복잡성이 증가합니다.
+아래 문서화된 기능으로 이동하기 전에 섹션의 템플릿 예를 검토하십시오 [ID, 속성 및 대상자 멤버십 변환에 템플릿 언어 사용](message-format.md#using-templating). 이 예제들의 시작은 매우 간단하고 복잡성이 증가합니다.
 
 ## 지원됨 [!DNL Pebble] 함수 {#supported-functions}
 
@@ -46,7 +46,6 @@ Experience Platform [!DNL Pebble] 에서 제공하는 기본 버전에 비해 �
 >
 > * 배열 요소의 예제를 보려면 [identityMap](message-format.md#identities) 네임스페이스: 다음과 같은 요소를 반복할 수 있습니다. `identityMap.gaid`, `identityMap.email`또는 이와 유사한 형식으로 프로필 스크립트에서 참조할 수 있습니다.
 > * 맵 요소의 예제에 대해 생각해 보십시오 [segmentMembership](message-format.md#segment-membership).
-
 
 다음에서 [!DNL Pebble] 필터 섹션, Destination SDK은 모든 함수를 지원합니다. 아래 예는 다음 방법을 보여 줍니다. `date` 함수는 Destination SDK 내에서 사용할 수 있습니다.
 
@@ -92,7 +91,7 @@ Experience Platform [!DNL Pebble] 에서 제공하는 기본 버전에 비해 �
 
 #### 사용 사례
 
-이러한 함수는 프로필에 추가되거나 제거된 세그먼트 목록을 가져올 때 사용할 수 있습니다.
+이러한 함수는 프로필에 추가되거나 제거된 대상자 목록을 가져올 때 사용할 수 있습니다.
 
 #### 예
 
@@ -143,7 +142,7 @@ added: <111111><333333>; removed: <222222>
 
 <!--
 
-### Added and removed segments filters {#added-and-removed-segmnts-filters}
+### Added and removed audiences filters {#added-and-removed-segmnts-filters}
 
 #### Use case {#use-case}
 

@@ -2,10 +2,10 @@
 title: SFTP 연결
 description: SFTP 서버에 대한 실시간 아웃바운드 연결을 생성하여 구분된 데이터 파일을 정기적으로 Adobe Experience Platform에서 내보냅니다.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 5af201858e00f5ccdee4d68f04d37bc5f69caf9c
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 7%
+source-wordcount: '1043'
+ht-degree: 6%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 7%
 >데이터 세트 내보내기 기능의 베타 릴리스와 향상된 파일 내보내기 기능으로 이제 두 가지가 표시될 수 있습니다 [!DNL SFTP] 대상 카탈로그의 카드.
 >* 이미 파일을 로 내보내고 있는 경우 **[!UICONTROL SFTP]** 대상: 새 데이터 흐름을 만드십시오. **[!UICONTROL SFTP 베타]** 대상.
 >* 에 대한 데이터 흐름을 아직 만들지 않은 경우 **[!UICONTROL SFTP]** 대상, 새 항목 사용 **[!UICONTROL SFTP 베타]** 파일을 내보낼 카드 **[!UICONTROL SFTP]**.
-
 
 ![두 SFTP 대상 카드의 나란히 표시되는 이미지입니다.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
 
@@ -39,8 +38,22 @@ SFTP 서버에 대한 실시간 아웃바운드 연결을 생성하여 구분된
 
 ## API 또는 UI를 통해 SFTP에 연결 {#connect-api-or-ui}
 
-* Platform 사용자 인터페이스를 사용하여 SFTP 저장소 위치에 연결하려면 섹션을 참조하십시오 [대상에 연결](#connect) 및 [이 대상에 대한 세그먼트 활성화](#activate) 아래요.
-* SFTP 저장소 위치에 프로그래밍 방식으로 연결하려면 [흐름 서비스 API 자습서를 사용하여 세그먼트를 파일 기반 대상으로 활성화](../../api/activate-segments-file-based-destinations.md).
+* Platform 사용자 인터페이스를 사용하여 SFTP 저장소 위치에 연결하려면 섹션을 참조하십시오 [대상에 연결](#connect) 및 [이 대상에 대상자 활성화](#activate) 아래요.
+* SFTP 저장소 위치에 프로그래밍 방식으로 연결하려면 [흐름 서비스 API 튜토리얼을 사용하여 파일 기반 대상에 대한 대상자 활성화](../../api/activate-segments-file-based-destinations.md).
+
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+
+모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+
+| 대상자 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+
+{style="table-layout:auto"}
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -85,7 +98,7 @@ SFTP 서버에 대한 실시간 아웃바운드 연결을 생성하여 구분된
 * **[!UICONTROL 암호]**: SFTP 저장소 위치에 로그인하기 위한 암호입니다.
 * **[!UICONTROL 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 을(를) 선택하는 경우 **[!UICONTROL SSH 키가 포함된 SFTP]** SFTP 위치에 연결하는 인증 유형:
@@ -98,7 +111,7 @@ SFTP 서버에 대한 실시간 아웃바운드 연결을 생성하여 구분된
 * **[!UICONTROL SSH 키]**: SFTP 저장소 위치에 로그인하는 데 사용되는 개인 SSH 키입니다. 비공개 키 형식은 Base64 인코딩된 문자열로 지정하며 암호로 보호해서는 안 됩니다.
 * **[!UICONTROL 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 대상 세부 사항 {#destination-details}
 
@@ -113,13 +126,13 @@ SFTP 위치에 인증 연결을 설정한 후 대상에 대해 다음 정보를 
 * **[!UICONTROL 압축 포맷]**: 내보낸 파일에 대해 Experience Platform이 사용해야 하는 압축 유형을 선택합니다. 이 옵션은 에만 사용할 수 있습니다. **[!UICONTROL SFTP 베타]** 대상.
 * **[!UICONTROL 매니페스트 파일 포함]**: 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함된 매니페스트 JSON 파일을 내보내기에 포함하려면 이 옵션을 켜거나 끕니다. 이 옵션은 에만 사용할 수 있습니다. **[!UICONTROL SFTP 베타]** 대상.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ## (베타) 데이터 세트 내보내기 {#export-datasets}
 
@@ -130,7 +143,7 @@ SFTP 위치에 인증 연결을 설정한 후 대상에 대해 다음 정보를 
 
 ## 내보낸 데이터 {#exported-data}
 
-대상 [!DNL SFTP] 대상, 플랫폼에서 다음을 생성합니다. `.csv` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 세그먼트 활성화 자습서에서 참조하십시오.
+대상 [!DNL SFTP] 대상, 플랫폼에서 다음을 생성합니다. `.csv` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) audience activation 튜토리얼에서 을 참조하십시오.
 
 ## IP 주소 허용 목록 {#ip-address-allow-list}
 

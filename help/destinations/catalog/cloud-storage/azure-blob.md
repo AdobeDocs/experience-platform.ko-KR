@@ -2,9 +2,9 @@
 title: Azure Blob 연결
 description: Azure Blob 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 CSV 데이터 파일을 정기적으로 내보냅니다.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1085'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 3%
 >데이터 세트 내보내기 기능의 베타 릴리스와 향상된 파일 내보내기 기능으로 이제 두 가지가 표시될 수 있습니다 [!DNL Azure Blob] 대상 카탈로그의 카드.
 >* 이미 파일을 로 내보내고 있는 경우 **[!UICONTROL Azure Blob]** 대상: 새 데이터 흐름을 만드십시오. **[!UICONTROL Azure Blob 베타]** 대상.
 >* 에 대한 데이터 흐름을 아직 만들지 않은 경우 **[!UICONTROL Azure Blob]** 대상, 새 대상을 사용하십시오. **[!UICONTROL Azure Blob 베타]** 파일을 내보낼 카드 **[!UICONTROL Azure Blob]**.
-
 
 ![두 Azure Blob 대상 카드의 나란히 표시되는 이미지입니다.](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
 
@@ -35,8 +34,8 @@ ht-degree: 3%
 
 ## 다음에 연결 [!UICONTROL Azure Blob] API 또는 UI를 통한 스토리지 {#connect-api-or-ui}
 
-* 에 연결하려면 [!UICONTROL Azure Blob] 플랫폼 사용자 인터페이스를 사용한 저장소 위치에서 섹션을 읽습니다. [대상에 연결](#connect) 및 [이 대상에 대한 세그먼트 활성화](#activate) 아래요.
-* 에 연결하려면 [!UICONTROL Azure Blob] 저장소 위치를 프로그래밍 방식으로 읽고 [흐름 서비스 API 자습서를 사용하여 세그먼트를 파일 기반 대상으로 활성화](../../api/activate-segments-file-based-destinations.md).
+* 에 연결하려면 [!UICONTROL Azure Blob] 플랫폼 사용자 인터페이스를 사용한 저장소 위치에서 섹션을 읽습니다. [대상에 연결](#connect) 및 [이 대상에 대상자 활성화](#activate) 아래요.
+* 에 연결하려면 [!UICONTROL Azure Blob] 저장소 위치를 프로그래밍 방식으로 읽고 [흐름 서비스 API 튜토리얼을 사용하여 파일 기반 대상에 대한 대상자 활성화](../../api/activate-segments-file-based-destinations.md).
 
 ## 시작하기
 
@@ -47,7 +46,21 @@ ht-degree: 3%
    * [스키마 편집기 튜토리얼](../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 정의 스키마를 만드는 방법을 알아봅니다.
 * [[!DNL Real-Time Customer Profile]](../../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
 
-이미 유효한 을(를) 가지고 있는 경우 [!DNL Blob] 대상, 이 문서의 나머지 부분을 건너뛰고 다음에 대한 자습서로 진행할 수 있습니다. [대상에 대한 세그먼트 활성화](../../ui/activate-batch-profile-destinations.md).
+이미 유효한 을(를) 가지고 있는 경우 [!DNL Blob] 대상, 이 문서의 나머지 부분을 건너뛰고 다음에 대한 자습서로 진행할 수 있습니다. [대상에 대한 대상자 활성화](../../ui/activate-batch-profile-destinations.md).
+
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+
+모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+
+| 대상자 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+
+{style="table-layout:auto"}
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -87,7 +100,7 @@ ht-degree: 3%
    * 구성에 대한 자세한 내용은 [!DNL Blob] 연결 문자열입니다. 참조 [Azure 스토리지 계정에 대한 연결 문자열 구성](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) Microsoft 설명서에서 확인할 수 있습니다.
 * **[!UICONTROL 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -107,13 +120,13 @@ ht-degree: 3%
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ## (베타) 데이터 세트 내보내기 {#export-datasets}
 
@@ -124,4 +137,4 @@ ht-degree: 3%
 
 ## 내보낸 데이터 {#exported-data}
 
-대상 [!DNL Azure Blob Storage] 대상, [!DNL Platform] 다음 항목을 만듭니다. `.csv` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 세그먼트 활성화 자습서에서 참조하십시오.
+대상 [!DNL Azure Blob Storage] 대상, [!DNL Platform] 다음 항목을 만듭니다. `.csv` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) audience activation 튜토리얼에서 을 참조하십시오.

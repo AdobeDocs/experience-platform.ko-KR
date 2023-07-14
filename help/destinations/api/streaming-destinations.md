@@ -5,7 +5,7 @@ title: Adobe Experience Platform에서 흐름 서비스 API를 사용하여 스�
 description: 이 문서에서는 Adobe Experience Platform API를 사용하여 스트리밍 대상을 만드는 방법에 대해 설명합니다
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 1%
@@ -26,9 +26,9 @@ ht-degree: 1%
 
 이 튜토리얼에서는 [!DNL Amazon Kinesis] 모든 예에서 대상, 그러나 단계는 다음과 같습니다. [!DNL Azure Event Hubs].
 
-![개요 - 스트리밍 대상을 만들고 세그먼트를 활성화하는 단계](../assets/api/streaming-destination/overview.png)
+![개요 - 스트리밍 대상을 만들고 대상을 활성화하는 단계](../assets/api/streaming-destination/overview.png)
 
-플랫폼에서 사용자 인터페이스를 사용하여 대상에 연결하고 데이터를 활성화하려면 다음을 참조하십시오. [대상 연결](../ui/connect-destination.md) 및 [대상 데이터를 스트리밍 세그먼트 내보내기 대상으로 활성화](../ui/activate-segment-streaming-destinations.md) 튜토리얼.
+플랫폼에서 사용자 인터페이스를 사용하여 대상에 연결하고 데이터를 활성화하려면 다음을 참조하십시오. [대상 연결](../ui/connect-destination.md) 및 [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](../ui/activate-segment-streaming-destinations.md) 튜토리얼.
 
 ## 시작하기
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 ### 필요한 자격 증명 수집
 
-이 자습서의 단계를 완료하려면 세그먼트를 연결 및 활성화하는 대상 유형에 따라 다음 자격 증명을 준비해야 합니다.
+이 자습서의 단계를 완료하려면 대상을 연결하고 활성화하는 대상 유형에 따라 다음 자격 증명을 준비해야 합니다.
 
 * 대상 [!DNL Amazon Kinesis] 연결: `accessKeyId`, `secretKey`, `region` 또는 `connectionUrl`
 * 대상 [!DNL Azure Event Hubs] 연결: `sasKeyName`, `sasKey`, `namespace`
@@ -79,7 +79,7 @@ Swagger의 이 자습서에서 모든 API 호출에 대한 동반 참조 설명�
 
 ![대상 단계 개요 1단계](../assets/api/streaming-destination/step1.png)
 
-첫 번째 단계로 데이터를 활성화할 스트리밍 대상을 결정해야 합니다. 시작하려면 호출을 수행하여 세그먼트를 연결 및 활성화할 수 있는 사용 가능한 대상 목록을 요청합니다. 에 다음 GET 요청을 수행합니다. `connectionSpecs` 사용 가능한 대상 목록을 반환하는 끝점:
+첫 번째 단계로 데이터를 활성화할 스트리밍 대상을 결정해야 합니다. 먼저, 대상자를 연결하고 활성화할 수 있는 사용 가능한 대상 목록을 요청하는 호출을 수행합니다. 에 다음 GET 요청을 수행합니다. `connectionSpecs` 사용 가능한 대상 목록을 반환하는 끝점:
 
 **API 형식**
 
@@ -101,7 +101,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **응답**
 
-성공적인 응답에는 사용 가능한 대상 목록과 해당 고유 식별자(`id`). 사용할 대상의 값을 저장합니다. 이 값은 이후 단계에서 필수입니다. 예를 들어 세그먼트를 연결하고 전달하려는 경우 [!DNL Amazon Kinesis] 또는 [!DNL Azure Event Hubs]응답에서 다음 코드 조각을 찾습니다.
+성공적인 응답에는 사용 가능한 대상 목록과 해당 고유 식별자(`id`). 사용할 대상의 값을 저장합니다. 이 값은 이후 단계에서 필수입니다. 예를 들어 대상자를 (으)로 연결하여 전달하려는 경우 [!DNL Amazon Kinesis] 또는 [!DNL Azure Event Hubs]응답에서 다음 코드 조각을 찾습니다.
 
 ```json
 {
@@ -409,7 +409,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 ID( )를 반환합니다.`id`)을 사용하여 새로 만든 데이터 흐름 및 `etag`. 두 값을 모두 기록해 둡니다. 다음 단계에서 수행할 것처럼 세그먼트를 활성화합니다.
+성공적인 응답은 ID( )를 반환합니다.`id`)을 사용하여 새로 만든 데이터 흐름 및 `etag`. 두 값을 모두 기록해 둡니다. 다음 단계에서 수행할 것처럼 대상자를 활성화합니다.
 
 ```json
 {
@@ -423,9 +423,9 @@ curl -X POST \
 
 ![대상 단계 개요 5단계](../assets/api/streaming-destination/step5.png)
 
-모든 연결 및 데이터 흐름을 만들었으므로 이제 프로필 데이터를 스트리밍 플랫폼에 활성화할 수 있습니다. 이 단계에서는 대상으로 전송할 세그먼트와 프로필 속성을 선택하고 데이터를 예약하고 대상으로 전송할 수 있습니다.
+모든 연결 및 데이터 흐름을 만들었으므로 이제 프로필 데이터를 스트리밍 플랫폼에 활성화할 수 있습니다. 이 단계에서는 대상으로 전송할 대상과 프로필 속성을 선택하고 데이터를 예약하고 대상으로 전송할 수 있습니다.
 
-새 대상에 세그먼트를 활성화하려면 아래 예제와 유사한 JSON PATCH 작업을 수행해야 합니다. 한 번의 호출로 여러 세그먼트 및 프로필 속성을 활성화할 수 있습니다. JSON PATCH에 대한 자세한 내용은 [RFC 사양](https://tools.ietf.org/html/rfc6902).
+새 대상에 대상을 활성화하려면 아래 예제와 유사한 JSON PATCH 작업을 수행해야 합니다. 한 번의 호출로 여러 대상과 프로필 속성을 활성화할 수 있습니다. JSON PATCH에 대한 자세한 내용은 [RFC 사양](https://tools.ietf.org/html/rfc6902).
 
 **API 형식**
 
@@ -450,8 +450,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
     "value": {
       "type": "PLATFORM_SEGMENT",
       "value": {
-        "name": "Name of the segment that you are activating",
-        "description": "Description of the segment that you are activating",
+        "name": "Name of the audience that you are activating",
+        "description": "Description of the audience that you are activating",
         "id": "{SEGMENT_ID}"
       }
     }
@@ -474,13 +474,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | URL에서 이전 단계에서 생성한 데이터 흐름의 ID를 사용합니다. |
 | `{ETAG}` | 가져오기 `{ETAG}` 이전 단계의 응답에서 [데이터 흐름 만들기](#create-dataflow). 이전 단계의 응답 형식에서 따옴표를 이스케이프 처리했습니다. 요청의 헤더에서 이스케이프되지 않은 값을 사용해야 합니다. 아래 예를 참조하십시오. <br> <ul><li>응답 예: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>요청에 사용할 값: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> 데이터 흐름이 성공적으로 업데이트될 때마다 etag 값이 업데이트됩니다. |
-| `{SEGMENT_ID}` | 이 대상으로 내보낼 세그먼트 ID를 입력합니다. 활성화하려는 세그먼트의 세그먼트 ID를 검색하려면 다음을 참조하십시오. [세그먼트 정의 검색](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) Experience Platform API 참조. |
+| `{SEGMENT_ID}` | 이 대상으로 내보낼 대상 ID를 제공합니다. 활성화하려는 대상의 대상 ID를 검색하려면 을 참조하십시오. [대상 정의 검색](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) Experience Platform API 참조. |
 | `{PROFILE_ATTRIBUTE}` | 예, `"person.lastName"` |
-| `op` | 데이터 흐름을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 다음이 포함됩니다. `add`, `replace`, 및 `remove`. 데이터 흐름에 세그먼트를 추가하려면 `add` 작업. |
-| `path` | 플로우에서 업데이트할 부분을 정의합니다. 데이터 흐름에 세그먼트를 추가할 때 예제에 지정된 경로를 사용합니다. |
+| `op` | 데이터 흐름을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 다음이 포함됩니다. `add`, `replace`, 및 `remove`. 데이터 흐름에 대상을 추가하려면 `add` 작업. |
+| `path` | 플로우에서 업데이트할 부분을 정의합니다. 데이터 흐름에 대상을 추가할 때는 예제에 지정된 경로를 사용하십시오. |
 | `value` | 매개 변수를 업데이트할 새 값입니다. |
-| `id` | 대상 데이터 흐름에 추가할 세그먼트의 ID를 지정합니다. |
-| `name` | *선택 사항입니다*. 대상 데이터 흐름에 추가할 세그먼트의 이름을 지정합니다. 이 필드는 필수가 아니므로 이름을 제공하지 않고 대상 데이터 흐름에 세그먼트를 추가할 수 있습니다. |
+| `id` | 대상 데이터 흐름에 추가할 대상자의 ID를 지정합니다. |
+| `name` | *선택 사항입니다*. 대상 데이터 흐름에 추가할 대상자의 이름을 지정합니다. 이 필드는 필수가 아니므로 이름을 제공하지 않고 대상 데이터 흐름에 대상을 성공적으로 추가할 수 있습니다. |
 
 **응답**
 
@@ -490,7 +490,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ![대상 단계 개요 6단계](../assets/api/streaming-destination/step6.png)
 
-자습서의 마지막 단계에서는 세그먼트 및 프로필 속성이 실제로 데이터 흐름에 올바르게 매핑되었는지 확인해야 합니다.
+자습서의 마지막 단계에서는 대상 및 프로필 속성이 실제로 데이터 흐름에 올바르게 매핑되었는지 확인해야 합니다.
 
 유효성을 검사하려면 다음 GET 요청을 수행하십시오.
 
@@ -517,7 +517,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **응답**
 
-반환된 응답은에 포함되어야 합니다. `transformations` 이전 단계에서 제출한 세그먼트 및 프로필 속성에 대한 매개 변수를 지정합니다. 샘플 `transformations` 응답의 매개 변수는 다음과 같습니다.
+반환된 응답은에 포함되어야 합니다. `transformations` 매개 변수는 이전 단계에서 제출한 대상자 및 프로필 속성입니다. 샘플 `transformations` 응답의 매개 변수는 다음과 같습니다.
 
 ```json
 "transformations": [
@@ -563,7 +563,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
-> 프로필 속성 및 단계의 세그먼트 외에도 [새 대상에 데이터 활성화](#activate-data), 내보낸 데이터 위치 [!DNL AWS Kinesis] 및 [!DNL Azure Event Hubs] id 맵에 대한 정보도 포함됩니다. 내보낸 프로필의 ID를 나타냅니다(예: [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), 모바일 ID, Google ID, 이메일 주소 등). 아래 예를 참조하십시오.
+> 프로필 속성 및 해당 단계의 대상 외에 [새 대상에 데이터 활성화](#activate-data), 내보낸 데이터 위치 [!DNL AWS Kinesis] 및 [!DNL Azure Event Hubs] id 맵에 대한 정보도 포함됩니다. 내보낸 프로필의 ID를 나타냅니다(예: [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), 모바일 ID, Google ID, 이메일 주소 등). 아래 예를 참조하십시오.
 
 ```json
 {

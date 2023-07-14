@@ -3,18 +3,18 @@ keywords: 페블포스트;페블포스트;페블포스트 프로그램 가능 DM
 title: 페블포스트 확장
 description: PebblePost 확장은 Adobe Experience Platform의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '470'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
-# [!DNL PebblePost] 확장 {#pebblepost-extension}
+# [!DNL PebblePost] 확장 기능 {#pebblepost-extension}
 
 ## 개요 {#overview}
 
-[!DNL PebblePost's Programmatic Direct Mail®] 솔루션은 디지털 마케터가 온라인 관심사와 의도를 전환되는 오프라인 유형 미디어에 연결할 수 있도록 지원합니다. 마케터는 Adobe에서 만든 사용자 지정 데이터 세그먼트를 활용하여 이제 연관성이 있고 오래 지속되는 홈 미디어 노출로 소비자를 타깃팅할 수 있습니다. 응답 경로 활동 및 현장 전환을 기반으로 실시간으로 성능을 분석합니다.
+[!DNL PebblePost's Programmatic Direct Mail®] 솔루션은 디지털 마케터가 온라인 관심사와 의도를 전환되는 오프라인 유형 미디어에 연결할 수 있도록 지원합니다. 마케터는 Adobe에서 만든 사용자 지정 데이터 대상을 활용하여 이제 연관성이 있고 오래 지속되는 홈 미디어 노출로 소비자를 타깃팅할 수 있습니다. 응답 경로 활동 및 현장 전환을 기반으로 실시간으로 성능을 분석합니다.
 
 [!DNL PebblePost] 는 Adobe Experience Platform의 이메일 확장입니다. 페블포스트에 대한 자세한 내용은 [통합 블로그 게시물](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
 

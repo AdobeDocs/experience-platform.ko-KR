@@ -3,7 +3,7 @@ keywords: 대상;experience cloud 솔루션;target;target 대상;ad cloud;advert
 title: Adobe 대상 개요
 description: 광고 타겟팅, 개인화, 마케팅 자동화 등을 위해 플랫폼의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다.
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: e3039944fff96bbb060fd800d7bbb032084c5010
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 12%
@@ -45,8 +45,8 @@ ht-degree: 12%
 * [Marketo Munchkin 확장 프로그램](../email/marketo-munchkin.md)
 * [Marketo 웹 개인화 확장](../personalization/marketo-web-personalization.md)
 
-## Experience Platform 세그먼트 공유
+## Experience Platform 대상 공유
 
-Experience Platform 세그먼트 공유 기능을 사용하여 Experience Platform 세그먼트를 추가 Adobe 대상에 공유할 수 있습니다. 자세한 내용은 아래 페이지(Audience Manager 설명서 포털에 열림)를 참조하십시오.
+Experience Platform 대상 공유 기능을 사용하여 Experience Platform 대상을 추가 Adobe 대상에 공유할 수 있습니다. 자세한 내용은 아래 페이지(Audience Manager 설명서 포털에 열림)를 참조하십시오.
 
-* [핵심 서비스 통합을 통해 Adobe Audience Manager, Adobe Advertising Cloud 및 Adobe Target과 공유하는 Experience Platform 세그먼트](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [핵심 서비스 통합을 통해 Adobe Audience Manager, Adobe Advertising Cloud 및 Adobe Target과 공유하는 대상 Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

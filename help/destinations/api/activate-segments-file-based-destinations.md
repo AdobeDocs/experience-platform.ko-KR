@@ -1,22 +1,21 @@
 ---
 solution: Experience Platform
-title: 흐름 서비스 API를 사용하여 세그먼트를 파일 기반 대상으로 활성화
+title: 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로 활성화
 description: 흐름 서비스 API를 사용하여 적격 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 5ab72c11a5fd73f10eef6b7bb3e0d3386098748e
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '4442'
 ht-degree: 3%
 
 ---
 
-# 흐름 서비스 API를 사용하여 세그먼트를 파일 기반 대상으로 활성화
+# 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로 활성화
 
 >[!IMPORTANT]
 >
 >* 이 베타 기능은 Real-Time CDP Prime 및 Ultimate 패키지를 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
-
 
 Experience Platform 외부에서 파일을 내보낼 때 향상된 사용자 정의 기능에 액세스하려면 향상된 파일 내보내기 기능(현재 베타 버전)을 사용하십시오.
 
@@ -46,12 +45,12 @@ Experience Platform 외부에서 파일을 내보낼 때 향상된 사용자 정
 
 ## 시작하기 {#get-started}
 
-![사용자가 진행 중인 현재 단계를 강조 표시하는 세그먼트를 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![사용자가 진행 중인 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] 에서 세그먼트를 작성하고 대상자를 생성할 수 있습니다. [!DNL Adobe Experience Platform] (으)로부터 [!DNL Real-Time Customer Profile] 데이터.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] 에서 대상을 빌드하고 대상을 생성할 수 있습니다. [!DNL Adobe Experience Platform] (으)로부터 [!DNL Real-Time Customer Profile] 데이터.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 만드는 가상 샌드박스를 제공합니다. [!DNL Platform] 인스턴스를 별도의 가상 환경으로 전환하여 디지털 경험 애플리케이션을 개발하고 발전시킵니다.
 
 다음 섹션에서는 Platform에서 파일 기반 대상에 데이터를 활성화하기 위해 알아야 하는 추가 정보를 제공합니다.
@@ -92,11 +91,11 @@ Experience Platform 외부에서 파일을 내보낼 때 향상된 사용자 정
 
 이 API 자습서에서 보게 되는 용어에 대한 설명은 [용어집 섹션](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) API 참조 설명서의
 
-## 세그먼트를 내보낼 대상 선택 {#select-destination}
+## 대상자를 내보낼 대상 선택 {#select-destination}
 
-![사용자가 진행 중인 현재 단계를 강조 표시하는 세그먼트를 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step1.png)
+![사용자가 진행 중인 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step1.png)
 
-프로필을 내보내는 워크플로우를 시작하기 전에 세그먼트를 내보내려는 대상의 연결 사양 및 흐름 사양 ID를 식별합니다. 아래 표를 참조하십시오.
+프로필을 내보내는 워크플로우를 시작하기 전에 대상을 내보내려는 대상의 연결 사양 및 흐름 사양 ID를 식별합니다. 아래 표를 참조하십시오.
 
 | 대상 | 연결 사양 | 흐름 사양 |
 ---------|----------|---------|
@@ -319,13 +318,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-클라우드 스토리지 대상에 대한 세그먼트 내보내기 데이터 흐름을 설정하려면 아래 단계를 따르십시오. 일부 단계의 경우 요청 및 응답은 다양한 클라우드 스토리지 대상 간에 다릅니다. 이러한 경우 페이지의 탭을 사용하여 세그먼트를 연결하고 내보내려는 대상에 대한 요청 및 응답을 검색합니다. 올바른 을(를) 사용하십시오 `connection spec` 및 `flow spec` 을(를) 구성하려는 대상에 대해 선택합니다.
+아래 단계에 따라 클라우드 스토리지 대상으로 대상 내보내기 데이터 흐름을 설정하십시오. 일부 단계의 경우 요청 및 응답은 다양한 클라우드 스토리지 대상 간에 다릅니다. 이러한 경우 페이지의 탭을 사용하여 대상을 연결하고 내보내려는 대상에 대한 요청 및 응답을 검색합니다. 올바른 을(를) 사용하십시오 `connection spec` 및 `flow spec` 을(를) 구성하려는 대상에 대해 선택합니다.
 
 ## 소스 연결 만들기 {#create-source-connection}
 
-![사용자가 진행 중인 현재 단계를 강조 표시하는 세그먼트를 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step2.png)
+![사용자가 진행 중인 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-세그먼트를 내보낼 대상을 결정한 후 소스 연결을 만들어야 합니다. 다음 [소스 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 내부로의 연결을 나타냅니다. [Experience Platform 프로필 저장소](/help/profile/home.md#profile-data-store).
+대상을 내보낼 대상을 결정한 후 소스 연결을 만들어야 합니다. 다음 [소스 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 내부로의 연결을 나타냅니다. [Experience Platform 프로필 저장소](/help/profile/home.md#profile-data-store).
 
 >[!BEGINSHADEBOX]
 
@@ -373,9 +372,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## 기본 연결 만들기 {#create-base-connection}
 
-![사용자가 진행 중인 현재 단계를 강조 표시하는 세그먼트를 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step3.png)
+![사용자가 진행 중인 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
-A [기본 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 대상에 자격 증명을 안전하게 저장합니다. 대상 유형에 따라 해당 대상에 대해 인증하는 데 필요한 자격 증명이 달라질 수 있습니다. 이러한 인증 매개 변수를 찾으려면 먼저 `connection spec` 섹션에 설명된 대로 원하는 대상에 대해 [세그먼트를 내보낼 대상 선택](#select-destination) 그리고 다음을 살펴보십시오. `authSpec` 응답. 다음 탭을 참조하십시오. `authSpec` 지원되는 모든 대상의 속성입니다.
+A [기본 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 대상에 자격 증명을 안전하게 저장합니다. 대상 유형에 따라 해당 대상에 대해 인증하는 데 필요한 자격 증명이 달라질 수 있습니다. 이러한 인증 매개 변수를 찾으려면 먼저 `connection spec` 섹션에 설명된 대로 원하는 대상에 대해 [대상자를 내보낼 대상 선택](#select-destination) 그리고 다음을 살펴보십시오. `authSpec` 응답. 다음 탭을 참조하십시오. `authSpec` 지원되는 모든 대상의 속성입니다.
 
 >[!BEGINTABS]
 
@@ -1144,9 +1143,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## 대상 연결 만들기 {#create-target-connection}
 
-![사용자가 진행 중인 현재 단계를 강조 표시하는 세그먼트를 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step4.png)
+![사용자가 진행 중인 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step4.png)
 
-그런 다음 타겟 연결을 만들어야 합니다. [Target 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 내보낸 세그먼트에 대한 내보내기 매개 변수를 저장합니다. 내보내기 매개 변수에는 내보내기 위치, 파일 형식, 압축 및 기타 세부 사항이 포함됩니다. 예를 들어 CSV 파일의 경우 몇 가지 내보내기 옵션을 선택할 수 있습니다. 지원되는 모든 CSV 내보내기 옵션에 대한 광범위한 정보를 보려면 [파일 형식 지정 구성 페이지](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+그런 다음 타겟 연결을 만들어야 합니다. [Target 연결](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 내보낸 대상에 대한 내보내기 매개 변수를 저장합니다. 내보내기 매개 변수에는 내보내기 위치, 파일 형식, 압축 및 기타 세부 사항이 포함됩니다. 예를 들어 CSV 파일의 경우 몇 가지 내보내기 옵션을 선택할 수 있습니다. 지원되는 모든 CSV 내보내기 옵션에 대한 광범위한 정보를 보려면 [파일 형식 지정 구성 페이지](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 다음을 참조하십시오. `targetSpec` 대상에 제공된 속성 `connection spec` 각 대상 유형에 대해 지원되는 속성을 이해합니다. 다음 탭을 참조하십시오. `targetSpec` 지원되는 모든 대상의 속성입니다.
 
@@ -1156,7 +1155,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Amazon S3] - [!DNL Connection spec] 대상 연결 매개 변수 표시
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 세그먼트 내보내기 대상에 적용할 수 있습니다.
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 대상 내보내기 대상에 적용할 수 있습니다.
 
 ```json {line-numbers="true" start-line="1" highlight="10,56"}
 {
@@ -1214,7 +1213,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1367,7 +1366,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] 대상 연결 매개 변수 표시
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 세그먼트 내보내기 대상에 적용할 수 있습니다.
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 대상 내보내기 대상에 적용할 수 있습니다.
 
 ```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
@@ -1413,7 +1412,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1567,7 +1566,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] 대상 연결 매개 변수 표시
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 세그먼트 내보내기 대상에 적용할 수 있습니다.
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 대상 내보내기 대상에 적용할 수 있습니다.
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1606,7 +1605,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1758,7 +1757,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] 대상 연결 매개 변수 표시
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 세그먼트 내보내기 대상에 적용할 수 있습니다.
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 대상 내보내기 대상에 적용할 수 있습니다.
 
 ```json {line-numbers="true" start-line="1" highlight="9,36"}
 "items": [
@@ -1796,7 +1795,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -1948,7 +1947,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Google Cloud Storage] - [!DNL Connection spec] 대상 연결 매개 변수 표시
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 세그먼트 내보내기 대상에 적용할 수 있습니다.
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 대상 내보내기 대상에 적용할 수 있습니다.
 
 ```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
@@ -1994,7 +1993,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -2147,7 +2146,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++SFTP - [!DNL Connection spec] 대상 연결 매개 변수 표시
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 세그먼트 내보내기 대상에 적용할 수 있습니다.
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 대상 내보내기 대상에 적용할 수 있습니다.
 
 ```json {line-numbers="true" start-line="1" highlight="10,37"}
 {
@@ -2186,7 +2185,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                                 "PARQUET"
                             ]
                         },
-                        "datasetFileType": { // does not apply to segment export destinations
+                        "datasetFileType": { // does not apply to audience export destinations
                             "conditional": {
                                 "field": "flowSpec.attributes._workflow",
                                 "operator": "CONTAINS",
@@ -2891,15 +2890,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-다음을 참고하십시오. `target connection ID` 응답. 세그먼트를 내보내기 위한 데이터 흐름을 만들 때 다음 단계에서 이 ID가 필요합니다.
+다음을 참고하십시오. `target connection ID` 응답. 이 ID는 대상자를 내보내기 위한 데이터 흐름을 만들 때 다음 단계에서 필수입니다.
 
 성공적인 응답은 ID( )를 반환합니다.`id`)을 참조하십시오. `etag`. 대상 연결 ID는 나중에 데이터 흐름을 만들 때 필요하므로 기록해 두십시오.
 
 ## 데이터 흐름 만들기 {#create-dataflow}
 
-![사용자가 진행 중인 현재 단계를 강조 표시하는 세그먼트를 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step5.png)
+![사용자가 진행 중인 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step5.png)
 
-대상 구성의 다음 단계는 데이터 흐름을 만드는 것입니다. A [데이터 흐름](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 는 이전에 만든 엔티티를 결합하고 세그먼트 내보내기 일정을 구성하는 옵션을 제공합니다. 데이터 흐름을 만들려면 원하는 클라우드 스토리지 대상에 따라 아래 페이로드를 사용하고 이전 단계의 흐름 엔티티 ID를 바꾸십시오. 이 단계에서는 속성 또는 ID 매핑과 관련된 정보를 데이터 흐름에 추가하지 않습니다. 이 작업은 다음 단계에서 수행합니다.
+대상 구성의 다음 단계는 데이터 흐름을 만드는 것입니다. A [데이터 흐름](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 는 이전에 만든 엔티티를 결합하고 대상 내보내기 일정을 구성하는 옵션을 제공합니다. 데이터 흐름을 만들려면 원하는 클라우드 스토리지 대상에 따라 아래 페이로드를 사용하고 이전 단계의 흐름 엔티티 ID를 바꾸십시오. 이 단계에서는 속성 또는 ID 매핑과 관련된 정보를 데이터 흐름에 추가하지 않습니다. 이 작업은 다음 단계에서 수행합니다.
 
 >[!BEGINTABS]
 
@@ -2907,7 +2906,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++세그먼트 내보내기 데이터 흐름 만들기 [!DNL Amazon S3] 대상 - 요청
++++대상 내보내기 데이터 흐름 만들기 [!DNL Amazon S3] 대상 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2920,8 +2919,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an Amazon S3 cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an Amazon S3 cloud storage destination",
+    "name": "Activate audiences to an Amazon S3 cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an Amazon S3 cloud storage destination",
     "flowSpec": {
         "id": "1a0514a6-33d4-4c7f-aff8-594799c47549", // Amazon S3 flow spec ID
         "version": "1.0"
@@ -2955,7 +2954,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++세그먼트 내보내기 데이터 흐름 만들기 [!DNL Azure Blob Storage] 대상 - 요청
++++대상 내보내기 데이터 흐름 만들기 [!DNL Azure Blob Storage] 대상 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2968,8 +2967,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an Azure Blob Storage cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an Azure Blob Storage cloud storage destination",
+    "name": "Activate audiences to an Azure Blob Storage cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an Azure Blob Storage cloud storage destination",
     "flowSpec": {
         "id": "752d422f-b16f-4f0d-b1c6-26e448e3b388", // Azure Blob Storage flow spec ID
         "version": "1.0"
@@ -3015,7 +3014,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++세그먼트 내보내기 데이터 흐름 만들기 [!DNL Azure Data Lake Gen 2(ADLS Gen2)] 대상 - 요청
++++대상 내보내기 데이터 흐름 만들기 [!DNL Azure Data Lake Gen 2(ADLS Gen2)] 대상 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -3028,8 +3027,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
+    "name": "Activate audiences to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an Azure Data Lake Gen 2(ADLS Gen2) cloud storage destination",
     "flowSpec": {
         "id": "17be2013-2549-41ce-96e7-a70363bec293", // Azure Data Lake Gen 2(ADLS Gen2) flow spec ID
         "version": "1.0"
@@ -3063,7 +3062,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++세그먼트 내보내기 데이터 흐름 만들기 [!DNL Data Landing Zone] 대상 - 요청
++++대상 내보내기 데이터 흐름 만들기 [!DNL Data Landing Zone] 대상 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -3076,8 +3075,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to a Data Landing Zone cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to a Data Landing Zone cloud storage destination",
+    "name": "Activate audiences to a Data Landing Zone cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to a Data Landing Zone cloud storage destination",
     "flowSpec": {
         "id": "cd2fc47e-e838-4f38-a581-8fff2f99b63a", // Data Landing Zone flow spec ID
         "version": "1.0"
@@ -3111,7 +3110,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++세그먼트 내보내기 데이터 흐름 만들기 [!DNL Google Cloud Storage] 대상 - 요청
++++대상 내보내기 데이터 흐름 만들기 [!DNL Google Cloud Storage] 대상 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -3124,8 +3123,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to a Google Cloud Storage cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to a Google Cloud Storage destination",
+    "name": "Activate audiences to a Google Cloud Storage cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to a Google Cloud Storage destination",
     "flowSpec": {
         "id": "585c15c4-6cbf-4126-8f87-e26bff78b657", // Google Cloud Storage flow spec ID
         "version": "1.0"
@@ -3159,7 +3158,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++SFTP 대상으로 세그먼트 내보내기 데이터 흐름 만들기 - 요청
++++SFTP 대상으로 대상 내보내기 데이터 흐름 만들기 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -3172,8 +3171,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Activate segments to an SFTP cloud storage destination",
-    "description": "This operation creates a dataflow to export segments to an SFTP cloud storage destination",
+    "name": "Activate audiences to an SFTP cloud storage destination",
+    "description": "This operation creates a dataflow to export audiences to an SFTP cloud storage destination",
     "flowSpec": {
         "id": "fd36aaa4-bf2b-43fb-9387-43785eeeb799", // SFTP flow spec ID
         "version": "1.0"
@@ -3207,14 +3206,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 응답에서 데이터 흐름 ID를 확인합니다. 이 ID는 이후 단계에서 필수입니다.
 
-### 내보내기에 세그먼트 추가
+### 내보내기에 대상자 추가
 
-이 단계에서는 대상으로 내보낼 세그먼트를 선택할 수도 있습니다. 이 단계와 데이터 흐름에 세그먼트를 추가하기 위한 요청 형식에 대한 자세한 내용은 [대상 데이터 흐름 업데이트](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) 섹션에 자세히 설명되어 있습니다.
+이 단계에서는 대상으로 내보낼 대상을 선택할 수도 있습니다. 이 단계와 데이터 흐름에 대상을 추가하는 요청 형식에 대한 자세한 내용은 [대상 데이터 흐름 업데이트](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) 섹션에 자세히 설명되어 있습니다.
 
 
 ## 속성 및 ID 매핑 설정 {#attribute-and-identity-mapping}
 
-![사용자가 진행 중인 현재 단계를 강조 표시하는 세그먼트를 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step6.png)
+![사용자가 진행 중인 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step6.png)
 
 데이터 흐름을 만든 후 내보낼 속성 및 ID에 대한 매핑을 설정해야 합니다. 이 단계는 아래에 나열된 세 단계로 구성됩니다.
 
@@ -3346,7 +3345,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/en
                             "type": "string",
                             "meta:xdmType": "string",
                             "title": "First name",
-                            "description": "The first segment of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the preferred personal or given name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
+                            "description": "The first audience of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the preferred personal or given name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
                         },
                         "fullName": {
                             "type": "string",
@@ -3358,7 +3357,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/en
                             "type": "string",
                             "meta:xdmType": "string",
                             "title": "Last name",
-                            "description": "The last segment of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the inherited family name, surname, patronymic, or matronymic name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
+                            "description": "The last audience of the name in the writing order most commonly accepted in the language of the name. In many cultures this is the inherited family name, surname, patronymic, or matronymic name. The `firstName` and `lastName` properties have been introduced to maintain compatibility with existing systems that model names in a simplified, non-semantic, and non-internationalizable way. Using `xdm:fullName` is always preferable."
                         },
                         "middleName": {
                             "type": "string",
@@ -3783,7 +3782,7 @@ Inspect 위의 호출을 수행할 때 받는 응답입니다. 응답을 드릴�
                         "exited":"Entity is exiting the segment.",
                         "realized":"Entity is entering the segment."
                      },
-                     "description":"Is the segment participation realized as part of the current request.",
+                     "description":"Is the audience participation realized as part of the current request.",
                      "meta:xdmType":"string",
                      "meta:xdmField":"xdm:status"
                   },
@@ -3844,14 +3843,14 @@ Inspect 위의 호출을 수행할 때 받는 응답입니다. 응답을 드릴�
                            "exclusiveMinimum":0
                         }
                      },
-                     "description":"Values that are directly related with the segment realization. This payload exists with the same 'validUntil' as the segment realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
+                     "description":"Values that are directly related with the audience realization. This payload exists with the same 'validUntil' as the audience realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
                      "meta:xdmType":"object",
                      "meta:xdmField":"xdm:payload"
                   },
                   "version":{
                      "type":"string",
                      "title":"Version",
-                     "description":"The version of the segment definition used in this segment assertion. Version can be omitted in audience lists when all memberships versions are the same.",
+                     "description":"The version of the audience definition used in this audience assertion. Version can be omitted in audience lists when all memberships versions are the same.",
                      "meta:xdmType":"string",
                      "meta:xdmField":"xdm:version"
                   },
@@ -3863,7 +3862,7 @@ Inspect 위의 호출을 수행할 때 받는 응답입니다. 응답을 드릴�
                            "type":"string",
                            "title":"Identifier",
                            "format":"uri-reference",
-                           "description":"Identity of the segment in the related namespace.",
+                           "description":"Identity of the audience in the related namespace.",
                            "meta:xdmType":"string",
                            "meta:xdmField":"@id"
                         },
@@ -3895,7 +3894,7 @@ Inspect 위의 호출을 수행할 때 받는 응답입니다. 응답을 드릴�
                            "meta:referencedFrom":"https://ns.adobe.com/xdm/context/namespace"
                         }
                      },
-                     "description":"The identity of the segment or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
+                     "description":"The identity of the audience or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
                      "meta:status":"deprecated",
                      "meta:xdmType":"object",
                      "meta:xdmField":"xdm:segmentID",
@@ -3905,7 +3904,7 @@ Inspect 위의 호출을 수행할 때 받는 응답입니다. 응답을 드릴�
                      "type":"string",
                      "title":"Valid until",
                      "format":"date-time",
-                     "description":"The timestamp for when the segment assertion should no longer be assumed to be valid and should either be ignored or revalidated.",
+                     "description":"The timestamp for when the audienceassertion should no longer be assumed to be valid and should either be ignored or revalidated.",
                      "meta:xdmType":"date-time",
                      "meta:xdmField":"xdm:validUntil"
                   },
@@ -3956,7 +3955,7 @@ Inspect 위의 호출을 수행할 때 받는 응답입니다. 응답을 드릴�
                      "type":"string",
                      "title":"Last qualification time",
                      "format":"date-time",
-                     "description":"The timestamp when the assertion of segment membership was made.",
+                     "description":"The timestamp when the assertion of audience membership was made.",
                      "meta:xdmType":"date-time",
                      "meta:xdmField":"xdm:lastQualificationTime"
                   }
@@ -4070,14 +4069,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                             "version": {
                                 "meta:xdmField": "xdm:version",
                                 "meta:xdmType": "string",
-                                "description": "The version of the segment definition used in this segment assertion. Version can be omitted in audience lists when all memberships versions are the same.",
+                                "description": "The version of the audience definition used in this audience assertion. Version can be omitted in audience lists when all memberships versions are the same.",
                                 "type": "string",
                                 "title": "Version"
                             },
                             "validUntil": {
                                 "meta:xdmField": "xdm:validUntil",
                                 "meta:xdmType": "date-time",
-                                "description": "The timestamp for when the segment assertion should no longer be assumed to be valid and should either be ignored or revalidated.",
+                                "description": "The timestamp for when the audienceassertion should no longer be assumed to be valid and should either be ignored or revalidated.",
                                 "format": "date-time",
                                 "type": "string",
                                 "title": "Valid until"
@@ -4094,7 +4093,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                     "exited"
                                 ],
                                 "default": "realized",
-                                "description": "Is the segment participation realized as part of the current request.",
+                                "description": "Is the audience participation realized as part of the current request.",
                                 "type": "string",
                                 "title": "Status"
                             },
@@ -4132,7 +4131,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                     "_id": {
                                         "meta:xdmField": "@id",
                                         "meta:xdmType": "string",
-                                        "description": "Identity of the segment in the related namespace.",
+                                        "description": "Identity of the audience in the related namespace.",
                                         "format": "uri-reference",
                                         "type": "string",
                                         "title": "Identifier"
@@ -4140,7 +4139,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                 },
                                 "meta:xdmType": "object",
                                 "type": "object",
-                                "description": "The identity of the segment or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
+                                "description": "The identity of the audience or snapshot definition in with the domain of the specific system that processes that type of segment. Deprecated.",
                                 "meta:status": "deprecated",
                                 "title": "Segment ID"
                             },
@@ -4245,13 +4244,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
                                     }
                                 },
                                 "type": "object",
-                                "description": "Values that are directly related with the segment realization. This payload exists with the same 'validUntil' as the segment realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
+                                "description": "Values that are directly related with the audience realization. This payload exists with the same 'validUntil' as the audience realization. Note that the intention is that exactly one payload value be included, as indicated by the payload type. This was originally modeled using 'oneOf', but due to limitations in our tooling that was removed. This more semantically meaningful representation will be re-introduced in the future.",
                                 "title": "Payload"
                             },
                             "lastQualificationTime": {
                                 "meta:xdmField": "xdm:lastQualificationTime",
                                 "meta:xdmType": "date-time",
-                                "description": "The timestamp when the assertion of segment membership was made.",
+                                "description": "The timestamp when the assertion of audience membership was made.",
                                 "format": "date-time",
                                 "type": "string",
                                 "title": "Last qualification time"
@@ -4323,7 +4322,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 >* 아래 표시된 매핑 개체에서 `destination` 매개 변수에서 점을 허용하지 않음 `"."`. 예를 들어 구성 예제에서 강조 표시된 대로 personalEmail_address 또는 segmentMembership_status를 사용해야 합니다.
 >* 소스 속성이 ID 속성이고 점을 포함하는 특별한 경우가 있습니다. 이 경우 속성은 로 이스케이프해야 합니다. `//`아래에 강조 표시된 대로.
 >* 또한 아래 예제 구성에는 `Email` 및 `Phone_E.164`, 데이터 흐름당 하나의 id 속성만 내보낼 수 있습니다.
-
 
 ```shell {line-numbers="true" start-line="1" highlight="16-38"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
@@ -4449,7 +4447,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## 다른 데이터 흐름 업데이트 {#other-dataflow-updates}
 
-![사용자가 진행 중인 현재 단계를 강조 표시하는 세그먼트를 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step7.png)
+![사용자가 진행 중인 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
 데이터 흐름을 업데이트하려면 `PATCH` 예를들어 데이터 흐름을 업데이트하여 필드를 필수 키 또는 중복 제거 키로 선택할 수 있습니다.
 
@@ -4599,7 +4597,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## 데이터 흐름 유효성 검사(데이터 흐름 실행 가져오기) {#get-dataflow-runs}
 
-![사용자가 진행 중인 현재 단계를 강조 표시하는 세그먼트를 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step8.png)
+![사용자가 진행 중인 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step8.png)
 
 데이터 흐름 실행을 확인하려면 데이터 흐름 실행 API를 사용하십시오.
 
@@ -4679,7 +4677,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 ## 다음 단계 {#next-steps}
 
-이 자습서에 따라 선호하는 클라우드 스토리지 대상 중 하나에 플랫폼을 연결하고 세그먼트를 내보낼 각 대상에 대한 데이터 흐름을 설정했습니다. 흐름 서비스 API를 사용하여 기존 데이터 흐름을 편집하는 방법과 같은 자세한 내용은 다음 페이지를 참조하십시오.
+이 자습서에 따라 선호하는 클라우드 스토리지 대상 중 하나에 플랫폼을 연결하고 대상을 내보내도록 각 대상에 데이터 흐름을 설정했습니다. 흐름 서비스 API를 사용하여 기존 데이터 흐름을 편집하는 방법과 같은 자세한 내용은 다음 페이지를 참조하십시오.
 
 * [대상 개요](../home.md)
 * [대상 카탈로그 개요](../catalog/overview.md)

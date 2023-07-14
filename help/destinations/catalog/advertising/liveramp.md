@@ -4,9 +4,9 @@ description: LiveRamp 커넥터를 사용하여 Adobe Real-time Customer Data Pl
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: d7625018b7b36d8e9516f7884fc00b726d391103
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1736'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,6 @@ LiveRamp 연결을 사용하여 Adobe Real-time Customer Data Platform에서 로
 >
 ><p>이 대상 연결은 현재 알파 단계에 있으며 제한된 고객만 사용할 수 있습니다. 기능 및 설명서는 변경될 수 있습니다.</p>
 &gt;<p>이 대상 연결의 최종 버전은 고객 마이그레이션이 필요할 수 있습니다.</p>
-
 
 ## 사용 사례 {#use-cases}
 
@@ -45,8 +44,8 @@ LiveRamp SFTP는 관계식에 설명된 PII 기반 식별자, 알려진 식별�
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | 에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 세그먼트(대상자)의 모든 구성원을 내보냅니다. [!DNL LiveRamp SFTP] 대상. |
-| 내보내기 빈도 | **[!UICONTROL 일별 일괄 처리]** | 프로필은 세그먼트 평가를 기반으로 Experience Platform에서 업데이트되므로 프로필(ID)은 대상 플랫폼으로 하루에 한 번 업데이트됩니다. 자세한 내용 [배치 파일 기반 대상](/help/destinations/destination-types.md#file-based). |
+| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | 에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보냅니다. [!DNL LiveRamp SFTP] 대상. |
+| 내보내기 빈도 | **[!UICONTROL 일별 일괄 처리]** | 프로필은 대상 평가를 기반으로 Experience Platform에서 업데이트되므로 프로필(ID)은 대상 플랫폼으로 하루에 한 번 업데이트됩니다. 자세한 내용 [배치 파일 기반 대상](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -70,7 +69,7 @@ LiveRamp SFTP는 관계식에 설명된 PII 기반 식별자, 알려진 식별�
 * **[!UICONTROL 암호]**: 의 암호 [!DNL LiveRamp SFTP] 저장소 위치.
 * **[!UICONTROL PGP/GPG 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다. 암호화 키를 제공하는 경우 **[!UICONTROL 암호화 하위 키 ID]** 다음에서 [대상 세부 사항](#destination-details) 섹션.
 
-   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 **SSH 키 인증이 있는 SFTP** {#sftp-ssh}
 
@@ -83,7 +82,7 @@ LiveRamp SFTP는 관계식에 설명된 PII 기반 식별자, 알려진 식별�
 
 * **[!UICONTROL PGP/GPG 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 암호화 키를 제공하는 경우 **[!UICONTROL 암호화 하위 키 ID]** 다음에서 [대상 세부 사항](#destination-details) 섹션. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -110,28 +109,28 @@ LiveRamp SFTP는 관계식에 설명된 PII 기반 식별자, 알려진 식별�
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-읽기 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](/help/destinations/ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+읽기 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](/help/destinations/ui/activate-batch-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ### 예약 {#scheduling}
 
-다음에서 [!UICONTROL 예약] 단계: 아래 표시된 설정을 사용하여 각 세그먼트에 대한 내보내기 일정을 만듭니다.
+다음에서 [!UICONTROL 예약] 단계: 아래 표시된 설정을 사용하여 각 대상에 대한 내보내기 일정을 만듭니다.
 
 >[!IMPORTANT]
 >
->이 대상에 활성화된 모든 세그먼트는 아래와 같이 정확히 동일한 일정으로 구성해야 합니다.
+>이 대상에 활성화된 모든 대상은 아래와 같이 정확히 동일한 일정으로 구성해야 합니다.
 
 * **[!UICONTROL 파일 내보내기 옵션]**: [!UICONTROL 전체 파일 내보내기]. [증분 파일 내보내기](../../ui/activate-batch-profile-destinations.md#export-incremental-files) 은(는) 현재 다음에 대해 지원되지 않습니다. [!DNL LiveRamp] 대상.
 * **[!UICONTROL 빈도]**: [!UICONTROL 매일]
-* 내보내기 시간을 다음으로 설정 **[!UICONTROL 세그먼트 평가 후]**. 예약된 세그먼트 내보내기 및 [온디맨드 파일 내보내기](../../ui/export-file-now.md) 은(는) 현재 다음에 대해 지원되지 않습니다. [!DNL LiveRamp] 대상.
+* 내보내기 시간을 다음으로 설정 **[!UICONTROL 세그먼트 평가 후]**. 예약된 대상 내보내기 및 [온디맨드 파일 내보내기](../../ui/export-file-now.md) 은(는) 현재 다음에 대해 지원되지 않습니다. [!DNL LiveRamp] 대상.
 * **[!UICONTROL 날짜]**: 원하는 대로 내보내기 시작 및 종료 시간을 선택합니다.
 
-![세그먼트 예약 단계를 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
+![대상 예약 단계를 보여주는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
 
 내보낸 파일 이름은 현재 사용자가 구성할 수 없습니다. 로 내보낸 모든 파일 [!DNL LiveRamp SFTP] 대상 은 다음 템플릿을 기반으로 자동 명명됩니다.
 
@@ -179,28 +178,28 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 파일을 로 내보낼 때 [!DNL LiveRamp SFTP] 대상, 플랫폼은 각각에 대해 하나의 CSV 파일을 생성합니다. [병합 정책 ID](../../../profile/merge-policies/overview.md).
 
-예를 들어 다음 세그먼트를 생각해 보겠습니다.
+예를 들어 다음 대상을 고려해 보겠습니다.
 
-* 세그먼트 A(병합 정책 1)
-* 세그먼트 B (병합 정책 2)
-* 세그먼트 C (병합 정책 1)
-* 세그먼트 D (병합 정책 1)
+* 대상자 A (병합 정책 1)
+* 대상 B(병합 정책 2)
+* 대상자 C (병합 정책 1)
+* 대상자 D (병합 정책 1)
 
 플랫폼이 CSV 파일 두 개를 (으)로 내보냅니다. [!DNL LiveRamp SFTP]:
 
-* 세그먼트 A, C 및 D가 포함된 하나의 CSV 파일
-* 세그먼트 B가 포함된 CSV 파일 1개.
+* 대상 A, C 및 D가 포함된 하나의 CSV 파일
+* 대상자 B가 포함된 CSV 파일 1개.
 
-내보낸 CSV 파일에는 속성 이름과 세그먼트 ID를 열 헤더로 사용하여 별도의 열에 선택한 속성과 해당 세그먼트 상태가 있는 프로필이 포함되어 있습니다.
+내보낸 CSV 파일에는 속성 이름과 대상 ID를 열 헤더로 사용하여 별도의 열에 선택한 속성과 해당 대상 상태를 가진 프로필이 포함되어 있습니다.
 
-내보낸 파일에 포함된 프로필은 다음 세그먼트 자격 상태 중 하나와 일치할 수 있습니다.
+내보낸 파일에 포함된 프로필은 다음 대상 자격 상태 중 하나와 일치할 수 있습니다.
 
-* `Active`: 프로필이 현재 세그먼트에 대해 자격이 있습니다.
-* `Expired`: 프로필이 더 이상 세그먼트에 적합하지 않지만 과거에 이미 적격입니다.
-* `""`(빈 문자열): 프로필이 세그먼트에 대해 정규화되지 않았습니다.
+* `Active`: 프로필이 현재 대상자에 대해 자격이 있습니다.
+* `Expired`: 프로필이 더 이상 대상자에 적합하지 않지만 과거에 자격이 있습니다.
+* `""`(빈 문자열): 프로필이 대상자에 대해 정격되지 않았습니다.
 
 
-예를 들어 내보낸 CSV 파일에는 하나가 있습니다 `email` 속성 및 3개의 세그먼트는 다음과 같이 표시될 수 있습니다.
+예를 들어 내보낸 CSV 파일에는 하나가 있습니다 `email` 속성 및 3개의 대상은 다음과 같습니다.
 
 ```csv
 email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -214,9 +213,9 @@ abc101@testemailabc.com,active,active,
 
 Platform은 각각에 대해 하나의 CSV 파일을 생성하므로 [병합 정책 ID](../../../profile/merge-policies/overview.md)또한 각 병합 정책 ID에 대해 별도의 데이터 흐름 실행을 생성합니다.
 
-즉, **[!UICONTROL ID 활성화됨]** 및 **[!UICONTROL 받은 프로필]** 의 지표 [데이터 흐름 실행](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 페이지는 각 세그먼트에 대해 표시되지 않고 동일한 병합 정책을 사용하는 각 세그먼트 그룹에 대해 집계됩니다.
+즉, **[!UICONTROL ID 활성화됨]** 및 **[!UICONTROL 받은 프로필]** 의 지표 [데이터 흐름 실행](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 페이지는 각 대상에 대해 표시되지 않고, 동일한 병합 정책을 사용하는 각 대상자 그룹에 대해 집계됩니다.
 
-동일한 병합 정책을 사용하는 세그먼트 그룹에 대해 데이터 흐름이 생성되므로 세그먼트 이름이 [모니터링 대시보드](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
+동일한 병합 정책을 사용하는 대상자 그룹에 대해 데이터 흐름이 생성되므로 대상자 이름이 [모니터링 대시보드](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
 ![id 활성화 지표를 보여 주는 Experience Platform UI 화면입니다.](../../assets/catalog/advertising/liveramp/liveramp-metrics.png)
 

@@ -3,16 +3,16 @@ title: Salesforce Marketing Cloud 계정 참여
 description: Salesforce Marketing Cloud 계정 참여(이전의 Pardot) 대상을 사용하여 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce Marketing Cloud 계정 참여 내에서 활성화하는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: 86feee5981aaa81d4c1f97ff8aaf303b2aacd977
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1589'
+source-wordcount: '1588'
 ht-degree: 1%
 
 ---
 
 # [!DNL Salesforce Marketing Cloud Account Engagement] 연결
 
-사용 [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *(이전 이름: [!DNL Pardot])* 잠재 고객을 캡처, 추적, 점수 및 등급화하는 대상. 또한 이메일 드립 캠페인 및 육성, 채점 및 캠페인 세분화를 통한 리드 관리를 통해 타겟팅된 시장 세그먼트 및 고객 그룹에 대한 파이프라인의 모든 단계에 대한 리드 트랙을 디자인할 수 있습니다.
+사용 [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *(이전 이름: [!DNL Pardot])* 잠재 고객을 캡처, 추적, 점수 및 등급화하는 대상. 또한 이메일 드립 캠페인 및 육성, 채점 및 캠페인 세분화를 통한 리드 관리를 통해 타겟팅된 시장 대상자 및 고객 그룹에 대한 파이프라인의 모든 단계에 대한 리드 트랙을 디자인할 수 있습니다.
 
 비교 대상 [!DNL Salesforce Marketing Cloud Engagement] 보다 지향적인 것 **B2C** 마케팅, [!DNL Marketing Cloud Account Engagement] 다음에 이상적 **B2B** 영업 및 의사 결정 주기가 더 길어야 하는 여러 부서 및 의사 결정자와 관련된 사용 사례입니다. 또한 CRM과의 긴밀한 근접성과 통합을 유지하여 적절한 판매 및 마케팅 결정을 내릴 수 있습니다. *참고: Experience Platform에 대한 연결도 있습니다 [!DNL Salesforce Marketing Cloud Engagement]에서 확인할 수 있습니다. [[!DNL Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) 및 [[!DNL (API) Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) 페이지.*
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ### 마케팅 캠페인을 위해 연락처에 이메일 보내기 {#use-case-send-emails}
 
-온라인 플랫폼의 마케팅 부서는 이메일 기반 마케팅 캠페인을 B2B 리드의 엄선된 대상자에게 브로드캐스트하려고 합니다. 플랫폼의 마케팅 팀은 Adobe Experience Platform을 통해 새로운 리드를 추가하거나 기존 리드 정보를 업데이트하고, 자체 오프라인 데이터에서 세그먼트를 작성하고, 이러한 세그먼트를 로 보낼 수 있습니다. [!DNL Marketing Cloud Account Engagement]그런 다음 마케팅 캠페인 이메일을 보내는 데 사용할 수 있습니다.
+온라인 플랫폼의 마케팅 부서는 이메일 기반 마케팅 캠페인을 B2B 리드의 엄선된 대상자에게 브로드캐스트하려고 합니다. 플랫폼의 마케팅 팀은 Adobe Experience Platform을 통해 새로운 리드를 추가하거나 기존 리드 정보를 업데이트하고, 자체 오프라인 데이터에서 대상을 작성하고, 이러한 대상을 로 보낼 수 있습니다. [!DNL Marketing Cloud Account Engagement]그런 다음 마케팅 캠페인 이메일을 보내는 데 사용할 수 있습니다.
 
 ## 사전 요구 사항 {#prerequisites}
 
@@ -86,8 +86,8 @@ A [!DNL Marketing Cloud Account Engagement] 다음에 대한 구독이 있는 �
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다 *(예: 이메일 주소, 전화번호, 성)*&#x200B;를 입력합니다.</li><li> 플랫폼에서 선택한 각 세그먼트에 대해 해당 [!DNL Salesforce Marketing Cloud Account Engagement] 세그먼트 상태가 플랫폼의 세그먼트 상태로 업데이트됩니다.</li></ul> |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다 *(예: 이메일 주소, 전화번호, 성)*&#x200B;를 입력합니다.</li><li> 플랫폼에서 선택한 각 대상에 대해 [!DNL Salesforce Marketing Cloud Account Engagement] 세그먼트 상태가 플랫폼의 대상자 상태로 업데이트됩니다.</li></ul> |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -133,13 +133,13 @@ A [!DNL Marketing Cloud Account Engagement] 다음에 대한 구독이 있는 �
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 >
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-읽기 [프로필 및 세그먼트를 스트리밍 세그먼트 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ### 매핑 고려 사항 및 예제 {#mapping-considerations-example}
 
@@ -154,7 +154,7 @@ XDM 필드를 [!DNL Marketing Cloud Account Engagement] 대상 필드에서 아�
    * XDM 프로필 스키마와 간에 매핑을 추가하려면 다음 단계를 반복합니다 [!DNL Marketing Cloud Account Engagement]: | 소스 필드 | Target 필드 | 필수 | | — | — | — | |`IdentityMap: Email`|`Identity: email`| 예 | |`xdm: MailingAddress.city`|`xdm: city`| | |`xdm: person.name.firstName`|`Attribute: firstName`| |
 
    * 위 매핑의 예가 아래에 나와 있습니다.
-      ![Target 매핑을 보여주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
+     ![Target 매핑을 보여주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
 
 대상 연결에 대한 매핑 제공을 마쳤으면 다음을 선택합니다. **[!UICONTROL 다음]**.
 
@@ -162,14 +162,14 @@ XDM 필드를 [!DNL Marketing Cloud Account Engagement] 대상 필드에서 아�
 
 대상을 올바르게 설정했는지 확인하려면 아래 단계를 수행하십시오.
 
-1. 선택한 세그먼트 중 하나로 이동합니다. **[!DNL Activation data]** 탭을 선택합니다. 다음 **[!UICONTROL 매핑 ID]** 열에는 내에서 생성된 사용자 정의 필드의 이름이 표시됩니다. [!DNL Marketing Cloud Account Engagement Prospects] 페이지를 가리키도록 업데이트하는 중입니다.
+1. 선택한 대상 중 하나로 이동합니다. **[!DNL Activation data]** 탭을 선택합니다. 다음 **[!UICONTROL 매핑 ID]** 열에는 내에서 생성된 사용자 정의 필드의 이름이 표시됩니다. [!DNL Marketing Cloud Account Engagement Prospects] 페이지를 가리키도록 업데이트하는 중입니다.
    ![선택한 세그먼트에 대한 매핑 ID를 보여주는 플랫폼 UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
 
-1. 에 로그인합니다 [[!DNL Salesforce]](https://login.salesforce.com/) 웹 사이트입니다. 그런 다음 로 이동합니다 **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** 페이지의 잠재 고객이 추가/업데이트되었는지 확인합니다. 또는 다음에 액세스할 수도 있습니다 [[!DNL Salesforce Pardot]](https://pi.pardot.com/) 및 액세스 **[!DNL Prospects]** 페이지를 가리키도록 업데이트하는 중입니다.
+1. 에 로그인합니다 [[!DNL Salesforce]](https://login.salesforce.com/) 웹 사이트입니다. 그런 다음 로 이동합니다 **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** 대상자의 잠재 고객이 추가/업데이트되었는지 확인합니다. 또는 다음에 액세스할 수도 있습니다 [[!DNL Salesforce Pardot]](https://pi.pardot.com/) 및 액세스 **[!DNL Prospects]** 페이지를 가리키도록 업데이트하는 중입니다.
    ![Prospect 페이지를 보여 주는 Salesforce UI 스크린샷입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)
 
-1. 잠재 고객이 업데이트되었는지 확인하려면 잠재 고객을 선택하고 사용자 지정 잠재 고객 필드가 Experience Platform 세그먼트 상태로 업데이트되었는지 확인합니다.
-   ![선택한 Prospect 페이지를 보여 주는 Salesforce UI 스크린샷에 세그먼트 상태로 사용자 지정 Prospect 필드가 업데이트됩니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
+1. 잠재 고객이 업데이트되었는지 확인하려면 잠재 고객을 선택하고 사용자 지정 잠재 고객 필드가 Experience Platform 대상 상태로 업데이트되었는지 확인합니다.
+   ![선택한 Prospect 페이지를 보여 주는 Salesforce UI 스크린샷에 사용자 지정 Prospect 필드가 대상자 상태로 업데이트됩니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

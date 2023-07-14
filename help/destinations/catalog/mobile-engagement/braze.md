@@ -3,9 +3,9 @@ keywords: 모바일; 브레이즈; 메시지;
 title: 브레이즈 연결
 description: Braze는 고객과 고객이 사랑하는 브랜드 간의 관련성 있고 기억에 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '1041'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 다음 세부 사항에 유의하십시오. [!DNL Braze] 대상:
 
-* [!DNL Adobe Experience Platform] 세그먼트를 내보낼 대상 [!DNL Braze] 다음 아래에 `AdobeExperiencePlatformSegments` 특성.
+* [!DNL Adobe Experience Platform] 대상자를 (으)로 내보냅니다. [!DNL Braze] 다음 아래에 `AdobeExperiencePlatformSegments` 특성.
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ ht-degree: 1%
 
 ## 사용 사례 {#use-cases}
 
-마케터는 세그먼트가 내장된 모바일 참여 대상에서 사용자를 타겟팅하려고 합니다 [!DNL Adobe Experience Platform]. 또한 의 속성을 기반으로 개인화된 경험을 전달하려고 합니다 [!DNL Adobe Experience Platform] 세그먼트 및 프로필이 업데이트되는 즉시 프로필 [!DNL Adobe Experience Platform].
+마케터는 대상이 내장된 모바일 참여 대상에서 사용자를 타겟팅하려고 합니다 [!DNL Adobe Experience Platform]. 또한 의 속성을 기반으로 개인화된 경험을 전달하려고 합니다 [!DNL Adobe Experience Platform] 대상자 및 프로필이 업데이트되는 즉시 프로필 [!DNL Adobe Experience Platform].
 
 ## 지원되는 ID {#supported-identities}
 
@@ -44,14 +44,26 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
+## 외부 대상 지원 {#external-audiences-support}
+
+모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+또한 이 대상은 아래 표에 설명된 외부 대상의 활성화도 지원합니다.
+
+| 외부 대상 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+
+{style="table-layout:auto"}
+
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 필드 매핑에 따라 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성) 및/또는 ID와 함께 세그먼트의 모든 멤버를 내보냅니다.[!DNL Adobe Experience Platform] 세그먼트를 내보낼 대상 [!DNL Braze] 다음 아래에 `AdobeExperiencePlatformSegments` 특성. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 필드 매핑에 따라 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성) 및/또는 ID와 함께 세그먼트의 모든 멤버를 내보냅니다.[!DNL Adobe Experience Platform] 대상자를 (으)로 내보냅니다. [!DNL Braze] 다음 아래에 `AdobeExperiencePlatformSegments` 특성. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -83,13 +95,13 @@ ht-degree: 1%
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-다음을 참조하십시오 [대상 데이터를 스트리밍 세그먼트 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+다음을 참조하십시오 [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ## 매핑 고려 사항 {#mapping-considerations}
 
@@ -142,8 +154,8 @@ XDM 프로필 스키마와 [!DNL Braze] 인스턴스에는 다음 속성과 ID�
 
 |  | XDM 프로필 스키마 | [!DNL Braze] 인스턴스 |
 |---|---|---|
-| 속성 | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>이름</code></li><li>성</code></li><li>전화번호</code></li></ul> |
-| ID | <ul><li>이메일</code></li><li>Google 광고 ID (GAID)</code></li><li>IDFA(광고주용 Apple ID)</code></li></ul> | <ul><li>external_id</code></li></ul> |
+| 속성 | <ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul> | <ul><li><code>이름</code></li><li><code>성</code></li><li><code>전화번호</code></li></ul> |
+| ID | <ul><li><code>이메일</code></li><li><code>Google 광고 ID (GAID)</code></li><li><code>IDFA(광고주용 Apple ID)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
 
 올바른 매핑은 다음과 같습니다.
 
@@ -151,7 +163,7 @@ XDM 프로필 스키마와 [!DNL Braze] 인스턴스에는 다음 속성과 ID�
 
 ## 내보낸 데이터 {#exported-data}
 
-데이터가 성공적으로 로 내보내졌는지 확인하려면 [!DNL Braze] 대상, 다음을 확인: [!DNL Braze] 계정입니다. [!DNL Adobe Experience Platform] 세그먼트를 내보낼 대상 [!DNL Braze] 다음 아래에 `AdobeExperiencePlatformSegments` 특성.
+데이터가 성공적으로 로 내보내졌는지 확인하려면 [!DNL Braze] 대상, 다음을 확인: [!DNL Braze] 계정입니다. [!DNL Adobe Experience Platform] 대상자를 (으)로 내보냅니다. [!DNL Braze] 다음 아래에 `AdobeExperiencePlatformSegments` 특성.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

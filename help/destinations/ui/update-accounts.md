@@ -4,7 +4,7 @@ title: 대상 계정 업데이트
 type: Tutorial
 description: 이 자습서에는 Adobe Experience Platform UI에서 대상 계정을 업데이트하는 단계가 나와 있습니다
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 0%
@@ -37,7 +37,7 @@ ht-degree: 0%
 
    ![대상 계정 필터링](../assets/ui/update-accounts/filter-accounts.png)
 
-3. 줄임표(`...`)을 클릭하여 제품에서 사용할 수 있습니다. 옵션을 제공하는 팝업 패널이 나타납니다. **[!UICONTROL 세그먼트 활성화]**, **[!UICONTROL 세부 정보 편집]**, 및 **[!UICONTROL 삭제]** 계정입니다. 다음 항목 선택 ![세부 정보 편집 단추](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 세부 정보 편집]** 단추를 클릭하여 계정 정보를 편집합니다.
+3. 줄임표(`...`)을 클릭하여 제품에서 사용할 수 있습니다. 옵션을 제공하는 팝업 패널이 나타납니다. **[!UICONTROL 대상자 활성화]**, **[!UICONTROL 세부 정보 편집]**, 및 **[!UICONTROL 삭제]** 계정입니다. 다음 항목 선택 ![세부 정보 편집 단추](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 세부 정보 편집]** 단추를 클릭하여 계정 정보를 편집합니다.
 
    ![계정 편집](../assets/ui/update-accounts/accounts-edit.png)
 

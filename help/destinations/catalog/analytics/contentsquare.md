@@ -3,18 +3,18 @@ keywords: contentsquare 확장;contentsquare 대상;contentsquare
 title: Contentsquare 확장
 description: Contentsquare 확장은 Adobe Experience Platform의 분석 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: bf836a15-b87c-4a4b-a3fc-92d3cf9bc90e
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 5%
 
 ---
 
-# [!DNL Contentsquare] 확장 {#contentsquare-extension}
+# [!DNL Contentsquare] 확장 기능 {#contentsquare-extension}
 
 ## 개요 {#overview}
 
-페이지 내 행동을 시각화하십시오. 고객이 포기하는 이유와 개선 가능한 방법을 확인하십시오. 각 Analytics 세그먼트 및 Target 테스트에 대한 UX 및 콘텐츠 요소에 매출을 연결합니다. 설치 [!DNL Contentsquare] 태그 지정, 사용자 지정 변수 및 이벤트 설정. 몇 번의 클릭만으로 UX 분석을 위한 데이터 수집을 시작할 수 있습니다.
+페이지 내 행동을 시각화하십시오. 고객이 포기하는 이유와 개선 가능한 방법을 확인하십시오. 각 Analytics 대상 및 Target 테스트에 대한 UX 및 콘텐츠 요소에 매출을 연결합니다. 설치 [!DNL Contentsquare] 태그 지정, 사용자 지정 변수 및 이벤트 설정. 몇 번의 클릭만으로 UX 분석을 위한 데이터 수집을 시작할 수 있습니다.
 
 [!DNL Contentsquare] 는 Adobe Experience Platform의 analytics 확장 기능입니다. 확장 기능에 대한 자세한 내용은 의 확장 페이지를 참조하십시오 [Adobe 교환](https://exchange.adobe.com/experiencecloud.details.100364.html).
 

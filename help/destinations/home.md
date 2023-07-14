@@ -3,10 +3,10 @@ keywords: 대상;adobe experience platform;platform;대상 개요;데이터 활�
 title: 대상 개요
 description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과 미리 빌드된 통합입니다. Adobe Experience Platform의 대상 을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '805'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ![대상 개요 배너](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+**[!DNL Destinations]**&#x200B;는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -30,7 +30,7 @@ Platform의 핵심 기능 중 하나는 자사 데이터를 수집하고 비즈�
 ## 대상 단계 {#steps}
 
 * 다음에서 선택: [셀프서비스 카탈로그](./catalog/overview.md) Platform에서 사용할 수 있는 모든 대상.
-* 대상을 사용하여 프로필 또는 세그먼트를 마케팅 자동화 플랫폼, 디지털 광고 플랫폼 등으로 보냅니다.
+* 대상을 사용하여 프로필 또는 대상자를 마케팅 자동화 플랫폼, 디지털 광고 플랫폼 등으로 보냅니다.
 * 정기적으로 원하는 대상으로 데이터 내보내기를 예약합니다.
 
 ## 컨트롤 {#controls}
@@ -40,8 +40,8 @@ Platform의 핵심 기능 중 하나는 자사 데이터를 수집하고 비즈�
 * 데이터를 활성화할 수 있는 대상 플랫폼의 카탈로그를 검색하십시오.
 * 카탈로그의 대상에 대한 데이터 흐름을 만들고, 편집하고, 활성화하고, 비활성화합니다.
 * 저장소 위치에 계정을 만들거나 대상 플랫폼의 계정에 플랫폼을 연결합니다.
-* 대상에 활성화해야 하는 세그먼트를 선택합니다.
-* 선택 [XDM(경험 데이터 모델) 필드](../xdm/home.md) 세그먼트를 이메일 마케팅 대상으로 활성화할 때 를 내보냅니다.
+* 대상에 활성화해야 하는 대상을 선택합니다.
+* 선택 [XDM(경험 데이터 모델) 필드](../xdm/home.md) 대상을 이메일 마케팅 대상으로 활성화할 때 내보내기합니다.
 
 ## 대상 유형 및 범주 {#types-and-categories}
 
@@ -56,8 +56,8 @@ Platform의 대상 기능은 Adobe Experience Platform 액세스 제어 권한�
 | 권한 수준 | 설명 |
 | ---- | ----|
 | **[!UICONTROL 대상 관리]** | 대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
-| **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** | 대상에 대한 세그먼트를 활성화하고 [매핑 단계](ui/activate-batch-profile-destinations.md#mapping) 워크플로의 경우 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
-| **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 매핑 없이 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** | 대상에 대한 세그먼트를 활성화하고 [매핑 단계](ui/activate-batch-profile-destinations.md#mapping) 워크플로의 경우 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 매핑 없이 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** | 대상에 대한 대상자를 활성화하고 [매핑 단계](ui/activate-batch-profile-destinations.md#mapping) 워크플로의 경우 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 매핑 없이 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** | 대상을 활성화하고 을(를) 숨기려면 [매핑 단계](ui/activate-batch-profile-destinations.md#mapping) 워크플로의 경우 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 매핑 없이 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
 
 {style="table-layout:auto"}
 
@@ -88,15 +88,15 @@ Adobe Experience Platform의 속성 기반 액세스 제어를 통해 관리자�
 
 대상 만들기 워크플로에서 마케팅 작업을 선택하는 방법에 대한 자세한 내용은 플랫폼의 다양한 대상 유형에 대한 다음 페이지를 참조하십시오.
 
-* [광고 대상 - Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
+* [광고 대상 - Google Ad Manager](./catalog/advertising/google-ad-manager.md)
 * [광고 대상 - Google 광고](./catalog/advertising/google-ads-destination.md)
-* [광고 대상 - Google 디스플레이 및 비디오 360 ](./catalog/advertising/google-dv360.md)
+* [광고 대상 - Google 디스플레이 및 비디오 360](./catalog/advertising/google-dv360.md)
 * [클라우드 스토리지 대상](./catalog/cloud-storage/overview.md)
 * [이메일 마케팅 대상](./catalog/email-marketing/overview.md)
 * [소셜 대상](./catalog/social/overview.md)
 
-세그먼트 활성화 워크플로의 데이터 정책 위반에 대한 자세한 내용은 다음을 참조하십시오. **[!UICONTROL 리뷰]** 다음 안내서의 단계:
+대상자 활성화 워크플로의 데이터 정책 위반에 대한 자세한 내용은 다음을 참조하십시오. **[!UICONTROL 리뷰]** 다음 안내서의 단계:
 
-* [대상 데이터를 스트리밍 세그먼트 내보내기 대상으로 활성화](./ui/activate-segment-streaming-destinations.md#review)
+* [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](./ui/activate-segment-streaming-destinations.md#review)
 * [대상자 데이터를 스트리밍 프로필 내보내기 대상으로 활성화](./ui/activate-streaming-profile-destinations.md#review)
 * [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](./ui/activate-batch-profile-destinations.md#review)

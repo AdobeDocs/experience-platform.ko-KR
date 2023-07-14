@@ -2,7 +2,7 @@
 description: 파일 기반 대상으로 데이터를 활성화할 때 파일 서식 옵션을 구성하는 방법에 대해 알아봅니다
 title: (Beta) 파일 기반 대상에 대한 파일 형식 옵션 구성
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1226'
 ht-degree: 19%
@@ -37,7 +37,7 @@ Experience Platform UI를 사용하여 내보낸 파일에 대한 다양한 파�
 > 
 >새로운 클라우드 스토리지 대상 - [(베타) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(베타) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(베타) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(베타) 데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(베타) Google 클라우드 스토리지](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(베타) SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - 현재 아래에 강조 표시된 6개의 CSV 옵션만 지원합니다.
 
-![사용 가능한 일부 파일 서식 옵션을 보여 주는 이미지입니다.](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
+![사용 가능한 일부 파일 서식 옵션을 보여 주는 이미지입니다.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
 ### 구분 기호 {#delimiter}
 

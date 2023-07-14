@@ -1,9 +1,9 @@
 ---
 description: 대상 메타데이터 템플릿을 사용하여 대상에서 대상을 프로그래밍 방식으로 생성, 업데이트 또는 삭제합니다. Adobe은 마케팅 API의 사양을 기반으로 구성할 수 있는 확장 가능한 대상 메타데이터 템플릿을 제공합니다. 템플릿을 정의, 테스트 및 제출하면 Adobe이 이 템플릿을 사용하여 대상에 대한 API 호출을 구조화합니다.
 title: 대상자 메타데이터 관리
-source-git-commit: e69bd819fb8ef6c2384a2b843542d1ddcea0661f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1037'
 ht-degree: 0%
 
 ---
@@ -23,23 +23,23 @@ API 구성에 따라 Experience Platform에서 대상을 구성할 때 대상 �
 
 ## 대상 메타데이터 관리에서 지원하는 사용 사례 {#use-cases}
 
-Destination SDK에서 대상 메타데이터를 지원하므로 Experience Platform 대상을 구성할 때 Platform 사용자가 세그먼트를 대상에 매핑하고 활성화할 때 여러 옵션 중 하나를 제공할 수 있습니다. 의 매개 변수를 통해 사용자가 사용할 수 있는 옵션을 제어할 수 있습니다. [대상 메타데이터 구성](../functionality/destination-configuration/audience-metadata-configuration.md) 섹션에 자세히 설명되어 있습니다.
+Destination SDK에서 대상 메타데이터를 지원하므로 Experience Platform 대상을 구성할 때 Platform 사용자가 대상에 대상을 매핑하고 활성화할 때 여러 옵션 중 하나를 제공할 수 있습니다. 의 매개 변수를 통해 사용자가 사용할 수 있는 옵션을 제어할 수 있습니다. [대상 메타데이터 구성](../functionality/destination-configuration/audience-metadata-configuration.md) 섹션에 자세히 설명되어 있습니다.
 
 ### 사용 사례 1 - 서드파티 API가 있으며 사용자는 매핑 ID를 입력할 필요가 없습니다.
 
-세그먼트나 대상을 생성/업데이트/삭제할 API 엔드포인트가 있는 경우, 대상 메타데이터 템플릿을 사용하여 Destination SDK 생성/업데이트/삭제 엔드포인트의 사양과 일치하도록 세그먼트를 구성할 수 있습니다. Experience Platform은 프로그래밍 방식으로 세그먼트를 생성/업데이트/삭제하고 메타데이터를 다시 Experience Platform으로 동기화할 수 있습니다.
+대상자 또는 대상자를 생성/업데이트/삭제할 API 엔드포인트가 있는 경우 대상자 메타데이터 템플릿을 사용하여 대상자 생성/업데이트/삭제 엔드포인트의 사양과 일치하도록 Destination SDK을 구성할 수 있습니다. Experience Platform은 프로그래밍 방식으로 대상을 만들기/업데이트/삭제하고 메타데이터를 다시 Experience Platform으로 동기화할 수 있습니다.
 
-Experience Platform UI(사용자 인터페이스)에서 대상에 대한 세그먼트를 활성화할 때 사용자가 활성화 워크플로에서 세그먼트 매핑 ID 필드를 수동으로 입력할 필요가 없습니다.
+Experience Platform UI(사용자 인터페이스)에서 대상에 대상을 활성화할 때 사용자가 활성화 워크플로에서 대상 매핑 ID 필드를 수동으로 입력할 필요가 없습니다.
 
-### 사용 사례 2 - 사용자는 먼저 대상에 세그먼트를 만들어야 하며 매핑 ID를 수동으로 입력해야 합니다.
+### 사용 사례 2 - 사용자는 먼저 대상에 대상을 만들어야 하며 매핑 ID를 수동으로 입력해야 합니다.
 
-파트너나 사용자가 대상에서 수동으로 세그먼트와 기타 메타데이터를 만들어야 하는 경우 활성화 워크플로의 세그먼트 매핑 ID 필드를 사용자가 수동으로 입력하여 대상과 Experience Platform 간에 세그먼트 메타데이터를 동기화해야 합니다.
+파트너나 사용자가 대상에서 수동으로 대상 및 기타 메타데이터를 만들어야 하는 경우 사용자는 활성화 워크플로의 대상 매핑 ID 필드를 수동으로 입력하여 대상과 Experience Platform 간에 대상 메타데이터를 동기화해야 합니다.
 
 ![입력 매핑 ID](../assets/functionality/input-mapping-id.png)
 
-### 사용 사례 3 - 대상에서 Experience Platform 세그먼트 ID를 승인하므로 사용자가 매핑 ID를 수동으로 입력할 필요가 없습니다.
+### 사용 사례 3 - 대상에서 Experience Platform 대상 ID를 승인하므로 사용자가 매핑 ID를 수동으로 입력할 필요가 없습니다.
 
-대상 시스템이 Experience Platform 세그먼트 ID를 수락하는 경우 대상 메타데이터 템플릿에서 이를 구성할 수 있습니다. 사용자는 세그먼트를 활성화할 때 세그먼트 매핑 ID를 채울 필요가 없습니다.
+대상 시스템이 Experience Platform 대상 ID를 수락하는 경우 대상 메타데이터 템플릿에서 이를 구성할 수 있습니다. 사용자가 세그먼트를 활성화할 때 대상 매핑 ID를 채울 필요가 없습니다.
 
 ## 범용 및 확장 가능한 대상 템플릿 {#generic-and-extensible}
 
@@ -525,13 +525,13 @@ Experience Platform UI(사용자 인터페이스)에서 대상에 대한 세그�
 
 ## 대상 메타데이터 템플릿에 사용되는 매크로
 
-Experience Platform과 API 간에 세그먼트 ID, 액세스 토큰, 오류 메시지 등의 정보를 전달하기 위해 대상 템플릿에는 사용할 수 있는 매크로가 포함됩니다. 이 페이지의 세 가지 구성 예제에 사용된 매크로에 대한 설명은 아래를 참조하십시오.
+Experience Platform과 API 간에 대상 ID, 액세스 토큰, 오류 메시지 등의 정보를 전달하기 위해 대상 템플릿에는 사용할 수 있는 매크로가 포함됩니다. 이 페이지의 세 가지 구성 예제에 사용된 매크로에 대한 설명은 아래를 참조하십시오.
 
 | 매크로 | 설명 |
 |--- |--- |
-| `{{segment.alias}}` | Experience Platform에서 세그먼트 별칭에 액세스할 수 있습니다. |
-| `{{segment.name}}` | Experience Platform에서 세그먼트 이름에 액세스할 수 있습니다. |
-| `{{segment.id}}` | Experience Platform에서 세그먼트 ID에 액세스할 수 있습니다. |
+| `{{segment.alias}}` | Experience Platform에서 대상 별칭에 액세스할 수 있습니다. |
+| `{{segment.name}}` | Experience Platform에서 대상자 이름에 액세스할 수 있습니다. |
+| `{{segment.id}}` | Experience Platform에서 대상 ID에 액세스할 수 있습니다. |
 | `{{customerData.accountId}}` | 대상 구성에서 설정한 계정 ID 필드에 액세스할 수 있습니다. |
 | `{{oauth2ServiceAccessToken}}` | OAuth 2 구성에 따라 액세스 토큰을 동적으로 생성할 수 있습니다. |
 | `{{authData.accessToken}}` | 액세스 토큰을 API 엔드포인트에 전달할 수 있습니다. 사용 `{{authData.accessToken}}` Experience Platform이 대상에 연결하는 데 만료되지 않는 토큰을 사용해야 하는 경우, 그렇지 않으면 를 사용하십시오. `{{oauth2ServiceAccessToken}}` 액세스 토큰을 생성합니다. |

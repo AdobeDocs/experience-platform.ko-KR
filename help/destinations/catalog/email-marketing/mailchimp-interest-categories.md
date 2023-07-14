@@ -1,25 +1,25 @@
 ---
-title: Mailchimp 관심 범주
-description: Mailchimp(Intuit Mailchimp라고도 함)는 기업이 메일링 목록 및 이메일 마케팅 캠페인을 사용하여 연락처(고객, 고객 또는 기타 이해 당사자)를 관리하고 상담하는 데 사용하는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다. 이 커넥터를 사용하여 관심 분야 및 환경 설정에 따라 연락처를 정렬할 수 있습니다.
+title: Mailchimp 관심 카테고리
+description: Mailchimp(Intuit Mailchimp라고도 함)는 기업이 메일링 목록 및 이메일 마케팅 캠페인을 사용하여 연락처(고객, 고객 또는 기타 이해 당사자)를 관리하고 상담하는 데 사용하는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다. 이 커넥터를 사용하여 관심사 및 선호도에 따라 연락처를 정렬합니다.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: f8ccf9303fbcb010225881942de5e672b4111072
+source-git-commit: a293df660a9b959d12bdc170d1cb69f3543a30f1
 workflow-type: tm+mt
-source-wordcount: '2357'
-ht-degree: 1%
+source-wordcount: '2356'
+ht-degree: 2%
 
 ---
 
 # [!DNL Mailchimp Interest Categories] 연결
 
-[[!DNL Mailchimp]](https://mailchimp.com) 은(는) 기업에서 연락처를 관리하고 상담하는 데 사용하는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다 *(클라이언트, 고객 또는 기타 이해 당사자)* 메일링 목록 및 이메일 마케팅 캠페인 사용. 이 커넥터를 사용하여 관심 분야 및 환경 설정에 따라 연락처를 정렬할 수 있습니다.
+[[!DNL Mailchimp]](https://mailchimp.com) 은(는) 기업에서 연락처를 관리하고 상담하는 데 사용하는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다 *(클라이언트, 고객 또는 기타 이해 당사자)* 메일링 목록 및 이메일 마케팅 캠페인 사용. 이 커넥터를 사용하여 관심사 및 선호도에 따라 연락처를 정렬합니다.
 
-[!DNL Mailchimp Interest Categories] 사용 [대상](https://mailchimp.com/help/getting-started-audience/), [그룹](https://mailchimp.com/help/getting-started-with-groups/), 및 관심 범주 *(그룹 이름 또는 그룹 제목이라고도 함)*. 각 [!DNL Mailchimp] 그룹은 관심 범주 목록입니다. 연락처는 웹 사이트의 등록 양식을 통해 하나 이상의 관심 범주를 구독할 때 관심 범주와 연결됩니다. 또한 대상자 내에서 연락처를 그룹으로 구성하고 관심 카테고리와 연결할 수 있으며, 세그먼트를 만드는 데 이 연락처를 사용할 수 있습니다. 이러한 세그먼트를 사용하여 타겟팅된 캠페인 이메일을 구독한 연락처에 브로드캐스트할 수 있습니다.
+[!DNL Mailchimp Interest Categories] 사용 [대상](https://mailchimp.com/help/getting-started-audience/), [그룹](https://mailchimp.com/help/getting-started-with-groups/), 및 관심 범주 *(그룹 이름 또는 그룹 제목이라고도 함)*. 각 [!DNL Mailchimp] 그룹은 관심 범주 목록입니다. 연락처는 웹 사이트의 등록 양식을 통해 하나 이상의 관심 범주를 구독할 때 관심 범주와 연결됩니다. 또한 대상자 내에서 연락처를 그룹으로 구성하고 관심 카테고리와 연결할 수 있으며, 세그먼트를 만드는 데 이 연락처를 사용할 수 있습니다. 이러한 대상을 사용하여 타겟팅된 캠페인 이메일을 구독한 연락처에 브로드캐스트할 수 있습니다.
 
 <!--
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
-이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md) 를 사용합니다. [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) 생성할 API [관심 범주](https://mailchimp.com/developer/marketing/api/interest-categories/) 선택한 각 Platform 세그먼트의 연락처를 해당 관심 카테고리에 추가합니다. 다음을 수행할 수 있습니다. **새 연락처 추가** 또는 **기존 의 정보 업데이트 [!DNL Mailchimp] 연락처**, 그런 다음 **원하는 그룹에서 추가하거나 제거합니다.** 기존 항목 내 [!DNL Mailchimp] 새 세그먼트 내에서 대상자를 활성화한 후 대상자입니다. [!DNL Mailchimp Interest Groups] 플랫폼에서 선택한 세그먼트 이름을 내 관심 카테고리로 사용합니다. [!DNL Mailchimp].
+이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md) 를 사용합니다. [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) 생성할 API [관심 범주](https://mailchimp.com/developer/marketing/api/interest-categories/) 그런 다음 선택한 각 Platform 대상자의 연락처를 해당 관심사 카테고리에 추가합니다. 다음을 수행할 수 있습니다. **새 연락처 추가** 또는 **기존 의 정보 업데이트 [!DNL Mailchimp] 연락처**, 그런 다음 **원하는 그룹에서 추가하거나 제거합니다.** 기존 항목 내 [!DNL Mailchimp] 새 세그먼트 내에서 대상자를 활성화한 후 대상자입니다. [!DNL Mailchimp Interest Groups] 플랫폼에서 선택한 대상 이름을 내 관심 카테고리로 사용합니다. [!DNL Mailchimp].
 
 ## 사용 사례 {#use-cases}
 
@@ -27,7 +27,7 @@ Compared to [!DNL Mailchimp Tags] which you would use for internal classificatio
 
 ### 마케팅 캠페인을 위해 연락처에 이메일 보내기 {#use-case-send-emails}
 
-스포츠 용품 웹사이트의 판매부는 축구에 관심이 있다고 스스로 확인한 연락처 목록에 이메일 기반의 마케팅 캠페인을 방송하기를 원한다. 연락처 목록은 웹 사이트의 개발 팀으로부터 받은 데이터 내보내기의 배치로 분리되므로 추적해야 합니다. 팀이 기존 을(를) 식별함 [!DNL Mailchimp] 대상자 및 는 각 목록의 연락처가 추가되는 Experience Platform 세그먼트 작성을 시작합니다. 이러한 세그먼트를 로 보낸 후 [!DNL Mailchimp Interest Categories], 선택한 항목에 연락처가 없는 경우 [!DNL Mailchimp] 대상자는 연락처가 속한 세그먼트 이름으로 그룹에 추가됩니다. 에 연락처가 이미 있는 경우 [!DNL Mailchimp] 대상자 또는 그룹이 있는 경우 해당 정보가 업데이트됩니다. 데이터가 (으)로 전송되면 [!DNL Mailchimp Interest Categories], Sales Team에서 마케팅 캠페인 이메일을 선택하여 [!DNL Mailchimp] 대상입니다.
+스포츠 용품 웹사이트의 판매부는 축구에 관심이 있다고 스스로 확인한 연락처 목록에 이메일 기반의 마케팅 캠페인을 방송하기를 원한다. 연락처 목록은 웹 사이트의 개발 팀으로부터 받은 데이터 내보내기의 배치로 분리되므로 추적해야 합니다. 팀이 기존 을(를) 식별함 [!DNL Mailchimp] 대상자 및 는 각 목록의 연락처가 추가되는 Experience Platform 대상자 빌드를 시작합니다. 이 대상자를 (으)로 보낸 후 [!DNL Mailchimp Interest Categories], 선택한 항목에 연락처가 없는 경우 [!DNL Mailchimp] 대상자는 연락처가 속한 대상자 이름으로 그룹에 추가됩니다. 에 연락처가 이미 있는 경우 [!DNL Mailchimp] 대상자 또는 그룹이 있는 경우 해당 정보가 업데이트됩니다. 데이터가 (으)로 전송되면 [!DNL Mailchimp Interest Categories], Sales Team에서 마케팅 캠페인 이메일을 선택하여 [!DNL Mailchimp] 대상입니다.
 
 ## 사전 요구 사항 {#prerequisites}
 
@@ -91,8 +91,8 @@ API 키의 예는 다음과 같습니다. `0123456789abcdef0123456789abcde-us14`
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다 *(예: 이메일 주소, 전화번호, 성)*&#x200B;를 입력합니다.</li><li> 플랫폼에서 선택한 각 세그먼트에 대해 해당 [!DNL Mailchimp Interest Categories] 세그먼트 상태가 플랫폼의 세그먼트 상태로 업데이트됩니다.</li></ul> |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되면 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>원하는 스키마 필드와 함께 세그먼트의 모든 멤버를 내보냅니다 *(예: 이메일 주소, 전화번호, 성)*&#x200B;를 입력합니다.</li><li> 플랫폼에서 선택한 각 대상에 대해 [!DNL Mailchimp Interest Categories] 세그먼트 상태가 플랫폼의 대상자 상태로 업데이트됩니다.</li></ul> |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필을 업데이트하면 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -147,13 +147,13 @@ API 키의 예는 다음과 같습니다. `0123456789abcdef0123456789abcde-us14`
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 >
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-읽기 [프로필 및 세그먼트를 스트리밍 세그먼트 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ### 매핑 고려 사항 및 예제 {#mapping-considerations-example}
 
@@ -195,8 +195,8 @@ XDM 필드를 [!DNL Mailchimp Interest Categories] 대상 필드에서 아래 �
 
 ![대상자 그룹 페이지를 보여 주는 Mailchimp UI 스크린샷.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
-* 그룹을 선택하고 선택한 세그먼트가 플랫폼의 세그먼트 이름을 가진 범주로 만들어지는지 확인합니다. 이 범주의 뒤에는 자동으로 생성된 접미사가 올 수 있습니다.
-   * 이 대상은 선택한 세그먼트의 이름을 사용하여 [[!DNL Mailchimp] 관심 범주 API 추가](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). 새 대상을 만들고 동일한 세그먼트를 다시 활성화하는 경우 [!DNL Mailchimp] 기존 세그먼트와 새 세그먼트를 구분하는 접미사를 추가합니다.
+* 그룹을 선택하고 선택한 대상이 플랫폼에서 대상 이름을 가진 카테고리로 만들어졌는지 확인합니다. 이 카테고리의 뒤에는 자동으로 생성된 접미사가 올 수 있습니다.
+   * 이 대상은 선택한 세그먼트의 이름을 사용하여 [[!DNL Mailchimp] 관심 범주 API 추가](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). 새 대상을 만들고 동일한 대상을 다시 활성화하는 경우 [!DNL Mailchimp] 기존 세그먼트와 새 세그먼트를 구분하는 접미사를 추가합니다.
 * 그룹에 이메일이 없는 연락처는 새로 만든 카테고리에 추가됩니다.
 * 그룹 내에 이미 존재하는 연락처의 경우 속성 필드 데이터가 업데이트되고, 연락처는 새로 생성된 카테고리에 추가됩니다.
 

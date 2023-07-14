@@ -2,9 +2,9 @@
 title: Verizon MediaYahoo DataX 연결
 description: DataX는 Verizon Media/Yahoo가 안전하고 자동화된 확장 가능한 방식으로 외부 파트너와 데이터를 교환할 수 있도록 하는 다양한 구성 요소를 호스팅하는 Verizon Media/Yahoo 인프라의 집합체입니다.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 0580816c471400ba17eddcb6b1a9dfbf01797938
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '776'
 ht-degree: 2%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->100개 이상의 세그먼트를 활성화할 때 [!DNL Verizon Media/Yahoo DataX], 대상에서 속도 제한 오류를 수신할 수 있습니다. 이 대상에 대한 세그먼트를 활성화할 때 하나의 활성화 데이터 흐름에서 100개 미만의 세그먼트를 활성화해 보십시오. 더 많은 세그먼트를 활성화해야 하는 경우 동일한 계정에 새 대상을 만듭니다.
+>100개 이상의 대상을 활성화할 때 다음이 수행됩니다. [!DNL Verizon Media/Yahoo DataX], 대상에서 속도 제한 오류를 수신할 수 있습니다. 이 대상에 대한 대상을 활성화할 때 하나의 활성화 데이터 흐름에서 100개 미만의 대상을 활성화해 보십시오. 더 많은 세그먼트를 활성화해야 하는 경우 동일한 계정에 새 대상을 만듭니다.
 
 [!DNL DataX] 은(는) 다음에 요약된 분류법 및 대상자 게시물에 대한 할당량 제한에 따라 비율이 제한됩니다. [DataX 설명서](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
@@ -83,14 +83,14 @@ ht-degree: 2%
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | Verizon Media 대상에 사용된 식별자(이메일, GAID, IDFA)로 세그먼트(대상자)의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | Verizon Media 대상에 사용된 식별자(이메일, GAID, IDFA)로 대상자의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## 사용 사례 {#use-cases}
 
-[!DNL DataX] API는 이메일 주소를 키로 사용하는 특정 대상 그룹을 타깃팅하려는 광고주가 사용할 수 있습니다. [!DNL Verizon Media] (VMG)는 VMG의 실시간에 가까운 API를 사용하여 새 세그먼트를 빠르게 만들고 원하는 대상 그룹을 푸시할 수 있습니다.
+[!DNL DataX] API는 이메일 주소를 키로 사용하는 특정 대상 그룹을 타깃팅하려는 광고주가 사용할 수 있습니다. [!DNL Verizon Media] (VMG)는 VMG의 실시간에 가까운 API를 사용하여 빠르게 새 대상을 만들고 원하는 대상 그룹을 푸시할 수 있습니다.
 
 ## 대상에 연결 {#connect}
 
@@ -116,13 +116,13 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-읽기 [대상에 대한 프로필 및 세그먼트 활성화](../../ui/activate-segment-streaming-destinations.md) 대상으로의 대상자 세그먼트 활성화에 대한 지침을 참조하십시오.
+읽기 [대상에 대한 프로필 및 대상자 활성화](../../ui/activate-segment-streaming-destinations.md) 대상을 대상으로 활성화하는 방법에 대한 지침을 참조하십시오.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

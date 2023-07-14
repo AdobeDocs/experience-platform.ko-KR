@@ -1,7 +1,7 @@
 ---
 description: 엔드포인트로 전송되는 HTTP 요청의 형식을 지정하는 방법을 알아봅니다. /authoring/destination-servers 끝점을 사용하여 Adobe Experience Platform Destination SDK에서 대상 서버 템플릿 사양을 구성합니다.
 title: Destination SDK으로 만든 대상에 대한 템플릿 사양
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 4%
@@ -46,7 +46,7 @@ Adobe은 다음과 유사한 템플릿 언어를 사용합니다. [진자](https
 변환에 대한 자세한 내용은 아래 링크를 참조하십시오.
 
 * [메시지 포맷](message-format.md)
-* [ID, 속성 및 세그먼트 멤버십 변환에 템플릿 언어 사용 ](message-format.md#using-templating)
+* [ID, 속성 및 대상자 멤버십 변환에 템플릿 언어 사용](message-format.md#using-templating)
 
 >[!TIP]
 >

@@ -1,7 +1,7 @@
 ---
 description: Adobe Experience Platform Destination SDK을 통해 대상 구성을 만들기 위해 API 호출을 구성하는 방법을 알아봅니다.
 title: 대상 구성 만들기
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 3%
@@ -213,10 +213,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 다음 항목을 나타냅니다. [표준 id 네임스페이스](/help/identity-service/namespaces.md#standard) (예: IDFA) 고객은 구성 중인 ID에 매핑할 수 있습니다. <br> 를 사용할 때 `acceptedGlobalNamespaces`, 다음을 사용할 수 있습니다 `"requiredTransformation":"sha256(lower($))"` 이메일 주소 또는 전화 번호를 소문자로 나타내고 해시합니다. |
 | `destinationDelivery.authenticationRule` | 문자열 | 방법을 나타냅니다. [!DNL Platform] 고객이 대상에 연결합니다. 허용되는 값은 다음과 같습니다 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>사용 `CUSTOMER_AUTHENTICATION` platform 고객이 사용자 이름과 암호, 전달자 토큰 또는 다른 인증 방법을 통해 시스템에 로그인하는 경우. 예를 들어 을 선택한 경우 이 옵션을 선택합니다 `authType: OAUTH2` 또는 `authType:BEARER` 위치: `customerAuthenticationConfigurations`. </li><li> 사용 `PLATFORM_AUTHENTICATION` Adobe과 대상 및 간에 글로벌 인증 시스템이 있는 경우 [!DNL Platform] 고객은 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없습니다. 이 경우 다음을 사용하여 자격 증명 개체를 만들어야 합니다 [자격 증명 API](../../credentials-api/create-credential-configuration.md) 구성. </li><li>사용 `NONE` 대상 플랫폼으로 데이터를 전송하는 데 인증이 필요하지 않은 경우 </li></ul> |
 | `destinationDelivery.destinationServerId` | 문자열 | 다음 `instanceId` / [대상 서버 템플릿](../destination-server/create-destination-server.md) 이 대상에 사용됩니다. |
-| `backfillHistoricalProfileData` | 부울 | 세그먼트가 대상으로 활성화될 때 내역 프로필 데이터를 내보내는지 여부를 제어합니다. 항상 다음으로 설정 `true`. |
-| `segmentMappingConfig.mapUserInput` | 부울 | 대상 활성화 워크플로의 세그먼트 매핑 ID가 사용자에 의해 입력되는지 여부를 제어합니다. |
-| `segmentMappingConfig.mapExperiencePlatformSegmentId` | 부울 | 대상 활성화 워크플로의 세그먼트 매핑 ID가 Experience Platform 세그먼트 ID인지 여부를 제어합니다. |
-| `segmentMappingConfig.mapExperiencePlatformSegmentName` | 부울 | 대상 활성화 워크플로의 세그먼트 매핑 ID가 Experience Platform 세그먼트 이름인지 여부를 제어합니다. |
+| `backfillHistoricalProfileData` | 부울 | 대상이 대상으로 활성화될 때 내역 프로필 데이터를 내보내는지 여부를 제어합니다. 항상 다음으로 설정 `true`. |
+| `segmentMappingConfig.mapUserInput` | 부울 | 대상 활성화 워크플로의 대상 매핑 ID가 사용자에 의해 입력되는지 여부를 제어합니다. |
+| `segmentMappingConfig.mapExperiencePlatformSegmentId` | 부울 | 대상 활성화 워크플로의 대상 매핑 ID가 Experience Platform 대상 ID인지 여부를 제어합니다. |
+| `segmentMappingConfig.mapExperiencePlatformSegmentName` | 부울 | 대상 활성화 워크플로의 대상 매핑 ID가 Experience Platform 대상 이름인지 여부를 제어합니다. |
 | `segmentMappingConfig.audienceTemplateId` | 부울 | 다음 `instanceId` / [대상 메타데이터 템플릿](../../metadata-api/create-audience-template.md) 이 대상에 사용됩니다. |
 | `schemaConfig.profileFields` | 배열 | 사전 정의된 항목을 추가할 때 `profileFields` 위의 구성에 표시된 대로 사용자는 Experience Platform 속성을 대상 측의 사전 정의된 속성에 매핑할 수 있습니다. |
 | `schemaConfig.profileRequired` | 부울 | 사용 `true` 위의 예제 구성에 표시된 대로 사용자가 Experience Platform의 프로필 속성을 대상 측의 사용자 지정 속성에 매핑할 수 있어야 하는 경우입니다. |
