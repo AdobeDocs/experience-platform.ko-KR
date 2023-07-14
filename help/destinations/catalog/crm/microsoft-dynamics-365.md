@@ -4,9 +4,9 @@ title: Microsoft Dynamics 365 연결
 description: Microsoft Dynamics 365 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Microsoft Dynamics 365 내에서 활성화할 수 있습니다.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 416f4ff28ae5ca7ee3235f020ce012352d6002c7
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1927'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,10 @@ ht-degree: 0%
 | `Client ID` | 다음 [!DNL Dynamics 365] 클라이언트 ID [!DNL Azure Active Directory] 응용 프로그램. 다음을 참조하십시오. [[!DNL Dynamics 365] 설명서](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) 지침을 참조하십시오. | `ababbaba-abab-baba-acac-acacacacacac` |
 | `Client Secret` | 다음 [!DNL Dynamics 365] 에 대한 클라이언트 암호 [!DNL Azure Active Directory] 응용 프로그램. 다음 내에서 #2 옵션을 사용합니다. [[!DNL Dynamics 365] 설명서](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#authentication-two-options). | `abcde~abcdefghijklmnopqrstuvwxyz12345678` 지침을 참조하십시오. |
 | `Tenant ID` | 다음 [!DNL Dynamics 365] 에 대한 임차인 ID [!DNL Azure Active Directory] 응용 프로그램. 다음을 참조하십시오. [[!DNL Dynamics 365] 설명서](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) 지침을 참조하십시오. | `1234567-aaaa-12ab-ba21-1234567890` |
+| `Region` | 환경 URL과 연결된 Microsoft 영역입니다.<br> 다음을 참조하십시오. [[!DNL Dynamics 365] 설명서](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions) 지침을 참조하십시오. | 도메인이 아래와 같은 경우 인증할 때 드롭다운 선택기에서 CRM 필드에 대해 강조 표시된 값을 제공해야 합니다. [대상](#authenticate).<br> *org57771b33.`crm`.dynamics.com*<br>  예를 들어, 회사가 북미(NAM) 지역에 프로비저닝된 경우 URL은 다음과 같습니다. `crm.dynamics.com` 다음을 선택해야 합니다. `crm`. 회사가 캐나다(CAN) 지역에서 프로비저닝된 경우 URL은 다음과 같습니다. `crm3.dynamics.com` 다음을 선택해야 합니다. `crm3`. |
 | `Environment URL` | 다음을 참조하십시오. [[!DNL Dynamics 365] 설명서](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1) 지침을 참조하십시오. | 다음의 경우 [!DNL Dynamics 365] 도메인은 아래와 같습니다. 강조 표시된 값이 필요합니다.<br> *`org57771b33`.crm.dynamics.com* |
+
+{style="table-layout:auto"}
 
 ## 가드레일 {#guardrails}
 
@@ -80,6 +83,8 @@ ht-degree: 0%
 | TARGET ID | 예 | 설명 | 고려 사항 |
 |---|---|---|---|
 | `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | 연락처에 대한 고유 식별자. | **필수입니다**. 다음을 참조하십시오. [[!DNL Dynamics 365] 설명서](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) 을 참조하십시오. |
+
+{style="table-layout:auto"}
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -111,6 +116,7 @@ ht-degree: 0%
 * **[!UICONTROL 클라이언트 ID]**: [!DNL Dynamics 365] 클라이언트 ID [!DNL Azure Active Directory] 응용 프로그램.
 * **[!UICONTROL 임차인 ID]**: [!DNL Dynamics 365] 에 대한 임차인 ID [!DNL Azure Active Directory] 응용 프로그램.
 * **[!UICONTROL 클라이언트 암호]**: [!DNL Dynamics 365] 에 대한 클라이언트 암호 [!DNL Azure Active Directory] 응용 프로그램.
+* **[!UICONTROL 지역]**: 사용자 [[!DNL Dynamics 365]](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions) 지역. 예를 들어, 회사가 북미(NAM) 지역에 프로비저닝된 경우 URL은 다음과 같습니다. `crm.dynamics.com` 다음을 선택해야 합니다. `crm`. 회사가 캐나다(CAN) 지역에서 프로비저닝된 경우 URL은 다음과 같습니다. `crm3.dynamics.com` 다음을 선택해야 합니다. `crm3`.
 * **[!UICONTROL 환경 URL]**: 사용자 [!DNL Dynamics 365] 환경 URL.
 
 제공된 세부 정보가 유효한 경우 UI에 **[!UICONTROL 연결됨]** 녹색 확인 표시가 있는 상태. 그런 다음 다음 다음 단계로 진행할 수 있습니다.

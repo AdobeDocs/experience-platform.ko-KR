@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;salesforce;api salesfor
 title: (API) Salesforce Marketing Cloud 연결
 description: Salesforce Marketing Cloud(이전의 ExactTarget) 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce Marketing Cloud 내에서 활성화할 수 있습니다.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: d1bfd85bf7a318692fb6ae87e163dca105d531c6
 workflow-type: tm+mt
-source-wordcount: '2909'
+source-wordcount: '2924'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ A [!DNL Salesforce Marketing Cloud] 다음에 대한 구독이 있는 계정 [[!
 
 [!DNL Salesforce] Experience Platform에서 들어오는 대상을 올바르게 읽고 해석하고 내에서 대상 상태를 업데이트하려면 이 값이 필요합니다. [!DNL Salesforce Marketing Cloud]. 다음에 대한 Experience Platform 설명서 참조: [대상자 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md) 대상 상태에 대한 지침이 필요한 경우.
 
-Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce Marketing Cloud], 유형의 속성을 만들어야 합니다. `Text` 다음 범위 내 [!DNL Salesforce]. 사용 [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] 속성을 만듭니다. 속성 필드 이름은 [!DNL (API) Salesforce Marketing Cloud] 대상 필드 및 은(는) `[!DNL Email Demographics system attribute-set]`. 비즈니스 요구 사항에 따라 최대 4000자로 필드 문자를 정의할 수 있습니다. 다음을 참조하십시오. [!DNL Salesforce Marketing Cloud] [데이터 확장 데이터 유형](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) 속성 유형에 대한 추가 정보는 설명서 페이지를 참조하십시오.
+Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce Marketing Cloud], 유형의 속성을 만들어야 합니다. `Text` 다음 범위 내 [!DNL Salesforce]. 사용 [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] 속성을 만듭니다. 속성 필드 이름은 [!DNL (API) Salesforce Marketing Cloud] 다음 기간 동안 타겟 필드: **[!UICONTROL 매핑]** 단계. 비즈니스 요구 사항에 따라 최대 4000자로 필드 문자를 정의할 수 있습니다. 다음을 참조하십시오. [!DNL Salesforce Marketing Cloud] [데이터 확장 데이터 유형](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) 속성 유형에 대한 추가 정보는 설명서 페이지를 참조하십시오.
 
 다음을 참조하십시오. [!DNL Salesforce Marketing Cloud] 에 대한 설명서 [속성 만들기](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) 속성 만들기에 대한 지침이 필요한 경우.
 
@@ -68,7 +68,7 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce Marketi
 
 다음 [!DNL (API) Salesforce Marketing Cloud] 대상이 을 사용합니다. [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) 내에서 정의된 속성 및 해당 속성 세트를 동적으로 읽어들이기 [!DNL Salesforce Marketing Cloud].
 
-다음 위치에 표시됩니다. **[!UICONTROL Target 필드]** 다음을 설정할 때 선택 창 [매핑](#mapping-considerations-example) (으)로 이동하는 워크플로우 [대상에 대상 활성화](#activate). 내에 정의된 속성에 대한 매핑만 [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` attribute-set이 지원됩니다.
+다음 위치에 표시됩니다. **[!UICONTROL Target 필드]** 다음을 설정할 때 선택 창 [매핑](#mapping-considerations-example) (으)로 이동하는 워크플로우 [대상에 대상 활성화](#activate).
 
 >[!IMPORTANT]
 >
@@ -90,7 +90,8 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce Marketi
 
 의 역할에 따라 [!DNL Salesforce Marketing Cloud] 사용자가 할당되었으므로 [!DNL Salesforce Marketing Cloud] 업데이트하려는 필드가 포함된 속성 세트입니다.
 
-이 대상에 대한 액세스 권한이 필요하므로 `[!DNL Email Demographics system attribute-set]`, 다음을 허용해야 합니다. `Email` 아래와 같이:
+이 대상에 대한 액세스 권한이 필요하므로 `[!DNL attribute-set]`, 허용해야 합니다. 예: `Email` [!DNL attribute-set] 아래와 같이 허용해야 합니다.
+
 ![허용된 권한을 가진 이메일 속성 세트를 표시하는 Salesforce Marketing Cloud UI입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
 
 액세스 수준을 제한하려면 세분화된 권한을 사용하여 개별 액세스를 재정의할 수도 있습니다.
@@ -196,16 +197,22 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에서 아래
 
 >[!IMPORTANT]
 >
->속성 이름은 인 경우와 같습니다. [!DNL Salesforce Marketing Cloud] 계정, 두 항목에 대한 매핑 `contactKey` 및 `personalEmail.address` 필수 항목입니다. 속성을 매핑할 때 Experience Platform의 속성만 `Email Demographics` 대상 필드 내에서 특성 세트를 사용해야 합니다.
+>* 속성 이름은 인 경우와 같습니다. [!DNL Salesforce Marketing Cloud] 계정, 두 항목에 대한 매핑 `contactKey` 및 `personalEmail.address` 필수 항목입니다.
+>
+>* 와 통합 [!DNL Salesforce Marketing Cloud] API는 Experience Platform이 Salesforce에서 검색할 수 있는 속성 수의 페이지 매김 제한을 받습니다. 다음 기간 동안 **[!UICONTROL 매핑]** 단계: target 필드 스키마는 Salesforce 계정에서 최대 2000개의 속성을 표시할 수 있습니다.
 
 1. 다음에서 **[!UICONTROL 매핑]** 단계, 선택 **[!UICONTROL 새 매핑 추가]**. 화면에 새 매핑 행이 표시됩니다.
    ![새 매핑 추가에 대한 Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 1. 다음에서 **[!UICONTROL 소스 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL 속성 선택]** 범주를 선택한 다음 XDM 속성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]** id를 선택합니다.
-1. 다음에서 **[!UICONTROL 대상 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL ID 네임스페이스 선택]** id를 선택하거나 **[!UICONTROL 사용자 지정 속성 선택]** 카테고리에 추가하고 속성 선택 `Email Demographics` 필요에 따라 속성이 표시됩니다. 다음 [!DNL (API) Salesforce Marketing Cloud] 대상이 을 사용합니다. [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) 내에서 정의된 속성 및 해당 속성 세트를 동적으로 읽어들이기 [!DNL Salesforce Marketing Cloud]. 다음 위치에 표시됩니다. **[!UICONTROL Target 필드]** 팝업 을 사용하여 [매핑](#mapping-considerations-example) 다음에서 [대상자 활성화 워크플로](#activate). 참고: 내에 정의된 속성에 대한 매핑만 [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` 속성 세트가 지원됩니다.
+1. 다음에서 **[!UICONTROL 대상 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL ID 네임스페이스 선택]** id를 선택하거나 **[!UICONTROL 속성 선택]** 필요에 따라 표시되는 속성 세트에서 속성을 선택하고 범주화합니다. 다음 [!DNL (API) Salesforce Marketing Cloud] 대상이 을 사용합니다. [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) 내에서 정의된 속성 및 해당 속성 세트를 동적으로 읽어들이기 [!DNL Salesforce Marketing Cloud]. 다음 위치에 표시됩니다. **[!UICONTROL Target 필드]** 팝업 을 사용하여 [매핑](#mapping-considerations-example) 다음에서 [대상자 활성화 워크플로](#activate).
 
-   * XDM 프로필 스키마와 간에 다음 매핑을 추가하려면 이 단계를 반복합니다 [!DNL (API) Salesforce Marketing Cloud]: |소스 필드|Target 필드| 필수| |—|—| |`IdentityMap: contactKey`|`Identity: salesforceContactKey`| `Mandatory` |\
-     |`xdm: person.name.firstName`|`Attribute: Email Demographics.First Name`| - |
-|`xdm: personalEmail.address`|`Attribute: Email Addresses.Email Address`| - |
+   * XDM 프로필 스키마와 간에 다음 매핑을 추가하려면 이 단계를 반복합니다 [!DNL (API) Salesforce Marketing Cloud]:
+
+     | 소스 필드 | Target 필드 | 필수입니다 |
+     |---|---|---|
+     | `IdentityMap: contactKey` | `Identity: salesforceContactKey` | `Mandatory` |
+     | `xdm: person.name.firstName` | `Attribute: First Name` 원하는 속성 세트에서 | - |
+     | `xdm: personalEmail.address` | `Attribute: Email Address` 원하는 속성 세트에서 | - |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
      ![Target 매핑을 보여주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
