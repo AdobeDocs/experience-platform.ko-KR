@@ -3,10 +3,10 @@ keywords: 광고; bing;
 title: Microsoft Bing 연결
 description: Microsoft Bing 연결 대상을 사용하면 Microsoft 디스플레이 광고 전반에 걸쳐 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있습니다.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 8%
+source-wordcount: '670'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 8%
 
 ## 사용 사례 {#use-cases}
 
-마케터로서 다음으로 구성된 세그먼트를 사용할 수 있기를 원합니다 [!DNL Microsoft Advertising IDs] 간 디스플레이 광고를 통해 사용자를 타겟팅하려면 [!DNL Microsoft Advertising] 채널.
+마케터로서 다음으로 구성된 대상을 사용할 수 있기를 원합니다 [!DNL Microsoft Advertising IDs] 간 디스플레이 광고를 통해 사용자를 타겟팅하려면 [!DNL Microsoft Advertising] 채널.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -32,16 +32,30 @@ ht-degree: 8%
 
 {style="table-layout:auto"}
 
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+
+모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+
+| 대상자 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+
+{style="table-layout:auto"}
+
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
-**[!DNL Segment Export]** - 세그먼트의 모든 멤버(대상)를 [!DNL Microsoft Bing] 대상.
+**[!DNL Audience Export]** - 대상의 모든 멤버를 [!DNL Microsoft Bing] 대상.
 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | 세그먼트(대상자)의 모든 구성원을 (으)로 내보내는 경우 [!DNL Microsoft Bing] 대상. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | 대상의 모든 구성원을 (으)로 내보내는 경우 [!DNL Microsoft Bing] 대상. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -77,22 +91,22 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="ID 매핑"
->abstract="선택한 세그먼트를 매핑할 숫자 Bing 세그먼트 ID를 입력합니다. 제공된 [!UICONTROL 매핑 ID]가 Bing 대상의 세그먼트 ID와 일치하지 않는 경우 Bing 계정에 예상되는 대상자 데이터가 표시되지 않습니다."
+>abstract="선택한 세그먼트를 매핑할 숫자 Bing 대상자 ID를 입력합니다. 제공된 경우 [!UICONTROL 매핑 ID] 은 Bing 대상의 대상 ID와 일치하지 않습니다. Bing 계정에 예상 대상 데이터가 표시되지 않습니다."
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-다음을 참조하십시오 [대상 데이터를 스트리밍 세그먼트 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+다음을 참조하십시오 [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
-다음에서 [세그먼트 일정](../../ui/activate-segment-streaming-destinations.md#scheduling) 단계에서는 의 세그먼트 이름을 수동으로 매핑해야 합니다. [!UICONTROL 매핑 ID] 필드. 이렇게 하면 세그먼트 메타데이터를에 올바르게 전달할 수 있습니다 [!DNL Bing].
+다음에서 [대상자 일정](../../ui/activate-segment-streaming-destinations.md#scheduling) 단계에서는 대상 이름을에서 수동으로 매핑해야 합니다 [!UICONTROL 매핑 ID] 필드. 이렇게 하면 대상 메타데이터를에 올바르게 전달할 수 있습니다 [!DNL Bing].
 
-![세그먼트 이름을 Bing 매핑 ID에 매핑하는 방법의 예와 함께 세그먼트 일정 화면을 표시하는 UI 이미지입니다.](../../assets/catalog/advertising/bing/mapping-id.png)
+![대상자 이름을 Bing 매핑 ID에 매핑하는 방법의 예와 함께 대상자 일정 화면을 표시하는 UI 이미지입니다.](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## 내보낸 데이터 {#exported-data}
 

@@ -3,9 +3,9 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;메
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 한 대상자 타겟팅, 개인화 및 억제에 대한 Facebook 캠페인용 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1856'
+source-wordcount: '1906'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 에 대한 프로필 활성화 [!DNL Facebook] 해시된 이메일을 기반으로 한 대상자 타겟팅, 개인화 및 억제용 캠페인
 
-대상 타깃팅에 이 대상을 사용할 수 있습니다. [!DNL Facebook’s] 에서 지원하는 앱 제품군 [!DNL Custom Audiences], 포함 [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], 및 [!DNL Messenger]. 캠페인을 실행할 앱의 선택은 [!DNL Facebook Ads Manager]의 배치 수준에서 표시됩니다.
+대상 타깃팅에 이 대상을 사용할 수 있습니다. [!DNL Facebook's] 에서 지원하는 앱 제품군 [!DNL Custom Audiences], 포함 [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], 및 [!DNL Messenger]. 캠페인을 실행할 앱의 선택은 [!DNL Facebook Ads Manager]의 배치 수준에서 표시됩니다.
 
 ![Adobe Experience Platform UI의 facebook 대상](../../assets/catalog/social/facebook/catalog.png)
 
@@ -26,7 +26,7 @@ ht-degree: 6%
 
 ### 사용 사례 #1
 
-온라인 소매업체는 소셜 플랫폼을 통해 기존 고객에게 도달하고 이전 주문을 기반으로 개인화된 오퍼를 표시하려고 합니다. 온라인 소매업체는 자체 CRM에서 Adobe Experience Platform으로 이메일 주소를 수집하고, 자체 오프라인 데이터에서 세그먼트를 작성하고, 이러한 세그먼트를 로 보낼 수 있습니다 [!DNL Facebook] 소셜 플랫폼, 광고 지출을 최적화.
+온라인 소매업체는 소셜 플랫폼을 통해 기존 고객에게 도달하고 이전 주문을 기반으로 개인화된 오퍼를 표시하려고 합니다. 온라인 소매업체는 자신의 CRM에서 Adobe Experience Platform으로 이메일 주소를 수집하고 자신의 오프라인 데이터에서 대상을 빌드하여 이러한 대상을 로 보낼 수 있습니다. [!DNL Facebook] 소셜 플랫폼, 광고 지출을 최적화.
 
 ### 사용 사례 #2
 
@@ -34,7 +34,7 @@ ht-degree: 6%
 
 소셜 미디어에서 고객을 타깃팅하기 위해 이메일 주소를 식별자로 사용하여 CRM의 고객 데이터를 Adobe Experience Platform에 온보딩할 수 있습니다.
 
-다음으로, 연결된 멤버십 ID 및 고객 계층을 비롯한 오프라인 데이터를 사용하여 를 통해 타깃팅할 수 있는 새 대상 세그먼트를 만들 수 있습니다. [!DNL Facebook] 대상.
+그런 다음 관련 멤버십 ID 및 고객 계층을 비롯한 오프라인 데이터를 사용하여 를 통해 타깃팅할 수 있는 새 대상을 구축할 수 있습니다. [!DNL Facebook] 대상.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -48,30 +48,44 @@ ht-degree: 6%
 | email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 의 지침을 따르십시오. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 일반 텍스트와 해시된 이메일 주소에 각각 적절한 네임스페이스를 섹션으로 지정하고 사용하십시오. 소스 필드에 해시되지 않은 속성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션, 보유 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
 | extern_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
 
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+
+모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+
+| 대상자 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+
+{style="table-layout:auto"}
+
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | facebook 대상에 사용된 식별자(이름, 전화번호 또는 기타)로 세그먼트(대상자)의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | facebook 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Facebook 계정 사전 요구 사항 {#facebook-account-prerequisites}
 
-대상 세그먼트를 보낼 수 있으려면 먼저 [!DNL Facebook], 다음 요구 사항을 충족하는지 확인하십시오.
+대상자를 다음으로 보내기 전 [!DNL Facebook], 다음 요구 사항을 충족하는지 확인하십시오.
 
 * 사용자 [!DNL Facebook] 사용자 계정에는 **[!DNL Manage campaigns]** 사용하려는 광고 계정에 대해 권한이 활성화되었습니다.
 * 다음 **Adobe Experience Cloud** 비즈니스 계정을 의 광고 파트너로 추가해야 합니다. [!DNL Facebook Ad Account]. `business ID=206617933627973` 사용. 다음을 참조하십시오 [비즈니스 관리자에 파트너 추가](https://www.facebook.com/business/help/1717412048538897) 자세한 내용은 Facebook 설명서 를 참조하십시오.
-   >[!IMPORTANT]
-   >
-   > Adobe Experience Cloud에 대한 권한을 구성할 때 다음을 활성화해야 합니다 **캠페인 관리** 권한. 다음에 대한 권한이 필요합니다. [!DNL Adobe Experience Platform] 통합.
+  >[!IMPORTANT]
+  >
+  > Adobe Experience Cloud에 대한 권한을 구성할 때 다음을 활성화해야 합니다 **캠페인 관리** 권한. 다음에 대한 권한이 필요합니다. [!DNL Adobe Experience Platform] 통합.
 * 읽기 및 서명 [!DNL Facebook Custom Audiences] 서비스 약관. 이렇게 하려면 다음으로 이동합니다. `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, 여기서 `accountID` 본인 [!DNL Facebook Ad Account ID].
-   >[!IMPORTANT]
-   >
-   >서명 시 [!DNL Facebook Custom Audiences] 서비스 약관에서 Facebook API에서 인증하는 데 사용한 것과 동일한 사용자 계정을 사용해야 합니다.
+  >[!IMPORTANT]
+  >
+  >서명 시 [!DNL Facebook Custom Audiences] 서비스 약관에서 Facebook API에서 인증하는 데 사용한 것과 동일한 사용자 계정을 사용해야 합니다.
 
 ## ID 일치 요구 사항 {#id-matching-requirements}
 
@@ -125,7 +139,7 @@ Experience Platform에서 이메일 주소 수집에 대한 자세한 내용은 
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-아래 비디오에서는 을(를) 구성하는 단계도 보여 줍니다. [!DNL Facebook] 대상 및 활성화 세그먼트를 참조하십시오.
+아래 비디오에서는 을(를) 구성하는 단계도 보여 줍니다. [!DNL Facebook] 대상 및 대상자 활성화
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -159,12 +173,12 @@ Experience Platform에서 이메일 주소 수집에 대한 자세한 내용은 
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="대상자 원본"
->abstract="원래 세그먼트의 고객 데이터를 수집하는 방법을 선택합니다. 사용자가 세그먼트에 타겟팅되면 데이터가 Facebook에 표시됩니다."
+>abstract="대상의 고객 데이터가 원래 수집되는 방법을 선택합니다. 사용자가 세그먼트에 타겟팅되면 데이터가 Facebook에 표시됩니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -185,9 +199,9 @@ Experience Platform에서 이메일 주소 수집에 대한 자세한 내용은 
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-다음을 참조하십시오 [대상 데이터를 스트리밍 세그먼트 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+다음을 참조하십시오 [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
-다음에서 **[!UICONTROL 세그먼트 일정]** 단계, 다음을 제공해야 합니다. [!UICONTROL 대상자 원본] 세그먼트를 보낼 때 [!DNL Facebook Custom Audiences].
+다음에서 **[!UICONTROL 세그먼트 일정]** 단계, 다음을 제공해야 합니다. [!UICONTROL 대상자 원본] 대상자를 (으)로 보낼 때 [!DNL Facebook Custom Audiences].
 
 ![Facebook 대상자 기원](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
@@ -222,11 +236,11 @@ Experience Platform에서 이메일 주소 수집에 대한 자세한 내용은 
 
 ## 내보낸 데이터 {#exported-data}
 
-대상 [!DNL Facebook], 활성화가 성공하면 [!DNL Facebook] 사용자 지정 대상은에서 프로그래밍 방식으로 만들어집니다. [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). 사용자가 활성화된 세그먼트에 대해 자격이 부여되거나 자격을 상실하면 대상의 세그먼트 멤버십이 추가 및 제거됩니다.
+대상 [!DNL Facebook], 활성화가 성공하면 [!DNL Facebook] 사용자 지정 대상은에서 프로그래밍 방식으로 만들어집니다. [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). 사용자가 활성화된 대상자에 대해 자격이 부여되거나 자격을 상실하면 대상자 멤버십이 추가 및 제거됩니다.
 
 >[!TIP]
 >
->Adobe Experience Platform과 의 통합 [!DNL Facebook] 는 과거 대상자 채우기를 지원합니다. 모든 과거 세그먼트 자격 요건이 (으)로 전송됩니다. [!DNL Facebook] 대상 세그먼트를 활성화할 때.
+>Adobe Experience Platform과 의 통합 [!DNL Facebook] 는 과거 대상자 채우기를 지원합니다. 모든 과거 대상 자격 요건이 (으)로 전송됩니다. [!DNL Facebook] 대상을 대상에 대해 활성화하면
 
 ## 문제 해결 {#troubleshooting}
 

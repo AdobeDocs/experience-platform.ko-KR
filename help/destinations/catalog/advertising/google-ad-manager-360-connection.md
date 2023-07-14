@@ -1,15 +1,15 @@
 ---
-title: (베타) [!DNL Google Ad Manager 360] 연결
+title: (Beta) [!DNL Google Ad Manager 360] 연결
 description: Google Ad Manager 360은 게시자에게 웹 사이트, 비디오 및 모바일 앱에서의 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 제공 플랫폼입니다.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '974'
-ht-degree: 4%
+source-wordcount: '1030'
+ht-degree: 1%
 
 ---
 
-# (베타) [!DNL Google Ad Manager 360] 연결
+# (Beta)[!DNL Google Ad Manager 360]연결
 
 ## 개요 {#overview}
 
@@ -36,6 +36,20 @@ ht-degree: 4%
 | TARGET ID | 설명 | 고려 사항 |
 |---|---|---|
 | PPID | [!DNL Publisher provided ID] | 대상자를 보낼 대상 ID 선택 [!DNL Google Ad Manager 360] |
+
+{style="table-layout:auto"}
+
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+
+모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+
+| 대상자 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
 
 {style="table-layout:auto"}
 
@@ -85,8 +99,8 @@ ht-degree: 4%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="세그먼트 이름에 세그먼트 ID 추가"
->abstract="Google Ad Manager 360에서 세그먼트 이름에 다음과 같이 Experience Platform의 세그먼트 ID가 포함되도록 하려면 이 옵션을 선택하십시오. `Segment Name (Segment ID)`"
+>title="대상 이름에 대상 ID 추가"
+>abstract="Google Ad Manager 360의 대상 이름에 다음과 같이 Experience Platform의 대상 ID가 포함되도록 하려면 이 옵션을 선택합니다. `Audience Name (Audience ID)`"
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
@@ -98,7 +112,7 @@ ht-degree: 4%
 * **[!UICONTROL 계정 유형]**: 다음에 따라 옵션을 선택합니다. [!DNL Google] 계정:
    * 사용 `AdX buyer` 대상 [!DNL Google AdX]
    * 사용 `DFP by Google` 대상 [!DNL DoubleClick] 게시자용
-* **[!UICONTROL 세그먼트 이름에 세그먼트 ID 추가]**: Google Ad Manager 360의 세그먼트 이름에 다음과 같이 Experience Platform의 세그먼트 ID가 포함되도록 하려면 이 옵션을 선택합니다. `Segment Name (Segment ID)`.
+* **[!UICONTROL 대상 이름에 대상 ID 추가]**: Google Ad Manager 360의 대상 이름에 다음과 같이 Experience Platform의 대상 ID가 포함되도록 하려면 이 옵션을 선택합니다. `Audience Name (Audience ID)`.
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -106,20 +120,20 @@ ht-degree: 4%
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ID 매핑 단계에서는 다음과 같은 미리 채워진 매핑을 볼 수 있습니다.
 
 | 미리 채워진 매핑 | 설명 |
 |---------|----------|
 | `ECID` -> `ppid` | 이는 사용자가 미리 채울 수 있는 유일한 매핑입니다. Platform에서 속성 또는 ID 네임스페이스를 선택하여 매핑할 수 있습니다. `ppid`. |
-| `metadata.segment.alias` -> `list_id` | Experience Platform 세그먼트 이름을 Google 플랫폼의 세그먼트 ID에 매핑합니다. |
+| `metadata.segment.alias` -> `list_id` | Experience Platform 대상 이름을 Google 플랫폼의 대상 ID에 매핑합니다. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | 세그먼트에서 자격이 없는 사용자를 제거할 시기를 Google 플랫폼에 알려줍니다. |
 
 이러한 매핑은 다음에 필요합니다. [!DNL Google Ad Manager 360] 및 은(는) Adobe Experience Platform에서 모든 항목에 대해 자동으로 만들어집니다 [!DNL Google Ad Manager 360] 연결.

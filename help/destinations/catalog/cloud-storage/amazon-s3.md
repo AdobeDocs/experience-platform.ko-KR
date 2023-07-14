@@ -2,10 +2,10 @@
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 CSV 데이터 파일을 정기적으로 자체 S3 버킷으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 13%
+source-wordcount: '1110'
+ht-degree: 11%
 
 ---
 
@@ -34,8 +34,22 @@ ht-degree: 13%
 
 ## 다음에 연결 [!DNL Amazon S3] API 또는 UI를 통한 스토리지 {#connect-api-or-ui}
 
-* 에 연결하려면 [!DNL Amazon S3] 플랫폼 사용자 인터페이스를 사용한 저장소 위치에서 섹션을 읽습니다. [대상에 연결](#connect) 및 [이 대상에 대한 세그먼트 활성화](#activate) 아래요.
-* 에 연결하려면 [!DNL Amazon S3] 저장소 위치를 프로그래밍 방식으로 읽고 [흐름 서비스 API 자습서를 사용하여 세그먼트를 파일 기반 대상으로 활성화](../../api/activate-segments-file-based-destinations.md).
+* 에 연결하려면 [!DNL Amazon S3] 플랫폼 사용자 인터페이스를 사용한 저장소 위치에서 섹션을 읽습니다. [대상에 연결](#connect) 및 [이 대상에 대상자 활성화](#activate) 아래요.
+* 에 연결하려면 [!DNL Amazon S3] 저장소 위치를 프로그래밍 방식으로 읽고 [흐름 서비스 API 튜토리얼을 사용하여 파일 기반 대상에 대한 대상자 활성화](../../api/activate-segments-file-based-destinations.md).
+
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+
+모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+
+| 대상자 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+
+{style="table-layout:auto"}
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -82,7 +96,7 @@ ht-degree: 13%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"
 >title="폴더 경로"
->abstract="A-Z, a-z, 0-9 문자만 포함해야 하며 특수 문자(예: `/!-_.'()"^[]+$%.*"`)를 포함할 수 있습니다. 세그먼트 파일별로 폴더를 만들려면 매크로(예: `/%SEGMENT_NAME%` 또는 `/%SEGMENT_ID%` 또는 `/%SEGMENT_NAME%/%SEGMENT_ID%`)를 텍스트 필드에 삽입합니다. 매크로는 폴더 경로 끝에만 삽입할 수 있습니다. 설명서의 매크로 예 보기"
+>abstract="A-Z, a-z, 0-9 문자만 포함해야 하며 특수 문자(예: `/!-_.'()"^[]+$%.*"`)를 포함할 수 있습니다. 대상 파일별로 폴더를 만들려면 매크로를 삽입합니다 `/%SEGMENT_NAME%` 또는 `/%SEGMENT_ID%` 또는 `/%SEGMENT_NAME%/%SEGMENT_ID%` 텍스트 필드에 입력합니다. 매크로는 폴더 경로 끝에만 삽입할 수 있습니다. 설명서의 매크로 예 보기"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=ko-KR#use-macros" text="매크로를 사용하여 스토리지 위치에 폴더 만들기"
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
@@ -97,7 +111,7 @@ ht-degree: 13%
 
 >[!TIP]
 >
->연결 대상 워크플로우에서는 내보낸 세그먼트 파일별로 Amazon S3 스토리지에 사용자 지정 폴더를 만들 수 있습니다. 읽기 [매크로를 사용하여 저장소 위치에 폴더를 만듭니다.](overview.md#use-macros) 설명서를 참조하십시오.
+>대상 연결 워크플로우에서 내보낸 대상 파일당 Amazon S3 저장소에 사용자 지정 폴더를 만들 수 있습니다. 읽기 [매크로를 사용하여 저장소 위치에 폴더를 만듭니다.](overview.md#use-macros) 설명서를 참조하십시오.
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -126,13 +140,13 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 -->
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ## (베타) 데이터 세트 내보내기 {#export-datasets}
 
@@ -143,4 +157,4 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 ## 내보낸 데이터 {#exported-data}
 
-대상 [!DNL Amazon S3] 대상, [!DNL Platform] 은 사용자가 제공한 저장 위치에 데이터 파일을 생성합니다. 파일에 대한 자세한 내용은 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 세그먼트 활성화 자습서에서 참조하십시오.
+대상 [!DNL Amazon S3] 대상, [!DNL Platform] 은 사용자가 제공한 저장 위치에 데이터 파일을 생성합니다. 파일에 대한 자세한 내용은 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) audience activation 튜토리얼에서 을 참조하십시오.

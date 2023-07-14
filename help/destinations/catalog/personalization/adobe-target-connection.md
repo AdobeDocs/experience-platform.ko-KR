@@ -3,10 +3,10 @@ keywords: target 개인화, 대상, experience platform 대상, adobe target 대
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 2c3a70df57af2045f03c8d4a22cdc33f3c449fb3
+source-git-commit: 387d47fd073456d73fc6aafd58d382398ff2c235
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 16%
+source-wordcount: '1118'
+ht-degree: 15%
 
 ---
 
@@ -58,8 +58,8 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!DNL Profile request]** | 단일 프로필에 대해 Adobe Target 대상에서 매핑된 모든 세그먼트를 요청하고 있습니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!DNL Profile request]** | 단일 프로필에 대해 Adobe Target 대상에 매핑된 모든 대상을 요청합니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="데이터스트림 ID 정보"
->abstract="이 옵션은 세그먼트에 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에 Target 구성이 활성화된 데이터스트림만 표시됩니다. 에지 세분화를 사용하려면 데이터스트림 ID를 선택해야 합니다. 없음을 선택하면 에지 세분화를 사용하는 모든 사용 사례가 비활성화됩니다."
+>abstract="이 옵션은 대상자가 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에 Target 구성이 활성화된 데이터스트림만 표시됩니다. 에지 세분화를 사용하려면 데이터스트림 ID를 선택해야 합니다. 없음을 선택하면 에지 세분화를 사용하는 모든 사용 사례가 비활성화됩니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=ko-KR#parameters" text="데이터스트림 선택에 대해 자세히 알아보기"
 
 >[!IMPORTANT]
@@ -91,12 +91,12 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 * **이름**: 이 대상의 기본 이름을 입력합니다.
 * **설명**: 대상에 대한 설명을 입력합니다. 예를 들어 이 대상을 사용하는 캠페인을 언급할 수 있습니다. 이 필드는 선택 사항입니다.
-* **데이터 스트림 ID**: 세그먼트를 포함할 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에는 Target 및 Adobe Experience Platform 서비스가 활성화된 데이터스트림만 표시됩니다. 다음을 참조하십시오 [데이터스트림 구성](../../../edge/datastreams/configure.md#aep) Adobe Experience Platform 및 Adobe Target용 데이터스트림을 구성하는 방법에 대한 자세한 내용
-   * **[!UICONTROL 없음]**: Adobe Target 개인화를 구성해야 하지만 를 구현할 수 없는 경우 이 옵션을 선택하십시오. [Experience Platform Web SDK](../../../edge/home.md). 이 옵션을 사용하는 경우 Experience Platform에서 Target으로 내보낸 세그먼트는 다음 세션 개인화만 지원하며 에지 세분화는 비활성화됩니다. 자세한 내용은 아래 표를 참조하십시오.
+* **데이터 스트림 ID**: 대상자를 포함할 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에는 Target 및 Adobe Experience Platform 서비스가 활성화된 데이터스트림만 표시됩니다. 다음을 참조하십시오 [데이터스트림 구성](../../../edge/datastreams/configure.md#aep) Adobe Experience Platform 및 Adobe Target용 데이터스트림을 구성하는 방법에 대한 자세한 내용
+   * **[!UICONTROL 없음]**: Adobe Target 개인화를 구성해야 하지만 를 구현할 수 없는 경우 이 옵션을 선택하십시오. [Experience Platform Web SDK](../../../edge/home.md). 이 옵션을 사용하는 경우 Experience Platform에서 Target으로 내보낸 대상은 다음 세션 개인화만 지원하며 에지 세분화는 비활성화됩니다. 자세한 내용은 아래 표를 참조하십시오.
 
   | 선택한 데이터 스트림 없음 | 데이터 스트림 선택됨 |
   |---|---|
-  | <ul><li>[에지 세분화](../../../segmentation/ui/edge-segmentation.md) 은(는) 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md) 은(는) 지원되지 않습니다.</li><li>에 대해서만 Adobe Target 연결에 세그먼트를 공유할 수 있습니다. *기본 프로덕션 샌드박스*.</li><li>데이터 스트림 ID를 사용하지 않고 다음 세션 개인화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>에지 세분화는 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md) 이 지원됩니다.</li><li>다른 샌드박스에 대해 세그먼트 공유가 지원됩니다.</li></ul> |
+  | <ul><li>[에지 세분화](../../../segmentation/ui/edge-segmentation.md) 은(는) 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md) 은(는) 지원되지 않습니다.</li><li>다음에 대한 대상자를 Adobe Target 연결에만 공유할 수 있습니다. *기본 프로덕션 샌드박스*.</li><li>데이터 스트림 ID를 사용하지 않고 다음 세션 개인화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>에지 세분화는 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md) 이 지원됩니다.</li><li>다른 샌드박스에 대해 대상 공유가 지원됩니다.</li></ul> |
 
 * **작업 영역**: Adobe Target 선택 [작업 영역](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) 대상자를 공유할 대상. 각 Adobe Target 연결에 대해 단일 작업 영역을 선택할 수 있습니다. 활성화 시 대상자는 적용 가능한 단계에 따라 선택한 작업공간으로 라우팅됩니다 [Experience Platform 데이터 사용 레이블](../../../data-governance/labels/overview.md).
 
@@ -112,13 +112,13 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-읽기 [프로필 요청 대상에 프로필 및 세그먼트 활성화](../../ui/activate-edge-personalization-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+읽기 [Edge 개인화 대상에 대한 대상자 활성화](../../ui/activate-edge-personalization-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ## 내보낸 데이터 {#exported-data}
 
