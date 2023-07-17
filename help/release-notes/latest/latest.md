@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: a3faca5e0a711f0d4f6bafb22bf3c4770f58db8e
 workflow-type: tm+mt
 source-wordcount: '1538'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [Experience Platform API 인증](#authentication-platform-apis)
 - [데이터 수집](#data-collection)
 - [대상](#destinations)
-- [경험 데이터 모델(XDM)](#xdm)
+- [경험 데이터 모델 (XDM)](#xdm)
 - [쿼리 서비스](#query-service)
 - [소스](#sources)
 
@@ -26,7 +26,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 Experience Platform API 사용자의 경우 이제 API 엔드포인트를 인증하고 호출하는 데 필요한 액세스 토큰을 얻는 방법이 간소화되었습니다. 액세스 토큰을 얻기 위한 JWT 방법은 더 이상 사용되지 않으며 더 간단한 OAuth 서버 간 인증 방법으로 대체됩니다.<p>![액세스 토큰을 가져오는 새로운 OAuth 인증 방법(강조 표시).](/help/landing/images/api-authentication/oauth-authentication-method.png "액세스 토큰을 가져오는 새로운 OAuth 인증 방법(강조 표시)."){width="100" zoomable="yes"}</p>
 
-JWT 인증 방법을 사용하는 기존 API 통합은 2025년 1월 1일까지 계속 작동하지만, Adobe는 해당 날짜 이전에 기존 통합을 새로운 OAuth 서버 간 방법으로 마이그레이션할 것을 강력히 권장합니다. [ 서비스 계정(JWT) 자격 증명에서 OAuth 서버 간 자격 증명으로 마이그레이션하는 방법](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)에 대한 안내서를 참조하십시오.
+JWT 인증 방법을 사용하는 기존 API 통합은 2025년 1월 1일까지 계속 작동하지만, Adobe는 해당 날짜 이전에 기존 통합을 새로운 OAuth 서버 간 방법으로 마이그레이션할 것을 강력히 권장합니다. [ 서비스 계정(JWT) 자격 증명에서 OAuth 서버 간 자격 증명으로 마이그레이션하는 방법](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)에 관한 안내서를 참조하십시오.
 
 자세한 내용은 업데이트된 [Experience Platform 인증 튜토리얼](/help/landing/api-authentication.md)을 참조하십시오.
 
@@ -76,21 +76,21 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
-## 경험 데이터 모델(XDM) {#xdm}
+## 경험 데이터 모델 (XDM) {#xdm}
 
-XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 일반적인 표현에 통합하여 보다 빠르고 통합적인 방식으로 통찰력을 제공할 수 있습니다. 고객 작업에서 중요한 통찰력을 얻고, 세그먼트를 통해 고객 대상을 정의하고, 개인화 목적으로 고객 속성을 사용할 수 있습니다.
+XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
 
 **새로운 XDM 구성 요소**
 
 | 구성 요소 유형 | 이름 | 설명 |
 | --- | --- | --- |
-| 확장 기능 (잠재 고객 프로필) | [[!UICONTROL Adobe 통합 프로필 서비스 Prospect-Profile Union 확장]](https://github.com/adobe/xdm/pull/1735/files) | Prospect-Profile 유니온 스키마에 대한 필수 필드가 추가되었습니다. |
-| 확장 기능 | [[!UICONTROL 자산 결정 중]](https://github.com/adobe/xdm/pull/1732/files) | 의사 결정에 사용되는 자산을 나타내는 데이터 유형을 추가합니다. [!UICONTROL 자산 결정 중] 를 렌더링하는 데 사용되는 에셋에 대한 참조를 제공합니다. `decisionItems`. |
-| 데이터 유형 | [[!UICONTROL 상거래]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL 상거래] 구매 및 판매 활동과 관련된 레코드를 저장합니다. |
-| 필드 그룹 | [[!UICONTROL 프로필 파트너 보강(샘플)]](https://github.com/adobe/xdm/pull/1747/files) | 프로필 파트너 강화를 위한 샘플 스키마를 추가했습니다. |
-| 필드 그룹 | [[!UICONTROL 파트너 잠재 고객 세부 정보(샘플)]](https://github.com/adobe/xdm/pull/1747/files) | 데이터 공급업체 잠재 고객 프로필 확장에 대한 샘플 스키마를 추가했습니다. |
-| 데이터 유형 | [[!UICONTROL 상거래 범위]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL 상거래 범위] 는 이벤트가 발생한 위치를 식별합니다. 예를 들어 스토어 보기, 스토어 또는 웹 사이트 등에서 사용할 수 있습니다. |
-| 데이터 유형 | [[!UICONTROL 과금]](https://github.com/adobe/xdm/pull/1734/files) | 하나 이상의 결제에 대한 청구 정보가 [!UICONTROL 상거래] 스키마. |
+| 확장 기능 (잠재 고객 프로필) | [[!UICONTROL Adobe 통합 프로필 서비스 잠재 고객 프로필 합집합 확장 기능]](https://github.com/adobe/xdm/pull/1735/files) | 잠재 고객 프로필 공용 구조체 스키마에 대한 필수 필드를 추가했습니다. |
+| 확장 기능 | [[!UICONTROL 자산 결정]](https://github.com/adobe/xdm/pull/1732/files) | 의사 결정에 사용되는 자산을 나타내는 데이터 유형을 추가합니다. [!UICONTROL 자산 결정]은 `decisionItems`를 렌더링하는 데 사용되는 자산에 대한 참조를 제공합니다. |
+| 데이터 유형 | [[!UICONTROL 상거래]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL 상거래]는 구매 및 판매 활동과 관련된 기록을 저장합니다. |
+| 필드 그룹 | [[!UICONTROL 프로필 파트너 보강(샘플)]](https://github.com/adobe/xdm/pull/1747/files) | 프로필 파트너 보강을 위해 샘플 스키마가 추가되었습니다. |
+| 필드 그룹 | [[!UICONTROL 파트너 잠재 고객 세부 정보(샘플)]](https://github.com/adobe/xdm/pull/1747/files) | 데이터 공급업체의 잠재 고객 프로필 확장 기능에 대한 샘플 스키마가 추가되었습니다. |
+| 데이터 유형 | [[!UICONTROL 상거래 범위]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL 상거래 범위]는 이벤트가 발생한 위치를 나타냅니다. 예를 들면 스토어 보기, 스토어 또는 웹 사이트 등이 있습니다. |
+| 데이터 유형 | [[!UICONTROL 과금]](https://github.com/adobe/xdm/pull/1734/files) | 하나 이상의 결제에 대한 과금 정보가 [!UICONTROL 상거래] 스키마에 추가되었습니다. |
 
 {style="table-layout:auto"}
 
@@ -98,22 +98,22 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 
 | 구성 요소 유형 | 이름 | 설명 업데이트 |
 | --- | --- | --- |
-| 필드 그룹 | [[!UICONTROL MediaAnalytics 인터랙션 세부 정보]](https://github.com/adobe/xdm/pull/1736/files) | 변경됨 `bitrateAverageBucket` 100부터 &quot;800-899&quot;까지. |
-| 데이터 유형 | [[!UICONTROL Qoe 데이터 세부 정보]](https://github.com/adobe/xdm/pull/1736/files) | 변경됨 `bitrateAverageBucket` 데이터 형식을 문자열로 바꿉니다. |
-| 필드 그룹 | [[!UICONTROL 세그먼트 멤버십 세부 정보]](https://github.com/adobe/xdm/pull/1735/files) | Prospect Profile 클래스에 추가되었습니다. |
-| 스키마 | [[!UICONTROL 계산된 속성 시스템 스키마]](https://github.com/adobe/xdm/pull/1735/files) | ID 맵이 [!UICONTROL 계산된 속성 시스템 스키마]. |
-| 데이터 유형 | [[!UICONTROL 컨텐츠 전달 네트워크]](https://github.com/adobe/xdm/pull/1733/files) | 필드 추가됨 [!UICONTROL 세션 세부 정보] 사용된 콘텐츠 전달 네트워크를 설명합니다. |
-| 확장 기능 | [[!UICONTROL Adobe 통합 프로필 서비스 계정 공용 구조체 확장]](https://github.com/adobe/xdm/pull/1731/files) | ID 맵이 [!UICONTROL Adobe 통합 프로필 서비스 계정 공용 구조체 확장]. |
-| 데이터 유형 | [[!UICONTROL 주문]](https://github.com/adobe/xdm/pull/1730/files) | `discountAmount` 이(가)에 추가되었습니다. [!UICONTROL 주문]. 이를 통해 일반 주문 가격과 특별 가격 간의 차이를 알 수 있다. 개별 제품보다는 전체 주문에 적용됩니다. |
-| 스키마 | [[!UICONTROL AEP 위생 작업 요청]](https://github.com/adobe/xdm/pull/1728/files) | 다음 `targetServices` 데이터 위생 작업을 처리하는 서비스의 이름을 제공하기 위해 필드가 추가되었습니다. |
-| 데이터 유형 | [[!UICONTROL 배송]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode` 하나 이상의 제품에 대한 배송 정보에 가 추가되었습니다. 제품 가격 설정에 사용되는 ISO 4217 알파벳 통화 코드입니다. |
-| 데이터 유형 | [[!UICONTROL 애플리케이션]](https://github.com/adobe/xdm/pull/1726/files) | 다음 `language` 사용자의 언어적, 지리적 또는 문화적 선호도를 애플리케이션에 제공하기 위해 필드가 추가되었습니다. |
-| 확장 기능 | [[!UICONTROL AJO 엔티티 필드]](https://github.com/adobe/xdm/pull/1746/files) | [!UICONTROL AJO 타임스탬프 엔티티] 메시지가 마지막으로 수정된 시간을 나타내기 위해 이(가) 추가되었습니다. |
-| 데이터 유형 | (여러 개) | [여러 미디어 세부 정보 제거됨](https://github.com/adobe/xdm/pull/1739/files) 을 참조하십시오. |
+| 필드 그룹 | [[!UICONTROL MediaAnalytics 상호 작용 세부 정보]](https://github.com/adobe/xdm/pull/1736/files) | `bitrateAverageBucket`이 100에서 “800-899”로 변경되었습니다. |
+| 데이터 유형 | [[!UICONTROL Qoe 데이터 세부 정보]](https://github.com/adobe/xdm/pull/1736/files) | `bitrateAverageBucket` 데이터 유형이 문자열로 변경되었습니다. |
+| 필드 그룹 | [[!UICONTROL 세그먼트 멤버십 세부 정보]](https://github.com/adobe/xdm/pull/1735/files) | 잠재 고객 프로필 클래스에 추가되었습니다. |
+| 스키마 | [[!UICONTROL 계산된 속성 시스템 스키마]](https://github.com/adobe/xdm/pull/1735/files) | [!UICONTROL 계산된 속성 시스템 스키마]에 ID 맵이 추가되었습니다 |
+| 데이터 유형 | [[!UICONTROL Content Delivery Network]](https://github.com/adobe/xdm/pull/1733/files) | 사용된 콘텐츠 게재 네트워크를 설명하는 필드가 [!UICONTROL 세션 세부 정보]에 추가되었습니다. |
+| 확장 기능 | [[!UICONTROL Adobe 통합 프로필 서비스 계정 합집합 확장 기능]](https://github.com/adobe/xdm/pull/1731/files) | ID 맵이 [!UICONTROL Adobe 통합 프로필 서비스 계정 합집합 확장 기능]에 추가되었습니다. |
+| 데이터 유형 | [[!UICONTROL 주문]](https://github.com/adobe/xdm/pull/1730/files) | `discountAmount`가 [!UICONTROL 주문]에 추가되었습니다. 이는 일반 주문 가격과 특별 가격 간의 차이를 나타냅니다. 개별 상품이 아닌 전체 주문에 적용됩니다. |
+| 스키마 | [[!UICONTROL AEP 위생 작업 요청]](https://github.com/adobe/xdm/pull/1728/files) | 데이터 위생 작업을 처리하는 서비스 이름을 제공하기 위해 `targetServices` 필드가 추가되었습니다. |
+| 데이터 유형 | [[!UICONTROL 배송]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode`가 하나 이상의 제품에 대한 배송 정보에 추가되었습니다. 제품 가격 책정에 사용되는 ISO 4217 알파벳 통화 코드입니다. |
+| 데이터 유형 | [[!UICONTROL 애플리케이션]](https://github.com/adobe/xdm/pull/1726/files) | 애플리케이션에 사용자의 언어적, 지리적 또는 문화적 환경 설정을 제공하기 위해 `language` 필드가 추가되었습니다. |
+| 확장 기능 | [[!UICONTROL AJO 엔티티 필드]](https://github.com/adobe/xdm/pull/1746/files) | 메시지가 마지막으로 수정된 시간을 나타내기 위해 [!UICONTROL AJO 타임스탬프 엔티티]가 추가되었습니다. |
+| 데이터 유형 | (다수) | 일관성을 위해 여러 데이터 유형에서 [여러 미디어 세부 정보를 제거](https://github.com/adobe/xdm/pull/1739/files)했습니다. |
 
 {style="table-layout:auto"}
 
-플랫폼의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)
+Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
 ## 쿼리 서비스 {#query-service}
 
@@ -123,8 +123,8 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 
 | 기능 | 설명 |
 | --- | --- |
-| 인라인 템플릿 | 이제 쿼리 서비스에서 SQL 내의 다른 템플릿을 참조하는 템플릿 사용을 지원합니다. 쿼리에서 인라인 템플릿을 활용하여 워크로드를 줄이고 오류를 방지할 수 있습니다. 명령문 또는 조건을 재사용하고 중첩된 템플릿을 참조하여 SQL의 유연성을 높일 수 있습니다. 템플릿으로 저장할 수 있는 쿼리 크기 또는 원래 쿼리에서 참조할 수 있는 템플릿 수에는 제한이 없습니다. 자세한 내용은 [인라인 템플릿 안내서](../../query-service/essential-concepts/inline-templates.md)를 참조하십시오. |
-| 예약된 쿼리 UI 업데이트 | UI의 한 위치에서 모든 예약된 쿼리를 관리하려면 [[!UICONTROL 예약된 쿼리 탭]](../../query-service/ui/monitor-queries.md#inline-actions). 인라인 쿼리 작업 및 새로운 쿼리 상태 열이 추가되어 [!UICONTROL 예약된 쿼리] UI가 개선되었습니다. 최근 추가된 사항으로는 일정을 활성화, 비활성화 및 삭제하거나 [!UICONTROL 예약된 쿼리] 보기에서 직접 실행되는 예정 쿼리에 대해 경고를 구독하는 기능이 있습니다. <p>![[!UICONTROL 예약된 쿼리] 보기에서 강조 표시된 인라인 작업.](../../query-service/images/ui/monitor-queries/disable-inline.png "[!UICONTROL 예약된 쿼리] 보기에서 강조 표시된 인라인 작업."){width="100" zoomable="yes"}</p> |
+| 인라인 템플릿 | 쿼리 서비스는 이제 SQL 내의 다른 템플릿을 참조하는 템플릿 사용을 지원합니다. 쿼리에서 인라인 템플릿을 활용하여 워크로드를 줄이고 오류를 방지할 수 있습니다. 명령문 또는 조건을 재사용하고 중첩된 템플릿을 참조하여 SQL의 유연성을 높일 수 있습니다. 템플릿으로 저장할 수 있는 쿼리 크기 또는 원래 쿼리에서 참조할 수 있는 템플릿 수에는 제한이 없습니다. 자세한 내용은 [인라인 템플릿 안내서](../../query-service/essential-concepts/inline-templates.md)를 참조하십시오. |
+| 예약된 쿼리 UI 업데이트 | [[!UICONTROL 예약된 쿼리 탭]](../../query-service/ui/monitor-queries.md#inline-actions)을 사용하여 UI의 한 위치에서 예약된 모든 쿼리를 관리합니다. 인라인 쿼리 작업 및 새로운 쿼리 상태 열이 추가되어 [!UICONTROL 예약된 쿼리] UI가 개선되었습니다. 최근 추가된 사항으로는 일정을 활성화, 비활성화 및 삭제하거나 [!UICONTROL 예약된 쿼리] 보기에서 직접 실행되는 예정 쿼리에 대해 경고를 구독하는 기능이 있습니다. <p>![[!UICONTROL 예약된 쿼리] 보기에서 강조 표시된 인라인 작업.](../../query-service/images/ui/monitor-queries/disable-inline.png "[!UICONTROL 예약된 쿼리] 보기에서 강조 표시된 인라인 작업."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
@@ -140,8 +140,8 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| Adobe Analytics 분류 소스 데이터 흐름 삭제 지원 | 이제 Adobe Analytics 분류를 소스로 사용하는 소스 데이터 흐름을 삭제할 수 있습니다. **[!UICONTROL 소스]** > **[!UICONTROL 데이터 흐름]**&#x200B;에서 원하는 데이터 흐름을 선택한 다음 삭제를 선택합니다. 자세한 내용은 [Adobe Analytics 분류 데이터의 소스 연결을 만드는 방법](../../sources/tutorials/ui/create/adobe-applications/classifications.md)에 대한 안내서를 참조하십시오. |
-| [!DNL Microsoft Dynamics]에 대한 API 사용 필터링 지원 | 논리 및 비교 연산자를 사용하여 [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) 소스의 행 수준 데이터를 필터링합니다. 자세한 내용은 [API를 사용하여 소스의 데이터를 필터링하는 방법](../../sources/tutorials/api/filter.md)에 대한 안내서를 참조하십시오. |
+| Adobe Analytics 분류 소스 데이터 흐름 삭제 지원 | 이제 Adobe Analytics 분류를 소스로 사용하는 소스 데이터 흐름을 삭제할 수 있습니다. **[!UICONTROL 소스]** > **[!UICONTROL 데이터 흐름]**&#x200B;에서 원하는 데이터 흐름을 선택한 다음 삭제를 선택합니다. 자세한 내용은 [Adobe Analytics 분류 데이터의 소스 연결을 만드는 방법](../../sources/tutorials/ui/create/adobe-applications/classifications.md)에 관한 안내서를 참조하십시오. |
+| [!DNL Microsoft Dynamics]에 대한 API 사용 필터링 지원 | 논리 및 비교 연산자를 사용하여 [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) 소스의 행 수준 데이터를 필터링합니다. 자세한 내용은 [API를 사용하여 소스의 데이터를 필터링하는 방법](../../sources/tutorials/api/filter.md)에 관한 안내서를 참조하십시오. |
 | [!BADGE Beta]{type=Informative}[!DNL RainFocus] | 이제 [!DNL RainFocus] 소스 통합을 사용해 Experience Platform [!DNL RainFocus] 계정의 이벤트 관리 및 분석 데이터를 가져올 수 있습니다. 자세한 내용은 [[!DNL RainFocus] 소스 개요](../../sources/connectors/analytics/rainfocus.md)를 참조하십시오. |
 | Adobe Commerce 지원 | 이제 Adobe Commerce 소스 통합을 사용해 Experience Platform Adobe Commerce 계정의 데이터를 가져올 수 있습니다. 자세한 내용은 [Adobe Commerce 소스 개요](../../sources/connectors/adobe-applications/commerce.md)를 참조하십시오. |
 | [!DNL Mixpanel] 지원 | 이제 [!DNL Mixpanel] 소스 통합을 사용해 API 또는 사용자 인터페이스를 사용하여 Experience Platform [!DNL Mixpanel] 계정의 분석 데이터를 가져올 수 있습니다. 자세한 내용은 [[!DNL Mixpanel] 소스 개요](../../sources/connectors/analytics/mixpanel.md)를 참조하십시오. |

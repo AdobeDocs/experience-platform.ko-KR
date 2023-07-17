@@ -7,7 +7,7 @@ feature: Privacy
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
 source-wordcount: '93'
-ht-degree: 47%
+ht-degree: 92%
 
 ---
 
@@ -15,20 +15,20 @@ ht-degree: 47%
 # Adobe Experience Platform Privacy Service {#privacy}
 
 * [Privacy Service 개요](./home.md)
-* [Privacy Service 권한 관리](./permissions.md)
+* [Privacy Service에 대한 권한 관리](./permissions.md)
 * [Privacy Service 및 Experience Cloud 애플리케이션](./experience-cloud-apps.md)
-* [개인 정보 보호 요청에 대한 ID 데이터](./identity-data.md)
-* [개인 정보 JS 라이브러리 개요](./js-library.md)
-* PRIVACY SERVICE API {#api}
+* [개인정보 보호 요청을 위한 ID 데이터](./identity-data.md)
+* [개인정보 보호 JS 라이브러리 개요](./js-library.md)
+* Privacy Service API {#api}
    * [개요](./api/overview.md)
    * [Privacy Service API 인증 및 액세스](./api/getting-started.md)
-   * [개인 정보 작업](./api/privacy-jobs.md)
+   * [개인정보 보호 작업](./api/privacy-jobs.md)
    * [동의](./api/consent.md)
    * [부록](./api/appendix.md)
-* PRIVACY SERVICE UI {#ui}
+* Privacy Service UI {#ui}
    * [개요](./ui/overview.md)
-   * [개인 정보 작업 관리](./ui/user-guide.md)
-* [개인 정보 이벤트 구독](./privacy-events.md)
+   * [개인정보 보호 작업 관리](./ui/user-guide.md)
+* [개인정보 보호 이벤트 구독](./privacy-events.md)
 * 개인 정보 보호 규정 {#regulations}
    * [개요](./regulations/overview.md)
    * [FAQ](./regulations/faq.md)
