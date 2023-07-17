@@ -1,9 +1,9 @@
 ---
 description: '`/destination-servers'' 끝점을 통해 Adobe Experience Platform Destination SDK으로 빌드된 파일 기반 대상의 파일 형식 옵션을 구성하는 방법을 알아봅니다.'
 title: 파일 서식 구성
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: 5a6359e5731b36763e86eba8c79e60d74fb3b4c8
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '1001'
 ht-degree: 4%
 
 ---
@@ -159,7 +159,8 @@ Experience Platform에서 받은 파일을 최적으로 읽고 해석하기 위�
             "templatingStrategy":"PEBBLE_V1",
             "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
          }
-      }
+      },
+      "maxFileRowCount":5000000
    }
 }
 ```
@@ -190,6 +191,7 @@ Experience Platform에서 받은 파일을 최적으로 읽고 해석하기 위�
 | `csvOptions.timestampFormat.value` | 선택 사항입니다 | *다음에 대해서만`"fileType.value": "csv"`*. 타임스탬프 형식을 나타내는 문자열을 설정합니다. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
 | `csvOptions.charToEscapeQuoteEscaping.value` | 선택 사항입니다 | *다음에 대해서만`"fileType.value": "csv"`*. 따옴표 문자의 이스케이프를 이스케이프 처리하는 데 사용되는 단일 문자를 설정합니다. | `\` 이스케이프 문자와 따옴표 문자가 다른 경우. `\0` 이스케이프와 따옴표 문자가 동일한 경우. | - | - |
 | `csvOptions.emptyValue.value` | 선택 사항입니다 | *다음에 대해서만`"fileType.value": "csv"`*. 빈 값의 문자열 표현을 설정합니다. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
+| `maxFileRowCount` | 선택 사항입니다 | 내보낸 파일당 1,000,000행과 10,000,000행 사이의 최대 행 수를 나타냅니다. | 5,000,000 |
 
 {style="table-layout:auto"}
 
