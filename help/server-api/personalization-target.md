@@ -2,7 +2,7 @@
 title: Adobe Target을 통한 개인화
 description: Server API를 사용하여 Adobe Target에서 생성된 개인화된 경험을 전달하고 렌더링하는 방법에 대해 알아봅니다.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 091d5440d7346861b7c882fa0a17bd03d528e438
+source-git-commit: 47cd73e45ac618a8a84aa3c47b91d5e2a107e7f4
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 1%
@@ -51,9 +51,9 @@ Adobe Target과 함께 서버 API를 사용하려면 먼저 데이터 스트림 
 
 Target에서 대상을 만들 때 다음 값을 사용자 지정 매개 변수로 사용할 수 있습니다.
 
-* `xdm.marketing.campaignGroup`
-* `xdm.marketing.campaignName`
-* `xdm.marketing.trackingCode`
+* `marketing.campaignGroup`
+* `marketing.campaignName`
+* `marketing.trackingCode`
 
 ## Target 프로필 업데이트 {#profile-update}
 
