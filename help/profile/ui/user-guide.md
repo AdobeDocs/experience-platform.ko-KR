@@ -3,7 +3,7 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 실시간 고객 프로필 UI 안내서
 description: 실시간 고객 프로파일은 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 다양한 채널의 데이터를 취합하여 각 개별 고객을 전체적으로 파악할 수 있도록 합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하기 위한 안내서 역할을 합니다.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 98854811e57c621a1c8de9146231f54c96e37a5d
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '2008'
 ht-degree: 0%
@@ -134,7 +134,7 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 을(를) 왼쪽 탐색�
 
 ![세부 정보 탭이 강조 표시됩니다. 프로필 세부 사항이 표시됩니다.](../images/user-guide/profile-detail.png)
 
-사용 가능한 탭 중 하나를 선택하여 개별 고객 프로필과 관련된 추가 정보를 볼 수 있습니다. 이러한 탭에는 속성, 이벤트 및 현재 프로필이 자격을 갖춘 세그먼트를 보여 주는 세그먼트 멤버십 탭이 포함됩니다.
+사용 가능한 탭 중 하나를 선택하여 개별 고객 프로필과 관련된 추가 정보를 볼 수 있습니다. 이러한 탭에는 속성, 이벤트 및 현재 프로필이 자격을 갖춘 대상자를 보여 주는 대상자 멤버십 탭이 포함됩니다.
 
 ### 속성 탭
 
@@ -152,13 +152,13 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 을(를) 왼쪽 탐색�
 
 ![이벤트 탭이 강조 표시됩니다. 프로필 이벤트가 표시됩니다.](../images/user-guide/events.png)
 
-### 세그먼트 멤버십 탭
+### 대상자 멤버십 탭
 
-다음 **[!UICONTROL 세그먼트 멤버십]** 탭에는 현재 개별 고객 프로필이 속한 세그먼트의 이름과 설명이 포함된 목록이 표시됩니다. 이 목록은 프로필이 세그먼트에서 정규화되거나 만료될 때 자동으로 업데이트됩니다. 현재 프로필이 자격을 갖춘 총 세그먼트 수가 탭 오른쪽에 표시됩니다.
+다음 **[!UICONTROL 대상자 멤버십]** 탭에는 현재 개별 고객 프로필이 속한 대상자의 이름과 설명이 포함된 목록이 표시됩니다. 이 목록은 프로필이 대상에서 정규화되거나 만료될 때 자동으로 업데이트됩니다. 프로필이 현재 자격이 있는 총 대상자 수가 탭 오른쪽에 표시됩니다.
 
 Experience Platform의 세그멘테이션에 대한 자세한 내용은 [Adobe Experience Platform 세그멘테이션 서비스 설명서](../../segmentation/home.md).
 
-![세그먼트 멤버십 탭이 강조 표시됩니다. 프로필 세그먼트 멤버십 세부 정보가 표시됩니다.](../images/user-guide/segment-membership.png)
+![대상자 멤버십 탭이 강조 표시됩니다. 프로필의 대상자 멤버십 세부 정보가 표시됩니다.](../images/user-guide/segment-membership.png)
 
 ## 병합 정책
 

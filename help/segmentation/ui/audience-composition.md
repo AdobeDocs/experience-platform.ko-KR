@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 13492b90552d16334030792323956ea18ca928dc
+source-git-commit: b7da6f00426f8cd8e219bf6f8c8275ab3f6942ef
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1737'
 ht-degree: 0%
 
 ---
@@ -108,6 +108,64 @@ ht-degree: 0%
 
 ![속성 목록이 표시됩니다.](../images/ui/audience-composition/select-attribute-exclude.png)
 
+## [!UICONTROL 강화] {#enrich-block}
+
+>[!IMPORTANT]
+>
+>이 시점에서 데이터 보강 속성은 다음을 수행할 수 있습니다. **전용** 다운스트림 Adobe Journey Optimizer 시나리오에서 사용됩니다.
+
+다음 **[!UICONTROL 강화]** 블록 유형을 사용하면 데이터 세트의 추가 속성으로 대상자를 보강할 수 있습니다. 개인화 사용 사례에서 이러한 속성을 사용할 수 있습니다.
+
+을(를) 추가하려면 **[!UICONTROL 강화]** 블록을 선택하고 **+** 아이콘, 뒤에 오는 **[!UICONTROL 강화]**.
+
+![다음 [!UICONTROL 강화] 옵션이 선택되어 있습니다.](../images/ui/audience-composition/add-enrich-block.png)
+
+다음 **[!UICONTROL 강화]** 블록이 추가되었습니다. 이 블록을 선택하면 데이터 보강에 대한 세부 정보가 오른쪽 레일에 표시됩니다. 여기에는 블록의 레이블 및 데이터 보강 세트가 포함됩니다.
+
+대상자를 강화할 데이터 세트를 선택하려면 다음을 선택하십시오. ![필터](../images/ui/audience-composition/filter-attribute.png) 아이콘.
+
+![필터 버튼이 강조 표시됩니다. 이 옵션을 선택하면 [!UICONTROL 데이터 세트 선택] 팝오버.](../images/ui/audience-composition/enrich-select-dataset.png)
+
+다음 **[!UICONTROL 데이터 세트 선택]** 팝오버가 표시됩니다. 데이터 강화를 위해 추가할 데이터 세트를 선택한 다음 **[!UICONTROL 선택]** 데이터 세트를 추가하여 보강합니다.
+
+![선택한 데이터 세트가 선택됩니다.](../images/ui/audience-composition/enrich-dataset-selected.png)
+
+>[!IMPORTANT]
+>
+>선택한 데이터 세트 **필수** 다음 기준을 충족합니다.
+>
+>- 데이터 세트 **필수** 기록 유형이어야 합니다.
+>   - 데이터 세트 **할 수 없음** 이벤트 유형이거나, 시스템 생성되거나, 프로필로 표시될 수 있습니다.
+>- 데이터 세트 **필수** 1GB 이하여야 합니다.
+
+다음 **[!UICONTROL 데이터 보강 기준]** 섹션이 이제 오른쪽 레일에 나타납니다. 이 섹션에서 다음을 선택할 수 있습니다 **[!UICONTROL 소스 조인 키]** 및 **[!UICONTROL 데이터 세트 보강 조인 키]**&#x200B;데이터 보강 데이터 세트를 만들려는 대상과 연결할 수 있습니다.
+
+![다음 [!UICONTROL 데이터 보강 기준] 영역이 강조 표시됩니다.](../images/ui/audience-composition/enrichment-criteria.png)
+
+을(를) 선택하려면 **[!UICONTROL 소스 조인 키]**&#x200B;를 선택하고 ![필터](../images/ui/audience-composition/filter-attribute.png) 아이콘.
+
+![에 대한 필터 아이콘 [!UICONTROL 소스 조인 키] 강조 표시됩니다.](../images/ui/audience-composition/enrich-select-source-join-key.png)
+
+다음 **[!UICONTROL 프로필 속성 선택]** 팝오버가 표시됩니다. 소스 조인 키로 사용할 프로필 속성을 선택한 후 다음을 수행합니다 **[!UICONTROL 선택]** 소스 조인 키로 해당 속성을 선택합니다.
+
+![소스 조인 키로 사용할 속성이 강조 표시됩니다.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+
+을(를) 선택하려면 **[!UICONTROL 데이터 세트 보강 조인 키]**&#x200B;를 선택하고 ![필터](../images/ui/audience-composition/filter-attribute.png) 아이콘.
+
+![에 대한 필터 아이콘 [!UICONTROL 데이터 세트 보강 조인 키] 강조 표시됩니다.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
+
+다음 **[!UICONTROL 데이터 보강 속성]** 팝오버가 표시됩니다. 데이터 보강 데이터 세트 조인 키로 사용할 속성을 선택한 다음 **[!UICONTROL 선택]** 데이터 보강 데이터 세트 조인 키로 해당 속성을 선택합니다.
+
+![데이터 보강 데이터 세트 조인 키로 사용할 속성이 강조 표시됩니다.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+
+이제 조인 키를 모두 추가했으므로 **[!UICONTROL 데이터 보강 속성]** 섹션이 나타납니다. 이제 대상자를 향상시킬 특성을 추가할 수 있습니다. 이러한 속성을 추가하려면 **[!UICONTROL 속성 추가]**.
+
+![다음 [!UICONTROL 속성 추가] 버튼이 강조 표시됩니다.](../images/ui/audience-composition/enrich-select-add-attribute.png)
+
+다음 **[!UICONTROL 데이터 보강 속성]** 팝오버가 표시됩니다. 데이터 세트에서 속성을 선택하여 대상자를 강화한 다음 **[!UICONTROL 선택]** 대상자에 속성을 추가합니다.
+
+![추가하려는 데이터 보강 속성이 강조 표시됩니다.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+
 <!-- ## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
@@ -161,6 +219,8 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 을(를) 추가하려면 **[!UICONTROL 분할]** 블록을 선택하고 **+** 아이콘, 뒤에 오는 **[!UICONTROL 분할]**.
 
 ![분할(Split) 옵션이 선택됩니다.](../images/ui/audience-composition/add-split-block.png)
+
+대상을 분할할 때 백분율로 분할하거나 속성별로 분할할 수 있습니다.
 
 ### 백분율로 분할 {#split-percentage}
 

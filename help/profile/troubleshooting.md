@@ -4,7 +4,7 @@ title: 실시간 고객 프로필 문제 해결 안내서
 type: Documentation
 description: 이 문서에서는 실시간 고객 프로필에 대해 자주 묻는 질문에 대한 답변과 Adobe Experience Platform을 사용하여 프로필 데이터 작업 시 발생하는 일반적인 오류에 대한 문제 해결 안내서를 제공합니다.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
@@ -47,13 +47,13 @@ API를 사용하는지 UI를 사용하는지에 따라 프로필 데이터를 �
 
 액세스하려는 프로필 엔티티의 ID를 알고 있는 경우 `/entities` (프로필 액세스) 프로필 API의 끝점으로 해당 엔티티를 조회합니다. 의 섹션을 참조하십시오. [엔티티](./api/entities.md) 자세한 내용은 개발자 안내서를 참조하십시오.
 
-또한 Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트 멤버십에 대한 자격이 있는 고객의 개별 프로필에 액세스할 수도 있습니다. 다음을 참조하십시오. [세그먼테이션 서비스 개요](../segmentation/home.md) 추가 정보.
+또한 Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 대상 멤버십에 대한 자격이 있는 고객의 개별 프로필에 액세스할 수도 있습니다. 다음을 참조하십시오. [세그먼테이션 서비스 개요](../segmentation/home.md) 추가 정보.
 
 #### UI 사용
 
 Experience Platform UI에서 **[!UICONTROL 찾아보기]** 의 탭 **[!UICONTROL 프로필]** 작업 공간에서는 총 프로필 수를 보고 id 값으로 개별 프로필을 검색할 수 있습니다. 다음을 참조하십시오. [프로필 사용 안내서](./ui/user-guide.md) 추가 정보.
 
-또한 아래에서 세그먼트 목록을 볼 수 있습니다. **[!UICONTROL 찾아보기]** 의 탭 **[!UICONTROL 세그먼트]** 작업 영역. 세그먼트를 선택하면 해당 세그먼트에 적합한 프로필 샘플이 표시됩니다. 그런 다음 나열된 프로필 중 하나를 선택하여 세부 정보를 볼 수 있습니다. 다음을 참조하십시오. [세그멘테이션 UI 개요](../segmentation/ui/overview.md) 추가 정보.
+또한 아래에서 대상자 목록을 볼 수도 있습니다. **[!UICONTROL 찾아보기]** 의 탭 **[!UICONTROL 대상]** 작업 영역. 대상을 선택하면 해당 대상에 적합한 프로필 샘플이 표시됩니다. 그런 다음 나열된 프로필 중 하나를 선택하여 세부 정보를 볼 수 있습니다. 다음을 참조하십시오. [세그멘테이션 UI 개요](../segmentation/ui/overview.md) 추가 정보.
 
 ## 오류 코드
 

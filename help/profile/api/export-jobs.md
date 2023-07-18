@@ -4,16 +4,16 @@ title: 프로필 내보내기 작업 API 끝점
 type: Documentation
 description: 실시간 고객 프로필을 사용하면 속성 데이터와 행동 데이터를 모두 포함하여 여러 소스의 데이터를 함께 가져와서 Adobe Experience Platform 내의 개별 고객에 대한 단일 보기를 구축할 수 있습니다. 그런 다음 프로필 데이터를 데이터 세트로 내보내 추가 처리할 수 있습니다.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1518'
 ht-degree: 2%
 
 ---
 
 # 프로필 내보내기 작업 엔드포인트
 
-[!DNL Real-Time Customer Profile] 속성 데이터와 행동 데이터를 모두 포함하여 여러 소스의 데이터를 통합하여 개별 고객에 대한 단일 뷰를 구축할 수 있습니다. 그런 다음 프로필 데이터를 데이터 세트로 내보내 추가 처리할 수 있습니다. 예: 의 대상 세그먼트 [!DNL Profile] 활성화를 위해 데이터를 내보내고 보고를 위해 프로필 속성을 내보낼 수 있습니다.
+[!DNL Real-Time Customer Profile] 속성 데이터와 행동 데이터를 모두 포함하여 여러 소스의 데이터를 통합하여 개별 고객에 대한 단일 뷰를 구축할 수 있습니다. 그런 다음 프로필 데이터를 데이터 세트로 내보내 추가 처리할 수 있습니다. 예를 들어, [!DNL Profile] 대상자를 만들어 활성화를 위해 데이터를 내보내고 보고를 위해 프로필 속성을 내보낼 수 있습니다.
 
 이 문서에서는 다음을 사용하여 내보내기 작업을 만들고 관리하는 단계별 지침을 제공합니다. [프로필 API](https://www.adobe.com/go/profile-apis-en).
 
@@ -37,7 +37,7 @@ ht-degree: 2%
 
 주요 고려 사항 중 하나는 데이터 세트의 기반이 되는 스키마 입니다(`schemaRef.id` (아래 API 샘플 요청). 프로필 데이터를 내보내려면 데이터 세트가 [!DNL XDM Individual Profile] 유니온 스키마 (`https://ns.adobe.com/xdm/context/profile__union`). 유니온 스키마는 동일한 클래스를 공유하는 스키마의 필드를 집계하는 시스템 생성 읽기 전용 스키마입니다. 이 경우 [!DNL XDM Individual Profile] 클래스. 유니온 보기 스키마에 대한 자세한 내용은 다음을 참조하십시오. [스키마 컴포지션 기본 사항 안내서의 유니온 섹션](../../xdm/schema/composition.md#union).
 
-이 자습서의 다음 단계에서는 다음을 참조하는 데이터 세트를 만드는 방법을 간략하게 설명합니다. [!DNL XDM Individual Profile] 유니온 스키마 사용 [!DNL Catalog] API. 다음을 사용할 수도 있습니다 [!DNL Platform] 유니온 스키마를 참조하는 데이터 세트를 만드는 사용자 인터페이스입니다. UI 사용 단계는에 설명되어 있습니다. [세그먼트 내보내기를 위한 이 UI 튜토리얼](../../segmentation/tutorials/create-dataset-export-segment.md) 하지만 여기서도 적용 가능합니다. 완료되면 이 자습서로 돌아가 의 단계를 진행할 수 있습니다. [새 내보내기 작업 시작](#initiate).
+이 자습서의 다음 단계에서는 다음을 참조하는 데이터 세트를 만드는 방법을 간략하게 설명합니다. [!DNL XDM Individual Profile] 유니온 스키마 사용 [!DNL Catalog] API. 다음을 사용할 수도 있습니다 [!DNL Platform] 유니온 스키마를 참조하는 데이터 세트를 만드는 사용자 인터페이스입니다. UI 사용 단계는에 설명되어 있습니다. [대상자 내보내기를 위한 이 UI 튜토리얼](../../segmentation/tutorials/create-dataset-export-segment.md) 하지만 여기서도 적용 가능합니다. 완료되면 이 자습서로 돌아가 의 단계를 진행할 수 있습니다. [새 내보내기 작업 시작](#initiate).
 
 이미 호환되는 데이터 세트가 있고 해당 ID를 알고 있는 경우 다음 단계로 직접 진행할 수 있습니다. [새 내보내기 작업 시작](#initiate).
 
@@ -132,11 +132,11 @@ curl -X POST \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `fields` | *(선택 사항)* 내보내기에 포함될 데이터 필드를 이 매개변수에 제공된 필드로만 제한합니다. 이 값을 생략하면 내보낸 데이터에 모든 필드가 포함됩니다. |
-| `mergePolicy` | *(선택 사항)* 내보낸 데이터를 제어하는 병합 정책을 지정합니다. 내보낼 세그먼트가 여러 개 있는 경우 이 매개 변수를 포함합니다. |
+| `mergePolicy` | *(선택 사항)* 내보낸 데이터를 제어하는 병합 정책을 지정합니다. 내보내는 대상이 여러 개 있는 경우 이 매개 변수를 포함하십시오. |
 | `mergePolicy.id` | 병합 정책의 ID입니다. |
 | `mergePolicy.version` | 사용할 병합 정책의 특정 버전입니다. 이 값을 생략하면 기본적으로 최신 버전이 사용됩니다. |
 | `additionalFields.eventList` | *(선택 사항)* 다음 설정 중 하나 이상을 제공하여 하위 객체 또는 연관된 객체에 대해 내보낸 시계열 이벤트 필드를 제어합니다.<ul><li>`eventList.fields`: 내보낼 필드를 제어합니다.</li><li>`eventList.filter`: 연결된 오브젝트에서 포함된 결과를 제한하는 기준을 지정합니다. 내보내기에 필요한 최소값(일반적으로 날짜)이 필요합니다.</li><li>`eventList.filter.fromIngestTimestamp`: 시계열 이벤트를 제공된 타임스탬프 후 수집된 이벤트로 필터링합니다. 이는 이벤트 시간 자체가 아니라 이벤트에 대한 수집 시간입니다.</li></ul> |
-| `destination` | **(필수)** 내보낸 데이터의 대상 정보:<ul><li>`destination.datasetId`: **(필수)** 데이터를 내보낼 데이터 세트의 ID입니다.</li><li>`destination.segmentPerBatch`: *(선택 사항)* 제공하지 않을 경우 기본값이 로 설정되는 부울 값 `false`. 값 `false` 모든 세그먼트 ID를 단일 배치 ID로 내보냅니다. 값 `true` 하나의 세그먼트 ID를 하나의 배치 ID로 내보냅니다. 값을 로 설정하는 것에 유의하십시오. `true` 일괄 내보내기 성능에 영향을 줄 수 있습니다.</li></ul> |
+| `destination` | **(필수)** 내보낸 데이터의 대상 정보:<ul><li>`destination.datasetId`: **(필수)** 데이터를 내보낼 데이터 세트의 ID입니다.</li><li>`destination.segmentPerBatch`: *(선택 사항)* 제공하지 않을 경우 기본값이 로 설정되는 부울 값 `false`. 값 `false` 모든 세그먼트 정의 ID를 단일 배치 ID로 내보냅니다. 값 `true` 하나의 세그먼트 정의 ID를 하나의 배치 ID로 내보냅니다. 값을 로 설정하는 것에 유의하십시오. `true` 일괄 내보내기 성능에 영향을 줄 수 있습니다.</li></ul> |
 | `schema.name` | **(필수)** 데이터를 내보낼 데이터 세트와 연결된 스키마의 이름입니다. |
 
 >[!NOTE]
@@ -494,6 +494,6 @@ Adobe Experience Platform 쿼리 서비스를 사용하여 성공적으로 내�
   }
 ```
 
-### 세그먼트 내보내기
+### 대상자 내보내기
 
-내보내기 작업 끝점을 사용하여 대상 세그먼트를 내보내는 대신 [!DNL Profile] 데이터. 다음 안내서를 참조하십시오 [세분화 API의 작업 내보내기](../../segmentation/api/export-jobs.md) 추가 정보.
+내보내기 작업 끝점을 사용하여 대상자를 내보내는 대신 [!DNL Profile] 데이터. 다음 안내서를 참조하십시오 [세분화 API의 작업 내보내기](../../segmentation/api/export-jobs.md) 추가 정보.

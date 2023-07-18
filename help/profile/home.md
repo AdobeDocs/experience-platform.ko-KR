@@ -3,16 +3,16 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 실시간 고객 프로필 개요
 description: Real-Time Customer Profile은 다양한 소스의 데이터를 병합하고 개별 고객 프로필 및 관련 시계열 이벤트의 형태로 해당 데이터에 대한 액세스를 제공합니다. 이 기능을 통해 마케터는 여러 채널에서 대상자와 일관되고, 관련성이 높은 경험을 제공할 수 있습니다.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1991'
-ht-degree: 0%
+source-wordcount: '1990'
+ht-degree: 1%
 
 ---
 
 # [!DNL Real-Time Customer Profile] 개요
 
-Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 장소나 시기에 상관없이 고객이 통합적이고 일관적이며 적절한 경험을 제공할 수 있습니다. 포함 [!DNL Real-Time Customer Profile]에서는 온라인, 오프라인, CRM 및 서드파티를 비롯한 여러 채널의 데이터를 결합하여 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. [!DNL Profile] 을 사용하면 모든 고객 상호 작용에 대해 실행 가능한 타임스탬프 계정을 제공하는 통합 보기로 고객 데이터를 통합할 수 있습니다. 이 개요는 의 역할 및 사용을 이해하는 데 도움이 됩니다. [!DNL Real-Time Customer Profile] 위치: [!DNL Experience Platform].
+Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드와 상호 작용하는지에 관계없이 고객을 위한 조직화되고 일관되며 관련성 높은 경험을 제공할 수 있습니다. 포함 [!DNL Real-Time Customer Profile]에서는 온라인, 오프라인, CRM 및 서드파티를 비롯한 여러 채널의 데이터를 결합하여 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. [!DNL Profile] 을 사용하면 모든 고객 상호 작용에 대해 실행 가능한 타임스탬프 계정을 제공하는 통합 보기로 고객 데이터를 통합할 수 있습니다. 이 개요는 의 역할 및 사용을 이해하는 데 도움이 됩니다. [!DNL Real-Time Customer Profile] 위치: [!DNL Experience Platform].
 
 ## [!DNL Profile] Experience Platform
 
@@ -26,7 +26,7 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 
 ### 프로필 엔티티 구성
 
-실시간 고객 프로필은 라는 주요 엔티티로 구성됩니다. **기본 엔티티**&#x200B;및 다양한 지원 엔티티가 포함됩니다. Experience Platform의 컨텍스트에서 기본 엔티티는 일반적으로 **프로필 엔티티**: 개별 사용자의 트레이트, 동작 및 세그먼트 멤버십으로 구성됩니다. 다른 엔티티를 사용하면 세그먼테이션 엔진이 프로필의 기본 엔티티 외부의 데이터를 활용할 수 있으며, 여기에는 다음이 포함됩니다.
+실시간 고객 프로필은 라는 주요 엔티티로 구성됩니다. **기본 엔티티**&#x200B;및 다양한 지원 엔티티가 포함됩니다. Experience Platform의 컨텍스트에서 기본 엔티티는 일반적으로 **프로필 엔티티**, 개별 사용자의 트레이트, 동작 및 대상 멤버십으로 구성됩니다. 다른 엔티티를 사용하면 세그먼테이션 엔진이 프로필의 기본 엔티티 외부의 데이터를 활용할 수 있으며, 여기에는 다음이 포함됩니다.
 
 - **차원 엔티티**: 이벤트 또는 프로필 레코드 간에 공유되는 정보에 대한 데이터 모델링 프로세스를 간소화하는 데 사용되는 엔티티입니다. 이를 조회 엔티티 또는 분류 엔티티라고도 합니다.
 - **B2B 엔티티**: 프로필과 B2B 계정 및 기회의 관계를 설명하는 엔티티입니다.
@@ -98,13 +98,13 @@ UI의 유니온 스키마에 액세스하는 방법을 포함하여 유니온 �
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
-## 프로필 및 세그먼트
+## 프로필 및 대상자
 
-Adobe Experience Platform [!DNL Segmentation Service] 은 개별 고객을 위한 경험을 제공하는 데 필요한 대상을 생성합니다. 대상 세그먼트가 만들어지면 해당 세그먼트의 ID가 모든 자격 있는 프로필의 세그먼트 멤버십 목록에 추가됩니다. 세그먼트 규칙이 만들어지고 다음에 적용됩니다. [!DNL Real-Time Customer Profile] restFul API 및 세그먼트 빌더 사용자 인터페이스를 사용하는 데이터. 세그먼테이션에 대해 자세히 알아보려면 다음을 읽으십시오. [세그먼테이션 서비스 개요](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] 은 개별 고객을 위한 경험을 제공하는 데 필요한 대상을 생성합니다. 대상자가 만들어지면 해당 대상자의 ID가 모든 자격 있는 프로필의 대상자 멤버십 목록에 추가됩니다. 세그먼트 규칙이 만들어지고 다음에 적용됩니다. [!DNL Real-Time Customer Profile] restFul API 및 세그먼트 빌더 사용자 인터페이스를 사용하는 데이터. 세그먼테이션에 대해 자세히 알아보려면 다음을 읽으십시오. [세그먼테이션 서비스 개요](../segmentation/home.md).
 
 ### 스트리밍 수집 및 스트리밍 세분화
 
-실시간 입력은 스트리밍 수집이라는 과정을 통해 가능하게 된다. 프로필 및 시계열 데이터가 수집되면 [!DNL Real-Time Customer Profile] 는 기존 데이터와 병합하고 유니온 보기를 업데이트하기 전에 스트리밍 세그먼테이션이라는 진행 중인 프로세스를 통해 세그먼트에서 해당 데이터를 포함 또는 제외하도록 자동으로 결정합니다. 따라서 고객이 브랜드와 상호 작용할 때 즉시 계산을 수행하고 고객에게 향상된 개인화된 경험을 제공하기 위한 결정을 내릴 수 있습니다. 데이터를 수집하는 동안 데이터가 제대로 수집되고 데이터 세트가 기반으로 하는 스키마를 준수하는지 확인하는 유효성 검사도 수행합니다. 수집 중 유효성 검사가 수행되는 방법에 대한 자세한 내용은 [데이터 수집 품질 개요](../ingestion/quality/overview.md).
+실시간 입력은 스트리밍 수집이라는 과정을 통해 가능하게 된다. 프로필 및 시계열 데이터가 수집되면 [!DNL Real-Time Customer Profile] 는 기존 데이터와 병합하고 유니온 보기를 업데이트하기 전에 스트리밍 세그먼테이션이라는 진행 중인 프로세스를 통해 대상에서 해당 데이터를 포함하거나 제외하도록 자동으로 결정합니다. 따라서 고객이 브랜드와 상호 작용할 때 즉시 계산을 수행하고 고객에게 향상된 개인화된 경험을 제공하기 위한 결정을 내릴 수 있습니다. 데이터를 수집하는 동안 데이터가 제대로 수집되고 데이터 세트가 기반으로 하는 스키마를 준수하는지 확인하는 유효성 검사도 수행합니다. 수집 중 유효성 검사가 수행되는 방법에 대한 자세한 내용은 [데이터 수집 품질 개요](../ingestion/quality/overview.md).
 
 ## 가장자리 투영
 
