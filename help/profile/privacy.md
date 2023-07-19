@@ -5,7 +5,7 @@ title: 실시간 고객 프로필에서 개인 정보 보호 요청 처리
 type: Documentation
 description: Adobe Experience Platform Privacy Service은 수많은 개인 정보 보호 규정에 명시된 대로 개인 데이터에 액세스하거나, 판매를 거부하거나, 삭제하기 위한 고객 요청을 처리합니다. 이 문서에서는 실시간 고객 프로필에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 42e59ba1c7b1980d6633ced264673afcf8d80810
+source-git-commit: fb2686eb44bbf7581120f40b241bead0e61baee9
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 0%
@@ -189,7 +189,7 @@ UI에서 작업 요청을 만들 때 다음을 선택해야 합니다. **[!UICON
 
 >[!IMPORTANT]
 >
->개인 정보 삭제 요청은 즉시 발생하지 않으며, 관련된 서비스 및 지리적 위치와 같은 기타 영향 요소에 따라 달라질 수 있습니다. 개인 정보 보호 작업의 완료 기간은 15일에서 45일까지 다양할 수 있지만 보장되지는 않습니다.
+>개인 정보 삭제 요청은 즉시 발생하지 않으며, 관련된 서비스 및 지리적 위치와 같은 기타 영향 요소에 따라 달라질 수 있습니다. 개인 정보 보호 작업 완료 기간은 15일에서 45일 사이일 수 있지만 보장되지는 않습니다.
 
 ID 서비스도 포함했는지 여부에 따라 다름(`identity`) 및 데이터 레이크(`aepDataLake`)을 프로필 개인정보 보호 요청에 있는 제품으로 사용(`ProfileService`)에서 프로필과 관련된 다양한 데이터 세트가 잠재적으로 다른 시간에 시스템에서 제거됩니다.
 
@@ -213,7 +213,8 @@ ID 서비스도 포함했는지 여부에 따라 다름(`identity`) 및 데이�
 ### 병합 정책 제한 사항 {#merge-policy-limitations}
 
 Privacy Service은 만 처리할 수 있습니다. [!DNL Profile] id 결합을 수행하지 않는 병합 정책을 사용하는 데이터. UI를 사용하여 개인 정보 보호 요청이 처리되고 있는지 확인하는 경우 **[!DNL None]** as its [!UICONTROL ID 결합] 유형. 즉, 다음과 같은 경우에는 병합 정책을 사용할 수 없습니다. [!UICONTROL ID 결합] 이(가) (으)로 설정됨 [!UICONTROL 비공개 그래프].
->![병합 정책의 ID 결합은 없음으로 설정됩니다](./images/privacy/no-id-stitch.png)
+>>
+![병합 정책의 ID 결합은 없음으로 설정됩니다](./images/privacy/no-id-stitch.png)
 >
 ## 다음 단계
 
