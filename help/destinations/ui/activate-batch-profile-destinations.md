@@ -7,7 +7,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '3961'
-ht-degree: 7%
+ht-degree: 10%
 
 ---
 
@@ -87,12 +87,12 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="파일 내보내기 옵션"
->abstract="선택 **전체 파일 내보내기** 을 클릭하여 대상에 적합한 모든 프로필의 전체 스냅샷을 내보냅니다. 선택 **증분 파일 내보내기** 마지막 내보내기 이후 대상에 적합한 프로필만 내보냅니다. <br> 첫 번째 증분 파일 내보내기에는 백필 역할을 하는 대상에 적합한 모든 프로필이 포함됩니다. 이후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 대상자에 적합한 프로필만 포함됩니다."
+>abstract="**전체 파일 내보내기**&#x200B;를 선택하여 대상자 조건에 적합한 모든 프로필의 전체 스냅샷을 내보냅니다. **증분 파일 내보내기**&#x200B;를 선택하여 마지막 내보내기 이후 대상자 조건에 적합한 프로필만 내보냅니다. <br>첫 번째 증분 파일 내보내기에는 채우기 역할을 하는 대상자에 적합한 모든 프로필이 포함됩니다. 향후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 대상자 조건에 적합한 프로필만 포함됩니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko-KR#export-incremental-files" text="증분 파일 내보내기"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="대상 평가 후 활성화"
+>title="대상자 평가 후 활성화"
 >abstract="일별 세분화 작업이 완료되면 활성화가 실행됩니다. 이렇게 하면 최신 프로필을 내보낼 수 있습니다."
 
 >[!CONTEXTUALHELP]
@@ -170,7 +170,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="파일 이름 구성"
->abstract="파일 기반 대상의 경우 대상별로 고유한 파일 이름이 생성됩니다. 파일 이름 편집기를 사용하여 고유 파일 이름을 만들고 편집하거나 기본 이름을 유지할 수 있습니다."
+>abstract="파일 기반 대상의 경우 고유 파일 이름이 대상자당 생성됩니다. 파일 이름 편집기를 사용하여 고유 파일 이름을 만들고 편집하거나 기본 이름을 유지할 수 있습니다."
 
 대부분의 대상에 대해 기본 파일 이름은 대상 이름, 대상 ID 및 날짜 및 시간 표시기로 구성됩니다. 예를 들어 내보낸 파일 이름을 편집하여 서로 다른 캠페인을 구별하거나 데이터 내보내기 시간을 파일에 추가할 수 있습니다. 일부 대상 개발자는 대상에 대해 다른 기본 파일 이름 추가 옵션이 표시되도록 선택할 수 있습니다.
 
@@ -247,7 +247,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
 >title="필수 속성 정보"
->abstract="내보낸 모든 프로필에 포함되어야 하는 XDM 스키마 속성을 선택합니다. 필수 키가 없는 프로필은 대상으로 내보내지 않습니다. 필수 키를 선택하지 않으면 속성에 관계없이 모든 적격 프로필을 내보냅니다."
+>abstract="내보낸 모든 프로필에 포함되어야 하는 XDM 스키마 속성을 선택합니다. 필수 키가 없는 프로필은 대상으로 내보내지 않습니다. 필수 키를 선택하지 않으면 속성과 관계없이 모든 적격 프로필을 내보냅니다."
 
 필수 속성은 모든 프로필 레코드에 선택한 속성이 포함되도록 하는 사용자가 사용할 수 있는 확인란입니다. 예를 들어 내보낸 모든 프로필에는 이메일 주소가 포함됩니다&#x200B;.
 
@@ -476,8 +476,8 @@ Adobe은 다음과 같은 ID 네임스페이스를 선택할 것을 권장합니
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exclude_enrichment_attributes"
->title="데이터 보강 속성 제외"
->abstract="이 옵션을 활성화하면 모든 특성을 제외하면서 선택한 사용자 지정 업로드 대상자의 프로필을 대상으로 내보냅니다."
+>title="보강 속성 제외"
+>abstract="모든 속성을 제외하고 선택한 사용자 지정 업로드된 대상자의 프로필을 대상으로 내보내려면 이 옵션을 활성화합니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="설명서에서 자세히 알아보기"
 
 >[!IMPORTANT]

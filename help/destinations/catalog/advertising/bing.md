@@ -6,7 +6,7 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
 source-wordcount: '670'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
@@ -96,7 +96,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="ID 매핑"
->abstract="선택한 세그먼트를 매핑할 숫자 Bing 대상자 ID를 입력합니다. 제공된 경우 [!UICONTROL 매핑 ID] 은 Bing 대상의 대상 ID와 일치하지 않습니다. Bing 계정에 예상 대상 데이터가 표시되지 않습니다."
+>abstract="선택한 대상자를 매핑할 숫자 Bing 세그먼트 ID를 입력합니다. 제공된 [!UICONTROL 매핑 ID]가 Bing 대상의 대상자 ID와 일치하지 않는 경우 Bing 계정에 예상되는 대상자 데이터가 표시되지 않습니다."
 
 >[!IMPORTANT]
 > 

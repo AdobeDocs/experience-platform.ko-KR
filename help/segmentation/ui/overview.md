@@ -6,7 +6,7 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3606'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -50,17 +50,17 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="이탈"
->abstract="이탈은 세그먼트 작업이 마지막으로 실행된 시간과 비교하여 대상 내에서 변경되는 프로필의 백분율을 나타냅니다."
+>abstract="이탈은 세그먼트 작업이 마지막으로 실행된 시간과 비교하여 대상자에서 변경되는 프로필의 백분율을 나타냅니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="평가 메서드"
->abstract="대상에 대한 평가 방법에는 일괄 처리, 스트리밍 및 에지가 포함됩니다."
+>abstract="대상자 평가 메서드에는 배치, 스트리밍과 에지가 포함됩니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="예약에 모든 대상 추가"
->abstract="일별 예약 업데이트에 일괄 처리 세분화를 사용하여 평가된 모든 대상을 포함할 수 있도록 활성화합니다. 비활성화하면 예약된 업데이트에서 모든 대상이 제거됩니다."
+>title="예약에 모든 대상자 추가"
+>abstract="활성화하여 매일 예약된 업데이트에서 배치 세분화를 사용하여 평가된 모든 대상자를 포함합니다. 비활성화하여 예약된 업데이트에서 모든 대상자를 제거합니다."
 
 다음 항목 선택 **[!UICONTROL 찾아보기]** 조직의 모든 대상자 목록을 보려면 탭을 사용하십시오.
 

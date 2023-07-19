@@ -6,7 +6,7 @@ exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '2118'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -99,12 +99,12 @@ Experience Platform은 고객의 보안 및 규정 준수 요구 사항을 충�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
 >title="세그먼트 이름 포함"
->abstract="데이터 내보내기에 내보낼 대상자의 이름을 포함시키려면 전환합니다. 이 옵션을 선택한 경우 데이터 내보내기 예는 설명서를 참조하십시오."
+>abstract="데이터 내보내기에 내보내는 대상자 이름이 포함되도록 하려면 전환하십시오. 이 옵션을 선택한 경우 데이터 내보내기 예는 설명서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
 >title="세그먼트 타임스탬프 포함"
->abstract="대상자를 만들고 업데이트할 때 UNIX 타임스탬프와, 대상자가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 데이터 내보내기에 포함하도록 하려면 전환합니다. 이 옵션을 선택한 경우 데이터 내보내기 예는 설명서를 참조하십시오."
+>abstract="대상자를 생성 및 업데이트하거나 대상자를 대상에 매핑하여 활성화하는 경우 데이터 내보내기에 Unix 타임스탬프가 포함되도록 하려면 전환하십시오. 이 옵션을 선택한 경우 데이터 내보내기 예는 설명서를 참조하십시오."
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 

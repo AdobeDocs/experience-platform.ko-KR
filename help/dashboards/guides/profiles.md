@@ -7,7 +7,7 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '3393'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -256,7 +256,7 @@ ID에 대한 자세한 내용은 [Adobe Experience Platform Identity Service 설
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="분할되지 않은 프로필"
->abstract="이 위젯은 대상자에 첨부되지 않은 모든 프로필의 총 수를 제공하며 조직 전체의 프로필 활성화 기회를 나타냅니다."
+>abstract="이 위젯은 대상자에 연결되지 않은 모든 프로필의 총 개수를 제공하고 조직 전체의 프로필 활성화 기회를 나타냅니다."
 
 다음 [!UICONTROL 세분화되지 않은 프로필] 위젯은 대상에 첨부되지 않은 모든 프로필의 총 수를 제공합니다. 생성된 숫자는 마지막 스냅샷을 기준으로 정확하며 조직 전체에서 프로필 활성화 기회를 나타냅니다. 또한 적절한 ROI를 제공하지 않는 프로필을 삭제할 수 있는 기회를 나타냅니다.
 
@@ -267,7 +267,7 @@ ID에 대한 자세한 내용은 [Adobe Experience Platform Identity Service 설
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="분할되지 않은 프로필 추세"
->abstract="이 위젯은 주어진 기간 동안 대상자에 첨부되지 않은 프로필 수에 대한 선 그래프 일러스트레이션을 제공합니다. 대상자에 첨부되지 않은 프로필의 트렌드는 30일, 90일 및 12개월 기간에 시각화할 수 있습니다."
+>abstract="이 위젯은 지정된 기간 동안 대상자에 연결되지 않은 프로필 개수에 대한 선 그래프 그림을 제공합니다. 대상자에 연결되지 않은 프로필 추세는 30일, 90일 및 12개월 기간 동안 시각화할 수 있습니다."
 
 다음 [!UICONTROL 세분화되지 않은 프로필 변경 트렌드] 위젯은 선 그래프를 사용하여 대상자에 첨부되지 않은 마지막 일별 스냅샷 이후 추가된 프로필 수를 보여줍니다. 대상자에 첨부되지 않은 프로필의 변경 트렌드를 30일, 90일 및 12개월 기간에 시각화할 수 있습니다. 위젯의 드롭다운 메뉴에서 기간이 선택됩니다. 프로필 카운트는 y축에 반영되고 시간은 x축에 반영됩니다.
 

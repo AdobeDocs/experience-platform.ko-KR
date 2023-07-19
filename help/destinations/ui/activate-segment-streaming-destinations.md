@@ -7,7 +7,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '1029'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -103,7 +103,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="종료 날짜"
->abstract="대상자 일정에 대한 종료 날짜를 추가할 수 없습니다."
+>abstract="대상자 예약에 종료 날짜를 추가할 수 없습니다."
 
 기본적으로 **[!UICONTROL 대상자 일정]** 페이지에는 현재 활성화 플로우에서 선택한 새로 선택한 대상만 표시됩니다.
 

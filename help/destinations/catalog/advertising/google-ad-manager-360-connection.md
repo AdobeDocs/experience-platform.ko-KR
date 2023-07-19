@@ -5,7 +5,7 @@ exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1030'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -99,8 +99,8 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="대상 이름에 대상 ID 추가"
->abstract="Google Ad Manager 360의 대상 이름에 다음과 같이 Experience Platform의 대상 ID가 포함되도록 하려면 이 옵션을 선택합니다. `Audience Name (Audience ID)`"
+>title="대상자 이름에 대상자 ID 추가"
+>abstract="Google Ad Manager 360에서 대상자 이름에 다음과 같이 Experience Platform의 대상자 ID가 포함되도록 하려면 이 옵션을 선택하십시오. `Audience Name (Audience ID)`"
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 

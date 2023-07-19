@@ -7,7 +7,7 @@ exl-id: 6a34a796-24a1-450a-af39-60113928873e
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '3031'
-ht-degree: 8%
+ht-degree: 20%
 
 ---
 
@@ -69,10 +69,10 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분�
 
 * [[!UICONTROL 가장 많이 사용하는 대상]](#most-used-destinations)
 * [[!UICONTROL 최근에 생성된 대상]](#recently-created-destinations)
-* [[!UICONTROL 최근에 활성화된 대상자]](#recently-activated-audiences)
-* [[!UICONTROL 대상별로 최근에 활성화된 대상자]](#recently-activated-audiences-by-destination)
+* [[!UICONTROL 최근 활성화된 대상자]](#recently-activated-audiences)
+* [[!UICONTROL 대상별로 최근 활성화된 대상자]](#recently-activated-audiences-by-destination)
 * [[!UICONTROL 대상자 크기 트렌드]](#audience-size-trend)
-* [[!UICONTROL ID별로 매핑되지 않은 대상]](#unmapped-audiences-by-identity)
+* [[!UICONTROL ID별로 매핑되지 않은 대상자]](#unmapped-audiences-by-identity)
 * [[!UICONTROL ID별로 매핑된 대상자]](#mapped-audiences-by-identity)
 * [[!UICONTROL 공통 대상자]](#common-audiences)
 * [[!UICONTROL 매핑된 대상자]](#mapped-audiences)
@@ -88,7 +88,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분�
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mostuseddestinations"
 >title="가장 많이 사용하는 대상"
->abstract="이 위젯은 매핑된 대상자의 수별로 조직의 가장 활성 대상을 표시합니다. 마지막 스냅샷이 생성된 시점에서 이 숫자는 정확합니다. 이 등급은 현재 가장 많이 사용되는 대상을 보여 주고 활용도가 낮을 수 있는 대상을 강조 표시합니다."
+>abstract="이 위젯은 매핑된 대상자 수에 따라 조직에 가장 많이 방문한 대상을 표시합니다. 마지막 스냅샷이 생성된 시점에서 이 숫자는 정확합니다. 이 등급은 현재 가장 많이 사용되는 대상을 보여 주고 활용도가 낮을 수 있는 대상을 강조 표시합니다."
 
 다음 **[!UICONTROL 가장 많이 사용한 대상]** 위젯은 마지막 스냅샷을 기준으로 매핑된 대상자 수별로 조직의 최상위 대상을 표시합니다. 이 순위는 어떤 대상이 활용되고 있는지에 대한 통찰력을 제공하는 동시에 활용도가 낮을 수 있는 대상을 잠재적으로 보여 줍니다.
 
@@ -117,14 +117,14 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분�
 
 ![최근에 만든 대상 위젯이 강조 표시된 대상 대시보드의 개요 탭](../images/destinations/recently-created-destinations.png)
 
-### [!UICONTROL 최근에 활성화된 대상자] {#recently-activated-audiences}
+### [!UICONTROL 최근 활성화된 대상자] {#recently-activated-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegments"
->title="최근에 활성화된 대상자"
->abstract="이 위젯은 대상에 가장 최근에 매핑된 대상자의 목록을 제공합니다. 이 목록은 시스템에서 사용 중인 대상 및 대상의 스냅샷을 제공하며 잘못된 매핑을 해결하는 데 도움이 됩니다."
+>title="최근 활성화된 대상자"
+>abstract="이 위젯은 가장 최근에 대상에 매핑된 대상자 목록을 제공합니다. 이 목록은 시스템에서 활성화되는 대상자와 대상에 대한 스냅샷을 제공하고 잘못된 매핑 문제를 해결하는 데 도움이 됩니다."
 
-다음 **[!UICONTROL 최근에 활성화된 대상자]** 위젯은 대상에 가장 최근에 매핑된 대상자의 목록을 제공합니다. 이 목록은 시스템에서 사용 중인 대상 및 대상의 스냅샷을 제공하며 잘못된 매핑을 해결하는 데 도움이 됩니다.
+다음 **[!UICONTROL 최근에 활성화된 대상자]** 위젯은 대상에 가장 최근에 매핑된 대상자의 목록을 제공합니다. 이 목록은 시스템에서 활성화되는 대상자와 대상에 대한 스냅샷을 제공하고 잘못된 매핑 문제를 해결하는 데 도움이 됩니다.
 
 다음 [!UICONTROL 업데이트됨] 표시된 날짜는 대상이 대상에 대해 마지막으로 활성화된 시간을 표시하며 마지막 일별 스냅샷에 정확합니다. 즉, 대상에 대한 대상을 활성화하면 다음 스냅샷을 생성할 때까지 업데이트된 날짜가 변경되지 않습니다.
 
@@ -134,12 +134,12 @@ Experience Platform에서 대상자 작업에 대한 자세한 내용은 다음�
 
 ![최근 활성화된 대상자 위젯이 강조 표시된 대상 대시보드의 개요 탭](../images/destinations/recently-activated-audiences.png)
 
-### [!UICONTROL 대상별로 최근에 활성화된 대상자] {#recently-activated-audiences-by-destination}
+### [!UICONTROL 대상별로 최근 활성화된 대상자] {#recently-activated-audiences-by-destination}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
->title="대상별로 최근에 활성화된 대상자"
->abstract="이 위젯은 개요 드롭다운에서 선택한 대상에 따라 가장 최근에 활성화된 상위 5개의 대상을 내림차순으로 표시합니다."
+>title="대상별로 최근 활성화된 대상자"
+>abstract="이 위젯은 개요 드롭다운에서 선택한 대상에 따라 가장 최근에 활성화된 상위 5개의 대상자를 내림차순으로 표시합니다."
 
 다음 **[!UICONTROL 대상별로 최근에 활성화된 대상자]** 위젯은 개요 드롭다운에서 선택한 대상에 따라 가장 최근에 활성화된 상위 5개의 대상을 내림차순으로 표시합니다. 이는 과 유사합니다. [!UICONTROL 최근에 활성화된 대상자] 위젯이지만 데이터가 표시됨 **전용** 선택한 대상에 적용됩니다.
 
@@ -156,7 +156,7 @@ Experience Platform에서 대상자 작업에 대한 자세한 내용은 다음�
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
 >title="대상자 크기 트렌드"
->abstract="이 위젯은 매일 대상 계정으로 전송되는 대상에 포함된 프로필 수를 보여줍니다. 첫 번째 드롭다운 메뉴는 대상자 트렌드의 기간을 조정합니다. 두 번째 위젯 드롭다운 메뉴에서 분석 대상을 선택합니다. 개요 드롭다운에서 대상을 선택합니다."
+>abstract="이 위젯은 대상 계정으로 매일 전송되는 대상자에 포함된 프로필 수를 보여 줍니다. 첫 번째 드롭다운 메뉴는 대상자 트렌드의 기간을 조정합니다. 두 번째 위젯 드롭다운 메뉴는 분석할 대상자를 선택합니다. 개요 드롭다운에서 대상을 선택합니다."
 
 다음 **[!UICONTROL 대상자 크기 트렌드]** 위젯은 해당 대상 계정에 매핑된 대상에 대해 일정 기간 동안의 프로필 수 관계를 보여 줍니다. 위젯은 선 그래프를 사용하여 매일 대상 계정으로 전송되는 대상에 포함된 프로필의 수를 보여줍니다.
 
@@ -170,12 +170,12 @@ Experience Platform에서 대상자 작업에 대한 자세한 내용은 다음�
 
 ![대상 크기 트렌드 위젯에 대한 자동 캡션 대화 상자.](../images/destinations/audience-size-trend-captions.png)
 
-### [!UICONTROL ID별로 매핑되지 않은 대상] {#unmapped-audiences-by-identity}
+### [!UICONTROL ID별로 매핑되지 않은 대상자] {#unmapped-audiences-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
->title="ID별로 매핑되지 않은 대상"
->abstract="이 위젯은 상위 5개를 나열합니다. **매핑되지 않음** 지정된 대상 및 id에 대한 id 수를 내림차순으로 순위를 매긴 대상입니다. 위젯 드롭다운에 나열된 필터 ID는 개요 페이지 상단에서 선택한 대상 계정에 따라 달라집니다."
+>title="ID별로 매핑되지 않은 대상자"
+>abstract="이 위젯은 특정 대상의 ID 개수와 ID를 내림차순으로 정렬한 **매핑되지 않은** 상위 5개의 대상자를 나열합니다. 위젯 드롭다운에 나열된 필터 ID는 개요 페이지 상단에서 선택한 대상 계정에 따라 달라집니다."
 
 다음 **[!UICONTROL ID별로 매핑되지 않은 대상]** 상위 5개 목록 위젯 **매핑되지 않음** 지정된 대상 및 id에 대한 id 수를 내림차순으로 순위를 매긴 대상입니다. 선택한 ID를 기반으로 선택한 대상 계정에 매핑하는 것이 가장 효과적인 대상을 강조 표시합니다.
 
@@ -192,9 +192,9 @@ ID 열은 대상 내에서 위젯 ID 드롭다운에서 선택한 ID에 매핑�
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedsegmentsbyidentity"
 >title="ID별로 매핑된 대상자"
->abstract="이 위젯은 의 상위 5개 목록을 제공합니다. **매핑됨** 대상. 대상자 내에 포함된 소스 ID의 수에 따라 목록의 순서가 높음에서 낮음 순으로 지정됩니다. 위젯 제목 아래의 드롭다운 메뉴에서 계산할 대상 ID를 선택합니다. 위젯 드롭다운에서 사용 가능한 대상 ID는 개요 대시보드 상단에서 선택한 대상에 따라 다릅니다."
+>abstract="이 위젯은 상위 5개의 **매핑된** 대상자 목록을 제공합니다. 목록은 대상자 내에 포함된 소스 ID 수에 따라 높은 순에서 낮은 순으로 정렬됩니다. 위젯 제목 아래의 드롭다운 메뉴에서 계산할 대상 ID를 선택합니다. 위젯 드롭다운에서 사용 가능한 대상 ID는 개요 대시보드 상단에서 선택한 대상에 따라 다릅니다."
 
-이 위젯은 의 상위 5개 목록을 제공합니다. **매핑됨** 대상. 대상자 내에 포함된 소스 ID의 수에 따라 목록의 순서가 높음에서 낮음 순으로 지정됩니다. 위젯 제목 아래의 드롭다운 메뉴에서 계산할 대상 ID를 선택합니다. 위젯의 드롭다운에서 사용할 수 있는 대상 ID는 개요 대시보드 맨 위에서 선택한 대상 계정 필터에 따라 변경됩니다.
+이 위젯은 상위 5개의 **매핑된** 대상자 목록을 제공합니다. 목록은 대상자 내에 포함된 소스 ID 수에 따라 높은 순에서 낮은 순으로 정렬됩니다. 위젯 제목 아래의 드롭다운 메뉴에서 계산할 대상 ID를 선택합니다. 위젯의 드롭다운에서 사용할 수 있는 대상 ID는 개요 대시보드 맨 위에서 선택한 대상 계정 필터에 따라 변경됩니다.
 
 ![ID별 매핑된 대상자 위젯.](../images/destinations/mapped-audiences-by-identity.png)
 
@@ -205,9 +205,9 @@ ID 열은 대상 내에서 위젯 ID 드롭다운에서 선택한 ID에 매핑�
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
 >title="공통 대상자"
->abstract="이 위젯은 페이지 상단에서 선택한 대상 계정에서 활성화된 상위 5개의 대상과 위젯 드롭다운에서 선택한 대상의 목록을 제공합니다. 대상자 목록은 얼마나 최근에 활성화되었는지에 따라 순서가 지정됩니다. 가장 최근에 활성화된 대상이 맨 위에 표시됩니다."
+>abstract="이 위젯은 페이지 상단에서 선택한 대상 계정과 위젯 드롭다운에서 선택한 대상에서 활성화된 상위 5개의 대상자 목록을 제공합니다. 대상자 목록은 최근에 활성화된 정도에 따라 정렬됩니다. 가장 최근에 활성화된 대상자가 맨 위에 표시됩니다."
 
-다음 **[!UICONTROL 일반 대상자]** 위젯은 페이지 상단에 선택된 대상 계정 및 위젯 드롭다운에서 선택된 대상 전체에서 활성화된 상위 5개의 대상 목록을 제공합니다. 대상자 목록은 얼마나 최근에 활성화되었는지에 따라 순서가 지정됩니다. 가장 최근에 활성화된 대상이 맨 위에 표시됩니다.
+다음 **[!UICONTROL 일반 대상자]** 위젯은 페이지 상단에 선택된 대상 계정 및 위젯 드롭다운에서 선택된 대상 전체에서 활성화된 상위 5개의 대상 목록을 제공합니다. 대상자 목록은 최근에 활성화된 정도에 따라 정렬됩니다. 가장 최근에 활성화된 대상자가 맨 위에 표시됩니다.
 
 다음 [!UICONTROL 대상 크기] 열은 나열된 각 대상자의 총 프로필 수를 제공합니다.
 
@@ -226,7 +226,7 @@ ID 열은 대상 내에서 위젯 ID 드롭다운에서 선택한 ID에 매핑�
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedaudiencehealth"
 >title="매핑된 대상자 상태"
->abstract="이 위젯에서는 총 프로필 수가 해당 대상에 매핑된 30일 평균 대상 크기보다 최소 하나 이상의 표준 편차만큼 벗어난 최대 20개의 매핑된 대상 목록을 제공합니다. 지난 30일간 평균 대상자 크기를 분산하는 데 계산된 지표가 제공됩니다. 대상자 크기는 높은 순에서 낮은 순으로 정렬됩니다."
+>abstract="이 위젯은 총 프로필 개수가 해당 대상에 매핑된 30일 평균 대상자 크기와 비교해 한 단계 이상의 표준 편차가 발생하는 최대 20개의 매핑된 대상자 목록을 제공합니다. 지난 30일간 평균 대상자 크기를 분산하는 데 계산된 지표가 제공됩니다. 대상자 크기는 높은 순에서 낮은 순으로 정렬됩니다."
 
 위젯은 마지막 일별 스냅샷에서 총 프로필 수가 해당 대상에 매핑된 30일 평균 대상 크기보다 최소 하나 이상의 표준 편차만큼 벗어난 최대 20개의 매핑된 대상 목록을 제공합니다.
 

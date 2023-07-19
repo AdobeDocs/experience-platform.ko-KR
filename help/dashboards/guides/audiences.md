@@ -7,7 +7,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '2098'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -95,7 +95,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하는 데 사용할 �
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
 >title="대상자 크기"
->abstract="이 위젯은 선택한 대상 내에서 병합된 프로필의 총 수를 표시합니다. 이 숫자는 데이터에 적용된 병합 정책에 따라 다르고 최근 스냅샷이 생성된 시점에서 정확합니다."
+>abstract="이 위젯은 선택한 대상자 내 병합 프로필의 총 개수를 표시합니다. 이 숫자는 데이터에 적용된 병합 정책에 따라 다르고 최근 스냅샷이 생성된 시점에서 정확합니다."
 
 다음 **[!UICONTROL 대상 크기]** 위젯은 스냅숏을 만들 때 선택한 대상 내에 있는 병합된 프로필의 총 수를 표시합니다. 이 숫자는 프로필 데이터에 대상 병합 정책을 적용하여 프로필 조각을 함께 병합하고 대상의 각 개인에 대해 단일 프로필을 형성한 결과입니다.
 
@@ -181,7 +181,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하는 데 사용할 �
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
 >title="ID 중첩"
->abstract="이 위젯은 선택한 두 ID를 모두 포함하는 대상의 프로필 중복을 보여 줍니다. 원은 각 ID에 대한 상대적 크기를 표시합니다. 두 네임스페이스가 포함된 프로필 개수는 원 사이의 겹침으로 표시됩니다."
+>abstract="이 위젯은 선택한 두 ID가 포함된 대상자의 프로필 중첩을 표시합니다. 원은 각 ID에 대한 상대적 크기를 표시합니다. 두 네임스페이스가 포함된 프로필 개수는 원 사이의 겹침으로 표시됩니다."
 
 다음 **[!UICONTROL ID 중복]** 위젯은 여러 id를 포함하는 대상의 프로필이 겹치는 것을 보여 주는 벤 다이어그램 또는 세트 다이어그램을 표시합니다.
 
@@ -198,7 +198,7 @@ ID에 대한 자세한 내용은 [Identity Service 설명서](../../identity-ser
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="ID별 프로필"
->abstract="이 위젯은 선택한 대상에 있는 병합된 모든 프로필의 ID 분류를 표시합니다."
+>abstract="이 위젯은 선택한 대상자에 병합된 모든 프로필에 있는 ID의 분석을 표시합니다."
 
 다음 **[!UICONTROL ID별 프로필]** 위젯은 선택한 대상에 있는 병합된 모든 프로필의 id 분류를 표시합니다. ID별 총 프로필 수는 한 프로필에 연관된 여러 ID가 있을 수 있으므로 대상자의 총 프로필 수보다 많을 수 있습니다. 즉, 각 ID에 대해 표시된 값을 함께 추가하면 전체 대상자 크기보다 합계가 더 클 수 있습니다. 고객이 둘 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 ID가 해당 개별 고객과 연결될 수 있기 때문입니다.
 

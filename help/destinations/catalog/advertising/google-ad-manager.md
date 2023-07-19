@@ -6,7 +6,7 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
 source-wordcount: '992'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -89,8 +89,8 @@ ht-degree: 2%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
->title="대상 이름에 대상 ID 추가"
->abstract="Google Ad Manager의 대상 이름에 다음과 같이 Experience Platform의 대상 ID를 포함하려면 이 옵션을 선택합니다. `Audience Name (Audience ID)`"
+>title="대상자 이름에 대상자 ID 추가"
+>abstract="Google Ad Manager에서 대상자 이름에 다음과 같이 Experience Platform의 대상자 ID가 포함되도록 하려면 이 옵션을 선택하십시오. `Audience Name (Audience ID)`"
 
 While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정보를 제공해야 합니다.
 
