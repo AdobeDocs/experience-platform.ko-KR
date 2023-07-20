@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;시작하기;기여도 ai;인기 주제;기여도 ai 입력;기여도 ai 출력;기여도 ai 문제 해결;기여도 ai 오류
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Attribution AI
 title: Attribution AI 오류 문제 해결
 description: Attribution AI에서 일반적인 오류에 대한 답변을 찾아보십시오.
 type: Documentation
 exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%

@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;시작하기;고객 ai;인기 항목;고객 ai 입력;고객 ai 출력;데이터 요구 사항
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Customer AI의 데이터 요구 사항
 topic-legacy: Getting started
 description: 고객 AI가 활용하는 필수 이벤트, 입력 및 출력에 대해 자세히 알아봅니다.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 5f7b602b68f5cbf4b1f4b08603757b0956e36408
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2484'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -62,7 +62,7 @@ ht-degree: 2%
 
 | 용어 | 정의 |
 | --- | --- |
-| [경험 데이터 모델(XDM)](../../xdm/home.md) | XDM은 Adobe Experience Platform에서 제공하는 Adobe Experience Cloud이 정확한 순간에 정확한 메시지를 적합한 사람에게 전달할 수 있는 기본 프레임워크입니다. Platform은 XDM 시스템을 사용하여 플랫폼 서비스에 보다 쉽게 사용할 수 있도록 데이터를 특정 방식으로 구성합니다. |
+| [경험 데이터 모델 (XDM)](../../xdm/home.md) | XDM은 Adobe Experience Platform에서 제공하는 Adobe Experience Cloud이 정확한 순간에 정확한 메시지를 적합한 사람에게 전달할 수 있는 기본 프레임워크입니다. Platform은 XDM 시스템을 사용하여 플랫폼 서비스에 보다 쉽게 사용할 수 있도록 데이터를 특정 방식으로 구성합니다. |
 | [XDM 스키마](../../xdm/schema/composition.md) | Experience Platform은 스키마를 사용하여 데이터의 구조를 일관되고 재사용 가능한 방식으로 설명합니다. 여러 시스템에서 데이터를 일관되게 정의하면 의미를 쉽게 유지할 수 있으므로 데이터의 가치를 얻을 수 있습니다. 데이터를 Platform에 수집하려면 먼저 데이터의 구조를 설명하고 각 필드 내에 포함할 수 있는 데이터 유형에 제약 조건을 제공하는 스키마를 구성해야 합니다. 스키마는 기본 XDM 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. |
 | [XDM 클래스](../../xdm/schema/field-constraints.md) | 모든 XDM 스키마는 분류할 수 있는 데이터를 설명합니다. `Experience Event`. 스키마의 데이터 비헤이비어는 스키마가 처음 생성될 때 스키마에 할당된 스키마의 클래스에 의해 정의됩니다. XDM 클래스는 특정 데이터 동작을 나타내기 위해 스키마에 포함해야 하는 최소 속성 수를 설명합니다. |
 | [필드 그룹](../../xdm/schema/composition.md) | 스키마에서 하나 이상의 필드를 정의하는 구성 요소입니다. 필드 그룹은 필드가 스키마의 계층 구조에 표시되는 방식을 적용하므로 포함되는 모든 스키마에서 동일한 구조를 표시합니다. 필드 그룹은 클래스에서 식별되는 특정 클래스와만 호환됩니다. `meta:intendedToExtend` 특성. |
