@@ -4,10 +4,10 @@ solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 대상자 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
-source-git-commit: 8f885181f8ec06f719e4a82b2cb5f13641f65607
-workflow-type: ht
-source-wordcount: '223'
-ht-degree: 100%
+source-git-commit: 1dea63c4efc4d8effed56c0cf97a35594f92a8d0
+workflow-type: tm+mt
+source-wordcount: '231'
+ht-degree: 96%
 
 ---
 
@@ -67,5 +67,6 @@ ht-degree: 100%
 * 사용 사례 {#use-cases}
    * 파트너 데이터 사용 사례 {#partner-data}
       * [자사 프로필 보완](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+      * [잠재 고객 확보를 통한 신규 고객 유치](/help/rtcdp/partner-data/prospecting.md)
 * [Experience Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes_kr)
 * [Experience Platform 용어](https://www.adobe.com/go/platform-glossary_kr)

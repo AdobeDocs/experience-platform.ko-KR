@@ -4,9 +4,9 @@ description: 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
-workflow-type: ht
-source-wordcount: '1082'
+source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
+workflow-type: tm+mt
+source-wordcount: '1083'
 ht-degree: 100%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선합니다.
 
-![파트너가 제공한 속성 사용 사례를 사용하여 프로필을 보강하는 높은 수준의 시각적 개요입니다.](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
+![파트너가 제공한 속성 사용 사례를 사용하여 프로필을 보강하는 높은 수준의 시각적 개요입니다.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
 ## 전제 조건 및 계획 {#prerequisites-and-planning}
 
@@ -36,7 +36,7 @@ ht-degree: 100%
 
 ## 사용 사례를 달성하는 방법: 높은 수준의 개요 {#achieve-the-use-case-high-level}
 
-![파트너가 제공한 속성 사용 사례를 사용하여 프로필을 보강하는 높은 수준의 시각적 개요입니다.](/help/rtcdp/assets/partner-data/enrichment-use-case-steps.png)
+![파트너가 제공한 속성 사용 사례를 사용하여 프로필을 보강하는 높은 수준의 시각적 개요입니다.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
 1. **고객**&#x200B;은 **데이터 파트너**&#x200B;의 속성에 라이선스를 부여합니다.
 2. **고객**&#x200B;은 **파트너**&#x200B;가 제공한 속성을 수용할 수 있도록 프로필 데이터 및 거버넌스 모델을 확장합니다.
