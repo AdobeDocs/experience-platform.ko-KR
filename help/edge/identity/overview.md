@@ -3,9 +3,9 @@ title: Platform Web SDK의 ID 데이터
 description: Adobe Experience Platform Web SDK를 사용하여 Adobe Experience Cloud ID(ECID)를 검색하고 관리하는 방법에 대해 알아봅니다.
 keywords: ID;자사 ID;ID 서비스;타사 ID;ID 마이그레이션;방문자 ID;타사 ID;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;동기화 ID;syncIdentity;sendEvent;identityMap;primary;ecid;ID 네임스페이스;네임스페이스 ID;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 0edd9422d6ea1b8e3aeaba1b24bc38b42ca809d8
+source-git-commit: 709996a837e722a79d695bf8573552f8f373850e
 workflow-type: tm+mt
-source-wordcount: '1404'
+source-wordcount: '1418'
 ht-degree: 1%
 
 ---
@@ -91,7 +91,7 @@ alloy("sendEvent", {
       "ID_NAMESPACE": [ // Notice how each namespace can contain multiple identifiers.
         {
           "id": "1234",
-          "authenticatedState": "ambiguous",
+          "authenticatedState": "authenticated",
           "primary": true
         }
       ]
@@ -99,6 +99,11 @@ alloy("sendEvent", {
   }
 });
 ```
+
+>[!NOTE]
+>
+>Adobe은 다음과 같이 개인을 나타내는 네임스페이스를 보낼 것을 권장합니다. `CRMID`를 기본 ID로 사용하십시오.
+
 
 내의 각 속성 `identityMap` 특정 항목에 속한 id를 나타냅니다. [id 네임스페이스](../../identity-service/namespaces.md). 속성 이름은 ID 네임스페이스 기호여야 하며 아래 Adobe Experience Platform 사용자 인터페이스에 나열되어 있습니다.[!UICONTROL ID]&quot;. 속성 값은 해당 ID 네임스페이스와 관련된 ID 배열이어야 합니다.
 
