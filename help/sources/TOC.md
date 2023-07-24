@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: 68c6d579d43b4137e3107d3ab102300dc8304c90
+source-git-commit: cb8fd7a7e3803c356adbdf0c20cde869c1de602c
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '990'
 ht-degree: 11%
 
 ---
@@ -62,7 +62,6 @@ ht-degree: 11%
       - [OneTrust 통합](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics 커넥터](connectors/crm/ms-dynamics.md)
-      - [SAP Hybris 커넥터](connectors/crm/sap-hybris.md)
       - [Salesforce 커넥터](connectors/crm/salesforce.md)
       - [SugarCRM 커넥터](connectors/crm/sugarcrm.md)
       - [Veeva CRM 커넥터](connectors/crm/veeva.md)
@@ -94,6 +93,7 @@ ht-degree: 11%
       - [Snowflake 커넥터](connectors/databases/snowflake.md)
       - [Teradata 밴티지 커넥터](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
+      - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
       - [Shopify 스트리밍](connectors/ecommerce/shopify-streaming.md)
    - 로컬 시스템 {#local-system}
@@ -140,7 +140,6 @@ ht-degree: 11%
          - [OneTrust 통합](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
-         - [SAP Hybris](tutorials/api/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [SugarCRM 계정 및 연락처](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM 이벤트](tutorials/api/create/crm/sugarcrm-events.md)
@@ -173,6 +172,7 @@ ht-degree: 11%
          - [Teradata 밴티지](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
+         - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify 스트리밍](tutorials/api/create/ecommerce/shopify-streaming.md)
       - 마케팅 자동화 {#marketing-automation}
@@ -261,7 +261,6 @@ ht-degree: 11%
          - [OneTrust 통합](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
-         - [SAP Hybris](tutorials/ui/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [SugarCRM 계정 및 연락처](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM 이벤트](tutorials/ui/create/crm/sugarcrm-events.md)
@@ -293,6 +292,7 @@ ht-degree: 11%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata 밴티지](tutorials/ui/create/databases/teradata-vantage.md)
       - eCommerce {#ecommerce}
+         - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Shopify 스트리밍](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - 로컬 시스템 {#local-system}
