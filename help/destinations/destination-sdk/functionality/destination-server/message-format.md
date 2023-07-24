@@ -1,7 +1,7 @@
 ---
 description: 이 페이지에서는 Adobe Experience Platform에서 대상으로 내보낸 데이터의 메시지 형식 및 프로필 변형을 다룹니다.
 title: 메시지 포맷
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: e500d05858a3242295c6e5aac8284ad301d0cd17
 workflow-type: tm+mt
 source-wordcount: '2237'
 ht-degree: 1%
@@ -15,10 +15,10 @@ ht-degree: 1%
 
 Adobe 측의 메시지 포맷 및 프로필 구성 및 변환 프로세스를 이해하려면 다음 Experience Platform 개념을 숙지하십시오.
 
-* **경험 데이터 모델(XDM)**. [XDM 개요](../../../../xdm/home.md) 및  [Adobe Experience Platform에서 XDM 스키마를 만드는 방법](../../../../xdm/tutorials/create-schema-ui.md).
+* **경험 데이터 모델 (XDM)**. [XDM 개요](../../../../xdm/home.md) 및  [Adobe Experience Platform에서 XDM 스키마를 만드는 방법](../../../../xdm/tutorials/create-schema-ui.md).
 * **클래스**. [UI에서 클래스 만들기 및 편집](../../../../xdm/ui/resources/classes.md).
 * **IdentityMap**. ID 맵은 Adobe Experience Platform의 모든 최종 사용자 ID의 맵을 나타냅니다. 을(를) 참조하십시오 `xdm:identityMap` 다음에서 [XDM 필드 사전](../../../../xdm/schema/field-dictionary.md).
-* **SegmentMembership**. 다음 [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM 속성은 프로필이 멤버인 세그먼트를 알려줍니다. 의 세 가지 다른 값에 대해 `status` 필드,에서 설명서 읽기 [세그먼트 멤버십 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/segmentation.md).
+* **SegmentMembership**. 다음 [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM 속성은 프로필이 멤버인 대상을 알려줍니다. 의 세 가지 다른 값에 대해 `status` 필드,에서 설명서 읽기 [대상자 멤버십 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/segmentation.md).
 
 >[!IMPORTANT]
 >
@@ -107,7 +107,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 프로필에는 다음 3개의 섹션이 있습니다.
 
 * `segmentMembership` (항상 프로필에 있음)
-   * 이 섹션에는 프로필에 있는 모든 세그먼트가 포함되어 있습니다. 세그먼트는 다음 두 상태 중 하나를 가질 수 있습니다. `realized` 또는 `exited`.
+   * 이 섹션에는 프로필에 있는 모든 대상자가 포함되어 있습니다. 대상자는 다음 두 상태 중 하나를 가질 수 있습니다. `realized` 또는 `exited`.
 * `identityMap` (항상 프로필에 있음)
    * 이 섹션에는 프로필에 있는 모든 ID(이메일, Google GAID, Apple IDFA 등)와 활성화 워크플로에서 내보내기를 위해 매핑된 사용자가 포함됩니다.
 * 속성(대상 구성에 따라 프로필에 표시될 수 있음) 미리 정의된 속성과 자유 형식 속성 간에는 약간의 차이가 있습니다.
@@ -170,15 +170,15 @@ Experience Platform의 두 가지 프로필 예를 참조하십시오.
 }
 ```
 
-## ID, 속성 및 세그먼트 멤버십 변환에 템플릿 언어 사용 {#using-templating}
+## ID, 속성 및 대상자 멤버십 변환에 템플릿 언어 사용 {#using-templating}
 
 Adobe 사용 [조약돌 틀](https://pebbletemplates.io/), 와 유사한 템플릿 언어 [진자](https://jinja.palletsprojects.com/en/2.11.x/)를 클릭하여 Experience Platform XDM 스키마의 필드를 대상에서 지원하는 형식으로 변환합니다.
 
 이 섹션에서는 입력 XDM 스키마에서 템플릿을 통해 그리고 대상에서 허용하는 페이로드 형식으로 출력하면서 이러한 변환을 수행하는 방법에 대한 몇 가지 예를 제공합니다. 아래 예제는 다음과 같이 복잡성을 증가시켜 제공됩니다.
 
-1. 간단한 변형 예. 다음에 대한 간단한 변형을 통해 템플릿화가 작동하는 방식을 알아봅니다. [프로필 속성](#attributes), [세그먼트 멤버십](#segment-membership), 및 [신원](#identities) 필드.
-2. 위의 필드를 결합하는 템플릿의 복잡성 증가 예: [세그먼트 및 ID를 전송하는 템플릿 만들기](./message-format.md#segments-and-identities) 및 [세그먼트, ID 및 프로필 속성을 보내는 템플릿 만들기](#segments-identities-attributes).
-3. 집계 키를 포함하는 템플릿. 를 사용할 때 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 대상 구성에서 Experience Platform은 세그먼트 ID, 세그먼트 상태 또는 ID 네임스페이스 등의 기준을 기반으로 대상으로 내보낸 프로필을 그룹화합니다.
+1. 간단한 변형 예. 다음에 대한 간단한 변형을 통해 템플릿화가 작동하는 방식을 알아봅니다. [프로필 속성](#attributes), [대상자 멤버십](#segment-membership), 및 [신원](#identities) 필드.
+2. 위의 필드를 결합하는 템플릿의 복잡성 증가 예: [대상자 및 ID를 전송하는 템플릿 만들기](./message-format.md#segments-and-identities) 및 [세그먼트, ID 및 프로필 속성을 보내는 템플릿 만들기](#segments-identities-attributes).
+3. 집계 키를 포함하는 템플릿. 를 사용할 때 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 대상 구성에서 Experience Platform은 대상 ID, 대상 상태 또는 ID 네임스페이스와 같은 기준을 기반으로 대상으로 내보낸 프로필을 그룹화합니다.
 
 ### 프로필 속성 {#attributes}
 
@@ -263,10 +263,10 @@ Adobe 사용 [조약돌 틀](https://pebbletemplates.io/), 와 유사한 템플�
 }
 ```
 
-### 세그먼트 멤버십 {#segment-membership}
+### 대상자 멤버십 {#audience-membership}
 
-다음 [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM 속성은 프로필이 멤버인 세그먼트를 알려줍니다.
-의 세 가지 다른 값에 대해 `status` 필드,에서 설명서 읽기 [세그먼트 멤버십 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/segmentation.md).
+다음 [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM 속성은 프로필이 멤버인 대상을 알려줍니다.
+의 세 가지 다른 값에 대해 `status` 필드,에서 설명서 읽기 [대상자 멤버십 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/segmentation.md).
 
 **입력**
 
@@ -335,7 +335,7 @@ Adobe 사용 [조약돌 틀](https://pebbletemplates.io/), 와 유사한 템플�
                 {% endfor %}
                 ],
                 "remove": [
-                {# Alternative syntax for filtering segments by status: #}
+                {# Alternative syntax for filtering audiences by status: #}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                 "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
@@ -490,10 +490,10 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 }
 ```
 
-### 세그먼트 및 ID를 전송하는 템플릿 만들기 {#segments-and-identities}
+### 대상자 및 ID를 전송하는 템플릿 만들기 {#segments-and-identities}
 
 이 섹션에서는 Adobe XDM 스키마와 파트너 대상 스키마 간에 일반적으로 사용되는 변환의 예를 제공합니다.
-아래 예제는 세그먼트 멤버십 및 ID 형식을 변환하여 대상에 출력하는 방법을 보여 줍니다.
+아래 예제는 대상 멤버십 및 ID 형식을 변환하여 대상에 출력하는 방법을 보여 줍니다.
 
 **입력**
 
@@ -595,7 +595,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
                     {% endfor %}
                 ],
                 "remove": [
-                    {# Alternative syntax for filtering segments by status: #}
+                    {# Alternative syntax for filtering audiences by status: #}
                     {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{% if not loop.last %},{% endif %}
                     {% endfor %}
@@ -661,7 +661,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 
 이 섹션에서는 Adobe XDM 스키마와 파트너 대상 스키마 간에 일반적으로 사용되는 변환의 예를 제공합니다.
 
-또 다른 일반적인 사용 사례는 세그먼트 멤버십, ID(예: 이메일 주소, 전화 번호, 광고 ID) 및 프로필 속성이 포함된 데이터를 내보내는 것입니다. 이러한 방식으로 데이터를 내보내려면 아래 예를 참조하십시오.
+또 다른 일반적인 사용 사례는 대상자 멤버십, ID(예: 이메일 주소, 전화 번호, 광고 ID) 및 프로필 속성이 포함된 데이터를 내보내는 것입니다. 이러한 방식으로 데이터를 내보내려면 아래 예를 참조하십시오.
 
 **입력**
 
@@ -788,7 +788,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
                 {% endfor %}
                 ],
                 "remove": [
-                {# Alternative syntax for filtering segments by status: #}
+                {# Alternative syntax for filtering audiences by status: #}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
@@ -859,21 +859,21 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 
 ### 템플릿에 집계 키를 포함하여 다양한 기준으로 그룹화된 내보낸 프로필에 액세스합니다 {#template-aggregation-key}
 
-를 사용할 때 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 대상 구성에서 세그먼트 ID, 세그먼트 별칭, 세그먼트 멤버십 또는 id 네임스페이스 등의 기준에 따라 대상으로 내보낸 프로필을 그룹화할 수 있습니다.
+를 사용할 때 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 대상 구성에서 대상 ID, 대상 별칭, 대상 멤버십 또는 ID 네임스페이스와 같은 기준에 따라 대상으로 내보낸 프로필을 그룹화할 수 있습니다.
 
 메시지 변환 템플릿에서 다음 섹션의 예에 표시된 대로 위에 언급된 합계 키에 액세스할 수 있습니다. 집계 키를 사용하여 Experience Platform에서 내보낸 HTTP 메시지를 대상에 필요한 형식 및 속도 제한과 일치하도록 구성합니다.
 
-#### 템플릿에서 세그먼트 ID 집계 키 사용 {#aggregation-key-segment-id}
+#### 템플릿에서 대상 ID 집계 키 사용 {#aggregation-key-segment-id}
 
-를 사용하는 경우 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 및 설정 `includeSegmentId` true로 설정하면 대상으로 내보낸 HTTP 메시지의 프로필이 세그먼트 ID별로 그룹화됩니다. 템플릿에서 세그먼트 ID에 액세스하는 방법은 아래를 참조하십시오.
+를 사용하는 경우 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 및 설정 `includeSegmentId` true로 설정하면 대상으로 내보낸 HTTP 메시지의 프로필이 대상 ID별로 그룹화됩니다. 템플릿의 대상 ID에 액세스하는 방법은 아래를 참조하십시오.
 
 **입력**
 
 아래의 네 가지 프로필을 고려하십시오. 여기서
 
-* 처음 두 개는 세그먼트 ID가 있는 세그먼트의 일부입니다 `788d8874-8007-4253-92b7-ee6b6c20c6f3`
-* 세 번째 프로필은 세그먼트 ID가 있는 세그먼트의 일부입니다 `8f812592-3f06-416b-bd50-e7831848a31a`
-* 네 번째 프로필은 위의 두 세그먼트 중 일부입니다.
+* 처음 두 개는 대상 ID가 있는 대상의 일부입니다 `788d8874-8007-4253-92b7-ee6b6c20c6f3`
+* 세 번째 프로필은 대상 ID를 가진 대상의 일부입니다 `8f812592-3f06-416b-bd50-e7831848a31a`
+* 네 번째 프로필은 위의 두 대상 모두에 속합니다.
 
 프로필 1:
 
@@ -965,7 +965,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 >
 >사용하는 모든 템플릿의 경우 큰따옴표와 같은 잘못된 문자를 이스케이프 처리해야 합니다 `""` 를 삽입하기 전에 [템플릿](../../functionality/destination-server/templating-specs.md) 다음에서 [대상 서버 구성](../../authoring-api/destination-server/create-destination-server.md). 큰따옴표 이스케이프에 대한 자세한 내용은 [JSON 표준](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-아래 방법 알림 `audienceId` 템플릿에서 세그먼트 ID에 액세스하는 데 사용됩니다. 이 예에서는 다음을 사용한다고 가정합니다. `audienceId` 대상 분류의 세그먼트 멤버십에 사용됩니다. 자체 분류법에 따라 다른 필드 이름을 대신 사용할 수 있습니다.
+아래 방법 알림 `audienceId` 템플릿에서 대상 ID에 액세스하는 데 사용됩니다. 이 예에서는 다음을 사용한다고 가정합니다. `audienceId` 대상 분류의 대상 멤버십에 사용됩니다. 자체 분류법에 따라 다른 필드 이름을 대신 사용할 수 있습니다.
 
 ```python
 {
@@ -982,7 +982,7 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 
 **결과**
 
-프로필은 대상으로 내보낼 때 세그먼트 ID를 기준으로 두 개의 그룹으로 분할됩니다.
+프로필은 대상으로 내보낼 때 대상 ID를 기준으로 두 개의 그룹으로 분할됩니다.
 
 ```json
 {
@@ -1015,19 +1015,19 @@ Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 �
 }
 ```
 
-#### 템플릿에서 세그먼트 별칭 집계 키 사용 {#aggregation-key-segment-alias}
+#### 템플릿에 대상 별칭 집계 키 사용 {#aggregation-key-segment-alias}
 
-를 사용하는 경우 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 및 설정 `includeSegmentId` true로 설정하려면 템플릿의 세그먼트 별칭에 액세스할 수도 있습니다.
+를 사용하는 경우 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 및 설정 `includeSegmentId` true로 설정하려면 템플릿의 대상 별칭에 액세스할 수도 있습니다.
 
-아래 줄을 템플릿에 추가하여 세그먼트 별칭으로 그룹화된 내보낸 프로필에 액세스합니다.
+아래 줄을 템플릿에 추가하여 대상자 별칭으로 그룹화된 내보낸 프로필에 액세스합니다.
 
 ```python
 customerList={{input.aggregationKey.segmentAlias}}
 ```
 
-#### 템플릿에서 세그먼트 상태 집계 키 사용 {#aggregation-key-segment-status}
+#### 템플릿에서 대상 상태 집계 키 사용 {#aggregation-key-segment-status}
 
-를 사용하는 경우 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 및 설정 `includeSegmentId` 및 `includeSegmentStatus` true로 설정하려면 템플릿의 세그먼트 상태에 액세스할 수 있습니다. 이렇게 하면 프로필이 세그먼트에서 추가되어야 하는지 또는 제거되어야 하는지에 따라 대상으로 내보낸 HTTP 메시지에서 프로필을 그룹화할 수 있습니다.
+를 사용하는 경우 [구성 가능한 집계](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 및 설정 `includeSegmentId` 및 `includeSegmentStatus` true로 설정하려면 템플릿의 대상 상태에 액세스할 수 있습니다. 이렇게 하면 프로필이 세그먼트에서 추가되어야 하는지 또는 제거되어야 하는지에 따라 대상으로 내보낸 HTTP 메시지에서 프로필을 그룹화할 수 있습니다.
 
 가능한 값:
 
@@ -1206,10 +1206,10 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 | 함수 | 설명 |
 |---------|----------|
 | `input.profile` | 프로필로 표시됩니다. [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). 이 페이지에서 위에 언급된 파트너 XDM 스키마를 따릅니다. |
-| `destination.segmentAliases` | Adobe Experience Platform 네임스페이스의 세그먼트 ID에서 파트너 시스템의 세그먼트 별칭으로 매핑합니다. |
-| `destination.segmentNames` | Adobe Experience Platform 네임스페이스의 세그먼트 이름에서 파트너 시스템의 세그먼트 이름으로 매핑합니다. |
-| `addedSegments(listOfSegments)` | 상태가 있는 세그먼트만 반환합니다. `realized`. |
-| `removedSegments(listOfSegments)` | 상태가 있는 세그먼트만 반환합니다. `exited`. |
+| `destination.segmentAliases` | Adobe Experience Platform 네임스페이스의 대상 ID에서 파트너 시스템의 대상 별칭으로 매핑합니다. |
+| `destination.segmentNames` | Adobe Experience Platform 네임스페이스의 대상 이름에서 파트너 시스템의 대상 이름으로 매핑합니다. |
+| `addedSegments(listOfSegments)` | 상태가 있는 대상자만 반환합니다. `realized`. |
+| `removedSegments(listOfSegments)` | 상태가 있는 대상자만 반환합니다. `exited`. |
 
 {style="table-layout:auto"}
 
