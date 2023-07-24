@@ -5,7 +5,7 @@ seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;a4t;로깅;web sdk;경험;플랫폼;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: de420d3bbf35968fdff59b403a0f2b18110f3c17
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 4%
@@ -40,7 +40,7 @@ Adobe Experience Platform Web SDK를 사용하면 다음을 수집할 수 있습
 
 ### Analytics 클라이언트측 로깅 활성화 {#enable-analytics-client-side-logging}
 
-구현에 대해 Analytics 클라이언트측 로깅을 활성화하려면 의 Adobe Analytics 구성을 비활성화해야 합니다 [데이터스트림](../../../datastreams/overview.md).
+구현에 대해 Analytics 클라이언트측 로깅을 활성화하려면 의 Adobe Analytics 구성을 비활성화해야 합니다 [데이터스트림](../../../../datastreams/overview.md).
 
 ![Analytics 데이터 스트림 구성 비활성화됨](../assets/disable-analytics-datastream.png)
 
@@ -212,8 +212,7 @@ Target Edge는 제안 응답을 계산할 때 Analytics 클라이언트측 로�
 >
 >다음 섹션에 제공된 구현 예에서 여러 Analytics 토큰이 반복적으로 수집됩니다. Analytics 토큰 배열을 연결하려면 다음과 유사한 함수를 사용합니다.
 >
->
-```javascript
+>```javascript
 >var concatenateAnalyticsPayloads = function concatenateAnalyticsPayloads(analyticsPayloads) {
 >   if (analyticsPayloads.size > 1) {
 >       return [].concat(analyticsPayloads).join(',');

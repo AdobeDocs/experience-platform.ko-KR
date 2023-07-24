@@ -2,14 +2,14 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 10월
 description: Adobe Experience Platform의 2022년 10월 릴리스 정보.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 8bbac729324ad5bd701f8609c443092ddb045b96
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1328'
-ht-degree: 2%
+ht-degree: 29%
 
 ---
 
-# Adobe Experience Platform 릴리스 노트
+# Adobe Experience Platform 릴리스 정보
 
 **릴리스 날짜: 2022년 10월 26일**
 
@@ -28,13 +28,13 @@ Adobe Experience Platform에 저장된 모든 데이터는 시스템 수준 키�
 
 ## 데이터 수집 {#data-collection}
 
-Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 비 Adobe 대상으로 보강, 변환 및 배포할 수 있는 기술 제품군을 제공합니다.
+Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe 또는 비 Adobe 대상으로 보강, 변환 및 배포가 가능한 Adobe Experience Platform Edge Network로 보낼 수 있는 기술 제품군을 제공합니다.
 
-**새 기능 또는 업데이트된 기능**
+**새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 데이터스트림에 대한 중요한 데이터 처리 | 이제 데이터 스트림은 여러 플랫폼 기술을 활용하여 HIPAA(Health Insurance Portability and Accountability Act)와 같은 규정에 따라 민감한 데이터를 적절하게 처리합니다. 의 섹션을 참조하십시오. [데이터 스트림에서 중요 데이터 처리](../../edge/datastreams/overview.md#sensitive) 추가 정보. |
+| 데이터스트림에 대한 중요한 데이터 처리 | 이제 데이터 스트림은 여러 플랫폼 기술을 활용하여 HIPAA(Health Insurance Portability and Accountability Act)와 같은 규정에 따라 민감한 데이터를 적절하게 처리합니다. 의 섹션을 참조하십시오. [데이터 스트림에서 중요 데이터 처리](../../datastreams/overview.md#sensitive) 추가 정보. |
 | [!DNL Splunk] 이벤트 전달을 위한 확장 | 이제 로 데이터를 보낼 수 있습니다. [!DNL Splunk] 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장명. 다음을 참조하십시오. [[!DNL Splunk] 확장 개요](../../tags/extensions/server/splunk/overview.md) 추가 정보. |
 | [!DNL Zendesk] 이벤트 전달을 위한 확장 | 이제 로 데이터를 보낼 수 있습니다. [!DNL Zendesk] 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장명. 다음을 참조하십시오. [[!DNL Zendesk] 확장 개요](../../tags/extensions/server/zendesk/overview.md) 추가 정보. |
 
@@ -42,9 +42,9 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-**새 기능 또는 업데이트된 기능**
+**새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
@@ -53,7 +53,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 {style="table-layout:auto"}
 
-**새 대상 또는 업데이트된 대상** {#new-or-updated-destinations}
+**새로운 대상 또는 업데이트된 대상** {#new-or-updated-destinations}
 
 | 대상 | 설명 |
 | ----------- | ----------- |
@@ -69,33 +69,33 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 {style="table-layout:auto"}
 
-**신규 또는 업데이트된 설명서**
+**새로운 대상 또는 업데이트된 설명서**
 
 | 설명서 | 설명 |
 | ----------- | ----------- |
 | [대상 보호](../../destinations/guardrails.md) | 이 페이지에서는 활성화 동작과 관련된 기본 사용량 및 요금 제한을 제공합니다. |
 
-대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md).
+대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
-## 경험 데이터 모델(XDM) {#xdm}
+## 경험 데이터 모델 (XDM) {#xdm}
 
-XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 일반적인 표현에 통합하여 보다 빠르고 통합적인 방식으로 통찰력을 제공할 수 있습니다. 고객 작업에서 중요한 통찰력을 얻고, 세그먼트를 통해 고객 대상을 정의하고, 개인화 목적으로 고객 속성을 사용할 수 있습니다.
+XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
 
 **업데이트된 XDM 구성 요소**
 
 | 구성 요소 유형 | 이름 | 설명 |
 | --- | --- | --- |
 | 데이터 유형 | [[!UICONTROL 세션 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | 을(를) 업데이트함 `authorized` 부울 유형에서 문자열로 연결된 필드입니다. `season` 및 `episode` 가 정수에서 문자열로 변경되었습니다. |
-| 데이터 유형 | [[!UICONTROL 광고 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` 의 이름이 로 변경되었습니다. `friendlyName`, 및 `ID` 의 이름이 로 변경되었습니다. `name`. |
+| 데이터 유형 | [[!UICONTROL 광고 상세 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` 의 이름이 로 변경되었습니다. `friendlyName`, 및 `ID` 의 이름이 로 변경되었습니다. `name`. |
 | 데이터 유형 | [[!UICONTROL 오류 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID`의 이름이 `name`로 변경되었습니다.  |
 
 {style="table-layout:auto"}
 
-플랫폼의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
+Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
 ## 쿼리 서비스 {#query-service}
 
-쿼리 서비스를 사용하면 표준 SQL을 사용하여 Adobe Experience Platform에서 데이터를 쿼리할 수 있습니다 [!DNL Data Lake]. 에서 모든 데이터 세트를 결합할 수 있습니다. [!DNL Data Lake] 보고, Data Science Workspace에 사용하거나 실시간 고객 프로필로 수집하기 위한 새 데이터 세트로 쿼리 결과를 캡처합니다.
+쿼리 서비스를 사용하면 표준 SQL로 Adobe Experience Platform [!DNL Data Lake]에서 데이터를 쿼리할 수 있습니다. 에서 모든 데이터 세트를 결합할 수 있습니다. [!DNL Data Lake] 보고, Data Science Workspace에 사용하거나 실시간 고객 프로필로 수집하기 위한 새 데이터 세트로 쿼리 결과를 캡처합니다.
 
 **업데이트된 기능**
 
@@ -106,14 +106,14 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 
 {style="table-layout:auto"}
 
-쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md).
+쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md)를 참조하십시오.
 Adobe Experience Platform의 새로운 기능:
 
 ## 소스 {#sources}
 
 Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스를 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
+Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
 **업데이트된 기능**
 
@@ -121,4 +121,4 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | --- | --- | 
 | Adobe Workfront 소스의 Beta 가용성 | 사용 [Adobe Workfront 소스](../../sources/connectors/adobe-applications/workfront.md) Workfront 데이터를 Experience Platform으로 전환하고 작업 레코드와 타사 데이터 결합, 작업 레코드에 대한 기록 및 시계열 분석 적용, 표준 SQL을 사용하여 작업 데이터 쿼리 등의 사용 사례를 수행합니다. 자세한 내용은 의 안내서를 참조하십시오. [ui에서 Workfront 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
 
-소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).
+소스에 대해 자세히 알아보려면 [소스 개요 ](../../sources/home.md)를 참조하십시오.

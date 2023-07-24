@@ -3,7 +3,7 @@ title: 이벤트 전달 개요
 description: Platform Edge Network를 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있도록 Adobe Experience Platform의 이벤트 게재에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
+source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 7%
@@ -81,7 +81,7 @@ Platform Edge Network의 데이터를 참조하려면 해당 데이터에 올바
 
 ### 규칙 {#rules}
 
-이벤트 전달 속성에서 규칙을 만드는 것은 태그와 유사한 방식으로 작동하며 주요 차이점은 이벤트를 규칙 구성 요소로 선택할 수 없다는 것입니다. 대신 이벤트 전달 규칙은 [데이터스트림](../../../edge/datastreams/overview.md) 특정 조건이 충족되는 경우 해당 이벤트를 대상으로 전달합니다.
+이벤트 전달 속성에서 규칙을 만드는 것은 태그와 유사한 방식으로 작동하며 주요 차이점은 이벤트를 규칙 구성 요소로 선택할 수 없다는 것입니다. 대신 이벤트 전달 규칙은 [데이터스트림](../../../datastreams/overview.md) 특정 조건이 충족되는 경우 해당 이벤트를 대상으로 전달합니다.
 
 또한 이벤트 전달 속성 내의 모든 규칙(및 따라서 모든 작업)에 걸쳐 처리되므로 단일 이벤트에 적용되는 30초 시간 초과가 있습니다. 즉, 이 시간대에 단일 이벤트에 대한 모든 규칙과 모든 작업을 완료해야 합니다.
 

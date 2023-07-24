@@ -2,7 +2,7 @@
 title: 감사 로그 개요
 description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어떤 작업을 수행했는지 확인하는 방법에 대해 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7bb81a103c6b2a7d0baec22c927f575764bc3730
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1294'
 ht-degree: 45%
@@ -46,7 +46,7 @@ Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명
 | 계산된 속성 | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
 | [고객 AI 인스턴스](../../../intelligent-services/customer-ai/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li></ul> |
 | [데이터 세트](../../../catalog/datasets/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>다음에 대해 활성화: [실시간 고객 프로필](../../../profile/home.md)</li><li>프로필 비활성화</li><li>데이터 추가</li><li>일괄 처리 삭제</li></ul> |
-| [데이터스트림](../../../edge/datastreams/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>[매핑 편집](../../../edge/datastreams/data-prep.md)</li></ul> |
+| [데이터스트림](../../../datastreams/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>[매핑 편집](../../../datastreams/data-prep.md)</li></ul> |
 | [데이터 유형](../../../xdm/schema/composition.md#data-type) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
 | [대상](../../../destinations/home.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>데이터 세트 활성화</li><li>데이터 세트 제거</li><li>프로필 활성화</li><li>프로필 제거</li></ul> |
 | [필드 그룹](../../../xdm/schema/composition.md#field-group) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
@@ -102,7 +102,7 @@ UI의 감사 이벤트에 사용할 수 있는 필터는 다음과 같습니다.
 
 | 필터 | 설명 |
 | --- | --- |
-| [!UICONTROL 범주] | 드롭다운 메뉴를 사용하여 표시된 결과 필터링 기준 [범주](#category). |
+| [!UICONTROL 카테고리] | 드롭다운 메뉴를 사용하여 표시된 결과 필터링 기준 [범주](#category). |
 | [!UICONTROL 작업] | 액션으로 필터링합니다. 각 서비스에 대해 사용할 수 있는 작업은 위의 리소스 테이블에서 확인할 수 있습니다. |
 | [!UICONTROL 사용자] | 전체 사용자 ID를 입력합니다(예: `johndoe@acme.com`)을 클릭하여 사용자별로 필터링할 수 있습니다. |
 | [!UICONTROL 상태] | 작업이 허용되었는지(완료되었는지) 또는 (이)가 없어 거부되었는지 여부에 따라 필터링합니다. [액세스 제어](../../../access-control/home.md) 사용 권한. |
@@ -118,7 +118,7 @@ UI의 감사 이벤트에 사용할 수 있는 필터는 다음과 같습니다.
 |---|---|
 | [!UICONTROL 타임스탬프] | 에서 수행된 작업의 정확한 날짜 및 시간 `month/day/year hour:minute AM/PM` 포맷. |
 | [!UICONTROL 에셋 이름] | 에 대한 값 [!UICONTROL 에셋 이름] 필드는 필터로 선택한 범주에 따라 다릅니다. |
-| [!UICONTROL 범주] | 이 필드는 필터 드롭다운에서 선택한 범주와 일치합니다. |
+| [!UICONTROL 카테고리] | 이 필드는 필터 드롭다운에서 선택한 범주와 일치합니다. |
 | [!UICONTROL 작업] | 사용 가능한 작업은 필터로 선택한 범주에 따라 다릅니다. |
 | [!UICONTROL 사용자] | 이 필드는 쿼리를 실행한 사용자 ID를 제공합니다. |
 

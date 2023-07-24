@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장 구성
 description: UI에서 Adobe Experience Platform 웹 SDK 태그 확장을 구성하는 방법
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1185'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
@@ -52,7 +52,7 @@ Adobe Experience Platform 웹 SDK 확장은 페이지에서 여러 인스턴스�
 
 Adobe Experience Platform Edge Network로 요청을 보낼 때 서버측 구성을 참조하는 데 데이터스트림 ID가 사용됩니다. 웹 사이트에서 코드를 변경하지 않고도 구성을 업데이트할 수 있습니다.
 
-다음 안내서를 참조하십시오 [데이터스트림](../../../../edge/datastreams/overview.md) 추가 정보.
+다음 안내서를 참조하십시오 [데이터스트림](../../../../datastreams/overview.md) 추가 정보.
 
 
 ## [!UICONTROL 개인정보 보호]
@@ -112,10 +112,10 @@ SDK는 자동으로 링크 클릭 정보를 수집할 수 있습니다. 기본�
 
 데이터 스트림 구성 재정의는 2단계 프로세스입니다.
 
-1. 먼저, 에서 데이터 스트림 구성 재정의를 정의해야 합니다. [데이터스트림 구성 페이지](../../../../edge/datastreams/configure.md).
-2. 그런 다음 Web SDK 명령을 통하거나 Web SDK 태그 확장을 사용하여 Edge 네트워크에 재정의를 전송해야 합니다.
+1. 먼저 [데이터스트림 구성 페이지](../../../../datastreams/configure.md)에서 데이터스트림 구성 재정의를 정의해야 합니다.
+2. 그런 다음 Web SDK 명령 또는 Web SDK 태그 확장 기능을 사용하여 Edge Network에 해당 재정의를 보내야 합니다.
 
-데이터 스트림 보기 [구성 재정의 설명서](../../../../edge/datastreams/overrides.md) 데이터스트림 구성을 재정의하는 방법에 대한 자세한 지침을 확인하십시오.
+데이터 스트림 보기 [구성 재정의 설명서](../../../../datastreams/overrides.md) 데이터스트림 구성을 재정의하는 방법에 대한 자세한 지침을 확인하십시오.
 
 웹 SDK 명령을 통해 재정의를 전달하는 대신 아래 표시된 태그 확장 화면에서 재정의를 구성할 수 있습니다.
 

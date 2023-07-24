@@ -3,7 +3,7 @@ title: Platform Web SDK에서 Offer decisioning 사용
 description: Adobe Experience Platform Web SDK는 Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 keywords: offer decisioning;의사 결정;Web SDK;Platform Web SDK;개인화된 오퍼;오퍼 게재;오퍼 게재;오퍼 개인화;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 5%
@@ -32,28 +32,28 @@ offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니�
 
 * **결정 범위:** offer decisioning의 경우 결정 범위는 offer decisioning 서비스가 오퍼를 제안하는 데 사용할 활동 및 배치 ID가 포함된 JSON의 Base64로 인코딩된 문자열입니다.
 
-   *결정 범위 JSON:*
+  *결정 범위 JSON:*
 
-   ```json
-   {
-     "activityId":"xcore:offer-activity:11cfb1fa93381aca",
-     "placementId":"xcore:offer-placement:1175009612b0100c"
-   }
-   ```
+  ```json
+  {
+    "activityId":"xcore:offer-activity:11cfb1fa93381aca",
+    "placementId":"xcore:offer-placement:1175009612b0100c"
+  }
+  ```
 
-   *결정 범위 Base64 인코딩 문자열:*
+  *결정 범위 Base64 인코딩 문자열:*
 
-   ```json
-   "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
-   ```
+  ```json
+  "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
+  ```
 
-   >[!TIP]
-   >
-   >다음에서 결정 범위 값을 복사할 수 있습니다. **활동 개요** UI의 페이지.
+  >[!TIP]
+  >
+  >다음에서 결정 범위 값을 복사할 수 있습니다. **활동 개요** UI의 페이지.
 
-   ![](assets/decision-scope-copy.png)
+  ![](assets/decision-scope-copy.png)
 
-* **데이터스트림:** 자세한 내용은 다음을 참조하십시오. [데이터스트림](../../datastreams/overview.md) 설명서를 참조하십시오.
+* **데이터스트림:** 자세한 내용은 다음을 참조하십시오. [데이터스트림](../../../datastreams/overview.md) 설명서를 참조하십시오.
 
 * **신원**: 자세한 내용은 이 설명서 의 개요를 참조하십시오 [Platform Web SDK에서 ID 서비스 사용](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니�
 
 offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
-1. 에서 Adobe Experience Platform 활성화됨 [데이터스트림](../../datastreams/overview.md) 및 &quot;Offer decisioning&quot; 상자를 선택합니다.
+1. 에서 Adobe Experience Platform 활성화됨 [데이터스트림](../../../datastreams/overview.md) 및 &quot;Offer decisioning&quot; 상자를 선택합니다.
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
@@ -81,6 +81,7 @@ offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
              ]
           })
          ```
+
    * 태그를 통해 SDK 설치
 
       1. [태그 속성 만들기](../../../tags/ui/administration/companies-and-properties.md)
@@ -101,10 +102,9 @@ offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
          * Platform Web SDK 이벤트 보내기 작업 추가 및 관련 작업 추가 `decisionScopes` 해당 작업 구성에 추가
 
-            ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+           ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+
       1. [라이브러리 만들기 및 게시](../../../tags/ui/publishing/libraries.md) 사용자가 구성한 모든 관련 규칙, 데이터 요소 및 확장 포함
-
-
 
 ## 샘플 요청 및 응답
 

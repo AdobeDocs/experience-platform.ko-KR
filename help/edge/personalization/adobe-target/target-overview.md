@@ -3,7 +3,7 @@ title: Platform Web SDK로 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform Web SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;의사 결정 범위;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;의사 결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 5a048505be139b58dbb3bf85120df5e3cc46881e
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1318'
 ht-degree: 6%
@@ -52,7 +52,7 @@ ht-degree: 6%
 
 활성화하려면 [!DNL Target]를 사용하여 다음을 수행합니다.
 
-1. 사용 [!DNL Target] (으)로 [데이터스트림](../../datastreams/overview.md) 적절한 클라이언트 코드로 만듭니다.
+1. 사용 [!DNL Target] (으)로 [데이터스트림](../../../datastreams/overview.md) 적절한 클라이언트 코드로 만듭니다.
 1. 추가 `renderDecisions` 이벤트 옵션
 
 그런 다음 선택적으로 다음 옵션을 추가할 수도 있습니다.

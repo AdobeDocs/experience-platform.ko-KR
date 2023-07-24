@@ -1,15 +1,15 @@
 ---
-title: Adobe Experience Platform 릴리스 노트 2022년 3월
-description: Adobe Experience Platform의 2022년 3월 릴리스 정보.
+title: Adobe Experience Platform 릴리스 정보 2022년 3월
+description: Adobe Experience Platform의 2022년 3월 릴리스 정보입니다.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 9%
+ht-degree: 18%
 
 ---
 
-# Adobe Experience Platform 릴리스 노트
+# Adobe Experience Platform 릴리스 정보
 
 **릴리스 일자: 2022년 3월 30일**
 
@@ -108,13 +108,13 @@ Experience Platform 대시보드에는 조직이 Profile Store in Profile에 가
 
 ## 데이터 수집 {#data-collection}
 
-Platform은 클라이언트측 고객 경험 데이터를 수집하고, 이를 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 Adobe이 아닌 대상으로 보강, 변환 및 배포할 수 있는 기술 제품군을 제공합니다.
+Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe 또는 비 Adobe 대상으로 보강, 변환 및 배포가 가능한 Adobe Experience Platform Edge Network로 보낼 수 있는 기술 제품군을 제공합니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 전역 데이터 스트림 설정 | 이제 데이터스트림을 구성할 때 지리적 위치, 자사 ID 쿠키 및 타사 ID 동기화와 같은 몇 가지 새로운 전역 설정을 구성할 수 있습니다. 의 섹션을 참조하십시오. [데이터스트림 구성](../../edge/datastreams/overview.md#create) 자세한 내용은 데이터스트림 UI 안내서를 참조하십시오. |
+| 전역 데이터 스트림 설정 | 이제 데이터스트림을 구성할 때 지리적 위치, 자사 ID 쿠키 및 타사 ID 동기화와 같은 몇 가지 새로운 전역 설정을 구성할 수 있습니다. 의 섹션을 참조하십시오. [데이터스트림 구성](../../datastreams/overview.md#create) 자세한 내용은 데이터스트림 UI 안내서를 참조하십시오. |
 | [Edge Network Server API](../../server-api/overview.md) | Server API를 사용하면 고객이 새로운 인증된 엔드포인트를 사용하여 Experience Platform 에지 네트워크와 상호 작용하여 다양한 데이터 수집, 개인화, 광고 및 마케팅 사용 사례를 강화할 수 있습니다. |
 
 Platform에서의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).

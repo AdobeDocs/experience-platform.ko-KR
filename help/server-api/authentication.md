@@ -2,7 +2,7 @@
 title: 인증
 description: Adobe Experience Platform Edge Network Server API에 대한 인증을 구성하는 방법에 대해 알아봅니다.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 각 요청에 대해 [!DNL Server API] 데이터 스트림 확인 [!DNL access type] 설정. 이 설정을 사용하여 고객은 인증된 데이터 또는 인증된 데이터와 인증되지 않은 데이터 모두를 수락하도록 데이터 스트림을 구성할 수 있습니다. 기본적으로 두 유형의 데이터가 모두 허용됩니다.
 
-데이터 스트림 액세스 유형 구성에 대한 자세한 내용은 방법 설명서를 참조하십시오 [데이터 스트림 만들기 및 구성](../edge/datastreams/overview.md#create).
+데이터 스트림 액세스 유형 구성에 대한 자세한 내용은 방법 설명서를 참조하십시오 [데이터 스트림 만들기 및 구성](../datastreams/overview.md#create).
 
 다음은 데이터 스트림을 기반으로 한 동작에 대한 요약입니다 [!DNL Access Type] 요청이 수신되는 구성 및 종단점입니다.
 

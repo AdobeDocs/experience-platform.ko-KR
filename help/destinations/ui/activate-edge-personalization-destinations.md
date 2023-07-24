@@ -3,7 +3,7 @@ title: Edge 개인화 대상에 대한 대상자 활성화
 description: 동일 페이지 및 다음 페이지 개인화 사용 사례를 위해 Adobe Experience Platform에서 Edge 개인화 대상으로 대상을 활성화하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 2%
@@ -80,7 +80,7 @@ Edge 개인화 대상을 사용하면 Adobe Target과 같은 Adobe 개인화 솔
 
 ![데이터 스트림 구성](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-데이터 스트림을 설정하는 방법에 대한 자세한 내용은 [Platform Web SDK 설명서](../../edge/datastreams/configure.md#aep).
+데이터 스트림을 설정하는 방법에 대한 자세한 내용은 [Platform Web SDK 설명서](../../datastreams/configure.md#aep).
 
 ### 만들기 [!DNL Active-On-Edge] 병합 정책 {#create-merge-policy}
 

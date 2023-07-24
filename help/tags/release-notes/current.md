@@ -2,10 +2,10 @@
 title: 태그 및 이벤트 전달에 대한 릴리스 노트
 description: Adobe Experience Platform의 태그 및 이벤트 게재에 대한 최신 릴리스 정보입니다.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 626330395c2d6b813d5d2157e92ada77ab4f96b1
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 3%
+ht-degree: 15%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 **Quick Stark 워크플로우(베타)**
 
-데이터 수집 홈 화면의 &quot;시작하기&quot;에서 새 빠른 시작 워크플로우에 액세스합니다! 이제 다음 워크플로를 고객이 공개 베타로 사용할 수 있습니다.
+데이터 수집 홈 화면의 “시작하기” 아래에 있는 새로운 빠른 시작 워크플로에 액세스할 수 있습니다! 이제 다음 워크플로를 고객이 공개 베타로 사용할 수 있습니다.
 * **[메타 전환 API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: 이벤트 전달 고객은 몇 가지 간단한 단계만으로 광고 전환을 위해 서버측에서 메타로 이벤트 데이터를 빠르게 수집하고 전달할 수 있습니다.
 * **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: 고객은 몇 가지 간단한 단계만으로 Mobile SDK를 빠르게 구현하고 기본 모바일 이벤트를 확인할 수 있습니다.
 
@@ -40,10 +40,10 @@ ht-degree: 3%
 ## 2023년 1월 25일
 
 * **새 홈 화면**: 데이터 수집 UI의 홈 페이지가 생산성 효율화를 위한 유용한 온보딩 정보 및 링크를 포함하도록 업데이트되었습니다. 여기에는 다음 항목이 포함되어 있습니다.
-   1. 시작하기 위한 설명서 및 권장 워크플로우
+   1. 시작을 위한 설명서 및 권장 워크플로
    1. 최근 속성, 규칙 및 데이터 요소
-   1. 인기 있는 확장
-   1. 빠른 설치 기능으로 새로운 확장 업데이트
+   1. 자주 사용하는 확장 기능
+   1. 빠른 설치 기능을 통한 새로운 확장 기능 업데이트
 * **데이터 보내기 대상 [!DNL Google Ads] 이벤트 전달 사용**: 이제 를 사용할 수 있습니다. [[!DNL Google Ads Enhanced Conversions] API 확장](../extensions/server/google-ads-enhanced-conversions/overview.md) 이벤트 전달용, 결합 [Google Oauth 2 비밀](../ui/event-forwarding/secrets.md#google-oauth2): 서버측 데이터를 로 안전하게 전송합니다. [!DNL Google Ads] 실시간으로.
 
 ## 2022년 11월 23일
@@ -54,7 +54,7 @@ ht-degree: 3%
 
 ## 2022년 10월 26일
 
-* **데이터스트림에 대한 중요한 데이터 처리**: 이제 데이터 스트림은 여러 플랫폼 기술을 활용하여 HIPAA(Health Insurance Portability and Accountability Act)와 같은 규정에 따라 중요한 데이터를 적절하게 처리합니다. 의 섹션을 참조하십시오. [데이터 스트림에서 중요 데이터 처리](../../edge/datastreams/overview.md#sensitive) 추가 정보.
+* **데이터스트림에 대한 중요한 데이터 처리**: 이제 데이터 스트림은 여러 플랫폼 기술을 활용하여 HIPAA(Health Insurance Portability and Accountability Act)와 같은 규정에 따라 중요한 데이터를 적절하게 처리합니다. 의 섹션을 참조하십시오. [데이터 스트림에서 중요 데이터 처리](../../datastreams/overview.md#sensitive) 추가 정보.
 * **[!DNL Splunk]이벤트 전달을 위한 확장**: 이제 로 데이터를 전송할 수 있습니다. [!DNL Splunk] 사용 [이벤트 전달](../ui/event-forwarding/overview.md) 확장명. 다음을 참조하십시오. [[!DNL Splunk] 확장 개요](../extensions/server/splunk/overview.md) 추가 정보.
 * **[!DNL Zendesk]이벤트 전달을 위한 확장**: 이제 로 데이터를 전송할 수 있습니다. [!DNL Zendesk] 사용 [이벤트 전달](../ui/event-forwarding/overview.md) 확장명. 다음을 참조하십시오. [[!DNL Zendesk] 확장 개요](../extensions/server/zendesk/overview.md) 추가 정보.
 

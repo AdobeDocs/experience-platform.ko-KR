@@ -2,7 +2,7 @@
 title: offer decisioning을 통한 개인화
 description: Server API를 사용하여 Offer decisioning을 통해 개인화된 경험을 전달하고 렌더링하는 방법에 대해 알아봅니다.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 3047a03e7a911c48a6d4e4c07117af45fa78f678
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 4%
@@ -25,7 +25,7 @@ Edge Network Server API는에서 관리하는 개인화된 경험을 제공할 �
 
 Server API를 Offer Decisioning과 함께 사용하려면 먼저 데이터 스트림 구성에서 Adobe Experience Platform 개인화를 활성화하고 **[!UICONTROL Offer decisioning]** 옵션을 선택합니다.
 
-다음을 참조하십시오. [데이터스트림에 서비스 추가 가이드](../edge/datastreams/overview.md#adobe-experience-platform-settings)를 참조하십시오. Offer decisioning 활성화 방법에 대한 자세한 내용은
+다음을 참조하십시오. [데이터스트림에 서비스 추가 가이드](../datastreams/overview.md#adobe-experience-platform-settings)를 참조하십시오. Offer decisioning 활성화 방법에 대한 자세한 내용은
 
 ![offer decisioning이 선택된 상태에서 데이터 스트림 서비스 구성 화면을 표시하는 UI 이미지](assets/aep-od-datastream.png)
 

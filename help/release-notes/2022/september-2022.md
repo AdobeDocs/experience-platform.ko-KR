@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 정보입니다.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '2940'
 ht-degree: 19%
@@ -112,7 +112,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | [[!DNL Snap Conversions API] 확장](https://exchange.adobe.com/apps/ec/108550) 이벤트 전달용 | 이제 로 데이터를 보낼 수 있습니다. [!DNL Snapchat Conversions API] 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장명. API 인증 및 사용 방법에 대한 자세한 내용은 다음을 참조하십시오. [[!DNL Snapchat Marketing API] 설명서](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [[!DNL User-Agent Client Hints] Web SDK에서](../../edge/fundamentals/user-agent-client-hints.md) | 이제 웹 SDK에서 다음을 지원합니다. [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). 클라이언트 힌트를 사용하면 웹 사이트 소유자는에서 사용할 수 있는 동일한 정보의 대부분에 액세스할 수 있습니다. [!DNL User-Agent] 문자열이지만 더 개인 정보를 보존하는 방식으로. |
 | [Web SDK 페이지별 마이그레이션](../../edge/home.md#migrating-to-web-sdk) | 이제 다음과 같은 다른 Experience Cloud 라이브러리에서 기존 웹 속성을 마이그레이션할 수 있습니다. [!DNL at.js]한 번에 한 페이지씩 웹 SDK에 연결합니다. 이렇게 하면 모든 페이지를 한 번에 마이그레이션할 필요 없이 웹 SDK 마이그레이션에 대한 단계별 접근 방식이 활성화됩니다. |
-| [[!DNL Adobe Journey Optimizer] 데이터스트림 지원](../../edge/datastreams/overview.md#aep) | 이제 데이터 스트림에 대한 Adobe Experience Platform 서비스에서 를 지원합니다. [!DNL Adobe Journey Optimizer]. 이 옵션을 사용하여에서 웹 및 앱 기반 인바운드 채널을 사용할 수 있습니다 [!DNL Adobe Journey Optimizer]. |
+| [[!DNL Adobe Journey Optimizer] 데이터스트림 지원](../../datastreams/overview.md#aep) | 이제 데이터 스트림에 대한 Adobe Experience Platform 서비스에서 를 지원합니다. [!DNL Adobe Journey Optimizer]. 이 옵션을 사용하여에서 웹 및 앱 기반 인바운드 채널을 사용할 수 있습니다 [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
 

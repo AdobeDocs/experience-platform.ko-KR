@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK를 사용하여 이벤트 추적
 description: Adobe Experience Platform Web SDK 이벤트를 추적하는 방법에 대해 알아봅니다.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;비콘 보내기;documentUnloading;문서 언로드;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: a6948e3744aa754eda22831a7e68b847eb904e76
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 1%
@@ -140,7 +140,7 @@ alloy("sendEvent", {
 
 >[!IMPORTANT]
 >
->다음 `datasetId` 옵션이에서 지원됨 `sendEvent` 명령이 더 이상 사용되지 않습니다. 데이터 세트 ID를 재정의하려면 [구성 재정의](../datastreams/overrides.md) 대신,
+>다음 `datasetId` 옵션이에서 지원됨 `sendEvent` 명령이 더 이상 사용되지 않습니다. 데이터 세트 ID를 재정의하려면 [구성 재정의](../../datastreams/overrides.md) 대신,
 
 일부 사용 사례에서는 이벤트를 구성 UI에 구성된 데이터 세트가 아닌 데이터 세트로 보낼 수 있습니다. 이를 위해 다음을 설정해야 합니다. `datasetId` 옵션 `sendEvent` 명령:
 
@@ -254,20 +254,20 @@ alloy("configure", {
 
 * 콜백 중에 이벤트 XDM을 수정할 수 있습니다. 콜백이 반환되면 content.xdm 및 content.data 개체의 수정된 필드 및 값이 이벤트와 함께 전송됩니다.
 
-   ```javascript
-   onBeforeEventSend: function(content){
-     //sets a query parameter in XDM
-     const queryString = window.location.search;
-     const urlParams = new URLSearchParams(queryString);
-     content.xdm.marketing.trackingCode = urlParams.get('cid')
-   }
-   ```
+  ```javascript
+  onBeforeEventSend: function(content){
+    //sets a query parameter in XDM
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    content.xdm.marketing.trackingCode = urlParams.get('cid')
+  }
+  ```
 
 * 콜백에서 예외가 발생하면 이벤트 처리가 중지되고 이벤트가 전송되지 않습니다.
 * 콜백이 부울 값 을 반환하는 경우 `false`, 이벤트 처리는 오류 없이 중단되며 이벤트는 전송되지 않습니다. 이 메커니즘을 사용하면 이벤트 데이터를 검사하고 를 반환하여 특정 이벤트를 쉽게 무시할 수 있습니다 `false` 이벤트를 보내지 말아야 하는 경우.
 
-   >[!NOTE]
-   >페이지의 첫 번째 이벤트에서 false를 반환하지 않도록 주의해야 합니다. 첫 번째 이벤트에서 false를 반환하면 개인화에 부정적인 영향을 줄 수 있습니다.
+  >[!NOTE]
+  >페이지의 첫 번째 이벤트에서 false를 반환하지 않도록 주의해야 합니다. 첫 번째 이벤트에서 false를 반환하면 개인화에 부정적인 영향을 줄 수 있습니다.
 
 ```javascript
    onBeforeEventSend: function(content) {

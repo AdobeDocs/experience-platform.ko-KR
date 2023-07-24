@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 데이터 수집 개요
 description: Adobe Experience Platform에서 고객 경험에 대한 데이터를 수집하는 것과 관련된 다양한 기술에 대해 알아봅니다.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '516'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -25,12 +25,12 @@ Adobe Experience Platform은 클라이언트측 소스에서 고객 경험 데�
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [태그](../tags/home.md)
-* [데이터스트림](../edge/datastreams/overview.md)
+* [데이터스트림](../datastreams/overview.md)
 * [이벤트 전달](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform 웹 SDK](../edge/home.md)
 * [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
-* [Adobe Experience Platform 디버거](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
-* [경험 데이터 모델(XDM)](../xdm/home.md)
+* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
+* [경험 데이터 모델 (XDM)](../xdm/home.md)
 * [Adobe Experience Platform ID 서비스](../identity-service/home.md)
 
 이 안내서에서는 데이터 수집에 대한 높은 수준의 소개와 Platform Edge Network를 통해 Adobe Experience Cloud 제품 및 Adobe이 아닌 애플리케이션으로 데이터를 전송하는 방법에 대해 설명합니다.
@@ -45,9 +45,9 @@ Platform Web SDK 및 Platform Mobile SDK는 모든 Adobe 제품 라이브러리�
 
 ## 플랫폼 에지 네트워크 및 데이터스트림 {#edge}
 
-Platform Edge Network는 전 세계적으로 분산된 빠르고 안정적인 서버 네트워크로서 엄청난 규모로 데이터를 수신하고 처리할 수 있습니다. 태그를 사용하여 다음을 설정할 수 있습니다 [데이터스트림](../edge/datastreams/overview.md) Adobe Target, Adobe Audience Manager 및 Adobe Analytics과 같은 제품의 경우 클라이언트측 코드를 변경하지 않고 서버측에서 이러한 제품을 활성화할 수 있습니다.
+Platform Edge Network는 전 세계적으로 분산된 빠르고 안정적인 서버 네트워크로서 엄청난 규모로 데이터를 수신하고 처리할 수 있습니다. 태그를 사용하여 다음을 설정할 수 있습니다 [데이터스트림](../datastreams/overview.md) Adobe Target, Adobe Audience Manager 및 Adobe Analytics과 같은 제품의 경우 클라이언트측 코드를 변경하지 않고 서버측에서 이러한 제품을 활성화할 수 있습니다.
 
-또한 데이터 스트림은 여러 Platform 기능과 통합되어 전송 중인 모든 중요한 데이터가 조직 정책 및 법적 규정과 관련하여 적절하게 처리되도록 합니다. 의 섹션을 참조하십시오. [중요 데이터 처리](../edge/datastreams/overview.md#sensitive) 자세한 내용은 데이터스트림 설명서 를 참조하십시오.
+또한 데이터 스트림은 여러 Platform 기능과 통합되어 전송 중인 모든 중요한 데이터가 조직 정책 및 법적 규정과 관련하여 적절하게 처리되도록 합니다. 의 섹션을 참조하십시오. [중요 데이터 처리](../datastreams/overview.md#sensitive) 자세한 내용은 데이터스트림 설명서 를 참조하십시오.
 
 ![데이터스트림 및 Adobe 솔루션](./images/home/adobe-solutions.png)
 

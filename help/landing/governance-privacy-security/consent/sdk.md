@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK를 사용하여 고객 동의 데이터 처리
 description: Adobe Experience Platform Web SDK를 통합하여 Adobe Experience Platform에서 고객 동의 데이터를 처리하는 방법에 대해 알아봅니다.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: dc269f952d0970cb5be1b28ab91c6006de975df3
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1349'
 ht-degree: 1%
@@ -24,7 +24,7 @@ Adobe Experience Platform Web SDK를 사용하면 동의 관리 플랫폼(CMP)�
 
 이 안내서는 UI에서 태그 확장을 사용하여 SDK를 설정하는 워크플로를 따릅니다. 확장을 사용하지 않고 사이트에 독립 실행형 SDK 버전을 직접 포함하려는 경우 이 안내서 대신 다음 문서를 참조하십시오.
 
-* [데이터스트림 구성](../../../edge/datastreams/overview.md)
+* [데이터스트림 구성](../../../datastreams/overview.md)
 * [SDK 설치](../../../edge/fundamentals/installing-the-sdk.md)
 * [동의 명령에 대한 SDK 구성](../../../edge/consent/supporting-consent.md)
 

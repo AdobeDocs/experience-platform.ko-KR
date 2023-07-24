@@ -3,10 +3,10 @@ title: Platform Web SDK로 Adobe Journey Optimizer 사용
 description: Adobe Journey Optimizer을 사용하여 Experience Platform Web SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다
 keywords: ajo;ajo web;adobe 여정 optimizer;renderDecisions;surfaces;decisions;제안;범위;스키마
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '424'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 1. 다음을 통과하십시오. [전제 조건](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) 다음에서 [!DNL Adobe Journey Optimizer] [웹 경험 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), 특히
    * 설정 [!DNL Adobe Experience Cloud Visual Editing Helper].
-   * 사용 [!DNL Adobe Journey Optimizer] (으)로 [데이터스트림](../../datastreams/overview.md).
+   * 사용 [!DNL Adobe Journey Optimizer] (으)로 [데이터스트림](../../../datastreams/overview.md).
    * 활성화 [!UICONTROL Active-On-Edge 병합 정책] 옵션을 선택합니다.
 
 2. 추가 `renderDecisions` 이벤트 옵션 설정 `renderDecisions` 끝 `true` 웹 페이지 표면에 전달된 Journey Optimizer 컨텐츠 제안을 자동으로 렌더링합니다.

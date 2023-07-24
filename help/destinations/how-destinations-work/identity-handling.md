@@ -1,15 +1,15 @@
 ---
-title: 대상 활성화 워크플로에서의 ID 처리
+title: 대상 활성화 워크플로의 ID 처리
 description: 대상 유형에 따라 활성화 워크플로에서 ID 내보내기가 처리되는 방법을 알아봅니다
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1186'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
-# 대상 활성화 워크플로에서의 ID 처리
+# 대상 활성화 워크플로의 ID 처리
 
 이 페이지에서는 ID를 다양한 대상 유형으로 내보내는 방법의 세부 사항을 설명하고 대상에 따라 내보낼 수 있는 ID를 찾는 방법을 설명합니다.
 
@@ -82,7 +82,7 @@ ht-degree: 1%
 
 이러한 대상을 사용하려면 다음 중 하나를 통해 ID 동기화를 수행해야 합니다. [!UICONTROL Experience Cloud ID 서비스] 또는 다음을 통해 [!UICONTROL Experience Platform Web SDK].
 
-을 사용하는 경우 [!UICONTROL Experience Platform Web SDK] 및 레거시 [!UICONTROL Experience Cloud ID 서비스] 가 페이지에 구현되지 않은 경우 다음에 설명된 대로 해당 웹 사이트에 대한 데이터 스트림이 타사 ID 동기화를 허용하도록 설정되어 있는지 확인해야 합니다. [데이터스트림 구성 설명서](/help/edge/datastreams/configure.md#create).
+을 사용하는 경우 [!UICONTROL Experience Platform Web SDK] 및 레거시 [!UICONTROL Experience Cloud ID 서비스] 가 페이지에 구현되지 않은 경우 다음에 설명된 대로 해당 웹 사이트에 대한 데이터 스트림이 타사 ID 동기화를 허용하도록 설정되어 있는지 확인해야 합니다. [데이터스트림 구성 설명서](/help/datastreams/configure.md#create).
 
 위에서 링크된 설명서에 설명된 대로 데이터 스트림을 구성할 때는 **[!UICONTROL 타사 ID 동기화]** 슬라이더를 사용할 수 있습니다. 대부분의 고객은 `container_id` 필드가 비어 있습니다(기본값은 0). 레거시 Audience Manager 구현에서 특정 컨테이너 ID를 사용한 경우에만 이 값을 변경하면 됩니다(하지만, 이는 대다수의 고객이 될 수 있음).
 

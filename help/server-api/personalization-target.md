@@ -2,7 +2,7 @@
 title: Adobe Target을 통한 개인화
 description: Server API를 사용하여 Adobe Target에서 생성된 개인화된 경험을 전달하고 렌더링하는 방법에 대해 알아봅니다.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 47cd73e45ac618a8a84aa3c47b91d5e2a107e7f4
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 1%
@@ -23,7 +23,7 @@ Edge Network Server API는 의 도움을 받아 Adobe Target에서 생성된 개
 
 Adobe Target과 함께 서버 API를 사용하려면 먼저 데이터 스트림 구성에서 Adobe Target 개인화를 활성화해야 합니다.
 
-다음을 참조하십시오. [데이터스트림에 서비스 추가 가이드](../edge/datastreams/overview.md#adobe-target-settings): Adobe Target 활성화 방법에 대한 자세한 정보를 제공합니다.
+다음을 참조하십시오. [데이터스트림에 서비스 추가 가이드](../datastreams/overview.md#adobe-target-settings): Adobe Target 활성화 방법에 대한 자세한 정보를 제공합니다.
 
 데이터 스트림을 구성할 때 다음에 대한 값을 제공할 수 있습니다(선택 사항). [!DNL Property Token], [!DNL Target Environment ID], 및 [!DNL Target Third Party ID Namespace].
 

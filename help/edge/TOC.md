@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK 도움말
 breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
-source-git-commit: 131c33d1049b018ba21898418abefc48e2200f3f
+source-git-commit: cc864e091f5e3f338f025238572158f555c3ede9
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 31%
+source-wordcount: '169'
+ht-degree: 30%
 
 ---
 
@@ -27,14 +27,6 @@ ht-degree: 31%
    * [CSP 구성](fundamentals/configuring-a-csp.md)
    * [여러 속성과 상호 작용](fundamentals/interacting-with-multiple-properties.md)
    * [사용자 에이전트 클라이언트 힌트](fundamentals/user-agent-client-hints.md)
-* 데이터스트림 {#datastreams}
-   * [개요](./datastreams/overview.md)
-   * [데이터스트림 구성](./datastreams/configure.md)
-   * [데이터 스트림 재정의 구성](./datastreams/overrides.md)
-   * [데이터 수집을 위한 데이터 준비](./datastreams/data-prep.md)
-   * 데이터 보강 {#data-enrichment}
-      * [날씨 채널별 날씨 데이터](./datastreams/data-enrichment/weather.md)
-      * [날씨 데이터 필드 매핑](./datastreams/data-enrichment/weather-reference.md)
 * 신원 {#identity}
    * [개요](identity/overview.md)
    * [자사 디바이스 ID](identity/first-party-device-ids.md)

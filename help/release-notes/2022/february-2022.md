@@ -1,15 +1,15 @@
 ---
-title: Adobe Experience Platform 릴리스 노트 2022년 2월
-description: Adobe Experience Platform의 2022년 2월 릴리스 정보.
+title: Adobe Experience Platform 릴리스 정보 2022년 2월
+description: Adobe Experience Platform의 2022년 2월 릴리스 정보입니다.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: e2342a8a7d03074ac26fbd129a2e7fd520ccb0c3
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1019'
-ht-degree: 10%
+ht-degree: 27%
 
 ---
 
-# Adobe Experience Platform 릴리스 노트
+# Adobe Experience Platform 릴리스 정보
 
 **릴리스 일자: 2022년 3월 7일**
 
@@ -39,23 +39,23 @@ Adobe Experience Platform에서 여러 기능 제공 [!DNL dashboards] 일별 �
 
 ## 데이터 수집 {#data-collection}
 
-Platform은 클라이언트측 고객 경험 데이터를 수집하고, 이를 Adobe Experience Platform Edge Network로 전송하여 Adobe 또는 Adobe이 아닌 대상으로 보강, 변환 및 배포할 수 있는 기술 제품군을 제공합니다.
+Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe 또는 비 Adobe 대상으로 보강, 변환 및 배포가 가능한 Adobe Experience Platform Edge Network로 보낼 수 있는 기술 제품군을 제공합니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 데이터 스트림 구성에 대한 UI 워크플로우 개선 | 데이터 수집 UI에서 새 데이터 스트림을 만드는 워크플로우가 업데이트되었습니다. 데이터 스트림에 서비스를 추가할 때 액세스 권한이 있는 서비스만 옵션 목록에 포함됩니다. 다음 안내서를 참조하십시오 [데이터스트림 구성](../../edge/datastreams/overview.md) 추가 정보. |
-| 데이터 수집을 위한 데이터 준비 | Adobe Experience Platform Web SDK를 사용하는 경우 이제 데이터 준비 기능을 활용하여 데이터를 서버측의 XDM(Experience Data Model)에 매핑할 수 있습니다. 의 섹션을 참조하십시오. [데이터 수집을 위한 데이터 준비](../../edge/datastreams/data-prep.md) 자세한 내용은 데이터스트림 안내서를 참조하십시오. |
+| 데이터 스트림 구성에 대한 UI 워크플로우 개선 | 데이터 수집 UI에서 새 데이터 스트림을 만드는 워크플로우가 업데이트되었습니다. 데이터 스트림에 서비스를 추가할 때 액세스 권한이 있는 서비스만 옵션 목록에 포함됩니다. 다음 안내서를 참조하십시오 [데이터스트림 구성](../../datastreams/overview.md) 추가 정보. |
+| 데이터 수집을 위한 데이터 준비 | Adobe Experience Platform Web SDK를 사용하는 경우 이제 데이터 준비 기능을 활용하여 데이터를 서버측의 XDM(Experience Data Model)에 매핑할 수 있습니다. 의 섹션을 참조하십시오. [데이터 수집을 위한 데이터 준비](../../datastreams/data-prep.md) 자세한 내용은 데이터스트림 안내서를 참조하십시오. |
 | 자사 디바이스 ID | 이제 Platform Web SDK를 사용하여 고객 데이터를 수집할 때 자신의 장치 ID를 Adobe Experience Platform Edge Network로 보내어 타사 쿠키 수명 주기에 대한 최근의 브라우저 제한 사항에 대한 해결 방법을 제공할 수 있습니다. 다음 안내서를 참조하십시오 [자사 디바이스 ID](../../edge/identity/first-party-device-ids.md) 추가 정보. |
 
 Platform에서의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-**새 기능 또는 업데이트된 기능**
+**새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | ----------- | ----------- |
@@ -79,7 +79,7 @@ Adobe Experience Platform [!DNL Identity Service] 은 디바이스와 시스템 
 
 Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스를 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
+Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
 **업데이트된 기능**
 
