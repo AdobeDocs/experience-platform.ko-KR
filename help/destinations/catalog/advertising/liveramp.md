@@ -4,9 +4,9 @@ description: LiveRamp 커넥터를 사용하여 Adobe Real-time Customer Data Pl
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 8c9d736c8d2c45909a2915f0f1d845a7ba4d876d
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1834'
 ht-degree: 3%
 
 ---
@@ -37,6 +37,20 @@ Experience Platform에서 (으)로 데이터를 보내기 전에 [!DNL LiveRamp 
 LiveRamp SFTP는 관계식에 설명된 PII 기반 식별자, 알려진 식별자 및 사용자 지정 ID와 같은 ID의 활성화를 지원합니다 [LiveRamp 설명서](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
 
 다음에서 [매핑 단계](#map) 활성화 워크플로 중에서 타겟 매핑을 사용자 지정 속성으로 정의해야 합니다.
+
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+
+모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+
+| 대상자 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#importing-an-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+
+{style="table-layout:auto"}
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -190,7 +204,9 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 * 대상 A, C 및 D가 포함된 하나의 CSV 파일
 * 대상자 B가 포함된 CSV 파일 1개.
 
-내보낸 CSV 파일에는 속성 이름과 대상 ID를 열 헤더로 사용하여 별도의 열에 선택한 속성과 해당 대상 상태를 가진 프로필이 포함되어 있습니다.
+내보낸 CSV 파일에는 선택한 속성이 있는 프로필과 해당 대상 상태가 별도의 열에 속성 이름이 있고 `audience_namespace:audience_ID` 아래 예에 표시된 대로 열 머리글로 쌍으로 묶습니다.
+
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
 
 내보낸 파일에 포함된 프로필은 다음 대상 자격 상태 중 하나와 일치할 수 있습니다.
 
@@ -198,11 +214,10 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 * `Expired`: 프로필이 더 이상 대상자에 적합하지 않지만 과거에 자격이 있습니다.
 * `""`(빈 문자열): 프로필이 대상자에 대해 정격되지 않았습니다.
 
-
-예를 들어 내보낸 CSV 파일에는 하나가 있습니다 `email` 속성 및 3개의 대상은 다음과 같습니다.
+예를 들어 내보낸 CSV 파일에는 하나가 있습니다 `email` 속성입니다. Experience Platform에서 시작된 두 대상 [세분화 서비스](../../../segmentation/home.md), 및 1 [가져옴](../../../segmentation/ui/overview.md#importing-an-audience) 외부 대상, 형태는 다음과 같습니다.
 
 ```csv
-email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -210,6 +225,8 @@ abc116@testemailabc.com,active,,
 abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
+
+위의 예에서 `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` 및 `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` 섹션에서는 세분화 서비스에서 시작된 대상자에 대해 설명하고 `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` 플랫폼으로 가져온 대상자를 다음과 같이 설명합니다. [사용자 지정 업로드](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Platform은 각각에 대해 하나의 CSV 파일을 생성하므로 [병합 정책 ID](../../../profile/merge-policies/overview.md)또한 각 병합 정책 ID에 대해 별도의 데이터 흐름 실행을 생성합니다.
 

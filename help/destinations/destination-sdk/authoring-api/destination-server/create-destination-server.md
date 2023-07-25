@@ -1,9 +1,9 @@
 ---
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 서버를 만드는 데 사용되는 API 호출을 보여 줍니다.
 title: 대상 서버 구성 만들기
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1696'
 ht-degree: 9%
 
 ---
@@ -44,7 +44,11 @@ ht-degree: 9%
 POST /authoring/destination-servers
 ```
 
-만드는 대상 유형에 따라 약간 다른 유형의 대상 서버를 구성해야 합니다. Destination SDK에서 지원되는 모든 대상 유형에 대한 대상 서버의 아래 예 를 참조하십시오.
+만드는 대상 유형에 따라 약간 다른 유형의 대상 서버를 구성해야 합니다.
+
+### 정적 스키마 대상 서버 만들기 {#static-destination-servers}
+
+을 사용하는 대상에 대한 대상 서버의 예는 아래 탭에서 을 참조하십시오. [정적 스키마](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
 
 아래의 샘플 페이로드에는 각 대상 서버 유형에서 지원하는 모든 매개 변수가 포함되어 있습니다. 요청에 모든 매개 변수를 포함할 필요는 없습니다. 페이로드는 필요에 따라 사용자 정의할 수 있습니다.
 
@@ -770,6 +774,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++
 
+>[!ENDTABS]
+
+### 동적 스키마 대상 서버 만들기 {#dynamic-schema-servers}
+
+동적 스키마를 사용하면 지원되는 타겟 속성을 동적으로 검색하고 고유한 API를 기반으로 스키마를 생성할 수 있습니다. 스키마를 구성하려면 먼저 동적 스키마에 대한 대상 서버를 구성해야 합니다.
+
+을 사용하는 대상에 대한 대상 서버의 예는 아래 탭에서 을 참조하십시오 [동적 스키마](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
+
+아래 샘플 페이로드에는 동적 스키마 서버에 필요한 모든 매개 변수가 포함되어 있습니다.
+
+>[!BEGINTABS]
+
 >[!TAB 동적 스키마 서버]
 
 **동적 스키마 서버 만들기**
@@ -827,6 +843,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 성공한 응답은 새로 만든 대상 서버 구성에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
 
 +++
+
 
 >[!ENDTABS]
 

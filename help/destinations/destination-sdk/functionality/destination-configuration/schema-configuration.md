@@ -1,9 +1,9 @@
 ---
 description: Destination SDK으로 빌드된 대상에 대해 파트너 스키마를 구성하는 방법을 알아봅니다.
 title: 파트너 스키마 구성
-source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
+source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
 workflow-type: tm+mt
-source-wordcount: '1892'
+source-wordcount: '1898'
 ht-degree: 4%
 
 ---
@@ -48,7 +48,7 @@ Destination SDK을 사용하여 대상을 작성할 때 대상 플랫폼에서 �
 Destination SDK은 여러 스키마 구성을 지원합니다.
 
 * 정적 스키마는 `profileFields` 배열에서 `schemaConfig` 섹션. 정적 스키마에서는 의 Experience Platform UI에 표시되어야 하는 모든 대상 속성을 정의합니다 `profileFields` 배열입니다. 스키마를 업데이트해야 하는 경우 [대상 구성 업데이트](../../authoring-api/destination-configuration/update-destination-configuration.md).
-* 동적 스키마는 라는 추가 대상 서버 유형을 사용합니다. [동적 스키마 서버](../../authoring-api/destination-server/create-destination-server.md)를 사용하여 고유한 API를 기반으로 스키마를 동적으로 생성할 수 있습니다. 동적 스키마는 `profileFields` 배열입니다. 스키마를 업데이트해야 하는 경우 업데이트할 필요가 없습니다 [대상 구성 업데이트](../../authoring-api/destination-configuration/update-destination-configuration.md). 대신 동적 스키마 서버는 API에서 업데이트된 스키마를 검색합니다.
+* 동적 스키마는 라는 추가 대상 서버 유형을 사용합니다. [동적 스키마 서버](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers)를 사용하여 지원되는 타겟 특성을 동적으로 검색하고 고유한 API를 기반으로 스키마를 생성할 수 있습니다. 동적 스키마는 `profileFields` 배열입니다. 스키마를 업데이트해야 하는 경우 업데이트할 필요가 없습니다 [대상 구성 업데이트](../../authoring-api/destination-configuration/update-destination-configuration.md). 대신 동적 스키마 서버는 API에서 업데이트된 스키마를 검색합니다.
 * 스키마 구성 내에는 필수(또는 사전 정의된) 매핑을 추가할 수 있는 옵션이 있습니다. 이는 사용자가 Platform UI에서 볼 수 있는 매핑이지만 대상에 대한 연결을 설정할 때 수정할 수 없습니다. 예를 들어 이메일 주소 필드를 항상 대상으로 전송하도록 적용할 수 있습니다.
 
 다음 `schemaConfig` 섹션은 아래 섹션에 표시된 대로 필요한 스키마 유형에 따라 여러 구성 매개 변수를 사용합니다.
@@ -126,7 +126,7 @@ Destination SDK은 동적 파트너 스키마 생성을 지원합니다. 정적 
 
 >[!IMPORTANT]
 >
->동적 스키마를 생성하기 전에 다음을 수행해야 합니다 [동적 스키마 서버 만들기](../../authoring-api/destination-server/create-destination-server.md).
+>동적 스키마를 생성하기 전에 다음을 수행해야 합니다 [동적 스키마 서버 만들기](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers).
 
 동적 스키마 구성에서 `profileFields` 배열이 로 대체됨 `dynamicSchemaConfig` 섹션에 있는 마지막 항목이 될 필요가 없습니다.
 
