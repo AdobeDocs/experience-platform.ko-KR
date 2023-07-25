@@ -1,7 +1,7 @@
 ---
 description: Adobe Experience Platform Destination SDK을 통해 대상 게시 요청을 제출하기 위해 API 호출 형식을 지정하는 방법을 알아봅니다.
 title: 대상 게시 요청 만들기
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+source-git-commit: 8ec5d450d2856b9a12457e1b1b0b46baf930253a
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 2%
@@ -69,9 +69,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
++++
+
 +++응답
 
 성공적인 응답은 대상 게시 요청의 세부 정보와 함께 HTTP 상태 201을 반환합니다.
+
++++
 
 ## API 오류 처리
 
