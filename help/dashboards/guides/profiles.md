@@ -4,7 +4,7 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
 workflow-type: tm+mt
 source-wordcount: '3393'
 ht-degree: 10%
@@ -339,7 +339,7 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL 대상 상태에 매핑된 대상자] {#audiences-mapped-to-destination-status}
 
-다음 [!UICONTROL 대상 상태에 매핑된 대상자] 위젯은 매핑된 대상자와 매핑되지 않은 대상자의 총 수를 단일 지표로 표시하며, 도넛형 차트를 사용하여 합계의 비례 차이를 보여 줍니다. 계산된 숫자는 선택한 병합 정책에 따라 다릅니다.
+다음 [!UICONTROL 대상 상태에 매핑된 대상자] 위젯은 매핑된 대상자와 매핑되지 않은 대상자의 총 수를 단일 지표로 표시하며, 도넛 차트를 사용하여 대상자의 합계 간 비례적 차이를 보여 줍니다. 계산된 숫자는 선택한 병합 정책에 따라 다릅니다.
 
 커서가 도넛 차트의 각 섹션을 가리키면 매핑된 대상자나 매핑되지 않은 대상자의 개별 카운트가 대화 상자에 표시됩니다.
 
