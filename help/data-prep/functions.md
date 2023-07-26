@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 준비 매핑 기능
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: a89faf5f1d1befdc057cd872fcd190703c620c2d
+source-git-commit: c9fb9320c7ef1da5aba41b3d01bca44b07ec6c17
 workflow-type: tm+mt
-source-wordcount: '4916'
+source-wordcount: '5221'
 ht-degree: 3%
 
 ---
@@ -117,8 +117,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| now | 현재 시간을 검색합니다. |  | now() | now() | `2021-10-26T10:10:24Z` |
-| timestamp | 현재 Unix 시간을 검색합니다. |  | timestamp() | timestamp() | 1571850624571 |
+| now | 현재 시간을 검색합니다. | | now() | now() | `2021-10-26T10:10:24Z` |
+| timestamp | 현재 Unix 시간을 검색합니다. | | timestamp() | timestamp() | 1571850624571 |
 | 형식 | 지정된 형식에 따라 입력 날짜 형식을 지정합니다. | <ul><li>날짜: **필수** 서식을 지정할 ZonedDateTime 개체의 입력 날짜입니다.</li><li>형식: **필수** 날짜를 변경할 형식입니다.</li></ul> | format(DATE, FORMAT) | 형식(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
 | dformat | 지정된 형식에 따라 타임스탬프를 날짜 문자열로 변환합니다. | <ul><li>타임스탬프: **필수** 서식을 지정할 타임스탬프입니다. 밀리초 단위로 기록됩니다.</li><li>형식: **필수** 타임스탬프를 지정할 형식입니다.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
 | 날짜 | 날짜 문자열을 ZonedDateTime 개체로 변환합니다(ISO 8601 형식). | <ul><li>날짜: **필수** 날짜를 나타내는 문자열입니다.</li><li>형식: **필수** 소스 날짜의 형식을 나타내는 문자열입니다.**참고:** 다음과 같습니다. **아님** 날짜 문자열을 로 변환할 형식을 나타냅니다. </li><li>DEFAULT_DATE: **필수** 제공된 날짜가 null인 경우 반환되는 기본 날짜.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
@@ -145,9 +145,12 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | to_object | 지정된 플랫 키/값 쌍을 기반으로 개체를 만듭니다. | <ul><li>입력: **필수** 키/값 쌍의 단순 목록입니다.</li></ul> | to_object(INPUT) | to_&#x200B;object(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | 입력 문자열에서 개체를 만듭니다. | <ul><li>문자열: **필수** 개체를 만들기 위해 구문 분석 중인 문자열입니다.</li><li>VALUE_DELIMITER: *선택 사항* 필드와 값을 구분하는 구분 기호입니다. 기본 구분 기호는 입니다. `:`.</li><li>필드 구분 기호: *선택 사항* 필드 값 쌍을 구분하는 구분 기호입니다. 기본 구분 기호는 입니다. `,`.</li></ul> | str_to_object&#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **참고**: 다음을 사용할 수 있습니다 `get()` 과 함께 함수 `str_to_object()` 문자열의 키 값을 검색합니다. | <ul><li>예 #1: str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>예 #2: str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>예 #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>예 #2: &quot;John&quot;</li></ul> |
 | contains_key | 원본 데이터 내에 개체가 있는지 확인합니다. **참고:** 이 함수는 사용되지 않는 을 대체합니다. `is_set()` 함수. | <ul><li>입력: **필수** 소스 데이터 내에 있는지 확인할 경로입니다.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |
-| 무효화 | 속성 값을 로 설정합니다. `null`. 필드를 대상 스키마에 복사하지 않으려는 경우 사용해야 합니다. |  | 무효화() | 무효화() | `null` |
+| 무효화 | 속성 값을 로 설정합니다. `null`. 필드를 대상 스키마에 복사하지 않으려는 경우 사용해야 합니다. | | 무효화() | 무효화() | `null` |
 | get_keys | 키/값 쌍을 구문 분석하고 모든 키를 반환합니다. | <ul><li>개체: **필수** 키를 추출할 개체입니다.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Pride and Preference&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | 키/값 쌍을 구문 분석하고 지정된 키를 기준으로 문자열 값을 반환합니다. | <ul><li>문자열: **필수** 구문 분석할 문자열입니다.</li><li>키: **필수** 값을 추출해야 하는 키입니다.</li><li>VALUE_DELIMITER: **필수** 필드와 값을 구분하는 구분 기호입니다. 다음 중 하나의 경우: `null` 빈 문자열이 제공된 경우 이 값은 다음과 같습니다. `:`.</li><li>필드 구분 기호: *선택 사항* 필드 쌍과 값 쌍을 구분하는 구분 기호입니다. 다음 중 하나의 경우: `null` 빈 문자열이 제공된 경우 이 값은 다음과 같습니다. `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
+| map_get_values | 맵과 키 입력을 가져옵니다. 입력이 단일 키인 경우 함수는 해당 키와 연관된 값을 반환합니다. 입력이 문자열 배열이면 함수는 제공된 키에 해당하는 모든 값을 반환합니다. 들어오는 맵에 중복 키가 있는 경우 반환 값은 키를 중복 제거하고 고유 값을 반환해야 합니다. | <ul><li>맵: **필수** 입력 맵 데이터.</li><li>키:  **필수** 키는 단일 문자열 또는 문자열 배열일 수 있습니다. 다른 기본 유형(데이터/숫자)이 제공되면 문자열로 처리됩니다.</li></ul> | get_values(MAP, KEY) | 다음을 참조하십시오. [부록](#map_get_values) 코드 샘플. | |
+| map_has_keys | 하나 이상의 입력 키가 제공되면 함수는 true를 반환합니다. 문자열 배열이 입력으로 제공되면 함수는 발견되는 첫 번째 키에 true를 반환합니다. | <ul><li>맵:  **필수** 입력 맵 데이터</li><li>키:  **필수** 키는 단일 문자열 또는 문자열 배열일 수 있습니다. 다른 기본 유형(데이터/숫자)이 제공되면 문자열로 처리됩니다.</li></ul> | map_has_keys(MAP, KEY) | 다음을 참조하십시오. [부록](#map_has_keys) 코드 샘플. | |
+| add_to_map | 최소 두 개 이상의 입력을 허용합니다. 맵의 수는 입력으로서 제공될 수 있다. 데이터 준비는 모든 입력의 모든 키-값 쌍이 있는 단일 맵을 반환합니다. 하나 이상의 키가 동일한 맵에서 또는 맵 간에 반복되는 경우, 데이터 준비는 첫 번째 키-값 쌍이 입력에서 전달된 순서대로 유지되도록 키를 중복 제거합니다. | 맵: **필수** 입력 맵 데이터. | add_to_map(지도 1, 지도 2, 지도 3, ...) | 다음을 참조하십시오. [부록](#add_to_map) 코드 샘플. | |
 
 {style="table-layout:auto"}
 
@@ -234,7 +237,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| uuid /<br>guid | 의사 무작위 ID를 생성합니다. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
+| uuid /<br>guid | 의사 무작위 ID를 생성합니다. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 | `fpid_to_ecid ` | 이 함수는 FPID 문자열을 가져와 Adobe Experience Platform 및 Adobe Experience Cloud 애플리케이션에서 사용할 ECID로 변환합니다. | <ul><li>문자열: **필수** ECID로 변환할 FPID 문자열입니다.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
@@ -378,3 +381,77 @@ address.line1 -> addr.addrLine1
 | 해커 | 이 장치 값은 스크립팅이 `useragent` 문자열. |
 
 {style="table-layout:auto"}
+
+### 코드 샘플 {#code-samples}
+
+#### map_get_values {#map-get-values}
+
++++예를 보려면 선택
+
+```json
+ example = "map_get_values(book_details,\"author\") where input is : {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}",
+      result = "{\"author\": \"George R. R. Martin\"}"
+```
+
++++
+
+#### map_has_keys {#map_has_keys}
+
++++예를 보려면 선택
+
+```json
+ example = "map_has_keys(book_details,\"author\")where input is : {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}",
+      result = "true"
+```
+
++++
+
+#### add_to_map {#add_to_map}
+
++++예를 보려면 선택
+
+```json
+example = "add_to_map(book_details, book_details2) where input is {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}" +
+        "{\n" +
+        "    \"book_details2\":\n" +
+        "    {\n" +
+        "        \"author\": \"Neil Gaiman\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-0-380-97365-0\"\n" +
+        "        \"publisher\": \"William Morrow\"\n" +
+        "    }\n" +
+        "}",
+      result = "{\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "        \"publisher\": \"William Morrow\"\n" +
+        "    }\n" +
+        "}",
+      returns = "A new map with all elements from map and addends"
+```
+
++++
