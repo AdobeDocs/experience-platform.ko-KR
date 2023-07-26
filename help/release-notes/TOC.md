@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 릴리스 정보
 breadcrumb-title: Platform 릴리스 정보
 user-guide-description: Adobe Experience Platform에 대한 월별 릴리스 정보를 살펴보십시오.
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
-workflow-type: ht
-source-wordcount: '76'
+source-git-commit: 4e0df3b62837e925954b221bfcb1f18483c4ded2
+workflow-type: tm+mt
+source-wordcount: '77'
 ht-degree: 100%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 100%
 
 * [현재 Platform 릴리스 정보](latest/latest.md)
 * 2023 {#2023}
+   * [2023년 7월](2023/july-2023.md)
    * [2023년 6월](2023/june-2023.md)
    * [2023년 5월](2023/may-2023.md)
    * [2023년 4월](2023/april-2023.md)
