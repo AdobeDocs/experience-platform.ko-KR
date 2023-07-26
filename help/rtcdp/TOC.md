@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 대상자 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
 source-git-commit: 7dfbf7c1d9d12e8e1fb654cf357d31a91611a18e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 100%
 
