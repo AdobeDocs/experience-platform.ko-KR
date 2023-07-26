@@ -3,7 +3,7 @@ title: Adobe Experience Platform 릴리스 정보 2023년 4월
 description: Adobe Experience Platform의 2023년 4월 릴리스 정보입니다.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2084'
 ht-degree: 100%
 
