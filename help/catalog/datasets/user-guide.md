@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 세트 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 127cc88735fdffa9227bdb0919ae086dbe76184d
+source-git-commit: 141037fd844c78e98785ea2246026ac120961dd5
 workflow-type: tm+mt
-source-wordcount: '2548'
+source-wordcount: '2745'
 ht-degree: 4%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 4%
 
 ## 인라인 데이터 세트 작업 {#inline-actions}
 
-이제 데이터 세트 UI는 사용 가능한 각 데이터 세트에 대한 인라인 작업 컬렉션을 제공합니다. 관리할 데이터 세트의 줄임표를 선택하여 팝업 메뉴에서 사용 가능한 옵션을 확인합니다. 사용 가능한 작업은 다음과 같습니다. [[!UICONTROL 데이터 세트 미리 보기]](#preview), [[!UICONTROL 데이터 관리 및 액세스 레이블]](#manage-and-enforce-data-governance), [[!UICONTROL 통합 프로필 활성화]](#enable-profile), [[!UICONTROL 태그 관리]](#add-tags), 및 [[!UICONTROL 삭제]](#delete). 사용 가능한 이러한 작업에 대한 자세한 내용은 해당 섹션에서 확인할 수 있습니다.
+이제 데이터 세트 UI는 사용 가능한 각 데이터 세트에 대한 인라인 작업 컬렉션을 제공합니다. 관리할 데이터 세트의 줄임표(...)를 선택하여 팝업 메뉴에서 사용 가능한 옵션을 확인합니다. 사용 가능한 작업은 다음과 같습니다. [[!UICONTROL 데이터 세트 미리 보기]](#preview), [[!UICONTROL 데이터 관리 및 액세스 레이블]](#manage-and-enforce-data-governance), [[!UICONTROL 통합 프로필 활성화]](#enable-profile), [[!UICONTROL 태그 관리]](#add-tags), [[!UICONTROL 폴더로 이동]](#move-to-folders), 및 [[!UICONTROL 삭제]](#delete). 사용 가능한 이러한 작업에 대한 자세한 내용은 해당 섹션에서 확인할 수 있습니다.
 
 ### 데이터 세트 태그 추가 {#add-tags}
 
@@ -92,7 +92,7 @@ ht-degree: 4%
 
 ### 태그로 데이터 세트 필터링 {#filter-by-tag}
 
-에 사용자 지정 태그 이름을 입력합니다. [!UICONTROL 태그] 을 입력한 다음 사용 가능한 옵션 목록에서 태그를 선택하여 해당 태그에 해당하는 데이터 세트를 검색하고 필터링합니다.
+에 사용자 정의 태그 이름을 입력합니다. [!UICONTROL 태그] 을 입력한 다음 사용 가능한 옵션 목록에서 태그를 선택하여 해당 태그에 해당하는 데이터 세트를 검색하고 필터링합니다.
 
 ![을 사용하는 데이터 세트 작업 공간의 필터 옵션 [!UICONTROL 태그] 입력 및 필터 아이콘이 강조 표시됩니다.](../images/datasets/user-guide/filter-tags.png)
 
@@ -116,7 +116,7 @@ ht-degree: 4%
 
 ## 데이터 세트 미리 보기 {#preview}
 
-의 인라인 옵션 모두에서 데이터 세트 샘플 데이터를 미리 볼 수 있습니다. [!UICONTROL 찾아보기] 탭 및 [!UICONTROL 데이터 세트 활동] 보기. 다음에서 [!UICONTROL 찾아보기] 탭에서 미리 보려는 데이터 세트 이름 옆에 있는 생략 부호를 선택합니다. 옵션 메뉴 목록이 나타납니다. 그런 다음 을 선택합니다. **[!UICONTROL 데이터 세트 미리 보기]** 사용 가능한 옵션 목록에서. 데이터 세트가 비어 있으면 미리보기 링크가 비활성화되고 대신 미리보기를 사용할 수 없다고 표시됩니다.
+의 인라인 옵션 모두에서 데이터 세트 샘플 데이터를 미리 볼 수 있습니다. [!UICONTROL 찾아보기] 탭 및 [!UICONTROL 데이터 세트 활동] 보기. 다음에서 [!UICONTROL 찾아보기] 탭에서 미리 보려는 데이터 세트 이름 옆의 생략 부호(...)를 선택합니다. 옵션 메뉴 목록이 나타납니다. 그런 다음 을 선택합니다. **[!UICONTROL 데이터 세트 미리 보기]** 사용 가능한 옵션 목록에서. 데이터 세트가 비어 있으면 미리보기 링크가 비활성화되고 대신 미리보기를 사용할 수 없다고 표시됩니다.
 
 ![선택한 데이터 세트에 대해 줄임표 및 데이터 세트 미리 보기 옵션이 강조 표시된 데이터 세트 작업 영역의 찾아보기 탭입니다.](../images/datasets/user-guide/preview-dataset-option.png)
 
@@ -203,13 +203,33 @@ CSV 파일을 사용하여 데이터 세트를 만들면 제공된 CSV 파일과
 
 ## 데이터 세트에 대한 데이터 거버넌스 관리 및 적용 {#manage-and-enforce-data-governance}
 
-의 인라인 옵션을 선택하여 데이터 세트에 대한 데이터 거버넌스 레이블을 관리할 수 있습니다. [!UICONTROL 찾아보기] 탭. 관리하려는 데이터 세트 이름 옆에 있는 생략 부호를 선택한 다음 를 클릭합니다 **[!UICONTROL 데이터 관리 및 액세스 레이블]** 드롭다운 메뉴를 통해 액세스합니다.
+의 인라인 옵션을 선택하여 데이터 세트에 대한 데이터 거버넌스 레이블을 관리할 수 있습니다. [!UICONTROL 찾아보기] 탭. 관리하려는 데이터 세트 이름 옆의 생략 부호(...)를 선택한 후 다음을 수행합니다 **[!UICONTROL 데이터 관리 및 액세스 레이블]** 드롭다운 메뉴를 통해 액세스합니다.
 
 스키마 수준에서 적용되는 데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트와 필드를 분류할 수 있습니다. 다음을 참조하십시오. [데이터 거버넌스 개요](../../data-governance/home.md) 레이블에 대해 자세히 알아보거나 [데이터 사용 레이블 사용 안내서](../../data-governance/labels/overview.md) 데이터 세트에 전달하기 위해 스키마에 레이블을 적용하는 방법에 대한 지침입니다.
 
+### 폴더로 이동 {#move-to-folders}
+
+더 나은 데이터 세트 관리를 위해 폴더 내에 데이터 세트를 배치할 수 있습니다. 데이터 세트를 폴더로 이동하려면 관리하려는 데이터 세트 이름 옆에 있는 생략 부호(...)를 선택한 다음 를 클릭합니다 **[!UICONTROL 폴더로 이동]** 드롭다운 메뉴를 통해 액세스합니다.
+
+![다음 [!UICONTROL 데이터 세트] 생략 부호 및 가 있는 대시보드 [!UICONTROL 폴더로 이동] 강조 표시됨.](../images/datasets/user-guide/move-to-folder.png)
+
+다음 [!UICONTROL 이동] 폴더 데이터 세트 대화 상자가 나타납니다. 대상자를 이동할 폴더를 선택한 다음 을 선택합니다 **[!UICONTROL 이동]**. 팝업 알림은 데이터 세트 이동이 성공했음을 알려줍니다.
+
+![다음 [!UICONTROL 이동] 데이터 세트 대화 상자 [!UICONTROL 이동] 강조 표시됨.](../images/datasets/user-guide/move-dialog.png)
+
+>
+>
+>데이터 세트 이동 대화 상자에서 직접 폴더를 만들 수도 있습니다. 폴더를 만들려면 폴더 만들기 아이콘(![폴더 만들기 아이콘](../images/datasets/user-guide/create-folder-icon.png))을 클릭하여 제품에서 사용할 수 있습니다.
+>
+>![다음 [!UICONTROL 이동] 폴더 만들기 아이콘이 강조 표시된 데이터 세트 대화 상자.](/help/catalog/images/datasets/user-guide/create-folder.png)
+
+데이터 세트가 폴더에 있으면 특정 폴더에 속하는 데이터 세트만 표시하도록 선택할 수 있습니다. 폴더 구조를 열려면 폴더 표시 아이콘(![폴더 표시 아이콘](../images/datasets/user-guide/show-folders-icon.png)). 그런 다음 선택한 폴더를 선택하여 연결된 모든 데이터 세트를 확인합니다.
+
+![다음 [!UICONTROL 데이터 세트] 데이터 세트 폴더 구조가 표시되고, 폴더 표시 아이콘 및 선택한 폴더가 강조 표시된 대시보드](../images/datasets/user-guide/folder-structure.png)
+
 ## 데이터 세트 삭제 {#delete}
 
-의 데이터 세트 인라인 작업에서 데이터 세트를 삭제할 수 있습니다. [!UICONTROL 찾아보기] 탭 또는 오른쪽 상단 [!UICONTROL 데이터 세트 활동] 보기. 다음에서 [!UICONTROL 찾아보기] 을(를) 보고 삭제하려는 데이터 세트 이름 옆에 있는 줄임표를 선택합니다. 옵션 메뉴 목록이 나타납니다. 그런 다음 을 선택합니다. **[!UICONTROL 삭제]** 드롭다운 메뉴를 통해 액세스합니다.
+의 데이터 세트 인라인 작업에서 데이터 세트를 삭제할 수 있습니다. [!UICONTROL 찾아보기] 탭 또는 오른쪽 상단 [!UICONTROL 데이터 세트 활동] 보기. 다음에서 [!UICONTROL 찾아보기] 을(를) 보고, 삭제하려는 데이터 세트 이름 옆에 있는 생략 부호(...)를 선택합니다. 옵션 메뉴 목록이 나타납니다. 그런 다음 을 선택합니다. **[!UICONTROL 삭제]** 드롭다운 메뉴를 통해 액세스합니다.
 
 ![선택한 데이터 세트에 대해 줄임표 및 삭제 옵션이 강조 표시된 데이터 세트 작업 영역의 찾아보기 탭입니다.](../images/datasets/user-guide/inline-delete-dataset.png)
 
