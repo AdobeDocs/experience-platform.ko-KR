@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 Salesforce 서비스 클라우드 �
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Salesforce 서비스 클라우드에 연결하는 방법에 대해 알아봅니다.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '501'
 ht-degree: 1%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 1%
 | `username` | 에 대한 사용자 이름 [!DNL Salesforce Service Cloud] 사용자 계정입니다. |
 | `password` | 에 대한 암호 [!DNL Salesforce Service Cloud] 계정입니다. |
 | `securityToken` | 에 대한 보안 토큰 [!DNL Salesforce Service Cloud] 계정입니다. |
+| `apiVersion` | (선택 사항) 의 REST API 버전 [!DNL Salesforce Service Cloud] 사용 중인 인스턴스. 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 에 대한 연결 사양 ID [!DNL Salesforce Service Cloud] 은(는) `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
 시작에 대한 자세한 내용은 다음을 참조하십시오. [이 Salesforce 서비스 클라우드 문서](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
@@ -62,28 +63,28 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Base connection for salesforce service cloud",
-        "description": "Base connection for salesforce service cloud",
-        "auth": {
-            "specName": "Basic Authentication",
-            "params": {
-                "username": "{USERNAME}",
-                "password": "{PASSWORD}",
-                "securityToken": "{SECURITY_TOKEN}"
-            }
-        },
-        "connectionSpec": {
-            "id": "b66ab34-8619-49cb-96d1-39b37ede86ea",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Base connection for salesforce service cloud",
+      "description": "Base connection for salesforce service cloud",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "securityToken": "{SECURITY_TOKEN}"
+          }
+      },
+      "connectionSpec": {
+          "id": "b66ab34-8619-49cb-96d1-39b37ede86ea",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | 매개변수 | 설명 |

@@ -1,17 +1,15 @@
 ---
-keywords: Experience Platform;홈;인기 항목;crm 스키마;crm;CRM;Salesforce;Salesforce
-solution: Experience Platform
 title: Salesforce 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce를 Adobe Experience Platform에 연결하는 방법에 대해 알아봅니다.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
 
-# [!DNL Salesforce] 커넥터
+# [!DNL Salesforce]
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
@@ -52,12 +50,12 @@ Platform 개발자 콘솔 및 [!DNL Postman] 을(를) 설정하면 이제 적절
 | 변수 | 설명 | 예 |
 | --- | --- | --- |
 | `CLIENT_SECRET` | 를 생성하는 데 사용되는 고유 식별자 `{ACCESS_TOKEN}`. 다음 튜토리얼 참조: [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md) 을(를) 검색하는 방법에 대한 자세한 내용은 `{CLIENT_SECRET}`. | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | JSON 웹 토큰(JWT)은 {ACCESS_TOKEN}을 생성하는 데 사용되는 인증 자격 증명입니다. 다음 튜토리얼 참조: [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md) 를 생성하는 방법에 대한 자세한 내용은 `{JWT_TOKEN}`. | `{JWT_TOKEN}` |
+| `JWT_TOKEN` | JSON 웹 토큰(JWT)은 을 생성하는 데 사용되는 인증 자격 증명입니다. {ACCESS_TOKEN}. 다음 튜토리얼 참조: [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md) 를 생성하는 방법에 대한 자세한 내용은 `{JWT_TOKEN}`. | `{JWT_TOKEN}` |
 | `API_KEY` | Experience Platform API 호출을 인증하는 데 사용되는 고유 식별자입니다. 다음 튜토리얼 참조: [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md) 을(를) 검색하는 방법에 대한 자세한 내용은 `{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `ACCESS_TOKEN` | Experience Platform API 호출을 완료하는 데 필요한 인증 토큰입니다. 다음 튜토리얼 참조: [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md) 을(를) 검색하는 방법에 대한 자세한 내용은 `{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | 에 관하여 [!DNL Marketo], 이 값은 고정되어 있으며 항상 다음으로 설정됩니다. `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | 다음 `global` 컨테이너에는 모든 표준 Adobe 및 Experience Platform 파트너가 제공한 클래스, 스키마 필드 그룹, 데이터 유형 및 스키마가 포함됩니다. 에 관하여 [!DNL Marketo], 이 값은 고정되며 항상 로 설정됩니다. `global`. | `global` |
-| `PRIVATE_KEY` | 인증에 사용되는 자격 증명 [!DNL Postman] Experience Platform API에 대한 인스턴스. 개발자 콘솔 설정에 대한 자습서 및 [개발자 콘솔 설정 및 [!DNL Postman]](../../../landing/postman.md) {PRIVATE_KEY}을(를) 검색하는 방법에 대한 지침입니다. | `{PRIVATE_KEY}` |
+| `PRIVATE_KEY` | 인증에 사용되는 자격 증명 [!DNL Postman] Experience Platform API에 대한 인스턴스. 개발자 콘솔 설정에 대한 자습서 및 [개발자 콘솔 설정 및 [!DNL Postman]](../../../landing/postman.md) 을(를) 검색하는 방법에 대한 지침을 보려면 {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Adobe I/O에 통합하는 데 사용되는 자격 증명입니다. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | IMS(Identity Management System)는 Adobe 서비스에 인증을 위한 프레임워크를 제공합니다. 에 관하여 [!DNL Marketo], 이 값은 고정되어 있으며 항상 다음과 같이 설정됩니다. `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | 제품 및 서비스를 소유하거나 라이선스를 부여하고 해당 구성원에 대한 액세스를 허용할 수 있는 법인 엔티티입니다. 다음 튜토리얼 참조: [개발자 콘솔 설정 및 [!DNL Postman]](../../../landing/postman.md) 을(를) 검색하는 방법에 대한 지침을 보려면 `{ORG_ID}` 정보. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |

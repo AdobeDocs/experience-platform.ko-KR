@@ -1,10 +1,8 @@
 ---
 title: UI에서 SAP Commerce 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 SAP Commerce 소스 연결을 만드는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 1%

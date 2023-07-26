@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 Salesforce 기본 연결 만들기
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Salesforce 계정에 연결하는 방법에 대해 알아봅니다.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,8 @@ ht-degree: 1%
 | `username` | 의 사용자 이름 [!DNL Salesforce] 사용자 계정입니다. |
 | `password` | 에 대한 암호 [!DNL Salesforce] 사용자 계정입니다. |
 | `securityToken` | 에 대한 보안 토큰 [!DNL Salesforce] 사용자 계정입니다. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 에 대한 연결 사양 ID [!DNL AdWords] 은(는) `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+| `apiVersion` | (선택 사항) 의 REST API 버전 [!DNL Salesforce] 사용 중인 인스턴스. 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 에 대한 연결 사양 ID [!DNL Salesforce] 은(는) `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 시작하기에 대한 자세한 내용은 다음을 참조하십시오. [이 Salesforce 문서](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
 
@@ -49,8 +50,7 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-POST 기본 연결 ID를 만들려면 `/connections` 을(를) 제공하는 동안 엔드포인트 [!DNL Salesforce] 요청 매개 변수의 일부로 인증 자격 증명을 사용합니다.
-
+POST 기본 연결 ID를 만들려면 `/connections` 엔드포인트 및 제공 [!DNL Salesforce] 요청 본문의 인증 자격 증명입니다.
 
 **API 형식**
 
@@ -64,28 +64,28 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Salesforce Connection",
-        "description": "Connection for Salesforce account",
-        "auth": {
-            "specName": "Basic Authentication",
-            "params": {
-                "username": "{USERNAME}",
-                "password": "{PASSWORD}",
-                "securityToken": "{SECURITY_TOKEN}"
-            }
-        },
-        "connectionSpec": {
-            "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Salesforce Connection",
+      "description": "Connection for Salesforce account",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {****
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "securityToken": "{SECURITY_TOKEN}"
+          }
+      },
+      "connectionSpec": {
+          "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | 속성 | 설명 |

@@ -2,10 +2,8 @@
 title: SAP Commerce 소스 개요
 description: API 또는 사용자 인터페이스를 사용하여 SAP Commerce를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 2%
