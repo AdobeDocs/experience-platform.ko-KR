@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 7월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 85240b7d8f187e3d95762b9afbd8b8507869dabc
+source-git-commit: 134c18822350a0032bb9957e6e0d1ab888c6b289
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 38%
+source-wordcount: '659'
+ht-degree: 33%
 
 ---
 
@@ -29,6 +29,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | 유형 | 기능 | 설명 |
 | --- | --- | --- |
 | 태그 및 이벤트 전달 | 데이터 수집 감사 로그 | 이제 태그 및 이벤트 전달에서 작업이 수행된 시기와 이 작업을 수행한 사용자를 볼 수 있습니다. 이를 통해 제품 문제 해결, 적절한 거버넌스 및 내부 감사 활동이 용이해집니다. 이 감사 데이터는 빠른 작업 및 리소스 상태 업데이트도 포함된 상황에 맞는 슬라이드 아웃 메뉴를 통해 표시됩니다. 이 데이터는 다음 화면의 태그 및 이벤트 전달 UI에서 볼 수 있습니다.<br><ul><li>[속성 개요](../../tags/ui/event-forwarding/overview.md#properties)</li><li>[규칙](../../tags/ui/event-forwarding/overview.md#rules)</li><li>[데이터 요소](../../tags/ui/event-forwarding/overview.md#data-elements)</li><li>[확장](../../tags/ui/event-forwarding/overview.md#extensions)</li><li>[라이브러리 검토](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li><li>[라이브러리 마지막 빌드 및 게시](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li></ul> |
+| 데이터스트림 | [지역 조회](../../datastreams/configure.md#advanced-options) | 이제 다음과 같은 정보를 포함하도록 데이터스트림에 대한 지리적 위치 및 네트워크 조회를 구성할 수 있습니다. <ul><li>국가</li><li>우편 번호</li><li>시/도</li><li>DMA</li><li>구/군/시</li><li>위도 </li><li>경도</li><li>통신사</li><li>도메인</li><li>ISP</li></ul> 정확한 지리적 위치 정보를 포함한 개인 데이터를 수집, 처리 및 전송하기 위해 해당 법률 및 규정에 따라 필요한 모든 권한, 동의, 승인 및 인증을 획득했는지 확인할 책임이 있습니다. <br> IP 주소 난독화 선택은 IP 주소에서 파생되어 구성된 Adobe 솔루션으로 전송되는 지리적 위치 정보 수준에 영향을 주지 않습니다. 지리적 위치 조회는 별도로 제한하거나 비활성화해야 합니다. <br> 다음을 참조하십시오. [데이터스트림 설명서](../../datastreams/configure.md#advanced-options) 을 참조하십시오. |
 
 {style="table-layout:auto"}
 
