@@ -1,14 +1,14 @@
 ---
 title: 매개 변수가 있는 쿼리
 description: Adobe Experience Platform UI에서 매개 변수가 있는 쿼리를 사용하는 방법에 대해 알아봅니다.
-source-git-commit: d927f1f98c1f3a42907501921fcd2367241fa625
+source-git-commit: d8845e080489af12e98badc892bb60cb9749bd47
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
 
-# 매개 변수가 있는 쿼리
+# 매개 변수가 있는 쿼리(제한된 릴리스)
 
 >[!IMPORTANT]
 >
