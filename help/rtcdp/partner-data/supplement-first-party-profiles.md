@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
 source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1083'
 ht-degree: 100%
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 >[!AVAILABILITY]
 >
->* 이 베타 기능은 라이선스가 부여된 Real-Time CDP(앱 서비스), Adobe Experience Platform 액티베이션, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate를 보유하고 있는 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
+>* 이 베타 기능은 라이선스가 부여된 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate를 보유하고 있는 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
 
 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선합니다.
 
@@ -87,7 +87,7 @@ Commenting out links for now
 >데이터 공급업체의 사용자 기반 식별자로 고객 프로필을 보완하도록 선택한 경우 **[[!UICONTROL 파트너 ID]](/help/identity-service/namespaces.md)** 유형의 새 ID 유형을 생성할 수 있습니다.
 >
 >[ID 유형 섹션](/help/identity-service/namespaces.md)의 파트너 ID에 대해 자세히 알아보십시오.
->Experience Platform 사용자 인터페이스의 [ID 필드를 정의하는 방법](/help/xdm/ui/fields/identity.md)에 대해 알아보십시오.
+>Experience Platform 사용자 인터페이스에서 [ID 필드를 정의하는 방법](/help/xdm/ui/fields/identity.md)에 대해 알아보십시오.
 
 ### 개인 식별 정보(PII) 또는 해시된 PII를 제거할 때 보강하려는 대상자를 내보냅니다. {#export-audiences}
 
