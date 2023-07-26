@@ -1,24 +1,34 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
-description: Adobe Experience Platform의 2023년 7월 릴리스 정보.
+description: Adobe Experience Platform의 2023년 6월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 134c18822350a0032bb9957e6e0d1ab888c6b289
+source-git-commit: 61247a5cac0f00a4163007fd693d3a0b0efc23ab
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 33%
+source-wordcount: '1538'
+ht-degree: 100%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2023년 7월 26일**
+**릴리스 일자: 2023년 6월 21일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [Experience Platform API 인증](#authentication-platform-apis)
 - [데이터 수집](#data-collection)
-- [데이터 준비](#data-prep)
-- [Segmentation Service](#segmentation)
+- [대상](#destinations)
+- [경험 데이터 모델 (XDM)](#xdm)
+- [쿼리 서비스](#query-service)
 - [소스](#sources)
+
+## Experience Platform API 인증 {#authentication-platform-apis}
+
+Experience Platform API 사용자의 경우 이제 API 엔드포인트를 인증하고 호출하는 데 필요한 액세스 토큰을 얻는 방법이 간소화되었습니다. 액세스 토큰을 얻기 위한 JWT 방법은 더 이상 사용되지 않으며 더 간단한 OAuth 서버 간 인증 방법으로 대체됩니다.<p>![액세스 토큰을 가져오는 새로운 OAuth 인증 방법(강조 표시).](/help/landing/images/api-authentication/oauth-authentication-method.png "액세스 토큰을 가져오는 새로운 OAuth 인증 방법(강조 표시)."){width="100" zoomable="yes"}</p>
+
+JWT 인증 방법을 사용하는 기존 API 통합은 2025년 1월 1일까지 계속 작동하지만, Adobe는 해당 날짜 이전에 기존 통합을 새로운 OAuth 서버 간 방법으로 마이그레이션할 것을 강력히 권장합니다. [ 서비스 계정(JWT) 자격 증명에서 OAuth 서버 간 자격 증명으로 마이그레이션하는 방법](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)에 관한 안내서를 참조하십시오.
+
+자세한 내용은 업데이트된 [Experience Platform 인증 튜토리얼](/help/landing/api-authentication.md)을 참조하십시오.
 
 ## 데이터 수집 {#data-collection}
 
@@ -28,52 +38,115 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 유형 | 기능 | 설명 |
 | --- | --- | --- |
-| 태그 및 이벤트 전달 | 데이터 수집 감사 로그 | 이제 태그 및 이벤트 전달에서 작업이 수행된 시기와 이 작업을 수행한 사용자를 볼 수 있습니다. 이를 통해 제품 문제 해결, 적절한 거버넌스 및 내부 감사 활동이 용이해집니다. 이 감사 데이터는 빠른 작업 및 리소스 상태 업데이트도 포함된 상황에 맞는 슬라이드 아웃 메뉴를 통해 표시됩니다. 이 데이터는 다음 화면의 태그 및 이벤트 전달 UI에서 볼 수 있습니다.<br><ul><li>[속성 개요](../../tags/ui/event-forwarding/overview.md#properties)</li><li>[규칙](../../tags/ui/event-forwarding/overview.md#rules)</li><li>[데이터 요소](../../tags/ui/event-forwarding/overview.md#data-elements)</li><li>[확장](../../tags/ui/event-forwarding/overview.md#extensions)</li><li>[라이브러리 검토](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li><li>[라이브러리 마지막 빌드 및 게시](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li></ul> |
-| 데이터스트림 | [지역 조회](../../datastreams/configure.md#advanced-options) | 이제 다음과 같은 정보를 포함하도록 데이터스트림에 대한 지리적 위치 및 네트워크 조회를 구성할 수 있습니다. <ul><li>국가</li><li>우편 번호</li><li>시/도</li><li>DMA</li><li>구/군/시</li><li>위도 </li><li>경도</li><li>통신사</li><li>도메인</li><li>ISP</li></ul> 정확한 지리적 위치 정보를 포함한 개인 데이터를 수집, 처리 및 전송하기 위해 해당 법률 및 규정에 따라 필요한 모든 권한, 동의, 승인 및 인증을 획득했는지 확인할 책임이 있습니다. <br> IP 주소 난독화 선택은 IP 주소에서 파생되어 구성된 Adobe 솔루션으로 전송되는 지리적 위치 정보 수준에 영향을 주지 않습니다. 지리적 위치 조회는 별도로 제한하거나 비활성화해야 합니다. <br> 다음을 참조하십시오. [데이터스트림 설명서](../../datastreams/configure.md#advanced-options) 을 참조하십시오. |
+| 확장 기능 | [!DNL Google Cloud Platform] 이벤트 전달 확장 기능 | [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) 이벤트 전달 확장 기능을 사용하면 활성화를 위해 [!DNL Google Pub/Sub]을 통하여 이벤트 데이터를 Google로 전달할 수 있습니다. |
+| 확장 기능 | [!DNL Cloud connector for Google Analytics 4 (ga4)] 확장 기능 | [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) 이벤트 전달 확장 기능을 사용하면 새로운 [!DNL Google Analytics 4 (ga4)] 표준을 통해 분석을 추적할 수 있습니다. |
+| Secret | OAuth 2 JWT Secret | [OAuth 2 JWT Secret](../../tags/ui/event-forwarding/secrets.md)을 사용하면 Adobe 및 [!DNL Google] 서비스 토큰을 사용해 이벤트 전달에서 서버 간 상호 작용을 지원할 수 있습니다. |
 
 {style="table-layout:auto"}
 
-데이터 수집에 대한 자세한 내용은 [데이터 컬렉션 개요](../../tags/home.md).
+데이터 수집에 대해 자세히 알아보려면 [데이터 수집 개요](../../tags/home.md)를 참조하십시오.
 
-## 데이터 준비 {#data-prep}
+## 대상 {#destinations}
 
-데이터 준비를 사용하면 데이터 엔지니어가 XDM(Experience Data Model)과의 데이터를 매핑, 변환 및 확인할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-**새로운 기능 또는 업데이트된 기능**
+**새로운 대상 또는 업데이트된 대상** {#new-updated-destinations}
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] 연결](../../destinations/catalog/advertising/amazon-ads.md) | Adobe Experience Platform과의 [!DNL Amazon Ads] 통합은 이제 다양한 [!DNL Amazon Ads] 마켓플레이스에 대한 지역 라우팅을 지원합니다. 자세한 내용은 [대상 변경 로그](../../destinations/catalog/advertising/amazon-ads.md#changelog)를 참조하십시오. |
+
+{style="table-layout:auto"}
+
+**새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
+
+| 기능 | 설명 |
+| ----------- | ----------- |
+| [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 대상에 대한 작업 영역 지원. | 이제 새 Adobe Target 대상 연결을 구성할 때 대상자를 공유할 Adobe Target 작업 영역을 선택할 수 있습니다. 자세한 내용은 [연결 매개변수](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) 섹션을 참조하십시오. 추가로 작업 영역에 대한 자세한 내용은 Adobe Target에서 [작업 공간을 구성하는 방법](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en)에 대한 튜토리얼을 참조하십시오. |
+
+{style="table-layout:auto"}
+
+<!--
+
+**Fixes and enhancements** {#destinations-fixes-and-enhancements}
+
+- Placeholder for fixes and enhancements
+
+-->
+
+대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
+
+## 경험 데이터 모델 (XDM) {#xdm}
+
+XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
+
+**새로운 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 |
+| --- | --- | --- |
+| 확장 기능 (잠재 고객 프로필) | [[!UICONTROL Adobe 통합 프로필 서비스 잠재 고객 프로필 합집합 확장 기능]](https://github.com/adobe/xdm/pull/1735/files) | 잠재 고객 프로필 공용 구조체 스키마에 대한 필수 필드를 추가했습니다. |
+| 확장 기능 | [[!UICONTROL 자산 결정]](https://github.com/adobe/xdm/pull/1732/files) | 의사 결정에 사용되는 자산을 나타내는 데이터 유형을 추가합니다. [!UICONTROL 자산 결정]은 `decisionItems`를 렌더링하는 데 사용되는 자산에 대한 참조를 제공합니다. |
+| 데이터 유형 | [[!UICONTROL 상거래]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL 상거래]는 구매 및 판매 활동과 관련된 기록을 저장합니다. |
+| 필드 그룹 | [[!UICONTROL 프로필 파트너 보강(샘플)]](https://github.com/adobe/xdm/pull/1747/files) | 프로필 파트너 보강을 위해 샘플 스키마가 추가되었습니다. |
+| 필드 그룹 | [[!UICONTROL 파트너 잠재 고객 세부 정보(샘플)]](https://github.com/adobe/xdm/pull/1747/files) | 데이터 공급업체의 잠재 고객 프로필 확장 기능에 대한 샘플 스키마가 추가되었습니다. |
+| 데이터 유형 | [[!UICONTROL 상거래 범위]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL 상거래 범위]는 이벤트가 발생한 위치를 나타냅니다. 예를 들면 스토어 보기, 스토어 또는 웹 사이트 등이 있습니다. |
+| 데이터 유형 | [[!UICONTROL 과금]](https://github.com/adobe/xdm/pull/1734/files) | 하나 이상의 결제에 대한 과금 정보가 [!UICONTROL 상거래] 스키마에 추가되었습니다. |
+
+{style="table-layout:auto"}
+
+**업데이트된 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 업데이트 |
+| --- | --- | --- |
+| 필드 그룹 | [[!UICONTROL MediaAnalytics 상호 작용 세부 정보]](https://github.com/adobe/xdm/pull/1736/files) | `bitrateAverageBucket`이 100에서 “800-899”로 변경되었습니다. |
+| 데이터 유형 | [[!UICONTROL Qoe 데이터 세부 정보]](https://github.com/adobe/xdm/pull/1736/files) | `bitrateAverageBucket` 데이터 유형이 문자열로 변경되었습니다. |
+| 필드 그룹 | [[!UICONTROL 세그먼트 멤버십 세부 정보]](https://github.com/adobe/xdm/pull/1735/files) | 잠재 고객 프로필 클래스에 추가되었습니다. |
+| 스키마 | [[!UICONTROL 계산된 속성 시스템 스키마]](https://github.com/adobe/xdm/pull/1735/files) | [!UICONTROL 계산된 속성 시스템 스키마]에 ID 맵이 추가되었습니다 |
+| 데이터 유형 | [[!UICONTROL Content Delivery Network]](https://github.com/adobe/xdm/pull/1733/files) | 사용된 콘텐츠 게재 네트워크를 설명하는 필드가 [!UICONTROL 세션 세부 정보]에 추가되었습니다. |
+| 확장 기능 | [[!UICONTROL Adobe 통합 프로필 서비스 계정 합집합 확장 기능]](https://github.com/adobe/xdm/pull/1731/files) | ID 맵이 [!UICONTROL Adobe 통합 프로필 서비스 계정 합집합 확장 기능]에 추가되었습니다. |
+| 데이터 유형 | [[!UICONTROL 주문]](https://github.com/adobe/xdm/pull/1730/files) | `discountAmount`가 [!UICONTROL 주문]에 추가되었습니다. 이는 일반 주문 가격과 특별 가격 간의 차이를 나타냅니다. 개별 상품이 아닌 전체 주문에 적용됩니다. |
+| 스키마 | [[!UICONTROL AEP 위생 작업 요청]](https://github.com/adobe/xdm/pull/1728/files) | 데이터 위생 작업을 처리하는 서비스 이름을 제공하기 위해 `targetServices` 필드가 추가되었습니다. |
+| 데이터 유형 | [[!UICONTROL 배송]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode`가 하나 이상의 제품에 대한 배송 정보에 추가되었습니다. 제품 가격 책정에 사용되는 ISO 4217 알파벳 통화 코드입니다. |
+| 데이터 유형 | [[!UICONTROL 애플리케이션]](https://github.com/adobe/xdm/pull/1726/files) | 애플리케이션에 사용자의 언어적, 지리적 또는 문화적 환경 설정을 제공하기 위해 `language` 필드가 추가되었습니다. |
+| 확장 기능 | [[!UICONTROL AJO 엔티티 필드]](https://github.com/adobe/xdm/pull/1746/files) | 메시지가 마지막으로 수정된 시간을 나타내기 위해 [!UICONTROL AJO 타임스탬프 엔티티]가 추가되었습니다. |
+| 데이터 유형 | (다수) | 일관성을 위해 여러 데이터 유형에서 [여러 미디어 세부 정보를 제거](https://github.com/adobe/xdm/pull/1739/files)했습니다. |
+
+{style="table-layout:auto"}
+
+Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
+
+## 쿼리 서비스 {#query-service}
+
+쿼리 서비스를 사용하면 표준 SQL을 사용하여 Adobe Experience Platform 데이터 레이크에서 데이터를 쿼리할 수 있습니다. 데이터 레이크의 데이터 세트에 참여하고 쿼리 결과를 보고 또는 Data Science Workspace에 사용하거나 실시간 고객 프로필에 수집하기 위한 새 데이터 세트로 캡처할 수 있습니다.
+
+**업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 신규 매퍼 함수 | 이제 데이터 준비에서 개체를 매핑할 때 다음 함수를 사용할 수 있습니다. <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> 이러한 함수에 대한 자세한 내용은 [데이터 준비 기능 안내서](../../data-prep/functions.md#hierarchies---objects). |
+| 인라인 템플릿 | 쿼리 서비스는 이제 SQL 내의 다른 템플릿을 참조하는 템플릿 사용을 지원합니다. 쿼리에서 인라인 템플릿을 활용하여 워크로드를 줄이고 오류를 방지할 수 있습니다. 명령문 또는 조건을 재사용하고 중첩된 템플릿을 참조하여 SQL의 유연성을 높일 수 있습니다. 템플릿으로 저장할 수 있는 쿼리 크기 또는 원래 쿼리에서 참조할 수 있는 템플릿 수에는 제한이 없습니다. 자세한 내용은 [인라인 템플릿 안내서](../../query-service/essential-concepts/inline-templates.md)를 참조하십시오. |
+| 예약된 쿼리 UI 업데이트 | [[!UICONTROL 예약된 쿼리 탭]](../../query-service/ui/monitor-queries.md#inline-actions)을 사용하여 UI의 한 위치에서 예약된 모든 쿼리를 관리합니다. 인라인 쿼리 작업 및 새로운 쿼리 상태 열이 추가되어 [!UICONTROL 예약된 쿼리] UI가 개선되었습니다. 최근 추가된 사항으로는 일정을 활성화, 비활성화 및 삭제하거나 [!UICONTROL 예약된 쿼리] 보기에서 직접 실행되는 예정 쿼리에 대해 경고를 구독하는 기능이 있습니다. <p>![[!UICONTROL 예약된 쿼리] 보기에서 강조 표시된 인라인 작업.](../../query-service/images/ui/monitor-queries/disable-inline.png "[!UICONTROL 예약된 쿼리] 보기에서 강조 표시된 인라인 작업."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
-데이터 준비에 대한 자세한 내용은 [데이터 준비 개요](../../data-prep/home.md)를 참조하십시오.
-
-## Segmentation Service {#segmentation}
-
-[!DNL Segmentation Service] 에 저장된 데이터를 세그먼트화할 수 있습니다. [!DNL Experience Platform] 고객, 잠재 고객, 사용자 또는 조직과 같은 개인 사용자를 대상으로 합니다. 에서 세그먼트 정의 또는 기타 소스를 통해 대상자를 만들 수 있습니다. [!DNL Real-Time Customer Profile] 데이터. 이러한 대상은에서 중앙 집중식으로 구성 및 유지 관리됩니다. [!DNL Platform]및 는 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
-
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| ------- | ----------- |
-| Audience 포털 | Audience Portal에서는 Adobe Experience Platform 내의 대상에 액세스, 생성 및 관리할 수 있는 새로운 탐색 환경을 제공합니다. Audience Portal에서는 플랫폼에서 생성한 및 외부에서 생성된 대상을 보고, 필터링, 폴더 및 태그를 통해 작업 효율성을 개선하고, 플랫폼에서 생성한 대상을 만들고, CSV 파일을 통해 외부에서 생성된 대상을 가져올 수 있습니다. 대상 포털에 대한 자세한 내용은 다음을 참조하십시오. [세그먼테이션 서비스 UI 안내서](../../segmentation/ui/overview.md). |
-| 대상자 구성 | 대상 컴포지션은 다양한 작업을 나타내는 데 사용되는 블록을 사용하여 대상을 작성하고 편집하는 사용하기 쉬운 작업 영역을 제공합니다. 대상자 구성에 대한 자세한 내용은 [대상 구성 UI 안내서](../../segmentation/ui/audience-composition.md). |
-
-에 대한 자세한 내용 [!DNL Segmentation Service], 다음을 읽으십시오. [세그먼테이션 개요](../../segmentation/home.md).
+쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md)를 참조하십시오.
 
 ## 소스 {#sources}
 
+Adobe Experience Platform은 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 라벨링하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
-**새로운 기능 또는 업데이트된 기능**
+**업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative}[!DNL SAP Commerce] | 이제 다음을 사용할 수 있습니다. [[!DNL SAP Commerce] 소스](../../sources/connectors/ecommerce/sap-commerce.md) 에서 구독 청구 데이터를 가져오려면 [!DNL SAP Commerce] Experience Platform 계정. |
-| [!DNL Phoenix] 지원 | 이제 다음을 사용할 수 있습니다. [[!DNL Phoenix] 소스](../../sources/connectors/databases/phoenix.md) 에서 데이터를 가져오려면 [!DNL Phoenix] Experience Platform 대상 데이터베이스. |
-| 에 대한 인증 업데이트 [!DNL Salesforce] 및 [!DNL Salesforce Service Cloud] | 이제 의 API 버전을 지정할 수 있습니다. [[!DNL Salesforce]](../../sources/connectors/crm/salesforce.md) 및 [[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md) 소스: Experience Platform UI 또는 [!DNL Flow Service] API. |
+| Adobe Analytics 분류 소스 데이터 흐름 삭제 지원 | 이제 Adobe Analytics 분류를 소스로 사용하는 소스 데이터 흐름을 삭제할 수 있습니다. **[!UICONTROL 소스]** > **[!UICONTROL 데이터 흐름]**&#x200B;에서 원하는 데이터 흐름을 선택한 다음 삭제를 선택합니다. 자세한 내용은 [Adobe Analytics 분류 데이터의 소스 연결을 만드는 방법](../../sources/tutorials/ui/create/adobe-applications/classifications.md)에 관한 안내서를 참조하십시오. |
+| [!DNL Microsoft Dynamics]에 대한 API 사용 필터링 지원 | 논리 및 비교 연산자를 사용하여 [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) 소스의 행 수준 데이터를 필터링합니다. 자세한 내용은 [API를 사용하여 소스의 데이터를 필터링하는 방법](../../sources/tutorials/api/filter.md)에 관한 안내서를 참조하십시오. |
+| [!BADGE Beta]{type=Informative}[!DNL RainFocus] | 이제 [!DNL RainFocus] 소스 통합을 사용해 Experience Platform [!DNL RainFocus] 계정의 이벤트 관리 및 분석 데이터를 가져올 수 있습니다. 자세한 내용은 [[!DNL RainFocus] 소스 개요](../../sources/connectors/analytics/rainfocus.md)를 참조하십시오. |
+| Adobe Commerce 지원 | 이제 Adobe Commerce 소스 통합을 사용해 Experience Platform Adobe Commerce 계정의 데이터를 가져올 수 있습니다. 자세한 내용은 [Adobe Commerce 소스 개요](../../sources/connectors/adobe-applications/commerce.md)를 참조하십시오. |
+| [!DNL Mixpanel] 지원 | 이제 [!DNL Mixpanel] 소스 통합을 사용해 API 또는 사용자 인터페이스를 사용하여 Experience Platform [!DNL Mixpanel] 계정의 분석 데이터를 가져올 수 있습니다. 자세한 내용은 [[!DNL Mixpanel] 소스 개요](../../sources/connectors/analytics/mixpanel.md)를 참조하십시오. |
+| [!DNL Zendesk] 지원 | 이제 [!DNL Zendesk] 소스 통합을 사용해 API 또는 사용자 인터페이스를 사용하여 Experience Platform [!DNL Zendesk] 계정의 고객 성공 데이터를 가져올 수 있습니다. 자세한 내용은 [[!DNL Zendesk] 소스 개요](../../sources/connectors/customer-success/zendesk.md)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
-소스에 대한 자세한 내용은 [소스 개요](../../sources/home.md).
+소스에 대해 자세히 알아보려면 [소스 개요 ](../../sources/home.md)를 참조하십시오.

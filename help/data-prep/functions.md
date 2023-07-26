@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 준비 매핑 기능
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: c9fb9320c7ef1da5aba41b3d01bca44b07ec6c17
+source-git-commit: 61247a5cac0f00a4163007fd693d3a0b0efc23ab
 workflow-type: tm+mt
-source-wordcount: '5221'
+source-wordcount: '4916'
 ht-degree: 3%
 
 ---
@@ -148,9 +148,9 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 무효화 | 속성 값을 로 설정합니다. `null`. 필드를 대상 스키마에 복사하지 않으려는 경우 사용해야 합니다. | | 무효화() | 무효화() | `null` |
 | get_keys | 키/값 쌍을 구문 분석하고 모든 키를 반환합니다. | <ul><li>개체: **필수** 키를 추출할 개체입니다.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Pride and Preference&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | 키/값 쌍을 구문 분석하고 지정된 키를 기준으로 문자열 값을 반환합니다. | <ul><li>문자열: **필수** 구문 분석할 문자열입니다.</li><li>키: **필수** 값을 추출해야 하는 키입니다.</li><li>VALUE_DELIMITER: **필수** 필드와 값을 구분하는 구분 기호입니다. 다음 중 하나의 경우: `null` 빈 문자열이 제공된 경우 이 값은 다음과 같습니다. `:`.</li><li>필드 구분 기호: *선택 사항* 필드 쌍과 값 쌍을 구분하는 구분 기호입니다. 다음 중 하나의 경우: `null` 빈 문자열이 제공된 경우 이 값은 다음과 같습니다. `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
-| map_get_values | 맵과 키 입력을 가져옵니다. 입력이 단일 키인 경우 함수는 해당 키와 연관된 값을 반환합니다. 입력이 문자열 배열이면 함수는 제공된 키에 해당하는 모든 값을 반환합니다. 들어오는 맵에 중복 키가 있는 경우 반환 값은 키를 중복 제거하고 고유 값을 반환해야 합니다. | <ul><li>맵: **필수** 입력 맵 데이터.</li><li>키:  **필수** 키는 단일 문자열 또는 문자열 배열일 수 있습니다. 다른 기본 유형(데이터/숫자)이 제공되면 문자열로 처리됩니다.</li></ul> | get_values(MAP, KEY) | 다음을 참조하십시오. [부록](#map_get_values) 코드 샘플. | |
-| map_has_keys | 하나 이상의 입력 키가 제공되면 함수는 true를 반환합니다. 문자열 배열이 입력으로 제공되면 함수는 발견되는 첫 번째 키에 true를 반환합니다. | <ul><li>맵:  **필수** 입력 맵 데이터</li><li>키:  **필수** 키는 단일 문자열 또는 문자열 배열일 수 있습니다. 다른 기본 유형(데이터/숫자)이 제공되면 문자열로 처리됩니다.</li></ul> | map_has_keys(MAP, KEY) | 다음을 참조하십시오. [부록](#map_has_keys) 코드 샘플. | |
-| add_to_map | 최소 두 개 이상의 입력을 허용합니다. 맵의 수는 입력으로서 제공될 수 있다. 데이터 준비는 모든 입력의 모든 키-값 쌍이 있는 단일 맵을 반환합니다. 하나 이상의 키가 동일한 맵에서 또는 맵 간에 반복되는 경우, 데이터 준비는 첫 번째 키-값 쌍이 입력에서 전달된 순서대로 유지되도록 키를 중복 제거합니다. | 맵: **필수** 입력 맵 데이터. | add_to_map(지도 1, 지도 2, 지도 3, ...) | 다음을 참조하십시오. [부록](#add_to_map) 코드 샘플. | |
+<!-- | map_get_values | Takes a map and a key input. If the input is a single key, then the function returns the value associated with that key. If the input is a string array, then the function returns all values corresponding to the keys provided. If the incoming map has duplicate keys, the return value must de-duplicate the keys and return unique values. | <ul><li>MAP: **Required** The input map data.</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | get_values(MAP, KEY) | Please see the [appendix](#map_get_values) for a code sample. | |
+| map_has_keys | If one or more input keys are provided, then the function returns true. If a string array is provided as input, then the function returns true on the first key that is found. | <ul><li>MAP:  **Required** The input map data</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | map_has_keys(MAP, KEY) | Please see the [appendix](#map_has_keys) for a code sample. | |
+| add_to_map | Accepts at least two inputs. Any number of maps can be provided as inputs. Data Prep returns a single map that has all key-value pairs from all the inputs. If one or more keys are repeated (in the same map or across maps), Data Prep de-duplicates the keys so that the first key-value pair persists in the order that they were passed in the input. | MAP: **Required** The input map data. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Please see the [appendix](#add_to_map) for a code sample. | | -->
 
 {style="table-layout:auto"}
 
@@ -381,12 +381,12 @@ address.line1 -> addr.addrLine1
 | 해커 | 이 장치 값은 스크립팅이 `useragent` 문자열. |
 
 {style="table-layout:auto"}
-
-### 코드 샘플 {#code-samples}
+<!-- 
+### Code samples {#code-samples}
 
 #### map_get_values {#map-get-values}
 
-+++예를 보려면 선택
++++Select to view example
 
 ```json
  example = "map_get_values(book_details,\"author\") where input is : {\n" +
@@ -404,7 +404,7 @@ address.line1 -> addr.addrLine1
 
 #### map_has_keys {#map_has_keys}
 
-+++예를 보려면 선택
++++Select to view example
 
 ```json
  example = "map_has_keys(book_details,\"author\")where input is : {\n" +
@@ -422,7 +422,7 @@ address.line1 -> addr.addrLine1
 
 #### add_to_map {#add_to_map}
 
-+++예를 보려면 선택
++++Select to view example
 
 ```json
 example = "add_to_map(book_details, book_details2) where input is {\n" +
@@ -454,4 +454,4 @@ example = "add_to_map(book_details, book_details2) where input is {\n" +
       returns = "A new map with all elements from map and addends"
 ```
 
-+++
++++ -->
