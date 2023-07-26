@@ -2,10 +2,10 @@
 title: Azure Blob 연결
 description: Azure Blob 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 CSV 데이터 파일을 정기적으로 내보냅니다.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 3%
+source-wordcount: '973'
+ht-degree: 4%
 
 ---
 
@@ -13,17 +13,9 @@ ht-degree: 3%
 
 ## 대상 변경 로그 {#changelog}
 
->[!IMPORTANT]
->
->데이터 세트 내보내기 기능의 베타 릴리스와 향상된 파일 내보내기 기능으로 이제 두 가지가 표시될 수 있습니다 [!DNL Azure Blob] 대상 카탈로그의 카드.
->* 이미 파일을 로 내보내고 있는 경우 **[!UICONTROL Azure Blob]** 대상: 새 데이터 흐름을 만드십시오. **[!UICONTROL Azure Blob 베타]** 대상.
->* 에 대한 데이터 흐름을 아직 만들지 않은 경우 **[!UICONTROL Azure Blob]** 대상, 새 대상을 사용하십시오. **[!UICONTROL Azure Blob 베타]** 파일을 내보낼 카드 **[!UICONTROL Azure Blob]**.
+2023년 7월 Experience Platform 릴리스에서는 [!DNL Azure Blob] 대상 은 아래에 나열된 새로운 기능을 제공합니다.
 
-![두 Azure Blob 대상 카드의 나란히 표시되는 이미지입니다.](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
-
-새로운 기능 개선 [!DNL Azure Blob] 대상 카드에는 다음이 포함됩니다.
-
-* [데이터 세트 내보내기 지원](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative}[데이터 세트 내보내기 지원](/help/destinations/ui/export-datasets.md).
 * 추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * 를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능 [매핑 단계 개선](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -110,9 +102,9 @@ ht-degree: 3%
 * **[!UICONTROL 설명]**: 이 대상에 대한 설명을 입력합니다.
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력합니다.
 * **[!UICONTROL 컨테이너]**: 의 이름을 입력합니다. [!DNL Azure Blob Storage] 이 대상에서 사용할 컨테이너입니다.
-* **[!UICONTROL 파일 유형]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 이 옵션은 에만 사용할 수 있습니다. **[!UICONTROL Azure Blob 베타]** 대상. 을(를) 선택할 때 [!UICONTROL CSV] 옵션을 사용하여 다음을 수행할 수도 있습니다. [파일 서식 옵션 구성](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 압축 포맷]**: 내보낸 파일에 대해 Experience Platform이 사용해야 하는 압축 유형을 선택합니다. 이 옵션은 에만 사용할 수 있습니다. **[!UICONTROL Azure Blob 베타]** 대상.
-* **[!UICONTROL 매니페스트 파일 포함]**: 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함된 매니페스트 JSON 파일을 내보내기에 포함하려면 이 옵션을 켜거나 끕니다. 이 옵션은 에만 사용할 수 있습니다. **[!UICONTROL Azure Blob 베타]** 대상.
+* **[!UICONTROL 파일 유형]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 을(를) 선택할 때 [!UICONTROL CSV] 옵션을 사용하여 다음을 수행할 수도 있습니다. [파일 서식 옵션 구성](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 압축 포맷]**: 내보낸 파일에 대해 Experience Platform이 사용해야 하는 압축 유형을 선택합니다.
+* **[!UICONTROL 매니페스트 파일 포함]**: 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함된 매니페스트 JSON 파일을 내보내기에 포함하려면 이 옵션을 켜거나 끕니다.
 
 ### 경고 활성화 {#enable-alerts}
 

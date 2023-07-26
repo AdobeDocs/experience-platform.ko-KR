@@ -1,19 +1,15 @@
 ---
-title: (베타) Azure Data Lake Storage Gen2 연결
+title: Azure Data Lake Storage Gen2 연결
 description: Azure Data Lake Storage Gen2에 연결하여 대상자를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '836'
-ht-degree: 1%
+source-wordcount: '805'
+ht-degree: 0%
 
 ---
 
-# (Beta)[!DNL Azure Data Lake Storage Gen2]연결
-
->[!IMPORTANT]
->
->이 대상은 현재 베타 버전이며 제한된 수의 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 [!DNL Azure Data Lake Storage Gen2] 연결, Adobe 담당자에게 연락하여 [!DNL Organization ID].
+# [!DNL Azure Data Lake Storage Gen2] 연결
 
 ## 개요 {#overview}
 

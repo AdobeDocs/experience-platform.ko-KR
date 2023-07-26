@@ -2,10 +2,10 @@
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 CSV 데이터 파일을 정기적으로 자체 S3 버킷으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 12%
+source-wordcount: '975'
+ht-degree: 14%
 
 ---
 
@@ -13,24 +13,12 @@ ht-degree: 12%
 
 ## 대상 변경 로그 {#changelog}
 
->[!IMPORTANT]
->
->데이터 세트 내보내기 기능의 베타 릴리스와 향상된 파일 내보내기 기능으로 이제 두 가지가 표시될 수 있습니다 [!DNL Amazon S3] 대상 카탈로그의 카드.
->* 이미 파일을 로 내보내고 있는 경우 **[!UICONTROL Amazon]** 대상. 새 데이터 흐름을 만드십시오. **[!UICONTROL Amazon S3 베타]** 대상.
->* 에 대한 데이터 흐름을 아직 만들지 않은 경우 **[!UICONTROL Amazon]** 대상, 새 대상을 사용하십시오. **[!UICONTROL Amazon S3 베타]** 파일을 내보낼 카드 **[!UICONTROL Amazon]**.
+2023년 7월 Experience Platform 릴리스에서는 [!DNL Amazon S3] 대상 은 아래에 나열된 새로운 기능을 제공합니다.
 
-![두 Amazon S3 대상 카드의 나란히 표시된 이미지](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
-
-새로운 기능 개선 [!DNL Amazon S3] 대상 카드에는 다음이 포함됩니다.
-
-* [데이터 세트 내보내기 지원](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative}[데이터 세트 내보내기 지원](/help/destinations/ui/export-datasets.md).
 * 추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * 를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능 [매핑 단계 개선](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).
-
-## 개요 {#overview}
-
-에 대한 실시간 아웃바운드 연결 만들기 [!DNL Amazon S3] Adobe Experience Platform의 데이터 파일을 고유한 S3 버킷으로 정기적으로 내보내는 저장소입니다.
 
 ## 다음에 연결 [!DNL Amazon S3] API 또는 UI를 통한 스토리지 {#connect-api-or-ui}
 
@@ -105,9 +93,9 @@ ht-degree: 12%
 * **[!UICONTROL 설명]**: 이 대상에 대한 설명을 입력합니다.
 * **[!UICONTROL 버킷 이름]**: 의 이름을 입력합니다. [!DNL Amazon S3] 이 대상에서 사용할 버킷.
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력합니다.
-* **[!UICONTROL 파일 유형]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 이 옵션은 에만 사용할 수 있습니다. **[!UICONTROL Amazon S3 베타]** 대상. 을(를) 선택할 때 [!UICONTROL CSV] 옵션을 사용하여 다음을 수행할 수도 있습니다. [파일 서식 옵션 구성](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 압축 포맷]**: 내보낸 파일에 대해 Experience Platform이 사용해야 하는 압축 유형을 선택합니다. 이 옵션은 에만 사용할 수 있습니다. **[!UICONTROL Amazon S3 베타]** 대상.
-* **[!UICONTROL 매니페스트 파일 포함]**: 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함된 매니페스트 JSON 파일을 내보내기에 포함하려면 이 옵션을 켜거나 끕니다. 이 옵션은 에만 사용할 수 있습니다. **[!UICONTROL Amazon S3 베타]** 대상.
+* **[!UICONTROL 파일 유형]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 을(를) 선택할 때 [!UICONTROL CSV] 옵션을 사용하여 다음을 수행할 수도 있습니다. [파일 서식 옵션 구성](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 압축 포맷]**: 내보낸 파일에 대해 Experience Platform이 사용해야 하는 압축 유형을 선택합니다.
+* **[!UICONTROL 매니페스트 파일 포함]**: 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함된 매니페스트 JSON 파일을 내보내기에 포함하려면 이 옵션을 켜거나 끕니다.
 
 >[!TIP]
 >

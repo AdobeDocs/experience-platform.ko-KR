@@ -4,10 +4,10 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 1e6cdbaa12c89dc678232245a9544bdfa81aebcf
 workflow-type: tm+mt
-source-wordcount: '3961'
-ht-degree: 10%
+source-wordcount: '3759'
+ht-degree: 11%
 
 ---
 
@@ -20,8 +20,6 @@ ht-degree: 10%
 > * 을(를) 거치지 않고 대상 활성화 [매핑 단계](#mapping) 워크플로의 경우 **[!UICONTROL 대상 관리]**, **[!UICONTROL 매핑 없이 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions).
 > 
 > 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
->
-> 향상된 파일 내보내기 기능 베타 프로그램에 참여하는 일부 고객은 새로운 기능을 보게 됩니다 **[!UICONTROL 매핑]** 에 대한 활성화 워크플로의 일부로 단계 [새로운 beta 클라우드 스토리지 대상](/help/release-notes/2022/october-2022.md#destinations). 다음을 고려하십시오. [알려진 제한 사항](#known-limitations) 를 릴리스의 일부로 추가합니다.
 
 ## 개요 {#overview}
 
@@ -193,10 +191,10 @@ ht-degree: 10%
 | **[!UICONTROL 대상 이름]** | 내보낸 대상자의 이름입니다. |
 | **[!UICONTROL 날짜 및 시간]** | 추가 중 선택 `MMDDYYYY_HHMMSS` 파일이 생성되는 시점의 UNIX 10자리 타임스탬프를 포맷합니다. 증분 내보내기마다 파일에 동적 파일 이름이 생성되도록 하려면 다음 옵션 중 하나를 선택합니다. |
 | **[!UICONTROL 사용자 정의 텍스트]** | 파일 이름에 추가할 사용자 지정 텍스트입니다. |
-| **[!UICONTROL 대상 ID]** | 대상자를 내보내는 데 사용하는 대상 데이터 흐름의 ID입니다. <br> **참고**: 이 파일 이름 추가 옵션은 향상된 파일 내보내기 기능 베타 프로그램에 참여하는 베타 고객만 사용할 수 있습니다. Beta 프로그램에 액세스하려면 Adobe 담당자 또는 고객 지원 센터에 문의하십시오. |
-| **[!UICONTROL 대상 이름]** | 대상을 내보내는 데 사용하는 대상 데이터 흐름의 이름입니다. <br> **참고**: 이 파일 이름 추가 옵션은 향상된 파일 내보내기 기능 베타 프로그램에 참여하는 베타 고객만 사용할 수 있습니다. Beta 프로그램에 액세스하려면 Adobe 담당자 또는 고객 지원 센터에 문의하십시오. |
-| **[!UICONTROL 조직 이름]** | Experience Platform 내 조직 이름. <br> **참고**: 이 파일 이름 추가 옵션은 향상된 파일 내보내기 기능 베타 프로그램에 참여하는 베타 고객만 사용할 수 있습니다. Beta 프로그램에 액세스하려면 Adobe 담당자 또는 고객 지원 센터에 문의하십시오. |
-| **[!UICONTROL 샌드박스 이름]** | 대상을 내보내는 데 사용하는 샌드박스의 ID입니다. <br> **참고**: 이 파일 이름 추가 옵션은 향상된 파일 내보내기 기능 베타 프로그램에 참여하는 베타 고객만 사용할 수 있습니다. Beta 프로그램에 액세스하려면 Adobe 담당자 또는 고객 지원 센터에 문의하십시오. |
+| **[!UICONTROL 대상 ID]** | 대상자를 내보내는 데 사용하는 대상 데이터 흐름의 ID입니다. |
+| **[!UICONTROL 대상 이름]** | 대상을 내보내는 데 사용하는 대상 데이터 흐름의 이름입니다. |
+| **[!UICONTROL 조직 이름]** | Experience Platform 내 조직 이름. |
+| **[!UICONTROL 샌드박스 이름]** | 대상을 내보내는 데 사용하는 샌드박스의 ID입니다. |
 
 {style="table-layout:auto"}
 
@@ -208,39 +206,44 @@ ht-degree: 10%
 
 모든 대상자 구성을 완료했으면 을 선택합니다. **[!UICONTROL 다음]** 계속합니다.
 
-## 프로필 속성 선택 {#select-attributes}
+## 매핑 {#mapping}
 
-프로필 기반 대상의 경우 대상 대상으로 전송할 프로필 속성을 선택해야 합니다.
+이 단계에서는 대상 대상으로 내보낸 파일에 추가할 프로필 속성을 선택해야 합니다. 내보낼 프로필 속성 및 ID를 선택하려면 다음을 수행하십시오.
 
-1. 다음에서 **[!UICONTROL 속성 선택]** 페이지, 선택 **[!UICONTROL 새 필드 추가]**.
+1. 다음에서 **[!UICONTROL 매핑]** 페이지, 선택 **[!UICONTROL 새 필드 추가]**.
 
-   ![새 필드 추가 단추를 강조 표시하는 이미지.](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
+   ![매핑 워크플로에서 강조 표시된 새 필드 컨트롤을 추가합니다.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
-1. 오른쪽 화살표를 선택합니다. **[!UICONTROL 스키마 필드]** 입력.
+1. 오른쪽 화살표를 선택합니다. **[!UICONTROL 소스 필드]** 입력.
 
-   ![이미지 강조 표시 소스 필드를 선택하는 방법.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
+   ![매핑 워크플로에서 강조 표시된 소스 필드 컨트롤을 선택합니다.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
-1. 다음에서 **[!UICONTROL 필드 선택]** 페이지에서 대상으로 전송할 XDM 속성 또는 ID 네임스페이스를 선택한 다음 을(를) 선택합니다 **[!UICONTROL 선택]**.
+1. 다음에서 **[!UICONTROL 소스 필드 선택]** 페이지를 열고 내보낸 파일에 대상에 포함할 프로필 속성 및 ID를 선택한 다음 을 선택합니다 **[!UICONTROL 선택]**.
 
-   ![소스 필드로 사용할 수 있는 다양한 필드를 보여주는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
+   >[!TIP]
+   > 
+   >아래 이미지에 표시된 대로 검색 필드를 사용하여 선택 항목의 범위를 좁힐 수 있습니다.
 
-1. 매핑을 더 추가하려면 1~3단계를 반복합니다.
+   ![대상으로 내보낼 수 있는 프로필 속성을 보여 주는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
 
->[!NOTE]
->
-> Adobe Experience Platform은 스키마에서 일반적으로 사용되는 네 가지 권장 속성으로 선택 사항을 미리 채웁니다. `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
-![대상자 활성화 워크플로의 매핑 단계에서 미리 채워진 권장 속성을 보여 주는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
+1. 내보내려고 선택한 필드가 매핑 보기에 나타납니다. 원하는 경우 내보낸 파일의 헤더 이름을 편집할 수 있습니다. 이렇게 하려면 대상 필드에서 아이콘을 선택합니다.
 
->[!IMPORTANT]
->
->알려진 제한 사항으로 인해 현재 를 사용할 수 없습니다. **[!UICONTROL 필드 선택]** 추가할 창 `segmentMembership.status` 를 파일로 내보냅니다. 대신 값을 수동으로 붙여넣어야 합니다 `xdm: segmentMembership.status` 아래 표시된 대로 스키마 필드로 이동합니다.
->
->![활성화 워크플로의 매핑 단계에서 대상 멤버십의 해결 방법을 보여 주는 화면 기록입니다.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+   ![대상으로 내보낼 수 있는 프로필 속성을 보여 주는 모달 창.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
 
-파일 내보내기는 다음에 따라 달라집니다 `segmentMembership.status` 이(가) 선택됨:
-* 다음과 같은 경우 `segmentMembership.status` 필드를 선택하고 내보낸 파일에는 다음이 포함됩니다. **[!UICONTROL 활성]** 초기 전체 스냅샷의 멤버 및 **[!UICONTROL 활성]** 및 **[!UICONTROL 만료됨]** 이후 증분 내보내기의 멤버
-* 다음과 같은 경우 `segmentMembership.status` 필드가 선택되지 않았습니다. 내보낸 파일에는 **[!UICONTROL 활성]** 초기 전체 스냅샷 및 이후 증분 내보내기의 멤버
+1. 다음에서 **[!UICONTROL 대상 필드 선택]** 페이지를 열고 내보낸 파일에 원하는 헤더 이름을 입력한 다음 을 선택합니다 **[!UICONTROL 선택]**.
+
+   ![헤더의 친숙한 입력 이름을 표시하는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
+
+1. 내보내기를 위해 선택한 필드가 매핑 보기에 나타나고 내보낸 파일의 편집된 헤더를 표시합니다.
+
+   ![대상으로 내보낼 수 있는 프로필 속성을 보여 주는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. (선택 사항) 내보낸 필드를 선택할 수 있습니다. [필수 키](#mandatory-keys) 또는 [중복 제거 키](#deduplication-keys).
+
+   ![대상으로 내보낼 수 있는 프로필 속성을 보여 주는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
+
+1. 내보낼 필드를 더 추가하려면 위의 단계를 반복합니다.
 
 ### 필수 속성 {#mandatory-attributes}
 
@@ -391,7 +394,6 @@ ht-degree: 10%
 | johndoe@example.com | D | John |
 | johndoe@example.com | Do | John |
 
-
 Adobe은 다음과 같은 ID 네임스페이스를 선택할 것을 권장합니다. [!DNL CRM ID] 또는 모든 프로필 레코드가 고유하게 식별되도록 이메일 주소를 중복 제거 키로 사용할 수 있습니다.
 
 >[!NOTE]
@@ -402,51 +404,6 @@ Adobe은 다음과 같은 ID 네임스페이스를 선택할 것을 권장합니
 >* 필드는 대상 대상에 대한 예상 속성으로 구성됩니다.
 >
 > 예를 들어, 필드가 `person.name.firstName` 에는 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있습니다. 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은 [Adobe Experience Platform의 데이터 거버넌스](../../rtcdp/privacy/data-governance-overview.md#destinations).
-
-## (베타) 매핑 {#mapping}
-
->[!IMPORTANT]
-> 
->향상된 기능을 볼 수 있는 베타 선택 **[!UICONTROL 매핑]** 을 대체하는 단계 [프로필 속성 선택](#select-attributes) 위에서 추가로 설명한 단계. 이 새로운 항목 **[!UICONTROL 매핑]** 단계를 사용하면 내보낸 파일의 헤더를 원하는 사용자 지정 이름으로 편집할 수 있습니다.
-> 
-> 기능 및 설명서는 변경될 수 있습니다. 이 Beta 프로그램에 액세스하려면 Adobe 담당자 또는 고객 지원 센터에 문의하십시오.
-
-이 단계에서는 대상 대상으로 내보낸 파일에 추가할 프로필 속성을 선택해야 합니다. 내보낼 프로필 속성 및 ID를 선택하려면 다음을 수행하십시오.
-
-1. 다음에서 **[!UICONTROL 매핑]** 페이지, 선택 **[!UICONTROL 새 필드 추가]**.
-
-   ![매핑 워크플로에서 강조 표시된 새 필드 컨트롤을 추가합니다.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
-
-1. 오른쪽 화살표를 선택합니다. **[!UICONTROL 소스 필드]** 입력.
-
-   ![매핑 워크플로에서 강조 표시된 소스 필드 컨트롤을 선택합니다.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
-
-1. 다음에서 **[!UICONTROL 소스 필드 선택]** 페이지를 열고 내보낸 파일에 대상에 포함할 프로필 속성 및 ID를 선택한 다음 을 선택합니다 **[!UICONTROL 선택]**.
-
-   >[!TIP]
-   > 
-   >아래 이미지에 표시된 대로 검색 필드를 사용하여 선택 항목의 범위를 좁힐 수 있습니다.
-
-   ![대상으로 내보낼 수 있는 프로필 속성을 보여 주는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
-
-
-1. 내보내려고 선택한 필드가 매핑 보기에 나타납니다. 원하는 경우 내보낸 파일의 헤더 이름을 편집할 수 있습니다. 이렇게 하려면 대상 필드에서 아이콘을 선택합니다.
-
-   ![대상으로 내보낼 수 있는 프로필 속성을 보여 주는 모달 창.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
-
-1. 다음에서 **[!UICONTROL 대상 필드 선택]** 페이지를 열고 내보낸 파일에 원하는 헤더 이름을 입력한 다음 을 선택합니다 **[!UICONTROL 선택]**.
-
-   ![헤더의 친숙한 입력 이름을 표시하는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
-
-1. 내보내기를 위해 선택한 필드가 매핑 보기에 나타나고 내보낸 파일의 편집된 헤더를 표시합니다.
-
-   ![대상으로 내보낼 수 있는 프로필 속성을 보여 주는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
-
-1. (선택 사항) 내보낸 필드를 선택할 수 있습니다. [필수 키](#mandatory-keys) 또는 [중복 제거 키](#deduplication-keys).
-
-   ![대상으로 내보낼 수 있는 프로필 속성을 보여 주는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
-
-1. 내보낼 필드를 더 추가하려면 위의 단계를 반복합니다.
 
 ### 알려진 제한 사항 {#known-limitations}
 
@@ -471,6 +428,46 @@ Adobe은 다음과 같은 ID 네임스페이스를 선택할 것을 권장합니
 임시 해결 방법으로 Beta 실행 중에 내보낸 파일에 ID 네임스페이스를 추가해야 하는 경우 다음 중 하나를 수행할 수 있습니다.
 * 내보내기에 ID 네임스페이스를 포함하려는 데이터 흐름에 레거시 클라우드 스토리지 대상을 사용합니다
 * ID를 Experience Platform에 속성으로 업로드한 다음 클라우드 스토리지 대상으로 내보냅니다.
+
+## 프로필 속성 선택 {#select-attributes}
+
+>[!IMPORTANT]
+> 
+>카탈로그의 모든 클라우드 스토리지 대상에서 향상된 기능을 확인할 수 있습니다. [[!UICONTROL 매핑] 단계](#mapping) 를 대체합니다. **[!UICONTROL 속성 선택]** 이 섹션에 설명된 단계입니다.
+>
+>이 **[!UICONTROL 속성 선택]** 단계는 Adobe Campaign, Oracle Responsys, Oracle Eloqua 및 Salesforce Marketing Cloud 이메일 마케팅 대상에 대해 여전히 표시됩니다.
+
+프로필 기반 대상의 경우 대상 대상으로 전송할 프로필 속성을 선택해야 합니다.
+
+1. 다음에서 **[!UICONTROL 속성 선택]** 페이지, 선택 **[!UICONTROL 새 필드 추가]**.
+
+   ![새 필드 추가 단추를 강조 표시하는 이미지.](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
+
+2. 오른쪽 화살표를 선택합니다. **[!UICONTROL 스키마 필드]** 입력.
+
+   ![이미지 강조 표시 소스 필드를 선택하는 방법.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
+
+3. 다음에서 **[!UICONTROL 필드 선택]** 페이지에서 대상으로 전송할 XDM 속성 또는 ID 네임스페이스를 선택한 다음 을(를) 선택합니다 **[!UICONTROL 선택]**.
+
+   ![소스 필드로 사용할 수 있는 다양한 필드를 보여주는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
+
+4. 매핑을 더 추가하려면 1~3단계를 반복합니다.
+
+>[!NOTE]
+>
+> Adobe Experience Platform은 스키마에서 일반적으로 사용되는 네 가지 권장 속성으로 선택 사항을 미리 채웁니다. `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+
+![대상자 활성화 워크플로의 매핑 단계에서 미리 채워진 권장 속성을 보여 주는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
+
+>[!IMPORTANT]
+>
+>알려진 제한 사항으로 인해 현재 를 사용할 수 없습니다. **[!UICONTROL 필드 선택]** 추가할 창 `segmentMembership.status` 를 파일로 내보냅니다. 대신 값을 수동으로 붙여넣어야 합니다 `xdm: segmentMembership.status` 아래 표시된 대로 스키마 필드로 이동합니다.
+>
+>![활성화 워크플로의 매핑 단계에서 대상 멤버십의 해결 방법을 보여 주는 화면 기록입니다.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+
+파일 내보내기는 다음에 따라 달라집니다 `segmentMembership.status` 이(가) 선택됨:
+* 다음과 같은 경우 `segmentMembership.status` 필드를 선택하고 내보낸 파일에는 다음이 포함됩니다. **[!UICONTROL 활성]** 초기 전체 스냅샷의 멤버 및 **[!UICONTROL 활성]** 및 **[!UICONTROL 만료됨]** 이후 증분 내보내기의 멤버
+* 다음과 같은 경우 `segmentMembership.status` 필드가 선택되지 않았습니다. 내보낸 파일에는 **[!UICONTROL 활성]** 초기 전체 스냅샷 및 이후 증분 내보내기의 멤버
 
 ## 데이터 보강 속성 선택 {#select-enrichment-attributes}
 

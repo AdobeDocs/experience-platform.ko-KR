@@ -3,10 +3,10 @@ keywords: 클라우드 스토리지 대상;클라우드 스토리지
 title: 클라우드 스토리지 대상 개요
 description: Adobe Experience Platform은 대상을 Amazon S3, AWS Kinesis, Azure Event Hubs 또는 SFTP 클라우드 스토리지 위치에 데이터 파일로 전달할 수 있습니다.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 3%
+source-wordcount: '385'
+ht-degree: 4%
 
 ---
 
@@ -20,15 +20,15 @@ Adobe Experience Platform은 대상을 클라우드 스토리지 위치에 데�
 
 ## 지원되는 클라우드 스토리지 대상 {#supported-destinations}
 
-Adobe Experience Platform은 다음 클라우드 스토리지 대상을 지원합니다.
+Adobe Experience Platform은 다음 클라우드 스토리지 대상으로 데이터 내보내기를 지원합니다.
 
 * [Amazon Kinesis 연결](amazon-kinesis.md)
 * [Amazon S3 연결](amazon-s3.md)
 * [Azure Blob 연결](azure-blob.md)
-* [(베타) Azure Data Lake Storage Gen2](adls-gen2.md)
+* [Azure Data Lake Storage Gen2](adls-gen2.md)
 * [Azure 이벤트 허브 연결](azure-event-hubs.md)
-* [(베타) 데이터 랜딩 영역](data-landing-zone.md)
-* [(베타) Google 클라우드 스토리지](google-cloud-storage.md)
+* [데이터 랜딩 영역](data-landing-zone.md)
+* [Google 클라우드 스토리지](google-cloud-storage.md)
 * [SFTP 연결](sftp.md)
 
 ## 새 클라우드 스토리지 대상에 연결 {#connect-destination}
@@ -65,4 +65,10 @@ Adobe Experience Platform은 다음 클라우드 스토리지 대상을 지원�
 
 ## 데이터 내보내기 유형 {#export-type}
 
-클라우드 스토리지 대상 지원 **프로필 기반 내보내기**. 즉, 대상의 개인에 대한 세부 정보를 내보내고 있습니다. 이러한 세부 사항은 개인화에 필요하며 속성, 이벤트, 대상 멤버십 등을 포함할 수 있습니다.
+클라우드 스토리지 대상은 다음 내보내기 유형을 지원합니다.
+* **프로필 기반 내보내기**. 즉, 대상의 개인에 대한 세부 정보를 내보내고 있습니다. 이러한 세부 사항은 개인화에 필요하며 속성, 이벤트, 대상 멤버십 등을 포함할 수 있습니다.
+* [!BADGE Beta]{type=Informative}**데이터 세트 내보내기**. 이 기능을 사용하면 전체 데이터 세트를 클라우드 스토리지 대상으로 내보낼 수 있습니다. [자세히 보기](/help/destinations/ui/export-datasets.md) 기능에 대해 설명합니다.
+
+## 다음 단계 {#next-steps}
+
+다음 중 하나를 선택한 후 [지원되는 클라우드 대상](#supported-destinations) 을(를) 사용하려면 다음을 읽으십시오. [대상에 연결 자습서](/help/destinations/ui/connect-destination.md) 대상에 대한 연결을 설정하는 방법에 대해 알아봅니다. 그런 다음 파일 기반 대상으로 활성화 자습서를 읽고 시작 방법을 알아보십시오 [내보내기](/help/destinations/ui/activate-batch-profile-destinations.md) 데이터를 클라우드 스토리지 대상에 추가합니다.

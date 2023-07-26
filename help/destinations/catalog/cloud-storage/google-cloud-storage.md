@@ -1,19 +1,15 @@
 ---
-title: (베타) Google 클라우드 스토리지 연결
+title: Google 클라우드 스토리지 연결
 description: Google Cloud Storage에 연결하고 대상을 활성화하거나 데이터 세트를 내보내는 방법에 대해 알아봅니다.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
 
-# (Beta)[!DNL Google Cloud Storage]연결
-
->[!IMPORTANT]
->
->이 대상은 현재 베타 버전이며 제한된 수의 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 [!DNL Google Cloud Storage] 연결, Adobe 담당자에게 연락하여 [!DNL Organization ID].
+# [!DNL Google Cloud Storage] 연결
 
 ## 개요 {#overview}
 

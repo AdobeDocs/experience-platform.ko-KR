@@ -2,19 +2,18 @@
 title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 대상자를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1404'
 ht-degree: 1%
 
 ---
 
-# (베타) 데이터 랜딩 영역 대상
+# 데이터 랜딩 영역 대상
 
 >[!IMPORTANT]
 >
->* 이 대상은 현재 베타 버전이며 제한된 수의 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 [!DNL Data Landing Zone] 연결, Adobe 담당자에게 연락하여 [!DNL Organization ID].
->* 이 설명서 페이지는 다음을 참조합니다. [!DNL Data Landing Zone] *대상*. 다음 항목도 있습니다 [!DNL Data Landing Zone] *소스* 소스 카탈로그에서. 자세한 내용은 [[!DNL Data Landing Zone] 소스](/help/sources/connectors/cloud-storage/data-landing-zone.md) 설명서를 참조하십시오.
+>이 설명서 페이지는 다음을 참조합니다. [!DNL Data Landing Zone] *대상*. 다음 항목도 있습니다 [!DNL Data Landing Zone] *소스* 소스 카탈로그에서. 자세한 내용은 [[!DNL Data Landing Zone] 소스](/help/sources/connectors/cloud-storage/data-landing-zone.md) 설명서를 참조하십시오.
 
 
 ## 개요 {#overview}
