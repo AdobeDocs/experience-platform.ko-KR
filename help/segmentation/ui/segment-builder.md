@@ -3,14 +3,18 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
+source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
 workflow-type: tm+mt
-source-wordcount: '3308'
-ht-degree: 8%
+source-wordcount: '3338'
+ht-degree: 7%
 
 ---
 
 # [!DNL Segment Builder] UI 안내서
+
+>[!NOTE]
+>
+>이 안내서에서는 다음을 통해 대상자를 만드는 방법을 설명합니다. **세그먼트 정의** 세그먼트 빌더 사용. 대상자 구성을 사용하여 대상자를 만드는 방법을 알아보려면 다음을 읽어 보십시오. [대상 구성 UI 안내서](./audience-composition.md).
 
 [!DNL Segment Builder] 에서는 상호 작용할 수 있는 다양한 작업 영역을 제공합니다. [!DNL Profile] 데이터 요소. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 

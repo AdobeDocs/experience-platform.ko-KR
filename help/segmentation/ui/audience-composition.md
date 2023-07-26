@@ -3,14 +3,18 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: b7da6f00426f8cd8e219bf6f8c8275ab3f6942ef
+source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
 workflow-type: tm+mt
-source-wordcount: '1737'
+source-wordcount: '1767'
 ht-degree: 0%
 
 ---
 
 # 대상 구성 UI 안내서
+
+>[!NOTE]
+>
+>이 안내서에서는 대상 구성을 사용하여 대상을 만드는 방법을 설명합니다. 세그먼트 빌더를 사용하여 세그먼트 정의를 통해 대상자를 만드는 방법에 대해 알아보려면 다음을 참조하십시오. [세그먼트 빌더 UI 안내서](./segment-builder.md).
 
 대상 컴포지션은 다양한 작업을 나타내는 데 사용되는 블록을 사용하여 대상을 작성하고 편집할 수 있는 작업 영역을 제공합니다.
 
@@ -52,7 +56,7 @@ ht-degree: 0%
 
 ![대상자 목록이 나타납니다. 이 대화 상자에서 추가할 대상을 선택할 수 있습니다.](../images/ui/audience-composition/select-audience.png)
 
-이제 선택한 대상자가 다음의 경우 오른쪽 레일 내에 나타납니다. **[!UICONTROL 대상자]** 블록이 선택되어 있습니다. 여기에서 결합된 대상자의 병합 유형을 변경할 수 있습니다.
+이제 다음과 같은 경우 선택한 대상이 오른쪽 레일 내에 나타납니다. **[!UICONTROL 대상자]** 블록이 선택되어 있습니다. 여기에서 결합된 대상자의 병합 유형을 변경할 수 있습니다.
 
 ![대상에 대해 가능한 병합 유형이 강조 표시됩니다.](../images/ui/audience-composition/merge-types.png)
 
@@ -214,7 +218,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL 분할] {#split-block}
 
-다음 **[!UICONTROL 분할]** 블록 유형을 사용하면 새 대상을 다양한 하위 대상으로 분할할 수 있습니다. 백분율을 기준으로 하거나 속성으로 이 대상을 분할할 수 있습니다.
+다음 **[!UICONTROL 분할]** 블록 유형을 사용하면 새 대상을 다양한 하위 대상으로 분할할 수 있습니다. 백분율이나 속성에 따라 이 대상을 분할할 수 있습니다.
 
 을(를) 추가하려면 **[!UICONTROL 분할]** 블록을 선택하고 **+** 아이콘, 뒤에 오는 **[!UICONTROL 분할]**.
 
