@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 7월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4064c4a7f855fa065c711df5d02d6b7982cc7627
+source-git-commit: 261729515ba25f20cd9606d378a3ec39471ee2cb
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 33%
+source-wordcount: '1061'
+ht-degree: 27%
 
 ---
 
@@ -17,6 +17,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 - [데이터 수집](#data-collection)
 - [데이터 준비](#data-prep)
+- [대상](#data-prep)
 - [Segmentation Service](#segmentation)
 - [소스](#sources)
 
@@ -48,6 +49,49 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 {style="table-layout:auto"}
 
 데이터 준비에 대한 자세한 내용은 [데이터 준비 개요](../../data-prep/home.md)를 참조하십시오.
+
+## 대상 {#destinations}
+
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새로운 대상 또는 업데이트된 대상** {#new-updated-destinations}
+
+<!--
+
+LiveRamp commented out until it is officially released tomorrow
+
+| [[!DNL LiveRamp - Onboarding]](../../destinations/catalog/advertising/liveramp-onboarding.md) | New | Onboard identities from Adobe Experience Platform into [!DNL LiveRamp Connect] so that you can target users on mobile, open web, social, and [!DNL CTV] platforms, using the [!DNL Ramp ID] identifier. |
+
+-->
+
+| 대상 | 신규 또는 업데이트됨 | 설명 |
+| ----------- |----------------|----------- |
+| [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | 신규 | 에 대한 실시간 아웃바운드 연결 만들기 [!DNL Azure Data Lake Storage Gen2] Adobe Experience Platform의 데이터 파일을 정기적으로 고유한 저장소 위치로 내보냅니다. 이 새 대상은 향상된 파일 내보내기 기능을 제공하며 을 지원합니다 [!BADGE 베타]{type=Informative} |
+| [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | 신규 | [!DNL Data Landing Zone] 은(는) [!DNL Azure Blob] Adobe Experience Platform에서 프로비저닝한 스토리지 인터페이스로, 안전한 클라우드 기반 파일 스토리지 시설에 대한 액세스 권한을 부여하여 플랫폼 외부로 파일을 내보낼 수 있습니다. 이 새 대상은 향상된 파일 내보내기 기능을 제공하며 을 지원합니다 [!BADGE 베타]{type=Informative} |
+| [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | 신규 | 에 대한 실시간 아웃바운드 연결 만들기 [!DNL Google Cloud Storage] Adobe Experience Platform의 데이터 파일을 정기적으로 고유한 버킷으로 내보냅니다. 이 새 대상은 향상된 파일 내보내기 기능을 제공하며 을 지원합니다 [!BADGE 베타]{type=Informative} |
+| [[!DNL Amazon S3] update](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) | 업데이트됨 | 이 업데이트를 통해 대상은 향상된 파일 내보내기 기능을 제공하며 을 지원합니다. [!BADGE 베타]{type=Informative} |
+| [[!DNL Azure Blob] update](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | 업데이트됨 | 이 업데이트를 통해 대상은 향상된 파일 내보내기 기능을 제공하며 을 지원합니다. [!BADGE 베타]{type=Informative} |
+| [[!DNL SFTP] update](../../destinations/catalog/cloud-storage/sftp.md#changelog) | 업데이트됨 | 이 업데이트를 통해 대상은 향상된 파일 내보내기 기능을 제공하며 을 지원합니다. [!BADGE 베타]{type=Informative} |
+| [[!DNL Adobe Campaign Managed Services] 연결](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | 업데이트됨 | 다음 [!DNL Adobe Campaign Managed Services] 이제 Adobe Experience Platform과의 통합은 다양한 대상 동기화 유형을 지원합니다. 동기화 유형 선택 컨트롤을 사용하여 대상을 Adobe Campaign으로 내보내야 하는지 아니면 대상 및 해당 프로필 속성으로 내보내야 하는지 결정합니다. <br> ![새 동기화 유형 선택 선택기가 강조 표시되어 있습니다.](/help/release-notes/2023/assets/acms-destination-export-type.png "새 동기화 유형 선택 선택기가 강조 표시되어 있습니다."){width="100" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+**새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
+
+위의 6개 클라우드 스토리지 대상의 업데이트 및 일반 가용성 릴리스는 다음 기능을 제공합니다.
+
+- 추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+- 를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능 [매핑 단계 개선](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+- 사용자 정의 기능 [내보낸 CSV 데이터 파일의 형식 지정](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+- [!BADGE Beta]{type=Informative}[데이터 세트 내보내기 지원](/help/destinations/ui/export-datasets.md).
+
+
+**수정 사항 및 개선 사항** {#destinations-fixes-and-enhancements}
+
+- 매핑 단계에서 사용 가능한 모든 대상 속성이 Salesforce에서 반환되지 않은 (API) Salesforce Marketing Cloud 대상 문제를 해결했습니다. 이제 다음 항목이 있습니다. [대상 속성의 상한 2000](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md#mapping-considerations-example) Salesforce에서 가져왔습니다.
+- Microsoft Dynamics 365 대상 문제를 해결했습니다. 이제 대상은 를 통해 데이터의 지역 라우팅을 지원합니다. [영역 선택기](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate)를 사용하면 Microsoft 생태계 내에서 회사가 프로비저닝되는 지역에 따라 데이터 내보내기를 라우팅할 수 있습니다. ![강조 표시된 새 영역 선택기입니다.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "강조 표시된 새 영역 선택기입니다."){width="100" zoomable="yes"}
+
+대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
 ## Segmentation Service {#segmentation}
 
