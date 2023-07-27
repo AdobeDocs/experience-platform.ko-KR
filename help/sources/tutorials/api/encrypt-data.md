@@ -4,9 +4,9 @@ description: API를 사용하여 클라우드 스토리지 일괄 처리 소스�
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
+source-git-commit: d05202fc1e64bbb06c886aedbe59e07c45f80686
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1343'
 ht-degree: 2%
 
 ---
@@ -111,6 +111,65 @@ curl -X POST \
 }
 ```
 
+| 속성 | 설명 |
+| --- | --- |
+| `publicKey` | 공개 키는 클라우드 스토리지의 데이터를 암호화하는 데 사용됩니다. 이 키는 이 단계 중에 생성된 개인 키와 일치합니다. 하지만 개인 키는 즉시 Experience Platform으로 이동합니다. |
+| `publicKeyId` | 공개 키 ID는 데이터 흐름을 만들고 암호화된 Experience Platform 스토리지 데이터를 수집하여 수집하는 데 사용됩니다. |
+| `expiryTime` | 만료 시간은 암호화 키 쌍의 만료 날짜를 정의합니다. 이 날짜는 키 생성 날짜 후 180일로 자동 설정되며 unix 타임스탬프 형식으로 표시됩니다. |
+
++++(선택 사항) 서명된 데이터에 대한 서명 확인 키 쌍 만들기
+
+### 고객 관리 키 쌍 만들기
+
+선택적으로 서명 확인 키 쌍을 만들어 암호화된 데이터에 서명하고 수집할 수 있습니다.
+
+이 단계에서는 개인 키와 공개 키 조합을 생성한 다음 개인 키를 사용하여 암호화된 데이터에 서명해야 합니다. 다음으로, Platform에서 서명을 확인하려면 Base64에서 공개 키를 인코딩한 다음 Experience Platform에 공유해야 합니다.
+
+### 공개 키를 공유하여 Experience Platform
+
+POST 공개 키를 공유하려면 `/customer-keys` 암호화 알고리즘과 Base64로 인코딩된 공개 키를 제공하는 동안 끝점이 발생했습니다.
+
+**API 형식**
+
+```http
+POST /data/foundation/connectors/encryption/customer-keys
+```
+
+**요청**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' 
+  -d '{
+      "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+    }'
+```
+
+| 매개변수 | 설명 |
+| --- | --- |
+| `encryptionAlgorithm` | 사용 중인 암호화 알고리즘의 유형입니다. 지원되는 암호화 유형은 다음과 같습니다 `PGP` 및 `GPG`. |
+| `publicKey` | 암호화된 서명에 사용되는 고객 관리 키에 해당하는 공개 키입니다. 이 키는 Base64로 인코딩해야 합니다. |
+
+**응답**
+
+```json
+{    
+  "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2" 
+} 
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `publicKeyId` | 이 공개 키 ID는 고객이 관리하는 키를 Experience Platform과 공유하는 것에 대한 응답으로 반환됩니다. 서명 및 암호화된 데이터에 대한 데이터 흐름을 만들 때 이 공개 키 ID를 서명 확인 키 ID로 제공할 수 있습니다. |
+
++++
+
 ## 다음을 사용하여 클라우드 스토리지 소스를 Experience Platform에 연결 [!DNL Flow Service] API
 
 암호화 키 쌍을 검색했으면 이제 계속하여 클라우드 스토리지 소스에 대한 소스 연결을 만들고 암호화된 데이터를 플랫폼으로 가져올 수 있습니다.
@@ -150,6 +209,10 @@ POST /flows
 ```
 
 **요청**
+
+>[!BEGINTABS]
+
+>[!TAB 암호화된 데이터 수집을 위한 데이터 흐름 만들기]
 
 다음 요청은 클라우드 스토리지 소스에 대해 암호화된 데이터를 수집하기 위한 데이터 흐름을 만듭니다.
 
@@ -206,6 +269,58 @@ curl -X POST \
 | `scheduleParams.startTime` | epoch 시간 내 데이터 흐름의 시작 시간입니다. |
 | `scheduleParams.frequency` | 데이터 흐름이 데이터를 수집하는 빈도입니다. 허용되는 값은 다음과 같습니다. `once`, `minute`, `hour`, `day`, 또는 `week`. |
 | `scheduleParams.interval` | 간격은 두 개의 연속 흐름 실행 사이의 기간을 지정합니다. 간격 값은 0이 아닌 정수여야 합니다. 빈도를 로 설정하면 간격이 필요하지 않습니다. `once` 다음보다 크거나 같아야 합니다. `15` 다른 빈도 값의 경우. |
+
+
+>[!TAB 데이터 흐름을 만들어 암호화 및 서명된 데이터 수집]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "ACME Customer Data (with Sign Verification)",
+    "description": "ACME Customer Data (with Sign Verification)",
+    "flowSpec": {
+        "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "655f7c1b-1977-49b3-a429-51379ecf0e15"
+    ],
+    "targetConnectionIds": [
+        "de688225-d619-481c-ae3b-40c250fd7c79"
+    ],
+    "transformations": [
+        {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "6b6e24213dbe4f57bd8207d21034ff03",
+                "mappingVersion":"0"
+            }
+        },
+        {
+            "name": "Encryption",
+            "params": {
+                "publicKeyId":"311ef6f8-9bcd-48cf-a9e9-d12c45fb7a17",
+                "signVerificationKeyId":"e31ae895-7896-469a-8e06-eb9207ddf1c2"
+            }
+        }
+    ],
+    "scheduleParams": {
+        "startTime": "1675793392",
+        "frequency": "once"
+    }
+}'
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `params.signVerificationKeyId` | 서명 확인 키 ID는 Base64로 인코딩된 공개 키를 Experience Platform과 공유한 후 검색된 공개 키 ID와 동일합니다. |
+
+>[!ENDTABS]
 
 **응답**
 
