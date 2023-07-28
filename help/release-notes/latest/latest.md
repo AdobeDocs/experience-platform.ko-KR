@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 7월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7cc7d43f6424ff91bd237235b278bf13a0add45d
+source-git-commit: 819c4e8b4ab24d364cf6d26d3ce38d0bc372e603
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 25%
+source-wordcount: '1297'
+ht-degree: 26%
 
 ---
 
@@ -15,10 +15,24 @@ ht-degree: 25%
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
+- [카탈로그 서비스](#catalog-service)
 - [데이터 수집](#data-collection)
 - [대상](#data-prep)
+- [쿼리 서비스](#query-service)
 - [Segmentation Service](#segmentation)
 - [소스](#sources)
+
+## 카탈로그 서비스 {#catalog-service}
+
+카탈로그 서비스는 Adobe Experience Platform 내의 데이터 위치와 계보를 위한 기록 시스템입니다. Experience Platform에 수집되는 모든 데이터는 파일 및 디렉터리로 데이터 레이크에 저장되지만, 카탈로그는 조회 및 모니터링을 위해 이러한 파일 및 디렉터리에 대한 메타데이터 및 설명을 포함합니다.
+
+| 기능 | 설명 |
+| --- | --- |
+| 데이터 세트 인벤토리 관리 | 이제 데이터 세트 UI는 데이터 세트를 더 잘 관리하기 위해 인라인 작업 컬렉션을 제공합니다. 고급 데이터 세트 관리를 사용하면 필터링 및 검색 기능을 향상시킬 수 있는 데이터 세트에 폴더 및 태그를 만들고 할당하여 작업 효율성을 높일 수 있습니다. 에 대한 자세한 내용은 설명서 를 참조하십시오 [인라인 작업](../../catalog/datasets/user-guide.md#inline-actions), 방법 [데이터 세트 검색 및 필터링](../../catalog/datasets/user-guide.md#search-and-filter), 및 [데이터 세트를 폴더로 이동](../../catalog/datasets/user-guide.md#move-to-folders). |
+
+{style="table-layout:auto"}
+
+카탈로그 서비스에 대한 자세한 내용은 [카탈로그 서비스 개요](../../catalog/home.md).
 
 ## 데이터 수집 {#data-collection}
 
@@ -84,6 +98,21 @@ For more information on Data Prep, please read the [Data Prep overview](../../da
 - Microsoft Dynamics 365 대상 문제를 해결했습니다. 이제 대상은 를 통해 데이터의 지역 라우팅을 지원합니다. [영역 선택기](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate)를 사용하면 Microsoft 생태계 내에서 회사가 프로비저닝되는 지역에 따라 데이터 내보내기를 라우팅할 수 있습니다. ![강조 표시된 새 영역 선택기입니다.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "강조 표시된 새 영역 선택기입니다."){width="100" zoomable="yes"}
 
 대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
+
+## 쿼리 서비스 {#query-service}
+
+쿼리 서비스를 사용하면 표준 SQL을 사용하여 Adobe Experience Platform 데이터 레이크에서 데이터를 쿼리할 수 있습니다. 데이터 레이크의 데이터 세트에 참여하고 쿼리 결과를 보고 또는 Data Science Workspace에 사용하거나 실시간 고객 프로필에 수집하기 위한 새 데이터 세트로 캡처할 수 있습니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 향상된 쿼리 편집기 토글 | 향상된 쿼리 편집기 토글은 향상된 액세스 가능성 및 다중 테마 지원을 제공합니다. 향상된 편집기 설정을 통해 어두운 테마 또는 밝은 테마를 활성화할 수 있습니다. 자세한 내용은 [설명서](../../query-service/ui/user-guide.md#enhanced-editor-toggle)를 참조하십시오. |
+| 계산된 통계의 별칭 이름 | 이제 별칭 이름을 제공하여 SQL 쿼리의 계산된 통계에서 의 결과를 기술적으로 참조할 수 있습니다. 이 업데이트 및 COMPUTE STATISTICS 명령의 기타 업데이트에 대한 자세한 내용은 설명서를 참조하십시오. 자세한 내용은 [설명서](../../query-service/essential-concepts/dataset-statistics.md#alias-name)를 참조하십시오. |
+
+{style="table-layout:auto"}
+
+쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md)를 참조하십시오.
 
 ## Segmentation Service {#segmentation}
 
