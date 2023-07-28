@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장의 데이터 요소 유형
 description: Adobe Experience Platform 웹 SDK 태그 확장에서 제공하는 다양한 데이터 요소 유형에 대해 알아봅니다.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 528b13aa20da62c32456e02cb2293fdded156421
+source-git-commit: 44fac57a30295b476910c0b37314eaebba175157
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 6%
+source-wordcount: '603'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 ## ID 맵 {#identity-map}
 
-ID 맵을 사용하면 웹 페이지 방문자의 ID를 설정할 수 있습니다. ID 맵은 다음과 같은 네임스페이스로 구성됩니다. _전화_ 또는 _이메일_, 각 네임스페이스에 하나 이상의 식별자가 포함된 경우 예를 들어 웹 사이트의 개인이 두 개의 전화 번호를 제공한 경우 전화 네임스페이스에는 두 개의 식별자가 포함되어야 합니다.
+ID 맵을 사용하면 웹 페이지 방문자의 ID를 설정할 수 있습니다. ID 맵은 다음과 같은 네임스페이스로 구성됩니다. `CRMID`, `Phone` 또는 `Email`, 각 네임스페이스에 하나 이상의 식별자가 포함된 경우 예를 들어 웹 사이트의 개인이 두 개의 전화 번호를 제공한 경우 전화 네임스페이스에는 두 개의 식별자가 포함되어야 합니다.
 
 다음에서 [!UICONTROL ID 맵] 데이터 요소에서는 각 식별자에 대해 다음 정보를 제공합니다.
 
@@ -25,6 +25,12 @@ ID 맵을 사용하면 웹 페이지 방문자의 ID를 설정할 수 있습니�
 * **[!UICONTROL 기본]**: 식별자를 개인의 기본 식별자로 사용할지 여부를 나타내는 선택 사항입니다. 기본 식별자로 표시된 식별자가 없으면 ECID가 기본 식별자로 사용됩니다.
 
 ![데이터 요소 편집 화면을 표시하는 UI 이미지입니다.](assets/identity-map-data-element.png)
+
+>[!TIP]
+>
+>Adobe은 다음과 같이 개인을 나타내는 ID를 전송할 것을 권장합니다. `Luma CRM Id` 를 기본 ID로 사용하십시오.
+>
+>ID 맵에 개인 식별자가 포함된 경우(예: `Luma CRM Id`)를 입력하면 개인 식별자가 기본 식별자가 됩니다. 그렇지 않으면, `ECID` 는 기본 id가 됩니다.
 
 다음을 제공해서는 안 됩니다. [!DNL ECID] id 맵을 작성하는 경우. SDK를 사용할 때 [!DNL ECID] 는 서버에서 자동으로 생성되며 id 맵에 포함됩니다.
 
@@ -36,7 +42,7 @@ ID 맵 데이터 요소는 종종 [[!UICONTROL XDM 개체] 데이터 요소 유�
 
 XDM 개체 데이터 요소를 사용하면 데이터를 XDM으로 더 쉽게 포맷할 수 있습니다. 이 데이터 요소를 처음 열면 올바른 Adobe Experience Platform 샌드박스 및 스키마를 선택합니다. 스키마를 선택하면 스키마 구조가 표시되어 쉽게 작성할 수 있습니다.
 
-![XDM 개체 구조를 보여 주는 UI 이미지입니다.](assets/XDM-object.png)
+![XDM 오브젝트 구조를 보여 주는 UI 이미지입니다.](assets/XDM-object.png)
 
 다음과 같은 스키마의 특정 필드를 열 경우 주의하십시오. `web.webPageDetails.URL`, 일부 항목은 자동으로 수집됩니다. 여러 항목이 자동으로 수집되지만 필요한 경우 덮어쓸 수 있습니다. 모든 값은 수동으로 채우거나 다른 데이터 요소를 사용할 수 있습니다.
 
