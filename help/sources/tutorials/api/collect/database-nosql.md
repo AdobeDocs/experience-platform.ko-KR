@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 데이터베이스 소스에 대한 
 type: Tutorial
 description: 이 자습서에서는 데이터베이스에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 이를 Platform에 수집하는 단계를 다룹니다.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1386'
+source-wordcount: '1408'
 ht-degree: 1%
 
 ---
@@ -185,7 +185,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | 다음 `$id` 대상 XDM 스키마. |
 | `data.schema.version` | 스키마의 버전입니다. 이 값을 설정해야 합니다. `application/vnd.adobe.xed-full+json;version=1`최신 부 버전의 스키마를 반환합니다. |
-| `params.dataSetId` | 이전 단계에서 수집된 대상 데이터 세트의 ID입니다. |
+| `params.dataSetId` | 이전 단계에서 생성된 대상 데이터 세트의 ID입니다. **참고**: 타겟 연결을 만들 때 유효한 데이터 세트 ID를 제공해야 합니다. 잘못된 데이터 세트 ID로 인해 오류가 발생합니다. |
 | `connectionSpec.id` | 데이터 레이크에 연결하는 데 사용되는 연결 사양 ID입니다. 이 ID는 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **응답**
@@ -683,7 +683,7 @@ curl -X POST \
 
 ## 데이터 흐름 모니터링
 
-데이터 흐름이 만들어지면 데이터 흐름을 통해 수집되는 데이터를 모니터링하여 흐름 실행, 완료 상태 및 오류에 대한 정보를 볼 수 있습니다. 데이터 흐름을 모니터링하는 방법에 대한 자세한 내용은 [api에서 데이터 흐름 모니터링 ](../monitor.md)
+데이터 흐름이 만들어지면 데이터 흐름을 통해 수집되는 데이터를 모니터링하여 흐름 실행, 완료 상태 및 오류에 대한 정보를 볼 수 있습니다. 데이터 흐름을 모니터링하는 방법에 대한 자세한 내용은 [api에서 데이터 흐름 모니터링](../monitor.md)
 
 ## 다음 단계
 

@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 클라우드 스토리지 소스에 
 type: Tutorial
 description: 이 튜토리얼에서는 소스 커넥터 및 API를 사용하여 서드파티 클라우드 스토리지에서 데이터를 검색하고 플랫폼으로 가져오는 단계를 설명합니다.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1765'
 ht-degree: 1%
 
 ---
@@ -253,8 +253,8 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | 다음 `$id` 대상 XDM 스키마. |
 | `data.schema.version` | 스키마의 버전입니다. 이 값을 설정해야 합니다. `application/vnd.adobe.xed-full+json;version=1`최신 부 버전의 스키마를 반환합니다. |
-| `params.dataSetId` | 대상 데이터 세트의 ID입니다. |
-| `connectionSpec.id` | 데이터 레이크에 대한 고정 연결 사양 ID입니다. 이 ID는 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | 이전 단계에서 생성된 대상 데이터 세트의 ID입니다. **참고**: 타겟 연결을 만들 때 유효한 데이터 세트 ID를 제공해야 합니다. 잘못된 데이터 세트 ID로 인해 오류가 발생합니다. |
+| `connectionSpec.id` | 데이터 레이크에 연결하는 데 사용되는 연결 사양 ID입니다. 이 ID는 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **응답**
 

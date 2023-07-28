@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 원시 데이터에 대한 스트리
 type: Tutorial
 description: 이 튜토리얼에서는 소스 커넥터 및 API를 사용하여 스트리밍 데이터를 검색하고 이를 플랫폼으로 가져오는 단계를 다룹니다.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1124'
 ht-degree: 2%
 
 ---
@@ -151,7 +151,7 @@ curl -X POST \
 
 ## 타겟 데이터 세트 만들기
 
-대상 XDM 스키마 및 고유 포함 `$id` 이제 소스 데이터를 포함할 타겟 데이터 세트를 만들 수 있습니다. POST 타겟 데이터 세트를 만들려면 다음을 수행하십시오. `dataSets` 의 엔드포인트 [카탈로그 서비스 API](https://www.adobe.io/experience-platform-apis/references/catalog/)페이로드 내에 대상 스키마의 ID를 제공합니다.
+대상 XDM 스키마 및 고유 포함 `$id` 이제 소스 데이터를 포함할 타겟 데이터 세트를 만들 수 있습니다. 타겟 데이터 세트를 만들려면 다음을 위해 POST 요청 `dataSets` 의 엔드포인트 [카탈로그 서비스 API](https://www.adobe.io/experience-platform-apis/references/catalog/)페이로드 내에 대상 스키마의 ID를 제공합니다.
 
 **API 형식**
 
@@ -246,9 +246,9 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `connectionSpec.id` | 에 연결하는 데 사용되는 연결 사양 ID [!DNL Data Lake]. 이 ID는 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | 가져오려는 데이터의 지정된 형식 [!DNL Data Lake]. |
-| `params.dataSetId` | 이전 단계에서 검색된 대상 데이터 세트의 ID입니다. |
+| `data.format` | 데이터 레이크로 가져오는 데이터의 지정된 형식입니다. |
+| `params.dataSetId` | 이전 단계에서 생성된 대상 데이터 세트의 ID입니다. **참고**: 타겟 연결을 만들 때 유효한 데이터 세트 ID를 제공해야 합니다. 잘못된 데이터 세트 ID로 인해 오류가 발생합니다. |
+| `connectionSpec.id` | 데이터 레이크에 연결하는 데 사용되는 연결 사양 ID입니다. 이 ID는 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **응답**
 
