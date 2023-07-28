@@ -4,8 +4,8 @@ description: Real-Time CDP의 파트너 데이터 지원으로 잠재 고객 발
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
-workflow-type: ht
+source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
+workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 100%
 
@@ -204,7 +204,7 @@ Real-Time CDP의 세분화 기능을 사용하여 잠재 고객 프로필에서 
 
 ### 잠재 고객 프로필을 대상으로 활성화 {#activate-to-destinations}
 
-잠재 고객 대상자를 대상으로 내보내 활용할 수 있습니다. 현재 [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) 또는 [!BADGE Alpha]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp.md) 대상과 같은 특정 대상만 잠재 고객 프로필 활성화를 지원합니다.
+잠재 고객 대상자를 대상으로 내보내 활용할 수 있습니다. 현재 [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) 또는 [!BADGE Alpha]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) 대상과 같은 특정 대상만 잠재 고객 프로필 활성화를 지원합니다.
 
 ## 파트너 데이터 지원을 통해 달성한 기타 사용 사례 {#other-use-cases}
 

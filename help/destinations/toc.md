@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
+source-git-commit: 002eea44dd719871d3ff1b4f1548b74efbbc7d3b
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1163'
 ht-degree: 9%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 9%
       * [Google Display &amp; Video 360 연결](./catalog/advertising/google-dv360.md)
       * [Google gtag 확장](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn 인사이트 태그 확장](./catalog/advertising/linkedin.md)
-      * [(알파) LiveRamp - SFTP 연결](./catalog/advertising/liveramp.md)
+      * [LiveRamp - 온보드 연결](./catalog/advertising/liveramp-onboarding.md)
       * [Microsoft Bing 연결](./catalog/advertising/bing.md)
       * [Pinterest 전환 추적 확장](./catalog/advertising/pinterest-extension.md)
       * [Pinterest 고객 목록 연결](./catalog/advertising/pinterest.md)
