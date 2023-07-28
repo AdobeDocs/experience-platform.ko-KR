@@ -3,10 +3,10 @@ audience: user
 user-guide-title: 실시간 고객 프로필 안내서
 user-guide-description: 고객 데이터를 통합하여 다양한 채널에서 고객과의 상호 작용을 종합적으로 파악합니다.
 feature: Profiles
-source-git-commit: 52836892736a075981ee06f28fbdf178f4492e09
+source-git-commit: 5fb8edd9dd664f9a0ed036d1340b5f8fcd4ba0c4
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 28%
+source-wordcount: '141'
+ht-degree: 29%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 28%
 * 프로필 UI {#ui}
    * [[!DNL Profile] UI 안내서](ui/user-guide.md)
    * [[!DNL Profile] 세부 사항 사용자 정의](ui/profile-customization.md)
+   * [잠재 고객 프로필](ui/prospect-profile.md)
 * (베타) 계산된 속성 {#computed-attributes}
    * [개요](computed-attributes/overview.md)
    * [계산된 속성 API 안내서](computed-attributes/api.md)

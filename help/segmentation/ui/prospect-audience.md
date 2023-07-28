@@ -4,9 +4,9 @@ description: 타사 정보를 사용하여 알 수 없는 고객을 타깃팅하
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 6a24e2fc29c8e020c7fe4ac1c1c5f9640cefb971
+source-git-commit: fff6279472607bd6e1ace21a3003ef839208d7a4
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '399'
 ht-degree: 1%
 
 ---
@@ -64,4 +64,4 @@ Experience Platform에서 Prospect Audiences 기능을 다른 플랫폼 기능�
 
 ## 다음 단계
 
-<!-- After reading this guide, you now know how to create and manage your prospect audiences in Adobe Experience Platform. To learn how to activate a prospect audience to other downstream services, please read the guide on [activating prospect audiences](../../destinations/ui/activate-prospect-audiences.md). -->
+이 안내서를 읽고 나면 이제 Adobe Experience Platform에서 잠재 고객을 만들고 관리하는 방법을 이해할 수 있습니다. 잠재 고객을 다른 다운스트림 서비스로 활성화하는 방법에 대해 알아보려면 의 안내서를 참조하십시오. [잠재 고객 활성화](../../destinations/ui/activate-prospect-audiences.md).
