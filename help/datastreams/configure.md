@@ -2,9 +2,9 @@
 title: 데이터스트림 구성
 description: 클라이언트측 웹 SDK 통합을 다른 Adobe 제품 및 서드파티 대상과 연결하는 방법에 대해 알아봅니다.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: ac0d92938332f04d0b2813172d0d4a75cacdcd1d
+source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
 workflow-type: tm+mt
-source-wordcount: '2247'
+source-wordcount: '2275'
 ht-degree: 3%
 
 ---
@@ -50,8 +50,8 @@ Experience Platform에서 사용하도록 이 데이터 스트림을 구성하�
 
 | 설정 | 설명 |
 | --- | --- |
-| [!UICONTROL 지역 조회] | 방문자 IP 주소를 기반으로 선택한 옵션에 대한 지리적 위치 조회를 활성화합니다. 사용 가능한 옵션: <ul><li>국가</li><li>우편 번호</li><li>시/도</li><li>DMA</li><li>구/군/시</li><li>위도 </li><li>경도</li></ul>선택 **[!UICONTROL 도시]**, **[!UICONTROL 위도]**, 또는 **[!UICONTROL 경도]** 에서는 다른 옵션이 선택되어 있는지에 관계없이 최대 2개의 소수점 좌표를 제공합니다. 이는 도시 수준의 세부 기간으로 간주됩니다. <br> <br>옵션을 선택하지 않으면 지리적 위치 조회가 비활성화됩니다. 지리적 위치는 다음 이전 [!UICONTROL IP 난독화] 의 영향을 받지 않습니다.  [!UICONTROL IP 난독화] 설정. |
-| [!UICONTROL 네트워크 조회] | 방문자 IP 주소를 기반으로 선택한 옵션에 대한 네트워크 조회를 활성화합니다. 사용 가능한 옵션: <ul><li>통신사</li><li>도메인</li><li>ISP</li></ul>요청이 시작된 특정 네트워크에 대한 자세한 정보를 다른 서비스에 제공하려면 다음 옵션을 사용하십시오. |
+| [!UICONTROL 지역 조회] | 방문자 IP 주소를 기반으로 선택한 옵션에 대한 지리적 위치 조회를 활성화합니다. 지리적 위치 조회를 사용하려면 다음을 포함해야 합니다. [`placeContext`](../edge/data-collection/automatic-information.md#place-context) 웹 SDK 구성의 필드 그룹입니다. <br> 사용 가능한 옵션: <ul><li>국가</li><li>우편 번호</li><li>시/도</li><li>DMA</li><li>구/군/시</li><li>위도 </li><li>경도</li></ul>선택 **[!UICONTROL 도시]**, **[!UICONTROL 위도]**, 또는 **[!UICONTROL 경도]** 에서는 다른 옵션이 선택되어 있는지에 관계없이 최대 2개의 소수점 좌표를 제공합니다. 이는 도시 수준의 세부 기간으로 간주됩니다. <br> <br>옵션을 선택하지 않으면 지리적 위치 조회가 비활성화됩니다. 지리적 위치는 다음 이전 [!UICONTROL IP 난독화] 의 영향을 받지 않습니다.  [!UICONTROL IP 난독화] 설정. |
+| [!UICONTROL 네트워크 조회] | 방문자 IP 주소를 기반으로 선택한 옵션에 대한 네트워크 조회를 활성화합니다. 네트워크 조회를 사용하려면 다음을 포함해야 합니다. [`Environment`](../edge/data-collection/automatic-information.md#environment) 웹 SDK 구성의 필드 그룹입니다. <br> 사용 가능한 옵션: <ul><li>통신사</li><li>도메인</li><li>ISP</li></ul>요청이 시작된 특정 네트워크에 대한 자세한 정보를 다른 서비스에 제공하려면 다음 옵션을 사용하십시오. |
 | [!UICONTROL IP 난독화] | 데이터 스트림에 적용할 IP 난독화의 유형을 나타냅니다. 고객 IP를 기반으로 하는 모든 처리는 IP 난독화 설정의 영향을 받습니다. 데이터스트림에서 데이터를 받는 모든 Experience Cloud 서비스가 여기에 포함됩니다. <p>사용 가능한 옵션:</p> <ul><li>**[!UICONTROL 없음]**: IP 난독화를 비활성화합니다. 전체 사용자 IP 주소는 데이터 스트림을 통해 전송됩니다.</li><li>**[!UICONTROL 부분]**: IPv4 주소의 경우 사용자 IP 주소의 마지막 옥텟을 난독화합니다. IPv6 주소의 경우 주소의 마지막 80비트를 난독화합니다. <p>예:</p> <ul><li>IPv4: `1.2.3.4` -> `1.2.3.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL 전체]**: 전체 IP 주소를 난독화합니다. <p>예:</p> <ul><li>IPv4: `1.2.3.4` -> `0.0.0.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> IP 난독화가 다른 Adobe 제품에 미치는 영향: <ul><li>**Adobe Target**: 데이터 스트림 수준 [!UICONTROL IP 난독화] 설정은 Adobe Target에 설정된 IP 난독화 옵션보다 우선합니다. 예를 들어 데이터 스트림 수준이 [!UICONTROL IP 난독화] 옵션이 로 설정되어 있습니다. **[!UICONTROL 전체]** 그리고 Adobe Target IP 난독화 옵션이 로 설정되어 있습니다. **[!UICONTROL 마지막 옥텟 난독화]**, Adobe Target은 완전히 난독화된 IP를 수신하게 됩니다. 에서 Adobe Target 설명서 참조 [IP 난독화](https://developer.adobe.com/target/before-implement/privacy/privacy/) 및 [지리적 위치](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=en) 을 참조하십시오.</li><li>**Audience Manager**: 데이터스트림 수준의 IP 난독화 설정이 Audience Manager에 설정된 모든 IP 난독화 옵션보다 우선하며 모든 IP 주소에 적용됩니다. Audience Manager에 의해 수행된 모든 지리적 위치 조회는 데이터 스트림 수준의 영향을 받습니다 [!UICONTROL IP 난독화] 옵션을 선택합니다. 완전히 난독화된 IP를 기반으로 하는 Audience Manager에서 지리적 위치 조회를 수행하면 알 수 없는 영역이 발생하고 결과 지리적 위치 데이터를 기반으로 하는 모든 세그먼트는 실현되지 않습니다. 다음에서 Audience Manager 설명서 참조: [IP 난독화](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=en) 을 참조하십시오.</li><li>**Adobe Analytics**: 현재 없음 이외의 IP 난독화 옵션을 선택한 경우 Adobe Analytics에서 부분적으로 난독화된 IP 주소를 받습니다. Analytics가 완전히 난독화된 IP 주소를 수신하려면 Adobe Analytics에서 별도로 IP 난독화를 구성해야 합니다. 이 동작은 향후 릴리스에서 업데이트될 예정입니다. Adobe Analytics 보기 [설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html) analytics에서 IP 난독화를 활성화하는 방법에 대한 자세한 내용을 참조하십시오.</li></ul> |
 | [!UICONTROL 자사 ID 쿠키] | 이 설정을 활성화하면 Edge Network가 를 조회할 때 지정된 쿠키를 참조하도록 지시합니다. [자사 디바이스 ID](../edge/identity/first-party-device-ids.md): ID 맵에서 이 값을 조회하는 대신<br><br>이 설정을 활성화할 때 ID가 저장될 쿠키의 이름을 제공해야 합니다. |
 | [!UICONTROL 타사 ID 동기화] | ID 동기화를 컨테이너로 그룹화하여 서로 다른 시간에 서로 다른 ID 동기화를 실행할 수 있습니다. 이 설정을 사용하면 이 데이터 스트림에 대해 실행할 ID 동기화 컨테이너를 지정할 수 있습니다. |

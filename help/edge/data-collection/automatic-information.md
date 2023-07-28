@@ -3,7 +3,7 @@ title: Adobe Experience Platform 웹 SDK에서 자동으로 수집된 정보
 description: Adobe Experience Platform SDK에서 자동으로 수집하는 각 정보에 대한 개요입니다.
 keywords: 정보 수집;컨텍스트;구성;장치;screenHeight;화면 높이;screenOrientation;화면 방향;screenWidth;화면 너비;환경;뷰포트 높이;뷰포트 너비;뷰포트 너비;crowserDetails;브라우저 세부 정보;구현 세부 정보;구현 세부 정보;이름;버전;placeContext;localTime;로컬 시간;localTimezoneOffset;로컬 시간대 오프셋;타임스탬프;웹;url;webPageDetails;웹 페이지 세부 정보;webReferrer;웹 레퍼러;가로;세로;
 exl-id: 901df786-df36-4986-9c74-a32d29c11b71
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 6%
@@ -92,7 +92,7 @@ Adobe Experience Platform 웹 SDK는 특별한 구성 없이 자동으로 많은
 
 독립형 라이브러리를 사용하는 경우 값은 단순히 라이브러리 버전입니다. 라이브러리를 태그 확장의 일부로 사용하는 경우 이것이 라이브러리 버전 및 &quot;+&quot;와 연결된 태그 확장 버전입니다. 예를 들어 라이브러리 버전이 2.1.0이고 태그 확장 버전이 2.1.3인 경우 값은 다음과 같습니다. `2.1.0+2.1.3`.
 
-### 환경
+### 환경 {#environment}
 
 | **페이로드의 경로:** | **예:** |
 | ------------------------------------------------ | ------------ |
@@ -100,7 +100,7 @@ Adobe Experience Platform 웹 SDK는 특별한 구성 없이 자동으로 많은
 
 데이터가 수집된 환경입니다. 항상 (으)로 설정됩니다. `browser`.
 
-## 위치 컨텍스트(`placeContext`)
+## 위치 컨텍스트(`placeContext`) {#place-context}
 
 최종 사용자의 위치에 대한 정보입니다.
 
