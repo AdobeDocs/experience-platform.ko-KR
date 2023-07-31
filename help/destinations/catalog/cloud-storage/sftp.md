@@ -5,7 +5,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
 source-wordcount: '940'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
@@ -78,7 +78,7 @@ SFTP 서버에 대한 실시간 아웃바운드 연결을 생성하여 구분된
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="비공개 SSH 키"
->abstract="개인 SSH 키는 RSA 형식의 Base64 인코딩 문자열이어야 하며 암호로 보호되지 않아야 합니다."
+>abstract="비공개 SSH 키는 RSA 포맷의 Base64로 인코딩된 문자열이어야 하며 암호로 보호되지 않아야 합니다."
 
 을(를) 선택하는 경우 **[!UICONTROL 암호가 포함된 SFTP]** SFTP 위치에 연결하는 인증 유형:
 
@@ -100,7 +100,7 @@ SFTP 서버에 대한 실시간 아웃바운드 연결을 생성하여 구분된
 * **[!UICONTROL 도메인]**: SFTP 계정의 IP 주소 또는 도메인 이름을 입력합니다
 * **[!UICONTROL 포트]**: SFTP 저장소 위치에서 사용하는 포트
 * **[!UICONTROL 사용자 이름]**: SFTP 저장소 위치에 로그인할 사용자 이름
-* **[!UICONTROL SSH 키]**: SFTP 저장소 위치에 로그인하는 데 사용되는 개인 SSH 키입니다. 개인 키는 RSA 형식의 Base64 인코딩 문자열이어야 하며 암호로 보호되지 않아야 합니다.
+* **[!UICONTROL SSH 키]**: SFTP 저장소 위치에 로그인하는 데 사용되는 개인 SSH 키입니다. 비공개 키는 RSA 포맷의 Base64로 인코딩된 문자열이어야 하며 암호로 보호되지 않아야 합니다.
 * **[!UICONTROL 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
