@@ -2,13 +2,13 @@
 solution: Data Collection
 audience: user
 user-guide-title: Adobe Experience Platform 데이터스트림 도움말
-breadcrumb-title: 데이터 스트림 안내서
+breadcrumb-title: 데이터스트림 안내서
 user-guide-description: Adobe Experience Platform에서 데이터스트림을 구성하는 방법에 대해 알아봅니다.
 feature: Datastreams
 source-git-commit: 57867a7c78ae7f8100ead278cf901fed63780caa
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 17%
+ht-degree: 53%
 
 ---
 
