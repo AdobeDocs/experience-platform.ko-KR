@@ -4,15 +4,19 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 1e6cdbaa12c89dc678232245a9544bdfa81aebcf
+source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
 workflow-type: tm+mt
-source-wordcount: '3759'
+source-wordcount: '3673'
 ht-degree: 11%
 
 ---
 
 
 # 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성화
+
+>[!IMPORTANT]
+> 
+> 페이지에 설명된 기능은 아직 고객에게 일반적으로 제공되지 않습니다. 이 페이지는 현재 출시 기능에 대한 사전 읽기로서의 Adobe 내부 팀을 대상으로 합니다. 이 메모가 제거될 때까지 Adobe 외부에서 공유하지 마십시오.
 
 >[!IMPORTANT]
 > 
@@ -122,10 +126,6 @@ ht-degree: 11%
 
    ![이미지: 배치 대상에 대한 활성화 흐름에서 예약됨 옵션을 강조 표시하고 시간 선택기를 표시합니다.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-   >[!IMPORTANT]
-   >
-   >내부 Experience Platform 프로세스가 구성되는 방식 때문에 첫 번째 증분 또는 전체 파일 내보내기에 일부 채우기 데이터가 포함되지 않을 수 있습니다. <br> <br> Adobe 전체 파일과 증분 파일 모두에 대해 완전하고 최신 채우기 데이터 내보내기를 보장하려면 다음 날 오후 12시 GMT 이후에 첫 번째 파일 내보내기 시간을 설정하는 것이 좋습니다. 이 제한은 향후 릴리스에서 해결될 예정입니다.
-
 1. 사용 **[!UICONTROL 날짜]** 내보내기를 수행할 날짜 또는 간격을 선택하는 선택기입니다. 일별 내보내기의 경우 가장 좋은 방법은 다운스트림 플랫폼의 캠페인 기간에 맞춰 시작 및 종료 날짜를 설정하는 것입니다.
 
    >[!IMPORTANT]
@@ -150,10 +150,6 @@ ht-degree: 11%
    * **[!UICONTROL 시간별]**: 3, 6, 8 또는 12시간마다 증분 파일 내보내기를 예약합니다.
 
 1. 사용 **[!UICONTROL 시간]** 시간(일 기준)을 선택하는 선택기 [!DNL UTC] 포맷(내보내기가 언제 수행되어야 하는지).
-
-   >[!IMPORTANT]
-   >
-   >내부 Experience Platform 프로세스가 구성되는 방식 때문에 첫 번째 증분 또는 전체 파일 내보내기에 일부 채우기 데이터가 포함되지 않을 수 있습니다. <br> <br> Adobe 전체 파일과 증분 파일 모두에 대해 완전하고 최신 채우기 데이터 내보내기를 보장하려면 다음 날 오후 12시 GMT 이후에 첫 번째 파일 내보내기 시간을 설정하는 것이 좋습니다. 이 제한은 향후 릴리스에서 해결될 예정입니다.
 
 1. 사용 **[!UICONTROL 날짜]** 선택기 : 내보내기가 발생할 간격을 선택합니다. 가장 좋은 방법은 다운스트림 플랫폼의 캠페인 기간에 맞춰 시작 및 종료 날짜를 설정하는 것입니다.
 
@@ -474,7 +470,7 @@ Adobe은 다음과 같은 ID 네임스페이스를 선택할 것을 권장합니
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exclude_enrichment_attributes"
 >title="보강 속성 제외"
->abstract="모든 속성을 제외하고 선택한 사용자 지정 업로드된 대상자의 프로필을 대상으로 내보내려면 이 옵션을 활성화합니다."
+>abstract="모든 속성을 제외하고 선택한 사용자 정의 업로드된 대상자의 프로필을 대상으로 내보내려면 이 옵션을 활성화합니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="설명서에서 자세히 알아보기"
 
 >[!IMPORTANT]
