@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 7월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
 workflow-type: tm+mt
-source-wordcount: '1297'
-ht-degree: 26%
+source-wordcount: '1365'
+ht-degree: 28%
 
 ---
 
@@ -17,6 +17,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 - [카탈로그 서비스](#catalog-service)
 - [데이터 수집](#data-collection)
+- [데이터 준비](#data-prep)
 - [대상](#destinations)
 - [쿼리 서비스](#query-service)
 - [Segmentation Service](#segmentation)
@@ -48,20 +49,20 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 {style="table-layout:auto"}
 
 데이터 수집에 대한 자세한 내용은 [데이터 컬렉션 개요](../../tags/home.md).
-<!-- 
-## Data Prep {#data-prep}
 
-Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+## 데이터 준비 {#data-prep}
 
-**New or updated features**
+데이터 준비를 사용하면 데이터 엔지니어가 XDM(Experience Data Model)과의 데이터를 매핑, 변환 및 확인할 수 있습니다.
 
-| Feature | Description |
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
 | --- | --- |
-| New mapper functions | You can now use the following functions when mapping objects in Data Prep: <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> For more information on these functions, read the [Data Prep functions guide](../../data-prep/functions.md#hierarchies---objects). |
+| 신규 매퍼 함수 | 이제 데이터 준비에서 개체를 매핑할 때 다음 함수를 사용할 수 있습니다. <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> 이러한 함수에 대한 자세한 내용은 [데이터 준비 기능 안내서](../../data-prep/functions.md#hierarchies---objects). |
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, please read the [Data Prep overview](../../data-prep/home.md). -->
+데이터 준비에 대한 자세한 내용은 [데이터 준비 개요](../../data-prep/home.md)를 참조하십시오.
 
 ## 대상 {#destinations}
 
