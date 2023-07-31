@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 7월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 819c4e8b4ab24d364cf6d26d3ce38d0bc372e603
+source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
 workflow-type: tm+mt
 source-wordcount: '1297'
 ht-degree: 26%
@@ -17,7 +17,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 - [카탈로그 서비스](#catalog-service)
 - [데이터 수집](#data-collection)
-- [대상](#data-prep)
+- [대상](#destinations)
 - [쿼리 서비스](#query-service)
 - [Segmentation Service](#segmentation)
 - [소스](#sources)
@@ -95,7 +95,7 @@ For more information on Data Prep, please read the [Data Prep overview](../../da
 **수정 사항 및 개선 사항** {#destinations-fixes-and-enhancements}
 
 - 매핑 단계에서 사용 가능한 모든 대상 속성이 Salesforce에서 반환되지 않은 (API) Salesforce Marketing Cloud 대상 문제를 해결했습니다. 이제 다음 항목이 있습니다. [대상 속성의 상한 2000](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md#mapping-considerations-example) Salesforce에서 가져왔습니다.
-- Microsoft Dynamics 365 대상 문제를 해결했습니다. 이제 대상은 를 통해 데이터의 지역 라우팅을 지원합니다. [영역 선택기](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate)를 사용하면 Microsoft 생태계 내에서 회사가 프로비저닝되는 지역에 따라 데이터 내보내기를 라우팅할 수 있습니다. ![강조 표시된 새 영역 선택기입니다.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "강조 표시된 새 영역 선택기입니다."){width="100" zoomable="yes"}
+- Microsoft Dynamics 365 대상 문제를 해결했습니다. 이제 대상은 를 통해 데이터의 지역 라우팅을 지원합니다. [영역 선택기](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate)를 사용하면 Microsoft 생태계 내에서 회사가 프로비저닝되는 지역에 따라 데이터 내보내기를 라우팅할 수 있습니다. <br> ![강조 표시된 새 영역 선택기입니다.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "강조 표시된 새 영역 선택기입니다."){width="100" zoomable="yes"}
 
 대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 

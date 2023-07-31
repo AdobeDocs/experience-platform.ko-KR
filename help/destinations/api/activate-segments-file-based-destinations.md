@@ -4,18 +4,14 @@ title: 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로
 description: 흐름 서비스 API를 사용하여 적격 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
 workflow-type: tm+mt
-source-wordcount: '4442'
+source-wordcount: '4415'
 ht-degree: 3%
 
 ---
 
 # 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로 활성화
-
->[!IMPORTANT]
->
->* 이 베타 기능은 Real-Time CDP Prime 및 Ultimate 패키지를 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 
 Experience Platform 외부에서 파일을 내보낼 때 향상된 사용자 정의 기능에 액세스하려면 향상된 파일 내보내기 기능(현재 베타 버전)을 사용하십시오.
 
@@ -24,14 +20,14 @@ Experience Platform 외부에서 파일을 내보낼 때 향상된 사용자 정
 * 을(를) 선택하는 기능 [파일 유형](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) 내보낸 파일.
 * [내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-이 기능은 아래에 나열된 6개의 새로운 Beta 클라우드 스토리지 카드에서 지원됩니다.
+이 기능은 아래에 나열된 6개의 클라우드 스토리지 카드에서 지원됩니다.
 
-* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
-* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
-* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
-* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
-* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
-* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
+* [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
+* [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 이 문서에서는 을(를) 사용하는 데 필요한 워크플로에 대해 설명합니다 [플로우 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/) Adobe Experience Platform에서 위에 연결된 클라우드 스토리지 위치 중 하나로 적격한 프로필을 내보냅니다.
 
@@ -382,7 +378,7 @@ A [기본 연결](https://developer.adobe.com/experience-platform-apis/reference
 
 +++[!DNL Amazon S3] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -429,7 +425,7 @@ A [기본 연결](https://developer.adobe.com/experience-platform-apis/reference
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -470,7 +466,7 @@ A [기본 연결](https://developer.adobe.com/experience-platform-apis/reference
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -548,7 +544,7 @@ A [기본 연결](https://developer.adobe.com/experience-platform-apis/reference
 
 +++[!DNL Google Cloud Storage] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -597,7 +593,7 @@ A [기본 연결](https://developer.adobe.com/experience-platform-apis/reference
 >
 >SFTP 대상에는 [!DNL auth spec]암호와 SSH 키 인증을 모두 지원합니다.
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {

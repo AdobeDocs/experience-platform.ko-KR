@@ -2,9 +2,9 @@
 description: 파일 기반 대상으로 데이터를 활성화할 때 파일 서식 옵션을 구성하는 방법에 대해 알아봅니다
 title: (Beta) 파일 기반 대상에 대한 파일 형식 옵션 구성
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1190'
 ht-degree: 19%
 
 ---
@@ -12,9 +12,6 @@ ht-degree: 19%
 # (Beta) 파일 기반 대상에 대한 파일 형식 옵션 구성
 
 >[!IMPORTANT]
->
->다음 **[!UICONTROL 파일 서식 옵션]** Adobe Experience Platform의 기능은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
->이 기능에 액세스하려면 Adobe 담당자에게 문의하십시오.
 > 
 >이 문서에 설명된 파일 서식 옵션은 현재 CSV 파일에만 사용할 수 있습니다.
 
@@ -35,7 +32,7 @@ Experience Platform UI를 사용하여 내보낸 파일에 대한 다양한 파�
 >
 >연결 중인 대상에 이러한 모든 옵션을 사용할 수 없을 수도 있습니다. 대상에서 지원할 파일 서식 옵션을 결정하는 것은 대상 개발자의 책임입니다. 대상 개발자는 대상에 연결할 때 사용할 수 있는 옵션을 결정할 수 있습니다. Experience Platform UI에서 필수 옵션이 별표로 표시됩니다.
 > 
->새로운 클라우드 스토리지 대상 - [(베타) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(베타) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(베타) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [(베타) 데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(베타) Google 클라우드 스토리지](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [(베타) SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - 현재 아래에 강조 표시된 6개의 CSV 옵션만 지원합니다.
+>Adobe이 빌드한 클라우드 스토리지 대상 - [Amazon](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google 클라우드 스토리지](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - 현재 아래에 강조 표시된 6개의 CSV 옵션만 지원합니다.
 
 ![사용 가능한 일부 파일 서식 옵션을 보여 주는 이미지입니다.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
