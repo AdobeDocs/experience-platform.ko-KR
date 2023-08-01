@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 27bff79c38395e2c2366f9bd89101eb03fcd5608
 workflow-type: tm+mt
-source-wordcount: '1688'
-ht-degree: 38%
+source-wordcount: '1723'
+ht-degree: 37%
 
 ---
 
@@ -13,6 +13,17 @@ ht-degree: 38%
 # Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 버전 2.20.0 - 2023년 7월 31일
+
+**새로운 기능**
+
+* 에 대한 지원이 추가됨 [데이터스트림 ID의 명령별 재정의](../../../../datastreams/overrides.md).
+
+**수정 사항 및 개선 사항**
+
+* 더 이상 사용되지 않음 `edgeConfigId` 에 찬성하여 `datastreamId` SDK 구성에서.
+* 데이터 스트림 구성에 대한 여러 사용자 경험 개선 사항이 사용자 인터페이스를 무시합니다.
 
 ## 버전 2.19.0 - 2023년 6월 21일
 
