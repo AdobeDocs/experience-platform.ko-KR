@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: cb8fd7a7e3803c356adbdf0c20cde869c1de602c
+source-git-commit: 732693b34bf4425cd3a44fba5647d337588abfa0
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '987'
 ht-degree: 11%
 
 ---
@@ -24,7 +24,6 @@ ht-degree: 11%
       - [Adobe Commerce 소스](connectors/adobe-applications/commerce.md)
       - [고객 특성 소스](connectors/adobe-applications/customer-attributes.md)
       - [데이터 수집 소스](connectors/adobe-applications/data-collection.md)
-      - [Workfront 소스](connectors/adobe-applications/workfront.md)
       - 필드 매핑 {#mapping}
          - [Analytics 필드 매핑](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager 필드 매핑](connectors/adobe-applications/mapping/audience-manager.md)
@@ -234,7 +233,6 @@ ht-degree: 11%
          - [고객 속성](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Marketo 사용자 지정 활동](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-         - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Advertising {#advertising}
          - [Google 광고](tutorials/ui/create/advertising/ads.md)
          - [Pinterest 광고](tutorials/ui/create/advertising/pinterest-ads.md)

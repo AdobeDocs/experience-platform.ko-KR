@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 10월
 description: Adobe Experience Platform의 2022년 10월 릴리스 정보.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e1deeadb98240f885e9dc95ecbc58ae48049a190
 workflow-type: tm+mt
-source-wordcount: '1328'
-ht-degree: 29%
+source-wordcount: '1159'
+ht-degree: 26%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 29%
 - [대상](#destinations)
 - [경험 데이터 모델](#xdm)
 - [쿼리 서비스](#query-service)
-- [소스](#sources-sources)
 
 ## 고객 관리 키 {#cmk}
 
@@ -109,16 +108,3 @@ Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/h
 쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md)를 참조하십시오.
 Adobe Experience Platform의 새로운 기능:
 
-## 소스 {#sources}
-
-Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
-
-Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
-
-**업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- | 
-| Adobe Workfront 소스의 Beta 가용성 | 사용 [Adobe Workfront 소스](../../sources/connectors/adobe-applications/workfront.md) Workfront 데이터를 Experience Platform으로 전환하고 작업 레코드와 타사 데이터 결합, 작업 레코드에 대한 기록 및 시계열 분석 적용, 표준 SQL을 사용하여 작업 데이터 쿼리 등의 사용 사례를 수행합니다. 자세한 내용은 의 안내서를 참조하십시오. [ui에서 Workfront 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-
-소스에 대해 자세히 알아보려면 [소스 개요 ](../../sources/home.md)를 참조하십시오.
