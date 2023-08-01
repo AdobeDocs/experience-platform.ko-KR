@@ -4,9 +4,9 @@ title: 대상자 대시보드 안내서
 description: Adobe Experience Platform은 조직이 만든 대상자에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2232'
 ht-degree: 7%
 
 ---
@@ -72,6 +72,20 @@ Platform 사용자 인터페이스 내의 모든 Adobe Experience Platform 세�
 가장 최근 스냅숏의 날짜와 시간이 [!UICONTROL 개요] 대상자 드롭다운 옆에 있는 탭. 모든 위젯 데이터는 해당 날짜 및 시간을 기준으로 정확합니다. 스냅샷의 타임스탬프는 UTC로 제공되며 개별 사용자 또는 조직의 시간대에 있지 않습니다.
 
 ![위젯 타임스탬프가 강조 표시된 대상 개요 탭](../images/audiences/widget-timestamp.png)
+
+## 기본 위젯 {#default-widgets}
+
+데이터에서 사용 가능한 최신 인사이트를 강조 표시하는 Adobe Experience Platform의 모든 새 인스턴스에 대해 기본 위젯 로드 아웃이 제공됩니다. 다음 위젯은 처음부터 세그먼트 보기에 사전 구성되어 있습니다. 위젯의 목적과 기능에 대한 전체 세부 정보는 각각의 섹션에서 찾을 수 있습니다.
+
+* [[!UICONTROL 대상자 크기]](#audience-size)
+* [[!UICONTROL 대상자 크기 변경 트렌드]](#audience-size-change-trend)
+* [[!UICONTROL ID 중첩]](#identity-overlap)
+* [[!UICONTROL ID별 프로필]](#profiles-by-identity)
+
+>[!NOTE]
+>
+>2023년 7월 26일 현재, [!UICONTROL 프로필], [!UICONTROL 대상], 및 [!UICONTROL 대상] 개요 대시보드는 지난 6개월 동안 보기를 수정하지 않은 모든 사용자에 대한 새 기본 위젯 로드 아웃으로 재설정되었습니다.
+>의 설명서를 참조하십시오. [프로필](./profiles.md#default-widgets) 및 [대상](./destinations.md#default-widgets) 기본 위젯 로드 아웃의 일부로 포함된 위젯에 대한 세부 정보를 보려면 기본 위젯 섹션을 참조하십시오. 이전과 같이 대시보드 위젯을 계속 사용자 정의할 수 있습니다.
 
 ## 표준 위젯 {#standard-widgets}
 
@@ -189,7 +203,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하는 데 사용할 �
 
 고객이 둘 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 ID가 해당 개별 고객과 연결됩니다. 이러한 상황으로 인해 조직에 둘 이상의 ID의 조각이 포함된 프로필이 여러 개 있을 수 있습니다.
 
-ID에 대한 자세한 내용은 [Identity Service 설명서](../../identity-service/home.md).
+ID에 대한 자세한 내용은 [ID 서비스 설명서](../../identity-service/home.md).
 
 ![다음 [!UICONTROL 대상] id 겹치기 위젯이 강조 표시된 대시보드 개요.](../images/audiences/identity-overlap.png)
 
@@ -208,7 +222,7 @@ ID에 대한 자세한 내용은 [Identity Service 설명서](../../identity-ser
 
 머신 러닝 모델은 데이터의 전체 분포 및 주요 차원을 분석하여 데이터 인사이트를 자동으로 생성합니다.
 
-ID에 대한 자세한 내용은 [Identity Service 설명서](../../identity-service/home.md).
+ID에 대한 자세한 내용은 [ID 서비스 설명서](../../identity-service/home.md).
 
 ### 예약된 활성화 {#scheduled-activations}
 

@@ -4,9 +4,9 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
+source-git-commit: 29c93c178a1f6247b61c663e87dbb0e5b95d318e
 workflow-type: tm+mt
-source-wordcount: '3393'
+source-wordcount: '3520'
 ht-degree: 10%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 10%
 
 Adobe Experience Platform UI(사용자 인터페이스)는 의 중요 정보를 볼 수 있는 대시보드를 제공합니다 [!DNL Real-Time Customer Profile] 일별 스냅샷 중에 캡처된 데이터. 이 안내서에서는 UI에서 프로필 대시보드에 액세스하고 작업하는 방법을 간략하게 설명하고 대시보드에 표시된 지표에 대한 정보를 제공합니다.
 
-Experience Platform 사용자 인터페이스 내의 모든 프로필 기능에 대한 개요는 다음을 참조하십시오. [실시간 고객 프로필 UI 안내서](../../profile/ui/user-guide.md).
+다음을 참조하십시오. [실시간 고객 프로필 UI 안내서](../../profile/ui/user-guide.md) Experience Platform 사용자 인터페이스 내의 프로필 기능에 대한 개요입니다.
 
 ## 프로필 대시보드 데이터
 
@@ -39,9 +39,9 @@ Platform UI 내에서 프로필 대시보드로 이동하려면 를 선택합니
 
 ### 프로필 대시보드 수정
 
-을 선택하여 프로파일 대시보드의 모양을 수정할 수 있습니다 **[!UICONTROL 대시보드 수정]**. 대시보드에서 위젯을 이동, 추가 및 제거하고 **[!UICONTROL 위젯 라이브러리]** 를 사용하여 사용 가능한 위젯을 탐색하고 조직의 사용자 정의 위젯을 만듭니다.
+을 선택하여 프로파일 대시보드의 모양을 수정할 수 있습니다 **[!UICONTROL 대시보드 수정]**. 대시보드에서 위젯을 이동, 추가, 크기 조정 및 제거하고 **[!UICONTROL 위젯 라이브러리]** 를 사용하여 사용 가능한 위젯을 탐색하고 조직의 사용자 정의 위젯을 만듭니다.
 
-다음을 참조하십시오. [대시보드 수정](../customize/modify.md) 및 [위젯 라이브러리 개요](../customize/widget-library.md) 설명서에서 자세히 알아보십시오.
+자세한 내용은 [대시보드 수정](../customize/modify.md) 및 [위젯 라이브러리 개요](../customize/widget-library.md) 설명서를 참조하십시오.
 
 ### 위젯 추가 {#add-widget}
 
@@ -91,7 +91,7 @@ Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [
 
 결합 스키마는 동일한 클래스를 공유하고 프로필에 대해 활성화된 여러 스키마로 구성됩니다. 단일 보기에서 동일한 클래스를 공유하는 각 스키마 내에 포함된 모든 필드의 합계를 볼 수 있습니다.
 
-자세한 내용은 유니온 스키마 UI 안내서 를 참조하십시오 [platform UI에서 결합 스키마 보기](../../profile/ui/union-schema.md#view-union-schemas).
+에 대해 자세히 알아보기 [platform UI에서 결합 스키마 보기](../../profile/ui/union-schema.md#view-union-schemas)유니온 스키마 UI 안내서 를 참조하십시오.
 
 ## 위젯 및 지표
 
@@ -101,9 +101,23 @@ Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [
 
 ![가장 최근 스냅샷 타임스탬프가 강조 표시된 프로필 대시보드 개요 탭](../images/profiles/snapshot-timestamp.png)
 
+## 기본 위젯 {#default-widgets}
+
+데이터에서 사용 가능한 최신 인사이트를 강조 표시하는 Adobe Experience Platform의 모든 새 인스턴스에 대해 기본 위젯 로드 아웃이 제공됩니다. 다음 위젯은 처음부터 세그먼트 보기에 사전 구성되어 있습니다. 위젯의 목적 및 기능에 대한 전체 세부 정보는 아래에서 찾을 수 있습니다.
+
+* [[!UICONTROL 프로필 개수]](#profile-count)
+* [[!UICONTROL 프로필 개수 변경]](#profile-count-change)
+* [[!UICONTROL 프로필 개수 변경 추세]](#profiles-count-change-trend)
+* [[!UICONTROL ID별 프로필]](#profiles-by-identity)
+* [[!UICONTROL ID 중첩]](#identity-overlap)
+
+>[!NOTE]
+>
+>2023년 7월 26일 현재 [!UICONTROL 프로필], [!UICONTROL 대상], 및 [!UICONTROL 대상] 개요 대시보드는 지난 6개월 동안 보기를 수정하지 않은 모든 사용자에 대한 새 기본 위젯 로드 아웃으로 재설정되었습니다. 의 설명서를 참조하십시오. [대상](./destinations.md#default-widgets) 및 [대상](./audiences.md#default-widgets) 기본 위젯 로드 아웃의 일부로 포함된 위젯에 대한 세부 정보를 보려면 기본 위젯 섹션을 참조하십시오. 이전과 같이 대시보드 위젯을 계속 사용자 정의할 수 있습니다.
+
 ## 표준 위젯 {#standard-widgets}
 
-Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 데 사용할 수 있는 여러 표준 위젯을 제공합니다. 를 사용하여 조직과 공유할 사용자 정의 위젯을 만들 수도 있습니다. [!UICONTROL 위젯 라이브러리]. 사용자 정의 위젯 만들기에 대한 자세한 내용은 [위젯 라이브러리 개요](../customize/widget-library.md).
+Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 데 사용할 수 있는 여러 표준 위젯을 제공합니다. 를 사용하여 조직과 공유할 사용자 정의 위젯을 만들 수도 있습니다. [!UICONTROL 위젯 라이브러리]. 사용자 정의 위젯을 만드는 방법에 대해 자세히 알아보려면 [위젯 라이브러리 개요](../customize/widget-library.md).
 
 사용 가능한 각 표준 위젯에 대해 자세히 알아보려면 다음 목록에서 위젯의 이름을 선택합니다.
 
@@ -138,7 +152,7 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 
 >[!NOTE]
 >
->다음 [!UICONTROL 프로필 개수] 위젯은에 표시된 프로필 수와 다른 수를 표시할 수 있습니다. [!UICONTROL 찾아보기] 의 탭 [!UICONTROL 프로필] 여러 가지 이유로 UI의 섹션에 있는 섹션을 참조하십시오. 이에 대한 가장 일반적인 이유는 [!UICONTROL 찾아보기] 탭은 조직의 기본 병합 정책을 기반으로 병합된 총 프로필 수를 참조하지만 [!UICONTROL 프로필 개수] 위젯은 대시보드에서 보기 위해 선택한 병합 정책을 기반으로 병합된 총 프로필 수를 참조합니다.
+>다음 [!UICONTROL 프로필 개수] 위젯은에 표시된 프로필 수와 다른 수를 표시할 수 있습니다. [!UICONTROL 찾아보기] 의 탭 [!UICONTROL 프로필] 여러 가지 이유로 UI의 섹션에 있는 섹션을 참조하십시오. 이러한 차이가 발생하는 가장 일반적인 이유는 [!UICONTROL 찾아보기] 탭은 조직의 기본 병합 정책을 기반으로 병합된 총 프로필 수를 참조하지만 [!UICONTROL 프로필 개수] 위젯은 대시보드에서 보기 위해 선택한 병합 정책을 기반으로 병합된 총 프로필 수를 참조합니다.
 >
 >또 다른 일반적인 이유는 대시보드 스냅숏을 만드는 시간과 [!UICONTROL 찾아보기] 탭. 다음을 확인할 수 있습니다. [!UICONTROL 프로필 개수] 위젯의 타임스탬프를 보고 위젯이 마지막으로 업데이트되었습니다. 에서 샘플 작업이 트리거되는 방법에 대해 자세히 알아보려면 [!UICONTROL 찾아보기] 탭에서 다음을 참조하십시오 [실시간 고객 프로필 UI 안내서의 프로필 개수 섹션](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
@@ -161,7 +175,7 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 
 >[!NOTE]
 >
->다음 [!UICONTROL 프로필 개수 변경] 위젯은 추가된 프로필 수를 반영합니다 **이후** 초기 프로필 수집 및 프로필 저장소 설정입니다. 즉, 조직에서 프로필 저장소를 설정하고 1일에 4,000,000을 수집한 경우 24시간 이내에 대시보드를 사용할 수 있지만, [!UICONTROL 프로필 개수 변경] 위젯이 0으로 설정됩니다. 이는 시스템으로의 초기 프로필 수집과 관련된 급증을 방지하기 위해 수행됩니다. 이후 30일 동안 조직은 프로필 스토어에 추가 1,000,000개의 프로필을 수집합니다. 다음 스냅샷을 만든 후 [!UICONTROL 프로필 개수 변경] 위젯은 추가된 총 100만 개의 프로필을 표시하지만 [!UICONTROL 프로필 개수] 위젯에는 총 5,000,000개의 프로필이 표시됩니다.
+>다음 [!UICONTROL 프로필 개수 변경] 위젯은 추가된 프로필 수를 반영합니다 **이후** 초기 프로필 수집 및 프로필 저장소 설정입니다. 즉, 조직에서 프로필 저장소를 설정하고 1일에 4,000,000을 수집한 경우 24시간 이내에 대시보드를 사용할 수 있지만, [!UICONTROL 프로필 개수 변경] 위젯이 0으로 설정됩니다. 이 계산 방법은 프로필의 초기 시스템 수집과 관련된 급증을 방지하기 위해 수행됩니다. 이후 30일 동안 조직은 프로필 스토어에 추가 1,000,000개의 프로필을 수집합니다. 다음 스냅샷을 만든 후 [!UICONTROL 프로필 개수 변경] 위젯은 추가된 총 100만 개의 프로필을 표시하지만 [!UICONTROL 프로필 개수] 위젯에는 총 5,000,000개의 프로필이 표시됩니다.
 
 ![프로필 수 변경 위젯이 강조 표시된 Platform UI 프로필 대시보드 .](../images/profiles/profile-count-change.png)
 
@@ -174,9 +188,9 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 
 다음 **[!UICONTROL 프로필 개수 변경 트렌드]** 위젯은 지난 30일, 90일 또는 12개월 동안 매일 프로필 스토어에 추가된 총 병합 프로필 수를 표시합니다. 이 숫자는 스냅숏을 만들 때 매일 업데이트되므로, 프로필을 플랫폼으로 수집하려는 경우 다음 스냅숏을 만들 때까지 프로필 수가 반영되지 않습니다. 추가된 프로필 수는 프로필 조각을 함께 병합하여 각 개인에 대한 단일 프로필을 형성하기 위해 선택한 병합 정책이 프로필 데이터에 적용된 결과입니다.
 
-다음을 참조하십시오. [이 문서의 앞부분에 있는 병합 정책에 대한 섹션](#merge-policies) 자세히 알아보십시오.
+자세한 내용은 [이 문서의 앞부분에 있는 병합 정책에 대한 섹션](#merge-policies).
 
-다음 **[!UICONTROL 프로필 개수 변경 트렌드]** 위젯은 위젯의 오른쪽 상단에 &#39;캡션&#39; 버튼을 표시합니다. 선택 **[!UICONTROL 캡션]** 자동 캡션 대화 상자를 엽니다.
+다음 **[!UICONTROL 프로필 개수 변경 트렌드]** 위젯은 위젯의 오른쪽 상단에 &#39;캡션&#39; 버튼을 표시합니다. 자동 캡션 대화 상자를 열려면 다음을 선택합니다 **[!UICONTROL 캡션]**.
 
 ![프로필 개요 탭에는 캡션 버튼이 강조 표시된 프로필 개수 변경 트렌드 위젯이 표시됩니다.](../images/profiles/profiles-count-change-trend-captions.png)
 
@@ -188,7 +202,7 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 
 <!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
 
-이 위젯은 선택한 소스 ID 및 병합 정책을 기반으로 프로필 수를 필터링한 다음 선 그래프를 사용하여 다양한 기간에 대한 숫자 변경을 보여 줍니다. 페이지 상단의 개요 드롭다운에서 병합 정책을 선택하고 위젯 드롭다운 메뉴에서 소스 ID 및 기간을 선택합니다. 30일, 90일, 12개월 기간에 걸쳐 트렌드를 시각화할 수 있습니다.
+이 위젯은 선택한 소스 ID를 기반으로 프로필 수를 필터링하고 정책을 병합한 다음 선 그래프를 사용하여 다양한 기간에 대한 숫자 변경을 보여 줍니다. 병합 정책은 페이지 상단의 개요 드롭다운에서 선택되고 위젯 드롭다운 메뉴에서 소스 ID 및 기간이 선택됩니다. 30일, 90일, 12개월 기간에 걸쳐 추세를 시각화할 수 있다.
 
 이 위젯은 필요한 ID로 필터링된 프로필의 증가 패턴을 보여줌으로써 대상 활성화 요구 사항을 관리하는 데 도움이 됩니다.
 
@@ -203,11 +217,11 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 
 다음 **[!UICONTROL ID별 프로필]** 위젯은 프로필 스토어에 있는 병합된 모든 프로필의 id 분류를 표시합니다. ID별 총 프로필 수(즉, 각 네임스페이스에 대해 표시된 값을 함께 추가)는 하나의 프로필에 연결된 여러 네임스페이스가 있을 수 있으므로 병합된 프로필의 총 수보다 높을 수 있습니다. 예를 들어 고객이 둘 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 네임스페이스가 해당 개별 고객과 연결됩니다.
 
-다음을 참조하십시오. [이 문서의 앞부분에 있는 병합 정책에 대한 섹션](#merge-policies) 자세히 알아보십시오.
+자세한 내용은 [이 문서의 앞부분에 있는 병합 정책에 대한 섹션](#merge-policies).
 
 ![ID별 프로필 위젯이 강조 표시된 프로필 개요 대시보드 .](../images/profiles/profiles-by-identity.png)
 
-선택 **[!UICONTROL 캡션]** 자동 캡션 대화 상자를 엽니다.
+자동 캡션 대화 상자를 열려면 다음을 선택합니다 **[!UICONTROL 캡션]**.
 
 ![ID 캡션별 프로필 대화 상자](../images/profiles/profiles-by-identity-captions.png)
 
@@ -224,9 +238,9 @@ ID에 대한 자세한 내용은 [Adobe Experience Platform Identity Service 설
 
 다음 **[!UICONTROL ID 중복]** 위젯은 벤 다이어그램을 사용하거나 다이어그램을 설정하여 두 개의 선택한 ID가 포함된 프로필 스토어의 프로필이 겹치는 것을 표시합니다.
 
-위젯 드롭다운 메뉴를 사용하여 비교할 ID를 선택합니다. 원은 각 ID를 포함하는 프로필의 상대적 총 수를 표시합니다. 두 ID를 모두 포함하는 프로필의 수는 원 사이의 겹침 크기로 표시됩니다. 고객이 둘 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 ID가 해당 개별 고객과 연결되므로 조직에 둘 이상의 ID에서 파생된 조각을 포함하는 프로필이 여러 개 있을 수 있습니다.
+위젯 드롭다운 메뉴를 사용하여 비교할 ID를 선택합니다. 원은 각 ID를 포함하는 프로필의 상대적 총 수를 표시합니다. 두 ID를 모두 포함하는 프로필의 수는 원 사이의 겹침 크기로 표시됩니다. 고객이 둘 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 ID가 해당 개별 고객과 연결됩니다. 이 경우 조직에는 둘 이상의 ID의 조각이 포함된 프로필이 여러 개 있을 수 있습니다.
 
-프로필 조각에 대한 자세한 내용은 [프로필 조각과 병합된 프로필](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) 를 참조하십시오.
+프로필 조각에 대한 자세한 내용은 [프로필 조각과 병합된 프로필](../../profile/home.md#profile-fragments-vs-merged-profiles) 를 참조하십시오.
 
 ID에 대한 자세한 내용은 [Adobe Experience Platform Identity Service 설명서](../../identity-service/home.md).
 
@@ -247,7 +261,7 @@ ID에 대한 자세한 내용은 [Adobe Experience Platform Identity Service 설
 
 이 위젯은 막대 차트를 사용하여 하나의 고유 식별자로만 식별되는 총 프로필 수를 보여줍니다. 위젯은 가장 일반적으로 발생하는 ID 중 최대 5개를 지원합니다.
 
-개별 막대에 마우스를 가져다 대면 ID에 대한 총 프로필 수를 자세히 설명하는 대화 상자를 볼 수 있습니다.
+ID에 대한 총 프로필 수를 자세히 설명하는 대화 상자를 보려면 커서를 사용하여 개별 막대 위로 마우스를 가져갑니다.
 
 ![ID 위젯별 단일 ID 프로필 .](../images/profiles/single-identity-profiles-by-identity.png)
 
@@ -294,7 +308,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 이 위젯은 프로필 데이터에 적용된 선택한 병합 정책에 따라 활성화할 준비가 된 총 대상 수를 제공합니다.
 
-선택 **[!UICONTROL 대상]** 을 클릭하여 다음 위치로 이동합니다. [!UICONTROL 세그먼트] 대시보드 [!UICONTROL 찾아보기] 탭. 여기에서 조직의 모든 세그먼트 정의 목록을 볼 수 있습니다.
+선택 **[!UICONTROL 대상]** 을 클릭하여 다음 위치로 이동합니다. [!UICONTROL 대상] 대시보드 [!UICONTROL 찾아보기] 탭. 여기에서 조직의 모든 세그먼트 정의 목록을 볼 수 있습니다.
 
 ![대상 위젯.](../images/profiles/audiences.png)
 
@@ -303,7 +317,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 <!-- * [[!UICONTROL Audiences change trend]](#audiences-change-trend) -->
 <!-- ### [!UICONTROL Audiences change trend] {#audiences-change-trend}
 
-This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.  
+This line graph widget visualizes the change in the total number of audiences each day, trending over time. The change in the number of audiences is dependent on the selected merge policy being applied to your profile data. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over 30 days, 90 days, and 12-month periods.
 
 The visualization allows you to monitor the overall health of audiences within Adobe Experience Platform by understanding trends in the growth or decline of the total number of audiences. -->
 
@@ -319,19 +333,19 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ![보기 가 더 강조 표시된 대상 중복 보고서 위젯 .](../images/profiles/profiles-audience-overlap-report.png)
 
-다음 [!UICONTROL 대상 중복 보고서] 대화 상자가 나타납니다. 이 대화 상자에는 최대 50개의 대상 중복 분석 행이 6개의 열로 분류되어 포함될 수 있습니다. 설정 아이콘(![설정 아이콘](../images/profiles/settings-icon.png))을 클릭하여 테이블에서 열을 제거하거나 추가합니다.
+다음 [!UICONTROL 대상 중복 보고서] 대화 상자가 나타납니다. 이 대화 상자에는 최대 50개의 대상 중복 분석 행이 6개의 열로 분류되어 포함될 수 있습니다. 테이블에서 열을 제거하거나 추가하려면 설정 아이콘(![설정 아이콘](../images/profiles/settings-icon.png)).
 
 ![대상 겹침 보고서 대화 상자](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
 >
->다음 항목 선택 **[!UICONTROL 겹침]** 열 머리글을 사용하여 결과의 순위를 가장 높은 항목에서 가장 낮은 항목순으로 변경하거나 가장 낮은 항목에서 가장 높은 항목순으로 변경합니다.
+>결과의 순위를 [최고]에서 [최저]로 또는 [최저]에서 [최고]로 변경하려면 다음을 선택합니다. **[!UICONTROL 겹침]** 열 머리글입니다.
 
 전체 보고서를 PDF 형식으로 다운로드하려면 옵션 메뉴(**`...`**) 다음에 오는 **[!UICONTROL 다운로드]**.
 
 ![타원 및 다운로드 옵션이 강조 표시된 대상 중복 보고서 대화 상자](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
 
-보고서에서 행을 선택하여 중복 분석의 벤 다이어그램을 엽니다. 벤 다이어그램의 섹션을 마우스로 가리키면 대화 상자에서 프로필 카운트가 표시됩니다.
+중복 분석의 벤 다이어그램을 열려면 보고서에서 행을 선택합니다. 대화 상자에서 프로필 수를 보려면 벤 다이어그램의 섹션 위로 마우스를 가져갑니다.
 
 ![벤 다이어그램과 행이 강조 표시된 대상 겹치기 보고서 대화 상자입니다.](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
 
@@ -436,4 +450,4 @@ The three levels of completeness are:
 
 ## 다음 단계
 
-이제 이 문서를 따라 프로필 대시보드를 찾고 사용 가능한 위젯에 표시되는 지표를 이해할 수 있습니다. 작업에 대해 자세히 알아보려면 [!DNL Profile] Experience Platform UI의 데이터입니다. [실시간 고객 프로필 UI 안내서](../../profile/ui/user-guide.md).
+이 문서를 따르면 이제 프로필 대시보드를 찾고 사용 가능한 위젯에 표시되는 지표를 이해할 수 있습니다. 작업에 대해 자세히 알아보려면 [!DNL Profile] Experience Platform UI의 데이터는 [실시간 고객 프로필 UI 안내서](../../profile/ui/user-guide.md).

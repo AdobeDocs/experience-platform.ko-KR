@@ -4,9 +4,9 @@ title: 대상 대시보드 안내서
 description: Adobe Experience Platform은 조직의 활성 대상에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '3031'
+source-wordcount: '3171'
 ht-degree: 20%
 
 ---
@@ -39,7 +39,7 @@ Platform UI 내에서 대상 대시보드로 이동하려면 를 선택합니다
 
 ### 수정 [!UICONTROL 대상] 대시보드 {#modify}
 
-선택 **[!UICONTROL 대시보드 수정]** 대상 대시보드의 모양을 변경합니다. 이를 통해 대시보드에서 위젯을 이동, 추가 및 제거하고 위젯 라이브러리에 액세스할 수 있습니다. 위젯 라이브러리에서 사용 가능한 위젯을 탐색하고 조직에 대한 사용자 정의 위젯을 만들 수 있습니다.
+선택 **[!UICONTROL 대시보드 수정]** 대상 대시보드의 모양을 변경합니다. 대시보드에 대한 변경 사항은 사용자별로 다르며 조직 전체가 아닙니다. 대시보드에서 위젯을 이동, 추가, 크기 조정 및 제거하고 위젯 라이브러리에 액세스하여 대시보드를 사용자 정의할 수 있습니다. 위젯 라이브러리에서 사용 가능한 위젯을 탐색하고 조직에 대한 사용자 정의 위젯을 만들 수 있습니다.
 
 다음을 참조하십시오. [대시보드 수정](../customize/modify.md) 및 [위젯 라이브러리 개요](../customize/widget-library.md) 설명서에서 자세히 알아보십시오.
 
@@ -51,11 +51,24 @@ Platform UI 내에서 대상 대시보드로 이동하려면 를 선택합니다
 
 위젯 라이브러리에서 표준 및 사용자 정의 대상 위젯의 선택을 검색할 수 있습니다. 위젯을 추가하는 방법에 대한 자세한 내용은 위젯 라이브러리 설명서 를 참조하십시오. [위젯 추가](../customize/widget-library.md#add-widgets).
 
+## 기본 위젯 {#default-widgets}
+
+데이터에서 사용 가능한 최신 인사이트를 강조 표시하는 Adobe Experience Platform의 모든 새 인스턴스에 대해 기본 위젯 로드 아웃이 제공됩니다. 다음 위젯은 처음부터 세그먼트 보기에 사전 구성되어 있습니다. 위젯의 목적 및 기능에 대한 전체 세부 정보는 아래에서 찾을 수 있습니다.
+
+* [[!UICONTROL 가장 많이 사용하는 대상]](#most-used-destinations)
+* [[!UICONTROL 최근에 생성된 대상]](#recently-created-destinations)
+* [[!UICONTROL 최근 활성화된 세그먼트]](#recently-activated-segments)
+
+>[!NOTE]
+>
+>2023년 7월 26일 현재, [!UICONTROL 프로필], [!UICONTROL 대상], 및 [!UICONTROL 대상] 개요 대시보드는 지난 6개월 동안 보기를 수정하지 않은 모든 사용자에 대한 새 기본 위젯 로드 아웃으로 재설정되었습니다.
+>의 설명서를 참조하십시오. [프로필](./profiles.md#default-widgets) 및 [대상](./audiences.md#default-widgets) 기본 위젯 로드 아웃의 일부로 포함된 위젯에 대한 세부 정보를 보려면 기본 위젯 섹션을 참조하십시오. 이전과 같이 대시보드 위젯을 계속 사용자 정의할 수 있습니다.
+
 ## 표준 위젯 {#standard-widgets}
 
 Adobe은 대상과 관련된 다양한 지표를 시각화하고 데이터 분석에 사용할 수 있는 대상의 완전성을 평가하는 데 사용할 수 있는 여러 표준 위젯을 제공합니다. 를 사용하여 조직과 공유할 사용자 정의 위젯을 만들 수도 있습니다. [!UICONTROL 위젯 라이브러리]. 사용자 정의 위젯 만들기에 대한 자세한 내용은 [위젯 라이브러리 개요](../customize/widget-library.md).
 
-### 사전 요구 사항 {#prerequisites}
+### 전제 조건 {#prerequisites}
 
 표준 위젯에 대한 설명을 계속하기 전에 설명서 전체에서 사용되는 다음 주요 용어의 정의를 잘 알고 있는지 확인하십시오.
 
