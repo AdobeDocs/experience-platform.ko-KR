@@ -3,9 +3,9 @@ title: LiveRamp - 온보드 연결
 description: LiveRamp 커넥터를 사용하여 Adobe Real-time Customer Data Platform에서 LiveRamp Connect로 대상을 온보딩하는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1830'
 ht-degree: 3%
 
 ---
@@ -36,9 +36,9 @@ Experience Platform에서 (으)로 데이터를 보내기 전에 [!DNL LiveRamp 
 
 이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
 
-모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+이 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
 
-또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+또한 이 대상은 아래 표에 설명된 추가 대상의 활성화도 지원합니다.
 
 | 대상자 유형 | 설명 |
 ---------|----------|
@@ -129,13 +129,8 @@ Experience Platform에서 (으)로 데이터를 보내기 전에 [!DNL LiveRamp 
 
 다음에서 [!UICONTROL 예약] 단계: 아래 표시된 설정을 사용하여 각 대상에 대한 내보내기 일정을 만듭니다.
 
->[!IMPORTANT]
->
->이 대상에 활성화된 모든 대상은 아래와 같이 정확히 동일한 일정으로 구성해야 합니다.
-
 * **[!UICONTROL 파일 내보내기 옵션]**: [!UICONTROL 전체 파일 내보내기]. [증분 파일 내보내기](../../ui/activate-batch-profile-destinations.md#export-incremental-files) 은(는) 현재 다음에 대해 지원되지 않습니다. [!DNL LiveRamp] 대상.
 * **[!UICONTROL 빈도]**: [!UICONTROL 매일]
-* 내보내기 시간을 다음으로 설정 **[!UICONTROL 세그먼트 평가 후]**. 예약된 대상 내보내기 및 [온디맨드 파일 내보내기](../../ui/export-file-now.md) 은(는) 현재 다음에 대해 지원되지 않습니다. [!DNL LiveRamp] 대상.
 * **[!UICONTROL 날짜]**: 원하는 대로 내보내기 시작 및 종료 시간을 선택합니다.
 
 ![대상 예약 단계를 보여주는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
