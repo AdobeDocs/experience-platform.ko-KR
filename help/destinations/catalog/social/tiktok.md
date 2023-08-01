@@ -3,9 +3,9 @@ title: TikTok 연결
 description: 광고 캠페인의 타겟팅용 데이터로 TikTok에서 맞춤형 대상자를 구축합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 대상을 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '983'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->이 설명서 페이지는 TikTok 팀에서 만들었습니다. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
+>이 대상 커넥터 및 설명서 페이지는 TikTok 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
 
 ## 사용 사례 {#use-cases}
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: 설명서 셀프서비스 템플릿
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 YOURSOURCE에 연결하는 방법을 알아봅니다.
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: 74e9774009d086a04351c8ff04cde29348c90c09
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '2134'
+source-wordcount: '2139'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->이 설명서 페이지는 다음 사용자가 만들었습니다. *소스* 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. *업데이트를 위해 연락할 수 있는 링크 또는 이메일 주소 삽입*.
+>이 소스 커넥터 및 설명서 페이지는 *YourSource* 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. *업데이트를 위해 연락할 수 있는 링크 또는 이메일 주소 삽입*.
 
 ## 사전 요구 사항
 

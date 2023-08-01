@@ -4,9 +4,9 @@ description: 흐름 서비스 API를 사용하여 스트리밍 데이터를 소�
 hide: true
 hidefromtoc: true
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1699'
+source-wordcount: '1704'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->이 설명서 페이지는 다음 사용자가 만들었습니다. *소스* 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. *업데이트를 위해 연락할 수 있는 링크 또는 이메일 주소 삽입*.
+>이 소스 커넥터 및 설명서 페이지는 *소스* 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. *업데이트를 위해 연락할 수 있는 링크 또는 이메일 주소 삽입*.
 
 ## 사전 요구 사항
 

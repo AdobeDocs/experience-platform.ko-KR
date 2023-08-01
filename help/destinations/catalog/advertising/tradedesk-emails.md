@@ -3,9 +3,9 @@ title: (Beta) 트레이드 데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타기팅 및 억제에 대한 프로필을 트레이드 데스크 계정에 활성화합니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1081'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 4%
 >* EU에서 소스 데이터를 제공하는 경우 **[!DNL The Trade Desk - CRM (EU)]** 대상을 사용하십시오.
 >* APAC 또는 NAMER 지역에서 소스 데이터를 제공하는 경우 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 대상을 사용하십시오.
 >
->Experience Platform의 두 대상 모두 현재 베타 버전입니다. 이 설명서 페이지는 다음 사용자가 만들었습니다. *[!DNL Trade Desk]* 팀. 문의 사항이나 업데이트 요청이 있으면 다음으로 문의하십시오. [!DNL Trade Desk] 대표적으로 설명서와 기능은 변경될 수 있습니다.
+>Experience Platform의 두 대상 모두 현재 베타 버전입니다. 이 대상 커넥터 및 설명서 페이지는 *[!DNL Trade Desk]* 팀. 문의 사항이나 업데이트 요청이 있으면 다음으로 문의하십시오. [!DNL Trade Desk] 대표적으로 설명서와 기능은 변경될 수 있습니다.
 
 ## 개요 {#overview}
 

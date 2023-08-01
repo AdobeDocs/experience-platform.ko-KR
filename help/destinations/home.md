@@ -3,10 +3,10 @@ keywords: 대상;adobe experience platform;platform;대상 개요;데이터 활�
 title: 대상 개요
 description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과 미리 빌드된 통합입니다. Adobe Experience Platform의 대상 을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 54165264364d7d53da2ff822b9ceb32157900b6a
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 5%
+source-wordcount: '925'
+ht-degree: 4%
 
 ---
 
@@ -46,6 +46,12 @@ Platform의 핵심 기능 중 하나는 자사 데이터를 수집하고 비즈�
 ## 대상 유형 및 범주 {#types-and-categories}
 
 Experience Platform을 사용하면 다양한 유형의 대상에 대한 데이터를 활성화하여 활성화 사용 사례를 충족할 수 있습니다. 대상은 API 기반 통합에서 파일 수신 시스템과의 통합, 프로필 조회 대상 등에 이르기까지 다양합니다. 사용 가능한 모든 대상에 대한 자세한 내용은 [대상 유형 및 범주 개요](./destination-types.md).
+
+## Adobe이 빌드한 대상 및 파트너가 빌드한 대상 {#adobe-and-partner-built-destinations}
+
+Experience Platform 대상 카탈로그의 일부 커넥터는 Adobe에서 빌드하고 유지 관리하는 반면, 다른 커넥터는 를 사용하는 파트너 회사에서 빌드하고 유지 관리하는 것입니다 [Destination SDK](/help/destinations/destination-sdk/overview.md). 파트너가 대상을 만들고 유지 관리하는 경우 각 파트너가 빌드한 커넥터에 대한 설명서 페이지 맨 위의 참고 사항이 호출됩니다. 예를 들어 [Amazon S3 커넥터](/help/destinations/catalog/cloud-storage/amazon-s3.md) 은 Adobe에 의해 만들어지지만 [TikTok 커넥터](/help/destinations/catalog/social/tiktok.md) 는 TikTok 팀에서 만들고 유지 관리합니다.
+
+파트너가 작성 및 유지 관리하는 커넥터의 경우 파트너 팀이 커넥터 문제를 해결해야 할 수 있습니다(설명서 페이지의 메모에 제공된 연락 방법). Adobe 작성 및 유지 관리되는 커넥터와 관련된 문제는 Adobe 담당자 또는 고객 지원 센터에 문의하십시오.
 
 ## 대상 및 액세스 제어 {#access-controls}
 

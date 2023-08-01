@@ -2,9 +2,9 @@
 title: Snap Inc 연결
 description: Snapchat Ads Platform에 연결하고 Experience Platform에서 대상을 내보내는 방법에 대해 알아봅니다.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->이 설명서 페이지는 다음 사용자가 만들었습니다. *스냅* 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. *dev-support@snap.com*
+>이 대상 커넥터 및 설명서 페이지는 *스냅* 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. *dev-support@snap.com*
 
 ## 사용 사례 {#use-cases}
 

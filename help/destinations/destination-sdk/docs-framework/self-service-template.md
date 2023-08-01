@@ -2,9 +2,9 @@
 title: 설명서 셀프서비스 템플릿 // 대상 이름으로 바꾸기
 description: 이 템플릿을 사용하여 Adobe Experience Platform 카탈로그의 대상에 대한 공개 설명서를 만듭니다. // 개요 섹션의 단락으로 바꾸기
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1525'
+source-wordcount: '1530'
 ht-degree: 1%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-*고객에게 제공하는 가치를 포함하여 회사에 대한 간략한 개요를 제공하십시오. 자세히 알아보려면 제품 설명서 홈페이지에 대한 링크를 포함하십시오.*
+*고객에게 제공하는 가치를 포함하여 회사에 대한 간략한 개요를 제공하십시오. 자세히 읽어보려면 제품 설명서 홈페이지에 대한 링크를 포함하십시오.*
 
 >[!IMPORTANT]
 >
->이 설명서 페이지는 다음 사용자가 만들었습니다. *Yourdestination* 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. *예를 들어 업데이트에 대해 연락할 수 있는 링크 또는 이메일 주소를 삽입합니다. `support@YourDestination.com`.*
+>이 대상 커넥터 및 설명서 페이지는 *Yourdestination* 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. *예를 들어 업데이트에 연결할 수 있는 링크 또는 이메일 주소를 삽입합니다. `support@YourDestination.com`.*
 
 ## 사용 사례 {#use-cases}
 

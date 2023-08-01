@@ -2,9 +2,9 @@
 title: 메달리아 연결
 description: 타겟팅된 Medallia 설문 조사 및 피드백 수집을 위한 프로필을 활성화하여 고객의 요구 사항과 기대치를 보다 잘 이해할 수 있습니다.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1100'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->이 설명서 페이지는 Medallia 팀에서 만들었습니다. 문의 사항이나 업데이트 요청은 adobe-integrations@medallia.com으로 직접 문의하시기 바랍니다.
+>이 대상 커넥터 및 설명서 페이지는 Medallia 팀에서 만들고 관리합니다. 문의 사항이나 업데이트 요청은 adobe-integrations@medallia.com으로 직접 문의하시기 바랍니다.
 
 ## 사용 사례 {#use-cases}
 
@@ -140,8 +140,8 @@ Medallia는 아래 표에 설명된 ID 활성화를 지원합니다. 자세히 �
         "aep_segments_new": ["c1c3edcc-07cb-4f66-b5dd-aff485148aba"],
         "aep_segments_existing": [],
         "aep_segments_removed": [],
-        "firstname":  “John” ,
-        "lastname":  “Smith”,
+        "firstname":  "John" ,
+        "lastname":  "Smith",
         "contactId": "jsmith120002",
     }
 ]

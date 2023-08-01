@@ -2,10 +2,10 @@
 title: RainFocus 소스 개요
 description: RainFocus 계정의 이벤트 관리 및 분석 데이터를 Experience Platform으로 가져오는 방법에 대해 알아봅니다
 last-substantial-update: 2023-06-21T00:00:00Z
-badge: 베타
-source-git-commit: f3d70e986148d39429f394a60d12686617e3fd3d
+badge: Beta
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '998'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->이 설명서 페이지는 다음 사용자가 만들었습니다. [!DNL RainFocus] 팀. 문의 사항이나 업데이트 요청은 클라이언트 지원팀에 직접 문의하십시오.<span>@rainfocus.com 또는 [[!DNL RainFocus] 도움말 센터](https://help.rainfocus.com/hc/en-us)
+>이 소스 커넥터 및 설명서 페이지는 [!DNL RainFocus] 팀. 문의 사항이나 업데이트 요청은 클라이언트 지원팀에 직접 문의하십시오.<span>@rainfocus.com 또는 [[!DNL RainFocus] 도움말 센터](https://help.rainfocus.com/hc/en-us)
 
 ## 사전 요구 사항
 

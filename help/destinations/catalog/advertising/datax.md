@@ -2,9 +2,9 @@
 title: Verizon MediaYahoo DataX 연결
 description: DataX는 Verizon Media/Yahoo가 안전하고 자동화된 확장 가능한 방식으로 외부 파트너와 데이터를 교환할 수 있도록 하는 다양한 구성 요소를 호스팅하는 Verizon Media/Yahoo 인프라의 집합체입니다.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '781'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 설명서 페이지는 작성자: [!DNL Verizon Media/Yahoo]의 [!DNL DataX] 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
+>이 대상 커넥터 및 설명서 페이지는 다음 방법으로 만들고 유지 관리됩니다. [!DNL Verizon Media/Yahoo]의 [!DNL DataX] 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
 
 ## 사전 요구 사항 {#prerequisites}
 

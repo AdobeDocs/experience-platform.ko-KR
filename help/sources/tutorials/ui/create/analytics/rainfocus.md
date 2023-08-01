@@ -1,10 +1,10 @@
 ---
 title: UI를 사용하여 RainFocus 계정을 Experience Platform에 연결
 description: UI를 사용하여 RainFocus 계정을 Experience Platform에 연결하는 방법을 알아봅니다.
-badge: 베타
-source-git-commit: 81f157216546d65c00090059c13c85e8ae5878f1
+badge: Beta
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1007'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->이 설명서 페이지는 다음 사용자가 만들었습니다. [!DNL RainFocus] 팀. 문의 사항이나 업데이트 요청은 클라이언트 지원팀에 직접 문의하십시오.<span>@rainfocus.com 또는 [[!DNL RainFocus] 도움말 센터](https://help.rainfocus.com/hc/en-us)
+>이 소스 커넥터 및 설명서 페이지는 [!DNL RainFocus] 팀. 문의 사항이나 업데이트 요청은 클라이언트 지원팀에 직접 문의하십시오.<span>@rainfocus.com 또는 [[!DNL RainFocus] 도움말 센터](https://help.rainfocus.com/hc/en-us)
 
 ## 시작하기
 

@@ -2,9 +2,9 @@
 title: Pega 고객 의사 결정 허브 연결
 description: Adobe Experience Platform의 Pega Customer Decision Hub 대상을 사용하여 프로필 속성 및 대상자 멤버십 데이터를 Pega Customer Decision Hub로 전송하여 다음 모범 조치 결정을 내릴 수 있습니다.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform의 프로필 대상 멤버십( 로 로드됨) [!DNL Pe
 
 >[!IMPORTANT]
 >
->이 설명서 페이지는 Pegasystems에서 만들었습니다. 문의 사항이나 업데이트 요청은 페가에게 직접 문의하시기 바랍니다 [여기](mailto:support@pega.com).
+>이 대상 커넥터 및 설명서 페이지는 Pegasystem에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 페가에게 직접 문의하시기 바랍니다 [여기](mailto:support@pega.com).
 
 ## 사용 사례
 
