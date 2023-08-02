@@ -3,9 +3,9 @@ title: Azure Data Lake Storage Gen2 연결
 description: Azure Data Lake Storage Gen2에 연결하여 대상자를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,13 @@ ht-degree: 0%
 
 이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
 
-모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
 
-또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
 
 | 대상자 유형 | 설명 |
 ---------|----------|
-| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 ## 대상에 연결 {#connect}
 

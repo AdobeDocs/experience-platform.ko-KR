@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;adobe campaign;campaign
 title: Adobe Campaign 연결
 description: Adobe Campaign은 모든 온라인 및 오프라인 채널에서 캠페인을 개인화하고 전달하는 데 도움이 되는 솔루션 세트입니다.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '941'
 ht-degree: 2%
 
 ---
@@ -22,13 +22,13 @@ Adobe Campaign은 모든 온라인 및 오프라인 채널에서 캠페인을 �
 
 이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
 
-모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
 
-또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
 
 | 대상자 유형 | 설명 |
 ---------|----------|
-| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 

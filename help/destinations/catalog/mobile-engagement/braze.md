@@ -3,9 +3,9 @@ keywords: 모바일; 브레이즈; 메시지;
 title: 브레이즈 연결
 description: Braze는 고객과 고객이 사랑하는 브랜드 간의 관련성 있고 기억에 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1040'
 ht-degree: 1%
 
 ---
@@ -44,15 +44,15 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-## 외부 대상 지원 {#external-audiences-support}
+## 지원되는 대상자 {#supported-audiences}
 
-모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
 
-또한 이 대상은 아래 표에 설명된 외부 대상의 활성화도 지원합니다.
+*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
 
 | 외부 대상 유형 | 설명 |
 ---------|----------|
-| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 

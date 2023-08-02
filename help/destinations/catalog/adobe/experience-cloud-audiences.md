@@ -3,9 +3,9 @@ title: (베타) Experience Cloud 대상
 description: Experience Platform에서 다양한 Experience Platform 솔루션으로 대상자를 공유하는 방법을 알아봅니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 1288652ca3b18b4adb357b2d8884f408725cb0a2
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1632'
 ht-degree: 2%
 
 ---
@@ -55,7 +55,7 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 -->
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 >[!IMPORTANT]
 >
@@ -80,7 +80,7 @@ Experience Cloud 대상 카드의 베타 릴리스에 있는 다음 알려진 �
 * [데이터 흐름 모니터링](/help/dataflows/ui/monitor-destinations.md) 은(는) 지원되지 않습니다.
 * 대상에 연결할 때 다음 옵션을 볼 수 있습니다. [데이터 흐름 경고 활성화](#enable-alerts). UI에 표시되지만 **경고 활성화 옵션은 지원되지 않습니다.** 를 참조하십시오.
 * **다시 채우기는 지원되지 않습니다.**. Audience Manager 또는 기타 Experience Cloud 솔루션으로 첫 번째 내보내기에는 대상의 과거 모집단이 포함되지 않습니다.
-* 베타 릴리스에서 다음을 만들 수 있습니다. **Experience Cloud 대상 대상에 대한 단일 대상 연결**, Experience Platform 조직에 속한 모든 샌드박스 간에 매핑됩니다.
+* 베타 릴리스에서 다음을 만들 수 있습니다. **Experience Cloud 대상 대상에 대한 단일 대상 연결**, Experience Platform 조직에 속한 모든 샌드박스에서 사용할 수 있습니다.
 
 ### 대상자를 활성화할 때 대기 시간 {#audience-activation-latency}
 
@@ -107,13 +107,13 @@ Experience Platform에서 대상이 처음 활성화되는 시간과 특정 사�
 
 이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
 
-모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
 
-또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
 
 | 대상자 유형 | 설명 |
 ---------|----------|
-| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 

@@ -2,9 +2,9 @@
 title: 사용자 지정 대상 연결 twitter
 description: Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에서 기존 팔로우어 및 고객을 Target 하고 관련 리마케팅 캠페인을 만듭니다
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 Twitter에서 기존 팔로우어 및 고객을 Target 하고 Adobe Experience Platform 내에 구축된 대상을 활성화하여 관련 리마케팅 캠페인을 만듭니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 을(를) 구성하기 전에 [!DNL Twitter Custom Audiences] 대상, 충족해야 하는 다음 Twitter 사전 요구 사항을 검토하십시오.
 
@@ -37,13 +37,13 @@ Twitter에서 기존 팔로우어 및 고객을 Target 하고 Adobe Experience P
 
 이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
 
-모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
 
-또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
 
 | 대상자 유형 | 설명 |
 ---------|----------|
-| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 

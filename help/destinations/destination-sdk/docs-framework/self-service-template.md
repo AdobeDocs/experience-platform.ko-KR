@@ -2,9 +2,9 @@
 title: 설명서 셀프서비스 템플릿 // 대상 이름으로 바꾸기
 description: 이 템플릿을 사용하여 Adobe Experience Platform 카탈로그의 대상에 대한 공개 설명서를 만듭니다. // 개요 섹션의 단락으로 바꾸기
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1645'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 1%
 
 *한 스포츠 의류 브랜드는 자신의 소셜 미디어 계정을 통해 기존 고객에게 도달하기를 원합니다. 의류 브랜드는 자체 CRM에서 Adobe Experience Platform으로 이메일 주소를 수집하고, 자체 오프라인 데이터에서 대상을 작성하고, 이러한 대상을 YourDestination으로 전송하여 고객의 소셜 미디어 피드에 광고를 표시할 수 있습니다.*
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 *이 섹션에서 Adobe Experience Platform 사용자 인터페이스에서 대상 설정을 시작하기 전에 고객이 알아야 할 사항에 대한 정보를 추가합니다. 이 작업은 다음에 대해 수행할 수 있습니다.*
 
@@ -69,6 +69,24 @@ ht-degree: 1%
 | phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 속성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션, 보유 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
 | email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 속성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션, 보유 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
 | extern_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+
+{style="table-layout:auto"}
+
+## 지원되는 대상자 {#supported-audiences}
+
+*이 섹션에서 대상에서 지원하는 대상에 대한 정보를 추가합니다. 우리는 몇 가지 표준 값으로 표를 미리 채웠다. 대상에 적용되지 않는 값과 미리 채워지지 않은 값을 삭제합니다.*
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+
+이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+
+*대상이 외부 대상의 활성화를 지원하지 않는 경우 표와 함께 아래 구문을 제거합니다.*
+
+*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+
+| 대상자 유형 | 설명 |
+---------|----------|
+| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 

@@ -3,9 +3,9 @@ keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure eventhub
 title: Azure 이벤트 허브 연결
 description: 에 대한 실시간 아웃바운드 연결 만들기 [!DNL Azure Event Hubs] Experience Platform에서 데이터를 스트리밍할 저장소입니다.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '2118'
+source-wordcount: '2119'
 ht-degree: 4%
 
 ---
@@ -38,13 +38,13 @@ ht-degree: 4%
 
 이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
 
-모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
 
-또한 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
+*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
 
 | 대상자 유형 | 설명 |
 ---------|----------|
-| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 

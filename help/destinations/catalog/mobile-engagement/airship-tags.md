@@ -3,9 +3,9 @@ keywords: 비행선 태그;비행선 목적지
 title: 비행선 태그 연결
 description: Airship 내에서 타깃팅할 대상 태그로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 >
 >이 대상 커넥터 및 설명서 페이지는 [!DNL Airship] 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. [support.airship.com](https://support.airship.com/).
 
-## 사전 요구 사항
+## 전제 조건
 
 Adobe Experience Platform 대상자를 다음으로 보내기 전에 [!DNL Airship], 다음을 수행해야 합니다.
 
@@ -36,15 +36,15 @@ Adobe Experience Platform 대상자를 다음으로 보내기 전에 [!DNL Airsh
 > 
 >만들기 [!DNL Airship] 계정 [이 등록 링크](https://go.airship.eu/accounts/register/plan/starter/) 아직 하지 않았다면.
 
-## 외부 대상 지원 {#external-audiences-support}
+## 지원되는 대상자 {#supported-audiences}
 
-모든 대상은 Experience Platform을 통해 생성된 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
+이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
 
-또한 이 대상은 아래 표에 설명된 외부 대상의 활성화도 지원합니다.
+*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
 
 | 외부 대상 유형 | 설명 |
 ---------|----------|
-| 사용자 정의 업로드 | CSV 파일에서 Experience Platform으로 수집된 대상입니다. |
+| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
