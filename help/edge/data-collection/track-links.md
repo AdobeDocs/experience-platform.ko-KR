@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK를 사용하여 링크 추적
 description: Experience Platform Web SDK를 사용하여 Adobe Analytics에 링크 데이터를 전송하는 방법 알아보기
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;웹 상호 작용;페이지 보기;링크 추적;링크;링크 추적 링크;clickCollection;클릭 컬렉션;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: 04078a53bc6bdc01d8bfe0f2e262a28bbaf542da
+source-git-commit: edf33d0d5991aed5c0535d0e7010aef082bcf48a
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 1%
@@ -12,9 +12,8 @@ ht-degree: 1%
 
 # 링크 추적
 
-링크를 수동으로 설정하거나 추적할 수 있습니다. [자동으로](#automaticLinkTracking). 수동 추적은 아래 세부 사항을 추가하여 수행합니다. `web.webInteraction` 스키마의 일부입니다. 다음 세 가지 필수 변수가 있습니다.
+링크를 수동으로 설정하거나 추적할 수 있습니다. [자동으로](#automaticLinkTracking). 수동 추적은 아래 세부 사항을 추가하여 수행합니다. `web.webInteraction` 스키마의 일부입니다. 다음 두 가지 필수 변수가 있습니다.
 
-* `web.webInteraction.name`
 * `web.webInteraction.type`
 * `web.webInteraction.linkClicks.value`
 
