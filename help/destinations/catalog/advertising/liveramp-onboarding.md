@@ -3,9 +3,9 @@ title: LiveRamp - 온보드 연결
 description: LiveRamp 커넥터를 사용하여 Adobe Real-time Customer Data Platform에서 LiveRamp Connect로 대상을 온보딩하는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
+source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1814'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 마케터로서 Adobe Experience Platform에서 온보드 ID로 대상자를 보내고 싶습니다. [!DNL LiveRamp Connect] 모바일, 오픈 웹, 소셜 및 [!DNL CTV] 플랫폼, 사용 [!DNL Ramp ID] 식별자.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 다음 [!DNL LiveRamp - Onboarding] 연결을 통해 다음을 사용하여 파일을 내보냅니다. [LiveRamp SFTP](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html) 스토리지.
 
@@ -75,9 +75,9 @@ Experience Platform에서 (으)로 데이터를 보내기 전에 [!DNL LiveRamp 
 
 * **[!UICONTROL 사용자 이름]**: 의 사용자 이름 [!DNL LiveRamp - Onboarding] 저장소 위치.
 * **[!UICONTROL 암호]**: 의 암호 [!DNL LiveRamp - Onboarding] 저장소 위치.
-* **[!UICONTROL PGP/GPG 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다. 암호화 키를 제공하는 경우 **[!UICONTROL 암호화 하위 키 ID]** 다음에서 [대상 세부 사항](#destination-details) 섹션.
-
+* **[!UICONTROL PGP/GPG 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL 하위 키 ID]**:암호화 키를 제공하는 경우 암호화도 제공해야 합니다. **[!UICONTROL 하위 키 ID]**. 다음을 참조하십시오. [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) 하위 키 ID를 얻는 방법에 대해 알아봅니다.
 
 **SSH 키 인증이 있는 SFTP** {#sftp-ssh}
 
@@ -88,9 +88,9 @@ Experience Platform에서 (으)로 데이터를 보내기 전에 [!DNL LiveRamp 
 
    * 을(를) 연결하려면 [!DNL SSH] 키 [!DNL LiveRamp - Onboarding] 서버, 다음을 통해 티켓을 제출해야 합니다. [!DNL LiveRamp]의 기술 지원 포털에서 공개 키를 제공합니다. 자세한 내용은 [LiveRamp 설명서](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
-* **[!UICONTROL PGP/GPG 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 암호화 키를 제공하는 경우 **[!UICONTROL 암호화 하위 키 ID]** 다음에서 [대상 세부 사항](#destination-details) 섹션. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
-
+* **[!UICONTROL PGP/GPG 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL 하위 키 ID]**:암호화 키를 제공하는 경우 암호화도 제공해야 합니다. **[!UICONTROL 하위 키 ID]**. 다음을 참조하십시오. [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) 하위 키 ID를 얻는 방법에 대해 알아봅니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -109,7 +109,6 @@ Experience Platform에서 (으)로 데이터를 보내기 전에 [!DNL LiveRamp 
 * **[!UICONTROL 폴더 경로]**: 의 경로 [!DNL LiveRamp] `uploads` 내보낸 파일을 호스팅하는 하위 폴더입니다. 다음 `uploads` 접두사는 폴더 경로에 자동으로 추가됩니다. [!DNL LiveRamp] 는 파일을 다른 기존 피드와 구분하고 모든 자동화가 원활하게 실행되도록 Adobe Real-Time CDP에서 게재할 전용 하위 폴더를 만들 것을 권장합니다.
    * 예를 들어 파일을 내보내려는 경우 `uploads/my_export_folder`, 입력 `my_export_folder` 다음에서 **[!UICONTROL 폴더 경로]** 필드.
 * **[!UICONTROL 압축 포맷]**: 내보낸 파일에 대해 Experience Platform이 사용해야 하는 압축 유형을 선택합니다. 사용 가능한 옵션은 다음과 같습니다 **[!UICONTROL GZIP]** 또는 **[!UICONTROL 없음]**.
-* **[!UICONTROL 암호화 하위 키 ID]**: 암호화에 사용되는 하위 키, [!DNL LiveRamp] 공개 암호화 키. 에서 암호화 키를 제공한 경우 이 필드가 필요합니다. [인증](#authenticate) 단계. 다음을 참조하십시오. [!DNL LiveRamp] [암호화 설명서](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) 하위 키 ID를 얻는 방법에 대해 알아봅니다.
 
 ### 경고 활성화 {#enable-alerts}
 
