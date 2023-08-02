@@ -3,9 +3,9 @@ keywords: 대상; 질문; faq; faq; 대상 faq
 title: 자주 묻는 질문
 description: Adobe Experience Platform 대상에 대해 가장 자주 묻는 질문에 대한 답변
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: 810bcd011fd6e172c79f4482e047aa6e715c3918
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1531'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-이 문서에서는 Adobe Experience Platform 대상에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 기타 관련 질문 및 문제 해결 [!DNL Platform] 모든 상황에서 발생하는 서비스를 포함한 서비스 [!DNL Platform] API입니다. 다음을 참조하십시오. [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md).
+이 문서에서는 Adobe Experience Platform 대상에 대한 FAQ에 대한 답변을 제공합니다. 기타 관련 질문 및 문제 해결 [!DNL Platform] 모든 상황에서 발생하는 서비스를 포함한 서비스 [!DNL Platform] API, 다음을 참조하십시오. [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md).
 
 ## 일반 대상 질문 {#general}
 
@@ -28,6 +28,27 @@ ht-degree: 4%
 
 다음을 참조하십시오. [세그먼테이션 서비스 설명서](../segmentation/home.md) 을 참조하십시오.
 +++
+
+### 업데이트된 대상을 동일한 대상으로 비활성화하고 다시 활성화하면 낮은 일치율이 표시되는 이유는 무엇입니까?
+
++++답변
+
+스트리밍 대상에서 대상 비활성화 및 제거는 동일한 스트리밍 대상으로 대상 재활성화 시 채우기를 트리거하지 않습니다.
+
+**예**
+
+스트리밍 대상에 대해 10개의 프로필로 구성된 대상을 활성화했습니다.
+
+대상을 활성화한 후에는 대상 구성을 변경하려고 하므로 대상을 비활성화하고 모집단 기준을 변경하여 100개의 프로필로 대상 모집단을 유도합니다.
+
+업데이트된 대상을 동일한 대상으로 다시 활성화하지만 트리거된 채우기가 없으므로 대상에 추가 90개의 프로필이 수신되지 않습니다.
+
+**솔루션**
+
+모든 프로필이 대상으로 전송되도록 하려면 새 구성으로 새 대상을 만든 다음 대상에 대해 활성화해야 합니다.
+
++++
+
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
