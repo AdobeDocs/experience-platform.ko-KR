@@ -2,10 +2,10 @@
 title: 데이터스트림 재정의 구성
 description: 데이터스트림 UI에서 데이터스트림 재정의를 구성하고 Web SDK를 통해 활성화하는 방법에 대해 알아봅니다.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
+source-git-commit: b0b53d9fcf410812eee3abdbbb6960d328fee99f
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 97%
+source-wordcount: '1231'
+ht-degree: 79%
 
 ---
 
@@ -25,6 +25,26 @@ ht-degree: 97%
 >[!IMPORTANT]
 >
 >데이터 스트림 재정의는 다음에 대해서만 지원됩니다. [웹 SDK](../edge/home.md) 통합. [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) 및 [서버 API](../server-api/overview.md) 통합은 현재 데이터 스트림 재정의를 지원하지 않습니다.
+><br><br>
+>다른 데이터스트림으로 다른 데이터를 전송해야 하는 경우 데이터스트림 재정의를 사용해야 합니다. 개인화 사용 사례 또는 동의 데이터에 데이터스트림 재정의를 사용해서는 안 됩니다.
+
+## 사용 사례 {#use-cases}
+
+데이터 스트림 무시를 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 기능을 사용하여 해결할 수 있는 몇 가지 사용 사례를 소개합니다.
+
+**다중 지역 데이터 수집**
+
+회사는 운영하는 국가마다 다른 웹 사이트 또는 하위 도메인을 가지고 있습니다. 다음을 보유한 경우 [구성됨](configure.md) 해당 analytics 관련 보고서 세트, 국가별 Adobe Target 속성 토큰, 국가별 스키마, 데이터 세트, Journey Optimizer 구성 등으로 데이터 스트림을 구분합니다. 또한 모든 국가별 데이터가 종합되는 글로벌 구성 세트가 있습니다.
+
+데이터 스트림 재정의를 사용하면 데이터를 하나의 데이터 스트림으로 전송하는 기본 동작 대신 데이터 흐름을 다른 데이터 스트림으로 동적으로 전환할 수 있습니다.
+
+일반적인 사용 사례는 데이터를 국가별 데이터 스트림으로 전송하고 고객이 주문을 하거나 사용자 프로필을 업데이트하는 등의 중요한 작업을 수행하는 글로벌 데이터 스트림으로 데이터를 전송하는 것입니다.
+
+**다양한 사업부를 위한 프로필 및 ID 차별화**
+
+여러 사업부를 가진 회사는 여러 Experience Platform 샌드박스를 사용하여 각 사업부와 관련된 데이터를 저장하려고 합니다.
+
+기본 데이터 스트림으로 데이터를 보내는 대신 데이터 스트림 재정의를 사용하여 각 비즈니스 단위에 데이터를 받을 자체 데이터 스트림이 있는지 확인할 수 있습니다.
 
 ## Datastreams UI에서 데이터스트림 재정의 구성 {#configure-overrides}
 
