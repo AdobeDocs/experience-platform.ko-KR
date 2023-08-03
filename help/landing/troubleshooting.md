@@ -7,9 +7,9 @@ landing-page-description: 자주 묻는 질문에 대한 답변과 Experience Pl
 short-description: 자주 묻는 질문에 대한 답변과 Experience Platform에서 일반적인 오류를 해결하기 위한 안내서를 확인하십시오.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 035fee1c3be69ff56b515251afcffaf1dff00f0d
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1905'
 ht-degree: 5%
 
 ---
@@ -90,7 +90,7 @@ UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 �
 |--- | --- | ---|
 | 400 | 잘못된 요청 | 요청이 잘못 구성되었거나, 키 정보가 누락되었거나, 잘못된 구문이 들어 있습니다. |
 | 401 | 인증 실패 | 요청이 인증 검사를 통과하지 못했습니다. 액세스 토큰이 누락되었거나 유효하지 않을 수 있습니다. 다음을 참조하십시오. [OAuth 토큰 오류](#oauth-token-is-missing) 자세한 내용은 아래 섹션을 참조하십시오. |
-| 403 | 금지됨 | 리소스를 찾았지만 볼 수 있는 자격 증명이 없습니다. |
+| 403 | 금지 | <p>리소스를 찾았지만 볼 수 있는 자격 증명이 없습니다.</p><p> 이 오류의 가능한 원인은 필요한 항목이 없을 수 있기 때문입니다 [액세스 제어 권한](/help/access-control/home.md) 을 클릭하여 리소스에 액세스하거나 리소스를 편집합니다. 방법 읽기 [필요한 속성 기반 액세스 제어 권한 얻기](/help/landing/api-authentication.md#get-abac-permissions) Platform API를 사용합니다. </p> |
 | 404 | 찾을 수 없음 | 요청한 리소스를 서버에서 찾을 수 없습니다. 리소스가 삭제되었거나 요청한 경로가 잘못 입력되었을 수 있습니다. |
 | 500 | 내부 서버 오류 | 서버측 오류입니다. 여러 번 동시에 호출하는 경우 API 제한에 도달하고 결과를 필터링해야 할 수 있습니다. (다음을 참조하십시오. [!DNL Catalog Service] 에 대한 API 개발자 안내서 하위 안내서 [데이터 필터링](../catalog/api/filter-data.md) 자세히 알아보십시오.) 요청을 다시 시도하기 전에 잠시 기다린 후 문제가 지속되면 관리자에게 문의하십시오. |
 
