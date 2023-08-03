@@ -44,7 +44,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 유형 | 기능 | 설명 |
 | --- | --- | --- |
-| 태그 및 이벤트 전달 | 데이터 수집 감사 로그 | 이제 태그 및 이벤트 전달에서 작업을 수행한 시간 및 이 작업을 수행한 사람을 확인할 수 있습니다. 이렇게 하면 용이하게 제품 문제를 해결하고 적절한 거버넌스 및 내부 감사 활동을 수행할 있습니다. 또한 빠른 작업 및 리소스 상태 업데이트가 포함된 컨텍스트 내 슬라이드 아웃 메뉴를 통해 이 감사 데이터가 표시됩니다. 이 데이터는 다음 화면의 태그 및 이벤트 전달 UI에서 볼 수 있습니다.<br><ul><li>[속성 개요](../../tags/ui/event-forwarding/overview.md#properties)</li><li>[규칙](../../tags/ui/event-forwarding/overview.md#rules)</li><li>[데이터 요소](../../tags/ui/event-forwarding/overview.md#data-elements)</li><li>[확장](../../tags/ui/event-forwarding/overview.md#extensions)</li><li>[라이브러리 검토](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li><li>[라이브러리 마지막 빌드 및 게시](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li></ul> |
+| 태그 및 이벤트 전달 | 데이터 수집 감사 로그 | 이제 태그 및 이벤트 전달에서 작업을 수행한 시간 및 이 작업을 수행한 사람을 확인할 수 있습니다. 이렇게 하면 용이하게 제품 문제를 해결하고 적절한 거버넌스 및 내부 감사 활동을 수행할 있습니다. 또한 빠른 작업 및 리소스 상태 업데이트가 포함된 컨텍스트 내 슬라이드 아웃 메뉴를 통해 이 감사 데이터가 표시됩니다. 이 데이터는 다음 화면의 태그 및 이벤트 전달 UI에서 볼 수 있습니다.<br><ul><li>[속성 개요](../../tags/ui/event-forwarding/overview.md#properties)</li><li>[규칙](../../tags/ui/event-forwarding/overview.md#rules)</li><li>[데이터 요소](../../tags/ui/event-forwarding/overview.md#data-elements)</li><li>[확장 기능](../../tags/ui/event-forwarding/overview.md#extensions)</li><li>[라이브러리 검토](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li><li>[라이브러리 마지막 빌드 및 게시](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li></ul> |
 | 데이터스트림 | [지역 조회](../../datastreams/configure.md#advanced-options) | 이제 다음과 같은 정보를 포함하도록 데이터스트림에 대한 지리적 위치 및 네트워크 조회를 구성할 수 있습니다. <ul><li>국가</li><li>우편번호</li><li>주/시/도</li><li>DMA</li><li>구/군/시</li><li>위도 </li><li>경도</li><li>통신사</li><li>도메인</li><li>ISP</li></ul> 정확한 지역 위치 정보를 포함하여 개인 데이터를 수집, 처리 및 전송할 목적으로 해당 법률과 규정에 따라 필요한 모든 권한, 동의와 인증을 획득했는지 확인해야 합니다. <br> IP 주소 난독화 선택 항목은 IP 주소에서 파생되고 나서 구성된 Adobe 솔루션으로 전송되는 지리 위치 정보 수준에는 영향을 미치지 않습니다. 지리적 위치 조회는 개별적으로 제한되거나 비활성화되어야 합니다. <br> 다음을 참조하십시오. [데이터스트림 설명서](../../datastreams/configure.md#advanced-options) 을 참조하십시오. |
 
 {style="table-layout:auto"}
@@ -118,16 +118,16 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service]를 사용하여 개인 사용자(예: 고객, 잠재 고객, 사용자 또는 조직)와 관련된 [!DNL Experience Platform]에 저장된 데이터를 대상자로 세그먼트화할 수 있습니다. 세그먼트 정의 또는 [!DNL Real-Time Customer Profile] 데이터의 다른 소스를 통해 대상자를 만들 수 있습니다. 이러한 대상자는 [!DNL Platform]을 통해 중앙 집중식으로 구성 및 유지 관리되고 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
+[!DNL Segmentation Service]를 사용하여 개인 사용자(예: 고객, 잠재 고객, 사용자 또는 조직)와 관련된 [!DNL Experience Platform]에 저장된 데이터를 대상자로 세분화할 수 있습니다. 세그먼트 정의 또는 [!DNL Real-Time Customer Profile] 데이터의 다른 소스를 통해 대상자를 만들 수 있습니다. 이러한 대상자는 [!DNL Platform]을 통해 중앙 집중식으로 구성 및 유지 관리되고 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| Audience 포털 | 대상자 포털은 Adobe Experience Platform에서 대상자에 액세스하고 대상자를 생성 및 관리하는 새로운 탐색 환경을 제공합니다. 대상자 포털 내부를 통해 Platform에서 생성된 대상자와 외부에서 생성된 대상자를 볼 수 있습니다. 필터링, 폴더와 태그를 통해 작업 효율성을 개선하고, Platform에서 생성된 대상자를 만들고, CSV 파일을 통해 외부에서 생성된 대상자를 가져옵니다. 대상자 포털에 대한 자세한 내용은 [ Segmentation Service UI 안내서](../../segmentation/ui/overview.md)를 참조하십시오. |
+| Audience 포털 | 대상자 포털은 Adobe Experience Platform에서 대상자에 액세스하고 대상자를 생성 및 관리하는 새로운 탐색 환경을 제공합니다. 대상자 포털 내부를 통해 Platform에서 생성된 대상자와 외부에서 생성된 대상자를 볼 수 있습니다. 필터링, 폴더와 태그를 통해 작업 효율성을 개선하고, Platform에서 생성된 대상자를 만들고, CSV 파일을 통해 외부에서 생성된 대상자를 가져옵니다. 대상자 포털에 대한 자세한 내용은 [Segmentation Service UI 안내서](../../segmentation/ui/overview.md)를 참조하십시오. |
 | 대상자 구성 | 대상자 구성은 여러 작업을 나타내는 데 사용되는 블록을 통해서 대상자를 빌드 및 편집할 수 있는 간편한 작업 영역을 제공합니다. 대상자 구성에 대한 자세한 내용은 [대상자 구성 UI 안내서](../../segmentation/ui/audience-composition.md)를 참조하십시오. |
 
-[!DNL Segmentation Service]에 대한 자세한 내용은 [세그먼테이션 개요](../../segmentation/home.md)를 참조하십시오.
+[!DNL Segmentation Service]에 대한 자세한 내용은 [세분화 개요](../../segmentation/home.md)를 참조하십시오.
 
 ## 소스 {#sources}
 
