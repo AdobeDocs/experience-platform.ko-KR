@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f360df6273986be35340432c72d8f8620f339b67
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1272'
 ht-degree: 2%
 
 ---
@@ -93,6 +93,101 @@ ht-degree: 2%
 | 하나에 매핑된 최대 대상자 수 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 대상 | 50 | 소프트 | 단일 Adobe Target 대상에 대한 활성화 흐름에서 최대 50개의 대상을 활성화할 수 있습니다. |
 
 {style="table-layout:auto"}
+
+## [!BADGE 베타]{type=Informative} 데이터 세트 내보내기 {#dataset-exports}
+
+데이터 세트 내보내기는 현재 **[!UICONTROL 첫 번째 전체, 그 다음 증분]** [패턴](/help/destinations/ui/export-datasets.md#scheduling). 이 섹션에서 설명하는 보호 기능은 데이터 세트 내보내기 워크플로우가 설정된 후 발생하는 첫 번째 전체 내보내기에 적용됩니다.
+
+| 가드레일 | 제한 | 제한 유형 | 설명 |
+| --- | --- | --- | --- |
+| 내보낸 데이터 세트 크기 | 50억 개의 레코드 | 소프트 | 데이터 세트 내보내기에 대해 여기에 설명된 제한은 *소프트 가드레일*. 예를 들어, 사용자 인터페이스는 50억 개 이상의 레코드를 내보내는 것을 차단하지 않지만 동작은 예측할 수 없으며 내보내기에 실패하거나 내보내기 지연 시간이 매우 길 수 있습니다. |
+
+{style="table-layout:auto"}
+
+<!--
+
+### Dataset Types {#dataset-types}
+
+Datasets exported from Experience Platform can be of two types, as described below:
+
+**Timeseries**
+Timeseries datasets are also known as *XDM Experience Events* datasets in Experience Platform terminology.
+The dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
+
+**Record** 
+Record datasets are also known as *XDM Individual Profile* datasets in Experience Platform terminology.
+The dataset schema does not include a top level *timestamp* column. Data is ingested in upsert fashion.
+
+The guardrails below are grouped by the format of the exported file, and then further by dataset type.
+
+**Parquet output**
+
+|Dataset type | Compression | Guardrail | Description |
+|---------|----------|---------|-----------|
+| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
+| Record | N/A | Five billion records per file | Only the data from the last seven days is exported. |
+
+{style="table-layout:auto"}
+
+**JSON output**
+
+|Dataset type | Compression | Guardrail | Description |
+|---------|----------|---------|-----------|
+| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
+| <p>Record</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | <p><ul><li>Five billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | <p>The record count of the dataset must be less than five billion for compressed files and one million for uncompressed files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
+
+{style="table-layout:auto"}
+
+-->
+
+<!--
+
+<table>
+<thead>
+  <tr>
+    <th>Output format</th>
+    <th>Dataset type</th>
+    <th>Compression</th>
+    <th>Guardrail</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Parquet</td>
+    <td>Timeseries</td>
+    <td>-</td>
+    <td>Last seven days per file</td>
+    <td>Only the data from the last seven days is exported.</td>
+  </tr>
+  <tr>
+    <td>Record</td>
+    <td>-</td>
+    <td>Five billion records per file</td>
+    <td>The record count of the dataset must be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
+  </tr>
+  <tr>
+    <td rowspan="3">JSON</td>
+    <td>Timeseries</td>
+    <td>-</td>
+    <td>Last seven days per file</td>
+    <td>Only the data from the last seven days is exported.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Record</td>
+    <td>Yes</td>
+    <td>Five billion records per file</td>
+    <td>The record count of the dataset must be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
+  </tr>
+  <tr>
+    <td>No</td>
+    <td>One million records per file</td>
+    <td>The record count of the dataset must be less than one million, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
+  </tr>
+</tbody>
+</table>
+
+-->
 
 ### Destination SDK 보호 {#destination-sdk-guardrails}
 
