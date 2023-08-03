@@ -4,10 +4,10 @@ title: Experience Platform API 인증 및 액세스
 type: Tutorial
 description: 이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 361f409c7aeee2e3e789bb263eca7c59b73db8ec
+source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
 workflow-type: tm+mt
-source-wordcount: '2240'
-ht-degree: 7%
+source-wordcount: '2205'
+ht-degree: 8%
 
 ---
 
@@ -30,12 +30,13 @@ ht-degree: 7%
 
 ![](./images/api-authentication/authentication-flowchart.png)
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 Experience Platform API를 성공적으로 호출하려면 다음 조건을 충족해야 합니다.
 
 * Adobe Experience Platform에 액세스할 수 있는 조직입니다.
 * 귀하를 제품 프로필의 개발자 및 사용자로 추가할 수 있는 Admin Console 관리자.
+* API를 통해 Experience Platform의 여러 부분에서 읽기 또는 쓰기 작업을 수행하는 데 필요한 속성 기반 액세스 제어를 부여할 수 있는 Experience Platform 시스템 관리자.
 
 또한 이 자습서를 완료하려면 Adobe ID이 있어야 합니다. Adobe ID이 없는 경우 다음 단계를 사용하여 만들 수 있습니다.
 
@@ -49,13 +50,15 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 
 ### 개발자 액세스 권한 얻기 {#gain-developer-access}
 
-다음 연락처로 이동 [!DNL Admin Console] 를 사용하여 귀하를 Experience Platform 제품 프로필에 개발자로 추가할 조직의 관리자 [[!DNL Admin Console]](https://adminconsole.adobe.com/). 다음을 참조하십시오. [!DNL Admin Console] 다음 방법에 대한 특정 지침 설명서 [제품 프로필에 대한 개발자 액세스 관리](https://helpx.adobe.com/kr/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+다음 연락처로 이동 [!DNL Admin Console] 를 사용하여 귀하를 Experience Platform 제품 프로필에 개발자로 추가할 조직의 관리자 [[!DNL Admin Console]](https://adminconsole.adobe.com/). 다음을 참조하십시오. [!DNL Admin Console] 다음 방법에 대한 특정 지침 설명서 [제품 프로필에 대한 개발자 액세스 관리](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 개발자로 할당되면에서 통합 만들기를 시작할 수 있습니다. [Adobe Developer 콘솔](https://www.adobe.com/go/devs_console_ui). 이러한 통합은 외부 앱 및 서비스에서 Adobe API로의 파이프라인입니다.
 
 ### 사용자 액세스 권한 얻기 {#gain-user-access}
 
-사용자 [!DNL Admin Console] 관리자가 귀하를 동일한 제품 프로필에 사용자로 추가해야 합니다. 다음 안내서를 참조하십시오 [에서 사용자 그룹 관리 [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) 추가 정보.
+사용자 [!DNL Admin Console] 관리자가 귀하를 동일한 제품 프로필에 사용자로 추가해야 합니다. 사용자 액세스를 사용하면 UI에서 사용자가 수행하는 API 작업의 결과를 볼 수 있습니다.
+
+다음 안내서를 참조하십시오 [에서 사용자 그룹 관리 [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) 추가 정보.
 
 ## API 키(클라이언트 ID) 및 조직 ID 생성 {#generate-credentials}
 
@@ -71,7 +74,11 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 
 새 프로젝트를 만들었으면 다음을 선택합니다. **[!UICONTROL API 추가]** 다음에 있음 **[!UICONTROL 프로젝트 개요]** 화면.
 
-![](./images/api-authentication/add-api.png)
+>[!TIP]
+>
+>여러 조직에 대해 프로비저닝된 경우 인터페이스의 오른쪽 상단에 있는 조직 선택기를 사용하여 필요한 조직에 있는지 확인합니다.
+
+![API 추가 옵션이 강조 표시된 Developer Console 화면입니다.](./images/api-authentication/add-api.png)
 
 다음 **[!UICONTROL API 추가]** 화면이 나타납니다. Adobe Experience Platform에 대한 제품 아이콘을 선택한 다음 을 선택합니다. **[!UICONTROL EXPERIENCE PLATFORM API]** 선택하기 전 **[!UICONTROL 다음]**.
 
@@ -93,14 +100,16 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 
 ### 통합할 제품 프로필 선택 {#select-product-profiles}
 
-그런 다음 통합에 적용할 제품 프로필을 선택합니다.
-통합의 서비스 계정은 여기에서 선택한 제품 프로필을 통해 세분화된 기능에 액세스할 수 있습니다.
+다음에서 **[!UICONTROL API 구성]** 화면, 선택 **[!UICONTROL AEP-Default-All-Users]**.
 
-Platform의 특정 기능에 액세스하려면 필요한 속성 기반 액세스 제어 권한을 부여하는 시스템 관리자도 필요합니다. 자세한 내용은 섹션 을 참조하십시오 [필요한 속성 기반 액세스 제어 권한 얻기](#get-abac-permissions).
+<!--
+Your integration's service account will gain access to granular features through the product profiles selected here.
 
->[!TIP]
+-->
+
+>[!IMPORTANT]
 >
-여기에서 특정 제품 프로필이 표시되어야 하는 경우 시스템 관리자에게 문의하십시오. 시스템 관리자는 권한 보기에서 API 자격 증명을 보고 관리할 수 있습니다. 자세한 내용은 섹션을 참조하십시오 [제품 프로필에 개발자 추가](#add-developers-to-product-profile).
+Platform의 특정 기능에 액세스하려면 필요한 속성 기반 액세스 제어 권한을 부여하는 시스템 관리자도 필요합니다. 자세한 내용은 섹션 을 참조하십시오 [필요한 속성 기반 액세스 제어 권한 얻기](#get-abac-permissions).
 
 ![통합할 제품 프로필을 선택합니다.](./images/api-authentication/select-product-profiles.png)
 
@@ -145,10 +154,10 @@ Postman 환경 및 컬렉션을 사용하여 액세스 토큰을 생성할 수�
 
 >[!WARNING]
 >
-액세스 토큰을 생성하기 위한 JWT 메서드가 더 이상 사용되지 않습니다. 모든 새 통합은 [OAuth 서버 간 인증 방법](#select-oauth-server-to-server). 또한 Adobe은 기존 통합을 OAuth 메서드로 마이그레이션할 것을 권장합니다. 다음 중요한 설명서를 참조하십시오.
+액세스 토큰을 생성하기 위한 JWT 메서드가 더 이상 사용되지 않습니다. 모든 새 통합은 [OAuth 서버 간 인증 방법](#select-oauth-server-to-server). 또한 Adobe 기존 통합을 OAuth 메서드로 마이그레이션할 것을 권장합니다. 다음 중요한 설명서를 참조하십시오.
 > 
 * [JWT에서 OAuth로의 애플리케이션 마이그레이션 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
-* [OAuth를 사용하는 신규 및 기존 애플리케이션에 대한 구현 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+* [OAuth를 사용한 신규 및 기존 애플리케이션 구현 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
 * [OAuth 서버 간 자격 증명 메서드 사용의 이점](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ 더 이상 사용되지 않는 정보 보기
@@ -260,7 +269,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 >[!IMPORTANT]
 >
-위의 호출로 액세스 자격 증명을 테스트할 수 있지만, 올바른 속성 기반 액세스 제어 권한을 보유하지 않으면 여러 리소스에 액세스하거나 수정할 수 없습니다. 자세한 내용 [필요한 속성 기반 액세스 제어 권한 얻기](#get-abac-permissions) 섹션.
+위의 호출로 액세스 자격 증명을 테스트할 수 있지만, 올바른 속성 기반 액세스 제어 권한을 보유하지 않으면 여러 리소스에 액세스하거나 수정할 수 없습니다. 자세한 내용 **필요한 속성 기반 액세스 제어 권한 얻기** 아래 섹션.
 
 ## 필요한 속성 기반 액세스 제어 권한 얻기 {#get-abac-permissions}
 
@@ -274,7 +283,7 @@ Experience Platform 내에서 여러 리소스에 액세스하거나 수정하�
 
 [Postman](https://www.postman.com/) 는 개발자가 RESTful API를 탐색하고 테스트할 수 있도록 하는 인기 있는 도구입니다. Experience Platform Postman 컬렉션 및 환경을 사용하여 Experience Platform API를 통한 작업 속도를 높일 수 있습니다. 자세한 내용 [Experience Platform에서 Postman 사용](/help/landing/postman.md) 컬렉션 및 환경 시작하기
 
-Experience Platform 컬렉션 및 환경에서 Postman 사용에 대한 자세한 내용은 아래 비디오 튜토리얼에서도 확인할 수 있습니다.
+Experience Platform 컬렉션 및 환경과 함께 Postman 사용에 대한 자세한 내용은 아래 비디오 튜토리얼에서도 확인할 수 있습니다.
 
 **Experience Platform API와 함께 사용할 Postman 환경 다운로드 및 가져오기**
 
@@ -326,19 +335,25 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 
 ![개발자 탭에 나열된 개발자](././images/api-authentication/developer-added.png)
 
-### API 설정
+<!--
 
-개발자는 Adobe Developer 콘솔에서 프로젝트 내에 API를 추가하고 구성할 수 있습니다.
+Commenting out this part since it duplicates information from the section Add Experience Platform to a project
 
-프로젝트를 선택한 다음 을 선택합니다. **[!UICONTROL API 추가]**.
+### Set up an API
 
-![프로젝트에 API 추가](././images/api-authentication/add-api-project.png)
+A developer can add and configure an API within a project in the Adobe Developer Console.
 
-다음에서 **[!UICONTROL API 추가]** 대화 상자 선택 **[!UICONTROL Adobe Experience Platform]**&#x200B;을 선택한 다음 을 선택합니다. **[!UICONTROL EXPERIENCE PLATFORM API]**.
+Select your project, then select **[!UICONTROL Add API]**.
 
-![Experience Platform에 API 추가](././images/api-authentication/add-api-platform.png)
+![Add API to a project](././images/api-authentication/add-api-project.png)
 
-다음에서 **[!UICONTROL API 구성]** 화면, 선택 **[!UICONTROL AEP-Default-All-Users]**.
+In the **[!UICONTROL Add an API]** dialog box select **[!UICONTROL Adobe Experience Platform]**, then select **[!UICONTROL Experience Platform API]**.
+
+![Add an API in Experience Platform](././images/api-authentication/add-api-platform.png)
+
+In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-All-Users]**.
+
+-->
 
 ### 역할에 API 할당
 
