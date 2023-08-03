@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
 source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1953'
 ht-degree: 100%
 
