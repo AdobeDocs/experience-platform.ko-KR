@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: f360df6273986be35340432c72d8f8620f339b67
+source-git-commit: 51f65799a45229fc810a1d41f8b40b215d3666da
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 2%
@@ -94,7 +94,7 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
-## [!BADGE 베타]{type=Informative} 데이터 세트 내보내기 {#dataset-exports}
+### [!BADGE 베타]{type=Informative} 데이터 세트 내보내기 {#dataset-exports}
 
 데이터 세트 내보내기는 현재 **[!UICONTROL 첫 번째 전체, 그 다음 증분]** [패턴](/help/destinations/ui/export-datasets.md#scheduling). 이 섹션에서 설명하는 보호 기능은 데이터 세트 내보내기 워크플로우가 설정된 후 발생하는 첫 번째 전체 내보내기에 적용됩니다.
 
