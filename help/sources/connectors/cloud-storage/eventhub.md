@@ -3,9 +3,9 @@ title: Azure Event Hubs 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Azure Event Hubs를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 7240f96cb30e79add500a1957d93062eecd79ee2
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]
 
 ### 에서 병렬 처리 수 늘리기 [!DNL Event Hubs] 및 플랫폼
 
-병렬화란 속도와 성능을 높이기 위해 여러 처리 장치에서 동일한 작업을 동시에 실행하는 것을 말합니다. 에서 병렬 처리를 늘릴 수 있습니다. [!DNL Event Hubs] 파티션을 늘리거나 [!DNL Event Hubs] 계정입니다. 이 항목 보기 [[!DNL Event Hubs] 크기 조정 문서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) 추가 정보.
+병렬화란 속도와 성능을 높이기 위해 여러 프로세싱 유닛에서 동일한 작업을 동시에 실행하는 것을 말합니다. 에서 병렬 처리를 늘릴 수 있습니다. [!DNL Event Hubs] 파티션을 늘리거나 [!DNL Event Hubs] 계정입니다. 이 항목 보기 [[!DNL Event Hubs] 크기 조정 문서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) 추가 정보.
 
 플랫폼 측에서 수집 속도를 높이려면 플랫폼에서 소스 커넥터의 작업 수를 늘려야 합니다. [!DNL Event Hubs] 파티션. 에 대한 병렬 처리를 늘린 후 [!DNL Event Hubs] 또한 Adobe 담당자에게 연락하여 새 파티션을 기반으로 플랫폼 작업의 크기를 조정하십시오. 현재 이 프로세스는 자동화되지 않습니다.
 
@@ -88,7 +88,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]
     "virtualNetworkRules": [
       {
         "subnet": {
-            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
+            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2-vnet/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
         }, 
         "ignoreMissingVnetServiceEndpoint": true
       },
