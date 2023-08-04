@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여 줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '3860'
+source-wordcount: '3863'
 ht-degree: 2%
 
 ---
@@ -597,9 +597,9 @@ ANALYZE TABLE <original_table_name>
 
 #### 데이터 레이크의 통계 계산 {#compute-statistics-data-lake}
 
-이제 의 열 수준 통계를 계산할 수 있습니다. [!DNL Azure Data Lake Storage] (ADLS) 데이터 세트 `COMPUTE STATISTICS` 및 `SHOW STATISTICS` 명령. 전체 데이터 세트, 데이터 세트의 하위 집합, 모든 열 또는 열의 하위 집합에 대한 열 통계를 계산합니다.
+이제 의 열 수준 통계를 계산할 수 있습니다. [!DNL Azure Data Lake Storage] (ADLS) 데이터 세트 `COMPUTE STATISTICS` SQL 명령. 전체 데이터 세트, 데이터 세트의 하위 집합, 모든 열 또는 열의 하위 집합에 대한 열 통계를 계산합니다.
 
-`COMPUTE STATISTICS` 다음을 확장합니다. `ANALYZE TABLE` 명령입니다. 그러나 `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, 및 `SHOW STATISTICS` 가속화된 저장소 테이블에는 명령이 지원되지 않습니다. 에 대한 이러한 확장 `ANALYZE TABLE` 명령은 현재 ADLS 테이블에 대해서만 지원됩니다.
+`COMPUTE STATISTICS` 다음을 확장합니다. `ANALYZE TABLE` 명령입니다. 그러나 `COMPUTE STATISTICS`, `FILTERCONTEXT`, 및 `FOR COLUMNS` 가속화된 저장소 테이블에는 명령이 지원되지 않습니다. 에 대한 이러한 확장 `ANALYZE TABLE` 명령은 현재 ADLS 테이블에 대해서만 지원됩니다.
 
 **예**
 
@@ -611,7 +611,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 
 >[!NOTE]
 >
->다음 `Statistics ID` 그리고 생성된 통계는 각 세션에 대해서만 유효하며 다른 PSQL 세션에서 액세스할 수 없습니다.<br><br>제한 사항:<ul><li>배열 또는 맵 데이터 유형에 대해서는 통계 생성이 지원되지 않습니다.</li><li>계산된 통계가 지속되지 않음</li></ul><br><br>옵션:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>기본적으로 플래그는 true로 설정됩니다. 따라서 지원되지 않는 데이터 유형에 대해 통계를 요청하면 오류가 발생하지 않고 자동으로 실패합니다.<br>지원되지 않는 데이터 유형에 대한 통계가 요청될 때 오류에 대한 알림을 활성화하려면 다음을 사용합니다. `SET skip_stats_for_complex_datatypes = false`.
+>다음 `Statistics ID` 그리고 생성된 통계는 각 세션에 대해서만 유효하며 다른 PSQL 세션에서 액세스할 수 없습니다.<br><br>제한 사항:<ul><li>배열 또는 맵 데이터 유형에 대해서는 통계 생성이 지원되지 않습니다.</li><li>계산된 통계는 **아님** 세션 간에 지속됨.</li></ul><br><br>옵션:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>기본적으로 플래그는 true로 설정됩니다. 따라서 지원되지 않는 데이터 형식에 대한 통계가 요청되면 오류가 발생하지 않지만 지원되지 않는 데이터 형식이 있는 필드는 자동으로 건너뜁니다.<br>지원되지 않는 데이터 유형에 대한 통계가 요청될 때 오류에 대한 알림을 활성화하려면 다음을 사용합니다. `SET skip_stats_for_complex_datatypes = false`.
 
 콘솔 출력이 아래와 같이 표시됩니다.
 
@@ -629,7 +629,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-사용 `SHOW STATISTICS` 세션에서 생성된 모든 임시 통계 테이블의 메타데이터를 표시하는 명령입니다. 이 명령은 통계 분석의 범위를 구체화하는 데 도움이 될 수 있습니다.
+사용 `SHOW STATISTICS` 세션에서 생성된 모든 임시 통계에 대한 메타데이터를 표시하는 명령입니다. 이 명령은 통계 분석의 범위를 구체화하는 데 도움이 될 수 있습니다.
 
 ```sql
 SHOW STATISTICS;

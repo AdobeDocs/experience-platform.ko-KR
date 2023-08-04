@@ -1,16 +1,16 @@
 ---
 title: 데이터 세트 통계 계산
 description: 이 문서에서는 SQL 명령을 사용하여 Azure ADLS(데이터 레이크 저장소) 데이터 세트에 대한 열 수준 통계를 계산하는 방법을 설명합니다.
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
 
 # 데이터 세트 통계 계산
 
-이제 의 열 수준 통계를 계산할 수 있습니다. [!DNL Azure Data Lake Storage] (ADLS) 데이터 세트 `COMPUTE STATISTICS` 및 `SHOW STATISTICS` 명령. 데이터 세트 통계를 계산하는 SQL 명령은 `ANALYZE TABLE` 명령입니다. 에 대한 전체 세부 정보 `ANALYZE TABLE` 명령은에서 찾을 수 있습니다. [SQL 참조 설명서](../sql/syntax.md#analyze-table).
+이제 의 열 수준 통계를 계산할 수 있습니다. [!DNL Azure Data Lake Storage] (ADLS) 데이터 세트 `COMPUTE STATISTICS` SQL 명령. 데이터 세트 통계를 계산하는 SQL 명령은 `ANALYZE TABLE` 명령입니다. 에 대한 전체 세부 정보 `ANALYZE TABLE` 명령은에서 찾을 수 있습니다. [SQL 참조 설명서](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->다음 `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, 및 `SHOW STATISTICS` 가속화된 저장소 테이블에는 명령이 지원되지 않습니다. 에 대한 이러한 확장 `ANALYZE TABLE` 명령은 현재 ADLS 테이블에 대해서만 지원됩니다. 자세한 내용은 [테이블 분석 섹션](../sql/syntax.md#analyze-table) SQL 구문 안내서의
+>다음 `COMPUTE STATISTICS`, `FILTERCONTEXT`, 및 `FOR COLUMNS` 가속화된 저장소 테이블에는 명령이 지원되지 않습니다. 에 대한 이러한 확장 `ANALYZE TABLE` 명령은 현재 ADLS 테이블에 대해서만 지원됩니다. 자세한 내용은 [테이블 분석 섹션](../sql/syntax.md#analyze-table) SQL 구문 안내서의
 
 이 안내서는 ADLS 데이터 세트의 열 통계를 계산할 수 있도록 쿼리를 구조화하는 데 도움이 됩니다. 이 명령을 사용하면 SQL 쿼리를 사용하여 PSQL 클라이언트를 통해 세션에서 생성된 통계를 볼 수 있습니다.
 
