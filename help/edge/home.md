@@ -3,9 +3,9 @@ title: Adobe Experience Platform 웹 SDK 개요
 description: Adobe Experience Platform Web SDK를 사용하여 Platform 기능을 웹 사이트에 통합하는 방법에 대해 알아봅니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;Web SDK;SDK;Web SDK;Launch;Launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 606052562da79982cbe4977c65ecf8ab64e4fa66
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '802'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform Web SDK는 Adobe Experience Cloud 고객이 의 다양
 [!DNL Adobe Experience Platform Web SDK] 은(는) 다음을 구성하는 컬렉션의 일부입니다. [!DNL Adobe Experience Edge]. [!DNL Experience Edge] 다음 기술로 구성됩니다.
 
 * **[[!DNL Adobe Experience Platform Web SDK]](#overview):** 배포를 크게 단순화하는 JavaScript SDK 및 태그 확장 [!DNL Adobe] 기술.
-* **[[!DNL Adobe Experience Platform Mobile SDK]](https://aep-sdks.gitbook.io/docs/getting-started/overview):** 고객이 새로운 배포 방법을 사용할 수 있도록 v5 모바일 SDK에 대한 확장
+* **[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/):** 고객이 새로운 배포 방법을 사용할 수 있도록 v5 모바일 SDK에 대한 확장
 * **[[!DNL Adobe Experience Platform Edge Network]](../server-api/overview.md):** 새로운 배포 방식을 구현하는 글로벌 분산 서버 네트워크 [!DNL Adobe] products
 
 다음 [!DNL Adobe Experience Edge] 는 모든 지정 가능한 채널에서 대기 시간이 짧은 데이터 수집, 플러그형 컴퓨팅 및 신속한 데이터 활성화를 위한 새로운 프레임워크입니다.
