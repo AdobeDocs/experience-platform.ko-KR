@@ -4,8 +4,8 @@ description: Real-Time CDP의 파트너 데이터 지원으로 잠재 고객 발
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
-workflow-type: ht
+source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
+workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 100%
 
@@ -76,7 +76,7 @@ Real-Time CDP에서 파트너 데이터 지원을 사용하여 새로운 고객�
 * **(설명서 준비 중)** 파트너 데이터 지원에 맞게 조정된 필드 그룹
 * **(설명서 준비 중)** 파트너로부터 수신되는 속성에 추가할 서드파티 레이블
 
-#### 파트너 ID 네임스페이스 만들기
+#### 파트너 ID 네임스페이스 만들기 {#create-partner-id-namespace}
 
 파트너로부터 받을 프로필에 대한 새 ID 유형을 생성하여 시작합니다. 이렇게 하려면 ID 섹션에서 **[!UICONTROL 파트너 ID]** 유형의 새 ID 네임스페이스를 만들어야 합니다.
 
