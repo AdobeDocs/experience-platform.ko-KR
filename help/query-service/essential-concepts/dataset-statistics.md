@@ -1,9 +1,9 @@
 ---
 title: 데이터 세트 통계 계산
 description: 이 문서에서는 SQL 명령을 사용하여 Azure ADLS(데이터 레이크 저장소) 데이터 세트에 대한 열 수준 통계를 계산하는 방법을 설명합니다.
-source-git-commit: 02b0939ee8fe92580402a78c7ebb5a250902d01c
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1086'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->다음 `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, 및 `SHOW STATISTICS` 명령은 data warehouse 테이블에서 지원되지 않습니다. 에 대한 이러한 확장 `ANALYZE TABLE` 명령은 현재 ADLS 테이블에 대해서만 지원됩니다. 자세한 내용은 [테이블 분석 섹션](../sql/syntax.md#analyze-table) SQL 구문 안내서의
+>다음 `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, 및 `SHOW STATISTICS` 가속화된 저장소 테이블에는 명령이 지원되지 않습니다. 에 대한 이러한 확장 `ANALYZE TABLE` 명령은 현재 ADLS 테이블에 대해서만 지원됩니다. 자세한 내용은 [테이블 분석 섹션](../sql/syntax.md#analyze-table) SQL 구문 안내서의
 
 이 안내서는 ADLS 데이터 세트의 열 통계를 계산할 수 있도록 쿼리를 구조화하는 데 도움이 됩니다. 이 명령을 사용하면 SQL 쿼리를 사용하여 PSQL 클라이언트를 통해 세션에서 생성된 통계를 볼 수 있습니다.
 
@@ -95,7 +95,7 @@ SELECT * FROM adc_geometric_stats_1;
 
 ## 통계 분석 메타데이터 표시 {#show-statistics}
 
-다음을 사용할 수 있습니다. `SHOW STATISTICS` 세션에서 생성된 모든 임시 통계 테이블의 메타데이터를 표시하는 명령입니다. 이 명령은 통계 분석의 범위를 구체화하는 데 도움이 될 수 있습니다.
+다음을 사용할 수 있습니다. `SHOW STATISTICS` 세션에서 생성된 모든 임시 통계에 대한 메타데이터를 표시하는 명령입니다. 이 명령은 통계 분석의 범위를 구체화하는 데 도움이 될 수 있습니다.
 
 의 출력 예 `SHOW STATISTICS` 아래에 이 표시됩니다.
 

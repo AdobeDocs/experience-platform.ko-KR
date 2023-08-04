@@ -2,7 +2,7 @@
 title: 쿼리 서비스의 데이터 거버넌스
 description: 이 개요에서는 Experience Platform 쿼리 서비스 데이터 거버넌스의 주요 요소를 다룹니다.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 54a6f508818016df1a4ab2a217bc0765b91df9e9
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
 source-wordcount: '2843'
 ht-degree: 2%
@@ -36,7 +36,6 @@ Query Service 내의 데이터 거버넌스를 사용하면 고객 데이터를 
 * [액세스 제어](#access-control): 액세스는 데이터 세트 및 열 수준 권한을 포함한 역할 및 권한을 통해 제어됩니다.
 * 를 통한 데이터 보호 [연결](#connectivity): 만료되는 자격 증명 또는 만료되지 않는 자격 증명으로 제한된 연결을 만들어 플랫폼 및 외부 클라이언트를 통해 데이터를 보호합니다.
 * 를 통한 데이터 보호 [암호화 및 시스템 수준 키](#encryption): 데이터 보안은 데이터가 유휴 상태일 때 암호화를 통해 보장됩니다.
-
 <!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
 
 ### 액세스 제어 {#access-control}
@@ -76,7 +75,7 @@ Adobe Experience Platform의 액세스 제어를 사용하면 다음을 사용�
 
 이 기능을 사용하면 선택한 사용자 그룹에 기밀 열에 대한 액세스 권한을 부여할 수 있습니다. 열에 대한 액세스 제어를 사용하면 특정 유형의 사용자에 대해 읽기 및 쓰기 기능을 모두 제한할 수 있습니다.
 
-열에 대한 액세스 제어는 표준 및 임시 스키마 모두에 대해 스키마 수준에서 적용할 수 있습니다. XDM 스키마에 데이터 사용 레이블을 적용하여 하나 이상의 열에 대한 액세스를 제한합니다. 데이터 레이블 지정은 CTAS 작업의 일부로 생성된 사전 정의된 스키마 또는 애드혹 스키마를 사용하여 쿼리 서비스를 통해 생성된 데이터 세트에 대해서도 일관되게 적용됩니다.
+열에 대한 액세스 제어는 표준 및 임시 스키마 모두에 대해 스키마 수준에서 적용할 수 있습니다. 데이터 사용 레이블을 XDM 스키마에 적용하여 하나 이상의 열에 대한 액세스를 제한합니다. 데이터 레이블 지정은 CTAS 작업의 일부로 생성된 사전 정의된 스키마 또는 애드혹 스키마를 사용하여 쿼리 서비스를 통해 생성된 데이터 세트에 대해서도 일관되게 적용됩니다.
 
 레이블과 역할을 사용하여 적절한 액세스 수준이 적용되면 사용자가 액세스할 수 없는 데이터에 액세스하려고 하면 다음과 같은 시스템 동작이 발생합니다.
 
@@ -141,7 +140,7 @@ Adobe Experience Platform의 액세스 제어를 사용하면 다음을 사용�
 
 암호화는 데이터를 암호화하고 읽을 수 없는 텍스트로 변환하는 알고리즘 프로세스를 사용하여 암호 해독 키 없이 정보를 보호하고 액세스할 수 없도록 합니다.
 
-Query Service 데이터 규정 준수는 데이터가 항상 암호화되도록 합니다. 전송 중인 데이터는 항상 HTTPS를 준수하며 사용하지 않는 데이터는 시스템 수준 키를 사용하여 Azure Data Lake 저장소에서 암호화됩니다. 다음에서 설명서를 참조하십시오. [Adobe Experience Platform에서 데이터를 암호화하는 방법](../../landing/governance-privacy-security/encryption.md) 추가 정보. 사용하지 않는 데이터를 Azure Data Lake Storage에서 암호화하는 방법에 대한 자세한 내용은 다음을 참조하십시오. [공식 Azure 설명서](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
+Query Service 데이터 규정 준수는 데이터가 항상 암호화되도록 합니다. 전송 중인 데이터는 항상 HTTPS를 준수하며, 사용하지 않는 데이터는 시스템 수준 키를 사용하여 Azure Data Lake 저장소에서 암호화됩니다. 다음에서 설명서를 참조하십시오. [Adobe Experience Platform에서 데이터를 암호화하는 방법](../../landing/governance-privacy-security/encryption.md) 추가 정보. 사용하지 않는 데이터를 Azure Data Lake Storage에서 암호화하는 방법에 대한 자세한 내용은 다음을 참조하십시오. [공식 Azure 설명서](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
 <!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
 
@@ -205,13 +204,13 @@ Platform 사용자가 원하는 대로 모든 로그 범주를 요청할 수 있
 
 데이터 거버넌스를 위한 쿼리 서비스 기능은 데이터 분류 프로세스 및 데이터 사용 규정 준수를 간소화하고 간소화합니다. 데이터가 식별되면 쿼리 서비스를 사용하여 모든 출력 데이터 세트에 기본 ID를 할당할 수 있습니다. 본인 **필수** 데이터 개인 정보 보호 요청을 용이하게 하고 데이터 규정 준수를 위해 데이터 세트에 id를 추가합니다.
 
-스키마 데이터 필드는 Platform UI를 통해 ID 필드로 설정할 수 있으며, 쿼리 서비스를 통해 다음을 수행할 수도 있습니다. [sql 명령 &#39;ALTER TABLE&#39;을 사용하여 기본 ID 표시](../sql/syntax.md#alter-table). 를 사용하여 ID 설정 `ALTER TABLE` 명령은 Platform UI를 통해 스키마에서 직접 만드는 것이 아니라 SQL을 사용하여 데이터 세트를 만들 때 특히 유용합니다. 방법에 대한 지침은 설명서 를 참조하십시오 [ui에서 id 필드 정의](../../xdm/ui/fields/identity.md) 표준 스키마를 사용하는 경우입니다.
+스키마 데이터 필드는 Platform UI를 통해 ID 필드로 설정할 수 있으며 쿼리 서비스를 통해 다음을 수행할 수도 있습니다. [sql 명령 &#39;ALTER TABLE&#39;을 사용하여 기본 ID 표시](../sql/syntax.md#alter-table). 를 사용하여 ID 설정 `ALTER TABLE` 명령은 Platform UI를 통해 스키마에서 직접 만드는 것이 아니라 SQL을 사용하여 데이터 세트를 만들 때 특히 유용합니다. 방법에 대한 지침은 설명서 를 참조하십시오 [ui에서 id 필드 정의](../../xdm/ui/fields/identity.md) 표준 스키마를 사용하는 경우입니다.
 
 <!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
 
 ## Data hygiene 
 
-"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. In Query Service, this is either the data lake or the data warehouse.
+"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. 
 
 It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
 

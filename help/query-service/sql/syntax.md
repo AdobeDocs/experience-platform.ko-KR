@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여 줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
-source-wordcount: '3761'
+source-wordcount: '3860'
 ht-degree: 2%
 
 ---
@@ -124,7 +124,6 @@ SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Cus
 >- 선택적 대체 동작 플래그를 설정하면 쿼리 서비스가 사용 가능한 가장 이른 스냅숏을 선택하고 이를 시작 스냅숏으로 설정하며 사용 가능한 가장 이른 스냅숏과 지정된 끝 스냅숏 사이에 데이터를 반환합니다. 이 데이터는 **포괄** 사용 가능한 가장 빠른 스냅샷
 >
 >- 선택적 대체 동작 플래그가 설정되지 않은 경우 오류가 반환됩니다.
-
 
 ### WHERE 절
 
@@ -541,7 +540,7 @@ select inline(productListItems) from source_dataset limit 10;
 | SKU | _경험 | 수량 | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
 | product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;) | 5 | 10.5 |
-| product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;) |  |  |
+| product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;) |          |              |
 | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;)) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;) | 3 | 12 |
 
@@ -600,7 +599,7 @@ ANALYZE TABLE <original_table_name>
 
 이제 의 열 수준 통계를 계산할 수 있습니다. [!DNL Azure Data Lake Storage] (ADLS) 데이터 세트 `COMPUTE STATISTICS` 및 `SHOW STATISTICS` 명령. 전체 데이터 세트, 데이터 세트의 하위 집합, 모든 열 또는 열의 하위 집합에 대한 열 통계를 계산합니다.
 
-`COMPUTE STATISTICS` 다음을 확장합니다. `ANALYZE TABLE` 명령입니다. 그러나 `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, 및 `SHOW STATISTICS` 명령은 data warehouse 테이블에서 지원되지 않습니다. 에 대한 이러한 확장 `ANALYZE TABLE` 명령은 현재 ADLS 테이블에 대해서만 지원됩니다.
+`COMPUTE STATISTICS` 다음을 확장합니다. `ANALYZE TABLE` 명령입니다. 그러나 `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, 및 `SHOW STATISTICS` 가속화된 저장소 테이블에는 명령이 지원되지 않습니다. 에 대한 이러한 확장 `ANALYZE TABLE` 명령은 현재 ADLS 테이블에 대해서만 지원됩니다.
 
 **예**
 
@@ -608,28 +607,43 @@ ANALYZE TABLE <original_table_name>
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
 ```
 
+다음 `FILTER CONTEXT` 명령은 제공된 필터 조건을 기반으로 데이터 집합 하위 집합에 대한 통계를 계산합니다. 다음 `FOR COLUMNS` 명령은 분석을 위한 특정 열을 대상으로 합니다.
+
 >[!NOTE]
 >
->`FILTER CONTEXT` 제공된 필터 조건을 기반으로 데이터 집합 하위 집합에 대한 통계를 계산합니다. `FOR COLUMNS` 분석을 위한 특정 열을 대상으로 합니다.
+>다음 `Statistics ID` 그리고 생성된 통계는 각 세션에 대해서만 유효하며 다른 PSQL 세션에서 액세스할 수 없습니다.<br><br>제한 사항:<ul><li>배열 또는 맵 데이터 유형에 대해서는 통계 생성이 지원되지 않습니다.</li><li>계산된 통계가 지속되지 않음</li></ul><br><br>옵션:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>기본적으로 플래그는 true로 설정됩니다. 따라서 지원되지 않는 데이터 유형에 대해 통계를 요청하면 오류가 발생하지 않고 자동으로 실패합니다.<br>지원되지 않는 데이터 유형에 대한 통계가 요청될 때 오류에 대한 알림을 활성화하려면 다음을 사용합니다. `SET skip_stats_for_complex_datatypes = false`.
 
 콘솔 출력이 아래와 같이 표시됩니다.
 
 ```console
-  Statistics ID 
-------------------
- ULKQiqgUlGbTJWhO
+|     Statistics ID      | 
+| ---------------------- |
+| adc_geometric_stats_1  |
 (1 row)
 ```
 
-그런 다음 반환된 통계 ID를 사용하여 `SHOW STATISTICS` 명령입니다.
+그런 다음 를 참조하여 계산된 통계를 직접 쿼리할 수 있습니다. `Statistics ID`. 아래의 예제 문을 사용하여 와 함께 사용할 경우 출력을 전체적으로 볼 수 있습니다. `Statistics ID` 또는 별칭 이름입니다. 이 기능에 대한 자세한 내용은 다음을 참조하십시오. [별칭 이름 설명서](../essential-concepts/dataset-statistics.md#alias-name).
 
 ```sql
-SHOW STATISTICS FOR <statistics_ID>
+-- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
+SELECT * FROM adc_geometric_stats_1;
 ```
 
->[!NOTE]
->
->`COMPUTE STATISTICS` 는 배열 또는 맵 데이터 유형을 지원하지 않습니다. 다음을 설정할 수 있습니다. `skip_stats_for_complex_datatypes` 입력 데이터 프레임에 배열 및 맵 데이터 형식이 있는 열이 있는 경우 알림을 받거나 오류 발생에 대한 플래그. 기본적으로 플래그는 true로 설정됩니다. 알림 또는 오류를 활성화하려면 다음 명령을 사용합니다. `SET skip_stats_for_complex_datatypes = false`.
+사용 `SHOW STATISTICS` 세션에서 생성된 모든 임시 통계 테이블의 메타데이터를 표시하는 명령입니다. 이 명령은 통계 분석의 범위를 구체화하는 데 도움이 될 수 있습니다.
+
+```sql
+SHOW STATISTICS;
+```
+
+SHOW STATISTICS의 출력 예는 아래에 나와 있습니다.
+
+```console
+      statsId         |   tableName   | columnSet |         filterContext       |      timestamp
+----------------------+---------------+-----------+-----------------------------+--------------------
+adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
+demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
+age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
+```
 
 다음을 참조하십시오. [데이터 세트 통계 설명서](../essential-concepts/dataset-statistics.md) 추가 정보.
 
@@ -728,7 +742,7 @@ EXPLAIN FORMAT { TEXT | JSON } statement
 | 매개 변수 | 설명 |
 | ------ | ------ |
 | `FORMAT` | 사용 `FORMAT` 출력 형식을 지정하는 명령입니다. 사용 가능한 옵션은 다음과 같습니다 `TEXT` 또는 `JSON`. 텍스트가 아닌 출력에는 텍스트 출력 형식과 동일한 정보가 포함되어 있지만 프로그램이 더 쉽게 구문 분석할 수 있습니다. 이 매개 변수의 기본값은 입니다. `TEXT`. |
-| `statement` | 임의 `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, 또는 `CREATE MATERIALIZED VIEW AS` 명령문(보고 싶은 실행 계획). |
+| `statement` | 임의 `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, 또는 `CREATE MATERIALIZED VIEW AS` 명령문입니다. 실행 계획을 확인해야 합니다. |
 
 >[!IMPORTANT]
 >
