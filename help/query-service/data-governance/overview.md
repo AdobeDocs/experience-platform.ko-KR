@@ -2,9 +2,9 @@
 title: 쿼리 서비스의 데이터 거버넌스
 description: 이 개요에서는 Experience Platform 쿼리 서비스 데이터 거버넌스의 주요 요소를 다룹니다.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '3132'
 ht-degree: 2%
 
 ---
@@ -23,11 +23,11 @@ Query Service 내의 데이터 거버넌스를 사용하면 고객 데이터를 
 1. 감사
 1. 데이터 사용
 1. 개인정보 보호
-<!-- 1. Data hygiene -->
+1. 데이터 위생
 
 이 문서에서는 다양한 거버넌스 영역을 살펴보고 쿼리 서비스를 사용할 때 데이터 규정 준수를 용이하게 하는 방법을 보여 줍니다. 다음을 참조하십시오. [거버넌스, 개인 정보 보호 및 보안 개요](../../landing/governance-privacy-security/overview.md) Experience Platform을 통해 고객 데이터를 관리하고 규정 준수를 보장하는 방법에 대한 자세한 정보.
 
-## 보안
+## 보안 {#security}
 
 데이터 보안은 데이터의 무단 액세스로부터 데이터를 보호하고 전체 수명주기 동안 안전한 액세스를 보장하는 프로세스입니다. 보안 액세스는 역할 기반 액세스 제어 및 속성 기반 액세스 제어와 같은 기능별 역할 및 권한 적용을 통해 Experience Platform 시 유지됩니다. 또한 자격 증명, SSL 및 데이터 암호화를 사용하여 플랫폼 전반에서 데이터를 보호합니다.
 
@@ -35,8 +35,7 @@ Query Service 내의 데이터 거버넌스를 사용하면 고객 데이터를 
 
 * [액세스 제어](#access-control): 액세스는 데이터 세트 및 열 수준 권한을 포함한 역할 및 권한을 통해 제어됩니다.
 * 를 통한 데이터 보호 [연결](#connectivity): 만료되는 자격 증명 또는 만료되지 않는 자격 증명으로 제한된 연결을 만들어 플랫폼 및 외부 클라이언트를 통해 데이터를 보호합니다.
-* 를 통한 데이터 보호 [암호화 및 시스템 수준 키](#encryption): 데이터 보안은 데이터가 유휴 상태일 때 암호화를 통해 보장됩니다.
-<!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
+* 를 통한 데이터 보호 [암호화 및 CMK(고객 관리 키)](#encryption-and-customer-managed-keys): 데이터가 유휴 상태일 때 암호화를 통해 액세스가 제어됩니다.
 
 ### 액세스 제어 {#access-control}
 
@@ -132,17 +131,14 @@ Adobe Experience Platform의 액세스 제어를 사용하면 다음을 사용�
 
 사용 가능한 설명서 참조 [쿼리 서비스에 대한 타사 클라이언트 연결을 위한 SSL 옵션](../clients/ssl-modes.md) 를 사용하여 연결하는 방법 등 자세한 내용은 `verify-full` SSL 매개 변수 값입니다.
 
-### 암호화 {#encryption}
-
-<!-- Commented out lines to be included when customer-managed keys is released. Link out to the new document. -->
-
-<!-- ### Encryption and customer-managed keys (CMK) {#encryption-and-customer-managed-keys} -->
+### 암호화 및 CMK(고객 관리 키) {#encryption-and-customer-managed-keys}
 
 암호화는 데이터를 암호화하고 읽을 수 없는 텍스트로 변환하는 알고리즘 프로세스를 사용하여 암호 해독 키 없이 정보를 보호하고 액세스할 수 없도록 합니다.
 
 Query Service 데이터 규정 준수는 데이터가 항상 암호화되도록 합니다. 전송 중인 데이터는 항상 HTTPS를 준수하며, 사용하지 않는 데이터는 시스템 수준 키를 사용하여 Azure Data Lake 저장소에서 암호화됩니다. 다음에서 설명서를 참조하십시오. [Adobe Experience Platform에서 데이터를 암호화하는 방법](../../landing/governance-privacy-security/encryption.md) 추가 정보. 사용하지 않는 데이터를 Azure Data Lake Storage에서 암호화하는 방법에 대한 자세한 내용은 다음을 참조하십시오. [공식 Azure 설명서](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
-<!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
+전송 중인 데이터는 항상 HTTPS를 준수하며 데이터가 데이터 레이크에 있는 경우에도 마찬가지로 암호화는 데이터 레이크 관리에서 이미 지원하는 CMK(고객 관리 키)로 수행됩니다. 현재 지원되는 버전은 TLS1.2입니다. 다음을 참조하십시오. [고객 관리 키(CMK) 설명서](../../landing/governance-privacy-security/customer-managed-keys.md) Adobe Experience Platform에 저장된 데이터에 대해 고유한 암호화 키를 설정하는 방법을 알아봅니다.
+
 
 ## 감사 {#audit}
 
@@ -206,14 +202,14 @@ Platform 사용자가 원하는 대로 모든 로그 범주를 요청할 수 있
 
 스키마 데이터 필드는 Platform UI를 통해 ID 필드로 설정할 수 있으며 쿼리 서비스를 통해 다음을 수행할 수도 있습니다. [sql 명령 &#39;ALTER TABLE&#39;을 사용하여 기본 ID 표시](../sql/syntax.md#alter-table). 를 사용하여 ID 설정 `ALTER TABLE` 명령은 Platform UI를 통해 스키마에서 직접 만드는 것이 아니라 SQL을 사용하여 데이터 세트를 만들 때 특히 유용합니다. 방법에 대한 지침은 설명서 를 참조하십시오 [ui에서 id 필드 정의](../../xdm/ui/fields/identity.md) 표준 스키마를 사용하는 경우입니다.
 
-<!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
+## 데이터 위생 {#data-hygiene}
 
-## Data hygiene 
+&quot;데이터 위생&quot;이란 오래된 데이터, 부정확한 데이터, 잘못된 포맷, 중복 데이터 또는 불완전한 데이터를 복구하거나 제거하는 프로세스를 말합니다. 이러한 프로세스를 통해 모든 시스템에서 데이터 세트가 정확하고 일관되도록 할 수 있습니다. 데이터 여정의 모든 단계와 심지어 초기 데이터 저장소 위치에서 적절한 데이터 위생을 보장하는 것이 중요합니다. Experience Platform 쿼리 서비스에서 데이터 레이크 또는 가속 저장소입니다.
 
-"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. 
+Platform의 중앙 집중식 데이터 위생 서비스에 따라 데이터 관리를 허용하도록 파생된 데이터 세트에 ID를 할당할 수 있습니다.
 
-It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
+반대로 가속화된 스토어에서 집계된 데이터 세트를 만들면 집계된 데이터를 원본 데이터를 파생시키는 데 사용할 수 없습니다. 이러한 데이터 집계로 인해 데이터 위생 요청을 제기할 필요성이 없어졌습니다.
 
-An exception to this scenario is the case of deletion. If a data hygiene deletion is requested on a dataset and before the deletion is completed, another derived dataset query is executed, then the derived dataset will capture information from the original dataset. In this case, you must be mindful that if a request to delete a dataset has been sent, you must not execute any new derived dataset queries using the same dataset source. 
+이 시나리오의 예외는 삭제의 경우입니다. 데이터 세트에서 데이터 위생 삭제가 요청되고 삭제가 완료되기 전에 다른 파생된 데이터 세트 쿼리가 실행되는 경우 파생된 데이터 세트는 원래 데이터 세트의 정보를 캡처합니다. 이 경우 데이터 세트 삭제 요청이 전송된 경우 동일한 데이터 세트 소스를 사용하여 새로 파생된 데이터 세트 쿼리를 실행해서는 안 된다는 점을 염두에 두어야 합니다.
 
-See the [data hygiene overview](../../hygiene/home.md) for more information on data hygiene in Adobe Experience Platform. -->
+다음을 참조하십시오. [데이터 위생 개요](../../hygiene/home.md) Adobe Experience Platform의 데이터 위생에 대한 자세한 정보.
