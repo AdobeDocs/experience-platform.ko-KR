@@ -2,10 +2,10 @@
 title: Adobe Experience Platform의 고객 관리 키
 description: Adobe Experience Platform에 저장된 데이터에 대한 자체 암호화 키를 설정하는 방법에 대해 알아봅니다.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 04ed092d4514d1668068ed73a1be4400c6cd4d8e
 workflow-type: tm+mt
-source-wordcount: '1617'
-ht-degree: 0%
+source-wordcount: '1774'
+ht-degree: 1%
 
 ---
 
@@ -15,11 +15,11 @@ Adobe Experience Platform에 저장된 데이터는 시스템 수준 키를 사�
 
 >[!NOTE]
 >
->Adobe Experience Platform 데이터 레이크 및 프로필 저장소(CosmosDB)의 데이터는 CMK를 사용하여 암호화됩니다.
+>Adobe Experience Platform 데이터 레이크 및 프로필 저장소의 데이터는 CMK를 사용하여 암호화됩니다. 이는 기본 데이터 저장소로 간주됩니다.
 
 이 문서에서는 Platform에서 CMK(고객 관리 키) 기능을 활성화하는 프로세스에 대해 설명합니다.
 
-## 사전 요구 사항
+## 전제 조건
 
 CMK를 활성화하려면 [!DNL Azure] Key Vault는 다음 설정으로 구성해야 합니다.
 
@@ -282,12 +282,21 @@ curl -X GET \
 1. `COMPLETED`: 주요 자격 증명 모음 및 키 이름이 데이터 저장소에 추가되었습니다.
 1. `FAILED`: 주로 키, 키 보관소 또는 다중 테넌트 앱 설정과 관련된 문제가 발생했습니다.
 
-## 다음 단계
+## 액세스 취소 {#revoke-access}
 
-위의 단계를 완료하면 조직에 대해 CMK를 성공적으로 사용할 수 있게 됩니다. Platform에 수집되는 데이터는 이제 의 키를 사용하여 암호화 및 암호 해독됩니다. [!DNL Azure] 키 보관소. 데이터에 대한 Platform 액세스를 취소하려는 경우 내의 키 저장소에서 애플리케이션과 연결된 사용자 역할을 제거할 수 있습니다 [!DNL Azure].
-
-애플리케이션에 대한 액세스를 비활성화한 후 플랫폼에서 데이터에 더 이상 액세스할 수 없는 데 몇 분에서 24시간 정도 걸릴 수 있습니다. 애플리케이션에 대한 액세스를 다시 활성화할 때 데이터를 다시 사용할 수 있도록 동일한 시간 지연이 적용됩니다.
+데이터에 대한 Platform 액세스를 취소하려는 경우 내의 키 저장소에서 애플리케이션과 연결된 사용자 역할을 제거할 수 있습니다 [!DNL Azure].
 
 >[!WARNING]
 >
->Key Vault, Key 또는 CMK 앱이 비활성화되고 Platform에서 더 이상 데이터에 액세스할 수 없게 되면 해당 데이터와 관련된 모든 다운스트림 작업은 더 이상 수행할 수 없습니다. 구성을 변경하기 전에 데이터에 대한 플랫폼 액세스 취소의 다운스트림에 대한 영향을 이해해야 합니다.
+>Key Vault, Key 또는 CMK 앱을 비활성화하면 변경 사항이 중단될 수 있습니다. Key Vault, Key 또는 CMK 앱이 비활성화되고 Platform에서 더 이상 데이터에 액세스할 수 없게 되면 해당 데이터와 관련된 모든 다운스트림 작업은 더 이상 수행할 수 없습니다. 구성을 변경하기 전에 키에 대한 플랫폼 액세스 취소의 다운스트림에 대한 영향을 이해해야 합니다.
+
+키 액세스 제거 또는 키에서 비활성화/삭제 후 [!DNL Azure] 주요 자격 증명 모음: 이 구성이 기본 데이터 저장소로 전파되는 데 몇 분에서 24시간 정도 소요될 수 있습니다. 또한 Platform 워크플로에는 성능 및 핵심 애플리케이션 기능에 필요한 캐시된 임시 데이터 저장소가 포함되어 있습니다. 이러한 캐시된 임시 저장소를 통한 CMK 취소의 전파는 데이터 처리 워크플로우에 의해 결정된 대로 최대 7일이 소요될 수 있다. 예를 들어 프로필 대시보드는 캐시 데이터 저장소에서 데이터를 유지 및 표시하고 새로 고침 주기의 일부로 캐시 데이터 저장소에 보관된 데이터를 만료하는 데 7일이 소요됩니다. 애플리케이션에 대한 액세스를 다시 활성화할 때 데이터를 다시 사용할 수 있도록 동일한 시간 지연이 적용됩니다.
+
+>[!NOTE]
+>
+>기본이 아닌(캐시된/임시) 데이터에 대한 7일 데이터 세트 만료에 대한 두 가지 사용 사례별 예외가 있습니다. 이러한 기능에 대한 자세한 내용은 해당 설명서 를 참조하십시오.<ul><li>[Adobe Journey Optimizer URL 단축기](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=ko-KR#message-preset-sms)</li><li>[가장자리 투영](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+
+## 다음 단계
+
+위의 단계를 완료하면 조직에 대해 CMK를 성공적으로 사용할 수 있게 됩니다. 기본 데이터 저장소에 수집된 데이터는 이제 의 키를 사용하여 암호화 및 암호 해독 됩니다. [!DNL Azure] 키 보관소.
+
