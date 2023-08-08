@@ -3,10 +3,10 @@ keywords: 대상; 질문; faq; faq; 대상 faq
 title: 자주 묻는 질문
 description: Adobe Experience Platform 대상에 대해 가장 자주 묻는 질문에 대한 답변
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 810bcd011fd6e172c79f4482e047aa6e715c3918
+source-git-commit: 75b9cc3e2c9a18ec8c08c9c3ca774accae31eb7e
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 4%
+source-wordcount: '1638'
+ht-degree: 3%
 
 ---
 
@@ -143,6 +143,7 @@ ID 일치 요구 사항에 대한 자세한 내용은 [ID 일치 요구 사항](
 
 +++답변
 [!DNL LinkedIn Matched Audiences] 은(는) 해시된 이메일, [!DNL GAID], 및 [!DNL IDFA].
+
 +++
 
 ## Adobe Target 및 사용자 지정 개인화 대상을 통한 동일 페이지 및 다음 페이지 개인화 {#same-next-page-personalization}
@@ -204,3 +205,20 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 +++예 라고 답하십시오. 다음 [데이터 거버넌스 및 동의 정책](../data-governance/home.md) 선택한 마케팅 액션과 연관되어 만들어지면 선택한 속성의 활성화를 제어합니다.
 +++
+
+### 다음 [!DNL Adobe Target] 및 [!DNL Custom Personalization] 대상 [!DNL HIPAA]규정을 준수합니까?
+
++++답변
+[!DNL Adobe Target] 은(는) 아님 [!DNL HIPPA]과 호환 [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). 고객은 다음에 대해 자체 법률팀에 확인해야 합니다 [!DNL HIPPA]-를 통해 에지 개인화를 사용하기 전에 사용자 지정 최적화 채널에 대한 준비 [!DNL Adobe Target] 또는 [!DNL Custom Personalization] 대상.
+
+동의 정책 관리를 규모에 맞게 적용해야 하는 사용 사례의 경우 고객은 다음을 구매해야 합니다 [!DNL Adobe Privacy & Security Shield]. [!DNL Adobe Privacy & Security Shield] 기능은 고급 기능 세트로 판매되며 별도로 구입할 수 없습니다.
+
+이 서비스에는 고객 관리 키와 높아진 임계값이 포함되어 있어 고객 데이터 수명주기를 관리할 수 있습니다.
+
+다음 [!DNL Adobe Target] 및 [!DNL Custom Personalization] 대상이 와 통합됨 [Experience Platform 데이터 사용 레이블](../data-governance/labels/overview.md) 및 [동의 정책 시행 서비스](../data-governance/enforcement/overview.md). 이러한 기능은 모든 고객이 사용할 수 있습니다.
+
+
+
+
++++
+
