@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 44c92e2163e2b6c0c140c64bba41dfbcc15d5d7f
 workflow-type: tm+mt
 source-wordcount: '1633'
-ht-degree: 9%
+ht-degree: 12%
 
 ---
 
@@ -57,7 +57,7 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="평가 메서드"
->abstract="Platform은 현재 스트리밍 세분화, 일괄 세분화 및 에지 세분화라는 세 가지 대상자 평가 방법을 지원합니다."
+>abstract="현재 Platform은 대상자를 평가하는 세 가지 방식(스트리밍 세분화, 배치 세분화, 에지 세분화)을 지원합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -65,7 +65,7 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >abstract="스트리밍 세분화는 사용자 활동에 대응하여 대상자를 업데이트하는 진행형 데이터 선택 프로세스입니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=ko-KR" text="스트리밍 세분화를 통해 거의 실시간으로 이벤트 평가"
 
-Platform은 현재 스트리밍 세분화, 일괄 세분화 및 에지 세분화라는 세 가지 대상자 평가 방법을 지원합니다.
+현재 Platform은 대상자를 평가하는 세 가지 방식(스트리밍 세분화, 배치 세분화, 에지 세분화)을 지원합니다.
 
 ### 스트리밍 세분화 {#streaming}
 
@@ -78,7 +78,7 @@ Platform은 현재 스트리밍 세분화, 일괄 세분화 및 에지 세분화
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="배치 평가"
->abstract="진행 중인 데이터 선택 프로세스를 사용하는 대신 배치 세분화는 세그먼트 정의를 통해 한 번에 모든 프로필 데이터를 이동하여 해당 대상자를 생성합니다. 대상자가 만들어지면 사용하기 위해 내보낼 수 있도록 대상자가 저장되고 저장됩니다."
+>abstract="진행 중인 데이터 선택 프로세스를 사용하는 대신 배치 세분화는 세그먼트 정의를 통해 한 번에 모든 프로필 데이터를 이동하여 해당 대상자를 생성합니다. 대상자가 생성되면 저장되므로 이를 사용하기 위해 내보낼 수 있습니다."
 
 진행 중인 데이터 선택 프로세스를 사용하는 대신 배치 세분화는 세그먼트 정의를 통해 한 번에 모든 프로필 데이터를 이동하여 해당 대상자를 생성합니다. 만든 후에는 사용하기 위해 내보낼 수 있도록 결과 대상자가 저장되고 저장됩니다.
 
