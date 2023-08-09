@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 대상자 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
-source-git-commit: 4a89650a8c1599b95e109a710e4f12df34e67f6f
+source-git-commit: 57b53ff592df687fa74398a19a3bde76b1164ee6
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 91%
+source-wordcount: '242'
+ht-degree: 94%
 
 ---
 
@@ -65,8 +65,6 @@ ht-degree: 91%
    * [소스 개요](sources/sources-overview.md)
    * [Real-Time CDP B2B 에디션의 소스](sources/b2b.md)
 * 사용 사례 {#use-cases}
-   * 지능형 재참여 사용 사례 {#intelligent-re-engagement}
-      * [지능적인 고객 재참여](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * 파트너 데이터 사용 사례 {#partner-data}
       * [잠재 고객 지원을 통해 신규 고객 참여 유도 및 확보](/help/rtcdp/partner-data/prospecting.md)
       * [파트너가 제공한 속성으로 자사 프로필 보완](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
