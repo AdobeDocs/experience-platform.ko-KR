@@ -3,9 +3,9 @@ title: 지능형 재참여
 description: 주요 전환 순간 동안 매력적이고 연결된 경험을 제공하여 빈번하지 않은 고객을 지능적으로 다시 참여시킵니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 4f0902b874d5e8179c009ad3b603e008b9a22bb4
+source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
 workflow-type: tm+mt
-source-wordcount: '3496'
+source-wordcount: '3482'
 ht-degree: 12%
 
 ---
@@ -110,9 +110,7 @@ XDM(경험 데이터 모델) 리소스는 [!UICONTROL 스키마] Adobe Experienc
 
 스키마 만들기에 대한 자세한 내용은 [스키마 튜토리얼 만들기.](/help/xdm/tutorials/create-schema-ui.md)
 
-재참여 여정에 사용되는 4가지 스키마 디자인이 있습니다.
-
-각 스키마에는 특정 필드를 설정해야 하며 일부 필드는 강력하게 제안됩니다.
+재참여 여정에 사용되는 4가지 스키마 디자인이 있습니다. 각 스키마에는 특정 필드를 설정해야 하며 일부 필드는 강력하게 제안됩니다.
 
 #### 고객 특성 스키마에 대한 필드 그룹 요구 사항
 
@@ -315,8 +313,6 @@ XDM(경험 데이터 모델) 리소스는 [!UICONTROL 스키마] Adobe Experienc
 
 Adobe 웹 커넥터 스키마는 [!UICONTROL XDM ExperienceEvent] 다음 필드 그룹을 포함하는 스키마:
 
-Adobe Analytics 데이터 피드를 위한 경험 이벤트 스키마에 필요한 필드 그룹은 다음과 같습니다.
-
 +++Adobe Analytics ExperienceEvent 템플릿(필드 그룹)
 
 | 필드 | 요구 사항 | 설명 |
@@ -382,8 +378,6 @@ Adobe Analytics 데이터 피드를 위한 경험 이벤트 스키마에 필요�
 +++
 
 ![필드 그룹 목록을 강조 표시하는 Adobe 웹 커넥터 스키마.](../intelligent-re-engagement/images/adobe-web-connector.png)
-
->[!ENDTABS]
 
 ### 스키마에서 데이터 세트 만들기
 

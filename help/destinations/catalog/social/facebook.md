@@ -3,9 +3,9 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;메
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 한 대상자 타겟팅, 개인화 및 억제에 대한 Facebook 캠페인용 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 37e8d36d89bf984673345743b371c31b4bb1f94d
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1926'
 ht-degree: 6%
 
 ---
@@ -77,6 +77,7 @@ ht-degree: 6%
 
 대상자를 다음으로 보내기 전 [!DNL Facebook], 다음 요구 사항을 충족하는지 확인하십시오.
 
+* 사용자 [!DNL Facebook] 사용자 계정에 대한 전체 액세스 권한이 있어야 함 [!DNL Facebook Business Account] 사용할 광고 계정을 소유하는 계정입니다.
 * 사용자 [!DNL Facebook] 사용자 계정에는 **[!DNL Manage campaigns]** 사용하려는 광고 계정에 대해 권한이 활성화되었습니다.
 * 다음 **Adobe Experience Cloud** 비즈니스 계정을 의 광고 파트너로 추가해야 합니다. [!DNL Facebook Ad Account]. `business ID=206617933627973` 사용. 다음을 참조하십시오 [비즈니스 관리자에 파트너 추가](https://www.facebook.com/business/help/1717412048538897) 자세한 내용은 Facebook 설명서 를 참조하십시오.
   >[!IMPORTANT]
