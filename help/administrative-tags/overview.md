@@ -1,20 +1,16 @@
 ---
 keywords: Experience Platform;홈;인기 있는 주제;통합 태그;태그;
-title: 통합 태그 개요 (Beta)
+title: 통합 태그 개요
 description: 이 문서는 Adobe Experience Platform의 통합 태그에 대한 정보를 제공합니다.
 exl-id: a19e37c3-697a-4000-9cb8-d67478b47dc6
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '607'
-ht-degree: 100%
+source-git-commit: 6977438d57dc8e1390812e58bf039ebc60cb830d
+workflow-type: tm+mt
+source-wordcount: '578'
+ht-degree: 98%
 
 ---
 
-# 통합 태그 개요 (Beta)
-
->[!IMPORTANT]
->
->통합 태그는 Beta 버전입니다. 피드백을 남기려면 태그 관리 페이지 상단에 있는 버튼을 선택하십시오.
+# 통합 태그 개요
 
 태그는 Adobe Experience Platform의 기능으로, 관리자가 비즈니스 오브젝트를 분류하도록 메타데이터 분류를 관리하여 더 쉽게 검색하고 분류할 수 있습니다. 태그는 검색에서 해당 오브젝트 및 관련 오브젝트를 찾을 수 있도록 세그먼트, 데이터 세트, 여정 또는 기타 오브젝트에 연결할 수 있는 키워드로 생각할 수 있는 메타데이터입니다. 태그는 두 가지 유형(분류 및 미분류)으로 분류됩니다.
 
