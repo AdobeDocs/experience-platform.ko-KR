@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: 셀프서비스 소스에 대한 인증 사양 구성(일괄 SDK)
 description: 이 문서에서는 셀프서비스 소스(Batch SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '518'
 ht-degree: 1%
 
 ---
@@ -237,4 +237,4 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
 
 ## 다음 단계
 
-인증 사양을 채워 Platform에 통합할 소스에 대한 소스 사양을 계속 구성할 수 있습니다. 의 문서 보기 [소스 세부 항목 구성](./sourcespec.md) 추가 정보.
+인증 사양을 채워 Platform에 통합할 소스에 대한 소스 사양을 계속 구성할 수 있습니다. 다음에 대한 문서 보기: [소스 세부 항목 구성](./sourcespec.md) 추가 정보.

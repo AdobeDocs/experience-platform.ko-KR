@@ -3,9 +3,9 @@ title: 파트너 지원 방문자 인식을 사용하여 온사이트 경험 개
 description: 파트너 지원 방문자 인식을 사용하여 방문자에게 개인화된 현장 경험을 제공하는 방법에 대해 알아보십시오.
 hide: true
 hidefromtoc: true
-source-git-commit: f63cddc1158e739ce26e0ce1d3d54b491bd80c06
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2493'
+source-wordcount: '2492'
 ht-degree: 7%
 
 ---
@@ -191,7 +191,7 @@ Web SDK를 구성하는 화면에서 아래로 이동하여 **[!UICONTROL 데이
 
 두 번째 데이터 요소를 설정하려면 새 변수의 이름을 지정합니다 `pageVisit`, 를 설정합니다. **[!UICONTROL 확장]** 끝 **[!UICONTROL Adobe Experience Platform]** 및 선택 **[!UICONTROL XDM 개체]** 를 데이터 유형으로 사용하십시오.
 
-![pageVisit 데이터 요소를 올바로 구성하기 위해 강조 표시된 선택 항목입니다.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
+![pageVisit 데이터 요소를 올바르게 구성하기 위해 강조 표시된 선택 항목입니다.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
 
 스키마에서 데이터 파트너에게 기대하는 값에 해당하는 타사 속성을 선택합니다. 그런 다음 제목이 있는 라디오 단추를 선택합니다 **[!UICONTROL 전체 개체 제공]**. 데이터베이스처럼 보이는 아이콘을 선택하고 `partnerData` 이전에 만든 데이터 요소입니다.
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 배열 필드 정의
 description: Experience Platform 사용자 인터페이스에서 배열 필드를 정의하는 방법을 알아봅니다.
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '362'
 ht-degree: 1%
 
 ---

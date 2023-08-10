@@ -2,9 +2,9 @@
 title: Adobe 개인 정보 보호 확장 개요
 description: Adobe Experience Platform의 Adobe 개인 정보 보호 태그 확장에 대해 알아봅니다.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '900'
 ht-degree: 5%
 
 ---
@@ -21,7 +21,7 @@ Adobe 개인 정보 보호 태그 확장을 사용하면 클라이언트측 장�
 
 >[!NOTE]
 >
->태그를 사용하지 않고 이러한 기능을 설치하려면 다음을 참조하십시오 [개인 정보 JavaScript 라이브러리 개요](../../../../privacy-service/js-library.md) 원시 코드를 사용하여 을 구현하는 방법에 대한 단계입니다.
+>태그를 사용하지 않고 이러한 기능을 설치하려면 다음을 참조하십시오. [개인 정보 JavaScript 라이브러리 개요](../../../../privacy-service/js-library.md) 원시 코드를 사용하여 을 구현하는 방법에 대한 단계입니다.
 
 ##  확장 설치 및 구성
 

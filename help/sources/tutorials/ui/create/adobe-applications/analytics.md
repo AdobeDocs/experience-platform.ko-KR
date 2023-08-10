@@ -2,9 +2,9 @@
 title: UI에서 Adobe Analytics 소스 연결 만들기
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: b8764b4b39aba43687c7ac0540d392a3aa808df4
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2298'
 ht-degree: 6%
 
 ---
@@ -38,7 +38,6 @@ ht-degree: 6%
 >
 >* 내역 보고서 세트 데이터를 데이터 레이크로 13개월 채우도록 하는 데이터 흐름입니다. 이 데이터 흐름은 채우기가 완료되면 종료됩니다.
 >* 라이브 데이터를 데이터 레이크 및 로 전송하는 데이터 흐름 [!DNL Real-Time Customer Profile]. 이 데이터 흐름은 지속적으로 실행됩니다.
-
 
 Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 탐색에서 [!UICONTROL 소스] 작업 영역. 다음 [!UICONTROL 카탈로그] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
@@ -135,7 +134,7 @@ Platform은 모든 친숙한 이름 충돌에 대한 매핑 세트를 자동으�
 다음 설명서는 데이터 준비, 계산된 필드 및 매핑 함수 이해에 대한 추가 리소스를 제공합니다.
 
 * [데이터 준비 개요](../../../../../data-prep/home.md)
-* [데이터 준비 매핑 함수](../../../../../data-prep/functions.md)
+* [데이터 준비 매핑 기능](../../../../../data-prep/functions.md)
 * [계산된 필드 추가](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
 <!-- 

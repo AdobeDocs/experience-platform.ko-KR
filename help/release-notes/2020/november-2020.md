@@ -5,14 +5,14 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 5%
+source-wordcount: '2181'
+ht-degree: 9%
 
 ---
 
-# Adobe Experience Platform 릴리스 노트
+# Adobe Experience Platform 릴리스 정보
 
 **릴리스 날짜: 2020년 11월 11일**
 
@@ -108,7 +108,7 @@ Data Science Workspace 는 머신 러닝 및 인공 지능을 사용하여 데�
 
 위치 [Real-time Customer Data Platform](../../rtcdp/overview.md), 대상은 이러한 파트너에게 데이터를 원활하게 활성화하는 대상 플랫폼과의 사전 구축된 통합입니다.
 
-**새 대상**
+**새로운 대상**
 
 | 대상 | 설명 |
 | ----------- | ----------- |
@@ -181,7 +181,7 @@ Intelligent Services의 일부인 고객 AI는 마케터에게 설명을 통해 
 
 ## 실시간 고객 프로필 {#profile}
 
-Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 장소나 시기에 상관없이 고객이 통합적이고 일관적이며 적절한 경험을 제공할 수 있습니다. 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 서드파티 데이터를 포함하여 여러 채널의 데이터를 결합하는 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. [!DNL Profile] 에서는 모든 고객 상호 작용에 대해 실행 가능한 타임스탬프 계정을 제공하는 통합 보기로 다양한 고객 데이터를 통합할 수 있습니다.
+Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드와 상호 작용하는지에 관계없이 고객을 위한 조직화되고 일관되며 관련성 높은 경험을 제공할 수 있습니다. 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 여러 채널의 데이터를 결합하여 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. [!DNL Profile] 에서는 모든 고객 상호 작용에 대해 실행 가능한 타임스탬프 계정을 제공하는 통합 보기로 다양한 고객 데이터를 통합할 수 있습니다.
 
 **주요 기능**
 
@@ -196,7 +196,7 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 
 Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. [!DNL Platform] 서비스. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-[!DNL Experience Platform] 는 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스를 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
+[!DNL Experience Platform] 는 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
 **새 소스**
 
@@ -210,7 +210,7 @@ Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동�
 | ------- | ----------- |
 | 연결 정보 업데이트 | 이제 를 사용하여 기존 배치 연결의 이름, 설명 및 자격 증명을 업데이트할 수 있습니다. [!DNL Flow Service] API 및 UI. 자세한 내용은 다음 자습서를 참조하십시오. [흐름 서비스 API를 사용하여 연결 업데이트](../../sources/tutorials/api/update.md) 및 [ui를 사용하여 계정 세부 정보 편집](../../sources/tutorials/ui/monitor.md). |
 | 연결 삭제 | 오류가 있거나 불필요하게 된 배치 연결은 이제 다음을 사용하여 삭제할 수 있습니다. [!DNL Flow Service] API 및 UI. 자세한 내용은 다음 자습서를 참조하십시오. [흐름 서비스 API를 사용하여 연결 삭제](../../sources/tutorials/api/delete.md) 및 [UI를 사용하여 계정 삭제](../../sources/tutorials/ui/delete-accounts.md). |
-| 계층 구조 매핑 | 데이터 수집 프로세스 중에 JSON 또는 Parquet와 같은 계층적 소스 파일을 미리 볼 수 있습니다. 다음에서 자습서 보기: [ui에서 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 추가 정보. |
+| 계층 구조 매핑 | 데이터 수집 프로세스 중에 JSON 또는 Parquet와 같은 계층적 소스 파일을 미리 볼 수 있습니다. 다음 튜토리얼 참조: [ui에서 클라우드 스토리지 커넥터에 대한 데이터 흐름 구성](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 추가 정보. |
 | 스트리밍 소스에서의 매핑을 위한 API 지원 | 이제 API를 사용하여 스트리밍 소스에서 매핑 기능을 수행할 수 있습니다. |
 | 클라우드 스토리지 소스의 사용자 지정 구분 기호에 대한 API 지원 | 이제 클라우드 저장소 소스를 사용하여 CSV로 구분되지 않은 파일을 수집할 수 있습니다. 탭, 쉼표, 파이프, 세미콜론 또는 해시와 같은 단일 열 구분 기호를 사용하여 모든 형식의 플랫 파일을 수집할 수 있습니다. |
 | Adobe Audience Manager 커넥터에 대한 샌드박스 지원 | 이제 Audience Manager 커넥터가 샌드박스를 인식합니다. 사용자는 커넥터가 Audience Manager 데이터 세트를 선택한 샌드박스(비프로덕션 샌드박스 포함)로 라우팅하도록 할 수 있습니다. 구성은 조직당 하나의 샌드박스로 제한됩니다. |

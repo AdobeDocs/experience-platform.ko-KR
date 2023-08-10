@@ -5,9 +5,9 @@ feature: Customer AI
 title: Customer AI 인스턴스 구성
 description: AI/ML 서비스는 다양한 사용 사례에 맞게 구성할 수 있는 사용하기 쉬운 Adobe Sensei 서비스로 고객 AI를 제공합니다. 다음 섹션에서는 고객 AI의 인스턴스를 구성하는 단계를 제공합니다.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2828'
+source-wordcount: '2827'
 ht-degree: 0%
 
 ---

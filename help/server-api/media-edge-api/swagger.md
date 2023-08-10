@@ -2,7 +2,7 @@
 solution: Experience Platform
 title: Media Edge API 시작하기
 description: Media Edge API를 사용하면 개발자가 Media Edge Analytics 및 Customer Journey Analytics에 대한 데이터를 수집할 수 있습니다.
-source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
+source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
@@ -3227,7 +3227,7 @@ ht-degree: 0%
     },
     "/sessionStart": {
       "post": {
-        "description": "Signals the the start of a new session. When the response returns, the \"sessionId\" must be extracted and sent for all subsequent event calls to the Edge API server.",
+        "description": "Signals the start of a new session. When the response returns, the \"sessionId\" must be extracted and sent for all subsequent event calls to the Edge API server.",
         "parameters": [
           {
             "name": "configId",

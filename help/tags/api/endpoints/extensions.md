@@ -2,9 +2,9 @@
 title: 확장 엔드포인트
 description: Reactor API에서 /extensions 끝점을 호출하는 방법을 알아봅니다.
 exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '940'
 ht-degree: 4%
 
 ---

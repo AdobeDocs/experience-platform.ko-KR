@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 작성된 제품화된 대상을 검토하기 위해 제출해야 하는 모든 정보를 제공합니다.
 title: Destination SDK에서 작성된 제품화된 대상을 검토하기 위해 제출
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---

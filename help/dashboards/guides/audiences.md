@@ -4,9 +4,9 @@ title: 대상자 대시보드 안내서
 description: Adobe Experience Platform은 조직이 만든 대상자에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2232'
+source-wordcount: '2231'
 ht-degree: 7%
 
 ---
@@ -156,7 +156,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하는 데 사용할 �
 
 ### [!UICONTROL 대상자 오버랩] {#audience-overlap}
 
-이 위젯은 벤 다이어그램을 사용하여 두 대상의 기준과 일치하는 사람 수를 시각화합니다. 비교에 사용되는 대상자는 위젯 드롭다운 메뉴에서 선택됩니다. 해당 세그먼트 정의 내에 포함된 총 프로필 수는 원 위 또는 벤 다이어그램의 교차 지점을 마우스로 가리키면 확인할 수 있습니다.
+이 위젯은 벤 다이어그램을 사용하여 두 대상의 기준과 일치하는 사람 수를 시각화합니다. 비교에 사용되는 대상자는 위젯 드롭다운 메뉴에서 선택됩니다. 관련 세그먼트 정의 내에 포함된 총 프로필 수는 원 위 또는 벤 다이어그램의 교차 지점을 마우스로 가리키면 확인할 수 있습니다.
 
 이 위젯을 사용하면 세그먼트 정의 결과의 유사성을 시각화하여 세분화 전략을 최적화할 수 있습니다.
 

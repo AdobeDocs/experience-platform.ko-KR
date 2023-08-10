@@ -1,9 +1,9 @@
 ---
 description: Destination SDK으로 빌드된 대상에 대한 파일 내보내기 설정을 구성하는 방법에 대해 알아봅니다.
 title: 일괄 처리 구성
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 4%
 
 ---

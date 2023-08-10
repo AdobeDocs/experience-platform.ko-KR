@@ -2,9 +2,9 @@
 title: 인증
 description: Adobe Experience Platform Edge Network Server API에 대한 인증을 구성하는 방법에 대해 알아봅니다.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '636'
 ht-degree: 2%
 
 ---
@@ -28,9 +28,9 @@ ht-degree: 2%
 
 의 개인 서버에서 오는 API 호출 `server.adobedc.net` 항상 인증되어야 합니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
-을(를) 호출하기 전에 [!DNL Server API], 다음 전제 조건을 충족하는지 확인하십시오.
+을(를) 호출하기 전에 [!DNL Server API]를 설치한 후 다음 전제 조건을 충족하는지 확인하십시오.
 
 * Adobe Experience Platform에 액세스할 수 있는 조직 계정이 있습니다.
 * Experience Platform 계정에는 `developer` 및 `user` Adobe Experience Platform API 제품 프로필에 대해 활성화된 역할. 다음으로 연락 [Admin Console](../access-control/home.md) 관리자가 귀하의 계정에 대해 이러한 역할을 활성화하도록 할 수 있습니다.

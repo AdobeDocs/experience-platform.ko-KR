@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;api;API;XDM;XDM 시스템;경험
 title: UI에서 필수 필드 정의
 description: Experience Platform 사용자 인터페이스에서 필수 XDM 필드를 정의하는 방법을 알아봅니다.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '361'
 ht-degree: 0%
 
 ---

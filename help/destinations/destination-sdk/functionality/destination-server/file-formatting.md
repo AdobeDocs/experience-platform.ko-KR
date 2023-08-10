@@ -1,9 +1,9 @@
 ---
 description: '`/destination-servers'' 끝점을 통해 Adobe Experience Platform Destination SDK으로 빌드된 파일 기반 대상의 파일 형식 옵션을 구성하는 방법을 알아봅니다.'
 title: 파일 서식 구성
-source-git-commit: 5a6359e5731b36763e86eba8c79e60d74fb3b4c8
+source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '999'
 ht-degree: 4%
 
 ---
@@ -24,7 +24,7 @@ Destination SDK을 통해 파일 기반 대상을 만들 때 내보낸 CSV 파�
 
 파일 형식 설정은 파일 기반 대상에 대한 대상 서버 구성의 일부입니다.
 
-이 구성 요소가 Destination SDK으로 만든 통합에 어디에 맞는지 이해하려면 의 다이어그램을 참조하십시오. [구성 옵션](../configuration-options.md) 설명서 또는 방법에 대한 안내서 참조 [Destination SDK을 사용하여 파일 기반 대상 구성](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+이 구성 요소가 Destination SDK으로 만든 통합에 어디에 맞는지 이해하려면 의 다이어그램을 참조하십시오. [구성 옵션](../configuration-options.md) 설명서 또는 방법에 대한 안내서를 참조하십시오 [Destination SDK을 사용하여 파일 기반 대상 구성](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 다음을 통해 파일 서식 옵션을 구성할 수 있습니다. `/authoring/destination-servers` 엔드포인트. 이 페이지에 표시된 구성 요소를 구성할 수 있는 자세한 API 호출 예는 다음 API 참조 페이지를 참조하십시오.
 

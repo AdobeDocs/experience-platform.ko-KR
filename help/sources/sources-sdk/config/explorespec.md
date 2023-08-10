@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: 셀프서비스 소스에 대한 세부 항목 탐색(일괄 SDK)
 description: 이 문서에서는 셀프서비스 소스(Batch SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '254'
 ht-degree: 1%
 
 ---

@@ -1,12 +1,12 @@
 ---
 title: 자체 식별 설문 조사를 사용하여 Experience Platform 개인 프로필 구축
-description: 자기 식별 설문 조사 UI를 사용하여 직무 기능 및 관련 목표에 따라 관련 콘텐츠를 수신하는 방법을 알아봅니다.
-badge: 베타
+description: 자기 식별 설문 조사 UI를 사용하여 직무 기능 및 관련 목표에 따라 관련 콘텐츠를 수신하는 방법에 대해 알아봅니다.
+badge: Beta
 exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 1%
+source-wordcount: '560'
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >
 >그 자기 식별 조사는 베타에 있다. 기능 및 설명서는 변경될 수 있습니다.
 
-자기인식조사는 Adobe Experience Platform UI 홈 페이지에 제시된 짧은 설문 문항이다. 설문지를 작성하시면 직무에 대한 정보와 일반적인 목표를 알 수 있습니다. 그런 다음 이 정보를 사용하여 제품 내 안내서를 보다 효과적으로 조정하고 궁극적으로 목표에 더 적합한 콘텐츠를 제공합니다.
+자가 식별 설문 조사는 Adobe Experience Platform UI 홈 페이지에 표시되는 짧은 설문지입니다. 설문지를 작성하시면 직무에 대한 정보와 일반적인 목표를 알 수 있습니다. 그런 다음 이 정보를 사용하여 제품 내 안내서를 보다 효과적으로 조정하고 궁극적으로 목표에 더 적합한 콘텐츠를 제공합니다.
 
 이 문서에서는 Platform UI의 자체 식별 설문 조사를 사용하여 목표 및 작업에 따라 관련 콘텐츠를 수신하는 방법과 UI를 사용하여 개인 프로필 속성을 재구성하는 방법에 대한 정보를 제공합니다.
 

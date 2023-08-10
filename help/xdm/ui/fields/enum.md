@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 열거형 필드 및 제안 값 정의
 description: Experience Platform 사용자 인터페이스의 문자열 필드에 대한 열거형 및 제안 값을 정의하는 방법을 알아봅니다.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1256'
 ht-degree: 8%
 
 ---
@@ -28,7 +28,7 @@ XDM(Experience Data Model)에서 문자열 필드에는 해당 필드에 수집�
 
 ![UI의 문자열 필드에 대해 활성화된 열거형 및 제안 값 옵션을 보여주는 이미지](../../images/ui/fields/enum/enum-options-selected.png)
 
-이 문서에서는 열거형 및 제안 값을 정의하는 방법을 다룹니다. [!UICONTROL 스키마] UI 작업 공간. UI에서 열거형을 구성하는 방법 및 다운스트림 효과를 포함하여 열거형 및 제안된 값에 대한 빠른 개요는 다음 비디오를 시청하십시오.
+이 문서는에서 열거형 및 제안 값을 정의하는 방법을 다룹니다. [!UICONTROL 스키마] UI 작업 공간. UI에서 열거형을 구성하는 방법 및 다운스트림 효과를 포함하여 열거형 및 제안된 값에 대한 빠른 개요는 다음 비디오를 시청하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
@@ -52,7 +52,7 @@ XDM(Experience Data Model)에서 문자열 필드에는 해당 필드에 수집�
 
 ![UI에서 선택된 제안 값 옵션을 보여 주는 이미지](../../images/ui/fields/enum/suggested-add-row.png)
 
-아래 **[!UICONTROL 표시 이름]** 열에서 세그먼테이션 UI에 표시할 값에 대해 친숙한 이름을 제공합니다. 제안 값을 더 추가하려면 **[!UICONTROL 행 추가]** 다시 한 번 확인하고 필요에 따라 프로세스를 반복합니다. 이전에 추가한 행을 제거하려면 다음을 선택합니다. ![삭제 아이콘](../../images/ui/fields/enum/remove-icon.png) 해당 행 옆에 있습니다.
+아래 **[!UICONTROL 표시 이름]** 열에서 세그먼테이션 UI에 표시하려는 값에 대해 사용자에게 친숙한 이름을 제공합니다. 제안 값을 더 추가하려면 **[!UICONTROL 행 추가]** 다시 한 번 확인하고 필요에 따라 프로세스를 반복합니다. 이전에 추가한 행을 제거하려면 다음을 선택합니다. ![삭제 아이콘](../../images/ui/fields/enum/remove-icon.png) 해당 행 옆에 있습니다.
 
 완료되면 다음을 선택합니다. **[!UICONTROL 적용]** 를 클릭하여 스키마에 변경 사항을 적용합니다.
 

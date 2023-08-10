@@ -2,9 +2,9 @@
 title: ID 네임스페이스 개요
 description: ID 네임스페이스는 ID 서비스의 구성 요소이며 ID가 연관되는 컨텍스트의 지표 역할을 합니다. 예를 들어 이메일 주소로 "name@email.com" 값을 구별하거나 숫자 CRM ID로 "443522"값을 구별합니다.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c456d02e746c160c1d133d0b4358415edffaa6f8
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1766'
+source-wordcount: '1765'
 ht-degree: 9%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 9%
 
 ID 네임스페이스는 의 구성 요소입니다. [[!DNL Identity Service]](./home.md) id가 연관되는 컨텍스트의 지표 역할을 합니다. 예를 들어, &quot;name&quot;의 값을 구별합니다<span>@email.com&quot; 을 이메일 주소로 사용하거나 &quot;443522&quot;를 숫자 CRM ID로 사용합니다.
 
-## 시작
+## 시작하기
 
 신원 네임스페이스를 사용하여 작업하려면 다양한 관련 Adobe Experience Platform 서비스를 이해해야 합니다. 네임스페이스 작업을 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
@@ -25,7 +25,7 @@ ID 네임스페이스는 의 구성 요소입니다. [[!DNL Identity Service]](.
 
 정규화된 ID에는 ID 값과 네임스페이스가 포함됩니다. 다음과 같이 프로필 조각 간에 레코드 데이터를 일치시킬 때 [!DNL Real-Time Customer Profile] 프로필 데이터를 병합합니다. id 값과 네임스페이스가 모두 일치해야 합니다.
 
-예를 들어 두 프로필 조각은 서로 다른 기본 ID를 포함할 수 있지만 &quot;이메일&quot; 네임스페이스에 대해 동일한 값을 공유합니다 [!DNL Platform] 는 이러한 조각이 실제로 동일한 개인이며 해당 개인의 id 그래프에 데이터를 함께 가져온다는 것을 알 수 있습니다.
+예를 들어 두 프로필 조각은 서로 다른 기본 ID를 포함할 수 있지만 &quot;이메일&quot; 네임스페이스에 대해 동일한 값을 공유합니다 [!DNL Platform] 에서는 이러한 조각이 실제로 동일한 개인이며 해당 개인의 id 그래프에 데이터를 함께 가져온다는 것을 알 수 있습니다.
 
 ![](images/identity-service-stitching.png)
 

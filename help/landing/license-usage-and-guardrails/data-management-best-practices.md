@@ -2,9 +2,9 @@
 title: 데이터 관리 라이선스 권한 부여 우수 사례
 description: Adobe Experience Platform을 사용하여 라이선스 권한을 보다 효율적으로 관리하는 데 사용할 수 있는 모범 사례 및 도구에 대해 알아봅니다.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 225fee7e2addf5067cb13da11615f6acff62ed72
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2203'
+source-wordcount: '2202'
 ht-degree: 2%
 
 ---
@@ -101,7 +101,7 @@ Adobe Experience Platform의 모든 데이터가 동일한 것은 아닙니다. 
 | 수집 필터 | 설명 |
 | --- | --- |
 | Adobe Audience Manager 소스 필터링 | Adobe Audience Manager 소스 연결을 만들 때 로 가져올 세그먼트 및 트레이트를 선택하고 선택할 수 있습니다. [!DNL data lake] Audience Manager 데이터를 완전히 섭취하지 않고 실시간 고객 프로필을 확인할 수 있습니다. 다음 안내서를 참조하십시오 [Audience Manager 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) 추가 정보. |
-| Adobe Analytics 데이터 준비 | 다음을 사용할 수 있습니다. [!DNL Data Prep] 기능 : Analytics 소스 연결을 만들어 사용 사례에 필요하지 않은 데이터를 필터링합니다. 까지 [!DNL Data Prep]프로필에 게시해야 하는 속성/열을 정의할 수 있습니다. 데이터가 프로필에 게시되어야 하는지 또는 에만 게시되어야 하는지 여부를 플랫폼에 알리는 조건문을 제공할 수도 있습니다. [!DNL data lake]. 다음 안내서를 참조하십시오 [analytics 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/analytics.md) 추가 정보. |
+| Adobe Analytics 데이터 준비 | 다음을 사용할 수 있습니다. [!DNL Data Prep] 기능 : Analytics 소스 연결을 만들어 사용 사례에 필요하지 않은 데이터를 필터링합니다. 까지 [!DNL Data Prep]프로필에 게시해야 하는 속성/열을 정의할 수 있습니다. 데이터가 프로필에 게시되어야 하는지 또는 에만 게시되어야 하는지를 플랫폼에 알리는 조건문을 제공할 수도 있습니다. [!DNL data lake]. 다음 안내서를 참조하십시오 [analytics 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/analytics.md) 추가 정보. |
 | 프로필에 대한 데이터 세트 활성화/비활성화 지원 | 실시간 고객 프로필로 데이터를 수집하려면 프로필 스토어에서 사용할 데이터 세트를 활성화해야 합니다. 이렇게 하면 가 을(를) 추가합니다. [!DNL Addressable Audience] 및 [!DNL Profile Richness] 권한. 고객 프로필 사용 사례에 더 이상 데이터 세트가 필요하지 않으면 해당 데이터 세트의 프로필 통합을 비활성화하여 데이터가 라이센스 규정을 준수하는지 확인할 수 있습니다. 다음 안내서를 참조하십시오 [프로필에 대한 데이터 세트 활성화 및 비활성화](../../catalog/datasets/enable-for-profile.md) 추가 정보. |
 | Web SDK 및 Mobile SDK 데이터 제외 | 웹 및 모바일 SDK에서 수집하는 데이터에는 자동으로 수집되는 데이터와 개발자가 명시적으로 수집하는 데이터의 두 가지 유형이 있습니다. 라이선스 준수를 보다 효율적으로 관리하려면 컨텍스트 설정을 통해 SDK의 구성에서 자동 데이터 수집을 비활성화하면 됩니다. 사용자 정의 데이터는 개발자가 제거하거나 설정할 수도 없습니다. 다음 안내서를 참조하십시오 [sdk 기본 사항 구성](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) 추가 정보. |
 | 서버 측 전달 데이터 제외 | 서버측 전달을 사용하여 데이터를 Platform으로 전송하는 경우, 규칙 작업에서 매핑을 제거하여 모든 이벤트에서 데이터를 제외하거나 규칙에 조건을 추가하여 특정 이벤트에 대해서만 데이터가 실행되도록 전송할 데이터를 제외할 수 있습니다. 다음에서 설명서를 참조하십시오. [이벤트 및 조건](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) 추가 정보. |

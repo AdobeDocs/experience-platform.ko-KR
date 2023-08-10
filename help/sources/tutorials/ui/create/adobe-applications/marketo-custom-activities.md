@@ -2,9 +2,9 @@
 title: UI에서 사용자 지정 활동 데이터에 대한 Marketo Engage 소스 연결 및 데이터 흐름 만들기
 description: 이 자습서에서는 사용자 지정 활동 데이터를 Adobe Experience Platform으로 가져오기 위해 UI에서 Marketo Engage 소스 연결 및 데이터 흐름을 만드는 단계를 제공합니다.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1480'
 ht-degree: 0%
 
 ---

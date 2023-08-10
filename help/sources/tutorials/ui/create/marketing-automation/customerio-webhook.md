@@ -1,11 +1,11 @@
 ---
 title: UI에서 Customer.io 소스 연결 및 데이터 흐름 만들기
 description: Adobe Experience Platform UI를 사용하여 Customer.io 소스 연결을 만드는 방법을 알아봅니다.
-badge: 베타
+badge: Beta
 exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1232'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
    * [스키마 편집기 튜토리얼](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 정의 스키마를 만드는 방법을 알아봅니다.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 다음 섹션에서는 다음을 만들기 전에 완료해야 하는 전제 조건에 대한 정보를 제공합니다. [!DNL Customer.io] 소스 연결.
 
@@ -92,7 +92,7 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 �
 
 완료되면 다음을 선택합니다. **[!UICONTROL 다음]**.
 
-![소스 워크플로우의 데이터 흐름 세부 사항 단계입니다.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//dataflow-detail.png)
+![소스 워크플로우의 데이터 흐름 세부 단계.](../../../../images/tutorials/create/marketing-automation/customerio-webhook//dataflow-detail.png)
 
 ## 매핑 {#mapping}
 

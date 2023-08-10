@@ -4,9 +4,9 @@ title: 경고 개요
 description: 경고 규칙이 정의되는 구조를 포함하여 Adobe Experience Platform에서의 다양한 경고에 대해 알아봅니다.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: 37700c3b3b728b59083fd51cabf1d8e4b8213580
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '773'
 ht-degree: 3%
 
 ---
@@ -45,7 +45,7 @@ Platform 경고를 한 번 전송하거나 해결할 때까지 사전 정의된 
 | **조건** | 특정 수를 초과하는 카운트 지표와 같이 true로 확인될 경우 경고를 트리거하는 지표와 관련된 조건입니다. 이 조건은 미리 정의된 시간 윈도우(time window)와 연관될 수 있다. |
 | **창** | (선택 사항) 경보에 대한 조건은 미리 정의된 시간 윈도우로 제한될 수 있다. 예를 들어 지난 5분 동안 실패한 일괄 처리 수에 따라 경고가 트리거될 수 있습니다. |
 | **작업** | 경고가 트리거되면 작업이 수행됩니다. 특히 미리 구성된 웹후크 또는 Experience Platform UI와 같은 게재 채널을 통해 메시지를 적용 가능한 수신자에게 보냅니다. |
-| **빈도** | (선택 사항) 해당 조건이 true로 유지되거나 해결되지 않은 경우 정의된 간격으로 경고를 반복하도록 구성할 수 있습니다. |
+| **빈도** | (선택 사항) 해당 조건이 true로 유지되거나 해결되지 않은 경우 정의된 간격으로 작업을 반복하도록 경고를 구성할 수 있습니다. |
 
 {style="table-layout:auto"}
 

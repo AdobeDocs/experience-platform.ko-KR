@@ -3,9 +3,9 @@ title: Real-Time CDP B2B에서 계정 일치로 리드
 type: Documentation
 description: Experience Platform CDP B2B의 리드-계정 일치 기능에 대한 개요 및 추가 정보입니다.
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '615'
 ht-degree: 3%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 3%
 >
 > 개인 프로필은 여러 계정 프로필과 관련될 수 있습니다. 그러나 계정 일치 프로세스에 대한 리드는 최상의 일치에만 일치합니다. 더 광범위한 일치 항목 세트가 필요한 경우 리드를 관련 계정 기능과 일치하는 계정에 연결합니다.
 
-## 작동 방법 {#how-it-works}
+## 작동 방식 {#how-it-works}
 
 일별 실행 작업은 기존 계정 연결 없이 알려진 리드 프로필을 일치시키기 위해 결정론적 및 확률론적 요소를 모두 사용합니다. 알려진 잠재 고객 프로필에는 다음 속성 중 하나를 사용할 수 있습니다.
 

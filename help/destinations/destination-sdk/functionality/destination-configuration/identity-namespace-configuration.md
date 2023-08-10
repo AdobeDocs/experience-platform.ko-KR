@@ -1,9 +1,9 @@
 ---
 description: Destination SDK으로 빌드된 대상에 대해 지원되는 타겟 ID를 구성하는 방법에 대해 알아봅니다.
 title: ID 네임스페이스 구성
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '841'
 ht-degree: 4%
 
 ---

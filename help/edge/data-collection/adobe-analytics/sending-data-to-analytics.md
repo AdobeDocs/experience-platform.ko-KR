@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK를 사용하여 Adobe Analytics에 데�
 description: Adobe Experience Platform Web SDK를 사용하여 Adobe Analytics에 데이터를 전송하는 방법에 대해 알아봅니다.
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;웹 상호 작용;페이지 보기;링크 추적;링크;링크 추적 링크;clickCollection;클릭 컬렉션;
 exl-id: cec4a9eb-2079-4386-88da-9b995e0673e6
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---

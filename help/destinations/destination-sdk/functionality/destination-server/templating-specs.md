@@ -1,9 +1,9 @@
 ---
 description: 엔드포인트로 전송되는 HTTP 요청의 형식을 지정하는 방법을 알아봅니다. /authoring/destination-servers 끝점을 사용하여 Adobe Experience Platform Destination SDK에서 대상 서버 템플릿 사양을 구성합니다.
 title: Destination SDK으로 만든 대상에 대한 템플릿 사양
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '523'
 ht-degree: 4%
 
 ---

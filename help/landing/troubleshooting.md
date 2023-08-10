@@ -7,9 +7,9 @@ landing-page-description: 자주 묻는 질문에 대한 답변과 Experience Pl
 short-description: 자주 묻는 질문에 대한 답변과 Experience Platform에서 일반적인 오류를 해결하기 위한 안내서를 확인하십시오.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 096b844246d194a822e4ba1811aef05e494c92be
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1904'
 ht-degree: 5%
 
 ---
@@ -68,7 +68,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 ## 에 대한 시스템 요구 사항은 무엇입니까? [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
-UI를 사용하는지 또는 API를 사용하는지에 따라 다음 시스템 요구 사항이 적용됩니다.
+UI 또는 API 사용 여부에 따라 다음 시스템 요구 사항이 적용됩니다.
 
 **UI 기반 작업의 경우:**
 - 최신 표준 웹 브라우저입니다. 최신 버전의 [!DNL Chrome] 권장됨, 현재 및 이전의 주요 릴리스 [!DNL Firefox], [!DNL Internet Explorer]및 Safari도 지원됩니다.

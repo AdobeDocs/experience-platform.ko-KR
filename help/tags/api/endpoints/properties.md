@@ -2,9 +2,9 @@
 title: 속성 끝점
 description: Reactor API에서 /properties 끝점을 호출하는 방법을 알아봅니다.
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1103'
 ht-degree: 6%
 
 ---
@@ -1406,7 +1406,7 @@ curl -X GET \
 
 **응답**
 
-응답이 성공하면 지정된 속성의 회사에 대한 세부 정보가 반환됩니다.
+성공한 응답은 지정된 속성의 회사 세부 정보를 반환합니다.
 
 ```json
 {

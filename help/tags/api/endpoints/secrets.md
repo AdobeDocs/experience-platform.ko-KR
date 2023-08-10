@@ -2,9 +2,9 @@
 title: 암호 엔드포인트
 description: Reactor API에서 /secrets 끝점을 호출하는 방법을 알아봅니다.
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1246'
 ht-degree: 4%
 
 ---

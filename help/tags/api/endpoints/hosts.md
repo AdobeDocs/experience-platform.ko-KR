@@ -2,9 +2,9 @@
 title: 호스트 엔드포인트
 description: Reactor API에서 /hosts 끝점을 호출하는 방법을 알아봅니다.
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
-source-git-commit: 905384b3190cd55e7caa9c4560d6b2774280eee7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '796'
 ht-degree: 3%
 
 ---

@@ -2,9 +2,9 @@
 title: 규칙 엔드포인트
 description: Reactor API에서 /rules 끝점을 호출하는 방법을 알아봅니다.
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '896'
 ht-degree: 5%
 
 ---
@@ -858,7 +858,7 @@ curl -X GET \
 
 **응답**
 
-응답이 성공하면 지정된 규칙 확장의 세부 사항이 반환됩니다.
+성공한 응답은 지정된 규칙 확장의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -960,7 +960,7 @@ curl -X GET \
 
 **응답**
 
-성공한 응답은 지정된 규칙의 속성에 대한 세부 정보를 반환합니다.
+성공한 응답은 지정된 규칙 속성의 세부 정보를 반환합니다.
 
 ```json
 {

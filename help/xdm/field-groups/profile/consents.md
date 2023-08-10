@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 동의 및 환경 설정 스키마 필드 그룹
 description: 이 문서에서는 동의 및 환경 설정 스키마 필드 그룹에 대한 개요를 제공합니다.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,6 @@ ht-degree: 0%
 >* [UI에서 샘플 데이터 생성](../../ui/sample.md)
 >* [API에서 샘플 데이터 생성](../../api/sample-data.md)
 
-
 ### `idSpecific`
 
 `idSpecific` 특정 동의 또는 환경 설정이 고객에게 보편적으로 적용되지 않고 단일 장치 또는 ID로 제한된 경우 사용할 수 있습니다. 예를 들어 고객이 한 주소에 대한 이메일 수신을 거부하는 동시에 다른 주소에 대한 이메일을 허용할 수 있습니다.
@@ -106,7 +105,6 @@ ht-degree: 0%
 >
 >* 고객이 채널 수준에서 옵트아웃한 경우 의 동등한 동의 또는 환경 설정 `idSpecific` 무시합니다.
 >* 채널 수준 동의 또는 환경 설정이 되어 있지 않거나 고객이 옵트인한 경우 `idSpecific` 영광입니다.
-
 
 의 각 키 `idSpecific` 개체는 Adobe Experience Platform ID 서비스에서 인식하는 특정 ID 네임스페이스를 나타냅니다. 사용자 정의 네임스페이스를 정의하여 다른 식별자를 분류할 수 있지만 Identity Service에서 제공하는 표준 네임스페이스 중 하나를 사용하여 실시간 고객 프로필의 스토리지 크기를 줄이는 것이 좋습니다. ID 네임스페이스에 대한 자세한 내용은 [id 네임스페이스 개요](../../../identity-service/namespaces.md) 을 참조하십시오.
 
