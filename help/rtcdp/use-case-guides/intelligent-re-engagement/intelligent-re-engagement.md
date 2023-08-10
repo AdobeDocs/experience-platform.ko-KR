@@ -3,45 +3,47 @@ title: 지능형 재참여
 description: 주요 전환 순간 동안 매력적이고 연결된 경험을 제공하여 빈번하지 않은 고객을 지능적으로 다시 참여시킵니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
+source-git-commit: 7ff623626b557cbf67ad6164157d1a5ef4820cb1
 workflow-type: tm+mt
-source-wordcount: '3482'
-ht-degree: 12%
+source-wordcount: '3259'
+ht-degree: 6%
 
 ---
 
 # 고객에게 지능적으로 재참여를 유도하여 재방문
 
-지능형 재참여를 통해 고객에게 특정 작업을 수행하도록 설득하는 맞춤형 크로스 채널 드립 캠페인을 설정할 수 있습니다. 누징 캠페인은 의도 이메일, SMS를 표시한 고객을 전송하고 유료 광고를 제공하는 등 제한된 시간 동안 작동하도록 설계되었습니다. 고객이 적절한 조치를 취하면 넛지(nudge) 캠페인이 즉시 종료됩니다.
+지능형 재참여를 통해 고객에게 특정 작업을 수행하도록 설득하는 맞춤형 크로스 채널 드립 캠페인을 설정할 수 있습니다. 누징 캠페인은 제한된 시간 동안 운영되며, 여기에는 의도 이메일, SMS를 표시한 고객에게 전송하고 유료 광고를 제공하는 등의 작업이 포함됩니다. 고객이 적절한 조치를 취하면 넛지(nudge) 캠페인이 즉시 종료됩니다.
 
 ![단계별 지능형 재참여 높은 수준의 시각적 개요.](../intelligent-re-engagement/images/step-by-step.png)
 
 ## 전제 조건 및 계획 {#prerequisites-and-planning}
 
-사용 사례를 구현하는 단계를 완료하면 다음 Real-Time CDP 기능 및 UI 요소(사용할 순서대로 나열됨)를 사용하게 됩니다. 이러한 모든 영역에 대해 필요한 속성 기반 액세스 제어 권한이 있는지 확인하거나 시스템 관리자에게 필요한 권한 부여를 요청하십시오.
+사용 사례를 구현하는 단계를 완료하면 다음 Real-Time CDP 기능 및 UI 요소(사용할 순서대로 나열됨)를 사용하게 됩니다. 이러한 모든 영역에 대해 필요한 속성 기반 액세스 제어 권한이 있는지 확인하거나 시스템 관리자에게 필요한 권한을 부여하도록 요청하십시오.
 
-* [Adobe Real-time Customer Data Platform(Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - 데이터 소스 간의 데이터를 집계하여 캠페인을 실행합니다. 그런 다음 이 데이터를 사용하여 캠페인 대상자를 만들고 이메일 및 웹 프로모션 타일에 사용된 개인화된 데이터 요소(예: 이름 또는 계정 관련 정보)를 표시합니다. CDP는 이메일 및 웹(Adobe Target을 통해)에서 대상자를 활성화하는 데도 사용됩니다.
+* [Adobe Real-time Customer Data Platform(Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - 데이터 소스 간의 데이터를 집계하여 캠페인을 실행합니다. 그런 다음 이 데이터를 사용하여 캠페인 대상자를 만들고 이메일 및 웹 프로모션 타일에 사용된 개인화된 데이터 요소(예: 이름 또는 계정 관련 정보)를 표시합니다. CDP는 이메일 및 웹(Adobe Target을 통해)에서 대상자를 활성화하는 데에도 사용됩니다.
    * [스키마](/help/xdm/home.md)
    * [프로필](/help/profile/home.md)
+   * [데이터 세트](/help/catalog/datasets/overview.md)
    * [Audiences](/help/segmentation/home.md)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [대상](/help/destinations/home.md)
    * [이벤트 또는 대상 트리거](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [대상/이벤트](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [여정 작업](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ### 사용 사례를 달성하는 방법: 높은 수준의 개요 {#achieve-the-use-case-high-level}
 
-만들어진 재참여 여정은 3개입니다.
+현재 개발된 세 가지 재참여 여정이 있습니다.
 
 >[!BEGINTABS]
 
 >[!TAB 재참여 여정]
 
-재참여 여정은 웹 사이트와 앱 모두에서 포기된 제품 탐색을 타겟으로 합니다. 이 여정은 장바구니에 구매하거나 추가한 제품이 없는 상태로 제품을 본 경우 트리거됩니다. 지난 24시간 내에 목록 추가가 없는 경우 3일 후에 브랜드 참여가 트리거됩니다.
+재참여 여정은 웹 사이트와 앱 모두에서 구매하지 않은 제품 탐색을 타깃팅합니다. 이 여정은 제품을 보았으나 장바구니에 구매하거나 추가하지 않은 경우 트리거됩니다. 지난 24시간 내에 목록 추가가 없는 경우 3일 후에 브랜드 참여가 트리거됩니다.
 
 ![고객 인텔리전트 재참여 여정 높은 수준의 시각적 개요](../intelligent-re-engagement/images/re-engagement-journey.png)
 
-1. 데이터는 Edge Network를 통해 웹 SDK/모바일 SDK/Edge Network API 수집으로 집계됩니다(기본 방법).
+1. 데이터는 Edge Network를 통해 웹 SDK, 모바일 SDK 또는 Edge Network API 수집으로 집계됩니다(기본 방법).
 2. 로서의 **고객**, 다음에 대해 표시된 데이터 세트를 만듭니다. [!UICONTROL 프로필].
 3. 로서의 **고객**, 프로필을 Real-Time CDP에 로드하고 거버넌스 정책을 구축하여 책임 있는 사용을 보장합니다.
 4. 로서의 **고객**, 프로필 목록에서 집중 대상자를 구성하여 **사용자** 은(는) 지난 3일 동안 브랜드 약정을 체결했습니다.
@@ -51,11 +53,11 @@ ht-degree: 12%
 
 >[!TAB 포기한 장바구니 여정]
 
-포기한 장바구니 여정은 장바구니에 넣었지만 웹 사이트 및 앱 모두에서 구매하지 않은 제품을 대상으로 합니다. 유료 미디어 캠페인 시작 및 중지에 사용됨
+포기한 장바구니 여정은 장바구니에 넣었지만 아직 웹 사이트 및 앱 모두에서 구매하지 않은 제품을 대상으로 합니다. 또한, 유료 미디어 캠페인은 이 방법을 사용하여 시작 및 중지됩니다.
 
 ![고객이 장바구니 여정을 포기하는 경우 높은 수준의 시각적 개요.](../intelligent-re-engagement/images/abandoned-cart-journey.png)
 
-1. 데이터는 Edge Network를 통해 웹 SDK/모바일 SDK/Edge Network API 수집으로 집계됩니다(기본 방법).
+1. 데이터는 Edge Network를 통해 웹 SDK, 모바일 SDK 또는 Edge Network API 수집으로 집계됩니다(기본 방법).
 2. 로서의 **고객**, 다음에 대해 표시된 데이터 세트를 만듭니다. [!UICONTROL 프로필].
 3. 로서의 **고객**, 프로필을 Real-Time CDP에 로드하고 거버넌스 정책을 구축하여 책임 있는 사용을 보장합니다.
 4. 로서의 **고객**, 프로필 목록에서 집중 대상자를 구성하여 **사용자** 이(가) 장바구니에 항목을 넣었지만 구매를 완료하지 않았습니다. 다음 **[!UICONTROL 장바구니에 추가]** 이벤트가 30분 동안 대기하는 타이머를 시작한 다음 구매를 확인합니다. 구매하지 않은 경우 **사용자** 이(가)에 추가됩니다 **[!UICONTROL 장바구니 포기]** 대상.
@@ -65,11 +67,11 @@ ht-degree: 12%
 
 >[!TAB 주문 확인 여정]
 
-이 주문 확인 여정은 웹 사이트와 앱 모두에서 제품 구매를 타깃팅합니다.
+주문 확인 여정은 홈페이지와 모바일 앱을 통한 제품 구매에 중점을 두고 있다.
 
 ![고객 주문 확인 여정 개요](../intelligent-re-engagement/images/order-confirmation-journey.png)
 
-1. 데이터는 Edge Network를 통해 웹 SDK/모바일 SDK/Edge Network API 수집으로 집계됩니다(기본 방법).
+1. 데이터는 Edge Network를 통해 웹 SDK, 모바일 SDK 또는 Edge Network API 수집으로 집계됩니다(기본 방법).
 2. 로서의 **고객**, 다음에 대해 표시된 데이터 세트를 만듭니다. [!UICONTROL 프로필].
 3. 로서의 **고객**, 프로필을 Real-Time CDP에 로드하고 거버넌스 정책을 구축하여 책임 있는 사용을 보장합니다.
 4. 로서의 **고객**, 프로필 목록에서 집중 대상자를 구성하여 **사용자** 을(를) 구매했습니다.
@@ -80,41 +82,36 @@ ht-degree: 12%
 
 ## 사용 사례 달성 방법: 단계별 지침 {#step-by-step-instructions}
 
-추가 설명서에 대한 링크가 포함된 아래 섹션을 읽어 위의 높은 수준 개요에서 각 단계를 완료합니다.
+위의 높은 수준 개요에서 각 단계를 완료하려면 추가 정보 및 보다 자세한 지침에 대한 링크를 제공하는 아래 섹션을 참조하십시오.
 
 ### 사용할 UI 기능 및 요소 {#ui-functionality-and-elements}
 
-사용 사례를 구현하는 단계를 완료하면 다음 Real-Time CDP 기능 및 UI 요소(사용할 순서대로 나열됨)를 사용하게 됩니다. 이러한 모든 영역에 대해 필요한 속성 기반 액세스 제어 권한이 있는지 확인하거나 시스템 관리자에게 필요한 권한 부여를 요청하십시오.
-
-* [스키마](/help/xdm/home.md)
-* [프로필](/help/profile/home.md)
-* [데이터 세트](/help/catalog/datasets/overview.md)
-* [Audiences](/help/segmentation/home.md)
-* [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
-* [대상](/help/destinations/home.md)
+사용 사례를 구현하는 단계를 완료하면 이 문서의 시작 부분에 나열된 Real-Time CDP 기능 및 UI 요소를 사용하게 됩니다. 이러한 모든 영역에 대해 필요한 속성 기반 액세스 제어 권한이 있는지 확인하거나 시스템 관리자에게 필요한 권한을 부여하도록 요청하십시오.
 
 ### 스키마 디자인 만들기 및 필드 그룹 지정
 
-XDM(경험 데이터 모델) 리소스는 [!UICONTROL 스키마] Adobe Experience Platform의 작업 영역 Adobe에서 제공하는 핵심 리소스를 보고 탐색하며 조직의 사용자 정의 리소스와 스키마를 만들 수 있습니다.
+XDM(경험 데이터 모델) 리소스는 [!UICONTROL 스키마] Adobe Experience Platform의 작업 영역 Adobe에서 제공하는 핵심 리소스를 보고 탐색할 수 있으며, 조직에 대한 사용자 지정 리소스 및 스키마를 만들 수 있습니다.
 
-스키마를 생성하려면 아래 단계를 완료하십시오.
+<!--
+To create a schema, complete the steps below:
 
-1. 다음으로 이동 **[!UICONTROL 데이터 관리]** > **[!UICONTROL 스키마]** 및 선택 **[!UICONTROL 스키마 만들기]**.
-2. 선택 **[!UICONTROL XDM 개별 프로필]/[!UICONTROL XDM ExperienceEvent]**.
-3. 다음으로 이동 **[!UICONTROL 필드 그룹]** 및 선택 **[!UICONTROL 추가]**.
-4. 검색 상자를 사용하여 필드 그룹을 찾아 선택한 다음 를 선택합니다 **[!UICONTROL 필드 그룹 추가]**.
-5. 스키마에 이름과 설명(선택 사항)을 지정합니다.
-6. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** and select **[!UICONTROL Create schema]**.
+2. Select **[!UICONTROL XDM Individual Profile]/[!UICONTROL XDM ExperienceEvent]**.
+3. Navigate to **[!UICONTROL Field groups]** and select **[!UICONTROL Add]**.
+4. Use the search box to find and select the field group, then select **[!UICONTROL Add field groups]**.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-![스키마를 만드는 단계에 대한 기록입니다.](../intelligent-re-engagement/images/create-a-schema.gif)
+![A recording of the steps to create a schema.](../intelligent-re-engagement/images/create-a-schema.gif) 
+-->
 
 스키마 만들기에 대한 자세한 내용은 [스키마 튜토리얼 만들기.](/help/xdm/tutorials/create-schema-ui.md)
 
-재참여 여정에 사용되는 4가지 스키마 디자인이 있습니다. 각 스키마에는 특정 필드를 설정해야 하며 일부 필드는 강력하게 제안됩니다.
+재참여 여정에 사용되는 네 가지 스키마 디자인이 있습니다. 각 스키마에는 특정 필드를 설정해야 할 뿐만 아니라 강력하게 제안되는 일부 필드도 있어야 합니다.
 
-#### 고객 특성 스키마에 대한 필드 그룹 요구 사항
+#### 고객 속성 스키마
 
-고객 속성 스키마는 [!UICONTROL XDM 개별 프로필] 다음 필드 그룹을 포함하는 스키마:
+고객 속성 스키마는 로 표시됩니다. [!UICONTROL XDM 개별 프로필] 클래스로, 다음과 같은 필드 그룹이 포함됩니다.
 
 +++개인 연락처 세부 정보(필드 그룹)
 
@@ -165,11 +162,13 @@ XDM(경험 데이터 모델) 리소스는 [!UICONTROL 스키마] Adobe Experienc
 
 +++
 
-![필드 그룹 목록을 강조 표시하는 고객 속성 스키마.](../intelligent-re-engagement/images/customer-attributes.png)
+<!--
+![Customer attributes schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-attributes.png) 
+-->
 
-#### 고객 디지털 거래 스키마에 대한 필드 그룹 요구 사항
+#### 고객 디지털 트랜잭션 스키마
 
-고객 디지털 트랜잭션 스키마는 [!UICONTROL XDM ExperienceEvent] 다음 필드 그룹을 포함하는 스키마:
+고객 디지털 거래 스키마는 로 표시됩니다. [!UICONTROL XDM ExperienceEvent] 클래스로, 다음과 같은 필드 그룹이 포함됩니다.
 
 +++Adobe Experience Platform 웹 SDK ExperienceEvent (필드 그룹)
 
@@ -260,11 +259,13 @@ XDM(경험 데이터 모델) 리소스는 [!UICONTROL 스키마] Adobe Experienc
 
 +++
 
-![필드 그룹 목록을 강조 표시하는 고객 디지털 거래 스키마.](../intelligent-re-engagement/images/customer-digital-transactions.png)
+<!--
+![Customer digital transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-digital-transactions.png) 
+-->
 
-#### 고객 오프라인 트랜잭션 스키마에 대한 필드 그룹 요구 사항
+#### 고객 오프라인 트랜잭션 스키마
 
-고객 오프라인 트랜잭션 스키마는 [!UICONTROL XDM ExperienceEvent] 다음 필드 그룹을 포함하는 스키마:
+고객 오프라인 트랜잭션 스키마는 로 표시됩니다. [!UICONTROL XDM ExperienceEvent] 클래스로, 다음과 같은 필드 그룹이 포함됩니다.
 
 +++상거래 세부 정보(필드 그룹)
 
@@ -307,11 +308,13 @@ XDM(경험 데이터 모델) 리소스는 [!UICONTROL 스키마] Adobe Experienc
 
 +++
 
-![필드 그룹 목록을 강조 표시하는 고객 오프라인 트랜잭션 스키마.](../intelligent-re-engagement/images/customer-offline-transactions.png)
+<!--
+![Customer offline transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-offline-transactions.png) 
+-->
 
-#### Adobe 웹 커넥터 스키마에 대한 필드 그룹 요구 사항
+#### Adobe 웹 커넥터 스키마
 
-Adobe 웹 커넥터 스키마는 [!UICONTROL XDM ExperienceEvent] 다음 필드 그룹을 포함하는 스키마:
+Adobe 웹 커넥터 스키마는으로 표시됩니다. [!UICONTROL XDM ExperienceEvent] 클래스로, 다음과 같은 필드 그룹이 포함됩니다.
 
 +++Adobe Analytics ExperienceEvent 템플릿(필드 그룹)
 
@@ -377,25 +380,34 @@ Adobe 웹 커넥터 스키마는 [!UICONTROL XDM ExperienceEvent] 다음 필드 
 
 +++
 
-![필드 그룹 목록을 강조 표시하는 Adobe 웹 커넥터 스키마.](../intelligent-re-engagement/images/adobe-web-connector.png)
+<!--
+![Adobe web connector schema highlighting the list of field groups.](../intelligent-re-engagement/images/adobe-web-connector.png) 
+-->
 
 ### 스키마에서 데이터 세트 만들기
 
-데이터 세트는 스키마(열) 및 필드(행)를 포함하는 데이터 수집을 위한 저장소 및 관리 구조입니다. 지능형 재참여 여정의 경우 각 스키마에는 하나의 데이터 세트가 있습니다.
+데이터 세트는 데이터 그룹의 저장소 및 관리 구조이며, 필드(행)와 스키마(열)가 있는 테이블인 경우가 많습니다. 지능형 재참여 여정을 위한 모든 스키마에는 단일 데이터 세트가 있습니다.
 
-스키마에서 데이터 세트를 만들려면 아래 단계를 완료하십시오.
+스키마에서 데이터 세트를 만드는 방법에 대한 자세한 내용은 [데이터 세트 UI 안내서](/help/catalog/datasets/user-guide.md).
+<!-- 
+To create a dataset from a schema, complete the steps below:
 
-1. **[!UICONTROL 데이터 관리]** > **[!UICONTROL 데이터 세트]**&#x200B;로 이동한 다음 **[!UICONTROL 데이터 세트 만들기]**&#x200B;를 선택합니다.
-2. **[!UICONTROL 스키마에서 데이터 세트 만들기]**&#x200B;를 선택합니다.
-3. 생성한 관련 재참여 스키마를 선택합니다.
-4. 데이터 세트의 이름을 지정하고 필요한 경우 설명을 제공합니다.
-5. **[!UICONTROL 마침]**&#x200B;을 선택합니다.
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** and select **[!UICONTROL Create dataset]**.
+2. Select **[!UICONTROL Create dataset from schema]**.
+3. Select the relevant re-engagement schema you created.
+4. Give your dataset a name and optionally a description.
+5. Select **[!UICONTROL Finish]**.
 
-![스키마에서 데이터 세트를 만드는 단계의 기록입니다.](../intelligent-re-engagement/images/dataset-from-schema.gif)
+![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
+-->
 
-스키마를 생성하는 단계와 유사하게 실시간 고객 프로필에 포함할 데이터 세트를 활성화해야 합니다. 실시간 고객 프로필에서 사용할 데이터 세트를 활성화하는 방법에 대한 자세한 내용은 [스키마 튜토리얼 만들기](/help/xdm/tutorials/create-schema-ui.md#profile)를 참조하십시오.
+>참고
+>
+>스키마를 만드는 단계와 유사하게 데이터 세트를 실시간 고객 프로필에 포함할 수 있도록 해야 합니다. 실시간 고객 프로필에서 사용할 데이터 세트를 활성화하는 방법에 대한 자세한 내용은 [스키마 튜토리얼 만들기.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-![프로필용으로 데이터 세트를 활성화합니다.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
+<!-- 
+![Enable dataset for profile.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
+-->
 
 ### 개인 정보, 동의 및 데이터 거버넌스
 
@@ -405,7 +417,7 @@ Adobe 웹 커넥터 스키마는 [!UICONTROL XDM ExperienceEvent] 다음 필드 
 >
 >고객에게 브랜드로부터 커뮤니케이션 수신을 거부할 수 있는 기능을 제공하는 것은 법적 요건이며 이러한 선택이 존중되도록 하는 것입니다. [Experience Platform 설명서](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html)에서 해당 법률에 대해 자세히 알아보십시오.
 
-재참여 여정 설정 시 다음 동의 정책을 고려하여 사용해야 합니다.
+재참여 경로를 생성할 때 다음 동의 정책을 고려하여 사용해야 합니다.
 
 * consents.marketing.email.val = &quot;Y&quot;인 경우 이메일을 보낼 수 있습니다.
 * consents.marketing.sms.val = &quot;Y&quot;인 경우 SMS를 사용할 수 있음
@@ -415,15 +427,14 @@ Adobe 웹 커넥터 스키마는 [!UICONTROL XDM ExperienceEvent] 다음 필드 
 
 #### DULE 레이블 및 적용
 
-개인 이메일 주소는 디바이스가 아닌 특정 사용자를 식별하거나 연락하는 데 사용할 수 있는 직접 식별 가능한 데이터로 사용됩니다.
+개인 이메일 주소는 디바이스가 아닌 특정 개인을 식별하거나 연락하는 데 사용되는 직접 식별 가능한 데이터로 사용됩니다.
 
 * personalEmail.address = I1
 
 #### 마케팅 정책
 
-재참여 여정에 대한 추가 마케팅 정책은 없지만 원하는 대로 다음을 고려해야 합니다.
+재참여 여정에 필요한 추가 마케팅 정책은 없지만, 다음과 같은 사항을 원하는 대로 고려해야 합니다.
 
-* 원하는 대로 고려하십시오.
 * 중요 데이터 제한
 * 온사이트 광고 제한
 * 이메일 타겟팅 제한
@@ -432,22 +443,26 @@ Adobe 웹 커넥터 스키마는 [!UICONTROL XDM ExperienceEvent] 다음 필드 
 
 ### 대상자 만들기
 
-대상자를 만들려면 아래 단계를 완료하십시오.
+<!--
+To create an audience, complete the steps below:
 
-1. 다음으로 이동 **[!UICONTROL 고객]** > **[!UICONTROL 대상]** 및 선택 **[!UICONTROL 대상자 만들기]**.
-2. 선택 **[!UICONTROL 규칙 작성]** 및 선택 **[!UICONTROL 만들기]**.
-3. 다음으로 이동 **[!UICONTROL 필드]** 및 선택 **[!UICONTROL 이벤트]** 탭.
-4. 탐색하거나 검색 상자를 사용하여 이벤트 유형을 찾은 다음 빌더로 드래그합니다. 마지막으로 이벤트 유형을 끌어 이벤트 규칙을 추가합니다.
-5. 스키마에 이름과 설명(선택 사항)을 지정합니다.
-6. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+1. Navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and select **[!UICONTROL Create audience]**.
+2. Select **[!UICONTROL Build rule]** and select **[!UICONTROL Create]**.
+3. Navigate to **[!UICONTROL Field]** and select **[!UICONTROL Events]** tab.
+4. Navigate or use the search box to find the event type, then drag this to the builder. Finally add event rules by dragging event types.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-![대상자를 만드는 단계를 기록하는 것입니다.](../intelligent-re-engagement/images/create-an-audience.gif)
-
-대상자를 만드는 방법에 대한 자세한 내용은 [Audience Builder UI 안내서](/help/segmentation/ui/segment-builder.md).
+![A recording of the steps to create an audience.](../intelligent-re-engagement/images/create-an-audience.gif)
+-->
 
 #### 브랜드 재참여 여정을 위한 대상 만들기
 
-각 재참여 여정의 대상은 세그먼트 자격을 얻기 위해 특정 이벤트로 설정해야 합니다. 이러한 세부 사항은 각 여정의 해당 탭에서 아래에 나와 있습니다.
+재참여 여정은 대상을 사용하여 프로필 스토어의 프로필 하위 집합이 공유하는 특정 속성이나 동작을 정의하여 마케팅 가능한 사용자 그룹과 고객 기반을 구분합니다. Adobe Experience Platform에서 대상자로 직접 구성하거나 플랫폼에서 파생된 세그먼트 정의를 통해 두 가지 다른 방식으로 대상을 만들 수 있습니다.
+
+대상자를 직접 구성하는 방법에 대한 자세한 내용은 [대상 구성 UI 안내서](/help/segmentation/ui/audience-composition.md).
+
+플랫폼에서 파생된 세그먼트 정의를 통해 대상자를 만드는 방법에 대한 자세한 내용은 [Audience Builder UI 안내서](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -457,20 +472,22 @@ Adobe 웹 커넥터 스키마는 [!UICONTROL XDM ExperienceEvent] 다음 필드 
 
 최소 1개의 EventType = ProductViews 이벤트가 있는 대상 포함 다음 최소 1개의 Any 이벤트가 있는 대상을 포함합니다. 여기서 (EventType은 commerce.productListAdds와 동일하지 않음) 지난 24시간 동안 발생하고 3일 후에는 (EventType = application.launch 또는 web.webpagedetails.pageViews 또는 commerce.purchases)이며 지난 2일 동안 발생합니다.
 
-![규칙 세트를 보여 주는 재참여 대상의 스크린샷입니다.](../intelligent-re-engagement/images/re-engagement-audience.png)
+<!--
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/re-engagement-audience.png) 
+-->
 
 >[!TAB 포기한 장바구니 여정]
 
 다음 이벤트는 장바구니에 제품을 추가했지만 지난 24시간 동안 구매를 완료하지 않았거나 장바구니를 지우지 않은 프로필에 사용됩니다.
 
-include EventType = commerce.productList지금부터 30분에서 1440분 사이에 추가합니다.
+Include EventType = commerce.productList지금부터 30분에서 1440분 사이를 추가합니다.
 exclude EventType = commerce.purchases 30분 전 지금 또는 EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (inclusion event).
 
-![규칙 세트를 보여 주는 재참여 대상의 스크린샷입니다.](../intelligent-re-engagement/images/abandoned-cart-audience.png)
+<!--
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/abandoned-cart-audience.png) 
+-->
 
 >[!ENDTABS]
-
-대상자 빌드에 대한 자세한 내용은 [Audience Builder UI 안내서](/help/segmentation/ui/segment-builder.md).
 
 ### Adobe Journey Optimizer에서 여정 설정
 
@@ -478,13 +495,15 @@ exclude EventType = commerce.purchases 30분 전 지금 또는 EventType = comme
 >
 >Adobe Journey Optimizer은 이 페이지 상단에 있는 다이어그램에 표시된 모든 항목을 포함하지 않습니다. 모든 유료 미디어 광고는에서 만들어집니다. [!UICONTROL 대상].
 
-각 사용 사례가 가질 수 있는 여러 여정에 대한 특정 정보가 필요합니다. 각 여정 분기에 필요한 특정 데이터는 해당 탭에서 아래에 나와 있습니다.
+Adobe Journey Optimizer은 고객에게 연관성 있고 상황에 맞는 개인화된 경험을 제공할 수 있도록 해줍니다. 고객 여정은 고객이 브랜드와 상호 작용하는 전체 프로세스입니다. 각 사용 사례에는 다양한 서로 다른 여정이 있을 수 있으며 각각 특정 정보가 필요합니다. 다음은 각 여정 분기에 필요한 정확한 데이터입니다.
 
 >[!BEGINTABS]
 
 >[!TAB 재참여 여정]
 
-![Adobe Journey Optimizer 개요의 고객 재참여 여정](../intelligent-re-engagement/images/re-engagement-ajo.png)
+<!--
+![Customer re-engagemnt journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/re-engagement-ajo.png) 
+-->
 
 +++이벤트
 
@@ -612,7 +631,9 @@ exclude EventType = commerce.purchases 30분 전 지금 또는 EventType = comme
 
 >[!TAB 포기한 장바구니 여정]
 
-![Adobe Journey Optimizer 개요의 고객 포기 장바구니 여정](../intelligent-re-engagement/images/abandoned-cart-ajo.png)
+<!--
+![Customer abandoned cart journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/abandoned-cart-ajo.png) 
+-->
 
 +++이벤트
 
@@ -741,7 +762,9 @@ exclude EventType = commerce.purchases 30분 전 지금 또는 EventType = comme
 
 >[!TAB 주문 확인 여정]
 
-![Adobe Journey Optimizer 개요의 고객 주문 확인 여정](../intelligent-re-engagement/images/order-confirmation-ajo.png)
+<!--
+![Customer order confirmation journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/order-confirmation-ajo.png) 
+-->
 
 +++이벤트
 
