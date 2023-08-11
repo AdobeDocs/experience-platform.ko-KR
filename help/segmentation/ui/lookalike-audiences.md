@@ -5,9 +5,9 @@ description: 유사 대상을 사용하여 Adobe Experience Platform에서 가�
 badgeLimitedAvailability: label="제한된 가용성" type=Caution
 hide: true
 hidefromtoc: true
-source-git-commit: d0b839dfc35ff9f8b4db34c61d2cdd820bfd448b
+source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '2123'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Adobe Experience Platform에서 유사 모델은 세 가지 서로 다른 유형
 
 이러한 모든 데이터 포인트는 유사 모델에 제공되는 키 값 쌍으로 변환됩니다. 상당 비율의 프로필이 일치하는 키 값 쌍만 유지됩니다.
 
-유사 모델은 자주 실행되며, 기본 대상에 대해 영향력 있는 요인 및 유사성 그래프를 만들고 다시 생성합니다. 유사 대상에 대한 점수도 자주 실행됩니다.
+이때 유사 모델은 24시간마다 실행되며, 기본 대상에 대해 영향력 있는 요인 및 유사성 그래프를 만들고 다시 생성합니다. 유사 대상에 대한 점수도 자주 실행됩니다.
 
 ## 권한 부여 {#entitlements}
 
@@ -52,11 +52,26 @@ Adobe Experience Platform에서 유사 모델은 세 가지 서로 다른 유형
 - Real-Time CDP Ultimate 고객은 **20** 프로덕션 샌드박스의 활성 유사 대상
 - 개발 샌드박스는 다음으로 제한됩니다. **5** 모든 Real-Time CDP 고객을 위한 유사 대상
 
-프로덕션 샌드박스에 대한 권한을 팩당 유사 대상 20개씩 증가시키는 추가 기능 팩을 사용할 수 있습니다.
+나중에 사용할 수 있는 추가 기능 팩은 프로덕션 샌드박스에 대한 권한을 팩당 20개의 유사 대상 수로 늘립니다.
 
 유사 대상에 대한 액세스 권한이 있는지 확인하려면 Adobe 담당자에게 문의하십시오.
 
 ## 유사 인사이트 보기 {#view}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_notEligible"
+>title="부적격"
+>abstract="교육에 필요한 최소 프로필 수보다 적거나 프로필 내보내기가 아직 트리거되지 않았기 때문에 이 대상자는 현재 유사 인사이트에 적합하지 않습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_processing"
+>title="처리 중"
+>abstract="이 대상은 현재 처리 중입니다. 모델은 처리를 완료하는 데 최대 24시간이 소요될 수 있습니다. 나중에 다시 확인하십시오."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_error"
+>title="오류"
+>abstract="이 모델을 처리하는 도중 오류가 발생했습니다. 이 모델을 삭제하고 다시 빌드하거나 나중에 다시 시도하십시오."
 
 대상 세부 사항 페이지에 유사 인사이트가 내장되어 있습니다. 대상에 대한 유사 인사이트를 보려면 을 선택합니다. **[!UICONTROL 대상]** 왼쪽 탐색 모음 뒤에 **[!UICONTROL 찾아보기]**, 및 통찰력을 보려는 대상.
 
@@ -68,10 +83,10 @@ Adobe Experience Platform에서 유사 모델은 세 가지 서로 다른 유형
 
 ### 유사성 및 도달 범위 {#similarity-and-reach}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
->title="Similarity and reach"
->abstract="" -->
+>title="유사성 및 도달 범위"
+>abstract="유사성 및 도달 범위 그래프는 주어진 유사성 점수 이상의 프로필로 구성된 유사 대상의 예상 도달 범위를 나타냅니다. 그래프의 특정 지점 위로 마우스를 가져가면 현재 강조 표시된 지점에 대한 유사성 백분율 및 예상 프로필 수를 표시할 수 있습니다."
 
 유사성 및 도달 범위 섹션에는 주어진 유사성 점수 이상의 프로필로 구성된 유사 대상의 예상 도달 범위를 나타내는 그래프가 표시됩니다. 유사성 점수는 다음을 나타냅니다 **거리** 기본 대상 프로필과 유사 인사이트 프로필 간의 유사성.
 
@@ -93,11 +108,11 @@ y축은 x축의 일치 값에 해당하는 유사성 백분율과 함께 예상 
 
 ### 영향력 있는 요인 {#influential-factors}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
->title="Influential factors"
->abstract="Influential factors are attributes, events and audience memberships that are important in explaining similarity of a profile to members of the base audience. Data usage labels and policies can be used to exclude certain data from being considered as influential factors in look-alike models."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclude data" -->
+>title="영향력 있는 요인"
+>abstract="영향력 있는 요소는 기본 대상의 구성원과 프로필의 유사성을 설명하는 데 중요한 속성, 이벤트 및 대상 멤버십입니다. 데이터 사용 레이블 및 정책을 사용하여 특정 데이터가 유사 모델에서 영향력 있는 요소로 간주되지 않도록 제외할 수 있습니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="데이터 제외"
 
 영향 요인 섹션에는 선택한 기본 대상의 유사 모델에 영향을 주는 상위 100개 요인이 표시됩니다. 이러한 영향력 있는 요소는 기본 대상의 유사성을 설명하는 데 가장 중요한 프로필 속성, 경험 이벤트 및 대상 멤버십입니다. 가장 영향력 있는 주요 요인을 이해하면 이 대상자 및 이 대상자를 통해 생성하는 유사 대상자에 대한 마케팅 콘텐츠를 보다 잘 개인화할 수 있습니다. 유사 모델에 영향을 미치는 모든 영향 요소가 표시되지는 않음에 유의하시기 바랍니다.
 
