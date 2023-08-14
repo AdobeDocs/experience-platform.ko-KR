@@ -5,7 +5,7 @@ exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
 source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
 workflow-type: tm+mt
 source-wordcount: '2275'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 98%
 
 ![데이터 수집 UI의 데이터스트림 탭](assets/configure/datastreams-tab.png)
 
-**[!UICONTROL 데이터스트림]** 탭에는 친숙한 이름, ID와 마지막 수정 날짜를 포함하여 기존 데이터스트림 목록이 표시됩니다. 데이터스트림 이름을 선택하여 [세부 정보를 보고 서비스를 구성](#view-details)합니다.
+**[!UICONTROL 데이터스트림]** 탭에는 친숙한 이름, ID와 마지막 수정 날짜를 포함하여 기존 데이터스트림 목록이 표시됩니다. 데이터스트림 이름을 선택하여 [세부 사항을 보고 서비스를 구성](#view-details)합니다.
 
 특정 데이터스트림에 대한 “추가” 아이콘(**...**)을 선택하여 추가 옵션을 표시합니다. **[!UICONTROL 편집]**&#x200B;을 선택하여 데이터스트림에 대한 [기본 구성](#configure)을 업데이트하거나 **[!UICONTROL 삭제]**&#x200B;를 선택하여 데이터스트림을 제거합니다.
 
@@ -50,8 +50,8 @@ Experience Platform에 사용할 데이터스트림을 구성하고 Platform Web
 
 | 설정 | 설명 |
 | --- | --- |
-| [!UICONTROL 지역 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대해 지리적 위치 조회를 활성화합니다. 지리적 위치 조회를 사용하려면 다음을 포함해야 합니다. [`placeContext`](../edge/data-collection/automatic-information.md#place-context) 웹 SDK 구성의 필드 그룹입니다. <br> 사용 가능한 옵션: <ul><li>국가</li><li>우편번호</li><li>주/시/도</li><li>DMA</li><li>구/군/시</li><li>위도 </li><li>경도</li></ul>**[!UICONTROL 도시]**, **[!UICONTROL 위도]** 또는 **[!UICONTROL 경도]**&#x200B;를 선택하면 선택한 다른 옵션에 관계없이 소수점 이하 두 자리까지 좌표가 제공됩니다. 이는 도시 수준의 세부 기간으로 간주됩니다. <br> <br>옵션을 선택하지 않으면 지리적 위치 조회가 비활성화됩니다. 지리적 위치는 [!UICONTROL IP 난독화] 이전에 활성화되고 [!UICONTROL IP 난독화] 설정에도 영향을 받지 않습니다. |
-| [!UICONTROL 네트워크 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대해 네트워크 조회를 활성화합니다. 네트워크 조회를 사용하려면 다음을 포함해야 합니다. [`Environment`](../edge/data-collection/automatic-information.md#environment) 웹 SDK 구성의 필드 그룹입니다. <br> 사용 가능한 옵션: <ul><li>통신사</li><li>도메인</li><li>ISP</li></ul>이러한 옵션을 사용하여 요청이 시작된 특정 네트워크에 대한 추가 정보를 다른 서비스에 제공합니다. |
+| [!UICONTROL 지역 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대해 지리적 위치 조회를 활성화합니다. 지리적 위치 조회에는 웹 SDK 구성의 [`placeContext`](../edge/data-collection/automatic-information.md#place-context) 필드 그룹이 포함되어야 합니다. <br> 사용 가능한 옵션: <ul><li>국가</li><li>우편번호</li><li>주/시/도</li><li>DMA</li><li>구/군/시</li><li>위도 </li><li>경도</li></ul>**[!UICONTROL 도시]**, **[!UICONTROL 위도]** 또는 **[!UICONTROL 경도]**&#x200B;를 선택하면 선택한 다른 옵션에 관계없이 소수점 이하 두 자리까지 좌표가 제공됩니다. 이는 도시 수준의 세부 기간으로 간주됩니다. <br> <br>옵션을 선택하지 않으면 지리적 위치 조회가 비활성화됩니다. 지리적 위치는 [!UICONTROL IP 난독화] 이전에 활성화되고 [!UICONTROL IP 난독화] 설정에도 영향을 받지 않습니다. |
+| [!UICONTROL 네트워크 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대해 네트워크 조회를 활성화합니다. 네트워크 조회에는 웹 SDK 구성의 [`Environment`](../edge/data-collection/automatic-information.md#environment) 필드 그룹이 포함되어야 합니다. <br> 사용 가능한 옵션: <ul><li>통신사</li><li>도메인</li><li>ISP</li></ul>이러한 옵션을 사용하여 요청이 시작된 특정 네트워크에 대한 추가 정보를 다른 서비스에 제공합니다. |
 | [!UICONTROL IP 난독화] | 데이터스트림에 적용할 IP 난독화 유형을 표시합니다. 고객 IP 기반의 처리는 IP 난독화 설정에 의해 영향을 받습니다. 여기에는 데이터스트림에서 데이터를 수신하는 모든 Experience Cloud 서비스가 포함됩니다. <p>사용 가능한 옵션:</p> <ul><li>**[!UICONTROL 없음]**: IP 난독화를 비활성화합니다. 전체 사용자 IP 주소는 데이터스트림을 통해 전송됩니다.</li><li>**[!UICONTROL 부분]**: IPv4 주소의 경우 사용자 IP 주소의 마지막 옥텟을 난독화합니다. IPv6 주소의 경우 주소의 마지막 80비트를 난독화합니다. <p>예:</p> <ul><li>IPv4: `1.2.3.4` -> `1.2.3.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL 전체]**: 전체 IP 주소를 난독화합니다. <p>예:</p> <ul><li>IPv4: `1.2.3.4` -> `0.0.0.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> 다른 Adobe 제품에 미치는 IP 난독화 영향: <ul><li>**Adobe Target**: 데이터스트림 수준의 [!UICONTROL IP 난독화] 설정은 Adobe Target에 설정된 모든 IP 난독화 옵션보다 우선합니다. 예를 들어 데이터스트림 수준의 [!UICONTROL IP 난독화] 옵션이 **[!UICONTROL 전체]**&#x200B;로 설정되고 Adobe Target IP 난독화 옵션이 **[!UICONTROL 마지막 옥텟 난독화]**&#x200B;로 설정되면 Adobe Target은 전체 난독화된 IP를 수신합니다. 자세한 내용은 [IP 난독화](https://developer.adobe.com/target/before-implement/privacy/privacy/) 및 [지리적 위치](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=ko)에 대한 Adobe Target 설명서를 참조하십시오.</li><li>**Audience Manager**: 데이터스트림 수준의 IP 난독화 설정은 Audience Manager에 설정된 모든 IP 난독화 옵션보다 우선하고 모든 IP 주소에 적용됩니다. Audience Manager가 수행하는 지리적 위치 조회는 데이터스트림 수준의 [!UICONTROL IP 난독화] 옵션에 영향을 받습니다. Audience Manager의 지리적 위치 조회는 전체 난독화된 IP를 기반으로 알 수 없는 지역을 생성하지만 해당 지리적 위치 데이터 기반의 세그먼트는 실현되지 않습니다. 자세한 내용은 [IP 난독화](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=ko)에 대한 Audience Manager 설명서를 참조하십시오.</li><li>**Adobe Analytics**: NONE이 아닌 IP 난독화 옵션이 선택되면 Adobe Analytics는 부분적으로 난독화된 IP 주소를 수신합니다. Analytics가 전체 난독화된 IP 주소를 수신하려면 Adobe Analytics에서 별도로 IP 난독화를 구성해야 합니다. 이 동작은 향후 릴리스에서 업데이트될 예정입니다. Analytics에서 IP 난독화를 활성화하는 방법에 대한 자세한 내용은 Adobe Analytics [설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html)를 참조하십시오.</li></ul> |
 | [!UICONTROL 자사 ID 쿠키] | 활성화되면 이 설정은 [자사 디바이스 ID](../edge/identity/first-party-device-ids.md) 조회 시 ID 맵에서 이 값을 조회하는 대신 지정된 쿠키를 참조하도록 Edge Network에 지시합니다.<br><br>이 설정을 활성화할 때에는 ID가 저장될 예정인 쿠키의 이름을 입력해야 합니다. |
 | [!UICONTROL 서드파티 ID 동기화] | ID 동기화를 컨테이너로 그룹화하면 다른 시간대에 다른 ID 동기화를 실행할 수 있습니다. 활성화되면 이 설정을 사용하여 이 데이터스트림에 실행되는 ID 동기화의 컨테이너를 지정할 수 있습니다. |
@@ -61,17 +61,17 @@ Experience Platform에 사용할 데이터스트림을 구성하고 Platform Web
 
 여기에서 Experience Platform에 대한 데이터스트림을 구성하는 경우 [데이터 수집을 위한 데이터 준비](./data-prep.md)에 대한 튜토리얼을 참조하여 이 안내서로 돌아가기 전에 데이터를 Platform 이벤트 스키마에 매핑합니다. 그렇지 않은 경우 **[!UICONTROL 저장]**&#x200B;을 선택하고 다음 섹션으로 계속 진행합니다.
 
-## 데이터스트림 세부 정보 보기 {#view-details}
+## 데이터스트림 세부 사항 보기 {#view-details}
 
-새 데이터스트림을 구성하거나 보려는 기존 데이터스트림을 선택하면 해당 데이터스트림에 대한 세부 정보 페이지가 나타납니다. 여기에서 해당 ID가 포함된 데이터스트림에 대한 자세한 내용을 찾을 수 있습니다.
+새 데이터스트림을 구성하거나 보려는 기존 데이터스트림을 선택하면 해당 데이터스트림에 대한 세부 사항 페이지가 나타납니다. 여기에서 해당 ID가 포함된 데이터스트림에 대한 자세한 내용을 찾을 수 있습니다.
 
-![생성된 데이터스트림에 대한 세부 정보 페이지](assets/configure/view-details.png)
+![생성된 데이터스트림에 대한 세부 사항 페이지](assets/configure/view-details.png)
 
-데이터스트림 세부 정보 화면에서 [서비스를 추가](#add-services)하여 액세스 권한이 있는 Adobe Experience Cloud 제품의 기능을 활성화할 수 있습니다. 데이터스트림의 [기본 구성](#create)을 편집하고, [매핑 규칙](./data-prep.md)을 업데이트하고, [데이터스트림을 복사](#copy)하거나 완전히 삭제할 수도 있습니다.
+데이터스트림 세부 사항 화면에서 [서비스를 추가](#add-services)하여 액세스 권한이 있는 Adobe Experience Cloud 제품의 기능을 활성화할 수 있습니다. 데이터스트림의 [기본 구성](#create)을 편집하고, [매핑 규칙](./data-prep.md)을 업데이트하고, [데이터스트림을 복사](#copy)하거나 완전히 삭제할 수도 있습니다.
 
 ## 데이터스트림에 서비스 추가 {#add-services}
 
-데이터스트림의 세부 정보 페이지에서 **[!UICONTROL 서비스 추가]**&#x200B;를 선택하여 해당 데이터스트림에서 사용할 수 있는 서비스를 추가합니다.
+데이터스트림의 세부 사항 페이지에서 **[!UICONTROL 서비스 추가]**&#x200B;를 선택하여 해당 데이터스트림에서 사용할 수 있는 서비스를 추가합니다.
 
 ![계속하려면 서비스 추가 선택](assets/configure/add-service.png)
 
@@ -79,7 +79,7 @@ Experience Platform에 사용할 데이터스트림을 구성하고 Platform Web
 
 ![목록에서 서비스 선택](assets/configure/service-selection.png)
 
-원하는 서비스를 선택하고 표시되는 구성 옵션을 입력한 다음 **[!UICONTROL 저장]**&#x200B;을 선택하여 서비스를 데이터스트림에 추가합니다. 추가된 모든 서비스가 데이터스트림의 세부 정보 보기에 표시됩니다.
+원하는 서비스를 선택하고 표시되는 구성 옵션을 입력한 다음 **[!UICONTROL 저장]**&#x200B;을 선택하여 서비스를 데이터스트림에 추가합니다. 추가된 모든 서비스가 데이터스트림의 세부 사항 보기에 표시됩니다.
 
 ![데이터스트림에 추가된 서비스](assets/configure/services-added.png)
 
@@ -91,7 +91,7 @@ Experience Platform에 사용할 데이터스트림을 구성하고 Platform Web
 
 ### Adobe Analytics 설정 {#analytics}
 
-이 서비스는 데이터가 Adobe Analytics로 전송되는지 여부와 그 방법을 제어합니다. [Analytics로 데이터 전송](../edge/data-collection/adobe-analytics/analytics-overview.md)에 대한 추가 세부 정보는 안내서에서 확인할 수 있습니다.
+이 서비스는 데이터가 Adobe Analytics로 전송되는지 여부와 그 방법을 제어합니다. [Analytics로 데이터 전송](../edge/data-collection/adobe-analytics/analytics-overview.md)에 대한 추가 세부 사항은 안내서에서 확인할 수 있습니다.
 
 ![Adobe Analytics 설정 블록](assets/configure/analytics-config.png)
 
@@ -164,7 +164,7 @@ Experience Platform에 사용할 데이터스트림을 구성하고 Platform Web
 
 ## 데이터스트림 복사 {#copy}
 
-기존 데이터스트림의 사본을 만들고 필요에 따라 세부 정보를 변경할 수 있습니다.
+기존 데이터스트림의 사본을 만들고 필요에 따라 세부 사항을 변경할 수 있습니다.
 
 >[!NOTE]
 >
@@ -174,11 +174,11 @@ Experience Platform에 사용할 데이터스트림을 구성하고 Platform Web
 
 ![데이터스트림 목록 보기에서 선택 중인 [!UICONTROL 복사] 옵션을 보여 주는 이미지](assets/configure/copy-datastream-list.png)
 
-또는 특정 데이터스트림의 세부 정보 보기에서 **[!UICONTROL 데이터스트림 복사]**&#x200B;를 선택할 수 있습니다.
+또는 특정 데이터스트림의 세부 사항 보기에서 **[!UICONTROL 데이터스트림 복사]**&#x200B;를 선택할 수 있습니다.
 
-![데이터스트림 세부 정보 보기에서 선택 중인 [!UICONTROL 복사] 옵션을 보여 주는 이미지](assets/configure/copy-datastream-details.png)
+![데이터스트림 세부 사항 보기에서 선택 중인 [!UICONTROL 복사] 옵션을 보여 주는 이미지](assets/configure/copy-datastream-details.png)
 
-전체 복사하려는 구성 옵션에 대한 세부 정보와 함께 생성할 새 데이터스트림의 고유 이름을 제공하라는 확인 대화 상자가 나타납니다. 준비가 되면 **[!UICONTROL 복사]**&#x200B;를 선택합니다.
+전체 복사하려는 구성 옵션에 대한 세부 사항과 함께 생성할 새 데이터스트림의 고유 이름을 제공하라는 확인 대화 상자가 나타납니다. 준비가 되면 **[!UICONTROL 복사]**&#x200B;를 선택합니다.
 
 ![데이터스트림 복사에 사용되는 확인 대화 상자 이미지](assets/configure/copy-datastream-confirm.png)
 
