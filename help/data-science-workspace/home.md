@@ -4,14 +4,19 @@ solution: Experience Platform
 title: 데이터 과학 작업 영역 개요
 description: 이 안내서에서는 Adobe Experience Platform의 데이터 과학 작업 영역과 관련된 주요 개념에 대한 개요를 제공합니다.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fa52aa668d21f71c0da6b35c933713f068e36b28
 workflow-type: tm+mt
-source-wordcount: '2388'
+source-wordcount: '2448'
 ht-degree: 0%
 
 ---
 
 # 데이터 과학 작업 영역 개요
+
+>[!NOTE]
+>
+>Experience League에 기능에 대한 설명서가 있다고 해서 모든 고객에게 그 기능이 제공된다고 보장되지는 않습니다. 이 기능은 Adobe Experience Platform 또는 Adobe Experience Platform Intelligence 라이선스를 구입한 기존 고객만 사용할 수 있습니다. 구매한 SKU/제품과 관련된 기능 및 기타 세부 사항을 이해하려면 공식 제품 설명을 참조하십시오.
+
 
 Adobe Experience Platform [!DNL Data Science Workspace] 는 머신 러닝 및 인공 지능을 사용하여 데이터에서 통찰력을 생성합니다. Adobe Experience Platform에 통합, [!DNL Data Science Workspace] 은 Adobe 솔루션 전반에서 컨텐츠 및 데이터 자산을 사용하여 예측을 수행하는 데 도움이 됩니다.
 
@@ -43,13 +48,13 @@ Adobe Experience Platform [!DNL Data Science Workspace] 는 머신 러닝 및 �
 
 | 용어 | 정의 |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [!DNL Data Science Workspace] | [!DNL Data Science Workspace] 다음 범위 내 [!DNL Experience Platform] 를 통해 고객은 의 데이터를 활용하는 머신 러닝 모델을 만들 수 있습니다. [!DNL Experience Platform] 및 Adobe 솔루션을 통해 지능형 통찰력과 예측을 생성하여 쾌적한 최종 사용자 디지털 경험을 제공할 수 있습니다. |
+| [!DNL Data Science Workspace] | [!DNL Data Science Workspace] 다음 범위 내 [!DNL Experience Platform] 를 통해 고객은 의 데이터를 활용하는 머신 러닝 모델을 만들 수 있습니다. [!DNL Experience Platform] 및 Adobe 솔루션을 통해 지능형 통찰력과 예측을 생성하여 유쾌한 최종 사용자 디지털 경험을 제공할 수 있습니다. |
 | 인공 지능 | 인공지능은 시각 지각, 음성 인식, 의사결정, 언어 간 번역 등 인간의 지능이 통상적으로 요구되는 업무를 수행할 수 있는 컴퓨터 시스템의 이론과 개발이다. |
 | 머신 러닝 | 머신 러닝은 컴퓨터가 명시적으로 프로그래밍되지 않고 학습할 수 있도록 하는 학문의 분야이다. |
 | [!DNL Sensei] ML 프레임워크 | [!DNL Sensei] ML 프레임워크는 의 데이터를 활용하는 Adobe 전반의 통합 머신 러닝 프레임워크입니다. [!DNL Experience Platform] 데이터 과학자가 머신 러닝 기반의 인텔리전스 서비스를 보다 빠르고 확장 가능하며 재사용 가능한 방식으로 개발할 수 있도록 지원합니다. |
 | [!DNL Experience Data Model] | [!DNL Experience Data Model] (XDM)은 표준 스키마(예: )를 정의하기 위한 Adobe의 표준화 작업입니다 [!DNL Profile] 및 [!DNL ExperienceEvent]고객 경험 관리용입니다. |
 | [!DNL JupyterLab] | [!DNL JupyterLab] 는 Project Jupyter용 오픈 소스 웹 기반 인터페이스이며 와 긴밀하게 통합되어 있습니다. [!DNL Experience Platform]. |
-| 레서피 | 레시피는 모델 사양에 대한 Adobe의 용어이며 훈련된 모델을 구축하고 실행하여 특정 비즈니스 문제를 해결하는 데 필요한 특정 머신 러닝, AI 알고리즘 또는 알고리즘, 처리 논리 및 구성의 앙상블을 나타내는 최상위 컨테이너입니다. |
+| 레서피 | 레시피는 Adobe의 모델 사양 용어이며 훈련된 모델을 구축하고 실행하여 특정 비즈니스 문제를 해결하는 데 필요한 특정 머신 러닝, AI 알고리즘 또는 알고리즘, 처리 논리 및 구성의 앙상블을 나타내는 최상위 컨테이너입니다. |
 | 모델 | 모델은 비즈니스 사용 사례를 해결하기 위해 내역 데이터 및 구성을 사용하여 교육되는 머신 러닝 레시피의 인스턴스입니다. |
 | 교육 | 교육은 레이블이 지정된 데이터에서 패턴과 통찰력을 배우는 프로세스입니다. |
 | 교육된 모델 | 트레이닝된 모델은 모델 트레이닝 프로세스의 실행 가능한 출력을 나타내며, 여기서 트레이닝 데이터의 세트가 모델 인스턴스에 적용되었다. 훈련된 모델은 이 모델에서 생성된 모든 지능형 웹 서비스에 대한 참조를 유지 관리합니다. 훈련된 모델은 채점을 하고 지능형 웹 서비스를 만드는 데 적합합니다. 훈련된 모델에 대한 수정 사항은 새 버전으로 추적할 수 있습니다. |
