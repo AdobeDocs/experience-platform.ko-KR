@@ -3,9 +3,7 @@ solution: Experience Platform
 title: 유사 대상
 description: 유사 대상을 사용하여 Adobe Experience Platform에서 가치가 높은 새 대상을 타깃팅하는 방법에 대해 알아봅니다.
 badgeLimitedAvailability: label="제한된 가용성" type=Caution
-hide: true
-hidefromtoc: true
-source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
+source-git-commit: 4bd26857d2c714cd629fc46dbb9b6da6a29358c8
 workflow-type: tm+mt
 source-wordcount: '2123'
 ht-degree: 10%
