@@ -8,7 +8,7 @@ hidefromtoc: true
 source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
 workflow-type: tm+mt
 source-wordcount: '2123'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -60,13 +60,13 @@ Adobe Experience Platform에서 유사 모델은 세 가지 서로 다른 유형
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_notEligible"
->title="부적격"
->abstract="교육에 필요한 최소 프로필 수보다 적거나 프로필 내보내기가 아직 트리거되지 않았기 때문에 이 대상자는 현재 유사 인사이트에 적합하지 않습니다."
+>title="자격이 없음"
+>abstract="이 대상자는 교육에 필요한 최소 프로필 수보다 적거나 프로필 내보내기가 아직 트리거되지 않았기 때문에 현재 유사 인사이트를 사용할 수 없습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_processing"
 >title="처리 중"
->abstract="이 대상은 현재 처리 중입니다. 모델은 처리를 완료하는 데 최대 24시간이 소요될 수 있습니다. 나중에 다시 확인하십시오."
+>abstract="이 대상자는 현재 처리 중입니다. 해당 모델은 처리를 완료하는 데 24시간까지 소요될 수 있습니다. 나중에 다시 확인하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_error"
@@ -81,12 +81,12 @@ Adobe Experience Platform에서 유사 모델은 세 가지 서로 다른 유형
 
 ![유사 인사이트 탭이 강조 표시되어 기본 대상에 대한 유사 인사이트를 표시합니다.](../images/ui/lookalike-audiences/look-alike-insights.png)
 
-### 유사성 및 도달 범위 {#similarity-and-reach}
+### 유사성 및 연결 {#similarity-and-reach}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
->title="유사성 및 도달 범위"
->abstract="유사성 및 도달 범위 그래프는 주어진 유사성 점수 이상의 프로필로 구성된 유사 대상의 예상 도달 범위를 나타냅니다. 그래프의 특정 지점 위로 마우스를 가져가면 현재 강조 표시된 지점에 대한 유사성 백분율 및 예상 프로필 수를 표시할 수 있습니다."
+>title="유사성 및 연결"
+>abstract="유사성 및 연결 그래프는 주어진 유사성 점수 이상의 프로필로 구성된 유사 대상자의 예상 연결 범위를 나타냅니다. 그래프의 특정 지점 위에 마우스를 가져다 대면 현재 강조 표시된 지점의 유사성 비율 및 예상 프로필 수를 표시할 수 있습니다."
 
 유사성 및 도달 범위 섹션에는 주어진 유사성 점수 이상의 프로필로 구성된 유사 대상의 예상 도달 범위를 나타내는 그래프가 표시됩니다. 유사성 점수는 다음을 나타냅니다 **거리** 기본 대상 프로필과 유사 인사이트 프로필 간의 유사성.
 
@@ -98,7 +98,7 @@ y축은 x축의 일치 값에 해당하는 유사성 백분율과 함께 예상 
 
 그래프는 다음과 같습니다. **누적** 오른쪽에서 왼쪽으로. 즉, 그래프의 어느 시점에서 y축의 값은 유사성이 있는 프로필의 수입니다 **위** 유사성 임계값. 예를 들어 x축이 60%이고 y축이 1,000만 개이면 기본 대상과 60% 이상의 유사성을 갖는 프로필이 1,000만 개라는 의미입니다.
 
-그래프의 특정 지점 위로 마우스를 가져가면 현재 강조 표시된 지점에 대한 유사성 백분율 및 예상 프로필 수를 표시할 수 있습니다.
+그래프의 특정 지점 위에 마우스를 가져다 대면 현재 강조 표시된 지점의 유사성 비율 및 예상 프로필 수를 표시할 수 있습니다.
 
 ### 유사 대상 {#list}
 
@@ -106,12 +106,12 @@ y축은 x축의 일치 값에 해당하는 유사성 백분율과 함께 예상 
 
 ![유사 대상 섹션이 강조 표시됩니다.](../images/ui/lookalike-audiences/select-laa.png)
 
-### 영향력 있는 요인 {#influential-factors}
+### 영향력 있는 요소 {#influential-factors}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
->title="영향력 있는 요인"
->abstract="영향력 있는 요소는 기본 대상의 구성원과 프로필의 유사성을 설명하는 데 중요한 속성, 이벤트 및 대상 멤버십입니다. 데이터 사용 레이블 및 정책을 사용하여 특정 데이터가 유사 모델에서 영향력 있는 요소로 간주되지 않도록 제외할 수 있습니다."
+>title="영향력 있는 요소"
+>abstract="영향력 있는 요소는 프로필의 유사성을 기본 대상자 멤버에게 설명하는 데 중요한 특성, 이벤트 및 대상자 멤버십입니다. 데이터 사용 레이블 및 정책을 사용하여 유사 모델에서 특정 데이터가 영향력 있는 요소로 간주되지 않도록 제외할 수 있습니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="데이터 제외"
 
 영향 요인 섹션에는 선택한 기본 대상의 유사 모델에 영향을 주는 상위 100개 요인이 표시됩니다. 이러한 영향력 있는 요소는 기본 대상의 유사성을 설명하는 데 가장 중요한 프로필 속성, 경험 이벤트 및 대상 멤버십입니다. 가장 영향력 있는 주요 요인을 이해하면 이 대상자 및 이 대상자를 통해 생성하는 유사 대상자에 대한 마케팅 콘텐츠를 보다 잘 개인화할 수 있습니다. 유사 모델에 영향을 미치는 모든 영향 요소가 표시되지는 않음에 유의하시기 바랍니다.
