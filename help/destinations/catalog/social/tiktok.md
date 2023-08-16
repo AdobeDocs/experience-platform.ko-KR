@@ -3,9 +3,9 @@ title: TikTok 연결
 description: 광고 캠페인의 타겟팅용 데이터로 TikTok에서 맞춤형 대상자를 구축합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 대상을 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: d9d31013d93e0e9e4e291a63840869e73d30ef01
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '1010'
 ht-degree: 5%
 
 ---
@@ -28,15 +28,17 @@ TikTok 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도�
 
 한 스포츠 의류 브랜드는 자신의 소셜 미디어 계정을 통해 기존 고객에게 도달하기를 원합니다. 의류 브랜드는 자체 CRM에서 Adobe Experience Platform으로 이메일 주소를 수집하고, 자체 오프라인 데이터에서 대상을 만들고, 이러한 대상을 TikTok으로 보내 고객의 소셜 미디어 피드에 광고를 표시할 수 있습니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
-에 데이터를 보내기 전 [!DNL TikTok Ads Manager] 계정, 다음에 대한 광고 계정에 액세스하려면 Adobe Experience Platform에 권한을 부여해야 합니다. `Audience Management`. 이 권한은 Experience Platform에 광고주 ID를 입력하고 리디렉션에 따라 권한을 부여하여 제공할 수 있습니다. 자세한 지침은 [TikTok API 설명서](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
+다음을 수행해야 합니다. [!DNL Admin] 또는 [!DNL Operator] 대상자를 전송하려는 TikTok Ads Manager 계정에 대한 액세스 권한. 자세한 지침은 [TikTok 도움말 센터](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+
+TikTok Ads Manager 계정에 데이터를 보내기 전에 다음에 대한 광고 계정에 액세스할 수 있는 Adobe Experience Platform 권한을 부여해야 합니다 `Audience Management`. 이 권한은 다음에서 제공할 수 있습니다. [Ads Manager ID 입력](#authenticate) TikTok Ads Manager 계정으로 리디렉션된 후 Experience Platform UI에서 권한을 부여합니다.
 
 ## 지원되는 ID {#supported-identities}
 
 TikTok은 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | GAID | Google 광고 ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
