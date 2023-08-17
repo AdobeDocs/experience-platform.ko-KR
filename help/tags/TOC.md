@@ -5,7 +5,7 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: 1ca080f6dd62c49c1f1672ec36ce446af591b6b6
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 31%
@@ -45,7 +45,7 @@ ht-degree: 31%
    * [라이브러리](./ui/publishing/libraries.md)
    * [자체 호스팅 라이브러리](./ui/publishing/hosts/self-hosting-libraries.md)
    * [라이브러리 다시 게시](./ui/publishing/republish.md)
-   * [Premium CDN 지원(Beta)](./ui/publishing/premium-cdn.md)
+   * [Experience Platform 태그(중국)](./ui/publishing/premium-cdn.md)
 * 클라이언트측 정보 {#client-side}
    * [개요](./ui/client-side/overview.md)
    * [비동기 배포](./ui/client-side/asynchronous-deployment.md)
