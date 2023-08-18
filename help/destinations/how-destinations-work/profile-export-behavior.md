@@ -2,9 +2,9 @@
 title: 프로필 내보내기 동작
 description: Experience Platform 대상에서 지원되는 다양한 통합 패턴 간에 프로필 내보내기 동작이 어떻게 다른지 알아봅니다.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: e6545dfaf5c43ac854986cfdc4f5cb153a07405b
 workflow-type: tm+mt
-source-wordcount: '2932'
+source-wordcount: '2924'
 ht-degree: 0%
 
 ---
@@ -19,20 +19,20 @@ ht-degree: 0%
 
 ![대상 다이어그램 유형](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
-## 마이크로배칭 및 집계 정책
+## 스트리밍 대상의 메시지 집계
 
-대상 유형별 특정 정보로 이동하기 전에 다음에 대한 마이크로배칭 및 집계 정책의 개념을 이해하는 것이 중요합니다 *스트리밍 대상*.
+대상 유형별 특정 정보로 이동하기 전에 다음에 대한 메시지 수집 개념을 이해하는 것이 중요합니다 *스트리밍 대상*.
 
 Experience Platform 대상은 데이터를 HTTPS 호출로 API 기반 통합에 내보냅니다. 다른 업스트림 서비스에서 일괄 처리 수집, 스트리밍 수집, 일괄 처리 세분화, 스트리밍 세분화 또는 ID 그래프 변경의 결과로 프로필이 업데이트되었다는 알림을 받으면 데이터를 내보내고 스트리밍 대상으로 전송합니다.
 
-프로필이 대상 API 엔드포인트로 발송되기 전에 HTTPS 메시지로 집계되는 프로세스를 호출합니다 *마이크로배칭*.
+프로필은 대상 API 엔드포인트로 발송되기 전에 HTTPS 메시지로 집계됩니다.
 
 다음을 수행합니다. [Facebook 대상](/help/destinations/catalog/social/facebook.md) 포함 *[구성 가능한 집계](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy as a example - 데이터가 집계된 방식으로 전송됩니다. 여기서 destinations 서비스는 프로필 서비스 업스트림에서 모든 수신 데이터를 가져와서 다음 중 하나로 집계한 후 Facebook에 전달합니다.
 
 * 레코드 수(최대 10,000개) 또는
-* 시간 창 간격(30분)
+* 시간 창 간격(300초)
 
-위의 임계값 중 어느 것이든 먼저 충족하면 Facebook으로 내보내기가 트리거됩니다. 그래서, [!DNL Facebook Custom Audiences] 대시보드에서 10,000개 레코드 단위로 Experience Platform에서 들어오는 대상이 표시될 수 있습니다. 데이터가 30분 내보내기 간격보다 빨리 처리 및 집계되고, 모든 레코드가 처리될 때까지 약 10~15분마다 더 빨리 전송되므로 10~15분마다 10,000개의 레코드가 표시될 수 있습니다. 레코드가 부족하여 10,000개의 일괄 처리를 구성할 수 없는 경우 시간 창 임계값이 충족될 때 현재 레코드 수가 그대로 전송되므로 더 작은 일괄 처리가 Facebook으로 전송되는 것을 볼 수도 있습니다.
+위의 임계값 중 어느 것이든 먼저 충족하면 Facebook으로 내보내기가 트리거됩니다. 그래서, [!DNL Facebook Custom Audiences] 대시보드에서 10,000개 레코드 단위로 Experience Platform에서 들어오는 대상이 표시될 수 있습니다. 데이터가 300초 내보내기 간격보다 빠르게 처리 및 집계되고, 모든 레코드가 처리될 때까지 약 2~3분마다 더 빠르게 전송되므로 2~3분마다 10,000개의 레코드가 표시될 수 있습니다. 레코드가 부족하여 10,000개의 일괄 처리를 구성할 수 없는 경우 시간 창 임계값이 충족될 때 현재 레코드 수가 그대로 전송되므로 더 작은 일괄 처리가 Facebook으로 전송되는 것을 볼 수도 있습니다.
 
 다른 예로, [HTTP API 대상](/help/destinations/catalog/streaming/http-destination.md), 다음에 대한 *[최적 작업 집계](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 정책, 포함 `maxUsersPerRequest: 10`. 즉, 이 대상에 대한 HTTP 호출이 실행되기 전에 최대 10개의 프로필이 집계되지만, Experience Platform은 대상 서비스가 업스트림 서비스에서 업데이트된 재평가 정보를 수신하는 즉시 대상에 프로필을 디스패치하려고 합니다.
 
@@ -184,7 +184,7 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 | 대상 내보내기를 결정하는 사항 | 내보낸 파일에 포함된 내용 |
 |---------|----------|
-| <ul><li>UI 또는 API에 설정된 내보내기 일정에 따라 대상 내보내기의 시작이 결정됩니다.</li><li>프로필의 대상 멤버십에 대한 변경 사항(세그먼트에서 적격이든 부적격이든)은 증분 내보내기에 포함할 프로필을 적격합니다. 프로필의 속성 또는 ID 맵 변경 *금지* 증분 내보내기에 포함할 프로필을 검증합니다.</li></ul> | <p>내보내기를 위해 선택한 각 XDM 속성에 대한 최신 정보와 함께 대상 멤버십이 변경된 프로필입니다.</p><p>종료한 상태의 프로필은 다음과 같은 경우 대상 내보내기에 포함됩니다. `segmentMembership.status` 매핑 단계에서 XDM 필드를 선택합니다.</p> |
+| <ul><li>UI 또는 API에 설정된 내보내기 일정에 따라 대상 내보내기의 시작이 결정됩니다.</li><li>프로필의 대상 멤버십에 대한 변경 사항(세그먼트에서 적격 또는 부적격)이 발생하면 증분 내보내기에 포함할 프로필이 적합합니다. 프로필의 속성 또는 ID 맵 변경 *금지* 증분 내보내기에 포함할 프로필을 검증합니다.</li></ul> | <p>내보내기를 위해 선택한 각 XDM 속성에 대한 최신 정보와 함께 대상 멤버십이 변경된 프로필입니다.</p><p>종료한 상태의 프로필은 다음과 같은 경우 대상 내보내기에 포함됩니다. `segmentMembership.status` 매핑 단계에서 XDM 필드를 선택합니다.</p> |
 
 {style="table-layout:fixed"}
 
