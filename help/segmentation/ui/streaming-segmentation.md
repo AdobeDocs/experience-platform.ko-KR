@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 스트리밍 세분화 UI 안내서
 description: Adobe Experience Platform에서의 스트리밍 세그먼테이션을 사용하면 데이터 풍부성에 초점을 맞추면서 거의 실시간으로 세그먼테이션을 수행할 수 있습니다. 스트리밍 세분화를 사용하면 데이터가 플랫폼에 들어올 때 세그먼트 자격이 부여되어 세분화 작업을 예약하고 실행할 필요가 줄어듭니다. 이 기능을 사용하면 이제 데이터가 플랫폼으로 전달될 때 대부분의 세그먼트 규칙을 평가할 수 있습니다. 즉, 예약된 세그먼테이션 작업을 실행하지 않고도 세그먼트 멤버십을 최신 상태로 유지합니다.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1442'
 ht-degree: 0%
 
 ---
@@ -38,8 +38,7 @@ ht-degree: 0%
 | 상대 기간 내의 단일 이벤트 | 단일 수신 이벤트를 참조하는 모든 세그먼트 정의. | ![상대 시간 창 내의 단일 이벤트의 예가 표시됩니다.](../images/ui/streaming-segmentation/relative-hit-success.png) |
 | 시간 창이 있는 단일 이벤트 | 시간 창이 있는 단일 수신 이벤트를 참조하는 모든 세그먼트 정의. | ![시간 창이 있는 단일 이벤트의 예가 표시됩니다.](../images/ui/streaming-segmentation/historic-time-window.png) |
 | 프로필만 | 프로필 속성만 참조하는 모든 세그먼트 정의. | |
-| 프로필 속성이 있는 단일 이벤트 | 시간 제한이 없고 하나 이상의 프로필 속성이 있는 단일 수신 이벤트를 참조하는 세그먼트 정의입니다. **참고:** 쿼리는 이벤트가 발생하면 즉시 평가됩니다. 단, 프로필 이벤트의 경우 통합되기까지 24시간 기다려야 합니다. | ![프로필 속성이 있는 단일 이벤트의 예가 표시됩니다.](../images/ui/streaming-segmentation/profile-hit.png) |
-| 상대 시간 창 내에 프로필 속성이 있는 단일 이벤트 | 단일 수신 이벤트와 하나 이상의 프로필 속성을 참조하는 세그먼트 정의입니다. | ![상대 시간 창 내에 프로필 속성이 있는 단일 이벤트의 예가 표시됩니다.](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| 24시간 미만의 상대 시간 창 내에 프로필 속성이 있는 단일 이벤트 | 하나 이상의 프로필 속성을 가진 단일 수신 이벤트를 참조하고 24시간 미만의 상대 시간 창 내에서 발생하는 모든 세그먼트 정의입니다. | ![상대 시간 창 내에 프로필 속성이 있는 단일 이벤트의 예가 표시됩니다.](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | 세그먼트 | 하나 이상의 일괄 처리 또는 스트리밍 세그먼트를 포함하는 모든 세그먼트 정의입니다. **참고:** 세그먼트 세그먼트를 사용하는 경우 프로필 결격이 발생합니다 **24시간마다**. | ![세그먼트 세그먼트의 예가 표시됩니다.](../images/ui/streaming-segmentation/two-batches.png) |
 | 프로필 속성이 있는 여러 이벤트 | 여러 이벤트를 참조하는 모든 세그먼트 정의 **지난 24시간 이내** 및 (선택 사항)에는 하나 이상의 프로필 속성이 있습니다. | ![프로필 속성이 있는 여러 이벤트의 예가 표시됩니다.](../images/ui/streaming-segmentation/event-history-success.png) |
 
