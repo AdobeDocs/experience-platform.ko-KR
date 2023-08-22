@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: 732693b34bf4425cd3a44fba5647d337588abfa0
+source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 11%
+source-wordcount: '989'
+ht-degree: 12%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 11%
       - 필드 매핑 {#mapping}
          - [Analytics 필드 매핑](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager 필드 매핑](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Target 필드 매핑](connectors/adobe-applications/mapping/target.md)
+         - [대상 필드 매핑](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engage 필드 매핑](connectors/adobe-applications/mapping/marketo.md)
          - [Microsoft Dynamics 필드 매핑](connectors/adobe-applications/mapping/dynamics.md)
          - [Salesforce 필드 매핑](connectors/adobe-applications/mapping/salesforce.md)
@@ -325,6 +325,7 @@ ht-degree: 11%
       - [결제 연결 데이터 흐름](tutorials/ui/dataflow/payments.md)
       - [프로토콜 연결 데이터 흐름](tutorials/ui/dataflow/protocols.md)
    - [UI의 템플릿을 사용하여 소스 데이터 흐름 만들기](tutorials/ui/templates.md)
+   - [온디맨드 수집](tutorials/ui/on-demand-ingestion.md)
    - [일괄 처리 데이터 흐름 모니터링](tutorials/ui/monitor.md)
    - [스트리밍 데이터 흐름 모니터링](tutorials/ui/monitor-streaming.md)
    - [계정 업데이트](tutorials/ui/update.md)
@@ -369,4 +370,4 @@ ht-degree: 11%
 - [IP 주소 허용 목록](ip-address-allow-list.md)
 - [자주 묻는 질문](./troubleshooting.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes_kr)
+- [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)
