@@ -4,9 +4,9 @@ description: AI Assistant를 사용하여 Experience Platform 및 Real-time Cust
 badge: Alpha
 hide: true
 hidefromtoc: true
-source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
+source-git-commit: ca606e4e29f4ba1df281f47a86b4e3cfa850ae35
 workflow-type: tm+mt
-source-wordcount: '2642'
+source-wordcount: '2627'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Experience Platform UI의 헤더 탐색에서 AI Assistant에 액세스할 수 �
 
 를 만드는 사용 사례를 고려하십시오. **이벤트 스키마의 디바이스 거래**. ExperienceEvent 스키마 생성 프로세스 중에 `eventType` 필드. 이 시점에서 워크플로우를 종료하고 의 설명서를 참조할 수 있습니다. [스키마 컴포지션 기본 사항](../xdm/schema/composition.md)또는 AI Assistant를 사용하여 질문에 대한 즉각적인 답변을 검색할 수 있습니다.
 
-시작하려면 제공된 텍스트 상자에 질문을 입력합니다. 아래 예에서 AI 도우미에게 &quot;경험 이벤트 스키마의 eventType 필드는 무엇입니까?&quot;라는 질문이 제공됩니다.
+시작하려면 제공된 텍스트 상자에 질문을 입력합니다. 아래 예제에서 AI 도우미에게 &quot; 라는 질문이 제공됩니다.**경험 이벤트 스키마의 eventType 필드는 무엇입니까?**&quot;
 
 ![다음 질문이 있는 Experience Platform AI 비서: &quot;ExperienceEvent 스키마의 eventType 필드는 무엇입니까?](./images/ai-assistant/question.png)
 
@@ -82,7 +82,7 @@ Experience Platform UI의 헤더 탐색에서 AI Assistant에 액세스할 수 �
 
 후속 질문을 통해 특정 주제에 대해 자세히 알아볼 수 있습니다. 다음 예에서는 AI Assistant에 eventType을 세그먼테이션에서 사용할 수 있는 방법을 묻습니다.
 
-![Experience Platform을 위한 AI Assistant에 표시되는 후속 질문 및 답변입니다.](./images/ai-assistant/follow-up-question.png)
+![Experience Platform을 위한 AI Assistant에 표시되는 후속 질문 및 답변입니다.](./images/ai-assistant/follow-up-answer.png)
 
 데이터 사용과 관련하여 AI Assistant에 질문을 할 수도 있습니다. 데이터 사용에 대해 문의할 때 AI Assistant가 질문에 답변하도록 하려면 활성 샌드박스에 있어야 합니다.
 
@@ -100,15 +100,13 @@ AI 도우미가 모든 질문에 대한 답변을 제공하므로 소스를 보�
 
 >[!ENDSHADEBOX]
 
-![Experience Platform을 위한 AI 도우미는 쿼리 후에 선택할 수 있는 옵션을 표시합니다.](./images/ai-assistant/options.png)
-
 >[!BEGINTABS]
 
 >[!TAB 소스 표시]
 
 선택 **[!UICONTROL 소스 표시]** AI Assistant가 응답을 계산하기 위해 참조하는 설명서에 대한 링크 목록.
 
-![AI 도우미에 표시된 인용에 대한 링크입니다.](./images/ai-assistant/citations.png)
+![AI Assistant에 표시되는 소스에 대한 링크입니다.](./images/ai-assistant/show-sources.png)
 
 >[!TAB 엄지 손가락 위로]
 
@@ -134,7 +132,7 @@ AI 도우미가 모든 질문에 대한 답변을 제공하므로 소스를 보�
 
 시작하려면 AI Assistant가 제공하는 사전 설정 프롬프트를 사용할 수도 있습니다.
 
-![AI 지원 패널에 메시지가 표시됩니다.](./images/ai-assistant/ideas-to-get-started.png)
+![AI 지원 패널에 메시지가 표시됩니다.](./images/ai-assistant/ideas.png)
 
 ## 추가 정보
 
