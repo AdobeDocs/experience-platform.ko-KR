@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 액세스 제어 정책 관리
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통한 액세스 제어 정책 관리에 대한 정보를 제공합니다.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 504c73fc73ce41f2c1b3159478fc7fe9b4d20a9d
+source-git-commit: 7cafe1f7e9dd6789db4199631cb605be666ce48a
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,74 @@ The **[!UICONTROL Delete user policy]** dialog appears, prompting you to confirm
 You are returned to the **[!UICONTROL policies]** tab and a confirmation of deletion pop over appears.
 
 ![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
+
+## 샌드박스에 대한 정책 구성
+
+>[!IMPORTANT]
+>
+>기본적으로 [!UICONTROL 자동 포함] 모든 고객에 대해 기능이 켜집니다. 즉, 모든 샌드박스가 정책에 추가됩니다.
+
+>[!NOTE]
+>
+>다음 **[!UICONTROL 기본 레이블 기반 액세스 제어 정책]** 현재 정책에 대한 구성만 사용할 수 있습니다.
+
+정책과 연결된 샌드박스를 보려면 **[!UICONTROL 정책]** 탭.
+
+![사용 가능한 기존 정책 목록을 표시하는 정책 페이지](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+
+그런 다음 정책을 선택하고 **[!UICONTROL 샌드박스]** 탭. 정책과 연결된 샌드박스 목록이 표시됩니다.
+
+![사용 가능한 기존 정책 목록을 표시하는 정책 페이지](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+
+### 모든 샌드박스에 정책 추가
+
+사용 **[!UICONTROL 자동 포함]** 전환 **[!UICONTROL 샌드박스]** 모든 샌드박스에 대한 정책을 활성화하는 탭입니다.
+
+![다음 [!UICONTROL 샌드박스] 다음을 표시하는 탭 [!UICONTROL 자동 포함] 토글.](../../images/flac-ui/abac-policies-auto-include.png)
+
+다음 **[!UICONTROL 자동 포함 활성화]** 선택 내용을 확인하는 대화 상자가 나타납니다. 선택 **[!UICONTROL 사용]** 구성 설정을 완료합니다.
+
+![다음 [!UICONTROL 자동 포함 활성화] 대화 상자 강조 표시 [!UICONTROL 사용].](../../images/flac-ui/abac-policies-auto-include-enable.png)
+
+>[!SUCCESS]
+>
+>정책은 모든 기존 샌드박스에 대해 활성화되며, 새 샌드박스를 사용할 수 있게 되면 자동으로 모든 샌드박스에 추가됩니다.
+
+### 샌드박스를 선택할 정책 추가
+
+>[!IMPORTANT]
+>
+>다음 경우에 기본적으로 향후 샌드박스가 정책에 포함되지 않습니다. [!UICONTROL 자동 포함] 토글이 꺼집니다. 정책에 샌드박스를 수동으로 관리하고 추가해야 합니다.
+
+사용 **[!UICONTROL 자동 포함]** 전환 **[!UICONTROL 샌드박스]** 모든 샌드박스에 대한 정책을 비활성화하려면 탭을 사용하십시오.
+
+![다음 [!UICONTROL 샌드박스] 다음을 표시하는 탭 [!UICONTROL 자동 포함] 토글.](../../images/flac-ui/abac-policies-auto-include.png)
+
+다음에서 **[!UICONTROL 샌드박스]** 탭, 선택 **[!UICONTROL 샌드박스 추가]** 이 정책이 적용될 샌드박스를 선택합니다.
+
+![다음 [!UICONTROL 샌드박스] 정책에 추가된 샌드박스 목록을 표시하는 탭입니다.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+
+샌드박스 목록이 나타납니다. 목록에서 추가할 샌드박스를 선택합니다. 또는 검색 창을 사용하여 샌드박스를 검색합니다. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+
+![다음 [!UICONTROL 샌드박스 추가] 정책에 추가할 수 있는 기존 샌드박스 목록을 표시하는 페이지입니다.](../../images/flac-ui/abac-policies-sandboxes-list.png)
+
+>[!SUCCESS]
+>
+>선택한 샌드박스가 정책에 정상적으로 추가되었습니다.
+
+### 정책에서 샌드박스 제거
+
+샌드박스를 제거하려면 **X** 아이콘을 클릭합니다.
+
+![다음 [!UICONTROL 샌드박스] 샌드박스 목록을 표시하는 탭으로, [!UICONTROL X] 삭제.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+
+다음 **[!UICONTROL 제거]** 선택 내용을 확인하는 대화 상자가 나타납니다. 선택 **[!UICONTROL 확인]** 제거 완료.
+
+![다음 [!UICONTROL 제거] 대화 상자 강조 표시 [!UICONTROL 확인].](../../images/flac-ui/abac-policies-remove-sandbox.png)
+
+>[!SUCCESS]
+>
+>선택한 샌드박스가 정책에서 정상적으로 제거되었습니다.
 
 ## 정책 활성화
 
