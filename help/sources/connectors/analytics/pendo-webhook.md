@@ -1,8 +1,9 @@
 ---
 title: Pendo 소스 개요
 description: API 또는 웹 후크를 활용하여 사용자 인터페이스를 사용하여 Pendo를 Adobe Experience Platform에 연결하는 방법에 대해 알아봅니다
+last-substantial-update: 2023-08-23T00:00:00Z
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
