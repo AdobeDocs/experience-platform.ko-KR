@@ -4,9 +4,9 @@ title: 경고 개요
 description: 경고 규칙이 정의되는 구조를 포함하여 Adobe Experience Platform에서의 다양한 경고에 대해 알아봅니다.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '796'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->비프로덕션 샌드박스에서 경고는 지원되지 않습니다. 경고를 구독하려면 프로덕션 샌드박스를 사용 중인지 확인해야 합니다.
+>비프로덕션 샌드박스에서 경고는 지원되지 않습니다. 경고를 구독하려면 프로덕션 샌드박스를 사용 중인지 확인해야 합니다. 샌드박스가 재설정되면 모든 구독 경고가 재설정됩니다. 샌드박스가 삭제되면 모든 구독 경고가 마찬가지로 지워집니다.
 
 Adobe Experience Platform을 사용하면 Adobe Experience Platform 활동과 관련된 이벤트 기반 경고를 구독할 수 있습니다. 경고: 폴링할 필요성 감소 또는 제거 [[!DNL Observability Insights] API](../api/overview.md) 작업이 완료되었는지, 워크플로우 내의 특정 이정표에 도달했는지 또는 오류가 발생했는지 확인하기 위해 사용됩니다.
 
@@ -58,7 +58,7 @@ Platform 경고를 한 번 전송하거나 해결할 때까지 사전 정의된 
 
 ### I/O 이벤트 {#events}
 
-활동 모니터링의 효율적인 자동화를 용이하게 하기 위해 구성된 웹후크로 경고를 보낼 수 있습니다. Webhook을 통해 경고를 수신하려면 Adobe Developer 콘솔에서 Platform 경고에 대한 Webhook을 등록해야 합니다. 다음 안내서를 참조하십시오 [Adobe I/O 이벤트 알림 구독](./subscribe.md) 특정 단계에 대해 설명합니다.
+활동 모니터링의 효율적인 자동화를 용이하게 하기 위해 구성된 웹후크에 경고를 보낼 수 있습니다. Webhook을 통해 경고를 수신하려면 Adobe Developer 콘솔에서 Platform 경고에 대한 Webhook을 등록해야 합니다. 다음 안내서를 참조하십시오 [Adobe I/O 이벤트 알림 구독](./subscribe.md) 특정 단계에 대해 설명합니다.
 
 ### 플랫폼 UI {#ui}
 
