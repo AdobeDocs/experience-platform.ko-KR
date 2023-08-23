@@ -118,7 +118,7 @@ XDM(경험 데이터 모델) 리소스는 [!UICONTROL 스키마] 의 작업 공�
 
 +++인구 통계 세부 정보(필드 그룹)
 
-[인구 통계 세부 정보](/help/xdm/field-groups/profile/demographic-details.md)는 XDM 개별 프로필 클래스의 표준 스키마 필드 그룹입니다. 필드 그룹은 개별 사용자에 대한 정보를 설명하는 하위 필드가 있는 루트 수준의 사용자 개체를 제공합니다.
+[인구 통계 세부 정보](/help/xdm/field-groups/profile/demographic-details.md)는 XDM 개별 프로필 클래스의 표준 스키마 필드 그룹입니다. 필드 그룹은 개별 사용자에 대한 정보를 설명하는 하위 필드가 있는 루트 수준의 사용자 오브젝트를 제공합니다.
 
 | 필드 | 요구 사항 |
 | --- | --- |
@@ -135,7 +135,7 @@ XDM(경험 데이터 모델) 리소스는 [!UICONTROL 스키마] 의 작업 공�
 
 +++동의 및 환경 설정 필드 그룹(필드 그룹)
 
-[동의 및 환경 설정](/help/xdm/field-groups//profile/consents.md) 필드 그룹은 동의 및 기본 설정 정보를 캡처하기 위해 동의라는 단일 개체 유형 필드를 제공합니다.
+[동의 및 환경 설정](/help/xdm/field-groups//profile/consents.md) 필드 그룹은 동의 및 기본 설정 정보를 캡처하기 위해 동의라는 단일 오브젝트 유형 필드를 제공합니다.
 
 | 필드 | 요구 사항 |
 | --- | --- |
@@ -251,11 +251,11 @@ XDM(경험 데이터 모델) 리소스는 [!UICONTROL 스키마] 의 작업 공�
 | 필드 | 요구 사항 | 설명 |
 | --- | --- | --- |
 | `commerce.cart.cartID` | 필수 여부 | 장바구니 ID |
-| `commerce.order.orderType` | 필수 여부 | 제품 주문 유형을 설명하는 개체입니다. |
-| `commerce.order.payments.paymentAmount` | 필수 여부 | 상품 주문 결제 금액을 설명하는 개체 |
-| `commerce.order.payments.paymentType` | 필수 여부 | 상품 주문 결제 유형을 설명하는 개체 |
-| `commerce.order.payments.transactionID` | 필수 여부 | 개체 제품 주문 트랜잭션 ID |
-| `commerce.order.purchaseID` | 필수 여부 | 개체 제품 주문 구매 ID |
+| `commerce.order.orderType` | 필수 여부 | 제품 주문 유형을 설명하는 오브젝트입니다. |
+| `commerce.order.payments.paymentAmount` | 필수 여부 | 상품 주문 결제 금액을 설명하는 오브젝트 |
+| `commerce.order.payments.paymentType` | 필수 여부 | 상품 주문 결제 유형을 설명하는 오브젝트 |
+| `commerce.order.payments.transactionID` | 필수 여부 | 오브젝트 제품 주문 트랜잭션 ID |
+| `commerce.order.purchaseID` | 필수 여부 | 오브젝트 제품 주문 구매 ID |
 | `productListItems.name` | 필수 여부 | 고객이 선택한 제품을 나타내는 항목 이름 목록 |
 | `productListItems.priceTotal` | 필수 여부 | 고객이 선택한 제품을 나타내는 항목 목록의 총 가격 |
 | `productListItems.product` | 필수 여부 | 선택한 제품 |
@@ -381,7 +381,7 @@ XDM(경험 데이터 모델) 리소스는 [!UICONTROL 스키마] 의 작업 공�
 
 재참여 경로를 생성할 때 다음 DULE 레이블을 고려해야 합니다.
 
-* 개인 이메일 주소는 장치가 아닌 특정 개인을 식별하거나 연락하기 위한 직접 식별 가능한 데이터로 활용됩니다.
+* 개인 이메일 주소는 디바이스가 아닌 특정 개인을 식별하거나 연락하기 위한 직접 식별 가능한 데이터로 활용됩니다.
    * `personalEmail.address = I1`
 
 #### 마케팅 정책
