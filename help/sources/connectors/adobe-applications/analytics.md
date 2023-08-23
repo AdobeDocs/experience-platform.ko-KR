@@ -2,9 +2,9 @@
 title: 보고서 세트 데이터용 Adobe Analytics Source Connector
 description: 이 문서에서는 Analytics에 대한 개요를 제공하고 Analytics 데이터의 사용 사례를 설명합니다.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 83ce7d46e4e64fbe961c964ed5a17ec12a7ec15f
+source-git-commit: 59f7b7cd2e7c52b64ee7fdb8e33b3a0116697696
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1161'
 ht-degree: 7%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform을 사용하면 Analytics 소스 커넥터를 통해 A
 
 다음을 참조하십시오. [처리 규칙 개요](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) 처리 규칙에 대한 자세한 내용을 참조하십시오.
 
-## 경험 데이터 모델(XDM)
+## 경험 데이터 모델 (XDM)
 
 XDM은 Experience Platform에서 서비스와 통신하는 데 사용할 애플리케이션에 대한 일반적인 구조 및 정의를 제공하는 공개적으로 문서화된 사양입니다.
 
@@ -92,3 +92,7 @@ XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../../xdm/home.md).
 * `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
 ID 맵에서 ECID가 있으면 이벤트의 기본 ID로 표시됩니다. 이 경우 AAID는 다음과 같은 이유로 ECID에 기반할 수 있습니다. [ID 서비스 유예 기간](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). 그렇지 않으면 AAID가 이벤트의 기본 ID로 표시됩니다. AACUSTOMID는 이벤트의 기본 ID로 표시되지 않습니다. 그러나 AACUSTOMID가 있으면 Experience Cloud 작업 순서에 따라 AAID가 AACUSTOMID를 기반으로 합니다.
+
+>[!NOTE]
+>
+>데이터 준비를 사용하여 AAID 및 AACUSTOMID와 같은 Analytics에서 발생하는 2차 ID를 필터링할 수 있습니다. 필터링되면 수신 Analytics 데이터에서 사용할 수 있는 경우 이러한 ID가 프로필에 수집되지 않습니다. 필터링되지 않은 데이터는 데이터 레이크로 계속 로드됩니다.
