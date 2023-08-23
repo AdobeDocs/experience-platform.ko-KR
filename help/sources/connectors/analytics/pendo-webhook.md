@@ -1,20 +1,15 @@
 ---
 title: Pendo 소스 개요
 description: API 또는 웹 후크를 활용하여 사용자 인터페이스를 사용하여 Pendo를 Adobe Experience Platform에 연결하는 방법에 대해 알아봅니다
-badge: 베타
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
 
 # [!DNL Pendo]
-
->[!NOTE]
->
->다음 [!DNL Pendo] 소스는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
@@ -30,7 +25,7 @@ Experience Platform은 타사 분석 애플리케이션에서 데이터를 수�
 * [투표](https://support.pendo.io/hc/en-us/articles/360031867152-Polls-Classic-) 표시됨 / 제출됨
 * [Net Promoter 점수](https://support.pendo.io/hc/en-us/articles/360033527151-Set-up-an-NPS-Survey) 표시됨 / 제출됨
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 다음을 만들기 전에 [!DNL Pendo] 소스 연결에서 먼저 다음을 확인해야 합니다.
 

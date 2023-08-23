@@ -2,18 +2,14 @@
 title: UI에서 SugarCRM 계정 및 연락처 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 SugarCRM 계정 및 연락처 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0de4b32ac2ddc90dabefd469b6658388a4532e0d
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '762'
 ht-degree: 2%
 
 ---
 
-# (Beta) [!DNL SugarCRM Accounts & Contacts] UI의 소스 연결
-
->[!NOTE]
->
->다음 [!DNL SugarCRM Accounts & Contacts] 소스는 베타 버전입니다. 다음을 참조하십시오. [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
+# 만들기 [!DNL SugarCRM Accounts & Contacts] UI의 소스 연결
 
 이 자습서에서는 다음을 만드는 단계를 제공합니다 [!DNL SugarCRM Accounts & Contacts] Adobe Experience Platform 사용자 인터페이스를 사용한 소스 연결.
 

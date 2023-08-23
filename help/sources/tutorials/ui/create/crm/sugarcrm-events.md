@@ -2,18 +2,14 @@
 title: UI에서 SugarCRM 이벤트 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 SugarCRM 이벤트 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '646'
 ht-degree: 1%
 
 ---
 
-# (Beta) [!DNL SugarCRM Events] UI의 소스 연결
-
->[!NOTE]
->
->다음 [!DNL SugarCRM Events] 소스는 베타 버전입니다. 다음을 참조하십시오. [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
+# 만들기 [!DNL SugarCRM Events] UI의 소스 연결
 
 이 자습서에서는 다음을 만드는 단계를 제공합니다 [!DNL SugarCRM Events] Adobe Experience Platform 사용자 인터페이스를 사용한 소스 연결.
 

@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 대시보드 도움말
 breadcrumb-title: 대시보드 안내서
 user-guide-description: 맞춤화가 가능한 대시보드를 통해 Experience Platform에서 데이터를 시각화하는 방법을 알아봅니다.
 feature: Dashboards
-source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
+source-git-commit: 43a98526d5713ffd5917bd3986067ba483001171
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 35%
+source-wordcount: '93'
+ht-degree: 33%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 35%
 * 사용 가능한 대시보드 {#guides}
    * [프로필](guides/profiles.md)
    * [계정 프로필](guides/account-profiles.md)
-   * [Audiences](guides/audiences.md)
+   * [대상자](guides/audiences.md)
    * [대상](guides/destinations.md)
    * [라이선스 사용](guides/license-usage.md)
    * [Customer AI 프로필 인사이트](guides/customer-ai-profiles.md)
@@ -34,8 +34,10 @@ ht-degree: 35%
    * [표준 위젯](customize/standard-widgets.md)
    * [사용자 정의 위젯](customize/custom-widgets.md)
    * [스키마 편집](customize/edit-schema.md)
+* 인사이트 사용 사례 {#insights-use-cases}
+   * [동의 분석](insights-use-cases/consent-analysis.md)
 * 애플리케이션 통합 {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [쿼리 대시보드 데이터 세트](query.md)
 * [Real-time Customer Data Platform 통찰력 데이터 모델](cdp-insights-data-model.md)
-* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes_kr)
+* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)

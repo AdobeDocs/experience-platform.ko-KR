@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
+source-git-commit: a74ec87c27d3db3bcd8d0a5075a593535e3c4de1
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 17%
+source-wordcount: '280'
+ht-degree: 19%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 17%
 - [쿼리 서비스 패키징](packages.md)
 - [쿼리 서비스 보호 기능](guardrails.md)
 - 시작 {#get-started}
-   - [사전 요구 사항](get-started/prerequisites.md)
+   - [전제 조건](get-started/prerequisites.md)
 - 데이터 Distiller {#data-distiller}
    - [개요](data-distiller/overview.md)
    - [라이선스 사용](data-distiller/license-usage.md)
@@ -34,6 +34,7 @@ ht-degree: 17%
    - [속성 분석](use-cases/attribution-analysis.md)
    - [보트 필터링](use-cases/bot-filtering.md)
    - [이벤트의 트렌드 보고서 만들기](use-cases/trended-report-of-events.md)
+   - [동의 분석](use-cases/consent-analysis.md)
    - [고객 생애 가치](use-cases/customer-lifetime-value.md)
    - [십분위수 기반 파생 속성](use-cases/deciles-use-case.md)
    - [유사 항목 일치](use-cases/fuzzy-match.md)
@@ -101,4 +102,4 @@ ht-degree: 17%
    - [준비된 문](sql/prepared-statements.md)
 - [자주 묻는 질문](troubleshooting-guide.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes_kr)
+- [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)

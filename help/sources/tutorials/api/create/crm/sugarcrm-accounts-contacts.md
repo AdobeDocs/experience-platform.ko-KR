@@ -2,18 +2,14 @@
 title: 흐름 서비스 API를 사용하여 SugarCRM 계정 및 연락처에 대한 소스 연결 및 데이터 흐름을 만듭니다.
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 SugarCRM 계정 및 연락처에 연결하는 방법을 알아봅니다.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2164'
 ht-degree: 1%
 
 ---
 
-# (Beta) 소스 연결 및 데이터 흐름 만들기 [!DNL SugarCRM Accounts & Contacts] 흐름 서비스 API 사용
-
->[!NOTE]
->
->다음 [!DNL SugarCRM Accounts & Contacts] 소스는 베타 버전입니다. 다음을 참조하십시오. [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
+# 소스 연결 및 데이터 흐름 만들기 [!DNL SugarCRM Accounts & Contacts] 흐름 서비스 API 사용
 
 다음 튜토리얼에서는 다음을 만드는 단계를 설명합니다. [!DNL SugarCRM Accounts & Contacts] 소스 연결 및 가져올 데이터 흐름 만들기 [[!DNL SugarCRM]](https://www.sugarcrm.com/) 다음을 사용하여 Adobe Experience Platform에 계정 및 연락처 데이터 보내기 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -162,7 +158,7 @@ curl -X GET \
 
 **응답**
 
-마찬가지로 수신한 응답을 활용하는 객체 유형에 따라 다음과 같습니다.
+마찬가지로 수신된 응답을 활용하는 객체 유형에 따라 다음과 같습니다.
 
 >[!NOTE]
 >
@@ -890,7 +886,7 @@ curl -X POST \
 데이터 가져오기를 위한 마지막 단계 [!DNL SugarCRM Accounts & Contacts] 를 플랫폼으로 가져와서 데이터 흐름을 만듭니다. 이제 다음 필수 값이 준비되었습니다.
 
 * [소스 연결 ID](#source-connection)
-* [Target 연결 ID](#target-connection)
+* [대상 연결 ID](#target-connection)
 * [ID 매핑](#mapping)
 
 데이터 흐름은 소스에서 데이터를 예약하고 수집합니다. 페이로드 내에 이전에 언급된 값을 제공하면서 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.
@@ -983,7 +979,7 @@ curl -X POST \
 
 ### 계정 업데이트
 
-에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. [!DNL Flow Service] 기본 연결 ID를 쿼리 매개 변수로 제공하는 동안 API입니다. PATCH 요청을 할 때는 소스 계정의 고유한 이름을 제공해야 합니다 `etag` 다음에서 `If-Match` 머리글입니다. 전체 API 예제는 의 안내서를 참조하십시오. [api를 사용하여 소스 계정 업데이트](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. [!DNL Flow Service] 기본 연결 ID를 쿼리 매개 변수로 제공하는 동안 API입니다. PATCH 요청을 할 때는 소스 계정의 고유 값을 제공해야 합니다 `etag` 다음에서 `If-Match` 머리글입니다. 전체 API 예제는 의 안내서를 참조하십시오. [api를 사용하여 소스 계정 업데이트](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### 데이터 흐름 삭제
 

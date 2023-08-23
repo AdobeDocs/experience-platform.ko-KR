@@ -1,20 +1,15 @@
 ---
 title: UI에서 Pendo 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Pendo 소스 연결을 만드는 방법을 알아봅니다.
-badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1194'
 ht-degree: 1%
 
 ---
 
 # 만들기 [!DNL Pendo] 소스 연결 데이터 흐름 및 UI의
-
->[!NOTE]
->
->다음 [!DNL Pendo] 소스는 베타 버전입니다. 다음을 참조하십시오. [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
 이 자습서에서는 다음을 만드는 단계를 제공합니다 [!DNL Pendo] Adobe Experience Platform 사용자 인터페이스를 사용한 소스 연결 및 데이터 흐름.
 
@@ -100,7 +95,7 @@ Platform은 선택한 대상 스키마 또는 데이터 세트를 기반으로 �
 
 아래 나열된 매핑은 필수이며, 로 진행하기 전에 설정해야 합니다. [!UICONTROL 리뷰] 스테이지.
 
-| Target 필드 | 설명 |
+| 대상 필드 | 설명 |
 | --- | --- |
 | `uniqueId` | 다음 [!DNL Pendo] 이벤트용 식별자. |
 
