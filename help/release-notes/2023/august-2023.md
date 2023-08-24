@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 8월 릴리스 정보입니다.
-source-git-commit: a699f66fd48f463cc69ea0f214f487cce360615e
+source-git-commit: b7812acf7c250621d40b152b391142050ac70e18
 workflow-type: tm+mt
-source-wordcount: '1592'
-ht-degree: 36%
+source-wordcount: '1649'
+ht-degree: 37%
 
 ---
 
@@ -122,6 +122,17 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 | 구성 요소 유형 | 이름 | 설명 |
 | --- | --- | --- |
 | 클래스 | [[!UICONTROL XDM 개별 잠재 고객 프로필]](https://github.com/adobe/xdm/pull/1758/files) | 이 클래스를 사용하여 데이터 공급업체의 단계 상단 고객 확보 사용 사례에서 소싱된 잠재 고객 프로필을 가져옵니다. |
+
+{style="table-layout:auto"}
+
+**업데이트된 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 업데이트 |
+| --- | --- | --- |
+| 확장([!UICONTROL Adobe Analytics ExperienceEvent 전체 확장]) | [[!UICONTROL 컨텍스트 데이터]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL 컨텍스트 데이터] 맵 개체가에 추가됨 [!UICONTROL Adobe Analytics ExperienceEvent 전체 확장] Adobe Analytics에 컨텍스트 데이터를 제공합니다. |
+| 필드 그룹 | 다수 | 몇 개의 필드가에 추가됨 [[!UICONTROL 보강된 이벤트 세그먼트 세부 정보]](https://github.com/adobe/xdm/pull/1760/files). |
+
+{style="table-layout:auto"}
 
 자세한 내용은 다음을 참조하십시오. [XDM 시스템 개요](../../xdm/home.md).
 

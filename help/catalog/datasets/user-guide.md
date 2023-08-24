@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 세트 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 141037fd844c78e98785ea2246026ac120961dd5
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '2745'
 ht-degree: 4%
@@ -92,7 +92,7 @@ ht-degree: 4%
 
 ### 태그로 데이터 세트 필터링 {#filter-by-tag}
 
-에 사용자 정의 태그 이름을 입력합니다. [!UICONTROL 태그] 을 입력한 다음 사용 가능한 옵션 목록에서 태그를 선택하여 해당 태그에 해당하는 데이터 세트를 검색하고 필터링합니다.
+에 사용자 지정 태그 이름을 입력합니다. [!UICONTROL 태그] 을 입력한 다음 사용 가능한 옵션 목록에서 태그를 선택하여 해당 태그에 해당하는 데이터 세트를 검색하고 필터링합니다.
 
 ![을 사용하는 데이터 세트 작업 공간의 필터 옵션 [!UICONTROL 태그] 입력 및 필터 아이콘이 강조 표시됩니다.](../images/datasets/user-guide/filter-tags.png)
 
@@ -207,7 +207,7 @@ CSV 파일을 사용하여 데이터 세트를 만들면 제공된 CSV 파일과
 
 스키마 수준에서 적용되는 데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트와 필드를 분류할 수 있습니다. 다음을 참조하십시오. [데이터 거버넌스 개요](../../data-governance/home.md) 레이블에 대해 자세히 알아보거나 [데이터 사용 레이블 사용 안내서](../../data-governance/labels/overview.md) 데이터 세트에 전달하기 위해 스키마에 레이블을 적용하는 방법에 대한 지침입니다.
 
-### 폴더로 이동 {#move-to-folders}
+## 폴더로 이동 {#move-to-folders}
 
 더 나은 데이터 세트 관리를 위해 폴더 내에 데이터 세트를 배치할 수 있습니다. 데이터 세트를 폴더로 이동하려면 관리하려는 데이터 세트 이름 옆에 있는 생략 부호(...)를 선택한 다음 를 클릭합니다 **[!UICONTROL 폴더로 이동]** 드롭다운 메뉴를 통해 액세스합니다.
 
@@ -217,7 +217,7 @@ CSV 파일을 사용하여 데이터 세트를 만들면 제공된 CSV 파일과
 
 ![다음 [!UICONTROL 이동] 데이터 세트 대화 상자 [!UICONTROL 이동] 강조 표시됨.](../images/datasets/user-guide/move-dialog.png)
 
->
+>[!TIP]
 >
 >데이터 세트 이동 대화 상자에서 직접 폴더를 만들 수도 있습니다. 폴더를 만들려면 폴더 만들기 아이콘(![폴더 만들기 아이콘](../images/datasets/user-guide/create-folder-icon.png))을 클릭하여 제품에서 사용할 수 있습니다.
 >
