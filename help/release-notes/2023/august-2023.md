@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 8월 릴리스 정보입니다.
-source-git-commit: b7812acf7c250621d40b152b391142050ac70e18
+source-git-commit: 5c1566bac20f7fb83a0ce48c4fe7a22e15dbeb37
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1650'
 ht-degree: 37%
 
 ---
@@ -36,7 +36,7 @@ Experience Platform을 기반으로 구축된 Real-Time Customer Data Platform([
 | 기능 | 설명 |
 | --- | --- |
 | 지능형 재참여 사용 사례 안내서 | 다음 [지능형 재참여](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) 사용 사례 안내서에서는 지능적이고 책임 있는 방식으로 전환을 완료하기 전에 포기한 고객을 다시 참여시키는 방법에 대한 세부 정보를 제공합니다. 이 안내서에서는 다음 예제 여정을 사용하여 고객을 다시 참여시킵니다. <ul><li>재참여 여정 - 제품 탐색을 중단한 고객을 타깃팅합니다.</li><li>포기한 장바구니 여정 - 장바구니에 제품을 배치했지만 아직 구매를 완료하지 않은 고객을 타깃팅합니다.</li><li>주문 확인 여정 - 제품 구매에 초점</li></ul> 아래 부분에 있는 자세한 피드백 옵션 링크를 사용하십시오. [지능형 재참여 사용 사례 안내서](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) 피드백을 제공할 수 있습니다. |
-| 잠재 고객 프로필 | 파트너 소스 잠재 고객 프로필 및 파트너 ID를 사용하여 Real-Time CDP에서 상위 단계 마케팅을 실행하여 신규 고객에게 도달하고 자사 데이터를 보강합니다. <ul><li>고객 확보 및 주소 지정 기능: 선택한 데이터 파트너의 쿠키 없는 식별자 및 해시된 PII를 활용하여 새로운 순 고객에게 도달하고 서드파티 쿠키 의존성을 줄입니다.</li><li>단일 시스템의 전체 단계 마케팅: 단일 시스템의 예상 및 알려진 고객을 위한 셀프서비스 세분화, 대상자 큐레이션 및 기본 활성화.</li><li>신뢰 기반: 특허를 획득한 데이터 사용, 레이블 지정, 액세스 제어 등을 통해 파트너 데이터 및 프로필을 책임감 있게 시장에 적용합니다. 자세한 내용은 다음 사용 사례 안내서를 참조하십시오. 이제 전망 사용 사례 안내서를 사용할 수 있습니다. 잠재 고객 활용 사례 안내서를 읽고 잠재 고객 활용 사례를 통해 신규 고객을 유치하는 방법을 알아보십시오.<ul><li>[전망](../../rtcdp/partner-data/prospecting.md)</li><li>[온사이트 개인화](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[자사 프로필 보완](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[잠재 고객 활성화](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
+| 파트너 데이터 지원 | 파트너 소스 잠재 고객 프로필 및 파트너 ID를 사용하여 Real-Time CDP에서 상위 단계 마케팅을 실행하여 신규 고객에게 도달하고 자사 데이터를 보강합니다. <ul><li>고객 확보 및 주소 지정 기능: 선택한 데이터 파트너의 쿠키 없는 식별자 및 해시된 PII를 활용하여 새로운 순 고객에게 도달하고 서드파티 쿠키 의존성을 줄입니다.</li><li>단일 시스템의 전체 단계 마케팅: 단일 시스템의 예상 및 알려진 고객을 위한 셀프서비스 세분화, 대상자 큐레이션 및 기본 활성화.</li><li>신뢰 기반: 특허를 획득한 데이터 사용, 레이블 지정, 액세스 제어 등을 통해 파트너 데이터 및 프로필을 책임감 있게 시장에 적용합니다. 자세한 내용은 다음 사용 사례 안내서를 참조하십시오. 이제 전망 사용 사례 안내서를 사용할 수 있습니다. 잠재 고객 활용 사례 안내서를 읽고 잠재 고객 활용 사례를 통해 신규 고객을 유치하는 방법을 알아보십시오.<ul><li>[전망](../../rtcdp/partner-data/prospecting.md)</li><li>[온사이트 개인화](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[자사 프로필 보완](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[잠재 고객 활성화](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
 
 {style="table-layout:auto"}
 
