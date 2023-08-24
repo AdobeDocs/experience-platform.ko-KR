@@ -1,13 +1,11 @@
 ---
 title: 대상에 대한 잠재 고객 활성화
 type: Tutorial
-hide: true
-hidefromtoc: true
 description: 잠재 고객을 대상으로 활성화하는 방법을 알아봅니다
-source-git-commit: e04d7a3cd75f4e61329a2de8ca5ddcc4d9518a57
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 0%
+source-wordcount: '619'
+ht-degree: 12%
 
 ---
 
@@ -26,7 +24,7 @@ ht-degree: 0%
 
 ![데이터 세트 내보내기를 지원하는 대상](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 * 먼저 수집해야 합니다. [잠재 고객 프로필](/help/profile/ui/prospect-profile.md) 및 만들기 [잠재 고객](/help/segmentation/ui/prospect-audience.md) 다운스트림 대상으로 활성화하기 전에
 * 대상에 잠재 고객을 활성화하려면 대상에 성공적으로 연결해야 합니다. 아직 수행하지 않았다면 [대상 카탈로그](../catalog/overview.md)에서 지원되는 대상을 탐색하고 사용할 대상을 구성합니다. 의 UI 튜토리얼 읽기 [대상에 연결](./connect-destination.md) 추가 정보.
@@ -82,3 +80,11 @@ Prospect 대상 이름 왼쪽에 있는 확인란을 사용하여 대상으로 �
 Note that we will need to add links to other destination types here as more destinations become supported 
 
 -->
+
+## 파트너 데이터 지원을 통해 달성한 기타 사용 사례 {#other-use-cases}
+
+Real-Time CDP에서 파트너 데이터 지원을 통해 활성화된 추가 사용 사례를 살펴보십시오.
+
+* [신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완](/help/rtcdp/partner-data/supplement-first-party-profiles.md)하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선합니다.
+* Real-Time CDP에서 서드파티 데이터 지원을 사용하여 [데이터 파트너의 잠재 고객 프로필로 프로필 기반을 확장하고 데이터 파트너와 협력하여 신규 고객에게 도달하거나 확보할 수 있습니다](/help/rtcdp/partner-data/prospecting.md).
+* [온사이트 경험을 개인화하기 위해 파트너 지원 인식 활용](/help/rtcdp/partner-data/onsite-personalization.md) 방문에서 사용자 인증이 없거나 브랜드와 이전 기록이 있는 경우.

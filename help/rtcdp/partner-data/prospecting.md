@@ -1,13 +1,10 @@
 ---
-title: (Beta) 잠재 고객 발굴 사용 사례를 통해 신규 고객 참여 유도 및 확보
+title: 잠재 고객 발굴 사용 사례를 통해 신규 고객 참여 유도 및 확보
 description: Real-Time CDP의 파트너 데이터 지원으로 잠재 고객 발굴 사용 사례를 통해 신규 고객을 참여시키고 확보하는 방법에 대해 알아봅니다.
-hide: true
-hidefromtoc: true
-badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
-workflow-type: ht
-source-wordcount: '1953'
-ht-degree: 100%
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+workflow-type: tm+mt
+source-wordcount: '1941'
+ht-degree: 96%
 
 ---
 
@@ -15,7 +12,7 @@ ht-degree: 100%
 
 >[!AVAILABILITY]
 >
->* 이 베타 기능은 라이선스가 부여된 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate를 보유하고 있는 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
+>* 이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate에 라이선스가 부여된 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
 
 Real-Time CDP에서 서드파티 데이터 지원을 사용하여 데이터 파트너의 잠재 고객 프로필로 프로필 기반을 확장하고 데이터 파트너와 협력하여 신규 고객에게 도달하거나 확보할 수 있습니다.
 
@@ -57,8 +54,8 @@ Real-Time CDP에서 파트너 데이터 지원을 사용하여 새로운 고객�
 * [데이터 사용 레이블](/help/data-governance/labels/overview.md)
 * [데이터 세트](/help/catalog/datasets/overview.md)
 * [소스](/help/sources/home.md)
-* 프로필 (잠재 고객 프로필 링크)
-* 대상자 (잠재 고객 대상자 링크)
+* [잠재 고객 프로필](/help/profile/ui/prospect-profile.md)
+* [잠재 고객](/help/segmentation/ui/prospect-audience.md)
 * [대상](/help/destinations/home.md)
 
 ### 파트너의 라이선스 서드파티 프로필 세부 정보 {#license-profiles-from-partner}
@@ -184,7 +181,7 @@ Real-Time CDP에 방금 로드한 잠재 고객 프로필이 잠재 고객 프�
 
 ![잠재 고객 프로필 검사 방법의 보기.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-(**제공 예정**) 잠재 고객 프로필에 대해 자세히 알아보십시오.
+자세한 내용 [잠재 고객 프로필](/help/profile/ui/prospect-profile.md).
 
 ### 잠재 고객 대상자 만들기 {#create-prospect-audiences}
 
@@ -200,7 +197,7 @@ Real-Time CDP의 세분화 기능을 사용하여 잠재 고객 프로필에서 
 * 배치 프로필 평가 전용
 * 시계열 이벤트를 기반으로 하는 대상자 구축 지원 안 함
 
-(**제공 예정**) 대상자 프로필에 대해 자세히 알아보십시오.
+자세한 내용 [잠재 고객](/help/segmentation/ui/prospect-audience.md).
 
 ### 잠재 고객 프로필을 대상으로 활성화 {#activate-to-destinations}
 
@@ -210,5 +207,6 @@ Real-Time CDP의 세분화 기능을 사용하여 잠재 고객 프로필에서 
 
 Real-Time CDP에서 파트너 데이터 지원을 통해 활성화된 추가 사용 사례를 살펴보십시오.
 
-* [!BADGE Beta]{type=Informative}[신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완](/help/rtcdp/partner-data/supplement-first-party-profiles.md)하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선합니다.
-* (**준비 중**) [!BADGE Beta]{type=Informative}사용자가 브랜드를 인증하거나 이전 기록을 가지고 있지 않아도 방문 중에 사이트 경험을 개인 설정하고 방문 후에 오프사이트 리타겟팅할 수 있도록 **파트너가 지원하는 인식을 활용합니다**.
+* [신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완](/help/rtcdp/partner-data/supplement-first-party-profiles.md)하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선합니다.
+* [온사이트 경험을 개인화하기 위해 파트너 지원 인식 활용](/help/rtcdp/partner-data/onsite-personalization.md) 방문에서 사용자 인증이 없거나 브랜드와 이전 기록이 있는 경우.
+* [잠재 고객 프로필 및 잠재 고객 활성화 확장](/help/destinations/ui/activate-prospect-audiences.md) 대상을 선택합니다.

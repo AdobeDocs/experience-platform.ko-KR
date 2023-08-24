@@ -1,16 +1,18 @@
 ---
 title: 파트너 지원 방문자 인식을 사용하여 온사이트 경험 개인화
 description: 파트너 지원 방문자 인식을 사용하여 방문자에게 개인화된 온사이트 경험을 제공하는 방법을 알아보십시오.
-hide: true
-hidefromtoc: true
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
-workflow-type: ht
-source-wordcount: '2492'
-ht-degree: 100%
+source-git-commit: 9d7e8ef99a42e804896f5c9befcf98bb1c010606
+workflow-type: tm+mt
+source-wordcount: '2530'
+ht-degree: 98%
 
 ---
 
 # 파트너 지원 방문자 인식을 사용하여 온사이트 경험 개인화
+
+>[!AVAILABILITY]
+>
+>이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate에 라이선스가 부여된 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
 
 파트너 지원 인식을 사용하여 웹 속성 방문자에게 개인화된 경험을 제공하는 방법을 알아보십시오. 이 튜토리얼을 사용하여 인증된 방문자와 인증되지 않은 방문자에게 개인화된 경험을 표시하기 위해 Experience Platform 및 기타 Experience Cloud 솔루션의 다양한 요소 구현 시퀀스를 이해하십시오.
 
@@ -265,4 +267,4 @@ Real-Time CDP에서 파트너 데이터 지원을 통해 활성화된 추가 사
 
 * [신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완](/help/rtcdp/partner-data/supplement-first-party-profiles.md)하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선합니다.
 * Real-Time CDP에서 서드파티 데이터 지원을 사용하여 [데이터 파트너의 잠재 고객 프로필로 프로필 기반을 확장하고 데이터 파트너와 협력하여 신규 고객에게 도달하거나 확보할 수 있습니다](/help/rtcdp/partner-data/prospecting.md).
-* (**준비 중**) [!BADGE Beta]{type=Informative}파트너 ID를 사용하여 PII 또는 해시된 PII를 허용하지 않는 게시 에코시스템으로 **활성화 범위를 확장**&#x200B;했습니다.
+* [잠재 고객 프로필 및 잠재 고객 활성화 확장](/help/destinations/ui/activate-prospect-audiences.md) 대상을 선택합니다.
