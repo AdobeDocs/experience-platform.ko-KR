@@ -2,9 +2,9 @@
 title: 예약된 쿼리 모니터링
 description: 쿼리 서비스 UI를 통해 쿼리를 모니터링하는 방법을 알아봅니다.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
+source-git-commit: fa871529a4136263399bad3200ee3888049d06a5
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform은 UI를 통해 모든 쿼리 작업의 상태에 대�
 
 로 이동하려면 [!UICONTROL 예약된 쿼리] 탭, 선택 **[!UICONTROL 쿼리]** 왼쪽 탐색 모음 뒤에 오는 **[!UICONTROL 예약된 쿼리]**
 
-![쿼리 작업 영역의 예약된 쿼리 탭.](../images/ui/monitor-queries/scheduled-queries.png)
+![예약된 쿼리 및 쿼리가 강조 표시된 쿼리 작업 영역의 예약된 쿼리 탭입니다.](../images/ui/monitor-queries/scheduled-queries.png)
 
 아래 표에서는 사용 가능한 각 열에 대해 설명합니다.
 
@@ -34,7 +34,7 @@ Adobe Experience Platform은 UI를 통해 모든 쿼리 작업의 상태에 대�
 | **[!UICONTROL SQL]** | SQL 쿼리의 코드 조각입니다. |
 | **[!UICONTROL 실행 빈도]** | 쿼리가 실행되도록 설정된 케이던스입니다. 사용 가능한 값은 다음과 같습니다 `Run once` 및 `Scheduled`. 쿼리는 실행 빈도에 따라 필터링될 수 있습니다. |
 | **[!UICONTROL 작성자]** | 쿼리를 만든 사용자의 이름입니다. |
-| **[!UICONTROL 생성됨]** | 쿼리가 생성된 타임스탬프(UTC 형식)입니다. |
+| **[!UICONTROL 생성일]** | 쿼리가 생성된 타임스탬프(UTC 형식)입니다. |
 | **[!UICONTROL 마지막 실행 타임스탬프]** | 쿼리가 실행된 가장 최근 타임스탬프입니다. 이 열에서는 쿼리가 현재 예약에 따라 실행되었는지 여부를 강조 표시합니다. |
 | **[!UICONTROL 마지막 실행 상태]** | 가장 최근 쿼리 실행의 상태입니다. 상태 값: `Success`, `Failed`, `In progress`, 및 `No runs`. |
 | **[!UICONTROL 일정 상태]** | 예약된 쿼리의 현재 상태입니다. 5개의 잠재적 값이 있습니다. [!UICONTROL 등록 중], [!UICONTROL 활성], [!UICONTROL 비활성], [!UICONTROL 삭제됨]및 하이픈입니다. <ul><li>하이픈은 예약된 쿼리가 반복되지 않는 일회성 쿼리임을 나타냅니다.</li><li>다음 [!UICONTROL 등록 중] 상태는 시스템이 계속해서 쿼리에 대한 새 일정 생성을 처리하고 있음을 나타냅니다. 예약된 쿼리가 등록되는 동안에는 비활성화하거나 삭제할 수 없습니다.</li><li>다음 [!UICONTROL 활성] 상태는 예약된 쿼리에 이 있음을 나타냅니다. **아직 전달되지 않음** 완료 날짜 및 시간입니다.</li><li>다음 [!UICONTROL 비활성] 상태는 예약된 쿼리에 이 있음을 나타냅니다. **전달됨** 완료 날짜 및 시간입니다.</li><li>다음 [!UICONTROL 삭제됨] 상태는 쿼리 일정이 삭제되었음을 나타냅니다.</li></ul> |
