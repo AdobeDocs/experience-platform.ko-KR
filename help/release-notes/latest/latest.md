@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 8월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c7cd33c5d3d18095fc525b7a8b36a06cad681200
+source-git-commit: 8a313587a339ea775adc5422519841b1e679be7a
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 36%
@@ -63,11 +63,14 @@ Experience Platform을 기반으로 구축된 Real-Time Customer Data Platform([
 
 Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대한 중요한 인사이트를 볼 수 있는 여러 대시보드를 제공합니다.
 
-**새 기능 또는 업데이트된 기능**
-&#x200B; | 기능 | 설명 | | — | — | |동의 분석 및 추적 사용 사례 | 을(를) 사용하여 Real-Time CDP 데이터에 대한 다양한 마케팅 사용 사례에 대한 동의 대시보드를 작성하는 방법에 대해 알아봅니다. [동의 분석 및 추적 문서](../../dashboards/insights-use-cases/consent-analysis.md). 비즈니스 요구에 적합한 속성으로 대상자를 만든 다음 Adobe Experience Platform UI에서 사전 구성된 위젯을 사용하여 통찰력을 소비하는 방법에 대해 자세히 설명합니다. 또한 사용자 정의 대시보드 기능을 사용하여 사용자 정의 위젯을 빌드하는 방법에 대한 지침을 제공합니다. 이 문서에서는 동의 트렌드 및 동의 중복 사용 사례를 다룹니다. |
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 동의 분석 및 추적 사용 사례 | 을(를) 사용하여 Real-Time CDP 데이터에 대한 다양한 마케팅 사용 사례에 대한 동의 대시보드를 작성하는 방법을 알아봅니다. [동의 분석 및 추적 문서](../../dashboards/insights-use-cases/consent-analysis.md). 비즈니스 요구에 적합한 속성으로 대상자를 만든 다음 Adobe Experience Platform UI에서 사전 구성된 위젯을 사용하여 통찰력을 소비하는 방법에 대해 자세히 설명합니다. 또한 사용자 정의 대시보드 기능을 사용하여 사용자 정의 위젯을 빌드하는 방법에 대한 지침을 제공합니다. 이 문서에서는 동의 트렌드 및 동의 중복 사용 사례를 다룹니다. |
 
 {style="table-layout:auto"}
-&#x200B;
+
 액세스 권한을 부여하고 사용자 정의 위젯을 만드는 방법을 포함해 대시보드에 대한 자세한 내용은 [대시보드 개요](../../dashboards/home.md)를 읽어 보십시오.
 
 ## 데이터 수집 {#data-collection}
