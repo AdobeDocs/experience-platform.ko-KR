@@ -4,10 +4,10 @@ title: 대상자 대시보드 안내서
 description: Adobe Experience Platform은 조직이 만든 대상자에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
 workflow-type: tm+mt
-source-wordcount: '2231'
-ht-degree: 7%
+source-wordcount: '3053'
+ht-degree: 8%
 
 ---
 
@@ -39,7 +39,7 @@ Platform 사용자 인터페이스 내의 모든 Adobe Experience Platform 세�
 
 ### 수정 [!UICONTROL 대상] 대시보드 {#modify}
 
-다음과 같은 모양을 수정할 수 있습니다 [!UICONTROL 대상] 을 선택하여 대시보드 **[!UICONTROL 대시보드 수정]**. 대시보드에서 위젯을 이동, 추가 및 제거하고 **[!UICONTROL 위젯 라이브러리]** 를 사용하여 사용 가능한 위젯을 탐색하고 조직에 대한 사용자 정의 위젯을 만들 수 있습니다.
+다음과 같은 모양을 수정할 수 있습니다 [!UICONTROL 대상] 을 선택하여 대시보드 **[!UICONTROL 대시보드 수정]**. 대시보드에서 위젯을 이동, 추가 및 제거하고 **[!UICONTROL 위젯 라이브러리]** 를 사용하여 사용 가능한 위젯을 탐색하고 조직의 사용자 정의 위젯을 만들 수 있습니다.
 
 다음을 참조하십시오. [대시보드 수정](../customize/modify.md) 및 [위젯 라이브러리 개요](../customize/widget-library.md) 설명서에서 자세히 알아보십시오.
 
@@ -86,6 +86,65 @@ Platform 사용자 인터페이스 내의 모든 Adobe Experience Platform 세�
 >
 >2023년 7월 26일 현재, [!UICONTROL 프로필], [!UICONTROL 대상], 및 [!UICONTROL 대상] 개요 대시보드는 지난 6개월 동안 보기를 수정하지 않은 모든 사용자에 대한 새 기본 위젯 로드 아웃으로 재설정되었습니다.
 >의 설명서를 참조하십시오. [프로필](./profiles.md#default-widgets) 및 [대상](./destinations.md#default-widgets) 기본 위젯 로드 아웃의 일부로 포함된 위젯에 대한 세부 정보를 보려면 기본 위젯 섹션을 참조하십시오. 이전과 같이 대시보드 위젯을 계속 사용자 정의할 수 있습니다.
+
+## 고객 AI 위젯 {#customer-ai-audiences-widgets}
+
+고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 정의 성향 점수를 생성하는 데 사용됩니다. 고객 AI는 기존 소비자 경험 이벤트 데이터를 분석하여 예측합니다 **이탈 또는 전환 성향 점수**. 이러한 정확도가 높은 고객 성향 모델을 통해 보다 정확한 세분화 및 타기팅을 수행할 수 있습니다. 다음 [점수 분포](#customer-ai-distribution-of-scores) 및 [채점 요약](#customer-ai-scoring-summary) 통찰력은 대상의 구분을 보여 줍니다. 이 섹션에서는 높음/낮음/중간 성향인 프로필과 이러한 프로필이 프로필 수에 걸쳐 배포되는 방법을 강조합니다.
+
+* [[!UICONTROL Customer AI 점수 요약]](#customer-ai-scoring-summary)
+* [[!UICONTROL 고객 AI 점수 분배]](#customer-ai-distribution-of-scores)
+
+### [!UICONTROL 고객 AI 점수 분배] {#customer-ai-distribution-of-scores}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_distributionOfScores"
+>title="점수 분배"
+>abstract="이 위젯은 성향 점수별로 총 프로필 수의 분포를 5% 단위로 시각화합니다. 프로필 수의 분포는 AI 모델과 선택한 병합 정책에 따라 결정됩니다. 위젯 제목 아래의 드롭다운 메뉴에서 AI 모델을 변경할 수 있습니다."
+
+다음 [!UICONTROL 고객 AI 점수 분배] 위젯은 성향 점수에 따라 총 프로필 수를 분류합니다. 프로필 수의 분포는 AI 모델과 선택한 병합 정책에 의해 결정된 다음 성향을 나타내는 5퍼센트 증분으로 시각화됩니다. 프로필의 카운트는 Y축을 따라 제공되고, 성향 점수는 X축을 따라 제공된다.
+
+>[!NOTE]
+>
+>시각화가 전환 성향 점수인 경우, 높은 점수는 녹색으로 표시되고 낮은 점수는 빨간색으로 표시됩니다. 이탈 성향을 예측하는 경우 이것이 뒤집히면, 높은 점수는 빨간색이고 낮은 점수는 녹색이다. 중간 버킷은 선택한 성향 유형에 관계없이 노란색으로 유지됩니다.
+
+성향 점수를 결정하는 AI 모델은 위젯 제목 아래의 드롭다운 선택기에서 선택됩니다. 드롭다운에는 구성된 모든 Customer AI 모델 목록이 포함되어 있습니다. 사용 가능한 모델 목록에서 분석에 적합한 AI 모델을 선택합니다. 사용 가능한 고객 AI 모델이 없는 경우 위젯 내의 메시지를 통해 하나 이상의 고객 AI 모델을 구성하도록 안내하고 고객 AI 모델 구성 페이지에 하이퍼링크를 제공합니다. 에 대한 지침은 설명서 를 참조하십시오. [고객 AI 인스턴스 구성 방법](../../intelligent-services/customer-ai/user-guide/configure.md).
+
+>[!NOTE]
+>
+>개요 탭 바로 아래에 있는 드롭다운을 선택하여 분석에 포함된 프로필을 결정하는 병합 정책을 변경합니다. 의 섹션을 참조하십시오. [병합 정책](#merge-policies) 을 참조하십시오. [병합 정책 개요](../../profile/merge-policies/overview.md) 을 참조하십시오.
+
+선택한 고객 AI 모델에 대한 세부 인사이트 페이지로 이동하려면 다음을 선택합니다. **[!UICONTROL 모델 세부 정보 보기]**.
+
+![을 사용하는 Experience Platform 대상 대시보드 [!UICONTROL 고객 AI 점수 분배] 위젯 및 [!UICONTROL 모델 세부 정보 보기] 강조 표시됨.](../images/segments/customer-ai-distribution-of-scores.png)
+
+자세한 모델 인사이트 페이지가 표시됩니다.
+
+![고객 AI에 대한 인사이트 페이지.](../images/profiles/customer-ai-insights-page.png)
+
+고객 AI에 대한 자세한 내용은 [insights UI 안내서 살펴보기](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+
+### [!UICONTROL Customer AI 점수 요약] {#customer-ai-scoring-summary}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_scoringSummary"
+>title="채점 요약"
+>abstract="이 위젯은 채점된 총 프로필 수를 표시하고 높은, 중간 및 낮은 성향을 포함하는 버킷으로 분류합니다. 도넛 차트는 높은, 중간 및 낮은 성향에 걸쳐 전체 프로필의 비례 컴포지션을 보여 줍니다."
+
+이 위젯은 채점된 총 프로필 수를 표시하고 높은 성향, 중간 성향 및 낮은 성향을 각각 녹색, 노란색 및 빨간색으로 포함하는 버킷으로 분류합니다. 도넛 차트는 높음, 중간 및 낮은 성향 사이의 총 프로필의 비례 구성을 각각 녹색, 노란색 및 빨간색으로 표시하는 데 사용됩니다. 프로필은 75세 이상의 높은 성향, 25세에서 74세 사이의 중간 성향 및 24세 미만의 낮은 성향이 적합합니다. 범례는 색상 코드 및 성향의 임계값을 나타냅니다. 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 높은, 중간 및 낮은 성향에 대한 프로필 수가 대화 상자에 표시됩니다.
+
+>[!NOTE]
+>
+>시각화가 전환 성향 점수인 경우, 높은 점수는 녹색으로 표시되고 낮은 점수는 빨간색으로 표시됩니다. 이탈 성향을 예측하는 경우 이것이 뒤집히면, 높은 점수는 빨간색이고 낮은 점수는 녹색이다. 중간 버킷은 선택한 성향 유형에 관계없이 노란색으로 유지됩니다.
+
+위젯 제목 아래의 드롭다운 메뉴는 구성된 모든 Customer AI 모델의 목록을 제공합니다. 사용 가능한 모델 목록에서 분석에 적합한 AI 모델을 선택합니다. 사용 가능한 고객 AI 모델이 없는 경우 위젯 내의 메시지를 통해 하나 이상의 고객 AI 모델을 구성하도록 안내하고 고객 AI 모델 구성 페이지에 하이퍼링크를 제공합니다. 다음에서 설명서를 참조하십시오. [고객 AI 인스턴스 구성 방법](../../intelligent-services/customer-ai/user-guide/configure.md) 자세한 지침은 을 참조하십시오.
+
+>[!NOTE]
+>
+>계산된 총 프로필 수는 선택한 병합 정책에 따라 다릅니다. 사용된 병합 정책을 변경하려면 개요 탭 바로 아래에 있는 드롭다운을 선택합니다. 의 섹션을 참조하십시오. [병합 정책](#merge-policies) 을 참조하십시오. [병합 정책 개요](../../profile/merge-policies/overview.md) 을 참조하십시오.
+
+![Customer AI 점수 요약 위젯이 강조 표시된 Experience Platform 대상 대시보드입니다.](../images/segments/customer-ai-scoring-summary.png)
+
+선택 **[!UICONTROL 모델 세부 정보 보기]** 을 눌러 선택한 고객 AI 모델에 대한 세부 인사이트 페이지로 이동합니다. 고객 AI에 대한 자세한 내용은 [insights UI 안내서 살펴보기](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ## 표준 위젯 {#standard-widgets}
 
@@ -203,7 +262,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하는 데 사용할 �
 
 고객이 둘 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 ID가 해당 개별 고객과 연결됩니다. 이러한 상황으로 인해 조직에 둘 이상의 ID의 조각이 포함된 프로필이 여러 개 있을 수 있습니다.
 
-ID에 대한 자세한 내용은 [ID 서비스 설명서](../../identity-service/home.md).
+ID에 대한 자세한 내용은 [Identity Service 설명서](../../identity-service/home.md).
 
 ![다음 [!UICONTROL 대상] id 겹치기 위젯이 강조 표시된 대시보드 개요.](../images/audiences/identity-overlap.png)
 
@@ -222,7 +281,7 @@ ID에 대한 자세한 내용은 [ID 서비스 설명서](../../identity-service
 
 머신 러닝 모델은 데이터의 전체 분포 및 주요 차원을 분석하여 데이터 인사이트를 자동으로 생성합니다.
 
-ID에 대한 자세한 내용은 [ID 서비스 설명서](../../identity-service/home.md).
+ID에 대한 자세한 내용은 [Identity Service 설명서](../../identity-service/home.md).
 
 ### 예약된 활성화 {#scheduled-activations}
 
