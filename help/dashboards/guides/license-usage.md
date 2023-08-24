@@ -4,7 +4,7 @@ title: 라이선스 사용 대시보드 안내서
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: 6ff198d1b4b567667eb3c74a2c6393ee3dc9ee7d
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Platform UI 내에서 라이선스 사용 대시보드로 이동하려면 다음
 
 샌드박스에 대한 소비 보고는 동일한 유형의 모든 샌드박스에 대해 누적됩니다. 즉, 선택 [!UICONTROL 프로덕션] 또는 [!UICONTROL 개발] 는 모든 프로덕션 또는 개발 샌드박스에 대한 소비 보고서를 각각 제공합니다.
 
-![샌드박스 선택기가 강조 표시된 라이센스 사용 대시보드 개요 탭](../images/license-usage/select-sandbox.png)
+![샌드박스 선택기가 강조 표시된 라이센스 사용 대시보드 개요 탭](../images/license-usage/select-sandbox-old.png)
 
 >[!WARNING]
 >
@@ -55,11 +55,11 @@ Platform UI 내에서 라이선스 사용 대시보드로 이동하려면 다음
 
 샌드박스를 선택한 후 날짜 범위 드롭다운을 사용하여 대시보드에 표시할 기간을 선택할 수 있습니다. 최근 30일의 기본값을 포함하여 여러 옵션을 사용할 수 있습니다.
 
-![날짜 범위 드롭다운이 강조 표시된 라이선스 사용 대시보드 개요 탭](../images/license-usage/select-date-range.png)
+![날짜 범위 드롭다운이 강조 표시된 라이선스 사용 대시보드 개요 탭](../images/license-usage/select-date-range-old.png)
 
 다음을 선택할 수도 있습니다. **[!UICONTROL 사용자 정의 날짜]** 표시되는 기간을 선택합니다.
 
-![사용자 정의 날짜 범위 옵션이 강조 표시된 라이선스 사용 대시보드 개요 탭](../images/license-usage/select-custom-date.png)
+![사용자 정의 날짜 범위 옵션이 강조 표시된 라이선스 사용 대시보드 개요 탭](../images/license-usage/select-custom-date-old.png)
 
 ## 위젯
 
@@ -67,7 +67,7 @@ Platform UI 내에서 라이선스 사용 대시보드로 이동하려면 다음
 
 각 위젯은 조직의 실제 숫자와 조직의 라이센싱에 사용할 수 있는 합계를 비교하는 선 그래프를 나타내며 총 사용량의 백분율을 제공합니다.
 
-![샘플 라이선스 사용 지표 위젯의 선 그래프가 강조 표시된 라이선스 사용 대시보드 개요 탭](../images/license-usage/widgets.png)
+![샘플 라이선스 사용 지표 위젯의 선 그래프가 강조 표시된 라이선스 사용 대시보드 개요 탭](../images/license-usage/widgets-old.png)
 
 ## 사용 가능한 지표
 
