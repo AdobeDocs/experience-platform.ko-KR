@@ -2,10 +2,10 @@
 title: Adobe Analytics 확장 기능 릴리스 노트
 description: Adobe Experience Platform의 Adobe Analytics 태그 확장 기능에 대한 최신 릴리스 정보입니다.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
 workflow-type: tm+mt
-source-wordcount: '1333'
-ht-degree: 84%
+source-wordcount: '1394'
+ht-degree: 82%
 
 ---
 
@@ -15,7 +15,20 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->Analytics 태그 확장(종종 업데이트에 대한 응답으로 업데이트되는 경우) [AppMeasurement JavaScript 라이브러리](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR). 다음을 참조하십시오. [AppMeasurement 릴리스 정보](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) 아래에 언급된 특정 버전에 대한 자세한 내용.
+>Analytics 태그 확장(종종 업데이트에 대한 응답으로 업데이트되는 경우) [AppMeasurement JavaScript 라이브러리](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR). 다음을 참조하십시오. [AppMeasurement 릴리스 노트](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) 아래에 언급된 특정 버전에 대한 자세한 내용.
+
+## 2023년 7월 19일
+
+**Adobe Analytics Extension 1.9.2**
+
+**기능**:
+
+* AppMeasurement v2.24.0으로 업그레이드되었습니다.
+* 선택적 구성(`decodeLinkParameters` 기본값 `false`)는 더블바이트로 인코딩된 문자가 포함된 링크 URL을 디코딩합니다.
+
+**버그 수정**:
+* 높은 엔트로피가 잘못된 브라우저에 대한 추가 오류 처리가 추가되었습니다. [사용자 에이전트 클라이언트 힌트](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API입니다.
+* 변경됨 [POST](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Methods/POST) 사용할 Content-Type 헤더 `x-www-form-urlencoded` 기본적으로.
 
 ## 2022년 9월 23일
 
@@ -24,7 +37,7 @@ ht-degree: 84%
 **기능**:
 
 * AppMeasurement v2.23.0으로 업그레이드되었습니다.
-* 확장은 이제 높은 엔트로피를 수집할 수 있다 [사용자 에이전트 클라이언트 힌트](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 최신 버전의 AppMeasurement에서 지원하는 대로.
+* 확장은 이제 높은 엔트로피를 수집할 수 있다 [사용자 에이전트 클라이언트 힌트](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 최신 버전의 AppMeasurement에서 지원됩니다.
 
 ## 2022년 2월 28일
 
@@ -40,7 +53,7 @@ ht-degree: 84%
 
 **버그 수정**:
 
-* AppMeasurement가 v2.22.3으로 업그레이드되었습니다.
+* AppMeasurement이 v2.22.3으로 업그레이드되었습니다.
 
 ## 2021년 9월 16일
 
@@ -48,7 +61,7 @@ ht-degree: 84%
 
 **버그 수정**:
 
-* AppMeasurement가 v2.22.2로 업그레이드되었습니다.
+* AppMeasurement이 v2.22.2로 업그레이드되었습니다.
 * 더 이상 사용되지 않는 buildInfo.environment가 제거되었습니다.
 
 ## 2021년 8월 24일
@@ -57,7 +70,7 @@ ht-degree: 84%
 
 **버그 수정**:
 
-* 업그레이드됨 [AppMeasurement에서 v2.22.1로](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* 업그레이드됨 [v2.22.1로 AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * innerHTML을 사용하는 대신 미러 Activity Map 논리를 위한 폴백 linkName이 업데이트되었습니다.
 
 ## 2020년 8월 6일
