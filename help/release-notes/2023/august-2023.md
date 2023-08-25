@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 8월 릴리스 정보입니다.
-source-git-commit: 5c1566bac20f7fb83a0ce48c4fe7a22e15dbeb37
+source-git-commit: bf4c4186ed9196e547620a91826f86aa09d683fd
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 37%
@@ -107,7 +107,6 @@ Adobe Experience Platform은 데이터의 모든 유형과 지연 시간을 수�
 | 기능 | 설명 |
 | --- | --- |
 | 보조 ID 필터링 지원 | 이제 데이터 준비를 사용하여 AAID 및 AACUSTOMID와 같은 Adobe Analytics에서 전송되는 ID를 필터링할 수 있습니다. 필터링되면 이러한 ID가 실시간 고객 프로필에 수집되지 않습니다. 필터링되지 않은 데이터는 데이터 레이크로 계속 수집됩니다. |
-| 신규 지원 `correlationID` Adobe Analytics용 필드 | 다음 `_experience.decisioning.propositions.scopeDetails.correlationID` 이제 Adobe Analytics 소스 커넥터 스키마에서 필드를 사용할 수 있습니다. 이 필드는 A4T 분류 지원에 사용되며 2023년 9월부터 채워집니다. |
 
 {style="table-layout:auto"}
 
@@ -172,6 +171,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 | --- | --- |
 | 의 일반 가용성 [!DNL SugarCRM] | [!DNL SugarCRM] 이제 소스를 사용할 수 있습니다. [!DNL SugarCRM Accounts & Contacts] 및 [!DNL SugarCRM Events] 소스를 사용하여 데이터를 사용자의 [!DNL SugarCRM] 계정에서 Experience Platform으로 가져옵니다. 자세한 내용은 [[!DNL SugarCRM] 개요](../../sources/connectors/crm/sugarcrm.md)를 참조하십시오. |
 | UI의 소스 데이터 흐름에 대한 온디맨드 수집 지원 | 이제 UI에서 기존 소스 데이터 흐름에 대한 주문형 흐름 실행을 만들 수 있습니다. 자세한 내용은 의 안내서를 참조하십시오. [ui를 사용하여 소스에 대한 온디맨드 플로우 실행 생성](../../sources/tutorials/ui/on-demand-ingestion.md). |
+| 신규 지원 `correlationID` Adobe Analytics용 필드 | 다음 `_experience.decisioning.propositions.scopeDetails.correlationID` 이제 Adobe Analytics 소스 커넥터 스키마에서 필드를 사용할 수 있습니다. 이 필드는 A4T 분류 지원에 사용되며 2023년 9월부터 채워집니다. |
 
 {style="table-layout:auto"}
 
