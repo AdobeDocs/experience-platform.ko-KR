@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 8월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: bf4c4186ed9196e547620a91826f86aa09d683fd
+source-git-commit: 4211a19bfd511c495d9efac898467230678aeb96
 workflow-type: tm+mt
-source-wordcount: '1650'
-ht-degree: 37%
+source-wordcount: '1664'
+ht-degree: 36%
 
 ---
 
@@ -121,7 +121,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 | 구성 요소 유형 | 이름 | 설명 |
 | --- | --- | --- |
-| 클래스 | [[!UICONTROL XDM 개별 잠재 고객 프로필]](https://github.com/adobe/xdm/pull/1758/files) | 이 클래스를 사용하여 데이터 공급업체의 단계 상단 고객 확보 사용 사례에서 소싱된 잠재 고객 프로필을 가져옵니다. |
+| 클래스 | [[!UICONTROL XDM 개별 잠재 고객 프로필]](https://github.com/adobe/xdm/pull/1758/files) | 이 클래스를 사용하여 데이터 공급업체의 단계 상단 고객 확보 사용 사례에서 소싱된 잠재 고객 프로필을 가져옵니다. 다음을 참조하십시오. [[!UICONTROL XDM 개별 잠재 고객 프로필]](../../xdm/classes/prospect.md) 설명서를 참조하여 예제를 확인하고 자세히 알아보십시오. |
 
 {style="table-layout:auto"}
 

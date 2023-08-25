@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 사용 레이블 용어집
 description: 이 문서에서는 현재 Adobe Experience Platform에서 지원하는 모든 데이터 사용 레이블에 대해 간략하게 설명합니다.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: d1d817646fdc943428ca13f3dd8b52725bce4921
+source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
 workflow-type: tm+mt
-source-wordcount: '2207'
+source-wordcount: '2185'
 ht-degree: 3%
 
 ---
@@ -64,11 +64,7 @@ ID &quot;I&quot; 레이블은 특정 사용자를 식별하거나 연결할 수 
 | **PSPD** | 허용된 중요 개인 데이터(PSPD)는 계약상 Adobe이 &quot;중요&quot;, &quot;특별한 데이터 범주&quot; 또는 해당 법률에서 사용하는 유사한 용어로 간주되는 업로드를 허용하는 데이터를 의미합니다. 이는 특별히 보호된 건강 정보 (PHI) 및 기타 규제 된 건강 데이터를 제외한다. |
 | **RHD** | PHI(Protected Health Information)를 참조하는 데이터 또는 계약상 Adobe이 업로드하도록 허용한 환자에 대한 정보입니다. |
 
-## (베타) 파트너 에코시스템 레이블 {#partner}
-
->[!IMPORTANT]
->
->타사 데이터 레이블은 베타입니다. 모든 사용자가 사용할 수 있는 것은 아니며 설명서는 변경될 수 있습니다.
+## 파트너 에코시스템 레이블 {#partner}
 
 파트너 에코시스템 레이블은 조직 외부의 소스에서 얻은 데이터를 분류하는 데 사용됩니다.
 
