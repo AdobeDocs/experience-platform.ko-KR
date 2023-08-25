@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스키마 레지스트리 API 안내서 부록
 description: 이 문서에서는 스키마 레지스트리 API 작업과 관련된 추가 정보를 제공합니다.
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 28891cf37dc9ffcc548f4c0565a77f62432c0b44
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '968'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,6 @@ ht-degree: 0%
 | `>` | 속성이 제공된 값보다 큰지 여부를 기준으로 필터링합니다. | `property=version>5` |
 | `<=` | 속성이 제공된 값보다 작거나 같은지 여부를 기준으로 필터링합니다. | `property=version<=5` |
 | `>=` | 속성이 제공된 값보다 크거나 같은지 여부를 기준으로 필터링합니다. | `property=version>=5` |
-| `~` | 속성이 제공된 정규 표현식과 일치하는지 여부를 기준으로 필터링합니다. | `property=title~test$` |
 | (None) | 속성 이름만 입력하면 속성이 있는 항목만 반환됩니다. | `property=title` |
 
 {style="table-layout:auto"}
