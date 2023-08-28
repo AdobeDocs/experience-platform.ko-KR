@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 8월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4211a19bfd511c495d9efac898467230678aeb96
+source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 36%
+source-wordcount: '1749'
+ht-degree: 38%
 
 ---
 
@@ -21,6 +21,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [데이터 수집](#data-collection)
 - [데이터 수집](#data-ingestion)
 - [데이터 준비](#data-prep)
+- [대상](#destinations)
 - [경험 데이터 모델 (XDM)](#xdm)
 - [ID 서비스](#identity-service)
 - [Segmentation Service](#segmentation)
@@ -112,6 +113,17 @@ Adobe Experience Platform은 데이터의 모든 유형과 지연 시간을 수�
 {style="table-layout:auto"}
 
 자세한 내용은 다음을 참조하십시오. [데이터 준비 개요](../../data-prep/home.md).
+
+## 대상 {#destinations}
+
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
+
+- 이제 다음을 수행할 수 있습니다. [잠재 고객 활성화](../../destinations/ui/activate-prospect-audiences.md) 파일 기반 대상으로 마이그레이션합니다.
+- 일반 [활성화 보호](../../destinations/guardrails.md#general-activation-guardrails) 샌드박스당 최대 100개의 대상이 다음으로 업데이트되었습니다. _엄격한 제한_.
+
+대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
 ## 경험 데이터 모델 (XDM) {#xdm}
 
