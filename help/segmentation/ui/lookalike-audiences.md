@@ -6,7 +6,7 @@ badgeLimitedAvailability: label="제한된 가용성" type=Caution
 source-git-commit: a44b1a1f6028e54ca23149249697dea9407bf60a
 workflow-type: tm+mt
 source-wordcount: '2123'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -84,7 +84,7 @@ Adobe Experience Platform에서 유사 모델은 세 가지 서로 다른 유형
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
 >title="유사성 및 연결"
->abstract="유사성 및 도달 범위 그래프는 주어진 유사성 점수 이상의 프로필로 구성된 유사 대상의 예상 도달 범위를 나타냅니다. 그래프의 특정 지점 위에 마우스를 가져다 대면 현재 강조 표시된 지점의 유사성 비율 및 예상 프로필 수를 표시할 수 있습니다."
+>abstract="유사성 및 연결 그래프는 주어진 유사성 점수 이상의 프로필로 구성된 유사 대상자의 예상 연결 범위를 나타냅니다. 그래프의 특정 지점 위에 마우스를 가져다 대면 현재 강조 표시된 지점의 유사성 비율 및 예상 프로필 수를 표시할 수 있습니다."
 
 유사성 및 도달 범위 섹션에는 주어진 유사성 점수 이상의 프로필로 구성된 유사 대상의 예상 도달 범위를 나타내는 그래프가 표시됩니다. 유사성 점수는 다음을 나타냅니다 **거리** 기본 대상 프로필과 유사 인사이트 프로필 간의 유사성.
 

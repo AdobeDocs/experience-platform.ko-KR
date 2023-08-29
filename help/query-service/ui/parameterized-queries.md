@@ -4,7 +4,7 @@ description: Adobe Experience Platform UI에서 매개 변수가 있는 쿼리�
 source-git-commit: 4fc94fc39fa09756a440b5e532330cd310dd96d2
 workflow-type: tm+mt
 source-wordcount: '755'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -12,8 +12,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
->title="매개 변수가 있는 쿼리"
->abstract="실행 시 매개 변수 값을 추가하려면 매개 변수가 있는 쿼리를 사용하십시오. 이를 통해 동적 데이터로 작업하고 다양한 사용 사례에 대해 쿼리를 재사용할 수 있습니다. 사용 `'$'` 텍스트 편집기에서 쿼리에 쿼리 매개 변수를 입력하도록 접두사를 사용합니다. 그런 다음 편집기 아래의 쿼리 매개 변수 섹션에 키 값을 추가합니다."
+>title="매개변수화된 쿼리"
+>abstract="매개변수화된 쿼리를 사용하여 실행 시 매개변수 값을 추가합니다. 이를 통해 동적 데이터로 작업하고 다양한 사용 사례에 대한 쿼리를 재사용할 수 있습니다. `'$'` 서문을 사용하여 텍스트 편집기의 쿼리에 쿼리 매개변수를 입력합니다. 그런 다음 편집기 아래의 쿼리 매개변수 섹션에 키 값을 추가합니다."
 
 >[!IMPORTANT]
 >
@@ -50,7 +50,7 @@ SELECT
 
 UI에서 매개 변수가 있는 쿼리를 만들려면 쿼리 편집기로 이동합니다. 의 섹션을 참조하십시오. [쿼리 편집기 액세스](./user-guide.md#accessing-query-editor) 추가 지침을 참조하십시오.
 
-사용 `'$'` 텍스트 편집기에서 쿼리에 쿼리 매개 변수를 입력하도록 접두사를 사용합니다. 그런 다음 의 키에 대해 누락된 값을 추가합니다. [!UICONTROL 쿼리 매개 변수] 편집기 아래의 섹션입니다. 필요한 키에 값을 추가하지 않으면 쿼리를 실행할 수 없습니다. 경고 아이콘(![경고 아이콘.](../images/ui/parameterized-queries/alert-icon.png))가 쿼리 매개 변수 섹션에 표시됩니다 [!UICONTROL 값] 입력 필드.
+`'$'` 서문을 사용하여 텍스트 편집기의 쿼리에 쿼리 매개변수를 입력합니다. 그런 다음 의 키에 대해 누락된 값을 추가합니다. [!UICONTROL 쿼리 매개 변수] 편집기 아래의 섹션입니다. 필요한 키에 값을 추가하지 않으면 쿼리를 실행할 수 없습니다. 경고 아이콘(![경고 아이콘.](../images/ui/parameterized-queries/alert-icon.png))가 쿼리 매개 변수 섹션에 표시됩니다 [!UICONTROL 값] 입력 필드.
 
 ![매개 변수가 있는 쿼리와 쿼리 매개 변수 섹션이 강조 표시된 쿼리 편집기.](../images/ui/parameterized-queries/parameterized-query.png)
 
