@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: d16a4cf7db12c92ab6ead498846f17d76f6ac641
+source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1167'
 ht-degree: 9%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 9%
    * [활성화 데이터 흐름 편집](./ui/edit-activation.md)
    * [대상 삭제](./ui/delete-destinations.md)
    * [데이터 흐름 모니터링](./ui/monitor-dataflows.md)
-   * [(Beta) 파일 기반 대상에 대한 파일 형식 옵션 구성](./ui/batch-destinations-file-formatting-options.md)
+   * [파일 기반 대상에 대한 파일 서식 옵션 구성](./ui/batch-destinations-file-formatting-options.md)
    * [컨텍스트 내 대상 경고 구독](ui/alerts.md)
 * 대상 카탈로그 {#catalog}
    * [대상 카탈로그 개요](./catalog/overview.md)
@@ -279,4 +279,4 @@ ht-degree: 9%
       * [설명서 셀프서비스 템플릿](./destination-sdk/docs-framework/self-service-template.md)
       * [작성 모범 사례](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [자주 묻는 질문](./destinations-faq.md)
-* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes_kr)
+* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)

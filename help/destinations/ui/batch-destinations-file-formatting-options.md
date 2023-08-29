@@ -1,15 +1,15 @@
 ---
 description: 파일 기반 대상으로 데이터를 활성화할 때 파일 서식 옵션을 구성하는 방법에 대해 알아봅니다
-title: (Beta) 파일 기반 대상에 대한 파일 형식 옵션 구성
+title: 파일 기반 대상에 대한 파일 서식 옵션 구성
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
+source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1188'
 ht-degree: 19%
 
 ---
 
-# (Beta) 파일 기반 대상에 대한 파일 형식 옵션 구성
+# 파일 기반 대상에 대한 파일 서식 옵션 구성
 
 >[!IMPORTANT]
 > 
