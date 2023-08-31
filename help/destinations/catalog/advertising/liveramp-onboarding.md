@@ -3,7 +3,7 @@ title: LiveRamp - 온보드 연결
 description: LiveRamp 커넥터를 사용하여 Adobe Real-time Customer Data Platform에서 LiveRamp Connect로 대상을 온보딩하는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
+source-git-commit: 7ea411c9543230f254f2a0565c04f277fed2b17b
 workflow-type: tm+mt
 source-wordcount: '1814'
 ht-degree: 3%
@@ -154,7 +154,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 >
 >이 대상은 활성화 흐름당 하나의 소스 ID 네임스페이스 활성화를 지원합니다. 다음과 같이 여러 ID 네임스페이스를 내보내야 하는 경우 `Email` 및 `Phone`, 다음을 수행해야 합니다. [별도의 활성화 플로우 만들기](../../ui/activate-batch-profile-destinations.md) 각 id에 대해.
 
-다음에서 **[!UICONTROL 매핑]** 단계, **[!UICONTROL Target 필드]** 매핑은 내보낸 CSV 파일의 열 헤더 이름을 정의합니다. 에 사용자 지정 이름을 제공하여 내보낸 파일의 CSV 열 헤더를 원하는 이름으로 변경할 수 있습니다. **[!UICONTROL Target 필드]**.
+다음에서 **[!UICONTROL 매핑]** 단계, **[!UICONTROL 대상 필드]** 매핑은 내보낸 CSV 파일의 열 헤더 이름을 정의합니다. 에 사용자 지정 이름을 제공하여 내보낸 파일의 CSV 열 헤더를 원하는 이름으로 변경할 수 있습니다. **[!UICONTROL 대상 필드]**.
 
 >[!IMPORTANT]
 >
@@ -172,7 +172,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
    ![대상 매핑 화면을 보여 주는 Experience Platform UI 화면핫.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-mapping.png)
 
-   속성 이름을에 직접 입력하여 입력할 수도 있습니다. **[!UICONTROL Target 필드]**.
+   속성 이름을에 직접 입력하여 입력할 수도 있습니다. **[!UICONTROL 대상 필드]**.
 
    ![대상 매핑 화면을 보여 주는 Experience Platform UI 화면핫.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-field.png)
 
@@ -209,7 +209,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 예를 들어 내보낸 CSV 파일에는 하나가 있습니다 `email` 속성입니다. Experience Platform에서 시작된 두 대상 [세분화 서비스](../../../segmentation/home.md), 및 1 [가져옴](../../../segmentation/ui/overview.md#importing-an-audience) 외부 대상, 형태는 다음과 같습니다.
 
 ```csv
-email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -218,7 +218,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-위의 예에서 `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` 및 `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` 섹션에서는 세분화 서비스에서 시작된 대상자에 대해 설명하고 `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` 플랫폼으로 가져온 대상자를 다음과 같이 설명합니다. [사용자 지정 업로드](../../../segmentation/ui/overview.md#importing-an-audience).
+위의 예에서 `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` 및 `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` 섹션에서는 세분화 서비스에서 시작된 대상자에 대해 설명하고 `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` 플랫폼으로 가져온 대상자를 다음과 같이 설명합니다. [사용자 지정 업로드](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Platform은 각각에 대해 하나의 CSV 파일을 생성하므로 [병합 정책 ID](../../../profile/merge-policies/overview.md)또한 각 병합 정책 ID에 대해 별도의 데이터 흐름 실행을 생성합니다.
 
