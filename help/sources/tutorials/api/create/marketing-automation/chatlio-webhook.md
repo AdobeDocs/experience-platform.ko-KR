@@ -1,15 +1,20 @@
 ---
 title: 흐름 서비스 API를 사용하여 Chatlio에 대한 소스 연결 및 데이터 흐름 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Chatlio에 연결하는 방법을 알아봅니다.
+badge: Beta
 exl-id: 867b8096-0841-4462-9888-e60c97c2115e
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1458'
 ht-degree: 1%
 
 ---
 
 # 소스 연결 및 데이터 흐름 만들기 [!DNL Chatlio] 흐름 서비스 API 사용
+
+>[!NOTE]
+>
+>다음 [!DNL Chatlio] 소스는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
 다음 자습서에서는 가져올 소스 연결 및 데이터 흐름을 만드는 단계를 안내합니다 [[!DNL Chatlio]](https://chatlio.com/) 를 사용하여 Adobe Experience Platform에 이벤트 데이터 보내기 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

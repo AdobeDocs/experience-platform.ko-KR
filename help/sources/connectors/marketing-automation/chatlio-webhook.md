@@ -1,16 +1,20 @@
 ---
 title: Chatlio 소스 개요
 description: API 또는 웹 후크를 활용하여 사용자 인터페이스를 사용하여 Chatlio를 Adobe Experience Platform에 연결하는 방법에 대해 알아봅니다
-last-substantial-update: 2023-08-23T00:00:00Z
+badge: Beta
 exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
 
 # [!DNL Chatlio]
+
+>[!NOTE]
+>
+>다음 [!DNL Chatlio] 소스는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 

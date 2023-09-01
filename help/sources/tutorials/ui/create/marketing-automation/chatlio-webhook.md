@@ -1,15 +1,20 @@
 ---
 title: UI에서 Chatlio 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Chatlio 소스 연결을 만드는 방법을 알아봅니다.
+badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1167'
 ht-degree: 1%
 
 ---
 
 # 만들기 [!DNL Chatlio] UI의 소스 연결
+
+>[!NOTE]
+>
+>다음 [!DNL Chatlio] 소스는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
 이 자습서에서는 다음을 만드는 단계를 제공합니다 [!DNL Chatlio] Adobe Experience Platform 사용자 인터페이스를 사용한 소스 연결.
 
