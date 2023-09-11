@@ -3,10 +3,10 @@ title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 대상자를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 950370683f648771d91689e84c3d782824fb01f4
 workflow-type: tm+mt
-source-wordcount: '1405'
-ht-degree: 1%
+source-wordcount: '1446'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-[!DNL Data Landing Zone] 은(는) [!DNL Azure Blob] Adobe Experience Platform에서 프로비저닝한 스토리지 인터페이스로, 안전한 클라우드 기반 파일 스토리지 시설에 대한 액세스 권한을 부여하여 플랫폼 외부로 파일을 내보낼 수 있습니다. 액세스 권한이 있습니다. [!DNL Data Landing Zone] 샌드박스당 컨테이너 및 모든 컨테이너의 총 데이터 볼륨은 Platform 제품 및 서비스 라이선스와 함께 제공되는 총 데이터로 제한됩니다. Platform 및 해당 애플리케이션 서비스의 모든 고객: [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], 및 [!DNL Real-Time Customer Data Platform] 이(가) 하나로 프로비저닝됨 [!DNL Data Landing Zone] 샌드박스당 컨테이너. 다음을 통해 컨테이너에 파일을 읽고 쓸 수 있습니다. [!DNL Azure Storage Explorer] 또는 명령줄 인터페이스입니다.
+[!DNL Data Landing Zone]은 Adobe Experience Platform에 의해 프로비저닝된 [!DNL Azure Blob] 스토리지 인터페이스로, 이를 통해 안전한 클라우드 기반 파일 스토리지 시설에 액세스하여 Platform에서 파일을 내보낼 수 있습니다. 액세스 권한이 있습니다. [!DNL Data Landing Zone] 샌드박스당 컨테이너 및 모든 컨테이너의 총 데이터 볼륨은 Platform 제품 및 서비스 라이선스와 함께 제공되는 총 데이터로 제한됩니다. Platform 및 해당 애플리케이션 서비스의 모든 고객: [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], 및 [!DNL Real-Time Customer Data Platform] 이(가) 하나로 프로비저닝됨 [!DNL Data Landing Zone] 샌드박스당 컨테이너. 다음을 통해 컨테이너에 파일을 읽고 쓸 수 있습니다. [!DNL Azure Storage Explorer] 또는 명령줄 인터페이스입니다.
 
 [!DNL Data Landing Zone] 는 SAS 기반 인증을 지원하며 데이터는 표준으로 보호됩니다 [!DNL Azure Blob] 중단 및 전송 중인 스토리지 보안 메커니즘. SAS 기반 인증을 통해 [!DNL Data Landing Zone] 공용 인터넷 연결을 통한 컨테이너. 에 액세스하는 데 필요한 네트워크 변경 사항이 없습니다. [!DNL Data Landing Zone] 즉, 네트워크에 대한 허용 목록 또는 교차 영역 설정을 구성할 필요가 없습니다.
 
@@ -32,15 +32,12 @@ Platform은에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을
 
 ## 지원되는 대상자 {#supported-audiences}
 
-이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
-이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
-
-*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
-
-| 대상자 유형 | 설명 |
----------|----------|
-| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 대상자 원본 | 지원됨 | 설명 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
+| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -207,7 +204,12 @@ curl -X POST \
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력합니다.
 * **[!UICONTROL 파일 유형]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택합니다. 을(를) 선택할 때 [!UICONTROL CSV] 옵션을 사용하여 다음을 수행할 수도 있습니다. [파일 서식 옵션 구성](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL 압축 포맷]**: 내보낸 파일에 대해 Experience Platform이 사용해야 하는 압축 유형을 선택합니다.
-* **[!UICONTROL 매니페스트 파일 포함]**: 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함된 매니페스트 JSON 파일을 내보내기에 포함하려면 이 옵션을 켜거나 끕니다.
+* **[!UICONTROL 매니페스트 파일 포함]**: 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함된 매니페스트 JSON 파일을 내보내기에 포함하려면 이 옵션을 켜거나 끕니다. 매니페스트의 이름은 형식을 사용하여 지정합니다. `manifest-<<destinationId>>-<<dataflowRunId>>.json`. 보기 [샘플 매니페스트 파일](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). 매니페스트 파일에는 다음 필드가 포함되어 있습니다.
+   * `flowRunId`: [데이터 흐름 실행](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 내보낸 파일을 생성했습니다.
+   * `scheduledTime`: 파일을 내보낸 시간(UTC)입니다.
+   * `exportResults.sinkPath`: 내보낸 파일이 저장되는 저장소 위치의 경로입니다.
+   * `exportResults.name`: 내보낸 파일의 이름입니다.
+   * `size`: 내보낸 파일의 크기(바이트)입니다.
 
 ### 경고 활성화 {#enable-alerts}
 
