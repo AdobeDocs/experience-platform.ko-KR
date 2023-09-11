@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform API 시작하기
 description: Adobe Experience Platform은 서로 밀접하게 연결된 API 서비스를 제공합니다. 이 안내서에는 사용 가능한 서비스, CRUD 작업에 필요한 헤더, 오류 메시지, Postman 컬렉션 및 샘플 API 호출에 대한 정보가 포함되어 있습니다.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: c728d63c22593ca56999dd0bb6679dea7de0e00a
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1412'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Postman은 사전 설정된 변수로 환경을 설정하고, API 컬렉션을 �
 
 에 대한 설명서 [!DNL Experience Platform] 에서는 두 가지 서로 다른 방식으로 API 호출 예를 보여 줍니다. 먼저 호출이 **API 형식**, 작업(GET, POST, PUT, PATCH, DELETE)과 사용 중인 엔드포인트만 보여 주는 템플릿 표시(예: `/global/classes`). 일부 템플릿은 다음과 같이 호출이 작성되어야 하는 방법을 보여 주는 변수의 위치를 보여 줍니다. `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
 
-그런 다음 호출은에서 cURL 명령으로 표시됩니다. **요청**: API와 성공적으로 상호 작용하는 데 필요한 헤더와 전체 &quot;기본 경로&quot;가 포함됩니다. 기본 경로는 모든 엔드포인트에 미리 첨부되어야 합니다. 예를 들어, 위에서 언급한 `/global/classes` 끝점이 다음과 같이 됨 `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. 설명서 전체에서 API 형식/요청 패턴이 표시되며, Platform API를 직접 호출할 때 예제 요청에 표시된 전체 경로를 사용해야 합니다.
+그런 다음 호출은에서 cURL 명령으로 표시됩니다. **요청**: API와 성공적으로 상호 작용하는 데 필요한 헤더와 전체 &quot;기본 경로&quot;가 포함됩니다. 기본 경로는 모든 끝점에 미리 첨부되어야 합니다. 예를 들어, 위에서 언급한 `/global/classes` 끝점이 다음과 같이 됨 `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. 설명서 전체에서 API 형식/요청 패턴이 표시되며, Platform API를 직접 호출할 때 예제 요청에 표시된 전체 경로를 사용해야 합니다.
 
 ### API 요청 예
 
@@ -124,6 +124,7 @@ curl -X GET \
 | [[!DNL Catalog Service] API 안내서](.././catalog/api/getting-started.md) | 다음 [!DNL Catalog Service] API를 통해 개발자는 Adobe Experience Platform에서 데이터 세트 메타데이터를 관리할 수 있습니다. 여기에는 데이터 위치, 처리 단계, 처리 중 발생한 오류 및 데이터 보고서가 포함됩니다. |
 | [[!DNL Data Access] API 안내서](.././data-access/api.md) | 다음 [!DNL Data Access] API를 사용하면 개발자가 Experience Platform 내에서 수집된 데이터 세트에 대한 정보를 검색할 수 있습니다. 여기에는 데이터 세트 파일 액세스 및 다운로드, 헤더 정보 검색, 실패 및 성공한 배치 나열, 미리보기 CSV/Parquet 파일 다운로드 등이 포함됩니다. |
 | [[!DNL Dataset Service] API 안내서](.././data-governance/labels/dataset-api.md) | 데이터 세트 서비스 API를 사용하면 데이터 세트에 대한 사용 레이블을 적용하고 편집할 수 있습니다. Adobe Experience Platform의 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 카탈로그 서비스 API와 별개입니다. |
+| [[!DNL Edge Network Server] API 안내서](../server-api/overview.md) | 다음 [!DNL Edge Network Server API] 는 다양한 데이터 수집, 개인화, 광고 및 마케팅 사용 사례에 사용할 수 있습니다. 다음 [!DNL Server API] 서버에서 사용할 수 있습니다. [!DNL IoT] 디바이스, 셋톱 박스 및 다양한 기타 디바이스. |
 | [[!DNL Identity Service] API 안내서](.././identity-service/api/getting-started.md) | 다음 [!DNL Identity Service] API를 사용하면 개발자는 Adobe Experience Platform의 ID 그래프를 사용하여 크로스 디바이스, 크로스 채널 및 거의 실시간으로 고객을 식별할 수 있습니다. |
 | [[!DNL Observability Insights] API 안내서](.././observability/api/overview.md) | [!DNL Observability Insights] 는 개발자가 Adobe Experience Platform에서 주요 가시성 지표를 노출할 수 있도록 하는 RESTful API입니다. 이러한 지표는 플랫폼 사용 통계, 플랫폼 서비스에 대한 상태 점검, 내역 트렌드 및 다양한 플랫폼 기능에 대한 성능 지표에 대한 통찰력을 제공합니다. |
 | [[!DNL Policy Service] API 안내서](.././data-governance/api/overview.md) <br> (데이터 거버넌스) | 다음 [!DNL Policy Service] API를 사용하면 데이터 사용 레이블 및 정책을 만들고 관리하여 특정 데이터 사용 레이블이 포함된 데이터에 대해 취할 수 있는 마케팅 작업을 결정할 수 있습니다. 데이터 세트 및 필드에 레이블을 적용하려면 [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) 안내서 |

@@ -4,14 +4,19 @@ solution: Experience Platform
 title: UI에서 클래스 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 클래스를 만들고 편집하는 방법을 알아봅니다.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 3a9b97b25980d88e0fff3d71e43407b641e6454d
+source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
 
-# UI에서 클래스 만들기 및 편집
+# UI에서 클래스 만들기 및 편집 {#ui-create-and-edit}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class_filter"
+>title="표준 또는 사용자 정의 클래스 필터"
+>abstract="사용 가능한 클래스 목록은 클래스 생성 방법에 따라 미리 필터링됩니다. 라디오 단추를 선택하여 표준 옵션과 사용자 정의 옵션 중에서 선택합니다. 표준 옵션은 Adobe으로 만든 엔티티를 표시하며 XDM 개별 프로필 및 XDM 경험 이벤트 클래스를 모두 포함합니다. 사용자 지정 옵션은 조직 내에서 생성된 엔티티를 표시합니다. 클래스 만들기 및 편집에 대한 자세한 내용은 설명서를 참조하십시오."
 
 Adobe Experience Platform에서 스키마의 클래스는 스키마에 포함될 데이터의 동작 측면(레코드 또는 시계열)을 정의합니다. 이 외에도 클래스는 해당 클래스를 기반으로 하는 모든 스키마가 포함해야 하는 가장 적은 수의 공통 속성을 설명하고 여러 호환되는 데이터 세트가 병합될 수 있는 방법을 제공합니다.
 
@@ -19,9 +24,9 @@ Adobe은 다음을 포함한 몇 가지 표준(&quot;코어&quot;) 경험 데이
 
 이 문서에서는 Experience Platform UI에서 사용자 정의 클래스를 만들고, 편집하고, 관리하는 방법에 대한 개요를 제공합니다.
 
-## 사전 요구 사항
+## 전제 조건
 
-이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. 다음을 참조하십시오. [XDM 개요](../../home.md) Experience Platform 생태계 내에서 XDM의 역할에 대한 소개 및 [스키마 컴포지션 기본 사항](../../schema/composition.md) 클래스가 XDM 스키마에 기여하는 방법을 알아봅니다.
+이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. 다음을 참조하십시오. [XDM 개요](../../home.md) Experience Platform 에코시스템 내에서 XDM의 역할 소개 및 [스키마 컴포지션 기본 사항](../../schema/composition.md) 클래스가 XDM 스키마에 기여하는 방법을 알아봅니다.
 
 이 안내서에서는 필요하지 않지만, [UI에서 스키마 작성](../../tutorials/create-schema-ui.md) 의 다양한 기능에 익숙해지려면 [!DNL Schema Editor].
 

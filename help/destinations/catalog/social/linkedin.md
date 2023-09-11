@@ -3,9 +3,9 @@ keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin;
 title: Linkedin 일치하는 대상 연결
 description: 해시된 이메일을 기반으로 대상 타겟팅, 개인화 및 억제에 대한 LinkedIn 캠페인용 프로필을 활성화합니다.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1067'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 [!DNL LinkedIn Matched Audiences] 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | GAID | Google 광고 ID | 소스 ID가 GAID 네임스페이스인 경우 이 대상 ID를 선택합니다. |
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 이 대상 ID를 선택합니다. |
@@ -38,15 +38,12 @@ ht-degree: 2%
 
 ## 지원되는 대상자 {#supported-audiences}
 
-이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
-이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
-
-*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
-
-| 대상자 유형 | 설명 |
----------|----------|
-| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 대상자 원본 | 지원됨 | 설명 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
+| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 

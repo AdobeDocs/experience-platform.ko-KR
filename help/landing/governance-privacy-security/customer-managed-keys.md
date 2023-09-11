@@ -2,9 +2,9 @@
 title: Adobe Experience Platform의 고객 관리 키
 description: Adobe Experience Platform에 저장된 데이터에 대한 자체 암호화 키를 설정하는 방법에 대해 알아봅니다.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 2564c0cc817362536f1a8291e1c733d9efbf5a78
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1855'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,10 @@ Adobe Experience Platform에 저장된 데이터는 시스템 수준 키를 사�
 이 문서에서는 Platform에서 CMK(고객 관리 키) 기능을 활성화하는 프로세스에 대해 설명합니다.
 
 ## 전제 조건
+
+CMK API에 액세스하려면 다음을 지정해야 합니다. [!UICONTROL 고객 관리 키 관리] api 자격 증명과 연결된 새 역할 또는 기존 역할에 대한 프로덕션 샌드박스 권한 및 액세스. CMK 액세스만 사용하여 이 API 자격 증명을 제공하려면 앞서 언급한 필수 권한이 있는 새 CMK 관리자 역할을 생성하는 것이 좋습니다.
+
+Experience Platform에서 역할 및 권한 할당에 대한 자세한 내용은 [권한 구성 설명서](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
 CMK를 활성화하려면 [!DNL Azure] Key Vault는 다음 설정으로 구성해야 합니다.
 

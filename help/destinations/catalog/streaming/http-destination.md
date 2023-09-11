@@ -3,9 +3,9 @@ keywords: 스트리밍; HTTP 대상
 title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 서드파티 HTTP 끝점으로 전송하여 자체 분석을 실행하거나 Experience Platform 외부로 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '2487'
+source-wordcount: '2466'
 ht-degree: 8%
 
 ---
@@ -30,15 +30,12 @@ HTTP 끝점은 고객의 자체 시스템 또는 타사 솔루션이 될 수 있
 
 ## 지원되는 대상자 {#supported-audiences}
 
-이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
-이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
-
-*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
-
-| 대상자 유형 | 설명 |
----------|----------|
-| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 대상자 원본 | 지원됨 | 설명 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
+| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 

@@ -5,9 +5,9 @@ title: 실시간 고객 프로필에서 개인 정보 보호 요청 처리
 type: Documentation
 description: Adobe Experience Platform Privacy Service은 수많은 개인 정보 보호 규정에 명시된 대로 개인 데이터에 액세스하거나, 판매를 거부하거나, 삭제하기 위한 고객 요청을 처리합니다. 이 문서에서는 실시간 고객 프로필에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: fb2686eb44bbf7581120f40b241bead0e61baee9
+source-git-commit: f0179bacc55134241bed8de240ee632d0f38e4b6
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,10 @@ Adobe Experience Platform [!DNL Privacy Service] 는 GDPR(일반 데이터 보�
 >이 안내서에서는 Experience Platform의 프로필 데이터 저장소에 대해 개인 정보 보호 요청을 하는 방법만 다룹니다. Platform 데이터 레이크에 대한 개인 정보 보호 요청도 수행할 계획이라면 의 안내서를 참조하십시오 [데이터 레이크에서 개인 정보 보호 요청 처리](../catalog/privacy.md) 이 튜토리얼 외에.
 >
 >다른 Adobe Experience Cloud 애플리케이션에 대한 개인 정보 보호 요청을 하는 방법에 대한 단계는 [Privacy Service 설명서](../privacy-service/experience-cloud-apps.md).
+
+>[!IMPORTANT]
+>
+>이 안내서의 개인 정보 보호 요청은 다음과 같습니다 **아님** 표지 B2B 비개인 엔티티.
 
 ## 시작하기
 
@@ -213,9 +217,9 @@ ID 서비스도 포함했는지 여부에 따라 다름(`identity`) 및 데이�
 ### 병합 정책 제한 사항 {#merge-policy-limitations}
 
 Privacy Service은 만 처리할 수 있습니다. [!DNL Profile] id 결합을 수행하지 않는 병합 정책을 사용하는 데이터. UI를 사용하여 개인 정보 보호 요청이 처리되고 있는지 확인하는 경우 **[!DNL None]** as its [!UICONTROL ID 결합] 유형. 즉, 다음과 같은 경우에는 병합 정책을 사용할 수 없습니다. [!UICONTROL ID 결합] 이(가) (으)로 설정됨 [!UICONTROL 비공개 그래프].
->>
-![병합 정책의 ID 결합은 없음으로 설정됩니다](./images/privacy/no-id-stitch.png)
->
+
+>![병합 정책의 ID 결합은 없음으로 설정됩니다](./images/privacy/no-id-stitch.png)
+
 ## 다음 단계
 
 이 문서를 읽으면에서 개인 정보 보호 요청 처리와 관련된 중요한 개념에 대해 소개합니다 [!DNL Experience Platform]. ID 데이터를 관리하고 개인 정보 보호 작업을 만드는 방법에 대한 이해를 심화하려면 이 안내서 전반에 걸쳐 제공된 설명서를 계속 읽으십시오.

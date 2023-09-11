@@ -4,12 +4,13 @@ description: Edge Network Server API란 무엇이며 이를 사용하는 방법�
 seo-description: Learn what the Edge Network Server API is and how you can use it.
 keywords: 데이터 수집;수집;Adobe Experience Platform Edge Network;서버 api;
 exl-id: 46bd8798-d7f9-405b-9ca8-856ad4aa688c
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 5%
 
 ---
+
 
 # Edge Network Server API 개요 {#overview}
 

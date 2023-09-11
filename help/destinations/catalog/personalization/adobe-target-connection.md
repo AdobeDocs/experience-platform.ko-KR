@@ -3,9 +3,9 @@ keywords: target 개인화, 대상, experience platform 대상, adobe target 대
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1224'
 ht-degree: 16%
 
 ---
@@ -31,7 +31,7 @@ Experience Platform에서 Adobe Target 연결을 구성하는 방법에 대한 �
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 ### 데이터 스트림 ID {#datastream-id}
 
@@ -51,6 +51,17 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 * 다음 **승인자** [역할](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#roles-and-permissions).
 
 다음에 대한 권한 부여에 대해 자세히 알아보십시오. [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) 및 [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
+
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
+
+| 대상자 원본 | 지원됨 | 설명 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
+| 사용자 정의 업로드 | X | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+
+{style="table-layout:auto"}
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
@@ -102,7 +113,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 >[!NOTE]
 >
->다음에 대한 사용자 지정 Target 작업 공간 사용 시 [속성을 사용한 동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md), 만 [선택한 대상자](../../ui/activate-edge-personalization-destinations.md#select-audiences) 선택한 Target 작업 영역으로 전송됩니다. 다음 [매핑된 속성](../../ui/activate-edge-personalization-destinations.md#mapping) 기본 Target 작업 영역으로 전송됩니다.
+>다음에 대한 사용자 지정 Target 작업 영역을 사용할 때 [속성을 사용한 동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md), 만 [선택한 대상자](../../ui/activate-edge-personalization-destinations.md#select-audiences) 선택된 Target 작업 영역으로 전송됩니다. 다음 [매핑된 속성](../../ui/activate-edge-personalization-destinations.md#mapping) 기본 Target 작업 영역으로 전송됩니다.
 ><br>
 >이 동작은 향후 업데이트에서 변경됩니다.
 

@@ -3,10 +3,10 @@ title: 모바일-웹 및 도메인 간 ID 공유
 description: 모바일에서 웹 속성으로, 그리고 도메인 간에 방문자 ID를 유지하는 방법에 대해 알아봅니다
 keywords: ID;모바일;ID;공유;도메인;교차 도메인;SDK;플랫폼;
 exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
-source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
 source-wordcount: '901'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -30,17 +30,17 @@ Adobe Experience Platform Web SDK는 방문자 ID 공유 기능을 지원하여 
 
 기술 소매업체는 방문자가 모바일 애플리케이션에서 모바일 웹 사이트 또는 다른 도메인으로 이동하는 시기에 대한 정보를 사용하여 방문자 활동 보고를 개선하려고 합니다. 마케팅 팀은 웹 SDK 도메인 간 ID 공유 기능을 사용하여 웹 속성에서 방문자를 정확하게 추적하고 활동 보고서를 생성할 수 있습니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 모바일-웹 및 도메인 간 ID 공유를 사용하려면 다음을 사용해야 합니다. [!DNL Web SDK] 버전 2.11.0 이상
 
-Edge Network 모바일 구현의 경우 이 기능은 [Edge Network용 ID](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) 확장 프로그램은 버전 1.1.0부터 시작됩니다(iOS 및 Android).
+Edge Network 모바일 구현의 경우 이 기능은 [Edge Network용 ID](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) 확장 프로그램은 버전 1.1.0부터 시작됩니다(iOS 및 Android).
 
 이 기능은 와 호환됩니다. [!DNL VisitorAPI.js] 버전 1.7.0 이상
 
 ## Mobile-to-web ID 공유 {#mobile-to-web}
 
-사용 `getUrlVariables` 의 API [Edge Network용 ID](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network/api-reference#geturlvariables) 식별자를 쿼리 매개 변수로 검색하고 열 때 URL에 첨부하는 확장명 [!DNL webViews].
+사용 `getUrlVariables` 의 API [Edge Network용 ID](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) 식별자를 쿼리 매개 변수로 검색하고 열 때 URL에 첨부하는 확장명 [!DNL webViews].
 
 웹 SDK가 동의하는 데 추가 구성이 필요하지 않습니다. `ECID` 쿼리 문자열의 값입니다.
 
@@ -102,7 +102,7 @@ Tags 확장을 통해 모바일-웹 및 도메인 간 ID 공유를 사용하려�
    * 선택 **[!UICONTROL 사용자가 > 특정 요소를 클릭할 때]**
    * 다음을 입력합니다. **[!UICONTROL 선택기]**: `a[href]`. 이 이벤트는 페이지에서 앵커 태그를 클릭할 때마다 `href` 속성.
 
-      ![위에서 설명한 설정을 사용한 이벤트 구성을 보여 주는 UI 이미지](assets/id-sharing-event-configuration.png)
+     ![위에서 설명한 설정을 사용한 이벤트 구성을 보여 주는 UI 이미지](assets/id-sharing-event-configuration.png)
 
 * [!UICONTROL 조건 구성]
    * **[!UICONTROL 논리 유형]**: [!UICONTROL 보통]
@@ -112,14 +112,14 @@ Tags 확장을 통해 모바일-웹 및 도메인 간 ID 공유를 사용하려�
    * **[!UICONTROL 연산자]**: [!UICONTROL RegEx와 일치]
    * **[!UICONTROL 오른쪽 피연산자]**: ID를 공유할 도메인과 일치하는 정규 표현식을 입력합니다. 예를 들어 로 끝나는 호스트 이름의 링크를 일치시키려면 `adobe.com` 또는 `behance.com`, 다음 정규 표현식을 사용합니다. `behance.com$|adobe.com$`. 링크된 페이지에는 [!DNL Web SDK] 또는 [!DNL Visitor ID] id를 수락하도록 설치되었습니다.
 
-      ![위에서 설명한 설정이 있는 조건 구성을 보여 주는 UI 이미지](assets/id-sharing-condition-configuration.png)
+     ![위에서 설명한 설정이 있는 조건 구성을 보여 주는 UI 이미지](assets/id-sharing-condition-configuration.png)
 
 * [!UICONTROL 작업 구성]
    * **[!UICONTROL 확장]**: [!UICONTROL Adobe Experience Platform 웹 SDK]
    * **[!UICONTROL 작업 유형]**: [!UICONTROL ID로 리디렉션]
    * **[!UICONTROL 인스턴스]**: 인스턴스를 선택합니다. 대부분의 경우 구성된 인스턴스는 한 개만 있습니다. 인스턴스가 여러 개 있는 경우 공유할 ID가 있는 인스턴스를 선택합니다.
 
-      ![위에서 설명한 설정이 있는 작업 구성을 보여 주는 UI 이미지](assets/id-sharing-action-configuration.png)
+     ![위에서 설명한 설정이 있는 작업 구성을 보여 주는 UI 이미지](assets/id-sharing-action-configuration.png)
 
 다음 **[!UICONTROL ID로 리디렉션]** 작업을 수행하면 브라우저가 링크로 이동하지 못합니다. 그런 다음 를 호출합니다. `appendIdentityToUrl` 다음에 대한 메서드 [!DNL Web SDK] 인스턴스.
 

@@ -1,10 +1,10 @@
 ---
 title: 잠재 고객 발굴 사용 사례를 통해 신규 고객 참여 유도 및 확보
 description: Real-Time CDP의 파트너 데이터 지원으로 잠재 고객 발굴 사용 사례를 통해 신규 고객을 참여시키고 확보하는 방법에 대해 알아봅니다.
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: 5352b461be3684ac4fe1703c916b9ec59bd14af1
 workflow-type: tm+mt
-source-wordcount: '1941'
-ht-degree: 96%
+source-wordcount: '1935'
+ht-degree: 95%
 
 ---
 
@@ -108,7 +108,7 @@ Real-Time CDP에서 파트너 데이터 지원을 사용하여 새로운 고객�
 
 #### 스키마의 모든 필드에 서드파티 데이터 거버넌스 레이블 추가
 
-스키마를 구성하는 모든 필드에 서드파티 데이터 거버넌스 레이블을 추가하는 것이 좋습니다. 이는 서드파티 데이터의 책임 있는 사용을 보장하고 데이터 유출 위험을 최소화하기 위해 중요합니다. 서드파티 데이터 거버넌스 레이블에 대한 자세한 정보 확인(Jordan의 문서 링크 추가)
+스키마를 구성하는 모든 필드에 서드파티 데이터 거버넌스 레이블을 추가하는 것이 좋습니다. 이는 서드파티 데이터의 책임 있는 사용을 보장하고 데이터 유출 위험을 최소화하기 위해 중요합니다. 에 대한 추가 정보 찾기 [타사 데이터 거버넌스 레이블](../../data-governance/labels/reference.md#partner-ecosystem-labels).
 
 이렇게 하려면 아래 단계를 수행합니다.
 

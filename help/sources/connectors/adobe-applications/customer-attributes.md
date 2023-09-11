@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 고객 속성 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 고객 속성을 Adobe Experience Platform에 연결하는 방법을 알아봅니다
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 10%
@@ -31,7 +31,7 @@ Experience Platform은 수집을 지원합니다 [!DNL Customer Attributes] 프�
 
 대상 [!DNL Customer Attributes] 다른 항목에 연결할 데이터 [!DNL Profile] 데이터 세트, 데이터 및 id는 Experience Cloud ID와 일치시킬 수 있어야 합니다.
 
-다음을 설정할 수 있습니다. `CORE` 네임스페이스: 을 사용하여 방문자의 Experience Cloud ID를 설정하는 경우 [웹 SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en), [Mobile SDK](https://aep-sdks.gitbook.io/docs/foundation-extensions/mobile-core/identity)또는 [Experience Cloud ID 서비스 API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=en).
+다음을 설정할 수 있습니다. `CORE` 네임스페이스: 을 사용하여 방문자의 Experience Cloud ID를 설정하는 경우 [웹 SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)또는 [Experience Cloud ID 서비스 API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=en).
 
 다음 [!DNL Customer Attributes] 파일이 다른 id 관계를 더 이상 채우지 않습니다. 예를 들어 [!DNL Customer Attributes] 소스 데이터 세트에 포함된 **이메일** 및 a **고객 충성도 ID** 필드를 선택한 다음 스키마에서 해당 필드를 id 필드로 레이블 지정하여 [!DNL Identity Service].
 

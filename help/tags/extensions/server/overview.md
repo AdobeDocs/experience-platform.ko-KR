@@ -2,10 +2,10 @@
 title: 이벤트 전달 확장 참조
 description: Adobe Experience Platform에서 이벤트 전달 확장에 대한 설명서를 찾습니다.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
+source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 21%
+source-wordcount: '191'
+ht-degree: 20%
 
 ---
 
@@ -47,4 +47,5 @@ ht-degree: 21%
 * [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)
+* [[!DNL Tiktok] 웹 이벤트 API](https://exchange.adobe.com/apps/ec/109834)*
 * [[!DNL Zendesk] 이벤트 API](./zendesk/overview.md)

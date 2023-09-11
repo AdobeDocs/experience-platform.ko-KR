@@ -4,9 +4,9 @@ title: 표준 경고 규칙
 description: 이 문서에서는 Experience Platform에서 제공하는 사전 정의된 경고 규칙에 대해 설명합니다.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
+source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '961'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,10 @@ Adobe Experience Platform은 조직에 대해 활성화할 수 있는 사전 정
 ## 데이터 수집
 
 다음 경고 규칙은 다음과 같습니다 [데이터 수집](../../ingestion/home.md) 및  [소스](../../sources/home.md):
+
+>[!NOTE]
+>
+>스트리밍 소스는 현재 경고에서 지원되지 않습니다. 배치 출처에 대한 경고 알림만 가입할 수 있습니다.
 
 | I/O 이벤트 구독 | 경고 규칙 | 설명 |
 | --- | --- | --- |

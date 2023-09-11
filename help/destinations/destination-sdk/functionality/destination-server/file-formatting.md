@@ -1,9 +1,9 @@
 ---
 description: '`/destination-servers'' 끝점을 통해 Adobe Experience Platform Destination SDK으로 빌드된 파일 기반 대상의 파일 형식 옵션을 구성하는 방법을 알아봅니다.'
 title: 파일 서식 구성
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1004'
 ht-degree: 4%
 
 ---
@@ -178,7 +178,7 @@ Experience Platform에서 받은 파일을 최적으로 읽고 해석하기 위�
 | `templatingStrategy` | 필수 여부 | 구성하는 각 파일 서식 옵션에 대해 매개 변수를 추가해야 합니다 `templatingStrategy`, 다음 두 가지 값을 가질 수 있습니다. <br><ul><li>`NONE`: 사용자가 구성에 대해 서로 다른 값 중에서 선택할 수 있도록 허용하지 않으려는 경우 이 값을 사용합니다. 다음을 참조하십시오 [이 구성](#file-configuration-templating-none) 파일 형식 지정 옵션이 고정된 예제.</li><li>`PEBBLE_V1`: 사용자가 구성에 대해 서로 다른 값 중에서 선택할 수 있도록 하려면 이 값을 사용합니다. 이 경우 에도 해당 고객 데이터 필드를 설정해야 합니다. `/destination` 엔드포인트 구성 : UI에서 사용자에게 다양한 옵션을 표시합니다. 다음을 참조하십시오 [이 구성](#file-configuration-templating-pebble) 예를 들어 사용자가 파일 서식 옵션에 대해 서로 다른 값 중에서 선택할 수 있습니다.</li></ul> | - | - | - |
 | `compression.value` | 선택 사항입니다 | 파일에 데이터를 저장할 때 사용할 압축 코덱입니다. 지원되는 값: `none`, `bzip2`, `gzip`, `lz4`, 및 `snappy`. | `none` | - | - |
 | `fileType.value` | 선택 사항입니다 | 출력 파일 형식을 지정합니다. 지원되는 값: `csv`, `parquet`, 및 `json`. | `csv` | - | - |
-| `csvOptions.quote.value` | 선택 사항입니다 | *다음에 대해서만`"fileType.value": "csv"`*. 구분 기호가 값의 일부일 수 있는 따옴표 붙은 값을 이스케이프 처리하는 데 사용되는 단일 문자를 설정합니다. | `null` | - | - |
+| `csvOptions.quote.value` | 선택 사항입니다 | *다음에 대해서만`"fileType.value": "csv"`*. 구분 기호가 값의 일부일 수 있는 따옴표 붙은 값을 이스케이프 처리하는 데 사용되는 단일 문자를 설정합니다. | `null` | 기본값 예: `quote.value: "u0000"` —> `male,NULJohn,LastNameNUL` | 사용자 정의 예: `quote.value: "\""` —> `male,"John,LastName"` |
 | `csvOptions.quoteAll.value` | 선택 사항입니다 | *다음에 대해서만`"fileType.value": "csv"`*. 모든 값을 항상 따옴표로 묶어야 하는지 여부를 나타냅니다. 기본적으로 따옴표 문자가 포함된 값만 이스케이프합니다. | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
 | `csvOptions.delimiter.value` | 선택 사항입니다 | *다음에 대해서만`"fileType.value": "csv"`*. 각 필드 및 값에 대한 구분 기호를 설정합니다. 이 구분 기호는 하나 이상의 문자일 수 있습니다. | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
 | `csvOptions.escape.value` | 선택 사항입니다 | *다음에 대해서만`"fileType.value": "csv"`*. 이미 인용된 값 내에서 인용 부호를 이스케이프하는 데 사용되는 단일 문자를 설정합니다. | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |

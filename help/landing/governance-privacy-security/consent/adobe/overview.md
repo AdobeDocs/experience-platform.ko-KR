@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform의 동의 처리
 description: Adobe 2.0 표준을 사용하여 Adobe Experience Platform에서 고객 동의 신호를 처리하는 방법에 대해 알아봅니다.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform을 사용하면 고객으로부터 수집한 동의 �
 >
 >이 문서는 Adobe 표준을 사용하는 동의 데이터 처리에 중점을 둡니다. IAB TCF(Transparency and Consent Framework) 2.0을 준수하여 동의 데이터를 처리하는 경우 의 안내서를 참조하십시오. [Adobe Real-time Customer Data Platform의 TCF 2.0 지원](../iab/overview.md).
 
-## 사전 요구 사항
+## 전제 조건
 
 이 안내서를 사용하려면 동의 데이터 처리와 관련된 다양한 Experience Platform 서비스에 대한 작업 이해가 필요합니다.
 
@@ -93,7 +93,7 @@ CMP 동의 변경 후크에서 트리거한 SDK 명령 외에도 동의 데이�
 
 모바일 애플리케이션에 고객 동의 환경 설정이 필요한 경우 Experience Platform Mobile SDK를 통합하여 동의 설정을 검색하고 업데이트할 수 있으며, 동의 API가 호출될 때마다 이를 Platform으로 전송할 수 있습니다.
 
-용 Mobile SDK 설명서 를 참조하십시오. [동의 모바일 확장 구성](https://aep-sdks.gitbook.io/docs/foundation-extensions/consent-for-edge-network) 및 [동의 API 사용](https://aep-sdks.gitbook.io/docs/foundation-extensions/consent-for-edge-network/api-reference). Mobile SDK를 사용하여 개인 정보 문제를 처리하는 방법에 대한 자세한 내용은 섹션을 참조하십시오 [개인 정보 및 GDPR](https://aep-sdks.gitbook.io/docs/resources/privacy-and-gdpr).
+용 Mobile SDK 설명서 를 참조하십시오. [동의 모바일 확장 구성](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) 및 [동의 API 사용](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Mobile SDK를 사용하여 개인 정보 문제를 처리하는 방법에 대한 자세한 내용은 섹션을 참조하십시오 [개인 정보 및 GDPR](https://developer.adobe.com/client-sdks/documentation/resources/privacy-and-gdpr/).
 
 ### XDM 호환 동의 데이터 직접 수집 {#batch}
 

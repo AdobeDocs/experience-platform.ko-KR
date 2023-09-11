@@ -5,9 +5,9 @@ description: 이 자습서를 따라 Adobe Experience Platform에서 외부 대�
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
 workflow-type: tm+mt
-source-wordcount: '1720'
+source-wordcount: '1722'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Adobe Experience Platform은 나중에 새 대상의 구성 요소로 사용할 
 
 세그먼트 정의에는 이름, 설명, 표현식(해당하는 경우), 생성 날짜, 마지막으로 수정한 날짜 및 ID와 같은 정보가 포함됩니다. ID는 세그먼트 자격을 충족하고 결과 대상자의 일부인 개별 프로필에 세그먼트 메타데이터를 연결합니다.
 
-| Audiences | 세그먼트 정의 |
+| 대상자 | 세그먼트 정의 |
 | --------- | ---------------- |
 | 찾으려는 프로필 그룹입니다. 세그먼트 정의를 사용할 때 세그먼트 자격을 충족하는 프로필 그룹이 됨을 의미합니다. | 찾고 있는 대상자를 세그먼트화하는 데 사용되는 규칙 그룹입니다. |
 
@@ -265,4 +265,4 @@ ID 네임스페이스를 만든 후에는 만들 세그먼트에 대한 새 스�
 
 >[!NOTE]
 >
->기본적으로 외부 대상 멤버십은 30일 동안만 유지됩니다. 30일 이상 보관하려면 `validUntil` 대상 데이터를 수집하는 동안 필드. 이 필드에 대한 자세한 내용은 의 안내서를 참조하십시오 [세그먼트 멤버십 세부 정보 스키마 필드 그룹](../../xdm/field-groups/profile/segmentation.md).
+>기본적으로 외부 대상 멤버십은 30일 후에 삭제됩니다. 삭제를 방지하고 30일 이상 보관하려면 `validUntil` 대상 데이터를 수집하는 동안 필드. 이 필드에 대한 자세한 내용은 의 안내서를 참조하십시오 [세그먼트 멤버십 세부 정보 스키마 필드 그룹](../../xdm/field-groups/profile/segmentation.md).

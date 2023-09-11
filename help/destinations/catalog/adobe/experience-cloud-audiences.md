@@ -3,9 +3,9 @@ title: (베타) Experience Cloud 대상
 description: Experience Platform에서 다양한 Experience Platform 솔루션으로 대상자를 공유하는 방법을 알아봅니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1632'
+source-wordcount: '1611'
 ht-degree: 2%
 
 ---
@@ -94,7 +94,7 @@ Experience Platform에서 대상이 처음 활성화되는 시간과 특정 사�
 
 로 내보내는 프로필 [!UICONTROL Experience Cloud 대상] 대상은 아래 표에 설명된 id에 매핑됩니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 에 대한 다음 문서를 참조하십시오. [ECID](/help/identity-service/ecid.md) 추가 정보. |
 | GAID | Google 광고 ID | 기본 ID(Google Advertising ID)를 사용하여 Experience Platform에 수집된 프로필을 이 대상으로 내보낼 수 있습니다. |
@@ -105,15 +105,12 @@ Experience Platform에서 대상이 처음 활성화되는 시간과 특정 사�
 
 ## 지원되는 대상자 {#supported-audiences}
 
-이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
-이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
-
-*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
-
-| 대상자 유형 | 설명 |
----------|----------|
-| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 대상자 원본 | 지원됨 | 설명 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
+| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 

@@ -2,9 +2,9 @@
 title: 대상에 대한 잠재 고객 활성화
 type: Tutorial
 description: 잠재 고객을 대상으로 활성화하는 방법을 알아봅니다
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '620'
 ht-degree: 12%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 12%
 
 ## 지원되는 대상 {#supported-destinations}
 
-다음으로 이동 **[!UICONTROL 연결]** > **[!UICONTROL 대상]**&#x200B;을(를) 클릭하고 **[!UICONTROL 카탈로그]** 탭. 사용 **[!UICONTROL 데이터 유형]** 필터링 및 선택 **[!UICONTROL 잠재 고객]** 잠재 고객 활성화를 지원하는 대상을 확인합니다. 현재 Prospect Audiences 내보내기는 [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) 대상.
+다음으로 이동 **[!UICONTROL 연결]** > **[!UICONTROL 대상]**&#x200B;을(를) 클릭하고 **[!UICONTROL 카탈로그]** 탭. 사용 **[!UICONTROL 데이터 유형]** 필터링 및 선택 **[!UICONTROL 잠재 고객]** 잠재 고객 활성화를 지원하는 대상을 확인합니다. 현재 Prospect Audiences 내보내기는 클라우드 스토리지 대상에서만 사용할 수 있습니다.
 
 ![데이터 세트 내보내기를 지원하는 대상](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 

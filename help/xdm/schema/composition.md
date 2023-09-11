@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스키마 컴포지션 기본 사항
 description: 이 문서에서는 XDM(경험 데이터 모델) 스키마와 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 구성 요소, 원칙 및 모범 사례에 대해 소개합니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '4140'
+source-wordcount: '4141'
 ht-degree: 6%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 6%
 
 [!DNL Experience Platform] 스키마를 사용하여 이 의미 체계 표준화를 유지 관리합니다. 스키마는 데이터를 설명하는 표준 방법입니다. [!DNL Experience Platform]를 사용하면 스키마를 준수하는 모든 데이터를 충돌 없이 조직에서 재사용하거나 여러 조직 간에 공유할 수 있습니다.
 
-XDM 스키마는 자체 포함된 형식으로 대량의 복잡한 데이터를 저장하는 데 이상적입니다. 의 섹션을 참조하십시오. [포함된 개체](#embedded) 및 [빅데이터](#big-data) xdm이 이 작업을 수행하는 방법에 대한 자세한 내용은 이 문서의 부록에서 확인할 수 있습니다.
+XDM 스키마는 대량의 복잡한 데이터를 자체 포함 형식으로 저장하는 데 이상적입니다. 의 섹션을 참조하십시오. [포함된 개체](#embedded) 및 [빅데이터](#big-data) xdm이 이 작업을 수행하는 방법에 대한 자세한 내용은 이 문서의 부록에서 확인할 수 있습니다.
 
 ### 의 스키마 기반 워크플로 [!DNL Experience Platform]
 
@@ -78,7 +78,7 @@ ID 데이터를 Platform으로 전송하는 방법에는 두 가지가 있습니
 >
 >를 사용하는 스키마 `identityMap` 관계에서 소스 스키마로 사용할 수 있지만 참조 스키마로 사용할 수는 없습니다. 모든 참조 스키마에는 소스 스키마 내의 참조 필드에 매핑될 수 있는 표시 ID가 있어야 하기 때문입니다. 의 UI 안내서 를 참조하십시오. [관계](../tutorials/relationship-ui.md) 소스 및 참조 스키마의 요구 사항에 대해 자세히 알아보십시오.
 
-그러나 ID 맵은 ID를 함께 저장하는 소스(예: )에서 데이터를 가져오는 경우 특히 유용할 수 있습니다 [!DNL Airship] 또는 Adobe Audience Manager), 또는 스키마에 대한 ID의 수가 가변 인 경우. 또한 를 사용하는 경우 ID 맵이 필요합니다. [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
+그러나 ID 맵은 ID를 함께 저장하는 소스(예: )에서 데이터를 가져오는 경우 특히 유용할 수 있습니다 [!DNL Airship] 또는 Adobe Audience Manager), 또는 스키마에 대한 ID의 수가 가변 인 경우. 또한 를 사용하는 경우 ID 맵이 필요합니다. [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 간단한 ID 맵의 예는 다음과 같습니다.
 

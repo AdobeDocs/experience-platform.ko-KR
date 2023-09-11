@@ -2,9 +2,9 @@
 title: 설명서 셀프서비스 템플릿 // 대상 이름으로 바꾸기
 description: 이 템플릿을 사용하여 Adobe Experience Platform 카탈로그의 대상에 대한 공개 설명서를 만듭니다. // 개요 섹션의 단락으로 바꾸기
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1604'
 ht-degree: 1%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-*고객에게 제공하는 가치를 포함하여 회사에 대한 간략한 개요를 제공하십시오. 자세히 읽어보려면 제품 설명서 홈페이지에 대한 링크를 포함하십시오.*
+*고객에게 제공하는 가치를 포함하여 회사에 대한 간략한 개요를 제공하십시오. 자세히 알아보려면 제품 설명서 홈페이지에 대한 링크를 포함하십시오.*
 
 >[!IMPORTANT]
 >
->이 대상 커넥터 및 설명서 페이지는 *Yourdestination* 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. *예를 들어 업데이트에 연결할 수 있는 링크 또는 이메일 주소를 삽입합니다. `support@YourDestination.com`.*
+>이 대상 커넥터 및 설명서 페이지는 *Yourdestination* 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. *예를 들어 업데이트에 대해 연락할 수 있는 링크 또는 이메일 주소를 삽입합니다. `support@YourDestination.com`.*
 
 ## 사용 사례 {#use-cases}
 
@@ -61,7 +61,7 @@ ht-degree: 1%
 
 *Yourdestination* 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | GAID | Google 광고 ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
@@ -74,19 +74,14 @@ ht-degree: 1%
 
 ## 지원되는 대상자 {#supported-audiences}
 
-*이 섹션에서 대상에서 지원하는 대상에 대한 정보를 추가합니다. 우리는 몇 가지 표준 값으로 표를 미리 채웠다. 대상에 적용되지 않는 값과 미리 채워지지 않은 값을 삭제합니다.*
+*이 섹션에서 대상에서 지원하는 대상에 대한 정보를 추가합니다. 우리는 몇 가지 표준 값으로 표를 미리 채웠다. 사용 `✓` 및 `X` 대상 유형이 이 대상에서 지원되는지 여부를 표시하는 문자입니다.*
 
-이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
-이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
-
-*대상이 외부 대상의 활성화를 지원하지 않는 경우 표와 함께 아래 구문을 제거합니다.*
-
-*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
-
-| 대상자 유형 | 설명 |
----------|----------|
-| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 대상자 원본 | 지원됨 | 설명 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
+| 사용자 정의 업로드 | X | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -158,7 +153,7 @@ ht-degree: 1%
 
 ### 속성 및 ID 매핑 {#map}
 
-*활성화 워크플로의 매핑 단계에서 소스 필드와 대상 필드 간에 지원되는 매핑에 대한 정보를 추가합니다. 대상은 프로필 속성, ID 네임스페이스 또는 둘 다 내보내기를 지원할 수 있습니다. 일부 필드는 필수일 수 있습니다. Target 속성은 사전 정의되거나 사용자 지정될 수 있습니다. 중요한 주의 사항을 호출하고 예를 들어 스크린샷을 사용하는 것이 좋습니다. 참조로 사용할 수 있는 대상 페이지의 두 가지 예는 다음과 같습니다.*
+*활성화 워크플로의 매핑 단계에서 소스 필드와 대상 필드 간에 지원되는 매핑에 대한 정보를 추가합니다. 대상은 프로필 속성, ID 네임스페이스 또는 둘 다 내보내기를 지원할 수 있습니다. 일부 필드는 필수일 수 있습니다. 타겟 속성은 사전 정의되거나 사용자 지정될 수 있습니다. 중요한 주의 사항을 호출하고 예를 들어 스크린샷을 사용하는 것이 좋습니다. 참조로 사용할 수 있는 대상 페이지의 두 가지 예는 다음과 같습니다.*
 
 * *[페가](/help/destinations/catalog/personalization/pega.md#mapping-example)*
 * *[메달리아](/help/destinations/catalog/voice/medallia-connector.md#map)*

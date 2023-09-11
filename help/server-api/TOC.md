@@ -5,19 +5,18 @@ user-guide-title: Edge Network Server API 설명서
 breadcrumb-title: Edge Network Server API 설명서
 user-guide-description: Experience Cloud 또는 Experience Platform Edge 서비스의 데이터 수집, 개인화, 광고 및 마케팅 사용 사례에 Edge Network Server API를 사용하십시오.
 feature: Data Collection
-source-git-commit: be073dcc62f0cf5b94f94082348442e2526604a7
+source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 39%
+source-wordcount: '99'
+ht-degree: 44%
 
 ---
 
 
 # Edge Network Server API 설명서 {#edge-network-server-api}
 
-
-* [Edge Network Server API 개요](overview.md)
-* [Edge Network Server API의 성능 보호 기능](guardrails.md)
+* [개요](overview.md)
+* [성능 보호](guardrails.md)
 * [인증](authentication.md)
 * 데이터 수집 {#data-collection}
    * [단일 이벤트 데이터 수집](interactive-data-collection.md)

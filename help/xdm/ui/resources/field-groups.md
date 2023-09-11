@@ -4,14 +4,19 @@ solution: Experience Platform
 title: UI에서 스키마 필드 그룹 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마 필드 그룹을 만들고 편집하는 방법을 알아봅니다.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 542ad49f475ac9586da506a8afa5408e83262121
+source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
 workflow-type: tm+mt
-source-wordcount: '839'
-ht-degree: 0%
+source-wordcount: '901'
+ht-degree: 1%
 
 ---
 
-# UI에서 스키마 필드 그룹 만들기 및 편집
+# UI에서 스키마 필드 그룹 생성 및 편집 {#ui-create-and-edit}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup_filter"
+>title="표준 또는 사용자 지정 필드 그룹 필터"
+>abstract="사용 가능한 필드 그룹 목록은 작성 방법에 따라 사전 필터링됩니다. 라디오 단추를 선택하여 표준 옵션과 사용자 정의 옵션 중에서 선택합니다. 표준 옵션은 Adobe에 의해 생성된 엔티티를 표시하고 사용자 지정 옵션은 조직 내에서 생성된 엔티티를 표시합니다. 필드 그룹 만들기 및 편집에 대한 자세한 내용은 설명서를 참조하십시오."
 
 XDM(Experience Data Model)에서 스키마 필드 그룹은 개인 세부 정보, 호텔 환경 설정 또는 주소와 같은 특정 기능을 구현하는 하나 이상의 필드를 정의하는 재사용 가능한 구성 요소입니다. 필드 그룹은 호환 가능한 클래스를 구현하는 스키마의 일부로 포함하기 위한 것입니다.
 
@@ -19,9 +24,9 @@ XDM(Experience Data Model)에서 스키마 필드 그룹은 개인 세부 정보
 
 Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 많은 표준 필드 그룹을 제공합니다. 그러나 사용자 정의 필드 그룹을 만들고 편집하여 XDM 스키마 내에서 비즈니스와 관련된 추가 개념을 정의할 수도 있습니다. 이 안내서에서는 Platform UI에서 조직의 사용자 정의 필드 그룹을 생성, 편집 및 관리하는 방법에 대한 개요를 제공합니다.
 
-## 사전 요구 사항
+## 전제 조건
 
-이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. 다음을 참조하십시오. [XDM 개요](../../home.md) Experience Platform 생태계 내에서 XDM의 역할에 대한 소개 및 [스키마 컴포지션 기본 사항](../../schema/composition.md) 필드 그룹이 XDM 스키마에 기여하는 방식.
+이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. 다음을 참조하십시오. [XDM 개요](../../home.md) Experience Platform 에코시스템 내에서 XDM의 역할 소개 및 [스키마 컴포지션 기본 사항](../../schema/composition.md) 필드 그룹이 XDM 스키마에 기여하는 방식.
 
 이 안내서에서는 필요하지 않지만, [UI에서 스키마 작성](../../tutorials/create-schema-ui.md) 의 다양한 기능에 익숙해지려면 [!DNL Schema Editor].
 

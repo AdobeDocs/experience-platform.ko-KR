@@ -3,10 +3,10 @@ keywords: 사용자 정의 개인화; 대상; experience platform 사용자 정�
 title: 사용자 지정 개인화 연결
 description: 이 대상은 Adobe Experience Platform에서 대상 정보를 검색할 수 있는 방법을 통해 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필 대상 멤버십을 기반으로 실시간 개인화를 제공합니다.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 8%
+source-wordcount: '915'
+ht-degree: 9%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 8%
 
 ## 전제 조건 {#prerequisites}
 
-이 통합은 [Adobe Experience Platform 웹 SDK](../../../edge/home.md) 또는 [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). 이 대상을 사용하려면 다음 SDK 중 하나를 사용해야 합니다.
+이 통합은 [Adobe Experience Platform 웹 SDK](../../../edge/home.md) 또는 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). 이 대상을 사용하려면 다음 SDK 중 하나를 사용해야 합니다.
 
 >[!IMPORTANT]
 >
@@ -43,15 +43,12 @@ ht-degree: 8%
 
 ## 지원되는 대상자 {#supported-audiences}
 
-이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
-이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
-
-*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
-
-| 대상자 유형 | 설명 |
----------|----------|
-| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 대상자 원본 | 지원됨 | 설명 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
+| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 

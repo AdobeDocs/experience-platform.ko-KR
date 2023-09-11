@@ -1,11 +1,11 @@
 ---
 title: 사용자 지정 대상 연결 twitter
-description: Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에서 기존 팔로우어 및 고객을 Target 하고 관련 리마케팅 캠페인을 만듭니다
+description: Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 관련 리마케팅 캠페인을 생성합니다
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 4%
+source-wordcount: '840'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-Twitter에서 기존 팔로우어 및 고객을 Target 하고 Adobe Experience Platform 내에 구축된 대상을 활성화하여 관련 리마케팅 캠페인을 만듭니다.
+Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 관련 리마케팅 캠페인을 생성합니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -26,7 +26,7 @@ Twitter에서 기존 팔로우어 및 고객을 Target 하고 Adobe Experience P
 
 [!DNL Twitter Custom Audiences] 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | device_id | IDFA/AdID/Android ID | Google Advertising ID(GAID) 및 Apple ID for Advertisers(IDFA)는 Adobe Experience Platform에서 지원됩니다. 소스 스키마에서 이러한 네임스페이스 및/또는 속성을 [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 대상 활성화 워크플로의 일부입니다. |
 | 이메일 | 사용자의 이메일 주소 | 일반 텍스트 이메일 주소와 SHA256 해시된 이메일 주소를 이 필드에 매핑하십시오. 소스 필드에 해시되지 않은 속성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션, 보유 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. Adobe Experience Platform에 업로드하기 전에 고객 이메일 주소를 해시하는 경우 이러한 ID는 소금 없이 SHA256을 사용하여 해시해야 합니다. |
@@ -35,15 +35,12 @@ Twitter에서 기존 팔로우어 및 고객을 Target 하고 Adobe Experience P
 
 ## 지원되는 대상자 {#supported-audiences}
 
-이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
-이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
-
-*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
-
-| 대상자 유형 | 설명 |
----------|----------|
-| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 대상자 원본 | 지원됨 | 설명 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
+| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -64,7 +61,7 @@ Twitter에서 기존 팔로우어 및 고객을 Target 하고 Adobe Experience P
 
 ### 사용 사례 #1
 
-Twitter에서 기존 팔로우어 및 고객을 Target 하고 Adobe Experience Platform 내에 구축된 대상을 활성화하여 관련 리마케팅 캠페인을 만듭니다. [!DNL List Custom Audiences] twitter.
+Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 관련 리마케팅 캠페인을 생성합니다. [!DNL List Custom Audiences] twitter.
 
 ## 대상에 연결 {#connect}
 

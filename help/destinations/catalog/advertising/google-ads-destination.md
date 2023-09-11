@@ -3,9 +3,9 @@ keywords: Google 광고;google 광고;google adwords;Google 광고;Google 광고
 title: Google 광고 연결
 description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업이 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 과금 광고를 할 수 있도록 해주는 온라인 광고 서비스입니다.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '974'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 [!DNL Google Ad Manager] 는 아래 표에 설명된 id 활성화를 지원합니다.
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | 소스 ID가 GAID 네임스페이스인 경우 이 대상 ID를 선택합니다. |
 | IDFA | [!DNL Apple ID for Advertisers] | 소스 ID가 IDFA 네임스페이스인 경우 이 대상 ID를 선택합니다. |
@@ -45,15 +45,12 @@ ht-degree: 2%
 
 ## 지원되는 대상자 {#supported-audiences}
 
-이 섹션에서는 이 대상으로 내보낼 수 있는 모든 대상에 대해 설명합니다.
+이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
-이 대상은 Experience Platform을 통해 생성된 모든 대상의 활성화를 지원합니다 [세분화 서비스](../../../segmentation/home.md).
-
-*추가로*, 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
-
-| 대상자 유형 | 설명 |
----------|----------|
-| 사용자 정의 업로드 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 대상자 원본 | 지원됨 | 설명 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
+| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -88,7 +85,7 @@ ht-degree: 2%
 * **계정 ID**: Google이 있는 Adobe의 계정 ID. 계정 ID: 87933855.
 * **고객 ID**: Google이 있는 Adobe의 고객 계정 ID. 고객 ID: 89690775.
 * 계정 유형: **애드워즈**
-* **Google 애드워즈 ID**: 이 ID는 와(과) 동일합니다. [!DNL Google]. ID 형식은 일반적으로 123-456-7890입니다.
+* **Google AdWords ID**: 이 ID는 와(과) 동일합니다. [!DNL Google]. ID 형식은 일반적으로 123-456-7890입니다.
 
 ## 대상에 연결 {#connect}
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침
 title: ID 서비스 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 2f226ae1356733b89b10e73ef1a371c42da05295
+source-git-commit: 87138cbf041e40bfc6b42edffb16f5b8a8f5b365
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1112'
 ht-degree: 1%
 
 ---
@@ -70,7 +70,8 @@ ht-degree: 1%
 >
 > * 개인 식별자(예: CRM ID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.
 > * 쿠키/장치 식별자가 교차 장치 ID 유형으로 구성된 사용자 지정 네임스페이스입니다.
-
+>
+>이 기능을 사용할 수 있게 되면 50개 ID의 제한을 초과하는 그래프는 최대 50개 ID로 줄어듭니다. Real-Time CDP B2C 에디션의 경우, 세분화 및 활성화에서 이전에 무시했던 프로필의 수가 대상에 대해 자격 조건을 충족하면 프로필 수가 최소한으로 증가할 수 있습니다.
 
 전체 ID 그래프가 업데이트되면 Identity Service는 최신 ID를 추가하기 전에 그래프에서 가장 오래된 ID를 삭제합니다. 이는 신원 데이터의 정확성과 관련성을 유지하기 위함이다. 이 삭제 프로세스는 다음 두 가지 기본 규칙을 따릅니다.
 
@@ -108,3 +109,8 @@ ht-degree: 1%
 * 드문 경우지만 동일한 타임스탬프와 ID 유형을 가진 두 개의 ID가 있는 경우 Identity Service는 다음을 기준으로 ID를 정렬합니다 [XID](./api/list-native-id.md) 삭제를 수행합니다.
 
 >[!ENDSHADEBOX]
+
+삭제는 ID 서비스의 데이터에만 발생하며 실시간 고객 프로필에는 발생하지 않습니다.
+
+* ECID가 더 이상 ID 그래프의 일부가 아니기 때문에 이 동작은 결과적으로 단일 ECID로 더 많은 프로필을 만들 수 있습니다.
+* 지정 가능한 대상 자격 번호 내에 계속 있으려면 을 활성화하는 것이 좋습니다 [익명 프로필 데이터 만료](../profile/pseudonymous-profiles.md) 이전 프로필을 삭제합니다.

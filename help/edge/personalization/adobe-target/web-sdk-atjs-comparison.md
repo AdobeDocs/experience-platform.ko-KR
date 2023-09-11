@@ -3,9 +3,9 @@ title: at.js와 Experience Platform Web SDK 비교
 description: at.js 기능을 Experience Platform Web SDK와 비교하는 방법에 대해 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;의사 결정 범위;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;의사 결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 5065d76ad8008988c843c88e33a25731fb5284d0
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: '2281'
 ht-degree: 6%
 
 ---
@@ -100,7 +100,7 @@ alloy("configure", {
 [추가 정보](../../fundamentals/configuring-the-sdk.md)
 
 
-## 페이지 로드 Target 오퍼를 요청하고 자동으로 렌더링하는 방법
+## 페이지 로드 타겟 오퍼를 요청하고 자동으로 렌더링하는 방법
 
 ### at.js 사용
 
@@ -210,7 +210,7 @@ Experience Platform Web SDK는 웹 SDK에서 실행한 오퍼와 함께 알림�
 
 [추가 정보](../rendering-personalization-content.md)
 
-## 페이지 로드 Target 오퍼를 요청하고 자동으로 렌더링하지 않는 방법
+## 페이지 로드 타겟 오퍼를 요청하고 자동으로 렌더링하지 않는 방법
 
 ### at.js 사용
 
@@ -1005,7 +1005,7 @@ alloy("sendEvent", {
 });
 ```
 
-## Target Recommendations을 사용하는 방법
+## Target Recommendations 사용 방법
 
 ### at.js 사용
 
@@ -1182,7 +1182,7 @@ window.targetPageParams = function() {
 
 고객은 Web SDK를 사용하여 데이터 스트림 구성을 설정할 때 Adobe Target 네임스페이스 아래에 있는 속성을 더 높은 수준으로 설정할 수 있습니다.
 ![](assets/at-property-setup.png)
-즉, 특정 데이터 스트림 구성에 대한 모든 Target 호출에는 해당 속성 토큰이 포함됩니다.
+즉, 특정 데이터 스트림 구성에 대한 모든 Target 호출에 해당 속성 토큰이 포함됩니다.
 
 ## mbox를 미리 가져오는 방법
 
@@ -1223,18 +1223,18 @@ adobe.target.getOffers({
 
 At.js는 다음 디버깅 기능을 노출합니다.
 
-* Mbox 비활성화 - Target을 가져오고 렌더링하지 않도록 하여 Target 상호 작용 없이 페이지가 손상되었는지 확인
+* Mbox 비활성화 - Target을 가져오고 렌더링하지 않도록 비활성화하여 페이지가 Target 상호 작용 없이 중단되었는지 확인
 * Mbox 디버그 - at.js는 모든 작업을 기록합니다.
 * Target 추적 - Bullseye에서 생성된 mbox 추적 토큰을 사용하면 의사 결정 프로세스에 참여한 세부 사항이 있는 추적 개체를 다음에서 사용할 수 있습니다. `window.___target_trace` 오브젝트
 
-참고: 이러한 모든 디버깅 기능은에서 향상된 기능을 통해 사용할 수 있습니다. [Adobe Experience Platform 디버거](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+참고: 이러한 모든 디버깅 기능은에서 향상된 기능을 통해 사용할 수 있습니다. [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 ### Web SDK 사용
 
 Web SDK를 사용할 때 여러 디버깅 기능을 사용할 수 있습니다.
 
-* 사용 [그리폰](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* 사용 [보증](../../../assurance/home.md)
 * [웹 SDK 디버그 활성화됨](../../../edge/fundamentals/debugging.md)
 * 사용 [Web SDK 모니터링 후크](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* 사용 [Adobe Experience Platform 디버거](../../../debugger/home.md)
-* Target 추적
+* 사용 [Adobe Experience Platform Debugger](../../../debugger/home.md)
+* 대상 추적

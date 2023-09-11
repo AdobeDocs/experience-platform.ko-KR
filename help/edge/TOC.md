@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform Web SDK 도움말
 breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
-source-git-commit: cc864e091f5e3f338f025238572158f555c3ede9
+source-git-commit: 95d7b16efb638c37d8db3f56b0f3fbf6aa9d15df
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '170'
 ht-degree: 30%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 30%
 * [Platform Web SDK 개요](home.md)
 * 기본 사항 {#fundamentals}
    * [지원되는 사용 사례](fundamentals/supported-use-cases.md)
-   * [사전 요구 사항](fundamentals/prerequisite.md)
+   * [전제 조건](fundamentals/prerequisite.md)
    * [SDK 설치](fundamentals/installing-the-sdk.md)
    * [SDK 구성](fundamentals/configuring-the-sdk.md)
    * [명령 실행](fundamentals/executing-commands.md)
@@ -34,7 +34,7 @@ ht-degree: 30%
 * 데이터 수집 {#data-collection}
    * [자동으로 수집된 정보](data-collection/automatic-information.md)
    * [링크 추적](data-collection/track-links.md)
-   * [상거래 및 제품 데이터 수집](data-collection/collect-commerce-data.md)
+   * [상거래, 제품 및 주문 데이터 수집](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
       * [Platform Web SDK로 Adobe Analytics 사용](data-collection/adobe-analytics/analytics-overview.md)
       * [Analytics 변수 매핑](data-collection/adobe-analytics/manually-mapping-variables.md)
@@ -50,7 +50,7 @@ ht-degree: 30%
       * [응답 토큰 액세스](personalization/adobe-target/accessing-response-tokens.md)
       * [mbox 타사 ID 사용](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [at.js 라이브러리와 Web SDK 비교](personalization/adobe-target/web-sdk-atjs-comparison.md)
-      * A4T(Target 분석) 로깅 {#a4t}
+      * A4T(Analytics for Target) 로깅 {#a4t}
          * [개요](personalization/adobe-target/analytics-logging/overview.md)
          * [클라이언트측 로깅](personalization/adobe-target/analytics-logging/client-side.md)
          * [서버측 로깅](personalization/adobe-target/analytics-logging/server-side.md)

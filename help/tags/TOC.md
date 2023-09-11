@@ -5,9 +5,9 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: 1ca080f6dd62c49c1f1672ec36ce446af591b6b6
+source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1034'
 ht-degree: 31%
 
 ---
@@ -246,6 +246,7 @@ ht-degree: 31%
          * [개요](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [개요](./extensions/server/twitter/overview.md)
+      * [[!DNL Tiktok] 웹 이벤트 API](https://exchange.adobe.com/apps/ec/109834)
       * [!DNL Zendesk] 이벤트 API {#zendesk}
          * [개요](./extensions/server/zendesk/overview.md)
 * 확장 개발 {#extension-dev}

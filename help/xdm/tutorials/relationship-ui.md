@@ -5,9 +5,9 @@ title: 스키마 편집기를 사용하여 두 스키마 간의 관계 정의
 description: 이 문서에서는 Experience Platform 사용자 인터페이스에서 스키마 편집기를 사용하여 두 스키마 간의 관계를 정의하는 자습서를 제공합니다.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1161'
 ht-degree: 9%
 
 ---
@@ -32,6 +32,10 @@ ht-degree: 9%
 Adobe Experience Platform에서는 다양한 채널에서 고객과 브랜드와의 상호 작용 간의 관계를 이해하는 기능이 중요합니다. 구조 내에서 이러한 관계 정의 [!DNL Experience Data Model] (XDM) 스키마를 사용하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
 
 한편 스키마 관계는 유니온 스키마 및 의 사용을 통해 추론될 수 있다. [!DNL Real-Time Customer Profile], 이는 동일한 클래스를 공유하는 스키마에만 적용됩니다. 다른 클래스에 속하는 두 스키마 간의 관계를 설정하려면 소스 스키마에 다른 관련 스키마의 ID를 참조하는 전용 관계 필드를 추가해야 합니다.
+
+>[!NOTE]
+>
+>소스 및 대상 스키마가 모두 동일한 클래스에 속하는 경우 전용 관계 필드는 다음과 같아야 합니다 **아님** 사용합니다. 이 경우 유니온 스키마 UI를 사용하여 관계를 확인합니다. 이 작업을 수행하는 방법에 대한 지침은 [관계 보기](../../profile/ui/union-schema.md#view-relationships) 유니온 스키마 UI 안내서의 섹션.
 
 이 문서는에서 스키마 편집기를 사용하여 두 스키마 간의 관계를 정의하는 자습서를 제공합니다. [!DNL Experience Platform] 사용자 인터페이스. API를 사용하여 스키마 관계를 정의하는 단계는 [스키마 레지스트리 API를 사용하여 관계 정의](relationship-api.md).
 

@@ -2,9 +2,9 @@
 title: 데이터스트림 구성
 description: 클라이언트측 Web SDK 통합 기능을 다른 Adobe 제품 및 서드파티 대상과 연결하는 방법에 대해 알아봅니다.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2276'
 ht-degree: 100%
 
 ---
@@ -57,7 +57,7 @@ Experience Platform에 사용할 데이터스트림을 구성하고 Platform Web
 | [!UICONTROL 서드파티 ID 동기화] | ID 동기화를 컨테이너로 그룹화하면 다른 시간대에 다른 ID 동기화를 실행할 수 있습니다. 활성화되면 이 설정을 사용하여 이 데이터스트림에 실행되는 ID 동기화의 컨테이너를 지정할 수 있습니다. |
 | [!UICONTROL 서드파티 ID 동기화 컨테이너 ID] | 서드파티 ID 동기화에 사용할 컨테이너의 숫자 ID. |
 | [!UICONTROL 컨테이너 ID 재정의] | 이 섹션에서는 기본 ID 재정의에 사용할 수 있는 추가 서드파티 ID 동기화 컨테이너 ID를 정의할 수 있습니다. |
-| [!UICONTROL 유형에 액세스] | Edge Network가 데이터스트림에 대해 허용하는 인증 유형을 정의합니다. <ul><li>**[!UICONTROL 혼합 인증]**: 이 옵션을 선택하는 경우 Edge Network는 인증된 요청과 인증되지 않은 요청을 모두 허용합니다. Web SDK 또는 [Mobile SDK](https://aep-sdks.gitbook.io/docs/)를 사용하려는 경우 [Server API](../server-api/overview.md)와 함께 이 옵션을 선택합니다. </li><li>**[!UICONTROL 인증된 요청만]**: 이 옵션을 선택하는 경우 Edge Network는 인증된 요청만 허용합니다. Server API만 사용하고 인증되지 않은 요청이 Edge Network에서 처리되지 않도록 하려면 이 옵션을 선택합니다.</li></ul> |
+| [!UICONTROL 유형에 액세스] | Edge Network가 데이터스트림에 대해 허용하는 인증 유형을 정의합니다. <ul><li>**[!UICONTROL 혼합 인증]**: 이 옵션을 선택하는 경우 Edge Network는 인증된 요청과 인증되지 않은 요청을 모두 허용합니다. Web SDK 또는 [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)를 사용하려는 경우 [Server API](../server-api/overview.md)와 함께 이 옵션을 선택합니다. </li><li>**[!UICONTROL 인증된 요청만]**: 이 옵션을 선택하는 경우 Edge Network는 인증된 요청만 허용합니다. Server API만 사용하고 인증되지 않은 요청이 Edge Network에서 처리되지 않도록 하려면 이 옵션을 선택합니다.</li></ul> |
 
 여기에서 Experience Platform에 대한 데이터스트림을 구성하는 경우 [데이터 수집을 위한 데이터 준비](./data-prep.md)에 대한 튜토리얼을 참조하여 이 안내서로 돌아가기 전에 데이터를 Platform 이벤트 스키마에 매핑합니다. 그렇지 않은 경우 **[!UICONTROL 저장]**&#x200B;을 선택하고 다음 섹션으로 계속 진행합니다.
 
