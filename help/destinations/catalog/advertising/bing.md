@@ -1,11 +1,11 @@
 ---
 keywords: 광고; bing;
 title: Microsoft Bing 연결
-description: Microsoft Bing 연결 대상을 사용하면 Microsoft 디스플레이 광고 전반에 걸쳐 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있습니다.
+description: Microsoft Bing 연결 대상을 사용하면 디스플레이 광고, 검색 및 기본을 포함하여 전체 Microsoft Advertising Network에서 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있습니다.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 093ddd1651e15bebf73d007fb05042fbcf02c675
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '690'
 ht-degree: 8%
 
 ---
@@ -14,13 +14,15 @@ ht-degree: 8%
 
 ## 개요 {#overview}
 
-다음 [!DNL Microsoft Bing] 대상 은 프로필 데이터를에 전송하는 데 도움이 됩니다. [!DNL Microsoft Display Advertising].
+사용 [!DNL Microsoft Bing] 프로필 데이터를 전체에 보낼 대상 [!DNL Microsoft Advertising Network], 포함 [!DNL Display Advertising], [!DNL Search], 및 [!DNL Native].
+
+다음 [!DNL Microsoft Bing] 대상이 다음을 생성합니다. *[!DNL Custom Audiences]* Microsoft. 이러한 기능은 모두에서 사용할 수 있습니다. [!DNL Microsoft Search Network] 및 [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic])에 나열되어 있습니다. [Microsoft Advertising 설명서](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 프로필 데이터를 (으)로 보내려면 [!DNL Microsoft Bing], 먼저 대상에 연결해야 합니다.
 
 ## 사용 사례 {#use-cases}
 
-마케터로서 다음으로 구성된 대상을 사용할 수 있기를 원합니다 [!DNL Microsoft Advertising IDs] 간 디스플레이 광고를 통해 사용자를 타겟팅하려면 [!DNL Microsoft Advertising] 채널.
+마케터로서 다음으로 구성된 대상을 사용할 수 있기를 원합니다 [!DNL Microsoft Advertising IDs] 디스플레이 또는 검색 광고를 통해 사용자를 타겟팅하려면 [!DNL Microsoft Advertising] 채널.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -74,7 +76,7 @@ ht-degree: 8%
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](../../ui/connect-destination.md).
 
-### 연결 매개 변수 {#parameters}
+### 대상 세부 정보 입력 {#parameters}
 
 While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정보를 제공해야 합니다.
 
