@@ -3,9 +3,9 @@ title: 흐름 서비스 API를 사용하여 Google PubSub 소스 연결 만들�
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Google PubSub 계정에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '996'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 1%
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
 | `projectId` | 인증에 필요한 프로젝트 ID [!DNL PubSub]. |
-| `credentials` | 인증에 필요한 자격 증명 또는 키 [!DNL PubSub]. |
+| `credentials` | 인증에 필요한 자격 증명 [!DNL PubSub]. 자격 증명에서 공백을 제거한 후 전체 JSON 파일을 넣었는지 확인해야 합니다. |
 | `topicName` | 메시지 피드를 나타내는 리소스의 이름입니다. 의 특정 데이터 스트림에 대한 액세스 권한을 제공하려면 항목 이름을 지정해야 합니다 [!DNL PubSub] 소스. 주제 이름 형식은 다음과 같습니다. `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
 | `subscriptionName` | 의 이름 [!DNL PubSub] 구독. 위치 [!DNL PubSub]가입을 사용하면 메시지가 게시된 주제를 구독하여 메시지를 받을 수 있습니다. **참고**: 단일 [!DNL PubSub] 구독은 하나의 데이터 흐름에만 사용할 수 있습니다. 여러 데이터 흐름을 만들려면 구독이 여러 개 있어야 합니다. 구독 이름 형식은 다음과 같습니다. `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 대상 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 다음 [!DNL PubSub] 연결 사양 ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |

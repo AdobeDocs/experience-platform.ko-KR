@@ -3,10 +3,10 @@ title: UI에서 Google PubSub 소스 연결 만들기
 description: Platform 사용자 인터페이스를 사용하여 Google PubSub 소스 커넥터를 만드는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '1028'
-ht-degree: 0%
+source-wordcount: '1043'
+ht-degree: 1%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
 | 프로젝트 ID | 인증에 필요한 프로젝트 ID [!DNL PubSub]. |
-| 자격 증명 | 인증에 필요한 자격 증명 또는 개인 키 ID [!DNL PubSub]. |
+| 자격 증명 | 인증에 필요한 자격 증명 [!DNL PubSub]. 자격 증명에서 공백을 제거한 후 전체 JSON 파일을 넣었는지 확인해야 합니다. |
 | 주제 이름 | 의 이름 [!DNL PubSub] 구독. 위치 [!DNL PubSub]가입을 사용하면 메시지가 게시된 주제를 구독하여 메시지를 받을 수 있습니다. **참고**: 단일 [!DNL PubSub] 구독은 하나의 데이터 흐름에만 사용할 수 있습니다. 여러 데이터 흐름을 만들려면 구독이 여러 개 있어야 합니다. |
 | 구독 이름 | 의 이름 [!DNL PubSub] 구독. 위치 [!DNL PubSub]가입을 사용하면 메시지가 게시된 주제를 구독하여 메시지를 받을 수 있습니다. |
 
