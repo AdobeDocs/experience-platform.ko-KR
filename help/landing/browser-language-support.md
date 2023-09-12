@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Experience Platform UI에 대한 브라우저 및 언어 지원
 description: Adobe Experience Platform은 고객 경험을 주도하는 완벽한 솔루션을 구축하고 관리하기 위해 시장에서 가장 강력하고 유연하며 개방적인 시스템입니다. Experience Platform을 사용하면 조직 내 모든 시스템의 고객 데이터와 컨텐츠를 중앙 집중화 및 표준화하고 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험을 더 잘 설계하고 전달할 수 있습니다.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 20cb7afe6338f1ca79e86558f1f0cbec54790212
+source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 24%
+source-wordcount: '247'
+ht-degree: 23%
 
 ---
 
@@ -51,9 +51,11 @@ Platform UI는 현재 다음 언어로 제공됩니다.
 
 언어를 변경하는 방법:
 
-1. 의 바닥글에서 현재 언어를 선택합니다. [!DNL Experience Platform] 사용자 인터페이스.
-2. 프로필 설정에서 을 선택합니다. **[!UICONTROL 영역 변경]**.
-3. 지역을 선택합니다.
+1. Experience Platform 계정에 로그인합니다.
+1. 누르기 `Ctrl + i` 계정 정보 메뉴를 표시합니다.
+1. 다음으로 이동 **[!UICONTROL 기본 언어]**.
+1. 첫 번째 및 두 번째 언어 기본 설정을 선택합니다.
+1. 선택 **[!UICONTROL 저장]** 창을 닫습니다.
 
 >[!NOTE]
 >
