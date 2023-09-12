@@ -1,9 +1,9 @@
 ---
 description: '`/destination-servers'' 끝점을 통해 Adobe Experience Platform Destination SDK으로 빌드된 파일 기반 대상의 파일 형식 옵션을 구성하는 방법을 알아봅니다.'
 title: 파일 서식 구성
-source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
+source-git-commit: 4f4ffc7fc6a895e529193431aba77d6f3dcafb6f
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1093'
 ht-degree: 4%
 
 ---
@@ -119,7 +119,11 @@ Experience Platform에서 받은 파일을 최적으로 읽고 해석하기 위�
                 "value": ""
             }
         },
-        "maxFileRowCount":5000000
+        "maxFileRowCount":5000000,
+        "includeFileManifest": {
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{ customerData.includeFileManifest }}"
+      }
     }
 ```
 
@@ -160,7 +164,11 @@ Experience Platform에서 받은 파일을 최적으로 읽고 해석하기 위�
             "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
          }
       },
-      "maxFileRowCount":5000000
+      "maxFileRowCount":5000000,
+      "includeFileManifest": {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{ customerData.includeFileManifest }}"
+      }
    }
 }
 ```
@@ -192,6 +200,7 @@ Experience Platform에서 받은 파일을 최적으로 읽고 해석하기 위�
 | `csvOptions.charToEscapeQuoteEscaping.value` | 선택 사항입니다 | *다음에 대해서만`"fileType.value": "csv"`*. 따옴표 문자의 이스케이프를 이스케이프 처리하는 데 사용되는 단일 문자를 설정합니다. | `\` 이스케이프 문자와 따옴표 문자가 다른 경우. `\0` 이스케이프와 따옴표 문자가 동일한 경우. | - | - |
 | `csvOptions.emptyValue.value` | 선택 사항입니다 | *다음에 대해서만`"fileType.value": "csv"`*. 빈 값의 문자열 표현을 설정합니다. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
 | `maxFileRowCount` | 선택 사항입니다 | 내보낸 파일당 1,000,000행과 10,000,000행 사이의 최대 행 수를 나타냅니다. | 5,000,000 |
+| `includeFileManifest` | 선택 사항입니다 | 파일 내보내기와 함께 파일 매니페스트 내보내기에 대한 지원을 활성화합니다. 매니페스트 JSON 파일에는 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함되어 있습니다. 매니페스트의 이름은 형식을 사용하여 지정합니다. `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | 보기 [샘플 매니페스트 파일](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). 매니페스트 파일에는 다음 필드가 포함되어 있습니다. <ul><li>`flowRunId`: [데이터 흐름 실행](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 내보낸 파일을 생성했습니다.</li><li>`scheduledTime`: 파일을 내보낸 시간(UTC)입니다. </li><li>`exportResults.sinkPath`: 내보낸 파일이 저장되는 저장소 위치의 경로입니다. </li><li>`exportResults.name`: 내보낸 파일의 이름입니다.</li><li>`size`: 내보낸 파일의 크기(바이트)입니다.</li></ul> |
 
 {style="table-layout:auto"}
 
