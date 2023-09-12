@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;자주 찾는 항목;클라우드 스토리지
 title: 흐름 서비스 API를 사용하여 클라우드 스토리지 폴더 살펴보기
 description: 이 튜토리얼에서는 플로우 서비스 API를 사용하여 서드파티 클라우드 스토리지 시스템을 살펴봅니다.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
+source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 2%
@@ -106,14 +106,14 @@ curl -X GET \
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&ileType=delimited&encoding=ISO-8859-1;
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&fileType=delimited&encoding=ISO-8859-1;
 ```
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | 클라우드 저장소 소스 커넥터의 연결 ID입니다. |
 | `{FILE_PATH}` | 검사할 파일의 경로입니다. |
-| `{FILE_TYPE}` | 파일의 유형입니다. 지원되는 파일 유형은 다음과 같습니다.<ul><li>구분됨</code>: 구분 기호로 구분된 값입니다. DSV 파일은 쉼표로 구분해야 합니다.</li><li>JSON</code>: JavaScript 개체 표기법 JSON 파일은 XDM을 준수해야 함</li><li>쪽모이</code>: Apache Parquet. Parquet 파일은 XDM을 준수해야 합니다.</li></ul> |
+| `{FILE_TYPE}` | 파일의 유형입니다. 지원되는 파일 유형은 다음과 같습니다.<ul><li><code>구분됨</code>: 구분 기호로 구분된 값입니다. DSV 파일은 쉼표로 구분해야 합니다.</li><li><code>JSON</code>: JavaScript 개체 표기법 JSON 파일은 XDM을 준수해야 함</li><li><code>쪽모이</code>: Apache Parquet. Parquet 파일은 XDM을 준수해야 합니다.</li></ul> |
 | `{QUERY_PARAMS}` | 결과를 필터링하는 데 사용할 수 있는 선택적 쿼리 매개 변수입니다. 의 섹션을 참조하십시오. [쿼리 매개 변수](#query) 추가 정보. |
 
 **요청**
