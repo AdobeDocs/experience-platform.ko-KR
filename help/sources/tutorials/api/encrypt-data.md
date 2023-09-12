@@ -4,9 +4,9 @@ description: API를 사용하여 클라우드 스토리지 일괄 처리 소스�
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd8844121fef79205d57fa979ca8630fc1b1ece4
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1473'
 ht-degree: 2%
 
 ---
@@ -197,7 +197,7 @@ curl -X POST \
 >
 >* [공개 키 ID](#create-encryption-key-pair)
 >* [소스 연결 ID](../api/collect/cloud-storage.md#source)
->* [Target 연결 ID](../api/collect/cloud-storage.md#target)
+>* [대상 연결 ID](../api/collect/cloud-storage.md#target)
 >* [ID 매핑](../api/collect/cloud-storage.md#mapping)
 
 데이터 흐름을 만들려면 다음에 대한 POST 요청을 만듭니다. `/flows` 의 엔드포인트 [!DNL Flow Service] API. 암호화된 데이터를 수집하려면 `encryption` 섹션에 대한 섹션 `transformations` 속성 및 포함 `publicKeyId` 이전 단계에서 만들어졌습니다.
@@ -332,6 +332,40 @@ curl -X POST \
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+
+>[!BEGINSHADEBOX]
+
+**반복 수집 제한 사항**
+
+암호화된 데이터 수집은 소스에서 반복 또는 다중 수준 폴더의 수집을 지원하지 않습니다. 암호화된 모든 파일은 단일 폴더에 포함되어야 합니다. 단일 소스 경로에 여러 폴더가 있는 와일드카드도 지원되지 않습니다.
+
+다음은 지원되는 폴더 구조의 예입니다. 여기서 소스 경로는 `/ACME-customers/*.csv.gpg`.
+
+이 시나리오에서는 굵게 표시된 파일이 Experience Platform으로 수집됩니다.
+
+* ACME-customer
+   * **File1.csv.gpg**
+   * File2.json.gpg
+   * **File3.csv.gpg**
+   * File4.json
+   * **File5.csv.gpg**
+
+다음은 소스 경로가 인 지원되지 않는 폴더 구조의 예입니다. `/ACME-customers/*`.
+
+이 시나리오에서는 흐름 실행이 실패하고 소스에서 데이터를 복사할 수 없다는 오류 메시지가 반환됩니다.
+
+* ACME-customer
+   * File1.csv.gpg
+   * File2.json.gpg
+   * Subfolder1
+      * File3.csv.gpg
+      * File4.json.gpg
+      * File5.csv.gpg
+* ACME-충성도
+   * File6.csv.gpg
+
+>[!ENDSHADEBOX]
 
 ## 다음 단계
 
