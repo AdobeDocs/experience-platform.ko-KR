@@ -4,19 +4,15 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
+source-git-commit: 823f781e59fe7f5f15620a2b99f9c0c1e7144666
 workflow-type: tm+mt
-source-wordcount: '3673'
+source-wordcount: '3633'
 ht-degree: 11%
 
 ---
 
 
 # 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성화
-
->[!IMPORTANT]
-> 
-> 페이지에 설명된 기능은 아직 고객에게 일반적으로 제공되지 않습니다. 이 페이지는 현재 출시 기능에 대한 사전 읽기로서의 Adobe 내부 팀을 대상으로 합니다. 이 메모가 제거될 때까지 Adobe 외부에서 공유하지 마십시오.
 
 >[!IMPORTANT]
 > 
@@ -29,7 +25,7 @@ ht-degree: 11%
 
 이 문서에서는 클라우드 스토리지 및 이메일 마케팅 대상과 같은 Adobe Experience Platform 배치 프로필 기반 대상에서 대상자를 활성화하는 데 필요한 워크플로우에 대해 설명합니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 대상에 대상을 활성화하려면 다음을 성공적으로 완료해야 합니다. [대상에 연결됨](./connect-destination.md). 아직 수행하지 않았다면 [대상 카탈로그](../catalog/overview.md)에서 지원되는 대상을 탐색하고 사용할 대상을 구성합니다.
 
@@ -117,7 +113,7 @@ ht-degree: 11%
    >
    >다음 **[!UICONTROL 세그먼트 평가 후]** 아래 설명된 옵션은 일부 베타 고객만 사용할 수 있습니다.
 
-   사용 **[!UICONTROL 세그먼트 평가 후]** 매일 플랫폼 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행하도록 하는 옵션입니다. 이 옵션을 사용하면 활성화 작업이 실행될 때 최신 프로필을 대상으로 내보냅니다.
+   사용 **[!UICONTROL 세그먼트 평가 후]** 옵션을 사용하여 일별 플랫폼 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행합니다. 이 옵션을 사용하면 활성화 작업이 실행될 때 최신 프로필을 대상으로 내보냅니다.
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
