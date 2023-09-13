@@ -1,7 +1,7 @@
 ---
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 서버를 만드는 데 사용되는 API 호출을 보여 줍니다.
 title: 대상 서버 구성 만들기
-source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
+source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
 workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 9%
@@ -32,7 +32,7 @@ ht-degree: 9%
 
 ## 대상 서버 구성 만들기 {#create}
 
-다음을 수행하여 새 대상 서버 구성을 만들 수 있습니다 `POST` 에 대한 요청 `/authoring/destination-servers` 엔드포인트.
+다음을 수행하여 새 대상 서버 구성을 만들 수 있습니다. `POST` 에 대한 요청 `/authoring/destination-servers` 엔드포인트.
 
 >[!TIP]
 >
@@ -244,7 +244,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"File-based SFTP destination server",
    "destinationServerType":"FILE_BASED_SFTP",
-   "fileBasedSftpDestination":{
+   "fileBasedSFTPDestination":{
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
@@ -319,10 +319,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |---|---|---|
 | `name` | 문자열 | 대상 연결의 이름입니다. |
 | `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. 대상 [!DNL SFTP] 대상, 다음으로 설정 `FILE_BASED_SFTP`. |
-| `fileBasedSftpDestination.rootDirectory.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
-| `fileBasedSftpDestination.rootDirectory.value` | 문자열 | 대상 스토리지의 루트 디렉토리입니다. |
-| `fileBasedSftpDestination.hostName.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
-| `fileBasedSftpDestination.hostName.value` | 문자열 | 대상 스토리지의 호스트 이름입니다. |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
+| `fileBasedSFTPDestination.rootDirectory.value` | 문자열 | 대상 스토리지의 루트 디렉토리입니다. |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
+| `fileBasedSFTPDestination.hostName.value` | 문자열 | 대상 스토리지의 호스트 이름입니다. |
 | `port` | 정수 | SFTP 파일 서버 포트입니다. |
 | `encryptionMode` | 문자열 | 파일 암호화를 사용할지 여부를 나타냅니다. 지원되는 값: <ul><li>PGP</li><li>None</li></ul> |
 | `fileConfigurations` | 해당 없음 | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
