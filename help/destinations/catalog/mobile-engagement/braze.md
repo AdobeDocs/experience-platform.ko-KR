@@ -3,9 +3,9 @@ keywords: 모바일; 브레이즈; 메시지;
 title: 브레이즈 연결
 description: Braze는 고객과 고객이 사랑하는 브랜드 간의 관련성 있고 기억에 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: e2317201ae4810734714cea6c5d172ea6a542f5b
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1096'
 ht-degree: 1%
 
 ---
@@ -163,6 +163,14 @@ XDM 프로필 스키마와 [!DNL Braze] 인스턴스에는 다음 속성과 ID�
 ## 내보낸 데이터 {#exported-data}
 
 데이터가 성공적으로 로 내보내졌는지 확인하려면 [!DNL Braze] 대상, 다음을 확인: [!DNL Braze] 계정입니다. [!DNL Adobe Experience Platform] 대상자를 (으)로 내보냅니다. [!DNL Braze] 다음 아래에 `AdobeExperiencePlatformSegments` 특성.
+
+## 문제 해결 {#troubleshooting}
+
+**이 대상에 대한 대상을 활성화하는 동안 시간 초과 오류가 발생했습니다. 어떻게 해야 합니까?**
+
+간혹 이 대상에 대한 대상을 활성화하면 시간 초과 오류가 발생할 수 있습니다. 이 오류는 활성화 문제를 나타내지 않습니다.
+
+시간 초과 오류가 표시되면 대상 플랫폼에서 대상 크기를 확인합니다. 대상자 크기가 올바른 경우 통합이 예상대로 작동합니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
