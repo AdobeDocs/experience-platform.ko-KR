@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 88bfcdef65b4a938d573b1beb1952c7e030ebc13
+source-git-commit: d83a5558d706e7bf059edb912f6fd43d4b66cc54
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 3%
+source-wordcount: '1678'
+ht-degree: 4%
 
 ---
 
@@ -55,7 +55,7 @@ Experience Platform은 두 개의 사전 구성된 기본 역할과 함께 제�
 
 ## 샌드박스 및 권한
 
-비프로덕션 샌드박스는 다른 샌드박스와 데이터를 분리할 수 있는 데이터 가상화 의 한 형태이며 일반적으로 개발 실험, 테스트 또는 시도에 사용됩니다. 역할의 권한은 해당 역할의 사용자에게 액세스 권한이 부여된 샌드박스 환경 내의 Experience Platform 기능에 대한 액세스 권한을 부여합니다. 기본 Experience Platform 라이선스는 5개의 샌드박스(프로덕션 1개와 비프로덕션 4개)를 부여합니다. 비프로덕션 샌드박스 10개 팩 및 총 75개의 샌드박스를 추가할 수 있습니다. 자세한 내용은 조직의 관리자 또는 Adobe 영업 담당자에게 문의하십시오.
+비프로덕션 샌드박스는 다른 샌드박스와 데이터를 분리할 수 있는 데이터 가상화 의 한 형태이며 일반적으로 개발 실험, 테스트 또는 시도에 사용됩니다. 역할의 권한은 해당 역할의 사용자에게 액세스 권한이 부여된 샌드박스 환경 내의 Experience Platform 기능에 대한 액세스 권한을 부여합니다. 기본 Experience Platform 라이선스는 5개의 샌드박스(프로덕션 1개와 비프로덕션 4개)를 부여합니다. 비프로덕션 샌드박스 10개 팩 및 총 75개 샌드박스를 추가할 수 있습니다. 자세한 내용은 조직의 관리자 또는 Adobe 영업 담당자에게 문의하십시오.
 
 Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요](../sandboxes/home.md).
 
@@ -99,7 +99,11 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Profile Management] | [!UICONTROL 병합 정책 관리] | 병합 정책을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Profile Management] | [!UICONTROL 병합 정책 보기] | 사용 가능한 병합 정책에 대한 읽기 전용 액세스 권한. |
 | [!DNL Profile Management] | [!UICONTROL 세그먼트를 위한 대상 내보내기] | 평가된 대상 세그먼트를 데이터 세트로 내보내는 기능. |
-| [!DNL Profile Management] | [!UICONTROL 대상에 대한 세그먼트 평가] | 세그먼트 정의를 평가하여 대상에 대한 프로필을 생성하는 기능. |
+| [!DNL Profile Management] | [!UICONTROL 대상에 대한 세그먼트 평가] | 세그먼트 정의를 평가하여 대상자에 대한 프로필을 생성하는 기능. |
+| [!DNL Profile Management] | [!UICONTROL B2B AI 보기] | 모든 B2B AI/ML 서비스에 대한 설정 및 구성에 대한 읽기 전용 액세스 권한. |
+| [!DNL Profile Management] | [!UICONTROL B2B AI 관리] | 모든 B2B AI/ML 서비스에 대한 설정 및 구성을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
+| [!DNL Profile Management] | [!UICONTROL B2B 프로필 보기] | B2B 엔티티 프로필(예: 계정, 영업 기회 등), 모든 B2B AI/ML 서비스에 대한 설정 및 구성, B2B 대시보드 위젯에 대한 읽기 전용 액세스입니다. |
+| [!DNL Profile Management] | [!UICONTROL B2B 프로필 관리] | B2B 엔티티 프로필(예: 계정, 영업 기회 등)을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한입니다. 모든 B2B AI/ML 서비스 및 B2B 대시보드 위젯에 대한 설정 및 구성에 대한 읽기 전용 액세스입니다. |
 | [!DNL Identity Management] | [!UICONTROL ID 네임스페이스 관리] | ID 네임스페이스를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Identity Management] | [!UICONTROL ID 네임스페이스 보기] | ID 네임스페이스에 대한 읽기 전용 액세스 권한. |
 | [!DNL Identity Management] | [!UICONTROL ID 그래프 보기] | ID 그래프에 대한 읽기 전용 액세스 권한. |
@@ -109,7 +113,7 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Destinations] | [!UICONTROL 대상 관리] | 대상 활성화 플로우 및 대상 계정을 읽고 만들고 삭제할 수 있는 액세스 권한. |
 | [!DNL Destinations] | [!UICONTROL 대상 보기] | 에서 사용 가능한 대상에 대한 읽기 전용 액세스 **[!UICONTROL 카탈로그]** 의 탭 및 인증된 대상 **[!UICONTROL 찾아보기]** 탭. |
 | [!DNL Destinations] | [!UICONTROL 대상 활성화] | 사용자에게 기존 대상에 대한 세그먼트를 활성화할 수 있는 기능을 제공합니다. 활성화 워크플로에서 매핑 단계를 활성화합니다. 이 권한을 사용하려면 다음 중 하나가 필요합니다. [!UICONTROL 대상 보기] 또는 [!UICONTROL 대상 관리] 대상에 데이터를 활성화하는 사용자에게 부여됩니다. |
-| [!DNL Destinations] | [!UICONTROL 매핑 없이 세그먼트 활성화] | 사용자에게 를 표시하지 않고 기존 대상에 대한 세그먼트를 활성화할 수 있는 기능을 제공합니다. [매핑 단계](../destinations/ui/activate-batch-profile-destinations.md#mapping). 사용자는 활성화 워크플로에서 세그먼트를 추가하거나 제거할 수 있지만 매핑된 속성 또는 ID를 추가하거나 제거할 수 없습니다. 이 권한을 사용하려면 [!UICONTROL 대상 활성화] 대상에 데이터를 활성화하는 사용자에게 부여할 권한. |
+| [!DNL Destinations] | [!UICONTROL 매핑 없이 세그먼트 활성화] | 사용자에게 를 표시하지 않고 기존 대상에 대한 세그먼트를 활성화할 수 있는 기능을 제공합니다. [매핑 단계](../destinations/ui/activate-batch-profile-destinations.md#mapping). 사용자는 활성화 워크플로에서 세그먼트를 추가 및 제거할 수 있지만, 매핑된 속성 또는 ID를 추가하거나 제거할 수는 없습니다. 이 권한을 사용하려면 [!UICONTROL 대상 활성화] 대상에 데이터를 활성화하는 사용자에게 부여할 권한. |
 | [!DNL Destinations] | [!UICONTROL 데이터 세트 대상 관리 및 활성화] | 데이터 세트 내보내기 흐름을 읽고, 만들고, 편집하고, 비활성화하는 기능입니다. 생성된 활성 데이터 세트에 대한 데이터도 활성화할 수 있습니다. |
 | [!DNL Destinations] | [!UICONTROL 대상 작성] | 을 사용하여 대상을 작성할 수 있는 기능 [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL 소스 관리] | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있는 액세스 권한. |
