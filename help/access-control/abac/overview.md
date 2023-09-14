@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 개요
 description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 정보를 제공합니다
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1847'
 ht-degree: 17%
 
 ---
@@ -21,6 +21,10 @@ ht-degree: 17%
 >속성 기반 액세스 제어를 Experience Platform의 데이터 거버넌스 기능과 혼동하지 마십시오. 데이터 거버넌스 기능을 사용하면 조직의 사용자가 데이터에 액세스할 수 있는 방식이 아니라 레이블과 정책을 사용하여 플랫폼에서 데이터를 사용하는 방법을 제어할 수 있습니다. 다음을 참조하십시오. [데이터 거버넌스 개요](../../data-governance/home.md) 추가 정보.
 
 속성 기반 액세스 제어를 통해 조직 관리자는 모든 플랫폼 워크플로 및 리소스에 걸쳐 중요한 개인 데이터(SPD), 개인 식별 정보(PII) 및 사용자 지정된 유형의 데이터에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.
+
+다음 비디오에서는 속성 기반 액세스 제어에 대한 이해를 돕기 위해 역할, 리소스 및 정책을 구성하는 방법에 대해 설명합니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## 속성 기반 액세스 제어 용어
 
@@ -76,7 +80,7 @@ Admin Console에서 새 권한 인터페이스로 모든 Experience Platform 기
 
 ### 대상 {#destinations}
 
-[!DNL Destinations]는 Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 관리자는 속성 기반 액세스 제어 기능을 사용하여 다음을 수행할 수 있습니다.
 
