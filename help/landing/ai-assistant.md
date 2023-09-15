@@ -4,7 +4,7 @@ description: AI Assistant를 사용하여 Experience Platform 및 Real-time Cust
 badge: Alpha
 hide: true
 hidefromtoc: true
-source-git-commit: 55d2518cdded50bcc8d6f7cc36f29581c5e64dab
+source-git-commit: 704d47b0e37825508705402ab2401636f46ef23f
 workflow-type: tm+mt
 source-wordcount: '2369'
 ht-degree: 0%
@@ -286,5 +286,3 @@ AI 도우미가 수행할 수 있는 작업에 대해 부정확한 인상을 줄
 | 가장 큰 세그먼트는 무엇입니까? | 가장 큰 세그먼트는 무엇입니까? 데이터 사용. | 답변이 데이터를 기반으로 하도록 AI 도우미에 명시적으로 지시합니다. |
 | 가장 큰 세그먼트는 무엇입니까? | 내 가장 큰 세그먼트를 나열합니다. | &quot;...&quot;라는 질문이 문서 기반 질문으로 오인될 수 있는 경우가 있습니다. &quot;list&quot;와 같은 명령을 사용하는 것은 컨텍스트에 있는 데이터로 질문을 하는 것이 더 강력합니다. |
 | 보유한 데이터 세트는 몇 개입니까? | 내 데이터 세트를 카운트합니다. | 원래 질문은 세그먼트에 대해 작동하지만 데이터 세트에서는 작동하지 않을 수 있습니다. |
-
-
