@@ -4,10 +4,10 @@ title: LINE 연결
 description: LINE 대상을 사용하면 Platform 대상자에 프로필을 추가하고 연결된 사용자에게 개인화된 경험을 전달할 수 있습니다.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 1%
+source-wordcount: '1214'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 마케터는 내장된 대상을 사용하여 모바일 참여 대상에서 사용자를 타깃팅할 수 있습니다 [!DNL Adobe Experience Platform]. 또한 의 속성을 기반으로 개인화된 경험을 제공할 수 있습니다 [!DNL Adobe Experience Platform] 대상자 및 프로필이 업데이트되는 즉시 프로필 [!DNL Adobe Experience Platform].
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 ### [!DNL LINE] 전제 조건 {#prerequisites-destination}
 
@@ -56,7 +56,7 @@ Platform의 액세스 허용 [!DNL LINE] 리소스, 다음이 필요합니다. *
 
 [!DNL LINE] 는 아래 표에 설명된 id 업데이트 및 내보내기를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 |
+| 대상 ID | 설명 |
 |---|---|
 | 광고주용 ID(IFA) | 소스 ID가 IFA인 경우 IFA(광고주) 타겟 ID에 대한 ID를 선택합니다 *(광고주용 Apple ID)* 또는 GAID *(Google Advertising ID) 네임스페이스입니다. |
 | LINE 사용자 ID | 소스 ID가 LINE 사용자 ID인 경우 UserID 대상 ID를 선택합니다. |
@@ -110,8 +110,9 @@ Platform의 액세스 허용 [!DNL LINE] 리소스, 다음이 필요합니다. *
 ## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
->
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+> 
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
@@ -119,7 +120,7 @@ Platform의 액세스 허용 [!DNL LINE] 리소스, 다음이 필요합니다. *
 
 대상 데이터를 Adobe Experience Platform에서 로 올바르게 보내려면 [!DNL LINE] 대상, 필드 매핑 단계를 거쳐야 합니다. 매핑은 Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 필드 간에 링크를 만드는 것으로 구성됩니다. XDM 필드를 [!DNL LINE] 대상 필드에서 다음 단계를 수행합니다.
 
-소스 ID에 따라 다음 대상 ID 네임스페이스를 매핑해야 합니다. | TARGET ID | 소스 필드 | Target 필드 | | — | — | — | | 광고주용 ID(IFA) | `IDFA` 또는 `GAID` | `LineId` | | LINE 사용자 ID | `UserID` | `LineId` |
+소스 ID에 따라 다음 대상 ID 네임스페이스를 매핑해야 합니다. | Target ID | 소스 필드 | 대상 필드 | | — | — | — | | 광고주용 ID(IFA) | `IDFA` 또는 `GAID` | `LineId` | | LINE 사용자 ID | `UserID` | `LineId` |
 
 대상 ID가 다음과 같은 경우 *LINE 사용자 ID* 다음이 필요합니다.
 ![타겟 ID에 LINE 사용자 ID를 사용할 때 타겟 매핑을 보여주는 플랫폼 UI 스크린샷 예입니다.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)

@@ -3,9 +3,9 @@ title: Edge 개인화 대상에 대한 대상자 활성화
 description: 동일 페이지 및 다음 페이지 개인화 사용 사례를 위해 Adobe Experience Platform에서 Edge 개인화 대상으로 대상을 활성화하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
 workflow-type: tm+mt
-source-wordcount: '1833'
+source-wordcount: '1869'
 ht-degree: 2%
 
 ---
@@ -27,6 +27,7 @@ Adobe Experience Platform 사용 [가장자리 세분화](../../segmentation/ui/
 > 
 > * 데이터를 활성화하고 활성화하려면 [매핑 단계](#mapping) 워크플로의 경우 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions).
 > * 을(를) 거치지 않고 데이터를 활성화하려면 [매핑 단계](#mapping) 워크플로의 경우 **[!UICONTROL 대상 관리]**, **[!UICONTROL 매핑 없이 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions).
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 > 
 > 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
@@ -68,9 +69,9 @@ Edge 개인화 대상을 사용하면 Adobe Target과 같은 Adobe 개인화 솔
 
 ### 홈페이지 배너 개인화 {#home-page-banner}
 
-홈 임대 및 판매 회사는 Adobe Experience Platform의 대상 자격을 기반으로 배너를 통해 홈 페이지를 개인화하려고 합니다. 회사는 개인화된 경험을 얻어야 하는 대상을 선택하고 Target 오퍼에 대한 타깃팅 기준으로 Adobe Target에 보낼 수 있습니다.
+홈 임대 및 판매 회사는 Adobe Experience Platform의 대상 자격을 기반으로 배너를 통해 홈 페이지를 개인화하려고 합니다. 회사는 개인화된 경험을 얻어야 하는 대상을 선택하고, 이 대상을 Target 오퍼에 대한 타깃팅 기준으로 Adobe Target에 보낼 수 있습니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 ### 데이터 수집 UI에서 데이터 스트림 구성 {#configure-datastream}
 
@@ -165,7 +166,7 @@ Edge 개인화 대상을 사용하면 Adobe Target과 같은 Adobe 개인화 솔
 
 ### 대상 속성 선택 {#select-target-attributes}
 
-대상 속성을 추가하려면 **[!UICONTROL 새 필드 추가]** 에 대한 제어 **[!UICONTROL Target 필드]** 소스 속성을 매핑할 사용자 지정 속성 이름을 입력하고 열을 선택합니다.
+대상 속성을 추가하려면 **[!UICONTROL 새 필드 추가]** 에 대한 제어 **[!UICONTROL 대상 필드]** 소스 속성을 매핑할 사용자 지정 속성 이름을 입력하고 열을 선택합니다.
 
 >[!NOTE]
 >

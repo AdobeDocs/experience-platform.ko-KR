@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;salesforce;api salesfor
 title: (API) Salesforce Marketing Cloud 연결
 description: Salesforce Marketing Cloud(이전의 ExactTarget) 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce Marketing Cloud 내에서 활성화할 수 있습니다.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: d1bfd85bf7a318692fb6ae87e163dca105d531c6
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '2924'
+source-wordcount: '2960'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 홈 임대 플랫폼의 판매 부서에서 마케팅 이메일을 타겟팅된 고객 대상자에게 브로드캐스트하려고 합니다. 플랫폼의 마케팅 팀이 새 연락처를 추가하거나 기존 연락처를 업데이트할 수 있습니다. *(및 해당 이메일 주소)* Adobe Experience Platform을 통해 자신의 오프라인 데이터에서 대상을 작성하고 이러한 대상을 로 보냅니다. [!DNL Salesforce Marketing Cloud]그런 다음 마케팅 캠페인 이메일을 보내는 데 사용할 수 있습니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 ### Experience Platform의 사전 요구 사항 {#prerequisites-in-experience-platform}
 
@@ -68,7 +68,7 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce Marketi
 
 다음 [!DNL (API) Salesforce Marketing Cloud] 대상이 을 사용합니다. [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) 내에서 정의된 속성 및 해당 속성 세트를 동적으로 읽어들이기 [!DNL Salesforce Marketing Cloud].
 
-다음 위치에 표시됩니다. **[!UICONTROL Target 필드]** 다음을 설정할 때 선택 창 [매핑](#mapping-considerations-example) (으)로 이동하는 워크플로우 [대상에 대상 활성화](#activate).
+다음 위치에 표시됩니다. **[!UICONTROL 대상 필드]** 다음을 설정할 때 선택 창 [매핑](#mapping-considerations-example) (으)로 이동하는 워크플로우 [대상에 대상 활성화](#activate).
 
 >[!IMPORTANT]
 >
@@ -128,7 +128,7 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce Marketi
 
 [!DNL (API) Salesforce Marketing Cloud] 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | contactKey | [!DNL Salesforce Marketing Cloud] 연락처 키. 다음을 참조하십시오. [!DNL Salesforce Marketing Cloud] [설명서](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&amp;type=5) 추가 지침이 필요한 경우. | 필수입니다 |
 
@@ -184,8 +184,9 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce Marketi
 ## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
->
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+> 
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
@@ -204,11 +205,11 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에서 아래
 1. 다음에서 **[!UICONTROL 매핑]** 단계, 선택 **[!UICONTROL 새 매핑 추가]**. 화면에 새 매핑 행이 표시됩니다.
    ![새 매핑 추가에 대한 Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 1. 다음에서 **[!UICONTROL 소스 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL 속성 선택]** 범주를 선택한 다음 XDM 속성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]** id를 선택합니다.
-1. 다음에서 **[!UICONTROL 대상 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL ID 네임스페이스 선택]** id를 선택하거나 **[!UICONTROL 속성 선택]** 필요에 따라 표시되는 속성 세트에서 속성을 선택하고 범주화합니다. 다음 [!DNL (API) Salesforce Marketing Cloud] 대상이 을 사용합니다. [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) 내에서 정의된 속성 및 해당 속성 세트를 동적으로 읽어들이기 [!DNL Salesforce Marketing Cloud]. 다음 위치에 표시됩니다. **[!UICONTROL Target 필드]** 팝업 을 사용하여 [매핑](#mapping-considerations-example) 다음에서 [대상자 활성화 워크플로](#activate).
+1. 다음에서 **[!UICONTROL 대상 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL ID 네임스페이스 선택]** id를 선택하거나 **[!UICONTROL 속성 선택]** 필요에 따라 표시되는 속성 세트에서 속성을 선택하고 범주화합니다. 다음 [!DNL (API) Salesforce Marketing Cloud] 대상이 을 사용합니다. [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) 내에서 정의된 속성 및 해당 속성 세트를 동적으로 읽어들이기 [!DNL Salesforce Marketing Cloud]. 다음 위치에 표시됩니다. **[!UICONTROL 대상 필드]** 팝업 을 사용하여 [매핑](#mapping-considerations-example) 다음에서 [대상자 활성화 워크플로](#activate).
 
    * XDM 프로필 스키마와 간에 다음 매핑을 추가하려면 이 단계를 반복합니다 [!DNL (API) Salesforce Marketing Cloud]:
 
-     | 소스 필드 | Target 필드 | 필수입니다 |
+     | 소스 필드 | 대상 필드 | 필수입니다 |
      |---|---|---|
      | `IdentityMap: contactKey` | `Identity: salesforceContactKey` | `Mandatory` |
      | `xdm: person.name.firstName` | `Attribute: First Name` 원하는 속성 세트에서 | - |

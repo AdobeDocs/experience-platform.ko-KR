@@ -3,9 +3,9 @@ title: Pega 프로필 커넥터
 description: Adobe Experience Platform의 Amazon S3용 Pega Profile Connector를 사용하여 전체 또는 증분, 또는 둘 다 프로필 데이터를 Amazon S3 클라우드 스토리지로 내보냅니다. Pega 고객 의사 결정 허브에서 고객 프로필 디자이너에서 데이터 작업을 예약하여 Amazon S3 스토리지에서 정기적으로 프로필 데이터를 가져올 수 있습니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1120'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 마케터는에서 사용할 수 있는 Adobe Experience Platform의 최신 프로필 데이터를 원합니다. [!DNL Pega Customer Decision Hub] 이를 통해 고객 프로필에 대한 페가의 통찰력이 지속적으로 향상됩니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 이 대상을 사용하여 Adobe Experience Platform에서 데이터를 내보내고 프로필을 로 가져오기 전에 [!DNL Pega Customer Decision Hub]를 설치한 후 다음 사전 요구 사항을 완료하십시오.
 
@@ -47,7 +47,7 @@ ht-degree: 2%
 
 [!DNL Pega Customer Decision Hub] 는 아래 표에 설명된 사용자 지정 사용자 ID의 활성화를 지원합니다. 자세한 내용은 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 |
+| 대상 ID | 설명 |
 |---|---|
 | *고객 ID* | 에서 프로필을 고유하게 식별하는 공통 사용자 식별자 [!DNL Pega Customer Decision Hub] 및 Adobe Experience Platform |
 
@@ -106,7 +106,8 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 > 
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 

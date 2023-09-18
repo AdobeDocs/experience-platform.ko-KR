@@ -3,9 +3,9 @@ title: (Beta) 트레이드 데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타기팅 및 억제에 대한 프로필을 트레이드 데스크 계정에 활성화합니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1150'
 ht-degree: 4%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 4%
 >
 >사용 [!DNL The Trade Desk] 이메일 또는 해시된 이메일 주소와 같은 CRM 데이터 매핑을 위한 CRM 대상. 사용 [기타 무역 데스크 대상](/help/destinations/catalog/advertising/tradedesk.md) 쿠키 및 장치 ID 매핑을 위한 Adobe Experience Platform 카탈로그에서.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 대상자를 활성화하기 전에 [!DNL The Trade Desk], 다음으로 문의해야 합니다. [!DNL The Trade Desk] 계정 관리자가 CRM 온보딩 계약에 서명합니다. [!DNL The Trade Desk] 그런 다음 권한을 부여하고 광고주 ID를 공유하여 대상을 구성합니다.
 
@@ -46,7 +46,7 @@ Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사�
 
 Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. ID 일치 요구 사항 섹션의 지침에 따라 일반 텍스트 및 해시된 이메일 주소에 적절한 네임스페이스를 각각 사용하십시오.
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | 이메일 | 이메일 주소(텍스트 지우기) | 입력 `email` 소스 ID가 이메일 네임스페이스 또는 속성인 경우 타겟 ID로. |
 | Email_LC_SHA256 | 이메일 주소는 SHA256 및 소문자를 사용하여 해시해야 합니다. 다음 중 하나를 따르십시오. [이메일 표준화](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) 규칙이 필요합니다. 나중에 이 설정을 변경할 수 없습니다. | 입력 `hashed_email` 소스 ID가 Email_LC_SHA256 네임스페이스 또는 속성일 경우 타겟 ID로 사용됩니다. |
@@ -98,6 +98,11 @@ Experience Platform에서 이메일 주소 수집에 대해 알아보려면 [일
 대상에 연결할 때 데이터 거버넌스 정책을 설정하는 것은 완전히 선택 사항입니다. Experience Platform을 검토하십시오. [데이터 거버넌스 개요](/help/data-governance/policies/overview.md) 을 참조하십시오.
 
 ## 이 대상에 대상자 활성화 {#activate}
+
+>[!IMPORTANT]
+> 
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 읽기 [대상자 데이터를 일괄 프로필 내보내기 대상으로 활성화](/help/destinations/ui/activate-batch-profile-destinations.md) 대상을 대상으로 활성화하는 방법에 대한 지침입니다.
 

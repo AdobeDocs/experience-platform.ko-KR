@@ -2,9 +2,9 @@
 title: Zendesk 연결
 description: Zendesk 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Zendesk 내에서 활성화할 수 있습니다.
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1506'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 멀티채널 B2C 플랫폼의 고객 서비스 부서는 고객을 위해 매끄러운 개인화된 경험을 보장하기를 원합니다. 부서는 자체 오프라인 데이터로 대상자를 만들어 새 사용자 프로필을 만들거나 다른 상호 작용(예: 구매, 반품 등)에서 기존 프로필 정보를 업데이트할 수 있습니다 Adobe Experience Platform에서 (으)로 이러한 대상자를 보냅니다. [!DNL Zendesk]. 업데이트된 정보 위치 [!DNL Zendesk] 은(는) 고객 서비스 에이전트가 고객의 최신 정보를 즉시 사용할 수 있도록 하여 더 빠른 응답과 해결을 가능하게 합니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 
@@ -49,7 +49,7 @@ Platform에서 로 데이터를 내보내려면 [!DNL Zendesk] 계정 보유가 
 
 [!DNL Zendesk] 는 아래 표에 설명된 id 업데이트를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 예 | 설명 | 필수입니다 |
+| 대상 ID | 예 | 설명 | 필수입니다 |
 |---|---|---|---|
 | `email` | `test@test.com` | 연락처의 이메일 주소입니다. | 예 |
 
@@ -101,8 +101,9 @@ Platform에서 로 데이터를 내보내려면 [!DNL Zendesk] 계정 보유가 
 ## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
->
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+> 
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
@@ -110,7 +111,7 @@ Platform에서 로 데이터를 내보내려면 [!DNL Zendesk] 계정 보유가 
 
 대상 데이터를 Adobe Experience Platform에서 로 올바르게 보내려면 [!DNL Zendesk] 대상, 필드 매핑 단계를 거쳐야 합니다. 매핑은 Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 필드 간에 링크를 만드는 것으로 구성됩니다.
 
-에 지정된 속성 **[!UICONTROL Target 필드]** 이 속성은 요청 본문을 형성하므로 속성 매핑 표에 설명된 것과 정확히 동일하게 이름이 지정되어야 합니다.
+에 지정된 속성 **[!UICONTROL 대상 필드]** 이 속성은 요청 본문을 형성하므로 속성 매핑 표에 설명된 것과 정확히 동일하게 이름이 지정되어야 합니다.
 
 에 지정된 속성 **[!UICONTROL 소스 필드]** 이러한 제한 사항을 따르지 마십시오. 필요에 따라 매핑할 수 있지만 로 푸시할 때 데이터 형식이 올바르지 않은 경우 [!DNL Zendesk] 그러면 오류가 발생합니다.
 
@@ -119,7 +120,7 @@ XDM 필드를 [!DNL Zendesk] 대상 필드에서 다음 단계를 수행합니�
 1. 다음에서 **[!UICONTROL 매핑]** 단계, 선택 **[!UICONTROL 새 매핑 추가]**. 화면에 새 매핑 행이 표시됩니다.
 1. 다음에서 **[!UICONTROL 소스 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL 속성 선택]** 범주를 선택한 다음 XDM 속성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]** id를 선택합니다.
 1. 다음에서 **[!UICONTROL 대상 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL ID 네임스페이스 선택]** 범주를 만들고 대상 id를 선택하거나 **[!UICONTROL 속성 선택]** 카테고리에 추가하고 지원되는 스키마 속성 중 하나를 선택합니다.
-   * 다음 필수 매핑을 추가하려면 이 단계를 반복하십시오. XDM 프로필 스키마와 [!DNL Zendesk] 인스턴스: |소스 필드|Target 필드| 필수| |—|—| |`xdm: person.name.lastName`|`xdm: last_name`| 예 | |`IdentityMap: Email`|`Identity: email`| 예 | |`xdm: person.name.firstName`|`xdm: first_name`| |
+   * 다음 필수 매핑을 추가하려면 이 단계를 반복하십시오. XDM 프로필 스키마와 [!DNL Zendesk] 인스턴스: |소스 필드|대상 필드| 필수| |—|—| |`xdm: person.name.lastName`|`xdm: last_name`| 예 | |`IdentityMap: Email`|`Identity: email`| 예 | |`xdm: person.name.firstName`|`xdm: first_name`| |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
      ![속성 매핑이 포함된 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/zendesk/mappings.png)

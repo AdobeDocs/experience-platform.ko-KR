@@ -2,9 +2,9 @@
 title: Adobe Campaign Managed Cloud Services 연결
 description: Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 플랫폼과 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: c4ead035202828a09c8c170e0a380fa49d186473
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1584'
 ht-degree: 4%
 
 ---
@@ -39,9 +39,9 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
 * Adobe Experience Platform은 id 그래프, analytics의 행동 데이터, 오프라인 및 온라인 데이터 병합 등과 같은 정보를 통합하는 고객 프로필을 만듭니다. 이 통합을 통해 해당 Adobe Experience Platform 기반 대상을 사용하여 Adobe Campaign 내에 이미 존재하는 세분화 기능을 강화할 수 있으므로 Campaign에서 해당 데이터를 활성화할 수 있습니다.
 
-  예를 들어 스포츠 의류 회사는 Adobe Experience Platform에서 제공하는 스마트 세그먼트를 활용하고 Adobe Campaign을 사용하여 활성화함으로써 Adobe Campaign에서 지원하는 다양한 채널에서 고객 기반에 연결하려고 합니다. 메시지가 전송되면 전송, 열기 및 클릭 수와 같은 Adobe Campaign의 경험 데이터로 Adobe Experience Platform의 고객 프로필을 개선하려고 합니다.
+  예를 들어 스포츠 의류 회사는 Adobe Experience Platform에서 제공하는 스마트 세그먼트를 활용하고 Adobe Campaign을 사용하여 활성화함으로써 Adobe Campaign에서 지원하는 다양한 채널에서 고객 기반에 연결하려고 합니다. 메시지를 보낸 후에는 발신, 열기 및 클릭과 같은 Adobe Campaign의 경험 데이터로 Adobe Experience Platform의 고객 프로필을 개선하려고 합니다.
 
-  그 결과, Adobe Experience Cloud 에코시스템 전반에서 보다 일관적인 크로스 채널 캠페인과 빠르게 적응하고 학습하는 풍부한 고객 프로필이 제공됩니다.
+  그 결과, Adobe Experience Cloud 생태계 전반에서 보다 일관적인 크로스 채널 캠페인과 다양한 고객 프로필이 적용되어 빠르게 학습할 수 있습니다.
 
 
 * Campaign의 세그먼트 활성화 외에도 Adobe Campaign Managed Services 대상을 활용하여 Adobe Experience Platform의 프로필에 연결된 추가 프로필 속성을 가져오고 동기화 프로세스를 통해 Adobe Campaign 데이터베이스에서 업데이트되도록 할 수 있습니다.
@@ -58,7 +58,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
 *Adobe Campaign Managed Cloud Services* 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | external_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. 이 ID를 사용하여 고객을 나타내는 Campaign 인스턴스의 ID(loyalty_ID, account_ID, customer_ID...)에 매핑하는 것이 좋습니다. |
 | ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 에 대한 다음 문서를 참조하십시오. [ECID](/help/identity-service/ecid.md) 추가 정보. |
@@ -119,9 +119,10 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
 >[!IMPORTANT]
 > 
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
-읽기 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko-KR) 대상 데이터를 이 대상으로 활성화하는 방법에 대한 지침
+읽기 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) 대상 데이터를 이 대상으로 활성화하는 방법에 대한 지침
 
 ### 속성 및 ID 매핑 {#map}
 

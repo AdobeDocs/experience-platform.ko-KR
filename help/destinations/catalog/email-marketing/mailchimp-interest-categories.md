@@ -2,9 +2,9 @@
 title: Mailchimp 관심 카테고리
 description: Mailchimp(Intuit Mailchimp라고도 함)는 기업이 메일링 목록 및 이메일 마케팅 캠페인을 사용하여 연락처(고객, 고객 또는 기타 이해 당사자)를 관리하고 상담하는 데 사용하는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다. 이 커넥터를 사용하여 관심사 및 선호도에 따라 연락처를 정렬합니다.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: a293df660a9b959d12bdc170d1cb69f3543a30f1
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '2356'
+source-wordcount: '2392'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,7 @@ Compared to [!DNL Mailchimp Tags] which you would use for internal classificatio
 
 스포츠 용품 웹사이트의 판매부는 축구에 관심이 있다고 스스로 확인한 연락처 목록에 이메일 기반의 마케팅 캠페인을 방송하기를 원한다. 연락처 목록은 웹 사이트의 개발 팀으로부터 받은 데이터 내보내기의 배치로 분리되므로 추적해야 합니다. 팀이 기존 을(를) 식별함 [!DNL Mailchimp] 대상자 및 는 각 목록의 연락처가 추가되는 Experience Platform 대상자 빌드를 시작합니다. 이 대상자를 (으)로 보낸 후 [!DNL Mailchimp Interest Categories], 선택한 항목에 연락처가 없는 경우 [!DNL Mailchimp] 대상자는 연락처가 속한 대상자 이름으로 그룹에 추가됩니다. 에 연락처가 이미 있는 경우 [!DNL Mailchimp] 대상자 또는 그룹이 있는 경우 해당 정보가 업데이트됩니다. 데이터가 (으)로 전송되면 [!DNL Mailchimp Interest Categories], Sales Team에서 마케팅 캠페인 이메일을 선택하여 [!DNL Mailchimp] 대상입니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 Experience Platform 및 에서 설정해야 하는 사전 요구 사항에 대해서는 아래 섹션을 참조하십시오 [!DNL Mailchimp] 및 를 사용하기 전에 수집해야 하는 정보의 경우 [!DNL Mailchimp Interest Categories] 대상.
 
@@ -79,7 +79,7 @@ API 키의 예는 다음과 같습니다. `0123456789abcdef0123456789abcde-us14`
 
 [!DNL Mailchimp] 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | 이메일 | 연락처 이메일 주소 | 필수입니다 |
 
@@ -150,8 +150,9 @@ API 키의 예는 다음과 같습니다. `0123456789abcdef0123456789abcde-us14`
 ## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
->
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+> 
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
@@ -165,13 +166,13 @@ XDM 필드를 [!DNL Mailchimp Interest Categories] 대상 필드에서 아래 �
 1. 다음에서 **[!UICONTROL 소스 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL 속성 선택]** 범주를 선택한 다음 XDM 속성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]** id를 선택합니다.
 1. 다음에서 **[!UICONTROL 대상 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL ID 네임스페이스 선택]** id를 선택하거나 **[!UICONTROL 속성 선택]** 범주별로 나열한 다음, [!DNL Mailchimp] API. *선택한 항목에 추가한 모든 사용자 지정 속성 [!DNL Mailchimp] 대상자를 대상 필드로 선택할 수도 있습니다.*
 
-   XDM 프로필 스키마와 간에 사용 가능한 매핑 [!DNL Mailchimp Interest Categories] 은(는) 다음과 같습니다. | 소스 필드 | Target 필드 | 메모 | | — | — | — | |`IdentityMap: Email`|`Identity: email`| 필수: 예 | |`xdm: person.name.firstName`|`Attribute: FNAME`| | |`xdm: person.name.lastName`|`Attribute: LNAME`| | |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
+   XDM 프로필 스키마와 간에 사용 가능한 매핑 [!DNL Mailchimp Interest Categories] 은(는) 다음과 같습니다. | 소스 필드 | 대상 필드 | 메모 | | — | — | — | |`IdentityMap: Email`|`Identity: email`| 필수: 예 | |`xdm: person.name.firstName`|`Attribute: FNAME`| | |`xdm: person.name.lastName`|`Attribute: LNAME`| | |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
 
    또한, `ADDRESS` 은(는) 이라고 하는 특수 대상 필드입니다. `merge field` 내 [!DNL Mailchimp] 대상입니다. 다음 [[!DNL Mailchimp] 설명서](https://mailchimp.com/developer/marketing/docs/merge-fields/) 필요한 키를 다음과 같이 정의합니다. `addr1`, `city`, `state`, 및 `zip`및 선택적 키 `addr2` 및 `country`. 이러한 필드의 값은 문자열이어야 합니다. 다음 중 하나라도 `ADDRESS` 필드 매핑이 있으면 대상이 을 전달합니다. `ADDRESS` 에 대한 오브젝트 [!DNL Mailchimp] 업데이트를 위한 API입니다. 임의 `ADDRESS` 매핑되지 않은 필드의 기본값은 입니다. `NULL` 기본값으로 설정되는 국가를 제외하고 `US`.
 
    다음에 사용할 수 있는 매핑 `ADDRESS` 필드는 다음과 같습니다.
 
-   | 소스 필드 | Target 필드 |
+   | 소스 필드 | 대상 필드 |
    | --- | --- |
    | `xdm: workAddress.street1` | `Attribute: ADDRESS.addr1` |
    | `xdm: workAddress.street2` | `Attribute: ADDRESS.addr2` |

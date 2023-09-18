@@ -1,12 +1,12 @@
 ---
 keywords: advertising; criteo;
 title: 크리테오 연결
-description: 크리테오는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인터넷을 통해 모든 소비자에게 더 풍부한 경험을 제공할 수 있도록 지원합니다. 세계 최대 규모의 상거래 데이터 세트와 동급 최고의 AI를 갖춘 Criteo는 쇼핑 여정의 각 접점이 적절한 시간에 적절한 광고를 통해 고객에게 도달하도록 개인화되도록 보장합니다.
+description: 크리터는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인터넷을 통해 모든 소비자에게 더 풍부한 경험을 제공할 수 있도록 지원합니다. 세계 최대 규모의 상거래 데이터 세트와 동급 최고의 AI를 갖춘 Criteo는 쇼핑 여정의 각 접점이 적절한 시간에 적절한 광고를 통해 고객에게 도달하도록 개인화되도록 보장합니다.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '1010'
-ht-degree: 3%
+source-wordcount: '1046'
+ht-degree: 2%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 3%
 >
 >이 대상 커넥터 및 설명서 페이지는 Criteo에서 만들고 유지 관리합니다. 현재 베타 제품이며 기능은 변경될 수 있습니다. 문의 사항이나 업데이트 요청은 크리테오에게 직접 문의하십시오 [여기](mailto:criteoTechnicalPartnerships@criteo.com).
 
-크리테오는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인터넷을 통해 모든 소비자에게 더 풍부한 경험을 제공할 수 있도록 지원합니다. 세계 최대 규모의 상거래 데이터 세트와 동급 최고의 AI를 갖춘 Criteo는 쇼핑 여정의 각 접점이 적절한 시간에 적절한 광고를 통해 고객에게 도달하도록 개인화되도록 보장합니다.
+크리터는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인터넷을 통해 모든 소비자에게 더 풍부한 경험을 제공할 수 있도록 지원합니다. 세계 최대 규모의 상거래 데이터 세트와 동급 최고의 AI를 갖춘 Criteo는 쇼핑 여정의 각 접점이 적절한 시간에 적절한 광고를 통해 고객에게 도달하도록 개인화되도록 보장합니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 * 다음에 대한 관리자 사용자 계정이 있어야 합니다. [크리테오 관리 센터](https://marketing.criteo.com).
 * Criteo 광고주 ID가 필요합니다(이 ID가 없는 경우 Criteo 담당자에게 문의).
@@ -28,7 +28,7 @@ ht-degree: 3%
 
 ## 제한 사항 {#limitations}
 
-* 크리테오는 [!DNL SHA-256]해시된 일반 텍스트 이메일(변환 대상: [!DNL SHA-256] 보내기 전). PII(개인 이름 또는 전화 번호와 같은 개인 식별 정보)는 보내지 마십시오.
+* 크리테오는 [!DNL SHA-256]해시된 일반 텍스트 이메일(변환 예정) [!DNL SHA-256] 보내기 전). PII(개인 이름 또는 전화 번호와 같은 개인 식별 정보)는 보내지 마십시오.
 * Criteo는 클라이언트가 제공할 식별자가 하나 이상 필요합니다. 우선 순위 [!DNL GUM ID] 더 나은 일치율에 기여하므로 해시된 이메일에 대한 식별자로.
 
 ![전제 조건](../../assets/catalog/advertising/criteo/prerequisites.png)
@@ -37,7 +37,7 @@ ht-degree: 3%
 
 크리터는 아래 표에 설명된 ID 활성화를 지원합니다. 자세히 알아보기 [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 | --- | --- | --- |
 | `email_sha256` | SHA-256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA-256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 속성이 포함된 경우 [!UICONTROL 변환 적용] 활성화 시 플랫폼이 데이터를 자동으로 해시하도록 하는 옵션입니다. |
 | `gum_id` | 크리테오 [!DNL GUM] 쿠키 식별자 | [!DNL GUM IDs] 클라이언트가 사용자 식별 시스템과 크리터의 사용자 식별([!DNL UID]). 식별자 유형이 다음과 같은 경우 `gum_id`, 추가 매개 변수, [!DNL GUM Caller ID]도 포함되어야 합니다. 해당하는 경우 Criteo 계정 팀에 문의하십시오 [!DNL GUM Caller ID] 또는 이에 대한 자세한 내용을 보려면 [!DNL GUM ID] 필요한 경우 동기화합니다. |
@@ -111,7 +111,8 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 > 
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](../../ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 

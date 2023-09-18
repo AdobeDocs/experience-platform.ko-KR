@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;sendgrid;sendgrid 대�
 title: SendGrid 연결
 description: SendGrid 대상을 사용하면 자사 데이터를 내보내고 비즈니스 요구 사항에 맞게 SendGrid 내에서 활성화할 수 있습니다.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '1541'
+source-wordcount: '1577'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 SendGrid는 API 전달자 토큰을 인증 메커니즘으로 사용하여 SendGrid API와 통신합니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 대상 구성을 시작하기 전에 다음 항목이 필요합니다.
 
@@ -46,7 +46,7 @@ SendGrid 대상으로 데이터를 활성화하기 전에 [스키마](https://ex
 
 SendGrid는 아래 표에 설명된 ID 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | 이메일 | 이메일 주소 | 일반 텍스트 및 SHA256 해시된 이메일 주소 모두 다음에서 지원됩니다. [!DNL Adobe Experience Platform]. Experience platform 소스 필드에 해시되지 않은 속성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션, 보유 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다.<br/><br/> 참고: **SendGrid** 는 해시된 이메일 주소를 지원하지 않으므로 변환하지 않은 일반 텍스트 데이터만 대상으로 전송됩니다. |
 
@@ -115,7 +115,8 @@ While [설정 중](https://experienceleague.adobe.com/docs/experience-platform/d
 
 >[!IMPORTANT]
 > 
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
@@ -124,7 +125,7 @@ While [설정 중](https://experienceleague.adobe.com/docs/experience-platform/d
 1. SendGrid로 내보낼 대상을 한 개 이상 선택합니다.
    ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
-1. 다음에서 **[!UICONTROL 매핑]** 단계, 선택 후 **[!UICONTROL 새 매핑 추가]**&#x200B;소스 XDM 필드를 SendGrid API 대상 필드에 매핑하는 매핑 페이지가 표시됩니다. 아래 이미지는 Experience Platform과 SendGrid 간에 ID 네임스페이스를 매핑하는 방법을 보여 줍니다. 다음을 확인하십시오. **[!UICONTROL 소스 필드]** *이메일* 을(를) 다음에 매핑해야 합니다. **[!UICONTROL Target 필드]** *external_id* 아래와 같이 표시됩니다.
+1. 다음에서 **[!UICONTROL 매핑]** 단계, 선택 후 **[!UICONTROL 새 매핑 추가]**&#x200B;소스 XDM 필드를 SendGrid API 대상 필드에 매핑하는 매핑 페이지가 표시됩니다. 아래 이미지는 Experience Platform과 SendGrid 간에 ID 네임스페이스를 매핑하는 방법을 보여 줍니다. 다음을 확인하십시오. **[!UICONTROL 소스 필드]** *이메일* 을(를) 다음에 매핑해야 합니다. **[!UICONTROL 대상 필드]** *external_id* 아래와 같이 표시됩니다.
    ![](../../assets/catalog/email-marketing/sendgrid/13.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)
@@ -142,7 +143,7 @@ While [설정 중](https://experienceleague.adobe.com/docs/experience-platform/d
 
 지원되는 속성 매핑에 대해 설정할 수 있는 포괄적인 목록 [SendGrid 마케팅 연락처 > 연락처 API 추가 또는 업데이트](https://docs.sendgrid.com/api-reference/contacts/add-or-update-a-contact) 은(는) 아래에 있습니다.
 
-| 소스 필드 | Target 필드 | 유형 | 설명 | 제한 |
+| 소스 필드 | 대상 필드 | 유형 | 설명 | 제한 |
 |---|---|---|---|---|
 | xdm:<br/> homeAddress.street1 | xdm:<br/> address_line_1 | 문자열 | 주소의 첫 번째 줄입니다. | 최대 길이:<br/> 100자 |
 | xdm:<br/> homeAddress.street2 | xdm:<br/> address_line_2 | 문자열 | 주소의 두 번째 줄(선택 사항)입니다. | 최대 길이:<br/> 100자 |

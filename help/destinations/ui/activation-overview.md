@@ -4,9 +4,9 @@ title: 활성화 개요
 type: Tutorial
 description: Adobe Experience Platform의 대상을 다양한 유형의 대상으로 활성화하는 방법을 알아봅니다.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: 771801b52b7df7029e1c6e7496dcfb563463d06e
+source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '361'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,8 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 > 
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 Adobe Experience Platform은 다양한 대상을 지원합니다. 대상자 활성화 워크플로우는 대상자가 지원하는 대상자 데이터 유형과 데이터 내보내기 빈도에 따라 대상마다 다릅니다.
 

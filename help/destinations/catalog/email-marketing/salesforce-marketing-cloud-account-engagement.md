@@ -3,9 +3,9 @@ title: Salesforce Marketing Cloud 계정 참여
 description: Salesforce Marketing Cloud 계정 참여(이전의 Pardot) 대상을 사용하여 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce Marketing Cloud 계정 참여 내에서 활성화하는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1624'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 온라인 플랫폼의 마케팅 부서는 이메일 기반 마케팅 캠페인을 B2B 리드의 엄선된 대상자에게 브로드캐스트하려고 합니다. 플랫폼의 마케팅 팀은 Adobe Experience Platform을 통해 새로운 리드를 추가하거나 기존 리드 정보를 업데이트하고, 자체 오프라인 데이터에서 대상을 작성하고, 이러한 대상을 로 보낼 수 있습니다. [!DNL Marketing Cloud Account Engagement]그런 다음 마케팅 캠페인 이메일을 보내는 데 사용할 수 있습니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 Experience Platform 및 에서 설정해야 하는 사전 요구 사항에 대해서는 아래 섹션을 참조하십시오 [!DNL Salesforce] 및 를 사용하기 전에 수집해야 하는 정보의 경우 [!DNL Marketing Cloud Account Engagement] 대상.
 
@@ -74,7 +74,7 @@ A [!DNL Marketing Cloud Account Engagement] 다음에 대한 구독이 있는 �
 
 [!DNL Marketing Cloud Account Engagement] 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | 이메일 | 잠재 고객 이메일 주소 | 필수입니다 |
 
@@ -136,8 +136,9 @@ A [!DNL Marketing Cloud Account Engagement] 다음에 대한 구독이 있는 �
 ## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
->
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+> 
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
@@ -151,7 +152,7 @@ XDM 필드를 [!DNL Marketing Cloud Account Engagement] 대상 필드에서 아�
 1. 다음에서 **[!UICONTROL 소스 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL 속성 선택]** 범주를 선택한 다음 XDM 속성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]** id를 선택합니다.
 1. 다음에서 **[!UICONTROL 대상 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL ID 네임스페이스 선택]** id를 선택하거나 **[!UICONTROL 사용자 지정 속성 선택]** 범주 및 다음 목록에서 지정 [[!DNL Prospect API fields]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#fields) 사용 가능한 스키마에서
 
-   * XDM 프로필 스키마와 간에 매핑을 추가하려면 다음 단계를 반복합니다 [!DNL Marketing Cloud Account Engagement]: | 소스 필드 | Target 필드 | 필수 | | — | — | — | |`IdentityMap: Email`|`Identity: email`| 예 | |`xdm: MailingAddress.city`|`xdm: city`| | |`xdm: person.name.firstName`|`Attribute: firstName`| |
+   * XDM 프로필 스키마와 간에 매핑을 추가하려면 다음 단계를 반복합니다 [!DNL Marketing Cloud Account Engagement]: | 소스 필드 | 대상 필드 | 필수 | | — | — | — | |`IdentityMap: Email`|`Identity: email`| 예 | |`xdm: MailingAddress.city`|`xdm: city`| | |`xdm: person.name.firstName`|`Attribute: firstName`| |
 
    * 위 매핑의 예가 아래에 나와 있습니다.
      ![Target 매핑을 보여주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)

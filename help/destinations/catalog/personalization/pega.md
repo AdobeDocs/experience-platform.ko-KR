@@ -2,9 +2,9 @@
 title: Pega 고객 의사 결정 허브 연결
 description: Adobe Experience Platform의 Pega Customer Decision Hub 대상을 사용하여 프로필 속성 및 대상자 멤버십 데이터를 Pega Customer Decision Hub로 전송하여 다음 모범 조치 결정을 내릴 수 있습니다.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Adobe Experience Platform의 프로필 대상 멤버십( 로 로드됨) [!DNL Pe
 
 마케터는 연금 제도 또는 퇴직 연금 제도 뉴스레터를 구독하거나 구독 취소한 고객을 위해 오퍼를 최적화하려고 합니다. 금융 서비스 회사는 자체 CRM에서 여러 고객 ID를 Adobe Experience Platform으로 수집하고, 자체 오프라인 데이터에서 대상을 작성하고, 대상을 입력 및 종료하는 프로필을 로 보낼 수 있습니다. [!DNL Pega Customer Decision Hub] 아웃바운드 채널의 다음 베스트 액션(NBA) 의사 결정용.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 이 대상을 사용하여 Adobe Experience Platform에서 데이터를 내보내려면 먼저 의 다음 사전 요구 사항을 완료해야 합니다. [!DNL Pega Customer Decision Hub]:
 
@@ -45,7 +45,7 @@ Adobe Experience Platform의 프로필 대상 멤버십( 로 로드됨) [!DNL Pe
 
 [!DNL Pega Customer Decision Hub] 는 아래 표에 설명된 사용자 지정 사용자 ID의 활성화를 지원합니다. 자세한 내용은 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 |
+| 대상 ID | 설명 |
 |---|---|
 | *고객 ID* | 에서 프로필을 고유하게 식별하는 공통 사용자 식별자 [!DNL Pega Customer Decision Hub] 및 Adobe Experience Platform |
 
@@ -94,7 +94,8 @@ Adobe Experience Platform의 프로필 대상 멤버십( 로 로드됨) [!DNL Pe
 
 >[!IMPORTANT]
 > 
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 다음을 참조하십시오 [대상자 데이터를 스트리밍 프로필 내보내기 대상으로 활성화](../../ui/activate-streaming-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 

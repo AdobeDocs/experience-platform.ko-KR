@@ -3,9 +3,9 @@ keywords: crm;CRM;CRM 대상;Outreach;Outreach crm 대상
 title: 지원 연결
 description: 전달 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 전달 내에서 활성화할 수 있습니다.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1746'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 마케터는 Adobe Experience Platform 프로필의 속성에 따라 잠재 고객에게 개인화된 경험을 제공할 수 있습니다. 오프라인 데이터에서 대상을 작성하고 이 대상자를 (으)로 보낼 수 있습니다. [!DNL Outreach]: Adobe Experience Platform에서 대상자 및 프로필이 업데이트되는 즉시 잠재 고객의 피드에 표시할 수 있습니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 
@@ -73,7 +73,7 @@ ht-degree: 1%
 
 [!DNL Outreach] 는 아래 표에 설명된 id 업데이트를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 | 고려 사항 |
+| 타겟 ID | 설명 | 고려 사항 |
 |---|---|---|
 | `OutreachId` | <ul><li>[!DNL Outreach] 식별자. Prospect Profile에 해당하는 숫자 값입니다.</li><li>ID는 내의 ID와 일치해야 합니다. [!DNL Outreach] 업데이트 중인 잠재 고객용 URL.</li><li>다음을 참조하십시오. [[!DNL Outreach] 설명서](https://api.outreach.io/api/v2/docs#update-an-existing-resource) 을 참조하십시오.</li></ul> | 필수입니다 |
 
@@ -135,7 +135,8 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 > 
-> 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](../../ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 

@@ -3,9 +3,9 @@ keywords: crm;CRM;CRM 대상;salesforce crm;salesforce crm 대상
 title: Salesforce CRM 연결
 description: Salesforce CRM 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce CRM 내에서 활성화할 수 있습니다.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '3085'
+source-wordcount: '3121'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 마케터는 Adobe Experience Platform 프로필의 속성에 따라 개인화된 경험을 사용자에게 제공할 수 있습니다. 오프라인 데이터에서 대상을 작성하고 이 대상을 Salesforce CRM으로 보내어 Adobe Experience Platform에서 대상 및 프로필이 업데이트되는 즉시 사용자 피드에 표시할 수 있습니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 ### Experience Platform의 사전 요구 사항 {#prerequisites-in-experience-platform}
 
@@ -125,7 +125,7 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce CRM], �
 
 [!DNL Salesforce CRM] 는 아래 표에 설명된 id 업데이트를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | `SalesforceId` | 다음 [!DNL Salesforce CRM] 세그먼트를 통해 내보내거나 업데이트하는 연락처 또는 잠재 고객 ID에 대한 식별자입니다. | 필수입니다 |
 
@@ -179,8 +179,9 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce CRM], �
 ## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
->
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+> 
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
@@ -188,7 +189,7 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce CRM], �
 
 대상 데이터를 Adobe Experience Platform에서 로 올바르게 보내려면 [!DNL Salesforce CRM] 대상, 필드 매핑 단계를 거쳐야 합니다. 매핑은 Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 필드 간에 링크를 만드는 것으로 구성됩니다.
 
-에 지정된 속성 **[!UICONTROL Target 필드]** 이 속성은 요청 본문을 형성하므로 속성 매핑 표에 설명된 것과 정확히 동일하게 이름이 지정되어야 합니다.
+에 지정된 속성 **[!UICONTROL 대상 필드]** 이 속성은 요청 본문을 형성하므로 속성 매핑 표에 설명된 것과 정확히 동일하게 이름이 지정되어야 합니다.
 
 에 지정된 속성 **[!UICONTROL 소스 필드]** 이러한 제한 사항을 따르지 마십시오. 필요에 따라 매핑할 수 있지만 입력 데이터의 형식이 [[!DNL Salesforce] 설명서](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5). 입력 데이터가 올바르지 않으면 업데이트 호출이 [!DNL Salesforce] 이(가) 실패하고 연락처/잠재 고객이 업데이트되지 않습니다.
 
@@ -204,7 +205,7 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에서 다음 단계를 �
 
    * 을 사용하여 작업하는 경우 *연락처* 세그먼트 내에서 Salesforce의 개체 참조 를 참조하십시오. [연락처](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) 업데이트할 필드에 대한 매핑을 정의합니다.
    * 단어를 검색하여 필수 필드를 식별할 수 있습니다 *필수*: 위의 링크에서 필드 설명에 언급되어 있습니다.
-   * 내보내거나 업데이트할 필드에 따라 XDM 프로필 스키마와 [!DNL (API) Salesforce CRM]: |소스 필드|Target 필드| 메모 | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 연락처의 성(최대 80자). |\
+   * 내보내거나 업데이트할 필드에 따라 XDM 프로필 스키마와 [!DNL (API) Salesforce CRM]: |소스 필드|대상 필드| 메모 | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 연락처의 성(최대 80자). |\
      |`xdm: person.name.firstName`|`Attribute: FirstName`| 연락처의 이름을 최대 40자까지 지정할 수 있습니다. | |`xdm: personalEmail.address`|`Attribute: Email`| 연락처의 이메일 주소입니다. |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
@@ -214,7 +215,7 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에서 다음 단계를 �
 
    * 을 사용하여 작업하는 경우 *잠재 고객* 세그먼트 내에서 Salesforce의 개체 참조 를 참조하십시오. [리드](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) 업데이트할 필드에 대한 매핑을 정의합니다.
    * 단어를 검색하여 필수 필드를 식별할 수 있습니다 *필수*: 위의 링크에서 필드 설명에 언급되어 있습니다.
-   * 내보내거나 업데이트할 필드에 따라 XDM 프로필 스키마와 [!DNL (API) Salesforce CRM]: |소스 필드|Target 필드| 메모 | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 리드 최대 80자의 성. |\
+   * 내보내거나 업데이트할 필드에 따라 XDM 프로필 스키마와 [!DNL (API) Salesforce CRM]: |소스 필드|대상 필드| 메모 | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 리드 최대 80자의 성. |\
      |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. 리드의 회사. | |`xdm: personalEmail.address`|`Attribute: Email`| 잠재 고객의 이메일 주소입니다. |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.

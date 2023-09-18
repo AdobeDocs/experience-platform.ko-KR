@@ -2,9 +2,9 @@
 title: Adobe Advertising Cloud DSP 연결
 description: Adobe Advertising Cloud DSP은 Adobe Real-time Customer Data Platform의 통합 대상으로서, 캠페인 활성화를 위해 인증된 자사 대상을 승인된 광고주 및 사용자와 공유할 수 있습니다.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Advertising Cloud DSP 대상을 사용하는 방법과 시기를 더 잘 이해�
 
 DSP 계정이 있는 미디어 에이전시는 호스피탈리티 업계의 상위 브랜드인 고객을 대신하여 리타겟팅 캠페인을 실행하고 있습니다. 그 브랜드는 새로운 판촉 오퍼와 함께 작년에 있었던 모든 손님들을 다시 타겟팅하고 싶어한다. 브랜드는에서 모든 게스트 정보를 호스팅합니다. [!DNL Real-Time CDP]. 브랜드는 해당 게스트의 해시된 이메일 ID로 구성된 대상을 공유할 수 있습니다 [!DNL Real-Time CDP] 미디어 캠페인을 통해 게스트를 재타겟팅하기 위해 미디어 에이전시의 DSP 계정에 연결합니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 * DSP 계정 수준 및 캠페인 수준 설정을 통해 대상자와의 공유 활성화 [!DNL LiveRamp RampID]고객 데이터를 로 변환합니다. [!DNL RampIDs] 타겟팅 가능한 세그먼트를 만듭니다. DSP 계정 팀이 이 구성을 수행합니다. [!DNL RampID] 는 DSP과 간의 파트너십을 통해 사용할 수 있습니다. [!DNL LiveRamp], 그리고 자신의 것은 필요 없습니다 [!DNL LiveRamp] 멤버십을 사용하여 쿠키를 사용할 수 있습니다.
 * Experience Platform 계정용 Experience Cloud 조직 ID입니다. ID는 [!DNL Real-Time CDP] 사용자 프로필 페이지입니다.
@@ -43,7 +43,7 @@ DSP 계정이 있는 미디어 에이전시는 호스피탈리티 업계의 상�
 
 Adobe Advertising Cloud DSP 대상은 아래 표에 설명된 ID 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
 
-| TARGET ID | 설명 | 고려 사항 |
+| 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 속성이 포함된 경우 **[!UICONTROL 변환 적용]** 활성화 시 Experience Platform이 데이터를 자동으로 해시하도록 하는 옵션입니다. |
 
@@ -95,7 +95,8 @@ Adobe Advertising Cloud DSP 대상은 아래 표에 설명된 ID 활성화를 �
 
 >[!IMPORTANT]
 > 
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
