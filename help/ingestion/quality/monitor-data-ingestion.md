@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 데이터 수집 모니터링
 description: 이 사용 안내서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터를 모니터링하는 방법에 대한 단계를 제공합니다. 이 안내서를 사용하려면 Adobe ID이 있어야 하며 Adobe Experience Platform에 액세스할 수 있어야 합니다.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 3%
+source-wordcount: '657'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 3%
 >title="수집 속도"
 >abstract="초당 정상적으로 처리된 이벤트 수입니다."
 >text="Learn more in the documentation"
->additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="UI에서 소스의 데이터 흐름 모니터링"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="UI에서 소스의 데이터 흐름 모니터링"
 
 >[!TIP]
 >
