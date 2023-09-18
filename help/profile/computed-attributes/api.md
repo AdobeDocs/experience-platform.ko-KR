@@ -1,21 +1,19 @@
 ---
 title: 계산된 속성 API 끝점
 description: Real-Time Customer Profile API를 사용하여 계산된 속성을 생성, 보기, 업데이트 및 삭제하는 방법을 알아봅니다.
-badge: "Beta"
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: e1c7d097f7ab39d05674c3dad620bea29f08092b
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1654'
 ht-degree: 2%
 
 ---
+
 
 # 계산된 속성 API 끝점
 
 >[!IMPORTANT]
 >
->계산된 속성 기능은 현재 Beta 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
->
->또한 API에 대한 액세스가 제한됩니다. 계산된 속성 API에 대한 액세스 권한을 받는 방법을 알아보려면 Adobe 지원 센터에 문의하십시오.
+>API에 대한 액세스가 제한됩니다. 계산된 속성 API에 대한 액세스 권한을 받는 방법을 알아보려면 Adobe 지원 센터에 문의하십시오.
 
 계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 데 사용되는 함수입니다. 이러한 함수는 세그먼테이션, 활성화 및 개인화에서 사용할 수 있도록 자동으로 계산됩니다. 이 안내서에는 를 사용하여 기본 CRUD 작업을 수행하기 위한 샘플 API 호출이 포함되어 있습니다. `/attributes` 엔드포인트.
 
@@ -52,7 +50,7 @@ GET /attributes?{QUERY_PARAMETERS}
 | `limit` | 응답의 일부로 반환되는 최대 항목 수를 지정하는 매개 변수입니다. 이 매개 변수의 최소값은 1이고 최대값은 40입니다. 이 매개 변수가 포함되지 않으면 기본적으로 20개 항목이 반환됩니다. | `limit=20` |
 | `offset` | 항목을 반환하기 전에 건너뛸 항목의 수를 지정하는 매개 변수입니다. | `offset=5` |
 | `sortBy` | 반환된 항목이 정렬되는 순서를 지정하는 매개 변수입니다. 사용 가능한 옵션은 다음과 같습니다 `name`, `status`, `updateEpoch`, 및 `createEpoch`. 다음을 포함하거나 포함하지 않고 오름차순 또는 내림차순으로 정렬할지 선택할 수도 있습니다. `-` 정렬 옵션 앞에 있습니다. 기본적으로 항목은 다음을 기준으로 정렬됩니다. `updateEpoch` 내림차순으로. | `sortBy=name` |
-| `status` | 계산된 속성의 상태를 기준으로 필터링할 수 있는 매개 변수입니다. 사용 가능한 옵션은 다음과 같습니다 `draft`, `new`, `processing`, `processed`, `failed`, `disabled`, 및 `initializing`. 이 옵션은 대/소문자를 구분하지 않습니다. | `status=draft` |
+| `property` | 다양한 계산된 속성 필드를 필터링할 수 있는 매개변수. 지원되는 속성은 다음과 같습니다 `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, 및 `status`. 지원되는 작업은 나열된 속성에 따라 다릅니다. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=다음 포함()), `NOT_CONTAINS` (!=다음 포함())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **요청**
 
@@ -107,19 +105,24 @@ curl -X GET https://platform.adobe.io/data/core/ca/attributes?limit=3 \
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
+            "keepCurrent": false,
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
                 "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "SUM"
             },
             "status": "DRAFT",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "",
             "createEpoch": 1671223530322,
             "updateEpoch": 1673043640946,
             "createdBy": "{USER_ID}"
@@ -138,19 +141,24 @@ curl -X GET https://platform.adobe.io/data/core/ca/attributes?limit=3 \
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
+            "keepCurrent": true,
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
-                "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
+                "value": "xEvent[eventType.equals(\"commerce.backofficeOrderPlaced\", false)].topN(timestamp, 1).map({\"timestamp\": timestamp, \"value\": producedBy}).head()"
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "MOST_RECENT"
             },
             "status": "DRAFT",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "",
             "createEpoch": 1671223586455,
             "updateEpoch": 1671223586455,
             "createdBy": "{USER_ID}"
@@ -173,15 +181,19 @@ curl -X GET https://platform.adobe.io/data/core/ca/attributes?limit=3 \
                 "type": "PQL",
                 "format": "pql/text",
                 "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "SUM"
             },
-            "status": "DRAFT",
+            "status": "PROCESSED",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "2023-08-27T00:14:55.028",
             "createEpoch": 1671220358902,
             "updateEpoch": 1671220358902,
             "createdBy": "{USER_ID}"
@@ -252,7 +264,7 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 | `expression.type` | 표현식의 유형입니다. 현재 PQL만 지원됩니다. |
 | `expression.format` | 표현식의 형식입니다. 현재는 `pql/text` 은(는) 지원됩니다. |
 | `expression.value` | 표현식의 값입니다. |
-| `keepCurrent` | 계산된 속성 값을 최신 상태로 유지할지 여부를 결정하는 부울입니다. 현재 이 값은 (으)로 설정되어야 합니다. `false`. |
+| `keepCurrent` | 빠른 새로 고침을 사용하여 계산된 속성 값을 최신 상태로 유지할지 여부를 결정하는 부울입니다. 현재 이 값은 (으)로 설정되어야 합니다. `false`. |
 | `duration` | 계산된 속성에 대한 전환 확인 기간을 나타내는 개체입니다. 전환 확인 기간은 계산된 속성을 계산하기 위해 되돌릴 수 있는 기간을 나타냅니다. |
 | `duration.count` | 전환 확인 기간 기간을 나타내는 숫자입니다. 가능한 값은 의 값에 따라 다릅니다 `duration.unit` 필드. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
 | `duration.unit` | 전환 확인 기간에 사용할 시간 단위를 나타내는 문자열입니다. 가능한 값은 다음과 같습니다. `HOURS`, `DAYS`, `WEEKS`, 및 `MONTHS`. |
@@ -294,6 +306,7 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -368,6 +381,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b1
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -378,13 +392,18 @@ curl -X GET 'https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b1
 | -------- | ----------- |
 | `id` | 다른 API 작업 중에 계산된 속성을 참조하는 데 사용할 수 있는 고유한 읽기 전용 시스템 생성 ID입니다. |
 | `type` | 반환된 객체가 계산된 속성임을 보여 주는 문자열입니다. |
+| `name` | 계산된 속성의 이름입니다. |
+| `displayName` | 계산된 속성의 표시 이름입니다. Adobe Experience Platform UI 내에서 계산된 속성을 나열할 때 표시되는 이름입니다. |
+| `description` | 계산된 속성에 대한 설명입니다. 이 기능은 조직 내의 다른 사용자가 사용할 올바른 계산된 속성을 결정하는 데 도움이 되므로 여러 계산된 속성이 정의된 경우에 특히 유용합니다. |
 | `imsOrgId` | 계산된 속성이 속한 조직의 ID입니다. |
 | `sandbox` | 샌드박스 객체에는 계산된 속성이 구성된 샌드박스의 세부 정보가 포함됩니다. 이 정보는 요청에서 전송된 샌드박스 헤더에서 가져옵니다. 자세한 내용은 다음을 참조하십시오. [샌드박스 개요](../../sandboxes/home.md). |
 | `path` | 다음 `path` 계산된 속성에 매핑할 수 없습니다. |
+| `keepCurrent` | 빠른 새로 고침을 사용하여 계산된 속성 값을 최신 상태로 유지할지 여부를 결정하는 부울입니다. |
 | `expression` | 계산된 속성의 표현식이 포함된 객체입니다. |
-| `mergeFunction` | 계산된 속성에 대한 병합 함수를 포함하는 객체입니다. 이 값은 계산된 속성의 표현식 내에서 해당 집계 매개변수를 기반으로 합니다. |
+| `mergeFunction` | 계산된 속성에 대한 병합 함수를 포함하는 객체입니다. 이 값은 계산된 속성의 표현식 내에서 해당 집계 매개변수를 기반으로 합니다. 가능한 값은 다음과 같습니다. `SUM`, `MIN`, `MAX`, 및 `MOST_RECENT`. |
 | `status` | 계산된 속성의 상태입니다. 다음 값 중 하나가 될 수 있습니다. `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`, 또는 `DISABLED`. |
 | `schema` | 표현식이 평가되는 스키마에 대한 정보를 포함하는 객체입니다. 현재는 `_xdm.context.profile` 은(는) 지원됩니다. |
+| `lastEvaluationTs` | 계산된 속성이 마지막으로 평가된 시기를 나타내는 타임스탬프입니다. |
 | `createEpoch` | 계산된 속성이 생성된 시간(초)입니다. |
 | `updateEpoch` | 계산된 속성이 마지막으로 업데이트된 시간(초)입니다. |
 | `createdBy` | 계산된 속성을 만든 사용자의 ID입니다. |
@@ -457,6 +476,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1681365690928,
     "updateEpoch": 1681365690928,
     "createdBy": "{USER_ID}"
@@ -548,6 +568,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680071726825,
     "updateEpoch": 1680074429192,
     "createdBy": "{USER_ID}"
