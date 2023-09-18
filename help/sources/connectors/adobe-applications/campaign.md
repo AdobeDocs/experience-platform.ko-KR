@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Adobe Campaign Managed Cloud Services;캠페인;캠페인 관리 서비스
 title: Adobe Campaign Managed Cloud Services
-description: 사용자 인터페이스를 사용하여 Campaign 관리 Cloud Services을 플랫폼에 연결하는 방법을 알아봅니다
+description: 사용자 인터페이스를 사용하여 Campaign 관리 Cloud Service을 플랫폼에 연결하는 방법을 알아봅니다
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 39a503b14c731aeed279bbbfa8c814c2ec26ed92
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 0%
+source-wordcount: '757'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자
 
 Adobe Campaign Managed Cloud Services 소스를 사용하면 Adobe Campaign v8 게재 로그 및 추적 로그 데이터를 Adobe Experience Platform으로 가져올 수 있습니다.
 
-## 사전 요구 사항
+## 전제 조건
 
 소스 연결을 만들어 Campaign v8을 Experience Platform 상태로 만들려면 먼저 다음 사전 요구 사항을 완료해야 합니다.
 
@@ -75,3 +75,9 @@ Adobe Campaign Managed Cloud Services 소스를 사용하면 Adobe Campaign v8 �
 이제 Campaign 클라이언트 콘솔에서 데이터 로그에 액세스하고 스키마 및 데이터 세트를 만들었으므로 소스 연결을 만들어 Campaign Managed Services 데이터를 플랫폼으로 가져올 수 있습니다.
 
 Campaign v8 게재 로그 및 추적 로그 데이터를 Experience Platform으로 가져오는 방법에 대한 자세한 지침은 의 안내서를 참조하십시오. [ui에서 Campaign Managed Services 소스 연결 만들기](../../tutorials/ui/create/adobe-applications/campaign.md).
+
+>[!IMPORTANT]
+>
+>최근에 제거된 이메일 수신자와 이메일의 상호 작용이 개인 정보를 Experience Platform으로 다시 수집할 수 있는 경계 사례가 있습니다. 경우에 따라 해당 사용자에게 마케팅을 다시 활성화할 수 있습니다.
+>
+>* 이 시나리오는 Experience Platform에서 개인 정보 보호 요청이 실행된 시간과 Adobe Campaign Classic에서 실행된 시간 사이에만 활성화됩니다. 요청이 Campaign에서 실행된 후 레코드가 Campaign으로 내보내지지 않는지 확인합니다. 이 문제를 해결하려면 실행 72시간 후 GDPR 요청을 다시 발행하십시오.

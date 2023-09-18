@@ -3,9 +3,9 @@ keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침
 title: ID 서비스 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 87138cbf041e40bfc6b42edffb16f5b8a8f5b365
+source-git-commit: a9b5ab28d00941b7531729653eb630a61b5446fc
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1182'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 1%
 | 가드레일 | 제한 | 참고 |
 | --- | --- | --- |
 | (현재 비헤이비어) 그래프의 ID 수 | 150 | 제한은 샌드박스 수준에서 적용됩니다. ID 수가 150개 이상에 도달하면 새 ID가 추가되지 않고 ID 그래프가 업데이트되지 않습니다. 그래프는 하나 이상의 그래프를 150개 미만의 동일성과 연결한 결과로서 150개 이상의 동일성을 나타낼 수 있다. **참고**: ID 그래프의 최대 ID 수 **병합된 개별 프로필의 경우** 는 50입니다. ID가 50개를 초과하는 ID 그래프를 기반으로 하는 병합된 프로필은 실시간 고객 프로필에서 제외됩니다. 자세한 내용은 의 안내서를 참조하십시오. [프로필 데이터 보호](../profile/guardrails.md). |
-| (예정된 비헤이비어) 그래프의 ID 수 [!BADGE 베타]{type=Informative} | 50 | 50개의 연결된 ID가 있는 그래프가 업데이트되면 ID 서비스는 &quot;선입 선출&quot; 메커니즘을 적용하고 최신 ID를 위한 공간을 만들기 위해 가장 오래된 ID를 삭제합니다. 삭제는 ID 유형 및 타임스탬프를 기반으로 합니다. 제한은 샌드박스 수준에서 적용됩니다. 읽기 [부록](#appendix) 제한에 도달하면 Identity Service에서 ID를 삭제하는 방법에 대한 자세한 내용을 보려면 여기를 클릭하십시오. |
+| (예정된 비헤이비어) 그래프의 ID 수 [!BADGE 베타]{type=Informative} | 50 | 50개의 연결된 ID가 있는 그래프가 업데이트되면 ID 서비스는 &quot;선입 선출&quot; 메커니즘을 적용하고 최신 ID를 위한 공간을 만들기 위해 가장 오래된 ID를 삭제합니다. 삭제는 ID 유형 및 타임스탬프를 기반으로 합니다. 제한은 샌드박스 수준에서 적용됩니다. 자세한 내용은 의 섹션을 참조하십시오. [삭제 논리 이해](#deletion-logic). |
 | XDM 레코드의 ID 수 | 20 | 필요한 최소 XDM 레코드 수는 2개입니다. |
 | 사용자 정의 네임스페이스 수 | None | 만들 수 있는 사용자 정의 네임스페이스의 수에는 제한이 없습니다. |
 | 네임스페이스 표시 이름 또는 ID 기호의 문자 수 | None | 네임스페이스 표시 이름 또는 ID 기호의 문자 수에는 제한이 없습니다. |
@@ -50,32 +50,11 @@ ht-degree: 1%
 
 2023년 3월 31일부터 Identity Service는 신규 고객에 대한 Adobe Analytics ID(AAID) 수집을 차단합니다. 이 ID는 일반적으로 [Adobe Analytics 소스](../sources/connectors/adobe-applications/analytics.md) 및 [Adobe Audience Manager 소스](../sources//connectors/adobe-applications/audience-manager.md) 및 는 ECID가 동일한 웹 브라우저를 나타내므로 중복됩니다. 이 기본 구성을 변경하려면 Adobe 계정 팀에 문의하십시오.
 
-## 다음 단계
-
-자세한 내용은 다음 설명서를 참조하십시오. [!DNL Identity Service]:
-
-* [[!DNL Identity Service] 개요](home.md)
-* [ID 그래프 뷰어](ui/identity-graph-viewer.md)
-
-
-## 부록 {#appendix}
-
-다음 섹션에는 ID 서비스 보호 기능에 대한 추가 정보가 포함되어 있습니다.
-
-### [!BADGE 베타]{type=Informative} 수용작업량 ID 그래프가 업데이트될 때 삭제 논리 이해 {#deletion-logic}
-
->[!IMPORTANT]
->
->다음 삭제 로직은 ID 서비스의 향후 동작입니다. 프로덕션 샌드박스에 다음이 포함된 경우 계정 담당자에게 문의하여 ID 유형 변경을 요청하십시오.
->
-> * 개인 식별자(예: CRM ID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.
-> * 쿠키/장치 식별자가 교차 장치 ID 유형으로 구성된 사용자 지정 네임스페이스입니다.
->
->이 기능을 사용할 수 있게 되면 50개 ID의 제한을 초과하는 그래프는 최대 50개 ID로 줄어듭니다. Real-Time CDP B2C 에디션의 경우, 세분화 및 활성화에서 이전에 무시했던 프로필의 수가 대상에 대해 자격 조건을 충족하면 프로필 수가 최소한으로 증가할 수 있습니다.
+## [!BADGE 베타]{type=Informative} 수용작업량 ID 그래프가 업데이트될 때 삭제 논리 이해 {#deletion-logic}
 
 전체 ID 그래프가 업데이트되면 Identity Service는 최신 ID를 추가하기 전에 그래프에서 가장 오래된 ID를 삭제합니다. 이는 신원 데이터의 정확성과 관련성을 유지하기 위함이다. 이 삭제 프로세스는 다음 두 가지 기본 규칙을 따릅니다.
 
-#### 규칙 #1 삭제는 네임스페이스의 ID 유형에 따라 우선 순위가 지정됩니다
+### 규칙 #1 삭제는 네임스페이스의 ID 유형에 따라 우선 순위가 지정됩니다
 
 삭제 우선 순위는 다음과 같습니다.
 
@@ -83,7 +62,7 @@ ht-degree: 1%
 2. 장치 ID
 3. 교차 장치 ID, 이메일 및 전화
 
-#### 규칙 #2 삭제는 ID에 저장된 타임스탬프를 기반으로 합니다
+### 규칙 #2 삭제는 ID에 저장된 타임스탬프를 기반으로 합니다
 
 그래프에 연결된 각 ID에는 해당하는 자체 타임스탬프가 있습니다. 전체 그래프가 업데이트되면 Identity Service는 타임스탬프가 가장 오래된 ID를 삭제합니다.
 
@@ -110,7 +89,36 @@ ht-degree: 1%
 
 >[!ENDSHADEBOX]
 
+### 구현에 대한 영향
+
+다음 섹션에서는 ID 서비스, 실시간 고객 프로필 및 WebSDK에 대한 삭제 논리의 의미에 대해 간략히 설명합니다.
+
+#### ID 서비스: 사용자 지정 네임스페이스 ID 유형 변경
+
+프로덕션 샌드박스에 다음이 포함된 경우 Adobe 계정 팀에 문의하여 ID 유형 변경을 요청하십시오.
+
+* 개인 식별자(예: CRM ID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.
+* 쿠키/장치 식별자가 교차 장치 ID 유형으로 구성된 사용자 지정 네임스페이스입니다.
+
+이 기능을 사용할 수 있게 되면 50개 ID의 제한을 초과하는 그래프는 최대 50개 ID로 줄어듭니다. Real-Time CDP B2C Edition의 경우, 이전에 세분화 및 활성화에서 이들 프로필이 무시되었으므로 대상에 대해 자격을 부여하는 프로필 수가 최소한으로 증가할 수 있습니다.
+
+#### 실시간 고객 프로필: 익명 프로필 설정
+
 삭제는 ID 서비스의 데이터에만 발생하며 실시간 고객 프로필에는 발생하지 않습니다.
 
 * ECID가 더 이상 ID 그래프의 일부가 아니기 때문에 이 동작은 결과적으로 단일 ECID로 더 많은 프로필을 만들 수 있습니다.
 * 지정 가능한 대상 자격 번호 내에 계속 있으려면 을 활성화하는 것이 좋습니다 [익명 프로필 데이터 만료](../profile/pseudonymous-profiles.md) 이전 프로필을 삭제합니다.
+
+#### 실시간 고객 프로필 및 WebSDK: 기본 ID 삭제
+
+CRM ID에 대해 인증된 이벤트를 유지하려면 기본 ID를 ECID에서 CRM ID로 변경하는 것이 좋습니다. 이 변경 사항을 구현하는 방법에 대한 단계는 다음 문서를 참조하십시오.
+
+* [Experience Platform 태그에 대한 ID 맵 구성](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
+* [Experience Platform Web SDK의 ID 데이터](../edge/identity/overview.md#using-identitymap)
+
+## 다음 단계
+
+자세한 내용은 다음 설명서를 참조하십시오. [!DNL Identity Service]:
+
+* [[!DNL Identity Service] 개요](home.md)
+* [ID 그래프 뷰어](ui/identity-graph-viewer.md)
