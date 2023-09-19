@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: d83a5558d706e7bf059edb912f6fd43d4b66cc54
+source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1703'
 ht-degree: 4%
 
 ---
@@ -51,7 +51,7 @@ Experience Platform은 두 개의 사전 구성된 기본 역할과 함께 제�
 | 역할 | 샌드박스 액세스 | 권한 |
 | --- | --- | --- |
 | 기본 프로덕션 모든 액세스 | 프로덕션 | 샌드박스 관리 권한을 제외하고 Experience Platform에 적용할 수 있는 모든 권한입니다. |
-| 샌드박스 관리자 | 해당 없음 | 샌드박스 관리 권한에 대한 액세스 권한만 제공합니다. |
+| 샌드박스 관리자 | N/A | 샌드박스 관리 권한에 대한 액세스 권한만 제공합니다. |
 
 ## 샌드박스 및 권한
 
@@ -83,6 +83,8 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Alerts] | [!UICONTROL 경고 해결] | 경고를 읽고, 편집하고, 삭제할 수 있는 액세스 권한 |
 | [!DNL Alerts] | [!UICONTROL 경고 보기] | 경고에 대한 읽기 전용 액세스 권한. |
 | [!DNL Alerts] | [!UICONTROL 경고 관리] | 경고 내역을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
+| [!DNL Computed Attributes] | [!UICONTROL 계산된 속성 보기] | 계산된 속성 탭, 인벤토리 및 세부 정보에 대한 읽기 전용 액세스 권한. |
+| [!DNL Computed Attributes] | [!UICONTROL 계산된 속성 관리] | 계산된 속성을 읽고, 만들고, 삭제하고, 비활성화할 수 있는 액세스 권한. |
 | [!DNL Data Hygiene] | [!UICONTROL 데이터 위생 보기] | 데이터 위생을 위한 읽기 전용 액세스. |
 | [!DNL Data Hygiene] | [!UICONTROL 데이터 위생 관리] | 데이터 위생 상태를 읽고 만들고 편집하고 삭제할 수 있는 액세스 권한. |
 | [!DNL Data Modeling] | [!UICONTROL 스키마 관리] | 스키마 및 관련 리소스를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
