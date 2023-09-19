@@ -3,10 +3,10 @@ audience: user
 user-guide-title: 실시간 고객 프로필 안내서
 user-guide-description: 고객 데이터를 통합하여 다양한 채널에서 고객과의 상호 작용을 종합적으로 파악합니다.
 feature: Profiles
-source-git-commit: 5fb8edd9dd664f9a0ed036d1340b5f8fcd4ba0c4
+source-git-commit: 776958abf5d5e71452ff7f315ea5579b4f4aac1c
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 29%
+source-wordcount: '143'
+ht-degree: 28%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 29%
 * [프로필 개요(비디오)](video/profile-overview.md)
 * [[!DNL Profile] 및 세그먼테이션 보호](guardrails.md)
 * [[!DNL Profile] 대시보드](ui/profile-dashboard.md)
+* [가장자리 프로필](edge-profiles.md)
 * [경험 이벤트 만료](event-expirations.md)
 * [익명 프로필 만료](pseudonymous-profiles.md)
 * [!DNL Profile] API {#api}
@@ -52,4 +53,4 @@ ht-degree: 29%
 * [개인 정보 보호 요청 처리](privacy.md)
 * [[!DNL Profile] 문제 해결 안내서](troubleshooting.md)
 * [프로필 API 참조](https://www.adobe.com/go/profile-apis-en)
-* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes_kr)
+* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)
