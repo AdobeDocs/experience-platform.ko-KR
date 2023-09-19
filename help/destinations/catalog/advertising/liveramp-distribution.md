@@ -3,9 +3,9 @@ title: LiveRamp - 배포 연결
 description: LiveRamp - 배포 커넥터를 사용하여 이전에 LiveRamp에 온보딩된 대상자를 다른 광고 대상으로 활성화하는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: c04c7ff4f1ab45d944f4ab516d7842df536fae40
+source-git-commit: 324f662dcc9718df6c81c47874c6b30235a74601
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1469'
 ht-degree: 40%
 
 ---
@@ -140,7 +140,9 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="광고주 데이터 대상 계약서 약관"
 >abstract="`I AGREE`을 입력하고 Disney 광고주 데이터 계약서 약관의 승인 및 동의를 확인합니다."
->additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="계약서 참조"
+
+<!-- 
+>additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement" -->
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"
