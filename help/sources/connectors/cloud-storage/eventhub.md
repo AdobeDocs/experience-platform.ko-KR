@@ -3,7 +3,7 @@ title: Azure Event Hubs 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Azure Event Hubs를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 7240f96cb30e79add500a1957d93062eecd79ee2
+source-git-commit: 087100b23f95cef527a507fb11440467feb78c9e
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]. 이러한 시스템에서 데이터를 플랫폼으로 가져올 수 있습니다.
 
-클라우드 스토리지 소스는 다운로드, 포맷 또는 업로드 없이도 고유한 데이터를 플랫폼으로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. 플랫폼에서 의 데이터를 가져올 수 있습니다. [!DNL Event Hubs] 실시간으로.
+클라우드 스토리지 소스는 다운로드, 포맷 또는 업로드 없이도 고유한 데이터를 플랫폼으로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. 플랫폼에서 다음 위치에서 데이터를 가져올 수 있습니다. [!DNL Event Hubs] 실시간으로.
 
 ## 다음으로 크기 조절 [!DNL Event Hubs]
 
@@ -107,7 +107,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]
     "virtualNetworkRules": [
       {
         "subnet": {
-          "id": "/subscriptions/1618ef18-9edc-48bf-88dd-61cc979629b5/resourceGroups/ethos_12_prod_aus5_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_aus5_network_10_21_116_0_22/subnets/ethos_12_prod_aus5_network_10_21_116_0_22"
+          "id": "/subscriptions/1618ef18-9edc-48bf-88dd-61cc979629b5/resourceGroups/ethos_12_prod_aus5_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_aus5-vnet/subnets/ethos_12_prod_aus5_network_10_21_116_0_22"
         },
         "ignoreMissingVnetServiceEndpoint": true
       },
