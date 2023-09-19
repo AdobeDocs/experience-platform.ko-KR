@@ -2,10 +2,10 @@
 title: Adobe Target v2 확장 릴리스 노트
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장 기능에 대한 최신 릴리스 정보입니다.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: ffbb68c9c84b834984e1adb2640d8806ce9f9962
+source-git-commit: 4b87141e94681d9a9f51d4d9b2f2276ca065d6ce
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 25%
+source-wordcount: '691'
+ht-degree: 23%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 25%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## v0.19.3 (2023년 9월 18일)
+
+- at.js v2.10.3을 지원하도록 업데이트되었습니다.
+- 렌더링되는 오퍼가 없을 때 at-content-rendering-succeeded 사용자 지정 이벤트를 잘못 트리거하는 문제를 해결했습니다. 이제 올바른 이벤트인 at-content-rendering-no-offers가 트리거됩니다.
+- at-content-rendering에 실패한 사용자 지정 이벤트에 대한 오류 개체에 eventToken 및 responseTokens를 추가했습니다.
 
 ## v0.19.2 (2023년 2월 14일)
 
@@ -74,7 +80,7 @@ ht-degree: 25%
 
 ## v0.14 (2021년 5월 14일)
 
-- 이(가) 있는 Target 로드 작업을 새로 추가했습니다. [온디바이스 의사 결정](./overview.md#load-target-with-on-device-decisioning), 로드됨 `at.js` 온디바이스 의사 결정 기능 포함 2.5
+- 과 함께 Target 로드 새 작업이 추가되었습니다. [온디바이스 의사 결정](./overview.md#load-target-with-on-device-decisioning), 로드됨 `at.js` 온디바이스 의사 결정 기능 포함 2.5
 - 업데이트됨 `at.js` 2.5로
 
 
@@ -104,8 +110,8 @@ ht-degree: 25%
 
 ## v0.13.2 (2020년 6월 15일)
 
-- CNAME 및 에지 재정의를 사용할 때 다음의 문제가 해결되었습니다. `at.js` 1.x에서 서버 도메인을 잘못 만들어 Target 요청이 실패할 수 있습니다
-- Target 및 Adobe Analytics 태그 확장을 위해 v2 태그 확장을 사용할 때 Target이 Analytics sendBeacon 호출을 지연하는 문제가 해결되었습니다.
+- CNAME 및 에지 재정의를 사용할 때 다음의 문제가 해결되었습니다. `at.js` 1.x에서 서버 도메인을 잘못 만들어 Target 요청에 실패할 수 있습니다
+- Target용 v2 태그 확장 및 Adobe Analytics 태그 확장을 사용할 때 Target이 Analytics sendBeacon 호출을 지연하는 문제가 해결되었습니다.
 - `deviceIdLifetime`을 통해 재정의 가능하도록 하여 `targetGlobalSettings` 설정을 개선했습니다.
 
 ## v0.13.0 (2020년 3월 25일)
