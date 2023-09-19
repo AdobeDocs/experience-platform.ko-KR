@@ -1,15 +1,19 @@
 ---
 title: 계산된 속성 UI 안내서
 description: Adobe Experience Platform UI를 사용하여 계산된 속성을 만들고, 보고, 업데이트하는 방법을 알아봅니다.
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1485'
 ht-degree: 1%
 
 ---
 
 
 # 계산된 속성 UI 안내서
+
+>[!NOTE]
+>
+>계산된 속성에 액세스하려면 적절한 권한(**계산된 속성 보기** 및 **계산된 속성 관리**). 필요한 권한에 대한 자세한 내용은 [액세스 제어 설명서](../../access-control/home.md). 이러한 권한을 적용하는 방법에 대해 알아보려면 [권한 관리 안내서](../../access-control/ui/permissions.md).
 
 Adobe Experience Platform에서 계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 데 사용되는 함수입니다. 이러한 함수는 세그먼테이션, 활성화 및 개인화에서 사용할 수 있도록 자동으로 계산됩니다.
 
