@@ -2,7 +2,7 @@
 title: 대화형 데이터 수집
 description: Adobe Experience Platform Edge Network Server API에서 대화형 데이터 수집을 수행하는 방법에 대해 알아봅니다.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 6%
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 ## 개요 {#overview}
 
-대화형 데이터 수집 엔드포인트는 단일 이벤트를 수신하며, 클라이언트가 Adobe Experience Platform Edge Network 서버에서 응답이 반환될 것으로 예상할 때 사용됩니다. 이러한 엔드포인트는 데이터 수집을 수행하는 동안 다른 Experience Edge 서비스의 콘텐츠를 반환할 수도 있습니다.
+대화형 데이터 수집 엔드포인트는 단일 이벤트를 수신하며, 클라이언트가 Adobe Experience Platform Edge Network 서버에서 응답이 반환될 것으로 예상할 때 사용됩니다. 이러한 엔드포인트는 데이터 수집을 수행하는 동안 다른 Edge Network 서비스에서 콘텐츠를 반환할 수도 있습니다.
 
 서버 응답에는 하나 이상이 포함됩니다 `Handle` 개체. 아래 표시된 대로.
 

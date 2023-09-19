@@ -2,9 +2,9 @@
 solution: Experience Platform
 title: Media Edge API 시작하기
 description: Media Edge API 문제 해결 안내서
-source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 ## 세션 시작 확인
 
 세션 시작 요청과 관련된 대부분의 문제는 207 다중 상태 응답으로 이어집니다.
-페이로드는 Experience Edge Network Server API의 치명적이지 않은 오류와 유사합니다. 모든 Media Analytics 오류의 유형은 다음과 같습니다.  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. 응답에 표시된 숫자는 오류 상태에 해당합니다.
+페이로드는 와 유사합니다. [서버 API](../error-handling.md)의 치명적이지 않은 오류입니다. 모든 Media Analytics 오류의 유형은 다음과 같습니다.  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. 응답에 표시된 숫자는 오류 상태에 해당합니다.
 
 다음 예는 필수 필드가 없고 세션 시작 요청에 잘못된 응답 본문을 보여줍니다.
 
@@ -64,7 +64,7 @@ ht-degree: 0%
 
 ## 이벤트 확인
 
-잘못된 이벤트 요청은 대부분 400개의 잘못된 요청 응답을 초래합니다. 이러한 경우 페이로드는 Experience Edge Network Server API 치명적 오류와 유사합니다.
+잘못된 이벤트 요청은 대부분 400개의 잘못된 요청 응답을 초래합니다. 이러한 경우 페이로드는 서버 API 치명적 오류와 유사합니다.
 
 이벤트 요청의 경우 Media Edge API 서비스에는 XDM 모델 자체에서 캡처되지 않은 추가 검사가 포함됩니다. 여기에는 경로 확인이 포함됩니다 `eventType` 요청 페이로드와 일치 `eventType`.
 

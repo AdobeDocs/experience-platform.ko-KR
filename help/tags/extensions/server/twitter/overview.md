@@ -3,9 +3,9 @@ keywords: 이벤트 전달 확장;twitter;twitter 이벤트 전달 확장
 title: Twitter 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장을 사용하면 비즈니스 요구 사항에 맞게 이벤트를 Twitter으로 수집할 수 있습니다.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1141'
 ht-degree: 3%
 
 ---
@@ -78,7 +78,7 @@ Experience Platform을 [!DNL Twitter]를 사용하려면 다음 입력이 필요
 
 모든 데이터 요소가 설정되면 이벤트가 전송되는 시기와 방법을 결정하는 이벤트 전달 규칙 만들기를 시작할 수 있습니다 [!DNL Twitter].
 
-새로 만들기 [규칙](../../../ui/managing-resources/rules.md) 이벤트 전달 속성에서 다음을 수행합니다. 아래 **[!UICONTROL 작업]**, 새 작업을 추가하고 확장을 로 설정합니다. **[!UICONTROL Twitter]**. Adobe Experience Edge 네트워크 이벤트를 [!DNL Twitter], 를 설정합니다. **[!UICONTROL 작업 유형]** 끝 **[!UICONTROL 웹 전환 보내기].**
+새로 만들기 [규칙](../../../ui/managing-resources/rules.md) 이벤트 전달 속성에서 다음을 수행합니다. 아래 **[!UICONTROL 작업]**, 새 작업을 추가하고 확장을 로 설정합니다. **[!UICONTROL Twitter]**. Edge Network 이벤트를 로 보내려면 [!DNL Twitter], 를 설정합니다. **[!UICONTROL 작업 유형]** 끝 **[!UICONTROL 웹 전환 보내기].**
 
 선택 후 이벤트를 추가로 구성하는 추가 컨트롤이 나타납니다. 다음을 매핑해야 합니다. [!DNL Twitter] 이전에 만든 데이터 요소에 대한 이벤트 속성입니다. 자세한 내용은 [[!DNL Twitter] 웹 전환 API](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 

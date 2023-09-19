@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 개요
 description: Adobe Experience Platform 세분화 서비스 및 플랫폼 생태계에서 수행하는 역할에 대해 알아봅니다.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 44c92e2163e2b6c0c140c64bba41dfbcc15d5d7f
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1635'
 ht-degree: 12%
 
 ---
@@ -32,7 +32,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트 정의나
 
 ## 대상자 만들기
 
-Adobe Experience Platform에서 대상자로 직접 구성하거나 플랫폼에서 파생된 세그먼트 정의를 통해 두 가지 다른 방식으로 대상을 만들 수 있습니다.
+대상자는 Adobe Experience Platform에서 대상자로 직접 구성 또는 플랫폼에서 파생된 세그먼트 정의를 통한 두 가지 방식으로 생성할 수 있습니다.
 
 ### 대상자 구성
 
@@ -89,10 +89,10 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="에지 평가"
->abstract="에지 세분화는 Experience Edge에서 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지의 개인화 사용 사례를 활성화하는 기능입니다."
+>abstract="Edge 세그멘테이션은 Edge Network에서 즉시 Platform의 세그먼트를 평가하는 기능으로, 동일한 페이지와 다음 페이지 개인화 사용 사례를 가능하게 합니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=ko-KR" text="에지 세분화 UI 안내서"
 
-에지 세그멘테이션은 플랫폼의 세그먼트를 즉시 평가하는 기능입니다 [Experience Edge에서](../edge/home.md), 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
+에지 세그멘테이션은 플랫폼의 세그먼트를 즉시 평가하는 기능입니다 [에지 네트워크에서](../edge/home.md), 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
 
 에지 세분화에 대한 자세한 내용은 다음 중 하나를 참조하십시오. [API 설명서](./api/edge-segmentation.md) 또는 [UI 설명서](./ui/edge-segmentation.md).
 

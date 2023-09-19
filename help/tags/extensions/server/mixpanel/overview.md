@@ -1,12 +1,12 @@
 ---
 keywords: 이벤트 전달 확장;mixpanel;mixpanel 이벤트 전달 확장
 title: Mixpanel 추적 이벤트 API 이벤트 전달 확장
-description: 이 Adobe Experience Platform 이벤트 전달 확장은 Adobe Experience Edge Network 이벤트를 Mixpanel로 보냅니다.
+description: 이 Adobe Experience Platform 이벤트 전달 확장은 Edge Network 이벤트를 Mixpanel로 보냅니다.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '946'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ Experience Platform을에 연결하려면 [!DNL Mixpanel] 다음 입력이 있�
 
 ## 만들기 [!DNL Send Event] 규칙
 
-이벤트 전달 속성에서 새 규칙 만들기를 시작합니다. 아래 **[!UICONTROL 작업]**, 새 작업을 추가하고 확장을 로 설정합니다. **[!UICONTROL Mixpanel]**. 그런 다음 작업 유형을 다음으로 설정합니다. **[!UICONTROL 이벤트 추적]** adobe Experience Edge 네트워크 이벤트를 [!DNL Mixpanel].
+이벤트 전달 속성에서 새 규칙 만들기를 시작합니다. 아래 **[!UICONTROL 작업]**, 새 작업을 추가하고 확장을 로 설정합니다. **[!UICONTROL Mixpanel]**. 그런 다음 작업 유형을 다음으로 설정합니다. **[!UICONTROL 이벤트 추적]** 에지 네트워크 이벤트를 (으)로 보내기 [!DNL Mixpanel].
 
 | 입력 | 설명 | 필수 여부 |
 | --- | --- | --- |

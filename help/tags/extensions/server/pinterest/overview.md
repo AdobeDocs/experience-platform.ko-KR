@@ -3,14 +3,14 @@ keywords: 이벤트 전달 확장;pinterest;pinterest 이벤트 전달 확장
 title: Pinterest 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장을 사용하면 비즈니스 요구 사항에 맞게 이벤트를 Pinterest에 수집할 수 있습니다.
 last-substantial-update: 2023-04-27T00:00:00Z
-source-git-commit: 87c76ef4b95bc05a64d9d124d69c2a51b7b77c08
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1548'
 ht-degree: 4%
 
 ---
 
-# [!DNL Pinterest] 이벤트 전달 확장
+# [!DNL Pinterest] 이벤트 전달 확장 기능
 
 [!DNL Pinterest] 은 레시피, 홈 데코, 스타일 영감 등과 같은 아이디어를 찾는 시각적 검색 엔진입니다. 에 수십억 개의 핀이 있습니다. [!DNL Pinterest], 다른 사용자와 공유할 수도 있습니다. [!DNL Pinterest]. 사용자 상호 작용 이벤트를 대조하고 를 활용할 수 있습니다 [!DNL Pinterest Analytics] 사용자 행동을 이해하고 타깃팅된 광고를 실행합니다.
 
@@ -61,7 +61,7 @@ Experience Platform을 [!DNL Pinterest]를 사용하려면 다음 입력이 필�
 
 ![[!DNL Pinterest] 에 표시된 확장 [!UICONTROL 설치] 탭 [!UICONTROL 구성] 강조 표시됨.](../../../images/extensions/server/pinterest/configure.png)
 
-다음 화면에서 [!UICONTROL 광고 계정 ID] 및 [!UICONTROL 전환 액세스 토큰] 이전에 수집한 [구성 세부 정보](#configuration-details) 섹션. 완료되면 다음을 선택합니다. **[!UICONTROL 저장]**.
+다음 화면에서 [!UICONTROL 광고 계정 ID] 및 [!UICONTROL 전환 액세스 토큰] 이전에 수집한 [구성 세부 정보](#configuration-details) 섹션. 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
 ![다음 [!DNL Pinterest] [!UICONTROL 구성] 을 강조 표시하는 화면 [!UICONTROL 광고 계정 ID] 및 [!UICONTROL 전환 액세스 토큰] 입력 필드.](../../../images/extensions/server/pinterest/input.png)
 
@@ -69,7 +69,7 @@ Experience Platform을 [!DNL Pinterest]를 사용하려면 다음 입력이 필�
 
 모든 데이터 요소가 설정되면 이벤트가 전송되는 시기와 방법을 결정하는 이벤트 전달 규칙 만들기를 시작할 수 있습니다 [!DNL Pinterest].
 
-새로 만들기 [규칙](../../../ui/managing-resources/rules.md) 이벤트 전달 속성에서 다음을 수행합니다. 아래 **[!UICONTROL 작업]**, 새 작업을 추가하고 확장을 로 설정합니다. **[!UICONTROL Pinterest]**. Adobe Experience Edge 네트워크 이벤트를 [!DNL Pinterest], 를 설정합니다. **[!UICONTROL 작업 유형]** 끝 **[!UICONTROL 이벤트 보내기].**
+새로 만들기 [규칙](../../../ui/managing-resources/rules.md) 이벤트 전달 속성에서 다음을 수행합니다. 아래 **[!UICONTROL 작업]**, 새 작업을 추가하고 확장을 로 설정합니다. **[!UICONTROL Pinterest]**. Edge Network 이벤트를 로 보내려면 [!DNL Pinterest], 를 설정합니다. **[!UICONTROL 작업 유형]** 끝 **[!UICONTROL 이벤트 보내기].**
 
 ![다음 [!DNL Pinterest] [!UICONTROL 이벤트 보내기] 규칙 만들기.](../../../images/extensions/server/pinterest/rule.png)
 

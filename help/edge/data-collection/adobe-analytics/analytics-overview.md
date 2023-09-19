@@ -3,9 +3,9 @@ title: Platform Web SDK로 Adobe Analytics 사용
 description: Adobe Experience Platform Web SDK를 사용하여 Adobe Analytics에 데이터를 전송하는 방법에 대해 알아봅니다.
 keywords: adobe analytics;analytics;매핑된 데이터;매핑된 변수;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -74,4 +74,4 @@ a.x.arrayofobjects.1.obj2key //objval1
 
 >[!NOTE]
 >
->Experience Edge 컬렉션을 사용하면 모든 이벤트가 Analytics뿐만 아니라 데이터스트림에 대해 구성한 다른 서비스로 전송됩니다. 예를 들어, Analytics와 Target이 모두 서비스로 구성되어 있고 개인화 및 Analytics를 별도로 호출하는 경우 두 이벤트가 Analytics뿐만 아니라 Target으로 전송됩니다. 이러한 이벤트는 Analytics 보고에 기록되며 바운스 비율과 같은 지표에 영향을 줄 수 있습니다.
+>Edge Network 컬렉션을 사용하면 모든 이벤트가 Analytics뿐만 아니라 데이터스트림에 대해 구성한 다른 서비스로 전송됩니다. 예를 들어 Analytics와 Target이 모두 서비스로 구성되어 있고 개인화 및 Analytics에 대해 별도의 호출을 하는 경우 두 이벤트가 Target뿐만 아니라 Analytics로 전송됩니다. 이러한 이벤트는 Analytics 보고에 기록되며 바운스 비율과 같은 지표에 영향을 줄 수 있습니다.

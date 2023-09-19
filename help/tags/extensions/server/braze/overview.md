@@ -1,12 +1,12 @@
 ---
 keywords: 이벤트 전달 확장;브레이즈;브레이즈 이벤트 전달 확장
 title: 브레이즈 이벤트 전달 확장
-description: 이 Adobe Experience Platform 이벤트 전달 확장은 Adobe Experience Edge Network 이벤트를 브레이즈로 보냅니다.
+description: 이 Adobe Experience Platform 이벤트 전달 확장은 Edge Network 이벤트를 Braze로 보냅니다.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1861'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 - 언어 선호도, 위치 선호도 등을 기반으로 타겟팅된 사용자에게 데이터(예: 마케팅 메시지)를 전달하여 전환율을 높이고 주요 비즈니스 목표를 지원합니다.
 - 이메일, 푸시 알림, 인앱 메시지 등 다양한 채널에서 적시에 원하는 언어로 고객에게 개인화된 메시지를 보낼 수 있습니다.
-- 마케팅 및 홍보 캠페인에 특정 사용자를 Target 하여 반복 고객 수를 늘립니다.
+- 마케팅 및 홍보 캠페인에 특정 사용자를 타깃팅하여 반복 고객 수를 늘립니다.
 - 사용자 행동 및 패턴을 연구하여 사용자 지정된 메시지로 특정 대상을 타깃팅하면 매출이 늘어날 수 있습니다.
 
 다음 [!DNL Braze Track Events API] [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장을 사용하면 Adobe Experience Platform Edge Network에 캡처된 데이터를 활용하여 로 전송할 수 있습니다. [!DNL Braze] 를 사용하는 서버측 이벤트 형식으로 [[!DNL Braze User Track]](https://www.braze.com/docs/api/endpoints/user_data/post_user_track) API.
@@ -76,7 +76,7 @@ Edge Network를 [!DNL Braze]를 사용하려면 다음 입력이 필요합니다
 
 다음 화면에서 다음을 입력합니다 [구성 값](#configuration-details) 이전에 수집한 항목 [!DNL Braze]:
 
-- **[!UICONTROL 브레이즈 나머지 끝점 URL]**: 의 값을 입력할 수 있습니다. [!DNL Braze] 제공된 입력에서 일반 텍스트로서 나머지 끝점 URL입니다.
+- **[!UICONTROL 브레이즈 나머지 끝점 URL]**: 의 값을 입력할 수 있습니다. [!DNL Braze] 제공된 입력에서 일반 텍스트로 나머지 끝점 URL입니다.
 - **[!UICONTROL API 키]**: 다음을 선택합니다. [비밀 데이터 요소](#create-a-secret) 을(를) 포함하는 이전에 만든 [!DNL Braze] API 키.
 
 선택 **[!UICONTROL 저장]** 완료 시.

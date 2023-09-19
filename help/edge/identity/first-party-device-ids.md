@@ -2,10 +2,10 @@
 title: Platform Web SDK의 자사 디바이스 ID
 description: Adobe Experience Platform Web SDK에 대한 자사 디바이스 ID(FPID)를 구성하는 방법에 대해 알아봅니다.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1773'
-ht-degree: 0%
+source-wordcount: '1774'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platform Web SDK는 [Adobe Experience Cloud ID (ECID)](https://
 
 이 문서에서는 Platform Web SDK 구현을 위한 자사 디바이스 ID를 구성하는 방법을 다룹니다.
 
-## 사전 요구 사항
+## 전제 조건
 
 이 안내서에서는 사용자가 ECID 및 의 역할을 포함하여 Platform Web SDK에 대해 ID 데이터가 작동하는 방식을 잘 알고 있다고 가정합니다. `identityMap`. 의 개요 보기 [웹 SDK의 ID 데이터](./overview.md) 추가 정보.
 
@@ -176,7 +176,7 @@ Platform Edge Network가 FPID 쿠키의 값을 읽도록 선택한 경우 `HTTPO
 }
 ```
 
-이 경우 Experience Edge에서 반환하는 오류 응답은 다음과 비슷합니다.
+이 경우 Edge Network에서 반환하는 오류 응답은 다음과 비슷합니다.
 
 ```json
 {
@@ -215,7 +215,7 @@ ID는 다음 순서로 우선 순위가 지정됩니다.
 | --- | --- |
 | 첫 번째 방문 | FPID 쿠키 설정을 아직 시작하지 않았다고 가정합니다. 에 포함된 ECID [AMCV 쿠키](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) 은 방문자를 식별하는 데 사용되는 식별자입니다. |
 | 두 번째 방문 | 자사 디바이스 ID 솔루션 롤아웃이 시작되었습니다. 기존 ECID는 여전히 존재하고 있으며 방문자 식별을 위한 기본 식별자가 계속 됩니다. |
-| 세 번째 방문 | 두 번째와 세 번째 방문 사이에 브라우저 정책으로 인해 ECID가 삭제될 때까지 충분한 시간이 경과되었습니다. 그러나 FPID가 DNS A-record를 사용하여 설정되었기 때문에 FPID는 유지됩니다. FPID는 이제 기본 ID로 간주되며 최종 사용자 디바이스에 기록되는 ECID를 시드하는 데 사용됩니다. 이제 사용자는 Adobe Experience Platform 및 Experience Cloud 솔루션에서 새 방문자로 간주됩니다. |
+| 세 번째 방문 | 두 번째와 세 번째 방문 사이에 브라우저 정책으로 인해 ECID가 삭제될 때까지 충분한 시간이 경과되었습니다. 그러나 FPID가 DNS A-record를 사용하여 설정되었기 때문에 FPID는 유지됩니다. 이제 FPID가 기본 ID로 간주되어 최종 사용자 디바이스에 기록되는 ECID를 시드하는 데 사용됩니다. 이제 사용자는 Adobe Experience Platform 및 Experience Cloud 솔루션에서 새 방문자로 간주됩니다. |
 | 네 번째 방문 | 세 번째와 네 번째 방문 사이에 브라우저 정책으로 인해 ECID가 삭제될 때까지 충분한 시간이 경과되었습니다. 이전 방문과 마찬가지로 FPID는 설정된 방식으로 인해 유지됩니다. 이번에는 이전 방문과 동일한 ECID가 생성됩니다. 사용자는 Experience Platform 및 Experience Cloud 솔루션 전체에서 이전 방문과 동일한 사용자로 표시됩니다. |
 | 다섯 번째 방문 | 네 번째와 다섯 번째 방문 사이에 최종 사용자는 브라우저의 모든 쿠키를 지웠습니다. 새 FPID가 생성되고 새 ECID 생성을 시드하는 데 사용됩니다. 이제 사용자는 Adobe Experience Platform 및 Experience Cloud 솔루션에서 새 방문자로 간주됩니다. |
 

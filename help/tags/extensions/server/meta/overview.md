@@ -2,9 +2,9 @@
 title: 메타 전환 API 확장 개요
 description: Adobe Experience Platform의 이벤트 전달을 위한 메타 전환 API 확장에 대해 알아봅니다.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: f5a9e8cb5cdbff485bc7d50e9567b0236ae5872e
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '2368'
+source-wordcount: '2370'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 사용 [!DNL Meta Conversions API] 확장에서는 의 API 기능을 활용할 수 있습니다. [이벤트 전달](../../../ui/event-forwarding/overview.md) 데이터를 보낼 규칙 [!DNL Meta] Adobe Experience Platform Edge Network에서 이 문서에서는 확장을 설치하고 이벤트 전달에서 해당 기능을 사용하는 방법을 다룹니다 [규칙](../../../ui/managing-resources/rules.md).
 
-## 사전 요구 사항
+## 전제 조건
 
 다음을 사용하는 것이 좋습니다. [!DNL Meta Pixel] 및 [!DNL Conversions API] 클라이언트 측과 서버 측에서 각각 동일한 이벤트를 공유하고 전송하십시오. 이렇게 하면 에서 선택하지 않은 이벤트를 복구하는 데 도움이 될 수 있습니다. [!DNL Meta Pixel]. 설치 전 [!DNL Conversions API] 확장자는 의 안내서를 참조하십시오. [[!DNL Meta Pixel] 확장](../../client/meta/overview.md) 를 클라이언트측 태그 구현에 통합하는 방법에 대한 단계입니다.
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 ![다음 [!UICONTROL 페이지 보기 보내기] 데이터 수집 UI에서 규칙에 대해 선택 중인 작업 유형.](../../../images/extensions/server/meta/select-action.png)
 
-전송할 이벤트 데이터를 구성할 수 있는 컨트롤이 나타납니다. [!DNL Meta] 를 통해 [!DNL Conversions API]. 이러한 옵션은 제공된 입력에 직접 입력할 수도 있고, 대신 값을 나타낼 기존 데이터 요소를 선택할 수도 있습니다. 구성 옵션은 아래 설명된 대로 4개의 기본 섹션으로 나뉩니다.
+전송할 이벤트 데이터를 구성할 수 있는 컨트롤이 나타납니다. [!DNL Meta] 를 통해 [!DNL Conversions API]. 이러한 옵션은 제공된 입력에 직접 입력할 수도 있고, 대신 값을 나타낼 기존 데이터 요소를 선택할 수도 있습니다. 구성 옵션은 아래에 설명된 대로 4개의 기본 섹션으로 나뉘어 있습니다.
 
 | 구성 섹션 | 설명 |
 | --- | --- |
@@ -91,10 +91,9 @@ ht-degree: 0%
 >* 빠른 시작 기능은 Real-Time CDP Prime 및 Ultimate 패키지를 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 >* 이 기능은 새로운 구현을 위한 것이며 현재 기존 태그 및 이벤트 전달 속성에 확장 및 구성을 자동으로 설치하는 것을 지원하지 않습니다.
 
-
 빠른 시작 기능을 사용하면 메타 전환 API 및 메타 픽셀 확장을 사용하여 쉽고 효율적으로 설정할 수 있습니다. 이 도구는 Adobe 태그 및 이벤트 전달에서 수행되는 여러 단계를 자동화하여 설정 시간을 크게 줄입니다.
 
-이 기능은 필요한 규칙 및 데이터 요소와 함께 새로 자동 생성된 태그 및 이벤트 전달 속성에 메타 전환 API 및 메타 픽셀 확장 기능을 자동으로 설치하고 구성합니다. 또한 Experience Platform Web SDK 및 데이터 스트림을 자동으로 설치 및 구성합니다. 마지막으로, 빠른 시작 기능은 이벤트 전달 및 Experience Edge를 통해 클라이언트측 데이터 수집 및 서버측 이벤트 전달을 실시간으로 사용할 수 있도록 개발 환경의 지정된 URL에 라이브러리를 자동으로 게시합니다.
+이 기능은 필요한 규칙 및 데이터 요소와 함께 새로 자동 생성된 태그 및 이벤트 전달 속성에 메타 전환 API 및 메타 픽셀 확장 기능을 자동으로 설치하고 구성합니다. 또한 Experience Platform Web SDK 및 데이터 스트림을 자동으로 설치 및 구성합니다. 마지막으로, 빠른 시작 기능은 이벤트 전달 및 Experience Platform Edge Network를 통해 실시간으로 클라이언트측 데이터 수집 및 서버측 이벤트 전달을 가능하게 하는 개발 환경의 지정된 URL에 라이브러리를 자동으로 게시합니다.
 
 다음 비디오에서는 빠른 시작 기능에 대해 소개합니다.
 

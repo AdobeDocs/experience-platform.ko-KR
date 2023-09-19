@@ -3,7 +3,7 @@ title: at.js와 Experience Platform Web SDK 비교
 description: at.js 기능을 Experience Platform Web SDK와 비교하는 방법에 대해 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;의사 결정 범위;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;의사 결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '2281'
 ht-degree: 6%
@@ -918,7 +918,7 @@ alloy("sendEvent", {
 
 ![](assets/analytics-enabled-datastream-config.png)
 
-Server Side Analytics 로깅을 활성화한 경우 Analytics 보고에 올바른 노출 횟수와 변환 횟수를 표시하도록 Analytics와 공유해야 하는 A4T 페이로드를 Experience Edge 수준에서 공유하므로 고객이 추가 처리를 수행할 필요가 없습니다.
+Server Side Analytics 로깅을 활성화한 경우 Analytics 보고에 올바른 노출 횟수와 변환 횟수를 표시하도록 Analytics와 공유해야 하는 A4T 페이로드를 Edge Network 수준에서 공유하므로 고객이 추가 처리를 수행할 필요가 없습니다.
 
 다음은 Server Side Analytics 로깅이 활성화된 경우 데이터가 시스템으로 유입되는 방식입니다.
 

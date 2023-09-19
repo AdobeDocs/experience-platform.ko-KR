@@ -3,7 +3,7 @@ title: Platform Web SDK에서 Offer decisioning 사용
 description: Adobe Experience Platform Web SDK는 Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 keywords: offer decisioning;의사 결정;Web SDK;Platform Web SDK;개인화된 오퍼;오퍼 게재;오퍼 게재;오퍼 개인화;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 5%
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 Adobe Experience Platform [!DNL Web SDK] 은 Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. Offer Decisioning UI(사용자 인터페이스) 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 
-## 사전 요구 사항
+## 전제 조건
 
 * 조직이 Edge Decisioning에 대해 활성화되었습니다.
 * 오퍼, 활동 생성됨
@@ -332,4 +332,4 @@ offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
 ## 제한 사항
 
-일부 오퍼 제한 사항은 현재 모바일 Experience Edge 워크플로에서 지원되지 않습니다(예: 한도). 한도 필드 값은 모든 사용자에게 오퍼를 제공할 수 있는 횟수를 지정합니다. 자세한 내용은 [오퍼 자격 규칙 및 제한 설명서](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+일부 오퍼 제한 사항은 현재 모바일 Edge Network 워크플로에서 지원되지 않습니다(예: 한도). 한도 필드 값은 모든 사용자에게 오퍼를 제공할 수 있는 횟수를 지정합니다. 자세한 내용은 [오퍼 자격 규칙 및 제한 설명서](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).

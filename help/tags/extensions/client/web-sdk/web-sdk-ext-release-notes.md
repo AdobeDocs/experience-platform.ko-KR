@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ba75669eeaef9fc023e7c33265ec1e5dbada9534
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1757'
+source-wordcount: '1758'
 ht-degree: 37%
 
 ---
@@ -126,7 +126,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.10.0을 포함합�
 
 ## 버전 2.11.0 - 2022년 4월 22일
 
-* 태그 UI 성능이 개선되었습니다.
+* 태그 UI 성능이 향상되었습니다.
 * 샌드박스 선택기를 데이터스트림 확장 구성에 추가합니다.
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.10.0을 포함합니다.
@@ -145,7 +145,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.8.0을 포함합�
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.7.0을 포함합니다.
 
-* Experience Edge의 추가 정보는 다음을 포함한 이벤트 전송 완료 이벤트에서 사용할 수 있습니다. `inferences` 및 `destinations`. 이러한 기능은 현재 베타의 일부로 출시되고 있으므로 이러한 속성의 형식이 변경될 수 있습니다. 자세한 내용은 [이벤트 추적.](../../../../edge/fundamentals/tracking-events.md)
+* Edge Network의 추가 정보는 이벤트 전송 완료 이벤트에서 사용할 수 있습니다. `inferences` 및 `destinations`. 이러한 기능은 현재 베타의 일부로 출시되고 있으므로 이러한 속성의 형식이 변경될 수 있습니다. 자세한 내용은 [이벤트 추적.](../../../../edge/fundamentals/tracking-events.md)
 
 ## 버전 2.7.3 - 2021년 9월 7일
 
