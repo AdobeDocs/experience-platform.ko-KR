@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: 333f98a74e69f50ae356231733924d1c6793ddf1
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1159'
 ht-degree: 9%
 
 ---
@@ -22,15 +22,14 @@ ht-degree: 9%
    * [서로 다른 대상 유형에 대한 프로필 내보내기 동작](./how-destinations-work/profile-export-behavior.md)
    * [대상 활성화 워크플로의 ID 처리](./how-destinations-work/identity-handling.md)
 * API 자습서 {#api}
-   * [클라우드 스토리지 대상에 대한 API 마이그레이션 안내서](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
+   * [흐름 서비스 API를 사용하여 파일 기반 대상에 데이터 활성화](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [흐름 서비스 API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다](./api/streaming-destinations.md)
-   * [일괄 클라우드 스토리지 및 이메일 마케팅 대상에 연결하고 플로우 서비스 API를 사용하여 데이터를 활성화합니다](./api/connect-activate-batch-destinations.md)
+   * [파일 기반 이메일 마케팅 대상에 연결하고 플로우 서비스 API를 사용하여 데이터를 활성화합니다](./api/connect-activate-batch-destinations.md)
    * [(Beta) 애드혹 활성화 API를 통해 대상자를 배치 대상으로 활성화합니다](./api/ad-hoc-activation-api.md)
    * [대상 편집](./api/edit-destination.md)
    * [대상 데이터 흐름 업데이트](./api/update-destination-dataflows.md)
    * [대상 계정 삭제](./api/delete-destination-account.md)
    * [대상 데이터 흐름 삭제](./api/delete-destination-dataflow.md)
-   * [(Beta) 플로우 서비스 API를 사용하여 파일 기반 대상에 데이터 활성화](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [(베타) 데이터 세트 내보내기](/help/destinations/api/export-datasets.md)
 * UI 안내서 {#ui}
    * [대상 작업 영역](./ui/destinations-workspace.md)

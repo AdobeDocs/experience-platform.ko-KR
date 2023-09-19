@@ -4,21 +4,21 @@ title: 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로
 description: 흐름 서비스 API를 사용하여 적격 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '4415'
+source-wordcount: '4401'
 ht-degree: 3%
 
 ---
 
 # 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로 활성화
 
-Experience Platform 외부에서 파일을 내보낼 때 향상된 사용자 정의 기능에 액세스하려면 향상된 파일 내보내기 기능(현재 베타 버전)을 사용하십시오.
+Experience Platform 외부에서 파일을 내보낼 때 향상된 사용자 정의 기능에 액세스하려면 향상된 파일 내보내기 기능을 사용하십시오.
 
 * 추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
-* 를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능 [매핑 단계 개선](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [향상된 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능.
 * 을(를) 선택하는 기능 [파일 유형](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) 내보낸 파일.
-* [내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+* [사용자 정의 기능내보낸 CSV 데이터 파일의 서식](/help/destinations/ui/batch-destinations-file-formatting-options.md)을 사용자 정의하는 기능.
 
 이 기능은 아래에 나열된 6개의 클라우드 스토리지 카드에서 지원됩니다.
 
@@ -35,9 +35,13 @@ Experience Platform 외부에서 파일을 내보낼 때 향상된 사용자 정
 >
 >Experience Platform 사용자 인터페이스를 사용하여 프로필을 클라우드 스토리지 대상으로 내보낼 수도 있습니다. 읽기 [파일 기반 대상 활성화 자습서](/help/destinations/ui/activate-batch-profile-destinations.md) 추가 정보.
 
-## API 사용자 마이그레이션 {#api-migration}
+<!--
 
-이미 Flow Service API를 사용하여 프로필을 Amazon S3, Azure Blob 또는 SFTP 클라우드 스토리지 대상으로 내보내는 경우 다음을 읽어 보십시오. [API 마이그레이션 안내서](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) Adobe이 사용자를 이전 대상에서 새 대상으로 전환할 때 필요한 마이그레이션 단계입니다.
+## API users migration {#api-migration}
+
+If you were already using the Flow Service API to export profiles to the Amazon S3, Azure Blob, or SFTP cloud storage destinations, read the [API migration guide](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) for necessary migration steps as Adobe transitions users from the legacy destinations to the new destinations. 
+
+-->
 
 ## 시작하기 {#get-started}
 
@@ -54,6 +58,8 @@ Experience Platform 외부에서 파일을 내보낼 때 향상된 사용자 정
 ### 필요 권한 {#permissions}
 
 프로필을 내보내려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 보기]**, 및 **[!UICONTROL 대상 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+
+내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 ### 샘플 API 호출 읽기 {#reading-sample-api-calls}
 
@@ -378,7 +384,7 @@ A [기본 연결](https://developer.adobe.com/experience-platform-apis/reference
 
 +++[!DNL Amazon S3] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -425,7 +431,7 @@ A [기본 연결](https://developer.adobe.com/experience-platform-apis/reference
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -466,7 +472,7 @@ A [기본 연결](https://developer.adobe.com/experience-platform-apis/reference
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -544,7 +550,7 @@ A [기본 연결](https://developer.adobe.com/experience-platform-apis/reference
 
 +++[!DNL Google Cloud Storage] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -593,7 +599,7 @@ A [기본 연결](https://developer.adobe.com/experience-platform-apis/reference
 >
 >SFTP 대상에는 [!DNL auth spec]암호와 SSH 키 인증을 모두 지원합니다.
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -2356,7 +2362,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Amazon S3 Beta Target Connection",
+    "name": "Amazon S3 Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -2374,7 +2380,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Amazon S3] - CSV 옵션을 사용하여 연결 요청 Target
++++[!DNL Amazon S3] - CSV 옵션을 사용하여 Target 연결 요청
 
 >[!TIP]
 >
@@ -2389,7 +2395,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Amazon S3 Beta Target Connection",
+   "name":"Amazon S3 Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2448,7 +2454,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Azure Blob Storage Beta Target Connection",
+    "name": "Azure Blob Storage Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -2466,7 +2472,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Azure Blob Storage] - CSV 옵션을 사용하여 연결 요청 Target
++++[!DNL Azure Blob Storage] - CSV 옵션을 사용하여 Target 연결 요청
 
 >[!TIP]
 >
@@ -2481,7 +2487,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Azure Blob Storage Beta Target Connection",
+   "name":"Azure Blob Storage Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2557,7 +2563,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - CSV 옵션을 사용하여 연결 요청 Target
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - CSV 옵션을 사용하여 Target 연결 요청
 
 >[!TIP]
 >
@@ -2648,7 +2654,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Data Landing Zone] - CSV 옵션을 사용하여 연결 요청 Target
++++[!DNL Data Landing Zone] - CSV 옵션을 사용하여 Target 연결 요청
 
 >[!TIP]
 >
@@ -2663,7 +2669,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Data Landing Zone Beta Target Connection",
+   "name":"Data Landing Zone Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2740,7 +2746,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Google Cloud Storage] - CSV 옵션을 사용하여 연결 요청 Target
++++[!DNL Google Cloud Storage] - CSV 옵션을 사용하여 Target 연결 요청
 
 >[!TIP]
 >
@@ -2755,7 +2761,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Google Cloud Storage Beta Target Connection",
+   "name":"Google Cloud Storage Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2831,7 +2837,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++SFTP - CSV 옵션을 사용하여 연결 요청 Target
++++SFTP - CSV 옵션이 있는 Target 연결 요청
 
 >[!TIP]
 >

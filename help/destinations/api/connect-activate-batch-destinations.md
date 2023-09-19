@@ -5,26 +5,32 @@ title: 흐름 서비스 API를 사용하여 배치 대상에 연결하고 데이
 description: 플로우 서비스 API를 사용하여 Experience Platform 시 일괄 클라우드 스토리지 또는 이메일 마케팅 대상을 만들고 데이터를 활성화하는 단계별 지침
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '3399'
+source-wordcount: '3446'
 ht-degree: 1%
 
 ---
 
-# 흐름 서비스 API를 사용하여 배치 대상에 연결하고 데이터를 활성화합니다
+# 파일 기반 이메일 마케팅 대상에 연결하고 플로우 서비스 API를 사용하여 데이터를 활성화합니다
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions).
+>* 대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions).
 >
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions).
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions).
+>
+>* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 >
 >읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-이 자습서에서는 흐름 서비스 API를 사용하여 일괄 처리를 만드는 방법을 보여줍니다 [클라우드 스토리지](../catalog/cloud-storage/overview.md) 또는 [이메일 마케팅 대상](../catalog/email-marketing/overview.md)를 클릭하고, 새로 만든 대상에 데이터 흐름을 만들고, CSV 파일을 통해 새로 만든 대상에 데이터를 내보냅니다.
+이 자습서에서는 흐름 서비스 API를 사용하여 파일 기반으로 만드는 방법을 보여줍니다 [이메일 마케팅 대상](../catalog/email-marketing/overview.md)를 클릭하고, 새로 만든 대상에 데이터 흐름을 만들고, CSV 파일을 통해 새로 만든 대상에 데이터를 내보냅니다.
 
-이 튜토리얼에서는 [!DNL Adobe Campaign] 대상 모든 예에서 동일하지만 단계는 모든 일괄 처리 클라우드 스토리지 및 이메일 마케팅 대상에 대해 동일합니다.
+>[!TIP]
+> 
+>흐름 서비스 API를 사용하여 데이터를 클라우드 스토리지 대상에 활성화하는 방법을 알아보려면 다음을 참조하십시오. [전용 API 튜토리얼](/help/destinations/api/activate-segments-file-based-destinations.md).
+
+이 튜토리얼에서는 [!DNL Adobe Campaign] 대상 모든 예에서 동일하지만 파일 기반 이메일 마케팅 대상의 단계는 동일합니다.
 
 ![개요 - 대상을 만들고 대상을 활성화하는 단계](../assets/api/email-marketing/overview.png)
 
@@ -123,12 +129,9 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 | 대상 | 연결 사양 ID |
 ---------|----------|
 | [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
-| [!DNL Amazon S3] | `4890fc95-5a1f-4983-94bb-e060c08e3f81` |
-| [!DNL Azure Blob] | `e258278b-a4cf-43ac-b158-4fa0ca0d948b` |
 | [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
 | [!DNL Oracle Responsys] | `a5e28ddf-e265-426e-83a1-9d03a3a6822b` |
 | [!DNL Salesforce Marketing Cloud] | `f599a5b3-60a7-4951-950a-cc4115c7ea27` |
-| SFTP | `64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0` |
 
 {style="table-layout:auto"}
 
@@ -1241,7 +1244,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## 다음 단계 {#next-steps}
 
-이 자습서에 따라 기본 설정 일괄 처리 클라우드 스토리지 또는 이메일 마케팅 대상 중 하나에 플랫폼을 연결하고 데이터 파일을 내보낼 해당 대상에 데이터 흐름을 설정했습니다. 이제 발신 데이터를 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례의 대상에서 사용할 수 있습니다. 흐름 서비스 API를 사용하여 기존 데이터 흐름을 편집하는 방법과 같은 자세한 내용은 다음 페이지를 참조하십시오.
+이 자습서에 따라 선호하는 파일 기반 이메일 마케팅 대상 중 하나에 Platform을 연결하고 데이터 파일을 내보낼 각 대상에 대한 데이터 흐름을 설정했습니다. 이제 발신 데이터를 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례의 대상에서 사용할 수 있습니다. 흐름 서비스 API를 사용하여 기존 데이터 흐름을 편집하는 방법과 같은 자세한 내용은 다음 페이지를 참조하십시오.
 
 * [대상 개요](../home.md)
 * [대상 카탈로그 개요](../catalog/overview.md)
