@@ -3,10 +3,10 @@ title: Snowflake 스트리밍 계정을 Adobe Experience Platform에 연결
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Snowflake 스트리밍에 연결하는 방법에 대해 알아봅니다.
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: f2c392704e0404aaff2ad569e388241c06fba902
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 2%
+source-wordcount: '867'
+ht-degree: 3%
 
 ---
 
@@ -185,7 +185,8 @@ curl -X POST \
       "params": {
           "tableName": "ACME",
           "timestampColumn": "dOb",
-          "backfill": "true"
+          "backfill": "true",
+          "timezoneValue": "PST"
       }
   }'
 ```
@@ -197,6 +198,7 @@ curl -X POST \
 | `params.tableName` | 에 있는 테이블 이름 [!DNL Snowflake] 플랫폼으로 가져올 데이터베이스입니다. |
 | `params.timestampColumn` | 증분 값을 가져오는 데 사용할 타임스탬프 열의 이름입니다. |
 | `params.backfill` | 데이터를 시작(0 epoch 시간)부터 가져오는지 또는 소스가 시작된 시간부터 가져오는지 여부를 결정하는 부울 플래그입니다. 이 값에 대한 자세한 내용은 [[!DNL Snowflake] 스트리밍 소스 개요](../../../../connectors/databases/snowflake-streaming.md). |
+| `params.timezoneValue` | 시간대 값은 쿼리를 수행할 때 가져올 시간대의 현재 시간을 나타냅니다. [!DNL Snowflake] 데이터베이스. 구성의 타임스탬프 열이 로 설정된 경우 이 매개 변수를 제공해야 합니다. `TIMESTAMP_NTZ`. 제공되지 않으면, `timezoneValue` 기본값은 UTC입니다. |
 
 **응답**
 
@@ -218,7 +220,7 @@ curl -X POST \
 >다음 ID를 검색하는 방법에 대한 단계별 지침은 아래 링크를 따르십시오.
 
 * [소스 연결 ID](#create-a-source-connection)
-* [Target 연결 ID](../../collect/database-nosql.md#create-a-target-connection)
+* [대상 연결 ID](../../collect/database-nosql.md#create-a-target-connection)
 * [흐름 사양 ID](../../collect/database-nosql.md#retrieve-dataflow-specifications)
 * [ID 매핑](../../collect/database-nosql.md#create-a-mapping)
 

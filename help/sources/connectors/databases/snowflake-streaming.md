@@ -4,9 +4,9 @@ description: 소스 연결 및 데이터 흐름을 만들어 Snowflake 인스턴
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 054175bd3f3aaab73c8cca249eaf1a9cdbc8deab
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '710'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Experience Platform은 의 데이터 스트리밍을 지원합니다. [!DNL Snow
 
 사용 [!DNL Kafka Connect], [!DNL Snowflake] 스트리밍 소스는 각 테이블에서 받은 최신 레코드를 추적하므로 다음 반복의 올바른 위치에서 시작할 수 있습니다. 소스는 이 기능을 사용하여 데이터를 필터링하고 각 반복의 테이블에서 업데이트된 행만 가져옵니다.
 
-## 사전 요구 사항
+## 전제 조건
 
 다음 섹션에서는 의 데이터를 스트리밍하기 전에 완료해야 하는 사전 요구 사항에 대해 설명합니다. [!DNL Snowflake] Experience Platform 대상 데이터베이스:
 
@@ -74,7 +74,8 @@ Experience Platform은 의 데이터 스트리밍을 지원합니다. [!DNL Snow
    * 다음을 활성화할 수 있습니다. `backfill` 에 대한 부울 플래그 [!DNL Snowflake] 소스 연결을 만들 때 소스.
       * backfill 이 true 로 설정되면 timestamp.initial 의 값이 0으로 설정됩니다. 즉, 타임스탬프 열이 0 epoch 시간보다 큰 데이터를 가져옵니다.
       * backfill 이 false 로 설정되어 있으면 timestamp.initial 의 값이 -1 로 설정됩니다. 즉, 타임스탬프 열이 현재 시간(소스가 수집을 시작하는 시간)보다 큰 데이터를 가져옵니다.
-   * 타임스탬프 열의 형식은 다음과 같아야 합니다. `TIMESTAMP_LTZ` 또는 `TIMESTAMP_NTZ`. 타임스탬프 열이 로 설정된 경우 `TIMESTAMP_NTZ`을 누르고 나면 유형이 데이터베이스에 UTC 시간으로 저장되어야 합니다.
+   * 타임스탬프 열의 형식은 다음과 같아야 합니다. `TIMESTAMP_LTZ` 또는 `TIMESTAMP_NTZ`. 타임스탬프 열이 로 설정된 경우 `TIMESTAMP_NTZ`를 설치한 다음 값이 저장된 해당 시간대를 `timezoneValue` 매개 변수. 제공되지 않는 경우 값은 기본적으로 UTC로 설정됩니다.
+      * `TIMESTAMP_TZ` 타임스탬프 열 또는 매핑에서 사용할 수 없습니다.
 
 ## 다음 단계
 
