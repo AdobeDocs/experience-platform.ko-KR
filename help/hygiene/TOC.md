@@ -4,10 +4,10 @@ user-guide-title: 데이터 위생 도움말
 breadcrumb-title: 데이터 위생 안내서
 user-guide-description: 데이터 정리, 익명 데이터 제거 및 데이터 최소화를 위해 Experience Platform에서 개별 레코드를 삭제하고 데이터 세트 만료 일정을 예약합니다.
 feature: Data Hygiene
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 0deb861d016fc99cfc1a2b75a08800dac7d208f4
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 50%
+source-wordcount: '55'
+ht-degree: 52%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 50%
    * [개요](./ui/overview.md)
    * [기존 작업 주문 찾아보기](./ui/browse.md)
    * [데이터 세트 만료 관리](./ui/dataset-expiration.md)
-   * [레코드 삭제](./ui/record-delete.md)
+   * [(Beta) 레코드 삭제](./ui/record-delete.md)
 * 데이터 위생 API {#api}
    * [개요](./api/overview.md)
    * [데이터 세트 만료](./api/dataset-expiration.md)
