@@ -5,14 +5,19 @@ description: Adobe Experience Platform은 조직의 라이선스 사용에 대�
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 6a69ecebe67a156d67a324581e5b96699b96d2e6
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1553'
 ht-degree: 1%
 
 ---
 
 # 라이선스 사용 대시보드(제한된 릴리스) {#license-usage-dashboard-limited-release}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage"
+>title="라이선스 사용 대시보드"
+>abstract="라이선스 사용 대시보드는 구입한 Adobe Experience Platform 제품에 대한 통찰력을 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 약정된 라이선스 금액을 포함하여 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 공간에는 특정 샌드박스 내의 각 제품에 대한 지표 분류가 표시됩니다."
 
 >[!IMPORTANT]
 >
@@ -72,7 +77,7 @@ Platform UI 내에서 라이선스 사용 대시보드로 이동하려면 다음
 
 요약 탭의 테이블에는 [!UICONTROL 지표] 열. 사람이 인식할 수 있는 이러한 설명은 해당 유형의 샌드박스에 사용되는 모든 지표를 나타냅니다.
 
-### 샌드박스 선택 {#select-sandbox}
+### 샌드박스를 선택합니다 {#select-sandbox}
 
 프로덕션 및 개발 샌드박스 유형 간에 보기를 변경하려면 다음 중 하나를 선택합니다 [!UICONTROL 프로덕션 샌드박스] 또는 [!UICONTROL 개발 샌드박스]. 선택한 샌드박스 유형은 샌드박스 이름 옆에 있는 라디오 버튼으로 표시됩니다.
 
