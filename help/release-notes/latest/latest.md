@@ -1,78 +1,47 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
-description: Adobe Experience Platform에 대한 2023년 8월 릴리스 정보입니다.
+description: Adobe Experience Platform에 대한 2023년 9월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+source-git-commit: 2492651fb03e0bfc5c9f68a9b063689a1b9001a3
 workflow-type: tm+mt
-source-wordcount: '1750'
-ht-degree: 38%
+source-wordcount: '907'
+ht-degree: 26%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2023년 8월 23일**
+**릴리스 날짜: 2023년 9월 28일**
 
-Adobe Experience Platform의 기존 기능 업데이트:
+Adobe Experience Platform의 새로운 기능:
 
-- [Real-Time Customer Data Platform](#rtcdp)
-- [속성 기반 액세스 제어](#abac)
-- [대시보드](#dashboards)
+- [계산된 속성](#computed-attributes)
+
+ Experience Platform의 기존 기능 업데이트:
+
+- [경고](#alerts)
 - [데이터 수집](#data-collection)
-- [데이터 수집](#data-ingestion)
-- [데이터 준비](#data-prep)
-- [대상](#destinations)
-- [경험 데이터 모델 (XDM)](#xdm)
 - [ID 서비스](#identity-service)
 - [Segmentation Service](#segmentation)
 - [소스](#sources)
 
-## Real-Time Customer Data Platform {#rtcdp}
+## 계산된 속성 {#computed-attributes}
 
-Experience Platform을 기반으로 구축된 Real-Time Customer Data Platform([!DNL Real-Time CDP])으로 기업은 알려진 데이터와 알 수 없는 데이터를 수집하여 고객 여정 전반에 걸쳐 지능적인 의사 결정을 통해 고객 프로필을 활성화할 수 있습니다.
+계산된 속성을 사용하면 향상된 동작 기반 세분화, 개인화 및 활성화를 위해 직관적인 UI를 통해 이벤트 데이터를 프로필 속성으로 쉽게 요약할 수 있습니다. 이 기능을 사용하면 셀프서비스 방식으로 계산된 속성을 만들고 관리하여 세그멘테이션, Real-Time CDP 대상 또는 Adobe Journey Optimizer에서 사용할 수 있습니다. 또한 계산된 속성은 세그멘테이션 및 여정 워크플로를 단순화하여 관련 경험을 원활하게 전달할 수 있습니다. 계산된 속성에 대해 자세히 알아보려면 다음을 참조하십시오. [계산된 속성 개요](../../profile/computed-attributes/overview.md).
 
-[!DNL Real-Time CDP]는 여러 기업의 데이터 소스를 결합하여 실시간으로 고객 프로필을 생성합니다. 이러한 프로필에서 구축된 세그먼트는 다운스트림 대상으로 전송되어 모든 채널과 디바이스에서 일대일로 개인 설정된 고객 경험을 제공할 수 있습니다.
+## 경고 {#alerts}
 
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 지능형 재참여 사용 사례 안내서 | 다음 [지능형 재참여](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) 사용 사례 안내서에서는 지능적이고 책임 있는 방식으로 전환을 완료하기 전에 포기한 고객을 다시 참여시키는 방법에 대한 세부 정보를 제공합니다. 이 안내서에서는 다음 예제 여정을 사용하여 고객을 다시 참여시킵니다. <ul><li>재참여 여정 - 제품 탐색을 중단한 고객을 타깃팅합니다.</li><li>포기한 장바구니 여정 - 장바구니에 제품을 배치했지만 아직 구매를 완료하지 않은 고객을 타깃팅합니다.</li><li>주문 확인 여정 - 제품 구매에 초점</li></ul> 아래 부분에 있는 자세한 피드백 옵션 링크를 사용하십시오. [지능형 재참여 사용 사례 안내서](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) 피드백을 제공할 수 있습니다. |
-| 파트너 데이터 지원 | 파트너 소스 잠재 고객 프로필 및 파트너 ID를 사용하여 Real-Time CDP에서 상위 단계 마케팅을 실행하여 신규 고객에게 도달하고 자사 데이터를 보강합니다. <ul><li>고객 확보 및 주소 지정 기능: 선택한 데이터 파트너의 쿠키 없는 식별자 및 해시된 PII를 활용하여 새로운 순 고객에게 도달하고 서드파티 쿠키 의존성을 줄입니다.</li><li>단일 시스템의 전체 단계 마케팅: 단일 시스템의 예상 및 알려진 고객을 위한 셀프서비스 세분화, 대상자 큐레이션 및 기본 활성화.</li><li>신뢰 기반: 특허를 획득한 데이터 사용, 레이블 지정, 액세스 제어 등을 통해 파트너 데이터 및 프로필을 책임감 있게 시장에 적용합니다. 자세한 내용은 다음 사용 사례 안내서를 참조하십시오. 이제 전망 사용 사례 안내서를 사용할 수 있습니다. 잠재 고객 활용 사례 안내서를 읽고 잠재 고객 활용 사례를 통해 신규 고객을 유치하는 방법을 알아보십시오.<ul><li>[전망](../../rtcdp/partner-data/prospecting.md)</li><li>[온사이트 개인화](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[자사 프로필 보완](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[잠재 고객 활성화](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
-
-{style="table-layout:auto"}
-
-자세한 내용은 다음을 참조하십시오. [Real-Time CDP 개요](../../rtcdp/overview.md).
-
-## 속성 기반 액세스 제어 {#abac}
-
-속성 기반 액세스 제어는 Adobe Experience Platform의 기능으로, 개인 정보 보호를 고려한 브랜드에게 사용자 액세스를 더 유연하게 관리할 수 있습니다. 스키마 필드 및 세그먼트와 같은 개별 객체를 사용자 역할에 할당할 수 있습니다. 이 기능을 사용하면 조직의 특정 Platform 사용자에 대해 개별 객체에 대한 액세스 권한을 부여하거나 취소할 수 있습니다.
-
-조직 관리자는 속성 기반 액세스 제어를 통해 모든 플랫폼 워크플로 및 리소스에서 중요한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 지정된 유형의 데이터에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.
+Experience Platform을 사용하면 다양한 플랫폼 활동에 대한 이벤트 기반 경고를 구독할 수 있습니다. 다음을 통해 다양한 경고 규칙에 가입할 수 있습니다. [!UICONTROL 경고] Platform 사용자 인터페이스의 탭으로, UI 자체 내에서 또는 이메일 알림을 통해 경고 메시지를 수신하도록 선택할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 권한 정책 샌드박스 구성 | 새로운 [권한 정책 샌드박스 구성](../../access-control/abac/ui/policies.md) 이 기능을 사용하면 요구 사항과 요구 사항에 따라 모든 샌드박스 또는 선택한 수의 샌드박스에 속성 기반 액세스 제어 정책을 적용할 수 있습니다. |
+| 경고 내역 탭 | 경고 [!UICONTROL 기록] 이제 탭에는 지연, 시작, 성공 및 실패를 포함한 모든 이벤트가 포함됩니다. 읽기 [경고 UI 설명서](../../observability/alerts/ui.md) 기록 탭에 대한 자세한 내용은 |
 
 {style="table-layout:auto"}
 
-속성 기반 액세스 제어에 대한 자세한 내용은 [속성 기반 액세스 제어 개요](../../access-control/abac/overview.md). 속성 기반 액세스 제어 워크플로에 대한 포괄적인 안내서는 [속성 기반 액세스 제어 엔드투엔드 안내서](../../access-control/abac/end-to-end-guide.md).
-
-## 대시보드 {#dashboards}
-
-Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대한 중요한 인사이트를 볼 수 있는 여러 대시보드를 제공합니다.
-
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 동의 분석 및 추적 사용 사례 | 을(를) 사용하여 Real-Time CDP 데이터에 대한 다양한 마케팅 사용 사례에 대한 동의 대시보드를 작성하는 방법을 알아봅니다. [동의 분석 및 추적 문서](../../dashboards/insights-use-cases/consent-analysis.md). 비즈니스 요구에 적합한 속성으로 대상자를 만든 다음 Adobe Experience Platform UI에서 사전 구성된 위젯을 사용하여 통찰력을 소비하는 방법에 대해 자세히 설명합니다. 또한 사용자 정의 대시보드 기능을 사용하여 사용자 정의 위젯을 빌드하는 방법에 대한 지침을 제공합니다. 이 문서에서는 동의 트렌드 및 동의 중복 사용 사례를 다룹니다. |
-
-{style="table-layout:auto"}
-
-액세스 권한을 부여하고 사용자 정의 위젯을 만드는 방법을 포함해 대시보드에 대한 자세한 내용은 [대시보드 개요](../../dashboards/home.md)를 읽어 보십시오.
+경고에 대한 자세한 내용은 [[!DNL Observability Insights] 개요](../../observability/home.md).
 
 ## 데이터 수집 {#data-collection}
 
@@ -82,71 +51,12 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 유형 | 기능 | 설명 |
 | --- | --- | --- |
-| 태그 및 이벤트 전달 | [Experience Platform 태그(중국)](/help/tags/ui/publishing/premium-cdn.md) | 새로운 Experience Platform 태그(중국) 기능은 웹 사이트 안정성과 지연 시간을 향상시켜 중국의 웹 사이트에 태그를 배포하는 고객의 응답 시간을 단축합니다. 이제 고객은 중국에서 웹 사이트를 구현할 때 태그 라이브러리의 JavaScript 코드를 사용할 수 있습니다. 이 기능은 UPP(통합 프로비저닝 프로토콜)에도 추가되어 구매 후 제품 배포를 자동화할 수 있습니다. |
+| 데이터스트림 | 장치 조회 지원 | 이제 데이터 스트림을 구성할 때 수집할 디바이스 조회 정보 수준을 선택할 수 있습니다. 장치 조회 정보에는 페이지와 상호 작용하는 데 사용되는 장치, 하드웨어, 운영 체제 및 브라우저에 대한 데이터가 포함됩니다. <br>  사용자 에이전트 및 클라이언트 힌트와 함께 디바이스 조회 정보를 수집할 수 없습니다. 디바이스 정보를 수집하도록 선택하면 사용자 에이전트 및 클라이언트 힌트 수집이 비활성화되고, 그 반대의 경우도 마찬가지입니다. 모든 장치 조회 정보는 `xdm:device` 필드 그룹입니다. 의 설명서에서 자세히 알아보기 [데이터스트림 구성](../../datastreams/configure.md#geolocation-device-lookup). |
+| 확장 | [!DNL TikTok] 웹 이벤트 API 확장 | 다음 [[!DNL TikTok] 웹 이벤트 API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) 확장을 사용하면 Adobe Experience Platform Edge Network에 캡처된 데이터를 활용하여 로 전송할 수 있습니다. [!DNL TikTok] 를 사용하는 서버측 이벤트 형식으로 [!DNL TikTok] 웹 이벤트 API. |
 
 {style="table-layout:auto"}
 
-자세한 내용은 다음을 참조하십시오. [데이터 컬렉션 개요](../../tags/home.md).
-
-## 데이터 수집 {#data-ingestion}
-
-Adobe Experience Platform은 데이터의 모든 유형과 지연 시간을 수집할 수 있는 다양한 기능 세트를 제공합니다. Adobe에서 구축한 소스, 데이터 통합 파트너 또는 Adobe Experience Platform UI를 사용하여 일괄 처리 또는 스트리밍 API로 수집할 수 있습니다.
-
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 데이터 수집 워크플로 변경 사항 | 지정된 데이터 유형보다 큰 값을 포함하는 데이터 행(예: 정수 데이터 유형으로 전달된 긴 데이터)이 거부되고 오류 메시지가 보고됩니다. 이전에는 이러한 행이 경고 없이 거부되었습니다. |
-
-자세한 내용은 다음을 참조하십시오. [데이터 수집 개요](../../ingestion/home.md).
-
-## 데이터 준비 {#data-prep}
-
-데이터 준비를 사용하면 데이터 엔지니어가 XDM(Experience Data Model)과의 데이터를 매핑, 변환 및 확인할 수 있습니다.
-
-**새로운 기능 또는 업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 보조 ID 필터링 지원 | 이제 데이터 준비를 사용하여 AAID 및 AACUSTOMID와 같은 Adobe Analytics에서 전송되는 ID를 필터링할 수 있습니다. 필터링되면 이러한 ID가 실시간 고객 프로필에 수집되지 않습니다. 필터링되지 않은 데이터는 데이터 레이크로 계속 수집됩니다. |
-
-{style="table-layout:auto"}
-
-자세한 내용은 다음을 참조하십시오. [데이터 준비 개요](../../data-prep/home.md).
-
-## 대상 {#destinations}
-
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
-
-**새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
-
-- 이제 다음을 수행할 수 있습니다. [잠재 고객 활성화](../../destinations/ui/activate-prospect-audiences.md) 클라우드 스토리지 대상으로 마이그레이션하는 것이 좋습니다.
-- 일반 [활성화 보호](../../destinations/guardrails.md#general-activation-guardrails) 샌드박스당 최대 100개의 대상이 다음으로 업데이트되었습니다. _엄격한 제한_.
-
-대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
-
-## 경험 데이터 모델 (XDM) {#xdm}
-
-XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
-
-**새로운 XDM 구성 요소**
-
-| 구성 요소 유형 | 이름 | 설명 |
-| --- | --- | --- |
-| 클래스 | [[!UICONTROL XDM 개별 잠재 고객 프로필]](https://github.com/adobe/xdm/pull/1758/files) | 이 클래스를 사용하여 데이터 공급업체의 단계 상단 고객 확보 사용 사례에서 소싱된 잠재 고객 프로필을 가져옵니다. 다음을 참조하십시오. [[!UICONTROL XDM 개별 잠재 고객 프로필]](../../xdm/classes/prospect.md) 설명서를 참조하여 예제를 확인하고 자세히 알아보십시오. |
-
-{style="table-layout:auto"}
-
-**업데이트된 XDM 구성 요소**
-
-| 구성 요소 유형 | 이름 | 설명 업데이트 |
-| --- | --- | --- |
-| 확장([!UICONTROL Adobe Analytics ExperienceEvent 전체 확장]) | [[!UICONTROL 컨텍스트 데이터]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL 컨텍스트 데이터] 맵 개체가에 추가됨 [!UICONTROL Adobe Analytics ExperienceEvent 전체 확장] Adobe Analytics에 컨텍스트 데이터를 제공합니다. |
-| 필드 그룹 | 다수 | 몇 개의 필드가에 추가됨 [[!UICONTROL 보강된 이벤트 세그먼트 세부 정보]](https://github.com/adobe/xdm/pull/1760/files). |
-
-{style="table-layout:auto"}
-
-자세한 내용은 다음을 참조하십시오. [XDM 시스템 개요](../../xdm/home.md).
+데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../tags/home.md).
 
 ## ID 서비스 {#identity-service}
 
@@ -156,9 +66,12 @@ Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 �
 
 | 기능 | 설명 |
 | --- | --- |
-| ID 그래프 제한 변경 | 9월 말까지 ID 그래프가 그래프당 50개의 ID로 변경되고 최신 ID가 수집됩니다. 따라서 가장 오래된 ID는 수집 타임스탬프 및 ID 유형에 따라 삭제되며 쿠키 ID 유형이 먼저 삭제됩니다. 현재 ID 그래프의 ID 제한은 그래프당 150개이며 이 제한에 도달하면 그래프가 더 이상 업데이트되지 않습니다. 프로덕션 샌드박스에 다음이 포함된 경우 계정 담당자에게 문의하여 ID 유형 변경을 요청하십시오. <ul><li>개인 식별자(예: CRM ID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.</li><li>쿠키/장치 식별자가 교차 장치 ID 유형으로 구성된 사용자 지정 네임스페이스입니다.</li></ul> Adobe 엔지니어링에서 이러한 요청을 수동으로 처리합니다. 자세한 내용은 [id 서비스 데이터 보호](../../identity-service/guardrails.md). |
+| ID 서비스 UI 개선 사항 | Experience Platform UI에서 향상된 사용자 정의 네임스페이스 만들기 도구를 사용하여 사용자 정의 네임스페이스 및 해당 ID 유형을 보다 효율적으로 관리할 수 있습니다. 향상된 ID 서비스 UI는 다음과 같은 기능을 제공합니다. <ul><li>컨텍스트 경험: ID 네임스페이스 및 ID 유형에 대한 시각적 큐, 명확성 및 컨텍스트입니다.</li><li>정확성: 더 이상 중복 ID 이름이 없어 오류 처리가 향상됩니다.</li><li>검색 기능: 제품 내 대화 상자에서 문서에 액세스합니다.</li></ul> 자세한 내용은 의 안내서를 참조하십시오. [사용자 정의 네임스페이스 만들기](../../identity-service/namespaces.md#create-namespaces). |
+| ID 그래프 제한 변경 | ID 그래프 제한이 150개의 ID에서 50개의 ID로 변경되었습니다. 새 ID가 전체 그래프에 수집되면 수집 타임스탬프와 ID 유형에 따라 가장 오래된 ID가 삭제됩니다. 쿠키 ID 유형은 삭제 우선 순위가 지정됩니다. 프로덕션 샌드박스에 다음이 포함된 경우 Adobe 계정 팀에 문의하여 ID 유형 변경을 요청하십시오. <ul><li>개인 식별자(예: CRM ID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.</li><li>쿠키/장치 식별자가 교차 장치 ID 유형으로 구성된 사용자 지정 네임스페이스입니다.</li></ul> Adobe 엔지니어링에서 이러한 요청을 수동으로 처리합니다. 자세한 내용은 [id 서비스 데이터 보호](../../identity-service/guardrails.md). |
 
-자세한 내용은 다음을 참조하십시오. [ID 서비스 개요](../../identity-service/home.md).
+{style="table-layout:auto"}
+
+ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md).
 
 ## Segmentation Service {#segmentation}
 
@@ -167,12 +80,13 @@ Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 �
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
-| --- | --- |
-| 유사 대상(제한된 가용성) | 유사 대상은 각 대상에 대한 지능적인 통찰력을 제공하며 머신 러닝 기반 통찰력을 활용하여 마케팅 캠페인을 통해 고부가가치 고객을 식별하고 타깃팅합니다. 유사 대상을 사용하면 성과가 좋은 대상과 유사한 고객을 타겟팅하거나 이전에 전환된 대상과 유사한 고객을 타겟팅하는 확장된 대상을 만들 수 있습니다. 유사 대상에 대한 자세한 내용은 [유사 대상 개요](../../segmentation/ui/lookalike-audiences.md). |
+| ------- | ----------- |
+| 사용자 정의 가능한 열 | 이제 크기 조정 가능한 열을 사용하여 Audience Portal의 레이아웃을 사용자 정의할 수 있습니다. 이 기능에 대한 자세한 내용은 [세그멘테이션 UI 안내서](../../segmentation/ui/overview.md#customize). |
+| 빈도 분류 업데이트 | 이제 조직 내 대상자의 업데이트 주기 분류를 볼 수 있습니다. 이 기능에 대한 자세한 내용은 [세그멘테이션 UI 안내서](../../segmentation/ui/overview.md#browse). |
 
-{style="table-layout:auto"}
+소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).
 
-자세한 내용은 다음을 참조하십시오. [세그먼테이션 개요](../../segmentation/home.md).
+세분화 서비스에 대한 자세한 내용은 [세그먼테이션 서비스 개요](../../segmentation/home.md).
 
 ## 소스 {#sources}
 
@@ -182,10 +96,8 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| 의 일반 가용성 [!DNL SugarCRM] | [!DNL SugarCRM] 이제 소스를 사용할 수 있습니다. [!DNL SugarCRM Accounts & Contacts] 및 [!DNL SugarCRM Events] 소스를 사용하여 데이터를 사용자의 [!DNL SugarCRM] 계정에서 Experience Platform으로 가져옵니다. 자세한 내용은 [[!DNL SugarCRM] 개요](../../sources/connectors/crm/sugarcrm.md)를 참조하십시오. |
-| UI의 소스 데이터 흐름에 대한 온디맨드 수집 지원 | 이제 UI에서 기존 소스 데이터 흐름에 대한 주문형 흐름 실행을 만들 수 있습니다. 자세한 내용은 의 안내서를 참조하십시오. [ui를 사용하여 소스에 대한 온디맨드 플로우 실행 생성](../../sources/tutorials/ui/on-demand-ingestion.md). |
-| 신규 지원 `correlationID` Adobe Analytics용 필드 | 다음 `_experience.decisioning.propositions.scopeDetails.correlationID` 이제 Adobe Analytics 소스 커넥터 스키마에서 필드를 사용할 수 있습니다. 이 필드는 A4T 분류 지원에 사용되며 2023년 9월부터 채워집니다. |
+| 새로운 기능 매개 변수 `offset` 셀프서비스 소스의 페이지 매김(일괄 SDK) | 이제 다음을 지정할 수 있습니다. `endConditionName` 및 `endConditionValue` 를 사용할 때 소스에 대해 `offset` 페이지 매김. 이러한 매개 변수를 사용하면 다음 HTTP 요청에서 페이지 매김 루프를 종료하는 조건을 나타낼 수 있습니다. 자세한 내용은 [셀프서비스 소스에 대한 페이지 매김 안내서(일괄 처리 SDK)](../../sources/sources-sdk/config/sourcespec.md#pagination). |
 
 {style="table-layout:auto"}
 
-자세한 내용은 다음을 참조하십시오. [소스 개요](../../sources/home.md).
+소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).
