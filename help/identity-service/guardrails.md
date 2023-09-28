@@ -3,9 +3,9 @@ keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침
 title: ID 서비스 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: a9b5ab28d00941b7531729653eb630a61b5446fc
+source-git-commit: b78d1d00a42df8a703a4dd15959cf15b058e0b7a
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1073'
 ht-degree: 1%
 
 ---
@@ -31,8 +31,7 @@ ht-degree: 1%
 
 | 가드레일 | 제한 | 참고 |
 | --- | --- | --- |
-| (현재 비헤이비어) 그래프의 ID 수 | 150 | 제한은 샌드박스 수준에서 적용됩니다. ID 수가 150개 이상에 도달하면 새 ID가 추가되지 않고 ID 그래프가 업데이트되지 않습니다. 그래프는 하나 이상의 그래프를 150개 미만의 동일성과 연결한 결과로서 150개 이상의 동일성을 나타낼 수 있다. **참고**: ID 그래프의 최대 ID 수 **병합된 개별 프로필의 경우** 는 50입니다. ID가 50개를 초과하는 ID 그래프를 기반으로 하는 병합된 프로필은 실시간 고객 프로필에서 제외됩니다. 자세한 내용은 의 안내서를 참조하십시오. [프로필 데이터 보호](../profile/guardrails.md). |
-| (예정된 비헤이비어) 그래프의 ID 수 [!BADGE 베타]{type=Informative} | 50 | 50개의 연결된 ID가 있는 그래프가 업데이트되면 ID 서비스는 &quot;선입 선출&quot; 메커니즘을 적용하고 최신 ID를 위한 공간을 만들기 위해 가장 오래된 ID를 삭제합니다. 삭제는 ID 유형 및 타임스탬프를 기반으로 합니다. 제한은 샌드박스 수준에서 적용됩니다. 자세한 내용은 의 섹션을 참조하십시오. [삭제 논리 이해](#deletion-logic). |
+| 그래프의 ID 수 | 50 | 50개의 연결된 ID가 있는 그래프가 업데이트되면 ID 서비스는 &quot;선입 선출&quot; 메커니즘을 적용하고 최신 ID를 위한 공간을 만들기 위해 가장 오래된 ID를 삭제합니다. 삭제는 ID 유형 및 타임스탬프를 기반으로 합니다. 제한은 샌드박스 수준에서 적용됩니다. 자세한 내용은 의 섹션을 참조하십시오. [삭제 논리 이해](#deletion-logic). |
 | XDM 레코드의 ID 수 | 20 | 필요한 최소 XDM 레코드 수는 2개입니다. |
 | 사용자 정의 네임스페이스 수 | None | 만들 수 있는 사용자 정의 네임스페이스의 수에는 제한이 없습니다. |
 | 네임스페이스 표시 이름 또는 ID 기호의 문자 수 | None | 네임스페이스 표시 이름 또는 ID 기호의 문자 수에는 제한이 없습니다. |
@@ -50,7 +49,7 @@ ht-degree: 1%
 
 2023년 3월 31일부터 Identity Service는 신규 고객에 대한 Adobe Analytics ID(AAID) 수집을 차단합니다. 이 ID는 일반적으로 [Adobe Analytics 소스](../sources/connectors/adobe-applications/analytics.md) 및 [Adobe Audience Manager 소스](../sources//connectors/adobe-applications/audience-manager.md) 및 는 ECID가 동일한 웹 브라우저를 나타내므로 중복됩니다. 이 기본 구성을 변경하려면 Adobe 계정 팀에 문의하십시오.
 
-## [!BADGE 베타]{type=Informative} 수용작업량 ID 그래프가 업데이트될 때 삭제 논리 이해 {#deletion-logic}
+## 생산 능력의 ID 그래프가 업데이트될 때의 삭제 논리 이해 {#deletion-logic}
 
 전체 ID 그래프가 업데이트되면 Identity Service는 최신 ID를 추가하기 전에 그래프에서 가장 오래된 ID를 삭제합니다. 이는 신원 데이터의 정확성과 관련성을 유지하기 위함이다. 이 삭제 프로세스는 다음 두 가지 기본 규칙을 따릅니다.
 
