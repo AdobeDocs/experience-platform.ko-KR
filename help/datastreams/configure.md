@@ -2,10 +2,10 @@
 title: 데이터스트림 구성
 description: 클라이언트측 Web SDK 통합 기능을 다른 Adobe 제품 및 서드파티 대상과 연결하는 방법에 대해 알아봅니다.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 705b1645eb8ca69169350c57cd28d3a1061f4928
 workflow-type: tm+mt
-source-wordcount: '2276'
-ht-degree: 100%
+source-wordcount: '2629'
+ht-degree: 86%
 
 ---
 
@@ -38,9 +38,42 @@ Experience Platform에 사용할 데이터스트림을 구성하고 Platform Web
 
 ![데이터스트림에 대한 기본 구성](assets/configure/configure.png)
 
-**[!UICONTROL 고급 옵션]**&#x200B;을 선택하여 데이터스트림을 구성하는 추가 제어 기능을 표시합니다.
+### 지리적 위치 및 네트워크 조회 구성 {#geolocation-network-lookup}
 
-![고급 구성 옵션](assets/configure/advanced-options.png) {#advanced-options}
+지리적 위치 및 네트워크 조회 설정을 사용하면 수집하려는 지리적 및 네트워크 수준 데이터의 세부 기간 수준을 정의할 수 있습니다.
+
+확장 **[!UICONTROL 지리적 위치 및 네트워크 조회]** 섹션에 설명되어 있는 설정을 구성하는 방법에 대해 설명합니다.
+
+![지리적 위치 및 네트워크 조회 설정이 강조 표시된 데이터 스트림 구성 화면을 표시하는 플랫폼 UI 스크린샷입니다.](assets/configure/geolookup.png)
+
+| 설정 | 설명 |
+| --- | --- |
+| [!UICONTROL 지역 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대해 지리적 위치 조회를 활성화합니다. 지리적 위치 조회에는 웹 SDK 구성의 [`placeContext`](../edge/data-collection/automatic-information.md#place-context) 필드 그룹이 포함되어야 합니다. <br> 사용 가능한 옵션: <ul><li>국가</li><li>우편번호</li><li>주/시/도</li><li>DMA</li><li>구/군/시</li><li>위도 </li><li>경도</li></ul>**[!UICONTROL 도시]**, **[!UICONTROL 위도]** 또는 **[!UICONTROL 경도]**&#x200B;를 선택하면 선택한 다른 옵션에 관계없이 소수점 이하 두 자리까지 좌표가 제공됩니다. 이는 도시 수준의 세부 기간으로 간주됩니다. <br> <br>옵션을 선택하지 않으면 지리적 위치 조회가 비활성화됩니다. 지리적 위치는 [!UICONTROL IP 난독화] 이전에 활성화되고 [!UICONTROL IP 난독화] 설정에도 영향을 받지 않습니다. |
+| [!UICONTROL 네트워크 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대해 네트워크 조회를 활성화합니다. 네트워크 조회에는 웹 SDK 구성의 [`Environment`](../edge/data-collection/automatic-information.md#environment) 필드 그룹이 포함되어야 합니다. <br> 사용 가능한 옵션: <ul><li>통신사</li><li>도메인</li><li>ISP</li></ul>이러한 옵션을 사용하여 요청이 시작된 특정 네트워크에 대한 추가 정보를 다른 서비스에 제공합니다. |
+
+### 장치 조회 구성 {#geolocation-device-lookup}
+
+다음 **[!UICONTROL 장치 조회]** 설정을 사용하면 수집할 장치별 정보의 세부 기간 수준을 선택할 수 있습니다.
+
+확장 **[!UICONTROL 장치 조회]** 섹션에 설명되어 있는 설정을 구성하는 방법에 대해 설명합니다.
+
+![디바이스 조회 설정이 강조 표시된 데이터 스트림 구성 화면을 보여 주는 플랫폼 UI 스크린샷입니다.](assets/configure/device-lookup.png)
+
+>[!IMPORTANT]
+>
+>아래 표에 설명된 설정은 함께 사용할 수 없습니다. 사용자 에이전트 정보와 장치 조회 데이터를 동시에 선택할 수는 없습니다.
+
+| 설정 | 설명 |
+| --- | --- |
+| **[!UICONTROL 사용자 에이전트 및 클라이언트 힌트 헤더 유지]** | 사용자 에이전트 문자열에 저장된 정보만 수집하려면 이 옵션을 선택합니다. 기본 설정입니다. |
+| **[!UICONTROL 장치 조회를 사용하여 다음 정보 수집]** | 다음 장치별 정보 중 하나 이상을 수집하려면 이 옵션을 선택합니다. <ul><li>**[!UICONTROL 장치]** 정보:<ul><li>장치 제조업체</li><li>디바이스 모델</li><li>마케팅 이름</li></ul></li><li>**[!UICONTROL 하드웨어]** 정보: <ul><li>장치 유형</li><li>높이 표시</li><li>표시 폭</li><li>색상 깊이 표시</li></ul></li><li>**[!UICONTROL 브라우저]** 정보: <ul><li>브라우저 공급업체</li><li>브라우저 이름</li><li>브라우저 버전</li></ul></li><li>**[!UICONTROL 운영 체제]** 정보: <ul><li>OS 공급업체</li><li>OS 이름</li><li>OS 버전</li></ul></li></ul> <br>  사용자 에이전트 및 클라이언트 힌트와 함께 디바이스 조회 정보를 수집할 수 없습니다. 디바이스 정보를 수집하도록 선택하면 사용자 에이전트 및 클라이언트 힌트 수집이 비활성화되고, 그 반대의 경우도 마찬가지입니다. 모든 장치 조회 정보는 `xdm:device` 필드 그룹입니다. |
+| **[!UICONTROL 장치 정보 수집 안 함]** | 모든 종류의 조회 정보를 수집하지 않으려면 이 옵션을 선택합니다. 사용자 에이전트나 클라이언트 힌트 헤더가 없는 등 디바이스, 하드웨어, 브라우저 또는 운영 체제 정보는 수집되지 않습니다. |
+
+### 고급 옵션 구성 {#@advanced-options}
+
+선택 **[!UICONTROL 고급 옵션]** IP 난독화, 자사 ID 쿠키 등과 같은 데이터스트림 구성을 위한 추가 제어 정보를 표시합니다.
+
+![고급 구성 옵션](assets/configure/advanced-settings.png)
 
 >[!IMPORTANT]
 >
@@ -50,14 +83,13 @@ Experience Platform에 사용할 데이터스트림을 구성하고 Platform Web
 
 | 설정 | 설명 |
 | --- | --- |
-| [!UICONTROL 지역 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대해 지리적 위치 조회를 활성화합니다. 지리적 위치 조회에는 웹 SDK 구성의 [`placeContext`](../edge/data-collection/automatic-information.md#place-context) 필드 그룹이 포함되어야 합니다. <br> 사용 가능한 옵션: <ul><li>국가</li><li>우편번호</li><li>주/시/도</li><li>DMA</li><li>구/군/시</li><li>위도 </li><li>경도</li></ul>**[!UICONTROL 도시]**, **[!UICONTROL 위도]** 또는 **[!UICONTROL 경도]**&#x200B;를 선택하면 선택한 다른 옵션에 관계없이 소수점 이하 두 자리까지 좌표가 제공됩니다. 이는 도시 수준의 세부 기간으로 간주됩니다. <br> <br>옵션을 선택하지 않으면 지리적 위치 조회가 비활성화됩니다. 지리적 위치는 [!UICONTROL IP 난독화] 이전에 활성화되고 [!UICONTROL IP 난독화] 설정에도 영향을 받지 않습니다. |
-| [!UICONTROL 네트워크 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대해 네트워크 조회를 활성화합니다. 네트워크 조회에는 웹 SDK 구성의 [`Environment`](../edge/data-collection/automatic-information.md#environment) 필드 그룹이 포함되어야 합니다. <br> 사용 가능한 옵션: <ul><li>통신사</li><li>도메인</li><li>ISP</li></ul>이러한 옵션을 사용하여 요청이 시작된 특정 네트워크에 대한 추가 정보를 다른 서비스에 제공합니다. |
 | [!UICONTROL IP 난독화] | 데이터스트림에 적용할 IP 난독화 유형을 표시합니다. 고객 IP 기반의 처리는 IP 난독화 설정에 의해 영향을 받습니다. 여기에는 데이터스트림에서 데이터를 수신하는 모든 Experience Cloud 서비스가 포함됩니다. <p>사용 가능한 옵션:</p> <ul><li>**[!UICONTROL 없음]**: IP 난독화를 비활성화합니다. 전체 사용자 IP 주소는 데이터스트림을 통해 전송됩니다.</li><li>**[!UICONTROL 부분]**: IPv4 주소의 경우 사용자 IP 주소의 마지막 옥텟을 난독화합니다. IPv6 주소의 경우 주소의 마지막 80비트를 난독화합니다. <p>예:</p> <ul><li>IPv4: `1.2.3.4` -> `1.2.3.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL 전체]**: 전체 IP 주소를 난독화합니다. <p>예:</p> <ul><li>IPv4: `1.2.3.4` -> `0.0.0.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> 다른 Adobe 제품에 미치는 IP 난독화 영향: <ul><li>**Adobe Target**: 데이터스트림 수준의 [!UICONTROL IP 난독화] 설정은 Adobe Target에 설정된 모든 IP 난독화 옵션보다 우선합니다. 예를 들어 데이터스트림 수준의 [!UICONTROL IP 난독화] 옵션이 **[!UICONTROL 전체]**&#x200B;로 설정되고 Adobe Target IP 난독화 옵션이 **[!UICONTROL 마지막 옥텟 난독화]**&#x200B;로 설정되면 Adobe Target은 전체 난독화된 IP를 수신합니다. 자세한 내용은 [IP 난독화](https://developer.adobe.com/target/before-implement/privacy/privacy/) 및 [지리적 위치](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=ko)에 대한 Adobe Target 설명서를 참조하십시오.</li><li>**Audience Manager**: 데이터스트림 수준의 IP 난독화 설정은 Audience Manager에 설정된 모든 IP 난독화 옵션보다 우선하고 모든 IP 주소에 적용됩니다. Audience Manager가 수행하는 지리적 위치 조회는 데이터스트림 수준의 [!UICONTROL IP 난독화] 옵션에 영향을 받습니다. Audience Manager의 지리적 위치 조회는 전체 난독화된 IP를 기반으로 알 수 없는 지역을 생성하지만 해당 지리적 위치 데이터 기반의 세그먼트는 실현되지 않습니다. 자세한 내용은 [IP 난독화](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=ko)에 대한 Audience Manager 설명서를 참조하십시오.</li><li>**Adobe Analytics**: NONE이 아닌 IP 난독화 옵션이 선택되면 Adobe Analytics는 부분적으로 난독화된 IP 주소를 수신합니다. Analytics가 전체 난독화된 IP 주소를 수신하려면 Adobe Analytics에서 별도로 IP 난독화를 구성해야 합니다. 이 동작은 향후 릴리스에서 업데이트될 예정입니다. Analytics에서 IP 난독화를 활성화하는 방법에 대한 자세한 내용은 Adobe Analytics [설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html)를 참조하십시오.</li></ul> |
 | [!UICONTROL 자사 ID 쿠키] | 활성화되면 이 설정은 [자사 디바이스 ID](../edge/identity/first-party-device-ids.md) 조회 시 ID 맵에서 이 값을 조회하는 대신 지정된 쿠키를 참조하도록 Edge Network에 지시합니다.<br><br>이 설정을 활성화할 때에는 ID가 저장될 예정인 쿠키의 이름을 입력해야 합니다. |
 | [!UICONTROL 서드파티 ID 동기화] | ID 동기화를 컨테이너로 그룹화하면 다른 시간대에 다른 ID 동기화를 실행할 수 있습니다. 활성화되면 이 설정을 사용하여 이 데이터스트림에 실행되는 ID 동기화의 컨테이너를 지정할 수 있습니다. |
 | [!UICONTROL 서드파티 ID 동기화 컨테이너 ID] | 서드파티 ID 동기화에 사용할 컨테이너의 숫자 ID. |
 | [!UICONTROL 컨테이너 ID 재정의] | 이 섹션에서는 기본 ID 재정의에 사용할 수 있는 추가 서드파티 ID 동기화 컨테이너 ID를 정의할 수 있습니다. |
 | [!UICONTROL 유형에 액세스] | Edge Network가 데이터스트림에 대해 허용하는 인증 유형을 정의합니다. <ul><li>**[!UICONTROL 혼합 인증]**: 이 옵션을 선택하는 경우 Edge Network는 인증된 요청과 인증되지 않은 요청을 모두 허용합니다. Web SDK 또는 [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)를 사용하려는 경우 [Server API](../server-api/overview.md)와 함께 이 옵션을 선택합니다. </li><li>**[!UICONTROL 인증된 요청만]**: 이 옵션을 선택하는 경우 Edge Network는 인증된 요청만 허용합니다. Server API만 사용하고 인증되지 않은 요청이 Edge Network에서 처리되지 않도록 하려면 이 옵션을 선택합니다.</li></ul> |
+| [!UICONTROL Media Analytics] | Experience Platform SDK 또는 Media Edge API를 통해 Edge Network 통합을 위한 스트리밍 추적 데이터 처리를 활성화하려면 이 옵션을 선택합니다. 에서 Media Analytics에 대해 알아봅니다. [설명서](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=ko). |
 
 여기에서 Experience Platform에 대한 데이터스트림을 구성하는 경우 [데이터 수집을 위한 데이터 준비](./data-prep.md)에 대한 튜토리얼을 참조하여 이 안내서로 돌아가기 전에 데이터를 Platform 이벤트 스키마에 매핑합니다. 그렇지 않은 경우 **[!UICONTROL 저장]**&#x200B;을 선택하고 다음 섹션으로 계속 진행합니다.
 
