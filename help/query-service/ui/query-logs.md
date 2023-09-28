@@ -2,9 +2,9 @@
 title: 쿼리 로그
 description: 쿼리가 실행될 때마다 쿼리 로그가 자동으로 생성되며 UI를 통해 문제 해결에 도움을 줄 수 있습니다. 이 문서에서는 UI의 쿼리 서비스 로그 섹션을 사용하고 탐색하는 방법에 대해 간략하게 설명합니다.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
@@ -57,9 +57,37 @@ A [각 로그 테이블 열에 대한 설명](./overview.md#log) 쿼리 서비�
 
 ![쿼리 로그 세부 사항 보기.](../images/ui/query-log/query-log-details.png)
 
+## 로그 편집 {#edit-logs}
+
 각 행의 템플릿 이름 또는 SQL 코드 조각 옆에 연필 아이콘(![연필 아이콘.](../images/ui/query-log/edit-icon.png))를 사용하여 쿼리 편집기로 이동할 수 있습니다. 그런 다음 편집기에서 편집을 위해 쿼리를 미리 채웁니다.
 
 ![연필 아이콘이 강조 표시된 쿼리 로그 작업 영역](../images/ui/query-log/edit-query.png)
+
+## 로그 필터링 {#filter-logs}
+
+다양한 설정을 기반으로 쿼리 로그 목록을 필터링할 수 있습니다. 필터 아이콘(![필터 아이콘](../images/ui/query-log/filter-icon.png))를 클릭하여 필터 옵션 세트를 왼쪽 레일에서 열 수 있습니다.
+
+![필터 아이콘이 강조 표시된 쿼리 로그 작업 영역](../images/ui/query-log/log-filter.png)
+
+사용 가능한 필터 목록이 표시됩니다.
+
+![필터 옵션이 표시되고 강조 표시된 쿼리 로그 작업 영역](../images/ui/query-log/log-filter-settings.png)
+
+다음 표는 각 필터에 대한 설명을 증명했습니다.
+
+| 필터 | 설명 |
+| ------ | ----------- |
+| [!UICONTROL 대시보드 쿼리 제외] | 이 확인란은 기본적으로 활성화되어 있으며 인사이트 생성에 사용된 쿼리에서 생성된 로그를 제외합니다. 이러한 쿼리는 시스템에서 생성되며 모니터링, 관리 및 문제 해결에 필요한 사용자 생성 로그의 레코드를 숨깁니다. 시스템에서 생성한 로그를 보려면 확인란을 선택 취소합니다. |
+| [!UICONTROL 시작 날짜] | 특정 기간 동안 생성된 쿼리에 대한 로그를 필터링하려면 [!UICONTROL 시작] 및 [!UICONTROL 종료] 날짜: [!UICONTROL 시작일] 섹션. |
+| [!UICONTROL 완료 날짜] | 특정 기간 동안 완료된 쿼리에 대한 로그를 필터링하려면 다음을 설정하십시오. [!UICONTROL 시작] 및 [!UICONTROL 종료] 날짜: [!UICONTROL 완료 날짜] 섹션. |
+| [!UICONTROL 상태] | 다음을 기준으로 로그를 필터링하려면 [!UICONTROL 상태] 쿼리에서 적절한 라디오 단추를 선택합니다. 사용 가능한 옵션은 다음과 같습니다 [!UICONTROL 제출됨], [!UICONTROL 진행 중], [!UICONTROL 성공], 및 [!UICONTROL 실패]. 한 번에 하나의 상태 조건을 기준으로 로그만 필터링할 수 있습니다. |
+| [!UICONTROL 클라이언트] | 사용된 쿼리 클라이언트를 기반으로 로그를 필터링하려면 자유 텍스트 필드에 다음 허용 값 중 하나를 입력합니다. `API`, `Adobe Query Service UI`, 또는 `QsAccel`. |
+| [!UICONTROL 내 쿼리] | 사용 [!UICONTROL 내 쿼리] 자신이 실행한 쿼리에 대한 로그를 필터링하려면 전환합니다. |
+| [!UICONTROL 쿼리 로그 ID] | 쿼리의 고유 로그 ID를 기준으로 필터링하려면 사용 가능한 텍스트 필드에 로그 ID를 입력합니다. 이 정보는 [!UICONTROL 로그 세부 정보]. |
+
+적용된 모든 필터는 필터링된 로그 결과 위에 표시됩니다.
+
+![적용된 필터 목록이 강조 표시된 쿼리 작업 영역의 로그 탭](../images/ui/query-log/applied-log-filters.png)
 
 ## 다음 단계
 

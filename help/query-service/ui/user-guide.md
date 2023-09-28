@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 편집기 UI 안내서
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서, Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 이를 통해 개발 목적으로 대화형 쿼리를 실행하고 비대화형 쿼리를 실행하여 Experience Platform의 데이터 세트를 채울 수 있습니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
+source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '2288'
 ht-degree: 3%
 
 ---
@@ -17,13 +17,23 @@ ht-degree: 3%
 
 의 개념 및 기능에 대한 자세한 내용 [!DNL Query Service], 다음을 참조하십시오. [쿼리 서비스 개요](../home.md). 에서 쿼리 서비스 사용자 인터페이스를 탐색하는 방법에 대해 자세히 알아보려면 [!DNL Platform], 다음을 참조하십시오. [쿼리 서비스 UI 개요](./overview.md).
 
+>[!NOTE]
+>
+>특정 쿼리 서비스 기능은 쿼리 편집기의 이전 버전에서 제공되지 않습니다. 이 문서에 사용된 스크린샷은 별도로 명시되지 않는 한 쿼리 편집기의 향상된 버전을 사용하여 찍은 것입니다. 다음에서 섹션을 참조하십시오. [향상된 쿼리 편집기](#enhanced-editor-toggle) 을 참조하십시오.
+
 ## 시작하기 {#getting-started}
 
 [!DNL Query Editor] 을에 연결하여 유연한 쿼리 실행 제공 [!DNL Query Service]및 쿼리는 이 연결이 활성화된 동안에만 실행됩니다.
 
+## [!DNL Query Editor]에 액세스 {#accessing-query-editor}
+
+다음에서 [!DNL Experience Platform] UI, 선택 **[!UICONTROL 쿼리]** 을(를) 클릭하여 왼쪽 탐색 메뉴에서 [!DNL Query Service] 작업 영역. 그런 다음 쿼리 작성을 시작하려면 다음을 선택합니다. **[!UICONTROL 쿼리 만들기]** 화면 오른쪽 상단에 있습니다. 이 링크는 의 페이지에서 사용할 수 있습니다. [!DNL Query Service] 작업 영역.
+
+![쿼리 만들기가 강조 표시된 쿼리 작업 공간 개요 탭](../images/ui/query-editor/create-query.png)
+
 ### 에 연결 중 [!DNL Query Service] {#connecting-to-query-service}
 
-[!DNL Query Editor] 을(를) 초기화하고 연결하는 데 몇 초 정도 소요됩니다. [!DNL Query Service] 열리면. 콘솔은 아래와 같이 연결되면 알려 줍니다. 편집기가 연결되기 전에 쿼리를 실행하려고 하면 연결이 완료될 때까지 실행이 지연됩니다.
+쿼리 편집기를 열 때 초기화하고 쿼리 서비스에 연결하는 데 몇 초 정도 걸립니다. 콘솔은 아래와 같이 연결되면 알려 줍니다. 편집기가 연결되기 전에 쿼리를 실행하려고 하면 연결이 완료될 때까지 실행이 지연됩니다.
 
 ![초기 연결 시 쿼리 편집기의 콘솔 출력입니다.](../images/ui/query-editor/connect.png)
 
@@ -31,17 +41,13 @@ ht-degree: 3%
 
 다음에서 실행된 쿼리 [!DNL Query Editor] 대화식으로 실행 : 브라우저를 닫거나 다른 곳으로 이동하면 쿼리가 취소됩니다. 쿼리 출력에서 데이터 세트를 생성하기 위해 만들어진 쿼리의 경우에도 마찬가지입니다.
 
+쿼리 편집기의 고급 버전에서는 쿼리 편집기에 두 개 이상의 쿼리를 작성하고 모든 쿼리를 순차적으로 실행할 수 있습니다. 의 섹션을 참조하십시오. [여러 순차적 쿼리 실행](#execute-multiple-sequential-queries) 추가 정보.
+
 ## 를 사용하여 쿼리 작성 [!DNL Query Editor] {#query-authoring}
 
 사용 [!DNL Query Editor], 고객 경험 데이터에 대한 쿼리를 작성, 실행 및 저장할 수 있습니다. 실행되거나 저장된 모든 쿼리 [!DNL Query Editor] 에 대한 액세스 권한이 있는 조직의 모든 사용자가 사용할 수 있습니다. [!DNL Query Service].
 
-### [!DNL Query Editor]에 액세스 {#accessing-query-editor}
-
-다음에서 [!DNL Experience Platform] UI, 선택 **[!UICONTROL 쿼리]** 을(를) 클릭하여 왼쪽 탐색 메뉴에서 [!DNL Query Service] 작업 영역. 그런 다음 쿼리 작성을 시작하려면 다음을 선택합니다. **[!UICONTROL 쿼리 만들기]** 화면 오른쪽 상단에 있습니다. 이 링크는 의 페이지에서 사용할 수 있습니다. [!DNL Query Service] 작업 영역.
-
-![쿼리 만들기가 강조 표시된 쿼리 작업 공간 개요 탭](../images/ui/query-editor/create-query.png)
-
-### 향상된 쿼리 편집기 토글 {#enhanced-editor-toggle}
+## 향상된 쿼리 편집기 토글 {#enhanced-editor-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_enhancedEditorToggle"
@@ -62,7 +68,30 @@ UI 토글을 사용하면 쿼리 편집기의 기존 버전과 향상된 버전 
 
 ![설정 아이콘 및 어두운 테마 활성화 드롭다운 메뉴 옵션이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/query-editor-settings.png)
 
-### 쿼리 작성 {#writing-queries}
+### 여러 순차적 쿼리 실행 {#execute-multiple-sequential-queries}
+
+쿼리 편집기의 고급 버전에서는 쿼리 편집기에 두 개 이상의 쿼리를 작성하고 모든 쿼리를 순차적 방식으로 실행할 수 있습니다.
+
+시퀀스에서 여러 쿼리를 실행하면 각각 로그 항목이 생성됩니다. 그러나 첫 번째 쿼리의 결과만 쿼리 편집기 콘솔에 표시됩니다. 실행된 쿼리의 문제를 해결하거나 확인해야 하는 경우 쿼리 로그를 확인합니다. 다음을 참조하십시오. [쿼리 로그 설명서](./query-logs.md) 추가 정보.
+
+>[!NOTE]
+> 
+>CTAS 쿼리가 쿼리 편집기에서 첫 번째 쿼리 이후에 실행되는 경우에도 쿼리 편집기 콘솔에 출력이 없어도 테이블이 만들어집니다.
+
+### 선택한 쿼리 실행 {#execute-selected-query}
+
+여러 개의 쿼리를 작성했지만 하나의 쿼리만 실행해야 하는 경우 선택한 쿼리를 강조 표시하고
+[!UICONTROL 선택한 쿼리 실행] 아이콘. 편집기에서 쿼리를 선택하지 않으면 기본적으로 이 아이콘이 비활성화됩니다.
+
+![를 사용하는 쿼리 편집기 [!UICONTROL 선택한 쿼리 실행] 아이콘이 강조 표시되었습니다.](../images/ui/query-editor/run-selected-query.png)
+
+### 결과 카운트 {#result-count}
+
+쿼리 편집기에는 최대 50,000개의 행 출력이 있습니다. 단, 쿼리 편집기 콘솔에는 한 번에 50개의 행만 표시됩니다. 콘솔에 표시되는 행 수를 변경하려면 **[!UICONTROL 결과 카운트]** 드롭다운을 클릭하고 50, 100, 150, 300 및 500 값 중에서 선택합니다.
+
+![결과 카운트 드롭다운이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/result-count.png)
+
+## 쿼리 작성 {#writing-queries}
 
 [!UICONTROL 쿼리 편집기] 는 가능한 한 쉽게 쿼리를 작성할 수 있도록 구성됩니다. 아래 스크린샷은 SQL 항목 필드와 함께 편집기가 UI에 표시되는 방식을 보여 줍니다. **재생** 강조 표시됨.
 
@@ -70,7 +99,7 @@ UI 토글을 사용하면 쿼리 편집기의 기존 버전과 향상된 버전 
 
 개발 시간을 최소화하려면 반환된 행에 대한 제한을 사용하여 쿼리를 개발하는 것이 좋습니다. 예, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. 쿼리에서 예상 출력이 생성되는지 확인했으면 제한을 제거하고 를 사용하여 쿼리를 실행합니다 `CREATE TABLE tablename AS SELECT` 을 클릭하여 출력으로 데이터 세트를 생성합니다.
 
-### 에서 쓰기 도구 [!DNL Query Editor] {#writing-tools}
+## 에서 쓰기 도구 [!DNL Query Editor] {#writing-tools}
 
 - **자동 구문 강조 표시:** SQL을 보다 쉽게 읽고 구성할 수 있습니다.
 
@@ -83,6 +112,18 @@ UI 토글을 사용하면 쿼리 편집기의 기존 버전과 향상된 버전 
 - **테이블 및 필드 자동 완성:** 원하는 테이블 이름을 입력하십시오. `SELECT` 에서 화살표 키를 사용하여 원하는 테이블로 이동한 다음 키를 누릅니다 **입력**. 테이블을 선택하면 자동 완성 기능이 해당 테이블의 필드를 인식합니다.
 
 ![드롭다운 테이블 이름 제안을 표시하는 쿼리 편집기 입력입니다.](../images/ui/query-editor/tables-auto.png)
+
+### 텍스트 서식 지정 {#format-text}
+
+다음 [!UICONTROL 텍스트 서식 지정] 기능을 사용하면 표준화된 구문 스타일을 추가하여 쿼리를 보다 쉽게 읽을 수 있습니다. 선택 **[!UICONTROL 텍스트 서식 지정]** 를 사용하여 쿼리 편집기 내의 모든 텍스트를 표준화합니다.
+
+![쿼리 편집기 [!UICONTROL 텍스트 서식 지정] 강조 표시된 SQL 문](../images/ui/query-editor/format-text.png)
+
+### SQL 복사 {#copy-sql}
+
+복사 아이콘을 선택하여 쿼리 편집기에서 클립보드로 SQL을 복사합니다. 이 복사 기능은 쿼리 템플릿과 쿼리 편집기에서 새로 만든 쿼리 모두에 사용할 수 있습니다.
+
+![복사 아이콘이 강조 표시된 예제 쿼리 템플릿이 있는 쿼리 작업 영역입니다.](../images/ui/query-editor/copy-sql.png)
 
 ### 자동 완성 UI 구성 전환 {#auto-complete}
 
