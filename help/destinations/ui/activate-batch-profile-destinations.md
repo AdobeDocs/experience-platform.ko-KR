@@ -4,9 +4,9 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 47ca76c5a4129882917e96a32721b4103bb6afa3
+source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
 workflow-type: tm+mt
-source-wordcount: '3669'
+source-wordcount: '3710'
 ht-degree: 11%
 
 ---
@@ -397,6 +397,10 @@ Adobe은 다음과 같은 ID 네임스페이스를 선택할 것을 권장합니
 >* 필드는 대상 대상에 대한 예상 속성으로 구성됩니다.
 >
 > 예를 들어, 필드가 `person.name.firstName` 에는 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있습니다. 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은 [Adobe Experience Platform의 데이터 거버넌스](../../rtcdp/privacy/data-governance-overview.md#destinations).
+
+### [!BADGE 베타]{type=Informative} 계산된 필드를 통해 배열 내보내기 {#export-arrays-calculated-fields}
+
+Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 어레이 개체를 내보낼 수 있습니다. 자세한 내용 [배열 및 계산된 필드 내보내기](/help/destinations/ui/export-arrays-calculated-fields.md) 기능에 액세스하려면 Adobe 담당자에게 문의하십시오.
 
 ### 알려진 제한 사항 {#known-limitations}
 

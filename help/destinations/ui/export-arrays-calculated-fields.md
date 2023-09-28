@@ -1,0 +1,214 @@
+---
+title: (베타) 계산된 필드를 사용하여 배열을 플랫 파일로 내보냅니다
+type: Tutorial
+description: Real-Time CDP에서 배치 프로필 기반 대상으로 배열 및 계산된 필드를 내보내는 방법을 알아봅니다.
+badge: "Beta"
+source-git-commit: 79924b9a7d5114c94a004f99fb194102845b2127
+workflow-type: tm+mt
+source-wordcount: '1180'
+ht-degree: 2%
+
+---
+
+
+# (Beta) 계산된 필드를 사용하여 플랫 스키마 파일로 배열을 내보냅니다 {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_flat_files"
+>title="(베타) 내보내기 어레이 지원"
+>abstract="Experience Platform에서 원하는 클라우드 스토리지 대상으로 int, string 또는 boolean 값의 단순 배열을 내보냅니다. 일부 제한 사항이 적용됩니다. 이 설명서에서 다양한 예제 및 지원되는 기능을 살펴보십시오."
+
+<!--
+
+additional links for contextualhelp:
+
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
+
+-->
+
+>[!AVAILABILITY]
+>
+>* 계산된 필드를 통해 배열을 내보내는 기능은 현재 Beta 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+
+플랫 스키마 파일의 Real-Time CDP에서 클라우드 스토리지 대상으로 계산된 필드를 통해 배열을 내보내는 방법에 대해 알아봅니다. 이 기능을 통해 활성화되는 사용 사례를 이해하려면 이 문서 를 참조하십시오.
+
+계산된 필드에 대한 광범위한 정보(이것이 무엇이며 왜 중요한지)를 얻을 수 있습니다. 데이터 준비의 계산된 필드에 대한 소개와 사용 가능한 모든 함수에 대한 자세한 내용은 아래 링크된 페이지를 참조하십시오.
+
+* [UI 안내서 및 개요](/help/data-prep/ui/mapping.md#calculated-fields)
+* [데이터 준비 기능](/help/data-prep/functions.md)
+
+>[!IMPORTANT]
+>
+>위에 나열된 모든 함수가 지원되는 것은 아닙니다. *필드를 클라우드 스토리지 대상으로 내보낼 때* 계산된 필드 기능 사용. 다음을 참조하십시오. [지원되는 함수 섹션](#supported-functions) 자세한 내용은 아래를 참조하십시오.
+
+## Platform의 배열 및 기타 개체 유형 {#arrays-strings-other-objects}
+
+Experience Platform에서 다음을 사용할 수 있습니다 [XDM 스키마](/help/xdm/home.md) 다른 필드 유형을 관리합니다. 이전에는 Experience Platform에서 벗어난 문자열과 같은 간단한 키-값 쌍 유형 필드를 원하는 대상으로 내보낼 수 있었습니다. 이전에 내보내기에 대해 지원되는 이러한 필드의 예는 다음과 같습니다. `personalEmail.address`:`johndoe@acme.org`.
+
+Experience Platform의 다른 필드 유형에는 배열 필드가 포함됩니다. 자세한 내용 [Experience Platform UI에서 배열 필드 관리](/help/xdm/ui/fields/array.md). 이전에 지원되는 필드 유형 외에도 이제 다음과 같은 배열 개체를 내보낼 수 있습니다. `organizations:[marketing, sales, engineering]`. 아래 추가 참조 [광범위한 예](#examples) 다양한 함수를 사용하여 배열의 요소에 액세스하고 배열 요소를 문자열로 결합하는 방법 등에 대해 알아봅니다.
+
+## 알려진 제한 사항 {#known-limitations}
+
+이 기능의 베타 릴리스에 대해 다음과 같은 알려진 제한 사항을 참고하십시오.
+
+* 계층 구조 스키마가 있는 JSON 또는 Parquet 파일로 내보내기는 현재 지원되지 않습니다. 배열을 플랫 스키마 CSV, JSON 및 Parquet 파일로만 내보낼 수 있습니다.
+* 현재, *단순 배열(또는 기본 값 배열)만 클라우드 스토리지 대상으로 내보낼 수 있습니다.*. 즉, 문자열, int 또는 부울 값을 포함하는 배열 개체를 내보낼 수 있습니다. 맵이나 맵 또는 개체 배열은 내보낼 수 없습니다. 계산된 필드 모달 창에는 내보낼 수 있는 배열만 표시됩니다.
+
+## 전제 조건 {#prerequisites}
+
+다음 단계를 통해 진행 [클라우드 스토리지 대상에 대한 활성화 단계](/help/destinations/ui/activate-batch-profile-destinations.md) 및 로 이동 [매핑](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 단계.
+
+## 계산된 필드를 내보내는 방법 {#how-to-export-calculated-fields}
+
+클라우드 스토리지 대상에 대한 활성화 워크플로의 매핑 단계에서 다음을 선택합니다. **[!UICONTROL (Beta) 계산된 필드 추가]**.
+
+![내보낼 계산된 필드 추가](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+
+이렇게 하면 Experience Platform 외부에서 속성을 내보내는 데 사용할 수 있는 속성을 선택할 수 있는 모달 창이 열립니다.
+
+>[!IMPORTANT]
+>
+>XDM 스키마의 일부 필드만 **[!UICONTROL 필드]** 보기. 문자열 값과 문자열, int 및 부울 값의 배열을 볼 수 있습니다. 예를 들어 `segmentMembership` 배열에는 다른 배열 값이 포함되어 있으므로 표시되지 않습니다.
+
+![모달 창 1](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+
+예를 들어 `join` 에 대한 함수 `loyaltyID` 충성도 ID 배열을 CSV 파일에서 밑줄이 연결된 문자열로 내보내는 아래 표시된 필드. 보기 [이 예제와 다른 예제에 대한 자세한 내용은 아래에서 확인하십시오](#join-function-export-arrays).
+
+![모달 창 2](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+
+선택 **[!UICONTROL 저장]** 계산된 필드를 유지하고 매핑 단계로 돌아갑니다.
+
+![모달 창 3](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+
+워크플로우의 매핑 단계로 돌아가서 **[!UICONTROL 대상 필드]** (내보낸 파일의 이 필드에 사용할 열 머리글 값 포함)
+
+![대상 필드 1 선택](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+
+![대상 필드 2 선택](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
+
+준비가 되면 다음을 선택합니다. **[!UICONTROL 다음]** 활성화 워크플로의 다음 단계로 진행합니다.
+
+![계속하려면 다음을 선택하십시오.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+
+## 지원되는 함수 {#supported-functions}
+
+계산된 필드의 베타 릴리스 및 대상에 대한 배열 지원에서는 다음 함수만 지원됩니다.
+
+* `join`
+* `coalesce`
+* `size_of`
+* `iif`
+* `index-based array access`
+* `add_to_array`
+* `to_array`
+* `first`
+* `last`
+* `sha256`
+* `md5`
+
+## 배열을 내보내는 데 사용되는 함수의 예 {#examples}
+
+위에 나열된 함수 중 일부는 아래 섹션의 예제 및 추가 정보를 참조하십시오. 나열된 나머지 함수는 [데이터 준비 섹션의 일반 함수 설명서](/help/data-prep/functions.md).
+
+### `join` 배열을 내보내는 함수 {#join-function-export-arrays}
+
+사용 `join` 원하는 구분 기호(예: )를 사용하여 배열의 요소를 문자열로 연결하는 함수 `_` 또는 `|`.
+
+예를 들어 를 사용하여 매핑 스크린샷에 표시된 대로 아래 XDM 필드를 결합할 수 있습니다. `join('_',loyalty.loyaltyID)` 구문:
+
+* `"organizations": ["Marketing","Sales,"Finance"]` 배열
+* `person.name.firstName` 문자열
+* `person.name.lastName` 문자열
+* `personalEmail.address` 문자열
+
+![스크린샷 매핑](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
+
+이 경우 출력 파일은 다음과 같습니다. 를 사용하여 배열의 세 요소가 단일 문자열로 연결되는 방식을 확인합니다. `_` 문자.
+
+```
+`First_Name,Last_Name,Organization
+John,Doe,"Marketing_Sales_Finance"
+```
+
+### `coalesce` 배열을 내보내는 함수 {#coalesce-function-export-arrays}
+
+사용 `coalesce` 배열의 null이 아닌 첫 번째 요소에 액세스하고 문자열로 내보내는 함수입니다.
+
+예를 들어 를 사용하여 매핑 스크린샷에 표시된 대로 아래 XDM 필드를 결합할 수 있습니다. `coalesce(subscriptions.hasPromotion)` 배열에서 false 값의 첫 번째 true를 반환하는 구문:
+
+* `"subscriptions.hasPromotion": [null, true, null, false, true]` 배열
+* `person.name.firstName` 문자열
+* `person.name.lastName` 문자열
+* `personalEmail.address` 문자열
+
+![결합 기능을 위한 스크린샷 매핑](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
+
+이 경우 출력 파일은 다음과 같습니다. null이 아닌 첫 번째 `true` 배열의 값을 파일로 내보냅니다.
+
+```
+First_Name,Last_Name,hasPromotion
+John,Doe,true
+```
+
+
+### `size_of` 배열을 내보내는 함수 {#sizeof-function-export-arrays}
+
+사용 `size_of` 배열에 있는 요소의 수를 나타내는 함수입니다. 예를 들어 `purchaseTime` 여러 타임스탬프가 있는 배열 개체를 사용하면 `size_of` 개인이 몇 개의 개별 구매를 했는지 나타내는 함수입니다.
+
+예를 들어 매핑 스크린샷에 표시된 대로 아래에 있는 다음 XDM 필드를 결합할 수 있습니다.
+
+* `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` 고객이 5개의 개별 구매 시간을 나타내는 스토리지 시스템
+* `personalEmail.address` 문자열
+
+![size_of 함수에 대한 스크린샷 매핑](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
+
+이 경우 출력 파일은 다음과 같습니다. 두 번째 열은 고객이 별도로 구매한 횟수에 해당하는 배열의 요소 수를 어떻게 표시하는지 확인합니다.
+
+```
+`Personal_Email,Times_Purchased
+johndoe@acme.org,"5"
+```
+
+### 인덱스 기반 스토리지 액세스 {#index-based-array-access}
+
+배열의 인덱스에 액세스하여 배열에서 단일 항목을 내보낼 수 있습니다. 예를 들어 의 위 예와 비슷합니다. `size_of` 기능을 사용하면 고객이 특정 제품을 처음 구매한 경우에만 액세스하고 내보내기를 하려는 경우 다음을 사용할 수 있습니다 `purchaseTime[0]` 타임스탬프의 첫 번째 요소를 내보내려면 `purchaseTime[1]` 타임스탬프의 두 번째 요소를 내보내려면 `purchaseTime[2]` 을 눌러 타임스탬프의 세 번째 요소를 내보내는 등의 작업을 수행합니다.
+
+![색인 액세스를 위한 스크린샷 매핑](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
+
+이 경우 출력 파일은 다음과 같습니다.
+
+```
+`Personal_Email,First_Purchase
+johndoe@acme.org,"1538097126"
+```
+
+### `first` 및 `last` 배열을 내보내는 함수 {#first-and-last-functions-export-arrays}
+
+사용 `first` 및 `last` 배열에서 첫 번째 또는 마지막 요소를 내보내는 함수입니다. 예를 들어 을 계속 `purchaseTime` 이전 예제의 여러 타임스탬프가 있는 배열 개체를 사용하면 함수를 사용하여 한 사람이 만든 첫 번째 또는 마지막 구매 시간을 내보낼 수 있습니다.
+
+![첫 번째 및 마지막 함수에 대한 스크린샷 매핑](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
+
+이 경우 출력 파일은 다음과 같습니다.
+
+```
+`Personal_Email,First_Purchase, Last_Purchase
+johndoe@acme.org,"1538097126","1664327526"
+```
+
+<!--
+
+### `iif` function to export arrays {#iif-function-export-arrays}
+
+Here are some examples of how you could use the `iif` function to access and export arrays and other fields: (STILL TO DO)
+
+-->
+
+### `md5` 및 `sha256` 해시 함수 {#hashing-functions}
+
+배열이나 배열에서 요소를 내보내는 특정 함수 외에도 해시 함수를 사용하여 특성을 해시할 수 있습니다. 예를 들어 속성에 개인 식별 가능한 정보가 있는 경우 내보낼 때 이러한 필드를 해시할 수 있습니다.
+
+예를 들어 문자열 값을 직접 해시할 수 있습니다 `md5(personalEmail.address)`. 원하는 경우 다음과 같이 배열 필드의 개별 요소를 해시할 수도 있습니다. `md5(purchaseTime[0])`
+
+
+
