@@ -4,9 +4,9 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 99ab9ed562d1959dc2bc801d563cb61d89bbde75
+source-git-commit: 47ca76c5a4129882917e96a32721b4103bb6afa3
 workflow-type: tm+mt
-source-wordcount: '3707'
+source-wordcount: '3669'
 ht-degree: 11%
 
 ---
@@ -27,11 +27,6 @@ ht-degree: 11%
 이 문서에서는 클라우드 스토리지 및 이메일 마케팅 대상과 같은 Adobe Experience Platform 배치 프로필 기반 대상에서 대상자를 활성화하는 데 필요한 워크플로우에 대해 설명합니다.
 
 ## 전제 조건 {#prerequisites}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_export_arrays_flat_files"
->title="(베타) 내보내기 어레이 지원"
->abstract="(베타) Experience Platform에서 원하는 클라우드 스토리지 대상으로 프리미티브 값 배열을 내보냅니다. 이 텍스트에 대한 자세한 정보가 업데이트됩니다. <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/license-usage-limited.html?lang=en#available-metrics">자세히 알아보기</a>. "
 
 대상에 대상을 활성화하려면 다음을 성공적으로 완료해야 합니다. [대상에 연결됨](./connect-destination.md). 아직 수행하지 않았다면 [대상 카탈로그](../catalog/overview.md)에서 지원되는 대상을 탐색하고 사용할 대상을 구성합니다.
 
