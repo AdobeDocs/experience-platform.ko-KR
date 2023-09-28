@@ -1,9 +1,9 @@
 ---
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 서버를 만드는 데 사용되는 API 호출을 보여 줍니다.
 title: 대상 서버 구성 만들기
-source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '2039'
 ht-degree: 9%
 
 ---
@@ -213,7 +213,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `fileBasedS3Destination.bucket.value` | 문자열 | 의 이름입니다. [!DNL Amazon S3] 이 대상에서 사용할 버킷. |
 | `fileBasedS3Destination.path.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
 | `fileBasedS3Destination.path.value` | 문자열 | 내보낸 파일을 호스팅할 대상 폴더의 경로입니다. |
-| `fileConfigurations` | 해당 없음 | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
+| `fileConfigurations` | N/A | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -325,7 +325,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `fileBasedSFTPDestination.hostName.value` | 문자열 | 대상 스토리지의 호스트 이름입니다. |
 | `port` | 정수 | SFTP 파일 서버 포트입니다. |
 | `encryptionMode` | 문자열 | 파일 암호화를 사용할지 여부를 나타냅니다. 지원되는 값: <ul><li>PGP</li><li>None</li></ul> |
-| `fileConfigurations` | 해당 없음 | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
+| `fileConfigurations` | N/A | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -431,7 +431,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. 대상 [!DNL Azure Data Lake Storage] 대상, 다음으로 설정 `FILE_BASED_ADLS_GEN2`. |
 | `fileBasedAdlsGen2Destination.path.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
 | `fileBasedAdlsGen2Destination.path.value` | 문자열 | 내보낸 파일을 호스팅할 대상 폴더의 경로입니다. |
-| `fileConfigurations` | 해당 없음 | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
+| `fileConfigurations` | N/A | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -543,7 +543,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `fileBasedAzureBlobDestination.path.value` | 문자열 | 내보낸 파일을 호스팅할 대상 폴더의 경로입니다. |
 | `fileBasedAzureBlobDestination.container.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
 | `fileBasedAzureBlobDestination.container.value` | 문자열 | 의 이름입니다. [!DNL Azure Blob Storage] 이 대상에서 사용할 컨테이너입니다. |
-| `fileConfigurations` | 해당 없음 | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
+| `fileConfigurations` | N/A | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -650,7 +650,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. 대상 [!DNL Data Landing Zone] 대상, 다음으로 설정 `FILE_BASED_DLZ`. |
 | `fileBasedDlzDestination.path.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
 | `fileBasedDlzDestination.path.value` | 문자열 | 내보낸 파일을 호스팅할 대상 폴더의 경로입니다. |
-| `fileConfigurations` | 해당 없음 | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
+| `fileConfigurations` | N/A | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -762,7 +762,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `fileBasedGoogleCloudStorageDestination.bucket.value` | 문자열 | 의 이름입니다. [!DNL Google Cloud Storage] 이 대상에서 사용할 버킷. |
 | `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
 | `fileBasedGoogleCloudStorageDestination.path.value` | 문자열 | 내보낸 파일을 호스팅할 대상 폴더의 경로입니다. |
-| `fileConfigurations` | 해당 없음 | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
+| `fileConfigurations` | N/A | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -844,6 +844,103 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++
 
+
+>[!ENDTABS]
+
+
+### 동적 드롭다운 대상 서버 만들기 {#dynamic-dropdown-servers}
+
+사용 [동적 드롭다운](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) 를 사용하여 고유한 API를 기반으로 드롭다운 고객 데이터 필드를 동적으로 검색하고 채울 수 있습니다. 예를 들어 대상 연결에 사용할 기존 사용자 계정 목록을 검색할 수 있습니다.
+
+동적 드롭다운 고객 데이터 필드를 구성하려면 먼저 동적 드롭다운에 대한 대상 서버를 구성해야 합니다.
+
+API에서 드롭다운 선택기에 표시할 값을 동적으로 검색하는 데 사용되는 대상 서버의 예 아래 탭에서 를 참조하십시오.
+
+아래 샘플 페이로드에는 동적 스키마 서버에 필요한 모든 매개 변수가 포함되어 있습니다.
+
+>[!BEGINTABS]
+
+>[!TAB 동적 드롭다운 서버]
+
+**동적 드롭다운 서버 만들기**
+
+고유한 API 끝점에서 드롭다운 고객 데이터 필드의 값을 검색하는 대상을 구성할 때 아래에 표시된 것과 유사한 동적 드롭다운 서버를 만들어야 합니다.
+
++++요청
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"https://api.moviestar.com/data/{{customerData.users}}/items"
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+| 매개변수 | 유형 | 설명 |
+| -------- | ----------- | ----------- |
+| `name` | 문자열 | *필수 여부.* 동적 드롭다운 서버의 친숙한 이름을 나타내며 Adobe에만 표시됩니다. |
+| `destinationServerType` | 문자열 | *필수 여부.* 다음으로 설정 `URL_BASED` 동적 드롭다운 서버. |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수 여부.* <ul><li>사용 `PEBBLE_V1` Adobe에서 URL을 `value` 아래 필드. 다음과 같은 엔드포인트가 있는 경우 이 옵션을 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> 사용 `NONE` Adobe 측에 변환이 필요하지 않은 경우, 예를 들어 다음과 같은 엔드포인트가 있는 경우: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | 문자열 | *필수 여부.* Experience Platform이 연결해야 하는 API 끝점의 주소를 입력하고 드롭다운 값을 검색합니다. |
+| `httpTemplate.httpMethod` | 문자열 | *필수 여부.* Adobe이 서버 호출에 사용할 메서드입니다. 동적 드롭다운 서버의 경우 다음을 사용합니다. `GET`. |
+| `httpTemplate.headers` | 오브젝트 | *Optiona.l* 동적 드롭다운 서버에 연결하는 데 필요한 모든 헤더를 포함합니다. |
+| `responseFields.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
+| `responseFields.value` | 문자열 | *필수 여부.* 이 문자열은 API에서 받은 응답을 Platform UI에 표시될 값으로 변환하는 문자 이스케이프 변환 템플릿입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 섹션 사용](../../functionality/destination-server/message-format.md#using-templating). </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7). |
+
+{style="table-layout:auto"}
+
++++
+
++++응답
+
+성공한 응답은 새로 만든 대상 서버 구성에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
+
++++
 
 >[!ENDTABS]
 

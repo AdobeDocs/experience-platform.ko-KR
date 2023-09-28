@@ -1,10 +1,10 @@
 ---
 description: 사용자가 대상에 데이터를 연결하고 내보내는 방법과 관련된 다양한 정보를 지정할 수 있도록 Experience Platform UI에서 입력 필드를 만드는 방법을 알아봅니다.
 title: 고객 데이터 필드
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 2%
+source-wordcount: '1580'
+ht-degree: 5%
 
 ---
 
@@ -58,11 +58,11 @@ Experience Platform UI에서 대상에 연결할 때 사용자가 특정 구성 
 | `title` | 문자열 | 선택 사항입니다 | Platform UI에서 고객에게 표시되는 필드의 이름을 나타냅니다. 이 필드가 비어 있거나 누락된 경우 UI는에서 필드 이름을 상속합니다. `name` 값. |
 | `description` | 문자열 | 선택 사항입니다 | 사용자 정의 필드에 대한 설명을 입력합니다. 이 설명은 Platform UI에 표시되지 않습니다. |
 | `isRequired` | 부울 | 선택 사항입니다 | 사용자가 대상 구성 워크플로우에서 이 필드에 대한 값을 제공해야 하는지 여부를 나타냅니다. |
-| `pattern` | 문자열 | 선택 사항입니다 | 필요한 경우 사용자 정의 필드에 패턴을 적용합니다. 패턴을 적용하려면 정규 표현식을 사용하십시오. 예를 들어 고객 ID에 숫자나 밑줄이 포함되지 않은 경우 을 입력합니다 `^[A-Za-z]+$` 이 필드에서 을(를) 참조하십시오. |
+| `pattern` | 문자열 | 선택 사항입니다 | 필요한 경우 사용자 정의 필드에 패턴을 적용합니다. 패턴을 적용하려면 정규 표현식을 사용하십시오. 예를 들어 고객 ID에 숫자나 밑줄이 포함되지 않은 경우 을 입력합니다 `^[A-Za-z]+$` 이 필드에서. |
 | `enum` | 문자열 | 선택 사항입니다 | 사용자 정의 필드를 드롭다운 메뉴로 렌더링하고 사용자가 사용할 수 있는 옵션을 나열합니다. |
 | `default` | 문자열 | 선택 사항입니다 | 에서 기본값 정의 `enum` 목록을 표시합니다. |
 | `hidden` | 부울 | 선택 사항입니다 | 고객 데이터 필드를 UI에 표시할지 여부를 나타냅니다. |
-| `unique` | 부울 | 선택 사항입니다 | 사용자 조직에서 설정한 모든 대상 데이터 흐름에서 값이 고유해야 하는 고객 데이터 필드를 만들어야 할 때 이 매개 변수를 사용합니다. 예를 들어 **[!UICONTROL 통합 별칭]** 의 필드 [사용자 정의 개인화](../../../catalog/personalization/custom-personalization.md) 대상은 고유해야 합니다. 즉, 이 대상에 대한 두 개의 개별 데이터 흐름은 이 필드에 대해 동일한 값을 가질 수 없습니다. |
+| `unique` | 부울 | 선택 사항입니다 | 사용자 조직에서 설정한 모든 대상 데이터 흐름에서 값이 고유한 고객 데이터 필드를 생성해야 하는 경우 이 매개변수를 사용합니다. 예를 들면 **[!UICONTROL 사용자 정의 개인 설정]** 대상의 [통합 별칭](../../../catalog/personalization/custom-personalization.md) 필드는 고유해야 하며, 이 대상으로 전송되는 두 개의 개별 데이터 흐름은 이 필드에 대해 동일한 값을 가질 수 없습니다. |
 | `readOnly` | 부울 | 선택 사항입니다 | 고객이 필드의 값을 변경할 수 있는지 여부를 나타냅니다. |
 
 {style="table-layout:auto"}
@@ -252,6 +252,93 @@ Experience Platform UI에서 대상에 연결할 때 사용자가 특정 구성 
 ```
 
 ![위에 표시된 구성으로 생성된 드롭다운 선택기의 예를 보여 주는 화면 레코딩입니다.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
+
+## 고객 데이터 필드에 대한 동적 드롭다운 선택기 만들기 {#dynamic-dropdown-selectors}
+
+API를 동적으로 호출하고 응답을 사용하여 드롭다운 메뉴의 옵션을 동적으로 채우는 상황의 경우 동적 드롭다운 선택기를 사용할 수 있습니다.
+
+동적 드롭다운 선택기는 다음과 동일하게 표시됩니다. [일반 드롭다운 선택기](#dropdown-selectors) UI에서 유일한 차이점은 값이 API에서 동적으로 검색된다는 것입니다.
+
+동적 드롭다운 선택기를 만들려면 다음 두 가지 구성 요소를 구성해야 합니다.
+
+**1단계.** [대상 서버 만들기](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) 포함 `responseFields` 아래 표시된 대로 동적 API 호출용 템플릿입니다.
+
+```json
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":" <--YOUR-API-ENDPOINT-PATH--> "
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+**2단계.** 사용 `dynamicEnum` 개체(아래 참조)를 참조하십시오. 아래 예에서는 `User` 동적 서버를 사용하여 드롭다운을 검색합니다.
+
+
+```json {line-numbers="true" highlight="13-21"}
+"customerDataFields": [
+  {
+    "name": "integrationId",
+    "title": "Integration ID",
+    "type": "string",
+    "isRequired": true
+  },
+  {
+    "name": "userId",
+    "title": "User",
+    "type": "string",
+    "isRequired": true,
+    "dynamicEnum": {
+      "queryParams": [
+        "integrationId"
+      ],
+      "destinationServerId": "<~dynamic-field-server-id~>",
+      "authenticationRule": "CUSTOMER_AUTHENTICATION",
+      "value": "$.list",
+      "responseFormat": "NAME_VALUE"
+    }
+  }
+]
+```
+
+설정 `destinationServerId` 1단계에서 만든 대상 서버의 ID에 대한 매개 변수입니다. 의 응답에서 대상 서버 ID를 볼 수 있습니다. [대상 서버 구성 검색](../../authoring-api/destination-server/retrieve-destination-server.md) API 호출.
 
 ## 조건부 고객 데이터 필드 만들기 {#conditional-options}
 
