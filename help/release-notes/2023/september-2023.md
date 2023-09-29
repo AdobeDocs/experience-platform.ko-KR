@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 9월 릴리스 정보입니다.
-source-git-commit: 1bfd5e05642e0ac8f80af5502878eaee0b33c704
+source-git-commit: 05136ca1a44fa0ecbf2fd9941d047c3a0899f2d1
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 26%
+source-wordcount: '1232'
+ht-degree: 25%
 
 ---
 
@@ -20,6 +20,7 @@ Adobe Experience Platform의 새로운 기능:
 
 - [경고](#alerts)
 - [데이터 수집](#data-collection)
+- [대상](#destinations)
 - [ID 서비스](#identity-service)
 - [Segmentation Service](#segmentation)
 - [소스](#sources)
@@ -56,6 +57,45 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 {style="table-layout:auto"}
 
 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../tags/home.md).
+
+## 대상 {#destinations}
+
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새로운 대상 또는 업데이트된 대상** {#new-updated-destinations}
+
+| 대상 | 새로운 기능 또는 업데이트된 기능 | 설명 |
+| ----------- |----------------|----------- |
+| [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | 새로운 기능 | [[!DNL HubSpot]](https://www.hubspot.com) 는 마케팅, 판매, 콘텐츠 관리 및 고객 서비스를 연결하는 데 필요한 모든 소프트웨어, 통합 및 리소스가 포함된 CRM 플랫폼입니다. 이를 통해 하나의 CRM 플랫폼에서 데이터, 팀 및 고객을 연결할 수 있습니다. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | 업데이트된 기능 | 에 대한 지원이 추가됨 [!DNL Dynamics 365] 의 기본 솔루션 내에서 만들어지지 않은 사용자 정의 필드에 대한 사용자 정의 필드 접두사 [!DNL Dynamics 365]. 새 입력 필드, **[!UICONTROL 사용자 지정 접두사]**&#x200B;이(가)에 추가되었습니다. [대상 세부 정보 입력](#destination-details) 단계. |
+
+{style="table-layout:auto"}
+
+<!-- 
+
+
+Add these to release notes as they go out
+
+| [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. | 
+| [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | New | Activate audiences previously onboarded to [!DNL LiveRamp] to premium publishers across mobile, web, display, and connected TV mediums. <br> After onboarding audiences to your [!DNL LiveRamp] account through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection, use the new [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) connection to activate the audiences to downstream destinations.  |
+| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Updated | The Experience Cloud Audiences destination is now generally available. Use this destination to activate audiences from Real-Time CDP to Audience Manager and Adobe Analytics. You need an Audience Manager license to send audiences to Adobe Analytics. |
+
+-->
+
+**새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
+
+| 기능 | 설명 |
+| ----------- | ----------- |
+| Real-Time CDP의 데이터 내보내기 | 다음 [데이터 세트 내보내기](../../destinations/ui/export-datasets.md) 이제 기능을 일반적으로 사용할 수 있습니다. 다음을 참조하십시오 [Experience Platform 앱을 기반으로 내보낼 수 있는 데이터 세트](../../destinations/ui/export-datasets.md#datasets-to-export) 을(를) 구입하고 다음을 확인하십시오. [데이터 세트 내보내기 보호](/help/destinations/guardrails.md#dataset-exports). |
+| (베타) 배열 유형 개체 내보내기 지원 | 기본 값(문자열, int 또는 부울 값) 배열을 클라우드 스토리지 대상에 플랫 스키마 파일로 내보냅니다. 의 기능에 대해 자세히 알아보십시오 [설명서](../../destinations/ui/export-arrays-calculated-fields.md). |
+| Destination SDK의 동적 드롭다운 선택기 | 이제 Destination SDK을 통해 대상을 만들 때 다음을 사용할 수 있습니다. [동적 드롭다운 선택기](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) 드롭다운 선택기의 필드를 API에서 검색한 값으로 채우기. |
+
+**수정 사항 및 개선 사항** {#destinations-fixes-and-enhancements}
+
+- 활용 [투명도 모니터링](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) 이제 엔터프라이즈 대상에 사용할 수 있습니다([HTTP API](../../destinations/catalog/streaming/http-destination.md), [Amazon Kinesis](../../destinations/catalog/cloud-storage/amazon-kinesis.md) 및 [Azure 이벤트 허브](../../destinations/catalog/cloud-storage/azure-event-hubs.md))에서 활성화 지표 및 상태를 모니터링하기 위한 데이터 흐름 실행 수준 [데이터 흐름 세부 정보 보기](../../dataflows/ui/monitor-destinations.md#dataflow-run-details-page)문제 해결을 위한 오류 코드 및 메시지를 통한 추가 정보 포함
+- 에 매핑된 대상자의 이름을 업데이트할 때 [Google Ad Manager](../../destinations/catalog/advertising/google-ad-manager.md), [Google Display &amp; Video 360](../../destinations/catalog/advertising/google-dv360.md)를 사용하는 및 기타 대상 [대상자 업데이트 템플릿](../../destinations/destination-sdk/metadata-api/update-audience-template.md), 이제 이러한 이름 변경 사항이 대상에 다운스트림에 반영됩니다.
+
+대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
 ## ID 서비스 {#identity-service}
 
