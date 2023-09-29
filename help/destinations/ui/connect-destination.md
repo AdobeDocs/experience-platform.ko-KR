@@ -4,9 +4,9 @@ title: 새 대상 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform에서 대상에 연결하고, 경고를 활성화하고, 연결된 대상에 대한 마케팅 작업을 설정하는 방법을 알아봅니다.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1141'
 ht-degree: 0%
 
 ---
@@ -78,15 +78,19 @@ ht-degree: 0%
 
 ![Trade Desk 대상에 연결할 때 필수 및 선택적 입력 매개 변수를 보여 주는 이미지입니다.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### (베타) 내보낸 파일에 대한 파일 형식 옵션 설정 {#file-formatting-and-compression-options}
+### 내보낸 파일에 대한 파일 서식 옵션 설정 {#file-formatting-and-compression-options}
 
 파일 기반 대상의 경우 내보낸 파일의 형식 지정 및 압축 방법과 관련된 다양한 설정을 구성할 수 있습니다. 사용 가능한 모든 서식 및 압축 옵션에 대한 자세한 내용은 [파일 기반 대상에 대한 파일 형식 옵션 구성 자습서](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ![CSV 파일에 대한 파일 유형 선택 및 다양한 옵션을 보여 주는 이미지입니다.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### 대상 활성화 또는 데이터 세트 내보내기에 대한 대상 연결 설정 {#segment-activation-or-dataset-exports}
+### 대상 활성화, 잠재 고객 활성화 또는 데이터 세트 내보내기에 대한 대상 연결 설정 {#segment-activation-or-dataset-exports}
 
-일부 파일 기반 대상은 대상 활성화와 데이터 세트 내보내기를 지원합니다. 이러한 대상의 경우 대상을 활성화하거나 데이터 세트를 내보낼 수 있는 연결을 만들지 여부를 선택할 수 있습니다.
+일부 파일 기반 대상은 알려진 고객 또는 잠재 고객에 대한 대상 활성화와 데이터 세트 내보내기를 지원합니다. 이러한 대상의 경우 다음을 수행할 수 있는 연결을 만들지 여부를 선택할 수 있습니다. [대상자 활성화](/help/destinations/ui/activate-batch-profile-destinations.md), [잠재 고객](/help/destinations/ui/activate-prospect-audiences.md), 또는 [데이터 세트 내보내기](/help/destinations/ui/export-datasets.md).
+
+>[!WARNING]
+>
+>데이터 세트를 내보낼 때 JSON 파일로 내보내기는 압축 모드에서만 지원됩니다. 다음으로 내보내기 [!DNL Parquet] 파일은 압축 및 압축되지 않은 모드에서 지원됩니다.
 
 ![사용자가 대상 활성화와 데이터 세트 내보내기 중에서 선택할 수 있는 데이터 유형 선택 컨트롤을 보여 주는 이미지입니다.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 

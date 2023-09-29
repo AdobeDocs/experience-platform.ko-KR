@@ -1,11 +1,11 @@
 ---
-title: (베타) 계산된 필드를 사용하여 배열을 플랫 파일로 내보냅니다
+title: (Beta) 계산된 필드를 사용하여 플랫 스키마 파일로 배열을 내보냅니다
 type: Tutorial
-description: Real-Time CDP에서 배치 프로필 기반 대상으로 배열 및 계산된 필드를 내보내는 방법을 알아봅니다.
+description: 계산된 필드를 사용하여 플랫 스키마 파일의 배열을 Real-Time CDP에서 클라우드 스토리지 대상으로 내보내는 방법에 대해 알아봅니다.
 badge: "Beta"
-source-git-commit: 79924b9a7d5114c94a004f99fb194102845b2127
+source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1207'
 ht-degree: 2%
 
 ---
@@ -17,15 +17,8 @@ ht-degree: 2%
 >id="platform_destinations_export_arrays_flat_files"
 >title="(베타) 내보내기 어레이 지원"
 >abstract="Experience Platform에서 원하는 클라우드 스토리지 대상으로 int, string 또는 boolean 값의 단순 배열을 내보냅니다. 일부 제한 사항이 적용됩니다. 이 설명서에서 다양한 예제 및 지원되는 기능을 살펴보십시오."
-
-<!--
-
-additional links for contextualhelp:
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="예시"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="알려진 제한 사항"
 
 >[!AVAILABILITY]
 >
