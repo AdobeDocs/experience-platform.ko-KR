@@ -1,20 +1,16 @@
 ---
 keywords: Experience Platform;홈;인기 항목;흐름 서비스;
-title: (Beta) 플로우 서비스 API를 사용하여 온디맨드 수집에 대한 플로우 실행 생성
-description: 이 자습서에서는 흐름 서비스 API를 사용하여 온디맨드 수집에 대한 흐름 실행을 만드는 단계를 다룹니다
+title: 흐름 서비스 API를 사용하여 온디맨드 수집에 대한 흐름 실행 만들기
+description: 흐름 서비스 API를 사용하여 온디맨드 수집을 위한 흐름 실행을 만드는 방법을 알아봅니다
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 795b1af6421c713f580829588f954856e0a88277
+source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '801'
 ht-degree: 1%
 
 ---
 
-# (Beta) 를 사용하여 온디맨드 수집을 위한 플로우 실행을 만듭니다. [!DNL Flow Service] API
-
->[!IMPORTANT]
->
->온디맨드 수집은 현재 베타 버전이며 조직에서 아직 액세스하지 못할 수 있습니다. 이 설명서에 설명된 기능은 변경될 수 있습니다.
+# 를 사용하여 온디맨드 수집에 대한 플로우 실행을 만듭니다. [!DNL Flow Service] API
 
 흐름 실행은 흐름 실행의 인스턴스를 나타냅니다. 예를 들어 흐름이 매시간 오전 9:00, 오전 10:00 및 오전 11:00에 실행되도록 예약되어 있는 경우 세 개의 흐름 실행 인스턴스가 생깁니다. 플로우 실행은 특정 조직에만 해당됩니다.
 
@@ -83,9 +79,9 @@ curl -X POST \
 | 매개변수 | 설명 |
 | --- | --- |
 | `flowId` | 플로우 실행을 생성할 플로우의 ID입니다. |
-| `params.startTime` | 실행 시작 시간을 정의하는 정수입니다. 값은 unix epoch 시간으로 표시됩니다. |
-| `params.windowStartTime` | 데이터를 가져올 창의 시작 시간을 정의하는 정수입니다. 값은 unix 시간으로 표시됩니다. |
-| `params.windowEndTime` | 데이터를 가져올 창의 종료 시간을 정의하는 정수입니다. 값은 unix 시간으로 표시됩니다. |
+| `params.startTime` | 온디맨드 플로우 실행이 시작될 예약된 시간입니다. 이 값은 unix 시간으로 표시됩니다. |
+| `params.windowStartTime` | 데이터를 검색할 가장 빠른 날짜 및 시간입니다. 이 값은 unix 시간으로 표시됩니다. |
+| `params.windowEndTime` | 데이터를 검색할 날짜 및 시간입니다. 이 값은 unix 시간으로 표시됩니다. |
 | `params.deltaColumn` | 델타 열은 데이터를 분할하고 새로 수집된 데이터를 기록 데이터와 구분하는 데 필요합니다. **참고**: `deltaColumn` 는 첫 번째 플로우 실행을 생성할 때만 필요합니다. |
 | `params.deltaColumn.name` | 델타 열의 이름입니다. |
 
@@ -165,9 +161,9 @@ curl -X POST \
 | 매개변수 | 설명 |
 | --- | --- |
 | `flowId` | 플로우 실행을 생성할 플로우의 ID입니다. |
-| `params.startTime` | 실행 시작 시간을 정의하는 정수입니다. 값은 unix epoch 시간으로 표시됩니다. |
-| `params.windowStartTime` | 데이터를 가져올 창의 시작 시간을 정의하는 정수입니다. 값은 unix 시간으로 표시됩니다. |
-| `params.windowEndTime` | 데이터를 가져올 창의 종료 시간을 정의하는 정수입니다. 값은 unix 시간으로 표시됩니다. |
+| `params.startTime` | 온디맨드 플로우 실행이 시작될 예약된 시간입니다. 이 값은 unix 시간으로 표시됩니다. |
+| `params.windowStartTime` | 데이터를 검색할 가장 빠른 날짜 및 시간입니다. 이 값은 unix 시간으로 표시됩니다. |
+| `params.windowEndTime` | 데이터를 검색할 날짜 및 시간입니다. 이 값은 unix 시간으로 표시됩니다. |
 
 **응답**
 
@@ -192,4 +188,4 @@ curl -X POST \
 
 ## 플로우 실행 모니터링
 
-플로우 실행이 생성되면 플로우 실행을 통해 수집되는 데이터를 모니터링하여 플로우 실행, 완료 상태 및 오류에 대한 정보를 확인할 수 있습니다. API를 사용하여 플로우 실행을 모니터링하려면 다음에서 자습서를 참조하십시오. [api에서 데이터 흐름 모니터링 ](./monitor.md). Platform UI를 사용하여 플로우 실행을 모니터링하려면 의 안내서를 참조하십시오. [모니터링 대시보드를 사용하여 소스 데이터 흐름 모니터링](../../../dataflows/ui/monitor-sources.md).
+플로우 실행이 생성되면 플로우 실행을 통해 수집되는 데이터를 모니터링하여 플로우 실행, 완료 상태 및 오류에 대한 정보를 확인할 수 있습니다. API를 사용하여 플로우 실행을 모니터링하려면 다음에서 자습서를 참조하십시오. [api에서 데이터 흐름 모니터링](./monitor.md). Platform UI를 사용하여 플로우 실행을 모니터링하려면 의 안내서를 참조하십시오. [모니터링 대시보드를 사용하여 소스 데이터 흐름 모니터링](../../../dataflows/ui/monitor-sources.md).

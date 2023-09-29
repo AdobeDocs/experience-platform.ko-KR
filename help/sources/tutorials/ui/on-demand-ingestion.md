@@ -1,10 +1,10 @@
 ---
 title: Ui에서 소스 데이터 흐름에 대한 온디맨드 수집
 description: Experience Platform 사용자 인터페이스를 사용하여 소스 연결에 대한 요청 시 데이터 흐름을 만드는 방법을 알아봅니다.
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 0%
+source-wordcount: '499'
+ht-degree: 1%
 
 ---
 
@@ -44,9 +44,9 @@ ht-degree: 0%
 
 | 구성 예약 중 | 설명 |
 | --- | --- |
-| [!UICONTROL 수집 시작 시간] | 온디맨드 데이터 흐름이 시작될 때 예약된 시작 시간(UTC)입니다. |
-| [!UICONTROL 날짜 범위 시작 시간] | 데이터를 가져올 시작 날짜 및 시간입니다. |
-| [!UICONTROL 날짜 범위 종료 시간] | 데이터를 가져올 종료 날짜 및 시간입니다. |
+| [!UICONTROL 수집 시작 시간] | 온디맨드 플로우 실행이 시작될 예약된 시간입니다. |
+| [!UICONTROL 날짜 범위 시작 시간] | 데이터를 검색할 가장 빠른 날짜 및 시간입니다. |
+| [!UICONTROL 날짜 범위 종료 시간] | 데이터를 검색할 날짜 및 시간입니다. |
 
 선택 **[!UICONTROL 예약]** 온디맨드 데이터 흐름이 트리거될 수 있도록 잠시 기다려 주십시오.
 
