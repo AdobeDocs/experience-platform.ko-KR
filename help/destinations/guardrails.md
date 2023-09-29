@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 0835021523a7eb1642a6dbcb24334eac535aaa6d
+source-git-commit: d8e7b5daf72afab8e0a980e35b18a9986a19387d
 workflow-type: tm+mt
-source-wordcount: '1270'
+source-wordcount: '1532'
 ht-degree: 2%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 2%
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
-| 초당 활성화 수(프로필 내보내기가 있는 HTTP 메시지) | 해당 없음 | - | 현재는 Experience Platform에서 파트너 대상의 API 끝점으로 전송되는 초당 메시지 수에 제한이 없습니다. <br> 제한이나 지연은 Experience Platform이 데이터를 전송하는 엔드포인트에 의해 결정됩니다. 또한 다음을 확인하십시오 [카탈로그](/help/destinations/catalog/overview.md) 데이터를 연결 및 활성화할 대상의 페이지입니다. |
+| 초당 활성화 수(프로필 내보내기가 있는 HTTP 메시지) | N/A | - | 현재는 Experience Platform에서 파트너 대상의 API 끝점으로 전송되는 초당 메시지 수에 제한이 없습니다. <br> 제한이나 지연은 Experience Platform이 데이터를 전송하는 엔드포인트에 의해 결정됩니다. 또한 다음을 확인하십시오 [카탈로그](/help/destinations/catalog/overview.md) 데이터를 연결 및 활성화할 대상의 페이지입니다. |
 
 {style="table-layout:auto"}
 
@@ -94,9 +94,31 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
-### [!BADGE 베타]{type=Informative} 데이터 세트 내보내기 {#dataset-exports}
+### 데이터 세트 내보내기 {#dataset-exports}
 
-데이터 세트 내보내기는 현재 **[!UICONTROL 첫 번째 전체, 그 다음 증분]** [패턴](/help/destinations/ui/export-datasets.md#scheduling). 이 섹션에서 설명하는 보호 기능은 데이터 세트 내보내기 워크플로우가 설정된 후 발생하는 첫 번째 전체 내보내기에 적용됩니다.
+데이터 세트 내보내기는 현재 **[!UICONTROL 첫 번째 전체, 그 다음 증분]** [패턴](/help/destinations/ui/export-datasets.md#scheduling). 이 섹션에 설명된 보호 기능 *첫 번째 전체 내보내기에 적용* 데이터 세트 내보내기 워크플로우가 설정된 후 발생합니다.
+
+<!--
+
+| Guardrail | Limit | Limit Type | Description |
+| --- | --- | --- | --- |
+| Size of exported datasets | 5 billion records | Soft | The limit described here for dataset exports is a *soft guardrail*. For example, while the user interface will not block you from exporting datasets larger than 5 billion records, the behavior is unpredictable and exports might either fail or have very long export latency. |
+
+{style="table-layout:auto"}
+
+-->
+
+#### 데이터 세트 유형 {#dataset-types}
+
+아래 설명된 대로 데이터 세트 내보내기 가드레일은 Experience Platform에서 내보낸 두 가지 유형의 데이터 세트에 적용됩니다.
+
+**XDM 경험 이벤트 스키마 기반 데이터 세트**
+XDM 경험 이벤트 스키마를 기반으로 하는 데이터 세트의 경우 데이터 세트 스키마에 최상위 수준이 포함됩니다 *timestamp* 열. 데이터는 추가 전용 방식으로 수집됩니다.
+
+**XDM 개별 프로필 스키마를 기반으로 하는 데이터 세트**
+XDM 개인 프로필 스키마를 기반으로 하는 데이터 세트의 경우 데이터 세트 스키마에 최상위 수준이 포함되지 않습니다 *timestamp* 열. 데이터는 업데이트 방식으로 수집됩니다.
+
+아래의 소프트 가드레일은 Experience Platform에서 내보낸 모든 데이터 세트에 적용됩니다. 또한 다른 데이터 세트 및 압축 유형에 해당하는 하드 가드레일을 아래에서 검토하십시오.
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
@@ -104,90 +126,42 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
-<!--
+#### 예약된 데이터 세트 내보내기 보호
 
-### Dataset Types {#dataset-types}
+예약되거나 반복되는 데이터 세트 내보내기의 경우, 아래 가드레일은 내보낸 파일의 두 형식(JSON 또는 Parquet)에 대해 동일하며 데이터 세트 유형별로 그룹화됩니다.
 
-Datasets exported from Experience Platform can be of two types, as described below:
+>[!WARNING]
+>
+>JSON 파일로 내보내기는 압축 모드에서만 지원됩니다.
 
-**Timeseries**
-Timeseries datasets are also known as *XDM Experience Events* datasets in Experience Platform terminology.
-The dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
-
-**Record** 
-Record datasets are also known as *XDM Individual Profile* datasets in Experience Platform terminology.
-The dataset schema does not include a top level *timestamp* column. Data is ingested in upsert fashion.
-
-The guardrails below are grouped by the format of the exported file, and then further by dataset type.
-
-**Parquet output**
-
-|Dataset type | Compression | Guardrail | Description |
-|---------|----------|---------|-----------|
-| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
-| Record | N/A | Five billion records per file | Only the data from the last seven days is exported. |
+| 데이터 세트 유형 | 가드레일 | 보호 유형 | 설명 |
+---------|----------|---------|-------|
+| 을(를) 기반으로 한 데이터 세트 **XDM 경험 이벤트 스키마** | 최근 365일 데이터 | 하드 | 지난 달력 연도의 데이터를 내보냅니다. |
+| 을(를) 기반으로 한 데이터 세트 **XDM 개인 프로필 스키마** | 데이터 흐름의 내보낸 모든 파일에 대해 100억 개의 레코드 보유 | 하드 | 데이터 세트의 기록 수는 압축된 JSON 또는 Parquet 파일의 경우 100억 개 미만이어야 하고, 압축되지 않은 Parquet 파일의 경우 100만 개 미만이어야 합니다. 그렇지 않으면 내보내기에 실패합니다. 허용된 임계값보다 큰 경우 내보내려는 데이터 세트의 크기를 줄이십시오. |
 
 {style="table-layout:auto"}
 
-**JSON output**
+<!--
 
-|Dataset type | Compression | Guardrail | Description |
-|---------|----------|---------|-----------|
-| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
-| <p>Record</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | <p><ul><li>Five billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | <p>The record count of the dataset must be less than five billion for compressed files and one million for uncompressed files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
+#### Ad-hoc dataset exports
+
+Exporting datasets in an-hoc manner is currently supported via API only. For ad-hoc dataset exports, you must use the backfill parameter in the API to limit the timeframe of exported data. 
+
+The guardrails below are the same whether you are exporting parquet of JSON files ad-hoc. 
+
+**Parquet and JSON output**
+
+|Dataset type | Backfill parameter provided | Guardrail | Guardrail type | Description |
+|---------|---------|-----------|-----------|------------|
+| Datasets based on the **XDM Experience Events schema** |  <p><ul><li>Both start and end date provided in `backfill` parameter in API call</li><li>Incomplete `backfill` parameter provided in API call</li></ul></p> | <p><ul><li>Last 30 days</li><li>Last 365 days</li></ul></p> | Hard | <p><ul><li>The export fails if the `startDate - endDate` interval is over 30 days</li><li>Either the `startDate` or `endDate` are missing or  incorrectly formatted in the API call. Expected format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`</li></ul></p> |
+| Datasets based on the **XDM Individual Profile schema** |  - | Ten billion records across all files exported in a dataflow | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
 
 {style="table-layout:auto"}
 
 -->
 
-<!--
+자세한 내용 [데이터 세트 내보내기](/help/destinations/ui/export-datasets.md).
 
-<table>
-<thead>
-  <tr>
-    <th>Output format</th>
-    <th>Dataset type</th>
-    <th>Compression</th>
-    <th>Guardrail</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td rowspan="2">Parquet</td>
-    <td>Timeseries</td>
-    <td>-</td>
-    <td>Last seven days per file</td>
-    <td>Only the data from the last seven days is exported.</td>
-  </tr>
-  <tr>
-    <td>Record</td>
-    <td>-</td>
-    <td>Five billion records per file</td>
-    <td>The record count of the dataset must be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
-  </tr>
-  <tr>
-    <td rowspan="3">JSON</td>
-    <td>Timeseries</td>
-    <td>-</td>
-    <td>Last seven days per file</td>
-    <td>Only the data from the last seven days is exported.</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Record</td>
-    <td>Yes</td>
-    <td>Five billion records per file</td>
-    <td>The record count of the dataset must be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
-  </tr>
-  <tr>
-    <td>No</td>
-    <td>One million records per file</td>
-    <td>The record count of the dataset must be less than one million, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
-  </tr>
-</tbody>
-</table>
-
--->
 
 ### Destination SDK 보호 {#destination-sdk-guardrails}
 
