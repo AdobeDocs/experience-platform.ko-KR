@@ -4,7 +4,7 @@ title: 쿼리 서비스를 사용하여 대시보드 데이터 세트 탐색, �
 type: Documentation
 description: 쿼리 서비스를 사용하여 Experience Platform에서 프로필, 대상 및 대상 대시보드를 지원하는 원시 데이터 세트를 탐색 및 처리하는 방법을 알아봅니다.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: c431973100cc65d99d9466553fe6624ac2653d4b
+source-git-commit: e808af41b0df7603ce6f44464d1e6e883d3f6208
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Adobe Experience Platform [!DNL Query Service] 에서는 표준 SQL을 사용하
 
 ![왼쪽 탐색에서 데이터 세트 탭이 강조 표시된 데이터 세트 찾아보기 대시보드.](./images/query/browse-datasets.png)
 
-### 시스템 생성 데이터 세트
+### 시스템 생성 데이터 세트 {#system-generated-datasets}
 
 >[!IMPORTANT]
 >
@@ -41,7 +41,7 @@ Adobe Experience Platform [!DNL Query Service] 에서는 표준 SQL을 사용하
 
 ![시스템 데이터 세트 표시 토글이 강조 표시된 데이터 세트 찾아보기 탭](./images/query/show-system-datasets.png)
 
-### 프로필 속성 데이터 세트
+### 프로필 속성 데이터 세트 {#profile-attribute-datasets}
 
 프로필 대시보드 인사이트는 조직에서 정의한 병합 정책에 연결되어 있습니다. 모든 활성 병합 정책에 대해 데이터 레이크에서 사용할 수 있는 프로필 속성 데이터 세트가 있습니다.
 

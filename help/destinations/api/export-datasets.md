@@ -1,29 +1,33 @@
 ---
 solution: Experience Platform
-title: (베타) 흐름 서비스 API를 사용하여 데이터 세트 내보내기
+title: 흐름 서비스 API를 사용하여 데이터 세트 내보내기
 description: 흐름 서비스 API를 사용하여 데이터 세트를 내보내기 하여 대상을 선택하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 28e07c464eb05ba7c20b132d430fccac15d8806e
 workflow-type: tm+mt
-source-wordcount: '3520'
+source-wordcount: '3526'
 ht-degree: 4%
 
 ---
 
-# (베타) 를 사용하여 데이터 세트 내보내기 [!DNL Flow Service API]
+# 를 사용하여 데이터 세트 내보내기 [!DNL Flow Service API]
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* 데이터 세트를 내보내는 기능은 현재 베타 버전이며 일부 사용자가 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
->* 이 베타 기능은 Real-time Customer Data Platform에 정의된 대로 1세대 데이터 내보내기를 지원합니다 [제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
->* 이 기능은 Real-Time CDP Prime 또는 Ultimate 패키지를 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
+>* 이 기능은 Real-Time CDP Prime 및 Ultimate 패키지, Adobe Journey Optimizer 또는 Customer Journey Analytics을 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 
 이 문서에서는 을(를) 사용하는 데 필요한 워크플로에 대해 설명합니다 [!DNL Flow Service API] 내보내기 [데이터 세트](/help/catalog/datasets/overview.md) Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 [!DNL Amazon S3], SFTP 위치 또는 [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
 >Experience Platform 사용자 인터페이스를 사용하여 데이터 세트를 내보낼 수도 있습니다. 읽기 [데이터 세트 내보내기 UI 자습서](/help/destinations/ui/export-datasets.md) 추가 정보.
+
+## 내보내기에 사용 가능한 데이터 세트 {#datasets-to-export}
+
+내보낼 수 있는 데이터 세트는 Experience Platform 애플리케이션(Real-Time CDP, Adobe Journey Optimizer), 계층(Prime 또는 Ultimate) 및 구입한 모든 추가 기능(예: Data Distiller)에 따라 다릅니다.
+
+다음을 참조하십시오. [UI 튜토리얼 페이지의 표](/help/destinations/ui/export-datasets.md#datasets-to-export) 내보낼 수 있는 데이터 세트를 이해합니다.
 
 ## 지원되는 대상 {#supported-destinations}
 
@@ -503,7 +507,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Amazon S3] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -550,7 +554,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -591,7 +595,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -669,7 +673,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Google Cloud Storage] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -718,7 +722,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >
 >SFTP 대상에는 [!DNL auth spec]암호와 SSH 키 인증을 모두 지원합니다.
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL connection spec].
+인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -1609,7 +1613,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Amazon S3 Beta Target Connection",
+    "name": "Amazon S3 Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -1663,7 +1667,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Azure Blob Storage Beta Target Connection",
+    "name": "Azure Blob Storage Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -1912,7 +1916,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![데이터 세트 내보내기 워크플로의 5단계를 보여 주는 다이어그램](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
 
-대상 구성의 마지막 단계는 데이터 흐름을 설정하는 것입니다. 데이터 흐름은 이전에 만든 엔티티를 결합하고 데이터 세트 내보내기 일정을 구성하는 옵션도 제공합니다. 데이터 흐름을 만들려면 원하는 클라우드 스토리지 대상에 따라 아래 페이로드를 사용하고 이전 단계의 엔티티 ID를 바꾸십시오.
+대상 구성의 마지막 단계는 데이터 흐름을 설정하는 것입니다. 데이터 흐름은 이전에 만든 엔터티를 결합하고 데이터 세트 내보내기 일정을 구성하는 옵션도 제공합니다. 데이터 흐름을 만들려면 원하는 클라우드 스토리지 대상에 따라 아래 페이로드를 사용하고 이전 단계의 엔티티 ID를 바꾸십시오.
 
 >[!BEGINTABS]
 

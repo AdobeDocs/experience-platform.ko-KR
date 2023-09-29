@@ -1,26 +1,65 @@
 ---
-title: (베타) 클라우드 스토리지 대상으로 데이터 세트 내보내기
+title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 85bc1f0af608a7b5510bd0b958122e9db10ee27a
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1754'
 ht-degree: 5%
 
 ---
 
-# (베타) 클라우드 스토리지 대상으로 데이터 세트 내보내기
+# 클라우드 스토리지 대상으로 데이터 세트 내보내기
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* 데이터 세트를 내보내는 기능은 현재 베타 버전이며 일부 사용자가 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
->* 이 베타 기능은 Real-time Customer Data Platform에 정의된 대로 1세대 데이터 내보내기를 지원합니다 [제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
->* 이 기능은 Real-Time CDP Prime 및 Ultimate 패키지를 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
+>* 이 기능은 Real-Time CDP Prime 또는 Ultimate 패키지, Adobe Journey Optimizer 또는 Customer Journey Analytics을 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 
 이 문서에서는 내보내기에 필요한 워크플로에 대해 설명합니다 [데이터 세트](/help/catalog/datasets/overview.md) Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 [!DNL Amazon S3], SFTP 위치 또는 [!DNL Google Cloud Storage] Experience Platform UI 사용.
 
 Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있습니다. 읽기 [데이터 세트 내보내기 API 자습서](/help/destinations/api/export-datasets.md) 추가 정보.
+
+## 내보내기에 사용 가능한 데이터 세트 {#datasets-to-export}
+
+내보낼 수 있는 데이터 세트는 Experience Platform 애플리케이션(Real-Time CDP, Adobe Journey Optimizer), 계층(Prime 또는 Ultimate) 및 구입한 모든 추가 기능(예: Data Distiller)에 따라 다릅니다.
+
+아래 표에서 애플리케이션, 제품 계층 및 구입한 추가 기능에 따라 내보낼 수 있는 데이터 세트 유형을 파악합니다.
+
+<table>
+<thead>
+  <tr>
+    <th>애플리케이션/추가 기능</th>
+    <th>계층</th>
+    <th>내보내기에 사용 가능한 데이터 세트</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Real-Time CDP</td>
+    <td>Prime</td>
+    <td>소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 생성된 프로필 및 경험 이벤트 데이터 세트입니다.</td>
+  </tr>
+  <tr>
+    <td>Ultimate</td>
+    <td><ul><li>소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 생성된 프로필 및 경험 이벤트 데이터 세트입니다.</li><li> 와 같은 시스템 생성 데이터 세트 <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">프로필 스냅샷 데이터 세트</a>.</li></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Adobe Journey Optimizer</td>
+    <td>Prime</td>
+    <td>다음을 참조하십시오. <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ko"> Adobe Journey Optimizer</a> 설명서를 참조하십시오. (지원되는 데이터 세트의 AJO 테이블 또는 섹션에 대한 딥 링크로 업데이트)</td>
+  </tr>
+  <tr>
+    <td>Ultimate</td>
+    <td>다음을 참조하십시오. <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ko"> Adobe Journey Optimizer</a> 설명서를 참조하십시오. (지원되는 데이터 세트의 AJO 테이블 또는 섹션에 대한 딥 링크로 업데이트)</td>
+  </tr>
+  <tr>
+    <td>데이터 Distiller</td>
+    <td>Data Distiller (추가 기능)</td>
+    <td>쿼리 서비스를 통해 만들어진 파생 데이터 세트입니다.</td>
+  </tr>
+</tbody>
+</table>
 
 ## 지원되는 대상 {#supported-destinations}
 
@@ -40,17 +79,17 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
 Experience Platform 카탈로그의 일부 파일 기반 대상은 대상 활성화와 데이터 세트 내보내기를 모두 지원합니다.
 
 * 데이터가 대상자 관심사나 자격별로 그룹화된 프로필로 구성되도록 하려면 대상자 활성화를 고려하십시오.
-* 또는 대상자 관심사나 자격에 의해 그룹화되거나 구조화되지 않은 원시 데이터 세트를 내보내려는 경우 데이터 세트 내보내기를 고려하십시오. 이 데이터를 보고, 데이터 과학 워크플로, 규정 준수 요구 사항 및 기타 다양한 사용 사례에 사용할 수 있습니다.
+* 또는 대상자 관심사나 자격에 의해 그룹화되거나 구조화되지 않은 원시 데이터 세트를 내보내려는 경우 데이터 세트 내보내기를 고려하십시오. 이 데이터는 보고, 데이터 과학 워크플로우 및 기타 다양한 사용 사례에 사용할 수 있습니다. 예를 들어 관리자, 데이터 엔지니어 또는 분석가는 Experience Platform에서 데이터를 내보내어 데이터 웨어하우스와 동기화하거나, BI 분석 도구, 외부 클라우드 ML 도구에서 사용하거나, 장기 저장 요구 사항에 맞게 시스템에 저장할 수 있습니다.
 
-이 문서에는 데이터 세트를 내보내는 데 필요한 모든 정보가 포함되어 있습니다. 클라우드 스토리지 또는 이메일 마케팅 대상에 대상을 활성화하려면 다음을 참조하십시오. [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](/help/destinations/ui/activate-batch-profile-destinations.md).
+이 문서에는 데이터 세트를 내보내는 데 필요한 모든 정보가 포함되어 있습니다. 를 활성화하려는 경우 *대상* 클라우드 스토리지 또는 이메일 마케팅 대상으로는 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](/help/destinations/ui/activate-batch-profile-destinations.md).
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 데이터 세트를 클라우드 스토리지 대상으로 내보내려면 다음을 성공적으로 수행해야 합니다. [대상에 연결됨](./connect-destination.md). 아직 수행하지 않았다면 [대상 카탈로그](../catalog/overview.md)에서 지원되는 대상을 탐색하고 사용할 대상을 구성합니다.
 
 ### 필요 권한 {#permissions}
 
-데이터 세트를 내보내려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 데이터 세트 대상 관리 및 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+데이터 세트를 내보내려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 데이터 세트 보기]**, 및 **[!UICONTROL 데이터 세트 대상 관리 및 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
 데이터 세트를 내보내는 데 필요한 권한이 있고 대상이 데이터 세트 내보내기를 지원하는지 확인하려면 대상 카탈로그를 확인하십시오. 대상에 다음 항목이 있는 경우 **[!UICONTROL 활성화]** 또는 **[!UICONTROL 데이터 세트 내보내기]** 을 제어한 다음 적절한 사용 권한을 갖습니다.
 
@@ -106,7 +145,7 @@ Experience Platform 카탈로그의 일부 파일 기반 대상은 대상 활성
 
 2. 사용 **[!UICONTROL 시간]** 시간(일 기준)을 선택하는 선택기 [!DNL UTC] 포맷(내보내기가 언제 수행되어야 하는지).
 
-3. 사용 **[!UICONTROL 날짜]** 선택기 : 내보내기가 발생할 간격을 선택합니다. 기능의 Beta 버전에서는 내보내기 종료 날짜를 설정할 수 없습니다. 자세한 내용은 [알려진 제한 사항](#known-limitations) 섹션.
+3. 사용 **[!UICONTROL 날짜]** 선택기 : 내보내기가 발생할 간격을 선택합니다. 내보내기에 대한 종료 날짜는 현재 설정할 수 없습니다. 자세한 내용은 [알려진 제한 사항](#known-limitations) 섹션.
 
 4. 선택 **[!UICONTROL 다음]** 일정을 저장하고 **[!UICONTROL 리뷰]** 단계.
 
@@ -169,12 +208,23 @@ Experience Platform은 지정한 저장소 위치에 내보낸 데이터 세트 
 
    ![데이터 흐름에서 데이터 세트 제거 확인 옵션을 보여 주는 대화 상자.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
+
+## 데이터 세트 내보내기 권한 {#licensing-entitlement}
+
+각 Experience Platform 애플리케이션에 대해 연간 얼마나 많은 데이터를 내보낼 수 있는지 파악하려면 제품 설명 문서를 참조하십시오. 예를 들어 Real-Time CDP 제품 설명을 볼 수 있습니다 [여기](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+
+다른 애플리케이션에 대한 데이터 내보내기 권한은 가산되지 않습니다. 예를 들어 Real-Time CDP Ultimate와 Adobe Journey Optimizer Ultimate를 구매하면 제품 설명에 따라 프로필 내보내기 권한이 두 권한 중 더 커집니다. 볼륨 권한은 라이선스가 부여된 총 프로필 수를 계산하고 Real-Time CDP Prime의 경우 500KB 또는 Real-Time CDP Ultimate의 경우 700KB를 곱하여 권한이 부여된 데이터의 양을 결정합니다.
+
+반면 Data Distiller과 같은 추가 기능을 구매하는 경우 권한이 있는 데이터 내보내기 제한은 제품 계층과 추가 기능의 합계를 나타냅니다.
+
+라이선스 대시보드에서 계약 제한에 대해 프로필 내보내기를 보고 추적할 수 있습니다.
+
 ## 알려진 제한 사항 {#known-limitations}
 
-데이터 세트 내보내기의 베타 릴리스에 대한 다음 제한 사항을 염두에 두십시오.
+데이터 세트 내보내기의 일반 가용성 릴리스에 대한 다음 제한 사항을 염두에 두십시오.
 
-* 현재 단일 권한(**[!UICONTROL 데이터 세트 대상 관리 및 활성화]**)를 사용하여 데이터 세트 대상에 대한 관리 및 활성화 권한을 제공할 수 있습니다. 이러한 컨트롤은 나중에 더 세분화된 권한으로 분할됩니다. 리뷰 [필수 권한](#permissions) 섹션 을 참조하여 데이터 세트를 내보내는 데 필요한 전체 권한 목록을 살펴보십시오.
 * 현재는 증분 파일만 내보낼 수 있으며 데이터 세트 내보내기에 대한 종료 날짜를 선택할 수 없습니다.
 * 내보낸 파일 이름은 현재 사용자 지정할 수 없습니다.
+* API를 통해 생성된 데이터 세트는 현재 내보내기에 사용할 수 없습니다.
 * 현재 UI가 대상으로 내보내는 데이터 세트를 삭제할 수 있도록 차단하지 않습니다. 대상으로 내보내는 데이터 세트는 삭제하지 마십시오. [데이터 세트 제거](#remove-dataset) 삭제하기 전에 대상 데이터 흐름에서.
 * 데이터 세트 내보내기에 대한 모니터링 지표는 현재 프로필 내보내기에 대한 숫자와 혼합되므로 실제 내보내기 숫자를 반영하지 않습니다.

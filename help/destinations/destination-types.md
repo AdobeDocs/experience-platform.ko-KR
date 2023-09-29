@@ -3,9 +3,9 @@ keywords: 대상;대상;대상 유형
 title: 대상 유형 및 범주
 description: Adobe Experience Platform의 다양한 유형과 범주에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: d0a9ac77346bea585691feee958e8d3b27f3f746
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '717'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Experience Platform의 Edge 개인화 대상은 다음과 같습니다 [Adobe Ta
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-## (베타) 데이터 세트 내보내기 대상 {#dataset-export-destinations}
+## 데이터 세트 내보내기 대상 {#dataset-export-destinations}
 
 대상 카탈로그의 일부 클라우드 스토리지 대상이 데이터 세트 내보내기를 지원합니다. 이러한 대상을 사용하여 원시 데이터 세트를 클라우드 스토리지 위치로 내보냅니다.
 
