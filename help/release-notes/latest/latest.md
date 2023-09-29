@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 9월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c57845ab2bd9ce16fb34b6babfa90a393b101409
+source-git-commit: b20e5e52b9d7568f4e20b94064819d0bebe4c236
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '2149'
 ht-degree: 24%
 
 ---
@@ -20,9 +20,14 @@ Adobe Experience Platform의 새로운 기능:
  Experience Platform의 기존 기능 업데이트:
 
 - [경고](#alerts)
+- [대시보드](#dashboards)
 - [데이터 수집](#data-collection)
+- [데이터 거버넌스](#data-governance)
+- [데이터 위생](#hygiene)
 - [대상](#destinations)
+- [경험 데이터 모델 (XDM)](#xdm)
 - [ID 서비스](#identity-service)
+- [쿼리 서비스](#query-service)
 - [Segmentation Service](#segmentation)
 - [소스](#sources)
 
@@ -44,6 +49,18 @@ Experience Platform을 사용하면 다양한 플랫폼 활동에 대한 이벤�
 
 경고에 대한 자세한 내용은 [[!DNL Observability Insights] 개요](../../observability/home.md).
 
+## 대시보드 {#dashboards}
+
+Adobe Experience Platform에서 여러 기능 제공 [!DNL dashboards] 이를 통해 일별 스냅샷 중에 캡처한 조직 데이터에 대한 중요한 정보를 볼 수 있습니다.
+
+| 기능 | 설명 |
+| --- | --- |
+| [라이선스 사용 대시보드 개선 사항](../../dashboards/guides/license-usage.md) | 조직의 라이선스 사용과 관련하여 향상된 보고 및 주요 지표 시각화를 통해 라이선스 계약을 계속 제어할 수 있습니다. 이러한 개선 사항은 구입한 모든 Experience Platform 제품에 대한 라이선스 사용 지표보다 높은 수준의 세부기간을 제공합니다. |
+
+{style="table-layout:auto"}
+
+라이선스 사용 대시보드에 대한 자세한 내용은 [라이선스 사용 대시보드 개요](../../dashboards/guides/destinations.md).
+
 ## 데이터 수집 {#data-collection}
 
 Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe 또는 비 Adobe 대상으로 보강, 변환 및 배포가 가능한 Adobe Experience Platform Edge Network로 보낼 수 있는 기술 제품군을 제공합니다.
@@ -58,6 +75,35 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 {style="table-layout:auto"}
 
 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../tags/home.md).
+
+## 데이터 거버넌스 {#data-governance}
+
+Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책을 준수하는 데 사용되는 일련의 전략 및 기술입니다. 이 기능은 Experience Platform 내 카탈로그 작성, 데이터 계통 확인, 데이터 사용 라벨링, 데이터 액세스 정책, 마케팅 액션을 위한 데이터 액세스 제어 등 다양한 수준에서 주요 역할을 합니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 새로운 기능 타사 데이터에 대한 파트너 에코시스템 레이블 | 타사 데이터 보강 및 잠재 고객 확보를 위한 새로운 데이터 사용 레이블 제공 다음을 참조하십시오. [파트너 에코시스템 레이블에 대한 설명서](../../data-governance/labels/reference.md#partner) 추가 정보. |
+
+{style="table-layout:auto"}
+
+데이터 거버넌스에 대해 자세히 알아보려면 [데이터 거버넌스 개요](../../data-governance/home.md)를 참조하십시오.
+
+## 데이터 위생 {#hygiene}
+
+Experience Platform은 소비자 레코드 및 데이터 세트에 대한 프로그래밍 방식 삭제를 통해 저장된 데이터를 관리할 수 있는 데이터 위생 기능 제품군을 제공합니다. 다음 중 하나를 사용합니다. [!UICONTROL 데이터 수명 주기] ui의 작업 영역 또는 데이터 위생 API 호출을 통해 데이터 스토어를 효과적으로 관리할 수 있습니다. 이러한 기능을 사용하여 정보가 예상대로 사용되고, 잘못된 데이터를 수정해야 할 때 업데이트되고, 조직 정책에서 필요하다고 판단할 때 삭제되도록 하십시오.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} | Adobe Experience Platform의 고급 데이터 라이프사이클 관리 기능인 자동화된 데이터 세트 만료 및 레코드 삭제 를 사용하여 고객 약속 및 라이선스 계약을 충족하도록 모든 데이터 저장소에서 데이터 라이프사이클을 관리합니다.<br>자동화된 데이터 세트 만료로 전체 데이터 세트를 삭제하고 데이터 세트를 삭제할 날짜 및 시간을 설정할 수 있습니다.<br>레코드 삭제를 사용하면 기본 ID를 타겟팅하여 개별 소비자 프로필을 삭제할 수 있습니다. UI를 통해 또는 CSV/JSON 파일 업로드를 통해 개별적으로 기본 ID를 제공할 수 있습니다. 다음을 참조하십시오. [레코드 삭제 설명서](../../hygiene/ui/record-delete.md) 추가 정보 |
+| 데이터 세트 만료 | 자동화된 데이터 세트 만료로 데이터를 최소화하고 라이선스 계약을 계속 제어할 수 있습니다. 전체 데이터 세트를 삭제하여 데이터 볼륨을 줄이고 데이터 세트를 삭제할 날짜와 시간을 설정합니다. 다음을 참조하십시오. [데이터 세트 만료 설명서](../../hygiene/ui/dataset-expiration.md) 추가 정보. |
+
+{style="table-layout:auto"}
+
+플랫폼의 데이터 위생 기능에 대한 자세한 내용은 다음을 참조하십시오. [데이터 위생 개요](../../hygiene/home.md).
 
 ## 대상 {#destinations}
 
@@ -98,6 +144,23 @@ Add these to release notes as they go out
 
 대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
+## 경험 데이터 모델 (XDM) {#xdm}
+
+XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 스키마 편집기에 추가된 빠른 작업 | 스키마 편집기의 캔버스에 새로운 빠른 작업이 추가되었습니다. 이제 JSON 구조를 복사하거나 편집기에서 직접 스키마를 삭제할 수 있습니다.<br>![스키마 편집기의 빠른 작업](../2023/assets/schema-editor-copy-json.png "추가 및 JSON으로 복사가 강조 표시된 스키마 편집기."){width="100" zoomable="yes"} |
+| 사용자 지정 또는 표준 작성자별로 XDM 리소스 필터링 | 이제 사용 가능한 스키마, 필드 그룹, 데이터 형식 및 클래스 목록이 해당 생성 방법에 따라 사전 필터링됩니다. 따라서 리소스가 사용자 지정 빌드되었는지 또는 Adobe에 의해 만들어졌는지 여부에 따라 리소스를 필터링할 수 있습니다.<br>![스키마 작업 영역의 표준 및 사용자 지정 필터.](../2023/assets/standard-and-custom-classes.png "표준 및 사용자 지정 필터가 강조 표시된 스키마 작업 영역"){width="100" zoomable="yes"} <br> 다음을 참조하십시오. [리소스 만들기 및 편집 설명서](../../xdm/ui/resources/classes.md#filter.md) 추가 정보. |
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 업데이트된 스키마 생성 워크플로 | 프로세스를 간소화하기 위해 새로운 스키마 생성 워크플로우가 구현되었습니다. <br> ![새 스키마 만들기 UI.](../2023/assets/schema-class-options.png "새 스키마 세부 정보 선택기가 강조 표시됩니다."){width="100" zoomable="yes"} <br> 다음을 참조하십시오. [스키마 생성 설명서](../../xdm/ui/resources/schemas.md#create) 추가 정보. |
+
 ## ID 서비스 {#identity-service}
 
 Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 걸쳐 ID를 연결하여 고객과 고객의 행동을 종합적으로 파악할 수 있으므로, 실시간으로 효과적인 개인 디지털 환경을 제공할 수 있습니다.
@@ -112,6 +175,21 @@ Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 �
 {style="table-layout:auto"}
 
 ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md).
+
+## 쿼리 서비스 {#query-service}
+
+쿼리 서비스를 사용하면 표준 SQL로 Adobe Experience Platform [!DNL Data Lake]에서 데이터를 쿼리할 수 있습니다. 에서 모든 데이터 세트를 결합할 수 있습니다. [!DNL Data Lake] 보고, Data Science Workspace에 사용하거나 실시간 고객 프로필로 수집하기 위한 새 데이터 세트로 쿼리 결과를 캡처합니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 로그 필터링 UI 업데이트 | 향상된 쿼리 로그 필터링은 모니터링, 관리 및 문제 해결을 위해 사용자 생성 로그에 대한 가시성을 향상시킵니다. 다양한 설정을 기반으로 쿼리 로그 목록을 필터링할 수 있습니다. <br> ![쿼리 로그 필터 설정입니다.](../2023/assets/log-filter-settings.png "새 쿼리 로그 필터가 강조 표시됩니다."){width="100" zoomable="yes"}  <br> 다음을 참조하십시오. [쿼리 로그 설명서](../../query-service/ui/query-logs.md#filter-logs) 추가 정보. |
+| 여러 쿼리 편집기 UI 업데이트 | 이제 쿼리 편집기에서 여러 순차적 쿼리를 실행하거나 둘 이상의 쿼리를 작성하고 모든 쿼리를 순차적 방식으로 실행할 수 있습니다. 쿼리 실행에 유연성을 더하기 위해 선택한 쿼리를 강조 표시하고 다른 쿼리와 독립적으로 실행할 특정 쿼리를 선택할 수 있습니다. 다음을 참조하십시오. [쿼리 편집기 UI 안내서](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) 추가 정보. |
+
+{style="table-layout:auto"}
+
+쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md)를 참조하십시오.
 
 ## Segmentation Service {#segmentation}
 
