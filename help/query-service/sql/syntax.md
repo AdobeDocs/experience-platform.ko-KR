@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여 줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: f729c54e490afb954bb627d150e499c98d51a53d
+source-git-commit: 18b8f683726f612a5979ab724067cc9f1bfecbde
 workflow-type: tm+mt
-source-wordcount: '3923'
+source-wordcount: '4006'
 ht-degree: 2%
 
 ---
@@ -262,7 +262,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 ## 데이터베이스 만들기
 
-다음 `CREATE DATABASE` 명령은 ADLS 데이터베이스를 만듭니다.
+다음 `CREATE DATABASE` 이 명령은 ADLS(Azure Data Lake Storage) 데이터베이스를 만듭니다.
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -296,7 +296,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 ## 보기 만들기
 
-다음 구문은 `CREATE VIEW` 쿼리:
+다음 구문은 `CREATE VIEW` 데이터 세트를 쿼리합니다. 이 데이터 세트는 ADLS 또는 가속화된 스토어 데이터 세트일 수 있습니다.
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -313,6 +313,46 @@ CREATE VIEW view_name AS select_query
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
 
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
+```
+
+다음 구문은 `CREATE VIEW` 데이터베이스 및 스키마 컨텍스트에서 뷰를 작성하는 쿼리입니다.
+
+**예**
+
+```sql
+CREATE VIEW db_name.schema_name.view_name AS select_query
+CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
+```
+
+| 매개 변수 | 설명 |
+| ------ | ------ |
+| `db_name` | 데이터베이스의 이름입니다. |
+| `schema_name` | 스키마의 이름입니다. |
+| `view_name` | 생성할 보기의 이름입니다. |
+| `select_query` | A `SELECT` 명령문입니다. 구문 `SELECT` 쿼리는 다음에서 찾을 수 있습니다 [쿼리 섹션 선택](#select-queries). |
+
+**예**
+
+```sql
+CREATE VIEW <dbV1 AS SELECT color, type FROM Inventory;
+
+CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory;
+```
+
+## 보기 표시
+
+다음 쿼리는 보기 목록을 보여 줍니다.
+
+```sql
+SHOW VIEWS;
+```
+
+```console
+ Db Name  | Schema Name | Name  | Id       |  Dataset Dependencies | Views Dependencies | TYPE
+----------------------------------------------------------------------------------------------
+ qsaccel  | profile_agg | view1 | view_id1 | dwh_dataset1          |                    | DWH
+          |             | view2 | view_id2 | adls_dataset          | adls_views         | ADLS
+(2 rows)
 ```
 
 ## 놓기 보기
@@ -742,7 +782,7 @@ EXPLAIN FORMAT { TEXT | JSON } statement
 | 매개 변수 | 설명 |
 | ------ | ------ |
 | `FORMAT` | 사용 `FORMAT` 출력 형식을 지정하는 명령입니다. 사용 가능한 옵션은 다음과 같습니다 `TEXT` 또는 `JSON`. 텍스트가 아닌 출력에는 텍스트 출력 형식과 동일한 정보가 포함되어 있지만 프로그램이 더 쉽게 구문 분석할 수 있습니다. 이 매개 변수의 기본값은 입니다. `TEXT`. |
-| `statement` | 임의 `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, 또는 `CREATE MATERIALIZED VIEW AS` 명령문입니다. 실행 계획을 확인해야 합니다. |
+| `statement` | 임의 `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, 또는 `CREATE MATERIALIZED VIEW AS` 명령문(보고 싶은 실행 계획). |
 
 >[!IMPORTANT]
 >
