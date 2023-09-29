@@ -5,9 +5,9 @@ title: UI에서 스키마 리소스 살펴보기
 description: Experience Platform 사용자 인터페이스에서 기존 스키마, 클래스, 스키마 필드 그룹 및 데이터 유형을 탐색하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 스키마]** 왼쪽 탐색.
 
 예를 들어 Adobe에서 제공하는 표준 데이터 유형만 표시하도록 목록을 필터링하려면 다음을 선택합니다. **[!UICONTROL 데이터 유형]** 및 **[!UICONTROL Adobe]** 다음 아래에 **[!UICONTROL 유형]** 및 **[!UICONTROL 소유자]** 각각 섹션.
 
-다음 **[!UICONTROL 프로필에 포함됨]** 토글을 사용하면 결과를 필터링하여에서 사용할 수 있도록 설정된 스키마에서 사용되는 리소스만 표시할 수 있습니다. [실시간 고객 프로필](../../profile/home.md).
+다음 **[!UICONTROL 프로필에 포함됨]** 토글을 사용하면 결과를 필터링하여에서 사용할 수 있도록 설정된 스키마에서 사용되는 리소스만 표시할 수 있습니다. [실시간 고객 프로필](../../profile/home.md). 다음 **[!UICONTROL 임시 스키마 표시]** 전환 필터는 단일 데이터 세트에서만 사용할 수 있도록 네임스페이스가 지정된 필드로 생성된 스키마 목록을 필터링합니다.
 
-![](../images/ui/explore/filter.png)
+![다음 [!UICONTROL 스키마] 작업 영역 [!UICONTROL 찾아보기] 필터 패널이 강조 표시된 탭입니다.](../images/ui/explore/filter.png)
 
 에 리소스를 나열할 때 **[!UICONTROL 클래스]**, **[!UICONTROL 필드 그룹]**, 또는 **[!UICONTROL 데이터 유형]** 탭을 사용하여 다음을 선택할 수 있습니다. **[!UICONTROL Adobe]** 표준 리소스만 표시하려면 **[!UICONTROL 고객]** 조직에서 생성한 리소스만 표시합니다.
 

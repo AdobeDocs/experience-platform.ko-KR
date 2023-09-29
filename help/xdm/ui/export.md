@@ -4,9 +4,9 @@ title: UI에서 XDM 스키마 내보내기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 스키마를 다른 샌드박스 또는 조직으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: d25042e80ca5f655a50deac6a65ce9168225d6e6
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,15 @@ ht-degree: 0%
 >
 >스키마 레지스트리 API를 사용하여 스키마 외에 클래스, 스키마 필드 그룹, 데이터 유형 등의 다른 리소스를 내보낼 수도 있습니다. 다음을 참조하십시오. [끝점 내보내기 안내서](../api/export.md) 추가 정보.
 
-## 사전 요구 사항
+## 전제 조건
 
 Platform UI를 사용하여 XDM 리소스를 내보낼 수 있지만 워크플로우를 완료하려면 스키마 레지스트리 API를 사용하여 해당 리소스를 다른 샌드박스 또는 조직으로 가져와야 합니다. 다음 안내서를 참조하십시오. [스키마 레지스트리 API 시작하기](../api/getting-started.md) 이 안내서를 따르기 전에 필수 인증 헤더에 대한 중요 정보를 확인하십시오.
 
 ## 내보내기 페이로드 생성 {#generate-export-payload}
 
-Platform UI에서 를 선택합니다. **[!UICONTROL 스키마]** 왼쪽 탐색. 다음 범위 내 [!UICONTROL 스키마] 작업 영역에서 내보낼 스키마의 행을 선택하여 오른쪽 사이드바에 스키마 세부 정보를 표시합니다.
+Platform UI의 세부 정보 패널에서 내보내기 페이로드를 생성할 수 있습니다. [!UICONTROL 찾아보기] 또는 스키마 편집기의 스키마 캔버스에서 바로 사용할 수 있습니다.
+
+내보내기 페이로드를 생성하려면 다음을 선택합니다. **[!UICONTROL 스키마]** 왼쪽 탐색. 다음 범위 내 [!UICONTROL 스키마] 작업 영역에서 내보낼 스키마의 행을 선택하여 오른쪽 사이드바에 스키마 세부 정보를 표시합니다.
 
 >[!TIP]
 >
@@ -200,6 +202,14 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 스키마]** 왼쪽 탐색.
   }
 ]
 ```
+
+페이로드를 선택하여 복사할 수도 있습니다. [!UICONTROL 자세히] 스키마 편집기의 오른쪽 상단에서. 드롭다운 메뉴는 두 가지 옵션을 제공합니다. [!UICONTROL JSON 구조 복사] 및 [!UICONTROL 스키마 삭제].
+
+>[!NOTE]
+>
+>프로필에 대해 활성화되거나 연결된 데이터 세트가 있는 스키마는 삭제할 수 없습니다.
+
+![스키마 편집기: [!UICONTROL 자세히] 및 [!UICONTROL JSON으로 복사] 강조 표시됨.](../images/ui/export/schema-editor-copy-json.png)
 
 페이로드는 배열의 형태를 취하며, 각 배열 항목은 내보낼 사용자 정의 XDM 리소스를 나타내는 개체입니다. 위의 예에서[!DNL Loyalty details]&quot;사용자 정의 필드 그룹 및&quot;[!DNL Loyalty Members]&quot;스키마가 포함됩니다. 스키마에서 사용하는 모든 핵심 리소스는 모든 샌드박스 및 조직에서 사용할 수 있으므로 내보내기에 포함되지 않습니다.
 

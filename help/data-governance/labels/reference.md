@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 데이터 사용 레이블 용어집
 description: 이 문서에서는 현재 Adobe Experience Platform에서 지원하는 모든 데이터 사용 레이블에 대해 간략하게 설명합니다.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
+source-git-commit: c55ad6c592be95b01cf7fe0b39635b478bc98be6
 workflow-type: tm+mt
-source-wordcount: '2185'
-ht-degree: 3%
+source-wordcount: '2250'
+ht-degree: 2%
 
 ---
 
@@ -73,6 +73,8 @@ ID &quot;I&quot; 레이블은 특정 사용자를 식별하거나 연결할 수 
 | 레이블 | 정의 |
 | --- | --- |
 | **서드파티** | 타사 데이터는 타사 데이터 공급업체에서 제공한 데이터입니다. 서드파티 데이터 공급업체는 Platform과 함께 서드파티의 데이터에 액세스하고, 사용하고, 표시하고, 전송할 수 있도록 귀하가 권한을 부여하는 계약을 귀사와 체결한 엔티티입니다. |
+| **타사 데이터 보강** | 데이터 주체와 직접 관련이 없는 서드파티 조직에서 수집한 데이터. 레이블은 자사 프로필을 보강하는 데 사용되는 타사 데이터에 적용해야 합니다. |
+| **제3자 탐구** | 데이터 주체와 직접 관련이 없는 서드파티 조직에서 수집한 데이터. 레이블을 신규 고객을 대상으로 사전 예측에 사용되는 타사 데이터에 적용해야 합니다. |
 
 ## 부록
 

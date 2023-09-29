@@ -4,14 +4,14 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법의 기본 사항에 대해 알아봅니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: 943d1360e80caef58d09b8502507a3ad72edda03
 workflow-type: tm+mt
-source-wordcount: '3340'
+source-wordcount: '3571'
 ht-degree: 1%
 
 ---
 
-# UI에서 스키마 만들기 및 편집
+# UI에서 스키마 생성 및 편집
 
 이 안내서에서는 Adobe Experience Platform UI에서 조직에 대한 XDM(Experience Data Model) 스키마를 만들고, 편집하고, 관리하는 방법에 대한 개요를 제공합니다.
 
@@ -21,9 +21,9 @@ ht-degree: 1%
 >
 >스키마 생성 프로세스를 자세히 살펴보려면 [스키마 만들기 튜토리얼](../../tutorials/create-schema-ui.md) 전체 예제 스키마를 만들고 의 다양한 기능을 숙지하려면 [!DNL Schema Editor].
 
-## 사전 요구 사항
+## 전제 조건
 
-이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. 다음을 참조하십시오. [XDM 개요](../../home.md) Experience Platform 생태계 내에서 XDM의 역할에 대한 소개 및 [스키마 컴포지션 기본 사항](../../schema/composition.md) 스키마 생성 방법에 대한 개요입니다.
+이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. 다음을 참조하십시오. [XDM 개요](../../home.md) Experience Platform 에코시스템 내에서 XDM의 역할 소개 및 [스키마 컴포지션 기본 사항](../../schema/composition.md) 스키마 생성 방법에 대한 개요입니다.
 
 ## 새 스키마 만들기 {#create}
 
@@ -31,15 +31,25 @@ ht-degree: 1%
 >
 >이 섹션에서는 UI에서 새 스키마를 수동으로 만드는 방법을 다룹니다. CSV 데이터를 플랫폼으로 수집하는 경우 다음을 선택할 수 있습니다. [해당 데이터를 AI가 생성한 권장 사항에 의해 생성된 XDM 스키마에 매핑합니다](../../../ingestion/tutorials/map-csv/recommendations.md) (현재 Beta 버전). 직접 스키마를 생성할 필요가 없습니다.
 
-다음에서 [!UICONTROL 스키마] 작업 영역, 선택 **[!UICONTROL 스키마 만들기]** 오른쪽 상단 모서리입니다. 표시되는 드롭다운에서 다음 중 하나를 선택할 수 있습니다. **[!UICONTROL XDM 개별 프로필]** 및 **[!UICONTROL XDM ExperienceEvent]** 를 스키마의 기본 클래스로 사용합니다. 또는 다음을 선택할 수 있습니다 **[!UICONTROL 찾아보기]** 사용 가능한 클래스의 전체 목록에서 선택하려면 [새 사용자 정의 클래스 만들기](./classes.md#create) 대신,
+다음에서 [!UICONTROL 스키마] 작업 영역, 선택 **[!UICONTROL 스키마 만들기]** 오른쪽 상단 모서리입니다.
 
-![](../../images/ui/resources/schemas/create-schema.png)
+![이 있는 스키마 작업 영역 [!UICONTROL 스키마 만들기] 강조 표시됨.](../../images/ui/resources/schemas/create-schema.png)
 
-클래스를 선택하면 [!DNL Schema Editor] 가 나타나고 스키마의 기본 구조(클래스에서 제공)가 캔버스에 표시됩니다. 여기에서 오른쪽 레일을 사용하여 을(를) 추가할 수 있습니다. **[!UICONTROL 표시 이름]** 및 **[!UICONTROL 설명]** 스키마.
+다음 [!UICONTROL 스키마 만들기] 워크플로가 나타납니다. 다음 중 하나를 선택하여 스키마의 기본 클래스를 선택할 수 있습니다. **[!UICONTROL 개인 프로필]**, **[!UICONTROL 경험 이벤트]**, 또는 **[!UICONTROL 기타]**, 그 다음 **[!UICONTROL 다음]** 선택을 확인합니다. 다음을 참조하십시오. [XDM 개별 프로필](../../classes/individual-profile.md) 및 [XDM ExperienceEvent](../../classes/experienceevent.md) 설명서입니다.
 
-![](../../images/ui/resources/schemas/schema-details.png)
+![다음 [!UICONTROL 스키마 만들기] 세 가지 클래스 옵션 및 [!UICONTROL 다음] 강조 표시됨.](../../images/ui/resources/schemas/schema-class-options.png)
 
-이제 다음 작업을 수행하여 스키마 구조 작성을 시작할 수 있습니다 [스키마 필드 그룹 추가](#add-field-groups).
+클래스를 선택한 후 [!UICONTROL 이름 및 검토] 섹션이 나타납니다. 이 섹션에서는 스키마를 식별하기 위한 이름과 설명을 제공합니다. &#x200B;선택한 클래스와 스키마 구조를 검토하고 확인할 수 있도록 스키마의 기본 구조(클래스에서 제공)가 캔버스에 표시됩니다.
+
+친숙한 사용자 입력 [!UICONTROL 스키마 표시 이름] 텍스트 필드에서 다음을 수행합니다. 그런 다음 스키마를 식별하는 데 도움이 되는 적절한 설명을 입력합니다. 스키마 구조를 검토하고 설정이 마음에 들면 을 선택합니다. **[!UICONTROL 완료]** 을 클릭하여 스키마를 만듭니다.
+
+![다음 [!UICONTROL 이름 및 검토] 의 섹션 [!UICONTROL 스키마 만들기] 을 사용한 워크플로우 [!UICONTROL 스키마 표시 이름], [!UICONTROL 설명], 및 [!UICONTROL 완료] 강조 표시됨.](../../images/ui/resources/schemas/name-and-review.png)
+
+다음 [!UICONTROL 스키마] [!UICONTROL 찾아보기] 탭이 나타납니다. 최근에 만든 스키마는에서 편집할 수 있습니다. [!DNL Schema Editor] 사용 가능한 스키마 목록에 이 표시됩니다.
+
+![최근에 만든 스키마를 표시하는 스키마 편집기.](../../images/ui/resources/schemas/schema-details.png)
+
+이제 다음 작업을 수행하여 스키마 구조 작성을 시작할 수 있습니다 [스키마 필드 그룹 추가](#add-field-groups) 다음에서 [!DNL Schema Editor].
 
 ## 기존 스키마 편집 {#edit}
 
@@ -47,9 +57,9 @@ ht-degree: 1%
 >
 >스키마가 저장되고 데이터 수집에 사용되면 추가 변경 사항만 수행할 수 있습니다. 다음을 참조하십시오. [스키마 진화 규칙](../../schema/composition.md#evolution) 추가 정보.
 
-기존 스키마를 편집하려면 **[!UICONTROL 찾아보기]** 를 탭한 다음 편집할 스키마의 이름을 선택합니다.
+기존 스키마를 편집하려면 **[!UICONTROL 찾아보기]** 를 탭한 다음 편집할 스키마의 이름을 선택합니다. 검색 창을 사용하여 사용 가능한 옵션 목록의 범위를 좁힐 수도 있습니다.
 
-![](../../images/ui/resources/schemas/edit-schema.png)
+![스키마가 강조 표시된 스키마 작업 영역.](../../images/ui/resources/schemas/edit-schema.png)
 
 >[!TIP]
 >
@@ -81,11 +91,11 @@ ht-degree: 1%
 
 스키마에 대해 선택할 수 있는 필드 그룹 목록을 표시하는 대화 상자가 나타납니다. 필드 그룹은 하나의 클래스와만 호환되므로 스키마의 선택한 클래스와 연결된 필드 그룹만 나열됩니다. 기본적으로 나열된 필드 그룹은 조직 내에서 사용 인기에 따라 정렬됩니다.
 
-![](../../images/ui/resources/schemas/field-group-popularity.png)
+![다음 [!UICONTROL 필드 그룹 추가] 대화 상자가 강조 표시됨 [!UICONTROL 인기도] 강조 표시된 열입니다.](../../images/ui/resources/schemas/field-group-popularity.png)
 
 추가할 필드의 일반 활동 또는 비즈니스 영역을 알고 있는 경우 왼쪽 레일에서 하나 이상의 수직 범주를 선택하여 표시된 필드 그룹 목록을 필터링합니다.
 
-![](../../images/ui/resources/schemas/industry-filter.png)
+![다음 [!UICONTROL 필드 그룹 추가] 대화 상자가 강조 표시됨 [!UICONTROL 업계] 필터 및 [!UICONTROL 업계] 강조 표시된 열입니다.](../../images/ui/resources/schemas/industry-filter.png)
 
 >[!NOTE]
 >
@@ -93,11 +103,11 @@ ht-degree: 1%
 
 검색 창을 사용하여 원하는 필드 그룹을 찾을 수도 있습니다. 쿼리와 이름이 일치하는 필드 그룹이 목록 맨 위에 나타납니다. 아래 **[!UICONTROL 표준 필드]**&#x200B;원하는 데이터 속성을 설명하는 필드가 포함된 필드 그룹이 표시됩니다.
 
-![](../../images/ui/resources/schemas/field-group-search.png)
+![다음 [!UICONTROL 필드 그룹 추가] 대화 상자 [!UICONTROL 표준 필드] 강조 표시된 검색 함수입니다.](../../images/ui/resources/schemas/field-group-search.png)
 
 스키마에 추가하려는 필드 그룹의 이름 옆에 있는 확인란을 선택합니다. 목록에서 여러 필드 그룹을 선택할 수 있으며, 선택한 각 필드 그룹이 오른쪽 레일에 표시됩니다.
 
-![](../../images/ui/resources/schemas/add-field-group.png)
+![다음 [!UICONTROL 필드 그룹 추가] 확인란 선택 기능이 강조 표시된 대화 상자.](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
@@ -105,11 +115,11 @@ ht-degree: 1%
 
 필드 그룹을 선택한 후 다음을 선택합니다. **[!UICONTROL 필드 그룹 추가]** 를 클릭하여 스키마에 추가합니다.
 
-![](../../images/ui/resources/schemas/add-field-group-finish.png)
+![다음 [!UICONTROL 필드 그룹 추가] 필드 그룹이 선택되어 있고 [!UICONTROL 필드 그룹 추가] 강조 표시됨.](../../images/ui/resources/schemas/add-field-group-finish.png)
 
 다음 [!DNL Schema Editor] 필드 그룹이 제공한 필드가 캔버스에 표시된 상태로 다시 나타납니다.
 
-![](../../images/ui/resources/schemas/field-groups-added.png)
+![다음 [!DNL Schema Editor] 예제 스키마가 표시된 경우.](../../images/ui/resources/schemas/field-groups-added.png)
 
 스키마에 필드 그룹을 추가한 후 선택적으로 다음을 수행할 수 있습니다. [기존 필드 제거](#remove-fields) 또는 [새 사용자 정의 필드 추가](#add-fields) 필요에 따라 이러한 그룹에 연결합니다.
 
@@ -123,15 +133,15 @@ ht-degree: 1%
 
 다음 예에서는 표준 필드 그룹입니다 **[!UICONTROL 인구 통계 세부 정보]** 이(가) 스키마에 추가되었습니다. 과 같은 단일 필드를 제거하려면 `taxId`을 클릭하고 캔버스에서 필드를 선택한 다음 를 선택합니다. **[!UICONTROL 제거]** 오른쪽 레일에서.
 
-![단일 필드 제거](../../images/ui/resources/schemas/remove-single-field.png)
+![다음 [!DNL Schema Editor] 포함 [!UICONTROL 제거] 강조 표시됨. 이 작업은 단일 필드를 제거합니다.](../../images/ui/resources/schemas/remove-single-field.png)
 
 제거할 필드가 여러 개인 경우 필드 그룹을 전체적으로 관리할 수 있습니다. 캔버스에서 그룹에 속하는 필드를 선택한 다음 를 선택합니다. **[!UICONTROL 관련 필드 관리]** 오른쪽 레일에서.
 
-![관련 필드 관리](../../images/ui/resources/schemas/manage-related-fields.png)
+![다음 [!DNL Schema Editor] 포함 [!UICONTROL 관련 필드 관리] 강조 표시됨.](../../images/ui/resources/schemas/manage-related-fields.png)
 
 해당 필드 그룹의 구조를 보여 주는 대화 상자가 나타납니다. 여기에서 제공된 확인란을 사용하여 필요한 필드를 선택하거나 선택 취소할 수 있습니다. 만족스러우면 다음을 선택합니다. **[!UICONTROL 확인]**.
 
-![필드 그룹에서 필드 선택](../../images/ui/resources/schemas/select-fields.png)
+![다음 [!UICONTROL 관련 필드 관리] 선택한 필드가 있는 대화 상자 및 [!UICONTROL 확인] 강조 표시됨.](../../images/ui/resources/schemas/select-fields.png)
 
 스키마 구조에 선택한 필드만 있는 캔버스가 다시 나타납니다.
 

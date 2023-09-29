@@ -5,10 +5,10 @@ title: UI를 사용하여 데이터 유형 만들기 및 편집
 type: Tutorial
 description: Experience Platform 사용자 인터페이스에서 데이터 유형을 만들고 편집하는 방법을 알아봅니다.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
+source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 0%
+source-wordcount: '1354'
+ht-degree: 5%
 
 ---
 
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_datatype_filter"
->title="표준 또는 사용자 지정 데이터 유형 필터"
->abstract="사용 가능한 데이터 유형 목록은 데이터 유형 생성 방법에 따라 사전 필터링됩니다. 라디오 단추를 선택하여 표준 옵션과 사용자 정의 옵션 중에서 선택합니다. 표준 옵션은 Adobe에 의해 생성된 엔티티를 표시하고 사용자 지정 옵션은 조직 내에서 생성된 엔티티를 표시합니다. 데이터 유형 만들기 및 편집에 대한 자세한 내용은 설명서를 참조하십시오."
+>title="표준 또는 사용자 정의 데이터 유형 필터"
+>abstract="사용 가능한 데이터 유형의 목록은 클래스의 생성 방법에 따라 사전에 필터링됩니다. 표준과 사용자 정의 옵션 중에서 선택하려면 라디오 버튼을 선택하십시오. 표준 옵션은 Adobe에서 생성한 엔티티를 표시하며 사용자 정의 옵션은 내 조직 내에서 생성된 엔티티를 표시합니다. 데이터 유형의 생성 및 편집에 대한 자세한 내용은 설명서를 참조하시기 바랍니다."
 
 XDM(Experience Data Model)에서 데이터 유형은 여러 하위 필드를 포함하는 재사용 가능한 필드입니다. 다중 필드 구조를 일관되게 사용할 수 있다는 점에서 스키마 필드 그룹과 유사하지만, 데이터 유형은 스키마 구조의 모든 위치에 포함될 수 있는 반면 필드 그룹은 루트 수준에서만 추가할 수 있으므로 보다 유연합니다.
 
@@ -33,20 +33,21 @@ Adobe Experience Platform은 광범위한 일반적인 경험 관리 사용 사�
 
 ## 를 엽니다. [!DNL Schema Editor] 데이터 형식용 {#data-type}
 
-Platform UI에서 를 선택합니다. **[!UICONTROL 스키마]** 을(를) 왼쪽 탐색에서 [!UICONTROL 스키마] 작업 영역을 선택한 다음 **[!UICONTROL 데이터 유형]** 탭. Adobe에서 정의한 데이터 유형 및 조직에서 만든 데이터 유형을 포함하여 사용 가능한 데이터 유형 목록이 표시됩니다.
+Platform UI에서 를 선택합니다. **[!UICONTROL 스키마]** 을(를) 왼쪽 탐색에서 [!UICONTROL 스키마] 작업 영역을 선택한 다음 **[!UICONTROL 데이터 유형]** 탭. 사용 가능한 데이터 유형 목록이 표시됩니다. 데이터 유형 목록은 작성 방법에 따라 자동으로 필터링됩니다. 기본 설정은 Adobe에 의해 정의된 데이터 유형을 표시합니다. 목록을 필터링하여 조직에서 만든 목록을 표시할 수도 있습니다.
 
-![](../../images/ui/resources/data-types/data-types-tab.png)
+![다음 [!UICONTROL 스키마] 작업 공간 [!UICONTROL 스키마] 왼쪽 탐색 및 [!UICONTROL 데이터 유형] 강조 표시됨.](../../images/ui/resources/data-types/data-types-tab.png)
 
-여기에서는 두 가지 옵션이 있습니다.
+여기에서 다음 옵션을 사용할 수 있습니다.
 
 - [새 데이터 유형 만들기](#create)
+- [데이터 유형 필터링](#filter)
 - [편집할 기존 데이터 유형 선택](#edit)
 
 ### 새 데이터 유형 만들기 {#create}
 
 다음에서 **[!UICONTROL 데이터 유형]** 탭, 선택 **[!UICONTROL 데이터 유형 만들기]**.
 
-![](../../images/ui/resources/data-types/create.png)
+![다음 [!UICONTROL 스키마] 작업 영역 [!UICONTROL 데이터 유형] 탭 [!UICONTROL 데이터 유형 만들기] 강조 표시됨.](../../images/ui/resources/data-types/create.png)
 
 다음 [!DNL Schema Editor] 이 나타나고 캔버스에 새 데이터 유형의 현재 구조가 표시됩니다. 편집기의 오른쪽에서 데이터 유형에 대한 표시 이름과 설명(선택 사항)을 제공할 수 있습니다. 데이터 유형을 스키마에 추가할 때 데이터 유형을 식별하는 방법이므로 데이터 유형에 고유하고 간결한 이름을 제공해야 합니다.
 
@@ -56,17 +57,25 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 스키마]** 을(를) 왼�
 
 여기에서 다음으로 건너뛸 수 있습니다. [다음 섹션](#add-fields) 을 클릭하여 필드를 새 데이터 형식에 추가합니다.
 
+### 데이터 유형 필터링 {#filter}
+
+사용 가능한 데이터 유형의 목록은 클래스의 생성 방법에 따라 사전에 필터링됩니다. 라디오 단추를 선택하여 다음 중 하나를 선택합니다. [!UICONTROL 표준] 및 [!UICONTROL 사용자 정의] 옵션. 다음 [!UICONTROL 표준] 옵션은 Adobe 및 [!UICONTROL 사용자 정의] 옵션은 조직 내에서 생성된 엔티티를 표시합니다.
+
+![다음 [!UICONTROL 데이터 유형] 의 탭 [!UICONTROL 스키마] 작업 공간 [!UICONTROL 표준] 및 [!UICONTROL 사용자 정의] 강조 표시됨.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
+
 ### 기존 데이터 유형 편집 {#edit}
 
 >[!NOTE]
 >
 >실시간 고객 프로필에서 사용할 수 있도록 설정된 스키마에서 기존 데이터 유형을 사용하면 그 이후에 해당 데이터 유형에 대해 비파괴인 변경만 수행할 수 있습니다. 다음을 참조하십시오. [스키마 진화 규칙](../../schema/composition.md#evolution) 추가 정보.
 
-조직에서 정의한 사용자 정의 데이터 유형만 편집할 수 있습니다. 표시된 목록의 범위를 좁히려면 필터 아이콘(![필터 아이콘](../../images/ui/resources/data-types/filter.png))을 클릭하여 다음을 기반으로 필터링을 위한 컨트롤을 표시합니다 [!UICONTROL 소유자]. 선택 **[!UICONTROL 고객]** 조직에서 소유한 사용자 지정 데이터 유형만 표시합니다.
+조직에서 정의한 사용자 정의 데이터 유형만 편집할 수 있습니다. 선택 **[!UICONTROL 사용자 정의]** 조직에서 소유한 사용자 지정 데이터 유형만 표시합니다.
 
-목록에서 편집할 데이터 유형을 선택하여 오른쪽 레일을 열고 데이터 유형의 세부 정보를 표시합니다. 오른쪽 레일에서 데이터 유형의 이름을 선택하여 [!DNL Schema Editor].
+목록에서 편집할 데이터 유형을 선택하여 오른쪽 레일을 열고 데이터 유형의 세부 정보를 표시합니다. 세부 정보 패널에서 샘플 파일을 다운로드하거나, JSON 구조를 복사하거나, 데이터 유형을 패키지에 추가할 수도 있습니다.
 
-![](../../images/ui/resources/data-types/edit.png)
+오른쪽 레일에서 데이터 유형의 이름을 선택하여 [!DNL Schema Editor].
+
+![다음 [!UICONTROL 데이터 유형] 의 탭 [!UICONTROL 스키마] 작업 영역, 데이터 유형 포함, [!UICONTROL 사용자 정의] 및 데이터 유형 [!UICONTROL 이름] 강조 표시됨.](../../images/ui/resources/data-types/edit.png)
 
 ## 데이터 유형에 필드 추가 {#add-fields}
 
