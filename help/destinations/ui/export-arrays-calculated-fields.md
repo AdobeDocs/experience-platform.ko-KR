@@ -3,9 +3,9 @@ title: (Beta) 계산된 필드를 사용하여 플랫 스키마 파일로 배열
 type: Tutorial
 description: 계산된 필드를 사용하여 플랫 스키마 파일의 배열을 Real-Time CDP에서 클라우드 스토리지 대상으로 내보내는 방법에 대해 알아봅니다.
 badge: "Beta"
-source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1278'
 ht-degree: 2%
 
 ---
@@ -124,6 +124,19 @@ Experience Platform의 다른 필드 유형에는 배열 필드가 포함됩니�
 John,Doe,"Marketing_Sales_Finance"
 ```
 
+### `iif` 배열을 내보내는 함수 {#iif-function-export-arrays}
+
+사용 `iif` 특정 조건에서 배열의 요소를 내보내는 함수입니다. 예를 들어 을 계속 `organzations` 위에서 배열 개체를 만들면 다음과 같은 간단한 조건부 함수를 작성할 수 있습니다 `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+
+![첫 번째 및 마지막 함수에 대한 스크린샷 매핑](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+
+이 경우 출력 파일은 다음과 같습니다. 이 경우 배열의 첫 번째 요소는 마케팅이므로 개인은 마케팅 부서의 구성원입니다.
+
+```
+`First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
+John,Doe, johndoe@acme.org, "isMarketing"
+```
+
 ### `coalesce` 배열을 내보내는 함수 {#coalesce-function-export-arrays}
 
 사용 `coalesce` 배열의 null이 아닌 첫 번째 요소에 액세스하고 문자열로 내보내는 함수입니다.
@@ -188,14 +201,6 @@ johndoe@acme.org,"1538097126"
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```
-
-<!--
-
-### `iif` function to export arrays {#iif-function-export-arrays}
-
-Here are some examples of how you could use the `iif` function to access and export arrays and other fields: (STILL TO DO)
-
--->
 
 ### `md5` 및 `sha256` 해시 함수 {#hashing-functions}
 

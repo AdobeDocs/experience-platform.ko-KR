@@ -1,10 +1,10 @@
 ---
 title: 파트너 지원 방문자 인식을 사용하여 온사이트 경험 개인화
 description: 파트너 지원 방문자 인식을 사용하여 방문자에게 개인화된 온사이트 경험을 제공하는 방법을 알아보십시오.
-source-git-commit: 9d7e8ef99a42e804896f5c9befcf98bb1c010606
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '2530'
-ht-degree: 98%
+source-wordcount: '2548'
+ht-degree: 97%
 
 ---
 
@@ -49,6 +49,12 @@ ht-degree: 98%
    * [에지 세분화](/help/segmentation/ui/edge-segmentation.md)
    * [에지 개인화 대상](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)(또는 원하는 개인화 플랫폼을 선택합니다. 이 사용 사례 튜토리얼은 Adobe Target을 개인화 엔진으로 강조함)
+
+## 비디오 워크스루 {#video-walkthrough}
+
+알 수 없는 방문자를 위해 온사이트 경험을 개인화하는 방법에 대한 연습은 아래 비디오 튜토리얼을 참조하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## 사용 사례를 달성하는 방법: 높은 수준의 개요 {#achieve-the-use-case-high-level}
 
