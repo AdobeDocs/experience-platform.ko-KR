@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: a34d2823383b2954ebd824a7197b1b64dc80e219
+source-git-commit: 0ef33fda8fab14de1676fc1d8a11029439b967ad
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1164'
 ht-degree: 9%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 9%
    * [대상 카탈로그 개요](./catalog/overview.md)
    * Adobe 대상{#adobe}
       * [Adobe 대상 개요](./catalog/adobe/overview.md)
-      * [(베타) Experience Cloud 대상](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+      * [Experience Cloud Audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage 연결](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate 연결](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform 대상 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

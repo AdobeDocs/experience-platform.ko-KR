@@ -3,7 +3,7 @@ keywords: 대상; 질문; faq; faq; 대상 faq
 title: 자주 묻는 질문
 description: Adobe Experience Platform 대상에 대해 가장 자주 묻는 질문에 대한 답변
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 75b9cc3e2c9a18ec8c08c9c3ca774accae31eb7e
+source-git-commit: b41335ba5fd6dca422b0c19517bc32b320f1e733
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 3%
@@ -48,7 +48,32 @@ ht-degree: 3%
 모든 프로필이 대상으로 전송되도록 하려면 새 구성으로 새 대상을 만든 다음 대상에 대해 활성화해야 합니다.
 
 +++
+<!--
+## [!DNL Experience Cloud Audiences] {#eca-faq}
 
+### What are the differences between the Experience Cloud Audiences and Adobe Target destinations?
+
++++Answer
+
+See the table below for a feature comparison between the Experience Cloud Audiences and Adobe Target destinations.
+
+||Experience Cloud Audiences|Adobe Target|
+|---|---|---|
+| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, Adobe Target, Adobe Analytics, Advertising Cloud, Marketo, Adobe Campaign | Supports audience activation only to Adobe Target |
+| **Supports audience activation** | ✓ | ✓ |
+| **Supports attribute activation** | X | ✓ |
+| **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
+| **DULE support** | ✓ | ✓ |
+| **Marketing actions support** | ✓ | ✓ |
+| **Supported IDs** | [!DNL ECID], [!DNL GAID], [!DNL IDFA], [!DNL email_lc_sha256] | Any ID type |
+| **Sandbox support** | One sandbox | Multiple sandboxes |
+| **Consent support** | X | Yes. Requires Privacy & Security Shield. |
+| **Edge segmentation support** | Supports activation of edge audiences. Does not support edge segmentation. | Supports edge segmentation and activation of edge audiences. |
+| **Supported audiences** | All types of audiences  | Edge merge policy required for activation.|
+
++++
+
+-->
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
@@ -58,6 +83,7 @@ ht-degree: 3%
 
 * 사용자 [!DNL Facebook] 사용자 계정에는 **[!DNL Manage campaigns]** 사용하려는 광고 계정에 대해 권한이 활성화되었습니다.
 * 다음 **Adobe Experience Cloud** 비즈니스 계정을 의 광고 파트너로 추가해야 합니다. [!DNL Facebook Ad Account]. `business ID=206617933627973` 사용. 다음을 참조하십시오 [비즈니스 관리자에 파트너 추가](https://www.facebook.com/business/help/1717412048538897) 자세한 내용은 Facebook 설명서 를 참조하십시오.
+
   >[!IMPORTANT]
   >
   > Adobe Experience Cloud에 대한 권한을 구성할 때 다음을 활성화해야 합니다 **캠페인 관리** 권한. 이 단계는 [!DNL Adobe Experience Platform] 통합에 필요합니다.
@@ -110,7 +136,7 @@ ID 일치 요구 사항에 대한 자세한 내용은 [ID 일치 요구 사항](
 +++예 라고 답하십시오. Experience Platform의 Facebook 대상은 Facebook의 광고 계정으로 1:1입니다. 회사의 각 Facebook 광고 계정에 대해 별도의 Facebook 대상을 만들 수 있습니다. 다음 [대상 연결 자습서](/help/destinations/ui/connect-destination.md) 플랫폼 UI에서 각각의 새로운 Facebook 대상에 대한 별도의 Facebook 계정에 연결합니다. 연결할 수 있는 Facebook 광고 계정 수에는 제한이 없습니다.
 +++
 
-## Google Customer Match {#google-customer-match}
+## Google 고객 일치 타겟팅 {#google-customer-match}
 
 ### 대상을 Google Customer Match로 내보낼 때 Google 인터페이스의 대상 이름 끝에 추가된 숫자가 표시되는 이유는 무엇입니까?
 
