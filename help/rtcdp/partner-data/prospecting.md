@@ -1,10 +1,11 @@
 ---
 title: 잠재 고객 발굴 사용 사례를 통해 신규 고객 참여 유도 및 확보
 description: Real-Time CDP의 파트너 데이터 지원으로 잠재 고객 발굴 사용 사례를 통해 신규 고객을 참여시키고 확보하는 방법에 대해 알아봅니다.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
+source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 94%
+source-wordcount: '1960'
+ht-degree: 93%
 
 ---
 
@@ -207,7 +208,11 @@ Real-Time CDP의 세분화 기능을 사용하여 잠재 고객 프로필에서 
 
 ### 잠재 고객 프로필을 대상으로 활성화 {#activate-to-destinations}
 
-잠재 고객 대상자를 대상으로 내보내 활용할 수 있습니다. 현재 [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) 또는 [!BADGE Alpha]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) 대상과 같은 특정 대상만 잠재 고객 프로필 활성화를 지원합니다.
+잠재 고객 대상자를 대상으로 내보내 활용할 수 있습니다. 현재 특정 클라우드 스토리지 대상만 잠재 고객 프로필 활성화를 지원합니다.
+
+![잠재 고객을 지원하는 대상.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+
+[자세히 보기](/help/destinations/ui/activate-prospect-audiences.md) 클라우드 스토리지 대상에 대한 잠재 고객 활성화 정보.
 
 ## 파트너 데이터 지원을 통해 달성한 기타 사용 사례 {#other-use-cases}
 

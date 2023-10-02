@@ -2,13 +2,13 @@
 title: 대상에 대한 잠재 고객 활성화
 type: Tutorial
 description: 잠재 고객을 대상으로 활성화하는 방법을 알아봅니다
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
+source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 12%
 
 ---
-
 
 # 잠재 고객 활성화
 
@@ -22,7 +22,7 @@ ht-degree: 12%
 
 다음으로 이동 **[!UICONTROL 연결]** > **[!UICONTROL 대상]**&#x200B;을(를) 클릭하고 **[!UICONTROL 카탈로그]** 탭. 사용 **[!UICONTROL 데이터 유형]** 필터링 및 선택 **[!UICONTROL 잠재 고객]** 잠재 고객 활성화를 지원하는 대상을 확인합니다. 현재 Prospect Audiences 내보내기는 클라우드 스토리지 대상에서만 사용할 수 있습니다.
 
-![데이터 세트 내보내기를 지원하는 대상](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![잠재 고객을 지원하는 대상.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
 ## 전제 조건 {#prerequisites}
 
