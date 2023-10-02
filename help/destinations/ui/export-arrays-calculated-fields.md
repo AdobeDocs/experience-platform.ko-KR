@@ -2,21 +2,21 @@
 title: (Beta) 계산된 필드를 사용하여 플랫 스키마 파일로 배열을 내보냅니다
 type: Tutorial
 description: 계산된 필드를 사용하여 플랫 스키마 파일의 배열을 Real-Time CDP에서 클라우드 스토리지 대상으로 내보내는 방법에 대해 알아봅니다.
-badge: "Beta"
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+badge: Beta
+exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
+source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '1278'
-ht-degree: 2%
+source-wordcount: '1479'
+ht-degree: 1%
 
 ---
-
 
 # (Beta) 계산된 필드를 사용하여 플랫 스키마 파일로 배열을 내보냅니다 {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="(베타) 내보내기 어레이 지원"
->abstract="Experience Platform에서 원하는 클라우드 스토리지 대상으로 int, string 또는 boolean 값의 단순 배열을 내보냅니다. 일부 제한 사항이 적용됩니다. 이 설명서에서 다양한 예제 및 지원되는 기능을 살펴보십시오."
+>abstract="사용 **계산된 필드 추가** Experience Platform에서 원하는 클라우드 스토리지 대상으로 int, string 또는 boolean 값의 단순 배열을 내보내도록 제어합니다. 일부 제한 사항이 적용됩니다. 이 설명서에서 다양한 예제 및 지원되는 기능을 살펴보십시오."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="예시"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="알려진 제한 사항"
 
@@ -24,7 +24,7 @@ ht-degree: 2%
 >
 >* 계산된 필드를 통해 배열을 내보내는 기능은 현재 Beta 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
 
-플랫 스키마 파일의 Real-Time CDP에서 클라우드 스토리지 대상으로 계산된 필드를 통해 배열을 내보내는 방법에 대해 알아봅니다. 이 기능을 통해 활성화되는 사용 사례를 이해하려면 이 문서 를 참조하십시오.
+플랫 스키마 파일에서 Real-Time CDP의 계산된 필드를 통해 배열을 내보내는 방법에 대해 알아봅니다. [클라우드 스토리지 대상](/help/destinations/catalog/cloud-storage/overview.md). 이 기능을 통해 활성화되는 사용 사례를 이해하려면 이 문서 를 참조하십시오.
 
 계산된 필드에 대한 광범위한 정보(이것이 무엇이며 왜 중요한지)를 얻을 수 있습니다. 데이터 준비의 계산된 필드에 대한 소개와 사용 가능한 모든 함수에 대한 자세한 내용은 아래 링크된 페이지를 참조하십시오.
 
@@ -50,13 +50,13 @@ Experience Platform의 다른 필드 유형에는 배열 필드가 포함됩니�
 
 ## 전제 조건 {#prerequisites}
 
-다음 단계를 통해 진행 [클라우드 스토리지 대상에 대한 활성화 단계](/help/destinations/ui/activate-batch-profile-destinations.md) 및 로 이동 [매핑](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 단계.
+[연결](/help/destinations/ui/connect-destination.md) 원하는 클라우드 스토리지 대상으로 이동하여 [클라우드 스토리지 대상에 대한 활성화 단계](/help/destinations/ui/activate-batch-profile-destinations.md) 및 로 이동 [매핑](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 단계.
 
 ## 계산된 필드를 내보내는 방법 {#how-to-export-calculated-fields}
 
 클라우드 스토리지 대상에 대한 활성화 워크플로의 매핑 단계에서 다음을 선택합니다. **[!UICONTROL (Beta) 계산된 필드 추가]**.
 
-![내보낼 계산된 필드 추가](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+![일괄 활성화 워크플로의 매핑 단계에서 강조 표시된 계산된 필드를 추가합니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
 이렇게 하면 Experience Platform 외부에서 속성을 내보내는 데 사용할 수 있는 속성을 선택할 수 있는 모달 창이 열립니다.
 
@@ -64,25 +64,25 @@ Experience Platform의 다른 필드 유형에는 배열 필드가 포함됩니�
 >
 >XDM 스키마의 일부 필드만 **[!UICONTROL 필드]** 보기. 문자열 값과 문자열, int 및 부울 값의 배열을 볼 수 있습니다. 예를 들어 `segmentMembership` 배열에는 다른 배열 값이 포함되어 있으므로 표시되지 않습니다.
 
-![모달 창 1](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+![아직 함수가 선택되지 않은 계산된 필드 기능의 모달 창.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
 예를 들어 `join` 에 대한 함수 `loyaltyID` 충성도 ID 배열을 CSV 파일에서 밑줄이 연결된 문자열로 내보내는 아래 표시된 필드. 보기 [이 예제와 다른 예제에 대한 자세한 내용은 아래에서 확인하십시오](#join-function-export-arrays).
 
-![모달 창 2](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![조인 함수가 선택된 계산된 필드 기능의 모달 창입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 선택 **[!UICONTROL 저장]** 계산된 필드를 유지하고 매핑 단계로 돌아갑니다.
 
-![모달 창 3](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![조인 함수가 선택되고 Save 컨트롤이 강조 표시된 계산된 필드 기능의 모달 창입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
 워크플로우의 매핑 단계로 돌아가서 **[!UICONTROL 대상 필드]** (내보낸 파일의 이 필드에 사용할 열 머리글 값 포함)
 
-![대상 필드 1 선택](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+![대상 필드가 강조 표시된 매핑 단계입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![대상 필드 2 선택](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
 준비가 되면 다음을 선택합니다. **[!UICONTROL 다음]** 활성화 워크플로의 다음 단계로 진행합니다.
 
-![계속하려면 다음을 선택하십시오.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+![대상 필드가 강조 표시되고 대상 값이 채워진 매핑 단계입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
 ## 지원되는 함수 {#supported-functions}
 
@@ -115,20 +115,20 @@ Experience Platform의 다른 필드 유형에는 배열 필드가 포함됩니�
 * `person.name.lastName` 문자열
 * `personalEmail.address` 문자열
 
-![스크린샷 매핑](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
+![조인 함수를 포함하는 매핑 예입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
 
 이 경우 출력 파일은 다음과 같습니다. 를 사용하여 배열의 세 요소가 단일 문자열로 연결되는 방식을 확인합니다. `_` 문자.
 
 ```
-`First_Name,Last_Name,Organization
-John,Doe,"Marketing_Sales_Finance"
+`First_Name,Last_Name,Personal_Email,Organization
+John,Doe,johndoe@acme.org, "Marketing_Sales_Finance"
 ```
 
 ### `iif` 배열을 내보내는 함수 {#iif-function-export-arrays}
 
-사용 `iif` 특정 조건에서 배열의 요소를 내보내는 함수입니다. 예를 들어 을 계속 `organzations` 위에서 배열 개체를 만들면 다음과 같은 간단한 조건부 함수를 작성할 수 있습니다 `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+사용 `iif` 특정 조건에서 배열의 요소를 내보내는 함수입니다. 예를 들어 을 계속 `organizations` 위에서 배열 개체를 만들면 다음과 같은 간단한 조건부 함수를 작성할 수 있습니다 `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
 
-![첫 번째 및 마지막 함수에 대한 스크린샷 매핑](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+![iif 함수를 포함하는 매핑 예입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
 
 이 경우 출력 파일은 다음과 같습니다. 이 경우 배열의 첫 번째 요소는 마케팅이므로 개인은 마케팅 부서의 구성원입니다.
 
@@ -137,18 +137,33 @@ John,Doe,"Marketing_Sales_Finance"
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
 
+### `add_to_array` 배열을 내보내는 함수 {#add-to-array-function-export-arrays}
+
+사용 `add_to_array` 내보낸 배열에 요소를 추가하는 함수입니다. 이 함수를 와 결합할 수 있습니다 `join` 위에서 추가로 설명한 함수.
+
+을(를) 계속하는 중 `organizations` 위에서 배열 개체를 만들면 다음과 같은 함수를 작성할 수 있습니다. `source: join('_', add_to_array(organizations,"2023"))`를 반환하여 2023년에 개인이 멤버인 조직을 반환합니다.
+
+![add_to_array 함수를 포함하는 매핑 예입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
+
+이 경우 출력 파일은 다음과 같습니다. 를 사용하여 배열의 세 요소가 단일 문자열로 연결되는 방식을 확인합니다. `_` 문자열 끝에 문자 및 2023도 추가됩니다.
+
+```
+`First_Name,Last_Name,Personal_Email,Organization_Member_2023
+John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
+```
+
 ### `coalesce` 배열을 내보내는 함수 {#coalesce-function-export-arrays}
 
 사용 `coalesce` 배열의 null이 아닌 첫 번째 요소에 액세스하고 문자열로 내보내는 함수입니다.
 
-예를 들어 를 사용하여 매핑 스크린샷에 표시된 대로 아래 XDM 필드를 결합할 수 있습니다. `coalesce(subscriptions.hasPromotion)` 배열에서 false 값의 첫 번째 true를 반환하는 구문:
+예를 들어 를 사용하여 매핑 스크린샷에 표시된 대로 아래 XDM 필드를 결합할 수 있습니다. `coalesce(subscriptions.hasPromotion)` 첫 번째 `true` / `false` 배열의 값:
 
 * `"subscriptions.hasPromotion": [null, true, null, false, true]` 배열
 * `person.name.firstName` 문자열
 * `person.name.lastName` 문자열
 * `personalEmail.address` 문자열
 
-![결합 기능을 위한 스크린샷 매핑](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
+![결합 함수를 포함하는 매핑 예입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
 
 이 경우 출력 파일은 다음과 같습니다. null이 아닌 첫 번째 `true` 배열의 값을 파일로 내보냅니다.
 
@@ -156,7 +171,6 @@ John,Doe, johndoe@acme.org, "isMarketing"
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
-
 
 ### `size_of` 배열을 내보내는 함수 {#sizeof-function-export-arrays}
 
@@ -167,7 +181,7 @@ John,Doe,true
 * `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` 고객이 5개의 개별 구매 시간을 나타내는 스토리지 시스템
 * `personalEmail.address` 문자열
 
-![size_of 함수에 대한 스크린샷 매핑](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
+![size_of 함수를 포함하는 매핑 예.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
 
 이 경우 출력 파일은 다음과 같습니다. 두 번째 열은 고객이 별도로 구매한 횟수에 해당하는 배열의 요소 수를 어떻게 표시하는지 확인합니다.
 
@@ -180,9 +194,9 @@ johndoe@acme.org,"5"
 
 배열의 인덱스에 액세스하여 배열에서 단일 항목을 내보낼 수 있습니다. 예를 들어 의 위 예와 비슷합니다. `size_of` 기능을 사용하면 고객이 특정 제품을 처음 구매한 경우에만 액세스하고 내보내기를 하려는 경우 다음을 사용할 수 있습니다 `purchaseTime[0]` 타임스탬프의 첫 번째 요소를 내보내려면 `purchaseTime[1]` 타임스탬프의 두 번째 요소를 내보내려면 `purchaseTime[2]` 을 눌러 타임스탬프의 세 번째 요소를 내보내는 등의 작업을 수행합니다.
 
-![색인 액세스를 위한 스크린샷 매핑](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
+![배열의 요소에 액세스하는 방법을 보여 주는 매핑 예입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
 
-이 경우 출력 파일은 다음과 같습니다.
+이 경우 출력 파일은 아래와 같이 표시되며 고객이 처음 구매한 항목을 내보냅니다.
 
 ```
 `Personal_Email,First_Purchase
@@ -193,9 +207,9 @@ johndoe@acme.org,"1538097126"
 
 사용 `first` 및 `last` 배열에서 첫 번째 또는 마지막 요소를 내보내는 함수입니다. 예를 들어 을 계속 `purchaseTime` 이전 예제의 여러 타임스탬프가 있는 배열 개체를 사용하면 함수를 사용하여 한 사람이 만든 첫 번째 또는 마지막 구매 시간을 내보낼 수 있습니다.
 
-![첫 번째 및 마지막 함수에 대한 스크린샷 매핑](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
+![첫 번째 및 마지막 함수를 포함하는 매핑 예입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
 
-이 경우 출력 파일은 다음과 같습니다.
+이 경우 출력 파일은 아래와 같이 표시되며 고객이 구매한 처음과 마지막 시간을 내보냅니다.
 
 ```
 `Personal_Email,First_Purchase, Last_Purchase
@@ -207,6 +221,3 @@ johndoe@acme.org,"1538097126","1664327526"
 배열이나 배열에서 요소를 내보내는 특정 함수 외에도 해시 함수를 사용하여 특성을 해시할 수 있습니다. 예를 들어 속성에 개인 식별 가능한 정보가 있는 경우 내보낼 때 이러한 필드를 해시할 수 있습니다.
 
 예를 들어 문자열 값을 직접 해시할 수 있습니다 `md5(personalEmail.address)`. 원하는 경우 다음과 같이 배열 필드의 개별 요소를 해시할 수도 있습니다. `md5(purchaseTime[0])`
-
-
-

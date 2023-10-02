@@ -3,9 +3,9 @@ title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 85bc1f0af608a7b5510bd0b958122e9db10ee27a
+source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '1754'
+source-wordcount: '1750'
 ht-degree: 5%
 
 ---
@@ -42,7 +42,7 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 생성된 프로필 및 경험 이벤트 데이터 세트입니다.</li><li> 와 같은 시스템 생성 데이터 세트 <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">프로필 스냅샷 데이터 세트</a>.</li></td>
+    <td><ul><li>소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 생성된 프로필 및 경험 이벤트 데이터 세트입니다.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">시스템 생성 프로필 스냅샷 데이터 세트</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
