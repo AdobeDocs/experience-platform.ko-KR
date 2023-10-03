@@ -3,10 +3,10 @@ title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: 08463e9f14b0952fe5db177ae8b4546cc3c6cac5
 workflow-type: tm+mt
-source-wordcount: '1750'
-ht-degree: 5%
+source-wordcount: '1724'
+ht-degree: 4%
 
 ---
 
@@ -47,11 +47,11 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>다음을 참조하십시오. <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ko"> Adobe Journey Optimizer</a> 설명서를 참조하십시오. (지원되는 데이터 세트의 AJO 테이블 또는 섹션에 대한 딥 링크로 업데이트)</td>
+    <td>다음을 참조하십시오. <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하십시오.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>다음을 참조하십시오. <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=ko"> Adobe Journey Optimizer</a> 설명서를 참조하십시오. (지원되는 데이터 세트의 AJO 테이블 또는 섹션에 대한 딥 링크로 업데이트)</td>
+    <td>다음을 참조하십시오. <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하십시오.</td>
   </tr>
   <tr>
     <td>데이터 Distiller</td>
