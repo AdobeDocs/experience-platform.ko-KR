@@ -2,7 +2,7 @@
 title: 파생된 속성에 대한 원활한 SQL 흐름
 description: 쿼리 서비스 SQL이 확장되어 파생 특성을 원활하게 지원합니다. 이 SQL 확장을 사용하여 프로필에 대해 활성화된 파생된 특성을 만드는 방법과 Real-Time Customer Profile 및 Segmentation Service에 대한 특성을 사용하는 방법을 알아봅니다.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 6202b1a5956da83691eeb5422d3ebe7f3fb7d974
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1238'
 ht-degree: 1%
@@ -35,7 +35,7 @@ ht-degree: 1%
 >
 >아래에 제공된 SQL 쿼리는 기존 네임스페이스의 사용을 가정합니다.
 
-CTAS(Create Table as Select) 쿼리를 사용하여 데이터 세트를 만들고, 데이터 형식을 할당하고, 기본 ID를 설정하고, 스키마를 만들고, 프로필이 활성화된 것으로 표시합니다. 아래의 예제 SQL 문은 속성을 만들고 실시간 고객 데이터 프로필(Real-Time CDP)에 사용할 수 있도록 합니다. SQL 쿼리는 아래 예에 표시된 형식을 따릅니다.
+CTAS(Create Table as Select) 쿼리를 사용하여 데이터 세트를 만들고, 데이터 형식을 할당하고, 기본 ID를 설정하고, 스키마를 만들고, 프로필이 활성화된 것으로 표시합니다. 아래의 예제 SQL 문은 속성을 만들고 Real-time Customer Data Platform(Real-Time CDP)에 사용할 수 있도록 합니다. SQL 쿼리는 아래 예에 표시된 형식을 따릅니다.
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];

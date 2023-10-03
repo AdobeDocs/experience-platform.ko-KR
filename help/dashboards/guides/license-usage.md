@@ -3,10 +3,11 @@ keywords: Experience Platform;사용자 인터페이스;UI;사용자 지정;라�
 title: 라이선스 사용 대시보드 안내서
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
-source-git-commit: 5b3ec9aca773cf4a1ba0d4c7e432949769b942c1
+exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1987'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 1%
 
 Adobe Experience Platform을 통해 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있습니다 [!UICONTROL 라이선스 사용] 대시보드입니다. 여기에 표시되는 정보는 Platform 인스턴스의 일별 스냅샷 중에 캡처됩니다.
 
-라이선스 사용 보고서는 라이선스 사용 지표에 비해 높은 수준의 세부기간을 제공합니다. 대시보드는 구매한 각 제품에 대한 사용 지표, 모든 프로덕션 또는 개발 샌드박스의 통합된 지표 사용 및 특정 샌드박스의 사용 지표를 제공합니다. Real-Time Customer Data Profile, Adobe Journey Optimizer 및 Customer Journey Analytics과 같은 사용 지표를 사용하여 Experience Platform 애플리케이션을 추적할 수 있습니다.
+라이선스 사용 보고서는 라이선스 사용 지표에 비해 높은 수준의 세부기간을 제공합니다. 대시보드는 구매한 각 제품에 대한 사용 지표, 모든 프로덕션 또는 개발 샌드박스의 통합된 지표 사용 및 특정 샌드박스의 사용 지표를 제공합니다. 사용 지표를 사용하여 Real-time Customer Data Platform, Adobe Journey Optimizer 및 Customer Journey Analytics Experience Platform 애플리케이션을 추적할 수 있습니다.
 
 이 안내서에서는 UI에서 라이선스 사용 대시보드에 액세스하고 작업하는 방법에 대해 간략하게 설명하고 대시보드에 표시된 시각화에 대한 자세한 정보를 제공합니다.
 
@@ -59,7 +60,7 @@ Platform UI 내에서 라이선스 사용 대시보드로 이동하려면 다음
 
 >[!NOTE]
 >
->다음에 대한 추가 [!UICONTROL 라이선스 금액] 추가 기능의 결과로 [!UICONTROL 라이선스 금액] Real-Time Customer Data Profile, Adobe Journey Optimizer 및 Customer Journey Analytics과 같은 기본 제품용 해당 라이선스 금액의 사용(추가 기능 이후)은 기본 제품을 통해 추적됩니다. 예를 들어, 샌드박스 5개를 한 팩씩 구매하면 기본 제품 수량에 5개의 수량이 추가됩니다. 이 경우 추가 기능에는 [!UICONTROL 라이선스 금액] 중 하나이며, 해당 추가 기능의 사용법이 기본 제품을 통해 추적되므로 &quot;비어 있음&quot;입니다.
+>다음에 대한 추가 [!UICONTROL 라이선스 금액] 추가 기능의 결과로 [!UICONTROL 라이선스 금액] Real-time Customer Data Platform, Adobe Journey Optimizer 및 Customer Journey Analytics과 같은 기본 제품용 해당 라이선스 금액의 사용(추가 기능 이후)은 기본 제품을 통해 추적됩니다. 예를 들어, 샌드박스 5개를 한 팩씩 구매하면 기본 제품 수량에 5개의 수량이 추가됩니다. 이 경우 추가 기능에는 [!UICONTROL 라이선스 금액] 중 하나이며, 해당 추가 기능의 사용법이 기본 제품을 통해 추적되므로 &quot;비어 있음&quot;입니다.
 
 각 제품이 다양한 지표를 추적할 수 있으므로 테이블은 각 제품에 대한 기본 지표를 나타냅니다.
 
