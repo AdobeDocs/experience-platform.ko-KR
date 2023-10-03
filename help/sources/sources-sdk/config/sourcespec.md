@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: 셀프서비스 소스에 대한 소스 사양 구성(일괄 SDK)
 description: 이 문서에서는 셀프서비스 소스(Batch SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
 workflow-type: tm+mt
-source-wordcount: '1846'
-ht-degree: 0%
+source-wordcount: '2078'
+ht-degree: 1%
 
 ---
 
@@ -381,7 +381,53 @@ ht-degree: 0%
 
 다음은 셀프 서비스 소스(Batch SDK)에서 지원하는 다른 페이지 매김 유형의 예입니다.
 
-#### `CONTINUATION_TOKEN`
+>[!BEGINTABS]
+
+>[!TAB 오프셋]
+
+이 페이지 매김 유형을 사용하면 결과 배열을 시작할 위치에 인덱스를 지정하고 반환되는 결과 수에 대한 제한을 지정하여 결과를 구문 분석할 수 있습니다. 예:
+
+```json
+"paginationParams": {
+        "type": "OFFSET",
+        "limitName": "limit",
+        "limitValue": "4",
+        "offSetName": "offset",
+        "endConditionName": "$.hasMore",
+        "endConditionValue": "Const:false"
+}
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `type` | 데이터를 반환하는 데 사용되는 페이지 매김 유형입니다. |
+| `limitName` | API가 페이지에서 가져올 레코드 수를 지정할 수 있는 제한 이름입니다. |
+| `limitValue` | 페이지에서 가져올 레코드 수입니다. |
+| `offSetName` | 오프셋 속성 이름입니다. 페이지 매김 유형이 로 설정된 경우 필요합니다. `offset`. |
+| `endConditionName` | 다음 HTTP 요청에서 페이지 매김 루프를 종료하는 조건을 나타내는 사용자 정의 값입니다. 종료 조건을 지정할 속성 이름을 제공해야 합니다. |
+| `endConditionValue` | 종료 조건을 지정할 속성 값입니다. |
+
+>[!TAB 포인터]
+
+이 페이지 매김 유형을 사용하면 `pointer` 변수를 사용하여 요청과 함께 보내야 하는 특정 항목을 지정합니다. 포인터 형식 페이지 매김에는 다음 페이지를 가리키는 페이로드의 경로가 필요합니다. 예:
+
+```json
+{
+ "type": "POINTER",
+ "limitName": "limit",
+ "limitValue": 1,
+ "pointerPath": "paging.next"
+}
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `type` | 데이터를 반환하는 데 사용되는 페이지 매김 유형입니다. |
+| `limitName` | API가 페이지에서 가져올 레코드 수를 지정할 수 있는 제한 이름입니다. |
+| `limitValue` | 페이지에서 가져올 레코드 수입니다. |
+| `pointerPath` | 포인터 속성 이름입니다. 이를 위해서는 다음 페이지를 가리키는 속성에 대한 json 경로가 필요합니다. |
+
+>[!TAB 연속 토큰]
 
 페이지 매김의 연속 토큰 유형은 단일 응답에서 반환할 수 있는 최대 항목 수가 미리 결정되었기 때문에 반환할 수 없는 항목이 더 있음을 나타내는 문자열 토큰을 반환합니다.
 
@@ -432,7 +478,7 @@ ht-degree: 0%
 }
 ```
 
-#### `PAGE`
+>[!TAB 페이지]
 
 다음 `PAGE` 페이지 매김 유형을 사용하면 0부터 시작하는 페이지 수별로 반환 데이터를 트래버스할 수 있습니다. 사용 시 `PAGE` 페이지 매김 입력 시 단일 페이지에 지정된 레코드 수를 제공해야 합니다.
 
@@ -461,7 +507,7 @@ ht-degree: 0%
 {style="table-layout:auto"}
 
 
-#### `NONE`
+>[!TAB None]
 
 다음 `NONE` 사용 가능한 페이지 매김 유형을 지원하지 않는 소스에는 페이지 매김 유형을 사용할 수 있습니다. 의 페이지 매김 유형을 사용하는 소스 `NONE` GET 요청이 수행된 경우 검색 가능한 모든 레코드를 반환하기만 하면 됩니다.
 
@@ -470,6 +516,8 @@ ht-degree: 0%
   "type": "NONE"
 }
 ```
+
+>[!ENDTABS]
 
 ### 셀프 서비스 소스에 대한 고급 예약(일괄 처리 SDK)
 

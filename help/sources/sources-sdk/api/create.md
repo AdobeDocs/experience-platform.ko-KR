@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 새 연결 사양 만들기
 description: 다음 문서에서는 Flow Service API를 사용하여 연결 사양을 만들고 셀프 서비스 소스를 통해 새 소스를 통합하는 방법에 대한 단계를 제공합니다.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f47b7f725475fc7f7fac6dd406975b46f257e390
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 1%
@@ -578,7 +578,9 @@ curl -X POST \
                   "type": "OFFSET",
                   "limitName": "count",
                   "limitValue": "100",
-                  "offSetName": "offset"
+                  "offSetName": "offset",
+                  "endConditionName": "$.hasMore",
+                  "endConditionValue": "Const:false"
               },
               "scheduleParams": {
                   "scheduleStartParamName": "since_last_changed",
@@ -767,7 +769,9 @@ curl -X POST \
                 "type": "OFFSET",
                 "limitName": "count",
                 "limitValue": "100",
-                "offSetName": "offset"
+                "offSetName": "offset",
+                "endConditionName": "$.hasMore",
+                "endConditionValue": "Const:false"
             },
             "scheduleParams": {
                 "scheduleStartParamName": "since_last_changed",
