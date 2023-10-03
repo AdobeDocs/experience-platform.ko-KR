@@ -2,7 +2,7 @@
 title: 잠재 고객 발굴 사용 사례를 통해 신규 고객 참여 유도 및 확보
 description: Real-Time CDP의 파트너 데이터 지원으로 잠재 고객 발굴 사용 사례를 통해 신규 고객을 참여시키고 확보하는 방법에 대해 알아봅니다.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
+source-git-commit: ec6375a025833027fda01c412124321132aefd65
 workflow-type: tm+mt
 source-wordcount: '1960'
 ht-degree: 93%
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!AVAILABILITY]
 >
->* 이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate에 라이선스가 부여된 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
+>* 이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate에 라이선스를 부여한 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
 
 Real-Time CDP에서 서드파티 데이터 지원을 사용하여 데이터 파트너의 잠재 고객 프로필로 프로필 기반을 확장하고 데이터 파트너와 협력하여 신규 고객에게 도달하거나 확보할 수 있습니다.
 

@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform 릴리스 정보 2023년 4월
 description: Adobe Experience Platform의 2023년 4월 릴리스 정보입니다.
-exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: ht
+exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
 source-wordcount: '2084'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -75,7 +75,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 ## 대상 {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 대상** {#new-destinations}
 
@@ -91,7 +91,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | ----------- | ----------- |
 | [!DNL Custom Personalization] 및 [!DNL Adobe Commerce]대상에 대한 데이터 흐름 모니터링 | <p> 이제 [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [사용자 정의 개인 설정](../../destinations/catalog/personalization/custom-personalization.md) 및 [속성을 사용한 사용자 정의 개인 설정](../../destinations/catalog/personalization/custom-personalization.md) 연결에 대한 활성화 지표를 확인할 수 있습니다. </p> <p>![Adobe Commerce 이미지](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce 지표"){width="100" zoomable="yes"}</p>  자세한 내용은 [대상 작업 영역의 데이터 흐름 모니터링](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace)을 참조하십시오. |
 | [!DNL Google Ad Manager] 및 [!DNL Google Ad Manager 360] 대상에 대한 새로운 **[!UICONTROL 세그먼트 이름에 세그먼트 ID 추가]** 필드 | <p>이제 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) 및 [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details)의 세그먼트 이름에 Experience Platform의 세그먼트 ID가 포함되도록 할 수 있습니다(`Segment Name (Segment ID)`).</p><p>![세그먼트 ID 이미지 추가](/help/destinations/assets/common/append-segment-id-to-segment-name.png "세그먼트 이름 필드에 세그먼트 ID 새로 추가 "){width="100" zoomable="yes"}</p> |
-| 예약된 대상자 채우기 | <p>[[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) 대상의 경우 대상에 대한 대상자 채우기 활성화는 세그먼트가 대상 연결에 처음 매핑된 후 24 ~ 48시간 후에 진행되도록 예약됩니다. 이러한 업데이트는 데이터를 수집할 때까지 24시간 대기하라는 Google 정책에 따른 것이며, Real-time CDP와 [!DNL Google Display & Video 360] 간 일치율을 향상시킵니다.</p> <p>이는 이 대상에만 적용할 수 있는 백엔드 구성이며, UI에서 고객이 구성할 수 있는 일정 옵션과는 관련이 없습니다.</p> |
+| 예약된 대상자 채우기 | <p>[[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) 대상의 경우 대상에 대한 대상자 채우기 활성화는 세그먼트가 대상 연결에 처음 매핑된 후 24 ~ 48시간 후에 진행되도록 예약됩니다. 이 업데이트는 데이터를 수집할 때까지 24시간 대기하는 Google의 정책에 따른 것으로, Real-Time CDP과 간의 일치율을 개선합니다 [!DNL Google Display & Video 360].</p> <p>이는 이 대상에만 적용할 수 있는 백엔드 구성이며, UI에서 고객이 구성할 수 있는 일정 옵션과는 관련이 없습니다.</p> |
 
 {style="table-layout:auto"}
 

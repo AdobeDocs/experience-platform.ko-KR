@@ -2,7 +2,7 @@
 title: Adobe Commerce 대상 커넥터
 description: Adobe Commerce 및 Real-Time CDP 판매자가 Real-Time CDP 내에서 구축 및 관리되는 고객 대상에 맞게 맞춤화된, 관련성이 높은 사이트 콘텐츠 및 프로모션을 제공하여 쇼핑 경험을 개인화하는 방법을 알아봅니다.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 다음 [!DNL Adobe Commerce] 대상 커넥터를 사용하면 하나 이상의 Real-Time CDP 대상을 선택하여 [!DNL Adobe Commerce] 은(는) 쇼핑객을 위한 동적 개인화된 경험을 제공할 계정입니다. 다음 범위 내 [!DNL Adobe Commerce]그런 다음 이러한 Real-Time CDP 대상을 선택하여 &#39;2개 구매, 1개 무료&#39; 등과 같은 장바구니에서 고유한 오퍼를 개인화할 수 있습니다. 또한 Adobe Real-Time CDP 대상에 맞게 맞춤화된 홍보용 오퍼를 통해 영웅 배너를 표시하고 제품 가격을 수정할 수 있습니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 이 커넥터는 Real-Time CDP Prime 또는 Ultimate 및 Adobe Commerce을 구입한 고객의 대상 카탈로그에서 사용할 수 있습니다.
 
@@ -75,7 +75,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 ## Commerce에서 대상자 활성화 확인 {#exported-data}
 
-에 Real-Time CDP 대상자를 활성화한 후 [!DNL Adobe Commerce] 계정, (으)로 이동하면 사용 가능한 해당 대상자가 표시됩니다. _관리자_ 사이드바, 다음으로 이동 **[!UICONTROL 고객]** > **[!UICONTROL 실시간 CDP 대상]**.
+에 Real-Time CDP 대상자를 활성화한 후 [!DNL Adobe Commerce] 계정, (으)로 이동하면 사용 가능한 해당 대상자가 표시됩니다. _관리자_ 사이드바, 다음으로 이동 **[!UICONTROL 고객]** > **[!UICONTROL Real-Time CDP 대상]**.
 
 ![Real-Time CDP 대상 대시보드](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 

@@ -1,10 +1,11 @@
 ---
 title: 파트너가 제공한 속성으로 자사 프로필 보완
 description: 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선하는 방법에 대해 알아봅니다.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1110'
-ht-degree: 93%
+ht-degree: 90%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 93%
 
 >[!AVAILABILITY]
 >
->* 이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate에 라이선스가 부여된 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
+>* 이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate에 라이선스를 부여한 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
 
 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선합니다.
 
@@ -24,7 +25,7 @@ ht-degree: 93%
 
 * 대상자 목록을 데이터 공급업체와 공유하기 위해 Real-Time CDP에서 내보낼 위치를 생각해 보십시오. 이 위치는 파일 내보내기를 지원해야 합니다.
 * 추가 속성에 계층화할 수 있도록 데이터 공급업체가 기대하는 식별자는 무엇입니까?
-* 파트너가 제공한 속성이 포함된 파일을 다시 Real-time CDP로 수집하는 방법은 무엇입니까? 예를 들어 [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) 또는 [SFTP](/help/sources/connectors/cloud-storage/sftp.md)와 같은 클라우드 스토리지 소스 커넥터를 통해 파일을 수집할 수 있습니다.
+* 파트너가 제공한 속성이 포함된 파일은 어떻게 Real-Time CDP에 다시 수집됩니까? 예를 들어 [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) 또는 [SFTP](/help/sources/connectors/cloud-storage/sftp.md)와 같은 클라우드 스토리지 소스 커넥터를 통해 파일을 수집할 수 있습니다.
 * 파트너가 제공한 속성을 Real-Time CDP로 다시 가져와서 새로 고치는 예상 주기는 어떻게 됩니까?
 
 >[!WARNING]
@@ -94,7 +95,7 @@ Commenting out links for now
 
 ### 개인 식별 정보(PII) 또는 해시된 PII를 제거할 때 보강하려는 대상자를 내보냅니다. {#export-audiences}
 
-파트너가 보강할 대상자를 내보냅니다. Amazon S3 또는 SFTP와 같은 Real-time CDP에서 제공하는 클라우드 스토리지 대상을 사용합니다. 이 단계를 완료하려면 다음 설명서 페이지를 읽으십시오.
+파트너가 보강할 대상자를 내보냅니다. Amazon S3 또는 SFTP와 같이 Real-Time CDP에서 제공하는 클라우드 스토리지 대상을 사용합니다. 이 단계를 완료하려면 다음 설명서 페이지를 읽으십시오.
 
 * [Amazon S3 대상](/help/destinations/catalog/cloud-storage/amazon-s3.md) 설명서 페이지
 * [SFTP 대상](/help/destinations/catalog/cloud-storage/sftp.md) 설명서 페이지

@@ -3,13 +3,13 @@ solution: Experience Platform
 title: 사용 사례 플레이북 개요
 description: Experience Platform의 사용 사례 플레이북 기능을 사용하여 다양한 마케팅 사용 사례를 시작하는 방법을 알아봅니다.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
-workflow-type: ht
-source-wordcount: '400'
-ht-degree: 100%
+exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '401'
+ht-degree: 88%
 
 ---
-
 
 # (Beta) 사용 사례 플레이북 개요
 
@@ -41,11 +41,11 @@ Real-Time CDP 플레이북을 선택하는 경우 마케팅 캠페인을 실행�
 
 Adobe Journey Optimizer 플레이북을 선택하는 경우 제품 내에서 고객 여정을 구성하고 고객에게 관련 메시지를 보내는 것이 목표일 수 있습니다.
 
-사용 사례에 맞게 조정되고 Experience Platform에서 재사용할 수 있는 스키마, 세그먼트 또는 여정과 같은 특정 자산을 생성하는 플레이북의 인스턴스를 만듭니다. 이러한 오브젝트의 목적은 특정 사용 사례를 구현하는 데 필요한 모든 리소스를 이해하는 데 도움을 주는 것입니다. 데이터를 포함하지 않으며 개발 샌드박스에서 생성됩니다. 이러한 자산을 사용하기 시작하거나 사용하기 전에 편집하고 Real-time CDP 또는 Journey Optimizer에서 팀과 공유합니다.
+사용 사례에 맞게 조정되고 Experience Platform에서 재사용할 수 있는 스키마, 세그먼트 또는 여정과 같은 특정 자산을 생성하는 플레이북의 인스턴스를 만듭니다. 이러한 오브젝트의 목적은 특정 사용 사례를 구현하는 데 필요한 모든 리소스를 이해하는 데 도움을 주는 것입니다. 데이터를 포함하지 않으며 개발 샌드박스에서 생성됩니다. Real-Time CDP 또는 Journey Optimizer에서 에셋을 사용하고 팀과 공유하기 전에 해당 에셋 사용을 시작하거나 편집합니다.
 
 ## 가용성
 
-일부 [!UICONTROL 사용 사례 플레이북]은 Real-time CDP 사용 사례에 맞게 조정된 반면, 다른 사용 사례는 Journey Optimizer를 사용하는 고객에게 가장 적합합니다. 제품 및 사용 사례에 가장 적합한 플레이북을 찾으려면 카탈로그를 검색하십시오.
+일부 [!UICONTROL 사용 사례 플레이북] 은 Real-Time CDP 사용 사례에 맞게 조정되지만 다른 기능은 Journey Optimizer을 사용하는 고객에게 가장 적합합니다. 제품 및 사용 사례에 가장 적합한 플레이북을 찾으려면 카탈로그를 검색하십시오.
 
 ## UI 안내서
 

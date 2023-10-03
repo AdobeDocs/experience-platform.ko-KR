@@ -3,7 +3,7 @@ keywords: 대상;대상;대상 유형
 title: 대상 유형 및 범주
 description: Adobe Experience Platform의 다양한 유형과 범주에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: d0a9ac77346bea585691feee958e8d3b27f3f746
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 0%

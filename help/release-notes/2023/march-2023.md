@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2023년 3월
 description: Adobe Experience Platform의 2023년 3월 릴리스 정보입니다.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
 source-wordcount: '2206'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 기능 | 설명 |
 | --- | --- |
-| 신규 Meta Conversions API(Beta)용 빠른 시작 워크플로 | 데이터 수집 홈 화면의 “시작하기” 아래에 있는 새로운 빠른 시작 워크플로에 액세스할 수 있습니다! 고객은 [Meta Conversions API를 위한 빠른 시작 워크플로](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)를 사용하여 이벤트 데이터를 신속하게 수집하여 단 몇 번의 간단한 단계로 광고 전환을 위해 서버측에서 Meta로 전달할 수 있습니다. |
+| 새로운 기능 Meta Conversions API(Beta)용 빠른 시작 워크플로 | 데이터 수집 홈 화면의 “시작하기” 아래에 있는 새로운 빠른 시작 워크플로에 액세스할 수 있습니다! 고객은 [Meta Conversions API를 위한 빠른 시작 워크플로](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)를 사용하여 이벤트 데이터를 신속하게 수집하여 단 몇 번의 간단한 단계로 광고 전환을 위해 서버측에서 Meta로 전달할 수 있습니다. |
 | Mobile SDK(Beta)용 새로운 빠른 시작 워크플로 | 데이터 수집 홈 화면의 “시작하기” 아래에 있는 새로운 빠른 시작 워크플로에 액세스할 수 있습니다! [Mobile SDK를 위한 새로운 빠른 시작 워크플로](https://developer.adobe.com/client-sdks/documentation/)를 사용하여 단 몇 번의 간단한 단계로 Mobile SDK를 신속하게 구현하고 기본적인 모바일 이벤트를 확인할 수 있습니다. |
 | [!DNL Braze] 이벤트 전달 확장 기능 | [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 이벤트 전달 확장 기능을 사용하면 Adobe Experience Platform Edge Network에서 캡처된 데이터를 활용하여 [!DNL Braze] User Track API를 통해 서버측 이벤트의 형태로 [!DNL Braze]로 전송할 수 있습니다 |
 | [!DNL Epsilon] 이벤트 전달 확장 기능 | [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) 확장 기능을 사용하면 이벤트 전달을 통해 Adobe Experience Platform Edge Network의 이벤트 정보를 캡처하고 [!DNL Epsilon] Event API를 통해 [!DNL Epsilon]로 전송할 수 있습니다 |
@@ -70,7 +70,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 ## 대상 {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 대상** {#new-destinations}
 
@@ -80,7 +80,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | [[!DNL Snap Inc] 연결 GA](../../destinations/catalog/advertising/snap-inc.md) | 마케터는 [!DNL Snap Inc] 대상 커넥터(현재 일반적으로 사용 가능)를 사용하여 Experience Platform에서 만든 사용자 세그먼트를 [!DNL Snapchat Ads]로 가져와서 광고 대상으로 사용할 수 있습니다. |
 | [(API) Oracle Eloqua 연결](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | [!DNL Oracle Eloqua]에 대한 API 기반 연결을 사용하여 캠페인을 계획하고 실행하는 동시에 [!DNL Oracle Eloqua]의 잠재 고객을 위한 맞춤형 고객 경험을 제공합니다. |
 | [(Beta) [!DNL Amazon Ads] 연결](../../destinations/catalog/advertising/amazon-ads.md) | Adobe Experience Platform과 [!DNL Amazon Ads]를 통합하면 [!DNL Amazon DSP (ADSP)]를 포함한 [!DNL Amazon Ads] 제품에 턴키 통합을 제공합니다. 사용자는 Adobe Experience Platform의 [!DNL Amazon Ads] 대상을 사용하여 [!DNL Amazon DSP]에서 타겟팅 및 활성화를 위한 광고주 대상자를 정의할 수 있습니다. |
-| [[!DNL Marketo Measure Ultimate] 연결](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (이전의 Bizible)는 마케터에게 매출을 늘리고 기업 투자 수익률을 증대시키는 데 가장 효과적인 마케팅 활동을 파악하는 인사이트를 제공합니다. 대상은 Adobe Experience Platform에서 [!DNL Marketo Measure]로 B2B(Business-to-Business) 데이터 흐름을 활성화합니다. 이 카드는 [!DNL Marketo Measure Ultimate] 고객만 사용할 수 있습니다. |
+| [[!DNL Marketo Measure Ultimate] 연결](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure](이전의 Bizible)는 마케터에게 매출을 늘리고 기업 투자 수익률을 증대시키는 데 가장 효과적인 마케팅 활동을 파악하는 인사이트를 제공합니다. 대상은 Adobe Experience Platform에서 [!DNL Marketo Measure]로 B2B(Business-to-Business) 데이터 흐름을 활성화합니다. 이 카드는 [!DNL Marketo Measure Ultimate] 고객만 사용할 수 있습니다. |
 | [TikTok 연결](../../destinations/catalog/social/tiktok.md) | 광고 캠페인의 타겟팅용 데이터로 TikTok에서 맞춤형 대상자를 구축합니다. |
 | [Zendesk 연결](../../destinations/catalog/crm/zendesk.md) | 이 대상을 사용하여 세그먼트에서 [!DNL Zendesk] 내의 연락처로 ID를 만들고 업데이트합니다. |
 
@@ -96,7 +96,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 **수정 사항 및 개선 사항** {#destinations-fixes-and-enhancements}
 
-Real-time CDP의 파일 기반 대상에서 PGP/GPG 암호화에 대한 버그 수정을 릴리스합니다. 이 변경 사항으로 현재 암호화를 사용하는 기존의 파일 기반 대상은 이전과 다른 확장자를 가진 파일 이름을 생성합니다.
+Real-Time CDP의 파일 기반 대상에서 PGP/GPG 암호화에 대한 버그 수정을 릴리스할 예정입니다. 이 변경 사항으로 현재 암호화를 사용하는 기존의 파일 기반 대상은 이전과 다른 확장자를 가진 파일 이름을 생성합니다.
 
 - 암호화 사용 시 현재 확장자: `filename.csv`
 - 암호화 사용 시 향후 확장자: `filename.csv.gpg`

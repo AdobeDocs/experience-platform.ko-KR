@@ -1,7 +1,8 @@
 ---
 title: 파트너 지원 방문자 인식을 사용하여 온사이트 경험 개인화
 description: 파트너 지원 방문자 인식을 사용하여 방문자에게 개인화된 온사이트 경험을 제공하는 방법을 알아보십시오.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '2548'
 ht-degree: 97%
@@ -12,7 +13,7 @@ ht-degree: 97%
 
 >[!AVAILABILITY]
 >
->이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate에 라이선스가 부여된 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
+>이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate에 라이선스를 부여한 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
 
 파트너 지원 인식을 사용하여 웹 속성 방문자에게 개인화된 경험을 제공하는 방법을 알아보십시오. 이 튜토리얼을 사용하여 인증된 방문자와 인증되지 않은 방문자에게 개인화된 경험을 표시하기 위해 Experience Platform 및 기타 Experience Cloud 솔루션의 다양한 요소 구현 시퀀스를 이해하십시오.
 

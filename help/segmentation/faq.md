@@ -1,13 +1,13 @@
 ---
 title: 대상 FAQ
 description: 대상자 및 기타 세분화 관련 개념에 대한 FAQ에 대한 답변을 살펴보십시오.
-source-git-commit: 9a72d85bfb592012b36826135e24d28983f92e40
+exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1935'
 ht-degree: 1%
 
 ---
-
 
 # 자주 묻는 질문
 
@@ -140,7 +140,7 @@ Audience Portal 및 Audience Composition은 다음 두 가지 방법으로 파�
 
 ### 대상 구성에서 모든 다운스트림 대상 및 채널로 대상을 보낼 수 있습니까?
 
-지금 이 시점에서는 아닙니다. 현재 Adobe Journey Optimizer 캠페인 및 Real-time CDP 대상의 대상자 구성에서 대상을 사용할 수 있습니다. Adobe Journey Optimizer 여정은 향후 릴리스에서 지원됩니다.
+지금 이 시점에서는 아닙니다. 현재 Adobe Journey Optimizer 캠페인 및 Real-Time CDP 대상의 대상자 구성에서 대상을 사용할 수 있습니다. Adobe Journey Optimizer 여정은 향후 릴리스에서 지원됩니다.
 
 ### 작곡 수에는 가드레일이 있나요?
 

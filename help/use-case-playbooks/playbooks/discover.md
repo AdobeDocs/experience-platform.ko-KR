@@ -3,13 +3,13 @@ solution: Experience Platform
 title: 적합한 플레이북 살펴보기
 description: 사용 사례 지원 플레이북에 적합한 플레이북을 찾는 방법을 알아보십시오.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
-workflow-type: ht
-source-wordcount: '740'
-ht-degree: 100%
+exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '741'
+ht-degree: 96%
 
 ---
-
 
 # (Beta) 적합한 플레이북 살펴보기
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 페이지에서 사용할 수 있는 검색 창과 필터를 사용하여 사용 사례에 적합한 플레이북을 찾습니다.
 
-예를 들어 전환, 참여 또는 유지와 같이 타겟팅하려는 마케팅 단계를 기반으로 사용할 수 있는 플레이북을 필터링할 수 있습니다. 또한 귀하가 속한 업계 또는 Adobe Journey Optimizer 또는 Real-time CDP에 액세스할 수 있는 제품 권한별로 표시되는 플레이북을 필터링할 수 있습니다.
+예를 들어 전환, 참여 또는 유지와 같이 타겟팅하려는 마케팅 단계를 기반으로 사용할 수 있는 플레이북을 필터링할 수 있습니다. 표시되는 플레이북을 현재 속한 산업별 또는 액세스 권한이 있는 제품 자격(Adobe Journey Optimizer 또는 Real-Time CDP)으로 필터링할 수도 있습니다.
 
 ![마케팅 단계, 업계 또는 제품별로 플레이북 필터링](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 

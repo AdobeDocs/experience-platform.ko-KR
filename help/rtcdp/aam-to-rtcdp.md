@@ -1,13 +1,13 @@
 ---
 title: Audience Manager에서 Real-Time CDP로의 발전
 description: Audience Manager에서 Real-Time CDP로의 마이그레이션을 계획하기 전에 고려 사항을 파악하십시오.
-source-git-commit: 147e95cce203933d591fc807d9d20bcbc06e68e3
-workflow-type: ht
+exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
 source-wordcount: '538'
-ht-degree: 100%
+ht-degree: 90%
 
 ---
-
 
 # Audience Manager에서 Real-Time CDP로의 발전
 
@@ -23,9 +23,9 @@ Audience Manager에서 Real-Time CDP로의 발전을 고려할 때 지금이 바
 
 Adobe는 세그먼트를 다음과 같이 분류하는 것을 권장합니다.
 
-* 데이터 종속성, 대상 또는 활성화 문제가 없고 나중에 Real-time CDP [세그먼트 빌더](/help/segmentation/ui/segment-builder.md)를 통해 세그먼트 규칙을 만들 수 있기 때문에 [[!UICONTROL Audience Manager 소스 커넥터]](/help/sources/connectors/adobe-applications/audience-manager.md)를 통해 Experience Platform으로 전송할 수 있는 세그먼트.
+* 를 통해 Experience Platform에 보낼 수 있는 세그먼트 [[!UICONTROL Audience Manager 소스 커넥터]](/help/sources/connectors/adobe-applications/audience-manager.md), 데이터 종속성이 없고, 대상 또는 활성화와 관련된 문제가 없으며, Real-Time CDP을 통해 세그멘테이션 규칙을 만들 수 있습니다 [세그먼트 빌더](/help/segmentation/ui/segment-builder.md) 나중에.
 * 지원할 수 있는 규칙이 있지만 Real-Time CDP에서 사용할 수 없는 데이터를 포함할 수 있는 세그먼트.
-* Real-Time CDP에서 생성할 수 없고 기능이 없는 세그먼트.
+* Real-Time CDP에서 만들 수 없고 기능이 없는 세그먼트입니다.
 
 >[!TIP]
 >
