@@ -5,9 +5,9 @@ title: 스키마 편집기를 사용하여 스키마 만들기
 type: Tutorial
 description: 이 튜토리얼에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 28d9a53371beea37b5c61b3bc4b111816f6e63e0
 workflow-type: tm+mt
-source-wordcount: '3959'
+source-wordcount: '4619'
 ht-degree: 0%
 
 ---
@@ -42,25 +42,24 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 를 만들�
 
 ## 스키마 만들기 및 이름 지정 {#create}
 
-스키마 작성을 시작하려면 다음을 선택합니다. **[!UICONTROL 스키마 만들기]** 의 오른쪽 위 모서리 **[!UICONTROL 스키마]** 작업 영역. 드롭다운 메뉴가 나타나고 핵심 클래스 중에서 선택할 수 있는 옵션이 제공됩니다 [!UICONTROL XDM 개별 프로필] 및 [!UICONTROL XDM ExperienceEvent]. 이러한 클래스가 목적에 맞지 않으면 다음을 선택할 수도 있습니다. **[!UICONTROL 찾아보기]** 사용 가능한 다른 클래스에서 선택하거나 [새 클래스 만들기](#create-new-class).
+스키마 작성을 시작하려면 다음을 선택합니다. **[!UICONTROL 스키마 만들기]** 의 오른쪽 위 모서리 **[!UICONTROL 스키마]** 작업 영역.
 
-이 자습서에서는 다음을 선택하십시오. **[!UICONTROL XDM 개별 프로필]**.
+![다음 [!UICONTROL 스키마] 작업 영역 [!UICONTROL 찾아보기] 탭 [!UICONTROL 스키마 만들기] 강조 표시됨.](../images/tutorials/create-schema/create-schema-button.png)
 
-![](../images/tutorials/create-schema/create-schema-button.png)
+다음 [!UICONTROL 스키마 만들기] 워크플로가 나타납니다. 그런 다음 스키마의 기본 클래스를 선택합니다. 의 핵심 클래스 중에서 선택할 수 있습니다. [!UICONTROL XDM 개별 프로필] 및 [!UICONTROL XDM ExperienceEvent], 또는 [!UICONTROL 기타] 만약 이 수업들이 당신의 목적에 맞지 않는다면. 다음 [!UICONTROL 기타] 클래스 옵션을 사용하면 다음 중 하나를 수행할 수 있습니다. [새 클래스 만들기](#create-new-class) 또는 다른 기존 클래스 중에서 선택할 수 있습니다.
 
-다음 [!DNL Schema Editor] 가 표시됩니다. 스키마를 구성할 캔버스입니다. 제목 없는 스키마는에서 자동으로 만들어집니다. **[!UICONTROL 구조]** 해당 클래스를 기반으로 모든 스키마에 포함된 표준 필드와 함께 편집기에 도착하면 캔버스의 섹션이 표시됩니다. 스키마에 할당된 클래스도 아래에 나열됩니다. **[!UICONTROL 클래스]** 위치: **[!UICONTROL 컴포지션]** 섹션.
+다음을 참조하십시오. [XDM 개별 프로필](../classes/individual-profile.md) 및 [XDM ExperienceEvent](../classes/experienceevent.md) 설명서입니다. 이 자습서에서는 다음을 선택하십시오. **[!UICONTROL XDM 개별 프로필]** 뒤에 오는 **[!UICONTROL 다음]**.
 
-![](../images/tutorials/create-schema/schema-editor.png)
 
->[!NOTE]
->
->다음을 수행할 수 있습니다. [스키마 클래스 변경](#change-class) 스키마가 저장되기 전에 초기 구성 프로세스 중에 언제든지 이 작업을 수행할 수 있지만 주의하여 수행해야 합니다. 필드 그룹은 특정 클래스와만 호환되므로 클래스를 변경하면 캔버스와 추가한 모든 필드가 재설정됩니다.
 
-아래 **[!UICONTROL 스키마 속성]**&#x200B;에 스키마에 대한 표시 이름과 설명(선택 사항)을 입력합니다. 이름을 입력하면 스키마의 새 이름을 반영하도록 캔버스가 업데이트됩니다.
+<!--  -->
 
-![](../images/tutorials/create-schema/name-schema.png)
+<!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
 
-스키마의 이름을 결정할 때 고려해야 할 몇 가지 중요한 사항이 있습니다.
+
+![다음 [!UICONTROL 스키마 만들기] 을 사용한 워크플로우 [!UICONTROL XDM 개별 프로필] 옵션 및 [!UICONTROL 다음] 강조 표시됨.](../images/tutorials/create-schema/individual-profile-base-class.png)
+
+클래스를 선택한 후 [!UICONTROL 이름 및 검토] 섹션이 나타납니다. 이 섹션에서는 스키마를 식별하기 위한 이름과 설명을 제공합니다. 스키마의 이름을 결정할 때 고려해야 할 몇 가지 중요한 사항이 있습니다.
 
 * 나중에 스키마를 쉽게 찾을 수 있도록 스키마 이름은 짧고 설명적이어야 합니다.
 * 스키마 이름은 고유해야 합니다. 즉, 나중에 다시 사용되지 않을 만큼 구체적이어야 합니다. 예를 들어 조직에 다른 브랜드에 대한 별도의 충성도 프로그램이 있는 경우 나중에 정의할 수 있는 다른 충성도 관련 스키마와 쉽게 구분할 수 있도록 스키마 이름을 &quot;브랜드 A 충성도 멤버&quot;로 지정하는 것이 좋습니다.
@@ -68,37 +67,55 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 를 만들�
 
 이 자습서에서는 충성도 프로그램의 구성원과 관련된 데이터를 수집하기 위한 스키마를 구성하므로 스키마 이름이 &quot;로 지정됩니다.[!DNL Loyalty Members]&quot;.
 
+&#x200B; 선택한 클래스와 스키마 구조를 검토하고 확인할 수 있도록 스키마의 기본 구조(클래스에서 제공)가 캔버스에 표시됩니다.
+
+친숙한 사용자 입력 [!UICONTROL 스키마 표시 이름] 텍스트 필드에서 다음을 수행합니다. 그런 다음 스키마를 식별하는 데 도움이 되는 적절한 설명을 입력합니다. 스키마 구조를 검토하고 설정이 마음에 들면 을 선택합니다. **[!UICONTROL 완료]** 을 클릭하여 스키마를 만듭니다.
+
+![다음 [!UICONTROL 이름 및 검토] 의 섹션 [!UICONTROL 스키마 만들기] 을 사용한 워크플로우 [!UICONTROL 스키마 표시 이름], [!UICONTROL 설명], 및 [!UICONTROL 완료] 강조 표시됨.](../images/ui/resources/schemas/name-and-review.png)
+
+다음 [!DNL Schema Editor] 가 표시됩니다. 스키마를 구성할 캔버스입니다. 자체 제목 스키마는에서 자동으로 만들어집니다. **[!UICONTROL 구조]** 선택한 기본 클래스에 포함된 표준 필드와 함께 편집기에 도착할 때 캔버스의 섹션입니다. 스키마에 할당된 클래스도 아래에 나열됩니다. **[!UICONTROL 클래스]** 위치: **[!UICONTROL 컴포지션]** 섹션.
+
+>[!NOTE]
+>
+>에서 스키마에 대한 표시 이름 및 설명(선택 사항)을 업데이트할 수 있습니다.  **[!UICONTROL 스키마 속성]** 사이드바. 새 이름을 입력하면 스키마의 새 이름을 반영하도록 캔버스가 자동으로 업데이트됩니다.
+
+![기본 클래스와 스키마 다이어그램이 강조 표시된 스키마 편집기.](../images/tutorials/create-schema/loyalty-members-schema-editor.png)
+
+>[!NOTE]
+>
+>다음을 수행할 수 있습니다. [스키마 클래스 변경](#change-class) 스키마가 저장되기 전에 초기 구성 프로세스 중에 언제든지 이 작업을 수행할 수 있지만 주의하여 수행해야 합니다. 필드 그룹은 특정 클래스와만 호환되므로 클래스를 변경하면 캔버스와 추가한 모든 필드가 재설정됩니다.
+
 ## 필드 그룹 추가 {#field-group}
 
 이제 필드 그룹을 추가하여 스키마에 필드를 추가할 수 있습니다. 필드 그룹은 특정 개념을 설명하는 데 종종 함께 사용되는 하나 이상의 필드 그룹입니다. 이 자습서에서는 필드 그룹을 사용하여 충성도 프로그램의 구성원을 설명하고 이름, 생일, 전화 번호, 주소 등의 주요 정보를 캡처합니다.
 
 필드 그룹을 추가하려면 다음을 선택합니다 **[!UICONTROL 추가]** 다음에서 **[!UICONTROL 필드 그룹]** 하위 섹션.
 
-![](../images/tutorials/create-schema/add-field-group-button.png)
+![필드 그룹 추가 버튼이 강조 표시된 스키마 편집기.](../images/tutorials/create-schema/add-field-group-button.png)
 
 사용 가능한 필드 그룹 목록을 표시하는 새 대화 상자가 나타납니다. 각 필드 그룹은 특정 클래스와 함께 사용하기 위한 것이므로 선택한 클래스와 호환되는 필드 그룹만 대화 상자에 나열됩니다(이 경우 [!DNL XDM Individual Profile] class). 표준 XDM 클래스를 사용하는 경우 필드 그룹 목록은 사용 빈도에 따라 지능적으로 정렬됩니다.
 
-![](../images/tutorials/create-schema/field-group-popularity.png)
+![다음 [!UICONTROL 필드 그룹 추가] 대화 상자.](../images/tutorials/create-schema/field-group-popularity.png)
 
 왼쪽 레일에서 필터 중 하나를 선택하여 표준 필드 그룹 목록을 특정 목록으로 좁힐 수 있습니다 [업종](../schema/industries/overview.md) 소매, 금융 서비스, 의료 서비스 등 다양한 서비스를 제공합니다.
 
-![](../images/tutorials/create-schema/industry-field-groups.png)
+![다음 [!UICONTROL 필드 그룹 추가] 업계 필드 그룹이 강조 표시된 대화 상자.](../images/tutorials/create-schema/industry-field-groups.png)
 
 목록에서 필드 그룹을 선택하면 오른쪽 레일에 표시됩니다. 원할 경우 여러 필드 그룹을 선택하고 확인하기에 앞서 각 필드 그룹을 오른쪽 레일의 목록에 추가할 수 있습니다. 또한 현재 선택한 필드 그룹의 오른쪽에 아이콘이 표시되어 제공되는 필드의 구조를 미리 볼 수 있습니다.
 
-![](../images/tutorials/create-schema/preview-field-group-button.png)
+![다음 [!UICONTROL 필드 그룹 추가] 선택한 필드 그룹 미리 보기 아이콘이 강조 표시된 대화 상자.](../images/tutorials/create-schema/preview-field-group-button.png)
 
 필드 그룹을 미리 볼 때 필드 그룹의 스키마에 대한 자세한 설명이 오른쪽 레일에 제공됩니다. 제공된 캔버스에서 필드 그룹의 필드를 탐색할 수도 있습니다. 다른 필드를 선택하면 오른쪽 레일이 업데이트되어 해당 필드에 대한 세부 정보가 표시됩니다. 선택 **[!UICONTROL 뒤로]** 미리 보기를 완료하여 필드 그룹 선택 대화 상자로 돌아가는 경우.
 
-![](../images/tutorials/create-schema/preview-field-group.png)
+![다음 [!UICONTROL 필드 그룹 미리 보기] 인구 통계 세부 정보 필드 그룹을 미리 본 대화 상자.](../images/tutorials/create-schema/preview-field-group.png)
 
 이 자습서에서 **[!UICONTROL 인구 통계 세부 정보]** 필드 그룹을 선택한 다음 **[!UICONTROL 필드 그룹 추가]**.
 
-![](../images/tutorials/create-schema/demographic-details.png)
+![다음 [!UICONTROL 필드 그룹 추가] 인구 통계 세부 정보 필드 그룹이 선택되어 있고 [!UICONTROL 필드 그룹 추가] 강조 표시됨.](../images/tutorials/create-schema/demographic-details.png)
 
 스키마 캔버스가 다시 나타납니다. 다음 **[!UICONTROL 필드 그룹]** 섹션에 이제 &quot; 목록이 표시됩니다.[!UICONTROL 인구 통계 세부 정보]&quot; 및 **[!UICONTROL 구조]** 섹션에는 필드 그룹에서 기여한 필드가 포함됩니다. 아래에서 필드 그룹의 이름을 선택할 수 있습니다 **[!UICONTROL 필드 그룹]** 섹션을 통해 캔버스 내에서 제공하는 특정 필드를 강조 표시합니다.
 
-![](../images/tutorials/create-schema/demographic-details-structure.png)
+![인구 통계 세부 정보 필드 그룹이 강조 표시된 스키마 편집기.](../images/tutorials/create-schema/demographic-details-structure.png)
 
 이 필드 그룹은 최상위 수준 이름 아래에 여러 필드를 기여합니다. `person` (데이터 유형 포함)[!UICONTROL 개인]&quot;. 이 필드 그룹은 이름, 생년월일 및 성별을 포함하여 개인에 대한 정보를 설명합니다.
 
@@ -116,11 +133,11 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 를 만들�
 
 이 자습서에서는 표준 필드 그룹을 선택합니다 **[!UICONTROL 개인 연락처 세부 정보]** 및 **[!UICONTROL 고객 충성도 세부 정보]** 목록에서 을(를) 선택한 다음 **[!UICONTROL 필드 그룹 추가]** 를 클릭하여 스키마에 추가합니다.
 
-![](../images/tutorials/create-schema/more-field-groups.png)
+![다음 [!UICONTROL 필드 그룹 추가] 두 개의 새 필드 그룹이 선택되고 [!UICONTROL 필드 그룹 추가] 강조 표시됨.](../images/tutorials/create-schema/more-field-groups.png)
 
 아래에 추가된 필드 그룹이 나열된 캔버스가 다시 나타납니다. **[!UICONTROL 필드 그룹]** 다음에서 **[!UICONTROL 컴포지션]** 섹션 및 스키마 구조에 추가된 해당 합성 필드
 
-![](../images/tutorials/create-schema/updated-structure.png)
+![새 복합 스키마 구조가 강조 표시된 스키마 편집기.](../images/tutorials/create-schema/updated-structure.png)
 
 ## 사용자 정의 필드 그룹 정의 {#define-field-group}
 
@@ -133,7 +150,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 를 만들�
 
 새 필드 그룹을 만들려면 **[!UICONTROL 추가]** 다음에서 **[!UICONTROL 필드 그룹]** 이전과 같은 하위 섹션이지만 이번에는 **[!UICONTROL 새 필드 그룹 만들기]** 표시되는 대화 상자의 상단 근처에 있습니다. 그런 다음 새 필드 그룹의 표시 이름과 설명을 입력하라는 메시지가 표시됩니다. 이 자습서의 경우 새 필드 그룹의 이름을 로 지정합니다.[!DNL Custom Loyalty Details]&quot;, 그런 다음 선택 **[!UICONTROL 필드 그룹 추가]**.
 
-![](../images/tutorials/create-schema/create-new-field-group.png)
+![다음 [!UICONTROL 필드 그룹 추가] 대화 상자 [!UICONTROL 새 필드 그룹 만들기], [!UICONTROL 표시 이름] 및 [!UICONTROL 설명] 강조 표시됨.](../images/tutorials/create-schema/create-new-field-group.png)
 
 >[!NOTE]
 >
@@ -147,11 +164,11 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 를 만들�
 
 시작하려면 다음을 선택합니다 **더하기(+)** (캔버스에서 스키마 이름 옆에 있는 아이콘)
 
-![](../images/tutorials/create-schema/add-field.png)
+![더하기 아이콘이 강조 표시된 스키마 편집기.](../images/tutorials/create-schema/add-field.png)
 
 An &quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스에 나타나고 오른쪽 레일이 업데이트되어 필드에 대한 구성 옵션이 표시됩니다.
 
-![](../images/tutorials/create-schema/untitled-field.png)
+![스키마 편집기 [!UICONTROL 제목 없는 필드] 및 스키마 [!UICONTROL 필드 속성] 강조 표시됨.](../images/tutorials/create-schema/untitled-field.png)
 
 이 시나리오에서는 스키마에 개인의 현재 충성도 계층을 자세히 설명하는 오브젝트 유형 필드가 있어야 합니다. 오른쪽 레일의 컨트롤을 사용하여 `loyaltyTier` 유형이 &quot; &quot;인 필드[!UICONTROL 오브젝트]&quot;관련 필드를 보관하는 데 사용됩니다.
 
@@ -159,11 +176,11 @@ An &quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스�
 
 완료되면 다음을 선택합니다. **[!UICONTROL 적용]**.
 
-![](../images/tutorials/create-schema/loyalty-tier-object.png)
+![충성도 계층 개체가 스키마에 추가된 스키마 편집기 [!UICONTROL 필드 속성] 강조 표시됨.](../images/tutorials/create-schema/loyalty-tier-object.png)
 
 변경 사항이 적용되고 새로 생성됩니다 `loyaltyTier` 개체가 나타납니다. 이 필드는 사용자 지정 필드이므로 조직의 테넌트 ID로 이름이 지정된 오브젝트 내에 밑줄(`_tenantId` 이 예제에서).
 
-![](../images/tutorials/create-schema/tenant-id.png)
+![스키마 다이어그램에서 테넌트 ID 및 충성도 계층이 강조 표시된 스키마 편집기.](../images/tutorials/create-schema/tenant-id.png)
 
 >[!NOTE]
 >
@@ -173,7 +190,7 @@ An &quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스�
 
 다음 항목 선택 **더하기(+)** 아이콘 옆에 있는 `loyaltyTier` 하위 필드 추가를 시작할 개체입니다. 새 필드 자리 표시자가 나타나고 **[!UICONTROL 필드 속성]** 섹션은 캔버스의 오른쪽에 표시됩니다.
 
-![](../images/tutorials/create-schema/new-field-in-loyalty-tier-object.png)
+![테넌트 ID와 새 하위 필드가 있는 스키마 편집기는 스키마 다이어그램의 충성도 계층에 추가됩니다.](../images/tutorials/create-schema/new-field-in-loyalty-tier-object.png)
 
 각 필드에는 다음 정보가 필요합니다.
 
@@ -186,11 +203,11 @@ An &quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스�
 
 에 대한 첫 번째 필드 `loyaltyTier` 개체가 라는 문자열이 됩니다. `id`충성도 멤버의 현재 계층의 ID를 나타냅니다. 이 회사는 서로 다른 요인에 따라 각 고객에 대해 서로 다른 충성도 계층 포인트 임계값을 설정하므로 계층 ID는 각 충성도 멤버에 대해 고유합니다. 새 필드의 유형을 (으)로 설정[!UICONTROL 문자열]&quot; 및 **[!UICONTROL 필드 속성]** 섹션은 기본값, 형식 및 최대 길이를 포함한 구속 적용을 위한 여러 옵션으로 채워집니다.
 
-![](../images/tutorials/create-schema/string-constraints.png)
+![새 ID 필드에 대한 필드 속성 값이 강조 표시된 스키마 편집기.](../images/tutorials/create-schema/string-constraints.png)
 
 다음 이후 `id` 은(는) 임의로 생성된 자유 형식 문자열이며, 더 이상 제약 조건이 필요하지 않습니다. 선택 **[!UICONTROL 적용]** 변경 사항을 적용합니다.
 
-![](../images/tutorials/create-schema/id-field-added.png)
+![ID 필드가 추가되고 강조 표시된 스키마 편집기.](../images/tutorials/create-schema/id-field-added.png)
 
 ## 필드 그룹에 더 많은 필드 추가 {#field-group-fields-2}
 
@@ -204,7 +221,7 @@ An &quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스�
 
 완료되면 `loyaltyTier` 개체에는 다음 필드가 포함됩니다. `id`, `currentThreshold`, `nextThreshold`, 및 `effectiveDate`.
 
-![](../images/tutorials/create-schema/loyalty-tier-object-fields.png)
+![충성도 계층 개체가 강조 표시된 스키마 편집기.](../images/tutorials/create-schema/loyalty-tier-object-fields.png)
 
 ## 필드 그룹에 열거형 필드 추가 {#enum}
 
@@ -226,7 +243,7 @@ An &quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스�
 
 이 자습서의 경우 `loyaltyTier` 스키마의 객체에는 계층 클래스를 설명하는 새 열거형 필드가 필요합니다. 여기서 값은 네 가지 옵션 중 하나일 수 있습니다. 이 필드를 스키마에 추가하려면 **더하기(+)** 아이콘 옆에 있는 `loyaltyTier` 을(를) 개체화하고 필수 필드 입력 **[!UICONTROL 필드 이름]** 및 **[!UICONTROL 표시 이름]**. 대상 **[!UICONTROL 유형]**, 선택[!UICONTROL 문자열]&quot;.
 
-![](../images/tutorials/create-schema/tier-class-type.png)
+![계층 클래스 개체가 추가되고 강조 표시된 스키마 편집기 [!UICONTROL 필드 속성].](../images/tutorials/create-schema/tier-class-type.png)
 
 해당 유형을 선택한 후 필드에 대한 추가 확인란이 나타나며, 여기에는 **[!UICONTROL 배열]**, **[!UICONTROL 열거형 및 제안된 값]**, **[!UICONTROL 신원]**, 및 **[!UICONTROL 관계]**.
 
@@ -234,7 +251,7 @@ An &quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스�
 
 모든 필드 속성을 완료했으면 다음을 선택합니다 **[!UICONTROL 적용]** 을(를) 추가하려면 `tierClass` 필드 대상 `loyaltyTier` 개체.
 
-![](../images/tutorials/create-schema/tier-class-enum.png)
+![열거형 및 제안 값 필드 속성이 다음으로 완료됨 [!UICONTROL 적용] 강조 표시됨.](../images/tutorials/create-schema/tier-class-enum.png)
 
 ## 다중 필드 개체를 데이터 형식으로 변환 {#datatype}
 
@@ -244,11 +261,11 @@ An &quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스�
 
 변환 `loyaltyTier` 데이터 형식에 대한 개체에서 `loyaltyTier` 캔버스의 필드를 선택한 다음 을(를) 선택합니다. **[!UICONTROL 새 데이터 유형으로 전환]** 의 편집기 오른쪽 **[!UICONTROL 필드 속성]**.
 
-![](../images/tutorials/create-schema/convert-data-type.png)
+![loyaltyTier 개체와 가 있는 스키마 편집기 [!UICONTROL 새 데이터 유형으로 전환] 강조 표시됨.](../images/tutorials/create-schema/convert-data-type.png)
 
 객체가 성공적으로 전환되었음을 확인하는 알림이 표시됩니다. 이제 캔버스에서 다음을 확인할 수 있습니다. `loyaltyTier` 이제 필드에는 링크 아이콘이 있고 오른쪽 레일은 데이터 유형이 &quot;&quot;임을 나타냅니다.[!DNL Loyalty Tier]&quot;.
 
-![](../images/tutorials/create-schema/loyalty-tier-data-type.png)
+![loyaltyTier 개체와 새 표시 이름이 강조 표시된 스키마 편집기.](../images/tutorials/create-schema/loyalty-tier-data-type.png)
 
 향후 스키마에서 필드를 &quot;&quot;로 할당할 수 있습니다.[!DNL Loyalty Tier]&quot;유형 및 에는 ID, 계층 클래스, 포인트 임계값 및 유효 일자에 대한 필드가 자동으로 포함됩니다.
 
@@ -260,11 +277,11 @@ An &quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스�
 
 이제 스키마에는 기본 클래스에서 제공한 필드 외에도 여러 필드 그룹이 포함됩니다. 더 큰 스키마로 작업할 때 왼쪽 레일에서 필드 그룹 이름 옆에 있는 확인란을 선택하여 표시된 필드를 관심 있는 필드 그룹에서 제공한 필드로만 필터링할 수 있습니다.
 
-![](../images/tutorials/create-schema/filter-by-field-group.png)
+![스키마 다이어그램의 크기를 줄이기 위해 스키마 편집기의 필드 그룹 섹션에서 일부 확인란이 선택되었습니다.](../images/tutorials/create-schema/filter-by-field-group.png)
 
 스키마에서 특정 필드를 찾는 경우 검색 창을 사용하면 제공된 필드 그룹에 관계없이 표시된 필드를 이름별로 필터링할 수도 있습니다.
 
-![](../images/tutorials/create-schema/search.png)
+![관련 결과가 캔버스에 강조 표시된 스키마 편집기의 검색 필드.](../images/tutorials/create-schema/search.png)
 
 >[!IMPORTANT]
 >
@@ -292,7 +309,7 @@ An &quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스�
 
 다음으로, 다음을 제공해야 합니다. **[!UICONTROL ID 네임스페이스]** 드롭다운의 사전 정의된 네임스페이스 목록에서 입니다. 이 필드는 고객의 이메일 주소이므로 &quot;[!UICONTROL 이메일]드롭다운에서 &quot;을 클릭합니다. 선택 **[!UICONTROL 적용]** 에 대한 업데이트를 확인하려면 `personalEmail.address` 필드.
 
-![](../images/tutorials/create-schema/primary-identity.png)
+![이메일 주소가 강조 표시되고 기본 ID 확인란이 활성화된 스키마 편집기.](../images/tutorials/create-schema/primary-identity.png)
 
 >[!NOTE]
 >
@@ -300,7 +317,7 @@ An &quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스�
 
 변경 사항을 적용한 다음에 대한 아이콘 `personalEmail.address` 현재 id 필드임을 나타내는 지문 기호를 표시합니다. 필드는 아래의 왼쪽 레일에도 나열됩니다 **[!UICONTROL ID]**.
 
-![](../images/tutorials/create-schema/identity-applied.png)
+![이메일 주소가 강조 표시되고 ID 필드가 스키마 구성 사이드바에서 강조 표시된 스키마 편집기.](../images/tutorials/create-schema/identity-applied.png)
 
 이제 모든 데이터가 `personalEmail.address` 필드는 해당 개인을 식별하고 해당 고객에 대한 단일 보기를 결합하는 데 사용됩니다. 에서 ID 작업에 대해 자세히 알아보려면 [!DNL Experience Platform], 다음을 검토하십시오. [[!DNL Identity Service]](../../identity-service/home.md) 설명서를 참조하십시오.
 
@@ -310,23 +327,31 @@ An &quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스�
 
 스키마를에 사용할 수 있도록 설정 [!DNL Real-Time Customer Profile]에 기본 ID가 정의되어 있어야 합니다. 기본 ID를 먼저 정의하지 않고 스키마를 활성화하려고 하면 오류 메시지가 표시됩니다.
 
-![](../images/tutorials/create-schema/missing-primary-identity.png)
+![기본 ID 누락 대화 상자](../images/tutorials/create-schema/missing-primary-identity.png)
 
 에서 사용할 &quot;충성도 멤버&quot; 스키마를 활성화하려면 [!DNL Profile], 캔버스에서 스키마 제목을 선택하는 것부터 시작합니다.
 
 편집기의 오른쪽에는 표시 이름, 설명 및 유형을 포함한 스키마에 대한 정보가 표시됩니다. 이 정보 외에도 **[!UICONTROL 프로필]** 토글 단추.
 
-![](../images/tutorials/create-schema/profile-toggle.png)
+![스키마 루트 및 프로필에 대해 활성화 토글이 강조 표시된 스키마 편집기.](../images/tutorials/create-schema/profile-toggle.png)
 
 선택 **[!UICONTROL 프로필]** 에 대해 스키마를 활성화할지 확인하는 팝오버가 나타납니다 [!DNL Profile].
 
-![](../images/tutorials/create-schema/enable-profile.png)
+![프로필 확인 활성화 대화 상자](../images/tutorials/create-schema/enable-profile.png)
 
 >[!WARNING]
 >
 >다음에 대한 스키마가 활성화되면 [!DNL Real-Time Customer Profile] 저장되면 비활성화할 수 없습니다.
 
 선택 **[!UICONTROL 사용]** 선택을 확인합니다. 다음을 선택할 수 있습니다. **[!UICONTROL 프로필]** 원하는 경우 다시 전환하여 스키마를 비활성화하지만 이후에 스키마가 저장되면 [!DNL Profile] 이(가) 활성화되었으므로 더 이상 비활성화할 수 없습니다.
+
+## 추가 작업
+
+스키마 편집기 내에서 빠른 작업을 수행하여 스키마의 JSON 구조를 복사하거나, 실시간 고객 프로필에 대해 활성화되지 않았거나 관련 데이터 세트가 있는 경우 스키마를 삭제할 수도 있습니다. 선택 [!UICONTROL 자세히] 빠른 작업과 함께 드롭다운을 표시하려면 보기 맨 위에 놓습니다.
+
+JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라인을 작성하는 동안 샘플 페이로드가 어떻게 표시되는지 확인할 수 있습니다. 특히 ID 맵과 같은 스키마에 복잡한 객체 맵 구조가 있는 경우에 유용합니다.
+
+![기타 버튼이 강조 표시되고 드롭다운 옵션이 표시된 스키마 편집기.](../images/tutorials/create-schema/more-actions.png)
 
 ## 다음 단계 및 추가 리소스
 

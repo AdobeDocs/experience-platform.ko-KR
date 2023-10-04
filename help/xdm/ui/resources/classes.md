@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 클래스 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 클래스를 만들고 편집하는 방법을 알아봅니다.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
+source-git-commit: 640d3ca0d3c227306436f2e653ef66fdc8ebd31c
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1457'
 ht-degree: 5%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 Adobe Experience Platform에서 스키마의 클래스는 스키마에 포함될 데이터의 동작 측면(레코드 또는 시계열)을 정의합니다. 이 외에도 클래스는 해당 클래스를 기반으로 하는 모든 스키마가 포함해야 하는 가장 적은 수의 공통 속성을 설명하고 여러 호환되는 데이터 세트가 병합될 수 있는 방법을 제공합니다.
 
-Adobe은 다음을 포함한 몇 가지 표준(&quot;코어&quot;) 경험 데이터 모델(XDM) 클래스를 제공합니다. [!DNL XDM Individual Profile] 및 [!DNL XDM ExperienceEvent]. 이러한 핵심 클래스 외에도 사용자 정의 클래스를 만들어 조직의 보다 구체적인 사용 사례를 설명할 수도 있습니다.
+Adobe은 XDM 개인 프로필 및 XDM ExperienceEvent를 비롯한 여러 표준(&quot;코어&quot;) 경험 데이터 모델(XDM) 클래스를 제공합니다. 이러한 핵심 클래스 외에도 사용자 정의 클래스를 만들어 조직의 보다 구체적인 사용 사례를 설명할 수도 있습니다.
 
 이 문서에서는 Experience Platform UI에서 사용자 정의 클래스를 만들고, 편집하고, 관리하는 방법에 대한 개요를 제공합니다.
 
@@ -28,7 +28,7 @@ Adobe은 다음을 포함한 몇 가지 표준(&quot;코어&quot;) 경험 데이
 
 이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. 다음을 참조하십시오. [XDM 개요](../../home.md) Experience Platform 에코시스템 내에서 XDM의 역할 소개 및 [스키마 컴포지션 기본 사항](../../schema/composition.md) 클래스가 XDM 스키마에 기여하는 방법을 알아봅니다.
 
-이 안내서에서는 필요하지 않지만, [UI에서 스키마 작성](../../tutorials/create-schema-ui.md) 의 다양한 기능에 익숙해지려면 [!DNL Schema Editor].
+이 안내서에서는 필요하지 않지만, [UI에서 스키마 작성](../../tutorials/create-schema-ui.md) 스키마 편집기의 다양한 기능에 익숙해질 수 있습니다.
 
 ## 시작하기
 
@@ -42,29 +42,25 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 스키마]** 을(를) 왼�
 
 >[!TIP]
 >
->작업 영역의 검색 기능을 사용하여 스키마를 더 쉽게 찾을 수 있습니다. 다음 안내서를 참조하십시오 [xdm 리소스 살펴보기](../explore.md) 추가 정보.
+>검색 기능을 사용하여 이름을 기반으로 클래스를 필터링하거나 찾습니다. 다음 안내서를 참조하십시오 [xdm 리소스 살펴보기](../explore.md) 추가 정보.
 
 ## 새 클래스 만들기 {#create}
 
-Platform UI에서 클래스를 만드는 방법에는 두 가지가 있습니다. 의 탭에서 **[!UICONTROL 스키마]** 작업 영역, 선택 **[!UICONTROL 스키마 만들기]**&#x200B;또는 [!UICONTROL 클래스] 탭 선택 **[!UICONTROL 클래스 만들기]**.
+Platform UI에서 클래스를 만드는 방법에는 두 가지가 있습니다. 의 탭에서 [!UICONTROL 스키마] 작업 영역, 선택 **[!UICONTROL 스키마 만들기]**&#x200B;또는 [!UICONTROL 클래스] 탭 선택 **[!UICONTROL 클래스 만들기]**.
 
 ![다음 [!UICONTROL 클래스] 의 탭 [!UICONTROL 스키마] 작업 공간 [!UICONTROL 스키마 만들기] 및 [!UICONTROL 클래스 만들기] 강조 표시됨](../../images/ui/resources/classes/create-class-methods.png)
 
-다음을 선택하는 경우 **[!UICONTROL 클래스 만들기]**, [!UICONTROL 클래스 만들기] 대화 상자가 나타납니다. 입력 [!UICONTROL 이름] 및 [!UICONTROL 설명] 클래스에 대해 라디오 단추를 사용하여 클래스의 의도한 동작을 선택합니다. 클래스는 레코드 계열 또는 시계열이 될 수 있습니다. 선택 **[!UICONTROL 만들기]** 을 클릭하여 선택 항목을 확인합니다.
+다음을 선택하는 경우 **[!UICONTROL 클래스 만들기]**, [!UICONTROL 클래스 만들기] 대화 상자가 나타납니다. 입력 [!UICONTROL 표시 이름] 및 [!UICONTROL 설명] 클래스에 대해 라디오 단추를 사용하여 클래스의 의도한 동작을 선택합니다. 클래스는 유형, 레코드 계열 또는 시계열일 수 있습니다. 선택 **[!UICONTROL 만들기]** 선택 사항을 확인하고 [!UICONTROL 클래스] 탭.
 
 ![다음 [!UICONTROL 클래스 만들기] 대화 상자 [!UICONTROL 만들기] 강조 표시됨.](../../images/ui/resources/classes/create-class-dialog.png)
 
-다음 [!DNL Schema Editor] 이 나타나고 방금 만든 사용자 지정 클래스를 기반으로 하는 새 스키마가 캔버스에 표시됩니다. 아직 클래스에 추가된 필드가 없으므로 스키마에는 `_id` 필드: 의 모든 리소스에 자동으로 적용되는 시스템 생성 고유 식별자를 나타냅니다. [!DNL Schema Registry].
+만든 클래스를 사용할 수 있고에 나열되어 있습니다. [!UICONTROL 클래스] 보기.
 
-![](../../images/ui/resources/classes/schema.png)
-
->[!IMPORTANT]
->
->조직에서 정의한 클래스를 구현하는 스키마를 작성할 때 스키마 필드 그룹은 호환되는 클래스에서만 사용할 수 있습니다. 정의한 클래스가 새로운 클래스이므로 **[!UICONTROL 필드 그룹 추가]** 대화 상자. 대신 다음을 수행해야 합니다. [새 필드 그룹 만들기](./field-groups.md#create) 해당 클래스와 함께 사용합니다. 다음에 새 클래스를 구현하는 스키마를 구성할 때 정의한 필드 그룹이 나열되고 사용할 수 있습니다.
+![다음 [!UICONTROL 클래스] 의 탭 [!UICONTROL 스키마] 최근에 작성된 클래스가 강조 표시된 작업 영역.](../../images/ui/resources/classes/new-class-listing.png)
 
 ### 클래스 만들기 또는 편집 {#create-or-edit}
 
-다음을 선택하는 경우 **[!UICONTROL 스키마 만들기]**, [!UICONTROL 스키마 만들기] 워크플로가 나타납니다. 다음에서 [!UICONTROL 스키마 세부 정보] 섹션, 선택 **[!UICONTROL 기타]**. 사용 가능한 클래스 목록이 나타납니다. 여기에서 새 클래스의 기반이 되는 기존 클래스를 찾아보고 필터링할 수 있습니다.
+또는 을 선택하는 경우 **[!UICONTROL 스키마 만들기]**, [!UICONTROL 스키마 만들기] 워크플로가 나타납니다. 다음에서 [!UICONTROL 스키마 세부 정보] 섹션, 선택 **[!UICONTROL 기타]**. 사용 가능한 클래스 목록이 나타납니다. 여기에서 새 클래스의 기반이 되는 기존 클래스를 찾아보고 필터링할 수 있습니다.
 
 >[!NOTE]
 >
@@ -86,21 +82,25 @@ Platform UI에서 클래스를 만드는 방법에는 두 가지가 있습니다
 
 ![다음 [!UICONTROL 스키마 만들기] 사용 가능한 클래스 및 [!UICONTROL 다음] 강조 표시됨.](../../images/ui/resources/classes/select-class.png)
 
-다음 [!UICONTROL 이름 및 설명] 섹션이 나타납니다. 이 섹션에서 스키마를 식별할 이름 및 설명을 입력합니다. &#x200B;선택한 클래스와 스키마 구조를 검토하고 확인할 수 있도록 스키마의 기본 구조(클래스에서 제공)가 캔버스에 표시됩니다.
+다음 [!UICONTROL 이름 및 검토] 워크플로의 섹션이 나타납니다. 이 섹션에서 스키마를 식별할 이름 및 설명을 입력합니다. &#x200B;선택한 클래스와 스키마 구조를 검토하고 확인할 수 있도록 스키마의 기본 구조(클래스에서 제공)가 캔버스에 표시됩니다.
 
 클래스의 간단하고 설명적이며 고유한 이름을 입력합니다 [!UICONTROL 스키마 표시 이름] 텍스트 필드. 그런 다음 스키마가 정의하는 데이터의 동작을 식별하는 데 적합한 설명을 입력합니다. 스키마 구조를 검토하고 설정이 마음에 들면 을 선택합니다. **[!UICONTROL 완료]** 을 클릭하여 스키마를 만듭니다.
 
 ![다음 [!UICONTROL 이름 및 검토] 의 섹션 [!UICONTROL 스키마 만들기] 을 사용한 워크플로우 [!UICONTROL 스키마 표시 이름], [!UICONTROL 설명], 및 [!UICONTROL 완료] 강조 표시됨.](../../images/ui/resources/classes/name-and-review-class.png)
 
-다음 [!DNL Schema Editor] 캔버스에 스키마 구조가 표시된 상태로 나타납니다. 이제 시작할 수 있습니다. [클래스에 필드 추가](#add-fields).
+스키마 구조가 캔버스에 표시된 스키마 편집기가 나타납니다. 이제 시작할 수 있습니다. [클래스에 필드 추가](#add-fields).
 
-![](../../images/ui/resources/classes/edit.png)
+![캔버스에 스키마 구조가 표시된 스키마 편집기.](../../images/ui/resources/classes/edit.png)
 
 ## 클래스에 필드 추가 {#add-fields}
 
 에 사용자 정의 클래스를 사용하는 스키마가 열려 있는 경우 [!UICONTROL 스키마 편집기]를 클릭하여 클래스에 필드를 추가할 수 있습니다. 새 필드를 추가하려면 **더하기(+)** 스키마 이름 옆에 있는 아이콘.
 
-![](../../images/ui/resources/classes/add-field.png)
+>[!IMPORTANT]
+>
+>조직에서 정의한 클래스를 구현하는 스키마를 작성할 때 스키마 필드 그룹은 호환되는 클래스에서만 사용할 수 있습니다. 정의한 클래스가 새로운 클래스이므로 **[!UICONTROL 필드 그룹 추가]** 대화 상자. 대신 다음을 수행해야 합니다. [새 필드 그룹 만들기](./field-groups.md#create) 해당 클래스와 함께 사용합니다. 다음에 새 클래스를 구현하는 스키마를 구성할 때 정의한 필드 그룹이 나열되고 사용할 수 있습니다.
+
+![추가 버튼이 강조 표시된 스키마 편집기.](../../images/ui/resources/classes/add-field.png)
 
 >[!IMPORTANT]
 >
@@ -108,22 +108,21 @@ Platform UI에서 클래스를 만드는 방법에는 두 가지가 있습니다
 
 An **[!UICONTROL 제목 없는 필드]** 자리 표시자가 캔버스에 나타나고 오른쪽 레일이 업데이트되어 필드의 속성을 구성하는 컨트롤을 표시합니다. 아래 **[!UICONTROL 할당 대상]**, 선택 **[!UICONTROL 클래스]**.
 
-![](../../images/ui/resources/classes/assign-to-class.png)
-
-![](../../images/ui/resources/classes/assign-to-class.png)
+![클래스 할당 필드 속성이 선택되고 강조 표시된 스키마 편집기 캔버스의 제목 없는 필드.](../../images/ui/resources/classes/assign-to-class.png)
 
 다음 안내서를 참조하십시오 [UI의 필드 정의](../fields/overview.md#define) 를 사용하여 필드를 구성하고 클래스에 추가하는 방법에 대한 구체적인 단계를 살펴보십시오. 클래스에 필요한 만큼 필드를 계속 추가합니다. 완료되면 다음을 선택합니다. **[!UICONTROL 저장]** 를 클릭하여 스키마와 클래스를 모두 저장합니다.
 
-![](../../images/ui/resources/classes/save.png)
+![스키마 편집기의 캔버스에 새로 생성된 스키마 [!UICONTROL 저장] 강조 표시됨.](../../images/ui/resources/classes/save.png)
 
 이 클래스를 사용하는 스키마를 이전에 생성한 경우에는 새로 추가된 필드가 해당 스키마에 자동으로 표시됩니다.
 
 ## 스키마 클래스 변경 {#schema}
 
-저장하기 전에 초기 생성 프로세스 중에 언제든지 스키마 클래스를 변경할 수 있습니다. 다음 안내서를 참조하십시오 [스키마 생성 및 편집](./schemas.md#change-class) 추가 정보.
+저장하기 전에 초기 생성 프로세스 중에 언제든지 스키마 클래스를 변경할 수 있습니다. 그러나 필드 그룹은 특정 클래스와만 호환되므로 이 작업은 주의하여 수행해야 합니다. 클래스를 변경하면 캔버스와 추가한 모든 필드가 재설정됩니다.
+다음 안내서를 참조하십시오 [스키마 생성 및 편집](./schemas.md#change-class) 추가 정보.
 
 ## 다음 단계
 
 이 문서에서는 Platform UI를 사용하여 클래스를 만들고 편집하는 방법에 대해 다룹니다. 의 기능에 대한 자세한 내용 [!UICONTROL 스키마] 작업 영역에서 다음을 참조하십시오 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md).
 
-을 사용하여 클래스를 관리하는 방법에 대해 알아보려면 [!DNL Schema Registry] API에서 다음을 참조하십시오. [클래스 끝점 안내서](../../api/classes.md).
+스키마 레지스트리 API를 사용하여 클래스를 관리하는 방법에 대한 자세한 내용은 [클래스 끝점 안내서](../../api/classes.md).
