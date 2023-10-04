@@ -2,10 +2,10 @@
 title: ID 네임스페이스 개요
 description: ID 서비스의 ID 네임스페이스에 대해 알아봅니다.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 36a42a7c3722828776495359762289d0028b6ddc
+source-git-commit: 3e4f79620d1f1b08684223214980ecbfdfa10a38
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -90,7 +90,7 @@ Experience Platform은 모든 조직에서 사용할 수 있는 여러 ID 네임
 | 전화(E.164) | E.164 형식으로 해시해야 하는 원시 전화 번호를 나타내는 네임스페이스입니다. E.164 형식에는 더하기 기호(`+`), 국제 국가 호출 코드, 현지 지역 코드 및 전화번호. 예: `(+)(country code)(area code)(phone number)`. |
 | 전화(SHA256) | SHA256을 사용하여 해시해야 하는 전화 번호를 나타내는 네임스페이스입니다. 기호, 문자 및 앞에 오는 0을 제거해야 합니다. 국가 호출 코드도 접두사로 추가해야 합니다. |
 | 전화(SHA256_E.164) | SHA256과 E.164 형식을 모두 사용하여 해시해야 하는 원시 전화 번호를 나타내는 네임스페이스입니다. |
-| TNTID | Adobe Target을 나타내는 네임스페이스입니다. 에 대한 다음 문서를 참조하십시오. [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) 자세한 내용을 확인하십시오. |
+| TNTID | Adobe Target을 나타내는 네임스페이스입니다. 에 대한 다음 문서를 참조하십시오. [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) 추가 정보. |
 | Windows AID | Windows 광고 ID를 나타내는 네임스페이스입니다. 에 대한 다음 문서를 참조하십시오. [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) 추가 정보. |
 
 ### ID 네임스페이스 보기 {#view-identity-namespaces}
