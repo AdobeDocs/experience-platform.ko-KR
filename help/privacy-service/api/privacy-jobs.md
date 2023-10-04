@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 개인 정보 작업 API 엔드포인트
 description: Privacy Service API를 사용하여 Experience Cloud 애플리케이션에 대한 개인 정보 작업을 관리하는 방법을 알아봅니다.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 1%
@@ -36,7 +36,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{REGULATION}` | 쿼리할 규정 유형. 허용되는 값은 다음과 같습니다. <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li><li>`cpa`</li><li>`ctdpa`</li></ul><br>의 개요 보기 [지원되는 규정](../regulations/overview.md) 위의 값이 나타내는 개인 정보 보호 규정에 대한 자세한 정보입니다. |
+| `{REGULATION}` | 쿼리할 규정 유형. 허용되는 값은 다음과 같습니다. <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`pdpd_vnm`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>의 개요 보기 [지원되는 규정](../regulations/overview.md) 위의 값이 나타내는 개인 정보 보호 규정에 대한 자세한 정보입니다. |
 | `{PAGE}` | 0 기반 번호 매기기를 사용하여 표시할 데이터 페이지입니다. 기본값은 `0`입니다. |
 | `{SIZE}` | 각 페이지에 표시할 결과 수. 기본값은 입니다 `1` 최대값은 입니다. `100`. 최대값을 초과하면 API가 400 코드 오류를 반환합니다. |
 
@@ -159,14 +159,14 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `companyContexts` **(필수 여부)** | 조직의 인증 정보가 포함된 배열입니다. 나열된 각 식별자에는 다음 속성이 포함됩니다. <ul><li>`namespace`: 식별자의 네임스페이스입니다.</li><li>`value`: 식별자의 값입니다.</li></ul>다음과 같습니다. **필수** 식별자 중 하나가 `imsOrgId` as its `namespace`, 포함 `value` 조직의 고유 ID를 포함합니다. <br/><br/>추가 식별자는 제품별 회사 한정자일 수 있습니다(예: `Campaign`) - 조직에 속한 Adobe 애플리케이션과의 통합을 식별합니다. 잠재적 값에는 계정 이름, 클라이언트 코드, 테넌트 ID 또는 기타 애플리케이션 식별자가 포함됩니다. |
-| `users` **(필수 여부)** | 액세스하거나 삭제하려는 정보를 가진 하나 이상의 사용자 컬렉션이 포함된 배열입니다. 단일 요청에서 최대 1000개의 사용자 ID를 제공할 수 있습니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`: 응답 데이터에서 개별 작업 ID를 구분하는 데 사용되는 사용자의 식별자입니다. 이 값을 쉽게 참조하거나 나중에 조회할 수 있도록 고유하고 쉽게 식별 가능한 문자열을 선택하는 것이 좋습니다.</li><li>`action`: 사용자 데이터에 대해 수행할 작업을 나열하는 배열입니다. 수행하려는 작업에 따라 이 배열에는 다음이 포함되어야 합니다. `access`, `delete`또는 둘 다.</li><li>`userIDs`: 사용자의 ID 컬렉션입니다. 단일 사용자가 가질 수 있는 ID의 수는 9개로 제한됩니다. 각 ID는 `namespace`, a `value`및 네임스페이스 한정자(`type`). 다음을 참조하십시오. [부록](appendix.md) 이러한 필수 속성에 대해 자세히 알아보십시오.</li></ul> 에 대한 자세한 설명은 `users` 및 `userIDs`, 다음을 참조하십시오. [문제 해결 안내서](../troubleshooting-guide.md#user-ids). |
-| `include` **(필수 여부)** | 처리에 포함할 Adobe 제품의 배열입니다. 이 값이 없거나 비어 있으면 요청이 거부됩니다. 조직이 통합한 제품만 포함합니다. 의 섹션을 참조하십시오. [허용된 제품 값](appendix.md) 자세한 내용은 부록에서 확인하십시오. |
+| `companyContexts` **(필수)** | 조직의 인증 정보가 포함된 배열입니다. 나열된 각 식별자에는 다음 속성이 포함됩니다. <ul><li>`namespace`: 식별자의 네임스페이스입니다.</li><li>`value`: 식별자의 값입니다.</li></ul>다음과 같습니다. **필수** 식별자 중 하나가 `imsOrgId` as its `namespace`, 포함 `value` 조직의 고유 ID를 포함합니다. <br/><br/>추가 식별자는 제품별 회사 한정자일 수 있습니다(예: `Campaign`) - 조직에 속한 Adobe 애플리케이션과의 통합을 식별합니다. 잠재적 값에는 계정 이름, 클라이언트 코드, 테넌트 ID 또는 기타 애플리케이션 식별자가 포함됩니다. |
+| `users` **(필수)** | 액세스하거나 삭제하려는 정보를 가진 하나 이상의 사용자 컬렉션이 포함된 배열입니다. 단일 요청에서 최대 1000개의 사용자 ID를 제공할 수 있습니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`: 응답 데이터에서 개별 작업 ID를 구분하는 데 사용되는 사용자의 식별자입니다. 이 값을 쉽게 참조하거나 나중에 조회할 수 있도록 고유하고 쉽게 식별 가능한 문자열을 선택하는 것이 좋습니다.</li><li>`action`: 사용자 데이터에 대해 수행할 작업을 나열하는 배열입니다. 수행하려는 작업에 따라 이 배열에는 다음이 포함되어야 합니다. `access`, `delete`또는 둘 다.</li><li>`userIDs`: 사용자의 ID 컬렉션입니다. 단일 사용자가 가질 수 있는 ID의 수는 9개로 제한됩니다. 각 ID는 `namespace`, a `value`및 네임스페이스 한정자(`type`). 다음을 참조하십시오. [부록](appendix.md) 이러한 필수 속성에 대해 자세히 알아보십시오.</li></ul> 에 대한 자세한 설명은 `users` 및 `userIDs`, 다음을 참조하십시오. [문제 해결 안내서](../troubleshooting-guide.md#user-ids). |
+| `include` **(필수)** | 처리에 포함할 Adobe 제품의 배열입니다. 이 값이 없거나 비어 있으면 요청이 거부됩니다. 조직이 통합한 제품만 포함합니다. 의 섹션을 참조하십시오. [허용된 제품 값](appendix.md) 자세한 내용은 부록에서 확인하십시오. |
 | `expandIDs` | 로 설정된 경우 선택 사항인 속성 `true`는 애플리케이션에서 ID를 처리하기 위한 최적화를 나타냅니다(현재는 에서만 지원됨). [!DNL Analytics]). 생략하면 이 값의 기본값은 입니다. `false`. |
 | `priority` | 요청 처리에 대한 우선 순위를 설정하는 Adobe Analytics에서 사용하는 선택적 속성입니다. 허용되는 값은 다음과 같습니다 `normal` 및 `low`. If `priority` 생략된 경우 기본 동작은 다음과 같습니다. `normal`. |
 | `analyticsDeleteMethod` | Adobe Analytics에서 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에는 두 가지 가능한 값이 허용됩니다. <ul><li>`anonymize`: 특정 사용자 ID 컬렉션에서 참조하는 모든 데이터는 익명으로 처리됩니다. If `analyticsDeleteMethod` 가 생략되면 기본 동작입니다.</li><li>`purge`: 모든 데이터가 완전히 제거됩니다.</li></ul> |
 | `mergePolicyId` | 실시간 고객 프로필에 대한 개인 정보 요청을 할 때(`profileService`)에 대해 선택적으로 특정 항목의 ID를 제공할 수 있습니다 [병합 정책](../../profile/merge-policies/overview.md) ID 결합에 사용할 수 있습니다. 병합 정책을 지정하여 개인 정보 보호 요청은 고객에 대한 데이터를 반환할 때 대상 정보를 포함할 수 있습니다. 요청당 하나의 병합 정책만 지정할 수 있습니다. 병합 정책이 제공되지 않으면 세그멘테이션 정보가 응답에 포함되지 않습니다. |
-| `regulation` **(필수 여부)** | 개인 정보 보호 작업에 대한 규정. 다음 값이 허용됩니다. <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>의 개요 보기 [지원되는 규정](../regulations/overview.md) 위의 값이 나타내는 개인 정보 보호 규정에 대한 자세한 정보입니다. |
+| `regulation` **(필수)** | 개인 정보 보호 작업에 대한 규정. 다음 값이 허용됩니다. <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>의 개요 보기 [지원되는 규정](../regulations/overview.md) 위의 값이 나타내는 개인 정보 보호 규정에 대한 자세한 정보입니다. |
 
 {style="table-layout:auto"}
 

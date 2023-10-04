@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 개인 정보 보호 규정 개요
 description: 이 문서에서는 Adobe Experience Cloud에서 지원하는 다양한 개인 정보 보호 규정에 대한 개요를 제공합니다.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 30cab0138ffc7d4f443c7a298139d3ad859b5772
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,7 @@ ht-degree: 0%
 | LGPD(브라질) | 다음 [[!DNL Lei Geral de Proteção de Dados (LGPD)]](https://gdpr.eu/gdpr-vs-lgpd/) 브라질에 있는 모든 개인 또는 자연인의 개인 데이터 처리를 규제하는 것을 목표로 합니다. LGPD는 브라질 시민에게 개인 데이터를 액세스하고 삭제할 수 있는 권한, 개인 데이터가 판매되었는지 공개되었는지 여부(및 공개된 대상)를 알 수 있는 권한 및 제3자에게 데이터를 판매하는 것을 거부할 수 있는 권한을 부여합니다. |
 | 뉴질랜드 [!DNL Privacy Act] | 다음 [뉴질랜드 [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) 기관이 뉴질랜드 시민과 조직의 개인 정보를 수집, 사용, 공개, 저장 및 액세스 권한을 부여하는 방법을 제어합니다. 2020년, 이 법의 최신 버전은 이러한 개인 정보 보호법에 대한 중요한 업데이트를 도입했습니다. 이 업데이트에는 새로운 위반, 벌금, 데이터 위반에 대한 필수 알림 및 개인정보 보호 관리자의 권한 증대가 포함됩니다. |
 | PDPA(태국) | 다음 [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) 태국의 데이터 소유자를 불법 수집, 사용 또는 개인 데이터 공개로부터 보호하기 위해 도입되었습니다. 유럽 연합의 GDPR에서 영감을 얻어, 이 규정은 태국 시민에게 저장된 개인 데이터에 대한 액세스 또는 삭제를 요청할 수 있는 권리를 부여합니다. |
+| UPA(유타) | 다음 [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) 소비자가 비즈니스가 수집하는 개인 데이터, 비즈니스가 개인 데이터를 사용하는 방법 및 비즈니스가 개인 데이터를 판매하는지 여부를 알 수 있는 권리를 만듭니다. 소비자는 비즈니스에 개인 데이터를 삭제하거나 판매를 중단하도록 요구할 수 있습니다. |
 | VCDPA(버지니아) | 다음 [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) 개인 데이터에 대한 액세스, 삭제 및 수정 권한을 포함하여 버지니아 거주자(&quot;소비자&quot;)에게 새로운 데이터 개인 정보 보호 권한을 제공합니다. 소비자는 또한 개인 데이터의 판매를 거부하고, 개인 데이터를 기반으로 한 프로파일링을 거부하며, 개인 광고 목적을 처리할 권리가 있습니다. |
 
 {style="table-layout:auto"}

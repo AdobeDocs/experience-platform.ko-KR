@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 용어
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '7929'
+source-wordcount: '7979'
 ht-degree: 0%
 
 ---
@@ -538,6 +538,8 @@ ht-degree: 0%
 **토큰**: 토큰은 와 함께 컴퓨터 서비스 사용을 승인하는 데 사용할 수 있는 이중 인증 보안 유형입니다 [!DNL Query Service].
 
 ## U
+
+**UPA**: [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) 소비자가 비즈니스가 수집하는 개인 데이터, 비즈니스가 개인 데이터를 사용하는 방법 및 비즈니스가 개인 데이터를 판매하는지 여부를 알 수 있는 권리를 만듭니다. 소비자는 비즈니스에 개인 데이터를 삭제하거나 판매를 중단하도록 요구할 수 있습니다.
 
 **유니온 스키마**: 결합 스키마는 동일한 클래스를 공유하고 용으로 활성화된 스키마의 통합입니다. [!DNL Real-Time Customer Profile]. 조직에 대해 여러 유니온 스키마가 존재할 수 있지만, 클래스당 하나의 유니온 스키마만 있을 수 있습니다.
 
