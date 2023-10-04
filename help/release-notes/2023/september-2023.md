@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 9월 릴리스 정보입니다.
-source-git-commit: c2563d43b9ee8b3191954275bd0102507a981071
+exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
+source-git-commit: 35d72969946dd79c356212ce53ee75b8c84f036c
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 24%
+source-wordcount: '2284'
+ht-degree: 26%
 
 ---
 
@@ -159,6 +160,27 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 | 기능 | 설명 |
 | --- | --- |
 | 업데이트된 스키마 생성 워크플로 | 프로세스를 간소화하기 위해 새로운 스키마 생성 워크플로우가 구현되었습니다. <br> ![새 스키마 만들기 UI.](../2023/assets/schema-class-options.png "새 스키마 세부 정보 선택기가 강조 표시됩니다."){width="100" zoomable="yes"} <br> 다음을 참조하십시오. [스키마 생성 설명서](../../xdm/ui/resources/schemas.md#create) 추가 정보. |
+
+**새로운 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 |
+| --- | --- | --- |
+| 데이터 유형 | [[!UICONTROL 반환]](https://github.com/adobe/xdm/pull/1773/files) | RMA(반품 상품 승인)가 발행되었습니다. |
+| 데이터 유형 | [[!UICONTROL 항목 반환]](https://github.com/adobe/xdm/pull/1773/files) | RMA(Return Merchandise Authorization) 내에서 반품 품목 정보. |
+
+{style="table-layout:auto"}
+
+**업데이트된 XDM 구성 요소**
+
+| 구성 요소 유형 | 이름 | 설명 업데이트 |
+| --- | --- | --- |
+| 확장 기능 | [!UICONTROL AJO 엔티티 필드] | 다음 [[!UICONTROL 다중 변형에 대한 플래그]](https://github.com/adobe/xdm/pull/1774/files) 이(가)에 추가되었습니다. [!UICONTROL AJO 엔티티 필드] 변형이 다중 변형인지 여부를 식별합니다. |
+| 데이터 유형 | [!UICONTROL 제품 목록 항목] | [[!UICONTROL 항목 반환]](https://github.com/adobe/xdm/pull/1773/files) 반품 승인 정보를 포함하도록 가 추가되었습니다. |
+| 데이터 유형 | 주문 | [[!UICONTROL 반환 정보]](https://github.com/adobe/xdm/pull/1773/files) rma(Return Merchandises Authorization)를 발행하기 위해 가 추가되었습니다. |
+
+{style="table-layout:auto"}
+
+Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
 ## ID 서비스 {#identity-service}
 
