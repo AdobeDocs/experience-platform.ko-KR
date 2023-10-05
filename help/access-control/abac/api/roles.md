@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 역할 API 끝점
 description: 속성 기반 액세스 제어 API의 /roles 끝점을 사용하면 Adobe Experience Platform에서 역할을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: 4b48fa5e9a1e9933cd33bf45b73ff6b0d831f06f
 workflow-type: tm+mt
-source-wordcount: '1606'
-ht-degree: 5%
+source-wordcount: '1666'
+ht-degree: 4%
 
 ---
 
@@ -179,7 +179,7 @@ curl -X GET \
 
 ## 역할 ID로 주제 조회
 
-에 GET 요청을 하여 제목을 검색할 수도 있습니다. `/roles` {ROLE_ID}을(를) 제공하는 도중 엔드포인트.
+에 GET 요청을 하여 제목을 검색할 수도 있습니다. `/roles` 를 제공하는 동안 엔드포인트 {ROLE_ID}.
 
 **API 형식**
 
@@ -498,20 +498,18 @@ PATCH /roles/{ROLE_ID}
 다음 요청은 과 연관된 주제를 업데이트합니다. `{ROLE_ID}`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-  -d'{
-    "operations": [
-      {
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
         "op": "add",
-        "path": "/subjects",
-        "value": "New subjects"
-      }
-    ]
-  }'
+        "path": "/user",
+        "value": "{USER ID}"
+    }
+]' 
 ```
 
 | 작업 | 설명 |
@@ -522,37 +520,7 @@ curl -X PATCH \
 
 **응답**
 
-성공한 응답은 쿼리된 역할 ID와 연결된 업데이트된 주제를 반환합니다.
-
-```json
-{
-  "subjects": [
-    {
-      "subjectId": "string",
-      "subjectType": "user"
-    }
-  ],
-  "_page": {
-    "limit": 0,
-    "count": 0
-  },
-  "_links": {
-    "next": {
-      "href": "string",
-      "templated": true
-    },
-    "page": {
-      "href": "string",
-      "templated": true
-    }
-  }
-}
-```
-
-| 속성 | 설명 |
-| --- | --- |
-| `subjectId` | 제목의 ID입니다. |
-| `subjectType` | 제목의 유형입니다. |
+성공적인 응답은 HTTP 상태 204(콘텐츠 없음) 및 빈 본문을 반환합니다.
 
 ## 역할 삭제 {#delete}
 
@@ -585,3 +553,34 @@ curl -X DELETE \
 성공적인 응답은 HTTP 상태 204(콘텐츠 없음) 및 빈 본문을 반환합니다.
 
 역할에 대한 조회(GET) 요청을 시도하여 삭제를 확인할 수 있습니다. 역할이 관리에서 제거되었으므로 HTTP 상태 404(찾을 수 없음)를 받게 됩니다.
+
+## API 자격 증명 추가 {#apicredential}
+
+API 자격 증명을 추가하려면 PATCH 요청을에 `/roles` 주체의 역할 ID를 제공하는 동안 끝점이 발생했습니다.
+
+**API 형식**
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
+        "op": "add",
+        "path": "/api-integration",
+        "value": "{TECHNICAL ACCOUNT ID}"
+    }
+]'   
+```
+
+| 작업 | 설명 |
+| --- | --- |
+| `op` | 역할을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 다음이 포함됩니다. `add`, `replace`, 및 `remove`. |
+| `path` | 추가할 매개 변수의 경로입니다. |
+| `value` | 매개 변수를 추가할 값입니다. |
+
+**응답**
+
+성공적인 응답은 HTTP 상태 204(콘텐츠 없음) 및 빈 본문을 반환합니다.
