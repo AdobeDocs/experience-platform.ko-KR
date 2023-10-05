@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법의 기본 사항에 대해 알아봅니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 943d1360e80caef58d09b8502507a3ad72edda03
+source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
-source-wordcount: '3571'
+source-wordcount: '3670'
 ht-degree: 1%
 
 ---
@@ -45,11 +45,9 @@ ht-degree: 1%
 
 ![다음 [!UICONTROL 이름 및 검토] 의 섹션 [!UICONTROL 스키마 만들기] 을 사용한 워크플로우 [!UICONTROL 스키마 표시 이름], [!UICONTROL 설명], 및 [!UICONTROL 완료] 강조 표시됨.](../../images/ui/resources/schemas/name-and-review.png)
 
-다음 [!UICONTROL 스키마] [!UICONTROL 찾아보기] 탭이 나타납니다. 최근에 만든 스키마는에서 편집할 수 있습니다. [!DNL Schema Editor] 사용 가능한 스키마 목록에 이 표시됩니다.
+다음 [!UICONTROL 스키마] [!UICONTROL 찾아보기] 탭이 나타납니다. 최근에 만든 스키마가 이제 스키마 라이브러리에 나열되고 [!DNL Schema Editor].
 
-![최근에 만든 스키마를 표시하는 스키마 편집기.](../../images/ui/resources/schemas/schema-details.png)
-
-이제 다음 작업을 수행하여 스키마 구조 작성을 시작할 수 있습니다 [스키마 필드 그룹 추가](#add-field-groups) 다음에서 [!DNL Schema Editor].
+![최근 생성된 스키마를 표시하는 스키마 작업 영역 찾아보기 탭](../../images/ui/resources/schemas/example-schema.png)
 
 ## 기존 스키마 편집 {#edit}
 
@@ -66,6 +64,14 @@ ht-degree: 1%
 >작업 영역의 검색 및 필터링 기능을 사용하여 스키마를 보다 쉽게 찾을 수 있습니다. 다음 안내서를 참조하십시오 [xdm 리소스 살펴보기](../explore.md) 추가 정보.
 
 스키마를 선택하면 [!DNL Schema Editor] 캔버스에 스키마 구조가 표시된 상태로 나타납니다. 이제 다음을 수행할 수 있습니다. [필드 그룹 추가](#add-field-groups) 스키마로(또는 [개별 필드 추가](#add-individual-fields) (해당 그룹에서), [필드 표시 이름 편집](#display-names), 또는 [기존 사용자 정의 필드 그룹 편집](./field-groups.md#edit) 스키마에 가 사용된 경우
+
+## 추가 작업 {#more}
+
+스키마 편집기 내에서 빠른 작업을 수행하여 스키마의 JSON 구조를 복사하거나, 실시간 고객 프로필에 대해 활성화되지 않았거나 관련 데이터 세트가 있는 경우 스키마를 삭제할 수도 있습니다. 선택 [!UICONTROL 자세히] 빠른 작업과 함께 드롭다운을 표시하려면 보기 맨 위에 놓습니다.
+
+JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라인을 작성하는 동안 샘플 페이로드가 어떻게 표시되는지 확인할 수 있습니다. 특히 ID 맵과 같은 스키마에 복잡한 객체 맵 구조가 있는 경우에 유용합니다.
+
+![기타 버튼이 강조 표시되고 드롭다운 옵션이 표시된 스키마 편집기.](../../images/tutorials/create-schema/more-actions.png)
 
 ## 표시 이름 전환 {#display-name-toggle}
 
