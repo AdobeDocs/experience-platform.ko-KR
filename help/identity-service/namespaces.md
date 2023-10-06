@@ -43,13 +43,13 @@ ID 네임스페이스를 사용하려면 다양한 Adobe Experience Platform 서
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="ID 유형 지정"
->abstract="ID 유형은 데이터가 ID 그래프에 저장되는지 여부를 제어합니다. 비개인 식별자 및 파트너 ID와 같은 ID 유형에 대해서는 ID 그래프가 생성되지 않습니다."
+>abstract="ID 유형은 데이터가 ID 그래프에 저장되는지 여부를 제어합니다. 비개인 식별자 및 파트너 ID 등의 신원 유형에 대해서는 아이덴티티 그래프가 생성되지 않습니다."
 >text="Learn more in documentation"
 
 ID 네임스페이스의 한 요소는 **id 유형**. ID 유형은 다음을 결정합니다.
 
 * ID 그래프 생성 여부:
-   * 비개인 식별자 및 파트너 ID와 같은 ID 유형에 대해서는 ID 그래프가 생성되지 않습니다.
+   * 비개인 식별자 및 파트너 ID 등의 신원 유형에 대해서는 아이덴티티 그래프가 생성되지 않습니다.
    * ID 그래프는 다른 모든 ID 유형에 대해 생성됩니다.
 * 시스템 제한에 도달하면 ID 그래프에서 제거되는 ID입니다. 자세한 내용은 [id 데이터 보호](guardrails.md).
 

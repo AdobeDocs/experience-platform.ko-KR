@@ -1,13 +1,13 @@
 ---
 title: LiveRamp - 배포 연결
 description: LiveRamp - 배포 커넥터를 사용하여 이전에 LiveRamp에 온보딩된 대상자를 다운스트림 광고 대상으로 오케스트레이션하고 활성화하는 방법에 대해 알아봅니다.
-source-git-commit: b97694dcf0d7fd600c6aada9600364e99ffe0902
+exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2716'
-ht-degree: 23%
+ht-degree: 38%
 
 ---
-
 
 # [!DNL LiveRamp - Distribution] 연결
 
@@ -110,13 +110,13 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
 >title="4C 브랜드 프로필 ID"
->abstract="4C 브랜드 프로필과 연계된 숫자 ID를 입력합니다. 이 ID가 없는 경우 4C 클라이언트 서비스 담당자에게 문의하십시오."
+>abstract="4C 브랜드 프로필과 연계된 숫자 ID를 입력합니다. 이 ID가 없는 경우 4C 클라이언트 서비스 담당자에게 문의하시기 바랍니다."
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
 ![4C Insights 대상에 대한 고객 데이터 필드를 보여주는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
 
-* **[!UICONTROL 4C 브랜드 프로필 ID]**: 4C 브랜드 프로필과 연결된 숫자 ID를 입력합니다. 이 ID가 없는 경우 4C 클라이언트 서비스 담당자에게 문의하십시오.
+* **[!UICONTROL 4C 브랜드 프로필 ID]**: 4C 브랜드 프로필과 연결된 숫자 ID를 입력합니다. 이 ID가 없는 경우 4C 클라이언트 서비스 담당자에게 문의하시기 바랍니다.
 
 ### [!DNL Acast] {#acast}
 
@@ -136,7 +136,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_ampersand_company_name"
 >title="회사 이름"
->abstract="대상 파트너에게 표시하려는 회사 이름입니다. 공백이나 특수 문자는 사용하지 마십시오."
+>abstract="대상 파트너에게 표시하고자 하는 회사 이름입니다. 공백이나 특수 문자는 사용하지 마십시오."
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
@@ -175,7 +175,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="광고주 데이터 대상 계약서 약관"
->abstract="입력 `I AGREE` 디즈니 광고주 데이터 약관에 대한 승인 및 동의를 확인합니다."
+>abstract="`I AGREE`를 입력하고 Disney 광고주 데이터 계약서 약관의 승인 및 동의를 확인합니다."
 
 <!-- >additional-url="<https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/>" text="Read the agreement" -->
 
@@ -187,7 +187,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_email"
 >title="내 이메일 주소"
->abstract="개인 사용자와 연결된 이메일 주소를 입력합니다. 이 이메일 주소는 광고주 데이터 계약서 약관에서 서명 역할을 합니다. 이 이메일 주소는 필요한 경우 귀하에게 연락하는 데에도 사용됩니다."
+>abstract="개인 사용자와 연결된 이메일 주소를 입력합니다. 이 이메일 주소는 광고주 데이터 계약서 약관에서 서명 역할을 합니다. 필요한 경우 이 이메일 주소는 관리자에게 문의하는 데 사용됩니다."
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
@@ -215,7 +215,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_index_advertiseraccountname"
 >title="계정 이름"
->abstract="Index Exchange 클라이언트 계정 이름입니다. 공백이나 특수 문자는 사용하지 마십시오."
+>abstract="귀하의 Index Exchange 클라이언트 계정 이름입니다. 공백이나 특수 문자는 사용하지 마십시오."
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
@@ -227,8 +227,8 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitectv_client"
->title="고객"
->abstract="대상 파트너에게 표시하려는 클라이언트 이름입니다. 회사 이름을 사용합니다. 공백이나 특수 문자는 사용하지 마십시오."
+>title="클라이언트"
+>abstract="대상 파트너에게 표시하고자 하는 클라이언트 이름입니다. 회사 이름을 사용합니다. 공백이나 특수 문자는 사용하지 마십시오."
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
@@ -241,18 +241,18 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_partnerid"
 >title="파트너 ID"
->abstract="세그먼트/데이터를 소유한 게시자와 연결된 Rubicon 프로젝트 파트너 ID입니다. 사용해야 하는 값에 대해 잘 모르는 경우 Rubicon 프로젝트 계정 담당자에게 문의하십시오."
+>abstract="세그먼트/데이터를 소유한 게시자와 관련된 Rubicon Project Partner ID입니다. 어떤 값을 사용해야 하는지 알 수 없는 경우 Rubicon Project 계정 담당자에게 문의하시기 바랍니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_seatid"
->title="시트 ID"
->abstract="Magnite 계정 관리자가 제공한 Magnite DV+ 시트 ID"
+>title="Seat ID"
+>abstract="Magnite 계정 관리자가 제공한 Magnite DV+ Seat ID"
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
 ![Magnite DV+ 대상에 대한 고객 데이터 필드를 보여주는 Platform UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
 
-* **[!UICONTROL 파트너 ID]**: 세그먼트/데이터를 소유한 게시자와 연결된 Rubicon 프로젝트 파트너 ID입니다. 사용해야 하는 값에 대해 잘 모르는 경우 Rubicon 프로젝트 계정 담당자에게 문의하십시오.
+* **[!UICONTROL 파트너 ID]**: 세그먼트/데이터를 소유한 게시자와 연결된 Rubicon 프로젝트 파트너 ID입니다. 어떤 값을 사용해야 하는지 알 수 없는 경우 Rubicon Project 계정 담당자에게 문의하시기 바랍니다.
 * **[!UICONTROL 시트 ID]**: Magnite 계정 관리자가 제공한 Magnite DV+ 시트 ID
 
 ### [!DNL Nexxen (formerly known as [!DNL Amobee])] {#nexxen}
@@ -260,44 +260,44 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_ratetype"
 >title="요금 유형"
->abstract="요금 유형은 데이터 사용이 청구되는 방식을 나타냅니다. 0.00달러 환율은 모두 정액제입니다. 사용할 요금 유형을 잘 모를 경우 Nexxen 담당자에게 문의하십시오."
+>abstract="요금 유형은 데이터 사용량에 대해 비용이 청구되는 방식을 나타냅니다. 모든 $0.00 요금은 정액 요금이어야 합니다. 어떤 요금 유형을 사용해야 할지 알 수 없는 경우 Nexxen 담당자에게 문의하시기 바랍니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_marketid"
->title="시장 ID"
->abstract="Nexxen 데이터 계약을 만들어야 하는 숫자 Market ID를 입력합니다. Nexxen 플랫폼의 모든 시장에서 &quot;AlwaysOn&quot; 신디케이션을 수행하는 경우 -1을 입력합니다."
+>title="Market ID"
+>abstract="Nexxen 데이터 약정을 생성해야 하는 숫자로 된 Market ID를 입력합니다. Nexxen 플랫폼의 모든 시장에서 “AlwaysOn” 신디케이션을 수행하는 경우 -1을 입력합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_advertiserid"
 >title="광고주 ID"
->abstract="Nexxen 플랫폼의 단일 광고주에게 데이터를 보내는 경우 숫자 Amobee 광고주 ID를 입력합니다. 시장의 모든 광고주가 데이터를 사용할 수 있도록 하려는 경우 또는 이러한 세그먼트가 &quot;AlwaysOn&quot;인 경우 -1을 입력하십시오."
+>abstract="Nexxen 플랫폼의 단일 광고주에게 데이터를 보내는 경우 숫자로 된 Amobee Advertiser ID를 입력하십시오. 시장의 모든 광고주가 데이터를 사용할 수 있도록 하고자 하거나 해당 세그먼트가 “AlwaysOn”인 경우 -1을 입력합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_contactemail"
 >title="연락처 이메일"
->abstract="Nexxen이 데이터 계약 세부 사항을 전송하는 데 사용할 이메일 주소를 입력합니다. 대부분 자신의 이메일 주소일 수 있지만 이메일 별칭일 수도 있습니다. 여러 수신자의 경우 쉼표(`email1@domain.com`,`email2@domain.com`등.)."
+>abstract="Nexxen이 데이터 약정 세부 정보를 보내는 데 사용할 이메일 주소를 입력합니다. 이는 대체로 귀하의 이메일 주소지만 이메일 별칭일 수도 있습니다. 수신자가 여러 명인 경우 쉼표를 사용하여 구분합니다(`email1@domain.com`, `email2@domain.com` 등)."
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
 ![Nexxen 대상에 대한 고객 데이터 필드를 보여주는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
 
-* **[!UICONTROL 요금 유형]**: 요금 유형은 데이터 사용이 청구되는 방식을 나타냅니다. 0.00달러 환율은 모두 정액제입니다. 사용할 요금 유형을 잘 모를 경우 Nexxen 담당자에게 문의하십시오.
-* **[!UICONTROL 시장 ID]**: Nexxen 데이터 계약을 만들어야 하는 숫자 Market ID를 입력합니다. Nexxen 플랫폼의 모든 시장에서 &quot;AlwaysOn&quot; 신디케이션을 수행하는 경우 -1을 입력합니다.
+* **[!UICONTROL 요금 유형]**: 요금 유형은 데이터 사용이 청구되는 방식을 나타냅니다. 모든 $0.00 요금은 정액 요금이어야 합니다. 어떤 요금 유형을 사용해야 할지 알 수 없는 경우 Nexxen 담당자에게 문의하시기 바랍니다.
+* **[!UICONTROL 시장 ID]**: Nexxen 데이터 계약을 만들어야 하는 숫자 Market ID를 입력합니다. Nexxen 플랫폼의 모든 시장에서 “AlwaysOn” 신디케이션을 수행하는 경우 -1을 입력합니다.
 * **[!UICONTROL 광고주 ID]**: Nexxen 플랫폼의 단일 광고주에게 데이터를 보내는 경우 숫자 Nexxen 광고주 ID를 입력합니다. 시장의 모든 광고주가 데이터를 사용할 수 있도록 하거나 이러한 세그먼트가 &quot;AlwaysOn&quot;인 경우 -1을 입력합니다.
-* **[!UICONTROL 연락처 전자 메일]**: Nexxen이 데이터 계약 세부 사항을 전송하는 데 사용할 이메일 주소를 입력합니다. 대부분 자신의 이메일 주소일 수 있지만 이메일 별칭일 수도 있습니다. 여러 수신자의 경우 쉼표( `email1@domain.com`, `email2@domain.com`).
+* **[!UICONTROL 연락처 전자 메일]**: Nexxen이 데이터 계약 세부 사항을 전송하는 데 사용할 이메일 주소를 입력합니다. 이는 대체로 귀하의 이메일 주소지만 이메일 별칭일 수도 있습니다. 여러 수신자의 경우 쉼표( `email1@domain.com`, `email2@domain.com`).
 
 ### [!DNL One Fox] {#fox}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_fox_client"
->title="고객"
->abstract="파트너에게 표시하려는 회사/배포 계정의 이름입니다. 사용할 이름이 확실하지 않은 경우 파트너 계정 담당자에게 문의하십시오. 공백이나 특수 문자는 사용하지 마십시오."
+>title="클라이언트"
+>abstract="파트너에게 표시되는 회사/배포 계정의 이름입니다. 어떤 이름을 사용해야 할지 알 수 없는 경우 파트너 계정 담당자에게 문의하시기 바랍니다. 공백이나 특수 문자는 사용하지 마십시오."
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
 ![One Fox 대상에 대한 고객 데이터 필드를 보여주는 플랫폼 UI 이미지입니다.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
 
-* **[!UICONTROL 클라이언트]**: 파트너에게 표시하려는 회사/배포 계정의 이름입니다. 기본적으로 회사 이름을 사용하십시오. 사용할 이름이 확실하지 않은 경우 파트너 계정 담당자에게 문의하십시오. 공백이나 특수 문자는 사용하지 마십시오.
+* **[!UICONTROL 클라이언트]**: 파트너에게 표시하려는 회사/배포 계정의 이름입니다. 기본적으로 회사 이름을 사용하십시오. 어떤 이름을 사용해야 할지 알 수 없는 경우 파트너 계정 담당자에게 문의하시기 바랍니다. 공백이나 특수 문자는 사용하지 마십시오.
 
 ### [!DNL Pandora] {#pandora}
 
@@ -373,7 +373,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_taboola_seg_type"
 >title="세그먼트 유형"
->abstract="세그먼트 유형. 현재 자사 세그먼트만 지원됩니다."
+>abstract="세그먼트 유형입니다. 현재 자사 세그먼트만 지원됩니다."
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 
@@ -400,7 +400,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_teads_teadsid"
 >title="Teads ID"
->abstract="Teads ID"
+>abstract="귀하의 Teads ID입니다."
 
 대상에 대한 세부 정보를 구성하려면 아래 필드를 채우십시오.
 

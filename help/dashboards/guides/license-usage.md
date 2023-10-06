@@ -16,7 +16,7 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="라이선스 사용 대시보드"
->abstract="라이선스 사용 대시보드는 구입한 Adobe Experience Platform 제품에 대한 통찰력을 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량 및 계약된 라이선스 금액을 포함하여 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 공간에는 특정 샌드박스 내의 각 제품에 대한 지표 분류가 표시됩니다."
+>abstract="라이선스 사용 대시보드는 구매한 Adobe Experience Platform 제품에 대한 인사이트를 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 계약된 라이선스 금액 등 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다."
 
 Adobe Experience Platform을 통해 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있습니다 [!UICONTROL 라이선스 사용] 대시보드입니다. 여기에 표시되는 정보는 Platform 인스턴스의 일별 스냅샷 중에 캡처됩니다.
 

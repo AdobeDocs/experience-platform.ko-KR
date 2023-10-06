@@ -7,7 +7,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
 source-wordcount: '1479'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="(베타) 내보내기 어레이 지원"
->abstract="사용 **계산된 필드 추가** Experience Platform에서 원하는 클라우드 스토리지 대상으로 int, string 또는 boolean 값의 단순 배열을 내보내도록 제어합니다. 일부 제한 사항이 적용됩니다. 이 설명서에서 다양한 예제 및 지원되는 기능을 살펴보십시오."
+>title="(Beta) 배열 내보내기 지원"
+>abstract="사용 **계산된 필드 추가** Experience Platform에서 원하는 클라우드 스토리지 대상으로 int, string 또는 boolean 값의 단순 배열을 내보내도록 제어합니다. 일부 제한 사항이 적용됩니다. 광범위한 예제와 지원 기능에 대한 설명서를 확인하시기 바랍니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="예시"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="알려진 제한 사항"
 
