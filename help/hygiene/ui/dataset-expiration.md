@@ -1,15 +1,15 @@
 ---
-title: 데이터 세트 만료 관리
+title: 자동화된 데이터 세트 만료
 description: Adobe Experience Platform UI에서 데이터 세트 만료를 예약하는 방법을 알아봅니다.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 7931c8fe4a1ca5d255a80e7e6b0deb976d53c3de
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '828'
 ht-degree: 20%
 
 ---
 
-# 데이터 세트 만료 관리 {#dataset-expiration}
+# 자동화된 데이터 세트 만료 {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
@@ -22,7 +22,7 @@ ht-degree: 20%
 >
 >데이터 세트가 만료되도록 설정된 경우 다운스트림 워크플로우가 부정적인 영향을 받지 않도록 데이터를 해당 데이터 세트로 수집할 수 있는 모든 데이터 흐름을 수동으로 변경해야 합니다.
 
-이 문서에서는 Platform UI에서 데이터 세트 만료를 예약하고 관리하는 방법을 다룹니다.
+이 문서에서는 Platform UI에서 데이터 세트 만료를 예약하고 자동화하는 방법을 다룹니다.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ ht-degree: 20%
 
 >[!IMPORTANT]
 >
-동시에 예약된 데이터 세트가 최대 20개까지 만료될 수 있습니다. 즉, 한 번에 20개의 데이터 세트를 삭제하도록 예약할 수 있습니다. 이러한 만료일이 설정되는 시간 또는 연도에는 제한이 없습니다. 예를 들어 20개의 예약된 데이터 세트가 만료되고 내일 하나의 데이터 세트가 삭제되는 경우 해당 데이터 세트가 삭제될 때까지 더 이상 만료를 설정할 수 없습니다.
+Real-Time CDP, Adobe Journey Optimizer 및 Customer Journey Analytics 사용자에게는 20개의 보류 중인 예약 데이터 세트 만료 작업 주문이 있습니다. Healthcare Shield 및 Privacy and Security Shield 사용자는 50개의 보류 중인 데이터 세트 만료 작업 주문을 가지고 있습니다. 즉, 한 번에 20개 또는 50개의 데이터 세트를 삭제하도록 예약할 수 있습니다.<br>예를 들어 20개의 예약된 데이터 세트가 만료되고 내일 하나의 데이터 세트가 삭제되는 경우 해당 데이터 세트가 삭제될 때까지 더 이상 만료를 설정할 수 없습니다.
 
 ![다음 [!UICONTROL 데이터 수명 주기] 작업 공간 [!UICONTROL 요청 만들기] 강조 표시됨.](../images/ui/ttl/create-request-button.png)
 

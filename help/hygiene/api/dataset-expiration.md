@@ -2,18 +2,14 @@
 title: 데이터 세트 만료 API 끝점
 description: 데이터 위생 API의 /ttl 끝점을 사용하면 Adobe Experience Platform에서 데이터 세트 만료를 프로그래밍 방식으로 예약할 수 있습니다.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1402'
 ht-degree: 2%
 
 ---
 
 # 데이터 세트 만료 끝점
-
->[!IMPORTANT]
->
->Adobe Experience Platform의 데이터 위생 기능은 현재 구입한 조직에서만 사용할 수 있습니다 **Adobe 헬스케어 실드** 또는 **Adobe 개인정보 보호 및 보안 실드**.
 
 다음 `/ttl` 데이터 위생 API의 끝점을 사용하면 Adobe Experience Platform의 데이터 세트에 대한 만료 날짜를 예약할 수 있습니다.
 

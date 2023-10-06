@@ -1,23 +1,19 @@
 ---
 title: 할당량 API 끝점
-description: 데이터 위생 API의 /quota 끝점을 사용하면 각 작업 유형에 대한 조직의 월별 할당량 한도를 기준으로 데이터 위생 사용을 모니터링할 수 있습니다.
+description: 데이터 위생 API의 /quota 끝점을 사용하면 각 작업 유형에 대한 조직의 월별 할당량 제한에 대해 고급 데이터 수명 주기 관리 사용을 모니터링할 수 있습니다.
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '327'
 ht-degree: 2%
 
 ---
 
 # 할당량 끝점
 
->[!IMPORTANT]
->
->Adobe Experience Platform의 데이터 위생 기능은 현재 구입한 조직에서만 사용할 수 있습니다 **Adobe 헬스케어 실드** 또는 **Adobe 개인정보 보호 및 보안 실드**.
+다음 `/quota` 데이터 위생 API의 끝점을 사용하면 각 작업 유형에 대한 조직의 할당량 제한에 대해 고급 데이터 수명 주기 관리 사용을 모니터링할 수 있습니다.
 
-다음 `/quota` 데이터 위생 API의 끝점을 사용하면 각 작업 유형에 대한 조직의 할당량 제한에 대해 데이터 위생 사용을 모니터링할 수 있습니다.
-
-할당량은 다음과 같은 방법으로 각 데이터 위생 작업 유형에 적용됩니다.
+할당량은 다음과 같은 방법으로 각 데이터 라이프사이클 작업 유형에 적용됩니다.
 
 * 레코드 삭제 및 업데이트는 매월 특정 수의 요청으로 제한됩니다.
 * 데이터 세트 만료에는 만료를 실행할 시기에 관계없이 동시에 활성 상태인 작업 수에 대한 일정한 제한이 있습니다.
@@ -58,7 +54,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 데이터 위생 할당량에 대한 세부 정보를 반환합니다.
+성공적인 응답은 데이터 라이프사이클 할당량에 대한 세부 정보를 반환합니다.
 
 ```json
 {
@@ -81,6 +77,6 @@ curl -X GET \
 
 | 속성 | 설명 |
 | --- | --- |
-| `quotas` | 각 데이터 위생 작업 유형에 대한 할당량 정보를 나열합니다. 각 할당량 개체에는 다음 속성이 포함되어 있습니다.<ul><li>`name`: 데이터 위생 작업 유형:<ul><li>`expirationDatasetQuota`: 데이터 세트 만료</li><li>`deleteIdentityWorkOrderDatasetQuota`: 레코드 삭제</li></ul></li><li>`description`: 데이터 위생 작업 유형에 대한 설명입니다.</li><li>`consumed`: 현재 월별 기간에 실행된 이 유형의 작업 수입니다.</li><li>`quota`: 이 작업 유형의 할당량 한도 레코드 삭제 및 업데이트의 경우 월별 기간마다 실행할 수 있는 작업 수를 나타냅니다. 데이터 세트 만료의 경우 지정된 시간에 동시에 활성화할 수 있는 작업 수를 나타냅니다.</li></ul> |
+| `quotas` | 각 데이터 라이프사이클 작업 유형에 대한 할당량 정보를 나열합니다. 각 할당량 개체에는 다음 속성이 포함되어 있습니다.<ul><li>`name`: 데이터 라이프사이클 작업 유형:<ul><li>`expirationDatasetQuota`: 데이터 세트 만료</li><li>`deleteIdentityWorkOrderDatasetQuota`: 레코드 삭제</li></ul></li><li>`description`: 데이터 라이프사이클 작업 유형에 대한 설명입니다.</li><li>`consumed`: 현재 월별 기간에 실행된 이 유형의 작업 수입니다.</li><li>`quota`: 이 작업 유형의 할당량 한도 레코드 삭제 및 업데이트의 경우 월별 기간마다 실행할 수 있는 작업 수를 나타냅니다. 데이터 세트 만료의 경우 지정된 시간에 동시에 활성화할 수 있는 작업 수를 나타냅니다.</li></ul> |
 
 {style="table-layout:auto"}

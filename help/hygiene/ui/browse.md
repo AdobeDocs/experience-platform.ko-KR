@@ -1,35 +1,31 @@
 ---
-title: 데이터 위생 작업 주문 찾아보기
-description: Adobe Experience Platform 사용자 인터페이스에서 기존 데이터 위생 작업 주문을 보고 관리하는 방법을 알아봅니다.
+title: 데이터 라이프사이클 작업 주문 찾아보기
+description: Adobe Experience Platform 사용자 인터페이스에서 기존 데이터 라이프사이클 작업 주문을 보고 관리하는 방법을 알아봅니다.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 25%
+source-wordcount: '841'
+ht-degree: 14%
 
 ---
 
-# 데이터 위생 작업 주문 찾아보기 {#browse-work-orders}
+# 데이터 라이프사이클 작업 주문 찾아보기 {#browse-work-orders}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="작업 주문 ID"
->abstract="데이터 위생 요청이 시스템으로 전송되면 작업 주문이 생성되어 요청된 작업을 실행합니다. 즉, 작업 주문은 현재 상태와 기타 관련 세부 정보가 포함된 특정 데이터 위생 프로세스를 나타냅니다. 생성 시 각 작업 주문에 고유 ID가 자동으로 할당됩니다."
->text="See the data hygiene UI guide to learn more."
+>abstract="데이터 라이프사이클 요청이 시스템으로 전송되면 요청된 작업을 실행하기 위한 작업 순서가 만들어집니다. 즉, 작업 순서는 현재 상태 및 기타 관련 세부 사항이 포함된 특정 데이터 라이프사이클 프로세스를 나타냅니다. 생성 시 각 작업 주문에 고유 ID가 자동으로 할당됩니다."
+>text="See the data lifecycle UI guide to learn more."
 
->[!IMPORTANT]
->
->Adobe Experience Platform의 데이터 위생 기능은 현재 구입한 조직에서만 사용할 수 있습니다 **Adobe 헬스케어 실드** 또는 **Adobe 개인정보 보호 및 보안 실드**.
-
-데이터 위생 요청이 시스템으로 전송되면 작업 주문이 생성되어 요청된 작업을 실행합니다. 작업 명령은 현재 상태 및 기타 관련 세부 사항이 포함된 예약된 데이터 세트 만료와 같은 특정 데이터 위생 프로세스를 나타냅니다.
+데이터 라이프사이클 요청이 시스템으로 전송되면 요청된 작업을 실행하기 위한 작업 순서가 만들어집니다. 작업 주문은 현재 상태 및 기타 관련 세부 정보를 포함하는 특정 데이터 라이프사이클 프로세스(예: 예약된 데이터 세트 만료)를 나타냅니다.
 
 이 안내서에서는 Adobe Experience Platform UI에서 기존 작업 주문을 보고 관리하는 방법을 다룹니다.
 
 ## 기존 작업 주문 나열 및 필터링
 
-에 처음 액세스하면 **[!UICONTROL 데이터 위생]** ui의 작업 공간에는 기본 세부 정보와 함께 기존 작업 주문 목록이 표시됩니다.
+에 처음 액세스하면 **[!UICONTROL 데이터 수명 주기]** ui의 작업 공간에는 기본 세부 정보와 함께 기존 작업 주문 목록이 표시됩니다.
 
-![다음을 보여주는 이미지 [!UICONTROL 데이터 위생] Platform UI의 작업 영역](../images/ui/browse/work-order-list.png)
+![다음을 보여주는 이미지 [!UICONTROL 데이터 수명 주기] Platform UI의 작업 영역](../images/ui/browse/work-order-list.png)
 
 목록에는 한 번에 한 범주에 대한 작업 주문만 표시됩니다. 선택 **[!UICONTROL 소비자]** 레코드 삭제 작업 목록을 보려면 **[!UICONTROL 데이터 세트]** 예약된 데이터 세트 만료 목록을 봅니다.
 
@@ -69,17 +65,17 @@ ht-degree: 25%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="서비스별 상태"
->abstract="데이터 위생 요청은 여러 Experience Platform 서비스에서 독립적으로 처리됩니다. 이 섹션에서는 각 해당 서비스에 대한 요청의 현재 처리 상태에 대해 간략히 소개합니다. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
+>abstract="데이터 라이프사이클 요청은 여러 Experience Platform 서비스에 의해 독립적으로 처리됩니다. 이 섹션에서는 각 해당 서비스에 대한 요청의 현재 처리 상태에 대해 간략히 소개합니다. 자세한 내용은 데이터 라이프사이클 UI 안내서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="ID 수"
->abstract="이 작업 주문의 일부로 요청된 레코드를 업데이트하거나 삭제할 수 있는 ID 수입니다. 카운터에 포함된 ID는 해당 데이터 세트에 실제로 존재할 필요는 없습니다. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
+>abstract="이 작업 주문의 일부로 요청된 레코드를 업데이트하거나 삭제할 수 있는 ID 수입니다. 카운터에 포함된 ID는 해당 데이터 세트에 실제로 존재할 필요는 없습니다. 자세한 내용은 데이터 라이프사이클 UI 안내서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="레코드 삭제 응답"
->abstract="레코드 삭제 프로세스가 시스템에서 응답을 수신하면 해당 메시지가 **[!UICONTROL 결과]** 섹션 아래에 표시됩니다. 작업 주문이 처리되는 동안 문제가 발생하는 경우 이 섹션에 관련 오류 메시지가 표시되면 문제를 해결하는 데 도움이 됩니다. 자세한 내용은 데이터 위생 UI 안내서를 참조하십시오."
+>abstract="레코드 삭제 프로세스가 시스템에서 응답을 수신하면 해당 메시지가 **[!UICONTROL 결과]** 섹션 아래에 표시됩니다. 작업 주문이 처리되는 동안 문제가 발생하는 경우 이 섹션에 관련 오류 메시지가 표시되면 문제를 해결하는 데 도움이 됩니다. 자세한 내용은 데이터 라이프사이클 UI 안내서 를 참조하십시오."
 
 나열된 작업 주문의 ID를 선택하여 세부 정보를 확인합니다.
 
@@ -101,7 +97,7 @@ ht-degree: 25%
 
 ## 다음 단계
 
-이 안내서에서는 Platform UI에서 기존 데이터 위생 작업 주문을 보고 관리하는 방법을 다룹니다. 고유한 작업 주문 생성에 대한 자세한 내용은 다음 설명서를 참조하십시오.
+이 안내서에서는 Platform UI에서 기존 데이터 라이프사이클 작업 주문을 보고 관리하는 방법을 다룹니다. 고유한 작업 주문 생성에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [데이터 세트 만료 관리](./dataset-expiration.md)
-<!-- * [Manage record deletes](./record-delete.md) -->
+* [레코드 삭제 관리](./record-delete.md)
