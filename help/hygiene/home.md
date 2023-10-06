@@ -2,18 +2,14 @@
 title: 데이터 위생 개요
 description: Adobe Experience Platform 데이터 위생 을 사용하면 오래되거나 정확하지 않은 레코드를 업데이트하거나 삭제하여 데이터 라이프사이클을 관리할 수 있습니다.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: ba23fb65fcc27a304e1075ec18b0bee3f240aa27
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '585'
 ht-degree: 1%
 
 ---
 
 # Adobe Experience Platform의 데이터 위생
-
->[!IMPORTANT]
->
->데이터 위생은 현재 구입한 조직에서만 사용할 수 있습니다 **Adobe 헬스케어 실드** 또는 **Adobe 개인정보 보호 및 보안 실드**. 이러한 기능은 가까운 시일 내에 일반 릴리스에서 제공될 예정입니다. 예정된 가용성에 대한 자세한 내용은 Adobe 서비스 담당자에게 문의하십시오. 그러나 즉시 사용할 수 있습니다 [다음을 통해 데이터 세트 삭제 [!UICONTROL 데이터 세트] UI](../catalog/datasets/user-guide.md#delete).
 
 Adobe Experience Platform은 소비자 경험을 조정하기 위해 크고 복잡한 데이터 작업을 관리하는 강력한 도구 세트를 제공합니다. 시간이 지나면서 데이터가 시스템에 수집되면 데이터가 예상대로 사용되고, 잘못된 데이터를 수정해야 할 때 업데이트되고, 조직 정책에서 필요하다고 판단할 때 삭제되도록 데이터 저장소를 관리하는 것이 점점 더 중요해집니다.
 
