@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 개인 정보 보호 규정 용어
 description: 이 문서에서는 Adobe Experience Cloud에서 지원하는 개인 정보 보호 규정 관련 주요 용어에 대한 정의를 제공합니다.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 2%
@@ -108,6 +108,10 @@ ht-degree: 2%
 ## P
 
 **PDPA**: [!DNL Personal Data Protection Act] 태국의 데이터 소유자를 불법 수집, 사용 또는 개인 정보 공개로부터 보호하기 위해 태국의 데이터 소유자 (PDPA)를 도입했습니다. 유럽 연합의 GDPR에서 영감을 얻어, 이 규정은 태국 시민에게 저장된 개인 데이터에 대한 액세스 또는 삭제를 요청할 수 있는 권리를 부여합니다.
+
+<!-- Not yet released:
+**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
+-->
 
 **개인 데이터**: 자연인 또는 &#39;데이터 주체&#39;와 관련하여 개인을 직접 또는 간접적으로 식별하는 데 사용할 수 있는 모든 정보입니다.
 

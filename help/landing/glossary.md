@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 용어
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '7979'
 ht-degree: 0%
@@ -380,6 +380,10 @@ ht-degree: 0%
 **Parquet 파일**: Parquet 파일은 복잡한 중첩된 데이터 구조가 있는 열 형식 스토리지 파일 형식입니다. 데이터를 추가하여 스키마 데이터 세트를 채우려면 Parquet 파일이 필요합니다.
 
 **PDPA**: [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) 태국의 데이터 소유자를 불법 수집, 사용 또는 개인 데이터 공개로부터 보호하기 위해 도입되었습니다. 유럽 연합의 GDPR에서 영감을 얻어, 이 규정은 태국 시민에게 저장된 개인 데이터에 대한 액세스 또는 삭제를 요청할 수 있는 권리를 부여합니다.
+
+<!-- Not yet released
+**PDPD**: The [[!DNL Personal Data Protection Decree] (PDPD) 
+-->
 
 **개인화된 오퍼**: 개인화된 오퍼는 적격성 및 제약 조건을 기반으로 한 맞춤형 마케팅 메시지입니다.
 

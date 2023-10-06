@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 개인 정보 보호 규정 개요
 description: 이 문서에서는 Adobe Experience Cloud에서 지원하는 다양한 개인 정보 보호 규정에 대한 개요를 제공합니다.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 0%
@@ -33,6 +33,10 @@ ht-degree: 0%
 | VCDPA(버지니아) | 다음 [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) 개인 데이터에 대한 액세스, 삭제 및 수정 권한을 포함하여 버지니아 거주자(&quot;소비자&quot;)에게 새로운 데이터 개인 정보 보호 권한을 제공합니다. 소비자는 또한 개인 데이터의 판매를 거부하고, 개인 데이터를 기반으로 한 프로파일링을 거부하며, 개인 광고 목적을 처리할 권리가 있습니다. |
 
 {style="table-layout:auto"}
+
+<!-- Not yet released:
+ | PDPD (Vietnam) | The [[!DNL Personal Data Protection Decree (PDPD)]]() .... | 
+ -->
 
 ## 다음 단계
 
