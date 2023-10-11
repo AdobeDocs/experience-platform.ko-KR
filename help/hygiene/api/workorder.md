@@ -2,20 +2,20 @@
 title: 작업 주문 API 끝점
 description: 데이터 위생 API의 /workorder 끝점을 사용하면 ID에 대한 삭제 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-hide: true
-hidefromtoc: true
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1034'
 ht-degree: 3%
 
 ---
 
-# 작업 주문 끝점
+# [!BADGE 베타]{type=Informative} 작업 순서 끝점 {#work-order-endpoint}
 
 다음 `/workorder` 데이터 위생 API의 끝점을 사용하면 Adobe Experience Platform에서 레코드 삭제 요청을 프로그래밍 방식으로 관리할 수 있습니다.
 
 >[!IMPORTANT]
+> 
+>레코드 삭제 기능은 현재 베타 버전이며 다음에서만 사용할 수 있습니다. **제한된 릴리스**. 모든 고객이 이용할 수 있는 것은 아닙니다. 레코드 삭제 요청은 제한된 릴리스의 조직에만 사용할 수 있습니다.
 >
 >레코드 삭제는 데이터 정리, 익명 데이터 제거 또는 데이터 최소화에 사용됩니다. 다음과 같습니다 **아님** GDPR(일반 데이터 보호 규정)과 같은 개인 정보 보호 규정에 관한 데이터 주체 권한 요청(준수)에 사용됩니다. 모든 규정 준수 사용 사례에 대해 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 대신,
 
