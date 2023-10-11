@@ -3,7 +3,7 @@ title: LiveRamp - 온보드 연결
 description: LiveRamp 커넥터를 사용하여 Adobe Real-time Customer Data Platform에서 LiveRamp Connect로 대상을 온보딩하는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 9122159b3facf7952e6072d0b9e6f8d8d7d7c99c
 workflow-type: tm+mt
 source-wordcount: '1793'
 ht-degree: 3%
@@ -195,7 +195,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 내보낸 CSV 파일에는 선택한 속성이 있는 프로필과 해당 대상 상태가 별도의 열에 속성 이름이 있고 `audience_namespace:audience_ID` 아래 예에 표시된 대로 열 머리글로 쌍으로 묶습니다.
 
-`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1_AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2_AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X_AUDIENCE_ID_X`
 
 내보낸 파일에 포함된 프로필은 다음 대상 자격 상태 중 하나와 일치할 수 있습니다.
 
