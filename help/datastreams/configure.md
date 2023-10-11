@@ -2,10 +2,10 @@
 title: 데이터스트림 구성
 description: 클라이언트측 Web SDK 통합 기능을 다른 Adobe 제품 및 서드파티 대상과 연결하는 방법에 대해 알아봅니다.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 1233d9dcfefa71685e457815cb5b9d7a768b7d6e
+source-git-commit: db75771d09caef00db58073333909f730a303975
 workflow-type: tm+mt
-source-wordcount: '2681'
-ht-degree: 82%
+source-wordcount: '2777'
+ht-degree: 75%
 
 ---
 
@@ -48,12 +48,18 @@ Experience Platform에 사용할 데이터스트림을 구성하고 Platform Web
 
 | 설정 | 설명 |
 | --- | --- |
-| [!UICONTROL 지역 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대해 지리적 위치 조회를 활성화합니다. 지리적 위치 조회에는 웹 SDK 구성의 [`placeContext`](../edge/data-collection/automatic-information.md#place-context) 필드 그룹이 포함되어야 합니다. <br> 사용 가능한 옵션: <ul><li>국가</li><li>우편번호</li><li>주/시/도</li><li>DMA</li><li>구/군/시</li><li>위도 </li><li>경도</li></ul>**[!UICONTROL 도시]**, **[!UICONTROL 위도]** 또는 **[!UICONTROL 경도]**&#x200B;를 선택하면 선택한 다른 옵션에 관계없이 소수점 이하 두 자리까지 좌표가 제공됩니다. 이는 도시 수준의 세부 기간으로 간주됩니다. <br> <br>옵션을 선택하지 않으면 지리적 위치 조회가 비활성화됩니다. 지리적 위치는 [!UICONTROL IP 난독화] 이전에 활성화되고 [!UICONTROL IP 난독화] 설정에도 영향을 받지 않습니다. |
-| [!UICONTROL 네트워크 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대해 네트워크 조회를 활성화합니다. 네트워크 조회에는 웹 SDK 구성의 [`Environment`](../edge/data-collection/automatic-information.md#environment) 필드 그룹이 포함되어야 합니다. <br> 사용 가능한 옵션: <ul><li>통신사</li><li>도메인</li><li>ISP</li></ul>이러한 옵션을 사용하여 요청이 시작된 특정 네트워크에 대한 추가 정보를 다른 서비스에 제공합니다. |
+| [!UICONTROL 지역 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대한 지리적 위치 조회를 활성화합니다. 사용 가능한 옵션은 다음과 같습니다. <ul><li>**국가**: 채우기 `xdm.placeContext.geo.countryCode`</li><li>**우편 번호**: 채우기 `xdm.placeContext.geo.postalCode`</li><li>**시/도**: 채우기 `xdm.placeContext.geo.stateProvince`</li><li>**DMA**: 채우기 `xdm.placeContext.geo.dmaID`</li><li>**도시**: 채우기 `xdm.placeContext.geo.city`</li><li>**위도**: 채우기 `xdm.placeContext.geo._schema.latitude`</li><li>**경도**: 채우기 `xdm.placeContext.geo._schema.longitude`</li></ul>**[!UICONTROL 도시]**, **[!UICONTROL 위도]** 또는 **[!UICONTROL 경도]**&#x200B;를 선택하면 선택한 다른 옵션에 관계없이 소수점 이하 두 자리까지 좌표가 제공됩니다. 이는 도시 수준의 세부 기간으로 간주됩니다.<br> <br>옵션을 선택하지 않으면 지리적 위치 조회가 비활성화됩니다. 지리적 위치는 이전에 발생합니다. [!UICONTROL IP 난독화]: 의 영향을 받지 않습니다. [!UICONTROL IP 난독화] 설정. |
+| [!UICONTROL 네트워크 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대한 네트워크 조회를 활성화합니다. 사용 가능한 옵션은 다음과 같습니다. <ul><li>**통신사**: 채우기 `xdm.environment.carrier`</li><li>**도메인**: 채우기 `xdm.environment.domain`</li><li>**ISP**: 채우기 `xdm.environment.ISP`</li></ul> |
+
+데이터 수집을 위해 위의 필드 중 하나를 활성화하는 경우 [`context`](../edge/data-collection/automatic-information.md) 배열 속성 [웹 SDK 구성](../edge/fundamentals/configuring-the-sdk.md).
+
+지리적 위치 조회 필드는 `context` 배열 문자열 `"placeContext"`, 네트워크 조회 필드는 `context` 배열 문자열 `"environment"`.
+
+또한 원하는 각 XDM 필드가 스키마에 있는지 확인합니다. 표시되지 않으면 제공된 Adobe을 추가할 수 있습니다 `Environment Details` 스키마에 대한 필드 그룹입니다.
 
 ### 장치 조회 구성 {#geolocation-device-lookup}
 
-다음 **[!UICONTROL 장치 조회]** 설정을 사용하면 수집할 장치별 정보의 세부 기간 수준을 선택할 수 있습니다.
+다음 **[!UICONTROL 장치 조회]** 설정을 사용하면 수집할 장치 관련 정보를 선택할 수 있습니다.
 
 확장 **[!UICONTROL 장치 조회]** 섹션에 설명되어 있는 설정을 구성하는 방법에 대해 설명합니다.
 
@@ -65,9 +71,15 @@ Experience Platform에 사용할 데이터스트림을 구성하고 Platform Web
 
 | 설정 | 설명 |
 | --- | --- |
-| **[!UICONTROL 사용자 에이전트 및 클라이언트 힌트 헤더 유지]** | 사용자 에이전트 문자열에 저장된 정보만 수집하려면 이 옵션을 선택합니다. 기본 설정입니다. |
-| **[!UICONTROL 장치 조회를 사용하여 다음 정보 수집]** | 다음 장치별 정보 중 하나 이상을 수집하려면 이 옵션을 선택합니다. <ul><li>**[!UICONTROL 장치]** 정보:<ul><li>장치 제조업체</li><li>디바이스 모델</li><li>마케팅 이름</li></ul></li><li>**[!UICONTROL 하드웨어]** 정보: <ul><li>장치 유형</li><li>높이 표시</li><li>표시 폭</li><li>색상 깊이 표시</li></ul></li><li>**[!UICONTROL 브라우저]** 정보: <ul><li>브라우저 공급업체</li><li>브라우저 이름</li><li>브라우저 버전</li></ul></li><li>**[!UICONTROL 운영 체제]** 정보: <ul><li>OS 공급업체</li><li>OS 이름</li><li>OS 버전</li></ul></li></ul> <br>  사용자 에이전트 및 클라이언트 힌트와 함께 디바이스 조회 정보를 수집할 수 없습니다. 디바이스 정보를 수집하도록 선택하면 사용자 에이전트 및 클라이언트 힌트 수집이 비활성화되고, 그 반대의 경우도 마찬가지입니다. 모든 장치 조회 정보는 `xdm:device` 필드 그룹입니다. |
-| **[!UICONTROL 장치 정보 수집 안 함]** | 모든 종류의 조회 정보를 수집하지 않으려면 이 옵션을 선택합니다. 사용자 에이전트나 클라이언트 힌트 헤더가 없는 등 디바이스, 하드웨어, 브라우저 또는 운영 체제 정보는 수집되지 않습니다. |
+| **[!UICONTROL 사용자 에이전트 및 클라이언트 힌트 헤더 유지]** | 사용자 에이전트 문자열에 저장된 정보만 수집하려면 이 옵션을 선택합니다. 이 설정은 기본적으로 선택됩니다. 채우기 `xdm.environment.browserDetails.userAgent` |
+| **[!UICONTROL 장치 조회를 사용하여 다음 정보 수집]** | 다음 장치별 정보 중 하나 이상을 수집하려면 이 옵션을 선택합니다. <ul><li>**[!UICONTROL 장치]** 정보:<ul><li>**장치 제조업체**: 채우기 `xdm.device.manufacturer`</li><li>**장치 모델**: 채우기 `xdm.device.modelNumber`</li><li>**마케팅 이름**: 채우기 `xdm.device.model`</li></ul></li><li>**[!UICONTROL 하드웨어]** 정보: <ul><li>**하드웨어 유형**: 채우기 `xdm.device.type`</li><li>**높이 표시**: 채우기 `xdm.device.screenHeight`</li><li>**표시 폭**: 채우기 `xdm.device.screenWidth`</li><li>**색상 깊이 표시**: 채우기 `xdm.device.colorDepth`</li></ul></li><li>**[!UICONTROL 브라우저]** 정보: <ul><li>**브라우저 공급업체**: 채우기 `xdm.environment.browserDetails.vendor`</li><li>**브라우저 이름**: 채우기 `xdm.environment.browserDetails.name`</li><li>**브라우저 버전**: 채우기 `xdm.environment.browserDetails.version`</li></ul></li><li>**[!UICONTROL 운영 체제]** 정보: <ul><li>**OS 공급업체**: 채우기 `xdm.environment.operatingSystemVendor`</li><li>**OS 이름**: 채우기 `xdm.environment.operatingSystem`</li><li>**OS 버전**: 채우기 `xdm.environment.operatingSystemVersion`</li></ul></li></ul>사용자 에이전트 및 클라이언트 힌트와 함께 디바이스 조회 정보를 수집할 수 없습니다. 디바이스 정보를 수집하도록 선택하면 사용자 에이전트 및 클라이언트 힌트 수집이 비활성화되고 그 반대의 경우도 마찬가지입니다. |
+| **[!UICONTROL 장치 정보 수집 안 함]** | 장치 조회 정보를 수집하지 않으려면 이 옵션을 선택합니다. 장치, 하드웨어, 브라우저, 운영 체제, 사용자 에이전트 또는 클라이언트 힌트 데이터가 수집되지 않습니다. |
+
+데이터 수집을 위해 위의 필드 중 하나를 활성화하는 경우 [`context`](../edge/data-collection/automatic-information.md) 배열 속성 [웹 SDK 구성](../edge/fundamentals/configuring-the-sdk.md).
+
+장치 및 하드웨어 정보는 `context` 배열 문자열 `"device"`, 브라우저 및 운영 체제 정보가 `context` 배열 문자열 `"environment"`.
+
+또한 원하는 각 XDM 필드가 스키마에 있는지 확인합니다. 표시되지 않으면 제공된 Adobe을 추가할 수 있습니다 `Environment Details` 스키마에 대한 필드 그룹입니다.
 
 ### 고급 옵션 구성 {#@advanced-options}
 
