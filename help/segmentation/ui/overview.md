@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 UI 안내서
 description: Adobe Experience Platform UI에서 대상 및 세그먼트 정의를 만들고 관리하는 방법을 알아봅니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7eaf3383bb8dde0d5918eefba1ee69caddea0c0b
+source-git-commit: 695a5c9b39def899c6b1f9cb169508ae0299686c
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '3822'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 3%
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] 에 저장된 데이터를 세그먼트화할 수 있습니다. [!DNL Experience Platform] 고객, 잠재 고객, 사용자 또는 조직 등 개인과 관련된 정보를 더 작은 그룹으로 분류할 수 있습니다.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): 수집되는 서로 다른 데이터 소스의 ID를 브리징하여 고객 프로필을 만들 수 있습니다 [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다. 세그먼테이션을 최대한 활용하려면 데이터에 따라 프로필 및 이벤트가 수집되는지 확인하십시오. [데이터 모델링 우수 사례](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다. 세그먼테이션을 최대한 활용하려면 데이터에 따라 프로필 및 이벤트가 수집되는지 확인하십시오. [데이터 모델링 우수 사례](../../xdm/schema/best-practices.md).
 
 또한 이 문서를 통해 사용되는 두 가지 주요 용어를 이해하고 두 용어 간의 차이점을 이해해야 합니다.
 
@@ -350,6 +350,10 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 ![다음 [!UICONTROL 리뷰] 새로 가져온 외부 생성 대상자의 세부 정보를 보여 주는 페이지가 표시됩니다.](../images/ui/overview/import-audience-review-details.png)
 
 세부 정보가 올바른지 확인한 후 다음을 선택합니다. **[!UICONTROL 완료]** 을 눌러 외부에서 생성된 대상자를 Adobe Experience Platform으로 가져옵니다.
+
+>[!IMPORTANT]
+>
+>외부에서 생성된 대상자에 중요한 정보 및/또는 의료 관련 정보가 포함되어 있는 경우 **필수** 필요한 데이터 사용 레이블을 대상에 활성화하기 전에 적용합니다. 데이터 사용 레이블 적용에 대한 자세한 내용은 [레이블 관리](../../access-control/abac/ui/labels.md).
 
 ## 예약된 세분화 {#scheduled-segmentation}
 
