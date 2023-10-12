@@ -2,7 +2,7 @@
 title: Moengage 연결
 description: Moengage는 소비자와 브랜드 간의 고객 중심 상호 작용을 실시간으로 향상시키는 고객 참여 플랫폼입니다.
 last-substantial-update: 2023-10-11T00:00:00Z
-source-git-commit: 3d5a3ce18e7f1c0e06246faf8ec4403871e1a1a9
+source-git-commit: 6a80089f404057b5c98764b5e0166b9afaf1a7e4
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Adobe을 사용하면 통합이 매우 간단하고 직관적입니다. Adobe �
 
 >[!IMPORTANT]
 >
->이 대상 커넥터 및 설명서 페이지는 *Moengage* 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. *`[amc-support@amazon.com](https://help.moengage.com/hc/en-us)`.*
+>이 대상 커넥터 및 설명서 페이지는 *Moengage* 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. *`https://help.moengage.com/hc/en-us`.*
 
 ## 사용 사례 {#use-cases}
 
