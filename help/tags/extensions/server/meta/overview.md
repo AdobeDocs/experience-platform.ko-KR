@@ -2,9 +2,9 @@
 title: 메타 전환 API 확장 개요
 description: Adobe Experience Platform의 이벤트 전달을 위한 메타 전환 API 확장에 대해 알아봅니다.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
 workflow-type: tm+mt
-source-wordcount: '2370'
+source-wordcount: '2624'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 원하는 속성을 선택하거나 만들었으면 를 선택합니다. **[!UICONTROL 확장]** 왼쪽 탐색에서 **[!UICONTROL 카탈로그]** 탭. 검색 [!UICONTROL 메타 전환 API] 카드를 선택한 다음 **[!UICONTROL 설치]**.
 
-![다음 [!UICONTROL 설치] 다음에 대해 선택 중인 버튼 [!UICONTROL 메타 전환 API] 데이터 수집 UI의 확장.](../../../images/extensions/server/meta/install.png)
+![다음 [!UICONTROL 설치] 다음에 대해 선택 중인 옵션 [!UICONTROL 메타 전환 API] 데이터 수집 UI의 확장.](../../../images/extensions/server/meta/install.png)
 
 표시되는 구성 보기에서 다음을 제공해야 합니다. [!DNL Pixel] 확장을 계정에 연결하기 위해 이전에 복사한 ID입니다. ID를 입력에 직접 붙여넣거나 데이터 요소를 대신 사용할 수 있습니다.
 
@@ -46,6 +46,30 @@ ht-degree: 0%
 ![다음 [!DNL Pixel] 확장 구성 보기에서 데이터 요소로 제공된 ID.](../../../images/extensions/server/meta/configure.png)
 
 확장이 설치되었으며 이제 이벤트 전달 규칙에 해당 기능을 사용할 수 있습니다.
+
+## Meta Business Extension(MBE)과 통합 {#mbe}
+
+MBE(Meta Business Extensions) 기능 향상으로 Meta Business 계정을 빠르게 인증할 수 있습니다. 그러면 자동으로 [!UICONTROL 픽셀 ID] 및 메타 전환 API [!UICONTROL 액세스 토큰]를 사용하면 메타 전환 API를 더 쉽게 설치하고 구성할 수 있습니다.
+
+를 설치할 때 MBE에 인증하라는 대화 상자가 나타납니다. [!UICONTROL 메타 전환 API] 확장명.
+
+![다음 [!UICONTROL 메타 전환 API 확장] 설치 페이지 강조 표시 [!UICONTROL 메타에 연결].](../../../images/extensions/server/meta/mbe-extension-install.png)
+
+MBE에서 인증하라는 대화 상자 프롬프트가 이벤트 전달 내의 빠른 시작 워크플로우 UI에도 나타납니다.
+
+![빠른 시작 워크플로우 UI 강조 표시 [!UICONTROL 메타에 연결].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+
+## 이벤트 품질 일치 점수(EMQ)와 통합 {#emq}
+
+이벤트 품질 일치 점수(EMQ)와 통합하면 EMQ 점수를 표시하여 구현의 효과를 쉽게 볼 수 있습니다. 이 통합은 컨텍스트 전환을 최소화하고 메타 전환 API 구현의 성공을 개선하는 데 도움이 됩니다. 이러한 이벤트 점수는 [!UICONTROL 메타 전환 API 확장] 구성 화면입니다.
+
+![다음 [!UICONTROL 메타 전환 API 확장] 구성 페이지 강조 표시 [!UICONTROL EMQ 점수 보기].](../../../images/extensions/server/meta/emq-score.png)
+
+## LiveRamp와 통합(Alpha) {#alpha}
+
+LiveRamp와 통합하면 메타 전환 API 규칙 구성에 새 필드가 추가되어 고객이 LiveRamp 전환 API와 보다 쉽게 통합할 수 있습니다. 이렇게 통합하면 파트너 또는 메타와 직접 PII를 공유할 필요가 없습니다. LiveRamp의 강력한 ID 그래프로 인해 [!UICONTROL 파트너 ID(알파)] 사용자 일치율을 높임으로써 통합 품질을 향상시킬 수 있습니다.
+
+![메타 짝수 전달 [!UICONTROL 규칙] 구성 페이지 강조 표시 [!UICONTROL 파트너 이름(알파)] 및 [!UICONTROL 파트너 ID(알파)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## 이벤트 전달 규칙 구성 {#rule}
 

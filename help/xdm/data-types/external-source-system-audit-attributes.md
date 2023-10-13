@@ -2,20 +2,16 @@
 title: 외부 소스 시스템 감사 속성 데이터 유형
 description: 이 문서에서는 외부 소스 시스템 감사 속성 XDM(Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 2%
+source-wordcount: '192'
+ht-degree: 15%
 
 ---
 
 # [!UICONTROL 외부 소스 시스템 감사 속성] 데이터 유형
 
->[!NOTE]
->
->이 데이터 유형은 Adobe Real-time Customer Data Platform의 B2B 에디션에 액세스할 수 있는 조직에만 사용할 수 있습니다.
-
-[!UICONTROL 외부 소스 시스템 감사 속성] 는 외부 소스 시스템에 대한 감사 세부 정보를 캡처하는 표준 경험 데이터 모델(XDM) 데이터 유형입니다.
+[!UICONTROL 외부 소스 시스템 감사 속성]은 외부 소스 시스템에 대한 감사 세부 정보를 캡처하는 표준 Experience Data Model(XDM) 데이터 유형입니다.
 
 ![](../images/data-types/external-source-system-audit-attributes.png)
 
