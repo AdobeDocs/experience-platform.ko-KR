@@ -3,9 +3,9 @@ keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침
 title: ID 서비스 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: b78d1d00a42df8a703a4dd15959cf15b058e0b7a
+source-git-commit: 30e927ec78a953aae8ac90829ec8b3b0475c5db4
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1074'
 ht-degree: 1%
 
 ---
@@ -101,7 +101,7 @@ ht-degree: 1%
 
 이 기능을 사용할 수 있게 되면 50개 ID의 제한을 초과하는 그래프는 최대 50개 ID로 줄어듭니다. Real-Time CDP B2C Edition의 경우, 이전에 세분화 및 활성화에서 이들 프로필이 무시되었으므로 대상에 대해 자격을 부여하는 프로필 수가 최소한으로 증가할 수 있습니다.
 
-#### 실시간 고객 프로필: 익명 프로필 설정
+#### 실시간 고객 프로필: 대응 가능 대상에 미치는 영향
 
 삭제는 ID 서비스의 데이터에만 발생하며 실시간 고객 프로필에는 발생하지 않습니다.
 

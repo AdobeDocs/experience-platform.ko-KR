@@ -2,9 +2,9 @@
 title: 데이터 관리 라이선스 권한 부여 우수 사례
 description: Adobe Experience Platform을 사용하여 라이선스 권한을 보다 효율적으로 관리하는 데 사용할 수 있는 모범 사례 및 도구에 대해 알아봅니다.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 5f21d988d7947e64378dc6f35993f2a465ad1df6
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2287'
 ht-degree: 2%
 
 ---
@@ -94,6 +94,12 @@ Adobe Experience Platform의 모든 데이터가 동일한 것은 아닙니다. 
 * [수집 필터](#ingestion-filters)
 * [프로필 저장소](#profile-service)
 
+### ID 서비스 및 대응 가능 대상 {#identity-service}
+
+대응 가능 대상자는 고객 프로필의 총 수를 참조하므로 ID 그래프는 총 대응 가능 대상 권한 수에 포함되지 않습니다.
+
+그러나 ID 그래프 제한은 ID 분할로 인해 대응 가능 대상에 영향을 줄 수 있습니다. 예를 들어 가장 오래된 ECID를 그래프에서 제거하면 ECID가 실시간 고객 프로필에 익명 프로필로 계속 존재합니다. 다음을 설정할 수 있습니다. [익명 프로필 데이터 만료](../../profile/pseudonymous-profiles.md) 이 행동을 회피하기 위해서. 자세한 내용은 [id 서비스 데이터 보호](../../identity-service/guardrails.md).
+
 ### 수집 필터 {#ingestion-filters}
 
 수집 필터를 사용하면 사용 사례에 필요한 데이터만 가져올 수 있으며 필요하지 않은 모든 이벤트는 필터링됩니다.
@@ -104,7 +110,7 @@ Adobe Experience Platform의 모든 데이터가 동일한 것은 아닙니다. 
 | Adobe Analytics 데이터 준비 | 다음을 사용할 수 있습니다. [!DNL Data Prep] 기능 : Analytics 소스 연결을 만들어 사용 사례에 필요하지 않은 데이터를 필터링합니다. 까지 [!DNL Data Prep]프로필에 게시해야 하는 속성/열을 정의할 수 있습니다. 데이터가 프로필에 게시되어야 하는지 또는 에만 게시되어야 하는지 여부를 플랫폼에 알리는 조건문을 제공할 수도 있습니다. [!DNL data lake]. 다음 안내서를 참조하십시오 [analytics 소스 연결 만들기](../../sources/tutorials/ui/create/adobe-applications/analytics.md) 추가 정보. |
 | 프로필에 대한 데이터 세트 활성화/비활성화 지원 | 실시간 고객 프로필로 데이터를 수집하려면 프로필 스토어에서 사용할 데이터 세트를 활성화해야 합니다. 이렇게 하면 가 을(를) 추가합니다. [!DNL Addressable Audience] 및 [!DNL Profile Richness] 권한. 고객 프로필 사용 사례에 더 이상 데이터 세트가 필요하지 않으면 해당 데이터 세트의 프로필 통합을 비활성화하여 데이터가 라이센스 규정을 준수하는지 확인할 수 있습니다. 다음 안내서를 참조하십시오 [프로필에 대한 데이터 세트 활성화 및 비활성화](../../catalog/datasets/enable-for-profile.md) 추가 정보. |
 | Web SDK 및 Mobile SDK 데이터 제외 | 웹 및 모바일 SDK에서 수집하는 데이터에는 자동으로 수집되는 데이터와 개발자가 명시적으로 수집하는 데이터의 두 가지 유형이 있습니다. 라이선스 준수를 보다 효율적으로 관리하려면 컨텍스트 설정을 통해 SDK의 구성에서 자동 데이터 수집을 비활성화하면 됩니다. 사용자 정의 데이터는 개발자가 제거하거나 설정할 수도 없습니다. 다음 안내서를 참조하십시오 [sdk 기본 사항 구성](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) 추가 정보. |
-| 서버 측 전달 데이터 제외 | 서버측 전달을 사용하여 데이터를 Platform으로 전송하는 경우, 규칙 작업에서 매핑을 제거하여 모든 이벤트에서 데이터를 제외하거나 규칙에 조건을 추가하여 특정 이벤트에 대해서만 데이터가 실행되도록 전송할 데이터를 제외할 수 있습니다. 다음에서 설명서를 참조하십시오. [이벤트 및 조건](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) 추가 정보. |
+| 서버 측 전달 데이터 제외 | 서버측 전달을 사용하여 데이터를 Platform으로 전송하는 경우, 규칙 작업에서 매핑을 제거하여 모든 이벤트에서 데이터를 제외하거나 규칙에 조건을 추가하여 특정 이벤트에 대해서만 데이터가 실행되도록 전송할 데이터를 제외할 수 있습니다. 다음에서 설명서를 참조하십시오. [이벤트 및 조건](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if) )를 참조하십시오. |
 | 소스 수준에서 데이터 필터링 | 연결을 만들고 Experience Platform에 대한 데이터를 수집하기 전에 논리 및 비교 연산자를 사용하여 소스에서 행 수준 데이터를 필터링할 수 있습니다. 자세한 내용은 의 안내서를 참조하십시오. [를 사용하여 소스에 대한 행 수준 데이터 필터링 [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 익명 프로필 데이터 만료
 description: 이 문서에서는 Adobe Experience Platform 내의 익명 프로필에 대한 데이터 만료 구성에 대한 일반적인 지침을 제공합니다.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: b6a79952d616a6f8e6ea4b2341c24d74c482c4b8
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -80,3 +80,8 @@ Adobe Experience Platform에서는 익명 프로필의 만료 시간을 구성�
 - 이 은(는) **아님** 1회성 정리 작업. 익명 프로필 데이터 만료는 하루에 한 번 계속 실행되며 고객의 입력과 일치하는 프로필을 삭제합니다.
 - **모두** 익명 프로필로 정의된 프로필은 익명 프로필 데이터 만료의 영향을 받습니다. 그렇습니다 **아님** 프로필이 경험 이벤트만 포함되는지 또는 프로필 속성만 포함하는지 여부입니다.
 - 이 정리 작업은 **전용** 프로필에서 발생합니다. 프로필에 두 개 이상의 연결된 익명 ID(예: `AAID` 및 `ECID`). 이러한 불일치는 가까운 미래에 해결될 것이다.
+
+### 익명 프로필 데이터 만료는 ID 서비스 데이터의 보호와 어떻게 상호 작용합니까?
+
+- ID 서비스 [&quot;선입 선출&quot; 삭제 시스템](../identity-service/guardrails.md) id 그래프에서 ID 서비스에 저장된 ECID를 삭제할 수 있습니다.
+- 이 삭제 동작으로 인해 ECID 전용 프로필이 실시간 고객 프로필(프로필 스토어)에 저장되는 경우 익명 프로필 데이터 만료로 프로필 스토어에서 이 프로필이 삭제됩니다.
