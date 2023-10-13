@@ -1,9 +1,10 @@
 ---
 title: Azure Key Vault 구성
 description: Azure를 사용하여 새 엔터프라이즈 계정을 만들거나 기존 엔터프라이즈 계정을 사용하여 Key Vault를 만드는 방법을 알아봅니다.
-source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
+source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -41,6 +42,12 @@ CMK(고객 관리 키)는 [!DNL Microsoft Azure] 키 보관소. 시작하려면 
 다음에 도착하면 **[!DNL Review + create]** 단계에서는 유효성 검사를 진행하는 동안 Key Vault의 세부 사항을 검토할 수 있습니다. 유효성 검사가 성공하면 다음을 선택합니다. **[!DNL Create]** 을 클릭하여 프로세스를 완료합니다.
 
 ![[만들기]가 강조 표시된 Microsoft Azure 키 저장소 검토 및 만들기 페이지입니다.](../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
+
+## 액세스 구성 {#configure-access}
+
+그런 다음 주요 자격 증명 모음에 대해 Azure 역할 기반 액세스 제어를 사용하도록 설정합니다. 선택 **[!DNL Access configuration]** 다음에서 [!DNL Settings] 왼쪽 탐색 영역에서 섹션을 선택한 다음 **[!DNL Azure role-based access control]** 을 클릭하여 설정을 활성화할 수 있습니다. CMK 앱은 나중에 Azure 역할과 연결해야 하므로 이 단계는 필수입니다. 역할 할당은 두 문서 모두에 설명되어 있습니다. [API](./api-set-up.md#assign-to-role) 및 [UI](./ui-set-up.md#assign-to-role) 워크플로.
+
+![다음 [!DNL Microsoft Azure] 대시보드 [!DNL Access configuration] 및 [!DNL Azure role-based access control] 강조 표시됨.](../../images/governance-privacy-security/customer-managed-keys/access-configuration.png)
 
 ## 네트워킹 옵션 구성 {#configure-network-options}
 
