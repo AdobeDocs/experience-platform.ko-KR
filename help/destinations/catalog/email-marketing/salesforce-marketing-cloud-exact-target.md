@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;salesforce;api salesfor
 title: (API) Salesforce Marketing Cloud 연결
 description: Salesforce Marketing Cloud(이전의 ExactTarget) 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce Marketing Cloud 내에서 활성화할 수 있습니다.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: b778b7b8c79176d0962a9c757d83a749acd147b6
 workflow-type: tm+mt
-source-wordcount: '2960'
+source-wordcount: '3079'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->이 연결과 다른 연결의 차이점을 참고하십시오. [[!DNL Salesforce Marketing Cloud] 연결](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) 이메일 마케팅 카탈로그 섹션에 있습니다. API 기반 스트리밍 연결인 반면, 다른 Salesforce Marketing Cloud 연결에서는 지정된 저장소 위치로 파일을 내보낼 수 있습니다.
+> 이 연결과 다른 연결의 차이점을 참고하십시오. [[!DNL Salesforce Marketing Cloud] 연결](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) 이메일 마케팅 카탈로그 섹션에 있습니다. API 기반 스트리밍 연결인 반면, 다른 Salesforce Marketing Cloud 연결에서는 지정된 저장소 위치로 파일을 내보낼 수 있습니다.
 
 비교 대상 [!DNL Salesforce Marketing Cloud Account Engagement] 보다 지향적인 것 **B2B** 마케팅, [!DNL (API) Salesforce Marketing Cloud] destination은 다음에 이상적입니다. **B2C** 트랜잭션 의사 결정 주기가 짧은 사용 사례입니다. 타겟 대상의 행동을 나타내는 더 큰 데이터 세트를 통합하여 연락처, 특히 외부의 데이터 세트에서 우선 순위를 지정하고 세그먼트화하여 마케팅 캠페인을 조정하고 개선할 수 있습니다 [!DNL Salesforce]. *참고: Experience Platform은 [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
@@ -56,46 +56,46 @@ A [!DNL Salesforce Marketing Cloud] 다음에 대한 구독이 있는 계정 [[!
 
 [!DNL Salesforce] Experience Platform에서 들어오는 대상을 올바르게 읽고 해석하고 내에서 대상 상태를 업데이트하려면 이 값이 필요합니다. [!DNL Salesforce Marketing Cloud]. 다음에 대한 Experience Platform 설명서 참조: [대상자 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md) 대상 상태에 대한 지침이 필요한 경우.
 
-Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce Marketing Cloud], 유형의 속성을 만들어야 합니다. `Text` 다음 범위 내 [!DNL Salesforce]. 사용 [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] 속성을 만듭니다. 속성 필드 이름은 [!DNL (API) Salesforce Marketing Cloud] 다음 기간 동안 타겟 필드: **[!UICONTROL 매핑]** 단계. 비즈니스 요구 사항에 따라 최대 4000자로 필드 문자를 정의할 수 있습니다. 다음을 참조하십시오. [!DNL Salesforce Marketing Cloud] [데이터 확장 데이터 유형](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) 속성 유형에 대한 추가 정보는 설명서 페이지를 참조하십시오.
+Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce], 유형의 속성이 있어야 합니다. `Text` 에 연결됨 [!DNL Email Demographics] 다음 범위 내의 데이터 확장 [!DNL Salesforce Marketing Cloud]. 사용 [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] 속성을 만듭니다. 다음을 참조하십시오. [!DNL Salesforce Marketing Cloud] 에 대한 설명서 [속성 만들기](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) 속성 만들기에 대한 지침이 필요한 경우.
 
-다음을 참조하십시오. [!DNL Salesforce Marketing Cloud] 에 대한 설명서 [속성 만들기](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) 속성 만들기에 대한 지침이 필요한 경우.
+속성 필드 이름은 [!DNL (API) Salesforce Marketing Cloud] 다음 기간 동안 타겟 필드: **[!UICONTROL 매핑]** 단계. 비즈니스 요구 사항에 따라 최대 4000자로 필드 문자를 정의할 수 있습니다. 다음을 참조하십시오. [!DNL Salesforce Marketing Cloud] [데이터 확장 데이터 유형](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) 속성 유형에 대한 추가 정보는 설명서 페이지를 참조하십시오.
 
 의 데이터 디자이너 화면의 예 [!DNL Salesforce Marketing Cloud]속성을 추가할 가 아래에 표시되어 있습니다.
 ![Salesforce Marketing Cloud UI 데이터 디자이너.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-data-designer.png)
 
-의 보기 [!DNL Salesforce Marketing Cloud] [!DNL Email Demographics] 속성 세트는 다음과 같습니다.
-![Salesforce Marketing Cloud UI 이메일 인구 통계 특성 세트입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-email-demograhics-fields.png)
+의 보기 [!DNL Salesforce Marketing Cloud] [!DNL Email Data] 내의 대상 상태에 해당하는 속성을 가진 속성 그룹 [!DNL Email Demographics] 데이터 확장은 아래에 표시되어 있습니다.
+![Salesforce Marketing Cloud UI 이메일 데이터 속성 그룹입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-email-demographics-fields.png)
 
-다음 [!DNL (API) Salesforce Marketing Cloud] 대상이 을 사용합니다. [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) 내에서 정의된 속성 및 해당 속성 세트를 동적으로 읽어들이기 [!DNL Salesforce Marketing Cloud].
+다음 [!DNL (API) Salesforce Marketing Cloud] 대상이 을 사용합니다. [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) 내에서 정의된 데이터 확장 및 연결된 속성을 동적으로 검색하기 [!DNL Salesforce Marketing Cloud].
 
 다음 위치에 표시됩니다. **[!UICONTROL 대상 필드]** 다음을 설정할 때 선택 창 [매핑](#mapping-considerations-example) (으)로 이동하는 워크플로우 [대상에 대상 활성화](#activate).
 
 >[!IMPORTANT]
 >
->다음 범위 내 [!DNL Salesforce Marketing Cloud]를 사용하여 속성을 만들어야 합니다. **[!UICONTROL 필드 이름]** 내에 지정된 값과 정확히 일치하는 **[!UICONTROL 매핑 ID]** 활성화된 각 플랫폼 세그먼트에 대해. 예를 들어 아래 스크린샷에는 라는 속성이 표시됩니다 `salesforce_mc_segment_1`. 이 대상에 대한 대상자를 활성화할 때 다음을 추가합니다. `salesforce_mc_segment_1` 다음으로: **[!UICONTROL 매핑 ID]** Experience Platform의 대상자 대상자를 이 속성으로 채우기 위한 것입니다.
+> 다음 범위 내 [!DNL Salesforce Marketing Cloud]를 사용하여 속성을 만들어야 합니다. **[!UICONTROL 필드 이름]** 내에 지정된 값과 정확히 일치하는 **[!UICONTROL 매핑 ID]** 활성화된 각 플랫폼 세그먼트에 대해. 예를 들어 아래 스크린샷에는 라는 속성이 표시됩니다 `salesforce_mc_segment_1`. 이 대상에 대한 대상자를 활성화할 때 다음을 추가합니다. `salesforce_mc_segment_1` 다음으로: **[!UICONTROL 매핑 ID]** Experience Platform의 대상자 대상자를 이 속성으로 채우기 위한 것입니다.
 
 의 속성 작성 예 [!DNL Salesforce Marketing Cloud]이 아래에 표시되어 있습니다.
 ![속성을 보여 주는 Salesforce Marketing Cloud UI 스크린샷입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
 >[!TIP]
 >
->* 속성을 만들 때 필드 이름에 공백 문자를 포함하지 마십시오. 대신 밑줄을 사용하십시오 `(_)` 문자를 구분 기호로 사용했습니다.
->* Platform 대상에 사용되는 속성과 내의 다른 속성을 구분하려면 다음 작업을 수행하십시오 [!DNL Salesforce Marketing Cloud], Adobe 세그먼트에 사용되는 속성에 인식 가능한 접두어 또는 접미어를 포함할 수 있습니다. 예를 들어, 대신 `test_segment`, 사용 `Adobe_test_segment` 또는 `test_segment_Adobe`.
->* 다른 속성을에 이미 만든 경우 [!DNL Salesforce Marketing Cloud], 플랫폼 세그먼트와 동일한 이름을 사용하여 대상자를 쉽게 식별할 수 있습니다. [!DNL Salesforce Marketing Cloud].
+> * 속성을 만들 때 필드 이름에 공백 문자를 포함하지 마십시오. 대신 밑줄을 사용하십시오 `(_)` 문자를 구분 기호로 사용했습니다.
+> * Platform 대상에 사용되는 속성과 내의 다른 속성을 구분하려면 다음 작업을 수행하십시오 [!DNL Salesforce Marketing Cloud], Adobe 세그먼트에 사용되는 속성에 인식 가능한 접두어 또는 접미어를 포함할 수 있습니다. 예를 들어, 대신 `test_segment`, 사용 `Adobe_test_segment` 또는 `test_segment_Adobe`.
+> * 다른 속성을에 이미 만든 경우 [!DNL Salesforce Marketing Cloud], 플랫폼 세그먼트와 동일한 이름을 사용하여 대상자를 쉽게 식별할 수 있습니다. [!DNL Salesforce Marketing Cloud].
 
 #### 내에서 사용자 역할 및 권한 할당 [!DNL Salesforce Marketing Cloud] {#prerequisites-roles-permissions}
 
-다음으로: [!DNL Salesforce Marketing Cloud] 은(는) 사용자 정의 역할을 지원합니다. 사용 사례에 따라 사용자는 관련 역할을 할당하여에서 속성을 업데이트해야 합니다. [!DNL Salesforce Marketing Cloud] attribute-sets. 사용자에게 할당된 역할의 예는 다음과 같습니다.
+다음으로: [!DNL Salesforce Marketing Cloud] 은(는) 사용자 정의 역할을 지원하며 사용 사례에 따라 내에서 속성을 업데이트하려면 사용자에게 관련 역할을 할당해야 합니다. [!DNL Salesforce Marketing Cloud]. 사용자에게 할당된 역할의 예는 다음과 같습니다.
 ![할당된 역할을 표시하는 선택한 사용자에 대한 Salesforce Marketing Cloud UI.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-edit-roles.png)
 
-의 역할에 따라 [!DNL Salesforce Marketing Cloud] 사용자가 할당되었으므로 [!DNL Salesforce Marketing Cloud] 업데이트하려는 필드가 포함된 속성 세트입니다.
+의 역할에 따라 [!DNL Salesforce Marketing Cloud] 사용자가 할당되었으므로 [!DNL Salesforce Marketing Cloud] 업데이트하려는 필드에 연결된 데이터 확장입니다.
 
-이 대상에 대한 액세스 권한이 필요하므로 `[!DNL attribute-set]`, 허용해야 합니다. 예: `Email` [!DNL attribute-set] 아래와 같이 허용해야 합니다.
+이 대상에 대한 액세스 권한이 필요하므로 `[!DNL data extension]`, 허용해야 합니다. 예: `Email` [!DNL data extension] 아래와 같이 허용해야 합니다.
 
-![허용된 권한을 가진 이메일 속성 세트를 표시하는 Salesforce Marketing Cloud UI입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
+![허용된 권한이 있는 이메일 데이터 확장을 표시하는 Salesforce Marketing Cloud UI입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
 
 액세스 수준을 제한하려면 세분화된 권한을 사용하여 개별 액세스를 재정의할 수도 있습니다.
-![세분화된 권한을 가진 이메일 속성 세트를 보여 주는 Salesforce Marketing Cloud UI입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
+![세분화된 권한을 가진 이메일 데이터 확장을 표시하는 Salesforce Marketing Cloud UI.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
 
 다음을 참조하십시오. [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5) 및 [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5) 페이지 를 참조하십시오.
 
@@ -132,6 +132,17 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce Marketi
 |---|---|---|
 | contactKey | [!DNL Salesforce Marketing Cloud] 연락처 키. 다음을 참조하십시오. [!DNL Salesforce Marketing Cloud] [설명서](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&amp;type=5) 추가 지침이 필요한 경우. | 필수입니다 |
 
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
+
+| 대상자 원본 | 지원됨 | 설명 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
+| 사용자 정의 업로드 | X | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+
+{style="table-layout:auto"}
+
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
@@ -147,7 +158,7 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce Marketi
 
 >[!IMPORTANT]
 >
->대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+> 대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
@@ -185,8 +196,8 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce Marketi
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
->* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
+> * 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+> * 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
@@ -198,22 +209,22 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에서 아래
 
 >[!IMPORTANT]
 >
->* 속성 이름은 인 경우와 같습니다. [!DNL Salesforce Marketing Cloud] 계정, 두 항목에 대한 매핑 `contactKey` 및 `personalEmail.address` 필수 항목입니다.
+> * 속성 이름은 인 경우와 같습니다. [!DNL Salesforce Marketing Cloud] 계정, 두 항목에 대한 매핑 `contactKey` 및 `personalEmail.address` 필수 항목입니다.
 >
->* 와 통합 [!DNL Salesforce Marketing Cloud] API는 Experience Platform이 Salesforce에서 검색할 수 있는 속성 수의 페이지 매김 제한을 받습니다. 다음 기간 동안 **[!UICONTROL 매핑]** 단계: target 필드 스키마는 Salesforce 계정에서 최대 2000개의 속성을 표시할 수 있습니다.
+> * 와 통합 [!DNL Salesforce Marketing Cloud] API는 Experience Platform이 Salesforce에서 검색할 수 있는 속성 수의 페이지 매김 제한을 받습니다. 다음 기간 동안 **[!UICONTROL 매핑]** 단계: target 필드 스키마는 Salesforce 계정에서 최대 2000개의 속성을 표시할 수 있습니다.
 
 1. 다음에서 **[!UICONTROL 매핑]** 단계, 선택 **[!UICONTROL 새 매핑 추가]**. 화면에 새 매핑 행이 표시됩니다.
    ![새 매핑 추가에 대한 Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 1. 다음에서 **[!UICONTROL 소스 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL 속성 선택]** 범주를 선택한 다음 XDM 속성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]** id를 선택합니다.
-1. 다음에서 **[!UICONTROL 대상 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL ID 네임스페이스 선택]** id를 선택하거나 **[!UICONTROL 속성 선택]** 필요에 따라 표시되는 속성 세트에서 속성을 선택하고 범주화합니다. 다음 [!DNL (API) Salesforce Marketing Cloud] 대상이 을 사용합니다. [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) 내에서 정의된 속성 및 해당 속성 세트를 동적으로 읽어들이기 [!DNL Salesforce Marketing Cloud]. 다음 위치에 표시됩니다. **[!UICONTROL 대상 필드]** 팝업 을 사용하여 [매핑](#mapping-considerations-example) 다음에서 [대상자 활성화 워크플로](#activate).
+1. 다음에서 **[!UICONTROL 대상 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL ID 네임스페이스 선택]** id를 선택하거나 **[!UICONTROL 속성 선택]** 카테고리에 추가하고 필요에 따라 표시된 데이터 확장에서 속성을 선택합니다. 다음 [!DNL (API) Salesforce Marketing Cloud] 대상이 을 사용합니다. [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) 내에서 정의된 데이터 확장 및 연결된 속성을 동적으로 검색하기 [!DNL Salesforce Marketing Cloud]. 다음 위치에 표시됩니다. **[!UICONTROL 대상 필드]** 팝업 을 사용하여 [매핑](#mapping-considerations-example) 다음에서 [대상자 활성화 워크플로](#activate).
 
    * XDM 프로필 스키마와 간에 다음 매핑을 추가하려면 이 단계를 반복합니다 [!DNL (API) Salesforce Marketing Cloud]:
 
      | 소스 필드 | 대상 필드 | 필수입니다 |
      |---|---|---|
      | `IdentityMap: contactKey` | `Identity: salesforceContactKey` | `Mandatory` |
-     | `xdm: person.name.firstName` | `Attribute: First Name` 원하는 속성 세트에서 | - |
-     | `xdm: personalEmail.address` | `Attribute: Email Address` 원하는 속성 세트에서 | - |
+     | `xdm: personalEmail.address` | `Attribute: Email Address` 다음에서 [!DNL Salesforce Marketing Cloud] [!DNL Email Addresses] 데이터 확장. | `Mandatory`새 연락처를 추가할 때 사용됩니다. |
+     | `xdm: person.name.firstName` | `Attribute: First Name` 원하는 대로 [!DNL Salesforce Marketing Cloud] 데이터 확장. | - |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
      ![Target 매핑을 보여주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
@@ -229,7 +240,7 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에서 아래
 예를 들어 [!DNL Salesforce Marketing Cloud] 속성은 입니다. `salesforce_mc_segment_1`에서 이 값을 지정합니다. [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL 매핑 ID]** Experience Platform의 대상자 대상자를 이 속성으로 채우기 위한 것입니다.
 
 의 예제 속성 [!DNL Salesforce Marketing Cloud] 다음이 표시됩니다.
-![속성을 보여주는 Salesforce Marketing Cloud UI 스크린샷입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
+![속성을 보여 주는 Salesforce Marketing Cloud UI 스크린샷입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
 의 위치를 나타내는 예 [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL 매핑 ID]** 다음이 표시됩니다.
 ![대상자 내보내기 예약을 보여 주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
@@ -238,7 +249,7 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에서 아래
 
 활성화된 각 플랫폼 세그먼트에 대해 이 섹션을 반복합니다.
 
-사용 사례에 따라 활성화된 모든 대상을 동일한 대상에 매핑할 수 있습니다 [!DNL Salesforce Marketing Cloud] **[!UICONTROL 필드 이름]** 또는 다름 **[!UICONTROL 필드 이름]** 위치: [!DNL (API) Salesforce Marketing Cloud]. 위에 표시된 이미지를 기반으로 한 일반적인 예는 다음과 같을 수 있습니다.
+위에 표시된 이미지를 기반으로 한 일반적인 예는 다음과 같을 수 있습니다.
 | [!DNL (API) Salesforce Marketing Cloud] 세그먼트 이름 | [!DNL Salesforce Marketing Cloud] **[!UICONTROL 필드 이름]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL 매핑 ID]** | | — | — | — | | salesforce mc 대상 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` | | salesforce mc 대상 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
@@ -282,7 +293,7 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에서 아래
 ## 추가 리소스 {#additional-resources}
 
 * [!DNL Salesforce Marketing Cloud] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
-* [!DNL Salesforce Marketing Cloud] [설명서](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) 지정된 속성 그룹의 지정된 정보로 연락처가 업데이트되는 방법을 설명합니다.
+* [!DNL Salesforce Marketing Cloud] [설명서](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) 연락처가 지정된 정보로 업데이트되는 방법을 설명합니다.
 
 ### 변경 로그 {#changelog}
 
@@ -292,6 +303,7 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에서 아래
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
+| 2023년 10월 | 설명서 업데이트 | <ul><li>다음을 업데이트했습니다. [(API) Salesforce Marketing Cloud의 사전 요구 사항](#prerequisites-destination) 섹션 및 일반적으로 문서 전체에서 속성 그룹에 대한 불필요한 참조를 제거했습니다.</li> <li>대상자 상태에 대한 속성을 다음 기간 내에 만들어야 함을 나타내도록 설명서가 업데이트되었습니다. [!DNL Salesforce Marketing Cloud] 의 내부 [!DNL Email Demographics] 데이터 확장만 해당.</li> <li>의 매핑 테이블을 업데이트했습니다. [매핑 고려 사항 및 예제](#mapping-considerations-example) 섹션, 매핑 `Email Address` 속성 포함 `Email Addresses` 데이터 확장은 필수로 표시되며, 이 요구 사항은 중요로 표시된 설명선에서 언급되었지만 표에서 생략되었습니다.</li></ul> |
 | 2023년 4월 | 설명서 업데이트 | <ul><li>에서 문 및 참조 링크를 수정했습니다. [(API) Salesforce Marketing Cloud의 사전 요구 사항](#prerequisites-destination) 섹션 을 참조하십시오 [!DNL Salesforce Marketing Cloud Engagement] 은(는) 이 대상을 사용하기 위한 필수 구독입니다. 이전에 호출한 섹션은 사용자가 Marketing Cloud에 대한 구독이 필요하다는 잘못된 정보를 제공했습니다 **계정** 계속 진행할 참여</li> <li>아래에 섹션을 추가했습니다. [전제 조건](#prerequisites) 대상 [역할 및 권한](#prerequisites-roles-permissions) 에 할당됨 [!DNL Salesforce] 이 대상에 대한 사용자가 작동합니다. (PLATIR-26299)</li></ul> |
 | 2023년 2월 | 설명서 업데이트 | 다음을 업데이트했습니다. [(API) Salesforce Marketing Cloud의 사전 요구 사항](#prerequisites-destination) 다음을 호출하는 참조 링크를 포함하는 섹션 [!DNL Salesforce Marketing Cloud Engagement] 은(는) 이 대상을 사용하기 위한 필수 구독입니다. |
 | 2023년 2월 | 기능 업데이트 | 대상에서 잘못된 구성으로 인해 잘못된 포맷의 JSON이 Salesforce로 전송되는 문제가 해결되었습니다. 이로 인해 일부 사용자는 활성화 시 많은 ID가 실패했음을 보게 되었습니다. (PLATIR-26299) |
