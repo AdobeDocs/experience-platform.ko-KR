@@ -3,7 +3,7 @@ title: ID 서비스 및 실시간 고객 프로필
 description: ID 서비스와 실시간 고객 프로필 간의 관계에 대해 알아봅니다
 hide: true
 hidefromtoc: true
-source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
+source-git-commit: 026f0dee203dd9d7f23d3343025665313692efbe
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 1%
@@ -14,14 +14,14 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->이 페이지에서는 병합 정책이 ID 그래프를 사용한다고 가정합니다. 실시간 고객 프로필의 병합 정책에 대한 자세한 내용은 [병합 정책 및 id 결합].
+>이 페이지에서는 병합 정책이 ID 그래프를 사용한다고 가정합니다. 실시간 고객 프로필의 병합 정책에 대한 자세한 내용은 [병합 정책 및 id 결합](../../profile/merge-policies/overview.md#identity-stitching).
 
 ID 서비스와 실시간 고객 프로필을 함께 사용할 수 있지만, Adobe Experience Platform의 두 가지 기능은 기본적으로 동일하지 않습니다.
 
 * ID 서비스를 사용하여 개별 고객의 서로 다른 ID를 통합하는 ID 그래프를 생성하고 유지 관리할 수 있습니다.
 * Real-Time Customer Profile을 사용하여 서로 다른 프로필 조각을 모으고 병합 프로필을 만들 수 있습니다. 이 프로세스에는 ID 그래프를 사용해야 합니다.
 
-이 문서에서는 ID 서비스와 실시간 고객 프로필의 유사성, 차이점 및 관계에 대해 간략히 설명합니다.
+이 문서에서는 ID 서비스와 실시간 고객 프로필 간의 유사성, 차이점 및 관계에 대해 간략히 설명합니다.
 
 ## ID 서비스와 실시간 고객 프로필 비교
 
