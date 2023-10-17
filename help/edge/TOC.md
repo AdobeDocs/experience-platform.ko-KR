@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK 도움말
 breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
-source-git-commit: d856630d4c14387ad4d77a915585fe05803878fb
+source-git-commit: f96c0a3b75239681f53ffec6184af64394e37a84
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 30%
+source-wordcount: '174'
+ht-degree: 29%
 
 ---
 
@@ -58,6 +58,7 @@ ht-degree: 30%
       * [개요](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [개요](personalization/ajo/overview.md)
+      * [단일 페이지 애플리케이션 구현](personalization/ajo/web-spa-implementation.md)
 * 동의 {#consent}
    * [동의 지원](consent/supporting-consent.md)
    * IAB 투명성 및 동의 프레임워크 2.0 {#iab-tcf}
