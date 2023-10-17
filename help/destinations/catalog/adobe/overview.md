@@ -3,9 +3,9 @@ keywords: 대상;experience cloud 솔루션;target;target 대상;ad cloud;advert
 title: Adobe 대상 개요
 description: 광고 타겟팅, 개인화, 마케팅 자동화 등을 위해 플랫폼의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다.
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '231'
 ht-degree: 12%
 
 ---
@@ -35,7 +35,6 @@ ht-degree: 12%
 
 * [Adobe Advertising Cloud 확장](../advertising/adobe-advertising-cloud.md)
 * [Adobe Analytics 확장](../analytics/adobe-analytics.md)
-* [Adobe Livefyre 확장](../social/adobe-livefyre.md)
 * [Adobe Media Analytics for Audio 및 Video 확장](../analytics/adobe-video-analytics.md)
 * [Adobe Target 확장](../personalization/adobe-target.md)
 * [Adobe Target v2 확장](../personalization/adobe-target-v2.md)
