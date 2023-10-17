@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 모델링 우수 사례
 description: 이 문서에서는 XDM(경험 데이터 모델) 스키마와 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 구성 요소, 원칙 및 모범 사례에 대해 소개합니다.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
+source-git-commit: 4e87471dcfc99ff70a0d91245821e7f974973b49
 workflow-type: tm+mt
-source-wordcount: '2709'
+source-wordcount: '3044'
 ht-degree: 1%
 
 ---
@@ -101,7 +101,7 @@ Experience Platform에서 사용할 데이터 모델을 디자인하는 데 권�
 
 #### 활성화 사용 사례
 
-세분화 사용 사례에 대한 고려 사항 외에 추가적인 관련 속성을 식별하려면 해당 대상에 대한 활성화 사용 사례도 검토해야 합니다.
+세분화 사용 사례에 대한 고려 사항 외에도 추가 관련 속성을 식별하려면 해당 대상에 대한 활성화 사용 사례도 검토해야 합니다.
 
 예를 들어 회사는 다음과 같은 규칙을 기반으로 대상을 빌드했습니다 `country = US`. 그런 다음 특정 다운스트림 타겟으로 해당 대상자를 활성화하면 회사는 홈 상태를 기반으로 내보낸 모든 프로필을 필터링하려고 합니다. 따라서 `state` 속성은 적용 가능한 프로필 엔티티에서도 캡처되어야 합니다.
 
@@ -228,6 +228,16 @@ Adobe Analytics의 경우 ECID가 기본 기본 ID입니다. 고객이 ECID 값�
 >[!IMPORTANT]
 >
 >Adobe 애플리케이션 필드 그룹을 사용할 때 다른 필드는 기본 ID로 표시되지 않아야 합니다. ID로 표시해야 하는 추가 속성이 있는 경우 이러한 필드를 보조 ID로 대신 할당해야 합니다.
+
+## 데이터 유효성 검사 필드 {#data-validation-fields}
+
+불필요한 데이터가 플랫폼으로 수집되지 않도록 하려면 스키마를 생성할 때 필드 수준 유효성 검사에 대한 기준을 정의하는 것이 좋습니다. 특정 필드에 대한 제약 조건을 설정하려면 스키마 편집기에서 필드를 선택하여 [!UICONTROL 필드 속성] 사이드바. 다음에서 설명서를 참조하십시오. [유형별 필드 속성](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) 사용 가능한 필드에 대한 정확한 설명.
+
+![제약조건 필드가 강조 표시된 스키마 편집기 [!UICONTROL 필드 속성] 사이드바.](../images/best-practices/data-validation-fields.png)
+
+>[!TIP]
+>
+>다음은 스키마를 만들 때 데이터 모델링을 위한 제안 사항 컬렉션입니다.<br><ul><li>**기본 ID 고려**: 웹 SDK, 모바일 SDK, Adobe Analytics 및 Adobe Journey Optimizer과 같은 Adobe 제품의 경우 `identityMap` 필드는 종종 기본 ID 역할을 합니다. 추가 필드를 해당 스키마의 기본 ID로 지정하지 마십시오.</li><li>**사용하지 않음 `_id` id로서의**: 를 사용하지 마십시오 `_id` id로서 경험 이벤트 스키마의 필드입니다. 이것은 정체성으로 사용하기 위한 것이 아니라 기록상의 고유성을 위한 것입니다.</li><li>**길이 제한 설정**: ID로 표시된 필드의 최소 및 최대 길이를 설정하는 것이 좋습니다. 이러한 제한 사항은 일관성 및 데이터 품질을 유지하는 데 도움이 됩니다.</li><li>**일관된 값에 패턴 적용**: ID 값이 특정 패턴을 따르는 경우 [!UICONTROL 패턴] 이 제약 조건을 적용하도록 설정합니다. 이 설정에는 숫자만, 대문자, 소문자 또는 특정 문자 조합과 같은 규칙이 포함될 수 있습니다. 정규 표현식을 사용하여 문자열의 패턴을 일치시킵니다.</li><li>**Analytics 스키마에서 eVar 제한**: 일반적으로 Analytics 스키마에는 ID로 지정된 eVar이 하나만 있어야 합니다. 두 개 이상의 eVar을 ID로 사용하려면 데이터 구조를 최적화할 수 있는지 다시 확인해야 합니다.</li><li>**선택한 필드의 고유성 확인**: 선택한 필드는 스키마의 기본 ID와 비교하여 고유해야 합니다. 그렇지 않은 경우 ID로 표시하지 않습니다. 예를 들어 여러 고객이 동일한 이메일 주소를 제공할 수 있는 경우 해당 네임스페이스는 적합한 ID가 아닙니다. 이 원칙은 전화번호와 같은 다른 ID 네임스페이스에도 적용됩니다.</li></ul>
 
 ## 다음 단계
 

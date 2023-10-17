@@ -5,9 +5,9 @@ title: 스키마 편집기를 사용하여 스키마 만들기
 type: Tutorial
 description: 이 튜토리얼에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: bf3099afadd6c8807060a6796cb6f37471478b44
+source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
 workflow-type: tm+mt
-source-wordcount: '4619'
+source-wordcount: '4632'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 를 만들�
 
 이 자습서에서는 스키마 만들기와 관련된 Adobe Experience Platform의 다양한 측면에 대한 작업 이해가 필요합니다. 이 자습서를 시작하기 전에 다음 개념에 대한 설명서를 검토하십시오.
 
-* [[!DNL Experience Data Model (XDM)]](../home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다.
+* [[!DNL Experience Data Model (XDM)]](../home.md): [!DNL Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션 기본 사항](../schema/composition.md): 클래스, 스키마 필드 그룹, 데이터 유형 및 개별 필드를 포함한 XDM 스키마 및 해당 빌딩 블록의 개요입니다.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
 
@@ -201,7 +201,7 @@ An &quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스�
 * **[!UICONTROL 유형]:** 필드의 데이터 유형입니다. 여기에는 기본 스칼라 유형과 [!DNL Schema Registry]. 예: [!UICONTROL 문자열], [!UICONTROL 정수], [!UICONTROL 부울], [!UICONTROL 개인], [!UICONTROL 주소], [!UICONTROL 전화 번호]등
 * **[!UICONTROL 설명]:** 필드에 대한 선택적 설명은 최대 200자로 포함해야 합니다.
 
-에 대한 첫 번째 필드 `loyaltyTier` 개체가 라는 문자열이 됩니다. `id`충성도 멤버의 현재 계층의 ID를 나타냅니다. 이 회사는 서로 다른 요인에 따라 각 고객에 대해 서로 다른 충성도 계층 포인트 임계값을 설정하므로 계층 ID는 각 충성도 멤버에 대해 고유합니다. 새 필드의 유형을 (으)로 설정[!UICONTROL 문자열]&quot; 및 **[!UICONTROL 필드 속성]** 섹션은 기본값, 형식 및 최대 길이를 포함한 구속 적용을 위한 여러 옵션으로 채워집니다.
+에 대한 첫 번째 필드 `loyaltyTier` 개체가 라는 문자열이 됩니다. `id`충성도 멤버의 현재 계층의 ID를 나타냅니다. 이 회사는 서로 다른 요인에 따라 각 고객에 대해 서로 다른 충성도 계층 포인트 임계값을 설정하므로 계층 ID는 각 충성도 멤버에 대해 고유합니다. 새 필드의 유형을 (으)로 설정[!UICONTROL 문자열]&quot; 및 **[!UICONTROL 필드 속성]** 섹션은 기본값, 형식 및 최대 길이를 포함한 구속 적용을 위한 여러 옵션으로 채워집니다. 다음에서 설명서를 참조하십시오. [데이터 유효성 검사 필드에 대한 우수 사례](../schema/best-practices.md#data-validation-fields) 자세히 알아보십시오.
 
 ![새 ID 필드에 대한 필드 속성 값이 강조 표시된 스키마 편집기.](../images/tutorials/create-schema/string-constraints.png)
 
