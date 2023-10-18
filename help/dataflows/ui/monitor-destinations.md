@@ -8,7 +8,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '3227'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -113,7 +113,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="데이터 흐름 실행 세부 정보"
 >abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 세그먼트의 활성화 상태 및 지표에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 검토하십시오."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=ko-KR#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"

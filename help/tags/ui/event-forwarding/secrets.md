@@ -5,7 +5,7 @@ exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
 workflow-type: tm+mt
 source-wordcount: '2182'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 3%
 >
 >비밀 구조의 JSON 예를 포함하여 Reactor API의 비밀을 관리하는 방법에 대한 자세한 지침은 [secrets API 안내서](../../api/guides/secrets.md).
 
-## 사전 요구 사항
+## 전제 조건
 
 이 안내서에서는 데이터 요소와 이벤트 전달 규칙을 만드는 방법을 포함하여 UI에서 태그 및 이벤트 전달을 위한 리소스를 관리하는 방법을 이미 잘 알고 있다고 가정합니다. 다음 안내서를 참조하십시오 [리소스 관리](../managing-resources/overview.md) 소개가 필요한 경우.
 
@@ -43,7 +43,7 @@ ht-degree: 3%
 >id="platform_eventforwarding_secrets_environments"
 >title="비밀 환경"
 >abstract="비밀을 이벤트 전달에 사용하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성에 환경이 생성되지 않은 경우 계속하기 전에 환경을 구성해야 합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ko-KR" text="환경 개요"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="환경 개요"
 
 암호를 생성하려면 다음을 선택합니다. **[!UICONTROL 이벤트 전달]** 왼쪽 탐색에서 암호를 추가할 이벤트 전달 속성을 엽니다. 그런 다음 을 선택합니다. **[!UICONTROL 비밀]** 왼쪽 탐색 후 **[!UICONTROL 새 암호 만들기]**.
 
@@ -57,7 +57,7 @@ ht-degree: 3%
 >
 >![환경 비활성화](../../images/ui/event-forwarding/secrets/env-disabled.png)
 
-아래 **[!UICONTROL Target 환경]**&#x200B;드롭다운 메뉴를 사용하여 암호를 지정할 환경을 선택합니다. 아래 **[!UICONTROL 암호 이름]**&#x200B;를 클릭하고 환경 컨텍스트에서 암호의 이름을 입력합니다. 이 이름은 이벤트 전달 속성에 있는 모든 비밀에서 고유해야 합니다.
+아래 **[!UICONTROL 대상 환경]**&#x200B;드롭다운 메뉴를 사용하여 암호를 지정할 환경을 선택합니다. 아래 **[!UICONTROL 암호 이름]**&#x200B;를 클릭하고 환경 컨텍스트에서 암호의 이름을 입력합니다. 이 이름은 이벤트 전달 속성에 있는 모든 비밀에서 고유해야 합니다.
 
 ![환경 및 이름](../../images/ui/event-forwarding/secrets/env-and-name.png)
 

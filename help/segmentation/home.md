@@ -63,7 +63,7 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >id="platform_segments_evaluation_streaming"
 >title="스트리밍 평가"
 >abstract="스트리밍 세분화는 사용자 활동에 대응하여 대상자를 업데이트하는 진행형 데이터 선택 프로세스입니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=ko-KR" text="스트리밍 세분화를 통해 거의 실시간으로 이벤트 평가"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="스트리밍 세분화를 통해 거의 실시간으로 이벤트 평가"
 
 현재 Platform은 대상자를 평가하는 세 가지 방식(스트리밍 세분화, 배치 세분화, 에지 세분화)을 지원합니다.
 
@@ -90,7 +90,7 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >id="platform_segments_evaluation_edge"
 >title="에지 평가"
 >abstract="에지 세분화는 Edge Network에서 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지의 개인화 사용 사례를 활성화하는 기능입니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=ko-KR" text="에지 세분화 UI 안내서"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="에지 세분화 UI 안내서"
 
 에지 세그멘테이션은 플랫폼의 세그먼트를 즉시 평가하는 기능입니다 [에지 네트워크에서](../edge/home.md), 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
 
@@ -133,13 +133,13 @@ API 또는 를 통해 세그먼트 정의 작성 [!DNL Segment Builder]) 이름 
 ## 고급 세그먼테이션 기능
 
 결합하여 지속적으로 대상자를 생성하도록 세그먼트 정의를 구성할 수 있습니다 [스트리밍 데이터 수집](../ingestion/streaming-ingestion/overview.md) 다음과 같은 고급 세분화 기능을 사용할 수 있습니다.
-- [순차적인 세분화](#sequential)
+- [순차적 세분화](#sequential)
 - [동적 세분화](#dynamic)
 - [다중 엔티티 세그멘테이션](#multi-entity)
 
 이러한 고급 기능에 대해서는 다음 섹션에서 자세히 설명합니다.
 
-### 순차적인 세분화 {#sequential}
+### 순차적 세분화 {#sequential}
 
 표준 사용자 여정은 기본적으로 순차적입니다. Adobe Experience Platform에서는 이 여정을 반영할 순서가 지정된 일련의 대상을 정의하여 이벤트가 발생할 때 일련의 이벤트를 캡처할 수 있습니다. 의 시각적 이벤트 타임라인을 사용하여 이벤트를 원하는 순서로 정렬할 수 있습니다. [!DNL Segment Builder].
 

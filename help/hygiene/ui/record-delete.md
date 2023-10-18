@@ -5,7 +5,7 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '1533'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -72,7 +72,7 @@ Platform의 ID에 대한 자세한 내용은 다음 설명서를 참조하십시
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="ID 값"
->abstract="이 열에서는 왼쪽 열에 입력한 ID 유형에 해당되는 레코드의 기본 ID 값을 입력해야 합니다. 기본 ID 유형이 `email`인 경우 값은 레코드의 이메일 주소이어야 합니다. 자세한 내용은 데이터 라이프사이클 UI 안내서 를 참조하십시오."
+>abstract="이 열에서는 왼쪽 열에 입력한 ID 유형에 해당되는 레코드의 기본 ID 값을 입력해야 합니다. 기본 ID 유형이 `email`인 경우 값은 레코드의 이메일 주소이어야 합니다. 자세한 내용은 데이터 라이프사이클 UI 안내서를 참조하십시오."
 
 레코드를 삭제할 때 시스템에서 삭제할 레코드를 결정할 수 있도록 ID 정보를 제공해야 합니다. 플랫폼의 모든 데이터 세트에 대해 레코드는 **기본 ID** 데이터 세트의 스키마로 정의되는 필드입니다.
 

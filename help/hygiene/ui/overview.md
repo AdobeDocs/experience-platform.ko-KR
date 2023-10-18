@@ -5,7 +5,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 0%
+ht-degree: 35%
 
 ---
 
@@ -14,12 +14,12 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="데이터 라이프사이클 요청 상태"
->abstract="이 위젯은 생성, 실패 및 완료된 데이터 라이프사이클 레코드 삭제 작업의 총 수를 표시합니다. 데이터 라이프사이클 프로세스에 대한 자세한 내용은 **데이터 수명 주기** 왼쪽 탐색."
+>abstract="이 위젯은 생성, 실패 및 완료된 데이터 라이프사이클 레코드 삭제 작업의 총 개수를 보여 줍니다. 데이터 라이프사이클 프로세스에 대한 자세한 내용을 보려면 왼쪽 탐색 메뉴의 **데이터 라이프사이클**&#x200B;를 선택합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
->title="최근 데이터 수명 주기 작업 주문"
->abstract="이 위젯은 오른쪽 상단에서 선택하는 옵션에 따라 가장 최근에 만들었거나 업데이트된 5개의 데이터 라이프사이클 작업 순서를 표시합니다. 데이터 라이프사이클 프로세스에 대한 자세한 내용은 **데이터 수명 주기** 왼쪽 탐색."
+>title="최근 데이터 라이프사이클 작업 주문"
+>abstract="이 위젯은 오른쪽 상단에서 선택한 옵션에 따라 가장 최근에 생성 또는 업데이트된 5개의 데이터 라이프사이클 작업 주문을 보여 줍니다. 데이터 라이프사이클 프로세스에 대한 자세한 내용을 보려면 왼쪽 탐색 메뉴의 **데이터 라이프사이클**&#x200B;를 선택합니다."
 
 다음 **[!UICONTROL 데이터 수명 주기]** Adobe Experience Platform UI의 작업 공간에서는 레코드 삭제 및 데이터 세트 만료 일정을 포함하여 다양한 데이터 수명 주기 관리 작업을 만들고 모니터링할 수 있습니다.
 
