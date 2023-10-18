@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: 6c3c5e3a87773f9f58a5d61bd4bef19f4cdc2e96
+source-git-commit: f9c3e20bdfbf4aa1b206b9efe770e9950fcd62d6
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 18%
+source-wordcount: '308'
+ht-degree: 19%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 18%
       - [원활한 SQL 흐름](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [십분위수 기반 파생 속성 만들기](data-distiller/derived-attributes/decile-based-derived-attributes.md)
    - AI/ML 기능 파이프라인 {#ml-feature-pipelines}
-      - [AI/ML 기능 파이프라인](data-distiller/ml-feature-pipelines/overview.md)
+      - [개요](data-distiller/ml-feature-pipelines/overview.md)
       - [Jupyter Notebooks 연결](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [탐색적 데이터 분석](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
       - [ML용 엔지니어 기능](data-distiller/ml-feature-pipelines/feature-engineering.md)

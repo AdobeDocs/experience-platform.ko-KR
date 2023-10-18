@@ -4,7 +4,7 @@ solution: Experience Platform
 title: XDM 필드 유형 제한
 description: 매핑할 수 있는 다른 일련화 형식과 API에서 고유한 필드 유형을 정의하는 방법을 포함하여 XDM(Experience Data Model)의 필드 유형 제약 조건에 대한 참조입니다.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 4%
@@ -49,7 +49,7 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
       <td><code>"Platinum"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Double]</td>
+      <td>[!UICONTROL Number]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "number"}</pre>
@@ -136,7 +136,7 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
 | XDM 유형 | 쪽모이 세공 | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL 문자열] | 유형: `BYTE_ARRAY`<br>주석: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL 이중] | 유형: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL 숫자] | 유형: `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL 길게] | 유형: `INT64` | `LongType` | `java.lang.Long` |
 | [!UICONTROL 정수] | 유형: `INT32`<br>주석: `INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL 짧음] | 유형: `INT32`<br>주석: `INT_16` | `ShortType` | `java.lang.Short` |
@@ -153,7 +153,7 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
 | XDM 유형 | 스칼라 | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL 문자열] | `String` | `System.String` | `String` |
-| [!UICONTROL 이중] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL 숫자] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL 길게] | `Long` | `System.Int64` | `Number` |
 | [!UICONTROL 정수] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL 짧음] | `Short` | `System.Int16` | `Number` |
@@ -161,7 +161,7 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
 | [!UICONTROL 날짜] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL 부울] | `Boolean` | `System.Boolean` | `Boolean` |
-| [!UICONTROL 맵] | `Map` | (해당 없음) | `object` |
+| [!UICONTROL 맵] | `Map` | (N/A) | `object` |
 
 {style="table-layout:auto"}
 
@@ -170,7 +170,7 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
 | XDM 유형 | 몽고DB | 에어로스파이크 | 프로토콜 버퍼 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL 문자열] | `string` | `String` | `string` |
-| [!UICONTROL 이중] | `double` | `Double` | `double` |
+| [!UICONTROL 숫자] | `double` | `Double` | `double` |
 | [!UICONTROL 길게] | `long` | `Integer` | `int64` |
 | [!UICONTROL 정수] | `int` | `Integer` | `int32` |
 | [!UICONTROL 짧음] | `int` | `Integer` | `int32` |
