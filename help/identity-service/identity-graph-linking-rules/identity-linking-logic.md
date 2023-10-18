@@ -3,14 +3,19 @@ title: ID 서비스 연결 논리
 description: ID 서비스에서 다양한 ID를 연결하여 고객에 대한 포괄적인 보기를 만드는 방법에 대해 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
+badge: Alpha
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '791'
 ht-degree: 3%
 
 ---
 
 # ID 서비스 연결 논리
+
+>[!IMPORTANT]
+>
+>ID 그래프 연결 규칙이 현재 Alpha 중입니다. 기능 및 설명서는 변경될 수 있습니다.
 
 ID 네임스페이스와 ID 값이 일치하면 두 ID 간의 링크가 설정됩니다.
 

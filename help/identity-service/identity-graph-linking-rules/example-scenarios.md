@@ -3,17 +3,21 @@ title: Id 설정 구성을 위한 예제 시나리오
 description: ID 설정 구성을 위한 예제 시나리오에 대해 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: bde6c96bf72bb948c149bf5dc8d35591f2586887
+badge: Alpha
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '433'
 ht-degree: 1%
 
 ---
 
 # ID 그래프 연결 규칙을 구성하기 위한 예제 시나리오
 
-이 문서에서는 ID 그래프 연결 규칙을 구성할 때 고려할 수 있는 예제 시나리오를 간략하게 설명합니다.
+>[!IMPORTANT]
+>
+>ID 그래프 연결 규칙이 현재 Alpha 중입니다. 기능 및 설명서는 변경될 수 있습니다.
 
+이 문서에서는 ID 그래프 연결 규칙을 구성할 때 고려할 수 있는 예제 시나리오를 간략하게 설명합니다.
 
 ## 공유 장치
 

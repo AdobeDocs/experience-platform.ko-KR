@@ -3,9 +3,10 @@ title: ID 서비스 및 실시간 고객 프로필
 description: ID 서비스와 실시간 고객 프로필 간의 관계에 대해 알아봅니다
 hide: true
 hidefromtoc: true
-source-git-commit: 026f0dee203dd9d7f23d3343025665313692efbe
+badge: Alpha
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '705'
 ht-degree: 1%
 
 ---
@@ -14,7 +15,9 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->이 페이지에서는 병합 정책이 ID 그래프를 사용한다고 가정합니다. 실시간 고객 프로필의 병합 정책에 대한 자세한 내용은 [병합 정책 및 id 결합](../../profile/merge-policies/overview.md#identity-stitching).
+>* ID 그래프 연결 규칙이 현재 Alpha 중입니다. 기능 및 설명서는 변경될 수 있습니다.
+>
+>* 이 페이지에서는 병합 정책이 ID 그래프를 사용한다고 가정합니다. 실시간 고객 프로필의 병합 정책에 대한 자세한 내용은 [병합 정책 및 id 결합](../../profile/merge-policies/overview.md#identity-stitching).
 
 ID 서비스와 실시간 고객 프로필을 함께 사용할 수 있지만, Adobe Experience Platform의 두 가지 기능은 기본적으로 동일하지 않습니다.
 
