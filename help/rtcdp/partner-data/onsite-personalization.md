@@ -2,10 +2,10 @@
 title: 파트너 지원 방문자 인식을 사용하여 온사이트 경험 개인화
 description: 파트너 지원 방문자 인식을 사용하여 방문자에게 개인화된 온사이트 경험을 제공하는 방법을 알아보십시오.
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: de8aeb553066405424711e75480204f6136b52ff
 workflow-type: tm+mt
-source-wordcount: '2548'
-ht-degree: 97%
+source-wordcount: '2580'
+ht-degree: 95%
 
 ---
 
@@ -248,9 +248,13 @@ XDM 데이터 옆에 있는 데이터베이스 아이콘을 선택하고 `pageVi
 
 이제 개인화를 위해 대상자를 만들고 활성화할 준비가 되었습니다.
 
-#### 에지 세분화 설정
+#### 대상자 만들기 및 에지 세분화 설정
 
-[에지 세분화](/help/segmentation/ui/edge-segmentation.md)를 설정하여 방문자가 웹 속성을 방문할 때 방문자의 대상자 멤버십이 실시간으로 평가됩니다.
+Platform UI에서 다음으로 이동합니다. **[!UICONTROL 고객]** > **[!UICONTROL 대상]** 웹 사이트 방문자를 캡처할 대상을 만들 수 있습니다.
+
+![대상자로 이동하는 방법 보기](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+
+다음으로 대상을 설정해야 합니다. [가장자리 세분화](/help/segmentation/ui/edge-segmentation.md) 따라서 방문자가 웹 자산을 방문할 때 방문자의 대상 멤버십이 실시간으로 평가됩니다.
 
 에지 대상자에 대한 [활성 온 에지 병합 정책](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy)도 설정하도록 합니다.
 
