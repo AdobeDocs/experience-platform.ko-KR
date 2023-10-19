@@ -2,9 +2,9 @@
 title: 작업 주문 API 끝점
 description: 데이터 위생 API의 /workorder 끝점을 사용하면 ID에 대한 삭제 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1181'
 ht-degree: 3%
 
 ---
@@ -26,6 +26,10 @@ ht-degree: 3%
 ## 레코드 삭제 요청 만들기 {#create}
 
 에 POST 요청을 하여 단일 데이터 세트 또는 모든 데이터 세트에서 하나 이상의 ID를 삭제할 수 있습니다. `/workorder` 엔드포인트.
+
+>[!IMPORTANT]
+> 
+>매월 제출할 수 있는 총 고유 ID 레코드 삭제 횟수에는 제한이 있습니다. 이러한 제한은 라이선스 계약을 기반으로 합니다. Adobe Real-time Customer Data Platform 및 Adobe Journey Optimizer의 모든 에디션을 구입한 조직은 매월 최대 10만 건의 ID 레코드 삭제를 제출할 수 있습니다. 구입한 조직 **Adobe 헬스케어 실드** 또는 **Adobe 개인정보 보호 및 보안 실드** 매달 최대 60만 개의 id 레코드 삭제를 제출할 수 있습니다.<br>단일 [ui를 통해 삭제 요청 기록](../ui/record-delete.md) 을(를) 통해 한 번에 10,000개의 ID를 제출할 수 있습니다. 레코드를 삭제하는 API 메서드를 사용하면 100,000개의 ID를 한 번에 제출할 수 있습니다.<br>최대 ID 제한까지, 요청당 가능한 많은 ID를 제출하는 것이 좋습니다. 많은 양의 ID를 삭제하려는 경우 낮은 볼륨 또는 레코드당 하나의 ID 삭제 요청을 제출하지 않아야 합니다.
 
 **API 형식**
 
