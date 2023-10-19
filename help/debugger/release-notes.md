@@ -4,14 +4,34 @@ description: Adobe Experience Platform Debugger에 대한 최신 릴리스 정�
 keywords: debugger;experience Platform Debugger 확장 프로그램;chrome;확장 프로그램;릴리스 정보
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '526'
 ht-degree: 4%
 
 ---
 
 # Adobe Experience Platform Debugger 릴리스 노트
+
+## 버전 1.5.0 - 2023년 10월 19일
+
+### 새로운 기능
+
+* 태그 요약 및 로그에 속성, 환경 및 규칙에 대한 링크를 표시합니다.
+
+### 수정 사항 및 개선 사항
+
+* 태그 요약 데이터가 전송되지 않는 문제가 해결되었습니다.
+* 보증 세션에서 CORS 오류를 발생하는 문제가 해결되었습니다.
+* Target 추적이 표시되지 않는 문제를 해결했습니다.
+* &#39;피드백 보내기&#39; 버튼을 수정했습니다.
+* 버전 ≥2.18.0에 대한 웹 SDK 요약에서 누락된 &quot;데이터 스트림 ID&quot;를 수정했습니다.
+* 에지 로그를 검색할 수 없는 문제를 해결했습니다.
+* 특정 계정 유형에 대한 추가 프로필에 대한 메모를 추가했습니다.
+
+## 버전 1.4.1 - 2022년 11월 1일
+
+* Adobe Experience Platform Assurance 이벤트가 많은 페이지의 성능이 개선되었습니다.
 
 ## 버전 1.4.0 - 2022년 10월 3일
 
