@@ -2,10 +2,10 @@
 title: 흐름 서비스 API에서 응답 정렬 및 필터링
 description: 이 자습서에서는 몇 가지 고급 사용 사례를 포함하여 흐름 서비스 API에서 쿼리 매개 변수를 사용하여 정렬하고 필터링하는 구문을 다룹니다.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: ef8db14b1eb7ea555135ac621a6c155ef920e89a
+source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 3%
+source-wordcount: '863'
+ht-degree: 2%
 
 ---
 
@@ -194,6 +194,58 @@ GET /flows?property=state==enabled&count=true
 | `state` | `/runs?property=state==inProgress` |
 
 {style="table-layout:auto"}
+
+## 사용 사례 {#use-cases}
+
+필터링 및 정렬을 사용하여 특정 커넥터에 대한 정보를 반환하거나 문제 디버깅을 지원하는 방법에 대한 몇 가지 특정 예를 보려면 이 섹션을 참조하십시오. Adobe에서 추가하고자 하는 추가 사용 사례가 있는 경우 **[!UICONTROL 자세한 피드백 옵션]** 페이지를 방문하여 요청을 제출하십시오.
+
+**특정 대상에 대한 연결만 반환하도록 필터링**
+
+필터를 사용하여 특정 대상에만 연결을 반환할 수 있습니다. 먼저 을(를) 쿼리합니다 `connectionSpecs` 아래와 같은 엔드포인트:
+
+```http
+GET /connectionSpecs
+```
+
+그런 다음 원하는 을 검색합니다 `connectionSpec` 다음의 물품을 검사함 `name` 매개 변수. 예를 들어에서 Amazon Ads, Pega, SFTP 등을 검색합니다. `name` 매개 변수. 해당 `id` 은(는) `connectionSpec` 다음 API 호출에서 검색할 수 있습니다.
+
+예를 들어 Amazon S3 연결에 대한 기존 연결만 반환하도록 대상을 필터링할 수 있습니다.
+
+```http
+GET /connections?property=connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**대상으로만 데이터 흐름을 반환하도록 필터링**
+
+쿼리 시 `/flows` endpoint에서는 모든 소스 및 대상 데이터 흐름을 반환하는 대신 필터를 사용하여 데이터 흐름을 대상으로만 반환할 수 있습니다. 이렇게 하려면 다음을 사용합니다. `isDestinationFlow` 쿼리 매개 변수로 다음과 같이 지정합니다.
+
+```http
+GET /flows?property=inheritedAttributes.properties.isDestinationFlow==true
+```
+
+**특정 소스 또는 대상으로만 데이터 흐름을 반환하도록 필터링**
+
+데이터 흐름을 필터링하여 특정 대상 또는 특정 소스에서만 데이터 흐름을 반환할 수 있습니다. 예를 들어 Amazon S3 연결에 대한 기존 연결만 반환하도록 대상을 필터링할 수 있습니다.
+
+```http
+GET /flows?property=inheritedAttributes.targetConnections[].connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**특정 기간 동안 데이터 흐름의 모든 실행을 가져오도록 필터링**
+
+다음과 같이 데이터 흐름의 데이터 흐름 실행을 필터링하여 특정 시간 간격의 실행만 볼 수 있습니다.
+
+```
+GET /runs?property=flowId==<flow-id>&property=metrics.durationSummary.startedAtUTC>1593134665781&property=metrics.durationSummary.startedAtUTC<1653134665781
+```
+
+**실패한 데이터 흐름만 반환하도록 필터링**
+
+디버깅 목적으로 아래와 같이 특정 소스 또는 대상 데이터 흐름에 대해 실패한 모든 데이터 흐름을 필터링하고 볼 수 있습니다.
+
+```http
+GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Failed
+```
 
 ## 다음 단계
 
