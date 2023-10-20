@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
+source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1780'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,10 @@ ht-degree: 0%
 대상 블록에 대상을 추가하려면 선택 **[!UICONTROL 대상 추가]**.
 
 ![대상자 추가 버튼이 강조 표시됩니다.](../images/ui/audience-composition/add-audience.png)
+
+>[!IMPORTANT]
+>
+>다음을 참고하십시오. **전용** 기본 병합 정책을 사용하여 정의된 대상이 표시됩니다.
 
 대상자 목록이 나타납니다. 포함할 대상을 선택한 다음, **[!UICONTROL 추가]** 대상 블록에 추가합니다.
 
