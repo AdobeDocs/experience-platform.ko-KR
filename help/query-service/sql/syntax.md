@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여 줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 18b8f683726f612a5979ab724067cc9f1bfecbde
+source-git-commit: 67fce2a88b4e75cfb033c6aef40afbca824c9354
 workflow-type: tm+mt
-source-wordcount: '4006'
+source-wordcount: '4134'
 ht-degree: 2%
 
 ---
@@ -375,7 +375,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## 익명 블록
+## 익명 블록 {#anonymous-block}
 
 익명 블록은 실행 섹션과 예외 처리 섹션의 두 섹션으로 구성됩니다. 익명 블록에서는 실행 가능 섹션이 필수입니다. 그러나 예외 처리 섹션은 선택 사항입니다.
 
@@ -410,6 +410,109 @@ EXCEPTION
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
+```
+
+### 익명 블록의 조건문 {#conditional-anonymous-block-statements}
+
+IF-THEN-ELSE 컨트롤 구조를 사용하면 조건이 TRUE로 평가될 때 문 목록을 조건부로 실행할 수 있습니다. 이 제어 구조는 익명 블록 내에서만 적용할 수 있습니다. 이 구조를 독립 실행형 명령으로 사용하면 구문 오류(&quot;익명 블록 외부의 잘못된 명령&quot;)가 발생합니다.
+
+아래의 코드 조각은 익명 블록의 IF-THEN-ELSE 조건문에 대한 올바른 형식을 보여 줍니다.
+
+```javascript
+IF booleanExpression THEN
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSE
+   List of statements;
+END IF
+```
+
+**예**
+
+아래 예제는 `SELECT 200;`.
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;   
+
+ END$$;
+```
+
+이 구조는 다음과 함께 사용할 수 있습니다. `raise_error();` 사용자 지정 오류 메시지를 반환합니다. 아래에 표시된 코드 블록은 &quot;사용자 지정 오류 메시지&quot;로 익명 블록을 종료합니다.
+
+**예**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 5;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT raise_error('custom error message');
+    END IF;   
+
+ END$$;
+```
+
+#### 중첩된 IF 문
+
+중첩된 IF 문은 익명 블록 내에서 지원됩니다.
+
+**예**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 1;
+    IF @V = 1 THEN
+       SELECT 100;
+       IF @V > 0 THEN
+         SELECT 1000;
+       END IF;   
+    END IF;   
+
+ END$$; 
+```
+
+#### 예외 블록
+
+예외 블록은 익명 블록 내에서 지원됩니다.
+
+**예**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT raise_error(concat('custom-error for v= ', '@V' ));
+
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;  
+EXCEPTION WHEN OTHER THEN 
+  SELECT 'THERE WAS AN ERROR';    
+ END$$;
 ```
 
 ### JSON으로 자동 {#auto-to-json}
