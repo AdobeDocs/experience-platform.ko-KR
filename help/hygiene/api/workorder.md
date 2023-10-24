@@ -2,10 +2,10 @@
 title: 작업 주문 API 끝점
 description: 데이터 위생 API의 /workorder 끝점을 사용하면 ID에 대한 삭제 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
+source-git-commit: 15f3f7c9e0efb2fe5e9a1acd39b1cf23790355cb
 workflow-type: tm+mt
-source-wordcount: '1181'
-ht-degree: 3%
+source-wordcount: '1281'
+ht-degree: 2%
 
 ---
 
@@ -36,6 +36,10 @@ ht-degree: 3%
 ```http
 POST /workorder
 ```
+
+>[!NOTE]
+>
+>데이터 라이프사이클 요청은 기본 ID 또는 ID 맵을 기준으로만 데이터 세트를 수정할 수 있습니다. 요청은 기본 ID를 지정하거나 ID 맵을 제공해야 합니다.
 
 **요청**
 
@@ -80,7 +84,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `action` | 수행할 작업입니다. 값을 로 설정해야 합니다. `delete_identity` 레코드 삭제에 사용됩니다. |
-| `datasetId` | 단일 데이터 세트에서 삭제하는 경우 이 값은 해당 데이터 세트의 ID여야 합니다. 모든 데이터 세트에서 삭제하는 경우 값을 로 설정하십시오. `ALL`.<br><br>단일 데이터 세트를 지정하는 경우 데이터 세트와 연결된 XDM(Experience Data Model) 스키마에 기본 ID가 정의되어 있어야 합니다. |
+| `datasetId` | 단일 데이터 세트에서 삭제하는 경우 이 값은 해당 데이터 세트의 ID여야 합니다. 모든 데이터 세트에서 삭제하는 경우 값을 로 설정하십시오. `ALL`.<br><br>단일 데이터 세트를 지정하는 경우 데이터 세트와 연결된 XDM(Experience Data Model) 스키마에 기본 ID가 정의되어 있어야 합니다. 데이터 세트에 기본 ID가 없는 경우 데이터 라이프사이클 요청으로 수정하려면 데이터 세트에 ID 맵이 있어야 합니다.<br>ID 맵이 존재하는 경우 라는 최상위 수준의 필드로 표시됩니다. `identityMap`.<br>데이터 세트 행의 ID 맵에는 여러 ID가 있을 수 있지만 하나만 기본으로 표시할 수 있습니다. `"primary": true` 을(를) 강제로 포함하려면 을(를) 포함해야 합니다. `id` 기본 id와 일치시키십시오. |
 | `displayName` | 레코드 삭제 요청에 대한 표시 이름입니다. |
 | `description` | 레코드 삭제 요청에 대한 설명. |
 | `identities` | 정보를 삭제하려는 하나 이상의 사용자 ID가 포함된 배열입니다. 각 ID는 [id 네임스페이스](../../identity-service/namespaces.md) 및 값:<ul><li>`namespace`: 단일 문자열 속성을 포함합니다. `code`: id 네임스페이스를 나타냅니다. </li><li>`id`: ID 값입니다.</ul>If `datasetId` 각 엔터티가 속한 단일 데이터 세트를 지정합니다. `identities` 스키마의 기본 id와 동일한 id 네임스페이스를 사용해야 합니다.<br><br>If `datasetId` 이(가) (으)로 설정됨 `ALL`, `identities` 각 데이터 세트가 다를 수 있으므로 배열이 단일 네임스페이스로 제한되지 않습니다. 그러나 요청은에서 보고한 대로 조직에서 사용할 수 있는 네임스페이스에 제약을 받습니다 [ID 서비스](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
