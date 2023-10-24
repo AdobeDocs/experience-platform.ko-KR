@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Marketo Engage 커넥터
 description: 이 문서에서는 인증, 매핑 및 데이터 지연에 대한 정보를 포함하여 Marketo Engage 소스 커넥터에 대한 개요를 제공합니다.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: f0a3486fc7df7b08a11ec7bfb041841bc2c1c9a3
+source-git-commit: 50b97ebb8496636a0fccd64d57d7829b1342f87c
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '678'
 ht-degree: 5%
 
 ---
@@ -70,8 +70,12 @@ XDM과 Platform에서의 역할에 대한 자세한 내용은 다음을 참조�
 
 | 대상 | 예상 대기 시간 |
 | ----------- | ---------------- |
-| [!DNL Real-Time Customer Profile] | 1분 미만 |
+| [!DNL Real-Time Customer Profile] | &lt; 10분 |
 | 데이터 레이크 | &lt; 60분 |
+
+>[!NOTE]
+>
+>위의 지연 수치는 95% 신뢰 수준에서 기대치를 나타냅니다. 실제 지연 시간은 다양하며 드문 경우 이러한 수치를 50% 초과할 수 있습니다.
 
 ## 다음 단계 및 추가 리소스
 
