@@ -5,10 +5,10 @@ title: 흐름 서비스 API를 사용하여 데이터 랜딩 영역을 Adobe Exp
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 데이터 랜딩 영역에 연결하는 방법을 알아봅니다.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 0089aa0d6b765645840e6954c3957282c2ad972b
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 4%
+source-wordcount: '1304'
+ht-degree: 5%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 4%
 
 ## 시작하기
 
-이 안내서를 사용하려면 다음 Experience Platform 구성 요소에 대해 이해하고 있어야 합니다.
+이 안내서를 사용하려면 Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [소스](../../../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
 * [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
@@ -103,14 +103,15 @@ curl -X GET \
 
 **응답**
 
-다음 응답은 현재 위치를 포함하여 랜딩 영역에 대한 자격 증명 정보를 반환합니다 `SASToken` 및 `SASUri`, 및 `storageAccountName` 랜딩 영역 컨테이너에 해당합니다.
+다음 응답은 현재 상태를 포함하여 데이터 랜딩 영역에 대한 자격 증명 정보를 반환합니다 `SASToken`, `SASUri`, `storageAccountName`및 만료일.
 
 ```json
 {
     "containerName": "dlz-user-container",
     "SASToken": "sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
     "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 
@@ -119,6 +120,7 @@ curl -X GET \
 | `containerName` | 랜딩 영역의 이름입니다. |
 | `SASToken` | 랜딩 영역에 대한 공유 액세스 서명 토큰입니다. 이 문자열에는 요청을 승인하는 데 필요한 모든 정보가 포함되어 있습니다. |
 | `SASUri` | 랜딩 영역에 대한 공유 액세스 서명 URI입니다. 이 문자열은 인증 중인 랜딩 영역에 대한 URI와 해당 SAS 토큰의 조합입니다. |
+| `expiryDate` | SAS 토큰이 만료되는 날짜. 데이터 랜딩 영역에 데이터를 업로드하기 위해 애플리케이션에서 계속 사용하려면 만료일 전에 토큰을 새로 고쳐야 합니다. 명시된 만료 날짜 이전에 토큰을 수동으로 새로 고치지 않는 경우, GET 자격 증명 호출이 수행될 때 자동으로 새로 고침되고 새 토큰을 제공합니다. |
 
 
 ## 업데이트 [!DNL Data Landing Zone] 자격 증명
@@ -159,7 +161,8 @@ curl -X POST \
     "containerName": "dlz-user-container",
     "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
     "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 
@@ -322,8 +325,8 @@ curl -X GET \
 
 | `determineProperties` | `queryParams` | 응답 |
 | --- | --- | --- |
-| True | 해당 없음 | If `determineProperties` 가 쿼리 매개 변수로 제공되면 파일 속성 검색이 발생하고 응답이 새 를 반환합니다 `properties` 파일 형식, 압축 형식 및 열 구분 기호에 대한 정보가 포함된 키. |
-| 해당 없음 | True | 파일 형식, 압축 형식 및 열 구분 기호 값이 의 일부로 수동으로 제공되는 경우 `queryParams`: 스키마를 생성하는 데 사용되며 응답의 일부로 동일한 속성이 반환됩니다. |
+| True | N/A | If `determineProperties` 가 쿼리 매개 변수로 제공되면 파일 속성 검색이 발생하고 응답이 새 를 반환합니다 `properties` 파일 형식, 압축 형식 및 열 구분 기호에 대한 정보가 포함된 키. |
+| N/A | True | 파일 형식, 압축 형식 및 열 구분 기호 값이 의 일부로 수동으로 제공되는 경우 `queryParams`: 스키마를 생성하는 데 사용되며 응답의 일부로 동일한 속성이 반환됩니다. |
 | True | True | 두 옵션이 동시에 수행되면 오류가 반환됩니다. |
 | N/A | N/A | 두 옵션이 모두 제공되지 않으면 응답에 대한 속성을 가져올 수 없으므로 오류가 반환됩니다. |
 
