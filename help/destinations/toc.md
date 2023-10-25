@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: c171d333569a6006d3399ede07d55ce233c166fa
+source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1185'
 ht-degree: 9%
 
 ---
@@ -186,6 +186,7 @@ ht-degree: 9%
       * [허용 목록에 추가하다 스트리밍 대상의 IP 주소](./catalog/streaming/ip-address-allow-list.md)
    * 설문 조사 대상 {#survey}
       * [Survey 대상 개요](./catalog/survey/overview.md)
+      * [Qualtrics 자동화 대상](./catalog/survey/qualtrics-automations.md)
       * [Foresee 확장 대상](./catalog/survey/foresee.md)
       * [InMoment 확장](./catalog/survey/inmoment.md)
       * [Qualtrics 웹 사이트 피드백 확장](./catalog/survey/qualtrics.md)
