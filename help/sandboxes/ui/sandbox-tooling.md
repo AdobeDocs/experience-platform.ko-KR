@@ -2,18 +2,14 @@
 title: 샌드박스 도구
 description: 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져옵니다.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1fd523b827a591fdc04ba64a558bc178f242a450
+source-git-commit: 58fcf3cbff242f65969193fd2e3d6eea0e6539aa
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: '1820'
 ht-degree: 7%
 
 ---
 
-# [!BADGE 베타] 샌드박스 도구
-
->[!IMPORTANT]
->
->다음 **샌드박스 도구** 아래 설명된 기능은 일부 베타 고객만 사용할 수 있습니다.
+# 샌드박스 도구
 
 >[!NOTE]
 >

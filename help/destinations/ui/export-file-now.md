@@ -34,7 +34,7 @@ ht-degree: 8%
 
 이 용도로 Experience Platform API를 사용할 수도 있습니다. 방법 읽기 [애드혹 활성화 API를 통해 온디맨드로 대상자를 배치 대상으로 활성화합니다](/help/destinations/api/ad-hoc-activation-api.md).
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 주문형 파일을 배치 대상으로 내보내려면 성공적으로 작업을 완료해야 합니다. [대상에 연결됨](./connect-destination.md). 아직 수행하지 않았다면 [대상 카탈로그](../catalog/overview.md)에서 지원되는 대상을 탐색하고 사용할 대상을 구성합니다.
 

@@ -185,7 +185,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 다음에 대한 데이터를 필터링할 수 있습니다. [!DNL Profile] 행 수준 및 열 수준에서 수집. 행 수준 필터링을 사용하면 문자열 포함, 다음과 같음, 시작 또는 끝과 같은 기준을 정의할 수 있습니다. 행 수준 필터링을 사용하여 다음을 사용하여 조건을 연결할 수도 있습니다. `AND` 뿐만 아니라 `OR`및 을 사용하여 조건 부정 `NOT`.
 
-다음을 필터링하려면 [!DNL Analytics] 행 수준의 데이터에서 **[!UICONTROL 행 필터]**.
+다음을 필터링하려면 [!DNL Analytics] 행 수준에서 데이터를 선택하고 **[!UICONTROL 행 필터]**.
 
 ![행 필터](../../../../images/tutorials/create/analytics/row-filter.png)
 

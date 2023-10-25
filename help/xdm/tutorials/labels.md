@@ -5,7 +5,7 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
 workflow-type: tm+mt
 source-wordcount: '795'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): [!DNL Experience Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 편집기](../ui/overview.md): Platform UI에서 스키마 및 기타 리소스를 만들고 관리하는 방법을 알아봅니다.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): 레이블이 지정된 데이터에 대해 수행할 수 있는(또는 수행할 수 없는) 마케팅 작업을 정의하는 정책을 사용하여 플랫폼 작업에 대한 데이터 사용 제한을 적용하기 위한 인프라를 제공합니다.
 

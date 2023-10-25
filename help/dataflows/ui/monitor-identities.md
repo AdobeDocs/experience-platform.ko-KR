@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;홈;자주 찾는 항목;ID 모니터링;데이터 흐름 모니터링;데이터 흐름;ID;
-description: Adobe Experience Platform Identity Service는 디바이스와 시스템 간에 ID를 연결하여 고객 및 고객 행동에 대한 포괄적인 보기를 제공하여 효과적인 개인 디지털 경험을 실시간으로 제공할 수 있습니다. 이 자습서에서는 Experience Platform 사용자 인터페이스를 사용하여 ID를 사용하여 데이터 흐름을 모니터링하는 방법에 대한 지침을 제공합니다.
+description: Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 걸쳐 ID를 연결하여 고객과 고객의 행동을 종합적으로 파악할 수 있으므로, 실시간으로 효과적인 개인 디지털 환경을 제공할 수 있습니다. 이 자습서에서는 Experience Platform 사용자 인터페이스를 사용하여 ID를 사용하여 데이터 흐름을 모니터링하는 방법에 대한 지침을 제공합니다.
 title: UI에서 ID에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 8%
+ht-degree: 14%
 
 ---
 
 # UI에서 ID에 대한 데이터 흐름 모니터링
 
-Adobe Experience Platform Identity Service는 디바이스와 시스템 간에 ID를 연결하여 고객 및 고객 행동에 대한 포괄적인 보기를 제공하여 효과적인 개인 디지털 경험을 실시간으로 제공할 수 있습니다.
+Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 걸쳐 ID를 연결하여 고객과 고객의 행동을 종합적으로 파악할 수 있으므로, 실시간으로 효과적인 개인 디지털 환경을 제공할 수 있습니다.
 
 모니터링 대시보드는 데이터의 ID 상태를 포함하여 ID 내에서 데이터의 활동을 시각적으로 표시합니다. 이 자습서에서는 모니터링 대시보드를 사용하여 ID 처리 상태를 추적할 수 있도록 Experience Platform 사용자 인터페이스를 사용하여 데이터의 ID를 모니터링하는 방법에 대한 지침을 제공합니다.
 

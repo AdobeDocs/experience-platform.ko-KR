@@ -7,7 +7,7 @@ exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1839'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 적절한 디지털 경험을 제공하려면 고객을 완전히 이해해야 합니다. 이러한 문제는 고객 데이터가 서로 다른 시스템 간에 분산되어 각 개별 고객이 여러 개의 &quot;ID&quot;를 가지는 것처럼 보이는 경우 더욱 어려워집니다.
 
-Adobe Experience Platform Identity Service는 디바이스와 시스템 간에 ID를 연결하여 고객 및 고객 행동에 대한 포괄적인 보기를 제공하여 효과적인 개인 디지털 경험을 실시간으로 제공할 수 있습니다.
+Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 걸쳐 ID를 연결하여 고객과 고객의 행동을 종합적으로 파악할 수 있으므로, 실시간으로 효과적인 개인 디지털 환경을 제공할 수 있습니다.
 
 포함 [!DNL Identity Service], 다음 작업을 수행할 수 있습니다.
 
@@ -133,7 +133,7 @@ ID 필드를 사용하면 공통 PII 데이터를 공유하는 경우 ID를 연�
 
 ### 다음에 대한 데이터 세트 구성 [!DNL Identity Service]
 
-스트리밍 수집 프로세스 중에 [!DNL Identity Service ]레코드 및 시계열 데이터에서 자동으로 id 데이터를 추출합니다. 그러나 데이터를 수집하려면 먼저 다음에 대해 활성화해야 합니다. [!DNL Identity Service]. 다음 튜토리얼 참조:  [api를 사용하여 실시간 고객 프로필 및 ID 서비스에 대한 데이터 세트 구성](../profile/tutorials/dataset-configuration.md) 추가 정보.
+스트리밍 수집 프로세스 중에 [!DNL Identity Service]레코드 및 시계열 데이터에서 자동으로 id 데이터를 추출합니다. 그러나 데이터를 수집하려면 먼저 다음에 대해 활성화해야 합니다. [!DNL Identity Service]. 다음 튜토리얼 참조:  [api를 사용하여 실시간 고객 프로필 및 ID 서비스에 대한 데이터 세트 구성](../profile/tutorials/dataset-configuration.md) 추가 정보.
 
 ### 데이터 수집 대상 [!DNL Identity Service]
 

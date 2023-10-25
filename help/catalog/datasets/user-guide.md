@@ -20,7 +20,7 @@ ht-degree: 4%
 이 사용 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [데이터 세트](overview.md): 의 데이터 지속성을 위한 스토리지 및 관리 구성 [!DNL Experience Platform].
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): [!DNL Experience Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션 기본 사항](../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기](../../xdm/tutorials/create-schema-ui.md): 다음을 사용하여 사용자 지정 XDM 스키마를 구축하는 방법 알아보기 [!DNL Schema Editor] 다음 범위 내 [!DNL Platform] 사용자 인터페이스.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
