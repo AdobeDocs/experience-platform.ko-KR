@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 10월 릴리스 정보.
-source-git-commit: 4ab89ef7cabc9d808fd9dab24b6dbe3fe23e53f3
+source-git-commit: ac7597a2e63559f3af91d559dd77f7778c9f27bb
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 35%
+source-wordcount: '766'
+ht-degree: 36%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 35%
  Experience Platform의 기존 기능 업데이트:
 
 - [데이터 수집](#data-collection)
+- [대상](#destinations)
 - [샌드박스](#sandboxes)
 - [Segmentation Service](#segmentation)
 - [소스](#sources)
@@ -30,6 +31,31 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | 확장 기능 | [!DNL Meta] 전환 API 개선 사항 | 에는 세 가지 개선 사항이 있습니다 [메타 전환 API](/help/tags/extensions/server/meta/overview.md) 확장: <ul><li>과 통합 [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): 전환 API와 Adobe 통합을 위해 pixelID 및 액세스 토큰을 공유할 수 있도록 하여 원활한 로그인 경험을 만듭니다.</li><li>과 통합 [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): 원하는 작업을 완료할 가능성이 높은 사람에게 광고를 게재하고 작업을 게재된 광고에 다시 연결할 수 있습니다.</li><li>과 통합 [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): CIP 필드에 LiveRamp의 RampID를 전달할 수 있으므로 파트너 또는 메타와 직접 PII를 공유할 필요가 없습니다. </li></ul> |
 
 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../tags/home.md)를 참조하십시오.
+
+## 대상 {#destinations}
+
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+
+**새로운 대상 또는 업데이트된 대상** {#new-updated-destinations}
+
+| 대상 | 새로운 기능 또는 업데이트된 기능 | 설명 |
+| ----------- |----------------|----------- |
+| [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | 새로운 기능 | Moengage 대상을 사용하여 Adobe 데이터(사용자 특성, 세그먼트 및 이벤트)를 MoEngage에 실시간으로 연결하고 매핑합니다. 그런 다음 고객은 이 데이터에 따라 행동하여 개인화되고 타겟팅된 경험을 제공할 수 있습니다. |
+| [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | 새로운 기능 | Adobe Experience Platform의 여러 운영 데이터 소스 합계를 Qualtrics Experience ID의 입력으로 사용하여 고객을 더 잘 이해하고 의도, 감정 및 경험 드라이버를 이해하는 데 있어 타깃팅된 전달을 통해 간격을 좁힐 수 있습니다. |
+
+{style="table-layout:auto"}
+
+**새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
+
+| 기능 | 설명 |
+| ----------- | ----------- |
+| 계산된 필드에서 함수 해싱 지원 | 에 특정한 함수 외에도 [배열 내보내기](../../destinations/ui/export-arrays-calculated-fields.md) 또는 배열의 요소를 사용하여 추가 [해시 함수](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) 내보낸 파일의 속성을 해시합니다. 지원되는 해시 함수는 다음과 같습니다. `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+
+{style="table-layout:auto"}
+
+**수정 사항 및 개선 사항** {#destinations-fixes-and-enhancements}
+
+대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
 ## 샌드박스 {#sandboxes}
 
