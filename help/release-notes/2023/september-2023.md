@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 9월 릴리스 정보입니다.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 94651b8035677eb65f6ca9e93001b4149f8bdbd4
+source-git-commit: 76ac65730512e589e518095f9496bb309365b0c9
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2283'
 ht-degree: 26%
 
 ---
@@ -222,8 +222,6 @@ ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-
 | ------- | ----------- |
 | 사용자 정의 가능한 열 | 이제 크기 조정 가능한 열을 사용하여 Audience Portal의 레이아웃을 사용자 정의할 수 있습니다. 이 기능에 대한 자세한 내용은 [세그멘테이션 UI 안내서](../../segmentation/ui/overview.md#customize). |
 | 빈도 분류 업데이트 | 이제 조직 내 대상자의 업데이트 주기 분류를 볼 수 있습니다. 이 기능에 대한 자세한 내용은 [세그멘테이션 UI 안내서](../../segmentation/ui/overview.md#browse). |
-
-소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).
 
 세분화 서비스에 대한 자세한 내용은 [세그먼테이션 서비스 개요](../../segmentation/home.md).
 
