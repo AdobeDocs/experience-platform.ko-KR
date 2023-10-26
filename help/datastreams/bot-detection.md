@@ -1,11 +1,11 @@
 ---
-title: 보트 탐지 구성
-description: 데이터스트림에 대한 보트 감지를 구성하는 방법에 대해 알아봅니다.
+title: 데이터스트림에 대한 보트 탐지 구성
+description: 사람 트래픽과 사람 트래픽을 구분하기 위해 데이터스트림에 대한 봇 탐지를 구성하는 방법에 대해 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 8445d530ca1241d86775ffa7fc49f49cb5a03b72
+source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
