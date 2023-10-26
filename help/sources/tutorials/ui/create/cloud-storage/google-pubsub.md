@@ -3,9 +3,9 @@ title: UI에서 Google PubSub 소스 연결 만들기
 description: Platform 사용자 인터페이스를 사용하여 Google PubSub 소스 커넥터를 만드는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
+source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1099'
 ht-degree: 1%
 
 ---
@@ -31,12 +31,24 @@ ht-degree: 1%
 
 연결하려면 [!DNL PubSub] 플랫폼에 다음 자격 증명에 대한 유효한 값을 제공해야 합니다.
 
+>[!BEGINTABS]
+
+>[!TAB 프로젝트 기반 인증]
+
 | 자격 증명 | 설명 |
-| ---------- | ----------- |
+| --- | --- |
 | 프로젝트 ID | 인증에 필요한 프로젝트 ID [!DNL PubSub]. |
+| 자격 증명 | 인증에 필요한 자격 증명 [!DNL PubSub]. 자격 증명에서 공백을 제거한 후 전체 JSON 파일을 넣었는지 확인해야 합니다. |
+
+>[!TAB 주제 및 구독 기반 인증]
+
+| 자격 증명 | 설명 |
+| --- | --- |
 | 자격 증명 | 인증에 필요한 자격 증명 [!DNL PubSub]. 자격 증명에서 공백을 제거한 후 전체 JSON 파일을 넣었는지 확인해야 합니다. |
 | 주제 이름 | 의 이름 [!DNL PubSub] 구독. 위치 [!DNL PubSub]가입을 사용하면 메시지가 게시된 주제를 구독하여 메시지를 받을 수 있습니다. **참고**: 단일 [!DNL PubSub] 구독은 하나의 데이터 흐름에만 사용할 수 있습니다. 여러 데이터 흐름을 만들려면 구독이 여러 개 있어야 합니다. |
 | 구독 이름 | 의 이름 [!DNL PubSub] 구독. 위치 [!DNL PubSub]가입을 사용하면 메시지가 게시된 주제를 구독하여 메시지를 받을 수 있습니다. |
+
+>[!ENDTABS]
 
 이러한 값에 대한 자세한 내용은 다음을 참조하십시오 [PubSub 인증](https://cloud.google.com/pubsub/docs/authentication) 문서. 서비스 계정 기반 인증을 사용하는 경우 다음을 참조하십시오 [PubSub 안내서](https://cloud.google.com/docs/authentication/production#create_service_account) 자격 증명을 생성하는 방법에 대한 단계입니다.
 
@@ -68,7 +80,8 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 �
 
 >[!TIP]
 >
->액세스 권한이 제한된 계정을 만들 때 주제 이름이나 구독 이름 중 하나 이상을 제공해야 합니다. 두 값이 모두 누락된 경우 인증이 실패합니다.
+>* 액세스 권한이 제한된 계정을 만들 때 주제 이름이나 구독 이름 중 하나 이상을 제공해야 합니다. 두 값이 모두 누락된 경우 인증이 실패합니다.
+>* 만든 후에는 의 인증 유형을 변경할 수 없습니다. [!DNL Google PubSub] 기본 연결. 인증 유형을 변경하려면 새 기본 연결을 만들어야 합니다.
 
 새 계정을 만드는 경우 다음을 선택합니다 **[!UICONTROL 새 계정]**&#x200B;을 클릭하고 새 항목의 이름과 설명(선택 사항)을 입력합니다 [!DNL PubSub] 계정입니다.
 

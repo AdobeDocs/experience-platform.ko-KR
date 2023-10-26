@@ -5,16 +5,16 @@ title: UI에서 Microsoft Dynamics 소스 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Microsoft Dynamics 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 1%
+source-wordcount: '620'
+ht-degree: 0%
 
 ---
 
 # 만들기 [!DNL Microsoft Dynamics] UI의 소스 연결
 
-이 자습서에서는 다음을 만드는 단계를 제공합니다 [!DNL Microsoft Dynamics] (이하 &quot;라고 한다)[!DNL Dynamics]&quot;) Adobe Experience Platform UI를 사용하는 소스 연결.
+이 튜토리얼에서는 [!DNL Microsoft Dynamics] (이하 &quot;라고 한다)[!DNL Dynamics]&quot;) Adobe Experience Platform UI를 사용하는 소스 연결.
 
 ## 시작하기
 
@@ -29,58 +29,78 @@ ht-degree: 1%
 
 ### 필요한 자격 증명 수집
 
+을(를) 인증하려면 [!DNL Dynamics] source에서 다음 연결 속성에 대한 값을 제공해야 합니다.
+
+>[!BEGINTABS]
+
+>[!TAB 기본 인증]
+
 | 자격 증명 | 설명 |
-| ---------- | ----------- |
+| --- | --- |
 | `serviceUri` | 의 서비스 URL [!DNL Dynamics] 인스턴스. |
 | `username` | 의 사용자 이름 [!DNL Dynamics] 사용자 계정입니다. |
 | `password` | 에 대한 암호 [!DNL Dynamics] 계정입니다. |
+
+>[!TAB 서비스 주체 및 키 인증]
+
+| 자격 증명 | 설명 |
+| --- | --- |
 | `servicePrincipalId` | 에 대한 클라이언트 ID [!DNL Dynamics] 계정입니다. 서비스 주체 및 키 기반 인증을 사용할 때 이 ID가 필요합니다. |
 | `servicePrincipalKey` | 서비스 주체 비밀 키. 서비스 주체 및 키 기반 인증을 사용할 때 이 자격 증명이 필요합니다. |
+
+>[!ENDTABS]
 
 시작하기에 대한 자세한 내용은 [이 [!DNL Dynamics] 문서](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
 ## 연결 [!DNL Dynamics] account
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 를 연결할 수 있습니다. [!DNL Dynamics] 계정을 플랫폼에 추가합니다.
-
-에 로그인 [Adobe Experience Platform](https://platform.adobe.com) 다음을 선택합니다. **[!UICONTROL 소스]** 왼쪽 탐색 모음에서 다음 위치에 액세스: [!UICONTROL 소스] 작업 영역. 다음 **[!UICONTROL 카탈로그]** 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 탐색에서 [!UICONTROL 소스] 작업 영역. 다음 [!UICONTROL 카탈로그] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-아래 **[!UICONTROL CRM]** 범주, 선택 **[!UICONTROL Microsoft Dynamics]**. 이 커넥터를 처음 사용하는 경우 다음을 선택합니다. **[!UICONTROL 구성]**. 그렇지 않으면 를 선택합니다. **[!UICONTROL 데이터 추가]** 새로 만들려면 [!DNL Dynamics] 커넥터.
+아래 [!UICONTROL CRM] 범주, 선택 **[!UICONTROL Microsoft Dynamics]**&#x200B;을 선택한 다음 을 선택합니다 **[!UICONTROL 데이터 추가]**.
 
-![카탈로그](../../../../images/tutorials/create/ms-dynamics/catalog.png)
+![Microsoft Dynamics가 선택된 소스 카탈로그입니다.](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 
-다음 **[!UICONTROL Dynamics에 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
-
-### 새 계정
-
-새 자격 증명을 사용하는 경우 다음을 선택합니다 **[!UICONTROL 새 계정]**. 표시되는 입력 양식에서 새 양식에 대한 이름과 선택적 설명을 입력합니다 [!DNL Dynamics] 계정입니다.
-
-다음 [!DNL Dynamics] 커넥터는 액세스에 대한 다양한 인증 유형을 제공합니다. 아래 [!UICONTROL 계정 인증] 선택 **[!UICONTROL 기본 인증]** 암호 기반 자격 증명을 사용할 수 있습니다.
-
-완료되면 다음을 선택합니다. **[!UICONTROL 소스에 연결]** 그런 다음 새 계정을 설정하는 데 시간이 걸릴 수 있습니다.
-
-![기본 인증](../../../../images/tutorials/create/ms-dynamics/basic-auth.png)
-
-또는 다음을 선택할 수 있습니다 **[!UICONTROL 서비스 주체 및 키 인증]** 및 연결 [!DNL Dynamics] 다음을 조합하여 계정 사용 [!UICONTROL 서비스 사용자 ID] 및 [!UICONTROL 서비스 주체 키].
-
->[!IMPORTANT]
->
-> 의 기본 인증 [!DNL Dynamics] 는 현재 Platform에서 지원하지 않는 이중 인증에 의해 차단될 수 있습니다. 이 경우 를 사용하여 소스 커넥터를 만들려면 키 기반 인증을 사용하는 것이 좋습니다. [!DNL Dynamics].
-
-![키 기반 인증](../../../../images/tutorials/create/ms-dynamics/key-based-auth.png)
-
-| 자격 증명 | 설명 |
-| ---------- | ----------- |
-| [!UICONTROL 서비스 사용자 ID] | 에 대한 클라이언트 ID [!DNL Dynamics] 계정입니다. 서비스 주체 및 키 기반 인증을 사용할 때 이 ID가 필요합니다. |
-| [!UICONTROL 서비스 주체 키] | 서비스 주체 비밀 키. 서비스 주체 및 키 기반 인증을 사용할 때 이 자격 증명이 필요합니다. |
+다음 **[!UICONTROL Microsoft Dynamics 계정 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
 
 ### 기존 계정
 
-기존 계정을 연결하려면 [!DNL Dynamics] 연결할 계정을 선택한 다음 **[!UICONTROL 다음]** 오른쪽 상단 모서리에서 을 참조하십시오.
+기존 계정을 사용하려면 [!DNL Dynamics] 사용할 계정을 선택한 다음 **[!UICONTROL 다음]** 오른쪽 상단 모서리에서 을 참조하십시오.
 
-![기존](../../../../images/tutorials/create/ms-dynamics/existing.png)
+![기존 계정 인터페이스.](../../../../images/tutorials/create/ms-dynamics/existing.png)
+
+### 새 계정
+
+>[!TIP]
+>
+>만든 후에는 의 인증 유형을 변경할 수 없습니다. [!DNL Dynamics] 기본 연결. 인증 유형을 변경하려면 새 기본 연결을 만들어야 합니다.
+
+새 계정을 만들려면 다음을 선택합니다. **[!UICONTROL 새 계정]**&#x200B;을 클릭하고 새 항목의 이름과 설명(선택 사항)을 입력합니다 [!DNL Dynamics] 계정입니다.
+
+![새 계정 생성 인터페이스.](../../../../images/tutorials/create/ms-dynamics/new.png)
+
+다음을 만들 때 기본 인증 또는 서비스 주체 및 키 인증을 사용할 수 있습니다. [!DNL Dynamics] 계정입니다.
+
+>[!BEGINTABS]
+
+>[!TAB 기본 인증]
+
+을(를) 만들려면 [!DNL Dynamics] 기본 인증을 가진 계정에서 다음을 선택합니다. [!UICONTROL 기본 인증] 그런 다음 의 값을 제공합니다. [!UICONTROL 서비스 URI], [!UICONTROL 사용자 이름], 및 [!UICONTROL 암호]. **참고**: 의 기본 인증 [!DNL Dynamics] 는 현재 Platform에서 지원하지 않는 이중 인증에 의해 차단될 수 있습니다. 이 경우 를 사용하여 소스 커넥터를 만들려면 키 기반 인증을 사용하는 것이 좋습니다. [!DNL Dynamics].
+
+완료되면 다음을 선택합니다. **[!UICONTROL 소스에 연결]** 그런 다음 새 계정을 설정하는 데 시간이 걸릴 수 있습니다.
+
+![기본 인증 인터페이스입니다.](../../../../images/tutorials/create/ms-dynamics/basic-authentication.png)
+
+>[!TAB 서비스 주체 및 키 인증]
+
+을(를) 만들려면 [!DNL Dynamics] 서비스 주체 및 키 인증이 있는 계정에서 다음을 선택합니다. **[!UICONTROL 서비스 주체 및 키 인증]** 그런 다음 의 값을 제공합니다. [!UICONTROL 서비스 사용자 ID] 및 [!UICONTROL 서비스 주체 키].
+
+완료되면 다음을 선택합니다. **[!UICONTROL 소스에 연결]** 그런 다음 새 계정을 설정하는 데 시간이 걸릴 수 있습니다.
+
+![서비스 주체 키 인증 인터페이스입니다.](../../../../images/tutorials/create/ms-dynamics/service-principal.png)
+
+>[!ENDTABS]
 
 ## 다음 단계
 

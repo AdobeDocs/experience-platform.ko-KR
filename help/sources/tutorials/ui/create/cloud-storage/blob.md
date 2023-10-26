@@ -2,9 +2,9 @@
 title: UI에서 Azure Blob 소스 연결 만들기
 description: 플랫폼 사용자 인터페이스를 사용하여 Azure Blob 소스 커넥터를 만드는 방법을 알아봅니다.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '827'
 ht-degree: 1%
 
 ---
@@ -34,16 +34,27 @@ Experience Platform은 외부 스토리지에서 수집할 다음 파일 형식�
 
 ### 필요한 자격 증명 수집
 
-에 액세스하려면 [!DNL Blob] 플랫폼의 스토리지에서는 다음 자격 증명에 대한 유효한 값을 제공해야 합니다.
+에 액세스하려면 [!DNL Blob] Experience Platform의 경우 다음 자격 증명에 대한 유효한 값을 제공해야 합니다.
+
+>[!BEGINTABS]
+
+>[!TAB 연결 문자열 인증]
 
 | 자격 증명 | 설명 |
-| ---------- | ----------- |
+| --- | --- |
 | 연결 문자열 | 인증에 필요한 인증 정보가 포함된 문자열 [!DNL Blob] Experience Platform. 다음 [!DNL Blob] 연결 문자열 패턴: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. 연결 문자열에 대한 자세한 내용은 다음을 참조하십시오 [!DNL Blob] 문서 날짜 [연결 문자열 구성](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+
+>[!TAB SAS URI 인증]
+
+| 자격 증명 | 설명 |
+| --- | --- |
 | SAS URI | 을(를) 연결하는 데 대체 인증 유형으로 사용할 수 있는 공유 액세스 서명 URI [!DNL Blob] 계정입니다. 다음 [!DNL Blob] SAS URI 패턴: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` 자세한 내용은 다음을 참조하십시오. [!DNL Blob] 문서 날짜 [공유 액세스 서명 URI](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
 | 컨테이너 | 액세스를 지정할 컨테이너의 이름입니다. 을(를) 사용하여 새 계정을 만들 때 [!DNL Blob] 소스 컨테이너 이름을 제공하여 선택한 하위 폴더에 대한 사용자 액세스를 지정할 수 있습니다. |
 | 폴더 경로 | 액세스 권한을 제공할 폴더의 경로입니다. |
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 를 연결할 수 있습니다. [!DNL Blob] 계정을 플랫폼에 추가합니다.
+>[!ENDTABS]
+
+필요한 자격 증명을 수집했으면 아래 단계에 따라 연결할 수 있습니다. [!DNL Blob] 스토리지에서 Experience Platform
 
 ## 연결 [!DNL Blob] account
 
@@ -64,6 +75,10 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 왼쪽 탐색 모
 ![기존](../../../../images/tutorials/create/blob/existing.png)
 
 ### 새 계정
+
+>[!TIP]
+>
+>만든 후에는 의 인증 유형을 변경할 수 없습니다. [!DNL Blob] 기본 연결. 인증 유형을 변경하려면 새 기본 연결을 만들어야 합니다.
 
 새 계정을 만드는 경우 다음을 선택합니다 **[!UICONTROL 새 계정]**&#x200B;을 클릭하고 새 항목의 이름과 설명(선택 사항)을 입력합니다 [!DNL Blob] 계정입니다.
 

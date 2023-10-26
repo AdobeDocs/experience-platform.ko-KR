@@ -2,10 +2,10 @@
 title: 흐름 서비스 API를 사용하여 SFTP 기본 연결 만들기
 description: Flow Service API를 사용하여 Adobe Experience Platform을 SFTP(Secure File Transfer Protocol) 서버에 연결하는 방법에 대해 알아봅니다.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 1%
+source-wordcount: '938'
+ht-degree: 2%
 
 ---
 
@@ -50,6 +50,10 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 ## 기본 연결 만들기
 
+>[!TIP]
+>
+>만든 후에는 의 인증 유형을 변경할 수 없습니다. [!DNL Dynamics] 기본 연결. 인증 유형을 변경하려면 새 기본 연결을 만들어야 합니다.
+
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
 다음 [!DNL SFTP] 소스는 SSH 공개 키를 통해 기본 인증과 인증을 모두 지원합니다. 이 단계에서 액세스 권한을 제공할 하위 폴더의 경로를 지정할 수도 있습니다.
@@ -66,13 +70,11 @@ POST 기본 연결 ID를 만들려면 `/connections` 을(를) 제공하는 동�
 POST /connections
 ```
 
-**요청**
-
-다음 요청은에 대한 기본 연결을 만듭니다. [!DNL SFTP]:
-
 >[!BEGINTABS]
 
 >[!TAB 기본 인증]
+
++++요청
 
 ```shell
 curl -X POST \
@@ -113,7 +115,24 @@ curl -X POST \
 | `auth.params.folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. |
 | `connectionSpec.id` | SFTP 서버 연결 사양 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
++++
+
++++응답
+
+성공적인 응답은 고유 식별자()를 반환합니다.`id`)을 참조하십시오. 이 ID는 다음 자습서에서 SFTP 서버를 탐색하는 데 필요합니다.
+
+```json
+{
+    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
+    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
+}
+```
+
++++
+
 >[!TAB SSH 공개 키 인증]
+
++++요청
 
 ```shell
 curl -X POST \
@@ -156,9 +175,9 @@ curl -X POST \
 | `auth.params.folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. |
 | `connectionSpec.id` | 다음 [!DNL SFTP] 서버 연결 사양 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
->[!ENDTABS]
++++
 
-**응답**
++++응답
 
 성공적인 응답은 고유 식별자()를 반환합니다.`id`)을 참조하십시오. 이 ID는 다음 자습서에서 SFTP 서버를 탐색하는 데 필요합니다.
 
@@ -168,6 +187,10 @@ curl -X POST \
     "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
 }
 ```
+
++++
+
+>[!ENDTABS]
 
 ## 다음 단계
 

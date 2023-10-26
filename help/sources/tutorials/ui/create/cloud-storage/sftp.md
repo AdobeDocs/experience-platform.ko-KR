@@ -2,9 +2,9 @@
 title: UI에서 SFTP 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 SFTP 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: e92471b386b857fc21947d352f1c1b88431c68bc
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---
@@ -65,9 +65,11 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 왼쪽 탐색 모
 
 ### 새 계정
 
->[!IMPORTANT]
+>[!TIP]
 >
->SFTP는 RSA 또는 DSA 유형 OpenSSH 키를 지원합니다. 키 파일 컨텐츠가 다음으로 시작하는지 확인합니다. `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` 다음으로 끝남 `"-----END [RSA/DSA] PRIVATE KEY-----"`. 개인 키 파일이 PPK 형식 파일인 경우 PuTTY 도구를 사용하여 PPK에서 OpenSSH 형식으로 변환합니다.
+>* 만든 후에는 의 인증 유형을 변경할 수 없습니다. [!DNL SFTP] 기본 연결. 인증 유형을 변경하려면 새 기본 연결을 만들어야 합니다.
+>
+>* SFTP는 RSA 또는 DSA 유형 OpenSSH 키를 지원합니다. 키 파일 컨텐츠가 다음으로 시작하는지 확인합니다. `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` 다음으로 끝남 `"-----END [RSA/DSA] PRIVATE KEY-----"`. 개인 키 파일이 PPK 형식 파일인 경우 PuTTY 도구를 사용하여 PPK에서 OpenSSH 형식으로 변환합니다.
 
 새 계정을 만드는 경우 다음을 선택합니다 **[!UICONTROL 새 계정]**&#x200B;을 클릭하고 새 항목의 이름과 설명(선택 사항)을 입력합니다 [!DNL SFTP] 계정입니다.
 

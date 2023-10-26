@@ -2,10 +2,10 @@
 title: 흐름 서비스 API를 사용하여 Azure Blob 기본 연결 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Azure Blob에 연결하는 방법을 알아봅니다.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 1%
+source-wordcount: '782'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 기본 연결을 만드는 단계를 안내합니다. [!DNL Azure Blob] (이하 &quot;라고 한다)[!DNL Blob]&quot;) 사용 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+이 자습서에서는 기본 연결을 만드는 단계를 제공합니다. [!DNL Azure Blob] (이하 &quot;라고 한다)[!DNL Blob]&quot;) 사용 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 시작하기
 
@@ -28,19 +28,35 @@ ht-degree: 1%
 
 주문 [!DNL Flow Service] 을(를) 사용하여 [!DNL Blob] storage에서 다음 연결 속성에 대한 값을 제공해야 합니다.
 
+>[!BEGINTABS]
+
+>[!TAB 연결 문자열 인증]
+
 | 자격 증명 | 설명 |
-| ---------- | ----------- |
+| --- | --- |
 | `connectionString` | 인증에 필요한 인증 정보가 포함된 문자열 [!DNL Blob] Experience Platform. 다음 [!DNL Blob] 연결 문자열 패턴: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. 연결 문자열에 대한 자세한 내용은 다음을 참조하십시오 [!DNL Blob] 문서 날짜 [연결 문자열 구성](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 에 대한 연결 사양 ID [!DNL Blob] 은(는) `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+
+>[!TAB SAS URI 인증]
+
+| 자격 증명 | 설명 |
+| --- | --- |
 | `sasUri` | 을(를) 연결하는 데 대체 인증 유형으로 사용할 수 있는 공유 액세스 서명 URI [!DNL Blob] 계정입니다. 다음 [!DNL Blob] SAS URI 패턴: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` 자세한 내용은 다음을 참조하십시오. [!DNL Blob] 문서 날짜 [공유 액세스 서명 URI](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
 | `container` | 액세스를 지정할 컨테이너의 이름입니다. 을(를) 사용하여 새 계정을 만들 때 [!DNL Blob] 소스 컨테이너 이름을 제공하여 선택한 하위 폴더에 대한 사용자 액세스를 지정할 수 있습니다. |
 | `folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 에 대한 연결 사양 ID [!DNL Blob] 은(는) `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+
+>[!ENDTABS]
 
 ### Platform API 사용
 
 Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../../../landing/api-guide.md).
 
 ## 기본 연결 만들기
+
+>[!TIP]
+>
+>만든 후에는 의 인증 유형을 변경할 수 없습니다. [!DNL Blob] 기본 연결. 인증 유형을 변경하려면 새 기본 연결을 만들어야 합니다.
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
@@ -63,6 +79,8 @@ POST /connections
 >[!TAB 연결 문자열]
 
 다음 요청은에 대한 기본 연결을 만듭니다. [!DNL Blob] 연결 문자열 기반 인증 사용:
+
++++요청
 
 ```shell
 curl -X POST \
@@ -95,11 +113,26 @@ curl -X POST \
 | `auth.params.connectionString` | Blob 저장소의 데이터에 액세스하는 데 필요한 연결 문자열입니다. Blob 연결 문자열 패턴은 다음과 같습니다. `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 | `connectionSpec.id` | Blob 저장소 연결 사양 ID는 다음과 같습니다. `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
++++
+
++++응답
+
+성공한 응답은 고유 식별자를 포함하여 새로 생성된 기본 연결의 세부 정보를 반환합니다(`id`). 다음 단계에서 소스 연결을 만들려면 이 ID가 필요합니다.
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"1700c57b-0000-0200-0000-5e3b3f440000\""
+}
+```
+
++++
+
 >[!TAB SAS URI 인증]
 
-을(를) 만들려면 [!DNL Blob] POST 공유 액세스 서명 URI를 사용하는 blob 연결에서 [!DNL Flow Service] 에 대한 값을 제공하는 동안 API [!DNL Blob] `sasUri`.
+을(를) 만들려면 [!DNL Blob] POST 공유 액세스 서명 URI를 사용한 연결에서 [!DNL Flow Service] 에 대한 값을 제공하는 동안 API [!DNL Blob] `sasUri`.
 
-다음 요청은에 대한 기본 연결을 만듭니다. [!DNL Blob] 공유 액세스 서명 URI 사용:
++++요청
 
 ```shell
 curl -X POST \
@@ -132,9 +165,9 @@ curl -X POST \
 | `auth.params.connectionString` | 의 데이터에 액세스하는 데 필요한 SAS URI [!DNL Blob] 스토리지. 다음 [!DNL Blob] SAS URI 패턴: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`. |
 | `connectionSpec.id` | 다음 [!DNL Blob] 저장소 연결 사양 ID: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
->[!ENDTABS]
++++
 
-**응답**
++++응답
 
 성공한 응답은 고유 식별자를 포함하여 새로 생성된 기본 연결의 세부 정보를 반환합니다(`id`). 다음 단계에서 소스 연결을 만들려면 이 ID가 필요합니다.
 
@@ -144,6 +177,10 @@ curl -X POST \
     "etag": "\"1700c57b-0000-0200-0000-5e3b3f440000\""
 }
 ```
+
++++
+
+>[!ENDTABS]
 
 ## 다음 단계
 
