@@ -4,9 +4,9 @@ type: Tutorial
 description: 계산된 필드를 사용하여 플랫 스키마 파일의 배열을 Real-Time CDP에서 클라우드 스토리지 대상으로 내보내는 방법에 대해 알아봅니다.
 badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1497'
 ht-degree: 5%
 
 ---
@@ -216,8 +216,21 @@ johndoe@acme.org,"1538097126"
 johndoe@acme.org,"1538097126","1664327526"
 ```
 
-### `md5` 및 `sha256` 해시 함수 {#hashing-functions}
+### 해시 함수 {#hashing-functions}
 
-배열이나 배열에서 요소를 내보내는 특정 함수 외에도 해시 함수를 사용하여 특성을 해시할 수 있습니다. 예를 들어 속성에 개인 식별 가능한 정보가 있는 경우 내보낼 때 이러한 필드를 해시할 수 있습니다.
+배열이나 배열에서 요소를 내보내는 특정 함수 외에도 해시 함수를 사용하여 내보낸 파일의 속성을 해시할 수 있습니다. 예를 들어 속성에 개인 식별 가능한 정보가 있는 경우 내보낼 때 이러한 필드를 해시할 수 있습니다.
 
-예를 들어 문자열 값을 직접 해시할 수 있습니다 `md5(personalEmail.address)`. 원하는 경우 다음과 같이 배열 필드의 개별 요소를 해시할 수도 있습니다. `md5(purchaseTime[0])`
+예를 들어 문자열 값을 직접 해시할 수 있습니다 `md5(personalEmail.address)`. 원하는 경우 다음과 같이 배열의 요소가 문자열이라고 가정하여 배열 필드의 개별 요소를 해시할 수도 있습니다. `md5(purchaseTime[0])`
+
+지원되는 해시 함수는 다음과 같습니다.
+
+| 함수 | 샘플 표현식 |
+|---------|----------|
+| `sha1` | `sha1(organizations[0])` |
+| `sha256` | `sha256(organizations[0])` |
+| `sha512` | `sha512(organizations[0])` |
+| `hash` | `hash("crc32", organizations[0], "UTF-8")` |
+| `md5` | `md5(organizations[0], "UTF-8")` |
+| `crc32` | `crc32(organizations[0])` |
+
+{style="table-layout:auto"}
