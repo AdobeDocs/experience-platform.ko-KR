@@ -2,7 +2,7 @@
 title: Linkedin 전환 API 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장을 사용하면 Linkedin 마케팅 캠페인의 성능을 측정할 수 있습니다.
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: ca65f010cda5d37c40fd57075a26e365c76bdc0b
+source-git-commit: e1ed18aa79abae70974df1845c211a00390ecca4
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ### 암호 및 데이터 요소 만들기
 
-새로 만들기 `LinkedIn` [이벤트 전달 암호](../../../ui/event-forwarding/secrets.md) 인증 멤버를 나타내는 고유한 이름을 제공합니다. 값을 안전하게 유지하면서 계정에 대한 연결을 인증하는 데 사용됩니다.
+새로 만들기 [!DNL LinkedIn] [이벤트 전달 암호](../../../ui/event-forwarding/secrets.md) 인증 멤버를 나타내는 고유한 이름을 제공합니다. 값을 안전하게 유지하면서 계정에 대한 연결을 인증하는 데 사용됩니다.
 
 다음, [데이터 요소 만들기](../../../ui/managing-resources/data-elements.md#create-a-data-element) 사용 [!UICONTROL 코어] 확장 및 a [!UICONTROL 암호] 참조할 데이터 요소 유형 `LinkedIn` 방금 생성한 암호.
 
