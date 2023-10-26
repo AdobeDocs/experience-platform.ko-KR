@@ -1,16 +1,16 @@
 ---
-title: 데이터스트림 구성
+title: 데이터스트림 만들기 및 구성
 description: 클라이언트측 Web SDK 통합 기능을 다른 Adobe 제품 및 서드파티 대상과 연결하는 방법에 대해 알아봅니다.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: db75771d09caef00db58073333909f730a303975
+source-git-commit: d7a0299c5fe3729620e74602ac99459093cc2e28
 workflow-type: tm+mt
-source-wordcount: '2777'
+source-wordcount: '2779'
 ht-degree: 75%
 
 ---
 
 
-# 데이터스트림 구성
+# 데이터스트림 만들기 및 구성
 
 이 문서에서는 UI에서 [데이터스트림](./overview.md)을 구성하는 단계를 설명합니다.
 
