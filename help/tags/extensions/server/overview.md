@@ -2,9 +2,9 @@
 title: 이벤트 전달 확장 참조
 description: Adobe Experience Platform에서 이벤트 전달 확장에 대한 설명서를 찾습니다.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
+source-git-commit: f63d171354e15a23c29c1e579ce816750dea3c97
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '193'
 ht-degree: 20%
 
 ---
@@ -37,6 +37,7 @@ ht-degree: 20%
 * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)*
 * [Google Ads 향상된 전환](./google-ads-enhanced-conversions/overview.md)
 * [Google Cloud 플랫폼](./google-cloud-platform/overview.md)
+* [[!DNL LinkedIn] 전환 API](./linkedin/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!DNL Meta] 전환 API](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)

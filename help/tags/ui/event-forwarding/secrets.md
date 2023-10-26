@@ -2,10 +2,10 @@
 title: 이벤트 전달 시 암호 구성
 description: 이벤트 전달 속성에 사용되는 엔드포인트를 인증하도록 UI에서 보안을 구성하는 방법에 대해 알아봅니다.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
+source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 4%
+source-wordcount: '2458'
+ht-degree: 3%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 4%
 | --- | --- |
 | [!UICONTROL Google OAuth 2] | 을(를) 지원하기 위한 몇 가지 속성을 포함합니다. [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 에서 사용할 인증 사양 [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) 및 [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
 | [!UICONTROL HTTP] | 사용자 이름과 암호에 대해 각각 두 개의 문자열 속성을 포함합니다. |
+| [!UICONTROL [!DNL LinkedIn] OAuth 2] | 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
 | [!UICONTROL OAuth 2] | 을(를) 지원하기 위한 몇 가지 속성을 포함합니다. [클라이언트 자격 증명 부여 유형](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) 대상: [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 인증 사양입니다. 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
 | [!UICONTROL OAuth 2 JWT] | 에 대한 JSON 웹 토큰(JWT) 프로필을 지원하는 몇 가지 속성을 포함합니다. [OAuth 2.0 인증](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) 부여됩니다. 시스템에서 필요한 정보를 요청한 다음 지정된 간격에 따라 이러한 토큰의 갱신을 처리합니다. |
 | [!UICONTROL 토큰] | 두 시스템에서 알려지고 이해하는 인증 토큰 값을 나타내는 단일 문자 문자열입니다. |
@@ -76,6 +77,7 @@ ht-degree: 4%
 * [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
+* [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
 
 ### [!UICONTROL 토큰] {#token}
 
@@ -175,6 +177,38 @@ Google 계정에 대한 자격 증명을 입력할 수 있는 대화 상자가 �
 >조직에 Google Cloud 애플리케이션에 대한 재인증 정책이 설정되어 있는 경우 인증이 만료된 후(정책 구성에 따라 1~24시간) 생성된 비밀이 성공적으로 새로 고쳐지지 않습니다.
 >
 >이 문제를 해결하려면 Google Admin Console에 로그인하고 로 이동합니다. **[!DNL App access control]** 이벤트 전달 앱(Adobe Real-Time CDP 이벤트 전달)을 [!DNL Trusted]. 다음에서 Google 설명서 참조: [Google Cloud Services의 세션 길이 설정](https://support.google.com/a/answer/9368756) 추가 정보.
+
+### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
+
+을(를) 만들려면 [!DNL LinkedIn] OAuth 2 암호, 선택 **[!UICONTROL [!DNL LinkedIn]OAuth 2]** 다음에서 **[!UICONTROL 유형]** 드롭다운입니다. 그런 다음 을 선택합니다. **[!UICONTROL 암호 만들기]**.
+
+![다음 [!UICONTROL 암호 만들기] 이 있는 탭 [!UICONTROL 유형] 강조 표시된 필드입니다.](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+
+다음을 통해 암호를 수동으로 승인해야 함을 알리는 팝오버가 표시됩니다 [!DNL LinkedIn]. 선택 **[!UICONTROL 다음을 사용하여 암호 만들기 및 승인[!DNL LinkedIn]]** 계속합니다.
+
+![[!DNL LinkedIn] 인증 팝오버 강조 표시 [!UICONTROL 다음을 사용하여 암호 만들기 및 승인 [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+
+다음을 입력하라는 대화 상자가 나타납니다. [!DNL LinkedIn] 자격 증명. 화면의 지침에 따라 데이터에 이벤트 전달 액세스 권한을 부여합니다.
+
+인증 프로세스가 완료되면 다음으로 돌아갑니다. **[!UICONTROL 비밀]** 새로 만든 암호를 볼 수 있는 탭입니다. 여기에서 암호의 상태와 만료일을 볼 수 있습니다.
+
+![다음 [!UICONTROL 암호] 새로 만든 암호를 강조 표시하는 탭입니다.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+
+#### 재인증 [!UICONTROL [!DNL LinkedIn] OAuth 2] 비밀
+
+>중요 사항
+>
+>을(를) 사용하여 재승인해야 합니다. [!DNL LinkedIn] 365일마다 자격 증명을 만듭니다. 기한 내에 재인증하지 않으면 암호가 새로 고쳐지지 않고 [!DNL LinkedIn] 전환 요청이 실패합니다.
+
+재인증이 필요한 암호보다 3개월 먼저, 속성의 페이지를 탐색할 때 팝업이 표시됩니다. 선택 **[!UICONTROL 비밀로 이동하려면 여기를 클릭하십시오.]**.
+
+![다음 [!UICONTROL 속성 개요] 비밀 재인증 팝업을 강조 표시하는 탭입니다.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+
+(으)로 리디렉션됩니다 [!UICONTROL 비밀] 탭. 이 페이지에 나열된 비밀은 다시 승인해야 하는 비밀만 표시하도록 필터링됩니다. 선택 **[!UICONTROL 인증 필요]** 을(를) 위해 재승인해야 합니다.
+
+![다음 [!UICONTROL 암호] 탭 강조 표시 [!UICONTROL 인증 필요]대상: [!DNL LinkedIn] 비밀.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+
+을 입력하라는 메시지가 표시되는 대화 상자가 나타납니다. [!DNL LinkedIn] 자격 증명. 화면의 지침에 따라 암호를 다시 인증합니다.
 
 ## 암호 편집
 
