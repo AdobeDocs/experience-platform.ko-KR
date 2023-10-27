@@ -5,7 +5,7 @@ exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
 source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
 workflow-type: tm+mt
 source-wordcount: '938'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../../../landing/api-guide.md).
 
-## 기본 연결 만들기
+## 기본 연결을 만듭니다
 
 >[!TIP]
 >

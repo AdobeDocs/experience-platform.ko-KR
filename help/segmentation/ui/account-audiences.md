@@ -2,20 +2,20 @@
 title: 계정 대상자
 description: 계정 대상자를 만들고 사용하여 다운스트림 대상의 계정 프로필을 타겟팅하는 방법을 알아봅니다.
 badgeLimitedAvailability: label="제한된 가용성" type="Caution"
-badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html"
-source-git-commit: ecc60ec2e7bf2ea02bd721eac1b101b0dc412ba0
+badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+source-git-commit: 77ba3bd55c2f2ac217612880b83b731919aa14af
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 1%
+source-wordcount: '603'
+ht-degree: 0%
 
 ---
 
 
 # 계정 대상자
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->계정 대상은 다음에서만 사용할 수 있습니다. [Real-time Customer Data Platform B2B 에디션](../../rtcdp/b2b-overview.md). 또한 계정 대상자 기능은 현재 **제한된 가용성**.
+>계정 대상은 다음에서만 사용할 수 있습니다. [Real-time Customer Data Platform B2B 에디션](../../rtcdp/b2b-overview.md). 또한 계정 대상자 기능은 현재 **제한된 가용성**. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
 
 Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 기반 대상에서 계정 기반 대상으로의 마케팅 세분화 경험을 전체적으로 쉽고 정교하게 만들 수 있습니다.
 
@@ -69,7 +69,7 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 
 ![다음 [!UICONTROL 대상에 활성화] 선택한 대상자의 빠른 작업 메뉴에서 버튼이 강조 표시됩니다.](../images/ui/account-audiences/activate.png)
 
-다음 [!UICONTROL 대상 활성화] 페이지가 나타납니다. 필드 매핑에 대한 세부 사항을 포함하여 활성화 프로세스에 대한 자세한 내용은 [활성화 개요](../../destinations/ui/activation-overview.md).
+다음 [!UICONTROL 대상 활성화] 페이지가 나타납니다. 지원되는 대상 및 필드 매핑에 대한 세부 정보를 포함하여 활성화 프로세스에 대한 자세한 내용은 [계정 대상자 활성화](/help/destinations/ui/activate-account-audiences.md) 튜토리얼.
 
 ## 다음 단계 {#next-steps}
 

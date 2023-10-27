@@ -4,9 +4,9 @@ title: 새 대상 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform에서 대상에 연결하고, 경고를 활성화하고, 연결된 대상에 대한 마케팅 작업을 설정하는 방법을 알아봅니다.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
+source-git-commit: 28abc492dc3b2b89c3e79a0531b8d206af1e0590
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
@@ -84,9 +84,9 @@ ht-degree: 0%
 
 ![CSV 파일에 대한 파일 유형 선택 및 다양한 옵션을 보여 주는 이미지입니다.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### 대상 활성화, 잠재 고객 활성화 또는 데이터 세트 내보내기에 대한 대상 연결 설정 {#segment-activation-or-dataset-exports}
+### 대상 활성화, 계정 활성화, 잠재 고객 활성화 또는 데이터 세트 내보내기에 대한 대상 연결을 설정합니다 {#segment-activation-or-dataset-exports}
 
-일부 파일 기반 대상은 알려진 고객 또는 잠재 고객에 대한 대상 활성화와 데이터 세트 내보내기를 지원합니다. 이러한 대상의 경우 다음을 수행할 수 있는 연결을 만들지 여부를 선택할 수 있습니다. [대상자 활성화](/help/destinations/ui/activate-batch-profile-destinations.md), [잠재 고객](/help/destinations/ui/activate-prospect-audiences.md), 또는 [데이터 세트 내보내기](/help/destinations/ui/export-datasets.md).
+일부 파일 기반 대상은 알려진 고객, 계정 고객 또는 잠재 고객에 대한 대상 활성화와 데이터 세트 내보내기를 지원합니다. 이러한 대상의 경우 다음을 수행할 수 있는 연결을 만들지 여부를 선택할 수 있습니다. [대상자 활성화](/help/destinations/ui/activate-batch-profile-destinations.md), [계정](/help/destinations/ui/activate-account-audiences.md), [잠재 고객](/help/destinations/ui/activate-prospect-audiences.md), 또는 [데이터 세트 내보내기](/help/destinations/ui/export-datasets.md).
 
 >[!WARNING]
 >
