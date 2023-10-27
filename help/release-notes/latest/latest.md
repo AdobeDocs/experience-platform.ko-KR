@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 10월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a307f21ad9c72fd413c90cff1c92af8535d9b17b
+source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '954'
 ht-degree: 34%
 
 ---
@@ -15,11 +15,26 @@ ht-degree: 34%
 
  Experience Platform의 기존 기능 업데이트:
 
+- [대시보드](#dashboards)
 - [데이터 수집](#data-collection)
 - [대상](#destinations)
 - [샌드박스](#sandboxes)
 - [Segmentation Service](#segmentation)
 - [소스](#sources)
+
+## 대시보드 {#dashboards}
+
+Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대한 중요한 인사이트를 볼 수 있는 여러 대시보드를 제공합니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| 대상 사용 지표 | 새 계량 지표가 라이선스 사용 대시보드에 추가되었습니다. 다음 **[!UICONTROL Audience Activation 크기]** 및 **[!UICONTROL 데이터 내보내기 크기]** 지표를 통해 라이선스 사용 권한과 관련하여 플랫폼에서 내보낸 데이터의 양을 추적할 수 있습니다. 다음을 참조하십시오. [사용 가능한 지표](../../dashboards/guides/license-usage.md#available-metrics) 이들 및 기타 라이선스 사용 지표에 대한 설명은 설명서에서 확인할 수 있습니다. |
+
+{style="table-layout:auto"}
+
+액세스 권한을 부여하고 사용자 정의 위젯을 만드는 방법을 포함해 대시보드에 대한 자세한 내용은 [대시보드 개요](../../dashboards/home.md)를 읽어 보십시오.
 
 ## 데이터 수집 {#data-collection}
 
@@ -52,7 +67,8 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| 계산된 필드에서 함수 해싱 지원 | 에 특정한 함수 외에도 [배열 내보내기](../../destinations/ui/export-arrays-calculated-fields.md) 또는 배열의 요소를 사용하여 추가 [해시 함수](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) 내보낸 파일의 속성을 해시합니다. 지원되는 해시 함수는 다음과 같습니다. `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (베타) 계산된 필드에서 함수 해싱 지원 | 에 특정한 함수 외에도 [배열 내보내기](../../destinations/ui/export-arrays-calculated-fields.md) 또는 배열의 요소를 사용하여 추가 [해시 함수](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) 내보낸 파일의 속성을 해시합니다. 지원되는 해시 함수는 다음과 같습니다. `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (제한된 GA) 특정 대상에 대해 계정 대상자 활성화 | Real-Time CDP B2B 고객은 이제 다음을 활성화할 수 있습니다 [계정 대상자](../../segmentation/ui/account-audiences.md) 특정 대상으로 이동합니다. 이 기능에 대한 자세한 내용은 [계정 대상자 활성화 자습서](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
