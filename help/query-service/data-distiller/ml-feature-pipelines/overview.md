@@ -1,22 +1,22 @@
 ---
 title: AI/ML 기능 파이프라인
 description: Data Distiller을 사용하여 Adobe Experience Platform 데이터에서 파생된 기능을 사용하여 머신 러닝 파이프라인을 보강하는 방법에 대해 알아봅니다. 원시 데이터를 기능으로 변환하고 기능 데이터를 전달하여 마케팅 사용 사례를 지원하는 모델을 교육하거나 평가합니다.
-source-git-commit: f8bba17df9673973cb2792658282c8db972d30d6
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '453'
 ht-degree: 1%
 
 ---
 
 # AI/ML 기능 파이프라인
 
-<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided Python notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
+<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
 
 <!--  -->
 
-데이터 Distiller을 사용하면 데이터 과학자와 엔지니어가 Adobe Experience Platform에서 수집 및 선별된 고가치 고객 경험 데이터를 통해 머신 러닝 파이프라인을 보강할 수 있습니다. 모든 환경의 Python 노트북에서 대화식으로 Experience Platform의 고객 데이터를 탐색하고, 데이터에서 기능을 정의 및 계산하고, 모델링을 위해 기계 학습 환경으로 계산된 기능을 읽을 수 있습니다.
+데이터 Distiller을 사용하면 데이터 과학자와 엔지니어가 Adobe Experience Platform에서 수집 및 선별된 고가치 고객 경험 데이터를 통해 머신 러닝 파이프라인을 보강할 수 있습니다. 다음에서: [!DNL Python] notebook 모든 환경에서 상호 작용하여 Experience Platform의 고객 데이터를 탐색하고, 데이터에서 기능을 정의 및 계산하고, 모델링을 위해 기계 학습 환경으로 계산된 기능을 읽을 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ This document provides an overview of the AI/ML feature pipelines use case and d
 
 이 워크플로우를 사용하려면 Adobe Experience Platform의 다양한 측면을 이해하고 있어야 합니다. 이 자습서를 시작하기 전에 다음 개념에 대한 설명서를 검토하십시오.
 
-- 방법 [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md)
+- 방법 [Experience Platform API 인증 및 액세스](../../../landing/api-authentication.md).
 - 샌드박스: [속성 기반 액세스 제어 권한](../../../access-control/abac/overview.md) 또한 역할을 만들고 관리하며, 이러한 역할에 대해 원하는 리소스 권한을 할당하는 방법에 대해 설명합니다.
 - 데이터 거버넌스: 방법 [데이터 세트 및 필드에 데이터 사용 레이블 적용, 각각 분류](../../../data-governance/labels/overview.md) 관련 데이터 거버넌스 정책 및 액세스 제어 정책에 따라.
 
@@ -40,16 +40,16 @@ This document provides an overview of the AI/ML feature pipelines use case and d
 
 이 문서를 읽은 후에는 선호하는 머신 러닝 도구를 사용하여 마케팅 사용 사례를 지원하는 사용자 정의 모델을 구축하는 중요한 개념에 대해 소개했습니다.
 
-이 일련의 안내서에 포함된 문서에서는 Experience Platform에서 머신 러닝 환경의 사용자 지정 모델에 대한 기능 파이프라인을 만드는 기본 단계를 설명합니다. 이제 Data Distiller과 Jupyter 노트북 간의 연결을 설정할 준비가 되었습니다.
+이 일련의 안내서에 포함된 문서에서는 Experience Platform에서 머신 러닝 환경의 사용자 지정 모델에 대한 기능 파이프라인을 만드는 기본 단계를 설명합니다. 이제 Data Distiller과 을(를) 연결할 준비가 되었습니다. [!DNL Jupyter Notebook].
 
-- [Python 노트북에서 Data Distiller에 연결](./establish-connection.md)
+- [다음에서 Data Distiller에 연결 [!DNL Python] notebook](./establish-connection.md)
 - [데이터 세트 탐색 및 분석](./exploratory-analysis.md)
 - [머신 러닝을 위한 엔지니어 기능](./feature-engineering.md)
 - [기능 데이터 세트 내보내기](./export-data.md)
 
 ## 추가 리소스
 
-- [aepp](https://github.com/adobe/aepp): Data Distiller 및 Python 코드에서 다른 Experience Platform 서비스에 요청을 하기 위한 Adobe 관리 오픈 소스 Python 라이브러리입니다.
+- [aepp](https://github.com/adobe/aepp): Adobe이 관리하는 오픈 소스 [!DNL Python] 에서 Data Distiller 및 기타 Experience Platform 서비스에 대한 요청을 수행하는 라이브러리 [!DNL Python] 코드.
 
 <!-- Old content below -->
 

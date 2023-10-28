@@ -1,20 +1,20 @@
 ---
 title: 탐색적 데이터 분석
 description: Data Distiller을 사용하여 Python 노트북에서 데이터를 탐색하고 분석하는 방법에 대해 알아봅니다.
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '809'
 ht-degree: 16%
 
 ---
 
 # 탐색적 데이터 분석
 
-이 문서에서는 Data Distiller을 사용하여 Python 전자 필기장의 데이터를 탐색하고 분석하기 위한 몇 가지 기본 예제와 모범 사례를 제공합니다.
+이 문서에서는 Data Distiller을 사용하여 의 데이터를 탐색하고 분석하기 위한 몇 가지 기본 예와 모범 사례를 제공합니다. [!DNL Python] 전자 필기장.
 
 ## 시작하기
 
-이 안내서를 계속 진행하기 전에 Python 전자 필기장에서 Data Distiller에 대한 연결을 만들었는지 확인하십시오. 방법에 대한 지침은 설명서 를 참조하십시오 [Python 노트북을 Data Distiller에 연결](./establish-connection.md).
+이 안내서를 계속 진행하기 전에 의 Data Distiller에 대한 연결을 만들었는지 확인하십시오. [!DNL Python] 전자 필기장. 방법에 대한 지침은 설명서 를 참조하십시오 [연결 [!DNL Python] notebook에서 Data Distiller으로](./establish-connection.md).
 
 ## 기본 통계 얻기 {#basic-statistics}
 
@@ -90,7 +90,7 @@ sample_table_name = df_samples[df_samples["sampling_rate"] == sampling_rate]["sa
 count_query=f'''SELECT count(*) as cnt from {sample_table_name}'''
 
 df = qs_cursor.query(count_query, output="dataframe")
-# divide by the sampling rate to extrapolate to the full dataset
+# Divide by the sampling rate to extrapolate to the full dataset
 approx_count = df["cnt"].iloc[0] / (sampling_rate / 100)
 
 print(f"Approximate count: {approx_count} using {sampling_rate *10}% sample")
@@ -137,7 +137,7 @@ funnel_df
 
 ### 그래프 쿼리 결과 {#plot-results}
 
-그런 다음 Python을 사용하여 쿼리 결과를 플롯합니다 `plotly` 라이브러리:
+그런 다음 다음을 사용하여 쿼리 결과를 플롯합니다. [!DNL Python] `plotly` 라이브러리:
 
 ```python
 import plotly.express as px
@@ -261,4 +261,4 @@ ax.set_title("Pearson Correlation of Events with the outcome event")
 
 ## 다음 단계
 
-이 문서를 읽고 Data Distiller을 사용하여 Python 전자 필기장의 데이터를 탐색하고 분석하는 방법에 대해 알아보았습니다. 머신 러닝 환경에서 Experience Platform에서 피드 사용자 지정 모델로의 기능 파이프라인을 만드는 다음 단계는 다음과 같습니다 [머신 러닝을 위한 엔지니어 기능](./feature-engineering.md).
+이 문서를 읽고 Data Distiller을 사용하여 의 데이터를 탐색하고 분석하는 방법을 배웠습니다. [!DNL Python] 전자 필기장. 머신 러닝 환경에서 Experience Platform에서 피드 사용자 지정 모델로의 기능 파이프라인을 만드는 다음 단계는 다음과 같습니다 [머신 러닝을 위한 엔지니어 기능](./feature-engineering.md).
