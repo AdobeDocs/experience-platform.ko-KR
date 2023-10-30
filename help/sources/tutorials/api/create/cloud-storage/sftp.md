@@ -2,7 +2,7 @@
 title: 흐름 서비스 API를 사용하여 SFTP 기본 연결 만들기
 description: Flow Service API를 사용하여 Adobe Experience Platform을 SFTP(Secure File Transfer Protocol) 서버에 연결하는 방법에 대해 알아봅니다.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
+source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 3%
@@ -52,7 +52,7 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 >[!TIP]
 >
->만든 후에는 의 인증 유형을 변경할 수 없습니다. [!DNL Dynamics] 기본 연결. 인증 유형을 변경하려면 새 기본 연결을 만들어야 합니다.
+>만든 후에는 의 인증 유형을 변경할 수 없습니다. [!DNL SFTP] 기본 연결. 인증 유형을 변경하려면 새 기본 연결을 만들어야 합니다.
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 

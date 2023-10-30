@@ -2,7 +2,7 @@
 title: UI에서 SFTP 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 SFTP 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: e92471b386b857fc21947d352f1c1b88431c68bc
+source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 0%
