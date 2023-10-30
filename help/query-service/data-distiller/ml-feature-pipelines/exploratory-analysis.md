@@ -1,7 +1,8 @@
 ---
 title: 탐색적 데이터 분석
 description: Data Distiller을 사용하여 Python 노트북에서 데이터를 탐색하고 분석하는 방법에 대해 알아봅니다.
-source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
+exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 16%

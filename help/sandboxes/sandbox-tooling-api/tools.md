@@ -1,7 +1,8 @@
 ---
 title: 샌드박스 도구 API 엔드포인트
 description: 샌드박스 도구 API의 /tools 끝점을 사용하면 Adobe Experience Platform에서 작업 JSON 데이터를 검색할 수 있습니다.
-source-git-commit: e4e89c5250885bef177ba0d678629261a361a66d
+exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 2%

@@ -1,7 +1,8 @@
 ---
 title: 샌드박스 도구 API 시작하기
 description: 샌드박스 도구 API를 사용하여 아티팩트를 검사하고 샌드박스 간에 샌드박스 구성의 스냅샷을 내보내고 가져올 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
-source-git-commit: bad6ad17a5f41e50b27ce44a6d52a79e2066c82f
+exl-id: 0b34d153-a603-4397-a375-9cc846efe23a
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 14%

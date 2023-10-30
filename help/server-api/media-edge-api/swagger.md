@@ -2,7 +2,8 @@
 solution: Experience Platform
 title: Media Edge Open API 사양
 description: 이 문서에는 YAML OAS(Open API Specification) 또는 "Swagger" 참조가 포함되어 있습니다. 이 사양을 복사하고 editor.swagger.io와 같은 렌더링 도구에 붙여넣어 Media Edge API 정보를 볼 수 있습니다. 이 사양은 각 끝점에 대한 매개 변수, 예 및 스키마를 포함합니다.
-source-git-commit: 11a9dc980b7a63549cdd9a8c9522e001faceeb56
+exl-id: 14395fa4-14a6-4487-8645-1a19e5695349
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%

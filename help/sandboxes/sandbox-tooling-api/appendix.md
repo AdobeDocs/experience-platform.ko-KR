@@ -1,13 +1,13 @@
 ---
 title: 샌드박스 도구 API 안내서 부록
 description: 이 문서에서는 샌드박스 도구 API 작업과 관련된 추가 정보를 제공합니다.
-source-git-commit: e4e89c5250885bef177ba0d678629261a361a66d
+exl-id: fdfa019d-ce0e-456b-b591-7d96d1115e02
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 1%
 
 ---
-
 
 # 샌드박스 API 안내서 부록
 

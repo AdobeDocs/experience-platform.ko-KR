@@ -1,11 +1,11 @@
 ---
 title: 데이터스트림 재정의 구성
 description: 데이터스트림 UI에서 데이터스트림 재정의를 구성하고 Web SDK를 통해 활성화하는 방법에 대해 알아봅니다.
-exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: b0b53d9fcf410812eee3abdbbb6960d328fee99f
+exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
+source-git-commit: 5effb8a514100c28ef138ba1fc443cf29a64319a
 workflow-type: tm+mt
-source-wordcount: '1231'
-ht-degree: 100%
+source-wordcount: '1464'
+ht-degree: 78%
 
 ---
 
@@ -18,14 +18,17 @@ ht-degree: 100%
 데이터스트림 구성 재정의는 2단계 프로세스입니다.
 
 1. 먼저 [데이터스트림 구성 페이지](configure.md)에서 데이터스트림 구성 재정의를 정의해야 합니다.
-2. 그런 다음 Web SDK 명령 또는 Web SDK [태그 확장 기능](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)을 사용하여 Edge Network에 해당 재정의를 보내야 합니다.
+2. 그런 다음 다음 중 한 가지 방법으로 Edge Network에 재정의를 전송해야 합니다.
+   * 다음을 통해 `sendEvent` 또는 `configure` [웹 SDK](#send-overrides-web-sdk) 명령입니다.
+   * Web SDK를 통해 [태그 확장](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+   * Mobile SDK를 통해 [sendEvent API](#send-overrides-mobile-sdk) 호출합니다.
 
 이 문서에서는 지원되는 모든 재정의에 대한 전반적인 데이터스트림 구성 재정의 프로세스를 설명합니다.
 
 >[!IMPORTANT]
 >
->데이터스트림 재정의는 [웹 SDK](../edge/home.md) 통합에 대해서만 지원됩니다. [모바일 SDK](https://developer.adobe.com/client-sdks/documentation/) 및 [서버 API](../server-api/overview.md) 통합은 현재 데이터스트림 재정의를 지원하지 않습니다.
-><br><br>
+>데이터 스트림 재정의는 다음에 대해서만 지원됩니다. [웹 SDK](../edge/home.md) 및 [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) 통합. [서버 API](../server-api/overview.md) 통합은 현재 데이터 스트림 재정의를 지원하지 않습니다.
+><br>
 >데이터스트림 재정의는 다른 데이터스트림으로 전송되는 다른 데이터가 필요할 때 사용해야 합니다. 개인화 사용 사례 또는 동의 데이터에 데이터 스트림 재정의를 사용해서는 안 됩니다.
 
 ## 사용 사례 {#use-cases}
@@ -111,7 +114,7 @@ Experience Platform 이벤트 데이터 세트에 대한 데이터스트림 재�
 
 이제 ID 동기화 컨테이너 재정의를 구성해야 합니다. [Web SDK를 통해 재정의를 Edge Network로 전송](#send-overrides)할 수 있습니다.
 
-## Web SDK를 통해 Edge Network로 재정의 전송 {#send-overrides}
+## Web SDK를 통해 Edge Network로 재정의 전송 {#send-overrides-web-sdk}
 
 >[!NOTE]
 >
@@ -119,7 +122,7 @@ Experience Platform 이벤트 데이터 세트에 대한 데이터스트림 재�
 
 데이터 수집 UI에서 [데이터스트림 재정의를 구성](#configure-overrides)하고 나서 Web SDK를 통해 재정의를 Edge Network로 전송할 수 있습니다.
 
-Web SDK를 통해 재정의를 Edge Network로 전송하는 단계는 데이터스트림 구성 재정의를 활성화하는 두 번째이자 마지막 단계입니다.
+웹 SDK를 사용하는 경우 다음을 통해 Edge Network에 재정의를 전송합니다. `edgeConfigOverrides` 명령은 데이터 스트림 구성 재정의를 활성화하는 두 번째이자 마지막 단계입니다.
 
 데이터스트림 구성 재정의는 `edgeConfigOverrides` Web SDK 명령을 통해 Edge Network로 전송됩니다. 이 명령은 다음 명령에서 [!DNL Edge Network]로 전달되는 데이터스트림 재정의를 생성하거나 `configure` 명령의 경우에는 모든 요청마다 해당 재정의를 생성합니다.
 
@@ -135,7 +138,7 @@ Web SDK를 통해 재정의를 Edge Network로 전송하는 단계는 데이터�
 
 전역적으로 지정된 옵션은 개별 명령의 구성 옵션으로 재정의할 수 있습니다.
 
-### `sendEvent` 명령을 통해 구성 재정의 전송 {#send-event}
+### 웹 SDK를 통해 구성 재정의 전송 `sendEvent` 명령 {#send-event}
 
 아래 예의 `sendEvent` 명령에서 구성 재정의는 다음과 같습니다.
 
@@ -149,7 +152,7 @@ alloy("sendEvent", {
     com_adobe_experience_platform: {
       datasets: {
         event: {
-          datasetId: "MyOverrideDataset"
+          datasetId: "SampleEventDatasetIdOverride"
         },
         profile: {
           datasetId: "www"
@@ -193,7 +196,7 @@ alloy("configure", {
     "com_adobe_experience_platform": {
       "datasets": {
         "event": { 
-          datasetId: "MyOverrideDataset"
+          datasetId: "SampleProfileDatasetIdOverride"
         },
         "profile": { 
           datasetId: "www"
@@ -218,9 +221,168 @@ alloy("configure", {
 };
 ```
 
-### 페이로드 예제 {#payload-example}
+## Mobile SDK를 통해 Edge Network에 재정의 전송 {#send-overrides-mobile-sdk}
 
-위 예는 다음과 유사한 [!DNL Edge Network] 페이로드를 생성합니다.
+다음 이후 [데이터 스트림 재정의 구성](#configure-overrides) 이제 데이터 수집 UI에서 Mobile SDK를 통해 Edge Network에 재정의를 전송할 수 있습니다.
+
+Mobile SDK를 사용하는 경우 를 통해 Edge Network에 재정의를 전송합니다. `sendEvent` API는 데이터스트림 구성 재정의를 활성화하는 두 번째 및 마지막 단계입니다.
+
+Experience Platform Mobile SDK에 대한 자세한 내용은 [Mobile SDK 설명서](https://developer.adobe.com/client-sdks/edge/edge-network/).
+
+### Mobile SDK를 통한 데이터 스트림 ID 재정의 {#id-override-mobile}
+
+아래 예는 Mobile SDK 통합에서 데이터 스트림 ID 재정의가 표시되는 모습을 보여 줍니다. 아래 탭을 선택하여 다음을 확인하십시오. [!DNL iOS] 및 [!DNL Android] 예.
+
+>[!BEGINTABS]
+
+>[!TAB iOS(Swift)]
+
+이 예는 Mobile SDK에서 데이터 스트림 ID 재정의가 표시되는 모습을 보여 줍니다 [!DNL iOS] 통합.
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+>[!TAB Android(Kotlin)]
+
+이 예는 Mobile SDK에서 데이터 스트림 ID 재정의가 표시되는 모습을 보여 줍니다 [!DNL Android] 통합.
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamIdOverride("SampleDatastreamId")
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+### Mobile SDK를 통한 데이터 스트림 구성 재정의 {#config-override-mobile}
+
+아래 예는 Mobile SDK 통합에서 데이터 스트림 구성 재정의가 표시되는 모습을 보여 줍니다. 아래 탭을 선택하여 다음을 확인하십시오. [!DNL iOS] 및 [!DNL Android] 예.
+
+>[!BEGINTABS]
+
+>[!TAB iOS(Swift)]
+
+이 예는 Mobile SDK에서 데이터 스트림 구성 재정의가 표시되는 모습을 보여 줍니다 [!DNL iOS] 통합.
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+
+let configOverrides: [String: Any] = [
+  "com_adobe_experience_platform": [
+    "datasets": [
+      "event": [
+        "datasetId": "SampleEventDatasetIdOverride"
+      ],
+      "profile": [
+        "datasetId": "SampleProfileDatasetIdOverride"
+      ],
+    ]
+  ],
+  "com_adobe_analytics": [
+  "reportSuites": [
+        "MyFirstOverrideReportSuite",
+          "MySecondOverrideReportSuite",
+          "MyThirdOverrideReportSuite"
+      ]
+  ],  
+  "com_adobe_identity": [
+    "idSyncContainerId": "1234567"
+  ],
+  "com_adobe_target": [
+    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+ ],
+]
+
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+>[!TAB Android(Kotlin)]
+
+이 예는 Mobile SDK에서 데이터 스트림 구성 재정의가 표시되는 모습을 보여 줍니다 [!DNL Android] 통합.
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val configOverrides = mapOf(
+    "com_adobe_experience_platform"
+    to mapOf(
+        "datasets"
+        to mapOf(
+            "event"
+            to mapOf("datasetId"
+                to "SampleEventDatasetIdOverride"),
+            "profile"
+            to mapOf("datasetId"
+                to "SampleProfileDatasetIdOverride")
+        )
+    ),
+    "com_adobe_analytics"
+    to mapOf(
+        "reportSuites"
+        to listOf(
+            "MyFirstOverrideReportSuite",
+            "MySecondOverrideReportSuite",
+            "MyThirdOverrideReportSuite"
+        )
+    ),
+    "com_adobe_identity"
+    to mapOf(
+        "idSyncContainerId"
+        to "1234567"
+    ),
+    "com_adobe_target"
+    to mapOf(
+        "propertyToken"
+        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    )
+)
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamConfigOverride(configOverrides)
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+## 페이로드 예제 {#payload-example}
+
+위의 예에서는 [!DNL Edge Network] 아래 페이로드 와 유사합니다.
 
 ```json
 {
@@ -229,7 +391,7 @@ alloy("configure", {
       "com_adobe_experience_platform": {
         "datasets": {
           "event": {
-            "datasetId": "MyOverrideDataset"
+            "datasetId": "SampleProfileDatasetIdOverride"
           },
           "profile": {
             "datasetId": "www"
@@ -252,13 +414,6 @@ alloy("configure", {
     },
     "state": {  }
   },
-  "events": [  ],
-  "query": {
-    "identity": {
-      "fetch": [
-        "ECID"
-      ]
-    }
-  }
+  "events": [  ]
 }
 ```

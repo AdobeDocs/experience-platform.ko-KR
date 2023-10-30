@@ -2,7 +2,8 @@
 keywords: IP 주소, IP 범위, 허용 목록, 허용 목록에 추가하다
 title: 허용 목록에 추가하다 쿼리 서비스용 IP 주소
 description: 이 페이지에서는 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
-source-git-commit: 89d04a98e983b5dc9f353a831cdbe21c7c7aaf36
+exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 2%

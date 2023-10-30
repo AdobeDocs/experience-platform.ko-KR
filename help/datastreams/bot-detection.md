@@ -3,13 +3,13 @@ title: 데이터스트림에 대한 보트 탐지 구성
 description: 사람 트래픽과 사람 트래픽을 구분하기 위해 데이터스트림에 대한 봇 탐지를 구성하는 방법에 대해 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
+exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1361'
 ht-degree: 0%
 
 ---
-
 
 # 데이터스트림에 대한 보트 탐지 구성
 
@@ -176,4 +176,3 @@ Edge Network에 대한 요청이 보트 탐지 규칙과 일치하는 경우 XDM
 요청은 두 IP 주소 중 하나인 `referer` 헤더 시작 문자 `www.adobe.com`및 `sec-ch-ua-mobile` 헤더는 요청을 데스크탑 브라우저에서 시작한 것으로 식별합니다.
 
 ![여러 조건을 기반으로 하는 보트 감지 규칙 이미지.](assets/bot-detection/bot-detection-multiple.png)
-

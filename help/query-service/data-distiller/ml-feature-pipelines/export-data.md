@@ -1,7 +1,8 @@
 ---
 title: 외부 ML 환경으로 데이터 내보내기
 description: Data Distiller으로 만든 준비된 교육 데이터 세트를 ML 환경에서 읽어 모델을 교육하고 점수를 매길 수 있는 클라우드 스토리지 위치에 공유하는 방법에 대해 알아봅니다.
-source-git-commit: a23100e8fbca93f14490e639f05991f06c113b93
+exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 3%

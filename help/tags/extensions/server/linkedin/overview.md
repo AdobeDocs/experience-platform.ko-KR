@@ -2,7 +2,8 @@
 title: Linkedin 전환 API 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장을 사용하면 Linkedin 마케팅 캠페인의 성능을 측정할 수 있습니다.
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: e1ed18aa79abae70974df1845c211a00390ecca4
+exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 1%

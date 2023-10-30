@@ -1,7 +1,8 @@
 ---
 title: 머신 러닝을 위한 엔지니어 기능
 description: Adobe Experience Platform의 데이터를 머신 러닝 모델에서 사용할 수 있는 기능 또는 변수로 변환하는 방법에 대해 알아봅니다. Data Distiller을 사용하여 규모에 맞게 ML 기능을 계산하고 이러한 기능을 머신 러닝 환경과 공유하십시오.
-source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
+exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1161'
 ht-degree: 14%

@@ -3,7 +3,8 @@ title: AI/ML 데이터 파이프라인 강화 통합 워크플로
 description: 클라우드 기반 머신 러닝 환경 notebooks를 사용하여 Adobe Experience Platform 데이터에서 구독 전환을 예측하는 교육 및 점수 책정 모델을 만듭니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+exl-id: 2853e7c7-cab8-4e1b-b73f-622c937fbbaf
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 0%

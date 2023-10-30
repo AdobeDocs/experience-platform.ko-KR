@@ -1,7 +1,8 @@
 ---
 title: AI/ML 기능 파이프라인
 description: Data Distiller을 사용하여 Adobe Experience Platform 데이터에서 파생된 기능을 사용하여 머신 러닝 파이프라인을 보강하는 방법에 대해 알아봅니다. 원시 데이터를 기능으로 변환하고 기능 데이터를 전달하여 마케팅 사용 사례를 지원하는 모델을 교육하거나 평가합니다.
-source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
+exl-id: 3b452181-e254-4155-8bf5-0990533f202d
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 1%
@@ -226,6 +227,3 @@ If the connection test above is unsuccessful, you will likely get `KeyError: 'te
 - Check your `config.ini` file and make sure that your environment and credential information is correct.
 
 If your configuration is correct and you are able to successfully make calls to `aepp` methods, you may sometimes get an unsuccessful response from the Platform server. This may happen if you try to create an object in Platform that already exists, or get an object that does not exist, or attempt to send a malformed payload with a request. Most `aepp` methods make a request to an Platform API endpoint and return the response from the server. Print the response and review it to get error message from the API. This will usually give you enough information to understand the problem with the request and fix it. -->
-
-
-
