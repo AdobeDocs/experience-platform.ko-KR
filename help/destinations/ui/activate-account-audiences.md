@@ -5,9 +5,9 @@ description: 대상에 대한 계정 대상을 활성화하는 방법을 알아�
 badgeLimitedAvailability: label="제한된 가용성" type="Caution"
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: bf4a34a0fbf59571eaea3ccbc619f9fe17d5c218
+source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
@@ -90,11 +90,11 @@ ht-degree: 0%
 | 소스 필드 | 대상 필드 |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` (다음에서 이 필드 선택: **[!UICONTROL ID 네임스페이스 선택]** view) |
+| `accountKey.sourceKey` | `primaryId` (다음에서 이 필드 선택: **[!UICONTROL ID 네임스페이스 선택]** 보기, 선택 시 **[!UICONTROL 대상 필드]**). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 계정 대상자를 활성화합니다.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 계정 대상자를 활성화합니다."){width="100" zoomable="yes"} |
 
 ### 데이터 거버넌스 적용 {#data-governance-enforcement}
 
-[동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 은(는) 계정 대상자를 대상으로 활성화할 때 현재 지원되지 않습니다. 활성화 워크플로의 검토 단계에서에 대해 회색으로 표시된 컨트롤을 볼 수 있습니다. **[!UICONTROL 해당 동의 정책 보기]**.
+다음에 대한 개인 또는 프로필 수준에서 동의가 시행됩니다. *고객 및 잠재 고객*. 따라서  [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 은(는) 계정 대상자를 대상으로 활성화할 때 현재 지원되지 않습니다. 활성화 워크플로의 검토 단계에서에 대해 회색으로 표시된 컨트롤을 볼 수 있습니다. **[!UICONTROL 해당 동의 정책 보기]**.
 
 ![동의 적용 제어가 회색으로 표시된 계정 대상자 활성화 워크플로의 검토 단계입니다.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 
