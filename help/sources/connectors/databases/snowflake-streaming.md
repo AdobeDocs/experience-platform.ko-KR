@@ -4,7 +4,8 @@ description: 소스 연결 및 데이터 흐름을 만들어 Snowflake 인스턴
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 054175bd3f3aaab73c8cca249eaf1a9cdbc8deab
+exl-id: ed937689-e844-487e-85fb-e3536c851fe5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '710'
 ht-degree: 1%
@@ -82,4 +83,3 @@ Experience Platform은 의 데이터 스트리밍을 지원합니다. [!DNL Snow
 다음 튜토리얼에서는 를 연결하는 방법에 대한 단계를 제공합니다. [!DNL Snowflake] API를 사용하여 스트리밍 소스에서 Experience Platform:
 
 * [에서 데이터 스트리밍 [!DNL Snowflake] 흐름 서비스 API를 사용하여 Experience Platform 할 데이터베이스](../../tutorials/api/create/databases/snowflake-streaming.md)
-

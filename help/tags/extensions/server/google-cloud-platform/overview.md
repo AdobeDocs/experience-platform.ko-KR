@@ -2,7 +2,8 @@
 title: Google Cloud Platform 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장은 Edge Network 이벤트를 Google Cloud Platform으로 전송합니다.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: c5da1889-f917-42aa-b3a4-9557c31d6ee8
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%

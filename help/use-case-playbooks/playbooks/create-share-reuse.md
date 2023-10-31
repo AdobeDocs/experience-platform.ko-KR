@@ -3,13 +3,13 @@ solution: Experience Platform
 title: 플레이북 인스턴스 만들기, 공유 및 재사용
 description: 마케팅 사용 사례를 달성하기 위해 플레이북 인스턴스를 생성, 공유 및 재사용하는 방법에 대해 알아봅니다.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
-workflow-type: ht
-source-wordcount: '724'
+exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
+source-wordcount: '725'
 ht-degree: 100%
 
 ---
-
 
 # (Beta) 플레이북 인스턴스 만들기, 공유 및 재사용
 

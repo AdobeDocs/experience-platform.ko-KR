@@ -1,7 +1,8 @@
 ---
 title: 자동으로 수집된 정보
 description: Adobe Experience Platform Web SDK에서 자동으로 수집하는 데이터에 대한 개요입니다.
-source-git-commit: 89b981104e3cbe597d1556484f4365866bf2a11d
+exl-id: 901df786-df36-4986-9c74-a32d29c11b71
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 3%

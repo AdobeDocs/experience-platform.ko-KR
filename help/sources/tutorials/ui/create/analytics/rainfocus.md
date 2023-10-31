@@ -2,7 +2,8 @@
 title: UI를 사용하여 RainFocus 계정을 Experience Platform에 연결
 description: UI를 사용하여 RainFocus 계정을 Experience Platform에 연결하는 방법을 알아봅니다.
 badge: Beta
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 1%
@@ -30,7 +31,7 @@ ht-degree: 1%
    * [스키마 편집기 튜토리얼](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 정의 스키마를 만드는 방법을 알아봅니다.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
 
-### 사전 요구 사항
+### 전제 조건
 
 연결하기 전에 [!DNL RainFocus] 계정을 Experience Platform 하려면 먼저 다음 사전 요구 작업을 완료해야 합니다.
 

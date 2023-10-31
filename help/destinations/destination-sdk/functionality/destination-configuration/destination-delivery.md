@@ -1,13 +1,13 @@
 ---
 description: 내보낸 데이터의 위치와 데이터가 도착하는 위치에서 사용되는 인증 규칙을 나타내기 위해 Destination SDK으로 작성한 대상에 대한 대상 게재 설정을 구성하는 방법에 대해 알아봅니다.
 title: 대상 게재
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '563'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # 대상 게재
 
@@ -76,7 +76,7 @@ ht-degree: 1%
 
 ## 파일 기반 대상에 대한 대상 게재 설정 {#destination-delivery-file-based}
 
-아래 예는 파일 기반 대상에 대해 대상 게재 설정을 구성하는 방법을 보여줍니다. 다음 사항에 주의하십시오. `deliveryMatchers` 파일 기반 대상에는 섹션이 필요합니다.
+아래 예제는 파일 기반 대상에 대해 대상 게재 설정을 구성하는 방법을 보여 줍니다. 다음 사항에 주의하십시오. `deliveryMatchers` 파일 기반 대상에는 섹션이 필요합니다.
 
 >[!BEGINSHADEBOX]
 

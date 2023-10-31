@@ -1,13 +1,13 @@
 ---
 description: 대상에 대한 HTTP 요청을 그룹화하고 일괄 처리하는 방법을 결정하는 집계 정책을 설정하는 방법에 대해 알아봅니다.
 title: 집계 정책
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '995'
 ht-degree: 2%
 
 ---
-
 
 # 집계 정책
 
@@ -45,7 +45,7 @@ Destination SDK을 사용하여 실시간(스트리밍) 대상을 작성할 때 
 
 우수 사례 집계는 요청당 프로필 수를 최소화하고, 데이터가 많은 요청보다 데이터가 적은 요청을 더 많은 요청으로 처리하는 대상에 가장 적합합니다.
 
-아래 예제 구성은 최상의 집계 구성을 보여 줍니다. 구성 가능한 합계 예는 다음을 참조하십시오. [구성 가능한 집계](#configurable-aggregation) 섹션. 최상의 노력 집계에 적용할 수 있는 매개 변수는 아래 표에 설명되어 있습니다.
+아래 예제 구성은 최상의 집계 구성을 보여 줍니다. 구성 가능한 합계의 예는 다음을 참조하십시오. [구성 가능한 집계](#configurable-aggregation) 섹션. 최상의 노력 집계에 적용할 수 있는 매개 변수는 아래 표에 설명되어 있습니다.
 
 ```json
 "aggregation":{

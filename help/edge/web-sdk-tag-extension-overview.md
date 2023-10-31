@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform Web SDK 확장 기능
 description: Adobe Experience Platform의 Web SDK 태그 확장에 대해 알아봅니다.
-source-git-commit: 131c33d1049b018ba21898418abefc48e2200f3f
+exl-id: 987a6675-4d1f-4a5a-b721-991ae5a9a3f4
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 45%
 
 ---
-
 
 # Adobe Experience Platform Web SDK 확장 기능
 

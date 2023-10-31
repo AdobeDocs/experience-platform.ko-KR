@@ -1,7 +1,8 @@
 ---
 title: Ui에서 소스 데이터 흐름에 대한 온디맨드 수집
 description: Experience Platform 사용자 인터페이스를 사용하여 소스 연결에 대한 요청 시 데이터 흐름을 만드는 방법을 알아봅니다.
-source-git-commit: cea12160656ba0724789db03e62213022bacd645
+exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 1%

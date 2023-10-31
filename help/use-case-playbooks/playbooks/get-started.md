@@ -3,13 +3,13 @@ solution: Experience Platform
 title: 시작하기
 description: 사용 사례 플레이북 기능을 시작하는 방법에 대해 알아봅니다.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 297dc9d6252d401f805fa5ebb5cf5111910286cf
-workflow-type: ht
-source-wordcount: '315'
+exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
+source-wordcount: '316'
 ht-degree: 100%
 
 ---
-
 
 # (Beta) 시작하기
 

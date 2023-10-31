@@ -1,13 +1,13 @@
 ---
 description: Adobe Experience Platform Destination SDK을 통해 대상 구성을 만들기 위해 API 호출을 구성하는 방법을 알아봅니다.
 title: 대상 구성 만들기
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 3%
 
 ---
-
 
 # 대상 구성 만들기
 
@@ -202,7 +202,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.isRequired` | 부울 | 대상 설정 워크플로에서 이 필드가 필요한지 여부를 나타냅니다. <br/><br/> 다음을 참조하십시오 [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md) 를 참조하십시오. |
 | `customerDataFields.enum` | 문자열 | 사용자 정의 필드를 드롭다운 메뉴로 렌더링하고 사용자가 사용할 수 있는 옵션을 나열합니다. <br/><br/> 다음을 참조하십시오 [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md) 를 참조하십시오. |
 | `customerDataFields.default` | 문자열 | 에서 기본값 정의 `enum` 목록을 표시합니다. |
-| `customerDataFields.pattern` | 문자열 | 필요한 경우 사용자 정의 필드에 패턴을 적용합니다. 패턴을 적용하려면 정규 표현식을 사용하십시오. 예를 들어 고객 ID에 숫자나 밑줄이 포함되지 않은 경우 을 입력합니다 `^[A-Za-z]+$` 이 필드에서 을(를) 참조하십시오. <br/><br/> 다음을 참조하십시오 [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md) 를 참조하십시오. |
+| `customerDataFields.pattern` | 문자열 | 필요한 경우 사용자 정의 필드에 패턴을 적용합니다. 패턴을 적용하려면 정규 표현식을 사용하십시오. 예를 들어 고객 ID에 숫자나 밑줄이 포함되지 않은 경우 을 입력합니다 `^[A-Za-z]+$` 이 필드에서. <br/><br/> 다음을 참조하십시오 [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md) 를 참조하십시오. |
 | `uiAttributes.documentationLink` | 문자열 | 에서 설명서 페이지를 참조하십시오. [대상 카탈로그](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) 목적지로요 사용 `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, 여기서 `YOURDESTINATION` 는 대상 이름입니다. Moviestar라는 대상의 경우 `https://www.adobe.com/go/destinations-moviestar-en`. 이 링크는 Adobe이 대상을 라이브로 설정하고 설명서가 게시된 후에만 작동합니다. <br/><br/> 다음을 참조하십시오 [UI 속성](../../functionality/destination-configuration/ui-attributes.md) 를 참조하십시오. ![설명서 링크를 표시하는 플랫폼 UI 이미지입니다.](../../assets/authoring-api/destination-configuration/documentation-url.png "설명서 URL"){width="100" zoomable="yes"} |
 | `uiAttributes.category` | 문자열 | Adobe Experience Platform에서 대상에 할당된 카테고리를 나타냅니다. 자세한 내용은 다음을 참조하십시오 [대상 범주](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). 다음 값 중 하나를 사용합니다. `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> 다음을 참조하십시오 [UI 속성](../../functionality/destination-configuration/ui-attributes.md) 를 참조하십시오. |
 | `uiAttributes.connectionType` | 문자열 | 대상에 따른 연결 유형입니다. 지원되는 값: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |

@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform Web SDK를 사용하여 상거래, 제품 및 주문 정보 수집
 description: Adobe Experience Platform Web SDK를 사용하여 제품 또는 장바구니와 관련된 데이터를 추가하는 방법에 대해 알아봅니다.
-source-git-commit: cb47f70fe75eb0dfe26fb3c3557658cf6cff5a17
+exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 2%
 
 ---
-
 
 # 상거래, 제품 및 주문 정보 수집
 

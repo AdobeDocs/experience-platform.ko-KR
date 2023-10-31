@@ -1,9 +1,9 @@
 ---
 title: Ui에서 Shopify 스트리밍 연결 및 데이터 흐름 만들기
 description: Platform 사용자 인터페이스를 사용하여 Shopify 스트리밍 소스 연결 및 데이터 흐름을 만드는 방법을 알아봅니다
-badge: 베타
-exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
-source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
+badge: Beta
+exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -60,7 +60,7 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 왼쪽 탐색 모
 
 완료되면 다음을 선택합니다. **[!UICONTROL 다음]**.
 
-![소스 워크플로우의 데이터 흐름 세부 사항 단계입니다.](../../../../images/tutorials/create/shopify-streaming/dataflow-detail.png)
+![소스 워크플로우의 데이터 흐름 세부 단계.](../../../../images/tutorials/create/shopify-streaming/dataflow-detail.png)
 
 ## 매핑
 

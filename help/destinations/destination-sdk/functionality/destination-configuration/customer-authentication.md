@@ -1,13 +1,13 @@
 ---
 description: 대상에 대한 인증 메커니즘을 설정하는 방법을 알아보고 선택한 인증 방법에 따라 UI에 표시되는 사용자에 대한 통찰력을 얻으십시오.
 title: 고객 인증 구성
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 0%
 
 ---
-
 
 # 고객 인증 구성
 
@@ -193,7 +193,7 @@ Azure Blob 인증 유형을 구성할 때 사용자가 연결 문자열을 입�
 
 ## SSH 키 인증이 있는 SFTP
 
-[!DNL SFTP] 인증 [!DNL SSH] Experience Platform의 파일 기반 대상에 대해서는 키가 지원됩니다.
+[!DNL SFTP] 인증 [!DNL SSH] Experience Platform의 파일 기반 대상에 대해 키가 지원됩니다.
 
 SSH 키 인증 유형으로 SFTP를 구성할 경우 사용자는 SFTP 사용자 이름과 SSH 키, SFTP 도메인 및 포트(기본 포트: 22)를 입력해야 합니다.
 

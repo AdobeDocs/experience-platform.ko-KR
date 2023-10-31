@@ -1,13 +1,13 @@
 ---
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 서버를 만드는 데 사용되는 API 호출을 보여 줍니다.
 title: 대상 서버 구성 만들기
-source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
+exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2039'
 ht-degree: 9%
 
 ---
-
 
 # 대상 서버 구성 만들기
 

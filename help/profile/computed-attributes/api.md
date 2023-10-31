@@ -1,13 +1,13 @@
 ---
 title: 계산된 속성 API 끝점
 description: Real-Time Customer Profile API를 사용하여 계산된 속성을 생성, 보기, 업데이트 및 삭제하는 방법을 알아봅니다.
-source-git-commit: e1c7d097f7ab39d05674c3dad620bea29f08092b
+exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 2%
 
 ---
-
 
 # 계산된 속성 API 끝점
 
@@ -27,7 +27,7 @@ ht-degree: 2%
 
 또한 다음 서비스에 대한 설명서를 검토하십시오.
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): [!DNL Experience Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    - [스키마 레지스트리 시작 안내서](../../xdm/api/getting-started.md#know-your-tenant_id): 다음에 대한 정보 `{TENANT_ID}`이 안내서 전체의 응답에 표시되는 가 제공됩니다.
 
 ## 계산된 속성 목록 검색 {#list}

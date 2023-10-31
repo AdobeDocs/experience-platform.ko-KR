@@ -16,7 +16,7 @@ Media Edge API는 의 프레임워크 내에서 미디어 이벤트 추적 데�
 
 * 포함 [Adobe Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko), 고객은 지속 시간, 시작 및 중지에 대한 세부 정보를 거의 실시간으로 가져와 미디어 지표를 평가하고 결합할 수 있습니다. Adobe Analytics에서 마이그레이션하는 고객은 Adobe Customer Journey Analytics에서 모든 보고 지표를 사용할 수 있습니다.
 
-* 포함 [Adobe Real-time Customer Data Platform](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=ko-KR), 고객은 미디어 사용량 데이터로 실시간 프로필을 보강할 수 있습니다.
+* 포함 [Adobe Real-time Customer Data Platform](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html), 고객은 미디어 사용량 데이터로 실시간 프로필을 보강할 수 있습니다.
 
 * 포함 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=en), 고객은 옴니채널 캠페인을 최적화하고 미디어 소비 신호로 여정을 자동화할 수 있습니다.
 

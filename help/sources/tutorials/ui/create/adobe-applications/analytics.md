@@ -2,9 +2,9 @@
 title: UI에서 Adobe Analytics 소스 연결 만들기
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 358daa9511f647749a8198893b712d00a5cfbc5d
 workflow-type: tm+mt
-source-wordcount: '2298'
+source-wordcount: '2481'
 ht-degree: 6%
 
 ---
@@ -264,33 +264,53 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![리뷰](../../../../images/tutorials/create/analytics/review.png)
 
-### 데이터 흐름 모니터링
+## 데이터 흐름 모니터링 {#monitor-your-dataflow}
 
-데이터 흐름이 만들어지면 데이터 흐름을 통해 수집되는 데이터를 모니터링할 수 있습니다. 다음에서 [!UICONTROL 카탈로그] 화면, 선택 **[!UICONTROL 데이터 흐름]** analytics 계정과 연결된 설정된 플로우 목록을 봅니다.
+데이터 흐름이 완료되면 다음을 선택합니다. **[!UICONTROL 데이터 흐름]** 소스 카탈로그에서 를 클릭하여 데이터의 활동 및 상태를 모니터링합니다.
 
-![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![데이터 흐름 탭이 선택된 소스 카탈로그.](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
-다음 **데이터 흐름** 화면이 나타납니다. 이 페이지에는 이름, 소스 데이터, 생성 시간 및 상태에 대한 정보를 포함하는 데이터 세트 흐름 쌍이 있습니다.
+조직의 기존 Analytics 데이터 흐름 목록이 나타납니다. 여기에서 타겟 데이터 세트를 선택하여 해당 수집 활동을 확인합니다.
 
-커넥터는 두 데이터 세트 흐름을 인스턴스화합니다. 한 흐름은 채우기 데이터를 나타내고 다른 흐름은 라이브 데이터에 대한 것입니다. 채우기 데이터는 프로필에 대해 구성되지 않지만 분석 및 데이터 과학 사용 사례를 위해 데이터 레이크로 전송됩니다.
+![조직의 기존 Adobe Analytics 데이터 흐름 목록입니다.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-채우기, 라이브 데이터 및 해당 지연에 대한 자세한 내용은 다음을 참조하십시오. [Analytics 데이터 커넥터 개요](../../../../connectors/adobe-applications/analytics.md).
+다음 [!UICONTROL 데이터 세트 활동] Experience Platform은 Analytics에서 페이지로 전송되는 데이터의 진행 상황에 대한 정보를 제공합니다. 인터페이스는 수집된 레코드 수, 수집된 배치 수 및 실패한 배치 수와 같은 지표를 표시합니다.
 
-목록에서 보려는 데이터 세트 흐름을 선택합니다.
+소스는 두 개의 데이터 세트 흐름을 인스턴스화합니다. 한 흐름은 채우기 데이터를 나타내고 다른 흐름은 라이브 데이터에 대한 것입니다. 채우기 데이터는 실시간 고객 프로필로 수집되도록 구성되지 않지만 분석 및 데이터 과학 사용 사례를 위해 데이터 레이크로 전송됩니다.
 
-![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
+채우기, 라이브 데이터 및 해당 지연에 대한 자세한 내용은 [Analytics 소스 개요](../../../../connectors/adobe-applications/analytics.md).
 
-다음 **[!UICONTROL 데이터 세트 활동]** 페이지가 나타납니다. 이 페이지에는 그래프 형태로 소비되는 메시지 비율이 표시됩니다. 선택 **[!UICONTROL 데이터 거버넌스]** 을 클릭하여 레이블 지정 필드에 액세스합니다.
+![Adobe Analytics 데이터에 대한 지정된 대상 데이터 세트의 데이터 세트 활동 페이지입니다.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-![dataset-activity](../../../../images/tutorials/create/analytics/dataset-activity.png)
++++기존 모니터링 인터페이스를 사용하여 개별 배치 보기
 
-에서 데이터 세트 흐름의 상속된 레이블을 볼 수 있습니다. [!UICONTROL 데이터 거버넌스] 화면. Analytics에서 오는 데이터에 레이블을 지정하는 방법에 대한 자세한 내용은 다음을 참조하십시오. [데이터 사용 레이블 안내서](../../../../../data-governance/labels/user-guide.md).
+데이터 세트 활동 페이지에 개별 배치 목록이 표시되지 않습니다. 개별 배치 목록을 보려면 데이터 세트 활동 인터페이스에서 차트를 선택합니다.
 
-![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
+![차트가 선택된 데이터 세트 활동 페이지입니다.](../../../../images/tutorials/create/analytics/select-chart.png)
 
-데이터 흐름을 삭제하려면 [!UICONTROL 데이터 흐름] 페이지를 선택한 다음 줄임표(`...`) 데이터 흐름 이름 옆의 를 선택한 다음 를 선택합니다. [!UICONTROL 삭제].
+모니터링 대시보드로 이동합니다. 그런 다음 을 선택합니다. **[!UICONTROL 수집 실패만 해당: 예]** 필터를 지우고 개별 배치 목록을 봅니다.
 
-![delete](../../../../images/tutorials/create/analytics/delete.png)
+![실패 필터가 선택된 모니터링 대시보드.](../../../../images/tutorials/create/analytics/clear-filter.png)
+
+인터페이스는 해당 지표에 대한 정보를 포함하여 개별 배치 목록으로 업데이트합니다.
+
+![배치 데이터에 대한 이전 모니터링 페이지.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
+
+| 지표 | 설명 |
+| --- | --- |
+| 일괄 처리 ID | 지정된 일괄 처리의 ID. 이 값은 내부적으로 생성됩니다. |
+| 데이터 세트 이름 | Analytics 데이터에 사용된 특정 데이터 세트의 이름. |
+| 소스 | 수집된 데이터의 소스. |
+| 업데이트된 기능 | 가장 최근 플로우 실행 반복의 날짜입니다. |
+| 데이터 세트의 레코드 | 데이터 집합에 있는 총 레코드 수입니다. **참고**: 이 매개 변수는 때때로 의 상태를 표시합니다. `in-progress`. 이 상태는 레코드 수집 프로세스가 아직 완료되지 않았음을 나타냅니다. |
+| 새 프로필 조각 | 수집된 새 프로필 조각의 총 수입니다. |
+| 기존 프로필 조각 | 기존 프로필 조각의 총 수입니다. |
+| ID 레코드 결합됨 | 수집 후 함께 결합된 총 ID 레코드 수입니다. |
+| 프로필의 레코드 | 실시간 고객 프로필에 수집된 총 레코드 수입니다. |
+
+{style="table-layout:auto"}
+
++++
 
 ## 다음 단계 및 추가 리소스
 

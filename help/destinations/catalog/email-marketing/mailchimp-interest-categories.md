@@ -2,7 +2,8 @@
 title: Mailchimp 관심 카테고리
 description: Mailchimp(Intuit Mailchimp라고도 함)는 기업이 메일링 목록 및 이메일 마케팅 캠페인을 사용하여 연락처(고객, 고객 또는 기타 이해 당사자)를 관리하고 상담하는 데 사용하는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다. 이 커넥터를 사용하여 관심사 및 선호도에 따라 연락처를 정렬합니다.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2392'
 ht-degree: 2%

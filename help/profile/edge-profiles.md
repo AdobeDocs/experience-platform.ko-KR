@@ -1,13 +1,13 @@
 ---
 title: Edge 프로필
 description: 에지 프로필과 관련 용어, 에지 프로필에 사용할 수 있는 영역 및 에지 프로필에 사용할 수 있는 서비스에 대해 알아봅니다.
-source-git-commit: 3c6f885f3962caff5f10980b8811f42e02b64f85
+exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 1%
 
 ---
-
 
 # 가장자리 프로필
 

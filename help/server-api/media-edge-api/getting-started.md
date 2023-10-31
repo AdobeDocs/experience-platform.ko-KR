@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: Media Edge API 시작하기
 description: Media Edge API 시작하기
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 6%
 
 ---
-
 
 # Media Edge API 시작
 
@@ -60,7 +60,7 @@ Media Edge API는 모델 및 호출된 경로에서 사소한 차이점을 제�
 
 세션 시작 요청을 수행하기 전에 다음이 필요합니다.
 
-* 다음 `datastreamId`- POST 세션 시작 요청의 필수 매개변수입니다. 을(를) 검색하려면 `datastreamId`, 참조 [데이터 스트림 구성](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=ko-KR?lang=ko).
+* 다음 `datastreamId`- POST 세션 시작 요청의 필수 매개변수입니다. 을(를) 검색하려면 `datastreamId`, 참조 [데이터 스트림 구성](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=ko-KR).
 
 * 필요한 최소 데이터가 포함된 요청 페이로드에 대한 JSON 개체. (아래 예제 요청에 표시된 대로)
 
@@ -292,5 +292,3 @@ curl -X 'POST' \
 
 * [Media Edge 문제 해결 안내서](troubleshooting.md)
 * [Media Edge API 개요](overview.md)
-
-

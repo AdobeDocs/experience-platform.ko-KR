@@ -2,13 +2,13 @@
 title: 잠재 고객
 description: 타사 정보를 사용하여 알 수 없는 고객을 타깃팅하기 위해 잠재 고객을 만들고 사용하는 방법을 알아봅니다.
 type: Documentation
-source-git-commit: cb70eca22633ee08b260903e38f4538a21f3a56c
+exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 1%
 
 ---
-
 
 # 잠재 고객
 

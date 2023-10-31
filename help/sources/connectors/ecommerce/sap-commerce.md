@@ -3,7 +3,8 @@ title: SAP Commerce 소스 개요
 description: API 또는 사용자 인터페이스를 사용하여 SAP Commerce를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 badge: Beta
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 2%
@@ -29,7 +30,7 @@ ht-degree: 2%
 
 소스 커넥터로 작업하기 전에 IP 주소 목록을 허용 목록에 추가해야 할 수 있습니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 다음을 참조하십시오. [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지 를 참조하십시오.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 가져오기 전에 [!DNL SAP Commerce] 데이터를 Experience Platform 하려면 먼저 다음 사항이 있는지 확인해야 합니다.
 

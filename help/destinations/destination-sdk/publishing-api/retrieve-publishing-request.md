@@ -1,13 +1,13 @@
 ---
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 게시 요청에 대한 세부 정보를 검색하는 데 사용되는 API 호출을 예시합니다.
 title: 대상 게시 요청 검색
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: fceef12d-a52c-4259-a91e-7af88b132800
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 2%
 
 ---
-
 
 # 대상 게시 요청 검색
 

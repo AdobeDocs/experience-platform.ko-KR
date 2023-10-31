@@ -3,7 +3,8 @@ keywords: 이벤트 전달 확장;twitter;twitter 이벤트 전달 확장
 title: Twitter 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장을 사용하면 비즈니스 요구 사항에 맞게 이벤트를 Twitter으로 수집할 수 있습니다.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 3%

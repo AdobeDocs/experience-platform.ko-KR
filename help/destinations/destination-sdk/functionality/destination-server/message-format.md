@@ -1,13 +1,13 @@
 ---
 description: 이 페이지에서는 Adobe Experience Platform에서 대상으로 내보낸 데이터의 메시지 형식 및 프로필 변형을 다룹니다.
 title: 메시지 포맷
-source-git-commit: e500d05858a3242295c6e5aac8284ad301d0cd17
+exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2237'
 ht-degree: 1%
 
 ---
-
 
 # 메시지 포맷
 
@@ -57,7 +57,7 @@ Users who want to activate data to your destination need to map the fields in th
 
 **소스 XDM 스키마 (1)**: 이 항목은 고객이 Experience Platform에서 사용하는 스키마를 참조합니다. Experience Platform에서 [매핑 단계](../../../ui/activate-segment-streaming-destinations.md#mapping) 활성화 대상 워크플로 중 고객은 XDM 스키마의 필드를 대상의 대상 스키마에 매핑합니다(2).
 
-**Target XDM 스키마 (2)**: 대상에서 예상되는 포맷의 JSON 표준 스키마(3)와 대상에서 해석할 수 있는 속성에 따라 대상 XDM 스키마에서 프로필 속성 및 ID를 정의할 수 있습니다. 대상 구성에서 이 작업을 수행할 수 있습니다. [schemaConfig](../../functionality/destination-configuration/schema-configuration.md) 및 [identityNamespaces](../../functionality/destination-configuration/identity-namespace-configuration.md) 개체.
+**대상 XDM 스키마 (2)**: 대상에서 예상되는 포맷의 JSON 표준 스키마(3)와 대상에서 해석할 수 있는 속성에 따라 대상 XDM 스키마에서 프로필 속성 및 ID를 정의할 수 있습니다. 대상 구성에서 이 작업을 수행할 수 있습니다. [schemaConfig](../../functionality/destination-configuration/schema-configuration.md) 및 [identityNamespaces](../../functionality/destination-configuration/identity-namespace-configuration.md) 개체.
 
 **대상 프로필 속성의 JSON 표준 스키마 (3)**: 이 예는 를 나타냅니다. [JSON 스키마](https://json-schema.org/learn/miscellaneous-examples.html) 사용 가능한 모든 프로필 속성 및 해당 유형(예: object, string, array). 대상이 지원할 수 있는 필드 예는 다음과 같습니다. `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`등. 다음이 필요합니다. [메시지 변환 템플릿](#using-templating) Experience Platform에서 내보낸 데이터를 예상 형식으로 사용자 지정합니다.
 

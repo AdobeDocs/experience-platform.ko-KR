@@ -1,10 +1,10 @@
 ---
 title: Shopify 스트리밍 소스
 description: 소스 연결 및 데이터 흐름을 만들어 Shopify 인스턴스에서 Adobe Experience Platform으로 스트리밍 데이터를 수집하는 방법을 알아봅니다
-badge: 베타
+badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
-exl-id: 4c83c08d-c744-4167-9e3b-ed9a995943f4
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 Adobe Experience Platform은 스트리밍 애플리케이션에서 데이터를 수집할 수 있도록 지원합니다. 스트리밍 공급자에 대한 지원은 다음과 같습니다 [!DNL Shopify].
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 다음 섹션에서는 를 사용하기 전에 완료해야 하는 사전 요구 사항에 대해 간략히 설명합니다. [!DNL Shopify Streaming] 소스.
 

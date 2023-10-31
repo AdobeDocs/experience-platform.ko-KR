@@ -1,13 +1,13 @@
 ---
 description: 이 페이지에서는 Adobe Experience Platform Destination SDK을 통해 기존 대상 서버 구성을 삭제하는 데 사용되는 API 호출을 구현합니다.
 title: 대상 서버 구성 삭제
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+exl-id: 2322a2ce-220e-4590-a553-b15152412752
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 2%
 
 ---
-
 
 # 대상 서버 구성 삭제
 
@@ -75,4 +75,3 @@ Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오�
 * [대상 서버 구성 만들기](create-destination-server.md)
 * [대상 서버 구성 검색](retrieve-destination-server.md)
 * [대상 서버 구성 업데이트](update-destination-server.md)
-

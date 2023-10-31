@@ -1,7 +1,8 @@
 ---
 title: 인라인 템플릿
 description: 인라인 템플릿을 사용하여 수많은 쿼리에서 여러 조건을 재사용하는 방법에 대해 알아봅니다.
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 1%
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 이 문서에서는 쿼리 편집기 내 인라인 템플릿의 사용 및 제한 사항에 대해 설명합니다.
 
-## 사전 요구 사항
+## 전제 조건
 
 인라인 템플릿은 UI 및 쿼리 서비스 API 모두에서 지원됩니다. 이 안내서를 계속하기 전에 다음 방법에 대한 설명서를 참조하십시오 [api를 통해 쿼리 템플릿 만들기](../api/query-templates.md#create-a-query-template) 또는 [쿼리 편집기](../ui/user-guide.md#query-authoring).
 

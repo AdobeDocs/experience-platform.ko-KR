@@ -1,13 +1,13 @@
 ---
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 서버 구성을 검색하는 데 사용되는 API 호출을 보여 줍니다.
 title: 대상 서버 구성 검색
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 1b375343-e793-4c91-856f-af66fe71822e
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 2%
 
 ---
-
 
 # 대상 서버 구성 검색
 

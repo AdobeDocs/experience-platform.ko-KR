@@ -1,13 +1,13 @@
 ---
 description: Destination SDK으로 빌드된 대상에 대해 파트너 스키마를 구성하는 방법을 알아봅니다.
 title: 파트너 스키마 구성
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1897'
 ht-degree: 4%
 
 ---
-
 
 # 파트너 스키마 구성
 
@@ -203,7 +203,7 @@ Destination SDK은 동적 파트너 스키마 생성을 지원합니다. 정적 
 
 {style="table-layout:auto"}
 
-따라서 두 가지 모두 **[!UICONTROL 소스 필드]** 및 **[!UICONTROL Target 필드]** Platform UI의 섹션이 회색으로 표시됩니다.
+따라서 두 가지 모두 **[!UICONTROL 소스 필드]** 및 **[!UICONTROL 대상 필드]** Platform UI의 섹션이 회색으로 표시됩니다.
 
 ![UI 활성화 플로우에서 필요한 매핑의 이미지입니다.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -233,7 +233,7 @@ Destination SDK은 동적 파트너 스키마 생성을 지원합니다. 정적 
 
 {style="table-layout:auto"}
 
-그 결과 **[!UICONTROL Target 필드]** Platform UI의 섹션은 회색으로 표시되고 **[!UICONTROL 소스 필드]** 섹션이 활성 상태이므로 사용자가 이 섹션과 상호 작용할 수 있습니다. 다음 **[!UICONTROL 필수 키]** 및 **[!UICONTROL 중복 제거 키]** 옵션이 활성 상태이므로 사용자가 변경할 수 없습니다.
+그 결과 **[!UICONTROL 대상 필드]** Platform UI의 섹션은 회색으로 표시되고 **[!UICONTROL 소스 필드]** 섹션이 활성 상태이므로 사용자가 이 섹션과 상호 작용할 수 있습니다. 다음 **[!UICONTROL 필수 키]** 및 **[!UICONTROL 중복 제거 키]** 옵션이 활성 상태이므로 사용자가 변경할 수 없습니다.
 
 ![UI 활성화 플로우에서 필요한 매핑의 이미지입니다.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 

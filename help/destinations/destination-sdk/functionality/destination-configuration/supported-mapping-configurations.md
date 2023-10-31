@@ -1,13 +1,13 @@
 ---
 description: 지원되는 ID 및 속성 매핑 구성에 대한 대상을 구성하는 방법에 대해 알아봅니다.
 title: 지원되는 매핑 구성
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '659'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
-
 
 # 지원되는 매핑 구성
 
@@ -29,7 +29,7 @@ Destination SDK으로 빌드된 대상은 대상 유형을 기반으로 특정 I
 
 Destination SDK으로 구축된 실시간(스트리밍) 대상은 아래 표에 설명된 매핑 구성을 지원합니다.
 
-| 소스 필드 | Target 필드 |
+| 소스 필드 | 대상 필드 |
 | --- | --- |
 | XDM 속성 | 사용자 지정 속성 |
 | ID 네임스페이스 | ID 네임스페이스 |
@@ -82,7 +82,7 @@ Destination SDK으로 구축된 실시간(스트리밍) 대상은 아래 표에 
 
 Destination SDK으로 빌드된 파일 기반 대상은 아래 표에 설명된 매핑 구성을 지원합니다. 자세한 매핑 예는 다음 섹션을 참조하십시오.
 
-| 소스 필드 | Target 필드 |
+| 소스 필드 | 대상 필드 |
 | --- | --- |
 | XDM 속성 | 속성 / 사용자 지정 속성 |
 | ID 네임스페이스 | 속성 / 사용자 지정 속성 |

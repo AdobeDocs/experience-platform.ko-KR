@@ -1,13 +1,13 @@
 ---
 description: '"/authoring/destination-servers" 엔드포인트를 통해 Adobe Experience Platform Destination SDK에서 대상 서버 사양을 구성하는 방법을 알아봅니다.'
 title: Destination SDK으로 생성된 대상의 서버 사양
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 62202edb-a954-42ff-9772-863cea37a889
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2750'
 ht-degree: 3%
 
 ---
-
 
 # Destination SDK으로 생성된 대상의 서버 사양
 

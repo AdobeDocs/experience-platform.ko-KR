@@ -1,13 +1,13 @@
 ---
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 자격 증명 구성을 검색하는 데 사용되는 API 호출을 보여 줍니다.
 title: 자격 증명 구성 검색
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: cec55073-6e2f-4412-a9dd-1aeb445279c0
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 1%
 
 ---
-
 
 # 자격 증명 구성 검색
 

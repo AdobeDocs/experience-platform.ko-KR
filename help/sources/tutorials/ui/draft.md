@@ -1,7 +1,8 @@
 ---
 title: UI의 초안 데이터 흐름
 description: 소스 작업 영역을 사용할 때 데이터 흐름을 초안으로 저장하고 나중에 게시하는 방법에 대해 알아봅니다.
-source-git-commit: 5fc433f603c6e83c621df0f4a1d0aa27e18cd582
+exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 0%

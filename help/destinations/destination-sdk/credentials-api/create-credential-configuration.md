@@ -1,13 +1,13 @@
 ---
 description: 이 페이지는 자격 증명 구성 Adobe Experience Platform Destination SDK을 만드는 데 사용되는 API 호출을 보여 줍니다.
 title: 자격 증명 구성 만들기
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 8%
 
 ---
-
 
 # 자격 증명 구성 만들기
 
