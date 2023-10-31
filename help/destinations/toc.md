@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: e4c2fc3cc2ef1f6731c81becdd6a6e4149b769dd
+source-git-commit: 48acb9ec2ee093c4b22176785a693b1c1ea742bd
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1201'
 ht-degree: 9%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 9%
       * [스트리밍 프로필 내보내기 대상에 대상자 활성화](./ui/activate-streaming-profile-destinations.md)
       * [프로필 내보내기 대상을 일괄 처리하도록 대상자 활성화](./ui/activate-batch-profile-destinations.md)
       * [Edge 개인화 대상에 대한 대상자 활성화](./ui/activate-edge-personalization-destinations.md)
+      * [LiveRamp 식별자를 기반으로 조정된 대상에 대상 활성화](./ui/activate-curated-destinations.md)
       * [대상에 대한 잠재 고객 활성화](./ui/activate-prospect-audiences.md)
       * [(제한된 가용성) 대상에 대한 계정 대상자 활성화](./ui/activate-account-audiences.md)
       * [(베타) Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기](./ui/export-file-now.md)
