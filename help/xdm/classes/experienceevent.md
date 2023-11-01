@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent 클래스
 description: 이 문서에서는 XDM ExperienceEvent 클래스에 대한 개요와 이벤트 데이터 모델링에 대한 모범 사례를 제공합니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: d648a2151060d1013a6bce7a8180378400337829
+source-git-commit: 093f4881f2224d0a0c888c7be688000d31114944
 workflow-type: tm+mt
-source-wordcount: '1880'
+source-wordcount: '2667'
 ht-degree: 1%
 
 ---
@@ -23,12 +23,12 @@ ht-degree: 1%
 
 | 속성 | 설명 |
 | --- | --- |
-| `_id`<br>**(필수 여부)** | 경험 이벤트 클래스 `_id` 필드는 Adobe Experience Platform에 수집되는 개별 이벤트를 고유하게 식별합니다. 이 필드는 개별 이벤트의 고유성을 추적하고, 데이터 중복을 방지하고, 다운스트림 서비스에서 해당 이벤트를 조회하는 데 사용됩니다.<br><br>중복 이벤트가 감지되면 플랫폼 애플리케이션과 서비스는 중복을 다르게 처리할 수 있습니다.  예를 들어 프로필 서비스의 중복 이벤트는 동일한 이벤트가 있는 경우 삭제됩니다 `_id` 이(가) 이미 프로필 저장소에 있습니다.<br><br>경우에 따라, `_id` 다음이 될 수 있음: [UUID(범용 고유 식별자)](https://tools.ietf.org/html/rfc4122) 또는 [GUID(Globally Unique Identifier)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>소스 연결에서 데이터를 스트리밍하거나 Parquet 파일에서 직접 수집하는 경우, 기본 ID, 타임스탬프, 이벤트 유형 등과 같이 이벤트를 고유하게 하는 필드의 특정 조합을 연결하여 이 값을 생성해야 합니다. 연결된 값은 이어야 합니다. `uri-reference` 형식이 지정된 문자열입니다. 즉, 콜론 문자는 제거해야 합니다. 그런 다음 연결된 값을 SHA-256 또는 선택한 다른 알고리즘을 사용하여 해시해야 합니다.<br><br>이를 구별하는 것이 중요합니다 **이 필드는 개별 사용자와 관련된 id를 나타내지 않습니다.**&#x200B;를 검색하는 것이 더 효율적입니다. 개인과 관련된 ID 데이터는 다음으로 내보냅니다. [id 필드](../schema/composition.md#identity) 호환 가능한 필드 그룹에서 대신 제공합니다. |
+| `_id`<br>**(필수 여부)** | 경험 이벤트 클래스 `_id` 필드는 Adobe Experience Platform에 수집되는 개별 이벤트를 고유하게 식별합니다. 이 필드는 개별 이벤트의 고유성을 추적하고, 데이터 중복을 방지하고, 다운스트림 서비스에서 해당 이벤트를 조회하는 데 사용됩니다.<br><br>중복 이벤트가 감지되면 플랫폼 애플리케이션과 서비스는 중복을 다르게 처리할 수 있습니다. 예를 들어 프로필 서비스의 중복 이벤트는 동일한 이벤트가 있는 경우 삭제됩니다 `_id` 이(가) 이미 프로필 저장소에 있습니다.<br><br>경우에 따라, `_id` 다음이 될 수 있음: [UUID(범용 고유 식별자)](https://datatracker.ietf.org/doc/html/rfc4122) 또는 [GUID(Globally Unique Identifier)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>소스 연결에서 데이터를 스트리밍하거나 Parquet 파일에서 직접 수집하는 경우, 이벤트를 고유하게 만드는 특정 필드 조합을 연결하여 이 값을 생성해야 합니다. 연결할 수 있는 이벤트의 예로는 기본 ID, 타임스탬프, 이벤트 유형 등이 있습니다. 연결된 값은 이어야 합니다. `uri-reference` 형식이 지정된 문자열입니다. 즉, 콜론 문자는 제거해야 합니다. 그런 다음 연결된 값을 SHA-256 또는 선택한 다른 알고리즘을 사용하여 해시해야 합니다.<br><br>이를 구별하는 것이 중요합니다 **이 필드는 개별 사용자와 관련된 id를 나타내지 않습니다.**&#x200B;를 검색하는 것이 더 효율적입니다. 개인과 관련된 ID 데이터는 다음으로 내보냅니다. [id 필드](../schema/composition.md#identity) 호환 가능한 필드 그룹에서 대신 제공합니다. |
 | `eventMergeId` | 을 사용하는 경우 [Adobe Experience Platform 웹 SDK](../../edge/home.md) 데이터를 수집하기 위해 레코드를 만들게 한 수집된 일괄 처리의 ID를 나타냅니다. 이 필드는 데이터 수집 시 시스템에서 자동으로 채워집니다. 웹 SDK 구현의 컨텍스트 외부에서 이 필드를 사용할 수 없습니다. |
 | `eventType` | 이벤트의 유형 또는 범주를 나타내는 문자열입니다. 이 필드는 제품 보기 이벤트를 소매 회사에 대한 장바구니에 추가 이벤트와 구분하는 것처럼 동일한 스키마 및 데이터 세트 내에서 다른 이벤트 유형을 구분하려는 경우 사용할 수 있습니다.<br><br>이 속성의 표준 값은 [부록 섹션](#eventType), 의도한 사용 사례에 대한 설명 포함. 이 필드는 확장 가능한 열거형입니다. 즉, 고유한 이벤트 유형 문자열을 사용하여 추적 중인 이벤트를 분류할 수도 있습니다.<br><br>`eventType` 는 애플리케이션에서 히트당 하나의 이벤트만 사용하도록 제한하므로 시스템에서 가장 중요한 이벤트를 알려주기 위해 계산된 필드를 사용해야 합니다. 자세한 내용은 다음 섹션 을 참조하십시오 [계산된 필드에 대한 우수 사례](#calculated). |
 | `producedBy` | 이벤트의 생성자 또는 출처를 설명하는 문자열 값입니다. 이 필드는 세분화 목적으로 필요한 경우 특정 이벤트 제작자를 필터링하는 데 사용할 수 있습니다.<br><br>이 속성에 대해 제안된 몇 가지 값은 [부록 섹션](#producedBy). 이 필드는 확장 가능한 열거형입니다. 즉, 고유한 문자열을 사용하여 다른 이벤트 생성자를 나타낼 수도 있습니다. |
 | `identityMap` | 이벤트가 적용되는 개인에 대한 네임스페이스 ID 세트가 포함된 맵 필드입니다. 이 필드는 ID 데이터가 수집될 때 시스템에 의해 자동으로 업데이트됩니다. 이 필드를 적절하게 사용하려면 [실시간 고객 프로필](../../profile/home.md)를 사용하여 데이터 작업에서 필드의 내용을 수동으로 업데이트하지 마십시오.<br /><br />에서 ID 맵에 대한 섹션을 참조하십시오. [스키마 컴포지션 기본 사항](../schema/composition.md#identityMap) 사용 사례에 대한 자세한 내용을 보려면 여기를 클릭하십시오. |
-| `timestamp`<br>**(필수 여부)** | 다음 형식의 이벤트 발생 시점의 ISO 8601 타임스탬프 [RFC 3339 섹션 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). 이 타임스탬프는 과거의 날짜여야 합니다. 에 대한 아래 섹션 참조 [타임스탬프](#timestamps) 이 필드의 사용에 대한 모범 사례입니다. |
+| `timestamp`<br>**(필수 여부)** | 다음 형식의 이벤트 발생 시점의 ISO 8601 타임스탬프 [RFC 3339 섹션 5.6](https://datatracker.ietf.org/doc/html/rfc3339). 이 타임스탬프는 과거의 날짜여야 합니다. 에 대한 아래 섹션 참조 [타임스탬프](#timestamps) 이 필드의 사용에 대한 모범 사례입니다. |
 
 {style="table-layout:auto"}
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 루트 `timestamp` 이벤트 스키마의 필드는 **전용** 사건 자체의 관찰을 나타내며 과거에 발생해야 합니다. 세분화 사용 사례에서 향후 발생할 수 있는 타임스탬프를 사용해야 하는 경우 이러한 값은 경험 이벤트 스키마의 다른 곳에서 제한되어야 합니다.
 
-예를 들어 여행 및 숙박 산업의 한 업체가 비행 예약 이벤트를 모델링하는 경우 클래스 수준입니다 `timestamp` 필드는 예약 이벤트가 관찰된 시간을 나타냅니다. 여행 예약 시작 날짜와 같이 이벤트와 관련된 다른 타임스탬프는 표준 또는 사용자 지정 필드 그룹에서 제공하는 별도의 필드에 캡처해야 합니다.
+예를 들어 여행 및 숙박 산업의 한 업체가 항공편 예약 이벤트를 모델링하는 경우 클래스 수준입니다 `timestamp` 필드는 예약 이벤트가 관찰된 시간을 나타냅니다. 여행 예약 시작 날짜와 같이 이벤트와 관련된 다른 타임스탬프는 표준 또는 사용자 지정 필드 그룹에서 제공하는 별도의 필드에 캡처해야 합니다.
 
 ![비행 예약 및 시작 일자가 강조 표시된 샘플 경험 이벤트 스키마.](../images/classes/experienceevent/timestamps.png)
 
@@ -92,57 +92,88 @@ Adobe은 와 함께 사용할 수 있도록 여러 표준 필드 그룹을 제�
 
 | 값 | 정의 |
 | --- | --- |
-| `advertising.clicks` | 광고에서 작업을 클릭합니다. |
-| `advertising.completes` | 시간 미디어 에셋이 완료될 때까지 관찰되었습니다. 이는 뷰어가 앞으로 건너뛸 수 있으므로, 뷰어가 전체 비디오를 반드시 시청했음을 의미하지는 않습니다. |
-| `advertising.conversions` | 성능 평가를 위한 이벤트를 트리거하는 고객이 수행한 사전 정의된 작업입니다. |
-| `advertising.federated` | 데이터 페더레이션(고객 간 데이터 공유)을 통해 경험 이벤트가 생성되었는지 보여 줍니다. |
-| `advertising.firstQuartiles` | 디지털 비디오 광고 재생이 정상 속도로 25% 완료되었습니다. |
-| `advertising.impressions` | 조회할 가능성이 있는 고객에 대한 광고의 노출 횟수. |
-| `advertising.midpoints` | 디지털 비디오 광고 재생이 정상 속도로 50% 완료되었습니다. |
-| `advertising.starts` | 디지털 비디오 광고 재생이 시작되었습니다. |
-| `advertising.thirdQuartiles` | 디지털 비디오 광고 재생이 정상 속도로 75% 완료되었습니다. |
-| `advertising.timePlayed` | 특정 시간 미디어 에셋에서 사용자가 사용한 총 시간을 설명합니다. |
-| `application.close` | 애플리케이션이 닫히거나 백그라운드로 전송되었습니다. |
-| `application.launch` | 애플리케이션을 시작했거나 포그라운드로 가져왔습니다. |
-| `commerce.checkouts` | 제품 목록에 대해 체크아웃 이벤트가 발생했습니다. 체크아웃 프로세스에 여러 단계가 있는 경우 두 개 이상의 체크아웃 이벤트가 있을 수 있습니다. 여러 단계가 있는 경우 타임스탬프 및 각 이벤트에 대해 참조된 페이지/경험을 사용하여 순서대로 표시되는 각 개별 이벤트(단계)를 식별합니다. |
-| `commerce.productListAdds` | 제품이 제품 목록 또는 장바구니에 추가되었습니다. |
-| `commerce.productListOpens` | 새 제품 목록(장바구니)이 초기화되거나 만들어졌습니다. |
-| `commerce.productListRemovals` | 제품 목록 또는 장바구니에서 하나 이상의 제품 항목이 제거되었습니다. |
-| `commerce.productListReopens` | 고객이 더 이상 액세스할 수 없는(포기된) 제품 목록(장바구니)을 재마케팅 활동을 통해 다시 활성화했습니다. |
-| `commerce.productListViews` | 제품 목록 또는 장바구니가 하나 이상의 보기를 받았습니다. |
-| `commerce.productViews` | 제품이 하나 이상의 보기를 받았습니다. |
-| `commerce.purchases` | 주문이 수락되었습니다. 이것은 상거래 전환에서 유일한 필수 작업입니다. 구매 이벤트에는 참조된 제품 목록이 있어야 합니다. |
-| `commerce.saveForLaters` | 나중에 사용할 수 있도록 제품 목록(예: 제품 위시리스트)이 저장되었습니다. |
-| `decisioning.propositionDisplay` | 결정 제안이 사람에게 표시되었습니다. |
-| `decisioning.propositionInteract` | 한 사람이 의사 결정 제안에 상호 작용했다. |
-| `delivery.feedback` | 이메일 게재와 같은 게재에 대한 피드백 이벤트. |
-| `directMarketing.emailBounced` | 반송된 사람에게 보내는 이메일. |
-| `directMarketing.emailBouncedSoft` | 가볍게 반송된 사람에게 보내는 이메일. |
-| `directMarketing.emailClicked` | 마케팅 이메일의 링크를 클릭한 사용자. |
-| `directMarketing.emailDelivered` | 이메일이 개인의 이메일 서비스에 정상적으로 전달되었습니다. |
-| `directMarketing.emailOpened` | 사용자가 마케팅 이메일을 열었습니다. |
-| `directMarketing.emailUnsubscribed` | 마케팅 이메일 구독을 취소한 사람. |
-| `inappmessageTracking.dismiss` | 인앱 메시지가 무시되었습니다. |
-| `inappmessageTracking.display` | 인앱 메시지가 표시되었습니다. |
-| `inappmessageTracking.interact` | 인앱 메시지가 와(과) 상호 작용했습니다. |
-| `leadOperation.callWebhook` | 리드에 대한 응답으로 웹후크가 호출되었습니다. |
-| `leadOperation.convertLead` | 잠재 고객이 전환되었습니다. |
-| `leadOperation.interestingMoment` | 한 사람을 위해 흥미로운 순간이 기록되었습니다. |
-| `leadOperation.newLead` | 리드가 생성되었습니다. |
-| `leadOperation.scoreChanged` | 잠재 고객의 스코어 속성 값이 변경되었습니다. |
-| `leadOperation.statusInCampaignProgressionChanged` | 캠페인에서 잠재 고객의 상태가 변경되었습니다. |
-| `listOperation.addToList` | 마케팅 목록에 개인이 추가되었습니다. |
-| `listOperation.removeFromList` | 마케팅 목록에서 개인이 제거되었습니다. |
-| `message.feedback` | 고객에게 보낸 메시지에 대한 보냄/바운스/오류와 같은 피드백 이벤트. |
-| `message.tracking` | 고객에게 전송된 메시지에 대한 열기/클릭/사용자 지정 작업과 같은 이벤트 추적. |
-| `opportunityEvent.addToOpportunity` | 영업 기회에 개인이 추가되었습니다. |
-| `opportunityEvent.opportunityUpdated` | 영업 기회가 업데이트되었습니다. |
-| `opportunityEvent.removeFromOpportunity` | 영업 기회에서 개인이 제거되었습니다. |
-| `pushTracking.applicationOpened` | 푸시 알림에서 애플리케이션을 연 사용자입니다. |
-| `pushTracking.customAction` | 푸시 알림에서 사용자가 사용자 지정 작업을 클릭했습니다. |
-| `web.formFilledOut` | 한 사람이 wep 페이지에서 양식을 작성했습니다. |
-| `web.webinteraction.linkClicks` | 링크가 한 번 이상 선택되었습니다. |
-| `web.webpagedetails.pageViews` | 웹 페이지가 하나 이상의 보기를 받았습니다. |
+| `advertising.clicks` | 이 이벤트는 광고를 선택하는 작업이 발생하면 추적합니다. |
+| `advertising.completes` | 이 이벤트는 시간 미디어 에셋이 완료될 때까지 관찰되면 추적합니다. 이는 뷰어가 앞으로 건너뛸 수도 있었으므로, 뷰어가 전체 비디오를 시청했다는 것을 반드시 의미하지는 않습니다. |
+| `advertising.conversions` | 이 이벤트는 성능 평가를 위해 이벤트를 트리거하는 고객이 수행한 사전 정의된 작업을 추적합니다. |
+| `advertising.federated` | 이 이벤트는 데이터 페더레이션(고객 간 데이터 공유)을 통해 경험 이벤트가 생성되었는지 추적합니다. |
+| `advertising.firstQuartiles` | 이 이벤트는 디지털 비디오 광고 재생이 정상 속도로 25% 진행되면 추적합니다. |
+| `advertising.impressions` | 이 이벤트는 잠재 고객이 볼 수 있는 광고의 노출 횟수를 추적합니다. |
+| `advertising.midpoints` | 이 이벤트는 디지털 비디오 광고 재생이 정상 속도로 50% 진행되면 추적합니다. |
+| `advertising.starts` | 이 이벤트는 디지털 비디오 광고 재생이 시작되면 추적합니다. |
+| `advertising.thirdQuartiles` | 이 이벤트는 디지털 비디오 광고 재생이 정상 속도로 75% 진행되면 추적합니다. |
+| `advertising.timePlayed` | 이 이벤트는 특정 시간 미디어 에셋에서 사용자가 사용한 시간을 추적합니다. |
+| `application.close` | 이 이벤트는 애플리케이션이 닫히거나 백그라운드로 전송되면 추적합니다. |
+| `application.launch` | 이 이벤트는 애플리케이션을 시작하거나 포그라운드로 가져올 때 추적합니다. |
+| `commerce.backofficeCreditMemoIssued` | 이 이벤트는 고객에게 신용 공지가 발행되면 추적합니다. |
+| `commerce.backofficeOrderCancelled` | 이 이벤트는 이전에 시작된 구매 프로세스가 완료 전에 종료되면 추적합니다. |
+| `commerce.backofficeOrderItemsShipped` | 이 이벤트는 구매한 항목이 실제로 고객에게 배송된 경우를 추적합니다. |
+| `commerce.backofficeOrderPlaced` | 이 이벤트는 주문 배치를 추적합니다. |
+| `commerce.backofficeShipmentCompleted` | 이 이벤트는 전체 선적 프로세스의 성공적인 완료를 추적합니다. |
+| `commerce.checkouts` | 이 이벤트는 제품 목록에 대해 체크아웃 이벤트가 발생하면 추적합니다. 체크아웃 프로세스에 여러 단계가 있는 경우 두 개 이상의 체크아웃 이벤트가 있을 수 있습니다. 여러 단계가 있는 경우 타임스탬프 및 각 이벤트에 대해 참조된 페이지/경험을 사용하여 순서대로 표시되는 각 개별 이벤트(단계)를 식별합니다. |
+| `commerce.productListAdds` | 이 이벤트는 제품이 제품 목록 또는 장바구니에 추가되면 추적합니다. |
+| `commerce.productListOpens` | 이 이벤트는 새 제품 목록(장바구니)이 초기화되거나 생성될 때 추적합니다. |
+| `commerce.productListRemovals` | 이 이벤트는 제품 항목이 제품 목록 또는 장바구니에서 제거되면 추적합니다. |
+| `commerce.productListReopens` | 이 이벤트는 고객이 더 이상 액세스할 수 없는(포기된) 제품 목록(장바구니)을 재활성화한 경우(예: 리마케팅 활동을 통해) 추적합니다. |
+| `commerce.productListViews` | 이 이벤트는 제품 목록 또는 장바구니가 보기를 받으면 추적합니다. |
+| `commerce.productViews` | 이 이벤트는 제품이 하나 이상의 보기를 수신하면 추적합니다. |
+| `commerce.purchases` | 이 이벤트는 주문이 수락되면 추적합니다. 이것은 상거래 전환에서 유일한 필수 작업입니다. 구매 이벤트에는 참조된 제품 목록이 있어야 합니다. |
+| `commerce.saveForLaters` | 이 이벤트는 제품 위시리스트 등 향후 사용을 위해 제품 목록이 저장되면 추적합니다. |
+| `decisioning.propositionDisplay` | 이 이벤트는 의사 결정 제안이 사용자에게 표시되면 추적합니다. |
+| `decisioning.propositionDismiss` | 이 이벤트는 제공된 오퍼에 참여하지 않기로 결정한 경우 추적합니다. |
+| `decisioning.propositionInteract` | 이 이벤트는 한 사람이 의사 결정 제안과 상호 작용할 때 추적합니다. |
+| `decisioning.propositionSend` | 이 이벤트는 잠재 고객에게 추천 또는 고려 제안을 보내기로 결정한 경우 추적합니다. |
+| `decisioning.propositionTrigger` | 이 이벤트는 제안 프로세스의 활성화를 추적합니다. 오퍼를 표시할지 묻는 특정 조건 또는 작업이 발생했습니다. |
+| `delivery.feedback` | 이 이벤트는 이메일 게재와 같은 게재의 피드백 이벤트를 추적합니다. |
+| `directMarketing.emailBounced` | 이 이벤트는 개인에게 전송된 이메일이 반송되면 추적합니다. |
+| `directMarketing.emailBouncedSoft` | 이 이벤트는 개인에게 보낸 이메일이 소프트 바운스되면 추적합니다. |
+| `directMarketing.emailClicked` | 이 이벤트는 사용자가 마케팅 이메일의 링크를 클릭했을 때 추적됩니다. |
+| `directMarketing.emailDelivered` | 이 이벤트는 이메일이 개인의 이메일 서비스에 성공적으로 전달될 때 추적합니다. |
+| `directMarketing.emailOpened` | 이 이벤트는 사용자가 마케팅 이메일을 열었을 때 추적합니다. |
+| `directMarketing.emailSent` | 이 이벤트는 마케팅 이메일이 사용자에게 전송되면 추적합니다. |
+| `directMarketing.emailUnsubscribed` | 이 이벤트는 사용자가 마케팅 이메일의 구독을 취소하면 추적합니다. |
+| `inappmessageTracking.dismiss` | 이 이벤트는 인앱 메시지가 무시되면 추적합니다. |
+| `inappmessageTracking.display` | 이 이벤트는 인앱 메시지가 표시되면 추적합니다. |
+| `inappmessageTracking.interact` | 이 이벤트는 인앱 메시지가 상호 작용할 때 추적합니다. |
+| `leadOperation.callWebhook` | 이 이벤트는 리드에 대한 응답으로 Webhook이 호출되면 추적합니다. |
+| `leadOperation.changeCampaignStream` | 이 이벤트는 특정 비즈니스 리드에 대한 마케팅 또는 참여 전략의 전환을 나타냅니다. |
+| `leadOperation.changeEngagementCampaignCadence` | 이 이벤트는 잠재 고객이 캠페인의 일부로 참여하는 빈도가 변경된 경우 추적합니다. |
+| `leadOperation.convertLead` | 이 이벤트는 잠재 고객 전환 시 추적합니다. |
+| `leadOperation.interestingMoment` | 이 이벤트는 한 사람에게 재미있는 순간을 기록할 때 추적합니다. |
+| `leadOperation.mergeLeads` | 이 이벤트는 동일한 엔티티를 참조하는 여러 잠재 고객의 정보가 통합되는 시점을 추적합니다. |
+| `leadOperation.newLead` | 이 이벤트는 잠재 고객 생성 시 추적합니다. |
+| `leadOperation.scoreChanged` | 이 이벤트는 잠재 고객의 스코어 속성 값이 변경되면 추적합니다. |
+| `leadOperation.statusInCampaignProgressionChanged` | 이 이벤트는 캠페인에서 잠재 고객의 상태가 변경되면 추적합니다. |
+| `listOperation.addToList` | 이 이벤트는 마케팅 목록에 개인이 추가되면 추적합니다. |
+| `listOperation.removeFromList` | 이 이벤트는 마케팅 목록에서 개인이 제거되면 추적합니다. |
+| `media.adBreakComplete` | 이 이벤트는 다음의 경우에 추적합니다. `adBreakComplete` 이벤트가 발생했습니다. 이 이벤트는 광고 브레이크가 시작될 때 트리거됩니다. |
+| `media.adBreakStart` | 이 이벤트는 다음의 경우에 추적합니다. `adBreakStart` 이벤트가 발생했습니다. 이 이벤트는 광고 브레이크가 끝날 때 트리거됩니다. |
+| `media.adComplete` | 이 이벤트는 다음의 경우에 추적합니다. `adComplete` 이벤트가 발생했습니다. 이 이벤트는 광고가 완료되면 트리거됩니다. |
+| `media.adSkip` | 이 이벤트는 다음의 경우에 추적합니다. `adSkip` 이벤트가 발생했습니다. 이 이벤트는 광고를 건너뛸 때 트리거됩니다. |
+| `media.adStart` | 이 이벤트는 다음의 경우에 추적합니다. `adStart` 이벤트가 발생했습니다. 이 이벤트는 광고가 시작될 때 트리거됩니다. |
+| `media.bitrateChange` | 이 이벤트는 다음 경우에 추적됩니다. `bitrateChange` 이벤트가 발생했습니다. 이 이벤트는 비트 전송률이 변경될 때 트리거됩니다. |
+| `media.bufferStart` | 이 이벤트는 다음 경우에 추적됩니다. `bufferStart` 이벤트가 발생했습니다. 이 이벤트는 미디어가 버퍼링되기 시작할 때 트리거됩니다. |
+| `media.chapterComplete` | 이 이벤트는 다음 경우에 추적됩니다. `chapterComplete` 이벤트가 발생했습니다. 이 이벤트는 미디어의 챕터 완료 시 트리거됩니다. |
+| `media.chapterSkip` | 이 이벤트는 다음 경우에 추적됩니다. `chapterSkip` 이벤트가 발생했습니다. 이 이벤트는 사용자가 미디어 콘텐츠 내의 다른 섹션 또는 챕터로 앞이나 뒤로 건너뛸 때 트리거됩니다. |
+| `media.chapterStart` | 이 이벤트는 다음 경우에 추적됩니다. `chapterStart` 이벤트가 발생했습니다. 이 이벤트는 미디어 콘텐츠 내의 특정 섹션 또는 챕터의 시작 시 트리거됩니다. |
+| `media.downloaded` | 이 이벤트는 미디어가 다운로드한 콘텐츠가 발생하면 추적합니다. |
+| `media.error` | 이 이벤트는 다음의 경우에 추적합니다. `error` 이벤트가 발생했습니다. 이 이벤트는 미디어 재생 중에 오류 또는 문제가 발생할 때 트리거됩니다. |
+| `media.pauseStart` | 이 이벤트는 다음 경우에 추적됩니다. `pauseStart` 이벤트가 발생했습니다. 이 이벤트는 사용자가 미디어 재생에서 일시 중지를 시작할 때 트리거됩니다. |
+| `media.ping` | 이 이벤트는 다음의 경우에 추적합니다. `ping` 이벤트가 발생했습니다. 미디어 리소스의 가용성을 확인합니다. |
+| `media.play` | 이 이벤트는 다음 경우에 추적됩니다. `play` 이벤트가 발생했습니다. 이 이벤트는 미디어 콘텐츠가 재생 중일 때 트리거되며, 사용자의 활성 소비를 나타냅니다. |
+| `media.sessionComplete` | 이 이벤트는 다음 경우에 추적됩니다. `sessionComplete` 이벤트가 발생했습니다. 이 이벤트는 미디어 재생 세션의 끝을 표시합니다. |
+| `media.sessionEnd` | 이 이벤트는 다음 경우에 추적됩니다. `sessionEnd` 이벤트가 발생했습니다. 이 이벤트는 미디어 세션의 종료를 나타냅니다. 이 결론에는 미디어 플레이어를 닫거나 재생을 중지하는 작업이 포함될 수 있습니다. |
+| `media.sessionStart` | 이 이벤트는 다음 경우에 추적됩니다. `sessionStart` 이벤트가 발생했습니다. 이 이벤트는 미디어 재생 세션의 시작을 표시합니다. 사용자가 미디어 파일 재생을 시작할 때 트리거됩니다. |
+| `media.statesUpdate` | 이 이벤트는 다음 경우에 추적됩니다. `statesUpdate` 이벤트가 발생했습니다. 플레이어 상태 추적 기능을 오디오 또는 비디오 스트림에 연결할 수 있습니다. 표준 상태는 fullscreen, mute, closedCaptioning, pictureInPicture 및 inFocus입니다. |
+| `opportunityEvent.addToOpportunity` | 이 이벤트는 한 사람이 기회에 추가되면 추적합니다. |
+| `opportunityEvent.opportunityUpdated` | 이 이벤트는 기회가 업데이트되면 추적합니다. |
+| `opportunityEvent.removeFromOpportunity` | 이 이벤트는 영업 기회에서 개인이 제거되면 추적합니다. |
+| `pushTracking.applicationOpened` | 이 이벤트는 사용자가 푸시 알림에서 애플리케이션을 열 때 추적합니다. |
+| `pushTracking.customAction` | 이 이벤트는 사용자가 푸시 알림에서 사용자 지정 작업을 선택할 때 추적합니다. |
+| `web.formFilledOut` | 이 이벤트는 사용자가 웹 페이지에서 양식을 작성할 때 추적합니다. |
+| `web.webinteraction.linkClicks` | 이 이벤트는 링크가 한 번 이상 선택된 경우 추적합니다. |
+| `web.webpagedetails.pageViews` | 이 이벤트는 웹 페이지가 하나 이상의 보기를 받으면 추적합니다. |
+| `location.entry` | 이 이벤트는 특정 위치에 있는 사용자 또는 장치의 항목을 추적합니다. |
+| `location.exit` | 이 이벤트는 특정 위치에서 개인 또는 장치의 종료를 추적합니다. |
 
 {style="table-layout:auto"}
 
