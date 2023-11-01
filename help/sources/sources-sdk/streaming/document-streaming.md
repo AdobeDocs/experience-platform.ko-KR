@@ -4,9 +4,9 @@ description: Adobe Experience Platform에서 새 소스를 라이브로 만들 �
 hide: true
 hidefromtoc: true
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
@@ -19,10 +19,10 @@ Adobe Experience Platform에서 새 소스를 라이브로 설정하기 전 마�
 
 * 새 소스에 대한 설명서 페이지를 만들기 위해 참조할 수 있는 튜토리얼
 * 새 소스에 대해 작성할 설명서 템플릿
-* [기술 설명서 작성에 Markdown을 사용하는 방법에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [Adobe Markdown 기능 이해에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions).
+* [기술 설명서 작성에 Markdown을 사용하는 방법에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Adobe Markdown 기능 이해에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
 
-## 사전 요구 사항
+## 전제 조건
 
 새 소스 문서화를 시작하려면 먼저 다음 항목이 필요합니다.
 

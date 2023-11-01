@@ -2,9 +2,9 @@
 title: 대상 활성화 워크플로의 ID 처리
 description: 대상 유형에 따라 활성화 워크플로에서 ID 내보내기가 처리되는 방법을 알아봅니다
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1180'
 ht-degree: 3%
 
 ---
@@ -78,7 +78,7 @@ ht-degree: 3%
 
 ### 서드파티 쿠키 통합에 의존하는 광고 대상 {#third-party-cookie-destinations}
 
-서드파티 쿠키에 의존하는 광고 대상(예: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) 고객이 활성화 워크플로에서 ID를 선택할 필요는 없습니다. 이러한 대상의 경우 활성화 워크플로를 설정할 때 Experience Platform은 자동으로 [[!UICONTROL Experience Cloud ID 서비스]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=en) 및 은 프로필에 사용할 수 있고 대상에서 지원하는 모든 id를 내보냅니다.
+서드파티 쿠키에 의존하는 광고 대상(예: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) 고객이 활성화 워크플로에서 ID를 선택할 필요는 없습니다. 이러한 대상의 경우 활성화 워크플로를 설정할 때 Experience Platform은 자동으로 [[!UICONTROL Experience Cloud ID 서비스]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ko-KR) 및 은 프로필에 사용할 수 있고 대상에서 지원하는 모든 id를 내보냅니다.
 
 이러한 대상을 사용하려면 다음 중 하나를 통해 ID 동기화를 수행해야 합니다. [!UICONTROL Experience Cloud ID 서비스] 또는 다음을 통해 [!UICONTROL Experience Platform Web SDK].
 
@@ -88,7 +88,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->이러한 광고 대상의 대부분은 Audience Manager에서 지원됩니다(이러한 대상 유형은 Audience Manager에서 장치 기반 대상으로 알려져 있음). 참조: [Audience Manager에서 지원되는 모든 장치 기반 대상 목록](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=en)). 몇 개만 Experience Platform에 나열되어 있습니다. Experience Platform과 Audience Manager 간 데이터 공유에 대한 자세한 내용은 [Experience Platform에서 Audience Manager으로 데이터 공유 활성화](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#enable-aep-to-aam-data). 현재 더 많은 타사 쿠키 대상을 지원할 계획이 없습니다.
+>이러한 광고 대상의 대부분은 Audience Manager에서 지원됩니다(이러한 대상 유형은 Audience Manager에서 장치 기반 대상으로 알려져 있음). 참조: [Audience Manager에서 지원되는 모든 장치 기반 대상 목록](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). 몇 개만 Experience Platform에 나열되어 있습니다. Experience Platform과 Audience Manager 간 데이터 공유에 대한 자세한 내용은 [Experience Platform에서 Audience Manager으로 데이터 공유 활성화](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). 현재 더 많은 타사 쿠키 대상을 지원할 계획이 없습니다.
 
 ## Enterprise 대상 {#enterprise-destinations}
 

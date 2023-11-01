@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 모델링 우수 사례
 description: 이 문서에서는 XDM(경험 데이터 모델) 스키마와 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 구성 요소, 원칙 및 모범 사례에 대해 소개합니다.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: f9c3e20bdfbf4aa1b206b9efe770e9950fcd62d6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '3044'
+source-wordcount: '3042'
 ht-degree: 1%
 
 ---
@@ -231,7 +231,7 @@ Adobe Analytics의 경우 ECID가 기본 기본 ID입니다. 고객이 ECID 값�
 
 ## 데이터 유효성 검사 필드 {#data-validation-fields}
 
-잘못된 데이터가 플랫폼으로 수집되지 않도록 하려면 스키마를 생성할 때 필드 수준 유효성 검사에 대한 기준을 정의하는 것이 좋습니다. 특정 필드에 대한 제약 조건을 설정하려면 스키마 편집기에서 필드를 선택하여 [!UICONTROL 필드 속성] 사이드바. 다음에서 설명서를 참조하십시오. [유형별 필드 속성](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) 사용 가능한 필드에 대한 정확한 설명.
+잘못된 데이터가 플랫폼으로 수집되지 않도록 하려면 스키마를 생성할 때 필드 수준 유효성 검사에 대한 기준을 정의하는 것이 좋습니다. 특정 필드에 대한 제약 조건을 설정하려면 스키마 편집기에서 필드를 선택하여 [!UICONTROL 필드 속성] 사이드바. 다음에서 설명서를 참조하십시오. [유형별 필드 속성](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html#type-specific-properties) 사용 가능한 필드에 대한 정확한 설명.
 
 ![제약조건 필드가 강조 표시된 스키마 편집기 [!UICONTROL 필드 속성] 사이드바.](../images/best-practices/data-validation-fields.png)
 

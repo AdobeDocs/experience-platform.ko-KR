@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Media Edge API 시작하기
 description: Media Edge API 시작하기
 exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '958'
-ht-degree: 6%
+source-wordcount: '946'
+ht-degree: 5%
 
 ---
 
@@ -42,12 +42,12 @@ ht-degree: 6%
 
 ## API 구현 {#implement-api}
 
-Media Edge API는 모델 및 호출된 경로에서 사소한 차이점을 제외하고 와 동일한 구현을 갖습니다. [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en). Media Collection의 구현 세부 사항은 다음 설명서에 설명된 대로 Media Edge API에 계속 유효합니다.
+Media Edge API는 모델 및 호출된 경로에서 사소한 차이점을 제외하고 와 동일한 구현을 갖습니다. [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html). Media Collection의 구현 세부 사항은 다음 설명서에 설명된 대로 Media Edge API에 계속 유효합니다.
 
-* [플레이어에서 HTTP 요청 유형 설정](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
-* [Ping 이벤트 보내기](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
-* [시간 제한 조건](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html?lang=en)
-* [이벤트 순서 제어](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html?lang=en)
+* [플레이어에서 HTTP 요청 유형 설정](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [Ping 이벤트 보내기](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [시간 제한 조건](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html)
+* [이벤트 순서 제어](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html)
 
 ## Authorization {#authorization}
 

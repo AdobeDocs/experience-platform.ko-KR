@@ -3,9 +3,9 @@ title: Adobe Commerce 소스 커넥터
 description: Adobe Commerce 소스를 사용하여 상거래 데이터를 Experience Platform으로 가져오는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 8313e3d5-5c3d-448c-883c-b9386dbbb2f5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '540'
 ht-degree: 1%
 
 ---
@@ -37,9 +37,9 @@ Adobe Commerce을 Experience Platform에 연결하려면 다음 조건을 충족
 Adobe Commerce 소스 계정을 완전히 온보딩하려면 해당 설명서와 함께 아래에 설명된 단계를 수행합니다.
 
 * [Experience Platform 커넥터 확장 설치](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/install.html) Adobe Commerce용 에서 커넥터 확장을 다운로드할 수 있습니다. [Adobe 마켓플레이스](https://commercemarketplace.adobe.com/magento-experience-platform-connector.html).
-* Connector 확장을 성공적으로 설치한 후 Experience Cloud에서 Adobe 계정에 로그인하고 [조직 ID 확인](https://experienceleague.adobe.com/docs/core-services/interface/administration/organizations.html?lang=en#concept_EA8AEE5B02CF46ACBDAD6A8508646255). 이 ID는 공급된 Experience Cloud 회사와 연결되어 있습니다. 24자 영숫자 문자열로 포맷되며 필수 항목이 포함됩니다 `@AdobeOrg`.
+* Connector 확장을 성공적으로 설치한 후 Experience Cloud에서 Adobe 계정에 로그인하고 [조직 ID 확인](https://experienceleague.adobe.com/docs/core-services/interface/administration/organizations.html#concept_EA8AEE5B02CF46ACBDAD6A8508646255). 이 ID는 공급된 Experience Cloud 회사와 연결되어 있습니다. 24자 영숫자 문자열로 포맷되며 필수 항목이 포함됩니다 `@AdobeOrg`.
 * 다음으로, Commerce별 필드 그룹으로 XDM(Experience Data Model) 스키마를 만들거나 업데이트합니다. XDM 스키마에 상거래 특정 필드 그룹을 추가하는 방법에 대한 자세한 단계는 의 안내서를 참조하십시오 [xdm 스키마에 필드 그룹 추가](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html).
-* 스키마가 구성되면 새 스키마를 기반으로 하여 데이터 세트를 만들어야 합니다. 그러면 이 데이터 세트에는 [!DNL Commerce] 전송하는 데이터입니다. 의 데이터 세트를 만드는 방법에 대한 자세한 단계 [!DNL Commerce] 데이터, 다음에 대한 안내서 읽기 [Experience Platform에 데이터 보내기](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/experience-cloud/platform.html?lang=en#create-a-dataset).
+* 스키마가 구성되면 새 스키마를 기반으로 하여 데이터 세트를 만들어야 합니다. 그러면 이 데이터 세트에는 [!DNL Commerce] 전송하는 데이터입니다. 의 데이터 세트를 만드는 방법에 대한 자세한 단계 [!DNL Commerce] 데이터, 다음에 대한 안내서 읽기 [Experience Platform에 데이터 보내기](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/experience-cloud/platform.html#create-a-dataset).
 * 그런 다음 데이터 스트림을 만들고 Commerce 관련 필드 그룹이 포함된 XDM 스키마를 선택합니다. 데이터스트림에 대한 자세한 내용은 [데이터스트림 개요](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=ko-KR).
 * 그런 다음 Adobe Commerce 인스턴스를 [Commerce Services 커넥터](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html). 이를 통해 상거래 인스턴스를 SaaS(Software as a Service)로 배포할 수 있습니다.
 * 앞에서 설명한 모든 구성이 완료되면 이제 를 사용하여 Commerce Services 커넥터와 Experience Platform 커넥터를 모두 구성하여 Experience Platform에 연결할 수 있습니다. [!DNL Commerce Admin]. 이 마지막 단계에 대한 자세한 내용은 의 안내서를 참조하십시오 [Experience Platform에 상거래 데이터 연결](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/connect-data.html).

@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;sendgrid;sendgrid 대�
 title: SendGrid 연결
 description: SendGrid 대상을 사용하면 자사 데이터를 내보내고 비즈니스 요구 사항에 맞게 SendGrid 내에서 활성화할 수 있습니다.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1577'
+source-wordcount: '1571'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ SendGrid는 API 전달자 토큰을 인증 메커니즘으로 사용하여 SendG
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-SendGrid 대상으로 데이터를 활성화하기 전에 [스키마](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko-KR), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 생성 위치 [!DNL Experience Platform]. 또한 다음을 참조하십시오 [제한](#limits) 이 페이지의 아래 섹션에 자세히 설명되어 있습니다.
+SendGrid 대상으로 데이터를 활성화하기 전에 [스키마](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko-KR), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) 생성 위치 [!DNL Experience Platform]. 또한 다음을 참조하십시오 [제한](#limits) 이 페이지의 아래 섹션에 자세히 설명되어 있습니다.
 
 >[!IMPORTANT]
 >
@@ -98,7 +98,7 @@ SendGrid를 사용하는 마케팅 팀은 SendGrid 내에서 메일링 목록을
 
 ### 대상 세부 정보 입력 {#destination-details}
 
-While [설정 중](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 이 대상에는 다음 정보를 제공해야 합니다.
+While [설정 중](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 이 대상에는 다음 정보를 제공해야 합니다.
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 선택적 설명입니다.

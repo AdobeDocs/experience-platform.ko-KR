@@ -3,10 +3,10 @@ keywords: livefyre;livefyre 확장
 title: Adobe Livefyre 확장
 description: Adobe Livefyre 확장은 Adobe Experience Platform의 소셜 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 5%
+source-wordcount: '450'
+ht-degree: 4%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 5%
 
 Adobe Livefyre를 사용하면 사용자가 생성한 콘텐츠의 지속적인 흐름을 웹 사이트에서 검색, 구성 및 게시하여 진실하고 고도로 개인화된 경험을 만들 수 있습니다.
 
-Adobe Livefyre는 Adobe Experience Platform의 소셜 확장입니다. Livefyre Adobe에 대한 자세한 내용은 [Livefyre 구현 안내서](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=en).
+Adobe Livefyre는 Adobe Experience Platform의 소셜 확장입니다. Livefyre Adobe에 대한 자세한 내용은 [Livefyre 구현 안내서](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
 
 이 대상은 태그 확장입니다. Platform에서 태그 확장이 작동하는 방식에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md).
 
 ![Adobe Livefyre 확장](../../assets/catalog/social/adobe-livefyre/catalog.png)
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 이 확장 프로그램은 다음에서 사용할 수 있습니다. [!DNL Destinations] Platform을 구입한 모든 고객을 위한 카탈로그.
 

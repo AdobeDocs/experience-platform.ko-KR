@@ -3,9 +3,9 @@ title: Mailchimp 관심 카테고리
 description: Mailchimp(Intuit Mailchimp라고도 함)는 기업이 메일링 목록 및 이메일 마케팅 캠페인을 사용하여 연락처(고객, 고객 또는 기타 이해 당사자)를 관리하고 상담하는 데 사용하는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다. 이 커넥터를 사용하여 관심사 및 선호도에 따라 연락처를 정렬합니다.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2392'
+source-wordcount: '2388'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Experience Platform 및 에서 설정해야 하는 사전 요구 사항에 대�
 
 ### Experience Platform의 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-에 대한 데이터를 활성화하기 전에 [!DNL Mailchimp Interest Categories] 대상, 다음 항목이 있어야 합니다. [스키마](/help/xdm/schema/composition.md), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 생성 위치 [!DNL Experience Platform].
+에 대한 데이터를 활성화하기 전에 [!DNL Mailchimp Interest Categories] 대상, 다음 항목이 있어야 합니다. [스키마](/help/xdm/schema/composition.md), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) 생성 위치 [!DNL Experience Platform].
 
 ### 사전 요구 사항 [!DNL Mailchimp Interest Categories] 대상 {#prerequisites-destination}
 

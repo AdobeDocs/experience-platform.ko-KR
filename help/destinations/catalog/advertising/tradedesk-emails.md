@@ -3,9 +3,9 @@ title: (Beta) 트레이드 데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타기팅 및 억제에 대한 프로필을 트레이드 데스크 계정에 활성화합니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1148'
 ht-degree: 4%
 
 ---
@@ -86,7 +86,7 @@ Experience Platform에서 이메일 주소 수집에 대해 알아보려면 [일
 
 ### 대상 세부 사항 입력 {#fill-in-details}
 
-대상 데이터를 대상으로 보내거나 활성화하려면 먼저 고유한 대상 플랫폼에 대한 연결을 설정해야 합니다. While [설정 중](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 이 대상에는 다음 정보를 제공해야 합니다.
+대상 데이터를 대상으로 보내거나 활성화하려면 먼저 고유한 대상 플랫폼에 대한 연결을 설정해야 합니다. While [설정 중](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 이 대상에는 다음 정보를 제공해야 합니다.
 
 * **[!UICONTROL 계정 유형]**: 다음 항목을 선택하십시오. **[!UICONTROL 기존 계정]** 옵션을 선택합니다.
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.

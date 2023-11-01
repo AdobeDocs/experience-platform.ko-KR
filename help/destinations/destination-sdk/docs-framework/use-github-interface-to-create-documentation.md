@@ -2,9 +2,9 @@
 title: GitHub 웹 인터페이스를 사용하여 대상 설명서 페이지를 만듭니다
 description: 이 페이지의 지침은 GitHub 웹 인터페이스를 사용하여 Experience Platform 대상에 대한 설명서 페이지를 작성하고 검토를 위해 제출하는 방법을 보여줍니다.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '768'
 ht-degree: 1%
 
 ---
@@ -16,15 +16,14 @@ ht-degree: 1%
 >[!TIP]
 >
 >Adobe의 기여자 안내서에서 지원 설명서를 참조하십시오.
->* [Git 및 Markdown 작성 도구 설치](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)
->* [로컬로 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)
->* [주요 변경 사항에 대한 GitHub 기여 워크플로](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en).
-
+>* [Git 및 Markdown 작성 도구 설치](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [로컬로 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [주요 변경 사항에 대한 GitHub 기여 워크플로](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
 ## GitHub 작성 환경 설정 {#set-up-environment}
 
 1. 브라우저에서 다음 위치로 이동합니다 `https://github.com/AdobeDocs/experience-platform.en`.
-2. 종료 [포크](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) 저장소에서 **포크** 아래와 같이 표시됩니다. 이렇게 하면 고유한 GitHub 계정에 Experience Platform 리포지토리의 사본이 만들어집니다.
+2. 종료 [포크](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) 저장소에서 **포크** 아래와 같이 표시됩니다. 이렇게 하면 고유한 GitHub 계정에 Experience Platform 리포지토리의 사본이 만들어집니다.
 
    ![포크 Adobe 문서 리포지토리](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -47,7 +46,7 @@ ht-degree: 1%
    >
    >언제든지 브라우저 창을 닫고 나중에 다시 열 수 있습니다. 작업이 자동으로 저장되며 브라우저를 다시 열 때 기다리고 있습니다.
 3. Markdown 편집기의 콘텐츠를 GitHub의 새 파일에 복사합니다.
-4. 사용할 스크린샷이나 이미지의 경우 GitHub 인터페이스를 사용하여 파일을 업로드하십시오. `experience-platform.en/help/destinations/assets/catalog/[...]`, 여기서 `[...]` 는 대상에 대해 원하는 범주입니다. 예를 들어 Experience Platform에 개인화 대상을 추가하는 경우 `personalization` 범주. 작성 중인 페이지의 이미지에 연결해야 합니다. 다음을 참조하십시오 [이미지에 연결하는 방법 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
+4. 사용할 스크린샷이나 이미지의 경우 GitHub 인터페이스를 사용하여 파일을 업로드하십시오. `experience-platform.en/help/destinations/assets/catalog/[...]`, 여기서 `[...]` 는 대상에 대해 원하는 범주입니다. 예를 들어 Experience Platform에 개인화 대상을 추가하는 경우 `personalization` 범주. 작성 중인 페이지의 이미지에 연결해야 합니다. 다음을 참조하십시오 [이미지에 연결하는 방법 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
 
    ![GitHub에 이미지 업로드](../assets/docs-framework/upload-image.gif)
 
@@ -83,4 +82,4 @@ ht-degree: 1%
 
 >[!TIP]
 >
->설명서에 이미지 및 링크를 추가하고 Markdown에 대한 기타 질문이 있는 경우 다음을 참조하십시오. [Markdown 사용](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en) Adobe의 공동 작업 쓰기 안내서에서 참조할 수 있습니다.
+>설명서에 이미지 및 링크를 추가하고 Markdown에 대한 기타 질문이 있는 경우 다음을 참조하십시오. [Markdown 사용](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) Adobe의 공동 작업 쓰기 안내서에서 참조할 수 있습니다.

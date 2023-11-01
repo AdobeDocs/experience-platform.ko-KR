@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 정보입니다.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2940'
+source-wordcount: '2938'
 ht-degree: 19%
 
 ---
@@ -120,7 +120,7 @@ Platform에서의 데이터 수집에 대한 자세한 내용은 [데이터 수�
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
@@ -134,7 +134,7 @@ Platform에서의 데이터 수집에 대한 자세한 내용은 [데이터 수�
 
 | 대상 | 설명 |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 플랫폼과 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다. [Campaign 시작](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). 이 통합은 와 작동합니다. [Adobe Campaign 버전 8.4 이상](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 플랫폼과 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다. [Campaign 시작](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). 이 통합은 와 작동합니다. [Adobe Campaign 버전 8.4 이상](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | 다음 [!DNL Salesforce CRM] 대상이 연락처 및 잠재 고객 업데이트 모두를 지원하도록 업데이트되었으며, 더 빠른 업데이트를 위한 성능 개선 사항이 있습니다. |
 
 {style="table-layout:auto"}
@@ -162,8 +162,8 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 | 구성 요소 유형 | 이름 | 설명 |
 | --- | --- | --- |
 | 필드 그룹 | [[!UICONTROL AJO 분류 필드]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | 제안 이벤트가 트리거된 와 상호 작용한 특정 요소의 속성입니다. |
-| 필드 그룹 | [[!UICONTROL MediaAnalytics 상호 작용 세부 정보]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | 시간 경과에 따른 미디어 상호 작용을 추적합니다. |
-| 필드 그룹 | [[!UICONTROL 미디어 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | 미디어 세부 정보를 추적합니다. |
+| 필드 그룹 | [[!UICONTROL MediaAnalytics 인터랙션 세부 정보]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | 시간 경과에 따른 미디어 상호 작용을 추적합니다. |
+| 필드 그룹 | [[!UICONTROL 미디어 세부 사항 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | 미디어 세부 정보를 추적합니다. |
 | 필드 그룹 | [[!UICONTROL Adobe CJM ExperienceEvent - 표면]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | Adobe Journey Optimizer의 경험 이벤트에 대한 표면을 설명합니다. |
 
 {style="table-layout:auto"}
@@ -178,7 +178,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 | 필드 그룹 | [[!UICONTROL AJO 분류 필드]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | 여러 필드의 네임스페이스가 (으)로 업데이트됨 `xdm`. |
 | 필드 그룹 | [[!UICONTROL Journey Orchestration 단계 이벤트 공통 필드]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 새 필드 추가됨, `isReadSegmentTriggerStartEvent`. |
 | 필드 그룹 | [[!UICONTROL 일기예보된 날씨]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | 을(를) 변경함 `xdm:uvIndex` 필드를 정수 형식에 추가하고 `xdm` 이 누락된 여러 필드에 대한 네임스페이스입니다. |
-| 필드 그룹 | [[!UICONTROL 미디어 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` 및 `xdm:implementationDetails` 이(가) 필드 그룹에서 제거되었습니다. |
+| 필드 그룹 | [[!UICONTROL 미디어 세부 사항 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` 및 `xdm:implementationDetails` 이(가) 필드 그룹에서 제거되었습니다. |
 | 데이터 유형 | (다수) | [여러 미디어 속성 이름이 업데이트되었습니다.](https://github.com/adobe/xdm/pull/1626/files) 을 참조하십시오. |
 | 데이터 유형 | [[!UICONTROL 구현 세부 사항]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | 플러터에 대해 알려진 이름이 추가되었습니다. |
 | 데이터 유형 | [[!UICONTROL 관심 영역 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | 이제 데이터 형식은 관심 영역과 연결된 메타데이터 키-값 쌍의 목록을 수락할 수 있습니다. |

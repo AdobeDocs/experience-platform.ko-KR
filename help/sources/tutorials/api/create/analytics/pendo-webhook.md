@@ -3,10 +3,10 @@ title: 흐름 서비스 API를 사용하여 Pendo에 대한 소스 연결 및 �
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Pendo에 연결하는 방법을 알아봅니다.
 badge: Beta
 exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
-source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1459'
-ht-degree: 1%
+source-wordcount: '1455'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 시작하기 {#getting-started}
 
-이 안내서를 사용하려면 다음 Experience Platform 구성 요소에 대해 이해하고 있어야 합니다.
+이 안내서를 사용하려면 Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [소스](../../../../home.md): Experience Platform을 사용하면 다양한 소스에서 데이터를 수집할 수 있으며 다음을 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. [!DNL Platform] 서비스.
 * [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
@@ -89,13 +89,13 @@ curl -X POST \
 
 에 대한 POST 요청을 수행하여 대상 XDM 스키마를 생성할 수 있습니다. [스키마 레지스트리 API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-대상 XDM 스키마를 만드는 방법에 대한 자세한 단계는 다음 자습서를 참조하십시오. [api를 사용하여 스키마 만들기](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+대상 XDM 스키마를 만드는 방법에 대한 자세한 단계는 다음 자습서를 참조하십시오. [api를 사용하여 스키마 만들기](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### 타겟 데이터 세트 만들기 {#target-dataset}
 
 에 대한 POST 요청을 수행하여 타겟 데이터 세트를 생성할 수 있습니다. [카탈로그 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)페이로드 내에 대상 스키마의 ID를 제공합니다.
 
-Target 데이터 세트를 만드는 방법에 대한 자세한 단계는 의 자습서를 참조하십시오. [api를 사용하여 데이터 세트 만들기](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Target 데이터 세트를 만드는 방법에 대한 자세한 단계는 의 자습서를 참조하십시오. [api를 사용하여 데이터 세트 만들기](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### 대상 연결 만들기 {#target-connection}
 

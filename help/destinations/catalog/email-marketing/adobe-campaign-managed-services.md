@@ -2,9 +2,9 @@
 title: Adobe Campaign Managed Cloud Services 연결
 description: Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 플랫폼과 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1582'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->이 통합은 과 작동합니다. [Adobe Campaign 버전 8.4 이상](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1).
+>이 통합은 과 작동합니다. [Adobe Campaign 버전 8.4 이상](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1).
 
 ## 개요 {#overview}
 

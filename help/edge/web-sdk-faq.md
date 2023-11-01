@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform Web SDK에 대해 자주 묻는 질문에 대한 답변을 받아 보십시오.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2098'
 ht-degree: 2%
 
 ---
@@ -84,7 +84,7 @@ Alloy는 Adobe Experience Platform 웹 SDK의 코드 이름입니다. Adobe Expe
 
 아니요. 모든 Adobe Digital Experience 고객은 Adobe Experience Platform Web SDK를 무료로 사용할 수 있습니다. 를 사용하려는 고객 [!DNL Web SDK] 데이터 수집 UI 또는 Experience Platform UI에서 스키마, 데이터 세트, ID 네임스페이스 및 데이터스트림을 생성할 수 있는 올바른 권한을 구성해야 합니다.
 
-이러한 권한 구성에 대한 자세한 내용은 다음 문서를에 참조하십시오. [데이터 수집 권한 관리](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
+이러한 권한 구성에 대한 자세한 내용은 다음 문서를에 참조하십시오. [데이터 수집 권한 관리](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## 웹 SDK는 누가 사용해야 합니까?
 
@@ -119,7 +119,7 @@ Web SDK는 빠르게 발전하고 있습니다. 더 많은 사용 사례가 진�
 
 ## 웹 사이트 방문자가 새 방문자로 표시되지 않도록 Alloy를 사용할 때 ECID를 마이그레이션할 수 있습니까?
 
-예. Adobe Experience Platform Web SDK는 ID 마이그레이션 기능을 제공합니다. 에서 ID 마이그레이션에 대한 지침을 따르십시오. [Platform Web SDK ID 설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) 을 참조하십시오.
+예. Adobe Experience Platform Web SDK는 ID 마이그레이션 기능을 제공합니다. 에서 ID 마이그레이션에 대한 지침을 따르십시오. [Platform Web SDK ID 설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#id-migration) 을 참조하십시오.
 
 ## 웹 SDK는 태그와 어떻게 다릅니까?
 
@@ -161,7 +161,7 @@ CNAME에 대한 자세한 내용은 [Adobe 설명서](https://experienceleague.a
 | **kndctr_orgid_cluster** | 1800 | 30분 | 이 쿠키는 현재 사용자의 요청을 처리하는 Edge Network 영역을 저장합니다. 영역은 Edge Network가 요청을 올바른 영역으로 라우팅할 수 있도록 URL 경로에 사용됩니다. 이 쿠키에는 30분의 라이프타임이 있으므로 사용자가 다른 IP 주소와 연결하는 경우 요청을 가장 가까운 영역으로 라우팅할 수 있습니다. |
 | **mbox** | 63072000 | 2년 | 이 쿠키는 Target 마이그레이션 설정이 true로 설정된 경우에 나타납니다. 타겟을 허용합니다. [mbox 쿠키](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) 웹 SDK에서 설정합니다. |
 | **mboxEdgeCluster** | 1800 | 30분 | 이 쿠키는 Target 마이그레이션 설정이 true로 설정된 경우에 나타납니다. 이 쿠키를 사용하면 Web SDK가 올바른 에지 클러스터를 at.js에 전달할 수 있으므로, 사용자가 사이트를 탐색할 때 Target 프로필이 동기화 상태를 유지할 수 있습니다. |
-| **AMCV_###@AdobeOrg** | 34128000 | 395일 | 이 쿠키는 Adobe Experience Platform Web SDK에서 ID 마이그레이션을 사용하는 경우에만 나타납니다. 이 쿠키는 사이트의 일부가 여전히 visitor.js를 사용하는 동안 Web SDK로 전환할 때 도움이 됩니다. 다음을 참조하십시오. [idMigrationEnabled 설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) 이 설정에 대해 자세히 알아보십시오. |
+| **AMCV_###@AdobeOrg** | 34128000 | 395일 | 이 쿠키는 Adobe Experience Platform Web SDK에서 ID 마이그레이션을 사용하는 경우에만 나타납니다. 이 쿠키는 사이트의 일부가 여전히 visitor.js를 사용하는 동안 Web SDK로 전환할 때 도움이 됩니다. 다음을 참조하십시오. [idMigrationEnabled 설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#identity-options) 이 설정에 대해 자세히 알아보십시오. |
 
 Web SDK를 사용하는 경우 Edge Network는 위의 쿠키 중 하나 이상을 설정합니다. Edge Network는 `secure` 및 `sameSite="none"` 속성.
 

@@ -3,10 +3,10 @@ title: Experience Cloud 대상자
 description: Real-time Customer Data Platform에서 다양한 Experience Cloud 앱으로 대상을 공유하는 방법을 알아봅니다.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 7cd8c257f723e2e60058610bf845ee1fe8785de7
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1699'
-ht-degree: 2%
+source-wordcount: '1683'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->이 대상은 [이전 대상자 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam) Real-time Customer Data Platform에서 다양한 Experience Cloud 솔루션으로 마이그레이션되었습니다.
+>이 대상은 [이전 대상자 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) Real-time Customer Data Platform에서 다양한 Experience Cloud 솔루션으로 마이그레이션되었습니다.
 > 
 >이미 Real-Time CDP의 대상을 을 통해 Audience Manager 및 기타 Experience Cloud 솔루션에 공유하는 경우 [이전 대상자 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), 이 대상을 사용하기 전에 고객 지원 센터에 문의하여 기존 통합을 비활성화해야 합니다.
 
@@ -37,8 +37,8 @@ ht-degree: 2%
 
 Audience Manager에서 다음과 같은 데이터 관리 플랫폼 사용 사례에 Real-Time CDP 대상을 사용할 수 있습니다.
 
-* 추가 중 [타사 데이터](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html?lang=en#third-party-data) 세그먼트 연결;
-* [알고리즘 모델링](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html?lang=en);
+* 추가 중 [타사 데이터](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html#third-party-data) 세그먼트 연결;
+* [알고리즘 모델링](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html);
 * Real-Time CDP 대상 카탈로그에서 아직 지원되지 않는 쿠키 기반 대상으로 대상을 활성화합니다.
 
 ### 내보낸 대상자에 대한 세분화된 제어 {#segments-control}
@@ -168,7 +168,7 @@ Real-Time CDP에서 대상이 처음 활성화되는 시간과 특정 사용 사
 
 ### Audience Manager의 데이터 유효성 검사
 
-Real-Time CDP 대상이 Audience Manager에 다음으로 표시됨 [신호](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [트레이트](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits), 및 [세그먼트](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). 위의 설명서 링크에 설명된 대로 데이터가 표시되었는지 Audience Manager에서 확인할 수 있습니다.
+Real-Time CDP 대상이 Audience Manager에 다음으로 표시됨 [신호](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-signals), [트레이트](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-traits), 및 [세그먼트](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-segments). 위의 설명서 링크에 설명된 대로 데이터가 표시되었는지 Audience Manager에서 확인할 수 있습니다.
 
 Real-Time CDP에서 대상을 보낸 후 15분 후 Audience Manager에서 세그먼트 이름이 채워지기 시작합니다.
 
@@ -181,13 +181,13 @@ Real-Time CDP에서 대상을 보낸 후 15분 후 Audience Manager에서 세그
 모두 [!DNL Real-Time CDP] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스 적용, 다음을 읽습니다. [데이터 거버넌스 개요](/help/data-governance/home.md).
 
 Real-Time CDP의 데이터 거버넌스는 두 가지 방법 모두에 의해 강제 적용됩니다. [데이터 사용 레이블](/help/data-governance/labels/reference.md) 및 마케팅 액션.
-데이터 사용 레이블은 애플리케이션으로 전송되지만 마케팅 액션은 전송되지 않습니다. 즉, Audience Manager에 도달하면 Real-Time CDP의 대상을 사용 가능한 대상으로 내보낼 수 있습니다. Audience Manager에서 다음을 사용할 수 있습니다 [데이터 내보내기 제어](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=en) 대상자를 특정 대상으로 내보내지 못하도록 차단합니다.
+데이터 사용 레이블은 애플리케이션으로 전송되지만 마케팅 액션은 전송되지 않습니다. 즉, Audience Manager에 도달하면 Real-Time CDP의 대상을 사용 가능한 대상으로 내보낼 수 있습니다. Audience Manager에서 다음을 사용할 수 있습니다 [데이터 내보내기 제어](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) 대상자를 특정 대상으로 내보내지 못하도록 차단합니다.
 
 다음으로 표시된 대상자 [!DNL HIPAA] 마케팅 액션은 Real-Time CDP에서 Audience Manager으로 전송되지 않습니다.
 
 ### Audience Manager의 권한 관리
 
-Audience Manager의 대상 및 트레이트는 다음에 해당됩니다 [역할 기반 액세스 제어](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=en) (RBAC).
+Audience Manager의 대상 및 트레이트는 다음에 해당됩니다 [역할 기반 액세스 제어](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) (RBAC).
 
 Real-Time CDP에서 내보낸 대상은 다음과 같은 Audience Manager의 특정 데이터 소스에 할당됩니다. **[!UICONTROL Experience Platform 세그먼트]**.
 

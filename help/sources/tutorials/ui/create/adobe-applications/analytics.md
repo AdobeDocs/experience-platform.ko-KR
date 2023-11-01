@@ -2,9 +2,9 @@
 title: UI에서 Adobe Analytics 소스 연결 만들기
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 358daa9511f647749a8198893b712d00a5cfbc5d
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2481'
+source-wordcount: '2477'
 ht-degree: 6%
 
 ---
@@ -26,9 +26,9 @@ ht-degree: 6%
 이 문서 전체에서 사용되는 다음 주요 용어를 이해하는 것이 중요합니다.
 
 * **표준 속성**: 표준 속성은 Adobe에 의해 사전 정의된 모든 속성입니다. 모든 고객에 대해 동일한 의미를 포함하며 다음에서 사용할 수 있습니다. [!DNL Analytics] 소스 데이터 및 [!DNL Analytics] 스키마 필드 그룹.
-* **사용자 지정 속성**: 사용자 지정 속성은 의 사용자 지정 변수 계층 구조에 있는 모든 속성입니다. [!DNL Analytics]. 사용자 지정 속성은 Adobe Analytics 구현 내에서 특정 정보를 보고서 세트에 캡처하는 데 사용되며 보고서 세트마다 용도가 다를 수 있습니다. 사용자 지정 속성에는 eVar, prop 및 목록이 포함됩니다. 다음을 참조하십시오 [[!DNL Analytics] 전환 변수에 대한 설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) eVar에 대한 자세한 내용은
+* **사용자 지정 속성**: 사용자 지정 속성은 의 사용자 지정 변수 계층 구조에 있는 모든 속성입니다. [!DNL Analytics]. 사용자 지정 속성은 Adobe Analytics 구현 내에서 특정 정보를 보고서 세트에 캡처하는 데 사용되며 보고서 세트마다 용도가 다를 수 있습니다. 사용자 지정 속성에는 eVar, prop 및 목록이 포함됩니다. 다음을 참조하십시오 [[!DNL Analytics] 전환 변수에 대한 설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) eVar에 대한 자세한 내용은
 * **사용자 정의 필드 그룹의 모든 속성**: 고객이 만든 필드 그룹에서 시작된 속성은 모두 사용자가 정의하며 표준 또는 사용자 지정 속성이 아닌 것으로 간주됩니다.
-* **알기 쉬운 이름**: 친숙한 이름은 의 사용자 지정 변수에 대해 사용자가 제공한 레이블입니다 [!DNL Analytics] 구현. 다음을 참조하십시오 [[!DNL Analytics] 전환 변수에 대한 설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) 친숙한 이름에 대한 자세한 정보입니다.
+* **알기 쉬운 이름**: 친숙한 이름은 의 사용자 지정 변수에 대해 사용자가 제공한 레이블입니다 [!DNL Analytics] 구현. 다음을 참조하십시오 [[!DNL Analytics] 전환 변수에 대한 설명서](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) 친숙한 이름에 대한 자세한 정보입니다.
 
 ## Adobe Analytics과의 소스 연결 만들기
 

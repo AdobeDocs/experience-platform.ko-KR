@@ -2,9 +2,9 @@
 title: 사용자 지정 대상 연결 twitter
 description: Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 관련 리마케팅 캠페인을 생성합니다
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '874'
 ht-degree: 4%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에�
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Twitter Custom Audiences] 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+[!DNL Twitter Custom Audiences] 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|

@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;salesforce;api salesfor
 title: (API) Salesforce Marketing Cloud 연결
 description: Salesforce Marketing Cloud(이전의 ExactTarget) 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce Marketing Cloud 내에서 활성화할 수 있습니다.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: b778b7b8c79176d0962a9c757d83a749acd147b6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '3079'
+source-wordcount: '3075'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 ### Experience Platform의 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-에 대한 데이터를 활성화하기 전에 [!DNL (API) Salesforce Marketing Cloud] 대상, 다음 항목이 있어야 합니다. [스키마](/help/xdm/schema/composition.md), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 생성 위치 [!DNL Experience Platform].
+에 대한 데이터를 활성화하기 전에 [!DNL (API) Salesforce Marketing Cloud] 대상, 다음 항목이 있어야 합니다. [스키마](/help/xdm/schema/composition.md), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) 생성 위치 [!DNL Experience Platform].
 
 ### 의 사전 요구 사항 [!DNL (API) Salesforce Marketing Cloud] {#prerequisites-destination}
 

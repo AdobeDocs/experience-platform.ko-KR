@@ -2,9 +2,9 @@
 title: 동의 분석 및 추적
 description: 사용자 동의가 시간 경과에 따라 어떻게 트렌드되는지 추적하기 위해 동의 분석 대시보드를 작성하는 방법을 알아봅니다.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1921'
+source-wordcount: '1919'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->권장되는 대상자 수에는 소프트 제한이 있습니다. 자세한 내용은 [세그먼테이션 보호 설명서](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=en#segmentation-guardrails).
+>권장되는 대상자 수에는 소프트 제한이 있습니다. 자세한 내용은 [세그먼테이션 보호 설명서](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails).
 
 ![다음 [!UICONTROL 선택 값] 속성이 [!UICONTROL 예(옵트인)] 세그먼트 빌더에서 강조 표시된 값입니다. 대상자의 이름과 설명도 강조 표시됩니다.](../images/insights-use-cases/consent-analysis/choice-value.png)
 

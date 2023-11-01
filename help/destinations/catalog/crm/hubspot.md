@@ -3,9 +3,9 @@ title: HubSpot 연결
 description: HubSpot 대상을 사용하면 HubSpot 계정에서 연락처 레코드를 관리할 수 있습니다.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1600'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Experience Platform 및 에서 설정해야 하는 사전 요구 사항에 대�
 
 ### Experience Platform 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-에 대한 데이터를 활성화하기 전에 [!DNL HubSpot] 대상, 다음 항목이 있어야 합니다. [스키마](/help/xdm/schema/composition.md), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), 및 [대상](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=en) 생성 위치 [!DNL Experience Platform].
+에 대한 데이터를 활성화하기 전에 [!DNL HubSpot] 대상, 다음 항목이 있어야 합니다. [스키마](/help/xdm/schema/composition.md), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), 및 [대상](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) 생성 위치 [!DNL Experience Platform].
 
 다음에 대한 Experience Platform 설명서 참조: [대상자 멤버십 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/profile/segmentation.md) 대상 상태에 대한 지침이 필요한 경우.
 

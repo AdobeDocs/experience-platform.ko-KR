@@ -2,16 +2,16 @@
 title: Platform Web SDK의 자사 디바이스 ID
 description: Adobe Experience Platform Web SDK에 대한 자사 디바이스 ID(FPID)를 구성하는 방법에 대해 알아봅니다.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1774'
-ht-degree: 1%
+source-wordcount: '1772'
+ht-degree: 2%
 
 ---
 
 # Platform Web SDK의 자사 디바이스 ID
 
-Adobe Experience Platform Web SDK는 [Adobe Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) 사용자 행동을 추적하기 위해 쿠키를 사용하여 웹 사이트 방문자를 대상으로 합니다. 쿠키 수명에 대한 브라우저 제한 사항을 고려하기 위해 대신 고유한 장치 식별자를 설정하고 관리하도록 선택할 수 있습니다. 이를 자사 디바이스 ID(FPID)라고 합니다. 
+Adobe Experience Platform Web SDK는 [Adobe Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) 사용자 행동을 추적하기 위해 쿠키를 사용하여 웹 사이트 방문자를 대상으로 합니다. 쿠키 수명에 대한 브라우저 제한 사항을 고려하기 위해 대신 고유한 장치 식별자를 설정하고 관리하도록 선택할 수 있습니다. 이를 자사 디바이스 ID(FPID)라고 합니다. 
 
 >[!NOTE]
 >

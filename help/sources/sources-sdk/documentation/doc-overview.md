@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 소스 문서화
 description: Adobe Experience Platform에서 새 소스를 라이브로 만들 수 있는 마지막 단계는 새 소스를 문서화하는 것입니다.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
@@ -19,10 +19,10 @@ Adobe Experience Platform에서 새 소스를 라이브로 설정하기 전 마�
 
 * 새 소스에 대한 설명서 페이지를 만들기 위해 참조할 수 있는 튜토리얼
 * 새 소스에 대해 작성할 설명서 템플릿
-* [기술 설명서 작성에 Markdown을 사용하는 방법에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [Adobe Markdown 기능 이해에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions).
+* [기술 설명서 작성에 Markdown을 사용하는 방법에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Adobe Markdown 기능 이해에 대한 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
 
-## 사전 요구 사항
+## 전제 조건
 
 새 소스 문서화를 시작하려면 먼저 다음 항목이 필요합니다.
 

@@ -2,9 +2,9 @@
 title: 대상의 구성 가능한 공통 내보내기 설정
 description: 대상 수준에서 구성할 수 있는 대상 내보내기 설정과 수정되어 편집할 수 없는 대상을 알아봅니다.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '843'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Experience Platform 대상으로 내보내기 동작을 고려할 때 구성이 
 
 ## 대상 유형 간의 공통 내보내기 설정 {#common-settings-across-destination-types}
 
-대상 내보내기 동작은 대상 유형에 속한 대상 간에 일관됩니다. *대상 내보내기를 트리거하는 것* 및 *대상 내보내기에 포함된 사항*. 대상 내보내기는 대상 서비스가에서 수신하는 알림에 의해 트리거됩니다 [업스트림 실시간 고객 프로필 서비스](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=en#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+대상 내보내기 동작은 대상 유형에 속한 대상 간에 일관됩니다. *대상 내보내기를 트리거하는 것* 및 *대상 내보내기에 포함된 사항*. 대상 내보내기는 대상 서비스가에서 수신하는 알림에 의해 트리거됩니다 [업스트림 실시간 고객 프로필 서비스](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
 대상 내보내기에 포함된 내용은 대상 유형 간에 약간 다릅니다. 자세한 내용 [대상 유형별 일반적인 내보내기 동작 패턴](/help/destinations/how-destinations-work/profile-export-behavior.md). 대상 개발자 또는 Real-Time CDP 사용자는 이러한 설정을 편집할 수 없습니다.
 

@@ -2,9 +2,9 @@
 title: Pinterest 고객 목록 연결
 description: 고객 목록, 사이트를 방문한 사람 또는 Pinterest에서 콘텐츠와 이미 상호 작용한 사람에서 대상을 만듭니다.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '727'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ## 지원되는 ID {#supported-identities}
 
-다음 [!DNL Pinterest Customer List] 대상 은 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+다음 [!DNL Pinterest Customer List] 대상 은 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 다음에서 [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 대상 활성화 워크플로 의 원하는 id를 타겟 필드에 매핑합니다 *pinterest 대상*. ID는 Pinterest으로 데이터를 수집할 때 구분되고 해결됩니다.
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | 매핑 *GAID* 소스 id 네임스페이스를 대상 id 필드에 *pinterest 대상*. ID는 Pinterest으로 데이터를 수집할 때 구분되고 해결됩니다. |
 | IDFA | [!DNL Apple ID for Advertisers] | 매핑 *IDFA* 소스 id 네임스페이스를 대상 id 필드에 *pinterest 대상*. ID는 Pinterest으로 데이터를 수집할 때 구분되고 해결됩니다. |
-| 이메일 | 이메일 주소(텍스트 지우기 또는 SHA256 알고리즘으로 해시됨) | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. <br> 매핑 *이메일* 또는 *Email_LC_SHA256* 소스 id 네임스페이스를 대상 id 필드에 *pinterest 대상*. |
+| EMAIL | 이메일 주소(텍스트 지우기 또는 SHA256 알고리즘으로 해시됨) | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. <br> 매핑 *이메일* 또는 *Email_LC_SHA256* 소스 id 네임스페이스를 대상 id 필드에 *pinterest 대상*. |
 
 {style="table-layout:auto"}
 

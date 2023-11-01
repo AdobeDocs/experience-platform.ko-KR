@@ -2,10 +2,10 @@
 title: Adobe Experience Platform의 고객 관리 키
 description: Adobe Experience Platform에 저장된 데이터에 대한 자체 암호화 키를 설정하는 방법에 대해 알아봅니다.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 930c786db51063c55f731dc90f2ee66e98624555
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '763'
-ht-degree: 2%
+source-wordcount: '761'
+ht-degree: 3%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform에 저장된 데이터는 시스템 수준 키를 사�
 
 >[!NOTE]
 >
->Customer Journey Analytics 고객의 경우 [Customer Journey Analytics 설명서](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=en).
+>Customer Journey Analytics 고객의 경우 [Customer Journey Analytics 설명서](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=ko).
 
 ## 전제 조건
 

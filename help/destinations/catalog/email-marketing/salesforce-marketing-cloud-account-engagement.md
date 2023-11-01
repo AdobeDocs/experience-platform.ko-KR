@@ -3,9 +3,9 @@ title: Salesforce Marketing Cloud 계정 참여
 description: Salesforce Marketing Cloud 계정 참여(이전의 Pardot) 대상을 사용하여 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce Marketing Cloud 계정 참여 내에서 활성화하는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1620'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Experience Platform 및 에서 설정해야 하는 사전 요구 사항에 대�
 
 ### Experience Platform의 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-에 대한 데이터를 활성화하기 전에 [!DNL Marketing Cloud Account Engagement] 대상, 다음 항목이 있어야 합니다. [스키마](/help/xdm/schema/composition.md), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 생성 위치 [!DNL Experience Platform].
+에 대한 데이터를 활성화하기 전에 [!DNL Marketing Cloud Account Engagement] 대상, 다음 항목이 있어야 합니다. [스키마](/help/xdm/schema/composition.md), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) 생성 위치 [!DNL Experience Platform].
 
 ### 의 사전 요구 사항 [!DNL Marketing Cloud Account Engagement] {#prerequisites-destination}
 

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1756'
 ht-degree: 37%
 
 ---
@@ -192,7 +192,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.5.0을 포함합�
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.4.0을 포함합니다.
 
-* 추가됨 [&quot;문서 언로드 중&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) 이벤트 작업 UI 보내기에 대한 확인란입니다.
+* 추가됨 [&quot;문서 언로드 중&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) 이벤트 작업 UI 보내기에 대한 확인란입니다.
 * 에 대한 지원이 추가됨 `out` 옵션 [기본 동의 구성](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) 동의를 받을 때까지 모든 이벤트 삭제(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 보냅니다).
 * 기본 동의 필드에 도구 설명을 추가했습니다.
 * 에 대한 지원이 추가됨 [Adobe 동의 2.0 standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).

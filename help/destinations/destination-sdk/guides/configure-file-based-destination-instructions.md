@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 파일 기반 대상을 구성하는 단계를 나열하고 설명합니다.
 title: Destination SDK을 사용하여 파일 기반 대상 구성
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '681'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 이 페이지에서는 의 정보를 사용하는 방법에 대해 설명합니다. [대상 SDK의 구성 옵션](../functionality/configuration-options.md) 을(를) 구성하기 위한 기타 Destination SDK 기능 및 API 참조 문서 [파일 기반 대상](../../destination-types.md#file-based). 단계는 아래에 순서대로 나열되어 있습니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 아래 그림에 나와 있는 단계로 이동하기 전에 [Destination SDK 시작](../getting-started.md) Destination SDK API를 사용하여 작업하는 데 필요한 Adobe I/O 인증 자격 증명 및 기타 전제 조건을 얻는 방법에 대한 자세한 내용을 보려면 페이지 를 참조하십시오.
 
@@ -387,7 +387,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 대상을 테스트하는 프로세스의 일부로 Experience Platform UI를 사용하여 대상에 활성화할 세그먼트를 만들어야 합니다. Experience Platform에서 대상자를 만드는 방법에 대한 지침은 아래 두 리소스를 참조하십시오.
 
 * [대상 설명서 페이지 만들기](/help/segmentation/ui/overview.md#create-segment)
-* [대상 비디오 워크스루 만들기](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [대상 비디오 워크스루 만들기](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 6단계: 대상 게시 {#publish-destination}
 

@@ -3,10 +3,10 @@ title: 사용자 에이전트 클라이언트 힌트
 description: 사용자 에이전트 클라이언트 힌트가 Web SDK에서 작동하는 방식을 알아봅니다. 클라이언트 힌트를 사용하면 웹 사이트 소유자가 사용자 에이전트 문자열에서 사용할 수 있는 동일한 정보의 대부분에 액세스할 수 있지만 보다 개인정보 보호에 특화되었습니다.
 keywords: 사용자 에이전트;클라이언트 힌트; 문자열; 사용자 에이전트 문자열; 낮은 엔트로피; 높은 엔트로피
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: d856630d4c14387ad4d77a915585fe05803878fb
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1200'
-ht-degree: 6%
+source-wordcount: '1192'
+ht-degree: 7%
 
 ---
 
@@ -120,9 +120,9 @@ Adobe Experience Cloud 솔루션은 다양한 방식으로 사용자 에이전�
 
 ### 높은 엔트로피 클라이언트 힌트에 의존하는 Audience Manager 트레이트 {#aam}
 
-[!DNL Google] 이(가) 다음을 업데이트함: [!DNL Chrome] 를 통해 수집된 정보를 최소화하는 브라우저 기능 `User-Agent` 머리글입니다. 그 결과, Audience Manager 고객은 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) 은 더 이상 을 기반으로 하는 트레이트에 대한 신뢰할 수 있는 정보를 받지 않습니다. [플랫폼 수준 키](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=ko).
+[!DNL Google] 이(가) 다음을 업데이트함: [!DNL Chrome] 를 통해 수집된 정보를 최소화하는 브라우저 기능 `User-Agent` 머리글입니다. 그 결과, Audience Manager 고객은 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ko-KR) 은 더 이상 을 기반으로 하는 트레이트에 대한 신뢰할 수 있는 정보를 받지 않습니다. [플랫폼 수준 키](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
 
-타깃팅에 플랫폼 수준 키를 사용하는 Audience Manager 고객은 다음으로 전환해야 합니다. [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en) 대신 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en), 및 활성화 [높은 엔트로피 클라이언트 힌트](#enabling-high-entropy-client-hints) 신뢰할 수 있는 트레이트 데이터를 계속 받을 수 있습니다.
+타깃팅에 플랫폼 수준 키를 사용하는 Audience Manager 고객은 다음으로 전환해야 합니다. [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=ko-KR) 대신 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ko-KR), 및 활성화 [높은 엔트로피 클라이언트 힌트](#enabling-high-entropy-client-hints) 신뢰할 수 있는 트레이트 데이터를 계속 받을 수 있습니다.
 
 ## 높은 엔트로피 클라이언트 힌트 활성화 {#enabling-high-entropy-client-hints}
 

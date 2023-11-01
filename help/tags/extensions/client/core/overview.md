@@ -2,7 +2,7 @@
 title: 코어 확장 개요
 description: Adobe Experience Platform의 Core Tag Extension에 대해 알아봅니다.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '5482'
 ht-degree: 62%
@@ -191,15 +191,15 @@ Blur 이벤트는 폼이 포커스를 잃으면 작업을 트리거합니다. �
 
 * `property=value`
 
-   Specify the value for the property
+  Specify the value for the property
 
 * Regex
 
-   `property=value`가 정규 표현식인 경우 활성화합니다.
+  `property=value`가 정규 표현식인 경우 활성화합니다.
 
 * 이벤트가 복제되지 않도록 하면서 현재 이벤트 변수에
 
-   다른 `property=value` 쌍을 추가합니다.
+  다른 `property=value` 쌍을 추가합니다.
 
 #### Advanced options (Bubbling)
 
@@ -636,7 +636,7 @@ setTimeout(function() {
 
 ![데이터 수집 UI의 직접 호출 트리거 작업 스크린샷](../../../images/extensions/client/core/direct-call-action.png)
 
-작업이 로 직접 매핑됩니다. [`track` 방법](../../../ui/client-side/satellite-object.md?lang=en#track) 다음에서 `satellite` 클라이언트측 코드로 액세스할 수 있는 개체입니다.
+작업이 로 직접 매핑됩니다. [`track` 방법](../../../ui/client-side/satellite-object.md#track) 다음에서 `satellite` 클라이언트측 코드로 액세스할 수 있는 개체입니다.
 
 ## 코어 확장 데이터 요소 유형
 

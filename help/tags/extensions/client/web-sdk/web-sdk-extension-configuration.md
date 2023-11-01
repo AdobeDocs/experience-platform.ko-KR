@@ -1,10 +1,10 @@
 ---
-title: Web SDK 구성 태그 확장
+title: 웹 SDK 태그 확장 구성
 description: 태그 UI에서 Experience Platform Web SDK 태그 확장을 구성하는 방법에 대해 알아봅니다.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1456'
 ht-degree: 10%
 
 ---

@@ -3,9 +3,9 @@ title: Marketo Measure Ultimate 대상
 description: Marketo Measure Ultimate 대상에 데이터를 연결하고 활성화하는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '652'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Marketo Measure 대상을 사용하는 방법과 시기를 더 잘 이해할 수
 * 여러 CRM 및 마케팅 자동화 시스템을 사용하여 B2B 속성 보고를 활성화합니다.
 * 서드파티 오프라인 터치포인트 데이터를 쉽게 가져올 수 있습니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 Marketo Measure 대상에 대한 다음 사전 요구 사항을 참조하십시오.
 
@@ -78,7 +78,7 @@ Marketo Measure 대상에 대한 다음 사전 요구 사항을 참조하십시�
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
 
-성공적인 데이터 세트 내보내기의 유효성을 검사하기 위해 데이터 세트가 성공적으로 [Snowflake 데이터 웨어하우스](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en).
+성공적인 데이터 세트 내보내기의 유효성을 검사하기 위해 데이터 세트가 성공적으로 [Snowflake 데이터 웨어하우스](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

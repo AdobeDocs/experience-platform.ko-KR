@@ -2,9 +2,9 @@
 title: Adobe Target을 통한 개인화
 description: Server API를 사용하여 Adobe Target에서 생성된 개인화된 경험을 전달하고 렌더링하는 방법에 대해 알아봅니다.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '616'
 ht-degree: 1%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-Edge Network Server API는 의 도움을 받아 Adobe Target에서 생성된 개인화된 경험을 제공하고 렌더링할 수 있습니다. [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
+Edge Network Server API는 의 도움을 받아 Adobe Target에서 생성된 개인화된 경험을 제공하고 렌더링할 수 있습니다. [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
 >[!IMPORTANT]
 >
->을(를) 통해 생성된 개인화 경험 [Target VEC(시각적 경험 작성기)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) 는 서버 API에서 완전히 지원되지 않습니다. 서버 API는 **검색** VEC에서 만든 활동이지만 서버 API에서는 만들 수 없습니다. **렌더링** VEC에서 만든 활동. VEC에서 만든 활동을 렌더링하려면 를 구현하십시오. [하이브리드 개인화](../edge/personalization/hybrid-personalization.md) 웹 SDK 및 Edge Network Server API 사용.
+>을(를) 통해 생성된 개인화 경험 [Target VEC(시각적 경험 작성기)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 는 서버 API에서 완전히 지원되지 않습니다. 서버 API는 **검색** VEC에서 만든 활동이지만 서버 API에서는 만들 수 없습니다. **렌더링** VEC에서 만든 활동. VEC에서 만든 활동을 렌더링하려면 를 구현하십시오. [하이브리드 개인화](../edge/personalization/hybrid-personalization.md) 웹 SDK 및 Edge Network Server API 사용.
 
 ## 데이터 스트림 구성 {#configure-your-datastream}
 
@@ -32,7 +32,7 @@ Adobe Target과 함께 서버 API를 사용하려면 먼저 데이터 스트림 
 
 ## 사용자 지정 매개 변수 {#custom-parameters}
 
-에 있는 대부분의 필드 [!DNL XDM] 각 요청의 일부는 점 표기법으로 일련화된 다음 사용자 정의 또는 로 Target에 전송됩니다. [!DNL mbox] 매개 변수.
+에 있는 대부분의 필드 [!DNL XDM] 각 요청의 일부는 점 표기법으로 일련화된 다음 사용자 정의 또는 로 Target에 전송됩니다 [!DNL mbox] 매개 변수.
 
 
 ### 예 {#custom-parameters-example}
@@ -57,7 +57,7 @@ Target에서 대상을 만들 때 다음 값을 사용자 지정 매개 변수�
 
 ## Target 프로필 업데이트 {#profile-update}
 
-다음 [!DNL Server API] Target 프로필을 업데이트할 수 있습니다. Target 프로필을 업데이트하려면에서 프로필 데이터가 전달되었는지 확인합니다. `data` 다음 형식의 요청 부분입니다.
+다음 [!DNL Server API] Target 프로필에 대한 업데이트를 허용합니다. Target 프로필을 업데이트하려면에서 프로필 데이터가 전달되었는지 확인합니다. `data` 다음 형식의 요청 부분입니다.
 
 ```json
 "data":  {
@@ -72,7 +72,7 @@ Target에서 대상을 만들 때 다음 값을 사용자 지정 매개 변수�
 
 ### 스키마 {#schemas}
 
-요청의 쿼리 부분은 Target이 반환할 콘텐츠를 결정합니다. 아래 `personalization` 개체, `schemas` Target이 반환할 콘텐츠의 유형을 결정합니다.
+요청의 쿼리 부분은 Target에서 반환되는 콘텐츠를 결정합니다. 아래 `personalization` 개체, `schemas` target에서 반환할 콘텐츠의 유형을 결정합니다.
 
 어떤 종류의 오퍼를 검색할지 확실하지 않은 경우 Edge Network에 대한 개인화 쿼리에 4개의 스키마를 모두 포함해야 합니다.
 
@@ -119,7 +119,7 @@ POST /ee/v2/interact
 
 ### 요청 {#request}
 
-적절한 Target 쿼리와 함께 전체 XDM 개체, 프로필 매개 변수를 포함하는 전체 요청은 아래에 요약되어 있습니다.
+적절한 Target 쿼리와 함께 전체 XDM 개체, 프로필 매개 변수를 포함하는 전체 요청이 아래에 요약되어 있습니다.
 
 ```shell
 curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}' \

@@ -2,10 +2,10 @@
 title: offer decisioning을 통한 개인화
 description: Server API를 사용하여 Offer decisioning을 통해 개인화된 경험을 전달하고 렌더링하는 방법에 대해 알아봅니다.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 4%
+source-wordcount: '572'
+ht-degree: 5%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-Edge Network Server API는에서 관리하는 개인화된 경험을 제공할 수 있습니다. [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) 웹 채널에 연결합니다.
+Edge Network Server API는에서 관리하는 개인화된 경험을 제공할 수 있습니다. [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=ko-KR) 웹 채널에 연결합니다.
 
 [!DNL Offer Decisioning] 은 활동 및 개인화 경험을 만들고, 활성화하고, 제공하기 위한 시각적이지 않은 인터페이스를 지원합니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
-을 통한 개인화 [!DNL Offer Decisioning] 은(는) 다음에 대한 액세스 권한이 있어야 합니다. [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=en) 통합을 구성하기 전에
+을 통한 개인화 [!DNL Offer Decisioning] 은(는) 다음에 대한 액세스 권한이 있어야 합니다. [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) 통합을 구성하기 전에
 
 ## 데이터 스트림 구성 {#configure-your-datastream}
 
@@ -41,7 +41,7 @@ Server API를 Offer Decisioning과 함께 사용하려면 먼저 데이터 스�
 
 다음 이후 [데이터 스트림 구성](#configure-your-datastream), 개인화 캠페인에 사용할 결정 범위를 정의해야 합니다.
 
-[결정 범위](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes) 는 원하는 활동 및 배치 ID가 포함된 Base64로 인코딩된 JSON 문자열입니다. [!DNL Offer Decisioning Service] 오퍼를 제안할 때 사용합니다.
+[결정 범위](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes) 는 원하는 활동 및 배치 ID가 포함된 Base64로 인코딩된 JSON 문자열입니다. [!DNL Offer Decisioning Service] 오퍼를 제안할 때 사용합니다.
 
 **결정 범위 JSON**
 
@@ -58,7 +58,7 @@ Server API를 Offer Decisioning과 함께 사용하려면 먼저 데이터 스�
 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
 ```
 
-오퍼 및 컬렉션을 만든 후에는 다음을 정의해야 합니다 [결정 범위](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes).
+오퍼 및 컬렉션을 만든 후에는 다음을 정의해야 합니다 [결정 범위](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes).
 
 Base64로 인코딩된 결정 범위를 복사합니다. 다음에서 사용합니다. `query` 서버 API 요청의 개체입니다.
 

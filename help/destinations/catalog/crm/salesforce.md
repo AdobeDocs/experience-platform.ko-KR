@@ -3,9 +3,9 @@ keywords: crm;CRM;CRM 대상;salesforce crm;salesforce crm 대상
 title: Salesforce CRM 연결
 description: Salesforce CRM 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce CRM 내에서 활성화할 수 있습니다.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '3121'
+source-wordcount: '3117'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ### Experience Platform의 사전 요구 사항 {#prerequisites-in-experience-platform}
 
-Salesforce CRM 대상으로 데이터를 활성화하기 전에 [스키마](/help/xdm/schema/composition.md), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 생성 위치 [!DNL Experience Platform].
+Salesforce CRM 대상으로 데이터를 활성화하기 전에 [스키마](/help/xdm/schema/composition.md), a [데이터 세트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), 및 [세그먼트](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) 생성 위치 [!DNL Experience Platform].
 
 ### 의 사전 요구 사항 [!DNL Salesforce CRM] {#prerequisites-destination}
 

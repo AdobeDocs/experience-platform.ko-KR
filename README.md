@@ -1,8 +1,8 @@
 ---
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: ht
-source-wordcount: '508'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '504'
+ht-degree: 98%
 
 ---
 # 콘텐츠 기여
@@ -15,7 +15,7 @@ Adobe는 Adobe 커뮤니티와 설명서 팀이 아닌 Adobe 직원들의 내용
 
 ## Adobe 콘텐츠에 기여하는 방법
 
-[Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en)를 참조하십시오.
+[Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ko)를 참조하십시오.
 
 기여하는 방식은 사용자의 신분과 사용자가 기여하고 싶은 변경 내용의 종류에 따라 다릅니다.
 
@@ -23,7 +23,7 @@ Adobe는 Adobe 커뮤니티와 설명서 팀이 아닌 Adobe 직원들의 내용
 
 요청을 제출하려면 문서에서 **문제 로그** 링크를 클릭하면 GitHub에서 문제가 열립니다. 제목과 설명을 지정한 다음 **새 문제 제출**&#x200B;을 클릭합니다.
 
-부분 업데이트를 요청하려면 문서에서 **이 페이지 편집** 링크를 클릭하여 GitHub에서 소스 문서를 엽니다. GitHub UI를 사용하여 업데이트를 만듭니다. 자세한 내용은 일반 [Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)를 참조하십시오.
+부분 업데이트를 요청하려면 문서에서 **이 페이지 편집** 링크를 클릭하여 GitHub에서 소스 문서를 엽니다. GitHub UI를 사용하여 업데이트를 만듭니다. 자세한 내용은 일반 [Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ko)를 참조하십시오.
 
 이 저장소의 설명서 및 코드 샘플에 대해 사용자가 제출하는 부분 수정 또는 설명은 Adobe 사용 약관의 적용을 받습니다.
 
@@ -37,7 +37,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Adobe 직원의 주요 변경 사항 또는 새로운 문서
 
-Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터, 프로그램 관리자 또는 개발자이고 기술 문서에 기여하거나 기술 문서를 작성하는 것이 본인의 직무인 경우 개인 저장소(`https://git.corp.adobe.com/AdobeDocs`)를 사용해야 합니다. 자세한 내용은 [내부 공동 작업 안내서](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en)를 참조하십시오.
+Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터, 프로그램 관리자 또는 개발자이고 기술 문서에 기여하거나 기술 문서를 작성하는 것이 본인의 직무인 경우 개인 저장소(`https://git.corp.adobe.com/AdobeDocs`)를 사용해야 합니다. 자세한 내용은 [내부 공동 작업 안내서](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html)를 참조하십시오.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 

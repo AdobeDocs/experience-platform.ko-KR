@@ -2,9 +2,9 @@
 title: Marketo Engage 대상
 description: Marketo Engage은 마케팅, 광고, 분석 및 상거래를 위한 유일한 엔드 투 엔드 CXM(Customer Experience Management) 솔루션입니다. CRM 리드 관리 및 고객 참여에서 계정 기반 마케팅 및 매출 기여도 분석에 이르기까지 활동을 자동화하고 관리할 수 있습니다.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '898'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,7 @@ Experience Platform의 속성을 조직이 Marketo에서 액세스할 수 있는
 >* 대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions).
 >* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-대상을 설정하고 대상을 활성화하는 방법에 대한 자세한 지침은 다음을 참조하십시오. [Adobe Experience Platform 대상을 Marketo 정적 목록으로 푸시](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) Marketo 설명서에서 확인할 수 있습니다.
+대상을 설정하고 대상을 활성화하는 방법에 대한 자세한 지침은 다음을 참조하십시오. [Adobe Experience Platform 대상을 Marketo 정적 목록으로 푸시](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) Marketo 설명서에서 확인할 수 있습니다.
 
 아래 비디오에서는 Marketo 대상을 구성하고 대상을 활성화하는 단계도 보여 줍니다.
 

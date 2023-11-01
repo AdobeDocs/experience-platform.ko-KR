@@ -2,9 +2,9 @@
 title: Snap Inc 연결
 description: Snapchat Ads Platform에 연결하고 Experience Platform에서 대상을 내보내는 방법에 대해 알아봅니다.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1028'
 ht-degree: 1%
 
 ---
@@ -128,7 +128,7 @@ ht-degree: 1%
 
 ![대상자](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Adobe 대상자가 Snap Inc.에 처음 활성화되면 처음에는 빈 대상자로 표시됩니다. 이는 Adobe Experience Platform이 대상자를 평가할 때까지 멤버 데이터를 Snap Inc로 내보내지 않기 때문입니다. Experience Platform에서 대상을 평가하는 방법에 대한 자세한 내용은 [세그먼테이션 서비스 개요](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Adobe 대상자가 Snap Inc.에 처음 활성화되면 처음에는 빈 대상자로 표시됩니다. 이는 Adobe Experience Platform이 대상자를 평가할 때까지 멤버 데이터를 Snap Inc로 내보내지 않기 때문입니다. Experience Platform에서 대상을 평가하는 방법에 대한 자세한 내용은 [세그먼테이션 서비스 개요](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

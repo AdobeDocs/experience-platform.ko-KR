@@ -2,16 +2,16 @@
 title: 외부 ML 환경으로 데이터 내보내기
 description: Data Distiller으로 만든 준비된 교육 데이터 세트를 ML 환경에서 읽어 모델을 교육하고 점수를 매길 수 있는 클라우드 스토리지 위치에 공유하는 방법에 대해 알아봅니다.
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '546'
 ht-degree: 3%
 
 ---
 
 # 외부 ML 환경으로 데이터 내보내기
 
-이 문서에서는 Data Distiller으로 만든 준비된 교육 데이터 세트를 ML 환경에서 읽어 모델을 교육하고 점수를 매길 수 있는 클라우드 스토리지 위치에 공유하는 방법을 보여 줍니다. 이 예제에서는 교육 데이터 세트를 [데이터 랜딩 영역(DLZ)](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html?lang=en). 기계 학습 환경에서 작업하는 데 필요한 경우 저장소 대상을 변경할 수 있습니다.
+이 문서에서는 Data Distiller으로 만든 준비된 교육 데이터 세트를 ML 환경에서 읽어 모델을 교육하고 점수를 매길 수 있는 클라우드 스토리지 위치에 공유하는 방법을 보여 줍니다. 이 예제에서는 교육 데이터 세트를 [데이터 랜딩 영역(DLZ)](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html). 기계 학습 환경에서 작업하는 데 필요한 경우 저장소 대상을 변경할 수 있습니다.
 
 다음 [대상에 대한 흐름 서비스](https://developer.adobe.com/experience-platform-apis/references/destinations/) 계산된 기능 데이터 세트를 적절한 클라우드 스토리지 위치에 랜딩하여 기능 파이프라인을 완료하는 데 사용됩니다.
 

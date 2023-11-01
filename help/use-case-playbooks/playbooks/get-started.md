@@ -4,9 +4,9 @@ title: 시작하기
 description: 사용 사례 플레이북 기능을 시작하는 방법에 대해 알아봅니다.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '314'
 ht-degree: 100%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 100%
 
 ### Adobe Journey Optimizer 사용자를 위한 샌드박스 구성 {#sandbox-configuration-journey-optimizer}
 
-조직에 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=en) 라이선스가 부여된 경우 메시지에 필요한 기술 매개변수를 정의하는 채널 사전 설정을 샌드박스에 구성해야 합니다. [Adobe Journey Optimizer에서 채널 표면을 설정하는 방법에 대해 알아봅니다](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
+조직에 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) 라이선스가 부여된 경우 메시지에 필요한 기술 매개변수를 정의하는 채널 사전 설정을 샌드박스에 구성해야 합니다. [Adobe Journey Optimizer에서 채널 표면을 설정하는 방법에 대해 알아봅니다](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
 
 ## 팀에 필요한 액세스 권한 부여 {#grant-access-permissions}
 

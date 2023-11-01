@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 로컬 환경에서 텍스트 편집기를 사용하여 소스 설명서 페이지를 만듭니다
 description: 이 문서는 로컬 환경을 사용하여 소스에 대한 설명서를 작성하고 가져오기 요청(PR)을 제출하는 방법에 대한 단계를 제공합니다.
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '640'
 ht-degree: 3%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 3%
 
 >[!TIP]
 >
->Adobe 기여 안내서의 다음 문서를 사용하여 설명서 프로세스를 추가로 지원할 수 있습니다. <ul><li>[Git 및 Markdown 작성 도구 설치](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)</li><li>[로컬로 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)</li><li>[주요 변경 사항에 대한 GitHub 기여 워크플로](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en)</li></ul>
+>Adobe 기여 안내서의 다음 문서를 사용하여 설명서 프로세스를 추가로 지원할 수 있습니다. <ul><li>[Git 및 Markdown 작성 도구 설치](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[로컬로 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[주요 변경 사항에 대한 GitHub 기여 워크플로](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
-## 사전 요구 사항
+## 전제 조건
 
 다음 자습서를 사용하려면 로컬 컴퓨터에 GitHub Desktop이 설치되어 있어야 합니다. GitHub Desktop이 없는 경우 애플리케이션을 다운로드할 수 있습니다 [여기](https://desktop.github.com/).
 
@@ -37,7 +37,7 @@ Platform GitHub 저장소의 기본 페이지에서 을 선택합니다. **포�
 
 >[!TIP]
 >
->자세한 내용은 다음 자습서를 참조하십시오. [로컬에서 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository).
+>자세한 내용은 다음 자습서를 참조하십시오. [로컬에서 설명서를 위한 Git 리포지토리 설정](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository).
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
@@ -59,7 +59,7 @@ Platform GitHub 저장소의 기본 페이지에서 을 선택합니다. **포�
 
 ## 소스에 대한 설명서 페이지 작성
 
-로컬 시스템에 복제된 저장소와 새 분기가 생성되면 이제 를 통해 새 소스에 대한 설명서 페이지 작성을 시작할 수 있습니다. [선택한 텍스트 편집기](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors).
+로컬 시스템에 복제된 저장소와 새 분기가 생성되면 이제 를 통해 새 소스에 대한 설명서 페이지 작성을 시작할 수 있습니다. [선택한 텍스트 편집기](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors).
 
 Adobe은 다음을 권장합니다. [Visual Studio 코드](https://code.visualstudio.com/) Adobe Markdown 작성 확장을 설치하는 방법을 설명합니다. 확장을 설치하려면 Visual Studio Code를 시작한 다음 **확장** 왼쪽 탐색에서 탭으로 이동합니다.
 

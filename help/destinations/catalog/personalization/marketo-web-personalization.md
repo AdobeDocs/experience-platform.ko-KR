@@ -3,26 +3,26 @@ keywords: Marketo 웹 개인화;marketo 웹 개인화;Marketo 웹 개인화 확�
 title: Marketo 웹 개인화 확장
 description: Marketo Web Personalization 확장은 Adobe Experience Platform의 개인화 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 3%
+source-wordcount: '499'
+ht-degree: 4%
 
 ---
 
-# [!DNL Marketo Web Personalization] 확장 {#marketo-web-personalization-extension}
+# [!DNL Marketo Web Personalization] 확장 기능 {#marketo-web-personalization-extension}
 
 ## 개요 {#overview}
 
-이 확장은 다음에 대한 스크립트를 배포합니다. [!DNL Marketo’s] 웹 개인화 및 ContentAI 애플리케이션. [!DNL Marketo] 웹 개인화는 익명 방문자에 대한 firmographics 및 내의 광범위한 행동 속성과 같은 웹 방문자 특성에 맞게 콘텐츠를 고유하게 식별하고 개인화합니다. [!DNL Marketo] 알려진 방문자에 대한 참여 플랫폼. [!DNL Marketo] ContentAI에는 B2B 고객에게만 제공되는 웹 및 이메일 캠페인에 대한 AI 기반 권장 사항 및 개인화 기능이 포함되어 있습니다.
+이 확장은 다음에 대한 스크립트를 배포합니다. [!DNL Marketo's] 웹 개인화 및 ContentAI 애플리케이션. [!DNL Marketo] 웹 개인화는 익명 방문자에 대한 firmographics 및 내의 광범위한 행동 속성과 같은 웹 방문자 특성에 맞게 콘텐츠를 고유하게 식별하고 개인화합니다. [!DNL Marketo] 알려진 방문자에 대한 참여 플랫폼. [!DNL Marketo] ContentAI에는 B2B 고객에게만 제공되는 웹 및 이메일 캠페인에 대한 AI 기반 권장 사항 및 개인화 기능이 포함되어 있습니다.
 
-[!DNL Marketo Web Personalization] 는 Adobe Experience Platform의 개인화 확장 프로그램입니다. Marketo의 웹 개인화 및 ContentAI에 대한 자세한 내용은 [웹 개인화 개요](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=en).
+[!DNL Marketo Web Personalization] 는 Adobe Experience Platform의 개인화 확장 프로그램입니다. Marketo의 웹 개인화 및 ContentAI에 대한 자세한 내용은 [웹 개인화 개요](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html).
 
 이 대상은 태그 확장입니다. Platform에서 태그 확장이 작동하는 방식에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md).
 
 ![Marketo 웹 개인화 확장](../../assets/catalog/personalization/marketo-web-personalization/catalog.png)
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 이 확장 프로그램은 다음에서 사용할 수 있습니다. [!DNL Destinations] Platform을 구입한 모든 고객을 위한 카탈로그.
 

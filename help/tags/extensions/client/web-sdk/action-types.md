@@ -3,10 +3,10 @@ title: Adobe Experience Platform 웹 SDK 확장의 작업 유형
 description: Adobe Experience Platform 웹 SDK 태그 확장에서 제공하는 다양한 작업 유형에 대해 알아봅니다.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 528b13aa20da62c32456e02cb2293fdded156421
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 3%
+source-wordcount: '757'
+ht-degree: 2%
 
 ---
 
@@ -23,8 +23,8 @@ Adobe에게 이벤트를 보냅니다. [!DNL Experience Platform] Adobe Experien
 
 이벤트 보내기 작업 유형에는 구현에 따라 유용할 수 있는 몇 가지 다른 필드가 있습니다. 이러한 필드는 모두 선택 사항입니다.
 
-- **유형:** 이 필드에서는 XDM 스키마에 기록될 이벤트 유형을 지정할 수 있습니다. 다음을 참조하십시오. [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) 기본 이벤트 유형에 대한 자세한 내용은 를 참조하십시오.
-- **데이터:** XDM 스키마와 일치하지 않는 데이터는 이 필드를 사용하여 보낼 수 있습니다. 이 필드는 Adobe Target 프로필을 업데이트하거나 Target Recommendations 속성을 보내려는 경우에 유용합니다. 예제에 대해서는 다음을 참조하십시오. [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=ko-KR).<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
+- **유형:** 이 필드에서는 XDM 스키마에 기록될 이벤트 유형을 지정할 수 있습니다. 다음을 참조하십시오. [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) 기본 이벤트 유형에 대한 자세한 내용은 를 참조하십시오.
+- **데이터:** XDM 스키마와 일치하지 않는 데이터는 이 필드를 사용하여 보낼 수 있습니다. 이 필드는 Adobe Target 프로필을 업데이트하거나 Target Recommendations 속성을 전송하려는 경우 유용합니다. 예제에 대해서는 다음을 참조하십시오. [설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=ko-KR).<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
 - **데이터 세트 ID:** 데이터 스트림에서 지정한 데이터 세트 이외의 데이터 세트로 데이터를 보내야 하는 경우 여기에서 해당 데이터 세트 ID를 지정할 수 있습니다.
 - **문서가 언로드됩니다.** 사용자가 페이지를 떠나더라도 이벤트가 서버에 도달하는지 확인하려면 **[!UICONTROL 문서가 언로드됩니다.]** 확인란. 이렇게 하면 이벤트가 서버에 도달할 수 있지만 응답은 무시됩니다.
 - **시각적 개인화 결정 렌더링:** 페이지에서 개인화된 콘텐츠를 렌더링하려면 다음을 확인하십시오. **[!UICONTROL 시각적 개인화 결정 렌더링]** 확인란. 필요한 경우 결정 범위 및/또는 서피스를 지정할 수도 있습니다. 다음을 참조하십시오. [개인화 설명서](../../../../edge/personalization/rendering-personalization-content.md#automatically-rendering-content) 개인화된 콘텐츠를 렌더링하는 방법에 대한 자세한 정보입니다.

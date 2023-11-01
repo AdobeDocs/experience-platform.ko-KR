@@ -3,26 +3,26 @@ keywords: bizible;bizible 확장;bizible 대상
 title: Bizible 확장
 description: Bizible 확장은 Adobe Experience Platform의 이메일 대상입니다. 확장 기능에 대한 자세한 내용은 Adobe Exchange의 확장 페이지를 참조하십시오.
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 3%
+source-wordcount: '444'
+ht-degree: 4%
 
 ---
 
-# [!DNL Bizible] 확장 {#bizible-extension}
+# [!DNL Bizible] 확장 기능 {#bizible-extension}
 
 ## 개요 {#overview}
 
 [!DNL Bizible] 는 데이터에 대한 탁월한 가시성을 제공하는 업계 선두의 B2B 속성 솔루션으로, 비즈니스 성장에 따라 현명한 의사 결정을 내릴 수 있습니다.
 
-[!DNL Bizible] 는 Adobe Experience Platform의 이메일 확장입니다. Bizible에 대한 자세한 내용은 [마케팅 속성](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en) Bizible 개요 리소스에서 확인할 수 있습니다.
+[!DNL Bizible] 는 Adobe Experience Platform의 이메일 확장입니다. Bizible에 대한 자세한 내용은 [마케팅 속성](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html) Bizible 개요 리소스에서 확인할 수 있습니다.
 
 이 대상은 태그 확장입니다. Platform에서 태그 확장이 작동하는 방식에 대한 자세한 내용은 [태그 확장 개요](../launch-extensions/overview.md).
 
 ![Bizible 확장](../../assets/catalog/email/bizible/catalog.png)
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 이 확장 프로그램은 다음에서 사용할 수 있습니다. [!DNL Destinations] Platform을 구입한 모든 고객을 위한 카탈로그.
 

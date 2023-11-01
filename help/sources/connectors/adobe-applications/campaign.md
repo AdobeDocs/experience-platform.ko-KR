@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;Adobe Campaign Managed Cloud Ser
 title: Adobe Campaign Managed Cloud Services
 description: 사용자 인터페이스를 사용하여 Campaign 관리 Cloud Service을 플랫폼에 연결하는 방법을 알아봅니다
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: 39a503b14c731aeed279bbbfa8c814c2ec26ed92
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 1%
+source-wordcount: '753'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 Managed Services 플랫폼을 제공하며 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다. 다음 방문: [Adobe Campaign v8 설명서](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) 추가 정보.
+Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 Managed Services 플랫폼을 제공하며 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다. 다음 방문: [Adobe Campaign v8 설명서](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html) 추가 정보.
 
 Adobe Campaign Managed Cloud Services 소스를 사용하면 Adobe Campaign v8 게재 로그 및 추적 로그 데이터를 Adobe Experience Platform으로 가져올 수 있습니다.
 
@@ -30,7 +30,7 @@ Adobe Campaign Managed Cloud Services 소스를 사용하면 Adobe Campaign v8 �
 
 >[!IMPORTANT]
 >
->Campaign에서 로그 데이터를 보려면 Adobe Campaign v8 클라이언트 콘솔에 대한 액세스 권한이 있어야 합니다. 다음 방문: [Campaign v8 설명서](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) 클라이언트 콘솔을 다운로드하고 설치하는 방법에 대한 자세한 내용을 참조하십시오.
+>Campaign에서 로그 데이터를 보려면 Adobe Campaign v8 클라이언트 콘솔에 대한 액세스 권한이 있어야 합니다. 다음 방문: [Campaign v8 설명서](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) 클라이언트 콘솔을 다운로드하고 설치하는 방법에 대한 자세한 내용을 참조하십시오.
 
 클라이언트 콘솔을 통해 Campaign v8 인스턴스에 로그인합니다. 아래 [!DNL Explorer] 탭, 선택 [!DNL Administration] 다음을 선택합니다. [!DNL Configuration]. 그런 다음 을 선택합니다. [!DNL Data schemas] 그런 다음 을 적용합니다. `broadLog` 이름 또는 레이블을 필터링합니다. 표시되는 목록에서 이름이 인 수신자 게재 로그 소스 스키마를 선택합니다 `broadLogRcp`.
 

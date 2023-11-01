@@ -3,9 +3,9 @@ keywords: advertising; criteo;
 title: 크리테오 연결
 description: 크리터는 신뢰할 수 있고 영향력 있는 광고를 통해 개방형 인터넷을 통해 모든 소비자에게 더 풍부한 경험을 제공할 수 있도록 지원합니다. 세계 최대 규모의 상거래 데이터 세트와 동급 최고의 AI를 갖춘 Criteo는 쇼핑 여정의 각 접점이 적절한 시간에 적절한 광고를 통해 고객에게 도달하도록 개인화되도록 보장합니다.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1042'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 2%
 
 ## 지원되는 ID {#supported-identities}
 
-크리터는 아래 표에 설명된 ID 활성화를 지원합니다. 자세히 알아보기 [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+크리터는 아래 표에 설명된 ID 활성화를 지원합니다. 자세히 알아보기 [id](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | 대상 ID | 설명 | 고려 사항 |
 | --- | --- | --- |
@@ -178,7 +178,7 @@ ht-degree: 2%
 
 ## 데이터 사용 및 관리 {#data-usage}
 
-모든 Adobe Experience Platform 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. Adobe Experience Platform에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ko-KR).
+모든 Adobe Experience Platform 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. Adobe Experience Platform에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ko).
 
 ## 추가 리소스
 

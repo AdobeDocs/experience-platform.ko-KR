@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보 2023년 4월
 description: Adobe Experience Platform의 2023년 4월 릴리스 정보입니다.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2082'
 ht-degree: 98%
 
 ---
@@ -68,7 +68,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | --- | --- |
 | 데이터스트림에 대한 IP 주소 난독화 | 이제 [데이터스트림 구성 UI](../../datastreams/configure.md)에서 부분 또는 전체의 데이터스트림 수준 IP 난독화 옵션을 정의할 수 있습니다. <br><br>데이터스트림 수준의 IP 난독화 설정은 Adobe Target 및 Audience Manager에서 구성된 모든 IP 난독화보다 우선합니다. <br><br>Adobe Analytics로 전송된 데이터는 데이터스트림 수준의 [!UICONTROL IP 난독화] 설정의 영향을 받지 않습니다. Adobe Analytics는 현재 난독화되지 않은 IP 주소를 수신합니다. Analytics가 난독화된 IP 주소를 수신하려면 Adobe Analytics에서 별도로 IP 난독화를 구성해야 합니다. 이 동작은 향후 릴리스에서 업데이트될 예정입니다.<br><br> IP 난독화 및 구성 방법에 대한 자세한 내용은 [데이터스트림 구성 설명서](../../datastreams/configure.md#advanced-options)를 참조하십시오. |
 | [데이터스트림 구성 재정의](../../datastreams/overrides.md) | 이제 이벤트 데이터 세트, Target 속성 토큰, ID 동기화 컨테이너 및 Analytics 보고서 세트와 같은 특정 설정을 재정의하는 데 사용할 수 있는 데이터스트림에 대한 추가 구성 옵션을 정의할 수 있습니다. <br><br>데이터스트림 구성 재정의는 2단계 프로세스입니다. <ol><li>먼저 [데이터스트림 구성 페이지](../../datastreams/configure.md)에서 데이터스트림 구성 재정의를 정의해야 합니다.</li><li>그런 다음 Web SDK 명령 또는 Web SDK [태그 확장 기능](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)을 사용하여 Edge Network에 해당 재정의를 보내야 합니다.</li></ol> |
-| OAuth JWT Secret | 고객은 [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en)을 사용하여 Adobe 및 Google Service 토큰으로 이벤트 전달에서 서버 간 상호 작용을 지원할 수 있습니다. |
+| OAuth JWT Secret | 고객은 [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html)을 사용하여 Adobe 및 Google Service 토큰으로 이벤트 전달에서 서버 간 상호 작용을 지원할 수 있습니다. |
 | [!DNL Pinterest Conversions API] 확장 기능 | [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) 이벤트 전달 확장 기능을 사용하면 Adobe Experience Platform Edge Network에서 캡처된 데이터를 활용하여 [!DNL Pinterest Conversions API]을 통해 서버측 이벤트의 형태로 [!DNL Pinterest]로 전송할 수 있습니다 |
 
 {style="table-layout:auto"}

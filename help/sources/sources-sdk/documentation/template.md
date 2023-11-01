@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: 설명서 셀프서비스 템플릿
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 YOURSOURCE에 연결하는 방법을 알아봅니다.
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2139'
+source-wordcount: '2135'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 >
 >이 소스 커넥터 및 설명서 페이지는 *YourSource* 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. *업데이트를 위해 연락할 수 있는 링크 또는 이메일 주소 삽입*.
 
-## 사전 요구 사항
+## 전제 조건
 
 *이 섹션에서 Adobe Experience Platform 사용자 인터페이스에서 소스 설정을 시작하기 전에 고객이 알아야 할 사항에 대한 정보를 추가합니다. 이 작업은 다음에 대해 수행할 수 있습니다.*
 
@@ -49,7 +49,7 @@ ht-degree: 1%
 
 다음 튜토리얼에서는 다음을 만드는 단계를 설명합니다. *소스* 소스 연결 및 가져올 데이터 흐름 만들기 *소스* 를 사용하여 데이터를 플랫폼에 전송 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-### 기본 연결 만들기 {#base-connection}
+### 기본 연결을 만듭니다 {#base-connection}
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
@@ -299,13 +299,13 @@ curl -X POST \
 
 에 대한 POST 요청을 수행하여 대상 XDM 스키마를 생성할 수 있습니다. [스키마 레지스트리 API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-대상 XDM 스키마를 만드는 방법에 대한 자세한 단계는 다음 자습서를 참조하십시오. [api를 사용하여 스키마 만들기](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+대상 XDM 스키마를 만드는 방법에 대한 자세한 단계는 다음 자습서를 참조하십시오. [api를 사용하여 스키마 만들기](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### 타겟 데이터 세트 만들기 {#target-dataset}
 
 에 대한 POST 요청을 수행하여 타겟 데이터 세트를 생성할 수 있습니다. [카탈로그 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)페이로드 내에 대상 스키마의 ID를 제공합니다.
 
-Target 데이터 세트를 만드는 방법에 대한 자세한 단계는 의 자습서를 참조하십시오. [api를 사용하여 데이터 세트 만들기](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Target 데이터 세트를 만드는 방법에 대한 자세한 단계는 의 자습서를 참조하십시오. [api를 사용하여 데이터 세트 만들기](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### 대상 연결 만들기 {#target-connection}
 
@@ -448,7 +448,7 @@ curl -X POST \
 데이터 가져오기를 위한 마지막 단계 *소스* 를 플랫폼으로 가져와서 데이터 흐름을 만듭니다. 이제 다음 필수 값이 준비되었습니다.
 
 * [소스 연결 ID](#source-connection)
-* [Target 연결 ID](#target-connection)
+* [대상 연결 ID](#target-connection)
 * [ID 매핑](#mapping)
 
 데이터 흐름은 소스에서 데이터를 예약하고 수집합니다. 페이로드 내에 이전에 언급된 값을 제공하면서 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다.
@@ -542,7 +542,7 @@ curl -X POST \
 
 ### 계정 업데이트
 
-에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. [!DNL Flow Service] 기본 연결 ID를 쿼리 매개 변수로 제공하는 동안 API입니다. PATCH 요청을 할 때는 소스 계정의 고유한 이름을 제공해야 합니다 `etag` 다음에서 `If-Match` 머리글입니다. 전체 API 예제는 의 안내서를 참조하십시오. [api를 사용하여 소스 계정 업데이트](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+에 대한 PATCH 요청을 수행하여 소스 계정의 이름, 설명 및 자격 증명을 업데이트합니다. [!DNL Flow Service] 기본 연결 ID를 쿼리 매개 변수로 제공하는 동안 API입니다. PATCH 요청을 할 때는 소스 계정의 고유 값을 제공해야 합니다 `etag` 다음에서 `If-Match` 머리글입니다. 전체 API 예제는 의 안내서를 참조하십시오. [api를 사용하여 소스 계정 업데이트](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### 데이터 흐름 삭제
 

@@ -2,9 +2,9 @@
 title: Adobe Analytics 확장 기능 릴리스 노트
 description: Adobe Experience Platform의 Adobe Analytics 태그 확장 기능에 대한 최신 릴리스 정보입니다.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1392'
 ht-degree: 82%
 
 ---
@@ -193,7 +193,7 @@ ht-degree: 82%
 
 **기능**:
 
-* 알려진 clearVars 문제에 대한 수정이 포함된 [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=en#version-2.14.0)으로 Adobe Analytics 확장이 업데이트됨
+* 알려진 clearVars 문제에 대한 수정이 포함된 [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0)으로 Adobe Analytics 확장이 업데이트됨
 * 확장에 Exchange 링크가 추가됨. 드롭다운을 선택하고 &quot;extension info&quot;를 선택하면 Exchange 목록을 확인할 수 있음
 
 **버그 수정**:

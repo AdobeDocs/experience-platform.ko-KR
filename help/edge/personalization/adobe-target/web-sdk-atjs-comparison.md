@@ -3,9 +3,9 @@ title: at.js와 Experience Platform Web SDK 비교
 description: at.js 기능을 Experience Platform Web SDK와 비교하는 방법에 대해 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;의사 결정 범위;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;의사 결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2281'
+source-wordcount: '2257'
 ht-degree: 6%
 
 ---
@@ -75,7 +75,7 @@ window.adobe.target.init(window, document, {
 });
 ```
 
-[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
+[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 
 ### 웹 SDK 구성
@@ -240,7 +240,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
+[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 ### Web SDK 사용
 
@@ -325,7 +325,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
+[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 
 ### Web SDK 사용
@@ -462,7 +462,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-에 대해 자세히 알아보기 `applyOffers` 다음에서 명령 [전용 설명서](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en).
+에 대해 자세히 알아보기 `applyOffers` 다음에서 명령 [전용 설명서](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html).
 
 
 ### Web SDK 사용
@@ -514,7 +514,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=en)
+[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
 
 ### Web SDK 사용
 
@@ -645,7 +645,7 @@ alloy("sendEvent", {
 adobe.target.triggerView("homeView")
 ```
 
-[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=en)
+[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html)
 
 
 ### Web SDK 사용
@@ -685,7 +685,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
+[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 
 ### Web SDK 사용
@@ -694,7 +694,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >Platform Web SDK 버전 2.6.0 이상을 사용 중인지 확인하십시오.
 
-응답 토큰은 `propositions` 의 결과에 노출되어 있는 `sendEvent` 명령입니다. 각 제안에는 다음 배열이 포함됩니다 `items`, 각 항목에는 `meta` Target 관리 UI에서 활성화된 경우 응답 토큰으로 채워진 개체입니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
+응답 토큰은 `propositions` 의 결과에 노출되어 있는 `sendEvent` 명령입니다. 각 제안에는 다음 배열이 포함됩니다 `items`, 각 항목에는 `meta` Target 관리 UI에서 활성화된 경우 응답 토큰으로 채워진 개체입니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 **예**
 
@@ -859,7 +859,7 @@ Analytics 서버측 로깅은 다음을 설정하여 활성화할 수 있습니�
 
 ![](assets/a4t-server-side-atjs.png)
 
-[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=en)
+[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
 ### Web SDK 사용
 
@@ -942,7 +942,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
+[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 ### Web SDK 사용
 
@@ -1042,7 +1042,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=en)
+[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
 
 
 ### Web SDK 사용
@@ -1122,7 +1122,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=en)
+[자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
 
 ### Web SDK 사용
 

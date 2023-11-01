@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보 2022년 2월
 description: Adobe Experience Platform의 2022년 2월 릴리스 정보입니다.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1017'
 ht-degree: 27%
 
 ---
@@ -33,7 +33,7 @@ Adobe Experience Platform에서 여러 기능 제공 [!DNL dashboards] 일별 �
 
 | 기능 | 설명 |
 | --- | --- |
-| 신규 표준 대상 위젯 | 다음 표준 위젯을 사용하여 대상과 관련된 다양한 지표를 시각화할 수 있습니다.<ul><li>대상별로 최근 활성화된 세그먼트. 이 위젯은 선택한 대상에 따라 가장 최근에 활성화된 상위 5개의 세그먼트를 내림차순으로 표시합니다.</li><li>대상자 크기 트렌드. 이 위젯은 해당 대상 계정에 매핑된 세그먼트의 기간 동안의 프로필 수 관계를 보여 줍니다.</li><li>ID별로 매핑되지 않은 세그먼트. 이 위젯은 특정 대상의 ID 개수와 ID를 내림차순으로 정렬한 매핑되지 않은 상위 5개의 세그먼트를 나열합니다.</li><li>ID별로 매핑된 세그먼트. 이 위젯은 매핑된 상위 5개의 세그먼트를 나열합니다. 세그먼트는 위젯의 드롭다운 메뉴에서 선택한 대상 ID와 일치하는 소스 ID의 각 수에 따라 높음에서 낮음 순으로 정렬됩니다.</li><li>공통 대상자. 이 위젯은 페이지 상단에서 선택한 대상 계정과 위젯 드롭다운에서 선택한 대상에서 활성화된 상위 5개의 세그먼트 목록을 제공합니다.</li></ul> 사용 가능한 표준 위젯에 대한 자세한 내용은 [대상 대시보드 설명서.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#standard-widgets). |
+| 새로운 기능 표준 대상 위젯 | 다음 표준 위젯을 사용하여 대상과 관련된 다양한 지표를 시각화할 수 있습니다.<ul><li>대상별로 최근 활성화된 세그먼트. 이 위젯은 선택한 대상에 따라 가장 최근에 활성화된 상위 5개의 세그먼트를 내림차순으로 표시합니다.</li><li>대상자 크기 트렌드. 이 위젯은 해당 대상 계정에 매핑된 세그먼트의 기간 동안의 프로필 수 관계를 보여 줍니다.</li><li>ID별로 매핑되지 않은 세그먼트. 이 위젯은 특정 대상의 ID 개수와 ID를 내림차순으로 정렬한 매핑되지 않은 상위 5개의 세그먼트를 나열합니다.</li><li>ID별로 매핑된 세그먼트. 이 위젯은 매핑된 상위 5개의 세그먼트를 나열합니다. 세그먼트는 위젯의 드롭다운 메뉴에서 선택한 대상 ID와 일치하는 소스 ID의 각 수에 따라 높음에서 낮음 순으로 정렬됩니다.</li><li>공통 대상자. 이 위젯은 페이지 상단에서 선택한 대상 계정과 위젯 드롭다운에서 선택한 대상에서 활성화된 상위 5개의 세그먼트 목록을 제공합니다.</li></ul> 사용 가능한 표준 위젯에 대한 자세한 내용은 [대상 대시보드 설명서.](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#standard-widgets). |
 
 에 대한 자세한 내용 [!DNL Dashboards], 다음을 참조하십시오. [[!DNL Dashboards] 개요](../../dashboards/home.md).
 
@@ -53,7 +53,7 @@ Platform에서의 데이터 수집에 대한 자세한 내용은 [데이터 수�
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
@@ -71,7 +71,7 @@ Adobe Experience Platform [!DNL Identity Service] 은 디바이스와 시스템 
 
 | 기능 | 설명 |
 | --- | --- |
-| 신규 다음에 대한 권한 `view-identity-graph` | 이제 다음을 사용할 수 있습니다. `view-identity-graph` 조직의 사용자가 id 그래프 데이터를 볼 수 있는지 여부를 제어하는 권한입니다. 이 권한이 없는 사용자는 UI의 ID 그래프 뷰어에 액세스하거나 액세스할 때 액세스할 수 없습니다 [!DNL Identity Service] ID를 반환하는 API. 다음을 참조하십시오. [액세스 제어 개요](../../access-control/home.md) 사용 권한에 대한 자세한 내용을 참조하십시오. |
+| 새로운 기능 다음에 대한 권한 `view-identity-graph` | 이제 다음을 사용할 수 있습니다. `view-identity-graph` 조직의 사용자가 id 그래프 데이터를 볼 수 있는지 여부를 제어하는 권한입니다. 이 권한이 없는 사용자는 UI의 ID 그래프 뷰어에 액세스하거나 액세스할 때 액세스할 수 없습니다 [!DNL Identity Service] ID를 반환하는 API. 다음을 참조하십시오. [액세스 제어 개요](../../access-control/home.md) 사용 권한에 대한 자세한 내용을 참조하십시오. |
 
 에 대한 일반적인 추가 정보 [!DNL Identity Service]을(를) 참조하십시오. [ID 서비스 개요](../../identity-service/home.md).
 

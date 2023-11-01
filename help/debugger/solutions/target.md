@@ -1,21 +1,21 @@
 ---
-title: Adobe Experience Platform Debugger를 사용하여 Adobe Target 구현 테스트
-description: Adobe Experience Platform Debugger를 사용하여 Adobe Target에서 활성화된 웹 사이트를 테스트하고 디버깅하는 방법을 알아봅니다.
+title: Adobe Experience Platform Debugger을 사용하여 Adobe Target 구현 테스트
+description: Adobe Experience Platform Debugger을 사용하여 Adobe Target에서 활성화된 웹 사이트를 테스트하고 디버깅하는 방법에 대해 알아봅니다.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: c3b5b63767a934be16a479d04853e1250b3bf775
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 4%
+source-wordcount: '1209'
+ht-degree: 5%
 
 ---
 
-# Adobe Experience Platform Debugger를 사용하여 Adobe Target 구현 테스트
+# Adobe Experience Platform Debugger을 사용하여 Adobe Target 구현 테스트
 
-Adobe Experience Platform Debugger는 Adobe Target 구현과 연결된 웹 사이트를 테스트하고 디버깅하는 데 유용한 도구 모음을 제공합니다. 이 안내서에서는 Target이 활성화된 웹 사이트에서 Platform Debugger를 사용하기 위한 몇 가지 일반적인 워크플로우 및 모범 사례를 다룹니다.
+Adobe Experience Platform Debugger은 Adobe Target 구현과 함께 조정된 웹 사이트를 테스트하고 디버깅하는 데 유용한 도구 모음을 제공합니다. 이 안내서에서는 Target을 사용할 수 있는 웹 사이트에서 Platform Debugger를 사용하기 위한 몇 가지 일반적인 워크플로우 및 모범 사례를 다룹니다.
 
-## 사전 요구 사항
+## 전제 조건
 
-Target에 Platform Debugger를 사용하려면 웹 사이트에서 [at.js 라이브러리](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) 버전 1.x 이상 이전 버전은 지원되지 않습니다.
+Target용 Platform Debugger를 사용하려면 웹 사이트에서 [at.js 라이브러리](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/) 버전 1.x 이상 이전 버전은 지원되지 않습니다.
 
 ## Platform Debugger 초기화
 
@@ -23,11 +23,11 @@ Target에 Platform Debugger를 사용하려면 웹 사이트에서 [at.js 라이
 
 선택 **[!DNL Target]** 왼쪽 탐색. Platform Debugger가 사이트에서 호환되는 at.js 버전이 실행 중임을 감지하면 Adobe Target 구현 세부 사항이 표시됩니다.
 
-![Platform Debugger에서 선택된 Target 보기로, 현재 표시된 브라우저 페이지에서 Adobe Target이 활성 상태임을 나타냅니다.](../images/solutions/target/target-initialized.png)
+![Platform Debugger에서 선택된 타겟 뷰로, 현재 표시된 브라우저 페이지에서 Adobe Target이 활성 상태임을 나타냅니다.](../images/solutions/target/target-initialized.png)
 
 ## 전역 구성 정보
 
-구현의 전역 구성에 대한 정보는 Platform Debugger의 Target 보기 맨 위에 표시됩니다.
+Platform Debugger의 Target 보기 맨 위에 구현의 전역 구성에 대한 정보가 표시됩니다.
 
 ![Platform Debugger 내에서 강조 표시된 Target에 대한 전역 구성 정보](../images/solutions/target/global-config.png)
 
@@ -44,11 +44,11 @@ Target에 Platform Debugger를 사용하려면 웹 사이트에서 [at.js 라이
 
 선택 **[!DNL Network Requests]** 페이지에서 수행된 각 네트워크 요청에 대한 요약 정보를 보려면 다음을 수행하십시오.
 
-![다음 [!DNL Network Requests] platform Debugger 내에서 선택한 Target에 대한 섹션](../images/solutions/target/network-requests.png)
+![다음 [!DNL Network Requests] platform Debugger 내에서 선택한 대상에 대한 섹션](../images/solutions/target/network-requests.png)
 
 페이지에서 작업(페이지 다시 로드 포함)을 수행하면 새 열이 표에 자동으로 추가되므로 작업의 시퀀스와 각 요청 간 값이 변경되는 방법을 볼 수 있습니다.
 
-![다음 [!DNL Network Requests] platform Debugger 내에서 선택한 Target에 대한 섹션](../images/solutions/target/new-request.png)
+![다음 [!DNL Network Requests] platform Debugger 내에서 선택한 대상에 대한 섹션](../images/solutions/target/new-request.png)
 
 다음 값이 캡처됩니다.
 
@@ -66,10 +66,10 @@ Target에 Platform Debugger를 사용하려면 웹 사이트에서 [at.js 라이
 | [!DNL Timestamp] | 브라우저의 시간대 내에서 요청(또는 이벤트)이 발생한 시점의 타임스탬프입니다. |
 | [!DNL Time Since Page Load] | 요청 시 페이지가 처음 로드된 이후 경과된 시간입니다. |
 | [!DNL Initiator] | 요청 개시자입니다. 즉, 누가 요청을 했는가? |
-| [!DNL clientCode] | Target이 인식하는 조직 계정의 식별자입니다. |
+| [!DNL clientCode] | Target에서 인식하는 조직 계정의 식별자입니다. |
 | [!DNL requestType] | 요청에 사용된 API입니다. at.js 1.x를 사용하는 경우 값은 다음과 같습니다. `/json`. at.js 2.x를 사용하는 경우 값은 다음과 같습니다. `delivery`. |
 | [!DNL Audience Manager Blob] | &quot;blob&quot;이라고도 하는 암호화된 Audience Manager 메타데이터에 대한 정보를 제공합니다. |
-| [!DNL Audience Location Hint] | 데이터 수집 지역 ID. 특정 ID 서비스 데이터 센터의 지리적 위치에 대한 숫자 식별자입니다. 자세한 내용은 다음 Audience Manager 설명서를 참조하십시오. [DCS 지역 ID, 위치 및 호스트 이름](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=ko-KR) 및 의 Experience Cloud ID 서비스 안내서 [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html?lang=en#reference-a761030ff06c4439946bb56febf42d4c). |
+| [!DNL Audience Location Hint] | 데이터 수집 지역 ID. 특정 ID 서비스 데이터 센터의 지리적 위치에 대한 숫자 식별자입니다. 자세한 내용은 다음 Audience Manager 설명서를 참조하십시오. [DCS 지역 ID, 위치 및 호스트 이름](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=ko-KR) 및 의 Experience Cloud ID 서비스 안내서 [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c). |
 | [!DNL Browser Height] | 브라우저 높이(픽셀 단위)입니다. |
 | [!DNL Browser Time Offset] | 시간대와 연결된 브라우저의 시간 오프셋입니다. |
 | [!DNL Browser Width] | 브라우저 너비(픽셀 단위)입니다. |
@@ -77,9 +77,9 @@ Target에 Platform Debugger를 사용하려면 웹 사이트에서 [at.js 라이
 | [!DNL context] | 화면 차원 및 클라이언트 플랫폼을 포함하여 요청을 하는 데 사용되는 브라우저에 대한 컨텍스트 정보가 포함된 객체입니다. |
 | [!DNL prefetch] | 다음 기간 동안에서 사용되는 매개 변수 `prefetch` 처리 중입니다. |
 | [!DNL execute] | 다음 기간 동안 사용되는 매개변수 `execute` 처리 중입니다. |
-| [!DNL Experience Cloud Visitor ID] | 하나가 감지되면 는 [Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) 현재 사이트 방문자에게 할당됩니다. |
-| [!DNL experienceCloud] | 이 특정 사용자 세션(A4T)의 Experience Cloud ID를 보유합니다. [보조 데이터 ID](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?#section_2C1F745A2B7D41FE9E30915539226E3A), 및 [방문자 ID (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html). |
-| [!DNL id] | 다음 [TARGET ID](https://developers.adobetarget.com/api/delivery-api/#section/Identifying-Visitors/Target-ID) 방문자용입니다. |
+| [!DNL Experience Cloud Visitor ID] | 하나가 감지되면 는 [Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ko-KR) 현재 사이트 방문자에게 할당됩니다. |
+| [!DNL experienceCloud] | 이 특정 사용자 세션(A4T)의 Experience Cloud ID를 보유합니다. [보조 데이터 ID](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?#section_2C1F745A2B7D41FE9E30915539226E3A), 및 [방문자 ID (ECID)](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ko-KR). |
+| [!DNL id] | 다음 [대상 ID](https://developers.adobetarget.com/api/delivery-api/#section/Identifying-Visitors/Target-ID) 방문자용입니다. |
 | [!DNL Mbox Host] | 다음 [호스트](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) Target 요청이 수행된 대상입니다. |
 | [!DNL Mbox PC] | 다음을 캡슐화하는 문자열 [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) 세션 ID 및 [Adobe Target Edge](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934) 위치 힌트. 이 값은 at.js에서 세션 및 에지 위치가 고정된 상태를 유지하도록 하는 데 사용됩니다. |
 | [!DNL Mbox Referrer] | 특정 항목의 URL 레퍼러 [`mbox`](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/) 요청. |
@@ -98,18 +98,18 @@ Target에 Platform Debugger를 사용하려면 웹 사이트에서 [at.js 라이
 
 특정 네트워크 이벤트에 대한 매개변수의 세부 정보를 보려면 해당 테이블 셀을 선택합니다. 설명 및 해당 값을 포함하여 매개 변수에 대한 추가 정보를 제공하는 팝오버가 나타납니다. 값이 JSON 객체인 경우 대화 상자에 객체 구조에 대한 탐색 가능한 보기가 포함됩니다.
 
-![다음 [!DNL Network Requests] platform Debugger 내에서 선택한 Target에 대한 섹션](../images/solutions/target/request-param-details.png)
+![다음 [!DNL Network Requests] platform Debugger 내에서 선택한 대상에 대한 섹션](../images/solutions/target/request-param-details.png)
 
 ## [!DNL Configuration]
 
-선택 **[!DNL Configuration]** Target을 위해 추가 디버깅 도구 선택을 활성화하거나 비활성화합니다.
+선택 **[!DNL Configuration]** Target에 대한 추가 디버깅 도구 선택을 활성화하거나 비활성화합니다.
 
-![다음 [!DNL Configuration Requests] platform Debugger 내에서 선택한 Target에 대한 섹션](../images/solutions/target/configuration.png)
+![다음 [!DNL Configuration Requests] platform Debugger 내에서 선택한 대상에 대한 섹션](../images/solutions/target/configuration.png)
 
 | 디버깅 도구 | 설명 |
 | --- | --- |
 | [!DNL Target Console Logging] | 활성화되면 브라우저의 콘솔 탭에서 at.js 로그에 액세스할 수 있습니다. 이 기능은 를 추가하여 활성화할 수도 있습니다 `mboxDebug` 브라우저 URL에 대한 매개 변수(임의 값 포함)를 쿼리합니다. |
-| [!DNL Target Diable] | 활성화되면 페이지에서 모든 Target 기능이 비활성화됩니다. 이 확장은 페이지별 오퍼가 Target에서 문제를 일으키는 원인인지 확인하는 데 사용할 수 있습니다. |
+| [!DNL Target Diable] | 활성화되면 페이지에서 모든 Target 기능이 비활성화됩니다. 이를 사용하여 Target 특정 오퍼가 페이지에서 문제를 일으키는지 확인할 수 있습니다. |
 | [!DNL Target Trace] | **참고**: 이 기능을 사용하려면 로그인해야 합니다.<br><br>활성화되면 모든 퀘스트와 함께 추적 토큰이 전송되고 각 응답에서 추적 개체가 반환됩니다. `at.js` 응답을 구문 분석합니다 `window.__targetTraces`. 각 추적 개체에는 [[!DNL Network Requests] tab] 아래에 추가 항목이 있습니다.<ul><li>요청 전후의 속성을 볼 수 있는 프로필 스냅숏입니다.</li><li>일치함 및 일치하지 않음 [활동](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)현재 프로필이 특정 활동에 자격이 되거나 되지 않는 이유를 보여 줍니다.<ul><li>이렇게 하면 프로필이 특정 시점에 대해 자격이 있는 대상과 그 이유를 식별하는 데 도움이 될 수 있습니다.</li><li>Target 문서에는 다양한 활동 유형에 대한 자세한 정보가 포함되어 있습니다.</li></ul></li></ul> |
 
 {style="table-layout:auto"}

@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform B2B 에디션의 대상
 description: Adobe Real-time Customer Data Platform B2B 에디션의 대상 역할에 대한 개요입니다.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
@@ -25,4 +25,4 @@ Marketo Engage 대상을 사용하여 데이터를 내보내는 방법에 대한
 
 - Real-time Customer Data Platform B2B 에디션에 사용할 수 있는 대상에 대한 자세한 내용은 [대상 카탈로그](../../destinations/catalog/overview.md).
 - Marketo Engage으로 내보낼 수 있는 ID에 대한 자세한 내용은 [Marketo Engage 대상 설명서](../../destinations/catalog/adobe/marketo-engage.md).
-- Experience Platform UI에서 Marketo Engage 대상에 연결하고 데이터를 내보내는 방법에 대한 자세한 내용은 을 참조하십시오. [&#39;Adobe Experience Platform 세그먼트를 Marketo 정적 목록으로 푸시&#39;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en).
+- Experience Platform UI에서 Marketo Engage 대상에 연결하고 데이터를 내보내는 방법에 대한 자세한 내용은 을 참조하십시오. [&#39;Adobe Experience Platform 세그먼트를 Marketo 정적 목록으로 푸시&#39;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html).

@@ -2,10 +2,10 @@
 title: 보고서 세트 데이터용 Adobe Analytics Source Connector
 description: 이 문서에서는 Analytics에 대한 개요를 제공하고 Analytics 데이터의 사용 사례를 설명합니다.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 59f7b7cd2e7c52b64ee7fdb8e33b3a0116697696
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 7%
+source-wordcount: '1159'
+ht-degree: 6%
 
 ---
 
@@ -74,7 +74,7 @@ XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../../xdm/home.md).
 | ID 필드 | 설명 |
 | --- | --- |
 | AAID | AAID는 Adobe Analytics의 기본 장치 식별자이며, 를 통해 전달되는 모든 이벤트에 존재할 수 있습니다. [!DNL Analytics] 소스. AAID를 때로 다음과 같이 합니다. *이전 Analytics ID* 또는 를 로 `s_vi` 쿠키 ID. 그럼에도 불구하고 AAID는 `s_vi` 쿠키가 없습니다. AAID는 `post_visid_high` 및 `post_visid_low` 열 위치 [[!DNL Analytics] 데이터 피드](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). 특정 이벤트에서 AAID 필드는 에 설명된 여러 가지 다른 유형 중 하나일 수 있는 단일 ID를 포함합니다. [작업 순서 [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). **참고**: 전체 보고서 세트 내에서 AAID에는 여러 이벤트에 걸쳐 혼합된 유형을 포함할 수 있습니다. |
-| ECID | ECID(Experience Cloud ID)는 다음과 같은 경우 Adobe Analytics에 채워지는 별도의 디바이스 식별자 필드입니다. [!DNL Analytics] 는 Experience Cloud ID 서비스를 사용하여 구현됩니다. ECID를 MCID(Marketing Cloud ID)라고도 합니다. 이벤트에 ECID가 존재하는 경우, AAID는 Analytics의 여부에 따라 ECID에 기반할 수 있습니다 [유예 기간](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) 이(가) 구성되었습니다. ECID는 `mcvisid` Analytics 데이터 피드에서. ECID에 대한 자세한 내용은 [ECID 개요](../../../identity-service/ecid.md). ECID가 와 작동하는 방식에 대한 자세한 내용 [!DNL Analytics], 다음에 대한 문서 참조 [Analytics 및 Experience Cloud ID 요청](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html?lang=ko-kr). |
+| ECID | ECID(Experience Cloud ID)는 다음과 같은 경우 Adobe Analytics에 채워지는 별도의 디바이스 식별자 필드입니다. [!DNL Analytics] 는 Experience Cloud ID 서비스를 사용하여 구현됩니다. ECID를 MCID(Marketing Cloud ID)라고도 합니다. 이벤트에 ECID가 존재하는 경우, AAID는 Analytics의 여부에 따라 ECID에 기반할 수 있습니다 [유예 기간](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html) 이(가) 구성되었습니다. ECID는 `mcvisid` Analytics 데이터 피드에서. ECID에 대한 자세한 내용은 [ECID 개요](../../../identity-service/ecid.md). ECID가 와 작동하는 방식에 대한 자세한 내용 [!DNL Analytics], 다음에 대한 문서 참조 [Analytics 및 Experience Cloud ID 요청](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/legacy-analytics.html). |
 | AACUSTOMID | AACUSTOMID는 의 사용을 기반으로 Adobe Analytics에서 채워지는 별도의 식별자 필드입니다. `s.VisitorID` 의 변수 [!DNL Analytics] 구현. AACUSTOMID는 `cust_visid` 열 위치 [[!DNL Analytics] 데이터 피드](https://experienceleague.adobe.com/docs/analytics/export/analytics-data-feed/data-feed-contents/datafeeds-reference.html). AACUSTOMID가 있으면 AACUSTOMID가 로 정의된 다른 모든 식별자를 우선하므로 AAID는 AACUSTOMID를 기반으로 합니다. [작업 순서 [!DNL Analytics] ID](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-order-of-operations.html). |
 
 ### 방법 [!DNL Analytics] 소스가 ID 처리

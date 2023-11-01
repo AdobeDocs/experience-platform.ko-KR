@@ -3,9 +3,9 @@ title: 이벤트 전달 시작
 description: Adobe Experience Platform에서 이벤트 전달 사용을 시작하려면 이 단계별 자습서를 따르십시오.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: efe88b582b4539a14f32c6e2c80a8b35cde1626e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '873'
 ht-degree: 27%
 
 ---
@@ -20,14 +20,14 @@ Adobe Experience Platform에서 이벤트 전달을 사용하려면 다음 세 �
 
 * [Adobe Experience Platform 웹 SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [서버 간 API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
+* [서버 간 API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html)
 
 >[!NOTE]
 >Platform Web SDK 및 Platform Mobile SDK는 Adobe Experience Platform의 태그를 통해 배포할 필요가 없습니다. 그러나 태그를 사용하여 이러한 SDK를 배포하는 것이 좋습니다.
 
 Edge 네트워크로 데이터를 전송하면 Adobe 솔루션을 전환하여 데이터를 보낼 수 있습니다. Adobe이 아닌 솔루션으로 데이터를 전송하려면 이벤트 전달 시 해당 설정을 지정합니다.
 
-## 사전 요구 사항
+## 전제 조건
 
 * Adobe Real-Time CDP Connections, Prime 또는 Ultimate(Adobe 계정 팀에 문의하여 가격 책정)
 * Adobe Experience Platform의 이벤트 전달

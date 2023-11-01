@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1589'
-ht-degree: 3%
+source-wordcount: '1587'
+ht-degree: 4%
 
 ---
 
@@ -31,7 +31,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 
 **수정 사항 및 개선 사항**
 
-* 이제 웹 SDK는 다음과 유사하게 Audience Manager 쿠키 대상 값을 인코딩합니다. [Data Integration Library(DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en).
+* 이제 웹 SDK는 다음과 유사하게 Audience Manager 쿠키 대상 값을 인코딩합니다. [Data Integration Library(DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ko-KR).
 
 ## 버전 2.16.0 - 2023년 4월 25일
 

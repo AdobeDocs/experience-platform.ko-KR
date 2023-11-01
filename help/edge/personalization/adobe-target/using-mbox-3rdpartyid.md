@@ -3,9 +3,9 @@ title: mbox3rdPartyId에 대한 실시간 프로필 동기화
 description: Adobe Experience Platform Web SDK에서 mbox3rdPartyID를 사용하는 방법에 대해 알아봅니다.
 keywords: 개인화;target;adobe target;renderDecisions;sendEvent;mbox3rdPartyId;
 exl-id: 677d1054-0769-4ec6-811e-e02d4b247c2a
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '159'
 ht-degree: 30%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 30%
 
 Adobe Target의 mbox3rdPartyID는 회사의 충성도 프로그램을 위한 멤버십 ID와 같은 회사의 방문자 ID입니다.
 
-방문자가 회사 사이트에 로그인하면 일반적으로 회사는 방문자 계정, 포인트 카드, 멤버십 번호 또는 해당 회사에 대한 기타 적용 가능한 식별자에 연결되는 ID를 만듭니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=en#)
+방문자가 회사 사이트에 로그인하면 일반적으로 회사는 방문자 계정, 포인트 카드, 멤버십 번호 또는 해당 회사에 대한 기타 적용 가능한 식별자에 연결되는 ID를 만듭니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html#)
 
 
 ## 사용 방법 `mbox3rdPartyId` Web SDK를 사용하여
@@ -26,9 +26,9 @@ Adobe Target의 mbox3rdPartyID는 회사의 충성도 프로그램을 위한 멤
 
 ![](assets/mbox3rdpartyid.png)
 
-### 2단계: 보내기 `mbox3rdpartyId` 대상 Target
+### 2단계: 보내기 `mbox3rdpartyId` 대상
 
-보내기 `mbox3rdpartyId` 에서 Target `sendEvent` 명령, 1단계에서 구성한 ID 네임스페이스 사용.
+보내기 `mbox3rdpartyId` 대상 위치: `sendEvent` 명령, 1단계에서 구성한 ID 네임스페이스 사용.
 [ID 전송에 대해 자세히 알아보기](../../identity/overview.md#syncing-identities)
 
 ```javascript

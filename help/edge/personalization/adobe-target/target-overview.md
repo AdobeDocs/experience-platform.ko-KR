@@ -3,9 +3,9 @@ title: Platform Web SDK로 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform Web SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;의사 결정 범위;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;의사 결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1316'
 ht-degree: 6%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->를 사용하여 Target 구현을 Platform Web SDK로 마이그레이션하는 방법에 대해 알아봅니다. [at.js 2.x에서 Platform Web SDK로 Target 마이그레이션](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) 튜토리얼.
+>를 사용하여 Target 구현을 Platform Web SDK로 마이그레이션하는 방법에 대해 알아봅니다. [Target을 at.js 2.x에서 Platform Web SDK로 마이그레이션](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) 튜토리얼.
 >
->을(를) 사용하여 처음으로 Target을 구현하는 방법에 대해 알아봅니다. [Web SDK를 사용하여 Adobe Experience Cloud 구현](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ko-KR) 튜토리얼. Target 관련 정보는 다음 제목의 자습서 섹션을 참조하십시오 [Platform Web SDK를 사용하여 Target 설정](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+>를 사용하여 처음으로 Target을 구현하는 방법을 알아봅니다. [Web SDK를 사용하여 Adobe Experience Cloud 구현](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ko-KR) 튜토리얼. Target에 대한 자세한 내용은 다음 제목의 자습서 섹션을 참조하십시오 [Platform Web SDK를 사용하여 Target 설정](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
 
 
 다음 기능이 테스트되었으며 현재 지원됨 [!DNL Target]:
@@ -29,7 +29,7 @@ ht-degree: 6%
 * [경험 타깃팅 활동](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [다변량 테스트(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 * [권장 사항 활동](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
-* [기본 Target 노출 및 전환 보고](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
+* [기본 타겟 노출 및 전환 보고](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [VEC 지원](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
 ## [!DNL Platform Web SDK] 시스템 다이어그램
@@ -46,7 +46,7 @@ ht-degree: 6%
 | 4 | 프로필 스크립트가 실행된 다음 로 피드 [!DNL Target] 프로필 스토리지. 프로필 스토리지는 [!UICONTROL 대상 라이브러리] (예:에서 공유된 세그먼트) [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]). |
 | 5 | URL 요청 매개 변수 및 프로필 데이터를 기반으로 [!DNL Target] 현재 페이지 보기 및 향후 프리페치된 보기에 대해 방문자에게 표시할 활동 및 경험을 결정합니다. [!DNL Target] 그런 다음 이를 edge network로 다시 전송합니다. |
 | 6 | a. 에지 네트워크는 추가적인 개인화를 위한 프로필 값을 선택적으로 포함하여 개인화 응답을 다시 페이지로 전송합니다. 현재 페이지의 개인화된 콘텐츠는 기본 콘텐츠의 플리커 없이 가능한 한 빨리 나타납니다.<br>b. SPA(단일 페이지 애플리케이션)에서 사용자 작업의 결과로 표시되는 보기를 위한 개인화된 컨텐츠는 캐시되므로 보기가 트리거될 때 추가적인 서버 호출 없이 즉시 적용할 수 있습니다. <br>c. Edge 네트워크는 방문자 ID와 동의, 세션 ID, ID, 쿠키 확인, 개인화 등과 같은 쿠키의 다른 값을 전송합니다. |
-| 7 | 에지 네트워크가 전달됩니다. [!UICONTROL Target 분석] (A4T) 세부 사항(활동, 경험 및 전환 메타데이터) [!DNL Analytics] edge. |
+| 7 | 에지 네트워크가 전달됩니다. [!UICONTROL Analytics for Target] (A4T) 세부 사항(활동, 경험 및 전환 메타데이터) [!DNL Analytics] edge. |
 
 ## 활성화 중 [!DNL Adobe Target]
 
@@ -85,7 +85,7 @@ ht-degree: 6%
 * 트래픽 소스
 * 시간대
 
-자세한 내용은 [대상의 카테고리](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) 다음에서 *Adobe Target 안내서*.
+자세한 내용은 [대상의 카테고리](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html) 다음에서 *Adobe Target 안내서*.
 
 ### 응답 토큰
 

@@ -2,16 +2,16 @@
 title: 개인화 개요
 description: Adobe Experience Platform Edge Network Server API를 사용하여 Adobe 개인화 솔루션에서 개인화된 콘텐츠를 검색하는 방법에 대해 알아봅니다.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 9%
+source-wordcount: '739'
+ht-degree: 10%
 
 ---
 
 # 개인화 개요
 
-포함 [!DNL Server API], 다음과 같은 Adobe 개인화 솔루션에서 개인화된 콘텐츠를 검색할 수 있습니다. [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 및 [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
+포함 [!DNL Server API], 다음과 같은 Adobe 개인화 솔루션에서 개인화된 콘텐츠를 검색할 수 있습니다. [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 및 [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko).
 
 또한 [!DNL Server API] 는 다음과 같은 Adobe Experience Platform 개인화 대상을 통해 동일한 페이지 및 다음 페이지 개인화 기능을 지원합니다. [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화 연결](../destinations/catalog/personalization/custom-personalization.md). 동일 페이지 및 다음 페이지 개인화에 대한 Experience Platform을 구성하는 방법에 대해 알아보려면 다음을 참조하십시오. [전용 안내서](../destinations/ui/activate-edge-personalization-destinations.md).
 

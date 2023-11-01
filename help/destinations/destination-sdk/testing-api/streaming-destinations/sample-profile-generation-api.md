@@ -2,9 +2,9 @@
 description: 대상 테스트 API를 사용하여 대상 테스트에 사용할 수 있는 스트리밍 대상에 대한 샘플 프로필을 생성하는 방법을 알아봅니다.
 title: 소스 스키마를 기반으로 샘플 프로필 생성
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1010'
 ht-degree: 1%
 
 ---
@@ -46,8 +46,8 @@ Adobe XDM 소스 스키마(대상을 테스트할 때 사용) 또는 대상에�
 
 >[!IMPORTANT]
 >
->* 이 API를 사용하려면 Experience Platform UI에 대상에 대한 기존 연결이 있어야 합니다. 읽기 [대상에 연결](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 및 [대상에 대한 프로필 및 대상자 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) 추가 정보.
-> * 대상에 대한 연결을 설정한 후에 이 끝점에 대한 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다. [대상과의 연결 검색](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
+>* 이 API를 사용하려면 Experience Platform UI에 대상에 대한 기존 연결이 있어야 합니다. 읽기 [대상에 연결](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 및 [대상에 대한 프로필 및 대상자 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) 추가 정보.
+> * 대상에 대한 연결을 설정한 후에 이 끝점에 대한 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다. [대상과의 연결 검색](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
 >![UI 이미지 대상 인스턴스 ID를 가져오는 방법](../../assets/testing-api/get-destination-instance-id.png)
 
 **API 형식**
@@ -183,7 +183,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 | `segmentMembership` | 개인의 대상 멤버십을 설명하는 맵 개체입니다. 에 대한 자세한 내용 `segmentMembership`, 읽기 [대상자 멤버십 세부 정보](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | 이 프로필이 세그먼트에 대해 마지막으로 적격한 타임스탬프입니다. |
 | `xdm:status` | 대상자 멤버십이 현재 요청의 일부로 실현되었는지 여부를 나타내는 문자열 필드입니다. 다음 값이 허용됩니다. <ul><li>`realized`: 프로필이 세그먼트의 일부입니다.</li><li>`exited`: 프로필이 현재 요청의 일부로 대상을 종료합니다.</li></ul> |
-| `identityMap` | 연관된 네임스페이스와 함께 개인에 대한 다양한 ID 값을 설명하는 맵 유형 필드입니다. 에 대한 자세한 내용 `identityMap`, 읽기 [스키마 구성 기준](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
+| `identityMap` | 연관된 네임스페이스와 함께 개인에 대한 다양한 ID 값을 설명하는 맵 유형 필드입니다. 에 대한 자세한 내용 `identityMap`, 읽기 [스키마 구성 기준](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
 
 {style="table-layout:auto"}
 

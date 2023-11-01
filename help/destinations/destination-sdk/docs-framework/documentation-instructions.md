@@ -2,9 +2,9 @@
 title: Adobe Experience Platform에서 대상 문서화
 description: Adobe Experience Platform에서 대상에 대한 설명서 페이지를 만드는 단계별 지침
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '530'
 ht-degree: 1%
 
 ---
@@ -24,11 +24,11 @@ Adobe Experience Platform에 오신 것을 환영합니다. 여기에 오신 것
 
 * 새 대상에 대한 설명서 페이지를 만드는 단계별 지침
 * 대상을 위해 작성할 템플릿
-* [Markdown 사용에 대한 일반 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [Adobe Markdown 향에 대한 특정 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions) (Adobe Markdown 향수는 일반 Markdown과 매우 유사합니다.)
+* [Markdown 사용에 대한 일반 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Adobe Markdown 향에 대한 특정 지침](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) (Adobe Markdown 향수는 일반 Markdown과 매우 유사합니다.)
 * A [우수 사례 페이지](./authoring-best-practices.md) Experience Platform 설명서 품질 표준을 충족하는 대상 페이지의 설명서 페이지를 작성하는 데 도움이 됩니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 이 문서의 지침에 따라 대상에 대한 설명서를 만들려면 다음 항목이 필요합니다.
 
@@ -38,7 +38,7 @@ Adobe Experience Platform에 오신 것을 환영합니다. 여기에 오신 것
 
 ## Adobe Experience Platform에서 대상에 대한 설명서를 만드는 고급 지침 {#high-level-instructions}
 
-높은 수준에서 대상에 대한 설명서를 만들려면 다음을 수행해야 합니다 [포크 만들기](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) Adobe Experience Platform 설명서 저장소의 를 편집하고 [제공된 설명서 템플릿](./self-service-template.md) 새 분기에서. Adobe 제공 템플릿을 사용하여 새 대상 페이지를 만듭니다. 준비가 되면 가져오기 요청(PR)을 엽니다. 이 작업을 수행하는 지침은 아래의에 자세히 나와 있습니다. [새 대상 페이지를 만드는 단계](./documentation-instructions.md#steps-to-create-docs-page).
+높은 수준에서 대상에 대한 설명서를 만들려면 다음을 수행해야 합니다 [포크 만들기](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) Adobe Experience Platform 설명서 저장소의 를 편집하고 [제공된 설명서 템플릿](./self-service-template.md) 새 분기에서. Adobe 제공 템플릿을 사용하여 새 대상 페이지를 만듭니다. 준비가 되면 가져오기 요청(PR)을 엽니다. 이 작업을 수행하는 지침은 아래의에 자세히 나와 있습니다. [새 대상 페이지를 만드는 단계](./documentation-instructions.md#steps-to-create-docs-page).
 
 <!--
 
@@ -53,7 +53,7 @@ Adobe Experience Platform에 오신 것을 환영합니다. 여기에 오신 것
 
 [여기에서 템플릿 다운로드](../assets/docs-framework/yourdestination-template.zip) 파일의 압축을 풀고 `yourdestination.md` 파일.
 
-템플릿을 사용하여 설명서 페이지를 만드는 방법은 아래에 나와 있습니다.
+템플릿 을 사용하여 설명서 페이지를 만드는 방법은 아래에 나와 있습니다.
 
 ## 새 대상 페이지를 만드는 단계 {#steps-to-create-docs-page}
 
@@ -64,4 +64,4 @@ GitHub 웹 인터페이스 또는 로컬 환경을 사용하여 Adobe Experience
 
 ## 모범 사례 {#best-practices}
 
-리뷰 [작성 모범 사례](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) 대상 설명서 페이지를 만들기 전과 만드는 동안 또한 다음을 읽어야 합니다. [Adobe 설명서 작성 지침 작성](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) Adobe 설명서 팀이 설명서를 작성할 때 사용하는 몇 가지 추가 작성 팁입니다.
+리뷰 [작성 모범 사례](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) 대상 설명서 페이지를 만들기 전과 만드는 동안 또한 다음을 읽어야 합니다. [Adobe 설명서 작성 지침 작성](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) Adobe 설명서 팀이 설명서를 작성할 때 사용하는 몇 가지 추가 작성 팁입니다.

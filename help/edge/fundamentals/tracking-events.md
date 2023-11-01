@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK를 사용하여 이벤트 추적
 description: Adobe Experience Platform Web SDK 이벤트를 추적하는 방법에 대해 알아봅니다.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;비콘 보내기;documentUnloading;문서 언로드;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1192'
 ht-degree: 1%
 
 ---
@@ -218,7 +218,7 @@ alloy("sendEvent", {
 
 **결정**: 이 속성은 더 이상 사용되지 않습니다. 대신 `propositions`를 사용하십시오.
 
-**대상**: 외부 개인화 플랫폼, 컨텐츠 관리 시스템, 광고 서버 및 고객 웹 사이트에서 실행되는 기타 애플리케이션과 공유할 수 있는 Adobe Experience Platform의 세그먼트입니다. [대상에 대해 자세히 알아보세요.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html?lang=en)
+**대상**: 외부 개인화 플랫폼, 컨텐츠 관리 시스템, 광고 서버 및 고객 웹 사이트에서 실행되는 기타 애플리케이션과 공유할 수 있는 Adobe Experience Platform의 세그먼트입니다. [대상에 대해 자세히 알아보세요.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
 
 >[!WARNING]
 >

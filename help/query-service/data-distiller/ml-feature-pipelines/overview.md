@@ -2,7 +2,7 @@
 title: AI/ML 기능 파이프라인
 description: Data Distiller을 사용하여 Adobe Experience Platform 데이터에서 파생된 기능을 사용하여 머신 러닝 파이프라인을 보강하는 방법에 대해 알아봅니다. 원시 데이터를 기능으로 변환하고 기능 데이터를 전달하여 마케팅 사용 사례를 지원하는 모델을 교육하거나 평가합니다.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 1%
@@ -106,7 +106,7 @@ Is this the correct doc to link to about creating an Oauth2 API credential?:
 
 An API credential will not be able to access Platform APIs without explicit permissions granted by your organization's Adobe System Admin for specific Platform services and data. A System Admin can [assign the API credential to a role](../../../landing/api-authentication.md#assign-api-to-a-role) and manage permissions for role in the [!UICONTROL Permissions] UI in Platform. 
 
-You will need to provide your system admin with the name and technical account email of your API credential. System admins can refer to the documentation to find information about how to [manage API credentials for a role](https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/permissions.html?lang=en#manage-api-credentials-for-role) and [grant the required permissions to access Platform resources](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#get-abac-permissions).
+You will need to provide your system admin with the name and technical account email of your API credential. System admins can refer to the documentation to find information about how to [manage API credentials for a role](https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/permissions.html#manage-api-credentials-for-role) and [grant the required permissions to access Platform resources](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#get-abac-permissions).
 
 The minimum permissions required to execute these notebooks include:
 

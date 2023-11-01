@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK은 선택한 데이터 및 인증 형식을 기반으로 대상 및 프로필 데이터를 엔드포인트 또는 스토리지 위치에 전달하도록 Experience Platform에 대한 대상 통합 패턴을 구성할 수 있는 구성 API 세트입니다. 구성은 Experience Platform에 저장되며 추가 업데이트를 위해 API를 통해 검색할 수 있습니다.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '848'
 ht-degree: 4%
 
 ---
@@ -83,6 +83,6 @@ Experience Platform에서 대상을 구성하는 프로세스는 아래에 요�
 
 Adobe은 다음 Experience Platform 설명서를 읽고 이해할 것을 권장합니다.
 
-* [Adobe Experience Platform 대상 개요](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=en)
+* [Adobe Experience Platform 대상 개요](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=ko)
 * [XDM 스키마 컴포지션의 기반](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ko-KR)
 * [ID 네임스페이스 개요](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ko)

@@ -2,10 +2,10 @@
 title: 태그 및 이벤트 전달에 대한 릴리스 노트
 description: Adobe Experience Platform의 태그 및 이벤트 게재에 대한 최신 릴리스 정보입니다.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 15%
+source-wordcount: '835'
+ht-degree: 12%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 15%
 
 >[!IMPORTANT]
 >
->태그 및 이벤트 전달 릴리스 정보를 앞으로 이동해도 이 페이지에는 더 이상 제공되지 않습니다. 최신 버전을 참조하십시오. [Adobe Experience Platform 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) 자세한 태그 및 이벤트 전달 업데이트.
+>태그 및 이벤트 전달 릴리스 정보를 앞으로 이동해도 이 페이지에는 더 이상 제공되지 않습니다. 최신 버전을 참조하십시오. [Adobe Experience Platform 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection) 자세한 태그 및 이벤트 전달 업데이트.
 
 ## 2023년 4월 26일
 
-* **OAuth JWT 암호**: [OAuth JWT 암호](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) 는 고객이 Adobe 및 Google 서비스 토큰을 사용하여 이벤트 전달에서 서버 간 상호 작용을 지원할 수 있도록 합니다.
+* **OAuth JWT 암호**: [OAuth JWT 암호](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) 는 고객이 Adobe 및 Google 서비스 토큰을 사용하여 이벤트 전달에서 서버 간 상호 작용을 지원할 수 있도록 합니다.
 
 다음 새 확장이 릴리스되었습니다.
 
@@ -28,7 +28,7 @@ ht-degree: 15%
 **Quick Stark 워크플로우(베타)**
 
 데이터 수집 홈 화면의 “시작하기” 아래에 있는 새로운 빠른 시작 워크플로에 액세스할 수 있습니다! 이제 다음 워크플로를 고객이 공개 베타로 사용할 수 있습니다.
-* **[메타 전환 API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: 이벤트 전달 고객은 몇 가지 간단한 단계만으로 광고 전환을 위해 서버측에서 메타로 이벤트 데이터를 빠르게 수집하고 전달할 수 있습니다.
+* **[메타 전환 API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**: 이벤트 전달 고객은 몇 가지 간단한 단계만으로 광고 전환을 위해 서버측에서 메타로 이벤트 데이터를 빠르게 수집하고 전달할 수 있습니다.
 * **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: 고객은 몇 가지 간단한 단계만으로 Mobile SDK를 빠르게 구현하고 기본 모바일 이벤트를 확인할 수 있습니다.
 
 새로운 확장이 릴리스되었습니다.

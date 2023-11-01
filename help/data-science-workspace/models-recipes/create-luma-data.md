@@ -5,9 +5,9 @@ title: Luma 웹 스키마 및 데이터 세트 만들기
 type: Tutorial
 description: 이 자습서에서는 Luma 데모 성향 모델에 필요한 사전 요구 사항 및 에셋을 제공합니다.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 ## 에셋 다운로드 {#assets}
 
-다음 자습서에서는 사용자 지정 Luma 구매 성향 모델을 사용합니다. 계속하기 전에, [필요한 에셋 다운로드](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) zip 폴더. 이 폴더에는 다음이 포함되어 있습니다.
+다음 자습서에서는 사용자 지정 Luma 구매 성향 모델을 사용합니다. 계속하기 전에, [필요한 에셋 다운로드](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) zip 폴더. 이 폴더에는 다음이 포함되어 있습니다.
 
 - 구매 성향 모델 노트북
 - 교육 및 채점 데이터 세트(Luma 웹 데이터의 하위 집합)로 데이터를 수집하는 데 사용되는 전자 필기장입니다

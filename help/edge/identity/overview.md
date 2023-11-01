@@ -3,9 +3,9 @@ title: Platform Web SDK의 ID 데이터
 description: Adobe Experience Platform Web SDK를 사용하여 Adobe Experience Cloud ID(ECID)를 검색하고 관리하는 방법에 대해 알아봅니다.
 keywords: ID;자사 ID;ID 서비스;타사 ID;ID 마이그레이션;방문자 ID;타사 ID;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;동기화 ID;syncIdentity;sendEvent;identityMap;primary;ecid;ID 네임스페이스;네임스페이스 ID;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 709996a837e722a79d695bf8573552f8f373850e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1414'
 ht-degree: 1%
 
 ---
@@ -119,7 +119,7 @@ ID 배열의 각 ID 개체에는 다음 속성이 포함되어 있습니다.
 | `authenticationState` | 문자열 | **(필수)** ID의 인증 상태입니다. 가능한 값은 다음과 같습니다 `ambiguous`, `authenticated`, 및 `loggedOut`. |
 | `primary` | 부울 | 이 ID를 프로필의 기본 조각으로 사용할지 여부를 결정합니다. 기본적으로 ECID는 사용자의 기본 식별자로 설정됩니다. 생략하면 이 값의 기본값은 입니다. `false`. |
 
-사용 `identityMap` 디바이스 또는 사용자를 식별하는 필드는 을 사용하는 것과 동일한 결과로 이어집니다. [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=en) 메서드의 [!DNL ID Service API]. 다음을 참조하십시오. [ID 서비스 API 설명서](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=en) 을 참조하십시오.
+사용 `identityMap` 디바이스 또는 사용자를 식별하는 필드는 을 사용하는 것과 동일한 결과로 이어집니다. [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=ko-KR) 메서드의 [!DNL ID Service API]. 다음을 참조하십시오. [ID 서비스 API 설명서](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) 을 참조하십시오.
 
 ## 방문자 API에서 ECID로 마이그레이션
 

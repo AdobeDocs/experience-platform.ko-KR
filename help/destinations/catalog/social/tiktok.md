@@ -3,10 +3,10 @@ title: TikTok 연결
 description: 광고 캠페인의 타겟팅용 데이터로 TikTok에서 맞춤형 대상자를 구축합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 대상을 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 4%
+source-wordcount: '1040'
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-광고 캠페인의 타겟팅용 데이터로 TikTok에서 맞춤형 대상자를 구축합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 대상을 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다. 방문 [TikTok 비즈니스 도움말 센터](https://ads.tiktok.com/help/article/audiences?lang=en) 추가 정보.
+광고 캠페인의 타겟팅용 데이터로 TikTok에서 맞춤형 대상자를 구축합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 대상을 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다. 방문 [TikTok 비즈니스 도움말 센터](https://ads.tiktok.com/help/article/audiences) 추가 정보.
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,7 @@ TikTok 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도�
 
 ## 전제 조건 {#prerequisites}
 
-다음을 수행해야 합니다. [!DNL Admin] 또는 [!DNL Operator] 대상자를 전송하려는 TikTok Ads Manager 계정에 대한 액세스 권한. 자세한 지침은 [TikTok 도움말 센터](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+다음을 수행해야 합니다. [!DNL Admin] 또는 [!DNL Operator] 대상자를 전송하려는 TikTok Ads Manager 계정에 대한 액세스 권한. 자세한 지침은 [TikTok 도움말 센터](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
 TikTok Ads Manager 계정에 데이터를 보내기 전에 다음에 대한 광고 계정에 액세스할 수 있는 Adobe Experience Platform 권한을 부여해야 합니다 `Audience Management`. 이 권한은 다음에서 제공할 수 있습니다. [Ads Manager ID 입력](#authenticate) TikTok Ads Manager 계정으로 리디렉션된 후 Experience Platform UI에서 권한을 부여합니다.
 
@@ -123,4 +123,4 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알
 
 ## 추가 리소스 {#additional-resources}
 
-다음을 참조하십시오. [TikTok 도움말 센터 페이지](https://ads.tiktok.com/help/article/audiences?lang=en) 추가 정보.
+다음을 참조하십시오. [TikTok 도움말 센터 페이지](https://ads.tiktok.com/help/article/audiences) 추가 정보.

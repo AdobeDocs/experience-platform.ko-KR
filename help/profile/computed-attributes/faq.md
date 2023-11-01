@@ -2,9 +2,9 @@
 title: 계산된 속성 FAQ
 description: 계산된 속성 사용에 대한 FAQ에 대한 답변을 살펴보십시오.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
@@ -99,4 +99,4 @@ Adobe Experience Platform에서 계산된 속성은 이벤트 수준 데이터�
 
 ## Adobe Journey Optimizer에서 계산된 속성을 사용하는 방법은 무엇입니까?
 
-여정에서 계산된 속성을 사용하려면 다음을 추가해야 합니다. `SystemComputedAttributes` Experience Platform 데이터 소스의 필드 그룹입니다. Experience Platform 데이터 소스 구성에 대한 자세한 내용은 [Adobe Experience Platform 데이터 소스 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=en).
+여정에서 계산된 속성을 사용하려면 다음을 추가해야 합니다. `SystemComputedAttributes` Experience Platform 데이터 소스의 필드 그룹입니다. Experience Platform 데이터 소스 구성에 대한 자세한 내용은 [Adobe Experience Platform 데이터 소스 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).

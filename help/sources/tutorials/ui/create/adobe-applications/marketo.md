@@ -2,10 +2,10 @@
 title: UI에서 Marketo Engage 소스 연결 및 데이터 흐름 만들기
 description: 이 자습서에서는 B2B 데이터를 Adobe Experience Platform으로 가져오기 위해 UI에서 Marketo Engage 소스 연결 및 데이터 흐름을 만드는 단계를 제공합니다.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: b271d28677543f773fe1ba471fc08574e7c5542b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 0%
+source-wordcount: '1691'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->만들기 전 [!DNL Marketo Engage] 소스 연결 및 데이터 흐름의 유효성을 검사하려면 [Adobe 조직 ID를 매핑했습니다.](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) 위치: [!DNL Marketo]. 또한 을 완료했는지 확인해야 합니다 [자동 채우기 [!DNL Marketo] B2B 네임스페이스 및 스키마](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) 소스 연결 및 데이터 흐름을 만들기 전에
+>만들기 전 [!DNL Marketo Engage] 소스 연결 및 데이터 흐름의 유효성을 검사하려면 [Adobe 조직 ID를 매핑했습니다.](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html) 위치: [!DNL Marketo]. 또한 을 완료했는지 확인해야 합니다 [자동 채우기 [!DNL Marketo] B2B 네임스페이스 및 스키마](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) 소스 연결 및 데이터 흐름을 만들기 전에
 
 이 자습서에서는 다음을 만드는 단계를 제공합니다 [!DNL Marketo Engage] (이하 &quot;라고 한다)[!DNL Marketo]&quot;) UI의 소스 커넥터 를 사용하여 B2B 데이터를 Adobe Experience Platform으로 가져옵니다.
 
@@ -57,7 +57,7 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 왼쪽 탐색 모
 
 ### 기존 계정
 
-기존 계정으로 데이터 흐름을 만들려면 다음을 선택합니다. **[!UICONTROL 기존 계정]** 을(를) 선택한 다음 [!DNL Marketo] 사용할 계정입니다. 선택 **[!UICONTROL 다음]** 계속합니다.
+기존 계정으로 데이터 흐름을 만들려면 다음을 선택합니다. **[!UICONTROL 기존 계정]** 을(를) 선택한 다음 [!DNL Marketo] 사용할 계정입니다. **[!UICONTROL 다음]**&#x200B;을 선택하여 계속하십시오.
 
 ![기존](../../../../images/tutorials/create/marketo/existing.png)
 
