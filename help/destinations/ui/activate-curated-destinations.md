@@ -2,7 +2,7 @@
 title: LiveRamp 식별자를 기반으로 조정된 대상에 대상 활성화
 type: Tutorial
 description: LiveRamp Ramp Id를 사용하여 Adobe Experience Platform에서 연결된 TV 및 오디오 대상 및 기타 통합에 대한 대상을 활성화하는 방법을 알아봅니다.
-source-git-commit: adc7e66fa17484ccb9527650f197acc29ef4d0f1
+source-git-commit: 25cda72508860b57bfa9ad0a729d0329d0f6bd1f
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 0%
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 2단계 프로세스를 거치고 를 사용하여 연결된 TV 및 오디오 대상에 대상을 활성화합니다. [라이브 램프 - 온보딩](../catalog/advertising/liveramp-onboarding.md) 및 [LiveRamp - 배포](../catalog/advertising/liveramp-distribution.md) 아래 이미지에 표시된 대상.
 
-![LiveRamp를 통해 Real-Time CDP에서 조정된 대상으로 대상을 활성화하는 워크플로를 보여 주는 다이어그램입니다.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png)
+![LiveRamp를 통해 Real-Time CDP에서 조정된 대상으로 대상을 활성화하는 워크플로를 보여 주는 다이어그램입니다.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
 먼저 대상을 Real-Time CDP에서 로 내보냅니다. [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) 대상을 CSV 파일로 지정합니다.
 
