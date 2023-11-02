@@ -2,9 +2,9 @@
 title: 가속화된 쿼리 끝점
 description: 상태 비저장 방식으로 쿼리 가속 저장소에 액세스하여 집계된 데이터를 기반으로 결과를 빠르게 반환하는 방법을 알아봅니다. 이 문서에서는 쿼리 서비스 가속 쿼리 끝점에 대한 샘플 HTTP 요청 및 응답을 제공합니다.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '559'
 ht-degree: 1%
 
 ---
@@ -212,6 +212,6 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 | `resultsMeta` | 이 개체에는 결과에 반환되는 각 열의 메타데이터가 포함되어 있으므로 사용자가 각 열의 이름과 유형을 알 수 있습니다. |
 | `resultsMeta._adhoc` | 단일 데이터 세트에서만 사용할 수 있도록 네임스페이스가 지정된 필드가 있는 임시 경험 데이터 모델(XDM) 스키마. |
 | `resultsMeta._adhoc.type` | Ad Hoc 스키마의 데이터 유형입니다. |
-| `resultsMeta._adhoc.meta:xdmType` | XDM 필드 유형에 대해 시스템에서 생성한 값입니다. 사용 가능한 유형에 대한 자세한 내용은 [사용 가능한 XDM 유형](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
+| `resultsMeta._adhoc.meta:xdmType` | XDM 필드 유형에 대해 시스템에서 생성한 값입니다. 사용 가능한 유형에 대한 자세한 내용은 [사용 가능한 XDM 유형](../../xdm/tutorials/custom-fields-api.md). |
 | `resultsMeta._adhoc.properties` | 쿼리된 데이터 세트의 열 이름입니다. |
 | `resultsMeta._adhoc.results` | 쿼리된 데이터 세트의 행 이름입니다. 반환된 각 열이 반영됩니다. |

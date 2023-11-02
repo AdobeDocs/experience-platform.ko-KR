@@ -2,9 +2,9 @@
 title: Ad Hoc 스키마에 대한 속성 기반 액세스 제어 지원
 description: Adobe Experience Platform 쿼리 서비스를 통해 생성된 임시 스키마의 데이터 필드에 대한 액세스를 제한하는 안내서입니다.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1013'
 ht-degree: 2%
 
 ---
@@ -25,8 +25,8 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [경험 데이터 모델(XDM) 시스템](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ko-KR): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=ko): Platform UI에서 스키마 및 기타 리소스를 만들고 관리하는 방법을 알아봅니다.
+* [경험 데이터 모델(XDM) 시스템](../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Platform UI에서 스키마 및 기타 리소스를 만들고 관리하는 방법을 알아봅니다.
 * [[!DNL Data Governance]](../../data-governance/home.md): 방법 알아보기 [!DNL Data Governance] 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다.
 * [속성 기반 액세스 제어](../../access-control/abac/overview.md): 속성 기반 액세스 제어는 관리자가 속성에 따라 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있도록 해 주는 Adobe Experience Platform의 기능입니다. 속성은 Ad Hoc 또는 일반 스키마 필드에 추가된 레이블과 같이 객체에 추가된 메타데이터일 수 있습니다. 관리자는 사용자 액세스 권한을 관리하기 위해 속성이 포함된 액세스 정책을 정의합니다.
 
@@ -70,7 +70,7 @@ Platform UI에서 임시 스키마 표시를 활성화하려면 필터 아이콘
 
 ![레이블 편집 팝오버](../images/data-governance/edit-labels-popover.png)
 
-방법에 대한 지침은 설명서 를 참조하십시오 [선택한 스키마 또는 필드에 대한 레이블 생성 또는 편집](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field).
+방법에 대한 지침은 설명서 를 참조하십시오 [선택한 스키마 또는 필드에 대한 레이블 생성 또는 편집](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
 
 >[!NOTE]
 >
@@ -94,4 +94,4 @@ ID 또는 기본 ID가 Ad Hoc 스키마에 설정된 경우 시스템은 연결�
 이 문서를 읽은 후에는 쿼리 서비스 CTAS 쿼리를 통해 만든 임시 스키마에 데이터 사용 레이블을 추가하는 방법을 더 잘 이해할 수 있습니다. 아직 수행하지 않았다면 다음 문서는 Query Service의 데이터 거버넌스에 대한 이해를 높이는 데 유용합니다.
 
 * [애드혹 스키마 ID](./ad-hoc-schema-identities.md)
-* [데이터 거버넌스](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ko)
+* [데이터 거버넌스](../../data-governance/home.md)

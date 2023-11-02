@@ -2,16 +2,16 @@
 title: 분석 데이터의 머천다이징 변수 반환 및 사용
 description: Analytics 데이터 세트의 머천다이징 변수에 액세스할 수 있는 XDM 필드 및 샘플 쿼리를 제공하는 방법에 대해 알아봅니다.
 exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 4%
+source-wordcount: '1103'
+ht-degree: 3%
 
 ---
 
 # 분석 데이터에서 머천다이징 변수 반환 및 사용
 
-쿼리 서비스를 사용하여 Adobe Analytics에서 Adobe Experience Platform으로 데이터 세트로 수집된 데이터를 관리합니다. 다음 섹션에서는 Analytics 데이터 세트의 머천다이징 변수에 액세스하는 데 사용할 수 있는 샘플 쿼리를 제공합니다. 에 대한 자세한 내용은 설명서 를 참조하십시오 [Adobe Analytics 데이터 수집 및 매핑 방법](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html?lang=ko-KR) Analytics 소스를 통해
+쿼리 서비스를 사용하여 Adobe Analytics에서 Adobe Experience Platform으로 데이터 세트로 수집된 데이터를 관리합니다. 다음 섹션에서는 Analytics 데이터 세트의 머천다이징 변수에 액세스하는 데 사용할 수 있는 샘플 쿼리를 제공합니다. 에 대한 자세한 내용은 설명서 를 참조하십시오 [Adobe Analytics 데이터 수집 및 매핑 방법](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics 소스를 통해
 
 ## 머천다이징 변수 {#merchandising-variables}
 
@@ -98,8 +98,7 @@ LIMIT 20
 >
 > 현재 데이터 세트에 존재하지 않는 필드를 검색하려고 하면 &quot;해당 구조 필드 없음&quot; 오류가 발생합니다. 오류 메시지에서 반환된 사유를 평가하여 사용 가능한 필드를 식별한 다음 쿼리를 업데이트하고 다시 실행합니다.
 >
->
-```console
+>```console
 >ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 >```
 

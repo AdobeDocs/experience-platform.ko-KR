@@ -4,9 +4,9 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '4329'
+source-wordcount: '4313'
 ht-degree: 10%
 
 ---
@@ -213,7 +213,7 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 >
 >다음 [!UICONTROL 프로필 개수] 위젯은에 표시된 프로필 수와 다른 수를 표시할 수 있습니다. [!UICONTROL 찾아보기] 의 탭 [!UICONTROL 프로필] 여러 가지 이유로 UI의 섹션에 있는 섹션을 참조하십시오. 이러한 차이가 발생하는 가장 일반적인 이유는 [!UICONTROL 찾아보기] 탭은 조직의 기본 병합 정책을 기반으로 병합된 총 프로필 수를 참조하지만 [!UICONTROL 프로필 개수] 위젯은 대시보드에서 보기 위해 선택한 병합 정책을 기반으로 병합된 총 프로필 수를 참조합니다.
 >
->또 다른 일반적인 이유는 대시보드 스냅숏을 만드는 시간과 [!UICONTROL 찾아보기] 탭. 다음을 확인할 수 있습니다. [!UICONTROL 프로필 개수] 위젯의 타임스탬프를 보고 위젯이 마지막으로 업데이트되었습니다. 에서 샘플 작업이 트리거되는 방법에 대해 자세히 알아보려면 [!UICONTROL 찾아보기] 탭에서 다음을 참조하십시오 [실시간 고객 프로필 UI 안내서의 프로필 개수 섹션](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count).
+>또 다른 일반적인 이유는 대시보드 스냅숏을 만드는 시간과 [!UICONTROL 찾아보기] 탭. 다음을 확인할 수 있습니다. [!UICONTROL 프로필 개수] 위젯의 타임스탬프를 보고 위젯이 마지막으로 업데이트되었습니다. 에서 샘플 작업이 트리거되는 방법에 대해 자세히 알아보려면 [!UICONTROL 찾아보기] 탭에서 다음을 참조하십시오 [실시간 고객 프로필 UI 안내서의 프로필 개수 섹션](../../profile/ui/user-guide.md#profile-count).
 
 ![프로필 수 위젯이 강조 표시된 Experience Platform 프로필 대시보드 .](../images/profiles/profile-count.png)
 
@@ -428,7 +428,7 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ![대상자 이름 및 모든 대상자 보기 텍스트가 강조 표시된 대상자 크기 위젯.](../images/profiles/audiences-size-view-all-audiences.png)
 
-자세한 내용은 설명서 를 참조하십시오. [[!UICONTROL 대상] [!UICONTROL  찾아보기] 탭](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
+자세한 내용은 설명서 를 참조하십시오. [[!UICONTROL 대상] [!UICONTROL  찾아보기] 탭](../../segmentation/ui/overview.md#browse).
 
 ### [!UICONTROL 병합 정책별 대상자 중복] {#audience-overlap-by-merge-policy}
 
