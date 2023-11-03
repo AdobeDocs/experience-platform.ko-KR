@@ -4,14 +4,22 @@ description: Adobe Experience Platform Debugger에 대한 최신 릴리스 정�
 keywords: debugger;experience Platform Debugger 확장 프로그램;chrome;확장 프로그램;릴리스 정보
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
+source-git-commit: 5b3bfc38a1b159d57c7be6733b9c2515ba72c3c6
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '564'
 ht-degree: 4%
 
 ---
 
 # Adobe Experience Platform Debugger 릴리스 노트
+
+## 버전 1.5.1 - 2023년 11월 2일
+
+### 수정 사항 및 개선 사항
+
+* Analytics 이벤트가 무시되거나 중복되는 문제가 해결되었습니다.
+* 최대 상태 저장소 크기를 초과하는 문제가 해결되었습니다.
+* 에지 로그 검색에서 이벤트를 필터링하지 못하는 문제가 해결되었습니다.
 
 ## 버전 1.5.0 - 2023년 10월 19일
 
