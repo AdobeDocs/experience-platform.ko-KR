@@ -1,15 +1,15 @@
 ---
-title: 파트너 지원 방문자 인식을 사용하여 온사이트 경험 개인화
+title: 파트너 지원 방문자 인식을 사용하여 첫 번째 방문 고객에 대한 온사이트 경험 개인화
 description: 파트너 지원 방문자 인식을 사용하여 방문자에게 개인화된 온사이트 경험을 제공하는 방법을 알아보십시오.
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: de8aeb553066405424711e75480204f6136b52ff
+source-git-commit: 77eb2492259cc813db2d6c514d123fa2ad698f67
 workflow-type: tm+mt
-source-wordcount: '2580'
-ht-degree: 95%
+source-wordcount: '2696'
+ht-degree: 91%
 
 ---
 
-# 파트너 지원 방문자 인식을 사용하여 온사이트 경험 개인화
+# 파트너 지원 방문자 인식을 사용하여 첫 번째 방문 고객에 대한 온사이트 경험 개인화
 
 >[!AVAILABILITY]
 >
@@ -17,7 +17,15 @@ ht-degree: 95%
 
 파트너 지원 인식을 사용하여 웹 속성 방문자에게 개인화된 경험을 제공하는 방법을 알아보십시오. 이 튜토리얼을 사용하여 인증된 방문자와 인증되지 않은 방문자에게 개인화된 경험을 표시하기 위해 Experience Platform 및 기타 Experience Cloud 솔루션의 다양한 요소 구현 시퀀스를 이해하십시오.
 
-![파트너 제공 속성을 사용하여 방문자에게 개인화된 경험을 제공하는 방법을 설명하는 인포그래픽입니다.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
+![파트너 제공 속성을 사용하여 방문자에게 개인화된 경험을 제공하는 방법을 설명하는 인포그래픽입니다.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
+
+## 이 사용 사례를 고려하는 이유 {#why-this-use-case}
+
+소비자가 무수한 방식으로 브랜드와 상호 작용할 때 디지털 경험의 단편화는 매우 현실적이며 해결하기 점점 더 어려워지고 있습니다. 응집력 있는 경험, 타깃팅된 추천 및 맞춤화된 상호 작용을 위한 최상의 고객 참여 전략은 모두 사용자 인식에 의해 제한됩니다.
+
+이는 파트너 지원 실시간 인식이 의미 있는 변화를 가져올 수 있는 부분이다. Adobe을 통해 id 파트너는 정교한 클라이언트측 데이터 수집 및 시장을 선도하는 경험 최적화 오퍼링에 연결할 수 있으며 이전 기록이나 인증 없이 첫 번째 방문부터 경험 전달에 대한 기준을 효과적으로 높일 수 있습니다.
+
+이는 소비자 패키지 상품, 온라인 소매 등과 같이 인증 비율이 낮은 버티컬에 특히 유용합니다.
 
 ## 업계 사례 {#industry-example}
 

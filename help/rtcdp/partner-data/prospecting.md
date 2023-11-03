@@ -1,15 +1,15 @@
 ---
-title: 잠재 고객 발굴 사용 사례를 통해 신규 고객 참여 유도 및 확보
-description: Real-Time CDP의 파트너 데이터 지원으로 잠재 고객 발굴 사용 사례를 통해 신규 고객을 참여시키고 확보하는 방법에 대해 알아봅니다.
+title: 서드파티 쿠키에 의존하지 않고 새로운 고객 참여 및 확보
+description: 서드파티 쿠키에 의존하지 않고 전망 사용 사례를 통해 새로운 고객을 참여하고 획득하는 방법을 알아봅니다.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ec6375a025833027fda01c412124321132aefd65
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1960'
-ht-degree: 93%
+source-wordcount: '2077'
+ht-degree: 85%
 
 ---
 
-# 잠재 고객 발굴 사용 사례를 통해 신규 고객 참여 유도 및 확보
+# 서드파티 쿠키에 의존하지 않고 새로운 고객 참여 및 확보
 
 >[!AVAILABILITY]
 >
@@ -19,9 +19,17 @@ Real-Time CDP에서 서드파티 데이터 지원을 사용하여 데이터 파�
 
 ![고객 발굴 사용 사례에 대한 높은 수준의 시각적 개요.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
 
+## 이 사용 사례를 고려하는 이유 {#why-this-use-case}
+
+브랜드는 서드파티 쿠키에 의존하지 않고, 제한된 예산, 투명성 및 광고 지출 수익률에 대한 높은 요구 없이 단계별로 최고의 고객 확보 사용 사례를 책임감 있게 실행하는 어려운 문제에 동시에 직면하고 있습니다.
+
+Adobe Real-time Customer Data Platform은 브랜드가 DMP(데이터 관리 플랫폼)에서 지원하는 사용 사례를 쿠키 없는 대안으로 안전하게 전환하고 셀프서비스 세분화, 대상자 큐레이션 및 활성화를 완전히 정교화하고 강력하게 단일 시스템으로 구현하는 방식으로 수행할 수 있도록 지원할 수 있습니다. 특허 받은 데이터 거버넌스 및 동의 프레임워크를 통해 책임감 있는 데이터 사용에 대한 Adobe의 확고한 초점은 그대로 유지합니다.
+
+예를 들어 잠재 고객을 사용자 또는 알려진 고객으로 끌어들이기 위해 캠페인을 실행해야 하는 경우 이 사용 사례에 설명된 단계를 따릅니다.
+
 ## 전제 조건 및 계획 {#prerequisites-and-planning}
 
-Real-Time CDP에서 파트너 데이터 지원을 사용하여 새로운 고객에게 도달하고 확보하고자 할 때는 계획 프로세스에서 다음 전제 조건을 고려하십시오.
+신규 고객을 유치하고 공략할 때 계획 프로세스에서 다음 전제 조건을 고려하십시오.
 
 * 파트너가 제공한 프로필을 Real-Time CDP로 수집해서 새로 고치는 예상 주기
 * 다운스트림 대상에 필요한 ID
@@ -219,5 +227,5 @@ Real-Time CDP의 세분화 기능을 사용하여 잠재 고객 프로필에서 
 Real-Time CDP에서 파트너 데이터 지원을 통해 활성화된 추가 사용 사례를 살펴보십시오.
 
 * [신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완](/help/rtcdp/partner-data/supplement-first-party-profiles.md)하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선합니다.
-* [온사이트 경험을 개인화하기 위해 파트너 지원 인식 활용](/help/rtcdp/partner-data/onsite-personalization.md) 방문에서 사용자 인증이 없거나 브랜드와 이전 기록이 있는 경우.
+* [파트너 지원 방문자 인식을 사용하여 알 수 없는 방문자에 대한 온사이트 경험 개인화](/help/rtcdp/partner-data/onsite-personalization.md) 방문에서 사용자 인증이 없거나 브랜드와 이전 기록이 있는 경우.
 * [잠재 고객 프로필 및 잠재 고객 활성화 확장](/help/destinations/ui/activate-prospect-audiences.md) 대상을 선택합니다.

@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 대상자 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 5c556d6a846c8ec97bf3aa8b6a6a6d2a64a33be5
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 98%
+source-wordcount: '254'
+ht-degree: 92%
 
 ---
 
@@ -67,9 +67,10 @@ ht-degree: 98%
 * 사용 사례 {#use-cases}
    * 지능적인 재참여 사용 사례 {#intelligent-re-engagement}
       * [지능적으로 고객의 재참여 유도](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-   * 파트너 데이터 사용 사례 {#partner-data}
-      * [잠재 고객 지원을 통해 신규 고객 참여 유도 및 확보](/help/rtcdp/partner-data/prospecting.md)
+   * 고객 확보 {#customer-acquisition}
+      * [서드파티 쿠키에 의존하지 않고 새로운 고객 참여 및 확보](/help/rtcdp/partner-data/prospecting.md)
+      * [파트너 지원 방문자 인식을 사용하여 첫 번째 방문 고객에 대한 온사이트 경험 개인화](/help/rtcdp/partner-data/onsite-personalization.md)
+   * 프로필 보강 {#profile-enrichment}
       * [파트너가 제공한 속성으로 자사 프로필 보완](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [파트너 지원 방문자 인식을 사용하여 온사이트 경험 개인화](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Experience Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)
 * [Experience Platform 용어](https://www.adobe.com/go/platform-glossary-kr)

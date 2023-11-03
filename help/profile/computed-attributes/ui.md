@@ -2,10 +2,10 @@
 title: 계산된 속성 UI 안내서
 description: Adobe Experience Platform UI를 사용하여 계산된 속성을 만들고, 보고, 업데이트하는 방법을 알아봅니다.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: cf01c18c8ea710492c8a2c8542c8a4580d5f0dcf
 workflow-type: tm+mt
-source-wordcount: '1485'
-ht-degree: 9%
+source-wordcount: '1567'
+ht-degree: 8%
 
 ---
 
@@ -147,6 +147,12 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 왼쪽 탐색 후 **[!UI
 ![다음 [!UICONTROL 계산된 속성 편집] 페이지가 표시됩니다.](./images/ui/edit.png)
 
 ## 계산된 속성 사용 {#usage}
+
+>[!IMPORTANT]
+>
+>계산된 속성을 **가장 최근** 세그먼트 정의에서 함수를 사용하면 다음과 같은 이점이 있습니다. **필수** include **모두** 계산된 속성 객체의 값 및 타임스탬프 값입니다.
+>
+>예를 들어 이메일 주소 필드가 가장 최근 함수를 가진 계산된 속성으로 채워지는 &quot;유효한 이메일 주소를 가진 모든 프로필&quot;을 찾는 세그먼트 정의를 만드는 경우 **필수** 이메일 주소 값이 모두 존재함 포함 **및** 이메일 주소의 타임스탬프가 존재합니다.
 
 계산된 속성을 작성한 후 다음을 사용할 수 있습니다 **게시됨** 다른 다운스트림 서비스에서 계산된 속성. 계산된 속성은 프로필 결합 스키마에서 생성된 프로필 속성 필드이므로, 실시간 고객 프로필에 대해 계산된 속성 값을 조회하고 대상에서 사용하거나 대상에 대해 활성화하거나 Adobe Journey Optimizer의 여정에서 개인화에 사용할 수 있습니다.
 

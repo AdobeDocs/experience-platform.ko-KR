@@ -2,7 +2,7 @@
 title: 계산된 속성 API 끝점
 description: Real-Time Customer Profile API를 사용하여 계산된 속성을 생성, 보기, 업데이트 및 삭제하는 방법을 알아봅니다.
 exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 94c94b8a3757aca1a04ff4ffc3c62e84602805cc
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 2%
@@ -50,7 +50,7 @@ GET /attributes?{QUERY_PARAMETERS}
 | `limit` | 응답의 일부로 반환되는 최대 항목 수를 지정하는 매개 변수입니다. 이 매개 변수의 최소값은 1이고 최대값은 40입니다. 이 매개 변수가 포함되지 않으면 기본적으로 20개 항목이 반환됩니다. | `limit=20` |
 | `offset` | 항목을 반환하기 전에 건너뛸 항목의 수를 지정하는 매개 변수입니다. | `offset=5` |
 | `sortBy` | 반환된 항목이 정렬되는 순서를 지정하는 매개 변수입니다. 사용 가능한 옵션은 다음과 같습니다 `name`, `status`, `updateEpoch`, 및 `createEpoch`. 다음을 포함하거나 포함하지 않고 오름차순 또는 내림차순으로 정렬할지 선택할 수도 있습니다. `-` 정렬 옵션 앞에 있습니다. 기본적으로 항목은 다음을 기준으로 정렬됩니다. `updateEpoch` 내림차순으로. | `sortBy=name` |
-| `property` | 다양한 계산된 속성 필드를 필터링할 수 있는 매개변수. 지원되는 속성은 다음과 같습니다 `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, 및 `status`. 지원되는 작업은 나열된 속성에 따라 다릅니다. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=다음 포함()), `NOT_CONTAINS` (!=다음 포함())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
+| `property` | 다양한 계산된 속성 필드를 필터링할 수 있는 매개변수. 지원되는 속성은 다음과 같습니다 `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, 및 `status`. 지원되는 작업은 나열된 속성에 따라 다릅니다. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **요청**
 

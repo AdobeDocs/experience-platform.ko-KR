@@ -2,10 +2,10 @@
 title: 파트너가 제공한 속성으로 자사 프로필 보완
 description: 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선하는 방법에 대해 알아봅니다.
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 90%
+source-wordcount: '1263'
+ht-degree: 79%
 
 ---
 
@@ -18,6 +18,16 @@ ht-degree: 90%
 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선합니다.
 
 ![파트너가 제공한 속성 사용 사례를 사용하여 프로필을 보강하는 높은 수준의 시각적 개요입니다.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
+
+## 이 사용 사례를 고려하는 이유 {#why-this-use-case}
+
+자사 데이터가 풍부한 브랜드라도 대부분의 브랜드는 데이터를 간소화하고 고객, 고객의 행동, 패턴 및 선호도에 대해 보다 미묘한 이해를 얻을 수 있으므로 도움이 될 수 있습니다.
+
+Adobe Real-time Customer Data Platform은 브랜드가 신뢰할 수 있는 한 명 이상의 파트너로부터 얻은 중요한 통찰력, 식별자 및 속성으로 자사 데이터를 책임감 있게 보완하도록 지원할 수 있습니다.
+
+Adobe은 한 가지 방법으로 모든 요구 사항을 충족할 수 있는 접근 방식이 없다는 것을 이해하고 데이터 및 ID 파트너와의 원활한 상호 운용성을 통해 고객 라이프사이클의 모든 단계에서 개별화되고 사려 깊은 참여를 촉진할 수 있습니다. 이러한 기능은 신뢰할 수 있는 데이터 거버넌스 프레임워크의 지원을 받아 파트너 데이터가 사용되는 위치와 방법을 세부적으로 제어할 수 있습니다. 예를 들어, 세그먼테이션에 대해 파트너가 제공한 인사이트를 사용할 수 있지만 개인화에는 사용할 수 없습니다.
+
+예를 들어 인구 통계학적 및 의도 신호로 고객 레코드를 보강해야 하는 경우 이 사용 사례에 설명된 단계를 따릅니다.
 
 ## 전제 조건 및 계획 {#prerequisites-and-planning}
 
@@ -126,5 +136,5 @@ Commenting out links for now
 Real-Time CDP에서 파트너 데이터 지원을 통해 활성화된 추가 사용 사례를 살펴보십시오.
 
 * Real-Time CDP에서 서드파티 데이터 지원을 사용하여 [데이터 파트너의 잠재 고객 프로필로 프로필 기반을 확장하고 데이터 파트너와 협력하여 신규 고객에게 도달하거나 확보할 수 있습니다](/help/rtcdp/partner-data/prospecting.md).
-* [온사이트 경험을 개인화하기 위해 파트너 지원 인식 활용](/help/rtcdp/partner-data/onsite-personalization.md) 방문에서 사용자 인증이 없거나 브랜드와 이전 기록이 있는 경우.
+* [파트너 지원 방문자 인식을 사용하여 알 수 없는 방문자에 대한 온사이트 경험 개인화](/help/rtcdp/partner-data/onsite-personalization.md) 방문에서 사용자 인증이 없거나 브랜드와 이전 기록이 있는 경우.
 * [잠재 고객 프로필 및 잠재 고객 활성화 확장](/help/destinations/ui/activate-prospect-audiences.md) 대상을 선택합니다.

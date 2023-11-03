@@ -2,9 +2,9 @@
 title: 대상 API 엔드포인트
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 대상 끝점을 사용하여 프로그래밍 방식으로 조직의 대상을 만들고, 관리하고, 업데이트합니다.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
 workflow-type: tm+mt
-source-wordcount: '2124'
+source-wordcount: '1879'
 ht-degree: 3%
 
 ---
@@ -692,7 +692,7 @@ PUT /audiences/{AUDIENCE_ID}
 
 **요청**
 
-+++전체 대상자 업데이트에 대한 샘플 요청입니다.
++++전체 대상 업데이트에 대한 샘플 요청입니다.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -933,145 +933,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-get
 
 +++
 
-## 여러 대상 업데이트 {#bulk-patch}
-
-에 POST 요청을 하여 여러 대상자의 프로필 및 레코드 수를 업데이트할 수 있습니다. `/audiences/bulk-patch-metric` 엔드포인트 및 업데이트하려는 대상자의 ID 제공
-
-**API 형식**
-
-```http
-POST /audiences/bulk-patch-metric
-```
-
-**요청**
-
-+++ 여러 대상을 업데이트하는 샘플 요청입니다.
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-patch-metric
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d ' {
-    "jobId": "12345",
-    "jobType": "AO",
-    "resources": [
-        {
-            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-            "namespace": "AAMTraits",
-            "operations": [
-                {
-                    "op": "add",
-                    "path": "/metrics/data",
-                    "value": {
-                        "totalProfiles": 11037
-                    }
-                },
-            ]
-        },
-        {
-            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-            "namespace": "AAMTraits",
-            "operations": [
-                {
-                    "op": "add",
-                    "path": "/metrics/data",
-                    "value": {
-                        "totalProfiles": 523
-                    }
-                }
-            ]
-        }
-    ]
-    }
-```
-
-<table>
-<thead>
-<tr>
-<th>매개변수</th>
-<th>설명</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>jobId</code></td>
-<td>업데이트를 실행할 작업의 ID입니다.</td>
-</tr>
-<tr>
-<td><code>jobType</code></td>
-<td>업데이트를 실행할 작업 유형입니다. 이 값은 다음 중 하나일 수 있습니다. <code>export</code> 또는 <code>AO</code>.</td>
-</tr>
-<tr>
-<td><code>audienceId</code></td>
-<td>업데이트할 대상자의 ID입니다. 이 은(는) <code>audienceId</code> 값, 및 <strong>아님</strong> 다음 <code>id</code> 대상자의 값입니다.</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>업데이트할 대상자의 네임스페이스입니다.</td>
-</tr>
-<tr>
-<td><code>operations</code></td>
-<td>대상자를 업데이트하는 데 사용되는 정보가 포함된 객체입니다.</td>
-</tr>
-<tr>
-<td><code>operations.op</code></td>
-<td>패치에 사용되는 작업입니다. 여러 대상을 업데이트할 때 이 값은 다음과 같습니다. <strong>항상</strong> <code>add</code>.</td>
-</tr>
-<tr>
-<td><code>operations.path</code></td>
-<td>업데이트할 필드의 경로입니다. 현재는 두 개의 경로만 지원됩니다. <code>/metrics/data</code> 을(를) 업데이트할 때 <strong>프로필</strong> 및 수 <code>/recordMetrics/data</code> 을(를) 업데이트할 때 <strong>기록</strong> 카운트.</td>
-</tr>
-<tr>
-<td><code>operations.value</code></td>
-<td>
-업데이트할 필드의 값입니다. 프로필 수를 업데이트할 때 이 값은 다음과 같이 표시됩니다. 
-<pre>
-{ "totalProfiles": 123456 }
-</pre>
-레코드 수를 업데이트할 때 이 값은 다음과 같이 표시됩니다. 
-<pre>
-{ "recordCount": 123456 }
-</pre>
-</td>
-</tr>
-</tbody>
-</table>
-
-+++
-
-**응답**
-
-성공적인 응답은 업데이트된 대상에 대한 세부 정보와 함께 HTTP 상태 207을 반환합니다.
-
-+++ 여러 대상을 업데이트하기 위한 샘플 응답입니다.
-
-```json
-{
-   "resources":[
-      {
-         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-
-         "namespace": "AAMTraits",
-         "status":200
-      },
-      {
-         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1vcmlnaW4tdGVzdDE_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-
-         "namespace": "AAMTraits",
-         "status":200
-      }
-   ]
-}
-```
-
-| 매개변수 | 설명 |
-| --------- | ----------- |
-| `status` | 업데이트된 대상자의 상태입니다. 반환된 상태가 200이면 대상이 성공적으로 업데이트되었습니다. 대상자를 업데이트할 수 없는 경우, 대상자가 업데이트되지 않은 이유를 설명하는 오류가 반환됩니다. |
-
-+++
 
 ## 다음 단계
 

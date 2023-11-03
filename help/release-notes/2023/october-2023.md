@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2023년 10월 릴리스 정보.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '954'
-ht-degree: 34%
+source-wordcount: '1068'
+ht-degree: 32%
 
 ---
 
@@ -44,9 +44,11 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 유형 | 기능 | 설명 |
 | --- | --- | --- |
-| 확장 기능 | [!DNL Meta] 전환 API 개선 사항 | 에는 세 가지 개선 사항이 있습니다 [메타 전환 API](/help/tags/extensions/server/meta/overview.md) 확장: <ul><li>과 통합 [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): 전환 API와 Adobe 통합을 위해 pixelID 및 액세스 토큰을 공유할 수 있도록 하여 원활한 로그인 경험을 만듭니다.</li><li>과 통합 [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): 원하는 작업을 완료할 가능성이 높은 사람에게 광고를 게재하고 작업을 게재된 광고에 다시 연결할 수 있습니다.</li><li>과 통합 [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): CIP 필드에 LiveRamp의 RampID를 전달할 수 있으므로 파트너 또는 메타와 직접 PII를 공유할 필요가 없습니다. </li></ul> |
-| 확장 기능 | [!DNL LinkedIn] 전환 API | 다음 [[!DNL LinkedIn] 전환 API](../../tags/extensions/server/linkedin/overview.md) 확장을 사용하면 Experience Platform 이벤트 데이터를 LinkedIn에 전달하여 LinkedIn 마케팅 캠페인의 효과를 평가할 수 있습니다. |
+| 확장 | [!DNL Meta] 전환 API 개선 사항 | 에는 세 가지 개선 사항이 있습니다 [메타 전환 API](/help/tags/extensions/server/meta/overview.md) 확장: <ul><li>과 통합 [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): 전환 API와 Adobe 통합을 위해 pixelID 및 액세스 토큰을 공유할 수 있도록 하여 원활한 로그인 경험을 만듭니다.</li><li>과 통합 [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): 원하는 작업을 완료할 가능성이 높은 사람에게 광고를 게재하고 작업을 게재된 광고에 다시 연결할 수 있습니다.</li><li>과 통합 [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): CIP 필드에 LiveRamp의 RampID를 전달할 수 있으므로 파트너 또는 메타와 직접 PII를 공유할 필요가 없습니다. </li></ul> |
+| 확장 | [!DNL LinkedIn] 전환 API | 다음 [[!DNL LinkedIn] 전환 API](../../tags/extensions/server/linkedin/overview.md) 확장을 사용하면 Experience Platform 이벤트 데이터를 LinkedIn에 전달하여 LinkedIn 마케팅 캠페인의 효과를 평가할 수 있습니다. |
 | Secret | [!DNL LinkedIn] OAuth 2 암호 | 다음 [[!DNL LinkedIn] OAuth 2 암호](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) 을(를) 통해 서버-서버 상호 작용을 (으)로 보낼 수 있습니다. [!DNL LinkedIn] 이벤트 전달 시. |
+| 이벤트 전달 | 태그 및 이벤트 전달 업데이트 | 유지하려면 [태그](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) 및 [이벤트 전달](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) platform의 성능에서는 성공하거나 실패한 가장 최근의 개발 및 스테이지 빌드만 유지됩니다. 더 이상 사용되지 않는 모든 빌드는 제거됩니다. 또한 제한과 속도 제한은 API를 많이 사용하는 몇 가지가 다른 사용자의 API 성능을 저하시키지 않도록 구현되었습니다. |
+| 확장 | 요소, 규칙 및 확장 | [요소, 규칙 및 확장](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) 이제 동일한 라이브러리의 여러 빌드와 배포 간에 보다 일관성을 유지할 수 있도록 라이브러리 출력에서 정렬됩니다. |
 
 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../tags/home.md)를 참조하십시오.
 
