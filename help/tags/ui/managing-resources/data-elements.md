@@ -2,10 +2,10 @@
 title: 데이터 요소
 description: 데이터 요소는 데이터 사전(또는 데이터 맵)의 기본 구성단위입니다. 데이터 요소를 사용하여 마케팅 및 광고 기술 전반에서 데이터를 수집, 구성 및 전달합니다.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
 workflow-type: tm+mt
 source-wordcount: '1622'
-ht-degree: 74%
+ht-degree: 71%
 
 ---
 
@@ -78,7 +78,7 @@ ht-degree: 74%
       * 이 값은 페이지를 새로 고치거나 새 페이지를 로드할 때까지 JavaScript 변수에 저장됩니다.
       * 다음 `_satellite` 개체 구문을 사용하여 작성하거나 스크립트에 설정할 수 있습니다.
 
-         `_satellite.setVar('data_element_name')`
+        `_satellite.setVar('data_element_name')`
    * Session
       * 브라우저 탭을 닫을 때까지 브라우저의 세션 저장소에 값이 유지됩니다.
       * 사이트 방문 전체에서 사용할 수 있습니다.
@@ -174,7 +174,7 @@ CSS 선택기 체인:
 
 데이터 요소를 만들 때 해당 변수에 경로를 제공해야 합니다.
 
-데이터 계층의 일부로 데이터 수집기 개체를 사용하는 경우 경로에 점 표기법을 사용하여 `_myData.pageName` 또는 `digitalData.pageName` 등과 같은 데이터 요소에 캡처할 개체 및 속성을 참조하면 됩니다.
+데이터 계층의 일부로 데이터 수집기 개체를 사용하는 경우 경로에 점 표기법을 사용하여 다음과 같이 데이터 요소에 캡처할 개체 및 속성을 참조하면 됩니다 `_myData.pageName`, 또는 `digitalData.pageName`등
 
 #### 예:
 
