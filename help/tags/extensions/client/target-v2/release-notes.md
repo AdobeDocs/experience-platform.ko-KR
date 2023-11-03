@@ -2,9 +2,9 @@
 title: Adobe Target v2 확장 릴리스 노트
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장 기능에 대한 최신 릴리스 정보입니다.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: f235d210682feba7617b720e514361c2862512f9
+source-git-commit: a51bc1fb536347840eef113a8649b64fbf573287
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '776'
 ht-degree: 21%
 
 ---
@@ -17,18 +17,18 @@ ht-degree: 21%
 
 ## v0.20.1 (2023년 11월 3일)
 
-- at.js 2.11.2를 지원하도록 업데이트되었습니다.
+- 을(를) 지원하도록 업데이트됨 `at.js` 2.11.2.
 - 사용자 지정 이벤트에서 전송된 응답 토큰에 불일치가 발생하는 버그를 수정했습니다.
 
 ## v0.20.0 (2023년 10월 9일)
 
-- at.js 2.11.0을 지원하도록 업데이트되었습니다.
+- 을(를) 지원하도록 업데이트됨 `at.js` 2.11.0.
 - getOffer/getOffers 호출 시 배달 API로 전달되는 targetGlobalSettings의 사용자 지정 Adobe Experience Platform sandboxId 및 sandboxName 설정에 대한 지원이 추가되었습니다.
 - 선택기에서 체인 :eq()에 대한 섀도 DOM 수정.
 
 ## v0.19.3 (2023년 9월 18일)
 
-- at.js v2.10.3을 지원하도록 업데이트되었습니다.
+- 을(를) 지원하도록 업데이트됨 `at.js` v2.10.3.
 - 렌더링되는 오퍼가 없을 때 at-content-rendering-succeeded 사용자 지정 이벤트를 잘못 트리거하는 문제를 해결했습니다. 이제 올바른 이벤트인 at-content-rendering-no-offers가 트리거됩니다.
 - at-content-rendering에 실패한 사용자 지정 이벤트에 대한 오류 개체에 eventToken 및 responseTokens를 추가했습니다.
 
@@ -66,6 +66,12 @@ ht-degree: 21%
 ## v0.16.0 (2021년 10월 28일)
 
 - 을(를) 지원하도록 업데이트됨 `at.js` 이제 Adobe Target에서 v2.7.0을 다운로드할 수 있습니다.
+
+## v0.15.2 (2021년 8월 16일)
+
+- 을(를) 지원하도록 업데이트됨 `at.js` 2.6.1.
+- 페이지 로드 이벤트에 관계없이 시작 시 온디바이스 의사 결정을 초기화합니다.
+- 이제 아티팩트가 다운로드된 후 첫 번째 방문에서 온디바이스 의사 결정을 사용할 수 있습니다.
 
 ## v0.15.1(2021년 7월 20일)
 
