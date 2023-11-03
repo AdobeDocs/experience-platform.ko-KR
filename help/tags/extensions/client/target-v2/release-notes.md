@@ -2,10 +2,10 @@
 title: Adobe Target v2 확장 릴리스 노트
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장 기능에 대한 최신 릴리스 정보입니다.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 63839b8918d42bae91df9bac919c546c81be6363
+source-git-commit: f235d210682feba7617b720e514361c2862512f9
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 22%
+source-wordcount: '749'
+ht-degree: 21%
 
 ---
 
@@ -14,6 +14,11 @@ ht-degree: 22%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## v0.20.1 (2023년 11월 3일)
+
+- at.js 2.11.2를 지원하도록 업데이트되었습니다.
+- 사용자 지정 이벤트에서 전송된 응답 토큰에 불일치가 발생하는 버그를 수정했습니다.
 
 ## v0.20.0 (2023년 10월 9일)
 
