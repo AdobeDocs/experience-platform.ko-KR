@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1202'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -90,7 +90,7 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 
 Adobe Experience Platform은 자동으로 회사의 Adobe Target 인스턴스에 연결합니다. 인증이 필요하지 않습니다.
 
-### 연결 매개 변수 {#parameters}
+### 연결 매개변수 {#parameters}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_workspace"
@@ -123,7 +123,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

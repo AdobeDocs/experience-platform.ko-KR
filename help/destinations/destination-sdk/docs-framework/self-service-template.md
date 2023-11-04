@@ -5,7 +5,7 @@ exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
 workflow-type: tm+mt
 source-wordcount: '1640'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -109,7 +109,7 @@ ht-degree: 1%
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 *고객이 대상에 인증할 때 채워야 하는 필드를 추가합니다. 이러한 필드는 대상별로 다르며 Destination SDK의 구성에 따라 다릅니다. 대상의 필드가 아래 나열된 필드와 동일하지 않을 수 있습니다. 또한 아래 샘플 스크린샷과 유사한 스크린샷도 포함해 주세요.*
 
@@ -137,7 +137,7 @@ ht-degree: 1%
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

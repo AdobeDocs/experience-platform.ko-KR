@@ -5,7 +5,7 @@ exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1047'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -66,7 +66,7 @@ Adobe Experience Platform의 프로필 대상 멤버십( 로 로드됨) [!DNL Pe
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 #### OAuth 2 클라이언트 자격 증명 인증 {#oauth-2-client-credentials-authentication}
 
@@ -90,7 +90,7 @@ Adobe Experience Platform의 프로필 대상 멤버십( 로 로드됨) [!DNL Pe
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL 호스트 이름]**: 프로필을 json 데이터로 내보내는 Pega 고객 의사 결정 허브 호스트 이름입니다.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

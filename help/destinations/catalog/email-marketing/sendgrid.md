@@ -6,7 +6,7 @@ exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1571'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -79,7 +79,7 @@ SendGrid를 사용하는 마케팅 팀은 SendGrid 내에서 메일링 목록을
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 1. 다음 범위 내 [!DNL Adobe Experience Platform] 콘솔, 다음으로 이동 **대상**.
 
@@ -111,7 +111,7 @@ While [설정 중](https://experienceleague.adobe.com/docs/experience-platform/d
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

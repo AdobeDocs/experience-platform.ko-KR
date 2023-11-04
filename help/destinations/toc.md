@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: 48acb9ec2ee093c4b22176785a693b1c1ea742bd
 workflow-type: tm+mt
 source-wordcount: '1201'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 9%
       * [(베타) Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기](./ui/export-file-now.md)
       * [Experience Platform UI를 사용하여 데이터 세트 내보내기](./ui/export-datasets.md)
       * [(Beta) 새 Beta 클라우드 스토리지 대상에서 마지막 선별 시간 XDM 속성 사용](./ui/activate-last-qualification-time.md)
-      * [(Beta) 계산된 필드를 사용하여 플랫 스키마 파일로 배열을 내보냅니다](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [(Beta) 계산된 필드를 사용하여 플랫 스키마 파일에서 배열 내보내기](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [대상 세부 사항 보기](./ui/destination-details-page.md)
    * [대상 계정 업데이트](./ui/update-accounts.md)
    * [대상 계정 삭제](./ui/delete-destination-account.md)

@@ -7,7 +7,7 @@ exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '2154'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -117,7 +117,7 @@ ht-degree: 1%
 
 다음 범위 내 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]** 검색 대상 [!DNL Dynamics 365]. 또는 아래에서 찾을 수 있습니다 **[!UICONTROL CRM]** 범주.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 대상에 인증하려면 다음을 선택합니다. **[!UICONTROL 대상에 연결]**.
 ![인증 방법을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
@@ -146,7 +146,7 @@ ht-degree: 1%
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

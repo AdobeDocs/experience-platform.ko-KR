@@ -5,7 +5,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 source-git-commit: 93b1c26e85ddd0fa232b26712f88faa824f19f30
 workflow-type: tm+mt
 source-wordcount: '1017'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -120,7 +120,7 @@ SFTP 위치에 인증 연결을 설정한 후 대상에 대해 다음 정보를 
    * `exportResults.name`: 내보낸 파일의 이름입니다.
    * `size`: 내보낸 파일의 크기(바이트)입니다.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

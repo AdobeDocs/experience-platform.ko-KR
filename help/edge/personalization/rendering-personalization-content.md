@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK를 사용하여 개인화된 콘텐츠 
 description: Adobe Experience Platform Web SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다.
 keywords: 개인화;renderDecisions;sendEvent;의사 결정 범위;제안;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: 5f205792a03c3c7dd9074827ce4a989fae2e45d9
 workflow-type: tm+mt
 source-wordcount: '962'
 ht-degree: 2%
@@ -18,7 +18,7 @@ Adobe Experience Platform Web SDK는 다음을 포함한 Adobe 개인화 솔루�
 
 Adobe Target 내에서 만들어진 컨텐츠 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 그리고 Adobe Journey Optimizer [웹 캠페인 UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 는 SDK를 통해 자동으로 검색 및 렌더링할 수 있습니다. Adobe Target 내에서 만들어진 컨텐츠 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 또는 Offer decisioning은 SDK에서 자동으로 렌더링할 수 없습니다. 대신 SDK를 사용하여 이 콘텐츠를 요청한 다음 직접 콘텐츠를 수동으로 렌더링해야 합니다.
 
-## 자동으로 콘텐츠 렌더링
+## 자동으로 콘텐츠 렌더링 {#automatic}
 
 서버에 이벤트를 보낼 때 `renderDecisions` 옵션 대상 `true`. 이렇게 하면 SDK가 자동 렌더링에 적합한 개인화된 콘텐츠를 자동으로 렌더링합니다.
 
@@ -40,7 +40,7 @@ alloy("sendEvent", {
 
 개인화된 콘텐츠를 렌더링하는 것은 비동기적이므로 특정 콘텐츠가 렌더링을 완료한 시기에 대해 가정해서는 안 됩니다.
 
-## 수동으로 컨텐츠 렌더링
+## 수동으로 컨텐츠 렌더링 {#manual}
 
 개인화 콘텐츠에 액세스하려면 SDK가 서버로부터 성공적인 응답을 받은 후에 호출되는 콜백 함수를 제공할 수 있습니다. 콜백에 대한 `result` 개체(포함 가능) `propositions` 반환된 개인화 콘텐츠가 포함된 속성입니다. 다음은 이벤트를 전송할 때 콜백 함수를 제공하는 방법의 예입니다.
 

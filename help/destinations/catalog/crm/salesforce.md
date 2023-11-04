@@ -6,7 +6,7 @@ exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '3117'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -150,7 +150,7 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce CRM], �
 
 다음 범위 내 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]** 검색 대상 [!DNL Salesforce CRM]. 또는 아래에서 찾을 수 있습니다 **[!UICONTROL CRM]** 범주.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 대상에 인증하려면 아래의 필수 필드를 입력한 다음 을(를) 선택합니다. **[!UICONTROL 대상에 연결]**. 다음을 참조하십시오. [수집 [!DNL Salesforce CRM] 자격 증명](#gather-credentials) 섹션에 자세히 설명되어 있습니다.
 | 자격 증명 | 설명 | | — | — | | **[!UICONTROL 사용자 이름]** | 내 [!DNL Salesforce] 계정 사용자 이름. | | **[!UICONTROL 암호]** | 다음으로 구성된 연결된 문자열 [!DNL Salesforce] 다음에 추가된 계정 암호: [!DNL Salesforce] 보안 토큰.<br>연결된 값은 다음 형식을 갖습니다. `{PASSWORD}{TOKEN}`.<br> 참고: 중괄호나 공백을 사용하지 마십시오.<br>예를 들어 [!DNL Salesforce] 암호: `MyPa$$w0rd123` 및 [!DNL Salesforce] 보안 토큰은 `TOKEN12345....0000`에서 사용할 연결된 값 **[!UICONTROL 암호]** 필드는 입니다. `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL 사용자 정의 도메인]** | 내 [!DNL Salesforce] 도메인 접두사입니다. <br>예를 들어 도메인이 입니다. *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, 다음을 제공해야 합니다. `d5i000000isb4eak-dev-ed` 을 값으로 추가합니다. | | **[!UICONTROL 클라이언트 ID]** | 내 [!DNL Salesforce] 연결된 앱 `Consumer Key`. | | **[!UICONTROL 클라이언트 암호]** | 내 [!DNL Salesforce] 연결된 앱 `Consumer Secret`. |
@@ -176,7 +176,7 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce CRM], �
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

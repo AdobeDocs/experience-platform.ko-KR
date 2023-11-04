@@ -6,7 +6,7 @@ exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
 source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
 source-wordcount: '731'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -57,7 +57,7 @@ SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe
 * **[!UICONTROL 암호가 포함된 SFTP]**
 * **[!UICONTROL SSH 키가 포함된 SFTP]**
 
-### 연결 매개 변수 {#parameters}
+### 연결 매개변수 {#parameters}
 
 While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정보를 제공해야 합니다.
 
@@ -92,7 +92,7 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

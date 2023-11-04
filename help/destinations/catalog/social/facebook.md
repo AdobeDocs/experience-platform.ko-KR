@@ -6,7 +6,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1941'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -145,7 +145,7 @@ Experience Platform에서 이메일 주소 수집에 대한 자세한 내용은 
 >
 >Experience Platform 사용자 인터페이스는 자주 업데이트되며, 이 비디오 녹화 이후에 변경되었을 수 있습니다. 최신 정보는 [대상 구성 자습서](../../ui/connect-destination.md).
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 Facebook 대상을 찾고 을 선택합니다. **[!UICONTROL 설정]**.
 2. 선택 **[!UICONTROL 대상에 연결]**.
@@ -171,7 +171,7 @@ Experience Platform에서 이메일 주소 수집에 대한 자세한 내용은 
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"

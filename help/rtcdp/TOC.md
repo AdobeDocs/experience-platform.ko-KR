@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 대상자 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
-source-git-commit: 5c556d6a846c8ec97bf3aa8b6a6a6d2a64a33be5
+source-git-commit: 01fe1dd1d7df31458d4175c25928bfd12e01d654
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 92%
+source-wordcount: '318'
+ht-degree: 76%
 
 ---
 
@@ -37,6 +37,14 @@ ht-degree: 92%
 * 대상 {#destinations}
    * [대상 개요](destinations/overview.md)
    * [Real-Time CDP B2B 에디션의 대상](destinations/b2b.md)
+* 가드레일 {#guardrails}
+   * [Real-Time CDP 보호 개요](/help/rtcdp/guardrails/overview.md){target="_blank"}
+   * [데이터 수집 보호](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [다음을 위한 보호 기능 [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+   * [의 보호 기능 [!DNL Real-Time Customer Profile] 데이터 및 세분화](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ko){target="_blank"}
+   * [의 보호 기능 [!DNL Identity Service] 데이터](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [의 보호 기능 [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [대상을 통한 데이터 활성화 보호](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * ID {#identity}
    * [ID 및 ID 네임스페이스](profile/identities-overview.md)
 * 병합 정책 {#merge-policies}

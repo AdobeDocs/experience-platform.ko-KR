@@ -5,7 +5,7 @@ exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1028'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -76,7 +76,7 @@ ht-degree: 1%
 > 
 >대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 대상에 인증하려면 다음 단계를 수행합니다.
 
@@ -110,7 +110,7 @@ ht-degree: 1%
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

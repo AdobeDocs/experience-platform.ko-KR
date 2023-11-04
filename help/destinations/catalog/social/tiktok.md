@@ -6,7 +6,7 @@ exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1040'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -66,7 +66,7 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 대상에 인증하려면 다음으로 로그인하도록 리디렉션됩니다. [!DNL TikTok Ads Manager] 귀하를 대신하여 대상을 관리할 Adobe을 계정 및 승인합니다.
 
@@ -90,7 +90,7 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

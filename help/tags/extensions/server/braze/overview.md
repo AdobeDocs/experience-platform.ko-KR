@@ -62,7 +62,7 @@ Edge Network를 [!DNL Braze]를 사용하려면 다음 입력이 필요합니다
 | [!DNL Braze] 인스턴스 | 와 연결된 REST 엔드포인트 [!DNL Braze] 계정입니다. 다음을 참조하십시오. [!DNL Braze] 설명서 [인스턴스](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) 지침을 참조하십시오. | `https://rest.iad-03.braze.com` |
 | API 키 | 다음 [!DNL Braze] 와 연결된 API 키 [!DNL Braze] 계정입니다. <br/>다음을 참조하십시오. [!DNL Braze] 에 대한 설명서 [REST API 키](https://www.braze.com/docs/api/basics/#rest-api-key) 지침을 참조하십시오. | `YOUR-BRAZE-REST-API-KEY` |
 
-### 암호 만들기
+### 보안 생성
 
 새로 만들기 [이벤트 전달 암호](../../../ui/event-forwarding/secrets.md) 값을 로 설정합니다. [[!DNL Braze] API 키](#configuration-details). 값을 안전하게 유지하면서 계정에 대한 연결을 인증하는 데 사용됩니다.
 

@@ -7,7 +7,7 @@ exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1475'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -111,7 +111,7 @@ Job 요청 제목 아래의 검색 막대에 키워드를 입력하여 목록을
 
 전체 작업 데이터를 CSV 파일로 다운로드하려면 다음을 선택합니다. **[!UICONTROL CSV로 내보내기]** 대화 상자의 오른쪽 상단
 
-## 새 개인 정보 작업 요청 만들기 {#create-a-new-privacy-job-request}
+## 새 개인정보 보호 작업 요청 만들기 {#create-a-new-privacy-job-request}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"

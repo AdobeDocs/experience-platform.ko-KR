@@ -7,7 +7,7 @@ exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1214'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -82,7 +82,7 @@ Platform의 액세스 허용 [!DNL LINE] 리소스, 다음이 필요합니다. *
 
 다음 범위 내 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]** 검색 대상 [!DNL LINE]. 또는 아래에서 찾을 수 있습니다 **[!UICONTROL 모바일 참여]** 범주.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 대상에 인증하려면 다음을 선택합니다. **[!UICONTROL 대상에 연결]**.
 ![인증 방법을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
@@ -107,7 +107,7 @@ Platform의 액세스 허용 [!DNL LINE] 리소스, 다음이 필요합니다. *
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

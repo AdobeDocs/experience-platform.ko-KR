@@ -6,7 +6,7 @@ exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1620'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -101,7 +101,7 @@ A [!DNL Marketing Cloud Account Engagement] 다음에 대한 구독이 있는 �
 
 다음 범위 내 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]**, 검색 [!DNL Salesforce Marketing Cloud Account Engagement]. 또는 아래에서 찾을 수 있습니다 **[!UICONTROL 이메일 마케팅]** 범주.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 대상에 인증하려면 다음을 선택합니다. **[!UICONTROL 대상에 연결]**. 다음으로 이동합니다. [!DNL Salesforce] 로그인 페이지입니다. 다음을 입력하십시오. [!DNL Marketing Cloud Account Engagement] 계정 자격 증명 및 선택 [!DNL Log In].
 
@@ -133,7 +133,7 @@ A [!DNL Marketing Cloud Account Engagement] 다음에 대한 구독이 있는 �
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

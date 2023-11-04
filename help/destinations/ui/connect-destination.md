@@ -50,7 +50,7 @@ ht-degree: 0%
 
    ![사용 가능한 대상 목록과 새 대상 구성 컨트롤이 강조 표시된 Experience Platform UI의 스크린샷입니다.](../assets/ui/connect-destinations/configure-new-destination.png)
 
-## 대상에 인증 {#authenticate}
+## 대상으로 인증 {#authenticate}
 
 대상에 연결하는 첫 번째 단계는 대상 플랫폼에 인증하는 것입니다.
 

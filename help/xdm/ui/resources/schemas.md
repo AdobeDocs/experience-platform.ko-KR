@@ -7,7 +7,7 @@ exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
 source-wordcount: '3670'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -275,7 +275,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 ![표준 오브젝트에 추가된 필드](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## 실시간 고객 프로필에 대한 스키마 활성화 {#profile}
+## 실시간 고객 프로필용으로 스키마 활성화 {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"

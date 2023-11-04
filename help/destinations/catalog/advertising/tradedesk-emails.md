@@ -6,7 +6,7 @@ exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1148'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -97,7 +97,7 @@ Experience Platform에서 이메일 주소 수집에 대해 알아보려면 [일
 
 대상에 연결할 때 데이터 거버넌스 정책을 설정하는 것은 완전히 선택 사항입니다. Experience Platform을 검토하십시오. [데이터 거버넌스 개요](/help/data-governance/policies/overview.md) 을 참조하십시오.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

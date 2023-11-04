@@ -5,7 +5,7 @@ exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
 source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '720'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -46,7 +46,7 @@ Experience Platform에서 다음을 생성합니다.
 1. Adobe Commerce 대상을 선택하여 강조 표시한 다음 을 선택합니다. **[!UICONTROL 설정]**.
 1. 다음에 설명된 단계를 수행합니다. [대상 구성 자습서](../../ui/connect-destination.md).
 
-### 연결 매개 변수 {#parameters}
+### 연결 매개변수 {#parameters}
 
 While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정보를 제공해야 합니다.
 

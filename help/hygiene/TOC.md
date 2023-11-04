@@ -7,7 +7,7 @@ feature: Data Hygiene
 source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
 workflow-type: tm+mt
 source-wordcount: '65'
-ht-degree: 47%
+ht-degree: 60%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 47%
 * [고급 데이터 수명주기 관리 개요](./home.md)
 * 데이터 라이프사이클 UI {#ui}
    * [개요](./ui/overview.md)
-   * [자동화된 데이터 세트 만료](./ui/dataset-expiration.md)
+   * [자동화된 데이터 세트 만료 일정](./ui/dataset-expiration.md)
    * [(Beta) 레코드 삭제](./ui/record-delete.md)
-   * [데이터 라이프사이클 작업 주문 찾아보기](./ui/browse.md)
+   * [데이터 라이프사이클 작업 주문 검색](./ui/browse.md)
 * 데이터 위생 API {#api}
    * [개요](./api/overview.md)
    * [데이터 세트 만료](./api/dataset-expiration.md)

@@ -6,7 +6,7 @@ exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
 source-wordcount: '984'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -102,7 +102,7 @@ Adobe Experience Platform의 대상자 개념은 와 유사합니다 [태그](ht
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 대상에 인증하려면 필수 필드를 입력한 다음 을(를) 선택합니다. **[!UICONTROL 대상에 연결]**.
 
@@ -122,7 +122,7 @@ Adobe Experience Platform의 대상자 개념은 와 유사합니다 [태그](ht
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

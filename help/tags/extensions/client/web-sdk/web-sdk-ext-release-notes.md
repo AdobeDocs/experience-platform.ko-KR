@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 37%
+source-wordcount: '1806'
+ht-degree: 36%
 
 ---
 
@@ -13,6 +13,20 @@ ht-degree: 37%
 # Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 버전 2.21.0 - 2023년 11월 1일
+
+**새로운 기능**
+
+* 추가됨 `Request default personalization` 이벤트 작업을 전송하는 옵션입니다.
+* 이벤트 보내기 작업에서 페이지 이벤트의 상단 및 하단에 대한 지원을 추가했습니다.
+* 추가됨 `Apply propositions` 작업.
+* 추가됨 `Evaluate rulesets` 작업 및 `Subscribe ruleset items` 인앱 메시지에 대한 이벤트입니다.
+* 추가됨 `Decision context` 이벤트 작업을 보냅니다.
+
+**수정 사항 및 개선 사항**
+
+* Adobe Experience Platform Web SDK 버전 2.19.0을 포함합니다.
 
 ## 버전 2.20.3 - 2023년 8월 8일
 

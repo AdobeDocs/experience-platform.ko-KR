@@ -3,9 +3,9 @@ title: Edge Network Server API의 성능 보호 기능
 description: 최적의 성능 보호 내에서 서버 API를 사용하는 방법에 대해 알아봅니다.
 keywords: 데이터 수집;수집;edge network;api;sla;slt;서비스 수준
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 0e609ce278af0c93503f05778887ad1bd881524a
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '536'
 ht-degree: 2%
 
 ---
@@ -64,3 +64,13 @@ Adobe은 사용 제한 초과로 인한 성능 저하의 책임이 없습니다.
 >[!NOTE]
 >
 >페이로드 자체에 따라 이진 형식은 일반적으로 20~40% 더 컴팩트하므로 일반 텍스트 JSON에서보다 더 많은 데이터를 푸시할 수 있습니다. 데이터 스트림에 더 많은 용량이 필요한 경우 고객 지원 센터 담당자에게 문의하십시오.
+
+## 다음 단계
+
+Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보호, 종단 간 지연 정보 및 라이선스 정보에 대한 자세한 내용은 다음 설명서를 참조하십시오.
+
+* [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
+* [엔드 투 엔드 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 다양한 Experience Platform 서비스용.
+* [Real-time Customer Data Platform (B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

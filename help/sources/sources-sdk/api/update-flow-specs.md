@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: 흐름 서비스 API를 사용하여 흐름 사양 업데이트
 description: 다음 문서에서는 셀프 서비스 소스용 흐름 서비스 API(Batch SDK)를 사용하여 흐름 사양을 검색하고 업데이트하는 방법에 대한 단계를 설명합니다.
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 21bccacf3555881ae731d0e60ff7d7677f18732d
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 1%
@@ -48,7 +48,7 @@ curl -X GET \
 
 **응답**
 
-성공한 응답은 질의된 플로우 사양의 상세내역을 반환합니다.
+성공적인 응답은 질의된 플로우 사양의 상세내역을 반환합니다.
 
 ```json
 {
@@ -251,7 +251,7 @@ PUT /flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72
 
 ```shell
 PUT -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6499120c-0b15-42dc-936e-847ea3c24d72' \
+  'https://platform.adobe.io/data/foundation/flowservice/flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \

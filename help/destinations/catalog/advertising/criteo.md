@@ -6,7 +6,7 @@ exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1042'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -88,11 +88,11 @@ ht-degree: 2%
    ![크리테오 로그인](../../assets/catalog/advertising/criteo/log-in-3.png)
 
 
-### 연결 매개 변수 {#connection-parameters}
+### 연결 매개변수 {#connection-parameters}
 
 대상에 인증한 후 다음 연결 매개 변수를 입력하십시오.
 
-![연결 매개 변수](../../assets/catalog/advertising/criteo/connection-parameters.png)
+![연결 매개변수](../../assets/catalog/advertising/criteo/connection-parameters.png)
 
 | 필드 | 설명 | 필수 여부 |
 | --- | --- | --- |
@@ -107,7 +107,7 @@ ht-degree: 2%
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate-segments}
+## 이 대상으로 대상자 활성화 {#activate-segments}
 
 >[!IMPORTANT]
 > 

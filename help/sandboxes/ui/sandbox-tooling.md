@@ -2,9 +2,9 @@
 title: 샌드박스 도구
 description: 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져옵니다.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 58fcf3cbff242f65969193fd2e3d6eea0e6539aa
+source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1849'
 ht-degree: 7%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 7%
 
 사용자 지정 ID 유형은 여정을 내보낼 때 종속 개체로 지원되지 않습니다.
 
-## 개체를 패키지로 내보내기 {#export-objects}
+## 패키지로 오브젝트 내보내기 {#export-objects}
 
 >[!NOTE]
 >
@@ -237,6 +237,12 @@ You are taken to the [!UICONTROL Package object and dependencies] page where you
 >[!NOTE]
 >
 >가져오기가 완료되면 Platform UI에서 알림을 받습니다. 경고 아이콘에서 이러한 알림에 액세스할 수 있습니다. 작업이 실패한 경우 여기에서 문제 해결로 이동할 수 있습니다.
+
+## 비디오 튜토리얼
+
+다음 비디오에서는 샌드박스 도구에 대한 이해를 돕기 위해 새 패키지를 만들고, 패키지를 게시하고, 패키지를 가져오는 방법을 간략하게 설명합니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## 다음 단계
 

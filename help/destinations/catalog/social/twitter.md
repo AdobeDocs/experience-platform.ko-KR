@@ -5,7 +5,7 @@ exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '874'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -71,7 +71,7 @@ Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에�
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 1. 다음 찾기 [!DNL Twitter Custom Audiences] 대상 카탈로그의 대상 및 선택 **[!UICONTROL 설정]**.
 2. 선택 **[!UICONTROL 대상에 연결]**.
@@ -97,7 +97,7 @@ Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에�
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: d8e7b5daf72afab8e0a980e35b18a9986a19387d
+source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1661'
 ht-degree: 2%
 
 ---
@@ -23,12 +23,16 @@ ht-degree: 2%
 >* 이 문서에 설명된 제한 사항이 지속적으로 개선되고 있습니다. 업데이트를 정기적으로 확인하십시오.
 >* 개별 다운스트림 제한 사항에 따라 일부 대상의 가드레일이 이 페이지에 설명된 것보다 더 빡빡할 수 있습니다. 또한 다음을 확인하십시오 [카탈로그](/help/destinations/catalog/overview.md) 데이터를 연결 및 활성화할 대상의 페이지입니다.
 
-## 제한 유형 {#limit-types}
+## 보호 유형 {#limit-types}
 
 이 문서에는 두 가지 유형의 기본 제한이 있습니다.
 
-* **소프트 제한:** 소프트 제한을 넘어설 수 있지만 소프트 제한은 시스템 성능에 대한 권장 지침을 제공합니다.
-* **엄격한 제한:** 엄격한 제한은 절대 최대값을 제공합니다. Experience Platform UI 또는 API에서는 이 제한을 초과할 수 없으며, 이 제한을 초과하면 오류가 반환됩니다.
+| 보호 유형 | 설명 |
+|----------|---------|
+| **성능 보호(소프트 제한)** | 성능 보호는 사용 사례의 범위와 관련된 사용 제한입니다. 성능 가드레일을 초과하면 성능 저하 및 지연이 발생할 수 있습니다. Adobe은 이러한 성능 저하의 원인이 아닙니다. 성능 가드레일을 지속적으로 초과하는 고객은 성능 저하를 방지하기 위해 추가 용량의 라이센스를 선택할 수 있습니다. |
+| **시스템 시행 보호(하드 제한)** | 시스템에서 적용되는 가드레일은 Real-Time CDP UI 또는 API에 의해 적용됩니다. 이는 UI 및 API가 귀하를 차단하거나 오류를 반환하므로 초과할 수 없는 제한입니다. |
+
+{style="table-layout:auto"}
 
 
 ## 활성화 제한 {#activation-limits}
@@ -41,11 +45,11 @@ ht-degree: 2%
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
-| 단일 대상에 대한 최대 대상 수 | 250 | 소프트 | 최대 250개의 대상을 데이터 흐름의 단일 대상에 매핑하는 것이 좋습니다. <br><br> 대상에 대해 250개 이상의 대상을 활성화해야 하는 경우 다음 중 하나를 수행할 수 있습니다. <ul><li> 더 이상 활성화하지 않으려는 대상자 매핑 해제 또는</li><li>원하는 대상에 대한 새 데이터 흐름을 만들고 대상을 이 새 데이터 흐름에 매핑합니다.</li></ul> <br> 일부 대상의 경우 대상에 매핑된 대상자는 250명 미만으로 제한될 수 있습니다. 이러한 대상은 해당 섹션에서 페이지의 아래에서 더 많이 호출됩니다. |
-| 대상에 매핑된 최대 속성 수 | 50 | 소프트 | 여러 대상 및 대상 유형의 경우 내보내기 위해 매핑할 프로필 속성 및 ID를 선택할 수 있습니다. 최적의 성능을 위해 데이터 흐름에서 대상에 최대 50개의 속성을 매핑해야 합니다. |
-| 최대 대상 수 | 100 | 하드 | 데이터를 연결하고 활성화할 수 있는 대상을 최대 100개까지 만들 수 있습니다. *샌드박스당*. [Edge 개인화 대상(사용자 지정 개인화)](#edge-destinations-activation) 는 100개의 권장 대상 중 최대 10개를 구성할 수 있습니다. |
-| 대상에 활성화된 데이터 유형 | ID 및 ID 맵을 포함한 프로필 데이터 | 하드 | 현재는 내보내기만 가능합니다 *프로필 레코드 속성* 대상으로 이동합니다. 이벤트 데이터를 설명하는 XDM 속성은 현재 내보내기에서 지원되지 않습니다. |
-| 대상에 활성화된 데이터 유형 - 배열 및 맵 속성 지원 | 사용할 수 없음 | 하드 | 현재, **아님** 내보내기 가능 *배열 또는 맵 특성* 대상으로 이동합니다. 이 규칙의 예외는 다음과 같습니다. [id 맵](/help/xdm/field-groups/profile/identitymap.md): 스트리밍과 파일 기반 활성화 모두에서 내보내집니다. |
+| 단일 대상에 대한 최대 대상 수 | 250 | 성능 보호 | 최대 250개의 대상을 데이터 흐름의 단일 대상에 매핑하는 것이 좋습니다. <br><br> 대상에 대해 250개 이상의 대상을 활성화해야 하는 경우 다음 중 하나를 수행할 수 있습니다. <ul><li> 더 이상 활성화하지 않으려는 대상자 매핑 해제 또는</li><li>원하는 대상에 대한 새 데이터 흐름을 만들고 대상을 이 새 데이터 흐름에 매핑합니다.</li></ul> <br> 일부 대상의 경우 대상에 매핑된 대상자는 250명 미만으로 제한될 수 있습니다. 이러한 대상은 해당 섹션에서 페이지의 아래에서 더 많이 호출됩니다. |
+| 대상에 매핑된 최대 속성 수 | 50 | 성능 보호 | 여러 대상 및 대상 유형의 경우 내보내기 위해 매핑할 프로필 속성 및 ID를 선택할 수 있습니다. 최적의 성능을 위해 데이터 흐름에서 대상에 최대 50개의 속성을 매핑해야 합니다. |
+| 최대 대상 수 | 100 | 시스템 강제 보호 | 데이터를 연결하고 활성화할 수 있는 대상을 최대 100개까지 만들 수 있습니다. *샌드박스당*. [Edge 개인화 대상(사용자 지정 개인화)](#edge-destinations-activation) 는 100개의 권장 대상 중 최대 10개를 구성할 수 있습니다. |
+| 대상에 활성화된 데이터 유형 | ID 및 ID 맵을 포함한 프로필 데이터 | 시스템 강제 보호 | 현재는 내보내기만 가능합니다 *프로필 레코드 속성* 대상으로 이동합니다. 이벤트 데이터를 설명하는 XDM 속성은 현재 내보내기에서 지원되지 않습니다. |
+| 대상에 활성화된 데이터 유형 - 배열 및 맵 속성 지원 | 사용할 수 없음 | 시스템 강제 보호 | 현재, **아님** 내보내기 가능 *배열 또는 맵 특성* 대상으로 이동합니다. 이 규칙의 예외는 다음과 같습니다. [id 맵](/help/xdm/field-groups/profile/identitymap.md): 스트리밍과 파일 기반 활성화 모두에서 내보내집니다. |
 
 {style="table-layout:auto"}
 
@@ -65,9 +69,9 @@ ht-degree: 2%
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
-| 활성화 빈도 | 3, 6, 8 또는 12시간마다 일일 전체 내보내기 또는 빈번한 증분 내보내기 | 하드 | 읽기 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 일괄 내보내기의 빈도 증분에 대한 자세한 내용은 설명서 섹션을 참조하십시오. |
-| 지정된 시간에 내보낼 수 있는 최대 대상 수 | 100 | 소프트 | 최대 100개의 대상을 대상 데이터 흐름을 일괄 처리하는 것이 좋습니다. |
-| 활성화할 파일당 최대 행(레코드) 수 | 500만 | 하드 | Adobe Experience Platform은 내보낸 파일을 파일당 5백만 개의 레코드(행)로 자동으로 분할합니다. 각 행은 하나의 프로필을 나타냅니다. 분할 파일 이름에는 다음과 같이 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다. `filename.csv`, `filename_2.csv`, `filename_3.csv`. 자세한 내용은 [예약 섹션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) 배치 대상 활성화 자습서 |
+| 활성화 빈도 | 3, 6, 8 또는 12시간마다 일일 전체 내보내기 또는 빈번한 증분 내보내기 | 시스템 강제 보호 | 읽기 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 일괄 내보내기의 빈도 증분에 대한 자세한 내용은 설명서 섹션을 참조하십시오. |
+| 지정된 시간에 내보낼 수 있는 최대 대상 수 | 100 | 성능 보호 | 최대 100개의 대상을 대상 데이터 흐름을 일괄 처리하는 것이 좋습니다. |
+| 활성화할 파일당 최대 행(레코드) 수 | 500만 | 시스템 강제 보호 | Adobe Experience Platform은 내보낸 파일을 파일당 5백만 개의 레코드(행)로 자동으로 분할합니다. 각 행은 하나의 프로필을 나타냅니다. 분할 파일 이름에는 다음과 같이 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다. `filename.csv`, `filename_2.csv`, `filename_3.csv`. 자세한 내용은 [예약 섹션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) 배치 대상 활성화 자습서 |
 
 {style="table-layout:auto"}
 
@@ -77,8 +81,8 @@ ht-degree: 2%
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
-| 임시 활성화 작업당 대상자 활성화됨 | 80 | 하드 | 현재 각 임시 활성화 작업은 최대 80개의 대상을 활성화할 수 있습니다. 작업당 80개 이상의 대상을 활성화하려고 하면 작업이 실패합니다. 이 동작은 향후 릴리스에서 변경될 수 있습니다. |
-| 대상당 동시 임시 활성화 작업 | 1 | 하드 | 대상자당 두 개 이상의 동시 임시 활성화 작업을 실행하지 마십시오. |
+| 임시 활성화 작업당 대상자 활성화됨 | 80 | 시스템 강제 보호 | 현재 각 임시 활성화 작업은 최대 80개의 대상을 활성화할 수 있습니다. 작업당 80개 이상의 대상을 활성화하려고 하면 작업이 실패합니다. 이 동작은 향후 릴리스에서 변경될 수 있습니다. |
+| 대상당 동시 임시 활성화 작업 | 1 | 시스템 강제 보호 | 대상자당 두 개 이상의 동시 임시 활성화 작업을 실행하지 마십시오. |
 
 {style="table-layout:auto"}
 
@@ -88,9 +92,9 @@ ht-degree: 2%
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
-| 최대 수 [사용자 정의 개인화](/help/destinations/catalog/personalization/custom-personalization.md) 대상 | 10 | 소프트 | 샌드박스당 10개의 사용자 지정 개인화 대상으로 데이터 흐름을 설정할 수 있습니다. |
-| 샌드박스당 개인화 대상에 매핑된 최대 속성 수 | 30 | 하드 | 샌드박스당 데이터 흐름에서 개인화 대상에 최대 30개의 속성을 매핑할 수 있습니다. |
-| 하나에 매핑된 최대 대상자 수 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 대상 | 50 | 소프트 | 단일 Adobe Target 대상에 대한 활성화 흐름에서 최대 50개의 대상을 활성화할 수 있습니다. |
+| 최대 수 [사용자 정의 개인화](/help/destinations/catalog/personalization/custom-personalization.md) 대상 | 10 | 성능 보호 | 샌드박스당 10개의 사용자 지정 개인화 대상으로 데이터 흐름을 설정할 수 있습니다. |
+| 샌드박스당 개인화 대상에 매핑된 최대 속성 수 | 30 | 시스템 강제 보호 | 샌드박스당 데이터 흐름에서 개인화 대상에 최대 30개의 속성을 매핑할 수 있습니다. |
+| 하나에 매핑된 최대 대상자 수 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 대상 | 50 | 성능 보호 | 단일 Adobe Target 대상에 대한 활성화 흐름에서 최대 50개의 대상을 활성화할 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -122,7 +126,7 @@ XDM 개인 프로필 스키마를 기반으로 하는 데이터 세트의 경우
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
-| 내보낸 데이터 세트 크기 | 50억 개의 레코드 | 소프트 | 데이터 세트 내보내기에 대해 여기에 설명된 제한은 *소프트 가드레일*. 예를 들어, 사용자 인터페이스는 50억 개 이상의 레코드를 내보내는 것을 차단하지 않지만 동작은 예측할 수 없으며 내보내기에 실패하거나 내보내기 지연 시간이 매우 길 수 있습니다. |
+| 내보낸 데이터 세트 크기 | 50억 개의 레코드 | 성능 보호 | 데이터 세트 내보내기에 대해 여기에 설명된 제한은 *소프트 가드레일*. 예를 들어, 사용자 인터페이스는 50억 개 이상의 레코드를 내보내는 것을 차단하지 않지만 동작은 예측할 수 없으며 내보내기에 실패하거나 내보내기 지연 시간이 매우 길 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -136,8 +140,8 @@ XDM 개인 프로필 스키마를 기반으로 하는 데이터 세트의 경우
 
 | 데이터 세트 유형 | 가드레일 | 보호 유형 | 설명 |
 ---------|----------|---------|-------|
-| 을(를) 기반으로 한 데이터 세트 **XDM 경험 이벤트 스키마** | 최근 365일 데이터 | 하드 | 지난 달력 연도의 데이터를 내보냅니다. |
-| 을(를) 기반으로 한 데이터 세트 **XDM 개인 프로필 스키마** | 데이터 흐름의 내보낸 모든 파일에 대해 100억 개의 레코드 보유 | 하드 | 데이터 세트의 기록 수는 압축된 JSON 또는 Parquet 파일의 경우 100억 개 미만이어야 하고, 압축되지 않은 Parquet 파일의 경우 100만 개 미만이어야 합니다. 그렇지 않으면 내보내기에 실패합니다. 허용된 임계값보다 큰 경우 내보내려는 데이터 세트의 크기를 줄이십시오. |
+| 을(를) 기반으로 한 데이터 세트 **XDM 경험 이벤트 스키마** | 최근 365일 데이터 | 시스템 강제 보호 | 지난 달력 연도의 데이터를 내보냅니다. |
+| 을(를) 기반으로 한 데이터 세트 **XDM 개인 프로필 스키마** | 데이터 흐름의 내보낸 모든 파일에 대해 100억 개의 레코드 보유 | 시스템 강제 보호 | 데이터 세트의 기록 수는 압축된 JSON 또는 Parquet 파일의 경우 100억 개 미만이어야 하고, 압축되지 않은 Parquet 파일의 경우 100만 개 미만이어야 합니다. 그렇지 않으면 내보내기에 실패합니다. 허용된 임계값보다 큰 경우 내보내려는 데이터 세트의 크기를 줄이십시오. |
 
 {style="table-layout:auto"}
 
@@ -169,8 +173,8 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
-| 최대 수 [비공개 사용자 지정 대상](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | 소프트 | Destination SDK을 사용하여 최대 5개의 개인 사용자 지정 스트리밍 또는 일괄 처리 대상을 만들 수 있습니다. 이러한 대상을 5개 이상 만들어야 하는 경우 사용자 정의 지원 담당자에게 문의하십시오. |
-| Destination SDK에 대한 프로필 내보내기 정책 | <ul><li>`maxBatchAgeInSecs` (최소 1.800 및 최대 3.600)</li><li>`maxNumEventsInBatch` (최소 1.000, 최대 10.000)</li></ul> | 하드 | 사용 시 [구성 가능한 집계](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 대상에 대한 옵션은 API 기반 대상으로 HTTP 메시지를 보내는 빈도와 메시지에 포함되어야 하는 프로필의 수를 결정하는 최소값과 최대값을 염두에 두어야 합니다. |
+| 최대 수 [비공개 사용자 지정 대상](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | 성능 보호 | Destination SDK을 사용하여 최대 5개의 개인 사용자 지정 스트리밍 또는 일괄 처리 대상을 만들 수 있습니다. 이러한 대상을 5개 이상 만들어야 하는 경우 사용자 정의 지원 담당자에게 문의하십시오. |
+| Destination SDK에 대한 프로필 내보내기 정책 | <ul><li>`maxBatchAgeInSecs` (최소 1.800 및 최대 3.600)</li><li>`maxNumEventsInBatch` (최소 1.000, 최대 10.000)</li></ul> | 시스템 강제 보호 | 사용 시 [구성 가능한 집계](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 대상에 대한 옵션은 API 기반 대상으로 HTTP 메시지를 보내는 빈도와 메시지에 포함되어야 하는 프로필의 수를 결정하는 최소값과 최대값을 염두에 두어야 합니다. |
 
 {style="table-layout:auto"}
 
@@ -184,11 +188,12 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 {style="table-layout:auto"}
 
-## 기타 Experience Platform 서비스 보호 {#guardrails-other-services}
+## 다음 단계
 
-다른 Experience Platform 서비스에 대한 보호 정보 보기:
+Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보호, 종단 간 지연 정보 및 라이선스 정보에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
-* 의 보호 기능 [데이터 수집](/help/ingestion/guardrails.md)
-* 의 보호 기능 [[!DNL Identity Service] 데이터](/help/identity-service/guardrails.md)
-* 의 보호 기능 [[!DNL Real-Time Customer Profile] 데이터](/help/profile/guardrails.md)
-* 의 보호 기능 [[!DNL Query Service] 데이터](/help/query-service/guardrails.md)
+* [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
+* [엔드 투 엔드 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 다양한 Experience Platform 서비스용.
+* [Real-time Customer Data Platform (B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

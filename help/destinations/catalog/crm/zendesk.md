@@ -6,7 +6,7 @@ exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1502'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -75,7 +75,7 @@ Platform에서 로 데이터를 내보내려면 [!DNL Zendesk] 계정 보유가 
 
 다음 범위 내 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]** 검색 대상 [!DNL Zendesk]. 또는 아래에서 찾을 수 있습니다 **[!UICONTROL CRM]** 범주.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 아래의 필수 필드를 입력하십시오. 다음을 참조하십시오. [수집 [!DNL Zendesk] 자격 증명](#gather-credentials) 섹션에 자세히 설명되어 있습니다.
 * **[!UICONTROL 전달자 토큰]**: 에서 생성한 액세스 토큰 [!DNL Zendesk] 계정입니다.
@@ -99,7 +99,7 @@ Platform에서 로 데이터를 내보내려면 [!DNL Zendesk] 계정 보유가 
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

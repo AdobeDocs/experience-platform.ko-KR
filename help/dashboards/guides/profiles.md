@@ -7,7 +7,7 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
 source-wordcount: '4313'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -107,7 +107,7 @@ Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [
 
 * [[!UICONTROL 프로필 개수]](#profile-count)
 * [[!UICONTROL 프로필 개수 변경]](#profile-count-change)
-* [[!UICONTROL 프로필 개수 변경 추세]](#profiles-count-change-trend)
+* [[!UICONTROL 프로필 개수 변경 트렌드]](#profiles-count-change-trend)
 * [[!UICONTROL ID별 프로필]](#profiles-by-identity)
 * [[!UICONTROL ID 중첩]](#identity-overlap)
 
@@ -119,10 +119,10 @@ Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [
 
 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 정의 성향 점수를 생성하는 데 사용됩니다. 고객 AI는 기존 소비자 경험 이벤트 데이터를 분석하여 예측합니다 **이탈 또는 전환 성향 점수**. 이러한 정확도가 높은 고객 성향 모델을 통해 보다 정확한 세분화 및 타기팅을 수행할 수 있습니다. 다음 [점수 분포](#customer-ai-distribution-of-scores) 및 [채점 요약](#customer-ai-scoring-summary) 통찰력은 대상의 구분을 보여 줍니다. 이 섹션에서는 높음/낮음/중간 성향인 프로필과 이러한 프로필이 프로필 수에 걸쳐 배포되는 방법을 강조합니다.
 
-* [[!UICONTROL Customer AI 점수 요약]](#customer-ai-scoring-summary)
-* [[!UICONTROL 고객 AI 점수 분배]](#customer-ai-distribution-of-scores)
+* [[!UICONTROL 고객 AI 채점 요약]](#customer-ai-scoring-summary)
+* [[!UICONTROL 고객 AI 점수 분포]](#customer-ai-distribution-of-scores)
 
-### [!UICONTROL 고객 AI 점수 분배] {#customer-ai-distribution-of-scores}
+### [!UICONTROL 고객 AI 점수 분포] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_distributionOfScores"
@@ -151,7 +151,7 @@ Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [
 
 고객 AI에 대한 자세한 내용은 [insights UI 안내서 살펴보기](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
-### [!UICONTROL Customer AI 점수 요약] {#customer-ai-scoring-summary}
+### [!UICONTROL 고객 AI 채점 요약] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_scoringSummary"
@@ -183,7 +183,7 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 * [[!UICONTROL 프로필 개수]](#profile-count)
 * [[!UICONTROL 프로필 개수 트렌드]](#profile-count-trend)
 * [[!UICONTROL 프로필 개수 변경]](#profile-count-change)
-* [[!UICONTROL 프로필 개수 변경 추세]](#profiles-count-change-trend)
+* [[!UICONTROL 프로필 개수 변경 트렌드]](#profiles-count-change-trend)
 * [[!UICONTROL ID별 프로필 개수 변경 트렌드]](#profiles-count-change-trend-by-identity)
 * [[!UICONTROL ID별 프로필]](#profiles-by-identity)
 * [[!UICONTROL ID 중첩]](#identity-overlap)
@@ -238,11 +238,11 @@ Adobe은 프로필 데이터와 관련된 다양한 지표를 시각화하는 �
 
 ![프로필 수 변경 위젯이 강조 표시된 Platform UI 프로필 대시보드 .](../images/profiles/profile-count-change.png)
 
-### [!UICONTROL 프로필 개수 변경 추세] {#profiles-count-change-trend}
+### [!UICONTROL 프로필 개수 변경 트렌드] {#profiles-count-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
->title="프로필 개수 변경 추세"
+>title="프로필 개수 변경 트렌드"
 >abstract="이 위젯은 지난 30일, 90일 또는 12개월 동안 매일 프로필 저장소에 추가된 병합된 프로필 개수를 표시합니다. 또한 숫자는 프로필 데이터에 적용되는 선택한 병합 정책에 따라 다릅니다."
 
 다음 **[!UICONTROL 프로필 개수 변경 트렌드]** 위젯은 지난 30일, 90일 또는 12개월 동안 매일 프로필 스토어에 추가된 총 병합 프로필 수를 표시합니다. 이 숫자는 스냅숏을 만들 때 매일 업데이트되므로, 프로필을 플랫폼으로 수집하려는 경우 다음 스냅숏을 만들 때까지 프로필 수가 반영되지 않습니다. 추가된 프로필 수는 프로필 조각을 함께 병합하여 각 개인에 대한 단일 프로필을 형성하기 위해 선택한 병합 정책이 프로필 데이터에 적용된 결과입니다.

@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
 workflow-type: tm+mt
-source-wordcount: '1587'
+source-wordcount: '1660'
 ht-degree: 4%
 
 ---
@@ -15,6 +15,20 @@ ht-degree: 4%
 
 이 문서에서는 Adobe Experience Platform Web SDK에 대한 릴리스 정보를 다룹니다.
 Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확장 릴리스 노트](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## 버전 2.19.0 - 2023년 11월 1일
+
+**새로운 기능**
+
+* Adobe Journey Optimizer의 인앱 메시지 렌더링에 대한 지원이 추가되었습니다.
+* 페이지 이벤트의 상단 및 하단에 대한 지원이 추가되었습니다.
+* 페이지 범위 및 기본 표면 요청을 제어하기 위해 sendEvent 명령에 &quot;defaultPersonalizationEnabled&quot; 옵션이 추가되었습니다.
+
+**수정 사항 및 개선 사항**
+
+* 결합된 개인화는 여러 유형의 개인화를 렌더링할 때 이벤트를 함께 표시합니다.
+* 단일 페이지 애플리케이션 보기 이름이 대소문자를 구분하던 문제가 수정되었습니다.
+* 그림자 DOM 맞춤형 오퍼 선택기 문제가 해결되었습니다.
 
 ## 버전 2.18.0 - 2023년 7월 31일
 

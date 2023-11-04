@@ -432,9 +432,9 @@ Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 
 
 >[!IMPORTANT]
 > 
->카탈로그의 모든 클라우드 스토리지 대상에서 향상된 기능을 확인할 수 있습니다. [[!UICONTROL 매핑] 단계](#mapping) 를 대체합니다. **[!UICONTROL 속성 선택]** 이 섹션에 설명된 단계입니다.
+카탈로그의 모든 클라우드 스토리지 대상에서 향상된 기능을 확인할 수 있습니다. [[!UICONTROL 매핑] 단계](#mapping) 를 대체합니다. **[!UICONTROL 속성 선택]** 이 섹션에 설명된 단계입니다.
 >
->이 **[!UICONTROL 속성 선택]** 단계는 Adobe Campaign, Oracle Responsys, Oracle Eloqua 및 Salesforce Marketing Cloud 이메일 마케팅 대상에 대해 여전히 표시됩니다.
+이 **[!UICONTROL 속성 선택]** 단계는 Adobe Campaign, Oracle Responsys, Oracle Eloqua 및 Salesforce Marketing Cloud 이메일 마케팅 대상에 대해 여전히 표시됩니다.
 
 프로필 기반 대상의 경우 대상 대상으로 전송할 프로필 속성을 선택해야 합니다.
 
@@ -454,31 +454,31 @@ Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 
 
 >[!NOTE]
 >
-> Adobe Experience Platform은 스키마에서 일반적으로 사용되는 네 가지 권장 속성으로 선택 사항을 미리 채웁니다. `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+Adobe Experience Platform은 스키마에서 일반적으로 사용되는 네 가지 권장 속성으로 선택 사항을 미리 채웁니다. `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 ![대상자 활성화 워크플로의 매핑 단계에서 미리 채워진 권장 속성을 보여 주는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
->알려진 제한 사항으로 인해 현재 를 사용할 수 없습니다. **[!UICONTROL 필드 선택]** 추가할 창 `segmentMembership.status` 를 파일로 내보냅니다. 대신 값을 수동으로 붙여넣어야 합니다 `xdm: segmentMembership.status` 아래 표시된 대로 스키마 필드로 이동합니다.
+알려진 제한 사항으로 인해 현재 를 사용할 수 없습니다. **[!UICONTROL 필드 선택]** 추가할 창 `segmentMembership.status` 를 파일로 내보냅니다. 대신 값을 수동으로 붙여넣어야 합니다 `xdm: segmentMembership.status` 아래 표시된 대로 스키마 필드로 이동합니다.
 >
->![활성화 워크플로의 매핑 단계에서 대상 멤버십의 해결 방법을 보여 주는 화면 기록입니다.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+![활성화 워크플로의 매핑 단계에서 대상 멤버십의 해결 방법을 보여 주는 화면 기록입니다.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 파일 내보내기는 다음에 따라 달라집니다 `segmentMembership.status` 이(가) 선택됨:
 * 다음과 같은 경우 `segmentMembership.status` 필드를 선택하고 내보낸 파일에는 다음이 포함됩니다. **[!UICONTROL 활성]** 초기 전체 스냅샷의 멤버 및 **[!UICONTROL 활성]** 및 **[!UICONTROL 만료됨]** 이후 증분 내보내기의 멤버
 * 다음과 같은 경우 `segmentMembership.status` 필드가 선택되지 않았습니다. 내보낸 파일에는 **[!UICONTROL 활성]** 초기 전체 스냅샷 및 이후 증분 내보내기의 멤버
 
-## 데이터 보강 속성 선택 {#select-enrichment-attributes}
+## 보강 속성 선택 {#select-enrichment-attributes}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_exclude_enrichment_attributes"
->title="보강 속성 제외"
->abstract="모든 속성을 제외하고 선택한 사용자 정의 업로드된 대상자의 프로필을 대상으로 내보내려면 이 옵션을 활성화합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="설명서에서 자세히 알아보기"
+[!CONTEXTUALHELP]
+id="platform_destinations_activate_exclude_enrichment_attributes"
+title="보강 속성 제외"
+abstract="모든 속성을 제외하고 선택한 사용자 정의 업로드된 대상자의 프로필을 대상으로 내보내려면 이 옵션을 활성화합니다."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="설명서에서 자세히 알아보기"
 
 >[!IMPORTANT]
 >
->이 단계는 선택한 경우에만 표시됩니다. **[!UICONTROL 사용자 정의 업로드]** 다음 기간 동안 대상: [대상자 선택](#select-audiences) 단계.
+이 단계는 선택한 경우에만 표시됩니다. **[!UICONTROL 사용자 정의 업로드]** 다음 기간 동안 대상: [대상자 선택](#select-audiences) 단계.
 
 데이터 보강 속성은 Experience Platform에서 다음으로 수집된 사용자 지정 업로드된 대상자에 해당합니다. **[!UICONTROL 사용자 정의 업로드]**. 이 단계에서는 선택한 각 외부 대상에 대해 대상으로 내보낼 속성을 선택할 수 있습니다.
 
@@ -509,10 +509,10 @@ Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 
 
 ### 동의 정책 평가 {#consent-policy-evaluation}
 
->[!CONTEXTUALHELP]
->id="platform_governance_policies_viewApplicableConsentPolicies"
->title="해당 동의 정책 보기"
->abstract="조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;를 구매한 경우 **[!UICONTROL 해당 동의 정책 보기]**&#x200B;를 선택하여 적용된 동의 정책을 조회하고 그 결과로 활성화에 포함된 프로필 수를 확인합니다. 기업이 위에서 언급한 SKU에 액세스할 수 없는 경우 이 컨트롤은 비활성화됩니다."
+[!CONTEXTUALHELP]
+id="platform_governance_policies_viewApplicableConsentPolicies"
+title="해당 동의 정책 보기"
+abstract="조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;를 구매한 경우 **[!UICONTROL 해당 동의 정책 보기]**&#x200B;를 선택하여 적용된 동의 정책을 조회하고 그 결과로 활성화에 포함된 프로필 수를 확인합니다. 기업이 위에서 언급한 SKU에 액세스할 수 없는 경우 이 컨트롤은 비활성화됩니다."
 
 조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;를 구매한 경우 **[!UICONTROL 해당 동의 정책 보기]**&#x200B;를 선택하여 적용된 동의 정책을 조회하고 그 결과로 활성화에 포함된 프로필 수를 확인합니다. 읽어보기 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 추가 정보.
 

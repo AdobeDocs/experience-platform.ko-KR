@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: 113e74b3a4783a11bc88dc2d16134b68638604e5
 workflow-type: tm+mt
 source-wordcount: '311'
-ht-degree: 18%
+ht-degree: 20%
 
 ---
 
@@ -77,7 +77,7 @@ ht-degree: 18%
 - 쿼리 서비스 API 끝점 {#api}
    - [시작하기](api/getting-started.md)
    - [쿼리](api/queries.md)
-   - [연결 매개 변수](api/connection-parameters.md)
+   - [연결 매개변수](api/connection-parameters.md)
    - [일정](api/scheduled-queries.md)
    - [예약된 쿼리에 대해 실행](api/runs-scheduled-queries.md)
    - [쿼리 템플릿](api/query-templates.md)

@@ -6,7 +6,7 @@ exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
 source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
 workflow-type: tm+mt
 source-wordcount: '1481'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -191,7 +191,7 @@ curl -X POST \
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 다음을 연결했는지 확인하십시오. [!DNL Data Landing Zone] 컨테이너 대상 [!DNL Azure Storage Explorer] 에 설명된대로 [전제 조건](#prerequisites) 섹션. 이유 [!DNL Data Landing Zone] 는 Adobe이 프로비저닝된 스토리지로, Experience Platform UI에서 대상을 인증하기 위해 더 이상 단계를 수행할 필요가 없습니다.
 
@@ -217,7 +217,7 @@ curl -X POST \
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

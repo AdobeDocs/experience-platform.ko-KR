@@ -6,7 +6,7 @@ exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
 source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
 source-wordcount: '956'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -63,7 +63,7 @@ Adobe Campaign은 다음 연결 유형을 지원합니다.
 
 Adobe Campaign에 데이터를 보내는 기본 방법은 [!DNL Amazon S3] 또는 [!DNL Azure Blob].
 
-### 연결 매개 변수 {#parameters}
+### 연결 매개변수 {#parameters}
 
 While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정보를 제공해야 합니다.
 
@@ -85,7 +85,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

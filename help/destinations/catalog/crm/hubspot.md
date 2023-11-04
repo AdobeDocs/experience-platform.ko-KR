@@ -6,7 +6,7 @@ exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1600'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -105,7 +105,7 @@ Platform에서 로 데이터를 내보내려면 [!DNL Hubspot] 계정 보유가 
 
 다음 범위 내 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]** 검색 대상 [!DNL HubSpot]. 또는 아래에서 찾을 수 있습니다 **[!UICONTROL CRM]** 범주.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 아래의 필수 필드를 입력하십시오. 다음을 참조하십시오. [다음을 수집합니다. [!DNL HubSpot] 비공개 앱 액세스 토큰](#gather-credentials) 섹션에 자세히 설명되어 있습니다.
 * **[!UICONTROL 전달자 토큰]**: 다음에 대한 액세스 토큰 [!DNL HubSpot] 비공개 앱.
@@ -129,7 +129,7 @@ Platform에서 로 데이터를 내보내려면 [!DNL Hubspot] 계정 보유가 
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 >

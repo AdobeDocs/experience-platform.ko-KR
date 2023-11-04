@@ -1,5 +1,5 @@
 ---
-title: (Beta) 계산된 필드를 사용하여 플랫 스키마 파일로 배열을 내보냅니다
+title: (Beta) 계산된 필드를 사용하여 플랫 스키마 파일에서 배열 내보내기
 type: Tutorial
 description: 계산된 필드를 사용하여 플랫 스키마 파일의 배열을 Real-Time CDP에서 클라우드 스토리지 대상으로 내보내는 방법에 대해 알아봅니다.
 badge: Beta
@@ -7,11 +7,11 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
 source-wordcount: '1497'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
-# (Beta) 계산된 필드를 사용하여 플랫 스키마 파일로 배열을 내보냅니다 {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
+# (Beta) 계산된 필드를 사용하여 플랫 스키마 파일에서 배열 내보내기 {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"

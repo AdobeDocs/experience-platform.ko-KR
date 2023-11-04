@@ -4,7 +4,7 @@ description: 데이터 위생 API의 /workorder 끝점을 사용하면 ID에 대
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 source-git-commit: 15f3f7c9e0efb2fe5e9a1acd39b1cf23790355cb
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1283'
 ht-degree: 2%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 > 
->레코드 삭제 기능은 현재 베타 버전이며 다음에서만 사용할 수 있습니다. **제한된 릴리스**. 모든 고객이 이용할 수 있는 것은 아닙니다. 레코드 삭제 요청은 제한된 릴리스의 조직에만 사용할 수 있습니다.
+레코드 삭제 기능은 현재 베타 버전이며 다음에서만 사용할 수 있습니다. **제한된 릴리스**. 모든 고객이 이용할 수 있는 것은 아닙니다. 레코드 삭제 요청은 제한된 릴리스의 조직에만 사용할 수 있습니다.
 >
->레코드 삭제는 데이터 정리, 익명 데이터 제거 또는 데이터 최소화에 사용됩니다. 다음과 같습니다 **아님** GDPR(일반 데이터 보호 규정)과 같은 개인 정보 보호 규정에 관한 데이터 주체 권한 요청(준수)에 사용됩니다. 모든 규정 준수 사용 사례에 대해 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 대신,
+레코드 삭제는 데이터 정리, 익명 데이터 제거 또는 데이터 최소화에 사용됩니다. 다음과 같습니다 **아님** GDPR(일반 데이터 보호 규정)과 같은 개인 정보 보호 규정에 관한 데이터 주체 권한 요청(준수)에 사용됩니다. 모든 규정 준수 사용 사례에 대해 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 대신,
 
 ## 시작하기
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 > 
->매월 제출할 수 있는 총 고유 ID 레코드 삭제 횟수에는 제한이 있습니다. 이러한 제한은 라이선스 계약을 기반으로 합니다. Adobe Real-time Customer Data Platform 및 Adobe Journey Optimizer의 모든 에디션을 구입한 조직은 매월 최대 10만 건의 ID 레코드 삭제를 제출할 수 있습니다. 구입한 조직 **Adobe 헬스케어 실드** 또는 **Adobe 개인정보 보호 및 보안 실드** 매달 최대 60만 개의 id 레코드 삭제를 제출할 수 있습니다.<br>단일 [ui를 통해 삭제 요청 기록](../ui/record-delete.md) 을(를) 통해 한 번에 10,000개의 ID를 제출할 수 있습니다. 레코드를 삭제하는 API 메서드를 사용하면 100,000개의 ID를 한 번에 제출할 수 있습니다.<br>최대 ID 제한까지, 요청당 가능한 많은 ID를 제출하는 것이 좋습니다. 많은 양의 ID를 삭제하려는 경우 낮은 볼륨 또는 레코드당 하나의 ID 삭제 요청을 제출하지 않아야 합니다.
+매월 제출할 수 있는 총 고유 ID 레코드 삭제 횟수에는 제한이 있습니다. 이러한 제한은 라이선스 계약을 기반으로 합니다. Adobe Real-time Customer Data Platform 및 Adobe Journey Optimizer의 모든 에디션을 구입한 조직은 매월 최대 10만 건의 ID 레코드 삭제를 제출할 수 있습니다. 구입한 조직 **Adobe 헬스케어 실드** 또는 **Adobe 개인정보 보호 및 보안 실드** 매달 최대 60만 개의 id 레코드 삭제를 제출할 수 있습니다.<br>단일 [ui를 통해 삭제 요청 기록](../ui/record-delete.md) 을(를) 통해 한 번에 10,000개의 ID를 제출할 수 있습니다. 레코드를 삭제하는 API 메서드를 사용하면 100,000개의 ID를 한 번에 제출할 수 있습니다.<br>최대 ID 제한까지, 요청당 가능한 많은 ID를 제출하는 것이 좋습니다. 많은 양의 ID를 삭제하려는 경우 낮은 볼륨 또는 레코드당 하나의 ID 삭제 요청을 제출하지 않아야 합니다.
 
 **API 형식**
 
@@ -39,7 +39,7 @@ POST /workorder
 
 >[!NOTE]
 >
->데이터 라이프사이클 요청은 기본 ID 또는 ID 맵을 기준으로만 데이터 세트를 수정할 수 있습니다. 요청은 기본 ID를 지정하거나 ID 맵을 제공해야 합니다.
+데이터 라이프사이클 요청은 기본 ID 또는 ID 맵을 기준으로만 데이터 세트를 수정할 수 있습니다. 요청은 기본 ID를 지정하거나 ID 맵을 제공해야 합니다.
 
 **요청**
 
@@ -89,7 +89,7 @@ curl -X POST \
 | `description` | 레코드 삭제 요청에 대한 설명. |
 | `identities` | 정보를 삭제하려는 하나 이상의 사용자 ID가 포함된 배열입니다. 각 ID는 [id 네임스페이스](../../identity-service/namespaces.md) 및 값:<ul><li>`namespace`: 단일 문자열 속성을 포함합니다. `code`: id 네임스페이스를 나타냅니다. </li><li>`id`: ID 값입니다.</ul>If `datasetId` 각 엔터티가 속한 단일 데이터 세트를 지정합니다. `identities` 스키마의 기본 id와 동일한 id 네임스페이스를 사용해야 합니다.<br><br>If `datasetId` 이(가) (으)로 설정됨 `ALL`, `identities` 각 데이터 세트가 다를 수 있으므로 배열이 단일 네임스페이스로 제한되지 않습니다. 그러나 요청은에서 보고한 대로 조직에서 사용할 수 있는 네임스페이스에 제약을 받습니다 [ID 서비스](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
-{style="table-layout:auto"}
+{style="표 레이아웃:자동"}
 
 **응답**
 

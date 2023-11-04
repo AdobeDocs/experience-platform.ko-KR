@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스 자격 증명 안내서
 description: Adobe Experience Platform Query Service는 쿼리를 작성하여 실행하고, 이전에 실행한 쿼리를 보고, 조직 내에서 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
+source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1517'
 ht-degree: 3%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 3%
 # 자격 증명 안내서
 
 Adobe Experience Platform Query Service를 사용하면 외부 클라이언트와 연결할 수 있습니다. 만료 자격 증명 또는 만료되지 않는 자격 증명을 사용하여 이러한 외부 클라이언트에 연결할 수 있습니다.
+
+>[!NOTE]
+>
+>모든 사용자가 자격 증명 패널을 자동으로 사용할 수 있는 것은 아닙니다. Adobe 계정 팀에 문의하여 다음을 요청하십시오. [!UICONTROL 자격 증명] 필요한 경우 쿼리 서비스 작업 영역에 포함할 탭입니다. 요청할 경우 이 변경은 조직 전체에 적용되며 Adobe 엔지니어링 팀에서 수행합니다. 사용자가 제어하는 설정이 아닙니다.
 
 ## 자격 증명 만료 {#expiring-credentials}
 

@@ -6,7 +6,7 @@ exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1683'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -139,7 +139,7 @@ Real-Time CDP에서 대상이 처음 활성화되는 시간과 특정 사용 사
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 대상에 인증하려면 다음을 선택합니다. **[!UICONTROL 설정]** 카탈로그의 대상 카드 보기에서 다음을 선택합니다. **[!UICONTROL 대상에 연결]**.
 
@@ -154,7 +154,7 @@ Real-Time CDP에서 대상이 처음 활성화되는 시간과 특정 사용 사
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

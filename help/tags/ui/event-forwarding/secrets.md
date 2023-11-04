@@ -38,7 +38,7 @@ ht-degree: 3%
 
 또한 라이브러리에 리소스를 추가하고 테스트를 위해 웹 사이트에 빌드를 설치하는 방법을 포함하여 태그 및 이벤트 전달을 위한 게시 플로우에 대해 잘 알고 있어야 합니다. 다음을 참조하십시오. [게시 개요](../publishing/overview.md) 을 참조하십시오.
 
-## 암호 만들기 {#create}
+## 보안 생성 {#create}
 
 >[!CONTEXTUALHELP]
 >id="platform_eventforwarding_secrets_environments"

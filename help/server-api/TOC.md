@@ -8,7 +8,7 @@ feature: Data Collection
 source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
 workflow-type: tm+mt
 source-wordcount: '99'
-ht-degree: 44%
+ht-degree: 46%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 44%
 # Edge Network Server API 설명서 {#edge-network-server-api}
 
 * [개요](overview.md)
-* [성능 보호](guardrails.md)
+* [성능 가드레일](guardrails.md)
 * [인증](authentication.md)
 * 데이터 수집 {#data-collection}
    * [단일 이벤트 데이터 수집](interactive-data-collection.md)
