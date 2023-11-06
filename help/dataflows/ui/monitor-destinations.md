@@ -107,7 +107,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 ![스트리밍 대상에 대한 데이터 흐름 레코드](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### 배치 대상에 대해 데이터 흐름 실행 {#dataflow-runs-for-batch-destinations}
+### 일괄 처리 대상에 대한 데이터 흐름 실행 {#dataflow-runs-for-batch-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
@@ -165,7 +165,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 ![배치 대상에 대한 데이터 흐름 레코드](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## 모니터링 대상 대시보드 {#monitoring-destinations-dashboard}
+## 대상 대시보드 모니터링 {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >

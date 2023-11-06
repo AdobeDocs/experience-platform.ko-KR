@@ -7,7 +7,7 @@ exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 9%
 
 샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션입니다. 각 샌드박스는 플랫폼 리소스(스키마, 데이터 세트, 프로필 등)의 자체 독립 라이브러리를 유지 관리합니다. 샌드박스 내에서 수행되는 모든 콘텐츠 및 작업은 해당 샌드박스로만 제한되고 다른 샌드박스에는 영향을 주지 않습니다. 자세한 내용은 [샌드박스 개요](home.md)를 참조하십시오.
 
-## 사용 가능한 샌드박스 유형과 차이점은 무엇입니까? {#sandbox-types}
+## 어떤 유형의 샌드박스를 사용할 수 있으며 차이점은 무엇입니까? {#sandbox-types}
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtypes"

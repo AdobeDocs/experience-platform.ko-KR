@@ -30,7 +30,7 @@ Adobe Experience Platform을 사용하면 Adobe Experience Platform 활동과 �
 * [가시성](../../../observability/home.md): [!DNL Observability Insights] 통계 지표 및 이벤트 알림을 사용하여 플랫폼 활동을 모니터링할 수 있습니다.
    * [경고](../../../observability/alerts/overview.md): Platform 작업의 특정 조건 세트에 도달하면(예: 시스템이 임계값을 위반한 경우 발생할 수 있는 문제), Platform은 이를 구독한 조직의 모든 사용자에게 경고 메시지를 전달할 수 있습니다.
 
-## UI에서 경고 구독 {#subscribe-sources-alerts}
+## UI에서 알림 구독 {#subscribe-sources-alerts}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"

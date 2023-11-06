@@ -7,7 +7,7 @@ exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
 workflow-type: tm+mt
 source-wordcount: '802'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -46,7 +46,7 @@ Platform에서 자동 적용이 작동하는 방법에 대한 자세한 내용�
 
 특정 데이터 내보내기 컨트롤이 의 데이터 사용 레이블에 매핑되는 방식에 대한 참조 [!DNL Platform], 다음을 참조하십시오. [Audience Manager 설명서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
-## 에서 데이터 사용 레이블 관리 [!DNL Experience Platform] {#manage-labels}
+## [!DNL Experience Platform]에서 데이터 사용 레이블 관리 {#manage-labels}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"

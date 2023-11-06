@@ -5,11 +5,11 @@ exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1391'
-ht-degree: 14%
+ht-degree: 16%
 
 ---
 
-# Real-time Customer Data Platform B2B 에디션에서 두 스키마 간의 다대일 관계 정의 {#relationship-b2b}
+# Real-Time Customer Data Platform B2B Edition에서 두 스키마 간의 다대일 관계 정의 {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
@@ -46,7 +46,7 @@ Adobe Real-time Customer Data Platform B2B 에디션은 다음과 같은 기본 
 
 스키마 관계는 내의 전용 필드로 표시됩니다 **소스 스키마** 의 기본 id 필드를 참조하는 경우 **참조 스키마**. 다음 단계에서 &quot;[!DNL Opportunities]&quot;&quot;는 소스 스키마 역할을 하는 반면 &quot;[!DNL Accounts]&quot;는 참조 스키마 역할을 합니다.
 
-### B2B 관계의 ID 이해
+### B2B 관계에서 ID 이해
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"

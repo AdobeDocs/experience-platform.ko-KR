@@ -1,16 +1,16 @@
 ---
 description: Adobe Experience Platform UI에서 템플릿을 사용하여 B2B 데이터에 대한 데이터 수집 프로세스를 가속화하는 방법을 알아봅니다.
-title: UI의 템플릿을 사용하여 소스 데이터 흐름 만들기
+title: UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '2258'
-ht-degree: 10%
+source-wordcount: '2259'
+ht-degree: 11%
 
 ---
 
-# UI의 템플릿을 사용하여 소스 데이터 흐름 만들기 {#create-a-sources-dataflow-using-templates-in-the-ui}
+# UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기 {#create-a-sources-dataflow-using-templates-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
@@ -45,7 +45,7 @@ Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 �
 * [[!DNL Experience Data Model (XDM)] 시스템](../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 * [샌드박스](../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-## Platform UI에서 템플릿 사용 {#use-templates-in-the-platform-ui}
+## 플랫폼 UI에서 템플릿 사용 {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
@@ -203,7 +203,7 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 �
 
 ![채우기가 활성화된 Dynamics 및 Salesforce 템플릿의 예약 인터페이스입니다.](../../images/tutorials/templates/backfill.png)
 
-### 에셋 검토 {#review-assets}
+### 자산 검토 {#review-assets}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_review"

@@ -7,7 +7,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
 workflow-type: tm+mt
 source-wordcount: '3053'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -91,10 +91,10 @@ Platform 사용자 인터페이스 내의 모든 Adobe Experience Platform 세�
 
 고객 AI는 규모에 따라 개별 프로필에 대한 이탈 및 전환과 같은 사용자 정의 성향 점수를 생성하는 데 사용됩니다. 고객 AI는 기존 소비자 경험 이벤트 데이터를 분석하여 예측합니다 **이탈 또는 전환 성향 점수**. 이러한 정확도가 높은 고객 성향 모델을 통해 보다 정확한 세분화 및 타기팅을 수행할 수 있습니다. 다음 [점수 분포](#customer-ai-distribution-of-scores) 및 [채점 요약](#customer-ai-scoring-summary) 통찰력은 대상의 구분을 보여 줍니다. 이 섹션에서는 높음/낮음/중간 성향인 프로필과 이러한 프로필이 프로필 수에 걸쳐 배포되는 방법을 강조합니다.
 
-* [[!UICONTROL Customer AI 점수 요약]](#customer-ai-scoring-summary)
-* [[!UICONTROL 고객 AI 점수 분배]](#customer-ai-distribution-of-scores)
+* [[!UICONTROL 고객 AI 채점 요약]](#customer-ai-scoring-summary)
+* [[!UICONTROL 고객 AI 점수 분포]](#customer-ai-distribution-of-scores)
 
-### [!UICONTROL 고객 AI 점수 분배] {#customer-ai-distribution-of-scores}
+### [!UICONTROL 고객 AI 점수 분포] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_distributionOfScores"
@@ -123,7 +123,7 @@ Platform 사용자 인터페이스 내의 모든 Adobe Experience Platform 세�
 
 고객 AI에 대한 자세한 내용은 [insights UI 안내서 살펴보기](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
-### [!UICONTROL Customer AI 점수 요약] {#customer-ai-scoring-summary}
+### [!UICONTROL 고객 AI 채점 요약] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_scoringSummary"
