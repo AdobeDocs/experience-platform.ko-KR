@@ -2,9 +2,9 @@
 title: 메타 전환 API 확장 개요
 description: Adobe Experience Platform의 이벤트 전달을 위한 메타 전환 API 확장에 대해 알아봅니다.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
+source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
 workflow-type: tm+mt
-source-wordcount: '2624'
+source-wordcount: '2595'
 ht-degree: 0%
 
 ---
@@ -67,9 +67,9 @@ MBE에서 인증하라는 대화 상자 프롬프트가 이벤트 전달 내의 
 
 ## LiveRamp와 통합(Alpha) {#alpha}
 
-LiveRamp와 통합하면 메타 전환 API 규칙 구성에 새 필드가 추가되어 고객이 LiveRamp 전환 API와 보다 쉽게 통합할 수 있습니다. 이렇게 통합하면 파트너 또는 메타와 직접 PII를 공유할 필요가 없습니다. LiveRamp의 강력한 ID 그래프로 인해 [!UICONTROL 파트너 ID(알파)] 사용자 일치율을 높임으로써 통합 품질을 향상시킬 수 있습니다.
+[!DNL LiveRamp] 다음을 보유한 고객 [!DNL LiveRamp]사이트에 배포된 의 인증된 트래픽 솔루션(ATS)은 RampID를 고객 정보 매개 변수로 공유하도록 선택할 수 있습니다. 다음으로 작업하십시오. [!DNL Meta] 이 기능에 대한 Alpha 프로그램에 참여할 계정 팀입니다.
 
-![메타 짝수 전달 [!UICONTROL 규칙] 구성 페이지 강조 표시 [!UICONTROL 파트너 이름(알파)] 및 [!UICONTROL 파트너 ID(알파)].](../../../images/extensions/server/meta/live-ramp.png)
+![메타 이벤트 전달 [!UICONTROL 규칙] 구성 페이지 강조 표시 [!UICONTROL 파트너 이름(알파)] 및 [!UICONTROL 파트너 ID(알파)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## 이벤트 전달 규칙 구성 {#rule}
 
