@@ -1,9 +1,9 @@
 ---
 title: Real-Time CDP 가드 레일
 description: Real-Time CDP의 다양한 서비스 및 영역에서 데이터 가드레일에 대해 알아봅니다.
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: c6daa645743331ba6fdf8f79e432ae150ee1ff9e
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '391'
 ht-degree: 3%
 
 ---
@@ -42,8 +42,8 @@ ht-degree: 3%
 
 * [모든 Adobe 제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)
 * [Real-time Customer Data Platform (B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 
 ## 다음 단계
 
