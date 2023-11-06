@@ -3,9 +3,9 @@ title: 이벤트 전달 시작
 description: Adobe Experience Platform에서 이벤트 전달 사용을 시작하려면 이 단계별 자습서를 따르십시오.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 45d881a810782f734ed030fbf29e802fa535400a
+source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '870'
 ht-degree: 26%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platform에서 이벤트 전달을 사용하려면 다음 세 �
 
 * [Adobe Experience Platform 웹 SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [서버 간 API](/help/server-api/overview.md)
+* [Edge Network Server API](/help/server-api/overview.md)
 
 >[!NOTE]
 >Platform Web SDK 및 Platform Mobile SDK는 Adobe Experience Platform의 태그를 통해 배포할 필요가 없습니다. 그러나 태그를 사용하여 이러한 SDK를 배포하는 것이 좋습니다.
