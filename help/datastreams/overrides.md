@@ -2,10 +2,10 @@
 title: 데이터스트림 재정의 구성
 description: 데이터스트림 UI에서 데이터스트림 재정의를 구성하고 Web SDK를 통해 활성화하는 방법에 대해 알아봅니다.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 5effb8a514100c28ef138ba1fc443cf29a64319a
+source-git-commit: 252bda1395a2a31cd7e2e2789e5c2508fbd3fd5e
 workflow-type: tm+mt
-source-wordcount: '1464'
-ht-degree: 78%
+source-wordcount: '1466'
+ht-degree: 77%
 
 ---
 
@@ -153,9 +153,6 @@ alloy("sendEvent", {
       datasets: {
         event: {
           datasetId: "SampleEventDatasetIdOverride"
-        },
-        profile: {
-          datasetId: "www"
         }
       }
     },
@@ -180,7 +177,7 @@ alloy("sendEvent", {
 |---|---|
 | `edgeConfigOverrides.datastreamId` | 이 매개변수를 사용하면 단일 요청이 `configure` 명령에서 정의한 데이터스트림과 다른 데이터스트림으로 이동할 수 있습니다. |
 
-### `configure` 명령을 통해 구성 재정의 전송 {#send-configure}
+### 웹 SDK를 통해 구성 재정의 전송 `configure` 명령 {#send-configure}
 
 아래 예의 `configure` 명령에서 구성 재정의는 다음과 같습니다.
 
@@ -195,11 +192,8 @@ alloy("configure", {
   edgeConfigOverrides: {
     "com_adobe_experience_platform": {
       "datasets": {
-        "event": { 
+        "event": {
           datasetId: "SampleProfileDatasetIdOverride"
-        },
-        "profile": { 
-          datasetId: "www"
         }
       }
     },
@@ -296,10 +290,7 @@ let configOverrides: [String: Any] = [
     "datasets": [
       "event": [
         "datasetId": "SampleEventDatasetIdOverride"
-      ],
-      "profile": [
-        "datasetId": "SampleProfileDatasetIdOverride"
-      ],
+      ]
     ]
   ],
   "com_adobe_analytics": [
@@ -308,7 +299,7 @@ let configOverrides: [String: Any] = [
           "MySecondOverrideReportSuite",
           "MyThirdOverrideReportSuite"
       ]
-  ],  
+  ],
   "com_adobe_identity": [
     "idSyncContainerId": "1234567"
   ],
@@ -341,10 +332,7 @@ val configOverrides = mapOf(
         to mapOf(
             "event"
             to mapOf("datasetId"
-                to "SampleEventDatasetIdOverride"),
-            "profile"
-            to mapOf("datasetId"
-                to "SampleProfileDatasetIdOverride")
+                to "SampleEventDatasetIdOverride")
         )
     ),
     "com_adobe_analytics"
@@ -392,9 +380,6 @@ Edge.sendEvent(experienceEvent) {
         "datasets": {
           "event": {
             "datasetId": "SampleProfileDatasetIdOverride"
-          },
-          "profile": {
-            "datasetId": "www"
           }
         }
       },
