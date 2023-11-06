@@ -2,23 +2,19 @@
 title: 매개 변수가 있는 쿼리
 description: Adobe Experience Platform UI에서 매개 변수가 있는 쿼리를 사용하는 방법에 대해 알아봅니다.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '734'
 ht-degree: 10%
 
 ---
 
-# 매개 변수가 있는 쿼리(제한된 릴리스) {#parameterized-queries}
+# 매개변수화된 쿼리 {#parameterized-queries}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
 >title="매개변수화된 쿼리"
 >abstract="매개변수화된 쿼리를 사용하여 실행 시 매개변수 값을 추가합니다. 이를 통해 동적 데이터로 작업하고 다양한 사용 사례에 대한 쿼리를 재사용할 수 있습니다. `'$'` 서문을 사용하여 텍스트 편집기의 쿼리에 쿼리 매개변수를 입력합니다. 그런 다음 편집기 아래의 쿼리 매개변수 섹션에 키 값을 추가합니다."
-
->[!IMPORTANT]
->
->매개 변수가 있는 쿼리 UI 기능은 **제한된 릴리스 전용** 일부 고객은 사용할 수 없습니다.
 
 쿼리 서비스는 쿼리 편집기에서 매개 변수가 있는 쿼리 사용을 지원합니다. 이제 매개 변수가 있는 쿼리를 사용하여 매개 변수에 자리 표시자를 사용하고 실행 시 매개 변수 값을 추가할 수 있습니다. 자리 표시자를 사용하면 명령문이 실행될 때까지 값이 무엇인지 모르는 동적 데이터로 작업할 수 있습니다. 쿼리를 미리 준비하여 비슷한 용도로 다시 사용할 수도 있습니다. 각 사용 사례에 대해 별도의 SQL 쿼리를 만들지 않으므로 쿼리를 재사용하면 상당한 노력을 절약할 수 있습니다.
 
