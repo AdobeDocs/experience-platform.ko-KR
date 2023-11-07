@@ -2,7 +2,7 @@
 description: 대상에 대한 인증 메커니즘을 설정하는 방법을 알아보고 선택한 인증 방법에 따라 UI에 표시되는 사용자에 대한 통찰력을 얻으십시오.
 title: 고객 인증 구성
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 0%
@@ -105,7 +105,7 @@ Experience Platform에서의 실시간(스트리밍) 통합에 대해 기본 인
 
 ## OAuth 2 인증 {#oauth2}
 
-사용자 선택 **[!UICONTROL 대상에 연결]** 사용자 지정 대상 Twitter 대상에 대해 아래 예에 표시된 대로 대상에 대한 OAuth 2 인증 흐름을 트리거합니다. 대상 끝점에 대한 OAuth 2 인증 구성에 대한 자세한 내용은 전용 을 참조하십시오 [Destination SDK OAuth 2 인증 페이지](oauth2-authentication.md).
+사용자 선택 **[!UICONTROL 대상에 연결]** 사용자 지정 대상 Twitter 대상에 대해 아래 예에 표시된 대로 대상에 대한 OAuth 2 인증 흐름을 트리거합니다. 대상 끝점에 대한 OAuth 2 인증 구성에 대한 자세한 내용은 전용 을 참조하십시오 [Destination SDK OAuth 2 인증 페이지](oauth2-authorization.md).
 
 ![OAuth 2 인증을 통해 UI 렌더링](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -233,7 +233,7 @@ SSH 키 인증 유형으로 SFTP를 구성할 경우 사용자는 SFTP 사용자
 
 다른 대상 구성 요소에 대한 자세한 내용은 다음 문서를 참조하십시오.
 
-* [OAuth2 인증](oauth2-authentication.md)
+* [OAuth2 인증](oauth2-authorization.md)
 * [고객 데이터 필드](customer-data-fields.md)
 * [UI 속성](ui-attributes.md)
 * [스키마 구성](schema-configuration.md)

@@ -2,7 +2,7 @@
 description: Destination SDK으로 빌드된 대상에 대해 설명서 링크, 대상 카드 카테고리, 대상 연결 유형 및 빈도와 같은 UI 속성을 구성하는 방법을 알아봅니다.
 title: UI 속성
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 0%
@@ -121,7 +121,7 @@ Destination SDK으로 만드는 대상을 제한된 수의 고객이 사용할 �
 다른 대상 구성 요소에 대한 자세한 내용은 다음 문서를 참조하십시오.
 
 * [고객 인증](customer-authentication.md)
-* [OAuth2 인증](oauth2-authentication.md)
+* [OAuth2 인증](oauth2-authorization.md)
 * [고객 데이터 필드](customer-data-fields.md)
 * [스키마 구성](schema-configuration.md)
 * [ID 네임스페이스 구성](identity-namespace-configuration.md)

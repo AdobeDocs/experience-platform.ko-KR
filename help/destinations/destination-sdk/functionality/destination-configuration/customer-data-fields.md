@@ -2,7 +2,7 @@
 description: 사용자가 대상에 데이터를 연결하고 내보내는 방법과 관련된 다양한 정보를 지정할 수 있도록 Experience Platform UI에서 입력 필드를 만드는 방법을 알아봅니다.
 title: 고객 데이터 필드
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 5%
@@ -568,7 +568,7 @@ Experience Platform이에 올바로 연결용 [!DNL Amazon S3]와 같은 두 고
 다른 대상 구성 요소에 대한 자세한 내용은 다음 문서를 참조하십시오.
 
 * [고객 인증](customer-authentication.md)
-* [OAuth2 인증](oauth2-authentication.md)
+* [OAuth2 인증](oauth2-authorization.md)
 * [UI 속성](ui-attributes.md)
 * [스키마 구성](schema-configuration.md)
 * [ID 네임스페이스 구성](identity-namespace-configuration.md)

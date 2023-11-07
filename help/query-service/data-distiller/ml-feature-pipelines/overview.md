@@ -2,7 +2,7 @@
 title: AI/ML 기능 파이프라인
 description: Data Distiller을 사용하여 Adobe Experience Platform 데이터에서 파생된 기능을 사용하여 머신 러닝 파이프라인을 보강하는 방법에 대해 알아봅니다. 원시 데이터를 기능으로 변환하고 기능 데이터를 전달하여 마케팅 사용 사례를 지원하는 모델을 교육하거나 평가합니다.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 1%
@@ -97,7 +97,7 @@ You are recommended to create an [!DNL Oauth2] API credential specifically for C
 
 <!-- 
 Is this the correct doc to link to about creating an Oauth2 API credential?:
-../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authentication.md
+../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authorization.md
  -->
 
 <!-- See [Authenticate and access Experience Platform APIs](../../../landing/api-authentication.md) detailed instructions instructions on creating an API credential. -->

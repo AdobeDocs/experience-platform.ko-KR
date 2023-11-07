@@ -4,7 +4,7 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: 48acb9ec2ee093c4b22176785a693b1c1ea742bd
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 10%
@@ -214,7 +214,7 @@ ht-degree: 10%
          * [파일 서식 구성](./destination-sdk/functionality/destination-server/file-formatting.md)
       * 대상 구성 구성 요소 {#destination-configuration}
          * [고객 인증 구성](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
-         * [OAuth2 인증](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
+         * [OAuth2 인증](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [고객 데이터 필드](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
          * [UI 속성](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
          * [파트너 스키마 구성](./destination-sdk/functionality/destination-configuration/schema-configuration.md)

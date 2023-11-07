@@ -2,7 +2,7 @@
 description: Destination SDK으로 빌드된 대상에 대해 파트너 스키마를 구성하는 방법을 알아봅니다.
 title: 파트너 스키마 구성
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1897'
 ht-degree: 4%
@@ -246,7 +246,7 @@ Destination SDK은 동적 파트너 스키마 생성을 지원합니다. 정적 
 다른 대상 구성 요소에 대한 자세한 내용은 다음 문서를 참조하십시오.
 
 * [고객 인증](customer-authentication.md)
-* [OAuth2 인증](oauth2-authentication.md)
+* [OAuth2 인증](oauth2-authorization.md)
 * [UI 속성](ui-attributes.md)
 * [고객 데이터 필드](customer-data-fields.md)
 * [ID 네임스페이스 구성](identity-namespace-configuration.md)

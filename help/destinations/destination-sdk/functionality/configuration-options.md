@@ -2,7 +2,7 @@
 description: Adobe Experience Platform의 대상 서비스는 대상 기능을 빌드하는 여러 구성 요소에 대한 구성 끝점을 사용합니다. 이러한 구성 요소를 결합하여 Experience Platform이 대상 파트너에 연결하고, 사용자 지정 메시지를 전송하고, 디지털 에코시스템에서 프로필 데이터를 활성화하는 방법에 대해 알아봅니다.
 title: Destination SDK의 구성 옵션
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Adobe Experience Platform의 대상 서비스는 대상 기능을 빌드하는 �
 각 대상 구성 요소에 대한 자세한 내용은 아래 설명서를 참조하십시오. 다음을 통해 아래에 설명된 기능을 구성할 수 있습니다 [대상 엔드포인트](../authoring-api/destination-configuration/create-destination-configuration.md).
 
 * [고객 인증 구성](destination-configuration/customer-authentication.md): Experience Platform이 대상에 연결하는 데 사용해야 하는 인증 메커니즘을 선택합니다. 이 구성은 [새 대상 구성](../../ui/connect-destination.md) Experience Platform을 대상이 있는 계정에 연결하는 Experience Platform 사용자 인터페이스의 페이지입니다.
-* [OAuth2 인증](destination-configuration/oauth2-authentication.md): 모든 항목에 대해 알아보기 [!DNL OAuth2] Destination SDK에서 지원하는 인증 흐름 및 설정에 대한 지침 받기 [!DNL OAuth2] 대상에 대한 인증..
+* [OAuth2 인증](destination-configuration/oauth2-authorization.md): 모든 항목에 대해 알아보기 [!DNL OAuth2] Destination SDK에서 지원하는 인증 흐름 및 설정에 대한 지침 받기 [!DNL OAuth2] 대상에 대한 인증..
 * [고객 데이터 필드](destination-configuration/customer-data-fields.md): 사용자가 대상에 데이터를 연결하고 내보내는 방법과 관련된 다양한 정보를 지정할 수 있도록 Experience Platform UI에서 입력 필드를 만드는 방법을 알아봅니다.
 * [UI 속성](destination-configuration/ui-attributes.md): Destination SDK으로 빌드된 대상의 설명서 링크, 대상 카드 카테고리, 대상 연결 유형 및 빈도와 같은 UI 속성을 구성하는 방법을 알아봅니다.
 * [스키마 구성](destination-configuration/schema-configuration.md): 사용자가 프로필 속성 및 ID를 매핑할 수 있는 대상의 타겟 스키마를 정의하는 방법을 알아봅니다.

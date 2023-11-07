@@ -2,7 +2,7 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 기존 대상 구성을 업데이트하는 데 사용되는 API 호출을 보여 줍니다.
 title: 대상 구성 업데이트
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 대상 구성의 기능에 대한 자세한 설명은 다음 문서를 참조하십시오.
 
 * [고객 인증 구성](../../functionality/destination-configuration/customer-authentication.md)
-* [OAuth2 인증](../../functionality/destination-configuration/oauth2-authentication.md)
+* [OAuth2 인증](../../functionality/destination-configuration/oauth2-authorization.md)
 * [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI 속성](../../functionality/destination-configuration/ui-attributes.md)
 * [스키마 구성](../../functionality/destination-configuration/schema-configuration.md)

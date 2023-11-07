@@ -2,7 +2,7 @@
 description: Adobe Experience Platform Destination SDK을 통해 대상 구성을 만들기 위해 API 호출을 구성하는 방법을 알아봅니다.
 title: 대상 구성 만들기
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 3%
@@ -16,7 +16,7 @@ ht-degree: 3%
 이 끝점을 통해 구성할 수 있는 기능에 대한 자세한 설명은 다음 문서를 참조하십시오.
 
 * [고객 인증 구성](../../functionality/destination-configuration/customer-authentication.md)
-* [OAuth2 인증](../../functionality/destination-configuration/oauth2-authentication.md)
+* [OAuth2 인증](../../functionality/destination-configuration/oauth2-authorization.md)
 * [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI 속성](../../functionality/destination-configuration/ui-attributes.md)
 * [스키마 구성](../../functionality/destination-configuration/schema-configuration.md)

@@ -2,7 +2,7 @@
 description: Destination SDK으로 빌드된 대상에서 지원하는 내역 프로필 자격에 대해 알아봅니다.
 title: 과거 프로필 자격 요건
 exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 2%
@@ -45,7 +45,7 @@ Destination SDK을 통해 생성된 모든 대상은 기본적으로 내역 프�
 다른 대상 구성 요소에 대한 자세한 내용은 다음 문서를 참조하십시오.
 
 * [고객 인증](customer-authentication.md)
-* [OAuth2 인증](oauth2-authentication.md)
+* [OAuth2 인증](oauth2-authorization.md)
 * [고객 데이터 필드](customer-data-fields.md)
 * [UI 속성](ui-attributes.md)
 * [스키마 구성](schema-configuration.md)

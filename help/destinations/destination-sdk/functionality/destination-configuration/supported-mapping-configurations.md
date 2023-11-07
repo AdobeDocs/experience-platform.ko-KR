@@ -2,7 +2,7 @@
 description: 지원되는 ID 및 속성 매핑 구성에 대한 대상을 구성하는 방법에 대해 알아봅니다.
 title: 지원되는 매핑 구성
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 3%
@@ -154,7 +154,7 @@ ID 네임스페이스를 소스 필드로 선택하면 대상 필드에 동등�
 다른 대상 구성 요소에 대한 자세한 내용은 다음 문서를 참조하십시오.
 
 * [고객 인증](customer-authentication.md)
-* [OAuth2 인증](oauth2-authentication.md)
+* [OAuth2 인증](oauth2-authorization.md)
 * [고객 데이터 필드](customer-data-fields.md)
 * [UI 속성](ui-attributes.md)
 * [스키마 구성](schema-configuration.md)

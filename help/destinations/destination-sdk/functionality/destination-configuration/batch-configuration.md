@@ -2,7 +2,7 @@
 description: Destination SDK으로 빌드된 대상에 대한 파일 내보내기 설정을 구성하는 방법에 대해 알아봅니다.
 title: 일괄 처리 구성
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1072'
 ht-degree: 4%
@@ -155,7 +155,7 @@ Destination SDK을 통해 파일 기반 대상을 만들 때 기본 파일 이�
 다른 대상 구성 요소에 대한 자세한 내용은 다음 문서를 참조하십시오.
 
 * [고객 인증 구성](customer-authentication.md)
-* [OAuth2 인증](oauth2-authentication.md)
+* [OAuth2 인증](oauth2-authorization.md)
 * [고객 데이터 필드](customer-data-fields.md)
 * [UI 속성](ui-attributes.md)
 * [스키마 구성](schema-configuration.md)
