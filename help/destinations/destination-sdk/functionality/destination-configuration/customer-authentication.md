@@ -2,7 +2,7 @@
 description: 대상에 대한 인증 메커니즘을 설정하는 방법을 알아보고 선택한 인증 방법에 따라 UI에 표시되는 사용자에 대한 통찰력을 얻으십시오.
 title: 고객 인증 구성
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 0%

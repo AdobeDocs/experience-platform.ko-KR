@@ -2,7 +2,7 @@
 description: Destination SDK으로 빌드된 대상에서 지원하는 내역 프로필 자격에 대해 알아봅니다.
 title: 과거 프로필 자격 요건
 exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 2%

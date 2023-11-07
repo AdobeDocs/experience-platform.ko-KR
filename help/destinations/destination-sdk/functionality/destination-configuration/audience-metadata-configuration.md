@@ -2,7 +2,7 @@
 description: Destination SDK으로 빌드된 대상에 대한 대상 메타데이터 설정을 구성하는 방법에 대해 알아봅니다.
 title: 대상 메타데이터 구성
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 3%

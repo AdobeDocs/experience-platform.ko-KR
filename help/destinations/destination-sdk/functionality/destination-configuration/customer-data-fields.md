@@ -2,7 +2,7 @@
 description: 사용자가 대상에 데이터를 연결하고 내보내는 방법과 관련된 다양한 정보를 지정할 수 있도록 Experience Platform UI에서 입력 필드를 만드는 방법을 알아봅니다.
 title: 고객 데이터 필드
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 5%

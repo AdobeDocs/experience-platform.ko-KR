@@ -2,7 +2,7 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 기존 대상 구성을 업데이트하는 데 사용되는 API 호출을 보여 줍니다.
 title: 대상 구성 업데이트
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 2%

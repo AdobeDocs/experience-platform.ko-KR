@@ -2,7 +2,7 @@
 description: Adobe Experience Platform Destination SDK을 통해 대상 구성을 만들기 위해 API 호출을 구성하는 방법을 알아봅니다.
 title: 대상 구성 만들기
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 3%

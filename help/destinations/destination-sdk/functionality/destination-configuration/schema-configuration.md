@@ -2,7 +2,7 @@
 description: Destination SDK으로 빌드된 대상에 대해 파트너 스키마를 구성하는 방법을 알아봅니다.
 title: 파트너 스키마 구성
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1897'
 ht-degree: 4%

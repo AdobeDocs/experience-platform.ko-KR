@@ -2,7 +2,7 @@
 description: 지원되는 ID 및 속성 매핑 구성에 대한 대상을 구성하는 방법에 대해 알아봅니다.
 title: 지원되는 매핑 구성
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 3%

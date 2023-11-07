@@ -2,7 +2,7 @@
 description: Destination SDK으로 빌드된 대상에 대해 지원되는 타겟 ID를 구성하는 방법에 대해 알아봅니다.
 title: ID 네임스페이스 구성
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 4%

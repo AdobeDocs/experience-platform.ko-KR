@@ -2,7 +2,7 @@
 description: Adobe Experience Platform의 대상 서비스는 대상 기능을 빌드하는 여러 구성 요소에 대한 구성 끝점을 사용합니다. 이러한 구성 요소를 결합하여 Experience Platform이 대상 파트너에 연결하고, 사용자 지정 메시지를 전송하고, 디지털 에코시스템에서 프로필 데이터를 활성화하는 방법에 대해 알아봅니다.
 title: Destination SDK의 구성 옵션
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%

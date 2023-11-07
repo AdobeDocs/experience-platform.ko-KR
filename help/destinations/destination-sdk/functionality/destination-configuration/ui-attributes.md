@@ -2,7 +2,7 @@
 description: Destination SDK으로 빌드된 대상에 대해 설명서 링크, 대상 카드 카테고리, 대상 연결 유형 및 빈도와 같은 UI 속성을 구성하는 방법을 알아봅니다.
 title: UI 속성
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 0%
