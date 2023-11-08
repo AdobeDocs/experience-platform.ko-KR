@@ -4,9 +4,9 @@ title: Microsoft Dynamics 365 연결
 description: Microsoft Dynamics 365 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Microsoft Dynamics 365 내에서 활성화할 수 있습니다.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 29cf080f83adf0e7f8b3549104229e9f54c5b8d9
 workflow-type: tm+mt
-source-wordcount: '2154'
+source-wordcount: '2183'
 ht-degree: 2%
 
 ---
@@ -86,7 +86,7 @@ ht-degree: 2%
 
 | 대상 ID | 예 | 설명 | 고려 사항 |
 |---|---|---|---|
-| `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | 연락처에 대한 고유 식별자. | **필수입니다**. 다음을 참조하십시오. [[!DNL Dynamics 365] 설명서](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) 을 참조하십시오. |
+| `contactid` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | 연락처에 대한 고유 식별자. | **필수입니다**. 다음을 참조하십시오. [[!DNL Dynamics 365] 설명서](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) 을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -162,23 +162,24 @@ ht-degree: 2%
 1. 다음에서 **[!UICONTROL 매핑]** 단계, 선택 **[!UICONTROL 새 매핑 추가]**. 화면에 새 매핑 행이 표시됩니다.
    ![새 매핑 추가에 대한 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
-1. 다음에서 **[!UICONTROL 소스 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL ID 네임스페이스 선택]** 범주 및 선택 `contactId`.
+1. 다음에서 **[!UICONTROL 소스 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL ID 네임스페이스 선택]** 범주 및 선택 `contactid`.
    ![소스 매핑용 플랫폼 UI 스크린샷 예입니다.](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
 1. 다음에서 **[!UICONTROL 대상 필드 선택]** 창에서 소스 필드를 매핑할 대상 필드의 유형을 선택합니다.
    * **[!UICONTROL ID 네임스페이스 선택]**: 이 옵션을 선택하여 소스 필드를 목록의 id 네임스페이스에 매핑합니다.
-     ![contactId에 대한 Target 매핑을 보여 주는 플랫폼 UI 스크린샷](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+     ![연락처에 대한 Target 매핑을 보여주는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
-   * XDM 프로필 스키마와 사용자 간에 다음 매핑을 추가합니다 [!DNL Dynamics 365] 인스턴스: |XDM 프로필 스키마|[!DNL Dynamics 365] 인스턴스| 필수| |—|—| |`contactId`|`contactId`| 예 |
+   * XDM 프로필 스키마와 사용자 간에 다음 매핑을 추가합니다 [!DNL Dynamics 365] 인스턴스: |XDM 프로필 스키마|[!DNL Dynamics 365] 인스턴스| 필수| |—|—| |`contactid`|`contactid`| 예 |
 
    * **[!UICONTROL 사용자 지정 속성 선택]**: 소스 필드를 다음에서 정의한 사용자 지정 속성에 매핑하려면 이 옵션을 선택합니다. **[!UICONTROL 속성 이름]** 필드. 을(를) 참조하십시오 [[!DNL Dynamics 365] 설명서](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) 를 참조하십시오.
-     ![LastName에 대한 Target 매핑을 보여 주는 플랫폼 UI 스크린샷](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
+     ![이메일에 대한 타겟 매핑을 보여주는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
      >
-     >에 매핑된 날짜 또는 타임스탬프 소스 필드가 있는 경우 [!DNL Dynamics 365] [날짜 또는 타임스탬프](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) 대상 필드에서 매핑되는 값이 비어 있지 않은지 확인합니다. 전달된 값이 비어 있으면 다음이 발생합니다. *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* 오류 메시지가 표시되고 데이터가 업데이트되지 않습니다. (이)는 [!DNL Dynamics 365] 제한 사항.
+     > * 대상 필드 이름은 이어야 합니다. `lowercase`.
+     > * 또한 에 매핑된 날짜 또는 타임스탬프 소스 필드가 있는 경우 [!DNL Dynamics 365] [날짜 또는 타임스탬프](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) 대상 필드에서 매핑된 값이 비어 있지 않은지 확인합니다. 내보낸 필드 값이 비어 있으면 *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* 오류 메시지가 표시되고 데이터가 업데이트되지 않습니다. (이)는 [!DNL Dynamics 365] 제한 사항.
 
-   * 예를 들어 업데이트할 값에 따라 XDM 프로필 스키마와 [!DNL Dynamics 365] 인스턴스: |XDM 프로필 스키마|[!DNL Dynamics 365] 인스턴스| |—|—| |`person.name.firstName`|`FirstName`| |`person.name.lastName`|`LastName`| |`personalEmail.address`|`Email`|
+   * 예를 들어 업데이트할 값에 따라 XDM 프로필 스키마와 [!DNL Dynamics 365] 인스턴스: |XDM 프로필 스키마|[!DNL Dynamics 365] 인스턴스| |—|—| |`person.name.firstName`|`firstname`| |`person.name.lastName`|`lastname`| |`personalEmail.address`|`emailaddress1`|
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
      ![Target 매핑을 보여주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
@@ -243,6 +244,7 @@ ht-degree: 2%
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
+| 2023년 10월 | 설명서 업데이트 | 모든 대상 속성 이름이 소문자여야 함을 나타내기 위해 지침이 업데이트되었습니다(위치: [매핑 고려 사항 및 예제](#mapping-considerations-example) 단계. |
 | 2023년 8월 | 기능 및 설명서 업데이트 | 에 대한 지원이 추가됨 [!DNL Dynamics 365] 의 기본 솔루션 내에서 만들어지지 않은 사용자 정의 필드에 대한 사용자 정의 필드 접두사 [!DNL Dynamics 365]. 새 입력 필드, **[!UICONTROL 사용자 지정 접두사]**&#x200B;이(가)에 추가되었습니다. [대상 세부 정보 입력](#destination-details) 단계. (PLATIR-31602). |
 | 2022년 11월 | 초기 릴리스 | 초기 대상 릴리스 및 설명서 게시. |
 
