@@ -60,7 +60,7 @@ Media Edge API는 모델 및 호출된 경로에서 사소한 차이점을 제�
 
 세션 시작 요청을 수행하기 전에 다음이 필요합니다.
 
-* 다음 `datastreamId`- POST 세션 시작 요청의 필수 매개변수입니다. 을(를) 검색하려면 `datastreamId`, 참조 [데이터 스트림 구성](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=ko-KR).
+* 다음 `datastreamId`- POST 세션 시작 요청의 필수 매개변수입니다. 을(를) 검색하려면 `datastreamId`, 참조 [데이터 스트림 구성](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html).
 
 * 필요한 최소 데이터가 포함된 요청 페이로드에 대한 JSON 개체. (아래 예제 요청에 표시된 대로)
 
