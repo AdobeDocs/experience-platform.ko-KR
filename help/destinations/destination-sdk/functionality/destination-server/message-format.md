@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Adobe Experience Platform에서 대상으로 내보낸 데이터의 메시지 형식 및 프로필 변형을 다룹니다.
 title: 메시지 포맷
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: b42ef11681bb50141c7f3dc76d8c79d71e55e73c
 workflow-type: tm+mt
-source-wordcount: '2237'
+source-wordcount: '2502'
 ht-degree: 1%
 
 ---
@@ -1203,13 +1203,18 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 
 아래 표는 위의 예에서 함수에 대한 설명을 제공합니다.
 
-| 함수 | 설명 |
-|---------|----------|
+| 함수 | 설명 | 예 |
+|---------|----------|----------|
 | `input.profile` | 프로필로 표시됩니다. [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). 이 페이지에서 위에 언급된 파트너 XDM 스키마를 따릅니다. |
-| `destination.segmentAliases` | Adobe Experience Platform 네임스페이스의 대상 ID에서 파트너 시스템의 대상 별칭으로 매핑합니다. |
-| `destination.segmentNames` | Adobe Experience Platform 네임스페이스의 대상 이름에서 파트너 시스템의 대상 이름으로 매핑합니다. |
-| `addedSegments(listOfSegments)` | 상태가 있는 대상자만 반환합니다. `realized`. |
-| `removedSegments(listOfSegments)` | 상태가 있는 대상자만 반환합니다. `exited`. |
+| `hasSegments` | 이 함수는 네임스페이스 대상 ID 맵을 매개 변수로 사용합니다. 함수는 를 반환합니다. `true` 상태에 관계없이 맵에 한 명 이상의 대상이 있는 경우 `false` 그렇지 않으면. 이 함수를 사용하여 대상자 맵을 반복할지 여부를 결정할 수 있습니다. | `hasSegments(input.profile.segmentMembership)` |
+| `destination.namespaceSegmentAliases` | 특정 Adobe Experience Platform 네임스페이스의 대상 ID에서 파트너 시스템의 대상 별칭으로 매핑합니다. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
+| `destination.namespaceSegmentNames` | 특정 Adobe Experience Platform 네임스페이스의 대상 이름에서 파트너 시스템의 대상 이름으로 매핑합니다. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
+| `destination.namespaceSegmentTimestamps` | 대상이 생성, 업데이트 또는 활성화된 시간을 UNIX 타임스탬프 형식으로 반환합니다. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: ID가 있는 세그먼트의 시간을 반환합니다. `seg-id-1`, `ups` 네임스페이스가 UNIX 타임스탬프 형식으로 생성되었습니다.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: ID가 있는 대상자가 발생하는 시간을 반환합니다. `seg-id-1`, `ups` 네임스페이스가 UNIX 타임스탬프 형식으로 업데이트되었습니다.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: ID가 있는 대상자가 발생하는 시간을 반환합니다. `seg-id-1`, `ups` 네임스페이스가 대상에 대해 UNIX 타임스탬프 형식으로 활성화되었습니다.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: 대상에서 대상 활성화가 업데이트된 시간을 UNIX 타임스탬프 형식으로 반환합니다.</li></ul> |
+| `addedSegments(mapOfNamespacedSegmentIds)` | 상태가 있는 대상자만 반환합니다. `realized`를 사용하여 모든 네임스페이스에 연결할 수 있습니다. | `addedSegments(input.profile.segmentMembership)` |
+| `removedSegments(mapOfNamespacedSegmentIds)` | 상태가 있는 대상자만 반환합니다. `exited`를 사용하여 모든 네임스페이스에 연결할 수 있습니다. | `removedSegments(input.profile.segmentMembership)` |
+| `destination.segmentAliases` | **사용하지 않음. 교체한 사람`destination.namespaceSegmentAliases`** <br><br> Adobe Experience Platform 네임스페이스의 대상 ID에서 파트너 시스템의 대상 별칭으로 매핑합니다. | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **사용하지 않음. 교체한 사람`destination.namespaceSegmentNames`** <br><br>  Adobe Experience Platform 네임스페이스의 대상 이름에서 파트너 시스템의 대상 이름으로 매핑합니다. | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentTimestamps` | **사용하지 않음. 교체한 사람`destination.namespaceSegmentTimestamps`** <br><br> 대상이 생성, 업데이트 또는 활성화된 시간을 UNIX 타임스탬프 형식으로 반환합니다. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: ID가 있는 대상자가 발생하는 시간을 반환합니다. `seg-id-1` 이(가) UNIX 타임스탬프 형식으로 만들어졌습니다.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: ID가 있는 대상자가 발생하는 시간을 반환합니다. `seg-id-1` 가 UNIX 타임스탬프 형식으로 업데이트되었습니다.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: ID가 있는 대상자가 발생하는 시간을 반환합니다. `seg-id-1` 대상이 UNIX 타임스탬프 형식으로 활성화되었습니다.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: 대상에서 대상 활성화가 업데이트된 시간을 UNIX 타임스탬프 형식으로 반환합니다.</li></ul> |
 
 {style="table-layout:auto"}
 
