@@ -2,7 +2,7 @@
 title: 지능형 재참여
 description: 주요 전환 순간에 강력한 연결 환경을 제공하여 방문 빈도가 낮은 고객을 지능적으로 재참여시킵니다.
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: d47ddc474fcaf19eaff8ddcd67139dec5c417720
+source-git-commit: df82431f87f725a12cbc5b8f88fff6d4cc065450
 workflow-type: tm+mt
 source-wordcount: '3594'
 ht-degree: 53%
@@ -150,6 +150,8 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++XDM ExperienceEvent(클래스)
 
+다음 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스에는 다음 필드 그룹이 포함됩니다.
+
 | 필드 | 요구 사항 | 설명 |
 | --- | --- | --- |
 | `_id` | 필수 여부 | 에 수집되는 개별 이벤트를 고유하게 식별합니다 [!DNL Adobe Experience Platform]. |
@@ -157,8 +159,6 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 | `eventType` | 필수 여부 | 이벤트의 카테고리 유형을 나타내는 문자열입니다. |
 
 +++
-
-다음 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스에는 다음 필드 그룹이 포함됩니다.
 
 +++최종 사용자 ID 세부 정보(필드 그룹)
 
@@ -189,6 +189,8 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++XDM ExperienceEvent(클래스)
 
+다음 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스에는 다음 필드 그룹이 포함됩니다.
+
 | 필드 | 요구 사항 | 설명 |
 | --- | --- | --- |
 | `_id` | 필수 여부 | 에 수집되는 개별 이벤트를 고유하게 식별합니다 [!DNL Adobe Experience Platform]. |
@@ -196,8 +198,6 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 | `eventType` | 필수 여부 | 이벤트의 카테고리 유형을 나타내는 문자열입니다. |
 
 +++
-
-다음 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스에는 다음 필드 그룹이 포함됩니다.
 
 +++상거래 세부 정보(필드 그룹)
 
@@ -247,6 +247,8 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++XDM ExperienceEvent(클래스)
 
+다음 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스에는 다음 필드 그룹이 포함됩니다.
+
 | 필드 | 요구 사항 | 설명 |
 | --- | --- | --- |
 | `_id` | 필수 여부 | 에 수집되는 개별 이벤트를 고유하게 식별합니다 [!DNL Adobe Experience Platform]. |
@@ -254,8 +256,6 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 | `eventType` | 필수 여부 | 이벤트의 카테고리 유형을 나타내는 문자열입니다. |
 
 +++
-
-다음 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스에는 다음 필드 그룹이 포함됩니다.
 
 +++Adobe Analytics ExperienceEvent 템플릿(필드 그룹)
 
