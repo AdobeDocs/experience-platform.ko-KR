@@ -3,11 +3,12 @@ keywords: Experience Platform;홈;인기 항목;데이터 위치;데이터 위�
 solution: Experience Platform
 title: 데이터 세트 개요
 description: 이 설명서는 Experience Platform의 데이터 세트에 대한 높은 수준의 개요를 제공합니다.
+user-guide-description: 이 안내서를 통해 Experience Platform 내 데이터 세트에 대한 높은 수준의 개요를 살펴보십시오. 여기에서 데이터 세트를 만들고, 데이터에 대한 제약 조건을 적용하고, 데이터 세트로 데이터를 수집하는 방법을 알아봅니다.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 8%
+source-wordcount: '870'
+ht-degree: 7%
 
 ---
 

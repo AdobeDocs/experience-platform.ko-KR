@@ -2,17 +2,17 @@
 audience: user
 user-guide-title: Adobe Experience Platform Debugger 도움말
 breadcrumb-title: Adobe Experience Platform Debugger 안내서
-user-guide-description: 웹 페이지에서 Experience Platform 구현에 문제가 있는지 검사합니다.
+user-guide-description: Chrome 및 Firefox용 Adobe Experience Platform Debugger을 사용하여 Experience Platform 구현과 관련된 문제가 있는지 웹 페이지를 검사합니다.
 feature: Debugger
-source-git-commit: 6362cef0dc33f4b1f9cf8560dae50e602ce6ad80
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 48%
+source-wordcount: '72'
+ht-degree: 26%
 
 ---
 
 
-# Adobe Experience Platform 디버거 {#debugger}
+# Adobe Experience Platform Debugger {#debugger}
 
 * [Platform 디버거 개요](./home.md)
 * [확장 설치](./install-debugger.md)

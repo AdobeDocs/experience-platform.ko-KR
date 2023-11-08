@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: 경험 데이터 모델(XDM) 시스템 도움말
 breadcrumb-title: 경험 데이터 모델(XDM) 안내서
-user-guide-description: 경험 데이터 모델(XDM) 클래스와 스키마 필드 그룹을 사용하여 경험 데이터를 표준화합니다.
+user-guide-description: Experience Platform 내의 XDM(Experience Data Model) 시스템에 대한 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법에 대해 알아봅니다.
 feature: Schemas
-source-git-commit: b181a6af8cb3f6ae6db28f0475b8999de2e9d8b5
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 21%
+source-wordcount: '532'
+ht-degree: 18%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 21%
       * [개요](./schema/industries/overview.md)
       * [소매](./schema/industries/retail.md)
       * [금융 서비스](./schema/industries/financial.md)
-      * [의료 서비스](./schema/industries/healthcare.md)
+      * [헬스 케어](./schema/industries/healthcare.md)
       * [전기 통신](./schema/industries/telecom.md)
       * [여행 및 접대](./schema/industries/travel-hospitality.md)
    * [XDM 필드 사전](schema/field-dictionary.md)
@@ -203,4 +203,4 @@ ht-degree: 21%
    * [애드혹 스키마 만들기](tutorials/ad-hoc.md)
 * [문제 해결 안내서](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes_kr)
+* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)
