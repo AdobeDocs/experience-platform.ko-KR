@@ -2,9 +2,9 @@
 title: 가속화된 쿼리 끝점
 description: 상태 비저장 방식으로 쿼리 가속 저장소에 액세스하여 집계된 데이터를 기반으로 결과를 빠르게 반환하는 방법을 알아봅니다. 이 문서에서는 쿼리 서비스 가속 쿼리 끝점에 대한 샘플 HTTP 요청 및 응답을 제공합니다.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '561'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,7 @@ Data Distiller SKU의 일부로서 [쿼리 서비스 API](https://developer.adob
 
 ## 시작하기
 
-Data Distiller SKU는 쿼리 가속 스토어를 사용해야 합니다. 다음을 참조하십시오. [포장](../packages.md) 및 [보호 기능](../guardrails.md#query-accelerated-store) Data Distiller SKU와 관련된 설명서입니다. Data Distiller SKU가 없는 경우 Adobe 고객 서비스 담당자에게 자세한 내용을 문의하십시오.
-
-<!-- Document is hidden temporarily
-Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
--->
+Data Distiller SKU는 쿼리 가속 스토어를 사용해야 합니다. 다음을 참조하십시오. [포장](../packaging.md) 및 [보호 기능](../guardrails.md#query-accelerated-store), 및 [라이선스](../data-distiller/license-usage.md) Data Distiller SKU와 관련된 설명서입니다. Data Distiller SKU가 없는 경우 Adobe 고객 서비스 담당자에게 자세한 내용을 문의하십시오.
 
 다음 섹션에서는 쿼리 서비스 API를 통해 상태 비저장 방식으로 쿼리 가속 저장소에 액세스하는 데 필요한 API 호출에 대해 자세히 설명합니다. 각 호출에는 일반 API 형식, 필요한 헤더를 보여주는 샘플 요청 및 샘플 응답이 포함됩니다.
 
