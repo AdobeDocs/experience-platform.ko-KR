@@ -2,10 +2,10 @@
 title: Adobe Analytics 확장 기능 릴리스 노트
 description: Adobe Experience Platform의 Adobe Analytics 태그 확장 기능에 대한 최신 릴리스 정보입니다.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: a49e0fe6c99f2874a9ca8403c4b69428826a6365
 workflow-type: tm+mt
-source-wordcount: '1392'
-ht-degree: 82%
+source-wordcount: '1416'
+ht-degree: 81%
 
 ---
 
@@ -17,13 +17,22 @@ ht-degree: 82%
 >
 >Analytics 태그 확장(종종 업데이트에 대한 응답으로 업데이트되는 경우) [AppMeasurement JavaScript 라이브러리](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR). 다음을 참조하십시오. [AppMeasurement 릴리스 노트](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) 아래에 언급된 특정 버전에 대한 자세한 내용.
 
+## 2023년 9월 15일
+
+**Adobe Analytics Extension 1.9.3**
+
+**기능**:
+
+* 으로 업그레이드됨 [v2.25.0으로 AppMeasurement](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+
+
 ## 2023년 7월 19일
 
 **Adobe Analytics Extension 1.9.2**
 
 **기능**:
 
-* AppMeasurement v2.24.0으로 업그레이드되었습니다.
+* 으로 업그레이드됨 [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
 * 선택적 구성(`decodeLinkParameters` 기본값 `false`)는 더블바이트로 인코딩된 문자가 포함된 링크 URL을 디코딩합니다.
 
 **버그 수정**:
