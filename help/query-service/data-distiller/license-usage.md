@@ -2,8 +2,7 @@
 title: 일괄 쿼리 라이선스 사용 모니터링
 description: Adobe Experience Platform UI는 조직의 Data Distiller 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-recommendations: noCatalog, display
-source-git-commit: e55cada0975d771f225e829aeeeeeeb64b9acf4a
+source-git-commit: a3a2377a873c0e54ba43a60e28f922e0cb9e9d01
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
