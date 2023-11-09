@@ -1,10 +1,8 @@
 ---
 title: 암호화된 데이터 수집
 description: API를 사용하여 클라우드 스토리지 일괄 처리 소스를 통해 암호화된 파일을 수집하는 방법에 대해 알아봅니다.
-hide: true
-hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: cd8844121fef79205d57fa979ca8630fc1b1ece4
+source-git-commit: a92a3d4ce16e50d9eec97448e677ca603931fa44
 workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 2%
