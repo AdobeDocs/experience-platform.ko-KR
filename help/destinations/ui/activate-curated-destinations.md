@@ -2,9 +2,9 @@
 title: LiveRamp 식별자를 기반으로 조정된 대상에 대상 활성화
 type: Tutorial
 description: LiveRamp Ramp Id를 사용하여 Adobe Experience Platform에서 연결된 TV 및 오디오 대상 및 기타 통합에 대한 대상을 활성화하는 방법을 알아봅니다.
-source-git-commit: 25cda72508860b57bfa9ad0a729d0329d0f6bd1f
+source-git-commit: 1eb422572d95426fa8b342dc6aa79fb6125e18a1
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,12 @@ ht-degree: 0%
 >[!TIP]
 >
 >이 프로세스를 통해 다음과 같은 대상에 대한 대상자를 활성화할 수 있습니다. [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney)등에 로그인할 필요 없이 Real-Time CDP UI에서 바로 사용이 가능합니다. [!DNL LiveRamp] 활성화 계정.
+
+### 비디오 튜토리얼 {#video}
+
+이 페이지에 설명된 워크플로에 대한 전체적인 설명은 아래 비디오를 참조하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
 ### 1단계: 다음을 통해 대상을 Experience Platform에서 LiveRamp로 보내기 [!DNL LiveRamp - Onboarding] 대상 {#onboarding}
 
