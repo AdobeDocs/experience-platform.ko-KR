@@ -3,9 +3,9 @@ title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7c68b6a3b08eb47fa8c3906468dc87f3715fbe99
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1751'
 ht-degree: 4%
 
 ---
@@ -60,6 +60,12 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
   </tr>
 </tbody>
 </table>
+
+## 비디오 튜토리얼 {#video-tutorial}
+
+이 페이지에 설명된 워크플로에 대한 전체적인 설명, 데이터 세트 내보내기 기능을 사용할 때의 이점 및 몇 가지 제안된 사용 사례를 확인하려면 아래 비디오를 보십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## 지원되는 대상 {#supported-destinations}
 
