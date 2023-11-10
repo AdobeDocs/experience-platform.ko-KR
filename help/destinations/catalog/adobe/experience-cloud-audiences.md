@@ -3,10 +3,10 @@ title: Experience Cloud 대상자
 description: Real-time Customer Data Platform에서 다양한 Experience Cloud 앱으로 대상을 공유하는 방법을 알아봅니다.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 23c4bce542bba76ea4badba43a7ce3e6f7fe9e49
 workflow-type: tm+mt
-source-wordcount: '1683'
-ht-degree: 2%
+source-wordcount: '1780'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +17,9 @@ ht-degree: 2%
 >
 > 이 대상은 다음 경우에 사용할 수 있습니다. [Adobe Real-time Customer Data Platform Prime 및 Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객.
 
-이 대상을 사용하여 Real-Time CDP에서 Audience Manager 및 Adobe Analytics으로 대상을 활성화합니다. Adobe Analytics에 대상을 보내려면 Audience Manager 라이선스가 필요합니다.
+이 대상을 사용하여 Real-Time CDP에서 Audience Manager 및 Adobe Analytics으로 대상을 활성화합니다.
+
+대상을 Adobe Analytics으로 보내려면 Audience Manager 라이선스가 필요합니다. 자세한 내용은 [Audience Analytics 개요](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=ko).
 
 대상을 다른 Adobe 솔루션으로 보내려면 Real-Time CDP에서 로 직접 연결을 사용합니다. [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) 및 [Marketo Engage](../adobe/marketo-engage.md).
 
@@ -43,31 +45,37 @@ Audience Manager에서 다음과 같은 데이터 관리 플랫폼 사용 사례
 
 ### 내보낸 대상자에 대한 세분화된 제어 {#segments-control}
 
-Experience Cloud 대상 대상을 통해 새로운 셀프서비스 대상 공유 통합을 사용하여 Audience Manager 및 그 이상으로 내보낼 대상을 선택합니다. 이렇게 하면 다른 Experience Cloud 솔루션과 공유할 대상 및 Real-Time CDP에서만 보관할 대상을 결정할 수 있습니다.
+Audience Manager 및 그 이상으로 내보낼 대상을 선택하려면 Experience Cloud 대상 대상을 통해 새로운 셀프서비스 대상 공유 통합을 사용합니다.  이렇게 하면 다른 Experience Cloud 솔루션과 공유할 대상 및 Real-Time CDP에서만 보관할 대상을 결정할 수 있습니다.
 
 기존 대상 공유 통합에서는 Audience Manager 및 그 이상으로 대상을 내보내야 하는 세분화된 제어를 허용하지 않았습니다.
 
-### 추가 Experience Cloud 솔루션으로 Real-Time CDP 대상 공유 {#share-segments-with-other-solutions}
+### Adobe Analytics과 Real-Time CDP 대상 공유 {#share-audiences-with-analytics}
 
-Real-Time CDP 대상 카드를 사용하면 Audience Manager과 대상을 공유하는 것 외에도 다음을 포함하여 프로비저닝된 다른 Experience Cloud 솔루션과 대상을 공유할 수 있습니다.
+Experience Cloud 대상 대상으로 전송하는 대상은 Adobe Analytics에서 자동으로 표시되지 않습니다.
 
-* Adobe Campaign
-* Adobe Target
-* Advertising Cloud
-* Analytics
-* Marketo
+Adobe Analytics에 대상을 보내려면 먼저 다음을 수행해야 합니다. [analytics 및 Audience Manager용 Experience Cloud ID 서비스 구현](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en).
 
-<!--
+>[!IMPORTANT]
+>
+>Experience Cloud 대상 대상을 통해 Real-Time CDP에서 Adobe Analytics으로 대상을 보내려면 Audience Manager 라이선스가 있어야 합니다.
 
-Note: briefly talk about when to share audiences to these destinations using the existing destination cards and when to share using the new Experience Cloud Audiences destination. 
+### 다른 Experience Cloud 솔루션과 Real-Time CDP 대상 공유 {#share-segments-with-other-solutions}
 
--->
+Real-Time CDP 대상 카드를 사용하여 대상을 다른 Experience Cloud 솔루션과 공유할 수 있습니다.
+
+Adobe 그러나 이러한 솔루션과 대상을 공유하려면 다음 전용 대상 카드를 사용하는 것이 좋습니다.
+
+* [Adobe Campaign](../email-marketing/adobe-campaign.md)
+* [Adobe Target](../personalization/adobe-target-connection.md)
+* [Advertising Cloud](../advertising/adobe-advertising-cloud-connection.md)
+* [Marketo](../adobe/marketo-engage.md)
 
 ## 전제 조건 {#prerequisites}
 
 >[!IMPORTANT]
 >
 > * 을(를) 활성화하려면 Audience Manager 라이선스가 필요합니다. [데이터 관리 플랫폼 사용 사례](#dmp-use-cases) 위에서 더 언급했습니다.
+> * 본인 *할 일* Adobe Analytics과 Real-Time CDP 대상을 공유하려면 Audience Manager 라이선스가 필요합니다.
 > * 본인 *필요 없음* Adobe Advertising Cloud, Adobe Target, Marketo 및 기타 Experience Cloud 솔루션과 Real-Time CDP 대상을 공유할 수 있는 Audience Manager 라이선스입니다. [위의 섹션](#share-segments-with-other-solutions).
 
 ### 기존 대상 공유 솔루션을 사용하는 고객의 경우
@@ -78,7 +86,7 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 >[!IMPORTANT]
 >
->티켓 확인과 대상 카드를 통한 새 연결이 설정되는 시간 사이에 Real-Time CDP에서 다른 솔루션으로 대상 내보내기가 중지됩니다. 티켓이 닫히는 즉시 대상 카드를 통해 연결을 만들면 이 가동 중지 시간을 최소화할 수 있습니다.
+>티켓 해상도와 대상 카드를 통한 새 연결이 설정되는 시간 사이에 Real-Time CDP에서 다른 솔루션으로 대상 내보내기가 중지됩니다. 티켓이 닫힌 후 대상 카드를 통해 연결을 생성하여 이 가동 중지 시간을 최소화할 수 있습니다.
 
 ## 알려진 제한 사항 및 설명선 {#known-limitations}
 
@@ -90,9 +98,9 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 ### 대상자를 활성화할 때 대기 시간 {#audience-activation-latency}
 
-Real-Time CDP에서 대상이 처음 활성화되는 시간과 특정 사용 사례에 대한 Audience Manager 및 기타 Experience Cloud 솔루션에서 사용될 준비가 된 시간 사이에 4시간 지연이 있습니다.
+Real-Time CDP에서 대상이 처음 활성화된 시간과 Audience Manager 및 기타 Experience Cloud 솔루션에서 사용할 준비가 된 시간 사이에 4시간 지연이 있습니다.
 
-모든 사용 사례에 대해 Audience Manager에서 대상을 완전히 사용할 수 있도록 하는 데 최대 24시간이 소요될 수 있으며, Experience Cloud 대상의 대상이 Audience Manager 보고서에 나타나도록 하는 데 최대 48시간이 걸릴 수 있습니다.
+모든 사용 사례에 대해 Audience Manager에서 대상을 완전히 사용할 수 있으려면 최대 24시간이 걸릴 수 있습니다. Experience Cloud 대상의 대상이 Audience Manager 보고서에 표시되는 데 최대 48시간이 걸릴 수 있습니다.
 
 대상 이름과 같은 메타데이터는 Experience Cloud 대상 대상으로 내보내기를 설정한 후 몇 분 안에 Audience Manager에서 사용할 수 있습니다.
 
@@ -111,7 +119,7 @@ Real-Time CDP에서 대상이 처음 활성화되는 시간과 특정 사용 사
 
 ## 지원되는 대상자 {#supported-audiences}
 
-이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
+이 섹션에서는 이 대상으로 내보낼 수 있는 대상 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
 ---------|----------|----------|
@@ -127,7 +135,7 @@ Real-Time CDP에서 대상이 처음 활성화되는 시간과 특정 사용 사
 | 항목 | 유형 | 참고 |
 |---------|----------|---------|
 | 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | 위의 섹션에 나열된 ID를 키로 사용하는 대상의 모든 구성원을 내보내는 것입니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Real-Time CDP에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상 평가를 기반으로 Real-Time CDP에서 프로필을 업데이트하면 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -191,4 +199,4 @@ Audience Manager의 대상 및 트레이트는 다음에 해당됩니다 [역할
 
 Real-Time CDP에서 내보낸 대상은 다음과 같은 Audience Manager의 특정 데이터 소스에 할당됩니다. **[!UICONTROL Experience Platform 세그먼트]**.
 
-특정 사용자만 대상에 액세스할 수 있도록 하려면 데이터 소스에 속하는 대상에 액세스 제어를 적용할 수 있습니다. Real-Time CDP 세그먼트에서 만든 이러한 대상 및 트레이트에 대해 Audience Manager에서 새 액세스 제어 권한을 설정해야 합니다.
+특정 사용자만 대상에 액세스할 수 있도록 하려면 데이터 소스에 속하는 대상에 액세스 제어를 적용할 수 있습니다. Real-Time CDP 세그먼트에서 만든 이러한 대상 및 트레이트에 대해 Audience Manager에서 새 액세스 제어 권한을 설정합니다.
