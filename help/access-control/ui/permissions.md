@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 제품 프로필에 대한 권한 관리
 description: Adobe Experience Platform의 액세스 제어를 사용하면 Adobe Admin Console을 사용하여 다양한 Platform 기능에 대한 역할과 권한을 관리할 수 있습니다. 이 문서는 Platform용 제품 프로필에 대한 권한을 관리하는 방법에 대한 안내서 역할을 합니다.
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 1812af74e82f3071963177356b3cd4b23ea567f5
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ![권한](../images/permissions.png)
 
-권한은 카테고리로 구분되고 이 페이지에 나열됩니다. 이 목록에는 범주 이름, 범주 이름이 포함된 권한 수(및 활성 상태의 수) 및 설명이 표시됩니다.
+권한은 카테고리로 구분되고 이 페이지에 나열됩니다. 이 목록에는 범주 이름, 범주 이름이 포함된 권한 수(및 활성 상태의 수) 및 설명이 표시됩니다. 다음 표를 참조하십시오. [리소스 권한](/help/access-control/home.md#permissions) 각 역할에 대해 사용할 수 있는 권한 분류.
 
 목록에서 카테고리를 선택하여 **[!UICONTROL 권한 편집]** 페이지를 가리키도록 업데이트하는 중입니다.
 
