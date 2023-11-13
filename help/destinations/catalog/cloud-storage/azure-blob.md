@@ -2,9 +2,9 @@
 title: Azure Blob 연결
 description: Azure Blob 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 CSV 데이터 파일을 정기적으로 내보냅니다.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1049'
 ht-degree: 8%
 
 ---
@@ -123,7 +123,7 @@ ht-degree: 8%
 
 다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
-## (베타) 데이터 세트 내보내기 {#export-datasets}
+## 데이터 세트 내보내기 {#export-datasets}
 
 이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기 설정 방법에 대한 자세한 내용은 튜토리얼을 참조하십시오.
 

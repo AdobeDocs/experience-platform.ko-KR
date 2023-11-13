@@ -4,9 +4,9 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '3720'
+source-wordcount: '3781'
 ht-degree: 11%
 
 ---
@@ -29,6 +29,18 @@ ht-degree: 11%
 ## 전제 조건 {#prerequisites}
 
 대상에 대상을 활성화하려면 다음을 성공적으로 완료해야 합니다. [대상에 연결됨](./connect-destination.md). 아직 수행하지 않았다면 [대상 카탈로그](../catalog/overview.md)에서 지원되는 대상을 탐색하고 사용할 대상을 구성합니다.
+
+### 내보내기에 지원되는 파일 형식 {#supported-file-formats-export}
+
+대상을 내보낼 때 다음 파일 형식이 지원됩니다.
+
+* CSV로 내보내기
+* JSON
+* 쪽모이 세공
+
+CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 유연성이 향상됩니다. 자세한 내용 [csv 파일에 대한 파일 형식 지정 구성](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
+
+다음과 같은 경우에 내보낼 파일 형식을 선택합니다. [파일 기반 대상에 대한 연결 만들기](/help/destinations/ui/connect-destination.md).
 
 ## 대상 선택 {#select-destination}
 
@@ -532,7 +544,7 @@ abstract="조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; 
 
 ## 대상자 활성화 확인 {#verify}
 
-이메일 마케팅 대상 및 클라우드 스토리지 대상의 경우 Adobe Experience Platform은 `.csv` 파일을 제공한 저장소 위치에 있습니다. 워크플로우에서 설정한 일정에 따라 스토리지 위치에 새 파일이 생성됩니다. 기본 파일 형식은 아래에 표시되지만 [파일 이름의 구성 요소 편집](#file-names):
+대상을 클라우드 스토리지 대상으로 내보낼 때 Adobe Experience Platform에서 다음을 생성합니다 `.csv`, `.json`, 또는 `.parquet` 파일을 제공한 저장소 위치에 있습니다. 워크플로우에서 설정한 일정에 따라 스토리지 위치에 새 파일이 생성됩니다. 기본 파일 형식은 아래에 표시되지만 [파일 이름의 구성 요소 편집](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 예를 들어 일별 내보내기 빈도를 선택한 경우 연속 3일에 받게 되는 파일은 다음과 같습니다.

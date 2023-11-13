@@ -2,9 +2,9 @@
 title: 대상의 구성 가능한 공통 내보내기 설정
 description: 대상 수준에서 구성할 수 있는 대상 내보내기 설정과 수정되어 편집할 수 없는 대상을 알아봅니다.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '842'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ Experience Platform 대상으로 내보내기 동작을 고려할 때 구성이 
 * [엔터프라이즈 대상으로 대상 데이터 활성화](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [주문형 파일을 배치 대상으로 내보내기](/help/destinations/ui/export-file-now.md)
-* [(베타) 클라우드 스토리지 대상으로 데이터 세트 내보내기](/help/destinations/ui/export-datasets.md)
+* [클라우드 스토리지 대상으로 데이터 세트 내보내기](/help/destinations/ui/export-datasets.md)
 
 ## 다음 단계 {#next-steps}
 

@@ -3,9 +3,9 @@ title: Marketo Measure Ultimate 대상
 description: Marketo Measure Ultimate 대상에 데이터를 연결하고 활성화하는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '651'
 ht-degree: 2%
 
 ---
@@ -74,7 +74,7 @@ Marketo Measure 대상에 대한 다음 사전 요구 사항을 참조하십시�
 > 
 >데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 데이터 세트 대상 관리 및 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
-읽기 [(베타) 데이터 세트 내보내기](/help/destinations/ui/export-datasets.md) 이 대상으로 데이터 세트를 내보내는 방법에 대한 자세한 지침은 튜토리얼을 참조하십시오.
+읽기 [데이터 세트 내보내기](/help/destinations/ui/export-datasets.md) 이 대상으로 데이터 세트를 내보내는 방법에 대한 자세한 지침은 튜토리얼을 참조하십시오.
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
 

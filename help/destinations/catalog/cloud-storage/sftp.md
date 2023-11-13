@@ -2,9 +2,9 @@
 title: SFTP 연결
 description: SFTP 서버에 대한 실시간 아웃바운드 연결을 생성하여 구분된 데이터 파일을 정기적으로 Adobe Experience Platform에서 내보냅니다.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 93b1c26e85ddd0fa232b26712f88faa824f19f30
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1016'
 ht-degree: 11%
 
 ---
@@ -129,7 +129,7 @@ SFTP 위치에 인증 연결을 설정한 후 대상에 대해 다음 정보를 
 
 다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
-## (베타) 데이터 세트 내보내기 {#export-datasets}
+## 데이터 세트 내보내기 {#export-datasets}
 
 이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기 설정 방법에 대한 자세한 내용은 튜토리얼을 참조하십시오.
 
