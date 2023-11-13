@@ -1,9 +1,9 @@
 ---
 title: 페이지 이벤트의 상단 및 하단 사용
 description: 이 문서에서는 Web SDK에서 페이지 이벤트의 상단과 하단을 사용하는 방법에 대해 설명합니다.
-source-git-commit: 5cd77f78c9617a16f6ee59a7c029dfffac7740e9
+source-git-commit: 5322156774388a19788529aee554424b2fb5d91b
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '806'
 ht-degree: 2%
 
 ---
@@ -219,3 +219,6 @@ alloy("sendEvent", {
 
 >[!ENDTABS]
 
+## GitHub 샘플 {#github-sample}
+
+다음 위치에 있는 샘플: [이 주소](https://github.com/adobe/alloy-samples/tree/main/top-and-bottom) Experience Platform 및 Web SDK를 사용하여 페이지 맨 위에서 개인화를 요청하고 맨 아래에서 분석 지표를 전송하는 방법을 보여 줍니다. 샘플을 다운로드하여 로컬에서 실행하여 페이지 이벤트의 상단과 하단의 작동 방식을 이해할 수 있습니다.
