@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service 및 Experience Cloud 애플리케이션
 description: 이 문서에서는 개인 정보 보호 관련 작업을 위해 다양한 Experience Cloud 애플리케이션을 구성하는 방법에 대한 참조를 제공합니다.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b73b6f1005dc8a9e647f706a1e98259131b17478
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '912'
 ht-degree: 13%
 
 ---
@@ -54,7 +54,6 @@ Adobe Experience Platform [!DNL Privacy Service] 은 여러 Adobe Experience Clo
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | 고객 개인정보 보호 관리자 또는 AEM 관리자가 GDPR 요청을 처리하는 방법에 대한 개요입니다. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Livefyre를 사용하여 GDPR 액세스 및 삭제 요청을 수행하는 단계입니다. |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Magento Commerce 설치가 특정 개인 정보 보호 법규의 요구 사항을 준수하는지 확인합니다. |
-| [Marketo](https://www.marketo.com/company/trust/gdpr/) | 개인 정보 보호 규정이 Marketo에 어떻게 적용되는지 알아봅니다. |
 | [Adobe Experience Platform의 태그](../tags/ui/client-side/consent.md) | 개발자가 확장 프로그램 및 규칙 작성기를 사용하여 옵트인 및 옵트아웃 솔루션을 정의할 수 있는 방법입니다. |
 | [Workfront](https://www.workfront.com/privacy-notice) | Workfront에서 개인 데이터를 수집하는 방법과 데이터 주체가 양식을 통해 개인 정보 보호 요청을 제출하는 방법을 알아봅니다. |
 
