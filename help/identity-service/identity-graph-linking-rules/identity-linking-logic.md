@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '794'
 ht-degree: 3%
 
 ---
@@ -150,5 +150,6 @@ ID 서비스는 CRM ID:60013ABC가 그래프 내에 이미 있음을 인식하�
 ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [ID 그래프 연결 규칙 개요](./overview.md)
+* [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
 * [ID 그래프 연결 규칙을 구성하기 위한 예제 시나리오](./example-scenarios.md)
 * [ID 서비스 및 실시간 고객 프로필](identity-and-profile.md)

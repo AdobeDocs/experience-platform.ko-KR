@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ID 서비스
 breadcrumb-title: Platform Identity Service 안내서
 user-guide-description: 다양한 디바이스와 시스템에서 고객 ID를 연결하여 개인화된 디지털 경험을 전달할 수 있습니다.
 feature: Identities
-source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
+source-git-commit: 51bb84f530ed941a67c4a4939e153f516d96ec25
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '132'
 ht-degree: 27%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 27%
    - [UI에서 ID 필드 정의](ui/label-identities.md)
 - [ID 그래프 연결 규칙] {#identity-graph-linking-rules}
    - [기능 개요](./identity-graph-linking-rules/overview.md)
+   - [ID 최적화 알고리즘](./identity-graph-linking-rules/identity-optimization-algorithm.md)
    - [예제 시나리오](./identity-graph-linking-rules/example-scenarios.md)
    - [ID 서비스 및 실시간 고객 프로필](./identity-graph-linking-rules/identity-and-profile.md)
    - [ID 연결 논리](./identity-graph-linking-rules/identity-linking-logic.md)
