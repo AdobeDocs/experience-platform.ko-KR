@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
+source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1678'
 ht-degree: 4%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 4%
 
 이 문서에서는 Adobe Experience Platform Web SDK에 대한 릴리스 정보를 다룹니다.
 Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확장 릴리스 노트](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## 버전 2.19.1 - 2023년 11월 10일
+
+**수정 사항 및 개선 사항**
+
+* 제안 배열이에서 반환되는 문제가 해결되었습니다. `sendEvent` 호출은 항상 비어 있었습니다.
 
 ## 버전 2.19.0 - 2023년 11월 1일
 

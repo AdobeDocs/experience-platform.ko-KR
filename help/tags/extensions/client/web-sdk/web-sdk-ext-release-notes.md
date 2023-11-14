@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
+source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1833'
 ht-degree: 36%
 
 ---
@@ -14,7 +14,15 @@ ht-degree: 36%
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## 버전 2.21.0 - 2023년 11월 1일
+## 버전 2.21.3 - 2023년 11월 10일
+
+Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
+
+**수정 사항 및 개선 사항**
+
+* 에서 사용할 수 있는 제안 배열이 발생하는 문제를 해결했습니다. `Send event complete` 이벤트가 항상 비어 있었습니다.
+
+## 버전 2.21.2 - 2023년 11월 1일
 
 **새로운 기능**
 
