@@ -5,7 +5,7 @@ exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
 source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
 workflow-type: tm+mt
 source-wordcount: '1000'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -60,7 +60,7 @@ HTTP API 연결을 만든 후 **[!UICONTROL 데이터 선택]** 단계가 나타
 
 ![데이터 추가](../../../../images/tutorials/create/http/add-data.png)
 
-데이터가 업로드된 상태에서 인터페이스의 오른쪽을 사용하여 파일 계층 구조를 미리 볼 수 있습니다. 선택 **[!UICONTROL 다음]** 계속합니다.
+데이터가 업로드된 상태에서 인터페이스의 오른쪽을 사용하여 파일 계층 구조를 미리 볼 수 있습니다. **[!UICONTROL 다음]**&#x200B;을 선택하여 계속하십시오.
 
 ![preview-sample-data](../../../../images/tutorials/create/http/preview-sample-data.png)
 

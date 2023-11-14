@@ -7,7 +7,7 @@ exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1573'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform에서 고객 동의/환경 설정 데이터를 처리�
 >* 조직에서 만든 사용자 정의 동의 필드 그룹
 >* 표준화된 동의 필드 그룹과 사용자 정의 동의 필드 그룹에서 제공하는 추가 필드의 조합
 
-## 사전 요구 사항
+## 전제 조건
 
 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 

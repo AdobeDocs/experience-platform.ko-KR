@@ -7,7 +7,7 @@ exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
 source-wordcount: '1151'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -230,7 +230,7 @@ curl -X PUT \
 | `entityId` | 이는 업데이트할 특정 데이터 세트 엔티티를 식별합니다. 다음 `entityId` 은(는) 다음 세 가지 값을 포함해야 합니다.<br/><br/>`namespace`: ID 충돌을 피하는 데 사용됩니다. 다음 `namespace` 은(는) `AEP`.<br/>`id`: 업데이트 중인 리소스의 ID입니다. 이 참조는 `datasetId`.<br/>`type`: 업데이트 중인 리소스의 유형입니다. 항상 다음과 같습니다. `dataset`. |
 | `labels` | 전체 데이터 세트에 추가할 데이터 사용 레이블 목록입니다. |
 | `parents` | 다음 `parents` 배열에 다음 목록이 포함됨: `entityId`이 데이터 세트가에서 레이블을 상속합니다. 데이터 세트는 스키마 및/또는 데이터 세트에서 레이블을 상속할 수 있습니다. |
-| `optionalLabels` | 이 매개 변수는 데이터 세트 필드에 이전에 적용된 레이블을 제거하는 데 사용됩니다. 레이블을 제거할 데이터 세트 내의 개별 필드 목록입니다. 이 배열의 각 항목에는 다음 속성이 있어야 합니다. <br/><br/>`option`: 다음을 포함하는 개체 [!DNL Experience Data Model] (XDM) 필드 속성입니다. 다음 세 가지 속성이 필요합니다.<ul><li>id</code>: URI $id</code> 필드와 연계된 스키마 값.</li><li>contentType</code>: 스키마의 콘텐츠 유형 및 버전 번호입니다. 유효한 형식 중 하나를 사용해야 합니다. <a href="../../xdm/api/getting-started.md#accept">Accept 헤더</a> XDM 조회 요청용.</li><li>schemaPath</code>: 데이터 세트 스키마 내의 필드에 대한 경로입니다.</li></ul>`labels`: 이 값은 적용된 기존 필드 레이블의 하위 집합을 포함하거나, 기존 필드 레이블을 모두 제거하려면 비워 두어야 합니다. 이제 PUT 또는 POST 메서드는 `optionalLabels` 필드에는 새 레이블이나 수정된 레이블이 있습니다. |
+| `optionalLabels` | 이 매개 변수는 데이터 세트 필드에 이전에 적용된 레이블을 제거하는 데 사용됩니다. 레이블을 제거할 데이터 세트 내의 개별 필드 목록입니다. 이 배열의 각 항목에는 다음 속성이 있어야 합니다. <br/><br/>`option`: 다음을 포함하는 개체 [!DNL Experience Data Model] (XDM) 필드 속성입니다. 다음 세 가지 속성이 필요합니다.<ul><li><code>ID</code>: URI <code>$id</code> 필드와 연계된 스키마 값.</li><li><code>contentType</code>: 스키마의 콘텐츠 유형 및 버전 번호입니다. 유효한 형식 중 하나를 사용해야 합니다. <a href="../../xdm/api/getting-started.md#accept">Accept 헤더</a> XDM 조회 요청용.</li><li><code>schemaPath</code>: 데이터 세트 스키마 내의 필드에 대한 경로입니다.</li></ul>`labels`: 이 값은 적용된 기존 필드 레이블의 하위 집합을 포함하거나, 기존 필드 레이블을 모두 제거하려면 비워 두어야 합니다. 이제 PUT 또는 POST 메서드는 `optionalLabels` 필드에는 새 레이블이나 수정된 레이블이 있습니다. |
 
 **응답**
 

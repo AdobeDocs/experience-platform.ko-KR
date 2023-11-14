@@ -5,7 +5,7 @@ exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
 source-wordcount: '921'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -115,7 +115,7 @@ Postman 환경 및 컬렉션을 사용하여 액세스 토큰을 생성할 수�
 
 ## 샘플 API 호출 읽기 {#read-sample-api-calls}
 
-각 엔드포인트 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 포맷의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/api-guide.md#sample-api) ( Platform API 시작 안내서).
+각 엔드포인트 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/api-guide.md#sample-api) ( Platform API 시작 안내서).
 
 ## 다음 단계 {#next-steps}
 

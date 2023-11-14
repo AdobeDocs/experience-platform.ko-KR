@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;카탈로그 서비스;카탈로그;카탈로그 서비스;데이터 위치;데이터 위치;데이터 관리;데이터 관리;계보;계보;카탈로그;데이터 세트 활성화
 solution: Experience Platform
 title: 카탈로그 서비스 개요
-description: 카탈로그 서비스는 Adobe Experience Platform 내의 데이터 위치와 계보를 위한 기록 시스템입니다. Experience Platform에 수집되는 모든 데이터는 파일 및 디렉터리로 데이터 레이크에 저장되지만, 카탈로그는 조회 및 모니터링을 위해 이러한 파일 및 디렉터리에 대한 메타데이터 및 설명을 포함합니다.
+description: 카탈로그 서비스는 Adobe Experience Platform 내의 데이터 위치 및 계보에 대한 레코드 시스템입니다. Experience Platform에 수집된 모든 데이터는 데이터 레이크에 파일 및 디렉터리로 저장되지만 카탈로그는 조회 및 모니터링 목적으로 해당 파일 및 디렉터리에 대한 메타데이터와 설명을 보유합니다.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
 source-git-commit: 0ebe9eadb1bce6252b43a50af009ce1b0f6e5d6e
 workflow-type: tm+mt
 source-wordcount: '694'
-ht-degree: 6%
+ht-degree: 13%
 
 ---
 

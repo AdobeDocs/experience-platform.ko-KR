@@ -126,11 +126,11 @@ Customer AI에서 데이터 세트를 두 개 이상 사용하는 경우 하이�
 
 ![점수 분포](../images/insights/distribution-of-scores.png)
 
-## 영향력 있는 요인
+## 영향력 있는 요소
 
 각 스코어 버킷에 대해 해당 버킷에 대해 가장 영향력 있는 상위 10개 요소를 표시하는 카드가 생성됩니다. 영향력 있는 요소는 고객이 다양한 스코어 버킷에 속하는 이유에 대한 추가 세부 정보를 제공합니다.
 
-![영향력 있는 요인](../images/insights/influential-factors.png)
+![영향력 있는 요소](../images/insights/influential-factors.png)
 
 ### 영향력 있는 요인 드릴다운
 
@@ -225,7 +225,7 @@ AUC는 점수별 순위와 예측 목표 발생 간의 관계의 강도를 반�
 
 ## 다음 단계
 
-이 문서에서는 고객 AI 서비스 인스턴스가 제공하는 통찰력에 대해 간략히 설명했습니다. 이제 의 자습서를 계속할 수 있습니다. [고객 AI에서 점수 다운로드](./download-scores.md) 또는 다른 항목 검색 [Adobe Intelligent Services](../../home.md) 제공되는 가이드.
+이 문서에서는 고객 AI 서비스 인스턴스가 제공하는 통찰력에 대해 간략히 설명했습니다. 이제 의 자습서를 계속할 수 있습니다. [고객 AI에서 점수 다운로드](./download-scores.md) 또는 다른 항목 탐색 [Adobe Intelligent Services](../../home.md) 제공되는 가이드.
 
 ## 추가 리소스
 

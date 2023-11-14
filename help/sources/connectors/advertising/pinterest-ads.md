@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;Pinterest 광고;
 title: Pinterest 광고 소스 개요
 description: API 또는 사용자 인터페이스를 사용하여 Pinterest 광고를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
-badge: 베타
+badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8edbcb26-0a18-47f1-8012-ca209d99d7a6
@@ -37,7 +37,7 @@ Experience Platform은 서드파티 광고 시스템에서 데이터를 수집�
 
 사용 [!DNL Pinterest Ads] 소스: 데이터를 가져올 위치 [!DNL Pinterest] Experience Platform 를 클릭하여 데이터 분석을 실행할 수 있습니다. 데이터는 90일 소급 범위 동안 수집된 날짜부터 반환됩니다. [!DNL Pinterest Ads] 전달자 토큰을 인증 메커니즘으로 사용하여 [!DNL Pinterest] API.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 를 만드는 첫 번째 단계입니다. [!DNL Pinterest Ads] 소스 연결은 Pinterest 개발자 계정이 있는지 확인하기 위한 것입니다. 아직 없다면 다음을 방문하십시오. [등록](https://www.pinterest.com/business/create/?next=https://developers.pinterest.com/account-setup/) 계정을 등록하고 만들 페이지입니다.
 

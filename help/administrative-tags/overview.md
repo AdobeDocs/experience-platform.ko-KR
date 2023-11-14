@@ -4,7 +4,7 @@ title: 통합 태그 개요
 description: 이 문서는 Adobe Experience Platform의 통합 태그에 대한 정보를 제공합니다.
 exl-id: a19e37c3-697a-4000-9cb8-d67478b47dc6
 source-git-commit: 6977438d57dc8e1390812e58bf039ebc60cb830d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 100%
 

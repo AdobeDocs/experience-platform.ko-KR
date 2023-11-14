@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥터;소스 sdk;sdk;SDK
 title: UI에서 Pinterest Ads 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Pinterest Ads 소스 연결을 만드는 방법을 알아봅니다.
-badge: 베타
+badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
@@ -30,7 +30,7 @@ ht-degree: 2%
    * [스키마 편집기 튜토리얼](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 정의 스키마를 만드는 방법을 알아봅니다.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 연결하려면 [!DNL Pinterest Ads] Experience Platform을 수행하려면 다음 연결 속성에 대한 값을 제공해야 합니다.
 

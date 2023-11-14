@@ -8,7 +8,7 @@ exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
 source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
 source-wordcount: '1338'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -606,12 +606,12 @@ curl -X GET \
 
 +++
 
-## 데이터 흐름 만들기
+## 데이터 흐름을 만듭니다
 
 데이터 수집을 위한 마지막 단계는 데이터 흐름을 만드는 것입니다. 이 시점에서 다음 필수 값을 준비해야 합니다.
 
 * [소스 연결 ID](#source)
-* [Target 연결 ID](#target)
+* [대상 연결 ID](#target)
 * [ID 매핑](#mapping)
 * [데이터 흐름 사양 ID](#specs)
 

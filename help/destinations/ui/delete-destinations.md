@@ -19,7 +19,7 @@ Adobe Experience Platform 사용자 인터페이스에서 대상에 대한 기�
 
 대상을 삭제하면 해당 대상에 대한 기존 데이터 흐름이 모두 제거됩니다. 삭제한 대상에 활성화된 모든 대상은 데이터 흐름이 삭제되기 전에 매핑되지 않습니다.
 
-다음 두 가지 방법으로 대상에서 대상을 삭제할 수 있습니다. [!DNL Platform] [!DNL UI]. 다음을 수행할 수 있습니다.
+다음 두 가지 방법으로 대상에서 대상을 삭제할 수 있습니다. [!DNL Platform] [!DNL UI]. 다음과 같은 작업을 수행할 수 있습니다.
 
 * [에서 대상 삭제 [!UICONTROL 찾아보기] 탭](#delete-browse-tab)
 * [대상 세부 사항 페이지에서 대상 삭제](#delete-destination-details-page)

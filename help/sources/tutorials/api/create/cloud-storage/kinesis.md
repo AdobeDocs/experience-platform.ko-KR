@@ -5,8 +5,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 1%
+source-wordcount: '737'
+ht-degree: 4%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 1%
 
 Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../../../landing/api-guide.md).
 
-## 기본 연결 만들기
+## 기본 연결을 만듭니다
 
 소스 연결을 만드는 첫 번째 단계는 [!DNL Kinesis] 소스 및 기본 연결 ID 생성. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 

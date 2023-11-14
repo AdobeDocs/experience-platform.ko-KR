@@ -8,7 +8,7 @@ exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
 source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
 source-wordcount: '1347'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -592,12 +592,12 @@ curl -X GET \
 
 +++
 
-## 데이터 흐름 만들기
+## 데이터 흐름을 만듭니다
 
 광고 데이터를 수집하는 마지막 단계는 데이터 흐름을 만드는 것입니다. 이제 다음 필수 값이 준비되었습니다.
 
 * [소스 연결 ID](#source)
-* [Target 연결 ID](#target)
+* [대상 연결 ID](#target)
 * [ID 매핑](#mapping)
 * [데이터 흐름 사양 ID](#specs)
 

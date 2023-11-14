@@ -7,7 +7,7 @@ feature: Sources
 source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
 workflow-type: tm+mt
 source-wordcount: '989'
-ht-degree: 12%
+ht-degree: 13%
 
 ---
 
@@ -114,7 +114,7 @@ ht-degree: 12%
    - 스트리밍 {#streaming}
       - [HTTP API 커넥터](connectors/streaming/http.md)
 - API 자습서 {#api-tutorials}
-   - 기본 연결 만들기 {#create}
+   - 기본 연결을 만듭니다 {#create}
       - Advertising {#advertising}
          - [Google 광고](tutorials/api/create/advertising/ads.md)
          - [Pinterest 광고](tutorials/api/create/advertising/pinterest-ads.md)
@@ -324,7 +324,7 @@ ht-degree: 12%
       - [마케팅 자동화 연결 데이터 흐름](tutorials/ui/dataflow/marketing-automation.md)
       - [결제 연결 데이터 흐름](tutorials/ui/dataflow/payments.md)
       - [프로토콜 연결 데이터 흐름](tutorials/ui/dataflow/protocols.md)
-   - [UI의 템플릿을 사용하여 소스 데이터 흐름 만들기](tutorials/ui/templates.md)
+   - [UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기](tutorials/ui/templates.md)
    - [온디맨드 수집](tutorials/ui/on-demand-ingestion.md)
    - [일괄 처리 데이터 흐름 모니터링](tutorials/ui/monitor.md)
    - [스트리밍 데이터 흐름 모니터링](tutorials/ui/monitor-streaming.md)

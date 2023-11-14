@@ -7,7 +7,7 @@ exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '410'
-ht-degree: 0%
+ht-degree: 12%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 샘플 API 호출 읽기
 
-다음 [!DNL Real-Time Customer Profile] API 설명서는 요청의 형식을 제대로 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 포맷의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 다음에서 [!DNL Experience Platform] 문제 해결 가이드.
+다음 [!DNL Real-Time Customer Profile] API 설명서는 요청의 형식을 제대로 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 문서에 사용된 규칙에 대한 자세한 내용은 [ 문제 해결 안내서의 ](../../landing/troubleshooting.md#how-do-i-format-an-api-request)예제 API 호출을 읽는 방법[!DNL Experience Platform] 섹션을 참조하세요.
 
 ## 필수 헤더
 

@@ -5,7 +5,7 @@ exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
 source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
 source-wordcount: '764'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -69,7 +69,7 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 왼쪽 탐색 모
 
 ### 데이터 선택
 
-소스가 인증되면 페이지는 데이터의 계층 구조를 탐색하고 검사할 수 있는 대화형 스키마 트리로 업데이트됩니다. 선택 **[!UICONTROL 다음]** 계속합니다.
+소스가 인증되면 페이지는 데이터의 계층 구조를 탐색하고 검사할 수 있는 대화형 스키마 트리로 업데이트됩니다. **[!UICONTROL 다음]**&#x200B;을 선택하여 계속하십시오.
 
 ![select-data](../../../../images/tutorials/create/zendesk/select-data.png)
 

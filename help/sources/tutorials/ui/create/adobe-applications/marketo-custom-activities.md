@@ -87,7 +87,7 @@ ht-degree: 0%
 
 ![스키마 내의 필드에 추가된 하위 필드 그룹입니다.](../../../../images/tutorials/create/marketo-custom-activities/add-sub-fields.png)
 
-## 데이터 흐름 만들기
+## 데이터 흐름을 만듭니다
 
 스키마 설정이 완료되면 이제 사용자 지정 활동 데이터에 대한 데이터 흐름을 만들 수 있습니다.
 

@@ -17,7 +17,6 @@ ht-degree: 0%
 > * Adobe은 이 페이지에 책갈피를 지정하고 3개월마다 다시 방문하여 최신 IP 주소를 확인하는 것을 권장합니다. Adobe은 새 IP 범위에 대한 알림을 제공하지 않습니다.
 > * Adobe은 SFTP 서버로 데이터 내보내기를 지원하지만 데이터를 내보내는 데 권장되는 클라우드 스토리지 위치는 다음과 같습니다 [!DNL Amazon S3] 및 [!DNL Azure Blob].
 
-
 ## 개요 {#overview}
 
 이 페이지는 Experience Platform에서 로 데이터를 안전하게 내보내기 위해 허용 목록에 추가하다에 추가할 수 있는 IP 범위를 제공합니다. [SFTP 서버](./sftp.md).

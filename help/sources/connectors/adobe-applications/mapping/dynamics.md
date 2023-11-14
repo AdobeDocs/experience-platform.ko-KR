@@ -15,7 +15,7 @@ ht-degree: 9%
 
 ## 연락처 {#contacts}
 
-| 소스 필드 | Target XDM 필드 | 참고 |
+| 소스 필드 | 타겟 XDM 필드 | 참고 |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |
 | `address1_city` | `workAddress.city` |
@@ -60,7 +60,7 @@ ht-degree: 9%
 
 ## 잠재 고객 {#leads}
 
-| 소스 필드 | Target XDM 필드 | 참고 |
+| 소스 필드 | 타겟 XDM 필드 | 참고 |
 | --- | --- | --- |
 | `address1_addressid` | `workAddress._id` |
 | `address1_city` | `workAddress.city` |
@@ -99,7 +99,7 @@ ht-degree: 9%
 
 ## 계정 {#accounts}
 
-| 소스 필드 | Target XDM 필드 | 참고 |
+| 소스 필드 | 타겟 XDM 필드 | 참고 |
 | --- | --- | --- |
 | `"Dynamics"` | `accountKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
@@ -136,7 +136,7 @@ ht-degree: 9%
 
 ## 영업 기회 {#opportunities}
 
-| 소스 필드 | Target XDM 필드 | 참고 |
+| 소스 필드 | 타겟 XDM 필드 | 참고 |
 | --- | --- | --- |
 | `name` | `opportunityName` |
 | `"Dynamics"` | `opportunityKey.sourceType` |
@@ -160,7 +160,7 @@ ht-degree: 9%
 
 ## 영업 기회 연락처 역할 {#opportunity-contact-roles}
 
-| 소스 필드 | Target XDM 필드 | 참고 |
+| 소스 필드 | 타겟 XDM 필드 | 참고 |
 | --- | --- | --- |
 | `"Dynamics"` | `opportunityPersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
@@ -178,7 +178,7 @@ ht-degree: 9%
 
 ## 캠페인 {#campaigns}
 
-| 소스 필드 | Target XDM 필드 | 참고 |
+| 소스 필드 | 타겟 XDM 필드 | 참고 |
 | --- | --- | --- |
 | `campaignid` | `campaignKey.sourceID` |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
@@ -203,7 +203,7 @@ ht-degree: 9%
 
 ## 마케팅 목록 {#marketing-list}
 
-| 소스 필드 | Target XDM 필드 | 참고 |
+| 소스 필드 | 타겟 XDM 필드 | 참고 |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `marketingListKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
@@ -218,7 +218,7 @@ ht-degree: 9%
 
 ## 마케팅 목록 구성원 {#marketing-list-members}
 
-| 소스 필드 | Target XDM 필드 | 참고 |
+| 소스 필드 | 타겟 XDM 필드 | 참고 |
 | --- | --- | --- |
 | `"Dynamics"` | `marketingListMemberKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `marketingListMemberKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
@@ -249,7 +249,7 @@ ht-degree: 9%
 
 #### 논리 연산자 사용
 
-| 소스 필드 | Target XDM 필드 |
+| 소스 필드 | 타겟 XDM 필드 |
 | --- | --- |
 | `decode(genderCode, "1", "male", "2", "female", "default")` | `person.gender` |
 
@@ -257,7 +257,7 @@ ht-degree: 9%
 
 #### 계산된 필드 사용
 
-| 소스 필드 | Target XDM 필드 |
+| 소스 필드 | 타겟 XDM 필드 |
 | --- | --- |
 | `iif(gendercode.equals("1"),"male",iif(gendercode.equals("2"),"female",null))` | `person.gender` |
 

@@ -6,7 +6,7 @@ exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '478'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -44,7 +44,7 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 시작에 대한 자세한 내용은 다음을 참조하십시오. [[!DNL Teradata Vantage] 문서](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
 
-## 기본 연결 만들기
+## 기본 연결을 만듭니다
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 

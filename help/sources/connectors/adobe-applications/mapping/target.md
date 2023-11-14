@@ -47,7 +47,7 @@ ht-degree: 0%
 | `experience.target.mboxName` | `mboxRequest.mboxName` |
 | `experience.target.mboxVersion` | `mboxRequest.mboxVersion` |
 | `experience.target.sessionId` | `mboxRequest.sessionId` |
-| `experience.target.environmentID` | 고객 정의 환경(예: 개발, qa 또는 프로덕션)에 대한 Target의 내부 매핑. |
+| `experience.target.environmentID` | 고객 정의 환경(예: 개발, qa 또는 프로덕션)에 대한 Target의 내부 매핑입니다. |
 | `experience.target.supplementalDataID` | Target 이벤트를 Analytics 이벤트와 연결하는 데 사용되는 식별자 |
 | `experience.target.pageDetails.pageId` | `mboxRequest.pageId` |
 | `experience.target.pageDetails.pageScore` | `mboxRequest.mboxPageValue` |

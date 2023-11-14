@@ -6,7 +6,7 @@ exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
 source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '424'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->읽기 [Adobe Journey Optimizer 웹 채널 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html) 시작하는 방법에 대한 자세한 내용 [!DNL Journey Optimizer Web] 경험 작성 및 보고.
+>읽기 [Adobe Journey Optimizer 웹 채널 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=ko) 시작하는 방법에 대한 자세한 내용 [!DNL Journey Optimizer Web] 경험 작성 및 보고.
 
 ## 용어 {#terminology}
 

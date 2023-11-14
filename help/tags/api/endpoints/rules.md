@@ -366,7 +366,7 @@ curl -X POST \
 
 ## 규칙에 이벤트, 조건 및 작업 추가 {#components}
 
-다음 작업을 완료하면 [이(가) 규칙을 만들었습니다.](#create), 이벤트, 조건 및 작업(통칭하여 규칙 구성 요소라고 함)을 추가하여 논리 구성을 시작할 수 있습니다. 의 섹션을 참조하십시오. [규칙 구성 요소 만들기](./rule-components.md#create) 다음에서 `/rule_components` Reactor API에서 이를 수행하는 방법에 대해 알아보려면 endpoint guide를 참조하십시오.
+다음 작업을 완료하면 [이(가) 규칙을 만들었습니다.](#create), 이벤트, 조건 및 작업(일반적으로 규칙 구성 요소라고 함)을 추가하여 논리 구성을 시작할 수 있습니다. 의 섹션을 참조하십시오. [규칙 구성 요소 만들기](./rule-components.md#create) 다음에서 `/rule_components` Reactor API에서 이를 수행하는 방법에 대해 알아보려면 endpoint guide를 참조하십시오.
 
 ## 규칙 업데이트 {#update}
 

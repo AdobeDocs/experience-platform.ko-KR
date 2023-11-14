@@ -5,8 +5,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
 source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 1%
+source-wordcount: '590'
+ht-degree: 4%
 
 ---
 
@@ -54,7 +54,7 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 >
 >다음을 설정해야 합니다. `PREVENT_UNLOAD_TO_INLINE_URL` 플래그 지정 대상 `FALSE` 에서 데이터 언로드를 허용하려면 [!DNL Snowflake] Experience Platform 대상 데이터베이스.
 
-## 기본 연결 만들기
+## 기본 연결을 만듭니다
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 

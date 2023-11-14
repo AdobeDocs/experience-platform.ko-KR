@@ -8,7 +8,7 @@ exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 1%
 
 Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../../../landing/api-guide.md).
 
-## 기본 연결 만들기
+## 기본 연결을 만듭니다
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 

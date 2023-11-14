@@ -7,7 +7,7 @@ exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '1599'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ### 필수 헤더
 
-이 자습서에서는 다음을 완료해야 합니다. [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en) 을(를) 성공적으로 호출하기 위해 [!DNL Platform] API. 인증 자습서를 완료하면 모든 항목에서 필요한 각 헤더에 대한 값이 제공됩니다 [!DNL Experience Platform] 아래와 같이 API 호출:
+이 자습서에서는 다음을 완료해야 합니다. [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en) 을(를) 성공적으로 호출하기 위해 [!DNL Platform] API. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - 인증: 전달자 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

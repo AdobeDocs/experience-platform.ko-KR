@@ -5,7 +5,7 @@ description: Adobe Experience Platform Privacy Service은 수많은 개인 정�
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
 source-git-commit: 74ef1e24c2b40103ac6cafdfd22cb6036cdbfd3e
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -119,4 +119,4 @@ UI에서 작업 요청을 만들 때 다음을 선택해야 합니다. **[!UICON
 
 ## 다음 단계
 
-이 문서를 읽으면에서 개인 정보 보호 요청 처리와 관련된 중요한 개념에 대해 소개합니다 [!DNL Identity Service]. 기타 개인 정보 보호 요청 처리에 대한 정보 [!DNL Experience Cloud] 응용 프로그램의 경우 다음 문서를 참조하십시오. [[!DNL Privacy Service] and [!DNL Experience Cloud] 응용 프로그램](../privacy-service/experience-cloud-apps.md).
+이 문서를 읽으면에서 개인 정보 보호 요청 처리와 관련된 중요한 개념에 대해 소개합니다 [!DNL Identity Service]. 기타 개인 정보 보호 요청 처리에 대한 정보 [!DNL Experience Cloud] 응용 프로그램의 경우 다음 문서를 참조하십시오. [[!DNL Privacy Service] 및 [!DNL Experience Cloud] 응용 프로그램](../privacy-service/experience-cloud-apps.md).

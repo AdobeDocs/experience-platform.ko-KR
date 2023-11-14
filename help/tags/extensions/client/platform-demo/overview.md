@@ -120,7 +120,7 @@ ID 매핑 섹션에는 여러 행이 포함될 수 있습니다. 각 행에 특�
 
 ID 매핑 섹션 내에 여러 개의 ID가 있는 경우 한 개의 ID만 기본으로 표시할 수 있습니다.
 
-다음 항목이 있는 스키마가 있는 경우 `xdm:identityMap` 필드 및 동시에 다른 필드가 기본 id 필드로 표시되면 id 매핑 섹션 내의 기본 열이 표시되지 않습니다.
+스키마에 다음 항목이 있는 경우 `xdm:identityMap` 필드 및 동시에 다른 필드가 기본 id 필드로 표시되면 id 매핑 섹션 내의 기본 열이 표시되지 않습니다.
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-section-not-primary.png)
 

@@ -6,7 +6,7 @@ description: 이 문서에서는 Experience Platform API를 호출하기 위해 
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
 workflow-type: tm+mt
-source-wordcount: '2205'
+source-wordcount: '2204'
 ht-degree: 8%
 
 ---
@@ -50,7 +50,7 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 
 ### 개발자 액세스 권한 얻기 {#gain-developer-access}
 
-다음 연락처로 이동 [!DNL Admin Console] 를 사용하여 귀하를 Experience Platform 제품 프로필에 개발자로 추가할 조직의 관리자 [[!DNL Admin Console]](https://adminconsole.adobe.com/). 다음을 참조하십시오. [!DNL Admin Console] 다음 방법에 대한 특정 지침 설명서 [제품 프로필에 대한 개발자 액세스 관리](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+다음 연락처로 이동 [!DNL Admin Console] 를 사용하여 귀하를 Experience Platform 제품 프로필에 개발자로 추가할 조직의 관리자 [[!DNL Admin Console]](https://adminconsole.adobe.com/). 다음을 참조하십시오. [!DNL Admin Console] 다음 방법에 대한 특정 지침 설명서 [제품 프로필에 대한 개발자 액세스 관리](https://helpx.adobe.com/kr/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 개발자로 할당되면에서 통합 만들기를 시작할 수 있습니다. [Adobe Developer 콘솔](https://www.adobe.com/go/devs_console_ui). 이러한 통합은 외부 앱 및 서비스에서 Adobe API로의 파이프라인입니다.
 
@@ -220,7 +220,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | 속성 | 설명 |
 | --- | --- |
-| `token_type` | 반환되는 토큰의 유형입니다. 액세스 토큰의 경우 이 값은 항상 입니다 `bearer`. |
+| `token_type` | 유형 of 토큰이 반환되고 있습니다. 액세스 토큰의 경우 이 값은 항상 입니다 `bearer`. |
 | `access_token` | 생성됨 `{ACCESS_TOKEN}`. 이 값, 단어 접두사 `Bearer`은(는) (으)로 필요합니다. `Authentication` 모든 플랫폼 API 호출에 대한 헤더입니다. |
 | `expires_in` | 액세스 토큰이 만료될 때까지 남은 시간(밀리초)입니다. 이 값이 0에 도달하면 새 액세스 토큰을 생성해야 Platform API를 계속 사용할 수 있습니다. |
 

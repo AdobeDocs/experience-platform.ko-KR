@@ -151,7 +151,7 @@ curl -X POST \
 
 ## 타겟 데이터 세트 만들기
 
-대상 XDM 스키마 및 고유 포함 `$id` 이제 소스 데이터를 포함할 타겟 데이터 세트를 만들 수 있습니다. 타겟 데이터 세트를 만들려면 다음을 위해 POST 요청 `dataSets` 의 엔드포인트 [카탈로그 서비스 API](https://www.adobe.io/experience-platform-apis/references/catalog/)페이로드 내에 대상 스키마의 ID를 제공합니다.
+대상 XDM 스키마 및 고유 포함 `$id` 이제 소스 데이터를 포함할 타겟 데이터 세트를 만들 수 있습니다. POST 타겟 데이터 세트를 만들려면 다음을 수행하십시오. `dataSets` 의 엔드포인트 [카탈로그 서비스 API](https://www.adobe.io/experience-platform-apis/references/catalog/)페이로드 내에 대상 스키마의 ID를 제공합니다.
 
 **API 형식**
 
@@ -204,7 +204,7 @@ curl -X POST \
 
 ## 대상 연결 만들기 {#target-connection}
 
-Target 연결은 플랫폼 또는 전송된 데이터가 도착하는 모든 위치에 대한 대상 연결을 만들고 관리합니다. Target 연결에는 데이터 대상, 데이터 형식 및 데이터 흐름을 만드는 데 필요한 대상 연결 ID에 대한 정보가 포함되어 있습니다. Target 연결 인스턴스는 테넌트 및 조직에만 해당됩니다.
+Target 연결은 플랫폼 또는 전송된 데이터가 도달할 위치에 대한 대상 연결을 만들고 관리합니다. 대상 연결에는 데이터 대상, 데이터 형식 및 데이터 흐름을 만드는 데 필요한 대상 연결 ID에 대한 정보가 포함되어 있습니다. Target 연결 인스턴스는 테넌트 및 조직에만 해당됩니다.
 
 POST 대상 연결을 만들려면 `/targetConnections` 의 엔드포인트 [!DNL Flow Service] API. 요청의 일부로 데이터 형식인 `dataSetId` 이전 단계에서 검색되고 고정 연결 사양 ID가 연결됨 [!DNL Data Lake]. 이 ID는 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -413,12 +413,12 @@ curl -X GET \
 }
 ```
 
-## 데이터 흐름 만들기
+## 데이터 흐름을 만듭니다
 
 스트리밍 데이터를 수집하는 마지막 단계는 데이터 흐름을 만드는 것입니다. 이제 다음 필수 값이 준비되었습니다.
 
 - [소스 연결 ID](#source)
-- [Target 연결 ID](#target)
+- [대상 연결 ID](#target)
 - [ID 매핑](#mapping)
 - [데이터 흐름 사양 ID](#specs)
 

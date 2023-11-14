@@ -5,7 +5,7 @@ exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
 source-wordcount: '627'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 4%
 
 Destination SDK은 [Adobe I/O](https://www.adobe.io/) 인증을 위한 게이트웨이 Destination SDK 종단점에 대한 API를 호출하려면 API 호출에 특정 헤더를 제공해야 합니다. Adobe Exchange 팀과 협력하여 [Adobe Developer 콘솔](https://developer.adobe.com/console).
 
-Destination SDK API 끝점을 성공적으로 호출하려면 다음을 따르십시오. [Experience Platform 인증 자습서](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). &quot;&quot;에서 자습서를 시작합니다.[API 키, 조직 ID 및 클라이언트 암호 생성](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; 단계. Adobe 교환 팀이 이전 단계를 처리합니다. 인증 자습서를 완료하면 아래와 같이 Destination SDK API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
+Destination SDK API 끝점을 성공적으로 호출하려면 다음을 따르십시오. [Experience Platform 인증 자습서](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ko). &quot;&quot;에서 자습서를 시작합니다.[API 키, 조직 ID 및 클라이언트 암호 생성](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; 단계. Adobe 교환 팀이 이전 단계를 처리합니다. 인증 자습서를 완료하면 아래와 같이 Destination SDK API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
 
 * `x-api-key: {API_KEY}`클라이언트 ID라고도 합니다
 * `x-gw-ims-org-id: {ORG_ID}`를 조직 ID라고도 합니다
@@ -64,7 +64,7 @@ Adobe Exchange 팀은 Destination SDK API 엔드포인트 호출에 사용해야
 
 * [제품 프로필에 대한 권한 관리](/help/access-control/ui/permissions.md)
 * [Experience Platform에 사용 가능한 권한](/help/access-control/home.md#permissions)
-* [Adobe Admin Console 설명서](https://helpx.adobe.com/kr/enterprise/using/admin-console.html)
+* [Adobe Admin Console 설명서](https://helpx.adobe.com/enterprise/using/admin-console.html)
 
 ## 추가 고려 사항 {#additional-considerations}
 

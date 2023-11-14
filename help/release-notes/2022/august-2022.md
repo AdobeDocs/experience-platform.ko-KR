@@ -5,11 +5,11 @@ exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
 source-git-commit: 7f5a1d8e50ff030b2abe04b5155f28b8c8b6fbf9
 workflow-type: tm+mt
 source-wordcount: '2082'
-ht-degree: 6%
+ht-degree: 27%
 
 ---
 
-# Adobe Experience Platform 릴리스 노트
+# Adobe Experience Platform 릴리스 정보
 
 **릴리스 날짜: 2022년 8월 24일**
 
@@ -19,9 +19,9 @@ Adobe Experience Platform의 기존 기능 업데이트:
 - [[!DNL Dashboards]](#dashboards)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
-- [경험 데이터 모델(XDM)](#xdm)
+- [경험 데이터 모델 (XDM)](#xdm)
 - [실시간 고객 프로필](#profile)
-- [세분화 서비스](#segmentation)
+- [Segmentation Service](#segmentation)
 - [소스](#sources)
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
@@ -88,9 +88,9 @@ Adobe Experience Platform에서 여러 기능 제공 [!DNL dashboards] 일별 �
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과의 사전 빌드된 통합입니다. 대상을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-**새 기능 또는 업데이트된 기능**
+**새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | ----------- | ----------- |
@@ -98,7 +98,7 @@ Adobe Experience Platform에서 여러 기능 제공 [!DNL dashboards] 일별 �
 
 {style="table-layout:auto"}
 
-**새 대상**
+**새로운 대상**
 
 | 대상 | 설명 |
 | ----------- | ----------- |
@@ -106,11 +106,11 @@ Adobe Experience Platform에서 여러 기능 제공 [!DNL dashboards] 일별 �
 
 {style="table-layout:auto"}
 
-대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md).
+대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
-## 경험 데이터 모델(XDM) {#xdm}
+## 경험 데이터 모델 (XDM) {#xdm}
 
-XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적인 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수함으로써 모든 고객 경험 데이터를 일반적인 표현에 통합하여 보다 빠르고 통합적인 방식으로 통찰력을 제공할 수 있습니다. 고객 작업에서 중요한 통찰력을 얻고, 세그먼트를 통해 고객 대상을 정의하고, 개인화 목적으로 고객 속성을 사용할 수 있습니다.
+XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 구조 및 정의(스키마)를 제공하는 오픈 소스 사양입니다. XDM 표준을 준수하여 모든 고객 경험 데이터를 공통된 표현에 통합해 보다 빠르고 통합된 방식으로 인사이트를 제공할 수 있습니다. 고객 조치에서 귀중한 인사이트를 얻고, 세그먼트를 통해 고객 대상자를 정의하고, 개인 설정 목적으로 고객 속성을 사용할 수 있습니다.
 
 **새로운 XDM 구성 요소**
 
@@ -127,21 +127,21 @@ XDM은 Adobe Experience Platform으로 가져온 데이터에 대한 일반적�
 | --- | --- | --- |
 | 필드 그룹 | [[!UICONTROL Journey Orchestration 단계 이벤트 공통 필드]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 다음 두 가지 새 속성이 추가되었습니다. `origTimeStamp` 및 `experienceID`. |
 | 필드 그룹 | [[!UICONTROL 세그먼트 멤버십 세부 정보]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | 에 더하여 [!UICONTROL XDM 개별 프로필], 이제 이 필드 그룹을 XDM 비즈니스 계정 클래스 기반 스키마에서도 사용할 수 있습니다. |
-| 필드 그룹 | (여러 개) | Marketo B2B 활동과 관련된 여러 필드 그룹이 안정적인 상태로 업데이트되었습니다. 다음을 참조하십시오 [끌어오기 요청](https://github.com/adobe/xdm/pull/1593/files) 을 참조하십시오. |
-| 필드 그룹 | (여러 개) | 몇 가지 날씨 관련 필드 그룹이 다음에 대해 발생하는 오류를 수정하도록 업데이트되었습니다. `uvIndex` 및 `sunsetTime`. 다음을 참조하십시오 [끌어오기 요청](https://github.com/adobe/xdm/pull/1602/files) 을 참조하십시오. |
+| 필드 그룹 | (다수) | Marketo B2B 활동과 관련된 여러 필드 그룹이 안정적인 상태로 업데이트되었습니다. 다음을 참조하십시오 [끌어오기 요청](https://github.com/adobe/xdm/pull/1593/files) 을 참조하십시오. |
+| 필드 그룹 | (다수) | 몇 가지 날씨 관련 필드 그룹이 다음에 대해 발생하는 오류를 수정하도록 업데이트되었습니다. `uvIndex` 및 `sunsetTime`. 다음을 참조하십시오 [끌어오기 요청](https://github.com/adobe/xdm/pull/1602/files) 을 참조하십시오. |
 | 데이터 유형 | [[!UICONTROL 제품 목록 항목]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | 새 속성 `productImageUrl` 이(가) 추가되었습니다. |
-| 데이터 유형 | [[!UICONTROL Qoe 데이터 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | 새 속성 `framesPerSecond` 이(가) 추가되었습니다. |
-| 데이터 유형 | [[!UICONTROL 세션 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion`의 이름이 `appVersion`로 변경되었습니다. `meta:enum` 및 `description` 필드도 업데이트되었습니다. |
-| 데이터 유형 및 필드 그룹 | (여러 개) | 일부 미디어 데이터 유형 및 필드 그룹에는 새 필드와 업데이트된 설명이 있습니다. 다음을 참조하십시오 [끌어오기 요청](https://github.com/adobe/xdm/pull/1582/files) 을 참조하십시오. |
-| (모두) | (여러 개) | 다음을 포함하는 모든 스키마 객체 `enum` 이제 필드에는 해당 `meta:enum` 각 제약 조건의 표시 값을 나타내는 필드입니다. 다음을 참조하십시오 [끌어오기 요청](https://github.com/adobe/xdm/pull/1601/files) 을 참조하십시오. |
+| 데이터 유형 | [[!UICONTROL Qoe 데이터 세부 사항 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | 새 속성 `framesPerSecond` 이(가) 추가되었습니다. |
+| 데이터 유형 | [[!UICONTROL 세션 세부 사항 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion`의 이름이 `appVersion`로 변경되었습니다. `meta:enum` 및 `description` 필드도 업데이트되었습니다. |
+| 데이터 유형 및 필드 그룹 | (다수) | 일부 미디어 데이터 유형 및 필드 그룹에는 새 필드와 업데이트된 설명이 있습니다. 다음을 참조하십시오 [끌어오기 요청](https://github.com/adobe/xdm/pull/1582/files) 을 참조하십시오. |
+| (모두) | (다수) | 다음을 포함하는 모든 스키마 객체 `enum` 이제 필드에는 해당 `meta:enum` 각 제약 조건의 표시 값을 나타내는 필드입니다. 다음을 참조하십시오 [끌어오기 요청](https://github.com/adobe/xdm/pull/1601/files) 을 참조하십시오. |
 
 {style="table-layout:auto"}
 
-플랫폼의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md).
+Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
 ## 실시간 고객 프로필 {#profile}
 
-Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 장소나 시기에 상관없이 고객이 통합적이고 일관적이며 적절한 경험을 제공할 수 있습니다. 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 서드파티 데이터를 포함하여 여러 채널의 데이터를 결합하는 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. 프로필을 사용하면 모든 고객 상호 작용에 대해 실행 가능한 타임스탬프 계정을 제공하는 통합 보기로 고객 데이터를 통합할 수 있습니다.
+Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드와 상호 작용하는지에 관계없이 고객을 위한 조직화되고 일관되며 관련성 높은 경험을 제공할 수 있습니다. 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 여러 채널의 데이터를 결합하여 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. 프로필을 사용하면 모든 고객의 상호 작용에 대해 실행 가능한 타임스탬프가 지정된 계정을 제공하는 통합 보기로 고객 데이터를 통합할 수 있습니다.
 
 | 기능 | 설명 |
 | ------- | ----------- |
@@ -150,11 +150,11 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 
 {style="table-layout:auto"}
 
-프로필 데이터 작업을 위한 튜토리얼 및 모범 사례를 포함하여 실시간 고객 프로필에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md).
+프로필 데이터 작업에 대한 튜토리얼 및 모범 사례를 포함하여 실시간 고객 프로필에 대해 자세히 알아보려면 [실시간 고객 프로필 개요](../../profile/home.md)를 참조하십시오.
 
-## 세분화 서비스 {#segmentation}
+## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 은 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 프로필의 특정 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(예: 인구 통계학적 정보) 또는 시계열 이벤트를 기반으로 할 수 있습니다.
+[!DNL Segmentation Service]는 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 프로필의 특정 하위 집합을 정의합니다. 세그먼트는 기록 데이터(예: 인구 통계 정보) 또는 고객과 브랜드의 상호 작용을 나타내는 시계열 이벤트를 기반으로 할 수 있습니다.
 
 **새로운 기능**
 
@@ -162,13 +162,13 @@ Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용�
 | ------- | ----------- |
 | 4000개 세그먼트 지원 | 이제 플랫폼이 있는 모든 조직에서 최대 4000개의 세그먼트 정의를 지원할 수 있습니다. 이 변경 사항이 세그먼트 작업 API에 미치는 영향에 대한 자세한 내용은 다음을 참조하십시오. [세그먼트 작업 끝점 안내서](../../segmentation/api/segment-jobs.md) |
 
-에 대한 자세한 내용 [!DNL Segmentation Service], 다음을 참조하십시오. [세그먼테이션 개요](../../segmentation/home.md).
+[!DNL Segmentation Service]에 대한 자세한 내용은 [세분화 개요](../../segmentation/home.md)를 참조하십시오.
 
 ## 소스 {#sources}
 
 Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 Platform 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스를 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
+Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
 **새로운 기능**
 

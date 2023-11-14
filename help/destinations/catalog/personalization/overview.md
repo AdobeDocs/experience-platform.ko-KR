@@ -28,7 +28,7 @@ ht-degree: 14%
 * [Pega 고객 의사 결정 허브 연결](pega.md)
 * [Pega 프로필 연결](pega-profile.md)
 
-**확장**
+**확장 기능**
 
 * [Adobe Target 확장](adobe-target.md)
 * [Adobe Target v2 확장](adobe-target-v2.md)

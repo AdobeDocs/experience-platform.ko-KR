@@ -5,7 +5,7 @@ exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
 source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
 workflow-type: tm+mt
 source-wordcount: '507'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -45,7 +45,7 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 시작에 대한 자세한 내용은 다음을 참조하십시오. [[!DNL Salesforce Marketing Cloud] 문서](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
-## 기본 연결 만들기
+## 기본 연결을 만듭니다
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 

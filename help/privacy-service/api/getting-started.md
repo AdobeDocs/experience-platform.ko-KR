@@ -5,7 +5,7 @@ exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
 source-wordcount: '862'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 이 안내서에서는 Adobe Experience Platform Privacy Service API를 호출하기 전에 알아야 하는 핵심 개념에 대해 소개합니다.
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 이 안내서를 사용하려면 의 작업 이해를 필요로 합니다. [Privacy Service](../home.md) 및 을 통해 Adobe Experience Cloud 애플리케이션에서 데이터 주체(고객)의 액세스 및 삭제 요청을 관리하는 방법을 설명합니다.
 
@@ -99,11 +99,11 @@ Postman 환경 및 컬렉션을 사용하여 액세스 토큰을 생성할 수�
 
 ## 샘플 API 호출 읽기 {#read-sample-api-calls}
 
-각 엔드포인트 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 포맷의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/api-guide.md#sample-api) ( Platform API 시작 안내서).
+각 엔드포인트 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/api-guide.md#sample-api) ( Platform API 시작 안내서).
 
 ## 다음 단계 {#next-steps}
 
 사용할 헤더를 이해했으므로 이제 Privacy Service API를 호출할 준비가 되었습니다. 시작하려면 다음 끝점 안내서 중 하나를 선택하십시오.
 
-* [개인 정보 작업](./privacy-jobs.md)
+* [개인정보 보호 작업](./privacy-jobs.md)
 * [동의](./consent.md)

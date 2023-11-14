@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-# (베타) [!DNL Generic REST API]
+# (Beta) [!DNL Generic REST API]
 
 >[!NOTE]
 >

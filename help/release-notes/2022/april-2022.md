@@ -5,7 +5,7 @@ exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2904'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
@@ -88,7 +88,7 @@ Platform은 일별 스냅샷 중에 캡처한 대로 조직 데이터에 대한 
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
@@ -173,7 +173,7 @@ Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/h
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-AI/ML 서비스는 마케팅 분석가 및 전문가가 고객 경험 사용 사례에서 인공 지능과 머신 러닝을 활용할 수 있는 권한을 부여합니다. 이를 통해 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준의 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다.
+AI/ML 서비스는 마케팅 분석가 및 전문가가 고객 경험 사용 사례에서 인공 지능과 머신 러닝을 활용할 수 있는 권한을 부여합니다. 이를 통해 마케팅 분석가가 데이터 과학에 대한 전문 지식 없이도 비즈니스 수준의 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다.
 
 ### 기여도 AI
 

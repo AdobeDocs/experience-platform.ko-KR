@@ -65,7 +65,7 @@ Experience Platform을 사용하면 다양한 플랫폼 활동에 대한 이벤�
 
 | 기능 | 설명 |
 | --- | --- |
-| 신규 경고 규칙 | 이제 데이터 수집과 관련된 소스에 대해 두 가지 새로운 경고 규칙을 사용할 수 있습니다. 의 개요 보기 [경고 규칙](../../observability/alerts/rules.md) 경고 유형 업데이트 목록. |
+| 새로운 기능 경고 규칙 | 이제 데이터 수집과 관련된 소스에 대해 두 가지 새로운 경고 규칙을 사용할 수 있습니다. 의 개요 보기 [경고 규칙](../../observability/alerts/rules.md) 경고 유형 업데이트 목록. |
 
 {style="table-layout:auto"}
 
@@ -143,7 +143,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| 신규 이제 B2B 사용에 사용할 수 있는 소스 | 이제 B2B 사용 사례용 플랫폼에서 사용 가능한 모든 소스를 사용할 수 있습니다. 다음을 참조하십시오. [소스 카탈로그](../../sources/home.md) 사용 가능한 소스의 전체 목록. |
+| 새로운 기능 이제 B2B 사용에 사용할 수 있는 소스 | 이제 B2B 사용 사례용 플랫폼에서 사용 가능한 모든 소스를 사용할 수 있습니다. 다음을 참조하십시오. [소스 카탈로그](../../sources/home.md) 사용 가능한 소스의 전체 목록. |
 | 새로운 기능의 일반 출시 [!DNL Oracle Eloqua] 소스 | 이제 다음을 사용할 수 있습니다. [!DNL Oracle Eloqua] 소스에서 데이터를 원활하게 수집 [!DNL Oracle Eloqua] 인스턴스(계정, 캠페인, 연락처)를 플랫폼에 추가합니다. 다음에서 설명서를 참조하십시오. [만들기 [!DNL Oracle Eloqua] 소스 연결](../../sources/connectors/marketing-automation/oracle-eloqua.md) 추가 정보. |
 | 의 API 개선 사항 [!DNL Data Landing Zone] | 다음 [!DNL Data Landing Zone] 이제 소스는 를 사용할 때 파일 속성의 자동 검색을 지원합니다. [!DNL Flow Service] API. 다음에서 설명서를 참조하십시오. [만들기 [!DNL Data Landing Zone] 소스 연결](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) 추가 정보. |
 

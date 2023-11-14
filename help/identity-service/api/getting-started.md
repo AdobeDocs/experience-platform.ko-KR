@@ -7,7 +7,7 @@ exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
 source-git-commit: 9f8ed1cc6460dacef7ca91b500a45c059ed1a295
 workflow-type: tm+mt
 source-wordcount: '764'
-ht-degree: 3%
+ht-degree: 20%
 
 ---
 
@@ -21,17 +21,17 @@ Adobe Experience Platform [!DNL Identity Service] 는 Adobe Experience Platform 
 
 - [[!DNL Identity Service]](../home.md): 고객 프로필 데이터의 단편화로 인해 발생하는 근본적인 문제를 해결합니다. 이는 고객이 브랜드와 상호 작용하는 디바이스 및 시스템 간에 ID를 연결하여 수행됩니다.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계한 데이터를 기반으로 통합 소비자 프로필을 실시간으로 제공합니다.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 
 다음 섹션에서는 를 성공적으로 호출하기 위해 알고 있거나 보유하고 있어야 하는 추가 정보를 제공합니다. [!DNL Identity Service] API.
 
 ### 샘플 API 호출 읽기
 
-이 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 포맷의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 다음에서 [!DNL Experience Platform] 문제 해결 가이드.
+이 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 문서에 사용된 규칙에 대한 자세한 내용은 [ 문제 해결 안내서의 ](../../landing/troubleshooting.md#how-do-i-format-an-api-request)예제 API 호출을 읽는 방법[!DNL Experience Platform] 섹션을 참조하세요.
 
 ### 필수 헤더에 대한 값 수집
 
-을 호출하기 위해 [!DNL Platform] API, 먼저 다음을 완료해야 합니다. [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). 인증 자습서를 완료하면 모든 항목에서 필요한 각 헤더에 대한 값이 제공됩니다 [!DNL Experience Platform] 아래와 같이 API 호출:
+[!DNL Platform] API를 호출하려면 먼저 [인증 튜토리얼](https://www.adobe.com/go/platform-api-authentication-en)을 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - 인증: 전달자 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

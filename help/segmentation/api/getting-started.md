@@ -7,7 +7,7 @@ exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '355'
-ht-degree: 1%
+ht-degree: 18%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 에서 세그먼트 정의
 개발자 안내서를 사용하려면 여러 가지 사항에 대한 작업 이해가 필요합니다 [!DNL Experience Platform] 사용과 관련된 서비스 [!DNL Segmentation Service].
 
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): 다음에서 대상자를 빌드할 수 있습니다. [!DNL Real-Time Customer Profile] 데이터.
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다. 세그먼테이션을 최대한 활용하려면 데이터에 따라 프로필 및 이벤트가 수집되는지 확인하십시오. [데이터 모델링 우수 사례](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): [!DNL Experience Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다. 세그먼테이션을 최대한 활용하려면 데이터에 따라 프로필 및 이벤트가 수집되는지 확인하십시오. [데이터 모델링 우수 사례](../../xdm/schema/best-practices.md).
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
 - [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 만드는 가상 샌드박스를 제공합니다. [!DNL Platform] 인스턴스를 별도의 가상 환경으로 전환하여 디지털 경험 애플리케이션을 개발하고 발전시킵니다.
 
@@ -26,7 +26,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 에서 세그먼트 정의
 
 ## 샘플 API 호출 읽기
 
-다음 [!DNL Segmentation Service] API 설명서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 포맷의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 다음에서 [!DNL Experience Platform] 문제 해결 가이드.
+다음 [!DNL Segmentation Service] API 설명서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 문서에 사용된 규칙에 대한 자세한 내용은 [ 문제 해결 안내서의 ](../../landing/troubleshooting.md#how-do-i-format-an-api-request)예제 API 호출을 읽는 방법[!DNL Experience Platform] 섹션을 참조하세요.
 
 ## 필수 헤더
 

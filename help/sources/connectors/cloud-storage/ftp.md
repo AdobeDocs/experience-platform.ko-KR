@@ -40,7 +40,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]
 - 잘못된 URL 경로 문자는 허용되지 않습니다. 다음과 같은 코드 포인트 `\uE000`는 NTFS 파일 이름에서 유효하지만 은 유효한 유니코드 문자가 아닙니다. 또한 제어 문자(0x00 ~ 0x1F, \u0081 등)와 같은 일부 ASCII 또는 유니코드 문자도 사용할 수 없습니다. HTTP/1.1의 유니코드 문자열을 제어하는 규칙에 대해서는 다음을 참조하십시오. [RFC 2616, 섹션 2.2: 기본 규칙](https://www.ietf.org/rfc/rfc2616.txt) 및 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, 점 문자(.) 및 점 문자(..) 두 개를 사용할 수 없습니다.
 
-## FTP 연결 [!DNL Platform]
+## FTP 연결 대상 [!DNL Platform]
 
 아래 설명서에서는 FTP 서버를 로 연결하는 방법에 대한 정보를 제공합니다 [!DNL Platform] api 또는 사용자 인터페이스 사용:
 

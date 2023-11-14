@@ -19,7 +19,7 @@ ht-degree: 0%
 
 아래에 사용된 매개 변수에 대한 자세한 설명은 을 참조하십시오. [대상 SDK의 구성 옵션](../../functionality/configuration-options.md).
 
-## 사전 요구 사항 {#prerequisites}
+## 전제 조건 {#prerequisites}
 
 아래 설명된 단계로 진행하기 전에 다음을 읽어 보십시오. [Destination SDK 시작](../../getting-started.md) Destination SDK API를 사용하여 작업하는 데 필요한 Adobe I/O 인증 자격 증명 및 기타 전제 조건을 얻는 방법에 대한 자세한 내용을 보려면 페이지 를 참조하십시오.
 

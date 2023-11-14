@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
 workflow-type: tm+mt
 source-wordcount: '966'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -153,7 +153,7 @@ UI의 역할에 사용할 수 있는 필터는 다음과 같습니다.
 
 ## 제품 프로필을 통해 Experience Platform에 사용자 추가
 
-제품 프로필에 사용자를 추가하려면 Admin Console에 로그인하고 을 선택합니다. **[!UICONTROL 사용자 추가]**
+제품 프로필에 사용자를 추가하려면 Admin Console에 로그인한 다음 **[!UICONTROL 사용자 추가]**&#x200B;를 선택합니다
 
 ![product-profile-add-user](../../images/flac-ui/product-profile-add-users.png)
 

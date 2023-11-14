@@ -17,7 +17,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 에서 세그먼트 정의
 
 사용 가능한 모든 엔드포인트 및 CRUD 작업을 보려면 [세그먼테이션 서비스 API 참조](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
-## Audiences
+## 대상자
 
 대상자는 유사한 행동 및/또는 특성을 공유하는 사람들의 컬렉션입니다. Platform을 사용하거나 외부 소스에서 생성할 수 있습니다. 다음을 사용할 수 있습니다. `/audiences` 엔드포인트 : 모든 대상을 검색하거나, 새 대상을 만들거나, 특정 대상의 세부 정보를 검색하거나, 특정 대상을 업데이트하거나, 특정 대상을 삭제합니다.
 

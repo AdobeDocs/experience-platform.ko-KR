@@ -1,6 +1,6 @@
 ---
 title: Platform Web SDK에서 A4T(Adobe Analytics for Target) 로깅
-description: Adobe Analytics Experience Platform Web SDK를 사용하여 Target (A4T) 데이터 수집을 제어하는 방법에 대해 알아봅니다.
+description: Experience Platform Web SDK를 사용하여 A4T(Adobe Analytics for Target) 데이터 수집을 제어하는 방법을 알아봅니다.
 seo-title: Adobe Analytics for Target (A4T) Logging in the Platform Web SDK
 seo-description: Learn how to control the collection of Adobe Analytics for Target (A4T) data using the Experience Platform Web SDK.
 keywords: a4t;로깅;analytics;sdk;web sdk;

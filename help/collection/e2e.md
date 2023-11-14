@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ---
 
-# 데이터 수집 전체 개요
+# 데이터 수집의 전체적인 개요
 
 Adobe Experience Platform은 데이터를 수집하여 다른 Adobe 제품 및 서드파티 대상으로 전송합니다. 애플리케이션에서 Experience Platform Edge Network로 이벤트 데이터를 전송하려면 이러한 핵심 기술을 이해하고, 필요할 때 원하는 대상에 데이터를 제공하도록 구성하는 방법을 이해하는 것이 중요합니다.
 
@@ -21,7 +21,7 @@ Adobe Experience Platform은 데이터를 수집하여 다른 Adobe 제품 및 �
 >
 >데이터 수집 UI와 관련된 모든 단계는 Experience Platform UI에서 수행할 수도 있습니다.
 
-## 사전 요구 사항
+## 전제 조건
 
 이 자습서에서는 데이터 수집 UI를 사용하여 스키마를 만들고 데이터스트림을 구성하고 웹 SDK를 설치합니다. UI에서 이러한 작업을 수행하려면 다음과 함께 하나 이상의 웹 속성에 대한 액세스 권한이 부여되어야 합니다 [속성 권한](../tags/ui/administration/user-permissions.md#property-rights):
 

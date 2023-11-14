@@ -72,7 +72,7 @@ person.birthMonth notIn [3, 6, 9]
 person.favoriteColors.intersects(["red", "blue", "green"])
 ```
 
-## 교차
+## 교집합
 
 다음 `intersection` 함수는 두 배열 또는 목록의 공통 멤버를 결정하는 데 사용합니다.
 

@@ -3,7 +3,7 @@ title: Adobe Experience Platform Assurance 사용자 액세스
 description: 이 안내서에서는 Admin Console로 관리하여 Adobe Experience Platform Assurance에 대한 사용자 액세스를 유지하는 방법을 설명합니다.
 exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
 source-git-commit: 95e5dad03741d06ee33a10c48b481b792140f7f1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 100%
 

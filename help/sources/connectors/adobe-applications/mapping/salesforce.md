@@ -17,7 +17,7 @@ ht-degree: 9%
 
 읽기 [XDM 개별 프로필 개요](../../../../xdm/classes/individual-profile.md) XDM 클래스에 대한 자세한 내용. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 사용자 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-details.md) 안내서 및 [XDM 비즈니스 사용자 구성 요소 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-components.md) 가이드.
 
-| 소스 필드 | Target XDM 필드 패스 | 참고 |
+| 소스 필드 | 대상 XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `AccountId` | `b2b.accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `b2b.accountKey` |
@@ -77,7 +77,7 @@ ht-degree: 9%
 
 읽기 [XDM 개별 프로필 개요](../../../../xdm/classes/individual-profile.md) XDM 클래스에 대한 자세한 내용. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 사용자 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-details.md) 안내서 및 [XDM 비즈니스 사용자 구성 요소 스키마 필드 그룹](../../../../xdm/field-groups/profile/business-person-components.md) 가이드.
 
-| 소스 필드 | Target XDM 필드 패스 | 참고 |
+| 소스 필드 | 대상 XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `City` | `workAddress.city` |
 | `ConvertedDate` | `b2b.convertedDate` |
@@ -128,7 +128,7 @@ ht-degree: 9%
 
 읽기 [XDM 비즈니스 계정 세부 정보 개요](../../../../xdm/classes/b2b/business-account.md) XDM 클래스에 대한 자세한 내용.
 
-| 소스 필드 | Target XDM 필드 패스 | 참고 |
+| 소스 필드 | 대상 XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `"Salesforce"` | `accountKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `accountKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
@@ -184,7 +184,7 @@ ht-degree: 9%
 
 읽기 [XDM 비즈니스 영업 기회 개요](../../../../xdm/classes/b2b/business-opportunity.md) XDM 클래스에 대한 자세한 내용.
 
-| 소스 필드 | Target XDM 필드 패스 | 참고 |
+| 소스 필드 | 대상 XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `opportunityKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
@@ -225,7 +225,7 @@ ht-degree: 9%
 
 읽기 [XDM 비즈니스 영업 기회 사용자 관계 클래스 개요](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) XDM 클래스에 대한 자세한 내용.
 
-| 소스 필드 | Target XDM 필드 패스 | 참고 |
+| 소스 필드 | 대상 XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `"Salesforce"` | `opportunityPersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `opportunityPersonKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
@@ -251,7 +251,7 @@ ht-degree: 9%
 
 읽기 [XDM 비즈니스 캠페인 클래스 개요](../../../../xdm/classes/b2b/business-campaign.md) XDM 클래스에 대한 자세한 내용. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 캠페인 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/b2b-campaign/details.md) 가이드.
 
-| 소스 필드 | Target XDM 필드 패스 | 참고 |
+| 소스 필드 | 대상 XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
@@ -282,7 +282,7 @@ ht-degree: 9%
 
 읽기 [XDM 비즈니스 캠페인 멤버 개요](../../../../xdm/classes/b2b/business-campaign-members.md) XDM 클래스에 대한 자세한 내용. XDM 필드 그룹에 대한 자세한 내용은 [XDM 비즈니스 캠페인 멤버 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/b2b-campaign/details.md) 문서.
 
-| 소스 필드 | Target XDM 필드 패스 | 참고 |
+| 소스 필드 | 대상 XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | 값 `"${CRM_ORG_ID}"` 자동으로 교체됩니다. |
@@ -308,7 +308,7 @@ ht-degree: 9%
 
 읽기 [XDM 비즈니스 계정 사용자 관계 클래스](../../../../xdm/classes/b2b/business-account-person-relation.md) XDM 클래스에 대한 자세한 내용.
 
-| 소스 필드 | Target XDM 필드 패스 | 참고 |
+| 소스 필드 | 대상 XDM 필드 패스 | 참고 |
 | --- | --- | --- |
 | `AccountId` | `accountKey.sourceID` |
 | `iif(AccountId != null && AccountId != "", to_object("sourceType", "Salesforce", "sourceInstanceID", "${CRM_ORG_ID}", "sourceKey", concat(AccountId,"@${CRM_ORG_ID}.Salesforce")), null)` | `accountKey` |

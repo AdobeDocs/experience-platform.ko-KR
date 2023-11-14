@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Experience Platform은 다음과 같은 클라우드 공급자를 위한 기본 연결을 제공합니다 [!DNL AWS], [!DNL Google Cloud Platform], 및 [!DNL Azure]를 사용하면 다운스트림 서비스 및 대상에서 사용할 수 있도록 이러한 시스템의 데이터를 플랫폼으로 가져올 수 있습니다.
 
-클라우드 스토리지 소스는 다운로드, 포맷 또는 업로드 없이도 데이터를 플랫폼으로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. 플랫폼에서 의 데이터를 가져올 수 있습니다. [!DNL Google PubSub] 실시간으로.
+클라우드 스토리지 소스는 다운로드, 포맷 또는 업로드 없이도 데이터를 플랫폼으로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. 플랫폼에서 다음 위치에서 데이터를 가져올 수 있습니다. [!DNL Google PubSub] 실시간으로.
 
 ## 연결 [!DNL Google PubSub] 대상 플랫폼
 

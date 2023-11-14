@@ -24,7 +24,7 @@ Mailchimp [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장은
 
 이 문서에서는 이벤트 추가 작업을 사용하여 확장을 설정하고 규칙을 구성하는 방법에 대해 설명합니다.
 
-## 사전 요구 사항
+## 전제 조건
 
 이 문서에서는 사용자가 확장에서 활용하는 관련 Mailchimp 제품을 잘 알고 있다고 가정합니다. 자세한 내용은 Mailchimp 도움말 설명서 를 참조하십시오. [캠페인](https://mailchimp.com/help/getting-started-with-campaigns/), [여정](https://mailchimp.com/help/about-customer-journeys/), 및 [트랜잭션](https://mailchimp.com/help/transactional/).
 
@@ -55,7 +55,7 @@ Mailchimp에 로그인하고 대시보드 보기에 랜딩한 후에는 브라�
 
 아래 **내 API 키**, 기존 키를 선택하거나 **키 만들기** 을 클릭하여 새 템플릿을 만듭니다. 이 확장에서 특별히 사용할 새 키를 만들 수 있습니다. API 키를 복사하고 이후 단계를 위해 저장합니다. 자세한 내용은 Mailchimp 설명서 를 참조하십시오 [api 키 생성](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
 
-### 대상자 ID 및 보낸 사람 주소
+### 대상 ID 및 보낸 사람 주소
 
 선택 **대상자** 왼쪽 탐색에서 **대상 대시보드**. 그런 다음 이 확장에 사용할 대상을 선택합니다. 자세한 내용은 의 Mailchimp 문서를 참조하십시오. [대상자 만들기](https://mailchimp.com/help/create-audience/).
 
@@ -93,7 +93,7 @@ Mailchimp 플랜과 트랜잭션 이메일, 고객 여정 또는 기타 Mailchim
 
 >[!IMPORTANT]
 >
->포함하지 않음 `http://` 또는 `https://` 이 필드에서 을(를) 참조하십시오.
+>포함하지 않음 `http://` 또는 `https://` 이 필드에서.
 
 ![확장 구성](../../../images/extensions/server/mailchimp/mailchimp-domain.png)
 
@@ -140,8 +140,8 @@ Mailchimp 플랜과 트랜잭션 이메일, 고객 여정 또는 기타 Mailchim
 
 ## 데이터 유효성 검사
 
-이벤트 전달 확장을 사용할 때 [Adobe Experience Platform 디버거](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 매우 유용합니다. 로그 섹션의 에지 로그에서 이벤트 전달 규칙이 트리거된 후 수행한 요청을 볼 수 있습니다. 다음 스크린샷은 확장에 의해 Mailchimp API에 수행된 요청을 보여줍니다.
+이벤트 전달 확장을 사용할 때 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 매우 유용합니다. 로그 섹션의 에지 로그에서 이벤트 전달 규칙이 트리거된 후 수행한 요청을 볼 수 있습니다. 다음 스크린샷은 확장에 의해 Mailchimp API에 수행된 요청을 보여줍니다.
 
-![Adobe Experience Platform 디버거](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
+![Adobe Experience Platform Debugger](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
 
 Mailchimp 대시보드의 활동 피드 보기에서 대상 또는 대상 구성원의 이벤트 목록이 제공됩니다. 이렇게 하려면 확장에서 전송한 이벤트와 일치해야 하며 수신한 이메일 또는 캠페인과 함께 전송된 모든 선택적 데이터를 표시해야 합니다. 다음을 참조하십시오. [Mailchimp 자동화 도움말 안내서](https://mailchimp.com/help/automation/) 을 참조하십시오.

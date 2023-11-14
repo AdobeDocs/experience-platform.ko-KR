@@ -5,7 +5,7 @@ exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
 source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
 workflow-type: tm+mt
 source-wordcount: '1192'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -951,4 +951,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서를 따라 의 초안을 만드는 방법을 배웠습니다. [!DNL Flow Service] 이러한 초안을 게시할 뿐만 아니라 엔티티도 게시합니다. 소스에 대한 자세한 내용은 [소스 개요](../../home.md).
+이 자습서를 따라 의 초안을 만드는 방법을 배웠습니다. [!DNL Flow Service] 이러한 초안을 게시할 뿐만 아니라 엔티티도 게시합니다. 소스에 대한 자세한 내용은 [ 소스 개요](../../home.md)를 참조하십시오.
