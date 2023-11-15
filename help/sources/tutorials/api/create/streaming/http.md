@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;스트리밍 연결;스트리밍
 title: 흐름 서비스 API를 사용하여 HTTP API 스트리밍 연결 만들기
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 원시 데이터와 XDM 데이터 모두에 대해 HTTP API 소스를 사용하여 스트리밍 연결을 만드는 방법에 대한 단계를 제공합니다
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
+source-git-commit: f94a51e22731977e120351c3b3598570666a624d
 workflow-type: tm+mt
-source-wordcount: '1544'
-ht-degree: 2%
+source-wordcount: '1552'
+ht-degree: 4%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 2%
 
 Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../../../landing/api-guide.md).
 
-## 기본 연결 만들기
+## 기본 연결을 만듭니다
 
 기본 연결은 소스를 지정하고 흐름이 스트리밍 수집 API와 호환되도록 하는 데 필요한 정보를 포함합니다. 기본 연결을 만들 때 인증되지 않은 연결과 인증된 연결을 만들 수 있는 옵션이 있습니다.
 
@@ -459,7 +459,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 
-## 데이터 흐름 만들기
+## 데이터 흐름을 만듭니다
 
 이제 소스 및 타겟 연결이 만들어지면 데이터 흐름을 만들 수 있습니다. 데이터 흐름은 소스에서 데이터를 예약하고 수집합니다. 에 대한 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다. `/flows` 엔드포인트.
 
@@ -562,7 +562,6 @@ curl -X POST \
 }
 ```
 
-
 ## 플랫폼에 수집할 게시물 데이터 {#ingest-data}
 
 플로우를 만들었으므로 이제 이전에 만든 스트리밍 엔드포인트로 JSON 메시지를 보낼 수 있습니다.
@@ -576,6 +575,7 @@ POST /collection/{INLET_URL}
 | 매개변수 | 설명 |
 | --------- | ----------- |
 | `{INLET_URL}` | 스트리밍 끝점 URL. 에 GET 요청을 하여 이 URL을 검색할 수 있습니다. `/connections` 기본 연결 ID를 제공하는 동안 끝점이 발생했습니다. |
+| `{FLOW_ID}` | HTTP API 스트리밍 데이터 흐름의 ID입니다. |
 
 **요청**
 
@@ -584,9 +584,8 @@ POST /collection/{INLET_URL}
 >[!TAB XDM]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
   -d '{
         "header": {
           "schemaRef": {
@@ -625,9 +624,8 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
 >[!TAB 원시 데이터]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
   -d '{
       "name": "Johnson Smith",
       "location": {
