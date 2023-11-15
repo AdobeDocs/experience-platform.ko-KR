@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
-user-guide-description: Experience Platform을 통해 가이드, 설명서 및 튜토리얼을 통해 개인화된 경험을 실시간으로 고객에게 전달하는 방법을 알아봅니다.
+user-guide-description: 안내서, 설명서 및 튜토리얼을 통해 Experience Platform이 개인화된 경험을 실시간으로 고객에게 전달하는 방법에 대해 알아봅니다.
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '289'
-ht-degree: 23%
+ht-degree: 30%
 
 ---
 

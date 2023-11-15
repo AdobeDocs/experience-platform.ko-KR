@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: e5e9eb262df1591f91b3b23359162236f898db8c
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1204'
 ht-degree: 10%
 
 ---
@@ -90,6 +90,7 @@ ht-degree: 10%
       * [Microsoft Bing 연결](./catalog/advertising/bing.md)
       * [Pinterest 전환 추적 확장](./catalog/advertising/pinterest-extension.md)
       * [Pinterest 고객 목록 연결](./catalog/advertising/pinterest.md)
+      * [Pinterest 연결 업그레이드](./catalog/advertising/pinterest-upgrade.md)
       * [Snapchat Ads 연결](./catalog/advertising/snap-inc.md)
       * [트레이드 데스크 연결](./catalog/advertising/tradedesk.md)
       * [(Beta) The Trade Desk CRM 연결](./catalog/advertising/tradedesk-emails.md)

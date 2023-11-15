@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: 경험 데이터 모델(XDM) 시스템 도움말
 breadcrumb-title: 경험 데이터 모델(XDM) 안내서
-user-guide-description: Experience Platform 내의 XDM(Experience Data Model) 시스템에 대한 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법에 대해 알아봅니다.
+user-guide-description: Experience Platform 내의 경험 데이터 모델(XDM) 시스템 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법을 알아봅니다.
 feature: Schemas
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '532'
-ht-degree: 18%
+ht-degree: 23%
 
 ---
 
