@@ -5,9 +5,9 @@ title: 실시간 고객 프로필에서 개인 정보 보호 요청 처리
 type: Documentation
 description: Adobe Experience Platform Privacy Service은 수많은 개인 정보 보호 규정에 명시된 대로 개인 데이터에 액세스하거나, 판매를 거부하거나, 삭제하기 위한 고객 요청을 처리합니다. 이 문서에서는 실시간 고객 프로필에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: f0179bacc55134241bed8de240ee632d0f38e4b6
+source-git-commit: 6d9f8eceeb8fbe550b4e1e7e0964f2fff0cd3c70
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1739'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,14 @@ ID 서비스는 전역 정의(표준) 및 사용자 정의(사용자 정의) ID 
 
 ## 요청 제출 {#submit}
 
-아래 섹션에서는 다음에 대한 개인 정보 보호 요청을 하는 방법에 대해 간략하게 설명합니다. [!DNL Real-Time Customer Profile] 사용 [!DNL Privacy Service] API 또는 UI. 이 섹션을 읽기 전에 다음을 검토하는 것이 좋습니다. [PRIVACY SERVICE API](../privacy-service/api/getting-started.md) 또는 [PRIVACY SERVICE UI](../privacy-service/ui/overview.md) 요청 페이로드에서 제출된 사용자 id 데이터를 적절히 포맷하는 방법을 포함하여 개인 정보 보호 작업을 제출하는 방법에 대한 전체 단계에 대한 설명서입니다.
+아래 섹션에서는 다음에 대한 개인 정보 보호 요청을 하는 방법에 대해 간략하게 설명합니다. [!DNL Real-Time Customer Profile] 사용 [!DNL Privacy Service] API 또는 UI. 이 섹션을 읽기 전에 다음을 검토하거나 알아 두어야 합니다. [PRIVACY SERVICE API](../privacy-service/api/getting-started.md) 또는 [PRIVACY SERVICE UI](../privacy-service/ui/overview.md) 설명서를 참조하십시오. 이 문서에서는 요청 페이로드에서 제출된 사용자 ID 데이터의 형식을 제대로 지정하는 방법을 포함하여 개인 정보 보호 작업을 제출하는 방법에 대한 전체 단계를 제공합니다.
 
 >[!IMPORTANT]
 >
 >Privacy Service은 만 처리할 수 있습니다. [!DNL Profile] id 결합을 수행하지 않는 병합 정책을 사용하는 데이터. 의 섹션을 참조하십시오. [병합 정책 제한 사항](#merge-policy-limitations) 추가 정보.
 >
->개인 정보 보호 요청을 완료하는 데 걸릴 수 있는 시간입니다. **할 수 없음** 보장됩니다. 에 변경 사항이 발생하는 경우 [!DNL Profile] 요청이 아직 처리되는 동안에는 해당 레코드가 처리되는지 여부도 보장되지 않습니다.
+>개인 정보 보호 요청은 규정 요구 사항 내에서 비동기적으로 처리되며, 완료하는 데 걸리는 시간은 다를 수 있습니다. 에 변경 사항이 발생하는 경우 [!DNL Profile] 요청이 아직 처리 중인 데이터에서는 해당 수신 레코드도 해당 요청에서 처리될 수 없습니다. 개인 정보 보호 작업이 요청될 때 데이터 레이크 또는 프로필 스토어에 보관된 프로필만 삭제됩니다. 삭제 작업 중에 삭제 요청 주체와 관련된 프로필 데이터를 수집하는 경우 모든 프로필 조각이 삭제되지는 않습니다.
+>해당 데이터는 레코드 저장소에 삽입되므로 삭제 요청 시 플랫폼 또는 프로필 서비스의 수신 데이터를 알아야 합니다. 삭제되었거나 삭제 중인 데이터 수집은 신중해야 합니다.
 
 ### API 사용
 
@@ -222,6 +223,6 @@ Privacy Service은 만 처리할 수 있습니다. [!DNL Profile] id 결합을 �
 
 ## 다음 단계
 
-이 문서를 읽으면에서 개인 정보 보호 요청 처리와 관련된 중요한 개념에 대해 소개합니다 [!DNL Experience Platform]. ID 데이터를 관리하고 개인 정보 보호 작업을 만드는 방법에 대한 이해를 심화하려면 이 안내서 전반에 걸쳐 제공된 설명서를 계속 읽으십시오.
+이 문서를 읽으면에서 개인 정보 보호 요청 처리와 관련된 중요한 개념에 대해 소개합니다 [!DNL Experience Platform]. ID 데이터를 관리하고 개인 정보 보호 작업을 만드는 방법을 깊이 이해하려면 이 안내서에 제공된 설명서를 계속 읽으십시오.
 
 의 개인 정보 보호 요청 처리에 대한 자세한 내용 [!DNL Platform] 에서 사용하지 않는 리소스 [!DNL Profile], 다음에 대한 문서 참조 [데이터 레이크에서 개인 정보 보호 요청 처리](../catalog/privacy.md).
