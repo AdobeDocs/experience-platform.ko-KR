@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 세트 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2769'
 ht-degree: 4%
 
 ---
@@ -264,6 +264,10 @@ CSV 파일을 사용하여 데이터 세트를 만들면 제공된 CSV 파일과
 ![선택한 일괄 처리의 세부 정보가 표시됩니다. 여기에는 수집된 레코드 수, 실패한 레코드 수, 배치 상태, 파일 크기, 수집 시작 및 종료 시간, 데이터 세트 및 배치 ID, 조직 ID, 데이터 세트 이름 및 액세스 정보가 포함됩니다.](../images/datasets/user-guide/batch-overview.png)
 
 배치를 삭제하려면 다음을 선택합니다 **[!UICONTROL 일괄 처리 삭제]** 대시보드 오른쪽 상단 근처에 있습니다. 배치를 삭제하면 원래 배치가 수집된 데이터 세트에서도 배치의 기록이 제거됩니다.
+
+>[!NOTE]
+>
+>수집된 데이터가 프로필에 대해 활성화되고 처리된 경우 배치를 삭제해도 프로필 스토어에서 해당 데이터가 삭제되지 않습니다.
 
 ![데이터 세트 세부 정보 페이지에서 일괄 처리 삭제 버튼이 강조 표시됩니다.](../images/datasets/user-guide/delete-batch.png)
 
