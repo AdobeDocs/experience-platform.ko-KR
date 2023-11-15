@@ -3,9 +3,9 @@ keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침
 title: ID 서비스 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 01fe1dd1d7df31458d4175c25928bfd12e01d654
+source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1233'
 ht-degree: 1%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 1%
 | 가드레일 | 제한 | 참고 |
 | --- | --- | --- |
 | 그래프의 ID 수 | 50 | 50개의 연결된 ID가 있는 그래프가 업데이트되면 ID 서비스는 &quot;선입 선출&quot; 메커니즘을 적용하고 최신 ID를 위한 공간을 만들기 위해 가장 오래된 ID를 삭제합니다. 삭제는 ID 유형 및 타임스탬프를 기반으로 합니다. 제한은 샌드박스 수준에서 적용됩니다. 자세한 내용은 의 섹션을 참조하십시오. [삭제 논리 이해](#deletion-logic). |
+| 단일 배치 수집을 위한 ID 링크 수 | 50 | 단일 일괄 처리에는 원치 않는 그래프 병합을 유발하는 이례적인 ID가 포함될 수 있습니다. 이를 방지하기 위해 ID 서비스는 50개 이상의 ID에 이미 연결된 ID를 수집하지 않습니다. |
 | XDM 레코드의 ID 수 | 20 | 필요한 최소 XDM 레코드 수는 2개입니다. |
 | 사용자 정의 네임스페이스 수 | None | 만들 수 있는 사용자 정의 네임스페이스의 수에는 제한이 없습니다. |
 | 네임스페이스 표시 이름 또는 ID 기호의 문자 수 | None | 네임스페이스 표시 이름 또는 ID 기호의 문자 수에는 제한이 없습니다. |
@@ -42,7 +43,7 @@ ht-degree: 1%
 
 | 네임스페이스 | 유효성 검사 규칙 | 규칙 위반 시 시스템 동작 |
 | --- | --- | --- |
-| ECID | <ul><li>ECID의 ID 값은 정확히 38자여야 합니다.</li><li>ECID의 ID 값은 숫자로만 구성되어야 합니다.</li></ul> | <ul><li>ECID의 ID 값이 정확히 38자가 아닌 경우 레코드를 건너뜁니다.</li><li>ECID의 ID 값에 숫자가 아닌 문자가 포함되어 있으면 레코드를 건너뜁니다.</li></ul> |
+| ECID | <ul><li>ECID의 ID 값은 정확히 38자여야 합니다.</li><li>ECID의 ID 값은 숫자로만 구성되어야 합니다.</li><li>ID 값은 &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot;이거나 빈 문자열일 수 없습니다(예: &quot; &quot;, &quot;&quot;, &quot;).</li></ul> | <ul><li>ECID의 ID 값이 정확히 38자가 아닌 경우 레코드를 건너뜁니다.</li><li>ECID의 ID 값에 숫자가 아닌 문자가 포함되어 있으면 레코드를 건너뜁니다.</li><li>ID가 수집되지 않도록 차단됩니다.</li></ul> |
 | 비 ECID | ID 값은 1024자를 초과할 수 없습니다. | ID 값이 1,024자를 초과하는 경우 레코드를 건너뜁니다. |
 
 ### ID 네임스페이스 수집
@@ -114,6 +115,8 @@ CRM ID에 대해 인증된 이벤트를 유지하려면 기본 ID를 ECID에서 
 
 * [Experience Platform 태그에 대한 ID 맵 구성](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Experience Platform Web SDK의 ID 데이터](../edge/identity/overview.md#using-identitymap)
+
+
 
 ## 다음 단계
 
