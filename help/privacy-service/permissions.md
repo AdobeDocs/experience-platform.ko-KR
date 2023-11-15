@@ -2,20 +2,14 @@
 title: Privacy Service에 대한 권한 관리
 description: Adobe Admin Console을 사용하여 Adobe Experience Platform Privacy Service에 대한 사용자 권한을 관리하는 방법을 알아봅니다.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: 1e164166f58540cbaaa4ad789b10cdfc40fa8a70
-workflow-type: ht
-source-wordcount: '1634'
-ht-degree: 100%
+source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
+workflow-type: tm+mt
+source-wordcount: '1504'
+ht-degree: 95%
 
 ---
 
 # Privacy Service에 대한 권한 관리
-
->[!IMPORTANT]
->
->세부 기간의 수준을 높이기 위해 Adobe Experience Platform Privacy Service에 대한 권한이 개선되었습니다. 이러한 변경 사항을 통해 조직 관리자는 원하는 역할 및 권한 수준으로 더 많은 사용자 액세스 권한을 부여할 수 있습니다. 이러한 임박한 업데이트가 주요 변경 사항을 구성하므로 기술 계정 사용자는 Privacy Service 권한을 업데이트해야 합니다. 이 권한 변경은 **2023년 4월 13일**&#x200B;에 시행됩니다. 이 문제를 해결하기 위한 지침은 [기존 API 자격 증명 마이그레이션](#migrate-tech-accounts)에 관한 설명서를 참조하십시오.
->
->기술 계정은 기업 고객이 사용할 수 있으며, Adobe Developers Console을 통해 생성됩니다. 기술 계정 소유자의 Adobe ID는 `@techacct.adobe.com`로 끝납니다. 기술 계정 소유자인지 확실하지 않은 경우 조직 관리자에게 문의하십시오.
 
 [Adobe Experience Platform Privacy Service](./home.md)에 대한 액세스는 Adobe Admin Console의 역할 기반의 세분화된 권한을 통해 제어됩니다. 사용자 그룹에 권한을 할당하는 제품 프로필을 만들어 Privacy Service [UI](./ui/overview.md) 및 [API](./api/overview.md) 기능에 액세스할 수 있는 사용자를 확인할 수 있습니다.
 
@@ -53,17 +47,17 @@ Privacy Service에 대한 액세스 제어를 구성하려면 Adobe Experience P
 
 Privacy Service 권한을 관리하려면 [Admin Console](https://adminconsole.adobe.com/)에 로그인한 다음 상단 탐색 영역에서 **[!UICONTROL 제품]**&#x200B;을 선택합니다. 여기에서 **[!UICONTROL Adobe Experience Platform Privacy Service]**&#x200B;를 선택합니다.
 
-![Admin Console의 Privacy Service 제품 카드를 보여 주는 이미지](./images/permissions/privacy-service-card.png)
+![Privacy Service 제품 카드가 강조 표시된 Admin Console.](./images/permissions/privacy-service-card.png)
 
 ### 제품 프로필 선택 또는 만들기
 
 다음 화면에는 조직에서 Privacy Service에 사용할 수 있는 제품 프로필 목록이 표시됩니다. 제품 프로필이 없으면 **[!UICONTROL 새 프로필]**&#x200B;을 선택하여 새로 만듭니다. 조직에 서로 다른 액세스 수준이 필요한 여러 역할 또는 사용자 그룹이 있는 경우 각각에 대해 별도의 제품 프로필을 만들어야 합니다.
 
-![Admin Console의 Privacy Service 제품 프로필을 보여 주는 이미지](./images/permissions/select-or-create-profile.png)
+![Privacy Service 제품 프로필이 강조 표시된 Admin Console.](./images/permissions/select-or-create-profile.png)
 
 제품 프로필을 선택한 후 **[!UICONTROL 권한]** 탭을 사용하여 프로필에 대한 [권한 편집](#edit-permissions)을 시작하거나 **[!UICONTROL 사용자]** 탭을 선택하여 프로필에 [사용자 할당](#assign-users)을 시작할 수 있습니다.
 
-![Admin Console의 제품 프로필에 대한 권한 탭을 보여 주는 이미지](./images/permissions/users-permissions-tabs.png)
+![제품 프로필 Admin Console에 대한 권한 탭입니다.](./images/permissions/users-permissions-tabs.png)
 
 ### 프로필에 대한 권한 편집 {#edit-permissions}
 
@@ -71,25 +65,25 @@ Privacy Service 권한을 관리하려면 [Admin Console](https://adminconsole.a
 
 프로필에 대한 권한을 편집할 때 사용 가능한 권한은 왼쪽 열에 나열되고 프로필에 포함된 권한은 오른쪽 열에 나열됩니다. 두 열 사이에 이동하려면 나열된 권한을 선택합니다.
 
-![사용 가능한 포함된 권한 열을 보여 주는 이미지](./images/permissions/edit-permissions.png)
+![사용 가능하고 포함된 권한 열.](./images/permissions/edit-permissions.png)
 
 권한은 카테고리로 구성됩니다. 카테고리 간에 전환하려면 왼쪽 탐색 영역에서 원하는 카테고리를 선택합니다.
 
-![권한 아래의 [!UICONTROL 판매 중지] 섹션을 보여 주는 이미지](./images/permissions/switch-category.png)
+![다음 [!UICONTROL 판매 거부] 섹션 아래에 표시됩니다.](./images/permissions/switch-category.png)
 
 구성 권한을 완료하면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
-![제품 프로필에 대해 저장되는 권한 구성을 보여 주는 이미지](./images/permissions/save-permissions.png)
+![저장 이 강조 표시된 제품 프로필에 대한 권한 구성입니다.](./images/permissions/save-permissions.png)
 
 추가된 권한이 반영된 제품 프로필 보기가 다시 표시됩니다.
 
-![제품 프로필에 추가된 권한을 보여 주는 이미지](./images/permissions/permissions-added.png)
+![제품 프로필에 추가된 권한입니다.](./images/permissions/permissions-added.png)
 
 ### 프로필에 사용자 할당 {#assign-users}
 
 사용자를 제품 프로필에 할당하고 프로필의 구성된 권한을 부여하려면 **[!UICONTROL 사용자]** 탭을 선택한 다음 **[!UICONTROL 사용자 추가]**&#x200B;를 선택합니다.
 
-![Admin Console의 제품 프로필에 대한 사용자 탭을 보여 주는 이미지](./images/permissions/manage-users.png)
+![Admin Console의 제품 프로필에 대한 사용자 탭](./images/permissions/manage-users.png)
 
 제품 프로필에 대한 사용자 관리에 대한 자세한 내용은 [Admin Console 설명서](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html)를 참조하십시오.
 

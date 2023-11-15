@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service UI 개요
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 요청을 조정하고 모니터링합니다.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 19%
+source-wordcount: '227'
+ht-degree: 18%
 
 ---
 
@@ -22,23 +22,24 @@ PRIVACY SERVICE UI [!DNL Privacy Service] 을(를) 사용하면 다양한 Adobe 
 
 >[!NOTE]
 >
->Privacy Service API를 사용하여 프로그래밍 방식으로 준수 요청을 관리하는 방법에 대한 자세한 내용은 [Privacy Service API 안내서](../api/overview.md).
+>Privacy Service API를 사용하여 프로그래밍 방식으로 준수 요청을 관리하는 방법에 대한 자세한 내용은 [Privacy Service API 안내서](../api/overview.md). 문서 보기 번호 [Privacy Service 권한 관리](../permissions.md) 추가 정보.
 
 ## 에 로그인합니다 [!DNL Privacy Service] UI
 
 >[!IMPORTANT]
 >
->에 인증하려면 Adobe ID이 있어야 합니다. [!DNL Privacy Service] UI. 또한 조직 내에서 시스템 관리자 권한이 있어야 합니다.
+>에 인증하려면 Adobe ID이 있어야 합니다. [!DNL Privacy Service] UI.
 
 UI에 액세스하려면 로그인합니다. [Adobe Experience Cloud](https://experience.adobe.com/) 및 선택 **[!UICONTROL 개인 정보 보호 UI]** 빠른 액세스 메뉴 아래에 있는 ID를 참조하십시오.
 
-![](../images/ui-overview/quick-access.png)
+![개인 정보 UI가 강조 표시된 Experience Cloud 대시보드.](../images/ui-overview/quick-access.png)
+
 
 ### 다음에서 로그인 [!DNL Experience Platform]
 
 Adobe Experience Platform UI에 액세스할 수 있는 경우 [!DNL Privacy Service] 를 통한 UI **[!UICONTROL 요청]** 왼쪽 탐색 영역에 있는 탭입니다.
 
-![](../images/ui-overview/platform.png)
+![왼쪽 탐색 막대에서 요청이 강조 표시된 Adobe Experience Platform UI입니다.](../images/ui-overview/platform.png)
 
 ## 다음 단계
 
