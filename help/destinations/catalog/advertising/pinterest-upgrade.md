@@ -3,9 +3,9 @@ title: 새 API로 pinterest 대상 마이그레이션. 고객 조치가 필요�
 description: Pinterest은 현재 Real-Time CDP의 Pinterest 대상에서 사용 중인 v4 advertiser API를 더 이상 사용하지 않습니다. pinterest 캠페인을 중단하지 않고 새 API로 원활하게 전환하기 위해 작업 항목을 이해합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 10bf63677c66366c226d647b1174093c1704a8b9
+source-git-commit: dbbdb62c996466499b70990decba58ecaf1be901
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe은 Pinterest API v5를 활용하고 새 연결에서 기존 데이터 흐�
 
 ## 활성화된 대상이 계속 작동하도록 하려면 어떤 작업을 수행해야 합니까?
 
-예. Adobe이 업그레이드(11월 16일 타깃팅)를 완료하면 Adobe Experience Platform에서 Pinterest 광고주 계정을 사용하여 Pinterest에 다시 인증해야 합니다. 자세한 지침은 아래에 나와 있습니다.
+예. Adobe이 업그레이드를 완료하고 새 Pinterest 대상을 릴리스하면 Real-Time CDP에서 Pinterest 광고주 계정을 사용하여 Pinterest에 다시 인증해야 합니다. 자세한 지침은 아래에 나와 있습니다.
 
 ### pinterest 재인증 {#reauthenticate}
 
@@ -36,21 +36,19 @@ Adobe은 Pinterest API v5를 활용하고 새 연결에서 기존 데이터 흐�
    ![세부 정보 편집 선택](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
 3. 선택 **[!UICONTROL OAuth에 다시 연결]** pinterest 계정에 로그인합니다.
    ![다시 연결 OAuth 선택](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
-4. 다음에 대한 재인증을 Adobe에게 알림: **[!UICONTROL (새로운 기능) Pinterest]** 대상.
+4. 아래 섹션의 작업 항목으로 이동
 
 ### 기존 대상에 대한 기존 흐름을 비활성화하고 새 대상에 대한 흐름을 활성화합니다. {#disable-old-enable-new-flows}
 
-그런 다음 기존 카드에 대한 기존 흐름을 수동으로 비활성화하고 새 카드에 대한 흐름을 활성화해야 합니다.
-
->[!IMPORTANT]
->
->다시 인증하면 Adobe에 연결할 수 있으며 이 두 번째 단계를 수행해 드리겠습니다. 이 단계를 수동으로 수행하려면 아래 단계를 따르십시오.
+그런 다음 이전 대상 카드에 대한 기존 흐름을 수동으로 비활성화해야 합니다 **[!UICONTROL (사용 중단) Pinterest]** 새 카드에 대한 플로우 활성화 **[!UICONTROL (새로운 기능) Pinterest]**.
 
 1. 다음으로 이동 **[!UICONTROL 대상 > 찾아보기]** 화면의 필터를 사용하여 **[!UICONTROL (새로운 기능) Pinterest]** 및 **[!UICONTROL (사용 중단) Pinterest]** 대상만 해당.
    ![찾아보기 탭에서만 Pinterest 데이터 흐름 필터링](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. 하이퍼링크가 연결된 연결 이름(위의 스크린샷 예에서 로열티 캠페인)을 선택하고 **[!UICONTROL 사용]** 전환 대상 **끔** 이전 연결 및 대상 **날짜** 새 연결에 사용합니다.
-   ![새 연결에 대해 켜기/끄기, 이전 연결에 대해 끄기](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle.png)
-3. 이전 및 새 데이터 흐름에서 활성화된 대상 목록을 비교하고, 새 흐름에서 누락된 이전 흐름의 새 대상이 없는지 확인합니다.
+2. 에 대한 하이퍼링크가 연결된 연결 이름(위의 스크린샷 예에서 로열티 캠페인)을 선택합니다. **[!UICONTROL (사용 중단) Pinterest]** 대상 및 전환 **[!UICONTROL 사용]** 전환 대상 **끔**.
+   ![새 연결에 대해 켜기/끄기, 이전 연결에 대해 끄기](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-old-destination.png)
+3. 에 대한 하이퍼링크가 연결된 연결 이름(위의 스크린샷 예에서 로열티 캠페인)을 선택합니다. **[!UICONTROL (새로운 기능) Pinterest]** 대상 및 전환 **[!UICONTROL 사용]** 전환 대상 **날짜**.
+   ![새 연결에 대해 켜기/끄기, 이전 연결에 대해 끄기](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
+4. 이전 및 새 데이터 흐름에서 활성화된 대상 목록을 비교하고, 새 흐름에서 누락된 이전 흐름의 새 대상이 없는지 확인합니다.
 
 캠페인이 중단되지 않을 것으로 예상되지만, 모든 것이 예상대로 작동하는지 Pinterest UI에서 확인해야 합니다.
 
@@ -58,18 +56,22 @@ Adobe은 Pinterest API v5를 활용하고 새 연결에서 기존 데이터 흐�
 
 예, 아래를 참조하십시오.
 
-**11월 16일까지**: 새 대상이 준비되었습니다. 카탈로그에 Pinterest 카드 2개가 나란히 표시되고 현재 Pinterest 카드에 대한 기존 데이터 흐름이 모두 새 대상에 복사됩니다.
+**2023년 11월 16일까지**: 새 대상이 준비되었습니다. 카탈로그에 Pinterest 카드 2개가 나란히 표시되고 현재 Pinterest 카드에 대한 기존 데이터 흐름이 모두 새 대상에 복사됩니다.
 
 ![이전 및 새로운 Pinterest 대상 나란히](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
 >[!IMPORTANT]
 >
->11월 16일 이후에는 기존 Pinterest 대상이 표시됩니다 **[!UICONTROL 사용 중단]**. <span class="preview">11월 16일 이후 (사용하지 않는) Pinterest 대상에 대한 데이터 흐름의 모든 변경 사항은 다음과 같습니다 *아님* 새 Pinterest 대상으로 자동으로 이월됩니다. </span>
+>2023년 11월 16일 이후에는 기존 Pinterest 대상이 표시됩니다 **[!UICONTROL 사용 중단]**. <span class="preview">11월 16일 이후 (사용하지 않는) Pinterest 대상에 대한 데이터 흐름의 모든 변경 사항은 다음과 같습니다 *아님* 새 Pinterest 대상으로 자동으로 이월됩니다. </span>
 >예를 들어 *추천하지 않음* 11월 16일 이후에 이전 대상에 대해 새 대상을 활성화합니다. 그렇게 하면 다음을 따라야 합니다. [일반 활성화 단계](/help/destinations/ui/activate-segment-streaming-destinations.md) 고객 작업이 수행된 후 대상을 새 대상에 추가하는 작업.
 
-**12월 15일까지**: <span class="preview">고객 작업</span>. 새 카드가 Pinterest에 연결되도록 Pinterest에 다시 인증해야 합니다(위의 추가 지침). 이 작업을 완료하면 우리에게 연락하십시오.
+**2023년 12월 15일까지**: <span class="preview">고객 작업 1</span>. 새 카드가 Pinterest에 연결되도록 Pinterest에 다시 인증해야 합니다. 에서 전체 지침 보기 [이 섹션](#reauthenticate).
 
-이전 카드의 Pinterest 데이터 흐름은 비활성화하고 새 카드의 데이터 흐름은 활성화해야 합니다. UI에서 수동으로 수행하거나 Adobe에 연결할 수 있으며, 그렇게 하겠습니다.
+<span class="preview">고객 작업 2</span>.그런 다음 이전 카드에서 Pinterest에 대한 데이터 흐름을 비활성화하고 새 카드에서 데이터 흐름을 활성화해야 합니다. 에서 전체 지침 보기 [이 섹션](#disable-old-enable-new-flows).
+
+>[!IMPORTANT]
+>
+>2023년 12월 15일 이후 Adobe은 이전 데이터흐름의 무결성을 보장하지 않습니다 **[!UICONTROL (사용 중단) Pinterest]** 대상.
 
 ## 참고할 기타 항목
 
