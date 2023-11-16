@@ -2,7 +2,7 @@
 title: Adobe Commerce 대상 커넥터
 description: Adobe Commerce 및 Real-Time CDP 판매자가 Real-Time CDP 내에서 구축 및 관리되는 고객 대상에 맞게 맞춤화된, 관련성이 높은 사이트 콘텐츠 및 프로모션을 제공하여 쇼핑 경험을 개인화하는 방법을 알아봅니다.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: ddc4e877b3ae2f8b235faec1c29e71d389195e02
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 4%
@@ -27,7 +27,7 @@ ht-degree: 4%
 
 Experience Platform에서 다음을 생성합니다.
 
-- [스키마](../../../xdm/schema/composition.md). 생성하는 스키마는 Adobe Commerce에서 수집하려는 데이터를 나타냅니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html) 상거래 관련 필드 그룹을 포함하는 스키마를 만드는 방법에 대해 설명합니다.
+- [스키마](../../../xdm/schema/composition.md). 생성하는 스키마는 Adobe Commerce에서 수집하려는 데이터를 나타냅니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) 상거래 관련 필드 그룹을 포함하는 스키마를 만드는 방법에 대해 설명합니다.
 - [데이터 세트](../../../catalog/datasets/user-guide.md#create). 데이터 집합은 데이터 수집을 위한 스토리지 및 관리 구성입니다. 위에서 만든 스키마에서 이 데이터 세트를 만듭니다.
 - [데이터스트림](../../../datastreams/overview.md#create). Adobe Experience Platform에서 다른 Adobe DX 제품으로 데이터가 흐를 수 있는 ID입니다. 이 ID는 특정 Adobe Commerce 인스턴스 내의 특정 웹 사이트에 연결되어야 합니다. 이 데이터 스트림을 만들 때 위에서 만든 XDM 스키마를 지정합니다.
 
