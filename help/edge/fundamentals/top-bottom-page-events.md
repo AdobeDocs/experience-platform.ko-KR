@@ -1,7 +1,7 @@
 ---
 title: 페이지 이벤트의 상단 및 하단 사용
 description: 이 문서에서는 Web SDK에서 페이지 이벤트의 상단과 하단을 사용하는 방법에 대해 설명합니다.
-source-git-commit: 5322156774388a19788529aee554424b2fb5d91b
+source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 2%
@@ -32,7 +32,7 @@ ht-degree: 2%
 
 ## 페이지 상단 이벤트 예 {#top-of-page}
 
-아래 코드 샘플은 개인화를 요청하지만 자동으로 렌더링된 제안에 대한 표시 알림을 보내지 않는 페이지 이벤트 구성의 맨 위를 나타냅니다. 디스플레이 알림은 페이지 하단 이벤트의 일부로 전송됩니다.
+아래 코드 샘플은 개인화를 요청하지만 요청하지 않는 페이지 이벤트 구성의 맨 위를 나타냅니다 [디스플레이 이벤트 보내기](../personalization/display-events.md#send-sendEvent-calls) 자동으로 렌더링된 제안에 사용됩니다. 다음 [이벤트 표시](../personalization/display-events.md#send-sendEvent-calls) 은 페이지 하단 이벤트의 일부로 전송됩니다.
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ alloy("sendEvent", {
 |---|---|---|
 | `type` | 필수 여부 | 이 매개 변수를 다음으로 설정 `decisioning.propositionFetch`. 이 특수 이벤트 유형은 Adobe Analytics에 이 이벤트를 삭제하도록 지시합니다. Customer Journey Analytics을 사용할 때 이러한 이벤트를 삭제하도록 필터를 설정할 수도 있습니다. |
 | `renderDecisions` | 필수 여부 | 이 매개 변수를 다음으로 설정 `true`. 이 매개 변수는 Edge Network에서 반환한 결정을 렌더링하도록 Web SDK에 지시합니다. |
-| `personalization.sendDisplayEvent` | 필수 여부 | 이 매개 변수를 다음으로 설정 `false`. 디스플레이 알림이 전송되지 않습니다. |
+| `personalization.sendDisplayEvent` | 필수 여부 | 이 매개 변수를 다음으로 설정 `false`. 이렇게 하면 디스플레이 이벤트의 전송이 중지됩니다. |
 
 >[!ENDTABS]
 
@@ -62,7 +62,7 @@ alloy("sendEvent", {
 
 >[!TAB 자동 렌더링된 제안]
 
-아래 코드 샘플은 페이지에 자동으로 렌더링되었지만 에서 표시 알림이 억제된 제안에 대한 표시 알림을 전송하는 페이지 이벤트 구성의 아래쪽을 나타냅니다 [페이지 상단](#top-of-page) 이벤트.
+아래 코드 샘플은 페이지에 자동으로 렌더링되었지만 에서 디스플레이 이벤트가 억제된 제안에 대한 디스플레이 이벤트를 전송하는 페이지 이벤트 구성의 아래쪽을 나타냅니다 [페이지 상단](#top-of-page) 이벤트.
 
 >[!NOTE]
 >
@@ -79,12 +79,12 @@ alloy("sendEvent", {
 
 | 매개 변수 | 필수/선택적 | 설명 |
 |---|---|---|
-| `personalization.includeRenderedPropositions` | 필수 여부 | 이 매개 변수를 다음으로 설정 `true`. 이렇게 하면 페이지 이벤트의 맨 위에서 억제된 표시 알림을 보낼 수 있습니다. |
+| `personalization.includeRenderedPropositions` | 필수 여부 | 이 매개 변수를 다음으로 설정 `true`. 이렇게 하면 페이지 이벤트의 맨 위에서 억제된 표시 이벤트를 보낼 수 있습니다. |
 | `xdm` | 선택 사항입니다 | 이 섹션을 사용하여 페이지 이벤트 하단에 필요한 모든 데이터를 포함합니다. |
 
 >[!TAB 수동으로 렌더링된 제안]
 
-아래 코드 샘플은 페이지에 수동으로 렌더링된 제안에 대해(즉, 사용자 지정 결정 범위 또는 표면에 대해) 디스플레이 통지를 전송하는 페이지 이벤트 구성의 하단을 예시합니다.
+아래 코드 샘플은 페이지에 수동으로 렌더링된 제안에 대해(즉, 사용자 지정 결정 범위 또는 표면에 대해) 디스플레이 이벤트를 전송하는 페이지 이벤트 구성의 아래쪽을 구현합니다.
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ alloy("sendEvent", {
 
 | 매개 변수 | 필수/선택적 | 설명 |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | 필수 여부 | 이 섹션에서는 수동으로 렌더링된 제안을 정의합니다. 이 제안을 포함해야 합니다. `ID`, `scope`, 및 `scopeDetails`. 방법 설명서 참조 [수동으로 개인화 렌더링](../personalization/rendering-personalization-content.md#manually) 수동으로 렌더링된 콘텐츠에 대한 표시 알림을 기록하는 방법에 대한 자세한 정보. 수동으로 렌더링된 개인화 콘텐츠는 페이지 조회수 하단에 포함되어야 합니다. |
+| `xdm._experience.decisioning.propositions` | 필수 여부 | 이 섹션에서는 수동으로 렌더링된 제안을 정의합니다. 이 제안을 포함해야 합니다. `ID`, `scope`, 및 `scopeDetails`. 방법 설명서 참조 [수동으로 개인화 렌더링](../personalization/rendering-personalization-content.md#manually) 수동으로 렌더링된 콘텐츠의 디스플레이 이벤트를 기록하는 방법에 대한 자세한 정보. 수동으로 렌더링된 개인화 콘텐츠는 페이지 조회수 하단에 포함되어야 합니다. |
 | `xdm._experience.decisioning.propositionEventType` | 필수 여부 | 이 매개 변수를 다음으로 설정 `display: 1`. |
 | `xdm` | 선택 사항입니다 | 이 섹션을 사용하여 페이지 이벤트 하단에 필요한 모든 데이터를 포함합니다. |
 
@@ -149,7 +149,7 @@ alloy("sendEvent", {
     }
 });
 
-// Bottom of page, send display notifications for the items that were rendered.
+// Bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
@@ -198,7 +198,7 @@ alloy("applyPropositions", {
     viewName: "cart"
 });
 
-// bottom of page, send display notifications for the items that were rendered.
+// bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
