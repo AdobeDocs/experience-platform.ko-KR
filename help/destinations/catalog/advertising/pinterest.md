@@ -2,14 +2,19 @@
 title: Pinterest 고객 목록 연결
 description: 고객 목록, 사이트를 방문한 사람 또는 Pinterest에서 콘텐츠와 이미 상호 작용한 사람에서 대상을 만듭니다.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5cef3bbc7f2246a91ecca807825d830f240c8d45
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '844'
 ht-degree: 3%
 
 ---
 
 # [!DNL Pinterest Customer List] 연결
+
+>[!IMPORTANT]
+>
+>* 2023년 11월 16일부터 대상 카탈로그에 Pinterest 카드 2개가 나란히 표시됩니다. 이는 Pinterest으로 데이터를 내보내는 데 사용되는 Pinterest 광고주 API로 업그레이드했기 때문입니다. 기존 Pinterest 대상 커넥터의 이름이 (으)로 변경되었습니다. **[!UICONTROL (사용 중단) Pinterest]** 새 카드 **[!UICONTROL (새로운 기능) Pinterest]** 이제 을(를) 사용할 수 있습니다.
+>* 사용 **[!UICONTROL (새로운 기능) Pinterest]** 카탈로그에서 Pinterest에 대한 모든 캠페인을 연결합니다. 에 대한 활성 데이터 흐름이 있는 경우 **[!UICONTROL (사용 중단) Pinterest]** 대상, 다음 읽기: [업그레이드 설명서](/help/destinations/catalog/advertising/pinterest-upgrade.md) 캠페인이 중단되지 않도록 작업 항목을 이해합니다.
 
 ## 개요 {#overview}
 
@@ -71,7 +76,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 광고주 ID]**: Pinterest 광고주 ID입니다.
+* **[!UICONTROL 광고 계정 ID]**: Pinterest 광고주 ID입니다.
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -95,3 +100,15 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 ## 추가 리소스 {#additional-resources}
 
 다음을 참조하십시오. [Pinterest 도움말 센터 페이지](https://help.pinterest.com/en/business/article/audience-targeting) 추가 정보.
+
++++ 변경 로그 보기
+
+
+| 릴리스 월 | 업데이트 유형 | 설명 |
+|---|---|---|
+| 2023년 11월 | 기능 및 설명서 업데이트 | 이제 Real-Time CDP의 Pinterest 대상은 v5 Advertiser API를 사용합니다. |
+
+{style="table-layout:auto"}
+
+
++++
