@@ -1,18 +1,18 @@
 ---
-title: 실시간 고객 프로필 데이터에 대한 기본 보호
+title: 실시간 고객 프로필 데이터 및 세분화를 위한 기본 보호
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Adobe Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다. 이 문서는 최적의 시스템 성능을 위해 프로필 데이터를 모델링하는 데 도움이 되는 기본 사용 및 속도 제한을 제공합니다.
+description: Real-Time CDP 기능을 최적의 상태로 사용할 수 있도록 프로필 데이터 및 세그멘테이션을 위한 성능 및 시스템 적용 가드레일에 대해 알아봅니다.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 554763cc444da0d1459b22f3f37d22b528b290e1
 workflow-type: tm+mt
-source-wordcount: '2153'
-ht-degree: 4%
+source-wordcount: '2202'
+ht-degree: 2%
 
 ---
 
-# 의 기본 보호 기능 [!DNL Real-Time Customer Profile] 데이터
+# 의 기본 보호 기능 [!DNL Real-Time Customer Profile] 데이터 및 세분화
 
 Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 기반으로 개인화된 크로스 채널 경험을 실시간 고객 프로필 형태로 제공할 수 있습니다. 프로필에 대한 이러한 새로운 접근 방식을 지원하기 위해 Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다.
 
@@ -108,16 +108,17 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 
 {style="table-layout:auto"}
 
-## 세그먼테이션 보호
+## 세그먼테이션 보호 {#segmentation-guardrails}
 
 이 섹션에 설명된 보호 기능은 대상이 대상에 매핑되고 활성화되는 것뿐만 아니라 Experience Platform 내에서 조직이 만들 수 있는 대상의 수와 특성에 대한 내용입니다.
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
-| 샌드박스당 대상 | 4000 | 성능 보호 | 각 개별 샌드박스에 4000개 미만의 대상이 있는 한 조직에는 총 4000개 이상의 대상이 있을 수 있습니다. 추가 대상을 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. |
-| 샌드박스당 Edge 대상 | 150 | 성능 보호 | 각 개별 샌드박스에 150개 미만의 Edge 대상이 있는 한 조직에는 총 150개 이상의 Edge 대상이 있을 수 있습니다. 추가 Edge 대상을 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. |
-| 샌드박스당 스트리밍 대상 | 500 | 성능 보호 | 각 개별 샌드박스에 500개 미만의 스트리밍 대상이 있는 한 조직에는 총 500개 이상의 스트리밍 대상이 있을 수 있습니다. 스트리밍 대상을 추가로 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. |
+| 샌드박스당 대상 | 4000 | 성능 보호 | 각 개별 샌드박스에 4000개 미만의 대상이 있는 한 조직에는 총 4000개 이상의 대상이 있을 수 있습니다. 추가 대상을 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. 자세한 내용 [대상자 만들기](/help/segmentation/ui/segment-builder.md) 세그먼트 빌더를 통해 액세스합니다. |
+| 샌드박스당 Edge 대상 | 150 | 성능 보호 | 각 개별 샌드박스에 150개 미만의 Edge 대상이 있는 한 조직에는 총 150개 이상의 Edge 대상이 있을 수 있습니다. 추가 Edge 대상을 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. 자세한 내용 [에지 대상자](/help/segmentation/ui/edge-segmentation.md). |
+| 샌드박스당 스트리밍 대상 | 500 | 성능 보호 | 각 개별 샌드박스에 500개 미만의 스트리밍 대상이 있는 한 조직에는 총 500개 이상의 스트리밍 대상이 있을 수 있습니다. 스트리밍 대상을 추가로 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. 자세한 내용 [스트리밍 대상](/help/segmentation/ui/streaming-segmentation.md). |
 | 샌드박스당 배치 대상 | 4000 | 성능 보호 | 각 개별 샌드박스에 4000개 미만의 배치 대상이 있는 한 조직에는 총 4000개 이상의 배치 대상이 있을 수 있습니다. 추가 배치 대상을 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. |
+| 샌드박스당 계정 대상자 | 50 | 시스템 강제 보호 | 샌드박스에서 50개 이상의 계정 대상을 만들 수 없습니다. 샌드박스에서 50개의 대상에 도달하면 **[!UICONTROL 대상자 만들기]** 새 계정 대상자를 만들려고 하면 제어가 비활성화됩니다. 자세한 내용 [계정 대상자](/help/segmentation/ui/account-audiences.md). |
 
 {style="table-layout:auto"}
 
