@@ -3,14 +3,18 @@ title: 새 API로 pinterest 대상 마이그레이션. 고객 조치가 필요�
 description: Pinterest은 현재 Real-Time CDP의 Pinterest 대상에서 사용 중인 v4 advertiser API를 더 이상 사용하지 않습니다. pinterest 캠페인을 중단하지 않고 새 API로 원활하게 전환하기 위해 작업 항목을 이해합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: dbbdb62c996466499b70990decba58ecaf1be901
+source-git-commit: 57097b785da3b516b5ce6670c0a376bd1d0fe479
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
 
 # Pinterest 대상을 새 API로 업그레이드합니다. 2023년 12월 15일까지 고객 조치 필요
+
+>[!IMPORTANT]
+>
+>이 페이지의 고객 작업 항목은 조직이 다음 날짜인 2023년 11월 16일 이전에 데이터를 Pinterest으로 내보내도록 데이터 흐름을 설정한 경우 적용됩니다. **[!UICONTROL (새로운 기능) Pinterest]** 최신 Pinterest API를 사용하는 대상이 대상 카탈로그에 추가되었습니다.
 
 ## 현재 상황
 
@@ -26,7 +30,7 @@ Adobe은 Pinterest API v5를 활용하고 새 연결에서 기존 데이터 흐�
 
 ## 활성화된 대상이 계속 작동하도록 하려면 어떤 작업을 수행해야 합니까?
 
-예. Adobe이 업그레이드를 완료하고 새 Pinterest 대상을 릴리스하면 Real-Time CDP에서 Pinterest 광고주 계정을 사용하여 Pinterest에 다시 인증해야 합니다. 자세한 지침은 아래에 나와 있습니다.
+예. 2023년 11월 16일 이후에는 Real-Time CDP에서 Pinterest 광고주 계정을 사용하여 새 Pinterest 대상을 인증해야 합니다. 자세한 지침은 아래에 나와 있습니다.
 
 ### pinterest 재인증 {#reauthenticate}
 
