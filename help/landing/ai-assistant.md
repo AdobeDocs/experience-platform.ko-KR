@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: e204e1cc70f0c87632f7d259194d34276f6fab72
+source-git-commit: afc61a5809b1dfb59b87731d835cf8a1668f79df
 workflow-type: tm+mt
-source-wordcount: '2571'
+source-wordcount: '2183'
 ht-degree: 0%
 
 ---
@@ -121,6 +121,22 @@ Assistant는 해당 소스를 보고 대답을 확인할 수 있는 방법을 �
 
 +++
 
+#### 멀티턴
+
++++다중 회전의 예를 보려면 선택
+
+Assistant의 멀티턴 기능을 사용하여 경험 중에 보다 자연스러운 대화를 나눌 수 있습니다. 조수는 앞선 상호 작용에서 맥락을 유추할 수 있다는 점을 감안할 때 후속 질문에 답할 수 있다.
+
+아래 예에서 도우미는 총 세그먼트 수에 대한 이전 쿼리의 후속 작업으로 조직의 기존 세그먼트를 나열하라는 요청을 받습니다.
+
+![](./images/ai-assistant/multi-turn-one.png)
+
+그런 다음 Assistant가 다른 후속 요청을 받습니다. 이번에는 Assistant가 해당 크기별로 정렬된 기존 세그먼트를 나열하여 응답합니다.
+
+![](./images/ai-assistant/multi-turn-two.png)
+
++++
+
 #### 자동 완성 사용
 
 +++자동 완성의 예를 보려면 선택
@@ -174,9 +190,9 @@ Assistant는 해당 소스를 보고 대답을 확인할 수 있는 방법을 �
 
 | 질문 유형 | 설명 | 예시 |
 | --- | --- | --- | 
-| 데이터 계보 | 다른 Experience Platform 오브젝트에서 하나 이상의 오브젝트 사용 추적 | <ul><li>사용 데이터 세트 {SCHEMA_NAME} 스키마?</li><li>동일한 스키마를 사용하여 수집된 데이터 세트 수는 얼마입니까?</li><li>활성화된 세그먼트에서 사용된 데이터 세트</li><li>활성화된 세그먼트에 사용된 속성이 있는 스키마를 나열합니다.</li><li>활성화된 세그먼트 표시 {DESTINATION_ACCOUNT_NAME} 와 에는 1000개 이상의 프로필이 있습니다.</li><li>2023년 1월 이후에 수정된 활성화된 세그먼트에 사용되는 속성을 표시합니다.</li><li>활성화된 세그먼트와 관련되고 지난 1년 동안 생성된 스키마를 나열합니다.</li></ul> |
-| 배포 및 집계 | Experience Platform 개체 사용에 대한 요약 기반 질문 | <ul><li>활성화된 세그먼트의 비율은 얼마입니까?</li><li>세분화에는 몇 개의 필드가 사용됩니까?</li><li>가장 많은 대상에 활성화된 세그먼트는 무엇입니까?</li><li>중복 세그먼트를 나열합니다.</li><li>활성화된 세그먼트 표시 {DESTINATION_ACCOUNT_NAME} 프로필 크기별로 등급을 매깁니다.</li><li>활성화되지 않았지만 프로필이 100개를 초과하는 세그먼트의 백분율입니다. 그들의 이름을 보여줘</li><li>발생에 따라 활성화된 세그먼트에 사용된 상위 5개 속성을 나열합니다.</li></ul> |
-| 오브젝트 조회 | Experience Platform 개체 또는 해당 속성을 검색하거나 액세스합니다. | <ul><li>연관된 스키마가 없는 데이터 세트</li><li>에 사용된 속성 나열 {SEGMENT_NAME}?</li><li>프로필이 활성화되었지만 생성 이후 수정되지 않은 스키마 목록을 제공합니다.</li><li>지난 주에 수정된 세그먼트는 무엇입니까?</li><li>세그먼트 정의가 같은 세그먼트를 만든 날짜와 함께 나열합니다.</li><li>프로필이 활성화된 데이터 세트이며 각 데이터 세트에서 생성된 세그먼트 수를 포함합니다.</li><li>다음의 세그먼트 정의 및 수정 날짜 표시 {SEGMENT_NAME}.</li></ul> |
+| 데이터 계보 | 다른 Experience Platform 오브젝트에서 하나 이상의 오브젝트 사용 추적 | <ul><li>사용 데이터 세트 {SCHEMA_NAME} 스키마?</li><li>동일한 스키마를 사용하여 수집된 데이터 세트 수는 얼마입니까?</li><li>활성화된 세그먼트에서 사용된 데이터 세트</li><li>활성화된 세그먼트에 사용된 속성이 있는 스키마를 나열합니다.</li><li>활성화된 세그먼트 표시 {DESTINATION_ACCOUNT_NAME} 와 에는 1000개 이상의 프로필이 있습니다.</li><li>2023년 1월 이후에 수정된 활성화된 세그먼트에 사용되는 속성을 표시합니다.</li><li>을 통해 수집된 데이터 세트 {SOURCE_NAME}?</li><li>연계된 데이터 흐름 {DATAFLOW_NAME}</li><li>활성화된 세그먼트와 관련되고 지난 1년 동안 생성된 스키마를 나열합니다.</li></ul> |
+| 배포 및 집계 | Experience Platform 개체 사용에 대한 요약 기반 질문 | <ul><li>활성화된 세그먼트의 비율은 얼마입니까?</li><li>세분화에는 몇 개의 필드가 사용됩니까?</li><li>가장 많은 대상에 활성화된 세그먼트는 무엇입니까?</li><li>중복 세그먼트를 나열합니다.</li><li>활성화된 세그먼트 표시 {DESTINATION_ACCOUNT_NAME} 프로필 크기별로 등급을 매깁니다.</li><li>활성화되지 않았지만 프로필이 100개를 초과하는 세그먼트의 백분율입니다. 그들의 이름을 보여줘</li><li>내 데이터 세트로 데이터를 수집하는 3개의 소스 커넥터를 나열합니다.</li><li>발생에 따라 활성화된 세그먼트에 사용된 상위 5개 속성을 나열합니다.</li></ul> |
+| 오브젝트 조회 | Experience Platform 개체 또는 해당 속성을 검색하거나 액세스합니다. | <ul><li>연관된 스키마가 없는 데이터 세트</li><li>에 사용된 속성 나열 {SEGMENT_NAME}?</li><li>프로필이 활성화되었지만 생성 이후 수정되지 않은 스키마 목록을 제공합니다.</li><li>지난 주에 수정된 세그먼트는 무엇입니까?</li><li>세그먼트 정의가 같은 세그먼트를 만든 날짜와 함께 나열합니다.</li><li>프로필이 활성화된 데이터 세트이며 각 데이터 세트에서 생성된 세그먼트 수를 포함합니다.</li><li>데이터 세트 XYZ와 연관된 소스 계정은 무엇입니까?</li><li>다음의 세그먼트 정의 및 수정 날짜 표시 {SEGMENT_NAME}.</li></ul> |
 
 +++
 
@@ -237,56 +253,56 @@ Experience Platform 도우미에 대한 자세한 내용은 이 섹션 을 참�
 ### 주의 사항 및 제한 사항
 
 다음 섹션에서는 Assistant 사용 시 고려해야 할 현재 주의 사항 및 제한 사항에 대해 간략히 설명합니다.
+<!-- 
+#### Conversational experience
 
-#### 대화 경험
-
-도우미를 쿼리할 때 대화 경험과 관련된 몇 가지 뉘앙스를 고려해야 합니다.
+You must consider several nuances regarding the conversational experience when querying the Assistant.
 
 >[!NOTE]
 >
->이러한 제한 사항은 일시적이며 알파 과정 전체에서 개선되고 있습니다.
+>These limitations are temporary and are being improved upon throughout the course of the alpha.
 
 >[!BEGINTABS]
 
->[!TAB 이전 토론에서 컨텍스트를 유추할 수 없음]
+>[!TAB Unable to infer context from prior discussion]
 
-현재 도우미는 주어진 질문에 대한 컨텍스트로 이전 토론을 참조할 수 없습니다. 예제는 아래 표를 참조하십시오.
+The Assistant currently cannot reference prior discussions as context for a given question. See the table below for examples:
 
-| 애매한 질문 | 질문 지우기 | 참고 |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| <ul><li>첫 번째 질문: &quot;세그먼트란 무엇입니까?&quot;</li><li>후속 질문: &quot;다른 유형이 있습니까?&quot;</li></ul> | <ul><li>첫 번째 질문: &quot;세그먼트란 무엇입니까?&quot;</li><li>후속 질문: &quot;다른 유형이 있습니까? **세그먼트**?&quot;</li></ul> | 도우미는 &quot;그들&quot;이 무엇을 의미하는지 추론할 수 없다. |
-| <ul><li>첫 번째 질문: &quot;세그먼트란 무엇입니까?&quot;</li><li>다음 질문: &quot;더 자세히 설명할 수 있습니까?&quot;</li></ul> | <ul><li>첫 번째 질문: &quot;세그먼트란 무엇입니까?&quot;</li><li>추가 질문: &quot;세그먼트에 대한 세부 사항 설명&quot;</li></ul> | Assistant는 &quot;자세히&quot;에 따라 설명서를 지능적으로 참조할 수 없습니다. |
-| <ul><li>첫 번째 질문: &quot;세그먼트란 무엇입니까?&quot;</li><li>다음 질문: &quot;예를 하나 들어주시겠어요?&quot;</li></ul> | <ul><li>첫 번째 질문: &quot;세그먼트란 무엇입니까?&quot;</li><li>후속 질문: &quot;세그먼트에 대한 예를 제공할 수 있습니까?&quot;</li></ul> | Assistant는 귀하가 예를 나타낼 내용을 유추할 수 없습니다. |
-| <ul><li>첫 번째 질문: &quot;일괄 처리 세그먼트란 무엇입니까?&quot;</li><li>후속 질문: &quot;스트리밍 세그먼트와 어떻게 비교됩니까?&quot;</li></ul> | <ul><li>첫 번째 질문: &quot;일괄 처리 세그먼트란 무엇입니까?&quot;</li><li>후속 질문: &quot;스트리밍 세그먼트를 배치 세그먼트와 비교할 수 있습니까?&quot;</li></ul> | 도우미는 &quot;그것&quot;이 무엇을 지칭하는지 유추할 수 없으므로 스트리밍 세그먼트를 비교할 수 없습니다. |
-| <ul><li>첫 번째 질문: &quot;나에게 세그먼트가 몇 개 있습니까?&quot;</li><li>후속 질문: &quot;이들 중 몇 명이 대상으로 Facebook을 사용합니까?&quot;</li></ul> | <ul><li>첫 번째 질문: &quot;나에게 세그먼트가 몇 개 있습니까?&quot;</li><li>후속 질문: &quot;내가 대상으로 Facebook을 사용하고 있는 세그먼트 중 몇 개나?&quot;</li></ul> | Assistant는 &quot;그들&quot;이 무엇을 가리키는지 유추할 수 없습니다. |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of them?"</li></ul>| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of **segments**?"</li></ul> | The Assistant cannot infer what "them" means. |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you elaborate more?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Explain what a segment is in depth"</li></ul> | The Assistant cannot intelligently reference documentation based on "more". |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of one?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of a segment?"</li></ul> | The Assistant cannot infer what you want an example of.|
+| <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "How does it compare to a streaming segment?"</li></ul> | <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "Can you compare a streaming segment to a batch segment?"</li></ul> | The Assistant cannot infer what "it" is referring to and thus cannot compare the streaming segment. |
+| <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of them use Facebook as a destination?"</li></ul> | <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of the segments that I have are using Facebook as a destination?"</li></ul> | The Assistant is cannot infer what "them" is referring to. |
 
 {style="table-layout:auto"}
 
->[!TAB 페이지에서 컨텍스트를 유추할 수 없음]
+>[!TAB Unable to infer context from a page]
 
-도우미에게 현재 진행 중인 Experience Platform UI 페이지의 특정 요소에 대해 질문할 때는 질문 내에 특정 요소를 명확히 정의해야 합니다.
+When asking the Assistant about a particular element of the Experience Platform UI page that you are on, you must clearly define the specific element within your question. 
 
-| 애매한 질문 | 질문 지우기 | 참고 |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| &quot;이 기능은 무엇입니까?&quot; | &quot;역할 {PAGE_NAME} 할 수 있습니까? | 도우미는 &quot;이&quot;가 무엇을 가리키는지 유추할 수 없습니다. 쿼리하는 특정 페이지 요소를 제공해야 합니다. |
-| &quot;왜 구하지 않는 거죠?&quot; | &quot;라는 새 샌드박스를 저장할 수 없는 이유 {NAME}?&quot; | Assistant는 &quot;그것&quot;이 무엇을 지칭하는지 유추할 수 없으며 엔티티에 문제가 있다는 것을 알 수 없습니다. |
+| "What does this do?" | "What does {PAGE_NAME} do? | The Assistant cannot infer what "this" is referring to. You must provide the specific page element that you are querying about. |
+| "Why won't it save?" | "Why can't I save a new sandbox called {NAME}?" | The Assistant cannot infer what "it" is referring to and cannot know that you are having issues with an entity. |
 
 {style="table-layout:auto"}
 
-또한 오류가 Experience League에 문서화되어 있는 경우 도우미는 오류 메시지와 관련된 질문에만 답변할 수 있습니다.
+Furthermore, the Assistant can only answer questions regarding error messages, given that the error is documented in Experience League.
 
->[!TAB 모호성]
+>[!TAB Ambiguity]
 
-Assistant는 현재 질문을 명확히 구분할 수 없으므로 질문을 명확히 표시하고 제품, 애플리케이션 또는 도메인 내에서 질문을 범위로 지정해야 합니다.
+You must phrase your questions clearly and scope them within a product, application, or domain, as the Assistant currently cannot disambiguate questions.
 
-| 애매한 질문 | 질문 지우기 | 참고 |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| &quot;필터를 만들려면 어떻게 해야 합니까? | 프로필 쿼리 언어로 필터를 만드는 방법 | 다양한 Experience Platform 기능이 필터링을 지원하므로 필터링할 기능을 지정해야 합니다. |
-| &quot;어떻게 시작합니까? | 대상 사용을 시작하려면 어떻게 해야 합니까? | 지나치게 넓은 개념은 포괄적이거나 불필요하게 구체적인 답변을 도출해낼 수 있기 때문에 목표 및 사용 사례에 대한 명확성을 제공해야 합니다. |
+| "How do I create a filter? | How do I create a filter in Profile Query Language? | You must specify the feature that which you are filtering for because a variety of Experience Platform features support filtering. |
+| "How do I get started? | How do I get started using destinations? | You must provide clarity on your goals and use case because overly broad concepts may result in generic or unnecessarily specific answers. |
 
 {style="table-layout:auto"}
 
->[!ENDTABS]
+>[!ENDTABS] -->
 
 #### 제한된 잡담
 
