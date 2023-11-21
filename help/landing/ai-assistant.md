@@ -5,7 +5,7 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: afc61a5809b1dfb59b87731d835cf8a1668f79df
+source-git-commit: a0395c4d3514693d3200571496eff47768da52ba
 workflow-type: tm+mt
 source-wordcount: '2183'
 ht-degree: 0%
@@ -77,7 +77,7 @@ A dedicated pop-up interface for Assistant appears at the center of your screen.
 
 From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
-### 예제 사용 사례: 스키마 생성 프로세스를 간소화하기 위해 Assistant 사용
+### 예제 사용 사례: 스키마 생성 프로세스를 간소화하기 위해 Assistant 사용 {#example-use-case}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ Assistant는 해당 소스를 보고 대답을 확인할 수 있는 방법을 �
 
 ![답변을 반환한 후 도우미가 제공하는 옵션.](./images/ai-assistant/options.png)
 
-#### 후속 질문
+### 후속 질문 {#follow-up-question}
 
 +++추가 질문의 예를 보려면 선택
 
@@ -109,7 +109,7 @@ Assistant는 해당 소스를 보고 대답을 확인할 수 있는 방법을 �
 
 +++
 
-#### 데이터 사용 질문
+### 데이터 사용 질문 {#data-usage-question}
 
 +++데이터 사용 질문의 예를 보려면 선택
 
@@ -121,7 +121,7 @@ Assistant는 해당 소스를 보고 대답을 확인할 수 있는 방법을 �
 
 +++
 
-#### 멀티턴
+### 멀티턴 {#multi-turn}
 
 +++다중 회전의 예를 보려면 선택
 
@@ -137,7 +137,7 @@ Assistant의 멀티턴 기능을 사용하여 경험 중에 보다 자연스러�
 
 +++
 
-#### 자동 완성 사용
+### 자동 완성 사용 {#use-auto-complete}
 
 +++자동 완성의 예를 보려면 선택
 
@@ -153,7 +153,7 @@ Assistant의 멀티턴 기능을 사용하여 경험 중에 보다 자연스러�
 
 +++
 
-## 범위
+## 범위 {#scope}
 
 도우미는 Real-Time CDP 및 Experience Platform 개념뿐만 아니라 사용자 계정과 관련된 데이터 사용에 대한 질문에 답변할 수 있습니다. 도우미는 현재 있는 UI 페이지를 기반으로 컨텍스트를 유추할 수도 있습니다. 다음을 식별할 수 있습니다.
 
@@ -163,13 +163,13 @@ Assistant의 멀티턴 기능을 사용하여 경험 중에 보다 자연스러�
 * 화면에 표시되는 리소스(유형 및 ID 포함)입니다.
 * 특정 Experience Platform 또는 Real-Time CDP 워크플로 진행 중이라면 도우미가 사용자의 의도를 추론할 수 있습니다.
 
-### 설명서
+### 설명서 {#documentation}
 
 현재 설명서 색인은 Adobe Experience Platform(Real-Time CDP 및 대상)를 포함합니다. 색인은 정기적으로 업데이트됩니다.
 
 설명서 검색 모델은 Experience Platform(Real-Time CDP 및 대상)에 대해 교육됩니다. Adobe Target 및 Creative Cloud 세트와 같은 Adobe Experience PlatformAdobe 의 범위를 벗어난 질문에 대해서는 답변할 수 없습니다.
 
-### 데이터 사용
+### 데이터 사용 {#data-usage}
 
 다음 도메인에서 데이터 사용에 대해 길잡이에게 질문할 수도 있습니다.
 
@@ -184,7 +184,7 @@ Assistant의 멀티턴 기능을 사용하여 경험 중에 보다 자연스러�
 
 스키마, 데이터 세트, 속성, 대상 및 세그먼트와 같은 객체와 관련된 특정 데이터를 조회하려면 샌드박스에 로그인해야 합니다.
 
-### 데이터 사용 질문 예
+### 데이터 사용 질문 예 {#example-data-usage-questions}
 
 +++예제 데이터 사용 질문 목록을 보려면 선택
 
@@ -196,11 +196,11 @@ Assistant의 멀티턴 기능을 사용하여 경험 중에 보다 자연스러�
 
 +++
 
-## 응답 확인
+## 응답 확인 {#verify-the-response}
 
 다양한 방법을 사용하여 길잡이가 반환하는 응답을 확인할 수 있습니다.
 
-### 설명서 인용
+### 설명서 인용 {#citations}
 
 모든 응답과 함께 도우미는 확인 또는 더 많은 정보를 위해 참조할 수 있는 인용구를 제공합니다.
 
@@ -208,7 +208,7 @@ Assistant의 멀티턴 기능을 사용하여 경험 중에 보다 자연스러�
 
 ![도우미에 표시되는 소스에 대한 링크입니다.](./images/ai-assistant/show-sources.png)
 
-## 피드백 제공
+## 피드백 제공 {#feedback}
 
 >[!BEGINSHADEBOX]
 
@@ -246,11 +246,11 @@ Assistant의 멀티턴 기능을 사용하여 경험 중에 보다 자연스러�
 
 +++
 
-## 추가 정보
+## 추가 정보 {#additional-information}
 
 Experience Platform 도우미에 대한 자세한 내용은 이 섹션 을 참조하십시오.
 
-### 주의 사항 및 제한 사항
+### 주의 사항 및 제한 사항 {#caveats-and-limitations}
 
 다음 섹션에서는 Assistant 사용 시 고려해야 할 현재 주의 사항 및 제한 사항에 대해 간략히 설명합니다.
 <!-- 
@@ -318,7 +318,7 @@ Assistant와 소규모 대화를 나눌 수 있지만 이 용량은 현재 제�
 | &quot;혹시... **x** 언어?&quot; | Assistant는 현재 영어만 지원하지만 기본 모델이 지원할 수 있으므로 &quot;예&quot;라고 답할 수 있습니다. |
 | &quot;할 수 있어?&quot; | Assistant는 Yes라고 대답할 수 없지만, Yes라고 대답할 수 있습니다. |
 
-### 팁
+### 팁 {#tips}
 
 다음 섹션에서는 Assistant 사용 시 고려해야 할 몇 가지 팁과 해결 방법에 대해 간략히 소개합니다.
 
