@@ -2,8 +2,9 @@
 keywords: 지표 개요, rtcdp 지표 개요
 title: Real-time Customer Data Platform 홈 페이지 및 대시보드
 description: 대시보드, 홈 페이지 및 Adobe Experience Platform의 최초 사용자 경험
+feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 8ea657e379248616d3140bc0a7b0c25a918bc857
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 1%

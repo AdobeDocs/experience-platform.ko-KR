@@ -2,8 +2,9 @@
 keywords: rtcdp 소스;소스 rtcdp;실시간 고객 데이터 플랫폼 소스
 title: Real-time Customer Data Platform의 소스
 description: 이 문서에서는 Adobe Real-time Customer Data Platform 소스에 대한 개요를 제공합니다
+feature: Sources, Data Ingestion, Get Started
 exl-id: 15b3ee9b-6faf-4091-9641-e653e4cdd7fb
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%

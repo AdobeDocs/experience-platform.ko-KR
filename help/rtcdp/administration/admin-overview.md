@@ -2,8 +2,9 @@
 keywords: rtcdp 관리 개요;관리 개요
 title: Real-time Customer Data Platform 관리 개요
 description: 이 문서에서는 Adobe Experience Platform에서 제공하는 Adobe Real-time Customer Data Platform의 관리 기능에 대한 개요를 제공합니다.
+feature: Access Control, Get Started, Sandboxes
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 1%

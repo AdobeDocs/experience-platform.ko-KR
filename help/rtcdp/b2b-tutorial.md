@@ -3,10 +3,12 @@ keywords: RTCDP;CDP;B2B 에디션;Real-time Customer Data Platform;실시간 고
 solution: Experience Platform
 title: Real-time Customer Data Platform B2B 에디션 시작하기
 description: Adobe Real-time Customer Data Platform B2B 에디션 구현을 설정할 때 이 샘플 시나리오를 예로 사용하십시오.
+feature: Get Started, B2B
+badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1216'
 ht-degree: 0%
 
 ---

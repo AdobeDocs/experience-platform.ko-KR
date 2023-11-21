@@ -2,8 +2,9 @@
 keywords: rtcdp 프로필;프로필 rtcdp;rtcdp id;rtcdp 병합 정책;실시간 고객 프로필
 title: Real-Time CDP의 실시간 고객 프로필 이해
 description: Adobe Real-time Customer Data Platform을 통해 실시간 고객 프로필을 사용하여 고객에게 통합적이고 일관적인 관련 경험을 제공하는 방법을 알아봅니다.
+feature: Get Started, Profiles
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%

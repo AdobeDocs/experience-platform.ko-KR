@@ -2,17 +2,19 @@
 keywords: RTCDP;CDP;B2B 에디션;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;b2b;cdp;고객 AI
 title: Real-Time CDP B2B 에디션 개요
 description: Real-Time Customer Data Platform B2B 에디션 계정 개요
+feature: Get Started, B2B
+badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 1%
+source-wordcount: '1093'
+ht-degree: 4%
 
 ---
 
 # Real-time Customer Data Platform B2B 에디션 개요
 
-Adobe Real-time Customer Data Platform(Real-Time CDP)을 기반으로 구축된 Real-Time CDP B2B 에디션은 B2B 서비스 모델을 운영하는 마케터용으로 특별히 빌드되었습니다. 여러 소스에서 데이터를 취합하여 사람 및 계정 프로필에 대한 단일 보기에 결합합니다. 이 통합 데이터를 통해 마케터는 특정 대상을 정확하게 타겟팅하고 사용 가능한 모든 채널에서 해당 대상을 참여시킬 수 있습니다.
+Adobe Real-time Customer Data Platform(Real-Time CDP)을 기반으로 구축된 Real-Time CDP B2B 에디션은 B2B 서비스 모델을 운영하는 마케터용으로 특별히 빌드되었습니다. 여러 소스의 데이터를 함께 가져와서 사람 및 계정 프로필의 단일 보기로 결합합니다. 마케터는 이 통합 데이터를 통해 특정 대상자를 정확하게 타겟팅하고 사용 가능한 모든 채널에서 해당 대상자를 참여시킬 수 있습니다.
 
 Real-Time CDP B2B 에디션과 해당 B2C 에디션을 구별하는 다양한 Adobe Experience Platform 기능에 대한 개선 사항이 있습니다. 여기에는 B2B 사용 사례용 XDM(Experience Data Model) 개선 사항, ID 확인 및 프로필 세분화로의 업그레이드, 사용자 지정 커넥터 및 대상 등이 포함됩니다 [!DNL Marketo Engage]. 다음 [!DNL Marketo] 커넥터를 사용하면 B2B 브랜드가 리드를 육성하고 계정 기반 마케팅 작업을 향상시키기 위해 업계 최고의 B2B 참여 데이터를 행동 정보와 연결할 수 있습니다.
 
@@ -51,7 +53,7 @@ ID 확인 시스템은 다음과 같은 기능을 제공합니다.
 
 ## 프로필 및 세분화
 
-Real-Time CDP B2B 에디션이 사람, 회사, 속성 및 행동과 관련된 데이터를 수집하고 ID를 해결하면 해당 데이터를 사용하여 프로필을 구성합니다. 그런 다음 이러한 프로필을 다양한 대상으로 활성화할 수 있는 검색 가능한 대상으로 세그먼트화할 수 있습니다.
+Real-Time CDP B2B 에디션이 사람, 회사, 속성 및 행동과 관련된 데이터를 수집하고 ID를 해결하면 해당 데이터를 사용하여 프로필을 구성합니다. 그런 다음 이러한 프로필을 다양한 대상으로 활성화할 수 있는 탐색 가능한 대상으로 세그먼트화할 수 있습니다.
 
 올바르게 구현되면 시스템에서는 이메일 주소와 같이 변경될 수 있는 속성이 아니라 고유한 기본 식별자를 사용하여 사용자를 추적합니다. 이것은 누군가가 직업을 바꿀 때 시스템이 여전히 그들을 뒤따른다는 것을 의미한다. 동일한 엔티티이지만 대신 새 계정에 연결됩니다. 시스템이 이러한 사람들을 모든 속성과 행동을 포함한 개인으로 따르므로 이 기본 기능은 새 계정으로 확장할 수 있는 훌륭한 벡터를 제공합니다.
 

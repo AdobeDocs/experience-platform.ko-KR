@@ -2,10 +2,12 @@
 keywords: rtcdp 프로필;프로필 rtcdp;rtcdp id;rtcdp 병합 정책;실시간 고객 프로필
 title: 계정 프로필 UI 안내서
 description: Adobe Real-time Customer Data Platform B2B 에디션을 사용하면 계정 프로필을 사용하여 여러 소스의 계정 정보를 통합할 수 있습니다. 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스에서 계정 프로필과 상호 작용하는 방법에 대한 세부 정보를 제공합니다.
+badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1636'
 ht-degree: 0%
 
 ---
@@ -150,7 +152,6 @@ Real-Time CDP, B2B 에디션은 사용자가 **[!UICONTROL 소스 이름]**, **[
 >
 >* 관련 계정 그룹은 최대 30개의 계정 프로필을 가질 수 있습니다. 30개 이상의 계정 프로필이 관련성이 발견되면 임의로 여러 그룹으로 나뉘며, 각각 30명 이하의 구성원을 가지고 있습니다. 계정 프로필의 관련 계정 그룹은 항상 자신을 포함합니다.
 >* 다음 [!UICONTROL 관련 계정] 탭에는 현재 검색 중인 계정과 연결된 최대 25개의 관련 계정 목록이 표시됩니다. 이는 향후 업데이트에서 다루게 될 제한 사항입니다. 이러한 UI 제한에도 불구하고 세그먼트 정의에서 관련 계정을 사용할 때 30개의 관련 계정 프로필 그룹의 경우 모든 프로필이 타겟팅에 사용됩니다.
-
 
 각 관련 계정에는 계정 프로필 ID 및 이름, 계정 소스 키, 홈페이지, 주소, 상위 계정, 전화, 업계 및 연간 매출과 관련된 추가 정보 등의 정보가 포함됩니다.
 

@@ -2,8 +2,9 @@
 keywords: 데이터 거버넌스 rtcdp;rtcdp 데이터 거버넌스;실시간 고객 데이터 프로필 데이터 거버넌스;개인정보 rtcdp;rtcdp 개인정보 보호
 title: Real-time Customer Data Platform의 개인 정보 보호
 description: Adobe Real-time Customer Data Platform을 사용하면 데이터 작업이 개인 정보 보호 규정을 준수하도록 하는 프로세스를 간소화할 수 있습니다.
+feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%

@@ -1,10 +1,12 @@
 ---
 title: Real-time Customer Data Platform B2B 에디션의 대상
 description: Adobe Real-time Customer Data Platform B2B 에디션의 대상 역할에 대한 개요입니다.
+feature: Destinations
+badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---

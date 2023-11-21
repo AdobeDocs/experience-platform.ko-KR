@@ -1,7 +1,8 @@
 ---
 title: 인증되지 않은 방문자에 대한 오프사이트 재타겟팅
 description: 잠재 고객 ID를 사용하여 인증되지 않은 사용자 대상을 만드는 데 사용할 수 있는 계산된 속성을 만들어 인증되지 않은 사용자를 다시 타깃팅하는 방법에 대해 알아봅니다.
-source-git-commit: 99516d0923e61c8c81f1933076f2d3e73b55544c
+feature: Use Cases, Customer Acquisition
+source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 2%

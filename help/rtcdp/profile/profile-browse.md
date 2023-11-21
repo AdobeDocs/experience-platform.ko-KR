@@ -2,8 +2,9 @@
 keywords: 프로필 보기 rtcdp;rtcdp 프로필 보기;rtcdp 프로필
 title: Real-time Customer Data Platform에서 프로필 찾아보기
 description: Adobe Real-time Customer Data Platform을 사용하면 Adobe Experience Platform 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터를 검색할 수 있습니다.
+feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 0%

@@ -1,8 +1,9 @@
 ---
 title: 서드파티 쿠키에 의존하지 않고 새로운 고객 참여 및 확보
 description: 서드파티 쿠키에 의존하지 않고 잠재 고객 발굴 사용 사례를 통해 신규 고객을 유치하고 확보하는 방법을 알아봅니다.
+feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
+source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
 workflow-type: tm+mt
 source-wordcount: '2077'
 ht-degree: 86%

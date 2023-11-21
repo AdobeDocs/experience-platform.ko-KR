@@ -1,8 +1,9 @@
 ---
 title: Real-time Customer Data Platform의 스키마
 description: Adobe Real-time Customer Data Platform에서 XDM(Experience Data Model) 스키마의 역할에 대한 개요입니다.
+feature: Get Started, Data Management, Schemas
 exl-id: e56873d2-825d-4c0f-a0fe-1ae6e83438f0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 11%

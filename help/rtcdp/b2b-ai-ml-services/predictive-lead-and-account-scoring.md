@@ -2,10 +2,12 @@
 title: Real-Time CDP B2B의 예측 리드 및 계정 점수
 type: Documentation
 description: Experience Platform CDP B2B의 예측 리드 및 계정 점수 기능에 대한 개요와 추가 정보입니다.
+feature: Profiles, B2B
+badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '869'
 ht-degree: 2%
 
 ---
@@ -14,7 +16,7 @@ ht-degree: 2%
 
 B2B 마케터는 마케팅 단계의 맨 위에서 여러 가지 문제에 직면합니다. 효과를 거두기 위해서는 B2B 마케터들은 많은 수의 사람들이 고가치 타겟에 집중할 수 있도록 자격을 부여하는 자동화된 방법이 필요하다. 자격은 마케팅 전환뿐만 아니라 궁극적인 판매 성과와 일치해야 합니다.
 
-계정 은 B2B 제품 및 서비스를 구매하는 최종 엔티티입니다. 효과적인 마케팅 및 판매를 위해 B2B 마케터는 개인의 뿐만 아니라 계정의 구매 가능성을 모두 알아야 합니다.
+계정 은 B2B 제품 및 서비스를 구매하는 최종 엔티티입니다. 효과적인 마케팅 및 판매를 위해 B2B 마케터는 개인의 뿐만 아니라 계정의 구매 가능성까지 알아야 합니다.
 
 계정 기반 마케팅은 특히 마케팅 타겟으로 계정을 전략화합니다. 거래처 성향 점수는 B2B 마케터가 투자수익률을 극대화하기 위해 거래처 간 우선순위를 매기는 데 큰 도움이 됩니다.
 
@@ -60,7 +62,7 @@ B2B 마케터는 마케팅 단계의 맨 위에서 여러 가지 문제에 직�
 | `extSourceSystemAudit.createdDate` | 필수 여부 |
 | `accountOrganization.industry` | 선택 사항입니다 |
 | `accountOrganization.numberOfEmployees` | 선택 사항입니다 |
-| `accountOrganization.annualRevenue.amount` | 선택 사항 |
+| `accountOrganization.annualRevenue.amount` | 옵션 |
 
 * 경험 이벤트
 
@@ -78,7 +80,7 @@ B2B 마케터는 마케팅 단계의 맨 위에서 여러 가지 문제에 직�
 
 데이터 품질 요구 사항은 다음과 같습니다.
 
-* 이상적으로 교육 목적의 가장 최근 2년 동안의 데이터가 있습니다.
+* 가장 최근 2년 동안의 데이터가 교육 목적으로 제공되는 것이 이상적입니다.
 * 필요한 최소 데이터 길이는 6개월에 예측 기간을 더한 값입니다.
 * 각 예측 목표에 대해 적어도 10개의 정규화된 전환 이벤트가 필요하다.
 
@@ -96,7 +98,7 @@ B2B 마케터는 마케팅 단계의 맨 위에서 여러 가지 문제에 직�
 | 백분위수 | 이 값은 점수가 비슷한 다른 프로필과 관련된 프로필의 성능에 대한 정보를 제공합니다. 백분위수의 범위는 1부터 100까지입니다. |
 | 모델 유형 | 선택한 모델 유형은 개인 점수인지 계정 점수인지 나타냅니다. |
 | 스코어 날짜 | 채점이 발생한 날짜. |
-| 영향력 있는 요인 | 프로필이 전환될 가능성이 높은 이유에 대한 예측된 이유. 인자는 다음 속성으로 구성됩니다.<ul><li>코드: 프로필의 예측된 점수에 긍정적인 영향을 주는 프로필 또는 행동 속성.</li><li>값: 프로필 또는 동작 속성의 값입니다.</li><li>중요도: 프로필 또는 행동 속성이 예측된 점수(낮음, 중간, 높음)에 대해 갖는 가중치를 나타냅니다.</li></ul> |
+| 영향력 있는 요소 | 프로필이 전환될 가능성이 높은 이유에 대한 예측된 이유. 인자는 다음 속성으로 구성됩니다.<ul><li>코드: 프로필의 예측된 점수에 긍정적인 영향을 주는 프로필 또는 행동 속성.</li><li>값: 프로필 또는 동작 속성의 값입니다.</li><li>중요도: 프로필 또는 행동 속성이 예측된 점수(낮음, 중간, 높음)에 대해 갖는 가중치를 나타냅니다.</li></ul> |
 
 ### 고객 프로필 점수 보기
 

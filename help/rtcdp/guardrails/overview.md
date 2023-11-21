@@ -1,7 +1,8 @@
 ---
 title: Real-Time CDP 가드 레일
 description: Real-Time CDP의 다양한 서비스 및 영역에서 데이터 가드레일에 대해 알아봅니다.
-source-git-commit: c6daa645743331ba6fdf8f79e432ae150ee1ff9e
+feature: Guardrails, Data Management, Data Ingestion, Data Export
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 3%

@@ -2,8 +2,9 @@
 keywords: 세그먼테이션, 세그먼테이션 rtcdp, 실시간 고객 데이터 플랫폼 세그먼테이션
 title: Real-time Customer Data Platform의 세그먼테이션 서비스
 description: Adobe 실시간 고객 데이터 플랫폼은 Adobe Experience Platform을 기반으로 구축되었으며 다양한 Experience Platform 서비스와 기능을 활용합니다. 세분화 서비스를 사용하면 고객을 유사한 트레이트를 가진 더 작은 그룹으로 나누어 맞춤형 마케팅을 제공할 수 있습니다.
+feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 4%
@@ -12,7 +13,7 @@ ht-degree: 4%
 
 # [!DNL Segmentation Service] in [!DNL Real-Time Customer Data Platform]
 
-[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP)을 사용하면 여러 소스에서 데이터를 가져와 고객을 위해 조정되고 일관된 경험을 제공할 수 있습니다. 을 사용하여 적절한 개인화된 마케팅 캠페인을 제공할 수 있습니다. [!DNL Segmentation Service], Adobe Experience Platform 일부.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP)을 사용하면 여러 소스에서 데이터를 가져와 고객을 위해 조정되고 일관된 경험을 제공할 수 있습니다. 를 사용하여 적절한 개인화된 마케팅 캠페인을 제공할 수 있습니다. [!DNL Segmentation Service], Adobe Experience Platform 일부.
 
 Real-Time CDP은 Adobe Experience Platform을 기반으로 구축되었으며 다음과 같은 다양한 기능을 활용합니다 [!DNL Experience Platform] 서비스 및 기능. 사용 [!DNL Segmentation Service], 고객을 유사한 트레이트를 가진 더 작은 그룹으로 분할하여 맞춤형 마케팅을 제공할 수 있습니다.
 
