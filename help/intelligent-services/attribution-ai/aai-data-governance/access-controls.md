@@ -5,14 +5,14 @@ feature: Attribution AI
 title: Attribution AI 액세스 제어
 description: 이 문서에서는 Attribution AI의 속성 기반 액세스 제어에 대한 정보를 제공합니다.
 exl-id: 3ed672bf-1fa6-4893-99e0-afc2b2179543
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '493'
 ht-degree: 1%
 
 ---
 
-# 액세스 제어
+# Attribution AI의 액세스 제어
 
 Attribution AI에 대한 액세스 제어는에서 Adobe Experience Platform을 통해 제공됩니다. [Adobe Admin Console](https://adminconsole.adobe.com/). 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 

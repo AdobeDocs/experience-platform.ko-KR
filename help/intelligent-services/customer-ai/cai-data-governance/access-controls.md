@@ -5,14 +5,14 @@ feature: Customer AI
 title: 고객 AI에 대한 액세스 제어
 description: 이 문서에서는 고객 AI의 속성 기반 액세스 제어에 대한 정보를 제공합니다.
 exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
 
-# 속성 기반 액세스 제어
+# 고객 AI의 속성 기반 액세스 제어
 
 >[!IMPORTANT]
 >

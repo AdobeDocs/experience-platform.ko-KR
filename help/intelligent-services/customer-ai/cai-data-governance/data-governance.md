@@ -5,14 +5,14 @@ feature: Customer AI
 title: 고객 AI의 데이터 거버넌스
 description: Adobe Experience Platform은 비즈니스 사례, 법적 의무 및 개발 프로세스를 준수하기 위해 수집된 경험 데이터를 자신 있게 제어할 수 있는 몇 가지 서비스와 도구를 제공합니다.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '303'
 ht-degree: 11%
 
 ---
 
-# 고객 AI 및 데이터 거버넌스
+# Customer AI의 Customer AI 및 데이터 거버넌스
 
 Customer AI의 모든 데이터 거버넌스 관련 설정은 Adobe Experience Platform에서 상속됩니다.
 

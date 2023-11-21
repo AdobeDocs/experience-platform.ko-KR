@@ -3,14 +3,14 @@ keywords: 통찰력;기여도 ai;기여도 ai 통찰력;AAI 쿼리 서비스;기
 title: Attribution AI 개요의 감사 로그
 description: Attribution AI에서 감사 로그를 보고 관리하는 방법을 알아봅니다.
 exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 38%
+source-wordcount: '271'
+ht-degree: 36%
 
 ---
 
-# 감사 로그
+# Attribution AI의 감사 로그
 
 시스템에서 수행되는 활동의 투명성과 가시성을 높이기 위해 이제 Attribution AI 워크플로 내의 사용자 활동이 감사 로그에 캡처되어 Attribution AI 모델에 대한 사용자 중심의 변경 사항을 이해합니다. 이러한 로그는 문제 해결에 도움이 될 수 있는 감사 추적을 형성하며, 기업이 기업 데이터 관리 정책 및 규정 요구 사항을 효과적으로 준수하는 데 도움이 됩니다.  HIPAA(Health Insurance Portability and Accountability Act)를 준수하고 Attribution AI 또는 Customer AI를 통해 허용된 중요한 개인 데이터를 생성, 수신, 유지 관리 또는 전송하는 경우, Adobe 및 Healthcare Shield 라이선스가 포함된 BAA를 실행할 책임이 있습니다.
 

@@ -3,14 +3,14 @@ keywords: 통찰력;고객 ai;고객 ai 통찰력;AAI 쿼리 서비스;고객 ai
 title: 고객 AI의 고객 관리 키.
 description: 고객 AI용 고객 관리 키를 설정하는 방법에 대해 알아봅니다.
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
-source-git-commit: a81c3f220203d65ef810a92896edcfc489a0327a
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 21%
+source-wordcount: '176'
+ht-degree: 19%
 
 ---
 
-# 고객 관리 키
+# Customer AI의 고객 관리 키
 
 고객 AI는 다음을 위한 옵션을 제공합니다. [헬스케어 실드](https://www.adobe.com/kr/trust/compliance/hipaa-ready.html) 및 Privacy &amp; Security Shield 고객은 Azure CMK(Customer Managed Keys)를 활용하여 고객 AI 데이터에 적용할 수 있습니다. 설정 프로세스는 다음과 같습니다. [Adobe Experience Platform CMK 설정](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) 그리고 당신은 거기에 요약된 단계를 따를 수 있습니다.
 
