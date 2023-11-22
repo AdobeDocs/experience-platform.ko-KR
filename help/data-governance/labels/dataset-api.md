@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API를 사용하여 데이터 세트의 데이터 사용 레이블 관리
 description: 데이터 세트 서비스 API를 사용하면 데이터 세트에 대한 사용 레이블을 적용하고 편집할 수 있습니다. Adobe Experience Platform의 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 카탈로그 서비스 API와 별개입니다.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 319bcc742b09f979cd744c8d66f032886427ea9e
+source-git-commit: 8db484e4a65516058d701ca972fcbcb6b73abb31
 workflow-type: tm+mt
 source-wordcount: '1318'
 ht-degree: 1%
@@ -124,13 +124,7 @@ curl -X POST \
         "labels": [
           "C1"
         ],
-        "parents": [
-            {
-              "id": "_ddgduleint.schemas.4a95cdba7d560e3bca7d8c5c7b58f00ca543e2bb1e4137d6",
-              "type": "schema",
-              "namespace": "AEP"
-            }
-        ]
+        "parents": []
       } '
 ```
 
@@ -207,7 +201,13 @@ curl -X PUT \
         "labels": [
           "C1"
         ],
-        "parents": [],
+        "parents": [
+          {
+            "id": "_xdm.context.identity-graph-flattened-export",
+            "type": "schema",
+            "namespace": "AEP"
+          }
+        ],
         "optionalLabels": [
           {
             "option": {
