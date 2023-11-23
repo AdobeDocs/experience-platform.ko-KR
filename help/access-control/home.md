@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
+source-git-commit: 866e84e5f7fe5df7444c83756a893964dcd3ed3d
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1702'
 ht-degree: 4%
 
 ---
@@ -85,8 +85,8 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Alerts] | [!UICONTROL 경고 관리] | 경고 내역을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Computed Attributes] | [!UICONTROL 계산된 속성 보기] | 계산된 속성 탭, 인벤토리 및 세부 정보에 대한 읽기 전용 액세스 권한. |
 | [!DNL Computed Attributes] | [!UICONTROL 계산된 속성 관리] | 계산된 속성을 읽고, 만들고, 삭제하고, 비활성화할 수 있는 액세스 권한. |
-| [!DNL Data Hygiene] | [!UICONTROL 데이터 위생 보기] | 데이터 위생을 위한 읽기 전용 액세스. |
-| [!DNL Data Hygiene] | [!UICONTROL 데이터 위생 관리] | 데이터 위생 상태를 읽고 만들고 편집하고 삭제할 수 있는 액세스 권한. |
+| [!DNL Data Lifecycle] | [!UICONTROL 데이터 라이프사이클 보기] | 데이터 라이프사이클에 대한 읽기 전용 액세스 권한. |
+| [!DNL Data Lifecycle] | [!UICONTROL 데이터 수명 주기 관리] | 데이터 라이프사이클을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Data Modeling] | [!UICONTROL 스키마 관리] | 스키마 및 관련 리소스를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Data Modeling] | [!UICONTROL 스키마 보기] | 스키마 및 관련 리소스에 대한 읽기 전용 액세스 권한. |
 | [!DNL Data Modeling] | [!UICONTROL 관계 관리] | 스키마 관계 읽기, 만들기, 편집 및 삭제에 대한 액세스 권한. |
@@ -123,7 +123,7 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 파트너 악수를 작성, 수락 및 거부하여 두 조직을 연결하고 활성화할 수 있는 액세스 권한 [!DNL Segment Match] 흐름. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | 읽기, 만들기, 편집 및 게시 액세스 권한 [!DNL Segment Match] 활성 파트너와 피드를 연결합니다. |
 | [!DNL Data Science Workspace] | [!UICONTROL 데이터 과학 작업 영역 관리] | 에서 읽기, 만들기, 편집 및 삭제 액세스 권한 [!DNL Data Science Workspace]. |
-| 데이터 거버넌스 | [!UICONTROL 데이터 사용 레이블 적용] | 사용 레이블을 읽고, 만들고, 삭제할 수 있는 액세스 권한. |
+| 데이터 거버넌스 | [!UICONTROL 사용 레이블 관리] | 사용 레이블을 읽고, 만들고, 삭제할 수 있는 액세스 권한. |
 | 데이터 거버넌스 | [!UICONTROL 데이터 사용 정책 관리] | 데이터 사용 정책을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | 데이터 거버넌스 | [!UICONTROL 데이터 사용 정책 보기] | 조직에 속한 데이터 사용 정책에 대한 읽기 전용 액세스 권한. |
 | 데이터 거버넌스 | [!UICONTROL 사용자 활동 로그 보기] | 기록된 보기에 대한 읽기 전용 액세스 [감사 로그](../landing/governance-privacy-security/audit-logs/overview.md) 플랫폼 활동 |
