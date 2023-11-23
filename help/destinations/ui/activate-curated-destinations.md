@@ -2,13 +2,13 @@
 title: LiveRamp 식별자를 기반으로 조정된 대상에 대상 활성화
 type: Tutorial
 description: LiveRamp Ramp Id를 사용하여 Adobe Experience Platform에서 연결된 TV 및 오디오 대상 및 기타 통합에 대한 대상을 활성화하는 방법을 알아봅니다.
-source-git-commit: 1eb422572d95426fa8b342dc6aa79fb6125e18a1
+exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
 
 ---
-
 
 # LiveRamp 식별자를 기반으로 조정된 대상에 대상 활성화
 

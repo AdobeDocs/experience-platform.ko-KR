@@ -3,9 +3,9 @@ keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침
 title: ID 서비스 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
+source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1509'
 ht-degree: 1%
 
 ---
@@ -72,23 +72,6 @@ ht-degree: 1%
 >
 >삭제하도록 지정된 ID가 그래프의 여러 다른 ID에 연결되어 있는 경우 해당 ID를 연결하는 링크도 삭제됩니다.
 
->[!BEGINSHADEBOX]
-
-**삭제 논리를 시각적으로 표현한 것입니다.**
-
-![최신 ID를 수용하기 위해 삭제되는 가장 오래된 ID의 예](./images/graph-limits-v3.png)
-
-*다이어그램 메모:*
-
-* `t` = 타임스탬프.
-* 타임스탬프 값은 지정된 ID의 최신성에 해당합니다. 예를 들어, `t1` 는 첫 번째로 연결된 id(가장 오래된)를 나타내고 `t51` 는 연결된 최신 id를 나타냅니다.
-
-이 예에서 왼쪽의 그래프를 새 ID로 업데이트하려면 먼저 ID 서비스에서 가장 오래된 타임스탬프가 있는 기존 ID를 삭제합니다. 그러나 가장 오래된 ID는 장치 ID이므로 Identity Service는 삭제 우선 순위 목록에서 더 높은 유형의 네임스페이스에 도달할 때까지 해당 ID를 건너뜁니다. 이 경우 입니다. `ecid-3`. 삭제 우선 순위 유형이 더 높은 가장 오래된 ID가 제거되면 그래프가 새 링크로 업데이트됩니다. `ecid-51`.
-
-* 드문 경우지만 동일한 타임스탬프와 ID 유형을 가진 두 개의 ID가 있는 경우 Identity Service는 다음을 기준으로 ID를 정렬합니다 [XID](./api/list-native-id.md) 삭제를 수행합니다.
-
->[!ENDSHADEBOX]
-
 ### 구현에 대한 영향
 
 다음 섹션에서는 ID 서비스, 실시간 고객 프로필 및 WebSDK에 대한 삭제 논리의 의미에 대해 간략히 설명합니다.
@@ -116,7 +99,83 @@ CRM ID에 대해 인증된 이벤트를 유지하려면 기본 ID를 ECID에서 
 * [Experience Platform 태그에 대한 ID 맵 구성](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Experience Platform Web SDK의 ID 데이터](../edge/identity/overview.md#using-identitymap)
 
+### 예제 시나리오
 
+#### 예 1: 전형적인 큰 그래프
+
+*다이어그램 메모:*
+
+* `t` = 타임스탬프.
+* 타임스탬프 값은 지정된 ID의 최신성에 해당합니다. 예를 들어, `t1` 는 첫 번째로 연결된 id(가장 오래된)를 나타내고 `t51` 는 연결된 최신 id를 나타냅니다.
+
+이 예에서 왼쪽의 그래프를 새 ID로 업데이트하려면 먼저 ID 서비스에서 가장 오래된 타임스탬프가 있는 기존 ID를 삭제합니다. 그러나 가장 오래된 ID는 장치 ID이므로 Identity Service는 삭제 우선 순위 목록에서 더 높은 유형의 네임스페이스에 도달할 때까지 해당 ID를 건너뜁니다. 이 경우 입니다. `ecid-3`. 삭제 우선 순위 유형이 더 높은 가장 오래된 ID가 제거되면 그래프가 새 링크로 업데이트됩니다. `ecid-51`.
+
+* 드문 경우지만 동일한 타임스탬프와 ID 유형을 가진 두 개의 ID가 있는 경우 Identity Service는 다음을 기준으로 ID를 정렬합니다 [XID](./api/list-native-id.md) 삭제를 수행합니다.
+
+![최신 ID를 수용하기 위해 삭제되는 가장 오래된 ID의 예](./images/graph-limits-v3.png)
+
+#### 예제 2: &quot;graph split&quot;
+
+>[!BEGINTABS]
+
+>[!TAB 수신 이벤트]
+
+*다이어그램 메모:*
+
+* 다음 다이어그램은에서 를 가정합니다 `timestamp=50`: id 그래프에 50개의 id가 존재합니다.
+* `(...)` 는 그래프 내에 이미 연결되어 있는 다른 ID를 나타냅니다.
+
+이 예에서 ECID:32110은 수집되고 의 큰 그래프에 연결됩니다. `timestamp=51`, 따라서 ID 50개의 제한을 초과합니다.
+
+![](./images/guardrails/before-split.png)
+
+>[!TAB 삭제 프로세스]
+
+따라서 ID 서비스는 타임스탬프 및 ID 유형에 따라 가장 오래된 ID를 삭제합니다. 이 경우 ECID:35577이 삭제됩니다.
+
+![](./images/guardrails/during-split.png)
+
+>[!TAB 그래프 출력]
+
+ECID:35577을 삭제하면 CRM ID:60013 및 CRM ID:25212을 현재 삭제된 ECID:35577과 연결한 에지도 삭제됩니다. 이 삭제 프로세스를 수행하면 그래프가 두 개의 더 작은 그래프로 분할됩니다.
+
+![](./images/guardrails/after-split.png)
+
+>[!ENDTABS]
+
+#### 예제 3: &quot;hub-and-spoke&quot;
+
+>[!BEGINTABS]
+
+>[!TAB 수신 이벤트]
+
+*다이어그램 메모:*
+
+* 다음 다이어그램은에서 를 가정합니다 `timestamp=50`: id 그래프에 50개의 id가 존재합니다.
+* `(...)` 는 그래프 내에 이미 연결되어 있는 다른 ID를 나타냅니다.
+
+삭제 논리로 인해 일부 &quot;허브&quot; ID도 삭제될 수 있습니다. 이러한 허브 ID는 연결되지 않은 여러 개별 ID에 연결된 노드를 나타냅니다.
+
+아래 예에서 ECID:21011은 다음 위치에서 수집되고 그래프에 연결됩니다. `timestamp=51`, 따라서 ID 50개의 제한을 초과합니다.
+
+![](./images/guardrails/hub-and-spoke-start.png)
+
+>[!TAB 삭제 프로세스]
+
+따라서 ID 서비스는 가장 오래된 ID를 삭제합니다. 이 경우 ID는 ECID:35577입니다. ECID:35577을 삭제하면 다음 항목도 삭제됩니다.
+
+* CRM ID: 60013과 현재 삭제된 ECID:35577 간의 링크로 인해 그래프 분할 시나리오가 발생합니다.
+* IDFA: 32110, IDFA: 02383 및 다음으로 표시되는 나머지 ID `(...)`. 이러한 ID는 개별적으로 다른 ID와 연결되어 있지 않으므로 그래프로 표시할 수 없으므로 삭제됩니다.
+
+![](./images/guardrails/hub-and-spoke-process.png)
+
+>[!TAB 그래프 출력]
+
+마지막으로 삭제 프로세스는 두 개의 더 작은 그래프를 생성합니다.
+
+![](./images/guardrails/hub-and-spoke-result.png)
+
+>[!ENDTABS]
 
 ## 다음 단계
 

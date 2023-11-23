@@ -3,7 +3,8 @@ title: 새 API로 pinterest 대상 마이그레이션. 고객 조치가 필요�
 description: Pinterest은 현재 Real-Time CDP의 Pinterest 대상에서 사용 중인 v4 advertiser API를 더 이상 사용하지 않습니다. pinterest 캠페인을 중단하지 않고 새 API로 원활하게 전환하기 위해 작업 항목을 이해합니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 57097b785da3b516b5ce6670c0a376bd1d0fe479
+exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 0%

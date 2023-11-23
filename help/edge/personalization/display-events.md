@@ -1,13 +1,13 @@
 ---
 title: Web SDK에서 디스플레이 이벤트 관리
 description: 이 문서에서는 디스플레이 이벤트의 정의와 Web SDK에서 이 이벤트를 사용하는 방법에 대해 설명합니다.
-source-git-commit: da506cd5de69047e326790d0fae56f76c728e7a5
+exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
 
 ---
-
 
 # Web SDK에서 디스플레이 이벤트 관리
 
