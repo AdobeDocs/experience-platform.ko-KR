@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 동의 및 환경 설정 데이터를 캡처하도록 데이터 세트 구성
 description: Adobe Experience Platform에서 동의 및 환경 설정 데이터를 캡처하도록 XDM(경험 데이터 모델) 스키마 및 데이터 세트를 구성하는 방법에 대해 알아봅니다.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 3f559601b50293723f601960dbd56fddf0285148
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 1%
@@ -96,8 +96,8 @@ Adobe Experience Platform에서 고객 동의/환경 설정 데이터를 처리�
 
 Adobe 표준을 사용하여 동의 데이터를 수집하려면 다음 두 필드 그룹을 포함하는 프로필 활성화 스키마가 있어야 합니다.
 
-* [!UICONTROL 동의 및 환경 설정 세부 정보]
-* [!UICONTROL IdentityMap] (Platform 웹 또는 Mobile SDK를 사용하여 동의 신호를 전송하는 경우 필요)
+* [[!UICONTROL 동의 및 환경 설정 세부 정보]](../../../../xdm/field-groups/profile/consents.md)
+* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (Platform 웹 또는 Mobile SDK를 사용하여 동의 신호를 전송하는 경우 필요)
 
 Platform UI에서 를 선택합니다. **[!UICONTROL 스키마]** 왼쪽 탐색에서 **[!UICONTROL 찾아보기]** 탭으로 기존 스키마 목록을 표시할 수 있습니다. 여기에서 [!DNL Profile]- 동의 필드를 추가할 스키마를 활성화했습니다. 이 섹션의 스크린샷은 다음에 빌드된 &quot;충성도 멤버&quot; 스키마를 사용합니다 [스키마 만들기 튜토리얼](../../../../xdm/tutorials/create-schema-ui.md) 예를 들어,
 

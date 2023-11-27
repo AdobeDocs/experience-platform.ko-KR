@@ -4,9 +4,9 @@ title: Real-time Customer Data Platform에서 프로필 찾아보기
 description: Adobe Real-time Customer Data Platform을 사용하면 Adobe Experience Platform 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터를 검색할 수 있습니다.
 feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: ea785ffa1dfa0f7c684fe536796a4b7409882159
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,8 @@ Real-Time CDP, B2B 에디션을 사용하면 [!UICONTROL 계정], [!UICONTROL �
 프로필 세부 사항에 다음에 대한 액세스 권한이 포함됩니다. [!UICONTROL 계정], [!UICONTROL 영업 기회], 및 [!UICONTROL 소스 레코드] 탭은 고객 프로필에 제공된 표준 정보 외에도 B2B 이벤트 및 속성으로 향상되었습니다.
 
 ![](images/b2b-profile-detail.png)
+
+Platform UI에 제공된 프로필 세부 정보에 대한 자세한 내용은 다음을 참조하십시오. [프로필 대시보드 설명서의 세부 정보 섹션](../../dashboards/guides/profiles.md#browse-profiles).
 
 ### 계정 탭
 

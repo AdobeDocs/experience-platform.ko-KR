@@ -4,10 +4,10 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
 workflow-type: tm+mt
-source-wordcount: '4313'
-ht-degree: 11%
+source-wordcount: '4900'
+ht-degree: 10%
 
 ---
 
@@ -69,7 +69,81 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 다음 [!UICONTROL 찾아보기] 탭에서는 조직에 수집된 읽기 전용 프로필을 검색하고 볼 수 있습니다. 여기에서 환경 설정, 이전 이벤트, 상호 작용 및 대상과 관련하여 프로필에 속하는 중요한 정보를 볼 수 있습니다.
 
-Platform UI에 제공된 프로필 보기 기능에 대한 자세한 내용은 [Adobe Real-time Customer Data Platform에서 프로필 검색](../../rtcdp/profile/profile-browse.md).
+## 프로필 세부 정보 {#profile-details}
+
+을(를) 열려면 [!UICONTROL 프로필] [!UICONTROL 세부 사항] 작업 영역에서 다음을 선택합니다. [!UICONTROL 프로필 ID] 목록에서 삭제할 수 있습니다.
+
+![프로필 ID가 강조 표시된 프로필 찾아보기 탭입니다.](../images/profiles/profile-id.png)
+
+다음 [!UICONTROL 프로필] [!UICONTROL 세부 사항] workspace에는 해당 프로필과 관련된 정보를 전달하는 사전 구성된 여러 위젯이 표시됩니다. 이 정보를 통해 프로필의 주요 속성을 한눈에 파악할 수 있습니다. 을(를) 사용자 지정할 수도 있습니다 [!UICONTROL 프로필] [!UICONTROL 세부 사항] 고유한 위젯을 만들어 작업 영역을 만듭니다. 의 섹션을 참조하십시오. [위젯을 추가하는 방법](#add-widgets) 을 참조하십시오.
+
+![다음 [!UICONTROL 프로필] [!UICONTROL 세부 사항] 작업 공간 [!UICONTROL 세부 사항] 강조 표시된 탭입니다.](../images/profiles/profile-details-workspace.png)
+
+### 프로필 세부 정보 위젯 {#widgets}
+
+사전 구성된 프로필 세부 정보 위젯은 다음과 같습니다.
+
+#### 고객 프로필 {#customer-profile}
+
+다음 [!UICONTROL 고객 프로필] 위젯은 프로필과 연관된 사용자의 이름과 성뿐만 아니라 이름도 표시합니다 [!UICONTROL 프로필 ID]. 프로필 ID는 ID 유형과 연관된 자동 생성된 식별자이며 프로필을 나타냅니다. ID 및 ID 네임스페이스에 대한 자세한 내용은 [id 개요](../../rtcdp/profile/identities-overview.md).
+
+![고객 프로필 위젯.](../images/profiles/customer-profile.png)
+
+#### 기본 속성 {#basic-attributes}
+
+다음 [!UICONTROL 기본 속성] 위젯은 개별 프로필을 정의하는 데 사용되는 가장 일반적으로 사용되는 속성을 표시합니다.
+
+![기본 속성 위젯.](../images/profiles/basic-attributes.png)
+
+#### 연결된 ID {#linked-identities}
+
+다음 [!UICONTROL 연결된 ID] 위젯은 프로필과 연결된 다른 모든 id를 표시합니다.
+
+프로필의 ID 세부 사항을 자세히 보고 다음으로 이동하려면 [!UICONTROL ID] 작업 영역, 선택 **[!UICONTROL ID 그래프 보기]**.
+
+![연결된 ID 위젯.](../images/profiles/linked-identities.png)
+
+#### 채널 환경 설정 {#channel-preferences}
+
+다음 [!UICONTROL 채널 환경 설정] 위젯은 사용자가 통신을 수신하는 데 동의한 통신 채널을 표시합니다. 체크 표시는 사용자가 통신수신에 동의한 각 채널을 나타낸다.
+
+<!-- image needs a blue tick added below -->
+
+![채널 환경 설정 위젯.](../images/profiles/channel-preferences.png)
+
+고객 동의 및 연락처 환경 설정은 복잡한 주제입니다. 동의 및 컨텍스트 환경 설정을 Experience Platform에서 수집, 처리 및 필터링하는 방법에 대해 알아보려면 다음 문서를 읽는 것이 좋습니다.
+
+* 에 필요한 스키마 필드 그룹에 대해 알아보려면 [Adobe 표준에 따라 동의 데이터 수집](../../landing/governance-privacy-security/consent/adobe/overview.md)에서 이러한 프로필 활성화 스키마 필드 그룹에 대한 설명서를 참조하십시오.
+   * [[!UICONTROL 동의 및 환경 설정 세부 정보]](../../xdm/field-groups/profile/consents.md)
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (Platform 웹 또는 Mobile SDK를 사용하여 동의 신호를 전송하는 경우 필요)
+* Adobe 표준을 사용하여 고객 동의 및 환경 설정 데이터를 처리하는 방법에 대해 알아보려면 의 개요를 참조하십시오 [Experience Platform에서 동의 처리](../../landing/governance-privacy-security/consent/adobe/overview.md).
+* 결합된 데이터 거버넌스 및 동의 정책을 사용하여 동의 환경 설정 및 설정한 조직 규칙을 기반으로 세분화를 위한 프로필을 필터링할 수 있습니다. 이러한 결합된 정책을 만들고 사용하는 방법에 대해 알아보려면 의 사용 안내서를 참조하십시오. [데이터 사용 정책 관리](../../data-governance/policies/user-guide.md#combine-policies).
+
+### 위젯 추가 {#add-widgets}
+
+사용자 정의 위젯을 추가하려면 [!UICONTROL 프로필] [!UICONTROL 세부 사항] 작업 영역, 선택 **[!UICONTROL 프로필 세부 정보 사용자 정의]**.
+
+![을 사용하는 프로필 세부 정보 작업 공간 [!UICONTROL 프로필 세부 정보 사용자 정의] 강조 표시됨.](../images/profiles/customize-profile-details.png)
+
+이제 위젯의 크기를 조정하거나 재배치하여 작업 영역을 편집할 수 있습니다. 선택 **[!UICONTROL 위젯 추가]** 을 클릭하여 사용자 지정 속성으로 위젯을 만듭니다.
+
+![프로필 [!UICONTROL 세부 사항] 작업 공간 [!UICONTROL 위젯 추가] 강조 표시됨.](../images/profiles/add-widget.png)
+
+위젯 작성기가 나타납니다. 위젯에 대한 수사적 이름을 입력합니다. [!UICONTROL 카드 제목] 텍스트 필드 및 선택 **[!UICONTROL 속성 추가]**.
+
+![위젯 작성기 캔버스 및 [!UICONTROL 카드 제목] 필드 및 [!UICONTROL 속성 추가] 강조 표시됨.](../images/profiles/widget-creator.png)
+
+프로필의 유니온 스키마 시각화가 포함된 대화 상자가 나타납니다. 검색 필드 또는 스크롤을 사용하여 위젯에 보고할 속성을 찾습니다. 포함할 속성에 대한 확인란을 선택합니다. 선택 **[!UICONTROL 선택]** 생성 워크플로우를 계속합니다.
+
+>[!TIP]
+>
+>최상위 확인란을 선택하면 모든 하위 요소가 포함됩니다.
+
+![충성도 속성 확인란과 유니온 스키마 다이어그램 [!UICONTROL 선택] 강조 표시됨.](../images/profiles/union-schema-attributes.png)
+
+완료된 위젯의 미리보기가 캔버스에 표시됩니다. 선택한 속성에 만족하면 다음을 선택합니다. **[!UICONTROL 저장]** 선택 사항을 확인하고 [!UICONTROL 프로필] [!UICONTROL 세부 사항] 작업 영역. 이제 새로 만든 위젯이 작업 영역에 표시됩니다.
+
+![저장 이 강조 표시되고 위젯 미리 보기가 표시되는 위젯 작성기 캔버스.](../images/profiles/widget-preview.png)
 
 ## 병합 정책 {#merge-policies}
 
