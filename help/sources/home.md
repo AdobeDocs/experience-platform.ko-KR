@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 소스 커넥터 개요
 description: Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7c83a946ca30f1bf016cc42245d7d52f2c034f18
+source-git-commit: a0616410da5cef51fdac928ecfb02f0b05a4cdb1
 workflow-type: tm+mt
-source-wordcount: '1437'
+source-wordcount: '1498'
 ht-degree: 1%
 
 ---
@@ -59,91 +59,91 @@ Experience Platform을 사용하면 Adobe Analytics 및 Adobe Audience Manager�
 
 Experience Platform은 서드파티 광고 시스템에서 데이터를 수집하는 기능을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [Google 광고](connectors/advertising/ads.md)
+- [Google 광고](connectors/advertising/ads.md) [!BADGE 일괄 처리]{type=Neutral}
 
 ### Analytics {#analytics}
 
 Experience Platform은 서드파티 분석 플랫폼에서 데이터를 수집하는 기능을 지원합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
-- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)
-- [[!DNL RainFocus]](connectors/analytics/rainfocus.md)
+- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE 스트리밍]{type=Caution}
+- [[!DNL RainFocus]](connectors/analytics/rainfocus.md) [!BADGE 스트리밍]{type=Caution}
 
 ### 클라우드 스토리지 {#cloud-storage}
 
 클라우드 스토리지 소스는 다운로드, 포맷 또는 업로드 없이도 고유한 데이터를 플랫폼으로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 사용자 인터페이스를 사용하여 소스 워크플로우에 통합됩니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md)
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md)
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md)
-- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md)
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md)
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md)
-- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md)
-- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md)
-- [[!DNL FTP]](connectors/cloud-storage/ftp.md)
-- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md)
-- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md)
-- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md)
-- [[!DNL SFTP]](connectors/cloud-storage/sftp.md)
+- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE 스트리밍]{type=Caution}
+- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE 스트리밍]{type=Caution}
+- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE 스트리밍]{type=Caution}
+- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE 일괄 처리]{type=Neutral}
 
 ### 동의 및 환경 설정 {#consent}
 
 Experience Platform은 서드파티 동의 및 환경 설정 관리 플랫폼에서 데이터를 수집하는 기능을 지원합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) [!BADGE 일괄 처리]{type=Neutral}
 
 ### CRM(고객 관계 관리) {#customer-relationship-management}
 
 CRM 시스템은 고객 관계를 구축하고 충성도를 창출하며 고객 유지를 촉진하는 데 도움이 되는 데이터를 제공합니다. Experience Platform은 CRM 데이터 수집을 지원합니다. [!DNL Microsoft Dynamics 365] 및 [!DNL Salesforce]. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md)
-- [[!DNL Salesforce]](connectors/crm/salesforce.md)
-- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md)
-- [[!DNL Veeva CRM]](connectors/crm/veeva.md)
-- [[!DNL Zoho CRM]](connectors/crm/zoho.md)
+- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Zoho CRM]](connectors/crm/zoho.md) [!BADGE 일괄 처리]{type=Neutral}
 
 ### 고객 성공 {#customer-success}
 
 Experience Platform은 서드파티 고객 성공 애플리케이션에서 데이터를 수집하는 데 대한 지원을 제공합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md)
-- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
-- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md)
-- [[!DNL Zendesk]](connectors/customer-success/zendesk.md)
+- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE 일괄 처리]{type=Neutral}
 
 ### 데이터베이스 {#database}
 
 Experience Platform은 타사 데이터베이스에서 데이터를 수집하는 기능을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md)
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md)
-- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md)
-- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md)
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md)
-- [[!DNL Azure Table Storage]](connectors/databases/ats.md)
-- [[!DNL Couchbase]](connectors/databases/couchbase.md)
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md)
-- [[!DNL GreenPlum]](connectors/databases/greenplum.md)
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md)
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md)
-- [[!DNL MariaDB]](connectors/databases/mariadb.md)
-- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md)
-- [[!DNL MySQL]](connectors/databases/mysql.md)
-- [[!DNL Oracle]](connectors/databases/oracle.md)
-- [[!DNL Phoenix]](connectors/databases/phoenix.md)
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md)
-- [[!DNL Snowflake (Streaming)]](connectors/databases//snowflake-streaming.md)
-- [[!DNL Snowflake]](connectors/databases/snowflake.md)
-- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md)
+- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL MariaDB]](connectors/databases/mariadb.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE 스트리밍]{type=Caution}
+- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE 일괄 처리]{type=Neutral}
 
 ### eCommerce {#ecommerce}
 
 Experience Platform은 서드파티 전자 상거래 시스템에서 데이터를 수집하는 기능을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md)
-- [[!DNL Shopify]](connectors/ecommerce/shopify.md)
-- [[!DNL Shopify (Streaming)]](connectors/ecommerce/shopify-streaming.md)
+- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) [!BADGE 스트리밍]{type=Caution}
 
 ### 로컬 시스템 {#local-system}
 
@@ -155,12 +155,12 @@ Experience Platform은 로컬 시스템에서 데이터를 수집할 수 있도�
 
 Experience Platform은 서드파티 마케팅 자동화 시스템에서 데이터를 수집하는 기능을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md)
-- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md)
-- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
-- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
-- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md)
-- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
+- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE 스트리밍]{type=Caution}
+- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE 스트리밍]{type=Caution}
+- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE 일괄 처리]{type=Neutral}
 <!-- 
 - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
 -->
@@ -169,21 +169,21 @@ Experience Platform은 서드파티 마케팅 자동화 시스템에서 데이�
 
 Experience Platform은 서드파티 결제 시스템에서 데이터를 수집할 수 있도록 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL PayPal]](connectors/payments/paypal.md)
-- [[!DNL Square]](connectors/payments/square.md)
+- [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Square]](connectors/payments/square.md) [!BADGE 일괄 처리]{type=Neutral}
 
 ### 스트리밍 {#streaming}
 
 Experience Platform은 스트리밍 소스에서 데이터 수집을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL HTTP API]](connectors/streaming/http.md)
+- [[!DNL HTTP API]](connectors/streaming/http.md) [!BADGE 스트리밍]{type=Caution}
 
 ### 프로토콜 {#protocols}
 
 Experience Platform은 타사 프로토콜 시스템에서 데이터를 수집하는 기능을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Generic OData]](connectors/protocols/odata.md)
-- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md)
+- [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE 일괄 처리]{type=Neutral}
+- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE 일괄 처리]{type=Neutral}
 
 ## 데이터 수집에서 소스에 대한 액세스 제어
 
