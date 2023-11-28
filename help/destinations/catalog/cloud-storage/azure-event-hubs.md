@@ -2,10 +2,11 @@
 keywords: Azure 이벤트 허브 대상;azure 이벤트 허브;azure eventhub
 title: Azure 이벤트 허브 연결
 description: 에 대한 실시간 아웃바운드 연결 만들기 [!DNL Azure Event Hubs] Experience Platform에서 데이터를 스트리밍할 저장소입니다.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2116'
 ht-degree: 5%
 
 ---
@@ -123,7 +124,8 @@ Experience Platform은 고객의 보안 및 규정 준수 요구 사항을 충�
 
 >[!IMPORTANT]
 > 
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 은(는) 현재 Azure 이벤트 허브 대상으로 내보내기에서 지원되지 않습니다. [자세히 보기](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 다음을 참조하십시오 [대상자 데이터를 스트리밍 프로필 내보내기 대상으로 활성화](../../ui/activate-streaming-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 

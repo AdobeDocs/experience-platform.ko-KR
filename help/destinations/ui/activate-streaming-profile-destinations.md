@@ -1,13 +1,13 @@
 ---
-keywords: 프로필 대상 활성화;대상 활성화;데이터 활성화; 이메일 마케팅 대상 활성화; 클라우드 스토리지 대상 활성화
 title: 스트리밍 프로필 내보내기 대상에 대상자 활성화
 type: Tutorial
 description: 스트리밍 프로필 기반 대상으로 대상자를 전송하여 Adobe Experience Platform에 있는 대상자 데이터를 활성화하는 방법을 알아봅니다.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 5%
+source-wordcount: '761'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,13 @@ ht-degree: 5%
 
 ## 개요 {#overview}
 
-이 문서에서는 Amazon Kinesis과 같은 Adobe Experience Platform 스트리밍 프로필 기반 대상에서 대상 데이터를 활성화하는 데 필요한 워크플로에 대해 설명합니다.
+이 문서에서는 Adobe Experience Platform의 대상 데이터를 스트리밍 프로필 기반 대상(이하: )으로 활성화하는 데 필요한 워크플로에 대해 설명합니다. [enterprise 대상](/help/destinations/destination-types.md#streaming-profile-export)).
+
+이 문서는 다음 세 가지 대상에 적용됩니다.
+
+* [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
+* [Azure 이벤트 허브](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [HTTP API 대상](/help/destinations/catalog/streaming/http-destination.md).
 
 ## 전제 조건 {#prerequisites}
 
@@ -83,7 +89,15 @@ ht-degree: 5%
 
 ### 동의 정책 평가 {#consent-policy-evaluation}
 
-조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;를 구매한 경우 **[!UICONTROL 해당 동의 정책 보기]**&#x200B;를 선택하여 적용된 동의 정책을 조회하고 그 결과로 활성화에 포함된 프로필 수를 확인합니다. 읽어보기 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 추가 정보.
+[동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 는 현재 Amazon Kinesis, Azure Event Hubs 및 HTTP API와 같은 세 가지 엔터프라이즈 대상으로 내보내기에서 지원되지 않습니다.
+
+이는 타겟팅에 동의하지 않은 프로필이 있음을 의미합니다 *포함* 을(를) 이 세 개의 대상으로 내보냅니다.
+
+<!--
+
+If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**, select **[!UICONTROL View applicable consent policies]** to see which consent policies are applied and how many profiles are included in the activation as a result of them. Read about [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
+
+-->
 
 ### 데이터 사용 정책 확인 {#data-usage-policy-checks}
 
