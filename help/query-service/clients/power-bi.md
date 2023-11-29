@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 쿼리 서비스에 Power BI 연결
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스와 Power BI을 연결하는 단계를 안내합니다.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Npgsql이 제대로 설치되었는지 확인하려면 다음 단계를 진행�
 
 >[!IMPORTANT]
 >
->타사 BI 도구의 중첩된 데이터 구조를 병합하여 사용성을 개선하고 데이터를 검색, 분석, 변환 및 보고하는 데 필요한 워크로드를 줄일 수 있습니다. 다음에서 설명서를 참조하십시오.[`FLATTEN` 기능](../essential-concepts/flatten-nested-data.md) 데이터베이스에 연결할 때 이 설정을 활성화하는 방법에 대한 지침입니다.
+>타사 BI 도구의 중첩된 데이터 구조를 병합하여 사용성을 개선하고 데이터를 검색, 분석, 변환 및 보고하는 데 필요한 워크로드를 줄일 수 있습니다. 다음에서 설명서를 참조하십시오.[`FLATTEN` 기능](../key-concepts/flatten-nested-data.md) 데이터베이스에 연결할 때 이 설정을 활성화하는 방법에 대한 지침입니다.
 
 ### 데이터 연결 모드 {#data-connectivity-mode}
 

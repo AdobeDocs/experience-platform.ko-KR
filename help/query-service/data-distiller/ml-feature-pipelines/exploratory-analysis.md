@@ -2,7 +2,7 @@
 title: 탐색적 데이터 분석
 description: Data Distiller을 사용하여 Python 노트북에서 데이터를 탐색하고 분석하는 방법에 대해 알아봅니다.
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: f9c49dbcc1820cf70c85368114c2a1ab30b87807
+source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
 workflow-type: tm+mt
 source-wordcount: '808'
 ht-degree: 16%
@@ -42,7 +42,7 @@ df
 
 ## 대용량 데이터 세트의 샘플 버전 만들기 {#create-dataset-sample}
 
-쿼리하려는 데이터 세트가 매우 크거나 탐색적 쿼리의 정확한 결과가 필요하지 않은 경우 [샘플링 기능](../../essential-concepts/dataset-samples.md) 데이터 Distiller 쿼리에 사용할 수 있습니다. 2단계 프로세스입니다.
+쿼리하려는 데이터 세트가 매우 크거나 탐색적 쿼리의 정확한 결과가 필요하지 않은 경우 [샘플링 기능](../../key-concepts/dataset-samples.md) 데이터 Distiller 쿼리에 사용할 수 있습니다. 2단계 프로세스입니다.
 
 - 첫 번째, **분석** 지정된 샘플링 비율로 샘플링된 버전을 만드는 데이터 집합입니다.
 - 그런 다음, 샘플링된 데이터 세트 버전을 쿼리합니다. 샘플링된 데이터 세트에 적용하는 함수에 따라 출력을 전체 데이터 세트에 대한 숫자로 조정할 수 있습니다

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문을 보여 줍니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 95d1aec09477480532d4df1bdc7488d3f5a39394
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '4134'
 ht-degree: 2%
@@ -765,7 +765,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 (1 row)
 ```
 
-그런 다음 를 참조하여 계산된 통계를 직접 쿼리할 수 있습니다. `Statistics ID`. 아래의 예제 문을 사용하여 와 함께 사용할 경우 출력을 전체적으로 볼 수 있습니다. `Statistics ID` 또는 별칭 이름입니다. 이 기능에 대한 자세한 내용은 다음을 참조하십시오. [별칭 이름 설명서](../essential-concepts/dataset-statistics.md#alias-name).
+그런 다음 를 참조하여 계산된 통계를 직접 쿼리할 수 있습니다. `Statistics ID`. 아래의 예제 문을 사용하여 와 함께 사용할 경우 출력을 전체적으로 볼 수 있습니다. `Statistics ID` 또는 별칭 이름입니다. 이 기능에 대한 자세한 내용은 다음을 참조하십시오. [별칭 이름 설명서](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -788,7 +788,7 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-다음을 참조하십시오. [데이터 세트 통계 설명서](../essential-concepts/dataset-statistics.md) 추가 정보.
+다음을 참조하십시오. [데이터 세트 통계 설명서](../key-concepts/dataset-statistics.md) 추가 정보.
 
 #### 테이블 샘플 {#tablesample}
 
@@ -806,7 +806,7 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-다음을 참조하십시오. [데이터 세트 샘플 설명서](../essential-concepts/dataset-samples.md) 추가 정보.
+다음을 참조하십시오. [데이터 세트 샘플 설명서](../key-concepts/dataset-samples.md) 추가 정보.
 
 ### 시작
 

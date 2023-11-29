@@ -2,7 +2,7 @@
 title: 예약된 쿼리 모니터링
 description: 쿼리 서비스 UI를 통해 쿼리를 모니터링하는 방법을 알아봅니다.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: fa871529a4136263399bad3200ee3888049d06a5
+source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 1%
@@ -161,7 +161,7 @@ Adobe Experience Platform은 UI를 통해 모든 쿼리 작업의 상태에 대�
 >
 >DROP 명령을 사용하는 익명 블록의 실행 세부 정보는 **아님** 별도의 하위 쿼리로 보고됩니다. 익명 블록 하위 쿼리로 사용되는 CTAS 쿼리, ITAS 쿼리 및 COPY 문에 대해 별도의 실행 세부 정보를 사용할 수 있습니다. DROP 명령에 대한 실행 세부 정보는 현재 지원되지 않습니다.
 
-익명 블록은 `$$` 접두사를 쿼리 앞에 추가합니다. 쿼리 서비스의 익명 블록에 대한 자세한 내용은 [익명 블록 문서](../essential-concepts/anonymous-block.md).
+익명 블록은 `$$` 접두사를 쿼리 앞에 추가합니다. 쿼리 서비스의 익명 블록에 대한 자세한 내용은 [익명 블록 문서](../key-concepts/anonymous-block.md).
 
 익명 블록 하위 쿼리는 실행 상태 왼쪽에 탭이 있습니다. 실행 세부 정보를 표시하려면 탭을 선택합니다.
 

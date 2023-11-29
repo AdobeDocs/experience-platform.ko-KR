@@ -5,7 +5,7 @@ title: 쿼리 서비스의 쿼리 실행에 대한 일반 지침
 type: Tutorial
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 쿼리를 작성할 때 알아야 할 중요한 세부 사항에 대해 간략하게 설명합니다.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 3%
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## 중복 제거
 
-쿼리 서비스는 데이터 중복 제거 또는 데이터에서 중복 행 제거를 지원합니다. 중복 제거에 대한 자세한 내용은 [쿼리 서비스 중복 제거 안내서](../essential-concepts/deduplication.md).
+쿼리 서비스는 데이터 중복 제거 또는 데이터에서 중복 행 제거를 지원합니다. 중복 제거에 대한 자세한 내용은 [쿼리 서비스 중복 제거 안내서](../key-concepts/deduplication.md).
 
 ## 쿼리 서비스의 시간대 계산
 

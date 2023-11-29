@@ -2,7 +2,7 @@
 title: 데이터 신호를 추적하여 고객 생애 가치 생성
 description: 이 안내서에서는 Data Distiller 및 Real-time Customer Data Platform과 함께 사용자 정의 대시보드를 사용하여 고객 생애 가치를 측정하고 시각화하는 방법에 대한 전체적인 데모를 제공합니다.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1269'
 ht-degree: 0%
@@ -91,7 +91,7 @@ CLV를 설정하는 첫 번째 단계는 사용자 작업에서 캡처한 데이
 
 ## 캠페인에서 반환된 분석 데이터를 확인합니다 {#post-campaign-data-analysis}
 
-이제 소스의 데이터는 다음과 같을 수 있습니다 [증분 처리됨](../essential-concepts/incremental-load.md) 가속화된 데이터 저장소에서 데이터 모델에 대한 예약된 새로 고침의 일부로. 고객의 모든 응답 이벤트는 발생 시 또는 일괄적으로 Adobe Experience Platform에 수집될 수 있습니다. 데이터 모델은 설정 또는 소스 커넥터에 따라 하루에 한 번 또는 여러 번 새로 고쳐질 수 있습니다. 다음을 참조하십시오. [일괄 처리 수집 API 개요](../../ingestion/batch-ingestion/api-overview.md) 또는 [스트리밍 수집 개요](../../ingestion/streaming-ingestion/overview.md) 추가 정보.
+이제 소스의 데이터는 다음과 같을 수 있습니다 [증분 처리됨](../key-concepts/incremental-load.md) 가속화된 데이터 저장소에서 데이터 모델에 대한 예약된 새로 고침의 일부로. 고객의 모든 응답 이벤트는 발생 시 또는 일괄적으로 Adobe Experience Platform에 수집될 수 있습니다. 데이터 모델은 설정 또는 소스 커넥터에 따라 하루에 한 번 또는 여러 번 새로 고쳐질 수 있습니다. 다음을 참조하십시오. [일괄 처리 수집 API 개요](../../ingestion/batch-ingestion/api-overview.md) 또는 [스트리밍 수집 개요](../../ingestion/streaming-ingestion/overview.md) 추가 정보.
 
 데이터 모델이 업데이트되면 사용자 정의 대시보드 위젯은 고객 생애 가치를 측정하고 시각화할 수 있는 의미 있는 신호를 제공합니다.
 

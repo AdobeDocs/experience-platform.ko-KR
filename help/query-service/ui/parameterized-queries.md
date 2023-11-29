@@ -2,7 +2,7 @@
 title: 매개 변수가 있는 쿼리
 description: Adobe Experience Platform UI에서 매개 변수가 있는 쿼리를 사용하는 방법에 대해 알아봅니다.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '734'
 ht-degree: 10%
@@ -24,7 +24,7 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->Adobe Experience Platform UI 내에서 매개 변수가 있는 쿼리는 인라인 템플릿의 상위 수준에서만 지원됩니다. 즉, 매개 변수가 있는 쿼리는 원래 템플릿에서 사용할 때만 작동합니다. 하위 템플릿은 정적 템플릿이어야 하며 동적 매개 변수를 가질 수 없습니다. 다음을 참조하십시오. [인라인 템플릿 설명서](../essential-concepts/inline-templates.md) 자세히 알아보십시오.
+>Adobe Experience Platform UI 내에서 매개 변수가 있는 쿼리는 인라인 템플릿의 상위 수준에서만 지원됩니다. 즉, 매개 변수가 있는 쿼리는 원래 템플릿에서 사용할 때만 작동합니다. 하위 템플릿은 정적 템플릿이어야 하며 동적 매개 변수를 가질 수 없습니다. 다음을 참조하십시오. [인라인 템플릿 설명서](../key-concepts/inline-templates.md) 자세히 알아보십시오.
 
 ## 매개 변수가 있는 쿼리 구문 {#syntax}
 

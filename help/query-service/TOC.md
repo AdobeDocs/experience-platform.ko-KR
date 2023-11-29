@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '310'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -52,6 +52,15 @@ ht-degree: 20%
    - [분석 데이터에서 머천다이징 변수 반환 및 사용](use-cases/merchandising-variables.md)
    - [방문자에 대한 롤업 보고서 보기](use-cases/roll-up-report-of-a-visitor.md)
    - [웹 및 모바일 분석 인사이트](use-cases/analytics-insights.md)
+- 주요 개념 {#key-concepts}
+   - [중첩 데이터 구조 작업](key-concepts/nested-data-structures.md)
+   - [중첩된 데이터 구조 평면화](key-concepts/flatten-nested-data.md)
+   - [익명 블록](key-concepts/anonymous-block.md)
+   - [인라인 템플릿](key-concepts/inline-templates.md)
+   - [증분 로드](key-concepts/incremental-load.md)
+   - [데이터 중복 제거](key-concepts/deduplication.md)
+   - [데이터 세트 샘플](key-concepts/dataset-samples.md)
+   - [데이터 세트 통계 계산](key-concepts/dataset-statistics.md)
 - 클라이언트를 쿼리 서비스에 연결 {#clients}
    - [클라이언트 연결 개요](clients/overview.md)
    - [SSL 모드](./clients/ssl-modes.md)
@@ -91,15 +100,6 @@ ht-degree: 20%
 - 모범 사례 {#best-practices}
    - [쿼리 실행](best-practices/writing-queries.md)
    - [데이터 자산 조직](./best-practices/organize-data-assets.md)
-- 기본 개념 {#essential-concepts}
-   - [중첩 데이터 구조 작업](essential-concepts/nested-data-structures.md)
-   - [중첩된 데이터 구조 평면화](essential-concepts/flatten-nested-data.md)
-   - [익명 블록](essential-concepts/anonymous-block.md)
-   - [인라인 템플릿](essential-concepts/inline-templates.md)
-   - [증분 로드](essential-concepts/incremental-load.md)
-   - [데이터 중복 제거](essential-concepts/deduplication.md)
-   - [데이터 세트 샘플](essential-concepts/dataset-samples.md)
-   - [데이터 세트 통계 계산](essential-concepts/dataset-statistics.md)
 - SQL 참조 {#sql}
    - [SQL 개요](sql/overview.md)
    - [SQL 구문](sql/syntax.md)

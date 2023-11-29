@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 정보입니다.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '2938'
 ht-degree: 19%
@@ -215,7 +215,7 @@ ID 서비스에 대해 자세히 알아보려면 [ID 서비스 개요](../../ide
 | 기능 | 설명 |
 | --- | --- |
 | 경고 구독 API | Adobe Experience Platform 쿼리 서비스를 사용하면 애드혹 및 예약된 쿼리 모두에 대한 경고를 구독할 수 있습니다. 경고는 이메일로 받거나 Platform UI 내에서 또는 두 가지 모두로 받을 수 있습니다. 현재 쿼리 경고는 다음을 사용해서만 구독할 수 있습니다. [쿼리 서비스 API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| 데이터 세트 샘플 | 쿼리 서비스 데이터 세트 샘플을 사용하면 쿼리 정확도 비용으로 처리 시간을 크게 단축하면서 빅 데이터에 대한 탐색적 쿼리를 수행할 수 있습니다. 다음을 참조하십시오. [데이터 세트 샘플 안내서](../../query-service/essential-concepts/dataset-samples.md) 자세히 알아보십시오. |
+| 데이터 세트 샘플 | 쿼리 서비스 데이터 세트 샘플을 사용하면 쿼리 정확도 비용으로 처리 시간을 크게 단축하면서 빅 데이터에 대한 탐색적 쿼리를 수행할 수 있습니다. 다음을 참조하십시오. [데이터 세트 샘플 안내서](../../query-service/key-concepts/dataset-samples.md) 자세히 알아보십시오. |
 
 에 대한 자세한 내용 [!DNL Query Service], 다음을 참조하십시오. [[!DNL Query Service] 개요](../../query-service/home.md).
 

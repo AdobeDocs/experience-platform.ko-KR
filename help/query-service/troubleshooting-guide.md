@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 자주 묻는 질문
 description: 이 문서에는 쿼리 서비스와 관련된 일반적인 질문과 대답이 포함되어 있습니다. 주제에는 데이터 내보내기, 서드파티 도구 및 PSQL 오류가 포함됩니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '4309'
 ht-degree: 1%
@@ -105,7 +105,7 @@ SELECT * FROM customers LIMIT 0;
 
 ![병합된 데이터의 XDM 스키마 및 테이블 형식 보기. 중첩된 데이터 세트의 열 이름이 UI에서 강조 표시됩니다.](./images/troubleshooting/column-name.png)
 
-에 대한 전체 지침은 설명서 를 참조하십시오. [중첩된 데이터 구조를 사용하여 작업하는 방법](./essential-concepts/nested-data-structures.md) 쿼리 편집기 또는 타사 클라이언트 사용.
+에 대한 전체 지침은 설명서 를 참조하십시오. [중첩된 데이터 구조를 사용하여 작업하는 방법](./key-concepts/nested-data-structures.md) 쿼리 편집기 또는 타사 클라이언트 사용.
 +++
 
 ### 배열이 포함된 데이터 세트에서 쿼리 속도를 높이려면 어떻게 해야 합니까?
@@ -142,7 +142,7 @@ SELECT * FROM customers LIMIT 0;
 
 +++응답 익명 블록 기능을 사용하면 순서대로 실행되는 하나 이상의 SQL 문을 연결할 수 있습니다. 또한 예외 처리 옵션을 사용할 수 있습니다.
 
-다음을 참조하십시오. [익명 블록 설명서](./essential-concepts/anonymous-block.md) 을 참조하십시오.
+다음을 참조하십시오. [익명 블록 설명서](./key-concepts/anonymous-block.md) 을 참조하십시오.
 +++
 
 ### 쿼리 서비스에서 사용자 지정 속성을 구현하려면 어떻게 해야 합니까?
@@ -226,7 +226,7 @@ AS SELECT '1' as _id,
 
 ### 매일 시스템에 들어오는 새 데이터를 빠르게 처리하려면 어떻게 해야 합니까?
 
-+++답변: [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) 스냅숏 ID를 기반으로 테이블의 데이터를 증분 읽는 데 절을 사용할 수 있습니다. 다음과 함께 사용하기에 이상적입니다 [증분 로드](./essential-concepts/incremental-load.md) 마지막 로드 실행 이후 생성 또는 수정된 데이터 세트의 정보만 처리하는 디자인 패턴입니다. 그 결과, 처리 효율을 증가시키고 스트리밍 및 배치 데이터 처리와 함께 사용할 수 있다.
++++답변: [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) 스냅숏 ID를 기반으로 테이블의 데이터를 증분 읽는 데 절을 사용할 수 있습니다. 다음과 함께 사용하기에 이상적입니다 [증분 로드](./key-concepts/incremental-load.md) 마지막 로드 실행 이후 생성 또는 수정된 데이터 세트의 정보만 처리하는 디자인 패턴입니다. 그 결과, 처리 효율을 증가시키고 스트리밍 및 배치 데이터 처리와 함께 사용할 수 있다.
 +++
 
 ### 프로필 UI에 표시된 숫자와 프로필 내보내기 데이터 세트에서 계산된 숫자 간에 차이가 있는 이유는 무엇입니까?
