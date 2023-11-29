@@ -2,10 +2,10 @@
 title: AI가 생성한 Recommendations을 사용하여 XDM 스키마에 CSV 파일 매핑
 description: 이 튜토리얼에서는 AI가 생성한 권장 사항을 사용하여 CSV 파일을 XDM 스키마에 매핑하는 방법을 다룹니다.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: df6f76be6beba962b1795bd33dc753ef04267734
+source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 1%
+source-wordcount: '1102'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ CSV 데이터를에 수집하려면 [!DNL Adobe Experience Platform], 데이터�
 
 이 자습서에서는 다음 구성 요소를 이해하고 있어야 합니다. [!DNL Platform]:
 
-* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다.
+* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): [!DNL Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * 최소한 의 개념을 이해해야 합니다. [XDM에서의 비헤이비어](../../../xdm/home.md#data-behaviors)에 매핑할 것인지 여부를 결정할 수 있습니다. [!UICONTROL 프로필] 클래스(레코드 동작) 또는 [!UICONTROL 경험 이벤트] 클래스(시계열 비헤이비어)
 * [일괄 처리 수집](../../batch-ingestion/overview.md): 다음에 사용되는 방법 [!DNL Platform] 사용자 제공 데이터 파일에서 데이터를 수집합니다.
 * [Adobe Experience Platform 데이터 준비](../../batch-ingestion/overview.md): 수집된 데이터를 XDM 스키마에 맞게 매핑하고 변형할 수 있는 기능 세트입니다. 에 대한 설명서 [데이터 준비 기능](../../../data-prep/functions.md) 는 특히 스키마 매핑과 관련이 있습니다.
@@ -71,6 +71,10 @@ Experience Platform UI에서 **[!UICONTROL 소스]** 왼쪽 탐색. 다음에서
 ML 모델이 실행되어 데이터 흐름 구성 및 업로드된 CSV 파일을 기반으로 새 스키마를 생성합니다. 프로세스가 완료되면 [!UICONTROL 매핑] 생성된 스키마 구조의 전체 탐색 보기와 함께 각 개별 필드에 대한 매핑을 표시하도록 단계가 채워집니다.
 
 ![다음 [!UICONTROL 매핑] 매핑된 모든 CSV 필드 및 결과 스키마 구조를 표시하는 UI의 단계입니다.](../../images/tutorials/map-csv-recommendations/schema-generated.png)
+
+>[!NOTE]
+>
+>소스-타겟 필드 매핑 워크플로우 동안 다양한 기준을 기반으로 스키마의 모든 필드를 필터링할 수 있습니다. 기본 동작은 매핑된 필드를 모두 표시하는 것입니다. 표시된 필드를 변경하려면 검색 입력 필드 옆에 있는 필터 아이콘을 선택하고 드롭다운 옵션 중에서 선택합니다.<br> ![필터 아이콘과 드롭다운 메뉴가 강조 표시된 CSV에서 XDM 스키마 생성 워크플로우에 대한 매핑 단계입니다.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "필터 아이콘과 드롭다운 메뉴가 강조 표시된 CSV에서 XDM 스키마 생성 워크플로우에 대한 매핑 단계입니다."){width="100" zoomable="yes"}
 
 여기에서 다음을 선택적으로 수행할 수 있습니다 [필드 매핑 편집](#edit-mappings) 또는 [연결된 필드 그룹 변경](#edit-schema) 필요에 따라. 만족스러우면 다음을 선택합니다. **[!UICONTROL 완료]** 매핑을 완료하고 이전에 구성한 데이터 흐름을 시작합니다. CSV 데이터는 시스템에 수집되고 다운스트림 플랫폼 서비스에서 사용할 수 있도록 생성된 스키마 구조를 기반으로 데이터 세트를 채웁니다.
 

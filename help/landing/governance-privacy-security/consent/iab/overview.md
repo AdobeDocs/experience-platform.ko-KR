@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experience Platform에서 IAB TCF 2.0 지원
 description: Adobe Experience Platform에서 세그먼트를 대상으로 활성화할 때 고객 동의 선택 사항을 전달하도록 데이터 작업 및 스키마를 구성하는 방법에 대해 알아보십시오.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 2a0ebe1e92ea21ff45051096d5a6969839c2f947
 workflow-type: tm+mt
 source-wordcount: '2558'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 >
 >TCF 2.0에 대한 자세한 내용은 [IAB 유럽 웹사이트](https://iabeurope.eu/tcf-2-0/), 지원 자료 및 기술 사양 포함.
 
-Adobe Experience Platform은 등록된 항목의 일부입니다. [IAB TCF 2.0 공급업체 목록](https://iabeurope.eu/vendor-list-tcf-v2-0/), ID 아래 **565**. TCF 2.0 요구 사항을 준수하는 플랫폼을 사용하면 고객 동의 데이터를 수집하여 저장된 고객 프로필에 통합할 수 있습니다. 그런 다음 이 동의 데이터를 사용 사례에 따라 프로필이 내보낸 대상 세그먼트에 포함되는지 여부에 팩터링할 수 있습니다.
+Adobe Experience Platform은 등록된 항목의 일부입니다. [IAB TCF 2.0 공급업체 목록](https://iabeurope.eu/vendor-list-tcf/), ID 아래 **565**. TCF 2.0 요구 사항을 준수하는 플랫폼을 사용하면 고객 동의 데이터를 수집하여 저장된 고객 프로필에 통합할 수 있습니다. 그런 다음 이 동의 데이터를 사용 사례에 따라 프로필이 내보낸 대상 세그먼트에 포함되는지 여부에 팩터링할 수 있습니다.
 
 >[!IMPORTANT]
 >

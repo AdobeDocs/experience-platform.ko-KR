@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 자주 묻는 질문
 description: 이 문서에는 쿼리 서비스와 관련된 일반적인 질문과 대답이 포함되어 있습니다. 주제에는 데이터 내보내기, 서드파티 도구 및 PSQL 오류가 포함됩니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 8f60d53c1adaf29ce2dce7c3af84f8b39998f7d0
 workflow-type: tm+mt
-source-wordcount: '4309'
+source-wordcount: '4384'
 ht-degree: 1%
 
 ---
@@ -535,6 +535,16 @@ WHERE T2.ID IS NULL
 ### 쿼리 서비스가 &quot;INSERT OVERWRITE INTO&quot; 명령을 지원합니까?
 
 +++아니요, 쿼리 서비스는 &quot;INSERT OVERWRITE INTO&quot; 명령을 지원하지 않습니다.
++++
+
+### 라이선스 사용 대시보드의 사용 데이터는 Data Distiller 계산 시간에 대해 얼마나 자주 업데이트됩니까?
+
++++답변 Data Distiller 컴퓨터 사용 시간에 대한 라이선스 사용 대시보드는 6시간마다 하루에 4번 업데이트됩니다.
++++
+
+### Data Distiller 액세스 없이 CREATE VIEW 명령을 사용할 수 있습니까?
+
++++예, 다음을 사용할 수 있습니다. `CREATE VIEW` data Distiller 액세스 권한 없는 명령입니다. 이 명령은 데이터의 논리적 뷰를 제공하지만 데이터 레이크에 다시 쓰지 않습니다.
 +++
 
 ## 데이터 내보내기 {#exporting-data}

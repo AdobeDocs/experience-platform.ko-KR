@@ -3,9 +3,9 @@ keywords: Experience Platform;사용자 인터페이스;UI;대시보드;대시�
 title: 대시보드 사용자 지정 개요
 description: Adobe Experience Platform 대시보드에 표시된 데이터를 사용자 정의할 수 있는 방법에 대해 자세히 알아보십시오.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Adobe Experience Platform 내에서 사용할 수 있는 프로필, 세그먼트
 
 >[!NOTE]
 >
->에 표시된 위젯 [!UICONTROL 라이선스 사용] 대시보드는 사용자 지정할 수 없습니다. 이 고유한 대시보드에 대한 자세한 내용은 [라이선스 사용 대시보드 설명서](../guides/license-usage.md).
+>대시보드에 대한 모든 업데이트는 조직당 및 샌드박스별로 수행됩니다.
 
 ## 대시보드 수정
 

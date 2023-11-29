@@ -4,7 +4,7 @@ title: Real-time Customer Data Platform의 개인 정보 보호
 description: Adobe Real-time Customer Data Platform을 사용하면 데이터 작업이 개인 정보 보호 규정을 준수하도록 하는 프로세스를 간소화할 수 있습니다.
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2a0ebe1e92ea21ff45051096d5a6969839c2f947
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ## IAB TCF 2.0 지원
 
-[!DNL Real-Time CDP] 등록된 Adobe Experience Platform의 일부인 [공급업체 목록](https://iabeurope.eu/vendor-list-tcf-v2-0/) 대상: [!DNL Transparency & Consent Framework (TCF)]로 요약된 [!DNL Interactive Advertising Bureau (IAB)]. TCF 2.0 요구 사항을 준수하는 플랫폼을 사용하면 자세한 고객 동의 데이터를 수집하고 이를 저장된 고객 프로필에 통합할 수 있습니다. 그런 다음 이 동의 데이터를 사용 사례에 따라 특정 프로필이 내보낸 대상 세그먼트에 포함되는지 여부에 팩터링할 수 있습니다.
+[!DNL Real-Time CDP] 등록된 Adobe Experience Platform의 일부인 [공급업체 목록](https://iabeurope.eu/vendor-list-tcf/) 대상: [!DNL Transparency & Consent Framework (TCF)]로 요약된 [!DNL Interactive Advertising Bureau (IAB)]. TCF 2.0 요구 사항을 준수하는 플랫폼을 사용하면 자세한 고객 동의 데이터를 수집하고 이를 저장된 고객 프로필에 통합할 수 있습니다. 그런 다음 이 동의 데이터를 사용 사례에 따라 특정 프로필이 내보낸 대상 세그먼트에 포함되는지 여부에 팩터링할 수 있습니다.
 
 의 개요 보기 [Experience Platform에서 IAB TCF 2.0 지원](../../landing/governance-privacy-security/consent/iab/overview.md) 추가 정보.
 
