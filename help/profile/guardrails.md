@@ -3,12 +3,12 @@ title: 실시간 고객 프로필 데이터 및 세분화를 위한 기본 보�
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Real-Time CDP 기능을 최적의 상태로 사용할 수 있도록 프로필 데이터 및 세그멘테이션을 위한 성능 및 시스템 적용 가드레일에 대해 알아봅니다.
+description: Real-Time CDP 기능의 최적 사용을 보장하기 위해 프로필 데이터 및 세분화에 대한 성능 및 시스템 적용 가드레일에 대해 알아봅니다.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 source-git-commit: 56ed0d777d9a7d489cde2e40340fee4ca0ad8c03
 workflow-type: tm+mt
 source-wordcount: '2230'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
