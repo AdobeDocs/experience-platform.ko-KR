@@ -3,9 +3,9 @@ title: (Beta) 트레이드 데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타기팅 및 억제에 대한 프로필을 트레이드 데스크 계정에 활성화합니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3680341c5ca4012ae33df32aa901467d1048b702
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1130'
 ht-degree: 5%
 
 ---
@@ -49,7 +49,7 @@ Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소�
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | 이메일 | 이메일 주소(텍스트 지우기) | 입력 `email` 소스 ID가 이메일 네임스페이스 또는 속성인 경우 타겟 ID로. |
-| Email_LC_SHA256 | 이메일 주소는 SHA256 및 소문자를 사용하여 해시해야 합니다. 다음 중 하나를 따르십시오. [이메일 표준화](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) 규칙이 필요합니다. 나중에 이 설정을 변경할 수 없습니다. | 입력 `hashed_email` 소스 ID가 Email_LC_SHA256 네임스페이스 또는 속성일 경우 타겟 ID로 사용됩니다. |
+| Email_LC_SHA256 | 이메일 주소는 SHA256 및 소문자를 사용하여 해시해야 합니다. 나중에 이 설정을 변경할 수 없습니다. | 입력 `hashed_email` 소스 ID가 Email_LC_SHA256 네임스페이스 또는 속성일 경우 타겟 ID로 사용됩니다. |
 
 {style="table-layout:auto"}
 
