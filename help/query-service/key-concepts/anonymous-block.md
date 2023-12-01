@@ -2,9 +2,9 @@
 title: 쿼리 서비스의 익명 블록
 description: 익명 블록은 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문으로, 쿼리 시퀀스를 효율적으로 실행할 수 있습니다
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: b7de5d3b2ceba27f5e86d48078be484dcb6f7c4b
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
@@ -60,8 +60,28 @@ END
 $$;
 ```
 
+## 타사 클라이언트가 있는 익명 블록 {#third-party-clients}
+
+특정 타사 클라이언트는 스크립트의 일부가 단일 문으로 처리되어야 함을 나타내기 위해 SQL 블록 전후에 별도의 식별자가 필요할 수 있습니다. 서드파티 클라이언트에서 쿼리 서비스를 사용할 때 오류 메시지가 표시되는 경우 SQL 블록 사용과 관련된 서드파티 클라이언트의 설명서를 참조하십시오.
+
+예를 들어, **DbVisualizer** 를 사용하려면 구분 기호가 줄의 유일한 텍스트여야 합니다. DbVisualizer에서 시작 식별자의 기본값은 입니다. `--/` 최종 식별자의 경우 다음과 같습니다. `/`. DbVisualizer의 익명 블록의 예는 아래에 나와 있습니다.
+
+```SQL
+--/
+$$ BEGIN
+    CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
+    ....
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
+    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+END
+$$;
+/
+```
+
+특히 DbVisualizer의 경우 UI에 &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. 다음을 참조하십시오. [DbVisualizer 설명서](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) 추가 정보.
+
 ## 다음 단계
 
-이제 이 문서를 읽고 익명 블록과 그 구성 방법을 명확하게 이해할 수 있습니다. [쿼리 실행에 대한 자세한 정보](../best-practices/writing-queries.md)쿼리 서비스의 쿼리 실행에 대한 안내서를 참조하십시오.
+이제 이 문서를 읽고 익명 블록과 그 구성 방법을 명확하게 이해할 수 있습니다. 다음을 읽으십시오. [쿼리 실행 안내서](../best-practices/writing-queries.md) 쿼리 작성에 대한 자세한 내용을 참조하십시오.
 
-다음 내용도 읽어 보십시오. [증분 로드 디자인 패턴과 함께 익명 블록을 사용하는 방법](./incremental-load.md) 쿼리 효율성을 높입니다.
+다음 내용도 읽어 보십시오. [증분 로드 디자인 패턴에 익명 블록을 사용하는 방법](./incremental-load.md) 쿼리 효율성을 높입니다.

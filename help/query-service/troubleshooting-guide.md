@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 자주 묻는 질문
 description: 이 문서에는 쿼리 서비스와 관련된 일반적인 질문과 대답이 포함되어 있습니다. 주제에는 데이터 내보내기, 서드파티 도구 및 PSQL 오류가 포함됩니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 8f60d53c1adaf29ce2dce7c3af84f8b39998f7d0
+source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
 workflow-type: tm+mt
-source-wordcount: '4384'
+source-wordcount: '4450'
 ht-degree: 1%
 
 ---
@@ -545,6 +545,11 @@ WHERE T2.ID IS NULL
 ### Data Distiller 액세스 없이 CREATE VIEW 명령을 사용할 수 있습니까?
 
 +++예, 다음을 사용할 수 있습니다. `CREATE VIEW` data Distiller 액세스 권한 없는 명령입니다. 이 명령은 데이터의 논리적 뷰를 제공하지만 데이터 레이크에 다시 쓰지 않습니다.
++++
+
+### DbVisualizer에서 익명 블록을 사용할 수 있습니까?
+
++++예 라고 답하십시오. 그러나 DbVisualizer와 같은 특정 타사 클라이언트에는 스크립트의 일부를 단일 문으로 처리해야 함을 나타내기 위해 SQL 블록 전후에 별도의 식별자가 필요할 수 있습니다. 자세한 내용은 [익명 블록 설명서](./key-concepts/anonymous-block.md) 또는 [공식 DbVisualizer 설명서](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
 ## 데이터 내보내기 {#exporting-data}
