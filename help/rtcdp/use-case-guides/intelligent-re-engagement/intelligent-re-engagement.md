@@ -3,10 +3,10 @@ title: 지능형 재참여
 description: 주요 전환 순간에 강력한 연결 환경을 제공하여 방문 빈도가 낮은 고객을 지능적으로 재참여시킵니다.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: ea0f53339d8549152a54267d537b04326f9164df
 workflow-type: tm+mt
-source-wordcount: '3594'
-ht-degree: 53%
+source-wordcount: '3772'
+ht-degree: 48%
 
 ---
 
@@ -19,6 +19,8 @@ ht-degree: 53%
 지능적이고 책임 있는 방식으로 전환을 포기한 고객을 다시 참여시킵니다. 소멸된 고객과 경험을 통해 전환을 늘리고 클라이언트 라이프타임 값을 높일 수 있습니다.
 
 실시간 고려 사항을 적용하고, 모든 소비자 특성과 행동을 감안하고, 온라인 및 오프라인 이벤트를 기반으로 빠른 재인증을 제공합니다.
+
+다음은 Real-Time CDP 및 Journey Optimizer의 다양한 구성 요소에 대한 높은 수준의 아키텍처 보기입니다. 이 다이어그램은 이 페이지에 설명된 사용 사례를 달성하기 위해 데이터가 데이터 수집에서 여정 또는 캠페인을 통해 활성화된 지점까지 두 Experience Platform 앱을 통해 어떻게 이동하는지를 보여 줍니다.
 
 ![지능형 재참여 높은 수준의 시각적 개요.](../intelligent-re-engagement/images/step-by-step.png)
 
@@ -59,7 +61,7 @@ ht-degree: 53%
 
 1. 스키마 및 데이터 세트를 만든 다음 를 활성화합니다. [!UICONTROL 프로필].
 2. Web SDK, Mobile SDK 또는 API를 통해 데이터를 Experience Platform에 수집합니다. Analytics Data Connector도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
-3. ID 그래프를 통해 인증된 웹 및/또는 모바일 앱 방문자에게 연결할 수 있는 추가 프로필 활성화 데이터를 수집합니다.
+3. ID 그래프를 통해 인증된 웹 및 모바일 앱 방문자에게 연결할 수 있는 추가 프로필 활성화 데이터를 수집합니다.
 4. **고객**&#x200B;이 지난 3일 동안 참여를 실행했는지 확인하기 위해 프로필 목록에서 집중 대상자를 구축합니다.
 5. 에서 구매하지 않은 제품 검색 여정을 만듭니다. [!DNL Adobe Journey Optimizer].
 6. 필요한 경우, **데이터 파트너**&#x200B;와 협력하여 원하는 유료 미디어 대상에 대한 대상자를 활성화할 수 있습니다.
@@ -71,7 +73,7 @@ ht-degree: 53%
 
 1. 스키마 및 데이터 세트를 만들고 [!UICONTROL 프로필].
 2. Web SDK, Mobile SDK 또는 API를 통해 데이터를 Experience Platform에 수집합니다. Analytics Data Connector도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
-3. ID 그래프를 통해 인증된 웹 및/또는 모바일 앱 방문자에게 연결할 수 있는 추가 프로필 활성화 데이터를 수집합니다.
+3. ID 그래프를 통해 인증된 웹 및 모바일 앱 방문자에게 연결할 수 있는 추가 프로필 활성화 데이터를 수집합니다.
 4. **고객**&#x200B;이 장바구니에 품목을 넣었지만 구매를 완료하지 않았는지 확인하기 위해 프로필 목록에서 집중 대상자를 구축합니다. **[!UICONTROL 장바구니에 추가]** 이벤트는 30분 동안 대기한 다음 구매를 확인하는 타이머를 시작합니다. 구매가 완료되면 **고객**&#x200B;이 **[!UICONTROL 장바구니 포기]** 대상자에 추가됩니다.
 5. [!DNL Adobe Journey Optimizer]에서 포기한 장바구니 여정을 만듭니다.
 6. 필요한 경우, **데이터 파트너**&#x200B;와 협력하여 원하는 유료 미디어 대상에 대한 대상자를 활성화할 수 있습니다.
@@ -83,7 +85,7 @@ ht-degree: 53%
 
 1. 스키마 및 데이터 세트를 만든 다음 를 활성화합니다. [!UICONTROL 프로필].
 2. Web SDK, Mobile SDK 또는 API를 통해 데이터를 Experience Platform에 수집합니다. Analytics Data Connector도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
-3. ID 그래프를 통해 인증된 웹 및/또는 모바일 앱 방문자에게 연결할 수 있는 추가 프로필 활성화 데이터를 수집합니다.
+3. ID 그래프를 통해 인증된 웹 및 모바일 앱 방문자에게 연결할 수 있는 추가 프로필 활성화 데이터를 수집합니다.
 4. [!DNL Adobe Journey Optimizer]에서 확인 여정을 만듭니다.
 5. [!DNL Adobe Journey Optimizer]는 선호 채널을 사용하여 주문 확인 메시지를 보냅니다.
 
@@ -109,10 +111,10 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 [개인 연락처 세부 정보](/help/xdm/field-groups/profile/personal-contact-details.md)는 개별 사용자의 연락처 정보를 설명하는 XDM 개별 프로필 클래스의 표준 스키마 필드 그룹입니다.
 
-| 필드 | 요구 사항 | 설명 |
-| --- | --- | --- |
-| `mobilePhone.number` | 필수 여부 | SMS에 사용될 개인의 휴대폰 번호 |
-| `personalEmail.address` | 필수 여부 | 개인의 이메일 주소. |
+| 필드 | 설명 |
+| --- | --- |
+| `mobilePhone.number` | SMS에 사용될 개인의 휴대폰 번호 |
+| `personalEmail.address` | 개인의 이메일 주소. |
 
 +++
 
@@ -139,13 +141,13 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++프로필 테스트 세부 정보(필드 그룹)
 
-이 필드 그룹은 모범 사례에 사용됩니다.
+이 필드 그룹에서는 테스트 프로필을 사용하여 여정을 게시하기 전에 테스트할 수 있습니다. 테스트 프로필 만들기에 대한 자세한 내용은 [테스트 프로필 만들기 튜토리얼](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) 및 [여정 자습서 테스트](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html).
 
 +++
 
 #### 고객 디지털 트랜잭션 스키마
 
-이 스키마는 웹 사이트 및/또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구성하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 다음 위치에 수집됩니다 [!DNL Adobe Experience Platform] 경유 [웹 SDK](/help/edge/home.md) 또한 여정 트리거, 자세한 온라인 고객 분석 및 향상된 대상 기능에 사용되는 다양한 검색 및 전환 이벤트를 참조해야 합니다.
+이 스키마는 웹 사이트 또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 다음 위치에 수집됩니다 [!DNL Adobe Experience Platform] 경유 [웹 SDK](/help/edge/home.md) 또한 여정 트리거, 자세한 온라인 고객 분석 및 향상된 대상 기능에 사용되는 다양한 검색 및 전환 이벤트를 참조해야 합니다.
 
 고객 디지털 거래 스키마는 로 표시됩니다. [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스.
 
@@ -153,11 +155,11 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 다음 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스에는 다음 필드 그룹이 포함됩니다.
 
-| 필드 | 요구 사항 | 설명 |
-| --- | --- | --- |
-| `_id` | 필수 여부 | 에 수집되는 개별 이벤트를 고유하게 식별합니다 [!DNL Adobe Experience Platform]. |
-| `timestamp` | 필수 여부 | RFC 3339 섹션 5.6에 따라 형식이 지정된, 이벤트가 발생한 시간의 ISO 8601 타임스탬프. 이 타임스탬프는 과거의 날짜여야 합니다. |
-| `eventType` | 필수 여부 | 이벤트의 카테고리 유형을 나타내는 문자열입니다. |
+| 필드 | 설명 |
+| --- | --- |
+| `_id` | 에 수집되는 개별 이벤트를 고유하게 식별합니다 [!DNL Adobe Experience Platform]. |
+| `timestamp` | RFC 3339 섹션 5.6에 따라 형식이 지정된, 이벤트가 발생한 시간의 ISO 8601 타임스탬프. 이 타임스탬프는 과거의 날짜여야 합니다. |
+| `eventType` | 이벤트의 카테고리 유형을 나타내는 문자열입니다. |
 
 +++
 
@@ -165,14 +167,14 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 다음 [최종 사용자 ID 세부 정보](/help/xdm/field-groups/event/enduserids.md) 필드 그룹은 여러 Adobe 애플리케이션에서 개인의 id 정보를 설명하는 데 사용됩니다.
 
-| 필드 | 요구 사항 | 설명 |
-| --- | --- | --- |
-| `endUserIDs._experience.emailid.authenticatedState` | 필수 여부 | 최종 사용자 이메일 주소 ID 인증 상태 |
-| `endUserIDs._experience.emailid.id` | 필수 여부 | 최종 사용자 이메일 주소 ID |
-| `endUserIDs._experience.emailid.namespace.code` | 필수 여부 | 최종 사용자 이메일 주소 ID 네임스페이스 코드 |
-| `endUserIDs._experience.mcid.authenticatedState` | 필수 여부 | [!DNL Adobe] Marketing Cloud ID(MCID) 인증 상태. MCID는 이제 ECID(Experience Cloud ID)로 알려져 있습니다. |
-| `endUserIDs._experience.mcid.id` | 필수 여부 | [!DNL Adobe] Marketing Cloud ID(MCID). MCID는 이제 ECID(Experience Cloud ID)로 알려져 있습니다. |
-| `endUserIDs._experience.mcid.namespace.code` | 필수 여부 | [!DNL Adobe] Marketing Cloud ID(MCID) 네임스페이스 코드. |
+| 필드 | 설명 |
+| --- | --- |
+| `endUserIDs._experience.emailid.authenticatedState` | 최종 사용자 이메일 주소 ID 인증 상태 |
+| `endUserIDs._experience.emailid.id` | 최종 사용자 이메일 주소 ID |
+| `endUserIDs._experience.emailid.namespace.code` | 최종 사용자 이메일 주소 ID 네임스페이스 코드 |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Marketing Cloud ID(MCID) 인증 상태. MCID는 이제 ECID(Experience Cloud ID)로 알려져 있습니다. |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID(MCID). MCID는 이제 ECID(Experience Cloud ID)로 알려져 있습니다. |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud ID(MCID) 네임스페이스 코드. |
 
 +++
 
@@ -192,11 +194,11 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 다음 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스에는 다음 필드 그룹이 포함됩니다.
 
-| 필드 | 요구 사항 | 설명 |
-| --- | --- | --- |
-| `_id` | 필수 여부 | 에 수집되는 개별 이벤트를 고유하게 식별합니다 [!DNL Adobe Experience Platform]. |
-| `timestamp` | 필수 여부 | RFC 3339 섹션 5.6에 따라 형식이 지정된, 이벤트가 발생한 시간의 ISO 8601 타임스탬프. 이 타임스탬프는 과거의 날짜여야 합니다. |
-| `eventType` | 필수 여부 | 이벤트의 카테고리 유형을 나타내는 문자열입니다. |
+| 필드 | 설명 |
+| --- | --- |
+| `_id` | 에 수집되는 개별 이벤트를 고유하게 식별합니다 [!DNL Adobe Experience Platform]. |
+| `timestamp` | RFC 3339 섹션 5.6에 따라 형식이 지정된, 이벤트가 발생한 시간의 ISO 8601 타임스탬프. 이 타임스탬프는 과거의 날짜여야 합니다. |
+| `eventType` | 이벤트의 카테고리 유형을 나타내는 문자열입니다. |
 
 +++
 
@@ -204,18 +206,18 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 다음 [상거래 세부 정보](/help/xdm/field-groups/event/commerce-details.md) 필드 그룹은 제품 정보(SKU, 이름, 수량) 및 표준 장바구니 작업(주문, 체크아웃, 포기)과 같은 상거래 데이터를 설명하는 데 사용됩니다.
 
-| 필드 | 요구 사항 | 설명 |
-| --- | --- | --- |
-| `commerce.cart.cartID` | 필수 여부 | 장바구니 ID |
-| `commerce.order.orderType` | 필수 여부 | 제품 주문 유형을 설명하는 오브젝트입니다. |
-| `commerce.order.payments.paymentAmount` | 필수 여부 | 상품 주문 결제 금액을 설명하는 오브젝트 |
-| `commerce.order.payments.paymentType` | 필수 여부 | 상품 주문 결제 유형을 설명하는 오브젝트 |
-| `commerce.order.payments.transactionID` | 필수 여부 | 오브젝트 제품 주문 트랜잭션 ID |
-| `commerce.order.purchaseID` | 필수 여부 | 오브젝트 제품 주문 구매 ID |
-| `productListItems.name` | 필수 여부 | 고객이 선택한 제품을 나타내는 항목 이름 목록 |
-| `productListItems.priceTotal` | 필수 여부 | 고객이 선택한 제품을 나타내는 항목 목록의 총 가격 |
-| `productListItems.product` | 필수 여부 | 선택한 제품 |
-| `productListItems.quantity` | 필수 여부 | 고객이 선택한 제품을 나타내는 항목 목록의 수량 |
+| 필드 | 설명 |
+| --- | --- |
+| `commerce.cart.cartID` | 장바구니 ID |
+| `commerce.order.orderType` | 제품 주문 유형을 설명하는 오브젝트입니다. |
+| `commerce.order.payments.paymentAmount` | 상품 주문 결제 금액을 설명하는 오브젝트 |
+| `commerce.order.payments.paymentType` | 상품 주문 결제 유형을 설명하는 오브젝트 |
+| `commerce.order.payments.transactionID` | 오브젝트 제품 주문 트랜잭션 ID |
+| `commerce.order.purchaseID` | 오브젝트 제품 주문 구매 ID |
+| `productListItems.name` | 고객이 선택한 제품을 나타내는 항목 이름 목록 |
+| `productListItems.priceTotal` | 고객이 선택한 제품을 나타내는 항목 목록의 총 가격 |
+| `productListItems.product` | 선택한 제품 |
+| `productListItems.quantity` | 고객이 선택한 제품을 나타내는 항목 목록의 수량 |
 
 +++
 
@@ -223,10 +225,10 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 [개인 연락처 세부 정보](/help/xdm/field-groups/profile/personal-contact-details.md)는 개별 사용자의 연락처 정보를 설명하는 XDM 개별 프로필 클래스의 표준 스키마 필드 그룹입니다.
 
-| 필드 | 요구 사항 | 설명 |
-| --- | --- | --- |
-| `mobilePhone.number` | 필수 여부 | SMS에 사용될 개인의 휴대폰 번호 |
-| `personalEmail.address` | 필수 여부 | 개인의 이메일 주소. |
+| 필드 | 설명 |
+| --- | --- |
+| `mobilePhone.number` | SMS에 사용될 개인의 휴대폰 번호 |
+| `personalEmail.address` | 개인의 이메일 주소. |
 
 +++
 
@@ -242,7 +244,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 >
 >[[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md)를 사용하는 경우 선택적 구현입니다.
 
-이 스키마는 웹 사이트 및/또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구성하고 참조하는 데 사용됩니다. 이 스키마는 고객 디지털 트랜잭션 스키마와 유사하지만, 다음과 같은 경우에 사용하기 위한 것이라는 점에서 다릅니다 [웹 SDK](/help/edge/home.md) 는 데이터 수집에 대한 옵션이 아니므로 을(를) 활용할 때 이 스키마가 필요합니다. [!DNL Adobe Analytics Source Connector] 온라인 데이터를에 보내려면 [!DNL Adobe Experience Platform] 를 기본 또는 보조 데이터 스트림으로 사용합니다.
+이 스키마는 웹 사이트 또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 스키마는 고객 디지털 트랜잭션 스키마와 유사하지만, 다음과 같은 경우에 사용하기 위한 것이라는 점에서 다릅니다 [웹 SDK](/help/edge/home.md) 는 데이터 수집에 대한 옵션이 아니므로 을(를) 활용할 때 이 스키마가 필요합니다. [!DNL Adobe Analytics Source Connector] 온라인 데이터를에 보내려면 [!DNL Adobe Experience Platform] 를 기본 또는 보조 데이터 스트림으로 사용합니다.
 
 다음 [!DNL Adobe] 웹 커넥터 스키마는 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스.
 
@@ -250,11 +252,11 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 다음 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스에는 다음 필드 그룹이 포함됩니다.
 
-| 필드 | 요구 사항 | 설명 |
-| --- | --- | --- |
-| `_id` | 필수 여부 | 에 수집되는 개별 이벤트를 고유하게 식별합니다 [!DNL Adobe Experience Platform]. |
-| `timestamp` | 필수 여부 | RFC 3339 섹션 5.6에 따라 형식이 지정된, 이벤트가 발생한 시간의 ISO 8601 타임스탬프. 이 타임스탬프는 과거의 날짜여야 합니다. |
-| `eventType` | 필수 여부 | 이벤트의 카테고리 유형을 나타내는 문자열입니다. |
+| 필드 | 설명 |
+| --- | --- |
+| `_id` | 에 수집되는 개별 이벤트를 고유하게 식별합니다 [!DNL Adobe Experience Platform]. |
+| `timestamp` | RFC 3339 섹션 5.6에 따라 형식이 지정된, 이벤트가 발생한 시간의 ISO 8601 타임스탬프. 이 타임스탬프는 과거의 날짜여야 합니다. |
+| `eventType` | 이벤트의 카테고리 유형을 나타내는 문자열입니다. |
 
 +++
 
@@ -262,14 +264,14 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 다음 [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/event/analytics-full-extension.md) 필드 그룹은 Adobe Analytics에서 수집하는 일반적인 지표를 캡처합니다.
 
-| 필드 | 요구 사항 | 설명 |
-| --- | --- | --- |
-| `endUserIDs._experience.emailid.authenticatedState` | 필수 여부 | 최종 사용자 이메일 주소 ID 인증 상태 |
-| `endUserIDs._experience.emailid.id` | 필수 여부 | 최종 사용자 이메일 주소 ID |
-| `endUserIDs._experience.emailid.namespace.code` | 필수 여부 | 최종 사용자 이메일 주소 ID 네임스페이스 코드 |
-| `endUserIDs._experience.mcid.authenticatedState` | 필수 여부 | [!DNL Adobe] Marketing Cloud ID(MCID) 인증 상태. MCID는 이제 ECID(Experience Cloud ID)로 알려져 있습니다. |
-| `endUserIDs._experience.mcid.id` | 필수 여부 | [!DNL Adobe] Marketing Cloud ID(MCID). MCID는 이제 ECID(Experience Cloud ID)로 알려져 있습니다. |
-| `endUserIDs._experience.mcid.namespace.code` | 필수 여부 | [!DNL Adobe] Marketing Cloud ID(MCID) 네임스페이스 코드. |
+| 필드 | 설명 |
+| --- | --- |
+| `endUserIDs._experience.emailid.authenticatedState` | 최종 사용자 이메일 주소 ID 인증 상태 |
+| `endUserIDs._experience.emailid.id` | 최종 사용자 이메일 주소 ID |
+| `endUserIDs._experience.emailid.namespace.code` | 최종 사용자 이메일 주소 ID 네임스페이스 코드 |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Marketing Cloud ID(MCID) 인증 상태. MCID는 이제 ECID(Experience Cloud ID)로 알려져 있습니다. |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID(MCID). MCID는 이제 ECID(Experience Cloud ID)로 알려져 있습니다. |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud ID(MCID) 네임스페이스 코드. |
 
 +++
 
@@ -344,8 +346,9 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 이 대상자를 설정할 때 다음 필드와 조건이 필요합니다.
 
 * `eventType: commerce.productViews`
-* 및 `THEN` (순차적 이벤트) 제외 `eventType: commerce.procuctListAdds` 또는 `application.launch` 또는 `web.webpagedetails.pageViews` 또는 `commerce.purchases` (여기에는 온라인과 오프라인이 모두 포함됩니다.)
+* 및 `THEN` (순차적 이벤트) 제외 `eventType: commerce.productListAdds` 또는 `application.launch` 또는 `web.webpagedetails.pageViews` 또는 `commerce.purchases` (여기에는 온라인과 오프라인이 모두 포함됩니다.)
    * `Timestamp: > 3 days after productView`
+* `Timestamp: > 4 days`
 
 +++
 
@@ -356,8 +359,10 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 이 대상자를 설정할 때 다음 필드와 조건이 필요합니다.
 
 * `eventType: commerce.productViews`
-* 및 `THEN` (순차적 이벤트)에는 다음이 포함됩니다 `eventType: commerce.procuctListAdds` 또는 `application.launch` 또는 `web.webpagedetails.pageViews` 또는 `commerce.purchases` (여기에는 온라인과 오프라인이 모두 포함됩니다.)
+* 및 `THEN` (순차적 이벤트)에는 다음이 포함됩니다 `eventType: commerce.productListAdds` 또는 `application.launch` 또는 `web.webpagedetails.pageViews` 또는 `commerce.purchases` (여기에는 온라인과 오프라인이 모두 포함됩니다.)
    * `Timestamp: > 3 days after productView`
+* `Timestamp: > 4 days`
++++
 
 +++지난 1일 동안의 참여 스트리밍
 
@@ -365,7 +370,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 이 대상자를 설정할 때 다음 필드와 조건이 필요합니다.
 
-* `eventType: commerce.procuctListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `eventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
    * `Timestamp: in last 1 day` (스트리밍)
 
 +++
@@ -376,7 +381,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 이 대상자를 설정할 때 다음 필드와 조건이 필요합니다.
 
-* `EventType: commerce.procuctListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `EventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
    * `Timestamp: in last 3 days` (일괄 처리)
 
 +++
@@ -422,6 +427,8 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++이벤트
 
+이벤트를 사용하면 여정을 통합적으로 트리거하여 여정에 참여하는 개인에게 실시간으로 메시지를 보낼 수 있습니다. 이벤트에 대한 자세한 내용은 [일반 이벤트 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+
 * 이벤트 1: 제품 보기
    * 스키마: 고객 디지털 트랜잭션
    * 필드:
@@ -429,14 +436,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
    * 조건:
       * `eventType = commerce.productViews`
       * 필드:
-         * `commerce.productViews.id`
-         * `commerce.productViews.value`
          * `eventType`
-         * `identityMap.authenticatedState`
-         * `identityMap.id`
-         * `identityMap.primary`
-         * `productListItems.SKU`
-         * `productListItems.currencyCode`
          * `productListItems.name`
          * `productListItems.priceTotal`
          * `productListItems.product`
@@ -515,7 +515,9 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++
 
-+++주요 여정 논리
++++여정 캔버스 키 논리
+
+여정 캔버스 키 논리를 사용하려면 특정 이벤트를 식별하고 이벤트가 발생한 후 수행할 작업을 구성해야 합니다.
 
 * 여정 입력 로직
    * 제품 보기 이벤트
@@ -549,6 +551,8 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 포기한 장바구니 시나리오는 장바구니에 넣었지만 아직 웹 사이트 및 모바일 앱 모두에서 구매하지 않은 제품을 타깃팅합니다.<p>![고객이 장바구니를 포기한 시나리오 높은 수준의 시각적 개요.](../intelligent-re-engagement/images/abandoned-cart-journey.png "고객이 장바구니를 포기한 시나리오 높은 수준의 시각적 개요."){width="1920" zoomable="yes"}</p>
 
 +++이벤트
+
+이벤트를 사용하면 여정을 통합적으로 트리거하여 여정에 참여하는 개인에게 실시간으로 메시지를 보낼 수 있습니다. 이벤트에 대한 자세한 내용은 [일반 이벤트 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * 이벤트 2: 장바구니에 추가
    * 스키마: 고객 디지털 트랜잭션
@@ -643,7 +647,9 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++
 
-+++주요 여정 논리
++++여정 캔버스 키 논리
+
+여정 캔버스 키 논리를 사용하려면 특정 이벤트를 식별하고 이벤트가 발생한 후 수행할 작업을 구성해야 합니다.
 
 * 여정 입력 로직
    * `AddToCart` 이벤트
@@ -679,6 +685,8 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++이벤트
 
+이벤트를 사용하면 여정을 통합적으로 트리거하여 여정에 참여하는 개인에게 실시간으로 메시지를 보낼 수 있습니다. 이벤트에 대한 자세한 내용은 [일반 이벤트 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+
 * 이벤트 4: 온라인 구매
    * 스키마: 고객 디지털 트랜잭션
    * 필드:
@@ -707,7 +715,9 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++
 
-+++주요 여정 논리
++++여정 캔버스 키 논리
+
+여정 캔버스 키 논리를 사용하려면 특정 이벤트를 식별하고 이벤트가 발생한 후 수행할 작업을 구성해야 합니다.
 
 * 여정 입력 로직
    * 주문 이벤트
@@ -740,10 +750,16 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 * `ECID`
 * `mobilePhone.number`
 
-포기 장바구니 대상은 스트리밍 대상으로 평가되므로 이 사용 사례의 대상 프레임워크에서 사용할 수 있습니다.
+포기한 제품 찾아보기를 활성화하고 장바구니 대상을 유료 미디어 광고로 포기할 수 있습니다.
 
 * 스트림/트리거됨
    * [광고](/help/destinations/catalog/advertising/overview.md)/[유료 미디어 및 소셜](/help/destinations/catalog/social/overview.md)
    * [모바일](/help/destinations/catalog/mobile-engagement/overview.md)
    * [스트리밍 대상](/help/destinations/catalog/streaming/http-destination.md)
    * [Destination SDK을 사용하여 생성된 사용자 지정 대상입니다.](/help/destinations/destination-sdk/overview.md) 질문에 답합니다. Real-Time CDP Ultimate 고객의 경우 개인 을(를) 만들 수도 있습니다 [Destination SDK을 사용한 사용자 지정 대상](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
+
+## 다음 단계 {#next-steps}
+
+지능적이고 책임감 있는 방식으로 전환을 포기한 고객을 다시 참여시킴으로써 전환을 늘리고 클라이언트 라이프타임 가치를 높일 수 있기를 바랍니다.
+
+다음으로, 다음과 같이 Real-Time CDP에서 지원하는 다른 사용 사례를 살펴볼 수 있습니다. [인증되지 않은 사용자에게 개인화된 콘텐츠 표시](/help/rtcdp/partner-data/onsite-personalization.md) 웹 속성에서.
