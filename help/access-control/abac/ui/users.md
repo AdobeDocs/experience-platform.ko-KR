@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 사용자 관리
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 사용자 및 사용자 그룹을 관리하는 방법에 대한 정보를 제공합니다
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
+source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 1%
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 1%
 >
 >시스템 관리자만 권한에서 API 자격 증명을 보고 관리할 수 있습니다.
 
-Adobe Experience Platform 권한으로 전환에는 이전에 제품 프로필에 의존했던 개발자 API 워크플로우에 대해 완료해야 하는 추가 단계가 있습니다. 다음 안내서를 참조하십시오 [API 인증](../../../landing/api-authentication.md) 추가 정보.
+Adobe Experience Platform 권한으로 전환에는 이전에 역할에 의존했던 개발자 API 워크플로에 대해 완료해야 하는 추가 단계가 있습니다. 다음 안내서를 참조하십시오 [API 인증](../../../landing/api-authentication.md) 추가 정보.
 
 ## 다음 단계
 
