@@ -2,10 +2,10 @@
 title: ID 네임스페이스 개요
 description: ID 서비스의 ID 네임스페이스에 대해 알아봅니다.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
 workflow-type: tm+mt
-source-wordcount: '1691'
-ht-degree: 8%
+source-wordcount: '1787'
+ht-degree: 7%
 
 ---
 
@@ -23,11 +23,24 @@ ID 네임스페이스를 사용하려면 다양한 Adobe Experience Platform 서
 
 ## ID 네임스페이스 이해
 
+![ID 서비스를 사용한 데이터 워크플로우의 일러스트레이션입니다.](images/identity-service-stitching.png)
+
 정규화된 ID에는 다음 두 가지 구성 요소가 포함됩니다. **id 값** 및 **id 네임스페이스**. 예를 들어 ID의 값이 `scott@acme.com`을 입력한 다음 네임스페이스는 이 값을 이메일 주소로 구별하여 컨텍스트를 제공합니다. 마찬가지로 네임스페이스에서는 `555-123-456` 전화번호로서요 `3126ABC` CRM ID로. 기본적으로, **네임스페이스는 특정 id에 컨텍스트를 제공합니다**. 다음과 같이 프로필 조각 간에 레코드 데이터를 일치시킬 때 [!DNL Real-Time Customer Profile] 프로필 데이터를 병합합니다. id 값과 네임스페이스가 모두 일치해야 합니다.
 
 예를 들어 두 개의 프로필 조각에 서로 다른 기본 ID가 포함되어 있을 수 있지만 &quot;이메일&quot; 네임스페이스에 대해 동일한 값을 공유하므로 Experience Platform은 이러한 조각이 실제로 동일한 개인임을 확인할 수 있으며 해당 개인의 ID 그래프에 데이터를 함께 가져옵니다.
 
-![](images/identity-service-stitching.png)
+>[!BEGINSHADEBOX]
+
+**ID 네임스페이스 설명**
+
+네임스페이스의 개념을 더 잘 이해할 수 있는 또 다른 방법은 도시 및 해당 상태와 같은 실제 사례를 고려하는 것입니다. 예를 들어, 포틀랜드, 메인, 그리고 오리건 포틀랜드는 미국에서 두 개의 다른 장소입니다. 도시는 같은 이름을 공유하는 반면, 국가는 네임스페이스로 작동하며 두 도시를 서로 구분하는 필요한 컨텍스트를 제공한다.
+
+ID 서비스에 동일한 논리 적용:
+
+* 의 ID 값 개요: `1-234-567-8900` 전화번호처럼 보일 수 있습니다. 그러나 시스템 관점에서 이 값은 CRM ID로 구성할 수 있습니다. ID 서비스에서는 해당 네임스페이스 없이 필요한 컨텍스트를 이 ID 값에 적용할 수 없습니다.
+* 또 다른 예는 의 ID 값입니다. `john@gmail.com`. 이 ID 값은 쉽게 이메일로 가정할 수 있지만 사용자 지정 네임스페이스 CRM ID로 구성되었을 수 있습니다. 네임스페이스를 사용하면 다음을 구별할 수 있습니다. `Email:john@gmail.com` 출처: `CRM ID:john@gmail.com`.
+
+>[!ENDSHADEBOX]
 
 ### 네임스페이스의 구성 요소
 
@@ -61,7 +74,7 @@ Experience Platform 내에서 사용할 수 있는 ID 유형은 다음과 같습
 | 교차 장치 ID | 크로스 디바이스 ID는 개인을 식별하며 일반적으로 다른 ID를 함께 연결합니다. 예를 들면 로그인 ID, CRM ID 및 충성도 ID가 있습니다. 다음에 대한 표시입니다. [!DNL Identity Service] 를 입력하여 값을 민감하게 처리합니다. |
 | 장치 ID | 장치 ID는 IDFA(iPhone 및 iPad), GAID(Android) 및 RIDA(Roku)와 같은 하드웨어 장치를 식별하며 가정에서 여러 사람이 공유할 수 있습니다. |
 | 이메일 주소 | 이메일 주소는 종종 단일 사용자와 연결되므로, 다양한 채널에서 해당 사용자를 식별하는 데 사용할 수 있습니다. 이 유형의 ID에는 PII(개인 식별 정보)가 포함됩니다. 다음에 대한 표시입니다. [!DNL Identity Service] 를 입력하여 값을 민감하게 처리합니다. |
-| 비인물 식별자 | 비사용자 ID는 네임스페이스가 필요하지만 개인 클러스터에 연결되지 않은 식별자를 저장하는 데 사용됩니다. 예: 제품 SKU, 제품, 조직 또는 스토어와 관련된 데이터. |
+| 비사용자 식별자 | 비사용자 ID는 네임스페이스가 필요하지만 개인 클러스터에 연결되지 않은 식별자를 저장하는 데 사용됩니다. 예: 제품 SKU, 제품, 조직 또는 스토어와 관련된 데이터. |
 | 파트너 ID | <ul><li>파트너 ID는 데이터 파트너가 사람을 나타내기 위해 사용하는 식별자입니다. 파트너 ID는 종종 개인의 진짜 신분을 밝히지 않기 위해 가명으로 사용되며 확률적일 수 있습니다. Real-time Customer Data Platform에서 파트너 ID는 ID 그래프 링크 구축이 아니라 주로 확장된 대상 활성화 및 데이터 보강에 사용됩니다.</li><li>파트너 ID 유형으로 지정된 ID 네임스페이스가 포함된 ID를 수집할 때 ID 그래프가 생성되지 않습니다.</li><li>파트너 ID의 ID 유형을 사용하여 파트너 데이터를 수집하지 않으면 ID 서비스의 시스템 그래프 제한에 도달할 수 있을 뿐만 아니라 원치 않는 프로필 병합이 발생할 수 있습니다.</li><ul> |
 | 전화번호 | 전화번호는 종종 한 사람과 연관되어 있으므로 다른 채널에서 해당 사람을 식별하는 데 사용할 수 있습니다. 이 유형의 ID에는 PII가 포함됩니다. 다음에 대한 표시입니다 [!DNL Identity Service] 를 입력하여 값을 민감하게 처리합니다. |
 
@@ -79,7 +92,7 @@ Experience Platform은 모든 조직에서 사용할 수 있는 여러 ID 네임
 | Adobe Analytics (이전 ID) | Adobe Analytics을 나타내는 네임스페이스입니다. 에 대한 다음 문서를 참조하십시오. [Adobe Analytics 네임스페이스](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) 추가 정보. |
 | Apple IDFA (광고주용 ID) | 광고주용 Apple ID를 나타내는 네임스페이스입니다. 에 대한 다음 문서를 참조하십시오. [관심 기반 광고](https://support.apple.com/en-us/HT202074) 추가 정보. |
 | Apple 푸시 알림 서비스 | Apple 푸시 알림 서비스를 사용하여 수집된 ID를 나타내는 네임스페이스입니다. 에 대한 다음 문서를 참조하십시오. [Apple 푸시 알림 서비스](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) 추가 정보. |
-| CORE | Adobe Audience Manager을 나타내는 네임스페이스입니다. 이 네임스페이스는 기존 이름 &quot;Adobe AudienceManager&quot;로도 참조할 수 있습니다. 에 대한 다음 문서를 참조하십시오. [AUDIENCE MANAGER ID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html#aam-ids) 추가 정보. |
+| 코어 | Adobe Audience Manager을 나타내는 네임스페이스입니다. 이 네임스페이스는 기존 이름 &quot;Adobe AudienceManager&quot;로도 참조할 수 있습니다. 에 대한 다음 문서를 참조하십시오. [AUDIENCE MANAGER ID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html#aam-ids) 추가 정보. |
 | ECID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 에 대한 다음 문서를 참조하십시오. [ECID](./ecid.md) 추가 정보. |
 | 이메일 | 이메일 주소를 나타내는 네임스페이스입니다. 이러한 유형의 네임스페이스는 종종 단일 사용자와 연결되므로 여러 채널에서 해당 사용자를 식별하는 데 사용할 수 있습니다. |
 | 이메일(SHA256, 소문자) | 사전 해시된 이메일 주소를 위한 네임스페이스입니다. 이 네임스페이스에 제공된 값은 SHA256으로 해싱하기 전에 소문자로 변환됩니다. 전자 메일 주소가 정규화되기 전에 선행 및 후행 공백을 잘라내야 합니다. 이 설정은 소급하여 변경할 수 없습니다. 에 대한 다음 문서를 참조하십시오. [SHA256 해시 지원](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) 추가 정보. |
