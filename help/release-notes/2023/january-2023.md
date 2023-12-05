@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보 2023년 1월
 description: Adobe Experience Platform의 2023년 1월 릴리스 정보입니다.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '2408'
+source-wordcount: '2224'
 ht-degree: 99%
 
 ---
@@ -79,7 +79,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 기능 | 설명 |
 | --- | --- |
-| 새로운 기능 홈 화면 | 데이터 수집 UI의 홈 페이지가 업데이트되어 유용한 온보딩 정보와 생산성 간소화를 위한 링크가 포함되었습니다. 여기에는 다음 항목이 포함되어 있습니다.<ol><li>시작을 위한 설명서 및 권장 워크플로</li><li>최근 속성, 규칙 및 데이터 요소</li><li>자주 사용하는 확장 기능</li><li>빠른 설치 기능을 통한 새로운 확장 기능 업데이트</li></ol> |
+| 새 홈 화면 | 데이터 수집 UI의 홈 페이지가 업데이트되어 유용한 온보딩 정보와 생산성 간소화를 위한 링크가 포함되었습니다. 여기에는 다음 항목이 포함되어 있습니다.<ol><li>시작을 위한 설명서 및 권장 워크플로</li><li>최근 속성, 규칙 및 데이터 요소</li><li>자주 사용하는 확장 기능</li><li>빠른 설치 기능을 통한 새로운 확장 기능 업데이트</li></ol> |
 | 이벤트 전달을 사용하여 [!DNL Google Ads]로 데이터 전송 | 이제 [Google Oauth 2 Secret](../../tags/ui/event-forwarding/secrets.md#google-oauth2)과 함께 이벤트 전달을 위한 [[!DNL Google Ads Enhanced Conversions] API 확장 기능](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md)을 사용하여 서버측 데이터를 [!DNL Google Ads]에 실시간으로 안전하게 전송할 수 있습니다. |
 
 {style="table-layout:auto"}
@@ -139,7 +139,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 | --- | --- | --- |
 | 클래스 | [[!UICONTROL 전환]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | 통화 전환과 같은 전환 데이터를 추적하기 위한 클래스입니다. |
 | 필드 그룹 | [[!UICONTROL 통화 전환율 세부 정보]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/conversion/currency-conversion-details.schema.json) | 통화 전환과 관련된 추가 세부 정보를 캡처하는 [!UICONTROL 전환] 클래스의 필드 그룹입니다. |
-| 필드 그룹 | [[!UICONTROL 메타데이터와 동의 정책 평가 결과 매핑]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.jsonn) | 동의 정책의 시작과 끝에 대한 메타데이터 정보를 포함하여 여러 동의 정책의 평가 결과에 대한 세부 정보를 캡처합니다. |
+| 필드 그룹 | [[!UICONTROL 메타데이터와 동의 정책 평가 결과 매핑]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.json) | 동의 정책의 시작과 끝에 대한 메타데이터 정보를 포함하여 여러 동의 정책의 평가 결과에 대한 세부 정보를 캡처합니다. |
 
 **업데이트된 XDM 구성 요소**
 
@@ -149,7 +149,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 | 데이터 유형 | [[!UICONTROL 의사 결정 제안 세부 사항]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | 선택 전략의 세부 정보를 캡처하는 `selectionStrategy` 필드가 추가되었습니다. |
 | 필드 그룹 | [[!UICONTROL 경험 이벤트 - 제안 상호 작용]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | 이제 필드 그룹은 [!UICONTROL 고객 여정 단계] 클래스와 호환됩니다. |
 | 데이터 유형 | [[!UICONTROL 오류 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` 필드 이름이 `name`으로 변경되었습니다. |
-| 데이터 유형 | [[!UICONTROL 미디어 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | 패턴의 변경 사항을 비디오 세그먼트 속성으로 복구하였습니다. |
+| 데이터 유형 | [[!UICONTROL 미디어 정보]](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/media.schema.json) | 패턴의 변경 사항을 비디오 세그먼트 속성으로 복구하였습니다. |
 | 데이터 유형 | [[!UICONTROL Qoe 데이터 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | `droppedFrameCount` 필드가 제거되었습니다. |
 | 데이터 유형 | [[!UICONTROL 세션 세부 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | 이전에 부울이었을 때 `isAuthorized` 필드 이름을 `authorized`로 변경하였으며, `type`을 문자열로 업데이트하였습니다. |
 | 데이터 유형 | [[!UICONTROL 배송]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | `shipDate`, `trackingNumber` 및 `trackingURL`과 같은 몇 가지 새 필드를 추가했습니다. |

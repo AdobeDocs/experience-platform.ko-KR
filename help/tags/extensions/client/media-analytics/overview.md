@@ -2,10 +2,10 @@
 title: Adobe Medium Analytics for Audio 및 Video 확장 개요
 description: Adobe Experience Platform의 Adobe Medium Analytics for Audio 및 Video 태그 확장 기능에 대해 알아봅니다.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 82%
+source-wordcount: '949'
+ht-degree: 80%
 
 ---
 
@@ -121,18 +121,19 @@ MA 확장은 `get-instance` 및 `media-heartbeat` 공유 모듈을 다른 확장
 
    * 다음 함수를 노출하는 유효한 위임 개체
 
-      | 메서드 |  설명   |
-      | :--- | :--- |
-      | `getQoSObject()` | 현재 QoS 정보가 포함된 `MediaObject` 인스턴스를 반환합니다. 이 메서드는 재생 세션 중에 여러 번 호출됩니다. 플레이어 구현은 항상 최근에 사용 가능한 QoS 데이터를 반환해야 합니다. |
-      | `getCurrentPlaybackTime()` | 플레이헤드의 현재 위치를 반환합니다. VOD 추적의 경우 이 값은 미디어 항목이 시작된 후 현재까지의 시간(초)으로 지정됩니다. LIVE/LIVE 추적의 경우 이 값은 프로그램이 시작된 후 현재까지의 시간(초)으로 지정됩니다. |
+     | 메서드 |  설명   |
+     | :--- | :--- |
+     | `getQoSObject()` | 현재 QoS 정보가 포함된 `MediaObject` 인스턴스를 반환합니다. 이 메서드는 재생 세션 중에 여러 번 호출됩니다. 플레이어 구현은 항상 최근에 사용 가능한 QoS 데이터를 반환해야 합니다. |
+     | `getCurrentPlaybackTime()` | 플레이헤드의 현재 위치를 반환합니다. VOD 추적의 경우 이 값은 미디어 항목이 시작된 후 현재까지의 시간(초)으로 지정됩니다. LIVE/LIVE 추적의 경우 이 값은 프로그램이 시작된 후 현재까지의 시간(초)으로 지정됩니다. |
 
    * 다음 속성을 노출하는 옵션 구성 개체
 
-      | 속성 | 설명 | 필수 여부 |
-      | :--- | :--- | :--- |
-      | Online Video Provider | 콘텐츠가 배포되는 온라인 비디오 플랫폼의 이름입니다. | 아니요. 있는 경우 확장 구성 중에 정의된 값을 재정의합니다. |
-      | Player Name | 사용 중인 미디어 플레이어의 이름(예: &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) | 아니요. 있는 경우 확장 구성 중에 정의된 값을 재정의합니다. |
-      | Channel | 채널 이름 속성입니다. | 아니요. 있는 경우 확장 구성 중에 정의된 값을 재정의합니다. |
+     | 속성 | 설명 | 필수 여부 |
+     | :--- | :--- | :--- |
+     | Online Video Provider | 콘텐츠가 배포되는 온라인 비디오 플랫폼의 이름입니다. | 아니요. 있는 경우 확장 구성 중에 정의된 값을 재정의합니다. |
+     | Player Name | 사용 중인 미디어 플레이어의 이름(예: &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) | 아니요. 있는 경우 확장 구성 중에 정의된 값을 재정의합니다. |
+     | Channel | 채널 이름 속성입니다. | 아니요. 있는 경우 확장 구성 중에 정의된 값을 재정의합니다. |
+
    **반환 값:** `MediaHeartbeat` 인스턴스로 해결되거나 오류 메시지가 표시되고 거부되는 약속입니다.
 
 1. **MediaHeartbeat 상수에 액세스:** `media-heartbeat` 공유 모듈
@@ -173,11 +174,11 @@ MA 확장은 `get-instance` 및 `media-heartbeat` 공유 모듈을 다른 확장
    ...
    ```
 
-1. 미디어 하트비트 인스턴스를 사용하여 [미디어 SDK JS 설명서](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/setup/setup-javascript/set-up-js-2.html) 및 [JS API 설명서](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html)에 따라 미디어 추적을 구현합니다.
+1. 미디어 하트비트 인스턴스를 사용하여 [미디어 SDK JS 설명서](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) 및 [JS API 설명서](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html)에 따라 미디어 추적을 구현합니다.
 
 >[!NOTE]
 >
->**테스트:** 이 릴리스에서 확장을 테스트하려면 모든 종속 확장에 대한 액세스 권한이 있는 [ Platform ](../../../extension-dev/submit/upload-and-test.md)에 업로드해야 합니다.
+>**테스트:** 이 릴리스에서 확장을 테스트하려면 다음을 업로드해야 합니다. [플랫폼](../../../extension-dev/submit/upload-and-test.md)모든 종속 확장에 대한 액세스 권한이 있는 경우입니다.
 
 
 <!--

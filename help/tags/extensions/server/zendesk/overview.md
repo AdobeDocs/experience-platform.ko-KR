@@ -2,10 +2,10 @@
 title: Zendesk 이벤트 전달 확장
 description: Adobe Experience Platform용 Zendesk 이벤트 전달 확장.
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '1271'
-ht-degree: 5%
+source-wordcount: '1170'
+ht-degree: 4%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 이 문서에서는 UI에서 확장을 설치하고 구성하는 방법을 다룹니다.
 
-## 사전 요구 사항
+## 전제 조건
 
 이 확장을 사용하려면 Zendesk 계정이 있어야 합니다. 에서 Zendesk 계정을 등록할 수 있습니다. [Zendesk 웹 사이트](https://www.zendesk.com/register/).
 
@@ -38,7 +38,7 @@ UI에서 Zendesk 확장을 설치하려면 **이벤트 전달** 확장을 추가
 
 ![UI에서 선택 중인 Zendesk 확장에 대한 설치 버튼](../../../images/extensions/server/zendesk/install.png)
 
-## 확장 프로그램 구성 {#configure}
+## 확장 구성 {#configure}
 
 >[!IMPORTANT]
 >
@@ -70,13 +70,13 @@ UI에서 Zendesk 확장을 설치하려면 **이벤트 전달** 확장을 추가
 
 내에서 다음 키를 참조할 수 있습니다. `event` 데이터 요소에 매핑할 때의 개체:
 
-| `event` key | 유형 | 플랫폼 경로 | 설명 | 필수입니다 | 제한 |
+| `event` key | 유형 | 플랫폼 경로 | 설명 | 필수 | 제한 |
 | --- | --- | --- | --- | --- | --- |
 | `source` | 문자열 | `arc.event.xdm._extconndev.event_source` | 이벤트를 전송한 애플리케이션. | 예 | 사용하지 않음 `Zendesk` as a value는 Zendesk 표준 이벤트의 보호된 소스 이름입니다. 이를 사용하려고 하면 오류가 발생합니다.<br>값 길이는 40자를 초과할 수 없습니다. |
 | `type` | 문자열 | `arc.event.xdm._extconndev.event_type` | 이벤트 유형의 이름입니다. 이 필드를 사용하여 주어진 소스에 대해 서로 다른 종류의 이벤트를 표시할 수 있습니다. 예를 들어 사용자 로그인에 대한 이벤트 세트와 장바구니에 대한 이벤트 세트를 만들 수 있습니다. | 예 | 값 길이는 40자를 초과할 수 없습니다. |
-| `description` | 문자열 | `arc.event.xdm._extconndev.description` | 이벤트에 대한 설명. | 아니요 | (해당 없음) |
-| `created_at` | 문자열 | `arc.event.xdm.timestamp` | 이벤트가 생성된 시간을 반영하는 ISO-8601 타임스탬프. | 아니요 | (해당 없음) |
-| `properties` | 오브젝트 | `arc.event.xdm._extconndev.EventProperties` | 이벤트에 대한 세부 정보가 포함된 사용자 지정 JSON 개체입니다. | 예 | (해당 없음) |
+| `description` | 문자열 | `arc.event.xdm._extconndev.description` | 이벤트에 대한 설명. | 아니요 | (N/A) |
+| `created_at` | 문자열 | `arc.event.xdm.timestamp` | 이벤트가 생성된 시간을 반영하는 ISO-8601 타임스탬프. | 아니요 | (N/A) |
+| `properties` | 오브젝트 | `arc.event.xdm._extconndev.EventProperties` | 이벤트에 대한 세부 정보가 포함된 사용자 지정 JSON 개체입니다. | 예 | (N/A) |
 
 {style="table-layout:auto"}
 
@@ -86,18 +86,18 @@ UI에서 Zendesk 확장을 설치하려면 **이벤트 전달** 확장을 추가
 
 ### `profile` 키
 
-`profile` 는 이벤트를 트리거한 사용자를 나타내는 JSON 개체입니다. 의 Zendesk 문서를 참조하십시오. [프로필 해부학](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/) 에서 캡처한 속성에 대한 자세한 내용은 `profile` 개체.
+`profile` 는 이벤트를 트리거한 사용자를 나타내는 JSON 개체입니다. 의 Zendesk 문서를 참조하십시오. [프로필 해부학](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/) 에서 캡처한 속성에 대한 자세한 내용은 `profile` 개체.
 
 내에서 다음 키를 참조할 수 있습니다. `profile` 데이터 요소에 매핑할 때의 개체:
 
-| `profile` key | 유형 | 플랫폼 경로 | 설명 | 필수입니다 | 제한 |
+| `profile` key | 유형 | 플랫폼 경로 | 설명 | 필수 | 제한 |
 | --- | --- | --- | --- | --- | --- |
-| `source` | 문자열 | `arc.event.xdm._extconndev.profile_source` | 프로필과 연관된 제품 또는 서비스(예: ) `Support`, `CompanyName`, 또는 `Chat`. | 예 | (해당 없음) |
+| `source` | 문자열 | `arc.event.xdm._extconndev.profile_source` | 프로필과 연관된 제품 또는 서비스(예: ) `Support`, `CompanyName`, 또는 `Chat`. | 예 | (N/A) |
 | `type` | 문자열 | `arc.event.xdm._extconndev.profile_type` | 프로필 유형의 이름입니다. 이 필드를 사용하여 주어진 소스에 대해 서로 다른 종류의 프로필을 만들 수 있습니다. 예를 들어 고객에 대한 회사 프로필 세트와 직원에 대한 회사 프로필 세트를 만들 수 있습니다. | 예 | 프로필 유형 길이는 40자를 초과할 수 없습니다. |
-| `name` | 문자열 | `arc.event.xdm._extconndev.name` | 프로필의 사용자 이름 | 아니요 | (해당 없음) |
-| `user_id` | 문자열 | `arc.event.xdm._extconndev.user_id` | Zendesk의 개인 사용자 ID입니다. | 아니요 | (해당 없음) |
-| `identifiers` | 배열 | `arc.event.xdm._extconndev.identifiers` | 하나 이상의 식별자가 포함된 배열입니다. 각 식별자는 유형과 값으로 구성됩니다. | 예 | 다음을 참조하십시오. [Zendesk 설명서](https://developer.zendesk.com/api-reference/custom-data/profiles_api/profiles_api/#identifiers-array) 에 대한 자세한 내용은 `identifiers` 배열입니다. 모든 필드와 값은 고유해야 합니다. |
-| `attributes` | 오브젝트 | `arc.event.xdm._extconndev.attrbutes` | 사용자에 대한 사용자 정의 속성이 포함된 객체입니다. | 아니요 | 다음을 참조하십시오. [Zendesk 설명서](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/#attributes) 프로필 속성에 대한 자세한 내용을 참조하십시오. |
+| `name` | 문자열 | `arc.event.xdm._extconndev.name` | 프로필의 사용자 이름 | 아니요 | (N/A) |
+| `user_id` | 문자열 | `arc.event.xdm._extconndev.user_id` | Zendesk의 개인 사용자 ID입니다. | 아니요 | (N/A) |
+| `identifiers` | 배열 | `arc.event.xdm._extconndev.identifiers` | 하나 이상의 식별자가 포함된 배열입니다. 각 식별자는 유형과 값으로 구성됩니다. | 예 | 다음을 참조하십시오. [Zendesk 설명서](https://developer.zendesk.com/api-reference/ticketing/users/profiles_api/profiles_api/#identifiers-array) 에 대한 자세한 내용은 `identifiers` 배열입니다. 모든 필드와 값은 고유해야 합니다. |
+| `attributes` | 오브젝트 | `arc.event.xdm._extconndev.attrbutes` | 사용자에 대한 사용자 정의 속성이 포함된 객체입니다. | 아니요 | 다음을 참조하십시오. [Zendesk 설명서](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/#attributes) 프로필 속성에 대한 자세한 내용을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -123,7 +123,7 @@ UI에서 Zendesk 확장을 설치하려면 **이벤트 전달** 확장을 추가
 | [!DNL Growth] | 250 |
 | [!DNL Professional] | 500 |
 | [!DNL Enterprise] | 750 |
-| [!DNL Enterprise Plus] | 1000 |
+| [!DNL Enterprise Plus] | 1000년 |
 
 {style="table-layout:auto"}
 
@@ -148,9 +148,9 @@ UI에서 Zendesk 확장을 설치하려면 **이벤트 전달** 확장을 추가
 이 문서에서는 UI에서 Zendesk 이벤트 전달 확장 기능을 설치하고 구성하는 방법에 대해 설명합니다. Zendesk에서 이벤트 데이터를 수집하는 방법에 대한 자세한 내용은 공식 설명서를 참조하십시오.
 
 * [이벤트 시작](https://developer.zendesk.com/documentation/custom-data/events/getting-started-with-events/)
-* [Zendesk 이벤트 API](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/)
+* [Zendesk 이벤트 API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/)
 * [이벤트 API 정보](https://developer.zendesk.com/documentation/custom-data/events/about-the-events-api/)
 * [사건 해부학](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/)
-* [Zendesk 프로필 API](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/#profile-object)
-* [프로필 API 정보](https://developer.zendesk.com/documentation/custom-data/profiles/about-the-profiles-api/)
-* [프로필 해부학](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/)
+* [Zendesk 프로필 API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/#profile-object)
+* [프로필 API 정보](https://developer.zendesk.com/documentation/ticketing/profiles/about-the-profiles-api/)
+* [프로필 해부학](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)

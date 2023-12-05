@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform의 동의 처리
 description: Adobe 2.0 표준을 사용하여 Adobe Experience Platform에서 고객 동의 신호를 처리하는 방법에 대해 알아봅니다.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ CMP 동의 변경 후크에서 트리거한 SDK 명령 외에도 동의 데이�
 
 모바일 애플리케이션에 고객 동의 환경 설정이 필요한 경우 Experience Platform Mobile SDK를 통합하여 동의 설정을 검색하고 업데이트할 수 있으며, 동의 API가 호출될 때마다 이를 Platform으로 전송할 수 있습니다.
 
-용 Mobile SDK 설명서 를 참조하십시오. [동의 모바일 확장 구성](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) 및 [동의 API 사용](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Mobile SDK를 사용하여 개인 정보 문제를 처리하는 방법에 대한 자세한 내용은 섹션을 참조하십시오 [개인 정보 및 GDPR](https://developer.adobe.com/client-sdks/documentation/resources/privacy-and-gdpr/).
+용 Mobile SDK 설명서 를 참조하십시오. [동의 모바일 확장 구성](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) 및 [동의 API 사용](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Mobile SDK를 사용하여 개인 정보 문제를 처리하는 방법에 대한 자세한 내용은 섹션을 참조하십시오 [개인 정보 및 GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/).
 
 ### XDM 호환 동의 데이터 직접 수집 {#batch}
 
