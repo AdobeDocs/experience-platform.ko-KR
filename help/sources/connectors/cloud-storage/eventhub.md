@@ -3,9 +3,9 @@ title: Azure Event Hubs 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Azure Event Hubs를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 087100b23f95cef527a507fb11440467feb78c9e
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]
 
 ## 가상 네트워크를 사용하여 연결 [!DNL Event Hubs] 대상 플랫폼
 
-연결할 가상 네트워크를 설정할 수 있습니다. [!DNL Event Hubs] 방화벽 조치를 활성화한 상태에서 플랫폼으로 이동합니다. 가상 네트워크를 설정하려면 다음과 같이 하십시오. [[!DNL Event Hubs] 네트워크 규칙 세트 문서](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) 아래에 나열된 단계를 수행합니다.
+연결할 가상 네트워크를 설정할 수 있습니다. [!DNL Event Hubs] 방화벽 조치를 활성화한 상태에서 플랫폼으로 이동합니다. 가상 네트워크를 설정하려면 다음과 같이 하십시오. [[!DNL Event Hubs] 네트워크 규칙 세트 문서](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) 아래에 나열된 단계를 수행합니다.
 
 * 선택 **사용해 보기** REST API 패널에서
 * 인증 [!DNL Azure] 동일한 브라우저에서 자격 증명을 사용하는 계정
@@ -117,7 +117,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]
 }
 ```
 
-다음을 참조하십시오 [[!DNL Event Hubs] 문서](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) 네트워크 규칙 세트에 대한 자세한 내용을 참조하십시오.
+다음을 참조하십시오 [[!DNL Event Hubs] 문서](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) 네트워크 규칙 세트에 대한 자세한 내용을 참조하십시오.
 
 ## 연결 [!DNL Event Hubs] 대상 플랫폼
 

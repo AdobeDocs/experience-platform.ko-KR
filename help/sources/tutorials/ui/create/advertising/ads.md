@@ -2,9 +2,9 @@
 title: UI에서 Google 광고 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Google Ads 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Google Ads 계정 플랫폼에 액세스하려면 다음 값을 제공해야 합
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
 | 클라이언트 고객 ID | 클라이언트 고객 ID는 Google Ads API로 관리하려는 Google Ads 클라이언트 계정에 해당하는 계정 번호입니다. 이 ID는 의 템플릿을 따릅니다. `123-456-7890`. |
-| 로그인 고객 ID | 로그인 고객 ID는 Google Ads Manager 계정에 해당하는 계정 번호이며 특정 운영 고객으로부터 보고서 데이터를 가져오는 데 사용됩니다. 로그인 고객 ID에 대한 자세한 내용은 [Google Ads API 설명서](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
+| 로그인 고객 ID | 로그인 고객 ID는 Google Ads Manager 계정에 해당하는 계정 번호이며 특정 운영 고객으로부터 보고서 데이터를 가져오는 데 사용됩니다. 로그인 고객 ID에 대한 자세한 내용은 [Google Ads API 설명서](https://developers.google.com/search-ads/reporting/concepts/login-customer-id). |
 | 개발자 토큰 | 개발자 토큰을 사용하면 Google Ads API에 액세스할 수 있습니다. 동일한 개발자 토큰을 사용하여 모든 Google Ads 계정에 대해 요청할 수 있습니다. 다음 방법으로 개발자 토큰 검색 [manager 계정에 로그인](https://ads.google.com/home/tools/manager-accounts/) 그런 다음 API 센터 페이지로 이동합니다. |
 | 토큰 새로 고침 | 새로 고침 토큰은 [!DNL OAuth2] 인증. 이 토큰을 사용하면 액세스 토큰이 만료된 후 다시 생성할 수 있습니다. |
 | 클라이언트 ID | 클라이언트 ID는 클라이언트 암호와 함께 의 일부로 사용됩니다 [!DNL OAuth2] 인증. 클라이언트 ID와 클라이언트 암호를 사용하면 Google에 대한 애플리케이션을 식별하여 애플리케이션이 계정을 대신하여 작동할 수 있습니다. |
