@@ -1,16 +1,15 @@
 ---
-title: Platform Web SDK의 ID 데이터
+title: 웹 SDK의 ID 데이터
 description: Adobe Experience Platform Web SDK를 사용하여 Adobe Experience Cloud ID(ECID)를 검색하고 관리하는 방법에 대해 알아봅니다.
-keywords: ID;자사 ID;ID 서비스;타사 ID;ID 마이그레이션;방문자 ID;타사 ID;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;동기화 ID;syncIdentity;sendEvent;identityMap;primary;ecid;ID 네임스페이스;네임스페이스 ID;authenticationState;hashEnabled;
-exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1414'
-ht-degree: 1%
+source-wordcount: '1339'
+ht-degree: 0%
 
 ---
 
-# Platform Web SDK의 ID 데이터
+
+# 웹 SDK의 ID 데이터
 
 Adobe Experience Platform Web SDK는 [Adobe Experience Cloud ID (ECID)](../../identity-service/ecid.md) 방문자 행동을 추적합니다. ECID를 사용하면 각 디바이스에 여러 세션에서 지속될 수 있는 고유 식별자가 있는지 확인하여 웹 세션 도중 및 여러 세션에서 발생한 모든 히트를 특정 디바이스에 연결할 수 있습니다.
 
@@ -35,7 +34,7 @@ ECID가 포함된 쿠키가 설정되면 Web SDK에서 생성된 각 후속 요�
 
 타사 데이터 수집에는 Edge Network 도메인으로 직접 데이터를 전송하는 작업이 포함됩니다 `adobedc.net`.
 
-최근 몇 년 동안 웹 브라우저는 제3자가 설정한 쿠키를 처리하는 데 점점 더 제한을 받고 있습니다. 일부 브라우저는 기본적으로 서드파티 쿠키를 차단합니다. 서드파티 쿠키를 사용하여 사이트 방문자를 식별하는 경우, 이러한 쿠키의 수명은 거의 항상 자사 쿠키를 대신 사용하여 사용할 수 있는 수명보다 짧습니다. 경우에 따라 서드파티 쿠키가 7일 안에 만료됩니다.
+최근 몇 년 동안 웹 브라우저는 제3자가 설정한 쿠키를 처리하는 데 점점 더 제한을 받고 있습니다. 일부 브라우저는 기본적으로 서드파티 쿠키를 차단합니다. 서드파티 쿠키를 사용하여 사이트 방문자를 식별하는 경우, 이러한 쿠키의 수명은 거의 항상 자사 쿠키를 대신 사용하여 사용할 수 있는 수명보다 짧습니다. 경우에 따라 서드파티 쿠키가 7일 후에 만료됩니다.
 
 또한 서드파티 데이터 수집을 사용하는 경우 일부 광고 차단기는 트래픽을 제한하여 데이터 수집 엔드포인트를 완전히 Adobe 합니다.
 
@@ -51,7 +50,7 @@ ECID가 포함된 쿠키가 설정되면 Web SDK에서 생성된 각 후속 요�
 
 예를 들어 사용자가 지난 7일 동안 항목을 3번 본 경우 항목을 홈 페이지로 홍보하는 개인화 경험을 만든 상황을 생각해 보겠습니다.
 
-최종 사용자가 일주일에 세 번 사이트를 방문한 다음 7일 동안 사이트로 돌아오지 않는 경우, 해당 쿠키가 브라우저 정책(사이트를 방문했을 때 사용 중인 브라우저에 따라)에 의해 삭제되었을 수 있으므로 해당 사용자는 사이트로 돌아올 때 새 사용자로 간주될 수 있습니다. 이 경우 Analytics 도구는 방문자가 7일 조금 전에 사이트를 방문했더라도 새로운 사용자로 취급합니다. 또한 사용자를 위해 경험을 개인화하려는 모든 노력이 다시 시작됩니다.
+최종 사용자가 일주일에 세 번 사이트를 방문한 후 7일 동안 사이트로 돌아오지 않는 경우, 해당 사용자는 브라우저 정책(사이트를 방문했을 때 사용 중인 브라우저에 따라)에 의해 쿠키가 삭제되었을 수 있으므로 사이트로 돌아올 때 새 사용자로 간주될 수 있습니다. 이 경우 Analytics 도구는 7일 조금 전에 방문자가 사이트를 방문했더라도 해당 방문자를 새 사용자로 취급합니다. 또한 사용자를 위해 경험을 개인화하려는 노력이 다시 시작됩니다.
 
 ### 자사 디바이스 ID
 
@@ -127,11 +126,11 @@ ID 배열의 각 ID 개체에는 다음 속성이 포함되어 있습니다.
 
 * 도메인의 일부 페이지가 방문자 API를 사용하고 다른 페이지가 이 SDK를 사용하는 경우. 이 경우를 지원하기 위해 SDK는 기존 AMCV 쿠키를 읽고 기존 ECID로 새 쿠키를 기록합니다. 또한 SDK는 AMCV 쿠키를 기록하여 SDK로 계측된 페이지에서 ECID를 먼저 획득하는 경우 방문자 API로 계측된 후속 페이지가 동일한 ECID를 갖도록 합니다.
 * 방문자 API가 있는 페이지에서 Adobe Experience Platform Web SDK가 설정된 경우. 이 경우를 지원하기 위해 AMCV 쿠키가 설정되지 않은 경우 SDK는 페이지에서 방문자 API를 찾아 호출하여 ECID를 가져옵니다.
-* 전체 사이트에서 Adobe Experience Platform Web SDK를 사용하고 있고 방문자 API가 없는 경우, 반환 방문자 정보가 유지되도록 ECID를 마이그레이션하는 것이 유용합니다. SDK가 로 배포된 후 `idMigrationEnabled` 일정 기간 동안 대부분의 방문자 쿠키가 마이그레이션되도록 설정을 끌 수 있습니다.
+* 전체 사이트에서 Adobe Experience Platform Web SDK를 사용하고 있고 방문자 API가 없는 경우 반환된 방문자 정보가 유지되도록 ECID를 마이그레이션하는 것이 유용합니다. SDK가 로 배포된 후 `idMigrationEnabled` 대부분의 방문자 쿠키가 마이그레이션되도록 하는 동안 이 설정을 끌 수 있습니다.
 
 ### 마이그레이션할 트레이트 업데이트
 
-XDM 형식의 데이터를 Audience Manager으로 전송하면 마이그레이션할 때 이 데이터를 신호로 변환해야 합니다. XDM에서 제공하는 새 키를 반영하도록 트레이트를 업데이트해야 합니다. 이 프로세스는 를 사용하여 쉽게 만들 수 있습니다. [BAAAM 도구](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) 해당 Audience Manager이 생성되었습니다.
+XDM 형식의 데이터를 Audience Manager으로 보낼 때 마이그레이션 시 이 데이터를 신호로 변환해야 합니다. XDM에서 제공하는 새 키를 반영하도록 트레이트를 업데이트해야 합니다. 이 프로세스는 를 사용하여 쉽게 만들 수 있습니다. [BAAAM 도구](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) 해당 Audience Manager이 생성되었습니다.
 
 ## 이벤트 전달에 사용
 

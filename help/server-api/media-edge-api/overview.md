@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Media Edge API
 description: Media Edge API 개요
 exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 034498e662ed55112f22751d44cf3ecf75d38d61
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 8%
+source-wordcount: '331'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ Media Edge API는 의 프레임워크 내에서 미디어 이벤트 추적 데�
 
 ## 미디어 추적 데이터 흐름 최적화
 
-모두 [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html&amp;media-tracking-data-flows) 및 Media Edge API는 미디어 추적 데이터를 RESTful 서비스로 제공합니다. 그러나 Media Edge 서비스를 사용하면 다음과 같은 이점이 있습니다.
+모두 [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html#media-tracking-data-flows) 및 Media Edge API는 미디어 추적 데이터를 RESTful 서비스로 제공합니다. 그러나 Media Edge 서비스를 사용하면 다음과 같은 이점이 있습니다.
 
 * XDM 스키마를 데이터 흐름에 통합하는 가장 쉬운 방법입니다.
 
@@ -33,7 +33,7 @@ Media Edge API는 의 프레임워크 내에서 미디어 이벤트 추적 데�
 
 다음 표는 다양한 미디어 분석 사례에 대해 가능한 Adobe API 서비스를 보여 줍니다.
 
-| 사용 사례 | API 서비스 |
+| 활용 사례 | API 서비스 |
 | -------- | ----------- |
 | Adobe Experience Platform 솔루션 | Media Edge |
 | REAL-TIME CDP + CUSTOMER JOURNEY ANALYTICS | Media Edge |

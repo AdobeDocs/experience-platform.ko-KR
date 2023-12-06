@@ -1,12 +1,9 @@
 ---
 title: Edge Network Server API 개요
 description: Edge Network Server API란 무엇이며 이를 사용하는 방법에 대해 알아봅니다.
-seo-description: Learn what the Edge Network Server API is and how you can use it.
-keywords: 데이터 수집;수집;Adobe Experience Platform Edge Network;서버 api;
-exl-id: 46bd8798-d7f9-405b-9ca8-856ad4aa688c
-source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '252'
 ht-degree: 5%
 
 ---
@@ -16,7 +13,7 @@ ht-degree: 5%
 
 Adobe Experience Platform Edge Network는 고객이 Adobe Experience Cloud 또는 Adobe Experience Platform Edge 서비스와 상호 작용할 수 있는 최적화된 방법을 제공합니다.
 
-다음 [!DNL Edge Network Server API] 는 다양한 데이터 수집, 개인화, 광고 및 마케팅 사용 사례에 사용할 수 있습니다. 다음 [!DNL Server API] 서버에서 사용할 수 있습니다. [!DNL IoT] 디바이스, 셋톱 박스 및 다양한 기타 디바이스.
+다음 [!DNL Edge Network Server API] 다양한 데이터 수집, 개인화, 광고 및 마케팅 사용 사례에 사용할 수 있습니다. 다음 [!DNL Server API] 서버에서 사용할 수 있습니다. [!DNL IoT] 장치, 셋톱 박스 및 다양한 기타 장치.
 
 다음 이후 [!DNL Server API] 로드하는 라이브러리에 의존하지 않으며, Adobe Experience Platform Edge Network 및 지원되는 솔루션과 상호 작용하는 빠른 방법을 제공합니다.
 
@@ -30,11 +27,11 @@ Adobe Experience Platform Edge Network는 고객이 Adobe Experience Cloud 또�
 다음 [!DNL Server API] 는 두 개의 전용 끝점을 통해 대화형 및 일괄 데이터 수집을 지원합니다.
 
 1. 대화형 엔드포인트는 고급 세분화, 개인화 및 기타 마케팅 사용 사례를 지원하는 Adobe Experience Platform 및 Adobe Experience Cloud 서비스와의 통신을 지원합니다.
-2. 배치 끝점을 사용하면 호출되는 응용 프로그램에서 응답을 받지 않고 데이터를 온보딩해야 할 때 요청을 일괄적으로 전송할 수 있습니다.
+2. 배치 끝점을 사용하면 호출되는 애플리케이션에서 응답을 받지 않고 데이터를 온보딩해야 하는 경우 요청을 일괄적으로 전송할 수 있습니다.
 
 다음 [!DNL Server API] 는 다음 유형의 요청을 지원합니다.
 
-* 다음을 통해 인증된 요청 [Adobe I/O](https://developer.adobe.com/), 새로 만들기 사용 `server.adobedc.net` 엔드포인트.
+* 다음을 통해 인증된 요청 [Adobe Developer](https://developer.adobe.com/), 사용 `server.adobedc.net` 엔드포인트.
 * 를 통한 인증되지 않은 요청 `edge.adobedc.net` 엔드포인트.
 
 이를 통해 조직의 개인정보 처리방침에 따라 중요한 데이터의 안전하고 인증된 수집을 허용하는 사용 사례를 사용할 수 있습니다. 인증 외에도 Server API는 API를 통해 인증된 통신만 수락하도록 데이터스트림 표시를 지원합니다.

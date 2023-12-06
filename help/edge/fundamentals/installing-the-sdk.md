@@ -1,18 +1,17 @@
 ---
 title: Adobe Experience Platform Web SDK 설치
 description: Experience Platform Web SDK를 설치하는 방법을 알아봅니다.
-keywords: web sdk 설치;web sdk 설치;internet explorer;promise;npm 패키지
-exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 2%
+source-wordcount: '864'
+ht-degree: 0%
 
 ---
 
-# SDK 설치 {#installing-the-sdk}
 
-Adobe Experience Platform Web SDK를 사용하는 세 가지 지원되는 방법은 다음과 같습니다.
+# Web SDK 설치 {#installing-the-sdk}
+
+Adobe Experience Platform Web SDK를 설치하는 세 가지 지원되는 방법은 다음과 같습니다.
 
 1. Adobe Experience Platform Web SDK를 사용하는 기본 방법은 데이터 수집 UI 또는 Experience Platform UI를 사용하는 것입니다.
 1. Adobe Experience Platform Web SDK는 CDN(콘텐츠 전달 네트워크)에서도 사용할 수 있습니다.
@@ -30,9 +29,8 @@ URL 구조: https://cdn1.adoberesources.net/alloy/[버전]축소되지 않은 �
 
 예:
 
-
 * 축소됨: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
-* 축소 취소: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
+* 축소되지 않음: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
 
 
 ### 코드 추가 {#adding-the-code}
@@ -77,7 +75,7 @@ URL 구조: https://cdn1.adoberesources.net/alloy/[버전]축소되지 않은 �
 
 1. 에서 웹 사이트 열기 [!DNL Internet Explorer].
 1. 브라우저의 디버깅 콘솔을 엽니다.
-1. 유형 `window.Promise` 콘솔로 이동한 다음 Enter 키를 누릅니다.
+1. 유형 `window.Promise` 를 콘솔로 가져간 다음 Enter 키를 누릅니다.
 
 다음 이외의 다른 항목일 경우 `undefined` 이(가) 나타나면 이미 폴리필했을 수 있습니다. `window.Promise`. 다음을 확인할 수 있는 다른 방법: `window.Promise` 는 위의 설치 지침을 완료한 후 웹 사이트를 로드하여 polyfilled입니다. SDK에서 약속에 대해 언급하는 동안 오류가 발생하면 채워지지 않았을 수 있습니다 `window.Promise`.
 
@@ -97,7 +95,7 @@ URL 구조: https://cdn1.adoberesources.net/alloy/[버전]축소되지 않은 �
 
 섹션에 설명된 대로 [코드 추가](#adding-the-code)를 사용하여 복사하고 웹 사이트의 HTML에 붙여넣은 기본 코드는 외부 파일을 로드합니다. 외부 파일에는 SDK의 핵심 기능이 포함되어 있습니다. 이 파일이 로드되는 동안 실행하려는 모든 명령은 큐에 있다가 파일이 로드된 후 처리됩니다. 파일을 비동기식으로 로드하는 것이 가장 성능이 좋은 설치 방법입니다.
 
-그러나 특정 상황에서는 파일을 동기식으로 로드할 수 있습니다. \(이러한 상황에 대한 자세한 내용은 나중에 문서화됩니다\). 이렇게 하면 외부 파일이 로드되고 실행될 때까지 나머지 HTML 문서가 브라우저에 의해 구문 분석되고 렌더링되지 않습니다. 사용자에게 기본 콘텐츠를 표시하기 전에 이렇게 추가로 지연하는 것은 일반적으로 권장되지 않지만 상황에 따라 적절할 수 있습니다.
+그러나 특정 상황에서 파일을 동기식으로 로드할 수 있습니다. 이렇게 하면 외부 파일이 로드되고 실행될 때까지 나머지 HTML 문서가 브라우저에 의해 구문 분석되고 렌더링되지 않습니다. 사용자에게 기본 콘텐츠를 표시하기 전에 이렇게 추가로 지연하는 것은 일반적으로 권장되지 않지만 상황에 따라 적절할 수 있습니다.
 
 파일을 비동기식으로 로드하지 않고 동기식으로 로드하려면 `async` 속성(초) `script` 태그는 아래와 같습니다.
 

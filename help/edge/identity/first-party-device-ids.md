@@ -1,17 +1,17 @@
 ---
-title: Platform Web SDK의 자사 디바이스 ID
+title: Web SDK의 자사 디바이스 ID
 description: Adobe Experience Platform Web SDK에 대한 자사 디바이스 ID(FPID)를 구성하는 방법에 대해 알아봅니다.
-exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: ffcd428f84a4dcbbc95560cb4da5fd1c6d858a28
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1779'
-ht-degree: 2%
+source-wordcount: '1700'
+ht-degree: 0%
 
 ---
 
-# Platform Web SDK의 자사 디바이스 ID
 
-Adobe Experience Platform Web SDK는 [Adobe Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) 사용자 행동을 추적하기 위해 쿠키를 사용하여 웹 사이트 방문자를 대상으로 합니다. 쿠키 수명에 대한 브라우저 제한 사항을 고려하기 위해 대신 고유한 장치 식별자를 설정하고 관리하도록 선택할 수 있습니다. 이를 자사 디바이스 ID(FPID)라고 합니다. 
+# Web SDK의 자사 디바이스 ID
+
+Adobe Experience Platform Web SDK는 [Adobe Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) 쿠키를 사용하여 웹 사이트 방문자에게 알리고 사용자 행동을 추적합니다. 쿠키 수명에 대한 브라우저 제한 사항을 고려하기 위해 대신 고유한 장치 식별자를 설정하고 관리하도록 선택할 수 있습니다. 이를 자사 디바이스 ID(FPID)라고 합니다.
 
 >[!NOTE]
 >
@@ -25,11 +25,11 @@ Adobe Experience Platform Web SDK는 [Adobe Experience Cloud ID (ECID)](https://
 
 ## FPID 사용
 
-FPID는 자사 쿠키를 사용하여 방문자를 추적합니다. 자사 쿠키는 DNS를 활용하는 서버를 사용하여 설정할 때 가장 효과적입니다 [레코드](https://datatracker.ietf.org/doc/html/rfc1035) (IPv4의 경우) 또는 [AAAA 레코드](https://datatracker.ietf.org/doc/html/rfc3596) DNS CNAME 또는 JavaScript 코드가 아닌 IPv6의 경우.
+FPID는 자사 쿠키를 사용하여 방문자를 추적합니다. 자사 쿠키는 DNS를 사용하는 서버를 사용하여 설정할 때 가장 효과적입니다 [레코드](https://datatracker.ietf.org/doc/html/rfc1035) (IPv4의 경우) 또는 [AAAA 레코드](https://datatracker.ietf.org/doc/html/rfc3596) DNS CNAME 또는 JavaScript 코드가 아닌 IPv6의 경우.
 
 >[!IMPORTANT]
 >
->레코드 또는 AAAA 레코드는 쿠키 설정 및 추적에 대해서만 지원됩니다. 데이터 수집을 위한 기본 방법은 DNS CNAME을 통하는 것입니다. 즉, FPID는 A 레코드나 AAAA 레코드를 사용하여 설정되고 CNAME을 사용하여 Adobe으로 전송됩니다.
+>`A` 또는 `AAAA` 레코드는 쿠키 설정 및 추적에 대해서만 지원됩니다. 데이터 수집을 위한 기본 방법은 DNS CNAME을 통하는 것입니다. 즉, FPID는 A 레코드나 AAAA 레코드를 사용하여 설정되고 CNAME을 사용하여 Adobe으로 전송됩니다.
 >
 >다음 [Adobe 관리 인증서 프로그램](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) 는 자사 데이터 수집에 대해서도 계속 지원됩니다.
 
@@ -64,9 +64,9 @@ ECID가 결국 브라우저 삭제 정책의 영향을 받지만 FPID가 영향�
 
 ### 쿠키 만료 설정
 
-쿠키의 만료를 설정하는 것은 FPID 기능을 구현할 때 신중하게 고려해야 하는 사항입니다. 이러한 결정을 내릴 때는 각 지역의 법률 및 정책과 함께 조직이 운영되는 국가 또는 지역을 고려해야 합니다.
+쿠키의 만료를 설정하는 것은 FPID 기능을 구현할 때 신중하게 고려해야 하는 사항입니다. 이를 결정할 때는 각 지역의 법률 및 정책과 함께 조직이 운영되는 국가 또는 지역을 고려해야 합니다.
 
-이 결정의 일부로 회사 전체의 쿠키 설정 정책 또는 사용자가 운영하는 각 로케일에서 사용자에 대해 달라지는 정책을 채택할 수 있습니다.
+이 결정의 일부로 회사 전체의 쿠키 설정 정책 또는 운영하는 각 로케일에서 사용자에 따라 달라지는 정책을 채택할 수 있습니다.
 
 쿠키의 초기 만료에 대해 선택하는 설정에 관계없이 사이트를 새로 방문할 때마다 쿠키 만료를 확장하는 논리를 포함해야 합니다.
 
@@ -75,14 +75,14 @@ ECID가 결국 브라우저 삭제 정책의 영향을 받지만 FPID가 영향�
 다양한 브라우저에서 쿠키가 처리되는 방식에 영향을 주는 다양한 쿠키 플래그가 있습니다.
 
 * [&#39;HTTPOnly&#39;](#http-only)
-* [`Secure`](#secure)
-* [`SameSite`](#same-site)
+* [&#39;보안&#39;](#secure)
+* [&#39;SameSite&#39;](#same-site)
 
 ### `HTTPOnly` {#http-only}
 
-를 사용하여 설정된 쿠키 `HTTPOnly` 클라이언트측 스크립트를 사용하여 플래그에 액세스할 수 없습니다. 즉, 다음을 설정하면 `HTTPOnly` flag fpid를 설정할 때 서버측 스크립팅 언어를 활용하여 에 포함할 쿠키 값을 읽어야 합니다. `identityMap`.
+를 사용하여 설정된 쿠키 `HTTPOnly` 클라이언트측 스크립트를 사용하여 플래그에 액세스할 수 없습니다. 즉, 다음을 설정하면 `HTTPOnly` flag fpid를 설정할 때 를 포함할 쿠키 값을 읽으려면 서버측 스크립팅 언어를 사용해야 합니다 `identityMap`.
 
-Platform Edge Network가 FPID 쿠키의 값을 읽도록 선택한 경우 `HTTPOnly` 플래그는 클라이언트측 스크립트가 이 값에 액세스할 수 없도록 하지만 Platform Edge Network의 쿠키 읽기 기능에 부정적인 영향을 주지 않습니다.
+Platform Edge Network가 FPID 쿠키의 값을 읽도록 선택한 경우 `HTTPOnly` 플래그를 사용하면 클라이언트측 스크립트가 해당 값에 액세스할 수 없지만 Platform Edge Network의 쿠키 읽기 기능에 부정적인 영향을 주지 않습니다.
 
 >[!NOTE]
 >
@@ -94,13 +94,13 @@ Platform Edge Network가 FPID 쿠키의 값을 읽도록 선택한 경우 `HTTPO
 
 ### `SameSite` {#same-site}
 
-다음 `SameSite` 속성을 사용하면 서버에서 쿠키가 사이트 간 요청으로 전송되는지 여부를 확인할 수 있습니다. 속성은 크로스 사이트 위조 공격으로부터 일부 보호를 제공합니다. 세 가지 가능한 값이 있습니다. `Strict`, `Lax` 및 `None`. 조직에 적합한 설정을 결정하려면 내부 팀에 문의하십시오.
+다음 `SameSite` 속성을 사용하면 서버에서 쿠키가 사이트 간 요청으로 전송되는지 여부를 확인할 수 있습니다. 속성은 크로스 사이트 위조 공격으로부터 일부 보호를 제공합니다. 세 가지 가능한 값이 있습니다. `Strict`, `Lax`, 및 `None`. 조직에 적합한 설정을 결정하려면 내부 팀에 문의하십시오.
 
 없는 경우 `SameSite` 속성을 지정했습니다. 이제 일부 브라우저의 기본 설정이 `SameSite=Lax`.
 
 ## 에서 FPID 사용 `identityMap` {#identityMap}
 
-아래는 FPID를 설정하는 방법의 예입니다. `identityMap`:
+아래는에서 FPID를 설정하는 방법의 예입니다. `identityMap`:
 
 ```json
 {
@@ -194,7 +194,7 @@ Platform Edge Network가 FPID 쿠키의 값을 읽도록 선택한 경우 `HTTPO
 
 ## 계층
 
-ECID와 FPID가 모두 존재하는 경우, ECID는 사용자를 식별하는 데 우선 순위를 둘 것이다. 이렇게 하면 기존 ECID가 브라우저 쿠키 저장소에 있는 경우 기본 식별자가 계속 되고 기존 방문자 수가 영향을 받지 않습니다. 기존 사용자의 경우 FPID는 ECID가 만료되거나 브라우저 정책 또는 수동 프로세스의 결과로 삭제될 때까지 기본 ID가 되지 않습니다.
+ECID와 FPID가 모두 존재하는 경우, ECID는 사용자를 식별하는 데 우선 순위가 지정됩니다. 이렇게 하면 기존 ECID가 브라우저 쿠키 저장소에 있을 때 기본 식별자로 유지되며 기존 방문자 수가 영향을 받지 않습니다. 기존 사용자의 경우 FPID는 ECID가 만료되거나 브라우저 정책 또는 수동 프로세스의 결과로 삭제될 때까지 기본 ID가 되지 않습니다.
 
 ID는 다음 순서로 우선 순위가 지정됩니다.
 
@@ -218,9 +218,9 @@ ID는 다음 순서로 우선 순위가 지정됩니다.
 | 방문 | 설명 |
 | --- | --- |
 | 첫 번째 방문 | FPID 쿠키 설정을 아직 시작하지 않았다고 가정합니다. 에 포함된 ECID [AMCV 쿠키](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) 은 방문자를 식별하는 데 사용되는 식별자입니다. |
-| 두 번째 방문 | 자사 디바이스 ID 솔루션 롤아웃이 시작되었습니다. 기존 ECID는 여전히 존재하고 있으며 방문자 식별을 위한 기본 식별자가 계속 됩니다. |
-| 세 번째 방문 | 두 번째와 세 번째 방문 사이에 브라우저 정책으로 인해 ECID가 삭제될 때까지 충분한 시간이 경과되었습니다. 그러나 FPID가 DNS A-record를 사용하여 설정되었기 때문에 FPID는 유지됩니다. 이제 FPID가 기본 ID로 간주되어 최종 사용자 디바이스에 기록되는 ECID를 시드하는 데 사용됩니다. 이제 사용자는 Adobe Experience Platform 및 Experience Cloud 솔루션에서 새 방문자로 간주됩니다. |
-| 네 번째 방문 | 세 번째와 네 번째 방문 사이에 브라우저 정책으로 인해 ECID가 삭제될 때까지 충분한 시간이 경과되었습니다. 이전 방문과 마찬가지로 FPID는 설정된 방식으로 인해 유지됩니다. 이번에는 이전 방문과 동일한 ECID가 생성됩니다. 사용자는 Experience Platform 및 Experience Cloud 솔루션 전체에서 이전 방문과 동일한 사용자로 표시됩니다. |
+| 두 번째 방문 | 자사 디바이스 ID 솔루션 롤아웃이 시작되었습니다. 기존 ECID는 여전히 존재하며 방문자 식별을 위한 기본 식별자로 유지됩니다. |
+| 세 번째 방문 | 두 번째와 세 번째 방문 사이에 브라우저 정책으로 인해 ECID가 삭제될 만큼 충분한 시간이 경과되었습니다. 그러나 FPID가 DNS A-record를 사용하여 설정되었기 때문에 FPID는 유지됩니다. 이제 FPID가 기본 ID로 간주되어 최종 사용자 디바이스에 기록되는 ECID를 시드하는 데 사용됩니다. 이제 사용자는 Adobe Experience Platform 및 Experience Cloud 솔루션에서 새 방문자로 간주됩니다. |
+| 네 번째 방문 | 세 번째와 네 번째 방문 사이에 브라우저 정책으로 인해 ECID가 삭제될 만큼 충분한 시간이 경과되었습니다. 이전 방문과 마찬가지로 FPID는 설정된 방식으로 인해 유지됩니다. 이번에는 이전 방문과 동일한 ECID가 생성됩니다. 사용자는 Experience Platform 및 Experience Cloud 솔루션 전체에서 이전 방문과 동일한 사용자로 표시됩니다. |
 | 다섯 번째 방문 | 네 번째와 다섯 번째 방문 사이에 최종 사용자는 브라우저의 모든 쿠키를 지웠습니다. 새 FPID가 생성되고 새 ECID 생성을 시드하는 데 사용됩니다. 이제 사용자는 Adobe Experience Platform 및 Experience Cloud 솔루션에서 새 방문자로 간주됩니다. |
 
 {style="table-layout:auto"}
@@ -235,11 +235,11 @@ ID는 다음 순서로 우선 순위가 지정됩니다.
 
 ### 자사 디바이스 ID는 언제 생성해야 합니까?
 
-잠재적 방문자 인플레이션을 줄이려면 Platform Web SDK를 사용하여 첫 번째 요청을 수행하기 전에 FPID를 생성해야 합니다. 그러나 이렇게 할 수 없는 경우 해당 사용자에 대한 ECID가 계속 생성되고 기본 식별자로 사용됩니다. 생성된 FPID는 ECID가 더 이상 존재하지 않을 때까지 기본 식별자가 되지 않습니다.
+잠재적 방문자 인플레이션을 줄이려면 Web SDK를 사용하여 첫 번째 요청을 수행하기 전에 FPID를 생성해야 합니다. 그러나 이렇게 할 수 없는 경우 해당 사용자에 대한 ECID가 계속 생성되고 기본 식별자로 사용됩니다. 생성된 FPID는 ECID가 더 이상 존재하지 않을 때까지 기본 식별자가 되지 않습니다.
 
 ### 자사 디바이스 ID를 지원하는 데이터 수집 방법
 
-현재 Platform Web SDK만 FPID를 지원합니다.
+현재 Web SDK만 FPID를 지원합니다.
 
 ### FPID가 플랫폼 또는 Experience Cloud 솔루션에 저장됩니까?
 

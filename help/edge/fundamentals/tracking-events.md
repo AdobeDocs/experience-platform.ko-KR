@@ -1,14 +1,13 @@
 ---
 title: Adobe Experience Platform Web SDK를 사용하여 이벤트 추적
 description: Adobe Experience Platform Web SDK 이벤트를 추적하는 방법에 대해 알아봅니다.
-keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;비콘 보내기;documentUnloading;문서 언로드;onBeforeEventSend;
-exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 1%
+source-wordcount: '1163'
+ht-degree: 0%
 
 ---
+
 
 # 이벤트 추적
 
@@ -103,7 +102,7 @@ alloy("sendEvent", {
 
 ### 설정 `eventType` {#event-types}
 
-XDM ExperienceEvent 스키마에는 선택 사항이 있습니다. `eventType` 필드. 레코드에 대한 기본 이벤트 유형이 보관됩니다. 이벤트 유형을 설정하면 전송할 여러 이벤트를 구분하는 데 도움이 됩니다. XDM은 사용할 수 있거나 사용 사례에 맞게 항상 사용자 지정 이벤트 유형을 만들 수 있는 사전 정의된 이벤트 유형을 제공합니다. 자세한 내용은 XDM 설명서 를 참조하십시오. [사전 정의된 모든 이벤트 유형 목록](../../xdm/classes/experienceevent.md#eventType).
+XDM ExperienceEvent 스키마에는 선택 사항이 있습니다. `eventType` 필드. 레코드에 대한 기본 이벤트 유형이 보관됩니다. 이벤트 유형을 설정하면 전송하는 여러 이벤트를 구분하는 데 도움이 됩니다. XDM은 사용할 수 있거나 사용 사례에 맞게 항상 사용자 지정 이벤트 유형을 만들 수 있는 사전 정의된 이벤트 유형을 제공합니다. 자세한 내용은 XDM 설명서 를 참조하십시오. [사전 정의된 모든 이벤트 유형 목록](../../xdm/classes/experienceevent.md#eventType).
 
 태그 확장을 사용하거나 태그 없이 언제든지 전달할 수 있는 경우 이러한 이벤트 유형이 드롭다운에 표시됩니다. 이러한 매개 변수는 의 일부로 전달될 수 있습니다. `xdm` 옵션을 선택합니다.
 
@@ -162,8 +161,9 @@ alloy("sendEvent", {
 
 ## sendBeacon API 사용
 
-웹 페이지 사용자가 탐색하기 직전에 이벤트 데이터를 보내는 것은 어려울 수 있습니다. 요청이 너무 오래 걸리면 브라우저가 요청을 취소할 수 있습니다. 일부 브라우저는 이라는 웹 표준 API를 구현했습니다. `sendBeacon` 이 시간 동안 데이터를 보다 쉽게 수집할 수 있도록 하기 위해 사용 시 `sendBeacon`을 사용하면 브라우저가 전역 검색 컨텍스트에서 웹 요청을 수행합니다. 즉, 브라우저가 백그라운드에서 비콘 요청을 수행하고 페이지 탐색을 유지하지 않습니다. Adobe Experience Platform에 알리기 [!DNL Web SDK] 사용 `sendBeacon`, 옵션을 추가합니다. `"documentUnloading": true` 이벤트 명령.  다음은 한 예입니다.
+웹 페이지 사용자가 탐색하기 직전에 이벤트 데이터를 보내는 것은 어려울 수 있습니다. 요청이 너무 오래 걸리면 브라우저가 요청을 취소할 수 있습니다. 일부 브라우저는 이라는 웹 표준 API를 구현했습니다. `sendBeacon` 이 시간 동안 데이터를 보다 쉽게 수집할 수 있도록 하기 위해 사용 시 `sendBeacon`을 사용하면 브라우저가 전역 검색 컨텍스트에서 웹 요청을 수행합니다. 즉, 브라우저가 백그라운드에서 비콘 요청을 수행하고 페이지 탐색을 유지하지 않습니다. Adobe Experience Platform에 알리기 [!DNL Web SDK] 사용 `sendBeacon`, 옵션을 추가합니다. `"documentUnloading": true` 이벤트 명령.
 
+**예**
 
 ```javascript
 alloy("sendEvent", {
@@ -181,7 +181,7 @@ alloy("sendEvent", {
 });
 ```
 
-브라우저에는 로 전송할 수 있는 데이터 양에 대한 제한이 적용되었습니다. `sendBeacon` 한 번에. 많은 브라우저에서 제한은 64K입니다. 페이로드가 너무 크기 때문에 브라우저가 이벤트를 거부하는 경우 Adobe Experience Platform [!DNL Web SDK] 는 일반적인 전송 방법(예: fetch)을 사용하는 것으로 돌아갑니다.
+브라우저에는 로 전송할 수 있는 데이터 양에 대한 제한이 적용되었습니다. `sendBeacon` 한 번에. 많은 브라우저에서 제한은 64KB입니다. 페이로드가 너무 크기 때문에 브라우저가 이벤트를 거부하는 경우 Adobe Experience Platform [!DNL Web SDK] 는 일반적인 전송 방법(예: fetch)을 사용하는 것으로 돌아갑니다.
 
 ## 이벤트에서 응답 처리
 
@@ -214,19 +214,19 @@ alloy("sendEvent", {
 
 다음 `sendEvent` 명령은 로 해결된 약속을 반환합니다. `result` 개체. 다음 `result` 개체에는 다음 속성이 포함되어 있습니다.
 
-**제안**: 방문자가 자격을 얻은 개인화 오퍼입니다. [제안에 대해 자세히 알아보세요.](../personalization/rendering-personalization-content.md#manually-rendering-content)
-
-**결정**: 이 속성은 더 이상 사용되지 않습니다. 대신 `propositions`를 사용하십시오.
-
-**대상**: 외부 개인화 플랫폼, 컨텐츠 관리 시스템, 광고 서버 및 고객 웹 사이트에서 실행되는 기타 애플리케이션과 공유할 수 있는 Adobe Experience Platform의 세그먼트입니다. [대상에 대해 자세히 알아보세요.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
+| 속성 | 설명 |
+|---------|----------|
+| `propositions` | 방문자가 자격을 얻은 개인화 오퍼입니다. [제안에 대해 자세히 알아보세요.](../personalization/rendering-personalization-content.md#manually-rendering-content) |
+| `decisions` | 이 속성은 더 이상 사용되지 않습니다. 대신 `propositions`를 사용하십시오. |
+| `destinations` | 외부 개인화 플랫폼, 컨텐츠 관리 시스템, 광고 서버 및 고객 웹 사이트에서 실행 중인 기타 애플리케이션과 공유할 수 있는 Adobe Experience Platform의 대상입니다. [대상에 대해 자세히 알아보세요.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html) |
 
 >[!WARNING]
 >
->`destinations` 는 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+>다음 `destinations` 속성이 Beta 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
 
 ## 전체적으로 이벤트 수정 {#modifying-events-globally}
 
-이벤트에서 필드를 전체적으로 추가, 제거 또는 수정하려면 `onBeforeEventSend` callback.  이 콜백은 이벤트가 전송될 때마다 호출됩니다.  이 콜백은 이벤트 개체에서 `xdm` 필드.  수정 `content.xdm` 를 클릭하여 이벤트와 함께 전송되는 데이터를 변경합니다.
+이벤트에서 필드를 전체적으로 추가, 제거 또는 수정하려면 `onBeforeEventSend` callback. 이 콜백은 이벤트가 전송될 때마다 호출됩니다. 이 콜백은 이벤트 개체에서 `xdm` 필드. 이벤트와 함께 전송되는 데이터를 변경하려면 를 수정합니다 `content.xdm`.
 
 
 ```javascript
@@ -246,8 +246,8 @@ alloy("configure", {
 
 `xdm` 필드는 다음 순서로 설정됩니다.
 
-1. 이벤트 명령에 옵션으로 전달된 값 `alloy("sendEvent", { xdm: ... });`
-2. 자동으로 수집된 값.  (참조: [자동 정보](../data-collection/automatic-information.md).)
+1. 이벤트 명령에 옵션으로 전달된 값 `alloy("sendEvent", { xdm: ... });`.
+2. 자동으로 수집된 값. 다음을 참조하십시오 [자동 정보](../data-collection/automatic-information.md).
 3. 에서 수행한 변경 사항 `onBeforeEventSend` callback.
 
 에 대한 몇 가지 참고 사항 `onBeforeEventSend` callback:

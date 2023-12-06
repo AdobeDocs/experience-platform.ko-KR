@@ -1,17 +1,15 @@
 ---
 title: Adobe Experience Platform 웹 SDK 구성
 description: Adobe Experience Platform Web SDK를 구성하는 방법에 대해 알아봅니다.
-seo-description: Learn how to configure the Experience Platform Web SDK
-keywords: 구성;구성;SDK;Edge;Web SDK;구성;edgeConfigId;컨텍스트;웹;장치;환경;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;웹 SDK 설정;사전 숨김 스타일;불투명도;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
-exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: a192a746fa227b658fcdb8caa07ea6fb4ac1a944
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1128'
-ht-degree: 9%
+source-wordcount: '1088'
+ht-degree: 8%
 
 ---
 
-# Platform Web SDK 구성
+
+# 웹 SDK 구성
 
 SDK에 대한 구성은 `configure` 명령입니다.
 
@@ -83,7 +81,7 @@ SDK를 적절한 계정 및 구성에 연결하는 할당된 구성 ID입니다.
 
 ### `edgeDomain` {#edge-domain}
 
-이 필드를 자사 도메인으로 채웁니다. 자세한 내용은 다음을 참조하십시오. [설명서](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=ko-KR).
+이 필드를 자사 도메인으로 채웁니다. 자세한 내용은 [설명서](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ko-KR).
 
 도메인은 와 유사합니다. `data.{customerdomain.com}` www의 웹 사이트용.{customerdomain.com}.
 
@@ -117,7 +115,7 @@ Adobe 서비스와 통신하고 상호 작용하는 데 사용되는 edgeDomain 
 
 {style="table-layout:auto"}
 
-링크 클릭과 연결된 데이터가 자동으로 수집되는지 여부를 나타냅니다. 다음을 참조하십시오 [자동 링크 추적](../data-collection/track-links.md#automaticLinkTracking) 추가 정보. 또한 링크에 다운로드 속성이 포함되어 있거나 링크가 파일 확장명으로 끝나는 경우 다운로드 링크로 레이블이 지정됩니다. 다운로드 링크 한정자는 정규 표현식으로 구성할 수 있습니다. 기본값은 입니다.`"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
+링크 클릭과 연결된 데이터가 자동으로 수집되는지 여부를 나타냅니다. 다음을 참조하십시오 [자동 링크 추적](../data-collection/track-links.md#automaticLinkTracking) 추가 정보. 또한 링크에 다운로드 속성이 포함되어 있거나 링크가 파일 확장명으로 끝나는 경우 다운로드 링크로 레이블이 지정됩니다. 다운로드 링크 한정자는 정규 표현식으로 구성할 수 있습니다. 기본값은 입니다. `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
 
 ### `onBeforeEventSend`
 
@@ -143,7 +141,7 @@ DOM 요소 구조를 사용하여 링크 추적을 필터링할 때 `clickElemen
 
 전송되는 데이터를 변경하려면 `xdm` 및/또는 `data` 개체. 콜백 내에서 `xdm` 개체에 이미 이벤트 명령에서 전달된 데이터와 자동으로 수집된 정보가 있습니다.
 
-* 이외의 모든 값 `false` 은 이벤트를 처리하고 콜백을 전송할 수 있도록 허용합니다.
+* 이외의 모든 값 `false` 이벤트를 처리하고 콜백을 전송할 수 있습니다.
 * 콜백이 다음을 반환하는 경우 `false` 값, 이벤트 처리가 오류 없이 중지되고 이벤트가 전송되지 않습니다. 이 메커니즘을 사용하면 이벤트 데이터를 검사하고 를 반환하여 특정 이벤트를 필터링할 수 있습니다 `false` 이벤트를 보내지 말아야 하는 경우.
 * 콜백에서 예외가 발생하면 이벤트 처리가 중지되고 이벤트가 전송되지 않습니다.
 
