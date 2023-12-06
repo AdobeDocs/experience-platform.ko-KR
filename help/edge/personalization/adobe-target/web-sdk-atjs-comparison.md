@@ -3,10 +3,10 @@ title: at.js와 Experience Platform Web SDK 비교
 description: at.js 기능을 Experience Platform Web SDK와 비교하는 방법에 대해 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;의사 결정 범위;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;의사 결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '2257'
-ht-degree: 6%
+source-wordcount: '2167'
+ht-degree: 5%
 
 ---
 
@@ -857,7 +857,7 @@ Analytics 페이로드(`tnta` token)은 다음을 사용하여 Analytics 히트�
 Analytics 서버측 로깅은 다음을 설정하여 활성화할 수 있습니다. `analyticsLogging: server_side` at.js 설정에서 또는 `window.targetglobalSettings` 개체.
 그런 다음 데이터는 다음과 같이 흐릅니다.
 
-![](assets/a4t-server-side-atjs.png)
+![Analytics 서버측 로깅 워크플로우를 보여 주는 다이어그램](assets/a4t-server-side-atjs.png)
 
 [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
@@ -872,7 +872,7 @@ Web SDK는 또한 다음을 지원합니다.
 
 해당 DataStream 구성에 대해 Adobe Analytics이 비활성화된 경우 Analytics 클라이언트 측 로깅이 활성화됩니다.
 
-![](assets/analytics-disabled-datastream-config.png)
+![Analytics 클라이언트측 로깅 워크플로우를 보여 주는 다이어그램](assets/analytics-disabled-datastream-config.png)
 
 고객은 Analytics 토큰( )에 액세스할 수 있습니다.`tnta`)을 사용하여 Analytics와 공유해야 합니다. [데이터 삽입 API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
 을(를) 연결하여 `sendEvent` 결과 제안 배열을 명령하고 반복합니다.
@@ -910,19 +910,19 @@ alloy("sendEvent", {
 
 다음은 Analytics Client Side가 활성화되어 있을 때 데이터가 어떻게 이동하는지를 보여 주는 다이어그램입니다.
 
-![](assets/analytics-client-side-logging.png)
+![Analytics Client Side 로깅의 데이터 흐름 다이어그램](assets/analytics-client-side-logging.png)
 
 #### Analytics 서버측 로깅
 
 해당 데이터 스트림 구성에 대해 Analytics가 활성화되면 Analytics Server Side 로깅이 활성화됩니다.
 
-![](assets/analytics-enabled-datastream-config.png)
+![Analytics 설정을 표시하는 데이터 스트림 UI입니다.](assets/analytics-enabled-datastream-config.png)
 
 Server Side Analytics 로깅을 활성화한 경우 Analytics 보고에 올바른 노출 횟수와 변환 횟수를 표시하도록 Analytics와 공유해야 하는 A4T 페이로드를 Edge Network 수준에서 공유하므로 고객이 추가 처리를 수행할 필요가 없습니다.
 
 다음은 Server Side Analytics 로깅이 활성화된 경우 데이터가 시스템으로 유입되는 방식입니다.
 
-![](assets/analytics-server-side-logging.png)
+![서버측 분석 로깅의 데이터 흐름을 보여 주는 다이어그램](assets/analytics-server-side-logging.png)
 
 ## Target 전역 설정을 설정하는 방법
 
@@ -1130,9 +1130,9 @@ Web SDK는 Target 타사 ID를 지원합니다. 그러나 몇 가지 단계가 �
 ID 맵을 사용하면 여러 ID를 보낼 수 있습니다. 모든 ID는 네임스페이스가 지정됩니다. 각 네임스페이스에는 하나 이상의 ID가 있을 수 있습니다. 특정 ID를 기본 ID로 표시할 수 있습니다.
 이 지식을 바탕으로 Target 타사 ID를 사용하도록 웹 SDK를 설정하는 데 필요한 단계를 확인할 수 있습니다.
 
-1. 데이터 스트림 구성 보기에서 Target 타사 ID를 포함할 네임스페이스를 설정합니다.
+1. 데이터 스트림 구성 페이지에서 Target 타사 ID를 포함할 네임스페이스를 설정합니다.
 
-![](assets/mbox-3-party-id-setup.png)
+![Target 타사 ID 네임스페이스 필드를 표시하는 데이터 스트림 UI](assets/mbox-3-party-id-setup.png)
 
 1. 다음과 같이 모든 sendEvent 명령에 해당 ID 네임스페이스를 보냅니다.
 
@@ -1180,8 +1180,8 @@ window.targetPageParams = function() {
 
 ### Web SDK 사용
 
-고객은 Web SDK를 사용하여 데이터 스트림 구성을 설정할 때 Adobe Target 네임스페이스 아래에 있는 속성을 더 높은 수준으로 설정할 수 있습니다.
-![](assets/at-property-setup.png)
+고객은 Web SDK를 사용하여 데이터스트림 구성을 설정할 때 Adobe Target 네임스페이스 아래에 있는 속성을 더 높은 수준에서 설정할 수 있습니다.
+![Adobe Target 설정을 보여 주는 데이터 스트림 UI입니다.](assets/at-property-setup.png)
 즉, 특정 데이터 스트림 구성에 대한 모든 Target 호출에 해당 속성 토큰이 포함됩니다.
 
 ## mbox를 미리 가져오는 방법

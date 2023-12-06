@@ -2,10 +2,10 @@
 title: 오류 처리
 description: Adobe Experience Platform Edge Network Server API에 대한 API 요청을 수행할 때 발생할 수 있는 오류에 대해 알아봅니다.
 exl-id: f6b8435c-b163-4046-b5fb-50a13a897637
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 3%
+source-wordcount: '766'
+ht-degree: 2%
 
 ---
 
@@ -117,7 +117,6 @@ Adobe Experience Platform Edge Network Server API의 API 오류는 내부(Edge N
 ```
 
 ## 처리 `4xx` 및 `5xx` 응답
-
 
 | 오류 코드 | 설명 |
 |---|---|

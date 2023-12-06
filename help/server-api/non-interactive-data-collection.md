@@ -2,12 +2,13 @@
 title: 비대화형 데이터 수집
 description: Adobe Experience Platform Edge Network Server API가 비대화형 데이터 수집을 수행하는 방법에 대해 알아봅니다.
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 4%
 
 ---
+
 
 # 비대화형 데이터 수집
 
@@ -15,7 +16,7 @@ ht-degree: 4%
 
 비대화형 이벤트 데이터 수집 엔드포인트는 여러 이벤트를 Experience Platform 데이터 세트 또는 다른 콘센트로 전송하는 데 사용됩니다.
 
-최종 사용자 이벤트가 짧은 기간(예: 네트워크 연결이 없는 경우) 로컬에서 대기열에 있을 때 이벤트를 일괄적으로 보내는 것이 좋습니다.
+최종 사용자 이벤트가 짧은 기간(예: 네트워크 연결이 없는 경우) 로컬 큐에 있는 경우 이벤트를 일괄 보내는 것이 좋습니다.
 
 일괄 처리 이벤트는 반드시 동일한 최종 사용자에게 속하지 않아야 합니다. 즉, 이벤트는 이벤트 내에 서로 다른 ID를 보유할 수 있습니다 `identityMap` 개체.
 
@@ -92,7 +93,6 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | `dataStreamId` | `String` | 예 | 데이터 수집 끝점에서 사용하는 데이터 스트림의 ID입니다. |
 | `requestId` | `String` | 아니요 | 외부 요청 추적 ID를 제공합니다. 아무 것도 제공되지 않으면 Edge Network가 자동으로 생성한 후 응답 본문/헤더로 다시 반환합니다. |
 | `silent` | `Boolean` | 아니요 | Edge Network가 `204 No Content` 페이로드가 비어 있거나 없는 응답입니다. 해당 HTTP 상태 코드 및 페이로드를 사용하여 심각한 오류가 보고됩니다. |
-
 
 ### 응답 {#response}
 

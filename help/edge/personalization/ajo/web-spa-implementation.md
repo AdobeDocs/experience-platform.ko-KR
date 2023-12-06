@@ -2,9 +2,9 @@
 title: 단일 페이지 애플리케이션 구현
 description: Adobe Journey Optimizer에서 SPA 보기를 구현하는 방법 알아보기
 exl-id: 1883251b-2d59-46d3-ac74-b8657edd0325
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '866'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ Adobe Journey Optimizer에서 XDM 보기를 활용하여 마케터가 Journey Op
 
 마케팅 팀은 전체 홈 페이지에서 A/B 테스트를 실행하려고 합니다.
 
-![](assets/web-spa-home.png)
+![단일 페이지 애플리케이션 샘플 페이지.](assets/web-spa-home.png)
 
 전체 홈 사이트에서 A/B 테스트를 실행하려면 `sendEvent()` 은(는) XDM을 사용하여 호출해야 합니다. `viewName` 을 로 설정 `home`:
 
@@ -137,7 +137,7 @@ history.listen(onViewChange);
 
 마케팅 팀은 사용자가 클릭하여 모든 남성 제품을 표시한 후 가격 레이블 색상을 빨간색으로 변경함으로써 제품의 두 번째 행을 개인화하려고 합니다.
 
-![](assets/web-spa-men-products.png)
+![개인화된 제품이 있는 단일 페이지 애플리케이션 샘플 페이지.](assets/web-spa-men-products.png)
 
 ```js
 function onViewChange(viewName) {

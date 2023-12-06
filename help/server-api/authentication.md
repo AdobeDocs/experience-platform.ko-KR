@@ -2,10 +2,10 @@
 title: 인증
 description: Adobe Experience Platform Edge Network Server API에 대한 인증을 구성하는 방법에 대해 알아봅니다.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 2%
+source-wordcount: '633'
+ht-degree: 1%
 
 ---
 
@@ -54,7 +54,7 @@ Experience Platform의 리소스는 특정 가상 샌드박스로 격리될 수 
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
-* Content-Type: `application/json`
+* 컨텐츠 유형: `application/json`
 
 ## 데이터 세트 쓰기 권한 구성 {#dataset-write-permissions}
 

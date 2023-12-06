@@ -3,10 +3,10 @@ title: Platform Web SDK에서 Offer decisioning 사용
 description: Adobe Experience Platform Web SDK는 Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 keywords: offer decisioning;의사 결정;Web SDK;Platform Web SDK;개인화된 오퍼;오퍼 게재;오퍼 게재;오퍼 개인화;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '863'
-ht-degree: 5%
+source-wordcount: '849'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 >
 >선택한 사용자에 대한 조기 액세스에서 Adobe Experience Platform Web SDK의 Offer decisioning을 사용할 수 있습니다. 일부 조직에서는 이 기능을 사용할 수 없습니다.
 
-Adobe Experience Platform [!DNL Web SDK] 은 Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. Offer Decisioning UI(사용자 인터페이스) 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
+Adobe Experience Platform [!DNL Web SDK] 은 Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI(사용자 인터페이스) 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 
 ## 전제 조건
 
@@ -51,7 +51,7 @@ offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니�
   >
   >다음에서 결정 범위 값을 복사할 수 있습니다. **활동 개요** UI의 페이지.
 
-  ![](assets/decision-scope-copy.png)
+  ![결정 복사 설정.](assets/decision-scope-copy.png)
 
 * **데이터스트림:** 자세한 내용은 다음을 참조하십시오. [데이터스트림](../../../datastreams/overview.md) 설명서를 참조하십시오.
 

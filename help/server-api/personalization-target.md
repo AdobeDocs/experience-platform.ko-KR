@@ -2,9 +2,9 @@
 title: Adobe Target을 통한 개인화
 description: Server API를 사용하여 Adobe Target에서 생성된 개인화된 경험을 전달하고 렌더링하는 방법에 대해 알아봅니다.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '591'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,6 @@ Adobe Target과 함께 서버 API를 사용하려면 먼저 데이터 스트림 
 데이터 스트림을 구성할 때 다음에 대한 값을 제공할 수 있습니다(선택 사항). [!DNL Property Token], [!DNL Target Environment ID], 및 [!DNL Target Third Party ID Namespace].
 
 ![Adobe Target이 선택된 상태에서 데이터 스트림 서비스 구성 화면을 표시하는 UI 이미지](assets/target-datastream.png)
-
 
 ## 사용자 지정 매개 변수 {#custom-parameters}
 

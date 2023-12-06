@@ -3,22 +3,23 @@ title: Adobe Experience Platform Web SDK에 대한 단일 페이지 애플리케
 description: Adobe Target을 사용하여 Adobe Experience Platform Web SDK의 단일 페이지 애플리케이션(SPA) 구현을 만드는 방법에 대해 알아봅니다.
 keywords: target;adobe target;xdm 보기;보기;단일 페이지 애플리케이션;SPA;SPA 라이프사이클;클라이언트측;AB 테스트;AB;경험 타깃팅;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '1665'
-ht-degree: 13%
+source-wordcount: '1817'
+ht-degree: 7%
 
 ---
+
 
 # 단일 페이지 애플리케이션 구현
 
 Adobe Experience Platform Web SDK는 단일 페이지 애플리케이션(SPA)과 같은 차세대 클라이언트측 기술에 대한 개인화를 실행하도록 기업을 지원하는 다양한 기능을 제공합니다.
 
-기존의 웹 사이트는, 웹 사이트 디자인이 URL과 밀접하게 연결되어 있고 한 웹 페이지에서 다른 웹 페이지로 전환하려면 페이지를 로드해야 하는 다중 페이지 애플리케이션으로도 알려진 &quot;페이지-투-페이지&quot; 탐색 모델에서 작동했습니다.
+기존 웹 사이트는 웹 사이트 디자인이 URL과 밀접하게 연결되어 있고 한 웹 페이지에서 다른 웹 페이지로 전환하려면 페이지를 로드해야 하는 다중 페이지 애플리케이션으로도 알려진 &quot;페이지-투-페이지&quot; 탐색 모델에서 작동했습니다.
 
 단일 페이지 애플리케이션과 같은 최신 웹 애플리케이션에서는 대신 종종 페이지 다시 로드와 무관한 브라우저 UI 렌더링을 촉진하는 모델을 채택했습니다. 이러한 경험은 스크롤, 클릭 및 커서 움직임과 같은 고객 상호 작용에 의해 트리거될 수 있습니다. 최신 웹의 패러다임이 발전함에 따라 개인화 및 실험을 배포하기 위한 페이지 로드와 같은 기존 일반 이벤트와의 관련성이 더 이상 작동하지 않습니다.
 
-![](assets/spa-vs-traditional-lifecycle.png)
+![기존 페이지 라이프사이클과 비교한 SPA 라이프사이클을 보여 주는 다이어그램입니다.](assets/spa-vs-traditional-lifecycle.png)
 
 ## SPA용 Platform Web SDK의 이점
 
@@ -32,27 +33,27 @@ Adobe Experience Platform Web SDK는 단일 페이지 애플리케이션(SPA)과
 
 SPA용 Adobe Target VEC는 &quot;보기&quot;라는 개념을 이용합니다. 이 개념은 SPA 경험을 함께 구성하는 시각적 요소의 논리 그룹입니다. 따라서 단일 페이지 애플리케이션은 사용자 상호 작용을 기반으로 URL 대신 보기를 통해 전환으로 간주할 수 있습니다. &quot;보기&quot;는 일반적으로 전체 사이트를 나타내거나 사이트 내의 그룹화된 시각적 요소를 나타낼 수 있습니다.
 
-&quot;보기&quot;에 대해 더 설명하기 위해 다음 예제에서는 React에 구현된 가상의 온라인 전자 상거래 사이트를 사용하여 &quot;보기&quot; 예제를 살펴봅니다.
+&quot;보기&quot;가 무엇인지 더 설명하기 위해 다음 예제에서는 React에 구현된 가상의 온라인 전자 상거래 사이트를 사용하여 &quot;보기&quot; 예를 살펴봅니다.
 
 홈 사이트로 이동한 후 영웅 이미지는 사이트에서 사용할 수 있는 최신 제품과 부활절 판매를 홍보합니다. 이 경우 전체 홈 화면에 대해 보기 를 정의할 수 있습니다. 이 보기는 간단히 &quot;홈&quot;이라고 할 수 있습니다.
 
-![](assets/example-views.png)
+![브라우저 창의 단일 페이지 애플리케이션에 대한 샘플 이미지입니다.](assets/example-views.png)
 
 고객이 비즈니스에서 판매하는 제품에 대한 관심이 높아짐에 따라 **제품** 링크를 클릭합니다. 홈 사이트와 유사하게, 제품 사이트 전체를 보기로 정의할 수 있습니다. 이 보기의 이름은 &quot;products-all&quot;로 지정할 수 있습니다.
 
-![](assets/example-products-all.png)
+![모든 제품이 표시된 브라우저 창의 단일 페이지 애플리케이션에 대한 샘플 이미지입니다.](assets/example-products-all.png)
 
 보기를 전체 사이트 또는 사이트의 시각적 요소 그룹으로 정의할 수 있으므로 제품 사이트에 표시된 4개의 제품을 그룹화하여 보기로 간주할 수 있습니다. 이 보기의 이름은 &quot;products&quot;로 지정할 수 있습니다.
 
-![](assets/example-products.png)
+![예제 제품이 표시된 브라우저 창의 단일 페이지 애플리케이션에 대한 샘플 이미지입니다.](assets/example-products.png)
 
 고객이 를 클릭하기로 결정하면 **추가 로드** 사이트에서 더 많은 제품을 탐색하기 위한 버튼인 경우 웹 사이트 URL은 변경되지 않지만, 표시되는 제품의 두 번째 행만 나타내는 보기 를 여기에 만들 수 있습니다. 보기 이름은 &quot;products-page-2&quot;일 수 있습니다.
 
-![](assets/example-load-more.png)
+![브라우저 창의 단일 페이지 애플리케이션에 대한 샘플 이미지로서, 추가 페이지에 표시되는 제품 예입니다.](assets/example-load-more.png)
 
 고객은 사이트에서 몇 가지 제품을 구매하기로 하고 체크아웃 화면으로 진행합니다. 체크아웃 사이트에서는 고객에게 일반 배달 또는 빠른 배달을 선택할 수 있는 옵션이 제공됩니다. &quot;보기&quot;는 사이트에서 임의의 시각적 요소 그룹일 수 있으므로 게재 환경 설정에 대해 보기를 만들고 &quot;게재 환경 설정&quot;이라고 할 수 있습니다.
 
-![](assets/example-check-out.png)
+![브라우저 창의 단일 페이지 애플리케이션 체크아웃 페이지에 대한 샘플 이미지입니다.](assets/example-check-out.png)
 
 &quot;보기&quot; 개념은 이보다 훨씬 더 확장될 수 있습니다. 다음은 사이트에서 정의할 수 있는 &quot;보기&quot;의 몇 가지 예입니다.
 
@@ -89,7 +90,7 @@ Adobe Target에서 XDM 보기 를 활용하여 마케터가 시각적 경험 작
 
 마케팅 팀은 전체 홈 페이지에서 A/B 테스트를 실행하려고 합니다.
 
-![](assets/use-case-1.png)
+![브라우저 창의 단일 페이지 애플리케이션에 대한 샘플 이미지입니다.](assets/use-case-1.png)
 
 전체 홈 사이트에서 A/B 테스트를 실행하려면 `sendEvent()` 은(는) XDM을 사용하여 호출해야 합니다. `viewName` 을 로 설정 `home`:
 
@@ -133,7 +134,7 @@ history.listen(onViewChange);
 
 마케팅 팀은 사용자가 클릭한 후 가격 레이블 색상을 빨간색으로 변경함으로써 제품의 두 번째 행을 개인화하려고 합니다 **추가 로드**.
 
-![](assets/use-case-2.png)
+![개인화된 오퍼를 보여 주는 브라우저 창의 단일 페이지 애플리케이션 샘플 이미지입니다.](assets/use-case-2.png)
 
 ```jsx
 function onViewChange(viewName) { 
@@ -159,7 +160,7 @@ class Products extends Component {
   } 
 
   handleLoadMoreClicked() { 
-    var page = this.state.page + 1; // assuming page number is derived from component’s state 
+    var page = this.state.page + 1; // assuming page number is derived from component's state 
     this.setState({page: page}); 
     onViewChange('PRODUCTS-PAGE-' + page); 
   } 
@@ -171,7 +172,7 @@ class Products extends Component {
 
 마케팅 팀은 A/B 테스트를 실행하여 버튼의 색상을 언제 파란색에서 빨간색으로 변경할지 확인하려고 합니다 **빠른 배달** 를 선택하면 전환이 늘어날 수 있습니다(두 게재 옵션 모두에 대해 단추 색상을 파란색으로 유지하는 것과 대조적으로).
 
-![](assets/use-case-3.png)
+![A/B 테스트와 함께 브라우저 창에 있는 단일 페이지 애플리케이션의 샘플 이미지입니다.](assets/use-case-3.png)
 
 선택한 게재 환경 설정에 따라 사이트에서 콘텐츠를 개인화하기 위해 각 게재 환경 설정에 대해 &quot;보기&quot;를 만들 수 있습니다. 날짜 **일반 게재** 을 선택하면 보기의 이름을 &quot;checkout-normal&quot;로 지정할 수 있습니다. If **빠른 배달** 을 선택한 경우 보기의 이름을 &quot;checkout-express&quot;로 지정할 수 있습니다.
 
@@ -226,13 +227,13 @@ XDM 보기 정의 및 구현을 완료한 경우 `sendEvent()` 전달된 XDM 보
 
 수정 사항 패널에서는 특정 보기용으로 만들어진 작업을 캡처합니다. 보기에 대한 모든 작업은 해당 보기 아래에 그룹화됩니다.
 
-![](assets/modifications-panel.png)
+![브라우저 창의 사이드바에 표시되는 페이지 로드 옵션이 있는 수정 사항 패널 .](assets/modifications-panel.png)
 
 ### 작업
 
 작업을 클릭하면 이 작업이 적용될 사이트의 요소가 강조 표시됩니다. 보기 아래에 작성된 각 VEC 작업에는 다음 아이콘이 있습니다. **정보**, **편집**, **복제**, **이동**, 및 **삭제**. 이러한 아이콘은 다음 표에 자세히 설명되어 있습니다.
 
-![](assets/action-icons.png)
+![작업 아이콘](assets/action-icons.png)
 
 | 아이콘 | 설명 |
 |---|---|
@@ -255,7 +256,7 @@ XDM 보기 정의 및 구현을 완료한 경우 `sendEvent()` 전달된 XDM 보
 
 VEC에서 이러한 업데이트를 수행하려면 다음을 선택합니다. **작성** 그리고 이러한 변경 사항을 &quot;홈&quot; 보기에 적용합니다.
 
-![](assets/vec-home.png)
+![시각적 경험 작성기 샘플 페이지.](assets/vec-home.png)
 
 ### 예제 2: 제품 레이블 변경
 
@@ -269,7 +270,7 @@ VEC에서 이러한 업데이트를 수행하려면 다음 단계를 수행해�
 4. 선택 **작성** VEC에서
 5. 작업을 적용하여 텍스트 레이블을 다음으로 변경 **판매 가격** 빨간색도 있고
 
-![](assets/vec-products-page-2.png)
+![제품 레이블이 있는 시각적 경험 작성기 샘플 페이지.](assets/vec-products-page-2.png)
 
 ### 예제 3: 게재 환경 설정 스타일 개인화
 
@@ -289,4 +290,4 @@ VEC에서 이러한 업데이트를 수행하려면 다음 단계를 수행해�
 >
 >&quot;checkout-express&quot; 보기는 다음이 수행되어야 수정 사항 패널에 표시됩니다. **빠른 배달** 라디오 단추가 선택되어 있습니다. 이유는 다음과 같습니다. `sendEvent()` 함수는 다음 경우에 실행됩니다. **빠른 배달** 라디오 버튼이 선택되어 있으므로 라디오 버튼을 선택할 때까지 VEC가 &quot;checkout-express&quot; 보기를 인식하지 못합니다.
 
-![](assets/vec-delivery-preference.png)
+![시각적 경험 작성기가 게재 환경 설정 선택기를 표시합니다.](assets/vec-delivery-preference.png)
