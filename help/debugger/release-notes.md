@@ -4,14 +4,27 @@ description: Adobe Experience Platform Debugger에 대한 최신 릴리스 정�
 keywords: debugger;experience Platform Debugger 확장 프로그램;chrome;확장 프로그램;릴리스 정보
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 5b3bfc38a1b159d57c7be6733b9c2515ba72c3c6
+source-git-commit: 5ec61e3822cf42bdb89b24a17782b40cbd9dab37
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '660'
 ht-degree: 4%
 
 ---
 
 # Adobe Experience Platform Debugger 릴리스 노트
+
+## 버전 1.5.3 - 2023년 12월 6일
+
+### 새로운 기능
+
+* &quot;디버거를 열 때 활성 탭에 잠금&quot; 설정이 추가되었습니다.
+
+### 수정 사항 및 개선 사항
+
+* 비공개 도메인에서 Analytics 요청이 누락되었던 문제가 수정되었습니다.
+* Analytics 요청 테이블에서 Activity Map 데이터가 누락되는 문제를 수정했습니다.
+* 타겟 추적을 보면 충돌이 발생하는 문제를 해결했습니다.
+* 디버거가 Firefox에서 페이지 내 인프라를 설정하지 못할 때 경고가 추가되었습니다.
 
 ## 버전 1.5.1 - 2023년 11월 2일
 
