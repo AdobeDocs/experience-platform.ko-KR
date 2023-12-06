@@ -1,12 +1,11 @@
 ---
-keywords: Google 광고;google 광고;google adwords;Google 광고;Google 광고
 title: Google 광고 연결
 description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업이 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 과금 광고를 할 수 있도록 해주는 온라인 광고 서비스입니다.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1ec9559e762b44dd8d7639aba0a54af7ce221666
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 3%
+source-wordcount: '950'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +28,7 @@ ht-degree: 3%
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Google Ad Manager] 는 아래 표에 설명된 id 활성화를 지원합니다.
+[!DNL Google Ads] 는 아래 표에 설명된 id 활성화를 지원합니다.
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
