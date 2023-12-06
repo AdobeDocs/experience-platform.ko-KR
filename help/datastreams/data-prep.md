@@ -1,16 +1,40 @@
 ---
 title: 데이터 수집을 위한 데이터 준비
 description: Adobe Experience Platform Web 및 Mobile SDK용 데이터스트림 구성 시 데이터를 Experience Data Model(XDM) 이벤트 스키마에 매핑하는 방법에 대해 알아봅니다.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 85%
+source-wordcount: '1201'
+ht-degree: 64%
 
 ---
+
 
 # 데이터 수집을 위한 데이터 준비
 
 데이터 준비는 [Experience Data Model(XDM)](../xdm/home.md)과의 데이터를 매핑, 변환 및 확인할 수 있는 Adobe Experience Platform 서비스입니다. Platform 지원 [데이터스트림](./overview.md)을 구성할 때 데이터 준비 기능을 사용하여 소스 데이터를 Platform Edge Network로 전송 시 XDM에 매핑할 수 있습니다.
+
+웹 페이지에서 전송된 모든 데이터는 XDM으로 Experience Platform에 도착해야 합니다. 3가지 방법으로 페이지 내 데이터 레이어의 데이터를 Experience Platform이 수락하는 XDM으로 변환할 수 있습니다.
+
+1. 웹 페이지 자체에서 데이터 레이어를 XDM으로 다시 포맷합니다.
+2. 태그 기본 데이터 요소 기능을 사용하여 웹 페이지의 기존 데이터 레이어 형식을 XDM으로 다시 지정합니다.
+3. 데이터 수집을 위한 데이터 준비를 사용하여 Edge Network를 통해 웹 페이지의 기존 데이터 레이어 형식을 XDM으로 다시 포맷합니다.
+
+이 안내서는 세 번째 옵션에 중점을 둡니다.
+
+## 데이터 수집을 위해 데이터 준비를 사용해야 하는 경우 {#when-to-use-data-prep}
+
+데이터 수집을 위한 데이터 준비가 유용한 두 가지 사용 사례가 있습니다.
+
+1. 웹 사이트에는 잘 구성되고 관리되며 유지되는 데이터 레이어가 있으며 JavaScript 조작을 사용하여 페이지에서 XDM으로 변환하는 대신 Edge Network로 직접 전송하는 것이 좋습니다(태그 데이터 요소 또는 수동 JavaScript 조작을 통해).
+2. 태그 이외의 태그 지정 시스템이 사이트에 배포됩니다.
+
+## WebSDK를 통해 Edge 네트워크에 기존 데이터 계층 보내기 {#send-datalayer-via-websdk}
+
+기존 데이터 레이어는 `data` 옵션 `sendEvent` 다음에 설명된 대로 명령 [Web SDK 설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+
+태그를 사용하는 경우 **[!UICONTROL 데이터]** 필드 **[!UICONTROL 이벤트 보내기]** 에 설명된 대로 작업 유형 [웹 SDK 태그 확장 설명서](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+
+이 안내서의 나머지 부분에서는 WebSDK에서 데이터 레이어를 전송한 후 XDM 표준에 매핑하는 방법에 중점을 둡니다.
 
 >[!NOTE]
 >
@@ -131,6 +155,10 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 옵션을 선택하여 오브젝트를 파일로 업로드하거나 원시 오브젝트를 대신 제공된 텍스트 상자에 붙여넣을 수 있습니다. JSON이 유효한 경우 오른쪽 패널에 미리보기 스키마가 표시됩니다. 계속하려면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
 ![예상되는 수신 데이터의 JSON 샘플](assets/data-prep/select-data.png)
+
+>[!NOTE]
+>
+> 모든 페이지에서 사용할 수 있는 모든 데이터 레이어 요소를 나타내는 샘플 JSON 개체를 사용합니다. 예를 들어 모든 페이지에서 장바구니 데이터 계층 요소를 사용하는 것은 아닙니다. 그러나 장바구니 데이터 계층 요소는 이 샘플 JSON 개체에 포함되어야 합니다.
 
 ## [!UICONTROL 매핑]
 

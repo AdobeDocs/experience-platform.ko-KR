@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform Web SDK를 사용하여 이벤트 추적
 description: Adobe Experience Platform Web SDK 이벤트를 추적하는 방법에 대해 알아봅니다.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -76,11 +76,9 @@ dataLayer.commerce = null;
 
 ## XDM이 아닌 데이터 보내기
 
-XDM 스키마와 일치하지 않는 데이터는 `data` 옵션 `sendEvent` 명령입니다. 이 기능은 Web SDK 버전 2.5.0 이상에서 지원됩니다.
+XDM 스키마와 일치하지 않는 데이터는 `data` 옵션 `sendEvent` 명령입니다. 이 기능은 Web SDK 버전 2.5.0 이상에서 지원됩니다. 이 옵션을 사용하는 경우 데이터를 를 통해 지원되는 XDM 스키마 서버측에 매핑해야 합니다. [데이터 수집을 위한 데이터 준비](../../datastreams/data-prep.md#create-mapping).
 
-이 기능은 Adobe Target 프로필을 업데이트하거나 Target Recommendations 속성을 보내야 하는 경우에 유용합니다. [이러한 Target 기능에 대해 자세히 알아보십시오.](../personalization/adobe-target/target-overview.md#single-profile-update)
-
-나중에 전체 데이터 레이어를 `data` 옵션을 선택하고 XDM 서버측에 매핑합니다.
+이 기능은 Adobe Target 프로필을 업데이트하거나 Target Recommendations 특성을 보내야 하는 경우에도 유용합니다. 자세한 내용 [Target 개인화](../personalization/adobe-target/target-overview.md#single-profile-update).
 
 **Adobe Target에 프로필 및 Recommendations 속성을 보내는 방법:**
 
