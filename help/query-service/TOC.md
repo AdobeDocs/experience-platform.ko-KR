@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: cd97165d4e4d8ed984c4705f614c8d77eb750ed6
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 21%
+source-wordcount: '309'
+ht-degree: 19%
 
 ---
 
@@ -48,8 +48,9 @@ ht-degree: 21%
    - [사용자의 페이지 보기 나열](use-cases/list-visitor-sessions.md)
    - [페이지 보기별로 방문자 나열](use-cases/visitors-by-number-of-page-views.md)
    - [성향 점수](use-cases/propensity-score.md)
-   - [SQLAlchemy](use-cases/sqlalchemy.md)
+   - [람다 함수 예: 유사한 레코드 검색](use-cases/retrieve-similar-records.md)
    - [분석 데이터에서 머천다이징 변수 반환 및 사용](use-cases/merchandising-variables.md)
+   - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [방문자에 대한 롤업 보고서 보기](use-cases/roll-up-report-of-a-visitor.md)
    - [웹 및 모바일 분석 인사이트](use-cases/analytics-insights.md)
 - 주요 개념 {#key-concepts}
@@ -72,7 +73,7 @@ ht-degree: 21%
    - [Power BI](clients/power-bi.md)
    - [PSQL](clients/psql.md)
    - [스튜디오](clients/rstudio.md)
-   - [Tableau](clients/tableau.md)
+   - [타블로](clients/tableau.md)
 - 쿼리 서비스 UI {#ui}
    - [UI 개요](ui/overview.md)
    - [쿼리 편집기 사용 안내서](ui/user-guide.md)
@@ -97,7 +98,7 @@ ht-degree: 21%
    - [감사 로그 안내서](data-governance/audit-log-guide.md)
    - [애드혹 스키마 데이터 세트의 ID](data-governance/ad-hoc-schema-identities.md)
    - [Ad Hoc 스키마에 대한 속성 기반 액세스 제어 지원](./data-governance/ad-hoc-schema-labels.md)
-- 모범 사례 {#best-practices}
+- 권장사항 {#best-practices}
    - [쿼리 실행](best-practices/writing-queries.md)
    - [데이터 자산 조직](./best-practices/organize-data-assets.md)
 - SQL 참조 {#sql}
