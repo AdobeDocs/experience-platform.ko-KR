@@ -2,10 +2,10 @@
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 CSV 데이터 파일을 정기적으로 자체 S3 버킷으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 17%
+source-wordcount: '1052'
+ht-degree: 16%
 
 ---
 
@@ -18,12 +18,12 @@ ht-degree: 17%
 * [데이터 세트 내보내기 지원](/help/destinations/ui/export-datasets.md).
 * 추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * [향상된 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능.
-* [사용자 정의 기능내보낸 CSV 데이터 파일의 서식](/help/destinations/ui/batch-destinations-file-formatting-options.md)을 사용자 정의하는 기능.
+* [내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ## 다음에 연결 [!DNL Amazon S3] API 또는 UI를 통한 스토리지 {#connect-api-or-ui}
 
 * 에 연결하려면 [!DNL Amazon S3] 플랫폼 사용자 인터페이스를 사용한 저장소 위치에서 섹션을 읽습니다. [대상에 연결](#connect) 및 [이 대상에 대상자 활성화](#activate) 아래요.
-* 에 연결하려면 [!DNL Amazon S3] 저장소 위치를 프로그래밍 방식으로 읽고 [흐름 서비스 API 튜토리얼을 사용하여 파일 기반 대상에 대한 대상자 활성화](../../api/activate-segments-file-based-destinations.md).
+* 에 연결하려면 [!DNL Amazon S3] 프로그래밍 방식으로 저장소 위치에서 방법 안내서를 참조하십시오. [흐름 서비스 API 튜토리얼을 사용하여 파일 기반 대상에 대상 활성화](../../api/activate-segments-file-based-destinations.md).
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -47,7 +47,7 @@ ht-degree: 17%
 
 {style="table-layout:auto"}
 
-![Amazon S3 프로필 기반 내보내기 유형](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+![Amazon S3 프로필 기반 내보내기 유형은 UU에서 강조 표시됩니다.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
 ## 대상에 연결 {#connect}
 
@@ -69,7 +69,7 @@ ht-degree: 17%
 * **[!DNL Amazon S3]액세스 키** 및 **[!DNL Amazon S3]비밀 키**: 위치 [!DNL Amazon S3], 생성 `access key - secret access key` 쌍으로 플랫폼에 액세스 권한 부여 [!DNL Amazon S3] 계정입니다. 다음에서 자세히 알아보기 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-  ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지입니다.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 대상 세부 정보 입력 {#destination-details}
 

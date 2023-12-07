@@ -1,12 +1,11 @@
 ---
-keywords: 프로필 대상 활성화;대상 활성화;데이터 활성화; 이메일 마케팅 대상 활성화; 클라우드 스토리지 대상 활성화
 title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성화
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 28578a7e852cbefd3c644259a4bffaed29501a9e
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '3765'
 ht-degree: 11%
 
 ---
@@ -24,7 +23,7 @@ ht-degree: 11%
 
 ## 개요 {#overview}
 
-이 문서에서는 클라우드 스토리지 및 이메일 마케팅 대상과 같은 Adobe Experience Platform 배치 프로필 기반 대상에서 대상자를 활성화하는 데 필요한 워크플로우에 대해 설명합니다.
+이 문서에서는 Adobe Experience Platform에서 대상을 활성화하여 클라우드 스토리지 및 이메일 마케팅 대상과 같은 프로필 파일 기반 대상을 일괄 처리하는 데 필요한 워크플로에 대해 설명합니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -46,15 +45,15 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 
 1. 다음으로 이동 **[!UICONTROL 연결 > 대상]**&#x200B;을(를) 클릭하고 **[!UICONTROL 카탈로그]** 탭.
 
-   ![이미지 강조 표시 대상 카탈로그 탭으로 이동하는 방법](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+   ![대상 카탈로그 탭으로 이동하는 방법을 강조 표시하는 이미지.](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. 선택 **[!UICONTROL 대상자 활성화]** 아래 이미지에 표시된 대로 대상을 활성화할 대상에 해당하는 카드에.
 
-   ![Activate audiences 단추를 강조 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
+   ![카탈로그 페이지에서 강조 표시된 대상자 컨트롤을 활성화합니다.](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
 1. 대상을 활성화하는 데 사용할 대상 연결을 선택한 다음 을 선택합니다 **[!UICONTROL 다음]**.
 
-   ![이미지 강조 표시 대상자를 활성화할 하나 이상의 대상을 선택하는 방법](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![대상을 활성화할 하나 이상의 대상을 선택하기 위해 강조 표시된 확인란입니다.](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. 다음 섹션으로 이동 [대상자 선택](#select-audiences).
 
@@ -68,7 +67,7 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 * **[!UICONTROL 사용자 정의 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드된 대상자 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/overview.md#import-audience).
 * 다른 Adobe 솔루션에서 가져온 다른 유형의 대상, 예: [!DNL Audience Manager].
 
-![이미지 강조 표시 활성화할 하나 이상의 대상을 선택하는 방법](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
+![활성화하려는 하나 이상의 대상을 선택할 때 표시되는 확인란입니다.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
@@ -81,7 +80,7 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 >title="예약"
 >abstract="연필 아이콘을 사용하여 파일 내보내기 유형(전체 파일 또는 증분 파일)과 내보내기 빈도를 설정합니다."
 
-[!DNL Adobe Experience Platform] 이메일 마케팅 및 클라우드 스토리지 대상에 대한 데이터를 [!DNL CSV] 파일. 다음에서 **[!UICONTROL 예약]** 페이지에서 내보내는 각 대상에 대해 일정 및 파일 이름을 구성할 수 있습니다. 예약을 구성해야 하지만, 파일 이름을 구성하는 것은 선택 사항입니다.
+[!DNL Adobe Experience Platform] 이메일 마케팅 및 클라우드 스토리지 대상에 대한 데이터를 다음으로 내보냅니다. [다른 파일 유형](#supported-file-formats-export). 다음에서 **[!UICONTROL 예약]** 페이지에서 내보내는 각 대상에 대해 일정 및 파일 이름을 구성할 수 있습니다. 예약을 구성해야 하지만, 파일 이름을 구성하는 것은 선택 사항입니다.
 
 >[!IMPORTANT]
 >
@@ -89,9 +88,9 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 >
 >분할 파일 이름에는 다음과 같이 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다. `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
-다음 항목 선택 **[!UICONTROL 일정 만들기]** 대상으로 보낼 대상에 해당하는 단추입니다.
+다음 항목 선택 **[!UICONTROL 일정 만들기]** 대상으로 보내려는 대상에 해당하는 컨트롤입니다.
 
-![일정 만들기 단추를 강조 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![예약 단계에서 강조 표시된 예약 컨트롤을 만듭니다.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### 전체 파일 내보내기 {#export-full-files}
 
@@ -113,14 +112,14 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 
 선택 **[!UICONTROL 전체 파일 내보내기]** 선택한 대상에 대한 모든 프로필 자격의 전체 스냅샷이 포함된 파일 내보내기를 트리거합니다.
 
-![전체 파일 내보내기 전환이 선택된 UI 이미지.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![전체 파일 내보내기 전환이 선택되었습니다.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. 사용 **[!UICONTROL 빈도]** 내보내기 빈도를 선택하는 선택기:
 
    * **[!UICONTROL 한 번]**: 온디맨드 전체 파일 내보내기를 한 번 예약합니다.
    * **[!UICONTROL 매일]**: 지정한 시간에 매일 한 번씩 전체 파일 내보내기를 예약합니다.
 
-1. 사용 **[!UICONTROL 시간]** 전환하여 대상 평가 후 바로 내보내기를 수행할지 또는 지정된 시간에 예약된 기준으로 내보내기를 수행할지 여부를 선택합니다. 을(를) 선택할 때 **[!UICONTROL 예약됨]** 옵션에서 선택기를 사용하여 시간을 선택할 수 있습니다. [!DNL UTC] 포맷(내보내기가 언제 수행되어야 하는지).
+2. 사용 **[!UICONTROL 시간]** 전환하여 대상 평가 후 바로 내보내기를 수행할지 또는 지정된 시간에 예약된 기준으로 내보내기를 수행할지 여부를 선택합니다. 을(를) 선택할 때 **[!UICONTROL 예약됨]** 옵션에서 선택기를 사용하여 시간을 선택할 수 있습니다. [!DNL UTC] 포맷(내보내기가 언제 수행되어야 하는지).
 
    >[!NOTE]
    >
@@ -135,13 +134,13 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 
    ![이미지: 배치 대상에 대한 활성화 흐름에서 예약됨 옵션을 강조 표시하고 시간 선택기를 표시합니다.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-1. 사용 **[!UICONTROL 날짜]** 내보내기를 수행할 날짜 또는 간격을 선택하는 선택기입니다. 일별 내보내기의 경우 가장 좋은 방법은 다운스트림 플랫폼의 캠페인 기간에 맞춰 시작 및 종료 날짜를 설정하는 것입니다.
+3. 사용 **[!UICONTROL 날짜]** 내보내기를 수행할 날짜 또는 간격을 선택하는 선택기입니다. 일별 내보내기의 경우 가장 좋은 방법은 다운스트림 플랫폼의 캠페인 기간에 맞춰 시작 및 종료 날짜를 설정하는 것입니다.
 
    >[!IMPORTANT]
    >
    > 내보내기 간격을 선택할 때 간격의 마지막 날은 내보내기에 포함되지 않습니다. 예를 들어, 1월 4일 - 11일 간격을 선택하면 마지막 파일 내보내기가 1월 10일에 수행됩니다.
 
-1. 선택 **[!UICONTROL 만들기]** 일정을 저장합니다.
+4. 선택 **[!UICONTROL 만들기]** 일정을 저장합니다.
 
 ### 증분 파일 내보내기 {#export-incremental-files}
 
@@ -151,22 +150,22 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 >
 >첫 번째로 내보낸 증분 파일에는 대상자를 위한 자격이 있고 채우기 역할을 하는 모든 프로필이 포함되어 있습니다.
 
-![증분 파일 내보내기 토글이 선택된 UI 이미지.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![증분 파일 내보내기 전환이 선택되었습니다.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. 사용 **[!UICONTROL 빈도]** 내보내기 빈도를 선택하는 선택기:
 
    * **[!UICONTROL 매일]**: 지정한 시간에 매일 한 번씩 증분 파일 내보내기를 예약합니다.
    * **[!UICONTROL 시간별]**: 3, 6, 8 또는 12시간마다 증분 파일 내보내기를 예약합니다.
 
-1. 사용 **[!UICONTROL 시간]** 시간(일 기준)을 선택하는 선택기 [!DNL UTC] 포맷(내보내기가 언제 수행되어야 하는지).
+2. 사용 **[!UICONTROL 시간]** 시간(일 기준)을 선택하는 선택기 [!DNL UTC] 포맷(내보내기가 언제 수행되어야 하는지).
 
-1. 사용 **[!UICONTROL 날짜]** 선택기 : 내보내기가 발생할 간격을 선택합니다. 가장 좋은 방법은 다운스트림 플랫폼의 캠페인 기간에 맞춰 시작 및 종료 날짜를 설정하는 것입니다.
+3. 사용 **[!UICONTROL 날짜]** 선택기 : 내보내기가 발생할 간격을 선택합니다. 가장 좋은 방법은 다운스트림 플랫폼의 캠페인 기간에 맞춰 시작 및 종료 날짜를 설정하는 것입니다.
 
    >[!IMPORTANT]
    >
    >간격의 마지막 날은 내보내기에 포함되지 않습니다. 예를 들어, 1월 4일 - 11일 간격을 선택하면 마지막 파일 내보내기가 1월 10일에 수행됩니다.
 
-1. 선택 **[!UICONTROL 만들기]** 일정을 저장합니다.
+4. 선택 **[!UICONTROL 만들기]** 일정을 저장합니다.
 
 ### 파일 이름 구성 {#file-names}
 
@@ -215,7 +214,7 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 
 이 단계에서는 대상 대상으로 내보낸 파일에 추가할 프로필 속성을 선택해야 합니다. 내보낼 프로필 속성 및 ID를 선택하려면 다음을 수행하십시오.
 
-1. 다음에서 **[!UICONTROL 매핑]** 페이지, 선택 **[!UICONTROL 새 필드 추가]**.
+1. 다음에서 **[!UICONTROL 매핑]** 페이지, 선택 **[!UICONTROL 새 매핑 추가]**.
 
    ![매핑 워크플로에서 강조 표시된 새 필드 컨트롤을 추가합니다.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
@@ -434,7 +433,7 @@ Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 
 
 아래 이미지에 표시된 대로 내보낼 ID 네임스페이스를 선택하는 것은 현재 지원되지 않습니다. 내보낼 ID 네임스페이스를 선택하면 **[!UICONTROL 리뷰]** 단계.
 
-![ID 내보내기를 보여주는 지원되지 않는 매핑](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+![ID 내보내기를 보여주는 지원되지 않는 매핑입니다.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 임시 해결 방법으로 Beta 실행 중에 내보낸 파일에 ID 네임스페이스를 추가해야 하는 경우 다음 중 하나를 수행할 수 있습니다.
 * 내보내기에 ID 네임스페이스를 포함하려는 데이터 흐름에 레거시 클라우드 스토리지 대상을 사용합니다
@@ -513,11 +512,11 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/dest
 
 선택 **[!UICONTROL 다음]** 로 이동 [리뷰](#review) 단계.
 
-## 검토 {#review}
+## 리뷰 {#review}
 
 다음에서 **[!UICONTROL 리뷰]** 페이지에서 선택 사항의 요약을 볼 수 있습니다. 선택 **[!UICONTROL 취소]** 흐름을 끊으려면, **[!UICONTROL 뒤로]** 설정을 수정하려면 **[!UICONTROL 완료]** 을 클릭하여 선택 항목을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
-![검토 단계의 선택 요약입니다.](../assets/ui/activate-batch-profile-destinations/review.png)
+![검토 단계에 표시되는 선택 요약입니다.](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ### 동의 정책 평가 {#consent-policy-evaluation}
 
@@ -532,7 +531,7 @@ abstract="조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; 
 
 다음에서 **[!UICONTROL 리뷰]** 단계, Experience Platform은 데이터 사용 정책 위반도 확인합니다. 다음은 정책이 위반되는 예입니다. 위반을 해결할 때까지 대상 활성화 워크플로우를 완료할 수 없습니다. 정책 위반을 해결하는 방법에 대한 자세한 내용은 다음을 참조하십시오. [데이터 사용 정책 위반](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) (데이터 거버넌스 설명서 섹션)
 
-![데이터 정책 위반](../assets/common/data-policy-violation.png)
+![활성화 워크플로에 표시된 데이터 정책 위반 사례입니다.](../assets/common/data-policy-violation.png)
 
 ### 대상자 필터링 {#filter-audiences}
 

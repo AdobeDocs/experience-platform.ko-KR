@@ -3,10 +3,10 @@ title: LiveRamp - 온보드 연결
 description: LiveRamp 커넥터를 사용하여 Adobe Real-time Customer Data Platform에서 LiveRamp Connect로 대상을 온보딩하는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 9122159b3facf7952e6072d0b9e6f8d8d7d7c99c
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1793'
-ht-degree: 4%
+source-wordcount: '1756'
+ht-degree: 3%
 
 ---
 

@@ -2,16 +2,16 @@
 title: 대상 개요
 description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과 미리 빌드된 통합입니다. Adobe Experience Platform의 대상 을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: d3c7b416317034c8d57663e0c05c9dc4dbe6d2d4
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '1001'
 ht-degree: 4%
 
 ---
 
 # [!DNL Destinations] 개요 {#overview}
 
-![대상 개요 배너](./assets/overview/destinations-overview-banner.png)
+![대상 개요 배너.](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]**&#x200B;는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
@@ -29,7 +29,7 @@ Platform의 핵심 기능 중 하나는 자사 데이터를 수집하고 비즈�
 ## 대상 단계 {#steps}
 
 * 다음에서 선택: [셀프서비스 카탈로그](./catalog/overview.md) Platform에서 사용할 수 있는 모든 대상.
-* 대상을 사용하여 프로필 또는 대상자를 마케팅 자동화 플랫폼, 디지털 광고 플랫폼 등으로 보냅니다.
+* 대상을 사용하여 대상자 또는 데이터 세트를 마케팅 자동화 플랫폼, 디지털 광고 플랫폼 등으로 보냅니다.
 * 정기적으로 원하는 대상으로 데이터 내보내기를 예약합니다.
 
 ## 컨트롤 {#controls}
@@ -39,8 +39,9 @@ Platform의 핵심 기능 중 하나는 자사 데이터를 수집하고 비즈�
 * 데이터를 활성화할 수 있는 대상 플랫폼의 카탈로그를 검색하십시오.
 * 카탈로그의 대상에 대한 데이터 흐름을 만들고, 편집하고, 활성화하고, 비활성화합니다.
 * 저장소 위치에 계정을 만들거나 대상 플랫폼의 계정에 플랫폼을 연결합니다.
-* 대상에 활성화해야 하는 대상을 선택합니다.
-* 선택 [XDM(경험 데이터 모델) 필드](../xdm/home.md) 대상을 이메일 마케팅 대상으로 활성화할 때 내보내기합니다.
+* 대상에 활성화할 대상 또는 데이터 세트를 선택합니다.
+* 선택 [XDM(경험 데이터 모델) 필드](../xdm/home.md) 이메일 마케팅 대상, CRM 플랫폼, 클라우드 스토리지 위치 등과 같은 특정 대상으로 대상을 활성화할 때 를 내보냅니다.
+* 사람, 계정 및 잠재 고객 등 대상에 대해 다양한 유형의 프로필 및 대상자를 활성화합니다.
 
 ## 대상 유형 및 범주 {#types-and-categories}
 
@@ -54,7 +55,7 @@ Experience Platform 대상 카탈로그의 일부 커넥터는 Adobe에서 빌�
 
 ## 대상 및 액세스 제어 {#access-controls}
 
-Platform의 대상 기능은 Adobe Experience Platform 액세스 제어 권한과 함께 작동합니다. 사용자의 권한 수준에 따라 대상을 보고, 관리하고, 활성화할 수 있습니다. 개별 권한에 대한 자세한 내용은 [Adobe Experience Platform의 액세스 제어](../access-control/home.md) 을 클릭하고 페이지 아래쪽으로 스크롤합니다.
+Platform의 대상 기능은 Adobe Experience Platform 액세스 제어 권한과 함께 작동합니다. 사용자의 권한 수준에 따라 대상을 보고, 관리하고, 활성화할 수 있습니다. 개별 권한에 대한 자세한 내용을 보려면 [Adobe Experience Platform의 액세스 제어](../access-control/home.md) 페이지 하단에 있는 테이블로 스크롤합니다.
 
 다음 표에서는 대상에 대해 특정 작업을 수행하는 데 필요한 권한 및 권한 조합을 간략하게 설명합니다.
 
@@ -81,7 +82,9 @@ Adobe Experience Platform의 속성 기반 액세스 제어를 통해 관리자�
 
 대상에 대한 연결을 설정하고 활성화 워크플로를 완료한 후 수신 시스템으로 데이터 내보내기를 모니터링할 수 있습니다. 읽기 [ui의 대상에 대한 데이터 흐름 모니터링에 대한 안내서](/help/dataflows/ui/monitor-destinations.md) 추가 정보.
 
-데이터가 대상으로 성공적으로 전달되고 있는지 확인할 수도 있습니다. 카탈로그의 대부분의 대상 설명서 페이지에는 *데이터 내보내기 섹션 유효성 검사*: Experience Platform에서 데이터를 성공적으로 가져왔음을 대상 플랫폼에서 확인할 수 있는 방법을 나타냅니다.
+![대상 모니터링 페이지 예](./assets/overview/monitoring-page-example.png)
+
+데이터가 대상으로 성공적으로 전달되고 있는지 확인할 수도 있습니다. 카탈로그의 대부분의 대상 설명서 페이지에는 *데이터 내보내기 섹션 유효성 검사*: Experience Platform에서 데이터를 성공적으로 가져왔음을 대상 플랫폼에서 확인할 수 있는 방법을 나타냅니다. 다음에 대한 이 섹션의 예 보기 [Amazon 광고 대상](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
 
 ## 대상으로 데이터 활성화에 대한 데이터 거버넌스 제한 사항 {#data-governance}
 

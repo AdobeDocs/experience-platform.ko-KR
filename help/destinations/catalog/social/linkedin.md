@@ -3,9 +3,9 @@ keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin;
 title: Linkedin 일치하는 대상 연결
 description: 해시된 이메일을 기반으로 대상 타겟팅, 개인화 및 억제에 대한 LinkedIn 캠페인용 프로필을 활성화합니다.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1096'
 ht-degree: 4%
 
 ---

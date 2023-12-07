@@ -3,9 +3,9 @@ keywords: 이메일;이메일;이메일;이메일 대상;responsys 대상 oracle
 title: Responsys 연결 oracle
 description: Responsys는 이메일, 모바일, 디스플레이 및 소셜에서 상호 작용을 개인화하기 위해 Oracle이 제공하는 크로스 채널 마케팅 캠페인을 위한 엔터프라이즈 이메일 마케팅 도구입니다.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '704'
 ht-degree: 3%
 
 ---

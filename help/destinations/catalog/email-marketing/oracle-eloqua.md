@@ -3,10 +3,10 @@ keywords: 이메일;이메일;이메일;이메일 대상;oracle eloqua;oracle
 title: (파일) Oracle Eloqua 연결
 description: Oracle Eloqua는 B2B 마케터와 조직이 마케팅 캠페인과 판매 리드 생성을 관리할 수 있도록 지원하는 것을 목표로 하는 Oracle에서 제공하는 마케팅 자동화를 위한 SaaS(Software as a Service) 플랫폼입니다.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 3%
+source-wordcount: '717'
+ht-degree: 2%
 
 ---
 

@@ -3,9 +3,9 @@ title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 9a149b86f34f5c7cae6a1bf2ae797a256e212f30
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1739'
 ht-degree: 4%
 
 ---
@@ -71,7 +71,7 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
 
 현재, 스크린샷에 강조 표시되고 아래에 나열된 클라우드 스토리지 대상으로 데이터 세트를 내보낼 수 있습니다.
 
-![데이터 세트 내보내기를 지원하는 대상](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![데이터 세트 내보내기를 지원하는 대상을 보여 주는 대상 카탈로그 페이지.](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -221,7 +221,7 @@ Experience Platform은 지정한 저장소 위치에 내보낸 데이터 세트 
 
 다른 애플리케이션에 대한 데이터 내보내기 권한은 가산되지 않습니다. 예를 들어 Real-Time CDP Ultimate와 Adobe Journey Optimizer Ultimate를 구매하면 제품 설명에 따라 프로필 내보내기 권한이 두 권한 중 더 커집니다. 볼륨 권한은 라이선스가 부여된 총 프로필 수를 계산하고 Real-Time CDP Prime의 경우 500KB 또는 Real-Time CDP Ultimate의 경우 700KB를 곱하여 권한이 부여된 데이터의 양을 결정합니다.
 
-반면 Data Distiller과 같은 추가 기능을 구매하는 경우 권한이 있는 데이터 내보내기 제한은 제품 계층과 추가 기능의 합계를 나타냅니다.
+반면 Data Distiller과 같은 추가 기능을 구입한 경우 권한이 부여된 데이터 내보내기 제한은 제품 계층과 추가 기능의 합계를 나타냅니다.
 
 라이선스 대시보드에서 계약 제한에 대해 프로필 내보내기를 보고 추적할 수 있습니다.
 

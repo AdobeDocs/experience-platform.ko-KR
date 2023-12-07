@@ -4,9 +4,9 @@ title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 서드파티 HTTP 끝점으로 전송하여 자체 분석을 실행하거나 Experience Platform 외부로 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2480'
 ht-degree: 8%
 
 ---
@@ -65,7 +65,7 @@ HTTP API 대상을 사용하여 데이터를 Experience Platform 밖으로 내�
 
 ## 허용 목록에 추가하다 IP 주소 {#ip-address-allowlist}
 
-고객의 보안 및 규정 준수 요구 사항을 충족하기 위해 Experience Platform은 HTTP API 대상에 대해 허용 목록에 추가하다할 수 있는 정적 IP 목록을 제공합니다. 을(를) 참조하십시오 [스트리밍 대상의 IP 주소 허용 목록](/help/destinations/catalog/streaming/ip-address-allow-list.md) 전체 IP 목록을 보려면 허용 목록에 추가하다를 선택합니다.
+고객의 보안 및 규정 준수 요구 사항을 충족하기 위해 Experience Platform은 HTTP API 대상에 대해 허용 목록에 추가하다할 수 있는 정적 IP 목록을 제공합니다. 을(를) 참조하십시오 [허용 목록에 추가하다 스트리밍 대상의 IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md) 전체 IP 목록을 보려면 허용 목록에 추가하다를 선택합니다.
 
 ## 지원되는 인증 유형 {#supported-authentication-types}
 
@@ -73,7 +73,7 @@ HTTP API 대상은 HTTP 끝점에 대한 여러 인증 유형을 지원합니다
 
 * 인증이 없는 HTTP 끝점;
 * 전달자 토큰 인증;
-* [OAuth 2.0 클라이언트 자격 증명](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 본문 양식 인증, 사용 [!DNL client ID], [!DNL client secret] 및 [!DNL grant type] 아래 예와 같이 HTTP 요청 본문에서 확인할 수 있습니다.
+* [OAuth 2.0 클라이언트 자격 증명](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 본문 양식 인증, 사용 [!DNL client ID], [!DNL client secret], 및 [!DNL grant type] 아래 예와 같이 HTTP 요청 본문에서 확인할 수 있습니다.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -113,7 +113,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 을(를) 선택하는 경우 **[!UICONTROL 전달자 토큰]** 인증 유형 - HTTP 끝점에 연결하려면 아래 필드를 입력하고 다음을 선택합니다. **[!UICONTROL 대상에 연결]**:
 
-![전달자 토큰 인증을 사용하여 HTTP API 대상에 연결할 수 있는 UI 화면의 이미지](../../assets/catalog/http/http-api-authentication-bearer.png)
+![전달자 토큰 인증을 사용하여 HTTP API 대상에 연결할 수 있는 UI 화면의 이미지입니다.](../../assets/catalog/http/http-api-authentication-bearer.png)
 
 * **[!UICONTROL 전달자 토큰]**: HTTP 위치에 인증할 전달자 토큰을 삽입합니다.
 
@@ -121,7 +121,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 을(를) 선택하는 경우 **[!UICONTROL 없음]** http 끝점에 연결하는 인증 유형:
 
-![인증을 사용하지 않고 HTTP API 대상에 연결할 수 있는 UI 화면의 이미지](../../assets/catalog/http/http-api-authentication-none.png)
+![인증을 사용하지 않고 HTTP API 대상에 연결할 수 있는 UI 화면의 이미지입니다.](../../assets/catalog/http/http-api-authentication-none.png)
 
 이 인증 열기를 선택할 때는 선택하기만 하면 됩니다. **[!UICONTROL 대상에 연결]** 엔드포인트에 대한 연결이 설정됩니다.
 
@@ -129,7 +129,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 을(를) 선택하는 경우 **[!UICONTROL OAuth 2 암호]** 인증 유형 - HTTP 끝점에 연결하려면 아래 필드를 입력하고 다음을 선택합니다. **[!UICONTROL 대상에 연결]**:
 
-![암호 인증과 함께 OAuth 2를 사용하여 HTTP API 대상에 연결할 수 있는 UI 화면의 이미지](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![암호 인증이 있는 OAuth 2를 사용하여 HTTP API 대상에 연결할 수 있는 UI 화면의 이미지입니다.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
 * **[!UICONTROL 토큰 URL 액세스]**: 액세스 토큰을 발행하고 선택적으로 토큰을 새로 고치는 사용자 측의 URL입니다.
 * **[!UICONTROL 클라이언트 ID]**: [!DNL client ID] 시스템이 Adobe Experience Platform에 할당하는 것입니다.
@@ -141,7 +141,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 을(를) 선택하는 경우 **[!UICONTROL OAuth 2 클라이언트 자격 증명]** 인증 유형 - HTTP 끝점에 연결하려면 아래 필드를 입력하고 다음을 선택합니다. **[!UICONTROL 대상에 연결]**:
 
-![클라이언트 자격 증명 인증과 함께 OAuth 2를 사용하여 HTTP API 대상에 연결할 수 있는 UI 화면의 이미지](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![클라이언트 자격 증명 인증과 함께 OAuth 2를 사용하여 HTTP API 대상에 연결할 수 있는 UI 화면의 이미지입니다.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 * **[!UICONTROL 토큰 URL 액세스]**: 액세스 토큰을 발행하고 선택적으로 토큰을 새로 고치는 사용자 측의 URL입니다.
 * **[!UICONTROL 클라이언트 ID]**: [!DNL client ID] 시스템이 Adobe Experience Platform에 할당하는 것입니다.
@@ -179,7 +179,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-![HTTP 대상 세부 사항에 대한 완료된 필드를 보여주는 UI 화면의 이미지](../../assets/catalog/http/http-api-destination-details.png)
+![HTTP 대상 세부 사항에 대한 완료된 필드를 보여주는 UI 화면의 이미지입니다.](../../assets/catalog/http/http-api-destination-details.png)
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명을 입력합니다.
@@ -232,7 +232,7 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 예를 들어 데이터 흐름에서 3개의 대상이 선택되고 대상에 4개의 속성이 매핑되는 HTTP 대상에 대한 이 데이터 흐름을 고려해 보십시오.
 
-![HTTP API 대상 데이터 흐름](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![HTTP API 대상 데이터 흐름의 예입니다.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 대상으로 프로필을 내보내는 방법은 대상 중 하나를 선택하거나 종료하는 프로필에 의해 결정됩니다. *세 개의 매핑된 세그먼트*. 그러나 데이터 내보내기에서 `segmentMembership` 오브젝트(참조) [내보낸 데이터](#exported-data) 아래 섹션) 특정 프로필이 멤버이고 내보내기를 트리거한 대상과 동일한 병합 정책을 공유하는 경우 매핑되지 않은 다른 대상자가 나타날 수 있습니다. 프로필이 다음에 대한 자격이 있는 경우: **DeLorean 자동차를 사용하는 고객** 세그먼트이지만 의 구성원이기도 합니다. **Back to the Future 시청** 동영상 및 **의 팬** 세그먼트를 가리키면 이 다른 두 대상도 `segmentMembership` 데이터 흐름에서 매핑되지 않은 데이터 내보내기의 객체입니다. 이러한 객체가 과 동일한 병합 정책을 공유하는 경우 **DeLorean 자동차를 사용하는 고객** 세그먼트.
 

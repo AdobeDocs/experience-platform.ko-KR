@@ -3,10 +3,10 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;메
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 한 대상자 타겟팅, 개인화 및 억제에 대한 Facebook 캠페인용 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1941'
-ht-degree: 7%
+source-wordcount: '1949'
+ht-degree: 6%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 대상 타깃팅에 이 대상을 사용할 수 있습니다. [!DNL Facebook's] 에서 지원하는 앱 제품군 [!DNL Custom Audiences], 포함 [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], 및 [!DNL Messenger]. 캠페인을 실행할 앱의 선택은 [!DNL Facebook Ads Manager]의 배치 수준에서 표시됩니다.
 
-![Adobe Experience Platform UI의 facebook 대상](../../assets/catalog/social/facebook/catalog.png)
+![Adobe Experience Platform UI의 facebook 대상.](../../assets/catalog/social/facebook/catalog.png)
 
 ## 사용 사례
 
@@ -30,7 +30,7 @@ ht-degree: 7%
 
 ### 사용 사례 #2
 
-항공사에는 다양한 고객 계층(브론즈, 실버 및 골드)이 있으며 소셜 플랫폼을 통해 각 계층에 개인화된 오퍼를 제공하려고 합니다. 다만 모든 고객이 항공사의 모바일 앱을 사용하는 것은 아니며, 이들 중 일부는 회사 홈페이지에 로그인하지 않은 상태다. 회사에 이러한 고객에 대한 유일한 식별자는 멤버십 ID와 이메일 주소입니다.
+항공사에는 다양한 고객 계층(브론즈, 실버 및 골드)이 있으며 소셜 플랫폼을 통해 각 계층에 개인화된 오퍼를 제공하려고 합니다. 다만 모든 고객이 항공사의 모바일 앱을 사용하는 것은 아니며, 이들 중 일부는 회사 홈페이지에 로그인하지 않은 상태다. 회사에서 이러한 고객에 대해 가지고 있는 유일한 식별자는 멤버십 ID와 이메일 주소입니다.
 
 소셜 미디어에서 고객을 타깃팅하기 위해 이메일 주소를 식별자로 사용하여 CRM의 고객 데이터를 Adobe Experience Platform에 온보딩할 수 있습니다.
 
@@ -74,9 +74,9 @@ ht-degree: 7%
 
 대상자를 다음으로 보내기 전 [!DNL Facebook], 다음 요구 사항을 충족하는지 확인하십시오.
 
-* 사용자 [!DNL Facebook] 사용자 계정에 대한 전체 액세스 권한이 있어야 함 [!DNL Facebook Business Account] 사용할 광고 계정을 소유하는 계정입니다.
+* 사용자 [!DNL Facebook] 사용자 계정에 대한 전체 액세스 권한이 있어야 함 [!DNL Facebook Business Account] 사용 중인 광고 계정을 소유하는 계정입니다.
 * 사용자 [!DNL Facebook] 사용자 계정에는 **[!DNL Manage campaigns]** 사용하려는 광고 계정에 대해 권한이 활성화되었습니다.
-* 다음 **Adobe Experience Cloud** 비즈니스 계정을 의 광고 파트너로 추가해야 합니다. [!DNL Facebook Ad Account]. `business ID=206617933627973` 사용. 다음을 참조하십시오 [비즈니스 관리자에 파트너 추가](https://www.facebook.com/business/help/1717412048538897) 자세한 내용은 Facebook 설명서 를 참조하십시오.
+* 다음 **Adobe Experience Cloud** 비즈니스 계정을 의 광고 파트너로 추가해야 합니다. [!DNL Facebook Ad Account]. `business ID=206617933627973`를 사용하십시오. 다음을 참조하십시오 [비즈니스 관리자에 파트너 추가](https://www.facebook.com/business/help/1717412048538897) 자세한 내용은 Facebook 설명서 를 참조하십시오.
   >[!IMPORTANT]
   >
   > Adobe Experience Cloud에 대한 권한을 구성할 때 다음을 활성화해야 합니다 **캠페인 관리** 권한. 다음에 대한 권한이 필요합니다. [!DNL Adobe Experience Platform] 통합.
@@ -123,7 +123,7 @@ Experience Platform에서 이메일 주소 수집에 대한 자세한 내용은 
 > 속성 소스 데이터는 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 속성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션, 보유 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다.
 > 다음 **[!UICONTROL 변환 적용]** 옵션은 속성을 소스 필드로 선택하는 경우에만 표시됩니다. 네임스페이스를 선택하면 표시되지 않습니다.
 
-![ID 매핑 변환](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![매핑 단계에서 강조 표시된 변환 제어 적용](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## 사용자 정의 네임스페이스 사용 {#custom-namespaces}
 
@@ -149,7 +149,7 @@ Experience Platform에서 이메일 주소 수집에 대한 자세한 내용은 
 
 1. 대상 카탈로그에서 Facebook 대상을 찾고 을 선택합니다. **[!UICONTROL 설정]**.
 2. 선택 **[!UICONTROL 대상에 연결]**.
-   ![facebook 인증](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+   ![활성화 워크플로에 표시된 Facebook 인증 단계입니다.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. facebook 자격 증명을 입력하고 다음을 선택합니다. **로그인**.
 
 ### 대상 세부 정보 입력 {#destination-details}
@@ -176,7 +176,7 @@ Experience Platform에서 이메일 주소 수집에 대한 자세한 내용은 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="대상자 원본"
->abstract="원래 대상자의 고객 데이터를 수집하는 방법을 선택합니다. 사용자가 세그먼트에 타겟팅되면 데이터가 Facebook에 표시됩니다."
+>abstract="원래 대상자의 고객 데이터를 수집하는 방법을 선택합니다. 사용자가 세그먼트에 의해 타겟팅되면 Facebook에 데이터가 표시됩니다"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -202,7 +202,7 @@ Experience Platform에서 이메일 주소 수집에 대한 자세한 내용은 
 
 다음에서 **[!UICONTROL 세그먼트 일정]** 단계, 다음을 제공해야 합니다. [!UICONTROL 대상자 원본] 대상자를 (으)로 보낼 때 [!DNL Facebook Custom Audiences].
 
-![Facebook 대상자 기원](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![facebook 활성화 단계에 표시된 대상자 원본 드롭다운입니다.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### 매핑 예:에서 대상 데이터 활성화 [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -231,7 +231,7 @@ Experience Platform에서 이메일 주소 수집에 대한 자세한 내용은 
 > 
 >속성 소스 데이터는 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 속성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션, 보유 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다.
 
-![ID 매핑](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![매핑 단계에서 강조 표시된 변환 제어 적용](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## 내보낸 데이터 {#exported-data}
 
@@ -251,4 +251,4 @@ Experience Platform에서 이메일 주소 수집에 대한 자세한 내용은 
 
 이 오류는 고객이 새로 만든 계정을 사용할 때 발생합니다. [!DNL Facebook] 사용 권한이 아직 활성화되지 않았습니다.
 
-다음을 받는 경우 `400 Bad Request` 의 단계를 수행한 후 오류 메시지 표시 [Facebook 계정 사전 요구 사항](#facebook-account-prerequisites), 며칠간 을(를) 허용하십시오. [!DNL Facebook] 적용할 권한입니다.
+다음을 받는 경우 `400 Bad Request` 의 단계를 수행한 후 오류 메시지 표시 [Facebook 계정 사전 요구 사항](#facebook-account-prerequisites)을(를) 위해 며칠 동안 허용 [!DNL Facebook] 적용할 권한입니다.

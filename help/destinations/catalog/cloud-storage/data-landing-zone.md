@@ -3,10 +3,10 @@ title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 대상자를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1481'
-ht-degree: 4%
+source-wordcount: '1509'
+ht-degree: 3%
 
 ---
 
@@ -62,11 +62,11 @@ Platform은에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을
 
 다음에서 [!DNL Azure Storage Explorer] UI에서 왼쪽 탐색 막대에 있는 연결 아이콘을 선택합니다. 다음 **리소스 선택** 연결 옵션을 제공하는 창이 나타납니다. 선택 **[!DNL Blob container]** 을(를) 통해 [!DNL Data Landing Zone] 스토리지.
 
-![select-resource](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![Azure UI에서 강조 표시된 리소스를 선택합니다.](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
 그런 다음 을 선택합니다. **SAS(공유 액세스 서명 URL)** 을 연결 방법으로 선택한 다음 을 선택합니다. **다음**.
 
-![select-connection-method](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![Azure UI에서 강조 표시된 연결 방법을 선택하십시오.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
 연결 방법을 선택한 후 다음을 제공해야 합니다 **표시 이름** 및 **[!DNL Blob]컨테이너 SAS URL** 에 해당하는 [!DNL Data Landing Zone] 컨테이너.
 
@@ -171,15 +171,15 @@ curl -X POST \
 
 디스플레이 이름(`containerName`) 및 [!DNL Data Landing Zone] 위에서 설명한 API 호출에서 반환된 SAS URL을 선택한 다음 **다음**.
 
-![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![Azure UI에서 강조 표시된 연결 정보를 입력하십시오.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
 다음 **요약** 창에 설정에 대한 정보를 포함하여 설정의 개요를 제공합니다. [!DNL Blob] 엔드포인트 및 권한. 준비가 되면 다음을 선택합니다. **연결**.
 
-![요약](/help/sources/images/tutorials/create/dlz/summary.png)
+![Azure UI에 표시된 설정 요약입니다.](/help/sources/images/tutorials/create/dlz/summary.png)
 
 연결에 성공하면 다음 항목이 업데이트됩니다. [!DNL Azure Storage Explorer] 을 통한 UI [!DNL Data Landing Zone] 컨테이너.
 
-![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+![Azure UI에서 강조 표시된 DLZ 사용자 컨테이너의 요약입니다.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
 (으)로 [!DNL Data Landing Zone] 컨테이너 연결됨 [!DNL Azure Storage Explorer]이제 Experience Platform에서 로 파일 내보내기를 시작할 수 있습니다. [!DNL Data Landing Zone] 컨테이너. 파일을 내보내려면 [!DNL Data Landing Zone] 아래 섹션에 설명된 대로 Experience Platform UI의 대상
 

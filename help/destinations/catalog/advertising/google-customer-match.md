@@ -3,9 +3,9 @@ keywords: google 고객 일치;Google 고객 일치;Google 고객 일치
 title: Google Customer Match 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail 및 YouTube과 같은 Google의 소유 및 운영되는 속성에서 고객에게 연락하고 다시 연결할 수 있습니다.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1788'
 ht-degree: 1%
 
 ---
@@ -82,7 +82,7 @@ Experience Platform의 일부 대상에는 대상 플랫폼으로 보내거나 �
 
 만들기 전에 [!DNL Google Customer Match] Experience Platform의 대상, [!DNL Google Ads] 계정이 다음을 준수함: [[!DNL Google Customer Match] 정책](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
-준수 계정이 있는 고객은 Google에서 자동으로 허용 목록에 포함됩니다.
+준수 계정이 있는 고객은 Google에서 자동으로 허용 목록에추가된으로 제공됩니다.
 
 ## ID 일치 요구 사항 {#id-matching-requirements}
 
@@ -132,6 +132,12 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
+## 비디오 개요 {#video-overview}
+
+아래 비디오를 통해 혜택과 Google Customer Match에 대한 데이터 활성화 방법에 대해 알아보십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
+
 ## 대상에 연결 {#connect}
 
 >[!IMPORTANT]
@@ -169,9 +175,9 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 다음에서 **[!UICONTROL 세그먼트 일정]** 단계, 다음을 제공해야 합니다. [!UICONTROL 앱 ID] 전송 시 [!DNL IDFA] 또는 [!DNL GAID] 대상: [!DNL Google Customer Match].
 
-![Google 고객 일치 앱 ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+![활성화 워크플로의 세그먼트 예약 단계에서 강조 표시된 Google Customer Match App ID 필드입니다.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-을(를) 찾는 방법에 대한 자세한 내용은 [!DNL App ID]을(를) 참조하십시오. [Google 공식 설명서](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
+을(를) 찾는 방법에 대한 자세한 내용은 [!DNL App ID]을(를) 참조하십시오. [Google 공식 설명서](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) 또는 Google 담당자에게 문의하십시오.
 
 ### 매핑 예:에서 대상 데이터 활성화 [!DNL Google Customer Match] {#example-gcm}
 
@@ -194,13 +200,13 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 * 다음 항목 선택 `IDFA` 또는 `GAID` 소스 네임스페이스가 다음과 같을 때 타겟 ID로서의 네임스페이스 `IDFA` 또는 `GAID`.
 * 다음 항목 선택 `User_ID` 소스 네임스페이스가 사용자 정의 네임스페이스인 경우 네임스페이스를 타겟 ID로.
 
-![ID 매핑](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+![활성화 워크플로의 매핑 단계에 표시된 소스 필드와 대상 필드 간의 ID 매핑.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
 해시되지 않은 네임스페이스의 데이터는 다음에 의해 자동으로 해시됩니다. [!DNL Platform] 활성화 시.
 
 속성 소스 데이터는 자동으로 해시되지 않습니다. 소스 필드에 해시되지 않은 속성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션, 보유 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다.
 
-![ID 매핑 변환](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+![활성화 워크플로의 매핑 단계에서 강조 표시된 변환 제어를 적용합니다.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## 대상자 활성화가 성공했는지 확인 {#verify-activation}
 
@@ -217,8 +223,3 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
 이 오류는 고객 계정이 [전제 조건](#google-account-prerequisites). 이 문제를 해결하려면 Google에 문의하고 계정이 허용 목록에 추가되었는지, 그리고 용으로 구성되어 있는지 확인하십시오. [!DNL Standard] 또는 더 높은 권한 수준입니다. 다음을 참조하십시오. [Google 광고 설명서](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) 을 참조하십시오.
-
-## 추가 리소스 {#additional-resources}
-
-* [통합 [!DNL Google Customer Match] - 비디오 튜토리얼](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
-

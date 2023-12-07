@@ -4,9 +4,9 @@ title: Amazon Kinesis 연결
 description: Amazon Kinesis 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 데이터를 스트리밍합니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1997'
+source-wordcount: '1981'
 ht-degree: 5%
 
 ---

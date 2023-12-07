@@ -2,10 +2,10 @@
 title: SFTP 연결
 description: SFTP 서버에 대한 실시간 아웃바운드 연결을 생성하여 구분된 데이터 파일을 정기적으로 Adobe Experience Platform에서 내보냅니다.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 11%
+source-wordcount: '1022'
+ht-degree: 8%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 11%
 * [데이터 세트 내보내기 지원](/help/destinations/ui/export-datasets.md).
 * 추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * [향상된 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능.
-* [사용자 정의 기능내보낸 CSV 데이터 파일의 서식](/help/destinations/ui/batch-destinations-file-formatting-options.md)을 사용자 정의하는 기능.
+* [내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ## 개요 {#overview}
 
@@ -55,7 +55,7 @@ SFTP 서버에 대한 실시간 아웃바운드 연결을 생성하여 구분된
 
 {style="table-layout:auto"}
 
-![SFTP 프로필 기반 내보내기 유형](../../assets/catalog/cloud-storage/sftp/catalog.png)
+![대상 카탈로그에서 강조 표시된 SFTP 프로필 기반 내보내기 유형.](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
 ## 대상에 연결 {#connect}
 
@@ -79,7 +79,7 @@ SFTP 서버에 대한 실시간 아웃바운드 연결을 생성하여 구분된
 
 을(를) 선택하는 경우 **[!UICONTROL 암호가 포함된 SFTP]** SFTP 위치에 연결하는 인증 유형:
 
-![SFTP 대상 기본 인증](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![암호가 포함된 SFTP 대상 기본 인증.](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL 도메인]**: SFTP 저장소 위치 주소;
 * **[!UICONTROL 사용자 이름]**: SFTP 저장소 위치에 로그인할 사용자 이름
@@ -87,26 +87,26 @@ SFTP 서버에 대한 실시간 아웃바운드 연결을 생성하여 구분된
 * **[!UICONTROL 암호]**: SFTP 저장소 위치에 로그인하기 위한 암호입니다.
 * **[!UICONTROL 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-  ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지입니다.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 을(를) 선택하는 경우 **[!UICONTROL SSH 키가 포함된 SFTP]** SFTP 위치에 연결하는 인증 유형:
 
-![SFTP 대상 SSH 키 인증](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![SFTP 대상 SSH 키 인증.](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
 * **[!UICONTROL 도메인]**: SFTP 계정의 IP 주소 또는 도메인 이름을 입력합니다
 * **[!UICONTROL 포트]**: SFTP 저장소 위치에서 사용하는 포트
 * **[!UICONTROL 사용자 이름]**: SFTP 저장소 위치에 로그인할 사용자 이름
-* **[!UICONTROL SSH 키]**: SFTP 저장소 위치에 로그인하는 데 사용되는 개인 SSH 키입니다. 비공개 키는 RSA 포맷의 Base64로 인코딩된 문자열이어야 하며 암호로 보호되지 않아야 합니다.
+* **[!UICONTROL SSH 키]**: SFTP 저장소 위치에 로그인하는 데 사용되는 개인 SSH 키입니다. 개인 키는 RSA 형식의 Base64 인코딩 문자열이어야 하며 암호로 보호되지 않아야 합니다.
 * **[!UICONTROL 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
-  ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지입니다.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 대상 세부 사항 {#destination-details}
 
 SFTP 위치에 인증 연결을 설정한 후 대상에 대해 다음 정보를 제공합니다.
 
-![SFTP 대상에 대해 사용 가능한 대상 세부 정보](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![SFTP 대상에 대한 대상 세부 사항 필드.](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
 * **[!UICONTROL 이름]**: Experience Platform 사용자 인터페이스에서 이 대상을 식별하는 데 도움이 되는 이름을 입력합니다.
 * **[!UICONTROL 설명]**: 이 대상에 대한 설명을 입력합니다.
@@ -140,6 +140,6 @@ SFTP 위치에 인증 연결을 설정한 후 대상에 대해 다음 정보를 
 
 대상 [!DNL SFTP] 대상, 플랫폼에서 다음을 생성합니다. `.csv` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) audience activation 튜토리얼에서 을 참조하십시오.
 
-## IP 주소 허용 목록 {#ip-address-allow-list}
+## 허용 목록에 추가하다 IP 주소 {#ip-address-allow-list}
 
-을(를) 참조하십시오 [SFTP 대상에 대한 IP 주소 허용 목록](ip-address-allow-list.md) 허용 목록에 Adobe IP를 추가해야 하는 경우.
+을(를) 참조하십시오 [허용 목록에 추가하다 SFTP 대상의 IP 주소](ip-address-allow-list.md) Adobe IP를 허용 목록에 추가하다에 추가해야 하는 경우

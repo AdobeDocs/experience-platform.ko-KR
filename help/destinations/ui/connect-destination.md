@@ -1,12 +1,11 @@
 ---
-keywords: 대상 연결;대상 연결;대상 연결 방법
 title: 새 대상 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform에서 대상에 연결하고, 경고를 활성화하고, 연결된 대상에 대한 마케팅 작업을 설정하는 방법을 알아봅니다.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 28abc492dc3b2b89c3e79a0531b8d206af1e0590
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1138'
 ht-degree: 0%
 
 ---

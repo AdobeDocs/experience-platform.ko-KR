@@ -2,9 +2,9 @@
 title: Google 광고 연결
 description: 이전에 Google AdWords로 알려졌던 Google Ads는 기업이 텍스트 기반 검색, 그래픽 디스플레이, YouTube 비디오 및 인앱 모바일 디스플레이에서 클릭당 과금 광고를 할 수 있도록 해주는 온라인 광고 서비스입니다.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 1ec9559e762b44dd8d7639aba0a54af7ce221666
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '946'
 ht-degree: 2%
 
 ---
@@ -70,16 +70,16 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
-> [!DNL Google] 더 이상 사용되지 않는 새로운 기능 포함 [!DNL Google Ads] 쿠키와 타사 공급업체의 통합. 다음 섹션의 허용 목록 단계를 수행하려면 의 기존 통합이 있어야 합니다. [!DNL Google Ads]. 따라서 사용에 대한 권장 접근 방식 [!DNL Google Ads] 을(를) 설정하는 중 [!DNL Google Customer Match] 통합. 만들기에 대한 자세한 내용은 [!DNL Google Customer Match] 통합입니다. 만들기 자습서를 참조하십시오. [[!DNL Google Customer Match]](./google-customer-match.md) 연결.
+> [!DNL Google] 더 이상 사용되지 않는 새로운 기능 포함 [!DNL Google Ads] 쿠키와 타사 공급업체의 통합. 다음 섹션의 허용 목록에 추가하다 단계를 수행하려면 와 기존의 통합이 있어야 합니다 [!DNL Google Ads]. 따라서 사용에 대한 권장 접근 방식 [!DNL Google Ads] 을(를) 설정하는 중 [!DNL Google Customer Match] 통합. 만들기에 대한 자세한 내용은 [!DNL Google Customer Match] 통합에서 만들기 자습서를 참조하십시오. [[!DNL Google Customer Match]](./google-customer-match.md) 연결.
 
 ### 허용 목록 {#allow-listing}
 
 >[!NOTE]
 >
->첫 번째 항목을 설정하기 전에 허용 목록은 필수입니다. [!DNL Google Ads] 대상(플랫폼 내) 아래 설명된 허용 목록 프로세스가 다음 기한까지 완료되었는지 확인하십시오. [!DNL Google] 대상을 만들기 전에.
+>첫 번째 항목을 설정하기 전에 허용 목록은 필수입니다. [!DNL Google Ads] 대상(플랫폼 내) 아래 설명된 허용 목록 프로세스가 다음 기한까지 완료되었는지 확인합니다. [!DNL Google] 대상을 만들기 전에.
 >이 규칙의 예외는 다음과 같습니다 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 고객. Audience Manager에서 이 Google 대상에 대한 연결을 이미 만든 경우 허용 목록 프로세스를 다시 진행할 필요가 없으며 다음 단계를 진행할 수 있습니다.
 
-만들기 전에 [!DNL Google Ads] 플랫폼의 대상입니다. 다음으로 문의해야 합니다 [!DNL Google] Adobe을 허용된 데이터 공급자 목록에 추가하고 허용 목록을 계정에 추가합니다. 연락처 [!DNL Google] 다음 정보를 입력하십시오.
+만들기 전에 [!DNL Google Ads] 플랫폼의 대상입니다. 다음으로 문의해야 합니다 [!DNL Google] Adobe을 허용된 데이터 공급자 목록에 추가하고 계정을 허용 목록에 추가하다에 추가하는 경우. 연락처 [!DNL Google] 다음 정보를 입력하십시오.
 
 * **계정 ID**: Google이 있는 Adobe의 계정 ID. 계정 ID: 87933855.
 * **고객 ID**: Google이 있는 Adobe의 고객 계정 ID. 고객 ID: 89690775.

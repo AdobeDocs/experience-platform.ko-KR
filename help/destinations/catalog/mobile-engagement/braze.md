@@ -3,10 +3,10 @@ keywords: 모바일; 브레이즈; 메시지;
 title: 브레이즈 연결
 description: Braze는 고객과 고객이 사랑하는 브랜드 간의 관련성 있고 기억에 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1132'
-ht-degree: 3%
+source-wordcount: '1122'
+ht-degree: 2%
 
 ---
 

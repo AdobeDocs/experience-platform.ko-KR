@@ -2,10 +2,10 @@
 title: Azure Blob 연결
 description: Azure Blob 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 CSV 데이터 파일을 정기적으로 내보냅니다.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 8%
+source-wordcount: '1045'
+ht-degree: 7%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 8%
 * [데이터 세트 내보내기 지원](/help/destinations/ui/export-datasets.md).
 * 추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * [향상된 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능.
-* [사용자 정의 기능내보낸 CSV 데이터 파일의 서식](/help/destinations/ui/batch-destinations-file-formatting-options.md)을 사용자 정의하는 기능.
+* [내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ## 개요 {#overview}
 

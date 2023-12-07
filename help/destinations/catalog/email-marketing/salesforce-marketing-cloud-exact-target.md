@@ -1,11 +1,10 @@
 ---
-keywords: 이메일;이메일;이메일;이메일 대상;salesforce;api salesforce marketing cloud 대상
 title: (API) Salesforce Marketing Cloud 연결
 description: Salesforce Marketing Cloud(이전의 ExactTarget) 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce Marketing Cloud 내에서 활성화할 수 있습니다.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '3075'
+source-wordcount: '2895'
 ht-degree: 1%
 
 ---
@@ -22,7 +21,7 @@ ht-degree: 1%
 
 비교 대상 [!DNL Salesforce Marketing Cloud Account Engagement] 보다 지향적인 것 **B2B** 마케팅, [!DNL (API) Salesforce Marketing Cloud] destination은 다음에 이상적입니다. **B2C** 트랜잭션 의사 결정 주기가 짧은 사용 사례입니다. 타겟 대상의 행동을 나타내는 더 큰 데이터 세트를 통합하여 연락처, 특히 외부의 데이터 세트에서 우선 순위를 지정하고 세그먼트화하여 마케팅 캠페인을 조정하고 개선할 수 있습니다 [!DNL Salesforce]. *참고: Experience Platform은 [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
-이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md) 을 활용합니다. [!DNL Salesforce Marketing Cloud] [연락처 업데이트](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API를 통해 다음을 수행할 수 있습니다. **연락처 추가 및 연락처 데이터 업데이트** 새 항목 내에서 활성화한 후 비즈니스 요구 사항 [!DNL Salesforce Marketing Cloud] 세그먼트.
+이 [!DNL Adobe Experience Platform] [대상](/help/destinations/home.md) 를 사용합니다. [!DNL Salesforce Marketing Cloud] [연락처 업데이트](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API를 통해 다음을 수행할 수 있습니다. **연락처 추가 및 연락처 데이터 업데이트** 새 항목 내에서 활성화한 후 비즈니스 요구 사항 [!DNL Salesforce Marketing Cloud] 세그먼트.
 
 [!DNL Salesforce Marketing Cloud] 클라이언트 자격 증명이 포함된 OAuth 2를 인증 메커니즘으로 사용하여 [!DNL Salesforce Marketing Cloud] API. 에 대한 인증 지침 [!DNL Salesforce Marketing Cloud] 인스턴스는 다음보다 아래에 있습니다. [대상에 인증](#authenticate) 섹션.
 
@@ -130,7 +129,7 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce], 유�
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| contactKey | [!DNL Salesforce Marketing Cloud] 연락처 키. 다음을 참조하십시오. [!DNL Salesforce Marketing Cloud] [설명서](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&amp;type=5) 추가 지침이 필요한 경우. | 필수입니다 |
+| contactKey | [!DNL Salesforce Marketing Cloud] 연락처 키. 다음을 참조하십시오. [!DNL Salesforce Marketing Cloud] [설명서](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&amp;type=5) 추가 지침이 필요한 경우. | 필수 |
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -220,7 +219,7 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에서 아래
 
    * XDM 프로필 스키마와 간에 다음 매핑을 추가하려면 이 단계를 반복합니다 [!DNL (API) Salesforce Marketing Cloud]:
 
-     | 소스 필드 | 대상 필드 | 필수입니다 |
+     | 소스 필드 | 대상 필드 | 필수 |
      |---|---|---|
      | `IdentityMap: contactKey` | `Identity: salesforceContactKey` | `Mandatory` |
      | `xdm: personalEmail.address` | `Attribute: Email Address` 다음에서 [!DNL Salesforce Marketing Cloud] [!DNL Email Addresses] 데이터 확장. | `Mandatory`새 연락처를 추가할 때 사용됩니다. |

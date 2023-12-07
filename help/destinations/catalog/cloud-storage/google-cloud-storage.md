@@ -3,10 +3,10 @@ title: Google 클라우드 스토리지 연결
 description: Google Cloud Storage에 연결하고 대상을 활성화하거나 데이터 세트를 내보내는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1107'
-ht-degree: 3%
+source-wordcount: '1102'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 ## 개요 {#overview}
 
-[!DNL Google Cloud Storage]에 대한 실시간 아웃바운드 연결을 만들어 주기적으로 Adobe Experience Platform의 데이터 파일을 자체 버킷으로 내보냅니다.
+에 대한 실시간 아웃바운드 연결 만들기 [!DNL Google Cloud Storage] Adobe Experience Platform의 데이터 파일을 정기적으로 고유한 버킷으로 내보냅니다.
 
 ## 다음에 연결 [!DNL Google Cloud Storage] API 또는 UI를 통한 스토리지 {#connect-api-or-ui}
 

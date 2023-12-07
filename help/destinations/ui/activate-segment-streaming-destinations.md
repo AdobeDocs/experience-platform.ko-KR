@@ -1,13 +1,12 @@
 ---
-keywords: 대상 스트리밍 대상 활성화;대상 스트리밍 대상 활성화;데이터 활성화
 title: 스트리밍 대상으로 대상 데이터 활성화
 type: Tutorial
 description: 스트리밍 대상에 매핑하여 Adobe Experience Platform에 있는 대상을 활성화하는 방법을 알아봅니다.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 8%
+source-wordcount: '1121'
+ht-degree: 7%
 
 ---
 
@@ -34,15 +33,15 @@ ht-degree: 8%
 
 1. 다음으로 이동 **[!UICONTROL 연결 > 대상]**&#x200B;을(를) 클릭하고 **[!UICONTROL 카탈로그]** 탭.
 
-   ![대상 카탈로그 탭](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
+   ![다양한 스트리밍 대상을 표시하는 대상 카탈로그 탭입니다.](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
 1. 선택 **[!UICONTROL 대상자 활성화]** 아래 이미지에 표시된 대로 대상을 활성화할 대상에 해당하는 카드에.
 
-   ![활성화 단추](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
+   ![대상 카탈로그에서 강조 표시된 컨트롤을 활성화합니다.](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
 1. 대상을 활성화하는 데 사용할 대상 연결을 선택한 다음 을 선택합니다 **[!UICONTROL 다음]**.
 
-   ![대상 선택](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
+   ![대상 선택 단계에서 강조 표시된 대상 연결입니다.](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. 다음 섹션으로 이동 [대상자 선택](#select-audiences).
 
@@ -56,7 +55,7 @@ ht-degree: 8%
 * **[!UICONTROL 사용자 정의 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드된 대상자 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/overview.md#import-audience).
 * 다른 Adobe 솔루션에서 가져온 다른 유형의 대상, 예: [!DNL Audience Manager].
 
-![대상자 선택](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
+![대상자 선택 단계에서 강조 표시된 여러 대상자입니다.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
 ## 속성 및 ID 매핑 {#mapping}
 
@@ -68,23 +67,23 @@ ht-degree: 8%
 
 1. 다음에서 **[!UICONTROL 매핑]** 페이지, 선택 **[!UICONTROL 새 매핑 추가]**.
 
-   ![새 매핑 추가](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
+   ![강조 표시된 새 매핑 컨트롤을 추가합니다.](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
 1. 오른쪽 화살표를 선택합니다. **[!UICONTROL 소스 필드]** 입력.
 
-   ![소스 필드 선택](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
+   ![소스 필드 컨트롤을 강조 표시합니다.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
 1. 다음에서 **[!UICONTROL 소스 필드 선택]** 페이지, 사용 **[!UICONTROL 속성 선택]** 또는 **[!UICONTROL ID 네임스페이스 선택]** 사용 가능한 두 가지 범주의 소스 필드 사이를 전환하는 옵션. 사용 가능한 날짜부터 [!DNL XDM] 프로필 속성 및 id 네임스페이스를 선택하고 대상에 매핑할 속성을 선택한 다음 을(를) 선택합니다 **[!UICONTROL 선택]**.
 
-   ![소스 필드 선택 페이지](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+   ![사용 가능한 여러 소스 필드를 표시하는 소스 필드 선택 페이지입니다.](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
 
 1. 오른쪽 버튼을 선택합니다. **[!UICONTROL 대상 필드]** 입력.
 
-   ![대상 필드 선택](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
+   ![강조 표시된 대상 필드 선택.](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
 
 1. 다음에서 **[!UICONTROL 대상 필드 선택]** 소스 필드를 매핑할 대상 id 네임스페이스를 선택한 다음 을(를) 선택합니다 **[!UICONTROL 선택]**.
 
-   ![대상 필드 선택 페이지](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
+   ![대상 필드 매핑에 사용 가능한 옵션을 보여 주는 대상 필드 선택 페이지입니다.](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
 
 1. 매핑을 더 추가하려면 1~5단계를 반복합니다.
 
@@ -97,7 +96,7 @@ ht-degree: 8%
 
 해시되지 않은 소스 속성을 대상이 해시할 것으로 예상하는 타겟 속성에 매핑할 때(예: `email_lc_sha256` 또는 `phone_sha256`), 다음을 확인합니다. **변환 적용** 활성화 시 Adobe Experience Platform이 소스 속성을 자동으로 해시하도록 하는 옵션입니다.
 
-![ID 매핑](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![ID 매핑 단계에서 강조 표시된 변환 제어 적용.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## 대상자 내보내기 예약 {#scheduling}
 
@@ -114,23 +113,23 @@ ht-degree: 8%
 
 1. 다음에서 **[!UICONTROL 대상자 일정]** 페이지를 열고 각 대상을 선택한 다음 **[!UICONTROL 시작일]** 및 **[!UICONTROL 종료일]** 선택기를 사용하여 데이터를 대상으로 전송하는 시간 간격을 구성할 수 있습니다.
 
-   ![대상자 일정](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
+   ![대상 일정 필터가 강조 표시되었습니다.](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
    * 일부 대상에서는 다음을 선택해야 합니다. **[!UICONTROL 대상자 원본]** 각 대상에 대해 달력 선택기 아래의 드롭다운 메뉴를 사용합니다. 대상에 이 선택기가 포함되지 않은 경우 이 단계를 건너뜁니다.
 
-     ![ID 매핑](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+     ![매핑 ID 드롭다운이 강조 표시됩니다.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
    * 일부 대상에서는 수동으로 매핑해야 합니다. [!DNL Platform] 대상 대상의 상대 대상에게 전달합니다. 이렇게 하려면 각 대상을 선택한 다음, 의 대상 플랫폼에서 해당 대상 ID를 입력합니다 **[!UICONTROL 매핑 ID]** 필드. 대상에 이 필드가 포함되지 않은 경우 이 단계를 건너뜁니다.
 
-     ![ID 매핑](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+     ![대상자 출처 드롭다운이 강조 표시됩니다.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
    * 일부 대상에는 다음을 입력해야 합니다. **[!UICONTROL 앱 ID]** 활성화 시 [!DNL IDFA] 또는 [!DNL GAID] 대상. 대상에 이 필드가 포함되지 않은 경우 이 단계를 건너뜁니다.
 
-     ![앱 ID](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
+     ![앱 ID 드롭다운이 강조 표시됩니다.](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
 1. 선택 **[!UICONTROL 다음]** 로 이동 [!UICONTROL 리뷰] 페이지를 가리키도록 업데이트하는 중입니다.
 
-## 검토 {#review}
+## 리뷰 {#review}
 
 다음에서 **[!UICONTROL 리뷰]** 페이지에서 선택 사항의 요약을 볼 수 있습니다. 선택 **[!UICONTROL 취소]** 흐름을 끊으려면, **[!UICONTROL 뒤로]** 설정을 수정하려면 **[!UICONTROL 완료]** 을 클릭하여 선택 항목을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
@@ -144,7 +143,7 @@ ht-degree: 8%
 
 다음에서 **[!UICONTROL 리뷰]** 단계, Experience Platform은 데이터 사용 정책 위반도 확인합니다. 다음은 정책이 위반되는 예입니다. 위반을 해결할 때까지 대상 활성화 워크플로우를 완료할 수 없습니다. 정책 위반을 해결하는 방법에 대한 자세한 내용은 다음을 참조하십시오. [데이터 사용 정책 위반](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) (데이터 거버넌스 설명서 섹션)
 
-![데이터 정책 위반](../assets/common/data-policy-violation.png)
+![활성화 워크플로에 표시된 데이터 정책 위반의 예입니다.](../assets/common/data-policy-violation.png)
 
 ### 대상자 필터링 {#filter-audiences}
 

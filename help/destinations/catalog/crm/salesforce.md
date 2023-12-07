@@ -3,9 +3,9 @@ keywords: crm;CRM;CRM 대상;salesforce crm;salesforce crm 대상
 title: Salesforce CRM 연결
 description: Salesforce CRM 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce CRM 내에서 활성화할 수 있습니다.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '3117'
+source-wordcount: '2818'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) 는 인기 있는 CRM(고객 관계 관리) 플랫폼으로, 다음을 지원합니다.
+[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) 는 인기 있는 CRM(고객 관계 관리) 플랫폼이며 아래에 설명된 프로필 유형을 지원합니다.
 
 * [잠재 고객](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) - 잠재 고객은 귀하가 판매하는 제품 또는 서비스에 관심이 있거나 관심이 없는 개인 또는 회사의 이름입니다.
 * [연락처](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) - 연락처는 담당자 중 한 명이 관계를 맺고 잠재 고객으로 자격을 얻은 개인입니다.
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 ## 사용 사례 {#use-cases}
 
-마케터는 Adobe Experience Platform 프로필의 속성에 따라 개인화된 경험을 사용자에게 제공할 수 있습니다. 오프라인 데이터에서 대상을 작성하고 이 대상을 Salesforce CRM으로 보내어 Adobe Experience Platform에서 대상 및 프로필이 업데이트되는 즉시 사용자 피드에 표시할 수 있습니다.
+마케터는 Adobe Experience Platform 프로필의 속성에 따라 개인화된 경험을 사용자에게 제공할 수 있습니다. 오프라인 데이터에서 대상을 작성하고 이 대상을 Salesforce CRM으로 보내어 Adobe Experience Platform에서 대상 및 프로필이 업데이트되는 즉시 CRM 멤버십을 업데이트할 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -127,7 +127,7 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce CRM], �
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| `SalesforceId` | 다음 [!DNL Salesforce CRM] 세그먼트를 통해 내보내거나 업데이트하는 연락처 또는 잠재 고객 ID에 대한 식별자입니다. | 필수입니다 |
+| `SalesforceId` | 다음 [!DNL Salesforce CRM] 세그먼트를 통해 내보내거나 업데이트하는 연락처 또는 잠재 고객 ID에 대한 식별자입니다. | 필수 |
 
 ## 내보내기 유형 및 빈도 {#export-type-frequency}
 

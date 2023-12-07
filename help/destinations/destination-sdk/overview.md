@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK은 선택한 데이터 및 인증 형식을 기반으로 대상 및 프로필 데이터를 엔드포인트 또는 스토리지 위치에 전달하도록 Experience Platform에 대한 대상 통합 패턴을 구성할 수 있는 구성 API 세트입니다. 구성은 Experience Platform에 저장되며 추가 업데이트를 위해 API를 통해 검색할 수 있습니다.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 4%
+source-wordcount: '808'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ Adobe Experience Platform Destination SDK은 선택한 데이터 및 인증 형�
 
 Destination SDK 설명서는 Adobe Experience Platform Destination SDK을 사용하여 Adobe Experience Platform과의 제품화된 대상 통합을 구성, 테스트 및 릴리스하고 대상을 지속적으로 성장하는 대상 카탈로그의 일부로 만드는 지침을 제공합니다. 또한 Destination SDK을 사용하여 사용자 지정 개인 대상을 만들어 요구 사항에 맞게 데이터를 내보낼 수도 있습니다.
 
-![대상 카탈로그를 표시하는 Experience Platform UI의 스크린샷](assets/destinations-catalog-overview.png)
+![대상 카탈로그를 표시하는 Experience Platform UI의 스크린샷입니다.](assets/destinations-catalog-overview.png)
 
 ## 프로덕션 및 사용자 정의 통합 {#productized-custom-integrations}
 
@@ -61,7 +61,7 @@ Destination SDK 액세스 권한은 Real-Time CDP 고객인 파트너 또는 Exp
 | 파트너 또는 고객 유형 | Destination SDK 액세스 방법 |
 ---------|----------|
 | ISV(Independent Software Vendor) | 가입 [Adobe 기술 파트너 프로그램](https://partners.adobe.com/technologyprogram/experiencecloud.html) Destination SDK 액세스를 위해 프로비저닝된 Experience Platform 샌드박스 가져오기를 요청합니다. |
-| 시스템 통합자(SI) | 에서 골드 또는 플래티넘 레벨이어야 합니다. [Adobe 솔루션 파트너 프로그램](https://solutionpartners.adobe.com/home.html), 그리고 Experience Platform 샌드박스가 프로비저닝되고 Destination SDK에 액세스할 수 있습니다. |
+| 시스템 통합자(SI) | 에서 골드 또는 플래티넘 레벨이어야 합니다. [Adobe 솔루션 파트너 프로그램](https://solutionpartners.adobe.com/home.html) Experience Platform 샌드박스가 프로비저닝되고 Destination SDK에 액세스할 수 있도록 합니다. |
 | 에서 고객 Experience Platform [Real-Time CDP Ultimate 패키지](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | 기본적으로 Experience Platform 샌드박스 및 Destination SDK에 액세스하여 조직의 개인 대상을 구축할 수 있습니다. |
 
 {style="table-layout:auto"}

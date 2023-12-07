@@ -3,7 +3,7 @@ keywords: 광고; bing;
 title: Microsoft Bing 연결
 description: Microsoft Bing 연결 대상을 사용하면 디스플레이 광고, 검색 및 기본을 포함하여 전체 Microsoft Advertising Network에서 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있습니다.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 10%

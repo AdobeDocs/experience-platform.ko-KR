@@ -3,10 +3,10 @@ keywords: target 개인화, 대상, experience platform 대상, adobe target 대
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1202'
-ht-degree: 16%
+source-wordcount: '1109'
+ht-degree: 15%
 
 ---
 
@@ -27,6 +27,8 @@ Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 �
 
 Adobe Target은 Adobe Experience Platform 대상 카탈로그의 개인화 연결입니다.
 
+## 비디오 개요 {#video-overview}
+
 Experience Platform에서 Adobe Target 연결을 구성하는 방법에 대한 간략한 개요는 아래 비디오를 참조하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
@@ -41,7 +43,7 @@ Experience Platform에서 Adobe Target 연결을 구성하는 방법에 대한 �
 
 >[!IMPORTANT]
 >
->만들기 전 [!DNL Adobe Target] 연결, 방법에 대한 안내서 읽기 [동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](../../ui/activate-edge-personalization-destinations.md). 이 안내서에서는 여러 Experience Platform 구성 요소에서 동일한 페이지 및 다음 페이지 개인화 사용 사례에 필요한 구성 단계를 안내합니다. 동일 페이지 및 다음 페이지 개인화를 사용하려면 Adobe Target 연결을 구성할 때 데이터 스트림 ID를 사용해야 합니다.
+>만들기 전 [!DNL Adobe Target] 연결, 방법에 대한 안내서 읽기 [동일 페이지 및 다음 페이지 개인화를 위한 개인화 대상 구성](../../ui/activate-edge-personalization-destinations.md). 이 안내서에서는 여러 Experience Platform 구성 요소에서 동일한 페이지 및 다음 페이지 개인화 사용 사례에 필요한 구성 단계를 안내합니다. 동일한 페이지 및 다음 페이지 개인화 사용 사례를 달성하려면 Adobe Target 연결을 구성할 때 데이터 스트림 ID를 사용해야 합니다.
 
 ### Adobe Target의 사전 요구 사항 {#prerequisites-in-adobe-target}
 
@@ -133,7 +135,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 ## 내보낸 데이터 {#exported-data}
 
-Adobe Target은 Adobe Experience Platform Edge Network에서 프로필 데이터를 읽으므로 데이터를 내보내지 않습니다.
+Adobe Target *읽기* Adobe Experience Platform Edge Network의 프로필 데이터이므로 데이터를 내보내지 않습니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

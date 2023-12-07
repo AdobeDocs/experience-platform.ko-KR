@@ -1,20 +1,19 @@
 ---
-keywords: Experience Platform;홈;자주 찾는 항목;계정 모니터링;데이터 흐름 모니터링;데이터 흐름;대상
 description: 대상을 사용하면 Adobe Experience Platform에서 수많은 외부 파트너에게 데이터를 활성화할 수 있습니다. 이 자습서에서는 Experience Platform 사용자 인터페이스를 사용하여 대상에 대한 데이터 흐름을 모니터링하는 방법에 대한 지침을 제공합니다.
 solution: Experience Platform
 title: UI에서 대상에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '3227'
-ht-degree: 11%
+source-wordcount: '3290'
+ht-degree: 10%
 
 ---
 
 # UI의 대상에 대한 데이터 흐름 모니터링
 
-대상을 사용하면 Adobe Experience Platform에서 수많은 외부 파트너에게 데이터를 활성화할 수 있습니다. Platform은 데이터 흐름과 함께 투명성을 제공하여 대상으로의 데이터 흐름을 추적하는 프로세스를 간소화합니다.
+Experience Platform 카탈로그의 다양한 대상을 사용하여 플랫폼에서 수많은 외부 파트너로 데이터를 활성화합니다. Platform은 데이터 흐름과 함께 투명성을 제공하여 대상으로의 데이터 흐름을 추적하는 프로세스를 간소화합니다.
 
 모니터링 대시보드는 데이터가 활성화되는 대상을 포함하여 데이터 흐름의 여정을 시각적으로 표시합니다. 이 자습서에서는 대상 작업 영역에서 데이터 흐름을 직접 모니터링하거나 모니터링 대시보드를 사용하여 Experience Platform 사용자 인터페이스를 사용하여 대상의 데이터 흐름을 모니터링하는 방법에 대한 지침을 제공합니다.
 
@@ -31,7 +30,7 @@ ht-degree: 11%
 
 다음에서 **[!UICONTROL 대상]** Platform UI의 작업 영역에서 **[!UICONTROL 찾아보기]** 을(를) 탭하고 보려는 대상의 이름을 선택합니다.
 
-![대상 보기 선택](../assets/ui/monitor-destinations/select-destination.png)
+![대상 연결이 강조 표시된 대상 보기 선택](../assets/ui/monitor-destinations/select-destination.png)
 
 기존 데이터 흐름 목록이 나타납니다. 이 페이지에는 대상, 사용자 이름, 데이터 흐름 수 및 상태에 대한 정보를 포함하여 볼 수 있는 데이터 흐름 목록이 있습니다.
 
@@ -49,7 +48,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="데이터 흐름 실행 세부 정보"
->abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 세그먼트의 활성화 상태 및 지표에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 검토하십시오."
+>abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 세그먼트의 활성화 상태 및 지표에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -81,11 +80,11 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 - **[!UICONTROL ID 제외됨]**: 누락된 속성 및 동의 위반을 기반으로 활성화를 위해 건너뛴 총 프로필 ID 수입니다.
 - **[!UICONTROL ID 실패]**: 오류로 인해 대상에 활성화되지 않은 총 프로필 ID 수입니다.
 
-![스트리밍 대상에 대한 데이터 흐름 실행 세부 정보](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
+![데이터 흐름은 스트리밍 대상에 대한 세부 사항을 실행합니다.](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
 각 개별 데이터 흐름 실행에는 다음 세부 사항이 표시됩니다.
 
-- **[!UICONTROL 데이터 흐름 실행 시작]**: 데이터 흐름 실행이 시작된 시간입니다. 스트리밍 데이터 흐름 실행의 경우, Experience Platform은 데이터 흐름 실행 시작을 기반으로 한 지표를 시간별 지표 형태로 캡처합니다. 스트리밍 데이터 흐름 실행의 경우, 데이터 흐름 실행이 예를 들어 오후 10시 30분에 시작된 경우 지표는 UI에서 시작 시간을 오후 10시로 표시합니다.
+- **[!UICONTROL 데이터 흐름 실행 시작]**: 데이터 흐름 실행이 시작된 시간입니다. 스트리밍 데이터 흐름 실행의 경우, Experience Platform은 데이터 흐름 실행 시작을 기반으로 한 지표를 시간별 지표 형태로 캡처합니다. 스트리밍 데이터 흐름 실행의 경우, 데이터 흐름 실행이 예를 들어 오후 10:30에 시작된 경우 지표는 UI에서 시작 시간을 오후 10:00으로 표시합니다.
 - **[!UICONTROL 처리 시간]**: 데이터 흐름 실행을 처리하는 데 걸린 시간입니다.
    - 대상 **[!UICONTROL 완료됨]** 를 실행하면 처리 시간 지표에 항상 1시간이 표시됩니다.
    - 에 여전히 있는 데이터 흐름 실행의 경우 **[!UICONTROL 처리 중]** state 를 지정하면 데이터 흐름 실행에 해당하는 모든 지표를 처리하기 위해 모든 지표를 캡처하는 창이 1시간 이상 열려 있습니다. 예를 들어 오전 9시 30분에 시작된 데이터 흐름 실행은 모든 지표를 캡처하고 처리하기 위해 1시간 30분 동안 처리 상태를 유지할 수 있습니다. 그런 다음 처리 창이 닫히고 데이터 흐름 실행의 상태가 (으)로 업데이트됩니다. **완료됨**&#x200B;로 표시되는 처리 시간이 1시간으로 변경됩니다.
@@ -94,25 +93,25 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 - **[!UICONTROL ID 제외됨]**: 누락된 속성 및 동의 위반을 기반으로 활성화에서 제외된 총 프로필 ID 수입니다.
 - **[!UICONTROL ID 실패]** 오류로 인해 대상에 활성화되지 않은 총 프로필 ID 수입니다.
 - **[!UICONTROL 활성화 비율]**: 활성화 또는 건너뛴 수신된 ID의 백분율입니다. 다음 수식은 이 값이 계산되는 방법을 보여 줍니다.
-  ![활성화 비율 공식](../assets/ui/monitor-destinations/activation-rate-formula.png)
+  ![활성화 비율 공식.](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL 상태]**: 데이터 흐름이 있는 상태를 나타냅니다. 다음 중 하나를 수행합니다. [!UICONTROL 완료됨] 또는 [!UICONTROL 처리 중]. [!UICONTROL 완료됨] 는 해당 데이터 흐름 실행에 대한 모든 id가 1시간 기간 내에 내보내졌음을 의미합니다. [!UICONTROL 처리 중] 는 데이터 흐름 실행이 아직 완료되지 않았음을 의미합니다.
 
 특정 데이터 흐름 실행의 세부 정보를 보려면 목록에서 실행 시작 시간을 선택합니다.
 
 데이터 흐름 실행을 위한 세부 정보 페이지에는 수신된 프로필 수, 활성화된 ID 수, 실패한 ID 수 및 제외된 ID 수와 같은 추가 정보가 포함되어 있습니다.
 
-![스트리밍 대상에 대한 데이터 흐름 세부 정보](../assets/ui/monitor-destinations/dataflow-details-stream.png)
+![스트리밍 대상에 대한 데이터 흐름 세부 정보.](../assets/ui/monitor-destinations/dataflow-details-stream.png)
 
 세부 정보 페이지에는 실패한 ID와 제외된 ID 목록도 표시됩니다. 오류 코드, ID 수 및 설명을 포함하여 실패한 ID와 제외된 ID 모두에 대한 정보가 표시됩니다. 기본적으로 목록에는 실패한 ID가 표시됩니다. 건너뛴 ID를 표시하려면 **[!UICONTROL ID 제외됨]** 토글.
 
-![스트리밍 대상에 대한 데이터 흐름 레코드](../assets/ui/monitor-destinations/dataflow-records-stream.png)
+![오류 메시지가 강조 표시된 스트리밍 대상에 대한 데이터 흐름 레코드입니다.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
 ### 일괄 처리 대상에 대한 데이터 흐름 실행 {#dataflow-runs-for-batch-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="데이터 흐름 실행 세부 정보"
->abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 세그먼트의 활성화 상태 및 지표에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 검토하십시오."
+>abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 세그먼트의 활성화 상태 및 지표에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 참조하십시오."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
 
 >[!CONTEXTUALHELP]
@@ -135,7 +134,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 - **[!UICONTROL ID 활성화됨]**: 선택한 대상에 성공적으로 활성화된 총 프로필 ID 수입니다. 이 지표에는 내보낸 세그먼트에서 생성, 업데이트 및 제거된 ID가 포함됩니다.
 - **[!UICONTROL ID 제외됨]**: 누락된 속성 및 동의 위반을 기반으로 선택한 대상에 대해 활성화에서 제외된 개별 프로필 ID의 수입니다.
 
-![배치 대상에 대한 데이터 흐름 실행 보기](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
+![데이터 흐름은 배치 대상에 대한 보기를 실행합니다.](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
 
 각 개별 데이터 흐름 실행에는 다음 세부 사항이 표시됩니다.
 
@@ -159,11 +158,11 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 - **[!UICONTROL 총 파일 수]**: 데이터 흐름에서 내보낸 총 파일 수입니다.
 - **[!UICONTROL 마지막으로 업데이트됨]**: 데이터 흐름 실행이 마지막으로 업데이트된 시간입니다.
 
-![배치 대상에 대한 데이터 흐름 실행 세부 정보](../assets/ui/monitor-destinations/dataflow-batch.png)
+![배치 대상에 대한 데이터 흐름 실행 세부 정보.](../assets/ui/monitor-destinations/dataflow-batch.png)
 
 세부 정보 페이지에는 실패한 ID와 제외된 ID 목록도 표시됩니다. 오류 코드와 설명을 포함하여 실패한 ID와 제외된 ID 모두에 대한 정보가 표시됩니다. 기본적으로 목록에는 실패한 ID가 표시됩니다. 제외된 ID를 표시하려면 다음을 선택합니다. **[!UICONTROL ID 제외됨]** 토글.
 
-![배치 대상에 대한 데이터 흐름 레코드](../assets/ui/monitor-destinations/dataflow-records-batch.png)
+![오류 메시지가 강조 표시된 배치 대상에 대한 데이터 흐름 레코드입니다.](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
 ## 대상 대시보드 모니터링 {#monitoring-destinations-dashboard}
 
@@ -183,7 +182,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 대시보드 중앙에는 [!UICONTROL 활성화] 패널은 스트리밍 대상으로 내보낸 데이터의 활성화 비율과 배치 대상으로 실행되는 실패한 배치 데이터 흐름에서 데이터를 표시하는 지표 및 그래프를 포함합니다.
 
-![스트리밍 및 일괄 활성화 그래프](../assets/ui/monitor-destinations/dashboard-graph.png)
+![모니터링 보기에서 강조 표시된 스트리밍 및 일괄 활성화 그래프.](../assets/ui/monitor-destinations/dashboard-graph.png)
 
 
 기본적으로 표시된 데이터에는 지난 24시간 동안의 활성화 정보가 포함됩니다. 선택 **[!UICONTROL 지난 24시간]** 표시되는 레코드의 시간대를 조정합니다. 사용 가능한 옵션은 다음과 같습니다 **[!UICONTROL 지난 24시간]**, **[!UICONTROL 지난 7일]**, 및 **[!UICONTROL 지난 30일]**. 또는 나타나는 달력 팝업 창에서 날짜를 선택할 수 있습니다. 날짜를 선택한 후 다음을 선택합니다. **[!UICONTROL 적용]** 표시되는 정보의 시간대를 조정합니다.
@@ -192,14 +191,14 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >
 >다음 스크린샷은 지난 24시간이 아닌 지난 30일 동안의 활성화율 및 일괄 데이터 흐름 실행을 보여 줍니다. 다음을 선택하여 시간대를 조정할 수 있습니다. **[!UICONTROL 지난 30일]**.
 
-![활성화된 대상에 대한 전환 확인 날짜 범위 변경](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
+![활성화된 대상에 대해 강조 표시된 전환 확인 날짜 범위 제어 변경](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
 화살표 아이콘 사용(![화살표 아이콘](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) 대상 유형(스트리밍 또는 배치)에 따라 활성화 세부 정보에 대한 정보를 한눈에 표시하는 화면 상단의 카드를 확장하거나 종료합니다.
 
 - **[!UICONTROL 스트리밍 활성화 비율]**: 활성화 또는 건너뛴 수신된 ID의 백분율을 나타냅니다. 이 백분율을 계산하는 데 사용되는 공식은 이 페이지의 [스트리밍 대상에 대해 데이터 흐름 실행](#dataflow-runs-for-streaming-destinations) 섹션.
 - **[!UICONTROL 일괄 처리 실패 데이터 흐름 실행]**: 선택한 시간 간격에서 실패한 데이터 흐름 실행 수를 나타냅니다.
 
-![페이지 맨 위에 카드 표시 또는 닫기](../assets/ui/monitor-destinations/monitoring-destinations-toggle-arrow.gif)
+![페이지 맨 위에 카드를 표시하거나 닫습니다.](../assets/ui/monitor-destinations/monitoring-destinations-toggle-arrow.gif)
 
 다음 **[!UICONTROL 활성화]** 그래프는 기본적으로 표시되며 비활성화하여 아래 대상 목록을 확장할 수 있습니다. 다음 항목 선택 **[!UICONTROL 지표 및 그래프]** 그래프를 비활성화하려면 전환합니다.
 
@@ -208,14 +207,14 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 | 지표 | 대상 유형 |
 ---------|----------|
 | **[!UICONTROL 받은 프로필]** | 스트리밍 및 일괄 처리 |
-| **[!UICONTROL 활성화된 ID]** | 스트리밍 및 일괄 처리 |
-| **[!UICONTROL 실패한 ID]** | 스트리밍 |
-| **[!UICONTROL 제외된 ID]** | 스트리밍 및 일괄 처리 |
+| **[!UICONTROL ID 활성화됨]** | 스트리밍 및 일괄 처리 |
+| **[!UICONTROL ID 실패]** | 스트리밍 |
+| **[!UICONTROL ID 제외됨]** | 스트리밍 및 일괄 처리 |
 | **[!UICONTROL 활성화 비율]** | 스트리밍 |
 | **[!UICONTROL 총 실패한 데이터 흐름]** | 일괄 처리 |
 | **[!UICONTROL 마지막으로 업데이트됨]** | 스트리밍 및 일괄 처리 |
 
-![활성화된 모든 대상 대시보드](../assets/ui/monitor-destinations/dashboard-destinations.png)
+![활성화된 모든 대상이 강조 표시된 모니터링 대시보드.](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
 대상 목록을 필터링하여 선택한 대상 범주만 표시할 수도 있습니다. 다음 항목 선택 **[!UICONTROL 내 대상]** 드롭다운을 클릭하고 [대상 범주](/help/destinations/destination-types.md#categories) 필터링하려는 대상입니다.
 
@@ -223,13 +222,13 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 또한 검색 막대에 대상을 입력하여 단일 대상으로 격리할 수 있습니다. 대상의 데이터 흐름을 보려면 필터를 선택합니다 ![필터](../assets/ui/monitor-destinations/filter-add.png) 활성 데이터 흐름 목록을 보려면 옆에 있어야 합니다.
 
-![검색 창을 사용하여 대상 필터링](../assets/ui/monitor-destinations/filtered-destinations.png)
+![모니터링 보기에서 강조 표시된 검색 창을 사용하여 대상을 필터링합니다.](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 모든 대상에 대한 기존 데이터 흐름을 모두 보려면 을 선택합니다. **[!UICONTROL 데이터 흐름]**.
 
 마지막 데이터 흐름 실행별로 정렬된 데이터 흐름 목록이 나타납니다. 모니터링할 대상을 찾아 필터를 선택하면 특정 데이터 흐름에 대한 추가 세부 정보를 볼 수 있습니다 ![필터](../assets/ui/monitor-destinations/filter-add.png) 옆에 있는 다음 필터를 차례로 선택합니다 ![필터](../assets/ui/monitor-destinations/filter-add.png) 자세한 내용은 데이터 흐름 옆에 있습니다.
 
-![모니터링 대시보드에서 강조 표시된 모든 데이터 흐름](../assets/ui/monitor-destinations/dashboard-dataflows.png)
+![모니터링 대시보드에서 강조 표시된 모든 데이터 흐름입니다.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
 추가 검사를 위해 데이터 흐름을 선택하면 데이터 흐름 세부 정보 페이지에 데이터 흐름 실행 또는 세그먼트별로 분류된 데이터 흐름에서 활성화된 데이터를 볼 수 있는 토글이 포함됩니다.
 
@@ -243,11 +242,11 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >
 >배치 대상에 대한 데이터 흐름의 경우, 각 세그먼트에는 세그먼트 활성화 예약 빈도에 따라 생성되는 해당 데이터 흐름 실행이 있습니다. 예를 들어, 동일한 대상 데이터 흐름의 5개 세그먼트에 대해 일별 예약된 활성화를 설정하는 경우 매일 5개의 개별 데이터 흐름 실행이 생성됩니다.
 
-![흐름 실행 패널](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
+![여러 개의 실행이 강조 표시된 데이터 흐름 실행 패널.](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
 
 사용 **[!UICONTROL 실패만 표시]** 데이터 흐름에 대해 실패한 실행만 표시하려면 전환합니다.
 
-![데이터 흐름 실행 - 실패만 표시 전환](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
+![실패만 표시 토글이 강조 표시된 데이터 흐름 실행 보기](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
 
 ### 세그먼트 수준 보기 {#segment-level-view}
 
@@ -261,7 +260,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >- 세그먼트 수준 보기는 현재 배치 대상에만 사용할 수 있습니다.
 >- 세그먼트 수준 지표는 현재 성공적인 데이터 흐름 실행에 대해서만 기록됩니다. 실패한 데이터 흐름 실행 및 제외된 레코드에 대해서는 기록되지 않습니다.
 
-![데이터 흐름 패널의 세그먼트](../assets/ui/monitor-destinations/dashboard-segments-view.png)
+![데이터 흐름 패널에서 강조 표시된 세그먼트입니다.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 세그먼트 수준 보기에서 지표는 선택한 시간 범위 내의 여러 데이터 흐름 실행 간에 집계됩니다. 데이터 흐름 실행이 여러 개 있는 경우 세그먼트 수준에서 드릴다운하여 선택한 세그먼트로 필터링된 각 데이터 흐름 실행에 대한 분류를 확인할 수 있습니다.
 필터 단추 사용 ![필터](../assets/ui/monitor-destinations/filter-add.png) 데이터 흐름의 각 세그먼트에 대한 실행 보기를 드릴다운합니다.
@@ -276,11 +275,11 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 - **[!UICONTROL 건너뛴 ID로 데이터 흐름 실행]**: 선택한 세그먼트에 대해 이 옵션은 일부 ID가 완전히 활성화되지 않았고 일부 프로필은 건너뛴 모든 데이터 흐름 실행을 나열합니다. 특정 데이터 흐름 실행의 ID를 건너뛴 이유를 검사하려면 다음을 참조하십시오. [데이터 흐름 실행 세부 정보 페이지](#dataflow-run-details-page) 해당 데이터 흐름을 실행합니다.
 - **[!UICONTROL 활성화된 ID로 데이터 흐름 실행]**: 선택한 세그먼트에 대해 이 옵션은 성공적으로 활성화된 ID가 있는 모든 데이터 흐름 실행을 나열합니다.
 
-![세그먼트에 대한 데이터 흐름 실행 필터링](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
+![세그먼트에 대한 데이터 흐름 실행을 필터링하는 방법을 보여 주는 라디오 버튼입니다.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
 특정 데이터 흐름 실행에 대한 자세한 내용을 보려면 필터를 선택합니다 ![필터](../assets/ui/monitor-destinations/filter-add.png) 데이터 흐름 실행 세부 정보 페이지를 보려면 데이터 흐름 실행 시작 시간 옆에 있어야 합니다.
 
-![데이터 흐름은 모니터링 대시보드에서 필터를 실행합니다.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
+![데이터 흐름 실행은 모니터링 대시보드에서 필터를 실행하여 특정 데이터 흐름 실행에 대한 자세한 정보를 드릴다운합니다.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 
 ### 데이터 흐름 실행 세부 정보 페이지 {#dataflow-run-details-page}
 
@@ -294,12 +293,12 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 데이터 흐름 실행 오류 보기에는 실패한 ID와 제외된 ID 목록이 표시됩니다. 오류 코드, ID 수 및 설명을 포함하여 실패한 ID와 제외된 ID 모두에 대한 정보가 표시됩니다. 기본적으로 목록에는 실패한 ID가 표시됩니다. 건너뛴 ID를 표시하려면 **[!UICONTROL ID 제외됨]** 토글.
 
-![ID 제외됨 토글](../assets/ui/monitor-destinations/identities-excluded.png)
+![모니터링 보기에서 강조 표시된 ID 제외됨 토글](../assets/ui/monitor-destinations/identities-excluded.png)
 
 날짜 **[!UICONTROL 세그먼트]** 이(가) 선택되면 선택한 데이터 흐름 실행에서 활성화된 세그먼트 목록이 표시됩니다. 이 화면에는 마지막으로 데이터 흐름이 실행된 상태 및 시간뿐만 아니라 활성화된 ID, 제외된 ID에 대한 세그먼트 수준 정보가 포함되어 있습니다.
 
-![데이터 흐름 실행 - 세그먼트 보기](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
+![데이터 흐름 실행 세부 정보 화면에서 세그먼트 보기.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
 ## 다음 단계 {#next-steps}
 
-이 안내서를 따라 처리 시간, 활성화 비율 및 상태와 같은 모든 관련 정보를 포함하여 배치 및 스트리밍 대상에 대한 데이터 흐름을 모니터링하는 방법을 이해합니다. Platform의 데이터 흐름에 대한 자세한 내용은 [데이터 흐름 개요](../home.md). 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md).
+이 안내서를 따라 처리 시간, 활성화 비율 및 상태와 같은 모든 관련 정보를 포함하여 배치 및 스트리밍 대상에 대한 데이터 흐름을 모니터링하는 방법을 이해합니다. Platform의 데이터 흐름에 대한 자세한 내용은 [데이터 흐름 개요](../home.md). 대상에 대해 자세히 알아보려면 [대상 개요](../../destinations/home.md).

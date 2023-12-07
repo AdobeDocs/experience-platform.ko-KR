@@ -2,10 +2,10 @@
 title: 사용자 지정 대상 연결 twitter
 description: Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에서 기존 팔로우어 및 고객을 타겟팅하고 관련 리마케팅 캠페인을 생성합니다
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '874'
-ht-degree: 6%
+source-wordcount: '859'
+ht-degree: 5%
 
 ---
 
@@ -115,6 +115,6 @@ Adobe Experience Platform 내에 구축된 대상을 활성화하여 Twitter에�
 대상을 Twitter에 매핑할 때 다음 대상 이름 지정 요구 사항을 충족해야 합니다.
 
 1. 사람이 읽을 수 있는 대상 매핑 이름을 제공합니다. Experience Platform 세그먼트에 사용한 것과 동일한 이름을 사용하는 것이 좋습니다.
-2. 특수 문자는 사용하지 마십시오 (+ &amp; , % : ; @ / = ? $) 대상 및 대상 매핑 이름. Experience Platform 대상 이름에 이러한 문자가 포함되어 있는 경우 대상을 Twitter 대상에 매핑하기 전에 해당 문자를 제거하십시오.
+2. 특수 문자(+ &amp; , % : ; @ / = ? $) 대상 및 대상 매핑 이름. Experience Platform 대상 이름에 이러한 문자가 포함되어 있는 경우 대상을 Twitter 대상에 매핑하기 전에 해당 문자를 제거하십시오.
 
 다음에 대한 추가 정보: [!DNL List Custom Audiences] twitter에서 찾을 수 있음 [Twitter 설명서](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).

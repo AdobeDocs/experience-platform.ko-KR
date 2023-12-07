@@ -1,15 +1,15 @@
 ---
-title: (Beta) [!DNL Google Ad Manager 360] 연결
+title: (베타) [!DNL Google Ad Manager 360] 연결
 description: Google Ad Manager 360은 게시자에게 웹 사이트, 비디오 및 모바일 앱에서의 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 제공 플랫폼입니다.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 6%
+source-wordcount: '1027'
+ht-degree: 5%
 
 ---
 
-# (Beta)[!DNL Google Ad Manager 360]연결
+# (베타) [!DNL Google Ad Manager 360] 연결
 
 ## 개요 {#overview}
 

@@ -3,9 +3,9 @@ keywords: 비행선 태그;비행선 목적지
 title: 비행선 태그 연결
 description: Airship 내에서 타깃팅할 대상 태그로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '967'
 ht-degree: 2%
 
 ---

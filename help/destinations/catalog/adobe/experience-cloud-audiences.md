@@ -3,10 +3,10 @@ title: Experience Cloud 대상자
 description: Real-time Customer Data Platform에서 다양한 Experience Cloud 앱으로 대상을 공유하는 방법을 알아봅니다.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 23c4bce542bba76ea4badba43a7ce3e6f7fe9e49
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1780'
-ht-degree: 3%
+source-wordcount: '1675'
+ht-degree: 2%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->이 대상은 [이전 대상자 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) Real-time Customer Data Platform에서 다양한 Experience Cloud 솔루션으로 마이그레이션되었습니다.
+>이 대상은 [기존 대상자 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) Real-time Customer Data Platform에서 다양한 Experience Cloud 솔루션으로 마이그레이션되었습니다.
 > 
->이미 Real-Time CDP의 대상을 을 통해 Audience Manager 및 기타 Experience Cloud 솔루션에 공유하는 경우 [이전 대상자 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), 이 대상을 사용하기 전에 고객 지원 센터에 문의하여 기존 통합을 비활성화해야 합니다.
+>이미 Real-Time CDP의 대상을 을 통해 Audience Manager 및 기타 Experience Cloud 솔루션에 공유하는 경우 [기존 대상자 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), 이 대상을 사용하기 전에 고객 지원 센터에 문의하여 기존 통합을 비활성화해야 합니다.
 
 ![대상 카탈로그에서 강조 표시된 Experience Cloud 대상.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
@@ -80,7 +80,7 @@ Adobe 그러나 이러한 솔루션과 대상을 공유하려면 다음 전용 �
 
 ### 기존 대상 공유 솔루션을 사용하는 고객의 경우
 
-이미 Real-Time CDP의 대상을 을 통해 Audience Manager 및 기타 Experience Cloud 솔루션에 공유하는 경우 [이전 대상자 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), 기존 통합을 비활성화하려면 고객 지원 센터에 문의해야 합니다.
+이미 Real-Time CDP의 대상을 을 통해 Audience Manager 및 기타 Experience Cloud 솔루션에 공유하는 경우 [기존 대상자 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), 기존 통합을 비활성화하려면 고객 지원 센터에 문의해야 합니다.
 
 디프로비저닝 티켓을 해결하는 데 걸리는 시간은 영업일 기준으로 6일 이내입니다. 기존 레거시 통합을 비활성화한 후 다음 작업을 진행할 수 있습니다. [연결 만들기](#connect) 셀프서비스 대상 카드를 통해
 
@@ -94,7 +94,7 @@ Adobe 그러나 이러한 솔루션과 대상을 공유하려면 다음 전용 �
 
 * 현재 단일 Experience Cloud 대상 이 지원됩니다. 두 번째 대상 연결을 구성하려고 하면 오류가 발생합니다.
 * 대상에 연결할 때 다음 옵션을 볼 수 있습니다. [데이터 흐름 경고 활성화](../../ui/alerts.md). UI에 표시되지만 **경고 활성화 옵션은 현재 지원되지 않습니다.**.
-* **대상자 채우기 지원**: Audience Manager 또는 기타 Experience Cloud 솔루션으로 첫 번째 내보내기에는 대상의 과거 모집단이 포함됩니다. 의 사용자 [이전 대상자 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) 이 대상을 구성하는 사람은 약 6시간의 채우기 차이를 예상해야 합니다.
+* **대상자 채우기 지원**: Audience Manager 또는 기타 Experience Cloud 솔루션으로 첫 번째 내보내기에는 대상의 과거 모집단이 포함됩니다. 의 사용자 [기존 대상자 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) 이 대상을 구성하는 사람은 약 6시간의 채우기 차이를 예상해야 합니다.
 
 ### 대상자를 활성화할 때 대기 시간 {#audience-activation-latency}
 

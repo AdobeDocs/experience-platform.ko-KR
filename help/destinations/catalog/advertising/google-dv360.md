@@ -1,12 +1,11 @@
 ---
-keywords: 더블 클릭 입찰 관리자;더블 클릭 입찰 관리자;더블 클릭;디스플레이 및 비디오 360;디스플레이 360;비디오 360;비디오 360;디스플레이 360;디스플레이 360;디스플레이 및 비디오
 title: Google Display & Video 360 연결
 description: 이전에 DoubleClick Bid Manager로 알려졌던 Display & Video 360은 디스플레이, 비디오 및 모바일 인벤토리 소스에 걸쳐 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행하는 데 사용되는 도구입니다.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 4%
+source-wordcount: '974'
+ht-degree: 2%
 
 ---
 
@@ -21,11 +20,11 @@ ht-degree: 4%
 다음의 세부 사항에 유의하십시오. [!DNL Google Display & Video 360] 대상:
 
 * 활성화된 대상은 Google 플랫폼에서 프로그래밍 방식으로 생성됩니다.
-* 에 대한 대상 다시 채우기 활성화 [!DNL Google Display & Video 360] 대상은 대상이 대상 연결에 처음 매핑되고 24-48시간 후에 발생하도록 예약되어 있습니다. 이 업데이트는 데이터를 수집할 때까지 24시간 대기하는 Google의 정책에 대한 응답이며 Real-Time CDP과 간의 일치율을 향상시키기 위한 것입니다 [!DNL Google Display & Video 360]. 이는 이 대상에만 적용할 수 있는 백엔드 구성이며, UI에서 고객이 구성할 수 있는 일정 옵션과는 관련이 없습니다.
+* 에 대한 대상 다시 채우기 활성화 [!DNL Google Display & Video 360] 대상은 대상이 대상 연결에 처음 매핑되고 24-48시간 후에 발생하도록 예약되어 있습니다. 이 업데이트는 데이터를 수집할 때까지 24시간 대기하는 Google의 정책에 대한 응답이며 Real-Time CDP과 간의 일치율을 향상시키기 위한 것입니다 [!DNL Google Display & Video 360]. 이는 이 대상에만 적용할 수 있는 백엔드 구성이며 UI의 고객이 구성할 수 있는 예약 옵션과 관련이 없습니다.
 
 >[!IMPORTANT]
 >
->Google Display &amp; Video 360으로 첫 번째 대상을 만들려고 하는데 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) 과거의 Experience Cloud ID 서비스(Adobe Audience Manager 또는 기타 애플리케이션 포함)에서 ID 동기화를 활성화하려면 Adobe 컨설팅 또는 고객 지원 센터에 문의하십시오. 이전에 Audience Manager에서 Google 통합을 설정한 경우 설정한 ID가 플랫폼으로 이월됩니다.
+>Google Display &amp; Video 360으로 첫 번째 대상을 만들려고 하는데 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) 과거 Experience Cloud ID 서비스(Adobe Audience Manager 또는 기타 애플리케이션 포함)에서 ID 동기화를 활성화하려면 Adobe 컨설팅 또는 고객 지원 센터에 문의하십시오. 이전에 Audience Manager에서 Google 통합을 설정한 경우 설정한 ID가 플랫폼으로 이월됩니다.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -67,10 +66,10 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->첫 번째 항목을 설정하기 전에 허용 목록은 필수입니다. [!DNL Google Display & Video 360] 대상(플랫폼 내) 아래 설명된 허용 목록 프로세스가 다음 기한까지 완료되었는지 확인하십시오. [!DNL Google] 대상을 만들기 전에.
+>첫 번째 항목을 설정하기 전에 허용 목록은 필수입니다. [!DNL Google Display & Video 360] 대상(플랫폼 내) 아래 설명된 허용 목록 프로세스가 다음 기한까지 완료되었는지 확인합니다. [!DNL Google] 대상을 만들기 전에.
 >이 규칙의 예외는 다음과 같습니다 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 고객. Audience Manager에서 이 Google 대상에 대한 연결을 이미 만든 경우 허용 목록 프로세스를 다시 진행할 필요가 없으며 다음 단계를 진행할 수 있습니다.
 
-만들기 전에 [!DNL Google Display & Video 360] destination in Platform에서는 Google에 연락하여 허용된 데이터 공급자 목록에 Adobe을 넣고 허용 목록에 계정을 추가해야 합니다. Google에 연락하여 다음 정보를 제공하십시오.
+만들기 전에 [!DNL Google Display & Video 360] destination in Platform에서는 Google에 문의하여 허용된 데이터 공급자 목록에 Adobe허용 목록에 추가하다 을 넣고 계정에 계정을 추가해야 합니다. Google에 연락하여 다음 정보를 제공하십시오.
 
 * **계정 ID**: Google이 있는 Adobe의 계정 ID. 계정 ID: 87933855.
 * **고객 ID**: Google이 있는 Adobe의 고객 계정 ID. 고객 ID: 89690775.
@@ -97,7 +96,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 >[!NOTE]
 >
->를 설정할 때 [!DNL Google Display & Video 360] 대상, (으)로 작업 [!DNL Google Account Manager] 또는 Adobe 담당자를 통해 보유하고 있는 계정 유형을 파악할 수 있습니다.
+>를 설정할 때 [!DNL Google Display & Video 360] 대상, 다음 사용자와 작업 [!DNL Google Account Manager] 또는 Adobe 담당자를 통해 보유하고 있는 계정 유형을 파악할 수 있습니다.
 
 ### 경고 활성화 {#enable-alerts}
 

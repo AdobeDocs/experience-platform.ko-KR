@@ -1,12 +1,11 @@
 ---
-keywords: 이메일;이메일;이메일;이메일 대상;salesforce;salesforce 대상
 title: Salesforce Marketing Cloud 연결
 description: Salesforce Marketing Cloud은 방문자와 고객이 여정을 만들고 사용자 정의하여 경험을 개인화할 수 있도록 하는 이전 ExactTarget의 디지털 마케팅 제품군입니다.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '819'
-ht-degree: 4%
+source-wordcount: '795'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 4%
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) 는 방문자와 고객이 자신의 경험을 개인화할 수 있도록 여정을 구축하고 맞춤화할 수 있는 이전 ExactTarget으로 알려진 디지털 마케팅 세트입니다.
 
-대상 데이터를에 보내려면 [!DNL Salesforce Marketing Cloud], 먼저 다음을 수행해야 합니다. [대상 연결](#connect-destination) Platform에서 [데이터 가져오기 설정](#import-data-into-salesforce) 스토리지 위치에서 로 [!DNL Salesforce Marketing Cloud].
+대상 데이터를에 보내려면 [!DNL Salesforce Marketing Cloud], 먼저 다음을 수행해야 합니다. [대상에 연결](#connect-destination) Platform에서 [데이터 가져오기 설정](#import-data-into-salesforce) 스토리지 위치에서 로 [!DNL Salesforce Marketing Cloud].
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -40,11 +39,11 @@ ht-degree: 4%
 
 {style="table-layout:auto"}
 
-## IP 주소 허용 목록 {#allow-list}
+## 허용 목록에 추가하다 IP 주소 {#allow-list}
 
-SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe은 허용 목록에 특정 IP 범위를 추가할 것을 권장합니다.
+SFTP 저장소를 사용하여 이메일 마케팅 대상을 설정할 때 Adobe은 특정 IP 범위를 허용 목록에 추가하다에 추가할 것을 권장합니다.
 
-을(를) 참조하십시오 [SFTP 대상에 대한 IP 주소 허용 목록](../cloud-storage/ip-address-allow-list.md) 허용 목록에 Adobe IP를 추가해야 하는 경우
+을(를) 참조하십시오 [허용 목록에 추가하다 SFTP 대상의 IP 주소](../cloud-storage/ip-address-allow-list.md) Adobe IP를 허용 목록에 추가하다에 추가해야 하는 경우
 
 ## 대상에 연결 {#connect}
 
@@ -72,7 +71,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
    * **[!UICONTROL 도메인]**: SFTP 계정의 IP 주소 또는 도메인 이름;
    * **[!UICONTROL 포트]**: SFTP 저장소 위치에서 사용하는 포트
    * **[!UICONTROL 사용자 이름]**: SFTP 저장소 위치에 로그인할 사용자 이름
-   * **[!UICONTROL SSH 키]**: SFTP 저장소 위치에 로그인하는 데 사용되는 개인 SSH 키입니다. 비공개 키 형식은 Base64 인코딩된 문자열로 지정하며 암호로 보호해서는 안 됩니다.
+   * **[!UICONTROL SSH 키]**: SFTP 저장소 위치에 로그인하는 데 사용되는 개인 SSH 키입니다. 개인 키의 형식은 Base64로 인코딩된 문자열이어야 하며 암호로 보호되어서는 안 됩니다.
 
 * 원할 경우 RSA 형식의 공개 키를 첨부하여 PGP/GPG를 사용한 암호화를 내보낸 파일에 추가할 수 있습니다. **[!UICONTROL 키]** 섹션. 공개 키는 다음으로 작성되어야 합니다. [!DNL Base64] 인코딩된 문자열입니다.
 * **[!UICONTROL 이름]**: 대상의 관련 이름을 선택합니다.

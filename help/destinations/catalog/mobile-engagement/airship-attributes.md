@@ -3,9 +3,9 @@ keywords: 비행선 속성;비행선 목적지
 title: 비행선 속성 연결
 description: Airship 내에서 타깃팅할 대상 속성으로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1036'
 ht-degree: 2%
 
 ---
