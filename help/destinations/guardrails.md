@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;활성화;문제 해결;보호 기능;지침;제한
-title: 활성화 데이터에 대한 기본 보호 기능
+title: 데이터 활성화를 위한 기본 보호 기능
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: c425d1016bed80113b879a683114861d839b79eb
 workflow-type: tm+mt
 source-wordcount: '1662'
 ht-degree: 1%
 
 ---
 
-# 활성화 데이터 보호
+# 데이터 활성화 보호
 
 이 페이지에서는 활성화 동작과 관련된 기본 사용량 및 요금 제한을 제공합니다. 다음 가드레일을 검토할 때 올바른 것으로 간주됩니다. [대상에 연결됨](/help/destinations/ui/connect-destination.md).
 

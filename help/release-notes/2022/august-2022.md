@@ -2,16 +2,16 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 8월
 description: Adobe Experience Platform에 대한 2022년 8월 릴리스 정보입니다.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 7f5a1d8e50ff030b2abe04b5155f28b8c8b6fbf9
+source-git-commit: 3069bdb3592ac1cd3fd7fe4f7f9234d5be56547d
 workflow-type: tm+mt
-source-wordcount: '2082'
+source-wordcount: '1999'
 ht-degree: 27%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2022년 8월 24일**
+**릴리스 날짜: 2022년 8월 24일 목요일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
@@ -116,7 +116,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 | 구성 요소 유형 | 이름 | 설명 |
 | --- | --- | --- |
-| 클래스 | [[!UICONTROL AJO 엔티티 클래스]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Adobe Journey Optimizer에 대한 조회 스키마를 만들기 위한 레코드 기반 클래스입니다. |
+| 클래스 | [[!UICONTROL AJO 엔티티 클래스]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Adobe Journey Optimizer에 대한 조회 스키마를 만들기 위한 레코드 기반 클래스입니다. |
 | 필드 그룹 | [[!UICONTROL Workfront 작업 오브젝트]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Adobe Workfront의 모든 하위 수준 개체별 필드 그룹을 참조하는 래퍼 필드 그룹입니다. |
 
 {style="table-layout:auto"}

@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: 안내서, 설명서 및 튜토리얼을 통해 Experience Platform이 개인화된 경험을 실시간으로 고객에게 전달하는 방법에 대해 알아봅니다.
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: a3ba26fd6ee7b473d74cc3cf3d142e0f3ff069bb
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 30%
+source-wordcount: '276'
+ht-degree: 24%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 30%
    * [AI Assistant](ai-assistant.md)
 * EXPERIENCE PLATFORM API {#platform-apis}
    * [Platform API 시작하기](api-guide.md)
-   * [ Platform API 인증 및 액세스](api-authentication.md)
+   * [Platform API 인증 및 액세스](api-authentication.md)
    * [API 기본 사항](api-fundamentals.md)
    * [Platform API와 함께 Postman 사용](postman.md)
    * [API 참조 문서](https://www.adobe.com/go/platform-api-reference-en)
@@ -74,6 +74,8 @@ ht-degree: 30%
 * 라이선스 사용 및 보호 {#license}
    * [데이터 관리 라이선스 권한 부여 모범 사례](./license-usage-and-guardrails/data-management-best-practices.md)
    * [라이선스 사용 대시보드](./license-usage-and-guardrails/license-usage-dashboard.md)
+   * [Adobe Journey Optimizer 보호 기능](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Real-Time CDP 보호 기능](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [문제 해결 안내서](troubleshooting.md)
 * [Gen2 데이터 레이크 마이그레이션](adls2-gen2-migration.md)
 * [용어집](glossary.md)
