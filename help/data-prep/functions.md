@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 데이터 준비 매핑 기능
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
+source-git-commit: ff61ec7bc1e67191a46f7d9bb9af642e9d601c3a
 workflow-type: tm+mt
-source-wordcount: '5221'
-ht-degree: 3%
+source-wordcount: '5080'
+ht-degree: 2%
 
 ---
 
-# 데이터 준비 매핑 기능
+# 데이터 준비 매핑 함수
 
 데이터 준비 함수를 사용하여 소스 필드에 입력된 내용을 기반으로 값을 계산하고 계산할 수 있습니다.
 
@@ -52,7 +52,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | substr | 주어진 길이의 하위 문자열을 반환합니다. | <ul><li>입력: **필수** 입력 문자열입니다.</li><li>시작 색인: **필수** 하위 문자열이 시작되는 입력 문자열의 인덱스입니다.</li><li>길이: **필수** 하위 문자열의 길이입니다.</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr(&quot;하위 문자열 테스트임&quot;, 7, 8) | &quot; a 하위&quot; |
 | 하한 /<br>케이스 | 문자열을 소문자로 변환합니다. | <ul><li>입력: **필수** 소문자로 변환되는 문자열입니다.</li></ul> | lower(입력) | lower(&quot;HeLlO&quot;)<br>lcase(&quot;HeLlO&quot;) | &quot;hello&quot; |
 | upper /<br>우카세 | 문자열을 대문자로 변환합니다. | <ul><li>입력: **필수** 대문자로 변환되는 문자열입니다.</li></ul> | upper(입력) | upper(&quot;HeLlO&quot;)<br>ucase(&quot;HeLlO&quot;) | &quot;HELLO&quot; |
-| split | 구분 기호에서 입력 문자열을 분할합니다. 다음 구분 기호 **필요** 함께 이스케이프 처리됨 `\`: `\`. 여러 구분 기호를 포함하는 경우 문자열이 다음으로 분할됩니다. **임의** 문자열에 있는 구분 기호입니다. | <ul><li>입력: **필수** 분할할 입력 문자열입니다.</li><li>분리자: **필수** 입력을 분할하는 데 사용되는 문자열입니다.</li></ul> | split(입력, 구분 기호) | split(&quot;Hello world&quot;, &quot;) | `["Hello", "world"]` |
+| split | 구분 기호에서 입력 문자열을 분할합니다. 다음 구분 기호 **필요** 함께 이스케이프 처리됨 `\`: `\`. 여러 구분 기호를 포함하는 경우 문자열이 다음으로 분할됩니다. **임의** 문자열에 있는 구분 기호입니다. **참고:** 이 함수는 구분 기호의 존재 여부에 관계없이 문자열에서 null이 아닌 인덱스만 반환합니다. 결과 배열에 null을 포함한 모든 인덱스가 필요한 경우에는 &quot;explode&quot; 함수를 대신 사용하십시오. | <ul><li>입력: **필수** 분할할 입력 문자열입니다.</li><li>분리자: **필수** 입력을 분할하는 데 사용되는 문자열입니다.</li></ul> | split(입력, 구분 기호) | split(&quot;Hello world&quot;, &quot;) | `["Hello", "world"]` |
 | 가입 | 구분 기호를 사용하여 개체 목록을 조인합니다. | <ul><li>분리자: **필수** 개체를 연결하는 데 사용할 문자열입니다.</li><li>개체: **필수** 조인할 문자열 배열입니다.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Hello world&quot; |
 | lpad | 문자열의 왼쪽을 지정된 다른 문자열과 연결합니다. | <ul><li>입력: **필수** 채워질 끈. 이 문자열은 null일 수 있습니다.</li><li>카운트: **필수** 패딩할 문자열의 크기입니다.</li><li>패딩: **필수** 입력을 연결하는 문자열입니다. null이거나 비어 있으면, 단일 공백으로 처리됩니다.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzybat&quot; |
 | rpad | 문자열의 오른쪽을 지정된 다른 문자열과 연결합니다. | <ul><li>입력: **필수** 채워질 끈. 이 문자열은 null일 수 있습니다.</li><li>카운트: **필수** 패딩할 문자열의 크기입니다.</li><li>패딩: **필수** 입력을 연결하는 문자열입니다. null이거나 비어 있으면, 단일 공백으로 처리됩니다.</li></ul> | rpad(입력, 카운트, 패딩) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
@@ -118,7 +118,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | 현재 시간을 검색합니다. | | now() | now() | `2021-10-26T10:10:24Z` |
-| 타임스탬프 | 현재 Unix 시간을 검색합니다. | | 타임스탬프() | 타임스탬프() | 1571850624571 |
+| 타임스탬프 | 현재 Unix 시간을 검색합니다. | | timestamp() | timestamp() | 1571850624571 |
 | 형식 | 지정된 형식에 따라 입력 날짜 형식을 지정합니다. | <ul><li>날짜: **필수** 서식을 지정할 ZonedDateTime 개체의 입력 날짜입니다.</li><li>형식: **필수** 날짜를 변경할 형식입니다.</li></ul> | format(DATE, FORMAT) | 형식(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
 | dformat | 지정된 형식에 따라 타임스탬프를 날짜 문자열로 변환합니다. | <ul><li>타임스탬프: **필수** 서식을 지정할 타임스탬프입니다. 밀리초 단위로 기록됩니다.</li><li>형식: **필수** 타임스탬프를 지정할 형식입니다.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
 | 날짜 | 날짜 문자열을 ZonedDateTime 개체로 변환합니다(ISO 8601 형식). | <ul><li>날짜: **필수** 날짜를 나타내는 문자열입니다.</li><li>형식: **필수** 소스 날짜의 형식을 나타내는 문자열입니다.**참고:** 다음과 같습니다. **아님** 날짜 문자열을 로 변환할 형식을 나타냅니다. </li><li>DEFAULT_DATE: **필수** 제공된 날짜가 null인 경우 반환되는 기본 날짜.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
@@ -171,8 +171,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | join_arrays | 배열을 서로 결합합니다. | <ul><li>배열: **필수** 요소를 추가할 배열입니다.</li><li>값: 상위 배열에 추가할 배열입니다.</li></ul> | join_arrays&#x200B;(ARRAY, VALUES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | 입력 목록을 가져와서 배열로 변환합니다. | <ul><li>INCLUDE_NULL: **필수** 응답 배열에 null을 포함할지 여부를 나타내는 부울 값입니다.</li><li>값: **필수** 배열로 변환할 요소입니다.</li></ul> | to_array&#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | 입력 크기를 반환합니다. | <ul><li>입력: **필수** 크기를 찾으려는 개체입니다.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
-| upsert_array_append | 이 함수는 전체 입력 배열의 모든 요소를 프로필의 배열 끝에 추가하는 데 사용합니다. 이 함수는 **전용** 업데이트 중에 적용할 수 있습니다. 삽입 컨텍스트에서 사용되는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>배열: **필수** 프로필에 배열을 추가할 배열입니다.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
-| upsert_array_replace | 이 함수는 배열에서 요소를 바꾸는 데 사용합니다. 이 함수는 **전용** 업데이트 중에 적용할 수 있습니다. 삽입 컨텍스트에서 사용되는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>배열: **필수** 프로필에서 배열을 대체할 배열입니다.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+| upsert_array_append | 이 함수는 전체 입력 배열의 모든 요소를 프로필의 배열 끝에 추가하는 데 사용합니다. 이 함수는 **전용** 업데이트 중에 적용할 수 있습니다. 삽입 컨텍스트에서 사용되는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>배열: **필수** 프로필에 배열을 추가할 배열입니다.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123,456] |
+| upsert_array_replace | 이 함수는 배열에서 요소를 바꾸는 데 사용합니다. 이 함수는 **전용** 업데이트 중에 적용할 수 있습니다. 삽입 컨텍스트에서 사용되는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>배열: **필수** 프로필에서 배열을 대체할 배열입니다.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123,456] |
 
 {style="table-layout:auto"}
 
@@ -327,7 +327,7 @@ address.line1 -> addr.addrLine1
 | # | %23 |
 | $ | %24 |
 | % | %25 |
-| &amp; | %26 |
+| 및 | %26 |
 | &#39; | %27 |
 | ( | %28 |
 | ) | %29 |
