@@ -3,10 +3,10 @@ keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침
 title: ID 서비스 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
+source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
 workflow-type: tm+mt
-source-wordcount: '1509'
-ht-degree: 1%
+source-wordcount: '1507'
+ht-degree: 0%
 
 ---
 
@@ -37,14 +37,18 @@ ht-degree: 1%
 | 사용자 정의 네임스페이스 수 | None | 만들 수 있는 사용자 정의 네임스페이스의 수에는 제한이 없습니다. |
 | 네임스페이스 표시 이름 또는 ID 기호의 문자 수 | None | 네임스페이스 표시 이름 또는 ID 기호의 문자 수에는 제한이 없습니다. |
 
+{style="table-layout:auto"}
+
 ### ID 값 유효성 검사
 
 다음 표에서는 ID 값을 성공적으로 확인하기 위해 따라야 하는 기존 규칙에 대해 설명합니다.
 
 | 네임스페이스 | 유효성 검사 규칙 | 규칙 위반 시 시스템 동작 |
 | --- | --- | --- |
-| ECID | <ul><li>ECID의 ID 값은 정확히 38자여야 합니다.</li><li>ECID의 ID 값은 숫자로만 구성되어야 합니다.</li><li>ID 값은 &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot;이거나 빈 문자열일 수 없습니다(예: &quot; &quot;, &quot;&quot;, &quot;).</li></ul> | <ul><li>ECID의 ID 값이 정확히 38자가 아닌 경우 레코드를 건너뜁니다.</li><li>ECID의 ID 값에 숫자가 아닌 문자가 포함되어 있으면 레코드를 건너뜁니다.</li><li>ID가 수집되지 않도록 차단됩니다.</li></ul> |
-| 비 ECID | ID 값은 1024자를 초과할 수 없습니다. | ID 값이 1,024자를 초과하는 경우 레코드를 건너뜁니다. |
+| ECID | <ul><li>ECID의 ID 값은 정확히 38자여야 합니다.</li><li>ECID의 ID 값은 숫자로만 구성되어야 합니다.</li></ul> | <ul><li>ECID의 ID 값이 정확히 38자가 아닌 경우 레코드를 건너뜁니다.</li><li>ECID의 ID 값에 숫자가 아닌 문자가 포함되어 있으면 레코드를 건너뜁니다.</li></ul> |
+| 비 ECID | <ul><li>ID 값은 1024자를 초과할 수 없습니다.</li><li>ID 값은 &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot;이거나 빈 문자열일 수 없습니다(예: &quot; &quot;, &quot;&quot;, &quot;).</li></ul> | <ul><li>ID 값이 1,024자를 초과하는 경우 레코드를 건너뜁니다.</li><li>ID가 수집되지 않도록 차단됩니다.</li></ul> |
+
+{style="table-layout:auto"}
 
 ### ID 네임스페이스 수집
 
