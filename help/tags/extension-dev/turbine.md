@@ -2,10 +2,10 @@
 title: Turbine 자유 변수
 description: Adobe Experience Platform 태그 런타임과 관련된 정보 및 유틸리티를 제공하는 자유 변수인 turbine 개체에 대해 알아봅니다.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 49%
+source-wordcount: '606'
+ht-degree: 48%
 
 ---
 
@@ -112,7 +112,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 turbine.logger.error('Error!');
 ```
 
-로깅 유틸리티는 콘솔에 메시지를 기록하는 데 사용됩니다. 사용자가 디버깅을 사용하는 경우에만 콘솔에 메시지가 표시됩니다. 디버깅을 설정하는 데 권장되는 방법은 [Adobe Experience Cloud 디버거](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). 또는 다음 명령을 실행할 수도 있습니다 `_satellite.setDebug(true)` 브라우저 개발자 콘솔 내에서 로거는 다음 메서드를 사용합니다.
+로깅 유틸리티는 콘솔에 메시지를 기록하는 데 사용됩니다. 사용자가 디버깅을 사용하는 경우에만 콘솔에 메시지가 표시됩니다. 디버깅을 설정하는 데 권장되는 방법은 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). 또는 다음 명령을 실행할 수도 있습니다 `_satellite.setDebug(true)` 브라우저 개발자 콘솔 내에서 로거는 다음 메서드를 사용합니다.
 
 * `logger.log(message: string)`: 콘솔에 메시지를 기록합니다.
 * `logger.info(message: string)`: 콘솔에 정보 메시지를 기록합니다.
@@ -137,8 +137,8 @@ console.log(turbine.propertySettings.domains);
 
 * `propertySettings.domains: Array<String>`
 
-   속성이 다루는 도메인의 배열입니다.
+  속성이 다루는 도메인의 배열입니다.
 
 * `propertySettings.undefinedVarsReturnEmpty: boolean`
 
-   확장 개발자는 이 설정에 관여하지 않아야 합니다.
+  확장 개발자는 이 설정에 관여하지 않아야 합니다.

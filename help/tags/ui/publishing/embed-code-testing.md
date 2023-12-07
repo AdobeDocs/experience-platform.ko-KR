@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform Debugger를 사용하여 포함 코드 테스트
+title: Adobe Experience Platform Debugger을 사용하여 포함 코드 테스트
 description: Platform Debugger를 사용하여 웹 사이트에서 Adobe Experience Platform에 대한 다양한 포함 코드를 로컬에서 테스트하는 방법에 대해 알아봅니다.
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 62%
+source-wordcount: '488'
+ht-degree: 56%
 
 ---
 
@@ -21,10 +21,9 @@ Adobe Experience Platform에서 태그 라이브러리 빌드를 변경할 때 �
 
 이 자습서에서는 태그에 대한 환경 및 포함 코드 사용에 대한 작업 이해가 필요합니다. 자세한 내용은 [환경 개요](./environments.md)를 참조하십시오.
 
-또한 이 자습서에서는 Platform Debugger 브라우저 확장이 설치되어 있어야 합니다. Platform Debugger는 Chrome 및 Firefox 브라우저에서만 사용할 수 있습니다. 다음 링크 중 하나를 사용하여 자습서를 시작하기 전에 확장을 설치합니다.
+또한 이 자습서에서는 Platform Debugger 브라우저 확장이 설치되어 있어야 합니다. Platform Debugger는 Chrome 브라우저에서 사용할 수 있습니다. 자습서를 시작하기 전에 다음 링크를 사용하여 확장을 설치합니다.
 
 * [Chrome용 Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-* [Firefox용 Platform Debugger](https://addons.mozilla.org/ko-KR/firefox/addon/adobe-experience-platform-dbg/)
 
 ## 웹 사이트에서 Platform Debugger 열기
 

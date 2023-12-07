@@ -1,21 +1,21 @@
 ---
 description: Experience Platform 디버거 는 웹 페이지를 검사하여 Experience Cloud 솔루션이 구현되는 방식과 관련된 문제를 찾는 데 도움이 됩니다.
 keywords: debugger;experience Platform Debugger 확장 프로그램;chrome;확장 프로그램
-seo-description: Technical documentation for the Adobe Experience Platform Debugger Chrome and Firefox Extension - examine your web pages and understand problems with your Experience Cloud solution mplementations
-seo-title: Adobe Experience Platform Debugger Chrome and Firefox Extension
+seo-description: Technical documentation for the Adobe Experience Platform Debugger Chrome Extension - examine your web pages and understand problems with your Experience Cloud solution mplementations
+seo-title: Adobe Experience Platform Debugger Chrome Extension
 title: Adobe Experience Platform Debugger 확장 프로그램
 uuid: 42e2c8a2-548a-4a3f-b57d-532535a0e7b9
 exl-id: e02bc318-fbff-4a19-980a-d5c0a21ca300
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 13%
+source-wordcount: '242'
+ht-degree: 8%
 
 ---
 
 # Adobe Experience Platform Debugger 개요
 
-용 Adobe Experience Platform Debugger 확장 프로그램 [크롬](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) 및 [Firefox](https://addons.mozilla.org/ko-KR/firefox/addon/adobe-experience-platform-dbg/) 는 웹 페이지를 살펴보고 Adobe Experience Cloud 솔루션이 구현되는 방식과 관련된 문제를 찾는 데 도움이 됩니다.
+의 Adobe Experience Platform Debugger 확장 [크롬](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 는 웹 페이지를 살펴보고 Adobe Experience Cloud 솔루션이 구현되는 방식과 관련된 문제를 찾는 데 도움이 됩니다.
 
 Platform Debugger를 다른 Adobe 활성화 솔루션과 함께 사용하여 다음을 수행할 수 있습니다.
 

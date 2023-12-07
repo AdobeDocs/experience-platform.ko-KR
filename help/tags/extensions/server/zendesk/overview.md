@@ -2,7 +2,7 @@
 title: Zendesk 이벤트 전달 확장
 description: Adobe Experience Platform용 Zendesk 이벤트 전달 확장.
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 4%
@@ -11,7 +11,7 @@ ht-degree: 4%
 
 # [!DNL Zendesk] 이벤트 API 확장 개요
 
-[젠데스크](https://www.zendesk.com) 는 고객 서비스 솔루션 및 판매 도구입니다. 더 젠데스크 [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장은 [[!DNL Zendesk Events API]](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) 추가 처리를 위해 Adobe Experience Platform Edge Network에서 Zendesk로 이벤트를 전송합니다. 확장을 사용하여 다운스트림 분석 및 작업에 사용할 고객 프로필 상호 작용을 수집할 수 있습니다.
+[젠데스크](https://www.zendesk.com) 는 고객 서비스 솔루션 및 판매 도구입니다. 더 젠데스크 [이벤트 전달](../../../ui/event-forwarding/overview.md) 확장은 [[!DNL Zendesk Events API]](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) 추가 처리를 위해 Adobe Experience Platform Edge Network에서 Zendesk로 이벤트를 전송합니다. 확장을 사용하여 다운스트림 분석 및 작업에 사용할 고객 프로필 상호 작용을 수집할 수 있습니다.
 
 이 문서에서는 UI에서 확장을 설치하고 구성하는 방법을 다룹니다.
 
@@ -66,7 +66,7 @@ UI에서 Zendesk 확장을 설치하려면 **이벤트 전달** 확장을 추가
 
 ### `event` 키
 
-`event` 는 사용자에 의해 트리거된 이벤트를 나타내는 JSON 개체입니다. 의 Zendesk 문서를 참조하십시오. [사건 해부학](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/) 에서 캡처한 속성에 대한 자세한 내용은 `event` 개체.
+`event` 는 사용자에 의해 트리거된 이벤트를 나타내는 JSON 개체입니다. 의 Zendesk 문서를 참조하십시오. [사건 해부학](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/) 에서 캡처한 속성에 대한 자세한 내용은 `event` 개체.
 
 내에서 다음 키를 참조할 수 있습니다. `event` 데이터 요소에 매핑할 때의 개체:
 
@@ -82,7 +82,7 @@ UI에서 Zendesk 확장을 설치하려면 **이벤트 전달** 확장을 추가
 
 >[!NOTE]
 >
->다음을 참조하십시오. [[!DNL Zendesk Events API] 설명서](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) 이벤트 속성에 대한 추가 지침을 참조하십시오.
+>다음을 참조하십시오. [[!DNL Zendesk Events API] 설명서](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) 이벤트 속성에 대한 추가 지침을 참조하십시오.
 
 ### `profile` 키
 
@@ -147,10 +147,10 @@ UI에서 Zendesk 확장을 설치하려면 **이벤트 전달** 확장을 추가
 
 이 문서에서는 UI에서 Zendesk 이벤트 전달 확장 기능을 설치하고 구성하는 방법에 대해 설명합니다. Zendesk에서 이벤트 데이터를 수집하는 방법에 대한 자세한 내용은 공식 설명서를 참조하십시오.
 
-* [이벤트 시작](https://developer.zendesk.com/documentation/custom-data/events/getting-started-with-events/)
+* [이벤트 시작](https://developer.zendesk.com/documentation/ticketing/events/getting-started-with-events/)
 * [Zendesk 이벤트 API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/)
-* [이벤트 API 정보](https://developer.zendesk.com/documentation/custom-data/events/about-the-events-api/)
-* [사건 해부학](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/)
+* [이벤트 API 정보](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/)
+* [사건 해부학](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/)
 * [Zendesk 프로필 API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/#profile-object)
 * [프로필 API 정보](https://developer.zendesk.com/documentation/ticketing/profiles/about-the-profiles-api/)
 * [프로필 해부학](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)
