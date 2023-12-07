@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
+source-git-commit: 4c8e80c5ec61aebd84064ac2a667188b8b5ddb8c
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 13%
+source-wordcount: '993'
+ht-degree: 11%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 13%
          - [Marketo Engage 커넥터](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage 인증 안내서](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B 네임스페이스 및 스키마](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - Advertising {#advertising}
+   - 광고 {#advertising}
       - [Google Ads 커넥터](connectors/advertising/ads.md)
       - [Pinterest 광고](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
@@ -91,7 +91,9 @@ ht-degree: 13%
       - [Snowflake 스트리밍 커넥터](connectors/databases/snowflake-streaming.md)
       - [Snowflake 커넥터](connectors/databases/snowflake.md)
       - [Teradata 밴티지 커넥터](connectors/databases/teradata-vantage.md)
-   - eCommerce {#ecommerce}
+   - 데이터 파트너 {#data-partner}
+      - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
+   - 전자 상거래 {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
       - [Shopify 스트리밍](connectors/ecommerce/shopify-streaming.md)
@@ -114,8 +116,8 @@ ht-degree: 13%
    - 스트리밍 {#streaming}
       - [HTTP API 커넥터](connectors/streaming/http.md)
 - API 자습서 {#api-tutorials}
-   - 기본 연결을 만듭니다 {#create}
-      - Advertising {#advertising}
+   - 기본 연결 만들기 {#create}
+      - 광고 {#advertising}
          - [Google 광고](tutorials/api/create/advertising/ads.md)
          - [Pinterest 광고](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
@@ -170,7 +172,7 @@ ht-degree: 13%
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata 밴티지](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
-      - eCommerce {#ecommerce}
+      - 전자 상거래 {#ecommerce}
          - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify 스트리밍](tutorials/api/create/ecommerce/shopify-streaming.md)
@@ -233,7 +235,7 @@ ht-degree: 13%
          - [고객 속성](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Marketo 사용자 지정 활동](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - Advertising {#advertising}
+      - 광고 {#advertising}
          - [Google 광고](tutorials/ui/create/advertising/ads.md)
          - [Pinterest 광고](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
@@ -277,7 +279,7 @@ ht-degree: 13%
          - [Azure synapse 분석](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure 테이블 스토리지](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
-         - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
+         - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
@@ -289,7 +291,9 @@ ht-degree: 13%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata 밴티지](tutorials/ui/create/databases/teradata-vantage.md)
-      - eCommerce {#ecommerce}
+      - 데이터 파트너 {#data-partner}
+         - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+      - 전자 상거래 {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Shopify 스트리밍](tutorials/ui/create/ecommerce/shopify-streaming.md)
