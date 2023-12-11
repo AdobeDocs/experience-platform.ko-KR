@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 기능의 최적 사용을 보장하기 위해 프로필 데이터 및 세분화에 대한 성능 및 시스템 적용 가드레일에 대해 알아봅니다.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 56ed0d777d9a7d489cde2e40340fee4ca0ad8c03
+source-git-commit: c7537959b1cc53998acafbccaa2f39686afd9f15
 workflow-type: tm+mt
-source-wordcount: '2230'
-ht-degree: 3%
+source-wordcount: '2282'
+ht-degree: 2%
 
 ---
 
@@ -120,6 +120,7 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 | 샌드박스당 배치 대상 | 4000 | 성능 보호 | 각 개별 샌드박스에 4000개 미만의 배치 대상이 있는 한 조직에는 총 4000개 이상의 배치 대상이 있을 수 있습니다. 추가 배치 대상을 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. |
 | 샌드박스당 계정 대상자 | 50 | 시스템 강제 보호 | 샌드박스에서 최대 50개의 계정 대상을 만들 수 있습니다. 샌드박스에서 50개의 대상에 도달하면 **[!UICONTROL 대상자 만들기]** 새 계정 대상자를 만들려고 하면 제어가 비활성화됩니다. 자세한 내용 [계정 대상자](/help/segmentation/ui/account-audiences.md). |
 | 샌드박스당 게시된 컴포지션 | 10 | 성능 보호 | 샌드박스에 최대 10개의 컴포지션이 게시될 수 있습니다. 자세한 내용 [ui 안내서의 대상 구성](/help/segmentation/ui/audience-composition.md). |
+| 최대 대상자 크기 | 30% | 성능 보호 | 대상자의 권장 최대 멤버십은 시스템 총 프로필 수의 30%입니다. 프로필의 30% 이상이 멤버이거나 큰 대상이 여러 개인 대상을 만드는 것은 가능하지만 시스템 성능에 영향을 줍니다. |
 
 {style="table-layout:auto"}
 
