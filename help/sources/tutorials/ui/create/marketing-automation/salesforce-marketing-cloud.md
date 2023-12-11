@@ -2,9 +2,9 @@
 title: Salesforce Marketing Cloud 계정을 UI를 통해 Experience Platform에 연결
 description: UI를 통해 Salesforce Marketing Cloud 계정을 Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
+source-git-commit: 635ab266fac9d3dc232307d7cb49f83904197782
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '500'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,6 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >사용자 지정 개체 수집은 현재 [!DNL Salesforce Marketing Cloud] 소스 통합.
-
 
 이 튜토리얼에서는 을(를) 연결하는 방법에 대한 단계를 제공합니다. [!DNL Salesforce Marketing Cloud] UI를 통해 Adobe Experience Platform에 연결합니다.
 
@@ -35,7 +34,7 @@ ht-degree: 1%
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| Host | 응용 프로그램의 호스트 서버입니다. 이는 종종 하위 도메인입니다. **참고:** 을(를) 입력할 때 `host` 값을 지정하면 전체 URL이 아닌 하위 도메인만 지정해야 합니다. 예를 들어 호스트 URL이 `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`를 선택한 다음 입력하기만 하면 됩니다. `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` 을 호스트 값으로 사용하십시오. |
+| Host | 응용 프로그램의 호스트 서버입니다. 이는 종종 하위 도메인입니다. **참고:** 을(를) 입력할 때 `host` 값, 다음을 지정해야 합니다. `{subdomain}.rest.marketingcloudapis.com`. 예를 들어 호스트 URL이 `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`를 선택한 다음 입력하기만 하면 됩니다. `acme-ab12c3d4e5fg6hijk7lmnop8qrstauth.marketingcloudapis.com/` 을 호스트 값으로 사용하십시오. |
 | 클라이언트 ID | 와 연결된 클라이언트 ID [!DNL Salesforce Marketing Cloud] 응용 프로그램. |
 | 클라이언트 암호 | 와(과) 연결된 클라이언트 암호 [!DNL Salesforce Marketing Cloud] 응용 프로그램. |
 

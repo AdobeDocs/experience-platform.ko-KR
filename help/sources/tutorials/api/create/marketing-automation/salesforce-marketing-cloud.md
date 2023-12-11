@@ -2,10 +2,10 @@
 title: 흐름 서비스 API를 사용하여 Salesforce Marketing Cloud 기반 연결 만들기
 description: 흐름 서비스 API를 사용하여 Experience Platform에 대해 Salesforce Marketing Cloud 계정을 인증하는 방법을 알아봅니다.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
+source-git-commit: 635ab266fac9d3dc232307d7cb49f83904197782
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 5%
+source-wordcount: '491'
+ht-degree: 4%
 
 ---
 
@@ -38,14 +38,14 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `host` | 응용 프로그램의 호스트 서버입니다. 이는 종종 하위 도메인입니다. **참고:** 을(를) 입력할 때 `host` 값을 지정하면 전체 URL이 아닌 하위 도메인만 지정해야 합니다. 예를 들어 호스트 URL이 `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`를 선택한 다음 입력하기만 하면 됩니다. `acme-ab12c3d4e5fg6hijk7lmnop8qrst` 을 호스트 값으로 사용하십시오. |
+| `host` | 응용 프로그램의 호스트 서버입니다. 이는 종종 하위 도메인입니다. **참고:** 을(를) 입력할 때 `host` 값, 다음을 지정해야 합니다. `{subdomain}.rest.marketingcloudapis.com`. 예를 들어 호스트 URL이 `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`를 선택한 다음 입력하기만 하면 됩니다. `acme-ab12c3d4e5fg6hijk7lmnop8qrstauth.marketingcloudapis.com/` 을 호스트 값으로 사용하십시오. |
 | `clientId` | 와 연결된 클라이언트 ID [!DNL Salesforce Marketing Cloud] 응용 프로그램. |
 | `clientSecret` | 와(과) 연결된 클라이언트 암호 [!DNL Salesforce Marketing Cloud] 응용 프로그램. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 에 대한 연결 사양 ID [!DNL Salesforce Marketing Cloud] 은(는) `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 시작에 대한 자세한 내용은 다음을 참조하십시오. [[!DNL Salesforce Marketing Cloud] 문서](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
-## 기본 연결을 만듭니다
+## 기본 연결 만들기
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
