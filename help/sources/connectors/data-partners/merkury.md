@@ -2,9 +2,7 @@
 title: Merkury Enterprise Identity Resolution 소스 개요
 description: 사용자 인터페이스를 사용하여 Merkury Enterprise Identity Resolution을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: bf6a3422d9af6eaa4f3f4a8a573dc587b3cfdbd5
+source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%

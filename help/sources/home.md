@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 소스 커넥터 개요
 description: Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 4c61cd575fe3fb1583900315030dd59579dd5206
+source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1524'
 ht-degree: 1%
 
 ---
@@ -136,6 +136,12 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하는
 - [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE 스트리밍]{type=Positive}
 - [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE 일괄 처리]{type=Informative}
+
+### 데이터 파트너 {#data-partner}
+
+Experience Platform은 타사 데이터베이스에서 데이터를 수집하는 기능을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+
+- [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE 일괄 처리]{type=Informative}
 
 ### eCommerce {#ecommerce}
 
