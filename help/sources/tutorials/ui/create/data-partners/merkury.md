@@ -1,8 +1,9 @@
 ---
 title: UI에서 Merkury Enterprise ID 확인 소스 연결 및 데이터 흐름 만들기
 description: Adobe Experience Platform UI를 사용하여 Merkury Enterprise ID 확인 소스 연결을 만드는 방법을 알아봅니다.
+last-substantial-update: 2023-12=12
 badge: Beta
-source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
+source-git-commit: d862a53c7a8880e86648c05cf94e37e1a1779c9e
 workflow-type: tm+mt
 source-wordcount: '2015'
 ht-degree: 0%
