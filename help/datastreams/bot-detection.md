@@ -4,9 +4,9 @@ description: 사람 트래픽과 사람 트래픽을 구분하기 위해 데이�
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 4881a82c0ce68d1efe85281d2a8c457a29531559
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -47,24 +47,22 @@ Edge Network에 대한 요청이 보트 탐지 규칙과 일치하는 경우 XDM
 
 데이터 스트림 구성을 만든 후 보트 검색을 구성할 수 있습니다. 방법 설명서 참조 [데이터 스트림 만들기 및 구성](configure.md)를 클릭한 다음 아래 지침에 따라 데이터 스트림에 보트 감지 기능을 추가합니다.
 
-
 데이터 스트림 목록으로 이동하여 보트 검색을 추가할 데이터 스트림을 선택합니다.
 
-![데이터스트림 UI 이미지](assets/bot-detection/datastream-list.png)
+![데이터 스트림 목록을 표시하는 데이터 스트림 사용자 인터페이스입니다.](assets/bot-detection/datastream-list.png)
 
 데이터스트림 세부 정보 페이지에서 **[!UICONTROL 보트 탐지]** 오른쪽 레일에 있는 옵션입니다.
 
-![[보트 탐지] 옵션이 강조 표시된 데이터 스트림 UI 이미지](assets/bot-detection/bot-detection.png)
+![데이터 스트림 사용자 인터페이스에서 강조 표시된 보트 감지 옵션입니다.](assets/bot-detection/bot-detection.png)
 
 다음 **[!UICONTROL 보트 탐지 규칙]** 페이지가 표시됩니다.
 
-![[보트 탐지] 옵션이 강조 표시된 데이터 스트림 UI 이미지](assets/bot-detection/bot-detection-page.png)
+![데이터 스트림 설정 페이지의 보트 감지 설정.](assets/bot-detection/bot-detection-page.png)
 
 [보트 탐지 규칙] 페이지에서 다음 기능을 사용하여 보트 탐지를 구성할 수 있습니다.
 
 * 사용 [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * 보트 감지 규칙을 만듭니다.
-
 
 ### IAB/ABC International Spiders and Bots List 사용 {#iab-list}
 
@@ -72,8 +70,7 @@ Edge Network에 대한 요청이 보트 탐지 규칙과 일치하는 경우 XDM
 
 를 사용하도록 데이터 스트림을 구성하려면 다음을 수행하십시오. [!DNL IAB/ABC International Spiders and Bots List], 전환 **[!UICONTROL 이 데이터 스트림에서 보트 탐지에 IAB/ABC International Spiders and Bots List 사용]** 옵션을 선택한 다음 저장 을 선택하여 데이터 스트림에 보트 감지 설정을 적용합니다.
 
-![IAB 스파이더 및 보트 목록이 활성화된 보트 감지 설정 화면의 이미지입니다.](assets/bot-detection/bot-detection-list.png)
-
+![IAB 스파이더 및 보트 목록이 활성화되었습니다.](assets/bot-detection/bot-detection-list.png)
 
 ### 보트 탐지 규칙 만들기 {#rules}
 
@@ -97,25 +94,21 @@ Edge Network에 대한 요청이 보트 탐지 규칙과 일치하는 경우 XDM
 | `sec-ch-ua-bitness` | 사용자 에이전트의 기본 CPU 아키텍처에 대한 &quot;비트율&quot;을 제공합니다. 이는 정수 또는 메모리 주소의 비트 단위 크기이며, 일반적으로 64 또는 32비트입니다. |
 | `sec-ch-ua-wow64` | 사용자 에이전트 바이너리가 64비트 Windows에서 32비트 모드로 실행 중인지 여부를 나타냅니다. |
 
-
-
-
-
 보트 탐지 규칙을 만들려면 아래 단계를 수행하십시오.
 
 1. 선택 **[!UICONTROL 새 규칙 추가]**.
 
-   ![새 규칙 추가 버튼이 강조 표시된 보트 탐지 설정 화면의 이미지입니다.](assets/bot-detection/bot-detection-new-rule.png)
+   ![새 규칙 추가 버튼이 강조 표시된 보트 감지 설정 화면입니다.](assets/bot-detection/bot-detection-new-rule.png)
 
 2. 에 규칙 이름을 입력합니다. **[!UICONTROL 규칙 이름]** 필드.
 
-   ![규칙 이름이 강조 표시된 보트 감지 규칙 화면의 이미지입니다.](assets/bot-detection/rule-name.png)
+   ![규칙 이름이 강조 표시된 보트 감지 규칙 화면입니다.](assets/bot-detection/rule-name.png)
 
 3. 선택 **[!UICONTROL 새 IP 조건 추가]** 새 IP 기반 규칙을 추가합니다. IP 주소 또는 IP 주소 범위별로 규칙을 정의할 수 있습니다.
 
-   ![IP 주소 필드가 강조 표시된 보트 탐지 규칙 화면의 이미지입니다.](assets/bot-detection/ip-address-rule.png)
+   ![IP 주소 필드가 강조 표시된 보트 탐지 규칙 화면입니다.](assets/bot-detection/ip-address-rule.png)
 
-   ![IP 범위 필드가 강조 표시된 보트 탐지 규칙 화면의 이미지입니다.](assets/bot-detection/ip-range-rule.png)
+   ![IP 범위 필드가 강조 표시된 보트 탐지 규칙 화면입니다.](assets/bot-detection/ip-range-rule.png)
 
    >[!TIP]
    >
@@ -123,15 +116,15 @@ Edge Network에 대한 요청이 보트 탐지 규칙과 일치하는 경우 XDM
 
 4. 규칙에 헤더 조건을 추가하려면 **[!UICONTROL 헤더 조건 그룹 추가]**&#x200B;을 클릭하고 규칙을 사용할 헤더를 선택합니다.
 
-   ![헤더 조건이 강조 표시된 보트 탐지 규칙 화면의 이미지입니다.](assets/bot-detection/header-conditions.png)
+   ![헤더 조건이 강조 표시된 보트 감지 규칙 화면입니다.](assets/bot-detection/header-conditions.png)
 
    그런 다음 선택한 헤더에 사용할 조건을 추가합니다.
 
-   ![헤더 조건이 강조 표시된 보트 탐지 규칙 화면의 이미지입니다.](assets/bot-detection/header-condition-rule.png)
+   ![헤더 조건이 강조 표시된 보트 감지 규칙 화면입니다.](assets/bot-detection/header-condition-rule.png)
 
 5. 원하는 보트 탐지 규칙을 구성한 후 를 선택합니다. **[!UICONTROL 저장]** 을 클릭하여 데이터스트림에 규칙을 적용합니다.
 
-   ![헤더 조건이 강조 표시된 보트 탐지 규칙 화면의 이미지입니다.](assets/bot-detection/bot-detection-save.png)
+   ![헤더 조건이 강조 표시된 보트 감지 규칙 화면입니다.](assets/bot-detection/bot-detection-save.png)
 
 
 ## 보트 탐지 규칙 예 {#examples}
@@ -142,19 +135,19 @@ Edge Network에 대한 요청이 보트 탐지 규칙과 일치하는 경우 XDM
 
 특정 IP 주소에서 발생하는 모든 요청을 보트 트래픽으로 표시하려면 아래 이미지에 표시된 대로 단일 IP 주소를 평가하는 새 보트 감지 규칙을 만듭니다.
 
-![하나의 IP 주소를 기반으로 하는 보트 감지 규칙 이미지입니다.](assets/bot-detection/bot-detection-one-ip.png)
+![하나의 IP 주소를 기반으로 하는 보트 감지 규칙입니다.](assets/bot-detection/bot-detection-one-ip.png)
 
 ### 두 개의 IP 주소를 기반으로 한 보트 감지 {#two-ip}
 
 두 개의 특정 IP 주소 중 하나에서 발생하는 모든 요청을 보트 트래픽으로 표시하려면 아래 이미지에 표시된 대로 두 개의 IP 주소를 평가하는 새 보트 감지 규칙을 만듭니다.
 
-![두 IP 주소를 기반으로 하는 보트 감지 규칙 이미지입니다.](assets/bot-detection/bot-detection-two-ips.png)
+![두 개의 IP 주소를 기반으로 하는 보트 감지 규칙입니다.](assets/bot-detection/bot-detection-two-ips.png)
 
 ### IP 주소 범위를 기반으로 한 보트 감지 {#range}
 
 특정 범위의 IP 주소에서 발생하는 모든 요청을 보트 트래픽으로 표시하려면 아래 이미지에 표시된 대로 전체 IP 주소 범위를 평가하는 새 보트 감지 규칙을 만듭니다.
 
-![IP 범위 기반 보트 감지 규칙 이미지.](assets/bot-detection/bot-detection-range.png)
+![IP 범위를 기반으로 하는 보트 감지 규칙.](assets/bot-detection/bot-detection-range.png)
 
 ### IP 주소 및 요청 헤더를 기반으로 한 보트 탐지 {#ip-header}
 
@@ -162,7 +155,7 @@ Edge Network에 대한 요청이 보트 탐지 규칙과 일치하는 경우 XDM
 
 이 규칙은 요청이 특정 IP 주소에서 발생하는지 및 `referer` 요청 헤더 시작 문자 `www.adobe.com`.
 
-![IP 주소 및 요청 헤더에 따른 보트 감지 규칙 이미지.](assets/bot-detection/bot-detection-header-ip.png)
+![IP 주소 및 요청 헤더를 기반으로 한 보트 탐지 규칙.](assets/bot-detection/bot-detection-header-ip.png)
 
 ### 여러 조건을 기반으로 한 보트 감지 {#multiple-conditions}
 
@@ -175,4 +168,4 @@ Edge Network에 대한 요청이 보트 탐지 규칙과 일치하는 경우 XDM
 
 요청은 두 IP 주소 중 하나인 `referer` 헤더 시작 문자 `www.adobe.com`및 `sec-ch-ua-mobile` 헤더는 요청을 데스크탑 브라우저에서 시작한 것으로 식별합니다.
 
-![여러 조건을 기반으로 하는 보트 감지 규칙 이미지.](assets/bot-detection/bot-detection-multiple.png)
+![여러 조건을 기반으로 하는 보트 감지 규칙.](assets/bot-detection/bot-detection-multiple.png)

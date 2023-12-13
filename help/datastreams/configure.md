@@ -2,10 +2,10 @@
 title: 데이터스트림 만들기 및 구성
 description: 클라이언트측 Web SDK 통합 기능을 다른 Adobe 제품 및 서드파티 대상과 연결하는 방법에 대해 알아봅니다.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '2725'
-ht-degree: 58%
+source-wordcount: '2707'
+ht-degree: 55%
 
 ---
 
@@ -44,7 +44,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 
 확장 **[!UICONTROL 지리적 위치 및 네트워크 조회]** 섹션에 설명되어 있는 설정을 구성하는 방법에 대해 설명합니다.
 
-![지리적 위치 및 네트워크 조회 설정이 강조 표시된 데이터 스트림 구성 화면을 표시하는 플랫폼 UI 스크린샷입니다.](assets/configure/geolookup.png)
+![지리적 위치 및 네트워크 조회 설정이 강조 표시된 데이터 스트림 구성 화면입니다.](assets/configure/geolookup.png)
 
 | 설정 | 설명 |
 | --- | --- |
@@ -63,7 +63,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 
 확장 **[!UICONTROL 장치 조회]** 섹션에 설명되어 있는 설정을 구성하는 방법에 대해 설명합니다.
 
-![디바이스 조회 설정이 강조 표시된 데이터 스트림 구성 화면을 보여 주는 플랫폼 UI 스크린샷입니다.](assets/configure/device-lookup.png)
+![디바이스 조회 설정이 강조 표시된 데이터 스트림 구성 화면입니다.](assets/configure/device-lookup.png)
 
 >[!IMPORTANT]
 >
@@ -109,7 +109,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 
 새 데이터스트림을 구성하거나 보려는 기존 데이터스트림을 선택하면 해당 데이터스트림에 대한 세부 사항 페이지가 나타납니다. 여기에서 해당 ID가 포함된 데이터스트림에 대한 자세한 내용을 찾을 수 있습니다.
 
-![생성된 데이터스트림에 대한 세부 사항 페이지](assets/configure/view-details.png)
+![데이터스트림 세부 정보 페이지](assets/configure/view-details.png)
 
 데이터스트림 세부 사항 화면에서 [서비스를 추가](#add-services)하여 액세스 권한이 있는 Adobe Experience Cloud 제품의 기능을 활성화할 수 있습니다. 데이터스트림의 [기본 구성](#create)을 편집하고, [매핑 규칙](./data-prep.md)을 업데이트하고, [데이터스트림을 복사](#copy)하거나 완전히 삭제할 수도 있습니다.
 
@@ -117,11 +117,11 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 
 데이터스트림의 세부 사항 페이지에서 **[!UICONTROL 서비스 추가]**&#x200B;를 선택하여 해당 데이터스트림에서 사용할 수 있는 서비스를 추가합니다.
 
-![계속하려면 서비스 추가 선택](assets/configure/add-service.png)
+![계속하려면 서비스 추가를 선택하십시오.](assets/configure/add-service.png)
 
 다음 화면에서 드롭다운 메뉴를 사용하여 이 데이터스트림에 대해 구성하는 서비스를 선택합니다. 액세스 권한이 있는 서비스만 이 목록에 표시됩니다.
 
-![목록에서 서비스 선택](assets/configure/service-selection.png)
+![목록에서 서비스를 선택합니다.](assets/configure/service-selection.png)
 
 원하는 서비스를 선택하고 표시되는 구성 옵션을 입력한 다음 **[!UICONTROL 저장]**&#x200B;을 선택하여 서비스를 데이터스트림에 추가합니다. 추가된 모든 서비스가 데이터스트림의 세부 사항 보기에 표시됩니다.
 
@@ -137,7 +137,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 
 이 서비스는 데이터가 Adobe Analytics로 전송되는지 여부와 그 방법을 제어합니다. [Analytics로 데이터 전송](../edge/data-collection/adobe-analytics/analytics-overview.md)에 대한 추가 세부 사항은 안내서에서 확인할 수 있습니다.
 
-![Adobe Analytics 설정 블록](assets/configure/analytics-config.png)
+![Adobe Analytics 데이터스트림 설정입니다.](assets/configure/analytics-config.png)
 
 | 설정 | 설명 |
 | --- | --- |
@@ -148,7 +148,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 
 이 서비스는 데이터가 Adobe Audience Manager로 전송되는지 여부와 그 방법을 제어합니다. 이 섹션을 활성화하려면 Audience Manager로 데이터를 전송하면 됩니다. 다른 설정은 선택 사항이지만 사용하는 것이 좋습니다.
 
-![Adobe Audience Manager 설정 블록](assets/configure/audience-manager-config.png)
+![Adobe 대상자 데이터 스트림 설정 관리.](assets/configure/audience-manager-config.png)
 
 | 설정 | 설명 |
 | --- | --- |
@@ -167,7 +167,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 
 이 서비스는 데이터가 Adobe Experience Platform으로 전송되는지 여부와 그 방법을 제어합니다.
 
-![Adobe Experience Platform 설정 블록](assets/configure/platform-config.png)
+![Adobe Experience Platform 데이터스트림 설정입니다.](assets/configure/platform-config.png)
 
 | 설정 | 설명 |
 |---| --- |
@@ -182,7 +182,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 
 이 서비스는 데이터가 Adobe Target로 전송되는지 여부와 그 방법을 제어합니다.
 
-![Adobe Target 설정 블록](assets/configure/target-config.png)
+![Adobe Target 데이터스트림 설정입니다.](assets/configure/target-config.png)
 
 | 설정 | 설명 |
 | --- | --- |
@@ -195,7 +195,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 
 이 서비스는 데이터가 [이벤트 전달](../tags/ui/event-forwarding/overview.md)로 전송되는지 여부와 그 방법을 제어합니다.
 
-![구성 UI의 이벤트 전달 섹션](assets/configure/event-forwarding-config.png)
+![데이터 스트림 구성 화면의 이벤트 전달 섹션입니다.](assets/configure/event-forwarding-config.png)
 
 | 설정 | 설명 |
 | --- | --- |
@@ -216,15 +216,15 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 
 [!UICONTROL 데이터스트림] 작업 영역의 메인 페이지에서 문제가 있는 데이터스트림의 줄임표(**....**)를 선택한 다음 **[!UICONTROL 복사]**&#x200B;를 선택합니다.
 
-![데이터스트림 목록 보기에서 선택 중인 [!UICONTROL 복사] 옵션을 보여 주는 이미지](assets/configure/copy-datastream-list.png)
+![데이터 스트림 목록 보기에서 선택 중인 복사 옵션을 보여 주는 이미지입니다.](assets/configure/copy-datastream-list.png)
 
 또는 특정 데이터스트림의 세부 사항 보기에서 **[!UICONTROL 데이터스트림 복사]**&#x200B;를 선택할 수 있습니다.
 
-![데이터스트림 세부 사항 보기에서 선택 중인 [!UICONTROL 복사] 옵션을 보여 주는 이미지](assets/configure/copy-datastream-details.png)
+![데이터 스트림 세부 사항 보기에서 복사 옵션을 선택하고 있습니다.](assets/configure/copy-datastream-details.png)
 
 전체 복사하려는 구성 옵션에 대한 세부 사항과 함께 생성할 새 데이터스트림의 고유 이름을 제공하라는 확인 대화 상자가 나타납니다. 준비가 되면 **[!UICONTROL 복사]**&#x200B;를 선택합니다.
 
-![데이터스트림 복사에 사용되는 확인 대화 상자 이미지](assets/configure/copy-datastream-confirm.png)
+![데이터 스트림을 복사하기 위한 확인 대화 상자.](assets/configure/copy-datastream-confirm.png)
 
 새 데이터스트림이 제공되면 [!UICONTROL 데이터스트림] 작업 영역의 메인 페이지가 다시 나타납니다.
 
