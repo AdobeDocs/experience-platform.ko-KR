@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: cd97165d4e4d8ed984c4705f614c8d77eb750ed6
+source-git-commit: f319f05d600dfd2bc4840ff56aefb8098dbfb7aa
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 19%
@@ -22,13 +22,13 @@ ht-degree: 19%
 - 데이터 Distiller {#data-distiller}
    - [개요](data-distiller/overview.md)
    - [라이선스 사용](data-distiller/license-usage.md)
+   - 파생 데이터 세트 {#derived-datasets}
+      - [개요](data-distiller/derived-datasets/overview.md)
+      - [원활한 SQL 흐름](data-distiller/derived-datasets/seamless-sql-flow.md)
+      - [십분위수 기반 파생 데이터 세트 만들기](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - 쿼리 가속 저장소 {#query-accelerated-store}
       - [가속화된 쿼리 보내기](data-distiller/query-accelerated-store/send-accelerated-queries.md)
       - [Reporting insights 데이터 모델 안내서](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
-   - 파생 속성 {#derived-attributes}
-      - [개요](data-distiller/derived-attributes/overview.md)
-      - [원활한 SQL 흐름](data-distiller/derived-attributes/seamless-sql-flow.md)
-      - [십분위수 기반 파생 속성 만들기](data-distiller/derived-attributes/decile-based-derived-attributes.md)
    - AI/ML 기능 파이프라인 {#ml-feature-pipelines}
       - [개요](data-distiller/ml-feature-pipelines/overview.md)
       - [Jupyter Notebooks 연결](data-distiller/ml-feature-pipelines/establish-connection.md)
@@ -43,7 +43,7 @@ ht-degree: 19%
    - [이벤트의 트렌드 보고서 만들기](use-cases/trended-report-of-events.md)
    - [동의 분석](use-cases/consent-analysis.md)
    - [고객 생애 가치](use-cases/customer-lifetime-value.md)
-   - [십분위수 기반 파생 속성](use-cases/deciles-use-case.md)
+   - [십분위수 기반 파생 데이터 세트](use-cases/deciles-use-case.md)
    - [유사 항목 일치](use-cases/fuzzy-match.md)
    - [사용자의 페이지 보기 나열](use-cases/list-visitor-sessions.md)
    - [페이지 보기별로 방문자 나열](use-cases/visitors-by-number-of-page-views.md)

@@ -3,10 +3,10 @@ keywords: Experience Platform;쿼리 서비스;쿼리 서비스;쿼리
 title: Adobe Experience Platform 쿼리 서비스에 대한 사용 사례 예
 description: Adobe Experience Platform 쿼리 서비스의 다기능성과 이점을 보여주는 전체적인 예입니다.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 2%
+source-wordcount: '695'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 2%
 * 기존 데이터 아키텍처를 기반으로 쿼리를 작성하는 방법입니다.
 * 요구 사항에 맞는 데이터 품질을 확인하고 부족한 부분을 완화할 수 있는 방법을 마련합니다.
 * 세분화 및 개인화 대상에서 다운스트림을 사용하도록 설정된 빈도로 쿼리를 실행하도록 예약하는 프로세스입니다.
-* 마케터는 의 기능을 통해 파생 속성을 대상에 포함하기 쉽습니다. [!DNL Query Service].
+* 마케터는 의 기능을 통해 파생 데이터 세트를 대상에 포함하기 쉽습니다. [!DNL Query Service].
 
 ## 목표 {#objectives}
 

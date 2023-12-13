@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2023년 2월
 description: Adobe Experience Platform의 2023년 2월 릴리스 정보입니다.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '1293'
-ht-degree: 100%
+source-wordcount: '1255'
+ht-degree: 97%
 
 ---
 
@@ -102,7 +102,7 @@ Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/h
 
 | 기능 | 설명 |
 | --- | --- |
-| SQL로 프로필용 데이터 세트 활성화 | [CTAS 쿼리에서 레이블을 사용하여 데이터 세트를 &#39;프로필 활성화됨&#39;으로 만들거나](../../query-service/sql/syntax.md#create-table-as-select) ALTER를 사용하여 프로필에 대해 활성화할 기존 데이터 세트를 업데이트합니다. 확장된 이 SQL 구성을 사용하여 실시간 고객 프로필 비즈니스 사용 사례에 대한 파생 속성을 수월하게 지원할 수 있습니다. 자세한 내용은 [파생 속성에 대한 원활한 SQL 흐름 문서](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md)를 참조하십시오. |
+| SQL로 프로필용 데이터 세트 활성화 | [CTAS 쿼리에서 레이블을 사용하여 데이터 세트를 &#39;프로필 활성화됨&#39;으로 만들거나](../../query-service/sql/syntax.md#create-table-as-select) ALTER를 사용하여 프로필에 대해 활성화할 기존 데이터 세트를 업데이트합니다. 이 확장된 SQL 구성을 사용하여 실시간 고객 프로필 비즈니스 사용 사례에 대해 파생된 데이터 세트를 매끄럽게 지원할 수 있습니다. 다음을 참조하십시오. [파생된 데이터 세트 문서에 대한 원활한 SQL 흐름](../../query-service/data-distiller/derived-datasets/seamless-sql-flow.md) 을 참조하십시오. |
 | 예약된 쿼리 모니터링 | [예약된 쿼리 탭](../../query-service/ui/monitor-queries.md)을 사용하여 쿼리 실행에 대한 중요 정보를 찾고 경고를 구독합니다. 일정 세부 정보, 상태 및 실패 시 오류 메시지/코드에 대한 쿼리를 모니터링합니다. |
 | 자동 완성 기능 전환 | [쿼리 편집기 자동 완성 기능을 전환](../../query-service/ui/user-guide.md#auto-complete)하여 특정 메타데이터 명령을 제거하고 처리 시간을 단축합니다. 이 기능은 쿼리를 작성할 때 잠재적인 SQL 키워드 및 테이블 세부 정보를 자동으로 제안합니다. |
 | 데이터 세트 샘플 | 쿼리에서 샘플링 속도를 지정하고 [데이터 세트 샘플을 사용하여 균일한 무작위 샘플을 만들거나](../../query-service/key-concepts/dataset-samples.md) 특정 기준에 따라 조건부 샘플을 만듭니다. |
