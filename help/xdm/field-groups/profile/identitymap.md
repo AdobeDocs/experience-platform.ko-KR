@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;개별 �
 title: IdentityMap 스키마 필드 그룹
 description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 43b3b79a4d24fd92c7afbf9ca9c83b0cbf80e2c2
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,24 @@ ht-degree: 0%
 
 [!UICONTROL IdentityMap] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md). 필드 그룹은 네임스페이스로 입력된 사용자 ID 세트가 포함된 단일 맵 필드를 제공합니다.
 
-<img src="../../images/field-groups/identitymap.png" width="600" /><br />
+![의 다이어그램 [!UICONTROL IdentityMap] 스키마 필드 그룹](../../images/field-groups/identitymap.png)
 
 에서 ID 맵에 대한 섹션을 참조하십시오. [스키마 컴포지션 기본 사항](../../schema/composition.md#identityMap) 사용 사례의 이점 및 단점 등 사용 사례에 대한 자세한 정보.
+
+**예**
+
+```JSON
+{
+    "identityMap":{
+        "ECID":[
+            {
+                "id":"83238819066235616291057085344313877718",
+                "authenticatedState":"ambiguous",
+                "primary":true
+            }
+        ]
+    }
+}
+```
+
+필드 그룹에 대한 자세한 내용은 [전체 스키마](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) 공용 XDM 리포지토리.
