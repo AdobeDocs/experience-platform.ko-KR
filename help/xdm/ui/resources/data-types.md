@@ -5,9 +5,9 @@ title: UI를 사용하여 데이터 유형 만들기 및 편집
 type: Tutorial
 description: Experience Platform 사용자 인터페이스에서 데이터 유형을 만들고 편집하는 방법을 알아봅니다.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1384'
 ht-degree: 6%
 
 ---
@@ -22,6 +22,10 @@ ht-degree: 6%
 XDM(Experience Data Model)에서 데이터 유형은 여러 하위 필드를 포함하는 재사용 가능한 필드입니다. 다중 필드 구조를 일관되게 사용할 수 있다는 점에서 스키마 필드 그룹과 유사하지만, 데이터 유형은 스키마 구조의 모든 위치에 포함될 수 있는 반면 필드 그룹은 루트 수준에서만 추가할 수 있으므로 보다 유연합니다.
 
 Adobe Experience Platform은 광범위한 일반적인 경험 관리 사용 사례를 다루는 데 사용할 수 있는 많은 표준 데이터 유형을 제공합니다. 하지만 고유한 비즈니스 요구 사항을 충족하기 위해 고유한 사용자 지정 데이터 유형을 정의할 수도 있습니다.
+
+>[!NOTE]
+>
+>필드가 특정 데이터 유형으로 정의된 경우 다른 스키마에서 다른 데이터 유형으로 동일한 필드를 생성할 수 없습니다. 이 제한은 조직의 테넌트 전체에 적용됩니다.
 
 이 자습서에서는 Platform 사용자 인터페이스에서 사용자 지정 데이터 유형을 만들고 편집하는 단계를 다룹니다.
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스키마 레지스트리 API 안내서
 description: 개발자는 스키마 레지스트리 API를 통해 Adobe Experience Platform 내의 모든 스키마 및 관련 XDM(Experience Data Model) 리소스를 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1141'
 ht-degree: 2%
 
 ---
@@ -48,6 +48,10 @@ CSV 데이터를 수집하는 경우 [CSV에서 스키마로 전환](#csv-to-sch
 ## 데이터 유형
 
 데이터 형식은 기본 리터럴 필드와 같은 방식으로 클래스나 필드 그룹에서 참조 형식 필드로 사용되며 주요 차이점은 데이터 형식이 여러 하위 필드를 정의할 수 있다는 것입니다. 데이터 유형은 다중 필드 구조를 일관되게 사용할 수 있다는 점에서 필드 그룹과 유사하지만 스키마 구조의 모든 위치에 포함될 수 있으므로 보다 유연하지만 필드 그룹은 루트 수준에서만 추가할 수 있습니다. 다음을 참조하십시오. [data types endpoint 안내서](./data-types.md) api의 데이터 유형 작업에 대한 자세한 내용.
+
+>[!NOTE]
+>
+>필드가 특정 데이터 유형으로 정의된 경우 다른 스키마에서 다른 데이터 유형으로 동일한 필드를 생성할 수 없습니다. 이 제한은 조직의 테넌트 전체에 적용됩니다.
 
 ## 설명자
 

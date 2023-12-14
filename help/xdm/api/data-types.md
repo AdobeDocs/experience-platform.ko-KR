@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 유형 API 끝점
 description: 스키마 레지스트리 API의 /datatypes 끝점을 사용하면 경험 애플리케이션 내에서 XDM 데이터 유형을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-source-git-commit: 342da62b83d0d804b31744a580bcd3e38412ea51
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1247'
 ht-degree: 2%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 2%
 # 데이터 유형 엔드포인트
 
 데이터 형식은 기본 리터럴 필드와 같은 방식으로 클래스나 스키마 필드 그룹에서 참조 형식 필드로 사용되며 주요 차이점은 데이터 형식이 여러 하위 필드를 정의할 수 있다는 것입니다. 데이터 유형은 다중 필드 구조를 일관되게 사용할 수 있다는 점에서 필드 그룹과 유사하지만 스키마 구조의 모든 위치에 포함될 수 있으므로 보다 유연하지만 필드 그룹은 루트 수준에서만 추가할 수 있습니다. 다음 `/datatypes` 의 엔드포인트 [!DNL Schema Registry] API를 사용하면 경험 애플리케이션 내에서 데이터 유형을 프로그래밍 방식으로 관리할 수 있습니다.
+
+>[!NOTE]
+>
+>필드가 특정 데이터 유형으로 정의된 경우 다른 스키마에서 다른 데이터 유형으로 동일한 필드를 생성할 수 없습니다. 이 제한은 조직의 테넌트 전체에 적용됩니다.
 
 ## 시작하기
 
@@ -110,7 +114,7 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 | 매개변수 | 설명 |
 | --- | --- |
 | `{CONTAINER_ID}` | 검색할 데이터 형식을 저장하는 컨테이너입니다. `global` Adobe 생성 데이터 유형 또는 `tenant` 조직에서 소유한 데이터 유형입니다. |
-| `{DATA_TYPE_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 조회할 데이터 유형. |
+| `{DATA_TYPE_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 조회하려는 데이터 유형. |
 
 {style="table-layout:auto"}
 

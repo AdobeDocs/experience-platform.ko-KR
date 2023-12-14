@@ -2,10 +2,10 @@
 title: 스키마에 대한 데이터 사용 레이블 관리
 description: Adobe Experience Platform UI에서 XDM(Experience Data Model) 스키마 필드에 데이터 사용 레이블을 추가하는 방법을 알아봅니다.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
+source-git-commit: 6fe11b909369797e96d8fa52542ebd5761a27b03
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 9%
+source-wordcount: '806'
+ht-degree: 8%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): [!DNL Experience Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다.
    * [스키마 편집기](../ui/overview.md): Platform UI에서 스키마 및 기타 리소스를 만들고 관리하는 방법을 알아봅니다.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): 레이블이 지정된 데이터에 대해 수행할 수 있는(또는 수행할 수 없는) 마케팅 작업을 정의하는 정책을 사용하여 플랫폼 작업에 대한 데이터 사용 제한을 적용하기 위한 인프라를 제공합니다.
 
@@ -43,6 +43,10 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 레이블 추가를 시작하려면 먼저 다음을 수행해야 합니다 [편집할 기존 스키마 선택](../ui/resources/schemas.md#edit) 또는 [새 스키마 만들기](../ui/resources/schemas.md#create) 스키마 편집기에서 구조를 확인합니다.
 
 개별 필드의 레이블을 편집하려면 캔버스에서 필드를 선택한 다음 를 선택할 수 있습니다 **[!UICONTROL 액세스 관리]** 오른쪽 레일에서.
+
+>[!IMPORTANT]
+>
+>모든 스키마에 최대 300개의 레이블을 적용할 수 있습니다.
 
 ![스키마 편집기 캔버스에서 필드 선택](../images/tutorials/labels/manage-access.png)
 
