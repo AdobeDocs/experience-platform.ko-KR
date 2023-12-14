@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 원시 데이터에 대한 스트리
 type: Tutorial
 description: 이 튜토리얼에서는 소스 커넥터 및 API를 사용하여 스트리밍 데이터를 검색하고 이를 플랫폼으로 가져오는 단계를 다룹니다.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 9034cd965dff59d6c304b9a7c38d3860311614fe
+source-git-commit: 39b5a2b76c28033b9e98dcefc4cdcaa9964f4d2e
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1169'
 ht-degree: 2%
 
 ---
@@ -486,13 +486,15 @@ curl -X POST \
 
 수집을 위해 보낼 수 있는 원시 또는 XDM 호환 json의 예는 아래 샘플 페이로드를 참조하십시오.
 
->[!TIP]
+>[!NOTE]
 >
->다음 예는 다음 세 가지 모두에 적용됩니다.
->
->- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
->- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
->- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+>데이터 흐름 생성과 스트리밍 데이터 수집 사이에 최소 ~5분의 지연을 추가해야 합니다. 이렇게 하면 데이터를 수집하기 전에 데이터 흐름을 완전히 활성화할 수 있습니다.
+
+다음 예는 모든 항목에 적용됩니다.
+
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 >[!BEGINTABS]
 
