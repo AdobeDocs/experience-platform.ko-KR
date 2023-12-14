@@ -4,10 +4,10 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: e5e9eb262df1591f91b3b23359162236f898db8c
+source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
-source-wordcount: '1204'
-ht-degree: 10%
+source-wordcount: '1188'
+ht-degree: 5%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 10%
 * [대상 유형 및 범주](./destination-types.md)
 * [대상(활성화) 보호 기능](./guardrails.md)
 * 대상 작동 방식 {#how-destinations-work}
-   * [대상의 구성 가능한 공통 내보내기 설정](./how-destinations-work/destinations-configurations.md)
-   * [서로 다른 대상 유형에 대한 프로필 내보내기 동작](./how-destinations-work/profile-export-behavior.md)
-   * [대상 활성화 워크플로의 ID 처리](./how-destinations-work/identity-handling.md)
+   * [대상에서 구성 및 공통 내보내기 설정](./how-destinations-work/destinations-configurations.md)
+   * [다양한 대상 유형에 대한 프로필 내보내기 동작](./how-destinations-work/profile-export-behavior.md)
+   * [대상 활성화 워크플로에서의 ID 처리](./how-destinations-work/identity-handling.md)
 * API 자습서 {#api}
    * [흐름 서비스 API를 사용하여 파일 기반 대상에 데이터 활성화](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [흐름 서비스 API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다](./api/streaming-destinations.md)
@@ -91,16 +91,17 @@ ht-degree: 10%
       * [Pinterest 전환 추적 확장](./catalog/advertising/pinterest-extension.md)
       * [Pinterest 고객 목록 연결](./catalog/advertising/pinterest.md)
       * [Pinterest 연결 업그레이드](./catalog/advertising/pinterest-upgrade.md)
+      * [PubMatic 연결](./catalog/advertising/pubmatic.md)
       * [Snapchat Ads 연결](./catalog/advertising/snap-inc.md)
       * [트레이드 데스크 연결](./catalog/advertising/tradedesk.md)
-      * [(Beta) The Trade Desk CRM 연결](./catalog/advertising/tradedesk-emails.md)
+      * [(Beta) 트레이드 데스크 CRM 연결](./catalog/advertising/tradedesk-emails.md)
       * [Twitter 범용 웹 사이트 태그 확장](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX 연결](./catalog/advertising/datax.md)
    * Analytics 대상 {#analytics}
       * [Analytics 대상 개요](./catalog/analytics/overview.md)
       * [Adform 웹 사이트 추적 확장](./catalog/analytics/adform.md)
       * [Adobe Analytics 확장](./catalog/analytics/adobe-analytics.md)
-      * [Adobe Media Analytics for Audio 및 Video 확장](./catalog/analytics/adobe-video-analytics.md)
+      * [오디오 및 비디오용 Adobe Medium 분석 확장](./catalog/analytics/adobe-video-analytics.md)
       * [Clicktale 확장](./catalog/analytics/clicktale.md)
       * [Contentsquare 확장](./catalog/analytics/contentsquare.md)
       * [Decibel 확장](./catalog/analytics/decibel.md)
@@ -146,7 +147,7 @@ ht-degree: 10%
       * [이메일 마케팅 대상 개요](./catalog/email-marketing/overview.md)
       * [Adobe Campaign 연결](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services 연결](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [Mailchimp 관심 카테고리](./catalog/email-marketing/mailchimp-interest-categories.md)
+      * [Mailchimp 관심 범주](./catalog/email-marketing/mailchimp-interest-categories.md)
       * [(API) Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(파일) Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua.md)
       * [Responsys 연결 oracle](./catalog/email-marketing/oracle-responsys.md)
@@ -201,7 +202,7 @@ ht-degree: 10%
       * [메달리아 연결](./catalog/voice/medallia-connector.md)
       * [메달리아 확장](./catalog/voice/medallia.md)
       * [Talk URL 받은 편지함 확장](./catalog/voice/talkurl.md)
-* 대상 SDK {#destination-sdk}
+* Destination SDK {#destination-sdk}
    * [개요](./destination-sdk/overview.md)
    * [통합 사전 요구 사항](./destination-sdk/integration-prerequisites.md)
    * [Destination SDK 시작](./destination-sdk/getting-started.md)
