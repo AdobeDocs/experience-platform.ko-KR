@@ -4,14 +4,14 @@ solution: Experience Platform
 title: XDM ExperienceEvent 클래스
 description: 이 문서에서는 XDM ExperienceEvent 클래스에 대한 개요와 이벤트 데이터 모델링에 대한 모범 사례를 제공합니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 093f4881f2224d0a0c888c7be688000d31114944
+source-git-commit: ac504f588b34961dff6887167e2cd07bc0eda453
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2663'
 ht-degree: 1%
 
 ---
 
-# [!DNL XDM ExperienceEvent] class
+# [!DNL XDM ExperienceEvent] 클래스
 
 [!DNL XDM ExperienceEvent] 는 특정 이벤트가 발생하거나 특정 조건 세트에 도달했을 때 시스템의 타임스탬프가 지정된 스냅샷을 만들 수 있는 표준 경험 데이터 모델(XDM) 클래스입니다.
 
@@ -23,12 +23,12 @@ ht-degree: 1%
 
 | 속성 | 설명 |
 | --- | --- |
-| `_id`<br>**(필수 여부)** | 경험 이벤트 클래스 `_id` 필드는 Adobe Experience Platform에 수집되는 개별 이벤트를 고유하게 식별합니다. 이 필드는 개별 이벤트의 고유성을 추적하고, 데이터 중복을 방지하고, 다운스트림 서비스에서 해당 이벤트를 조회하는 데 사용됩니다.<br><br>중복 이벤트가 감지되면 플랫폼 애플리케이션과 서비스는 중복을 다르게 처리할 수 있습니다. 예를 들어 프로필 서비스의 중복 이벤트는 동일한 이벤트가 있는 경우 삭제됩니다 `_id` 이(가) 이미 프로필 저장소에 있습니다.<br><br>경우에 따라, `_id` 다음이 될 수 있음: [UUID(범용 고유 식별자)](https://datatracker.ietf.org/doc/html/rfc4122) 또는 [GUID(Globally Unique Identifier)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>소스 연결에서 데이터를 스트리밍하거나 Parquet 파일에서 직접 수집하는 경우, 이벤트를 고유하게 만드는 특정 필드 조합을 연결하여 이 값을 생성해야 합니다. 연결할 수 있는 이벤트의 예로는 기본 ID, 타임스탬프, 이벤트 유형 등이 있습니다. 연결된 값은 이어야 합니다. `uri-reference` 형식이 지정된 문자열입니다. 즉, 콜론 문자는 제거해야 합니다. 그런 다음 연결된 값을 SHA-256 또는 선택한 다른 알고리즘을 사용하여 해시해야 합니다.<br><br>이를 구별하는 것이 중요합니다 **이 필드는 개별 사용자와 관련된 id를 나타내지 않습니다.**&#x200B;를 검색하는 것이 더 효율적입니다. 개인과 관련된 ID 데이터는 다음으로 내보냅니다. [id 필드](../schema/composition.md#identity) 호환 가능한 필드 그룹에서 대신 제공합니다. |
+| `_id`<br>**(필수)** | 경험 이벤트 클래스 `_id` 필드는 Adobe Experience Platform에 수집되는 개별 이벤트를 고유하게 식별합니다. 이 필드는 개별 이벤트의 고유성을 추적하고, 데이터 중복을 방지하고, 다운스트림 서비스에서 해당 이벤트를 조회하는 데 사용됩니다.<br><br>중복 이벤트가 감지되면 플랫폼 애플리케이션과 서비스는 중복을 다르게 처리할 수 있습니다. 예를 들어 프로필 서비스의 중복 이벤트는 동일한 이벤트가 있는 경우 삭제됩니다 `_id` 이(가) 이미 프로필 저장소에 있습니다.<br><br>경우에 따라, `_id` 다음이 될 수 있음: [UUID(범용 고유 식별자)](https://datatracker.ietf.org/doc/html/rfc4122) 또는 [GUID(Globally Unique Identifier)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>소스 연결에서 데이터를 스트리밍하거나 Parquet 파일에서 직접 수집하는 경우, 이벤트를 고유하게 만드는 특정 필드 조합을 연결하여 이 값을 생성해야 합니다. 연결할 수 있는 이벤트의 예로는 기본 ID, 타임스탬프, 이벤트 유형 등이 있습니다. 연결된 값은 이어야 합니다. `uri-reference` 형식이 지정된 문자열입니다. 즉, 콜론 문자는 제거해야 합니다. 그런 다음 연결된 값을 SHA-256 또는 선택한 다른 알고리즘을 사용하여 해시해야 합니다.<br><br>이를 구별하는 것이 중요합니다 **이 필드는 개별 사용자와 관련된 id를 나타내지 않습니다.**&#x200B;를 검색하는 것이 더 효율적입니다. 개인과 관련된 ID 데이터는 다음으로 내보냅니다. [id 필드](../schema/composition.md#identity) 호환 가능한 필드 그룹에서 대신 제공합니다. |
 | `eventMergeId` | 을 사용하는 경우 [Adobe Experience Platform 웹 SDK](../../edge/home.md) 데이터를 수집하기 위해 레코드를 만들게 한 수집된 일괄 처리의 ID를 나타냅니다. 이 필드는 데이터 수집 시 시스템에서 자동으로 채워집니다. 웹 SDK 구현의 컨텍스트 외부에서 이 필드를 사용할 수 없습니다. |
 | `eventType` | 이벤트의 유형 또는 범주를 나타내는 문자열입니다. 이 필드는 제품 보기 이벤트를 소매 회사에 대한 장바구니에 추가 이벤트와 구분하는 것처럼 동일한 스키마 및 데이터 세트 내에서 다른 이벤트 유형을 구분하려는 경우 사용할 수 있습니다.<br><br>이 속성의 표준 값은 [부록 섹션](#eventType), 의도한 사용 사례에 대한 설명 포함. 이 필드는 확장 가능한 열거형입니다. 즉, 고유한 이벤트 유형 문자열을 사용하여 추적 중인 이벤트를 분류할 수도 있습니다.<br><br>`eventType` 는 애플리케이션에서 히트당 하나의 이벤트만 사용하도록 제한하므로 시스템에서 가장 중요한 이벤트를 알려주기 위해 계산된 필드를 사용해야 합니다. 자세한 내용은 다음 섹션 을 참조하십시오 [계산된 필드에 대한 우수 사례](#calculated). |
 | `producedBy` | 이벤트의 생성자 또는 출처를 설명하는 문자열 값입니다. 이 필드는 세분화 목적으로 필요한 경우 특정 이벤트 제작자를 필터링하는 데 사용할 수 있습니다.<br><br>이 속성에 대해 제안된 몇 가지 값은 [부록 섹션](#producedBy). 이 필드는 확장 가능한 열거형입니다. 즉, 고유한 문자열을 사용하여 다른 이벤트 생성자를 나타낼 수도 있습니다. |
 | `identityMap` | 이벤트가 적용되는 개인에 대한 네임스페이스 ID 세트가 포함된 맵 필드입니다. 이 필드는 ID 데이터가 수집될 때 시스템에 의해 자동으로 업데이트됩니다. 이 필드를 적절하게 사용하려면 [실시간 고객 프로필](../../profile/home.md)를 사용하여 데이터 작업에서 필드의 내용을 수동으로 업데이트하지 마십시오.<br /><br />에서 ID 맵에 대한 섹션을 참조하십시오. [스키마 컴포지션 기본 사항](../schema/composition.md#identityMap) 사용 사례에 대한 자세한 내용을 보려면 여기를 클릭하십시오. |
-| `timestamp`<br>**(필수 여부)** | 다음 형식의 이벤트 발생 시점의 ISO 8601 타임스탬프 [RFC 3339 섹션 5.6](https://datatracker.ietf.org/doc/html/rfc3339). 이 타임스탬프는 과거의 날짜여야 합니다. 에 대한 아래 섹션 참조 [타임스탬프](#timestamps) 이 필드의 사용에 대한 모범 사례입니다. |
+| `timestamp`<br>**(필수)** | 다음 형식의 이벤트 발생 시점의 ISO 8601 타임스탬프 [RFC 3339 섹션 5.6](https://datatracker.ietf.org/doc/html/rfc3339). 이 타임스탬프는 과거의 날짜여야 합니다. 에 대한 아래 섹션 참조 [타임스탬프](#timestamps) 이 필드의 사용에 대한 모범 사례입니다. |
 
 {style="table-layout:auto"}
 
@@ -78,6 +78,7 @@ Adobe은 와 함께 사용할 수 있도록 여러 표준 필드 그룹을 제�
 * [[!UICONTROL 비행 예약]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL IAB TCF 2.0 동의]](../field-groups/event/iab.md)
 * [[!UICONTROL 숙박 예약]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL MediaAnalytics 인터랙션 세부 정보]](../field-groups/event/mediaanalytics-interaction.md)
 * [[!UICONTROL 견적 요청 세부 정보]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL 예약 세부 정보]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL 웹 세부 정보]](../field-groups/event/web-details.md)

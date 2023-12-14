@@ -4,10 +4,10 @@ user-guide-title: 경험 데이터 모델(XDM) 시스템 도움말
 breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: Experience Platform 내의 경험 데이터 모델(XDM) 시스템 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법을 알아봅니다.
 feature: Schemas
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: 4f819dcbdf67dc0305b397c54de2b1149cff398d
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 23%
+source-wordcount: '561'
+ht-degree: 15%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 23%
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [약물](./classes/medication.md)
    * [지불인](./classes/payer.md)
-   * [계획](./classes/plan.md)
+   * [플랜](./classes/plan.md)
    * [정책](./classes/policy.md)
    * [제품](./classes/product.md)
    * [잠재 고객](./classes/prospect.md)
@@ -80,6 +80,7 @@ ht-degree: 23%
       * [비행 예약](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0 동의](./field-groups/event/iab.md)
       * [숙박 예약](./field-groups/event/lodging-reservation.md)
+      * [MediaAnalytics 인터랙션 세부 정보](./field-groups/event/mediaanalytics-interaction.md)
       * [견적 요청 세부 정보](./field-groups/event/quote-request-details.md)
       * [예약 세부 정보](./field-groups/event/reservation-details.md)
       * [Sitetool 세부 정보](./field-groups/event/sitetool-details.md)
@@ -104,17 +105,22 @@ ht-degree: 23%
 * 데이터 유형 {#data-types}
    * [계정 세부 정보](./data-types/account-details.md)
    * [광고 브레이크](./data-types/ad-break.md)
+   * [광고 세부 정보](./data-types/advertising-details-information.md)
+   * [Advertising pod 세부 정보](./data-types/advertising-pod-details-information.md)
    * [애플리케이션](./data-types/application.md)
    * [비콘](./data-types/beacon.md)
    * [브라우저 세부 정보](./data-types/browser-details.md)
    * [B2B 소스](./data-types/b2b-source.md)
+   * [챕터 세부 정보](./data-types/chapter-details-information.md)
    * [Commerce](./data-types/commerce.md)
    * [동의 문자열](./data-types/consent-string.md)
    * [동의 및 환경 설정](./data-types/consents.md)
    * [통화](./data-types/currency.md)
+   * [사용자 지정 메타데이터 세부 정보](./data-types/custom-metadata-details-information.md)
    * [디바이스](./data-types/device.md)
    * [이메일 주소](./data-types/email-address.md)
    * [환경](./data-types/environment.md)
+   * [오류 세부 정보](./data-types/error-details-information.md)
    * [경험 채널](./data-types/experience-channel.md)
    * [외부 소스 시스템 감사 속성](./data-types/external-source-system-audit-attributes.md)
    * [금융 계정](./data-types/financial-account.md)
@@ -134,17 +140,22 @@ ht-degree: 23%
    * [키 값 쌍](./data-types/key-value-pair.md)
    * [마케팅](./data-types/marketing.md)
    * [측정](./data-types/measure.md)
+   * [미디어 세부 정보](./data-types/media-details-information.md)
+   * [미디어 이벤트 정보](./data-types/media-event-information.md)
    * [주문](./data-types/order.md)
    * [결제 항목](./data-types/payment-item.md)
    * [사람](./data-types/person.md)
    * [개인 이름](./data-types/person-name.md)
    * [전화번호](./data-types/phone-number.md)
    * [위치 컨텍스트](./data-types/place-context.md)
+   * [플레이어 상태 데이터 정보](./data-types/player-state-data-information.md)
    * [POI 세부 정보](./data-types/poi-details.md)
    * [POI 인터랙션](./data-types/poi-interaction.md)
    * [우편 주소](./data-types/postal-address.md)
    * [제품 목록 항목](./data-types/product-list-item.md)
+   * [QoE 데이터 세부 정보](./data-types/qoe-data-details-information.md)
    * [검색](./data-types/search.md)
+   * [세션 세부 정보](./data-types/session-details-information.md)
    * [구독](./data-types/subscription.md)
    * [통신 구독](./data-types/telecom-subscription.md)
    * [거래](./data-types/transaction.md)
