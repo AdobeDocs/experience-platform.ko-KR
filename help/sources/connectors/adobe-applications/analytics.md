@@ -2,10 +2,10 @@
 title: 보고서 세트 데이터용 Adobe Analytics Source Connector
 description: 이 문서에서는 Analytics에 대한 개요를 제공하고 Analytics 데이터의 사용 사례를 설명합니다.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 251b00e0f0e063859f8d0a0e188fa805c7bf3f87
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 6%
+source-wordcount: '1110'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform을 사용하면 Analytics 소스 커넥터를 통해 A
 
 ![Adobe Analytics을 포함한 다양한 Adobe 애플리케이션의 데이터 여정을 보여 주는 그래픽입니다.](./images/analytics-data-experience-platform.png)
 
-높은 수준에서 [!DNL Analytics] 전 세계 다양한 디지털 채널과 여러 데이터 센터에서 데이터를 수집합니다. 데이터가 수집되면 방문자 식별, VISTA(세그먼테이션 및 변형 아키텍처) 규칙 및 처리 규칙이 적용되어 들어오는 데이터를 형성합니다. 원시 데이터가 이러한 간단한 처리를 거친 후 다음에 의해 소비될 준비가 된 것으로 간주됩니다. [!DNL Real-Time Customer Profile]. 앞서 설명한 것과 병행되는 프로세스에서, 동일한 처리된 데이터는에 의해 소비되도록 플랫폼 데이터 세트에 마이크로 배칭되고 수집됩니다. [!DNL Data Science Workspace], [!DNL Query Service]및 기타 데이터 검색 애플리케이션.
+높은 수준에서 [!DNL Analytics] 전 세계 다양한 디지털 채널과 여러 데이터 센터에서 데이터를 수집합니다. 데이터가 수집되면 방문자 식별, VISTA(세그먼테이션 및 변형 아키텍처) 규칙 및 처리 규칙이 적용되어 들어오는 데이터를 형성합니다. 원시 데이터가 이러한 간단한 처리를 거친 후 다음에 의해 소비될 준비가 된 것으로 간주됩니다. [!DNL Real-Time Customer Profile]. 앞서 설명한 것과 병행되는 프로세스에서, 동일한 처리된 데이터는에 의해 소비되도록 플랫폼 데이터 세트에 마이크로 배칭되고 수집됩니다. [!DNL Query Service]및 기타 데이터 검색 애플리케이션.
 
 다음을 참조하십시오. [처리 규칙 개요](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) 처리 규칙에 대한 자세한 내용을 참조하십시오.
 
@@ -49,9 +49,9 @@ XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../../xdm/home.md).
 
 | 분석 데이터 | 예상 대기 시간 |
 | -------------- | ---------------- |
-| 새 데이터 받는 사람 [!DNL Real-Time Customer Profile] (A4T **아님** 활성화됨) | &lt; 2분 |
+| 새 데이터 받는 사람 [!DNL Real-Time Customer Profile] (A4T **아님** 활성화됨) | 2분 미만 |
 | 새 데이터 받는 사람 [!DNL Real-Time Customer Profile] (A4T **은(는)** 활성화됨) | 최대 30분 |
-| 데이터 레이크에 새 데이터 추가 | &lt; 90분 |
+| 데이터 레이크에 새 데이터 추가 | 90분 미만 |
 | 100억 개 미만의 이벤트 채우기 | &lt; 4주 |
 
 프로덕션 샌드박스에 대한 Analytics 채우기는 기본적으로 13개월로 설정됩니다. 비프로덕션 샌드박스의 Analytics 데이터의 경우 채우기는 3개월로 설정됩니다. 위 표에 언급된 100억 개의 이벤트 제한은 예상되는 지연과 관련하여 엄격히 제한됩니다.
