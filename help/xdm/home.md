@@ -48,7 +48,7 @@ Platform에서 스키마를 관리하고 상호 작용하는 방법에 대한 �
 * [XDM UI 안내서](./ui/overview.md)
 * [스키마 레지스트리 API 안내서](./api/overview.md)
 
-## XDM 시스템의 데이터 동작 {#data-behaviors}
+## XDM 시스템의 데이터 비헤이비어 {#data-behaviors}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
