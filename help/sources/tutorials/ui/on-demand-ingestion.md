@@ -2,10 +2,10 @@
 title: Ui에서 소스 데이터 흐름에 대한 온디맨드 수집
 description: Experience Platform 사용자 인터페이스를 사용하여 소스 연결에 대한 요청 시 데이터 흐름을 만드는 방법을 알아봅니다.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 38da1c1d5e563ea3f66cc25a69ad726f709784d0
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 1%
+source-wordcount: '522'
+ht-degree: 0%
 
 ---
 
@@ -24,6 +24,10 @@ ht-degree: 1%
 >[!ENDSHADEBOX]
 
 ## 시작하기
+
+>[!NOTE]
+>
+>플로우 실행을 만들려면 먼저 1회 수집으로 예약된 데이터 흐름의 플로우 ID가 있어야 합니다.
 
 이 문서를 사용하려면 다음 Experience Platform 구성 요소에 대해 잘 알고 있어야 합니다.
 
