@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 10월
 description: Adobe Experience Platform의 2022년 10월 릴리스 정보.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 34%
+source-wordcount: '1135'
+ht-degree: 29%
 
 ---
 
@@ -48,7 +48,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | 기능 | 설명 |
 | --- | --- |
 | (베타) 데이터 세트 내보내기 | 다음 [데이터 세트 내보내기 Beta 기능](/help/destinations/ui/export-datasets.md) 에서 정의한 대로 1세대 데이터를 내보낼 수 있습니다. [Real-time Customer Data Platform 제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html))를 클릭하여 대상 사용자 인터페이스를 통해 Adobe Experience Platform에서 고유한 외부 고객 시스템으로 마이그레이션합니다. 이를 통해 분석 및 규정 준수 사용 사례를 위해 6개의 클라우드 스토리지 대상(아래 표에 나열됨)에 대한 no-code/low-code 워크플로우를 통해 Experience Platform에서 데이터를 가져올 수 있습니다. |
-| (베타) 향상된 파일 내보내기 기능 | 이제 Experience Platform 외부에서 파일을 내보낼 때 향상된 사용자 정의 기능을 활용할 수 있습니다. <br><ul><li>추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).</li><li>[향상된 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능.</li><li>[사용자 정의 기능내보낸 CSV 데이터 파일의 서식](/help/destinations/ui/batch-destinations-file-formatting-options.md)을 사용자 정의하는 기능.</li></ul> <br> 이 기능은 아래 표에 나열된 6개의 새로운 Beta 클라우드 스토리지 카드에서 지원됩니다. |
+| (베타) 향상된 파일 내보내기 기능 | 이제 Experience Platform 외부에서 파일을 내보낼 때 향상된 사용자 정의 기능을 활용할 수 있습니다. <br><ul><li>추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).</li><li>[향상된 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능.</li><li>[내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> 이 기능은 아래 표에 나열된 6개의 새로운 Beta 클라우드 스토리지 카드에서 지원됩니다. |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 {style="table-layout:auto"}
 
-**새로운 대상 또는 업데이트된 설명서**
+**신규 또는 업데이트된 설명서**
 
 | 설명서 | 설명 |
 | ----------- | ----------- |
@@ -86,7 +86,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 | --- | --- | --- |
 | 데이터 유형 | [[!UICONTROL 세션 세부 사항 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | 을(를) 업데이트함 `authorized` 부울 유형에서 문자열로 연결된 필드입니다. `season` 및 `episode` 가 정수에서 문자열로 변경되었습니다. |
 | 데이터 유형 | [[!UICONTROL 광고 세부 사항 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` 의 이름이 로 변경되었습니다. `friendlyName`, 및 `ID` 의 이름이 로 변경되었습니다. `name`. |
-| 데이터 유형 | [[!UICONTROL 오류 세부 사항 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID`의 이름이 `name`로 변경되었습니다.  |
+| 데이터 유형 | [[!UICONTROL 오류 세부 사항 정보]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` 의 이름이 로 변경되었습니다. `name`. |
 
 {style="table-layout:auto"}
 
@@ -101,10 +101,10 @@ Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/h
 | 기능 | 설명 |
 | --- | --- |
 | Platform UI를 통해 쿼리 모니터링 | 쿼리 서비스 [!UICONTROL 예약된 쿼리] 탭은 UI를 통해 모든 쿼리 작업의 상태에 대한 향상된 가시성을 제공합니다. 이제 다음 위치에서 오류 메시지 및 실패한 경우 코드를 포함하여 쿼리 실행 상태에 대한 중요한 정보를 찾을 수 있습니다. [!UICONTROL 예약된 쿼리] 탭. UI를 통해 상태를 기반으로 이러한 쿼리에 대한 경고를 구독할 수도 있습니다. 다음을 참조하십시오. [쿼리 문서 모니터링](../../query-service/ui/monitor-queries.md) 이 기능에 대해 자세히 알아보십시오. |
-| 쿼리 가속화된 보고 통찰력 데이터 모델 | Data Distiller SKU의 일부로, 쿼리 가속 스토어를 사용하면 데이터에서 중요한 통찰력을 얻는 데 필요한 시간과 처리 능력을 줄일 수 있습니다. 쿼리 가속 저장소를 사용하면 사용자 지정 데이터 모델을 구축하거나 기존 Adobe Real-time Customer Data Platform 데이터 모델에서 확장하여 보고 통찰력과 시각화를 향상시킬 수 있습니다. 다음을 참조하십시오. [가속화된 저장소 보고 통찰력 문서 쿼리](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) 이 기능에 대해 자세히 알아보십시오. |
+| 쿼리 가속화된 보고 통찰력 데이터 모델 | Data Distiller SKU의 일부로, 쿼리 가속 스토어를 사용하면 데이터에서 중요한 통찰력을 얻는 데 필요한 시간과 처리 능력을 줄일 수 있습니다. 쿼리 가속 저장소를 사용하면 사용자 지정 데이터 모델을 구축하거나 기존 Adobe Real-time Customer Data Platform 데이터 모델에서 확장하여 보고 통찰력과 시각화를 향상시킬 수 있습니다. 다음을 참조하십시오. [가속화된 저장소 보고 통찰력 문서 쿼리](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md) 이 기능에 대해 자세히 알아보십시오. |
 
 {style="table-layout:auto"}
 
-쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md)를 참조하십시오.
+쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md).
 Adobe Experience Platform의 새로운 기능:
 

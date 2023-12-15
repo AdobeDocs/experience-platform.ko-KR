@@ -2,10 +2,10 @@
 title: 쿼리 서비스의 데이터 거버넌스
 description: 이 개요에서는 Experience Platform 쿼리 서비스 데이터 거버넌스의 주요 요소를 다룹니다.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '3132'
-ht-degree: 2%
+source-wordcount: '3129'
+ht-degree: 1%
 
 ---
 
@@ -93,7 +93,7 @@ Adobe Experience Platform의 액세스 제어를 사용하면 다음을 사용�
 
 #### 가속화된 데이터 세트에 대한 필드 기반 액세스 제한 사항 만들기 {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-포함 [속성 기반 액세스 제어 기능](../../access-control/abac/overview.md) 에서 팩트 및 차원 데이터 세트에 대한 조직 또는 데이터 사용 범위를 정의할 수 있습니다. [가속 저장소](../data-distiller/query-accelerated-store/send-accelerated-queries.md). 이를 통해 관리자는 특정 세그먼트에 대한 액세스를 관리하고 사용자 또는 사용자 그룹에 부여된 액세스를 더 잘 관리할 수 있습니다.
+포함 [속성 기반 액세스 제어 기능](../../access-control/abac/overview.md) 에서 팩트 및 차원 데이터 세트에 대한 조직 또는 데이터 사용 범위를 정의할 수 있습니다. [가속 저장소](../data-distiller/customizable-insights/send-accelerated-queries.md). 이를 통해 관리자는 특정 세그먼트에 대한 액세스를 관리하고 사용자 또는 사용자 그룹에 부여된 액세스를 더 잘 관리할 수 있습니다.
 
 가속화된 데이터 세트에 대한 필드 기반 액세스 제한을 만들려면 쿼리 서비스 CTAS 쿼리를 사용하여 가속화된 데이터 세트를 만들고 기존 XDM 스키마 또는 애드혹 스키마를 기반으로 이러한 데이터 세트를 구조화할 수 있습니다. 그러면 관리자는 [스키마에 대한 데이터 사용 레이블 추가 및 편집](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) 또는 [애드혹 스키마](./ad-hoc-schema-labels.md#edit-governance-labels). 다음에서 스키마에 레이블을 적용, 생성 및 편집할 수 있습니다. [!UICONTROL 레이블] 의 작업 공간 [!UICONTROL 스키마] UI.
 

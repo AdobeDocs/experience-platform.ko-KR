@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: f319f05d600dfd2bc4840ff56aefb8098dbfb7aa
+source-git-commit: fbb627787580c6a4ffd1deb0009105f1ba821b6f
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '313'
 ht-degree: 19%
 
 ---
@@ -26,9 +26,10 @@ ht-degree: 19%
       - [개요](data-distiller/derived-datasets/overview.md)
       - [원활한 SQL 흐름](data-distiller/derived-datasets/seamless-sql-flow.md)
       - [십분위수 기반 파생 데이터 세트 만들기](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - 쿼리 가속 저장소 {#query-accelerated-store}
-      - [가속화된 쿼리 보내기](data-distiller/query-accelerated-store/send-accelerated-queries.md)
-      - [Reporting insights 데이터 모델 안내서](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
+   - 확장 앱 보고를 위한 사용자 지정 가능한 통찰력 {#customizable-insights}
+      - [개요](data-distiller/customizable-insights/overview.md)
+      - [가속화된 쿼리 보내기](data-distiller/customizable-insights/send-accelerated-queries.md)
+      - [Reporting insights 데이터 모델 안내서](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - AI/ML 기능 파이프라인 {#ml-feature-pipelines}
       - [개요](data-distiller/ml-feature-pipelines/overview.md)
       - [Jupyter Notebooks 연결](data-distiller/ml-feature-pipelines/establish-connection.md)
