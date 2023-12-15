@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: 안내서, 설명서 및 튜토리얼을 통해 Experience Platform이 개인화된 경험을 실시간으로 고객에게 전달하는 방법에 대해 알아봅니다.
-source-git-commit: a3ba26fd6ee7b473d74cc3cf3d142e0f3ff069bb
+source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '281'
 ht-degree: 24%
 
 ---
@@ -75,6 +75,7 @@ ht-degree: 24%
    * [데이터 관리 라이선스 권한 부여 모범 사례](./license-usage-and-guardrails/data-management-best-practices.md)
    * [라이선스 사용 대시보드](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [Adobe Journey Optimizer 보호 기능](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Customer Journey Analytics 보호](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
    * [Real-Time CDP 보호 기능](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [문제 해결 안내서](troubleshooting.md)
 * [Gen2 데이터 레이크 마이그레이션](adls2-gen2-migration.md)

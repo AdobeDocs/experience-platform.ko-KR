@@ -3,10 +3,10 @@ title: Real-Time CDP 가드 레일
 description: Real-Time CDP의 다양한 서비스 및 영역에서 데이터 가드레일에 대해 알아봅니다.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 3%
+source-wordcount: '369'
+ht-degree: 1%
 
 ---
 
@@ -22,10 +22,12 @@ ht-degree: 3%
 * [의 보호 기능 [!DNL Identity Service] 데이터](/help/identity-service/guardrails.md)
 * [의 보호 기능 [!DNL Query Service]](/help/query-service/guardrails.md)
 * [대상을 통한 데이터 활성화 보호](/help/destinations/guardrails.md)
+* [Real-Time CDP B2B 보호](/help/rtcdp/b2b-guardrails.md)
 
 >[!TIP]
 >
->또한 다음을 참조하십시오. [이 페이지](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) 기타 Experience Platform 앱의 보호 기능에 대한 정보: [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ko) 및 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html), 및 [엔드 투 엔드 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 다양한 Experience Platform 서비스용.
+>또한 다음을 방문하십시오. [digital experience 블루프린트](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) 추가 정보: [엔드 투 엔드 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 다양한 Experience Platform 서비스용.
+
 
 ## 보호 유형 {#guardrail-types}
 
@@ -46,6 +48,13 @@ ht-degree: 3%
 * [Real-time Customer Data Platform (B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2P 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2B 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+
+## 기타 Experience Platform 애플리케이션의 보호 기능  {#guardrails-other-aep-apps}
+
+다른 Experience Platform 애플리케이션에도 유사한 보호 기능이 있습니다. 자세한 내용은 아래 링크를 참조하십시오.
+
+* [Adobe Journey Optimizer 보호 기능](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
+* [Customer Journey Analytics 보호](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
 
 ## 다음 단계
 
