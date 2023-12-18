@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;웹 페이지 세부 정보;데이터 유형;데이터 유형;데이터 유형;웹 페이지
 solution: Experience Platform
 title: 웹 정보 데이터 유형
-description: 이 문서에서는 웹 정보 XDM(Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
+description: 웹 정보 XDM(경험 데이터 모델) 데이터 유형에 대해 알아봅니다.
 exl-id: bfb00835-5908-4baf-af2a-6d845710e340
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 1%
+source-wordcount: '166'
+ht-degree: 2%
 
 ---
 

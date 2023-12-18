@@ -1,11 +1,11 @@
 ---
 title: 금융 계정 데이터 유형
-description: 이 문서에서는 금융 계정 XDM 데이터 유형에 대한 개요를 제공합니다.
+description: 금융 계정 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: badf9b20-d397-4b46-b045-19c69806fe8e
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 5%
+source-wordcount: '90'
+ht-degree: 8%
 
 ---
 

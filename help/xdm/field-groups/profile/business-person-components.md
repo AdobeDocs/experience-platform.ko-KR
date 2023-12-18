@@ -1,10 +1,10 @@
 ---
 title: XDM 비즈니스 사용자 구성 요소 스키마 필드 그룹
-description: 이 문서에서는 XDM 비즈니스 사용자 구성 요소 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: XDM 비즈니스 사용자 구성 요소 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '514'
 ht-degree: 2%
 
 ---

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;ExperienceEvent;필드;스키마;스키마;스키마 디자인;필드 그룹;필드 그룹;예약;비행;
 title: 비행 예약 스키마 필드 그룹
-description: 이 문서에서는 비행 예약 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 비행 예약 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '625'
 ht-degree: 4%
 
 ---

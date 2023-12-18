@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM 시스템 개요
 description: 표준화와 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 작업입니다.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '2087'
+source-wordcount: '2083'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ XDM은 디지털 경험의 성능을 개선하기 위해 설계된 공개적으�
 
 XDM은 Experience Platform을 기반으로 한 Adobe Experience Cloud이 적절한 사람에게 적절한 채널에서 정확한 순간에 올바른 메시지를 전달할 수 있는 기본 프레임워크입니다. Experience Platform이 빌드되는 방법론인 XDM System은 [!DNL Experience Data Model] platform 서비스에서 사용할 스키마.
 
-이 문서에서는 Experience Platform 내 XDM 시스템의 역할에 대한 개요를 제공합니다.
+Experience Platform 내에서 XDM 시스템의 역할에 대해 알아봅니다.
 
 ## XDM 스키마
 

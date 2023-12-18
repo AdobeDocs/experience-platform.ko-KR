@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
 title: 세그먼트 정의 클래스
-description: 이 문서에서는 XDM(Experience Data Model)의 세그먼트 정의 클래스에 대한 개요를 제공합니다.
+description: XDM(경험 데이터 모델)의 세그먼트 정의 클래스에 대해 알아봅니다.
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---

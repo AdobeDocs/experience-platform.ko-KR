@@ -1,11 +1,11 @@
 ---
 title: Sitetool 세부 정보 스키마 필드 그룹
-description: 이 문서에서는 Sitetool 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: Sitetool 세부 정보 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 472c0a3f-efda-49af-9490-f2de90b348c0
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 4%
+source-wordcount: '181'
+ht-degree: 5%
 
 ---
 

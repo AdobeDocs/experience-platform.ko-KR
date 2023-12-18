@@ -1,11 +1,11 @@
 ---
 title: B2B 소스 데이터 유형
-description: 이 문서에서는 B2B 소스 XDM(경험 데이터 모델) 데이터 유형에 대한 개요를 제공합니다.
+description: B2B 소스 경험 데이터 모델(XDM) 데이터 유형에 대해 알아봅니다.
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 2%
+source-wordcount: '236'
+ht-degree: 3%
 
 ---
 

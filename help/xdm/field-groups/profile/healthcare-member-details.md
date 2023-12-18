@@ -1,11 +1,11 @@
 ---
 title: 의료 멤버 세부 정보 스키마 필드 그룹
-description: 이 문서에서는 의료 멤버 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 의료 멤버 세부 정보 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '655'
-ht-degree: 3%
+source-wordcount: '635'
+ht-degree: 2%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 3%
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
 | `billingAddress` | [[!UICONTROL 우편 주소]](../../data-types/postal-address.md) | 개인 청구 주소. |
-| `faxPhone` | [[!UICONTROL 전화번호]](../../data-types/phone-number.md) | 개인의 팩스 번호입니다. |
+| `faxPhone` | [[!UICONTROL 전화 번호]](../../data-types/phone-number.md) | 개인의 팩스 번호입니다. |
 | `homeAddress` | [[!UICONTROL 우편 주소]](../../data-types/postal-address.md) | 사용자의 집 주소입니다. |
-| `homePhone` | [[!UICONTROL 전화번호]](../../data-types/phone-number.md) | 개인 집 전화번호. |
+| `homePhone` | [[!UICONTROL 전화 번호]](../../data-types/phone-number.md) | 개인 집 전화번호. |
 | `mailingAddress` | [[!UICONTROL 우편 주소]](../../data-types/postal-address.md) | 해당 사용자의 우편 주소. |
 | `memberDetails` | 오브젝트 | 개인의 의료 관련 속성 및 관계에 대한 자세한 정보를 포함하는 객체입니다. 다음을 참조하십시오. [아래 하위 섹션](#memberDetails) 객체의 구조에 대한 자세한 정보를 제공합니다. |
-| `mobilePhone` | [[!UICONTROL 전화번호]](../../data-types/phone-number.md) | 개인 휴대폰 번호. |
-| `person` | [[!UICONTROL 사람]](../../data-types/person.md) | 개인 의료 서비스 멤버십과 관련된 개인 작업자, 연락처 또는 소유자입니다. |
+| `mobilePhone` | [[!UICONTROL 전화 번호]](../../data-types/phone-number.md) | 개인 휴대폰 번호. |
+| `person` | [[!UICONTROL 개인]](../../data-types/person.md) | 개인 의료 서비스 멤버십과 관련된 개인 작업자, 연락처 또는 소유자입니다. |
 | `personalEmail` | [[!UICONTROL 이메일 주소]](../../data-types/email-address.md) | 개인의 개인 이메일 주소입니다. |
 | `shippingAddress` | [[!UICONTROL 우편 주소]](../../data-types/postal-address.md) | 개인의 배송 주소입니다. |
 
@@ -50,7 +50,7 @@ ht-degree: 3%
 | `deceasedDate` | DateTime | 사망한 경우 사망한 날짜. |
 | `isDeceased` | 부울 | 개인의 사망 여부를 나타냅니다. |
 | `isDependent` | 부울 | 개인이 부양가족인지 여부를 나타냅니다. |
-| `nationality` | 문자열 | ISO 3166-1 Alpha-2 코드를 사용하여 표시된 사용자와 해당 주 간의 법적 관계. |
+| `nationality` | 문자열 | ISO 3166-1 Alpha-2 코드를 사용하여 표시되는 개인 및 해당 주 간의 법적 관계. |
 | `preferredAvailability` | 문자열 | 개인이 선호하는 약속 요일 및 시간 가용성. |
 | `primaryMemberID` | 문자열 | 개인이 피부양자인 경우 주 구독자에 대한 고유 식별자. |
 

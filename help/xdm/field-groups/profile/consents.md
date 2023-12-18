@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
 title: 동의 및 환경 설정 스키마 필드 그룹
-description: 이 문서에서는 동의 및 환경 설정 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 동의 및 환경 설정 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---

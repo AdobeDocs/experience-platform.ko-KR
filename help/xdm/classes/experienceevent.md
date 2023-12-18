@@ -2,11 +2,11 @@
 keywords: Experience Platform;홈;인기 주제;스키마;스키마;XDM;필드;스키마;스키마;ID 맵;ID 맵;ID 맵;스키마 디자인;맵;맵;맵;이벤트 모델링;이벤트 모델링;우수 사례;이벤트;이벤트;이벤트;
 solution: Experience Platform
 title: XDM ExperienceEvent 클래스
-description: 이 문서에서는 XDM ExperienceEvent 클래스에 대한 개요와 이벤트 데이터 모델링에 대한 모범 사례를 제공합니다.
+description: XDM ExperienceEvent 클래스와 이벤트 데이터 모델링을 위한 모범 사례에 대해 알아봅니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ac504f588b34961dff6887167e2cd07bc0eda453
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '2663'
+source-wordcount: '2659'
 ht-degree: 1%
 
 ---

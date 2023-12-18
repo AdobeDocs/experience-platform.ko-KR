@@ -1,11 +1,11 @@
 ---
 title: 정책 클래스
-description: 이 문서에서는 XDM(경험 데이터 모델)의 정책 클래스에 대한 개요를 제공합니다.
+description: XDM(경험 데이터 모델)의 정책 클래스에 대해 알아봅니다.
 exl-id: 56cc8c69-84a0-493e-85c5-e0cd994e4bee
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 7%
+source-wordcount: '237'
+ht-degree: 4%
 
 ---
 
@@ -21,10 +21,10 @@ XDM(경험 데이터 모델)에서 [!UICONTROL 정책] 클래스는 보험 증�
 | `benefitAmount` | [[!UICONTROL 통화]](../data-types/currency.md) | 약관에 따라 지급할 금액. |
 | `location` | [[!UICONTROL 우편 주소]](../data-types/postal-address.md) | 보험 증서가 발급된 위치입니다. |
 | `owner` | [!UICONTROL 오브젝트] | 정책 소유자의 프로필 정보를 캡처합니다. |
-| `owner.faxPhone` | [[!UICONTROL 전화번호]](../data-types/phone-number.md) | 소유자의 팩스 번호입니다. |
+| `owner.faxPhone` | [[!UICONTROL 전화 번호]](../data-types/phone-number.md) | 소유자의 팩스 번호입니다. |
 | `owner.homeAddress` | [[!UICONTROL 우편 주소]](../data-types/postal-address.md) | 소유자의 집 주소입니다. |
-| `owner.homePhone` | [[!UICONTROL 전화번호]](../data-types/phone-number.md) | 집주인의 집 전화번호. |
-| `owner.mobilePhone` | [[!UICONTROL 전화번호]](../data-types/phone-number.md) | 소유자의 휴대폰 번호입니다. |
+| `owner.homePhone` | [[!UICONTROL 전화 번호]](../data-types/phone-number.md) | 집주인의 집 전화번호. |
+| `owner.mobilePhone` | [[!UICONTROL 전화 번호]](../data-types/phone-number.md) | 소유자의 휴대폰 번호입니다. |
 | `owner.personalEmail` | [[!UICONTROL 이메일 주소]](../data-types/email-address.md) | 소유자의 개인 이메일 주소입니다. |
 | `ID` | [!UICONTROL 문자열] | 보험 증서에 대한 식별자. |
 | `_id` | [!UICONTROL 문자열] | 레코드에 대한 시스템에서 생성한 고유한 문자열 식별자. 이 필드는 개별 레코드의 고유성을 추적하고, 데이터 중복을 방지하고, 다운스트림 서비스에서 해당 레코드를 조회하는 데 사용됩니다.<br><br>이 필드는 시스템에서 생성되므로 데이터 수집 중에 명시적 값을 제공하지 않습니다. 그러나 원하는 경우 고유한 ID 값을 제공하도록 선택할 수 있습니다. |

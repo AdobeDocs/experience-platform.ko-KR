@@ -1,11 +1,11 @@
 ---
 title: 잔액 전송 스키마 필드 그룹
-description: 이 문서에서는 잔고 이체 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 잔고 이체 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: be0d2ed6-6547-432a-af2f-409c33e268d4
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 1%
+source-wordcount: '101'
+ht-degree: 3%
 
 ---
 

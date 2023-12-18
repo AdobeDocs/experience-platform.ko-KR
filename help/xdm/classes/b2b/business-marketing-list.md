@@ -1,11 +1,11 @@
 ---
 title: XDM 비즈니스 마케팅 목록 클래스
-description: 이 문서에서는 XDM(경험 데이터 모델)의 XDM 비즈니스 마케팅 목록 클래스에 대한 개요를 제공합니다.
+description: 경험 데이터 모델(XDM)의 XDM 비즈니스 마케팅 목록 클래스에 대해 알아봅니다.
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 2%
+source-wordcount: '299'
+ht-degree: 3%
 
 ---
 

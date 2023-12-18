@@ -1,11 +1,11 @@
 ---
 title: 노출 횟수 데이터 유형
-description: 이 문서에서는 노출 횟수 XDM 데이터 유형에 대한 개요를 제공합니다.
+description: 노출 횟수 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
-source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 4%
+source-wordcount: '115'
+ht-degree: 6%
 
 ---
 

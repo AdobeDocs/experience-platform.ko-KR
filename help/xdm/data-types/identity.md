@@ -2,11 +2,11 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;ID;데이터 유형;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: ID 데이터 유형
-description: 이 문서에서는 ID XDM 데이터 유형에 대한 개요를 제공합니다.
+description: ID XDM 데이터 유형에 대해 알아봅니다.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '262'
 ht-degree: 4%
 
 ---

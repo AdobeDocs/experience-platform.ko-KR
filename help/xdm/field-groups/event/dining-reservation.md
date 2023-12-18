@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;ExperienceEvent;필드;스키마;스키마;스키마 디자인;필드 그룹;필드 그룹;예약;식사;
 title: 식사 예약 스키마 필드 그룹
-description: 이 문서에서는 식사 예약 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 식사 예약 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '435'
 ht-degree: 5%
 
 ---

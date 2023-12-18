@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;측정값;데이터 유형;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: 측정값 데이터 유형
-description: 이 문서에서는 XDM(측정 경험 데이터 모델) 데이터 유형에 대한 개요를 제공합니다.
+description: XDM(측정 경험 데이터 모델) 데이터 유형에 대해 알아봅니다.
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 1%
+source-wordcount: '204'
+ht-degree: 2%
 
 ---
 

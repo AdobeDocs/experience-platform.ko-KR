@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;ExperienceEvent;필드;스키마;스키마;스키마 디자인;필드 그룹;필드 그룹;장치;트레이드;트레이드 인;트레이드 인;
 solution: Experience Platform
 title: 장치 거래 세부 정보 스키마 필드 그룹
-description: 이 문서에서는 Device Trade-In Details 스키마 필드 그룹의 개요를 제공합니다.
+description: Device Trade-In Details 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 2%
+source-wordcount: '150'
+ht-degree: 4%
 
 ---
 

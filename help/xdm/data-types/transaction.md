@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;트랜잭션;데이터 유형;데이터 유형;데이터 유형;
 title: 거래 데이터 유형
-description: 이 문서에서는 XDM(Transaction Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
+description: XDM(Transaction Experience Data Model) 데이터 유형에 대해 알아봅니다.
 exl-id: 47b7152f-a853-44f0-8962-e902631ad8a4
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 5%
+source-wordcount: '92'
+ht-degree: 7%
 
 ---
 

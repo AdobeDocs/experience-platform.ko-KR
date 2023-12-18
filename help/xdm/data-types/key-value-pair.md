@@ -1,11 +1,11 @@
 ---
 title: 키 값 쌍 데이터 유형
-description: 이 문서에서는 키 값 쌍 XDM(경험 데이터 모델) 데이터 유형에 대한 개요를 제공합니다.
+description: 키 값 쌍 경험 데이터 모델(XDM) 데이터 유형에 대해 알아봅니다.
 exl-id: 2a1a7537-9019-4cf2-bfa1-9c760f9656dd
-source-git-commit: 1d023ce6184e54693401eb68a04ceeb1464dcaa0
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 3%
+source-wordcount: '104'
+ht-degree: 5%
 
 ---
 

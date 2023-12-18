@@ -1,11 +1,11 @@
 ---
 title: 내부 사이트 검색 데이터 유형
-description: 이 문서에서는 내부 사이트 검색 XDM 데이터 유형에 대한 개요를 제공합니다.
+description: 내부 사이트 검색 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: 3cab9445-f641-4a44-9699-cd8a62da8a61
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 5%
+source-wordcount: '383'
+ht-degree: 3%
 
 ---
 

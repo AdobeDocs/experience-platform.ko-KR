@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
 title: 일반 마케팅 환경 설정 필드 데이터 유형
-description: 이 문서에서는 일반 마케팅 환경 설정 필드 XDM 데이터 유형에 대한 개요를 제공합니다.
+description: 일반 마케팅 환경 설정 필드 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '645'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 1%
 
 다음 표에서 허용되는 값을 간략하게 설명합니다. `val`:
 
-| 값 | Title | 설명 |
+| 값 | 제목 | 설명 |
 | --- | --- | --- |
 | `y` | 예(옵트인) | 고객이 환경 설정을 선택했다. 즉, **할 일** 해당 환경 설정에 명시된 데이터 사용에 동의합니다. |
 | `n` | 아니요(옵트아웃) | 고객이 선호에서 벗어났습니다. 즉, **금지** 해당 환경 설정에 명시된 데이터 사용에 동의합니다. |

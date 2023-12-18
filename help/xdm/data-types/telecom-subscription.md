@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;통신;구독;데이터 유형;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: 통신 구독 데이터 유형
-description: 이 문서에서는 XDM(Telecom Subscription Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
+description: 통신 구독 경험 데이터 모델(XDM) 데이터 유형에 대해 알아봅니다.
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '605'
-ht-degree: 9%
+source-wordcount: '572'
+ht-degree: 7%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 9%
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
 | `devices` | 오브젝트 배열 | 플랜과 연결된 장치 및/또는 액세서리 목록을 설명합니다. 다음을 참조하십시오. [아래 섹션](#devices) 각 배열 항목의 예상 구조에 대한 자세한 내용을 보려면 여기를 클릭하십시오. |
-| `subscriber` | [[!UICONTROL 사람]](./person.md) | 구독 소유자를 설명합니다. |
+| `subscriber` | [[!UICONTROL 개인]](./person.md) | 구독 소유자를 설명합니다. |
 | `ID` | 문자열 | 구독 인스턴스에 대한 고유 식별자. |
 | `billingPeriod` | 문자열 | 청구 기간. |
 | `billingStartDate` | 날짜 | 청구 기간 시작일. 날짜 형식(시간 없음)은 [RFC 3339, 섹션 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 표준. |

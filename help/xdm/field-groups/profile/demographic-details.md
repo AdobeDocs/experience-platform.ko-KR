@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;개별 프로필;필드;스키마;스키마;스키마 디자인;필드 그룹;필드 그룹;개인;개인 세부 정보;프로필 개인 세부 정보;개인;
 solution: Experience Platform
 title: 인구 통계 세부 정보 스키마 필드 그룹
-description: 이 문서에서는 인구 통계 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 인구 통계 세부 정보 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 3%
+source-wordcount: '261'
+ht-degree: 4%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 3%
 | `person.gender` | 문자열 | 개인의 성 정체성. |
 | `person.martialStatus` | 문자열 | 다른 중요 인물과의 관계를 설명합니다. |
 | `person.nationality` | 문자열 | ISO 3166-1 Alpha-2 코드를 사용하여 표시된 사용자와 해당 주 간의 법적 관계. |
-| `person.taxId` | 문자열 | 사용자의 세금/회계 ID(예: 미국의 경우 TIN 또는 스페인의 경우 CIF/NIF). |
+| `person.taxId` | 문자열 | 개인의 세금/회계 ID(예: 미국의 TIN 또는 스페인의 CIF/NIF). |
 
 {style="table-layout:auto"}
 

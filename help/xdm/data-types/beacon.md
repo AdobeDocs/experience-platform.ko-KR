@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;비콘;상호 작용 세부 정보;데이터 유형;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: 비콘 데이터 유형
-description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
+description: XDM 개별 프로필 클래스에 대해 알아봅니다.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 3%
+source-wordcount: '233'
+ht-degree: 4%
 
 ---
 

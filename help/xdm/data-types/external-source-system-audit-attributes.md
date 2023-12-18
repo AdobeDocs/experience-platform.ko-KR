@@ -1,11 +1,11 @@
 ---
 title: 외부 소스 시스템 감사 속성 데이터 유형
-description: 이 문서에서는 외부 소스 시스템 감사 속성 XDM(Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
+description: 외부 소스 시스템 감사 속성 경험 데이터 모델(XDM) 데이터 유형에 대해 알아봅니다.
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 15%
+source-wordcount: '168'
+ht-degree: 17%
 
 ---
 

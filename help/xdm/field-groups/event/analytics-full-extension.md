@@ -1,11 +1,11 @@
 ---
 title: Adobe Analytics ExperienceEvent 전체 확장 스키마 필드 그룹
-description: 이 문서에서는 Adobe Analytics ExperienceEvent 전체 확장 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: Adobe Analytics ExperienceEvent 전체 확장 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '888'
-ht-degree: 10%
+source-wordcount: '811'
+ht-degree: 5%
 
 ---
 

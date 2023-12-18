@@ -1,11 +1,11 @@
 ---
 title: XDM 비즈니스 캠페인 세부 정보 스키마 필드 그룹
-description: 이 문서에서는 XDM 비즈니스 캠페인 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: XDM 비즈니스 캠페인 세부 사항 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '363'
-ht-degree: 4%
+source-wordcount: '353'
+ht-degree: 5%
 
 ---
 

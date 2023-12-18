@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;개별 프로필;필드;스키마;스키마;통신;구독;통신;스키마 디자인;필드 그룹;필드 그룹;
 solution: Experience Platform
 title: 통신 구독 스키마 필드 그룹
-description: 이 문서에서는 통신 구독 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 통신 구독 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 4%
+source-wordcount: '692'
+ht-degree: 6%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 4%
 | `landlineSubscription` | 오브젝트 배열 | 선택한 기능, 시간(분) 및 다이얼 플랜 등 유선전화 구독 플랜에 대한 세부 정보를 설명합니다. 다음을 참조하십시오. [아래 섹션](#landlineSubscription) 추가 정보. |
 | `mediaSubscription` | 오브젝트 배열 | 채널 수 및 포함된 스트리밍 서비스를 포함한 미디어 구독 플랜 세부 정보에 대해 설명합니다. 다음을 참조하십시오. [아래 섹션](#mediaSubscription) 추가 정보. |
 | `mobileSubscription` | 오브젝트 배열 | 줄 수, 데이터 요금, 비용 등을 포함한 모바일 구독 플랜 세부 정보에 대해 설명합니다. 다음을 참조하십시오. [아래 섹션](#mobileSubscription) 추가 정보. |
-| `primarySubscriber` | [[!UICONTROL 사람]](../../data-types/person.md) | 구독 소유자를 설명합니다. |
+| `primarySubscriber` | [[!UICONTROL 개인]](../../data-types/person.md) | 구독 소유자를 설명합니다. |
 | `bundleName` | 문자열 | 고객이 등록된 모든 유형의 구독 번들 이름(예: )을 캡처합니다. `Internet + Media`. |
 | `primaryPartyID` | 문자열 | 구독 담당 직원을 위한 식별자(일반적으로 디바이스 전화번호 가능). |
 

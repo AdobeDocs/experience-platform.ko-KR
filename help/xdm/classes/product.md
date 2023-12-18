@@ -1,11 +1,11 @@
 ---
 title: 제품 클래스
-description: 이 문서에서는 XDM(경험 데이터 모델)의 제품 클래스에 대한 개요를 제공합니다.
+description: XDM(경험 데이터 모델)의 제품 클래스에 대해 알아봅니다.
 exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
-source-git-commit: fdd68e5a94d841992a6f8abe10f3cffe0ebb6794
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 6%
+source-wordcount: '200'
+ht-degree: 7%
 
 ---
 

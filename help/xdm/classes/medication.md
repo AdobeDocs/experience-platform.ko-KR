@@ -1,11 +1,11 @@
 ---
 title: 약물 분류
-description: 이 문서에서는 XDM(Experience Data Model)의 약물 클래스에 대한 개요를 제공합니다.
+description: Experience Data Model(XDM)의 약물 클래스에 대해 알아봅니다.
 exl-id: e5786241-dd6e-450f-98c8-2de46affb3e2
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 3%
+source-wordcount: '145'
+ht-degree: 4%
 
 ---
 

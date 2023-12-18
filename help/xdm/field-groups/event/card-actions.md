@@ -1,11 +1,11 @@
 ---
 title: 카드 작업 스키마 필드 그룹
-description: 이 문서에서는 카드 작업 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 카드 작업 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 49851544-9118-4b73-b1d1-4cf49b3f1dee
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 6%
+source-wordcount: '176'
+ht-degree: 8%
 
 ---
 

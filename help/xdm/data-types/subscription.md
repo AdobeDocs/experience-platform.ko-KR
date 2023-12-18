@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;구독;데이터 유형;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: 구독 데이터 유형
-description: 이 문서에서는 구독 XDM(Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
+description: 구독 경험 데이터 모델(XDM) 데이터 유형에 대해 알아봅니다.
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 9%
+source-wordcount: '388'
+ht-degree: 6%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 9%
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `device` | [[!UICONTROL 디바이스]](./device.md) | 구독과 연결된 장치에 대한 세부 정보를 설명합니다. |
+| `device` | [[!UICONTROL 장치]](./device.md) | 구독과 연결된 장치에 대한 세부 정보를 설명합니다. |
 | `environment` | [[!UICONTROL 환경]](./environment.md) | 이벤트 관찰 시 주변에서 발생한 임시 상황에 대한 세부 정보(예: 네트워크 또는 소프트웨어 버전)를 포함합니다. |
-| `subscriber` | [[!UICONTROL 사람]](./person.md) | 개별 개인을 설명합니다. 고객, 연락처 또는 소유자 등 다양한 역할을 수행하는 사람을 나타낼 수도 있습니다. |
+| `subscriber` | [[!UICONTROL 개인]](./person.md) | 개별 개인을 설명합니다. 고객, 연락처 또는 소유자 등 다양한 역할을 수행하는 사람을 나타낼 수도 있습니다. |
 | `SKU` | 문자열 | 제품에 대한 고유 식별자인 SKU(Stock Keeping Unit). |
 | `billingPeriod` | 문자열 | 청구 기간. |
 | `billingStartDate` | 날짜 | 첫 번째 청구서 기한일. 날짜 형식(시간 없음)은 [RFC 3339, 섹션 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) 표준. |

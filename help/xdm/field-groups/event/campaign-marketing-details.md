@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;ExperienceEvent;필드;스키마;스키마;스키마 디자인;필드 그룹;필드 그룹;
 solution: Experience Platform
 title: 캠페인 마케팅 세부 정보 스키마 필드 그룹
-description: 이 문서에서는 Campaign 마케팅 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: Campaign 마케팅 세부 정보 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 1%
+source-wordcount: '124'
+ht-degree: 3%
 
 ---
 

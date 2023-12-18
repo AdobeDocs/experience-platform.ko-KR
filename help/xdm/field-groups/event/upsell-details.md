@@ -1,11 +1,11 @@
 ---
 title: 업셀 세부 정보 스키마 필드 그룹
-description: 이 문서에서는 업셀 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 업셀 세부 정보 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 6b69805d-03bc-489b-945a-03e61b99842e
-source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 1%
+source-wordcount: '126'
+ht-degree: 3%
 
 ---
 

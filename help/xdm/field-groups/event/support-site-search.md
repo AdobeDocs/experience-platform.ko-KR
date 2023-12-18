@@ -1,10 +1,10 @@
 ---
 title: 사이트 검색 스키마 필드 그룹 지원
-description: 이 문서에서는 지원 사이트 검색 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 지원 사이트 검색 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 7bd442f0-f85c-491f-91ad-8b14b4b431eb
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '77'
 ht-degree: 5%
 
 ---

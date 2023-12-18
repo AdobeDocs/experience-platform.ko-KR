@@ -1,11 +1,11 @@
 ---
 title: 제품 범주 스키마 필드 그룹
-description: 이 문서에서는 제품 범주 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 제품 범주 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 80825bcf-e646-426b-a3d6-f6759f6cd5cf
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 6%
+source-wordcount: '86'
+ht-degree: 9%
 
 ---
 

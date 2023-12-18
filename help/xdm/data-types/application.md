@@ -2,11 +2,11 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;애플리케이션;데이터 유형;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: 애플리케이션 데이터 유형
-description: 이 문서에서는 XDM(애플리케이션 경험 데이터 모델) 데이터 유형에 대한 개요를 제공합니다.
+description: XDM(애플리케이션 경험 데이터 모델) 데이터 유형에 대해 알아봅니다.
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '416'
 ht-degree: 1%
 
 ---

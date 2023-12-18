@@ -1,11 +1,11 @@
 ---
 title: 구현 세부 사항 데이터 유형
-description: 이 문서에서는 구현 세부 사항 XDM(Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
+description: 구현 세부 사항 XDM(Experience Data Model) 데이터 유형에 대해 알아봅니다.
 exl-id: d3d16bae-196b-489d-8590-fd22150eedf1
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 4%
+source-wordcount: '101'
+ht-degree: 6%
 
 ---
 

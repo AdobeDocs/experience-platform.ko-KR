@@ -1,11 +1,11 @@
 ---
 title: 의료 서비스 플랜 세부 정보 스키마 필드 그룹
-description: 이 문서에서는 의료 서비스 플랜 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 의료 서비스 플랜 세부 정보 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 5a480c5b-74f8-48dd-858a-5cf2628dc7f0
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 3%
+source-wordcount: '202'
+ht-degree: 4%
 
 ---
 

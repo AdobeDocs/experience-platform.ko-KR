@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;ExperienceEvent;필드;스키마;스키마;스키마 디자인;필드 그룹;필드 그룹;enduserids;최종 사용자;최종 사용자;id;
 solution: Experience Platform
 title: 최종 사용자 ID 세부 정보 스키마 필드 그룹
-description: 이 문서에서는 최종 사용자 ID 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 최종 사용자 ID 세부 정보 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 4%
+source-wordcount: '200'
+ht-degree: 14%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 4%
 | `acid` | [신원](../../data-types/identity.md) | Adobe Campaign의 최종 사용자 ID. |
 | `adcloud` | [신원](../../data-types/identity.md) | Adobe Advertising Cloud의 최종 사용자 ID. |
 | `emailid` | [신원](../../data-types/identity.md) | 이메일 주소 ID. |
-| `mcid` | [신원](../../data-types/identity.md) | Adobe Marketing Cloud ID(MCID). 이제 MCID를 ECID(Experience Cloud ID)라고 합니다. |
+| `mcid` | [신원](../../data-types/identity.md) | Adobe Marketing Cloud ID(MCID). MCID는 이제 ECID(Experience Cloud ID)로 알려져 있습니다. |
 | `phonenumberid` | [신원](../../data-types/identity.md) | 전화번호 ID. |
 | `tntid` | [신원](../../data-types/identity.md) | Adobe Target의 최종 사용자 ID. |
 

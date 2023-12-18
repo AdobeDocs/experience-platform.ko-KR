@@ -1,11 +1,11 @@
 ---
 title: 견적 요청 세부 정보 스키마 필드 그룹
-description: 이 문서에서는 Quote Request Details 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: Quote Request Details 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 19be76fa-d212-4b00-815a-d3869c1054e2
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 4%
+source-wordcount: '133'
+ht-degree: 6%
 
 ---
 

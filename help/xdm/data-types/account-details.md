@@ -1,10 +1,10 @@
 ---
 title: 계정 세부 정보 데이터 유형
-description: 이 문서에서는 계정 세부 사항 XDM(Experience Data Model) 데이터 유형에 대한 개요를 제공합니다.
+description: 계정 세부 사항 XDM(경험 데이터 모델) 데이터 유형에 대해 알아봅니다.
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '409'
 ht-degree: 5%
 
 ---

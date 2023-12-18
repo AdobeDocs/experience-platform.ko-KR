@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;검색;데이터 유형;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: 데이터 유형 검색
-description: 이 문서에서는 XDM(검색 경험 데이터 모델) 데이터 유형에 대한 개요를 제공합니다.
+description: XDM(검색 경험 데이터 모델) 데이터 유형에 대해 알아봅니다.
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 4%
+source-wordcount: '160'
+ht-degree: 6%
 
 ---
 

@@ -2,16 +2,16 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;개별 프로필;필드;스키마;스키마;identityMap;ID 맵;ID 맵;스키마 디자인;맵;맵;유니온 스키마;유니온
 solution: Experience Platform
 title: XDM 개별 프로필 클래스
-description: 이 문서에서는 XDM 개별 프로필 클래스에 대한 개요를 제공합니다.
+description: XDM 개별 프로필 클래스에 대해 알아봅니다.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 1%
+source-wordcount: '573'
+ht-degree: 0%
 
 ---
 
-# [!DNL XDM Individual Profile] class
+# [!DNL XDM Individual Profile] 클래스
 
 [!DNL XDM Individual Profile] 는 개별 사용자의 단일 표시(또는 &quot;프로필&quot;)를 형성하는 표준 경험 데이터 모델(XDM) 클래스입니다. 특히 클래스(및 호환 가능한 필드 그룹)는 브랜드와 상호 작용하는 식별된 개인과 부분적으로 식별된 개인 모두의 속성과 관심을 캡처합니다.
 

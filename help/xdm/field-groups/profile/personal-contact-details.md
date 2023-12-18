@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;개별 프로필;필드;스키마;스키마;개인 세부 정보;스키마 디자인;필드 그룹;필드 그룹;
 solution: Experience Platform
 title: 개인 연락처 세부 정보 스키마 필드 그룹
-description: 이 문서에서는 개인 연락처 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 개인 연락처 세부 정보 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 6%
+source-wordcount: '143'
+ht-degree: 2%
 
 ---
 
@@ -24,10 +24,10 @@ ht-degree: 6%
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `faxPhone` | [전화번호](../../data-types/phone-number.md) | 사용자의 팩스 번호를 설명합니다. |
+| `faxPhone` | [전화 번호](../../data-types/phone-number.md) | 사용자의 팩스 번호를 설명합니다. |
 | `homeAddress` | [우편 주소](../../data-types/postal-address.md) | 사용자의 거주 주소를 설명합니다. |
-| `homePhone` | [전화번호](../../data-types/phone-number.md) | 사용자의 집 전화 번호를 설명합니다. |
-| `mobilePhone` | [전화번호](../../data-types/phone-number.md) | 사용자의 휴대폰 번호를 설명합니다. |
+| `homePhone` | [전화 번호](../../data-types/phone-number.md) | 사용자의 집 전화 번호를 설명합니다. |
+| `mobilePhone` | [전화 번호](../../data-types/phone-number.md) | 사용자의 휴대폰 번호를 설명합니다. |
 | `personalEmail` | [이메일 주소](../../data-types/email-address.md) | 개인의 이메일 주소를 설명합니다. |
 
 {style="table-layout:auto"}

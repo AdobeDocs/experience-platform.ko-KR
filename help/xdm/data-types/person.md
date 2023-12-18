@@ -2,12 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;필드;스키마;스키마;개인;데이터 유형;데이터 유형;데이터 유형;
 solution: Experience Platform
 title: 개인 데이터 유형
-description: 이 문서에서는 XDM(개인 경험 데이터 모델) 데이터 유형에 대한 개요를 제공합니다.
+description: XDM(개인 경험 데이터 모델) 데이터 유형에 대해 알아봅니다.
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 4%
+source-wordcount: '318'
+ht-degree: 3%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 4%
 | `gender` | 문자열 | 개인의 성 정체성. 이 속성의 값은 다음 알려진 열거형 값 중 하나와 같아야 합니다. <li> `female` </li> <li> `male` </li> <li> `not_specified` </li> <li> `non_specific` </li> 이 값의 기본값은 입니다. `not_specified`. |
 | `maritalStatus` | 문자열 | 다른 중요 인물과의 관계를 설명합니다. 이 속성의 값은 다음 열거형 값 중 하나와 같아야 합니다. <li> `married` </li> <li> `single` </li> <li> `divorced` </li> <li> `widowed` </li> <li> `not_specified` </li> 이 값의 기본값은 입니다. `not_specified`. |
 | `nationality` | 문자열 | ISO 3166-1 Alpha-2 코드를 사용하여 표시된 사용자와 해당 주 간의 법적 관계. 이 속성의 형식은 이 정규 표현식을 준수해야 합니다 `^[A-Z]{2}$`. |
-| `taxId` | 문자열 | 사용자의 세금 또는 회계 ID(예: 미국의 납세자 식별 번호(TIN) 또는 스페인의 CIF/NIF(Certificado de Identificación Fiscal)). |
+| `taxId` | 문자열 | 사용자의 세금 또는 회계 ID(예: 미국의 납세자 식별 번호(TIN) 또는 스페인의 Certificado de Identificación Fiscal (CIF/NIF)). |
 
 {style="table-layout:auto"}
 

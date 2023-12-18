@@ -1,10 +1,10 @@
 ---
 title: XDM 개별 잠재 고객 프로필 클래스
-description: 이 문서에서는 XDM(경험 데이터 모델)의 XDM 개별 잠재 고객 프로필 클래스에 대한 개요를 제공합니다.
+description: Experience Data Model(XDM)의 XDM 개별 잠재 고객 프로필 클래스에 대해 알아봅니다.
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '356'
 ht-degree: 3%
 
 ---

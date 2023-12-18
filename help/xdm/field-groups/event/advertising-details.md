@@ -1,11 +1,11 @@
 ---
 title: 광고 세부 정보 스키마 필드 그룹
-description: 이 문서에서는 광고 세부 정보 스키마 필드 그룹에 대한 개요를 제공합니다.
+description: 광고 세부 정보 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 8%
+source-wordcount: '992'
+ht-degree: 4%
 
 ---
 
@@ -46,11 +46,11 @@ ht-degree: 8%
 | `_xmpDM.duration` | 정수 | 에셋의 길이 또는 기간(초)입니다. |
 | `_id` | 문자열 | 다음 광고 자산의 고유 식별자. [Ad-ID standard](https://datatracker.ietf.org/doc/html/rfc8107). |
 | `advertiser` | 문자열 | 광고에서 다루고 있는 제품의 회사 또는 브랜드입니다. |
-| `campaign` | 문자열 | 광고 캠페인의 ID. |
+| `campaign` | 문자열 | 광고 캠페인의 ID입니다. |
 | `creativeID` | 문자열 | 광고 문안 ID. |
 | `creativeURL` | 문자열 | 광고 문안 URL. |
-| `placementID` | 문자열 | 광고 배치 ID. |
-| `siteID` | 문자열 | 광고 사이트의 ID. |
+| `placementID` | 문자열 | 광고의 배치 ID입니다. |
+| `siteID` | 문자열 | 광고 사이트의 ID입니다. |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ ht-degree: 8%
 | --- | --- | --- |
 | `adBreak` | [[!UICONTROL 광고 브레이크]](../../data-types/ad-break.md) | 시간 광고를 시간 미디어에 삽입하는 방법을 설명합니다. |
 | `index` | 정수 | 상위 광고 브레이크 내에 있는 광고의 색인입니다. 예를 들어 첫 번째 광고에는 색인이 있습니다 `0` 두 번째 광고에는 색인이 있습니다. `1`. |
-| `playerName` | 문자열 | 광고를 렌더링하는 플레이어의 이름. |
+| `playerName` | 문자열 | 광고 렌더링을 담당하는 플레이어의 이름입니다. |
 
 {style="table-layout:auto"}
 
