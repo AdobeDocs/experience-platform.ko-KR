@@ -4,10 +4,10 @@ title: 라이선스 사용 대시보드 안내서
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
+source-git-commit: e80577cb190e77624a2dc32f8343fc4b82a24a03
 workflow-type: tm+mt
-source-wordcount: '2027'
-ht-degree: 4%
+source-wordcount: '2108'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,14 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="라이선스 사용 대시보드"
->abstract="라이선스 사용 대시보드는 구매한 Adobe Experience Platform 제품에 대한 인사이트를 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 계약된 라이선스 금액 등 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다."
+>abstract="라이선스 사용 대시보드는 구입한 Adobe Experience Platform 제품에 대한 통찰력을 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량 및 계약된 라이선스 금액을 포함하여 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_prediction"
+>title="라이선스 사용 대시보드"
+>abstract="라이선스 사용 대시보드는 구입한 Adobe Experience Platform 제품에 대한 통찰력을 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량 및 계약된 라이선스 금액을 포함하여 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다.<br>사용량 예측은 월말에 매달 새로 고쳐지고 다가오는 6개월 동안 사용량을 예측합니다. 사용량을 줄이려면 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성합니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="데이터 세트 만료"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
 Adobe Experience Platform을 통해 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있습니다 [!UICONTROL 라이선스 사용] 대시보드입니다. 여기에 표시되는 정보는 Platform 인스턴스의 일별 스냅샷 중에 캡처됩니다.
 
@@ -46,7 +53,7 @@ Platform UI 내에서 라이선스 사용 대시보드로 이동하려면 다음
 
 ![왼쪽 탐색 사이드바에서 라이선스 사용이 강조 표시된 라이선스 사용 대시보드 개요 탭.](../images/license-usage/dashboard-overview.png)
 
-## [!UICONTROL 개요 탭] {#overview-tab}
+## [!UICONTROL 개요] 탭 {#overview-tab}
 
 이 대시보드에는 추가 기능을 포함하여 사용 허가된 모든 Adobe Experience Platform 제품이 표 형식으로 표시됩니다. 이 표에서는 사용 가능한 모든 프로필에서 라이선스 사용에 대한 주요 정보를 제공합니다.
 
@@ -56,7 +63,7 @@ Platform UI 내에서 라이선스 사용 대시보드로 이동하려면 다음
 | **[!UICONTROL 기본 지표]** | 해당 제품에 대한 내에서 추적하는 데 사용되는 기본 지표입니다. |
 | **[!UICONTROL 라이선스 금액]** | 제품 라이선스 계약에 합의된 기본 지표의 최대 금액에 대해 계약된 값입니다. |
 | **[!UICONTROL 사용]** | 사용된 기본 지표의 양입니다. 이 값은 프로덕션 또는 개발의 모든 샌드박스에서 해당 지표의 총 사용량을 제공합니다. |
-| **[!UICONTROL 사용 %]** | 라이선스 금액에 따라 사용되는 기본 지표의 비율입니다. |
+| **[!UICONTROL 사용량 %]** | 라이선스 금액에 따라 사용되는 기본 지표의 비율입니다. |
 
 >[!NOTE]
 >
@@ -72,7 +79,7 @@ Platform UI 내에서 라이선스 사용 대시보드로 이동하려면 다음
 
 요약 탭의 테이블에는 [!UICONTROL 지표] 열. 사람이 인식할 수 있는 이러한 설명은 해당 유형의 샌드박스에 사용되는 모든 지표를 나타냅니다.
 
-### 샌드박스를 선택합니다 {#select-sandbox}
+### 샌드박스 선택 {#select-sandbox}
 
 프로덕션 및 개발 샌드박스 유형 간에 보기를 변경하려면 다음 중 하나를 선택합니다 [!UICONTROL 프로덕션 샌드박스] 또는 [!UICONTROL 개발 샌드박스]. 선택한 샌드박스 유형은 샌드박스 이름 옆에 있는 라디오 버튼으로 표시됩니다.
 
