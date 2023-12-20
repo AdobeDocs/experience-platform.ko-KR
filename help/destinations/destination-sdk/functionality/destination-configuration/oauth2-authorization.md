@@ -2,10 +2,10 @@
 description: 이 페이지에서는 Destination SDK에서 지원하는 다양한 OAuth 2 인증 흐름에 대해 설명하고 대상에 대한 OAuth 2 인증을 설정하는 지침을 제공합니다.
 title: OAuth 2 인증
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 7ba9971b44410e609c64f4dcf956a1976207353e
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 4%
+source-wordcount: '2181'
+ht-degree: 3%
 
 ---
 
@@ -33,11 +33,16 @@ Destination SDK은 대상에 대한 여러 인증 방법을 지원합니다. 이
 
 ### 시스템의 필수 구성 요소 {#prerequisites}
 
-첫 번째 단계로, Adobe Experience Platform용 시스템에서 앱을 만들거나 시스템에 Experience Platform을 등록해야 합니다. 목표는 대상에 대한 Experience Platform을 인증하는 데 필요한 클라이언트 ID와 클라이언트 암호를 생성하는 것입니다. 시스템에서 이 구성의 일부로 아래 목록에서 가져올 수 있는 Adobe Experience Platform OAuth 2 리디렉션/콜백 URL이 필요합니다.
+첫 번째 단계로, Adobe Experience Platform용 시스템에서 앱을 만들거나 시스템에 Experience Platform을 등록해야 합니다. 목표는 대상에 대한 Experience Platform을 인증하는 데 필요한 클라이언트 ID와 클라이언트 암호를 생성하는 것입니다.
+
+시스템에서 이 구성의 일부로 아래 목록에서 가져올 수 있는 Adobe Experience Platform OAuth 2 리디렉션/콜백 URL이 필요합니다.
 
 * `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-can2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-gbr9.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >
@@ -118,7 +123,7 @@ Adobe이 OAuth 2 인증을 위해 디자인한 시스템:
 | `refreshTokenUrl` | 문자열 | *선택 사항입니다.* 새로 고침 토큰을 발급하는 사용자 측의 URL입니다. 종종 `refreshTokenUrl` 은(는) 과(와) 동일합니다. `accessTokenUrl`. |
 | `clientId` | 문자열 | 시스템이 Adobe Experience Platform에 할당하는 클라이언트 ID입니다. |
 | `clientSecret` | 문자열 | 시스템이 Adobe Experience Platform에 할당하는 클라이언트 암호입니다. |
-| `scope` | 문자열 목록 | *선택 사항입니다*. 액세스 토큰으로 Experience Platform이 리소스에 대해 수행할 수 있는 범위를 설정합니다. 예: &quot;read, write&quot;. |
+| `scope` | 문자열 목록 | *선택 사항*. 액세스 토큰으로 Experience Platform이 리소스에 대해 수행할 수 있는 범위를 설정합니다. 예: &quot;read, write&quot;. |
 
 {style="table-layout:auto"}
 
@@ -161,7 +166,7 @@ Adobe은 아래의 표준 입력을 사용하여 값을 재정의하는 기능�
 | `accessTokenUrl` | 문자열 | 액세스 토큰 및 선택적으로 토큰 새로 고침을 발행하는 사용자 측의 URL입니다. |
 | `clientId` | 문자열 | 시스템이 Adobe Experience Platform에 할당하는 클라이언트 ID입니다. |
 | `clientSecret` | 문자열 | 시스템이 Adobe Experience Platform에 할당하는 클라이언트 암호입니다. |
-| `scope` | 문자열 목록 | *선택 사항입니다*. 액세스 토큰으로 Experience Platform이 리소스에 대해 수행할 수 있는 범위를 설정합니다. 예: &quot;read, write&quot;. |
+| `scope` | 문자열 목록 | *선택 사항*. 액세스 토큰으로 Experience Platform이 리소스에 대해 수행할 수 있는 범위를 설정합니다. 예: &quot;read, write&quot;. |
 
 {style="table-layout:auto"}
 
@@ -203,7 +208,7 @@ OAuth 2 클라이언트 자격 증명을 구성할 수 있습니다( [RFC 표준
 | `refreshTokenUrl` | 문자열 | *선택 사항입니다.* 새로 고침 토큰을 발급하는 사용자 측의 URL입니다. 종종 `refreshTokenUrl` 은(는) 과(와) 동일합니다. `accessTokenUrl`. |
 | `clientId` | 문자열 | 시스템이 Adobe Experience Platform에 할당하는 클라이언트 ID입니다. |
 | `clientSecret` | 문자열 | 시스템이 Adobe Experience Platform에 할당하는 클라이언트 암호입니다. |
-| `scope` | 문자열 목록 | *선택 사항입니다*. 액세스 토큰으로 Experience Platform이 리소스에 대해 수행할 수 있는 범위를 설정합니다. 예: &quot;read, write&quot;. |
+| `scope` | 문자열 목록 | *선택 사항*. 액세스 토큰으로 Experience Platform이 리소스에 대해 수행할 수 있는 범위를 설정합니다. 예: &quot;read, write&quot;. |
 
 {style="table-layout:auto"}
 
