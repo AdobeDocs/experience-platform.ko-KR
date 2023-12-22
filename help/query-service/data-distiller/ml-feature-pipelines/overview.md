@@ -2,9 +2,9 @@
 title: AI/ML 기능 파이프라인
 description: Data Distiller을 사용하여 Adobe Experience Platform 데이터에서 파생된 기능을 사용하여 머신 러닝 파이프라인을 보강하는 방법에 대해 알아봅니다. 원시 데이터를 기능으로 변환하고 기능 데이터를 전달하여 마케팅 사용 사례를 지원하는 모델을 교육하거나 평가합니다.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 641f507210071ee8efeb3562eec78afd0468d4f2
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
@@ -25,9 +25,9 @@ This document provides an overview of the AI/ML feature pipelines use case and d
 
 ![AI-ML 기능 파이프라인을 자세히 설명하는 인포그래픽.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
-1. Data Distiller의 강력한 쿼리 기능을 사용하면 Experience Platform 외부에서 대량의 이벤트 데이터를 복사할 필요 없이 Experience Platform에서 사용할 수 있는 풍부한 행동 데이터에서 의미 있는 기능을 추출하고 증류된 기능 데이터를 머신 러닝 환경으로 가져올 수 있습니다.
-2. 준비된 기능 데이터 세트를 원하는 머신 러닝 툴로 읽고 엔터프라이즈 데이터에서 파생된 다른 기능과 결합하여 비즈니스에 적합한 맞춤형 모델을 교육하고, 실험하고, 튜닝하고, 배포합니다.
-3. 모델에서 점수, 예측 또는 권장 사항을 생성하고 그 결과를 Experience Platform에 반환하여 Real-time Customer Data Platform 및 Adobe Journey Optimizer을 통해 고객 경험을 최적화합니다.
+- Data Distiller의 강력한 쿼리 기능을 사용하면 Experience Platform에서 사용할 수 있는 풍부한 동작 데이터에서 의미 있는 기능을 추출할 수 있습니다. 그런 다음 Experience Platform 외부에서 대량의 이벤트 데이터를 복사할 필요 없이 증류된 기능 데이터를 머신 러닝 환경으로 가져올 수 있습니다.
+- 준비된 기능 데이터 세트를 원하는 머신 러닝 툴로 읽고 엔터프라이즈 데이터에서 파생된 다른 기능과 결합하여 비즈니스에 적합한 맞춤형 모델을 교육하고, 실험하고, 튜닝하고, 배포합니다.
+- 모델에서 점수, 예측 또는 권장 사항을 생성하고 그 결과를 Experience Platform에 반환하여 Real-time Customer Data Platform 및 Adobe Journey Optimizer을 통해 고객 경험을 최적화합니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -43,10 +43,13 @@ This document provides an overview of the AI/ML feature pipelines use case and d
 
 이 일련의 안내서에 포함된 문서에서는 Experience Platform에서 머신 러닝 환경의 사용자 지정 모델에 대한 기능 파이프라인을 만드는 기본 단계를 설명합니다. 이제 Data Distiller과 을(를) 연결할 준비가 되었습니다. [!DNL Jupyter Notebook].
 
-- [다음에서 Data Distiller에 연결 [!DNL Python] notebook](./establish-connection.md)
-- [데이터 세트 탐색 및 분석](./exploratory-analysis.md)
-- [머신 러닝을 위한 엔지니어 기능](./feature-engineering.md)
-- [기능 데이터 세트 내보내기](./export-data.md)
+- **설정**: [다음에서 Data Distiller에 연결 [!DNL Python] notebook](./establish-connection.md)
+
+아래 링크된 설명서는 위의 인포그래픽에 표시된 단계에 해당합니다.
+
+- **1단계**: [데이터 세트 탐색 및 분석](./exploratory-analysis.md)
+- **2단계**: [머신 러닝을 위한 엔지니어 기능](./feature-engineering.md)
+- **3단계**: [기능 데이터 세트 내보내기](./export-data.md)
 
 ## 추가 리소스
 
