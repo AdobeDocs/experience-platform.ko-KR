@@ -3,38 +3,38 @@ keywords: Experience Platform;홈;인기 항목;데이터 액세스;데이터 �
 solution: Experience Platform
 title: 데이터 액세스 API를 사용하여 데이터 세트 데이터 보기
 type: Tutorial
-description: Adobe Experience Platform의 Data Access API를 사용하여 데이터 세트 내에 저장된 데이터를 찾고, 액세스하고, 다운로드하는 방법을 알아봅니다. 또한 페이징 및 부분 다운로드와 같은 Data Access API의 고유한 기능 중 일부를 소개합니다.
+description: Adobe Experience Platform의 Data Access API를 사용하여 데이터 세트 내에 저장된 데이터를 찾고, 액세스하고, 다운로드하는 방법을 알아봅니다. 이 문서에서는 페이징 및 부분 다운로드와 같은 Data Access API의 고유한 기능 중 일부를 소개합니다.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 9144a5f4cce88fc89973a7fea6d69384cc5f4ba1
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 3%
+source-wordcount: '1364'
+ht-degree: 7%
 
 ---
 
 # 다음을 사용하여 데이터 세트 데이터 보기 [!DNL Data Access] API
 
-이 문서에서는 다음을 사용하여 데이터 집합 내에 저장된 데이터를 찾고, 액세스하고, 다운로드하는 방법을 다루는 단계별 자습서를 제공합니다. [!DNL Data Access] Adobe Experience Platform의 API입니다. 또한 의 고유한 기능 중 일부를 소개합니다. [!DNL Data Access] 페이징 및 부분 다운로드와 같은 API입니다.
+이 단계별 자습서를 사용하여 데이터 세트 내에 저장된 데이터를 찾아서 액세스하고 다운로드하는 방법을 알아보십시오. [!DNL Data Access] Adobe Experience Platform의 API입니다. 이 문서에서는 의 몇 가지 고유한 기능을 소개합니다 [!DNL Data Access] 페이징 및 부분 다운로드와 같은 API입니다.
 
 ## 시작하기
 
 이 자습서에서는 데이터 세트를 만들고 채우는 방법에 대한 작업 이해를 필요로 합니다. 다음을 참조하십시오. [데이터 세트 만들기 자습서](../../catalog/datasets/create.md) 추가 정보.
 
-다음 섹션에서는 Platform API를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다.
+다음 섹션은 Platform API를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다.
 
-### 샘플 API 호출 읽기
+### 샘플 API 호출 읽기 {#reading-sample-api-calls}
 
-이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 포맷의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 다음에서 [!DNL Experience Platform] 문제 해결 가이드.
+이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 다음에서 [!DNL Experience Platform] 문제 해결 가이드.
 
 ### 필수 헤더에 대한 값 수집
 
-을 호출하기 위해 [!DNL Platform] API, 먼저 다음을 완료해야 합니다. [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). 인증 자습서를 완료하면 모든 항목에서 필요한 각 헤더에 대한 값이 제공됩니다 [!DNL Experience Platform] 아래와 같이 API 호출:
+을(를) 호출하려면 [!DNL Platform] API, 먼저 다음을 완료해야 합니다. [인증 자습서](../../landing/api-authentication.md). 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - 인증: 전달자 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-의 모든 리소스 [!DNL Experience Platform] 특정 가상 샌드박스로 격리됩니다. 에 대한 모든 요청 [!DNL Platform] API에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+의 모든 리소스 [!DNL Experience Platform] 특정 가상 샌드박스로 격리됩니다. 에 대한 모든 요청 [!DNL Platform] API에는 작업이 발생하는 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -48,19 +48,20 @@ ht-degree: 3%
 
 ## 시퀀스 다이어그램
 
-이 자습서는 아래 시퀀스 다이어그램에 설명된 단계를 따르며 의 핵심 기능을 강조 표시합니다. [!DNL Data Access] API.</br>
-![](../images/sequence_diagram.png)
+이 자습서는 아래 시퀀스 다이어그램에 설명된 단계를 따르며 의 핵심 기능을 강조 표시합니다. [!DNL Data Access] API.
 
-다음 [!DNL Catalog] API를 사용하면 배치 및 파일에 대한 정보를 검색할 수 있습니다. 다음 [!DNL Data Access] API를 사용하면 파일 크기에 따라 전체 또는 부분 다운로드로서 HTTP를 통해 이러한 파일에 액세스하고 다운로드할 수 있습니다.
+![Data Access API 핵심 기능의 시퀀스 다이어그램입니다.](../images/sequence_diagram.png)
+
+배치 및 파일에 대한 정보를 검색하려면 [!DNL Catalog] API. HTTP를 통해 파일 크기에 따라 전체 또는 부분 다운로드로 이러한 파일에 액세스하고 다운로드하려면 [!DNL Data Access] API.
 
 ## 데이터 찾기
 
-을(를) 사용하기 전에 [!DNL Data Access] API, 액세스하려는 데이터의 위치를 식별해야 합니다. 다음에서 [!DNL Catalog] API에는 조직의 메타데이터를 탐색하고, 액세스할 일괄 처리 또는 파일의 ID를 검색하는 데 사용할 수 있는 두 가지 종단점이 있습니다.
+을(를) 사용하기 전에 [!DNL Data Access] API를 사용하려면 액세스하려는 데이터의 위치를 식별해야 합니다. 다음에서 [!DNL Catalog] API에는 조직의 메타데이터를 탐색하고, 액세스할 일괄 처리 또는 파일의 ID를 검색하는 데 사용할 수 있는 두 가지 종단점이 있습니다.
 
 - `GET /batches`: 조직의 배치 목록을 반환합니다.
 - `GET /dataSetFiles`: 조직 아래의 파일 목록을 반환합니다.
 
-의 포괄적인 엔드포인트 목록 [!DNL Catalog] API, 다음을 참조하십시오. [API 참조](https://www.adobe.io/experience-platform-apis/references/catalog/).
+의 포괄적인 엔드포인트 목록 [!DNL Catalog] API에서 다음을 참조하십시오. [API 참조](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 ## 조직에서 배치 목록 검색
 
@@ -105,9 +106,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
 }
 ```
 
-### 배치 목록 필터링
+### 배치 목록 필터링 {#filter-batches-list}
 
-필터는 종종 특정 사용 사례에 대한 적절한 데이터를 검색하기 위해 특정 일괄 처리를 찾는 데 필요합니다. 매개 변수를 `GET /batches` 반환된 응답을 필터링하기 위한 요청입니다. 아래 요청은 특정 데이터 세트 내에서 지정된 시간 후에 생성된 모든 배치를 반환하며 이 배치는 생성 시점을 기준으로 정렬됩니다.
+필터는 종종 특정 사용 사례에 대한 적절한 데이터를 검색하기 위해 특정 배치를 찾는 데 필요합니다. 매개 변수를 `GET /batches` 반환된 응답을 필터링하도록 요청합니다. 아래 요청은 특정 데이터 세트 내에서 지정된 시간 이후에 생성된 모든 배치를 반환하며 이 배치는 생성 시점을 기준으로 정렬됩니다.
 
 **API 형식**
 
@@ -191,7 +192,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 }
 ```
 
-매개 변수와 필터의 전체 목록은 [카탈로그 API 참조](https://www.adobe.io/experience-platform-apis/references/catalog/).
+매개 변수와 필터의 전체 목록은 [카탈로그 API 참조](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 ## 특정 배치에 속하는 모든 파일 목록 검색
 
@@ -250,7 +251,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 
 응답에는 지정된 배치 내의 모든 파일을 나열하는 데이터 배열이 포함됩니다. 파일 참조: 파일 ID는 `dataSetFileId` 필드.
 
-## 파일 ID를 사용하여 파일에 액세스
+## 파일 ID를 사용하여 파일에 액세스 {#access-file-with-file-id}
 
 고유한 파일 ID가 있으면 [!DNL Data Access] 이름, 크기(바이트) 및 다운로드 링크를 포함하여 파일에 대한 특정 세부 정보에 액세스하기 위한 API입니다.
 
@@ -274,7 +275,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-파일 ID가 개별 파일을 가리키는지 아니면 디렉터리를 가리키는지에 따라 반환되는 데이터 배열에는 단일 항목이나 해당 디렉터리에 속하는 파일 목록이 포함될 수 있습니다. 각 파일 요소에는 파일 이름, 크기(바이트) 및 파일 다운로드 링크와 같은 세부 정보가 포함됩니다.
+파일 ID가 개별 파일을 가리키는지 아니면 디렉터리를 가리키는지에 따라 반환되는 데이터 배열에는 단일 항목이나 해당 디렉터리에 속하는 파일 목록이 포함될 수 있습니다. 각 파일 요소에는 파일 이름, 크기(바이트) 및 파일 다운로드 링크와 같은 세부 정보가 포함되어 있습니다.
 
 **사례 1: 파일 ID가 단일 파일을 가리킴**
 
@@ -350,7 +351,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 | -------- | ----------- | 
 | `data._links.self.href` | 연결된 파일을 다운로드할 URL입니다. |
 
-이 응답은 ID가 있는 두 개의 개별 파일이 포함된 디렉토리를 반환합니다 `{FILE_ID_2}` 및 `{FILE_ID_3}`. 이 시나리오에서는 파일에 액세스하려면 각 파일의 URL을 따라야 합니다.
+이 응답은 ID가 있는 두 개의 개별 파일이 포함된 디렉토리를 반환합니다 `{FILE_ID_2}` 및 `{FILE_ID_3}`. 이 시나리오에서는 각 파일의 URL을 따라 파일에 액세스해야 합니다.
 
 ## 파일의 메타데이터 검색
 
@@ -380,6 +381,7 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
 **응답**
 
 응답 헤더에는 다음을 포함하여 쿼리된 파일의 메타데이터가 포함됩니다.
+
 - `Content-Length`: 페이로드의 크기를 바이트 단위로 나타냅니다.
 - `Content-Type`: 파일 유형을 나타냅니다.
 
@@ -412,9 +414,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 응답이 성공하면 파일의 내용이 반환됩니다.
 
-## 파일의 일부 내용 다운로드
+## 파일의 일부 내용 다운로드 {#download-partial-file-contents}
 
-다음 [!DNL Data Access] API를 사용하면 파일을 청크 단위로 다운로드할 수 있습니다. 범위 헤더는 다음 기간 동안 지정할 수 있습니다. `GET /files/{FILE_ID}` 파일에서 특정 바이트 범위를 다운로드하도록 요청합니다. 범위를 지정하지 않으면 기본적으로 API에서 전체 파일을 다운로드합니다.
+파일에서 특정 바이트 범위를 다운로드하려면 `GET /files/{FILE_ID}` 에 대한 요청 [!DNL Data Access] API. 범위를 지정하지 않으면 기본적으로 API가 전체 파일을 다운로드합니다.
 
 의 HEAD 예 [이전 섹션](#retrieve-the-metadata-of-a-file) 는 특정 파일의 크기를 바이트 단위로 제공합니다.
 
@@ -452,7 +454,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 - 콘텐츠 유형: application/parquet(Parquet 파일이 요청되었으므로 응답 콘텐츠 유형이 다음과 같습니다. `parquet`)
 - Content-Range: bytes 0-99/249058(총 바이트 수(249058) 중 요청된 범위(0-99))
 
-## API 응답 페이지 매김 구성
+## API 응답 페이지 매김 구성 {#configure-response-pagination}
 
 다음 내의 응답 [!DNL Data Access] API에 페이지가 매겨집니다. 기본적으로 페이지당 최대 항목 수는 100개입니다. 페이징 매개 변수를 사용하여 기본 동작을 수정할 수 있습니다.
 

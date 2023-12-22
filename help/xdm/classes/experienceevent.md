@@ -4,22 +4,22 @@ solution: Experience Platform
 title: XDM ExperienceEvent 클래스
 description: XDM ExperienceEvent 클래스와 이벤트 데이터 모델링을 위한 모범 사례에 대해 알아봅니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
 workflow-type: tm+mt
-source-wordcount: '2659'
+source-wordcount: '2656'
 ht-degree: 1%
 
 ---
 
 # [!DNL XDM ExperienceEvent] 클래스
 
-[!DNL XDM ExperienceEvent] 는 특정 이벤트가 발생하거나 특정 조건 세트에 도달했을 때 시스템의 타임스탬프가 지정된 스냅샷을 만들 수 있는 표준 경험 데이터 모델(XDM) 클래스입니다.
+[!DNL XDM ExperienceEvent] 는 표준 경험 데이터 모델(XDM) 클래스입니다. 특정 이벤트가 발생하거나 특정 조건 집합에 도달한 경우 이 클래스를 사용하여 시스템의 타임스탬프가 지정된 스냅샷을 만듭니다.
 
 경험 이벤트 는 시점 및 관련된 개인의 ID를 포함하여 발생한 사항에 대한 팩트 레코드입니다. 사건은 명시적(직접 관찰 가능한 인간 행동) 또는 암시적(직접 인간 행동 없이 발생)일 수 있으며 집계나 해석 없이 기록된다. 플랫폼 생태계에서 이 클래스의 사용에 대한 자세한 내용은 [XDM 개요](../home.md#data-behaviors).
 
-다음 [!DNL XDM ExperienceEvent] 클래스 자체는 스키마에 여러 시계열 관련 필드를 제공합니다. 이 필드 중 두 개(`_id` 및 `timestamp`) **필수** 클래스를 기반으로 하는 모든 스키마의 경우 나머지는 선택 사항입니다. 일부 필드의 값은 데이터가 수집될 때 자동으로 채워집니다.
+다음 [!DNL XDM ExperienceEvent] 클래스 자체는 스키마에 여러 시계열 관련 필드를 제공합니다. 이 필드 중 두 개(`_id` 및 `timestamp`) **필수** 이 클래스를 기반으로 하는 모든 스키마의 경우 나머지는 선택 사항입니다. 일부 필드의 값은 데이터가 수집될 때 자동으로 채워집니다.
 
-![Platform UI에 표시되는 XDM ExperienceEvent 구조](../images/classes/experienceevent/structure.png)
+![Platform UI에 표시되는 XDM ExperienceEvent 구조.](../images/classes/experienceevent/structure.png)
 
 | 속성 | 설명 |
 | --- | --- |
@@ -27,7 +27,7 @@ ht-degree: 1%
 | `eventMergeId` | 을 사용하는 경우 [Adobe Experience Platform 웹 SDK](../../edge/home.md) 데이터를 수집하기 위해 레코드를 만들게 한 수집된 일괄 처리의 ID를 나타냅니다. 이 필드는 데이터 수집 시 시스템에서 자동으로 채워집니다. 웹 SDK 구현의 컨텍스트 외부에서 이 필드를 사용할 수 없습니다. |
 | `eventType` | 이벤트의 유형 또는 범주를 나타내는 문자열입니다. 이 필드는 제품 보기 이벤트를 소매 회사에 대한 장바구니에 추가 이벤트와 구분하는 것처럼 동일한 스키마 및 데이터 세트 내에서 다른 이벤트 유형을 구분하려는 경우 사용할 수 있습니다.<br><br>이 속성의 표준 값은 [부록 섹션](#eventType), 의도한 사용 사례에 대한 설명 포함. 이 필드는 확장 가능한 열거형입니다. 즉, 고유한 이벤트 유형 문자열을 사용하여 추적 중인 이벤트를 분류할 수도 있습니다.<br><br>`eventType` 는 애플리케이션에서 히트당 하나의 이벤트만 사용하도록 제한하므로 시스템에서 가장 중요한 이벤트를 알려주기 위해 계산된 필드를 사용해야 합니다. 자세한 내용은 다음 섹션 을 참조하십시오 [계산된 필드에 대한 우수 사례](#calculated). |
 | `producedBy` | 이벤트의 생성자 또는 출처를 설명하는 문자열 값입니다. 이 필드는 세분화 목적으로 필요한 경우 특정 이벤트 제작자를 필터링하는 데 사용할 수 있습니다.<br><br>이 속성에 대해 제안된 몇 가지 값은 [부록 섹션](#producedBy). 이 필드는 확장 가능한 열거형입니다. 즉, 고유한 문자열을 사용하여 다른 이벤트 생성자를 나타낼 수도 있습니다. |
-| `identityMap` | 이벤트가 적용되는 개인에 대한 네임스페이스 ID 세트가 포함된 맵 필드입니다. 이 필드는 ID 데이터가 수집될 때 시스템에 의해 자동으로 업데이트됩니다. 이 필드를 적절하게 사용하려면 [실시간 고객 프로필](../../profile/home.md)를 사용하여 데이터 작업에서 필드의 내용을 수동으로 업데이트하지 마십시오.<br /><br />에서 ID 맵에 대한 섹션을 참조하십시오. [스키마 컴포지션 기본 사항](../schema/composition.md#identityMap) 사용 사례에 대한 자세한 내용을 보려면 여기를 클릭하십시오. |
+| `identityMap` | 이벤트가 적용되는 개인에 대한 네임스페이스 ID 세트가 포함된 맵 필드입니다. 이 필드는 ID 데이터가 수집될 때 시스템에 의해 자동으로 업데이트됩니다. 이 필드를 적절하게 활용하려면 [실시간 고객 프로필](../../profile/home.md)를 사용하여 데이터 작업에서 필드의 내용을 수동으로 업데이트하지 마십시오.<br /><br />에서 ID 맵에 대한 섹션을 참조하십시오. [스키마 컴포지션 기본 사항](../schema/composition.md#identityMap) 사용 사례에 대한 자세한 내용을 보려면 여기를 클릭하십시오. |
 | `timestamp`<br>**(필수)** | 다음 형식의 이벤트 발생 시점의 ISO 8601 타임스탬프 [RFC 3339 섹션 5.6](https://datatracker.ietf.org/doc/html/rfc3339). 이 타임스탬프는 과거의 날짜여야 합니다. 에 대한 아래 섹션 참조 [타임스탬프](#timestamps) 이 필드의 사용에 대한 모범 사례입니다. |
 
 {style="table-layout:auto"}
@@ -50,7 +50,7 @@ ht-degree: 1%
 
 경험 애플리케이션의 특정 상호 작용으로 인해 동일한 이벤트 타임스탬프를 기술적으로 공유하는 여러 관련 이벤트가 발생할 수 있으므로 단일 이벤트 레코드로 나타낼 수 있습니다. 예를 들어 고객이 웹 사이트에서 제품을 보는 경우 두 가지 가능성이 있는 이벤트 레코드가 발생할 수 있습니다 `eventType` 값: &quot;제품 보기&quot; 이벤트(`commerce.productViews`) 또는 일반적인 &quot;페이지 보기&quot; 이벤트(`web.webpagedetails.pageViews`). 이러한 경우 단일 히트에서 여러 이벤트가 캡처될 때 계산된 필드를 사용하여 가장 중요한 속성을 캡처할 수 있습니다.
 
-[Adobe Experience Platform 데이터 준비](../../data-prep/home.md) 를 사용하면 XDM에서 데이터를 매핑, 변환 및 확인할 수 있습니다. 사용 가능한 사용 [매핑 함수](../../data-prep/functions.md) 이 서비스에서 제공하면 논리 연산자를 호출하여 Experience Platform으로 수집할 때 다중 이벤트 레코드의 데이터를 우선 순위 지정, 변환 및/또는 통합할 수 있습니다. 위의 예에서 `eventType` 둘 다 발생할 때마다 &quot;페이지 보기&quot;보다 &quot;제품 보기&quot;의 우선 순위를 지정하는 계산된 필드입니다.
+사용 [Adobe Experience Platform 데이터 준비](../../data-prep/home.md) 를 사용하여 XDM에서 데이터를 매핑, 변환 및 검증할 수 있습니다. 사용 가능한 사용 [매핑 함수](../../data-prep/functions.md) 이 서비스에서 제공하면 논리 연산자를 호출하여 Experience Platform으로 수집할 때 다중 이벤트 레코드의 데이터를 우선 순위 지정, 변환 및/또는 통합할 수 있습니다. 위의 예에서 `eventType` 둘 다 발생할 때마다 &quot;페이지 보기&quot;보다 &quot;제품 보기&quot;의 우선 순위를 지정하는 계산된 필드입니다.
 
 UI를 통해 데이터를 플랫폼으로 수동으로 수집하는 경우 의 안내서를 참조하십시오. [계산된 필드](../../data-prep/ui/mapping.md#calculated-fields) 계산된 필드를 만드는 방법에 대한 특정 단계입니다.
 
@@ -140,7 +140,7 @@ Adobe은 와 함께 사용할 수 있도록 여러 표준 필드 그룹을 제�
 | `leadOperation.changeEngagementCampaignCadence` | 이 이벤트는 잠재 고객이 캠페인의 일부로 참여하는 빈도가 변경된 경우 추적합니다. |
 | `leadOperation.convertLead` | 이 이벤트는 잠재 고객 전환 시 추적합니다. |
 | `leadOperation.interestingMoment` | 이 이벤트는 한 사람에게 재미있는 순간을 기록할 때 추적합니다. |
-| `leadOperation.mergeLeads` | 이 이벤트는 동일한 엔티티를 참조하는 여러 잠재 고객의 정보가 통합되는 시점을 추적합니다. |
+| `leadOperation.mergeLeads` | 이 이벤트는 동일한 엔터티를 참조하는 여러 리드의 정보가 통합되면 추적합니다. |
 | `leadOperation.newLead` | 이 이벤트는 잠재 고객 생성 시 추적합니다. |
 | `leadOperation.scoreChanged` | 이 이벤트는 잠재 고객의 스코어 속성 값이 변경되면 추적합니다. |
 | `leadOperation.statusInCampaignProgressionChanged` | 이 이벤트는 캠페인에서 잠재 고객의 상태가 변경되면 추적합니다. |

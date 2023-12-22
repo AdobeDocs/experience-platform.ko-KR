@@ -2,18 +2,18 @@
 keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비스;spark sql;Spark sql;spark;spark sql 함수;함수;
 solution: Experience Platform
 title: 쿼리 서비스의 Spark SQL 함수
-description: 이 설명서에는 SQL 기능을 확장하는 Spark SQL 함수에 대한 정보가 포함되어 있습니다.
+description: SQL 기능을 확장하는 지원되는 Spark SQL 함수에 대해 알아봅니다.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 7ac1521adb916313c8b53fe2a095821d756480be
 workflow-type: tm+mt
-source-wordcount: '3866'
-ht-degree: 0%
+source-wordcount: '1903'
+ht-degree: 1%
 
 ---
 
 # [!DNL Spark] SQL 함수
 
-Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위한 몇 가지 내장 Spark SQL 기능을 제공합니다. 이 문서에서는 쿼리 서비스에서 지원하는 Spark SQL 함수를 나열합니다.
+여러 기본 제공 Spark SQL 함수를 사용하여 Adobe Experience Platform Query Service로 SQL 기능을 확장할 수 있습니다. 이 문서에서는 쿼리 서비스에서 지원하는 Spark SQL 함수를 나열합니다.
 
 구문, 사용 방법 및 예를 포함하여 함수에 대한 자세한 내용은 [Spark SQL 함수 설명서](https://spark.apache.org/docs/latest/api/sql/index.html).
 
@@ -73,7 +73,7 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위한 몇
 | [`positive`](https://spark.apache.org/docs/latest/api/sql/index.html#positive) | 양수 값 반환 |
 | [`pow`](https://spark.apache.org/docs/latest/api/sql/index.html#pow), [`power`](https://spark.apache.org/docs/latest/api/sql/index.html#power) | 첫 번째 값을 두 번째 값의 거듭제곱으로 반환합니다. |
 | [`radians`](https://spark.apache.org/docs/latest/api/sql/index.html#radians) | 값을 라디안으로 변환 |
-| [`rand`](https://spark.apache.org/docs/latest/api/sql/index.html#rand) | 0과 1 사이의 난수를 반환합니다. |
+| [`rand`](https://spark.apache.org/docs/latest/api/sql/index.html#rand) | 0에서 1까지의 난수 반환 |
 | [`randn`](https://spark.apache.org/docs/latest/api/sql/index.html#randn) | 임의 값 반환 |
 | [`rint`](https://spark.apache.org/docs/latest/api/sql/index.html#rint) | 가장 가까운 double 값 반환 |
 | [`round`](https://spark.apache.org/docs/latest/api/sql/index.html#round) | 가장 가까운 반올림된 값 반환 |
@@ -95,9 +95,9 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위한 몇
 | 연산자/함수 | 설명 |
 | ----------------- | ----------- |
 | [`!`](https://spark.apache.org/docs/latest/api/sql/index.html#_1) 또는 [`not`](https://spark.apache.org/docs/latest/api/sql/index.html#not) | 논리적 아님 |
-| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | 미만 |
+| [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | 보다 작음 |
 | [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | 작거나 같음 |
-| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | 같음 |
+| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | 다음과 같음 |
 | [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | 보다 큼 |
 | [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | 크거나 같음 |
 | [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | 비트 전용 또는 |
@@ -129,10 +129,10 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위한 몇
 | [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day), [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | 날짜를 반환합니다. |
 | [`dayofweek`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofweek) | 요일 반환(1-7) |
 | [`dayofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofyear) | 일(한 해 기준) 반환 |
-| [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | 날짜를 Unix 시간으로 반환 |
+| [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | 날짜를 UNIX® 시간으로 반환 |
 | [`from_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#from_utc_timestamp) | 날짜를 UTC 시간으로 반환 |
 | [`hour`](https://spark.apache.org/docs/latest/api/sql/index.html#hour) | 입력 시간 반환 |
-| [`last_day`](https://spark.apache.org/docs/latest/api/sql/index.html#last_day) | 날짜가 속한 달의 말일을 반환합니다. |
+| [`last_day`](https://spark.apache.org/docs/latest/api/sql/index.html#last_day) | 날짜가 속한 달의 마지막 날짜를 반환합니다. |
 | [`minute`](https://spark.apache.org/docs/latest/api/sql/index.html#minute) | 입력 시간(분) 반환 |
 | [`month`](https://spark.apache.org/docs/latest/api/sql/index.html#month) | 입력 월 반환 |
 | [`months_between`](https://spark.apache.org/docs/latest/api/sql/index.html#months_between) | 다음 기간 사이의 개월 수 |
@@ -141,10 +141,10 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위한 몇
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | 문자열의 초 반환 |
 | [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | 문자열을 날짜로 변환합니다. **참고:** 문자열 **필수** 형식이어야 합니다. `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | 문자열을 타임스탬프로 변환합니다. **참고:** 문자열 **필수** 형식이어야 합니다. `yyyy-mm-ddTHH24:MM:SS`. |
-| [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | 문자열을 Unix 타임스탬프로 변환합니다. |
+| [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | 문자열을 UNIX® 타임스탬프로 변환합니다. |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | 문자열을 UTC 타임스탬프로 변환 |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | 날짜 자르기 |
-| [`unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#unix_timestamp) | Unix 타임스탬프 반환 |
+| [`unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#unix_timestamp) | UNIX® 타임스탬프 반환 |
 | [`weekday`](https://spark.apache.org/docs/latest/api/sql/index.html#weekday) | 요일 (0-6) |
 | [`weekofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#weekofyear) | 지정된 일자의 주를 반환합니다. |
 | [`year`](https://spark.apache.org/docs/latest/api/sql/index.html#year) | 문자열의 연도 반환 |
@@ -217,7 +217,7 @@ Adobe Experience Platform Query Service는 SQL 기능을 확장하기 위한 몇
 | [`from_json`](https://spark.apache.org/docs/latest/api/sql/index.html#from_json), [`get_json_object`](https://spark.apache.org/docs/latest/api/sql/index.html#get_json_object) | JSON에서 데이터 가져오기 |
 | [`hash`](https://spark.apache.org/docs/latest/api/sql/index.html#hash) | 해시 값 반환 |
 | [`hex`](https://spark.apache.org/docs/latest/api/sql/index.html#hex) | 인수를 16진수 값으로 변환 |
-| [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | 문자열을 제목 케이스로 변경합니다. |
+| [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | 문자열을 제목 대/소문자로 변경합니다. |
 | [`lcase`](https://spark.apache.org/docs/latest/api/sql/index.html#lcase), [`lower`](https://spark.apache.org/docs/latest/api/sql/index.html#lower) | 문자열을 모두 소문자로 변경합니다. |
 | [`lpad`](https://spark.apache.org/docs/latest/api/sql/index.html#lpad) | 문자열의 왼쪽에 패드 달기 |
 | [`map`](https://spark.apache.org/docs/latest/api/sql/index.html#map) | 맵 만들기 |
