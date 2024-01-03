@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 UI 안내서
 description: Adobe Experience Platform UI에서 대상 및 세그먼트 정의를 만들고 관리하는 방법을 알아봅니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 692cdd3d8b30c3e5187a556e4f9ec80d675cb443
+source-git-commit: 7ee39a39aecdfc0516f63e6a9c9a06c6c4b22996
 workflow-type: tm+mt
-source-wordcount: '3910'
+source-wordcount: '3933'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 3%
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] 에 저장된 데이터를 세그먼트화할 수 있습니다. [!DNL Experience Platform] 고객, 잠재 고객, 사용자 또는 조직 등 개인과 관련된 정보를 더 작은 그룹으로 분류할 수 있습니다.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): 수집되는 서로 다른 데이터 소스의 ID를 브리징하여 고객 프로필을 만들 수 있습니다 [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다. 세그먼테이션을 최대한 활용하려면 데이터에 따라 프로필 및 이벤트가 수집되는지 확인하십시오. [데이터 모델링 우수 사례](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다. 세그먼테이션을 최대한 활용하려면 데이터에 따라 프로필 및 이벤트가 수집되는지 확인하십시오. [데이터 모델링 우수 사례](../../xdm/schema/best-practices.md).
 
 또한 이 문서를 통해 사용되는 두 가지 주요 용어를 이해하고 두 용어 간의 차이점을 이해해야 합니다.
 
@@ -72,17 +72,17 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 
 | 작업 | 원본 | 설명 |
 | ------ | ------- | ----------- |
-| [!UICONTROL 편집] | Segmentation Service | 세그먼트 빌더를 열어 대상자를 편집할 수 있습니다. 세그먼트 빌더 사용에 대한 자세한 내용은 [세그먼트 빌더 UI 안내서](./segment-builder.md). |
-| [!UICONTROL 컴포지션 열기] | 대상자 구성 | 대상 컴포지션을 열어 대상을 볼 수 있습니다. 대상자 구성에 대한 자세한 내용은 [대상자 구성 UI 안내서](./audience-composition.md). |
-| [!UICONTROL 대상에 활성화] | Segmentation Service | 대상에 대한 대상을 활성화할 수 있습니다. 대상을 대상으로 활성화하는 방법에 대한 자세한 내용은 [활성화 개요](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL 파트너와 공유] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 다른 Platform 사용자와 대상을 공유할 수 있습니다. 이 기능에 대한 자세한 내용은 [세그먼트 일치 개요](./segment-match/overview.md). |
-| [!UICONTROL 태그 관리] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 대상자에 속하는 사용자 정의 태그를 관리할 수 있습니다. 이 기능에 대한 자세한 내용은 의 섹션을 참조하십시오. [필터링 및 태그 지정](#manage-audiences). |
-| [!UICONTROL 폴더로 이동] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 대상자가 속한 폴더를 관리할 수 있습니다. 이 기능에 대한 자세한 내용은 의 섹션을 참조하십시오. [필터링 및 태그 지정](#manage-audiences). |
+| [!UICONTROL 편집] | Segmentation Service | 세그먼트 빌더를 열어 대상자를 편집합니다. 대상이 API를 통해 만들어진 경우 다음을 수행하십시오 **아님** 세그먼트 빌더를 사용하여 편집할 수 있습니다. 세그먼트 빌더 사용에 대한 자세한 내용은 [세그먼트 빌더 UI 안내서](./segment-builder.md). |
+| [!UICONTROL 컴포지션 열기] | 대상자 구성 | 대상을 볼 수 있는 대상 구성을 엽니다. 대상자 구성에 대한 자세한 내용은 [대상자 구성 UI 안내서](./audience-composition.md). |
+| [!UICONTROL 대상에 활성화] | Segmentation Service | 대상을 대상으로 활성화합니다. 대상을 대상으로 활성화하는 방법에 대한 자세한 내용은 [활성화 개요](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL 파트너와 공유] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 다른 Platform 사용자와 대상을 공유합니다. 이 기능에 대한 자세한 내용은 [세그먼트 일치 개요](./segment-match/overview.md). |
+| [!UICONTROL 태그 관리] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 대상에 속하는 사용자 정의 태그를 관리합니다. 이 기능에 대한 자세한 내용은 의 섹션을 참조하십시오. [필터링 및 태그 지정](#manage-audiences). |
+| [!UICONTROL 폴더로 이동] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 대상자가 속한 폴더를 관리합니다. 이 기능에 대한 자세한 내용은 의 섹션을 참조하십시오. [필터링 및 태그 지정](#manage-audiences). |
 | [!UICONTROL 복사] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 선택한 대상자를 복제합니다. |
-| [!UICONTROL 액세스 레이블 적용] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 대상자에 속하는 액세스 레이블을 관리할 수 있습니다. 액세스 레이블에 대한 자세한 내용은 의 설명서를 참조하십시오. [레이블 관리](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL 액세스 레이블 적용] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 대상에 속하는 액세스 레이블을 관리합니다. 액세스 레이블에 대한 자세한 내용은 의 설명서를 참조하십시오. [레이블 관리](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL 보관] | 사용자 정의 업로드 | 선택한 대상자를 보관합니다. |
 | [!UICONTROL 삭제] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 선택한 대상자를 삭제합니다. |
-| [!UICONTROL 패키지에 추가] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 샌드박스 간에 대상자를 이동할 수 있습니다. 이 기능에 대한 자세한 내용은 [샌드박스 도구 안내서](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL 패키지에 추가] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 샌드박스 간에 대상자를 이동합니다. 이 기능에 대한 자세한 내용은 [샌드박스 도구 안내서](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!NOTE]
 >
@@ -106,7 +106,7 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 
 ![업데이트 주기 파이 차트가 표시됩니다.](../images/ui/overview/update-frequency-chart.png)
 
-### 사용자 지정 {#customize}
+### 사용자 정의 {#customize}
 
 에 필드를 추가할 수 있습니다. [!UICONTROL 찾아보기] 선택하여 페이지 ![필터 속성 아이콘](../images/ui/overview/filter-attribute.png). 이러한 추가 필드에는 라이프사이클 상태, 업데이트 주기, 마지막 업데이트자, 설명, 작성자 및 액세스 레이블이 포함됩니다.
 
@@ -399,7 +399,7 @@ UI 또는 API를 사용하여 예약된 평가에 대해 대상을 활성화할 
 | [!UICONTROL 상태] | 대상의 상태입니다. 이 필드에 사용할 수 있는 값은 다음과 같습니다. `Draft`, `Published`, 및 `Archived`. |
 | [!UICONTROL 생성일] | 대상자가 생성된 시간과 날짜. |
 | [!UICONTROL 작성자] | 대상을 만든 사람의 이름입니다. |
-| [!UICONTROL 업데이트된 기능] | 대상자가 마지막으로 업데이트된 시간 및 날짜입니다. |
+| [!UICONTROL 업데이트됨] | 대상자가 마지막으로 업데이트된 시간 및 날짜입니다. |
 | [!UICONTROL 업데이트한 사람] | 대상자를 마지막으로 업데이트한 사람의 이름입니다. |
 
 대상자 구성 방법을 보려면 내에서 대상자의 이름을 선택합니다 [!UICONTROL 대상] 탭.

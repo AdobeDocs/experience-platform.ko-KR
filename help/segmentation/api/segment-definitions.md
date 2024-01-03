@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼트 정의 API 엔드포인트
 description: Adobe Experience Platform Segmentation Service API의 세그먼트 정의 엔드포인트를 사용하면 조직의 세그먼트 정의를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: d47ec6fca05191f532b5a2e94f1943c4337258ed
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1228'
 ht-degree: 3%
 
 ---
@@ -153,6 +153,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 에 POST 요청을 하여 새 세그먼트 정의를 만들 수 있습니다. `/segment/definitions` 엔드포인트.
 
+>[!IMPORTANT]
+>
+>API를 통해 생성된 세그먼트 정의 **할 수 없음** 세그먼트 빌더를 사용하여 편집할 수 있습니다.
+
 **API 형식**
 
 ```http
@@ -199,8 +203,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | 속성 | 설명 |
 | -------- | ----------- |
 | `name` | 세그먼트 정의를 참조할 고유한 이름. |
-| `description` | (선택 사항입니다.) 생성 중인 세그먼트 정의에 대한 설명입니다. |
-| `evaluationInfo` | (선택 사항입니다.) 생성 중인 세그먼트 정의 유형입니다. 배치 세그먼트를 만들려면 다음을 설정하십시오. `evaluationInfo.batch.enabled` 사실입니다. 스트리밍 세그먼트를 만들려면 다음을 설정하십시오. `evaluationInfo.continuous.enabled` 사실입니다. 모서리 세그먼트를 만들려면 다음을 설정합니다. `evaluationInfo.synchronous.enabled` 사실입니다. 비워 두면 세그먼트 정의가 다음과 같이 만들어집니다. **일괄 처리** 세그먼트. |
+| `description` | (선택 사항.) 생성 중인 세그먼트 정의에 대한 설명입니다. |
+| `evaluationInfo` | (선택 사항.) 생성 중인 세그먼트 정의 유형입니다. 배치 세그먼트를 만들려면 다음을 설정하십시오. `evaluationInfo.batch.enabled` 사실입니다. 스트리밍 세그먼트를 만들려면 다음을 설정하십시오. `evaluationInfo.continuous.enabled` 사실입니다. 모서리 세그먼트를 만들려면 다음을 설정합니다. `evaluationInfo.synchronous.enabled` 사실입니다. 비워 두면 세그먼트 정의가 다음과 같이 만들어집니다. **일괄 처리** 세그먼트. |
 | `schema` | 세그먼트의 엔티티와 연결된 스키마입니다. 다음 중 하나로 구성됩니다. `id` 또는 `name` 필드. |
 | `expression` | 세그먼트 정의에 대한 필드 정보를 포함하는 엔티티입니다. |
 | `expression.type` | 표현식 유형을 지정합니다. 현재 &quot;PQL&quot;만 지원됩니다. |
