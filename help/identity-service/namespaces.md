@@ -2,9 +2,9 @@
 title: ID 네임스페이스 개요
 description: ID 서비스의 ID 네임스페이스에 대해 알아봅니다.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
+source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1779'
 ht-degree: 7%
 
 ---
@@ -22,8 +22,6 @@ ID 네임스페이스를 사용하려면 다양한 Adobe Experience Platform 서
 * [[!DNL Privacy Service]](../privacy-service/home.md): ID 네임스페이스는 GDPR(일반 데이터 보호 규정)과 같은 법적 개인 정보 보호 규정에 대한 준수 요청에 사용됩니다. 각 개인 정보 보호 요청은 영향을 받아야 하는 소비자의 데이터를 식별하기 위해 네임스페이스를 기준으로 수행됩니다.
 
 ## ID 네임스페이스 이해
-
-![ID 서비스를 사용한 데이터 워크플로우의 일러스트레이션입니다.](images/identity-service-stitching.png)
 
 정규화된 ID에는 다음 두 가지 구성 요소가 포함됩니다. **id 값** 및 **id 네임스페이스**. 예를 들어 ID의 값이 `scott@acme.com`을 입력한 다음 네임스페이스는 이 값을 이메일 주소로 구별하여 컨텍스트를 제공합니다. 마찬가지로 네임스페이스에서는 `555-123-456` 전화번호로서요 `3126ABC` CRM ID로. 기본적으로, **네임스페이스는 특정 id에 컨텍스트를 제공합니다**. 다음과 같이 프로필 조각 간에 레코드 데이터를 일치시킬 때 [!DNL Real-Time Customer Profile] 프로필 데이터를 병합합니다. id 값과 네임스페이스가 모두 일치해야 합니다.
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 매핑 세트 개요
 description: Adobe Experience Platform 데이터 준비와 함께 매핑 세트를 사용하는 방법을 알아봅니다.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 660948b7a43ed3c18feb74cccf8f9c607470759c
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%
@@ -74,8 +74,8 @@ ht-degree: 0%
 | `outputSchema` | 입력 데이터가 따라야 할 XDM 스키마가 변환됩니다. |
 | `mappings` | 소스 스키마에서 대상 스키마로의 필드 간 매핑 배열입니다. |
 | `sourceType` | 나열된 각 매핑에 대해 `sourceType` 속성은 매핑될 소스의 유형을 나타냅니다. 다음 중 하나일 수 있습니다. `ATTRIBUTE`, `STATIC`, 또는 `EXPRESSION`: <ul><li> `ATTRIBUTE` 소스 경로에 있는 모든 값에 사용됩니다. </li><li>`STATIC` 대상 경로에 삽입된 값에 사용됩니다. 이 값은 일정하게 유지되며 소스 스키마의 영향을 받지 않습니다.</li><li> `EXPRESSION` 는 런타임 중에 확인되는 표현식에 사용됩니다. 사용 가능한 표현식 목록은 [매핑 함수 안내서](./functions.md).</li> </ul> |
-| `source` | 나열된 각 매핑에 대해 `source` 속성은 매핑할 필드를 나타냅니다. 소스를 구성하는 방법에 대한 자세한 내용은 [소스 섹션](#sources). |
-| `destination` | 나열된 각 매핑에 대해 `destination` 속성은 필드 또는 필드의 경로를 나타내며, 여기서 값은 `source` 필드가 배치됩니다. 대상을 구성하는 방법에 대한 자세한 내용은 [대상 섹션](#destination). |
+| `source` | 나열된 각 매핑에 대해 `source` 속성은 매핑할 필드를 나타냅니다. 소스를 구성하는 방법에 대한 자세한 내용은 [소스 개요](../sources/home.md). |
+| `destination` | 나열된 각 매핑에 대해 `destination` 속성은 필드 또는 필드의 경로를 나타내며, 여기서 값은 `source` 필드가 배치됩니다. 대상을 구성하는 방법에 대한 자세한 내용은 [대상 개요](../destinations/home.md). |
 | `mappings.name` | (*선택 사항*) 매핑의 이름입니다. |
 | `mappings.description` | (*선택 사항*) 매핑에 대한 설명입니다. |
 
