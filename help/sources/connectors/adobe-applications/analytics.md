@@ -2,7 +2,7 @@
 title: 보고서 세트 데이터용 Adobe Analytics Source Connector
 description: 이 문서에서는 Analytics에 대한 개요를 제공하고 Analytics 데이터의 사용 사례를 설명합니다.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 251b00e0f0e063859f8d0a0e188fa805c7bf3f87
+source-git-commit: 5ec22fcf0f4c48efc28a3abd343bb00a19756281
 workflow-type: tm+mt
 source-wordcount: '1110'
 ht-degree: 2%
@@ -51,7 +51,7 @@ XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../../xdm/home.md).
 | -------------- | ---------------- |
 | 새 데이터 받는 사람 [!DNL Real-Time Customer Profile] (A4T **아님** 활성화됨) | 2분 미만 |
 | 새 데이터 받는 사람 [!DNL Real-Time Customer Profile] (A4T **은(는)** 활성화됨) | 최대 30분 |
-| 데이터 레이크에 새 데이터 추가 | 90분 미만 |
+| 데이터 레이크에 새 데이터 추가 | &lt; 2.25시간 |
 | 100억 개 미만의 이벤트 채우기 | &lt; 4주 |
 
 프로덕션 샌드박스에 대한 Analytics 채우기는 기본적으로 13개월로 설정됩니다. 비프로덕션 샌드박스의 Analytics 데이터의 경우 채우기는 3개월로 설정됩니다. 위 표에 언급된 100억 개의 이벤트 제한은 예상되는 지연과 관련하여 엄격히 제한됩니다.
