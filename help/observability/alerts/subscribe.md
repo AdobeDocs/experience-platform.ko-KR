@@ -4,10 +4,10 @@ title: Adobe I/O 이벤트 알림 구독
 description: 이 문서에서는 Adobe Experience Platform 서비스에 대한 Adobe I/O 이벤트 알림을 구독하는 방법에 대한 단계를 제공합니다. 사용 가능한 이벤트 유형에 대한 참조 정보가 제공되며, 각 해당 항목에 대해 반환된 이벤트 데이터를 해석하는 방법에 대한 추가 설명서 링크도 함께 제공됩니다 [!DNL Platform] 서비스.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 49f4cf07d2f002e45e27dffac4fd0049446bc68f
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 2%
+source-wordcount: '769'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 [!DNL Observability Insights] Adobe Experience Platform 활동과 관련된 Adobe I/O 이벤트 알림을 구독할 수 있습니다. 이러한 이벤트는 활동 모니터링의 효율적인 자동화를 용이하게 하기 위해 구성된 웹후크로 전송됩니다.
 
-이 문서에서는 Adobe Experience Platform 서비스에 대한 Adobe I/O 이벤트 알림을 구독하는 방법에 대한 단계를 제공합니다. 사용 가능한 이벤트 유형에 대한 참조 정보가 제공되며, 각 해당 항목에 대해 반환된 이벤트 데이터를 해석하는 방법에 대한 추가 설명서 링크도 함께 제공됩니다 [!DNL Platform] 서비스.
+이 문서에서는 Adobe Experience Platform 서비스에 대한 Adobe I/O 이벤트 알림을 구독하는 방법에 대한 단계를 제공합니다. 사용 가능한 이벤트 유형에 대한 참조 정보가 제공되며, 각 해당 항목에 대해 반환된 이벤트 데이터를 해석할 수 있는 방법에 대한 추가 설명서 링크도 제공됩니다 [!DNL Platform] 서비스.
 
 ## 시작하기
 
@@ -39,6 +39,10 @@ ht-degree: 2%
 
 ## 이벤트 구독
 
+>[참고!]
+>
+>데이터 수집 알림은 Adobe IO 구독에서 더 이상 사용되지 않습니다. 대신 **소스 흐름 실행 정보** 입출력 이벤트
+
 새 프로젝트를 만든 후 해당 프로젝트의 개요 화면으로 이동합니다. 여기에서 다음을 선택합니다. **[!UICONTROL 이벤트 추가]**.
 
 ![](../images/notifications/add-event-button.png)
@@ -60,7 +64,6 @@ ht-degree: 2%
 >
 >* [Platform 알림](./rules.md)
 >* [Privacy Service 알림](../../privacy-service/privacy-events.md)
-
 
 ![](../images/notifications/choose-event-subscriptions.png)
 
