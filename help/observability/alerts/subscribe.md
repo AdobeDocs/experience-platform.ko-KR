@@ -4,9 +4,9 @@ title: Adobe I/O 이벤트 알림 구독
 description: 이 문서에서는 Adobe Experience Platform 서비스에 대한 Adobe I/O 이벤트 알림을 구독하는 방법에 대한 단계를 제공합니다. 사용 가능한 이벤트 유형에 대한 참조 정보가 제공되며, 각 해당 항목에 대해 반환된 이벤트 데이터를 해석하는 방법에 대한 추가 설명서 링크도 함께 제공됩니다 [!DNL Platform] 서비스.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 49f4cf07d2f002e45e27dffac4fd0049446bc68f
+source-git-commit: eccd53a8b2076fe23a65aa2e933a7cb871e97f72
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '768'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 1%
 
 ## 이벤트 구독
 
->[참고!]
+>[!NOTE]
 >
 >데이터 수집 알림은 Adobe IO 구독에서 더 이상 사용되지 않습니다. 대신 **소스 흐름 실행 정보** 입출력 이벤트
 
