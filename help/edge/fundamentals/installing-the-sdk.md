@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform Web SDK 설치
 description: Experience Platform Web SDK를 설치하는 방법을 알아봅니다.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
+source-git-commit: a8b1aa87ecd85c530188e520db2f17136a63ae44
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
-
 
 # Web SDK 설치 {#installing-the-sdk}
 
@@ -68,6 +68,10 @@ URL 구조: https://cdn1.adoberesources.net/alloy/[버전]축소되지 않은 �
 이 기본 코드는 전역 함수를 만드는 것 외에도 외부 파일 \(`alloy.js`\) 서버에 호스팅됩니다. 기본적으로 이 코드는 비동기적으로 로드되어 웹 페이지가 가능한 한 성능을 유지할 수 있도록 합니다. 권장되는 구현입니다.
 
 ### Internet Explorer 지원 {#support-internet-explore}
+
+>[!IMPORTANT]
+>
+>2024년 4월 말에 Adobe Experience Platform Web SDK는 모든 버전의 Internet Explorer에 대한 지원을 제거할 예정입니다.
 
 이 SDK는 비동기 작업의 완료를 통신하는 방법인 약속을 사용합니다. 다음 [약속](https://developer.mozilla.org/ko-KR/docs/Web/JavaScript/Reference/Global_Objects/Promise) sdk에서 사용하는 구현은 을 제외한 모든 target 브라우저에서 기본적으로 지원됩니다. [!DNL Internet Explorer]. 에서 SDK를 사용하려면 [!DNL Internet Explorer], 다음을 수행해야 합니다. `window.Promise` [다량 충전됨](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
