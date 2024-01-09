@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 역할 권한 관리
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 역할에 대한 권한을 구성하는 방법에 대해 설명합니다
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
+source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 6%
+source-wordcount: '986'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 6%
 
 권한은 관리자가 사용자 역할과 액세스 정책을 정의하여 제품 애플리케이션 내의 기능 및 개체에 대한 액세스 권한을 관리할 수 있는 Experience Cloud 영역입니다.
 
- 권한을 통해 역할을 만들고 관리하며, 이러한 역할에 대해 원하는 리소스 권한을 지정할 수 있습니다. 또한 권한을 사용하여 레이블, 샌드박스 및 특정 역할과 연관된 사용자를 관리할 수 있습니다.
+권한을 통해 역할을 만들고 관리하며, 이러한 역할에 대해 원하는 리소스 권한을 할당할 수 있습니다. 또한 권한을 사용하여 레이블, 샌드박스 및 특정 역할과 연관된 사용자를 관리할 수 있습니다.
 
 의 바로 뒤에 [새 역할 만들기](#create-a-new-role), (으)로 돌아갑니다 **[!UICONTROL 역할]** 탭. 기존 역할에 대한 권한을 편집하는 경우 **[!UICONTROL 역할]** 탭. 또는 필터 옵션을 사용하여 결과를 필터링하여 역할을 찾습니다.
 
@@ -101,6 +101,10 @@ UI의 역할에 사용할 수 있는 필터는 다음과 같습니다.
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
+다음 비디오는 새 역할을 만들고 해당 역할에 대한 사용자를 관리하는 방법에 대한 이해를 돕기 위한 것입니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+
 ## 역할에 대한 API 자격 증명 관리 {#manage-api-credentials-for-role}
 
 다음 항목 선택 **[!UICONTROL API 자격 증명]** 탭을 사용하여 역할 API 자격 증명 페이지를 연 다음 를 선택합니다 **[!UICONTROL API 자격 증명 추가]** 을 눌러 역할에 API 자격 증명을 할당할 수 있습니다.
@@ -153,7 +157,7 @@ UI의 역할에 사용할 수 있는 필터는 다음과 같습니다.
 
 ## 제품 프로필을 통해 Experience Platform에 사용자 추가
 
-제품 프로필에 사용자를 추가하려면 Admin Console에 로그인한 다음 **[!UICONTROL 사용자 추가]**&#x200B;를 선택합니다
+제품 프로필에 사용자를 추가하려면 Admin Console에 로그인하고 을 선택합니다. **[!UICONTROL 사용자 추가]**
 
 ![product-profile-add-user](../../images/flac-ui/product-profile-add-users.png)
 

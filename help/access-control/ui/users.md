@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 제품 프로필에 대한 사용자 관리
 description: 이 문서에서는 Adobe Experience Platform용 UI에서 제품 프로필의 사용자를 관리하는 방법을 보여줍니다.
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 1%
+source-wordcount: '228'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 제품 프로필에서 사용자를 할당하거나 제거하려면 프로필의 세부 정보 페이지를 열고 다음 위치로 이동합니다. **[!UICONTROL 사용자]** 탭. 여기에서 다음을 선택합니다. **[!UICONTROL 사용자 추가]**.
 
-![사용자 추가](../images/add-user.png)
+![다음에 나열된 사용자를 보여 주는 제품 프로필 세부 정보 페이지 [!UICONTROL 사용자] 탭.](../images/add-user.png)
 
 다음 **[!UICONTROL 사용자 추가]** 대화 상자가 나타납니다. 검색 필드를 사용하면 사용자를 조회하여 이름 또는 이메일로 추가할 수 있습니다. 입력할 때 일치하는 사용자가 텍스트 상자 아래의 자동 완성 창에 나타납니다.
 
@@ -25,7 +25,11 @@ ht-degree: 1%
 
 사용자를 선택한 후 다음을 선택합니다. **[!UICONTROL 저장]** 를 클릭하여 제품 프로필에 추가합니다.
 
-![save-user](../images/save-user.png)
+![사용자 세부 사항을 강조 표시하는 제품 프로필 페이지에 사용자를 추가합니다.](../images/save-user.png)
+
+다음 비디오에서는 제품 프로필의 관리 관리자에 대한 이해를 돕기 위한 것입니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/333860/?learn=on)
 
 ## 다음 단계
 
