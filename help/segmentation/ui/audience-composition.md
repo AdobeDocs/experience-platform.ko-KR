@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
+source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1789'
 ht-degree: 0%
 
 ---
@@ -28,13 +28,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->다음을 수행하는 경우 **아님** 컴포지션에 제목을 지정하면 &quot;컴포지션&quot;이라는 제목 뒤에 기본적으로 작성 날짜와 시간이 옵니다.
+>다음을 수행하는 경우 **아님** 컴포지션에 제목을 지정하면 &quot;컴포지션&quot;이라는 제목 뒤에 기본적으로 작성 날짜와 시간이 옵니다. 또한 각 컴포지션 **필수** 고유한 이름이 있습니다.
 
 컴포지션의 세부 정보를 업데이트한 후 **[!UICONTROL 저장]** 업데이트를 확인합니다. 대상자 구성 캔버스가 다시 나타납니다.
 
 대상 구성 캔버스는 네 가지 유형의 블록으로 구성됩니다. **[[!UICONTROL 대상자]](#audience-block)**, **[[!UICONTROL 제외]](#exclude-block)**, **[[!UICONTROL 등급]](#rank-block)**, 및 **[[!UICONTROL 분할]](#split-block)**.
 
-## [!UICONTROL Audience] {#audience-block}
+## [!UICONTROL 대상자] {#audience-block}
 
 다음 **[!UICONTROL 대상자]** 블록 유형을 사용하면 더 큰 새 대상을 구성할 하위 대상을 추가할 수 있습니다. 기본적으로 **[!UICONTROL 대상자]** 블록은 컴포지션 캔버스의 맨 위에 포함됩니다.
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 | 병합 유형 | 설명 |
 | ---------- | ----------- |
 | [!UICONTROL 합집합] | 대상은 하나의 대상으로 결합됩니다. 이는 OR 작업과 동일합니다. |
-| [!UICONTROL 교집합] | 대상은에서 공유되는 대상과만 결합됩니다 **모두** 개 중 개가 추가됩니다. 이는 AND 작업과 동일합니다. |
+| [!UICONTROL 교차] | 대상은에서 공유되는 대상과만 결합됩니다 **모두** 개 중 개가 추가됩니다. 이는 AND 작업과 동일합니다. |
 | [!UICONTROL 중복 제외] | 대상은에서 공유되는 대상과만 결합됩니다 **1개, 그러나 전부는 아님** 개 중 개가 추가됩니다. 이것은 XOR 연산과 같은 결과가 될 것이다. |
 
 ### [!UICONTROL 규칙 작성] {#build-rule}
