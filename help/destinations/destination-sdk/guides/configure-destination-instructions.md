@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 스트리밍 대상을 구성하는 단계를 나열하고 설명합니다.
 title: Destination SDK을 사용하여 스트리밍 대상 구성
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 52be44ece950ee57a66a13ab7962907b2b7c0fb1
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '865'
 ht-degree: 0%
 
 ---
@@ -264,6 +264,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 ## 5단계: 인증 설정 {#set-up-authentication}
 
 지정 여부에 따라 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 또는 `"authenticationRule": "PLATFORM_AUTHENTICATION"` 위의 대상 구성에서 다음을 사용하여 대상에 대한 인증을 설정할 수 있습니다. `/destination` 또는 `/credentials` 엔드포인트.
+
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` 는 두 인증 규칙 중 더 일반적이며 연결을 설정하고 데이터를 내보내기 전에 사용자에게 대상에 대한 일부 인증 형식을 제공하도록 요구하는 경우 사용할 수 있는 규칙입니다.
 
 선택한 경우 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 대상 구성에서 대상 은 OAuth 2 인증 방법을 지원합니다. [OAuth 2 인증](../functionality/destination-configuration/oauth2-authorization.md).
 

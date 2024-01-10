@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 파일 기반 대상을 구성하는 단계를 나열하고 설명합니다.
 title: Destination SDK을 사용하여 파일 기반 대상 구성
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 시작 기준 [서버 및 파일 구성 만들기](../authoring-api/destination-server/create-destination-server.md) 사용 `/destinations-server` 엔드포인트.
 
-다음은 의 예제 구성입니다 [!DNL Amazon S3] 대상. 다른 유형의 파일 기반 대상을 구성하려면 해당 내용을 참조하십시오 [서버 구성](../functionality/destination-server/server-specs.md).
+다음은 의 예제 구성입니다 [!DNL Amazon S3] 대상. 구성에 사용되는 필드에 대한 자세한 내용과 다른 유형의 파일 기반 대상을 구성하는 방법은 해당 필드를 참조하십시오 [서버 구성](../functionality/destination-server/server-specs.md).
 
 **API 형식**
 
@@ -40,7 +40,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
     "name": "S3 destination",
     "destinationServerType": "FILE_BASED_S3",
     "fileBasedS3Destination": {
-        "bucketName": {
+        "bucket": {
             "templatingStrategy": "PEBBLE_V1",
             "value": "{{customerData.bucketName}}"
         },
@@ -116,7 +116,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 다음은 를 사용하여 만든 대상 구성의 예입니다. `/destinations` API 엔드포인트.
 
-1단계의 서버 및 파일 구성을 이 대상 구성에 연결하려면 서버와 템플릿 구성의 인스턴스 ID를 `destinationServerId` 여기.
+1단계의 서버 및 파일 구성을 이 대상 구성에 연결하려면 `instance ID` 서버 및 파일 구성 `destinationServerId` 여기.
 
 **API 형식**
 
@@ -124,7 +124,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 POST platform.adobe.io/data/core/activation/authoring/destinations
 ```
 
-```json {line-numbers="true" highlight="84"}
+```json {line-numbers="true" highlight="83"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -189,7 +189,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "https://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -232,7 +232,22 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -244,7 +259,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 대상 메타데이터 구성을 사용하는 경우 2단계에서 만든 대상 구성에 연결해야 합니다. 대상 구성에 대상 메타데이터 구성의 인스턴스 ID를 다음과 같이 추가합니다. `audienceTemplateId`.
 
-```json {line-numbers="true" highlight="91"}
+```json {line-numbers="true" highlight="90"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -309,7 +324,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "http://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -358,7 +373,22 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -367,6 +397,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 ## 4단계: 인증 설정 {#set-up-authentication}
 
 지정 여부에 따라 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 또는 `"authenticationRule": "PLATFORM_AUTHENTICATION"` 위의 대상 구성에서 다음을 사용하여 대상에 대한 인증을 설정할 수 있습니다. `/destination` 또는 `/credentials` 엔드포인트.
+
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` 는 두 인증 규칙 중 더 일반적이며 연결을 설정하고 데이터를 내보내기 전에 사용자에게 대상에 대한 일부 인증 형식을 제공하도록 요구하는 경우 사용할 수 있는 규칙입니다.
 
 * 선택한 경우 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 대상 구성에서 파일 기반 대상에 대해 Destination SDK에서 지원하는 인증 유형에 대해서는 다음 섹션을 참조하십시오.
 
@@ -384,10 +418,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 이전 단계에서 구성 끝점을 사용하여 대상을 설정한 후 [대상 테스트 도구](../testing-api/batch-destinations/file-based-destination-testing-overview.md) Adobe Experience Platform과 대상 간의 통합을 테스트합니다.
 
-대상을 테스트하는 프로세스의 일부로 Experience Platform UI를 사용하여 대상에 활성화할 세그먼트를 만들어야 합니다. Experience Platform에서 대상자를 만드는 방법에 대한 지침은 아래 두 리소스를 참조하십시오.
+대상을 테스트하는 프로세스의 일부로 Experience Platform UI를 사용하여 대상에 활성화할 대상을 만들어야 합니다. Experience Platform에서 대상자를 만드는 방법에 대한 지침은 아래 두 리소스를 참조하십시오.
 
-* [대상 설명서 페이지 만들기](/help/segmentation/ui/overview.md#create-segment)
-* [대상 비디오 워크스루 만들기](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [대상자 만들기 - 설명서 페이지](/help/segmentation/ui/overview.md#create-segment)
+* [대상 만들기 - 비디오 연습](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 6단계: 대상 게시 {#publish-destination}
 
