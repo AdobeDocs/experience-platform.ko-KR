@@ -2,16 +2,16 @@
 description: Destination SDK으로 빌드된 대상에 대해 설명서 링크, 대상 카드 카테고리, 대상 연결 유형 및 빈도와 같은 UI 속성을 구성하는 방법을 알아봅니다.
 title: UI 속성
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
 
 # UI 속성
 
-UI 속성은 대상 플랫폼 로고, 설명서 페이지에 대한 링크, 대상 설명 및 카테고리 및 유형과 같은 Adobe Experience Platform Adobe 인터페이스에서 대상 카드에 대해 사용자가 표시해야 하는 시각적 요소를 정의합니다.
+UI 속성은 로고, 설명서 페이지에 대한 링크, 대상 설명 및 카테고리 및 유형과 같은 Adobe Experience Platform Adobe 인터페이스에서 대상 카드에 대해 사용자가 표시해야 하는 시각적 요소를 정의합니다.
 
 이 구성 요소가 Destination SDK으로 만든 통합에 어디에 맞는지 이해하려면 의 다이어그램을 참조하십시오. [구성 옵션](../configuration-options.md) 설명서 또는 다음 대상 구성 개요 페이지를 참조하십시오.
 
@@ -21,10 +21,10 @@ UI 속성은 대상 플랫폼 로고, 설명서 페이지에 대한 링크, 대�
 날짜 [대상 만들기](../../authoring-api/destination-configuration/create-destination-configuration.md) Destination SDK을 통해 `uiAttributes` 섹션은 대상 카드의 다음 시각적 속성을 정의합니다.
 
 * 에서 대상 설명서 페이지의 URL [대상 카탈로그](../../../catalog/overview.md).
-* 대상 카탈로그 카드에 표시할 아이콘을 호스팅한 URL입니다.
 * 대상이 Platform UI에 표시되는 카테고리입니다.
 * 대상의 데이터 내보내기 빈도입니다.
 * Amazon S3, Azure Blob 등과 같은 대상 연결 유형입니다.
+* 대상 카탈로그 카드에 표시할 아이콘을 호스팅한 URL입니다.
 
 다음을 통해 UI 속성을 구성할 수 있습니다. `/authoring/destinations` 엔드포인트. 이 페이지에 표시된 구성 요소를 구성할 수 있는 자세한 API 호출 예는 다음 API 참조 페이지를 참조하십시오.
 
@@ -82,14 +82,6 @@ UI 속성은 대상 플랫폼 로고, 설명서 페이지에 대한 링크, 대�
 
 ![대상 범주 위치를 보여 주는 UI 이미지입니다.](../../assets/functionality/destination-configuration/ui-attributes-category.png)
 
-<!-- ### `iconUrl` {#icon-url}
-
-`iconUrl` is a string parameter that refers to the URL where you hosted the icon to be displayed in the destinations catalog card. For private custom integrations, this is not required. For productized configurations, you need to share an icon with the Adobe team when you [submit the destination for review](../../guides/submit-destination.md#logo).
-
-Users can see the icon on your destination card, as shown in the image below.
-
-![UI image showing the icon location.](../../assets/functionality/destination-configuration/ui-attributes-icon.png) -->
-
 ### `connectionType` {#connection-type}
 
 `connectionType` 은 대상에 따라 연결 유형을 참조하는 문자열 매개 변수입니다. 지원되는 값: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul>
@@ -113,6 +105,14 @@ Destination SDK으로 만드는 대상을 제한된 수의 고객이 사용할 �
 이렇게 하려면 다음을 사용할 수 있습니다 `isBeta: "true"` 대상 카드의 UI 속성 섹션에 있는 매개 변수를 적절히 표시합니다.
 
 ![베타로 표시된 대상 카드를 보여주는 UI 이미지입니다.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
+
+### `icon` {#icon}
+
+아래 이미지에 표시된 대로 로고 아이콘을 대상에 추가할 수 있습니다.
+
+![아이콘 위치를 보여 주는 UI 이미지입니다.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+
+대상 카드에 로고를 추가하려면 다음 작업을 수행할 때 원하는 이미지를 Adobe 팀과 공유해야 합니다. [검토할 대상 제출](../../guides/submit-destination.md#logo).
 
 ## 다음 단계 {#next-steps}
 
