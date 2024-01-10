@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
+source-git-commit: fb2cf23f4762eec4bcab1126bdfb1aaa4144e777
 workflow-type: tm+mt
-source-wordcount: '1833'
-ht-degree: 36%
+source-wordcount: '1990'
+ht-degree: 26%
 
 ---
 
@@ -14,11 +14,20 @@ ht-degree: 36%
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## 버전 2.21.4 - 2024년 1월 10일
+
+**수정 사항 및 향상된 기능**
+
+* 3개의 환경 세트를 모두 설정하지 않고 구성 재정의를 저장하면 확장 UI가 충돌하던 문제가 해결되었습니다.
+* 변수 업데이트 작업을 편집할 때 루트 기존 값 지우기 확인란이 채워지지 않는 문제를 해결했습니다.
+
+Adobe Experience Platform Web SDK 버전 2.19.2를 포함합니다.
+
 ## 버전 2.21.3 - 2023년 11월 10일
 
 Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * 에서 사용할 수 있는 제안 배열이 발생하는 문제를 해결했습니다. `Send event complete` 이벤트가 항상 비어 있었습니다.
 
@@ -32,19 +41,19 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 * 추가됨 `Evaluate rulesets` 작업 및 `Subscribe ruleset items` 인앱 메시지에 대한 이벤트입니다.
 * 추가됨 `Decision context` 이벤트 작업을 보냅니다.
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * Adobe Experience Platform Web SDK 버전 2.19.0을 포함합니다.
 
 ## 버전 2.20.3 - 2023년 8월 8일
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * ID 동기화 컨테이너 ID 재정의 필드에 데이터 요소를 저장할 수 없는 문제가 해결되었습니다.
 
 ## 버전 2.20.1 - 2023년 8월 3일
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * 저장된 데이터 스트림 재정의 설정의 유효성 검사를 개선했습니다.
 
@@ -54,7 +63,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
 * 에 대한 지원이 추가됨 [데이터스트림 ID의 명령별 재정의](../../../../datastreams/overrides.md).
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * 더 이상 사용되지 않음 `edgeConfigId` 에 찬성하여 `datastreamId` SDK 구성에서.
 * 데이터 스트림 구성에 대한 여러 사용자 경험 개선 사항이 사용자 인터페이스를 무시합니다.
@@ -76,7 +85,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 * 사용 중단 알림을 `datasetId` 옵션 `sendEvent` 명령입니다.
 
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * Safari에서 스크롤하면 데이터 스트림 선택기가 닫히는 문제가 해결되었습니다.
 
@@ -91,7 +100,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 * (베타) 추가됨 **[!UICONTROL 변수 업데이트]** 작업 및 **[!UICONTROL 변수]** 데이터 요소입니다.
 * 에 대한 구성 추가됨 [`onBeforeLinkClickSend`](../../../../edge/fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback 함수.
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * 에서 앵커 태그 내의 요소 클릭이 작동하지 않는 문제를 수정했습니다. **[!UICONTROL ID로 리디렉션]** 작업이 사용되었습니다.
 * 스키마가 하나만 있을 때 XDM 개체 데이터 요소가 작동하지 않는 문제를 수정했습니다.
@@ -171,7 +180,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.7.0을 포함합�
 
 ## 버전 2.7.3 - 2021년 9월 7일
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.4을 포함합니다.
+Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.4를 포함합니다.
 
 * 에 대한 사용 중단 경고가 더 이상 없습니다. `container.buildInfo.environment.`
 
@@ -185,7 +194,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.3을 포함합�
 
 ## 버전 2.6.2 - 2021년 8월 4일
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.2을 포함합니다.
+Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.2를 포함합니다.
 
 ## 버전 2.6.1 - 2021년 7월 29일
 

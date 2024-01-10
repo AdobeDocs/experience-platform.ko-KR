@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
+source-git-commit: e46ac94a2328b045d7270b2498d6cb7ef5f0464b
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 4%
+source-wordcount: '1740'
+ht-degree: 2%
 
 ---
 
@@ -16,9 +16,17 @@ ht-degree: 4%
 이 문서에서는 Adobe Experience Platform Web SDK에 대한 릴리스 정보를 다룹니다.
 Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확장 릴리스 노트](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## 버전 2.19.2 - 2024년 1월 10일
+
+**수정 사항 및 향상된 기능**
+
+* ID 오류가 다른 오류를 마스킹하고 ID 오류를 경고로 변경하던 문제가 수정되었습니다.
+* renderDecisions가 false로 설정된 페이지 호출의 상단이 있는 경우 페이지 호출 하단이 전송되지 않는 문제가 해결되었습니다.
+* 여러 adobe_mc 쿼리 문자열 매개 변수가 있는 경우 Web SDK가 도메인 간 ID를 읽지 못하는 문제가 해결되었습니다.
+
 ## 버전 2.19.1 - 2023년 11월 10일
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * 제안 배열이에서 반환되는 문제가 해결되었습니다. `sendEvent` 호출은 항상 비어 있었습니다.
 
@@ -30,7 +38,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 * 페이지 이벤트의 상단 및 하단에 대한 지원이 추가되었습니다.
 * 페이지 범위 및 기본 표면 요청을 제어하기 위해 sendEvent 명령에 &quot;defaultPersonalizationEnabled&quot; 옵션이 추가되었습니다.
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * 결합된 개인화는 여러 유형의 개인화를 렌더링할 때 이벤트를 함께 표시합니다.
 * 단일 페이지 애플리케이션 보기 이름이 대소문자를 구분하던 문제가 수정되었습니다.
@@ -42,14 +50,14 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 
 * 에 대한 지원이 추가됨 [데이터스트림 ID의 명령별 재정의](../datastreams/overrides.md).
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * 도메인이 쿼리의 일부로 인해 종료 링크를 분류하지 못하는 문제가 해결되었습니다.
 * 더 이상 사용되지 않음 `edgeConfigId` 에 찬성하여 `datastreamId` 웹 SDK 구성에서.
 
 ## 버전 2.17.0 - 2023년 5월 17일
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * 이제 웹 SDK는 다음과 유사하게 Audience Manager 쿠키 대상 값을 인코딩합니다. [Data Integration Library(DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ko-KR).
 
@@ -66,7 +74,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 * 에 대한 지원이 추가됨 [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) 링크 클릭 콜백.
 * Adobe Journey Optimizer 클릭 추적에 대한 지원이 추가되었습니다.
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * 이제 링크 컬렉션에 링크 이름 및 방문자 영역이 포함됩니다.
 * 실패한 URL 대상에 대한 콘솔 오류가 제거되었습니다.
@@ -75,7 +83,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 
 * (베타) Adobe Journey Optimizer 표면 및 제안에 대한 지원이 추가되었습니다.
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * 코드가 가 아닌 대체 위치에 주입된 Adobe Target VEC 사용자 지정 코드 작업 문제를 수정했습니다 [!DNL at.js].
 * 일부 에지 사례에서 &quot;referer&quot; 헤더가 Edge Network에 대한 요청에 대해 제대로 설정되지 않던 문제를 해결했습니다.
@@ -96,7 +104,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 * 새로운 기능에 대한 지원이 추가되었습니다. `applyResponse` 명령입니다. 이렇게 하면 를 통해 하이브리드 개인화가 활성화됩니다. [Edge Network Server API](../server-api/overview.md).
 * 이제 QA 모드 링크가 여러 페이지에서 작동합니다.
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * 링크 추적이 비활성화될 때 개인화 클릭 추적 지표가 업데이트되지 않던 문제를 수정했습니다.
 * 알 수 없는 옵션이 지정되었을 때 유효성 검사 오류가 발생하도록 명령을 업데이트했습니다.
@@ -117,7 +125,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 * 이제에서 제안 배열을 렌더링하거나 실행할 수 있습니다. [!DNL Adobe Target] analytics 지표를 증가시키지 않고 단일 페이지 애플리케이션으로 복제합니다. 이렇게 하면 보고 오류가 줄어들고 분석 정확도가 높아집니다. 다음을 참조하십시오. [전용 설명서](personalization/rendering-personalization-content.md#applypropositions) 자세히 알아보십시오.
 * 에 추가 정보를 추가했습니다. `getLibraryInfo` 사용 가능한 명령을 포함하는 명령 및 인스턴스에 대한 최종 구성.
 
-**수정 사항 및 개선 사항**
+**수정 사항 및 향상된 기능**
 
 * 사용할 쿠키 설정이 업데이트되었습니다. `sameSite="none"` 및 `secure` 플래그 설정 [!DNL HTTPS] 페이지.
 * 를 사용할 때 개인화된 콘텐츠가 올바르게 적용되지 않던 문제를 수정했습니다. `eq` 의사 선택기입니다.
