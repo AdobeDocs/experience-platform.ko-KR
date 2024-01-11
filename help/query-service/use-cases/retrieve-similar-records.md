@@ -1,7 +1,8 @@
 ---
 title: 람다 함수 예제 - 유사한 레코드 검색
 description: 유사성 지표 및 유사성 임계값을 기반으로 하나 이상의 데이터 세트에서 유사하거나 관련된 레코드를 식별하고 검색하는 방법을 알아봅니다. 이 워크플로우는 서로 다른 데이터 세트 간의 의미 있는 관계 또는 중복을 강조할 수 있습니다.
-source-git-commit: 55af6c8de72e9b60eb9423dda568681e7c84245f
+exl-id: 4810326a-a613-4e6a-9593-123a14927214
+source-git-commit: 20624b916bcb3c17e39a402d9d9df87d0585d4b8
 workflow-type: tm+mt
 source-wordcount: '4011'
 ht-degree: 3%

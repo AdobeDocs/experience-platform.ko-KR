@@ -2,9 +2,9 @@
 title: 쿼리 서비스의 익명 블록
 description: 익명 블록은 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문으로, 쿼리 시퀀스를 효율적으로 실행할 수 있습니다
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: b7de5d3b2ceba27f5e86d48078be484dcb6f7c4b
+source-git-commit: 9193ba821409806cd7b4667c5de73a0cf2660c66
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,9 @@ Adobe Experience Platform 쿼리 서비스는 익명 블록을 지원합니다. 
 
 익명 블록 기능은 일련의 작업 또는 쿼리를 수행하는 효율적인 방법입니다. 블록 내의 쿼리 체인을 템플릿으로 저장하고 특정 시간 또는 간격으로 실행되도록 예약할 수 있습니다. 이러한 쿼리는 데이터를 작성하고 추가하여 새 데이터 세트를 만들 수 있으며 일반적으로 종속성이 있는 곳에서 사용됩니다.
 
->[!IMPORTANT]
->
->현재 익명 블록을 사용하여 쿼리를 예약하는 것은 [!DNL Query Service] API. 다음 설명서를 참조하십시오. [api를 통한 쿼리 예약에 대한 전체 지침](../api/scheduled-queries.md).
-
 이 표에서는 블록의 주요 섹션인 실행 및 예외 처리에 대한 분류를 제공합니다. 섹션은 키워드로 정의됩니다 `BEGIN`, `END`, 및 `EXCEPTION`.
 
-| 섹션에 있는 마지막 항목이 될 필요가 없습니다 | 설명 |
+| 섹션 | 설명 |
 |---|---|
 | 실행 | 실행 가능한 섹션은 키워드로 시작합니다 `BEGIN` 키워드로 끝남 `END`. 내에 포함된 모든 문 세트 `BEGIN` 및 `END` 키워드는 순서대로 실행되며 시퀀스의 이전 쿼리가 완료될 때까지 후속 쿼리가 실행되지 않습니다. |
 | 예외 처리 | 선택적 예외 처리 섹션은 키워드로 시작합니다 `EXCEPTION`. 실행 섹션의 SQL 문이 실패할 경우 예외를 catch하고 처리하는 코드가 포함되어 있습니다. 쿼리 중 하나라도 실패하면 전체 블록이 중지됩니다. |
