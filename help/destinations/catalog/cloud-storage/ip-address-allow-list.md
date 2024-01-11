@@ -3,9 +3,9 @@ title: IP 주소 허용 목록 SFTP 대상
 type: Documentation
 description: 이 페이지에서는 데이터를 Experience Platform에서 SFTP 서버로 안전하게 내보내기 위해 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 3d870975593313062d796601f0e19a0a3aec7854
+source-git-commit: 52186e03ba2a9d8b105d01ebfcd9be7666bfb6ff
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,17 @@ Adobe은 클라우드 스토리지 연결을 사용하기 전에 다음 IP 범�
 
 * `52.252.71.64/29`
 
+## 캐나다 고객
+
+* `20.220.135.16/29`
+
 ## EMEA 고객
 
 * `51.137.8.208/29`
+
+## 영국 고객
+
+* `20.26.133.96/29`
 
 ## APAC 고객
 
