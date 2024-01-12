@@ -4,23 +4,24 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 대상자 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
-source-git-commit: c76a6267230599dfab905524e613f9721b928211
+source-git-commit: 19bde5079c8f1a916bec775b64fa743e80e4e1b1
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 73%
+source-wordcount: '287'
+ht-degree: 72%
 
 ---
 
 
 # Real-Time Customer Data Platform 도움말 {#rtcdp}
 
-* [Real-Time CDP 개요](overview.md)
-* [Real-Time CDP B2B 에디션 개요](b2b-overview.md)
-* 시작하기 {#intro}
+* [Real-Time CDP 설명서](home.md)
+* 시작 {#intro}
    * Real-Time CDP {#rtcdp-intro}
+      * [Real-Time CDP 개요](overview.md)
       * [Real-Time CDP 시작하기](get-started.md)
       * [홈 페이지](home-page-dashboards.md)
    * Real-Time CDP B2B 에디션 {#rtcdpb2b-intro}
+      * [Real-Time CDP B2B 에디션 개요](b2b-overview.md)
       * [예제 사용 사례](./b2b-use-case.md)
       * [전체 튜토리얼](./b2b-tutorial.md)
       * [Real-Time CDP B2B 에디션 가드레일](b2b-guardrails.md)
@@ -37,7 +38,7 @@ ht-degree: 73%
 * 대상 {#destinations}
    * [대상 개요](destinations/overview.md)
    * [Real-Time CDP B2B 에디션의 대상](destinations/b2b.md)
-* 가드레일 {#guardrails}
+* 보호 기능 {#guardrails}
    * [Real-Time CDP 보호 개요](guardrails/overview.md)
    * [데이터 수집 보호](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [다음을 위한 보호 기능 [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
@@ -73,11 +74,12 @@ ht-degree: 73%
    * [소스 개요](sources/sources-overview.md)
    * [Real-Time CDP B2B 에디션의 소스](sources/b2b.md)
 * 사용 사례 {#use-cases}
+   * [지원되는 사용 사례 개요](/help/rtcdp/use-case-guides/overview.md)
    * 개인화, 인사이트 및 참여 {#personalization-insights-engagement}
       * [지능적으로 고객의 재참여 유도](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * 고객 확보 {#customer-acquisition}
       * [서드파티 쿠키에 의존하지 않고 새로운 고객 참여 및 확보](/help/rtcdp/partner-data/prospecting.md)
-      * [파트너 지원 방문자 인식을 사용하여 첫 번째 방문 고객에 대한 온사이트 경험 개인화](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [파트너 지원 방문자 인식을 사용하여 알 수 없는 방문자에 대한 온사이트 경험 개인화](/help/rtcdp/partner-data/onsite-personalization.md)
       * [인증되지 않은 사용자에 대한 오프사이트 재타겟팅](./partner-data/offsite-retargeting.md)
    * 프로필 보강 {#profile-enrichment}
       * [파트너가 제공한 속성으로 자사 프로필 보완](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
