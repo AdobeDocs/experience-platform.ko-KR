@@ -2,10 +2,10 @@
 title: UI에서 Adobe Analytics 소스 연결 만들기
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
 workflow-type: tm+mt
-source-wordcount: '2477'
-ht-degree: 6%
+source-wordcount: '2695'
+ht-degree: 4%
 
 ---
 
@@ -109,7 +109,7 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 �
 
 을(를) 미리 보려면 [!DNL Analytics] ExperienceEvent 템플릿 스키마 필드 그룹, 선택 **[!UICONTROL 보기]** 다음에서 [!UICONTROL 표준 매핑 적용됨] 패널.
 
-![view](../../../../images/tutorials/create/analytics/view.png)
+![보기](../../../../images/tutorials/create/analytics/view.png)
 
 다음 [!UICONTROL Adobe Analytics ExperienceEvent 템플릿 스키마 필드 그룹] 페이지는 스키마 구조를 검사하는 데 사용할 인터페이스를 제공합니다. 완료되면 다음을 선택합니다. **[!UICONTROL 닫기]**.
 
@@ -134,7 +134,7 @@ Platform은 모든 친숙한 이름 충돌에 대한 매핑 세트를 자동으�
 다음 설명서는 데이터 준비, 계산된 필드 및 매핑 함수 이해에 대한 추가 리소스를 제공합니다.
 
 * [데이터 준비 개요](../../../../../data-prep/home.md)
-* [데이터 준비 매핑 기능](../../../../../data-prep/functions.md)
+* [데이터 준비 매핑 함수](../../../../../data-prep/functions.md)
 * [계산된 필드 추가](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
 <!-- 
@@ -177,11 +177,30 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 에 대한 매핑을 완료한 후 [!DNL Analytics] 보고서 세트 데이터에서 필터링 규칙 및 조건을 적용하여 실시간 고객 프로필에 수집에서 데이터를 선택적으로 포함하거나 제외할 수 있습니다. 필터링에 대한 지원은 다음에만 가능합니다. [!DNL Analytics] 데이터 및 데이터는 입력 전에 필터링됩니다. [!DNL Profile.] 모든 데이터는 데이터 레이크로 수집됩니다.
 
+>[!BEGINSHADEBOX]
+
+**실시간 고객 프로필의 데이터 준비 및 Analytics 데이터 필터링에 대한 추가 정보**
+
+* 프로필로 이동하는 데이터에는 필터링 기능을 사용할 수 있지만, 데이터 레이크로 이동하는 데이터에는 사용할 수 없습니다.
+* 라이브 데이터에 필터링을 사용할 수 있지만 채우기 데이터는 필터링할 수 없습니다.
+   * 다음 [!DNL Analytics] 소스는 프로필에 데이터를 채우지 않습니다.
+* 의 초기 설정 중에 데이터 준비 구성을 활용하는 경우 [!DNL Analytics] 플로우, 이러한 변경 사항은 자동 13개월 채우기에도 적용됩니다.
+   * 단, 필터링은 라이브 데이터에만 예약되어 있으므로 필터링에 대해서는 해당되지 않습니다.
+* 데이터 준비는 스트리밍 및 일괄 처리 수집 경로 모두에 적용됩니다. 기존 데이터 준비 구성을 수정하는 경우 이러한 변경 사항은 스트리밍 및 배치 수집 경로 모두에서 새 수신 데이터에 적용됩니다.
+   * 그러나 스트리밍 데이터인지 배치 데이터인지에 관계없이, 이미 Experience Platform에 수집된 데이터에는 데이터 준비 구성이 적용되지 않습니다.
+* Analytics의 표준 속성은 항상 자동으로 매핑됩니다. 따라서 표준 속성에는 변환을 적용할 수 없습니다.
+   * 그러나 ID 서비스 또는 프로필에서 필요하지 않은 표준 속성은 필터링할 수 있습니다.
+* 열 수준 필터링을 사용하여 필수 필드 및 ID 필드를 필터링할 수 없습니다.
+* 보조 ID, 특히 AAID 및 AACustomID를 필터링할 수 있지만 ECID는 필터링할 수 없습니다.
+* 변환 오류가 발생하면 해당 열이 NULL이 됩니다.
+
+>[!ENDSHADEBOX]
+
 #### 행 수준 필터링
 
 >[!IMPORTANT]
 >
->행 수준 필터링을 사용하여 조건을 적용하고 **프로필 수집에 포함**&#x200B;할 데이터를 보여 줍니다. 열 수준 필터링을 사용하여 **프로필 수집에서 제외**&#x200B;할 데이터 열을 선택합니다.
+>행 수준 필터링을 사용하여 조건을 적용하고 **프로필 수집에 포함**&#x200B;할 데이터를 보여 줍니다. 열 수준 필터링을 사용하여 원하는 데이터 열을 선택합니다 **프로필 수집을 위한 제외**.
 
 다음에 대한 데이터를 필터링할 수 있습니다. [!DNL Profile] 행 수준 및 열 수준에서 수집. 행 수준 필터링을 사용하면 문자열 포함, 다음과 같음, 시작 또는 끝과 같은 기준을 정의할 수 있습니다. 행 수준 필터링을 사용하여 다음을 사용하여 조건을 연결할 수도 있습니다. `AND` 뿐만 아니라 `OR`및 을 사용하여 조건 부정 `NOT`.
 
@@ -201,14 +220,14 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 구성 가능한 조건 목록은 다음과 같습니다.
 
-* [!UICONTROL 다음과 같음]
+* [!UICONTROL equals]
 * [!UICONTROL 다음과 같지 않음]
 * [!UICONTROL 다음으로 시작]
 * [!UICONTROL 다음으로 끝남]
 * [!UICONTROL 다음으로 끝나지 않음]
 * [!UICONTROL 다음 포함]
 * [!UICONTROL 다음을 포함하지 않음]
-* [!UICONTROL 존재]
+* [!UICONTROL 존재함]
 * [!UICONTROL 존재하지 않음]
 
 ![조건](../../../../images/tutorials/create/analytics/conditions.png)
@@ -255,7 +274,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![데이터 흐름 세부 정보](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
-### 검토
+### 리뷰
 
 다음 [!UICONTROL 리뷰] 새 Analytics 데이터 흐름을 만들기 전에 검토할 수 있는 단계가 나타납니다. 연결의 세부 정보는 다음을 포함하여 범주별로 그룹화됩니다.
 
