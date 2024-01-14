@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 기능의 최적 사용을 보장하기 위해 프로필 데이터 및 세분화에 대한 성능 및 시스템 적용 가드레일에 대해 알아봅니다.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 17aa9029dc83454133847352c21aa9ac68f23be8
+source-git-commit: ec47f07f20e0f4ccda4c791882361bdc7a77aa98
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2434'
 ht-degree: 2%
 
 ---
@@ -116,9 +116,9 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 | --- | --- | --- | --- |
 | 샌드박스당 대상 | 4000 | 성능 보호 | 각 개별 샌드박스에 4000개 미만의 대상이 있는 한 조직에는 총 4000개 이상의 대상이 있을 수 있습니다. 여기에는 일괄 처리, 스트리밍 및 에지 대상이 포함됩니다. 추가 대상을 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. 자세한 내용 [대상자 만들기](/help/segmentation/ui/segment-builder.md) 세그먼트 빌더를 통해 액세스합니다. |
 | 샌드박스당 Edge 대상 | 150 | 성능 보호 | 각 개별 샌드박스에 150개 미만의 Edge 대상이 있는 한 조직에는 총 150개 이상의 Edge 대상이 있을 수 있습니다. 추가 Edge 대상을 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. 자세한 내용 [에지 대상자](/help/segmentation/ui/edge-segmentation.md). |
-| 모든 샌드박스에서 에지 처리량 | 1500RPS | 성능 보호 | 에지 세그멘테이션은 Adobe Experience Platform 에지 네트워크로 들어오는 초당 최대 1500개의 인바운드 이벤트를 지원합니다. 에지 세그멘테이션은 Adobe Experience Platform Edge Network에 진입한 후 인바운드 이벤트를 처리하는 데 최대 350밀리초가 걸릴 수 있습니다. 자세한 내용 [에지 대상자](/help/segmentation/ui/edge-segmentation.md). |
+| 모든 샌드박스에서 에지 처리량 | 1500RPS | 성능 보호 | 에지 세분화는 Adobe Experience Platform 에지 네트워크로 들어오는 초당 1500개의 인바운드 이벤트의 최대 값을 지원합니다. 에지 세그멘테이션은 Adobe Experience Platform Edge Network에 진입한 후 인바운드 이벤트를 처리하는 데 최대 350밀리초가 걸릴 수 있습니다. 자세한 내용 [에지 대상자](/help/segmentation/ui/edge-segmentation.md). |
 | 샌드박스당 스트리밍 대상 | 500 | 성능 보호 | 각 개별 샌드박스에 500개 미만의 스트리밍 대상이 있는 한 조직에는 총 500개 이상의 스트리밍 대상이 있을 수 있습니다. 여기에는 스트리밍 대상과 에지 대상이 모두 포함됩니다. 스트리밍 대상을 추가로 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. 자세한 내용 [스트리밍 대상](/help/segmentation/ui/streaming-segmentation.md). |
-| 모든 샌드박스에서 스트리밍 처리량 | 1500RPS | 성능 보호 | 스트리밍 세분화는 초당 최대 1500개의 인바운드 이벤트를 지원합니다. 스트리밍 세분화는 프로필 멤버십에 자격을 부여하는 데 최대 5분이 걸릴 수 있습니다. 자세한 내용 [스트리밍 대상](/help/segmentation/ui/streaming-segmentation.md). |
+| 모든 샌드박스에서 스트리밍 처리량 | 1500RPS | 성능 보호 | 스트리밍 세분화는 초당 1500개의 인바운드 이벤트라는 최대 값을 지원합니다. 스트리밍 세분화는 프로필 멤버십에 자격을 부여하는 데 최대 5분이 걸릴 수 있습니다. 자세한 내용 [스트리밍 대상](/help/segmentation/ui/streaming-segmentation.md). |
 | 샌드박스당 배치 대상 | 4000 | 성능 보호 | 각 개별 샌드박스에 4000개 미만의 배치 대상이 있는 한 조직에는 총 4000개 이상의 배치 대상이 있을 수 있습니다. 추가 배치 대상을 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. |
 | 샌드박스당 계정 대상자 | 50 | 시스템 강제 보호 | 샌드박스에서 최대 50개의 계정 대상을 만들 수 있습니다. 샌드박스에서 50개의 대상에 도달하면 **[!UICONTROL 대상자 만들기]** 새 계정 대상자를 만들려고 하면 제어가 비활성화됩니다. 자세한 내용 [계정 대상자](/help/segmentation/ui/account-audiences.md). |
 | 샌드박스당 게시된 컴포지션 | 10 | 성능 보호 | 샌드박스에 최대 10개의 컴포지션이 게시될 수 있습니다. 자세한 내용 [ui 안내서의 대상 구성](/help/segmentation/ui/audience-composition.md). |
