@@ -2,10 +2,10 @@
 title: Experience Platform의 데이터 수집에 대한 권한 관리
 description: Adobe Experience Platform에서 권한을 관리하고 데이터 수집 기능에 대한 액세스를 제어하는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 29%
+source-wordcount: '1285'
+ht-degree: 28%
 
 ---
 
@@ -58,7 +58,8 @@ Adobe Experience Platform 데이터 수집 아래의 권한은 속성, 확장 �
 | 속성 권한 | 확장 관리 | 을(를) 관리할 수 있는 권한 부여 [확장](../tags/ui/managing-resources/extensions/overview.md) 사용자가 액세스할 수 있는 속성입니다. |
 | 속성 권한 | 게시 | 라이브러리 빌드를 의 일부로 게시할 권한을 부여합니다. [게시 플로우](../tags/ui/publishing/publishing-flow.md). |
 | 회사 권한 | 확장 개발 | 비공개 릴리스 및 공개 릴리스 요청을 포함하여 조직이 소유한 확장 패키지를 만들고 수정하는 권한을 부여합니다. |
-| 회사 권한 | 확장 관리 | 이 권한은 모바일 인앱 및 푸시 메시지에 대한 액세스 권한을 부여하는 Adobe Journey Optimizer 또는 다른 솔루션에 대한 라이선스가 있는 경우에만 적용할 수 있습니다. 이를 통해 Adobe Experience Cloud이 알고 있는 앱을 Firebase Cloud Messaging 서비스 및 Apple 푸시 알림 서비스와 통신하는 데 필요한 푸시 자격 증명과 함께 관리할 수 있습니다. |
+| 회사 권한 | 앱 구성 관리 | 이 권한은 모바일 인앱 및 푸시 메시지에 대한 액세스 권한을 부여하는 Adobe Journey Optimizer 또는 다른 솔루션에 대한 라이선스가 있는 경우에만 적용할 수 있습니다. 이를 통해 Adobe Experience Cloud이 알고 있는 앱을 Firebase Cloud Messaging 서비스 및 Apple 푸시 알림 서비스와 통신하는 데 필요한 푸시 자격 증명과 함께 관리할 수 있습니다. |
+| 회사 권한 | 속성 관리 | 태그(웹 속성), 이벤트 전달(에지 속성) 및 모바일 속성을 만들고 관리하는 기능을 부여합니다. |
 
 {style="table-layout:auto"}
 
