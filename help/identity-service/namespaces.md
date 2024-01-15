@@ -2,10 +2,10 @@
 title: ID 네임스페이스 개요
 description: ID 서비스의 ID 네임스페이스에 대해 알아봅니다.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
+source-git-commit: 876613610f8e3b369bc3fd41d235c214b791fd4d
 workflow-type: tm+mt
-source-wordcount: '1779'
-ht-degree: 7%
+source-wordcount: '1869'
+ht-degree: 9%
 
 ---
 
@@ -21,7 +21,19 @@ ID 네임스페이스를 사용하려면 다양한 Adobe Experience Platform 서
 * [[!DNL Identity Service]](./home.md): 디바이스와 시스템 간에 ID를 연결하여 개별 고객과 고객의 행동을 더 잘 파악할 수 있습니다.
 * [[!DNL Privacy Service]](../privacy-service/home.md): ID 네임스페이스는 GDPR(일반 데이터 보호 규정)과 같은 법적 개인 정보 보호 규정에 대한 준수 요청에 사용됩니다. 각 개인 정보 보호 요청은 영향을 받아야 하는 소비자의 데이터를 식별하기 위해 네임스페이스를 기준으로 수행됩니다.
 
-## ID 네임스페이스 이해
+## ID 네임스페이스 이해 {#understanding-identity-namespaces}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_namespace"
+>title="ID 네임스페이스"
+>abstract="ID 네임스페이스는 특정 ID의 컨텍스트입니다. 예를 들어 의 네임스페이스는 `Email` 다음과 일치할 수 있음 **이름<span>@acme.com**. 마찬가지로 의 네임스페이스입니다. `Phone` 다음과 일치할 수 있음 `555-555-1234`."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_value"
+>title="ID 값"
+>abstract="ID 값은 고유 개인, 조직 또는 자산을 나타내는 식별자입니다. 값이 표시하는 ID의 컨텍스트 또는 유형은 해당 ID 네임스페이스에 의해 정의됩니다. 프로필 조각 간에 레코드 데이터를 일치시킬 때 네임스페이스와 ID 값이 일치해야 합니다. 프로필 조각 간에 레코드 데이터를 일치시킬 때 네임스페이스와 ID 값이 일치해야 합니다."
+>text="Learn more in documentation"
 
 정규화된 ID에는 다음 두 가지 구성 요소가 포함됩니다. **id 값** 및 **id 네임스페이스**. 예를 들어 ID의 값이 `scott@acme.com`을 입력한 다음 네임스페이스는 이 값을 이메일 주소로 구별하여 컨텍스트를 제공합니다. 마찬가지로 네임스페이스에서는 `555-123-456` 전화번호로서요 `3126ABC` CRM ID로. 기본적으로, **네임스페이스는 특정 id에 컨텍스트를 제공합니다**. 다음과 같이 프로필 조각 간에 레코드 데이터를 일치시킬 때 [!DNL Real-Time Customer Profile] 프로필 데이터를 병합합니다. id 값과 네임스페이스가 모두 일치해야 합니다.
 
