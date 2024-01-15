@@ -2,10 +2,10 @@
 title: 샌드박스 도구
 description: 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져옵니다.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
+source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 9%
+source-wordcount: '1859'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 샌드박스 간 구성 정확도를 높이고 샌드박스 도구 기능을 사용하여 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져올 수 있습니다. 샌드박스 도구를 사용하여 구현 프로세스에 대한 가치 창출 시간을 줄이고 샌드박스 간에 성공적인 구성을 이동할 수 있습니다.
 
-샌드박스 도구 기능을 사용하여 다른 개체를 선택하고 패키지로 내보낼 수 있습니다. 패키지는 단일 개체 또는 여러 개체로 구성될 수 있습니다. <!--or an entire sandbox.-->패키지에 포함되는 모든 개체는 동일한 샌드박스에서 가져온 개체여야 합니다.
+샌드박스 도구 기능을 사용하여 다른 개체를 선택하고 패키지로 내보낼 수 있습니다. 패키지는 단일 개체 또는 여러 개체로 구성될 수 있습니다. <!--or an entire sandbox.-->패키지에 포함된 모든 객체는 동일한 샌드박스의 객체여야 합니다.
 
 ## 샌드박스 도구에 지원되는 오브젝트 {#supported-objects}
 
@@ -67,19 +67,14 @@ ht-degree: 9%
 >모든 내보내기 작업은 감사 로그에 기록됩니다.
 
 >[!CONTEXTUALHELP]
->id="platform_sandbox_tooling_exit_package"
->title="패키지 저장 및 종료"
->abstract="패키지를 종료 및 저장하려면 사용자는 뒤로 옵션을 사용하면 됩니다."
-
->[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="오브젝트 제거"
->abstract="사용자는 행을 선택한 다음 삭제 옵션(선택 시 사용 가능)을 사용하여 행을 제거해야 합니다."
+>abstract="패키지에서 객체를 제거하려면 제거할 행을 선택한 다음 선택 시 사용할 수 있는 삭제 옵션을 사용합니다. 게시된 패키지에서 개체를 제거할 수 없습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="패키지 만료 설정"
->abstract="만료일은 오늘날짜로부터 90일로 설정됩니다. 패키지가 게시될 때까지 이 날짜는 계속 변경됩니다. 사용자가 내일 초안 상태의 패키지를 방문하는 경우 날짜가 1일씩 이동합니다(사용자가 설정하지 않는 한)."
+>abstract="패키지는 초안 상태에서 비활성 기간이 지난 후 만료되도록 설정됩니다. 기본 날짜는 오늘부터 90일로 설정됩니다. 패키지가 게시될 때까지 이 날짜는 계속 변경됩니다. 내일 초안 상태의 패키지를 방문하는 경우 수동으로 설정하지 않는 한 날짜가 +1일 이동합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"
