@@ -2,10 +2,10 @@
 title: 데이터 요소
 description: 데이터 요소는 데이터 사전(또는 데이터 맵)의 기본 구성단위입니다. 데이터 요소를 사용하여 마케팅 및 광고 기술 전반에서 데이터를 수집, 구성 및 전달합니다.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
+source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 71%
+source-wordcount: '1614'
+ht-degree: 70%
 
 ---
 
@@ -91,9 +91,11 @@ ht-degree: 71%
 
 ## 데이터 요소 유형 {#types-of-data-elements}
 
-데이터 요소 유형은 확장에 의해 결정됩니다. 만들 수 있는 유형에는 제한이 없습니다.
+>[!NOTE]
+>
+>데이터 요소 유형은 확장에 의해 결정됩니다. 만들 수 있는 유형에는 제한이 없습니다.
 
-다음 섹션에서는 코어 확장에서 사용할 수 있는 데이터 요소 유형에 대해 설명합니다. 확장마다 다른 유형의 데이터 요소를 사용합니다.
+다음 섹션에서는 **코어 확장**. 확장마다 다른 유형의 데이터 요소를 사용합니다.
 
 ### 쿠키
 
