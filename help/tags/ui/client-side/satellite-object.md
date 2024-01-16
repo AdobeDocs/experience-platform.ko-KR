@@ -2,10 +2,10 @@
 title: 위성 개체 참조
 description: 클라이언트측 _satellite 개체 및 태그에서 이 개체를 사용하여 수행할 수 있는 다양한 기능에 대해 알아봅니다.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 309f3cce82c5d6c7f10c08b05da6d9c6c44631b6
 workflow-type: tm+mt
 source-wordcount: '1290'
-ht-degree: 42%
+ht-degree: 40%
 
 ---
 
@@ -61,6 +61,10 @@ var rule = _satellite.getVar('return event rule', event);
 ```
 
 ## `setVar`
+
+>[!NOTE]
+>
+>다음 `setVar` 코드는 태그에 지정된 데이터 요소와 완전히 별개입니다.
 
 **코드**
 
