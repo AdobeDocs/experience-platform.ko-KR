@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service 개요
 description: Adobe Experience Platform Identity Service를 사용하면 디바이스와 시스템 간에 ID를 연결하여 고객과 고객의 행동을 더 잘 볼 수 있으므로 효과적인 개인 디지털 경험을 실시간으로 제공할 수 있습니다.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 4d7470a15a7cc9c9a3bcc56f5f783a967021242f
+source-git-commit: 484b1c2d37291afd02fe58723121325c837061aa
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1524'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ID 서비스에 대한 세부 사항으로 이동하기 전에 주요 용어에 
 | --- | --- |
 | 신원 | ID는 엔티티에 고유한 데이터입니다. 일반적으로 이 개체는 개인, 하드웨어 장치 또는 웹 브라우저(쿠키로 표시됨)와 같은 실제 개체입니다. 정규화된 ID는 다음 두 가지 요소로 구성됩니다. **id 네임스페이스** 및 **id 값**. |
 | ID 네임스페이스 | ID 네임스페이스는 특정 ID의 컨텍스트입니다. 예를 들어 의 네임스페이스는 `Email` 다음과 일치할 수 있음 **줄리엔<span>@acme.com**. 마찬가지로 의 네임스페이스입니다. `Phone` 다음과 일치할 수 있음 `555-555-1234`. 자세한 내용은 [id 네임스페이스 개요](./namespaces.md) |
-| ID 값 | ID 값은 실제 엔티티를 나타내는 문자열이며, 네임스페이스를 통해 ID 서비스 내에서 분류됩니다. (예: 이메일) **줄리엔<span>@acme.com** 다음과 같이 분류할 수 있습니다. `Email` 네임스페이스입니다. |
+| ID 값 | ID 값은 실제 엔티티를 나타내는 문자열이며, 네임스페이스를 통해 ID 서비스 내에서 분류됩니다. 예를 들어 ID 값(문자열)은 **줄리엔<span>@acme.com** 다음과 같이 분류할 수 있습니다. `Email` 네임스페이스입니다. |
 | ID 유형 | ID 유형은 ID 네임스페이스의 구성 요소입니다. ID 유형은 ID 데이터가 ID 그래프에 연결되어 있는지 여부를 지정합니다. |
 | 링크 | 링크 또는 연결은 서로 다른 두 ID가 동일한 엔터티를 나타내도록 설정하는 방법입니다. 예: &quot; 사이의 링크`Email` = julien<span>@acme.com&quot; 및 &quot;`Phone` = 555-555-1234&quot;는 두 id가 동일한 엔터티를 나타낸다는 의미입니다. 이는 줄리앙이라는 이메일 주소와 함께 귀하의 브랜드와 상호 작용한 고객이<span>@acme.com과 555-555-1234 전화번호는 동일합니다. |
 | ID 서비스 | ID 서비스는 ID를 연결(또는 연결 해제)하여 ID 그래프를 유지 관리하는 Experience Platform 내의 서비스입니다. |
@@ -91,7 +91,7 @@ ID 네임스페이스와 ID 값이 일치하면 두 ID 간의 링크가 설정�
 * 다음으로, 동일한 전자 상거래 웹 사이트에 동일한 자격 증명으로 로그인하지만 랩톱의 웹 브라우저 대신 휴대폰의 웹 브라우저를 사용하는 경우 새 ECID가 ID 서비스에 등록됩니다.
 * ID 서비스는 이 새로운 이벤트를 다음으로 처리합니다. `{CRM_ID:ABC, ECID:456}`여기서 CRM_ID: ABC 는 인증된 고객 ID를 나타내고 ECID:456은 모바일 장치의 웹 브라우저를 나타냅니다.
 
-위의 시나리오를 고려하여 Identity Service는 `CRM_ID:ABC, ECID:123`및 `{CRM_ID:ABC, ECID:456}`. 이렇게 하면 세 개의 ID를 &quot;소유&quot;하는 ID 그래프가 생성됩니다. 하나는 개인 식별자(CRM ID)에, 다른 하나는 쿠키 식별자(ECID)에 사용됩니다.
+위의 시나리오를 고려하여 Identity Service는 `{CRM_ID:ABC, ECID:123}`및 `{CRM_ID:ABC, ECID:456}`. 이렇게 하면 세 개의 ID를 &quot;소유&quot;하는 ID 그래프가 생성됩니다. 하나는 개인 식별자(CRM ID)에, 다른 하나는 쿠키 식별자(ECID)에 사용됩니다.
 
 ## ID 그래프
 
