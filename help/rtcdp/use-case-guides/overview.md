@@ -2,7 +2,7 @@
 title: Real-Time CDP의 샘플 사용 사례
 description: 샘플 교차 서비스 사용 사례를 확인하여 Real-Time CDP 구현을 최대한 활용하십시오.
 feature: Use Cases
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: f342020a0e821172a7ceca95265a9d71f64f5347
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -23,7 +23,7 @@ ht-degree: 6%
 
 Adobe Real-Time CDP은 파트너 식별자를 광범위하게 지원하므로 잠재 고객의 대상을 만들고 파트너의 속성으로 알려진 대상을 보강하는 등 다양한 작업을 수행할 수 있습니다.
 
-지원되는 사용 사례는 고객 확보 및 프로필 강화 사례로 그룹화할 수 있습니다. 자세한 구현 정보는 아래 설명서 링크를 참조하십시오.
+샘플 사용 사례는 고객 확보 및 프로필 강화 사례로 그룹화할 수 있습니다. 자세한 구현 정보는 아래 설명서 링크를 참조하십시오.
 
 ### 고객 확보 {#customer-acquisition}
 
