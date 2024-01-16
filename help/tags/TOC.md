@@ -5,10 +5,10 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: 7b957aeff6f60665841013619d70ee962fc4c449
+source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 31%
+source-wordcount: '770'
+ht-degree: 36%
 
 ---
 
@@ -135,7 +135,7 @@ ht-degree: 31%
       * [Awin 변환 태그](https://exchange.adobe.com/apps/ec/103240)
       * [인간의 맥락](https://exchange.adobe.com/apps/ec/101063)
       * [Bing Ads 범용 이벤트 추적](https://exchange.adobe.com/apps/ec/100154)
-      * [Branch](https://exchange.adobe.com/apps/ec/101382)
+      * [분기](https://exchange.adobe.com/apps/ec/101382)
       * [!DNL BrightCove] 비디오 추적 {#brightcove}
          * [개요](./extensions/client/brightcove/overview.md)
          * [릴리스 정보](./extensions/client/brightcove/release-notes.md)
@@ -226,7 +226,7 @@ ht-degree: 31%
       * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)
       * Google Ads 향상된 전환 {#google-ads-enhanced-conversions}
          * [개요](./extensions/server/google-ads-enhanced-conversions/overview.md)
-      * Google Cloud 플랫폼 {#google-cloud-platform}
+      * Google 클라우드 플랫폼 {#google-cloud-platform}
          * [개요](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
          * [개요](./extensions/server/linkedin/overview.md)
@@ -286,7 +286,7 @@ ht-degree: 31%
    * [타사 라이브러리 호스팅](./extension-dev/third-party-libraries.md)
    * [Turbine 자유 변수](./extension-dev/turbine.md)
    * [이전 버전과의 호환성 표준](./extension-dev/backwards-compatibility.md)
-* Reactor API {#api}
+* 반응기 API {#api}
    * [개요](./api/overview.md)
    * [Reactor API 인증 및 액세스](./api/getting-started.md)
    * 엔드포인트 {#endpoints}
@@ -321,10 +321,5 @@ ht-degree: 31%
 * [FAQ](./faq.md)
 * [용어 업데이트](./term-updates.md)
 * [Internet Explorer 10 및 11에 대한 지원 중단](./ie-deprecation.md)
-* 릴리스 정보  {#release-notes}
-   * [최신 항목](./release-notes/current.md)
-   * [2021 릴리스 정보](./release-notes/2021.md)
-   * [2020 릴리스 정보](./release-notes/2020.md)
-   * [2019 릴리스 정보](./release-notes/2019.md)
-   * [2018 릴리스 노트](./release-notes/2018.md)
+* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)
 
