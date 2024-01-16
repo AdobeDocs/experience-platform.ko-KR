@@ -6,9 +6,9 @@ description: Adobe Experience Platform은 기존의 관계형 데이터 모델�
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 7c455b546b6a98936d60e6cd481cae8610c8be17
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1675'
 ht-degree: 2%
 
 ---
@@ -66,6 +66,7 @@ Real-time Customer Data Platform B2B 에디션을 사용하면 행동 통찰력 
 | 중첩된 레거시 관계 없음 | 0 | 소프트 | 두 비-터 간의 관계를 만들면 안 됩니다.[!DNL XDM Individual Profile] 스키마. 에 포함되지 않은 스키마에는 관계를 만드는 기능이 권장되지 않습니다. [!DNL Profile] 유니온 스키마. |
 | B2B 개체만 다대일 관계에 참여할 수 있습니다 | 0 | 하드 | 시스템은 B2B 개체 간의 다대일 관계만 지원합니다. 다대일 관계에 대한 자세한 내용은 [B2B 스키마 관계 정의](../xdm/tutorials/relationship-b2b.md). |
 | B2B 개체 간 중첩 관계의 최대 깊이 | 3 | 하드 | B2B 개체 간의 중첩 관계의 최대 깊이는 3입니다. 즉, 고도로 중첩된 스키마에서는 3개 수준 이상 중첩된 B2B 개체 간의 관계가 없어야 합니다. |
+| 각 차원 엔티티에 대한 단일 스키마 | 1 | 하드 | 각 차원 엔티티에는 단일 스키마가 있어야 합니다. 둘 이상의 스키마에서 생성된 차원 엔티티를 사용하려고 하면 세분화 결과에 영향을 줄 수 있습니다. 다른 차원 엔티티에는 별도의 스키마가 있어야 합니다. |
 
 ## 데이터 크기 제한
 
