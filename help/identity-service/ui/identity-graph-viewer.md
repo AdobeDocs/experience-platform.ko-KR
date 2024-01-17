@@ -2,10 +2,10 @@
 title: ID 그래프 뷰어
 description: ID 그래프는 특정 고객에 대한 서로 다른 ID 간의 관계 맵으로, 고객이 다양한 채널에서 브랜드와 상호 작용하는 방식을 시각적으로 보여 줍니다.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 4bf939011e6246a553f67805ff99a70610782ea6
+source-git-commit: d4ed36bd036218fcc3428ef420490b68c9cdb121
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 6%
+source-wordcount: '1402'
+ht-degree: 5%
 
 ---
 
@@ -46,7 +46,7 @@ ID 그래프를 보려면 ID 네임스페이스 및 해당 값을 입력한 다�
 
 >[!TIP]
 >
->표 아이콘 선택 ![표 아이콘](../images/identity-graph-viewer/table-icon.png) 조직에서 사용할 수 있는 모든 id 네임스페이스 목록이 있는 패널을 보려면 다음을 수행하십시오. 유효한 ID 값이 연결되어 있는 한 모든 ID 네임스페이스를 사용할 수 있습니다. 자세한 내용은 [id 네임스페이스 안내서](../namespaces.md).
+>표 아이콘 선택 ![표 아이콘](../images/identity-graph-viewer/table-icon.png) 조직에서 사용 가능한 모든 id 네임스페이스 목록이 있는 패널을 보려면 다음을 수행하십시오. 유효한 ID 값이 연결되어 있는 한 모든 ID 네임스페이스를 사용할 수 있습니다. 자세한 내용은 [id 네임스페이스 안내서](../namespaces.md).
 
 ![ID 그래프 조회 화면에 제공되는 ID 네임스페이스 및 해당 값.](../images/graph-viewer/namespace-and-value.png)
 
@@ -60,7 +60,7 @@ ID 그래프는 입력한 ID 네임스페이스 및 값 조합에 연결된 모�
 
 >[!IMPORTANT]
 >
->ID 그래프를 사용하려면 최소 2개의 연결된 ID와 유효한 ID 네임스페이스 및 값 조합이 필요합니다. 그래프 뷰어가 표시할 수 있는 최대 ID 수는 150개입니다. 다음을 참조하십시오. [부록](#appendix) 자세한 내용은 아래 섹션을 참조하십시오.
+>ID 그래프를 사용하려면 최소 2개의 연결된 ID와 유효한 ID 네임스페이스 및 값 조합이 필요합니다. 그래프 뷰어가 표시할 수 있는 최대 ID 수는 50개입니다. 다음을 참조하십시오. [부록](#appendix) 자세한 내용은 아래 섹션을 참조하십시오.
 
 ![5개의 연결된 ID가 있는 ID 그래프 뷰어.](../images/graph-viewer/graph.png)
 
@@ -115,7 +115,7 @@ ID 그래프 뷰어에 액세스할 때 오류가 발생할 수 있습니다. �
 
 - 선택한 네임스페이스에 ID 값이 있어야 합니다.
 - ID 그래프 뷰어를 생성하려면 최소 2개의 연결된 ID가 필요합니다. ID 값은 하나뿐이고 연결된 ID는 없을 수 있으며, 이 경우 값은 에만 존재합니다. [!DNL Profile] 뷰어.
-- ID 그래프 뷰어는 최대 150개의 ID를 초과할 수 없습니다.
+- ID 그래프 뷰어는 최대 50개의 ID를 초과할 수 없습니다.
 
 ![오류 화면](../images/graph-viewer/error-screen.png)
 
