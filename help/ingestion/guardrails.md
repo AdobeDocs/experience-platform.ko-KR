@@ -3,9 +3,9 @@ keywords: Experience Platform;문제 해결;보호 기능;지침;
 title: 데이터 수집 보호
 description: 이 문서에서는 Adobe Experience Platform의 데이터 수집을 위한 보호 기능에 대한 지침을 제공합니다
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 4debc301b930643565b25218f4822a67e88063bb
+source-git-commit: d0ee51340e1175e2820fea69269a8cb6e9d85c1c
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '571'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 | 수집 유형 | 지침 | 참고 |
 | --- | --- | --- |
-| 스트리밍 소스 | <ul><li>최대 레코드 크기는 1MB이며 권장 크기는 10KB입니다.</li><li>스트리밍 소스는 새 소스 연결 생성 시 초당 4000~5000개의 요청을 지원합니다. **참고**: 스트리밍 데이터가 데이터 레이크로 완전히 처리되는 데 최대 30분이 걸릴 수 있습니다.</li><li>데이터 레이크에 대한 초당 4000~5000개의 요청을 처리할 수 있습니다. **참고**: 스트리밍 데이터가 데이터 레이크로 완전히 처리되는 데 최대 30분이 걸릴 수 있습니다.</li></ul> | 스트리밍 소스: [!DNL Kafka], [!DNL Azure Event Hubs], 및 [!DNL Amazon Kinesis] 를 사용하지 마십시오 [!DNL Data Collection Core Service] (DCCS) 경로 및 은 서로 다른 처리량 제한을 가질 수 있습니다. 다음을 참조하십시오. [소스 개요](../sources/home.md) 소스 카탈로그의 경우 데이터 수집에 사용할 수 있습니다. |
+| 스트리밍 소스 | <ul><li>최대 레코드 크기는 1MB이며 권장 크기는 10KB입니다.</li><li>스트리밍 소스는 데이터 레이크로 수집할 때 초당 4000~5000개의 요청을 지원합니다. 이는 기존 소스 연결뿐만 아니라 새로 생성된 소스 연결 모두에 적용됩니다. **참고**: 스트리밍 데이터가 데이터 레이크로 완전히 처리되는 데 최대 30분이 걸릴 수 있습니다.</li><li>스트리밍 소스는 프로필로 데이터를 수집하거나 스트리밍 세분화를 수행할 때 초당 최대 1500개의 요청을 지원합니다.</li></ul> | 스트리밍 소스: [!DNL Kafka], [!DNL Azure Event Hubs], 및 [!DNL Amazon Kinesis] 를 사용하지 마십시오 [!DNL Data Collection Core Service] (DCCS) 경로 및 은 서로 다른 처리량 제한을 가질 수 있습니다. 다음을 참조하십시오. [소스 개요](../sources/home.md) 소스 카탈로그의 경우 데이터 수집에 사용할 수 있습니다. |
 
 ## 다음 단계
 
