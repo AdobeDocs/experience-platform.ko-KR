@@ -4,9 +4,9 @@ title: Real-time Customer Data Platform의 ID
 description: Adobe Experience Platform Identity Service를 사용하면 디바이스와 시스템 간에 ID를 연결하여 고객과 고객의 행동을 더 잘 볼 수 있습니다.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ ID 네임스페이스는 의 구성 요소입니다. [!DNL Identity Service] 고
 
 ## ID 그래프
 
-ID 그래프는 서로 다른 ID 네임스페이스 간의 관계 맵으로, 고객이 다양한 채널에서 브랜드와 상호 작용하는 방식을 시각적으로 보여 줍니다. 모든 고객 ID 그래프는 다음을 통해 일괄적으로 관리 및 업데이트됩니다 [!DNL Identity Service] 고객 활동에 대응하여 거의 실시간으로.
+ID 그래프는 서로 다른 ID 간의 관계 맵으로, 고객이 다양한 채널에서 브랜드와 상호 작용하는 방식을 시각적으로 보여 줍니다. 모든 고객 ID 그래프는 고객 활동에 대한 응답으로 ID 서비스에서 총괄적으로 관리 및 업데이트됩니다.
 
-[!DNL Identity Service] 는 조직에서만 볼 수 있고 개인 그래프라고 하는 데이터를 기반으로 빌드된 id 그래프를 관리합니다. [!DNL Identity Service] 수집된 데이터 레코드에 둘 이상의 id가 포함된 경우 개인 그래프를 확장하여 발견된 id 간에 관계를 추가합니다.
+[!DNL Identity Service] 는 조직에만 표시되고 데이터를 기반으로 빌드된 id 그래프를 관리합니다. [!DNL Identity Service] 수집된 데이터 레코드에 둘 이상의 id가 포함된 경우 그래프를 확장하여 발견된 id 간에 관계를 추가합니다.
 
 ## 다음 단계
 
