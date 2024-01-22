@@ -5,9 +5,9 @@ description: 대상에 대한 계정 대상을 활성화하는 방법을 알아�
 badgeLimitedAvailability: label="제한된 가용성" type="Caution"
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ### 필요 권한 {#permissions}
 
-계정 대상자를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+계정 대상자를 활성화하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
 계정 대상을 활성화하는 데 필요한 권한이 있는지 확인하려면 대상 카탈로그를 확인하십시오. 대상에 다음 항목이 있는 경우 **[!UICONTROL 활성화]** 을 제어한 다음 적절한 사용 권한을 갖습니다.
 

@@ -2,9 +2,9 @@
 title: 대상 개요
 description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과 미리 빌드된 통합입니다. Adobe Experience Platform의 대상 을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: d3c7b416317034c8d57663e0c05c9dc4dbe6d2d4
+source-git-commit: 6dd6190f1b006ffb3346eea6dc917ce52e0aa1c6
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1088'
 ht-degree: 4%
 
 ---
@@ -61,12 +61,18 @@ Platform의 대상 기능은 Adobe Experience Platform 액세스 제어 권한�
 
 | 권한 수준 | 설명 |
 | ---- | ---- |
-| **[!UICONTROL 대상 관리]** | 대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
-| **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** | 대상에 대한 대상자를 활성화하고 [매핑 단계](ui/activate-batch-profile-destinations.md#mapping) 워크플로의 경우 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
-| **[!UICONTROL 대상 관리]**, **[!UICONTROL 매핑 없이 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** | 대상을 활성화하고 을(를) 숨기려면 [매핑 단계](ui/activate-batch-profile-destinations.md#mapping) 워크플로의 경우 **[!UICONTROL 대상 관리]**, **[!UICONTROL 매핑 없이 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 대상 보기]** | Experience Platform UI의 대상 탭에 액세스하려면 **[!UICONTROL 대상 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 관리]** | 대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** | 대상에 대한 대상자를 활성화하고 [매핑 단계](ui/activate-batch-profile-destinations.md#mapping) 워크플로의 경우 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 대상 보기]**, **[!UICONTROL 매핑 없이 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** | 에 액세스하지 않고 기존 데이터 흐름에서 대상을 추가하거나 제거하려면 [매핑 단계](ui/activate-batch-profile-destinations.md#mapping) 워크플로의 경우 **[!UICONTROL 대상 보기]**, **[!UICONTROL 매핑 없이 세그먼트 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 대상 보기]**, **[!UICONTROL 데이터 세트 대상 관리 및 활성화]** | 데이터 세트를 대상으로 내보내려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 데이터 세트 대상 관리 및 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions). |
 | **[!UICONTROL ID 그래프 보기]** | 내보내려면 *id* 대상에 대해 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
+
+아래 다이어그램은 대상에 대해 수행하려는 작업에 따라 필요한 권한을 시각적으로 표시합니다.
+
+![대상에서 특정 작업을 수행하는 데 필요한 권한을 보여 주는 다이어그램입니다.](/help/destinations/assets/overview/permissions-diagram.png)
 
 액세스 제어에 대한 자세한 내용은 [액세스 제어 사용 안내서](../access-control/ui/overview.md).
 

@@ -3,9 +3,9 @@ title: HubSpot 연결
 description: HubSpot 대상을 사용하면 HubSpot 계정에서 연락처 레코드를 관리할 수 있습니다.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1543'
 ht-degree: 2%
 
 ---
@@ -68,7 +68,7 @@ Platform에서 로 데이터를 내보내려면 [!DNL Hubspot] 계정 보유가 
 
 | 대상 ID | 예 | 설명 | 고려 사항 |
 |---|---|---|---|
-| `email` | `test@test.com` | 연락처의 이메일 주소입니다. | 필수입니다 |
+| `email` | `test@test.com` | 연락처의 이메일 주소입니다. | 필수 |
 
 ## 지원되는 대상자 {#supported-audiences}
 
@@ -99,7 +99,7 @@ Platform에서 로 데이터를 내보내려면 [!DNL Hubspot] 계정 보유가 
 
 >[!IMPORTANT]
 >
->대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
@@ -133,7 +133,7 @@ Platform에서 로 데이터를 내보내려면 [!DNL Hubspot] 계정 보유가 
 
 >[!IMPORTANT]
 >
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
 읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
@@ -153,7 +153,7 @@ XDM 필드를 [!DNL HubSpot] 대상 필드에서 아래 단계를 수행합니�
 1. 다음에서 **[!UICONTROL 대상 필드 선택]** 창에서 다음을 선택합니다. **[!UICONTROL 속성 선택]** 및 선택 `email`.
    ![ID로 매핑할 타겟 속성으로 이메일을 선택하는 Platform UI 스크린샷입니다.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
-| 소스 필드 | 대상 필드 | 필수입니다 |
+| 소스 필드 | 대상 필드 | 필수 |
 | --- | --- | --- |
 | `IdentityMap: Email` | `Identity: email` | 예 |
 

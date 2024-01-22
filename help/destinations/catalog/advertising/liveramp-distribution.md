@@ -2,9 +2,9 @@
 title: LiveRamp - 배포 연결
 description: LiveRamp - 배포 커넥터를 사용하여 이전에 LiveRamp에 온보딩된 대상자를 다운스트림 광고 대상으로 오케스트레이션하고 활성화하는 방법에 대해 알아봅니다.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2722'
 ht-degree: 38%
 
 ---
@@ -65,7 +65,7 @@ LiveRamp에 대상자를 온보딩한 후 [대상에 연결](#connect) 데이터
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
@@ -195,7 +195,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 * **[!UICONTROL 광고주 데이터 대상 약관 계약]**: 입력 `I AGREE` 디즈니 광고주 데이터 약관에 대한 승인 및 동의를 확인합니다.
 * **[!UICONTROL 클라이언트 이름]**: 대상 파트너에게 표시하려는 회사 이름을 입력합니다.
-* **[!UICONTROL 이메일 주소]**: 개인에게 연결된 이메일 주소를 입력합니다. 이 이메일 주소는 광고주 데이터 계약서 약관에서 서명 역할을 합니다.
+* **[!UICONTROL 이메일 주소]**: 개인에게 연결된 이메일 주소를 입력합니다. 이 이메일 주소는 광고주 데이터 사용 약관에 대한 서명 역할을 합니다.
 
 ### [!DNL iHeartMedia] {#iheartmedia}
 
@@ -431,7 +431,7 @@ LiveRamp 계정에 성공적으로 연결한 후 대상자를 활성화할 대�
 
 >[!IMPORTANT]
 > 
->데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
 다음 [!DNL LiveRamp - Distribution] 연결은 를 통해 LiveRamp 계정에 이미 온보딩된 대상을 활성화합니다. [라이브 램프 - 온보딩](liveramp-onboarding.md) 연결.
 

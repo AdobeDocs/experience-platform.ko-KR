@@ -3,9 +3,9 @@ title: 대상에 대한 잠재 고객 활성화
 type: Tutorial
 description: 잠재 고객을 대상으로 활성화하는 방법을 알아봅니다
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '619'
 ht-degree: 12%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 12%
 
 ### 필요 권한 {#permissions}
 
-잠재 고객을 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+잠재 고객을 활성화하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
 잠재 고객을 활성화하는 데 필요한 권한이 있는지 확인하려면 대상 카탈로그를 확인하십시오. 대상에 다음 항목이 있는 경우 **[!UICONTROL 활성화]** 을 제어한 다음 적절한 사용 권한을 갖습니다.
 

@@ -3,9 +3,9 @@ keywords: crm;CRM;CRM 대상;salesforce crm;salesforce crm 대상
 title: Salesforce CRM 연결
 description: Salesforce CRM 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce CRM 내에서 활성화할 수 있습니다.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2818'
+source-wordcount: '2821'
 ht-degree: 1%
 
 ---
@@ -144,7 +144,7 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce CRM], �
 
 >[!IMPORTANT]
 >
->대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
@@ -153,7 +153,7 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce CRM], �
 ### 대상으로 인증 {#authenticate}
 
 대상에 인증하려면 아래의 필수 필드를 입력한 다음 을(를) 선택합니다. **[!UICONTROL 대상에 연결]**. 다음을 참조하십시오. [수집 [!DNL Salesforce CRM] 자격 증명](#gather-credentials) 섹션에 자세히 설명되어 있습니다.
-| 자격 증명 | 설명 | | — | — | | **[!UICONTROL 사용자 이름]** | 내 [!DNL Salesforce] 계정 사용자 이름. | | **[!UICONTROL 암호]** | 다음으로 구성된 연결된 문자열 [!DNL Salesforce] 다음에 추가된 계정 암호: [!DNL Salesforce] 보안 토큰.<br>연결된 값은 다음 형식을 갖습니다. `{PASSWORD}{TOKEN}`.<br> 참고: 중괄호나 공백을 사용하지 마십시오.<br>예를 들어 [!DNL Salesforce] 암호: `MyPa$$w0rd123` 및 [!DNL Salesforce] 보안 토큰은 `TOKEN12345....0000`에서 사용할 연결된 값 **[!UICONTROL 암호]** 필드는 입니다. `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL 사용자 정의 도메인]** | 내 [!DNL Salesforce] 도메인 접두사입니다. <br>예를 들어 도메인이 입니다. *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, 다음을 제공해야 합니다. `d5i000000isb4eak-dev-ed` 을 값으로 추가합니다. | | **[!UICONTROL 클라이언트 ID]** | 내 [!DNL Salesforce] 연결된 앱 `Consumer Key`. | | **[!UICONTROL 클라이언트 암호]** | 내 [!DNL Salesforce] 연결된 앱 `Consumer Secret`. |
+| 자격 증명 | 설명 | | — | — | | **[!UICONTROL 사용자 이름]** | 사용자 [!DNL Salesforce] 계정 사용자 이름. | | **[!UICONTROL 암호]** | 다음으로 구성된 연결된 문자열 [!DNL Salesforce] 다음에 추가된 계정 암호: [!DNL Salesforce] 보안 토큰.<br>연결된 값은 다음 형식을 갖습니다. `{PASSWORD}{TOKEN}`.<br> 참고: 중괄호나 공백을 사용하지 마십시오.<br>예를 들어 [!DNL Salesforce] 암호: `MyPa$$w0rd123` 및 [!DNL Salesforce] 보안 토큰은 `TOKEN12345....0000`에서 사용할 연결된 값 **[!UICONTROL 암호]** 필드는 입니다. `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL 사용자 정의 도메인]** | 사용자 [!DNL Salesforce] 도메인 접두사입니다. <br>예를 들어 도메인이 입니다. *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, 다음을 제공해야 합니다. `d5i000000isb4eak-dev-ed` 을 값으로 추가합니다. | | **[!UICONTROL 클라이언트 ID]** | 사용자 [!DNL Salesforce] 연결된 앱 `Consumer Key`. | | **[!UICONTROL 클라이언트 암호]** | 사용자 [!DNL Salesforce] 연결된 앱 `Consumer Secret`. |
 
 ![인증 방법을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
@@ -180,7 +180,7 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce CRM], �
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 관리]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 >* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
 
 읽기 [스트리밍 대상자 내보내기 대상으로 프로필 및 대상자 활성화](/help/destinations/ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
@@ -206,7 +206,7 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에서 다음 단계를 �
    * 을 사용하여 작업하는 경우 *연락처* 세그먼트 내에서 Salesforce의 개체 참조 를 참조하십시오. [연락처](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) 업데이트할 필드에 대한 매핑을 정의합니다.
    * 단어를 검색하여 필수 필드를 식별할 수 있습니다 *필수*: 위의 링크에서 필드 설명에 언급되어 있습니다.
    * 내보내거나 업데이트할 필드에 따라 XDM 프로필 스키마와 [!DNL (API) Salesforce CRM]: |소스 필드|대상 필드| 메모 | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 연락처의 성(최대 80자). |\
-     |`xdm: person.name.firstName`|`Attribute: FirstName`| 연락처의 이름을 최대 40자까지 지정할 수 있습니다. | |`xdm: personalEmail.address`|`Attribute: Email`| 연락처의 이메일 주소입니다. |
+     |`xdm: person.name.firstName`|`Attribute: FirstName`| 연락처의 이름은 최대 40자입니다. | |`xdm: personalEmail.address`|`Attribute: Email`| 연락처의 이메일 주소입니다. |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
      ![Target 매핑을 보여주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
