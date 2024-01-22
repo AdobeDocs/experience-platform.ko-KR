@@ -4,9 +4,9 @@ description: Pinterest은 현재 Real-Time CDP의 Pinterest 대상에서 사용 
 hide: true
 hidefromtoc: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
-source-git-commit: 3968c8e2a0ebd2084a7047fb41e2b85c5da7a6e7
+source-git-commit: e3341ec6f62844858ecda7dd4db70d085f0bf217
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ pinterest에 대한 대상을 활성화할 수 있는 활성 데이터 흐름이
 
 ## 계획이 뭐야?
 
-Adobe은 Pinterest API v5를 활용하고 새 연결에서 기존 데이터 흐름을 유지하는 새로운 Pinterest 대상 카드를 출시합니다.
+Adobe은 Pinterest API v5를 활용하고 새 연결에서 기존 데이터 흐름을 유지하는 새로운 Pinterest 대상 카드를 발표했습니다.
 
 ## 활성화된 대상이 계속 작동하도록 하려면 어떤 작업을 수행해야 합니까?
 
@@ -45,7 +45,7 @@ Adobe은 Pinterest API v5를 활용하고 새 연결에서 기존 데이터 흐�
 
 ### 새 대상에 대한 흐름 활성화 {#disable-old-enable-new-flows}
 
-그런 다음 새 카드에 대한 데이터 흐름을 활성화해야 합니다 **[!UICONTROL (새로운 기능) Pinterest]**.
+그런 다음 새 항목에 대한 데이터 흐름을 활성화해야 합니다  **[!UICONTROL Pinterest]** 카드.
 
 1. 다음으로 이동 **[!UICONTROL 대상 > 찾아보기]** 화면의 필터를 사용하여 **[!UICONTROL Pinterest]** 대상만.
    ![찾아보기 탭에서만 Pinterest 데이터 흐름 필터링](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
@@ -66,14 +66,18 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 ![이전 및 새로운 Pinterest 대상 나란히](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
+<!--
+
 >[!IMPORTANT]
 >
->2023년 11월 16일 이후에는 기존 Pinterest 대상이 표시됩니다 **[!UICONTROL 사용 중단]**. <span class="preview">11월 16일 이후 (사용하지 않는) Pinterest 대상에 대한 데이터 흐름의 모든 변경 사항은 다음과 같습니다 *아님* 새 Pinterest 대상으로 자동으로 이월됩니다. </span>
->예를 들어 *추천하지 않음* 11월 16일 이후에 이전 대상에 대해 새 대상을 활성화합니다. 그렇게 하면 다음을 따라야 합니다. [일반 활성화 단계](/help/destinations/ui/activate-segment-streaming-destinations.md) 고객 작업이 수행된 후 대상을 새 대상에 추가하는 작업.
+>After November 16th, 2023 the legacy Pinterest destination is marked **[!UICONTROL Deprecating]**. <span class="preview">Any changes that you make to dataflows to the (Deprecating) Pinterest destination after November 16th will *not* be automatically carried over to the new Pinterest destination. </span>
+>For example, we *do not recommend* that you activate new audiences to the old destination after November 16th. If you do that, you will then have to follow the [regular activation steps](/help/destinations/ui/activate-segment-streaming-destinations.md) to add the audience to the new destination once the customer actions are taken.
+
+-->
 
 **2023년 12월 15일까지**: <span class="preview">고객 작업 1</span>. 새 카드가 Pinterest에 연결되도록 Pinterest에 다시 인증해야 합니다. 에서 전체 지침 보기 [이 섹션](#reauthenticate).
 
-<span class="preview">고객 작업 2</span>.그런 다음 이전 카드에서 Pinterest에 대한 데이터 흐름을 비활성화하고 새 카드에서 데이터 흐름을 활성화해야 합니다. 에서 전체 지침 보기 [이 섹션](#disable-old-enable-new-flows).
+<span class="preview">고객 작업 2</span>.그런 다음 새 카드에서 데이터 흐름을 활성화해야 합니다. 에서 전체 지침 보기 [이 섹션](#disable-old-enable-new-flows).
 
 <!--
 
@@ -83,8 +87,12 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 -->
 
-**2024년 1월 18일 이후**: <span class="preview">Pinterest이 V4 광고주 API에 대한 액세스를 해제했습니다. 새 대상으로 업그레이드하지 않은 모든 Real-Time CDP 고객은 이제 Pinterest 대상으로의 데이터 흐름이 실패했음을 알게 됩니다. [pinterest 재인증](#reauthenticate) 및 [데이터 흐름 활성화](#disable-old-enable-new-flows) 캠페인을 Pinterest으로 다시 시작하기 위해 업그레이드된 대상으로</span>.
+**2024년 1월 18일 이후**: <span class="preview">Pinterest이 V4 광고주 API에 대한 액세스를 해제했습니다. 새 대상으로 업그레이드하지 않은 모든 Real-Time CDP 고객은 이제 Pinterest 대상으로의 데이터 흐름이 실패했음을 알게 됩니다. [pinterest 재인증](#reauthenticate) 및 [데이터 흐름 활성화](#disable-old-enable-new-flows) 캠페인을 Pinterest으로 다시 시작하기 위해 업그레이드된 대상으로 설정합니다.</span>
 
-## 참고할 기타 항목
+<!--
 
-새 대상 카드에서 데이터 흐름을 활성화하고 이전 대상 카드에서 데이터 흐름을 비활성화하면 캠페인이나 Adobe Real-Time CDP에서 들어오는 대상에 있는 적격 프로필 수가 중단되지 않습니다.
+## Other items to note
+
+After you enable the dataflows on the new destination card and disable the dataflows on the old destination cards, you should see no disruption in your campaigns or in the numbers of qualified profiles in the audiences coming in from Adobe Real-Time CDP.
+
+-->
