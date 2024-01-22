@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 쿼리 서비스 개요
 description: Experience Platform 내에서 쿼리 서비스의 역할에 대해 알아봅니다.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: e06519978ed9c6128be53a15cef3046a0dbc2a16
+source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Adobe Experience Platform은 다양한 소스에서 데이터를 수집합니다
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
-Adobe Experience Platform [!DNL Data Science Workspace] 는 머신 러닝 및 인공 지능을 사용하여 Experience Platform 내에 저장된 데이터에서 통찰력을 얻습니다. 데이터 과학자는 [!DNL Data Science Workspace] 고객 및 고객 활동에 대한 기록 및 시계열 데이터를 기반으로 레시피를 빌드합니다. 이러한 레시피는 개인이 인식하고 사용할 가능성이 높은 구매 성향 및 추천 오퍼와 같은 예측을 용이하게 합니다. 다음 내에서 SQL을 사용할 수 있습니다. [!DNL Data Science Workspace] 쿼리 서비스를 로 통합하여 [!DNL JupyterLab] Adobe Analytics 데이터를 탐색, 변환 및 분석하기 위해 읽기 [[!DNL Data Science Workspace] 개요](../data-science-workspace/home.md) 및 [Jypiter Notebook 연결 안내서](./clients/jupyter-notebook.md) 자세한 내용은 [!DNL Data Science Workspace] 가 쿼리 서비스와 상호 작용합니다.
+Adobe Experience Platform [!DNL Data Science Workspace] 는 머신 러닝 및 인공 지능을 사용하여 Experience Platform 내에 저장된 데이터에서 통찰력을 얻습니다. 데이터 과학자는 [!DNL Data Science Workspace] 고객 및 고객 활동에 대한 기록 및 시계열 데이터를 기반으로 레시피를 빌드합니다. 이러한 레시피는 개인이 인식하고 사용할 가능성이 높은 구매 성향 및 추천 오퍼와 같은 예측을 용이하게 합니다. 다음 내에서 SQL을 사용할 수 있습니다. [!DNL Data Science Workspace] 쿼리 서비스를 로 통합하여 [!DNL JupyterLab] Adobe Analytics 데이터를 탐색, 변환 및 분석하기 위해 읽기 [[!DNL Data Science Workspace] 개요](../data-science-workspace/home.md) 및 [Jupyter Notebook 연결 안내서](./clients/jupyter-notebook.md) 자세한 내용은 [!DNL Data Science Workspace] 가 쿼리 서비스와 상호 작용합니다.
 
 ### [!DNL Segmentation Service] {#segmentation}
 
