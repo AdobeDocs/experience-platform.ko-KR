@@ -2,19 +2,14 @@
 title: Pinterest 고객 목록 연결
 description: 고객 목록, 사이트를 방문한 사람 또는 Pinterest에서 콘텐츠와 이미 상호 작용한 사람에서 대상을 만듭니다.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 5cef3bbc7f2246a91ecca807825d830f240c8d45
+source-git-commit: 02110e4b4156774c2961803f78ae1c3fc9d6240a
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '719'
 ht-degree: 3%
 
 ---
 
 # [!DNL Pinterest Customer List] 연결
-
->[!IMPORTANT]
->
->* 2023년 11월 16일부터 대상 카탈로그에 Pinterest 카드 2개가 나란히 표시됩니다. 이는 Pinterest으로 데이터를 내보내는 데 사용되는 Pinterest 광고주 API로 업그레이드했기 때문입니다. 기존 Pinterest 대상 커넥터의 이름이 (으)로 변경되었습니다. **[!UICONTROL (사용 중단) Pinterest]** 새 카드 **[!UICONTROL (새로운 기능) Pinterest]** 이제 을(를) 사용할 수 있습니다.
->* 사용 **[!UICONTROL (새로운 기능) Pinterest]** 카탈로그에서 Pinterest에 대한 모든 캠페인을 연결합니다. 에 대한 활성 데이터 흐름이 있는 경우 **[!UICONTROL (사용 중단) Pinterest]** 대상, 다음 읽기: [업그레이드 설명서](/help/destinations/catalog/advertising/pinterest-upgrade.md) 캠페인이 중단되지 않도록 작업 항목을 이해합니다.
 
 ## 개요 {#overview}
 
