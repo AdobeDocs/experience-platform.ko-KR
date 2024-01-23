@@ -5,7 +5,7 @@ exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
 workflow-type: tm+mt
 source-wordcount: '1859'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -69,12 +69,12 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="오브젝트 제거"
->abstract="패키지에서 객체를 제거하려면 제거할 행을 선택한 다음 선택 시 사용할 수 있는 삭제 옵션을 사용합니다. 게시된 패키지에서 개체를 제거할 수 없습니다."
+>abstract="패키지에서 오브젝트를 제거하려면 제거할 행을 선택한 다음, 행 선택 시 활성화되는 삭제 옵션을 사용합니다. 게시된 패키지에서는 오브젝트를 제거할 수 없습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="패키지 만료 설정"
->abstract="패키지는 초안 상태에서 비활성 기간이 지난 후 만료되도록 설정됩니다. 기본 날짜는 오늘부터 90일로 설정됩니다. 패키지가 게시될 때까지 이 날짜는 계속 변경됩니다. 내일 초안 상태의 패키지를 방문하는 경우 수동으로 설정하지 않는 한 날짜가 +1일 이동합니다."
+>abstract="패키지는 초안 상태에서 일정 기간 동안 활동이 없으면 만료되도록 설정됩니다. 기본 일자는 오늘로부터 90일 후로 설정됩니다. 패키지가 게시될 때까지 이 일자는 계속 변경됩니다. 내일 초안 상태의 패키지를 방문하는 경우 일자가 1일씩 이동합니다(사용자가 수동으로 설정하지 않는 한)."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"

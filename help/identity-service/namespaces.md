@@ -5,7 +5,7 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 876613610f8e3b369bc3fd41d235c214b791fd4d
 workflow-type: tm+mt
 source-wordcount: '1869'
-ht-degree: 9%
+ht-degree: 12%
 
 ---
 
@@ -26,13 +26,13 @@ ID 네임스페이스를 사용하려면 다양한 Adobe Experience Platform 서
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
 >title="ID 네임스페이스"
->abstract="ID 네임스페이스는 특정 ID의 컨텍스트입니다. 예를 들어 의 네임스페이스는 `Email` 다음과 일치할 수 있음 **이름<span>@acme.com**. 마찬가지로 의 네임스페이스입니다. `Phone` 다음과 일치할 수 있음 `555-555-1234`."
+>abstract="ID 네임스페이스는 특정 ID의 컨텍스트입니다. 예를 들어 `Email`의 네임스페이스는 **name<span>@acme.com**&#x200B;에 해당할 수 있습니다. 마찬가지로 `Phone`의 네임스페이스는 `555-555-1234`에 해당할 수 있습니다."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
 >title="ID 값"
->abstract="ID 값은 고유 개인, 조직 또는 자산을 나타내는 식별자입니다. 값이 표시하는 ID의 컨텍스트 또는 유형은 해당 ID 네임스페이스에 의해 정의됩니다. 프로필 조각 간에 레코드 데이터를 일치시킬 때 네임스페이스와 ID 값이 일치해야 합니다. 프로필 조각 간에 레코드 데이터를 일치시킬 때 네임스페이스와 ID 값이 일치해야 합니다."
+>abstract="ID 값은 고유 개인, 조직 또는 자산을 나타내는 식별자입니다. 값이 표시하는 ID의 컨텍스트 또는 유형은 해당 ID 네임스페이스에 의해 정의됩니다. 프로필 조각 전체에서 레코드 데이터를 일치시킬 때 네임스페이스와 ID 값이 일치해야 합니다. 프로필 조각 전체에서 레코드 데이터를 일치시킬 때 네임스페이스와 ID 값이 일치해야 합니다."
 >text="Learn more in documentation"
 
 정규화된 ID에는 다음 두 가지 구성 요소가 포함됩니다. **id 값** 및 **id 네임스페이스**. 예를 들어 ID의 값이 `scott@acme.com`을 입력한 다음 네임스페이스는 이 값을 이메일 주소로 구별하여 컨텍스트를 제공합니다. 마찬가지로 네임스페이스에서는 `555-123-456` 전화번호로서요 `3126ABC` CRM ID로. 기본적으로, **네임스페이스는 특정 id에 컨텍스트를 제공합니다**. 다음과 같이 프로필 조각 간에 레코드 데이터를 일치시킬 때 [!DNL Real-Time Customer Profile] 프로필 데이터를 병합합니다. id 값과 네임스페이스가 모두 일치해야 합니다.
