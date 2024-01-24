@@ -2,10 +2,10 @@
 title: 계산된 속성 UI 안내서
 description: Adobe Experience Platform UI를 사용하여 계산된 속성을 만들고, 보고, 업데이트하는 방법을 알아봅니다.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: cf01c18c8ea710492c8a2c8542c8a4580d5f0dcf
+source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 8%
+source-wordcount: '1576'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Platform에서 계산된 속성은 이벤트 수준 데이터�
 이 UI 안내서를 사용하려면 다양한 내용을 이해해야 합니다 [!DNL Experience Platform] 관리와 관련된 서비스 [!DNL Real-Time Customer Profiles]. 이 안내서를 읽거나 UI에서 작업하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [[!DNL Real-Time Customer Profile]](../home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): [!DNL Experience Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다.
 
 ## 계산된 속성 보기 {#view}
 
@@ -38,7 +38,7 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 왼쪽 탐색 후 **[!UI
 | ----- | ----------- |
 | [!UICONTROL 이름] | 계산된 속성의 표시 이름입니다. |
 | [!UICONTROL 설명] | 계산된 속성에 대한 설명입니다. |
-| [!UICONTROL 평가 메서드] | 계산된 속성에 대한 평가 메서드입니다. 현재는 **일괄 처리** 은(는) 지원됩니다. |
+| [!UICONTROL 평가 방법] | 계산된 속성에 대한 평가 메서드입니다. 현재는 **일괄 처리** 은(는) 지원됩니다. |
 | [!UICONTROL 마지막 평가됨] | 이 타임스탬프는 마지막으로 성공한 평가 실행을 나타냅니다. 발생한 이벤트만 **다음 이전** 이 타임스탬프는 마지막으로 성공한 평가에서 고려됩니다. |
 | [!UICONTROL 마지막 평가 상태] | 계산된 속성이 마지막 평가 실행에서 성공적으로 계산되었는지 여부를 나타내는 상태입니다. 가능한 값은 다음과 같습니다. **[!UICONTROL 성공]** 또는 **[!UICONTROL 실패]**. |
 | [!UICONTROL 새로 고침 빈도] | 계산된 속성이 새로 고쳐질 빈도를 나타냅니다. 가능한 값은 시간별, 일별, 주별 또는 월별입니다. |
@@ -112,7 +112,7 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 왼쪽 탐색 후 **[!UI
 
 ![다음 [!UICONTROL 빠른 새로 고침] 확인란이 강조 표시됩니다.](./images/ui/enable-fast-refresh.png)
 
-빠른 새로 고침을 사용하면 속성을 최신 상태로 유지할 수 있습니다. 이 옵션을 활성화하면 더 긴 전환 기간 동안에도 계산된 속성을 매일 새로 고쳐 사용자 활동에 신속하게 대응할 수 있습니다.
+빠른 새로 고침을 사용하면 속성을 최신 상태로 유지할 수 있습니다. 이 옵션을 활성화하면 더 긴 전환 확인 기간에도 계산된 속성을 매일 새로 고칠 수 있으므로 사용자 활동에 빠르게 반응할 수 있습니다.
 
 빠른 새로 고침에 대한 자세한 내용은 [빠른 새로 고침 섹션](./overview.md#fast-refresh) 를 참조하십시오.
 
@@ -155,6 +155,10 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 왼쪽 탐색 후 **[!UI
 >예를 들어 이메일 주소 필드가 가장 최근 함수를 가진 계산된 속성으로 채워지는 &quot;유효한 이메일 주소를 가진 모든 프로필&quot;을 찾는 세그먼트 정의를 만드는 경우 **필수** 이메일 주소 값이 모두 존재함 포함 **및** 이메일 주소의 타임스탬프가 존재합니다.
 
 계산된 속성을 작성한 후 다음을 사용할 수 있습니다 **게시됨** 다른 다운스트림 서비스에서 계산된 속성. 계산된 속성은 프로필 결합 스키마에서 생성된 프로필 속성 필드이므로, 실시간 고객 프로필에 대해 계산된 속성 값을 조회하고 대상에서 사용하거나 대상에 대해 활성화하거나 Adobe Journey Optimizer의 여정에서 개인화에 사용할 수 있습니다.
+
+>[!NOTE]
+>
+>계산된 속성 **할 수 없음** 대상자에서 사용 **컴포지션**.
 
 ![세그먼트 빌더가 표시되고 계산된 속성이 세그먼트 정의 컴포지션의 일부로 표시됩니다.](./images/ui/use-ca.png)
 

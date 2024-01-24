@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
+source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1844'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,10 @@ ht-degree: 0%
 프로필 속성 목록이 나타납니다. 제외할 속성 유형을 선택한 후 다음을 수행합니다 **[!UICONTROL 선택]** 제외 블록에 추가합니다.
 
 ![속성 목록이 표시됩니다.](../images/ui/audience-composition/select-attribute-exclude.png)
+
+>[!IMPORTANT]
+>
+>속성별로 제외할 때는 **1** 제외할 값입니다. 쉼표나 세미콜론과 같은 모든 종류의 구분 기호를 사용하면 해당 정확한 값만 제외됩니다. 예를 들어 값을 로 설정하는 경우 `red, blue` 을 실행하면 해당 용어가 제외됩니다. `red, blue` 속성에서 가져왔지만 **아님** 다음 용어 중 하나를 제외합니다. `red` 또는 `blue`.
 
 ## [!UICONTROL 강화] {#enrich-block}
 
