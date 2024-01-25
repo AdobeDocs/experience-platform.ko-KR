@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 편집기 UI 안내서
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서, Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 이를 통해 개발 목적으로 대화형 쿼리를 실행하고 비대화형 쿼리를 실행하여 Experience Platform의 데이터 세트를 채울 수 있습니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 79214671acdb0d48182423ad658be2a8b1cbc0c2
+source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '2313'
 ht-degree: 3%
 
 ---
@@ -26,13 +26,6 @@ ht-degree: 3%
 [!DNL Query Editor] 을에 연결하여 유연한 쿼리 실행 제공 [!DNL Query Service]및 쿼리는 이 연결이 활성화된 동안에만 실행됩니다.
 
 ## [!DNL Query Editor]에 액세스 {#accessing-query-editor}
-
->[!CONTEXTUALHELP]
->id="platform_queryservice_create_datagovernance"
->title="데이터 거버넌스 의무"
->abstract="조직의 데이터 거버넌스 정책을 준수하고 규정 요구 사항을 충족하는 것은 귀사의 유일한 책임입니다. Experience Platform은 데이터 사용 의무를 관리할 수 있는 데이터 거버넌스 도구를 제공합니다. 데이터를 쿼리하거나 처리하기 전에 적절한 데이터 사용 레이블을 적용합니다. 데이터 거버넌스 도구 및 모범 사례에 대한 자세한 내용은 설명서를 참조하십시오."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ko" text="데이터 거버넌스 개요"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ko" text="데이터 거버넌스 레이블 개요"
 
 다음에서 [!DNL Experience Platform] UI, 선택 **[!UICONTROL 쿼리]** 을(를) 클릭하여 왼쪽 탐색 메뉴에서 [!DNL Query Service] 작업 영역. 그런 다음 쿼리 작성을 시작하려면 다음을 선택합니다. **[!UICONTROL 쿼리 만들기]** 화면 오른쪽 상단에 있습니다. 이 링크는 의 페이지에서 사용할 수 있습니다. [!DNL Query Service] 작업 영역.
 

@@ -4,14 +4,21 @@ solution: Experience Platform
 title: 데이터 거버넌스 개요
 description: Adobe Experience Platform 데이터 거버넌스를 사용하면 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다. 이 기능은 Experience Platform 내 카탈로그 작성, 데이터 계통 확인, 데이터 사용 라벨링, 데이터 사용 정책, 마케팅 작업을 위한 데이터 사용 제어 등 다양한 수준에서 주요 역할을 합니다.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 2b16ecb840e63baa244d8061a0349a9e39e726b2
+source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 3%
+source-wordcount: '1623'
+ht-degree: 4%
 
 ---
 
-# 데이터 거버넌스 개요
+# 데이터 거버넌스 개요 {#data-governance-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_datagovernance_framework"
+>title="데이터 거버넌스 의무"
+>abstract="조직의 데이터 거버넌스 정책을 준수하고 규정 요구 사항을 충족하는 것은 귀사의 유일한 책임입니다. Experience Platform은 데이터 사용 의무를 관리할 수 있는 데이터 거버넌스 도구를 제공합니다. 데이터를 쿼리하거나 처리하기 전에 적절한 데이터 사용 레이블을 적용합니다. 데이터 거버넌스 도구 및 모범 사례에 대한 자세한 내용은 설명서를 참조하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ko" text="데이터 거버넌스 개요"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ko" text="데이터 거버넌스 레이블 개요"
 
 Adobe Experience Platform의 핵심 기능 중 하나는 마케터가 고객을 식별하고, 이해하고, 참여시킬 수 있도록 여러 엔터프라이즈 시스템의 데이터를 통합하는 것입니다. 이 데이터에는 조직 규정이나 법적 규정에 따른 사용 제한이 적용될 수 있습니다. 따라서 내에서 데이터 작업을 수행하는 것이 중요합니다 [!DNL Platform] 는 데이터 사용 정책을 준수합니다.
 

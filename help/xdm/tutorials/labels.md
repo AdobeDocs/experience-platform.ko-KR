@@ -2,10 +2,10 @@
 title: 스키마에 대한 데이터 사용 레이블 관리
 description: Adobe Experience Platform UI에서 XDM(Experience Data Model) 스키마 필드에 데이터 사용 레이블을 추가하는 방법을 알아봅니다.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 27842e7e07b6fc5884587fb75cc89bcfb4320938
+source-git-commit: 37395e5762c8d54e6fca5c3502bdbf56f5b5472c
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 7%
+source-wordcount: '806'
+ht-degree: 8%
 
 ---
 
@@ -39,12 +39,6 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 >id="platform_schemas_editgovernancelabels"
 >title="거버넌스 레이블 편집"
 >abstract="레이블을 스키마 필드에 적용하여 해당 특정 필드에 포함된 데이터에 적용되는 사용 정책을 표시합니다."
-
->[!CONTEXTUALHELP]
->id="platform_schemas_labelusageacknowledgement"
->title="레이블 사용"
->abstract="이 객체의 레이블을 편집하기 전에 다음 다운스트림 효과를 기록해 두십시오.<br>거버넌스 정책: 레이블을 사용하여 데이터를 다운스트림 대상으로 활성화할 수 있는지 여부를 관리합니다. 잘못된 레이블 사용으로 인해 다운스트림에서 데이터에 액세스할 수 없습니다.<br>동의 정책: 세그먼트에 프로필을 포함할 때 레이블을 사용하여 고객 동의 및 환경 설정을 적용합니다. 잘못된 레이블 사용으로 인해 다운스트림에서 데이터에 액세스할 수 없습니다.<br>액세스 정책: 속성 기반 액세스 컨트롤은 레이블을 사용하여 특정 자산에 액세스할 수 있는 사용자 역할을 결정합니다. 의도하지 않은 레이블 사용으로 인해 조직의 일부 직원이 이전에 액세스한 자산을 사용하지 못할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/overview.html?lang=ko" text="속성 기반 액세스 제어 개요"
 
 레이블 추가를 시작하려면 먼저 다음을 수행해야 합니다 [편집할 기존 스키마 선택](../ui/resources/schemas.md#edit) 또는 [새 스키마 만들기](../ui/resources/schemas.md#create) 스키마 편집기에서 구조를 확인합니다.
 
