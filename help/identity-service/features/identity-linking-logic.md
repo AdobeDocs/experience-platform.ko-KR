@@ -2,9 +2,9 @@
 title: ID 서비스 연결 논리
 description: ID 서비스에서 다양한 ID를 연결하여 고객에 대한 포괄적인 보기를 만드는 방법에 대해 알아봅니다.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 45170c78b9d15c7cc9d71f2d0dab606ea988a783
+source-git-commit: 2b6700b2c19b591cf4e60006e64ebd63b87bdb2a
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '980'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,17 @@ ID 네임스페이스와 ID 값이 일치하면 두 ID 간의 링크가 설정�
 
 * **프로필 레코드**: 이러한 ID는 일반적으로 CRM 시스템에서 가져옵니다.
 * **경험 이벤트**: 이러한 ID는 일반적으로 WebSDK 구현 또는 Adobe Analytics 소스에서 가져옵니다.
+
+## 링크 설정의 의미론적 의미
+
+ID는 실제 엔티티를 나타냅니다. 두 ID 사이에 링크가 설정되어 있는 경우 이는 두 ID가 서로 연결되어 있음을 의미합니다. 다음은 이 개념을 설명하는 몇 가지 예입니다.
+
+| 작업 | 링크 설정됨 | 의미 |
+| --- | --- | --- |
+| 최종 사용자는 컴퓨터를 사용하여 로그인합니다. | CRM ID와 ECID가 함께 연결됩니다. | 사용자(CRM ID)는 브라우저(ECID)가 있는 장치를 소유합니다. |
+| 최종 사용자는 iPhone 를 사용하여 익명으로 탐색합니다. | IDFA는 ECID와 연결되어 있습니다. | iPhone과 같은 Apple 하드웨어 장치(IDFA)는 브라우저(ECID)와 연결되어 있습니다. |
+| 최종 사용자는 Google Chrome을 사용한 다음 Firefox를 사용하여 로그인합니다. | CRM ID가 두 개의 다른 ECID와 연결되어 있습니다. | 사용자(CRM ID)가 2개의 웹 브라우저와 연결되어 있습니다(**참고**: 각 브라우저는 자체 ECID)를 갖습니다. |
+| 데이터 엔지니어는 CRM ID와 이메일이라는 ID로 표시된 두 필드가 포함된 CRM 레코드를 수집합니다. | CRM ID와 이메일이 연결됩니다. | 개인(CRM ID)은 이메일 주소와 연결됩니다. |
 
 ## ID 서비스 연결 논리 이해
 
@@ -85,10 +96,13 @@ ID 서비스는 CRM ID:60013ABC가 그래프 내에 이미 있음을 인식하�
 | `t=3` | ECID:44675 | 홈 페이지 보기 |
 | `t=4` | ECID:44675, CRM ID: 31260XYZ | 구매 내역 보기 |
 
+각 이벤트에 대한 기본 ID는 다음을 기반으로 결정됩니다 [데이터 요소 유형 구성 방법](../../tags/extensions/client/web-sdk/data-element-types.md).
+
 >[!NOTE]
 >
->* `*` - ID로 표시된 필드를 나타내며 ECID는 기본 필드로 표시됩니다.
->* 기본적으로 개인 식별자(이 경우 CRM ID)가 기본 ID로 지정됩니다. 개인 식별자가 없으면 쿠키 식별자(이 경우 ECID)가 기본 ID가 됩니다.
+>* CRM ID를 기본 ID로 선택하면 인증된 이벤트(CRM ID 및 ECID가 포함된 ID 맵이 있는 이벤트)에 CRM ID의 기본 ID가 있습니다. 인증되지 않은 이벤트(ID 맵이 ECID만 포함된 이벤트)의 경우 ECID의 기본 ID가 있습니다. Adobe은 이 옵션을 권장합니다.
+>
+>* 인증 상태에 관계없이 ECID를 기본 ID로 선택하면 ECID가 기본 ID가 됩니다.
 
 이 예제에서는
 
