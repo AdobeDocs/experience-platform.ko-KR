@@ -5,9 +5,9 @@ feature: Customer AI
 title: Customer AI 인스턴스 구성
 description: AI/ML 서비스는 다양한 사용 사례에 맞게 구성할 수 있는 사용하기 쉬운 Adobe Sensei 서비스로 고객 AI를 제공합니다. 다음 섹션에서는 고객 AI의 인스턴스를 구성하는 단계를 제공합니다.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 973a9cae711780448e5c708622a71ba928695beb
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2824'
+source-wordcount: '2827'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 
 >[!NOTE]
 >
-> 데이터 세트에 유효한 ID 유형(네임스페이스)이 없는 경우 기본 ID를 설정하고 을 사용하여 ID 네임스페이스에 할당해야 합니다. [스키마 편집기](../../../xdm/schema/composition.md#identity). 네임스페이스 및 ID에 대한 자세한 내용은 [ID 서비스 네임스페이스](../../../identity-service/namespaces.md) 설명서를 참조하십시오.
+> 데이터 세트에 유효한 ID 유형(네임스페이스)이 없는 경우 기본 ID를 설정하고 을 사용하여 ID 네임스페이스에 할당해야 합니다. [스키마 편집기](../../../xdm/schema/composition.md#identity). 네임스페이스 및 ID에 대한 자세한 내용은 [ID 서비스 네임스페이스](../../../identity-service/features/namespaces.md) 설명서를 참조하십시오.
 
 ## 목표 정의 {#define-a-goal}
 

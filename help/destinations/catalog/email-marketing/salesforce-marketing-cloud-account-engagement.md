@@ -3,7 +3,7 @@ title: Salesforce Marketing Cloud 계정 참여
 description: Salesforce Marketing Cloud 계정 참여(이전의 Pardot) 대상을 사용하여 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce Marketing Cloud 계정 참여 내에서 활성화하는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 2%
@@ -72,7 +72,7 @@ A [!DNL Marketing Cloud Account Engagement] 다음에 대한 구독이 있는 �
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Marketing Cloud Account Engagement] 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
+[!DNL Marketing Cloud Account Engagement] 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/features/namespaces.md).
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|

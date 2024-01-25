@@ -5,9 +5,9 @@ title: 스키마 편집기를 사용하여 두 스키마 간의 관계 정의
 description: 이 문서에서는 Experience Platform 사용자 인터페이스에서 스키마 편집기를 사용하여 두 스키마 간의 관계를 정의하는 자습서를 제공합니다.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1158'
 ht-degree: 10%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 10%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
->title="참조 신원 네임스페이스"
+>title="참조 ID 네임스페이스"
 >abstract="참조 스키마의 기본 ID 필드에 대한 네임스페이스(유형)입니다. 관계에 참여하려면 참조 스키마에 기본 ID 필드가 설정되어 있어야 합니다. 스키마 관계에 대한 자세한 내용은 설명서를 참조하십시오."
 
 Adobe Experience Platform에서는 다양한 채널에서 고객과 브랜드와의 상호 작용 간의 관계를 이해하는 기능이 중요합니다. 구조 내에서 이러한 관계 정의 [!DNL Experience Data Model] (XDM) 스키마를 사용하면 고객 데이터에 대한 복잡한 통찰력을 얻을 수 있습니다.
@@ -73,11 +73,11 @@ Adobe Experience Platform에서는 다양한 채널에서 고객과 브랜드와
 
 참조 스키마 &quot;[!DNL Hotels]&quot;은(는) 사용자 정의&quot;를 기반으로 합니다.[!DNL Hotels]&quot; 클래스이며, 호텔을 설명하는 필드가 포함되어 있습니다. 관계에 참여하려면 참조 스키마에 기본 ID도 정의되어 있어야 하며 사용할 수 있어야 합니다. [!UICONTROL 프로필]. 이 경우, `_tenantId.hotelId`사용자 지정 을 사용하여 스키마의 기본 ID로 작동합니다.[!DNL Hotel ID]&quot;id 네임스페이스.
 
-![프로필](../images/tutorials/relationship/hotels.png)에 대해 활성화합니다
+![프로필 활성화](../images/tutorials/relationship/hotels.png)
 
 >[!NOTE]
 >
->사용자 정의 ID 네임스페이스를 만드는 방법을 알아보려면 [Identity Service 설명서](../../identity-service/namespaces.md#manage-namespaces).
+>사용자 정의 ID 네임스페이스를 만드는 방법을 알아보려면 [Identity Service 설명서](../../identity-service/features/namespaces.md#manage-namespaces).
 
 ## 관계 필드 그룹 만들기
 

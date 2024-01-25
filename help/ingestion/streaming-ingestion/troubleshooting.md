@@ -4,16 +4,16 @@ solution: Experience Platform
 title: 스트리밍 수집 문제 해결 안내서
 description: 이 문서에서는 Adobe Experience Platform의 스트리밍 수집에 대한 FAQ에 대한 답변을 제공합니다.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
 
 # 스트리밍 수집 문제 해결 안내서
 
-이 문서에서는 Adobe Experience Platform의 스트리밍 수집에 대한 FAQ에 대한 답변을 제공합니다. 기타 관련 질문 및 문제 해결 [!DNL Platform] 모든 상황에서 발생하는 서비스를 포함한 서비스 [!DNL Platform] API입니다. 다음을 참조하십시오. [Experience Platform 문제 해결 안내서](../../landing/troubleshooting.md).
+이 문서에서는 Adobe Experience Platform의 스트리밍 수집에 대한 FAQ에 대한 답변을 제공합니다. 기타 관련 질문 및 문제 해결 [!DNL Platform] 모든 상황에서 발생하는 서비스를 포함한 서비스 [!DNL Platform] API, 다음을 참조하십시오. [Experience Platform 문제 해결 안내서](../../landing/troubleshooting.md).
 
 Adobe Experience Platform [!DNL Data Ingestion] 는 데이터를 수집하는 데 사용할 수 있는 RESTful API를 제공합니다. [!DNL Experience Platform]. 수집된 데이터는 거의 실시간으로 개별 고객 프로필을 업데이트하는 데 사용되므로 여러 채널에 걸쳐 개인화되고 관련성 있는 경험을 제공할 수 있습니다. 다음을 읽으십시오. [데이터 수집 개요](../home.md) 서비스 및 다양한 수집 방법에 대한 자세한 내용을 참조하십시오. 스트리밍 수집 API 사용 방법에 대한 단계는 [스트리밍 수집 개요](../streaming-ingestion/overview.md).
 
@@ -97,6 +97,6 @@ Adobe Experience Platform [!DNL Data Ingestion] 는 데이터를 수집하는 �
 
 If [!DNL Real-Time Customer Profile] 은(는) 메시지를 거부합니다. 잘못된 id 정보 때문일 수 있습니다. ID에 대해 잘못된 값 또는 네임스페이스를 제공한 결과일 수 있습니다.
 
-ID 네임스페이스에는 기본 및 사용자 지정의 두 가지 유형이 있습니다. 사용자 정의 네임스페이스를 사용하는 경우 [!DNL Identity Service]. 다음을 참조하십시오. [id 네임스페이스 개요](../../identity-service/namespaces.md) 기본 및 사용자 지정 네임스페이스 사용에 대한 자세한 내용은 을 참조하십시오.
+ID 네임스페이스에는 기본 및 사용자 지정의 두 가지 유형이 있습니다. 사용자 정의 네임스페이스를 사용하는 경우 [!DNL Identity Service]. 다음을 참조하십시오. [id 네임스페이스 개요](../../identity-service/features/namespaces.md) 기본 및 사용자 지정 네임스페이스 사용에 대한 자세한 내용은 을 참조하십시오.
 
 다음을 사용할 수 있습니다. [[!DNL Experience Platform UI]](https://platform.adobe.com) 메시지가 수집되지 않은 이유에 대한 자세한 내용을 보려면 을 클릭하십시오. 클릭 **[!UICONTROL 모니터링]** 왼쪽 탐색에서 **[!UICONTROL 전체 스트리밍]** 탭하여 선택한 기간 동안 스트리밍된 메시지 배치를 볼 수 있습니다.

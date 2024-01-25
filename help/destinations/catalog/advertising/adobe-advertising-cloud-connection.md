@@ -2,7 +2,7 @@
 title: Adobe Advertising Cloud DSP 연결
 description: Adobe Advertising Cloud DSP은 Adobe Real-time Customer Data Platform의 통합 대상으로서, 캠페인 활성화를 위해 인증된 자사 대상을 승인된 광고주 및 사용자와 공유할 수 있습니다.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 2%
@@ -41,7 +41,7 @@ DSP 계정이 있는 미디어 에이전시는 호스피탈리티 업계의 상�
 
 ## 지원되는 ID {#supported-identities}
 
-Adobe Advertising Cloud DSP 대상은 아래 표에 설명된 ID 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
+Adobe Advertising Cloud DSP 대상은 아래 표에 설명된 ID 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/features/namespaces.md).
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|

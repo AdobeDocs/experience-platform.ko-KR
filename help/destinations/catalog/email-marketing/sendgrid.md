@@ -3,7 +3,7 @@ keywords: 이메일;이메일;이메일;이메일 대상;sendgrid;sendgrid 대�
 title: SendGrid 연결
 description: SendGrid 대상을 사용하면 자사 데이터를 내보내고 비즈니스 요구 사항에 맞게 SendGrid 내에서 활성화할 수 있습니다.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 2%
@@ -44,7 +44,7 @@ SendGrid 대상으로 데이터를 활성화하기 전에 [스키마](https://ex
 
 ## 지원되는 ID {#supported-identities}
 
-SendGrid는 아래 표에 설명된 ID 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
+SendGrid는 아래 표에 설명된 ID 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/features/namespaces.md).
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|

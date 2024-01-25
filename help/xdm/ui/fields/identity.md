@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 ID 필드 정의
 description: Experience Platform 사용자 인터페이스에서 ID 필드를 정의하는 방법을 알아봅니다.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 6%
@@ -20,7 +20,7 @@ XDM(Experience Data Model)에서 ID 필드는 레코드 또는 시계열 이벤�
 ID 필드는 플랫폼에서 고객 ID 그래프를 구성하는 방법에 대한 중요한 구성 요소이며, 이는 궁극적으로 실시간 고객 프로필이 서로 다른 데이터 조각을 병합하여 고객에 대한 완전한 보기를 얻는 방법에 영향을 줍니다. 스키마에서 ID 필드를 정의하기 전에 다음 설명서를 참조하여 ID 필드와 관련된 주요 서비스 및 개념에 대해 알아보십시오.
 
 * [Adobe Experience Platform ID 서비스](../../../identity-service/home.md): 디바이스와 시스템 간에 ID를 브리징하여 일치하는 XDM 스키마에 의해 정의된 ID 필드를 기반으로 데이터 세트를 서로 연결합니다.
-   * [ID 네임스페이스](../../../identity-service/namespaces.md): ID 네임스페이스는 단일 사용자와 관련될 수 있는 다양한 유형의 ID 정보를 정의하며, 각 ID 필드에 필요한 구성 요소입니다.
+   * [ID 네임스페이스](../../../identity-service/features/namespaces.md): ID 네임스페이스는 단일 사용자와 관련될 수 있는 다양한 유형의 ID 정보를 정의하며, 각 ID 필드에 필요한 구성 요소입니다.
 * [실시간 고객 프로필](../../../profile/home.md): 고객 ID 그래프를 활용하여 실시간으로 업데이트되는 여러 소스의 집계 데이터를 기반으로 통합 소비자 프로필을 제공합니다.
 
 ## ID 필드 정의 {#define-a-identity-field}
@@ -56,6 +56,6 @@ ID 필드는 플랫폼에서 고객 ID 그래프를 구성하는 방법에 대�
 
 ## 다음 단계
 
-이 안내서에서는 UI에서 ID 필드를 정의하는 방법을 다룹니다. 이 스키마를 사용하여 데이터가 수집되면 고객 ID 그래프가 스키마의 ID 필드를 반영하도록 업데이트됩니다. 에서 안내서 참조 [id 그래프 뷰어](../../../identity-service/ui/identity-graph-viewer.md) ui에서 조직의 개인 그래프를 살펴보는 방법을 알아봅니다.
+이 안내서에서는 UI에서 ID 필드를 정의하는 방법을 다룹니다. 이 스키마를 사용하여 데이터가 수집되면 고객 ID 그래프가 스키마의 ID 필드를 반영하도록 업데이트됩니다. 에서 안내서 참조 [id 그래프 뷰어](../../../identity-service/features/identity-graph-viewer.md) ui에서 조직의 개인 그래프를 살펴보는 방법을 알아봅니다.
 
 의 개요 보기 [UI의 필드 정의](./overview.md#special) 에서 다른 XDM 필드 유형을 정의하는 방법을 알아보려면 [!DNL Schema Editor].

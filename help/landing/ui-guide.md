@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Experience Platform UI 개요
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1797'
-ht-degree: 2%
+source-wordcount: '1795'
+ht-degree: 1%
 
 ---
 
@@ -131,7 +131,7 @@ Platform UI의 맨 위 탐색 모음에는 현재 로그인한 조직이 표시�
 
 다음 **[!UICONTROL 세그먼트]** 섹션 을 사용하면 세그먼트 정의를 만들고 관리할 수 있습니다. 사용에 대해 자세히 알아보려면 [!UICONTROL 세그먼트] 섹션, 다음을 읽으십시오. [세그먼테이션 사용 안내서](../segmentation/ui/overview.md). 세분화 서비스에 대한 자세한 내용은 [세그먼테이션 서비스 개요](../segmentation/home.md).
 
-다음 **[!UICONTROL ID]** 섹션 을 사용하면 id 네임스페이스를 만들고 관리할 수 있습니다. 에 대한 자세한 내용은 [!UICONTROL ID] Platform UI에서 id 네임스페이스 및 id 사용 방법에 대한 정보가 포함된 섹션은 다음을 참조하십시오. [id 네임스페이스 개요](../identity-service/namespaces.md).
+다음 **[!UICONTROL ID]** 섹션 을 사용하면 id 네임스페이스를 만들고 관리할 수 있습니다. 에 대한 자세한 내용은 [!UICONTROL ID] Platform UI에서 id 네임스페이스 및 id 사용 방법에 대한 정보가 포함된 섹션은 다음을 참조하십시오. [id 네임스페이스 개요](../identity-service/features/namespaces.md).
 
 ### [!UICONTROL 개인정보 보호]
 
@@ -139,7 +139,7 @@ Platform UI의 맨 위 탐색 모음에는 현재 로그인한 조직이 표시�
 
 다음 **[!UICONTROL 요청]** 섹션을 통해 개인 정보 보호 요청을 만들고 관리할 수 있습니다. Privacy Service UI에 액세스하려면 허용 목록에추가된여야 합니다. 요청 섹션 사용에 대한 자세한 내용은 다음을 참조하십시오. [Privacy Service 사용 안내서](../privacy-service/ui/user-guide.md). Privacy Service에 대한 자세한 내용은 [Privacy Service 개요](../privacy-service/home.md).
 
-### [!UICONTROL Data Science]
+### [!UICONTROL 데이터 과학]
 
 다음 **[!UICONTROL 노트북]** 섹션은 데이터를 탐색, 분석 및 모델링할 수 있는 대화형 개발 환경인 JupyterLab에 대한 액세스를 제공합니다. Notebooks 섹션 사용에 대한 자세한 내용은 [JupyterLab 사용 안내서](../data-science-workspace/jupyterlab/overview.md). 데이터 과학 작업 영역에 대한 자세한 내용은 [데이터 과학 작업 영역 개요](../data-science-workspace/home.md)
 

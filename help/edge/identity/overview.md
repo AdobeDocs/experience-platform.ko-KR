@@ -1,17 +1,17 @@
 ---
 title: 웹 SDK의 ID 데이터
 description: Adobe Experience Platform Web SDK를 사용하여 Adobe Experience Cloud ID(ECID)를 검색하고 관리하는 방법에 대해 알아봅니다.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 03060cdb-becc-430a-b527-60c055c2a906
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '1339'
 ht-degree: 0%
 
 ---
 
-
 # 웹 SDK의 ID 데이터
 
-Adobe Experience Platform Web SDK는 [Adobe Experience Cloud ID (ECID)](../../identity-service/ecid.md) 방문자 행동을 추적합니다. ECID를 사용하면 각 디바이스에 여러 세션에서 지속될 수 있는 고유 식별자가 있는지 확인하여 웹 세션 도중 및 여러 세션에서 발생한 모든 히트를 특정 디바이스에 연결할 수 있습니다.
+Adobe Experience Platform Web SDK는 [Adobe Experience Cloud ID (ECID)](../../identity-service/features/ecid.md) 방문자 행동을 추적합니다. ECID를 사용하면 각 디바이스에 여러 세션에서 지속될 수 있는 고유 식별자가 있는지 확인하여 웹 세션 도중 및 여러 세션에서 발생한 모든 히트를 특정 디바이스에 연결할 수 있습니다.
 
 이 문서에서는 Platform Web SDK를 사용하여 ECID를 관리하는 방법에 대한 개요를 제공합니다.
 
@@ -104,7 +104,7 @@ alloy("sendEvent", {
 >Adobe은 다음과 같이 개인을 나타내는 네임스페이스를 보낼 것을 권장합니다. `CRMID`를 기본 ID로 사용하십시오.
 
 
-내의 각 속성 `identityMap` 특정 항목에 속한 id를 나타냅니다. [id 네임스페이스](../../identity-service/namespaces.md). 속성 이름은 ID 네임스페이스 기호여야 하며 아래 Adobe Experience Platform 사용자 인터페이스에 나열되어 있습니다.[!UICONTROL ID]&quot;. 속성 값은 해당 ID 네임스페이스와 관련된 ID 배열이어야 합니다.
+내의 각 속성 `identityMap` 특정 항목에 속한 id를 나타냅니다. [id 네임스페이스](../../identity-service/features/namespaces.md). 속성 이름은 ID 네임스페이스 기호여야 하며 아래 Adobe Experience Platform 사용자 인터페이스에 나열되어 있습니다.[!UICONTROL ID]&quot;. 속성 값은 해당 ID 네임스페이스와 관련된 ID 배열이어야 합니다.
 
 >[!IMPORTANT]
 >

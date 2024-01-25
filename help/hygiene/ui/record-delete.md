@@ -2,9 +2,9 @@
 title: 레코드 삭제
 description: Adobe Experience Platform UI에서 레코드를 삭제하는 방법을 알아봅니다.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1557'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 4%
 Platform의 ID에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [Adobe Experience Platform ID 서비스](../../identity-service/home.md): 디바이스와 시스템 간에 ID를 브리징하여 일치하는 XDM 스키마에 의해 정의된 ID 필드를 기반으로 데이터 세트를 서로 연결합니다.
-* [ID 네임스페이스](../../identity-service/namespaces.md): ID 네임스페이스 는 다양한 유형을 정의합니다 of 단일 사용자와 관련될 수 있는 id 정보이며 각 id 필드의 필수 구성 요소입니다.
+* [ID 네임스페이스](../../identity-service/features/namespaces.md): ID 네임스페이스 는 다양한 유형을 정의합니다 of 단일 사용자와 관련될 수 있는 id 정보이며 각 id 필드의 필수 구성 요소입니다.
 * [실시간 고객 프로필](../../profile/home.md): ID 그래프를 사용하여 실시간으로 업데이트되는 여러 소스의 집계 데이터를 기반으로 통합 소비자 프로필을 제공합니다.
 * [경험 데이터 모델(XDM)](../../xdm/home.md): 스키마를 사용하여 플랫폼 데이터에 대한 표준 정의 및 구조를 제공합니다. 모든 Platform 데이터 세트는 특정 XDM 스키마를 준수하며, 스키마는 ID인 필드를 정의합니다.
 * [ID 필드](../../xdm/ui/fields/identity.md): XDM 스키마에서 ID 필드를 정의하는 방법을 알아봅니다.

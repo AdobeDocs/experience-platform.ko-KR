@@ -2,7 +2,7 @@
 title: XDM 개별 잠재 고객 프로필 클래스
 description: Experience Data Model(XDM)의 XDM 개별 잠재 고객 프로필 클래스에 대해 알아봅니다.
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 3%
@@ -23,7 +23,7 @@ XDM(경험 데이터 모델)에서 [!UICONTROL XDM 개별 잠재 고객 프로�
 | `_id` | [!UICONTROL 문자열] | 레코드에 대한 시스템에서 생성한 고유한 문자열 식별자. 이 필드는 개별 레코드의 고유성을 추적하고, 데이터 중복을 방지하고, 다운스트림 서비스에서 해당 레코드를 조회하는 데 사용됩니다.<br><br>이 필드는 시스템에서 생성되므로 데이터 수집 중에 명시적 값을 제공하지 않습니다. 그러나 원하는 경우 고유한 ID 값을 제공하도록 선택할 수 있습니다. |
 | `createdByBatchID` | [!UICONTROL 문자열] | 레코드가 생성된 수집된 일괄 처리의 ID입니다. |
 | `modifiedByBatchID` | [!UICONTROL 문자열] | 마지막으로 수집된 일괄 처리의 ID로 인해 레코드가 업데이트되었습니다. |
-| `partnerID` | [!UICONTROL 문자열] | 일반적으로 개별 잠재 고객을 식별하는 고유한 익명 식별자입니다. 다음에서 설명서를 참조하십시오. [id 유형](../../identity-service/namespaces.md#identity-type) Adobe Experience Platform에서 사용할 수 있는 Partner ID 및 기타 ID 유형에 대해 자세히 알아보려면 |
+| `partnerID` | [!UICONTROL 문자열] | 일반적으로 개별 잠재 고객을 식별하는 고유한 익명 식별자입니다. 다음에서 설명서를 참조하십시오. [id 유형](../../identity-service/features/namespaces.md#identity-type) Adobe Experience Platform에서 사용할 수 있는 Partner ID 및 기타 ID 유형에 대해 자세히 알아보려면 |
 | `repositoryCreatedBy` | [!UICONTROL 문자열] | 레코드를 만든 사용자의 ID입니다. |
 | `repositoryLastModifiedBy` | [!UICONTROL 문자열] | 레코드를 마지막으로 수정한 사용자의 ID입니다. 레코드가 생성되면 `modifiedByUser` 값은 로 설정됩니다. `createdByUser` 값. |
 

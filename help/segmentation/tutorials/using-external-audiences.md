@@ -5,9 +5,9 @@ description: 이 자습서를 따라 Adobe Experience Platform에서 외부 대�
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Adobe Experience Platform은 나중에 새 대상의 구성 요소로 사용할 
 
 외부 대상을 사용하는 첫 번째 단계는 ID 네임스페이스를 만드는 것입니다. ID 네임스페이스를 사용하면 플랫폼에서 대상자의 출처 를 연결할 수 있습니다.
 
-ID 네임스페이스를 만들려면 [id 네임스페이스 안내서](../../identity-service/namespaces.md#manage-namespaces). ID 네임스페이스를 만들 때 소스 세부 정보를 ID 네임스페이스에 추가하고 해당 ID를 표시합니다 [!UICONTROL 유형] as a **[!UICONTROL 비사용자 식별자]**.
+ID 네임스페이스를 만들려면 [id 네임스페이스 안내서](../../identity-service/features/namespaces.md#manage-namespaces). ID 네임스페이스를 만들 때 소스 세부 정보를 ID 네임스페이스에 추가하고 해당 ID를 표시합니다 [!UICONTROL 유형] as a **[!UICONTROL 비사용자 식별자]**.
 
 ![비사용자 식별자는 ID 네임스페이스 만들기 모달에서 강조 표시됩니다.](../images/tutorials/external-audiences/identity-namespace-info.png)
 

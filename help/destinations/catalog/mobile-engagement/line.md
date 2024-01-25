@@ -4,7 +4,7 @@ title: LINE 연결
 description: LINE 대상을 사용하면 Platform 대상자에 프로필을 추가하고 연결된 사용자에게 개인화된 경험을 전달할 수 있습니다.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 2%
@@ -54,7 +54,7 @@ Platform의 액세스 허용 [!DNL LINE] 리소스, 다음이 필요합니다. *
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL LINE] 는 아래 표에 설명된 id 업데이트 및 내보내기를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
+[!DNL LINE] 는 아래 표에 설명된 id 업데이트 및 내보내기를 지원합니다. 자세히 알아보기 [id](/help/identity-service/features/namespaces.md).
 
 | 대상 ID | 설명 |
 |---|---|

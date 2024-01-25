@@ -3,9 +3,9 @@ keywords: 대상;대상;대상 세부 사항 페이지;대상 세부 사항 페�
 title: 대상 세부 사항 보기
 description: 개별 대상에 대한 세부 정보 페이지에서는 대상 세부 정보에 대한 개요를 제공합니다. 대상 세부 사항에는 대상 이름, ID, 대상에 매핑된 대상자 및 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤이 포함됩니다.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '925'
 ht-degree: 1%
 
 ---
@@ -57,10 +57,10 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 | [!UICONTROL 대상] | 대상자를 보낼 대상 플랫폼을 나타냅니다. 다음을 참조하십시오. [대상 카탈로그](../catalog/overview.md) 추가 정보. |
 | [!UICONTROL 상태] | 대상의 활성화 여부를 나타냅니다. |
 | [!UICONTROL 마케팅 액션] | 데이터 거버넌스 목적으로 이 대상에 적용되는 마케팅 작업(사용 사례)을 나타냅니다. |
-| [!UICONTROL 카테고리] | 대상 유형을 나타냅니다. 다음을 참조하십시오. [대상 카탈로그](../catalog/overview.md) 추가 정보. |
+| [!UICONTROL 범주] | 대상 유형을 나타냅니다. 다음을 참조하십시오. [대상 카탈로그](../catalog/overview.md) 추가 정보. |
 | [!UICONTROL 연결 유형] | 대상자를 대상으로 전송하는 양식을 나타냅니다. 가능한 값은 다음과 같습니다. [!UICONTROL 쿠키] 및 [!UICONTROL 프로필 기반]. |
 | [!UICONTROL 빈도] | 대상자를 대상으로 보내는 빈도를 나타냅니다. 가능한 값은 다음과 같습니다. [!UICONTROL 스트리밍] 및 [!UICONTROL 일괄 처리]. |
-| [!UICONTROL 신원] | 대상이 허용하는 ID 네임스페이스를 나타냅니다. 예: `GAID`, `IDFA`, 또는 `email`. 허용되는 ID 네임스페이스에 대한 자세한 내용은 [id 네임스페이스 개요](../../identity-service/namespaces.md). |
+| [!UICONTROL 신원] | 대상이 허용하는 ID 네임스페이스를 나타냅니다. 예: `GAID`, `IDFA`, 또는 `email`. 허용되는 ID 네임스페이스에 대한 자세한 내용은 [id 네임스페이스 개요](../../identity-service/features/namespaces.md). |
 | [!UICONTROL 작성자] | 이 대상을 만든 사용자를 나타냅니다. |
 | [!UICONTROL 생성일] | 이 대상을 만들 때의 UTC 날짜/시간을 나타냅니다. |
 

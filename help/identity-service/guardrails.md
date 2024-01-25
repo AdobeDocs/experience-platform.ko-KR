@@ -3,7 +3,7 @@ keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침
 title: ID 서비스 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 0%
@@ -186,7 +186,7 @@ ECID:35577을 삭제하면 CRM ID:60013 및 CRM ID:25212을 현재 삭제된 ECI
 자세한 내용은 다음 설명서를 참조하십시오. [!DNL Identity Service]:
 
 * [[!DNL Identity Service] 개요](home.md)
-* [ID 그래프 뷰어](ui/identity-graph-viewer.md)
+* [ID 그래프 뷰어](features/identity-graph-viewer.md)
 
 Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보호, 종단 간 지연 정보 및 라이선스 정보에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 모델링 우수 사례
 description: 이 문서에서는 XDM(경험 데이터 모델) 스키마와 Adobe Experience Platform에서 사용할 스키마를 구성하기 위한 구성 요소, 원칙 및 모범 사례에 대해 소개합니다.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: cdb98f7512d290ed23867f2c081cf4ce432d18ca
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '3096'
 ht-degree: 1%
@@ -206,7 +206,7 @@ ERD에 설정된 카디널리티는 또한 개체를 분류하는 방법에 대�
 
 Experience Platform에서 ID로 표시된 XDM 필드는 여러 데이터 소스에서 온 개별 고객에 대한 정보를 결합하는 데 사용됩니다. 스키마에 ID로 표시된 필드가 여러 개 있을 수 있지만 스키마가에서 사용할 수 있도록 하려면 단일 기본 ID를 정의해야 합니다 [!DNL Real-Time Customer Profile]. 의 섹션을 참조하십시오. [id 필드](./composition.md#identity) 이들 필드의 사용 사례에 대한 자세한 내용은 스키마 컴포지션 기본 사항을 참조하십시오.
 
-스키마를 디자인할 때 관계형 데이터베이스 테이블의 모든 기본 키는 기본 ID에 대한 후보일 수 있습니다. 적용 가능한 ID 필드의 다른 예로는 고객 이메일 주소, 전화번호, 계정 ID 등이 있습니다. [ECID](../../identity-service/ecid.md).
+스키마를 디자인할 때 관계형 데이터베이스 테이블의 모든 기본 키는 기본 ID에 대한 후보일 수 있습니다. 적용 가능한 ID 필드의 다른 예로는 고객 이메일 주소, 전화번호, 계정 ID 등이 있습니다. [ECID](../../identity-service/features/ecid.md).
 
 ### Adobe 응용 프로그램 스키마 필드 그룹 {#adobe-application-schema-field-groups}
 

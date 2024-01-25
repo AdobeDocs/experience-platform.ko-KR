@@ -2,10 +2,10 @@
 title: 감사 로그 개요
 description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어떤 작업을 수행했는지 확인하는 방법에 대해 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1294'
-ht-degree: 46%
+source-wordcount: '1291'
+ht-degree: 42%
 
 ---
 
@@ -34,24 +34,24 @@ Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명
 
 ## 감사 로그로 캡처된 이벤트 유형 {#category}
 
-다음 표에서는 감사 로그에서 리소스를 기록하는 작업을 설명합니다:
+다음 표에서는 감사 로그에서 리소스를 기록하는 작업을 설명합니다.
 
 | 리소스 | 작업 |
 | --- | --- |
 | [액세스 제어 정책(속성 기반 액세스 제어)](../../../access-control/home.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
 | [계정(Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
-| [Attribution AI 인스턴스](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li></ul> |
+| [Attribution AI 인스턴스](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>사용</li><li>사용 안 함</li></ul> |
 | [감사 로그](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>내보내기</li></ul> |
 | [클래스](../../../xdm/schema/composition.md#class) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
 | 계산된 속성 | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
-| [고객 AI 인스턴스](../../../intelligent-services/customer-ai/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li></ul> |
+| [고객 AI 인스턴스](../../../intelligent-services/customer-ai/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>사용</li><li>사용 안 함</li></ul> |
 | [데이터 세트](../../../catalog/datasets/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>다음에 대해 활성화: [실시간 고객 프로필](../../../profile/home.md)</li><li>프로필 비활성화</li><li>데이터 추가</li><li>일괄 처리 삭제</li></ul> |
-| [데이터스트림](../../../datastreams/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>[매핑 편집](../../../datastreams/data-prep.md)</li></ul> |
+| [데이터스트림](../../../datastreams/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>사용</li><li>사용 안 함</li><li>[매핑 편집](../../../datastreams/data-prep.md)</li></ul> |
 | [데이터 유형](../../../xdm/schema/composition.md#data-type) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
-| [대상](../../../destinations/home.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>데이터 세트 활성화</li><li>데이터 세트 제거</li><li>프로필 활성화</li><li>프로필 제거</li></ul> |
+| [대상](../../../destinations/home.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>사용</li><li>사용 안 함</li><li>데이터 세트 활성화</li><li>데이터 세트 제거</li><li>프로필 활성화</li><li>프로필 제거</li></ul> |
 | [필드 그룹](../../../xdm/schema/composition.md#field-group) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
-| [아이덴티티 그래프](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>보기</li></ul> |
-| [ID 네임스페이스](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>만들기</li><li>업데이트</li></ul> |
+| [ID 그래프](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>보기</li></ul> |
+| [ID 네임스페이스](../../../identity-service/features/namespaces.md) | <ul><li>만들기</li><li>업데이트</li></ul> |
 | [병합 정책](../../../profile/merge-policies/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
 | [제품 프로필](../../../access-control/home.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
 | [쿼리](../../../query-service/ui/overview.md) | <ul><li>실행</li></ul> |
@@ -59,9 +59,9 @@ Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명
 | [역할(속성 기반 액세스 제어)](../../../access-control/home.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>사용자 추가</li><li>사용자 제거</li></ul> |
 | [샌드박스](../../../sandboxes/home.md) | <ul><li>만들기</li><li>업데이트</li><li>재설정</li><li>삭제</li></ul> |
 | [예약된 쿼리](../../../query-service/ui/overview.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li></ul> |
-| [스키마](../../../xdm/schema/composition.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>프로필에 대해 활성화합니다</li></ul> |
+| [스키마](../../../xdm/schema/composition.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>프로필 활성화</li></ul> |
 | [세그먼트](../../../segmentation/home.md) | <ul><li>만들기</li><li>삭제</li><li>세그먼트 활성화</li><li>세그먼트 제거</li></ul> |
-| [소스 데이터 흐름](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>활성화</li><li>비활성화</li><li>데이터 세트 활성화</li><li>데이터 세트 제거</li><li>프로필 활성화</li><li>프로필 제거</li></ul> |
+| [소스 데이터 흐름](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>만들기</li><li>업데이트</li><li>삭제</li><li>사용</li><li>사용 안 함</li><li>데이터 세트 활성화</li><li>데이터 세트 제거</li><li>프로필 활성화</li><li>프로필 제거</li></ul> |
 | [작업 순서](../../../hygiene/home.md) | <ul><li>만들기</li></ul> |
 
 ## 감사 로그 액세스
@@ -102,7 +102,7 @@ UI의 감사 이벤트에 사용할 수 있는 필터는 다음과 같습니다.
 
 | 필터 | 설명 |
 | --- | --- |
-| [!UICONTROL 카테고리] | 드롭다운 메뉴를 사용하여 표시된 결과 필터링 기준 [범주](#category). |
+| [!UICONTROL 범주] | 드롭다운 메뉴를 사용하여 표시된 결과 필터링 기준 [범주](#category). |
 | [!UICONTROL 작업] | 액션으로 필터링합니다. 각 서비스에 대해 사용할 수 있는 작업은 위의 리소스 테이블에서 확인할 수 있습니다. |
 | [!UICONTROL 사용자] | 전체 사용자 ID를 입력합니다(예: `johndoe@acme.com`)을 클릭하여 사용자별로 필터링할 수 있습니다. |
 | [!UICONTROL 상태] | 작업이 허용되었는지(완료되었는지) 또는 (이)가 없어 거부되었는지 여부에 따라 필터링합니다. [액세스 제어](../../../access-control/home.md) 사용 권한. |
@@ -118,7 +118,7 @@ UI의 감사 이벤트에 사용할 수 있는 필터는 다음과 같습니다.
 |---|---|
 | [!UICONTROL 타임스탬프] | 에서 수행된 작업의 정확한 날짜 및 시간 `month/day/year hour:minute AM/PM` 포맷. |
 | [!UICONTROL 에셋 이름] | 에 대한 값 [!UICONTROL 에셋 이름] 필드는 필터로 선택한 범주에 따라 다릅니다. |
-| [!UICONTROL 카테고리] | 이 필드는 필터 드롭다운에서 선택한 범주와 일치합니다. |
+| [!UICONTROL 범주] | 이 필드는 필터 드롭다운에서 선택한 범주와 일치합니다. |
 | [!UICONTROL 작업] | 사용 가능한 작업은 필터로 선택한 범주에 따라 다릅니다. |
 | [!UICONTROL 사용자] | 이 필드는 쿼리를 실행한 사용자 ID를 제공합니다. |
 
@@ -136,7 +136,7 @@ UI의 감사 이벤트에 사용할 수 있는 필터는 다음과 같습니다.
 
 ## API에서 감사 로그 관리
 
-UI에서 수행할 수 있는 모든 작업은 API 호출을 사용하여 수행할 수도 있습니다. 자세한 내용은 [ API 참조 문서](https://www.adobe.io/experience-platform-apis/references/audit-query/)를 참조하십시오.
+UI에서 수행할 수 있는 모든 작업은 API 호출을 사용하여 수행할 수도 있습니다. 다음을 참조하십시오. [API 참조 문서](https://www.adobe.io/experience-platform-apis/references/audit-query/) 추가 정보.
 
 ## Adobe Admin Console에 대한 감사 로그 관리
 

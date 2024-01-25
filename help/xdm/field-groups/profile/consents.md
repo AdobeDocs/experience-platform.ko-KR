@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 동의 및 환경 설정 스키마 필드 그룹
 description: 동의 및 환경 설정 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -106,7 +106,7 @@ ht-degree: 0%
 >* 고객이 채널 수준에서 옵트아웃한 경우 의 동등한 동의 또는 환경 설정 `idSpecific` 무시합니다.
 >* 채널 수준 동의 또는 환경 설정이 되어 있지 않거나 고객이 옵트인한 경우 `idSpecific` 영광입니다.
 
-의 각 키 `idSpecific` 개체는 Adobe Experience Platform ID 서비스에서 인식하는 특정 ID 네임스페이스를 나타냅니다. 사용자 정의 네임스페이스를 정의하여 다른 식별자를 분류할 수 있지만 Identity Service에서 제공하는 표준 네임스페이스 중 하나를 사용하여 실시간 고객 프로필의 스토리지 크기를 줄이는 것이 좋습니다. ID 네임스페이스에 대한 자세한 내용은 [id 네임스페이스 개요](../../../identity-service/namespaces.md) 을 참조하십시오.
+의 각 키 `idSpecific` 개체는 Adobe Experience Platform ID 서비스에서 인식하는 특정 ID 네임스페이스를 나타냅니다. 사용자 정의 네임스페이스를 정의하여 다른 식별자를 분류할 수 있지만 Identity Service에서 제공하는 표준 네임스페이스 중 하나를 사용하여 실시간 고객 프로필의 스토리지 크기를 줄이는 것이 좋습니다. ID 네임스페이스에 대한 자세한 내용은 [id 네임스페이스 개요](../../../identity-service/features/namespaces.md) 을 참조하십시오.
 
 각 네임스페이스 개체에 대한 키는 고객이 기본 설정으로 지정한 고유한 ID 값을 나타냅니다. 각 ID 값에는 와 동일한 방식으로 형식이 지정된 전체 동의 및 환경 설정 세트가 포함될 수 있습니다. `consents`.
 

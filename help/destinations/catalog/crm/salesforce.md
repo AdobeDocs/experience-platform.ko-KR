@@ -3,7 +3,7 @@ keywords: crm;CRM;CRM 대상;salesforce crm;salesforce crm 대상
 title: Salesforce CRM 연결
 description: Salesforce CRM 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce CRM 내에서 활성화할 수 있습니다.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2821'
 ht-degree: 1%
@@ -123,7 +123,7 @@ Platform에서 로 활성화하는 각 대상에 대해 [!DNL Salesforce CRM], �
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Salesforce CRM] 는 아래 표에 설명된 id 업데이트를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
+[!DNL Salesforce CRM] 는 아래 표에 설명된 id 업데이트를 지원합니다. 자세히 알아보기 [id](/help/identity-service/features/namespaces.md).
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|

@@ -2,7 +2,7 @@
 title: Experience Platform의 데이터 수집에 대한 권한 관리
 description: Adobe Experience Platform에서 권한을 관리하고 데이터 수집 기능에 대한 액세스를 제어하는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 28%
@@ -34,7 +34,7 @@ Adobe Experience Platform 아래의 권한에는 데이터 스트림, ID, 스키
 | 샌드박스 | (N/A) | 에 따라 [샌드박스](../sandboxes/home.md) 조직의 권한 아래에 만들어진 각 권한은 Admin Console의 이 권한 범주를 통해 제어할 수 있습니다. |
 | 데이터 모델링 | 스키마 관리 | 보기, 만들기 및 편집 기능을 부여합니다. [XDM(경험 데이터 모델) 스키마](../xdm/home.md). |
 | 데이터 모델링 | 스키마 보기 | 스키마에 대한 읽기 전용 액세스 권한을 부여합니다. |
-| ID 관리 | ID 네임스페이스 관리 | 보기, 만들기 및 편집 기능을 부여합니다. [id 네임스페이스](../identity-service/namespaces.md). |
+| ID 관리 | ID 네임스페이스 관리 | 보기, 만들기 및 편집 기능을 부여합니다. [id 네임스페이스](../identity-service/features/namespaces.md). |
 | ID 관리 | ID 네임스페이스 보기 | ID 네임스페이스에 대한 읽기 전용 액세스 권한을 부여합니다. |
 | 데이터 수집 | 데이터 스트림 관리 | 보기, 만들기 및 편집 기능을 부여합니다. [데이터스트림](../datastreams/overview.md). |
 | 데이터 수집 | 데이터스트림 보기 | 데이터스트림에 대한 읽기 전용 액세스 권한을 부여합니다. |

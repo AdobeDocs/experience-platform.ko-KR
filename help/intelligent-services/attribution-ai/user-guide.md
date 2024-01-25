@@ -4,16 +4,16 @@ feature: Attribution AI
 title: Attribution AI UI 안내서
 description: 이 문서는 Intelligent Services 사용자 인터페이스에서 Attribution AI과 상호 작용하기 위한 안내서 역할을 합니다.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2442'
-ht-degree: 1%
+source-wordcount: '2450'
+ht-degree: 0%
 
 ---
 
 # Attribution AI UI 안내서
 
-인텔리전트 서비스의 일부인 Attribution AI은 지정된 결과에 대한 고객 상호 작용의 영향 및 점진적 영향을 계산하는 멀티채널 알고리즘 속성 서비스입니다. 마케터는 Attribution AI를 통해 고객 여정의 각 단계에서 개별 고객과의 상호 작용이 미치는 영향을 파악하여 마케팅 및 광고 비용을 측정하고 최적화할 수 있습니다.
+인텔리전트 서비스의 일부인 Attribution AI은 지정된 결과에 대한 고객 상호 작용의 영향 및 점진적 영향을 계산하는 멀티채널 알고리즘 속성 서비스입니다. 마케터는 Attribution AI을 통해 고객 여정의 각 단계에서 모든 개별 고객 상호 작용의 영향을 이해함으로써 마케팅 및 광고 지출을 측정하고 최적화할 수 있습니다.
 
 이 문서는 Intelligent Services 사용자 인터페이스에서 Attribution AI과 상호 작용하기 위한 안내서 역할을 합니다.
 
@@ -103,7 +103,7 @@ ID를 선택하려면 ID 열에 있는 밑줄이 있는 값을 선택합니다. 
 
 >[!NOTE]
 >
-> 데이터 세트에 유효한 ID 유형(네임스페이스)이 없는 경우 기본 ID를 설정하고 을 사용하여 ID 네임스페이스에 할당해야 합니다. [스키마 편집기](../../xdm/schema/composition.md#identity). 네임스페이스 및 ID에 대한 자세한 내용은 [ID 서비스 네임스페이스](../../identity-service/namespaces.md) 설명서를 참조하십시오.
+> 데이터 세트에 유효한 ID 유형(네임스페이스)이 없는 경우 기본 ID를 설정하고 을 사용하여 ID 네임스페이스에 할당해야 합니다. [스키마 편집기](../../xdm/schema/composition.md#identity). 네임스페이스 및 ID에 대한 자세한 내용은 [ID 서비스 네임스페이스](../../identity-service/features/namespaces.md) 설명서를 참조하십시오.
 
 ## 미디어 채널 및 캠페인 필드 매핑 {#aai-mapping}
 

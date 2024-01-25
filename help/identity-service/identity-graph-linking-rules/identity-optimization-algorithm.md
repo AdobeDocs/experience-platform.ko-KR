@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
 source-wordcount: '1319'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -134,5 +134,5 @@ ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참
 
 * [ID 그래프 연결 규칙 개요](./overview.md)
 * [ID 그래프 연결 규칙을 구성하기 위한 예제 시나리오](./example-scenarios.md)
-* [ID 연결 논리](./identity-linking-logic.md)
-* [ID 서비스 및 실시간 고객 프로필](identity-and-profile.md)
+* [ID 연결 논리](../features/identity-linking-logic.md)
+* [ID 서비스 및 실시간 고객 프로필](../identity-and-profile.md)

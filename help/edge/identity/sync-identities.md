@@ -3,7 +3,7 @@ title: Platform Web SDK를 사용하여 Audience Manager과 Adobe Experience Pla
 description: Platform Web SDK를 사용하여 Audience Manager과 Adobe Experience Platform 간에 ID를 동기화하는 방법에 대해 알아봅니다
 seo-description: Learn how to sync identities with Adobe Audience Manager with Experience Platform Web SDK
 keywords: audience manager;aam;id;동기화 id;네임스페이스;
-source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK는 를 통해 고객 ID 및 해당 인증 상태를 선언하는 기능을 지원합니다. [sendEvent](./overview.md#syncing-identities) 명령입니다.
 
-다음에서 네임스페이스 선택 [ID 서비스 네임스페이스](../../identity/../identity-service/namespaces.md) ID 기호 열의 값을 사용하여 ID가 관련되는 컨텍스트를 나타내려면 다음을 수행합니다.
+다음에서 네임스페이스 선택 [ID 서비스 네임스페이스](../../identity/../identity-service/features/namespaces.md) ID 기호 열의 값을 사용하여 ID가 관련되는 컨텍스트를 나타내려면 다음을 수행합니다.
 
 ![네임스페이스 UI 보기](../assets/identity/edge_namespaceUI_identity-symbol.png)
 

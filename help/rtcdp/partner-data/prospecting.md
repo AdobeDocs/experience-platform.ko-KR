@@ -3,9 +3,9 @@ title: 서드파티 쿠키에 의존하지 않고 새로운 고객 참여 및 �
 description: 서드파티 쿠키에 의존하지 않고 잠재 고객 발굴 사용 사례를 통해 신규 고객을 유치하고 확보하는 방법을 알아봅니다.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2074'
 ht-degree: 86%
 
 ---
@@ -65,7 +65,7 @@ Adobe Real-time Customer Data Platform은 브랜드가 DMP(데이터 관리 플�
 
 사용 사례를 구현하는 단계를 완료하면 다음 Real-Time CDP 기능 및 UI 요소(사용할 순서대로 나열됨)를 사용하게 됩니다. 이러한 모든 영역에 대해 필요한 속성 기반 액세스 제어 권한이 있는지 확인하거나 시스템 관리자에게 필요한 권한 부여를 요청하십시오.
 
-* [ID](/help/identity-service/namespaces.md)
+* [ID](/help/identity-service/features/namespaces.md)
 * [스키마](/help/xdm/home.md)
 * [데이터 사용 레이블](/help/data-governance/labels/overview.md)
 * [데이터 세트](/help/catalog/datasets/overview.md)
@@ -95,7 +95,7 @@ Adobe Real-time Customer Data Platform은 브랜드가 DMP(데이터 관리 플�
 
 ![새 파트너 ID 네임스페이스를 만듭니다.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
-* [ID 유형 섹션](/help/identity-service/namespaces.md)에서 파트너 ID 네임스페이스에 대해 자세히 알아보십시오.
+* [ID 유형 섹션](/help/identity-service/features/namespaces.md)에서 파트너 ID 네임스페이스에 대해 자세히 알아보십시오.
 * Experience Platform 사용자 인터페이스에서 [ID 필드를 정의하는 방법](/help/xdm/ui/fields/identity.md)에 대해 알아보십시오.
 
 #### **[!UICONTROL XDM 개별 잠재 고객 프로필]** 클래스로 새 스키마를 만듭니다.

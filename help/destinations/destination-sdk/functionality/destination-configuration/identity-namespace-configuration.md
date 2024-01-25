@@ -2,9 +2,9 @@
 description: Destination SDK으로 빌드된 대상에 대해 지원되는 타겟 ID를 구성하는 방법에 대해 알아봅니다.
 title: ID 네임스페이스 구성
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '842'
 ht-degree: 4%
 
 ---
@@ -17,13 +17,13 @@ Destination SDK을 통해 대상을 만들 때 [파트너 스키마 구성](sche
 
 이렇게 하면 사용자는 타겟 프로필 속성 외에 타겟 ID를 선택할 수 있는 옵션이 추가됩니다.
 
-Experience Platform의 ID 네임스페이스에 대한 자세한 내용은 [id 네임스페이스 설명서](../../../../identity-service/namespaces.md).
+Experience Platform의 ID 네임스페이스에 대한 자세한 내용은 [id 네임스페이스 설명서](../../../../identity-service/features/namespaces.md).
 
 대상에 대해 ID 네임스페이스를 구성할 때 다음과 같이 대상에서 지원하는 대상 ID 매핑을 미세 조정할 수 있습니다.
 
 * 사용자가 XDM 속성을 ID 네임스페이스에 매핑할 수 있습니다.
-* 사용자가 매핑할 수 있도록 허용 [표준 id 네임스페이스](../../../../identity-service/namespaces.md#standard) 고유한 id 네임스페이스에 대해 설명합니다.
-* 사용자가 매핑할 수 있도록 허용 [사용자 정의 id 네임스페이스](../../../../identity-service/namespaces.md#manage-namespaces) 고유한 id 네임스페이스에 대해 설명합니다.
+* 사용자가 매핑할 수 있도록 허용 [표준 id 네임스페이스](../../../../identity-service/features/namespaces.md#standard) 고유한 id 네임스페이스에 대해 설명합니다.
+* 사용자가 매핑할 수 있도록 허용 [사용자 정의 id 네임스페이스](../../../../identity-service/features/namespaces.md#manage-namespaces) 고유한 id 네임스페이스에 대해 설명합니다.
 
 이 구성 요소가 Destination SDK으로 만든 통합에 어디에 맞는지 이해하려면 의 다이어그램을 참조하십시오. [구성 옵션](../configuration-options.md) 설명서 또는 방법에 대한 안내서 참조 [Destination SDK을 사용하여 파일 기반 대상 구성](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -55,7 +55,7 @@ Experience Platform의 ID 네임스페이스에 대한 자세한 내용은 [id �
 |---------|----------|---|------|
 | `acceptsAttributes` | 부울 | 선택 사항입니다 | 고객이 표준 프로필 속성을 구성 중인 ID에 매핑할 수 있는지 여부를 나타냅니다. |
 | `acceptsCustomNamespaces` | 부울 | 선택 사항입니다 | 고객이 사용자 정의 ID 네임스페이스를 구성 중인 ID 네임스페이스에 매핑할 수 있는지 여부를 나타냅니다. |
-| `acceptedGlobalNamespaces` | - | 선택 사항입니다 | 다음 항목을 나타냅니다. [표준 id 네임스페이스](../../../../identity-service/namespaces.md#standard) (예: [!UICONTROL IDFA]) 고객은 구성 중인 id에 매핑할 수 있습니다. |
+| `acceptedGlobalNamespaces` | - | 선택 사항입니다 | 다음 항목을 나타냅니다. [표준 id 네임스페이스](../../../../identity-service/features/namespaces.md#standard) (예: [!UICONTROL IDFA]) 고객은 구성 중인 id에 매핑할 수 있습니다. |
 | `transformation` | 문자열 | 선택 사항입니다 | 다음을 표시합니다. [[!UICONTROL 변환 적용]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) 소스 필드가 XDM 속성이나 사용자 지정 ID 네임스페이스인 경우 Platform UI의 확인란 이 옵션을 사용하여 사용자가 내보낼 때 소스 속성을 해시할 수 있도록 합니다. 이 옵션을 활성화하려면 값을 로 설정합니다. `sha256(lower($))`. |
 | `requiredTransformation` | 문자열 | 선택 사항입니다 | 고객이 이 소스 ID 네임스페이스를 선택하면 [[!UICONTROL 변환 적용]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) 이 확인란은 매핑에 자동으로 적용되며 고객은 이 확인란을 비활성화할 수 없습니다. 이 옵션을 활성화하려면 값을 로 설정합니다. `sha256(lower($))`. |
 
@@ -84,7 +84,7 @@ Experience Platform의 ID 네임스페이스에 대한 자세한 내용은 [id �
 ID 네임스페이스는 다음 사이에 1:1 대응이 필요하지 않습니다. [!DNL Platform] 목적지도요
 예를 들어 고객은 를 매핑할 수 있습니다. [!DNL Platform] [!DNL IDFA] 네임스페이스를 다음에 추가 [!DNL IDFA] 대상에서 네임스페이스를 매핑하거나 동일한 네임스페이스를 [!DNL Platform] [!DNL IDFA] 네임스페이스 대상 [!DNL Customer ID] 네임스페이스를 대상에 추가합니다.
 
-에서 ID에 대해 자세히 알아보기 [id 네임스페이스 개요](../../../../identity-service/namespaces.md).
+에서 ID에 대해 자세히 알아보기 [id 네임스페이스 개요](../../../../identity-service/features/namespaces.md).
 
 ## 매핑 고려 사항
 

@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 있는 주제
 title: Identity 서비스에서 개인 정보 보호 요청 처리
 description: Adobe Experience Platform Privacy Service은 수많은 개인 정보 보호 규정에 명시된 대로 개인 데이터에 액세스하거나, 판매를 거부하거나, 삭제하기 위한 고객 요청을 처리합니다. 이 문서에서는 Identity 서비스에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: 74ef1e24c2b40103ac6cafdfd22cb6036cdbfd3e
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1016'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience Platform [!DNL Identity Service] 시스템 및 장치 간에 �
 
 ID 서비스는 전역 정의(표준) 및 사용자 정의(사용자 정의) ID 네임스페이스 저장소를 유지 관리합니다. 표준 네임스페이스는 모든 조직에서 사용할 수 있으며(예: &quot;이메일&quot; 및 &quot;ECID&quot;), 조직에서는 특정 요구 사항에 맞게 사용자 정의 네임스페이스를 만들 수도 있습니다.
 
-의 ID 네임스페이스에 대한 자세한 내용 [!DNL Experience Platform], 다음을 참조하십시오. [id 네임스페이스 개요](../identity-service/namespaces.md).
+의 ID 네임스페이스에 대한 자세한 내용 [!DNL Experience Platform], 다음을 참조하십시오. [id 네임스페이스 개요](../identity-service/features/namespaces.md).
 
 ## 요청 제출 {#submit}
 
@@ -113,7 +113,7 @@ UI에서 작업 요청을 만들 때 다음을 선택해야 합니다. **[!UICON
 | `identity` 전용 | 제공된 ID는 플랫폼이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 삭제됩니다. 해당 ID 그래프에서 생성된 프로필은 여전히 남아 있지만 이제 ID 연결이 제거되므로 새 데이터가 수집될 때 업데이트되지 않습니다. 프로필과 연결된 데이터도 데이터 레이크에 유지됩니다. |
 | `identity` 및 `ProfileService` | 제공된 ID는 플랫폼이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 삭제됩니다. 프로필과 연결된 데이터는 데이터 레이크에 유지됩니다. |
 | `identity` 및 `aepDataLake` | 제공된 ID는 플랫폼이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 삭제됩니다. 해당 ID 그래프에서 생성된 프로필은 여전히 남아 있지만 이제 ID 연결이 제거되므로 새 데이터가 수집될 때 업데이트되지 않습니다.<br><br>데이터 레이크 제품이 요청을 받고 현재 처리 중이라는 응답을 하는 경우 프로필과 연관된 데이터가 일시 삭제되므로 다른 사용자도 해당 데이터에 액세스할 수 없습니다 [!DNL Platform] 서비스. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
-| `identity`, `ProfileService`, 및 `aepDataLake` | 제공된 ID는 플랫폼이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 삭제됩니다.<br><br>데이터 레이크 제품이 요청을 받고 현재 처리 중이라는 응답을 하는 경우 프로필과 연관된 데이터가 일시 삭제되므로 다른 사용자도 해당 데이터에 액세스할 수 없습니다 [!DNL Platform] 서비스. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
+| `identity`, `ProfileService` 및 `aepDataLake` | 제공된 ID는 플랫폼이 삭제 요청이 수신되었다는 확인을 전송하는 즉시 삭제됩니다.<br><br>데이터 레이크 제품이 요청을 받고 현재 처리 중이라는 응답을 하는 경우 프로필과 연관된 데이터가 일시 삭제되므로 다른 사용자도 해당 데이터에 액세스할 수 없습니다 [!DNL Platform] 서비스. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
 
 다음을 참조하십시오. [[!DNL Privacy Service] 설명서](../privacy-service/home.md#monitor) 작업 상태 추적에 대한 자세한 내용을 참조하십시오.
 

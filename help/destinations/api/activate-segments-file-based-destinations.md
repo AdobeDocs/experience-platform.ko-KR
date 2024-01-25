@@ -4,7 +4,7 @@ title: 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로
 description: 흐름 서비스 API를 사용하여 적격 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '4335'
 ht-degree: 4%
@@ -3424,7 +3424,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ 입력 스키마에서 사용할 수 있는 ID 보기
 
-이 응답은 입력 스키마를 만들 때 사용할 수 있는 ID를 반환합니다. 이 응답은 두 가지를 모두 반환합니다. [표준](/help/identity-service/namespaces.md#standard) 및 [사용자 정의](/help/identity-service/namespaces.md#manage-namespaces) Experience Platform에서 설정한 id 네임스페이스.
+이 응답은 입력 스키마를 만들 때 사용할 수 있는 ID를 반환합니다. 이 응답은 두 가지를 모두 반환합니다. [표준](/help/identity-service/features/namespaces.md#standard) 및 [사용자 정의](/help/identity-service/features/namespaces.md#manage-namespaces) Experience Platform에서 설정한 id 네임스페이스.
 
 ```json
 [

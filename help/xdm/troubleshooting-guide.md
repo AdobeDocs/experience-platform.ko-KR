@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM 시스템 문제 해결 안내서
 description: 일반적인 API 오류를 해결하는 단계를 포함하여 XDM(Experience Data Model)에 대해 자주 묻는 질문에 대한 답변을 찾아보십시오.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2073'
+source-wordcount: '1947'
 ht-degree: 0%
 
 ---
@@ -136,7 +136,6 @@ XDM의 유니온에 대한 자세한 내용은 [합집합](./api/unions.md) 의 
 >* `http://ns.adobe.com/aep/errors/XDM-1016-404`
 >* `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
-
 API에서 조회 경로를 구성하는 방법에 대한 자세한 내용은 [컨테이너](./api/getting-started.md#container) 및 [리소스 식별](api/getting-started.md#resource-identification) 의 섹션 [!DNL Schema Registry] 개발자 안내서.
 
 ### 제목이 고유하지 않음
@@ -189,7 +188,6 @@ API에서 조회 경로를 구성하는 방법에 대한 자세한 내용은 [�
 >* `http://ns.adobe.com/aep/errors/XDM-1023-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
-
 XDM 리소스에 대한 적절한 데이터 구조의 자세한 예는 스키마 레지스트리 API 안내서에서 확인할 수 있습니다.
 
 * [사용자 정의 클래스 만들기](./api/classes.md#create)
@@ -225,7 +223,6 @@ XDM 리소스에 대한 적절한 데이터 구조의 자세한 예는 스키마
 >* `http://ns.adobe.com/aep/errors/XDM-1007-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1008-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1009-400`
-
 
 다른 API 요청에 대해 호환되는 Accept 헤더 목록은 의 해당 섹션을 참조하십시오. [스키마 레지스트리 개발자 안내서](./api/overview.md).
 
@@ -277,7 +274,7 @@ XDM 리소스에 대한 적절한 데이터 구조의 자세한 예는 스키마
 
 다음을 확인합니다. `xdm:namespace` 참조 스키마의 id 필드 값이 `xdm:identityNamespace` 이 문제를 해결하기 위한 소스 필드의 참조 id 설명자에 있는 속성입니다.
 
-표준 ID 네임스페이스 코드 목록은 의 섹션을 참조하십시오. [표준 네임스페이스](../identity-service/namespaces.md) id 네임스페이스 개요에서 참조하십시오.
+표준 ID 네임스페이스 코드 목록은 의 섹션을 참조하십시오. [표준 네임스페이스](../identity-service/features/namespaces.md) id 네임스페이스 개요에서 참조하십시오.
 
 #### 스키마에 identityMap 또는 기본 ID가 포함되어야 합니다.
 

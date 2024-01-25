@@ -3,7 +3,7 @@ title: Experience Cloud 대상자
 description: Real-time Customer Data Platform에서 다양한 Experience Cloud 앱으로 대상을 공유하는 방법을 알아봅니다.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -106,11 +106,11 @@ Real-Time CDP에서 대상이 처음 활성화된 시간과 Audience Manager 및
 
 ## 지원되는 ID {#supported-identities}
 
-로 내보내는 프로필 [!UICONTROL Experience Cloud 대상] 대상은 아래 표에 설명된 id에 매핑됩니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
+로 내보내는 프로필 [!UICONTROL Experience Cloud 대상] 대상은 아래 표에 설명된 id에 매핑됩니다. 자세히 알아보기 [id](/help/identity-service/features/namespaces.md).
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 에 대한 다음 문서를 참조하십시오. [ECID](/help/identity-service/ecid.md) 추가 정보. |
+| ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 에 대한 다음 문서를 참조하십시오. [ECID](/help/identity-service/features/ecid.md) 추가 정보. |
 | GAID | Google 광고 ID | 기본 ID(Google Advertising ID)가 있는 Real-Time CDP에 수집된 프로필을 이 대상으로 내보낼 수 있습니다. |
 | IDFA | 광고주용 Apple ID | IDFA(Apple ID for Advertisers)의 기본 ID를 사용하여 Real-Time CDP에 수집된 프로필을 이 대상으로 내보낼 수 있습니다. |
 | email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | 해시된 이메일 주소의 기본 ID를 사용하여 Real-Time CDP에 수집된 프로필을 이 대상으로 내보낼 수 있습니다. |

@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 개요
 description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 정보를 제공합니다
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
+source-git-commit: 0d111241658b4014d1ca2e6013d21a4782d81be9
 workflow-type: tm+mt
 source-wordcount: '1840'
 ht-degree: 13%
@@ -103,7 +103,7 @@ Admin Console에서 새 권한 인터페이스로 모든 Experience Platform 기
 
 Adobe Experience Platform [!DNL Identity Service] 은 디바이스와 시스템 간에 id를 연결하여 고객 및 고객 행동을 더 잘 파악할 수 있도록 하여 효과적인 개인 디지털 경험을 실시간으로 제공할 수 있습니다.
 
-속성 기반 액세스 제어의 일부로서 `view-identity-graph` 권한을 사용하면 사용자 인터페이스 또는 API를 통해 id 그래프에 액세스할 수 있는 조직의 사용자를 결정할 수 있습니다. 자세한 내용은 다음 안내서를 참조하십시오. [id 그래프 뷰어 사용](../../identity-service/ui/identity-graph-viewer.md).
+속성 기반 액세스 제어의 일부로서 `view-identity-graph` 권한을 사용하면 사용자 인터페이스 또는 API를 통해 id 그래프에 액세스할 수 있는 조직의 사용자를 결정할 수 있습니다. 자세한 내용은 다음 안내서를 참조하십시오. [id 그래프 뷰어 사용](../../identity-service/features/identity-graph-viewer.md).
 
 에 대한 자세한 내용 [!DNL Identity Service]을(를) 참조하십시오. [[!DNL Identity Service] 개요](../../identity-service/home.md).
 

@@ -3,7 +3,7 @@ title: Pega 프로필 커넥터
 description: Adobe Experience Platform의 Amazon S3용 Pega Profile Connector를 사용하여 전체 또는 증분, 또는 둘 다 프로필 데이터를 Amazon S3 클라우드 스토리지로 내보냅니다. Pega 고객 의사 결정 허브에서 고객 프로필 디자이너에서 데이터 작업을 예약하여 Amazon S3 스토리지에서 정기적으로 프로필 데이터를 가져올 수 있습니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1115'
 ht-degree: 3%
@@ -45,7 +45,7 @@ ht-degree: 3%
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Pega Customer Decision Hub] 는 아래 표에 설명된 사용자 지정 사용자 ID의 활성화를 지원합니다. 자세한 내용은 [id](/help/identity-service/namespaces.md).
+[!DNL Pega Customer Decision Hub] 는 아래 표에 설명된 사용자 지정 사용자 ID의 활성화를 지원합니다. 자세한 내용은 [id](/help/identity-service/features/namespaces.md).
 
 | 대상 ID | 설명 |
 |---|---|

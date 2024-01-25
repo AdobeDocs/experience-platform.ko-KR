@@ -4,7 +4,7 @@ title: Qualtrics 자동화
 description: 경험과 운영 고객 데이터를 동기화하여 규모에 맞게 개인화를 잠금 해제할 수 있습니다. Adobe Experience Platform의 여러 운영 데이터 소스의 집계를 Qualtrics Experience iD의 입력으로 사용하여 고객을 더 잘 이해하고 의도, 감정 및 경험 드라이버를 이해하는 데 있어 타깃팅된 전달을 통해 간극을 좁힐 수 있습니다.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 2%
@@ -57,7 +57,7 @@ Adobe Experience Platform에서 Qualtrics 대상을 설정하기 전에 다음 �
 
 ## 지원되는 ID {#supported-identities}
 
-*Qualtrics 자동화* 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
+*Qualtrics 자동화* 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/features/namespaces.md).
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|

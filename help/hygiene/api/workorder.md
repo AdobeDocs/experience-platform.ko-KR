@@ -2,10 +2,10 @@
 title: 작업 주문 API 끝점
 description: 데이터 위생 API의 /workorder 끝점을 사용하면 ID에 대한 삭제 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 15f3f7c9e0efb2fe5e9a1acd39b1cf23790355cb
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1283'
-ht-degree: 2%
+source-wordcount: '1281'
+ht-degree: 1%
 
 ---
 
@@ -87,7 +87,7 @@ curl -X POST \
 | `datasetId` | 단일 데이터 세트에서 삭제하는 경우 이 값은 해당 데이터 세트의 ID여야 합니다. 모든 데이터 세트에서 삭제하는 경우 값을 로 설정하십시오. `ALL`.<br><br>단일 데이터 세트를 지정하는 경우 데이터 세트와 연결된 XDM(Experience Data Model) 스키마에 기본 ID가 정의되어 있어야 합니다. 데이터 세트에 기본 ID가 없는 경우 데이터 라이프사이클 요청으로 수정하려면 데이터 세트에 ID 맵이 있어야 합니다.<br>ID 맵이 존재하는 경우 라는 최상위 수준의 필드로 표시됩니다. `identityMap`.<br>데이터 세트 행의 ID 맵에는 여러 ID가 있을 수 있지만 하나만 기본으로 표시할 수 있습니다. `"primary": true` 을(를) 강제로 포함하려면 을(를) 포함해야 합니다. `id` 기본 id와 일치시키십시오. |
 | `displayName` | 레코드 삭제 요청에 대한 표시 이름입니다. |
 | `description` | 레코드 삭제 요청에 대한 설명. |
-| `identities` | 정보를 삭제하려는 하나 이상의 사용자 ID가 포함된 배열입니다. 각 ID는 [id 네임스페이스](../../identity-service/namespaces.md) 및 값:<ul><li>`namespace`: 단일 문자열 속성을 포함합니다. `code`: id 네임스페이스를 나타냅니다. </li><li>`id`: ID 값입니다.</ul>If `datasetId` 각 엔터티가 속한 단일 데이터 세트를 지정합니다. `identities` 스키마의 기본 id와 동일한 id 네임스페이스를 사용해야 합니다.<br><br>If `datasetId` 이(가) (으)로 설정됨 `ALL`, `identities` 각 데이터 세트가 다를 수 있으므로 배열이 단일 네임스페이스로 제한되지 않습니다. 그러나 요청은에서 보고한 대로 조직에서 사용할 수 있는 네임스페이스에 제약을 받습니다 [ID 서비스](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | 정보를 삭제하려는 하나 이상의 사용자 ID가 포함된 배열입니다. 각 ID는 [id 네임스페이스](../../identity-service/features/namespaces.md) 및 값:<ul><li>`namespace`: 단일 문자열 속성을 포함합니다. `code`: id 네임스페이스를 나타냅니다. </li><li>`id`: ID 값입니다.</ul>If `datasetId` 각 엔터티가 속한 단일 데이터 세트를 지정합니다. `identities` 스키마의 기본 id와 동일한 id 네임스페이스를 사용해야 합니다.<br><br>If `datasetId` 이(가) (으)로 설정됨 `ALL`, `identities` 각 데이터 세트가 다를 수 있으므로 배열이 단일 네임스페이스로 제한되지 않습니다. 그러나 요청은에서 보고한 대로 조직에서 사용할 수 있는 네임스페이스에 제약을 받습니다 [ID 서비스](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style="표 레이아웃:자동"}
 
@@ -114,7 +114,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `workorderId` | 삭제 주문 ID. 나중에 삭제 상태를 조회하는 데 사용할 수 있습니다. |
-| `orgId` | 자신의 조직 ID. |
+| `orgId` | 조직 ID입니다. |
 | `bundleId` | 이 삭제 순서가 연결된 번들의 ID이며, 디버깅 목적으로 사용됩니다. 여러 삭제 주문이 함께 번들로 포함되어 다운스트림 서비스에서 처리됩니다. |
 | `action` | 작업 주문에 의해 수행되는 작업입니다. 레코드 삭제의 경우 값은 다음과 같습니다. `identity-delete`. |
 | `createdAt` | 삭제 순서가 생성된 시점의 타임스탬프입니다. |
@@ -192,7 +192,7 @@ curl -X GET \
 | 속성 | 설명 |
 | --- | --- |
 | `workorderId` | 삭제 주문 ID. 나중에 삭제 상태를 조회하는 데 사용할 수 있습니다. |
-| `orgId` | 자신의 조직 ID. |
+| `orgId` | 조직 ID입니다. |
 | `bundleId` | 이 삭제 순서가 연결된 번들의 ID이며, 디버깅 목적으로 사용됩니다. 여러 삭제 주문이 함께 번들로 포함되어 다운스트림 서비스에서 처리됩니다. |
 | `action` | 작업 주문에 의해 수행되는 작업입니다. 레코드 삭제의 경우 값은 다음과 같습니다. `identity-delete`. |
 | `createdAt` | 삭제 순서가 생성된 시점의 타임스탬프입니다. |
@@ -280,7 +280,7 @@ curl -X PUT \
 | 속성 | 설명 |
 | --- | --- |
 | `workorderId` | 삭제 주문 ID. 나중에 삭제 상태를 조회하는 데 사용할 수 있습니다. |
-| `orgId` | 자신의 조직 ID. |
+| `orgId` | 조직 ID입니다. |
 | `bundleId` | 이 삭제 순서가 연결된 번들의 ID이며, 디버깅 목적으로 사용됩니다. 여러 삭제 주문이 함께 번들로 포함되어 다운스트림 서비스에서 처리됩니다. |
 | `action` | 작업 주문에 의해 수행되는 작업입니다. 레코드 삭제의 경우 값은 다음과 같습니다. `identity-delete`. |
 | `createdAt` | 삭제 순서가 생성된 시점의 타임스탬프입니다. |

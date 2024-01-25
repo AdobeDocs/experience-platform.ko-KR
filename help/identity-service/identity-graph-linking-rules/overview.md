@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 07771956c22a3fee92bd76ae061b07e1e0f98b49
+source-git-commit: f21b5519440f7ffd272361954c9e32ccca2ec2bc
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,6 @@ ht-degree: 0%
 * [개요](./overview.md)
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
 * [예제 시나리오](./example-scenarios.md)
-* [ID 서비스 및 실시간 고객 프로필](identity-and-profile.md)
-* [ID 연결 논리](./identity-linking-logic.md)
 
 Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용하면 데이터가 완벽하게 수집되고 병합된 모든 프로필이 CRM ID와 같은 개인 식별자를 통해 단일 개별 사용자를 나타낸다고 쉽게 가정할 수 있습니다. 그러나 특정 데이터가 서로 다른 여러 프로필을 하나의 프로필로 병합(&quot;프로필 축소&quot;)하려는 시나리오가 있을 수 있습니다. 이러한 원치 않는 병합을 방지하기 위해 ID 그래프 연결 규칙을 통해 제공된 구성을 사용하고 사용자를 위한 정확한 개인화를 허용할 수 있습니다.
 
@@ -114,5 +112,3 @@ ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참
 
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
 * [ID 그래프 연결 규칙을 구성하기 위한 예제 시나리오](./example-scenarios.md)
-* [ID 서비스 및 실시간 고객 프로필](identity-and-profile.md)
-* [ID 연결 논리](./identity-linking-logic.md)

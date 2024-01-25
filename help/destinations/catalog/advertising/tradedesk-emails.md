@@ -3,7 +3,7 @@ title: (Beta) 트레이드 데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타기팅 및 억제에 대한 프로필을 트레이드 데스크 계정에 활성화합니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 5%
@@ -38,11 +38,11 @@ ht-degree: 5%
 
 ## ID 일치 요구 사항 {#id-matching-requirements}
 
-Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사항을 준수해야 합니다. 다음을 읽으십시오. [ID 네임스페이스 개요](/help/identity-service/namespaces.md) 추가 정보.
+Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사항을 준수해야 합니다. 다음을 읽으십시오. [ID 네임스페이스 개요](/help/identity-service/features/namespaces.md) 추가 정보.
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL The Trade Desk] 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/features/namespaces.md).
 
 Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. ID 일치 요구 사항 섹션의 지침에 따라 일반 텍스트 및 해시된 이메일 주소에 적절한 네임스페이스를 각각 사용하십시오.
 

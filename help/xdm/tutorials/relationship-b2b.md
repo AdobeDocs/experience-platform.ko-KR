@@ -2,10 +2,10 @@
 title: Real-time Customer Data Platform B2B 에디션에서 두 스키마 간의 관계 정의
 description: Adobe Real-time Customer Data Platform B2B 에디션에서 두 스키마 간의 다대일 관계를 정의하는 방법을 알아봅니다.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1391'
-ht-degree: 16%
+source-wordcount: '1363'
+ht-degree: 15%
 
 ---
 
@@ -50,7 +50,7 @@ Adobe Real-time Customer Data Platform B2B 에디션은 다음과 같은 기본 
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
->title="참조 신원 네임스페이스"
+>title="참조 ID 네임스페이스"
 >abstract="참조 스키마의 기본 ID 필드에 대한 네임스페이스(유형)입니다. 관계에 참여하려면 참조 스키마에 기본 ID 필드가 설정되어 있어야 합니다. B2B 관계에서 ID에 대한 자세한 내용은 설명서를 참조하십시오."
 
 관계를 설정하려면 참조 스키마에 정의된 기본 ID가 있어야 합니다. B2B 엔티티에 대한 기본 ID를 설정할 때 문자열 기반 엔티티 ID는 서로 다른 시스템 또는 위치에서 수집하는 경우 겹칠 수 있으며, 이로 인해 플랫폼에서 데이터 충돌이 발생할 수 있다는 점을 유의하십시오.
@@ -61,7 +61,7 @@ Adobe Real-time Customer Data Platform B2B 에디션은 다음과 같은 기본 
 
 >[!NOTE]
 >
->날짜 [xdm 필드를 ID로 설정](../ui/fields/identity.md)에서 id를 정의하려면 id 네임스페이스를 제공해야 합니다. Adobe에서 제공하는 표준 네임스페이스이거나 조직에서 정의한 사용자 정의 네임스페이스일 수 있습니다. 실제로 네임스페이스는 단순히 컨텍스트 문자열이며, ID 유형을 분류하는 데 조직에서 의미가 있는 경우 원하는 값으로 설정할 수 있습니다. 의 개요 보기 [id 네임스페이스](../../identity-service/namespaces.md) 추가 정보.
+>날짜 [xdm 필드를 ID로 설정](../ui/fields/identity.md)에서 id를 정의하려면 id 네임스페이스를 제공해야 합니다. Adobe에서 제공하는 표준 네임스페이스이거나 조직에서 정의한 사용자 정의 네임스페이스일 수 있습니다. 실제로 네임스페이스는 단순히 컨텍스트 문자열이며, ID 유형을 분류하는 데 조직에서 의미가 있는 경우 원하는 값으로 설정할 수 있습니다. 의 개요 보기 [id 네임스페이스](../../identity-service/features/namespaces.md) 추가 정보.
 
 참조용으로 다음 섹션에서는 관계가 정의되기 전에 이 자습서에서 사용되는 각 스키마의 구조를 설명합니다. 스키마 구조에서 기본 ID가 정의된 위치와 기본 ID가 사용하는 사용자 정의 네임스페이스를 참고하십시오.
 

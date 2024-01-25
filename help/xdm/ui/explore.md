@@ -5,7 +5,7 @@ title: UI에서 스키마 리소스 살펴보기
 description: Experience Platform 사용자 인터페이스에서 기존 스키마, 클래스, 스키마 필드 그룹 및 데이터 유형을 탐색하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -86,7 +86,7 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 스키마]** 왼쪽 탐색.
 
 ID 필드가 포함된 스키마를 검사할 때 이러한 필드는 스키마에 제공하는 클래스 또는 필드 그룹 아래의 왼쪽 레일에 나열됩니다. 중첩된 깊이에 관계없이 캔버스에 필드를 표시하려면 왼쪽 레일에서 ID 필드 이름을 선택합니다.
 
-캔버스에서 ID 필드가 지문 아이콘( )으로 강조 표시됩니다.![지문 아이콘 이미지](../images/ui/explore/identity-symbol.png)). ID 필드의 이름을 선택하면 [id 네임스페이스](../../identity-service/namespaces.md) 필드가 스키마의 기본 ID인지 여부를 나타냅니다.
+캔버스에서 ID 필드가 지문 아이콘( )으로 강조 표시됩니다.![지문 아이콘 이미지](../images/ui/explore/identity-symbol.png)). ID 필드의 이름을 선택하면 [id 네임스페이스](../../identity-service/features/namespaces.md) 필드가 스키마의 기본 ID인지 여부를 나타냅니다.
 
 ![](../images/ui/explore/identity-field.png)
 

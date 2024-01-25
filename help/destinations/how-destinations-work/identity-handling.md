@@ -1,15 +1,15 @@
 ---
-title: 대상 활성화 워크플로의 ID 처리
+title: 대상 활성화 워크플로에서의 ID 처리
 description: 대상 유형에 따라 활성화 워크플로에서 ID 내보내기가 처리되는 방법을 알아봅니다
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 3%
+source-wordcount: '1163'
+ht-degree: 1%
 
 ---
 
-# 대상 활성화 워크플로의 ID 처리
+# 대상 활성화 워크플로에서의 ID 처리
 
 이 페이지에서는 ID를 다양한 대상 유형으로 내보내는 방법의 세부 사항을 설명하고 대상에 따라 내보낼 수 있는 ID를 찾는 방법을 설명합니다.
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 대상 [파일 기반 대상](/help/destinations/destination-types.md#file-based) (예 [!DNL Amazon S3], SFTP, 다음과 같은 대부분의 이메일 마케팅 대상 [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]) 이러한 대부분의 대상에서 id 설정이 열려 있으므로 에서 id를 선택할 필요가 없습니다. [속성 선택](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) 배치 활성화 워크플로의 단계입니다.
 
-파일 내보내기에 ID를 추가하도록 선택하는 경우 [id 네임스페이스](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) 내보내기에서 선택할 수 있습니다. 내보낼 ID를 선택하면 자동으로 다음으로 선택됩니다. [필수 속성](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) 및 [중복 제거 키](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
+파일 내보내기에 ID를 추가하도록 선택하는 경우 [id 네임스페이스](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer) 내보내기에서 선택할 수 있습니다. 내보낼 ID를 선택하면 자동으로 다음으로 선택됩니다. [필수 속성](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) 및 [중복 제거 키](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
 
 ![필수 속성 및 중복 제거 키로 선택된 ID.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 

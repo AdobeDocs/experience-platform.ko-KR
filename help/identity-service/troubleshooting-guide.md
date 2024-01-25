@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ID 서비스 문제 해결 안내서
 description: 이 문서에서는 Adobe Experience Platform ID 서비스에 대해 자주 묻는 질문에 대한 답변과 일반적인 오류에 대한 문제 해결 안내서를 제공합니다.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '2176'
+source-wordcount: '2166'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ API를 사용하여 ID 설명자를 만들 때 네임스페이스를 정의하�
 
 ## Experience Platform에서 제공하는 표준 ID 네임스페이스는 무엇입니까? {#standard-namespaces}
 
-표준 ID 네임스페이스는 모든 조직에서 사용할 수 있는 네임스페이스입니다. 다음을 참조하십시오. [ID 네임스페이스 개요](./namespaces.md) 사용 가능한 표준 네임스페이스의 전체 목록입니다.
+표준 ID 네임스페이스는 모든 조직에서 사용할 수 있는 네임스페이스입니다. 다음을 참조하십시오. [ID 네임스페이스 개요](./features/namespaces.md) 사용 가능한 표준 네임스페이스의 전체 목록입니다.
 
 ## 조직에서 사용할 수 있는 ID 네임스페이스 목록은 어디에서 찾을 수 있습니까?
 

@@ -2,9 +2,9 @@
 title: CSV 템플릿에서 스키마 변환 API 엔드포인트로
 description: 스키마 레지스트리 API의 /rpc/csv2schema 끝점을 사용하면 CSV 템플릿을 사용하여 XDM(경험 데이터 모델) 스키마를 자동으로 만들 수 있습니다.
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
-source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '849'
 ht-degree: 5%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 5%
 
 이 끝점을 사용하려면 먼저 적절한 열 헤더와 해당 값이 있는 CSV 파일을 만들어야 합니다. 일부 열은 필수이고 나머지는 선택 사항입니다. 아래 표에서는 이러한 열과 스키마 구성에서 해당 역할에 대해 설명합니다.
 
-| CSV 헤더 위치 | CSV 헤더 이름 | 필수/선택적 | 설명 |
+| CSV 헤더 위치 | CSV 헤더 이름 | 필수/선택 사항 | 설명 |
 | --- | --- | --- | --- |
 | 1 | `isIgnored` | 선택 사항입니다 | 포함 시 로 설정 `true`는 필드가 API 업로드에 준비되지 않았으므로 무시해야 함을 나타냅니다. |
 | 2 | `isCustom` | 필수 여부 | 필드가 사용자 정의 필드인지 여부를 나타냅니다. |
@@ -36,7 +36,7 @@ ht-degree: 5%
 | 9 | `isRequired` | 선택 사항입니다 | 데이터 수집에 필드가 필요한지 여부를 나타냅니다. |
 | 10 | `isArray` | 선택 사항입니다 | 필드가 표시된 배열인지 여부를 나타냅니다. `dataType`. |
 | 11 | `isIdentity` | 선택 사항입니다 | 필드가 ID 필드인지 여부를 나타냅니다. |
-| 12 | `identityNamespace` | 다음과 같은 경우 필수 `isIdentity` true임 | 다음 [id 네임스페이스](../../identity-service/namespaces.md) id 필드. |
+| 12 | `identityNamespace` | 다음과 같은 경우 필수 `isIdentity` true임 | 다음 [id 네임스페이스](../../identity-service/features/namespaces.md) id 필드. |
 | 13 | `isPrimaryIdentity` | 선택 사항입니다 | 필드가 스키마의 기본 ID인지 여부를 나타냅니다. |
 | 14 | `minimum` | 선택 사항입니다 | (숫자 필드만 해당) 필드의 최소값입니다. |
 | 15 | `maximum` | 선택 사항입니다 | (숫자 필드만 해당) 필드의 최대값입니다. |

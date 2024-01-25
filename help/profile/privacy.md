@@ -5,9 +5,9 @@ title: 실시간 고객 프로필에서 개인 정보 보호 요청 처리
 type: Documentation
 description: Adobe Experience Platform Privacy Service은 수많은 개인 정보 보호 규정에 명시된 대로 개인 데이터에 액세스하거나, 판매를 거부하거나, 삭제하기 위한 고객 요청을 처리합니다. 이 문서에서는 실시간 고객 프로필에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 6d9f8eceeb8fbe550b4e1e7e0964f2fff0cd3c70
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1743'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Adobe Experience Platform [!DNL Identity Service] 시스템 및 장치 간에 �
 
 ID 서비스는 전역 정의(표준) 및 사용자 정의(사용자 정의) ID 네임스페이스 저장소를 유지 관리합니다. 표준 네임스페이스는 모든 조직에서 사용할 수 있으며(예: &quot;이메일&quot; 및 &quot;ECID&quot;), 조직에서는 특정 요구 사항에 맞게 사용자 정의 네임스페이스를 만들 수도 있습니다.
 
-의 ID 네임스페이스에 대한 자세한 내용 [!DNL Experience Platform], 다음을 참조하십시오. [id 네임스페이스 개요](../identity-service/namespaces.md).
+의 ID 네임스페이스에 대한 자세한 내용 [!DNL Experience Platform], 다음을 참조하십시오. [id 네임스페이스 개요](../identity-service/features/namespaces.md).
 
 ## 요청 제출 {#submit}
 
@@ -203,7 +203,7 @@ ID 서비스도 포함했는지 여부에 따라 다름(`identity`) 및 데이�
 | `ProfileService` 전용 | Platform에서 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필이 즉시 삭제됩니다. 그러나 프로필의 ID 그래프는 여전히 남아 있으며 동일한 ID를 가진 새 데이터가 수집되면 프로필을 다시 구성할 수 있습니다. 프로필과 연결된 데이터도 데이터 레이크에 유지됩니다. |
 | `ProfileService` 및 `identity` | Platform에서 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필 및 관련 ID 그래프가 즉시 삭제됩니다. 프로필과 연결된 데이터는 데이터 레이크에 유지됩니다. |
 | `ProfileService` 및 `aepDataLake` | Platform에서 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필이 즉시 삭제됩니다. 그러나 프로필의 ID 그래프는 여전히 남아 있으며 동일한 ID를 가진 새 데이터가 수집되면 프로필을 다시 구성할 수 있습니다.<br><br>데이터 레이크 제품이 요청을 받고 현재 처리 중이라는 응답을 하는 경우 프로필과 연관된 데이터가 일시 삭제되므로 다른 사용자도 해당 데이터에 액세스할 수 없습니다 [!DNL Platform] 서비스. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
-| `ProfileService`, `identity`, 및 `aepDataLake` | Platform에서 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필 및 관련 ID 그래프가 즉시 삭제됩니다.<br><br>데이터 레이크 제품이 요청을 받고 현재 처리 중이라는 응답을 하는 경우 프로필과 연관된 데이터가 일시 삭제되므로 다른 사용자도 해당 데이터에 액세스할 수 없습니다 [!DNL Platform] 서비스. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
+| `ProfileService`, `identity` 및 `aepDataLake` | Platform에서 삭제 요청이 수신되었다는 확인을 전송하는 즉시 프로필 및 관련 ID 그래프가 즉시 삭제됩니다.<br><br>데이터 레이크 제품이 요청을 받고 현재 처리 중이라는 응답을 하는 경우 프로필과 연관된 데이터가 일시 삭제되므로 다른 사용자도 해당 데이터에 액세스할 수 없습니다 [!DNL Platform] 서비스. 작업이 완료되면 데이터가 데이터 레이크에서 완전히 제거됩니다. |
 
 다음을 참조하십시오. [[!DNL Privacy Service] 설명서](../privacy-service/home.md#monitor) 작업 상태 추적에 대한 자세한 내용을 참조하십시오.
 

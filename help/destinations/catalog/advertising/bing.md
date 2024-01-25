@@ -3,7 +3,7 @@ keywords: 광고; bing;
 title: Microsoft Bing 연결
 description: Microsoft Bing 연결 대상을 사용하면 디스플레이 광고, 검색 및 기본을 포함하여 전체 Microsoft Advertising Network에서 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있습니다.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 10%
@@ -26,7 +26,7 @@ ht-degree: 10%
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Microsoft Bing] 는 아래 표에 표시된 id를 기반으로 대상의 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
+[!DNL Microsoft Bing] 는 아래 표에 표시된 id를 기반으로 대상의 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/features/namespaces.md).
 
 | 신원 | 설명 |
 |---|---|

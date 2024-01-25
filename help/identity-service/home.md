@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service 개요
 description: Adobe Experience Platform Identity Service를 사용하면 디바이스와 시스템 간에 ID를 연결하여 고객과 고객의 행동을 더 잘 볼 수 있으므로 효과적인 개인 디지털 경험을 실시간으로 제공할 수 있습니다.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 484b1c2d37291afd02fe58723121325c837061aa
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1554'
 ht-degree: 2%
 
 ---
@@ -32,12 +32,12 @@ ID 서비스에 대한 세부 사항으로 이동하기 전에 주요 용어에 
 | 용어 | 정의 |
 | --- | --- |
 | 신원 | ID는 엔티티에 고유한 데이터입니다. 일반적으로 이 개체는 개인, 하드웨어 장치 또는 웹 브라우저(쿠키로 표시됨)와 같은 실제 개체입니다. 정규화된 ID는 다음 두 가지 요소로 구성됩니다. **id 네임스페이스** 및 **id 값**. |
-| ID 네임스페이스 | ID 네임스페이스는 특정 ID의 컨텍스트입니다. 예를 들어 의 네임스페이스는 `Email` 다음과 일치할 수 있음 **줄리엔<span>@acme.com**. 마찬가지로 의 네임스페이스입니다. `Phone` 다음과 일치할 수 있음 `555-555-1234`. 자세한 내용은 [id 네임스페이스 개요](./namespaces.md) |
+| ID 네임스페이스 | ID 네임스페이스는 특정 ID의 컨텍스트입니다. 예를 들어 의 네임스페이스는 `Email` 다음과 일치할 수 있음 **줄리엔<span>@acme.com**. 마찬가지로 의 네임스페이스입니다. `Phone` 다음과 일치할 수 있음 `555-555-1234`. 자세한 내용은 [id 네임스페이스 개요](./features/namespaces.md) |
 | ID 값 | ID 값은 실제 엔티티를 나타내는 문자열이며, 네임스페이스를 통해 ID 서비스 내에서 분류됩니다. 예를 들어 ID 값(문자열)은 **줄리엔<span>@acme.com** 다음과 같이 분류할 수 있습니다. `Email` 네임스페이스입니다. |
 | ID 유형 | ID 유형은 ID 네임스페이스의 구성 요소입니다. ID 유형은 ID 데이터가 ID 그래프에 연결되어 있는지 여부를 지정합니다. |
 | 링크 | 링크 또는 연결은 서로 다른 두 ID가 동일한 엔터티를 나타내도록 설정하는 방법입니다. 예: &quot; 사이의 링크`Email` = julien<span>@acme.com&quot; 및 &quot;`Phone` = 555-555-1234&quot;는 두 id가 동일한 엔터티를 나타낸다는 의미입니다. 이는 줄리앙이라는 이메일 주소와 함께 귀하의 브랜드와 상호 작용한 고객이<span>@acme.com과 555-555-1234 전화번호는 동일합니다. |
 | ID 서비스 | ID 서비스는 ID를 연결(또는 연결 해제)하여 ID 그래프를 유지 관리하는 Experience Platform 내의 서비스입니다. |
-| 아이덴티티 그래프 | ID 그래프는 단일 고객을 나타내는 ID 컬렉션입니다. 자세한 내용은 의 안내서를 참조하십시오. [id 그래프 뷰어 사용](./ui/identity-graph-viewer.md). |
+| 아이덴티티 그래프 | ID 그래프는 단일 고객을 나타내는 ID 컬렉션입니다. 자세한 내용은 의 안내서를 참조하십시오. [id 그래프 뷰어 사용](./features/identity-graph-viewer.md). |
 | 실시간 고객 프로필 | 실시간 고객 프로필은 다음과 같은 Adobe Experience Platform 내의 서비스입니다. <ul><li>ID 그래프를 기반으로 프로필 조각을 병합하여 프로필을 만듭니다.</li><li>프로필을 세그먼트화하여 활성화를 위해 대상으로 전송할 수 있습니다.</li></ul> |
 | 프로필 | 프로파일은 주체, 조직 또는 개인을 나타냅니다. 프로필은 다음 네 가지 요소로 구성됩니다. <ul><li>속성: 속성은 이름, 연령 또는 성별 등의 정보를 제공합니다.</li><li>비헤이비어: 비헤이비어는 지정된 프로필의 활동에 대한 정보를 제공합니다. 예를 들어 프로필 비헤이비어는 지정된 프로필이 &quot;샌들 검색 중&quot; 또는 &quot;티셔츠 주문 중&quot;인지 여부를 알 수 있습니다.</li><li>ID: 병합된 프로필의 경우 해당 개인과 관련된 모든 ID에 대한 정보를 제공합니다. ID는 개인(CRMID, 이메일, 전화), 디바이스(IDFA, GAID) 및 쿠키(ECID, AAID)의 세 가지 범주로 분류될 수 있습니다.</li><li>대상자 멤버십: 프로필이 속한 그룹(단골 사용자, 캘리포니아에 거주하는 사용자 등)입니다.</li></ul> |
 
@@ -93,9 +93,11 @@ ID 네임스페이스와 ID 값이 일치하면 두 ID 간의 링크가 설정�
 
 위의 시나리오를 고려하여 Identity Service는 `{CRM_ID:ABC, ECID:123}`및 `{CRM_ID:ABC, ECID:456}`. 이렇게 하면 세 개의 ID를 &quot;소유&quot;하는 ID 그래프가 생성됩니다. 하나는 개인 식별자(CRM ID)에, 다른 하나는 쿠키 식별자(ECID)에 사용됩니다.
 
+자세한 내용은 의 안내서를 참조하십시오 [identity 서비스에서 ID를 연결하는 방법](./features/identity-linking-logic.md).
+
 ## ID 그래프
 
-ID 그래프는 서로 다른 ID 네임스페이스 간의 관계 맵으로, 고객 ID가 어떻게 결합되어 있는지 시각화하고 더 잘 이해할 수 있습니다. 다음에 대한 자습서 읽기: [id 그래프 뷰어 사용](./ui/identity-graph-viewer.md) 추가 정보.
+ID 그래프는 서로 다른 ID 네임스페이스 간의 관계 맵으로, 고객 ID가 어떻게 결합되어 있는지 시각화하고 더 잘 이해할 수 있습니다. 다음에 대한 자습서 읽기: [id 그래프 뷰어 사용](./features/identity-graph-viewer.md) 추가 정보.
 
 다음 비디오는 ID 및 ID 그래프에 대한 이해를 돕기 위한 것입니다.
 
@@ -108,7 +110,7 @@ ID 서비스는 Experience Platform 내에서 중요한 역할을 합니다. 이
 * [스키마](../xdm/home.md): 특정 스키마 내에서 ID로 표시된 스키마 필드를 사용하면 ID 그래프를 작성할 수 있습니다.
 * [데이터 세트](../catalog/datasets/overview.md): 데이터 세트가 실시간 고객 프로필에 수집되도록 활성화된 경우 데이터 세트가 ID로 표시된 최소 두 개 이상의 필드인 경우 데이터 세트에서 ID 그래프가 생성됩니다.
 * [웹 SDK](../edge/home.md): Web SDK는 경험 이벤트를 Adobe Experience Platform으로 전송하고, ID 서비스는 이벤트에 두 개 이상의 ID가 있을 때 그래프를 생성합니다.
-* [실시간 고객 프로필](../profile/home.md): 특정 프로필의 속성 및 이벤트를 병합하기 전에 실시간 고객 프로필에서 ID 그래프를 참조할 수 있습니다.
+* [실시간 고객 프로필](../profile/home.md): 특정 프로필의 속성 및 이벤트를 병합하기 전에 실시간 고객 프로필에서 ID 그래프를 참조할 수 있습니다. 자세한 내용은 의 안내서를 참조하십시오. [identity 서비스와 실시간 고객 프로필 간의 관계 이해](./identity-and-profile.md).
 * [대상](../destinations/home.md): 대상은 해시된 이메일과 같은 ID 네임스페이스를 기반으로 다른 시스템에 프로필 정보를 보낼 수 있습니다.
 * [세그먼트 일치](../segmentation/ui/segment-match/overview.md): 세그먼트 일치 는 ID 네임스페이스와 ID 값이 동일한 두 개의 서로 다른 샌드박스에서 두 개의 프로필과 일치합니다.
 * [Privacy Service](../privacy-service/home.md): 삭제 요청에 다음이 포함된 경우 `identity`그런 다음 Privacy Service의 개인 정보 보호 요청 처리 기능을 사용하여 ID 서비스에서 지정된 네임스페이스 및 ID 값 조합을 삭제할 수 있습니다.

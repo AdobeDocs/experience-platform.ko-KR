@@ -4,7 +4,7 @@ title: Real-time Customer Data Platform의 ID
 description: Adobe Experience Platform Identity Service를 사용하면 디바이스와 시스템 간에 ID를 연결하여 고객과 고객의 행동을 더 잘 볼 수 있습니다.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Adobe Experience Platform [!DNL Identity Service] 은 디바이스와 시스템 
 
 ## ID 네임스페이스
 
-ID 네임스페이스는 의 구성 요소입니다. [!DNL Identity Service] 고객 id에 추가 컨텍스트를 제공하는 표시기 역할을 합니다. 일반적으로 사용되는 ID 네임스페이스의 예로는 &quot;이메일&quot;이 있습니다. 여러 웹 사이트에서 동일한 이메일 주소를 사용하면 실제로 동일한 고객에 속하면서 각각 고유한 고객 ID를 가진 여러 다른 ID를 함께 결합할 수 있습니다. [!DNL Experience Platform] 에서는 ID 네임스페이스를 사용하여 사용자 인터페이스 내에서 개별 프로필을 검색할 수 있습니다. 프로필 보기에 대한 자세한 내용은 [프로필 찾아보기 개요](profile-browse.md). ID 네임스페이스에 대한 자세한 내용은 [id 네임스페이스 개요](../../identity-service/namespaces.md).
+ID 네임스페이스는 의 구성 요소입니다. [!DNL Identity Service] 고객 id에 추가 컨텍스트를 제공하는 표시기 역할을 합니다. 일반적으로 사용되는 ID 네임스페이스의 예로는 &quot;이메일&quot;이 있습니다. 여러 웹 사이트에서 동일한 이메일 주소를 사용하면 실제로 동일한 고객에 속하면서 각각 고유한 고객 ID를 가진 여러 다른 ID를 함께 결합할 수 있습니다. [!DNL Experience Platform] 에서는 ID 네임스페이스를 사용하여 사용자 인터페이스 내에서 개별 프로필을 검색할 수 있습니다. 프로필 보기에 대한 자세한 내용은 [프로필 찾아보기 개요](profile-browse.md). ID 네임스페이스에 대한 자세한 내용은 [id 네임스페이스 개요](../../identity-service/features/namespaces.md).
 
 ## ID 그래프
 

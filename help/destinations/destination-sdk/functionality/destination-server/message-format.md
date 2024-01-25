@@ -2,10 +2,10 @@
 description: 이 페이지에서는 Adobe Experience Platform에서 대상으로 내보낸 데이터의 메시지 형식 및 프로필 변형을 다룹니다.
 title: 메시지 포맷
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b42ef11681bb50141c7f3dc76d8c79d71e55e73c
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2502'
-ht-degree: 1%
+source-wordcount: '2489'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Adobe 측의 메시지 포맷 및 프로필 구성 및 변환 프로세스를 이해하려면 다음 Experience Platform 개념을 숙지하십시오.
 
-* **경험 데이터 모델 (XDM)**. [XDM 개요](../../../../xdm/home.md) 및  [Adobe Experience Platform에서 XDM 스키마를 만드는 방법](../../../../xdm/tutorials/create-schema-ui.md).
+* **경험 데이터 모델(XDM)**. [XDM 개요](../../../../xdm/home.md) 및  [Adobe Experience Platform에서 XDM 스키마를 만드는 방법](../../../../xdm/tutorials/create-schema-ui.md).
 * **클래스**. [UI에서 클래스 만들기 및 편집](../../../../xdm/ui/resources/classes.md).
 * **IdentityMap**. ID 맵은 Adobe Experience Platform의 모든 최종 사용자 ID의 맵을 나타냅니다. 을(를) 참조하십시오 `xdm:identityMap` 다음에서 [XDM 필드 사전](../../../../xdm/schema/field-dictionary.md).
 * **SegmentMembership**. 다음 [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM 속성은 프로필이 멤버인 대상을 알려줍니다. 의 세 가지 다른 값에 대해 `status` 필드,에서 설명서 읽기 [대상자 멤버십 세부 정보 스키마 필드 그룹](../../../../xdm/field-groups/profile/segmentation.md).
@@ -380,7 +380,7 @@ Adobe 사용 [조약돌 틀](https://pebbletemplates.io/), 와 유사한 템플�
 
 ### ID {#identities}
 
-Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 개요](../../../../identity-service/namespaces.md).
+Experience Platform의 ID에 대한 자세한 내용은 [ID 네임스페이스 개요](../../../../identity-service/features/namespaces.md).
 
 **입력**
 

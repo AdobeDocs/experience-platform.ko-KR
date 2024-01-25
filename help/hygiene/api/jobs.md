@@ -4,10 +4,10 @@ description: Adobe Experience Platform에서 고객의 저장된 개인 데이�
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '480'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -107,8 +107,8 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `companyContexts` | 조직의 인증 정보가 포함된 배열입니다. 다음 속성을 가진 단일 개체가 있어야 합니다. <ul><li>`namespace`: 다음으로 설정되어야 합니다. `imsOrgID`.</li><li>`value`: 자신의 조직 ID. 에 제공된 것과 동일한 값입니다 `x-gw-ims-org-id` 머리글입니다.</li></ul> |
-| `users` | 정보를 삭제할 하나 이상의 사용자 컬렉션이 포함된 배열입니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`: 응답 데이터에서 개별 작업 ID를 구분하는 데 사용되는 사용자의 식별자입니다. 이 값을 참조하거나 나중에 조회할 수 있도록 고유하고 쉽게 식별 가능한 문자열을 선택하는 것이 좋습니다.</li><li>`action`: 사용자 데이터에 대해 수행할 작업을 나열하는 배열입니다. 단일 문자열 값을 포함해야 합니다. `delete`.</li><li>`userIDs`: 사용자의 ID 컬렉션입니다. 단일 사용자가 가질 수 있는 ID의 수는 9개로 제한됩니다. 각 ID에는 다음 속성이 포함되어 있습니다. <ul><li>`namespace`: [id 네임스페이스](../../identity-service/namespaces.md) ID와 연결됩니다. 다음과 같을 수 있습니다. [표준 네임스페이스](../../privacy-service/api/appendix.md#standard-namespaces) 플랫폼에서 인식하거나 조직에서 정의한 사용자 지정 네임스페이스일 수 있습니다. 사용된 네임스페이스 유형은 다음에 반영되어야 합니다. `type` 속성.</li><li>`value`: ID 값입니다.</li><li>`type`: 다음으로 설정되어야 합니다. `standard` 전역적으로 인식된 네임스페이스를 사용하는 경우 또는 `custom` 조직에서 정의한 네임스페이스를 사용하는 경우</li></ul></li></ul> |
+| `companyContexts` | 조직의 인증 정보가 포함된 배열입니다. 다음 속성을 가진 단일 개체가 있어야 합니다. <ul><li>`namespace`: 다음으로 설정되어야 합니다. `imsOrgID`.</li><li>`value`: 조직 ID입니다. 에 제공된 것과 동일한 값입니다 `x-gw-ims-org-id` 머리글입니다.</li></ul> |
+| `users` | 정보를 삭제할 하나 이상의 사용자 컬렉션이 포함된 배열입니다. 각 사용자 객체에는 다음 정보가 포함됩니다. <ul><li>`key`: 응답 데이터에서 개별 작업 ID를 구분하는 데 사용되는 사용자의 식별자입니다. 이 값을 참조하거나 나중에 조회할 수 있도록 고유하고 쉽게 식별 가능한 문자열을 선택하는 것이 좋습니다.</li><li>`action`: 사용자 데이터에 대해 수행할 작업을 나열하는 배열입니다. 단일 문자열 값을 포함해야 합니다. `delete`.</li><li>`userIDs`: 사용자의 ID 컬렉션입니다. 단일 사용자가 가질 수 있는 ID의 수는 9개로 제한됩니다. 각 ID에는 다음 속성이 포함되어 있습니다. <ul><li>`namespace`: [id 네임스페이스](../../identity-service/features/namespaces.md) ID와 연결됩니다. 다음과 같을 수 있습니다. [표준 네임스페이스](../../privacy-service/api/appendix.md#standard-namespaces) 플랫폼에서 인식하거나 조직에서 정의한 사용자 지정 네임스페이스일 수 있습니다. 사용된 네임스페이스 유형은 다음에 반영되어야 합니다. `type` 속성.</li><li>`value`: ID 값입니다.</li><li>`type`: 다음으로 설정되어야 합니다. `standard` 전역적으로 인식된 네임스페이스를 사용하는 경우 또는 `custom` 조직에서 정의한 네임스페이스를 사용하는 경우</li></ul></li></ul> |
 
 {style="table-layout:auto"}
 

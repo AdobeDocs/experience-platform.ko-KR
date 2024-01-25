@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK을 통해 대상 구성을 만들기 위해 API 호출을 구성하는 방법을 알아봅니다.
 title: 대상 구성 만들기
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1194'
 ht-degree: 3%
 
 ---
@@ -193,7 +193,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |---------|----------|------|
 | `name` | 문자열 | Experience Platform 카탈로그에서 대상의 제목을 나타냅니다. |
 | `description` | 문자열 | Adobe이 대상 카드의 Experience Platform 대상 카탈로그에서 사용할 설명을 입력합니다. 4-5개 이하의 문장을 목표로 하라. ![대상 설명을 표시하는 플랫폼 UI 이미지입니다.](../../assets/authoring-api/destination-configuration/destination-description.png "대상 설명"){width="100" zoomable="yes"} |
-| `status` | 문자열 | 대상 카드의 라이프사이클 상태를 나타냅니다. 허용되는 값은 `TEST`, `PUBLISHED` 및 `DELETED`입니다. 사용 `TEST` 대상을 처음 구성할 때. |
+| `status` | 문자열 | 대상 카드의 라이프사이클 상태를 나타냅니다. 허용되는 값은 다음과 같습니다 `TEST`, `PUBLISHED`, 및 `DELETED`. 사용 `TEST` 대상을 처음 구성할 때. |
 | `customerAuthenticationConfigurations.authType` | 문자열 | 대상 서버에 Experience Platform 고객을 인증하는 데 사용되는 구성을 나타냅니다. 다음을 참조하십시오 [고객 인증 구성](../../functionality/destination-configuration/customer-authentication.md) 지원되는 인증 유형에 대한 자세한 내용은 을 참조하십시오. |
 | `customerDataFields.name` | 문자열 | 도입 중인 사용자 정의 필드의 이름을 입력합니다. <br/><br/> 다음을 참조하십시오 [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md) 를 참조하십시오. ![고객 데이터 필드를 보여주는 플랫폼 UI 이미지입니다.](../../assets/authoring-api/destination-configuration/customer-data-fields.png "고객 데이터 필드"){width="100" zoomable="yes"} |
 | `customerDataFields.type` | 문자열 | 도입 중인 사용자 정의 필드 유형을 나타냅니다. 허용되는 값은 다음과 같습니다 `string`, `object`, `integer`. <br/><br/> 다음을 참조하십시오 [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md) 를 참조하십시오. |
@@ -208,9 +208,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `uiAttributes.connectionType` | 문자열 | 대상에 따른 연결 유형입니다. 지원되는 값: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 | `uiAttributes.frequency` | 문자열 | 대상에서 지원하는 데이터 내보내기 유형을 나타냅니다. 다음으로 설정 `Streaming` API 기반 통합 또는 `Batch` 파일을 대상으로 내보낼 때 |
 | `identityNamespaces.externalId.acceptsAttributes` | 부울 | 고객이 표준 프로필 속성을 구성 중인 ID에 매핑할 수 있는지 여부를 나타냅니다. |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | 부울 | 고객이 다음에 속한 ID를 매핑할 수 있는지 여부를 나타냅니다. [사용자 정의 네임스페이스](/help/identity-service/namespaces.md#manage-namespaces) 를 추가합니다. |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | 부울 | 고객이 다음에 속한 ID를 매핑할 수 있는지 여부를 나타냅니다. [사용자 정의 네임스페이스](/help/identity-service/features/namespaces.md#manage-namespaces) 를 추가합니다. |
 | `identityNamespaces.externalId.transformation` | 문자열 | _예제 구성에 표시되지 않음_. 다음과 같은 경우에 사용됩니다. [!DNL Platform] 고객은 일반 이메일 주소를 속성으로 가지고 있으며 플랫폼은 해시된 이메일만 허용합니다. 여기에서 적용해야 하는 변형을 제공합니다(예: 이메일을 소문자로 변환한 다음 해시로 변환). |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 다음 항목을 나타냅니다. [표준 id 네임스페이스](/help/identity-service/namespaces.md#standard) (예: IDFA) 고객은 구성 중인 ID에 매핑할 수 있습니다. <br> 를 사용할 때 `acceptedGlobalNamespaces`, 다음을 사용할 수 있습니다 `"requiredTransformation":"sha256(lower($))"` 이메일 주소 또는 전화 번호를 소문자로 나타내고 해시합니다. |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 다음 항목을 나타냅니다. [표준 id 네임스페이스](/help/identity-service/features/namespaces.md#standard) (예: IDFA) 고객은 구성 중인 ID에 매핑할 수 있습니다. <br> 를 사용할 때 `acceptedGlobalNamespaces`, 다음을 사용할 수 있습니다 `"requiredTransformation":"sha256(lower($))"` 이메일 주소 또는 전화 번호를 소문자로 나타내고 해시합니다. |
 | `destinationDelivery.authenticationRule` | 문자열 | 방법을 나타냅니다. [!DNL Platform] 고객이 대상에 연결합니다. 허용되는 값은 다음과 같습니다 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>사용 `CUSTOMER_AUTHENTICATION` platform 고객이 사용자 이름과 암호, 전달자 토큰 또는 다른 인증 방법을 통해 시스템에 로그인하는 경우. 예를 들어 을 선택한 경우 이 옵션을 선택합니다 `authType: OAUTH2` 또는 `authType:BEARER` 위치: `customerAuthenticationConfigurations`. </li><li> 사용 `PLATFORM_AUTHENTICATION` Adobe과 대상 및 간에 글로벌 인증 시스템이 있는 경우 [!DNL Platform] 고객은 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없습니다. 이 경우 다음을 사용하여 자격 증명 개체를 만들어야 합니다 [자격 증명 API](../../credentials-api/create-credential-configuration.md) 구성. </li><li>사용 `NONE` 대상 플랫폼으로 데이터를 전송하는 데 인증이 필요하지 않은 경우 </li></ul> |
 | `destinationDelivery.destinationServerId` | 문자열 | 다음 `instanceId` / [대상 서버 템플릿](../destination-server/create-destination-server.md) 이 대상에 사용됩니다. |
 | `backfillHistoricalProfileData` | 부울 | 대상이 대상으로 활성화될 때 내역 프로필 데이터를 내보내는지 여부를 제어합니다. 항상 다음으로 설정 `true`. |

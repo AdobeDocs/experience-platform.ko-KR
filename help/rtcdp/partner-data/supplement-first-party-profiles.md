@@ -3,9 +3,9 @@ title: 파트너가 제공한 속성으로 자사 프로필 보완
 description: 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선하는 방법에 대해 알아봅니다.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1256'
 ht-degree: 79%
 
 ---
@@ -56,7 +56,7 @@ Adobe은 한 가지 방법으로 모든 요구 사항을 충족할 수 있는 �
 1. **고객**&#x200B;은 **데이터 파트너**&#x200B;의 속성에 라이선스를 부여합니다.
 2. **고객**&#x200B;은 **파트너**&#x200B;가 제공한 속성을 수용할 수 있도록 프로필 데이터 및 거버넌스 모델을 확장합니다.
 3. **고객**&#x200B;은 데이터 파트너와 함께 보강하고 싶은 대상자를 참여시킬 수 있습니다. 일반적으로 이러한 대상자는 이메일, 이름, 주소 등과 같은 개인 식별 정보(PII) 요소와 같은 입력 식별자를 제거합니다.
-4. **파트너**&#x200B;는 일치시킬 수 있는 프로필에 대해 라이선스가 부여된 속성을 추가합니다. 필요한 경우 [파트너 ID](/help/identity-service/namespaces.md)를 포함하여 파트너 범위의 ID 네임스페이스에 가져올 수 있습니다.
+4. **파트너**&#x200B;는 일치시킬 수 있는 프로필에 대해 라이선스가 부여된 속성을 추가합니다. 필요한 경우 [파트너 ID](/help/identity-service/features/namespaces.md)를 포함하여 파트너 범위의 ID 네임스페이스에 가져올 수 있습니다.
 5. **고객**&#x200B;은 Real-Time CDP에서 데이터 파트너의 속성을 고객 프로필로 로드합니다.
 
 ## 사용 사례 달성 방법: 단계별 지침 {#step-by-step-instructions}
@@ -99,9 +99,9 @@ Commenting out links for now
 
 >[!TIP]
 >
->데이터 공급업체의 사용자 기반 식별자로 고객 프로필을 보완하도록 선택한 경우 **[[!UICONTROL 파트너 ID]](/help/identity-service/namespaces.md)** 유형의 새 ID 유형을 생성할 수 있습니다.
+>데이터 공급업체의 사용자 기반 식별자로 고객 프로필을 보완하도록 선택한 경우 **[[!UICONTROL 파트너 ID]](/help/identity-service/features/namespaces.md)** 유형의 새 ID 유형을 생성할 수 있습니다.
 >
->[ID 유형 섹션](/help/identity-service/namespaces.md)의 파트너 ID에 대해 자세히 알아보십시오.
+>[ID 유형 섹션](/help/identity-service/features/namespaces.md)의 파트너 ID에 대해 자세히 알아보십시오.
 >Experience Platform 사용자 인터페이스에서 [ID 필드를 정의하는 방법](/help/xdm/ui/fields/identity.md)에 대해 알아보십시오.
 
 ### 개인 식별 정보(PII) 또는 해시된 PII를 제거할 때 보강하려는 대상자를 내보냅니다. {#export-audiences}
@@ -130,7 +130,7 @@ Commenting out links for now
 
 이 페이지에 설명된 사용 사례를 탐색할 때 다음 제한 사항에 유의하십시오.
 
-* 파트너 ID를 사용하기로 선택한 경우 [ID 그래프](/help/identity-service/ui/identity-graph-viewer.md)를 구축할 때 이 ID는 사용하지 않습니다.
+* 파트너 ID를 사용하기로 선택한 경우 [ID 그래프](/help/identity-service/features/identity-graph-viewer.md)를 구축할 때 이 ID는 사용하지 않습니다.
 
 ## 파트너 데이터 지원을 통해 달성한 기타 사용 사례 {#other-use-cases}
 

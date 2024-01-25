@@ -3,7 +3,7 @@ title: 파트너 지원 방문자 인식을 사용하여 알 수 없는 방문�
 description: 파트너 지원 방문자 인식을 사용하여 방문자에게 개인화된 온사이트 경험을 제공하는 방법을 알아보십시오.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -51,7 +51,7 @@ ht-degree: 89%
    * [태그](/help/tags/home.md)
    * [데이터스트림](/help/datastreams/overview.md)
 * Real-Time CDP의 데이터 관리
-   * [ID](/help/identity-service/namespaces.md)
+   * [ID](/help/identity-service/features/namespaces.md)
    * [스키마](/help/xdm/home.md)
    * [데이터 사용 레이블](/help/data-governance/labels/overview.md)
    * [데이터 세트](/help/catalog/datasets/overview.md)
@@ -279,7 +279,7 @@ Platform UI에서 다음으로 이동합니다. **[!UICONTROL 고객]** > **[!UI
 
 이 페이지에 설명된 사용 사례를 탐색할 때 다음 제한 사항에 유의하십시오.
 
-* 파트너 ID를 사용하는 경우, [ID 그래프](/help/identity-service/ui/identity-graph-viewer.md)를 구축할 때 이 ID는 사용하지 않습니다.
+* 파트너 ID를 사용하는 경우, [ID 그래프](/help/identity-service/features/identity-graph-viewer.md)를 구축할 때 이 ID는 사용하지 않습니다.
 
 ## 파트너 데이터 지원을 통해 달성한 기타 사용 사례 {#other-use-cases}
 

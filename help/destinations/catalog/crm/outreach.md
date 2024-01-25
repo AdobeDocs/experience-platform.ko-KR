@@ -3,7 +3,7 @@ keywords: crm;CRM;CRM 대상;Outreach;Outreach crm 대상
 title: 지원 연결
 description: 전달 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 전달 내에서 활성화할 수 있습니다.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -71,7 +71,7 @@ ht-degree: 2%
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Outreach] 는 아래 표에 설명된 id 업데이트를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
+[!DNL Outreach] 는 아래 표에 설명된 id 업데이트를 지원합니다. 자세히 알아보기 [id](/help/identity-service/features/namespaces.md).
 
 | 타겟 ID | 설명 | 고려 사항 |
 |---|---|---|

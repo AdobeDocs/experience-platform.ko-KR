@@ -3,9 +3,9 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 샘플 상태 미리 보기(프로필 미리 보기) API 끝점
 description: Real-Time Customer Profile API의 샘플 상태 미리보기 엔드포인트를 사용하면 프로필 데이터의 최근 성공 샘플을 미리 보고, 데이터 세트 및 ID별로 프로필 분포를 나열하고, 데이터 세트 중복, ID 중복 및 연결되지 않은 프로필을 보여주는 보고서를 생성할 수 있습니다.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2868'
+source-wordcount: '2906'
 ht-degree: 1%
 
 ---
@@ -208,7 +208,7 @@ curl -X GET \
 
 에 대한 GET 요청을 수행할 수 있습니다. `/previewsamplestatus/report/namespace` 프로필 스토어에 병합된 모든 프로필의 id 네임스페이스별 분류를 보는 엔드포인트입니다. 여기에는 Adobe에서 제공하는 표준 ID와 조직에서 정의한 사용자 정의 ID가 모두 포함됩니다.
 
-ID 네임스페이스는 고객 데이터와 관련된 컨텍스트의 지표 역할을 하는 Adobe Experience Platform ID 서비스의 중요한 구성 요소입니다. 자세한 내용은 [id 네임스페이스 개요](../../identity-service/namespaces.md).
+ID 네임스페이스는 고객 데이터와 관련된 컨텍스트의 지표 역할을 하는 Adobe Experience Platform ID 서비스의 중요한 구성 요소입니다. 자세한 내용은 [id 네임스페이스 개요](../../identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
@@ -298,7 +298,7 @@ curl -X GET \
 | `fullIDsFragmentCount` | 네임스페이스의 총 프로필 조각 수입니다. |
 | `fullIDsCount` | 네임스페이스에 병합된 총 프로필 수입니다. |
 | `fullIDsPercentage` | 다음 `fullIDsCount` 병합된 총 프로필의 백분율로 표시( `totalRows` 에 반환된 값 [마지막 샘플 상태](#view-last-sample-status)), 10진수 형식으로 표시됩니다. |
-| `code` | 다음 `code` 네임스페이스에 사용됩니다. 이 로그는 를 사용하여 네임스페이스로 작업할 때 찾을 수 있습니다. [Adobe Experience Platform ID 서비스 API](../../identity-service/api/list-namespaces.md) 및 를 &quot;다음&quot;이라고도 합니다. [!UICONTROL ID 심볼] Experience Platform UI에서 자세한 내용은 [id 네임스페이스 개요](../../identity-service/namespaces.md). |
+| `code` | 다음 `code` 네임스페이스에 사용됩니다. 이 로그는 를 사용하여 네임스페이스로 작업할 때 찾을 수 있습니다. [Adobe Experience Platform ID 서비스 API](../../identity-service/api/list-namespaces.md) 및 를 &quot;다음&quot;이라고도 합니다. [!UICONTROL ID 심볼] Experience Platform UI에서 자세한 내용은 [id 네임스페이스 개요](../../identity-service/features/namespaces.md). |
 | `value` | 다음 `id` 네임스페이스에 대한 값입니다. 이 로그는 를 사용하여 네임스페이스로 작업할 때 찾을 수 있습니다. [ID 서비스 API](../../identity-service/api/list-namespaces.md). |
 
 ## 데이터 세트 중복 보고서 생성
@@ -444,7 +444,7 @@ curl -X GET \
 | 속성 | 설명 |
 |---|---|
 | `data` | 다음 `data` 객체에는 id 네임스페이스 코드와 해당 프로필 카운트의 고유한 조합이 있는 쉼표로 구분된 목록이 포함되어 있습니다. |
-| 네임스페이스 코드 | 다음 `code` 는 각 id 네임스페이스 이름에 대한 약식입니다. 각 의 매핑 `code` 로 `name` 을 사용하여 찾을 수 있음 [Adobe Experience Platform ID 서비스 API](../../identity-service/api/list-namespaces.md). 다음 `code` 를 &quot;다음&quot;이라고도 합니다 [!UICONTROL ID 심볼] Experience Platform UI에서 자세한 내용은 [id 네임스페이스 개요](../../identity-service/namespaces.md). |
+| 네임스페이스 코드 | 다음 `code` 는 각 id 네임스페이스 이름에 대한 약식입니다. 각 의 매핑 `code` 로 `name` 을 사용하여 찾을 수 있음 [Adobe Experience Platform ID 서비스 API](../../identity-service/api/list-namespaces.md). 다음 `code` 를 &quot;다음&quot;이라고도 합니다 [!UICONTROL ID 심볼] Experience Platform UI에서 자세한 내용은 [id 네임스페이스 개요](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | 보고서의 타임스탬프. 다음과 같은 경우 `date` 매개 변수가 요청 중에 제공되었습니다. 반환된 보고서는 제공된 날짜에 대한 것입니다. 없는 경우 `date` 매개 변수가 제공되면 가장 최근 보고서가 반환됩니다. |
 
 ### ID 네임스페이스 중복 보고서 해석

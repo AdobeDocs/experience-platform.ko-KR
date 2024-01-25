@@ -3,7 +3,7 @@ title: (API) Oracle Eloqua 연결
 description: (API) Oracle Eloqua 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Oracle Eloqua 내에서 활성화할 수 있습니다.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2042'
 ht-degree: 4%
@@ -65,7 +65,7 @@ Platform에서 로 데이터를 내보내려면 [!DNL Oracle Eloqua] 계정 이(
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Oracle Eloqua] 는 아래 표에 설명된 id 업데이트를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
+[!DNL Oracle Eloqua] 는 아래 표에 설명된 id 업데이트를 지원합니다. 자세히 알아보기 [id](/help/identity-service/features/namespaces.md).
 
 | 대상 ID | 설명 | 필수 |
 |---|---|---|

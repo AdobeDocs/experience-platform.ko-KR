@@ -2,22 +2,22 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 9월 릴리스 정보입니다.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 76ac65730512e589e518095f9496bb309365b0c9
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2283'
-ht-degree: 26%
+source-wordcount: '2257'
+ht-degree: 24%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2023년 9월 28일**
+**릴리스 날짜: 2023년 9월 28일 금요일**
 
 Adobe Experience Platform의 새로운 기능:
 
 - [계산된 속성](#computed-attributes)
 
- Experience Platform의 기존 기능 업데이트:
+Experience Platform의 기존 기능 업데이트:
 
 - [경고](#alerts)
 - [대시보드](#dashboards)
@@ -84,7 +84,7 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 | 기능 | 설명 |
 | --- | --- |
-| 새로운 기능 타사 데이터에 대한 파트너 에코시스템 레이블 | 타사 데이터 보강 및 잠재 고객 확보를 위한 새로운 데이터 사용 레이블 제공 다음을 참조하십시오. [파트너 에코시스템 레이블에 대한 설명서](../../data-governance/labels/reference.md#partner) 추가 정보. |
+| 서드파티 데이터에 대한 새로운 파트너 에코시스템 레이블 | 타사 데이터 보강 및 잠재 고객 확보를 위한 새로운 데이터 사용 레이블 제공 다음을 참조하십시오. [파트너 에코시스템 레이블에 대한 설명서](../../data-governance/labels/reference.md#partner) 추가 정보. |
 
 {style="table-layout:auto"}
 
@@ -190,7 +190,7 @@ Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 �
 
 | 기능 | 설명 |
 | --- | --- |
-| ID 서비스 UI 개선 사항 | Experience Platform UI에서 향상된 사용자 정의 네임스페이스 만들기 도구를 사용하여 사용자 정의 네임스페이스 및 해당 ID 유형을 보다 효율적으로 관리할 수 있습니다. 향상된 ID 서비스 UI는 다음과 같은 기능을 제공합니다. <ul><li>컨텍스트 경험: ID 네임스페이스 및 ID 유형에 대한 시각적 큐, 명확성 및 컨텍스트입니다.</li><li>정확성: 더 이상 중복 ID 이름이 없어 오류 처리가 향상됩니다.</li><li>검색 기능: 제품 내 대화 상자에서 문서에 액세스합니다.</li></ul> 자세한 내용은 의 안내서를 참조하십시오. [사용자 정의 네임스페이스 만들기](../../identity-service/namespaces.md#create-namespaces). |
+| ID 서비스 UI 개선 사항 | Experience Platform UI에서 향상된 사용자 정의 네임스페이스 만들기 도구를 사용하여 사용자 정의 네임스페이스 및 해당 ID 유형을 보다 효율적으로 관리할 수 있습니다. 향상된 ID 서비스 UI는 다음과 같은 기능을 제공합니다. <ul><li>컨텍스트 경험: ID 네임스페이스 및 ID 유형에 대한 시각적 큐, 명확성 및 컨텍스트입니다.</li><li>정확성: 더 이상 중복 ID 이름이 없어 오류 처리가 향상됩니다.</li><li>검색 기능: 제품 내 대화 상자에서 문서에 액세스합니다.</li></ul> 자세한 내용은 의 안내서를 참조하십시오. [사용자 정의 네임스페이스 만들기](../../identity-service/features/namespaces.md#create-namespaces). |
 | ID 그래프 제한 변경 | ID 그래프 제한이 150개의 ID에서 50개의 ID로 변경되었습니다. 새 ID가 전체 그래프에 수집되면 수집 타임스탬프와 ID 유형에 따라 가장 오래된 ID가 삭제됩니다. 쿠키 ID 유형은 삭제 우선 순위가 지정됩니다. 프로덕션 샌드박스에 다음이 포함된 경우 Adobe 계정 팀에 문의하여 ID 유형 변경을 요청하십시오. <ul><li>개인 식별자(예: CRM ID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.</li><li>쿠키/장치 식별자가 교차 장치 ID 유형으로 구성된 사용자 지정 네임스페이스입니다.</li></ul> Adobe 엔지니어링에서 이러한 요청을 수동으로 처리합니다. 자세한 내용은 [id 서비스 데이터 보호](../../identity-service/guardrails.md) 및 다음에 대한 안내서: [데이터 관리 라이선스 권한 부여 모범 사례](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}
@@ -233,7 +233,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| 새로운 기능 매개 변수 `offset` 셀프서비스 소스의 페이지 매김(일괄 SDK) | 이제 다음을 지정할 수 있습니다. `endConditionName` 및 `endConditionValue` 를 사용할 때 소스에 대해 `offset` 페이지 매김. 이러한 매개 변수를 사용하면 다음 HTTP 요청에서 페이지 매김 루프를 종료하는 조건을 나타낼 수 있습니다. 자세한 내용은 [셀프서비스 소스에 대한 페이지 매김 안내서(일괄 처리 SDK)](../../sources/sources-sdk/config/sourcespec.md#pagination). |
+| 에 대한 새 매개 변수 `offset` 셀프서비스 소스의 페이지 매김(일괄 SDK) | 이제 다음을 지정할 수 있습니다. `endConditionName` 및 `endConditionValue` 를 사용할 때 소스에 대해 `offset` 페이지 매김. 이러한 매개 변수를 사용하면 다음 HTTP 요청에서 페이지 매김 루프를 종료하는 조건을 나타낼 수 있습니다. 자세한 내용은 [셀프서비스 소스에 대한 페이지 매김 안내서(일괄 처리 SDK)](../../sources/sources-sdk/config/sourcespec.md#pagination). |
 
 {style="table-layout:auto"}
 

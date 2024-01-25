@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 고객 속성 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 고객 속성을 Adobe Experience Platform에 연결하는 방법을 알아봅니다
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 10%
+source-wordcount: '381'
+ht-degree: 7%
 
 ---
 
@@ -25,7 +25,7 @@ Experience Platform은 수집을 지원합니다 [!DNL Customer Attributes] 프�
 
 ## ID
 
-데이터 세트의 기본 ID는 소스 데이터의 CSV 파일의 첫 번째 열에 포함되어 있습니다. 다음 [!DNL Customer Attributes] 소스는 id가 항상 [`CORE` 네임스페이스](../../../identity-service/namespaces.md)에서 지원하는 시스템 생성 네임스페이스 [[!DNL Identity Service]](../../../identity-service/home.md).
+데이터 세트의 기본 ID는 소스 데이터의 CSV 파일의 첫 번째 열에 포함되어 있습니다. 다음 [!DNL Customer Attributes] 소스는 id가 항상 [`CORE` 네임스페이스](../../../identity-service/features/namespaces.md)에서 지원하는 시스템 생성 네임스페이스 [[!DNL Identity Service]](../../../identity-service/home.md).
 
 을 사용할 때는 ID에 대한 기존 네임스페이스를 선택할 수 없습니다. [!DNL Customer Attributes] 소스 이유 [!DNL Customer Attributes] 스키마에 대한 기본 id가 항상 id 맵에 있다고 가정합니다. [!DNL Customer Attributes] 그런 다음 자동화된 방식으로 소스 ID와 ID 맵 UUID의 매핑을 생성합니다.
 

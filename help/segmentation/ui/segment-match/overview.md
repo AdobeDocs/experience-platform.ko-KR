@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 세그먼트 일치 개요
 description: 세그먼트 일치 는 두 명 이상의 Platform 사용자가 안전하고 관리되며 개인 정보 보호 친화적인 방식으로 세그먼트 데이터를 교환할 수 있는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1968'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ ID 네임스페이스는 의 구성 요소입니다. [Adobe Experience Platform 
 | --------- | ----------- |
 | 이메일(SHA256, 소문자) | 사전 해시된 이메일 주소를 위한 네임스페이스입니다. 이 네임스페이스에 제공된 값은 SHA256으로 해싱하기 전에 소문자로 변환됩니다. 전자 메일 주소가 정규화되기 전에 선행 및 후행 공백을 잘라내야 합니다. 이 설정은 소급하여 변경할 수 없습니다. Platform은 다음을 통해 데이터 수집 시 해싱을 지원하는 두 가지 방법을 제공합니다 [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) 및 [데이터 준비](../../../data-prep/functions.md#hashing). |
 | 전화(SHA256_E.164) | SHA256과 E.164 형식을 모두 사용하여 해시해야 하는 원시 전화 번호를 나타내는 네임스페이스입니다. |
-| ECID | ECID(Experience Cloud ID) 값을 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 다음을 참조하십시오. [ECID 개요](../../../identity-service/ecid.md) 추가 정보. |
+| ECID | ECID(Experience Cloud ID) 값을 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 다음을 참조하십시오. [ECID 개요](../../../identity-service/features/ecid.md) 추가 정보. |
 | Apple IDFA (광고주용 ID) | 광고주용 Apple ID를 나타내는 네임스페이스입니다. 에 대한 다음 문서를 참조하십시오. [관심 기반 광고](https://support.apple.com/en-us/HT202074) 추가 정보. |
 | Google 광고 ID | Google 광고 ID를 나타내는 네임스페이스입니다. 에 대한 다음 문서를 참조하십시오. [Google 광고 ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) 추가 정보. |
 
@@ -132,7 +132,7 @@ A **피드** 는 데이터(세그먼트) 그룹, 데이터를 노출하거나 �
 * [!UICONTROL Analytics]
 * [!UICONTROL PII와 결합]
 * [!UICONTROL 크로스 사이트 타겟팅]
-* [!UICONTROL Data Science]
+* [!UICONTROL 데이터 과학]
 * [!UICONTROL 이메일 타겟팅]
 * [!UICONTROL 서드파티로 내보내기]
 * [!UICONTROL 온사이트 광고]

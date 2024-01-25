@@ -2,7 +2,7 @@
 title: PubMatic Connect
 description: PubMatic은 미래의 프로그램 방식의 디지털 마케팅 공급망을 제공하여 고객 가치를 극대화합니다. PubMatic Connect는 플랫폼 기술과 전용 서비스를 결합하여 인벤토리와 데이터를 패키지하고 처리하는 방법을 개선합니다.
 last-substantial-update: 2023-12-14T00:00:00Z
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '923'
 ht-degree: 3%
@@ -36,7 +36,7 @@ ht-degree: 3%
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL PubMatic Connect] 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/namespaces.md).
+[!DNL PubMatic Connect] 는 아래 표에 설명된 id 활성화를 지원합니다. 자세히 알아보기 [id](/help/identity-service/features/namespaces.md).
 
 | 대상 ID | 설명 | 고려 사항 |
 | --------------- | ------ | --- |

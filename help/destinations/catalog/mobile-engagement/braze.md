@@ -3,7 +3,7 @@ keywords: 모바일; 브레이즈; 메시지;
 title: 브레이즈 연결
 description: Braze는 고객과 고객이 사랑하는 브랜드 간의 관련성 있고 기억에 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 2%
@@ -40,7 +40,7 @@ ht-degree: 2%
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| external_id | 사용자 정의 [!DNL Braze] 모든 id의 매핑을 지원하는 식별자. | 다음을 보낼 수 있습니다. [신원](../../../identity-service/namespaces.md) (으)로 [!DNL Braze] 대상 을 매핑하기만 하면 됩니다. [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | 사용자 정의 [!DNL Braze] 모든 id의 매핑을 지원하는 식별자. | 다음을 보낼 수 있습니다. [신원](../../../identity-service/features/namespaces.md) (으)로 [!DNL Braze] 대상 을 매핑하기만 하면 됩니다. [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
 {style="table-layout:auto"}
 
