@@ -4,10 +4,10 @@ title: 플레이북 인스턴스 만들기, 공유 및 재사용
 description: 마케팅 사용 사례를 달성하기 위해 플레이북 인스턴스를 생성, 공유 및 재사용하는 방법에 대해 알아봅니다.
 badgeBeta: label="Beta" type="Informative"
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
 workflow-type: tm+mt
-source-wordcount: '725'
-ht-degree: 100%
+source-wordcount: '745'
+ht-degree: 97%
 
 ---
 
@@ -20,6 +20,11 @@ ht-degree: 100%
 플레이북을 사용하려면 **[!UICONTROL 사용 사례 플레이북] > [!UICONTROL 플레이북]**&#x200B;으로 이동합니다. 페이지에서 다양한 검색 및 필터링 옵션을 찾아보고 사용하여 특정 플레이북을 선택하고 시작합니다.
 
 ## 플레이북 인스턴스 만들기 {#create-playbook-instance}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_create"
+>title="인스턴스 만들기"
+>abstract="여정 또는 활성화 시나리오에서 사용할 여정, 대상, 스키마 또는 대상과 같은 에셋 목록을 생성합니다."
 
 플레이북 인스턴스를 만들기 전에 사용 가능한 플레이북을 탐색하여 [사용자에게 적합한 플레이북을 찾습니다](/help/use-case-playbooks/playbooks/discover.md). 플레이북을 진행하고 인스턴스를 생성할 준비가 되면 **[!UICONTROL 인스턴스 만들기]**&#x200B;를 선택하여 플레이북을 진행하고 기술 자산을 생성합니다.
 
