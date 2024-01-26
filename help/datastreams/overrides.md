@@ -1,10 +1,11 @@
 ---
 title: 데이터스트림 재정의 구성
 description: 데이터스트림 UI에서 데이터스트림 재정의를 구성하고 Web SDK를 통해 활성화하는 방법에 대해 알아봅니다.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
+source-git-commit: 11feeae0409822f0b1ccba2df263f0be466d54e3
 workflow-type: tm+mt
-source-wordcount: '1450'
-ht-degree: 60%
+source-wordcount: '1303'
+ht-degree: 67%
 
 ---
 
@@ -218,154 +219,7 @@ alloy("configure", {
 
 다음 이후 [데이터 스트림 재정의 구성](#configure-overrides) 이제 데이터 수집 UI에서 Mobile SDK를 통해 Edge Network에 재정의를 전송할 수 있습니다.
 
-Mobile SDK를 사용하는 경우 를 통해 Edge Network에 재정의를 전송합니다. `sendEvent` API는 데이터스트림 구성 재정의를 활성화하는 두 번째 및 마지막 단계입니다.
-
-Experience Platform Mobile SDK에 대한 자세한 내용은 [Mobile SDK 설명서](https://developer.adobe.com/client-sdks/edge/edge-network/).
-
-### Mobile SDK를 통한 데이터 스트림 ID 재정의 {#id-override-mobile}
-
-아래 예는 Mobile SDK 통합에서 데이터 스트림 ID 재정의가 표시되는 모습을 보여 줍니다. 아래 탭을 선택하여 다음을 확인하십시오. [!DNL iOS] 및 [!DNL Android] 예.
-
->[!BEGINTABS]
-
->[!TAB iOS(Swift)]
-
-이 예는 Mobile SDK에서 데이터 스트림 ID 재정의가 표시되는 모습을 보여 줍니다 [!DNL iOS] 통합.
-
-```swift
-// Create Experience event from dictionary
-var xdmData: [String: Any] = [
-  "eventType": "SampleXDMEvent",
-  "sample": "data",
-]
-let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
-
-Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
-  // Handle the Edge Network response
-}
-```
-
->[!TAB Android™ (Kotlin)]
-
-이 예는 Mobile SDK에서 데이터 스트림 ID 재정의가 표시되는 모습을 보여 줍니다 [!DNL Android] 통합.
-
-```kotlin
-// Create experience event from Map
-val xdmData = mutableMapOf < String, Any > ()
-xdmData["eventType"] = "SampleXDMEvent"
-xdmData["sample"] = "data"
-
-val experienceEvent = ExperienceEvent.Builder()
-    .setXdmSchema(xdmData)
-    .setDatastreamIdOverride("SampleDatastreamId")
-    .build()
-
-Edge.sendEvent(experienceEvent) {
-    // Handle the Edge Network response
-}
-```
-
->[!ENDTABS]
-
-### Mobile SDK를 통한 데이터 스트림 구성 재정의 {#config-override-mobile}
-
-아래 예는 Mobile SDK 통합에서 데이터 스트림 구성 재정의가 표시되는 모습을 보여 줍니다. 아래 탭을 선택하여 다음을 확인하십시오. [!DNL iOS] 및 [!DNL Android] 예.
-
->[!BEGINTABS]
-
->[!TAB iOS(Swift)]
-
-이 예는 Mobile SDK에서 데이터 스트림 구성 재정의가 표시되는 모습을 보여 줍니다 [!DNL iOS] 통합.
-
-```swift
-// Create Experience event from dictionary
-var xdmData: [String: Any] = [
-  "eventType": "SampleXDMEvent",
-  "sample": "data",
-]
-
-let configOverrides: [String: Any] = [
-  "com_adobe_experience_platform": [
-    "datasets": [
-      "event": [
-        "datasetId": "SampleEventDatasetIdOverride"
-      ]
-    ]
-  ],
-  "com_adobe_analytics": [
-  "reportSuites": [
-        "MyFirstOverrideReportSuite",
-          "MySecondOverrideReportSuite",
-          "MyThirdOverrideReportSuite"
-      ]
-  ],
-  "com_adobe_identity": [
-    "idSyncContainerId": "1234567"
-  ],
-  "com_adobe_target": [
-    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
- ],
-]
-
-let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
-
-Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
-  // Handle the Edge Network response
-}
-```
-
->[!TAB Android(Kotlin)]
-
-이 예는 Mobile SDK에서 데이터 스트림 구성 재정의가 표시되는 모습을 보여 줍니다 [!DNL Android] 통합.
-
-```kotlin
-// Create experience event from Map
-val xdmData = mutableMapOf < String, Any > ()
-xdmData["eventType"] = "SampleXDMEvent"
-xdmData["sample"] = "data"
-
-val configOverrides = mapOf(
-    "com_adobe_experience_platform"
-    to mapOf(
-        "datasets"
-        to mapOf(
-            "event"
-            to mapOf("datasetId"
-                to "SampleEventDatasetIdOverride")
-        )
-    ),
-    "com_adobe_analytics"
-    to mapOf(
-        "reportSuites"
-        to listOf(
-            "MyFirstOverrideReportSuite",
-            "MySecondOverrideReportSuite",
-            "MyThirdOverrideReportSuite"
-        )
-    ),
-    "com_adobe_identity"
-    to mapOf(
-        "idSyncContainerId"
-        to "1234567"
-    ),
-    "com_adobe_target"
-    to mapOf(
-        "propertyToken"
-        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    )
-)
-
-val experienceEvent = ExperienceEvent.Builder()
-    .setXdmSchema(xdmData)
-    .setDatastreamConfigOverride(configOverrides)
-    .build()
-
-Edge.sendEvent(experienceEvent) {
-    // Handle the Edge Network response
-}
-```
-
->[!ENDTABS]
+Edge Network에 재정의를 전송하는 방법에 대해 알아보려면 다음을 참조하십시오. [sendEvent를 사용한 재정의 전송에 대한 가이드](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) 또는 [규칙을 사용한 재정의 전송에 대한 가이드](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
 
 ## 페이로드 예제 {#payload-example}
 
