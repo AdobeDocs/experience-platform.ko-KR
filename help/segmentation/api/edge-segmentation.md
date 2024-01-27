@@ -3,9 +3,9 @@ solution: Experience Platform
 title: API를 사용한 Edge 세그멘테이션
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API와 함께 에지 세그멘테이션을 사용하는 방법에 대한 예제가 포함되어 있습니다.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 9f586b336f5cc232ac9b04a74846b7cfc2b46a71
+source-git-commit: d3c0e5ed596661f11191bbcd8d51c888bbd4c1d2
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1195'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 1%
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계한 데이터를 기반으로 통합 소비자 프로필을 실시간으로 제공합니다.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): 다음에서 대상자를 빌드할 수 있습니다. [!DNL Real-Time Customer Profile] 데이터.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다.
 
 Experience Platform API 엔드포인트를 성공적으로 호출하려면 의 안내서를 참조하십시오. [platform API 시작하기](../../landing/api-guide.md) 필수 헤더와 샘플 API 호출을 읽는 방법에 대해 알아봅니다.
 
@@ -46,9 +46,9 @@ Experience Platform API 엔드포인트를 성공적으로 호출하려면 의 �
 | 단일 프로필 | 단일 프로필 전용 속성을 참조하는 모든 세그먼트 정의 | 미국에 사는 사람들. | `homeAddress.countryCode = "US"` |
 | 프로필을 참조하는 단일 이벤트 | 하나 이상의 프로필 속성 및 시간 제한 없이 수신되는 단일 이벤트를 참조하는 모든 세그먼트 정의. | 홈페이지를 방문한 미국 거주자. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
 | 프로필 속성을 사용하여 단일 이벤트 무효화 | 무효화된 단일 수신 이벤트와 하나 이상의 프로필 속성을 참조하는 세그먼트 정의 | 미국에 거주하고 다음을 보유한 사람 **아님** 홈페이지를 방문했습니다. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
-| 기간 내 단일 이벤트 | 설정된 기간 내의 단일 수신 이벤트를 참조하는 모든 세그먼트 정의. | 지난 24시간 동안 홈페이지를 방문한 사람. | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
-| 24시간 미만의 상대 시간 창 내에 프로필 속성이 있는 단일 이벤트 | 하나 이상의 프로필 속성을 가진 단일 수신 이벤트를 참조하고 24시간 미만의 상대 시간 창 내에서 발생하는 모든 세그먼트 정의입니다. | 지난 24시간 동안 홈페이지를 방문한 미국 거주자. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
-| 기간 내에 프로필 속성이 있는 단일 이벤트가 무효화됨 | 일정 기간 내에 하나 이상의 프로필 속성 및 차단된 단일 수신 이벤트를 참조하는 모든 세그먼트 정의. | 미국에 거주하고 다음을 보유한 사람 **아님** 지난 24시간 동안 홈페이지를 방문했습니다. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)]))` |
+| 기간 내 단일 이벤트 | 설정된 기간 내의 단일 수신 이벤트를 참조하는 모든 세그먼트 정의. | 지난 24시간 동안 홈페이지를 방문한 사람. | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)])` |
+| 24시간 미만의 상대 시간 창 내에 프로필 속성이 있는 단일 이벤트 | 하나 이상의 프로필 속성을 가진 단일 수신 이벤트를 참조하고 24시간 미만의 상대 시간 창 내에서 발생하는 모든 세그먼트 정의입니다. | 지난 24시간 동안 홈페이지를 방문한 미국 거주자. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)])` |
+| 기간 내에 프로필 속성이 있는 단일 이벤트가 무효화됨 | 일정 기간 내에 하나 이상의 프로필 속성 및 차단된 단일 수신 이벤트를 참조하는 모든 세그먼트 정의. | 미국에 거주하고 다음을 보유한 사람 **아님** 지난 24시간 동안 홈페이지를 방문했습니다. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)]))` |
 | 24시간 기간 내 빈도 이벤트 | 24시간의 기간 내에서 특정 횟수로 발생하는 이벤트를 참조하는 세그먼트 정의입니다. | 홈 페이지를 방문한 사람 **최소** 지난 24시간 동안 5번 | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
 | 24시간 기간 내에 프로필 속성이 있는 빈도 이벤트 | 하나 이상의 프로필 속성을 참조하는 세그먼트 정의와 24시간의 기간 내에서 특정 횟수만큼 발생하는 이벤트. | 홈페이지를 방문한 미국 출신 **최소** 지난 24시간 동안 5번 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
 | 24시간 기간 내에 프로필로 빈도 이벤트를 무효화했습니다. | 하나 이상의 프로필 속성을 참조하는 세그먼트 정의와 24시간의 기간 내에서 특정 횟수만큼 발생하는 차단된 이벤트입니다. | 홈 페이지를 방문하지 않은 사람 **기타** 지난 24시간 동안 5번 이상 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
