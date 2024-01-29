@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: 4d9c04909cba29b0c6685c357dbb84af9fa14b47
+source-git-commit: 8a9cf0547720927018d728d7cecbf377a1282f6f
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1008'
 ht-degree: 11%
 
 ---
@@ -303,6 +303,7 @@ ht-degree: 11%
       - 로컬 시스템 {#local-system}
          - [로컬 파일 업로드](tutorials/ui/create/local-system/local-file-upload.md)
       - 마케팅 자동화 {#marketing-automation}
+         - [브레이즈](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
