@@ -2,10 +2,10 @@
 title: 예약된 쿼리 모니터링
 description: 쿼리 서비스 UI를 통해 쿼리를 모니터링하는 방법을 알아봅니다.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: 7e0259f8807e96118dbcd1085d8b3b3186fc8317
 workflow-type: tm+mt
 source-wordcount: '1818'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -174,9 +174,3 @@ Adobe Experience Platform은 UI를 통해 모든 쿼리 작업의 상태에 대�
 선택 **[!UICONTROL 쿼리]** 일정 세부 정보 화면으로 돌아가려면 **[!UICONTROL 예약된 쿼리]** (으)로 돌아가기 [!UICONTROL 예약된 쿼리] 탭.
 
 ![Query 가 강조 표시된 실행 세부 정보 화면입니다.](../images/ui/monitor-queries/return-navigation.png)
-
-<!-- Details required to complete this section below:
-### Run details for queries with parameterized queries {#parameterized-queries}
-
-Queries that use parameterized values to make up the SQL statement are ... 
--->

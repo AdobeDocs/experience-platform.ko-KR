@@ -2,9 +2,9 @@
 title: 쿼리 템플릿
 description: 쿼리 템플릿은 다른 사용자가 재사용하여 시간과 노력을 절약할 수 있는 재사용 가능한 저장된 SQL 쿼리입니다. 쿼리 편집기 또는 쿼리 서비스 API를 사용하여 만들 수 있으며, 모든 Experience Platform 데이터 세트에서 사용할 수 있습니다.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
+source-git-commit: 1a44be939a4678078b414658199472e07dee153b
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Adobe Experience Platform Query Service를 사용하면 SQL 코드를 쿼리 템
 
 이 문서에서는 쿼리 서비스에서 쿼리 템플릿을 만드는 데 필요한 정보를 제공합니다.
 
-## 사전 요구 사항
+## 전제 조건
 
 다음을 보유해야 합니다. [!UICONTROL 쿼리 관리] 쿼리 편집기에 액세스하고 플랫폼 UI 내에서 쿼리 대시보드를 볼 수 있는 권한이 활성화되었습니다. 권한은 Adobe을 통해 사용할 수 있습니다. [Admin Console](https://adminconsole.adobe.com/). 이 권한을 활성화하기 위한 관리자 권한이 없는 경우 조직의 관리자에게 문의하십시오. 다음에 대한 액세스 제어 설명서 참조: [Admin Console을 통한 권한 추가에 대한 전체 지침](../../access-control/home.md).
 
@@ -27,6 +27,10 @@ Query Service API에 POST 요청을 하는 두 가지 방법을 통해 쿼리 �
 
 쿼리 편집기 사용 방법에 대한 지침은 설명서 를 참조하십시오. [쓰기](./user-guide.md#query-authoring) 및 [쿼리 저장](./user-guide.md#saving-queries). 쿼리의 이름을 지정하고 저장하면 다음에서 쿼리 템플릿으로 재사용할 수 있습니다. [!UICONTROL 템플릿] 탭.
 
+>[!TIP]
+>
+>쿼리 편집기에 쿼리를 저장하면 성공 작업을 알리는 확인 메시지가 표시됩니다. 이 팝업 메시지에는 쿼리 예약 작업 공간으로 편리하게 이동할 수 있는 방법을 제공하는 링크가 포함되어 있습니다. 다음을 참조하십시오. [일정 쿼리 설명서](./query-schedules.md) 사용자 지정 케이던스에서 쿼리를 실행하는 방법에 대해 알아봅니다.
+
 ## 쿼리 템플릿 찾아보기 {#browse}
 
 Platform UI의 쿼리 작업 영역에서 을 선택합니다 **[!UICONTROL 템플릿]** 저장 가능한 쿼리 목록을 표시합니다.
@@ -37,10 +41,11 @@ Platform UI의 쿼리 작업 영역에서 을 선택합니다 **[!UICONTROL 템�
 
 ![쿼리 ID가 강조 표시된 쿼리 작업 영역의 세부 정보 패널입니다.](../images/ui/query-templates/details-panel.png)
 
-세부 정보 패널에서 다음 네 가지 작업을 실행할 수 있습니다.
+세부 정보 패널에서 다음 작업을 실행할 수 있습니다.
 
-* 선택 **[!UICONTROL 출력 데이터 세트]** 을 눌러 선택한 템플릿에 대한 출력 데이터 세트를 편집합니다.
-* 선택 **[!UICONTROL 일정 보기]** 을 클릭하여 다음 위치로 이동합니다. [!UICONTROL 일정] 탭. 이 보기에는 쿼리와 관련된 모든 일정 정보가 포함됩니다.
+* 선택 **[!UICONTROL CTAS로 실행]** 기존 테이블에서 데이터를 선택하여 새 테이블을 만듭니다. 이 옵션은 SELECT 쿼리가 있는 경우에만 사용할 수 있습니다.
+* 선택 **[!UICONTROL 일정 추가]** 을 클릭하여 쿼리 템플릿에 대한 일정 편집을 시작합니다.
+* 선택 **[!UICONTROL 일정 보기]** 을 클릭하여 다음 위치로 이동합니다. [!UICONTROL 일정] 쿼리 편집기 탭. 이 보기에는 쿼리와 관련된 모든 일정 정보가 포함됩니다.
 * 선택 **[!UICONTROL 쿼리 삭제]** 템플릿을 삭제합니다.
 * 템플릿 이름을 선택하여 편집할 SQL이 미리 채워진 쿼리 편집기로 이동합니다.
 

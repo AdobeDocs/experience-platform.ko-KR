@@ -2,9 +2,9 @@
 title: 쿼리 로그
 description: 쿼리가 실행될 때마다 쿼리 로그가 자동으로 생성되며 UI를 통해 문제 해결에 도움을 줄 수 있습니다. 이 문서에서는 UI의 쿼리 서비스 로그 섹션을 사용하고 탐색하는 방법에 대해 간략하게 설명합니다.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
+source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -41,9 +41,13 @@ A [각 로그 테이블 열에 대한 설명](./overview.md#log) 쿼리 서비�
 
 ![행이 선택되어 있고 오른쪽 사이드바의 로그 데이터가 강조 표시된 쿼리 로그 작업 영역입니다.](../images/ui/query-log/log-details.png)
 
-로그 세부 정보 패널에서 새 출력 데이터 세트를 선택하고 실행에 사용된 전체 SQL 쿼리를 보거나 복사할 수 있습니다.
+로그 세부 정보 패널에서 다양한 작업을 수행할 수 있습니다. 쿼리를 CTAS로 실행하여 새 출력 데이터 세트를 만들거나 실행에 사용된 전체 SQL 쿼리를 보거나 복사하거나 쿼리를 삭제할 수 있습니다.
 
-![행이 선택되고 출력 데이터 세트와 SQL 쿼리가 강조 표시된 쿼리 로그 작업 영역](../images/ui/query-log/edit-output-dataset.png)
+>[!NOTE]
+>
+>다음에 대한 옵션: [!UICONTROL CTAS로 실행] 는 SELECT 쿼리에만 사용할 수 있습니다.
+
+![행이 선택된 쿼리 로그 작업 영역, CTAS로 실행, 쿼리 삭제 및 SQL 복사 아이콘이 강조 표시됩니다.](../images/ui/query-log/edit-output-dataset.png)
 
 >[!IMPORTANT]
 >
@@ -78,7 +82,7 @@ A [각 로그 테이블 열에 대한 설명](./overview.md#log) 쿼리 서비�
 | 필터 | 설명 |
 | ------ | ----------- |
 | [!UICONTROL 대시보드 쿼리 제외] | 이 확인란은 기본적으로 활성화되어 있으며 인사이트 생성에 사용된 쿼리에서 생성된 로그를 제외합니다. 이러한 쿼리는 시스템에서 생성되며 모니터링, 관리 및 문제 해결에 필요한 사용자 생성 로그의 레코드를 숨깁니다. 시스템에서 생성한 로그를 보려면 확인란을 선택 취소합니다. |
-| [!UICONTROL 시작 날짜] | 특정 기간 동안 생성된 쿼리에 대한 로그를 필터링하려면 [!UICONTROL 시작] 및 [!UICONTROL 종료] 날짜: [!UICONTROL 시작일] 섹션. |
+| [!UICONTROL 시작일] | 특정 기간 동안 생성된 쿼리에 대한 로그를 필터링하려면 [!UICONTROL 시작] 및 [!UICONTROL 종료] 날짜: [!UICONTROL 시작일] 섹션. |
 | [!UICONTROL 완료 날짜] | 특정 기간 동안 완료된 쿼리에 대한 로그를 필터링하려면 다음을 설정하십시오. [!UICONTROL 시작] 및 [!UICONTROL 종료] 날짜: [!UICONTROL 완료 날짜] 섹션. |
 | [!UICONTROL 상태] | 다음을 기준으로 로그를 필터링하려면 [!UICONTROL 상태] 쿼리에서 적절한 라디오 단추를 선택합니다. 사용 가능한 옵션은 다음과 같습니다 [!UICONTROL 제출됨], [!UICONTROL 진행 중], [!UICONTROL 성공], 및 [!UICONTROL 실패]. 한 번에 하나의 상태 조건을 기준으로 로그만 필터링할 수 있습니다. |
 | [!UICONTROL 클라이언트] | 사용된 쿼리 클라이언트를 기반으로 로그를 필터링하려면 자유 텍스트 필드에 다음 허용 값 중 하나를 입력합니다. `API`, `Adobe Query Service UI`, 또는 `QsAccel`. |

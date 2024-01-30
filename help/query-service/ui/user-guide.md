@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 쿼리 편집기 UI 안내서
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서, Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 이를 통해 개발 목적으로 대화형 쿼리를 실행하고 비대화형 쿼리를 실행하여 Experience Platform의 데이터 세트를 채울 수 있습니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
+source-git-commit: 202bd42596608d27f99baea9e0a4a6ec92cf469f
 workflow-type: tm+mt
-source-wordcount: '2313'
-ht-degree: 3%
+source-wordcount: '2550'
+ht-degree: 2%
 
 ---
 
@@ -85,13 +85,13 @@ UI 토글을 사용하면 쿼리 편집기의 기존 버전과 향상된 버전 
 ### 선택한 쿼리 실행 {#execute-selected-query}
 
 여러 개의 쿼리를 작성했지만 하나의 쿼리만 실행해야 하는 경우 선택한 쿼리를 강조 표시하고
-[!UICONTROL 선택한 쿼리 실행] 아이콘. 편집기에서 쿼리를 선택하지 않으면 기본적으로 이 아이콘이 비활성화됩니다.
+[!UICONTROL 선택한 쿼리 실행] 아이콘. 편집기 내에서 쿼리 구문을 선택할 때까지 이 아이콘이 기본적으로 비활성화됩니다.
 
 ![를 사용하는 쿼리 편집기 [!UICONTROL 선택한 쿼리 실행] 아이콘이 강조 표시되었습니다.](../images/ui/query-editor/run-selected-query.png)
 
 ### 결과 카운트 {#result-count}
 
-쿼리 편집기에는 최대 50,000개의 행 출력이 있습니다. 단, 쿼리 편집기 콘솔에는 한 번에 50개의 행만 표시됩니다. 콘솔에 표시되는 행 수를 변경하려면 **[!UICONTROL 결과 카운트]** 드롭다운을 클릭하고 50, 100, 150, 300 및 500 값 중에서 선택합니다.
+쿼리 편집기에는 최대 50,000개의 행 출력이 있습니다. 쿼리 편집기 콘솔에서 한 번에 표시되는 행 수를 선택할 수 있습니다. 콘솔에 표시되는 행 수를 변경하려면 **[!UICONTROL 결과 카운트]** 드롭다운을 클릭하고 50, 100, 150, 300 및 500 옵션 중에서 선택합니다.
 
 ![결과 카운트 드롭다운이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/result-count.png)
 
@@ -101,7 +101,7 @@ UI 토글을 사용하면 쿼리 편집기의 기존 버전과 향상된 버전 
 
 ![[SQL 입력] 필드 및 [재생]이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/editor.png)
 
-개발 시간을 최소화하려면 반환된 행에 대한 제한을 사용하여 쿼리를 개발하는 것이 좋습니다. 예, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. 쿼리에서 예상 출력이 생성되는지 확인했으면 제한을 제거하고 를 사용하여 쿼리를 실행합니다 `CREATE TABLE tablename AS SELECT` 을 클릭하여 출력으로 데이터 세트를 생성합니다.
+개발 시간을 최소화하려면 반환되는 행 수를 제한하여 쿼리를 개발하는 것이 좋습니다. 예, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. 쿼리에서 예상 출력이 생성되는지 확인했으면 제한을 제거하고 를 사용하여 쿼리를 실행합니다 `CREATE TABLE tablename AS SELECT` 을 클릭하여 출력으로 데이터 세트를 생성합니다.
 
 ## 에서 쓰기 도구 [!DNL Query Editor] {#writing-tools}
 
@@ -123,6 +123,12 @@ UI 토글을 사용하면 쿼리 편집기의 기존 버전과 향상된 버전 
 
 ![쿼리 편집기 [!UICONTROL 텍스트 서식 지정] 강조 표시된 SQL 문](../images/ui/query-editor/format-text.png)
 
+<!-- ### Undo text {#undo-text}
+
+If you format your SQL in the Query Editor, you can undo the formatting applied by the [!UICONTROL Format text] feature. To return your SQL back to its original form, select **[!UICONTROL Undo text]**.
+
+![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) -->
+
 ### SQL 복사 {#copy-sql}
 
 복사 아이콘을 선택하여 쿼리 편집기에서 클립보드로 SQL을 복사합니다. 이 복사 기능은 쿼리 템플릿과 쿼리 편집기에서 새로 만든 쿼리 모두에 사용할 수 있습니다.
@@ -134,6 +140,10 @@ UI 토글을 사용하면 쿼리 편집기의 기존 버전과 향상된 버전 
 다음 [!DNL Query Editor] 쿼리를 작성할 때 테이블 또는 열 세부 정보와 함께 잠재적 SQL 키워드를 자동으로 제안합니다. 자동 완성 기능은 기본적으로 활성화되어 있으며, 언제든지 을 선택하여 비활성화하거나 활성화할 수 있습니다. [!UICONTROL 구문 자동 완성] 쿼리 편집기의 오른쪽 상단으로 전환합니다.
 
 자동 완성 구성 설정은 사용자별로 지정되며 해당 사용자에 대한 연속 로그인 동안 기억됩니다.
+
+>[!NOTE]
+>
+>구문 자동 완성 토글은 쿼리 편집기의 이전 버전에만 사용할 수 있습니다.
 
 ![구문 자동 완성 토글이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/auto-complete-toggle.png)
 
@@ -159,21 +169,47 @@ UI 토글을 사용하면 쿼리 편집기의 기존 버전과 향상된 버전 
 
 [!DNL Query Editor] 쿼리를 작성할 때 일반 SQL 유효성 검사와 특정 실행 유효성 검사를 제공하여 쿼리를 자동으로 확인합니다. 아래 이미지에 표시된 대로 쿼리 아래에 빨간색 밑줄이 표시되면 쿼리 내의 오류를 나타냅니다.
 
+<!-- ... Image below needs updating couldn't replicate the effect -->
+
 ![쿼리 편집기 입력에 오류를 나타내기 위해 빨간색으로 밑줄이 그어진 SQL이 표시됩니다.](../images/ui/query-editor/syntax-error-highlight.png)
 
 오류가 감지되면 SQL 코드 위로 마우스를 가져가면 특정 오류 메시지를 볼 수 있습니다.
+
+<!-- ... Image below needs updating couldn't replicate the effect -->
 
 ![오류 메시지가 표시된 대화 상자입니다.](../images/ui/query-editor/linting-error.png)
 
 ### 쿼리 세부 정보 {#query-details}
 
-쿼리 편집기에서 쿼리를 보려면 [!UICONTROL 템플릿] 탭. 쿼리 세부 정보 패널에서는 선택한 쿼리를 관리하기 위한 자세한 정보와 도구를 제공합니다.
+쿼리 편집기에서 쿼리를 보려면 [!UICONTROL 템플릿] 탭. 쿼리 세부 정보 패널에서는 선택한 쿼리를 관리하기 위한 자세한 정보와 도구를 제공합니다. 또한 쿼리가 마지막으로 수정된 시간과 해당되는 경우 이를 수정한 사람과 같은 유용한 메타데이터도 표시합니다.
+
+>[!NOTE]
+>
+>다음 [!UICONTROL 일정 보기], [!UICONTROL 일정 추가] 및 [!UICONTROL 쿼리 삭제] 옵션은 쿼리가 템플릿으로 저장된 후에만 사용할 수 있습니다. 다음 [!UICONTROL 일정 추가] 옵션을 사용하면 쿼리 편집기에서 예약 빌더로 바로 이동합니다. 다음 [!UICONTROL 일정 보기] 옵션을 사용하면 해당 쿼리에 대한 예약 인벤토리로 바로 이동합니다. 방법을 알아보려면 쿼리 일정 설명서 를 참조하십시오 [ui에서 쿼리 일정 만들기](./query-schedules.md#create-schedule).
 
 ![[쿼리 세부 정보] 패널이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/query-details.png)
 
-이 패널을 사용하면 UI에서 직접 출력 데이터 세트를 생성하고, 표시된 쿼리를 삭제하거나 이름을 지정하고, 쿼리에 일정을 추가할 수 있습니다.
+세부 정보 패널에서 UI에서 직접 출력 데이터 세트를 생성하고, 표시된 쿼리를 삭제하거나 이름을 지정하고, 쿼리 실행 일정을 보고, 쿼리를 일정에 추가할 수 있습니다.
 
-이 패널에는 쿼리가 마지막으로 수정된 시간과 해당되는 경우 이를 수정한 사람과 같은 유용한 메타데이터도 표시됩니다. 데이터 세트를 생성하려면 다음을 선택합니다. **[!UICONTROL 출력 데이터 세트]**. 다음 **[!UICONTROL 출력 데이터 세트]** 대화 상자가 나타납니다. 이름과 설명을 입력한 다음 을(를) 선택합니다 **[!UICONTROL 쿼리 실행]**. 새 데이터 세트가에 표시됩니다. **[!UICONTROL 데이터 세트]** 의 탭 [!DNL Query Service] 의 사용자 인터페이스 [!DNL Platform].
+출력 데이터 세트를 생성하려면 다음을 선택합니다. **[!UICONTROL CTAS로 실행]**. 다음 **[!UICONTROL 출력 데이터 세트 세부 정보 입력]** 대화 상자가 나타납니다. 이름과 설명을 입력한 다음 을(를) 선택합니다 **[!UICONTROL CTAS로 실행]**. 새 데이터 세트가에 표시됩니다. **[!UICONTROL 데이터 세트]** 찾아보기 탭. 다음을 참조하십시오 [데이터 세트 보기 설명서](../../catalog/datasets/user-guide.md#view-datasets) 조직의 사용 가능한 데이터 세트에 대해 자세히 알아보십시오.
+
+>[!NOTE]
+>
+>다음 [!UICONTROL CTAS로 실행] 옵션은 쿼리에 이 있는 경우에만 사용할 수 있습니다. **아님** 예약되었습니다.
+
+![다음 [!UICONTROL 출력 데이터 세트 세부 정보 입력] 대화 상자.](../images/ui/query-editor/output-dataset-details.png)
+
+를 실행한 후 **[!UICONTROL CTAS로 실행]** 작업, 성공 작업을 알리는 확인 메시지가 표시됩니다. 이 팝업 메시지에는 쿼리 로그 작업 영역으로 이동하는 편리한 방법을 제공하는 링크가 포함되어 있습니다. 다음을 참조하십시오. [쿼리 로그 설명서](./query-logs.md) 쿼리 로그에 대한 자세한 정보입니다.
+
+### 쿼리 저장 중 {#saving-queries}
+
+다음 [!DNL Query Editor] 는 쿼리를 저장하고 나중에 작업할 수 있도록 해주는 저장 기능을 제공합니다. 쿼리를 저장하려면 을 선택합니다. **[!UICONTROL 저장]** 의 오른쪽 위 모서리 [!DNL Query Editor]. 쿼리를 저장하려면 먼저 **[!UICONTROL 쿼리 세부 정보]** 패널.
+
+>[!NOTE]
+>
+>쿼리 편집기 를 사용하여에 이름이 지정되고 저장된 쿼리는 쿼리 대시보드 내에서 템플릿으로 사용할 수 있습니다 [!UICONTROL 템플릿] 탭. 다음을 참조하십시오. [템플릿 설명서](./query-templates.md) 추가 정보.
+
+쿼리 편집기에 쿼리를 저장하면 성공 작업을 알리는 확인 메시지가 표시됩니다. 이 팝업 메시지에는 쿼리 예약 작업 공간으로 편리하게 이동할 수 있는 방법을 제공하는 링크가 포함되어 있습니다. 다음을 참조하십시오. [일정 쿼리 설명서](./query-schedules.md) 사용자 지정 케이던스에서 쿼리를 실행하는 방법에 대해 알아봅니다.
 
 ### 예약된 쿼리 {#scheduled-queries}
 
@@ -185,13 +221,6 @@ UI 토글을 사용하면 쿼리 편집기의 기존 버전과 향상된 버전 
 
 예약된 쿼리는 모두 의 목록에 추가됩니다. [!UICONTROL 예약된 쿼리] 탭. 해당 작업 영역에서 UI를 통해 예약된 모든 쿼리 작업의 상태를 모니터링할 수 있습니다. 다음에서 [!UICONTROL 예약된 쿼리] 탭에서 쿼리 실행에 대한 중요한 정보를 찾아 경고를 구독할 수 있습니다. 사용 가능한 정보에는 실행이 실패한 경우 상태, 일정 세부 정보 및 오류 메시지/코드가 포함됩니다. 다음을 참조하십시오. [예약된 쿼리 문서 모니터링](./monitor-queries.md) 추가 정보.
 
-### 쿼리 저장 중 {#saving-queries}
-
-다음 [!DNL Query Editor] 는 쿼리를 저장하고 나중에 작업할 수 있도록 해주는 저장 기능을 제공합니다. 쿼리를 저장하려면 을 선택합니다. **[!UICONTROL 저장]** 의 오른쪽 위 모서리 [!DNL Query Editor]. 쿼리를 저장하려면 먼저 **[!UICONTROL 쿼리 세부 정보]** 패널.
-
->[!NOTE]
->
->쿼리 편집기 를 사용하여에 이름이 지정되고 저장된 쿼리는 쿼리 대시보드 내에서 템플릿으로 사용할 수 있습니다 [!UICONTROL 템플릿] 탭. 다음을 참조하십시오. [템플릿 설명서](./query-templates.md) 추가 정보.
 
 ### 이전 쿼리를 찾는 방법 {#previous-queries}
 
@@ -219,7 +248,7 @@ UI 토글을 사용하면 쿼리 편집기의 기존 버전과 향상된 버전 
 
 ### 쿼리 결과 {#query-results}
 
-쿼리가 완료되면 결과가 **[!UICONTROL 결과]** 탭, 다음 옆에 있음 **[!UICONTROL 콘솔]** 탭. 이 보기는 쿼리의 테이블 형식 출력을 보여주며 최대 100개의 행을 표시합니다. 이 보기를 통해 쿼리가 예상 출력을 생성하는지 확인할 수 있습니다. 쿼리를 사용하여 데이터 세트를 생성하려면 반환된 행에 대한 제한을 제거하고 `CREATE TABLE tablename AS SELECT` 을 클릭하여 출력으로 데이터 세트를 생성합니다. 다음을 참조하십시오. [데이터 세트 생성 자습서](./create-datasets.md) 쿼리 결과에서 데이터 세트를 생성하는 방법에 대한 지침은 [!DNL Query Editor].
+쿼리가 완료되면 결과가 **[!UICONTROL 결과]** 탭, 다음 옆에 있음 **[!UICONTROL 콘솔]** 탭. 이 보기는 쿼리의 테이블 형식 출력을 보여주며 선택한 항목에 따라 50~500개 사이의 결과 행을 표시합니다 [결과 카운트](#result-count). 이 보기를 통해 쿼리가 예상 출력을 생성하는지 확인할 수 있습니다. 쿼리를 사용하여 데이터 세트를 생성하려면 반환된 행에 대한 제한을 제거하고 `CREATE TABLE tablename AS SELECT` 을 클릭하여 출력으로 데이터 세트를 생성합니다. 다음을 참조하십시오. [데이터 세트 생성 자습서](./create-datasets.md) 쿼리 결과에서 데이터 세트를 생성하는 방법에 대한 지침은 [!DNL Query Editor].
 
 ![쿼리 편집기 콘솔의 결과 탭에는 쿼리 실행 결과가 표시됩니다.](../images/ui/query-editor/query-results.png)
 
