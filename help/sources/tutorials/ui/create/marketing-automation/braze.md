@@ -1,10 +1,9 @@
 ---
 title: UI에서 브레이즈 데이터에 대한 데이터 흐름 만들기
 description: Adobe Experience Platform UI를 사용하여 Braze 계정의 데이터 흐름을 만드는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
+last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
-source-git-commit: 92d3a7143edc81cc5266ef5a33a8c53dcfdf1074
+source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 1%
