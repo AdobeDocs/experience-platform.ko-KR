@@ -5,10 +5,10 @@ user-guide-title: Edge Network Server API 설명서
 breadcrumb-title: Edge Network Server API 설명서
 user-guide-description: Experience Cloud 또는 Experience Platform Edge 서비스의 데이터 수집, 개인화, 광고 및 마케팅 사용 사례에 Edge Network Server API를 사용하십시오.
 feature: Data Collection
-source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
+source-git-commit: f7b6154166ccd7989c563115e99717937cfe9a5d
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 46%
+source-wordcount: '76'
+ht-degree: 60%
 
 ---
 
@@ -30,8 +30,3 @@ ht-degree: 46%
 * [위치 힌트](location-hints.md)
 * [오류 처리](error-handling.md)
 * [문제 해결](troubleshooting.md)
-* Media Edge API {#media-edge-apis}
-   * [Media Edge API 개요](media-edge-api/overview.md)
-   * [Media Edge API 시작](media-edge-api/getting-started.md)
-   * [Media Edge API 문제 해결](media-edge-api/troubleshooting.md)
-   * [Media Edge API Open API 사양 리소스](media-edge-api/swagger.md)
