@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 대시보드 도움말
 breadcrumb-title: 대시보드 안내서
 user-guide-description: 맞춤화가 가능한 대시보드를 통해 Experience Platform에서 데이터를 시각화하는 방법을 알아봅니다.
 feature: Dashboards
-source-git-commit: ea9cfa38ae861fd5003bea55b17a473aaf2979d5
+source-git-commit: 643e70bb2e55c2fad89fdf784298f7ac6f98397e
 workflow-type: tm+mt
 source-wordcount: '85'
-ht-degree: 36%
+ht-degree: 32%
 
 ---
 
@@ -38,4 +38,5 @@ ht-degree: 36%
    * [Power BI](integrations/power-bi.md)
 * [쿼리 대시보드 데이터 세트](query.md)
 * [Real-time Customer Data Platform 통찰력 데이터 모델](cdp-insights-data-model.md)
+* [인사이트 SQL 보기](view-sql.md)
 * [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)

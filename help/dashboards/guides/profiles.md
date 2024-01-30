@@ -4,10 +4,10 @@ title: 프로필 대시보드 안내서
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '4900'
-ht-degree: 10%
+source-wordcount: '4996'
+ht-degree: 9%
 
 ---
 
@@ -27,7 +27,7 @@ Experience Platform 대시보드에는 조직이 Profile Store in Profile에 가
 >
 >스냅숏을 만든 이후 데이터에 대한 변경 또는 업데이트는 다음 스냅숏을 만들 때까지 대시보드에 반영되지 않습니다.
 
-## 프로필 대시보드 살펴보기
+## 프로필 대시보드 탐색 {#explore-dashboard}
 
 Platform UI 내에서 프로필 대시보드로 이동하려면 를 선택합니다 **[!UICONTROL 프로필]** 왼쪽 레일에서 **[!UICONTROL 개요]** 탭을 클릭하여 대시보드를 표시합니다.
 
@@ -37,7 +37,7 @@ Platform UI 내에서 프로필 대시보드로 이동하려면 를 선택합니
 
 ![프로필 및 개요 가 강조 표시된 Experience Platform 프로필 대시보드입니다.](../images/profiles/dashboard-overview.png)
 
-### 프로필 대시보드 수정
+### 프로필 대시보드 수정 {#modify-dashboard}
 
 을 선택하여 프로파일 대시보드의 모양을 수정할 수 있습니다 **[!UICONTROL 대시보드 수정]**. 대시보드에서 위젯을 이동, 추가, 크기 조정 및 제거하고 **[!UICONTROL 위젯 라이브러리]** 를 사용하여 사용 가능한 위젯을 탐색하고 조직의 사용자 정의 위젯을 만듭니다.
 
@@ -50,6 +50,10 @@ Platform UI 내에서 프로필 대시보드로 이동하려면 를 선택합니
 ![위젯 추가 가 강조 표시된 프로필 대시보드 개요.](../images/profiles/profiles-overview-add-widget.png)
 
 위젯 라이브러리에서 표준 및 사용자 정의 대상 위젯의 선택을 검색할 수 있습니다. 위젯을 추가하는 방법에 대한 자세한 내용은 위젯 라이브러리 설명서 를 참조하십시오. [위젯 추가](../customize/widget-library.md#add-widgets).
+
+### SQL 보기 {#view-sql}
+
+대시보드에 시각화된 통찰력을 생성하는 SQL을 토글을 사용하여 볼 수 있습니다. [!UICONTROL 개요] 작업 영역. 기존 인사이트의 SQL에서 영감을 얻어 비즈니스 요구 사항에 따라 플랫폼 데이터에서 고유한 인사이트를 도출하는 새 쿼리를 만들 수 있습니다. 이 기능에 대한 자세한 내용은 [SQL UI 보기 안내서](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 

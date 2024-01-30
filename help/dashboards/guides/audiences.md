@@ -4,9 +4,9 @@ title: 대상자 대시보드 안내서
 description: Adobe Experience Platform은 조직이 만든 대상자에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '3053'
+source-wordcount: '3133'
 ht-degree: 9%
 
 ---
@@ -50,6 +50,10 @@ Platform 사용자 인터페이스 내의 모든 Adobe Experience Platform 세�
 ![다음 [!UICONTROL 대상] 대시보드 개요 [!UICONTROL 위젯 추가] 강조 표시됨.](../images/audiences/audiences-overview-add-widget.png)
 
 위젯 라이브러리에서 표준 및 사용자 정의 대상 위젯의 선택을 검색할 수 있습니다. 위젯을 추가하는 방법에 대한 자세한 내용은 위젯 라이브러리 설명서 를 참조하십시오. [위젯 추가](../customize/widget-library.md#add-widgets).
+
+### SQL 보기 {#view-sql}
+
+대시보드에 시각화된 통찰력을 생성하는 SQL을 토글을 사용하여 볼 수 있습니다. [!UICONTROL 개요] 작업 영역. 기존 인사이트의 SQL에서 영감을 얻어 비즈니스 요구 사항에 따라 플랫폼 데이터에서 고유한 인사이트를 도출하는 새 쿼리를 만들 수 있습니다. 이 기능에 대한 자세한 내용은 [SQL UI 보기 안내서](../view-sql.md).
 
 ## 대상자 선택 {#select-audience}
 
