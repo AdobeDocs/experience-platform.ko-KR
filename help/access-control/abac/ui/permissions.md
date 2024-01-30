@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 역할 권한 관리
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 역할에 대한 권한을 구성하는 방법에 대해 설명합니다
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
+source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 3%
+source-wordcount: '984'
+ht-degree: 2%
 
 ---
 
@@ -155,9 +155,9 @@ UI의 역할에 사용할 수 있는 필터는 다음과 같습니다.
 
 (으)로 반환됩니다. **[!UICONTROL 사용자 그룹]** 탭.
 
-## 제품 프로필을 통해 Experience Platform에 사용자 추가
+## 역할을 통해 Experience Platform에 사용자 추가
 
-제품 프로필에 사용자를 추가하려면 Admin Console에 로그인하고 을 선택합니다. **[!UICONTROL 사용자 추가]**
+Admin Console에 사용자를 추가하려면 역할에 로그인하고 를 선택합니다 **[!UICONTROL 사용자 추가]**
 
 ![product-profile-add-user](../../images/flac-ui/product-profile-add-users.png)
 
