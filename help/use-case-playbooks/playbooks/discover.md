@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: 적합한 플레이북 살펴보기
 description: 사용 사례 지원 플레이북에 적합한 플레이북을 찾는 방법을 알아보십시오.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: 0decef848fe90e5c60352aeb42aabdd678eeb8f8
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '752'
 ht-degree: 91%
 
 ---
 
-# (Beta) 적합한 플레이북 살펴보기
-
->[!AVAILABILITY]
->
->이 기능은 현재 Beta 버전이며 일부 사용자는 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+# 적합한 플레이북 살펴보기
 
 플레이북을 사용하려면 **[!UICONTROL 사용 사례 플레이북] > [!UICONTROL 플레이북]**&#x200B;으로 이동합니다. 페이지에서 다양한 검색 및 필터링 옵션을 찾아보고 사용하여 특정 플레이북을 선택하고 시작합니다.
 
@@ -48,7 +43,6 @@ ht-degree: 91%
 마인드맵은 사용자 여정에 누가 도달했는지에 대한 정의로 시작하여 새로운 메시지나 주의 사항과 같이 Adobe가 전달한 사항이 있는지 또는 대상 담당자가 다음 메시지나 이벤트를 트리거한 것인지 여부를 매 단계에서 설명합니다.
 
 ![플레이북 마인드맵이 강조 표시되었습니다.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
-
 
 ### 요약 {#summary}
 
