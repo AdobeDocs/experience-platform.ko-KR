@@ -3,10 +3,10 @@ title: 인증되지 않은 방문자에 대한 오프사이트 재타겟팅
 description: 잠재 고객 ID를 사용하여 인증되지 않은 사용자 대상을 만드는 데 사용할 수 있는 계산된 속성을 만들어 인증되지 않은 사용자를 다시 타깃팅하는 방법에 대해 알아봅니다.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 2%
+source-wordcount: '1462'
+ht-degree: 1%
 
 ---
 
@@ -67,7 +67,7 @@ Web SDK를 사용하여 Real-Time CDP으로 데이터를 가장 잘 가져오는
 
 이 사용 사례에서는 파트너 ID가 있는 경우 지난 24시간 내에 파트너 ID의 가장 최근 값을 가져오는 계산된 속성을 만들 수 있습니다.
 
-검색 창을 사용하여 &quot;Partner ID&quot; 이벤트를 찾아 계산된 속성 캔버스에 추가할 수 있습니다.
+검색 창을 사용하여 다음과 같은 &quot;파트너 ID&quot; 이벤트를 찾아 추가할 수 있습니다 [온사이트 개인화 사용 사례 중에 을(를) 만들었습니다.](#get-data-in) 계산된 속성 캔버스
 
 ![다음 [!UICONTROL 이벤트] 탭과 검색 창이 강조 표시됩니다.](../assets/offsite-retargeting/ca-add-partner-id.png)
 
@@ -109,7 +109,7 @@ Web SDK를 사용하여 Real-Time CDP으로 데이터를 가장 잘 가져오는
 
 이벤트를 추가한 후 속성을 추가해야 합니다. 인증되지 않은 방문자로 작업하므로 방금 만든 계산된 속성을 추가할 수 있습니다. 이렇게 새로 만든 계산된 속성을 사용하면 파트너 ID를 대상자에 연결할 수 있습니다.
 
-계산된 속성을 추가하려면 **[!UICONTROL 속성]**, 선택 **[!UICONTROL XDM 개별 프로필]**, 그 다음 **[!UICONTROL _atag]**, **[!UICONTROL SystemComputedAttributes]**, 및 **[!UICONTROL PartnerID]**. 이제 **[!UICONTROL 값]** 캔버스의 속성 섹션에 대해 계산된 속성.
+계산된 속성을 추가하려면 **[!UICONTROL 속성]**, 선택 **[!UICONTROL XDM 개별 프로필]**, 그 다음 **[조직의 테넌트 ID](../../xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]**, 및 **[!UICONTROL PartnerID]**. 이제 **[!UICONTROL 값]** 캔버스의 속성 섹션에 대해 계산된 속성.
 
 ![계산된 속성에 액세스하기 위한 폴더 경로 지정이 표시됩니다.](../assets/offsite-retargeting/access-computed-attribute.png)
 
