@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 사용 사례 플레이북 개요
 description: Experience Platform의 사용 사례 플레이북 기능을 사용하여 다양한 마케팅 사용 사례를 시작하는 방법을 알아봅니다.
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: c79bffdc38d269385689da64ee8e78ea60e6af92
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 32%
@@ -34,7 +34,6 @@ ht-degree: 32%
 * 준비가 되면 프로덕션에 사용, 테스트 및 홍보할 수 있도록 다양한 에셋을 만듭니다.
 
 ![모든 플레이북 보기](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
-<!-- Replace this image with a current image -->
 
 각 플레이북에는 해결된 특정 사용 사례에 대한 정보가 포함되어 있습니다.
 
