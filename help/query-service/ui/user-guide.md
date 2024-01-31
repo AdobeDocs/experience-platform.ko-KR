@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 편집기 UI 안내서
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서, Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 이를 통해 개발 목적으로 대화형 쿼리를 실행하고 비대화형 쿼리를 실행하여 Experience Platform의 데이터 세트를 채울 수 있습니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 202bd42596608d27f99baea9e0a4a6ec92cf469f
+source-git-commit: 29a33dd5823ac425cc567e948a5def948aedb44e
 workflow-type: tm+mt
-source-wordcount: '2550'
+source-wordcount: '2576'
 ht-degree: 2%
 
 ---
@@ -120,6 +120,10 @@ UI 토글을 사용하면 쿼리 편집기의 기존 버전과 향상된 버전 
 ### 텍스트 서식 지정 {#format-text}
 
 다음 [!UICONTROL 텍스트 서식 지정] 기능을 사용하면 표준화된 구문 스타일을 추가하여 쿼리를 보다 쉽게 읽을 수 있습니다. 선택 **[!UICONTROL 텍스트 서식 지정]** 를 사용하여 쿼리 편집기 내의 모든 텍스트를 표준화합니다.
+
+>[!NOTE]
+>
+>다음 [!UICONTROL 텍스트 서식 지정] 익명 블록에서는 기능이 작동하지 않습니다. 하나 이상의 SQL 문을 순차적으로 연결하는 방법은 다음을 참조하십시오. [익명 블록 설명서](../key-concepts/anonymous-block.md).
 
 ![쿼리 편집기 [!UICONTROL 텍스트 서식 지정] 강조 표시된 SQL 문](../images/ui/query-editor/format-text.png)
 
