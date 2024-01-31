@@ -2,9 +2,9 @@
 title: 대상 FAQ
 description: 대상자 및 기타 세분화 관련 개념에 대한 FAQ에 대한 답변을 살펴보십시오.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: dbc14c639ef02b8504cc9895c6aacb6e205549b2
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2746'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트 정의나
 
 ### 외부에서 생성된 대상자를 업로드하려면 어떤 권한이 있어야 합니까?
 
-외부에서 생성된 대상을 업로드하려면 &quot;대상/세그먼트 관리&quot; 권한과 &quot;데이터 세트 관리&quot; 권한이 모두 있어야 합니다. 외부에서 생성된 대상자를 업로드하는 데 필요한 특정 역할 기반 컨트롤은 없습니다.
+외부에서 생성된 대상을 업로드하려면 &quot;대상/세그먼트 보기&quot;, &quot;대상/세그먼트 관리&quot;, &quot;데이터 세트 보기&quot;, &quot;데이터 세트 관리&quot;, &quot;소스 보기&quot; 및 &quot;소스 관리&quot; 권한이 있어야 합니다. 외부에서 생성된 대상자를 업로드하는 데 필요한 특정 역할 기반 컨트롤은 없습니다.
 
 ### 외부에서 생성된 대상자를 업로드하면 어떻게 됩니까?
 
