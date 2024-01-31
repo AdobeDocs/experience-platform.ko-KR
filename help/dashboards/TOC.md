@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 대시보드 도움말
 breadcrumb-title: 대시보드 안내서
 user-guide-description: 맞춤화가 가능한 대시보드를 통해 Experience Platform에서 데이터를 시각화하는 방법을 알아봅니다.
 feature: Dashboards
-source-git-commit: 643e70bb2e55c2fad89fdf784298f7ac6f98397e
+source-git-commit: 45b11ddbd3c938a042cc625aba9fabbd2064f980
 workflow-type: tm+mt
-source-wordcount: '85'
-ht-degree: 32%
+source-wordcount: '90'
+ht-degree: 34%
 
 ---
 
@@ -25,6 +25,10 @@ ht-degree: 32%
    * [대상자](guides/audiences.md)
    * [대상](guides/destinations.md)
    * [라이선스 사용](guides/license-usage.md)
+* 사용 가능한 인사이트 {#insights}
+   * [프로필](insights/profiles.md)
+   * [대상자](insights/audiences.md)
+   * [대상](insights/destinations.md)
 * 대시보드 맞춤화 {#customize}
    * [사용자 지정 개요](customize/overview.md)
    * [대시보드 수정](customize/modify.md)
