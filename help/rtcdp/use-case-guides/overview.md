@@ -2,7 +2,7 @@
 title: Real-Time CDP의 샘플 사용 사례
 description: 샘플 교차 서비스 사용 사례를 확인하여 Real-Time CDP 구현을 최대한 활용하십시오.
 feature: Use Cases
-source-git-commit: f342020a0e821172a7ceca95265a9d71f64f5347
+source-git-commit: a58476e0a52cce763a114b2b4f4314fdb2e3f4c9
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -76,11 +76,11 @@ Adobe Real-Time CDP은 파트너 식별자를 광범위하게 지원하므로 �
 <table style="margin-top: 0 !important">
 <tr>
   <td>
-    <a href="../partner-data/prospecting.md">
+    <a href="../partner-data/supplement-first-party-profiles.md">
       <img alt="파트너가 제공한 속성으로 자사 프로필 보완" src="/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png" />
     </a>
     <div>
-      <a href="../partner-data/prospecting.md">
+      <a href="../partner-data/supplement-first-party-profiles.md">
     <strong>파트너가 제공한 속성으로 자사 프로필 보완</strong>
     </a>
     </div>

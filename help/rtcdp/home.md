@@ -3,10 +3,10 @@ title: Real-Time CDP 제품 설명서
 description: Adobe Real-Time CDP 사용 방법을 알아봅니다.
 solution: Real-Time Customer Data Platform
 product: Real-Time Customer Data Platform
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: d5a8faa7b854f6d0b4ef36dc86bd78bf4e6ad6f4
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 3%
+source-wordcount: '1071'
+ht-degree: 4%
 
 ---
 
@@ -20,17 +20,17 @@ Real-Time CDP 제품 및 설명서의 최신 개선 사항을 살펴보십시오
 
 >[!BEGINTABS]
 
+>[!TAB 사용 사례 플레이북]
+
+다음 [!UICONTROL 사용 사례 플레이북] 이제 모든 Real-Time CDP 및 Adobe Journey Optimizer 고객이 기능을 사용할 수 있습니다. [!UICONTROL 사용 사례 플레이북] 는 Real-time Customer Data Platform 또는 Adobe Journey Optimizer으로 시작할 때 사용자가 문제를 극복하도록 지원하기 위해 설계되었습니다. 어디서부터 시작할지 또는 원하는 사용 사례에 적합한 에셋을 제작하는 방법을 잘 모를 때 사용 사례 플레이북을 통해 영감을 얻고 다른 에셋을 제작하여 준비가 되면 프로덕션 환경에 테스트하고 가져올 수 있습니다.
+
+[![이미지](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
+
 >[!TAB 샌드박스 도구]
 
 샌드박스 도구 기능을 사용하여 샌드박스 간 구성 정확도를 높이고 샌드박스 간에 구성을 원활하게 내보내고 가져올 수 있습니다. 샌드박스 도구 기능을 사용하여 다른 개체를 선택하고 패키지로 내보낼 수 있습니다.
 
 [![이미지](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
-
->[!TAB (제한된 GA) 계정 대상자 활성화]
-
-Real-Time CDP B2B 고객은 이제 다음을 활성화할 수 있습니다 [계정 대상자](/help/segmentation/ui/account-audiences.md) 특정 대상으로 이동합니다.
-
-[![이미지](assets/do-not-localize/learn-more-button.svg)](/help/destinations/ui/activate-account-audiences.md)
 
 >[!TAB 계산된 속성]
 
@@ -202,4 +202,4 @@ Adobe Real-Time CDP의 4가지 핵심 축이 엔터프라이즈 사용 사례를
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>최신 정보를 얻고, 커뮤니티에 기여하고, Adobe Real-Time CDP 환경을 개선하십시오!</b><br/>Real-time Customer Data Platform 커뮤니티를 방문하여 동료 실무자와 기능에 대해 논의하십시오. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">지금 커뮤니티에 가입하세요!</a></td></tr></table>
+<b>최신 정보를 얻고, 커뮤니티에 기여하고, Adobe Real-Time CDP 환경을 개선하십시오!</b><br/>Real-time Customer Data Platform 커뮤니티를 방문하여 동료 실무자와 기능에 대해 논의하십시오. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">지금 커뮤니티에 가입하십시오!</a></td></tr></table>
