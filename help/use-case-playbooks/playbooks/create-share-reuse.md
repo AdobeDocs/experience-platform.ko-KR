@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: 플레이북 인스턴스 만들기, 공유 및 재사용
 description: 마케팅 사용 사례를 달성하기 위해 플레이북 인스턴스를 생성, 공유 및 재사용하는 방법에 대해 알아봅니다.
+role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 86%
+source-wordcount: '787'
+ht-degree: 83%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 86%
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_create"
 >title="인스턴스 만들기"
->abstract="여정 또는 활성화 시나리오에서 사용할 여정, 대상, 스키마 또는 대상과 같은 에셋 목록을 생성합니다."
+>abstract="여정 또는 활성화 시나리오에 사용할 여정, 대상자, 스키마 또는 대상과 같은 자산 목록을 생성합니다."
 
 플레이북 인스턴스를 만들기 전에 사용 가능한 플레이북을 탐색하여 [사용자에게 적합한 플레이북을 찾습니다](/help/use-case-playbooks/playbooks/discover.md). 플레이북을 진행하고 인스턴스를 생성할 준비가 되면 **[!UICONTROL 인스턴스 만들기]**&#x200B;를 선택하여 플레이북을 진행하고 기술 자산을 생성합니다.
 
@@ -73,6 +74,12 @@ ht-degree: 86%
 생성된 인스턴스 및 자산을 다른 팀원과 공유할 수 있습니다. 이렇게 하려면 브라우저에서 URL 링크를 복사하고 이를 팀과 공유하여 생성된 자산에 대한 개요를 제공합니다.
 
 ![사용 사례 플레이북 보기에서 강조 표시된 URL.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
+
+## 엔드투엔드 플레이북 프로세스에 대한 비디오 안내
+
+이 비디오를 통해 엔드투엔드에서의 사용 사례 플레이북 인스턴스를 검색, 제작, 게시 및 문제 해결하는 방법과 플레이북에서 생성된 에셋을 조직에 설정된 다른 샌드박스로 복사하는 방법에 대해 알아보십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427058/?learn=on)
 
 ## 다음 단계 {#next-steps}
 

@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: 적합한 플레이북 살펴보기
 description: 사용 사례 지원 플레이북에 적합한 플레이북을 찾는 방법을 알아보십시오.
+role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: 0decef848fe90e5c60352aeb42aabdd678eeb8f8
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
 source-wordcount: '752'
-ht-degree: 91%
+ht-degree: 96%
 
 ---
 
@@ -49,7 +50,7 @@ ht-degree: 91%
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_assets"
 >title="에셋"
->abstract="다음은 이 플레이북에서 생성된 에셋입니다. 플레이북의 인스턴스를 생성하면 영감을 주는 샌드박스의 자산을 볼 수 있고, 원하는 대로 다른 샌드박스로 승격할 수 있습니다."
+>abstract="이 항목은 이 플레이북에서 생성된 자산입니다. 플레이북 인스턴스를 만든 후에 영감을 주는 샌드박스에서 자산을 확인하고 원하는 대로 다른 샌드박스로 승격할 수 있습니다."
 
 요약 섹션을 검사하여 플레이북에서 인스턴스를 생성한 후 어떤 자산이 생성되는지 파악하십시오. 각 플레이북에 대해 생성되는 자산은 플레이북이 지원하는 사용 사례에 맞게 조정됩니다. 아래에서 요약 섹션의 모든 항목에 대한 자세한 정보를 얻으십시오.
 

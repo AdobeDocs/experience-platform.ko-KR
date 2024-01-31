@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: 시작하기
 description: 사용 사례 플레이북 기능을 시작하는 방법에 대해 알아봅니다.
+role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '927'
 ht-degree: 14%
 
 ---
@@ -65,7 +66,7 @@ Real-time Customer Data Platform 및 Adobe Journey Optimizer용으로 설계된 
 
 **대상에 대한 권한**
 
-대상을 만들고 관리하려면 대상 권한을 사용합니다. **[!UICONTROL 관리]**, **[!UICONTROL 대상]**, **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 매핑 없이 세그먼트 활성화]**, **[!UICONTROL 데이터 세트 대상 관리 및 활성화]**, UICONTROL 대상 작성*.
+대상을 만들고 관리하려면 대상 권한을 사용합니다. **[!UICONTROL 관리]**, **[!UICONTROL 대상]**, **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 매핑 없이 세그먼트 활성화]**, **[!UICONTROL 데이터 세트 대상 관리 및 활성화]**, **[!UICONTROL 대상 작성]**.
 
 **여정 권한**
 

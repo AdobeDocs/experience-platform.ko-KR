@@ -2,15 +2,16 @@
 solution: Experience Platform
 title: 사용 사례 플레이북의 데이터 인식 개요
 description: 최종 영감을 주는 샌드박스에서 생성된 에셋을 다른 샌드박스에 복사하여 가치 실현 시간을 단축하는 방법에 대해 알아봅니다.
+role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# 사용 사례 플레이북의 데이터 인식 개요
+# 플레이북에서 생성한 에셋을 다른 샌드박스에 게시 {#publish-to-other-sandboxes}
 
 사용 사례 플레이북은 일반적인 마케팅 사용 사례에 대한 대상, 스키마 또는 여정과 같은 에셋을 생성하도록 설계된 마케팅 템플릿입니다. 영감을 주는 샌드박스에서 플레이북으로 생성된 에셋을 테스트할 수 있으며 준비가 되면 에셋을 다른 개발 샌드박스로 가져와서 해당 샌드박스에서 사용할 수 있는 데이터로 추가 테스트를 수행할 수 있습니다. 테스트가 만족스러우면 개발 샌드박스의 자산을 프로덕션 샌드박스로 이동할 수 있습니다.
 
@@ -97,7 +98,3 @@ ht-degree: 0%
 ## 다음 단계
 
 이 안내서를 읽은 후에는 사용 사례 플레이북을 함께 활용하는 방법을 더 잘 이해할 수 있습니다 [샌드박스 도구](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) 스키마를 참조하는 실행 가능한 여정을 만들려면. 공통점에 대해 자세히 알아보기 [Real-Time CDP 활용 사례](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
-
-### 이 항목에 대한 추가 도움말
-
-[샌드박스 도구](/help/sandboxes/ui/sandbox-tooling.md)

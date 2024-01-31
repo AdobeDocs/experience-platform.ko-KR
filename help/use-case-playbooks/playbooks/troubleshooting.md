@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: 플레이북의 알려진 제한 사항 및 문제 해결
 description: 플레이북의 알려진 문제 및 일반적인 문제와 이러한 문제를 해결하는 방법에 대해 자세히 알아보십시오
+role: User, Developer, Admin
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '395'
 ht-degree: 2%
 
 ---
@@ -13,7 +14,11 @@ ht-degree: 2%
 
 # 문제 해결 및 알려진 제한 사항 {#troubleshooting-known-limitations}
 
+사용 사례 플레이북으로 작업할 때 발생하는 오류를 해결하는 방법을 알아보고, 일반 가용성 릴리스의 알려진 제한 사항을 이해합니다.
+
 ## 문제 해결 {#troubleshooting}
+
+사용 사례 플레이북으로 작업할 때 발생하는 일반적인 오류에 대한 문제 해결 제안 사항 보기
 
 ### Adobe Journey Optimizer 표면이 구성되지 않음
 
@@ -35,7 +40,7 @@ ht-degree: 2%
 
 * 사용 시 [데이터 인식 기능](/help/use-case-playbooks/playbooks/data-awareness.md) 영감을 주는 샌드박스에서 개발 샌드박스로 스키마를 홍보하기 위해 다음과 유사한 오류가 표시될 수 있습니다.
 
-![스키마 오류](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png)
+![스키마 매핑 워크플로에 표시되는 오류.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 이는 스키마에서 생성된 필드 중 일부가 복사 중인 개발 샌드박스의 스키마에 없기 때문입니다. 그 필드들이 무엇인지 찾아보세요. 그런 다음 다음을 수행할 수 있는 개발 샌드박스로 돌아갑니다.
 
