@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 준비 매핑 기능
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: ff61ec7bc1e67191a46f7d9bb9af642e9d601c3a
+source-git-commit: f250d8e6e5368a785dcb154dbe0b611baed73a4c
 workflow-type: tm+mt
-source-wordcount: '5080'
+source-wordcount: '5459'
 ht-degree: 2%
 
 ---
@@ -151,6 +151,9 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | map_get_values | 맵과 키 입력을 가져옵니다. 입력이 단일 키인 경우 함수는 해당 키와 연관된 값을 반환합니다. 입력이 문자열 배열이면 함수는 제공된 키에 해당하는 모든 값을 반환합니다. 들어오는 맵에 중복 키가 있는 경우 반환 값은 키를 중복 제거하고 고유 값을 반환해야 합니다. | <ul><li>맵: **필수** 입력 맵 데이터.</li><li>키:  **필수** 키는 단일 문자열 또는 문자열 배열일 수 있습니다. 다른 기본 유형(데이터/숫자)이 제공되면 문자열로 처리됩니다.</li></ul> | get_values(MAP, KEY) | 다음을 참조하십시오. [부록](#map_get_values) 코드 샘플. | |
 | map_has_keys | 하나 이상의 입력 키가 제공되면 함수는 true를 반환합니다. 문자열 배열이 입력으로 제공되면 함수는 발견되는 첫 번째 키에 true를 반환합니다. | <ul><li>맵:  **필수** 입력 맵 데이터</li><li>키:  **필수** 키는 단일 문자열 또는 문자열 배열일 수 있습니다. 다른 기본 유형(데이터/숫자)이 제공되면 문자열로 처리됩니다.</li></ul> | map_has_keys(MAP, KEY) | 다음을 참조하십시오. [부록](#map_has_keys) 코드 샘플. | |
 | add_to_map | 최소 두 개 이상의 입력을 허용합니다. 맵의 수는 입력으로서 제공될 수 있다. 데이터 준비는 모든 입력의 모든 키-값 쌍이 있는 단일 맵을 반환합니다. 하나 이상의 키가 동일한 맵에서 또는 맵 간에 반복되는 경우, 데이터 준비는 첫 번째 키-값 쌍이 입력에서 전달된 순서대로 유지되도록 키를 중복 제거합니다. | 맵: **필수** 입력 맵 데이터. | add_to_map(지도 1, 지도 2, 지도 3, ...) | 다음을 참조하십시오. [부록](#add_to_map) 코드 샘플. | |
+| object_to_map (구문 1) | 이 함수를 사용하여 맵 데이터 유형을 만듭니다. | <ul><li>키: **필수** 키는 문자열이어야 합니다. 정수 또는 날짜와 같은 다른 기본 값이 제공되면 문자열로 자동 변환되고 문자열로 처리됩니다.</li><li>ANY_TYPE **필수** 맵은 제외하고 지원되는 모든 XDM 데이터 유형을 참조합니다.</li></ul> | object_to_map(KEY, ANY_TYPE, KEY, ANY_TYPE, ... ) | 다음을 참조하십시오. [부록](#object_to_map) 코드 샘플. | |
+| object_to_map (구문 2) | 이 함수를 사용하여 맵 데이터 유형을 만듭니다. | <ul><li>개체: **필수** 들어오는 개체 또는 개체 배열을 제공하고 개체 내의 속성을 키로 지정할 수 있습니다.</li></ul> | object_to_map(OBJECT) | 다음을 참조하십시오. [부록](#object_to_map) 코드 샘플. |
+| object_to_map (구문 3) | 이 함수를 사용하여 맵 데이터 유형을 만듭니다. | <ul><li>개체: **필수** 들어오는 개체 또는 개체 배열을 제공하고 개체 내의 속성을 키로 지정할 수 있습니다.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | 다음을 참조하십시오. [부록](#object_to_map) 코드 샘플. |
 
 {style="table-layout:auto"}
 
@@ -173,6 +176,20 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | size_of | 입력 크기를 반환합니다. | <ul><li>입력: **필수** 크기를 찾으려는 개체입니다.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | 이 함수는 전체 입력 배열의 모든 요소를 프로필의 배열 끝에 추가하는 데 사용합니다. 이 함수는 **전용** 업데이트 중에 적용할 수 있습니다. 삽입 컨텍스트에서 사용되는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>배열: **필수** 프로필에 배열을 추가할 배열입니다.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123,456] |
 | upsert_array_replace | 이 함수는 배열에서 요소를 바꾸는 데 사용합니다. 이 함수는 **전용** 업데이트 중에 적용할 수 있습니다. 삽입 컨텍스트에서 사용되는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>배열: **필수** 프로필에서 배열을 대체할 배열입니다.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123,456] |
+
+{style="table-layout:auto"}
+
+### 계층 - 맵 {#map}
+
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
+
+| 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| array_to_map | 이 함수는 개체 배열과 키를 입력으로 취하여 값을 키로 사용하고 배열 요소를 값으로 하는 키 필드의 맵을 반환합니다. | <ul><li>입력: **필수** null이 아닌 첫 번째 개체를 찾을 개체 배열입니다.</li><li>키:  **필수** 키는 개체 배열의 필드 이름이어야 하며 개체를 값으로 사용해야 합니다.</li></ul> | array_to_map(OBJECT[] 입력, 키) | 읽기 [부록](#object_to_map) 코드 샘플. |
+| object_to_map | 이 함수는 개체를 인수로 사용하고 키-값 쌍의 맵을 반환합니다. | <ul><li>입력: **필수** null이 아닌 첫 번째 개체를 찾을 개체 배열입니다.</li></ul> | object_to_map(OBJECT_INPUT) | &quot;object_to_map(address) 여기서 입력은 &quot; + &quot;address: {line1 : \&quot;345 park ave\&quot;,line2: \&quot;bldg 2\&quot;,도시 : \&quot;san jose\&quot;,상태 : \&quot;CA\&quot;,유형: \&quot;office\&quot;}입니다.&quot; | 입력이 null인 경우 필드 이름과 값 쌍이 지정된 맵을 반환하거나 null을 반환합니다. 예: `"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
+| to_map | 이 함수는 키-값 쌍의 목록을 가져와서 키-값 쌍의 맵을 반환합니다. | | to_map(OBJECT_INPUT) | &quot;to_map(\&quot;firstName\&quot;, \&quot;John\&quot;, \&quot;lastName\&quot;, \&quot;Doe\&quot;)&quot; | 입력이 null인 경우 필드 이름과 값 쌍이 지정된 맵을 반환하거나 null을 반환합니다. 예: `"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
 {style="table-layout:auto"}
 
@@ -455,3 +472,150 @@ example = "add_to_map(book_details, book_details2) where input is {\n" +
 ```
 
 +++
+
+#### object_to_map {#object_to_map}
+
+**구문 1**
+
++++예를 보려면 선택
+
+```json
+example = "object_to_map(\"firstName\", \"John\", \"lastName\", \"Doe\")",
+result = "{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"
+```
+
++++
+
+**구문 2**
+
++++예를 보려면 선택
+
+```json
+example = "object_to_map(address) where input is " +
+  "address: {line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}",
+result = "{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"
+```
+
++++
+
+**구문 3**
+
++++예를 보려면 선택
+
+```json
+example = "object_to_map(addresses,type)" +
+        "\n" +
+        "[\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "]" ,
+result = "{\n" +
+        "    \"home\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    \"work\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    \"office\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "}" 
+```
+
++++
+
+#### array_to_map {#array_to_map}
+
++++예를 보려면 선택
+
+```json
+example = "array_to_map(addresses, \"type\") where addresses is\n" +
+  "\n" +
+  "[\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "]" ,
+result = "{\n" +
+  "    \"home\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    \"work\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    \"office\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "}",
+returns = "Returns a map with given field name and value pairs or null if input is null"
+```
+
++++
+
