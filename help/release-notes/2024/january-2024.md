@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 1월
 description: Adobe Experience Platform의 2024년 1월 릴리스 정보.
-source-git-commit: 88dc2fc84002ae4400e4a11370ac3354cd38cd0e
+source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 38%
@@ -45,7 +45,7 @@ Experience Platform의 기존 기능 업데이트:
 
 | 기능 | 설명 |
 | --- | --- |
-| 새로운 매퍼 함수 | <ul><li>`object_to_map`: 사용 `object_to_map` 맵 데이터 유형을 만드는 함수입니다. 이 함수는 여러 가지 다른 구문을 지원합니다. 자세한 내용은 의 안내서를 참조하십시오. [계층 함수 - 객체](../../data-prep/functions.md#objects). </li><li>`to_map`: 사용 `to_map` 개체를 사용하여 주어진 필드 이름과 값 쌍을 사용하여 맵을 만드는 함수입니다. 자세한 내용은 의 안내서를 참조하십시오. [계층 함수 - 맵](../../data-prep/functions.md#objects). </li><li>`array_to_map`: 사용 `array_to_map` 개체 배열을 사용하여 지정된 필드 이름 및 값 쌍으로 맵을 만드는 함수입니다. 자세한 내용은 의 안내서를 참조하십시오. [계층 함수 - 맵](../../data-prep/functions.md#objects). |
+| 새로운 매퍼 함수 | <ul><li>`object_to_map`: 사용 `object_to_map` 맵 데이터 유형을 만드는 함수입니다. 이 함수는 여러 가지 다른 구문을 지원합니다. 자세한 내용은 의 안내서를 참조하십시오. [계층 함수 - 객체](../../data-prep/functions.md#objects). </li><li>`to_map`: 사용 `to_map` 개체를 사용하여 주어진 필드 이름과 값 쌍을 사용하여 맵을 만드는 함수입니다. 자세한 내용은 의 안내서를 참조하십시오. [계층 함수 - 맵](../../data-prep/functions.md#map). </li><li>`array_to_map`: 사용 `array_to_map` 개체 배열을 사용하여 지정된 필드 이름 및 값 쌍으로 맵을 만드는 함수입니다. 자세한 내용은 의 안내서를 참조하십시오. [계층 함수 - 맵](../../data-prep/functions.md#map). |
 
 {style="table-layout:auto"}
 
