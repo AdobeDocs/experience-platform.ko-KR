@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 1월
 description: Adobe Experience Platform의 2024년 1월 릴리스 정보.
-source-git-commit: fc7183cbc1ca3e27999d0ddd64c83ee19ccb1200
+source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
 workflow-type: tm+mt
-source-wordcount: '1038'
-ht-degree: 36%
+source-wordcount: '1478'
+ht-degree: 29%
 
 ---
 
@@ -18,9 +18,11 @@ Adobe Experience Platform의 새로운 기능:
 
 Experience Platform의 기존 기능 업데이트:
 
-- [대시보드](#dashboards)
+- [속성 기반 액세스 제어](#abac)
 - [데이터 준비](#data-prep)
+- [대시보드](#dashboards)
 - [대상](#destinations)
+- [ID 서비스](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [실시간 고객 프로필](#profile)
 - [소스](#sources)
@@ -36,6 +38,22 @@ Experience Platform의 기존 기능 업데이트:
 - 모든 항목에 대한 정보 가져오기 [필수 권한](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) 플레이북과 플레이북에서 생성된 에셋을 사용합니다.
 - 이해 [데이터 인식 기능](/help/use-case-playbooks/playbooks/data-awareness.md) 생성된 에셋을 다른 샌드박스 환경으로 복사할 수 있습니다
 - Get [문제 해결 팁](/help/use-case-playbooks/playbooks/troubleshooting.md) 사용 사례 플레이북을 사용할 때 오류나 문제가 발생하는 경우.
+
+## 속성 기반 액세스 제어 {#abac}
+
+속성 기반 액세스 제어는 Adobe Experience Platform의 기능으로, 개인 정보 보호를 고려한 브랜드에게 사용자 액세스를 더 유연하게 관리할 수 있습니다. 스키마 필드 및 세그먼트와 같은 개별 객체를 사용자 역할에 할당할 수 있습니다. 이 기능을 사용하면 조직의 특정 Platform 사용자에 대해 개별 객체에 대한 액세스 권한을 부여하거나 취소할 수 있습니다.
+
+조직 관리자는 속성 기반 액세스 제어를 통해 모든 플랫폼 워크플로 및 리소스에서 중요한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 지정된 유형의 데이터에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.
+
+**신규 또는 업데이트된 설명서**
+
+| 설명서 업데이트 | 설명 |
+| --- | --- |
+| 속성 기반 액세스 제어에 대해 문서화된 새 API 엔드포인트 | 다음 [액세스 제어 API 참조 설명서](https://developer.adobe.com/experience-platform-apis/references/access-control/) 에는 이제 속성 기반 액세스 제어 API 역할, 정책 및 제품 끝점이 포함됩니다. 이러한 엔드포인트는 지정된 샌드박스의 지정된 리소스에서 사용자에 대한 관련 역할, 정책 및 제품을 검색하는 데 사용할 수 있습니다. |
+
+{style="table-layout:auto"}
+
+속성 기반 액세스 제어에 대한 자세한 내용은 [속성 기반 액세스 제어 개요](../../access-control/abac/overview.md). 속성 기반 액세스 제어 워크플로에 대한 포괄적인 안내서는 [속성 기반 액세스 제어 엔드투엔드 안내서](../../access-control/abac/end-to-end-guide.md).
 
 ## 데이터 준비 {#data-prep}
 
@@ -87,6 +105,20 @@ Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터�
 
 대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
+## ID 서비스 {#identity-service}
+
+Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 걸쳐 ID를 연결하여 고객과 고객의 행동을 종합적으로 파악할 수 있으므로, 실시간으로 효과적인 개인 디지털 환경을 제공할 수 있습니다.
+
+**신규 또는 업데이트된 설명서**
+
+| 설명서 업데이트 | 설명 |
+| --- | --- |
+| 문서 재구성 | Identity Service 설명서는 Identity Service 내 개념의 표시 및 명확성을 개선하기 위해 재구성되었습니다.<ul><li>다음 방문: [ID 서비스 개요 페이지](../../identity-service/home.md) 확장된 용어 안내서의 경우 일반적인 고객 여정을 자세히 설명하는 사용 사례 예, Identity Service가 ID를 함께 연결하는 방법에 대한 분류 및 Identity Service가 Experience Platform 생태계 내에서 수행하는 역할에 대한 요약이 제공됩니다.</li><li>의 안내서 읽기 [identity 서비스와 실시간 고객 프로필 간의 관계 이해](../../identity-service/identity-and-profile.md) 두 서비스가 함께 작동하는 방식과 목적, 프로세스, 입력 및 출력 간의 차이에 대한 자세한 요약 정보.</li><li>다음을 참조하십시오. [ID 서비스 연결 논리 안내서](../../identity-service/features/identity-linking-logic.md) id 그래프가 다양한 시나리오 및 타임스탬프를 부여받아 동작하는 방식에 대한 설명 및 시각화용.</li></ul> |
+
+{style="table-layout:auto"}
+
+ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md).
+
 ## Real-Time Customer Data Platform {#rtcdp}
 
 Experience Platform을 기반으로 구축된 Real-Time Customer Data Platform([!DNL Real-Time CDP])으로 기업은 알려진 데이터와 알 수 없는 데이터를 수집하여 고객 여정 전반에 걸쳐 지능적인 의사 결정을 통해 고객 프로필을 활성화할 수 있습니다. [!DNL Real-Time CDP]는 여러 기업의 데이터 소스를 결합하여 실시간으로 고객 프로필을 생성합니다. 이러한 프로필에서 구축된 세그먼트는 다운스트림 대상으로 전송되어 모든 채널과 디바이스에서 일대일로 개인 설정된 고객 경험을 제공할 수 있습니다.
@@ -96,6 +128,17 @@ Experience Platform을 기반으로 구축된 Real-Time Customer Data Platform([
 | 기능 | 설명 |
 | --- | --- |
 | 업데이트: [Real-Time CDP 홈 페이지](https://experience.adobe.com) | <ul><li>**프로필 위젯**: 이제 프로필 위젯을 사용하여 프로필 개요 페이지로 이동하고 조직의 프로필 지표를 볼 수 있습니다.</li><li>**프로필 지표 카드**: 이제 홈 페이지 대시보드의 프로필 지표 카드에 각 병합 정책에 따라 조직의 총 프로필 수가 표시됩니다.</li><li>**스키마 위젯**: 이제 스키마 위젯을 사용하여 UI에서 스키마 생성 워크플로우로 이동할 수 있습니다.</li></ul> |
+
+{style="table-layout:auto"}
+
+**신규 또는 업데이트된 설명서**
+
+| 설명서 업데이트 | 설명 |
+| --- | --- |
+| 새 Real-Time CDP 설명서 홈 페이지 | 다음 방문: [새 Real-Time CDP 설명서 홈 페이지](/help/rtcdp/home.md) 제품, 가드레일, 샘플 사용 사례 등을 시작하는 방법에 대한 정보를 한눈에 살펴볼 수 있습니다. |
+| 샘플 Real-Time CDP 사용 사례 개요 | 다음 방문: [새로운 샘플 사용 사례 개요 페이지](/help/rtcdp/use-case-guides/overview.md) 조직에서 Real-Time CDP을 통해 달성할 수 있는 샘플 사용 사례 컬렉션. |
+
+{style="table-layout:auto"}
 
 Real-Time CDP에 대해 자세히 알아보려면 [Real-Time CDP 개요](../../rtcdp/overview.md).
 
