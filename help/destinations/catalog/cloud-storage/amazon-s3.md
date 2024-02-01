@@ -2,10 +2,10 @@
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 CSV 데이터 파일을 정기적으로 자체 S3 버킷으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 16%
+source-wordcount: '1354'
+ht-degree: 13%
 
 ---
 
@@ -13,12 +13,17 @@ ht-degree: 16%
 
 ## 대상 변경 로그 {#changelog}
 
-2023년 7월 Experience Platform 릴리스에서는 [!DNL Amazon S3] 대상 은 아래에 나열된 새로운 기능을 제공합니다.
++++ 변경 로그 보기
 
-* [데이터 세트 내보내기 지원](/help/destinations/ui/export-datasets.md).
-* 추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
-* [향상된 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능.
-* [내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+
+| 릴리스 월 | 업데이트 유형 | 설명 |
+|---|---|---|
+| 2024년 1월 | 기능 및 설명서 업데이트 | 이제 Amazon S3 대상 커넥터가 새로운 가정된 역할 인증 유형을 지원합니다. 자세한 내용은 [인증 섹션](#assumed-role-authentication). |
+| 2023년 7월 | 기능 및 설명서 업데이트 | 2023년 7월 Experience Platform 릴리스에서는 [!DNL Amazon S3] 대상 은 아래에 나열된 새로운 기능을 제공합니다. <br><ul><li>[데이터 세트 내보내기 지원](/help/destinations/ui/export-datasets.md)</li><li>추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>[향상된 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능.</li><li>[내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
+
+{style="table-layout:auto"}
+
++++
 
 ## 다음에 연결 [!DNL Amazon S3] API 또는 UI를 통한 스토리지 {#connect-api-or-ui}
 
@@ -64,12 +69,37 @@ ht-degree: 16%
 >title="RSA 공개 키"
 >abstract="필요한 경우 RSA 형식의 공개 키를 첨부하여 암호화를 내보낸 파일에 추가할 수 있습니다. 아래 설명서 링크에서 올바른 형식의 키 예를 봅니다."
 
-대상에 인증하려면 필수 필드를 입력한 다음 을(를) 선택합니다. **[!UICONTROL 대상에 연결]**.
+대상에 인증하려면 필수 필드를 입력한 다음 을(를) 선택합니다. **[!UICONTROL 대상에 연결]**. Amazon S3 대상은 두 가지 인증 방법을 지원합니다.
+
+* 액세스 키 및 비밀 키 인증
+* 가정된 역할 인증
+
+#### 액세스 키 및 비밀 키 인증
+
+Experience Platform이 데이터를 Amazon S3 속성으로 내보내도록 Amazon S3 액세스 키 및 비밀 키를 입력하려는 경우 이 인증 방법을 사용하십시오.
+
+![액세스 키 및 비밀 키 인증을 선택할 때 필요한 필드의 이미지.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
 * **[!DNL Amazon S3]액세스 키** 및 **[!DNL Amazon S3]비밀 키**: 위치 [!DNL Amazon S3], 생성 `access key - secret access key` 쌍으로 플랫폼에 액세스 권한 부여 [!DNL Amazon S3] 계정입니다. 다음에서 자세히 알아보기 [Amazon Web Services 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
   ![UI에서 올바른 형식의 PGP 키의 예를 보여 주는 이미지입니다.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+
+#### 가정된 역할 {#assumed-role-authentication}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_assumed_role"
+>title="가정된 역할 인증"
+>abstract="Adobe 키 및 비밀 키를 계정 키와 공유하지 않으려는 경우 이 인증 유형을 사용하십시오. 대신 Experience Platform은 역할 기반 액세스를 사용하여 Amazon S3 위치에 연결합니다. Adobe 사용자를 위해 AWS에서 만든 역할의 ARN을 붙여넣습니다. 패턴은 과 유사합니다. `arn:aws:iam::800873819705:role/destinations-role-customer` "
+
+![가정된 역할 인증을 선택할 때의 필수 필드 이미지.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
+
+Adobe 키 및 비밀 키를 계정 키와 공유하지 않으려는 경우 이 인증 유형을 사용하십시오. 대신 Experience Platform은 역할 기반 액세스를 사용하여 Amazon S3 위치에 연결합니다.
+
+이렇게 하려면 AWS 콘솔에서 를 사용하여 Adobe을 수행할 가정한 사용자를 만들어야 합니다. [권한 필수 권한](#required-s3-permission) Amazon S3 버킷에 쓸 수 있습니다. 만들기 **[!UICONTROL 신뢰할 수 있는 엔티티]** Adobe 계정이 있는 AWS에서 **[!UICONTROL 670664943635]**. 자세한 내용은 [역할 만들기에 대한 AWS 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+
+* **[!DNL Role]**: Adobe 사용자를 위해 AWS에서 만든 역할의 ARN을 붙여넣습니다. 패턴은 과 유사합니다. `arn:aws:iam::800873819705:role/destinations-role-customer`.
+* **[!UICONTROL 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 

@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 1월
 description: Adobe Experience Platform의 2024년 1월 릴리스 정보.
-source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
+source-git-commit: fc7183cbc1ca3e27999d0ddd64c83ee19ccb1200
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 38%
+source-wordcount: '1038'
+ht-degree: 36%
 
 ---
 
@@ -74,6 +74,14 @@ Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터�
 | 대상 | 설명 |
 | ----------- | ----------- |
 | [치골 연결](../../destinations/catalog/advertising/pubmatic.md) | 이 대상을 사용하여 대상 데이터를 [!DNL PubMatic Connect] 플랫폼. |
+
+{style="table-layout:auto"}
+
+**새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
+
+| 기능 | 설명 |
+| ----------- | ----------- |
+| 신규 **가정된 역할** Amazon S3 대상에 대한 인증 유형 | Experience Platform과 Experience Platform 키 및 비밀 키를 공유하지 않으려면 Amazon S3 버킷에 계정을 연결할 때 새로운 가설 역할 인증 유형을 사용하십시오. 의 새 인증 방법에 대해 자세히 알아보십시오. [인증 섹션](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) Amazon S3 설명서의 |
 
 {style="table-layout:auto"}
 
