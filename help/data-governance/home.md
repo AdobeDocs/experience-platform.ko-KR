@@ -7,7 +7,7 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
 source-wordcount: '1623'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_datagovernance_framework"
 >title="데이터 거버넌스 의무"
->abstract="조직의 데이터 거버넌스 정책을 준수하고 규정 요구 사항을 충족하는 것은 귀사의 유일한 책임입니다. Experience Platform은 데이터 사용 의무를 관리할 수 있는 데이터 거버넌스 도구를 제공합니다. 데이터를 쿼리하거나 처리하기 전에 적절한 데이터 사용 레이블을 적용합니다. 데이터 거버넌스 도구 및 모범 사례에 대한 자세한 내용은 설명서를 참조하십시오."
+>abstract="조직의 데이터 거버넌스 정책을 준수하고 규제 요구 사항을 충족하는 것은 전적으로 귀하의 책임입니다. Experience Platform은 데이터 사용 의무를 관리할 수 있는 데이터 거버넌스 도구를 제공합니다. 데이터를 쿼리하거나 처리하기 전에 적절한 데이터 사용량 레이블을 적용합니다. 데이터 거버넌스 도구 및 모범 사례에 대해 알아보려면 설명서를 참조하십시오."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=ko" text="데이터 거버넌스 개요"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=ko" text="데이터 거버넌스 레이블 개요"
 
