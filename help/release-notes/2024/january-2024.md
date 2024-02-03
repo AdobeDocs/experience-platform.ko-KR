@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 1월
 description: Adobe Experience Platform의 2024년 1월 릴리스 정보.
-source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
+source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
 workflow-type: tm+mt
-source-wordcount: '1478'
-ht-degree: 29%
+source-wordcount: '1553'
+ht-degree: 27%
 
 ---
 
@@ -77,7 +77,7 @@ Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터�
 
 | 기능 | 설명 |
 | --- | --- |
-| SQL 보기 | 이제 프로필, 대상, 대상 및 사용자 지정된 통찰력에 숨겨진 SQL을 보고 쿼리 편집기를 통해 요청 시 쿼리를 실행할 수 있습니다. 40개 이상의 기존 인사이트의 SQL에서 영감을 얻어 비즈니스 요구 사항에 따라 플랫폼 데이터에서 고유한 인사이트를 도출하는 새로운 쿼리를 만들 수 있습니다. 자세한 내용은 의 안내서를 참조하십시오. [insight SQL 보기](../../dashboards/view-sql.md). |
+| SQL 보기 | 이제 SQL 보기 토글을 사용하여 프로필, 대상, 대상 및 맞춤화된 인사이트 뒤에 있는 SQL을 본 다음 쿼리 편집기를 통해 요청 시 쿼리를 실행할 수 있습니다. Real-time Customer Data Platform 통찰력을 제공하는 SQL에 액세스하면 데이터 모델 분석의 논리를 이해할 수 있습니다. 이러한 투명성은 Adobe 실시간 CDP 데이터를 보다 쉽게 액세스하고 이해할 수 있도록 하며 의사 결정에 영향을 줍니다.<br>40개 이상의 기존 인사이트의 SQL에서 영감을 얻어 비즈니스 요구 사항에 따라 플랫폼 데이터에서 고유한 인사이트를 도출하는 새로운 쿼리를 만들 수 있습니다. SQL은 [프로필](../../dashboards/insights/profiles.md), [대상](../../dashboards/insights/audiences.md), 및 [대상](../../dashboards/insights/destinations.md) Experience League 설명서의 insights. 이 문서에서는 표준 인사이트로 답할 수 있는 비즈니스 사용 사례를 강조합니다. 자세한 내용은 의 안내서를 참조하십시오. [insight SQL 보기](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
