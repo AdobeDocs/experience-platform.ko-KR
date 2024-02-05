@@ -4,9 +4,9 @@ title: 시작하기
 description: 사용 사례 플레이북 기능을 시작하는 방법에 대해 알아봅니다.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 785e32b27372cef9d23761f648bcbaa431448ce7
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '943'
 ht-degree: 14%
 
 ---
@@ -29,6 +29,11 @@ Real-time Customer Data Platform 및 Adobe Journey Optimizer용으로 설계된 
 ## 개발 샌드박스 만들기 {#create-development-sandbox}
 
 사용 사례 플레이북은 특수한 유형의 개발 샌드박스를 사용합니다. [[!UICONTROL 사용 사례 플레이북]](/help/use-case-playbooks/playbooks/overview.md) 기능을 시작하고 액세스하려면 아래와 같이 접미사에 `-ucp` 또는 `-UCP`가 포함된 이름(제목이 아닌)으로 [새 개발 샌드박스를 만듭니다](/help/sandboxes/ui/user-guide.md#create)(프로덕션 샌드박스는 선택하지 않음).
+
+>[!IMPORTANT]
+>
+>새 개발 샌드박스를 생성할 때 이름에 이 포함되어 있는지 확인합니다. `-ucp` 또는 `-UCP` 접미사.
+
 
 ![사용 사례 플레이북을 위한 개발 샌드박스 생성](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
