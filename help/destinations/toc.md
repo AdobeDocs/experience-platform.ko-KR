@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: 1d8ba11b1043fa68bf3c0205e8cecc2de8910234
+source-git-commit: ed3d672c2f6c06259c341c87451d049d00a41268
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1194'
 ht-degree: 5%
 
 ---
@@ -166,6 +166,7 @@ ht-degree: 5%
       * [Moengage 연결](./catalog/mobile-engagement/moengage.md)
    * 개인화 대상 {#personalization}
       * [개인화 대상 개요](./catalog/personalization/overview.md)
+      * [(제한된 가용성) 대상 분석](./catalog/personalization/audience-analysis.md)
       * [Adobe Commerce 연결](./catalog/personalization/adobe-commerce.md)
       * [Adobe Target 연결](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 확장](./catalog/personalization/adobe-target.md)
