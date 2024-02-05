@@ -3,7 +3,7 @@ title: 파트너가 제공한 속성으로 자사 프로필 보완
 description: 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선하는 방법에 대해 알아봅니다.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 79%
@@ -30,7 +30,7 @@ Adobe은 한 가지 방법으로 모든 요구 사항을 충족할 수 있는 �
 
 예를 들어 인구 통계학적 및 의도 신호로 고객 레코드를 보강해야 하는 경우 이 사용 사례에 설명된 단계를 따릅니다.
 
-## 전제 조건 및 계획 {#prerequisites-and-planning}
+## 전제 조건 및 계획
 
 데이터 파트너의 속성으로 자사 프로필의 보완을 고려할 때 데이터 파트너와 데이터 보강 루프에 대한 다음 세부 정보를 논의하고 해결해야 합니다.
 
