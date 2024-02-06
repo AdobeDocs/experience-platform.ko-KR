@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 1월
 description: Adobe Experience Platform의 2024년 1월 릴리스 정보.
-source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 27%
+source-wordcount: '1655'
+ht-degree: 29%
 
 ---
 
@@ -25,6 +25,7 @@ Experience Platform의 기존 기능 업데이트:
 - [ID 서비스](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [실시간 고객 프로필](#profile)
+- [Segmentation Service](#segmentation)
 - [소스](#sources)
 
 ## 사용 사례 플레이북 {#use-case-playbooks}
@@ -155,6 +156,21 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 {style="table-layout:auto"}
 
 실시간 고객 프로필에 대한 자세한 내용은 [프로필 개요](../../profile/home.md)
+
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service]는 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 프로필의 특정 하위 집합을 정의합니다. 세그먼트는 기록 데이터(예: 인구 통계 정보) 또는 고객과 브랜드의 상호 작용을 나타내는 시계열 이벤트를 기반으로 할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 외부에서 생성된 대상 업로드 | 최대 열 수를 (으)로 늘렸습니다. **25**. |
+| 세그먼트 빌더 추정치 | 이제 예상 및 적격 프로필이 대상 속성 섹션에 표시됩니다. 이 변경 사항에 대한 자세한 내용은 [세그먼트 빌더 UI 안내서](../../segmentation/ui/segment-builder.md). |
+
+{style="table-layout:auto"}
+
+[!DNL Segmentation Service]에 대한 자세한 내용은 [세분화 개요](../../segmentation/home.md)를 참조하십시오.
 
 ## 소스 {#sources}
 
