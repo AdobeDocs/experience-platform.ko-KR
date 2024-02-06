@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK 명령 실행
 description: Experience Platform 웹 SDK 명령을 실행하는 방법에 대해 알아봅니다
 keywords: 명령 실행;commandName;약속;getLibraryInfo;응답 개체;동의;
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
-source-git-commit: f3344c9c9b151996d94e40ea85f2b0cf9c9a6235
+source-git-commit: ffc60e83285188bc5b0f6eb7a20fafee16d51d4d
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 2%
+source-wordcount: '405'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +35,7 @@ alloy("commandName", options);
 alloy("commandName", options)
   .then(function(result) {
     // The command succeeded.
-    // "value" is whatever the command returned
+    // "result" is whatever the command returned
   })
   .catch(function(error) {
     // The command failed.
