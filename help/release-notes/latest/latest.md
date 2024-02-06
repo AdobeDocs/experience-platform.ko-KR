@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
-description: Adobe Experience Platform의 2024년 1월 릴리스 정보.
+description: Adobe Experience Platform의 2024년 1월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '1653'
+source-wordcount: '1657'
 ht-degree: 30%
 
 ---
@@ -181,8 +181,8 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative}[!DNL Oracle NetSuite] 소스 | 사용 [!DNL Oracle NetSuite] 소스 카탈로그의 통합을 통해 다음에서 데이터 가져오기 [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) 및 [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) Experience Platform 계정. |
-| [!BADGE Beta]{type=Informative}[!DNL Braze Currents] 소스 | 사용 [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) 소스 카탈로그의 통합을 통해 다음에서 데이터 가져오기 [!DNL Braze] Experience Platform 계정. |
+| [!BADGE 베타]{type=Informative} [!DNL Oracle NetSuite] 소스 | 사용 [!DNL Oracle NetSuite] 소스 카탈로그의 통합을 통해 다음에서 데이터 가져오기 [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) 및 [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) Experience Platform 계정. |
+| [!BADGE 베타]{type=Informative} [!DNL Braze Currents] 소스 | 사용 [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) 소스 카탈로그의 통합을 통해 다음에서 데이터 가져오기 [!DNL Braze] Experience Platform 계정. |
 | 에 대한 키 쌍 인증 지원 [!DNL Snowflake] 일괄 처리 소스 | 이제 새로 만들 때 키 쌍 인증을 사용할 수 있습니다 [!DNL Snowflake] 배치 데이터 계정. 자세한 내용은 의 안내서를 참조하십시오. [만들기 [!DNL Snowflake] API를 사용하는 계정](../../sources/tutorials/api/create/databases/snowflake.md) 또는 의 안내서 [만들기 [!DNL Snowflake] UI를 사용하는 계정](../../sources/tutorials/ui/create/databases/snowflake.md). |
 
 {style="table-layout:auto"}
