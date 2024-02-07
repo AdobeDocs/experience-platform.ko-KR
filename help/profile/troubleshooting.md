@@ -4,9 +4,9 @@ title: 실시간 고객 프로필 문제 해결 안내서
 type: Documentation
 description: 이 문서에서는 실시간 고객 프로필에 대해 자주 묻는 질문에 대한 답변과 Adobe Experience Platform을 사용하여 프로필 데이터 작업 시 발생하는 일반적인 오류에 대한 문제 해결 안내서를 제공합니다.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
@@ -122,18 +122,6 @@ Experience Platform UI에서 **[!UICONTROL 찾아보기]** 의 탭 **[!UICONTROL
 ```
 
 이 오류는 프로필 데이터에 대한 삭제 요청을 만들 때 유효한 일괄 처리를 찾을 수 없을 때 발생합니다. 프로필 사용 데이터 세트에 대한 올바른 ID를 입력했는지 확인한 후 다시 시도하십시오.
-
-### 프로젝션 대상이 아직 생성되지 않았습니다.
-
-```json
-{
-  "status":404,
-  "title":"The projection destination has not yet been created.",
-  "type":"http://ns.adobe.com/adobecloud/problem/missing-entity"
-}
-```
-
-이 오류는 다음 경우에 발생합니다. `destinationId` 에 제공됨 `POST /config/projections` 요청이 잘못되었습니다. 유효한 대상 ID를 입력했는지 다시 한 번 확인하십시오. 새 대상을 만들려면 다음에 설명된 단계를 수행합니다. [프로필 개발자 안내서](./api/edge-projections.md#create-a-destination).
 
 ### 지원되지 않는 미디어 유형
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 실시간 고객 프로필 API 안내서
 description: 실시간 고객 프로필 API를 통해 개발자는 프로필 보기, 병합 정책 만들기 및 업데이트, 프로필 데이터 내보내기 또는 샘플, 더 이상 필요하지 않거나 오류로 추가된 프로필 데이터 삭제 등을 포함하여 프로필 데이터를 탐색하고 작업할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '881'
 ht-degree: 1%
 
 ---
@@ -31,10 +31,6 @@ ht-degree: 1%
 계산된 각 속성에는 들어오는 데이터를 평가하고 결과 값을 프로필 속성에 저장하는 표현식 또는 &quot;규칙&quot;이 포함됩니다. 이러한 계산을 통해 정보가 필요할 때마다 복잡한 계산을 수동으로 수행하지 않고도 수명 기간 내 구매 가격, 구매 간격 또는 응용 프로그램 열기 수와 같은 질문과 관련된 질문에 쉽게 답변할 수 있습니다. 그런 다음 이러한 계산된 속성 값을 프로필에서 보거나, 대상자를 만드는 데 사용하거나, 여러 다른 액세스 패턴을 통해 액세스할 수 있습니다.
 
 다음을 사용하여 계산된 속성을 작성, 보기, 편집 및 삭제할 수 있습니다. `ca/attributes/` 엔드포인트. 계산된 속성을 사용하는 방법에 대해 알아보려면 다음을 참조하십시오. [계산된 속성 개요](../computed-attributes/overview.md). API 작업은 다음을 참조하십시오. [계산된 속성 API 끝점 안내서](../computed-attributes/api.md).
-
-## 가장자리 투영 {#edge-projections}
-
-Adobe Experience Platform은 전략적으로 위치한 서버인 &quot;에지&quot;에서 데이터에 쉽게 액세스할 수 있도록 함으로써 고객 경험의 실시간 개인화를 지원합니다. 다음 [!DNL Real-Time Customer Profile] API는 &quot;예측&quot;이라는 구성 요소를 통해 에지 작업을 위한 끝점을 제공합니다. 여기에는 각 에지에 투영해야 하는 데이터를 결정하는 투영 구성과 투영을 라우팅할 위치를 정의하는 투영 대상이 포함됩니다. Edge 프로젝션을 사용한 작업에 대한 자세한 내용은 [투영 구성 및 대상 끝점 안내서](edge-projections.md).
 
 ## 엔티티([!DNL Profile] 액세스) {#entities}
 
