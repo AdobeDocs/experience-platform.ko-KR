@@ -6,8 +6,8 @@ description: 이 문서에서는 Adobe Experience Platform 사용자 인터페�
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 7%
+source-wordcount: '940'
+ht-degree: 5%
 
 ---
 
@@ -126,7 +126,7 @@ Experience Platform에서 샌드박스를 사용하는 방법에 대한 빠른 �
 
 샌드박스 목록에서 삭제할 샌드박스를 선택합니다. 표시되는 오른쪽 탐색 패널에서 을 선택합니다. **[!UICONTROL 삭제]**.
 
-![delete](../images/ui/delete.png)
+![삭제](../images/ui/delete.png)
 
 선택을 확인하는 대화 상자가 나타납니다. 선택 **[!UICONTROL 계속]** 계속합니다.
 

@@ -11,7 +11,7 @@ ht-degree: 8%
 
 ---
 
-# UI에서 스키마 필드 그룹 생성 및 편집 {#ui-create-and-edit}
+# UI에서 스키마 필드 그룹 만들기 및 편집 {#ui-create-and-edit}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_filter"

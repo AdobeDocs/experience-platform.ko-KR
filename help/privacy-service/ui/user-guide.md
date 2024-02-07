@@ -6,8 +6,8 @@ description: Privacy Service 사용자 인터페이스를 사용하여 다양한
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
-source-wordcount: '1475'
-ht-degree: 15%
+source-wordcount: '1456'
+ht-degree: 14%
 
 ---
 

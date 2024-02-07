@@ -100,7 +100,7 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 �
 
 ![일정 팝업](../../images/tutorials/update-dataflows/schedule-pop-up.png)
 
-### 검토
+### 리뷰
 
 다음 **[!UICONTROL 리뷰]** 데이터 흐름이 업데이트되기 전에 검토할 수 있는 단계가 나타납니다.
 

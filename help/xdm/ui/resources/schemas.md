@@ -6,7 +6,7 @@ description: Experience Platform 사용자 인터페이스에서 스키마를 �
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
-source-wordcount: '3670'
+source-wordcount: '3671'
 ht-degree: 2%
 
 ---
@@ -191,7 +191,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 ![표준 필드 추가됨](../../images/ui/resources/schemas/standard-field-added.png)
 
-### 사용자 지정 필드 추가 {#add-custom-fields}
+### 사용자 정의 필드 추가 {#add-custom-fields}
 
 표준 필드의 워크플로우와 마찬가지로 사용자 정의 필드를 스키마에 직접 추가할 수도 있습니다.
 

@@ -4,8 +4,8 @@ description: Adobe Experience Platform UI를 사용하여 Mixpanel 소스 연결
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 11%
+source-wordcount: '797'
+ht-degree: 10%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 11%
 | 사용자 이름 | 에 해당하는 서비스 계정 사용자 이름 [!DNL Mixpanel] 계정입니다. 다음을 참조하십시오. [[!DNL Mixpanel] 서비스 계정 설명서](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) 추가 정보. | `Test8.6d4ee7.mp-service-account` |
 | 암호 | 에 해당하는 서비스 계정 암호 [!DNL Mixpanel] 계정입니다. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
 | 프로젝트 ID | 사용자 [!DNL Mixpanel] 프로젝트 ID. 이 ID는 소스 연결을 만드는 데 필요합니다. 다음을 참조하십시오. [[!DNL Mixpanel] 프로젝트 설정 설명서](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) 및 [[!DNL Mixpanel] 프로젝트 만들기 및 관리에 대한 안내서](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) 추가 정보. | `2384945` |
-| 표준 시간대 | 에 해당하는 시간대 [!DNL Mixpanel] 프로젝트. 소스 연결을 만들려면 시간대가 필요합니다. 다음을 참조하십시오. [Mixpanel 프로젝트 설정 설명서](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) 추가 정보. | `Pacific Standard Time` |
+| 시간대 | 에 해당하는 시간대 [!DNL Mixpanel] 프로젝트. 소스 연결을 만들려면 시간대가 필요합니다. 다음을 참조하십시오. [Mixpanel 프로젝트 설정 설명서](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) 추가 정보. | `Pacific Standard Time` |
 
 인증에 대한 자세한 내용 [!DNL Mixpanel] source, 다음 참조: [[!DNL Mixpanel] 소스 개요](../../../../connectors/analytics/mixpanel.md).
 

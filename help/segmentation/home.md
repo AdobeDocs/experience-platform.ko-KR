@@ -5,7 +5,7 @@ description: Adobe Experience Platform 세분화 서비스 및 플랫폼 생태�
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1627'
 ht-degree: 14%
 
 ---
@@ -16,7 +16,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트 정의나
 
 이 문서에서는 다음에 대한 개요를 제공합니다. [!DNL Segmentation Service] 그리고 Adobe Experience Platform에서 수행하는 역할입니다.
 
-## 시작하기 [!DNL Segmentation Service]
+## [!DNL Segmentation Service] 시작하기
 
 이 문서 전체에서 사용되는 다음 주요 용어를 이해해야 합니다.
 

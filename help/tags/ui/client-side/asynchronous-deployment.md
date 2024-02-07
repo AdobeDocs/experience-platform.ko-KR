@@ -4,8 +4,8 @@ description: 웹 사이트에 Adobe Experience Platform 태그 라이브러리�
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 61%
+source-wordcount: '1045'
+ht-degree: 59%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 61%
 
 ### 비동기 배포
 
-`<script>`태그에 `async` 속성을 추가하여 모든 라이브러리를 비동기적으로 로드할 수 있습니다. 예:
+를 추가하여 모든 라이브러리를 비동기식으로 로드할 수 있습니다. `async` 속성 `<script>` 태그에 가깝게 배치하십시오. 예:
 
 ```markup
 <script src="example.js" async></script>
