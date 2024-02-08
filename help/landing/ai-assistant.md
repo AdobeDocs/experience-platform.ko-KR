@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: a0395c4d3514693d3200571496eff47768da52ba
+source-git-commit: 5bdfc5282e71d05ff0db39c32fc02c60fd8d1c34
 workflow-type: tm+mt
-source-wordcount: '2183'
+source-wordcount: '2383'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >Adobe Experience Platform용 도우미는 현재 Alpha 중입니다. 기능 및 설명서는 변경될 수 있습니다.
 
-Adobe Experience Platform용 도우미는 Experience Platform 및 Real-time Customer Data Platform 개념과 개체에 대한 사용 정보를 탐색하고 이해하는 데 사용할 수 있는 UI 기능입니다.
+도우미는 개체에 대한 Adobe Experience Platform 및 Real-time Customer Data Platform 개념과 사용 정보를 탐색하고 이해하는 데 사용할 수 있는 UI 기능입니다.
 
 Assistant에서 다음과 같은 정보를 쿼리할 수 있습니다.
 
@@ -26,7 +26,7 @@ Assistant에서 다음과 같은 정보를 쿼리할 수 있습니다.
 * 조직 내 기존 데이터 객체의 상태 및 지표.
 * 속성, 데이터 세트, 대상, 스키마, 세그먼트 및 소스를 비롯한 데이터 개체를 더 잘 이해하려면 사례 예제와 뉘앙스를 사용하십시오.
 
-이 문서에서는 Assistant에 액세스하고 이를 사용하여 Experience Platform 및 Real-Time CDP 개념에 대한 질문을 하고 답변을 받는 방법에 대해 설명합니다.
+아래 안내서를 읽고 Assistant를 사용하여 Experience Platform 및 Real-Time CDP 워크플로를 탐색하고 이해하는 방법에 대해 알아보십시오.
 
 >[!BEGINSHADEBOX]
 
@@ -55,35 +55,31 @@ Assistant를 쿼리하기 전에 고려해야 할 두 가지 질문 클래스가
 
 >[!ENDSHADEBOX]
 
-## UI의 Experience Platform을 위한 액세스 지원
+## Experience Platform UI의 Access Assistant
 
-Experience Platform UI의 헤더 탐색에서 도우미에 액세스할 수 있습니다.
+길잡이를 시작하려면 다음을 선택합니다. **[!UICONTROL Assistant 아이콘]** Experience Platform UI의 상단 헤더에서
 
-다음 항목 선택 **[!UICONTROL Assistant 아이콘]** 헤더에서 [길잡이] 패널로 이동합니다.
+![Assistant 아이콘이 선택되고 Assistant 인터페이스가 열려 있는 Experience Platform 홈 페이지.](./images/ai-assistant/ai-assistant.png)
 
-![도우미 아이콘이 있는 Experience Platform UI 홈 페이지가 선택되었습니다.](./images/ai-assistant/ai-assistant.png)
+Assistant 인터페이스가 나타나고 시작하기 위한 정보가 즉시 제공됩니다. 아래에 제공된 옵션을 사용할 수 있습니다. [!UICONTROL 시작하기 위한 아이디어] 다음과 같은 질문과 명령에 답변하려면
 
-<!-- +++Use immersive mode
+* [!UICONTROL 내 세그먼트 중 어떤 세그먼트가 활성화됩니까?]
+* [!UICONTROL 스키마란?]
+* [!UICONTROL Real-Time CDP의 일반적인 사용 사례 설명]
 
-To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
+![길잡이의 &quot;시작하기 위한 아이디어&quot; 섹션.](./images/ai-assistant/ideas-to-get-started.png)
 
-![select-immersive](./images/ai-assistant/select-immersive.png)
+Assistant와 상호 작용하려면 입력 상자를 사용하여 쿼리 또는 명령을 입력합니다. (**`+`**) 자동 완성 기능과 책갈피 아이콘을 사용하여 책갈피가 지정된 쿼리 및 명령에 액세스할 수 있는 기호를 제공합니다.
 
-A dedicated pop-up interface for Assistant appears at the center of your screen.
+![길잡이 입력 상자가 강조 표시됩니다.](./images/ai-assistant/interact.png)
 
-![immersive-mode](./images/ai-assistant/immersive-mode.png)
-
-+++
-
-From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
-
-### 예제 사용 사례: 스키마 생성 프로세스를 간소화하기 위해 Assistant 사용 {#example-use-case}
+## 사용 사례 예: Assistant를 사용하여 스키마 생성 프로세스 가속화
 
 >[!NOTE]
 >
->다음 예제 워크플로에서는 ExperienceEvent 스키마 생성 프로세스를 사용하여 Experience Platform UI 사용 시 도우미를 사용하는 방법을 보여 줍니다.
+>다음 워크플로우는 경험 이벤트 스키마 생성 프로세스를 사용하여 Experience Platform UI 사용 시 도우미를 사용하는 방법을 설명하는 예제입니다.
 
-를 만드는 사용 사례를 고려하십시오. **이벤트 스키마의 디바이스 거래**. ExperienceEvent 스키마 생성 프로세스 중에 `eventType` 필드. 이 시점에서 워크플로우를 종료하고 의 설명서를 참조할 수 있습니다. [스키마 컴포지션 기본 사항](../xdm/schema/composition.md)또는 Assistant를 사용하여 질문에 대한 즉각적인 답변을 검색할 수 있습니다.
+를 만드는 사용 사례를 고려하십시오. **이벤트 스키마의 디바이스 거래**. 경험 이벤트 스키마 생성 프로세스 중에 `eventType` 필드. &quot;이 시점에서 워크플로를 종료하고 [스키마 컴포지션 기본 사항](../xdm/schema/composition.md) 또는 Assistant를 사용하여 질문에 대한 답변을 검색하고 Assistant가 권장하는 설명서 링크를 통해 추가 리소스를 찾을 수 있습니다.&quot;
 
 시작하려면 제공된 텍스트 상자에 질문을 입력합니다. 아래 예제에서 도우미에게 &quot; 라는 질문이 제공됩니다.**ExperienceEvent 스키마의 eventType 필드는 무엇입니까?**&quot;
 
@@ -91,49 +87,61 @@ From here, you can input your question in the text box and query Assistant for c
 
 그런 다음 Assistant는 기술 자료를 쿼리하고 답을 계산합니다. 잠시 후 도우미는 후속 프롬프트로 사용할 수 있는 답변 및 관련 제안을 반환합니다.
 
-지정된 답변은 참조된 엔티티에 대한 하이퍼링크를 제공합니다. 아래 예에서 **[!UICONTROL 스키마]** 참조된 스키마 목록을 보려면 **[!UICONTROL 세그먼트]** 참조된 세그먼트 목록을 봅니다.
-
 ![이전 쿼리에 대한 답변이 있는 Experience Platform 도우미입니다.](./images/ai-assistant/answer.png)
 
-Assistant는 해당 소스를 보고 대답을 확인할 수 있는 방법을 제공합니다. 개념 질문에는 설명서 링크가 제공되며, 답변이 계산된 방식을 보여 주는 SQL 쿼리를 통해 데이터 사용 질문을 확인할 수 있습니다.
+길잡이에서 응답을 받은 후 여러 옵션 중에서 선택하여 진행할 방법을 결정할 수 있습니다.
 
-![답변을 반환한 후 도우미가 제공하는 옵션.](./images/ai-assistant/options.png)
+### 쿼리 저장 {#save-your-query}
 
-### 후속 질문 {#follow-up-question}
++++쿼리 저장 방법의 예를 보려면 선택
 
-+++추가 질문의 예를 보려면 선택
+쿼리를 저장하려면 질문 옆에 있는 책갈피 아이콘을 선택합니다.
 
-후속 질문을 통해 특정 주제에 대해 자세히 알아볼 수 있습니다. 다음 예제에서는 eventType 을 세그먼테이션에서 사용하는 방법에 대해 도우미에게 묻습니다.
+![선택한 책갈피의 스크린샷입니다.](./images/ai-assistant/save-your-query.png)
 
-![Experience Platform 도우미에 표시되는 후속 질문 및 답변입니다.](./images/ai-assistant/follow-up-question.png)
+저장된 쿼리에 액세스하려면 입력 상자 아래의 책갈피 아이콘을 선택한 다음 실행할 쿼리를 선택합니다.
 
-+++
-
-### 데이터 사용 질문 {#data-usage-question}
-
-+++데이터 사용 질문의 예를 보려면 선택
-
-데이터 사용과 관련하여 길잡이에게 질문할 수도 있습니다. 데이터 사용에 대해 문의할 때 도우미가 질문에 답변하려면 활성 샌드박스에 있어야 합니다.
-
-데이터 사용 정보가 포함된 응답의 경우 도우미에서 해당 엔터티에 대한 링크를 제공합니다. 또한 Assistant는 해당 답을 계산하는 방법에 대한 설명을 제공합니다.
-
-![사용자에게 있는 세그먼트 수를 묻는 데이터 사용 질문입니다.](./images/ai-assistant/data-usage-question.png)
+![책갈피 아이콘 및 저장된 쿼리 목록의 스크린샷입니다.](./images/ai-assistant/bookmarks.png)
 
 +++
 
-### 멀티턴 {#multi-turn}
+### 샌드박스에서 데이터 보기 {#view-data-in-your-sandbox}
 
-+++다중 회전의 예를 보려면 선택
++++예를 보려면 선택
 
-Assistant의 멀티턴 기능을 사용하여 경험 중에 보다 자연스러운 대화를 나눌 수 있습니다. 조수는 앞선 상호 작용에서 맥락을 유추할 수 있다는 점을 감안할 때 후속 질문에 답할 수 있다.
+쿼리에 따라 Assistant는 샌드박스의 데이터와 관련된 추가 정보를 제공합니다. 쿼리에 대한 응답이 샌드박스에 어떻게 적용되는지 보려면 을 선택합니다. **[!UICONTROL 샌드박스에서].**
 
-아래 예에서 도우미는 총 세그먼트 수에 대한 이전 쿼리의 후속 작업으로 조직의 기존 세그먼트를 나열하라는 요청을 받습니다.
+이 단계 동안 도우미는 해당 특정 오브젝트의 UI 페이지로 직접 연결되는 링크를 제공할 수 있습니다. 아래 예에서 도우미는 [!UICONTROL 스키마] 및 [!UICONTROL 세그먼트] UI 페이지.
 
-![](./images/ai-assistant/multi-turn-one.png)
+![&quot;샌드박스에서&quot; 옵션의 스크린샷입니다.](./images/ai-assistant/in-your-sandbox.png)
 
-그런 다음 Assistant가 다른 후속 요청을 받습니다. 이번에는 Assistant가 해당 크기별로 정렬된 기존 세그먼트를 나열하여 응답합니다.
++++
 
-![](./images/ai-assistant/multi-turn-two.png)
+### 응답 확인 {#verify-the-response}
+
++++소스 표시 방법의 예를 보려면 선택
+
+인용을 보고 길잡이의 응답을 확인하려면 다음을 선택합니다. **[!UICONTROL 소스 표시]**. Assistant는 해당 응답을 확증하는 설명서에 대한 링크를 제공합니다. Assistant에서 제공하는 쿼리를 사용할 수도 있습니다. [!UICONTROL 관련 제안] 원본 쿼리와 관련된 항목을 더 자세히 살펴보십시오.
+
+![&quot;소스 표시&quot;의 스크린샷.](./images/ai-assistant/show-sources.png)
+
++++
+
+### 데이터 사용 및 시각화 {#data-usage-and-visualization}
+
++++데이터 사용 질문 및 데이터 시각화의 예를 보려면 선택
+
+데이터 사용에 대해 도우미에게 문의할 수 있습니다. Assistant가 조직의 데이터에 대한 데이터 사용 질문에 답변하려면 활성 샌드박스에 있어야 합니다.
+
+![데이터 사용에 대한 추가 질문입니다.](./images/ai-assistant/data-usage-question.png)
+
+데이터 사용 질문을 묻는 메시지가 표시되면 도우미에서 답변을 계산하는 방법에 대한 설명도 제공합니다. 아래 예에서 Assistant는 1000개가 넘는 프로필과 각각의 활성화 상태가 있는 세그먼트를 표시하기 위해 수행한 단계를 간략하게 설명합니다.
+
+![Assistant가 답변을 계산하는 방법을 보여 주는 세그먼트에 대한 후속 질문입니다.](./images/ai-assistant/results-explained.png)
+
+또한 Assistant는 차트를 렌더링하여 데이터를 시각화합니다. 쿼리에 필터 및 수정 사항을 제공할 수도 있으며, 포함된 필터를 기반으로 검색 결과를 렌더링하도록 도우미를 지시할 수도 있습니다. 예를 들어 도우미에게 생성된 날짜 순서로 카운트 세그먼트의 트렌드를 보여 달라고 요청하고, 총 프로필이 0인 세그먼트를 제거하고, 데이터를 표시할 때 정수 대신 월 이름을 사용할 수 있습니다.
+
+![데이터 시각화를 보여 주는 후속 질문입니다.](./images/ai-assistant/data-visualization.png)
 
 +++
 
@@ -143,13 +151,29 @@ Assistant의 멀티턴 기능을 사용하여 경험 중에 보다 자연스러�
 
 자동 완성 기능을 사용하여 샌드박스에 있는 데이터 객체 목록을 수신할 수 있습니다. 세그먼트, 스키마, 데이터 세트, 소스 및 대상 도메인에서 자동 완성 권장 사항을 사용할 수 있습니다.
 
-자동 완성을 사용하려면 더하기 기호(**`+`**)을 참조하십시오. 또는 더하기 기호(**`+`**)을 클릭하여 텍스트 입력 상자에 추가합니다. 그러면 샌드박스에 있는 권장 데이터 객체 목록이 표시된 창이 나타납니다.
+더하기 기호()를 포함하여 자동 완성을 사용할 수 있습니다&#x200B;**`+`**)을 클릭하여 검색할 수 있습니다. 또는 더하기 기호(**`+`**)를 입력합니다. 샌드박스의 권장 데이터 개체 목록이 표시된 창이 나타납니다.
 
-![](./images/ai-assistant/autocomplete-options.png)
+![자동 완성의 예](./images/ai-assistant/auto-complete-one.png)
 
 그런 다음 쿼리할 데이터 개체를 선택하여 질문을 완료한 다음 질문을 제출합니다.
 
-![](./images/ai-assistant/autocomplete-question.png)
+![질문 및 답변이 포함된 자동 완성의 예](./images/ai-assistant/auto-complete-two.png)
+
++++
+
+### 멀티턴 사용 {#use-multi-turn}
+
++++다중 회전의 예를 보려면 선택
+
+Assistant의 멀티턴 기능을 사용하여 경험 중에 보다 자연스러운 대화를 나눌 수 있습니다. 주어진 후속 질문에 보조자가 답변할 수 있습니다. 그 맥락은 이전의 상호 작용으로부터 추론될 수 있다.
+
+아래 예에서 Assistant는 현재 조직의 총 데이터 흐름 수에 대해 질문을 받습니다.
+
+![다중 회전의 예](./images/ai-assistant/multi-turn-one.png)
+
+그런 다음 Assistant가 또 다른 후속 요청을 받습니다. 이번에는 Assistant가 현재 조직에 있는 데이터 흐름을 나열하여 응답합니다.
+
+![질문과 대답이 있는 다중 회전의 예](./images/ai-assistant/multi-turn-two.png)
 
 +++
 
@@ -195,18 +219,6 @@ Assistant의 멀티턴 기능을 사용하여 경험 중에 보다 자연스러�
 | 오브젝트 조회 | Experience Platform 개체 또는 해당 속성을 검색하거나 액세스합니다. | <ul><li>연관된 스키마가 없는 데이터 세트</li><li>에 사용된 속성 나열 {SEGMENT_NAME}?</li><li>프로필이 활성화되었지만 생성 이후 수정되지 않은 스키마 목록을 제공합니다.</li><li>지난 주에 수정된 세그먼트는 무엇입니까?</li><li>세그먼트 정의가 같은 세그먼트를 만든 날짜와 함께 나열합니다.</li><li>프로필이 활성화된 데이터 세트이며 각 데이터 세트에서 생성된 세그먼트 수를 포함합니다.</li><li>데이터 세트 XYZ와 연관된 소스 계정은 무엇입니까?</li><li>다음의 세그먼트 정의 및 수정 날짜 표시 {SEGMENT_NAME}.</li></ul> |
 
 +++
-
-## 응답 확인 {#verify-the-response}
-
-다양한 방법을 사용하여 길잡이가 반환하는 응답을 확인할 수 있습니다.
-
-### 설명서 인용 {#citations}
-
-모든 응답과 함께 도우미는 확인 또는 더 많은 정보를 위해 참조할 수 있는 인용구를 제공합니다.
-
-선택 **[!UICONTROL 소스 표시]** 길잡이가 응답을 계산하기 위해 참조하는 설명서 링크 목록. 참조된 설명서에 대한 링크를 선택하면 특정 정보가 강조 표시된 해당 특정 페이지의 관련 섹션으로 이동합니다.
-
-![도우미에 표시되는 소스에 대한 링크입니다.](./images/ai-assistant/show-sources.png)
 
 ## 피드백 제공 {#feedback}
 
