@@ -2,9 +2,9 @@
 title: 샌드박스 도구 패키지 API 끝점
 description: 샌드박스 도구 API의 /packages 끝점을 사용하면 Adobe Experience Platform에서 패키지를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1531'
 ht-degree: 6%
 
 ---
@@ -134,7 +134,7 @@ curl -X PUT \
   }'
 ```
 
-| 속성 | 설명 | 유형 | 필수입니다 |
+| 속성 | 설명 | 유형 | 필수 |
 | --- | --- | --- | --- |
 | `id` | 업데이트할 패키지의 ID입니다. | 문자열 | 예 |
 | `action` | 패키지에 아티팩트를 추가하려면 작업 값이 다음과 같아야 합니다. **추가**. 이 작업은 다음에 대해서만 지원됩니다. **부분** 패키지 유형. | 문자열 | 예 |
@@ -213,7 +213,7 @@ curl -X PUT \
   }'
 ```
 
-| 속성 | 설명 | 유형 | 필수입니다 |
+| 속성 | 설명 | 유형 | 필수 |
 | --- | --- | --- | --- |
 | `id` | 업데이트할 패키지의 ID입니다. | 문자열 | 예 |
 | `action` | 패키지에서 객체를 삭제하려면 작업 값은 다음과 같아야 합니다. **DELETE**. 이 작업은 다음에 대해서만 지원됩니다. **부분** 패키지 유형. | 문자열 | 예 |
@@ -288,7 +288,7 @@ curl -X PUT \
   }'
 ```
 
-| 속성 | 설명 | 유형 | 필수입니다 |
+| 속성 | 설명 | 유형 | 필수 |
 | --- | --- | --- | --- |
 | `id` | 업데이트할 패키지의 ID입니다. | 문자열 | 예 |
 | `action` | 패키지의 메타데이터 필드를 업데이트하려면 작업 값이 다음과 같아야 합니다. **업데이트**. 이 작업은 다음에 대해서만 지원됩니다. **부분** 패키지 유형. | 문자열 | 예 |
@@ -391,7 +391,7 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
-| 속성 | 설명 | 유형 | 필수입니다 |
+| 속성 | 설명 | 유형 | 필수 |
 | --- | --- | --- | --- |
 | `expiryPeriod` | 이 사용자가 지정한 기간은 패키지가 게시된 시점부터 패키지 만료 날짜(일)를 정의합니다. 이 값은 음수가 아니어야 합니다.<br> 값을 지정하지 않으면 기본값은 게시일로부터 90일(일)로 계산됩니다. | 정수 | 아니요 |
 
@@ -747,11 +747,11 @@ POST /packages/import
 
 **요청**
 
-다음 요청은 를 사용하여 패키지를 검색합니다. {PACKAGE_ID} 을(를) 입력했습니다. 페이로드는 항목이 존재하는 경우 키가 인 대체 맵입니다. `artifactId` 패키지에서 제공하며 그 대안은 값입니다. 맵 또는 페이로드가 **비어 있음**: 대체가 수행되지 않습니다.
+다음 요청은 가져올 패키지를 검색합니다. 페이로드는 항목이 존재하는 경우 키가 인 대체 맵입니다. `artifactId` 패키지에서 제공하며 그 대안은 값입니다. 맵 또는 페이로드가 **비어 있음**: 대체가 수행되지 않습니다.
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/import/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -773,9 +773,8 @@ curl -X POST \
   }'
 ```
 
-| 속성 | 설명 | 유형 | 필수입니다 |
+| 속성 | 설명 | 유형 | 필수 |
 | --- | --- | --- | --- |
-| `id` | 패키지의 ID입니다. | 문자열 | 예 |
 | `alternatives` | `alternatives` 소스 샌드박스 아티팩트와 기존 타겟 샌드박스 아티팩트의 매핑을 나타냅니다. 이미 존재하기 때문에 가져오기 작업은 대상 샌드박스에서 이러한 아티팩트를 생성하지 않습니다. | 문자열 | 아니요 |
 
 **응답**
