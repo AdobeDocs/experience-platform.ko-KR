@@ -2,22 +2,18 @@
 title: Google 데이터 레이어 확장
 description: Adobe Experience Platform의 Google 클라이언트 데이터 레이어 태그 확장에 대해 알아봅니다.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 9c608f69f6ba219f9cb4e938a77bd4838158d42c
+source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
 workflow-type: tm+mt
-source-wordcount: '867'
-ht-degree: 1%
+source-wordcount: '937'
+ht-degree: 0%
 
 ---
 
 # Google 데이터 레이어 확장
 
-Google 데이터 레이어 확장을 사용하면 태그 구현에서 Google 데이터 레이어를 사용할 수 있습니다. 확장은 Google 솔루션 및 Google 오픈 소스와 독립적으로 또는 동시에 사용할 수 있습니다 [데이터 레이어 도우미 라이브러리](https://github.com/google/data-layer-helper).
+Google 데이터 레이어 확장을 사용하면 Tags 구현에서 Google 데이터 레이어를 사용할 수 있습니다. 확장은 Google 솔루션 및 Google 오픈 소스와 독립적으로 또는 동시에 사용할 수 있습니다 [데이터 레이어 도우미 라이브러리](https://github.com/google/data-layer-helper).
 
-도우미 라이브러리는 ACDL(Adobe 클라이언트 데이터 레이어)과 유사한 이벤트 기반 기능을 제공합니다. Google 데이터 레이어 확장의 데이터 요소, 규칙 및 작업은 의 기능과 유사한 기능을 제공합니다. [ACDL 확장](../client-data-layer/overview.md).
-
-## 완성도
-
-버전 1.2.x는 프로덕션 사용 중인 최신 베타입니다.
+도우미 라이브러리는 ACDL(Adobe 클라이언트 데이터 레이어)에 유사한 이벤트 기반 기능을 제공합니다. Google 데이터 레이어 확장의 데이터 요소, 규칙 및 작업은 의 기능과 유사한 기능을 제공합니다. [ACDL 확장](../client-data-layer/overview.md).
 
 ## 설치
 
@@ -44,13 +40,22 @@ Google 데이터 레이어 확장을 사용하면 태그 구현에서 Google 데
 > - JavaScript 이벤트.
 > - 를 사용하여 데이터 레이어로 푸시된 데이터 _이벤트_ 키워드.
 
-
 확장은 데이터 레이어에서 변경 사항을 수신 대기할 수 있는 기능을 제공합니다.
 
 >[!NOTE]
 >
 >의 사용을 이해하는 것이 중요합니다. _이벤트_ 키워드 : 데이터가 Adobe 클라이언트 데이터 레이어와 유사하게 Google 데이터 레이어에 푸시될 때. 다음 _이벤트_ 키워드는 Google 데이터 레이어 및 이 확장의 동작을 변경합니다.\
 > 이 점에 대해 잘 모르는 경우 Google 설명서를 읽어보거나 조사를 수행하십시오.
+
+### Google 이벤트 유형
+
+Google에서는 Google 태그 관리자와 `push()` 방법 및 Google Analytics 4(다음을 사용) `gtag()` 메서드를 사용합니다.
+
+1.2.1 이전 버전의 Google 데이터 레이어 확장 기능에서는 만들어진 이벤트만 지원됨 `push()`: 이 페이지의 코드 예제에 나와 있습니다.
+
+버전 1.2.1 이상에서는 를 사용하여 만든 이벤트를 지원합니다 `gtag()`.  이 옵션은 선택 사항이며 확장 구성 대화 상자에서 활성화할 수 있습니다.
+
+에 대한 자세한 내용 `push()` 및 `gtag()` events, see the [Google 설명서](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  확장 기능의 구성 및 규칙 대화 상자에도 정보가 제공됩니다.
 
 ### 데이터 레이어의 모든 푸시를 수신합니다.
 
@@ -121,11 +126,11 @@ dataLayer.push({"event":"myEvent2"})
 
 ```json
 {
-    "page": {
-        "url": "%url%",
-        "previous_url": "%previous_url%",
-        "concatenated_values": "static string %dataElement%"
-    }
+  "page": {
+    "url": "%url%",
+    "previous_url": "%previous_url%",
+    "concatenated_values": "static string %dataElement%"
+  }
 }
 ```
 

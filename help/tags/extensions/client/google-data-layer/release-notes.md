@@ -2,10 +2,10 @@
 title: Google 데이터 레이어 확장 릴리스 노트
 description: Adobe Experience Platform의 Google 데이터 레이어 태그 확장 기능에 대한 최신 릴리스 정보입니다.
 exl-id: 740b6e3a-d469-475d-9523-03b0b48b11c8
-source-git-commit: 0b9fa104777f21fc9bc893784ae3155d887a48d2
+source-git-commit: c1bad7d5414e62f4d77f7d5903f4b2bf4d9081f8
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 1%
+source-wordcount: '265'
+ht-degree: 5%
 
 ---
 
@@ -37,3 +37,7 @@ ht-degree: 1%
 * 일부 상황에서 데이터 요소를 저장할 때 오류가 발생한 버그를 수정합니다.
 * Tags 이벤트 개체의 사용을 설명하는 설명서를 이벤트 대화 상자에 추가합니다.
 * 이벤트 대화 상자에 무한 루프에 대한 경고를 추가합니다.
+
+## 버전 1.2.2
+
+* Google Analytics gtag() 이벤트에 대한 지원을 추가합니다.
