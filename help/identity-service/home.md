@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service 개요
 description: Adobe Experience Platform Identity Service를 사용하면 디바이스와 시스템 간에 ID를 연결하여 고객과 고객의 행동을 더 잘 볼 수 있으므로 효과적인 개인 디지털 경험을 실시간으로 제공할 수 있습니다.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1560'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ ID 서비스에 대한 세부 사항으로 이동하기 전에 주요 용어에 
 | 용어 | 정의 |
 | --- | --- |
 | 신원 | ID는 엔티티에 고유한 데이터입니다. 일반적으로 이 개체는 개인, 하드웨어 장치 또는 웹 브라우저(쿠키로 표시됨)와 같은 실제 개체입니다. 정규화된 ID는 다음 두 가지 요소로 구성됩니다. **id 네임스페이스** 및 **id 값**. |
-| ID 네임스페이스 | ID 네임스페이스는 특정 ID의 컨텍스트입니다. 예를 들어 의 네임스페이스는 `Email` 다음과 일치할 수 있음 **줄리엔<span>@acme.com**. 마찬가지로 의 네임스페이스입니다. `Phone` 다음과 일치할 수 있음 `555-555-1234`. 자세한 내용은 [id 네임스페이스 개요](./features/namespaces.md) |
+| ID 네임스페이스 | ID 네임스페이스는 특정 ID의 컨텍스트입니다. 예를 들어 의 네임스페이스는 `Email` 은 id 값과 일치할 수 있습니다. **줄리엔<span>@acme.com**. 마찬가지로 의 네임스페이스입니다. `Phone` 은 id 값과 일치할 수 있습니다. `555-555-1234`. 자세한 내용은 [id 네임스페이스 개요](./features/namespaces.md). |
 | ID 값 | ID 값은 실제 엔티티를 나타내는 문자열이며, 네임스페이스를 통해 ID 서비스 내에서 분류됩니다. 예를 들어 ID 값(문자열)은 **줄리엔<span>@acme.com** 다음과 같이 분류할 수 있습니다. `Email` 네임스페이스입니다. |
 | ID 유형 | ID 유형은 ID 네임스페이스의 구성 요소입니다. ID 유형은 ID 데이터가 ID 그래프에 연결되어 있는지 여부를 지정합니다. |
 | 링크 | 링크 또는 연결은 서로 다른 두 ID가 동일한 엔터티를 나타내도록 설정하는 방법입니다. 예: &quot; 사이의 링크`Email` = julien<span>@acme.com&quot; 및 &quot;`Phone` = 555-555-1234&quot;는 두 id가 동일한 엔터티를 나타낸다는 의미입니다. 이는 줄리앙이라는 이메일 주소와 함께 귀하의 브랜드와 상호 작용한 고객이<span>@acme.com과 555-555-1234 전화번호는 동일합니다. |
