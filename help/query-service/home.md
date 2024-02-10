@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스 개요
 description: Experience Platform 내에서 쿼리 서비스의 역할에 대해 알아봅니다.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,16 @@ Adobe Experience Platform은 다양한 소스에서 데이터를 수집합니다
 
 ## 쿼리 서비스 사용 {#usage}
 
-데이터를 분석하려면 쿼리 서비스 사용자 인터페이스와 RESTful API를 사용하여 SQL 쿼리를 만들 수 있습니다. 사용자 인터페이스를 사용하면 쿼리를 작성하여 실행하고, 이전에 실행한 쿼리를 보고, 조직 내에서 사용자가 저장한 쿼리에 액세스할 수 있습니다. 샌드박스와 같은 쿼리 편집기를 사용하여 더 넓은 데이터 세트에서 쿼리를 실행하기 전에 테스트할 수 있습니다. 다음을 참조하십시오. [쿼리 서비스 사용자 인터페이스 안내서](ui/overview.md) ui 사용에 대한 자세한 내용. RESTful API도 유사한 경험을 제공합니다. 쿼리 서비스 API를 사용하여 쿼리를 프로그래밍 방식으로 작성 및 실행하고, 향후 사용 및 반복을 위해 쿼리를 예약하며, 작성하려는 쿼리에 대한 템플릿을 만들 수 있습니다. 쿼리 서비스 API 사용에 대한 자세한 내용은 [쿼리 서비스 개발자 안내서](api/getting-started.md).
+데이터를 분석하려면 쿼리 서비스 사용자 인터페이스 또는 RESTful API를 사용하여 SQL 쿼리를 만들고 실행합니다.
+Query Service UI를 사용하면 쿼리를 작성, 실행 및 예약하고, 이전에 실행한 쿼리를 보고, 조직 내에서 사용자가 저장한 쿼리에 액세스할 수 있습니다. 쿼리 편집기를 사용하여 더 넓은 데이터 세트에서 쿼리를 실행하기 전에 테스트할 수도 있습니다. 다음을 참조하십시오. [쿼리 서비스 UI 안내서](ui/overview.md) UI 기능에 대한 개요입니다.
+
+RESTful API도 유사한 경험을 제공합니다. 쿼리 서비스 API를 사용하여 쿼리를 프로그래밍 방식으로 작성 및 실행하고, 조정할 쿼리에 대한 템플릿을 작성 및 저장하거나, 자동 실행을 위해 쿼리를 예약할 수 있습니다. 다음을 참조하십시오. [쿼리 서비스 개발자 안내서](api/getting-started.md) 쿼리 서비스 API 사용에 대한 자세한 내용을 보려면 여기를 클릭하십시오.
+
+쿼리 서비스 기능을 빠르게 시작하려면 다음 문서를 읽는 것이 좋습니다.
+
+- [쿼리 실행에 대한 일반 지침](./best-practices/writing-queries.md)
+- [쿼리 서비스의 SQL 구문](./sql/syntax.md)
+- [SQL을 사용하여 파생 데이터 세트 만들기](./data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
 ## 쿼리 서비스 및 Experience Platform 서비스 {#experience-platform-services}
 

@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: fbb627787580c6a4ffd1deb0009105f1ba821b6f
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '315'
 ht-degree: 19%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 19%
    - [라이선스 사용](data-distiller/license-usage.md)
    - 파생 데이터 세트 {#derived-datasets}
       - [개요](data-distiller/derived-datasets/overview.md)
-      - [원활한 SQL 흐름](data-distiller/derived-datasets/seamless-sql-flow.md)
+      - [SQL을 사용하여 파생 데이터 세트 만들기](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [십분위수 기반 파생 데이터 세트 만들기](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - 확장 앱 보고를 위한 사용자 지정 가능한 통찰력 {#customizable-insights}
       - [개요](data-distiller/customizable-insights/overview.md)

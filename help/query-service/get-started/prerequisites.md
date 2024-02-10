@@ -3,14 +3,14 @@ keywords: Experience Platform;쿼리 서비스;쿼리 서비스;쿼리
 title: Adobe Experience Platform 쿼리 서비스 시작
 description: Adobe Experience Platform 쿼리 서비스를 완전히 활용하는 데 필요한 단계에 대한 분류
 exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 705d58fad98c6c021220a4b1c5fc85541d6572bb
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 7%
+source-wordcount: '241'
+ht-degree: 2%
 
 ---
 
-#  Adobe Experience Platform 시작하기[!DNL Query Service] {#getting-started}
+# Adobe Experience Platform 시작하기 [!DNL Query Service] {#getting-started}
 
 조직에 Adobe Experience Platform이 프로비저닝되면 관리자는 사용자에게 액세스 권한을 부여할 수 있습니다. [!DNL Query Service]. 에서 제공하는 모든 기능을 사용하기 전에 [!DNL Query Service]그러나 먼저 데이터를 Adobe Experience Platform에 수집해야 합니다.
 
@@ -20,7 +20,13 @@ ht-degree: 7%
 
 ## 다음 단계
 
-이 문서에서는 을(를) 사용하는 데 필요한 사전 요구 사항을 다룹니다. [!DNL Query Service] Experience Platform의 기능. 방법에 대해 자세히 알아보기 [!DNL Query Service] platform에서의 데이터 처리에 대한 이점은 다음을 참조하십시오. [사용 사례 프레젠테이션 예](../use-cases/abandoned-browse.md).
+이 문서에서는 을(를) 사용하는 데 필요한 사전 요구 사항을 다룹니다. [!DNL Query Service] Experience Platform의 기능. 쿼리 서비스 기능을 빠르게 시작하려면 다음 문서를 읽는 것이 좋습니다.
+
+- [쿼리 실행에 대한 일반 지침](../best-practices/writing-queries.md)
+- [쿼리 서비스의 SQL 구문](../sql/syntax.md)
+- [SQL을 사용하여 파생 데이터 세트 만들기](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
+
+또는 Query Service가 Platform에서 데이터 처리에 도움이 되는 방법에 대해 자세히 알아보려면 [중단된 찾아보기 사용 사례 프레젠테이션](../use-cases/abandoned-browse.md#video-example).
 
 다음 리소스는 다음에 대한 이해를 높이는 데 유용합니다 [!DNL Query Service]:
 
