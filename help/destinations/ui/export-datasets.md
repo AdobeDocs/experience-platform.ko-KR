@@ -3,9 +3,9 @@ title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
+source-git-commit: 4d662bc8ec8729654589c8675c5e598b94957ed7
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1838'
 ht-degree: 4%
 
 ---
@@ -52,6 +52,11 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
   <tr>
     <td>Ultimate</td>
     <td>다음을 참조하십시오. <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> 설명서를 참조하십시오.</td>
+  </tr>
+  <tr>
+    <td>Customer Journey Analytics</td>
+    <td>모두</td>
+    <td> 소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 생성된 프로필 및 경험 이벤트 데이터 세트입니다. 에서 필요한 권한에 대해 읽어 보십시오. <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/cja-access-control.html#product-admin-additional-permissions"> Customer Journey Analytics 설명서</a>.  <br> <b>가용성에 대한 참고 사항:</b> 데이터 세트를 클라우드로 내보내는 기능은 릴리스의 제한된 테스트 단계에 있으며 아직 사용자 환경에서 사용할 수 없습니다. 기능이 일반적으로 제공되면 이 메모는 제거됩니다. Customer Journey Analytics 릴리스 프로세스에 대한 자세한 내용은 <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Customer Journey Analytics 기능 릴리스</a>. </td>
   </tr>
   <tr>
     <td>데이터 Distiller</td>
