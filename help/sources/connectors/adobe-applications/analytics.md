@@ -2,9 +2,9 @@
 title: 보고서 세트 데이터용 Adobe Analytics Source Connector
 description: 이 문서에서는 Analytics에 대한 개요를 제공하고 Analytics 데이터의 사용 사례를 설명합니다.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: ae88ce6f24db669577941b59fdaf18f43e32768f
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1139'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,11 @@ XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../../xdm/home.md).
 | 새 데이터 받는 사람 [!DNL Real-Time Customer Profile] (A4T **아님** 활성화됨) | 2분 미만 |
 | 새 데이터 받는 사람 [!DNL Real-Time Customer Profile] (A4T **은(는)** 활성화됨) | 최대 30분 |
 | 데이터 레이크에 새 데이터 추가 | &lt; 2.25시간 |
+| 없이 CJA에 새 데이터 보내기 [결합](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3.75시간 |
+| CJA에 대한 새 데이터 결합 | 7시간 미만 |
 | 100억 개 미만의 이벤트 채우기 | &lt; 4주 |
+
+CJA 지연에 대한 자세한 내용은 다음을 참조하십시오. [Customer Journey Analytics 보호](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
 
 프로덕션 샌드박스에 대한 Analytics 채우기는 기본적으로 13개월로 설정됩니다. 비프로덕션 샌드박스의 Analytics 데이터의 경우 채우기는 3개월로 설정됩니다. 위 표에 언급된 100억 개의 이벤트 제한은 예상되는 지연과 관련하여 엄격히 제한됩니다.
 
