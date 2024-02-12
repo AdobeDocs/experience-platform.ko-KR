@@ -4,9 +4,9 @@ title: Experience Platform을 위한 맞춤형 접근성 솔루션
 type: Documentation
 description: Adobe Experience Platform 사용자 인터페이스 내의 사용자 지정 접근성 솔루션에 대해 자세히 알아보십시오.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1663'
 ht-degree: 0%
 
 ---
@@ -142,6 +142,10 @@ Segment Builder UI를 사용하여 Experience Platform 내에서 세그먼트를
 
 * 쿼리 서비스 편집기 UI의 색상 대비는 접근성 규정 준수를 충족합니다.
 * 키보드 탐색은 편집기 UI 외부에서 지원됩니다. 편집기 UI는 임베드된 코드 미러입니다.
+
+>[!NOTE]
+>
+>쿼리 편집기에서 **탭** 기본적으로 키. 를 호출하려면 **탭** 편집기에 있는 동안 다음을 눌러야 합니다. **이스케이프** 키를 누른 다음 키를 누릅니다 **탭** 바로 뒤에. 누르기 **탭** 다시 한 번, 편집기 넘어 포커스를 이동합니다.
 
 ## 소스 및 대상의 시스템 보기 탭
 
