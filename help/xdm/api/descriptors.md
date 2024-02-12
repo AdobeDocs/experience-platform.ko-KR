@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 끝점을 사용하면 경험 애플리케이션 내에서 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 786801975dbde52b5d81a407618ef3b574a6afa3
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '1905'
 ht-degree: 1%
 
 ---
@@ -51,14 +51,14 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->설명자는 고유해야 합니다. `Accept` 대체할 헤더 `xed` 포함 `xdm`, 및 `link` 설명자에 고유한 옵션입니다. 더 프로퍼트 `Accept` 아래 예제 호출에 헤더가 포함되었지만 설명자를 사용하여 작업할 때 올바른 헤더가 사용되도록 각별히 주의하십시오.
+>설명자는 고유해야 합니다. `Accept` 대체할 헤더 `xed` 포함 `xdm`, 및 `link` 설명자에 고유한 옵션입니다. 더 프로퍼트 `Accept` 아래 예제 호출에 헤더가 포함되었지만 설명자를 사용하여 작업할 때 올바른 헤더가 사용되고 있는지 각별히 주의하십시오.
 
 | `Accept` 머리글 | 설명 |
 | -------|------------ |
 | `application/vnd.adobe.xdm-id+json` | 설명자 ID 배열 반환 |
 | `application/vnd.adobe.xdm-link+json` | 설명자 API 경로 배열 반환 |
 | `application/vnd.adobe.xdm+json` | 확장된 설명자 개체의 배열을 반환합니다. |
-| `application/vnd.adobe.xdm-v2+json` | 이 `Accept` 페이징 기능을 활용하려면 헤더를 사용해야 합니다. |
+| `application/vnd.adobe.xdm-v2+json` | 이 `Accept` 페이징 기능을 사용하려면 헤더를 사용해야 합니다. |
 
 {style="table-layout:auto"}
 
@@ -211,7 +211,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **요청**
 
-이 요청은 기본적으로 설명자를 다시 작성하므로 요청 본문에는 해당 유형의 설명자를 정의하는 데 필요한 모든 필드가 포함되어야 합니다. 즉, 설명자를 업데이트(PUT)하기 위한 요청 페이로드는 페이로드와 동일합니다 [설명자 만들기(POST)](#create) 같은 종류의
+이 요청은 본질적으로 설명자를 재작성하므로 요청 본문에는 해당 유형의 설명자를 정의하는 데 필요한 모든 필드가 포함되어야 합니다. 즉, 설명자를 업데이트(PUT)하기 위한 요청 페이로드는 페이로드와 동일합니다 [설명자 만들기(POST)](#create) 같은 종류의
 
 >[!IMPORTANT]
 >
@@ -252,7 +252,7 @@ curl -X PUT \
 
 ## 설명자 삭제 {#delete}
 
-간혹 정의한 설명자를 다음에서 제거해야 할 수 있습니다. [!DNL Schema Registry]. 이 작업은 를 참조하는 DELETE 요청을 통해 수행됩니다. `@id` / 제거할 설명자.
+간혹 정의한 설명자를 다음에서 제거해야 할 수 있습니다. [!DNL Schema Registry]. 이 작업은 를 참조하는 DELETE 요청을 통해 수행됩니다. `@id` 제거할 설명자의 이름입니다.
 
 **API 형식**
 
@@ -291,6 +291,10 @@ curl -X DELETE \
 
 다음 섹션에서는 각 유형의 설명자를 정의하는 데 필요한 필드를 포함하여 사용 가능한 설명자 유형에 대한 개요를 제공합니다.
 
+>[!IMPORTANT]
+>
+>시스템이 해당 샌드박스의 모든 사용자 정의 필드에 해당 레이블을 적용하므로 테넌트 네임스페이스 개체에 레이블을 지정할 수 없습니다. 대신 레이블을 지정해야 하는 개체 아래에 리프 노드를 지정해야 합니다.
+
 #### ID 설명자
 
 ID 설명자는 &quot;라는 신호를 보냅니다.[!UICONTROL sourceProperty]의 &quot;[!UICONTROL source스키마]&quot;은(는) [!DNL Identity] 다음에 의해 설명된 필드 [Adobe Experience Platform ID 서비스](../../identity-service/home.md).
@@ -314,7 +318,7 @@ ID 설명자는 &quot;라는 신호를 보냅니다.[!UICONTROL sourceProperty]�
 | `xdm:sourceSchema` | 다음 `$id` 설명자가 정의되는 스키마의 URI입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 주 버전. |
 | `xdm:sourceProperty` | ID가 될 특정 속성에 대한 경로입니다. 경로는 &quot;/&quot;로 시작하고 1로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot; 사용). |
-| `xdm:namespace` | 다음 `id` 또는 `code` id 네임스페이스 값입니다. 네임스페이스 목록은 [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). |
+| `xdm:namespace` | 다음 `id` 또는 `code` id 네임스페이스 값입니다. 네임스페이스 목록은 [[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service). |
 | `xdm:property` | 다음 중 하나 `xdm:id` 또는 `xdm:code`, 다음에 따라 `xdm:namespace` 사용됨. |
 | `xdm:isPrimary` | 선택적 부울 값입니다. true인 경우 는 필드를 기본 ID로 나타냅니다. 스키마에는 기본 ID가 하나만 포함될 수 있습니다. |
 
