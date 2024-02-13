@@ -13,8 +13,8 @@ ht-degree: 42%
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
->title="상위 동작"
->abstract="이 위젯은 선택한 기간 내에 Experience Platform에서 수행된 상위 동작을 보여 줍니다. Platform에서 기록된 작업의 전체 목록을 보려면 왼쪽 탐색에서 **감사**&#x200B;를 선택합니다."
+>title="상위 액션"
+>abstract="이 위젯은 선택한 기간 내에 Experience Platform에서 수행된 상위 액션을 보여 줍니다. Platform에서 기록된 작업의 전체 목록을 보려면 왼쪽 탐색에서 **감사**&#x200B;를 선택합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
