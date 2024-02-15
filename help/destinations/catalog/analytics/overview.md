@@ -3,10 +3,10 @@ keywords: analytics 대상;analytics 대상
 title: Analytics 대상 개요
 description: Analytics 대상은 방문자가 사이트에서 콘텐츠와 상호 작용하는 방법을 추적하고 데이터를 수집하여 대상자의 행동을 파악합니다. 이러한 플랫폼은 가장 가치 있는 방문자의 참여 및 전환에 대한 고유한 통찰력을 제공합니다.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 6%
+source-wordcount: '175'
+ht-degree: 2%
 
 ---
 
@@ -22,12 +22,13 @@ Analytics 대상은 방문자가 사이트에서 콘텐츠와 상호 작용하�
 
 * [Adform 웹 사이트 추적 확장](adform.md)
 * [Adobe Analytics 확장](adobe-analytics.md)
-* [Adobe Media Analytics for Audio 및 Video 확장](adobe-video-analytics.md)
+* [오디오 및 비디오용 Adobe Medium 분석 확장](adobe-video-analytics.md)
 * [Clicktale 확장](clicktale.md)
 * [Contentsquare 확장](contentsquare.md)
 * [Decibel 확장](decibel.md)
 * [Demandbase 확장](demandbase.md)
 * [대화 상자 확장](dialogtech.md)
+* [Gainsight PX](gainsight-px.md)
 * [Google 글로벌 사이트 태그 분석 확장](gtag-analytics.md)
 * [Google Universal Analytics 확장](google-universal-analytics.md)
 * [JW Player Analytics(베타) 확장](jw-player-analytics.md)
