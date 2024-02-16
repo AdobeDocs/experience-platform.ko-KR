@@ -6,7 +6,7 @@ exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
 workflow-type: tm+mt
 source-wordcount: '354'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_audiences_segmentBuilder_constraints"
 >title="시간 제한 리팩터링"
->abstract="시간 제한 사용을 명확히 하기 위해 규칙 수준 및 그룹 수준 시간 제한을 제거했습니다. 제한을 캔버스 수준 또는 카드 수준 시간 제한으로 다시 작성하십시오."
+>abstract="시간 제한 사용법을 명확히 하기 위해 규칙 수준 및 그룹 수준 시간 제한이 제거되었습니다. 제한을 캔버스 수준 또는 카드 수준 시간 제한으로 다시 작성하십시오."
 
 2024년 1월 Adobe Experience Platform 릴리스에서는 시간 제한을 정의할 수 있는 위치에 새로운 제한을 추가하는 Adobe Experience Platform 세분화 서비스 변경 사항이 도입되었습니다. 이러한 변경 사항은 세그먼트 빌더 UI를 사용하여 새로 만들어지거나 편집된 세그먼트에 영향을 줍니다. 이 안내서에서는 이러한 변경 사항을 완화하는 방법을 설명합니다.
 
