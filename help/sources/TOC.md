@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 소스 커넥터 도움말
 breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
-source-git-commit: 8a9cf0547720927018d728d7cecbf377a1282f6f
+source-git-commit: 345cd259cba2faa2b2b4bafd8ef9d2691d101fd1
 workflow-type: tm+mt
-source-wordcount: '1008'
-ht-degree: 11%
+source-wordcount: '1012'
+ht-degree: 10%
 
 ---
 
@@ -296,6 +296,7 @@ ht-degree: 11%
          - [Teradata 밴티지](tutorials/ui/create/databases/teradata-vantage.md)
       - 데이터 파트너 {#data-partner}
          - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+         - [Acxiom 전망 데이터 가져오기](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - 전자 상거래 {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
