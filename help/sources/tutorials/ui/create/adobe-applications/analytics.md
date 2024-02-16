@@ -2,9 +2,9 @@
 title: UI에서 Adobe Analytics 소스 연결 만들기
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
+source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
 workflow-type: tm+mt
-source-wordcount: '2695'
+source-wordcount: '2755'
 ht-degree: 4%
 
 ---
@@ -168,7 +168,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
-### 실시간 고객 프로필에 대한 필터링 {#filtering-for-profile}
+## 실시간 고객 프로필에 대한 필터링 {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
@@ -196,7 +196,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 >[!ENDSHADEBOX]
 
-#### 행 수준 필터링
+### 행 수준 필터링
 
 >[!IMPORTANT]
 >
@@ -254,7 +254,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![exclude-example](../../../../images/tutorials/create/analytics/exclude-examples.png)
 
-#### 열 수준 필터링
+### 열 수준 필터링
 
 선택 **[!UICONTROL 열 필터]** 열 수준 필터링을 적용할 헤더입니다.
 
@@ -267,6 +267,14 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 완료되면 다음을 선택합니다. **[!UICONTROL 다음]**.
 
 ![열 선택됨](../../../../images/tutorials/create/analytics/columns-selected.png)
+
+### 보조 ID 필터링
+
+열 필터를 사용하여 프로필 수집에서 보조 ID를 제외합니다. 보조 ID를 필터링하려면 다음을 선택합니다 **[!UICONTROL 열 필터]** 다음을 선택합니다. **[!UICONTROL _identities]**.
+
+필터는 ID가 보조로 표시된 경우에만 적용됩니다. ID를 선택했지만 이벤트가 기본 ID로 표시된 ID 중 하나와 함께 도착하는 경우 해당 ID는 필터링되지 않습니다.
+
+![보조 ID](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### 데이터 흐름 세부 정보 제공
 

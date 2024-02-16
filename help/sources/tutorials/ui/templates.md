@@ -3,7 +3,7 @@ description: Adobe Experience Platform UI에서 템플릿을 사용하여 B2B �
 title: UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
+source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 10%
@@ -51,7 +51,7 @@ Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 �
 >id="platform_sources_templates_accounttype"
 >title="비즈니스 유형 선택"
 >abstract="사용 사례에 적합한 비즈니스 유형을 선택합니다. 액세스 권한은 Real-Time Customer Data Platform 구독 계정에 따라 달라질 수 있습니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html" text="Real-Time CDP 개요"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP 개요"
 
 Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 탐색에서 [!UICONTROL 소스] workspace 를 참조하고 Experience Platform에서 사용할 수 있는 소스 카탈로그를 확인하십시오.
 
