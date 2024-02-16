@@ -2,9 +2,9 @@
 title: 가속화된 쿼리 끝점
 description: 상태 비저장 방식으로 쿼리 가속 저장소에 액세스하여 집계된 데이터를 기반으로 결과를 빠르게 반환하는 방법을 알아봅니다. 이 문서에서는 쿼리 서비스 가속 쿼리 끝점에 대한 샘플 HTTP 요청 및 응답을 제공합니다.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: ea2a1cddf299bec750875c4a9125cdd065f18d8b
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '560'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ POST /accelerated-queries
 다음 요청은 요청 본문의 SQL 쿼리를 가속 저장소로 제출합니다.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
@@ -60,7 +60,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 이 대체 요청은 요청 본문의 템플릿 ID를 가속 저장소로 제출합니다. 해당 템플릿의 SQL을 사용하여 가속화된 저장소를 쿼리합니다.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
