@@ -4,14 +4,18 @@ solution: Experience Platform
 title: SFTP 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 SFTP 서버를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 6c22f8243269bb304b12a4e4978ed141ed092c67
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
 
 # SFTP 커넥터
+
+>[!IMPORTANT]
+>
+>다음 [!DNL SFTP] Adobe Experience Platform이 연결되는 서버는 단일 파일에 대한 여러 연결을 의미하는 청크 기능을 지원할 수 있어야 합니다. 다음의 경우 [!DNL SFTP] 서버에서 청킹을 지원하지 않으면 파일 수집을 방해하는 오류가 발생할 수 있습니다.
 
 Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]를 사용하면 이러한 시스템에서 데이터를 가져올 수 있습니다.
 
@@ -36,7 +40,7 @@ Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]
 
 다음 [!DNL SFTP] 소스는 다음을 사용하여 인증을 지원합니다. [!DNL Base64]-encoded OpenSSH 개인 키. Base64로 인코딩된 OpenSSH 개인 키를 생성하고 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하십시오 [!DNL SFTP] 플랫폼으로 이동합니다.
 
-### [!DNL Windows] users
+### [!DNL Windows] 사용자
 
 를 사용하는 경우 [!DNL Windows] 기계, 열어 **시작** 메뉴를 선택한 다음 **설정**.
 
@@ -88,7 +92,7 @@ C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\
 
 위의 명령은 [!DNL Base64]지정한 파일 경로에 있는 -인코딩된 개인 키. 그런 다음 해당 개인 키를 사용하여 을 인증할 수 있습니다 [!DNL SFTP] 플랫폼에 연결합니다.
 
-### [!DNL Mac] users
+### [!DNL Mac] 사용자
 
 를 사용하는 경우 [!DNL Mac], 열기 **터미널** 다음 명령을 실행하여 개인 키를 생성합니다. 이 경우 개인 키는 다음에 저장됩니다. `/Documents/id_rsa`):
 
