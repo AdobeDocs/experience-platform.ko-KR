@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 준비 매핑 기능
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: f250d8e6e5368a785dcb154dbe0b611baed73a4c
+source-git-commit: 5525e81afe0945716c510ff7a0b06cc7e4d5ee6c
 workflow-type: tm+mt
-source-wordcount: '5459'
+source-wordcount: '5908'
 ht-degree: 2%
 
 ---
@@ -282,6 +282,27 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | ua_agent_version_major | 사용자 에이전트 문자열에서 에이전트 이름과 주요 버전을 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_agent_version_major&#x200B;(USER_AGENT) | ua_agent_version_major&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
 | ua_agent_name | 사용자 에이전트 문자열에서 에이전트 이름을 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | 사용자 에이전트 문자열에서 장치 클래스를 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 전화 |
+
+{style="table-layout:auto"}
+
+### Analytics 함수 {#analytics}
+
+>[!NOTE]
+>
+>표의 전체 내용을 보려면 왼쪽/오른쪽으로 스크롤하십시오.
+
+| 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| get_event_id | Analytics 이벤트 문자열에서 이벤트 ID를 추출합니다. | <ul><li>이벤트 문자열: **필수** 쉼표로 구분된 Analytics 이벤트 문자열.</li><li>이벤트 이름: **필수** 추출할 이벤트 이름 및 ID입니다.</li></ul> | get_event_id(EVENT_STRING, EVENT_NAME) | get_event_id(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 123456 |
+| get_event_value | Analytics 이벤트 문자열에서 이벤트 값을 추출합니다. 이벤트 값을 지정하지 않으면 1이 반환됩니다. | <ul><li>이벤트 문자열: **필수** 쉼표로 구분된 Analytics 이벤트 문자열.</li><li>이벤트 이름: **필수** 값을 추출할 이벤트 이름.</li></ul> | get_event_value(EVENT_STRING, EVENT_NAME) | get_event_value(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 5 |
+| get_product_categories | Analytics 제품 문자열에서 제품 카테고리를 추출합니다. | <ul><li>PRODUCTS_문자열: **필수** Analytics 제품 문자열입니다.</li></ul> | get_product_categories(PRODUCTS_STRING) | get_product_categories(&quot;;예제 제품 1;1;3.50,예제 범주 2;예제 제품 2;1;5.99&quot;) | [null,&quot;예 범주 2&quot;] |
+| get_product_names | Analytics 제품 문자열에서 제품 이름을 추출합니다. | <ul><li>PRODUCTS_문자열: **필수** Analytics 제품 문자열입니다.</li></ul> | get_product_names(PRODUCTS_STRING) | get_product_names(&quot;;예제 제품 1;1;3.50,예제 범주 2;예제 제품 2;1;5.99&quot;) | [&quot;Example product 1&quot;,&quot;Example product 2&quot;] |
+| get_product_quantities | Analytics 제품 문자열에서 수량을 추출합니다. | <ul><li>PRODUCTS_문자열: **필수** Analytics 제품 문자열입니다.</li></ul> | get_product_quantities(PRODUCTS_STRING) | get_product_quantities(&quot;;예제 제품 1;1;3.50,예제 범주 2;예제 제품 2&quot;) | [&quot;1&quot;, null] |
+| get_product_prices | Analytics 제품 문자열에서 가격을 추출합니다. | <ul><li>PRODUCTS_문자열: **필수** Analytics 제품 문자열입니다.</li></ul> | get_product_prices(PRODUCTS_STRING) | get_product_prices(&quot;;예제 제품 1;1;3.50,예제 범주 2;예제 제품 2&quot;) | [&quot;3.50&quot;, null] |
+| get_product_events | 제품 문자열에서 명명된 이벤트를 개체의 배열로 추출합니다. | <ul><li>PRODUCTS_문자열: **필수** Analytics 제품 문자열입니다.</li><li>이벤트 이름: **필수** 값을 추출할 이벤트 이름.</li></ul> | get_product_events(PRODUCTS_STRING, EVENT_NAME) | get_product_events(&quot;;예제 제품 1;1;4.20;event1=2.3\|event2=5:1,;예제 제품 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event2&quot;) | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
+| get_product_event_ids | 제품 문자열에서 명명된 이벤트의 ID를 문자열 배열로 추출합니다. | <ul><li>PRODUCTS_문자열: **필수** Analytics 제품 문자열입니다.</li><li>이벤트 이름: **필수** 값을 추출할 이벤트 이름.</li></ul> | get_product_events_ids(PRODUCTS_STRING, EVENT_NAME) | get_product_event_ids(&quot;;예제 제품 1;1;4.20;event1=2.3\|event2=5:1,;예제 제품 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event2&quot;) | [&quot;1&quot;, &quot;2&quot;] |
+| get_product_event_values | 제품 문자열에서 명명된 이벤트의 값을 문자열 배열로 추출합니다. | <ul><li>PRODUCTS_문자열: **필수** Analytics 제품 문자열입니다.</li><li>이벤트 이름: **필수** 값을 추출할 이벤트 이름.</li></ul> | get_product_events_values(PRODUCTS_STRING, EVENT_NAME) | get_product_event_values(&quot;;예제 제품 1;1;4.20;event1=2.3\|event2=5:1,;예제 제품 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event1&quot;) | [&quot;2.3&quot;, &quot;3&quot;] |
+| get_product_evars | 제품 문자열에서 명명된 이벤트에 대한 evar 값을 문자열 배열로 추출합니다. | <ul><li>PRODUCTS_문자열: **필수** Analytics 제품 문자열입니다.</li><li>EVAR 이름: **필수** 추출할 eVar 이름입니다.</li></ul> | get_product_evars(PRODUCTS_STRING, EVENT_NAME) | get_product_evars(&quot;;예제 product;1;6.69;;eVar1=Merchandising value&quot;, &quot;eVar1&quot;) | [&quot;머천다이징 값&quot;] |
 
 {style="table-layout:auto"}
 
