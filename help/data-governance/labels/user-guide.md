@@ -6,8 +6,8 @@ description: 이 안내서에서는 Adobe Experience Platform 사용자 인터�
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
-source-wordcount: '1465'
-ht-degree: 19%
+source-wordcount: '1442'
+ht-degree: 18%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 19%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="지침"
->abstract="<ol><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=ko">데이터 세트</a> 를 선택한 다음 데이터를 제한하려는 데이터 세트를 선택합니다.</li><li>데이터 세트 세부 정보 보기에서 <b>데이터 거버넌스</b> 탭을 선택합니다.</li><li>제한할 데이터 세트 필드를 선택한 다음 <b>거버넌스 레이블 편집</b>을 선택하여 사용 제한에 따라 데이터에 레이블을 지정합니다.</li><li>데이터에 레이블을 지정한 후 왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ko">정책</a> 을 선택한 다음 <b>정책 만들기</b>를 선택합니다.</li><li><a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">데이터 거버넌스 정책</a> 만들기를 선택한 다음 정책이 해당 정책에 적용할 데이터 사용 레이블을 선택합니다.</li><li>해당 레이블이 포함된 모든 데이터에 대해 정책이 거부할 마케팅 작업을 선택하십시오. 정책이 생성되면 목록에서 해당 정책을 선택하고 오른쪽 레일의 토글을 사용하여 활성화합니다.</li><li>활성화된 각 정책에 대해 Platform은 지정된 레이블이 포함된 모든 데이터가 정의된 마케팅 작업에 사용되는 것을 방지합니다. 이 적용은 관련 마케팅 작업(사용 사례)이 있는 대상에 대해 레이블이 지정된 데이터를 활성화하려고 시도할 때 자동으로 수행됩니다.</li></ol>"
+>abstract="<ol><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=ko">데이터 세트</a> 를 선택한 다음 데이터를 제한하려는 데이터 세트를 선택합니다.</li><li>데이터 세트 세부 정보 보기에서 <b>데이터 거버넌스</b> 탭을 선택합니다.</li><li>제한할 데이터 세트 필드를 선택한 다음 <b>거버넌스 레이블 편집</b>을 선택하여 사용 제한에 따라 데이터에 레이블을 지정합니다.</li><li>데이터에 레이블을 지정한 후 왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ko">정책</a> 을 선택한 다음 <b>정책 만들기</b>를 선택합니다.</li><li><a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ko-KR#create-governance-policy">데이터 거버넌스 정책</a> 만들기를 선택한 다음 정책이 해당 정책에 적용할 데이터 사용 레이블을 선택합니다.</li><li>해당 레이블이 포함된 모든 데이터에 대해 정책이 거부할 마케팅 작업을 선택하십시오. 정책이 생성되면 목록에서 해당 정책을 선택하고 오른쪽 레일의 토글을 사용하여 활성화합니다.</li><li>활성화된 각 정책에 대해 Platform은 지정된 레이블이 포함된 모든 데이터가 정의된 마케팅 작업에 사용되는 것을 방지합니다. 이 적용은 관련 마케팅 작업(사용 사례)이 있는 대상에 대해 레이블이 지정된 데이터를 활성화하려고 시도할 때 자동으로 수행됩니다.</li></ol>"
 
 >[!IMPORTANT]
 >

@@ -6,8 +6,8 @@ description: Adobe Experience Platform 데이터 거버넌스는 데이터 사�
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 18%
+source-wordcount: '1768'
+ht-degree: 16%
 
 ---
 
@@ -104,7 +104,7 @@ ht-degree: 18%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="지침"
->abstract="<ul><li>동의를 위해 OneTrust 소스 커넥터 또는 표준 XDM 스키마를 통해 환경 설정 데이터를 통합 스키마로 수집하고 있는지 확인하십시오.</li><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ko">정책</a> 을 선택한 다음 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">정책 만들기</a>를 선택합니다.</li><li><b>If</b> 섹션에서 정책 확인을 트리거할 조건 또는 작업을 설명합니다.</li><li><b>Then</b> 섹션에서 프로필이 정책을 트리거한 작업에 포함되기 위해 있어야 하는 동의 속성을 입력합니다.</li><li><b>저장</b> 을 선택하여 정책을 생성합니다. 정책을 활성화하려면 오른쪽 레일에서 <b>상태</b> 토글을 선택합니다.</li><li>Experience Platform은 대상에 대한 세그먼트를 활성화할 때 활성화된 동의 정책을 자동으로 적용하고 각 정책이 대상자 크기에 미치는 영향에 대한 세부 정보를 제공합니다.</li><li>이 기능에 대한 자세한 내용은 Experience League의 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ko#consent-policy">동의 정책 생성</a> 안내서를 참조하십시오.</li></ul>"
+>abstract="<ul><li>동의를 위해 OneTrust 소스 커넥터 또는 표준 XDM 스키마를 통해 환경 설정 데이터를 통합 스키마로 수집하고 있는지 확인하십시오.</li><li>왼쪽 탐색 메뉴에서 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=ko">정책</a> 을 선택한 다음 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ko-KR#create-governance-policy">정책 만들기</a>를 선택합니다.</li><li><b>If</b> 섹션에서 정책 확인을 트리거할 조건 또는 작업을 설명합니다.</li><li><b>Then</b> 섹션에서 프로필이 정책을 트리거한 작업에 포함되기 위해 있어야 하는 동의 속성을 입력합니다.</li><li><b>저장</b> 을 선택하여 정책을 생성합니다. 정책을 활성화하려면 오른쪽 레일에서 <b>상태</b> 토글을 선택합니다.</li><li>Experience Platform은 대상에 대한 세그먼트를 활성화할 때 활성화된 동의 정책을 자동으로 적용하고 각 정책이 대상자 크기에 미치는 영향에 대한 세부 정보를 제공합니다.</li><li>이 기능에 대한 자세한 내용은 Experience League의 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ko#consent-policy">동의 정책 생성</a> 안내서를 참조하십시오.</li></ul>"
 
 >[!IMPORTANT]
 >
@@ -145,7 +145,7 @@ ht-degree: 18%
 >title="Then 조건"
 >abstract="&#39;If&#39; 조건이 정의되면 &#39;Then&#39; 섹션을 사용하여 통합 스키마에서 하나 이상의 동의 속성을 선택합니다. 이 정책이 적용되는 작업에 프로필을 포함하려면 이 속성이 있어야 합니다."
 
-아래 **[!UICONTROL 그러면]** 섹션에서 유니온 스키마에서 하나 이상의 동의 속성을 선택합니다. 이 정책이 적용되는 작업에 프로필을 포함하려면 이 속성이 있어야 합니다. 목록에서 제공된 옵션 중 하나를 선택하거나 **[!UICONTROL 모두 보기]** 유니온 스키마에서 속성을 직접 선택합니다.
+아래 **[!UICONTROL 그러면]** 섹션에서 유니온 스키마에서 하나 이상의 동의 속성을 선택합니다. 프로필이 이 정책이 제어하는 작업에 포함되려면 이 속성이 있어야 합니다. 목록에서 제공된 옵션 중 하나를 선택하거나 **[!UICONTROL 모두 보기]** 유니온 스키마에서 속성을 직접 선택합니다.
 
 동의 속성을 선택할 때 이 정책에서 확인할 속성의 값을 선택합니다.
 

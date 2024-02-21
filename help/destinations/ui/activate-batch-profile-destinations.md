@@ -98,7 +98,7 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 >id="platform_destinations_activate_exportoptions"
 >title="파일 내보내기 옵션"
 >abstract="**전체 파일 내보내기**&#x200B;를 선택하여 대상자 조건에 적합한 모든 프로필의 전체 스냅샷을 내보냅니다. **증분 파일 내보내기**&#x200B;를 선택하여 마지막 내보내기 이후 대상자 조건에 적합한 프로필만 내보냅니다. <br>첫 번째 증분 파일 내보내기에는 채우기 역할을 하는 대상자에 적합한 모든 프로필이 포함됩니다. 향후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 대상자 조건에 적합한 프로필만 포함됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="증분 파일 내보내기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko-KR#export-incremental-files" text="증분 파일 내보내기"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
@@ -490,7 +490,7 @@ Adobe Experience Platform은 스키마에서 일반적으로 사용되는 네 �
 id="platform_destinations_activate_exclude_enrichment_attributes"
 title="보강 속성 제외"
 abstract="모든 속성을 제외하고 선택한 사용자 정의 업로드된 대상자의 프로필을 대상으로 내보내려면 이 옵션을 활성화합니다."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="설명서에서 자세히 알아보기"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko-KR#select-enrichment-attributes" text="설명서에서 자세히 알아보기"
 
 >[!IMPORTANT]
 >

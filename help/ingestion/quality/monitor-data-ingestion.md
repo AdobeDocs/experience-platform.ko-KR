@@ -24,7 +24,7 @@ ht-degree: 3%
 >title="수집 속도"
 >abstract="초당 정상적으로 처리된 이벤트 수입니다."
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="UI에서 소스의 데이터 흐름 모니터링"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=ko-KR" text="UI에서 소스의 데이터 흐름 모니터링"
 
 >[!TIP]
 >

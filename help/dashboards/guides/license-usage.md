@@ -22,7 +22,7 @@ ht-degree: 8%
 >id="platform_dashboards_licenseUsage_prediction"
 >title="라이선스 사용 대시보드"
 >abstract="라이선스 사용 대시보드는 구매한 Adobe Experience Platform 제품에 대한 인사이트를 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 계약된 라이선스 금액 등 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다.<br><br>사용량 예측은 매월 말에 새로 고쳐지며 향후 6개월 동안의 사용량을 예측합니다. 사용량을 줄이려면 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성하십시오."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="데이터 세트 만료"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=ko-KR" text="데이터 세트 만료"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
 
 Adobe Experience Platform을 통해 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있습니다 [!UICONTROL 라이선스 사용] 대시보드입니다. 여기에 표시되는 정보는 Platform 인스턴스의 일별 스냅샷 중에 캡처됩니다.

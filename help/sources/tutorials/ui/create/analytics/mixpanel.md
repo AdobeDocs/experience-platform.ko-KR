@@ -65,7 +65,7 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 왼쪽 탐색 모
 >id="platform_sources_mixpanel_timezone"
 >title="Mixpanel 수집 시간대 설정"
 >abstract="플랫폼은 지정된 프로젝트 시간대를 사용하여 Mixpanel에서 관련 데이터를 수집하므로 시간대는 Mixpanel 프로필 시간대 설정과 같아야 합니다. 이벤트가 Mixpanel 데이터 저장소에 기록되기 전에 Mixpanel은 프로젝트 시간대에 맞게 시간대를 조정합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html#project-id-and-timezone" text="설명서에서 자세히 알아보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=ko-KR#project-id-and-timezone" text="설명서에서 자세히 알아보기"
 
 소스가 인증되면 프로젝트 ID와 시간대를 제공한 다음 을 선택합니다. **[!UICONTROL 선택]**.
 
