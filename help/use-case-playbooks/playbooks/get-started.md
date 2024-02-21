@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
-title: 시작하기
+title: 사용 사례 플레이북 시작
 description: 사용 사례 플레이북 기능을 시작하는 방법에 대해 알아봅니다.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 785e32b27372cef9d23761f648bcbaa431448ce7
+source-git-commit: fe87b8cdeaca5e4e852a8819534f4a5c4023ca52
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 14%
+source-wordcount: '947'
+ht-degree: 15%
 
 ---
 
