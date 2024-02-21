@@ -2,9 +2,9 @@
 title: B2B 네임스페이스 및 스키마
 description: 이 문서에서는 B2B 소스 커넥터를 만들 때 필요한 사용자 지정 네임스페이스에 대한 개요를 제공합니다.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5e8bb04ca18159eab98b2f7f0bba8cb1488a1f26
 workflow-type: tm+mt
-source-wordcount: '1622'
+source-wordcount: '1620'
 ht-degree: 3%
 
 ---
@@ -68,7 +68,7 @@ Platform 개발자 콘솔 및 [!DNL Postman] 을(를) 설정하면 이제 적절
 
 ## B2B 네임스페이스
 
-ID 네임스페이스는 의 구성 요소입니다. [[!DNL Identity Service]](../../../../identity-service/home.md) id의 컨텍스트나 유형을 구별하는 역할을 합니다. 정규화된 ID에는 ID 값과 네임스페이스가 포함됩니다. 다음을 참조하십시오. [네임스페이스 개요](../../../../identity-service/features/namespaces.md) 추가 정보.
+ID 네임스페이스는 의 구성 요소입니다. [[!DNL Identity Service]](../../../../identity-service/home.md) 그것은 정체성의 맥락을 구별하는 역할을 한다. 정규화된 ID에는 ID 값과 네임스페이스가 포함됩니다. 읽기 [네임스페이스 개요](../../../../identity-service/features/namespaces.md) 추가 정보.
 
 B2B 네임스페이스는 엔티티의 기본 ID에서 사용됩니다.
 
