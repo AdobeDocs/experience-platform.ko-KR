@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service 안내서
 user-guide-description: Adobe Experience Platform에서 생성한 세그먼트 정의 또는 외부 소스를 사용하여 실시간 고객 프로필 데이터에서 대상자를 빌드하십시오.
 feature: Segments
-source-git-commit: 0063f08c16ca0be629684319856bb42d0dd1536d
+source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 36%
+source-wordcount: '183'
+ht-degree: 33%
 
 ---
 
@@ -40,6 +40,7 @@ ht-degree: 36%
    - [에지 세분화](ui/edge-segmentation.md)
    - [스트리밍 세분화](ui/streaming-segmentation.md)
    - [스트리밍 세분화(비디오)](video/streaming-segmentation-overview.md)
+   - [연도 시간 제한 업데이트 무시](ui/ignore-year.md)
    - [시간 제한 리팩터링](ui/segment-refactoring.md)
    - 세그먼트 일치 {#segment-match}
       - [세그먼트 일치 개요](ui/segment-match/overview.md)
@@ -61,7 +62,7 @@ ht-degree: 36%
    - [논리적 수량자](pql/logical-quantifiers.md)
    - [기타 함수](pql/misc-functions.md)
 - 튜토리얼 {#tutorials}
-   - [세그먼트를 만듭니다](tutorials/create-a-segment.md)
+   - [세그먼트 만들기](tutorials/create-a-segment.md)
    - [세그먼트 만들기(비디오)](video/create-segment.md)
    - [동적 세그먼트 만들기(비디오)](video/create-a-dynamic-segment.md)
    - [다중 엔티티 세그먼트 만들기(비디오)](video/create-multi-entity-segments.md)

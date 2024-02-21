@@ -4,10 +4,10 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
+source-git-commit: c2e446ed89ef8a2c4496cd1d442d0204843dab2e
 workflow-type: tm+mt
-source-wordcount: '1196'
-ht-degree: 5%
+source-wordcount: '1202'
+ht-degree: 4%
 
 ---
 
@@ -139,6 +139,8 @@ ht-degree: 5%
    * 데이터 관리 플랫폼 대상 {#data-management}
       * [DMP(데이터 관리 플랫폼) 대상 개요](./catalog/data-management/overview.md)
       * [Audience Manager DIL 확장](./catalog/data-management/aam-dil-extension.md)
+   * eCommerce 대상 {#ecommerce}
+      * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * 이메일 대상 {#email}
       * [Bizible 확장](./catalog/email/bizible.md)
       * [Marketo 확장](./catalog/email/marketo.md)
@@ -149,6 +151,7 @@ ht-degree: 5%
       * [Adobe Campaign 연결](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services 연결](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Mailchimp 관심 범주](./catalog/email-marketing/mailchimp-interest-categories.md)
+      * [Mailchimp 태그](./catalog/email-marketing/mailchimp-tags.md)
       * [(API) Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(파일) Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua.md)
       * [Responsys 연결 oracle](./catalog/email-marketing/oracle-responsys.md)

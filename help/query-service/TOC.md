@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 쿼리 서비스 도움말
 breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: ad3b739f300aa51f6f12c566ab49fafedb90be23
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '317'
 ht-degree: 19%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 19%
    - [사용자의 페이지 보기 나열](use-cases/list-visitor-sessions.md)
    - [페이지 보기별로 방문자 나열](use-cases/visitors-by-number-of-page-views.md)
    - [성향 점수](use-cases/propensity-score.md)
-   - [람다 함수 예: 유사한 레코드 검색](use-cases/retrieve-similar-records.md)
+   - [고차 함수로 유사한 레코드 검색](use-cases/retrieve-similar-records.md)
    - [분석 데이터에서 머천다이징 변수 반환 및 사용](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [방문자에 대한 롤업 보고서 보기](use-cases/roll-up-report-of-a-visitor.md)
@@ -106,6 +106,7 @@ ht-degree: 19%
    - [SQL 개요](sql/overview.md)
    - [SQL 구문](sql/syntax.md)
    - [Adobe 정의 함수](sql/adobe-defined-functions.md)
+   - [고차 함수](sql/higher-order-functions.md)
    - [Spark SQL 함수](sql/spark-sql-functions.md)
    - [메타데이터 명령](sql/metadata.md)
    - [준비된 문](sql/prepared-statements.md)
