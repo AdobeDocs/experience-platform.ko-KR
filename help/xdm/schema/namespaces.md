@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Experience Data Model(XDM)의 이름 간격
 description: XDM(Experience Data Model)의 이름 간격을 통해 스키마를 확장하고 다른 스키마 구성 요소를 가져올 때 필드 충돌을 방지하는 방법에 대해 알아봅니다.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
+source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
 
 # Experience Data Model(XDM)의 이름 간격
+
+>[!IMPORTANT]
+>
+>XDM에서 네임스페이스(이 페이지의 주제)는 스키마의 필드를 구분하는 데 사용됩니다. 이는 ID 값을 구별하는 데 네임스페이스가 사용되는 ID 서비스의 ID 네임스페이스 개념과 다릅니다. 의 설명서를 읽어 보십시오. [identity 서비스의 네임스페이스](../../identity-service/features/namespaces.md) 추가 정보.
 
 XDM(Experience Data Model) 스키마의 모든 필드에는 연결된 네임스페이스가 있습니다. 이러한 네임스페이스를 사용하면 서로 다른 스키마 구성 요소를 함께 가져올 때 스키마를 확장하고 필드 충돌을 방지할 수 있습니다. 이 문서에서는 XDM의 네임스페이스에 대한 개요와 네임스페이스가 [스키마 레지스트리 API](../api/overview.md).
 
