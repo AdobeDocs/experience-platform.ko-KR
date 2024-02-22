@@ -2,88 +2,64 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2024년 1월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: b41a69244c7eb1111759b2af5c1ae6a0fb90be32
 workflow-type: tm+mt
-source-wordcount: '1657'
-ht-degree: 30%
+source-wordcount: '1242'
+ht-degree: 22%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 일자: 2024년 1월 30일 수요일**
-
-Adobe Experience Platform의 새로운 기능:
-
-- [사용 사례 플레이북](#use-case-playbooks)
+**릴리스 일자: 2024년 2월 21일 목요일**
 
 Experience Platform의 기존 기능 업데이트:
 
-- [속성 기반 액세스 제어](#abac)
-- [데이터 준비](#data-prep)
-- [대시보드](#dashboards)
+- [경고](#alerts)
+- [데이터 수집](#data-collection)
+<!-- - [Data Prep](#data-prep) -->
 - [대상](#destinations)
-- [ID 서비스](#identity-service)
-- [Real-Time Customer Data Platform](#rtcdp)
-- [실시간 고객 프로필](#profile)
+- [샌드박스](#sandboxes)
 - [Segmentation Service](#segmentation)
 - [소스](#sources)
 
-## 사용 사례 플레이북 {#use-case-playbooks}
+## 경고 {#alerts}
 
-다음 [!UICONTROL 사용 사례 플레이북] 이제 모든 Real-Time CDP 및 Adobe Journey Optimizer 고객이 기능을 사용할 수 있습니다. [!UICONTROL 사용 사례 플레이북] 는 Real-time Customer Data Platform 또는 Adobe Journey Optimizer으로 시작할 때 사용자가 문제를 극복하도록 지원하기 위해 설계되었습니다. 어디서부터 시작할지 또는 원하는 사용 사례에 적합한 에셋을 제작하는 방법을 잘 모를 때 사용 사례 플레이북을 통해 영감을 얻고 다른 에셋을 제작하여 준비가 되면 프로덕션 환경에 테스트하고 가져올 수 있습니다.
-
-시작하려면 [!UICONTROL 사용 사례 플레이북], 다음 설명서 페이지를 참조하십시오.
-
-- 읽기 [개요 페이지](/help/use-case-playbooks/playbooks/overview.md) 목적, 가용성 정보를 이해하고 플레이북이 검색에서 인스턴스 생성, 생성된 에셋을 다른 샌드박스 환경으로 가져오는 방법에 대해 전체적인 데모를 받습니다.
-- 모든 항목 목록 가져오기 [이용할 수 있는 플레이북](/help/use-case-playbooks/playbooks/playbooks-list.md), 제품별로 그룹화됨(Real-Time CDP 또는 Journey Optimizer)
-- 모든 항목에 대한 정보 가져오기 [필수 권한](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) 플레이북과 플레이북에서 생성된 에셋을 사용합니다.
-- 이해 [데이터 인식 기능](/help/use-case-playbooks/playbooks/data-awareness.md) 생성된 에셋을 다른 샌드박스 환경으로 복사할 수 있습니다
-- Get [문제 해결 팁](/help/use-case-playbooks/playbooks/troubleshooting.md) 사용 사례 플레이북을 사용할 때 오류나 문제가 발생하는 경우.
-
-## 속성 기반 액세스 제어 {#abac}
-
-속성 기반 액세스 제어는 Adobe Experience Platform의 기능으로, 개인 정보 보호를 고려한 브랜드에게 사용자 액세스를 더 유연하게 관리할 수 있습니다. 스키마 필드 및 세그먼트와 같은 개별 객체를 사용자 역할에 할당할 수 있습니다. 이 기능을 사용하면 조직의 특정 Platform 사용자에 대해 개별 객체에 대한 액세스 권한을 부여하거나 취소할 수 있습니다.
-
-조직 관리자는 속성 기반 액세스 제어를 통해 모든 플랫폼 워크플로 및 리소스에서 중요한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 지정된 유형의 데이터에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.
-
-**신규 또는 업데이트된 설명서**
-
-| 설명서 업데이트 | 설명 |
-| --- | --- |
-| 속성 기반 액세스 제어에 대해 문서화된 새 API 엔드포인트 | 다음 [액세스 제어 API 참조 설명서](https://developer.adobe.com/experience-platform-apis/references/access-control/) 에는 이제 속성 기반 액세스 제어 API 역할, 정책 및 제품 끝점이 포함됩니다. 이러한 엔드포인트는 지정된 샌드박스의 지정된 리소스에서 사용자에 대한 관련 역할, 정책 및 제품을 검색하는 데 사용할 수 있습니다. |
+Experience Platform을 사용하면 다양한 플랫폼 활동에 대한 이벤트 기반 경고를 구독할 수 있습니다. 다음을 통해 다양한 경고 규칙에 가입할 수 있습니다. [!UICONTROL 경고] Platform 사용자 인터페이스의 탭으로, UI 자체 내에서 또는 이메일 알림을 통해 경고 메시지를 수신하도록 선택할 수 있습니다.
+**새 기능 또는 업데이트된 기능**
+| 기능 | 설명 | | — | — | | 경고 내역 탭 | Experience Platform 관리자는 경고 구독자 관리 기능을 사용하여 Adobe 사용자 ID, 외부 이메일 주소 또는 이메일 그룹 목록에 경고를 할당할 수 있습니다. 자세한 내용은 [경고 UI 설명서](../../observability/alerts/ui.md) 기록 탭에 대한 자세한 내용은 |
 
 {style="table-layout:auto"}
 
-속성 기반 액세스 제어에 대한 자세한 내용은 [속성 기반 액세스 제어 개요](../../access-control/abac/overview.md). 속성 기반 액세스 제어 워크플로에 대한 포괄적인 안내서는 [속성 기반 액세스 제어 엔드투엔드 안내서](../../access-control/abac/end-to-end-guide.md).
+경고에 대해 자세히 알아보려면 [[!DNL Observability Insights] 개요](../../observability/home.md).
 
-## 데이터 준비 {#data-prep}
+## 데이터 수집 {#data-collection}
 
-데이터 준비를 사용하면 데이터 엔지니어가 XDM(Experience Data Model)과의 데이터를 매핑, 변환 및 확인할 수 있습니다.
+Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe 또는 비 Adobe 대상으로 보강, 변환 및 배포가 가능한 Adobe Experience Platform Edge Network로 보낼 수 있는 기술 제품군을 제공합니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 새로운 매퍼 함수 | <ul><li>`object_to_map`: 사용 `object_to_map` 맵 데이터 유형을 만드는 함수입니다. 이 함수는 여러 가지 다른 구문을 지원합니다. 자세한 내용은 의 안내서를 참조하십시오. [계층 함수 - 객체](../../data-prep/functions.md#objects). </li><li>`to_map`: 사용 `to_map` 개체를 사용하여 주어진 필드 이름과 값 쌍을 사용하여 맵을 만드는 함수입니다. 자세한 내용은 의 안내서를 참조하십시오. [계층 함수 - 맵](../../data-prep/functions.md#map). </li><li>`array_to_map`: 사용 `array_to_map` 개체 배열을 사용하여 지정된 필드 이름 및 값 쌍으로 맵을 만드는 함수입니다. 자세한 내용은 의 안내서를 참조하십시오. [계층 함수 - 맵](../../data-prep/functions.md#map). |
+| [Web SDK의 웹 인앱 메시지 지원](../../edge/personalization/web-in-app-messaging.md) | 이제 Adobe Experience Platform Web SDK가 Adobe Journey Optimizer 캠페인에 대한 웹 인앱 메시지 구성을 지원합니다. |
 
 {style="table-layout:auto"}
 
-데이터 준비에 대한 자세한 내용은 [데이터 준비 개요](../../data-prep/home.md).
+데이터 수집에 대해 자세히 알아보려면 [데이터 수집 개요](../../tags/home.md)를 참조하십시오.
 
-## 대시보드 {#dashboards}
+<!-- ## Data Prep {#data-prep}
 
-Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대한 중요한 인사이트를 볼 수 있는 여러 대시보드를 제공합니다.
+Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
-**새로운 기능 또는 업데이트된 기능**
+**New or updated features**
 
-| 기능 | 설명 |
+| Feature | Description |
 | --- | --- |
-| SQL 보기 | 이제 SQL 보기 토글을 사용하여 프로필, 대상, 대상 및 맞춤화된 인사이트 뒤에 있는 SQL을 본 다음 쿼리 편집기를 통해 요청 시 쿼리를 실행할 수 있습니다. Real-time Customer Data Platform 통찰력을 제공하는 SQL에 액세스하면 데이터 모델 분석의 논리를 이해할 수 있습니다. 이러한 투명성은 Adobe 실시간 CDP 데이터를 보다 쉽게 액세스하고 이해할 수 있도록 하며 의사 결정에 영향을 줍니다.<br>40개 이상의 기존 인사이트의 SQL에서 영감을 얻어 비즈니스 요구 사항에 따라 플랫폼 데이터에서 고유한 인사이트를 도출하는 새로운 쿼리를 만들 수 있습니다. SQL은 [프로필](../../dashboards/insights/profiles.md), [대상](../../dashboards/insights/audiences.md), 및 [대상](../../dashboards/insights/destinations.md) Experience League 설명서의 insights. 이 문서에서는 표준 인사이트로 답할 수 있는 비즈니스 사용 사례를 강조합니다. 자세한 내용은 의 안내서를 참조하십시오. [insight SQL 보기](../../dashboards/view-sql.md). |
+| New mapper functions for Adobe Analytics | You can now use the following functions to extract event data from Adobe Analytics: <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> For more information on these functions, read the [Data Prep functions guide](../../data-prep/functions.md) |
 
 {style="table-layout:auto"}
 
-액세스 권한을 부여하고 사용자 정의 위젯을 만드는 방법을 포함해 대시보드에 대한 자세한 내용은 [대시보드 개요](../../dashboards/home.md)를 읽어 보십시오.
+For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md). -->
 
 ## 대상 {#destinations}
 
@@ -93,7 +69,9 @@ Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터�
 
 | 대상 | 설명 |
 | ----------- | ----------- |
-| [치골 연결](../../destinations/catalog/advertising/pubmatic.md) | 이 대상을 사용하여 대상 데이터를 [!DNL PubMatic Connect] 플랫폼. |
+| [Gainsight PX 연결](../../destinations/catalog/analytics/gainsight-px.md) | Gainsight PX는 제품 팀이 사용자가 제품을 사용하는 방법을 이해하고 피드백을 수집하며 제품 연습과 같은 인앱 참여를 만들어 사용자 온보딩 및 제품 채택을 유도할 수 있는 제품 경험 플랫폼입니다. |
+| [Mailchimp 태그 연결](../../destinations/catalog/email-marketing/mailchimp-tags.md) | Mailchimp는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다. Mailchimp 태그 커넥터를 사용하여 연락처를 구성, 레이블 지정 또는 분류할 수 있습니다. |
+| [SAP Commerce 연결](../../destinations/catalog/ecommerce/sap-commerce.md) | SAP Commerce는 B2B 및 B2C 기업을 위한 클라우드 기반의 전자 상거래 플랫폼 솔루션으로 SAP Customer Experience 포트폴리오의 일부로 제공됩니다. 이 대상을 사용하여 기존 Experience Platform 대상에서 SAP Commerce 내의 고객 세부 정보를 업데이트할 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -101,77 +79,42 @@ Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터�
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| 신규 **가정된 역할** Amazon S3 대상에 대한 인증 유형 | Experience Platform과 Experience Platform 키 및 비밀 키를 공유하지 않으려면 Amazon S3 버킷에 계정을 연결할 때 새로운 가설 역할 인증 유형을 사용하십시오. 의 새 인증 방법에 대해 자세히 알아보십시오. [인증 섹션](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) Amazon S3 설명서의 |
+| 일반적으로 사용할 수 있는 계정 대상자 활성화 | 이제 를 구매하는 회사에서 특정 대상에 대해 계정 대상을 활성화하는 기능을 일반적으로 사용할 수 있습니다. [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2b) Real-time Customer Data Platform 에디션. 다음에 대한 자습서 읽기: [계정 대상자 활성화](/help/destinations/ui/activate-account-audiences.md) 지원되는 대상을 포함하여 전체 정보를 얻습니다. |
+| Google 대상에 대한 Digital Markets Act 동의 시행 도구 | Google은 의 변경 사항을 [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [고객 일치](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)및 [디스플레이 및 비디오 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) 아래에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [디지털 시장법](https://digital-markets-act.ec.europa.eu/index_en) 유럽 연합의 (DMA)[EU 사용자 동의 정책](https://www.google.com/about/company/user-consent-policy/)). 이러한 동의 요건 변경의 시행은 2024년 3월 6일부터 시행될 예정이다. <br/><br/> EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너인 Adobe은 유럽 연합의 DMA에 따라 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.<br/><br/>Adobe 개인 정보 보호 및 보안 쉴드를 구매하고 [동의 정책](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 동의하지 않은 프로필을 필터링하려면 별도의 조치를 취할 필요가 없습니다.<br/><br/>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 정의](../../segmentation/home.md#segment-definitions) 내 기능 [세그먼트 빌더](../../segmentation/ui/segment-builder.md) 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있도록 동의하지 않은 프로필을 필터링합니다. |
+| [!BADGE 베타]{type=Informative} 배치 대상에 대한 매핑 필드 순서 바꾸기 | 이제 의 매핑 필드를 드래그 앤 드롭하여 CSV 내보내기의 열 순서를 변경할 수 있습니다. [매핑](../../destinations/ui/activate-batch-profile-destinations.md#mapping) 단계. UI에서 매핑된 필드의 순서는 내보낸 CSV 파일의 열 순서에 따라 위에서 아래로 반영되며, 맨 위 행은 CSV 파일의 가장 왼쪽 열입니다. <br/><br/> 이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
+| [!BADGE 베타]배치 대상에 대해 미리 선택된 기본 내보내기 일정 {type=Informative} | 이제 Experience Platform이 각 파일 내보내기에 대한 기본 일정을 자동으로 설정합니다. 다음에서 설명서를 참조하십시오. [대상자 내보내기 예약](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) 기본 일정을 수정하는 방법을 알아봅니다. <br/><br/> 이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
+| [!BADGE 베타]{type=Informative} 배치 대상에 대한 대상자 활성화 일정 벌크 편집 | 이제 다음에서 여러 대상에 대한 활성화 일정을 일괄적으로 편집할 수 있습니다. [활성화 데이터](../../destinations/ui/destination-details-page.md#bulk-edit-schedule) 페이지를 가리키도록 업데이트하는 중입니다. <br/><br/> 이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
+| [!BADGE 베타]{type=Informative} 주문형 파일을 일괄 처리 대상으로 내보내기 | 이제 다음을 통해 대상자를 일괄 배치 대상으로 내보낼 수 있습니다. [요청 시 파일 내보내기](../../destinations/ui/export-file-now.md) 기능. <br/><br/> 이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
 
 {style="table-layout:auto"}
 
 대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
-## ID 서비스 {#identity-service}
+## 샌드박스 {#sandboxes}
 
-Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 걸쳐 ID를 연결하여 고객과 고객의 행동을 종합적으로 파악할 수 있으므로, 실시간으로 효과적인 개인 디지털 환경을 제공할 수 있습니다.
-
-**신규 또는 업데이트된 설명서**
-
-| 설명서 업데이트 | 설명 |
-| --- | --- |
-| 문서 재구성 | Identity Service 설명서는 Identity Service 내 개념의 표시 및 명확성을 개선하기 위해 재구성되었습니다.<ul><li>다음 방문: [ID 서비스 개요 페이지](../../identity-service/home.md) 확장된 용어 안내서의 경우 일반적인 고객 여정을 자세히 설명하는 사용 사례 예, Identity Service가 ID를 함께 연결하는 방법에 대한 분류 및 Identity Service가 Experience Platform 생태계 내에서 수행하는 역할에 대한 요약이 제공됩니다.</li><li>의 안내서 읽기 [identity 서비스와 실시간 고객 프로필 간의 관계 이해](../../identity-service/identity-and-profile.md) 두 서비스가 함께 작동하는 방식과 목적, 프로세스, 입력 및 출력 간의 차이에 대한 자세한 요약 정보.</li><li>다음을 참조하십시오. [ID 서비스 연결 논리 안내서](../../identity-service/features/identity-linking-logic.md) id 그래프가 다양한 시나리오 및 타임스탬프를 부여받아 동작하는 방식에 대한 설명 및 시각화용.</li></ul> |
-
-{style="table-layout:auto"}
-
-ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md).
-
-## Real-Time Customer Data Platform {#rtcdp}
-
-Experience Platform을 기반으로 구축된 Real-Time Customer Data Platform([!DNL Real-Time CDP])으로 기업은 알려진 데이터와 알 수 없는 데이터를 수집하여 고객 여정 전반에 걸쳐 지능적인 의사 결정을 통해 고객 프로필을 활성화할 수 있습니다. [!DNL Real-Time CDP]는 여러 기업의 데이터 소스를 결합하여 실시간으로 고객 프로필을 생성합니다. 이러한 프로필에서 구축된 세그먼트는 다운스트림 대상으로 전송되어 모든 채널과 디바이스에서 일대일로 개인 설정된 고객 경험을 제공할 수 있습니다.
+Adobe Experience Platform은 글로벌 규모로 디지털 경험 애플리케이션을 강화하기 위해 빌드되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하는 경우가 많으며, 운영 규정 준수를 보장하면서 이러한 애플리케이션의 개발, 테스트 및 구축 요건을 충족해야 합니다. 이러한 요구 사항을 해결하기 위해 Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 샌드박스를 제공합니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 업데이트: [Real-Time CDP 홈 페이지](https://experience.adobe.com) | <ul><li>**프로필 위젯**: 이제 프로필 위젯을 사용하여 프로필 개요 페이지로 이동하고 조직의 프로필 지표를 볼 수 있습니다.</li><li>**프로필 지표 카드**: 이제 홈 페이지 대시보드의 프로필 지표 카드에 각 병합 정책에 따라 조직의 총 프로필 수가 표시됩니다.</li><li>**스키마 위젯**: 이제 스키마 위젯을 사용하여 UI에서 스키마 생성 워크플로우로 이동할 수 있습니다.</li></ul> |
+| 샌드박스 도구 | 이제 동의 및 거버넌스 규칙에 대한 오브젝트 유형을 지원하는 것 외에도 샌드박스 도구를 사용하여 통합 프로필이 활성화되지 않은 스키마를 가져오고, 세그먼트를 가져올 때 타겟 샌드박스에서 누락된 속성이 있는지 확인하고, 기본적으로 기존 병합 정책을 사용합니다. 이러한 기능에 대한 자세한 내용은 [샌드박스 도구 UI 안내서](../../sandboxes/ui/sandbox-tooling.md). |
 
 {style="table-layout:auto"}
 
-**신규 또는 업데이트된 설명서**
-
-| 설명서 업데이트 | 설명 |
-| --- | --- |
-| 새 Real-Time CDP 설명서 홈 페이지 | 다음 방문: [새 Real-Time CDP 설명서 홈 페이지](/help/rtcdp/home.md) 제품, 가드레일, 샘플 사용 사례 등을 시작하는 방법에 대한 정보를 한눈에 살펴볼 수 있습니다. |
-| 샘플 Real-Time CDP 사용 사례 개요 | 다음 방문: [새로운 샘플 사용 사례 개요 페이지](/help/rtcdp/use-case-guides/overview.md) 조직에서 Real-Time CDP을 통해 달성할 수 있는 샘플 사용 사례 컬렉션. |
-
-{style="table-layout:auto"}
-
-Real-Time CDP에 대해 자세히 알아보려면 [Real-Time CDP 개요](../../rtcdp/overview.md).
-
-## 실시간 고객 프로필 {#profile}
-
-Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드와 상호 작용하는지에 관계없이 고객을 위한 조직화되고 일관되며 관련성 높은 경험을 제공할 수 있습니다. 실시간 고객 프로필을 사용하면 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 여러 채널의 데이터를 결합하여 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. 프로필을 사용하면 모든 고객의 상호 작용에 대해 실행 가능한 타임스탬프가 지정된 계정을 제공하는 통합 보기로 고객 데이터를 통합할 수 있습니다.
-
-**업데이트된 기능**
-
-| 기능 | 설명 |
-| --- | --- |
-| 프로필 뷰어의 기본 대시보드 카드 현지화 개선 사항 | 이제 기본 프로필 카드에 동적으로 현지화된 이름이 표시됩니다. 사용자 정의 프로필 카드는 편집할 수 있는 사용자 정의 이름을 계속 가질 수 있습니다. |
-
-{style="table-layout:auto"}
-
-실시간 고객 프로필에 대한 자세한 내용은 [프로필 개요](../../profile/home.md)
+샌드박스에 대한 자세한 내용은 [샌드박스 개요](../../sandboxes/home.md).
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service]는 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 프로필의 특정 하위 집합을 정의합니다. 세그먼트는 기록 데이터(예: 인구 통계 정보) 또는 고객과 브랜드의 상호 작용을 나타내는 시계열 이벤트를 기반으로 할 수 있습니다.
+[!DNL Segmentation Service]를 사용하여 개인 사용자(예: 고객, 잠재 고객, 사용자 또는 조직)와 관련된 [!DNL Experience Platform]에 저장된 데이터를 대상자로 세분화할 수 있습니다. 세그먼트 정의 또는 [!DNL Real-Time Customer Profile] 데이터의 다른 소스를 통해 대상자를 만들 수 있습니다. 이러한 대상자는 [!DNL Platform]을 통해 중앙 집중식으로 구성 및 유지 관리되고 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
 
-**새로운 기능 또는 업데이트된 기능**
+**새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 외부에서 생성된 대상 업로드 | 최대 열 수를 (으)로 늘렸습니다. **25**. |
-| 세그먼트 빌더 추정치 | 이제 예상 및 적격 프로필이 대상 속성 섹션에 표시됩니다. 이 변경 사항에 대한 자세한 내용은 [세그먼트 빌더 UI 안내서](../../segmentation/ui/segment-builder.md). |
+| 계정 대상자 | 이제 계정 대상을 일반적으로 사용할 수 있습니다! 이제 계정 세분화를 사용하여 Real-Time Customer Platform의 B2B 및 B2P 에디션 모두에서 사람 기반 대상자에서 계정 기반 대상자로 마케팅 세분화 환경을 완전히 쉽고 정교하게 만들 수 있습니다. 이 릴리스에서는 사용자 기반 대상을 계정 기반 대상의 술어로 사용하고, 검색 기능을 추가하고, 사용자 지정 엔티티의 사용을 지원하고, 데이터 거버넌스를 준수할 수 있습니다. 이 기능에 대한 자세한 내용은 [계정 대상자 개요](../../segmentation/ui/account-audiences.md). |
 
 {style="table-layout:auto"}
-
-[!DNL Segmentation Service]에 대한 자세한 내용은 [세분화 개요](../../segmentation/home.md)를 참조하십시오.
 
 ## 소스 {#sources}
 
@@ -181,10 +124,8 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| [!BADGE 베타]{type=Informative} [!DNL Oracle NetSuite] 소스 | 사용 [!DNL Oracle NetSuite] 소스 카탈로그의 통합을 통해 다음에서 데이터 가져오기 [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) 및 [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) Experience Platform 계정. |
-| [!BADGE 베타]{type=Informative} [!DNL Braze Currents] 소스 | 사용 [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) 소스 카탈로그의 통합을 통해 다음에서 데이터 가져오기 [!DNL Braze] Experience Platform 계정. |
-| 에 대한 키 쌍 인증 지원 [!DNL Snowflake] 일괄 처리 소스 | 이제 새로 만들 때 키 쌍 인증을 사용할 수 있습니다 [!DNL Snowflake] 배치 데이터 계정. 자세한 내용은 의 안내서를 참조하십시오. [만들기 [!DNL Snowflake] API를 사용하는 계정](../../sources/tutorials/api/create/databases/snowflake.md) 또는 의 안내서 [만들기 [!DNL Snowflake] UI를 사용하는 계정](../../sources/tutorials/ui/create/databases/snowflake.md). |
+| [!BADGE 베타]{type=Informative} [!DNL Acxiom] 소스 | 사용 [[!DNL Acxiom Prospecting Data Import] 소스](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) 에서 데이터 검색 및 매핑 [!DNL Acxiom] Experience Platform 대상 Prospect Service |
 
 {style="table-layout:auto"}
 
-소스에 대해 자세히 알아보려면 [소스 개요 ](../../sources/home.md)를 참조하십시오.
+소스에 대한 자세한 내용은 [소스 개요](../../sources/home.md).
