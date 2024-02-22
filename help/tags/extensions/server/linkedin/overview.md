@@ -3,9 +3,9 @@ title: Linkedin 전환 API 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장을 사용하면 Linkedin 마케팅 캠페인의 성능을 측정할 수 있습니다.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 ## 전제 조건 {#prerequisites}
 
-에서 전환 규칙을 만들어야 합니다. [!DNL LinkedIn] 캠페인 광고 계정입니다. [!DNL Adobe] 는 대화 규칙 이름의 시작 부분에 &quot;CAPI&quot;를 포함하여 구성할 수 있는 다른 전환 규칙 유형과 구분하도록 권장합니다.
+다음을 수행해야 합니다. [전환 규칙 만들기](https://www.linkedin.com/help/lms/answer/a1657171) (으)로 [!DNL LinkedIn Campaign Manager] 계정입니다. [!DNL Adobe] 는 대화 규칙 이름의 시작 부분에 &quot;CAPI&quot;를 포함하여 구성할 수 있는 다른 전환 규칙 유형과 구분하도록 권장합니다.
 
 ### 암호 및 데이터 요소 만들기
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 모든 데이터 요소가 설정되면 이벤트가 전송되는 시기와 방법을 결정하는 이벤트 전달 규칙 만들기를 시작할 수 있습니다 [!DNL LinkedIn].
 
-새 이벤트 전달 만들기 [규칙](../../../ui/managing-resources/rules.md) 이벤트 전달 속성에서 다음을 수행합니다. 아래 **[!UICONTROL 작업]**, 새 작업을 추가하고 확장을 로 설정합니다. **[!UICONTROL LinkedIn]**. 그런 다음 을 선택합니다. **[!UICONTROL 웹 전환 보내기]** 대상: **[!UICONTROL 작업 유형]**.
+새 이벤트 전달 만들기 [규칙](../../../ui/managing-resources/rules.md) 이벤트 전달 속성에서 다음을 수행합니다. 아래 **[!UICONTROL 작업]**, 새 작업을 추가하고 확장을 로 설정합니다. **[!UICONTROL LinkedIn]**. 그런 다음 을 선택합니다. **[!UICONTROL 변환 전송]** 대상: **[!UICONTROL 작업 유형]**.
 
 ![이벤트 전달 규칙 작업 구성을 추가하는 데 필요한 필드가 강조 표시된 이벤트 전달 속성 규칙 보기.](../../../images/extensions/server/linkedin/linkedin-event-action.png)
 
@@ -62,11 +62,11 @@ ht-degree: 1%
 
 | 입력 | 설명 |
 | --- | --- |
-| [!UICONTROL 전환] | 에서 생성된 전환 규칙의 ID [LinkedIn 캠페인 관리자](https://www.linkedin.com/help/lms/answer/a1657171) 또는 다음을 통해 [!DNL LinkedIn Campaign Manager]. |
+| [!UICONTROL 전환] | 에서 생성된 전환 규칙의 ID [LinkedIn 캠페인 관리자](https://www.linkedin.com/help/lms/answer/a1657171). 변환 규칙을 선택하여 ID를 가져온 다음 브라우저 URL에서 ID를 복사합니다(예: `/campaignmanager/accounts/508111232/conversions/15588877`) as `/conversions/<id>`. |
 | [!UICONTROL 전환 시간] | 전환 이벤트가 발생한 각 타임스탬프(밀리초). <br><br> 참고: 소스에서 전환 타임스탬프를 초 단위로 기록하는 경우 끝에 000을 삽입하여 밀리초로 변환하십시오. |
 | [!UICONTROL 통화] | ISO 형식의 통화 코드. |
 | [!UICONTROL 금액] | 변환 값(소수점 문자열: &quot;100.05&quot;). |
-| [!UICONTROL 이벤트 ID] | 광고주가 각 이벤트를 표시하기 위해 생성한 고유 ID. 이 필드는 선택 사항이며 중복 제거에 사용됩니다. |
+| [!UICONTROL 이벤트 ID] | 광고주가 각 이벤트를 표시하기 위해 생성한 고유 ID. 이 필드는 선택 사항이며 다음에 사용됩니다. [중복 제거](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02). |
 
 {style="table-layout:auto"}
 
@@ -86,4 +86,6 @@ ht-degree: 1%
 
 ## 다음 단계
 
-이 안내서에서는 로 데이터를 보내는 방법을 다룹니다 [!DNL LinkedIn] 사용 [!DNL LinkedIn Conversions API] 이벤트 전달 확장. 의 이벤트 전달 기능에 대한 자세한 내용 [!DNL Adobe Experience Platform]을(를) 참조하십시오. [이벤트 전달 개요](../../../ui/event-forwarding/overview.md).
+이 안내서에서는 로 데이터를 보내는 방법을 다룹니다 [!DNL LinkedIn] 사용 [!DNL LinkedIn Conversions API] 이벤트 전달 확장. 의 이벤트 전달 기능에 대한 자세한 내용 [!DNL Adobe Experience Platform], 다음을 읽습니다 [이벤트 전달 개요](../../../ui/event-forwarding/overview.md).
+
+Experience Platform 디버거 및 이벤트 전달 모니터링 도구를 사용하여 구현을 디버깅하는 방법에 대한 자세한 내용은 [Adobe Experience Platform Debugger 개요](../../../../debugger/home.md) 및 [이벤트 전달 시 활동 모니터링](../../../ui/event-forwarding/monitoring.md).
