@@ -3,10 +3,10 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
+source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
 workflow-type: tm+mt
-source-wordcount: '3797'
-ht-degree: 12%
+source-wordcount: '3879'
+ht-degree: 11%
 
 ---
 
@@ -73,6 +73,10 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 >
 >다음에서 시작된 대상자 선택 **[!UICONTROL 사용자 정의 업로드]** 에서 자동으로 [데이터 보강 속성 선택](#select-enrichment-attributes) 단계.
 
+>[!TIP]
+>
+>의 기존 활성화 플로우에서 대상을 제거할 수 있습니다. **[!UICONTROL 활성화 데이터]** 페이지를 가리키도록 업데이트하는 중입니다. 다음을 참조하십시오. [전용 설명서](../ui/destination-details-page.md#bulk-remove) 을 참조하십시오.
+
 ## 대상자 내보내기 예약 {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -80,17 +84,21 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 >title="예약"
 >abstract="연필 아이콘을 사용하여 파일 내보내기 유형(전체 파일 또는 증분 파일)과 내보내기 빈도를 설정합니다."
 
-[!DNL Adobe Experience Platform] 이메일 마케팅 및 클라우드 스토리지 대상에 대한 데이터를 다음으로 내보냅니다. [다른 파일 유형](#supported-file-formats-export). 다음에서 **[!UICONTROL 예약]** 페이지에서 내보내는 각 대상에 대해 일정 및 파일 이름을 구성할 수 있습니다. 예약을 구성해야 하지만, 파일 이름을 구성하는 것은 선택 사항입니다.
+[!DNL Adobe Experience Platform] 이메일 마케팅 및 클라우드 스토리지 대상에 대한 데이터를 다음으로 내보냅니다. [다른 파일 유형](#supported-file-formats-export). 다음에서 **[!UICONTROL 예약]** 페이지에서 내보내는 각 대상에 대해 일정 및 파일 이름을 구성할 수 있습니다.
+
+Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동으로 설정합니다. 각 일정 옆에 있는 연필 아이콘을 선택하고 사용자 지정 일정을 정의하여 필요에 따라 기본 일정을 수정할 수 있습니다.
+
+![예약 단계에서 강조 표시된 예약 컨트롤을 편집합니다.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
+
+>[!TIP]
+>
+>에서 기존 활성화 흐름에 대한 대상 활성화 일정을 편집할 수 있습니다. **[!UICONTROL 활성화 데이터]** 페이지를 가리키도록 업데이트하는 중입니다. 다음에서 설명서를 참조하십시오. [활성화 일정 벌크 편집](../ui/destination-details-page.md#bulk-edit-schedule) 을 참조하십시오.
 
 >[!IMPORTANT]
 >
 >[!DNL Adobe Experience Platform] 는 내보내기 파일을 파일당 5백만 개의 레코드(행)로 자동으로 분할합니다. 각 행은 하나의 프로필을 나타냅니다.
 >
 >분할 파일 이름에는 다음과 같이 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다. `filename.csv`, `filename_2.csv`, `filename_3.csv`.
-
-다음 항목 선택 **[!UICONTROL 일정 만들기]** 대상으로 보내려는 대상에 해당하는 컨트롤입니다.
-
-![예약 단계에서 강조 표시된 예약 컨트롤을 만듭니다.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### 전체 파일 내보내기 {#export-full-files}
 
@@ -247,6 +255,14 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 1. 내보내기를 위해 선택한 필드가 매핑 보기에 나타나고 내보낸 파일의 편집된 헤더를 표시합니다.
 
    ![대상으로 내보낼 수 있는 프로필 속성을 보여 주는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. [!BADGE Beta]{type=Informative}
+
+   >[!NOTE]
+   >
+   >이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
+
+   ![드래그 앤 드롭으로 매핑 필드를 재정렬하는 과정을 보여 주는 기록.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
 1. (선택 사항) 내보낸 필드를 선택할 수 있습니다. [필수 키](#mandatory-keys) 또는 [중복 제거 키](#deduplication-keys).
 

@@ -3,9 +3,9 @@ title: (베타) Experience Platform UI를 사용하여 주문형 파일을 배�
 type: Tutorial
 description: Experience Platform UI를 사용하여 주문형 파일을 일괄 처리 대상으로 내보내는 방법을 알아봅니다.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: 64833e29d062225bc774a14ae60b102b293bb5c4
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '722'
 ht-degree: 8%
 
 ---
@@ -48,13 +48,9 @@ ht-degree: 8%
 
    ![필터링된 데이터 흐름을 강조 표시하는 이미지입니다.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. 다음 항목 선택 **[!UICONTROL 활성화 데이터]** 파일을 온디맨드로 내보낼 대상을 탭하고 선택한 다음 **[!UICONTROL 지금 파일 내보내기]** 파일을 배치 대상에 전달하는 일회성 내보내기를 트리거하도록 제어합니다.
+3. 다음 항목 선택 **[!UICONTROL 활성화 데이터]** 를 탭하고 파일을 온디맨드로 내보낼 대상을 선택한 다음 **[!UICONTROL 지금 파일 내보내기]** 선택한 각 대상에 대한 파일을 일괄 처리 대상으로 전달하는 1회 내보내기를 트리거하도록 제어합니다.
 
-   >[!IMPORTANT]
-   >
-   >파일을 온디맨드로 대량으로 내보낼 대상을 여러 개 선택하는 것은 현재 UI에서 지원되지 않습니다. 사용 [임시 활성화 API](/help/destinations/api/ad-hoc-activation-api.md) 그 목적을 위해.
-
-   ![이미지(Export file now) 단추를 강조 표시합니다.](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
+   ![이미지(Export file now) 단추를 강조 표시합니다.](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
 4. 선택 **[!UICONTROL 예]** 을 클릭하여 파일 내보내기를 확인하고 트리거합니다.
 

@@ -3,9 +3,9 @@ keywords: 대상;대상;대상 세부 사항 페이지;대상 세부 사항 페�
 title: 대상 세부 사항 보기
 description: 개별 대상에 대한 세부 정보 페이지에서는 대상 세부 정보에 대한 개요를 제공합니다. 대상 세부 사항에는 대상 이름, ID, 대상에 매핑된 대상자 및 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤이 포함됩니다.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '1100'
 ht-degree: 1%
 
 ---
@@ -115,6 +115,32 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 
 ![활성화 데이터 보기 스트리밍 대상](../assets/ui/details-page/activation-data-streaming.png)
 
+<!-- ### Remove multiple audiences from activation flows {#bulk-remove}
+
+To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
+
+![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png) -->
+
+### [!BADGE 베타]{type=Informative} 여러 파일을 요청 시 배치 대상으로 내보냅니다. {#bulk-export}
+
 >[!NOTE]
 >
->대상자의 세부 정보 페이지 탐색에 대한 자세한 내용은 [세그멘테이션 UI 개요](../../segmentation/ui/overview.md#segment-details).
+이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
+
+다음을 수행할 수 있습니다. [여러 파일을 온디맨드로 내보내기](../ui/export-file-now.md) 다음에서 **[!UICONTROL 활성화 데이터]** 페이지를 가리키도록 업데이트하는 중입니다. 이렇게 하려면 파일을 온디맨드로 내보낼 대상을 선택하고 **[!UICONTROL 지금 파일 내보내기]** 선택한 각 대상에 대한 파일을 일괄 처리 대상으로 전달하는 1회 내보내기를 트리거하도록 제어합니다.
+
+![이미지(Export file now) 단추를 강조 표시합니다.](../assets/ui/details-page/bulk-export-file-now.png)
+
+### [!BADGE 베타]{type=Informative} 일괄 처리 대상으로 내보낸 여러 대상에 대한 활성화 일정을 편집합니다. {#bulk-edit-schedule}
+
+>[!NOTE]
+>
+이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
+
+여러 대상의 기존 활성화 일정을 동시에 편집하려면 원하는 대상을 선택한 다음 을 선택합니다 **[!UICONTROL 일정 편집]**. 내보내기 일정을 정의하거나 편집하는 방법에 대한 자세한 내용은 [대상자 내보내기 예약](../ui/activate-batch-profile-destinations.md#scheduling) 섹션.
+
+![여러 대상에 대한 활성화 일정을 편집하는 옵션이 강조 표시된 활성화 데이터 화면입니다.](../assets/ui/details-page/bulk-edit-schedule.png)
+
+>[!NOTE]
+>
+대상자의 세부 정보 페이지 탐색에 대한 자세한 내용은 [세그멘테이션 UI 개요](../../segmentation/ui/overview.md#segment-details).
