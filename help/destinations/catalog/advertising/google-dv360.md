@@ -2,16 +2,24 @@
 title: Google Display & Video 360 연결
 description: 이전에 DoubleClick Bid Manager로 알려졌던 Display & Video 360은 디스플레이, 비디오 및 모바일 인벤토리 소스에 걸쳐 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행하는 데 사용되는 도구입니다.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: d5a22d4692226c865f6489c821366b4ce8bc2887
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '1158'
 ht-degree: 2%
 
 ---
 
 # [!DNL Google Display & Video 360] 연결
 
-## 개요 {#overview}
+>[!IMPORTANT]
+>
+> Google은 의 변경 사항을 [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [고객 일치](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)및 [디스플레이 및 비디오 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) 아래에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [디지털 시장법](https://digital-markets-act.ec.europa.eu/index_en) 유럽 연합의 (DMA)[EU 사용자 동의 정책](https://www.google.com/about/company/user-consent-policy/)). 이러한 동의 요건 변경의 시행은 2024년 3월 6일부터 시행될 예정이다.
+><br/><br/>
+>EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너인 Adobe은 유럽 연합의 DMA에 따라 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
+><br/><br/>
+>Adobe 개인 정보 보호 및 보안 쉴드를 구매하고 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 동의하지 않은 프로필을 필터링하려면 별도의 조치를 취할 필요가 없습니다.
+><br/><br/>
+>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 정의](../../../segmentation/home.md#segment-definitions) 내 기능 [세그먼트 빌더](../../../segmentation/ui/segment-builder.md) 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있도록 동의하지 않은 프로필을 필터링합니다.
 
 [!DNL Display & Video 360], 이전에 [!DNL DoubleClick Bid Manager]는 디스플레이, 비디오 및 모바일 인벤토리 소스에 걸쳐 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행하는 데 사용되는 도구입니다.
 
