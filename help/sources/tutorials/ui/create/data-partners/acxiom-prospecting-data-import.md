@@ -3,9 +3,7 @@ title: Acxiom 전망 데이터 가져오기
 description: UI를 사용하여 Acxiom Prospecting Data를 Adobe Experience Platform 및 Adobe Real-time Customer Data Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2024-02-21T00:00:00Z
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: 5457c2fcb6045338d042d3910752b962912b6397
+source-git-commit: bf7e2e08d54f113c6e2cc5060f51725555c2c049
 workflow-type: tm+mt
 source-wordcount: '1752'
 ht-degree: 2%
