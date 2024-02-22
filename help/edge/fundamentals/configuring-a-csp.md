@@ -5,16 +5,16 @@ description: Experience Platform 웹 SDK에 대한 CSP를 구성하는 방법을
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: 구성;구성;SDK;Edge;Web SDK;구성;컨텍스트;웹;장치;환경;웹 SDK 설정;컨텐츠 보안 정책;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 099f87acded9eca31c31555e63c0ea49ae2d1719
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 2%
+source-wordcount: '339'
+ht-degree: 0%
 
 ---
 
 # CSP 구성
 
-A [컨텐츠 보안 정책](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP)는 브라우저에서 사용할 수 있는 리소스를 제한하는 데 사용됩니다. CSP는 스크립트 및 스타일 리소스의 기능을 제한할 수도 있습니다. Adobe Experience Platform Web SDK는 CSP가 필요하지 않지만 CSP를 추가하면 공격 지표를 줄여 악의적인 공격을 방지할 수 있습니다.
+A [컨텐츠 보안 정책](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP)는 브라우저에서 사용할 수 있는 리소스를 제한하는 데 사용됩니다. CSP는 스크립트 및 스타일 리소스의 기능을 제한할 수도 있습니다. Adobe Experience Platform Web SDK는 CSP가 필요하지 않지만 CSP를 추가하면 공격 지표를 줄여 악의적인 공격을 방지할 수 있습니다.
 
 CSP는 방법을 반영해야 합니다. [!DNL Platform Web SDK] 배포 및 구성됩니다. 다음 CSP는 SDK가 제대로 작동하는 데 필요한 변경 사항을 보여 줍니다. 특정 환경에 따라 추가 CSP 설정이 필요할 수 있습니다.
 
@@ -60,3 +60,11 @@ style-src 'unsafe-inline'
 >[!NOTE]
 >
 >Adobe **아님** 추천 지정 `unsafe-inline` 를 사용하면 페이지에서 스크립트를 실행할 수 있어 CSP의 이점을 제한할 수 있습니다.
+
+## 인앱 메시지에 대한 CSP 구성 {#in-app-messaging}
+
+를 구성할 때 [웹 인앱 메시지](../personalization/web-in-app-messaging.md), CSP에 다음 지시문을 포함해야 합니다.
+
+```
+default-src  blob:;
+```

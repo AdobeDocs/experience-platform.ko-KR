@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK 도움말
 breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
-source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
+source-git-commit: 82eede9e59338e8438c361d58b476960b7faa5cb
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 28%
+source-wordcount: '188'
+ht-degree: 23%
 
 ---
 
@@ -46,6 +46,7 @@ ht-degree: 28%
    * [개인화된 콘텐츠 렌더링](personalization/rendering-personalization-content.md)
    * [하이브리드 구현을 통한 개인화](personalization/hybrid-personalization.md)
    * [플리커 관리](personalization/manage-flicker.md)
+
    * Adobe Target {#adobe-target}
       * [개요](personalization/adobe-target/target-overview.md)
       * [단일 페이지 애플리케이션 구현](personalization/adobe-target/spa-implementation.md)
@@ -56,11 +57,12 @@ ht-degree: 28%
          * [개요](personalization/adobe-target/analytics-logging/overview.md)
          * [클라이언트측 로깅](personalization/adobe-target/analytics-logging/client-side.md)
          * [서버측 로깅](personalization/adobe-target/analytics-logging/server-side.md)
-   * Offer Decisioning {#offer-decisioning}
+   * Offer decisioning {#offer-decisioning}
       * [개요](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [개요](personalization/ajo/overview.md)
       * [단일 페이지 애플리케이션 구현](personalization/ajo/web-spa-implementation.md)
+      * [웹 인앱 메시지 구성](personalization/web-in-app-messaging.md)
 * 동의 {#consent}
    * [동의 지원](consent/supporting-consent.md)
    * IAB 투명성 및 동의 프레임워크 2.0 {#iab-tcf}
