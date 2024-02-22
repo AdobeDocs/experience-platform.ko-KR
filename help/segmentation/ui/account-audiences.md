@@ -1,12 +1,12 @@
 ---
 title: 계정 대상자
 description: 계정 대상자를 만들고 사용하여 다운스트림 대상의 계정 프로필을 타겟팅하는 방법을 알아봅니다.
-badgeLimitedAvailability: label="제한된 가용성" type="Caution"
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 1ff4cb004b7c2f474e2d64f4bcc239c7060f9439
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->계정 대상은 다음에서만 사용할 수 있습니다. [Real-time Customer Data Platform B2B 에디션](../../rtcdp/b2b-overview.md). 또한 계정 대상자 기능은 현재 **제한된 가용성**. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
+>계정 대상은 다음에서만 사용할 수 있습니다. [Real-time Customer Data Platform B2B 에디션](../../rtcdp/overview.md#rtcdp-b2b) 및 [Real-time Customer Data Platform B2P 에디션](../../rtcdp/overview.md#rtcdp-b2p).
 
 Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 기반 대상에서 계정 기반 대상으로의 마케팅 세분화 경험을 전체적으로 쉽고 정교하게 만들 수 있습니다.
 

@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 2월
 description: Adobe Experience Platform의 2024년 2월 릴리스 정보.
-source-git-commit: b41a69244c7eb1111759b2af5c1ae6a0fb90be32
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 20%
@@ -16,7 +16,6 @@ Experience Platform의 기존 기능 업데이트:
 
 - [경고](#alerts)
 - [데이터 수집](#data-collection)
-<!-- - [Data Prep](#data-prep) -->
 - [대상](#destinations)
 - [샌드박스](#sandboxes)
 - [Segmentation Service](#segmentation)
@@ -78,7 +77,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| 일반적으로 사용할 수 있는 계정 대상자 활성화 | 이제 를 구매하는 회사에서 특정 대상에 대해 계정 대상을 활성화하는 기능을 일반적으로 사용할 수 있습니다. [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2b) Real-time Customer Data Platform 에디션. 다음에 대한 자습서 읽기: [계정 대상자 활성화](/help/destinations/ui/activate-account-audiences.md) 지원되는 대상을 포함하여 전체 정보를 얻습니다. |
+| 일반적으로 사용할 수 있는 계정 대상자 활성화 | 이제 를 구매하는 회사에서 특정 대상에 대해 계정 대상을 활성화하는 기능을 일반적으로 사용할 수 있습니다. [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) Real-time Customer Data Platform 에디션. 다음에 대한 자습서 읽기: [계정 대상자 활성화](/help/destinations/ui/activate-account-audiences.md) 지원되는 대상을 포함하여 전체 정보를 얻습니다. |
 | Google 대상에 대한 Digital Markets Act 동의 시행 도구 | Google은 의 변경 사항을 [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [고객 일치](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)및 [디스플레이 및 비디오 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) 아래에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [디지털 시장법](https://digital-markets-act.ec.europa.eu/index_en) 유럽 연합의 (DMA)[EU 사용자 동의 정책](https://www.google.com/about/company/user-consent-policy/)). 이러한 동의 요건 변경의 시행은 2024년 3월 6일부터 시행될 예정이다. <br/><br/> EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너인 Adobe은 유럽 연합의 DMA에 따라 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.<br/><br/>Adobe 개인 정보 보호 및 보안 쉴드를 구매하고 [동의 정책](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 동의하지 않은 프로필을 필터링하려면 별도의 조치를 취할 필요가 없습니다.<br/><br/>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 정의](../../segmentation/home.md#segment-definitions) 내 기능 [세그먼트 빌더](../../segmentation/ui/segment-builder.md) 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있도록 동의하지 않은 프로필을 필터링합니다. |
 | [!BADGE 베타]{type=Informative} 배치 대상에 대한 매핑 필드 순서 바꾸기 | 이제 의 매핑 필드를 드래그 앤 드롭하여 CSV 내보내기의 열 순서를 변경할 수 있습니다. [매핑](../../destinations/ui/activate-batch-profile-destinations.md#mapping) 단계. UI에서 매핑된 필드의 순서는 내보낸 CSV 파일의 열 순서에 따라 위에서 아래로 반영되며, 맨 위 행은 CSV 파일의 가장 왼쪽 열입니다. <br/><br/> 이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
 | [!BADGE 베타]배치 대상에 대해 미리 선택된 기본 내보내기 일정 {type=Informative} | 이제 Experience Platform이 각 파일 내보내기에 대한 기본 일정을 자동으로 설정합니다. 다음에서 설명서를 참조하십시오. [대상자 내보내기 예약](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) 기본 일정을 수정하는 방법을 알아봅니다. <br/><br/> 이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |

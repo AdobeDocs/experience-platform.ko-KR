@@ -5,7 +5,7 @@ description: 대상에 대한 계정 대상을 활성화하는 방법을 알아�
 badgeB2B: label="B2B 버전" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->을(를) 구매하는 회사는 대상에 대한 계정 대상을 활성화할 수 있습니다. [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2b) Real-time Customer Data Platform 에디션.
+>을(를) 구매하는 회사는 대상에 대한 계정 대상을 활성화할 수 있습니다. [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) Real-time Customer Data Platform 에디션.
 
 이 문서에서는 내보내기에 필요한 워크플로에 대해 설명합니다 [계정 대상자](/help/segmentation/ui/account-audiences.md) Adobe Experience Platform에서 원하는 대상으로 이동합니다.
 
