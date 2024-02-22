@@ -4,9 +4,9 @@ user-guide-title: 대상 안내서
 user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
-source-git-commit: c2e446ed89ef8a2c4496cd1d442d0204843dab2e
+source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
 workflow-type: tm+mt
-source-wordcount: '1202'
+source-wordcount: '1203'
 ht-degree: 4%
 
 ---
@@ -107,7 +107,7 @@ ht-degree: 4%
       * [Decibel 확장](./catalog/analytics/decibel.md)
       * [Demandbase 확장](./catalog/analytics/demandbase.md)
       * [DialogTech 확장](./catalog/analytics/dialogtech.md)
-      * [Gainsight PX](./catalog/analytics/gainsight-px.md)
+      * [Gainsight PX 연결](./catalog/analytics/gainsight-px.md)
       * [Google 전역 사이트 태그 확장](./catalog/analytics/gtag-analytics.md)
       * [Google Universal Analytics 확장](./catalog/analytics/google-universal-analytics.md)
       * [JW Player Analytics(베타) 확장](./catalog/analytics/jw-player-analytics.md)
