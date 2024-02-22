@@ -2,12 +2,12 @@
 title: 대상에 대한 계정 대상자 활성화
 type: Tutorial
 description: 대상에 대한 계정 대상을 활성화하는 방법을 알아봅니다
-badgeLimitedAvailability: label="제한된 가용성" type="Caution"
-badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B 버전" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->대상에 대한 계정 대상을 활성화하는 기능은 [Real-time Customer Data Platform B2B 에디션](../../rtcdp/b2b-overview.md). 또한 계정 대상자 기능은 현재 **제한된 가용성**. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 고객 지원 센터 또는 Adobe 담당자에게 문의하십시오.
+>을(를) 구매하는 회사는 대상에 대한 계정 대상을 활성화할 수 있습니다. [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2b) Real-time Customer Data Platform 에디션.
 
 이 문서에서는 내보내기에 필요한 워크플로에 대해 설명합니다 [계정 대상자](/help/segmentation/ui/account-audiences.md) Adobe Experience Platform에서 원하는 대상으로 이동합니다.
 
@@ -79,7 +79,7 @@ ht-degree: 0%
 
 ## 중요한 콜아웃 및 알려진 제한 사항 {#important-callouts-known-limitations}
 
-계정 대상을 활성화하는 기능의 제한된 가용성 릴리스에 대한 다음의 중요한 콜아웃 및 알려진 제한을 참조하십시오.
+계정 대상을 활성화하는 기능의 일반 가용성 릴리스에 대한 다음의 중요한 콜아웃 및 알려진 제한을 참조하십시오.
 
 ### 에 대한 계정 대상을 활성화할 때 매핑 단계에서 필요한 매핑 쌍 **[!UICONTROL (회사) LinkedIn 일치 대상]** 대상 {#required-mappings}
 

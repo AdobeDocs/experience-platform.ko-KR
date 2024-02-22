@@ -4,7 +4,7 @@ title: Real-time Customer Data Platform 개요
 description: Adobe Real-time Customer Data Platform 개요
 feature: Get Started
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: ab87434b753c1231f01cde85637081eb08fce356
+source-git-commit: f89665837b75dc4305073d675c4c05b04302c85e
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 0%
@@ -49,11 +49,11 @@ Real-Time CDP을 구입할 때는 아래 표와 같이 세 가지 버전 중에�
 * [Real-time Customer Data Platform (B2B 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2P 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 
-### Adobe Real-time Customer Data Platform - B2C(Business-to-Consumer) 버전
+### Adobe Real-time Customer Data Platform - B2C(Business-to-Consumer) 버전 {#rtcdp-b2c}
 
 Real-Time CDP B2C(Business-to-Consumer)는 B2C 마케터가 모든 기능을 통합, 관리 및 활성화할 수 있도록 특별히 빌드되었습니다 *소비자 데이터* 다양한 시스템과 채널을 통해 보다 개인화된 고객 경험을 제공하고 데이터를 안심하고 사용할 수 있습니다.
 
-### Adobe Real-time Customer Data Platform - B2B(Business to Business) 에디션
+### Adobe Real-time Customer Data Platform - B2B(Business to Business) 에디션 {#rtcdp-b2b}
 
 Real-Time CDP B2B(Business-to-Business)는 B2B 마케터가 모든 작업을 통합, 관리 및 활성화할 수 있도록 특별히 빌드되었습니다 *리드 및 계정 데이터* 다양한 시스템과 채널을 통해 보다 개인화된 고객 경험과 완벽한 데이터 보호
 
@@ -61,7 +61,7 @@ Real-Time CDP B2B 에디션을 사용하면 마케터가 사람 및 계정에 �
 
 다음을 참조하십시오 [Real-Time CDP B2B 에디션 개요](./b2b-overview.md) 보다 포괄적인 정보를 제공합니다.
 
-### Adobe Real-time Customer Data Platform - B2P(Business to Person) 에디션
+### Adobe Real-time Customer Data Platform - B2P(Business to Person) 에디션 {#rtcdp-b2p}
 
 Real-Time CDP의 B2P(Business-to-Person) 에디션을 통해 *B2C 및 B2B 고객 데이터* 단일 CDP를 사용하여 원활한 경험과 완벽한 데이터 안정성으로 모든 업무 분야에서 동일한 사용자를 타겟팅할 수 있습니다.
 
