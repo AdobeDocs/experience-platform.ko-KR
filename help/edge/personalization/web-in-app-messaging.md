@@ -1,7 +1,7 @@
 ---
 title: Web SDK에서 웹 인앱 메시지 지원 구성
 description: 웹 인앱 메시지를 지원하도록 웹 SDK 태그 확장을 구성하는 방법을 알아봅니다.
-source-git-commit: 82eede9e59338e8438c361d58b476960b7faa5cb
+source-git-commit: a020f880be2606024c6a986dc468d70a2fbdc30f
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 0%
@@ -185,5 +185,5 @@ Web SDK가 페이지 로드 시 개인화 콘텐츠를 자동으로 가져오도
 
 다음에서 [웹 SDK 구성](../fundamentals/configuring-the-sdk.md) 설정 `personalizationStorageEnabled` 필요에 따른 옵션:
 
-* `personalizationStorageEnabled: true` 에서 정의한 빈도로 인앱 메시지를 트리거합니다. [Adoube Journey Optimizer 캠페인](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
+* `personalizationStorageEnabled: true` 에서 정의한 빈도로 인앱 메시지를 트리거합니다. [Adobe Journey Optimizer campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
 * `personalizationStorageEnabled: false` 는 모든 페이지 로드 시 인앱 메시지를 트리거합니다.
