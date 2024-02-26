@@ -3,9 +3,9 @@ title: Experience Cloud 대상자
 description: Real-time Customer Data Platform에서 다양한 Experience Cloud 앱으로 대상을 공유하는 방법을 알아봅니다.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 188398e3483541ca482f5c1cfdce307160ada2da
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1703'
 ht-degree: 2%
 
 ---
@@ -95,6 +95,7 @@ Adobe 그러나 이러한 솔루션과 대상을 공유하려면 다음 전용 �
 * 현재 단일 Experience Cloud 대상 이 지원됩니다. 두 번째 대상 연결을 구성하려고 하면 오류가 발생합니다.
 * 대상에 연결할 때 다음 옵션을 볼 수 있습니다. [데이터 흐름 경고 활성화](../../ui/alerts.md). UI에 표시되지만 **경고 활성화 옵션은 현재 지원되지 않습니다.**.
 * **대상자 채우기 지원**: Audience Manager 또는 기타 Experience Cloud 솔루션으로 첫 번째 내보내기에는 대상의 과거 모집단이 포함됩니다. 의 사용자 [기존 대상자 공유 통합](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) 이 대상을 구성하는 사람은 약 6시간의 채우기 차이를 예상해야 합니다.
+* 다음에서 시작된 대상자 [대상자 구성](../../../segmentation/ui/audience-composition.md) 은 직접 지원되지 않습니다. 이 대상에 대한 복합 대상을 활성화하려면 다음을 통해 대상 정의를 만들어야 합니다. [세그먼트 빌더](../../../segmentation/ui/segment-builder.md) 는 복합 대상을 기반으로 새로 만든 대상을 활성화합니다.
 
 ### 대상자를 활성화할 때 대기 시간 {#audience-activation-latency}
 
@@ -199,4 +200,4 @@ Audience Manager의 대상 및 트레이트는 다음에 해당됩니다 [역할
 
 Real-Time CDP에서 내보낸 대상은 다음과 같은 Audience Manager의 특정 데이터 소스에 할당됩니다. **[!UICONTROL Experience Platform 세그먼트]**.
 
-특정 사용자만 대상에 액세스할 수 있도록 하려면 데이터 소스에 속하는 대상에 액세스 제어를 적용할 수 있습니다. Real-Time CDP 세그먼트에서 만든 이러한 대상 및 트레이트에 대해 Audience Manager에서 새 액세스 제어 권한을 설정합니다.
+특정 사용자만 대상에 액세스할 수 있도록 하려면 를 사용합니다. [역할 기반 액세스 제어](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) Real-Time CDP 대상에서 만든 대상 및 트레이트에 대한 사용자 액세스를 구성합니다.
