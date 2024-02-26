@@ -2,9 +2,9 @@
 title: Azure Key Vault 구성
 description: Azure를 사용하여 새 엔터프라이즈 계정을 만들거나 기존 엔터프라이즈 계정을 사용하여 Key Vault를 만드는 방법을 알아봅니다.
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ CMK(고객 관리 키)는 [!DNL Microsoft Azure] 키 보관소. 시작하려면 
 
 >[!IMPORTANT]
 >
->에 대한 Premium 및 표준 서비스 계층만 [!DNL Azure] Key Vault가 지원됩니다. [!DNL Azure Managed HSM], [!DNL Azure Dedicated HSM] 및 [!DNL Azure Payments HSM] 은(는) 지원되지 않습니다. 다음을 참조하십시오. [[!DNL Azure] 설명서](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) 제공되는 주요 관리 서비스에 대한 자세한 정보.
+>표준, 프리미엄 및 관리 HSM 계층만 [!DNL Azure] Key Vault가 지원됩니다. [!DNL Azure Dedicated HSM] 및 [!DNL Azure Payments HSM] 은(는) 지원되지 않습니다. 다음을 참조하십시오. [[!DNL Azure] 설명서](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) 제공되는 주요 관리 서비스에 대한 자세한 정보.
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ Key Vault를 만든 후에는 새 키를 생성할 수 있습니다. 다음 위�
 
 ![다음 [!DNL Keys] 탭 / [!DNL Azure] 포함 [!DNL Generate import] 강조 표시됨.](../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-제공된 양식을 사용하여 키의 이름을 입력한 다음 을 선택합니다 **RSA** 키 유형. 최소한, **[!DNL RSA key size]** 은(는) 이상이어야 합니다. **3072** 다음에 필요한 비트 수 [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] 는 RSA 3027과도 호환됩니다.
+제공된 양식을 사용하여 키의 이름을 입력하고 다음 중 하나를 선택합니다. **RSA** 또는 **RSA-HSM** 키 유형. 최소한, **[!DNL RSA key size]** 은(는) 이상이어야 합니다. **3072** 다음에 필요한 비트 수 [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] 는 RSA 3027과도 호환됩니다.
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Key Vault를 만든 후에는 새 키를 생성할 수 있습니다. 다음 위�
 
 나머지 컨트롤을 사용하여 생성하거나 가져올 키를 원하는 대로 구성합니다. 완료되면 다음을 선택합니다. **[!DNL Create]**.
 
-![을 사용하여 키 대시보드 만들기 [!DNL 3072] 강조 표시된 비트입니다.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
+![다음 [!DNL Create a key] 대시보드 [!DNL 3072] 강조 표시된 비트입니다.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
 구성된 키가 자격 증명 모음의 키 목록에 나타납니다.
 

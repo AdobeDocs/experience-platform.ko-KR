@@ -2,10 +2,10 @@
 title: API를 사용하여 고객 관리 키 설정 및 구성
 description: Azure 테넌트로 CMK 앱을 설정하고 암호화 키 ID를 Adobe Experience Platform으로 보내는 방법에 대해 알아봅니다.
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 2%
+source-wordcount: '1002'
+ht-degree: 1%
 
 ---
 
@@ -78,6 +78,10 @@ curl -X GET \
 
 다음 화면에서는 이 할당에 대한 역할을 선택하라는 메시지가 표시됩니다. 선택 **[!DNL Key Vault Crypto Service Encryption User]** 선택하기 전 **[!DNL Next]** 계속합니다.
 
+>[!NOTE]
+>
+>다음 항목이 있는 경우 [!DNL Managed-HSM Key Vault] 계층을 선택한 다음 **[!DNL Managed HSM Crypto Service Encryption User]** 사용자 역할.
+
 ![다음을 포함하는 Microsoft Azure 대시보드 [!DNL Key Vault Crypto Service Encryption User] 강조 표시됨.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
 다음 화면에서 다음을 선택합니다. **[!DNL Select members]** 오른쪽 레일에서 대화 상자를 엽니다. 검색 창을 사용하여 CMK 응용 프로그램에 대한 서비스 주체를 찾아 목록에서 선택합니다. 완료되면 다음을 선택합니다. **[!DNL Save]**.
@@ -133,7 +137,7 @@ curl -X POST \
 | --- | --- |
 | `name` | 구성의 이름입니다. 다음에서 구성 상태를 확인하는 데 필요하므로 이 값을 기억해야 합니다. [이후 단계](#check-status). 값은 대/소문자를 구분합니다. |
 | `type` | 구성 유형. 을(를) (으)로 설정해야 합니다. `BYOK_CONFIG`. |
-| `imsOrgId` | 자신의 조직 ID. 이 ID는 아래에 제공된 값과 동일한 값이어야 합니다. `x-gw-ims-org-id` 머리글입니다. |
+| `imsOrgId` | 조직 ID입니다. 이 ID는 아래에 제공된 값과 동일한 값이어야 합니다. `x-gw-ims-org-id` 머리글입니다. |
 | `configData` | 이 속성에는 구성에 대한 다음 세부 정보가 포함됩니다.<ul><li>`providerType`: 다음으로 설정되어야 합니다. `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: 복사한 주요 자격 증명 모음 URI [이전](#send-to-adobe).</li></ul> |
 
 +++

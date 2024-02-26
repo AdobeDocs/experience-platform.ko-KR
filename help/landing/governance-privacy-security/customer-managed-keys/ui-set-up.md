@@ -2,10 +2,10 @@
 title: Platform UI를 사용하여 고객 관리 키 설정 및 구성
 description: Azure 테넌트로 CMK 앱을 설정하고 암호화 키 ID를 Adobe Experience Platform으로 보내는 방법에 대해 알아봅니다.
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 1%
+source-wordcount: '1090'
+ht-degree: 0%
 
 ---
 
@@ -61,6 +61,10 @@ Key Vault를 구성한 후 다음 단계는 다음에 연결할 CMK 애플리케
 ![다음 [!DNL Microsoft Azure] 대시보드 [!DNL Add] 및 [!DNL Add role assignment] 강조 표시됨.](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 다음 화면에서는 이 할당에 대한 역할을 선택하라는 메시지가 표시됩니다. 선택 **[!DNL Key Vault Crypto Service Encryption User]** 선택하기 전 **[!DNL Next]** 계속합니다.
+
+>[!NOTE]
+>
+>다음 항목이 있는 경우 [!DNL Managed-HSM Key Vault] 계층을 선택한 다음 **[!DNL Managed HSM Crypto Service Encryption User]** 사용자 역할.
 
 ![다음 [!DNL Microsoft Azure] 대시보드를 [!DNL Key Vault Crypto Service Encryption User] 강조 표시됨.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
