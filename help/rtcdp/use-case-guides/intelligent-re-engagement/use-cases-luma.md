@@ -2,7 +2,7 @@
 title: 지능형 재참여 Luma 예
 description: 지능형 재참여 사용 사례에 대한 예제 비디오입니다.
 feature: Use Cases
-source-git-commit: eaa71bb93a08e8f0a9afe7f6b05929dae93cb670
+source-git-commit: ffa049f1650e9592bda934822cce8565db40c013
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 1%
