@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
+source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
 workflow-type: tm+mt
 source-wordcount: '1844'
 ht-degree: 0%
@@ -220,9 +220,9 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 속성을 선택한 후 등급 지정 순서를 선택할 수 있습니다. 오름차순(가장 낮은 순에서 가장 높은 순까지) 또는 내림차순(가장 높은 순에서 가장 낮은 순까지)입니다.
 
-또한 를 활성화하여 반환되는 대상 수를 제한할 수 있습니다. **[!UICONTROL 프로필 제한 추가]** 토글. 이 토글이 활성화되면 내에서 반환되는 최대 대상 수를 설정할 수 있습니다. **[!UICONTROL 포함된 프로필]** 필드.
+또한 를 활성화하여 반환되는 프로필 수를 제한할 수 있습니다. **[!UICONTROL 프로필 제한 추가]** 토글. 이 토글이 활성화되면 다음 내에서 반환되는 최대 프로필 수를 설정할 수 있습니다. **[!UICONTROL 포함된 프로필]** 필드.
 
-![프로필 제한 추가 토글이 강조 표시되어 반환되는 대상자 수를 제한할 수 있습니다.](../images/ui/audience-composition/add-profile-limit.png)
+![프로필 제한 추가 토글이 강조 표시되어 반환되는 프로필 수를 제한할 수 있습니다.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL 분할] {#split-block}
 
