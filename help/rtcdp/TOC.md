@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 대상자 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
-source-git-commit: f342020a0e821172a7ceca95265a9d71f64f5347
+source-git-commit: eaa71bb93a08e8f0a9afe7f6b05929dae93cb670
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 72%
+source-wordcount: '293'
+ht-degree: 70%
 
 ---
 
@@ -77,6 +77,7 @@ ht-degree: 72%
    * [샘플 사용 사례 개요](/help/rtcdp/use-case-guides/overview.md)
    * 개인화, 인사이트 및 참여 {#personalization-insights-engagement}
       * [지능적으로 고객의 재참여 유도](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+      * [지능적으로 고객 참여를 다시 유도하십시오. Luma 예](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
    * 고객 확보 {#customer-acquisition}
       * [서드파티 쿠키에 의존하지 않고 새로운 고객 참여 및 확보](/help/rtcdp/partner-data/prospecting.md)
       * [파트너 지원 방문자 인식을 사용하여 알 수 없는 방문자에 대한 온사이트 경험 개인화](/help/rtcdp/partner-data/onsite-personalization.md)
