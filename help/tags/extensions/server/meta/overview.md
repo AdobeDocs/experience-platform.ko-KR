@@ -2,9 +2,9 @@
 title: 메타 전환 API 확장 개요
 description: Adobe Experience Platform의 이벤트 전달을 위한 메타 전환 API 확장에 대해 알아봅니다.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: e7d63ff86cdc1718129d0a8e4861b6a8c4631f75
+source-git-commit: f7fdfbf9afcecb255668d5d6393b87918114b067
 workflow-type: tm+mt
-source-wordcount: '2565'
+source-wordcount: '2578'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 0%
 다음 [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) 을(를) 통해 서버측 마케팅 데이터를 [!DNL Meta] 광고 타겟팅을 최적화하고, 작업당 비용을 줄이고, 결과를 측정하는 기술을 제공합니다. 이벤트가 다음에 연결됨 [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) ID 및 는 클라이언트측 이벤트와 유사한 방식으로 처리됩니다.
 
 사용 [!DNL Meta Conversions API] 확장에서는 의 API 기능을 활용할 수 있습니다. [이벤트 전달](../../../ui/event-forwarding/overview.md) 데이터를 보낼 규칙 [!DNL Meta] Adobe Experience Platform Edge Network에서 이 문서에서는 확장을 설치하고 이벤트 전달에서 해당 기능을 사용하는 방법을 다룹니다 [규칙](../../../ui/managing-resources/rules.md).
+
+## 데모
+
+다음 비디오는 다음에 대한 이해를 돕기 위한 것입니다. [!DNL Meta Conversions API].
+
+>[!VIDEO](https://unlockmarketingdata.com/video-meta-conversions-api)
 
 ## 전제 조건
 
