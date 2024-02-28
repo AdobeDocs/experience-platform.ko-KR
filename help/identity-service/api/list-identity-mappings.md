@@ -3,11 +3,12 @@ keywords: Experience Platform;홈;인기 항목;ID;ID
 solution: Experience Platform
 title: 목록 ID 매핑
 description: 매핑은 지정된 네임스페이스에 대한 클러스터의 모든 ID의 컬렉션입니다.
+role: Developer
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 2%
+source-wordcount: '278'
+ht-degree: 1%
 
 ---
 

@@ -3,11 +3,12 @@ keywords: Experience Platform;개발자 안내서;엔드포인트;Data Science W
 solution: Experience Platform
 title: MLInstances API 끝점
 description: MLInstance는 교육 매개 변수, 채점 매개 변수 또는 하드웨어 리소스 구성을 정의하는 적절한 구성 세트와 기존 엔진의 페어링입니다.
+role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '619'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -207,7 +208,7 @@ GET /mlInstances/{MLINSTANCE_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{MLINSTANCE_ID}` | 원하는 MLInstance의 ID입니다. |
+| `{MLINSTANCE_ID}` | 원하는 MLInstance의 ID. |
 
 **요청**
 

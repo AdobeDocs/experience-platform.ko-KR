@@ -3,10 +3,11 @@ audience: user
 user-guide-title: Catalog and Datasets 안내서
 user-guide-description: 데이터 레이크 내의 데이터 계보, 메타데이터, 파일 설명, 디렉터리 및 데이터 세트를 탐색하고 카탈로그 서비스 시스템에 대해 자세히 알아보십시오.
 feature: Catalog
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 36%
+source-wordcount: '112'
+ht-degree: 33%
 
 ---
 

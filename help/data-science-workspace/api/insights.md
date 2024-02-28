@@ -3,10 +3,11 @@ keywords: Experience Platform;개발자 안내서;엔드포인트;Data Science W
 solution: Experience Platform
 title: Insights API 끝점
 description: 인사이트에는 관련 평가 지표를 표시하여 데이터 과학자가 최적의 ML 모델을 평가하고 선택할 수 있도록 하는 데 사용되는 지표가 포함되어 있습니다.
+role: Developer
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '514'
 ht-degree: 3%
 
 ---

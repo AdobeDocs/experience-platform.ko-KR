@@ -2,11 +2,12 @@
 keywords: Experience Platform;홈;인기 항목;속성 기반 액세스 제어;속성 기반 액세스 제어
 title: 속성 기반 액세스 제어 API 시작하기
 description: 속성 기반 액세스 제어 API를 사용하면 Adobe Experience Platform 내에서 역할 및 액세스 정책을 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
+role: Developer
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: 54e15234d1b1050ea2cdb8b7d37c79a133a339f1
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 4%
+source-wordcount: '327'
+ht-degree: 17%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 4%
 
 ## 샘플 API 호출 읽기
 
-이 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 포맷의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) Experience Platform 문제 해결 안내서에서 참조하십시오.
+이 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) Experience Platform 문제 해결 안내서에서 참조하십시오.
 
 ## 필수 헤더에 대한 값 수집
 

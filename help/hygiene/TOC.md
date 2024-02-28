@@ -4,10 +4,11 @@ user-guide-title: 고급 데이터 라이프사이클 관리 도움말
 breadcrumb-title: 고급 데이터 라이프사이클 관리 안내서
 user-guide-description: 데이터 정리, 익명 데이터 제거 및 데이터 최소화를 위해 Experience Platform에서 개별 레코드를 삭제하고 데이터 세트 만료 일정을 예약합니다.
 feature: Data Hygiene
-source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
+role: User, Developer, Admin
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '65'
-ht-degree: 60%
+ht-degree: 63%
 
 ---
 

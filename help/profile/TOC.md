@@ -3,7 +3,8 @@ audience: user
 user-guide-title: 실시간 고객 프로필 안내서
 user-guide-description: 고객 데이터를 통합하여 다양한 채널에서 고객과의 상호 작용을 종합적으로 파악합니다.
 feature: Profiles
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+role: User
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 24%

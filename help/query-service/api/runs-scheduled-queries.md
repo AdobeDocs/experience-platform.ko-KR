@@ -3,10 +3,11 @@ keywords: Experience Platform;홈;인기 항목;쿼리 서비스;예약된 쿼�
 solution: Experience Platform
 title: 예약된 쿼리가 API 끝점을 실행합니다.
 description: 다음 섹션에서는 쿼리 서비스 API로 예약된 쿼리를 실행하기 위해 수행할 수 있는 다양한 API 호출을 안내합니다.
+role: Developer
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: e9639cb90a561adc59388ac77984edaf90f4bfdd
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '782'
 ht-degree: 2%
 
 ---

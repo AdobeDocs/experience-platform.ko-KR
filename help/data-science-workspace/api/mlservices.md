@@ -3,10 +3,11 @@ keywords: Experience Platform;개발자 안내서;엔드포인트;Data Science W
 solution: Experience Platform
 title: MLServices API 끝점
 description: MLService는 이전에 개발된 모델에 액세스하고 재사용할 수 있는 기능을 조직에 제공하는 게시된 교육된 모델입니다. MLSservices의 주요 기능은 일정에 따라 교육 및 채점을 자동화하는 기능입니다. 예약된 교육 실행은 모델의 효율성과 정확성을 유지하는 데 도움이 될 수 있으며, 예약된 채점 실행은 새로운 통찰력이 일관되게 생성되도록 할 수 있습니다.
+role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '887'
 ht-degree: 2%
 
 ---

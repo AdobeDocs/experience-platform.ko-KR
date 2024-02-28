@@ -3,10 +3,11 @@ keywords: Experience Platform;홈;인기 항목;정책 적용;마케팅 작업 a
 solution: Experience Platform
 title: 마케팅 액션 API 엔드포인트
 description: Adobe Experience Platform 데이터 거버넌스 컨텍스트에서 마케팅 작업은 Experience Platform 데이터 소비자가 수행하는 작업으로서 데이터 사용 정책 위반을 확인해야 합니다.
+role: Developer
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '734'
 ht-degree: 2%
 
 ---

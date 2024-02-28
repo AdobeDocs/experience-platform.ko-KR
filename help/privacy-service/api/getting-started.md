@@ -1,11 +1,12 @@
 ---
 title: Privacy Service API 인증 및 액세스
 description: 설명서에서 Privacy Service API를 인증하는 방법과 예제 API 호출을 해석하는 방법을 알아봅니다.
+role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 7%
+source-wordcount: '851'
+ht-degree: 5%
 
 ---
 

@@ -3,10 +3,11 @@ keywords: Experience Platform;홈;인기 항목;쿼리 서비스;api 안내서;�
 solution: Experience Platform
 title: 계정 API 끝점
 description: 지속에 대한 쿼리 서비스 계정을 만들 수 있습니다.
+role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '498'
 ht-degree: 4%
 
 ---

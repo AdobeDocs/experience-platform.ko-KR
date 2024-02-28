@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: 예약 API 끝점
 description: 예약은 하루에 한 번 배치 세분화 작업을 자동으로 실행하는 데 사용할 수 있는 도구입니다.
+role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1996'
-ht-degree: 4%
+source-wordcount: '2040'
+ht-degree: 3%
 
 ---
 
@@ -136,9 +137,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 
 | 속성 | 설명 |
 | -------- | ------------ |
-| `name` | **필수 여부.** 문자열로 표시되는 예약의 이름입니다. |
-| `type` | **필수 여부.** 문자열로서의 작업 유형입니다. 지원되는 두 가지 유형은 &quot;batch_segmentation&quot; 및 &quot;export&quot;입니다. |
-| `properties` | **필수 여부.** 일정과 관련된 추가 등록 정보가 포함된 객체입니다. |
+| `name` | **필수.** 문자열로 표시되는 예약의 이름입니다. |
+| `type` | **필수.** 문자열로서의 작업 유형입니다. 지원되는 두 가지 유형은 &quot;batch_segmentation&quot; 및 &quot;export&quot;입니다. |
+| `properties` | **필수.** 일정과 관련된 추가 등록 정보가 포함된 객체입니다. |
 | `properties.segments` | **필요한 경우 `type` 은 &quot;batch_segmentation&quot;과 같습니다.** 사용 `["*"]` 는 모든 세그먼트가 포함되어 있는지 확인합니다. |
 | `schedule` | *선택 사항입니다.* 작업 일정을 포함하는 문자열입니다. 작업은 하루에 한 번만 실행되도록 예약할 수 있습니다. 즉, 24시간 동안 작업을 두 번 이상 실행하도록 예약할 수 없습니다. cron 일정에 대한 자세한 내용은 [cron 표현식 형식](#appendix). 이 예에서 &quot;0 0 1 * *&quot;는 이 일정이 매일 오전 1시에 실행됨을 의미합니다. <br><br>이 문자열을 제공하지 않으면 시스템에서 생성한 일정이 자동으로 생성됩니다. |
 | `state` | *선택 사항입니다.* 일정 상태를 포함하는 문자열입니다. 지원되는 두 가지 상태는 &quot;활성&quot; 및 &quot;비활성&quot;입니다. 기본적으로 상태는 &quot;비활성&quot;으로 설정됩니다. |

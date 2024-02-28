@@ -3,8 +3,9 @@ keywords: Experience Platform;홈;인기 항목;api;속성 기반 액세스 제�
 solution: Experience Platform
 title: 액세스 제어 정책 API 끝점
 description: 속성 기반 액세스 제어 API의 /policies 끝점을 사용하면 Adobe Experience Platform에서 정책을 프로그래밍 방식으로 관리할 수 있습니다.
+role: Developer
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1433'
 ht-degree: 2%

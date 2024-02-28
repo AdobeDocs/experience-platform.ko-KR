@@ -3,11 +3,12 @@ keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: Privacy Service API 안내서 부록
 description: 이 문서에는 Privacy Service API 작업에 대한 추가 정보가 포함되어 있습니다.
+role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '476'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 

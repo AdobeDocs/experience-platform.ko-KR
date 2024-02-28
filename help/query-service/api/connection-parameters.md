@@ -3,8 +3,9 @@ keywords: Experience Platform;홈;인기 항목;쿼리 서비스;api 안내서;�
 solution: Experience Platform
 title: 연결 매개 변수 API 끝점
 description: /connection_parameters 끝점에 대한 GET 요청을 수행하여 대화형 서비스 사용을 위한 연결 매개 변수를 검색할 수 있습니다.
+role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 1%

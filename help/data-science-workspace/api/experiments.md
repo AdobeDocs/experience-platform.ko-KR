@@ -3,8 +3,9 @@ keywords: Experience Platform;개발자 안내서;엔드포인트;Data Science W
 solution: Experience Platform
 title: 실험 API 끝점
 description: 모델 개발 및 훈련은 실험 수준에서 발생하며, 실험은 인스턴스, 교육 실행 및 채점 실행으로 구성됩니다.
+role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 4%

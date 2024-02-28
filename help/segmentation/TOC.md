@@ -4,10 +4,11 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service 안내서
 user-guide-description: Adobe Experience Platform에서 생성한 세그먼트 정의 또는 외부 소스를 사용하여 실시간 고객 프로필 데이터에서 대상자를 빌드하십시오.
 feature: Segments
-source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
+role: User
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 33%
+ht-degree: 36%
 
 ---
 
@@ -40,7 +41,7 @@ ht-degree: 33%
    - [에지 세분화](ui/edge-segmentation.md)
    - [스트리밍 세분화](ui/streaming-segmentation.md)
    - [스트리밍 세분화(비디오)](video/streaming-segmentation-overview.md)
-   - [연도 시간 제한 업데이트 무시](ui/ignore-year.md)
+   - [연도 제한 무시 업데이트](ui/ignore-year.md)
    - [시간 제한 리팩터링](ui/segment-refactoring.md)
    - 세그먼트 일치 {#segment-match}
       - [세그먼트 일치 개요](ui/segment-match/overview.md)

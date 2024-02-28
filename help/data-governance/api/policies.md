@@ -3,10 +3,11 @@ keywords: Experience Platform;홈;인기 항목;정책 시행;API 기반 시행;
 solution: Experience Platform
 title: 데이터 거버넌스 정책 API 끝점
 description: 데이터 거버넌스 정책은 Experience Platform 내에서 데이터에 대해 수행하도록 허용하거나 제한하는 마케팅 작업 종류를 설명하는 조직에서 채택하는 규칙입니다. /policies 끝점은 데이터 거버넌스 정책 보기, 만들기, 업데이트 또는 삭제와 관련된 모든 API 호출에 사용됩니다.
+role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1863'
 ht-degree: 2%
 
 ---

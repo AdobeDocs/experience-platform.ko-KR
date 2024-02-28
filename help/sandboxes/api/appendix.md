@@ -3,10 +3,11 @@ keywords: Experience Platform;홈;인기 항목;api;API;샌드박스;샌드박�
 solution: Experience Platform
 title: 샌드박스 API 안내서 부록
 description: 이 문서에서는 Sandbox API 작업과 관련된 추가 정보를 제공합니다.
+role: Developer
 exl-id: 48ffea01-f1b4-48c6-a6f5-c321074023d3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '122'
 ht-degree: 1%
 
 ---

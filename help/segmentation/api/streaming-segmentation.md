@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: 스트리밍 세분화를 통해 실시간에 가까운 이벤트 평가
 description: 이 문서에는 Adobe Experience Platform 세그먼테이션 서비스 API와 함께 스트리밍 세그먼테이션을 사용하는 방법에 대한 예제가 포함되어 있습니다.
+role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1956'
-ht-degree: 7%
+source-wordcount: '1962'
+ht-degree: 4%
 
 ---
 
@@ -32,17 +33,17 @@ ht-degree: 7%
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계한 데이터를 기반으로 통합 소비자 프로필을 실시간으로 제공합니다.
 - [[!DNL Segmentation]](../home.md): 의 세그먼트 정의 및 기타 외부 소스를 사용하여 대상자를 만드는 기능을 제공합니다. [!DNL Real-Time Customer Profile] 데이터.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다.
 
 다음 섹션에서는 을 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다 [!DNL Platform] API.
 
 ### 샘플 API 호출 읽기
 
-이 개발자 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 문서에 사용된 규칙에 대한 자세한 내용은 [ 문제 해결 안내서의 ](../../landing/troubleshooting.md#how-do-i-format-an-api-request)예제 API 호출을 읽는 방법[!DNL Experience Platform] 섹션을 참조하세요.
+이 개발자 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 다음에서 [!DNL Experience Platform] 문제 해결 가이드.
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 튜토리얼](https://www.adobe.com/go/platform-api-authentication-en)을 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+을 호출하기 위해 [!DNL Platform] API, 먼저 다음을 완료해야 합니다. [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - 인증: 전달자 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -351,7 +352,7 @@ curl -X POST \
 | `properties` | **(필수)** 일정과 관련된 추가 등록 정보가 포함된 객체입니다. |
 | `properties.segments` | **(필요한 경우) `type` 다음과 같음 `batch_segmentation`)** 사용 `["*"]` 는 모든 세그먼트 정의를 포함합니다. |
 | `schedule` | **(필수)** 작업 일정을 포함하는 문자열입니다. 작업은 하루에 한 번만 실행되도록 예약할 수 있습니다. 즉, 24시간 동안 작업을 두 번 이상 실행하도록 예약할 수 없습니다. 표시된 예 (`0 0 1 * * ?`)은 작업이 매일 1시에 트리거됨을 의미합니다:00:00 UTC. 자세한 내용은 다음 문서의 부록을 참조하십시오. [cron 표현식 형식](./schedules.md#appendix) 세분화 내 일정에 대한 설명서 내에서. |
-| `state` | *(선택 사항)* 일정 상태를 포함하는 문자열입니다. 사용 가능한 값: `active` 및 `inactive`. 기본값은 `inactive`입니다. 조직은 하나의 스케줄만 생성할 수 있습니다. 일정을 업데이트하는 단계는 이 자습서의 뒷부분에서 확인할 수 있습니다. |
+| `state` | *(선택 사항)* 일정 상태를 포함하는 문자열입니다. 사용 가능한 값: `active` 및 `inactive`. 기본값은 입니다. `inactive`. 조직은 하나의 스케줄만 생성할 수 있습니다. 일정을 업데이트하는 단계는 이 자습서의 뒷부분에서 확인할 수 있습니다. |
 
 **응답**
 

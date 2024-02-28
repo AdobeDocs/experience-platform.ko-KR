@@ -3,11 +3,12 @@ keywords: Experience Platform;홈;인기 항목;샌드박스 개발자 안내서
 solution: Experience Platform
 title: 샌드박스 API 시작하기
 description: 개발자는 샌드박스 API를 통해 Adobe Experience Platform에서 샌드박스를 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
+role: Developer
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '375'
-ht-degree: 5%
+source-wordcount: '372'
+ht-degree: 15%
 
 ---
 
@@ -17,13 +18,13 @@ Adobe Experience Platform의 샌드박스는 프로덕션 환경에 영향을 �
 
 이 개발자 안내서는 샌드박스 API를 사용하여 Experience Platform에서 샌드박스를 관리하는 데 도움이 되는 단계를 제공하며 다양한 작업을 수행하기 위한 샘플 API 호출이 포함됩니다.
 
-## 사전 요구 사항
+## 전제 조건
 
 조직의 샌드박스를 관리하려면 샌드박스 관리 권한이 있어야 합니다. 액세스 권한이 없는 사용자는 [사용 가능한 샌드박스 끝점](./available.md) 현재 사용자의 활성 샌드박스를 나열합니다. 다음을 참조하십시오. [액세스 제어 개요](../../access-control/home.md) Experience Platform에 대한 샌드박스 권한을 할당하는 방법에 대해 자세히 알아보십시오.
 
 ### 샘플 API 호출 읽기
 
-이 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 포맷의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) Experience Platform 문제 해결 안내서에서 참조하십시오.
+이 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) Experience Platform 문제 해결 안내서에서 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 

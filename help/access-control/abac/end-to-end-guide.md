@@ -2,8 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 액세스 제어;
 title: 속성 기반 액세스 제어 엔드투엔드 안내서
 description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 전체 안내서를 제공합니다
+role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 2b3c4a7aed804a1059708a698f3ba5edfb007926
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1714'
 ht-degree: 17%
@@ -78,7 +79,7 @@ Platform UI에 대한 권한 작업 공간이 나타나고 **[!UICONTROL 역할]
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="역할이란 무엇입니까?"
->abstract="역할은 Platform 인스턴스와 상호 작용하고 액세스 제어 정책의 블록을 구성하는 사용자 유형을 분류하는 방법입니다. 역할에는 주어진 권한 집합이 있으며, 조직의 멤버들은 필요한 보기 또는 쓰기 액세스 범위에 따라 하나 이상의 역할에 할당될 수 있습니다."
+>abstract="역할은 Platform 인스턴스와 상호 작용하고 액세스 제어 정책의 블록을 구성하는 사용자 유형을 분류하는 방법입니다. 역할에는 주어진 권한 집합이 있으며 조직의 멤버들은 필요한 보기 또는 쓰기 액세스 범위에 따라 하나 이상의 역할에 할당될 수 있습니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ko-KR" text="역할 관리"
 
 >[!CONTEXTUALHELP]

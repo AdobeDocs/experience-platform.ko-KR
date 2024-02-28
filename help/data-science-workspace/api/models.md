@@ -3,8 +3,9 @@ keywords: Experience Platform;개발자 안내서;엔드포인트;Data Science W
 solution: Experience Platform
 title: 모델 API 엔드포인트
 description: 모델은 비즈니스 사용 사례를 해결하기 위해 내역 데이터 및 구성을 사용하여 교육되는 머신 러닝 레시피의 인스턴스입니다.
+role: Developer
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 4%
@@ -115,7 +116,7 @@ GET /models/?property=experimentRunID=={EXPERIMENT_RUN_ID}
 
 **요청**
 
-다음 요청에는 쿼리가 포함되어 있으며 동일한 experimentRunID({EXPERIMENT_RUN_ID})를 공유하는 훈련된 모델 목록을 검색합니다.
+다음 요청은 쿼리를 포함하며 동일한 experimentRunID( )를 공유하는 훈련된 모델 목록을 검색합니다.{EXPERIMENT_RUN_ID}).
 
 ```shell
 curl -X GET \

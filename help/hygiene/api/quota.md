@@ -1,8 +1,9 @@
 ---
 title: 할당량 API 끝점
 description: 데이터 위생 API의 /quota 끝점을 사용하면 각 작업 유형에 대한 조직의 월별 할당량 제한에 대해 고급 데이터 수명 주기 관리 사용을 모니터링할 수 있습니다.
+role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 2%

@@ -3,11 +3,12 @@ keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비�
 solution: Experience Platform
 title: 쿼리 서비스 API 안내서
 description: 쿼리 서비스 API를 사용하면 개발자가 표준 SQL을 사용하여 Adobe Experience Platform 데이터를 쿼리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
+role: Developer
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 5%
+source-wordcount: '396'
+ht-degree: 20%
 
 ---
 
@@ -27,13 +28,13 @@ ht-degree: 5%
 
 ### 샘플 API 호출 읽기
 
-이 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 포맷의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대해 이 설명서에서 사용되는 규칙에 대한 자세한 내용은 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 다음에서 [!DNL Experience Platform] 문제 해결 가이드.
+이 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대해 이 설명서에서 사용되는 규칙에 대한 자세한 내용은 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 다음에서 [!DNL Experience Platform] 문제 해결 가이드.
 
 ### 필수 헤더에 대한 값 수집
 
-을 호출하기 위해 [!DNL Experience Platform] API, 먼저 다음을 완료해야 합니다. [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). 인증 자습서를 완료하면 모든 항목에서 필요한 각 헤더에 대한 값이 제공됩니다 [!DNL Platform] 아래와 같이 API 호출:
+을 호출하기 위해 [!DNL Experience Platform] API, 먼저 다음을 완료해야 합니다. [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
-- Authorization: `Bearer {ACCESS_TOKEN}`
+- 인증: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
@@ -50,7 +51,7 @@ ht-degree: 5%
 사용할 헤더를 이해했으므로 이제 [!DNL Query Service] API. 다음 문서에서는 를 사용하여 수행할 수 있는 다양한 API 호출을 설명합니다 [!DNL Query Service] API. 각 예제 호출에는 일반 API 형식, 필요한 헤더를 보여주는 샘플 요청 및 샘플 응답이 포함됩니다.
 
 - [쿼리](queries.md)
-- [연결 매개 변수](connection-parameters.md)
+- [연결 매개변수](connection-parameters.md)
 - [예약된 쿼리](scheduled-queries.md)
 - [예약된 쿼리에 대해 실행](runs-scheduled-queries.md)
 - [쿼리 템플릿](query-templates.md)

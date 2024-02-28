@@ -3,10 +3,11 @@ keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 서비�
 solution: Experience Platform
 title: 일정 끝점
 description: 다음 섹션에서는 쿼리 서비스 API를 사용하여 예약된 쿼리에 대해 수행할 수 있는 다양한 API 호출을 안내합니다.
+role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1214'
 ht-degree: 2%
 
 ---

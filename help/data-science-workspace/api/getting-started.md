@@ -3,11 +3,12 @@ keywords: Experience Platform;개발자 안내서;엔드포인트;Data Science W
 solution: Experience Platform
 title: Sensei 머신 러닝 API 안내서
 description: Sensei 머신 러닝 API를 통해 개발자는 다양한 데이터 과학 작업 영역 리소스에 대한 CRUD 작업을 수행할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
+role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 9%
+source-wordcount: '232'
+ht-degree: 14%
 
 ---
 

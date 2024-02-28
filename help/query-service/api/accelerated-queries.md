@@ -1,8 +1,9 @@
 ---
 title: 가속화된 쿼리 끝점
 description: 상태 비저장 방식으로 쿼리 가속 저장소에 액세스하여 집계된 데이터를 기반으로 결과를 빠르게 반환하는 방법을 알아봅니다. 이 문서에서는 쿼리 서비스 가속 쿼리 끝점에 대한 샘플 HTTP 요청 및 응답을 제공합니다.
+role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: ea2a1cddf299bec750875c4a9125cdd065f18d8b
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 1%

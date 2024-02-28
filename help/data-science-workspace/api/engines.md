@@ -3,11 +3,12 @@ keywords: Experience Platform;개발자 안내서;엔드포인트;Data Science W
 solution: Experience Platform
 title: 엔진 API 엔드포인트
 description: 엔진은 데이터 과학 작업 영역에서 머신 러닝 모델을 위한 기초입니다. 여기에는 특정 문제를 해결하는 머신 러닝 알고리즘, 기능 엔지니어링을 수행하는 기능 파이프라인 또는 둘 다가 포함됩니다.
+role: Developer
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1165'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 3%
 
 >[!TIP]
 >
->도커 URL이 없는 경우 다음을 방문하십시오. [소스 파일을 레시피에 패키징](../models-recipes/package-source-files-recipe.md) 도커 호스트 URL 만들기에 대한 단계별 연습에 대한 자습서입니다.
+>도커 URL이 없는 경우 [소스 파일을 레시피에 패키징](../models-recipes/package-source-files-recipe.md) 도커 호스트 URL 만들기에 대한 단계별 연습에 대한 자습서입니다.
 
 Docker 호스트 URL, 사용자 이름 및 암호를 포함하여 패키지된 레서피 파일을 업로드하려면 Docker 레지스트리 자격 증명이 필요합니다. 다음 GET 요청을 수행하여 이 정보를 조회할 수 있습니다.
 

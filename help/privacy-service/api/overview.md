@@ -1,11 +1,12 @@
 ---
 title: Privacy Service API 안내서
 description: Privacy Service API를 사용하여 지원되는 Adobe Experience Cloud 애플리케이션에 대한 개인 정보 작업을 프로그래밍 방식으로 관리하는 방법에 대해 알아봅니다.
+role: Developer
 exl-id: 665466ac-2447-4a9d-a8cf-62092c09e431
-source-git-commit: bda8d0ee1db4b58b4b856a23a8790cd7f76c0656
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 1%
+source-wordcount: '261'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +20,7 @@ Privacy Service API는 조직의 개인 정보 보호 작업을 프로그래밍 
 
 사용 가능한 모든 엔드포인트 및 CRUD 작업을 보려면 [Privacy Service API 참조](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
 
-## 개인 정보 작업
+## 개인정보 보호 작업
 
 Privacy Service이 주체의 개인 데이터에 액세스하거나 삭제하라는 요청을 받으면 시스템은 해당 요청을 수행하기 위해 개인 정보 작업을 생성합니다. 각 개인 정보 작업에는 데이터 주체와 관련된 ID 정보, 작업이 적용되는 Adobe Experience Cloud 제품에 대한 메타데이터 및 작업 처리 상태가 포함됩니다.
 

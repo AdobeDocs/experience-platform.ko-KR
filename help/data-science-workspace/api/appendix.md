@@ -3,11 +3,12 @@ keywords: Experience Platform;개발자 안내서;엔드포인트;Data Science W
 solution: Experience Platform
 title: Sensei 머신 러닝 API 안내서 부록
 description: 다음 섹션에서는 Sensei 머신 러닝 API의 다양한 기능에 대한 참조 정보를 제공합니다.
+role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -73,7 +74,7 @@ Python 엔진은 교육 또는 채점 목적으로 CPU와 GPU 중 하나를 선�
 
 ## PySpark 및 Spark 리소스 구성 {#resource-config}
 
-Spark Engines는 훈련 및 채점 목적으로 계산 리소스를 수정하는 능력이 있습니다. 이러한 리소스는 다음 표에 설명되어 있습니다.
+Spark 엔진은 교육 및 채점 목적으로 계산 리소스를 수정하는 능력이 있습니다. 이러한 리소스는 다음 표에 설명되어 있습니다.
 
 | 리소스 | 설명 | 유형 |
 | -------- | ----------- | ---- |

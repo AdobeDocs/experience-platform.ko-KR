@@ -3,10 +3,11 @@ audience: user
 user-guide-title: 데이터 준비 안내서
 user-guide-description: Adobe Experience Platform으로 수집할 데이터를 준비하고 데이터 준비를 통해 데이터를 매핑, 변환 및 검증하는 방법을 알아보십시오.
 feature: Data Prep
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 65%
+source-wordcount: '61'
+ht-degree: 59%
 
 ---
 

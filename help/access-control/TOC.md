@@ -4,10 +4,11 @@ user-guide-title: Adobe Experience Platform의 액세스 제어 도움말
 breadcrumb-title: 액세스 제어 안내서
 user-guide-description: Adobe Admin Console에서 제품 프로필을 사용하여 사용자 권한을 관리할 수 있습니다. 제품 및 샌드박스에 사용자를 할당하는 방법을 알아봅니다.
 feature: Access Control
-source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
+role: Admin
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 50%
+source-wordcount: '117'
+ht-degree: 49%
 
 ---
 
@@ -45,4 +46,4 @@ ht-degree: 50%
    * [유효한 정책 보기](api/effective-policies.md)
 * [문제 해결 안내서](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes_kr)
+* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)

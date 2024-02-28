@@ -5,9 +5,10 @@ breadcrumb-title: Data Science Workspace 안내서
 user-guide-description: 머신 러닝을 활용하여 Adobe Sensei 및 JupyterLab Notebooks에서 모델과 레시피를 개발, 트레이닝 및 평가할 수 있습니다.
 feature: Data Science Workspace
 solution: Experience Platform
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+role: User, Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '225'
 ht-degree: 18%
 
 ---
@@ -64,4 +65,4 @@ ht-degree: 18%
    * [서비스에서 자동화된 교육 및 채점 예약(UI)](models-recipes/schedule-models-ui.md)
 * [문제 해결 안내서](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes_kr)
+* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)

@@ -1,10 +1,11 @@
 ---
 title: 세그먼테이션 서비스 API 안내서
 description: 개발자는 세그멘테이션 서비스 API를 사용하여 Adobe Experience Platform의 세그멘테이션 작업을 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
+role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '556'
 ht-degree: 2%
 
 ---

@@ -3,10 +3,11 @@ keywords: Experience Platform;홈;인기 항목;쿼리 서비스;쿼리 템플�
 solution: Experience Platform
 title: 쿼리 템플릿 API 끝점
 description: 이 안내서에서는 쿼리 서비스 API를 사용하여 수행할 수 있는 다양한 쿼리 템플릿 API 호출에 대해 자세히 설명합니다.
+role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '977'
 ht-degree: 2%
 
 ---

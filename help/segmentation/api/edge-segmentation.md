@@ -2,8 +2,9 @@
 solution: Experience Platform
 title: API를 사용한 Edge 세그멘테이션
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API와 함께 에지 세그멘테이션을 사용하는 방법에 대한 예제가 포함되어 있습니다.
+role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: d3c0e5ed596661f11191bbcd8d51c888bbd4c1d2
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1195'
 ht-degree: 1%

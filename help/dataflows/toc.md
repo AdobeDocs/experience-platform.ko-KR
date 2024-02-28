@@ -3,10 +3,11 @@ audience: user
 user-guide-title: 데이터 흐름 안내서
 user-guide-description: 데이터 흐름이란 무엇이며 다양한 서비스에서 이들 데이터 흐름을 구성하는 방법에 대해 알아봅니다.
 feature: Dataflows
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 22%
+source-wordcount: '57'
+ht-degree: 24%
 
 ---
 

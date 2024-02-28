@@ -3,10 +3,11 @@ keywords: Experience Platform;홈;인기 항목;샌드박스 개발자 안내서
 solution: Experience Platform
 title: 샌드박스 API 안내서
 description: Adobe Experience Platform의 샌드박스는 프로덕션 환경에 영향을 주지 않고 기능을 테스트하고 실험을 실행하며 사용자 지정 구성을 만들 수 있는 격리된 개발 환경을 제공합니다.
+role: Developer
 exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---

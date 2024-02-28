@@ -1,10 +1,11 @@
 ---
 title: 데이터 세트 만료 API 끝점
 description: 데이터 위생 API의 /ttl 끝점을 사용하면 Adobe Experience Platform에서 데이터 세트 만료를 프로그래밍 방식으로 예약할 수 있습니다.
+role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: a954059155857e6dde7884cf413561cd5214d9bb
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1726'
 ht-degree: 2%
 
 ---

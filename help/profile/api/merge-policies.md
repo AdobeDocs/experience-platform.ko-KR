@@ -3,10 +3,11 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 병합 정책 API 끝점
 type: Documentation
 description: Adobe Experience Platform을 사용하면 여러 소스에서 데이터 조각을 한데 모아 결합하여 각 개별 고객에 대한 전체 보기를 볼 수 있습니다. 이 데이터를 결합할 때 병합 정책은 Platform이 데이터를 우선 순위가 매겨지는 방법과 어떤 데이터를 결합하여 통합 보기를 만들 것인지 결정하는 데 사용하는 규칙입니다.
+role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '2467'
+source-wordcount: '2465'
 ht-degree: 1%
 
 ---

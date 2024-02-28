@@ -2,8 +2,9 @@
 keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결;API;미리 보기;샘플
 title: 샘플 상태 미리 보기(프로필 미리 보기) API 끝점
 description: Real-Time Customer Profile API의 샘플 상태 미리보기 엔드포인트를 사용하면 프로필 데이터의 최근 성공 샘플을 미리 보고, 데이터 세트 및 ID별로 프로필 분포를 나열하고, 데이터 세트 중복, ID 중복 및 연결되지 않은 프로필을 보여주는 보고서를 생성할 수 있습니다.
+role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 1%

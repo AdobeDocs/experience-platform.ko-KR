@@ -3,10 +3,11 @@ keywords: Experience Platform;홈;인기 항목;샌드박스 개발자 안내서
 solution: Experience Platform
 title: 샌드박스 관리 API 엔드포인트
 description: 샌드박스 API의 /sandboxes 끝점을 사용하면 Adobe Experience Platform에서 샌드박스를 프로그래밍 방식으로 관리할 수 있습니다.
+role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1474'
 ht-degree: 3%
 
 ---
