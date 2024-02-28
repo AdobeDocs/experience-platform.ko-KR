@@ -2,10 +2,10 @@
 title: 쿼리 서비스 패키징
 description: 다음 문서에서는 쿼리 서비스에 사용할 수 있는 기능 및 제품의 패키지 구성에 대해 간략히 설명하고 애드혹 쿼리와 배치 쿼리의 차이점을 조명합니다.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 2bea95d855d24aa9d5763ab541ec282f0d8d1d56
+source-git-commit: 0f55a836321e974b3f29d2285c38cc8461636f39
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 1%
+source-wordcount: '963'
+ht-degree: 2%
 
 ---
 
@@ -39,7 +39,7 @@ Adobe Experience Platform 쿼리 서비스는 실행할 수 있는 쿼리 패턴
 | 데이터 내보내기 허용 | 총 내보내기 권한은 플랫폼 기반 애플리케이션 라이선스에 따라 다릅니다. 예를 들어 Real-Time CDP, AJO, CJA 등이 있습니다. | 예 - Data Distiller을 사용하여 생성된 파생 데이터 세트를 내보낼 수 있는 추가 내보내기 권한이 제공됩니다.<br>연간 데이터 내보내기 허용량은 테라바이트(TB) 단위로 측정되며 구입한 컴퓨팅 시간의 양에 따라 다릅니다. 자세한 내용은 제품 설명을 확인하십시오. |
 | 쿼리 실행 인터페이스 | <ul><li>쿼리 서비스 UI</li><li>타사 클라이언트 UI</li><li>[!DNL PostgresSQL] 클라이언트 UI</li></ul> | <ul><li>쿼리 서비스 UI </li><li>타사 클라이언트 UI</li><li>[!DNL PostgresSQL] 클라이언트 UI</li><li>REST API</li></ul> |
 | 다음을 통해 반환된 쿼리 결과 | 클라이언트 UI | 데이터 레이크에 저장된 파생된 데이터 세트 |
-| 결과 제한 | <ul><li>쿼리 서비스 UI - 다음과 같은 출력 행 수 [ui 설정으로 구성됨](./ui/user-guide.md#result-count) 행 50~500개 사이로 확장됩니다.</li><li>타사 클라이언트 - 50,000개</li><li>[!DNL PostgresSQL] 클라이언트 - 50,000</li></ul> | <ul><li>쿼리 서비스 UI - 다음과 같은 출력 행 수 [ui 설정으로 구성됨](./ui/user-guide.md#result-count) 행 50~500개 사이로 확장됩니다.<br>참고: CTAS 및 ITAS 쿼리는 쿼리 출력이 파생 데이터 세트에 저장되므로 성공 메시지만 생성합니다.</li><li>타사 클라이언트(행에 대한 상한 없음)</li><li>[!DNL PostgresSQL] 클라이언트(행에 대한 상한 없음)</li><li>REST API(행에 대한 상한 없음)</li></ul> |
+| 결과 제한 | <ul><li>쿼리 서비스 UI - 다음과 같은 출력 행 수 [ui 설정으로 구성됨](./ui/user-guide.md#result-count) 행 50~500개 사이로 확장됩니다.</li><li>타사 클라이언트 - 50,000개</li><li>[!DNL PostgresSQL] 클라이언트 - 50,000</li></ul> | CTAS 및 ITAS 쿼리는 쿼리 출력이 파생 데이터 세트에 저장되므로 성공 메시지만 생성합니다. |
 | 데이터 세트 용량 읽기 | 예 | 예 |
 | 데이터 세트 용량 쓰기 | 아니요 | 예 |
 | 예약 용량 | 아니요 | 예 |
