@@ -4,9 +4,9 @@ description: 계정 대상자를 만들고 사용하여 다운스트림 대상�
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
@@ -41,19 +41,29 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 
 이 보기에는 이름, 프로필 수, 원본, 라이프사이클 상태, 만든 날짜 및 마지막으로 업데이트한 날짜 등 대상에 대한 정보가 나열됩니다.
 
+또한 검색 및 필터링 기능을 사용하여 특정 계정 대상을 신속하게 검색하고 정렬할 수 있습니다. 이 기능에 대한 자세한 내용은 [세그멘테이션 UI 안내서](./overview.md#manage-audiences).
+
 ## 대상자 만들기 {#create}
+
+>[!NOTE]
+>
+>계정 대상은 다음을 사용하여 평가됩니다. **일괄 처리** 세그멘테이션 및 는 24시간마다 평가됩니다.
 
 계정 대상자를 만들려면 다음을 선택합니다. **[!UICONTROL 대상자 만들기]** 다음에 있음 [!UICONTROL 찾아보기] 페이지를 가리키도록 업데이트하는 중입니다.
 
 ![다음 [!UICONTROL 대상자 만들기] [계정 대상자 찾아보기] 페이지에서 버튼이 강조 표시됩니다.](../images/ui/account-audiences/select-create-audience.png)
 
-세그먼트 빌더 가 나타납니다. 계정 속성은 왼쪽 탐색 모음에 표시됩니다.
+세그먼트 빌더 가 나타납니다. 계정 속성 및 대상은 왼쪽 탐색 모음에 표시됩니다. 아래 [!UICONTROL 속성] 탭에서 플랫폼에서 만든 속성과 사용자 지정 속성을 모두 추가할 수 있습니다.
 
-![세그먼트 빌더 가 표시됩니다. 속성만 표시됩니다.](../images/ui/account-audiences/segment-builder.png)
+![세그먼트 빌더 가 표시됩니다. 속성과 대상만 표시됩니다.](../images/ui/account-audiences/segment-builder.png)
 
 계정 대상을 만들 때는 아래에 이벤트가 나열되어 있습니다. **[!UICONTROL 사람]**, 이러한 속성은 사용자와 연결되므로 고유한 탭이 되지 않습니다.
 
 ![다음 내에 있는 이벤트를 찾을 위치입니다. [!UICONTROL 사람] 폴더가 강조 표시됩니다.](../images/ui/account-audiences/attributes.png)
+
+아래 [!UICONTROL 대상] 탭에서는 이전에 만든 사람 기반 대상자를 추가하여 자신의 계정 대상자를 만들 때에서 빌드할 수 있습니다.
+
+![세그먼트 빌더 내의 대상자 탭이 강조 표시됩니다.](../images/ui/account-audiences/audiences.png)
 
 세그먼트 빌더 사용에 대한 자세한 내용은 [세그먼트 빌더 UI 안내서](./segment-builder.md).
 
