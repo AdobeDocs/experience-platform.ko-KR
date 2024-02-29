@@ -5,9 +5,9 @@ breadcrumb-title: 태그
 user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케팅 및 광고 태그를 배포 및 관리하는 방법을 살펴볼 수 있습니다.
 feature: Tags
 solution: Data Collection
-source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
+source-git-commit: 1e61b2258f943a09cba30aa1c0bc1c6647b9fd16
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '773'
 ht-degree: 36%
 
 ---
@@ -53,6 +53,7 @@ ht-degree: 36%
    * [JavaScript 태그를 배포하여 고객 동의 관리](./ui/client-side/consent.md)
    * [CSP(콘텐츠 보안 정책) 지원](./ui/client-side/content-security-policy.md)
    * [SRI(Subresource Integrity) 지원](./ui/client-side/sri.md)
+   * [전송 계층 보안](./ui/client-side/transport-layer-security.md)
 * 이벤트 전달 {#event-forwarding}
    * [개요](./ui/event-forwarding/overview.md)
    * [시작하기](./ui/event-forwarding/getting-started.md)
