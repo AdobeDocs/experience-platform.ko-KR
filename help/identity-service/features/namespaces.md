@@ -121,7 +121,7 @@ Experience Platform은 모든 조직에서 사용할 수 있는 여러 ID 네임
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"
 >title="통합 ID 보기"
->abstract="통합 ID는 다른 시스템에 연결하는 데 사용되는 네임스페이스이며, ID 확인 또는 연결 ID에는 사용되지 않습니다. <br> 이러한 ID는 기본적으로 숨겨져 있습니다. 토글을 사용하여 통합 네임스페이스를 봅니다."
+>abstract="통합 ID는 다른 시스템에 연결하는 데 사용되는 네임스페이스이며 ID 확인 또는 연결 ID에는 사용되지 않습니다. <br> 이러한 ID는 기본적으로 숨겨져 있습니다. 토글을 사용하여 통합 네임스페이스를 봅니다."
 
 UI에서 ID 네임스페이스를 보려면 **[!UICONTROL ID]** 왼쪽 탐색에서 을(를) 선택한 다음 **[!UICONTROL 찾아보기]**.
 

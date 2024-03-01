@@ -7,7 +7,7 @@ exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
 source-wordcount: '1130'
-ht-degree: 0%
+ht-degree: 27%
 
 ---
 
@@ -94,72 +94,72 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
 >title="최대 전환 확인 기간 오류"
->abstract="경험 이벤트에 대한 최대 전환 확인 기간은 30일입니다."
+>abstract="경험 이벤트의 최대 전환 확인 기간은 30일입니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
 >title="최대 중첩 컨테이너 깊이 오류"
->abstract="중첩 컨테이너의 최대 깊이는 다음과 같습니다. **5**. 이것은 다음을 의미합니다. **할 수 없음** 대상을 만들 때 5개 이상의 중첩된 컨테이너가 있습니다."
+>abstract="중첩된 컨테이너의 최대 깊이는 **5**&#x200B;입니다. 이는 대상자를 생성할 때 다섯 개를 초과하는 중첩된 컨테이너를 **가질 수 없다**&#x200B;는 것을 의미합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxBreadth"
->title="최대 규칙 금액 오류"
->abstract="단일 컨테이너 내의 최대 규칙 수는 입니다. **5**. 이것은 다음을 의미합니다. **할 수 없음** 대상자를 만들 때 단일 컨테이너 내에 5개 이상의 규칙이 있습니다."
+>title="최대 규칙 수량 오류"
+>abstract="단일 컨테이너 내에서의 최대 규칙 수는 **5**&#x200B;입니다. 이는 대상자를 생성할 때 단일 컨테이너 내에서의 규칙 수가 다섯 개를 **초과할 수 없다**&#x200B;는 것을 의미합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_crossEntityMaxDepth"
->title="최대 교차 엔티티 금액 오류"
->abstract="단일 대상 내에서 사용할 수 있는 최대 교차 엔티티 수는 다음과 같습니다. **5**. 크로스 엔티티는 대상 내의 서로 다른 엔티티 간을 변경하는 경우입니다. 예를 들어 계정에서 개인으로 마케팅 목록으로 이동합니다."
+>title="최대 크로스 엔티티 수량 오류"
+>abstract="단일 대상자 내에서 사용할 수 있는 최대 크로스 엔티티 수는 **5**&#x200B;입니다. 크로스 엔티티는 대상자 내에서 서로 다른 엔티티 간에 변경하는 경우입니다. 예를 들어 계정에서 사용자, 마케팅 목록으로 이동합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowCustomEntity"
->title="사용자 지정 엔티티 오류"
->abstract="사용자 지정 엔티티는 다음과 같습니다 **아님** 허용됨."
+>title="사용자 정의 엔티티 오류"
+>abstract="사용자 정의 엔티티는 **허용되지 않습니다**."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_b2bBuiltInEntities"
 >title="잘못된 B2B 엔티티 오류"
->abstract="다음 B2B 엔티티만 사용할 수 있습니다. `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member`, 및 `_xdm.classes.campaign`."
+>abstract="다음 B2B 엔티티만 사용이 허용됩니다. `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member` 및 `_xdm.classes.campaign`."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_rhsMaxOptions"
->title="최대값 오류"
->abstract="단일 필드에 대해 확인할 수 있는 최대 값 수는 다음과 같습니다. **50**."
+>title="최대 값 오류"
+>abstract="단일 필드에 대해 확인할 수 있는 최대 값 수는 **50**&#x200B;입니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowInSegmentByReference"
 >title="inSegment 이벤트 오류"
->abstract="inSegment 이벤트는 **아님** 허용됨."
+>abstract="inSegment 이벤트는 **허용되지 않습니다**."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowInSegmentByValue"
 >title="inSegment 이벤트 오류"
->abstract="inSegment 이벤트는 **아님** 허용됨."
+>abstract="inSegment 이벤트는 **허용되지 않습니다**."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowSequentialEvents"
 >title="순차적 이벤트 오류"
->abstract="순차적 이벤트는 **아님** 허용됨."
+>abstract="순차적 이벤트는 **허용되지 않습니다**."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowMaps"
 >title="맵 유형 속성 오류"
->abstract="맵 유형 속성은 다음과 같습니다 **아님** 허용됨."
+>abstract="맵 유형 속성은 **허용되지 않습니다**."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_maxNestedAggregationDepth"
 >title="최대 중첩 엔티티 깊이 오류"
->abstract="중첩된 배열의 최대 깊이는 다음과 같습니다. **5**."
+>abstract="중첩된 배열의 최대 깊이는 **5**&#x200B;입니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_maxObjectNestingLevel"
->title="최대 중첩 오브젝트 양 오류"
->abstract="허용되는 최대 중첩 오브젝트 수는 입니다. **10**."
+>title="최대 중첩 오브젝트 수량 오류"
+>abstract="허용되는 최대 중첩 오브젝트 수는 **10**&#x200B;입니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_generic"
 >title="제한 위반"
->abstract="대상자가 제한 사항을 위반합니다. 자세한 내용은 링크된 문서를 참조하십시오."
+>abstract="대상자가 제한 조건을 위반했습니다. 자세한 내용은 링크된 문서를 읽어 보시기 바랍니다."
 
 계정 대상자 사용 시 대상자 **필수** 다음 제한 사항을 준수하십시오.
 
@@ -169,16 +169,16 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 
 - 경험 이벤트에 대한 최대 전환 확인 기간은 다음과 같습니다. **30일**.
 - 중첩 컨테이너의 최대 깊이는 다음과 같습니다. **5**.
-   - 이것은 다음을 의미합니다. **할 수 없음** 대상을 만들 때 5개 이상의 중첩된 컨테이너가 있습니다.
+   - 이는 대상자를 생성할 때 다섯 개를 초과하는 중첩된 컨테이너를 **가질 수 없다**&#x200B;는 것을 의미합니다.
 - 단일 컨테이너 내의 최대 규칙 수는 입니다. **5**.
    - 즉, 대상자는 **할 수 없음** 대상자를 구성하는 규칙이 5개 이상 있습니다.
 - 사용할 수 있는 최대 교차 엔티티 수는 입니다. **5**.
-   - 크로스 엔티티는 대상 내의 서로 다른 엔티티 간을 변경하는 경우입니다. 예를 들어 계정에서 개인으로 마케팅 목록으로 이동합니다.
+   - 크로스 엔티티는 대상자 내에서 서로 다른 엔티티 간에 변경하는 경우입니다. 예를 들어 계정에서 사용자, 마케팅 목록으로 이동합니다.
 - 사용자 지정 엔티티 **할 수 없음** 사용합니다.
-- 단일 필드에 대해 확인할 수 있는 최대 값 수는 다음과 같습니다. **50**.
+- 단일 필드에 대해 확인할 수 있는 최대 값 수는 **50**&#x200B;입니다.
    - 예를 들어 &quot;도시 이름&quot; 필드가 있는 경우 50개의 도시 이름에 대해 해당 값을 확인할 수 있습니다.
 - 계정 대상자 **할 수 없음** 사용 `inSegment` 이벤트.
 - 계정 대상자 **할 수 없음** 순차적 이벤트를 사용합니다.
 - 계정 대상자 **할 수 없음** 맵을 사용합니다.
-- 중첩된 배열의 최대 깊이는 다음과 같습니다. **5**.
+- 중첩된 배열의 최대 깊이는 **5**&#x200B;입니다.
 - 중첩된 객체의 최대 수는 입니다. **10**.
