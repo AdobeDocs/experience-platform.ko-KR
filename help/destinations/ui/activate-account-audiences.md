@@ -5,10 +5,10 @@ description: 대상에 대한 계정 대상을 활성화하는 방법을 알아�
 badgeB2B: label="B2B 버전" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 0%
+source-wordcount: '834'
+ht-degree: 1%
 
 ---
 
@@ -25,6 +25,12 @@ ht-degree: 0%
 다음으로 이동 **[!UICONTROL 연결]** > **[!UICONTROL 대상]**&#x200B;을(를) 클릭하고 **[!UICONTROL 카탈로그]** 탭. 사용 **[!UICONTROL 데이터 유형]** 필터링 및 선택 **[!UICONTROL 계정]** 계정 대상자 활성화를 지원하는 대상을 확인합니다. 현재 계정 대상자 내보내기는 특정 클라우드 스토리지 대상([Amazon](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS 세대 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob 저장소](/help/destinations/catalog/cloud-storage/azure-blob.md), [데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md), 및 [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) 및 [(회사) LinkedIn 일치 대상](/help/destinations/catalog/social/linkedin.md) 대상.
 
 ![계정 대상을 지원하는 대상.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
+
+## 비디오 개요
+
+계정 대상자 만들기 및 활성화에 대한 개요와 계정 대상자 활성화 시 지원되는 사용 사례에 대해서는 아래 비디오를 참조하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/338252/?learn=on)
 
 ## 전제 조건 {#prerequisites}
 

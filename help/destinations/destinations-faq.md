@@ -3,10 +3,10 @@ keywords: 대상; 질문; faq; faq; 대상 faq
 title: 자주 묻는 질문
 description: Adobe Experience Platform 대상에 대해 가장 자주 묻는 질문에 대한 답변
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 3%
+source-wordcount: '1673'
+ht-degree: 2%
 
 ---
 
@@ -48,6 +48,15 @@ ht-degree: 3%
 모든 프로필이 대상으로 전송되도록 하려면 새 구성으로 새 대상을 만든 다음 대상에 대해 활성화해야 합니다.
 
 +++
+
+### 대상이 대상에서 제거되면 대상이 제거되었음을 나타내는 신호가 대상으로 전송됩니까?
+
++++답변
+
+아니요. 타겟 시스템의 Experience Platform 대상과 고객 인스턴스 사이에는 종속성이 없습니다. 수신 측에서 타겟 시스템에서 볼 수 있는 유일한 표시는 해당 대상 데이터의 수신을 중단했다는 것입니다.
+
++++
+
 <!--
 ## [!DNL Experience Cloud Audiences] {#eca-faq}
 
@@ -82,7 +91,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 +++대상자를 다음으로 보내려면 먼저 답변하십시오. [!DNL Facebook], 다음 요구 사항을 충족하는지 확인하십시오.
 
 * 사용자 [!DNL Facebook] 사용자 계정에는 **[!DNL Manage campaigns]** 사용하려는 광고 계정에 대해 권한이 활성화되었습니다.
-* 다음 **Adobe Experience Cloud** 비즈니스 계정을 의 광고 파트너로 추가해야 합니다. [!DNL Facebook Ad Account]. `business ID=206617933627973` 사용. 다음을 참조하십시오 [비즈니스 관리자에 파트너 추가](https://www.facebook.com/business/help/1717412048538897) 자세한 내용은 Facebook 설명서 를 참조하십시오.
+* 다음 **Adobe Experience Cloud** 비즈니스 계정을 의 광고 파트너로 추가해야 합니다. [!DNL Facebook Ad Account]. `business ID=206617933627973`를 사용하십시오. 다음을 참조하십시오 [비즈니스 관리자에 파트너 추가](https://www.facebook.com/business/help/1717412048538897) 자세한 내용은 Facebook 설명서 를 참조하십시오.
 
   >[!IMPORTANT]
   >
@@ -136,7 +145,7 @@ ID 일치 요구 사항에 대한 자세한 내용은 [ID 일치 요구 사항](
 +++예 라고 답하십시오. Experience Platform의 Facebook 대상은 Facebook의 광고 계정으로 1:1입니다. 회사의 각 Facebook 광고 계정에 대해 별도의 Facebook 대상을 만들 수 있습니다. 다음 [대상 연결 자습서](/help/destinations/ui/connect-destination.md) 플랫폼 UI에서 각각의 새로운 Facebook 대상에 대한 별도의 Facebook 계정에 연결합니다. 연결할 수 있는 Facebook 광고 계정 수에는 제한이 없습니다.
 +++
 
-## Google 고객 일치 타겟팅 {#google-customer-match}
+## Google Customer Match {#google-customer-match}
 
 ### 대상을 Google Customer Match로 내보낼 때 Google 인터페이스의 대상 이름 끝에 추가된 숫자가 표시되는 이유는 무엇입니까?
 

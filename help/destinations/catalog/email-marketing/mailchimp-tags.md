@@ -1,7 +1,8 @@
 ---
 title: Mailchimp 태그
 description: Mailchimp 태그 대상을 사용하면 계정 데이터를 내보내고 Mailchimp 내에서 활성화하여 연락처에 참여할 수 있습니다.
-source-git-commit: b32d619b78502e38e98a410bd14379992543c63c
+last-substantial-update: 2024-02-20T00:00:00Z
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
