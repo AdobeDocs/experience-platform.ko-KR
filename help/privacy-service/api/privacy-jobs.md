@@ -5,9 +5,9 @@ title: 개인 정보 작업 API 엔드포인트
 description: Privacy Service API를 사용하여 Experience Cloud 애플리케이션에 대한 개인 정보 작업을 관리하는 방법을 알아봅니다.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0ffc9648fbc6e6aa3c43a7125f25a98452e8af9a
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1857'
 ht-degree: 1%
 
 ---
@@ -26,25 +26,34 @@ ht-degree: 1%
 
 **API 형식**
 
-이 요청 형식은 `regulation` 쿼리 매개 변수 `/jobs` 끝점이므로 물음표(`?`)을 참조하십시오. 응답은 페이지 번호를 매겨 다른 쿼리 매개 변수를 사용할 수 있습니다(`page` 및 `size`)을 클릭하여 응답을 필터링합니다. 앰퍼샌드( )를 사용하여 여러 매개 변수를 분리할 수 있습니다`&`).
+이 요청 형식은 `regulation` 쿼리 매개 변수 `/jobs` 끝점이므로 물음표(`?`)을 참조하십시오. 리소스를 나열할 때 Privacy Service API는 최대 1000개의 작업을 반환하고 응답에 페이지를 매깁니다. 다른 쿼리 매개 변수 사용(`page`, `size`, 및 날짜 필터)를 사용하여 응답을 필터링합니다. 앰퍼샌드( )를 사용하여 여러 매개 변수를 분리할 수 있습니다`&`).
+
+>[!TIP]
+>
+>추가 쿼리 매개 변수를 사용하여 특정 쿼리에 대한 결과를 추가로 필터링합니다. 예를 들어, 지정된 기간 동안 제출된 개인 정보 작업 수와 해당 상태가 `status`, `fromDate`, 및 `toDate` 쿼리 매개 변수.
 
 ```http
 GET /jobs?regulation={REGULATION}
 GET /jobs?regulation={REGULATION}&page={PAGE}
 GET /jobs?regulation={REGULATION}&size={SIZE}
 GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={STATUS}
 ```
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{REGULATION}` | 쿼리할 규정 유형. 허용되는 값은 다음과 같습니다. <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>의 개요 보기 [지원되는 규정](../regulations/overview.md) 위의 값이 나타내는 개인 정보 보호 규정에 대한 자세한 정보입니다. |
+| `{REGULATION}` | 쿼리할 규정 유형. 허용되는 값은 다음과 같습니다. <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>의 개요 보기 [지원되는 규정](../regulations/overview.md) 위의 값이 나타내는 개인 정보 보호 규정에 대한 자세한 정보입니다. |
 | `{PAGE}` | 0 기반 번호 매기기를 사용하여 표시할 데이터 페이지입니다. 기본값은 `0`입니다. |
-| `{SIZE}` | 각 페이지에 표시할 결과 수. 기본값은 입니다 `1` 최대값은 입니다. `100`. 최대값을 초과하면 API가 400 코드 오류를 반환합니다. |
+| `{SIZE}` | 각 페이지에 표시할 결과 수. 기본값은 입니다 `100` 최대값은 입니다. `1000`. 최대값을 초과하면 API가 400 코드 오류를 반환합니다. |
+| `{status}` | 기본 동작은 모든 상태를 포함하는 것입니다. 상태 유형을 지정하면 요청은 해당 상태 유형과 일치하는 개인 정보 작업만 반환합니다. 허용되는 값은 다음과 같습니다. <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
+| `{toDate}` | 이 매개 변수는 결과를 지정된 날짜 이전에 처리된 것으로 제한합니다. 요청 날짜부터 시스템에서 45일을 되돌릴 수 있습니다. 그러나 범위는 30일을 초과할 수 없습니다.<br>YYYY-MM-DD 형식을 허용합니다. 제공한 날짜는 그리니치 표준시(GMT)로 표시되는 종료 날짜로 해석됩니다.<br>이 매개 변수를 제공하지 않은 경우(및 해당 `fromDate`) 기본 동작은 지난 7일 동안 데이터가 다시 저장된 작업을 반환합니다. 를 사용하는 경우 `toDate`, 또한 `fromDate` 쿼리 매개 변수. 두 가지를 모두 사용하지 않으면 호출에서 400 오류가 반환됩니다. |
+| `{fromDate}` | 이 매개 변수는 지정된 날짜 이후에 처리된 것으로 결과를 제한합니다. 요청 날짜부터 시스템에서 45일을 되돌릴 수 있습니다. 그러나 범위는 30일을 초과할 수 없습니다.<br>YYYY-MM-DD 형식을 허용합니다. 제공한 날짜는 그리니치 표준시(GMT)로 표시되는 요청의 시작 날짜로 해석됩니다.<br>이 매개 변수를 제공하지 않은 경우(및 해당 `toDate`) 기본 동작은 지난 7일 동안 데이터가 다시 저장된 작업을 반환합니다. 를 사용하는 경우 `fromDate`, 또한 `toDate` 쿼리 매개 변수. 두 가지를 모두 사용하지 않으면 호출에서 400 오류가 반환됩니다. |
+| `{filterDate}` | 이 매개 변수는 결과를 지정된 날짜에 처리된 것으로 제한합니다. YYYY-MM-DD 형식을 허용합니다. 시스템은 지난 45일 동안 되돌릴 수 있습니다. |
 
 {style="table-layout:auto"}
 
 <!-- Not released yet:
-<li>`pdpd_vnm`</li>
+<li>`pdpd_vnm`</li> 
  -->
 
 **요청**

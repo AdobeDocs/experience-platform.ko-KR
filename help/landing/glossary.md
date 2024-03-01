@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 용어
 description: Experience Platform의 중요한 용어에 대한 용어집입니다.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '7979'
+source-wordcount: '7996'
 ht-degree: 0%
 
 ---
@@ -344,6 +344,8 @@ ht-degree: 0%
 **병합 방법**: 플랫폼 UI를 사용하여 병합 정책을 정의할 때 병합 방법은 충돌이 발생할 때 데이터 조각의 우선 순위를 지정하는 방법을 지정합니다. 실시간 고객 프로필 API를 사용하여 병합 정책을 정의하는 경우 `attributeMerge` 개체.
 
 **병합 정책**: 병합 정책은 Experience Platform이 여러 소스의 고객 데이터 조각을 결합하여 개별 프로필을 만드는 방법을 결정하는 데 사용하는 규칙입니다. 데이터 충돌이 발생하면 병합 정책에서 프로필에 포함하기 위해 우선 순위를 지정해야 하는 데이터를 결정합니다.
+
+**MHMDAa**: [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) 건강 데이터에 대한 소비자의 개인 정보 보호 권한을 강화합니다. 건강 데이터에 대한 공개, 소비자 동의, 삭제 권한을 의무화하고, 허가 없이 건강 데이터를 판매하는 것을 금지한다. 또한, 이 법은 의료 시설 주변에서 지오펜싱을 사용하는 것을 불법으로 만듭니다.
 
 **Mixin**: &quot;스키마 필드 그룹&quot;을 참조하십시오.
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service UI의 개인 정보 작업 관리
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 요청을 조정하고 모니터링하는 방법에 대해 알아봅니다.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1458'
 ht-degree: 14%
 
 ---
@@ -46,6 +46,7 @@ ht-degree: 14%
 | [!UICONTROL GDPR] | 유럽 연합의 [!DNL General Data Protection Regulation] |
 | [!UICONTROL HIPAA_AUS] | [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | 브라질 [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MHMDA] | [!DNL Washington My Health My Data Act] |
 | [!UICONTROL NZPA_NZL] | 뉴질랜드 [!DNL Privacy Act] |
 | [!UICONTROL PDPA_THA] | 태국 [!DNL Personal Data Protection Act] |
 | [!UICONTROL UPA] | [!DNL Utah Consumer Privacy Act] |

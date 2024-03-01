@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 개인 정보 보호 규정 용어
 description: 이 문서에서는 Adobe Experience Cloud에서 지원하는 개인 정보 보호 규정 관련 주요 용어에 대한 정의를 제공합니다.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1842'
 ht-degree: 2%
 
 ---
@@ -100,6 +100,8 @@ ht-degree: 2%
 ## M
 
 **주요 설립**: 연합 내에서 데이터 처리에 대한 주요 의사 결정이 내려지는 곳으로, 처리자와 관련되어 있습니다.
+
+**MHMDAa**: [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) 건강 데이터에 대한 소비자의 개인 정보 보호 권한을 강화합니다. 건강 데이터에 대한 공개, 소비자 동의, 삭제 권한을 의무화하고, 허가 없이 건강 데이터를 판매하는 것을 금지한다. 또한, 이 법은 의료 시설 주변에서 지오펜싱을 사용하는 것을 불법으로 만듭니다.
 
 ## N
 
