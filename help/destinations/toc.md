@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 73785443a9d07dfde3ef1060f7886dfed484925b
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1209'
 ht-degree: 4%
 
 ---
@@ -247,6 +247,7 @@ ht-degree: 4%
          * [사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성을 사용하여 Azure Data Lake 저장소 대상 구성](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [사용자 지정 파일 형식 옵션 및 사용자 지정 파일 이름 구성을 사용하여 DLZ(데이터 랜딩 영역) 대상을 구성합니다](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [사전 정의된 파일 형식 옵션 및 사용자 정의 파일 이름 구성을 사용하여 SFTP 대상 구성](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [잠재 고객을 내보내도록 파일 기반 대상 구성](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * 대상 작성 API 참조 {#authoring-api}
       * [Destination SDK(대상 작성) API 참조](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * 대상 서버 작업 {#server-operations}
