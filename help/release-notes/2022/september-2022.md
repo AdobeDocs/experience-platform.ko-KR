@@ -2,16 +2,16 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 정보입니다.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2938'
-ht-degree: 19%
+source-wordcount: '2762'
+ht-degree: 18%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2022년 9월 28일**
+**릴리스 날짜: 2022년 9월 28일 목요일**
 
 Adobe Experience Platform의 새로운 기능:
 
@@ -110,8 +110,8 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | Platform UI에서 왼쪽 탐색 통합 | 이전에 데이터 수집 UI에만 제공되었던 모든 기능(태그, 이벤트 전달 및 데이터스트림 포함)은 이제 Experience Platform에서 범주 아래 왼쪽 탐색을 통해 사용할 수도 있습니다 **[!UICONTROL 데이터 수집]**. 이렇게 하면 Platform에서 데이터 수집 기능으로 작업할 때 UI 간을 전환할 필요가 없습니다. |
 | 태그 및 이벤트 전달의 사용자 속성 | 사용 가능한 목록 작성 시 [!UICONTROL 속성] 태그 및 이벤트 전달에서 이제 나열된 각 속성은 마지막으로 업데이트된 시간과 업데이트를 수행한 사용자를 표시합니다. |
 | [[!DNL Snap Conversions API] 확장](https://exchange.adobe.com/apps/ec/108550) 이벤트 전달용 | 이제 로 데이터를 보낼 수 있습니다. [!DNL Snapchat Conversions API] 사용 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장명. API 인증 및 사용 방법에 대한 자세한 내용은 다음을 참조하십시오. [[!DNL Snapchat Marketing API] 설명서](https://marketingapi.snapchat.com/docs/conversion.html). |
-| [[!DNL User-Agent Client Hints] Web SDK에서](../../edge/fundamentals/user-agent-client-hints.md) | 이제 웹 SDK에서 다음을 지원합니다. [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). 클라이언트 힌트를 사용하면 웹 사이트 소유자는에서 사용할 수 있는 동일한 정보의 대부분에 액세스할 수 있습니다. [!DNL User-Agent] 문자열이지만 더 개인 정보를 보존하는 방식으로. |
-| [Web SDK 페이지별 마이그레이션](../../edge/home.md#migrating-to-web-sdk) | 이제 다음과 같은 다른 Experience Cloud 라이브러리에서 기존 웹 속성을 마이그레이션할 수 있습니다. [!DNL at.js]한 번에 한 페이지씩 웹 SDK에 연결합니다. 이렇게 하면 모든 페이지를 한 번에 마이그레이션할 필요 없이 웹 SDK 마이그레이션에 대한 단계별 접근 방식이 활성화됩니다. |
+| [Web SDK의 사용자 에이전트 클라이언트 힌트](/help/web-sdk/use-cases/client-hints.md) | 이제 웹 SDK에서 다음을 지원합니다. [사용자 에이전트 클라이언트 힌트](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). 클라이언트 힌트를 사용하면 웹 사이트 소유자는에서 사용할 수 있는 동일한 정보의 대부분에 액세스할 수 있습니다. [!DNL User-Agent] 문자열이지만 더 개인 정보를 보존하는 방식으로. |
+| [Web SDK 페이지별 마이그레이션](../../web-sdk/home.md#migrating-to-web-sdk) | 이제 다음과 같은 다른 Experience Cloud 라이브러리에서 기존 웹 속성을 마이그레이션할 수 있습니다. [!DNL at.js]한 번에 한 페이지씩 웹 SDK에 연결합니다. 이렇게 하면 모든 페이지를 한 번에 마이그레이션할 필요 없이 웹 SDK 마이그레이션에 대한 단계별 접근 방식이 활성화됩니다. |
 | [[!DNL Adobe Journey Optimizer] 데이터스트림 지원](../../datastreams/overview.md#aep) | 이제 데이터 스트림에 대한 Adobe Experience Platform 서비스에서 를 지원합니다. [!DNL Adobe Journey Optimizer]. 이 옵션을 사용하여에서 웹 및 앱 기반 인바운드 채널을 사용할 수 있습니다 [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
@@ -126,11 +126,11 @@ Platform에서의 데이터 수집에 대한 자세한 내용은 [데이터 수�
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| 대상 SDK | 이제 Destination SDK은 배치(또는 파일 기반) 프로덕션 또는 비공개 대상을 만드는 파트너와 고객을 위해 모든 지원을 제공합니다. 자세한 내용은 다음 설명서 페이지를 참조하십시오. <ul><li>[Destination SDK 개요](../../destinations/destination-sdk/overview.md)</li><li>[파일 기반 대상 구성](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[파일 기반 대상에 대한 파일 서식 옵션 구성](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[파일 기반 대상 테스트](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
+| Destination SDK | 이제 Destination SDK은 배치(또는 파일 기반) 프로덕션 또는 비공개 대상을 만드는 파트너와 고객을 위해 모든 지원을 제공합니다. 자세한 내용은 다음 설명서 페이지를 참조하십시오. <ul><li>[Destination SDK 개요](../../destinations/destination-sdk/overview.md)</li><li>[파일 기반 대상 구성](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[파일 기반 대상에 대한 파일 서식 옵션 구성](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[파일 기반 대상 테스트](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
 
 {style="table-layout:auto"}
 
-**새로운 대상 또는 업데이트된 대상**
+**새 대상 또는 업데이트된 대상**
 
 | 대상 | 설명 |
 | ----------- | ----------- |
@@ -139,7 +139,7 @@ Platform에서의 데이터 수집에 대한 자세한 내용은 [데이터 수�
 
 {style="table-layout:auto"}
 
-**새로운 대상 또는 업데이트된 설명서**
+**신규 또는 업데이트된 설명서**
 
 | 설명서 | 설명 |
 | ----------- | ----------- |

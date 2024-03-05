@@ -3,10 +3,10 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 동의 및 환경 설정 데이터 유형
 description: 개인 정보, 개인화 및 마케팅 환경 설정 데이터 유형에 대한 동의는 데이터 작업에서 CMP(동의 관리 플랫폼) 및 기타 소스에서 생성된 고객 권한 및 환경 설정의 수집을 지원하기 위한 것입니다.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 70ea0aa74f1874ea2772dd0d961c98d2ac1137e8
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2294'
-ht-degree: 1%
+source-wordcount: '2278'
+ht-degree: 0%
 
 ---
 
@@ -267,7 +267,7 @@ ht-degree: 1%
 
 ## 동의 및 환경 설정 변경 처리
 
-고객이 웹 사이트에서 동의 또는 환경 설정을 변경할 경우 이러한 변경 사항을 수집하여 를 사용하여 즉시 적용해야 합니다. [Adobe Experience Platform 웹 SDK](../../edge/consent/supporting-consent.md). 고객이 데이터 수집을 옵트아웃하면 모든 데이터 수집을 즉시 중단해야 합니다. 고객이 개인화를 옵트아웃하는 경우 방문하는 다음 페이지에 개인화가 없어야 합니다.
+고객이 웹 사이트에서 동의 또는 환경 설정을 변경할 경우 이러한 변경 사항을 수집하여 를 사용하여 즉시 적용해야 합니다. [Adobe Experience Platform 웹 SDK](/help/web-sdk/consent/supporting-consent.md). 고객이 데이터 수집을 옵트아웃하면 모든 데이터 수집을 즉시 중단해야 합니다. 고객이 개인화를 옵트아웃하는 경우 방문하는 다음 페이지에 개인화가 없어야 합니다.
 
 ## 부록 {#appendix}
 

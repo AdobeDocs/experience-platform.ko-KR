@@ -3,7 +3,7 @@ title: 파트너 지원 방문자 인식을 사용하여 알 수 없는 방문�
 description: 파트너 지원 방문자 인식을 사용하여 방문자에게 개인화된 온사이트 경험을 제공하는 방법을 알아보십시오.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -47,7 +47,7 @@ ht-degree: 89%
 이 사용 사례를 성공적으로 구현하려면 실시간 고객 데이터 플랫폼 및 기타 Experience Cloud 솔루션의 여러 영역을 사용해야 합니다. 이러한 모든 영역에 대해 필요한 [속성 기반의 액세스 제어 권한](/help/access-control/abac/overview.md)이 있는지 확인하거나, 시스템 관리자에게 필요한 권한 부여를 요청하십시오.
 
 * 데이터 수집
-   * [Adobe Experience Platform 웹 SDK](/help/edge/home.md)
+   * [Adobe Experience Platform 웹 SDK](/help/web-sdk/home.md)
    * [태그](/help/tags/home.md)
    * [데이터스트림](/help/datastreams/overview.md)
 * Real-Time CDP의 데이터 관리

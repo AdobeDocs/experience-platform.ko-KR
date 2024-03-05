@@ -2,9 +2,9 @@
 title: 용어 업데이트
 description: Adobe Experience Platform Launch 리브랜딩의 영향을 받는 용어 및 UI 요소의 전체 목록입니다.
 exl-id: 93dc0abf-c80d-4a67-bf0c-3fb09ca915a2
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '127'
 ht-degree: 4%
 
 ---
@@ -21,4 +21,4 @@ Adobe Experience Platform Launch은 데이터 수집 기술군으로 Adobe Exper
 |---|---|
 | Platform launch(클라이언트측) | [태그](./home.md) |
 | Platform launch 서버측 | [이벤트 전달](./ui/event-forwarding/overview.md) |
-| Edge 구성 | [데이터스트림](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html) |
+| Edge 구성 | [데이터스트림](/help/datastreams/overview.md) |

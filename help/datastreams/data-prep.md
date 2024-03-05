@@ -2,10 +2,10 @@
 title: 데이터 수집을 위한 데이터 준비
 description: Adobe Experience Platform Web 및 Mobile SDK용 데이터스트림 구성 시 데이터를 Experience Data Model(XDM) 이벤트 스키마에 매핑하는 방법에 대해 알아봅니다.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 59%
+source-wordcount: '1183'
+ht-degree: 60%
 
 ---
 
@@ -30,9 +30,9 @@ ht-degree: 59%
 
 ## WebSDK를 통해 Edge 네트워크에 기존 데이터 계층 보내기 {#send-datalayer-via-websdk}
 
-기존 데이터 레이어는 `data` 옵션 `sendEvent` 다음에 설명된 대로 명령 [Web SDK 설명서](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+기존 데이터 레이어는 [`data`](/help/web-sdk/commands/sendevent/data.md) 내의 개체 `sendEvent` 명령입니다.
 
-태그를 사용하는 경우 **[!UICONTROL 데이터]** 필드 **[!UICONTROL 이벤트 보내기]** 에 설명된 대로 작업 유형 [웹 SDK 태그 확장 설명서](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+태그를 사용하는 경우 **[!UICONTROL 데이터]** 필드 **[!UICONTROL 이벤트 보내기]** 에 설명된 대로 작업 유형 [웹 SDK 태그 확장 설명서](/help/tags/extensions/client/web-sdk/action-types.md).
 
 이 안내서의 나머지 부분에서는 WebSDK에서 데이터 레이어를 전송한 후 XDM 표준에 매핑하는 방법에 중점을 둡니다.
 

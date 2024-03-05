@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Edge 세그멘테이션 UI 안내서
 description: 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화하면서 에지 세분화를 사용하여 에지에서 즉시 플랫폼의 세그먼트 정의를 평가하는 방법을 알아봅니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: d3c0e5ed596661f11191bbcd8d51c888bbd4c1d2
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >이제 모든 Platform 사용자가 Edge 세그멘테이션을 일반적으로 사용할 수 있습니다. Beta 실행 중에 에지 세그먼트 정의를 생성한 경우 이러한 세그먼트 정의는 계속 작동합니다.
 
-에지 세그멘테이션은 Adobe Experience Platform의 세그먼트를 즉시 평가하는 기능입니다 [가장자리에](../../edge/home.md), 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
+에지 세그멘테이션은 Adobe Experience Platform의 세그먼트를 즉시 평가하는 기능입니다 [가장자리에](../../web-sdk/home.md), 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
 
 >[!IMPORTANT]
 >

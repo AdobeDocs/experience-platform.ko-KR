@@ -3,7 +3,7 @@ title: 인증되지 않은 방문자에 대한 오프사이트 재타겟팅
 description: 잠재 고객 ID를 사용하여 인증되지 않은 사용자 대상을 만드는 데 사용할 수 있는 계산된 속성을 만들어 인증되지 않은 사용자를 다시 타깃팅하는 방법에 대해 알아봅니다.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1462'
 ht-degree: 1%
@@ -39,7 +39,7 @@ ht-degree: 1%
 - [대상자](../../segmentation/home.md)
 - [계산된 속성](../../profile/computed-attributes/overview.md)
 - [대상](../../destinations/home.md)
-- [Web SDK](../../edge/home.md)
+- [Web SDK](../../web-sdk/home.md)
 
 ## Real-Time CDP으로 파트너 데이터 가져오기 {#get-data-in}
 

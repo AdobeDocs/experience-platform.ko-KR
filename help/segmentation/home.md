@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 개요
 description: Adobe Experience Platform 세분화 서비스 및 플랫폼 생태계에서 수행하는 역할에 대해 알아봅니다.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '1627'
 ht-degree: 14%
@@ -92,7 +92,7 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >abstract="에지 세분화는 Edge Network에서 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지의 개인화 사용 사례를 활성화하는 기능입니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=ko-KR" text="에지 세분화 UI 안내서"
 
-에지 세그멘테이션은 플랫폼의 세그먼트를 즉시 평가하는 기능입니다 [에지 네트워크에서](../edge/home.md), 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
+에지 세그멘테이션은 플랫폼의 세그먼트를 즉시 평가하는 기능입니다 [에지 네트워크에서](../web-sdk/home.md), 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
 
 에지 세분화에 대한 자세한 내용은 다음 중 하나를 참조하십시오. [API 설명서](./api/edge-segmentation.md) 또는 [UI 설명서](./ui/edge-segmentation.md).
 

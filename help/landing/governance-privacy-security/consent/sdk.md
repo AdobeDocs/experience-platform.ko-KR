@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK를 사용하여 고객 동의 데이터 처리
 description: Adobe Experience Platform Web SDK를 통합하여 Adobe Experience Platform에서 고객 동의 데이터를 처리하는 방법에 대해 알아봅니다.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1311'
 ht-degree: 1%
 
 ---
@@ -24,15 +24,15 @@ Adobe Experience Platform Web SDK를 사용하면 동의 관리 플랫폼(CMP)�
 
 이 안내서는 UI에서 태그 확장을 사용하여 SDK를 설정하는 워크플로를 따릅니다. 확장을 사용하지 않고 사이트에 독립 실행형 SDK 버전을 직접 포함하려는 경우 이 안내서 대신 다음 문서를 참조하십시오.
 
-* [데이터스트림 구성](../../../datastreams/overview.md)
-* [SDK 설치](../../../edge/fundamentals/installing-the-sdk.md)
-* [동의 명령에 대한 SDK 구성](../../../edge/consent/supporting-consent.md)
+* [데이터스트림 구성](/help/datastreams/overview.md)
+* [SDK 설치](/help/web-sdk/install/overview.md)
+* [동의 명령에 대한 SDK 구성](/help/web-sdk/commands/configure/defaultconsent.md)
 
 이 안내서의 설치 단계에서는 태그 확장 및 웹 애플리케이션에 태그 확장을 설치하는 방법을 이해해야 합니다. 자세한 내용은 다음 설명서를 참조하십시오.
 
-* [태그 개요](../../../tags/home.md)
-* [빠른 시작 안내서](../../../tags/quick-start/quick-start.md)
-* [게시 개요](../../../tags/ui/publishing/overview.md)
+* [태그 개요](/help/tags/home.md)
+* [빠른 시작 안내서](/help/tags/quick-start/quick-start.md)
+* [게시 개요](/help/tags/ui/publishing/overview.md)
 
 ## 데이터스트림 설정
 
@@ -110,14 +110,7 @@ UI에서 데이터 요소를 만들려면 다음을 선택합니다 **[!UICONTRO
 
 ### `setConsent` 구문
 
->[!NOTE]
->
->Platform SDK 명령의 일반적인 구문에 대한 소개는 다음 문서를 참조하십시오. [명령 실행](../../../edge/fundamentals/executing-commands.md).
-
-다음 `setConsent` 명령에는 다음 두 개의 인수가 필요합니다.
-
-1. 명령 유형을 나타내는 문자열(이 경우 `"setConsent"`)
-1. 단일 배열 유형 속성을 포함하는 페이로드 개체: `consent`. 다음 `consent` 배열에는 Adobe 표준에 대한 필수 동의 필드를 제공하는 개체가 하나 이상 있어야 합니다.
+다음 [`setConsent`](/help/web-sdk/commands/setconsent.md) 명령에는 단일 배열 형식 속성이 포함된 페이로드 개체가 필요합니다. `consent`. 다음 `consent` 배열에는 Adobe 표준에 대한 필수 동의 필드를 제공하는 개체가 하나 이상 있어야 합니다.
 
 다음 예제는 Adobe 표준에 대한 필수 동의 필드입니다 `setConsent` 호출:
 
@@ -139,7 +132,7 @@ alloy("setConsent", {
         }
       },
       metadata: {
-        time: "2020-10-12T15:52:25+00:00"
+        time: "YYYY-10-12T15:52:25+00:00"
       }
     }
   }]
@@ -200,7 +193,7 @@ var setConsent = function () {
 
 ## SDK 응답 처리
 
-모두 [!DNL Platform SDK] 명령은 호출의 성공 또는 실패 여부를 나타내는 약속을 반환합니다. 그런 다음 고객에게 확인 메시지를 표시하는 것과 같은 추가 논리에 이러한 응답을 사용할 수 있습니다. 의 섹션을 참조하십시오. [성공 또는 실패 처리](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) 특정 예제의 SDK 명령 실행에 대한 안내서에서 참조할 수 있습니다.
+모두 [!DNL Platform SDK] 명령은 호출의 성공 또는 실패 여부를 나타내는 약속을 반환합니다. 그런 다음 고객에게 확인 메시지를 표시하는 것과 같은 추가 논리에 이러한 응답을 사용할 수 있습니다. 다음을 참조하십시오 [명령 응답](/help/web-sdk/commands/command-responses.md) 추가 정보.
 
 성공하면 `setConsent` sdk를 사용하여 를 호출하면 Platform UI의 프로필 뷰어를 사용하여 데이터가 프로필 스토어에 도달하는지 확인할 수 있습니다. 의 섹션을 참조하십시오. [id별 프로필 검색](../../../profile/ui/user-guide.md#browse-identity) 추가 정보.
 

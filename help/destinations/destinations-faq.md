@@ -3,7 +3,7 @@ keywords: 대상; 질문; faq; faq; 대상 faq
 title: 자주 묻는 질문
 description: Adobe Experience Platform 대상에 대해 가장 자주 묻는 질문에 대한 답변
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1673'
 ht-degree: 2%
@@ -185,11 +185,11 @@ ID 일치 요구 사항에 대한 자세한 내용은 [ID 일치 요구 사항](
 
 ### Experience Platform Web SDK를 사용하여 대상과 속성을 Adobe Target으로 전송해야 합니까?
 
-+++아니요, [웹 SDK](../edge/home.md) 대상자를 활성화하기 위해 이 필요하지 않음: [Adobe Target](catalog/personalization/adobe-target-connection.md).
++++아니요, [웹 SDK](../web-sdk/home.md) 대상자를 활성화하기 위해 이 필요하지 않음: [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
 그러나 다음과 같은 경우에는 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) 는 Web SDK 대신 사용되며 다음 세션 개인화만 지원됩니다.
 
-대상 [동일 페이지 및 다음 페이지 개인화](ui/activate-edge-personalization-destinations.md) 사용 사례는 다음 중 하나를 사용해야 합니다. [웹 SDK](../edge/home.md) 또는 [Edge Network Server API](../server-api/overview.md). 다음에서 설명서를 참조하십시오. [Edge 대상으로 대상자 활성화](ui/activate-edge-personalization-destinations.md) 구현 세부 사항.
+대상 [동일 페이지 및 다음 페이지 개인화](ui/activate-edge-personalization-destinations.md) 사용 사례는 다음 중 하나를 사용해야 합니다. [웹 SDK](../web-sdk/home.md) 또는 [Edge Network Server API](../server-api/overview.md). 다음에서 설명서를 참조하십시오. [Edge 대상으로 대상자 활성화](ui/activate-edge-personalization-destinations.md) 구현 세부 사항.
 +++
 
 ### Real-time Customer Data Platform에서 Adobe Target 또는 사용자 지정 개인화 대상으로 보낼 수 있는 속성 수에 제한이 있습니까?
@@ -208,7 +208,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### Experience Platform에서 대상자를 만들면 Edge 세그멘테이션 사용 사례에 해당 대상자를 사용할 수 있는 데 얼마나 걸립니까?
 
-+++응답 대상 정의는 [에지 네트워크](../edge/home.md) 한 시간이면 됩니다. 그러나 대상이 이 첫 번째 시간 내에 활성화되면 대상의 자격이 되었을 일부 방문자를 놓칠 수 있습니다.
++++응답 대상 정의는 [에지 네트워크](../web-sdk/home.md) 한 시간이면 됩니다. 그러나 대상이 이 첫 번째 시간 내에 활성화되면 대상의 자격이 되었을 일부 방문자를 놓칠 수 있습니다.
 +++
 
 ### Adobe Target에서 활성화된 속성은 어디에서 볼 수 있습니까?

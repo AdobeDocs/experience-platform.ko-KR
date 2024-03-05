@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;데이터 준비;데이터 준�
 title: 데이터 준비를 사용하여 실시간 고객 프로필에 부분 행 업데이트 보내기
 description: 데이터 준비를 사용하여 실시간 고객 프로필에 부분 행 업데이트를 보내는 방법을 알아봅니다.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: db6a0b45d600d16b24f7f749e414dfd0998fbf5e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1241'
 ht-degree: 0%
 
 ---
@@ -265,7 +265,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 * 부분 행 업데이트를 로 보낼 때만 스트리밍 업데이트 메서드를 사용해야 합니다. [!DNL Real-Time Customer Profile]. 부분 행 업데이트는 다음과 같습니다 **아님** 데이터 레이크에서 사용됨.
 * 스트리밍 업데이트 메서드는 ID 업데이트, 바꾸기 및 제거를 지원하지 않습니다. 존재하지 않는 경우 새 ID가 생성됩니다. 따라서 `identity` 작업은 항상 만들도록 설정해야 합니다. ID가 이미 존재하는 경우 작업이 no-op입니다.
-* 스트리밍 업데이트 방법은 현재 를 지원하지 않습니다. [Adobe Experience Platform 웹 SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=ko-KR) 및 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* 스트리밍 업데이트 방법은 현재 를 지원하지 않습니다. [Adobe Experience Platform 웹 SDK](/help/web-sdk/home.md) 및 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## 다음 단계
 

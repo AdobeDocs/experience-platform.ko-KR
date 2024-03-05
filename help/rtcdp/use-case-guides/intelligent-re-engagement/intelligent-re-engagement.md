@@ -3,7 +3,7 @@ title: 지능형 재참여
 description: 주요 전환 순간에 강력한 연결 환경을 제공하여 방문 빈도가 낮은 고객을 지능적으로 재참여시킵니다.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: ea0f53339d8549152a54267d537b04326f9164df
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '3772'
 ht-degree: 48%
@@ -147,7 +147,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 #### 고객 디지털 트랜잭션 스키마
 
-이 스키마는 웹 사이트 또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 다음 위치에 수집됩니다 [!DNL Adobe Experience Platform] 경유 [웹 SDK](/help/edge/home.md) 또한 여정 트리거, 자세한 온라인 고객 분석 및 향상된 대상 기능에 사용되는 다양한 검색 및 전환 이벤트를 참조해야 합니다.
+이 스키마는 웹 사이트 또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 다음 위치에 수집됩니다 [!DNL Adobe Experience Platform] 경유 [웹 SDK](/help/web-sdk/home.md) 또한 여정 트리거, 자세한 온라인 고객 분석 및 향상된 대상 기능에 사용되는 다양한 검색 및 전환 이벤트를 참조해야 합니다.
 
 고객 디지털 거래 스키마는 로 표시됩니다. [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스.
 
@@ -244,7 +244,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 >
 >[[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md)를 사용하는 경우 선택적 구현입니다.
 
-이 스키마는 웹 사이트 또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 스키마는 고객 디지털 트랜잭션 스키마와 유사하지만, 다음과 같은 경우에 사용하기 위한 것이라는 점에서 다릅니다 [웹 SDK](/help/edge/home.md) 는 데이터 수집에 대한 옵션이 아니므로 을(를) 활용할 때 이 스키마가 필요합니다. [!DNL Adobe Analytics Source Connector] 온라인 데이터를에 보내려면 [!DNL Adobe Experience Platform] 를 기본 또는 보조 데이터 스트림으로 사용합니다.
+이 스키마는 웹 사이트 또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 스키마는 고객 디지털 트랜잭션 스키마와 유사하지만, 다음과 같은 경우에 사용하기 위한 것이라는 점에서 다릅니다 [웹 SDK](/help/web-sdk/home.md) 는 데이터 수집에 대한 옵션이 아니므로 을(를) 활용할 때 이 스키마가 필요합니다. [!DNL Adobe Analytics Source Connector] 온라인 데이터를에 보내려면 [!DNL Adobe Experience Platform] 를 기본 또는 보조 데이터 스트림으로 사용합니다.
 
 다음 [!DNL Adobe] 웹 커넥터 스키마는 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스.
 

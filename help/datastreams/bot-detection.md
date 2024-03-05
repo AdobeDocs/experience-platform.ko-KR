@@ -4,9 +4,9 @@ description: 사람 트래픽과 사람 트래픽을 구분하기 위해 데이�
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1320'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 자동화된 프로그램, 웹 스크레이퍼, 스파이더, 스크립팅된 스캐너와 같은 비인간 엔티티에서 발생하는 트래픽은 인간 방문자에서 발생하는 이벤트를 식별하는 것을 더 어렵게 할 수 있습니다. 이 유형의 트래픽은 중요한 비즈니스 지표에 부정적인 영향을 주어 잘못된 트래픽 보고를 초래할 수 있습니다.
 
-보트 감지를 사용하면 다음에서 생성한 이벤트를 식별할 수 있습니다. [[!DNL Web SDK]](../edge/home.md), [[!DNL Mobile SDK]](https://developer.adobe.com/client-sdks/home/) 및 [[!DNL Server API]](../server-api/overview.md) 알려진 스파이더 및 보트에서 생성됨.
+보트 감지를 사용하면[웹 SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) 및 [[!DNL Server API]](../server-api/overview.md) 알려진 스파이더 및 보트에서 생성됨.
 
 데이터스트림에 대한 보트 감지를 구성하여 보트 이벤트로 분류하려는 특정 IP 주소, IP 범위 및 요청 헤더를 식별할 수 있습니다.
 

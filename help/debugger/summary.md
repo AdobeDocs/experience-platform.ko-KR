@@ -1,21 +1,21 @@
 ---
 title: 요약 탭
-description: Adobe Experience Platform Debugger의 요약 탭을 사용하는 방법에 대해 알아봅니다.
+description: Adobe Experience Platform Debugger에서 요약 탭을 사용하는 방법에 대해 알아봅니다.
 keywords: debugger;experience Platform Debugger 확장 프로그램;chrome;확장 프로그램;요약;지우기;요청;요약 화면;솔루션;정보;analytics;target;dtm;audience manager;launch;id 서비스
 seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
 uuid: 46b17eaa-b611-43cf-8c6a-67b2e9b9d940
 exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
-source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 74%
+source-wordcount: '711'
+ht-degree: 85%
 
 ---
 
 # 요약 탭
 
-Adobe Experience Platform Debugger를 실행하려면 브라우저에서 검사할 페이지를 연 다음 아이콘(![](images/start-icon.jpg))을 클릭하여 제품에서 사용할 수 있습니다. 확장 프로그램은 **요약** 탭.
+Adobe Experience Platform Debugger을 실행하려면 브라우저에서 검사할 페이지를 연 다음 아이콘(![](images/start-icon.jpg))을 클릭하여 제품에서 사용할 수 있습니다. 확장 프로그램은 **요약** 탭.
 
 ![](images/summary.jpg)
 
@@ -81,7 +81,7 @@ Experience Platform Debugger에는 각 솔루션에 대한 다음 정보가 표�
   </tr> 
   <tr> 
    <td colname="col1"> <p>버전 </p> </td> 
-   <td colname="col2"> <p>Turbine 버전입니다.</a> </p> </td> 
+   <td colname="col2"> <p>Turbine 버전입니다</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>빌드 날짜 </p> </td> 
@@ -89,7 +89,7 @@ Experience Platform Debugger에는 각 솔루션에 대한 다음 정보가 표�
   </tr> 
   <tr> 
    <td colname="col1"> <p>환경 </p> </td> 
-   <td colname="col2"> <p>다음 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> 환경</a> 태그 라이브러리에서 사용됨 </p> </td> 
+   <td colname="col2"> <p>다음 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ko-KR" format="https" scope="external"> 환경</a> 태그 라이브러리에서 사용됨 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>확장 </p> </td> 
@@ -104,7 +104,7 @@ Experience Platform Debugger에는 각 솔루션에 대한 다음 정보가 표�
  <tbody> 
   <tr> 
    <td colname="col1"> <p>라이브러리 버전 </p> </td> 
-   <td colname="col2"> <p>Adobe Experience Platform 웹 SDK <a href="https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-ext-release-notes.html" format="html" scope="external">라이브러리 버전</a>의 번호 </p> </td> 
+   <td colname="col2"> <p>Adobe Experience Platform 웹 SDK <a href="https://experienceleague.adobe.com/docs/experience-platform/web-sdk/extension/web-sdk-ext-release-notes.html" format="html" scope="external">라이브러리 버전</a>의 번호 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>네임스페이스</p> </td> 

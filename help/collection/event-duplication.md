@@ -1,7 +1,7 @@
 ---
 title: Experience Platform에서 이벤트 복제 처리
 description: Adobe Experience Platform에서 이벤트 복제를 처리하는 방법 알아보기
-source-git-commit: 89cdb0832009bcee31b4339f021bc5a0ce254752
+source-git-commit: bc3ae849bd7fd8a9f50ba98528adc43d7282df90
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform은 신뢰성을 극대화하는 동시에 증가하는 데이터 볼륨으로 확장할 수 있도록 설계된 고도로 분산된 시스템입니다.
 
-실시간 데이터 수집의 경우 [경험 이벤트](../xdm/classes/experienceevent.md) 다음을 통해 수집됩니다. [에지 네트워크](../edge/home.md#edge-network), 클라이언트측 소스(예: ) [웹 SDK](../edge/home.md) 또는 [Mobile SDK](https://developer.adobe.com/client-sdks/home/), Experience Platform 처리 및 스토리지 계층으로 전달됩니다. 이러한 레이어는 Experience Platform, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko), 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html).
+실시간 데이터 수집의 경우 [경험 이벤트](../xdm/classes/experienceevent.md) 다음을 통해 수집됩니다. [에지 네트워크](../web-sdk/home.md#edge-network), 클라이언트측 소스(예: ) [웹 SDK](../web-sdk/home.md) 또는 [Mobile SDK](https://developer.adobe.com/client-sdks/home/), Experience Platform 처리 및 스토리지 계층으로 전달됩니다. 이러한 레이어는 Experience Platform, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko), 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html).
 
 경험 이벤트 손실을 최소화하기 위해 클라이언트 측 SDK와 내부 Experience Platform 전달 서비스에서는 이벤트가 성공적으로 수집되었다는 확인이 필요합니다.
 

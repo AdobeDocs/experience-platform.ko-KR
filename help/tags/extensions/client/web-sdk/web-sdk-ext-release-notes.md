@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: fb2cf23f4762eec4bcab1126bdfb1aaa4144e777
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '1983'
 ht-degree: 26%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 26%
 
 # Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 
-이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md).
 
 ## 버전 2.21.4 - 2024년 1월 10일
 
@@ -81,7 +81,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 **새로운 기능**
 
 * Adobe Experience Platform Web SDK 버전 2.16.0을 포함합니다.
-* 에 대한 지원이 추가됨 [데이터 스트림 구성 무시](../../../../datastreams/overrides.md).
+* 에 대한 지원이 추가됨 [데이터 스트림 구성 무시](/help/datastreams/overrides.md).
 * 사용 중단 알림을 `datasetId` 옵션 `sendEvent` 명령입니다.
 
 
@@ -98,7 +98,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 **새로운 기능**
 
 * (베타) 추가됨 **[!UICONTROL 변수 업데이트]** 작업 및 **[!UICONTROL 변수]** 데이터 요소입니다.
-* 에 대한 구성 추가됨 [`onBeforeLinkClickSend`](../../../../edge/fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback 함수.
+* 에 대한 구성 추가됨 [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) callback 함수.
 
 **수정 사항 및 향상된 기능**
 
@@ -176,7 +176,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.8.0을 포함합�
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.7.0을 포함합니다.
 
-* Edge Network의 추가 정보는 이벤트 전송 완료 이벤트에서 사용할 수 있습니다. `inferences` 및 `destinations`. 이러한 기능은 현재 베타의 일부로 출시되고 있으므로 이러한 속성의 형식이 변경될 수 있습니다. 자세한 내용은 [이벤트 추적.](../../../../edge/fundamentals/tracking-events.md)
+* Edge Network의 추가 정보는 이벤트 전송 완료 이벤트에서 사용할 수 있습니다. `inferences` 및 `destinations`. 이러한 기능은 현재 베타의 일부로 출시되고 있으므로 이러한 속성의 형식이 변경될 수 있습니다.
 
 ## 버전 2.7.3 - 2021년 9월 7일
 
@@ -223,10 +223,10 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.5.0을 포함합�
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.4.0을 포함합니다.
 
-* 추가됨 [&quot;문서 언로드 중&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) 이벤트 작업 UI 보내기에 대한 확인란입니다.
-* 에 대한 지원이 추가됨 `out` 옵션 [기본 동의 구성](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) 동의를 받을 때까지 모든 이벤트 삭제(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 보냅니다).
+* 추가됨 [&quot;문서 언로드 중&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) 이벤트 작업 UI 보내기에 대한 확인란입니다.
+* 에 대한 지원이 추가됨 `out` 옵션 [기본 동의 구성](/help/web-sdk/commands/configure/defaultconsent.md) 동의를 받을 때까지 모든 이벤트 삭제(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 보냅니다).
 * 기본 동의 필드에 도구 설명을 추가했습니다.
-* 에 대한 지원이 추가됨 [Adobe 동의 2.0 standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* 을(를) 사용할 때 Adobe의 동의 2.0 표준에 대한 지원을 추가했습니다. [`setConsent`](/help/web-sdk/commands/setconsent.md) 명령입니다.
 * 사용자의 액세스 토큰이 잘못되었거나 잘못 제공된 경우 XDM 개체 데이터 요소 UI에 더 나은 오류가 표시됩니다.
 * XDM 개체 데이터 요소를 볼 때 브라우저 개발자 콘솔에 표시되는 교차 원본 오류(확장 작업에 영향을 주지 않음)가 수정되었습니다.
 
@@ -251,7 +251,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 ## 버전 2.1.0 - 2020년 8월 5일
 
 * 변경 내용: `syncIdentity` 작업을 제거하고 대신 `sendEvent` 작업에서 이러한 ID를 전달할 수 있도록 지원합니다. 확장을 업그레이드하기 전에 이 작업을 사용하여 기존 규칙을 비활성화하십시오.
-* Alloy v. 2.1.0로 업데이트([릴리스 노트](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html))
+* Alloy v. 2.1.0로 업데이트([릴리스 노트](/help/web-sdk/release-notes.md))
 * `setConsent` 작업에서 IAB 2.0 동의 표준을 지원합니다.
 * `sendEvent` 작업에서 데이터 세트 ID 재정의를 지원합니다.
 * 이제 활성화된 XDM 개체 데이터 요소와 `IdentityMap` 작업에 `identityMap` 항목을 채우는 데 사용할 수 있는 `setConsent` 유형의 새 데이터 요소를 추가합니다.

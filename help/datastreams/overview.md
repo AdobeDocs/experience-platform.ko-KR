@@ -1,17 +1,17 @@
 ---
 title: 데이터스트림 개요
 description: 데이터스트림을 통해 클라이언트측 Experience Platform SDK 통합을 Adobe 제품 및 서드파티 대상과 연결하는 방법에 대해 알아봅니다.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '727'
 ht-degree: 77%
 
 ---
 
-
 # 데이터스트림 개요
 
-데이터스트림은 Adobe Experience Platform Web 및 Mobile SDK 구현 시 서버측 구성을 나타냅니다. 동안 [구성](../edge/fundamentals/configuring-the-sdk.md) sdk의 명령은 클라이언트에서 처리해야 하는 항목을 제어합니다(예: `edgeDomain`) 데이터스트림은 SDK에 대한 다른 모든 구성을 처리합니다. Adobe Experience Platform Edge Network로 요청이 전송되면 `edgeConfigId`는 데이터스트림을 참조하는 데 사용됩니다. 이를 통해 웹 사이트에서 코드를 변경하지 않고도 서버측 구성을 업데이트할 수 있습니다.
+데이터스트림은 Adobe Experience Platform Web 및 Mobile SDK 구현 시 서버측 구성을 나타냅니다. 동안 [`configure`](/help/web-sdk/commands/configure/overview.md) sdk의 명령은 클라이언트에서 처리해야 하는 항목을 제어합니다(예: `edgeDomain`) 데이터스트림은 SDK에 대한 다른 모든 구성을 처리합니다. Adobe Experience Platform Edge Network로 요청이 전송되면 `edgeConfigId`는 데이터스트림을 참조하는 데 사용됩니다. 이를 통해 웹 사이트에서 코드를 변경하지 않고도 서버측 구성을 업데이트할 수 있습니다.
 
 Adobe Experience Platform UI 또는 데이터 수집 UI 내의 왼쪽 탐색 영역에서 **[!UICONTROL 데이터스트림]**&#x200B;을 선택하여 데이터스트림을 만들고 관리할 수 있습니다.
 

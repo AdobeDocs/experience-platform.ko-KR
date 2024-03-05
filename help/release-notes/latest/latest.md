@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2024년 1월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1242'
 ht-degree: 22%
@@ -28,7 +28,7 @@ Experience Platform을 사용하면 다양한 플랫폼 활동에 대한 이벤�
 **새 기능 또는 업데이트된 기능**
 | 기능 | 설명 | | — | — | | 경고 내역 탭 | Experience Platform 관리자는 경고 구독자 관리 기능을 사용하여 Adobe 사용자 ID, 외부 이메일 주소 또는 이메일 그룹 목록에 경고를 할당할 수 있습니다. 자세한 내용은 [경고 UI 설명서](../../observability/alerts/ui.md) 기록 탭에 대한 자세한 내용은 |
 
-
+{style="table-layout:auto"}
 
 경고에 대해 자세히 알아보려면 [[!DNL Observability Insights] 개요](../../observability/home.md).
 
@@ -40,7 +40,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 기능 | 설명 |
 | --- | --- |
-| [Web SDK의 웹 인앱 메시지 지원](../../edge/personalization/web-in-app-messaging.md) | 이제 Adobe Experience Platform Web SDK가 Adobe Journey Optimizer 캠페인에 대한 웹 인앱 메시지 구성을 지원합니다. |
+| [Web SDK의 웹 인앱 메시지 지원](../../web-sdk/personalization/web-in-app-messaging.md) | 이제 Adobe Experience Platform Web SDK가 Adobe Journey Optimizer 캠페인에 대한 웹 인앱 메시지 구성을 지원합니다. |
 
 {style="table-layout:auto"}
 

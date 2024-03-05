@@ -3,9 +3,9 @@ keywords: 사용자 정의 개인화; 대상; experience platform 사용자 정�
 title: 사용자 지정 개인화 연결
 description: 이 대상은 Adobe Experience Platform에서 대상 정보를 검색할 수 있는 방법을 통해 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필 대상 멤버십을 기반으로 실시간 개인화를 제공합니다.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '906'
 ht-degree: 9%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 9%
 
 ## 전제 조건 {#prerequisites}
 
-이 통합은 [Adobe Experience Platform 웹 SDK](../../../edge/home.md) 또는 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). 이 대상을 사용하려면 다음 SDK 중 하나를 사용해야 합니다.
+이 통합은 [Adobe Experience Platform 웹 SDK](/help/web-sdk/home.md) 또는 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). 이 대상을 사용하려면 다음 SDK 중 하나를 사용해야 합니다.
 
 >[!IMPORTANT]
 >
@@ -120,7 +120,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 ]
 ```
 
-을 사용하지 않는 경우 [태그](../../../tags/home.md) Experience Platform Web SDK를 배포하려면 [이벤트에서 응답 처리](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 내보낸 데이터를 보는 기능입니다.
+을 사용하지 않는 경우 [태그](/help/tags/home.md) Experience Platform Web SDK를 배포하려면 다음을 사용합니다. [명령 응답](/help/web-sdk/commands/command-responses.md) 을 눌러 내보낸 데이터를 확인합니다.
 
 Adobe Experience Platform의 JSON 응답을 구문 분석하여 Adobe Experience Platform과 통합 중인 애플리케이션의 해당 통합 별칭을 찾을 수 있습니다. 대상 ID는 타깃팅 매개 변수로 애플리케이션의 코드에 전달될 수 있습니다. 다음은 대상 응답에만 적용되는 예제입니다.
 

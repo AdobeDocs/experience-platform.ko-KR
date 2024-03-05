@@ -2,9 +2,9 @@
 title: Adobe Analytics과 상호 작용
 description: Edge Network Server API를 사용하여 Adobe Analytics과 상호 작용하는 방법에 대해 알아봅니다.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '180'
 ht-degree: 1%
 
 ---
@@ -13,9 +13,7 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-Adobe Analytics 데이터 수집은 XDM 데이터를 Adobe Analytics이 이해할 수 있는 형식으로 변환하여 작동합니다. 여러 XDM 필드는 다음과 같습니다 [자동으로 매핑됨](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) Analytics 변수에
-
-다음을 수행할 수도 있습니다. [수동으로 XDM 값 매핑](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) 기존 Analytics 변수에 연결합니다.
+Adobe Analytics 데이터 수집은 XDM 데이터를 Adobe Analytics이 이해할 수 있는 형식으로 변환하여 작동합니다. 여러 XDM 필드는 다음과 같습니다 [자동으로 매핑됨](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=ko-KR) Analytics 변수에 XDM 값을 이전 Analytics 변수에 수동으로 매핑할 수도 있습니다.
 
 Adobe Analytics이 서버 API에서 데이터를 수신하도록 하려면 다음을 수행해야 합니다 [데이터스트림 구성](../datastreams/overview.md#adobe-analytics-settings) 이벤트를 Adobe Analytics에 전달하려면 데이터 스트림 구성 페이지에 보고서 세트 ID를 입력합니다.
 

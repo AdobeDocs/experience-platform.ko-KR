@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identity Service 개요
 description: Adobe Experience Platform Identity Service를 사용하면 디바이스와 시스템 간에 ID를 연결하여 고객과 고객의 행동을 더 잘 볼 수 있으므로 효과적인 개인 디지털 경험을 실시간으로 제공할 수 있습니다.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 2%
@@ -109,7 +109,7 @@ ID 서비스는 Experience Platform 내에서 중요한 역할을 합니다. 이
 
 * [스키마](../xdm/home.md): 특정 스키마 내에서 ID로 표시된 스키마 필드를 사용하면 ID 그래프를 작성할 수 있습니다.
 * [데이터 세트](../catalog/datasets/overview.md): 데이터 세트가 실시간 고객 프로필에 수집되도록 활성화된 경우 데이터 세트가 ID로 표시된 최소 두 개 이상의 필드인 경우 데이터 세트에서 ID 그래프가 생성됩니다.
-* [웹 SDK](../edge/home.md): Web SDK는 경험 이벤트를 Adobe Experience Platform으로 전송하고, ID 서비스는 이벤트에 두 개 이상의 ID가 있을 때 그래프를 생성합니다.
+* [웹 SDK](../web-sdk/home.md): Web SDK는 경험 이벤트를 Adobe Experience Platform으로 전송하고, ID 서비스는 이벤트에 두 개 이상의 ID가 있을 때 그래프를 생성합니다.
 * [실시간 고객 프로필](../profile/home.md): 특정 프로필의 속성 및 이벤트를 병합하기 전에 실시간 고객 프로필에서 ID 그래프를 참조할 수 있습니다. 자세한 내용은 의 안내서를 참조하십시오. [identity 서비스와 실시간 고객 프로필 간의 관계 이해](./identity-and-profile.md).
 * [대상](../destinations/home.md): 대상은 해시된 이메일과 같은 ID 네임스페이스를 기반으로 다른 시스템에 프로필 정보를 보낼 수 있습니다.
 * [세그먼트 일치](../segmentation/ui/segment-match/overview.md): 세그먼트 일치 는 ID 네임스페이스와 ID 값이 동일한 두 개의 서로 다른 샌드박스에서 두 개의 프로필과 일치합니다.

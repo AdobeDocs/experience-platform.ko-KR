@@ -2,10 +2,10 @@
 title: Audience Manager에서 Real-Time CDP로의 발전
 description: Audience Manager에서 Real-Time CDP로의 마이그레이션을 계획하기 전에 고려 사항을 파악하십시오.
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 84%
+source-wordcount: '498'
+ht-degree: 88%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe는 세그먼트를 다음과 같이 분류하는 것을 권장합니다.
 
 ## 2. [!UICONTROL Audience Manager 소스 커넥터]를 통해 전송하기 위한 중요 세그먼트는 무엇입니까?
 
-평가 기준에 따라 데이터 종속성, 대상 또는 활성화 문제가 없으며 나중에 [Adobe Experience Platform Web SDK](/help/edge/web-sdk-faq.md)와 같은 Real-Time CDP 데이터 수집을 통해 세분화 규칙을 만들 수 있는 세그먼트는 Audience Manager 소스 커넥터를 통해 데이터를 전송해야 합니다.
+평가 기준에 따라 데이터 종속성, 대상 또는 활성화 문제가 없으며 나중에 [Adobe Experience Platform Web SDK](/help/web-sdk/faq.md)와 같은 Real-Time CDP 데이터 수집을 통해 세분화 규칙을 만들 수 있는 세그먼트는 Audience Manager 소스 커넥터를 통해 데이터를 전송해야 합니다.
 
 ## 3. Audience Manager로 데이터를 다시 가져오기 위해 [!UICONTROL Experience Cloud 대상자] 대상을 사용하시겠습니까?
 

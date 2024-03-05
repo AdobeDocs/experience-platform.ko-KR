@@ -2,9 +2,9 @@
 title: 데이터 수집 전체 개요
 description: Adobe Experience Platform의 데이터 수집 기능을 사용하여 Adobe Experience Cloud 솔루션으로 이벤트 데이터를 전송하는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2621'
+source-wordcount: '2616'
 ht-degree: 0%
 
 ---
@@ -113,8 +113,8 @@ UI에서 을 선택합니다. **[!UICONTROL 스키마]** 왼쪽 탐색. 여기�
 >
 >이 섹션에서는 데이터 수집 UI를 사용하여 웹 SDK 태그 확장을 구성하지만 대신 원시 코드를 사용하여 설치하고 구성할 수도 있습니다. 자세한 내용은 다음 안내서를 참조하십시오.
 >
->* [SDK 설치](../edge/fundamentals/installing-the-sdk.md)
->* [SDK 구성](../edge/fundamentals/configuring-the-sdk.md)
+>* [SDK 설치](/help/web-sdk/install/overview.md)
+>* [SDK 구성](/help/web-sdk/commands/configure/overview.md)
 >
 >또한 이벤트 전달만 사용하려는 경우에도 의 이벤트 전달을 구성하기 전에 설명된 대로 SDK를 설치하고 구성해야 합니다 [이후 단계](#event-forwarding).
 
@@ -141,7 +141,7 @@ UI에서 을 선택합니다. **[!UICONTROL 스키마]** 왼쪽 탐색. 여기�
 
 SDK에 대한 구성 페이지가 나타납니다. 대부분의 필수 값은 원하는 경우 변경할 수 있는 기본값으로 자동 채워집니다.
 
-![Web SDK를 구성합니다](./images/e2e/configure-sdk.png)
+![웹 SDK 구성](./images/e2e/configure-sdk.png)
 
 그러나 SDK를 설치하기 전에 데이터를 전송할 위치를 알 수 있도록 데이터 스트림을 선택해야 합니다. 아래 **[!UICONTROL 데이터스트림]**, 드롭다운 메뉴를 사용하여 [이전 단계](#datastream). 데이터 스트림을 설정하고 나면 다음을 선택합니다. **[!UICONTROL 저장]** 를 클릭하여 속성에 SDK 설치를 완료합니다.
 

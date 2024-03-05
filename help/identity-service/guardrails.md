@@ -3,7 +3,7 @@ keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침
 title: ID 서비스 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 1576405e6f1d674a75446f887c2912c4480d0e28
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1526'
 ht-degree: 0%
@@ -101,7 +101,7 @@ ht-degree: 0%
 CRM ID에 대해 인증된 이벤트를 유지하려면 기본 ID를 ECID에서 CRM ID로 변경하는 것이 좋습니다. 이 변경 사항을 구현하는 방법에 대한 단계는 다음 문서를 참조하십시오.
 
 * [Experience Platform 태그에 대한 ID 맵 구성](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Experience Platform Web SDK의 ID 데이터](../edge/identity/overview.md#using-identitymap)
+* [Experience Platform Web SDK의 ID 데이터](../web-sdk/identity/overview.md#using-identitymap)
 
 ### 예제 시나리오
 

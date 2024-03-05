@@ -2,9 +2,9 @@
 title: 웹 SDK 태그 확장 구성
 description: 태그 UI에서 Experience Platform Web SDK 태그 확장을 구성하는 방법에 대해 알아봅니다.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1552'
 ht-degree: 6%
 
 ---
@@ -84,7 +84,7 @@ Edge Network로 요청을 보낼 때 서버측 구성을 참조하는 데 데이
 * **[!UICONTROL 서드파티 쿠키 사용]**: 이 옵션이 활성화되면 Web SDK는 사용자 식별자를 서드파티 쿠키에 저장하려고 합니다. 성공하면 사용자는 각 도메인에서 별도의 사용자로 식별되지 않고 여러 도메인을 탐색할 때 단일 사용자로 식별됩니다. 이 옵션이 활성화된 경우 브라우저가 서드파티 쿠키를 지원하지 않거나 사용자가 서드파티 쿠키를 허용하지 않도록 구성한 경우 SDK에서 여전히 서드파티 쿠키에 사용자 식별자를 저장하지 못할 수 있습니다. 이 경우 SDK는 자사 도메인에만 식별자를 저장합니다.
 
   >[!IMPORTANT]
-  >>서드파티 쿠키는 [자사 디바이스 ID](../../../../edge/identity/first-party-device-ids.md) Web SDK의 기능입니다.
+  >>서드파티 쿠키는 [자사 디바이스 ID](../../../../web-sdk/identity/first-party-device-ids.md) Web SDK의 기능입니다.
 자사 디바이스 ID를 사용하거나 서드파티 쿠키를 사용할 수 있지만 두 기능을 동시에 사용할 수는 없습니다.
   >
 ## 개인화 설정 구성 {#personalization}
@@ -113,9 +113,9 @@ Adobe 코드 조각 사전 숨김을 사용하는 경우 동일한 항목을 사
 
 ![태그 UI에서 웹 SDK 태그 확장의 데이터 수집 설정을 보여 주는 이미지](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL 콜백 함수]**: 확장에 제공된 콜백 함수를 라고 합니다. [`onBeforeEventSend` 함수](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=ko-KR) 라이브러리에 있습니다. 이 함수를 사용하면 Edge Network로 전송되기 전에 이벤트를 전체적으로 수정할 수 있습니다. 이 기능을 사용하는 방법에 대한 자세한 정보는 을 찾을 수 있다 [여기](../../../../edge/fundamentals/tracking-events.md#modifying-events-globally).
+* **[!UICONTROL 콜백 함수]**: 확장에 제공된 콜백 함수를 라고 합니다. [`onBeforeEventSend` 함수](/help/web-sdk/commands/configure/onbeforeeventsend.md) 라이브러리에 있습니다. 이 함수를 사용하면 Edge Network로 전송되기 전에 이벤트를 전체적으로 수정할 수 있습니다.
 * **[!UICONTROL 클릭 데이터 수집 활성화]**: Web SDK는 자동으로 링크 클릭 정보를 수집할 수 있습니다. 기본적으로 이 기능은 활성화되어 있지만 이 옵션을 사용하여 비활성화할 수 있습니다. 또한 링크의 레이블은 다음에 나열된 다운로드 표현식 중 하나를 포함하는 경우 다운로드 링크로 표시됩니다. [!UICONTROL 다운로드 링크 한정자] 텍스트 상자. Adobe은 몇 가지 기본 다운로드 링크 한정자를 제공합니다. 필요에 따라 편집할 수 있습니다.
-* **[!UICONTROL 자동으로 수집된 컨텍스트 데이터]**: 기본적으로 Web SDK는 장치, 웹, 환경 및 위치 컨텍스트와 관련된 특정 컨텍스트 데이터를 수집합니다. Adobe이 수집하는 정보 목록을 보고 싶다면 찾을 수 있다 [여기](../../../../edge/data-collection/automatic-information.md). 이 데이터를 수집하지 않거나 특정 범주의 데이터만 수집하려면 다음을 선택합니다. **[!UICONTROL 특정 컨텍스트 정보]** 수집할 데이터를 선택합니다.
+* **[!UICONTROL 자동으로 수집된 컨텍스트 데이터]**: 기본적으로 Web SDK는 장치, 웹, 환경 및 위치 컨텍스트와 관련된 특정 컨텍스트 데이터를 수집합니다. 이 데이터를 수집하지 않거나 특정 범주의 데이터만 수집하려면 다음을 선택합니다. **[!UICONTROL 특정 컨텍스트 정보]** 수집할 데이터를 선택합니다. 다음을 참조하십시오 [`context`](/help/web-sdk/commands/configure/context.md) 추가 정보.
 
 ## 데이터스트림 재정의 구성 {#datastream-overrides}
 
@@ -125,10 +125,10 @@ Adobe 코드 조각 사전 숨김을 사용하는 경우 동일한 항목을 사
 
 데이터스트림 구성 재정의는 2단계 프로세스입니다.
 
-1. 먼저 [데이터스트림 구성 페이지](../../../../datastreams/configure.md)에서 데이터스트림 구성 재정의를 정의해야 합니다.
+1. 먼저 [데이터스트림 구성 페이지](/help/datastreams/configure.md)에서 데이터스트림 구성 재정의를 정의해야 합니다.
 2. 그런 다음 Web SDK 명령을 통하거나 Web SDK 태그 확장을 사용하여 Edge 네트워크에 재정의를 전송해야 합니다.
 
-데이터 스트림 보기 [구성 재정의 설명서](../../../../datastreams/overrides.md) 데이터스트림 구성을 재정의하는 방법에 대한 자세한 지침을 확인하십시오.
+데이터 스트림 보기 [구성 재정의 설명서](/help/datastreams/overrides.md) 데이터스트림 구성을 재정의하는 방법에 대한 자세한 지침을 확인하십시오.
 
 웹 SDK 명령을 통해 재정의를 전달하는 대신 아래 표시된 태그 확장 화면에서 재정의를 구성할 수 있습니다.
 
@@ -136,10 +136,10 @@ Adobe 코드 조각 사전 숨김을 사용하는 경우 동일한 항목을 사
 >
 데이터 스트림 재정의는 환경별로 구성해야 합니다. 개발, 스테이징 및 프로덕션 환경에는 모두 별도의 재정의가 있습니다. 아래 화면에 표시된 전용 옵션을 사용하여 설정 간을 복사할 수 있습니다.
 
-![웹 SDK 태그 확장 페이지의 데이터 스트림 구성 재정의를 보여 주는 이미지입니다.](assets/datastream-overrides.png)
+![웹 SDK 태그 확장 페이지를 사용한 데이터 스트림 구성 재정의를 보여 주는 이미지입니다.](assets/datastream-overrides.png)
 
 ## 고급 설정 구성
 
 사용 **[!UICONTROL 가장자리 기준 경로]** Edge 네트워크와 상호 작용하는 데 사용되는 기본 경로를 변경해야 하는 경우 필드입니다. 이 경우 업데이트가 필요하지 않지만 Beta 또는 알파에 참여하는 경우 Adobe에서 이 필드를 변경하도록 요청할 수 있습니다.
 
-![웹 SDK 태그 확장 페이지의 고급 설정을 보여 주는 이미지입니다.](assets/advanced-settings.png)
+![웹 SDK 태그 확장 페이지를 사용한 고급 설정을 보여 주는 이미지입니다.](assets/advanced-settings.png)

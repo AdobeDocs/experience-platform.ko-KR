@@ -3,16 +3,16 @@ title: Adobe Experience Platform 웹 SDK 확장의 이벤트 유형
 description: Adobe Experience Platform Launch의 Adobe Experience Platform Web SDK 확장에서 제공하는 이벤트 유형을 사용하는 방법에 대해 알아봅니다.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 1%
+source-wordcount: '1006'
+ht-degree: 0%
 
 ---
 
 # 이벤트 유형
 
-이 페이지에서는 Adobe Experience Platform Web SDK 태그 확장에서 제공하는 Adobe Experience Platform 이벤트 유형에 대해 설명합니다. 다음 용도로 사용됩니다. [규칙 작성](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) 와 혼동해서는 안 됩니다. [`eventType` XDM의 필드](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=ko-KR).
+이 페이지에서는 Adobe Experience Platform Web SDK 태그 확장에서 제공하는 Adobe Experience Platform 이벤트 유형에 대해 설명합니다. 다음 용도로 사용됩니다. [규칙 작성](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) 와 혼동해서는 안 됩니다. `eventType` 의 필드 [`xdm` 오브젝트](/help/web-sdk/commands/sendevent/xdm.md).
 
 ## [!UICONTROL 이벤트 전송 완료]
 

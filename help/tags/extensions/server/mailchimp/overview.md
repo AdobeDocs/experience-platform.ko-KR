@@ -7,10 +7,10 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 5%
+source-wordcount: '1267'
+ht-degree: 4%
 
 ---
 
@@ -83,7 +83,7 @@ Mailchimp 플랜과 트랜잭션 이메일, 고객 여정 또는 기타 Mailchim
 
 다음, [데이터 요소 만들기](../../../ui/managing-resources/data-elements.md#create-a-data-element) 사용 [!UICONTROL 코어] 확장 및 a [!UICONTROL 암호] 참조할 데이터 요소 유형 `Mailchimp API Key` 방금 생성한 암호. 입력 `Mailchimp Token` 를 데이터 요소 이름으로 사용하십시오.
 
-###  확장 설치 및 구성
+### 확장 설치 및 구성
 
 동일한 이벤트 전달 속성에서 **[!UICONTROL 확장],** 그러면 **[!UICONTROL 카탈로그]** 을 클릭하여 설치에 사용할 수 있는 확장을 표시합니다. 여기에서 Mailchimp 확장을 검색한 다음 을 선택합니다. **[!UICONTROL 설치]**.
 
@@ -105,7 +105,7 @@ Mailchimp 플랜과 트랜잭션 이메일, 고객 여정 또는 기타 Mailchim
 
 에서 이 확장을 사용할 때 [규칙](../../../ui/managing-resources/rules.md), 확장에서 각 이벤트와 함께 Mailchimp에 보내는 여러 데이터 값이 있습니다. 일반적인 구현의 경우 다음을 구성할 수 있습니다 [Adobe Experience Platform 웹 SDK 확장](../../client/web-sdk/overview.md) 해당 데이터를 (으)로 보내기 [!DNL Platform Edge Network] 이벤트 전달 속성에서 확장에서 사용하는 경우.
 
-이 확장에 필요한 데이터는 Web SDK에서 XDM 데이터 또는 XDM이 아닌 데이터로 보낼 수 있습니다. 자세한 내용은 설명서 를 참조하십시오. [xdm 데이터 보내기](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
+이 확장에 필요한 데이터는 다음 중 하나를 사용하여 Web SDK에서 XDM 데이터로 보낼 수 있습니다. [`xdm`](/help/web-sdk/commands/sendevent/xdm.md) 개체) 또는 비 XDM 데이터(사용: [`data`](/help/web-sdk/commands/sendevent/data.md) 개체)를 참조하십시오.
 
 예를 들어 고객이 사이트에서 이벤트를 구매하거나 등록하는 경우 이 확장 기능을 사용하여 Mailchimp를 통해 확인 이메일을 보낼 수 있습니다. Web SDK에서 Edge Network로 필수 정보를 전송하면 확장 프로그램에서 Mailchimp를 사용하여 이메일을 트리거합니다.
 
