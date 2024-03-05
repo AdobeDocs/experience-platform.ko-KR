@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
 workflow-type: tm+mt
-source-wordcount: '3562'
+source-wordcount: '3629'
 ht-degree: 6%
 
 ---
@@ -282,6 +282,8 @@ ht-degree: 6%
 평가 방법을 선택할 수도 있습니다. 사용하려는 평가 방법을 알고 있는 경우 드롭다운 목록을 사용하여 원하는 평가 방법을 선택할 수 있습니다. 이 세그먼트 정의가 적합한 평가 유형을 알려면 찾아보기 아이콘을 선택할 수 있습니다 ![돋보기가 있는 폴더 아이콘](../images/ui/segment-builder/segment-evaluation-select-icon.png) 사용 가능한 세그먼트 정의 평가 방법 목록을 봅니다.
 
 다음 [!UICONTROL 평가 방법 적격성] 팝오버가 표시됩니다. 이 팝오버에는 사용 가능한 평가 방법인 일괄 처리, 스트리밍 및 에지가 표시됩니다. 팝오버는 적격 및 부적격 평가 방법을 보여 줍니다. 세그먼트 정의에 사용한 매개 변수에 따라 특정 평가 방법에 적합하지 않을 수 있습니다. 각 평가 방법에 대한 요구 사항에 대한 자세한 내용은 다음을 참조하십시오. [스트리밍 세분화](./streaming-segmentation.md#query-types) 또는 [가장자리 세분화](./edge-segmentation.md#query-types) 개요.
+
+세그먼트 정의를 작성한 후 세그먼트 정의의 평가 방법을 변경할 수도 있습니다. 평가 방법을 에지 또는 스트리밍에서 배치로 변경하면 **아님** 에지 또는 스트리밍으로 다시 변경할 수 있습니다. 평가 방법이 변경되면 **전용** 선택하면 적용됩니다. **[!UICONTROL 저장]** 팝오버에서. 대화 상자를 취소하면 **유지** 원래 평가 방법입니다.
 
 ![평가 방법 적격성 팝업이 나타납니다. 세그먼트 정의에 적합한 평가 방법과 부적합한 방법이 표시됩니다.](../images/ui/segment-builder/select-evaluation-method.png)
 
