@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 데이터 사용 레이블 용어집
 description: 이 문서에서는 현재 Adobe Experience Platform에서 지원하는 모든 데이터 사용 레이블에 대해 간략하게 설명합니다.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c55ad6c592be95b01cf7fe0b39635b478bc98be6
+source-git-commit: 6f3f08203242843ce703de5e4546a537dff82270
 workflow-type: tm+mt
-source-wordcount: '2250'
-ht-degree: 3%
+source-wordcount: '2254'
+ht-degree: 1%
 
 ---
 
