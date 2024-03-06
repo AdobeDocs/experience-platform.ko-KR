@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1021'
 ht-degree: 10%
 
 ---
@@ -92,7 +92,8 @@ ht-degree: 10%
       - [Snowflake 스트리밍 커넥터](connectors/databases/snowflake-streaming.md)
       - [Snowflake 커넥터](connectors/databases/snowflake.md)
       - [Teradata 밴티지 커넥터](connectors/databases/teradata-vantage.md)
-   - 데이터 파트너 {#data-partner}
+   - 데이터 및 ID 파트너 {#data-partner}
+      - [Acxiom 전망 데이터 가져오기](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
    - 전자 상거래 {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
@@ -101,6 +102,7 @@ ht-degree: 10%
    - 로컬 시스템 {#local-system}
       - [로컬 파일 업로드 커넥터](connectors/local-system/local-file-upload.md)
    - 마케팅 자동화 {#marketing-automation}
+      - [브레이즈 커류스](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [HubSpot 커넥터](connectors/marketing-automation/hubspot.md)
@@ -295,7 +297,7 @@ ht-degree: 10%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata 밴티지](tutorials/ui/create/databases/teradata-vantage.md)
-      - 데이터 파트너 {#data-partner}
+      - 데이터 및 ID 파트너 {#data-partner}
          - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
          - [Acxiom 전망 데이터 가져오기](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - 전자 상거래 {#ecommerce}
@@ -305,7 +307,7 @@ ht-degree: 10%
       - 로컬 시스템 {#local-system}
          - [로컬 파일 업로드](tutorials/ui/create/local-system/local-file-upload.md)
       - 마케팅 자동화 {#marketing-automation}
-         - [브레이즈](tutorials/ui/create/marketing-automation/braze.md)
+         - [브레이즈 커류스](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)

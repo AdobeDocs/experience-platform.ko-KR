@@ -3,18 +3,18 @@ title: UI에서 브레이즈 데이터에 대한 데이터 흐름 만들기
 description: Adobe Experience Platform UI를 사용하여 Braze 계정의 데이터 흐름을 만드는 방법을 알아봅니다.
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
-source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
+source-git-commit: bfcea2a30a0ecadcafaddf7660eef90952dcade6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '689'
 ht-degree: 1%
 
 ---
 
-# 만들기 [!DNL Braze] UI의 소스 연결
+# 만들기 [!DNL Braze Currents] UI의 소스 연결
 
 >[!NOTE]
 >
->다음 [!DNL Braze] 소스는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
+>다음 [!DNL Braze Currents] 소스는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
 [!DNL Braze] 는 실시간으로 소비자와 브랜드 간의 고객 중심 상호 작용을 강화합니다. [!DNL Braze Currents] 는 Braze 플랫폼의 참여 이벤트에 대한 실시간 데이터 스트림으로, 에서 가장 강력하면서도 세부적인 내보내기입니다. [!DNL Braze] 플랫폼.
 
@@ -44,7 +44,7 @@ ht-degree: 1%
 
 Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 탐색에서 [!UICONTROL 소스] 작업 영역. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-아래 *마케팅 자동화* 범주, 선택 **[!UICONTROL 브레이즈]**&#x200B;을 선택한 다음 을 선택합니다 **[!UICONTROL 데이터 추가]**.
+아래 *마케팅 자동화* 범주, 선택 **[!UICONTROL 브레이즈 커류스]**&#x200B;을 선택한 다음 을 선택합니다 **[!UICONTROL 데이터 추가]**.
 
 ![브레이즈 전류 소스가 선택된 Experience Platform UI의 소스 카탈로그.](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -67,16 +67,16 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 �
 
 ### 필요한 자격 증명 수집
 
-연결이 생성되면 다음 자격 증명 값을 수집해야 합니다. 그런 다음 동기화 대시보드에서 입력하여 데이터를으로 전송합니다 [!DNL Platform]. 자세한 내용은 [!DNL Braze] [Current로 이동하는 방법 안내](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+연결이 생성되면 다음 자격 증명 값을 수집해야 합니다. 그러면 동기화 대시보드에서 제공하여 데이터를 Experience Platform으로 전송합니다. 자세한 내용은 [!DNL Braze] [Current로 이동하는 방법 안내](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | 필드 | 설명 |
-| ---------- | ----------- |
-| `Client ID` | 와 연결된 클라이언트 ID [!DNL Platform] 소스. |
-| `Client Secret` | 와(과) 연결된 클라이언트 암호 [!DNL Platform] 소스. |
-| `Tenant ID` | 와 연결된 테넌트 ID [!DNL Platform] 소스. |
-| `Sandbox Name` | 와 연계된 샌드박스 [!DNL Platform] 소스. |
-| `Dataflow ID` | 와 연결된 데이터 흐름 ID [!DNL Platform] 소스. |
-| `Streaming Endpoint` | 와 연결된 스트리밍 엔드포인트 [!DNL Platform] 소스. 브레이즈는 이 문자열을 일괄 처리 스트리밍 끝점으로 자동 변환합니다. |
+| --- | --- |
+| 클라이언트 ID | Experience Platform 소스와 연결된 클라이언트 ID. |
+| 클라이언트 암호 | Experience Platform 소스와 연결된 클라이언트 암호입니다. |
+| 임차인 ID | Experience Platform 소스와 연결된 테넌트 ID입니다. |
+| 샌드박스 이름 | Experience Platform 소스와 연결된 샌드박스 입니다. |
+| 데이터 흐름 ID | Experience Platform 소스와 연결된 데이터 흐름 ID. |
+| 스트리밍 엔드포인트 | Experience Platform 소스와 연결된 스트리밍 엔드포인트. **참고**: [!DNL Braze] 는 이 항목을 일괄 처리 스트리밍 끝점으로 자동 변환합니다. |
 
 ### 구성 [!DNL Braze Currents] 데이터를 데이터 소스로 스트리밍하려면
 
