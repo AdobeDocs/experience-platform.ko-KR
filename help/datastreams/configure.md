@@ -2,10 +2,10 @@
 title: 데이터스트림 만들기 및 구성
 description: 클라이언트측 Web SDK 통합 기능을 다른 Adobe 제품 및 서드파티 대상과 연결하는 방법에 대해 알아봅니다.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e82da728c86225ccb089ca5a2506d7c24f18b8f8
 workflow-type: tm+mt
-source-wordcount: '2700'
-ht-degree: 55%
+source-wordcount: '2737'
+ht-degree: 54%
 
 ---
 
@@ -101,7 +101,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 | [!UICONTROL 서드파티 ID 동기화 컨테이너 ID] | 서드파티 ID 동기화에 사용할 컨테이너의 숫자 ID. |
 | [!UICONTROL 컨테이너 ID 재정의] | 이 섹션에서는 기본 ID를 재정의하는 데 사용할 수 있는 추가 타사 ID 동기화 컨테이너 ID를 정의할 수 있습니다. |
 | [!UICONTROL 유형에 액세스] | Edge Network가 데이터스트림에 대해 허용하는 인증 유형을 정의합니다. <ul><li>**[!UICONTROL 혼합 인증]**: 이 옵션을 선택하는 경우 Edge Network는 인증된 요청과 인증되지 않은 요청을 모두 허용합니다. Web SDK 또는 [Mobile SDK](https://developer.adobe.com/client-sdks/home/)를 사용하려는 경우 [Server API](../server-api/overview.md)와 함께 이 옵션을 선택합니다. </li><li>**[!UICONTROL 인증된 요청만]**: 이 옵션을 선택하는 경우 Edge Network는 인증된 요청만 허용합니다. Server API만 사용하고 인증되지 않은 요청이 Edge Network에서 처리되지 않도록 하려면 이 옵션을 선택합니다.</li></ul> |
-| [!UICONTROL Media Analytics] | Experience Platform SDK 또는 Media Edge API를 통해 Edge Network 통합을 위한 스트리밍 추적 데이터를 처리할 수 있습니다. 에서 Media Analytics에 대해 알아봅니다. [설명서](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html). |
+| [!UICONTROL Media Analytics] | Experience Platform SDK 또는 Media Edge API를 통해 Edge Network 통합을 위한 스트리밍 추적 데이터를 처리할 수 있습니다. 에서 Media Analytics에 대해 알아봅니다. [설명서](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=ko-KR). |
 
 여기에서 Experience Platform에 대한 데이터스트림을 구성하는 경우 [데이터 수집을 위한 데이터 준비](./data-prep.md)에 대한 튜토리얼을 참조하여 이 안내서로 돌아가기 전에 데이터를 Platform 이벤트 스키마에 매핑합니다. 그렇지 않은 경우 **[!UICONTROL 저장]**&#x200B;을 선택하고 다음 섹션으로 계속 진행합니다.
 
@@ -142,6 +142,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 | 설정 | 설명 |
 | --- | --- |
 | [!UICONTROL 보고서 세트 ID] | **(필수)** 데이터를 전송하려는 Analytics 보고서 세트 ID. 이 ID는 [!UICONTROL 관리] > [!UICONTROL 보고서 세트] 아래의 Adobe Analytics UI에서 찾을 수 있습니다. 여러 보고서 세트가 지정된 경우 데이터는 각 보고서 세트에 복사됩니다. |
+| [!UICONTROL 방문자 ID 네임스페이스] | (선택 사항) Adobe Analytics에 사용할 네임스페이스입니다 [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=ko-KR). 이 네임스페이스에 대해 지정된 값이 있는 이벤트를 보내면 자동으로 `visitorID` Analytics에서. |
 | [!UICONTROL 보고서 세트 재정의] | 이 섹션에서는 기본 ID 재정의에 사용할 수 있는 추가 보고서 세트 ID를 추가할 수 있습니다. |
 
 ### Adobe Audience Manager 설정 {#audience-manager}
@@ -173,7 +174,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 |---| --- |
 | [!UICONTROL 이벤트 데이터 세트] | **(필수)** 고객 이벤트 데이터가 스트리밍되는 Platform 데이터 세트를 선택합니다. 이 스키마는 [XDM ExperienceEvent 클래스](../xdm/classes/experienceevent.md)를 사용해야 합니다. 추가 데이터 세트를 추가하려면 **[!UICONTROL 이벤트 데이터 세트 추가]**&#x200B;를 선택합니다. |
 | [!UICONTROL 프로필 데이터 세트] | 고객 속성 데이터를 전송할 Platform 데이터 세트를 선택합니다. 이 스키마는 [XDM 개별 프로필 클래스](../xdm/classes/individual-profile.md)를 사용해야 합니다. |
-| [!UICONTROL Offer Decisioning] | 웹 SDK 구현에 대한 Offer decisioning을 활성화합니다. 다음 안내서를 참조하십시오 [Web SDK에서 Offer decisioning 사용](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md) 구현 세부 사항.<br><br>Offer Decisioning 기능에 대한 자세한 내용은 [Adobe Journey Optimizer 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html)를 참조하십시오. |
+| [!UICONTROL Offer Decisioning] | 웹 SDK 구현에 대한 Offer decisioning을 활성화합니다. 다음 안내서를 참조하십시오 [Web SDK에서 Offer decisioning 사용](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md) 구현 세부 사항.<br><br>Offer Decisioning 기능에 대한 자세한 내용은 [Adobe Journey Optimizer 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=ko-KR)를 참조하십시오. |
 | [!UICONTROL 에지 세분화] | 사용 [가장자리 세분화](../segmentation/ui/edge-segmentation.md) 이 데이터스트림에 사용됩니다. SDK가 에지 세분화 지원 데이터스트림을 통해 데이터를 전송하는 경우 문제가 있는 해당 프로필의 업데이트된 세그먼트 멤버십이 응답으로 다시 전송됩니다.<br><br>이 옵션은 [다음 페이지 개인화 사용 사례](../destinations/ui/activate-edge-personalization-destinations.md)에 대한 [!UICONTROL 개인화 대상]과 함께 사용될 수 있습니다. |
 | [!UICONTROL 개인화 대상] | [!UICONTROL 에지 세분화] 확인란을 활성화하고 이 옵션을 활성화하는 경우 데이터스트림을 [사용자 정의 개인화](../destinations/catalog/personalization/custom-personalization.md)와 같은 개인화 대상에 연결할 수 있습니다.<br><br>[개인화 대상 구성](../destinations/ui/activate-edge-personalization-destinations.md)에 대한 구체적인 단계는 대상 설명서를 참조하십시오. |
 | [!UICONTROL Adobe Journey Optimizer] | 사용 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) 이 데이터스트림에 사용됩니다. <br><br> 이 옵션을 활성화하면 데이터스트림은 [!DNL Adobe Journey Optimizer]의 웹 및 앱 기반 인바운드 캠페인에서 개인화된 콘텐츠를 반환할 수 있습니다. 이 옵션을 사용하려면 [!UICONTROL 에지 세분화]를 활성화해야 합니다. If [!UICONTROL Edge 세그멘테이션] 이 선택되지 않으면 이 옵션이 회색으로 표시됩니다. |
