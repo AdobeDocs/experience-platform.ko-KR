@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 준비 매핑 기능
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 51a4c8e0c667e8f9319e61476a6b709324101dad
+source-git-commit: c7d6ef441f97cbc318bb2dd5c2f1daa08a6db197
 workflow-type: tm+mt
-source-wordcount: '5459'
+source-wordcount: '5794'
 ht-degree: 2%
 
 ---
@@ -285,24 +285,24 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 {style="table-layout:auto"}
 
-<!-- ### Analytics functions {#analytics}
+### Analytics 함수 {#analytics}
 
 >[!NOTE]
 >
->Please scroll left/right to view the full contents of the table.
+>스트리밍 수집에는 다음 분석 함수만 사용할 수 있습니다.
 
-| Function | Description | Parameters | Syntax | Expression | Sample output |
+| 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| aa_get_event_id | Extracts the event ID from an Analytics event string. | <ul><li>EVENT_STRING: **Required** The comma-separated Analytics event string.</li><li>EVENT_NAME: **Required** The event name to extract and ID from.</li></ul> | aa_get_event_id(EVENT_STRING, EVENT_NAME) | aa_get_event_id("event101=5:123456,scOpen", "event101") | 123456 |
-| aa_get_event_value | Extracts the event value from an Analytics event string. If the event value is not specified 1 is returned. | <ul><li>EVENT_STRING: **Required** The comma-separated Analytics event string.</li><li>EVENT_NAME: **Required** The event name to extract a value from.</li></ul> | aa_get_event_value(EVENT_STRING, EVENT_NAME) | aa_get_event_value("event101=5:123456,scOpen", "event101") | 5 |
-| aa_get_product_categories | Extracts the product category from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_categories(PRODUCTS_STRING) | aa_get_product_categories(";Example product 1;1;3.50,Example category 2;Example product 2;1;5.99") | [null,"Example category 2"] |
-| aa_get_product_names | Extracts the product name from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_names(PRODUCTS_STRING) | aa_get_product_names(";Example product 1;1;3.50,Example category 2;Example product 2;1;5.99") | ["Example product 1","Example product 2"] |
-| aa_get_product_quantities | Extracts the quantities from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_quantities(PRODUCTS_STRING) | aa_get_product_quantities(";Example product 1;1;3.50,Example category 2;Example product 2") | ["1", null] |
-| aa_get_product_prices | Extracts the price from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_prices(PRODUCTS_STRING) | aa_get_product_prices(";Example product 1;1;3.50,Example category 2;Example product 2") | ["3.50", null] |
-| aa_get_product_event_values | Extracts values for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_values(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_values(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event1") | ["2.3", "3"] |
-| aa_get_product_evars | Extracts the evar values for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVAR_NAME: **Required** The eVar name to extract.</li></ul> | aa_get_product_evars(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_evars(";Example product;1;6.69;;eVar1=Merchandising value", "eVar1") | ["Merchandising value"] |
+| aa_get_event_id | Analytics 이벤트 문자열에서 이벤트 ID를 추출합니다. | <ul><li>이벤트 문자열: **필수** 쉼표로 구분된 Analytics 이벤트 문자열.</li><li>이벤트 이름: **필수** 추출할 이벤트 이름 및 ID입니다.</li></ul> | aa_get_event_id(EVENT_STRING, EVENT_NAME) | aa_get_event_id(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 123456 |
+| aa_get_event_value | Analytics 이벤트 문자열에서 이벤트 값을 추출합니다. 이벤트 값을 지정하지 않으면 1이 반환됩니다. | <ul><li>이벤트 문자열: **필수** 쉼표로 구분된 Analytics 이벤트 문자열.</li><li>이벤트 이름: **필수** 값을 추출할 이벤트 이름.</li></ul> | aa_get_event_value(EVENT_STRING, EVENT_NAME) | aa_get_event_value(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 5 |
+| aa_get_product_categories | Analytics 제품 문자열에서 제품 카테고리를 추출합니다. | <ul><li>PRODUCTS_문자열: **필수** Analytics 제품 문자열입니다.</li></ul> | aa_get_product_categories(PRODUCTS_STRING) | aa_get_product_categories(&quot;;예제 제품 1;1;3.50,예제 범주 2;예제 제품 2;1;5.99&quot;) | [null,&quot;예 범주 2&quot;] |
+| aa_get_product_names | Analytics 제품 문자열에서 제품 이름을 추출합니다. | <ul><li>PRODUCTS_문자열: **필수** Analytics 제품 문자열입니다.</li></ul> | aa_get_product_names(PRODUCTS_STRING) | aa_get_product_names(&quot;;예제 제품 1;1;3.50,예제 범주 2;예제 제품 2;1;5.99&quot;) | [&quot;Example product 1&quot;,&quot;Example product 2&quot;] |
+| aa_get_product_quantities | Analytics 제품 문자열에서 수량을 추출합니다. | <ul><li>PRODUCTS_문자열: **필수** Analytics 제품 문자열입니다.</li></ul> | aa_get_product_quantities(PRODUCTS_STRING) | aa_get_product_quantities(&quot;;예제 제품 1;1;3.50,예제 범주 2;예제 제품 2&quot;) | [&quot;1&quot;, null] |
+| aa_get_product_prices | Analytics 제품 문자열에서 가격을 추출합니다. | <ul><li>PRODUCTS_문자열: **필수** Analytics 제품 문자열입니다.</li></ul> | aa_get_product_prices(PRODUCTS_STRING) | aa_get_product_prices(&quot;;예제 제품 1;1;3.50,예제 범주 2;예제 제품 2&quot;) | [&quot;3.50&quot;, null] |
+| aa_get_product_event_values | 제품 문자열에서 명명된 이벤트의 값을 문자열 배열로 추출합니다. | <ul><li>PRODUCTS_문자열: **필수** Analytics 제품 문자열입니다.</li><li>이벤트 이름: **필수** 값을 추출할 이벤트 이름.</li></ul> | aa_get_product_event_values(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_values(&quot;;예제 제품 1;1;4.20;event1=2.3\|event2=5:1,;예제 제품 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event1&quot;) | [&quot;2.3&quot;, &quot;3&quot;] |
+| aa_get_product_evars | 제품 문자열에서 명명된 이벤트에 대한 evar 값을 문자열 배열로 추출합니다. | <ul><li>PRODUCTS_문자열: **필수** Analytics 제품 문자열입니다.</li><li>EVAR 이름: **필수** 추출할 eVar 이름입니다.</li></ul> | aa_get_product_evars(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_evars(&quot;;예제 product;1;6.69;;eVar1=Merchandising value&quot;, &quot;eVar1&quot;) | [&quot;머천다이징 값&quot;] |
 
-{style="table-layout:auto"} -->
+{style="table-layout:auto"}
 
 <!-- | aa_get_product_events | Extracts a named event from the products string as an array of objects. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_events(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_events(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
 | aa_get_product_event_ids | Extracts the IDs for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_ids(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_ids(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | ["1", "2"] | -->
