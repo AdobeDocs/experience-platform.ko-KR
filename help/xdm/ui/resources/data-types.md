@@ -5,7 +5,7 @@ title: UI를 사용하여 데이터 유형 만들기 및 편집
 type: Tutorial
 description: Experience Platform 사용자 인터페이스에서 데이터 유형을 만들고 편집하는 방법을 알아봅니다.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1384'
 ht-degree: 6%
@@ -29,7 +29,7 @@ Adobe Experience Platform은 광범위한 일반적인 경험 관리 사용 사�
 
 이 자습서에서는 Platform 사용자 인터페이스에서 사용자 지정 데이터 유형을 만들고 편집하는 단계를 다룹니다.
 
-## 전제 조건
+## 전제 조건 {#prerequisites}
 
 이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. 다음을 참조하십시오. [XDM 개요](../../home.md) Experience Platform 에코시스템 내에서 XDM의 역할 소개 및 [스키마 컴포지션 기본 사항](../../schema/composition.md) 데이터 유형이 XDM 스키마에 기여하는 방식에 대한 설명.
 
@@ -105,7 +105,7 @@ Restaurant 데이터 형식에는 레스토랑 이름을 나타내는 문자열 
 
 데이터 유형에 필드 추가를 완료했으면 을 선택합니다. **[!UICONTROL 저장]** 변경 사항을 저장하고 데이터 형식을 [!DNL Schema Library].
 
-## 스키마에 데이터 유형 추가
+## 스키마에 데이터 유형 추가 {#add-data-type}
 
 데이터 유형을 만든 후에는 스키마에서 사용을 시작할 수 있습니다. XDM 스키마는 클래스와 0개 이상의 필드 그룹으로 구성되므로 데이터 유형에서 제공하는 필드를 스키마에 직접 추가할 수 없습니다. 대신 클래스 또는 필드 그룹에 포함되어야 합니다.
 
@@ -123,7 +123,7 @@ Restaurant 데이터 형식에는 레스토랑 이름을 나타내는 문자열 
 
 ![](../../images/ui/resources/data-types/converted.png)
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 이 안내서에서는 Platform UI를 사용하여 데이터 유형을 만들고 편집하는 방법을 다룹니다. 의 기능에 대한 자세한 내용 [!UICONTROL 스키마] 작업 영역에서 다음을 참조하십시오 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md).
 

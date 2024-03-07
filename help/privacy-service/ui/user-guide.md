@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service UI의 개인 정보 작업 관리
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 요청을 조정하고 모니터링하는 방법에 대해 알아봅니다.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: 93d9e5965e0f5556ff2b584c8b66bd7a7be15d23
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 14%
+source-wordcount: '1511'
+ht-degree: 13%
 
 ---
 
@@ -143,6 +143,8 @@ Job 요청 제목 아래의 검색 막대에 키워드를 입력하여 목록을
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
 다음 항목 선택 **[!UICONTROL 작업 유형]** 목록에서 사용 가능한 하나 이상의 제품 및 요청(&quot;삭제&quot; 또는 &quot;액세스&quot;)의
+
+Privacy Service은 개인 데이터에 대한 두 가지 종류의 작업 요청을 지원합니다. [!UICONTROL 액세스] (읽기) 및/또는 [!UICONTROL 삭제]. 조회 대상과 관련된 상품에 있는 모든 정보를 제공받도록 요청하거나 조회 대상과 관련된 모든 정보를 삭제하도록 요청할 수 있습니다.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 

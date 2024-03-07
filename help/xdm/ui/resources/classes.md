@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 클래스 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 클래스를 만들고 편집하는 방법을 알아봅니다.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 640d3ca0d3c227306436f2e653ef66fdc8ebd31c
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 5%
@@ -24,13 +24,13 @@ Adobe은 XDM 개인 프로필 및 XDM ExperienceEvent를 비롯한 여러 표준
 
 이 문서에서는 Experience Platform UI에서 사용자 정의 클래스를 만들고, 편집하고, 관리하는 방법에 대한 개요를 제공합니다.
 
-## 전제 조건
+## 전제 조건 {#prerequisites}
 
 이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. 다음을 참조하십시오. [XDM 개요](../../home.md) Experience Platform 에코시스템 내에서 XDM의 역할 소개 및 [스키마 컴포지션 기본 사항](../../schema/composition.md) 클래스가 XDM 스키마에 기여하는 방법을 알아봅니다.
 
 이 안내서에서는 필요하지 않지만, [UI에서 스키마 작성](../../tutorials/create-schema-ui.md) 스키마 편집기의 다양한 기능에 익숙해질 수 있습니다.
 
-## 시작하기
+## 시작하기 {#getting-started}
 
 Platform UI에서 를 선택합니다. **[!UICONTROL 스키마]** 을(를) 왼쪽 탐색에서 [!UICONTROL 스키마] 작업 영역을 선택한 다음 **[!UICONTROL 클래스]** 탭. 사용 가능한 클래스 목록이 표시됩니다.
 
@@ -121,7 +121,7 @@ An **[!UICONTROL 제목 없는 필드]** 자리 표시자가 캔버스에 나타
 저장하기 전에 초기 생성 프로세스 중에 언제든지 스키마 클래스를 변경할 수 있습니다. 그러나 필드 그룹은 특정 클래스와만 호환되므로 이 작업은 주의하여 수행해야 합니다. 클래스를 변경하면 캔버스와 추가한 모든 필드가 재설정됩니다.
 다음 안내서를 참조하십시오 [스키마 생성 및 편집](./schemas.md#change-class) 추가 정보.
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 이 문서에서는 Platform UI를 사용하여 클래스를 만들고 편집하는 방법에 대해 다룹니다. 의 기능에 대한 자세한 내용 [!UICONTROL 스키마] 작업 영역에서 다음을 참조하십시오 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md).
 

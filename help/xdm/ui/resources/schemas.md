@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법의 기본 사항에 대해 알아봅니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
+source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
 workflow-type: tm+mt
 source-wordcount: '3671'
 ht-degree: 2%
@@ -21,7 +21,7 @@ ht-degree: 2%
 >
 >스키마 생성 프로세스를 자세히 살펴보려면 [스키마 만들기 튜토리얼](../../tutorials/create-schema-ui.md) 전체 예제 스키마를 만들고 의 다양한 기능을 숙지하려면 [!DNL Schema Editor].
 
-## 전제 조건
+## 전제 조건 {#prerequisites}
 
 이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. 다음을 참조하십시오. [XDM 개요](../../home.md) Experience Platform 에코시스템 내에서 XDM의 역할 소개 및 [스키마 컴포지션 기본 사항](../../schema/composition.md) 스키마 생성 방법에 대한 개요입니다.
 
@@ -227,7 +227,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 새 필드가 캔버스에 추가되고 아래에 이름 간격이 지정됩니다. [임차인 ID](../../api/getting-started.md#know-your-tenant_id) 표준 XDM 필드와의 충돌을 방지합니다. 새 필드를 연결한 필드 그룹도 아래에 나타납니다. **[!UICONTROL 필드 그룹]** 왼쪽 레일에서.
 
-![임차인 ID](../../images/ui/resources/schemas/tenantId.png)
+![테넌트 ID](../../images/ui/resources/schemas/tenantId.png)
 
 >[!NOTE]
 >
@@ -350,7 +350,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 수업 변경을 확인한 후 캔버스가 재설정되고 모든 작곡 진행이 손실됩니다.
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 이 문서에서는 Platform UI에서 스키마를 만들고 편집하는 기본 사항에 대해 설명합니다. 다음을 검토하는 것이 좋습니다. [스키마 만들기 튜토리얼](../../tutorials/create-schema-ui.md) 고유한 사용 사례에 대한 사용자 지정 필드 그룹 및 데이터 유형 만들기를 포함하여 UI에서 전체 스키마를 구축하기 위한 포괄적인 워크플로를 제공합니다.
 

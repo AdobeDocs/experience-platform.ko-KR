@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 스키마 필드 그룹 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마 필드 그룹을 만들고 편집하는 방법을 알아봅니다.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 0375ddcb7d06208199bf1172b157aa6eb28811f6
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '985'
 ht-degree: 8%
@@ -24,7 +24,7 @@ XDM(Experience Data Model)에서 스키마 필드 그룹은 개인 세부 정보
 
 Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 많은 표준 필드 그룹을 제공합니다. 그러나 사용자 정의 필드 그룹을 만들고 편집하여 XDM 스키마 내에서 비즈니스와 관련된 추가 개념을 정의할 수도 있습니다. 이 안내서에서는 Platform UI에서 조직의 사용자 정의 필드 그룹을 생성, 편집 및 관리하는 방법에 대한 개요를 제공합니다.
 
-## 전제 조건
+## 전제 조건 {#prerequisites}
 
 이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. 다음을 참조하십시오. [XDM 개요](../../home.md) Experience Platform 에코시스템 내에서 XDM의 역할 소개 및 [스키마 컴포지션 기본 사항](../../schema/composition.md) 필드 그룹이 XDM 스키마에 기여하는 방식.
 
@@ -90,7 +90,7 @@ An **[!UICONTROL 제목 없는 필드]** 자리 표시자가 캔버스에 나타
 
 동일한 필드 그룹이 다른 스키마에서 이미 사용 중인 경우 새로 추가된 필드가 해당 스키마에 자동으로 표시됩니다.
 
-## 다음 단계
+## 다음 단계 {#next-steps}
 
 이 안내서에서는 Platform UI를 사용하여 필드 그룹을 만들고 편집하는 방법에 대해 다룹니다. 의 기능에 대한 자세한 내용 [!UICONTROL 스키마] 작업 영역에서 다음을 참조하십시오 [[!UICONTROL 스키마] 작업 영역 개요](../overview.md).
 

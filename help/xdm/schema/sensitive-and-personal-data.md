@@ -2,9 +2,9 @@
 title: XDM의 중요 및 개인 정보
 description: XDM(경험 데이터 모델)의 중요 SPI(개인 정보) 및 PII(개인 식별 정보)와 관련된 주요 고려 사항에 대해 알아봅니다.
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: 9785b252b7c9cb3513858476753b6b4f71277ed7
+source-git-commit: 302dca9a9f834dba1fd3fdac15284ea4e2fba282
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,10 @@ Platform을 사용하면 사용자 정의 필드 그룹 및 데이터 유형을 
 * Remove fields from standard field groups pre-ingestion
 * Deprecate fields post-ingestion
 -->
+
+>[!IMPORTANT]
+>
+>SPI 및 PII는 [XDM 개별 프로필](../classes/individual-profile.md) 및 [XDM ExperienceEvent](../classes/experienceevent.md) 클래스입니다. 데이터 삭제, 개인정보 보호 및 거버넌스 목적을 위한 우수 사례로서, 다른 사용자 지정 또는 표준 XDM 클래스에서 SPI 및 PII를 저장하지 마십시오.
 
 ## 다음 단계
 
