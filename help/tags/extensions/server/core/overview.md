@@ -3,9 +3,9 @@ title: 코어 이벤트 전달 확장 개요
 description: Adobe Experience Platform의 핵심 이벤트 전달 확장에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1715'
 ht-degree: 91%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 91%
 
 ### 사용자 지정 코드
 
-이벤트의 조건으로 존재해야 하는 사용자 지정 코드를 지정합니다. 내장된 코드 편집기를 사용하여 사용자 지정 코드를 입력합니다. Adobe Experience Platform의 이벤트 전달은 ES6을 지원합니다.
+이벤트의 조건으로 존재해야 하는 사용자 지정 코드를 지정합니다. 내장된 코드 편집기를 사용하여 사용자 지정 코드를 입력합니다. Adobe Experience Platform의 이벤트 전달은 ES13을 지원합니다.
 
 1. 선택 **[!UICONTROL 편집기 열기]**.
 1. 사용자 지정 코드를 입력합니다.
@@ -155,7 +155,7 @@ module.exports = (context) => {
 
 ### 사용자 지정 코드
 
-이벤트가 트리거되고 조건이 평가된 후 실행되는 코드를 제공합니다. Adobe Experience Platform의 이벤트 전달은 ES6을 지원합니다.
+이벤트가 트리거되고 조건이 평가된 후 실행되는 코드를 제공합니다. Adobe Experience Platform의 이벤트 전달은 ES13을 지원합니다.
 
 1. 작업 코드에 이름을 지정합니다.
 1. 선택 **[!UICONTROL 편집기 열기]**.
