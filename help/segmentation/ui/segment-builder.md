@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
+source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
 workflow-type: tm+mt
-source-wordcount: '3629'
+source-wordcount: '3633'
 ht-degree: 6%
 
 ---
@@ -103,7 +103,7 @@ ht-degree: 6%
 >
 >Platform 내에서 생성된 대상의 경우 이 포함된 대상만 **동일** 병합 정책이 표시됩니다.
 
-다음 **[!UICONTROL 대상]** 탭에는 Adobe Audience Manager과 같은 외부 소스에서 가져온 모든 대상과 내에서 만든 대상이 나열됩니다. [!DNL Experience Platform].
+다음 **[!UICONTROL 대상]** 탭에는 Adobe Audience Manager 또는 Customer Journey Analytics과 같은 외부 소스에서 가져온 모든 대상과 내에서 만든 대상이 나열됩니다. [!DNL Experience Platform].
 
 다음에서 **[!UICONTROL 대상]** 탭에서는 사용 가능한 모든 소스를 폴더 그룹으로 볼 수 있습니다. 폴더를 선택하면 사용 가능한 하위 폴더와 대상이 표시됩니다. 또한 폴더 구조(현재 있는 폴더를 확인 표시)를 보고 트리에서 폴더 이름을 선택하여 폴더를 쉽게 탐색할 수 있도록 폴더 아이콘(맨 오른쪽 그림에 표시됨)을 선택할 수 있습니다.
 

@@ -2,9 +2,9 @@
 title: Edge 프로필
 description: 에지 프로필과 관련 용어, 에지 프로필에 사용할 수 있는 영역 및 에지 프로필에 사용할 수 있는 서비스에 대해 알아봅니다.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ XPS(Express Profile Service)가 다른 모서리에 있는 프로필을 검색�
 
 ## 다음 단계
 
-이 안내서를 읽은 후에는 Edge 프로필에 대해 사용 가능한 영역 및 서비스에 대한 정보를 포함하여 Edge 프로필에 대한 기본적인 이해를 해야 합니다. Experience Edge Adobe에 대한 자세한 내용은 [Edge 네트워크 개요](../web-sdk/home.md).
+이 안내서를 읽은 후에는 Edge 프로필에 대해 사용 가능한 영역 및 서비스에 대한 정보를 포함하여 Edge 프로필에 대한 기본적인 이해를 해야 합니다. Experience Edge Adobe에 대한 자세한 내용은 [Edge 네트워크 개요](../web-sdk/home.md#edge-network).
 
 ## 부록
 
@@ -78,3 +78,7 @@ XPS(Express Profile Service)가 다른 모서리에 있는 프로필을 검색�
 ### 데이터 만료는 에지 프로필에서 어떻게 작동합니까?
 
 Edge 프로필의 경우 데이터 만료는 제거하기 전에 프로필이 Edge에 유지되는 기간을 결정합니다. 데이터 만료 **rolling**&#x200B;즉, edge에서 프로필에 액세스할 때마다 데이터 만료 시간이 재설정됩니다. 기본적으로 데이터 만료는 14일 동안 지속됩니다.
+
+### 에지 프로필에 저장되는 데이터는 무엇입니까?
+
+Edge 프로필은 프로필 속성, 프로필 ID와 적격 대상 ID를 저장합니다. 기본적으로 데이터 만료는 14일 동안 지속됩니다.
