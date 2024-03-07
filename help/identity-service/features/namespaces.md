@@ -2,9 +2,9 @@
 title: ID 네임스페이스 개요
 description: ID 서비스의 ID 네임스페이스에 대해 알아봅니다.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 6ae3626c2e0f7e58968b5582ca1895bd03ab1c32
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1920'
 ht-degree: 12%
 
 ---
@@ -134,6 +134,10 @@ UI에서 ID 네임스페이스를 보려면 **[!UICONTROL ID]** 왼쪽 탐색에
 조직 데이터 및 사용 사례에 따라 사용자 정의 네임스페이스가 필요할 수 있습니다. 다음을 사용하여 사용자 정의 네임스페이스를 만들 수 있습니다. [[!DNL Identity Service]](../api/create-custom-namespace.md) API 또는 UI를 통해.
 
 사용자 지정 네임스페이스를 만들려면 **[!UICONTROL ID 네임스페이스 만들기]**.
+
+>[!TIP]
+>
+>통합 ID는 다른 시스템과 연결하는 데 사용되는 네임스페이스입니다. ID 해결에는 사용되지 않으며 ID를 결합하는 데도 사용되지 않습니다. 선택 **[!UICONTROL 통합 ID 보기]** 목록을 업데이트하고 통합 id를 포함합니다. 그러나 통합 ID는 보기 전용이므로 구성할 필요가 없으므로 기본적으로 숨겨집니다.
 
 ![ID 작업 영역의 ID 네임스페이스 만들기 버튼입니다.](../images/namespace/create-identity-namespace.png)
 
