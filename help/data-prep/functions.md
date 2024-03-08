@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 준비 매핑 기능
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: c7d6ef441f97cbc318bb2dd5c2f1daa08a6db197
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '5794'
+source-wordcount: '5789'
 ht-degree: 2%
 
 ---
@@ -119,8 +119,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | 현재 시간을 검색합니다. | | now() | now() | `2021-10-26T10:10:24Z` |
 | 타임스탬프 | 현재 Unix 시간을 검색합니다. | | timestamp() | timestamp() | 1571850624571 |
-| 형식 | 지정된 형식에 따라 입력 날짜 형식을 지정합니다. | <ul><li>날짜: **필수** 서식을 지정할 ZonedDateTime 개체의 입력 날짜입니다.</li><li>형식: **필수** 날짜를 변경할 형식입니다.</li></ul> | format(DATE, FORMAT) | 형식(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
-| dformat | 지정된 형식에 따라 타임스탬프를 날짜 문자열로 변환합니다. | <ul><li>타임스탬프: **필수** 서식을 지정할 타임스탬프입니다. 밀리초 단위로 기록됩니다.</li><li>형식: **필수** 타임스탬프를 지정할 형식입니다.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
+| 형식 | 지정된 형식에 따라 입력 날짜 형식을 지정합니다. | <ul><li>날짜: **필수** 서식을 지정할 ZonedDateTime 개체의 입력 날짜입니다.</li><li>형식: **필수** 날짜를 변경할 형식입니다.</li></ul> | format(DATE, FORMAT) | 형식(2019-10-23T11:24:00+00:00, &quot;`yyyy-MM-dd HH:mm:ss`&quot;) | `2019-10-23 11:24:35` |
+| dformat | 지정된 형식에 따라 타임스탬프를 날짜 문자열로 변환합니다. | <ul><li>타임스탬프: **필수** 서식을 지정할 타임스탬프입니다. 밀리초 단위로 기록됩니다.</li><li>형식: **필수** 타임스탬프를 지정할 형식입니다.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;`yyyy-MM-dd'T'HH:mm:ss.SSSX`&quot;) | `2019-10-23T11:24:35.000Z` |
 | 날짜 | 날짜 문자열을 ZonedDateTime 개체로 변환합니다(ISO 8601 형식). | <ul><li>날짜: **필수** 날짜를 나타내는 문자열입니다.</li><li>형식: **필수** 소스 날짜의 형식을 나타내는 문자열입니다.**참고:** 다음과 같습니다. **아님** 날짜 문자열을 로 변환할 형식을 나타냅니다. </li><li>DEFAULT_DATE: **필수** 제공된 날짜가 null인 경우 반환되는 기본 날짜.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
 | 날짜 | 날짜 문자열을 ZonedDateTime 개체로 변환합니다(ISO 8601 형식). | <ul><li>날짜: **필수** 날짜를 나타내는 문자열입니다.</li><li>형식: **필수** 소스 날짜의 형식을 나타내는 문자열입니다.**참고:** 다음과 같습니다. **아님** 날짜 문자열을 로 변환할 형식을 나타냅니다. </li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | `2019-10-23T11:24:00Z` |
 | 날짜 | 날짜 문자열을 ZonedDateTime 개체로 변환합니다(ISO 8601 형식). | <ul><li>날짜: **필수** 날짜를 나타내는 문자열입니다.</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24:00Z&quot; |

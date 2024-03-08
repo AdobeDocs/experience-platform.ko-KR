@@ -2,9 +2,10 @@
 title: Adobe TikTok 웹 이벤트 API 확장 통합
 description: 이 Adobe Experience Platform 웹 이벤트 API를 사용하면 TikTok과 웹 사이트 상호 작용을 직접 공유할 수 있습니다.
 last-substantial-update: 2023-09-26T00:00:00Z
-source-git-commit: d8b7006ade1dc82fdd79b7ed744c021bc304bca7
+exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1105'
 ht-degree: 3%
 
 ---
@@ -64,7 +65,7 @@ ht-degree: 3%
 | 입력 | 설명 |
 | --- | --- |
 | 이벤트 이름 | 이벤트의 이름입니다. 다음은에서 생성한 사전 정의된 이름의 작업입니다. [!DNL TikTok] 필수 필드입니다. 다음을 참조하십시오. [[!DNL TikTok] 마케팅 API](https://business-api.tiktok.com/portal/docs?id=1741601162187777) 지원되는 이벤트에 대한 자세한 내용은 설명서를 참조하십시오. |
-| 이벤트 시간 | ISO 8601 또는 yyyy-MM-dd&#39;T&#39;HH의 문자열로 표시된 날짜-시간:mm:ss:SSSZ 형식입니다. 필수 필드입니다. |
+| 이벤트 시간 | ISO 8601 또는 의 문자열로 표시된 날짜-시간 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 포맷. 필수 필드입니다. |
 | 이벤트 ID | 광고주가 각 이벤트를 표시하기 위해 생성한 고유 ID. 이 필드는 선택 사항이며 중복 제거에 사용됩니다. |
 
 {style="table-layout:auto"}

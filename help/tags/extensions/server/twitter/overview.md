@@ -4,9 +4,9 @@ title: Twitter 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장을 사용하면 비즈니스 요구 사항에 맞게 이벤트를 Twitter으로 수집할 수 있습니다.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1048'
 ht-degree: 3%
 
 ---
@@ -97,7 +97,7 @@ Experience Platform을 [!DNL Twitter]를 사용하려면 다음 입력이 필요
 
 | 필드 이름 | 설명 | 예 | 필수 여부 |
 | --- | --- | --- | --- |
-| [!UICONTROL 전환 시간] | ISO 8601 또는 yyyy-MM-dd&#39;T&#39;HH의 문자열로 표시된 날짜-시간:mm:ss:SSSZ 형식입니다. | 2022년 2월 18일:14:00.603Z | 예 |
+| [!UICONTROL 전환 시간] | ISO 8601 또는 의 문자열로 표시된 날짜-시간 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 포맷. | 2022년 2월 18일:14:00.603Z | 예 |
 | [!UICONTROL 이벤트 ID] | 특정 이벤트의 base-36 ID입니다. 이 ID는 내에 포함된 사전 구성된 이벤트와 일치해야 합니다 [!DNL Twitter] 광고 계정입니다. 이를 이벤트 관리자의 해당 이벤트에 대한 ID라고 합니다. | o87ne 또는 tw-o8z6j-o87ne (tw-pixel_id-event-id) | 예 |
 | [!UICONTROL 항목 수] | 이벤트에서 구매 중인 항목 수입니다. 0보다 큰 양수여야 합니다. | 4 | 아니요 |
 | [!UICONTROL 통화] | 이벤트에서 구매 중인 항목의 통화입니다. 이는 ISO-4217로 표시되며, 제공되지 않을 경우 기본값은 USD입니다. | 미국 달러 | 아니요 |
