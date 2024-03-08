@@ -2,10 +2,10 @@
 title: 이벤트 전달 확장 참조
 description: Adobe Experience Platform에서 이벤트 전달 확장에 대한 설명서를 찾습니다.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: af3353000e5545e6d2dc729d6f0bb91a00683b04
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 20%
+source-wordcount: '166'
+ht-degree: 19%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 20%
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
 * [Google Analytics용 클라우드 커넥터](https://exchange.adobe.com/apps/ec/106542)*
-* [Google Analytics 4용 클라우드 커넥터](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
+<!-- * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)* -->
 * [코어](./core/overview.md)
 * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)*
 * [Google Ads 향상된 전환](./google-ads-enhanced-conversions/overview.md)

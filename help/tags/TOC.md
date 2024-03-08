@@ -6,9 +6,9 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '761'
 ht-degree: 36%
 
 ---
@@ -196,7 +196,6 @@ ht-degree: 36%
       * [SDI 설문 조사](https://exchange.adobe.com/apps/ec/102991)
       * [SDI 툴킷](https://exchange.adobe.com/apps/ec/101460)
       * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
-      * [SPA 보기 변경 이벤트](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
       * [저장소 스패너](https://exchange.adobe.com/apps/ec/102990)
       * [Loop Horizon별 태그](https://exchange.adobe.com/apps/ec/106092)
       * [티리움 콜렉트](https://exchange.adobe.com/apps/ec/104217)
@@ -222,7 +221,6 @@ ht-degree: 36%
       * [!DNL Braze] {#braze}
          * [개요](./extensions/server/braze/overview.md)
       * [Google Analytics용 클라우드 커넥터](https://exchange.adobe.com/apps/ec/106542)
-      * [Google Analytics 4용 클라우드 커넥터](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
       * 코어 {#core}
          * [개요](./extensions/server/core/overview.md)
       * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)

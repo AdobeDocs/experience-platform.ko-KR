@@ -2,10 +2,10 @@
 title: 태그 확장 참조
 description: Adobe Experience Platform에서 태그 확장에 대한 설명서를 찾습니다.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 10%
+source-wordcount: '469'
+ht-degree: 9%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 10%
 * [Awin 변환 태그](https://exchange.adobe.com/apps/ec/103240)*
 * [인간의 맥락](https://exchange.adobe.com/apps/ec/101063)*
 * [Bing Ads 범용 이벤트 추적](https://exchange.adobe.com/apps/ec/100154)*
-* [Branch](https://exchange.adobe.com/apps/ec/101382)*
+* [분기](https://exchange.adobe.com/apps/ec/101382)*
 * [[!DNL BrightCove] 비디오 추적](./brightcove/overview.md)
 * [호출 추적 지표](https://exchange.adobe.com/apps/ec/107695)*
 * [채널 소스 식별자](https://exchange.adobe.com/apps/ec/101412)*
@@ -106,7 +106,7 @@ ht-degree: 10%
 * [SDI 설문 조사](https://exchange.adobe.com/apps/ec/102991)*
 * [SDI 툴킷](https://exchange.adobe.com/apps/ec/101460)*
 * [SessionCam](https://exchange.adobe.com/apps/ec/100517)*
-* [SPA 보기 변경 이벤트](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
+<!-- * [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html) -->
 * [저장소 스패너](https://exchange.adobe.com/apps/ec/102990)*
 * [Loop Horizon별 태그](https://exchange.adobe.com/apps/ec/106092)*
 * [티리움 콜렉트](https://exchange.adobe.com/apps/ec/104217)*
