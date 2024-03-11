@@ -2,12 +2,13 @@
 title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform Web SDK에 대해 자주 묻는 질문에 대한 답변을 받아 보십시오.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '2279'
+source-wordcount: '2268'
 ht-degree: 1%
 
 ---
+
 
 # 자주 묻는 질문
 
@@ -15,16 +16,15 @@ ht-degree: 1%
 
 ## Adobe Experience Platform 웹 SDK란 무엇입니까?
 
-Adobe Experience Platform Web SDK는 Adobe Experience Cloud 고객이 Experience Cloud에서 다양한 서비스와 상호 작용할 수 있도록 하는 클라이언트측 JavaScript 라이브러리입니다.
+Adobe Experience Platform Web SDK는 Adobe Experience Cloud의 다양한 서비스와 상호 작용할 수 있는 클라이언트측 JavaScript 라이브러리입니다.
 
-솔루션과 관계없는 방식(XDM)으로 데이터를 Adobe Experience Platform Edge Network로 전송한 다음, 해당 데이터를 솔루션별 형식 및 대상에 매핑하고 실시간으로 전송합니다.
+Web SDK는 솔루션과 관계없는 방식(XDM)으로 데이터를 Experience Platform Edge Network로 전송한 다음, 해당 데이터를 솔루션별 형식 및 대상에 매핑하고 실시간으로 전송합니다.
 
-**추가 정보**
-[Adobe Summit 표시](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html)
+웹 SDK에 대한 자세한 내용은 다음 비디오를 참조하십시오. [eVar 또는 Mbox에 대해 Alloy.js를 만나고 태그를 다시 사용하지 않음](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html).
 
 ## Adobe Experience Platform 웹 SDK는 이전 솔루션과 어떻게 다릅니까?
 
-### Adobe Experience Platform SDK 이전
+### Web SDK Experience Platform 전
 
 현재 각 개별 솔루션을 기반으로 다른 JavaScript 라이브러리를 배포해야 합니다.
 
@@ -44,9 +44,9 @@ Platform의 태그를 사용하여 이러한 라이브러리를 최대한 쉽게
 
 또한 현재 Adobe Experience Platform으로 데이터를 직접 전송하는 JavaScript 라이브러리가 없습니다.
 
-### Adobe Experience Platform Web SDK 사용
+### Web SDK Experience Platform
 
-새로운 웹 SDK는 다음 솔루션에 대한 데이터를 단일 대상(Adobe Experience Platform Edge Network)으로 전송하고 위에서 언급한 가장 일반적인 솔루션 사용 사례를 해결합니다.
+새로운 웹 SDK는 다음 솔루션에 대한 데이터를 단일 대상(Experience Platform 에지 네트워크)으로 전송하고 위에서 언급한 가장 일반적인 솔루션 사용 사례를 해결합니다.
 
 * Adobe Analytics
 * Adobe Audience Manager
@@ -54,9 +54,9 @@ Platform의 태그를 사용하여 이러한 라이브러리를 최대한 쉽게
 * 방문자 ID
 * Adobe Experience Platform
 
-다른 해결책들은 올해 말에 뒤따를 것입니다.
+다른 해결 방법도 함께 제공됩니다.
 
-Adobe Experience Platform Web SDK는 Adobe Experience Platform으로 직접 데이터를 전송할 수도 있습니다. 이 데이터는 XDM으로 이루어지며 서버측 솔루션 스키마에 매핑됩니다.
+Adobe Experience Platform Web SDK는 Adobe Experience Platform으로 직접 데이터를 전송할 수도 있습니다. 이 데이터는 XDM 형식이며 서버측 솔루션 스키마에 매핑됩니다.
 
 ## 이 새로운 웹 SDK의 가치는 무엇입니까?
 
@@ -65,7 +65,7 @@ Adobe Experience Platform Web SDK는 Adobe Experience Platform으로 직접 데�
 **단순성:** XDM, Web SDK, 태그, Edge Network, Adobe Experience Cloud 솔루션 및 Adobe Experience Platform의 조합은 이해하기 쉽고 따라하기 쉬운 데이터 수집 스토리를 만듭니다.
 
 * **XDM:** 데이터를 Adobe으로 전송하는 데 사용하는 솔루션과 관계없는 스키마. evar 또는 mbox에 대해 더 이상 태깅하지 않습니다.
-* **Adobe Experience Platform 웹 SDK:** Adobe Experience Platform Edge Network로 데이터를 쉽게 보내고 받을 수 있습니다.
+* **웹 SDK:** Adobe Experience Platform Edge Network로 데이터를 쉽게 보내고 받을 수 있습니다.
 * **태그:** 사이트에서 Web SDK(및 기타 JavaScript 태그)의 배포 및 구성을 간소화합니다.
 * **에지 네트워크:** 필요한 형식으로 Adobe Experience Platform 및 솔루션에 데이터를 쉽게 라우팅할 수 있습니다.
 * **Adobe Experience Platform 및 Adobe 솔루션:** 해당 가치 제안을 활성화합니다.
@@ -76,9 +76,9 @@ Adobe Experience Platform Web SDK는 Adobe Experience Platform으로 직접 데�
 
 **가치 창출 시간:** Adobe은 태그를 통해 웹 SDK를 배포하고 클라이언트측 데이터를 XDM에 매핑하기 위해 최대한 열심히 노력했습니다(및 계속 진행할 예정). 이 작업이 완료되면 다른 모든 Adobe 솔루션 및 Adobe Experience Platform 서비스를 서버측에서 켜거나 끌 수 있습니다. 예를 들어, Adobe Analytics에 대해 이 기능을 사용 중이며 Target 또는 Experience Platform을 켜려는 경우 데이터 스트림 구성에 대한 토글을 전환하고 해당 사용 사례를 켤 수 있습니다.
 
-## Alloy란?
+## [!DNL alloy.js] (이)란?
 
-Alloy는 Adobe Experience Platform 웹 SDK의 코드 이름입니다. Adobe Experience Platform Web SDK가 공식 이름이지만 SDK의 소스 코드 및 파일 이름 내에서 사용됩니다.
+[!DNL alloy.js] 는 웹 SDK JavaScript 라이브러리의 이름입니다. SDK 소스 코드 및 파일 이름 내에서 참조됩니다.
 
 ## 고객이 Adobe Experience Platform을 구입하여 [!DNL Web SDK]?
 
@@ -88,24 +88,27 @@ Alloy는 Adobe Experience Platform 웹 SDK의 코드 이름입니다. Adobe Expe
 
 ## 웹 SDK는 누가 사용해야 합니까?
 
-Adobe Experience Platform Web SDK는 다음 사용자를 위해 개발되었습니다.
+Adobe Experience Platform Web SDK는 다음 고객을 위해 개발되었습니다.
 
 * Adobe Experience Platform 사용자
    * 장치에서 Adobe Experience Platform으로 직접 데이터를 전송해야 하는 경우 이렇게 하는 것이 좋습니다.
-   * Adobe은 고객이 이미 Adobe Analytics을 보유하고 있는 경우 Adobe Analytics 커넥터를 사용하는 것이 더 빠르다는 것을 알고 있지만, 데이터 수집을 위한 장기적인 전략은 아닙니다.
+   * Adobe은 Adobe Analytics이 이미 있는 경우 Adobe Analytics 커넥터를 사용하는 것이 더 빠르다는 것을 알고 있지만, 데이터 수집을 위한 장기적인 전략은 아닙니다.
 
 * Adobe Experience Cloud 솔루션 고객
    * 새 Adobe Analytics, Adobe Audience Manager 및 Adobe Target 고객은 기존 라이브러리를 사용하지 말고 새 Web SDK로 시작해야 합니다.
    * 최대한 최적화된 구현을 얻고자 하는 기존 고객은 새로운 웹 SDK를 사용해야 합니다.
 
+## 웹 SDK에 액세스하려면 어떻게 합니까?
 
-## Adobe Experience Platform Web SDK를 사용하기 시작하려면 어떻게 해야 합니까?
+Web SDK는 현재 일반 사용자가 사용할 수 있으며 Adobe Experience Cloud 제품으로 데이터를 전송하는 데 사용할 수 있습니다. 데이터를 서드파티 솔루션으로 보낼 수 있는 기능은 가까운 미래에 제공될 예정입니다.
 
-Web SDK는 현재 일반 사용자가 사용할 수 있으며 Adobe Experience Cloud 제품으로 데이터를 전송하는 데 사용할 수 있습니다. 데이터를 서드파티 솔루션으로 보낼 수 있는 기능은 가까운 미래에 제공될 예정입니다. SDK는 무료이며, Adobe에서 무료로 호스팅합니다. 필요한 경우 무료로 다운로드하여 자체 서버에 호스팅할 수 있습니다. Platform Web SDK는 Adobe 서버가 SDK에서 오는 인바운드 데이터를 제대로 처리하기 위해 데이터 스트림 구성 및 Adobe Experience Platform XDM 스키마 빌더에 대한 액세스가 필요합니다. 액세스 권한을 얻으려면 Adobe 계정 팀에 연락하여 요청 프로세스를 시작하십시오.
+SDK는 무료이며, Adobe에서 무료로 호스팅합니다. 필요한 경우 무료로 다운로드하여 자체 서버에 호스팅할 수 있습니다.
+
+Web SDK는에 대한 액세스 권한이 필요합니다. [데이터 스트림 구성](../datastreams/overview.md) 및 Experience Platform [XDM 스키마 빌더](../xdm/tutorials/create-schema-ui.md): Adobe 서버가 SDK에서 들어오는 인바운드 데이터를 제대로 처리하도록 합니다. 액세스 권한을 얻으려면 Adobe 계정 팀에 연락하여 요청 프로세스를 시작하십시오.
 
 ## 현재 웹 SDK에서 지원되는 사용 사례는 무엇입니까?
 
-Web SDK는 빠르게 발전하고 있습니다. 더 많은 사용 사례가 진행 중입니다. 다음을 찾을 수 있습니다. [현재 여기에서 지원되는 사용 사례 목록입니다.](https://github.com/adobe/alloy/projects/5)
+Web SDK는 빠르게 발전하고 있습니다. 더 많은 사용 사례가 진행 중입니다. 다음을 찾을 수 있습니다. [현재 여기에서 지원되는 사용 사례 목록입니다.](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)
 
 ## 현재 고객은 사이트에 태그를 다시 지정해야 합니까?
 
@@ -117,7 +120,7 @@ Web SDK는 빠르게 발전하고 있습니다. 더 많은 사용 사례가 진�
 
 즉, 솔루션이 아닌 사용 사례에 Adobe Experience Platform Web SDK를 사용하려는 경우 `alloy.js` 새로운 솔루션인 것처럼 계속 진행하십시오. Adobe Analytics, Target 또는 Audience Manager에 사용하거나 애플리케이션 사용 사례에 사용하려는 경우 페이지에서 기존 코드를 제거해야 할 수 있습니다.
 
-## 웹 사이트 방문자가 새 방문자로 표시되지 않도록 Alloy를 사용할 때 ECID를 마이그레이션할 수 있습니까?
+## 웹 SDK를 사용할 때 웹 사이트 방문자가 새 방문자로 표시되지 않도록 ECID를 마이그레이션할 수 있습니까?
 
 예. Adobe Experience Platform Web SDK는 ID 마이그레이션 기능을 제공합니다. 에서 ID 마이그레이션에 대한 지침을 따르십시오. [Platform Web SDK ID 설명서](/help/web-sdk/identity/overview.md#id-migration) 을 참조하십시오.
 

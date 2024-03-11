@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: cf6df4d005486aa297dcced7c8811f87f5e988c2
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1725'
 ht-degree: 1%
 
 ---
@@ -213,8 +213,8 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 
 ## 버전 2.2.0 - 2020년 10월
 
-* 버그 수정: 옵트인 개체는 다음의 경우에 Alloy가 호출을 하지 못하도록 차단했습니다. `idMigrationEnabled` 은(는) `true`.
-* 버그 수정: Alloy가 깜박이는 문제를 방지하기 위해 개인화 오퍼를 반환해야 하는 요청을 인식하도록 합니다.
+* 버그 수정: 옵트인 개체는 다음의 경우에 웹 SDK가 호출하지 못하도록 차단합니다. `idMigrationEnabled` 은(는) `true`.
+* 버그 수정: 웹 SDK에서 개인화 오퍼를 반환해야 하는 요청을 인식하도록 하여 깜박이는 문제를 방지합니다.
 
 ## 버전 2.1.0 - 2020년 8월
 
@@ -222,5 +222,5 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 * IAB 2.0 동의 표준을 지원합니다.
 * 에서 추가 ID 전달 지원 `setConsent` 명령입니다.
 * 재정의 지원 `datasetId` 다음에서 `sendEvent` 명령입니다.
-* Alloy 모니터 지원([자세히 보기](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
+* 모니터링 후크 지원([자세히 보기](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
 * 합격 `environment: browser` 구현 세부 사항 컨텍스트 데이터에서 확인할 수 있습니다.

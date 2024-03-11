@@ -1,13 +1,13 @@
 ---
 title: 태그 확장을 사용하여 웹 SDK 설치
 description: Adobe Experience Cloud 데이터 수집을 사용하여 웹 SDK 라이브러리를 참조합니다.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: ba8348c9-f642-4230-9f7f-4496d4154d83
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
-
 
 # 태그 확장을 사용하여 웹 SDK 설치
 
@@ -23,6 +23,8 @@ Adobe은 웹 SDK를 구현하고 구성할 수 있는 전용 태그 확장 기�
 1. 다음으로 이동 **[!UICONTROL 확장]**&#x200B;을(를) 선택한 다음 **[!UICONTROL 카탈로그]** 탭.
 1. 을(를) 찾아 설치합니다. **[!UICONTROL Adobe Experience Platform 웹 SDK]** 확장명.
 1. 각 환경에 적합한 샌드박스 및 데이터스트림을 선택하고 **[!UICONTROL 저장]**.
+
+방법 설명서 참조 [웹 SDK 태그 확장 구성](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 추가 정보.
 
 ## 개발에 태그 코드 게시
 
