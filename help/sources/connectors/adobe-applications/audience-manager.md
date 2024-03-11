@@ -4,14 +4,21 @@ solution: Experience Platform
 title: Audience Manager 소스 개요
 description: Adobe Audience Manager 소스는 Audience Manager에서 수집된 자사 데이터를 Adobe Experience Platform으로 스트리밍합니다.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 8ef9fedcc77f39707ef5191988a5b7360e1118cc
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
 
 # Audience Manager 소스
+
+>[!IMPORTANT]
+>
+>초기 설정 시 Adobe Audience Manager 소스는 지정된 ID 네임스페이스를 설명하는 오류 메시지를 반환합니다 `namespaceCode={VALUE}` 존재하지 않습니다. **참고**: 백엔드에서 `namespaceCode` 는 id 기호를 참조하는 데 사용됩니다. 통합을 완료하려면 다음을 수행해야 합니다.
+>
+>- [ID 서비스에서 사용자 지정 네임스페이스 만들기](../../../identity-service/features/namespaces.md#create-custom-namespaces) 지정된 id 기호(`VALUE`).
+>- 데이터를 다시 수집합니다.
 
 Adobe Audience Manager 소스는 Adobe Experience Platform 활성화를 위해 Adobe Audience Manager에서 수집된 자사 데이터를 스트리밍합니다. Audience Manager 소스는 두 가지 유형의 데이터를 Platform에 수집합니다.
 
