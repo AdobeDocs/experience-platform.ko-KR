@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 샌드박스 UI 안내서
 description: 이 문서에서는 Adobe Experience Platform 사용자 인터페이스에서 샌드박스와 관련된 다양한 작업을 수행하는 방법에 대한 단계를 설명합니다.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
+source-git-commit: 0db23e475d6546ebb886a56d5915d023ea215125
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '929'
 ht-degree: 5%
 
 ---
@@ -49,7 +49,7 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 샌드박스]** 왼쪽 탐�
 
 >[!NOTE]
 >
->새 샌드박스가 생성되면 먼저 의 제품 프로필에 해당 새 샌드박스를 추가해야 합니다 [Adobe Admin Console](https://adminconsole.adobe.com/) 새 샌드박스 사용을 시작하기 전에 다음에서 설명서를 참조하십시오. [제품 프로필에 대한 권한 관리](../../access-control/ui/permissions.md) 제품 프로필에 샌드박스를 프로비저닝하는 방법에 대한 정보입니다.
+>새 샌드박스를 생성하려면 의 역할에 추가해야 합니다. [[!UICONTROL 권한]](../../access-control/abac/ui/permissions.md) 사용을 시작하기 전에 역할에 대한 샌드박스를 프로비저닝하는 방법에 대해 알아보려면 다음을 참조하십시오. [역할의 샌드박스 관리](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) 설명서를 참조하십시오.
 
 Experience Platform에서 샌드박스를 사용하는 방법에 대한 빠른 개요를 알려면 다음 비디오를 사용하십시오.
 
