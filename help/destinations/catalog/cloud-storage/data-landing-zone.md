@@ -3,9 +3,9 @@ title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 대상자를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1512'
+source-wordcount: '1586'
 ht-degree: 3%
 
 ---
@@ -51,6 +51,19 @@ Platform은에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을
 | 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. 자세한 내용 [배치 파일 기반 대상](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
+
+## 데이터 세트 내보내기 {#export-datasets}
+
+이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기 설정 방법에 대한 자세한 내용은 튜토리얼을 참조하십시오.
+
+* 방법 [platform 사용자 인터페이스를 사용하여 데이터 세트 내보내기](/help/destinations/ui/export-datasets.md).
+* 방법 [흐름 서비스 API를 사용하여 프로그래밍 방식으로 데이터 세트 내보내기](/help/destinations/api/export-datasets.md).
+
+## 내보낸 데이터의 파일 형식 {#file-format}
+
+내보낼 때 *대상 데이터*, Platform은 `.csv`, `parquet`, 또는 `.json` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [내보내기에 지원되는 파일 형식](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) audience activation 튜토리얼의 섹션.
+
+내보낼 때 *데이터 세트*, Platform은 `.parquet` 또는 `.json` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [데이터 세트 내보내기 성공 확인](../../ui/export-datasets.md#verify) 섹션 을 참조하십시오.
 
 ## 전제 조건 {#prerequisites}
 
@@ -233,13 +246,6 @@ curl -X POST \
 ### 속성 및 ID 매핑 {#map}
 
 다음에서 **[!UICONTROL 매핑]** 단계에서는 프로필에 내보낼 속성 및 id 필드를 선택할 수 있습니다. 내보낸 파일의 헤더를 원하는 이름으로 변경하도록 선택할 수도 있습니다. 자세한 내용은 [매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 배치 대상 활성화 UI 튜토리얼에서 다음을 수행합니다.
-
-## 데이터 세트 내보내기 {#export-datasets}
-
-이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기 설정 방법에 대한 자세한 내용은 튜토리얼을 참조하십시오.
-
-* 방법 [platform 사용자 인터페이스를 사용하여 데이터 세트 내보내기](/help/destinations/ui/export-datasets.md).
-* 방법 [흐름 서비스 API를 사용하여 프로그래밍 방식으로 데이터 세트 내보내기](/help/destinations/api/export-datasets.md).
 
 ## 성공적인 데이터 내보내기 유효성 검사 {#exported-data}
 

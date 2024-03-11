@@ -2,10 +2,10 @@
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 CSV 데이터 파일을 정기적으로 자체 S3 버킷으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1354'
-ht-degree: 18%
+source-wordcount: '1440'
+ht-degree: 17%
 
 ---
 
@@ -53,6 +53,19 @@ ht-degree: 18%
 {style="table-layout:auto"}
 
 ![Amazon S3 프로필 기반 내보내기 유형은 UU에서 강조 표시됩니다.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+
+## 데이터 세트 내보내기 {#export-datasets}
+
+이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기 설정 방법에 대한 자세한 내용은 튜토리얼을 참조하십시오.
+
+* 방법 [platform 사용자 인터페이스를 사용하여 데이터 세트 내보내기](/help/destinations/ui/export-datasets.md).
+* 방법 [흐름 서비스 API를 사용하여 프로그래밍 방식으로 데이터 세트 내보내기](/help/destinations/api/export-datasets.md).
+
+## 내보낸 데이터의 파일 형식 {#file-format}
+
+내보낼 때 *대상 데이터*, Platform은 `.csv`, `parquet`, 또는 `.json` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [내보내기에 지원되는 파일 형식](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) audience activation 튜토리얼의 섹션.
+
+내보낼 때 *데이터 세트*, Platform은 `.parquet` 또는 `.json` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [데이터 세트 내보내기 성공 확인](../../ui/export-datasets.md#verify) 섹션 을 참조하십시오.
 
 ## 대상에 연결 {#connect}
 
@@ -169,13 +182,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
-## 데이터 세트 내보내기 {#export-datasets}
+## 성공적인 데이터 내보내기 유효성 검사 {#exported-data}
 
-이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기 설정 방법에 대한 자세한 내용은 튜토리얼을 참조하십시오.
+데이터를 성공적으로 내보냈는지 확인하려면 [!DNL Amazon S3] 저장소가 추가되고 내보낸 파일에 예상 프로필 모집단이 포함되어 있는지 확인합니다.
 
-* 방법 [platform 사용자 인터페이스를 사용하여 데이터 세트 내보내기](/help/destinations/ui/export-datasets.md).
-* 방법 [흐름 서비스 API를 사용하여 프로그래밍 방식으로 데이터 세트 내보내기](/help/destinations/api/export-datasets.md).
+## 허용 목록에 추가하다 IP 주소 {#ip-address-allow-list}
 
-## 내보낸 데이터 {#exported-data}
-
-대상 [!DNL Amazon S3] 대상, [!DNL Platform] 은 사용자가 제공한 저장 위치에 데이터 파일을 생성합니다. 파일에 대한 자세한 내용은 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) audience activation 튜토리얼에서 을 참조하십시오.
+다음을 참조하십시오. [허용 목록에 추가하다 IP 주소](ip-address-allow-list.md) Adobe IP를 허용 목록에 추가하다에 추가해야 하는 경우 문서입니다.

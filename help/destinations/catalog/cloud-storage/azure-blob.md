@@ -2,9 +2,9 @@
 title: Azure Blob 연결
 description: Azure Blob 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform에서 CSV 데이터 파일을 정기적으로 내보냅니다.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1089'
 ht-degree: 7%
 
 ---
@@ -62,11 +62,18 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-## 지원되는 파일 형식 {#file-formats}
+## 데이터 세트 내보내기 {#export-datasets}
 
-[!DNL Experience Platform] 은(는) 내보낼 다음 파일 형식을 지원합니다 [!DNL Azure Blob]:
+이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기 설정 방법에 대한 자세한 내용은 튜토리얼을 참조하십시오.
 
-* 쉼표로 구분된 값(CSV): 내보낸 데이터 파일에 대한 지원은 현재 쉼표로 구분된 값으로 제한됩니다.
+* 방법 [platform 사용자 인터페이스를 사용하여 데이터 세트 내보내기](/help/destinations/ui/export-datasets.md).
+* 방법 [흐름 서비스 API를 사용하여 프로그래밍 방식으로 데이터 세트 내보내기](/help/destinations/api/export-datasets.md).
+
+## 내보낸 데이터의 파일 형식 {#file-format}
+
+내보낼 때 *대상 데이터*, Platform은 `.csv`, `parquet`, 또는 `.json` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [내보내기에 지원되는 파일 형식](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) audience activation 튜토리얼의 섹션.
+
+내보낼 때 *데이터 세트*, Platform은 `.parquet` 또는 `.json` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [데이터 세트 내보내기 성공 확인](../../ui/export-datasets.md#verify) 섹션 을 참조하십시오.
 
 ## 대상에 연결 {#connect}
 
@@ -123,13 +130,6 @@ ht-degree: 7%
 
 다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
-## 데이터 세트 내보내기 {#export-datasets}
+## 성공적인 데이터 내보내기 유효성 검사 {#exported-data}
 
-이 대상은 데이터 세트 내보내기를 지원합니다. 데이터 세트 내보내기 설정 방법에 대한 자세한 내용은 튜토리얼을 참조하십시오.
-
-* 방법 [platform 사용자 인터페이스를 사용하여 데이터 세트 내보내기](/help/destinations/ui/export-datasets.md).
-* 방법 [흐름 서비스 API를 사용하여 프로그래밍 방식으로 데이터 세트 내보내기](/help/destinations/api/export-datasets.md).
-
-## 내보낸 데이터 {#exported-data}
-
-대상 [!DNL Azure Blob Storage] 대상, [!DNL Platform] 다음 항목을 만듭니다. `.csv` 파일을 제공한 저장소 위치에 있습니다. 파일에 대한 자세한 내용은 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) audience activation 튜토리얼에서 을 참조하십시오.
+데이터를 성공적으로 내보냈는지 확인하려면 [!DNL Azure Blob] 저장소가 추가되고 내보낸 파일에 예상 프로필 모집단이 포함되어 있는지 확인합니다.
