@@ -4,9 +4,9 @@ title: Real-time Customer Data Platform 개요
 description: Adobe Real-time Customer Data Platform 개요
 feature: Get Started
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: f89665837b75dc4305073d675c4c05b04302c85e
+source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '682'
 ht-degree: 0%
 
 ---
@@ -79,3 +79,7 @@ Real-time Customer Data Platform을 시작하는 데 도움이 되는 다음 설
 * [대상자를 만드는 방법](segmentation/segmentation-overview.md)
 * [대상에 대한 대상자를 활성화하는 방법](destinations/overview.md)
 * [데이터 거버넌스 정책을 정의하고 적용하는 방법](privacy/data-governance-overview.md)
+
+## 용어집
+
+사용 [**용어집**](/help/landing/glossary.md) Real-Time CDP 및 Adobe Experience Platform 용어를 검토할 수 있는 페이지입니다.

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 개요
 description: Adobe Experience Platform을 사용하면 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험을 더 잘 설계하고 전달하기 전에 고객 데이터를 중앙 집중화 및 표준화할 수 있습니다.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 48e050718b665bc297f97bf1b90a6f4517dd3af5
+source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 3%
+source-wordcount: '434'
+ht-degree: 2%
 
 ---
 
@@ -34,13 +34,18 @@ RESTful API를 기반으로 구축, [!DNL Experience Platform] 는 시스템의 
 
 ### 애플리케이션 서비스 설명서 기본 제공 [!DNL Experience Platform]
 
-Adobe은 Experience Platform 위에 여러 애플리케이션 서비스를 구축했습니다. 이들 서비스에 대한 설명서는 아래에 링크된 해당 안내서에서 찾을 수 있습니다.
+Adobe은 Experience Platform 위에 여러 애플리케이션 서비스를 구축했습니다. 이러한 애플리케이션에 대한 설명서는 아래에 링크된 해당 안내서에서 찾을 수 있습니다.
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ko)
-* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ko-KR)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
+
+아래 비디오에서는 Experience Platform 위에 구축된 각 애플리케이션 서비스의 사용 사례를 설명합니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 
 ## [!DNL Experience Platform] 자습서
 
@@ -51,16 +56,16 @@ Adobe은 Experience Platform 위에 여러 애플리케이션 서비스를 구�
 ## 참조 문서 및 리소스
 
 * [**API 기본 사항**](api-fundamentals.md)\
-   작업 기본 사항 알아보기 [!DNL Platform] API.
+  작업 기본 사항 알아보기 [!DNL Platform] API.
 
 * [**API 참조 문서**](https://www.adobe.com/go/platform-api-reference-en)\
-   검색 [!DNL Experience Platform] 헤더, 매개 변수, 샘플 요청 및 응답을 포함한 API.<br/>*이러한 문서는 Adobe I/O 시 호스팅됩니다.*
+  검색 [!DNL Experience Platform] 헤더, 매개 변수, 샘플 요청 및 응답을 포함한 API.<br/>*이러한 문서는 Adobe I/O 시 호스팅됩니다.*
 
 * [**용어집**](glossary.md)\
-   Adobe Experience Platform 용어를 검토하십시오.
+  Adobe Experience Platform 용어를 검토하십시오.
 
-* [**릴리스 정보**](https://www.adobe.com/go/platform-release-notes_kr)\
-   가장 최근 항목에 대한 정보 찾기 [!DNL Experience Platform] 이전 릴리스를 릴리스하고 검토하십시오.
+* [**릴리스 정보**](https://www.adobe.com/go/platform-release-notes-kr)\
+  가장 최근 항목에 대한 정보 찾기 [!DNL Experience Platform] 이전 릴리스를 릴리스하고 검토하십시오.
 
 * [**문제 해결 안내서**](troubleshooting.md)\
-   일반적인 오류와 자주 묻는 질문에 대한 답변을 찾아보십시오.
+  일반적인 오류와 자주 묻는 질문에 대한 답변을 찾아보십시오.
