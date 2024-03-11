@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 편집기 UI 안내서
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서, Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 이를 통해 개발 목적으로 대화형 쿼리를 실행하고 비대화형 쿼리를 실행하여 Experience Platform의 데이터 세트를 채울 수 있습니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 29a33dd5823ac425cc567e948a5def948aedb44e
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '2576'
+source-wordcount: '2647'
 ht-degree: 2%
 
 ---
@@ -255,6 +255,10 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 쿼리가 완료되면 결과가 **[!UICONTROL 결과]** 탭, 다음 옆에 있음 **[!UICONTROL 콘솔]** 탭. 이 보기는 쿼리의 테이블 형식 출력을 보여주며 선택한 항목에 따라 50~500개 사이의 결과 행을 표시합니다 [결과 카운트](#result-count). 이 보기를 통해 쿼리가 예상 출력을 생성하는지 확인할 수 있습니다. 쿼리를 사용하여 데이터 세트를 생성하려면 반환된 행에 대한 제한을 제거하고 `CREATE TABLE tablename AS SELECT` 을 클릭하여 출력으로 데이터 세트를 생성합니다. 다음을 참조하십시오. [데이터 세트 생성 자습서](./create-datasets.md) 쿼리 결과에서 데이터 세트를 생성하는 방법에 대한 지침은 [!DNL Query Editor].
 
 ![쿼리 편집기 콘솔의 결과 탭에는 쿼리 실행 결과가 표시됩니다.](../images/ui/query-editor/query-results.png)
+
+## 사용 사례 {#use-cases}
+
+쿼리 서비스는 업계 및 비즈니스 시나리오 전반에 걸쳐 다양한 사용 사례에 대한 솔루션을 제공합니다. 이러한 실제 사례는 다양한 요구 사항을 해결하는 데 있어 서비스의 유연성과 효과를 보여 줍니다. 종료 [쿼리 서비스를 통해 특정 비즈니스 요구 사항에 가치를 제공하는 방법 발견](../use-cases/overview.md)를 통해 사용 사례 문서의 포괄적인 컬렉션을 살펴볼 수 있습니다. 쿼리 서비스를 사용하여 향상된 운영 효율성 및 비즈니스 성공을 위한 통찰력과 솔루션을 제공하는 방법에 대해 알아봅니다.
 
 ## 쿼리 실행 [!DNL Query Service] 튜토리얼 비디오 {#query-tutorial-video}
 

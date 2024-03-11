@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법의 기본 사항에 대해 알아봅니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '3671'
+source-wordcount: '3732'
 ht-degree: 2%
 
 ---
@@ -126,6 +126,12 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 다음 [!DNL Schema Editor] 필드 그룹이 제공한 필드가 캔버스에 표시된 상태로 다시 나타납니다.
 
 ![다음 [!DNL Schema Editor] 예제 스키마가 표시된 경우.](../../images/ui/resources/schemas/field-groups-added.png)
+
+>[!NOTE]
+>
+>스키마 편집기 내에서 표준(Adobe 생성) 클래스와 필드 그룹은 자물쇠 아이콘( )으로 표시됩니다.![자물쇠 아이콘.](../../images/ui/explore/padlock-icon.png) 질문에 답합니다. 자물쇠는 클래스 또는 필드 그룹 이름 옆의 왼쪽 레일과 시스템 생성 리소스의 일부인 스키마 다이어그램의 필드 옆에 나타납니다.
+>
+>![자물쇠 아이콘이 강조 표시된 스키마 편집기](../../images/ui/explore/schema-editor-padlock-icon.png)
 
 스키마에 필드 그룹을 추가한 후 선택적으로 다음을 수행할 수 있습니다. [기존 필드 제거](#remove-fields) 또는 [새 사용자 정의 필드 추가](#add-fields) 필요에 따라 이러한 그룹에 연결합니다.
 

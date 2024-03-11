@@ -5,9 +5,9 @@ title: 스키마 편집기를 사용하여 스키마 만들기
 type: Tutorial
 description: 이 튜토리얼에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '4632'
+source-wordcount: '4695'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 를 만들�
 
 이 자습서에서는 스키마 만들기와 관련된 Adobe Experience Platform의 다양한 측면에 대한 작업 이해가 필요합니다. 이 자습서를 시작하기 전에 다음 개념에 대한 설명서를 검토하십시오.
 
-* [[!DNL Experience Data Model (XDM)]](../home.md): [!DNL Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)]](../home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다.
    * [스키마 컴포지션 기본 사항](../schema/composition.md): 클래스, 스키마 필드 그룹, 데이터 유형 및 개별 필드를 포함한 XDM 스키마 및 해당 빌딩 블록의 개요입니다.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
 
@@ -116,6 +116,12 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 를 만들�
 스키마 캔버스가 다시 나타납니다. 다음 **[!UICONTROL 필드 그룹]** 섹션에 이제 &quot; 목록이 표시됩니다.[!UICONTROL 인구 통계 세부 정보]&quot; 및 **[!UICONTROL 구조]** 섹션에는 필드 그룹에서 기여한 필드가 포함됩니다. 아래에서 필드 그룹의 이름을 선택할 수 있습니다 **[!UICONTROL 필드 그룹]** 섹션을 통해 캔버스 내에서 제공하는 특정 필드를 강조 표시합니다.
 
 ![인구 통계 세부 정보 필드 그룹이 강조 표시된 스키마 편집기.](../images/tutorials/create-schema/demographic-details-structure.png)
+
+>[!NOTE]
+>
+>스키마 편집기 내에서 표준(Adobe 생성) 클래스와 필드 그룹은 자물쇠 아이콘( )으로 표시됩니다.![자물쇠 아이콘.](../images/ui/explore/padlock-icon.png) 질문에 답합니다. 자물쇠는 클래스 또는 필드 그룹 이름 옆의 왼쪽 레일과 시스템 생성 리소스의 일부인 스키마 다이어그램의 필드 옆에 나타납니다.
+>
+>![자물쇠 아이콘이 강조 표시된 스키마 편집기](../images/ui/explore/padlock-icon-highlight.png)
 
 이 필드 그룹은 최상위 수준 이름 아래에 여러 필드를 기여합니다. `person` (데이터 유형 포함)[!UICONTROL 개인]&quot;. 이 필드 그룹은 이름, 생년월일 및 성별을 포함하여 개인에 대한 정보를 설명합니다.
 
@@ -229,7 +235,7 @@ An &quot;[!UICONTROL 제목 없는 필드]&quot; 자리 표시자가 캔버스�
 
 | 제한 | 설명 |
 | --- | --- |
-| [!UICONTROL 필수 여부] | 데이터 수집에 필드가 필요함을 나타냅니다. 이 필드를 포함하지 않는 이 스키마를 기반으로 한 데이터 세트에 업로드된 모든 데이터는 수집 시 실패합니다. |
+| [!UICONTROL 필수] | 데이터 수집에 필드가 필요함을 나타냅니다. 이 필드를 포함하지 않는 이 스키마를 기반으로 한 데이터 세트에 업로드된 모든 데이터는 수집 시 실패합니다. |
 | [!UICONTROL 배열] | 필드에 데이터 형식이 지정된 값의 배열이 포함되어 있음을 나타냅니다. 예를 들어 데이터 유형이 &quot;인 필드에 이 제약 조건을 사용합니다.[!UICONTROL 문자열]&quot;필드에 문자열 배열이 포함되도록 지정합니다. |
 | [!UICONTROL 열거형 및 제안된 값] | 열거형은 이 필드에 가능한 값의 열거형 목록에 있는 값 중 하나를 포함해야 함을 나타냅니다. 또는 이 옵션을 사용하여 필드를 해당 값으로 제한하지 않고 문자열 필드에 대해 제안된 값 목록을 제공할 수도 있습니다. |
 | [!UICONTROL 신원] | 이 필드가 ID 필드임을 나타냅니다. ID 필드에 대한 자세한 정보가 제공됩니다 [이 자습서의 뒷부분에서](#identity-field). |

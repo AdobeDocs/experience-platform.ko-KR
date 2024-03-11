@@ -2,9 +2,9 @@
 title: 동의 분석 및 추적
 description: 사용자 동의가 시간 경과에 따라 어떻게 트렌드되는지 추적하기 위해 동의 분석 대시보드를 작성하는 방법을 알아봅니다.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '1912'
+source-wordcount: '1909'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,9 @@ ht-degree: 0%
 - **동의 트렌드** 시간 경과에 따른 사용자 동의 트렌드를 추적합니다. 동의 환경 설정 변경 분석을 사용하면 마케터가 이러한 사용자 환경 설정 변경에 맞는 캠페인을 계획하고 실행할 수 있습니다. 예를 들어 동의 선택을 유도하기 위해 타기팅된 교육 캠페인, 투명성 및 신뢰 캠페인 또는 인센티브 캠페인을 실행할 수 있습니다. 캠페인의 빈도를 사전 예방적으로 줄이기 위해 동의에 부정적인 영향을 미칠 수 있는 캠페인을 상호 연관시킬 수도 있습니다.
 - **동의 겹치기** 은 동의 채널 간의 겹침을 사용하여 여러 채널에 동의한 고객을 위해 여러 채널에서 일관되게 개인화된 메시지를 제공합니다. 마케터는 높은 수준의 동의 및 개인화된 메시징이 고객에게 공감을 주고 더 높은 응답률을 생성할 수 있는 특정 채널에 리소스를 우선 지정하고 할당할 수 있습니다.
 
-<!-- ## Build a consent dashboard {#build-a-consent-dashboard} -->
-
 ## 동의한 대상자 만들기 {#create-consent-audiences}
 
 동의 대시보드를 작성하려면 먼저 연락하는 데 동의한 모든 프로필의 대상자를 만들어야 합니다. Real-time Customer Data Platform 세그먼트 빌더로 이동하려면 를 선택합니다. **[!UICONTROL 대상]** ( 플랫폼 UI의 왼쪽 탐색 ). 다음에서 [!UICONTROL 고객] 의 탭 [!UICONTROL 대상] 대시보드, 선택 **[!UICONTROL 대상자 만들기]** 보기의 오른쪽 상단에서 **[!UICONTROL 규칙 작성]**.
-
-<!-- Update screenshot below to include Create audience -->s
 
 ![다음 [!UICONTROL 대상] 대시보드 [!UICONTROL 고객], [!UICONTROL 대상], 및 [!UICONTROL 세그먼트 만들기] 강조 표시됨.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
