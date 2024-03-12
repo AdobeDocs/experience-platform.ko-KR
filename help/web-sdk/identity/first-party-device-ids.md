@@ -2,12 +2,13 @@
 title: Web SDK의 자사 디바이스 ID
 description: Adobe Experience Platform Web SDK에 대한 자사 디바이스 ID(FPID)를 구성하는 방법에 대해 알아봅니다.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 9f10d48357b7fb28dc54375a4d077d0a1961a746
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
+
 
 # Web SDK의 자사 디바이스 ID
 
@@ -47,6 +48,28 @@ FPID 쿠키가 설정되면 해당 값을 가져와 이벤트 데이터가 수�
 Platform Edge Network는 [UUIDv4 형식](https://datatracker.ietf.org/doc/html/rfc4122). UUIDv4 형식이 아닌 장치 ID는 거부됩니다.
 
 UUID를 생성하면 거의 항상 고유한 임의 ID가 생성되며 충돌이 발생할 확률은 무시할 수 있습니다. UUIDv4는 IP 주소 또는 기타 PII(개인 식별 정보)를 사용하여 시드할 수 없습니다. UUID는 어디에나 존재하며 거의 모든 프로그래밍 언어에 대해 라이브러리를 찾아 생성할 수 있습니다.
+
+## 데이터스트림 UI에서 자사 ID 쿠키 설정 {#setting-cookie-datastreams}
+
+데이터 스트림 UI에서 쿠키 이름을 지정할 수 있습니다. 여기서, [!DNL FPID] 는 쿠키 값을 읽고 ID 맵에 FPID를 포함하지 않고 상주할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>이 기능을 사용하려면 다음 조건을 충족해야 합니다 [자사 데이터 수집](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) 활성화되었습니다.
+
+다음을 참조하십시오. [데이터스트림 설명서](../../datastreams/configure.md) 데이터 스트림을 구성하는 방법에 대한 자세한 정보입니다.
+
+데이터 스트림을 구성할 때 다음을 활성화합니다. **[!UICONTROL 자사 ID 쿠키]** 옵션을 선택합니다. 이 설정은 Edge Network가 자사 디바이스 ID를 조회할 때에서 이 값을 조회하지 않고 지정된 쿠키를 참조하도록 합니다 [ID 맵](#identityMap).
+
+다음에서 설명서를 참조하십시오. [자사 쿠키](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=ko-KR) Adobe Experience Cloud에서 작동하는 방식에 대한 자세한 내용.
+
+![자사 ID 쿠키 설정을 강조 표시하는 데이터 스트림 구성을 표시하는 플랫폼 UI 이미지](../assets/first-party-id-datastreams.png)
+
+이 설정을 활성화할 때 ID가 저장될 쿠키의 이름을 제공해야 합니다.
+
+자사 ID를 사용하는 경우 타사 ID 동기화를 수행할 수 없습니다. 타사 ID 동기화는 [!DNL Visitor ID] 서비스 및 `UUID` 생성된 서비스입니다. 자사 ID 기능을 사용하는 경우 를 사용하지 않고 ECID가 생성됩니다 [!DNL Visitor ID] 서드파티 ID 동기화를 불가능하게 하는 서비스.
+
+자사 ID를 사용하는 경우, Audience Manager 파트너 ID 동기화가 대부분 를 기반으로 한다는 점에서 Audience Manager 플랫폼의 활성화를 대상으로 하는 파트너 기능은 지원되지 않습니다 `UUIDs` 또는 `DIDs`. 자사 ID에서 파생된 ECID가 `UUID`를 사용하여 주소를 지정할 수 없습니다.
 
 ## 자체 서버를 사용하여 쿠키 설정
 
