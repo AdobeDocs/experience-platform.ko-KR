@@ -2,10 +2,10 @@
 title: Adobe Target v2 확장 릴리스 노트
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장 기능에 대한 최신 릴리스 정보입니다.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: edef000bfe6c4de69a037e2ad6871759c1404580
+source-git-commit: a062305e3ed0eb4d127f93ff37efe15e41eaa601
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 20%
+source-wordcount: '834'
+ht-degree: 17%
 
 ---
 
@@ -14,6 +14,11 @@ ht-degree: 20%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+
+## v0.20.3 (2024년 1월 23일)
+
+- 을(를) 지원하도록 업데이트됨 `at.js` 2.11.4
+- 잘못된 지역 데이터가 배달 API로 전송되지 않도록 하는 버그를 수정했습니다.
 
 ## v0.20.2 (2023년 11월 29일)
 
@@ -62,7 +67,7 @@ ht-degree: 20%
 - 을(를) 지원하도록 업데이트됨 `at.js` v2.8.1
 - 고정 `pageLoad` 매핑되지 않음 `target-global-mbox` ODD 하이브리드 실행 모드에서
 - 에 대한 Analytics 세부 정보 관련 문제가 해결되었습니다. `mbox` 요청
-- 보안 취약성을 해결하기 위해 개발 종속성이 업그레이드되었습니다
+- 보안 취약성을 해결하기 위해 개발 종속성이 업그레이드되었습니다.
 
 ## v0.17.0 (2022년 1월 7일)
 
@@ -142,7 +147,7 @@ ht-degree: 20%
 - adobe.target.getOffer API에 Target Global Mbox 지원 추가됨
 - 매개 변수 및 페이지 로드 매개 변수가 올바르게 처리되지 않는 문제가 해결되었습니다.
 
-## v0.12.0 (2019년 10월 10일)
+## v0.12.0(2019년 10월 10일)
 
 - 업데이트됨 `at.js` v2.2로 변환.
 - ECID(Experience Cloud ID 라이브러리) v4.4와 간의 통합을 위해 성능이 향상되었습니다. `at.js` 2.2.
