@@ -1,9 +1,10 @@
 ---
 title: 컨텍스트
 description: 장치, 환경 또는 위치 데이터를 자동으로 수집합니다.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 911cabec-2afb-4216-b413-80533f826b0e
+source-git-commit: dc2a2ecf7b602d2fcfd3b6c93cecdb6f3368a3f9
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '900'
 ht-degree: 5%
 
 ---
@@ -59,8 +60,34 @@ ht-degree: 5%
 | --- | --- | --- | --- |
 | 현지 시간 | 간소화된 확장에서 최종 사용자의 로컬 타임스탬프 [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) 포맷. | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
 | 로컬 시간대 오프셋 | 사용자가 GMT에서 오프셋된 시간(분)입니다. | `xdm.placeContext.localTimezoneOffset` | `360` |
+| 국가 코드 | 최종 사용자의 국가 코드. | `xdm.placeContext.geo.countryCode` | `US` |
+| 시/도 | 최종 사용자의 시/도 코드입니다. | `xdm.placeContext.geo.stateProvince` | `CA` |
+| 위도 | 최종 사용자 위치의 위도입니다. | `xdm.placeContext.geo._schema.latitude` | `37.3307447` |
+| 경도 | 최종 사용자 위치의 경도입니다. | `xdm.placeContext.geo._schema.longitude` | `-121.8945965` |
 
 {style="table-layout:auto"}
+
+
+### 타임스탬프
+
+다음 `timestamp` 키워드는 이벤트의 타임스탬프에 대한 정보를 수집합니다. 컨텍스트의 이 부분은 제거할 수 없습니다.
+
+| 차원 | 설명 | XDM 경로 | 예제 값 |
+| --- | --- | --- | --- |
+| 이벤트의 타임스탬프 | 간소화된 확장의 최종 사용자에 대한 UTC 타임스탬프 [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) 포맷. | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
+
+{style="table-layout:auto"}
+
+### 구현 세부 사항
+
+다음 `implementationDetails` 키워드는 이벤트를 수집하는 데 사용되는 SDK 버전에 대한 정보를 수집합니다.
+
+| 차원 | 설명 | XDM 경로 | 예제 값 |
+| --- | --- | --- | --- |
+| 이름 | 소프트웨어 개발 키트(SDK) 식별자. 이 필드는 URI를 사용하여 다른 소프트웨어 라이브러리에서 제공하는 식별자 간의 고유성을 개선합니다. | `xdm.implementationDetails.name` | 독립형 라이브러리를 사용하는 경우 값은 입니다. `https://ns.adobe.com/experience/alloy`. 라이브러리가 태그 확장의 일부로 사용되는 경우 값은 입니다. `https://ns.adobe.com/experience/alloy+reactor`. |
+| 버전 | 소프트웨어 개발 키트(SDK) 버전. | `xdm.implementationDetails.version` | 독립형 라이브러리를 사용하는 경우 값은 라이브러리 버전입니다. 라이브러리가 태그 확장의 일부로 사용되는 경우 값은 라이브러리 버전 및 와 연결된 태그 확장 버전입니다. `+`. 예를 들어 라이브러리 버전이 `2.1.0` 및 태그 확장 버전은 입니다. `2.1.3`, 값은 다음과 같습니다 `2.1.0+2.1.3`. |
+| 환경 | 데이터가 수집된 환경입니다. 항상 (으)로 설정됩니다. `browser`. | `xdm.implementationDetails.environment` | `browser` |
+
 
 ### 높은 엔트로피 클라이언트 힌트
 
