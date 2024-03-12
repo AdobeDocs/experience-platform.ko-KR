@@ -1,14 +1,23 @@
 ---
 title: 타사 쿠키 사용
 description: 서드파티 쿠키를 사용하여 방문자를 식별할 수 있습니다.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
+source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
 
+
 # `thirdPartyCookiesEnabled`
+
+>[!IMPORTANT]
+>
+>Google [발표](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) 는 2024년 하반기에 서드파티 쿠키에 대한 Chrome 지원을 중단할 예정입니다. 따라서 타사 쿠키는 더 이상 주요 브라우저에서 지원되지 않습니다.
+>
+>이 변경 사항이 구현되면 Adobe은 다음에 대한 지원을 중단합니다. `demdex` 현재 웹 SDK에서 지원되는 쿠키입니다.
+
 
 다음 `thirdPartyCookiesEnabled` 속성은 웹 SDK가 서드파티 컨텍스트에서 쿠키를 설정하는지 여부를 결정하는 부울입니다. 이 옵션을 활성화하면 조직이 소유하는 하위 도메인 또는 도메인 간 방문자를 식별하려는 경우 유용합니다. 그러나 많은 최신 브라우저는 서드파티 쿠키의 설정 및 만료를 제한합니다.
 

@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
+source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1777'
 ht-degree: 1%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 1%
 
 이 문서에서는 Adobe Experience Platform Web SDK에 대한 릴리스 정보를 다룹니다.
 Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확장 릴리스 노트](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+>[!IMPORTANT]
+>
+>Google [발표](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) 는 2024년 하반기에 서드파티 쿠키에 대한 Chrome 지원을 중단할 예정입니다. 따라서 타사 쿠키는 더 이상 주요 브라우저에서 지원되지 않습니다.
+>
+>이 변경 사항이 구현되면 Adobe은 다음에 대한 지원을 중단합니다. `demdex` 현재 웹 SDK에서 지원되는 쿠키입니다.
 
 ## 버전 2.19.2 - 2024년 1월 10일
 
