@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 2월
 description: Adobe Experience Platform의 2024년 2월 릴리스 정보.
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
+source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
 workflow-type: tm+mt
 source-wordcount: '1244'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -24,10 +25,11 @@ Experience Platform의 기존 기능 업데이트:
 ## 경고 {#alerts}
 
 Experience Platform을 사용하면 다양한 플랫폼 활동에 대한 이벤트 기반 경고를 구독할 수 있습니다. 다음을 통해 다양한 경고 규칙에 가입할 수 있습니다. [!UICONTROL 경고] Platform 사용자 인터페이스의 탭으로, UI 자체 내에서 또는 이메일 알림을 통해 경고 메시지를 수신하도록 선택할 수 있습니다.
-**새 기능 또는 업데이트된 기능**
 
-| 기능 | 설명 | 
-| --- | --- | 
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
 | 경고 내역 탭 | Experience Platform 관리자는 경고 구독자 관리 기능을 사용하여 Adobe 사용자 ID, 외부 이메일 주소 또는 이메일 그룹 목록에 경고를 할당할 수 있습니다. 자세한 내용은 [경고 UI 설명서](../../observability/alerts/ui.md) 기록 탭에 대한 자세한 내용은 |
 
 {style="table-layout:auto"}
