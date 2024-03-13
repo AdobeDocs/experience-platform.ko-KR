@@ -3,10 +3,10 @@ title: 지능형 재참여
 description: 주요 전환 순간에 강력한 연결 환경을 제공하여 방문 빈도가 낮은 고객을 지능적으로 재참여시킵니다.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
 workflow-type: tm+mt
 source-wordcount: '3772'
-ht-degree: 48%
+ht-degree: 47%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 48%
 포기한 제품 검색 시나리오는 웹 사이트와 모바일 앱 모두에서 포기한 제품 검색을 대상으로 합니다. 이 시나리오는 제품을 보았으나 장바구니에 구매하거나 추가하지 않은 경우에 트리거됩니다. 이 예에서는 지난 24시간 내에 목록 추가가 없는 경우 3일 후에 브랜드 참여가 트리거됩니다.<p>![고객 인텔리전트 포기 제품 검색 시나리오 높은 수준의 시각적 개요.](../intelligent-re-engagement/images/re-engagement-journey.png "고객 인텔리전트 포기 제품 검색 시나리오 높은 수준의 시각적 개요."){width="1920" zoomable="yes"}</p>
 
 1. 스키마 및 데이터 세트를 만든 다음 를 활성화합니다. [!UICONTROL 프로필].
-2. Web SDK, Mobile SDK 또는 API를 통해 데이터를 Experience Platform에 수집합니다. Analytics Data Connector도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
+2. Web SDK, Mobile SDK 또는 API를 통해 데이터를 Experience Platform에 수집합니다. Analytics Source Connector를 활용할 수도 있지만 여정 지연이 발생할 수 있습니다.
 3. ID 그래프를 통해 인증된 웹 및 모바일 앱 방문자에게 연결할 수 있는 추가 프로필 활성화 데이터를 수집합니다.
 4. **고객**&#x200B;이 지난 3일 동안 참여를 실행했는지 확인하기 위해 프로필 목록에서 집중 대상자를 구축합니다.
 5. 에서 구매하지 않은 제품 검색 여정을 만듭니다. [!DNL Adobe Journey Optimizer].
@@ -72,7 +72,7 @@ ht-degree: 48%
 포기한 장바구니 시나리오는 제품을 장바구니에 넣었지만 아직 웹 사이트 및 모바일 앱에서 구매하지 않은 경우에 적용됩니다. 또한 이 방법을 사용하여 유료 미디어 캠페인을 시작하고 중지합니다.<p>![고객이 장바구니를 포기한 시나리오 높은 수준의 시각적 개요.](../intelligent-re-engagement/images/abandoned-cart-journey.png "고객이 장바구니를 포기한 시나리오 높은 수준의 시각적 개요."){width="1920" zoomable="yes"}</p>
 
 1. 스키마 및 데이터 세트를 만들고 [!UICONTROL 프로필].
-2. Web SDK, Mobile SDK 또는 API를 통해 데이터를 Experience Platform에 수집합니다. Analytics Data Connector도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
+2. Web SDK, Mobile SDK 또는 API를 통해 데이터를 Experience Platform에 수집합니다. Analytics Source Connector를 활용할 수도 있지만 여정 지연이 발생할 수 있습니다.
 3. ID 그래프를 통해 인증된 웹 및 모바일 앱 방문자에게 연결할 수 있는 추가 프로필 활성화 데이터를 수집합니다.
 4. **고객**&#x200B;이 장바구니에 품목을 넣었지만 구매를 완료하지 않았는지 확인하기 위해 프로필 목록에서 집중 대상자를 구축합니다. **[!UICONTROL 장바구니에 추가]** 이벤트는 30분 동안 대기한 다음 구매를 확인하는 타이머를 시작합니다. 구매가 완료되면 **고객**&#x200B;이 **[!UICONTROL 장바구니 포기]** 대상자에 추가됩니다.
 5. [!DNL Adobe Journey Optimizer]에서 포기한 장바구니 여정을 만듭니다.
@@ -84,7 +84,7 @@ ht-degree: 48%
 주문 확인 시나리오는 웹사이트와 모바일 앱을 통한 제품 구매에 초점이 맞춰져 있다.<p>![고객 주문 확인 시나리오 높은 수준의 시각적 개요.](../intelligent-re-engagement/images/order-confirmation-journey.png "고객 주문 확인 시나리오 높은 수준의 시각적 개요."){width="1920" zoomable="yes"}</p>
 
 1. 스키마 및 데이터 세트를 만든 다음 를 활성화합니다. [!UICONTROL 프로필].
-2. Web SDK, Mobile SDK 또는 API를 통해 데이터를 Experience Platform에 수집합니다. Analytics Data Connector도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
+2. Web SDK, Mobile SDK 또는 API를 통해 데이터를 Experience Platform에 수집합니다. Analytics Source Connector를 활용할 수도 있지만 여정 지연이 발생할 수 있습니다.
 3. ID 그래프를 통해 인증된 웹 및 모바일 앱 방문자에게 연결할 수 있는 추가 프로필 활성화 데이터를 수집합니다.
 4. [!DNL Adobe Journey Optimizer]에서 확인 여정을 만듭니다.
 5. [!DNL Adobe Journey Optimizer]는 선호 채널을 사용하여 주문 확인 메시지를 보냅니다.
