@@ -2,9 +2,9 @@
 title: Experience Platform 사용자 인터페이스를 사용하여 Salesforce 계정을 연결합니다.
 description: 사용자 인터페이스를 사용하여 Salesforce 계정을 연결하고 CRM 데이터를 Experience Platform 상태로 만드는 방법을 알아봅니다.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
+source-git-commit: a5ecd4ab1c543805870b846cfe0fccc5474333d4
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 | `username` | 의 사용자 이름 [!DNL Salesforce] 사용자 계정입니다. |
 | `password` | 에 대한 암호 [!DNL Salesforce] 사용자 계정입니다. |
 | `securityToken` | 에 대한 보안 토큰 [!DNL Salesforce] 사용자 계정입니다. |
-| `apiVersion` | (선택 사항) 의 REST API 버전 [!DNL Salesforce] 사용 중인 인스턴스. 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. |
+| `apiVersion` | (선택 사항) 의 REST API 버전 [!DNL Salesforce] 사용 중인 인스턴스. API 버전의 값은 십진수로 형식을 지정해야 합니다. 예를 들어 API 버전을 사용하는 경우 `52`을 누르고 값을 다음으로 입력해야 합니다. `52.0` 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. |
 
 인증에 대한 자세한 내용은 [이 [!DNL Salesforce] 인증 안내서](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 

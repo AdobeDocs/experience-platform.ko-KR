@@ -5,10 +5,10 @@ title: 흐름 서비스 API를 사용하여 Salesforce 기본 연결 만들기
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Salesforce 계정에 연결하는 방법에 대해 알아봅니다.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
+source-git-commit: 27ad8812137502d0a636345852f0cae5d01c7b23
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 5%
+source-wordcount: '511'
+ht-degree: 4%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 5%
 | `username` | 의 사용자 이름 [!DNL Salesforce] 사용자 계정입니다. |
 | `password` | 에 대한 암호 [!DNL Salesforce] 사용자 계정입니다. |
 | `securityToken` | 에 대한 보안 토큰 [!DNL Salesforce] 사용자 계정입니다. |
-| `apiVersion` | (선택 사항) 의 REST API 버전 [!DNL Salesforce] 사용 중인 인스턴스. 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. |
+| `apiVersion` | 선택 사항) 의 REST API 버전 [!DNL Salesforce] 사용 중인 인스턴스. API 버전의 값은 십진수로 형식을 지정해야 합니다. 예를 들어 API 버전을 사용하는 경우 `52`을 누르고 값을 다음으로 입력해야 합니다. `52.0` 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 에 대한 연결 사양 ID [!DNL Salesforce] 은(는) `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 시작하기에 대한 자세한 내용은 다음을 참조하십시오. [이 Salesforce 문서](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
@@ -46,7 +46,7 @@ ht-degree: 5%
 
 Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../../../landing/api-guide.md).
 
-## 기본 연결을 만듭니다
+## 기본 연결 만들기
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
