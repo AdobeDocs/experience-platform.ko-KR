@@ -6,7 +6,7 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 36%
@@ -321,5 +321,5 @@ ht-degree: 36%
 * [FAQ](./faq.md)
 * [용어 업데이트](./term-updates.md)
 * [Internet Explorer 10 및 11에 대한 지원 중단](./ie-deprecation.md)
-* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)
+* [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 개요
 description: Adobe Experience Platform을 사용하면 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험을 더 잘 설계하고 전달하기 전에 고객 데이터를 중앙 집중화 및 표준화할 수 있습니다.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 2%
@@ -64,7 +64,7 @@ Adobe은 Experience Platform 위에 여러 애플리케이션 서비스를 구�
 * [**용어집**](glossary.md)\
   Adobe Experience Platform 용어를 검토하십시오.
 
-* [**릴리스 정보**](https://www.adobe.com/go/platform-release-notes-kr)\
+* [**릴리스 정보**](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)\
   가장 최근 항목에 대한 정보 찾기 [!DNL Experience Platform] 이전 릴리스를 릴리스하고 검토하십시오.
 
 * [**문제 해결 안내서**](troubleshooting.md)\

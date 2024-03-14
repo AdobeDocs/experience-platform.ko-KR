@@ -5,10 +5,10 @@ breadcrumb-title: Data Governance 안내서
 user-guide-description: 레이블, 마케팅 활동 및 거버넌스 정책 사용을 통해 데이터 사용 제한을 적용합니다.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '90'
-ht-degree: 42%
+ht-degree: 41%
 
 ---
 
@@ -38,4 +38,4 @@ ht-degree: 42%
    * [마케팅 액션](api/marketing-actions.md)
    * [평가](api/evaluation.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)
+* [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

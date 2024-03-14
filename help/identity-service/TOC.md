@@ -5,10 +5,10 @@ breadcrumb-title: Platform Identity Service 안내서
 user-guide-description: 다양한 디바이스와 시스템에서 고객 ID를 연결하여 개인화된 디지털 경험을 전달할 수 있습니다.
 feature: Identities
 role: Admin,Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 29%
+ht-degree: 28%
 
 ---
 
@@ -43,4 +43,4 @@ ht-degree: 29%
    - [예제 시나리오](./identity-graph-linking-rules/example-scenarios.md)
 - [개인 정보 보호 요청 처리](privacy.md)
 - [문제 해결 안내서](troubleshooting-guide.md)
-- [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)
+- [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

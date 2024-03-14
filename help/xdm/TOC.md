@@ -5,7 +5,7 @@ breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: Experience Platform 내의 경험 데이터 모델(XDM) 시스템 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법을 알아봅니다.
 feature: Schemas
 role: Developer
-source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 15%
@@ -228,4 +228,4 @@ ht-degree: 15%
    * [애드혹 스키마 만들기](tutorials/ad-hoc.md)
 * [문제 해결 안내서](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)
+* [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

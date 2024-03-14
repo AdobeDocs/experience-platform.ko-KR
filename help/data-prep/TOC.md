@@ -4,10 +4,10 @@ user-guide-title: 데이터 준비 안내서
 user-guide-description: Adobe Experience Platform으로 수집할 데이터를 준비하고 데이터 준비를 통해 데이터를 매핑, 변환 및 검증하는 방법을 알아보십시오.
 feature: Data Prep
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '61'
-ht-degree: 59%
+ht-degree: 57%
 
 ---
 
@@ -27,4 +27,4 @@ ht-degree: 59%
 - [매핑 세트](mapping-set.md)
 - [스트림 업데이트](upserts.md)
 - [문제 해결 안내서](troubleshooting-guide.md)
-- [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)
+- [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

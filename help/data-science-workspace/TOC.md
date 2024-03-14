@@ -6,7 +6,7 @@ user-guide-description: 머신 러닝을 활용하여 Adobe Sensei 및 JupyterLa
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 18%
@@ -65,4 +65,4 @@ ht-degree: 18%
    * [서비스에서 자동화된 교육 및 채점 예약(UI)](models-recipes/schedule-models-ui.md)
 * [문제 해결 안내서](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Platform 릴리스 정보](https://www.adobe.com/go/platform-release-notes-kr)
+* [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
