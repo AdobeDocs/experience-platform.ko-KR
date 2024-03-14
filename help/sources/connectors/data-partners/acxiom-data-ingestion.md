@@ -1,34 +1,29 @@
 ---
-title: Acxiom 전망 데이터 가져오기
-description: UI를 사용하여 Acxiom Prospecting Data를 Adobe Experience Platform 및 Adobe Real-time Customer Data Platform에 연결하는 방법을 알아봅니다.
+title: Acxiom 데이터 섭취
+description: 수집 방법 알아보기 [!DNL Acxiom] 데이터를 Real-time Customer Data Platform으로 이동하고, 자사 프로필을 보강하고, 대상자를 개선하고, 마케팅 채널 전반에서 활성화합니다.
 badge: Beta
-exl-id: 6df674d9-c14b-42ea-a287-5377484e567d
 source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
 
-# [!DNL Acxiom Prospecting Data Import]
+# [!DNL Acxiom Data Ingestion]
 
 >[!NOTE]
 >
 >다음 [!DNL Acxiom Prospecting Data Import] 소스는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
-Adobe Experience Platform은 데이터 파트너 애플리케이션에서 데이터를 수집할 수 있도록 지원합니다. 데이터 및 ID 파트너에 대한 지원은 다음과 같습니다 [!DNL Acxiom Prospecting Data Import].
+사용 [!DNL Acxiom Data Ingestion] 수집할 소스 [!DNL Acxiom] 데이터를 Real-time Customer Data Platform으로 가져와서 자사 프로필을 보강합니다. 그러면 다음을 사용할 수 있습니다. [!DNL Acxiom]-향상된 자사 프로필을 통해 대상자를 개선하고 마케팅 채널 전반에서 활성화합니다.
 
-[!DNL Acxiom]의 Adobe Real-time Customer Data Platform용 Prospect Data Import 는 잠재 고객을 최대한 활용하기 위한 프로세스입니다. [!DNL Acxiom] 안전한 내보내기를 통해 Real-Time CDP 자사 데이터를 가져오고 수상 경력에 빛나는 위생 및 id 해결 시스템을 통해 해당 데이터를 실행합니다. 비표시 목록으로 활용할 수 있는 데이터 파일이 생성됩니다. 그런 다음 이 데이터 파일은 [!DNL Acxiom Global] 데이터베이스를 사용하여 가져오기에 대해 잠재 고객 목록을 사용자 지정할 수 있습니다.
+![acxiom-data-ingestion-workflow](../../images/tutorials/create/acxiom-data-enhancement-import/acxiom-data-ingestion.png)
 
-다음을 사용할 수 있습니다. [!DNL Acxiom] 소스에서 응답을 검색하고 매핑할 수 있습니다 [!DNL Acxiom] Prospect Service 사용 [!DNL Amazon S3] 드롭포인트입니다.
+을(를) 설정하는 방법에 대한 자세한 내용은 아래 문서를 참조하십시오 [!DNL Acxiom Data Ingestion] 소스 계정입니다.
 
-![acxiom-prospect-workflow](../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/acxiom-prospecting.png)
+## 전제 조건 {#prerequisites}
 
-을(를) 설정하는 방법에 대한 자세한 내용은 아래 문서를 참조하십시오 [!DNL Acxiom Prospecting Data Import] 소스 계정입니다.
-
-## 전제 조건
-
-Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대한 유효한 값을 제공해야 합니다.
+을(를) 연결하려면 [!DNL Acxiom Data Ingestion] 계정을 Experience Platform 하려면 다음 인증 자격 증명에 대한 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | --- | --- |
@@ -43,9 +38,9 @@ Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대
 
 ### Experience Platform에 대한 권한 구성
 
-둘 다 있어야 합니다. **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 에 연결하기 위해 계정에 대해 활성화된 권한 [!DNL Acxiom Prospecting Data Import] Experience Platform 계정. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/abac/ui/permissions.md).
+둘 다 있어야 합니다. **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 에 연결하기 위해 계정에 대해 활성화된 권한 [!DNL Acxiom Data Ingestion] Experience Platform 계정. 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오. 자세한 내용은 [액세스 제어 UI 안내서](../../../access-control/ui/overview.md).
 
-## 파일 및 디렉터리에 대한 이름 지정 제약 조건
+### 파일 및 디렉터리에 대한 이름 지정 제약 조건
 
 아래 나열된 제한 사항은 클라우드 스토리지 파일 또는 디렉토리의 이름을 지정할 때 고려해야 합니다.
 
@@ -58,4 +53,4 @@ Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대
 
 ## 다음 단계
 
-이 문서를 읽고 데이터를 가져올 때 필요한 필수 구성 요소 설정을 완료했습니다. [!DNL Acxiom] Experience Platform 계정. 이제 의 안내서로 진행할 수 있습니다. [연결 중 [!DNL Acxiom Prospecting Data Import] 사용자 인터페이스를 사용하여 Experience Platform](../../tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md).
+이 문서를 읽고 데이터를 가져올 때 필요한 필수 구성 요소 설정을 완료했습니다. [!DNL Acxiom] Experience Platform 계정. 이제 의 안내서로 진행할 수 있습니다. [연결 중 [!DNL Acxiom Data Ingestion] 사용자 인터페이스를 사용하여 Experience Platform](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).

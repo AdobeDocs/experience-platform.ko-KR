@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
+source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1027'
 ht-degree: 10%
 
 ---
@@ -93,6 +93,7 @@ ht-degree: 10%
       - [Snowflake 커넥터](connectors/databases/snowflake.md)
       - [Teradata 밴티지 커넥터](connectors/databases/teradata-vantage.md)
    - 데이터 및 ID 파트너 {#data-partner}
+      - [Acxiom 데이터 섭취](connectors/data-partners/acxiom-data-ingestion.md)
       - [Acxiom 전망 데이터 가져오기](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
    - 전자 상거래 {#ecommerce}
@@ -298,8 +299,9 @@ ht-degree: 10%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata 밴티지](tutorials/ui/create/databases/teradata-vantage.md)
       - 데이터 및 ID 파트너 {#data-partner}
-         - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+         - [Acxiom 데이터 섭취](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Acxiom 전망 데이터 가져오기](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
       - 전자 상거래 {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
