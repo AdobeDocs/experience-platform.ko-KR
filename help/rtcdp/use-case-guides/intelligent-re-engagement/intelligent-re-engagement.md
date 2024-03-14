@@ -3,10 +3,10 @@ title: 지능형 재참여
 description: 주요 전환 순간에 강력한 연결 환경을 제공하여 방문 빈도가 낮은 고객을 지능적으로 재참여시킵니다.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
+source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
 workflow-type: tm+mt
-source-wordcount: '3772'
-ht-degree: 47%
+source-wordcount: '3894'
+ht-degree: 48%
 
 ---
 
@@ -147,7 +147,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 #### 고객 디지털 트랜잭션 스키마
 
-이 스키마는 웹 사이트 또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 다음 위치에 수집됩니다 [!DNL Adobe Experience Platform] 경유 [웹 SDK](/help/web-sdk/home.md) 또한 여정 트리거, 자세한 온라인 고객 분석 및 향상된 대상 기능에 사용되는 다양한 검색 및 전환 이벤트를 참조해야 합니다.
+이 스키마는 웹 사이트 또는 관련 디지털 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구조화하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 다음 위치에 수집됩니다 [!DNL Adobe Experience Platform] 경유 [웹 SDK](/help/web-sdk/home.md) 또한 여정 트리거, 자세한 온라인 고객 분석, 향상된 대상 기능 및 개인화된 메시징에 사용되는 다양한 찾아보기 및 전환 이벤트를 참조해야 합니다.
 
 고객 디지털 거래 스키마는 로 표시됩니다. [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스.
 
@@ -178,6 +178,25 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++
 
++++상거래 세부 정보(필드 그룹)
+
+다음 [상거래 세부 정보](/help/xdm/field-groups/event/commerce-details.md) 필드 그룹은 제품 정보(SKU, 이름, 수량) 및 표준 장바구니 작업(주문, 체크아웃, 포기)과 같은 상거래 데이터를 설명하는 데 사용됩니다.
+
+| 필드 | 설명 |
+| --- | --- |
+| `commerce.cart.cartID` | 장바구니 ID |
+| `commerce.order.orderType` | 제품 주문 유형을 설명하는 오브젝트입니다. |
+| `commerce.order.payments.paymentAmount` | 상품 주문 결제 금액을 설명하는 오브젝트 |
+| `commerce.order.payments.paymentType` | 상품 주문 결제 유형을 설명하는 오브젝트 |
+| `commerce.order.payments.transactionID` | 오브젝트 제품 주문 트랜잭션 ID |
+| `commerce.order.purchaseID` | 오브젝트 제품 주문 구매 ID |
+| `productListItems.name` | 고객이 선택한 제품을 나타내는 항목 이름 목록 |
+| `productListItems.priceTotal` | 고객이 선택한 제품을 나타내는 항목 목록의 총 가격 |
+| `productListItems.product` | 선택한 제품 |
+| `productListItems.quantity` | 고객이 선택한 제품을 나타내는 항목 목록의 수량 |
+
++++
+
 +++외부 소스 시스템 감사 세부 정보(필드 그룹)
 
 외부 소스 시스템 감사 속성은 외부 소스 시스템에 대한 감사 세부 정보를 캡처하는 표준 Experience Data Model(XDM) 데이터 유형입니다.
@@ -186,7 +205,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 #### 고객 오프라인 트랜잭션 스키마
 
-이 스키마는 웹 사이트 외부 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구성하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 POS(또는 유사한 시스템)에서 [!DNL Adobe Experience Platform]으로 수집되며, API 연결을 통해 Platform으로 스트리밍되는 경우가 가장 많습니다. 목적은 여정 트리거, 딥 온라인 및 오프라인 고객 분석, 향상된 대상 기능에 사용되는 다양한 오프라인 전환 이벤트를 참조하는 것입니다.
+이 스키마는 웹 사이트 외부 플랫폼에서 발생하는 고객 활동을 구성하는 이벤트 데이터를 구성하고 참조하는 데 사용됩니다. 이 데이터는 일반적으로 POS(또는 유사한 시스템)에서 [!DNL Adobe Experience Platform]으로 수집되며, API 연결을 통해 Platform으로 스트리밍되는 경우가 가장 많습니다. 그 목적은 여정 트리거, 딥 온라인 및 오프라인 고객 분석, 향상된 대상 기능 및 개인화된 메시징에 사용되는 다양한 오프라인 전환 이벤트를 참조하는 것입니다.
 
 고객 오프라인 트랜잭션 스키마는 로 표시됩니다. [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 클래스.
 
@@ -346,7 +365,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 이 대상자를 설정할 때 다음 필드와 조건이 필요합니다.
 
 * `eventType: commerce.productViews`
-* 및 `THEN` (순차적 이벤트) 제외 `eventType: commerce.productListAdds` 또는 `application.launch` 또는 `web.webpagedetails.pageViews` 또는 `commerce.purchases` (여기에는 온라인과 오프라인이 모두 포함됩니다.)
+* 및 `THEN` (순차적 이벤트) 제외 `eventType: commerce.productListAdds` 및 `application.launch` 및 `web.webpagedetails.pageViews` 및 `commerce.purchases` (여기에는 온라인과 오프라인이 모두 포함됩니다.)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 
@@ -370,7 +389,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 이 대상자를 설정할 때 다음 필드와 조건이 필요합니다.
 
-* `eventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `eventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 1 day` (스트리밍)
 
 +++
@@ -381,7 +400,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 이 대상자를 설정할 때 다음 필드와 조건이 필요합니다.
 
-* `EventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `EventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 3 days` (일괄 처리)
 
 +++
@@ -395,7 +414,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 이 대상자를 설정할 때 다음 필드와 조건이 필요합니다.
 
 * `eventType: commerce.productListAdds`
-   * `Timestamp: >= 1 days before now and <= 4 days before now `
+   * `Timestamp: >= 1 days before now AND <= 4 days before now `
 * `eventType: commerce.purchases`
    * `Timestamp: <= 4 days before now`
 * `eventType: commerce.productListRemovals`
