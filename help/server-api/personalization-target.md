@@ -2,9 +2,9 @@
 title: Adobe Target을 통한 개인화
 description: Server API를 사용하여 Adobe Target에서 생성된 개인화된 경험을 전달하고 렌더링하는 방법에 대해 알아봅니다.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ddffe9bf30741b457f7de1099b50ac1624fca927
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '664'
 ht-degree: 1%
 
 ---
@@ -287,3 +287,9 @@ Edge Network는 아래 응답과 유사한 응답을 반환합니다.
 | `items[].data.id` | 제안된 오퍼의 ID입니다. | `"id": "282484"` |
 | `items[].data.format` | 제안된 오퍼와 연관된 콘텐츠의 형식입니다. | `"format: "application/json` |
 | `items[].data.content` | 제안된 오퍼와 연관된 콘텐츠. 호출 애플리케이션의 콘텐츠 개인화에 사용됩니다. | `"content": "<CONTENT CONFIGURED IN TARGET>"` |
+
+## 서버측 개인화 샘플 애플리케이션 {#sample}
+
+에 있는 샘플 애플리케이션 [이 URL](https://github.com/adobe/alloy-samples/tree/main/target/personalization-server-side) Adobe Experience Platform을 사용하여 Adobe Target에서 개인화 콘텐츠를 가져오는 방법을 보여 줍니다. 웹 페이지는 반환된 개인화 콘텐츠에 따라 변경됩니다.
+
+이 샘플은 _아님_ 과 같은 클라이언트측 라이브러리에 의존 [!DNL Web SDK] 을 클릭하여 개인화 콘텐츠를 가져옵니다. 대신 Adobe Experience Platform API를 사용하여 개인화 콘텐츠를 가져옵니다. 그런 다음 반환된 개인화 컨텐츠를 기반으로 HTML 서버측을 생성합니다.
