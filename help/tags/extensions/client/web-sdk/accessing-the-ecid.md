@@ -2,10 +2,10 @@
 title: ECID 액세스
 description: 데이터 준비 또는 태그에서 Experience Cloud ID에 액세스하는 방법 알아보기
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e01dfcf3cccea589083a23171f4b8d9ecad58233
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 3%
+source-wordcount: '253'
+ht-degree: 1%
 
 ---
 
@@ -33,9 +33,9 @@ xdm.identityMap.ECID[0].id
 에 액세스해야 하는 경우 [!DNL ECID] 클라이언트측에서는 아래 설명된 대로 태그 접근 방식을 사용합니다.
 
 1. 속성이 다음으로 구성되었는지 확인합니다. [규칙 구성 요소 시퀀싱](../../../ui/managing-resources/rules.md#sequencing) 활성화되었습니다.
-1. 새 규칙을 만듭니다.
+1. 새 규칙을 만듭니다. 이 규칙은 을(를) 캡처하는 데만 사용해야 합니다. [!DNL ECID] 다른 중요한 작업 없이
 1. 추가 [!UICONTROL 라이브러리가 로드됨] 이벤트를 규칙에 추가합니다.
-1. 추가 [!UICONTROL 사용자 지정 조건] 다음 코드를 사용하여 규칙에 대한 작업(SDK 인스턴스에 대해 구성한 이름이 이라고 가정) `alloy`):
+1. 추가 [!UICONTROL 사용자 지정 코드] 다음 코드를 사용하여 규칙에 대한 작업(SDK 인스턴스에 대해 구성한 이름이 이라고 가정) `alloy` 그리고 같은 이름의 데이터 요소가 이미 없습니다.)
 
    ```js
     return alloy("getIdentity")
