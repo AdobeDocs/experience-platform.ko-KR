@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 73785443a9d07dfde3ef1060f7886dfed484925b
+source-git-commit: 5db7e1a88373dcc5dd266f6c082985f4055a1b0f
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1215'
 ht-degree: 4%
 
 ---
@@ -140,6 +140,8 @@ ht-degree: 4%
    * 데이터 관리 플랫폼 대상 {#data-management}
       * [DMP(데이터 관리 플랫폼) 대상 개요](./catalog/data-management/overview.md)
       * [Audience Manager DIL 확장](./catalog/data-management/aam-dil-extension.md)
+   * 데이터 및 ID 파트너 {#data-partner}
+      * [Acxiom 잠재 고객 억제](./catalog/data-partner/acxiom-prospect-suppression.md)
    * eCommerce 대상 {#ecommerce}
       * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * 이메일 대상 {#email}
