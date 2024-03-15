@@ -1,10 +1,8 @@
 ---
 title: 흐름 서비스 API를 사용하여 Streaming SDK에 대한 흐름 사양 업데이트
 description: 다음 문서에서는 셀프 서비스 소스(Streaming SDK)용 흐름 서비스 API를 사용하여 흐름 사양을 검색하고 업데이트하는 방법에 대한 단계를 제공합니다.
-hide: true
-hidefromtoc: true
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 1%
@@ -49,7 +47,7 @@ curl -X GET \
 
 **응답**
 
-성공한 응답은 질의된 플로우 사양의 상세내역을 반환합니다.
+성공적인 응답은 질의된 플로우 사양의 상세내역을 반환합니다.
 
 ```json
 {

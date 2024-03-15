@@ -1,13 +1,11 @@
 ---
 title: 스트리밍 SDK UI용 설명서 셀프서비스 템플릿
 description: UI를 사용하여 소스에서 Adobe Experience Platform으로 스트리밍 데이터를 가져오는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 1%
+source-wordcount: '1186'
+ht-degree: 0%
 
 ---
 
@@ -101,7 +99,7 @@ Platform은 선택한 대상 스키마 또는 데이터 세트를 기반으로 �
 
 ![소스 워크플로우의 매핑 단계입니다.](../assets/streaming/mapping.png)
 
-## 검토
+## 리뷰
 
 다음 **[!UICONTROL 리뷰]** 새 데이터 흐름을 만들기 전에 검토할 수 있는 단계가 나타납니다. 세부 사항은 다음 범주 내에서 그룹화됩니다.
 
