@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 780d1ad0886d474d2584050ab763259ba8fb8a83
+source-git-commit: f10716ea10c4e3962cb2d4be70c34ca048d3a869
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1031'
 ht-degree: 10%
 
 ---
@@ -115,6 +115,7 @@ ht-degree: 10%
    - 결제 {#payments}
       - [PayPal 커넥터](connectors/payments/paypal.md)
       - [정사각형 커넥터](connectors/payments/square.md)
+      - [Stripe 커넥터](connectors/payments/stripe.md)
    - 프로토콜 {#protocols}
       - [범용 OData 커넥터](connectors/protocols/odata.md)
       - [일반 REST API 커넥터](connectors/protocols/generic-rest.md)
@@ -195,6 +196,7 @@ ht-degree: 10%
       - 결제 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
          - [정사각형](tutorials/api/create/payments/square.md)
+         - [Stripe](tutorials/api/create/payments/stripe.md)
       - 프로토콜 {#protocols}
          - [일반 OData](tutorials/api/create/protocols/odata.md)
          - [일반 REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -323,6 +325,7 @@ ht-degree: 10%
       - 결제 {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
          - [정사각형](tutorials/ui/create/payments/square.md)
+         - [Stripe](tutorials/ui/create/payments/stripe.md)
       - 프로토콜 {#protocols}
          - [일반 OData](tutorials/ui/create/protocols/odata.md)
       - 스트리밍 {#streaming}
