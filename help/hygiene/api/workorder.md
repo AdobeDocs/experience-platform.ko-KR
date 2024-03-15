@@ -3,7 +3,7 @@ title: 작업 주문 API 끝점
 description: 데이터 위생 API의 /workorder 끝점을 사용하면 ID에 대한 삭제 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 1%
@@ -126,9 +126,9 @@ curl -X POST \
 
 {style="table-layout:auto"}
 
-## 레코드 삭제 상태 검색(#lookup)
+## 레코드 삭제 상태 검색 {#lookup}
 
-다음 이후 [레코드 삭제 요청 만들기](#create), GET 요청을 사용하여 상태를 확인할 수 있습니다.
+이후 [레코드 삭제 요청 만들기](#create), GET 요청을 사용하여 상태를 확인할 수 있습니다.
 
 **API 형식**
 

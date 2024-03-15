@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service UI 개요
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 요청을 조정하고 모니터링합니다.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
+source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 18%
@@ -18,7 +18,7 @@ ht-degree: 18%
 >title="데이터 주제 요청"
 >abstract="이 위젯은 지정된 날짜에 Privacy Service에서 처리한 제출 및 완료된 데이터 주체 요청의 수를 보여 줍니다. Privacy Service 프로세스에 대한 자세한 내용을 보려면 왼쪽 탐색 메뉴의 **요청**&#x200B;을 선택합니다."
 
-PRIVACY SERVICE UI [!DNL Privacy Service] 을(를) 사용하면 다양한 Adobe Experience Cloud 애플리케이션에서 개인 정보 보호 및 규정 준수 요청을 조정할 수 있습니다.
+Privacy Service UI를 통해 다양한 Adobe Experience Cloud 애플리케이션에서 개인 정보 보호 및 규정 준수 요청을 조정할 수 있습니다.
 
 >[!NOTE]
 >
