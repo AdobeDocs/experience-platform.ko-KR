@@ -3,9 +3,9 @@ title: Acxiom 잠재 고객 억제
 description: Acxiom 대상에 자사 대상을 내보내고 Acxiom이 알려지거나 전환된 고객을 억제하도록 합니다. 그런 다음 Acxiom 소스 커넥터를 사용하여 알려진 고객 또는 전환된 고객이 제거된 Acxiom의 잠재 목록을 수집하고 활성화합니다.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c881f8375bc0eccb8e64666a888735c03018421c
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1466'
 ht-degree: 2%
 
 ---
@@ -102,7 +102,7 @@ Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대
 
 ### 기존 계정
 
-Acxiom Prospect-Suppression 카드를 사용하여 이미 정의된 계정은 목록 팝업에 표시되며, 선택되면 계정에 대한 세부 정보가 제공됩니다.  이 아이콘은 로 이동하면 UI의 아래 예제에 표시됩니다. **대상** > **계정**;
+다음을 사용하여 이미 정의된 계정 [!DNL Acxiom Prospect Suppression] 대상이 목록 팝업에 나타납니다. 선택하면 오른쪽 레일에서 계정에 대한 세부 정보를 볼 수 있습니다. 로 이동하면 UI에서 예를 봅니다. **[!UICONTROL 대상]** > **[!UICONTROL 계정]**:
 
 ![기존 계정](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
 
@@ -145,14 +145,14 @@ Acxiom Prospect-Suppression 카드를 사용하여 이미 정의된 계정은 �
 
 | 대상 필드 | 소스 설명 |
 |--------------|-------------------------------------------------------------|
-| 이름 | Experience Platform의 person.name.fullName 값입니다. |
-| 이름 | Experience Platform의 person.name.firstName 값입니다. |
-| 성 | Experience Platform의 person.name.lastName 값입니다. |
-| address1 | Experience Platform의 mailingAddress.street1 값입니다. |
-| address2 | Experience Platform의 mailingAddress.street2 값입니다. |
-| city | Experience Platform의 mailingAddress.city 값입니다. |
-| state | Experience Platform의 mailingAddress.state 값입니다. |
-| zip | Experience Platform의 mailingAddress.postalCode 값입니다. |
+| 이름 | 다음 `person.name.fullName` Experience Platform의 값입니다. |
+| 이름 | 다음 `person.name.firstName` Experience Platform의 값입니다. |
+| 성 | 다음 `person.name.lastName` Experience Platform의 값입니다. |
+| address1 | 다음 `mailingAddress.street1` Experience Platform의 값입니다. |
+| address2 | 다음 `mailingAddress.street2` Experience Platform의 값입니다. |
+| city | 다음 `mailingAddress.city` Experience Platform의 값입니다. |
+| state | 다음 `mailingAddress.state` Experience Platform의 값입니다. |
+| zip | 다음 `mailingAddress.postalCode` Experience Platform의 값입니다. |
 
 {style="table-layout:auto"}
 
