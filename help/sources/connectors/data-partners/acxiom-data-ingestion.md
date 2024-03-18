@@ -2,7 +2,7 @@
 title: Acxiom 데이터 섭취
 description: 수집 방법 알아보기 [!DNL Acxiom] 데이터를 Real-time Customer Data Platform으로 이동하고, 자사 프로필을 보강하고, 대상자를 개선하고, 마케팅 채널 전반에서 활성화합니다.
 badge: Beta
-source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
+source-git-commit: d841975249262fa5908a408e4c27c5f76b92d96e
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%
@@ -54,3 +54,4 @@ ht-degree: 1%
 ## 다음 단계
 
 이 문서를 읽고 데이터를 가져올 때 필요한 필수 구성 요소 설정을 완료했습니다. [!DNL Acxiom] Experience Platform 계정. 이제 의 안내서로 진행할 수 있습니다. [연결 중 [!DNL Acxiom Data Ingestion] 사용자 인터페이스를 사용하여 Experience Platform](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+
