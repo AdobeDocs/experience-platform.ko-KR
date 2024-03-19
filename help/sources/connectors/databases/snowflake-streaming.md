@@ -5,7 +5,7 @@ badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
 workflow-type: tm+mt
 source-wordcount: '710'
 ht-degree: 1%
@@ -47,7 +47,6 @@ Experience Platform은 의 데이터 스트리밍을 지원합니다. [!DNL Snow
 | `role` | (선택 사항) 지정된 연결에 대해 사용자에게 제공할 수 있는 사용자 정의 역할입니다. 제공되지 않은 경우 이 값의 기본값은 입니다. `public`. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 에 대한 연결 사양 ID [!DNL Snowflake] 은(는) `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
-인증에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL Snowflake] 문서](<https://docs.snowflake.com/en/user-guide/key-pair-auth.html>).
 
 ### 역할 설정 구성 {#configure-role-settings}
 
@@ -83,3 +82,4 @@ Experience Platform은 의 데이터 스트리밍을 지원합니다. [!DNL Snow
 다음 튜토리얼에서는 를 연결하는 방법에 대한 단계를 제공합니다. [!DNL Snowflake] API를 사용하여 스트리밍 소스에서 Experience Platform:
 
 * [에서 데이터 스트리밍 [!DNL Snowflake] 흐름 서비스 API를 사용하여 Experience Platform 할 데이터베이스](../../tutorials/api/create/databases/snowflake-streaming.md)
+* [에서 데이터 스트리밍 [!DNL Snowflake] Experience Platform Experience Platform 인터페이스의 소스 작업 영역을 사용하여 내보낼 데이터베이스](../../tutorials/ui/create/databases/snowflake-streaming.md)

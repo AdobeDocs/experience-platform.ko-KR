@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 UI 안내서
 description: Adobe Experience Platform UI에서 대상 및 세그먼트 정의를 만들고 관리하는 방법을 알아봅니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: 0e8147a9e4589747b212ce1dd0f0bc215f3bab4c
 workflow-type: tm+mt
-source-wordcount: '3933'
+source-wordcount: '4018'
 ht-degree: 3%
 
 ---
@@ -212,6 +212,18 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 | [!UICONTROL 수정한 날짜] | 대상자의 마지막 수정 날짜를 기준으로 필터링할 수 있습니다. 대상자를 마지막으로 수정한 시기를 필터링할 날짜 범위를 선택할 수 있습니다. |
 
 ![대상 찾아보기 페이지에 사용 가능한 필터가 표시되고 강조 표시됩니다.](../images/ui/overview/filter-audiences.png)
+
+**대량 작업** {#bulk-actions}
+
+또한 최대 25개의 서로 다른 대상을 선택하고 이러한 대상에 대해 다양한 작업을 수행할 수 있습니다. 이러한 작업은 다음과 같습니다. [폴더로 이동](#folders), [태그 편집 또는 적용](#tags), [액세스 레이블 적용](../../access-control/abac/ui/labels.md), 및 [삭제 중](#browse).
+
+![대량 작업에 사용할 수 있는 옵션이 강조 표시됩니다.](../images/ui/overview/bulk-actions.png)
+
+이러한 대상자에게 일괄 작업을 적용할 때 다음 조건이 적용됩니다.
+
+- 본인 **can** 다른 페이지에서 대상을 선택합니다.
+- 본인 **할 수 없음** 대상 활성화에서 사용 중인 대상을 삭제합니다.
+- 필터를 선택하면 선택한 대상자가 **의지** 재설정.
 
 ### 대상자 세부 정보 {#audience-details}
 

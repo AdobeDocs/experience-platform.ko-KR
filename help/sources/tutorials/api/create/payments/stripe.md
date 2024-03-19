@@ -1,10 +1,8 @@
 ---
 title: 다음에서 결제 데이터 수집 [!DNL Stripe] api를 사용하여 Experience Platform 할 계정
 description: 플로우 서비스 API를 사용하여 Stripe 계정에서 Experience Platform으로 결제 데이터를 수집하는 방법에 대해 알아봅니다
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: b5e791882ddb7cb8c87c15d4812470b3bbc9a72e
+source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 1%

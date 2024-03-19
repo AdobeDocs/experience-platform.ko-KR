@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 데이터 세트 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
+source-git-commit: aee82356f1f519398f381e161be14789532561f1
 workflow-type: tm+mt
-source-wordcount: '2769'
-ht-degree: 4%
+source-wordcount: '2932'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 4%
 이 사용 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [데이터 세트](overview.md): 의 데이터 지속성을 위한 스토리지 및 관리 구성 [!DNL Experience Platform].
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): [!DNL Experience Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다.
    * [스키마 컴포지션 기본 사항](../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기](../../xdm/tutorials/create-schema-ui.md): 다음을 사용하여 사용자 지정 XDM 스키마를 구축하는 방법 알아보기 [!DNL Schema Editor] 다음 범위 내 [!DNL Platform] 사용자 인터페이스.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
@@ -41,12 +41,36 @@ ht-degree: 4%
 
 다음에서 [!DNL Experience Platform] UI, 선택 **[!UICONTROL 데이터 세트]** 을(를) 왼쪽 탐색에서 열어 **[!UICONTROL 데이터 세트]** 대시보드입니다. 대시보드에는 조직에서 사용 가능한 모든 데이터 세트가 나열됩니다. 목록에 있는 각 데이터 세트에 대해 이름, 데이터 세트가 준수하는 스키마, 최근 수집 실행 상태 등 세부 정보가 표시됩니다.
 
-![왼쪽 탐색 막대 내의 데이터 세트 항목을 강조 표시하는 이미지입니다.](../images/datasets/user-guide/browse-datasets.png)
+![왼쪽 탐색 막대에서 데이터 세트 항목이 강조 표시된 Platform UI .](../images/datasets/user-guide/browse-datasets.png)
 
 에서 데이터 세트 이름 선택 [!UICONTROL 찾아보기] 탭을 사용하여 액세스 **[!UICONTROL 데이터 세트 활동]** 선택한 데이터 세트에 대한 세부 정보를 표시합니다. 활동 탭에는 메시지 사용률을 시각화한 그래프와 성공/실패한 일괄 처리 집합 목록이 있습니다.
 
-![선택한 데이터 세트에 대한 세부 사항이 강조 표시됩니다.](../images/datasets/user-guide/dataset-activity-1.png)
-![선택한 데이터 세트에 속하는 샘플 배치가 강조 표시됩니다.](../images/datasets/user-guide/dataset-activity-2.png)
+![선택한 데이터 세트의 지표 및 시각화가 강조 표시됩니다.](../images/datasets/user-guide/dataset-activity-1.png)
+![선택한 데이터 세트와 관련된 샘플 배치가 강조 표시됩니다.](../images/datasets/user-guide/dataset-activity-2.png)
+
+## 추가 작업 {#more-actions}
+
+다음을 수행할 수 있습니다. [!UICONTROL 삭제] 또는 [!UICONTROL 프로필에 대한 데이터 세트 활성화] 다음에서 [!UICONTROL 데이터 세트] 세부 사항 보기. 사용 가능한 작업을 보려면 **[!UICONTROL ... 자세히]** UI의 오른쪽 상단에서. 드롭다운 메뉴가 나타납니다.
+
+![를 사용하는 데이터 세트 작업 공간 [!UICONTROL ... 자세히] 드롭다운 메뉴가 강조 표시됩니다.](../images/datasets/user-guide/more-actions.png)
+
+다음을 선택하는 경우 **[!UICONTROL 프로필에 대한 데이터 세트 활성화]**&#x200B;확인 대화 상자가 나타납니다. 선택 **[!UICONTROL 사용]** 선택을 확인합니다.
+
+>[!NOTE]
+>
+>프로필에 대한 데이터 세트를 활성화하려면 데이터 세트가 준수하는 스키마가 실시간 고객 프로필과 호환되어야 합니다. 다음을 참조하십시오. [프로필에 대한 데이터 세트 활성화](#enable-profile) 섹션에 자세히 설명되어 있습니다.
+
+![데이터 세트 활성화 확인 대화 상자.](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
+
+다음을 선택하는 경우 **[!UICONTROL 삭제]**, [!UICONTROL 데이터 세트 삭제] 확인 대화 상자가 나타납니다. 선택 **[!UICONTROL 삭제]** 선택을 확인합니다.
+
+>[!NOTE]
+>
+>시스템 데이터 세트는 삭제할 수 없습니다.
+
+또한 데이터 세트를 삭제하거나 실시간 고객 프로필과 함께 사용할 데이터 세트를 의 인라인 작업에서 추가할 수 있습니다. [!UICONTROL 찾아보기] 탭. 다음을 참조하십시오. [인라인 작업 섹션](#inline-actions) 추가 정보.
+
+![데이터 세트 삭제 확인 대화 상자](../images/datasets/user-guide/delete-confirmation-dialog.png)
 
 ## 인라인 데이터 세트 작업 {#inline-actions}
 
@@ -135,14 +159,14 @@ ht-degree: 4%
 
 ## 데이터 세트 만들기 {#create}
 
-새 데이터 세트를 만들려면 먼저 [데이터 세트] 대시보드의 **[!UICONTROL 데이터 세트 만들기]**&#x200B;를 선택합니다.****
+새 데이터 세트를 만들려면 먼저 **[!UICONTROL 데이터 세트 만들기]** 다음에서 **[!UICONTROL 데이터 세트]** 대시보드입니다.
 
 ![데이터 세트 만들기 버튼이 강조 표시됩니다.](../images/datasets/user-guide/select-create.png)
 
 다음 화면에서는 새 데이터 세트를 만들기 위한 다음 두 가지 옵션이 표시됩니다.
 
 * [스키마에서 데이터 세트 만들기](#schema)
-* [CSV 파일에서 데이터 세트를 만듭니다](#csv)
+* [CSV 파일에서 데이터 세트 만들기](#csv)
 
 ### 기존 스키마로 데이터 세트 만들기 {#schema}
 

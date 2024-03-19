@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스키마 컴포지션 기본 사항
 description: XDM(Experience Data Model) 스키마와 Adobe Experience Platform에서 스키마를 구성하기 위한 빌딩 블록, 원칙 및 모범 사례에 대해 알아봅니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: 1b3d20610a48fc48c84dc4901d7b09db4bb8fa1f
 workflow-type: tm+mt
-source-wordcount: '4229'
+source-wordcount: '4236'
 ht-degree: 6%
 
 ---
@@ -261,7 +261,7 @@ Experience Platform은 다음과 같은 여러 가지 공통 데이터 유형을
 
 >[!NOTE]
 >
->&quot;맵&quot; 필드 유형을 사용하면 단일 키에 대한 여러 값을 포함하여 키-값 쌍 데이터를 사용할 수 있습니다. 맵은 표준 XDM 클래스 및 필드 그룹에서 찾을 수 있지만 스키마 레지스트리 API를 사용하여 사용자 지정 맵을 정의할 수도 있습니다. 다음 튜토리얼 참조: [사용자 정의 필드 정의](../tutorials/custom-fields-api.md#custom-maps) 추가 정보.
+>&quot;맵&quot; 필드 유형을 사용하면 단일 키에 대한 여러 값을 포함하여 키-값 쌍 데이터를 사용할 수 있습니다. 맵은 표준 XDM 클래스 및 필드 그룹에서 찾을 수 있지만 사용자 지정 맵을 정의할 수도 있습니다. 에서 API 튜토리얼 보기 [사용자 정의 맵 필드 정의](../tutorials/custom-fields-api.md#custom-maps) 또는 의 안내서 [UI에서 맵 필드 정의](../ui/fields/map.md) 추가 정보.
 
 ## 컴포지션 예 {#composition-example}
 

@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: f10716ea10c4e3962cb2d4be70c34ca048d3a869
+source-git-commit: 0d85f37ee2da4857205819a3a4dea3f25eaad26e
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1033'
 ht-degree: 10%
 
 ---
@@ -299,6 +299,7 @@ ht-degree: 10%
          - [피닉스](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
+         - [Snowflake 스트리밍](tutorials/ui/create/databases/snowflake-streaming.md)
          - [Teradata 밴티지](tutorials/ui/create/databases/teradata-vantage.md)
       - 데이터 및 ID 파트너 {#data-partner}
          - [Acxiom 데이터 섭취](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)

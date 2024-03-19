@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 준비 매핑 기능
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: ac90dc055a1e4d1d8127899f668e619deab2d19e
 workflow-type: tm+mt
-source-wordcount: '5789'
+source-wordcount: '5792'
 ht-degree: 2%
 
 ---
@@ -289,7 +289,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 >[!NOTE]
 >
->스트리밍 수집에는 다음 분석 함수만 사용할 수 있습니다.
+>WebSDK 및 Adobe Analytics 플로우에 대해 다음 분석 함수만 사용할 수 있습니다.
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
