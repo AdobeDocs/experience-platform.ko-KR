@@ -5,10 +5,10 @@ breadcrumb-title: 액세스 제어 안내서
 user-guide-description: Adobe Admin Console에서 제품 프로필을 사용하여 사용자 권한을 관리할 수 있습니다. 제품 및 샌드박스에 사용자를 할당하는 방법을 알아봅니다.
 feature: Access Control
 role: Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 48%
+source-wordcount: '127'
+ht-degree: 44%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 48%
 * 속성 기반 액세스 제어 {#abac}
    * [개요](abac/overview.md)
    * [전체 안내서](abac/end-to-end-guide.md)
+   * [액세스 레이블을 사용하여 대상 데이터 흐름에 대한 사용자 액세스 관리](/help/access-control/abac/apply-access-labels-destinations.md)
    * 권한 {#permissions-ui}
       * [찾아보기](abac/ui/browse.md)
       * [레이블](abac/ui/labels.md)
