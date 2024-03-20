@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 3월
 description: Adobe Experience Platform의 2024년 3월 릴리스 정보.
-source-git-commit: 709bb15f75bfee5380b779d595b3487080cbb97a
+source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 31%
+source-wordcount: '1177'
+ht-degree: 32%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 31%
 Experience Platform의 기존 기능 업데이트:
 
 - [카탈로그 서비스](#catalog-service)
+- [데이터 수집](#data-collection)
 - [데이터 준비](#data-prep)
 - [대상](#destinations)
 - [경험 데이터 모델 (XDM)](#xdm)
@@ -40,6 +41,20 @@ Experience Platform의 기존 기능 업데이트:
 {style="table-layout:auto"}
 
 카탈로그 서비스에 대한 자세한 내용은 [카탈로그 서비스 개요](../../catalog/home.md)를 참조하십시오.
+
+## 데이터 수집 {#data-collection}
+
+Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe 또는 비 Adobe 대상으로 보강, 변환 및 배포가 가능한 Adobe Experience Platform Edge Network로 보낼 수 있는 기술 제품군을 제공합니다.
+
+**새로운 기능**
+
+| 유형 | 기능 | 설명 |
+| --- | --- | --- |
+| 확장 | [!DNL Merkury] 태그 확장 | 다음 [[!DNL Merkury] 태그 확장](https://exchange.adobe.com/apps/ec/600027/merkury-tag) 은 익명의 웹 사이트 방문자에게 업계 최고의 일치율을 제공합니다. [!DNL Merkury] ID 브랜드는 의 기능을 활용할 수 있습니다. [!DNL Merkury] 태그와 Adobe을 통해 개인화된 실시간 웹 사이트 경험을 제공할 수 있습니다. 또한 [!DNL Merkury] tag를 사용하면 연결된 온라인 및 오프라인 고객 프로필과 함께 자사 디지털 데이터를 확장할 수 있습니다. |
+
+{style="table-layout:auto"}
+
+데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../tags/home.md).
 
 ## 데이터 준비 {#data-prep}
 

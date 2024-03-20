@@ -6,9 +6,9 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: ddf7eb620f36b6e18d7e3949e5339062edf9f9a6
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '765'
 ht-degree: 36%
 
 ---
@@ -180,6 +180,7 @@ ht-degree: 36%
          * [개요](./extensions/client/marketo/overview.md)
          * [릴리스 정보](./extensions/client/marketo/release-notes.md)
       * [기본 속성 관리자](https://exchange.adobe.com/apps/ec/102992)
+      * [Merkury 태그 확장](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
       * [!DNL Meta Pixel] {#meta}
          * [개요](./extensions/client/meta/overview.md)
       * [모니타](https://exchange.adobe.com/apps/ec/106544)
