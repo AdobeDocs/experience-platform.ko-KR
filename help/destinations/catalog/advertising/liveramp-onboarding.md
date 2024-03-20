@@ -3,9 +3,9 @@ title: LiveRamp - 온보드 연결
 description: LiveRamp 커넥터를 사용하여 Adobe Real-time Customer Data Platform에서 LiveRamp Connect로 대상을 온보딩하는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1941'
 ht-degree: 3%
 
 ---
@@ -70,6 +70,9 @@ Experience Platform에서 (으)로 데이터를 보내기 전에 [!DNL LiveRamp 
 
 ![암호가 있는 SFTP를 사용하여 대상을 인증하는 방법을 보여 주는 샘플 스크린샷](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
+* **[!UICONTROL 포트]**: 다음에 사용되는 포트 [!DNL LiveRamp - Onboarding] 저장소 위치.  아래 설명된 대로 지리적 위치에 해당하는 포트를 사용하십시오.
+   * **[!UICONTROL 해당 없음]**: 포트 사용 `22`
+   * **[!UICONTROL AU]**: 포트 사용 `2222`
 * **[!UICONTROL 사용자 이름]**: 의 사용자 이름 [!DNL LiveRamp - Onboarding] 저장소 위치.
 * **[!UICONTROL 암호]**: 의 암호 [!DNL LiveRamp - Onboarding] 저장소 위치.
 * **[!UICONTROL PGP/GPG 암호화 키]**: 원할 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
@@ -80,6 +83,8 @@ Experience Platform에서 (으)로 데이터를 보내기 전에 [!DNL LiveRamp 
 
 ![SSH 키를 사용하여 대상을 인증하는 방법을 보여 주는 샘플 스크린샷](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
+* **[!UICONTROL 포트]**: 다음에 사용되는 포트 [!DNL LiveRamp - Onboarding] 저장소 위치.  아래 설명된 대로 지리적 위치에 해당하는 포트를 사용하십시오.
+   * **[!UICONTROL EU]**: 포트 사용 `4222`
 * **[!UICONTROL 사용자 이름]**: 의 사용자 이름 [!DNL LiveRamp - Onboarding] 저장소 위치.
 * **[!UICONTROL SSH 키]**: 비공개 [!DNL SSH] 에 로그인하는 데 사용되는 키 [!DNL LiveRamp - Onboarding] 저장소 위치. 개인 키의 형식은 다음과 같아야 합니다. [!DNL Base64]-인코딩된 문자열이며, 암호로 보호될 수 없습니다.
 
@@ -99,10 +104,11 @@ Experience Platform에서 (으)로 데이터를 보내기 전에 [!DNL LiveRamp 
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-![대상에 대한 세부 정보를 채우는 방법을 보여 주는 플랫폼 UI 스크린샷](../../assets/catalog/advertising/liveramp-onboarding/liveramp-connection-details.png)
+![대상에 대한 세부 정보를 채우는 방법을 보여 주는 플랫폼 UI 스크린샷](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
+* **[!UICONTROL 지역]**: LiveRamp SFTP 저장소 인스턴스의 지리적 지역
 * **[!UICONTROL 폴더 경로]**: 의 경로 [!DNL LiveRamp] `uploads` 내보낸 파일을 호스팅하는 하위 폴더입니다. 다음 `uploads` 접두사는 폴더 경로에 자동으로 추가됩니다. [!DNL LiveRamp] 는 파일을 다른 기존 피드와 구분하고 모든 자동화가 원활하게 실행되도록 Adobe Real-Time CDP에서 게재할 전용 하위 폴더를 만들 것을 권장합니다.
    * 예를 들어 파일을 내보내려는 경우 `uploads/my_export_folder`, 입력 `my_export_folder` 다음에서 **[!UICONTROL 폴더 경로]** 필드.
 * **[!UICONTROL 압축 포맷]**: 내보낸 파일에 대해 Experience Platform이 사용해야 하는 압축 유형을 선택합니다. 사용 가능한 옵션은 다음과 같습니다 **[!UICONTROL GZIP]** 또는 **[!UICONTROL 없음]**.
@@ -179,6 +185,8 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 데이터를 (으)로 내보냅니다. [!DNL LiveRamp - Onboarding] CSV 파일로 구성한 저장소 위치입니다.
 
+내보낸 파일의 최대 크기는 1,000만 행입니다. Experience Platform은 선택한 대상이 1천만 행을 초과하는 경우 게재당 여러 파일을 생성합니다. 단일 파일 제한을 초과할 것으로 예상되면 [!DNL LiveRamp] 을(를) 대표하고 일괄 처리 수집을 구성하도록 요청합니다.
+
 파일을 로 내보낼 때 [!DNL LiveRamp - Onboarding] 대상, 플랫폼은 각각에 대해 하나의 CSV 파일을 생성합니다. [병합 정책 ID](../../../profile/merge-policies/overview.md).
 
 예를 들어 다음 대상을 고려해 보겠습니다.
@@ -238,3 +246,18 @@ Platform은 각각에 대해 하나의 CSV 파일을 생성하므로 [병합 정
 ## 추가 리소스 {#additional-resources}
 
 을(를) 구성하는 방법에 대한 자세한 내용은 [!DNL LiveRamp - Onboarding] storage, 자세한 내용은 [공식 문서](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+
+## 변경 로그 {#changelog}
+
+이 섹션에서는 이 대상 커넥터에 대한 기능 및 중요 설명서 업데이트를 캡처합니다.
+
++++ 변경 로그 보기
+
+| 릴리스 월 | 업데이트 유형 | 설명 |
+|---|---|---|
+| 2024년 3월 | 기능 및 설명서 업데이트 | <ul><li>유럽 및 오스트레일리아 게재에 대한 지원이 추가되었습니다 [!DNL LiveRamp] [!DNL SFTP] 인스턴스.</li><li>새로 지원되는 영역의 특정 구성을 설명하는 설명서가 업데이트되었습니다.</li><li>최대 파일 크기가 1,000만 행으로 증가했습니다(이전에는 500만 개에서).</li><li>파일 크기 증가를 반영하도록 설명서가 업데이트되었습니다.</li></ul> |
+| 2023년 7월 | 초기 릴리스 | 초기 대상 릴리스 및 설명서가 게시되었습니다. |
+
+{style="table-layout:auto"}
+
++++

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2024년 3월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
+source-git-commit: 33952028a4323b2292cdd313da290a5dd079c93f
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 33%
+source-wordcount: '1209'
+ht-degree: 32%
 
 ---
 
@@ -82,6 +82,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | [(베타) Acxiom 데이터 개선 연결](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | 새로운 기능 | 이 커넥터를 사용하여 데이터 강화를 위해 Real-Time CDP에서 Acxiom으로 자사 프로필을 활성화하고 마케팅 채널 전반에서 사용할 수 있습니다. 그런 다음 Acxiom 소스를 사용하여 고급 데이터가 포함된 프로필을 가져오고 Real-Time CDP에서 작업할 수 있습니다. |
 | [(Beta) Acxiom 잠재 고객 억제 연결](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | 새로운 기능 | Acxiom 대상에 자사 대상을 내보내고 Acxiom이 알려지거나 전환된 고객을 억제하도록 합니다. 그런 다음 를 사용합니다. [Acxiom 전망 데이터 가져오기](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) 알려진 또는 전환된 고객이 제거된 Acxiom의 잠재 고객 목록을 수집하고 활성화하기 위한 소스 커넥터 |
 | [Amazon 광고 연결](../../destinations/catalog/advertising/amazon-ads.md) | 업데이트 | 이제 Amazon 광고 대상으로 데이터를 내보낼 때 Amazon DSP 또는 Amazon Marketing Cloud(신규)로 데이터를 라우팅할 수 있습니다. |
+| [LiveRamp 온보드 연결](../../destinations/catalog/advertising/liveramp-onboarding.md) | 업데이트 | 이제 LiveRamp 온보딩 대상은 유럽 및 오스트레일리아로 배달할 수 있습니다 [!DNL LiveRamp] [!DNL SFTP] 인스턴스. 내보낸 최대 파일 크기도 1,000만 행(이전 500만 행에서)으로 증가했습니다. |
 
 {style="table-layout:auto"}
 
