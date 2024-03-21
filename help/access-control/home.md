@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: df24799e4644a98941b707bb216a4ad434f5ebf9
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1707'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Experience Platform에 대한 액세스 제어를 구성하려면 Experience Pla
 
 - Adobe Experience Platform 또는 Experience Platform을 사용하는 애플리케이션/앱 서비스에 라이선스를 부여한 후 라이선스 부여 중에 지정된 관리자에게 이메일이 전송됩니다.
 - 관리자가에 로그인합니다. [Adobe Admin Console](#adobe-admin-console) 및 선택 **Adobe Experience Platform** (개요 페이지의 제품 목록)
-- Experience Platform에 대한 액세스 권한을 부여하려면 관리자는 기본 제품 프로필에 사용자를 추가해야 합니다. `AEP-Default-All-Users`.
+- Experience Platform에 대한 액세스 권한을 부여하려면 관리자가 기본 제품 프로필에 사용자를 추가하는 것이 좋습니다. `AEP-Default-All-Users`.
 - Experience Platform 권한에서 관리자는 새 역할을 만들거나 기존 역할에 대한 권한 및 사용자를 편집할 수 있습니다.
 - 역할을 만들거나 편집할 때 관리자는 를 사용하여 사용자를 역할에 추가합니다. **[!UICONTROL 사용자]** 탭을 만들고 이러한 사용자에게 권한을 부여합니다(예: &quot;[!UICONTROL 데이터 세트 읽기]&quot; 또는 &quot;[!UICONTROL 스키마 관리]&quot;) 역할의 권한을 편집하는 것입니다. 마찬가지로 관리자는 동일한 편집 옵션을 사용하여 샌드박스에 대한 액세스 권한을 할당할 수 있습니다.
 - 사용자가 Experience Platform 사용자 인터페이스에 로그인할 때 Experience Platform 기능에 대한 액세스는 이전 단계에서 부여한 권한에 의해 결정됩니다. 예를 들어 사용자에게 [!UICONTROL 데이터 세트 보기] 권한, **[!UICONTROL 데이터 세트]** 사이드 메뉴에 있는 탭은 해당 사용자에게 표시되지 않습니다.
