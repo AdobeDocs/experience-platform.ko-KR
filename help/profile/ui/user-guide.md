@@ -3,10 +3,10 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 실시간 고객 프로필 UI 안내서
 description: 실시간 고객 프로파일은 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 다양한 채널의 데이터를 취합하여 각 개별 고객을 전체적으로 파악할 수 있도록 합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하기 위한 안내서 역할을 합니다.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
 workflow-type: tm+mt
-source-wordcount: '2008'
-ht-degree: 1%
+source-wordcount: '2103'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 * [[!DNL Real-Time Customer Profile] 개요](../home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
 * [[!DNL Identity Service]](../../identity-service/home.md): 사용 [!DNL Real-Time Customer Profile] 서로 다른 데이터 소스의 id를 로 수집할 때 [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Platform]이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다.
 
 ## [!UICONTROL 개요]
 
@@ -144,6 +144,12 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 을(를) 왼쪽 탐색�
 
 ![[속성] 탭이 강조 표시됩니다. 프로필 속성이 표시됩니다.](../images/user-guide/attributes.png)
 
+에지에서 사용할 수 있는 속성을 보려면 **[!UICONTROL Edge]** 를 클릭합니다.
+
+![속성 탭 내의 데이터 위치 선택기가 강조 표시됩니다.](../images/user-guide/attributes-select.png)
+
+에지 프로필에 대한 자세한 내용은 [edge 프로필 설명서](../edge-profiles.md).
+
 ### 이벤트 탭
 
 다음 **[!UICONTROL 이벤트]** 탭에는 고객과 연관된 100개의 최신 ExperienceEvents의 데이터가 포함되어 있습니다. 이 데이터에는 이메일 열림, 장바구니 활동 및 페이지 보기가 포함될 수 있습니다. 선택 **[!UICONTROL 모두 보기]** 개별 이벤트에 대해 추가 필드 및 값을 이벤트의 일부로 캡처합니다.
@@ -158,7 +164,11 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 을(를) 왼쪽 탐색�
 
 Experience Platform의 세그멘테이션에 대한 자세한 내용은 [Adobe Experience Platform 세그멘테이션 서비스 설명서](../../segmentation/home.md).
 
-![대상자 멤버십 탭이 강조 표시됩니다. 프로필의 대상자 멤버십 세부 정보가 표시됩니다.](../images/user-guide/segment-membership.png)
+![대상자 멤버십 탭이 강조 표시됩니다. 프로필의 대상자 멤버십 세부 정보가 표시됩니다.](../images/user-guide/audience-membership.png)
+
+Edge에서 사용할 수 있는 프로필의 대상 멤버십을 보려면 을 선택합니다. **[!UICONTROL Edge]** 를 입력합니다. 에지 세분화에 대한 자세한 내용은 [edge segmentation 안내서](../../segmentation/ui/edge-segmentation.md).
+
+![대상자 멤버십 탭 내의 데이터 위치 선택기가 강조 표시됩니다.](../images/user-guide/audience-membership-select.png)
 
 ## 병합 정책
 
