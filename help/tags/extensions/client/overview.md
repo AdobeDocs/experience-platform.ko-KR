@@ -2,9 +2,9 @@
 title: 태그 확장 참조
 description: Adobe Experience Platform에서 태그 확장에 대한 설명서를 찾습니다.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '472'
 ht-degree: 9%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 9%
 * [Adform 웹 사이트 추적](https://exchange.adobe.com/apps/ec/103195)*
 * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
-* [Adobe Analytics 및 Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)
+* [Adobe Analytics 및 Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
 * [Adobe Analytics 및 Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
 * [Adobe Analytics 및 Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [Adobe Analytics 제품 문자열](./product-string/overview.md)
@@ -68,7 +68,7 @@ ht-degree: 9%
 * [일반 웹 SDK 플러그인](./web-sdk/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
-* [Usercentrics CMP v2의 쿠키 동의 관리](https://exchange.adobe.com/apps/ec/*107037)
+* [Usercentrics CMP v2의 쿠키 동의 관리](https://exchange.adobe.com/apps/ec/*107037)*
 * [코어](./core/overview.md)
 * [사용자 지정 디버그 로거](https://exchange.adobe.com/apps/ec/104698)*
 * [고객 인식](https://exchange.adobe.com/apps/ec/100688)*
@@ -84,12 +84,13 @@ ht-degree: 9%
 * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)*
 * [Genesys 예측 참여](https://exchange.adobe.com/apps/ec/106148)*
 * [Google 데이터 레이어](./google-data-layer/overview.md)
-* [Google 글로벌 사이트 태그(gtag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)
+* [Google 글로벌 사이트 태그(gtag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)*
 * [InMoment](https://exchange.adobe.com/apps/ec/100847)*
 * [JSON 도우미](https://exchange.adobe.com/apps/ec/106449)*
-* [JW 플레이어 분석](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)
+* [JW 플레이어 분석](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)*
 * [킥파이어](https://exchange.adobe.com/apps/ec/101621)*
 * [매핑 테이블](https://exchange.adobe.com/apps/ec/103136)*
+* [Merkury 태그](https://exchange.adobe.com/apps/ec/600027/merkury-tag)*
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
 * [기본 속성 관리자](https://exchange.adobe.com/apps/ec/102992)*
 * [모니타](https://exchange.adobe.com/apps/ec/106544)*
