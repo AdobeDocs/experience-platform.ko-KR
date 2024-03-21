@@ -3,7 +3,7 @@ title: Amazon 광고
 description: Amazon Ads는 등록된 판매자, 공급업체, 서적 공급업체, Kindle Direct Publishing(KDP) 작성자, 앱 개발자 및/또는 에이전시에 대한 광고 목표를 달성하는 데 도움이 되는 다양한 옵션을 제공합니다. Amazon Ads와 Adobe Experience Platform의 통합은 ADSP(Amazon DSP)를 비롯한 Amazon Ads 제품에 턴키 통합을 제공합니다. Adobe Experience Platform의 Amazon 광고 대상을 사용하면 Amazon DSP에서 타깃팅 및 활성화를 위해 광고주 대상을 정의할 수 있습니다.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 24f7463f7005f77f8d93e7cb2c04efc0fb4e3a0b
+source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -171,7 +171,7 @@ Amazon DSP과의 통합을 통해 다음과 같은 작업을 수행할 수 있�
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
-| 2024년 2월 | 기능 및 설명서 업데이트 | 에 사용할 대상자를 내보내는 옵션이 추가되었습니다. [!DNL Amazon Marketing Cloud] (AMC). |
+| 2024년 3월 | 기능 및 설명서 업데이트 | 에 사용할 대상자를 내보내는 옵션이 추가되었습니다. [!DNL Amazon Marketing Cloud] (AMC). |
 | 2023년 5월 | 기능 및 설명서 업데이트 | <ul><li>에서 광고주 영역 선택에 대한 지원을 추가했습니다. [대상 연결 워크플로](#destination-details).</li><li>광고주 지역 선택 사항의 추가를 반영하도록 설명서를 업데이트했습니다. 올바른 광고주 영역 선택에 대한 자세한 내용은 [Amazon 설명서](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | 2023년 3월 | 초기 릴리스 | 초기 대상 릴리스 및 설명서가 게시되었습니다. |
 
