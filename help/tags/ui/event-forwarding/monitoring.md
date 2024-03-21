@@ -3,10 +3,10 @@ title: 이벤트 전달 시 활동 모니터링
 description: 이벤트 전달 속성에서 사용, 오류 및 시간을 모니터링하는 방법을 알아봅니다.
 feature: Event Forwarding
 exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
-source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
+source-git-commit: f8988d08e7009cc613a00f34e8151e8560c479d4
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 1%
+source-wordcount: '561'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ![데이터 수집 UI의 모니터링 탭을 보여주는 이미지](../../images/ui/event-forwarding/monitoring/monitoring-tab.png)
 
-## 사전 요구 사항
+## 전제 조건
 
 이 안내서에서는 사용자가 이벤트 전달을 구매했으며 이벤트 전달이 작동하는 방식을 잘 알고 있다고 가정합니다. 다음을 참조하십시오. [이벤트 전달 개요](./overview.md) 추가 정보.
 
@@ -39,6 +39,10 @@ ht-degree: 1%
 ![UI의 속성 환경 드롭다운 메뉴를 보여 주는 이미지](../../images/ui/event-forwarding/monitoring/property-environment.png)
 
 ## [!UICONTROL 사용]
+
+>[!NOTE]
+>
+>이전 달이 종료된 후 매월 사용 데이터가 새로 고쳐집니다.
 
 다음 **[!UICONTROL 사용]** 보고서는 지정된 기간 동안 수신 및 발신 통화를 보여줍니다. 수신 호출은 이벤트 전달로 전송된 데이터를 나타냅니다. 발신 호출은 이벤트 전달에서 전송된 데이터를 나타냅니다. 다음 **[!UICONTROL 총 이벤트 수]** 왼쪽 창의 number는 지정된 기간 동안 들어오는 호출과 나가는 호출의 합계입니다.
 
