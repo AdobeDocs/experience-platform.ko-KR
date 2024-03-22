@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;스트리밍 연결;스트리밍
 title: 흐름 서비스 API를 사용하여 HTTP API 스트리밍 연결 만들기
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 원시 데이터와 XDM 데이터 모두에 대해 HTTP API 소스를 사용하여 스트리밍 연결을 만드는 방법에 대한 단계를 제공합니다
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: fe2e93b9595d9df9a088d627d696b559f259e80d
+source-git-commit: afe632181295cc1460b3489d9b0306ef9342abfe
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1658'
 ht-degree: 3%
 
 ---
@@ -456,9 +456,6 @@ curl -X POST \
 }
 ```
 
-| 속성 | 설명 |
-| --- | --- |
-
 ## 데이터 흐름 만들기
 
 이제 소스 및 타겟 연결이 만들어지면 데이터 흐름을 만들 수 있습니다. 데이터 흐름은 소스에서 데이터를 예약하고 수집합니다. 에 대한 POST 요청을 수행하여 데이터 흐름을 만들 수 있습니다. `/flows` 엔드포인트.
@@ -579,16 +576,16 @@ POST /collection/{INLET_URL}
 | 매개변수 | 설명 |
 | --------- | ----------- |
 | `{INLET_URL}` | 스트리밍 끝점 URL. 에 GET 요청을 하여 이 URL을 검색할 수 있습니다. `/connections` 기본 연결 ID를 제공하는 동안 끝점이 발생했습니다. |
-| `{FLOW_ID}` | HTTP API 스트리밍 데이터 흐름의 ID입니다. |
+| `{FLOW_ID}` | HTTP API 스트리밍 데이터 흐름의 ID입니다. 이 ID는 XDM 및 RAW 데이터 모두에 필요합니다. |
 
 **요청**
 
 >[!BEGINTABS]
 
->[!TAB XDM]
+>[!TAB XDM 데이터 보내기]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
   -H 'Content-Type: application/json' \
   -d '{
         "header": {
@@ -625,10 +622,36 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
       }'
 ```
 
->[!TAB 원시 데이터]
+>[!TAB 흐름 ID가 있는 원시 데이터를 HTTP 헤더로 보내기]
+
+원시 데이터를 전송할 때 흐름 ID를 쿼리 매개 변수 또는 HTTP 헤더의 일부로 지정할 수 있습니다. 다음 예제에서는 흐름 ID를 HTTP 헤더로 지정합니다.
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' 
+  -H 'x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB 흐름 ID를 쿼리 매개 변수로 사용하는 원시 데이터 보내기]
+
+원시 데이터를 전송할 때 흐름 ID를 쿼리 매개 변수 또는 HTTP 헤더로 지정할 수 있습니다. 다음 예제에서는 흐름 ID를 쿼리 매개 변수로 지정합니다.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2 \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "Johnson Smith",
