@@ -3,7 +3,7 @@ title: Amazon 광고
 description: Amazon Ads는 등록된 판매자, 공급업체, 서적 공급업체, Kindle Direct Publishing(KDP) 작성자, 앱 개발자 및/또는 에이전시에 대한 광고 목표를 달성하는 데 도움이 되는 다양한 옵션을 제공합니다. Amazon Ads와 Adobe Experience Platform의 통합은 ADSP(Amazon DSP)를 비롯한 Amazon Ads 제품에 턴키 통합을 제공합니다. Adobe Experience Platform의 Amazon 광고 대상을 사용하면 Amazon DSP에서 타깃팅 및 활성화를 위해 광고주 대상을 정의할 수 있습니다.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
+source-git-commit: 8e34e5488ab80cd1f3c8086bf7c16d3f22527540
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -38,7 +38,7 @@ Amazon DSP과의 통합을 통해 다음과 같은 작업을 수행할 수 있�
 
 이 통합 대상 [!DNL Amazon Marketing Cloud] (AMC) 허용 [!DNL Amazon Ads] Adobe Experience Platform 양식의 CDP 세그먼트를 AMC에 전달하는 광고주. 그런 다음 광고주는 CDP 입력을 와 결합할 수 있습니다. [!DNL Amazon Ads] 는 개인정보 보호 준수 형식으로 미디어 영향, 대상 세그먼트 및 고객 여정과 같은 주제에 대한 사용자 지정 분석을 알리고 수행합니다. 예를 들어 광고주는 기존 고객 목록을 업로드하여 전체 광고 캠페인 성과 또는 제품 세부 사항 페이지 보기, 장바구니에 제품 추가 또는 제품 구매와 같은 Amazon 전환 이벤트의 집계된 통계를 파악할 수 있습니다.
 
-### 광고 최적화:
+### Advertising 최적화
 
 이 통합 대상 [!DNL Amazon Marketing Cloud] (AMC)를 사용하면 광고주가 자신의 고객 목록을 업로드하고 [!DNL Amazon Marketing Cloud] SQL에서는 타깃팅을 위해 Amazon DSP에서 활성화 준비 대상을 만들기 전에 반복해서 대상에 중복 분석, 억제, 추가 또는 최적화를 수행합니다.
 
