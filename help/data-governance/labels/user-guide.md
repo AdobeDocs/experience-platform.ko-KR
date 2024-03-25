@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI에서 데이터 사용 레이블 관리
 description: 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 사용 레이블 작업을 위한 단계를 다룹니다.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '1442'
-ht-degree: 18%
+source-wordcount: '1538'
+ht-degree: 17%
 
 ---
 
@@ -29,6 +29,14 @@ ht-degree: 18%
 ## 스키마 수준에서 레이블 관리
 
 해당 스키마 내의 스키마 또는 필드에 직접 레이블을 추가할 수 있습니다. 스키마 수준에서 적용된 모든 필드는 해당 스키마를 기반으로 하는 모든 데이터 세트로 전파됩니다.
+
+>[!NOTE]
+>
+>필드에 레이블을 지정하기 전에 데이터 사용 정책이 생성된 경우 새 스키마에 레이블을 적용할 때 거버넌스 정책 위반 대화 상자가 나타날 수 있습니다. 이 대화 상자는 이 레이블을 적용하면 기존 사용 정책을 위반함을 나타냅니다. 데이터 계보 다이어그램을 사용하여 스키마 필드에 레이블을 추가하기 전에 다른 구성 변경이 필요한지 이해합니다.
+>
+>![데이터 거버넌스 정책 위반이 위반 요약 및 데이터 계보 다이어그램이 강조 표시된 대화 상자를 감지했습니다.](../images/labels/policy-violation-dialog.png)
+>
+>다음을 참조하십시오. [데이터 사용 정책 위반 설명서](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) 부분 정책 위반에 대한 자세한 정보.
 
 스키마 수준에서 데이터 사용 레이블을 관리하려면 기존 스키마를 선택하거나 새 스키마를 만들어야 합니다. Adobe Experience Platform에 로그인한 후 다음을 선택합니다 **[!UICONTROL 스키마]** 을(를) 왼쪽 탐색에서 열어 **[!UICONTROL 스키마]** 작업 영역. 이 페이지에는 각 스키마와 관련된 유용한 세부 정보와 함께 조직에 속하는 생성된 모든 스키마가 나열됩니다.
 

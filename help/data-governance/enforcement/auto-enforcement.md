@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 자동 정책 시행
 description: 이 문서에서는 Experience Platform의 대상에 대한 대상을 활성화할 때 데이터 사용 정책이 자동으로 적용되는 방법에 대해 설명합니다.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2109'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Experience Platform에서 정책 집행은 다음 계보와 관련이 있습니�
 
 대상을 활성화하려고 할 때 정책 위반이 발생하는 경우(또는 [이미 활성화된 대상을 편집하는 중](#policy-enforcement-for-activated-audiences)) 작업이 금지되고 하나 이상의 정책이 위반되었음을 나타내는 팝오버가 표시됩니다. 위반이 트리거되면 **[!UICONTROL 저장]** 해당 구성 요소가 데이터 사용 정책을 준수하도록 업데이트될 때까지 수정하는 엔티티에 대해 버튼이 비활성화됩니다.
 
-팝오버의 왼쪽 열에서 정책 위반을 선택하여 해당 위반에 대한 세부 정보를 표시합니다.
+정책 이름을 선택하여 해당 위반에 대한 세부 정보를 표시합니다.
 
 ![정책 이름이 강조 표시된 정책 위반을 나타내는 대화 상자가 나타납니다.](../images/enforcement/violation-policy-select.png)
 
@@ -104,13 +104,21 @@ Experience Platform에서 정책 집행은 다음 계보와 관련이 있습니�
 
 ![데이터 계보 그래프가 강조 표시된 정책 위반 대화 상자.](../images/enforcement/data-lineage.png)
 
-다음을 사용할 수도 있습니다 **[!UICONTROL 필터]** 아이콘(![](../images/enforcement/filter.png))을 클릭하여 표시된 엔티티를 카테고리별로 필터링합니다. 데이터를 표시하려면 적어도 두 개의 카테고리를 선택해야 합니다.
+다음을 사용할 수도 있습니다 **[!UICONTROL 필터]** 아이콘(![필터 아이콘](../images/enforcement/filter.png))을 클릭하여 표시된 엔티티를 카테고리별로 필터링합니다. 데이터를 표시하려면 적어도 두 개의 카테고리를 선택해야 합니다.
 
 ![데이터 계보 필터 및 드롭다운 메뉴가 강조 표시된 정책 위반 대화 상자.](../images/enforcement/lineage-filter.png)
 
 선택 **[!UICONTROL 목록 보기]** 데이터 계보를 목록으로 표시합니다. 시각적 그래프로 다시 전환하려면 **[!UICONTROL 경로 보기]**.
 
 ![데이터 계보 경로 보기가 강조 표시된 정책 위반 대화 상자.](../images/enforcement/list-view.png)
+
+#### 레이블이 정상적으로 적용됨 {#labels-successfully-applied}
+
+스키마 필드에 레이블을 지정하기 전에 데이터 사용 정책을 만드는 경우 스키마에 레이블을 적용하는 즉시 거버넌스 정책 위반 대화 상자가 나타날 수 있습니다. 이 경우 스키마의 일부에 성공적으로 레이블을 지정할 수 있습니다. 다음 [!UICONTROL 레이블이 정상적으로 적용됨] 해당 필드에 대한 정책 제한 사항이 없으므로 탭이 성공적으로 적용된 레이블을 나타냅니다.
+
+데이터 계보 다이어그램을 사용하여 스키마 필드에 레이블을 추가하기 전에 다른 구성 변경이 필요한지 이해합니다.
+
+![정책 위반 대화 상자 [!UICONTROL 레이블이 정상적으로 적용됨] 강조 표시된 탭입니다.](../images/enforcement/labels-successfully-applied.png)
 
 ### 동의 정책 평가 {#consent-policy-evaluation}
 
