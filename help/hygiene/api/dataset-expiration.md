@@ -3,9 +3,9 @@ title: 데이터 세트 만료 API 끝점
 description: 데이터 위생 API의 /ttl 끝점을 사용하면 Adobe Experience Platform에서 데이터 세트 만료를 프로그래밍 방식으로 예약할 수 있습니다.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '2083'
 ht-degree: 2%
 
 ---
@@ -130,8 +130,6 @@ curl -X GET \
 
 성공적인 응답은 데이터 세트 만료의 세부 정보를 반환합니다.
 
-<!-- Is there a different response from making a GET request to either '/ttl/{DATASET_ID}?include=history' or '/ttl/{TTL_ID}'? If so please can you provide the response for both (or just the ttl endpoint itf it differs from teh example) -->
-
 ```json
 {
     "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
@@ -186,29 +184,105 @@ curl -X GET \
 }
 ```
 
-## 데이터 세트 만료 만들기 또는 업데이트 {#create-or-update}
+## 데이터 세트 만료 만들기 {#create}
 
-PUT 요청을 통해 데이터 세트에 대한 만료 날짜를 만들거나 업데이트합니다. PUT 요청은 다음 중 하나를 사용합니다. `datasetId` 또는 `ttlId`.
+지정된 기간 후에 시스템에서 데이터가 제거되도록 하려면 데이터 세트 ID와 만료 날짜 및 시간을 ISO 8601 형식으로 제공하여 특정 데이터 세트에 대한 만료를 예약하십시오.
+
+데이터 세트 만료를 만들려면 아래 그림과 같이 POST 요청을 수행하고 페이로드 내에 아래 언급된 값을 제공합니다.
 
 **API 형식**
 
 ```http
-PUT /ttl/{DATASET_ID}
-PUT /ttl/{TTL_ID}
+POST /ttl
 ```
-
-| 매개변수 | 설명 |
-| --- | --- |
-| `{DATASET_ID}` | 만료를 예약하려는 데이터 세트의 ID입니다. |
-| `{TTL_ID}` | 데이터 세트 만료 ID입니다. |
 
 **요청**
 
-다음 요청은 데이터 세트를 예약합니다 `5b020a27e7040801dedbf46e` 2022년 말(그리니치 표준시) 삭제. 데이터 세트에 대한 기존 만료가 없으면 새 만료가 만들어집니다. 데이터 세트에 이미 보류 중인 만료가 있는 경우 해당 만료는 새 만료로 업데이트됩니다 `expiry` 값.
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/hygiene/ttl \
+  -H `Authorization: Bearer {ACCESS_TOKEN}`
+  -H `x-gw-ims-org-id: {ORG_ID}`
+  -H `x-api-key: {API_KEY}`
+  -H `Accept: application/json`
+  -d {
+      "datasetId": "5b020a27e7040801dedbf46e",
+      "expiry": "2030-12-31T23:59:59Z"
+      "displayName": "Delete Acme Data before 2025",
+      "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+      }
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `datasetId` | **필수** 만료를 예약하려는 대상 데이터 세트의 ID입니다. |
+| `expiry` | **필수** ISO 8601 형식의 날짜 및 시간입니다. 문자열에 명시적 시간대 오프셋이 없으면 시간대는 UTC로 간주됩니다. 시스템 내의 데이터 수명은 제공된 만료 값에 따라 설정된다.<br>참고:<ul><li>데이터 세트에 대한 데이터 세트 만료가 이미 존재하는 경우 요청이 실패합니다.</li><li>이 날짜 및 시간은 최소 이상이어야 합니다. **향후 24시간**.</li></ul> |
+| `displayName` | 데이터 세트 만료 요청에 대한 선택적 표시 이름입니다. |
+| `description` | 만료 요청에 대한 선택적 설명. |
+
+**응답**
+
+기존 데이터 세트 만료가 없는 경우 성공한 응답은 HTTP 201(생성됨) 상태와 데이터 세트 만료의 새 상태를 반환합니다.
+
+```json
+{
+  "ttlId":       "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
+  "datasetId":   "5b020a27e7040801dedbf46e",
+  "datasetName": "Acme licensed data",
+  "sandboxName": "prod",
+  "imsOrg":      "{ORG_ID}",
+  "status":      "pending",
+  "expiry":      "2030-12-31T23:59:59Z",
+  "updatedAt":   "2021-08-19T11:14:16Z",
+  "updatedBy":   "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
+  "displayName": "Delete Acme Data before 2031",
+  "description": "The Acme information in this dataset is licensed for our use through the end of 2030."
+}
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `ttlId` | 데이터 세트 만료 ID입니다. |
+| `datasetId` | 이 만료가 적용되는 데이터 세트의 ID입니다. |
+| `datasetName` | 이 만료가 적용되는 데이터 세트의 표시 이름입니다. |
+| `sandboxName` | 대상 데이터 세트가 있는 샌드박스의 이름입니다. |
+| `imsOrg` | 조직의 ID입니다. |
+| `status` | 데이터 세트 만료의 현재 상태입니다. |
+| `expiry` | 데이터 세트를 삭제할 예약된 날짜 및 시간입니다. |
+| `updatedAt` | 만료를 마지막으로 업데이트한 시점의 타임스탬프입니다. |
+| `updatedBy` | 만료를 마지막으로 업데이트한 사용자입니다. |
+| `displayName` | 만료 요청의 표시 이름입니다. |
+| `description` | 만료 요청에 대한 설명. |
+
+데이터 세트에 대한 데이터 세트 만료가 이미 존재하는 경우 400(잘못된 요청) HTTP 상태가 발생합니다. 실패한 응답은 그러한 데이터 세트 만료가 존재하지 않거나 액세스 권한이 없는 경우 404(찾을 수 없음) HTTP 상태를 반환합니다.
+
+## 데이터 세트 만료 업데이트 {#update}
+
+데이터 세트에 대한 만료 날짜를 업데이트하려면 PUT 요청 및 `ttlId`. 다음을 업데이트할 수 있습니다. `displayName`, `description`, 및/또는 `expiry` 정보.
+
+>[!NOTE]
+>
+>만료 날짜 및 시간을 변경할 경우 향후 최소 24시간 이상이어야 합니다. 이렇게 강제 지연된 경우 만료를 취소하거나 다시 예약할 수 있으며 실수로 데이터가 손실되는 것을 방지할 수 있습니다.
+
+**API 형식**
+
+```http
+PUT /ttl/{TTL_ID}
+```
+
+<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
+
+| 매개변수 | 설명 |
+| --- | --- |
+| `{TTL_ID}` | 변경하려는 데이터 세트 만료의 ID입니다. |
+
+**요청**
+
+다음 요청은 데이터 세트 만료를 예약합니다. `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` 2024년 말(그리니치 표준시)에 발생합니다. 기존 데이터 세트 만료가 발견되면 해당 만료가 새 데이터 세트로 업데이트됩니다 `expiry` 값.
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -223,7 +297,7 @@ curl -X PUT \
 
 | 속성 | 설명 |
 | --- | --- |
-| `expiry` | ISO 8601 형식의 날짜 및 시간입니다. 문자열에 명시적 시간대 오프셋이 없으면 시간대는 UTC로 간주됩니다. 시스템 내의 데이터 수명은 제공된 만료 값에 따라 설정된다. 동일한 데이터 세트의 이전 만료 타임스탬프는 사용자가 제공한 새 만료 값으로 대체됩니다. |
+| `expiry` | **필수** ISO 8601 형식의 날짜 및 시간입니다. 문자열에 명시적 시간대 오프셋이 없으면 시간대는 UTC로 간주됩니다. 시스템 내의 데이터 수명은 제공된 만료 값에 따라 설정된다. 동일한 데이터 세트의 이전 만료 타임스탬프는 사용자가 제공한 새 만료 값으로 대체됩니다. 이 날짜 및 시간은 최소 이상이어야 합니다. **향후 24시간**. |
 | `displayName` | 만료 요청의 표시 이름입니다. |
 | `description` | 만료 요청에 대한 선택적 설명. |
 
@@ -231,7 +305,7 @@ curl -X PUT \
 
 **응답**
 
-성공한 응답은 데이터 세트 만료의 세부 정보를 반환하며, 기존 만료가 업데이트된 경우에는 HTTP 상태 200(OK)으로, 기존 만료가 없는 경우에는 201(Created)로 반환합니다.
+기존 만료가 업데이트된 경우 성공한 응답은 데이터 세트 만료의 새 상태와 HTTP 상태 200(OK)을 반환합니다.
 
 ```json
 {
@@ -258,6 +332,8 @@ curl -X PUT \
 | `updatedBy` | 만료를 마지막으로 업데이트한 사용자입니다. |
 
 {style="table-layout:auto"}
+
+실패한 응답은 그러한 데이터 세트 만료가 존재하지 않는 경우 404(찾을 수 없음) HTTP 상태를 반환합니다.
 
 ## 데이터 세트 만료 취소 {#delete}
 
