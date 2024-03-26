@@ -3,7 +3,7 @@ title: 데이터 세트 만료 API 끝점
 description: 데이터 위생 API의 /ttl 끝점을 사용하면 Adobe Experience Platform에서 데이터 세트 만료를 프로그래밍 방식으로 예약할 수 있습니다.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
+source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
 workflow-type: tm+mt
 source-wordcount: '2083'
 ht-degree: 2%
@@ -489,3 +489,4 @@ curl -X GET \
 | `updatedDate` / `updatedToDate` / `updatedFromDate` | 좋아요 `createdDate` / `createdFromDate` / `createdToDate`를 조정할 때 반드시 필요합니다. 하지만 은 생성 시간 대신 데이터 세트 만료의 업데이트 시간과 일치합니다.<br><br>만료는 작성, 취소 또는 실행 시기를 포함하여 모든 편집 시 업데이트된 것으로 간주됩니다. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
+
