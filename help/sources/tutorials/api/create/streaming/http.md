@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;스트리밍 연결;스트리밍
 title: 흐름 서비스 API를 사용하여 HTTP API 스트리밍 연결 만들기
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 원시 데이터와 XDM 데이터 모두에 대해 HTTP API 소스를 사용하여 스트리밍 연결을 만드는 방법에 대한 단계를 제공합니다
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: afe632181295cc1460b3489d9b0306ef9342abfe
+source-git-commit: 84ffbb86e8973c2795d19122d3866e980949759d
 workflow-type: tm+mt
 source-wordcount: '1658'
 ht-degree: 3%
@@ -718,3 +718,4 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
     }
 }
 ```
+
