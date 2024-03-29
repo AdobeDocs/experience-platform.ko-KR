@@ -2,14 +2,19 @@
 title: 셀프서비스 소스 시작하기(Streaming SDK)
 description: 이 문서에서는 셀프서비스 소스(Streaming SDK)를 사용하여 새 소스를 만들기 전에 알아야 하는 전제 조건 정보에 대해 소개합니다.
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '543'
 ht-degree: 12%
 
 ---
 
 # 셀프서비스 소스 시작하기(Streaming SDK)
+
+>[!NOTE]
+>
+>Streaming SDK는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
 셀프서비스 소스(Streaming SDK)를 사용하면 자체 소스를 통합하여 스트리밍 데이터를 Adobe Experience Platform으로 가져올 수 있습니다. 이 문서에서는 을 호출하기 전에 알아야 하는 핵심 개념에 대해 소개합니다. [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

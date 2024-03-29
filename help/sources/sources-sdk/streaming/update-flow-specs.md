@@ -2,14 +2,19 @@
 title: 흐름 서비스 API를 사용하여 Streaming SDK에 대한 흐름 사양 업데이트
 description: 다음 문서에서는 셀프 서비스 소스(Streaming SDK)용 흐름 서비스 API를 사용하여 흐름 사양을 검색하고 업데이트하는 방법에 대한 단계를 제공합니다.
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 1%
+source-wordcount: '423'
+ht-degree: 2%
 
 ---
 
 # 를 사용하여 플로우 사양 업데이트 [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>Streaming SDK는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
 새 연결 사양 ID를 생성한 후 데이터 흐름을 생성하려면 이 ID를 흐름 사양에 추가해야 합니다.
 

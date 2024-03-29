@@ -2,14 +2,19 @@
 title: 흐름 서비스 API를 사용하여 Streaming SDK에 대한 연결 사양 업데이트
 description: 다음 문서에서는 셀프서비스 소스(Streaming SDK)용 흐름 서비스 API를 사용하여 연결을 지정하는 방법에 대한 단계를 제공합니다.
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 2%
+source-wordcount: '163'
+ht-degree: 3%
 
 ---
 
 # 플로우 서비스 API를 사용하여 연결 사양 업데이트
+
+>[!NOTE]
+>
+>Streaming SDK는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
 PUT 작업을 통해 연결 사양의 속성을 업데이트할 수 있습니다. PUT 요청을 통해 연결 사양을 업데이트할 때 본문에는 POST 요청에서 새 연결 사양을 만들 때 필요한 모든 필드가 포함되어야 합니다.
 

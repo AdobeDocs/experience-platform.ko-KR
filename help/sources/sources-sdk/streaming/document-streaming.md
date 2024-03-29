@@ -2,14 +2,19 @@
 title: 소스 문서화(Streaming SDK)
 description: Adobe Experience Platform에서 새 소스를 라이브로 만들 수 있는 마지막 단계는 새 소스를 문서화하는 것입니다.
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
 
 # 소스 문서화(Streaming SDK)
+
+>[!NOTE]
+>
+>Streaming SDK는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
 Adobe Experience Platform에서 새 소스를 라이브로 설정하기 전 마지막 단계는 새 소스를 문서화하는 것입니다.
 

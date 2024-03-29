@@ -2,10 +2,11 @@
 title: 스트리밍 SDK UI용 설명서 셀프서비스 템플릿
 description: UI를 사용하여 소스에서 Adobe Experience Platform으로 스트리밍 데이터를 가져오는 방법을 알아봅니다.
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 0%
+source-wordcount: '1187'
+ht-degree: 1%
 
 ---
 

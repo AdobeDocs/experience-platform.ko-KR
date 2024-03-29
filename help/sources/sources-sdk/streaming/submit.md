@@ -2,14 +2,19 @@
 title: 소스 테스트 및 제출
 description: 다음 문서에서는 Flow Service API를 사용하여 새 소스를 테스트 및 확인하고 셀프서비스 소스(Streaming SDK)를 통해 새 소스를 통합하는 방법에 대한 단계를 제공합니다.
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1265'
 ht-degree: 0%
 
 ---
 
 # 소스 테스트 및 제출
+
+>[!NOTE]
+>
+>Streaming SDK는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
 셀프 서비스 소스(Streaming SDK)를 사용하여 새 소스를 Adobe Experience Platform에 통합하는 마지막 단계는 새 소스를 테스트하고 제출하는 것입니다. 연결 사양을 완료하고 스트리밍 흐름 사양을 업데이트하면 API 또는 UI를 통해 소스의 기능 테스트를 시작할 수 있습니다. 성공하면 Adobe 담당자에게 연락하여 새 소스를 제출할 수 있습니다.
 

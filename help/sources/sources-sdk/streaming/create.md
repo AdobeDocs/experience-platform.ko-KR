@@ -2,14 +2,19 @@
 title: 흐름 서비스 API를 사용하여 Streaming SDK에 대한 새 연결 사양 만들기
 description: 다음 문서에서는 Flow Service API를 사용하여 연결 사양을 만들고 셀프 서비스 소스를 통해 새 소스를 통합하는 방법에 대한 단계를 제공합니다.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '756'
 ht-degree: 1%
 
 ---
 
 # 를 사용하여 새 연결 사양을 생성합니다. [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>Streaming SDK는 베타 버전입니다. 다음을 읽으십시오. [소스 개요](../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
 
 연결 사양은 소스의 구조를 나타냅니다. 여기에는 소스의 인증 요구 사항에 대한 정보가 포함되어 있으며 소스 데이터를 탐색하고 검사하는 방법을 정의하고 주어진 소스의 속성에 대한 정보를 제공합니다. 다음 `/connectionSpecs` 의 엔드포인트 [!DNL Flow Service] API를 사용하면 조직 내에서 연결 사양을 프로그래밍 방식으로 관리할 수 있습니다.
 

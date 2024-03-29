@@ -2,9 +2,10 @@
 title: 스트리밍 SDK API용 설명서 셀프서비스 템플릿
 description: 흐름 서비스 API를 사용하여 스트리밍 데이터를 소스에서 Adobe Experience Platform으로 가져오는 방법에 대해 알아봅니다.
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1638'
 ht-degree: 1%
 
 ---
