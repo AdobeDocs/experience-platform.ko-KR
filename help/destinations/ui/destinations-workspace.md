@@ -3,10 +3,10 @@ keywords: 플랫폼;대상;대상 작업 영역;작업 영역;ui;대상 ui;카�
 title: 대상 작업 영역
 description: 대상 작업 영역은 개요, 카탈로그, 찾아보기, 계정 및 시스템 보기의 5개 섹션으로 구성되어 있습니다. 아래 섹션에 설명되어 있습니다.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: dad07add8c5f9cc98a187c2e2222a51611dbd1a2
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 2%
+source-wordcount: '1231'
+ht-degree: 1%
 
 ---
 
@@ -110,7 +110,7 @@ Adobe Experience Platform에서 **[!UICONTROL 대상]** 왼쪽 탐색 모음에�
 | [!UICONTROL 생성일] | 대상으로의 활성화 흐름이 생성된 날짜와 UTC 시간. 활성화 흐름을 가장 최근 첫 번째 또는 가장 오래된 순으로 정렬하려면 위쪽/아래쪽 화살표 기호를 선택합니다. |
 | [!UICONTROL 상태] | `Enabled` 또는 `Disabled`. 이 대상에 대해 데이터가 활성화되는지 여부를 나타냅니다. |
 
-대상 행을 클릭하여 오른쪽 레일에서 대상에 대한 자세한 정보를 표시합니다.
+대상 ID, 설명, 활성화된 대상 수 등과 같은 대상 정보를 오른쪽 레일에 표시하려면 대상 행을 클릭합니다.
 
 ![대상 행 클릭](../assets/ui/workspace/click-destination-row.png)
 
@@ -120,8 +120,8 @@ Adobe Experience Platform에서 **[!UICONTROL 대상]** 왼쪽 탐색 모음에�
 
 다음 **[!UICONTROL 시스템 보기]** 탭에는 Adobe Experience Platform에서 설정한 활성화 흐름이 그래픽으로 표시됩니다.
 
-![Data-flows1](../assets/ui/workspace/data-flows1.png)
+![데이터 흐름1](../assets/ui/workspace/data-flows1.png)
 
 페이지에 표시된 대상 중 하나를 선택하고 **[!UICONTROL 데이터 흐름 보기]** 을 눌러 각 대상에 대해 설정한 모든 연결에 대한 정보를 확인합니다.
 
-![Data-flows2](../assets/ui/workspace/data-flows2.png)
+![데이터 흐름2](../assets/ui/workspace/data-flows2.png)
