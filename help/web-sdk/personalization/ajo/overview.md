@@ -3,16 +3,16 @@ title: Platform Web SDK로 Adobe Journey Optimizer 사용
 description: Adobe Journey Optimizer을 사용하여 Experience Platform Web SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다
 keywords: ajo;ajo web;adobe 여정 optimizer;renderDecisions;surfaces;decisions;제안;범위;스키마
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '390'
 ht-degree: 1%
 
 ---
 
 # 사용 [!DNL Adobe Journey Optimizer] (으)로 [!DNL Platform Web SDK]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] 에서 관리되는 개인화된 경험을 제공하고 렌더링할 수 있습니다. [!DNL Adobe Journey Optimizer] 웹 채널에 연결합니다. WYSIWYG 편집기를 사용할 수 있습니다. [!DNL Adobe Journey Optimizer] [웹 캠페인 UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)를 만들고, 활성화하고, 게재하려면 [!DNL Journey Optimizer Web] 캠페인 및 개인화 경험.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] 에서 관리되는 개인화된 경험을 제공하고 렌더링할 수 있습니다. [!DNL Adobe Journey Optimizer] 웹 채널에 연결합니다. WYSIWYG 편집기를 사용할 수 있습니다. [!DNL Adobe Journey Optimizer] [웹 채널](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)또는 시각적이지 않은 인터페이스인 [코드 기반 경험 채널](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) 을(를) 만들고, 활성화하고, 게재하려면 [!DNL Journey Optimizer Web] 캠페인 및 개인화 경험.
 
 >[!IMPORTANT]
 >
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 용어 {#terminology}
 
-**[!UICONTROL 표면]**: 웹 표면은 URL로 식별되는 웹 속성이며, 여기서 [!DNL Adobe Journey Optimizer] 경험 콘텐츠가 전달됩니다.
+**[!UICONTROL 표면]**: 웹 표면은 URI로 식별되는 페이지의 웹 페이지 또는 위치이며, 여기서 [!DNL Adobe Journey Optimizer] 경험 콘텐츠가 전달됩니다.
 
 **[!UICONTROL 제안]**: 위치 [!DNL Adobe Journey Optimizer], propositions는 다음에서 선택한 경험과 관련이 있습니다. [!DNL Journey Optimizer Campaign].
 

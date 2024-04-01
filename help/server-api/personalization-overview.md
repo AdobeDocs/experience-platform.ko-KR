@@ -2,20 +2,20 @@
 title: 개인화 개요
 description: Adobe Experience Platform Edge Network Server API를 사용하여 Adobe 개인화 솔루션에서 개인화된 콘텐츠를 검색하는 방법에 대해 알아봅니다.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '735'
 ht-degree: 9%
 
 ---
 
 # 개인화 개요
 
-포함 [!DNL Server API], 다음과 같은 Adobe 개인화 솔루션에서 개인화된 콘텐츠를 검색할 수 있습니다. [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 및 [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko).
+포함 [!DNL Server API], 다음과 같은 Adobe 개인화 솔루션에서 개인화된 콘텐츠를 검색할 수 있습니다. [Adobe Target](https://business.adobe.com/products/target/adobe-target.html), [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home), 및 [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=ko).
 
 또한 [!DNL Server API] 는 다음과 같은 Adobe Experience Platform 개인화 대상을 통해 동일한 페이지 및 다음 페이지 개인화 기능을 지원합니다. [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화 연결](../destinations/catalog/personalization/custom-personalization.md). 동일 페이지 및 다음 페이지 개인화에 대한 Experience Platform을 구성하는 방법에 대해 알아보려면 다음을 참조하십시오. [전용 안내서](../destinations/ui/activate-edge-personalization-destinations.md).
 
-Server API를 사용하는 경우 개인화 엔진에서 제공하는 응답을 사이트의 콘텐츠를 렌더링하는 데 사용되는 논리와 통합해야 합니다. 와(과) 달리 [웹 SDK](../web-sdk/home.md), [!DNL Server API] 은(는) 이 반환한 콘텐츠를 자동으로 적용하는 메커니즘을 가지고 있지 않습니다. [!DNL Adobe Target] 및 [!DNL Offer Decisioning].
+Server API를 사용하는 경우 개인화 엔진에서 제공하는 응답을 사이트의 콘텐츠를 렌더링하는 데 사용되는 논리와 통합해야 합니다. 와(과) 달리 [웹 SDK](../web-sdk/home.md), [!DNL Server API] 에는 Adobe 개인화 솔루션에서 반환된 콘텐츠를 자동으로 적용하는 메커니즘이 없습니다.
 
 ## 용어 {#terminology}
 
@@ -34,24 +34,30 @@ Adobe 개인화 솔루션을 사용하기 전에 다음 개념을 이해해야 �
 
 ```json
 {
-   "query":{
-      "personalization":{
-         "schemas":[
-            "https://ns.adobe.com/personalization/html-content-item",
-            "https://ns.adobe.com/personalization/json-content-item",
-            "https://ns.adobe.com/personalization/redirect-item",
-            "https://ns.adobe.com/personalization/dom-action"
-         ],
-         "decisionScopes":[
-            "alloyStore",
-            "siteWide",
-            "__view__",
-            "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ"
-         ]
-      }
-   }
+  "query": {
+    "personalization": {
+      "schemas": [
+        "https://ns.adobe.com/personalization/html-content-item",
+        "https://ns.adobe.com/personalization/json-content-item",
+        "https://ns.adobe.com/personalization/redirect-item",
+        "https://ns.adobe.com/personalization/dom-action"
+      ],
+      "decisionScopes": [
+        "alloyStore",
+        "siteWide",
+        "__view__",
+        "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ"
+      ],
+      "surfaces": [
+        "web://mywebpage.html/",
+        "web://mywebpage.html/#sample-json-content"
+      ]
+    }
+  }
 }
 ```
+
+
 
 | 속성 | 유형 | 필수/선택적 | 설명 |
 | --- | --- | --- | ---|

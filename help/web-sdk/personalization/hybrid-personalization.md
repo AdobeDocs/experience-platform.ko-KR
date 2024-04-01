@@ -3,9 +3,9 @@ title: Web SDK 및 Edge Network Server API를 사용한 하이브리드 개인�
 description: 이 문서에서는 Server API와 함께 웹 SDK를 사용하여 웹 속성에 하이브리드 개인화를 배포하는 방법을 보여 줍니다.
 keywords: 개인화, 하이브리드, 서버 api, 서버측, 하이브리드 구현,
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '861'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Hybdrid 개인화는 다음을 사용하여 서버측에서 개인화 콘텐츠를 검색하는 프로세스를 설명합니다. [Edge Network Server API](../../server-api/overview.md)및 를 사용하여 클라이언트측 렌더링 [웹 SDK](../home.md).
 
-Adobe Target 또는 Offer Decisioning과 같은 개인화 솔루션에 하이브리드 개인화를 사용할 수 있습니다. 차이점은 의 콘텐츠입니다. [!UICONTROL 서버 API] 페이로드.
+Adobe Target, Adobe Journey Optimizer 또는 Offer decisioning과 같은 개인화 솔루션에서 하이브리드 개인화를 사용할 수 있습니다. 차이점은 의 컨텐츠입니다. [!UICONTROL 서버 API] 페이로드.
 
 ## 전제 조건 {#prerequisites}
 
@@ -39,9 +39,9 @@ Adobe Target 또는 Offer Decisioning과 같은 개인화 솔루션에 하이브
 1. 서버 API는 개인화 콘텐츠를 애플리케이션 서버에 반환합니다.
 1. 응용 프로그램 서버는 클라이언트 브라우저에 다음을 포함하는 HTML 응답을 반환합니다. [id 및 클러스터 쿠키](#cookies).
 1. 클라이언트 페이지에서 [!DNL Web SDK] `applyResponse` 명령이 호출되어 의 헤더와 본문을 전달합니다. [!UICONTROL 서버 API] 이전 단계의 응답입니다.
-1. 다음 [!DNL Web SDK] renders 페이지 로드 [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 다음 이유로 오퍼가 자동으로 `renderDecisions` 플래그가 로 설정되어 있습니다. `true`.
-1. 양식 기반 [!DNL JSON] 오퍼는 다음을 통해 수동으로 적용됩니다. `applyPersonalization` 메서드, 업데이트 [!DNL DOM] 개인화 오퍼를 기반으로 합니다.
-1. 양식 기반 활동의 경우 오퍼가 표시된 시기를 나타내기 위해 표시 이벤트를 수동으로 보내야 합니다. 이 작업은 다음을 통해 수행됩니다. `sendEvent` 명령입니다.
+1. 다음 [!DNL Web SDK] renders 대상 [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 오퍼 및 Journey Optimizer 웹 채널 항목이 자동으로 `renderDecisions` 플래그가 로 설정되어 있습니다. `true`.
+1. Target 양식 기반 [!DNL HTML]/[!DNL JSON] 오퍼 및 Journey Optimizer 코드 기반 경험은 `applyProposition` 메서드, 업데이트 [!DNL DOM] 제안의 개인화 콘텐츠를 기반으로 합니다.
+1. Target 양식 기반 [!DNL HTML]/[!DNL JSON] 오퍼 및 Journey Optimizer 코드 기반 경험, 디스플레이 이벤트는 반환된 콘텐츠가 표시된 시기를 나타내기 위해 수동으로 전송해야 합니다. 이 작업은 다음을 통해 수행됩니다. `sendEvent` 명령입니다.
 
 ## 쿠키 {#cookies}
 
