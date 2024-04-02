@@ -5,10 +5,10 @@ title: Privacy Service API 안내서 부록
 description: 이 문서에는 Privacy Service API 작업에 대한 추가 정보가 포함되어 있습니다.
 role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 644e85fe5c9b1a37f69c75755713e929736c2e89
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 5%
+source-wordcount: '496'
+ht-degree: 6%
 
 ---
 
@@ -62,18 +62,24 @@ ht-degree: 5%
 
 다음 표에서 Adobe 제품을 지정할 때 허용되는 값을 간략하게 설명합니다. `include` 작업 만들기 요청의 특성입니다.
 
+>[!NOTE]
+>
+>제품 목록의 값은 대/소문자를 구분하지 않습니다. Camel-case가 권장되지만 적용되지 않습니다.
+
 | 제품 | 에 사용할 값 `include` 속성 |
 | --- | --- |
 | Adobe Advertising Cloud | `adCloud` |
 | Adobe Analytics | `analytics` |
-| Adobe Audience Manager | `AudienceManager` |
+| Adobe Audience Manager | `audienceManager` |
 | Adobe Campaign | `campaign` |
 | Adobe Experience Platform (데이터 레이크) | `aepDataLake` |
 | Adobe Experience Platform (실시간 고객 프로필) | `profileService` |
 | Adobe Pass 인증 | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | 고객 속성(CRS) | `CRS` |
+| 고객 여정 관리 | `cjm` |
 | ID 서비스 | `identity` |
 | Marketo Engage | `marketo` |
+| Marketo Measure | `marketomeasure` |
 
 {style="table-layout:auto"}
