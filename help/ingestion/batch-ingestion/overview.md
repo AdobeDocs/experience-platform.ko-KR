@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 일괄 처리 수집 API 개요
 description: 'Adobe Experience Platform 일괄 처리 수집 API 를 사용하면 데이터를 플랫폼에 일괄 처리 파일로 수집할 수 있습니다. 수집되는 데이터는 CRM 시스템의 플랫 파일(예: Parquet 파일)의 프로필 데이터이거나 Experience Data Model(XDM) 레지스트리의 알려진 스키마를 준수하는 데이터일 수 있습니다.'
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
 workflow-type: tm+mt
-source-wordcount: '1387'
+source-wordcount: '1388'
 ht-degree: 6%
 
 ---
@@ -44,7 +44,7 @@ Adobe Experience Platform 일괄 처리 수집 API 를 사용하면 데이터를
 - 배치당 최대 파일 수: 1500
 - 최대 배치 크기: 100GB
 - 행당 최대 속성 또는 필드 수: 10000
-- 사용자당 분당 최대 배치 수: 138
+- 사용자당 분당 데이터 레이크의 최대 배치 수: 138
 
 >[!NOTE]
 >
@@ -60,18 +60,18 @@ Adobe Experience Platform 일괄 처리 수집 API 를 사용하면 데이터를
 
 아래 표는 데이터 수집 시 지원되는 전환을 보여 줍니다.
 
-| 인바운드(행)와 Target(열) | 문자열 | 바이트 | 짧음 | 정수 | 길게 | 이중 | 날짜 | 날짜-시간 | 오브젝트 | 맵 |
+| 인바운드(행)와 대상(열) | 문자열 | 바이트 | 짧음 | 정수 | 길게 | 이중 | 날짜 | 날짜-시간 | 오브젝트 | 맵 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 문자열 | X | X | X | X | X | X | X | X |  |  |
-| 바이트 | X | X | X | X | X | X |  |  |  |  |
-| 짧음 | X | X | X | X | X | X |  |  |  |  |
-| 정수 | X | X | X | X | X | X |  |  |  |  |
-| 길게 | X | X | X | X | X | X | X | X |  |  |
-| 이중 | X | X | X | X | X | X |  |  |  |  |
-| 날짜 |  |  |  |  |  |  | X |  |  |  |
-| 날짜-시간 |  |  |  |  |  |  |  | X |  |  |
-| 오브젝트 |  |  |  |  |  |  |  |  | X | X |
-| 맵 |  |  |  |  |  |  |  |  | X | X |
+| 문자열 | X | X | X | X | X | X | X | X |   |   |
+| 바이트 | X | X | X | X | X | X |   |   |   |   |
+| 짧음 | X | X | X | X | X | X |   |   |   |   |
+| 정수 | X | X | X | X | X | X |   |   |   |   |
+| 길게 | X | X | X | X | X | X | X | X |   |   |
+| 이중 | X | X | X | X | X | X |   |   |   |   |
+| 날짜 |   |   |   |   |   |   | X |   |   |   |
+| 날짜-시간 |   |   |   |   |   |   |   | X |   |   |
+| 오브젝트 |   |   |   |   |   |   |   |   | X | X |
+| 맵 |   |   |   |   |   |   |   |   | X | X |
 
 >[!NOTE]
 >
