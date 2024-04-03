@@ -2,9 +2,9 @@
 description: Destination SDK으로 빌드된 대상에 대해 지원되는 타겟 ID를 구성하는 방법에 대해 알아봅니다.
 title: ID 네임스페이스 구성
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '892'
 ht-degree: 4%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 4%
 
 Experience Platform은 id 네임스페이스를 사용하여 특정 id 유형을 설명합니다. 예를 들어 이라는 ID 네임스페이스 `Email` 는 과 같은 값을 식별합니다. `name@email.com` 이메일 주소로 사용하십시오.
 
-Destination SDK을 통해 대상을 만들 때 [파트너 스키마 구성](schema-configuration.md) 사용자는 프로필 속성 및 id를에 매핑할 수 있으므로 대상 플랫폼에서 지원하는 id 네임스페이스를 정의할 수도 있습니다.
+Destination SDK을 통해 실시간(스트리밍) 대상을 만들 때 및 [파트너 스키마 구성](schema-configuration.md) 사용자가 프로필 속성 및 id를에 매핑할 수 있으려면 대상 플랫폼에서 지원하는 id 네임스페이스도 정의해야 합니다. 예를 들어 대상 플랫폼에서 해시된 이메일 및 [!DNL IDFA], 다음과 같이 이 두 ID를 정의해야 합니다. [이 문서의 뒷부분에 설명되어 있다](#supported-parameters).
 
-이렇게 하면 사용자는 타겟 프로필 속성 외에 타겟 ID를 선택할 수 있는 옵션이 추가됩니다.
+대상자를 스트리밍 대상으로 활성화할 때, 사용자는 타겟 프로필 속성 외에 타겟 ID도 매핑해야 합니다. 그렇지 않으면 대상자가 대상 플랫폼에 활성화되지 않습니다.
+
+Destination SDK을 통해 파일 기반 대상을 만들 때 ID 네임스페이스 구성은 선택 사항입니다.
 
 Experience Platform의 ID 네임스페이스에 대한 자세한 내용은 [id 네임스페이스 설명서](../../../../identity-service/features/namespaces.md).
 
@@ -44,8 +46,8 @@ Experience Platform의 ID 네임스페이스에 대한 자세한 내용은 [id �
 
 | 통합 유형 | 기능 지원 |
 |---|---|
-| 실시간(스트리밍) 통합 | 예 |
-| 파일 기반 (일괄 처리) 통합 | 예 |
+| 실시간(스트리밍) 통합 | 예(필수) |
+| 파일 기반 (일괄 처리) 통합 | 예(선택 사항) |
 
 ## 지원되는 매개 변수 {#supported-parameters}
 
