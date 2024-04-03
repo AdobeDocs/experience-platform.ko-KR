@@ -1,10 +1,11 @@
 ---
 title: MediaAnalytics 상호 작용 세부 정보 스키마 필드 그룹
 description: MediaAnalytics 상호 작용 세부 사항 스키마 필드 그룹에 대해 알아봅니다.
-source-git-commit: 65f3dcf1cacfbc4e8a598244810d238bd88f64bd
+exl-id: 1096d28a-5796-49cc-bd45-b3f5188f699e
+source-git-commit: b81afb8f6c4eaedb19a58b6fe3896286f1486804
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 2%
+source-wordcount: '233'
+ht-degree: 1%
 
 ---
 
@@ -16,10 +17,18 @@ ht-degree: 2%
 
 | 표시 이름 | 속성 | 데이터 유형 | 설명 |
 |---| --- | --- | --- |
-| [!UICONTROL 미디어 컬렉션 세부 사항] | `mediaCollection` | [[!UICONTROL 미디어 세부 정보]](../../data-types/media-details-information.md) | 미디어 항목 컬렉션과 관련된 속성입니다. |
-| [!UICONTROL 미디어 보고 세부 정보] | `mediaReporting` | [[!UICONTROL 미디어 세부 정보]](../../data-types/media-details-information.md) | 미디어 콘텐츠와 연계된 보고 세부 정보 및 지표. |
+| [!UICONTROL 미디어 컬렉션 세부 사항] | `mediaCollection` | [[!UICONTROL 미디어 컬렉션 세부 정보]](../../data-types/media-collection-details.md) | 미디어 항목 컬렉션과 관련된 속성입니다. 미디어 컬렉션 필드를 사용하여 데이터를 캡처하고 추가 처리를 위해 다른 Adobe 서비스로 전송합니다. |
+| [!UICONTROL 미디어 보고 세부 정보] | `mediaReporting` | [[!UICONTROL 미디어 보고 세부 정보]](../../data-types/media-reporting-details.md) | 미디어 콘텐츠와 연계된 보고 세부 정보 및 지표. * 미디어 보고 필드는 Adobe 서비스에서 사용자가 보낸 미디어 컬렉션 필드를 분석하는 데 사용됩니다. 이 데이터는 다른 특정 사용자 지표와 함께 계산되고 보고됩니다. |
 | [!UICONTROL 미디어 컬렉션 다운로드 콘텐츠 이벤트 목록] | `mediaDownloadedEvents` | [!UICONTROL 배열] / [[!UICONTROL mediaEvent]](../../data-types/media-event-information.md) | 미디어 컬렉션 내의 콘텐츠 다운로드를 추적하는 이벤트입니다. |
 
 {style="table-layout:auto"}
 
-필드 그룹에 대한 자세한 내용은 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json)
+>[!TIP]
+>
+>Media Edge API에서 사용되지 않는 필드를 숨길 수 있습니다. 이러한 필드를 숨기면 스키마를 읽고 이해하는 것이 쉬워지지만 필수는 아닙니다. 이 필드는 의 필드만 참조합니다. [!UICONTROL MediaAnalytics 인터랙션 세부 정보] 필드 그룹입니다. Platform UI에서 가독성을 향상시키려면 [사용하지 않는 필드를 숨기는 방법에 대한 Media Analytics 설명서](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
+
+<!-- 
+>[!NOTE]
+>
+>Schemas contain fields that are not used in every context or situation. They provide a potential blueprint to map an object. Schemas displayed for the Media Edge API Collection or Reporting data types only portray the relevant fields. You can manually select and deselect the fields that you want to use if you intend to use a schema for the Media Edge API interaction. You can find instructions on [hiding unnecessary fields](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform) in the guide to install Media Analytics with Experience Platform Edge.
+ -->
