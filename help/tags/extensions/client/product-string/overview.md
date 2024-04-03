@@ -2,9 +2,9 @@
 title: Adobe Analytics 제품 문자열 확장 프로그램 개요
 description: Adobe Experience Platform의 Adobe Analytics 제품 문자열 태그 확장에 대해 알아봅니다.
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 36ca1e63c043baa776f27b627cdbe493b2ced674
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '516'
 ht-degree: 90%
 
 ---
@@ -89,7 +89,7 @@ digitalData.transaction.item.productInfo.productName
 
 이 작업은 해당 성공 이벤트와 &quot;Adobe Analytics - 비콘 보내기&quot; 작업을 설정하는 &quot;Adobe Analytics - 변수 설정&quot; 작업과 함께 수행해야 합니다. 적절한 작업 시퀀스가 아래에 나와 있습니다.
 
-![표준 필드](./images/screenshot-price-type.png)
+![표준 필드](./images/screenshot-action-type.png)
 
 ### 요구 사항
 
