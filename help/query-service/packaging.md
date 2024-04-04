@@ -2,9 +2,9 @@
 title: 쿼리 서비스 패키징
 description: 다음 문서에서는 쿼리 서비스에 사용할 수 있는 기능 및 제품의 패키지 구성에 대해 간략히 설명하고 애드혹 쿼리와 배치 쿼리의 차이점을 조명합니다.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 0f55a836321e974b3f29d2285c38cc8461636f39
+source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '980'
 ht-degree: 2%
 
 ---
@@ -52,9 +52,11 @@ Adobe Experience Platform 쿼리 서비스는 실행할 수 있는 쿼리 패턴
 
 Experience Platform에 대한 액세스 제어는 [Adobe Admin Console](https://adminconsole.adobe.com/) 여기서 제품 프로필은 권한 및 샌드박스와 함께 사용자를 연결합니다. 다음을 참조하십시오. [액세스 제어 개요](../access-control/home.md) 추가 정보.
 
-쿼리 서비스를 사용하려면 [!DNL Manage Queries] Admin Console 내에서 권한을 활성화해야 합니다. 이 권한을 사용하면 임시 및 일괄 쿼리를 실행할 수 있습니다. 제품 프로필에 대한 액세스 요청에 대한 세부 지침 [!DNL Manage Queries] 권한 윤곽이 다음과 같습니다. [제품 프로필에 대한 권한 관리](../access-control/ui/permissions.md) 및 [제품 프로필에 대한 사용자 관리](../access-control/ui/users.md) 문서.
+다음을 참조하십시오. [제품 프로필에 대한 권한 관리](../access-control/ui/permissions.md) 및 [제품 프로필에 대한 사용자 관리](../access-control/ui/users.md) 제품 프로필 권한 액세스 요청에 대한 자세한 지침은 문서 를 참조하십시오
 
-구매 후 [!DNL Data Distiller] 추가 기능, [!DNL Write Dataset] 권한을 부여해야 합니다. 이 권한은 [!DNL Data Distiller] 배치 쿼리를 실행할 사용자.
+### 관련 쿼리 서비스 권한 {#query-service-permissions}
+
+쿼리 서비스를 사용하려면 **[!DNL Manage Queries]** Admin Console 내에서 권한을 활성화해야 합니다. 이 권한을 사용하면 임시 및 일괄 쿼리를 실행할 수 있습니다.
 
 다음 표에서는 다음과 같은 결과를 간략하게 설명합니다. [!DNL Manage Queries] 권한:
 
@@ -62,6 +64,17 @@ Experience Platform에 대한 액세스 제어는 [Adobe Admin Console](https://
 |---|---|
 | [!DNL Manage Queries] (데이터 쓰기 권한 없음) | 애드혹 쿼리 실행에 대한 액세스 권한 제공 |
 | [!DNL Manage Queries] (데이터 쓰기 권한 있음) | 일괄 처리 쿼리 실행에 대한 액세스 권한 제공 |
+
+{style="table-layout:auto"}
+
+### 관련 사용자 정의 가능한 Insights 권한 {#customizable-insights-permissions}
+
+데이터 Distiller을 만들려면 [사용자 지정 가능한 인사이트](./data-distiller/customizable-insights/overview.md) 대시보드 내에서 다음 권한 **필수** Admin Console 내에서 활성화할 수 있습니다.
+
+| 사용 권한 | 함수 |
+|---|---|
+| [!DNL View Custom Dashboard] | 사용자 정의 대시보드에 대한 보기 액세스 권한 제공 |
+| [!DNL Manage Custom Dashboard] | 사용자 정의 대시보드에 대한 액세스 관리 제공 |
 
 {style="table-layout:auto"}
 
