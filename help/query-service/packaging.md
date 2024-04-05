@@ -2,7 +2,7 @@
 title: 쿼리 서비스 패키징
 description: 다음 문서에서는 쿼리 서비스에 사용할 수 있는 기능 및 제품의 패키지 구성에 대해 간략히 설명하고 애드혹 쿼리와 배치 쿼리의 차이점을 조명합니다.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
+source-git-commit: 1e18a60478e2755f49d37d4d3bf4bd3ca6dbf23b
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 2%
@@ -85,3 +85,4 @@ Experience Platform에 대한 액세스 제어는 [Adobe Admin Console](https://
 ## 다음 단계
 
 이 문서를 읽으면 Query Service에서 사용할 수 있는 다양한 패키징 유형 및 쿼리 실행 기능을 더 잘 이해할 수 있습니다. 잘 알려진 업계 사용 사례와 같은 쿼리 서비스에 대한 자세한 내용은 [사용 사례 설명서](./use-cases/abandoned-browse.md). 자세한 내용은 [쿼리 서비스 개요](./home.md).
+
