@@ -4,9 +4,9 @@ title: 스트리밍 세분화를 통해 실시간에 가까운 이벤트 평가
 description: 이 문서에는 Adobe Experience Platform 세그먼테이션 서비스 API와 함께 스트리밍 세그먼테이션을 사용하는 방법에 대한 예제가 포함되어 있습니다.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '2038'
 ht-degree: 4%
 
 ---
@@ -454,3 +454,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 유사한 �
 ### 세그먼트 정의를 사용하려면 얼마나 걸립니까?
 
 세그먼트 정의를 사용할 수 있는 데 최대 1시간이 소요됩니다.
+
+### 스트리밍되는 데이터에 제한이 있습니까?
+
+스트리밍된 데이터가 스트리밍 세분화에 사용되려면 다음과 같이 하십시오. **필수** 스트리밍되는 이벤트 간의 간격이 조정됩니다. 너무 많은 이벤트가 동일한 초 내에서 스트리밍되는 경우 Platform은 이러한 이벤트를 봇 생성 데이터로 취급하며 삭제됩니다. 가장 좋은 방법은 다음과 같습니다 **최소** 데이터가 제대로 사용되는지 확인하기 위해 이벤트 데이터 간 5초.
