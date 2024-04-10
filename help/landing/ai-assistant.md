@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: b1f2d85f5a1cf6bb38344c87496488a919800029
+source-git-commit: f38f528c421c7cbf7116cc0ee323e8e7dcde6292
 workflow-type: tm+mt
-source-wordcount: '2604'
+source-wordcount: '2730'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ AI Assistant에 다음과 같은 정보를 쿼리할 수 있습니다.
 
 * 데이터 및 대상과 관련된 작업을 수행하는 방법에 대한 지침입니다.
 * 조직 내 기존 데이터 객체의 상태 및 지표.
-* 속성, 데이터 흐름, 데이터 세트, 대상, 스키마, 세그먼트 및 소스를 비롯한 데이터 개체를 더 잘 이해하려면 사례 예제와 뉘앙스를 사용하십시오.
+* 속성, 대상, 데이터 흐름, 데이터 세트, 대상, 스키마 및 소스를 포함한 데이터 개체를 더 잘 이해하려면 사례 예제와 뉘앙스를 사용하십시오.
 
 아래 안내서를 읽고 AI Assistant를 사용하여 Experience Platform 및 Real-Time CDP 워크플로를 탐색하고 이해하는 방법에 대해 알아보십시오.
 
@@ -51,7 +51,7 @@ AI Assistant를 쿼리하기 전에 고려해야 할 두 가지 유형의 질문
 * **사용 질문**: 사용 질문은 조직 내의 데이터 개체에 대한 것입니다. 사용 관련 질문의 몇 가지 예는 다음과 같습니다.
    * 보유한 데이터 세트는 몇 개입니까?
    * 사용된 적이 없는 스키마 속성 수는 몇 개입니까?
-   * 활성화된 세그먼트
+   * 활성화된 대상은 무엇입니까?
 
 >[!ENDSHADEBOX]
 
@@ -59,13 +59,14 @@ AI Assistant를 쿼리하기 전에 고려해야 할 두 가지 유형의 질문
 
 다음과 같은 목표에 AI Assistant를 사용할 수 있습니다.
 
-| 목표 | 설명 |
-| --- | --- |
-| 학습 Experience Platform 및 Real-Time CDP 개념 | Experience Platform 및 Real-Time CDP에 온보딩할 수 있도록 AI Assistant 개념 질문을 할 수 있습니다. AI Assistant를 사용하여 익숙하지 않은 객체와 행동에 대해 학습할 수도 있습니다. |
-| 샌드박스 내 데이터 청결 보장 | AI Assistant를 사용하여 중복 또는 사용하지 않는 객체를 식별하여 샌드박스의 청정도를 효율적으로 관리할 수 있습니다. |
-| 값 분석 오케스트레이션 | AI Assistant를 사용하여 가장 많이 사용되는 객체를 식별하고 성능 지표를 평가하거나 가장 중요한 데이터를 찾을 수 있습니다. |
-| 영향 분석 이해 | AI Assistant를 사용하여 특정 워크플로우에서 사용된 객체를 식별하여 변경 사항의 영향을 평가할 수 있습니다. |
-| 데이터 모니터링 | AI Assistant를 사용하여 데이터 흐름, 수집 또는 평가 작업을 모니터링하여 불일치를 보거나 진행 상황을 보고할 수 있습니다. |
+| 목표 | 설명 | 예 |
+| --- | --- | --- |
+| 학습 개념 및 지속적인 워크플로 | <ul><li>초보 사용자는 AI Assistant를 사용하여 Real-Time CDP 및 Adobe Journey Optimizer 개념을 학습하고 익숙하지 않은 제품 및 기능을 온보딩할 수 있습니다.</li><li>숙련된 사용자는 AI Assistant를 사용하여 워크플로우를 차단할 수 있는 경계 사례를 해결할 수 있습니다. | <ul><li>여정 분석에서 대시보드를 설정하려면 어떻게 해야 합니까?</li><li>Real-Time CDP의 사용 사례를 알려 주십시오.</li></ul> |
+| 문제 해결 | AI Assistant를 사용하여 워크플로우에서 발생할 수 있는 기본 오류를 디버깅하는 방법을 학습합니다. | <ul><li>이 오류는 무엇입니까? {ERROR_MESSAGE} 비열해?</li><li>&quot;Luma: 이메일 대상자&quot;라는 대상자를 삭제할 수 없는 이유는 무엇입니까?</li></ul> |
+| 샌드박스 위생 | AI Assistant를 사용하여 중복 또는 사용하지 않는 오브젝트를 식별하면 샌드박스를 효율적으로 관리할 수 있습니다. | <ul><li>비슷한 관객들을 보여주실 수 있나요?</li><li>연관된 데이터 세트가 없는 스키마가 있습니까?</li></ul> |
+| 값 분석 | AI Assistant를 사용하여 가장 많이 사용되는 데이터 객체를 식별하고 성능 지표를 평가하거나 가장 중요한 데이터 객체를 찾습니다. | <ul><li>Luma: 이메일 대상자 세그먼트 정의에 있는 프로필은 몇 개입니까?</li><li>대상이 언제 대상 Experience Cloud 대상으로 활성화되었습니까?</li></ul> |
+| 검색 | AI 비서를 사용하여 대상, 데이터 세트, 대상, 스키마 및 소스와 같은 지원되는 Experience Platform 개체를 찾습니다. | <ul><li>지난 분기에 생성된 이름에 &quot;Luma&quot;가 포함된 대상을 나열합니다.</li><li>Luma: 사용자 지정 작업 XDM 스키마에는 어떤 속성이 있습니까?</li></ul> |
+| 영향 분석 | AI Assistant를 사용하여 특정 워크플로우에서 사용된 데이터 객체를 식별하여 변경 사항의 영향을 평가할 수 있습니다. | <ul><li>대상이 사용하는 항목 `homeAddress.city` &quot;Luma: PersonProfiles&quot; 스키마에서?</li><li>은(는) 어떤 데이터 세트입니까? `consents.marketing.push.val` 프로필 속성이에 저장됩니까?</li></ul> |
 
 ## Experience Platform UI에서 AI 지원에 액세스
 
@@ -75,7 +76,7 @@ AI Assistant를 실행하려면 **[!UICONTROL AI Assistant 아이콘]** Experien
 
 AI Assistant 인터페이스가 나타나고 시작하기 위한 정보가 즉시 제공됩니다. 아래에 제공된 옵션을 사용할 수 있습니다. [!UICONTROL 시작하기 위한 아이디어] 다음과 같은 질문과 명령에 답변하려면
 
-* [!UICONTROL 내 세그먼트 중 어떤 세그먼트가 활성화됩니까?]
+* [!UICONTROL 내 대상 중 어떤 대상이 활성화되었습니까?]
 * [!UICONTROL 스키마란?]
 * [!UICONTROL Real-Time CDP의 일반적인 사용 사례 설명]
 
@@ -157,11 +158,11 @@ AI Assistant가 조직 내 데이터 사용에 대한 쿼리에 응답하려면 
 
 ![확장된 차트입니다.](./images/ai-assistant/chart-expanded.png)
 
-데이터 사용 질문을 묻는 메시지가 뜨면 AI 어시스턴트가 답을 계산하는 방식에 대한 설명을 제공한다. 아래 예에서 AI Assistant는 1000개 이상의 프로필이 있는 세그먼트 정의와 각각의 활성화 상태를 표시하기 위해 수행한 단계를 간략하게 설명합니다.
+데이터 사용 질문을 묻는 메시지가 뜨면 AI 어시스턴트가 답을 계산하는 방식에 대한 설명을 제공한다. 아래 예에서 AI Assistant는 1000개 이상의 프로필과 각각의 활성화 상태가 있는 세그먼트 정의를 표시하기 위해 수행한 단계를 간략하게 설명합니다.
 
-![AI Assistant가 응답을 계산한 방법을 보여 주는 세그먼트에 대한 후속 질문입니다.](./images/ai-assistant/results-explained.png)
+![AI Assistant가 응답을 계산한 방법을 보여 주는 세그먼트 정의에 대한 후속 질문입니다.](./images/ai-assistant/results-explained.png)
 
-쿼리에 필터 및 수정 사항을 제공할 수도 있으며, 포함하는 필터를 기반으로 검색 결과를 렌더링하도록 AI Assistant에 지시할 수 있습니다. 예를 들어, AI Assistant에 카운트 세그먼트 정의의 추세를 생성 날짜 순서로 표시하도록 요청하고, 합계 프로필이 0인 세그먼트 정의를 제거하고, 데이터를 표시할 때 정수 대신 월 이름을 사용할 수 있습니다.
+쿼리에 필터 및 수정 사항을 제공할 수도 있으며, 포함하는 필터를 기반으로 검색 결과를 렌더링하도록 AI Assistant에 지시할 수 있습니다. 예를 들어, AI 도우미에 카운트 세그먼트 정의의 트렌드를 만들어진 날짜 순서로 표시하도록 요청하고, 총 프로필이 0인 세그먼트 정의를 제거하고, 데이터를 표시할 때 정수 대신 월 이름을 사용할 수 있습니다.
 
 +++
 
@@ -169,7 +170,7 @@ AI Assistant가 조직 내 데이터 사용에 대한 쿼리에 응답하려면 
 
 +++자동 완성의 예를 보려면 선택
 
-자동 완성 기능을 사용하여 샌드박스에 있는 데이터 객체 목록을 수신할 수 있습니다. 세그먼트, 스키마, 데이터 세트, 소스 및 대상 도메인에서 자동 완성 권장 사항을 사용할 수 있습니다.
+자동 완성 기능을 사용하여 샌드박스에 있는 데이터 객체 목록을 수신할 수 있습니다. 자동 완성 권장 사항은 대상자, 스키마, 데이터 세트, 소스 및 대상 도메인에서 사용할 수 있습니다.
 
 더하기 기호()를 포함하여 자동 완성을 사용할 수 있습니다&#x200B;**`+`**)을 클릭하여 검색할 수 있습니다. 또는 더하기 기호(**`+`**)를 입력합니다. 샌드박스의 권장 데이터 개체 목록이 표시된 창이 나타납니다.
 
@@ -208,16 +209,16 @@ AI 어시스턴트의 멀티턴 기능을 활용해 경험 중 보다 자연스�
 또한 다음 도메인에서 데이터 사용에 대해 AI Assistant에 질문할 수 있습니다.
 
 * 속성
+* 대상자
 * 데이터 흐름
 * 데이터 세트
 * 대상 _(계정에 대한 질문과 데이터 흐름에 대한 일부 질문은 현재 답변할 수 없습니다.)_
 * 스키마 _(필드 그룹에 대한 질문에 지금은 답변할 수 없습니다.)_
-* 세그먼트
 * 소스 _(현재 계정에 대한 질문에 답변할 수 없습니다.)_
 
-사용 데이터 쿼리의 경우, 답변이 UI의 현재 상태를 반영하지 않을 수 있습니다. 이러한 질문에 대한 데이터는 24시간마다 한 번씩 업데이트됩니다. 예를 들어 사용자가 낮에 Real-Time CDP에서 수행하는 변경 사항은 밤에 데이터 스토어와 동기화된 다음 아침에 사용자 질문에 대해 사용할 수 있게 됩니다. 질문의 서식을 다음과 같이 지정해야 할 수 있습니다. &quot;제목이 있는 세그먼트는 언제입니까? {TITLE} 생성됨?&quot; 대신, &quot;언제 {TITLE} 세그먼트를 만들었습니까?&quot;
+사용 데이터 쿼리의 경우, 답변이 UI의 현재 상태를 반영하지 않을 수 있습니다. 이러한 질문에 대한 데이터는 24시간마다 한 번씩 업데이트됩니다. 예를 들어 사용자가 낮에 Real-Time CDP에서 수행하는 변경 사항은 밤에 데이터 스토어와 동기화된 다음 아침에 사용자 질문에 대해 사용할 수 있게 됩니다. 질문의 서식을 다음과 같이 지정해야 할 수 있습니다. &quot;제목을 가진 대상자는 언제 있었습니까? {TITLE} 생성됨?&quot; 대신, &quot;언제 {TITLE} 대상을 만들었습니까?&quot;
 
-스키마, 데이터 세트, 속성, 대상 및 세그먼트와 같은 객체와 관련된 특정 데이터를 조회하려면 샌드박스에 로그인해야 합니다.
+대상, 스키마, 데이터 세트, 속성 및 대상과 같은 객체와 관련된 특정 데이터를 조회하려면 샌드박스에 로그인해야 합니다.
 
 ### 데이터 사용 질문 예 {#example-data-usage-questions}
 
@@ -225,9 +226,9 @@ AI 어시스턴트의 멀티턴 기능을 활용해 경험 중 보다 자연스�
 
 | 질문 유형 | 설명 | 예시 |
 | --- | --- | --- | 
-| 데이터 계보 | 다른 Experience Platform 오브젝트에서 하나 이상의 오브젝트 사용 추적 | <ul><li>사용 데이터 세트 {SCHEMA_NAME} 스키마?</li><li>동일한 스키마를 사용하여 수집된 데이터 세트 수는 얼마입니까?</li><li>활성화된 세그먼트에서 사용된 데이터 세트</li><li>활성화된 세그먼트에 사용된 속성이 있는 스키마를 나열합니다.</li><li>활성화된 세그먼트 표시 {DESTINATION_ACCOUNT_NAME} 와 에는 1000개 이상의 프로필이 있습니다.</li><li>2023년 1월 이후에 수정된 활성화된 세그먼트에 사용되는 속성을 표시합니다.</li><li>을 통해 수집된 데이터 세트 {SOURCE_NAME}?</li><li>연계된 데이터 흐름 {DATAFLOW_NAME}</li><li>활성화된 세그먼트와 관련되고 지난 1년 동안 생성된 스키마를 나열합니다.</li></ul> |
-| 배포 및 집계 | Experience Platform 개체 사용에 대한 요약 기반 질문 | <ul><li>활성화된 세그먼트의 비율은 얼마입니까?</li><li>세분화에는 몇 개의 필드가 사용됩니까?</li><li>가장 많은 대상에 활성화된 세그먼트는 무엇입니까?</li><li>중복 세그먼트를 나열합니다.</li><li>활성화된 세그먼트 표시 {DESTINATION_ACCOUNT_NAME} 프로필 크기별로 등급을 매깁니다.</li><li>활성화되지 않았지만 프로필이 100개를 초과하는 세그먼트의 백분율입니다. 그들의 이름을 보여줘</li><li>내 데이터 세트로 데이터를 수집하는 3개의 소스 커넥터를 나열합니다.</li><li>발생에 따라 활성화된 세그먼트에 사용된 상위 5개 속성을 나열합니다.</li></ul> |
-| 오브젝트 조회 | Experience Platform 개체 또는 해당 속성을 검색하거나 액세스합니다. | <ul><li>연관된 스키마가 없는 데이터 세트</li><li>에 사용된 속성 나열 {SEGMENT_NAME}?</li><li>프로필이 활성화되었지만 생성 이후 수정되지 않은 스키마 목록을 제공합니다.</li><li>지난 주에 수정된 세그먼트는 무엇입니까?</li><li>세그먼트 정의가 같은 세그먼트를 만든 날짜와 함께 나열합니다.</li><li>프로필이 활성화된 데이터 세트이며 각 데이터 세트에서 생성된 세그먼트 수를 포함합니다.</li><li>데이터 세트 XYZ와 연관된 소스 계정은 무엇입니까?</li><li>다음의 세그먼트 정의 및 수정 날짜 표시 {SEGMENT_NAME}.</li></ul> |
+| 데이터 계보 | 다른 Experience Platform 오브젝트에서 하나 이상의 오브젝트 사용 추적 | <ul><li>사용 데이터 세트 {SCHEMA_NAME} 스키마?</li><li>동일한 스키마를 사용하여 수집된 데이터 세트 수는 얼마입니까?</li><li>활성화된 대상에서 사용된 데이터 세트는 무엇입니까?</li><li>활성화된 대상자에 사용된 속성이 있는 스키마를 나열합니다.</li><li>활성화된 대상 표시 {DESTINATION_ACCOUNT_NAME} 와 에는 1000개 이상의 프로필이 있습니다.</li><li>2023년 1월 이후에 수정된 활성화된 대상자에 사용되는 속성을 표시합니다.</li><li>을 통해 수집된 데이터 세트 {SOURCE_NAME}?</li><li>연계된 데이터 흐름 {DATAFLOW_NAME}</li><li>활성화된 대상과 관련되고 지난 1년에 생성된 스키마를 나열합니다.</li></ul> |
+| 배포 및 집계 | Experience Platform 개체 사용에 대한 요약 기반 질문 | <ul><li>활성화된 대상의 비율은 얼마입니까?</li><li>세분화에는 몇 개의 필드가 사용됩니까?</li><li>가장 많은 대상에 활성화된 대상은 무엇입니까?</li><li>중복 대상을 나열합니다.</li><li>다음에 활성화된 대상자 표시 {DESTINATION_ACCOUNT_NAME} 프로필 크기별로 등급을 매깁니다.</li><li>활성화되지 않았지만 프로필이 100개를 초과하는 대상자의 비율은 얼마입니까? 그들의 이름을 보여줘</li><li>내 데이터 세트로 데이터를 수집하는 3개의 소스 커넥터를 나열합니다.</li><li>발생 횟수에 따라 활성화된 대상자에 사용되는 상위 5개 속성을 나열합니다.</li></ul> |
+| 오브젝트 조회 | Experience Platform 개체 또는 해당 속성을 검색하거나 액세스합니다. | <ul><li>연관된 스키마가 없는 데이터 세트</li><li>에 사용된 속성 나열 {AUDIENCE_NAME}?</li><li>프로필이 활성화되었지만 생성 이후 수정되지 않은 스키마 목록을 제공합니다.</li><li>지난 주에 수정된 대상은 무엇입니까?</li><li>생성 날짜와 함께 동일한 세그먼트 정의를 가진 대상을 나열합니다.</li><li>프로필이 활성화된 데이터 세트이며 각 데이터 세트에서 만든 대상 수를 포함합니다.</li><li>데이터 세트 XYZ와 연관된 소스 계정은 무엇입니까?</li><li>다음의 세그먼트 정의 및 수정 날짜 표시 {AUDIENCE_NAME}.</li></ul> |
 
 +++
 
@@ -276,56 +277,6 @@ AI Assistant for Experience Platform에 대한 자세한 내용은 이 섹션 �
 ### 주의 사항 및 제한 사항 {#caveats-and-limitations}
 
 다음 섹션에서는 AI Assistant 사용 시 고려해야 할 현재 주의 사항 및 제한 사항에 대해 간략히 설명합니다.
-<!-- 
-#### Conversational experience
-
-You must consider several nuances regarding the conversational experience when querying the AI Assistant.
-
->[!NOTE]
->
->These limitations are temporary and are being improved upon throughout the course of the alpha.
-
->[!BEGINTABS]
-
->[!TAB Unable to infer context from prior discussion]
-
-The AI Assistant currently cannot reference prior discussions as context for a given question. See the table below for examples:
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of them?"</li></ul>| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of **segments**?"</li></ul> | The AI Assistant cannot infer what "them" means. |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you elaborate more?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Explain what a segment is in depth"</li></ul> | The AI Assistant cannot intelligently reference documentation based on "more". |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of one?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of a segment?"</li></ul> | The AI Assistant cannot infer what you want an example of.|
-| <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "How does it compare to a streaming segment?"</li></ul> | <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "Can you compare a streaming segment to a batch segment?"</li></ul> | The AI Assistant cannot infer what "it" is referring to and thus cannot compare the streaming segment. |
-| <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of them use Facebook as a destination?"</li></ul> | <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of the segments that I have are using Facebook as a destination?"</li></ul> | The AI Assistant is cannot infer what "them" is referring to. |
-
-{style="table-layout:auto"}
-
->[!TAB Unable to infer context from a page]
-
-When asking the AI Assistant about a particular element of the Experience Platform UI page that you are on, you must clearly define the specific element within your question. 
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| "What does this do?" | "What does {PAGE_NAME} do? | The AI Assistant cannot infer what "this" is referring to. You must provide the specific page element that you are querying about. |
-| "Why won't it save?" | "Why can't I save a new sandbox called {NAME}?" | The AI Assistant cannot infer what "it" is referring to and cannot know that you are having issues with an entity. |
-
-{style="table-layout:auto"}
-
-Furthermore, the AI Assistant can only answer questions regarding error messages, given that the error is documented in Experience League.
-
->[!TAB Ambiguity]
-
-You must phrase your questions clearly and scope them within a product, application, or domain, as the AI Assistant currently cannot disambiguate questions.
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| "How do I create a filter? | How do I create a filter in Profile Query Language? | You must specify the feature that which you are filtering for because a variety of Experience Platform features support filtering. |
-| "How do I get started? | How do I get started using destinations? | You must provide clarity on your goals and use case because overly broad concepts may result in generic or unnecessarily specific answers. |
-
-{style="table-layout:auto"}
-
->[!ENDTABS] -->
 
 #### 제한된 잡담
 
@@ -356,6 +307,6 @@ AI 도우미가 수행할 수 있는 작업에 대해 부정확한 인상을 줄
 
 | 나쁜 질문 | 좋은 질문 | 참고 |
 | --- | --- | --- |
-| 가장 큰 세그먼트는 무엇입니까? | 가장 큰 세그먼트는 무엇입니까? 데이터 사용. | 답변이 데이터를 기반으로 하도록 AI 도우미에 명시적으로 지시합니다. |
-| 가장 큰 세그먼트는 무엇입니까? | 내 가장 큰 세그먼트를 나열합니다. | &quot;...&quot;라는 질문이 문서 기반 질문으로 오인될 수 있는 경우가 있습니다. &quot;list&quot;와 같은 명령을 사용하는 것은 컨텍스트에 있는 데이터로 질문을 하는 것이 더 강력합니다. |
-| 보유한 데이터 세트는 몇 개입니까? | 내 데이터 세트를 카운트합니다. | 원래 질문은 세그먼트에 대해 작동하지만 데이터 세트에서는 작동하지 않을 수 있습니다. |
+| 가장 큰 대상은 어디입니까? | 가장 큰 대상은 어디입니까? 데이터 사용. | 답변이 데이터를 기반으로 하도록 AI 도우미에 명시적으로 지시합니다. |
+| 가장 큰 대상은 어디입니까? | 내 가장 큰 대상을 나열합니다. | &quot;...&quot;라는 질문이 문서 기반 질문으로 오인될 수 있는 경우가 있습니다. &quot;list&quot;와 같은 명령을 사용하는 것은 컨텍스트에 있는 데이터로 질문을 하는 것이 더 강력합니다. |
+| 보유한 데이터 세트는 몇 개입니까? | 내 데이터 세트를 카운트합니다. | 원래 질문은 대상에 대해 작동하지만 데이터 세트에서는 작동하지 않을 수 있습니다. |
