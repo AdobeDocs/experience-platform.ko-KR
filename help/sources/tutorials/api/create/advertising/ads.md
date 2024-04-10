@@ -2,14 +2,18 @@
 title: 흐름 서비스 API를 사용하여 Google Ads Base 연결 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Google 광고에 연결하는 방법을 알아봅니다.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
+source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '741'
 ht-degree: 3%
 
 ---
 
 # 를 사용하여 Google 광고 기본 연결 만들기 [!DNL Flow Service] API
+
+>[!WARNING]
+>
+>다음 [!DNL Google Ads] 소스를 일시적으로 사용할 수 없습니다. Adobe이 이 소스의 문제를 해결하기 위해 노력하고 있습니다.
 
 >[!NOTE]
 >
