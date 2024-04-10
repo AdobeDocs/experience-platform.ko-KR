@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2024년 3월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 33952028a4323b2292cdd313da290a5dd079c93f
+source-git-commit: d698bf0b8b0dbdb85909008bb3b60efb0575accc
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1189'
 ht-degree: 33%
 
 ---
@@ -30,10 +30,6 @@ Experience Platform의 기존 기능 업데이트:
 ## 카탈로그 서비스 {#catalog-service}
 
 카탈로그 서비스는 Adobe Experience Platform 내의 데이터 위치 및 계보에 대한 레코드 시스템입니다. Experience Platform에 수집되는 모든 데이터는 파일 및 디렉터리로 데이터 레이크에 저장되지만, 카탈로그는 조회 및 모니터링을 위해 이러한 파일 및 디렉터리에 대한 메타데이터 및 설명을 보유합니다.
-
->[!NOTE]
->
->표의 이미지 옆에 불필요한 구문이 렌더링되는 표시 문제를 알고 있으며 이를 해결하기 위해 노력하고 있습니다.
 
 | 기능 | 설명 |
 | --- | --- |
