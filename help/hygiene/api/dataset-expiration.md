@@ -3,9 +3,9 @@ title: 데이터 세트 만료 API 끝점
 description: 데이터 위생 API의 /ttl 끝점을 사용하면 Adobe Experience Platform에서 데이터 세트 만료를 프로그래밍 방식으로 예약할 수 있습니다.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
+source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2141'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 데이터 세트 삭제가 실제로 시작되기 전에 언제든지 만료를 취소하거나 트리거 시간을 수정할 수 있습니다. 데이터 세트 만료를 취소한 후 새 만료를 설정하여 다시 열 수 있습니다.
 
-데이터 세트 삭제가 시작되면 해당 만료 작업이 다음과 같이 표시됩니다. `executing`및 더 이상 변경되지 않을 수 있습니다. 데이터 세트 자체는 최대 7일 동안 복구할 수 있지만 Adobe 서비스 요청을 통해 시작된 수동 프로세스를 통해서만 가능합니다. 요청이 실행되면 데이터 레이크, ID 서비스 및 실시간 고객 프로필은 각 서비스에서 데이터 세트의 콘텐츠를 제거하기 위한 별도의 프로세스를 시작합니다. 세 서비스 모두에서 데이터가 삭제되면 만료는 다음과 같이 표시됩니다. `executed`.
+데이터 세트 삭제가 시작되면 해당 만료 작업이 다음과 같이 표시됩니다. `executing`및 더 이상 변경되지 않을 수 있습니다. 데이터 세트 자체는 최대 7일 동안 복구할 수 있지만 Adobe 서비스 요청을 통해 시작된 수동 프로세스를 통해서만 가능합니다. 요청이 실행되면 데이터 레이크, ID 서비스 및 실시간 고객 프로필은 각 서비스에서 데이터 세트의 콘텐츠를 제거하기 위한 별도의 프로세스를 시작합니다. 세 서비스 모두에서 데이터가 삭제되면 만료는 다음과 같이 표시됩니다. `completed`.
 
 >[!WARNING]
 >
@@ -56,7 +56,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%Jane Doe%25 \
+  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%20%25Jane%20Doe%25 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -66,6 +66,10 @@ curl -X GET \
 **응답**
 
 성공적인 응답에는 데이터 세트의 만료 결과가 표시됩니다. 다음 예제는 공백에 대해 잘렸습니다.
+
+>[!IMPORTANT]
+>
+>다음 `ttlId` 또한 이 응답으로 `{DATASET_EXPIRATION_ID}`. 둘 다 데이터 세트 만료에 대한 고유 식별자를 참조합니다.
 
 ```json
 {
@@ -90,26 +94,30 @@ curl -X GET \
 
 | 속성 | 설명 |
 | --- | --- |
-| `totalRecords` | 목록 호출의 매개 변수와 일치하는 데이터 세트 만료 수입니다. |
-| `ttlDetails` | 반환된 데이터 세트 만료에 대한 세부 정보를 포함합니다. 데이터 세트 만료의 속성에 대한 자세한 내용은 만들기 응답 섹션을 참조하십시오. [조회 호출](#lookup). |
+| `total_count` | 목록 호출의 매개 변수와 일치하는 데이터 세트 만료 수입니다. |
+| `results` | 반환된 데이터 세트 만료에 대한 세부 정보를 포함합니다. 데이터 세트 만료의 속성에 대한 자세한 내용은 만들기 응답 섹션을 참조하십시오. [조회 호출](#lookup). |
 
 {style="table-layout:auto"}
 
 ## 데이터 세트 만료 조회 {#lookup}
 
-데이터 세트 만료를 조회하려면 다음 중 하나를 사용하여 GET 요청을 수행합니다. `datasetId` 또는 `ttlId`.
+데이터 세트 만료를 조회하려면 다음 중 하나를 사용하여 GET 요청을 수행합니다. `{DATASET_ID}` 또는 `{DATASET_EXPIRATION_ID}`.
+
+>[!IMPORTANT]
+>
+>다음 `{DATASET_EXPIRATION_ID}` 을(를) (으)로 함 `ttlId` 응답. 둘 다 데이터 세트 만료에 대한 고유 식별자를 참조합니다.
 
 **API 형식**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}
 ```
 
 | 매개변수 | 설명 |
 | --- | --- |
 | `{DATASET_ID}` | 조회할 만료에 해당하는 데이터 세트의 ID입니다. |
-| `{TTL_ID}` | 데이터 세트 만료 ID입니다. |
+| `{DATASET_EXPIRATION_ID}` | 데이터 세트 만료 ID입니다. |
 
 {style="table-layout:auto"}
 
@@ -222,7 +230,7 @@ curl -X POST \
 
 **응답**
 
-기존 데이터 세트 만료가 없는 경우 성공한 응답은 HTTP 201(생성됨) 상태와 데이터 세트 만료의 새 상태를 반환합니다.
+성공적인 응답은 HTTP 201(생성됨) 상태와 데이터 세트 만료의 새 상태를 반환합니다.
 
 ```json
 {
@@ -254,7 +262,7 @@ curl -X POST \
 | `displayName` | 만료 요청의 표시 이름입니다. |
 | `description` | 만료 요청에 대한 설명. |
 
-데이터 세트에 대한 데이터 세트 만료가 이미 존재하는 경우 400(잘못된 요청) HTTP 상태가 발생합니다. 실패한 응답은 그러한 데이터 세트 만료가 존재하지 않거나 액세스 권한이 없는 경우 404(찾을 수 없음) HTTP 상태를 반환합니다.
+데이터 세트에 대한 데이터 세트 만료가 이미 존재하는 경우 400(잘못된 요청) HTTP 상태가 발생합니다. 실패한 응답은 그러한 데이터 세트 만료가 존재하지 않거나 데이터 세트에 대한 액세스 권한이 없는 경우 404(찾을 수 없음) HTTP 상태를 반환합니다.
 
 ## 데이터 세트 만료 업데이트 {#update}
 
@@ -267,14 +275,12 @@ curl -X POST \
 **API 형식**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_EXPIRATION_ID}
 ```
-
-<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{TTL_ID}` | 변경하려는 데이터 세트 만료의 ID입니다. |
+| `{DATASET_EXPIRATION_ID}` | 변경하려는 데이터 세트 만료의 ID입니다. 참고: 이를 라고 합니다. `ttlId` 응답. |
 
 **요청**
 
@@ -374,19 +380,19 @@ curl -X DELETE \
 
 ## 데이터 세트의 만료 상태 내역 검색 {#retrieve-expiration-history}
 
-쿼리 매개 변수를 사용하여 특정 데이터 세트의 만료 상태 기록을 조회할 수 있습니다 `include=history` 조회 요청에서. 결과에는 데이터 세트 만료, 적용된 모든 업데이트 및 해당 취소 또는 실행(해당되는 경우)에 대한 정보가 포함됩니다. 다음을 사용할 수도 있습니다 `ttlId` 데이터 세트 만료 기간.
+특정 데이터 세트의 만료 상태 기록을 조회하려면 `{DATASET_ID}` 및 `include=history` 조회 요청의 쿼리 매개 변수. 결과에는 데이터 세트 만료, 적용된 모든 업데이트 및 해당 취소 또는 실행(해당되는 경우)에 대한 정보가 포함됩니다. 다음을 사용할 수도 있습니다 `{DATASET_EXPIRATION_ID}` 데이터 세트 만료 상태 기록을 검색합니다.
 
 **API 형식**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}?include=history
 ```
 
 | 매개변수 | 설명 |
 | --- | --- |
 | `{DATASET_ID}` | 만료 내역을 조회할 데이터 세트의 ID입니다. |
-| `{TTL_ID}` | 데이터 세트 만료 ID입니다. |
+| `{DATASET_EXPIRATION_ID}` | 데이터 세트 만료 ID입니다. 참고: 이를 라고 합니다. `ttlId` 응답. |
 
 {style="table-layout:auto"}
 
