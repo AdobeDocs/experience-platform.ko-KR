@@ -2,10 +2,10 @@
 title: YouTube 비디오 추적 확장 개요
 description: Adobe Experience Platform의 YouTube 비디오 추적 태그 확장에 대해 알아봅니다.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 40%
+source-wordcount: '895'
+ht-degree: 33%
 
 ---
 
@@ -82,11 +82,11 @@ document.onreadystatechange = function () {
 
 다음 비디오 확장 개체가 포함될 예정입니다.
 
-* **이벤트**: 비디오 시작(이 이벤트는 방문자가 YouTube 비디오를 재생하기 시작할 때 규칙이 실행됩니다.)
+* **이벤트**: &quot;비디오 시작&quot;(이 이벤트는 방문자가 YouTube 비디오를 재생하기 시작할 때 규칙이 실행됩니다.)
 
 * **조건**: 없음
 
-* **작업**: 사용 **분석 확장** 를 &quot;변수 설정&quot; 작업에 매핑하려면 다음을 수행합니다.
+* **작업**: 사용 **분석 확장** 을 &quot;변수 설정&quot; 작업에 매핑하려면 다음을 수행합니다.
 
    * 비디오 시작 이벤트,
    * 비디오 지속 시간 데이터 요소에 대한 prop/eVar
@@ -94,13 +94,13 @@ document.onreadystatechange = function () {
    * 비디오 이름 데이터 요소에 대한 prop/eVar
    * 비디오 URL 데이터 요소에 대한 prop/eVar
 
-   그런 다음 &quot;비콘 보내기&quot; 작업(`s.tl`) 링크 이름 &quot;video start&quot;와 &quot;Clear Variables&quot; 작업이 차례로 표시됩니다.
+  그런 다음 &quot;비콘 보내기&quot; 작업(`s.tl`) 링크 이름 &quot;비디오 시작&quot; 뒤에 &quot;변수 지우기&quot; 작업이 옵니다.
 
 >[!TIP]
 > 
 >각 비디오 요소에 대해 여러 개의 eVar 또는 prop을 사용할 수 없는 구현의 경우, 데이터 요소 값을 플랫폼 내에서 연결하고, 분류 규칙 빌더 도구를 사용하여 분류 보고서로 구문 분석할 수 있습니다. [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html)을 추가한 다음 Analysis Workspace에서 세그먼트로 적용합니다.
 
-비디오 정보 값을 연결하려면 ”비디오 메타 데이터”라는 새 데이터 요소를 만든 후 이를 프로그래밍하여 모든 비디오 데이터 요소(위에 나열됨)를 가져와서 함께 조합합니다. 예:
+비디오 정보 값을 연결하려면 &quot;비디오 메타데이터&quot;라는 새 데이터 요소를 만들고 이를 프로그래밍하여 모든 비디오 데이터 요소(위에 나열됨)를 가져와서 함께 조합합니다. 예:
 
 ```javascript
 var r = [];
@@ -113,3 +113,5 @@ r.push(_satellite.getVar('Extension Version'));
 
 return r.join('|');
 ```
+
+플랫폼 내에서 데이터 요소를 효과적으로 만들고 활용하는 방법에 대한 자세한 내용은 [데이터 요소](../../../ui/managing-resources/data-elements.md) 설명서를 참조하십시오.
