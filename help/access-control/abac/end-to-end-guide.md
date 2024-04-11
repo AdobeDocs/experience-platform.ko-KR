@@ -4,9 +4,9 @@ title: 속성 기반 액세스 제어 엔드투엔드 안내서
 description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 전체 안내서를 제공합니다
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c89ae9befa3befbffab9d6468f3c207ab8e7b74f
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1736'
 ht-degree: 17%
 
 ---
@@ -132,6 +132,10 @@ Platform UI에 대한 권한 작업 공간이 나타나고 **[!UICONTROL 역할]
 >레이블이 필드에 추가되면 해당 레이블은 해당 필드의 상위 리소스(클래스 또는 필드 그룹)에 적용됩니다. 상위 클래스 또는 필드 그룹이 다른 스키마에서 사용되는 경우 해당 스키마는 동일한 레이블을 상속합니다.
 
 ## 세그먼트에 레이블 적용
+
+>[!NOTE]
+>
+>동일한 액세스 제한을 적용하려면 레이블이 지정된 속성을 사용하는 세그먼트에도 마찬가지로 레이블이 지정되어야 합니다.
 
 스키마 필드에 레이블 지정을 완료한 후에는 세그먼트에 레이블 지정을 시작할 수 있습니다.
 
