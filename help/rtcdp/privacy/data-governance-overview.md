@@ -4,9 +4,9 @@ title: 데이터 거버넌스 개요
 description: 데이터 거버넌스를 통해 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다.
 feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '689'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ Real-Time CDP은 Adobe Experience Platform을 기반으로 구축되므로 대�
 >
 >마케팅 작업과 데이터 사용 정책에서의 사용에 대한 자세한 내용은 [데이터 사용 정책 개요](../../data-governance/policies/overview.md) 다음에서 [!DNL Experience Platform] 설명서를 참조하십시오.
 
-대상에 대한 마케팅 작업을 정의하면 해당 대상으로 전송된 모든 프로필 또는 세그먼트가 데이터 사용 정책을 준수하는지 확인할 수 있습니다. 따라서 활성화에 대한 정책 제한을 집행해야 하는 조직의 필요에 따라 대상에 적절한 마케팅 작업을 추가해야 합니다.
+대상에 대한 마케팅 작업을 정의하면 해당 대상으로 전송된 모든 프로필 또는 대상이 데이터 사용 정책을 준수하는지 확인할 수 있습니다. 따라서 활성화에 대한 정책 제한을 집행해야 하는 조직의 필요에 따라 대상에 적절한 마케팅 작업을 추가해야 합니다.
 
 마케팅 작업은 대상을 처음 설정할 때만 선택할 수 있습니다. 작업 중인 대상 유형에 따라 마케팅 작업을 구성할 수 있는 기회가 설정 워크플로우의 다른 지점에 나타납니다. 다음을 참조하십시오. [대상 설명서](../destinations/overview.md) 특정 대상을 구성하는 방법에 대한 단계입니다.
 
@@ -49,7 +49,7 @@ Adobe Experience Platform은 일반적인 고객 경험 사용 사례를 위한 
 
 ## 데이터 사용 규정 준수 적용 {#enforce}
 
-데이터에 레이블이 지정되고 사용 정책이 정의되면 데이터 사용을 정책에 따라 적용할 수 있습니다. Real-Time CDP의 대상으로 대상 세그먼트를 활성화할 때 데이터 거버넌스에서 위반이 발생하면 사용 정책을 자동으로 적용합니다.
+데이터에 레이블이 지정되고 사용 정책이 정의되면 데이터 사용을 정책에 따라 적용할 수 있습니다. Real-Time CDP에서 대상을 대상으로 활성화할 때 데이터 거버넌스에서 위반이 발생하면 사용 정책을 자동으로 적용합니다.
 
 다음에 대한 문서 보기: [자동 정책 시행](../../data-governance/enforcement/auto-enforcement.md) 추가 정보.
 

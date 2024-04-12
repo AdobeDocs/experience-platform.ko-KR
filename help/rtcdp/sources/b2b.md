@@ -4,9 +4,9 @@ description: Adobe Real-time Customer Data Platform B2B 에디션의 소스 역�
 feature: Sources, Data Ingestion, Get Started, B2B
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: a8c9543bb003a99dcd85712d202482511c0a5608
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,6 @@ Adobe Real-time Customer Data Platform B2B 에디션을 사용하면 다음을 �
 사용에 대한 자세한 내용은 다음 문서를 참조하십시오 [!DNL Marketo] B2B 데이터를 Platform으로 가져오려면 다음을 수행하십시오.
 
 * 연결 방법에 대한 자세한 정보 [!DNL Marketo] 데이터를 플랫폼으로 전송하는 방법에 대한 자습서를 참조하십시오. [ui에서 Marketo 소스 커넥터 만들기](../../sources/tutorials/ui/create/adobe-applications/marketo.md).
-* 에서 사용되는 B2B 네임스페이스 및 스키마의 기본 설정에 대한 자세한 내용 [!DNL Marketo], 다음 설명서를 참조하십시오. [B2B 네임스페이스 및 스키마](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
+* B2B 네임스페이스 및 스키마의 기본 설정에 대한 자세한 내용은 다음 설명서를 참조하십시오 [B2B 네임스페이스 및 스키마](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 * 를 찾는 방법에 대한 자세한 내용 [!DNL Marketo] Munchkin ID 및 자격 증명 생성에서 다음을 참조하십시오. [[!DNL Marketo] 인증 안내서](../../sources/connectors/adobe-applications/marketo/marketo-auth.md).
 * 에 적용되는 특정 매핑 규칙에 대한 정보 [!DNL Marketo] 데이터 세트 다음에 대한 설명서 참조: [[!DNL Marketo] 필드 매핑](../../sources/connectors/adobe-applications//mapping/marketo.md).

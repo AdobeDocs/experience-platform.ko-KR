@@ -5,10 +5,10 @@ description: Real-Time CDP B2B Experience Platform의 관련 계정 기능에 �
 feature: Get Started, Profiles, B2B
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 6%
+source-wordcount: '435'
+ht-degree: 4%
 
 ---
 
@@ -32,7 +32,7 @@ B2B 기업은 고객 정보가 여러 시스템에 저장되어 있는 경우가
 
 ![Experience Platform UI에서 관련 계정을 표시하는 화면입니다.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
-이 기능을 사용하여 Experience Platform UI에서 계정 프로필에 대한 관련 계정 프로필을 본 다음 세그먼트 정의에 관련 계정을 포함시켜 범위를 넓히거나 세그먼트에 더 넓은 기준을 적용할 수 있습니다.
+이 기능을 사용하여 Experience Platform UI에서 계정 프로필에 대한 관련 계정 프로필을 본 다음 세그먼트 정의에 관련 계정을 포함시켜 범위를 넓히거나 대상에 더 넓은 기준을 적용할 수 있습니다.
 
 ## 관련 계정 서비스 활성화 {#enable}
 

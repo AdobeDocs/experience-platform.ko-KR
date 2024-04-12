@@ -4,9 +4,9 @@ description: 사용 가능한 다양한 Adobe Real-time Customer Data Platform B
 feature: Get Started, Audiences, Segments, B2B
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1422'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 0%
 B2B 클래스에 대한 세분화 속성을 사용하려면 먼저 다음 단계를 완료해야 합니다.
 
 1. B2B 클래스를 사용하는 스키마를 만듭니다. B2B 에디션 클래스에는 계정, 캠페인, 기회, 마케팅 목록 등이 포함됩니다. 다음에 대한 정보: [b2B 클래스에서 사용할 스키마를 설정하는 방법](../schemas/b2b.md) 스키마 설명서 를 참조하십시오.
-1. XDM(Experience Data Model) B2B 스키마 간의 관계를 만듭니다. B2B 에디션 속성을 기반으로 하는 세그먼트는 확장된 B2B 세그멘테이션 기능을 완전히 사용하기 위해 클래스 간의 관계가 필요합니다. 다음에서 설명서를 참조하십시오. [두 B2B 스키마 간의 관계를 정의하는 방법](../../xdm/tutorials/relationship-b2b.md) 추가 정보.
-1. B2B 스키마를 기반으로 데이터 세트를 사용하여 데이터를 수집합니다. 다음에 대한 소스 설명서 를 참조하십시오. [데이터 수집 방법에 대한 정보](../../sources/connectors/adobe-applications/marketo/marketo.md).
-1. 읽기 [세그먼트 빌더 사용 안내서](../../segmentation/ui/segment-builder.md) 대상자를 만드는 방법에 대한 자세한 지침을 보려면 여기를 클릭하십시오.
+2. XDM(Experience Data Model) B2B 스키마 간의 관계를 만듭니다. B2B 에디션 속성을 기반으로 하는 대상은 확장된 B2B 세그멘테이션 기능을 완전히 사용하기 위해 클래스 간의 관계가 필요합니다. 다음에서 설명서를 참조하십시오. [두 B2B 스키마 간의 관계를 정의하는 방법](../../xdm/tutorials/relationship-b2b.md) 추가 정보.
+3. B2B 스키마를 기반으로 데이터 세트를 사용하여 데이터를 수집합니다. 다음에 대한 소스 설명서 를 참조하십시오. [데이터 수집 방법에 대한 정보](../../sources/connectors/adobe-applications/marketo/marketo.md).
+4. 읽기 [세그먼트 빌더 사용 안내서](../../segmentation/ui/segment-builder.md) 대상자를 만드는 방법에 대한 자세한 지침을 보려면 여기를 클릭하십시오.
 
 이러한 요구 사항이 충족되면 일반적인 B2B 사용 사례에 대해 이러한 속성을 결합할 수 있습니다.
 
@@ -54,7 +54,7 @@ B2B 사용 사례에 대한 대상을 효과적으로 만들려면 스키마에 
 
 다음을 참조하십시오. [Real-time Customer Data Platform B2B 에디션 설명서의 스키마](../schemas/b2b.md) 사용 가능한 B2B 클래스에 대한 자세한 정보를 제공합니다.
 
-아래 사용 사례에서는 이러한 결과를 얻기 위해 서로 다른 스키마 간의 관계를 설정하는 데 사용되는 클래스에 대한 정보를 제공합니다. 이러한 예제를 사용하여 고유한 세그먼트를 만들 수 있습니다.
+아래 사용 사례에서는 이러한 결과를 얻기 위해 서로 다른 스키마 간의 관계를 설정하는 데 사용되는 클래스에 대한 정보를 제공합니다. 이러한 예제를 사용하여 고유한 대상을 만들 수 있습니다.
 
 ## 다양한 세분화 사용 사례의 예 {#use-cases}
 

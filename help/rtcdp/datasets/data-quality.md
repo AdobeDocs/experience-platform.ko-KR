@@ -4,9 +4,9 @@ title: Real-time Customer Data Platform의 데이터 품질
 description: Adobe Real-time Customer Data Platform의 데이터 품질에 대한 문서
 feature: Get Started, Data Ingestion, Best Practices
 exl-id: 1d1b0bf9-1011-4053-8f8a-7a141febd000
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '129'
 ht-degree: 0%
 
 ---
@@ -17,4 +17,4 @@ Adobe Real-time Customer Data Platform(Real-Time CDP)를 사용하면 여러 소
 
 Real-Time CDP은 Adobe Experience Platform을 기반으로 구축되었으며 다양한 Experience Platform 서비스 및 기능을 활용합니다. 따라서 데이터가 수집될 때 확인 및 유효성이 검사될 것임을 확신할 수 있습니다.
 
-데이터 품질에 대한 자세한 내용은 [Adobe I/O에 대한 데이터 품질 설명서](../../ingestion/quality/overview.md).
+데이터 수집 시 확인 사항 및 모범 사례에 대한 자세한 내용은 [데이터 품질 설명서](../../ingestion/quality/overview.md).

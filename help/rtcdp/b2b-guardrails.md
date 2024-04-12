@@ -6,7 +6,7 @@ description: Adobe Experience Platform은 기존의 관계형 데이터 모델�
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: f6cfe2de5f2f485cbd42c83b539fb458b505d260
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '1794'
 ht-degree: 2%
@@ -102,7 +102,7 @@ Real-time Customer Data Platform B2B 에디션을 사용하면 행동 통찰력 
 
 ## 세그먼테이션 보호
 
-이 섹션에 설명된 보호 기능은 Experience Platform 내에서 조직이 만들 수 있는 세그먼트의 수와 특성과 대상 세그먼트를 매핑하고 활성화하는 방법에 대해 설명합니다.
+이 섹션에 설명된 보호 기능은 대상이 대상에 매핑되고 활성화되는 것뿐만 아니라 Experience Platform 내에서 조직이 만들 수 있는 대상의 수와 특성에 대한 내용입니다.
 
 >[!NOTE]
 >
@@ -134,7 +134,7 @@ Real-time Customer Data Platform B2B 에디션을 사용하면 행동 통찰력 
 
 #### Dimension 엔티티
 
-프로필 데이터를 유지 관리하는 프로필 데이터 저장소는 관계형 저장소가 아니지만, 프로필에서는 단순하고 직관적인 방식으로 세그먼트를 생성하기 위해 작은 차원 엔티티와의 통합을 허용합니다. 이러한 통합을 라고 합니다. [다중 엔티티 세그멘테이션](../segmentation/multi-entity-segmentation.md).
+프로필 데이터를 유지 관리하는 프로필 데이터 저장소는 관계형 저장소가 아니지만, 프로필에서는 단순하고 직관적인 방식으로 대상자를 만들 수 있도록 작은 차원 엔티티와의 통합을 허용합니다. 이러한 통합을 라고 합니다. [다중 엔티티 세그멘테이션](../segmentation/multi-entity-segmentation.md).
 
 또한 조직은 상점, 제품 또는 속성과 같이 개인 이외의 항목을 설명하는 XDM 클래스를 정의할 수도 있습니다. 이 비-[!DNL XDM Individual Profile] 스키마는 &quot;차원 엔티티&quot;(조회 엔티티라고도 함)라고 하며 시계열 데이터를 포함하지 않습니다. 차원 엔티티를 나타내는 스키마는 를 사용하여 프로필 엔티티에 연결됩니다. [스키마 관계](../xdm/tutorials/relationship-ui.md).
 

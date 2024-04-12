@@ -1,12 +1,12 @@
 ---
 title: Real-Time CDP 제품 설명서
-description: Adobe Real-Time CDP 사용 방법을 알아봅니다.
+description: Adobe Real-Time CDP을 시작하고 가 제공하는 다양한 기능과 비즈니스에 도움이 되는 방법을 이해합니다. 이 페이지를 제품 학습의 시작점으로 사용하십시오.
 solution: Real-Time Customer Data Platform
 product: Real Time CDP
 exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
-source-git-commit: 882852b186779c29c5d2b46a56b73809b8611dd6
+source-git-commit: c9a954d2a78abcea67e68e5ae9563e6db1ae706c
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1114'
 ht-degree: 4%
 
 ---

@@ -3,12 +3,12 @@ product: adobe experience platform
 solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
-user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 대상자 세그먼트를 생성하며, 이러한 세그먼트를 서드파티 대상으로 활성화할 수 있습니다.
+user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이러한 프로필에서 대상을 생성하며, 이러한 대상을 서드파티 대상으로 활성화할 수 있습니다.
 role: Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 70%
+source-wordcount: '294'
+ht-degree: 59%
 
 ---
 
@@ -33,6 +33,11 @@ ht-degree: 70%
    * [계정 프로필 UI 안내서](accounts/account-profile-ui-guide.md)
 * 관리 {#admin}
    * [관리 개요](administration/admin-overview.md)
+* 대상자 및 세그멘테이션 {#segmentation}
+   * [세분화 개요](segmentation/segmentation-overview.md)
+   * [세그먼트 빌더 안내서](segmentation/segment-builder-guide.md)
+   * [Real-Time CDP B2B 에디션의 세분화](segmentation/b2b.md)
+   * [고객 AI](segmentation/customer-ai.md)
 * 데이터 세트 {#datasets}
    * [데이터 세트](datasets/dataset.md)
    * [Platform의 데이터 품질](datasets/data-quality.md)
@@ -66,11 +71,6 @@ ht-degree: 70%
 * 스키마 {#schemas}
    * [스키마 개요](schemas/overview.md)
    * [Real-Time CDP B2B 에디션의 스키마](schemas/b2b.md)
-* 세그먼트 {#segmentation}
-   * [세분화 개요](segmentation/segmentation-overview.md)
-   * [세그먼트 빌더 안내서](segmentation/segment-builder-guide.md)
-   * [Real-Time CDP B2B 에디션의 세분화](segmentation/b2b.md)
-   * [고객 AI](segmentation/customer-ai.md)
 * 소스 {#sources}
    * [소스 개요](sources/sources-overview.md)
    * [Real-Time CDP B2B 에디션의 소스](sources/b2b.md)

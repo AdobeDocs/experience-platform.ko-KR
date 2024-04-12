@@ -5,9 +5,9 @@ description: Real-Time Customer Data Platform B2B 에디션 계정 개요
 feature: Get Started, B2B
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1050'
 ht-degree: 4%
 
 ---
@@ -86,6 +86,6 @@ Real-Time CDP B2B 에디션이 B2B 서비스 모델에 어떤 도움을 줄 수 
 * [데이터 수집 방법](./sources/b2b.md)
 * [프로필에 액세스하는 방법](./profile/profile-overview.md)
 * [Real-time Customer Data Platform B2B 에디션의 스키마](./schemas/b2b.md)
-* [세그먼트를 만드는 방법](./segmentation/b2b.md)
-* [대상에 세그먼트를 활성화하는 방법](./destinations/b2b.md)
+* [대상자를 만드는 방법](./segmentation/b2b.md)
+* [대상에 대한 대상자를 활성화하는 방법](./destinations/b2b.md)
 * [데이터 거버넌스 정책을 정의하고 적용하는 방법](./privacy/data-governance-overview.md)

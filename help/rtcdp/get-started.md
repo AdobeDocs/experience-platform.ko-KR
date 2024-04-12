@@ -4,10 +4,10 @@ title: Real-time Customer Data Platform 시작하기
 description: Adobe Real-Time Customer Data Platform 구현을 설정할 때 이 샘플 시나리오를 예로 사용하십시오.
 feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '2333'
-ht-degree: 2%
+source-wordcount: '2325'
+ht-degree: 1%
 
 ---
 
@@ -55,7 +55,7 @@ Adobe Experience Platform에서 제공하는 Real-Time CDP을 통해 Luma의 마
 1. 사용 [여러 데이터 소스](#using-multiple-data-sources).
 1. [데이터 소스 구성](#configuring-a-data-source).
 1. [데이터 수집](#bringing-the-data-together-for-a-specific-customer) 특정 고객용.
-1. 설정 [세그먼트](#segments).
+1. 설정 [대상](#audiences).
 1. 설정 [대상](#destinations).
 1. [여러 장치에서 프로필 결합](#cross-device-identity-stitching).
 1. [프로필 분석](#analyzing-the-profile).
@@ -64,7 +64,7 @@ Adobe Experience Platform에서 제공하는 Real-Time CDP을 통해 Luma의 마
 
 고객이 사이트를 처음 방문할 때 고객에 대해 아는 것이 없습니다.
 
-![image](assets/luma-site.png)
+![이미지](assets/luma-site.png)
 
 탐색할 때 데이터는 실시간으로 캡처되어 Adobe Analytics의 보고서 세트뿐만 아니라 Adobe Experience Platform으로 직접 전송됩니다. 데이터가 수집되면에서 행동 데이터를 기반으로 하여 고객에 대한 단일 뷰를 형성하기 시작합니다 [!DNL Experience Platform's real-time customer profile].
 
@@ -74,7 +74,7 @@ Adobe Experience Platform에서 제공하는 Real-Time CDP을 통해 Luma의 마
 
 예를 들어, 식별되지 않은 방문자가 Luma 사이트의 남성용 섹션으로 이동하여 커플 러닝 스웨트 셔츠를 봅니다.
 
-![image](assets/luma-sweatshirts.png)
+![이미지](assets/luma-sweatshirts.png)
 
 고객이 이러한 제품에 대해 자세히 알아보려고 탐색할 때 이러한 제품 보기가 Adobe Analytics에 수집되어 로 전송됩니다. [!DNL Experience Platform].
 
@@ -88,7 +88,7 @@ Luma는 방문자의 행동을 Adobe Experience Platform의 사용자 프로필�
 
 고객이 로그인하면 Sarah Rose라고 알려줍니다.
 
-![image](assets/luma-login.png)
+![이미지](assets/luma-login.png)
 
 두 개의 ID가 병합됩니다.
 
@@ -105,7 +105,7 @@ Luma는 방문자의 행동을 Adobe Experience Platform의 사용자 프로필�
 
 그녀는 홈페이지로 이동하여 더 많은 것을 찾아본다.
 
-![image](assets/luma-personal.png)
+![이미지](assets/luma-personal.png)
 
 Sarah는 자신을 기반으로 동적으로 제공되는 개인화된 홈 페이지 경험을 수신합니다 [!DNL Real-Time Customer Profile] Adobe Experience Platform.
 
@@ -129,7 +129,7 @@ Adobe Experience Platform에서 제공하는 Real-time Customer Data Platform은
 
 Luma의 팀은 모든 행동 및 고객 데이터를 한 곳에 보유하고 있습니다.
 
-![image](assets/luma-dash.png)
+![이미지](assets/luma-dash.png)
 
 다음 모든 소스에서 데이터를 수집할 수 있습니다.
 
@@ -144,13 +144,13 @@ Luma의 팀은 모든 행동 및 고객 데이터를 한 곳에 보유하고 있
 
 사용 [!DNL Real-Time Customer Data Platform] 새로운 데이터 소스를 Platform으로 가져옵니다. Real-Time CDP에는 프로필에 빠르고 쉽게 추가할 수 있는 데이터 소스 카탈로그가 포함되어 있습니다.
 
-![image](assets/luma-source-cat.png)
+![이미지](assets/luma-source-cat.png)
 
 예를 들어 Luma의 CRM 데이터를 수집하려면 다음을 수행하여 카탈로그를 필터링합니다. *CRM*, 및 을 포함하는 모든 기본 제공 커넥터 *CRM* 나열된 상태로 남아 있습니다. 추가하려면 [!DNL Microsoft Dynamics CRM] 데이터:
 
 1. 연결을 승인합니다.
 
-   ![image](assets/luma-source-auth.png)
+   ![이미지](assets/luma-source-auth.png)
 
 1. XDM 사전 매핑 테이블의 권장 목록에서 가져올 항목을 선택합니다.
 
@@ -158,7 +158,7 @@ Luma의 팀은 모든 행동 및 고객 데이터를 한 곳에 보유하고 있
 
    예를 들어 을 선택합니다. **[!UICONTROL 연락처]**. 연락처 데이터의 미리 보기가 자동으로 로드되므로 모든 것이 예상대로 보이는지 확인할 수 있습니다.
 
-   Adobe Experience Platform은 표준 필드를 로 자동 매핑하여 이 프로세스에서 많은 수동 작업을 수행합니다. [!DNL Experience Data Model] (XDM) 프로필 스키마.
+   Real-Time CDP은 표준 필드를 로 자동 매핑하여 이 프로세스에서 많은 수동 작업을 수행합니다. [!DNL Experience Data Model] (XDM) 프로필 스키마.
 
 1. 필드 매핑을 검토합니다.
 
@@ -169,7 +169,7 @@ Luma의 팀은 모든 행동 및 고객 데이터를 한 곳에 보유하고 있
 
 1. 일정을 설정합니다.
 
-   ![image](assets/luma-source-sched.png)
+   ![이미지](assets/luma-source-sched.png)
 
 완료되었습니다. 방금 을(를) 추가했습니다. [!DNL Microsoft CRM] 에 데이터 소스로 사용 [!DNL Experience Platform].
 
@@ -181,13 +181,15 @@ Luma에는 수집된 특정 종류의 정보 사용을 제한하는 많은 내�
 
 데이터 사용 레이블이 적용되면 Luma는 데이터 거버넌스를 사용하여 데이터 사용 정책을 만들 수 있습니다. 데이터 사용 정책은 특정 레이블이 포함된 데이터에 대해 수행할 수 있는 작업 종류를 설명하는 규칙입니다. 정책 위반을 구성하는 Real-Time CDP에서 작업을 수행하려고 하면 작업이 차단되고 위반된 정책 및 이유를 보여주는 경고가 표시됩니다.
 
+또한 Real-Time CDP
+
 ## 특정 고객을 위한 데이터 통합
 
 이 시나리오에서는 Sarah Rose의 프로필을 검색합니다. 로그인에 사용한 이메일과 함께 프로필이 나타납니다.
 
 <!-- ![image](assets/luma-find-profile.png) -->
 
-Luma가 Sarah에 대해 갖는 모든 프로필 정보입니다. 여기에는 주소 및 전화번호, 커뮤니케이션 환경 설정, 지원 대상 세그먼트 등 그녀의 개인 정보가 포함됩니다.
+Luma가 Sarah에 대해 갖는 모든 프로필 정보입니다. 여기에는 주소 및 전화번호, 커뮤니케이션 환경 설정, 대상 등 그녀의 개인 정보가 포함됩니다.
 
 | 카테고리 | 설명 |
 |---|---|
@@ -198,9 +200,9 @@ Real-Time CDP 프로필은 Luma 마케팅 팀의 워크플로우를 몇 주에�
 
 마케팅 팀은 이 향상된 기능을 사용할 수 있습니다. [!DNL Real-Time Customer Profile] Luma를 통해 Sarah의 경험을 더 잘 개인화하고 브랜드 충성도를 높이기 위해.
 
-## 세그먼트
+## 대상자
 
-강력한 Adobe Experience Platform 세그멘테이션 기능을 통해 마케터는 의 캡처된 데이터를 기반으로 속성, 이벤트 및 기존 세그먼트를 결합할 수 있습니다. [!DNL Real-Time Customer Profile].
+강력한 Adobe Experience Platform 세그멘테이션 기능을 통해 마케터는 의 캡처된 데이터를 기반으로 속성, 이벤트 및 기존 대상을 결합할 수 있습니다. [!DNL Real-Time Customer Profile].
 
 <!-- ![image](assets/luma-segments.png) -->
 
@@ -210,9 +212,9 @@ Luma 데이터 과학 팀은 구매 성향에 대한 모델을 만들었습니�
 
 <!-- ![image](assets/luma-gift.png) -->
 
-### 세그먼트 정의
+### 대상자 정의
 
-선물을 사는 과정에 있는 것으로 보이는 장바구니 포기 고객을 나타내는 세그먼트를 수정하거나 만듭니다.
+Audiences 작업 영역의 다양한 시각적 구성 또는 코드 기반 표현식 편집기 옵션을 사용하여 선물을 사는 과정에 있는 것으로 보이는 장바구니 포기 고객을 나타내는 대상자를 수정하거나 만듭니다.
 
 ```sql
 Profile: Category != Preferred Category 
@@ -231,14 +233,14 @@ Sarah가 장바구니에 명백한 선물 항목을 추가하고 포기했으므
 
 ## 대상
 
-&quot;선물 증정 카트 포기&quot; 세그먼트를 추가하면 이 세그먼트에 속하는 대략 몇 명의 사람들을 볼 수 있습니다. 해당 작업을 수행하여 채널 전반의 개인화에 사용할 수 있도록 할 수 있습니다.
+&quot;선물 증정 카트 포기&quot; 대상을 추가하면 이 대상의 약 몇 명이 속해 있는지 확인할 수 있습니다. 해당 작업을 수행하여 채널 전반의 개인화에 사용할 수 있도록 할 수 있습니다.
 
 선택 **[!UICONTROL 대상으로 보내기]**.
 
-Real-Time CDP에서 Luma는 개인화를 위해 대상 세그먼트에 매끄럽게 작용할 수 있습니다.\
+Real-Time CDP에서 Luma는 개인화를 위해 해당 대상자에게 원활하게 작용할 수 있습니다.\
 여기에서는 Luma가 이 대상을 Adobe 및 비 Adobe 솔루션 모두로 보낼 수 있는 모든 대상을 확인합니다.
 
-![image](assets/luma-dest.png)
+![이미지](assets/luma-dest.png)
 
 ### 대상 선택
 
@@ -252,7 +254,7 @@ Real-Time CDP에서 Luma는 개인화를 위해 대상 세그먼트에 매끄럽
 
 ### 대상 예약
 
-특정 시간에 시작하거나 종료하도록 세그먼트를 예약할 수도 있습니다. 세그먼트는 게시되고 예약된 날짜에 구성된 플랫폼에서 자동으로 업데이트됩니다.
+대상자 내보내기를 특정 시간에 시작하거나 종료하도록 예약할 수도 있습니다. 예정된 날짜에 구성된 플랫폼에서 대상자가 게시되고 자동으로 업데이트됩니다.
 
 >[!NOTE]
 >
@@ -266,17 +268,21 @@ Real-Time CDP에서 Luma는 개인화를 위해 대상 세그먼트에 매끄럽
 
 ### 대상에 대한 데이터 사용 정책 시행
 
-Adobe Experience Platform에는 특정 대상에 세그먼트를 활성화할 수 있는지 여부를 결정하는 개인 정보 보호 및 보안 컨트롤이 포함되어 있습니다. 활성화 는 대상이 생성될 때 지정된 마케팅 목적과 조직에서 정의한 데이터 사용 정책에 따라 활성화되거나 제한됩니다.
+Adobe Experience Platform에는 특정 대상에 대상을 활성화할 수 있는지 여부를 결정하는 개인 정보 보호 및 보안 컨트롤이 포함되어 있습니다. 활성화 는 대상이 생성될 때 지정된 마케팅 목적과 조직에서 정의한 데이터 사용 정책에 따라 활성화되거나 제한됩니다.
 
 활동이 정책을 위반하는 경우 경고가 표시됩니다. 이 경고에는 정책이 위반된 이유와 위반 사항을 해결하기 위해 수행할 수 있는 작업을 식별하는 데 도움이 되는 데이터 계보 정보가 포함되어 있습니다.
 
 이 컨트롤을 사용하면 [!DNL Experience Platform] luma가 규정을 준수하고 시장에 책임감을 갖도록 지원합니다. 이러한 컨트롤은 유연하며 Luma의 보안 및 거버넌스 팀의 요구 사항에 맞게 수정할 수 있으므로 알려지거나 알려지지 않은 고객 데이터를 관리하기 위한 지역 및 조직의 요구 사항을 자신 있게 해결할 수 있습니다.
 
-### 데이터 흐름 캔버스
+<!--
 
-저장하면 시각적 데이터 흐름 캔버스에 통합 프로필에서 선택한 세 개의 대상으로 매핑된 세그먼트가 표시됩니다.
+### Data flow canvas
+
+When you save, a visual data flow canvas shows the segment mapped from the unified profile to the three destinations you selected.
 
 ![image](assets/luma-flow.png)
+
+-->
 
 ## 크로스 디바이스 ID 결합
 
@@ -297,8 +303,8 @@ Sarah가 모바일 디바이스에서 소셜 미디어 사이트를 탐색하면
 
 ## 프로필 분석
 
-Luma 마케터는 Adobe Experience Platform을 사용하여 Real-Time CDP 대시보드에서 선물 제공자 세그먼트를 봅니다. 시간이 지남에 따라 이 이니셔티브의 결과를 보고 성장하고 있음을 파악합니다. 고객들은 오퍼에 반응하고 더 많은 돈을 소비하고 있다.
+Luma 마케터는 Adobe Experience Platform을 사용하여 Real-Time CDP 대시보드에서 선물 제공자 대상을 봅니다. 시간이 지남에 따라 이 이니셔티브의 결과를 보고 성장하고 있음을 파악합니다. 고객들은 오퍼에 반응하고 더 많은 돈을 소비하고 있다.
 
-이러한 통찰력을 통해 마케터는 CDP에서 이 데이터를 사용할 수 있고 Sarah와 같은 고객이 세그먼트에 연결되도록 하여 발생한 이 신호에 대해 조치를 취할 수 있습니다.
+이러한 통찰력을 통해 마케터는 CDP에서 이 데이터를 사용할 수 있고 Sarah와 같은 고객을 대상자에 연결하여 이 신호에 대한 조치를 취할 수 있습니다.
 
 Luma는 이 CDP 데이터를 사용하여 충성도와 고객 만족도를 향상시킵니다.

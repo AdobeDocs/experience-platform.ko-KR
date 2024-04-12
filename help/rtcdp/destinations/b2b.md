@@ -4,9 +4,9 @@ description: Adobe Real-time Customer Data Platform B2B 에디션의 대상 역�
 feature: Destinations
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Real-Time CDP B2B 에디션에서 완전히 지원하는 Experience Platform 대
 
 대상이 B2B 워크플로우에 어떻게 적합한지 이해하려면 다음을 참조하십시오. [전체 튜토리얼](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
 
-Adobe Real-time Customer Data Platform B2B 에디션을 사용하면 Marketo Engage 대상 커넥터를 통해 B2B 데이터를 내보낼 수 있습니다. Marketo Engage 대상을 사용하면 Adobe Experience Platform에서 만든 세그먼트를 Marketo에 푸시할 수 있으며 여기서 정적 목록으로 표시됩니다.
+Adobe Real-time Customer Data Platform B2B 에디션을 사용하면 Marketo Engage 대상 커넥터를 통해 B2B 데이터를 내보낼 수 있습니다. Marketo Engage 대상을 사용하면 Adobe Experience Platform에서 만든 대상을 Marketo으로 푸시하여 정적 목록으로 표시할 수 있습니다.
 
 Marketo Engage 대상을 사용하여 데이터를 내보내는 방법에 대한 자세한 내용은 다음 문서를 참조하십시오.
 
