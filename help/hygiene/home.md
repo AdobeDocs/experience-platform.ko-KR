@@ -1,10 +1,10 @@
 ---
 title: 고급 데이터 수명주기 관리 개요
-description: 고급 데이터 수명주기 관리를 사용하면 오래되거나 부정확한 레코드를 업데이트하거나 삭제하여 데이터의 수명주기를 관리할 수 있습니다.
+description: 고급 데이터 수명 주기 관리를 사용하면 오래되거나 부정확한 레코드를 업데이트하거나 삭제하여 데이터의 수명 주기를 관리할 수 있습니다.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '583'
 ht-degree: 1%
 
 ---
@@ -70,4 +70,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## 다음 단계
 
-이 문서에서는 Platform의 데이터 수명주기 기능에 대한 개요를 제공합니다. UI에서 데이터 위생 요청을 시작하려면 다음을 참조하십시오. [UI 안내서](./ui/overview.md). 프로그래밍 방식으로 데이터 주기 작업을 만드는 방법에 대해 알아보려면 다음을 참조하십시오. [데이터 위생 API 안내서](./api/overview.md)
+이 문서에서는 플랫폼의 데이터 수명주기 기능에 대한 개요를 제공합니다. UI에서 데이터 위생 요청을 시작하려면 다음을 참조하십시오. [UI 안내서](./ui/overview.md). 프로그래밍 방식으로 데이터 주기 작업을 만드는 방법에 대해 알아보려면 다음을 참조하십시오. [데이터 위생 API 안내서](./api/overview.md)

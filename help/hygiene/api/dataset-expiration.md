@@ -3,9 +3,9 @@ title: 데이터 세트 만료 API 끝점
 description: 데이터 위생 API의 /ttl 끝점을 사용하면 Adobe Experience Platform에서 데이터 세트 만료를 프로그래밍 방식으로 예약할 수 있습니다.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
+source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2166'
 ht-degree: 2%
 
 ---
@@ -197,6 +197,10 @@ curl -X GET \
 지정된 기간 후에 시스템에서 데이터가 제거되도록 하려면 데이터 세트 ID와 만료 날짜 및 시간을 ISO 8601 형식으로 제공하여 특정 데이터 세트에 대한 만료를 예약하십시오.
 
 데이터 세트 만료를 만들려면 아래 그림과 같이 POST 요청을 수행하고 페이로드 내에 아래 언급된 값을 제공합니다.
+
+>[!NOTE]
+>
+>404 오류가 발생하면 요청에 슬래시가 추가로 없는지 확인합니다. 뒤쪽 슬래시로 인해 POST 요청이 실패할 수 있습니다.
 
 **API 형식**
 
