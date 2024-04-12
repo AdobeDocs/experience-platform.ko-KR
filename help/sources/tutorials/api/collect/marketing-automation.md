@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 Marketing Automation 소스에 대�
 type: Tutorial
 description: 이 자습서에서는 마케팅 자동화 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Adobe Experience Platform으로 가져오는 단계를 다룹니다.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1349'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,8 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 마케팅 자동화 소스가 있는 유효한 기본 연결 ID가 이미 있어야 합니다. 이 ID가 없는 경우 [소스 개요](../../../home.md#marketing-automation) 기본 연결을 만들 수 있는 marketing automation 소스 목록
+>* 데이터 흐름을 만들려면 마케팅 자동화 소스가 있는 유효한 기본 연결 ID가 이미 있어야 합니다. 이 ID가 없는 경우 [소스 개요](../../../home.md#marketing-automation) 기본 연결을 만들 수 있는 marketing automation 소스 목록
+>* Experience Platform이 데이터를 수집하려면 모든 테이블 기반 배치 소스의 시간대를 UTC로 구성해야 합니다.
 
 ## 시작하기
 
@@ -558,7 +559,7 @@ curl -X GET \
 
 +++
 
-## 데이터 흐름을 만듭니다
+## 데이터 흐름 만들기
 
 마케팅 자동화 데이터를 수집하기 위한 마지막 단계는 데이터 흐름을 만드는 것입니다. 이제 다음 필수 값이 준비되었습니다.
 

@@ -5,10 +5,10 @@ title: 흐름 서비스 API를 사용하여 프로토콜 소스에 대한 데이
 type: Tutorial
 description: 이 자습서에서는 프로토콜 응용 프로그램에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 플랫폼으로 수집하는 단계를 다룹니다.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 2%
+source-wordcount: '1314'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 프로토콜 원본이 있는 올바른 기본 연결 ID가 이미 있어야 합니다. 이 ID가 없는 경우 [소스 개요](../../../home.md#protocols) 기본 연결을 만들 수 있는 프로토콜 원본 목록에 대해 설명합니다.
+>* 데이터 흐름을 만들려면 프로토콜 원본이 있는 올바른 기본 연결 ID가 이미 있어야 합니다. 이 ID가 없는 경우 [소스 개요](../../../home.md#protocols) 기본 연결을 만들 수 있는 프로토콜 원본 목록에 대해 설명합니다.
 
 ## 시작하기
 
@@ -606,7 +606,7 @@ curl -X GET \
 
 +++
 
-## 데이터 흐름을 만듭니다
+## 데이터 흐름 만들기
 
 데이터 수집을 위한 마지막 단계는 데이터 흐름을 만드는 것입니다. 이 시점에서 다음 필수 값을 준비해야 합니다.
 

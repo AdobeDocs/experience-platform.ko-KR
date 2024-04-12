@@ -5,9 +5,9 @@ title: UI에서 데이터베이스 소스를 사용하여 데이터 흐름 만�
 type: Tutorial
 description: 데이터 흐름은 소스에서 Platform 데이터 세트로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 Platform UI를 사용하여 데이터베이스 소스에 대한 데이터 흐름을 만드는 방법에 대한 단계를 제공합니다.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1441'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 데이터베이스 원본이 있는 인증된 계정이 이미 있어야 합니다. UI에서 다양한 데이터베이스 소스 계정을 만들기 위한 자습서 목록은 [소스 개요](../../../home.md#database).
+>* 데이터 흐름을 만들려면 데이터베이스 원본이 있는 인증된 계정이 이미 있어야 합니다. UI에서 다양한 데이터베이스 소스 계정을 만들기 위한 자습서 목록은 [소스 개요](../../../home.md#database).
+>
+>* Experience Platform이 데이터를 수집하려면 모든 테이블 기반 배치 소스의 시간대를 UTC로 구성해야 합니다. 에 대해 지원되는 유일한 타임스탬프 [[!DNL Snowflake] 소스](../../../connectors/databases/snowflake.md) 는 UTC 시간을 사용하는 TIMESTAMP_NTZ입니다.
 
 ## 시작하기
 

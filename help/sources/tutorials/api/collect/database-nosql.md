@@ -5,10 +5,10 @@ title: 흐름 서비스 API를 사용하여 데이터베이스 소스에 대한 
 type: Tutorial
 description: 이 자습서에서는 데이터베이스에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 이를 Platform에 수집하는 단계를 다룹니다.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1408'
-ht-degree: 2%
+source-wordcount: '1416'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,8 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 데이터베이스 원본의 올바른 기본 연결 ID가 이미 있어야 합니다. 이 ID가 없는 경우 [소스 개요](../../../home.md#database) 기본 연결을 만들 수 있는 데이터베이스 원본 목록입니다.
+>* 데이터 흐름을 만들려면 데이터베이스 원본의 올바른 기본 연결 ID가 이미 있어야 합니다. 이 ID가 없는 경우 [소스 개요](../../../home.md#database) 기본 연결을 만들 수 있는 데이터베이스 원본 목록입니다.
+>* Experience Platform이 데이터를 수집하려면 모든 테이블 기반 배치 소스의 시간대를 UTC로 구성해야 합니다. 에 대해 지원되는 유일한 타임스탬프 [[!DNL Snowflake] 소스](../../../connectors/databases/snowflake.md) 는 UTC 시간을 사용하는 TIMESTAMP_NTZ입니다.
 
 ## 시작하기
 
@@ -587,7 +588,7 @@ curl -X GET \
 
 +++
 
-## 데이터 흐름을 만듭니다
+## 데이터 흐름 만들기
 
 데이터 수집을 위한 마지막 단계는 데이터 흐름을 만드는 것입니다. 이 시점에서 다음 필수 값을 준비해야 합니다.
 

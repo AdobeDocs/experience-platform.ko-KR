@@ -5,9 +5,9 @@ title: UI에서 동의 및 환경 설정 소스를 사용하여 데이터 흐름
 type: Tutorial
 description: 데이터 흐름은 소스에서 Platform 데이터 세트로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 튜토리얼에서는 Platform UI를 사용하여 동의 및 환경 설정 소스에 대한 데이터 흐름을 만드는 방법에 대한 단계를 제공합니다.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1489'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 다음을 보유한 인증된 계정이 이미 있어야 합니다 [!DNL OneTrust Integration] 소스. 다음 튜토리얼 참조: [만들기 [!DNL OneTrust Integration] UI의 소스 연결](../../ui/create/consent-and-preferences/onetrust.md) 추가 정보.
+>* 데이터 흐름을 만들려면 다음을 보유한 인증된 계정이 이미 있어야 합니다 [!DNL OneTrust Integration] 소스. 다음 튜토리얼 참조: [만들기 [!DNL OneTrust Integration] UI의 소스 연결](../../ui/create/consent-and-preferences/onetrust.md) 추가 정보.
+>* Experience Platform이 데이터를 수집하려면 모든 테이블 기반 배치 소스의 시간대를 UTC로 구성해야 합니다.
 
 ## 시작하기
 

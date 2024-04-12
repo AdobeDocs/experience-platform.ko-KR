@@ -5,10 +5,10 @@ title: 흐름 서비스 API를 사용하여 전자 상거래 소스에 대한 �
 type: Tutorial
 description: 이 튜토리얼에서는 타사 전자 상거래 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 Platform으로 수집하는 단계를 다룹니다.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1311'
-ht-degree: 2%
+source-wordcount: '1304'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,8 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 전자 상거래 원본의 올바른 기본 연결 ID가 이미 있어야 합니다. 이 ID가 없는 경우 [소스 개요](../../../home.md#ecommerce) 기본 연결을 만들 수 있는 전자 상거래 원본 목록입니다.
+>* 데이터 흐름을 만들려면 전자 상거래 원본의 올바른 기본 연결 ID가 이미 있어야 합니다. 이 ID가 없는 경우 [소스 개요](../../../home.md#ecommerce) 기본 연결을 만들 수 있는 전자 상거래 원본 목록입니다.
+>* Experience Platform이 데이터를 수집하려면 모든 테이블 기반 배치 소스의 시간대를 UTC로 구성해야 합니다.
 
 ## 시작하기
 
@@ -561,7 +562,7 @@ curl -X GET \
 
 +++
 
-## 데이터 흐름을 만듭니다
+## 데이터 흐름 만들기
 
 데이터 수집을 위한 마지막 단계는 데이터 흐름을 만드는 것입니다. 이 시점에서 다음 필수 값을 준비해야 합니다.
 

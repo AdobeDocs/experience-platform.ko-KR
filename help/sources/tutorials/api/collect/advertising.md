@@ -5,10 +5,10 @@ title: 흐름 서비스 API를 사용하여 광고 소스에 대한 데이터 �
 type: Tutorial
 description: 이 튜토리얼에서는 서드파티 광고 애플리케이션에서 데이터를 검색하고 소스 커넥터 및 플로우 서비스 API를 사용하여 이 데이터를 플랫폼으로 수집하는 단계를 다룹니다.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1347'
-ht-degree: 2%
+source-wordcount: '1340'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,8 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 광고 소스가 있는 유효한 기본 연결 ID가 이미 있어야 합니다. 이 ID가 없는 경우 [소스 개요](../../../home.md#advertising) 기본 연결을 만들 수 있는 advertising 소스 목록의 경우
+>* 데이터 흐름을 만들려면 광고 소스가 있는 유효한 기본 연결 ID가 이미 있어야 합니다. 이 ID가 없는 경우 [소스 개요](../../../home.md#advertising) 기본 연결을 만들 수 있는 advertising 소스 목록의 경우
+>* Experience Platform이 데이터를 수집하려면 모든 테이블 기반 배치 소스의 시간대를 UTC로 구성해야 합니다.
 
 ## 시작하기
 
@@ -592,7 +593,7 @@ curl -X GET \
 
 +++
 
-## 데이터 흐름을 만듭니다
+## 데이터 흐름 만들기
 
 광고 데이터를 수집하는 마지막 단계는 데이터 흐름을 만드는 것입니다. 이제 다음 필수 값이 준비되었습니다.
 

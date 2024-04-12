@@ -5,9 +5,9 @@ title: UI에서 프로토콜 소스를 사용하여 데이터 흐름 만들기
 type: Tutorial
 description: 데이터 흐름은 소스에서 Platform 데이터 세트로 데이터를 검색하고 수집하는 예약된 작업입니다. 이 자습서에서는 Platform UI를 사용하여 프로토콜 소스에 대한 데이터 흐름을 만드는 방법에 대한 단계를 제공합니다.
 exl-id: 94631a78-14ea-41d7-876c-468634dfc6c1
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->데이터 흐름을 만들려면 프로토콜 원본이 있는 인증된 계정이 이미 있어야 합니다. UI에서 다양한 프로토콜 소스 계정을 만들기 위한 자습서 목록은 [소스 개요](../../../home.md#protocols).
+>* 데이터 흐름을 만들려면 프로토콜 원본이 있는 인증된 계정이 이미 있어야 합니다. UI에서 다양한 프로토콜 소스 계정을 만들기 위한 자습서 목록은 [소스 개요](../../../home.md#protocols).
+>* Experience Platform이 데이터를 수집하려면 모든 테이블 기반 배치 소스의 시간대를 UTC로 구성해야 합니다.
 
 ## 시작하기
 
