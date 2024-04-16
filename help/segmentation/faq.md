@@ -2,9 +2,9 @@
 title: 대상 FAQ
 description: 대상자 및 기타 세분화 관련 개념에 대한 FAQ에 대한 답변을 살펴보십시오.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
+source-git-commit: f9235763746e12bd62f19094372dcff41cb41d65
 workflow-type: tm+mt
-source-wordcount: '3189'
+source-wordcount: '3161'
 ht-degree: 1%
 
 ---
@@ -86,7 +86,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 는 세그먼트 정의나
 
 ### 외부에서 생성된 대상자를 삭제할 수 있습니까?
 
-이 시점에서는 외부에서 생성된 대상자만 비활성화할 수 있습니다. 이 상태에서는 프로필 **의지** 다운스트림 애플리케이션에서 사용할 수 있도록 활성 상태를 유지합니다. 외부에서 생성된 대상자 삭제에 대한 지원이 후속 릴리스에 추가됩니다.
+예! 외부에서 생성된 대상은 Audience Portal 내에서 삭제할 수 있습니다.
 
 ### 실수로 외부에서 생성된 대상자를 업로드한 경우 어떻게 해야 합니까?
 
