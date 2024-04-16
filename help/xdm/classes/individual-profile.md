@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM 개별 프로필 클래스
 description: XDM 개별 프로필 클래스에 대해 알아봅니다.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ce937f1335283382189fa40f65aa268735c02715
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,7 @@ ht-degree: 0%
 
 프로필의 범위는 익명 행동 신호(예: 브라우저 쿠키)부터 이름, 생년월일, 위치 및 이메일 주소와 같은 세부 정보가 포함된 고도로 식별된 프로필까지 다양합니다. 프로필이 성장하면 개인의 개인 정보, ID, 연락처 세부 정보 및 커뮤니케이션 환경 설정을 저장하는 강력한 저장소가 됩니다. 플랫폼 생태계에서 이 클래스의 사용에 대한 자세한 내용은 [XDM 개요](../home.md#data-behaviors).
 
-다음 [!DNL XDM Individual Profile] 클래스 자체는 데이터를 수집할 때 자동으로 채워지는 여러 시스템 생성 값을 제공하지만 다른 모든 필드는 를 사용하여 추가해야 합니다 [호환 가능한 스키마 필드 그룹](#field-groups):
-
-![](../images/classes/individual-profile.png)
+![XDM 개별 프로필 클래스의 스키마 다이어그램입니다.](../images/classes/individual-profile.png)
 
 | 속성 | 설명 |
 | --- | --- |
