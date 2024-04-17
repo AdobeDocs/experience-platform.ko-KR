@@ -4,9 +4,9 @@ title: API를 사용한 Edge 세그멘테이션
 description: 이 문서에는 Adobe Experience Platform 세그멘테이션 서비스 API와 함께 에지 세그멘테이션을 사용하는 방법에 대한 예제가 포함되어 있습니다.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1207'
 ht-degree: 1%
 
 ---
@@ -64,6 +64,7 @@ Experience Platform API 엔드포인트를 성공적으로 호출하려면 의 �
 
 - 세그먼트 정의는 단일 이벤트와 `inSegment` 이벤트.
    - 그러나 세그먼트에 포함된 경우 `inSegment` 이벤트는 프로필 전용이며, 세그먼트 정의는 입니다. **의지** 에지 세분화에 대해 활성화되어야 합니다.
+- 세그먼트 정의는 시간 제한의 일부로서 &quot;연도 무시&quot;를 사용합니다.
 
 ## 에지 세그멘테이션에 대해 활성화된 모든 세그먼트 검색
 
@@ -279,6 +280,6 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 유사한 �
 
 다음 섹션에는 에지 세분화에 대해 자주 묻는 질문이 나와 있습니다.
 
-### Edge Network에서 세그먼트를 사용할 수 있으려면 얼마나 걸립니까?
+### Edge Network에서 세그먼트를 사용할 수 있는 데 시간이 얼마나 걸립니까?
 
-Edge Network에서 세그먼트를 사용할 수 있으려면 최대 1시간이 걸립니다.
+Edge Network에서 세그먼트를 사용할 수 있는 데 최대 1시간이 소요됩니다.

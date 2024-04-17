@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Edge 세그멘테이션 UI 안내서
 description: 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화하면서 에지 세분화를 사용하여 에지에서 즉시 플랫폼의 세그먼트 정의를 평가하는 방법을 알아봅니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ ht-degree: 0%
 
 - 세그먼트 정의는 단일 이벤트와 `inSegment` 이벤트.
    - 그러나 세그먼트 정의에 가 포함된 경우 `inSegment` 이벤트는 프로필 전용이며, 세그먼트 정의는 입니다. **의지** 에지 세분화에 대해 활성화되어야 합니다.
+- 세그먼트 정의는 시간 제한의 일부로서 &quot;연도 무시&quot;를 사용합니다.
 
 ## 다음 단계
 
@@ -64,6 +65,6 @@ ht-degree: 0%
 
 다음 섹션에는 에지 세분화에 대해 자주 묻는 질문이 나와 있습니다.
 
-### Edge Network에서 세그먼트 정의를 사용하려면 얼마나 걸립니까?
+### Edge Network에서 세그먼트 정의를 사용할 수 있는 데 시간이 얼마나 걸립니까?
 
-Edge Network에서 세그먼트 정의를 사용할 수 있으려면 최대 1시간이 걸립니다.
+Edge Network에서 세그먼트 정의를 사용할 수 있는 데 최대 1시간이 소요됩니다.

@@ -4,9 +4,9 @@ title: 스트리밍 세분화를 통해 실시간에 가까운 이벤트 평가
 description: 이 문서에는 Adobe Experience Platform 세그먼테이션 서비스 API와 함께 스트리밍 세그먼테이션을 사용하는 방법에 대한 예제가 포함되어 있습니다.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2050'
 ht-degree: 4%
 
 ---
@@ -87,6 +87,7 @@ ht-degree: 4%
 - 세그먼트 정의에는 여러 엔티티(다중 엔티티 쿼리)가 포함됩니다.
 - 세그먼트 정의는 단일 이벤트와 `inSegment` 이벤트.
    - 그러나 세그먼트에 포함된 경우 `inSegment` 이벤트는 프로필 전용이며, 세그먼트 정의는 입니다. **의지** 스트리밍 세분화를 활성화하십시오.
+- 세그먼트 정의는 시간 제한의 일부로서 &quot;연도 무시&quot;를 사용합니다.
 
 스트리밍 세분화를 수행할 때 다음 지침이 적용됩니다.
 

@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: 연도 시간 제한 업데이트 무시
 description: 연도 시간 제한 무시 문제를 해결하는 방법에 대해 알아봅니다.
-source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
+exl-id: 44bb8817-e32d-4806-ad4e-b1840313e768
+source-git-commit: 006950092f69d378b064c795b117166343e5d8f2
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 9%
+source-wordcount: '246'
+ht-degree: 8%
 
 ---
-
 
 # 연도 제한 무시 업데이트 {#ignore-year}
 
@@ -16,6 +16,10 @@ ht-degree: 9%
 >id="platform_audiences_segmentBuilder_ignoreYear"
 >title="연도 업데이트 무시"
 >abstract="연도 제한 무시 기능이 업데이트되었습니다. 대상자를 다시 저장해 주십시오."
+
+>[!IMPORTANT]
+>
+>다음을 사용하여 평가된 세그먼트 정의에서만 &quot;연도 무시&quot; 시간 제한을 사용할 수 있습니다. **일괄 세분화**. 세그먼트 정의에 &quot;연도 무시&quot; 시간 제한을 추가하면 결과 대상자가 됩니다. **부적당해** 스트리밍 또는 에지 세분화용.
 
 2024년 2월 Adobe Experience Platform 릴리스에는 대상 만들기 및 평가에서 &quot;연도 무시&quot; 옵션 문제를 해결하는 Adobe Experience Platform 세그멘테이션 서비스 변경 사항이 도입되었습니다.
 

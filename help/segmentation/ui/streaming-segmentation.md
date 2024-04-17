@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 스트리밍 세분화 UI 안내서
 description: Adobe Experience Platform에서의 스트리밍 세그먼테이션을 사용하면 데이터 풍부성에 초점을 맞추면서 거의 실시간으로 세그먼테이션을 수행할 수 있습니다. 스트리밍 세분화를 사용하면 데이터가 플랫폼에 들어올 때 세그먼트 자격이 부여되어 세분화 작업을 예약하고 실행할 필요가 줄어듭니다. 이 기능을 사용하면 이제 데이터가 플랫폼으로 전달될 때 대부분의 세그먼트 규칙을 평가할 수 있습니다. 즉, 예약된 세그먼테이션 작업을 실행하지 않고도 세그먼트 멤버십을 최신 상태로 유지합니다.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 88f2c8723ef16ff5601dc7e45a9f77b25f45acfd
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1541'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,7 @@ ht-degree: 0%
 - 세그먼트 정의에는 여러 엔티티(다중 엔티티 쿼리)가 포함됩니다.
 - 세그먼트 정의는 단일 이벤트와 `inSegment` 이벤트.
    - 그러나 세그먼트 정의에 가 포함된 경우 `inSegment` 이벤트는 프로필 전용이며, 세그먼트 정의는 입니다. **의지** 스트리밍 세분화를 활성화하십시오.
+- 세그먼트 정의는 시간 제한의 일부로서 &quot;연도 무시&quot;를 사용합니다.
 
 스트리밍 세분화를 수행할 때 다음 지침이 적용됩니다.
 
