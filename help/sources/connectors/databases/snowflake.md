@@ -1,13 +1,11 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Amazon Redshift;Amazon redshift;redshift;Redshift
-solution: Experience Platform
 title: Snowflake 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Snowflake을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 8b0f6eca87deedd8090830e3375d5099bfb0dfc0
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
@@ -16,7 +14,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->다음 [!DNL Snowflake] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
+>* 다음 [!DNL Snowflake] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
+>* 기본적으로 [!DNL Snowflake] 소스 해석 `null` 를 빈 문자열로 표시합니다. Adobe 담당자에게 문의하여 다음을 확인하십시오. `null` 값이 올바르게 다음으로 기록됨 `null` Adobe Experience Platform.
+>* Experience Platform이 데이터를 수집하려면 모든 테이블 기반 배치 소스의 시간대를 UTC로 구성해야 합니다. 에 대해 지원되는 유일한 타임스탬프 [!DNL Snowflake] 소스는 UTC 시간을 사용하는 TIMESTAMP_NTZ입니다.
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
@@ -30,11 +30,11 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하는
 
 ## 연결 [!DNL Snowflake] API를 사용하여 플랫폼으로
 
-- [흐름 서비스 API를 사용하여 Snowflake 기반 연결 만들기](../../tutorials/api/create/databases/snowflake.md)
-- [흐름 서비스 API를 사용하여 데이터 테이블 탐색](../../tutorials/api/explore/tabular.md)
-- [흐름 서비스 API를 사용하여 데이터베이스 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/database-nosql.md)
+* [흐름 서비스 API를 사용하여 Snowflake 기반 연결 만들기](../../tutorials/api/create/databases/snowflake.md)
+* [흐름 서비스 API를 사용하여 데이터 테이블 탐색](../../tutorials/api/explore/tabular.md)
+* [흐름 서비스 API를 사용하여 데이터베이스 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/database-nosql.md)
 
 ## 연결 [!DNL Snowflake] UI를 사용하여 플랫폼에 연결
 
-- [UI에서 Snowflake 소스 연결 만들기](../../tutorials/ui/create/databases/snowflake.md)
-- [UI에서 데이터베이스 소스 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/databases.md)
+* [UI에서 Snowflake 소스 연결 만들기](../../tutorials/ui/create/databases/snowflake.md)
+* [UI에서 데이터베이스 소스 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/databases.md)
