@@ -4,7 +4,7 @@ description: 소스 커넥터를 사용하기 전에 허용 목록에 IP 주소�
 solution: Experience Platform
 title: 소스 연결을 위한 IP 주소 허용 목록
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 4fd23af603296fb7201925029dd5acc196156420
+source-git-commit: 9bd2e10b11dd77e3c8064617135a1a0bdcf9a66e
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -30,6 +30,10 @@ ht-degree: 0%
 - `40.70.148.160/28`
 - `52.167.107.224/28`
 - `20.98.198.224/29`
+- `20.119.28.57/32`
+- `20.232.89.104/29`
+- `20.98.195.172/32`
+- `172.210.218.144/28`
 
 ## NLD2: 유럽
 
