@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 세트 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: aee82356f1f519398f381e161be14789532561f1
+source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
 workflow-type: tm+mt
-source-wordcount: '2932'
+source-wordcount: '2943'
 ht-degree: 3%
 
 ---
@@ -273,9 +273,9 @@ CSV 파일을 사용하여 데이터 세트를 만들면 제공된 CSV 파일과
 
 ## 프로필 활성화 데이터 세트 삭제
 
-프로필에 대해 데이터 세트가 활성화되어 있으면 UI를 통해 해당 데이터 세트를 삭제하면 데이터 레이크, ID 서비스 및 Platform 내의 프로필 스토어에서 삭제됩니다.
+데이터 세트가 프로필에 대해 활성화된 경우 UI를 통해 해당 데이터 세트를 삭제하면 데이터 레이크, ID 서비스 및 프로필 스토어의 해당 데이터 세트와 연결된 모든 프로필 데이터에서도 삭제됩니다.
 
-다음에서 데이터 세트를 삭제할 수 있습니다. [!DNL Profile] 실시간 고객 프로필 API를 사용하여 데이터 레이크에 데이터만 저장합니다. 자세한 내용은 [프로필 시스템 작업 API 끝점 안내서](../../profile/api/profile-system-jobs.md).
+데이터 세트와 연결된 프로필 데이터를 [!DNL Profile] 실시간 고객 프로필 API를 사용하여 (데이터를 데이터 레이크에 둡니다.) 자세한 내용은 [프로필 시스템 작업 API 끝점 안내서](../../profile/api/profile-system-jobs.md).
 
 ## 데이터 수집 모니터링
 

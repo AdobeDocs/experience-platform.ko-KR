@@ -5,16 +5,16 @@ type: Documentation
 description: Adobe Experience Platform을 사용하면 더 이상 필요하지 않거나 오류로 추가된 실시간 고객 프로필 데이터를 제거하기 위해 프로필 스토어에서 데이터 세트 또는 배치를 삭제할 수 있습니다. 이를 위해서는 프로필 API를 사용하여 프로필 시스템 작업을 생성하거나 요청을 삭제해야 합니다.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1327'
 ht-degree: 2%
 
 ---
 
 # 프로필 시스템 작업 끝점(요청 삭제)
 
-Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 수집하고 개별 고객을 위한 강력한 프로필을 구축할 수 있습니다. 데이터 수집됨 [!DNL Platform] 에 저장됩니다. [!DNL Data Lake], 그리고 데이터 세트가 프로필에 대해 활성화된 경우 해당 데이터는에 저장됩니다. [!DNL Real-Time Customer Profile] 데이터 저장소도 있습니다. 더 이상 필요하지 않거나 오류로 추가된 데이터를 제거하기 위해 프로필 저장소에서 데이터 세트 또는 배치를 삭제해야 하는 경우가 있습니다. 이를 위해서는 를 사용해야 합니다. [!DNL Real-Time Customer Profile] 만들기 위한 API [!DNL Profile] 시스템 작업 또는 `delete request`필요한 경우 수정, 모니터링 또는 제거할 수도 있습니다.
+Adobe Experience Platform을 사용하면 여러 소스에서 데이터를 수집하고 개별 고객을 위한 강력한 프로필을 구축할 수 있습니다. 데이터 수집됨 [!DNL Platform] 에 저장됩니다. [!DNL Data Lake], 그리고 데이터 세트가 프로필에 대해 활성화된 경우 해당 데이터는에 저장됩니다. [!DNL Real-Time Customer Profile] 데이터 저장소도 있습니다. 더 이상 필요하지 않거나 오류로 추가된 데이터를 제거하기 위해 프로필 저장소에서 데이터 세트와 연결된 프로필 데이터를 삭제해야 하는 경우가 있습니다. 이를 위해서는 를 사용해야 합니다. [!DNL Real-Time Customer Profile] 만들기 위한 API [!DNL Profile] 시스템 작업 또는 `delete request`필요한 경우 수정, 모니터링 또는 제거할 수도 있습니다.
 
 >[!NOTE]
 >
@@ -102,9 +102,9 @@ curl -X GET \
 
 새 삭제 요청을 시작하는 것은 (으)로의 POST 요청을 통해 수행됩니다. `/systems/jobs` 삭제할 데이터 세트 또는 배치의 ID가 요청 본문에 제공되는 종단점입니다.
 
-### 데이터 세트 삭제
+### 데이터 세트 및 관련 프로필 데이터 삭제
 
-프로필 스토어에서 데이터 세트를 삭제하려면 데이터 세트 ID가 POST 요청 본문에 포함되어야 합니다. 이 작업은 주어진 데이터 세트에 대한 모든 데이터를 삭제합니다. [!DNL Experience Platform] 레코드 및 시계열 스키마를 모두 기반으로 데이터 세트를 삭제할 수 있습니다.
+POST 저장소에서 데이터 세트 및 데이터 세트와 연결된 모든 프로필 데이터를 삭제하려면 데이터 세트 ID를 프로필 요청의 본문에 포함해야 합니다. 이 작업은 주어진 데이터 세트에 대한 모든 데이터를 삭제합니다. [!DNL Experience Platform] 레코드 및 시계열 스키마를 모두 기반으로 데이터 세트를 삭제할 수 있습니다.
 
 **API 형식**
 

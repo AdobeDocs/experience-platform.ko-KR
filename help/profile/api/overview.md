@@ -4,9 +4,9 @@ title: 실시간 고객 프로필 API 안내서
 description: 실시간 고객 프로필 API를 통해 개발자는 프로필 보기, 병합 정책 만들기 및 업데이트, 프로필 데이터 내보내기 또는 샘플, 더 이상 필요하지 않거나 오류로 추가된 프로필 데이터 삭제 등을 포함하여 프로필 데이터를 탐색하고 작업할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '883'
 ht-degree: 1%
 
 ---
@@ -53,7 +53,7 @@ Adobe Experience Platform을 통해 액세스할 수 있습니다. [!DNL Real-Ti
 
 ## 프로필 시스템 작업 {#profile-system-jobs}
 
-에 수집되는 프로필 활성화 데이터 [!DNL Platform] 에 저장됩니다. [!DNL Data Lake] 및 [!DNL Real-Time Customer Profile] 데이터 저장소입니다. 간혹 [!DNL Profile] 더 이상 필요하지 않거나 오류로 추가된 데이터를 제거하려면 저장합니다. API를 사용하여 다음을 생성해야 합니다. [!DNL Profile System Job], &quot;라고도 함[!DNL delete request]필요한 경우 수정, 모니터링 또는 삭제할 수 있는 &quot;. 을(를) 사용하여 삭제 요청으로 작업하는 방법을 알아보려면 `/system/jobs` 의 엔드포인트 [!DNL Real-Time Customer Profile] API에서 다음에 설명된 단계를 수행합니다. [프로필 시스템 작업 끝점 안내서](profile-system-jobs.md).
+에 수집되는 프로필 활성화 데이터 [!DNL Platform] 에 저장됩니다. [!DNL Data Lake] 및 [!DNL Real-Time Customer Profile] 데이터 저장소입니다. 더 이상 필요하지 않거나 오류로 추가된 데이터를 제거하기 위해 프로필 저장소에서 데이터 세트와 연결된 프로필 데이터를 삭제해야 하는 경우가 있습니다. API를 사용하여 다음을 생성해야 합니다. [!DNL Profile System Job], &quot;라고도 함[!DNL delete request]필요한 경우 수정, 모니터링 또는 삭제할 수 있는 &quot;. 을(를) 사용하여 삭제 요청으로 작업하는 방법을 알아보려면 `/system/jobs` 의 엔드포인트 [!DNL Real-Time Customer Profile] API에서 다음에 설명된 단계를 수행합니다. [프로필 시스템 작업 끝점 안내서](profile-system-jobs.md).
 
 ## 프로필 속성 업데이트 {#update-profile}
 
