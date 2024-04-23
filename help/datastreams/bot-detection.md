@@ -4,7 +4,7 @@ description: 사람 트래픽과 사람 트래픽을 구분하기 위해 데이�
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
+source-git-commit: c7853855ade1867cf33ea935a8a776080be2e5ab
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 자동화된 프로그램, 웹 스크레이퍼, 스파이더, 스크립팅된 스캐너와 같은 비인간 엔티티에서 발생하는 트래픽은 인간 방문자에서 발생하는 이벤트를 식별하는 것을 더 어렵게 할 수 있습니다. 이 유형의 트래픽은 중요한 비즈니스 지표에 부정적인 영향을 주어 잘못된 트래픽 보고를 초래할 수 있습니다.
 
-보트 감지를 사용하면[웹 SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) 및 [[!DNL Server API]](../server-api/overview.md) 알려진 스파이더 및 보트에서 생성됨.
+보트 감지를 사용하면 [웹 SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) 및 [[!DNL Server API]](../server-api/overview.md) 알려진 스파이더 및 보트에서 생성됨.
 
 데이터스트림에 대한 보트 감지를 구성하여 보트 이벤트로 분류하려는 특정 IP 주소, IP 범위 및 요청 헤더를 식별할 수 있습니다.
 
@@ -37,9 +37,9 @@ Edge Network에 대한 요청이 보트 탐지 규칙과 일치하는 경우 XDM
 >
 >보트 감지는 보트 요청을 삭제하지 않습니다. 보트 점수로 XDM 스키마만 업데이트하고 이벤트를 [데이터 스트림 서비스](configure.md) 을 참조하십시오.
 >
->Adobe 솔루션은 다양한 방식으로 봇 점수를 처리할 수 있습니다. 예를 들어 Adobe Analytics은 자체 를 사용합니다 [보트 필터링 서비스](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) 및 은 Edge Network에서 설정한 점수를 사용하지 않습니다. 두 서비스는 동일한 것을 사용합니다 [IAB 보트 목록](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), 따라서 보트 점수는 동일합니다.
+>Adobe 솔루션은 다양한 방식으로 봇 점수를 처리할 수 있습니다. 예를 들어 Adobe Analytics은 자체 를 사용합니다 [보트 필터링 서비스](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) 에서는 Edge Network이 설정한 점수를 사용하지 않습니다. 두 서비스는 동일한 것을 사용합니다 [IAB 보트 목록](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), 따라서 보트 점수는 동일합니다.
 
-보트 탐지 규칙이 생성된 후 Edge Network를 통해 전파되는 데 최대 15분이 걸릴 수 있습니다.
+보트 탐지 규칙은 만들어진 후 Edge Network에서 전파되는 데 최대 15분이 걸릴 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
