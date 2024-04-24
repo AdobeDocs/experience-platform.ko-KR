@@ -3,9 +3,9 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager 연결
 description: 이전에 DoubleClick for Publishers 또는 DoubleClick AdX로 알려졌던 Google Ad Manager는 게시자에게 웹 사이트, 비디오 및 모바일 앱에서 광고 표시를 관리하는 수단을 제공하는 Google의 광고 서비스 제공 플랫폼입니다.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 7d43abd507b5cee2b5c5d90af253d3e9290013a2
+source-git-commit: 0db22ba2993012357cf65daaeffb5676193fba23
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1119'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
-> Google은 의 변경 사항을 [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [고객 일치](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)및 [디스플레이 및 비디오 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) 아래에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [디지털 시장법](https://digital-markets-act.ec.europa.eu/index_en) 유럽 연합의 (DMA)[EU 사용자 동의 정책](https://www.google.com/about/company/user-consent-policy/)). 이러한 동의 요건 변경의 시행은 2024년 3월 6일부터 시행될 예정이다.
+> Google은 의 변경 사항을 [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [고객 일치](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)및 [디스플레이 및 비디오 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) 아래에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [디지털 시장법](https://digital-markets-act.ec.europa.eu/index_en) 유럽 연합의 (DMA)[EU 사용자 동의 정책](https://www.google.com/about/company/user-consent-policy/)). 동의 요구 사항에 대한 이러한 변경 사항의 시행은 2024년 3월 6일부터 시작됩니다.
 ><br/>
 >EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너인 Adobe은 유럽 연합의 DMA에 따라 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
 ><br/>
