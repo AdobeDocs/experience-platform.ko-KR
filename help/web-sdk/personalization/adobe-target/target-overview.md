@@ -2,9 +2,9 @@
 title: 개인화에 Web SDK와 함께 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform Web SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 0b662b4c1801a6d6f6fc2c6ade92d259b821ab23
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1173'
 ht-degree: 5%
 
 ---
@@ -35,17 +35,18 @@ ht-degree: 5%
 
 다음 다이어그램은 의 워크플로를 이해하는 데 도움이 됩니다 [!DNL Target] 및 [!DNL Web SDK] edge decisioning
 
-![Platform Web SDK를 사용한 Adobe Target Edge Decisioning 다이어그램](./assets/target-platform-web-sdk.png)
+![Platform Web SDK를 사용한 Adobe Target Edge Decisioning 다이어그램](assets/target-platform-web-sdk-new.png)
 
 | 호출 | 세부 사항 |
 | --- | --- |
 | 1 | 장치가 를 로드합니다 [!DNL Web SDK]. 다음 [!DNL Web SDK] xdm 데이터, 데이터스트림 환경 ID, 전달된 매개 변수 및 고객 ID(선택 사항)가 있는 Edge Network에 요청을 보냅니다. 페이지(또는 컨테이너)가 미리 숨겨져 있습니다. |
-| 2 | Edge 네트워크는 Edge 서비스에 요청을 전송하여 방문자 ID, 동의와 지리적 위치 및 장치 친화적 이름과 같은 기타 방문자 컨텍스트 정보로 보강합니다. |
-| 3 | Edge 네트워크는 보강된 개인화 요청을 로 보냅니다. [!DNL Target] 방문자 ID 및 전달된 매개 변수를 사용하는 edge. |
+| 2 | Edge Network은 Edge Services에 요청을 전송하여 방문자 ID, 동의 및 지리적 위치 및 장치에 친숙한 이름과 같은 기타 방문자 컨텍스트 정보로 보강합니다. |
+| 3 | Edge Network이 보강된 개인화 요청을 로 보냅니다. [!DNL Target] 방문자 ID 및 전달된 매개 변수를 사용하는 edge. |
 | 4 | 프로필 스크립트가 실행된 다음 로 피드 [!DNL Target] 프로필 스토리지. 프로필 스토리지는 [!UICONTROL 대상 라이브러리] (예:에서 공유된 세그먼트) [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]). |
-| 5 | URL 요청 매개 변수 및 프로필 데이터를 기반으로 [!DNL Target] 현재 페이지 보기 및 향후 프리페치된 보기에 대해 방문자에게 표시할 활동 및 경험을 결정합니다. [!DNL Target] 그런 다음 이를 edge network로 다시 전송합니다. |
-| 6 | a. 에지 네트워크는 추가적인 개인화를 위한 프로필 값을 선택적으로 포함하여 개인화 응답을 다시 페이지로 전송합니다. 현재 페이지의 개인화된 콘텐츠는 기본 콘텐츠의 플리커 없이 가능한 한 빨리 나타납니다.<br>b. SPA(단일 페이지 애플리케이션)에서 사용자 작업의 결과로 표시되는 보기를 위한 개인화된 컨텐츠는 캐시되므로 보기가 트리거될 때 추가적인 서버 호출 없이 즉시 적용할 수 있습니다. <br> 질문에 답합니다. Edge Network는 방문자 ID와 동의, 세션 ID, ID, 쿠키 확인, 개인화와 같은 쿠키의 다른 값을 보냅니다. |
-| 7 | 에지 네트워크가 전달됩니다. [!UICONTROL Analytics for Target] (A4T) 세부 사항(활동, 경험 및 전환 메타데이터) [!DNL Analytics] edge. |
+| 5 | URL 요청 매개 변수 및 프로필 데이터를 기반으로 [!DNL Target] 현재 페이지 보기 및 향후 프리페치된 보기에 대해 방문자에게 표시할 활동 및 경험을 결정합니다. [!DNL Target] 그런 다음 이 파일을 다시 Edge Network으로 보냅니다. |
+| 6 | a. Edge Network은 추가적인 개인화를 위한 프로필 값을 선택적으로 포함하여 개인화 응답을 다시 페이지로 전송합니다. 현재 페이지의 개인화된 콘텐츠는 기본 콘텐츠의 플리커 없이 가능한 한 빨리 나타납니다.<br>b. SPA(단일 페이지 애플리케이션)에서 사용자 작업의 결과로 표시되는 보기를 위한 개인화된 컨텐츠는 캐시되므로 보기가 트리거될 때 추가적인 서버 호출 없이 즉시 적용할 수 있습니다. <br>c. Edge Network이 방문자 ID와 동의, 세션 ID, ID, 쿠키 확인, 개인화와 같은 쿠키의 다른 값을 보냅니다. |
+| 7 | Web SDK는 디바이스에서 Edge Network으로 알림을 전송합니다. |
+| 8 | Edge Network 전달 [!UICONTROL Analytics for Target] (A4T) 세부 사항(활동, 경험 및 전환 메타데이터) [!DNL Analytics] edge. |
 
 ## 활성화 중 [!DNL Adobe Target]
 
