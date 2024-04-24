@@ -1,13 +1,13 @@
 ---
 keywords: 지표 개요, rtcdp 지표 개요
 title: Real-time Customer Data Platform 홈 페이지 및 대시보드
-description: 다양한 대시보드, 홈 페이지 및 Adobe Real-Time CDP의 최초 사용자 경험을 이해합니다.
+description: Adobe Real-Time CDP의 다양한 대시보드, 홈 페이지 및 최초 사용자 경험에 대해 알아봅니다.
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '919'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
