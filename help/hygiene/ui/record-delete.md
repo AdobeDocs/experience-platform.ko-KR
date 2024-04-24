@@ -3,7 +3,7 @@ title: 레코드 삭제
 description: Adobe Experience Platform UI에서 레코드를 삭제하는 방법을 알아봅니다.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 86cf250b2915a49d994fee0ab9d9ddbf65f6f836
+source-git-commit: d9d2ab2da87adce45242cbb0c4132a4d17fcc4a6
 workflow-type: tm+mt
 source-wordcount: '1566'
 ht-degree: 8%
@@ -140,7 +140,7 @@ ID를 더 추가하려면 더하기 아이콘(![더하기 아이콘](../images/u
 
 >[!IMPORTANT]
 > 
->매월 제출할 수 있는 총 고유 ID 레코드 삭제 횟수에는 제한이 있습니다. 이러한 제한은 라이선스 계약을 기반으로 합니다. Adobe Real-time Customer Data Platform 및 Adobe Journey Optimizer의 모든 에디션을 구입한 조직은 매월 최대 10만 건의 ID 레코드 삭제를 제출할 수 있습니다. 구입한 조직 **Adobe 헬스케어 실드** 또는 **Adobe 개인정보 보호 및 보안 실드** 매달 최대 60만 개의 id 레코드 삭제를 제출할 수 있습니다.<br>UI를 통한 단일 레코드 삭제 요청으로 한 번에 10,000개의 ID를 제출할 수 있습니다. 다음 [레코드를 삭제하는 API 메서드](../api/workorder.md#create) 를 통해 한 번에 100,000개의 ID를 제출할 수 있습니다.<br>최대 ID 제한까지, 요청당 가능한 많은 ID를 제출하는 것이 좋습니다. 많은 양의 ID를 삭제하려는 경우 낮은 볼륨 또는 레코드당 하나의 ID 삭제 요청을 제출하지 않아야 합니다.
+>매월 제출할 수 있는 총 고유 ID 레코드 삭제 횟수에는 제한이 있습니다. 이러한 제한은 라이선스 계약을 기반으로 합니다. Adobe Real-time Customer Data Platform 또는 Adobe Journey Optimizer의 모든 에디션을 구입한 조직은 매월 최대 10만 건의 ID 레코드 삭제를 제출할 수 있습니다. 구입한 조직 **Adobe 헬스케어 실드** 또는 **Adobe 개인정보 보호 및 보안 실드** 매달 최대 60만 개의 id 레코드 삭제를 제출할 수 있습니다.<br>UI를 통한 단일 레코드 삭제 요청으로 한 번에 10,000개의 ID를 제출할 수 있습니다. 다음 [레코드를 삭제하는 API 메서드](../api/workorder.md#create) 를 통해 한 번에 100,000개의 ID를 제출할 수 있습니다.<br>최대 ID 제한까지, 요청당 가능한 많은 ID를 제출하는 것이 좋습니다. 많은 양의 ID를 삭제하려는 경우 낮은 볼륨 또는 레코드당 하나의 ID 삭제 요청을 제출하지 않아야 합니다.
 
 ![요청 설정 [!UICONTROL 이름] 및 [!UICONTROL 설명] 필드가 있는 [!UICONTROL 제출] 강조 표시됨.](../images/ui/record-delete/submit.png)
 
