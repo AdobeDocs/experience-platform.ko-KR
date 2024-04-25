@@ -1,11 +1,11 @@
 ---
 title: 대화형 데이터 수집
-description: Adobe Experience Platform Edge Network Server API에서 대화형 데이터 수집을 수행하는 방법에 대해 알아봅니다.
+description: Adobe Experience Platform Edge Network 서버 API에서 대화형 데이터 수집을 수행하는 방법에 대해 알아봅니다.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f8434746c4a023ec895d23a59e04fca4baecfc36
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 6%
+source-wordcount: '179'
+ht-degree: 5%
 
 ---
 
@@ -14,6 +14,10 @@ ht-degree: 6%
 ## 개요 {#overview}
 
 대화형 데이터 수집 엔드포인트는 단일 이벤트를 수신하며, 클라이언트가 Adobe Experience Platform Edge Network 서버에서 응답이 반환될 것으로 예상할 때 사용됩니다. 이러한 엔드포인트는 데이터 수집을 수행하는 동안 다른 Edge Network 서비스에서 콘텐츠를 반환할 수도 있습니다.
+
+>[!IMPORTANT]
+>
+>다음 `/interact` endpoint는 주로 Experience Platform SDK에서 사용하도록 설계되었습니다. 이 종단점은 추가 변경 사항이며 해당 동작은 예고 없이 발전할 수 있습니다. 예를 들어 나중에 응답 페이로드에 새 항목이 추가될 수 있습니다.
 
 서버 응답에는 하나 이상이 포함됩니다 `Handle` 개체. 아래 표시된 대로.
 
@@ -63,7 +67,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | 매개변수 | 유형 | 필수 여부 | 설명 |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | 예. | 데이터 스트림 ID입니다. |
-| `requestId` | `String` | 아니요 | 내부 서버 요청의 상관 관계를 확인하기 위해 클라이언트 임의 ID를 제공합니다. 아무 것도 제공되지 않으면 Edge Network가 하나를 생성하고 응답에 반환합니다. |
+| `requestId` | `String` | 아니요 | 내부 서버 요청의 상관 관계를 확인하기 위해 클라이언트 임의 ID를 제공합니다. 아무 것도 제공되지 않으면 Edge Network이 생성한 후 응답에 반환합니다. |
 
 ### 응답 {#response}
 
