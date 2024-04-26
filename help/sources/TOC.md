@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 0d85f37ee2da4857205819a3a4dea3f25eaad26e
+source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1036'
 ht-degree: 10%
 
 ---
@@ -97,7 +97,7 @@ ht-degree: 10%
       - [Acxiom 전망 데이터 가져오기](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
    - 전자 상거래 {#ecommerce}
-      - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
+      - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
       - [Shopify 스트리밍](connectors/ecommerce/shopify-streaming.md)
    - 로컬 시스템 {#local-system}
@@ -111,6 +111,7 @@ ht-degree: 10%
       - [Oracle Eloqua 커넥터](connectors/marketing-automation/oracle-eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [Oracle Responsys 커넥터](connectors/marketing-automation/oracle-responsys.md)
+      - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 결제 {#payments}
       - [PayPal 커넥터](connectors/payments/paypal.md)
@@ -179,7 +180,7 @@ ht-degree: 10%
          - [Teradata 밴티지](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - 전자 상거래 {#ecommerce}
-         - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
+         - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify 스트리밍](tutorials/api/create/ecommerce/shopify-streaming.md)
       - 마케팅 자동화 {#marketing-automation}
@@ -192,6 +193,7 @@ ht-degree: 10%
          - [NetSuite 활동 oracle](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite 엔티티](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
+         - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
          - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 결제 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -306,7 +308,7 @@ ht-degree: 10%
          - [Acxiom 전망 데이터 가져오기](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
          - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
       - 전자 상거래 {#ecommerce}
-         - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
+         - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Shopify 스트리밍](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - 로컬 시스템 {#local-system}
@@ -322,6 +324,7 @@ ht-degree: 10%
          - [NetSuite 활동 oracle](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite 엔티티](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
+         - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 결제 {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
