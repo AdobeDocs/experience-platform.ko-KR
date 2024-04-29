@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;데이터 랜딩 영역;데이�
 title: UI를 사용하여 데이터 랜딩 영역을 플랫폼에 연결
 description: Platform 사용자 인터페이스를 사용하여 데이터 랜딩 영역 소스 커넥터를 만드는 방법을 알아봅니다.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 9cffd508c1bff7ce133f84ca686c414e997343b8
+source-git-commit: 9372e6f961015c989bfcb0d1e2b0129da965c522
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '747'
 ht-degree: 0%
 
 ---
@@ -60,23 +60,41 @@ Experience Platform에 가져올 파일을 선택하고 몇 분 동안 올바른
 
 클라우드 스토리지 소스에 대한 데이터 흐름을 만드는 방법에 대한 자세한 단계별 안내서는 다음 자습서를 참조하십시오. [클라우드 스토리지 데이터 흐름을 만들어 플랫폼으로 데이터 가져오기](../../dataflow/batch/cloud-storage.md).
 
-## 검색 및 새로 고침 [!DNL Data Landing Zone] 자격 증명
+## 검색 [!DNL Data Landing Zone] 자격 증명
 
-[!DNL Data Landing Zone] 는 Adobe Experience Platform 소스 라이선스와 함께 제공되는 기본 소스입니다. [!DNL Data Landing Zone] 는 SAS URI 및 SAS 토큰 기반 인증을 사용합니다. 에서 인증 자격 증명을 검색하고 새로 고칠 수 있습니다. [!UICONTROL 소스 카탈로그] 페이지를 가리키도록 업데이트하는 중입니다.
+[!DNL Data Landing Zone] 는 Adobe Experience Platform 소스 라이선스와 함께 제공되는 소스입니다. [!DNL Data Landing Zone] 는 SAS URI 및 SAS 토큰 기반 인증을 사용합니다. 에서 인증 자격 증명을 검색할 수 있습니다. [!UICONTROL 소스 카탈로그] 페이지를 가리키도록 업데이트하는 중입니다.
 
-다음에서 [!UICONTROL 소스 카탈로그], [!UICONTROL 클라우드 스토리지] 범주에서는 줄임표(**...**&#x200B;의 ) **[!UICONTROL 데이터 랜딩 영역]** 카드. 표시되는 드롭다운 메뉴에서 을(를) 선택합니다 **[!UICONTROL 자격 증명 보기]**.
+자격 증명을 검색하려면 **[!UICONTROL 데이터 랜딩 영역]** 카드를 클릭한 다음 나타나는 오른쪽 레일에서 자격 증명을 복사합니다.
 
-![데이터 랜딩 구역에 대한 보기 옵션 목록입니다.](../../../../images/tutorials/create/dlz/options.png)
+![데이터 랜딩 구역에 대한 보기 옵션 목록입니다.](../../../../images/tutorials/create/dlz/view-credentials.png)
 
 컨테이너 이름, SAS 토큰, 저장소 계정 이름, SAS URI 및 만료 날짜를 표시하는 팝오버가 나타납니다.
 
-선택 **[!UICONTROL 자격 증명 새로 고침]** 업데이트된 자격 증명이 처리될 수 있도록 몇 초 동안 기다립니다.
+## 새로 고침 [!DNL Data Landing Zone] 자격 증명
 
->[!TIP]
->
->사용자 [!DNL Data Landing Zone] 자격 증명은 90일 후에 자동 만료되도록 설정되며, 다시 연결하려면 새 자격 증명을 사용해야 합니다. [!DNL Data Landing Zone] 만료 후. Platform의 데이터 흐름은 만료 자격 증명의 영향을 받지 않으며 새 자격 증명을 사용하여 새 데이터 흐름 및 기존 데이터 흐름을 계속 사용할 수 있습니다.
+사용자 [!DNL Data Landing Zone] 자격 증명은 90일 후에 자동 만료되도록 설정되며, 다시 연결하려면 새 자격 증명을 사용해야 합니다. [!DNL Data Landing Zone] 만료 후. Experience Platform의 데이터 흐름은 만료 자격 증명의 영향을 받지 않으며 새 자격 증명을 사용하여 새 데이터 흐름 및 기존 데이터 흐름을 계속 사용할 수 있습니다.
 
-![지정된 데이터 랜딩 영역 계정과 연결된 자격 증명입니다.](../../../../images/tutorials/create/dlz/view-credentials.png)
+다음 두 가지 방법으로 새로 고칠 수 있습니다 [!DNL Data Landing Zone] 자격 증명:
+
+>[!BEGINTABS]
+
+>[!TAB 소스 카드 사용]
+
+소스 카탈로그 페이지에서 자격 증명을 새로 고치려면 줄임표(**`...`**)에 있는 [!DNL Data Landing Zone] 카드를 선택한 다음 선택 **[!UICONTROL 자격 증명 새로 고침]**.
+
+![소스 카드를 사용하여 자격 증명을 새로 고칩니다.](../../../../images/tutorials/create/dlz/refresh-with-card.png)
+
+계속하기 전에 확인을 묻는 팝업 창이 나타납니다. 준비가 되면 다음을 선택합니다 **[!UICONTROL 자격 증명 새로 고침]**.
+
+![인증서 새로 고침 확인 창.](../../../../images/tutorials/create/dlz/confirm.png)
+
+>[!TAB 오른쪽 레일 사용]
+
+오른쪽 레일을 사용하여 자격 증명을 새로 고치려면 **[!UICONTROL 데이터 랜딩 영역]** 소스 카드 를 선택한 다음 를 선택합니다. **[!UICONTROL 추가 작업]**. 그런 다음 을 선택합니다. **[!UICONTROL 자격 증명 새로 고침]** 그런 다음 나타나는 팝업 창을 사용하는지 확인합니다.
+
+![오른쪽 레일을 사용하여 자격 증명을 새로 고칩니다.](../../../../images/tutorials/create/dlz/refresh-with-right-rail.png)
+
+>[!ENDTABS]
 
 ## 다음 단계
 
