@@ -3,18 +3,14 @@ keywords: Experience Platform;홈;인기 항목;Teradata Vantage
 title: 흐름 서비스 API를 사용하여 Teradata Vantage Base 연결 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Teradata Vantage에 연결하는 방법에 대해 알아봅니다.
 exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 5%
+source-wordcount: '450'
+ht-degree: 4%
 
 ---
 
-# (Beta) [!DNL Teradata Vantage] 를 사용한 기본 연결 [!DNL Flow Service] API
-
->[!NOTE]
->
->다음 [!DNL Teradata Vantage] 소스는 베타 버전입니다. 다음을 참조하십시오. [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
+# 만들기 [!DNL Teradata Vantage] 를 사용한 기본 연결 [!DNL Flow Service] API
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
@@ -44,7 +40,7 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 시작에 대한 자세한 내용은 다음을 참조하십시오. [[!DNL Teradata Vantage] 문서](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
 
-## 기본 연결을 만듭니다
+## 기본 연결 만들기
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 

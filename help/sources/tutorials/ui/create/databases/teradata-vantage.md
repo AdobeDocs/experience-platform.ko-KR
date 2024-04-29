@@ -3,18 +3,14 @@ keywords: Experience Platform;홈;인기 항목;Teradata Vantage
 title: UI에서 Teradata Vantage Source 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Teradata Vantage 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '413'
 ht-degree: 1%
 
 ---
 
-# (Beta) [!DNL Teradata Vantage] UI의 소스 연결
-
->[!NOTE]
->
-> 다음 [!DNL Teradata Vantage] 소스는 베타 버전입니다. 다음을 참조하십시오. [소스 개요](../../../../home.md#terms-and-conditions) beta 레이블 소스를 사용하는 방법에 대한 자세한 내용.
+# 만들기 [!DNL Teradata Vantage] UI의 소스 연결
 
 이 자습서에서는 다음을 만드는 단계를 제공합니다 [!DNL Teradata Vantage] Adobe Experience Platform 사용자 인터페이스를 사용하는 소스 커넥터입니다.
 
@@ -37,13 +33,15 @@ ht-degree: 1%
 
 ## 연결 [!DNL Teradata Vantage] account
 
-Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 탐색에서 [!UICONTROL 소스] 작업 영역. 다음 [!UICONTROL 카탈로그] 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 탐색에서 [!UICONTROL 소스] 작업 영역. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 창을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
+아래 [!UICONTROL 데이터베이스] 범주, 선택 **[!UICONTROL Teradata 밴티지]** 다음을 선택합니다. **[!UICONTROL 설정]**.
 
-아래 [!UICONTROL 데이터베이스] 범주, 선택 **[!UICONTROL Teradata 밴티지]** 다음을 선택합니다. **[!UICONTROL 데이터 추가]**.
+>[!TIP]
+>
+>소스 카탈로그의 소스는 **[!UICONTROL 설정]** 지정된 소스에 인증된 계정이 아직 없는 경우 옵션입니다. 인증된 계정이 존재하면 이 옵션은 다음으로 변경됩니다. **[!UICONTROL 데이터 추가]**.
 
-![](../../../../images/tutorials/create/teradata/catalog.png)
+![teradata 밴티지 소스가 선택된 소스 카탈로그.](../../../../images/tutorials/create/teradata/catalog.png)
 
 다음 **[!UICONTROL teradata Vantage에 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
 
@@ -51,13 +49,13 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 �
 
 기존 계정을 연결하려면 [!DNL Teradata Vantage] 연결할 계정을 선택한 다음 **[!UICONTROL 다음]** 계속합니다.
 
-![](../../../../images/tutorials/create/teradata/existing.png)
+![소스 작업 영역의 기존 계정 페이지.](../../../../images/tutorials/create/teradata/existing.png)
 
 ### 새 계정
 
 새 자격 증명을 사용하는 경우 다음을 선택합니다 **[!UICONTROL 새 계정]**. 표시되는 입력 양식에서 이름, 설명(선택 사항) 및 [!DNL Teradata Vantage] 자격 증명. 완료되면 다음을 선택합니다. **[!UICONTROL 연결]** 그런 다음 새 연결을 설정하는 데 시간이 걸릴 수 있습니다.
 
-![](../../../../images/tutorials/create/teradata/new.png)
+![소스 작업 영역의 새 계정 생성 인터페이스입니다.](../../../../images/tutorials/create/teradata/new.png)
 
 ## 다음 단계
 
