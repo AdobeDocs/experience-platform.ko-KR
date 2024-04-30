@@ -2,10 +2,10 @@
 title: 샌드박스 도구
 description: 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져옵니다.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 888608bdf3ccdfc56edd41c164640e258a4c5dd7
+source-git-commit: 1a474fa0947cb930bad95f94c1901fffb7e23e7b
 workflow-type: tm+mt
-source-wordcount: '1961'
-ht-degree: 8%
+source-wordcount: '2241'
+ht-degree: 7%
 
 ---
 
@@ -165,6 +165,52 @@ ht-degree: 8%
 
 ![다음 [!UICONTROL 패키지 개체 및 종속성] 페이지에 패키지에 포함된 에셋 목록이 강조 표시됩니다. [!UICONTROL 완료].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
+## 전체 샌드박스 내보내기 및 가져오기
+
+>[!NOTE]
+>
+>전체 샌드박스 내보내기/가져오기에 대해 실시간 고객 데이터 플랫폼 개체만 지원됩니다. 여정 개체는 포함되지 않습니다.
+
+### 전체 샌드박스 내보내기 {#export-entire-sandbox}
+
+전체 샌드박스를 내보내려면 [!UICONTROL 샌드박스] **[!UICONTROL 패키지]** 탭하고 선택 **[!UICONTROL 패키지 만들기]**.
+
+![다음 [!UICONTROL 샌드박스] **[!UICONTROL 패키지]** 탭 강조 표시 [!UICONTROL 패키지 만들기].](../images/ui/sandbox-tooling/create-sandbox-package.png)
+
+선택 **[!UICONTROL 전체 샌드박스]** 대상: [!UICONTROL 패키지 유형] 다음에서 [!UICONTROL 패키지 만들기] 대화 상자. 다음을 제공합니다. [!UICONTROL 패키지 이름] 을(를) 새 패키지에 대해 선택하고 **[!UICONTROL 샌드박스]** 드롭다운에서 을 클릭합니다. 마지막으로 다음을 선택합니다. **[!UICONTROL 만들기]** 을 눌러 항목을 확인합니다.
+
+![다음 [!UICONTROL 패키지 만들기] 완료된 필드와 강조 표시를 표시하는 대화 상자 [!UICONTROL 만들기].](../images/ui/sandbox-tooling/create-package-dialog.png)
+
+패키지가 성공적으로 생성되었습니다. 다음을 선택하십시오. **[!UICONTROL 게시]** 패키지를 게시합니다.
+
+![새로 게시된 패키지를 강조 표시하는 샌드박스 패키지 목록입니다.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
+
+(으)로 돌아갑니다. **[!UICONTROL 패키지]** 의 탭 [!UICONTROL 샌드박스] 게시된 새 패키지를 볼 수 있는 환경입니다.
+
+### 전체 샌드박스 패키지 가져오기 {#import-entire-sandbox-package}
+
+>[!NOTE]
+>
+>모든 오브젝트를 타겟 샌드박스에 새 오브젝트로 가져옵니다. 전체 샌드박스 패키지를 빈 샌드박스로 가져오는 것이 좋습니다.
+
+패키지를 대상 샌드박스로 가져오려면 다음으로 이동합니다. [!UICONTROL 샌드박스] **[!UICONTROL 찾아보기]** 을 탭하고 샌드박스 이름 옆에 있는 더하기(+) 옵션을 선택합니다.
+
+![샌드박스 **[!UICONTROL 찾아보기]** 패키지 가져오기 선택 항목을 강조 표시하는 탭입니다.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+
+드롭다운 메뉴를 사용하여 다음을 사용하여 전체 샌드박스 선택 **[!UICONTROL 패키지 이름]** 드롭다운입니다. 추가 **[!UICONTROL 작업 이름]**: 향후 모니터링 및 선택 사항에 사용됩니다. **[!UICONTROL 작업 설명]**&#x200B;을 선택한 다음 을 선택합니다. **[!UICONTROL 다음]**.
+
+![다음을 표시하는 가져오기 세부 정보 페이지 [!UICONTROL 패키지 이름] 드롭다운 선택](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+
+>[!NOTE]
+>
+>패키지에 포함된 모든 개체에 대한 모든 권한이 있어야 합니다. 권한이 없는 경우 가져오기 작업이 실패하고 오류 메시지가 표시됩니다.
+
+다음으로 이동되었습니다. [!UICONTROL 패키지 개체 및 종속성] 가져온 객체와 제외된 객체의 수를 볼 수 있는 페이지입니다. 여기에서 다음을 선택합니다. **[!UICONTROL 가져오기]** 패키지 가져오기를 완료합니다.
+
+![다음 [!UICONTROL 패키지 개체 및 종속성] 페이지에 지원되지 않는 개체 유형의 인라인 메시지가 표시되며 강조 표시됩니다. [!UICONTROL 가져오기].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+
+가져오기가 완료될 때까지 잠시 기다립니다. 완료 시간은 패키지에 있는 객체의 수에 따라 달라질 수 있습니다. 에서 가져오기 작업을 모니터링할 수 있습니다. [!UICONTROL 샌드박스] **[!UICONTROL 작업]** 탭.
+
 <!--
 ## Export and import an entire sandbox 
 
@@ -207,37 +253,37 @@ You are taken to the [!UICONTROL Package object and dependencies] page where you
  ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 -->
 
-## 가져오기 작업 모니터링 및 가져오기 객체 세부 정보 보기
+## 가져오기 세부 정보 모니터링 {#view-import-details}
 
-가져온 개체 및 가져온 세부 정보를 보려면 [!UICONTROL 샌드박스] **[!UICONTROL 가져오기]** 을(를) 탭하고 목록에서 패키지를 선택합니다. 또는 검색 창을 사용하여 패키지를 검색합니다.
+가져온 세부 정보를 보려면 [!UICONTROL 샌드박스] **[!UICONTROL 작업]** 을(를) 탭하고 목록에서 패키지를 선택합니다. 또는 검색 창을 사용하여 패키지를 검색합니다.
 
-![샌드박스 [!UICONTROL 가져오기] 탭에서는 패키지 가져오기 선택 사항이 강조 표시됩니다.](../images/ui/sandbox-tooling/imports-tab.png)
+![샌드박스 [!UICONTROL 작업] 탭에서는 패키지 가져오기 선택 사항이 강조 표시됩니다.](../images/ui/sandbox-tooling/imports-tab.png)
 
-### 가져온 개체 보기 {#view-imported-objects}
+<!--### View imported objects {#view-imported-objects}
 
-다음에서 **[!UICONTROL 가져오기]** 의 탭 [!UICONTROL 샌드박스] 환경, 선택 **[!UICONTROL 가져온 개체 보기]** 오른쪽 세부 정보 창에서 액세스합니다.
+On the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment, select **[!UICONTROL View imported objects]** from the right details pane.
 
-선택 **[!UICONTROL 가져온 개체 보기]** 의 오른쪽 세부 정보 창에서 **[!UICONTROL 가져오기]** 의 탭 [!UICONTROL 샌드박스] 환경.
+Select **[!UICONTROL View imported objects]** from the right details pane on the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment.
 
-![샌드박스 [!UICONTROL 가져오기] 탭에서는 [!UICONTROL 가져온 개체 보기] 오른쪽 창에서 선택합니다.](../images/ui/sandbox-tooling/view-imported-objects.png)
+![The sandboxes [!UICONTROL Imports] tab highlights the [!UICONTROL View imported objects] selection in the right pane.](../images/ui/sandbox-tooling/view-imported-objects.png)
 
-화살표를 사용하여 개체를 확장하면 패키지로 가져온 필드의 전체 목록을 볼 수 있습니다.
+Use the arrows to expand objects to view the full list of fields that have been imported into the package.
 
-![샌드박스 [!UICONTROL 가져온 오브젝트] 패키지로 가져온 개체 목록을 표시합니다.](../images/ui/sandbox-tooling/expand-imported-objects.png)
+![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
 
-### 가져오기 세부 정보 보기 {#view-import-details}
-
-선택 **[!UICONTROL 가져오기 세부 정보 보기]** 의 오른쪽 세부 정보 창에서 **[!UICONTROL 가져오기]** 샌드박스 환경의 탭입니다.
+선택 **[!UICONTROL 가져오기 요약 보기]** 의 오른쪽 세부 정보 창에서 **[!UICONTROL 작업]** 샌드박스 환경의 탭입니다.
 
 ![샌드박스 [!UICONTROL 가져오기] 탭에서는 [!UICONTROL 가져오기 세부 정보 보기] 오른쪽 창에서 선택합니다.](../images/ui/sandbox-tooling/view-import-details.png)
 
-다음 **[!UICONTROL 세부 정보 가져오기]** 대화 상자에 가져오기의 세부 분류가 표시됩니다.
-
-![다음 [!UICONTROL 세부 정보 가져오기] 가져오기의 세부 분류를 보여 주는 대화 상자.](../images/ui/sandbox-tooling/import-details.png)
+다음 **[!UICONTROL 가져오기 요약]** 대화 상자에는 진행률이 표시된 가져오기 분류가 백분율로 표시됩니다.
 
 >[!NOTE]
 >
->가져오기가 완료되면 Platform UI에서 알림을 받습니다. 경고 아이콘에서 이러한 알림에 액세스할 수 있습니다. 작업이 실패한 경우 여기에서 문제 해결로 이동할 수 있습니다.
+>특정 인벤토리 페이지로 이동하여 개체 목록을 볼 수 있습니다.
+
+![다음 [!UICONTROL 세부 정보 가져오기] 가져오기의 세부 분류를 보여 주는 대화 상자.](../images/ui/sandbox-tooling/import-details.png)
+
+가져오기가 완료되면 Platform UI에서 알림을 받습니다. 경고 아이콘에서 이러한 알림에 액세스할 수 있습니다. 작업이 실패한 경우 여기에서 문제 해결로 이동할 수 있습니다.
 
 ## 비디오 튜토리얼
 
