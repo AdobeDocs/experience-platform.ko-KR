@@ -5,7 +5,7 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 2bf445144789a05e8a789994d30b884be7a8843d
+source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
 workflow-type: tm+mt
 source-wordcount: '2730'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe Experience Platform용 AI Assistant는 현재 베타 버전입니다. 기능 및 설명서는 변경될 수 있습니다.
+>Adobe Experience Platform용 AI Assistant는 현재 베타 버전입니다. 기능 및 설명서는 변경될 수 있습니다.
 
 AI Assistant는 Adobe Experience Platform 및 Real-time Customer Data Platform 개념과 객체에 대한 사용 정보를 탐색하고 이해하는 데 사용할 수 있는 UI 기능입니다.
 

@@ -2,10 +2,9 @@
 title: PathFactory 소스 개요
 description: API 또는 사용자 인터페이스를 사용하여 PathFactory를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2024-04-30T00:00:00Z
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
+exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
+source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 3%

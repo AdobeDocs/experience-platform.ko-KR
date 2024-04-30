@@ -1,8 +1,10 @@
 ---
 title: Ui에서 소스 오브젝트 필터링
 description: Experience Platform UI에서 계정 및 데이터 흐름과 같은 소스 오브젝트를 탐색하는 방법에 대해 알아봅니다.
-last-substantial-update: 2024-04-30T00:00:00Z
-source-git-commit: 244f0734cf19694b15ecd10cfa76fb96d07b9489
+hide: true
+hidefromtoc: true
+exl-id: 59c200cc-1be7-45a8-9d7a-55e6f11dbcf2
+source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 1%
