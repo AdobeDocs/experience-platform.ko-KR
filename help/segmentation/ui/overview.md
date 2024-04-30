@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 UI 안내서
 description: Adobe Experience Platform UI에서 대상 및 세그먼트 정의를 만들고 관리하는 방법을 알아봅니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: dc899a4aa64b6e734322020e4c10aee687c6d8c5
+source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
 workflow-type: tm+mt
-source-wordcount: '4014'
+source-wordcount: '4105'
 ht-degree: 3%
 
 ---
@@ -80,7 +80,8 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 | [!UICONTROL 폴더로 이동] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 대상자가 속한 폴더를 관리합니다. 이 기능에 대한 자세한 내용은 의 섹션을 참조하십시오. [필터링 및 태그 지정](#manage-audiences). |
 | [!UICONTROL 복사] | Segmentation Service | 선택한 대상자를 복제합니다. |
 | [!UICONTROL 액세스 레이블 적용] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 대상에 속하는 액세스 레이블을 관리합니다. 액세스 레이블에 대한 자세한 내용은 의 설명서를 참조하십시오. [레이블 관리](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL 보관] | 사용자 정의 업로드 | 선택한 대상자를 보관합니다. |
+| [!UICONTROL 게시] | 사용자 정의 업로드, 세분화 서비스 | 선택한 대상자를 게시합니다. 라이프사이클 상태 관리에 대한 자세한 내용은 [세분화 FAQ의 라이프사이클 상태 섹션](../faq.md#lifecycle-states). |
+| [!UICONTROL 비활성화] | 사용자 정의 업로드, 세분화 서비스 | 선택한 대상자를 비활성화합니다. 라이프사이클 상태 관리에 대한 자세한 내용은 [세분화 FAQ의 라이프사이클 상태 섹션](../faq.md#lifecycle-states). |
 | [!UICONTROL 삭제] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 선택한 대상자를 삭제합니다. |
 | [!UICONTROL 패키지에 추가] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 샌드박스 간에 대상자를 이동합니다. 이 기능에 대한 자세한 내용은 [샌드박스 도구 안내서](../../sandboxes/ui/sandbox-tooling.md). |
 
@@ -102,9 +103,9 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 
 ![업데이트 빈도 요약 버튼이 강조 표시됩니다.](../images/ui/overview/browse-audience-update-frequency-summary.png)
 
-업데이트 빈도별 대상자 분류를 표시하는 파이 차트가 나타납니다. 이 차트는 중간에 있는 총 대상자 수를 표시합니다. 대상의 여러 부분을 마우스로 가리키면 각 업데이트 빈도 유형에 속하는 대상의 수가 표시됩니다.
+업데이트 빈도별 대상자 분류를 표시하는 파이 차트가 나타납니다. 차트에는 중간에 있는 총 대상 수가 표시되고, 하단에 일일 배치 평가 시간(UTC)이 표시됩니다. 대상의 여러 부분을 마우스로 가리키면 각 업데이트 빈도 유형에 속하는 대상의 수가 표시됩니다.
 
-![업데이트 주기 파이 차트가 표시됩니다.](../images/ui/overview/update-frequency-chart.png)
+![업데이트 빈도 파이 차트가 강조 표시되고 배치 세분화 평가 시간도 표시됩니다.](../images/ui/overview/update-frequency-chart.png)
 
 ### 사용자 정의 {#customize}
 
@@ -115,7 +116,7 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 | [!UICONTROL 이름] | 대상자의 이름입니다. |
 | [!UICONTROL 프로필 개수] | 대상자에 적합한 총 프로필 수입니다. |
 | [!UICONTROL Origin] | 대상의 기원입니다. 이는 대상자가 어디에서 오는지 설명합니다. 가능한 값에는 세그먼테이션 서비스, 사용자 지정 업로드, 대상 구성 및 Audience Manager이 포함됩니다. |
-| [!UICONTROL 라이프사이클 상태] | 대상의 상태입니다. 이 필드에 사용할 수 있는 값은 다음과 같습니다. `Draft`, `Published`, 및 `Archived`. |
+| [!UICONTROL 라이프사이클 상태] | 대상의 상태입니다. 이 필드에 사용할 수 있는 값은 다음과 같습니다. `Draft`, `Inactive`, `Published`, 및 `Archived`. 다른 상태의 의미와 대상을 다른 라이프사이클 상태로 이동하는 방법 등 라이프사이클 상태에 대한 자세한 내용은 [세분화 FAQ의 라이프사이클 상태 섹션](../faq.md#lifecycle-status). |
 | [!UICONTROL 업데이트 주기] | 대상자의 데이터가 업데이트되는 빈도를 나타내는 값입니다. 이 필드에 사용할 수 있는 값은 다음과 같습니다. [!UICONTROL 일괄 처리], [!UICONTROL 스트리밍], [!UICONTROL Edge], 및 [!UICONTROL 예약되지 않음]. |
 | [!UICONTROL 마지막으로 업데이트한 사람] | 대상자를 마지막으로 업데이트한 사람의 이름입니다. |
 | [!UICONTROL 생성일] | 대상이 생성된 날짜와 시간(UTC). |
@@ -205,7 +206,7 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 | ------ | ----------- |
 | [!UICONTROL Origin] | 대상자의 출처를 기준으로 필터링할 수 있습니다. 사용 가능한 옵션에는 세그멘테이션 서비스, 사용자 지정 업로드, 대상 구성 및 Audience Manager이 포함됩니다. |
 | [!UICONTROL 임의의 태그 있음] | 태그로 필터링할 수 있습니다. 다음 중 하나를 선택할 수 있습니다. **[!UICONTROL 임의의 태그 있음]** 및 **[!UICONTROL 모든 태그 있음]**. 날짜 **[!UICONTROL 임의의 태그 있음]** 이(가) 선택되면 필터링된 대상자에 다음이 포함됩니다. **임의** 을(를) 추가했습니다. 날짜 **[!UICONTROL 모든 태그 있음]** 이(가) 선택되면 필터링된 대상자에 다음이 포함되어야 합니다. **모두** 을(를) 추가했습니다. |
-| [!UICONTROL 라이프사이클 상태] | 대상자의 라이프사이클 상태에 따라 필터링할 수 있습니다. 사용 가능한 옵션은 다음과 같습니다 [!UICONTROL 활성], [!UICONTROL 보관됨], [!UICONTROL 삭제됨], [!UICONTROL 초안], [!UICONTROL 비활성], 및 [!UICONTROL 게시됨]. |
+| [!UICONTROL 라이프사이클 상태] | 대상자의 라이프사이클 상태에 따라 필터링할 수 있습니다. 사용 가능한 옵션은 다음과 같습니다 [!UICONTROL 삭제됨], [!UICONTROL 초안], [!UICONTROL 비활성], 및 [!UICONTROL 게시됨]. |
 | [!UICONTROL 업데이트 주기] | 대상자의 업데이트 빈도에 따라 필터링할 수 있습니다. 사용 가능한 옵션은 다음과 같습니다 [!UICONTROL 예약됨], [!UICONTROL 연속], 및 [!UICONTROL 온디맨드]. |
 | [!UICONTROL 작성자] | 대상자를 만든 사람을 기준으로 필터링할 수 있습니다. |
 | [!UICONTROL 제작일] | 대상자의 생성 날짜를 기준으로 필터링할 수 있습니다. 대상자가 만들어졌을 때 필터링할 날짜 범위를 선택할 수 있습니다. |
@@ -408,7 +409,7 @@ UI 또는 API를 사용하여 예약된 평가에 대해 대상을 활성화할 
 | 필드 | 설명 |
 | ----- | ----------- | 
 | [!UICONTROL 이름] | 대상자의 이름입니다. |
-| [!UICONTROL 상태] | 대상의 상태입니다. 이 필드에 사용할 수 있는 값은 다음과 같습니다. `Draft`, `Published`, 및 `Archived`. |
+| [!UICONTROL 상태] | 대상의 상태입니다. 이 필드에 사용할 수 있는 값은 다음과 같습니다. `Draft`, `Inactive`, `Published`, 및 `Archived`. |
 | [!UICONTROL 생성일] | 대상자가 생성된 시간과 날짜. |
 | [!UICONTROL 작성자] | 대상을 만든 사람의 이름입니다. |
 | [!UICONTROL 업데이트됨] | 대상자가 마지막으로 업데이트된 시간 및 날짜입니다. |
