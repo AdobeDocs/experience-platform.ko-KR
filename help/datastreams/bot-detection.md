@@ -1,10 +1,8 @@
 ---
 title: 데이터스트림에 대한 보트 탐지 구성
 description: 사람 트래픽과 사람 트래픽을 구분하기 위해 데이터스트림에 대한 봇 탐지를 구성하는 방법에 대해 알아봅니다.
-hide: true
-hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: c7853855ade1867cf33ea935a8a776080be2e5ab
+source-git-commit: ff95e5e105f7b3e1213eab90456b9fa9000918d3
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
