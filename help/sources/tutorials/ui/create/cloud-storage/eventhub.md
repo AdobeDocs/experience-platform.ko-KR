@@ -3,9 +3,9 @@ title: UI에서 Azure Event Hubs 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Azure Event Hubs 소스 연결을 만드는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 1680cc4e1d5c1576767053a74e560bc2eb8c24cb
+source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '1094'
 ht-degree: 1%
 
 ---
@@ -52,9 +52,32 @@ ht-degree: 1%
 | 네임스페이스 | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. An [!DNL Event Hubs] 네임스페이스는 하나 이상을 만들 수 있는 고유한 범위 컨테이너를 제공합니다 [!DNL Event Hubs]. |
 | 이벤트 허브 이름 | 에 대한 이름 [!DNL Event Hubs] 소스. |
 
->[!ENDTABS]
+의 공유 액세스 서명(SAS) 인증에 대한 자세한 내용 [!DNL Event Hubs], 다음을 읽습니다 [[!DNL Azure] sas 사용 안내서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
-이러한 값에 대한 자세한 내용은 [이 이벤트 허브 문서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+>[!TAB 이벤트 허브 Azure Active Directory 인증]
+
+| 자격 증명 | 설명 |
+| --- | --- |
+| 임차인 ID | 권한을 요청하려는 테넌트 ID입니다. 테넌트 ID는 GUID 또는 친숙한 이름으로 포맷할 수 있습니다. **참고**: 테넌트 ID는에서 &quot;디렉터리 ID&quot;라고 합니다. [!DNL Microsoft Azure] 인터페이스. |
+| 클라이언트 ID | 앱에 할당된 애플리케이션 ID입니다. 에서 이 ID를 검색할 수 있습니다. [!DNL Microsoft Entra ID] 을(를) 등록한 포털 [!DNL Azure Active Directory]. |
+| 클라이언트 암호 값 | 앱을 인증하기 위해 클라이언트 ID와 함께 사용되는 클라이언트 암호입니다. 에서 클라이언트 암호를 검색할 수 있습니다 [!DNL Microsoft Entra ID] 을(를) 등록한 포털 [!DNL Azure Active Directory]. |
+| 네임스페이스 | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. An [!DNL Event Hubs] 네임스페이스는 하나 이상을 만들 수 있는 고유한 범위 컨테이너를 제공합니다 [!DNL Event Hubs]. |
+
+에 대한 자세한 내용 [!DNL Azure Active Directory], 다음을 읽습니다 [Microsoft Entra ID 사용에 대한 Azure 안내서](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!TAB 이벤트 허브 범위 Azure Active Directory 인증]
+
+| 자격 증명 | 설명 |
+| --- | --- |
+| 임차인 ID | 권한을 요청하려는 테넌트 ID입니다. 테넌트 ID는 GUID 또는 친숙한 이름으로 포맷할 수 있습니다. **참고**: 테넌트 ID는에서 &quot;디렉터리 ID&quot;라고 합니다. [!DNL Microsoft Azure] 인터페이스. |
+| 클라이언트 ID | 앱에 할당된 애플리케이션 ID입니다. 에서 이 ID를 검색할 수 있습니다. [!DNL Microsoft Entra ID] 을(를) 등록한 포털 [!DNL Azure Active Directory]. |
+| 클라이언트 암호 값 | 앱을 인증하기 위해 클라이언트 ID와 함께 사용되는 클라이언트 암호입니다. 에서 클라이언트 암호를 검색할 수 있습니다 [!DNL Microsoft Entra ID] 을(를) 등록한 포털 [!DNL Azure Active Directory]. |
+| 네임스페이스 | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. An [!DNL Event Hubs] 네임스페이스는 하나 이상을 만들 수 있는 고유한 범위 컨테이너를 제공합니다 [!DNL Event Hubs]. |
+| 이벤트 허브 이름 | 에 대한 이름 [!DNL Event Hubs] 소스. |
+
+에 대한 자세한 내용 [!DNL Azure Active Directory], 다음을 읽습니다 [Microsoft Entra ID 사용에 대한 Azure 안내서](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!ENDTABS]
 
 필요한 자격 증명을 수집했으면 아래 단계에 따라 를 연결할 수 있습니다. [!DNL Event Hubs] Experience Platform 계정.
 
@@ -90,7 +113,7 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 �
 
 >[!TAB 표준 인증]
 
-을(를) 만들려면 [!DNL Event Hubs] 표준 인증을 사용하는 계정에서 **[!UICONTROL 표준 인증]** 그런 다음 의 값을 제공합니다. [!UICONTROL SAS 키 이름], [!UICONTROL SAS 키], 및 [!UICONTROL 네임스페이스].
+을(를) 만들려면 [!DNL Event Hubs] 표준 인증을 사용하는 계정에서 [!UICONTROL 계정 인증] 드롭다운 메뉴를 선택한 다음 선택 **[!UICONTROL 표준 인증]**. 다음으로, 다음에 대한 값을 제공합니다. [!UICONTROL SAS 키 이름], [!UICONTROL SAS 키], 및 [!UICONTROL 네임스페이스].
 
 인증 자격 증명을 입력했으면 다음을 선택합니다. **[!UICONTROL 소스에 연결]**.
 
@@ -98,11 +121,23 @@ Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 �
 
 >[!TAB SAS 인증]
 
-을(를) 만들려면 [!DNL Event Hubs] SAS 인증을 사용하여 계정, 선택 **[!UICONTROL SAS 인증]** 그런 다음 의 값을 제공합니다. [!UICONTROL SAS 키 이름], [!UICONTROL SAS 키], [!UICONTROL 네임스페이스], 및 [!UICONTROL 이벤트 허브 이름].
+을(를) 만들려면 [!DNL Event Hubs] SAS 인증을 사용하는 계정, [!UICONTROL 계정 인증] 드롭다운 메뉴를 선택한 다음 선택 **[!UICONTROL SAS 인증]**. 다음으로, 다음에 대한 값을 제공합니다. [!UICONTROL SAS 키 이름], [!UICONTROL SAS 키], [!UICONTROL 네임스페이스], 및 [!UICONTROL 이벤트 허브 이름].
 
 인증 자격 증명을 입력했으면 다음을 선택합니다. **[!UICONTROL 소스에 연결]**.
 
 ![Azure 이벤트 허브용 SAS 인증 인터페이스.](../../../../images/tutorials/create/eventhub/sas.png)
+
+>[!TAB 이벤트 허브 Azure Active Directory 인증]
+
+을(를) 만들려면 [!DNL Event Hubs] 이벤트 허브 Azure Active Directory 인증이 있는 계정에서 [!UICONTROL 계정 인증] 드롭다운 메뉴를 선택한 다음 선택 **[!UICONTROL 이벤트 허브 Azure Active Directory]**. 다음으로, 다음에 대한 값을 제공합니다. [!UICONTROL 임차인 ID], [!UICONTROL 클라이언트 ID], [!UICONTROL 클라이언트 암호 값], 및 [!UICONTROL 네임스페이스].
+
+![Azure 이벤트 허브 Azure Active Directory 인증](../../../../images/tutorials/create/eventhub/active-directory.png)
+
+>[!TAB 이벤트 허브 범위 Azure Active Directory 인증]
+
+을(를) 만들려면 [!DNL Event Hubs] 이벤트 허브의 범위가 Azure Active Directory인 계정에서 [!UICONTROL 계정 인증] 드롭다운 메뉴를 선택한 다음 선택 **[!UICONTROL 이벤트 허브 범위 Azure Active Directory]**. 다음으로, 다음에 대한 값을 제공합니다. [!UICONTROL 임차인 ID], [!UICONTROL 클라이언트 ID], [!UICONTROL 클라이언트 암호 값], [!UICONTROL 네임스페이스], 및 [!UICONTROL 이벤트 허브 이름].
+
+![Azure 이벤트 허브 범위 Azure Activity Directory 인증](../../../../images/tutorials/create/eventhub/scoped.png)
 
 >[!ENDTABS]
 

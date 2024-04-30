@@ -3,10 +3,10 @@ title: 흐름 서비스 API를 사용하여 Azure Event Hubs 소스 연결 만�
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Azure Event Hubs 계정에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 3%
+source-wordcount: '1473'
+ht-degree: 2%
 
 ---
 
@@ -52,6 +52,29 @@ ht-degree: 3%
 | `eventHubName` | 에 대한 이름 [!DNL Event Hubs] 소스. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 다음 [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
+의 공유 액세스 서명(SAS) 인증에 대한 자세한 내용 [!DNL Event Hubs], 다음을 읽습니다 [[!DNL Azure] sas 사용 안내서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+
+>[!TAB 이벤트 허브 Azure Active Directory 인증]
+
+| 자격 증명 | 설명 |
+| --- | --- |
+| `tenantId` | 권한을 요청하려는 테넌트 ID입니다. 테넌트 ID는 GUID 또는 친숙한 이름으로 포맷할 수 있습니다. **참고**: 테넌트 ID는에서 &quot;디렉터리 ID&quot;라고 합니다. [!DNL Microsoft Azure] 인터페이스. |
+| `clientId` | 앱에 할당된 애플리케이션 ID입니다. 에서 이 ID를 검색할 수 있습니다. [!DNL Microsoft Entra ID] 을(를) 등록한 포털 [!DNL Azure Active Directory]. |
+| `clientSecretValue` | 앱을 인증하기 위해 클라이언트 ID와 함께 사용되는 클라이언트 암호입니다. 에서 클라이언트 암호를 검색할 수 있습니다 [!DNL Microsoft Entra ID] 을(를) 등록한 포털 [!DNL Azure Active Directory]. |
+| `namespace` | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. An [!DNL Event Hubs] 네임스페이스는 하나 이상을 만들 수 있는 고유한 범위 컨테이너를 제공합니다 [!DNL Event Hubs]. |
+
+에 대한 자세한 내용 [!DNL Azure Active Directory], 다음을 읽습니다 [Microsoft Entra ID 사용에 대한 Azure 안내서](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!TAB 이벤트 허브 범위 Azure Active Directory 인증]
+
+| 자격 증명 | 설명 |
+| --- | --- |
+| `tenantId` | 권한을 요청하려는 테넌트 ID입니다. 테넌트 ID는 GUID 또는 친숙한 이름으로 포맷할 수 있습니다. **참고**: 테넌트 ID는에서 &quot;디렉터리 ID&quot;라고 합니다. [!DNL Microsoft Azure] 인터페이스. |
+| `clientId` | 앱에 할당된 애플리케이션 ID입니다. 에서 이 ID를 검색할 수 있습니다. [!DNL Microsoft Entra ID] 을(를) 등록한 포털 [!DNL Azure Active Directory]. |
+| `clientSecretValue` | 앱을 인증하기 위해 클라이언트 ID와 함께 사용되는 클라이언트 암호입니다. 에서 클라이언트 암호를 검색할 수 있습니다 [!DNL Microsoft Entra ID] 을(를) 등록한 포털 [!DNL Azure Active Directory]. |
+| `namespace` | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. An [!DNL Event Hubs] 네임스페이스는 하나 이상을 만들 수 있는 고유한 범위 컨테이너를 제공합니다 [!DNL Event Hubs]. |
+| `eventHubName` | 에 대한 이름 [!DNL Event Hubs] 소스. |
+
 >[!ENDTABS]
 
 이러한 값에 대한 자세한 내용은 [이 이벤트 허브 문서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
@@ -60,7 +83,7 @@ ht-degree: 3%
 
 Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../../../landing/api-guide.md).
 
-## 기본 연결을 만듭니다
+## 기본 연결 만들기
 
 >[!TIP]
 >
@@ -171,6 +194,120 @@ curl -X POST \
 | `auth.params.sasKey` | 생성된 공유 액세스 서명입니다. |
 | `auth.params.namespace` | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. |
 | `params.eventHubName` | 에 대한 이름 [!DNL Event Hubs] 소스. |
+| `connectionSpec.id` | 다음 [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+
++++
+
++++응답
+
+성공한 응답은 고유 식별자를 포함하여 새로 생성된 기본 연결의 세부 정보를 반환합니다(`id`). 다음 단계에서 소스 연결을 만들려면 이 연결 ID가 필요합니다.
+
+```json
+{
+    "id": "4cdbb15c-fb1e-46ee-8049-0f55b53378fe",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
++++
+
+>[!TAB 이벤트 허브 Azure Active Directory 인증]
+
+POST Azure Active Directory Auth를 사용하여 계정을 만들려면 `/connections` 에 대한 값을 제공하는 동안 엔드포인트 `tenantId`, `clientId`,`clientSecretValue`, 및 `namespace`.
+
++++요청
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Event Hubs connection",
+      "description": "Connector for Azure Event Hubs",
+      "auth": {
+          "specName": "Event Hub Azure Active Directory Auth",
+          "params": {
+              "tenantId": "{TENANT_ID}",
+              "clientId": "{CLIENT_ID}",
+              "clientSecretValue": "{CLIENT_SECRET_VALUE}",
+              "namespace": "{NAMESPACE}" 
+          }
+      },
+      "connectionSpec": {
+          "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+          "version": "1.0"
+      }
+  }'
+```
+
+| 속성 | 설명 |
+| -------- | ----------- |
+| `auth.params.tenantId` | 애플리케이션의 테넌트 ID입니다. **참고**: 테넌트 ID는에서 &quot;디렉터리 ID&quot;라고 합니다. [!DNL Microsoft Azure] 인터페이스. |
+| `auth.params.clientId` | 조직의 클라이언트 ID입니다. |
+| `auth.params.clientSecretValue` | 조직의 클라이언트 암호 값입니다. |
+| `auth.params.namespace` | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. |
+| `connectionSpec.id` | 다음 [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+
++++
+
++++응답
+
+성공한 응답은 고유 식별자를 포함하여 새로 생성된 기본 연결의 세부 정보를 반환합니다(`id`). 다음 단계에서 소스 연결을 만들려면 이 연결 ID가 필요합니다.
+
+```json
+{
+    "id": "4cdbb15c-fb1e-46ee-8049-0f55b53378fe",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
++++
+
+>[!TAB 이벤트 허브 범위 Azure Active Directory 인증]
+
+POST Azure Active Directory Auth를 사용하여 계정을 만들려면 `/connections` 에 대한 값을 제공하는 동안 엔드포인트 `tenantId`, `clientId`,`clientSecretValue`, `namespace`, 및 `eventHubName`.
+
++++요청
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Event Hubs connection",
+      "description": "Connector for Azure Event Hubs",
+      "auth": {
+          "specName": "Event Hub Scoped Azure Active Directory Auth",
+          "params": {
+              "tenantId": "{TENANT_ID}",
+              "clientId": "{CLIENT_ID}",
+              "clientSecretValue": "{CLIENT_SECRET_VALUE}",
+              "namespace": "{NAMESPACE}",
+              "eventHubName": "{EVENT_HUB_NAME}" 
+          }
+      },
+      "connectionSpec": {
+          "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+          "version": "1.0"
+      }
+  }'
+```
+
+| 속성 | 설명 |
+| -------- | ----------- |
+| `auth.params.tenantId` | 애플리케이션의 테넌트 ID입니다. **참고**: 테넌트 ID는에서 &quot;디렉터리 ID&quot;라고 합니다. [!DNL Microsoft Azure] 인터페이스. |
+| `auth.params.clientId` | 조직의 클라이언트 ID입니다. |
+| `auth.params.clientSecretValue` | 조직의 클라이언트 암호 값입니다. |
+| `auth.params.namespace` | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. |
+| `auth.params.eventHubName` | 에 대한 이름 [!DNL Event Hubs] 소스. |
 | `connectionSpec.id` | 다음 [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
