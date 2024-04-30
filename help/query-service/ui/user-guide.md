@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 편집기 UI 안내서
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서, Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 이를 통해 개발 목적으로 대화형 쿼리를 실행하고 비대화형 쿼리를 실행하여 Experience Platform의 데이터 세트를 채울 수 있습니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ce937f1335283382189fa40f65aa268735c02715
+source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
 workflow-type: tm+mt
-source-wordcount: '2661'
+source-wordcount: '2794'
 ht-degree: 2%
 
 ---
@@ -88,6 +88,16 @@ UI 토글을 사용하면 쿼리 편집기의 기존 버전과 향상된 버전 
 [!UICONTROL 선택한 쿼리 실행] 아이콘. 편집기 내에서 쿼리 구문을 선택할 때까지 이 아이콘이 기본적으로 비활성화됩니다.
 
 ![를 사용하는 쿼리 편집기 [!UICONTROL 선택한 쿼리 실행] 아이콘이 강조 표시되었습니다.](../images/ui/query-editor/run-selected-query.png)
+
+### 쿼리 편집기 세션 취소 {#cancel-query}
+
+쿼리 실행을 제어하고 오래 실행되는 쿼리를 취소하여 생산성을 향상시킵니다. 이 작업을 수행하면 쿼리 실행 중에 쿼리 편집기가 지워집니다. 쿼리는 백그라운드에서 계속 실행됩니다. CTAS 쿼리인 경우에도 출력 데이터 세트가 생성됩니다. 편집기에서 실행을 취소하고 SQL 문을 계속 작성하려면 **[!UICONTROL 쿼리 취소]** 쿼리를 실행한 후.
+
+![쿼리 편집기 [!UICONTROL 쿼리 취소] 강조 표시됨.](../images/ui/query-editor/cancel-query-run.png)
+
+확인 대화 상자가 나타납니다. 선택 **[!UICONTROL 확인]** 쿼리 실행을 취소합니다.
+
+![확인 이 강조 표시된 쿼리 취소 확인 대화 상자입니다.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
 
 ### 결과 카운트 {#result-count}
 
@@ -219,7 +229,11 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 템플릿으로 저장된 쿼리는 쿼리 편집기에서 예약할 수 있습니다. 쿼리 예약을 사용하면 사용자 지정 케이던스에서 쿼리 실행을 자동화할 수 있습니다. 빈도, 날짜 및 시간에 따라 쿼리를 예약할 수 있으며 필요한 경우 결과에 대한 출력 데이터 세트를 선택할 수도 있습니다. UI를 통해 쿼리 일정을 비활성화하거나 삭제할 수도 있습니다.
 
-예약은 쿼리 편집기에서 설정됩니다. 쿼리 편집기를 사용하는 경우 이미 생성, 저장 및 실행된 쿼리에 대한 예약만 추가할 수 있습니다. 동일한 제한이 에는 적용되지 않습니다. [!DNL Query Service] API:
+예약은 쿼리 편집기에서 설정됩니다. 쿼리 편집기를 사용하는 경우 이미 생성, 저장 및 실행된 쿼리에 대한 예약만 추가할 수 있습니다. 동일한 제한이 에는 적용되지 않습니다. [!DNL Query Service] API.
+
+>[!NOTE]
+>
+>10회 연속 실행에 실패한 예약된 쿼리는 [!UICONTROL 격리됨] 상태. 이 상태의 쿼리는 더 이상 실행되기 전에 사용자의 개입이 필요합니다. 다음을 참조하십시오. [격리된 쿼리](./monitor-queries.md#quarantined-queries) 자세한 내용은 설명서 를 참조하십시오.
 
 방법을 알아보려면 쿼리 일정 설명서 를 참조하십시오 [ui에서 쿼리 일정 만들기](./query-schedules.md). 또는 API를 사용하여 일정을 추가하는 방법을 배우려면 다음을 참조하십시오. [예약된 쿼리 끝점 안내서](../api/scheduled-queries.md).
 
