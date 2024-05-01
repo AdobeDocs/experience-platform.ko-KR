@@ -2,7 +2,7 @@
 description: 사용자가 대상에 데이터를 연결하고 내보내는 방법과 관련된 다양한 정보를 지정할 수 있도록 Experience Platform UI에서 입력 필드를 만드는 방법을 알아봅니다.
 title: 고객 데이터 필드
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
+source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
 workflow-type: tm+mt
 source-wordcount: '1742'
 ht-degree: 1%
@@ -352,7 +352,7 @@ API를 동적으로 호출하고 응답을 사용하여 드롭다운 메뉴의 �
 >
 >2024년 4월 릴리스부터 다음을 설정할 수 있습니다 `isRequired` 중첩된 필드의 매개 변수. 예를 들어 아래 구성 스니펫에서 처음 두 개의 중첩된 필드가 필수(강조 표시된 xxx행)로 표시되며, 고객은 이 필드에 대한 값을 선택하지 않으면 진행할 수 없습니다. 의 필수 필드에 대한 자세한 내용 [지원되는 매개변수](#supported-parameters) 섹션.
 
-```json {line-numbers="true" highlight="10,19"}
+```json {line-numbers="true" highlight="11,20"}
     {
       "name": "yourdestination",
       "title": "Yourdestination - Integration Specific Settings",

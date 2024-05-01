@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform 릴리스 정보
-description: Adobe Experience Platform의 2024년 3월 릴리스 정보입니다.
+description: Adobe Experience Platform에 대한 2024년 4월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6ad7d55ca0a544879db9738c0a4ab914fdc363bd
+source-git-commit: 4ec4335d19695e8d6e26390358356dedd048594e
 workflow-type: tm+mt
-source-wordcount: '1726'
-ht-degree: 18%
+source-wordcount: '1849'
+ht-degree: 16%
 
 ---
 
@@ -74,12 +74,12 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | 기능 | 설명 |
 | ----------- | ----------- |
 | `isRequired` 이제 Destination SDK의 중첩된 고객 데이터 필드에 매개 변수를 사용할 수 있습니다. | 이제 Destination SDK에서 대상을 구성할 때 다음 작업을 수행할 수 있습니다 [필요에 따라 중첩된 고객 데이터 필드 설정](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). 이렇게 하면 대상을 설정하는 사용자는 해당 필드에 대한 값을 선택할 때까지 활성화 플로우를 진행할 수 없습니다. |
+| Web SDK를 사용하여 Adobe Target 대상을 설정할 때 Edge 세그멘테이션은 더 이상 필수 요구 사항이 아닙니다 | 이전에는 을 구성할 때 [Adobe Target 대상](/help/destinations/catalog/personalization/adobe-target-connection.md) web SDK를 사용하면 데이터 스트림을 개인화 및 에지 세분화에 사용할 수 있어야 합니다. 에지 세그멘테이션에 대해 데이터 스트림을 활성화해야 하는 요구 사항 [이(가) 이제 제거되었습니다.](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). 이 통합 패턴은 Real-Time CDP에서 Adobe Target을 사용할 때 개인화 사용 사례의 하위 집합에서만 혜택을 받을 수 있습니다. 자세한 내용 [통합 유형별로 활성화된 사용 사례](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters). |
+| [!BADGE 베타]{type=Informative} 활성화 플로우에서 여러 대상자 및 데이터 세트 제거 | 이제 대상 활성화 플로우에서 여러 대상 및 데이터 세트를 선택하고 제거할 수 있습니다. 다음을 참조하십시오. [대상 세부 사항](../../destinations/ui/destination-details-page.md#bulk-remove) 및 [데이터 세트 내보내기](../../destinations/ui/export-datasets.md) 자세한 내용은 설명서 를 참조하십시오. |
 
 {style="table-layout:auto"}
 
 대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
-
-<!--| [!BADGE Beta]{type=Informative} Remove multiple audiences and datasets from activation flows | You can now select and remove multiple audiences and datasets from destination activation flows. See the [destination details](../../destinations/ui/destination-details-page.md#bulk-remove) and [dataset export](../../destinations/ui/export-datasets.md) documentation for more details. |-->
 
 ## ID 서비스 {#identity-service}
 
