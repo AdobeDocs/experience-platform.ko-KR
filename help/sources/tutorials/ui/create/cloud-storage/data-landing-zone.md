@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;홈;인기 항목;데이터 랜딩 영역;데이터 랜딩 영역
 title: UI를 사용하여 데이터 랜딩 영역을 플랫폼에 연결
 description: Platform 사용자 인터페이스를 사용하여 데이터 랜딩 영역 소스 커넥터를 만드는 방법을 알아봅니다.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 9372e6f961015c989bfcb0d1e2b0129da965c522
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---

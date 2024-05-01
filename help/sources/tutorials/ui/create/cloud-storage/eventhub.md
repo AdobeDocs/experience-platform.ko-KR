@@ -3,9 +3,9 @@ title: UI에서 Azure Event Hubs 소스 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Azure Event Hubs 소스 연결을 만드는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1096'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 >
 >다음 [!DNL Azure Event Hubs] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
 
-이 튜토리얼에서는 [!DNL Azure Event Hubs] Adobe Experience Platform 사용자 인터페이스를 사용하는 계정입니다.
+이 자습서를 읽고 다음을 만드는 방법을 알아보십시오. [!DNL Azure Event Hubs] Adobe Experience Platform 사용자 인터페이스를 사용하는 계정입니다.
 
 ## 시작하기
 
