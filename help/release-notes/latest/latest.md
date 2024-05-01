@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2024년 4월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4ec4335d19695e8d6e26390358356dedd048594e
+source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
 workflow-type: tm+mt
-source-wordcount: '1849'
+source-wordcount: '1841'
 ht-degree: 16%
 
 ---
@@ -51,7 +51,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 유형 | 기능 | 설명 |
 | --- | --- | --- |
-| Insights | [!DNL Acxiom] 익명 방문자 인사이트 | 로 웹 사이트 방문자를 검색하는 방법 [!DNL Acxiom's] 방문자 인사이트. 지역 IP 조회 기술을 활용하여 익명 브라우저의 위치를 정확하게 파악합니다. 식별되면 구성된 데이터베이스에서 빠른 검색으로 브라우저에 다시 전송되는 추가 인사이트를 얻을 수 있습니다. 콘텐츠 크리에이터에게는 낯선 사람이었던 방문자에게 보다 개인화되고 흥미로운 경험을 제공하는 이러한 데이터 포인트에 맞게 콘텐츠를 맞춤화할 수 있는 절호의 기회가 됩니다. |
+| 확장 | [!DNL Acxiom Anonymous Visitor Insights] 태그 확장 | 로 웹 사이트 방문자를 검색하는 방법 [!DNL Acxiom's Visitor Insights]. Acxiom은 지역 IP 조회 기술을 활용하여 익명 브라우저의 위치를 정확하게 파악할 수 있습니다. 식별되면 구성된 데이터베이스에서 검색하면 다시 브라우저로 전송되는 추가 인사이트가 생성됩니다. 따라서 콘텐츠 작성자는 낯선 사람으로 시작한 경우에도 방문자에게 보다 개인화되고 흥미로운 경험을 제공하는 이러한 데이터 포인트에 맞게 콘텐츠를 조정할 수 있습니다. |
 | 데이터스트림 | [Edge Network 봇 탐지](../../datastreams/bot-detection.md) | 자동화된 프로그램, 웹 스크레이퍼, 스파이더, 스크립팅된 스캐너와 같은 비인간 엔티티에서 발생하는 트래픽은 인간 방문자에서 발생하는 이벤트를 식별하는 것을 더 어렵게 할 수 있습니다. 이 유형의 트래픽은 중요한 비즈니스 지표에 부정적인 영향을 주어 잘못된 트래픽 보고를 초래할 수 있습니다. <br>보트 감지를 사용하면 [웹 SDK](../../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) 및 [[!DNL Server API]](../../server-api/overview.md) 알려진 스파이더 및 보트에서 생성됨. 데이터스트림에 대한 보트 감지를 구성하여 보트 이벤트로 분류하려는 특정 IP 주소, IP 범위 및 요청 헤더를 식별할 수 있습니다. <br> 보트 트래픽을 식별하면 사이트 또는 모바일 애플리케이션에서 사용자 활동을 보다 정확하게 측정할 수 있습니다. |
 | Mobile SDK | 주요 버전 릴리스 | iOS Mobile Core 5.x 및 호환 iOS 확장, Android Mobile Core 3.x 및 호환 Android 확장, React Native Core 6.x 및 호환 React Native 확장, Flutter Core 4.x 및 호환 Flutter 확장에 대한 Mobile SDK의 새 주요 버전이 출시되었습니다. 이러한 릴리스는 Jetpack Compose용 Android SDK의 지원, Adobe Journey Optimizer 코드 기반 경험의 지원, Flutter용 Adobe Journey Optimizer Messaging 확장의 일반 가용성을 포함하여 몇 가지 새로운 기능과 개선 사항을 제공합니다. 릴리스 노트에 대한 자세한 내용은 [모바일 SDK 릴리스 노트](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | Mobile SDK | 개인정보 보호 | 2024년 5월 1일부터 Apple의 정책 업데이트로 인해 개발자가 App Store에 제출하려면 새로운 개인 정보 보호 기능을 구현해야 합니다. Mobile SDK를 사용하는 모든 Adobe 고객이 5월 1일 이후에 App Store 승인을 받으려면 SDK 버전 5.x로 업그레이드해야 합니다. |
