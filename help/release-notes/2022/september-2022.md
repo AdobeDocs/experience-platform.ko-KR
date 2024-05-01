@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 정보입니다.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '2762'
 ht-degree: 18%
@@ -94,7 +94,7 @@ Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터�
 | --- | --- |
 | 사용 중 레이블 | 위젯 라이브러리에서 볼 때 사용 중 레이블은 대시보드에 기존 위젯이 있는지 쉽게 식별합니다. 이렇게 하면 원하는 경우 동일한 위젯을 두 번 이상 추가할 수 있지만 중복을 쉽게 방지할 수 있습니다. |
 | 사용자 정의 대시보드 | 사용자 정의 대시보드를 사용하면 사용자 정의 대시보드를 작성하고 관리할 수 있으므로 신속하게 통찰력을 얻고 시각화를 맞춤화할 수 있습니다. 사용자 정의 대시보드를 사용하여 맞춤형 위젯을 만들고, 추가하고, 편집하여 조직과 관련된 주요 지표를 시각화할 수 있습니다. 읽기 [기능 안내서](../../dashboards/user-defined-dashboards.md) 자세히 알아보십시오. |
-| Customer Data Platform Insights 데이터 모델 | CDP(Customer Data Platform) Insights 데이터 모델 기능은 다양한 프로필, 대상 및 세그멘테이션 위젯에 대한 통찰력을 제공하는 데이터 모델 및 SQL을 노출합니다. 이러한 SQL 쿼리 템플릿을 사용자 정의하여 마케팅 및 주요 성능 지표 사용 사례에 대한 CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 인사이트를 사용자 정의 대시보드에 대한 사용자 정의 위젯으로 사용할 수 있습니다. 읽기 [CDP Insights 데이터 모델 기능 안내서](../../dashboards/cdp-insights-data-model.md) 자세히 알아보십시오. |
+| Customer Data Platform Insights 데이터 모델 | CDP(Customer Data Platform) Insights 데이터 모델 기능은 다양한 프로필, 대상 및 세그멘테이션 위젯에 대한 통찰력을 제공하는 데이터 모델 및 SQL을 노출합니다. 이러한 SQL 쿼리 템플릿을 사용자 정의하여 마케팅 및 주요 성능 지표 사용 사례에 대한 CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 인사이트를 사용자 정의 대시보드에 대한 사용자 정의 위젯으로 사용할 수 있습니다. 읽기 [CDP Insights 데이터 모델 기능 안내서](../../dashboards/data-models/cdp-insights-data-model-b2c.md) 자세히 알아보십시오. |
 | 대상 중복 보고서 위젯 | 이 위젯은 두 가지 모두에 사용할 수 있습니다 [!UICONTROL 프로필] 및 [!UICONTROL 세그먼트] 대시보드. 이 보고서는 선택한 세그먼트에 대해 가장 높거나 가장 낮은 오버랩 비율로 순위가 매겨진 대상자 목록을 제공합니다. 다음에서 [!UICONTROL 프로필] 대시보드 사용 가능한 모든 세그먼트의 병합 정책으로 대상 겹침을 필터링하고 볼 수 있습니다. 다음 [!UICONTROL 세그먼트] 대시보드를 사용하면 특정 세그먼트별로 대상 겹침을 필터링할 수 있습니다.<br>이 분석을 사용하여 새로운 고성능 세그먼트를 작성하고 동일한 대상자를 다른 대상으로 보내지 마십시오. 또한 이 보고서는 숨겨진 인사이트를 식별하여 세그먼테이션을 개선하거나 추적할 고유한 프로필을 찾는 데 도움이 됩니다. 해당 항목 읽기 [프로필](../../dashboards/guides/profiles.md#audience-overlap-report) 및 [세그먼트](../../dashboards/guides/audiences.md#audience-overlap-report) 자세한 내용은 위젯 안내서를 참조하십시오. |
 
 에 대한 자세한 내용 [!DNL Dashboards], 다음을 참조하십시오. [[!DNL Dashboards] 개요](../../dashboards/home.md).

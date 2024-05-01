@@ -5,10 +5,10 @@ breadcrumb-title: 대시보드 안내서
 user-guide-description: 맞춤화가 가능한 대시보드를 통해 Experience Platform에서 데이터를 시각화하는 방법을 알아봅니다.
 feature: Dashboards
 role: Developer,User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8daa1c190f4c868fc12a46c66f6970704c8de8fa
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 33%
+source-wordcount: '106'
+ht-degree: 29%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 33%
    * [프로필](insights/profiles.md)
    * [대상자](insights/audiences.md)
    * [대상](insights/destinations.md)
+   * [계정 프로필](insights/account-profiles.md)
 * 대시보드 맞춤화 {#customize}
    * [사용자 지정 개요](customize/overview.md)
    * [대시보드 수정](customize/modify.md)
@@ -39,9 +40,11 @@ ht-degree: 33%
    * [스키마 편집](customize/edit-schema.md)
 * 인사이트 사용 사례 {#insights-use-cases}
    * [동의 분석](insights-use-cases/consent-analysis.md)
+* 사용 가능한 데이터 모델 {#data-models}
+   * [Real-time Customer Data Platform Insights 데이터 모델 B2B 에디션](data-models/cdp-insights-data-model-b2b.md)
+   * [Real-time Customer Data Platform Insights 데이터 모델 B2C 에디션](data-models/cdp-insights-data-model-b2c.md)
 * 애플리케이션 통합 {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [쿼리 대시보드 데이터 세트](query.md)
-* [Real-time Customer Data Platform 통찰력 데이터 모델](cdp-insights-data-model.md)
 * [인사이트 SQL 보기](view-sql.md)
 * [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

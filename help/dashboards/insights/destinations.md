@@ -1,9 +1,10 @@
 ---
 title: 대상 통찰력
 description: 대상 통찰력을 제공하는 SQL을 살펴보고 이러한 쿼리를 사용하여 사용자 지정 통찰력을 생성하여 Adobe Experience Platform에서 데이터 활성화를 자세히 살펴보십시오.
-source-git-commit: 3d5dd6300952409e2dddb32eb11547fb43a5feac
+exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
+source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1139'
 ht-degree: 2%
 
 ---
@@ -14,8 +15,7 @@ ht-degree: 2%
 
 이를 구동하는 SQL에 액세스하여 대상 인사이트를 파악한 다음 고유한 인사이트를 생성하여 Adobe Experience Platform에서 대상 플랫폼으로의 데이터 활성화를 자세히 살펴봅니다. 기존 Real-Time CDP 데이터 모델 SQL을 영감으로 사용하여 원시 데이터를 새로운 실행 가능한 통찰력으로 변환하여 고유한 비즈니스 요구 사항에 맞는 쿼리를 만듭니다.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+다음을 참조하십시오. [SQL 설명서 보기](../view-sql.md) 자세한 내용은 양식 UI를 통해 통찰력의 SQL을 직접 조정하는 방법을 참조하십시오.
 
 다음 인사이트를 의 일부로 사용할 수 있습니다. [대상 대시보드](../guides/destinations.md) 또는 사용자 지정 [사용자 정의 대시보드](../user-defined-dashboards.md). 다음을 참조하십시오. [사용자 지정 개요](../customize/overview.md) 대시보드 또는 를 사용자 지정하는 방법에 대한 지침 [새 위젯 만들기 및 편집](../customize/custom-widgets.md) 위젯 라이브러리 및 [사용자 정의 대시보드](../user-defined-dashboards.md#create-widget).
 
@@ -511,13 +511,6 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 이제 이 문서를 읽고 대시보드 인사이트를 생성하는 SQL과 이 분석이 해결하는 일반적인 질문을 이해합니다. 이제 이러한 SQL 쿼리를 편집하고 반복하여 고유한 인사이트를 생성할 수 있습니다.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+다음을 참조하십시오. [SQL 설명서 보기](../view-sql.md) 자세한 내용은 양식 UI를 통해 통찰력의 SQL을 직접 조정하는 방법을 참조하십시오.
 
-다음에 대한 인사이트를 생성하는 SQL을 읽고 이해할 수도 있습니다. [프로필](./profiles.md) 및 [대상](./audiences.md) 대시보드.
-
-<!-- 
-SQL MISSING FROM WIKI:
-Unmapped audiences by identity
-Mapped audiences by identity 
--->
+다음에 대한 인사이트를 생성하는 SQL을 읽고 이해할 수도 있습니다. [프로필](./profiles.md), [계정 프로필](./account-profiles.md) 및 [대상](./audiences.md) 대시보드.

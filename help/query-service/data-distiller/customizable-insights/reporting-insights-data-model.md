@@ -2,7 +2,7 @@
 title: Query Accelerated Store 보고 인사이트 안내서
 description: 가속화된 스토어 데이터 및 사용자 정의 대시보드와 함께 사용할 수 있도록 쿼리 서비스를 통해 보고 인사이트 데이터 모델을 구축하는 방법에 대해 알아봅니다.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 쿼리 가속 저장소를 사용하면 데이터에서 중요한 통찰력을 얻는 데 필요한 시간과 처리 능력을 줄일 수 있습니다. 일반적으로 데이터는 집계 보기가 생성되고 보고되는 정기적인 간격(예: 시간별 또는 일별)으로 처리됩니다. 집계된 데이터에서 생성된 이러한 보고서를 분석하면 비즈니스 성과를 향상시키기 위한 통찰력을 도출합니다. 쿼리 가속 저장소는 캐시 서비스, 동시성, 대화형 경험 및 상태 비저장 API를 제공합니다. 단, 데이터는 원시 데이터 쿼리가 아닌 집계된 쿼리에 대해 사전 처리되고 최적화된다고 가정합니다.
 
-쿼리 가속 저장소를 사용하면 사용자 지정 데이터 모델을 구축하거나 기존 Adobe Real-time Customer Data Platform 데이터 모델을 확장할 수 있습니다. 그런 다음 보고 통찰력을 참여하거나 선택한 보고/시각화 프레임워크에 포함할 수 있습니다. 다음 방법에 대해 알아보려면 Real-time Customer Data Platform 통찰력 데이터 모델 설명서 를 참조하십시오 [sql 쿼리 템플릿을 사용자 정의하여 마케팅 및 KPI(주요 성능 지표) 사용 사례에 대한 Real-Time CDP 보고서를 생성합니다.](../../../dashboards/cdp-insights-data-model.md).
+쿼리 가속 저장소를 사용하면 사용자 지정 데이터 모델을 구축하거나 기존 Adobe Real-time Customer Data Platform 데이터 모델을 확장할 수 있습니다. 그런 다음 보고 통찰력을 참여하거나 선택한 보고/시각화 프레임워크에 포함할 수 있습니다. 다음 방법에 대해 알아보려면 Real-time Customer Data Platform 통찰력 데이터 모델 설명서 를 참조하십시오 [sql 쿼리 템플릿을 사용자 정의하여 마케팅 및 KPI(주요 성능 지표) 사용 사례에 대한 Real-Time CDP 보고서를 생성합니다.](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 Adobe Experience Platform의 Real-Time CDP 데이터 모델은 프로필, 대상 및 대상에 대한 인사이트를 제공하며 Real-Time CDP 인사이트 대시보드를 사용할 수 있습니다. 이 문서에서는 Reporting Insights 데이터 모델을 만드는 과정을 안내하고 필요에 따라 Real-Time CDP 데이터 모델을 확장하는 방법을 안내합니다.
 

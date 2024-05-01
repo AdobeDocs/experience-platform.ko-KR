@@ -1,10 +1,10 @@
 ---
-title: 계정 프로필 대시보드 안내서
+title: 계정 프로필 대시보드
 description: Adobe Experience Platform은 조직의 B2B 계정 프로필에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: b7875128592b17044b068d8064de082bf00a8309
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1715'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중에 캡처된 계정 프로필에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. 이 안내서에서는 액세스 및 작업 방법을 간략하게 설명합니다. [!UICONTROL 계정 프로필] UI의 대시보드 및에서 대시보드에 표시된 시각화에 대한 자세한 정보를 제공합니다.
 
-계정 프로필 사용자 인터페이스 내의 모든 기능에 대한 개요를 알려면 [계정 프로필 UI 안내서](../../rtcdp/accounts/account-profile-ui-guide.md).
+이 문서에서는 [!UICONTROL 계정 프로필] 대시보드를 만들고 사용 가능한 표준 인사이트에 대해 자세히 설명합니다. 다음을 참조하십시오. [[!UICONTROL 계정 프로필] UI 안내서](../../rtcdp/accounts/account-profile-ui-guide.md) 사용 가능한 기능에 대한 포괄적인 세부 정보를 제공합니다.
 
 ## 시작하기
 
-다음에 대한 권한이 있어야 합니다. [Adobe Real-time Customer Data Platform 에디션](../../rtcdp/b2b-overview.md) B2B에 액세스하려면 [!UICONTROL 계정 프로필] 대시보드입니다.
+다음에 대한 권한이 있어야 합니다. [Adobe Real-time Customer Data Platform 에디션](../../rtcdp/b2b-overview.md) B2B에 액세스 [!UICONTROL 계정 프로필] 대시보드입니다.
 
-## 계정 프로필 데이터
+## 계정 프로필 데이터 {#data}
 
-다음 [!UICONTROL 계정 프로필] 대시보드에는 마케팅 채널 전반의 여러 소스에서 가져온 통합 계정 정보와 조직이 현재 고객 계정 정보를 저장하는 데 사용하는 다양한 시스템의 스냅샷이 표시됩니다.
+다음 [!UICONTROL 계정 프로필] 대시보드에는 통합 계정 정보의 스냅샷이 표시됩니다. 이 계정 정보는 마케팅 채널 및 조직에서 현재 고객 계정 정보를 저장하는 데 사용하는 다양한 시스템에 있는 여러 소스에서 가져온 것입니다.
 
 스냅샷의 프로필 데이터는 스냅샷이 생성된 특정 시점에 나타나는 데이터를 정확하게 표시합니다. 즉, 스냅샷은 데이터의 근사값이나 샘플이 아니고 [!UICONTROL 계정 프로필] 대시보드가 실시간으로 업데이트되지 않습니다.
 
@@ -29,17 +29,33 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 >
 >스냅숏을 만든 이후 데이터에 대한 변경 또는 업데이트는 다음 스냅숏을 만들 때까지 대시보드에 반영되지 않습니다.
 
-## 탐색 [!UICONTROL 계정 프로필] 대시보드
+## 탐색 [!UICONTROL 계정 프로필] 대시보드 {#explore}
 
 로 이동하려면 [!UICONTROL 계정 프로필] Platform UI에서 대시보드를 선택한 다음 **[!UICONTROL 프로필]** 아래에 [!UICONTROL 계정] 을 클릭합니다.
 
 ![왼쪽 탐색 창에 계정 프로필이 있는 Platform UI가 강조 표시되고 개요 탭이 표시됩니다.](../images/account-profiles/account-profiles-dashboard.png)
 
-다음에서 [!UICONTROL 계정 프로필] 대시보드 다음 중 하나를 수행할 수 있습니다. [조직에 수집된 계정 프로필 검색](#browse-account-profiles), 또는 [위젯을 사용하여 계정 프로필 데이터 전체를 한눈에 볼 수 있습니다](#standard-widgets) 데이터의 측면을 시각화합니다.
+다음에서 [!UICONTROL 계정 프로필] 대시보드, 다음 중 하나를 수행할 수 있습니다. [조직에 수집된 계정 프로필 검색](#browse-account-profiles), 또는 [위젯을 사용하여 계정 프로필 데이터 전체를 한눈에 볼 수 있습니다](#standard-widgets).
+
+### 날짜 필터 {#date-filter}
+
+다음 [!UICONTROL 개요] 탭은 계정 프로필에 대한 중요한 정보를 전달하기 위해 읽기 전용 지표를 제공하는 위젯으로 구성됩니다. 달력 아이콘 또는 날짜를 선택하여 위젯의 전역 날짜 필터를 변경합니다.
+
+>[!IMPORTANT]
+>
+>드롭다운 캘린더에서 선택하는 날짜 범위는 두 개의 예측 점수 위젯( )을 제외한 모든 인사이트에 영향을 줍니다.[배포](#predictive-scoring-distribution) 및 [가장 영향력 있는 요인](#predictive-scoring-top-influential-factors)).
+
+![날짜 선택기 및 필터 아이콘이 강조 표시된 계정 프로필 개요 탭](../images/account-profiles/date-filter.png)
+
+### 리드-계정 일치 서비스 구성 {#lead-to-account-matching-service}
+
+선택 **[!UICONTROL 설정]** 에서 리드-계정 일치 서비스를 구성하려면 다음을 수행합니다. [!UICONTROL 계정 설정] 대화 상자. 리드-계정 일치를 구성하는 방법에 대한 자세한 내용은 다음을 참조하십시오. [UI 안내서](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). 리드-계정 일치에 대한 자세한 내용은 [Real-Time CDP B2B 설명서의 계정 일치 리드](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+
+![[설정]이 강조 표시된 [계정 프로필] 대시보드입니다.](../images/account-profiles/settings.png)
 
 ## 계정 프로필 찾아보기 {#browse-account-profiles}
 
-다음 [!UICONTROL 찾아보기] 탭에서는 연결된 엔터프라이즈 소스의 계정 ID를 사용하거나 소스 세부 정보를 직접 입력하여 조직에 수집된 읽기 전용 계정 프로필을 검색하고 볼 수 있습니다. 여기에서 계정 프로필에 속하는 이름, 업계, 매출 및 기타 고객 등 중요한 정보를 볼 수 있습니다.
+다음에서 [!UICONTROL 찾아보기] 탭에서는 조직에 수집된 읽기 전용 계정 프로필을 검색하고 볼 수 있습니다. 연결된 엔터프라이즈 소스의 계정 ID를 사용하거나 소스 세부 정보를 직접 입력합니다. 이 작업 공간에서는 계정 프로필에 속하는 이름, 업계, 매출 및 기타 고객 등 중요한 정보를 볼 수 있습니다.
 
 다음 항목 선택 [!UICONTROL 프로필 ID] 에 표시된 결과에서 [!UICONTROL 찾아보기] 탭을 클릭하여 열기 [!UICONTROL 세부 사항] 계정 프로필에 대한 탭입니다.
 
@@ -47,42 +63,79 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 
 다음에 표시되는 계정 프로필 정보 [!UICONTROL 세부 사항] 탭이 여러 프로필 조각에서 함께 병합되어 개별 계정에 대한 단일 보기를 형성했습니다. 다음에서 설명서를 참조하십시오. [Adobe Real-time Customer Data Platform에서 계정 프로필 찾아보기](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) platform UI의 계정 프로필 보기 기능에 대해 자세히 알아보십시오.
 
-## 다음 [!UICONTROL 계정 프로필] [!UICONTROL 개요] {#overview}
-
-다음 [!UICONTROL 개요] 탭은 계정 프로필에 대한 중요한 정보를 전달하기 위해 읽기 전용 지표를 제공하는 위젯으로 구성됩니다. 선택 **[!UICONTROL 대시보드 수정]** 의 모양을 변경하려면 [!UICONTROL 개요] 위젯을 이동하고 크기를 조정하여 탭합니다.
-
-![[수정] 대시보드가 강조 표시된 계정 프로필 개요 탭](../images/account-profiles/modify-dashboard.png)
-
-다음 문서를 참조하십시오. [대시보드 수정](../customize/modify.md) 및 [위젯 라이브러리 개요](../customize/widget-library.md) 자세히 알아보십시오.
-
 ## 표준 위젯 {#standard-widgets}
 
 Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 사용할 수 있는 표준 위젯을 제공합니다.
 
 사용 가능한 각 표준 위젯에 대해 자세히 알아보려면 다음 목록에서 위젯의 이름을 선택합니다.
 
-* [업종별 총 계정 수](#total-accounts-by-industry)
 * [계정 프로필 추가됨](#account-profiles-added)
+* [업종별 계정](#accounts-by-industry)
+* [유형별 계정](#accounts-by-type)
+* [영업 기회 추가됨](#opportunities-added)
+* [개인 역할별 기회](#opportunities-by-person-role)
+* [매출액별 영업 기회](#opportunities-by-revenue)
+* [상태 및 단계별 영업 기회](#opportunities-by-status-&-stage)
+* [성공한 영업 기회](#opportunities-won)
 * [예측 채점 분포](#predictive-scoring-distribution)
 * [예측 점수 가장 영향력 있는 요인](#predictive-scoring-top-influential-factors)
-
-### 업종별 총 계정 수 {#total-accounts-by-industry}
-
-이 위젯은 단일 지표에 총 계정 수를 표시하고 도넛 차트를 사용하여 전체 수를 구성하는 산업에 대한 카운트의 비례 크기를 보여 줍니다. 키는 도넛 차트를 구성하는 다양한 산업에 대한 색상 코딩 정보를 제공합니다.
-
-커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 서로 다른 업계에 대한 개별 카운트가 대화 상자에 표시됩니다.
-
-![업계 위젯별 총 계정 수.](../images/account-profiles/total-accounts-by-industry-widget.png)
+* [업종별 총 계정 수](#total-accounts-by-industry)
 
 ### 계정 프로필 추가됨 {#account-profiles-added}
 
-이 위젯은 색상으로 구분된 막대 차트를 사용하여 주어진 기간 동안 계정에 추가된 프로필 수와 이러한 추가된 프로필을 구성하는 다양한 업종의 비율을 보여 줍니다. 업종은 색상 코딩되어 있으며, 막대형 차트를 구성하는 다양한 업종에 대한 색상 코딩 정보를 제공하는 것이 핵심입니다. 분석 기간은 위젯 드롭다운 메뉴에서 선택됩니다. 막대 차트는 30일, 90일 및 12개월 기간에 걸쳐 시각화할 수 있습니다.
+다음 [!UICONTROL 계정 프로필 추가됨] 위젯은 선 그래프를 사용하여 일정 기간 동안 매일 추가된 계정 프로필 수를 표시합니다. 대시보드 맨 위에 있는 글로벌 날짜 필터를 사용하여 분석 기간을 결정합니다. 날짜 필터를 제공하지 않으면 기본 비헤이비어에 오늘 이전 연도에 추가된 계정 프로필이 나열됩니다. 결과는 추가된 계정 프로필 수의 트렌드를 유추하는 데 사용할 수 있습니다.
+
+![계정 프로필 추가 위젯입니다.](../images/account-profiles/account-profiles-added.png)
+
+### 업종별 계정 {#accounts-by-industry}
+
+다음 [!UICONTROL 업종별 계정] 위젯은 도넛 차트 내의 단일 지표에 있는 총 계정 수를 표시합니다. 도넛 차트는 이 합계를 구성하는 다양한 산업의 상대적 구성을 보여 줍니다. 색상으로 구분된 키는 포함된 모든 산업의 분석을 제공합니다. 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 각 업계에 대한 개별 카운트가 대화 상자에 표시됩니다.
+
+![업종별 계정 위젯.](../images/account-profiles/accounts-by-industry.png)
+
+### 유형별 계정 {#accounts-by-type}
+
+다음 [!UICONTROL 유형별 계정] 위젯은 도넛 차트 내의 단일 지표에 있는 총 계정 수를 표시합니다. 도넛 차트는 이 합계를 구성하는 다양한 계정 유형의 상대적 구성을 보여 줍니다. 색상으로 구분된 키는 포함된 모든 계정 유형에 대한 분류를 제공합니다. 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 각 계정 유형에 대한 개별 카운트가 대화 상자에 표시됩니다.
+
+![유형별 계정 위젯.](../images/account-profiles/accounts-by-type.png)
+
+### 영업 기회 추가됨 {#opportunities-added}
+
+다음 [!UICONTROL 영업 기회 추가됨] 위젯은 선 그래프를 사용하여 일정 기간 동안 매일 추가되는 기회의 수를 표시합니다. 대시보드 맨 위에 있는 글로벌 날짜 필터를 사용하여 분석 기간을 결정합니다. 날짜 필터를 제공하지 않으면 기본 비헤이비어에 오늘 이전 연도에 추가된 기회가 나열됩니다. 그 결과를 이용하여 추가된 기회의 수에서의 추세를 추론할 수 있다.
+
+<!-- Link to date filter documentation from Annamalai -->
+
+![Opportunities 추가 위젯.](../images/account-profiles/opportunities-added.png)
+
+### 개인 역할별 기회 {#opportunities-by-person-role}
+
+다음 [!UICONTROL 개인 역할별 기회] 위젯은 도넛 차트 내의 단일 지표에 총 기회 수를 표시합니다. 도넛 차트는 이 총 기회 수를 구성하는 역할의 상대적 구성을 보여 줍니다. 색상으로 구분된 키는 포함된 모든 역할에 대한 분류를 제공합니다. 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 대화 상자에 각 역할에 대한 개별 카운트가 표시됩니다.
 
 >[!NOTE]
 >
->프로필은 계정에만 추가되고 제거되지 않으므로 일정 기간 동안 추가될 수 있는 최소 프로필 수는 0입니다.
+>다음 [!UICONTROL 데이터를 찾을 수 없음] 또는 [!UICONTROL 로드할 수 없음] 스키마에서 &#39;Opportunity-Person&#39; 브리지 테이블을 사용하지 않으면 오류가 발생합니다. 인사이트에 이러한 오류 중 하나가 표시되면 결합 스키마를 확인하고 &#39;Opportunity-Person&#39; 필드 그룹이 데이터를 수집하는지 확인하십시오.
 
-![계정 프로필 추가 위젯입니다.](../images/account-profiles/accounts-profiles-added-widget.png)
+![개인 역할별 기회 위젯.](../images/account-profiles/opportunities-by-person-role.png)
+
+### 매출액별 영업 기회 {#opportunities-by-revenue}
+
+다음 [!UICONTROL 매출액별 영업 기회] 위젯은 막대 차트를 사용하여 기회에 의해 생성된 총 예상 매출액을 보여줍니다. 위젯은 최대 6개의 기회를 지원합니다.
+
+영업 기회에 대한 특정 매출 합계가 포함된 대화 상자를 보려면 커서를 사용하여 개별 막대 위로 마우스를 가져갑니다.
+
+![매출액별 Opportunity 위젯 을 참조하십시오.](../images/account-profiles/opportunities-by-revenue.png)
+
+### 상태 및 단계별 영업 기회 {#opportunities-by-status-&-stage}
+
+이 위젯은 막대 차트를 사용하여 마케팅/판매 단계의 모든 단계에서 열리거나 종료되는 기회의 수를 보여 줍니다. 위젯은 색상을 사용하여 기회의 단계를 구분합니다. 색상으로 구분된 키는 영업 기회에 사용할 수 있는 단계를 나타냅니다.
+
+![상태 및 단계 위젯별 Opportunity](../images/account-profiles/opportunities-by-status-&-stage.png)
+
+### 성공한 영업 기회 {#opportunities-won}
+
+다음 [!UICONTROL 성공한 영업 기회] 위젯은 성공적으로 완료된 총 기회 수를 도넛 차트 내의 단일 지표로 표시합니다. 도넛 차트는 성공 또는 비성공 기회의 상대적 구성을 보여줍니다. 색상으로 구분된 키는 성공한 기회와 그렇지 않은 기회를 구분합니다. 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 대화 상자에 각 역할에 대한 개별 카운트가 표시됩니다.
+
+![Opportunities가 위젯에서 승리했습니다.](../images/account-profiles/opportunities-won.png)
 
 ### 예측 채점 분포 {#predictive-scoring-distribution}
 
@@ -94,6 +147,10 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 
 위젯 내의 드롭다운 메뉴에서 계정 채점 모델을 선택할 수 있습니다.
 
+>[!NOTE]
+>
+>글로벌 날짜 범위 필터는 예측 채점 통찰력에 적용되지 않습니다. 예측 채점 위젯은 드롭다운에서 선택한 계정 채점 모델을 기반으로 데이터를 분석합니다.
+
 ![예측 채점 배포 위젯.](../images/account-profiles/predictive-scoring-distribution.png)
 
 ### 예측 점수 가장 영향력 있는 요인 {#predictive-scoring-top-influential-factors}
@@ -104,8 +161,20 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 
 위젯 내의 드롭다운 메뉴에서 계정 채점 모델을 선택할 수 있습니다.
 
+>[!NOTE]
+>
+>글로벌 날짜 범위 필터는 예측 채점 통찰력에 적용되지 않습니다. 예측 채점 위젯은 드롭다운에서 선택한 계정 채점 모델을 기반으로 데이터를 분석합니다.
+
 ![예측 점수 최상위 영향력 있는 요소 위젯.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
+### 업종별 총 계정 수 {#total-accounts-by-industry}
+
+이 위젯은 단일 지표에 총 계정 수를 표시하고 도넛 차트를 사용하여 전체 수를 구성하는 산업에 대한 카운트의 비례 크기를 보여 줍니다. 키는 도넛 차트를 구성하는 다양한 산업에 대한 색상 코딩 정보를 제공합니다.
+
+커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 서로 다른 업계에 대한 개별 카운트가 대화 상자에 표시됩니다.
+
+![업계 위젯별 총 계정 수.](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ## 다음 단계
 
-이 문서를 따르면 이제 를 찾는 방법을 알 수 있습니다. [!UICONTROL 계정 프로필] 대시보드입니다. 사용 가능한 위젯에 표시되는 지표도 이해해야 합니다. Experience Platform UI에서 B2B 데이터의 일부로 계정 프로필을 사용하는 작업에 대한 자세한 내용은 다음을 참조하십시오. [계정 프로필 개요](../../rtcdp/accounts/account-profile-overview.md) Adobe Real-Time CDP, B2B 에디션용.
+이 문서를 따르면 이제 를 찾는 방법을 알 수 있습니다. [!UICONTROL 계정 프로필] 대시보드 및 사용 가능한 위젯에 표시되는 지표를 이해합니다. Experience Platform UI에서 B2B 데이터의 일부로 계정 프로필을 사용하는 작업에 대한 자세한 내용은 다음을 참조하십시오. [계정 프로필 개요](../../rtcdp/accounts/account-profile-overview.md) Adobe Real-Time CDP, B2B 에디션용.

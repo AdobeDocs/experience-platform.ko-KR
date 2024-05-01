@@ -1,7 +1,8 @@
 ---
 title: Insight SQL 보기
 description: 프로필, 대상자, 대상 및 맞춤화된 인사이트 뒤에 있는 SQL을 보고 쿼리 편집기를 통해 요청 시 쿼리를 실행합니다.
-source-git-commit: be90cf38970a54431f48799bf506fb0a20ec0166
+exl-id: fd728926-c113-4593-92b1-916a02d09d41
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -58,4 +59,4 @@ ht-degree: 0%
 
 ## 다음 단계
 
-이 문서를 읽고 나면 이제 표준 대시보드 또는 사용자 정의 대시보드 내의 통찰력을 위해 SQL에 액세스하는 방법을 이해할 수 있습니다. 아직 읽지 않았다면 다음을 읽는 것이 좋습니다. [Real-time Customer Data Platform 통찰력 데이터 모델 문서](./cdp-insights-data-model.md). 이 문서에는 마케팅 및 KPI 요구 사항에 맞게 Real-Time CDP 보고서의 SQL 템플릿을 사용자 지정하는 방법에 대한 통찰력이 포함되어 있습니다.
+이 문서를 읽고 나면 이제 표준 대시보드 또는 사용자 정의 대시보드 내의 통찰력을 위해 SQL에 액세스하는 방법을 이해할 수 있습니다. 아직 읽지 않았다면 다음을 읽는 것이 좋습니다. [Real-time Customer Data Platform 통찰력 데이터 모델 문서](./data-models/cdp-insights-data-model-b2c.md). 이 문서에는 마케팅 및 KPI 요구 사항에 맞게 Real-Time CDP 보고서의 SQL 템플릿을 사용자 지정하는 방법에 대한 통찰력이 포함되어 있습니다.

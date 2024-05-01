@@ -2,7 +2,7 @@
 title: 데이터 신호를 추적하여 고객 생애 가치 생성
 description: 이 안내서에서는 Data Distiller 및 Real-time Customer Data Platform과 함께 사용자 정의 대시보드를 사용하여 고객 생애 가치를 측정하고 시각화하는 방법에 대한 전체적인 데모를 제공합니다.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -56,7 +56,7 @@ CLV를 설정하는 첫 번째 단계는 사용자 작업에서 캡처한 데이
 * 차원 테이블을 생성하여 보고 통찰력 모델을 확장합니다.
 * 확장 가속 저장소 보고 통찰력 데이터 모델 쿼리
 
-다음 방법에 대해 알아보려면 Real-time Customer Data Platform 통찰력 데이터 모델 설명서 를 참조하십시오 [sql 쿼리 템플릿을 사용자 정의하여 마케팅 및 KPI(주요 성능 지표) 사용 사례에 대한 Real-Time CDP 보고서를 생성합니다.](../../dashboards/cdp-insights-data-model.md).
+다음 방법에 대해 알아보려면 Real-time Customer Data Platform 통찰력 데이터 모델 설명서 를 참조하십시오 [sql 쿼리 템플릿을 사용자 정의하여 마케팅 및 KPI(주요 성능 지표) 사용 사례에 대한 Real-Time CDP 보고서를 생성합니다.](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 정기적으로 사용자 지정 데이터 모델을 새로 고치도록 일정을 설정해야 합니다. 이렇게 하면 데이터가 필요에 따라 수집 파이프라인의 일부로 다시 들어오고 사용자 정의 대시보드가 채워집니다. 다음을 참조하십시오. [일정 쿼리 안내서](../ui/query-schedules.md#create-schedule) 을(를) 사용하여 일정을 설정하는 방법을 알아보십시오.
 

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;프로필;대상;대상;세그먼테이션;사용자 인터페이스;UI;사용자 지정;대상 대시보드;대시보드
-title: 대상자 대시보드 안내서
+title: 대상자 대시보드
 description: Adobe Experience Platform은 조직이 만든 대상자에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
+source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
 workflow-type: tm+mt
-source-wordcount: '3133'
+source-wordcount: '3132'
 ht-degree: 9%
 
 ---

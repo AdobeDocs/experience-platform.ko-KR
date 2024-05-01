@@ -2,7 +2,7 @@
 title: 동의 분석 및 추적
 description: 사용자 동의가 시간 경과에 따라 어떻게 트렌드되는지 추적하기 위해 동의 분석 대시보드를 작성하는 방법을 알아봅니다.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -143,7 +143,7 @@ Adobe은 프로필, 대상 및 대상 대시보드에서 자동으로 사용할 
 >이제 대시보드를 저장하기 전에 위젯의 크기를 원하는 크기와 위치로 조정하거나 이동할 수 있습니다.
 
 
-아래 이미지는 완성된 위젯이 표시되는 방식과 기타 잠재적인 사용자 정의 인사이트를 보여 줍니다. 생성할 수 있는 위젯 유형에 대한 자세한 내용은 다음을 참조하십시오. [데이터 모델 설명서](../cdp-insights-data-model.md).
+아래 이미지는 완성된 위젯이 표시되는 방식과 기타 잠재적인 사용자 정의 인사이트를 보여 줍니다. 생성할 수 있는 위젯 유형에 대한 자세한 내용은 다음을 참조하십시오. [데이터 모델 설명서](../data-models/cdp-insights-data-model-b2c.md).
 
 <!-- The diagram shows straight lines due to a lack of data, however in your environment the trends will reflect the actual changes over time. -->
 

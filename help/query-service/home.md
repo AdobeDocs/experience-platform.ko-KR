@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 쿼리 서비스 개요
 description: Experience Platform 내에서 쿼리 서비스의 역할에 대해 알아봅니다.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '860'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Adobe Experience Platform 세분화 서비스를 사용하여 고객을 유사�
 
 ## 사용자 정의 대시보드를 사용하여 인사이트 생성 {#custom-dashboards}
 
-Adobe Experience Platform을 사용하면 행동, CRM 및 판매 시점 데이터를 포함하여 저장된 모든 데이터 세트를 수집, 저장, 구조 및 가져올 수 있습니다. 사용 [!DNL Experience Platform's Query Service], 이러한 데이터 세트에 대해 쿼리하고 비즈니스에 대한 특정 질문에 답한 다음 효과적인 통찰력을 생성하기 시작할 수 있습니다. 맞춤형 위젯을 만들고, 추가하고, 편집하여 주요 지표를 시각화할 수 있는 사용자 정의 대시보드를 만들고 관리하는 방법을 알아봅니다 [사용자 정의 대시보드](../dashboards/user-defined-dashboards.md). 다음을 수행할 수 있습니다. [자체 Real-Time CDP 보고서 사용자 지정](../dashboards/cdp-insights-data-model.md) Real-time Customer Data Platform Insights 데이터 모델과 함께 SQL 쿼리를 사용하여 마케팅 및 KPI 활용 사례
+Adobe Experience Platform을 사용하면 행동, CRM 및 판매 시점 데이터를 포함하여 저장된 모든 데이터 세트를 수집, 저장, 구조 및 가져올 수 있습니다. 사용 [!DNL Experience Platform's Query Service], 이러한 데이터 세트에 대해 쿼리하고 비즈니스에 대한 특정 질문에 답한 다음 효과적인 통찰력을 생성하기 시작할 수 있습니다. 맞춤형 위젯을 만들고, 추가하고, 편집하여 주요 지표를 시각화할 수 있는 사용자 정의 대시보드를 만들고 관리하는 방법을 알아봅니다 [사용자 정의 대시보드](../dashboards/user-defined-dashboards.md). 다음을 수행할 수 있습니다. [자체 Real-Time CDP 보고서 사용자 지정](../dashboards/data-models/cdp-insights-data-model-b2c.md) Real-time Customer Data Platform Insights 데이터 모델과 함께 SQL 쿼리를 사용하여 마케팅 및 KPI 활용 사례
 
 ## 다음 단계 및 추가 리소스
 
