@@ -3,9 +3,9 @@ keywords: 대상;대상;대상 세부 사항 페이지;대상 세부 사항 페�
 title: 대상 세부 사항 보기
 description: 개별 대상에 대한 세부 정보 페이지에서는 대상 세부 정보에 대한 개요를 제공합니다. 대상 세부 사항에는 대상 이름, ID, 대상에 매핑된 대상자 및 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤이 포함됩니다.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
+source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1154'
 ht-degree: 1%
 
 ---
@@ -115,11 +115,15 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 
 ![활성화 데이터 보기 스트리밍 대상](../assets/ui/details-page/activation-data-streaming.png)
 
-<!-- ### Remove multiple audiences from activation flows {#bulk-remove}
+### [!BADGE 베타]{type=Informative} 활성화 플로우에서 여러 대상 제거 {#bulk-remove}
 
-To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
+>[!NOTE]
+>
+이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
 
-![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png) -->
+기존 활성화 플로우에서 여러 대상을 제거하려면 대상을 선택한 다음 을 선택합니다 **[!UICONTROL 대상자 제거]**.
+
+![대상자 제거 옵션이 강조 표시된 활성화 데이터 화면입니다.](../assets/ui/details-page/bulk-remove-audiences.png)
 
 ### [!BADGE 베타]{type=Informative} 여러 파일을 요청 시 배치 대상으로 내보냅니다. {#bulk-export}
 
