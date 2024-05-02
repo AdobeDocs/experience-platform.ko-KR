@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
+source-git-commit: d22f8b4a39cb76dab4c976d8ea883d5170ee34e4
 workflow-type: tm+mt
-source-wordcount: '1844'
+source-wordcount: '1889'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,8 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >다음을 참고하십시오. **전용** 기본 병합 정책을 사용하여 정의된 대상이 표시됩니다.
+>
+>또한 만 **게시됨** 세그먼트 빌더를 사용하여 만든 대상자를 사용할 수 있습니다. 대상자 구성을 사용하여 만든 대상자와 외부에서 생성된 대상자는 다음과 같습니다 **아님** 사용 가능.
 
 대상자 목록이 나타납니다. 포함할 대상을 선택한 다음, **[!UICONTROL 추가]** 대상 블록에 추가합니다.
 
@@ -101,6 +103,10 @@ ht-degree: 0%
 대상별로 제외하는 경우 을 선택하여 제외할 대상을 선택할 수 있습니다 **[!UICONTROL 대상 추가]**.
 
 ![다음 [!UICONTROL 대상자 추가] 버튼을 선택하여 제외할 대상을 선택할 수 있습니다.](../images/ui/audience-composition/add-excluded-audience.png)
+
+>[!IMPORTANT]
+>
+>전용 **게시됨** 세그먼트 빌더를 사용하여 만든 대상자를 사용할 수 있습니다. 대상자 구성을 사용하여 만든 대상자와 외부에서 생성된 대상자는 다음과 같습니다 **아님** 사용 가능.
 
 대상자 목록이 나타납니다. 선택 **[!UICONTROL 추가]** 제외할 대상을 제외 블록에 추가합니다.
 
