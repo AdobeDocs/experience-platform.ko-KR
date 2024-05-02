@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 유사 대상
 description: 유사 대상을 사용하여 Adobe Experience Platform에서 새로운 고부가가치 대상을 타깃팅하는 방법에 대해 알아봅니다.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: fe2bb709a7ee56323492fed381c447e6a79fd5f8
+source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2193'
 ht-degree: 9%
 
 ---
@@ -197,7 +197,7 @@ y축은 x축의 일치 값에 해당하는 유사성 백분율과 함께 예상 
 
 표준 &quot;C9&quot; 레이블은 데이터 과학에 사용해서는 안 되는 데이터에 레이블을 지정하는 데 사용할 수 있으며, 표준 &quot;데이터 과학 제한&quot; 정책을 활성화하여 적용할 수 있습니다. 중요한 레이블을 포함하여 다른 레이블로 데이터를 사용하는 경우 데이터 과학을 사용할 수 없도록 제한하는 추가 정책을 만들 수도 있습니다. 데이터 사용 정책 관리에 대한 자세한 내용은 [데이터 사용 정책 UI 안내서](../../data-governance/policies/user-guide.md). 데이터 사용 레이블 관리에 대한 자세한 내용은 [데이터 사용 레이블 UI 안내서](../../data-governance/labels/user-guide.md).
 
-기본적으로 유사 대상의 모델링 프로세스는 다음을 제외합니다 **임의** 조직에 대해 활성화된 개인정보 처리방침을 기반으로 한 필드, 데이터 세트 또는 대상입니다. 기본 대상에 계약 레이블이 없는 경우 모델링 프로세스에서 다음을 제외합니다. **임의** 조직에 대해 활성화된 개인정보 처리방침을 기반으로 한 필드, 데이터 세트 또는 대상입니다.
+기본적으로 기본 대상에 계약 레이블이 없는 경우 유사 대상의 모델링 프로세스는 를 제외합니다 **임의** 조직에 대해 활성화된 개인정보 처리방침을 기반으로 한 필드, 데이터 세트 또는 대상입니다.
 
 ## 다음 단계
 

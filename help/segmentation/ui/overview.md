@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 UI 안내서
 description: Adobe Experience Platform UI에서 대상 및 세그먼트 정의를 만들고 관리하는 방법을 알아봅니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
+source-git-commit: 795b76465c59fc375542b92cdd3deefce8c000ca
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4274'
 ht-degree: 3%
 
 ---
@@ -82,12 +82,8 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 | [!UICONTROL 액세스 레이블 적용] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 대상에 속하는 액세스 레이블을 관리합니다. 액세스 레이블에 대한 자세한 내용은 의 설명서를 참조하십시오. [레이블 관리](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL 게시] | 사용자 정의 업로드, 세분화 서비스 | 선택한 대상자를 게시합니다. 라이프사이클 상태 관리에 대한 자세한 내용은 [세분화 FAQ의 라이프사이클 상태 섹션](../faq.md#lifecycle-states). |
 | [!UICONTROL 비활성화] | 사용자 정의 업로드, 세분화 서비스 | 선택한 대상자를 비활성화합니다. 라이프사이클 상태 관리에 대한 자세한 내용은 [세분화 FAQ의 라이프사이클 상태 섹션](../faq.md#lifecycle-states). |
-| [!UICONTROL 삭제] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 선택한 대상자를 삭제합니다. |
+| [!UICONTROL 삭제] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 선택한 대상자를 삭제합니다. 다운스트림 대상에 사용되거나 다른 대상에 종속된 대상자 **할 수 없음** 삭제할 수 있습니다. 대상 삭제에 대한 자세한 내용은 [세그먼테이션 FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL 패키지에 추가] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 샌드박스 간에 대상자를 이동합니다. 이 기능에 대한 자세한 내용은 [샌드박스 도구 안내서](../../sandboxes/ui/sandbox-tooling.md). |
-
->[!NOTE]
->
-> 다음을 수행합니다. **아님** 대상 활성화에 사용되는 대상을 삭제할 수 있습니다.
 
 페이지 맨 위에는 일정에 모든 대상을 추가하고, 대상을 가져오고, 새 대상을 만들고, 업데이트 주기 분류를 보는 옵션이 있습니다.
 
@@ -356,6 +352,15 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 
 ![다음 [!UICONTROL 대상자 세부 정보] 페이지가 표시됩니다.](../images/ui/overview/import-audience-audience-details.png)
 
+ID를 제공하거나 병합 정책을 정의하거나 열 데이터 유형을 편집하는 등 외부에서 생성된 대상자에 대해 추가 세부 정보를 추가할 수도 있습니다.
+
+>[!NOTE]
+>
+>사용자 지정 외부 대상 ID를 사용하는 경우 다음 지침을 준수해야 합니다.
+>
+> - It **필수** 문자(a-z 또는 A-Z), 밑줄(_) 또는 달러 기호($)로 시작합니다.
+> - 모든 후속 문자는 영숫자(a-z, A-Z, 0-9), 밑줄(_) 또는 달러 기호($)일 수 있습니다.
+
 대상자 세부 정보를 입력한 후 다음을 선택합니다. **[!UICONTROL 다음]**.
 
 ![다음 [!UICONTROL 다음] 버튼이 [!UICONTROL 대상자 세부 정보] 페이지를 가리키도록 업데이트하는 중입니다.](../images/ui/overview/import-audience-filled-details.png)
@@ -397,6 +402,14 @@ UI 또는 API를 사용하여 예약된 평가에 대해 대상을 활성화할 
 ![조직의 대상자 구성에서 생성된 대상자 목록입니다.](../images/ui/overview/compositions.png)
 
 기본적으로 이 보기에는 이름, 상태, 만든 날짜, 만든 사람, 마지막 업데이트 날짜 및 마지막 업데이트 날짜 등 대상에 대한 정보가 나열됩니다.
+
+각 대상 옆에 줄임표 아이콘이 있습니다. 이 옵션을 선택하면 대상자에 대해 사용 가능한 빠른 작업 목록이 표시됩니다.
+
+| 작업 | 설명 |
+| ------ | ----------- |
+| 복제 | 선택한 대상자를 복사합니다. |
+| 액세스 관리 | 대상에 속하는 액세스 레이블을 관리합니다. 액세스 레이블에 대한 자세한 내용은 의 설명서를 참조하십시오. [레이블 관리](../../access-control/abac/ui/labels.md). |
+| 삭제 | 선택한 대상자를 삭제합니다. 다운스트림 대상에 사용되거나 다른 대상에 종속된 대상자 **할 수 없음** 삭제할 수 있습니다. 대상 삭제에 대한 자세한 내용은 [세그먼테이션 FAQ](../faq.md#lifecycle-states). |
 
 다음을 선택할 수 있습니다. ![표 맞춤화](../images/ui/overview/customize-table.png) 표시되는 필드를 변경하는 아이콘입니다.
 
