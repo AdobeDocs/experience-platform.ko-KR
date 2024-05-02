@@ -2,9 +2,9 @@
 title: 계정 프로필 대시보드
 description: Adobe Experience Platform은 조직의 B2B 계정 프로필에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1800'
 ht-degree: 0%
 
 ---
@@ -67,16 +67,20 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 
 Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 사용할 수 있는 표준 위젯을 제공합니다.
 
+>[!IMPORTANT]
+>
+>날짜 필터를 제공하지 않는 경우 인사이트의 기본 동작은 전년도에서 오늘까지 추가된 데이터를 분석합니다.
+
 사용 가능한 각 표준 위젯에 대해 자세히 알아보려면 다음 목록에서 위젯의 이름을 선택합니다.
 
 * [계정 프로필 추가됨](#account-profiles-added)
-* [업종별 계정](#accounts-by-industry)
-* [유형별 계정](#accounts-by-type)
+* [업종별 신규 계정](#accounts-by-industry)
+* [유형별 새 계정](#accounts-by-type)
 * [영업 기회 추가됨](#opportunities-added)
-* [개인 역할별 기회](#opportunities-by-person-role)
-* [매출액별 영업 기회](#opportunities-by-revenue)
-* [상태 및 단계별 영업 기회](#opportunities-by-status-&-stage)
-* [성공한 영업 기회](#opportunities-won)
+* [개인 역할별 새로운 기회](#opportunities-by-person-role)
+* [매출액별 새로운 기회](#opportunities-by-revenue)
+* [상태 및 단계별 새로운 기회](#opportunities-by-status-&-stage)
+* [획득한 새로운 영업 기회](#opportunities-won)
 * [예측 채점 분포](#predictive-scoring-distribution)
 * [예측 점수 가장 영향력 있는 요인](#predictive-scoring-top-influential-factors)
 * [업종별 총 계정 수](#total-accounts-by-industry)
@@ -87,17 +91,17 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 
 ![계정 프로필 추가 위젯입니다.](../images/account-profiles/account-profiles-added.png)
 
-### 업종별 계정 {#accounts-by-industry}
+### 업종별 신규 계정 {#accounts-by-industry}
 
-다음 [!UICONTROL 업종별 계정] 위젯은 도넛 차트 내의 단일 지표에 있는 총 계정 수를 표시합니다. 도넛 차트는 이 합계를 구성하는 다양한 산업의 상대적 구성을 보여 줍니다. 색상으로 구분된 키는 포함된 모든 산업의 분석을 제공합니다. 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 각 업계에 대한 개별 카운트가 대화 상자에 표시됩니다.
+다음 [!UICONTROL 업종별 신규 계정] 위젯은 도넛 차트 내의 단일 지표에 있는 총 계정 수를 표시합니다. 도넛 차트는 이 합계를 구성하는 다양한 산업의 상대적 구성을 보여 줍니다. 색상으로 구분된 키는 포함된 모든 산업의 분석을 제공합니다. 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 각 업계에 대한 개별 카운트가 대화 상자에 표시됩니다.
 
-![업종별 계정 위젯.](../images/account-profiles/accounts-by-industry.png)
+![업종별 새 계정 위젯.](../images/account-profiles/new-accounts-by-industry.png)
 
-### 유형별 계정 {#accounts-by-type}
+### 유형별 새 계정 {#accounts-by-type}
 
-다음 [!UICONTROL 유형별 계정] 위젯은 도넛 차트 내의 단일 지표에 있는 총 계정 수를 표시합니다. 도넛 차트는 이 합계를 구성하는 다양한 계정 유형의 상대적 구성을 보여 줍니다. 색상으로 구분된 키는 포함된 모든 계정 유형에 대한 분류를 제공합니다. 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 각 계정 유형에 대한 개별 카운트가 대화 상자에 표시됩니다.
+다음 [!UICONTROL 유형별 새 계정] 위젯은 도넛 차트 내의 단일 지표에 있는 총 계정 수를 표시합니다. 도넛 차트는 이 합계를 구성하는 다양한 계정 유형의 상대적 구성을 보여 줍니다. 색상으로 구분된 키는 포함된 모든 계정 유형에 대한 분류를 제공합니다. 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 각 계정 유형에 대한 개별 카운트가 대화 상자에 표시됩니다.
 
-![유형별 계정 위젯.](../images/account-profiles/accounts-by-type.png)
+![유형별 새 계정 위젯.](../images/account-profiles/new-accounts-by-type.png)
 
 ### 영업 기회 추가됨 {#opportunities-added}
 
@@ -107,35 +111,35 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 
 ![Opportunities 추가 위젯.](../images/account-profiles/opportunities-added.png)
 
-### 개인 역할별 기회 {#opportunities-by-person-role}
+### 개인 역할별 새로운 기회 {#opportunities-by-person-role}
 
-다음 [!UICONTROL 개인 역할별 기회] 위젯은 도넛 차트 내의 단일 지표에 총 기회 수를 표시합니다. 도넛 차트는 이 총 기회 수를 구성하는 역할의 상대적 구성을 보여 줍니다. 색상으로 구분된 키는 포함된 모든 역할에 대한 분류를 제공합니다. 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 대화 상자에 각 역할에 대한 개별 카운트가 표시됩니다.
+다음 [!UICONTROL 개인 역할별 새로운 기회] 위젯은 도넛 차트 내의 단일 지표에 총 기회 수를 표시합니다. 도넛 차트는 이 총 기회 수를 구성하는 역할의 상대적 구성을 보여 줍니다. 색상으로 구분된 키는 포함된 모든 역할에 대한 분류를 제공합니다. 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 대화 상자에 각 역할에 대한 개별 카운트가 표시됩니다.
 
 >[!NOTE]
 >
 >다음 [!UICONTROL 데이터를 찾을 수 없음] 또는 [!UICONTROL 로드할 수 없음] 스키마에서 &#39;Opportunity-Person&#39; 브리지 테이블을 사용하지 않으면 오류가 발생합니다. 인사이트에 이러한 오류 중 하나가 표시되면 결합 스키마를 확인하고 &#39;Opportunity-Person&#39; 필드 그룹이 데이터를 수집하는지 확인하십시오.
 
-![개인 역할별 기회 위젯.](../images/account-profiles/opportunities-by-person-role.png)
+![개인 역할별 새로운 기회 위젯.](../images/account-profiles/new-opportunities-by-person-role.png)
 
-### 매출액별 영업 기회 {#opportunities-by-revenue}
+### 매출액별 새로운 기회 {#opportunities-by-revenue}
 
-다음 [!UICONTROL 매출액별 영업 기회] 위젯은 막대 차트를 사용하여 기회에 의해 생성된 총 예상 매출액을 보여줍니다. 위젯은 최대 6개의 기회를 지원합니다.
+다음 [!UICONTROL 매출액별 새로운 기회] 위젯은 막대 차트를 사용하여 기회에 의해 생성된 총 예상 매출액을 보여줍니다. 위젯은 최대 6개의 기회를 지원합니다.
 
 영업 기회에 대한 특정 매출 합계가 포함된 대화 상자를 보려면 커서를 사용하여 개별 막대 위로 마우스를 가져갑니다.
 
-![매출액별 Opportunity 위젯 을 참조하십시오.](../images/account-profiles/opportunities-by-revenue.png)
+![매출 위젯별 새로운 기회.](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### 상태 및 단계별 영업 기회 {#opportunities-by-status-&-stage}
+### 상태 및 단계별 새로운 기회 {#opportunities-by-status-&-stage}
 
 이 위젯은 막대 차트를 사용하여 마케팅/판매 단계의 모든 단계에서 열리거나 종료되는 기회의 수를 보여 줍니다. 위젯은 색상을 사용하여 기회의 단계를 구분합니다. 색상으로 구분된 키는 영업 기회에 사용할 수 있는 단계를 나타냅니다.
 
-![상태 및 단계 위젯별 Opportunity](../images/account-profiles/opportunities-by-status-&-stage.png)
+![상태 및 단계 위젯별 새로운 기회.](../images/account-profiles/new-opportunities-by-status-&-stage.png)
 
-### 성공한 영업 기회 {#opportunities-won}
+### 획득한 새로운 영업 기회 {#opportunities-won}
 
-다음 [!UICONTROL 성공한 영업 기회] 위젯은 성공적으로 완료된 총 기회 수를 도넛 차트 내의 단일 지표로 표시합니다. 도넛 차트는 성공 또는 비성공 기회의 상대적 구성을 보여줍니다. 색상으로 구분된 키는 성공한 기회와 그렇지 않은 기회를 구분합니다. 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 대화 상자에 각 역할에 대한 개별 카운트가 표시됩니다.
+다음 [!UICONTROL 획득한 새로운 영업 기회] 위젯은 성공적으로 완료된 총 기회 수를 도넛 차트 내의 단일 지표로 표시합니다. 도넛 차트는 성공 또는 비성공 기회의 상대적 구성을 보여줍니다. 색상으로 구분된 키는 성공한 기회와 그렇지 않은 기회를 구분합니다. 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 대화 상자에 각 역할에 대한 개별 카운트가 표시됩니다.
 
-![Opportunities가 위젯에서 승리했습니다.](../images/account-profiles/opportunities-won.png)
+![새로운 기회가 위젯을 이겼습니다.](../images/account-profiles/new-opportunities-won.png)
 
 ### 예측 채점 분포 {#predictive-scoring-distribution}
 
@@ -170,6 +174,10 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 ### 업종별 총 계정 수 {#total-accounts-by-industry}
 
 이 위젯은 단일 지표에 총 계정 수를 표시하고 도넛 차트를 사용하여 전체 수를 구성하는 산업에 대한 카운트의 비례 크기를 보여 줍니다. 키는 도넛 차트를 구성하는 다양한 산업에 대한 색상 코딩 정보를 제공합니다.
+
+>[!NOTE]
+>
+>이 인사이트가 표시하는 정보는 사용자가 지정한 날짜 범위에 따라 다릅니다. 날짜 필터를 제공하지 않는 경우 인사이트의 기본 동작은 전년도에서 오늘까지 추가된 데이터를 분석합니다.
 
 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 서로 다른 업계에 대한 개별 카운트가 대화 상자에 표시됩니다.
 

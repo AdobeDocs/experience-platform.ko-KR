@@ -3,9 +3,10 @@ title: 계정 프로필 통찰력
 description: 계정 프로필 인사이트를 제공하는 SQL을 살펴보고 이러한 쿼리를 사용하여 고객 및 고객 경험을 추가로 살펴보는 사용자 지정 인사이트를 생성하십시오.
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ ORDER BY date_key limit 5000;
 
 +++
 
-## 업종별 계정 {#accounts-by-industry}
+## 업종별 신규 계정 {#accounts-by-industry}
 
 이 통찰력에 의해 답변된 질문:
 
@@ -82,7 +83,7 @@ ORDER BY total_accounts DESC limit 5000;
 
 +++
 
-## 유형별 계정 {#accounts-by-type}
+## 유형별 새 계정 {#accounts-by-type}
 
 이 통찰력에 의해 답변된 질문:
 
@@ -128,7 +129,7 @@ LIMIT  5000;
 
 +++
 
-## 개인 역할별 기회 {#opportunities-by-person-role}
+## 개인 역할별 새로운 기회 {#opportunities-by-person-role}
 
 이 통찰력에 의해 답변된 질문:
 
@@ -150,7 +151,7 @@ LIMIT  5000;
 
 +++
 
-## 매출액별 영업 기회 {#opportunities-by-revenue}
+## 매출액별 새로운 기회 {#opportunities-by-revenue}
 
 이 통찰력에 의해 답변된 질문:
 
@@ -190,7 +191,7 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 +++
 
-## 상태 및 단계별 영업 기회 {#opportunities-by-status-and-stage}
+## 상태 및 단계별 새로운 기회 {#opportunities-by-status-and-stage}
 
 이 통찰력에 의해 답변된 질문:
 
@@ -223,7 +224,7 @@ FROM   opportunities_by_isclosed limit 5000;
 
 +++
 
-## 성공한 영업 기회 {#opportunities-won}
+## 획득한 새로운 영업 기회 {#opportunities-won}
 
 이 통찰력에 의해 답변된 질문:
 

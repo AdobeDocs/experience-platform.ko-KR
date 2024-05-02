@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2024년 4월
 description: Adobe Experience Platform에 대한 2024년 4월 릴리스 정보입니다.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1843'
-ht-degree: 16%
+source-wordcount: '1897'
+ht-degree: 17%
 
 ---
 
@@ -31,15 +31,15 @@ Experience Platform의 기존 기능 업데이트:
 
 ## 대시보드 {#dashboards}
 
-Adobe Experience Platform은 일별 스냅샷 중에 캡처한 대로 조직 데이터에 대한 중요한 통찰력을 볼 수 있는 여러 대시보드를 제공합니다.
+Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대한 중요한 인사이트를 볼 수 있는 여러 대시보드를 제공합니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| Real-time Customer Data Platform B2B 인사이트 | 계정 및 기회에 대해 사전 구성된 Real-Time CDP B2B 데이터 인사이트를 탐색하여 데이터를 이해하고 비즈니스 의사 결정을 알리는 데 도움이 됩니다. 또한 Real-Time CDP B2B 데이터 모델을 사용하여 나만의 통찰력을 구축하여 데이터를 시각화 및 탐색하고 대시보드에 사용자 지정 시각화를 저장할 수 있습니다. |
+| Real-time Customer Data Platform B2B 인사이트 | 사전 구성된 탐색 [계정 및 기회에 대한 Real-Time CDP B2B 데이터 인사이트](../../dashboards/insights/account-profiles.md) 데이터를 이해하고 비즈니스 결정을 알리는 데 도움이 됩니다. 다음을 수행할 수도 있습니다. [Real-Time CDP B2B 데이터 모델을 사용하여 나만의 통찰력 구축](../../dashboards/data-models/cdp-insights-data-model-b2c.md) 을 사용하여 데이터를 시각화하고 탐색할 수 있으며, 대시보드에 사용자 지정 시각화를 저장할 수 있습니다. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 액세스 권한을 부여하고 사용자 정의 위젯을 만드는 방법을 포함해 대시보드에 대한 자세한 내용은 [대시보드 개요](../../dashboards/home.md)를 읽어 보십시오.
 
@@ -117,14 +117,14 @@ Experience Platform UI의 여정 대시보드를 사용하여 소스, ID 서비�
 
 | 기능 | 설명 |
 | --- | --- |
-| 쿼리 격리 | 장애가 발생한 쿼리 실행을 자동으로 격리하여 중단을 방지하고 일관된 성능을 유지합니다. |
-| 쿼리 취소 | 쿼리 실행을 제어하고 오래 실행되는 쿼리를 취소하여 생산성을 향상시킵니다. |
-| 예약된 쿼리 경고 | 사전 알림을 통해 정보를 지속적으로 확인하고 쿼리를 스케줄링하여 효율적이고 시기 적절한 작업 관리를 보장합니다. 쿼리를 만들거나 기존 예약된 쿼리에 대한 인라인 작업을 사용하여 경고를 구독할 수 있습니다. |
-| 향상된 예약된 쿼리 탐색 | 쿼리 템플릿과 예약된 실행 사이를 쉽게 탐색하여 생산성을 높일 수 있습니다. |
-| 확장 쿼리 출력 | 콘솔 내에서 최대 500개의 쿼리 결과 행에 액세스하여 데이터를 보다 심층적으로 분석할 수 있습니다. |
-| 이전 쿼리 편집기 종료 | 2024년 4월 30일부터 고급 쿼리 편집기가 모든 사용자의 기본 편집기가 되었습니다. 레거시 편집기는 2024년 5월 30일에 사용이 중단되며 더 이상 사용할 수 없습니다. |
+| 쿼리 격리 | 장애가 발생한 쿼리 실행을 자동으로 격리하여 중단을 방지하고 일관된 성능을 유지합니다. 다음을 참조하십시오. [쿼리 격리](../../query-service/ui/query-schedules.md#quarantine) 설명서 를 참조하십시오. |
+| 쿼리 취소 | 쿼리 실행을 제어하고 오래 실행되는 쿼리를 취소하여 생산성을 향상시킵니다.다음을 참조하십시오. [쿼리 취소](../../query-service/ui/user-guide.md#cancel-query) 설명서 를 참조하십시오. |
+| 예약된 쿼리 경고 | 사전 알림을 통해 정보를 지속적으로 확인하고 쿼리를 스케줄링하여 효율적이고 시기 적절한 작업 관리를 보장합니다. 다음을 수행할 수 있습니다. [쿼리를 생성할 때 경고 구독](../../query-service/ui/query-schedules.md#alerts-for-query-status) 또는 기존 예약된 쿼리에 대해 인라인 작업을 사용하는 경우입니다. 다음을 참조하십시오. [인라인 작업으로 경고 구독](../../query-service/ui/monitor-queries.md#alert-subscription) 설명서 를 참조하십시오. |
+| 향상된 예약된 쿼리 탐색 | 쿼리 템플릿과 예약된 실행 사이를 쉽게 탐색하여 생산성을 높일 수 있습니다. 다음에서 설명서를 참조하십시오. [예약된 쿼리 실행 보기](../../query-service/ui/query-schedules.md#scheduled-query-runs) 추가 정보. |
+| 확장 쿼리 출력 | 콘솔 내에서 최대 500개의 쿼리 결과 행에 액세스하여 데이터를 보다 심층적으로 분석할 수 있습니다.다음을 참조하십시오. [결과 카운트](../../query-service/ui/user-guide.md#result-count) 설명서 를 참조하십시오. |
+| 이전 쿼리 편집기 종료 | 2024년 4월 30일부터 고급 쿼리 편집기가 모든 사용자의 기본 편집기가 되었습니다. 레거시 편집기는 2024년 5월 30일에 사용이 중단되며 더 이상 사용할 수 없습니다. 다음을 참조하십시오. [쿼리 편집기 사용 안내서](../../query-service/ui/user-guide.md) 추가 정보. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 쿼리 서비스에 대한 자세한 내용은 [쿼리 서비스 개요](../../query-service/home.md)를 참조하십시오.
 

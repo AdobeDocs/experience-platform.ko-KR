@@ -2,9 +2,9 @@
 title: 쿼리 일정
 description: Adobe Experience Platform UI를 통해 예약된 쿼리 실행을 자동화하고, 쿼리 일정을 삭제 또는 비활성화하고, 사용 가능한 예약 옵션을 활용하는 방법을 알아봅니다.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 8d307b9c1c80c7b1672f2bf6b7acb4b85c4dae1b
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1572'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->이미 생성, 저장 및 실행된 쿼리에만 일정을 추가할 수 있습니다.
+>이미 생성되어 저장된 질의에만 스케줄을 추가할 수 있습니다.
 
 예약된 쿼리는 모두 의 목록에 추가됩니다. [!UICONTROL 예약된 쿼리] 탭. 해당 작업 영역에서 UI를 통해 예약된 모든 쿼리 작업의 상태를 모니터링할 수 있습니다. 다음에서 [!UICONTROL 예약된 쿼리] 탭에서는 쿼리 실행에 대한 중요한 정보를 찾고 경고를 구독할 수 있습니다. 실행 실패 시 사용 가능한 정보에는 상태, 일정 세부 정보 및 오류 메시지/코드가 포함됩니다. 다음을 참조하십시오. [예약된 쿼리 문서 모니터링](./monitor-queries.md) 추가 정보.
 

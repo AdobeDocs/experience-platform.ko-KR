@@ -3,9 +3,10 @@ title: Real-time Customer Data Platform Insights 데이터 모델 B2B 에디션
 description: Real-time Customer Data Platform Insights 데이터 모델(B2B 에디션)과 함께 SQL 쿼리를 사용하여 마케팅 및 KPI 사용 사례에 맞게 고유한 Real-Time CDP 보고서를 사용자 지정하는 방법을 알아봅니다.
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: 52f67037756af97bac97908d4736a3cbafce6844
+exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -49,15 +50,15 @@ Real-Time CDP B2B 보고에서는 계정 프로필 데이터와 계정 및 기�
 
 ![계정 프로필 모델에 대한 엔터티 관계 다이어그램입니다.](../images/data-models/account-profile-model.png)
 
-#### 업종별 계정 사용 사례 {#accounts-by-industry}
+#### 업종별 새 계정 사용 사례 {#accounts-by-industry}
 
-에 사용되는 논리 [!UICONTROL 업종별 계정] insight는 계정 프로필 수와 상대적인 크기에 따라 상위 5개 업종을 반환합니다. 다음을 참조하십시오. [[!UICONTROL 업종별 계정] 위젯 설명서](../guides/account-profiles.md#accounts-by-industry) 추가 정보.
+에 사용되는 논리 [!UICONTROL 업종별 신규 계정] insight는 계정 프로필 수와 상대적인 크기에 따라 상위 5개 업종을 반환합니다. 다음을 참조하십시오. [[!UICONTROL 업종별 계정] 위젯 설명서](../guides/account-profiles.md#accounts-by-industry) 추가 정보.
 
 >[!TIP]
 >
 >이 SQL 쿼리를 사용자 지정하여 상위 5개 산업보다 많거나 적은 수의 산업을 반환할 수 있습니다.
 
-다음을 생성하는 SQL [!UICONTROL 업종별 계정] 인사이트는 아래의 축소 가능한 섹션에 표시됩니다.
+다음을 생성하는 SQL [!UICONTROL 업종별 신규 계정] 인사이트는 아래의 축소 가능한 섹션에 표시됩니다.
 
 +++SQL 쿼리
 
@@ -94,11 +95,11 @@ LIMIT 5000;
 
 +++
 
-#### 유형별 계정 사용 사례 {#accounts-by-type}
+#### 유형별 새 계정 사용 사례 {#accounts-by-type}
 
-에 사용되는 논리 [!UICONTROL 유형별 계정] insight는 계정 유형별 숫자 분류를 반환합니다. 이러한 통찰력은 리소스 할당 또는 마케팅 전략을 포함하여 비즈니스 전략 및 운영을 안내하는 데 도움이 될 수 있습니다. 다음을 참조하십시오. [[!UICONTROL 유형별 계정] 위젯 설명서](../guides/account-profiles.md#accounts-by-type) 추가 정보.
+에 사용되는 논리 [!UICONTROL 유형별 새 계정] insight는 계정 유형별 숫자 분류를 반환합니다. 이러한 통찰력은 리소스 할당 또는 마케팅 전략을 포함하여 비즈니스 전략 및 운영을 안내하는 데 도움이 될 수 있습니다. 다음을 참조하십시오. [[!UICONTROL 유형별 새 계정] 위젯 설명서](../guides/account-profiles.md#accounts-by-type) 추가 정보.
 
-다음을 생성하는 SQL [!UICONTROL 유형별 계정] 인사이트는 아래의 축소 가능한 섹션에 표시됩니다.
+다음을 생성하는 SQL [!UICONTROL 유형별 새 계정] 인사이트는 아래의 축소 가능한 섹션에 표시됩니다.
 
 +++SQL 쿼리
 

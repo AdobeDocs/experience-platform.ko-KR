@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 자주 묻는 질문
 description: 이 문서에는 쿼리 서비스와 관련된 일반적인 질문과 대답이 포함되어 있습니다. 주제에는 데이터 내보내기, 서드파티 도구 및 PSQL 오류가 포함됩니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '4450'
-ht-degree: 1%
+source-wordcount: '4425'
+ht-degree: 0%
 
 ---
 
@@ -125,7 +125,7 @@ SELECT * FROM customers LIMIT 0;
 +++답변
 [Adobe 고객 지원 전화 번호의 전체 목록](https://helpx.adobe.com/ca/contact/phone.html) 은 Adobe 도움말 페이지에서 사용할 수 있습니다. 또는 다음 단계를 완료하여 온라인으로 도움말을 찾을 수 있습니다.
 
-- 다음으로 이동 [https://www.adobe.com/](https://www.adobe.com/) 을 클릭합니다.
+- 다음으로 이동 [https://www.adobe.com/](https://www.adobe.com/kr) 을 클릭합니다.
 - 위쪽 탐색 막대의 오른쪽에서 을 선택합니다. **[!UICONTROL 로그인]**.
 
 ![로그인 이 강조 표시된 Adobe 웹 사이트입니다.](./images/troubleshooting/adobe-sign-in.png)
@@ -277,7 +277,7 @@ SELECT count(1) FROM myTableName
 
 또한 수행 방법에 대한 지침은 설명서를 확인해야 합니다 [UI의 예약된 쿼리](./ui/user-guide.md#scheduled-queries) 및 [api](./api/scheduled-queries.md).
 
-을(를) 사용할 때 주의하십시오. [!DNL Query Editor] 이미 생성, 저장 및 실행된 쿼리에만 일정을 추가할 수 있습니다. 이는 에는 적용되지 않습니다. [!DNL Query Service] API.
+을(를) 사용할 때 주의하십시오. [!DNL Query Editor] 이미 생성되어 저장된 질의에만 스케줄을 추가할 수 있습니다. 이는 에는 적용되지 않습니다. [!DNL Query Service] API.
 +++
 
 ### &quot;세션 제한에 도달했습니다.&quot; 오류는 무엇을 의미합니까?
@@ -337,7 +337,7 @@ Query Service는 특정 타임스탬프를 UTC 형식으로 변환하는 기본 
 | 매개변수 | 설명 |
 |-----------|---------------|
 | 타임스탬프 | 타임스탬프는 UTC 형식이나 간단한 형식으로 작성할 수 있습니다 `{year-month-day}` 포맷. 시간을 제공하지 않은 경우 기본값은 지정된 날 아침의 자정입니다. |
-| 표준 시간대 | 시간대는 `{continent/city})` 포맷. 에 있는 인식된 시간대 코드 중 하나여야 합니다. [공개 도메인 TZ 데이터베이스](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+| 시간대 | 시간대는 `{continent/city})` 포맷. 에 있는 인식된 시간대 코드 중 하나여야 합니다. [공개 도메인 TZ 데이터베이스](https://data.iana.org/time-zones/tz-link.html#tzdb). |
 
 #### UTC 타임스탬프로 변환
 

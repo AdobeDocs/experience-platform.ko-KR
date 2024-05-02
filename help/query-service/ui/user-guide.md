@@ -4,14 +4,18 @@ solution: Experience Platform
 title: 쿼리 편집기 UI 안내서
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서, Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 이를 통해 개발 목적으로 대화형 쿼리를 실행하고 비대화형 쿼리를 실행하여 Experience Platform의 데이터 세트를 채울 수 있습니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '2794'
+source-wordcount: '2825'
 ht-degree: 2%
 
 ---
 
 # [!DNL Query Editor] UI 안내서
+
+>[!NOTE]
+>
+>2024년 4월 30일 현재 [향상된 쿼리 편집기](#enhanced-editor-toggle) 가 모든 사용자의 기본 편집기가 되었습니다. 레거시 편집기는 2024년 5월 30일에 사용이 중단되며 더 이상 사용할 수 없습니다.
 
 [!DNL Query Editor] 는 Adobe Experience Platform에서 제공하는 대화형 도구입니다 [!DNL Query Service]를 사용하여 내에서 고객 경험 데이터에 대한 쿼리를 작성하고, 유효성을 확인하고, 실행할 수 있습니다 [!DNL Experience Platform] 사용자 인터페이스. [!DNL Query Editor] 는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 이를 통해 개발 목적으로 대화형 쿼리를 실행하고 데이터 세트를 채울 수 있습니다. [!DNL Experience Platform].
 
@@ -229,7 +233,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 템플릿으로 저장된 쿼리는 쿼리 편집기에서 예약할 수 있습니다. 쿼리 예약을 사용하면 사용자 지정 케이던스에서 쿼리 실행을 자동화할 수 있습니다. 빈도, 날짜 및 시간에 따라 쿼리를 예약할 수 있으며 필요한 경우 결과에 대한 출력 데이터 세트를 선택할 수도 있습니다. UI를 통해 쿼리 일정을 비활성화하거나 삭제할 수도 있습니다.
 
-예약은 쿼리 편집기에서 설정됩니다. 쿼리 편집기를 사용하는 경우 이미 생성, 저장 및 실행된 쿼리에 대한 예약만 추가할 수 있습니다. 동일한 제한이 에는 적용되지 않습니다. [!DNL Query Service] API.
+예약은 쿼리 편집기에서 설정됩니다. 쿼리 편집기를 사용하는 경우 이미 생성 및 저장된 쿼리에만 일정을 추가할 수 있습니다. 동일한 제한이 에는 적용되지 않습니다. [!DNL Query Service] API.
 
 >[!NOTE]
 >
