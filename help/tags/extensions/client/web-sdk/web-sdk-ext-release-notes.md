@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: ea3df4f05850547c75358fb15bf7a1e6a1d19dbf
 workflow-type: tm+mt
-source-wordcount: '1983'
+source-wordcount: '2024'
 ht-degree: 26%
 
 ---
@@ -13,6 +13,15 @@ ht-degree: 26%
 # Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md).
+
+## 버전 2.22.0 - 2024년 5월 3일
+
+**새로운 기능**
+
+* 변수 데이터 요소를 확장하여 데이터 개체를 지원합니다.
+* 이제 변수 업데이트 작업은 통과 Adobe Analytics, Adobe Audience Manager 및 Adobe Target 데이터 수정을 지원합니다.
+
+Adobe Experience Platform Web SDK 버전 2.19.2를 포함합니다.
 
 ## 버전 2.21.4 - 2024년 1월 10일
 
@@ -176,7 +185,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.8.0을 포함합�
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.7.0을 포함합니다.
 
-* Edge Network의 추가 정보는 이벤트 전송 완료 이벤트에서 사용할 수 있습니다. `inferences` 및 `destinations`. 이러한 기능은 현재 베타의 일부로 출시되고 있으므로 이러한 속성의 형식이 변경될 수 있습니다.
+* Edge Network의 추가 정보는 이벤트 전송 완료 이벤트에서 확인할 수 있습니다. `inferences` 및 `destinations`. 이러한 기능은 현재 베타의 일부로 출시되고 있으므로 이러한 속성의 형식이 변경될 수 있습니다.
 
 ## 버전 2.7.3 - 2021년 9월 7일
 
