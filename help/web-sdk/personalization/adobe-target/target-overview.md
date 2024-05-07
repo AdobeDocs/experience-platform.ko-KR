@@ -2,9 +2,9 @@
 title: 개인화에 Web SDK와 함께 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform Web SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: a34204eb58ed935831d26caf062ebb486039669f
+source-git-commit: 69406293dce5fdfc832adff801f1991626dafae0
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1345'
 ht-degree: 4%
 
 ---
@@ -183,7 +183,7 @@ alloy("sendEvent",
 | `xdm` | 오브젝트 | 웹 SDK에 경험 이벤트로 전송되는 XDM 형식의 데이터 |
 | `data` | 오브젝트 | 에 전송된 임의 키/값 쌍 [!DNL Target] target 클래스 아래에 있는 솔루션. |
 
-일반 [!DNL Web SDK] 이 명령을 사용하는 코드는 다음과 같습니다.
+<!--Typical [!DNL Web SDK] code using this command looks like the following:-->
 
 **콘텐츠가 최종 사용자에게 표시될 때까지 프로필 또는 엔티티 매개 변수 저장 지연**
 
