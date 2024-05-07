@@ -2,10 +2,10 @@
 title: 데이터스트림 재정의 구성
 description: 데이터스트림 UI에서 데이터스트림 재정의를 구성하고 Web SDK를 통해 활성화하는 방법에 대해 알아봅니다.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 90493d179e620604337bda96cb3b7f5401ca4a81
+source-git-commit: b9b6320b15ee93807ebf8b48f31be7386a6f4a19
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 61%
+source-wordcount: '1067'
+ht-degree: 68%
 
 ---
 
@@ -18,10 +18,10 @@ ht-degree: 61%
 데이터 스트림 구성 재정의는 2단계 프로세스입니다.
 
 1. 먼저, 데이터 스트림 구성 재정의를 [데이터스트림 구성 페이지](configure.md).
-2. 그런 다음 다음 중 한 가지 방법으로 Edge Network에 재정의를 전송해야 합니다.
-   * 다음을 통해 `sendEvent` 또는 `configure` [웹 SDK](#send-overrides-web-sdk) 명령입니다.
+2. 그런 다음 다음 방법 중 하나로 Edge Network에 재정의를 전송해야 합니다.
+   * 다음을 통해 `sendEvent` 또는 `configure` [웹 SDK](#send-overrides) 명령입니다.
    * Web SDK를 통해 [태그 확장](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-   * Mobile SDK를 통해 [sendEvent](#send-overrides-mobile-sdk) 명령입니다.
+   * Mobile SDK를 통해 [sendEvent](#send-overrides) API 또는 를 사용하여 [규칙](#send-overrides).
 
 이 문서에서는 지원되는 모든 재정의에 대한 전반적인 데이터스트림 구성 재정의 프로세스를 설명합니다.
 
@@ -114,157 +114,12 @@ Experience Platform 이벤트 데이터 세트에 대한 데이터스트림 재�
 
 이제 ID 동기화 컨테이너 재정의를 구성해야 합니다. [Web SDK를 통해 재정의를 Edge Network로 전송](#send-overrides)할 수 있습니다.
 
-## Web SDK를 통해 Edge Network로 재정의 전송 {#send-overrides-web-sdk}
+## Web SDK를 통해 Edge Network로 재정의 전송 {#send-overrides}
 
-데이터 수집 UI에서 데이터스트림 재정의를 구성한 후 웹 SDK 또는 Mobile SDK를 통해 Edge Network로 재정의를 전송할 수 있습니다.
+데이터 수집 UI에서 데이터스트림 재정의를 구성한 후 웹 SDK 또는 Mobile SDK를 통해 Edge Network에게 재정의를 전송할 수 있습니다.
 
 * **웹 SDK**: 를 참조하십시오 [데이터 스트림 구성 무시](../web-sdk/commands/datastream-overrides.md#library) 태그 확장 지침 및 JavaScript 라이브러리 코드 예제.
-* **Mobile SDK**: 아래를 참조하십시오.
-
-### Mobile SDK를 통한 데이터 스트림 ID 재정의 {#id-override-mobile}
-
-아래 예는 Mobile SDK 통합에서 데이터 스트림 ID 재정의가 표시되는 모습을 보여 줍니다. 아래 탭을 선택하여 다음을 확인하십시오. [!DNL iOS] 및 [!DNL Android] 예.
-
->[!BEGINTABS]
-
->[!TAB iOS(Swift)]
-
-이 예는 Mobile SDK에서 데이터 스트림 ID 재정의가 표시되는 모습을 보여 줍니다 [!DNL iOS] 통합.
-
-```swift
-// Create Experience event from dictionary
-var xdmData: [String: Any] = [
-  "eventType": "SampleXDMEvent",
-  "sample": "data",
-]
-let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
-
-Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
-  // Handle the Edge Network response
-}
-```
-
->[!TAB Android™ (Kotlin)]
-
-이 예는 Mobile SDK에서 데이터 스트림 ID 재정의가 표시되는 모습을 보여 줍니다 [!DNL Android] 통합.
-
-```kotlin
-// Create experience event from Map
-val xdmData = mutableMapOf < String, Any > ()
-xdmData["eventType"] = "SampleXDMEvent"
-xdmData["sample"] = "data"
-
-val experienceEvent = ExperienceEvent.Builder()
-    .setXdmSchema(xdmData)
-    .setDatastreamIdOverride("SampleDatastreamId")
-    .build()
-
-Edge.sendEvent(experienceEvent) {
-    // Handle the Edge Network response
-}
-```
-
->[!ENDTABS]
-
-### Mobile SDK를 통한 데이터 스트림 구성 재정의 {#config-override-mobile}
-
-아래 예는 Mobile SDK 통합에서 데이터 스트림 구성 재정의가 표시되는 모습을 보여 줍니다. 아래 탭을 선택하여 다음을 확인하십시오. [!DNL iOS] 및 [!DNL Android] 예.
-
->[!BEGINTABS]
-
->[!TAB iOS(Swift)]
-
-이 예는 Mobile SDK에서 데이터 스트림 구성 재정의가 표시되는 모습을 보여 줍니다 [!DNL iOS] 통합.
-
-```swift
-// Create Experience event from dictionary
-var xdmData: [String: Any] = [
-  "eventType": "SampleXDMEvent",
-  "sample": "data",
-]
-
-let configOverrides: [String: Any] = [
-  "com_adobe_experience_platform": [
-    "datasets": [
-      "event": [
-        "datasetId": "SampleEventDatasetIdOverride"
-      ]
-    ]
-  ],
-  "com_adobe_analytics": [
-  "reportSuites": [
-        "MyFirstOverrideReportSuite",
-          "MySecondOverrideReportSuite",
-          "MyThirdOverrideReportSuite"
-      ]
-  ],
-  "com_adobe_identity": [
-    "idSyncContainerId": "1234567"
-  ],
-  "com_adobe_target": [
-    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
- ],
-]
-
-let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
-
-Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
-  // Handle the Edge Network response
-}
-```
-
->[!TAB Android(Kotlin)]
-
-이 예는 Mobile SDK에서 데이터 스트림 구성 재정의가 표시되는 모습을 보여 줍니다 [!DNL Android] 통합.
-
-```kotlin
-// Create experience event from Map
-val xdmData = mutableMapOf < String, Any > ()
-xdmData["eventType"] = "SampleXDMEvent"
-xdmData["sample"] = "data"
-
-val configOverrides = mapOf(
-    "com_adobe_experience_platform"
-    to mapOf(
-        "datasets"
-        to mapOf(
-            "event"
-            to mapOf("datasetId"
-                to "SampleEventDatasetIdOverride")
-        )
-    ),
-    "com_adobe_analytics"
-    to mapOf(
-        "reportSuites"
-        to listOf(
-            "MyFirstOverrideReportSuite",
-            "MySecondOverrideReportSuite",
-            "MyThirdOverrideReportSuite"
-        )
-    ),
-    "com_adobe_identity"
-    to mapOf(
-        "idSyncContainerId"
-        to "1234567"
-    ),
-    "com_adobe_target"
-    to mapOf(
-        "propertyToken"
-        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    )
-)
-
-val experienceEvent = ExperienceEvent.Builder()
-    .setXdmSchema(xdmData)
-    .setDatastreamConfigOverride(configOverrides)
-    .build()
-
-Edge.sendEvent(experienceEvent) {
-    // Handle the Edge Network response
-}
-```
-
->[!ENDTABS]
+* **Mobile SDK**: 다음 중 하나를 사용하여 데이터 스트림 ID 무시를 전송할 수 있습니다. [sendEvent API](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) 또는 를 사용하여 [규칙](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
 
 ## 페이로드 예제 {#payload-example}
 

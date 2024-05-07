@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 UI 안내서
 description: Adobe Experience Platform UI에서 대상 및 세그먼트 정의를 만들고 관리하는 방법을 알아봅니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 795b76465c59fc375542b92cdd3deefce8c000ca
+source-git-commit: bc501b96a9ec6b723f4598d048b399fef82d54b2
 workflow-type: tm+mt
 source-wordcount: '4274'
 ht-degree: 3%
@@ -23,7 +23,7 @@ ht-degree: 3%
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): 수집되는 서로 다른 데이터 소스의 ID를 브리징하여 고객 프로필을 만들 수 있습니다 [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Platform] 고객 경험 데이터를 구성합니다. 세그먼테이션을 최대한 활용하려면 데이터에 따라 프로필 및 이벤트가 수집되는지 확인하십시오. [데이터 모델링 우수 사례](../../xdm/schema/best-practices.md).
 
-또한 이 문서를 통해 사용되는 두 가지 주요 용어를 이해하고 두 용어 간의 차이점을 이해해야 합니다.
+또한 이 문서를 통해 사용되는 세 가지 주요 용어를 이해하고 그 차이점을 이해해야 합니다.
 
 - **대상자**: 유사한 행동 및/또는 특성을 공유하는 사람들의 세트입니다. 이 인물 컬렉션은 세그먼트 정의 또는 대상자 구성(플랫폼 생성 대상자)을 사용하여 Adobe Experience Platform에서 생성하거나, 사용자 지정 업로드(외부 생성 대상자)와 같은 외부 소스에서 생성할 수 있습니다.
 - **세그먼트 정의**: Adobe Experience Platform이 대상 대상의 주요 특성 또는 동작을 설명하는 데 사용하는 규칙입니다.
