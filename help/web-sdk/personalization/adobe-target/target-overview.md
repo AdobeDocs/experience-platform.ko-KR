@@ -2,10 +2,10 @@
 title: 개인화에 Web SDK와 함께 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform Web SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 0b662b4c1801a6d6f6fc2c6ade92d259b821ab23
+source-git-commit: a34204eb58ed935831d26caf062ebb486039669f
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 5%
+source-wordcount: '1354'
+ht-degree: 4%
 
 ---
 
@@ -184,6 +184,58 @@ alloy("sendEvent",
 | `data` | 오브젝트 | 에 전송된 임의 키/값 쌍 [!DNL Target] target 클래스 아래에 있는 솔루션. |
 
 일반 [!DNL Web SDK] 이 명령을 사용하는 코드는 다음과 같습니다.
+
+**콘텐츠가 최종 사용자에게 표시될 때까지 프로필 또는 엔티티 매개 변수 저장 지연**
+
+콘텐츠가 표시될 때까지 프로필의 기록 속성을 지연하려면 을 설정합니다 `data.adobe.target._save=false` 을 참조하십시오.
+
+예를 들어 웹 사이트에는 웹 사이트의 세 범주 링크(남성, 여성 및 아동)에 해당하는 세 가지 결정 범위가 포함되어 있으며 사용자가 최종적으로 방문한 범주를 추적하려고 합니다. 이 요청을 (으)로 보내기 `__save` 플래그가 로 설정됨 `false` 콘텐츠가 요청된 시간에 범주가 유지되지 않도록 합니다. 콘텐츠가 시각화되면 적절한 페이로드(포함)를 `eventToken` 및 `stateToken`)를 입력하여 해당 속성을 기록합니다.
+
+<!--Save profile or entity attributes by default with:
+
+```js
+alloy ( "sendEvent" , {
+  renderDecisions : true,
+  data : {
+    __adobe : {
+      target : {
+        "__save" : true // Optional. __save=true is the default 
+        "profile.gender" : "female",
+        "profile.age" : 30,
+        "entity.name" : "T-shirt",
+        "entity.id" : "1234",
+      }
+    }
+  }
+} ) ; 
+```
+-->
+
+아래 예제에서는 trackEvent 스타일 메시지를 보내고, 프로필 스크립트를 실행하고, 속성을 저장하고, 이벤트를 즉시 기록합니다.
+
+```js
+alloy ( "sendEvent" , {
+  renderDecisions : true,
+  data : {
+    __adobe : {
+      target : {
+        "profile.gender" : "female",
+        "profile.age" : 30,
+        "entity.name" : "T-shirt" ,
+        "entity.id" : "1234" ,
+        "track": {
+          "scopes": [ "mbox1", "mbox2"],
+          "type": "display|click|..."
+        }
+      }
+    }
+  }
+} ) ;
+```
+
+>[!NOTE]
+>
+>다음과 같은 경우 `__save` 지시문이 생략되어 프로필 및 엔티티 속성을 저장하는 것은 요청이 실행된 것처럼, 요청의 나머지 부분이 개인화의 미리 가져오기인 경우에도 즉시 수행됩니다. 다음 `__save` 지시어는 프로필 및 엔티티 속성에만 관련이 있습니다. 추적 개체가 있으면 `__save` 지시문이 무시됩니다. 데이터가 즉시 저장되고 알림이 기록됩니다.
 
 **`sendEvent`프로필 데이터 포함**
 
