@@ -2,16 +2,16 @@
 title: 암호화된 데이터 수집
 description: API를 사용하여 클라우드 스토리지 일괄 처리 소스를 통해 암호화된 파일을 수집하는 방법에 대해 알아봅니다.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: a92a3d4ce16e50d9eec97448e677ca603931fa44
+source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1736'
 ht-degree: 2%
 
 ---
 
 # 암호화된 데이터 수집
 
-Adobe Experience Platform을 사용하면 클라우드 스토리지 배치 소스를 통해 암호화된 파일을 수집할 수 있습니다. 암호화된 데이터 수집을 통해 비대칭 암호화 메커니즘을 활용하여 배치 데이터를 안전하게 Experience Platform으로 전송할 수 있습니다. 현재 지원되는 비대칭 암호화 메커니즘은 PGP와 GPG이다.
+클라우드 스토리지 배치 소스를 사용하여 Adobe Experience Platform에 암호화된 데이터 파일을 수집할 수 있습니다. 암호화된 데이터 수집을 통해 비대칭 암호화 메커니즘을 활용하여 배치 데이터를 안전하게 Experience Platform으로 전송할 수 있습니다. 현재 지원되는 비대칭 암호화 메커니즘은 PGP와 GPG이다.
 
 암호화된 데이터 수집 프로세스는 다음과 같습니다.
 
@@ -27,7 +27,7 @@ Adobe Experience Platform을 사용하면 클라우드 스토리지 배치 소�
 
 이 문서에서는 데이터를 암호화하고 클라우드 스토리지 소스를 사용하여 암호화된 데이터를 Experience Platform에 수집하는 암호화 키 쌍을 생성하는 방법에 대한 단계를 제공합니다.
 
-## 시작하기
+## 시작하기 {#get-started}
 
 이 자습서를 사용하려면 Adobe Experience Platform의 다음 구성 요소를 잘 알고 있어야 합니다.
 
@@ -39,7 +39,7 @@ Adobe Experience Platform을 사용하면 클라우드 스토리지 배치 소�
 
 Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../landing/api-guide.md).
 
-### 암호화된 파일에 대해 지원되는 파일 확장명
+### 암호화된 파일에 대해 지원되는 파일 확장명 {#supported-file-extensions-for-encrypted-files}
 
 암호화된 파일에 대해 지원되는 파일 확장자 목록은 다음과 같습니다.
 
@@ -74,6 +74,8 @@ POST /data/foundation/connectors/encryption/keys
 
 **요청**
 
++++예제 요청 보기
+
 다음 요청은 PGP 암호화 알고리즘을 사용하여 암호화 키 쌍을 생성합니다.
 
 ```shell
@@ -97,7 +99,11 @@ curl -X POST \
 | `encryptionAlgorithm` | 사용 중인 암호화 알고리즘의 유형입니다. 지원되는 암호화 유형은 다음과 같습니다 `PGP` 및 `GPG`. |
 | `params.passPhrase` | 암호는 암호화 키에 대한 추가 보호 계층을 제공합니다. 생성 시 Experience Platform은 암호를 공개 키와 다른 보안 저장소에 저장합니다. 비어 있지 않은 문자열을 암호로 제공해야 합니다. |
 
++++
+
 **응답**
+
++++예제 응답 보기
 
 성공적인 응답은 Base64로 인코딩된 공개 키, 공개 키 ID 및 키의 만료 시간을 반환합니다. 만료 시간은 키 생성일로부터 180일로 자동 설정됩니다. 만료 시간은 현재 구성할 수 없습니다.
 
@@ -115,9 +121,93 @@ curl -X POST \
 | `publicKeyId` | 공개 키 ID는 데이터 흐름을 만들고 암호화된 Experience Platform 스토리지 데이터를 수집하여 수집하는 데 사용됩니다. |
 | `expiryTime` | 만료 시간은 암호화 키 쌍의 만료 날짜를 정의합니다. 이 날짜는 키 생성 날짜 후 180일로 자동 설정되며 unix 타임스탬프 형식으로 표시됩니다. |
 
-+++(선택 사항) 서명된 데이터에 대한 서명 확인 키 쌍 만들기
++++
 
-### 고객 관리 키 쌍 만들기
+### 암호화 키 검색 {#retrieve-encryption-keys}
+
+GET 조직의 모든 암호화 키를 검색하려면 `/encryption/keys` endpoit=nt.
+
+**API 형식**
+
+```http
+GET /data/foundation/connectors/encryption/keys
+```
+
+**요청**
+
++++예제 요청 보기
+
+다음 요청은 조직의 모든 암호화 키를 검색합니다.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**응답**
+
++++예제 응답 보기
+
+성공적인 응답은 암호화 알고리즘, 공개 키, 공개 키 ID 및 키의 해당 만료 시간을 반환합니다.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### ID로 암호화 키 검색 {#retrieve-encryption-keys-by-id}
+
+GET 특정 암호화 키 세트를 검색하려면 `/encryption/keys` 을(를) 종단하여 공개 키 ID를 헤더 매개 변수로 제공하십시오.
+
+**API 형식**
+
+```http
+GET /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**요청**
+
++++예제 요청 보기
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**응답**
+
++++예제 응답 보기
+
+성공적인 응답은 암호화 알고리즘, 공개 키, 공개 키 ID 및 키의 해당 만료 시간을 반환합니다.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### 고객 관리 키 쌍 만들기 {#create-customer-managed-key-pair}
 
 선택적으로 서명 확인 키 쌍을 만들어 암호화된 데이터에 서명하고 수집할 수 있습니다.
 
@@ -134,6 +224,8 @@ POST /data/foundation/connectors/encryption/customer-keys
 ```
 
 **요청**
+
++++예제 요청 보기
 
 ```shell
 curl -X POST \
@@ -154,7 +246,11 @@ curl -X POST \
 | `encryptionAlgorithm` | 사용 중인 암호화 알고리즘의 유형입니다. 지원되는 암호화 유형은 다음과 같습니다 `PGP` 및 `GPG`. |
 | `publicKey` | 암호화된 서명에 사용되는 고객 관리 키에 해당하는 공개 키입니다. 이 키는 Base64로 인코딩해야 합니다. |
 
++++
+
 **응답**
+
++++예제 응답 보기
 
 ```json
 {    
@@ -196,7 +292,7 @@ curl -X POST \
 >* [공개 키 ID](#create-encryption-key-pair)
 >* [소스 연결 ID](../api/collect/cloud-storage.md#source)
 >* [대상 연결 ID](../api/collect/cloud-storage.md#target)
->* [ID 매핑](../api/collect/cloud-storage.md#mapping)
+>* [매핑 ID](../api/collect/cloud-storage.md#mapping)
 
 데이터 흐름을 만들려면 다음에 대한 POST 요청을 만듭니다. `/flows` 의 엔드포인트 [!DNL Flow Service] API. 암호화된 데이터를 수집하려면 `encryption` 섹션에 대한 섹션 `transformations` 속성 및 포함 `publicKeyId` 이전 단계에서 만들어졌습니다.
 
@@ -206,11 +302,13 @@ curl -X POST \
 POST /flows
 ```
 
-**요청**
-
 >[!BEGINTABS]
 
 >[!TAB 암호화된 데이터 수집을 위한 데이터 흐름 만들기]
+
+**요청**
+
++++예제 요청 보기
 
 다음 요청은 클라우드 스토리지 소스에 대해 암호화된 데이터를 수집하기 위한 데이터 흐름을 만듭니다.
 
@@ -268,8 +366,28 @@ curl -X POST \
 | `scheduleParams.frequency` | 데이터 흐름이 데이터를 수집하는 빈도입니다. 허용되는 값은 다음과 같습니다. `once`, `minute`, `hour`, `day`, 또는 `week`. |
 | `scheduleParams.interval` | 간격은 두 개의 연속 흐름 실행 사이의 기간을 지정합니다. 간격 값은 0이 아닌 정수여야 합니다. 빈도를 로 설정하면 간격이 필요하지 않습니다. `once` 다음보다 크거나 같아야 합니다. `15` 다른 빈도 값의 경우. |
 
++++
+
+**응답**
+
++++예제 응답 보기
+
+성공적인 응답은 ID( )를 반환합니다.`id`)에 포함되어 있습니다.
+
+```json
+{
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
++++
 
 >[!TAB 데이터 흐름을 만들어 암호화 및 서명된 데이터 수집]
+
+**요청**
+
++++예제 요청 보기
 
 ```shell
 curl -X POST \
@@ -318,9 +436,11 @@ curl -X POST \
 | --- | --- |
 | `params.signVerificationKeyId` | 서명 확인 키 ID는 Base64로 인코딩된 공개 키를 Experience Platform과 공유한 후 검색된 공개 키 ID와 동일합니다. |
 
->[!ENDTABS]
++++
 
 **응답**
+
++++예제 응답 보기
 
 성공적인 응답은 ID( )를 반환합니다.`id`)에 포함되어 있습니다.
 
@@ -331,10 +451,92 @@ curl -X POST \
 }
 ```
 
++++
 
->[!BEGINSHADEBOX]
+>[!ENDTABS]
 
-**반복 수집 제한 사항**
+### 암호화 키 삭제 {#delete-encryption-keys}
+
+DELETE 암호화 키를 삭제하려면 `/encryption/keys` 을(를) 종단하여 공개 키 ID를 헤더 매개 변수로 제공하십시오.
+
+**API 형식**
+
+```http
+DELETE /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**요청**
+
++++예제 요청 보기
+
+```shell
+curl -X DELETE \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**응답**
+
+성공적인 응답은 HTTP 상태 204(콘텐츠 없음) 및 빈 본문을 반환합니다.
+
+### 암호화 키 유효성 검사 {#validate-encryption-keys}
+
+GET 암호화 키의 유효성을 검사하려면 `/encryption/keys/validate/` 을(를) 종단하고 유효성을 검사할 공개 키 ID를 헤더 매개 변수로 제공하십시오.
+
+```http
+GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
+```
+
+**요청**
+
++++예제 요청 보기
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/validate/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**응답**
+
+성공적인 응답은 ID가 유효하거나 유효하지 않다는 확인을 반환합니다.
+
+>[!BEGINTABS]
+
+>[!TAB 유효]
+
+유효한 공개 키 ID가 다음 상태를 반환합니다. `Active` 공개 키 ID와 함께 사용할 수 있습니다.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Active"
+}
+```
+
+>[!TAB 잘못됨]
+
+잘못된 공개 키 ID가 다음 상태를 반환합니다. `Expired` 공개 키 ID와 함께 사용할 수 있습니다.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Expired"
+}
+```
+
+>[!ENDTABS]
+
+
+## 반복 수집 제한 사항 {#restrictions-on-recurring-ingestion}
 
 암호화된 데이터 수집은 소스에서 반복 또는 다중 수준 폴더의 수집을 지원하지 않습니다. 암호화된 모든 파일은 단일 폴더에 포함되어야 합니다. 단일 소스 경로에 여러 폴더가 있는 와일드카드도 지원되지 않습니다.
 
@@ -356,14 +558,13 @@ curl -X POST \
 * ACME-customer
    * File1.csv.gpg
    * File2.json.gpg
-   * Subfolder1
+   * 하위 폴더1
       * File3.csv.gpg
       * File4.json.gpg
       * File5.csv.gpg
 * ACME-충성도
    * File6.csv.gpg
 
->[!ENDSHADEBOX]
 
 ## 다음 단계
 
