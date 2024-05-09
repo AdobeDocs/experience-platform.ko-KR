@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Intelligent Services 개요
 description: 인텔리전트 서비스는 마케팅 분석가 및 전문가가 고객 경험 사용 사례에서 인공 지능(AI) 및 머신 러닝을 활용할 수 있는 권한을 부여합니다. 이를 통해 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준의 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다. 또한 마케팅 실무자는 Adobe Experience Cloud, Adobe Experience Platform 및 서드파티 애플리케이션에서 예측을 활성화할 수 있습니다.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: edc812c2725f92d71af30a3107de067f85ca1235
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
 
-# Intelligent Services 개요
+# Intelligent Services 개요 {#intelligent-services-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_intelligent-services_home"
+>title="Intelligent Services 개요"
+>abstract=""
 
 인텔리전트 서비스는 마케팅 분석가 및 전문가가 고객 경험 사용 사례에서 인공 지능(AI) 및 머신 러닝을 활용할 수 있는 권한을 부여합니다. 이를 통해 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준의 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다. 또한 마케팅 실무자는에서 예측을 활성화할 수 있습니다 [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform], 및 타사 응용 프로그램.
 
@@ -41,7 +46,7 @@ Adobe은 심층적인 CXM 경험과 결합된 AI/ML 전문 지식을 갖추고 �
 
 고객 데이터는에서 XDM(Experience Data Model)으로 수집 및 변환됩니다. [!DNL Adobe Experience Platform]. XDM에 대한 자세한 내용은 [XDM 개요](../xdm/home.md).
 
-### 메시지에 대한
+### 구성
 
 마케팅 분석가는 비즈니스 규칙을 지정하고 관련 데이터를 식별하여 원하는 예측을 구성합니다.
 
