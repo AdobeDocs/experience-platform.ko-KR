@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Intelligent Services 개요
 description: 인텔리전트 서비스는 마케팅 분석가 및 전문가가 고객 경험 사용 사례에서 인공 지능(AI) 및 머신 러닝을 활용할 수 있는 권한을 부여합니다. 이를 통해 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준의 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다. 또한 마케팅 실무자는 Adobe Experience Cloud, Adobe Experience Platform 및 서드파티 애플리케이션에서 예측을 활성화할 수 있습니다.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-source-git-commit: edc812c2725f92d71af30a3107de067f85ca1235
+source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 # Intelligent Services 개요 {#intelligent-services-overview}
 
 >[!CONTEXTUALHELP]
->id="platform_intelligent-services_home"
+>id="platform_intelligentservices_home"
 >title="Intelligent Services 개요"
 >abstract=""
 
