@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이들 프로필에서 대상자를 생성하며, 이들 대상자를 서드파티 대상으로 활성화할 수 있습니다.
 role: Admin
-source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
+source-git-commit: 9327cf8545caa306acd8077d089041d50a30e556
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 69%
+source-wordcount: '301'
+ht-degree: 67%
 
 ---
 
@@ -83,6 +83,7 @@ ht-degree: 69%
    * 프로필 보강 {#profile-enrichment}
       * [파트너가 제공한 속성으로 자사 프로필 보완](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
    * 개인화된 통찰력 및 참여 {#personalization-insights-engagement}
+      * [일회성 고객 가치를 라이프타임 가치로 향상](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [지능적으로 고객의 재참여 유도](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [지능적으로 고객 참여를 다시 유도하십시오. Luma 예](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Experience Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
