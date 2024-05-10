@@ -54,8 +54,8 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
->title="평가 메서드"
->abstract="대상자 평가 메서드에는 배치, 스트리밍과 에지가 포함됩니다."
+>title="평가 방법"
+>abstract="대상자 평가 방법에는 배치, 스트리밍과 에지가 포함됩니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"

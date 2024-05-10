@@ -7,7 +7,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
 workflow-type: tm+mt
 source-wordcount: '3337'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
@@ -50,7 +50,7 @@ Experience Platform 카탈로그의 다양한 대상을 사용하여 플랫폼�
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="데이터 흐름 실행 세부 정보"
->abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 지표 및 대상자의 활성화 상태에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 검토하십시오."
+>abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 대상자의 활성화 상태 및 지표에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 검토하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -113,7 +113,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="데이터 흐름 실행 세부 정보"
->abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 지표 및 대상자의 활성화 상태에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 검토하십시오."
+>abstract="대상 데이터 흐름 실행 세부 정보에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 대상자의 활성화 상태 및 지표에 대한 정보가 포함됩니다. 자세한 내용은 지표 정의 안내서를 검토하십시오."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=ko-KR#dataflow-runs-for-streaming-destinations" text="스트리밍 대상에 대한 데이터 흐름 실행"
 
 >[!CONTEXTUALHELP]
@@ -176,7 +176,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="활성화"
->abstract="대상 활성화 보기에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 대상자 및 지표의 활성화 상태에 대한 정보가 포함됩니다."
+>abstract="대상 활성화 보기에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 대상자의 활성화 상태 및 지표에 대한 정보가 포함됩니다."
 
 에 액세스하려면 [!UICONTROL 모니터링] 대시보드, 선택 **[!UICONTROL 모니터링]** (![모니터링 아이콘](../assets/ui/monitor-destinations/monitoring-icon.png))을 클릭하여 왼쪽 탐색 창에서 액세스합니다. 다음에 한 번 [!UICONTROL 모니터링] 페이지, 선택 [!UICONTROL 대상]. 다음 [!UICONTROL 모니터링] 대시보드는 대상 실행 작업에 대한 지표 및 정보를 포함합니다.
 
