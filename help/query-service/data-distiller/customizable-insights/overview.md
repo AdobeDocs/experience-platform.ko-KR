@@ -1,9 +1,10 @@
 ---
 title: 사용자 지정 가능한 인사이트
 description: Data Distiller을 사용하여 사용자 정의 가능한 통찰력 대시보드를 개발하는 사용 사례, 필수 기능 및 필수 단계에 대해 알아봅니다. Data Distiller 내의 사용자 지정 가능한 인사이트 기능을 통해 프로필, 대상, 캠페인, 여정, 권한 및 동의와 같은 다양한 차원에 대한 투명성을 높이고 운영 인사이트를 얻는 방법에 대해 알아봅니다.
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -11,6 +12,8 @@ ht-degree: 0%
 # 사용자 지정 가능한 인사이트
 
 맞춤형 보고 데이터 모델을 만들어 Data Distiller의 사용자 정의 가능한 인사이트를 통해 보다 심층적인 통찰력을 추출하고 전략을 최적화하며 특정 비즈니스 요구 사항을 충족하도록 분석을 조정할 수 있습니다. 사용자 지정 가능한 인사이트 기능을 사용하여 프로필, 대상, 캠페인, 여정, 권한 및 동의와 같은 차원 전반에서 Adobe Experience Platform 데이터의 투명성을 높이고 운영 통찰력을 얻을 수 있습니다. 이 기능은 조직의 보고 데이터 모델을 특정 비즈니스 요구에 맞게 조정할 수 있는 다목적 적응형 솔루션을 제공합니다.
+
+종료 [사용자 정의 가능한 인사이트 시각화](../../../dashboards/data-distiller/overview.md) 다음을 사용할 수 있습니다. [query pro 모드](../../../dashboards/data-distiller/customizable-insights/query-pro-mode.md) 사용자 지정 SQL 쿼리를 사용하여 복잡한 분석을 수행하고 데이터를 쉽게 해석 가능한 차트로 변환합니다. Query pro 모드를 사용하면 대시보드에서 맞춤형 인사이트와 시각화를 만들고 인사이트를 CSV 파일로 다운로드하여 기술 대상과 기술 이외의 대상 모두에 맞출 수 있습니다.
 
 이 문서에서는 Data Distiller을 사용하여 사용자 정의 가능한 통찰력 대시보드를 개발하는 사용 사례, 필수 기능 및 필수 단계를 다룹니다.
 

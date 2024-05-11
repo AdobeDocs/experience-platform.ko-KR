@@ -1,17 +1,18 @@
 ---
-title: 사용자 정의 대시보드
+title: 사용자 지정 대시보드
 description: 맞춤형 위젯을 만들고, 추가하고, 편집하여 주요 지표를 시각화할 수 있는 사용자 정의 대시보드를 만들고 관리하는 방법을 알아봅니다.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 4%
+source-wordcount: '1624'
+ht-degree: 3%
 
 ---
 
-# 사용자 정의 대시보드
+# 사용자 지정 대시보드
 
-Adobe Experience Platform 대시보드는 사용자 정의 대시보드 기능을 통해 통찰력을 신속하게 파악하고 시각화를 사용자 정의할 수 있도록 지원합니다. 이 기능을 사용하면 맞춤형 위젯을 만들고, 추가하고, 편집하여 조직과 관련된 주요 지표를 시각화할 수 있는 사용자 정의 대시보드를 작성하고 관리할 수 있습니다.
+Adobe Experience Platform 대시보드를 사용하여 대시보드 기능을 통해 신속하게 통찰력을 얻고 시각화를 사용자 정의할 수 있습니다. 이 기능을 사용하여 맞춤형 위젯을 만들고, 추가하고, 편집하여 조직과 관련된 주요 지표를 시각화할 수 있는 사용자 정의 대시보드를 작성하고 관리합니다.
+
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
@@ -25,15 +26,18 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ![왼쪽 탐색 영역에 대시보드가 있고 &quot;대시보드 만들기&quot;가 강조 표시된 대시보드 인벤토리.](./images/user-defined-dashboards/create-dashboard.png)
 
-사용자 정의 대시보드를 추가하기 전에 대시보드 인벤토리가 비어 있고 &quot;대시보드를 찾을 수 없음&quot;이 표시됩니다. 메시지. 대시보드가 생성되면 사용자 정의 대시보드가 모두 대시보드 인벤토리에 나열됩니다.
+사용자 정의 대시보드를 추가하기 전에 대시보드 인벤토리가 비어 있고 &quot;대시보드를 찾을 수 없음&quot;이 표시됩니다. 메시지. 대시보드가 생성되면 모든 대시보드가 대시보드 인벤토리에 나열됩니다.
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->기존 대시보드를 편집하려면 인벤토리 목록에서 대시보드 이름을 선택한 다음 연필 아이콘(![연필 아이콘.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 다음 [!UICONTROL 대시보드 만들기] 대화 상자가 나타납니다. 만들려는 위젯 컬렉션에 대해 사용자에게 친숙한 설명 이름을 입력하고 을(를) 선택합니다 **[!UICONTROL 저장]**.
 
 ![대시보드 만들기 대화 상자](./images/user-defined-dashboards/create-dashboard-dialog.png)
+
+Data Distiller SKU를 구매한 사용자에게는 사용자 지정 SQL 쿼리를 사용하여 인사이트를 만들 수 있는 옵션이 있습니다. 다음을 참조하십시오. [사용자 지정 가능한 인사이트 생성 안내서](./data-distiller/customizable-insights/overview.md) 이 워크플로에 대한 지침을 참조하십시오.
 
 새로 생성된 빈 대시보드가 뷰의 왼쪽 상단 모서리에 선택한 이름과 함께 나타납니다.
 
@@ -42,13 +46,13 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="최대 위젯 수"
->abstract="사용자 정의 대시보드는 최대 10개의 위젯을 지원합니다. 10개의 위젯을 대시보드에 추가하면 [!UICONTROL 새 위젯 추가] 옵션이 비활성화되어 회색으로 표시됩니다."
+>abstract="대시보드 서비스는 최대 10개의 위젯을 지원합니다. 10개의 위젯을 대시보드에 추가하면 [!UICONTROL 새 위젯 추가] 옵션이 비활성화되어 회색으로 표시됩니다."
 
 새 대시보드 보기에서 을(를) 선택합니다 **[!UICONTROL 새 위젯 추가]** 을 클릭하여 위젯 만들기 프로세스를 시작합니다.
 
 >[!IMPORTANT]
 >
->사용자 정의 대시보드는 최대 10개의 위젯을 지원합니다. 10개의 위젯을 대시보드에 추가하면 [!UICONTROL 새 위젯 추가] 옵션이 비활성화되어 회색으로 표시됩니다.
+>각 대시보드는 최대 10개의 위젯을 지원합니다. 10개의 위젯을 대시보드에 추가하면 [!UICONTROL 새 위젯 추가] 옵션이 비활성화되어 회색으로 표시됩니다.
 
 ![새 위젯 추가 가 강조 표시된 새 빈 대시보드.](./images/user-defined-dashboards/add-new-widget.png)
 
@@ -150,21 +154,25 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 Adobe Real-time Customer Data Platform 인사이트 대시보드에 대한 각 쿼리에 효율적으로 실행할 수 있는 리소스가 충분히 있는지 확인하기 위해 API는 각 쿼리에 동시 슬롯을 할당하여 리소스 사용을 추적합니다. 시스템은 최대 4개의 동시 쿼리를 처리할 수 있으므로 주어진 시간에 4개의 동시 쿼리 슬롯을 사용할 수 있습니다. 쿼리는 동시성 슬롯을 기반으로 대기열에 추가된 다음 충분한 동시성 슬롯을 사용할 수 있을 때까지 대기합니다.
 
-### 위젯 복제
+### 위젯 편집, 복제 또는 삭제 {#duplicate}
 
-위젯을 만든 후에는 처음부터 새로 시작하지 않고도 전체 위젯을 복제하고 해당 속성을 사용자 정의하여 고유한 위젯을 만들 수 있습니다. 위젯을 복제하려면 먼저 대시보드 인벤토리로 이동합니다. 그런 다음 인벤토리 목록에서 대시보드 이름을 선택합니다. 맞춤화된 대시보드가 나타납니다.
+위젯을 만들면 사용자 정의 대시보드에서 전체 위젯을 편집, 복제 또는 삭제할 수 있습니다.
 
-![대시보드와 사용자 지정 대시보드 이름이 강조 표시된 Platform UI입니다.](./images/user-defined-dashboards/dashbaord-inventory.png)
+>[!TIP]
+>
+>기존 사용자 정의 대시보드 간에 전환하려면 왼쪽 탐색 막대에서 대시보드 를 선택한 다음 인벤토리 목록에서 대시보드 이름을 선택합니다.
 
 연필 아이콘(![연필 아이콘.](./images/user-defined-dashboards/edit-icon.png))을 클릭하여 편집 모드로 전환할 수 있습니다.
 
 ![연필 아이콘이 강조 표시된 사용자 지정 대시보드.](./images/user-defined-dashboards/edit-mode.png)
 
-그런 다음 복사할 위젯의 오른쪽 상단에서 생략 부호를 선택한 다음 을 선택합니다 **[!UICONTROL 복제]** 사용 가능한 옵션 목록에서.
+그런 다음 편집, 복사 또는 삭제하려는 위젯의 오른쪽 상단에 있는 줄임표를 선택합니다. 드롭다운 메뉴에서 적절한 작업을 선택합니다.
 
-![줄임표 및 중복 위젯이 강조 표시된 사용자 정의 대시보드의 위젯입니다.](./images/user-defined-dashboards/duplicate.png)
+![타원 및 중복 위젯이 강조 표시된 사용자 정의 대시보드의 위젯.](./images/user-defined-dashboards/duplicate.png)
 
-중복 위젯이 사용자 정의 대시보드에 나타납니다. 새 위젯의 생략 부호를 선택한 다음 **[!UICONTROL 편집]**: 새 위젯을 사용자 정의합니다.
+>[!NOTE]
+>
+>복제를 통해 처음부터 시작하지 않고도 통찰력의 속성을 사용자 정의하여 고유한 위젯을 만들 수 있습니다. 위젯을 복제하면 사용자 정의 대시보드에 표시됩니다. 그런 다음 새 위젯의 생략 부호를 선택한 다음 **[!UICONTROL 편집]**&#x200B;를 클릭하여 통찰력을 사용자 지정합니다.
 
 ## 다음 단계 및 추가 리소스
 
@@ -172,6 +180,6 @@ Adobe Real-time Customer Data Platform 인사이트 대시보드에 대한 각 �
 
 에 대해 사용 가능한 사전 구성된 지표 및 시각화를 검색하려면 [프로필](./guides/profiles.md#standard-widgets), [세그먼트](./guides/audiences.md#standard-widgets), 및 [대상](./guides/destinations.md#standard-widgets) 대시보드의 각 설명서에서 표준 위젯 목록을 참조하십시오.
 
-Experience Platform의 사용자 정의 대시보드에 대한 이해를 강화하려면 다음 비디오를 시청하십시오.
+Experience Platform의 대시보드에 대한 이해를 강화하려면 다음 비디오를 시청하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

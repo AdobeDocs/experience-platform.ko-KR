@@ -5,10 +5,10 @@ breadcrumb-title: 대시보드 안내서
 user-guide-description: 맞춤화가 가능한 대시보드를 통해 Experience Platform에서 데이터를 시각화하는 방법을 알아봅니다.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 8daa1c190f4c868fc12a46c66f6970704c8de8fa
+source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 29%
+source-wordcount: '132'
+ht-degree: 28%
 
 ---
 
@@ -18,8 +18,19 @@ ht-degree: 29%
 * [대시보드 개요](home.md)
 * [대시보드 액세스 권한](permissions.md)
 * [대시보드 인벤토리](inventory.md)
-* [사용자 정의 대시보드](user-defined-dashboards.md)
+* [대시보드](user-defined-dashboards.md)
 * [대시보드를 다운로드하여 PDF](download.md)
+* 데이터 Distiller {#data-distiller}
+   * [개요](data-distiller/overview.md)
+   * 확장 앱 보고를 위한 사용자 지정 가능한 통찰력 {#customizable-insights}
+      * [개요](data-distiller/customizable-insights/overview.md)
+      * [쿼리 프로 모드(SQL 차트 생성)](data-distiller/customizable-insights/query-pro-mode.md)
+      * 필터 {#filters}
+         * [날짜 필터](data-distiller/customizable-insights/filters/date-filter.md)
+         * [전역 필터](data-distiller/customizable-insights/filters/global-filter.md)
+      * [더 보기](data-distiller/customizable-insights/view-more.md)
+      * [SQL 보기](data-distiller/customizable-insights/view-sql.md)
+      * [CSV로 다운로드](data-distiller/customizable-insights/download-csv.md)
 * 사용 가능한 대시보드 {#guides}
    * [프로필](guides/profiles.md)
    * [계정 프로필](guides/account-profiles.md)

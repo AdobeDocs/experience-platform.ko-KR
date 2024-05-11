@@ -5,10 +5,10 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: 61b20f2a618ed4305351b2fe6ff771a45d759de1
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 19%
+source-wordcount: '321'
+ht-degree: 21%
 
 ---
 
@@ -29,6 +29,7 @@ ht-degree: 19%
       - [십분위수 기반 파생 데이터 세트 만들기](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - 확장 앱 보고를 위한 사용자 지정 가능한 통찰력 {#customizable-insights}
       - [개요](data-distiller/customizable-insights/overview.md)
+      - [Query pro 모드](data-distiller/customizable-insights/query-pro-mode.md)
       - [가속화된 쿼리 보내기](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [Reporting insights 데이터 모델 안내서](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - AI/ML 기능 파이프라인 {#ml-feature-pipelines}
