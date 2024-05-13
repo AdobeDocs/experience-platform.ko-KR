@@ -3,10 +3,10 @@ keywords: target 개인화, 대상, experience platform 대상, adobe target 대
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: e9777960f347e32ff6288227ef95cec9cc4c55e7
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 13%
+source-wordcount: '1459'
+ht-degree: 11%
 
 ---
 
@@ -139,6 +139,16 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 >데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
 읽기 [Edge 개인화 대상에 대한 대상자 활성화](../../ui/activate-edge-personalization-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
+
+## Target 대상에서 대상 제거 {#remove}
+
+기존 Adobe Target 연결에서 대상을 이미 Adobe Target에서 사용 중인 경우 해당 대상을 제거하는 데 필요한 추가 단계가 있습니다 [활동](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Adobe Target 활동에서 대상을 사용하는 경우 Adobe Target 연결에서 대상을 제거하려고 하면 오류가 발생합니다.
+
+![Target 활동에서 사용하는 대상을 제거하려고 시도하는 것으로 인해 오류가 표시되는 플랫폼 UI 이미지입니다.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+
+활동에서 대상을 사용 중일 때 Target 대상에서 대상을 제거하려면 먼저 대상을 사용 중인 Target 활동에서 대상을 제거하거나 활동을 모두 삭제해야 합니다. 그런 다음 Target 연결에서 대상을 제거할 수 있습니다.
+
+대상자가 활동에서 사용되고 있지 않다면 다음 위치로 이동하십시오. **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]** > **[!UICONTROL 대상 데이터 흐름 선택]** > **[!UICONTROL 활성화 데이터]**&#x200B;제거할 대상자를 선택한 다음 을 선택합니다 **[!UICONTROL 대상자 제거]**.
 
 ## 내보낸 데이터 {#exported-data}
 
