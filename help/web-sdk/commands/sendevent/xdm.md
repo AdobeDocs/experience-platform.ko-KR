@@ -1,9 +1,10 @@
 ---
 title: xdm
-description: Adobe에 전송된 스키마 정렬 오브젝트입니다.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: XDM 스키마 정렬 오브젝트를 통해 Adobe에 데이터를 전송하는 방법에 대해 알아봅니다.
+exl-id: 1d8ef191-aed6-4c8b-a1fd-614bd8ed73da
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 0%
 
 Adobe Experience Platform은 스키마를 사용하여 데이터의 구조를 일관되고 재사용 가능한 방식으로 설명합니다. 여러 시스템에서 데이터를 일관되게 정의하면 의미를 쉽게 유지할 수 있으므로 데이터의 가치를 얻을 수 있습니다.
 
-이 필드의 최대 한도는 32KB입니다.
+이 개체의 최대 제한은 32KB입니다.
 
 ## Web SDK 확장을 사용하여 XDM 개체 구성
 
-설정 **[!UICONTROL XDM]** 태그 규칙 작업 내의 필드 다음 [XDM 개체](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) 에서는 다른 데이터 요소를 해당 XDM 필드에 매핑하는 직관적인 인터페이스를 제공합니다.
+설정 **[!UICONTROL XDM]** 는 태그 규칙 작업 내에 있는 객체입니다. 다음 [XDM 개체](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) 에서는 다른 데이터 요소를 해당 XDM 필드에 매핑하는 직관적인 인터페이스를 제공합니다.
 
 1. 에 로그인 [experience.adobe.com](https://experience.adobe.com) Adobe ID 자격 증명을 사용합니다.
 1. 다음으로 이동 **[!UICONTROL 데이터 수집]** > **[!UICONTROL 태그]**.
@@ -39,7 +40,7 @@ alloy("sendEvent", {
 });
 ```
 
-다음 예제에서는 [상거래 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/event/commerce-details.md):
+다음 예제에서는 [Commerce 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/event/commerce-details.md):
 
 ```javascript
 alloy("sendEvent",{

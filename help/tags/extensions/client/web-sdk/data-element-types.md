@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK 확장의 데이터 요소 유형
 description: Adobe Experience Platform 웹 SDK 태그 확장에서 제공하는 다양한 데이터 요소 유형에 대해 알아봅니다.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 44fac57a30295b476910c0b37314eaebba175157
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '599'
 ht-degree: 5%
 
 ---
@@ -42,7 +42,7 @@ ID 맵 데이터 요소는 종종 [[!UICONTROL XDM 개체] 데이터 요소 유�
 
 XDM 개체 데이터 요소를 사용하면 데이터를 XDM으로 더 쉽게 포맷할 수 있습니다. 이 데이터 요소를 처음 열면 올바른 Adobe Experience Platform 샌드박스 및 스키마를 선택합니다. 스키마를 선택하면 스키마 구조가 표시되어 쉽게 작성할 수 있습니다.
 
-![XDM 오브젝트 구조를 보여 주는 UI 이미지입니다.](assets/XDM-object.png)
+![XDM 개체 구조를 보여 주는 UI 이미지입니다.](assets/XDM-object.png)
 
 다음과 같은 스키마의 특정 필드를 열 경우 주의하십시오. `web.webPageDetails.URL`, 일부 항목은 자동으로 수집됩니다. 여러 항목이 자동으로 수집되지만 필요한 경우 덮어쓸 수 있습니다. 모든 값은 수동으로 채우거나 다른 데이터 요소를 사용할 수 있습니다.
 
@@ -52,11 +52,14 @@ XDM 개체 데이터 요소를 사용하면 데이터를 XDM으로 더 쉽게 �
 
 ## 변수 {#variable}
 
-XDM 개체를 만드는 또 다른 방법은 **[!UICONTROL 변수]** 데이터 요소입니다. XDM 개체 데이터 요소는 참조할 때 만들어집니다(예: `sendEvent` 명령, **[!UICONTROL 변수]** 데이터 요소는 다음을 통해 업데이트할 수 있습니다. [!UICONTROL 변수 업데이트] 작업. 데이터 요소를 사용하려면 올바른 Adobe Experience Platform 샌드박스 및 스키마를 선택합니다.
+다음을 사용하여 페이로드 개체를 만들 수 있습니다. **[!UICONTROL 변수]** 데이터 요소입니다. 모두 [!UICONTROL XDM] 및 [!UICONTROL 데이터] 개체가 지원됩니다.
 
-![데이터 요소 만들기 화면을 보여 주는 UI 이미지입니다.](assets/variable-data-element.png)
+* 다음을 선택할 때 [!UICONTROL XDM]를 클릭하고 원하는 을 선택합니다 [!UICONTROL 샌드박스] 및 [!UICONTROL 스키마].
+* 다음을 선택할 때 [!UICONTROL 데이터]를 클릭하고 원하는 솔루션을 선택합니다. 사용 가능한 솔루션은 다음과 같습니다 [!UICONTROL Adobe Analytics] 및 [!UICONTROL Adobe Target].
 
-이 데이터 요소를 만들면 [변수 업데이트](./action-types.md#update-variable) 데이터 요소 수정 작업 그런 다음 이벤트 보내기 작업 내에서 XDM 옵션에 대해 변수 데이터 요소를 사용합니다.
+![데이터 요소 옵션을 보여 주는 태그 UI의 이미지.](assets/variable-data-element.png)
+
+이 데이터 요소를 만든 후 [변수 업데이트](./action-types.md#update-variable) 수정 작업. 준비가 완료된 경우 이 데이터 요소를 [이벤트 보내기](./action-types.md#send-event) 데이터스트림으로 데이터를 전송하는 작업.
 
 ## 다음 단계 {#next-steps}
 
