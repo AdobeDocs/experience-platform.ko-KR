@@ -4,7 +4,7 @@ user-guide-title: 데이터 흐름 안내서
 user-guide-description: 데이터 흐름이란 무엇이며 다양한 서비스에서 이들 데이터 흐름을 구성하는 방법에 대해 알아봅니다.
 feature: Dataflows
 role: Developer
-source-git-commit: 21c69ff834dbd0e32831c5c9071e4255fd8258e1
+source-git-commit: 8d7bb7058df67526710936e330c69e524d18b709
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 23%
@@ -23,7 +23,7 @@ ht-degree: 23%
    - [소스의 데이터 흐름 모니터링](./ui/monitor-sources.md)
    - [ID에서 데이터 흐름 모니터링](./ui/monitor-identities.md)
    - [프로필의 데이터 흐름 모니터링](./ui/monitor-profiles.md)
-   - [세그먼트의 데이터 흐름 모니터링](./ui/monitor-segments.md)
+   - [대상의 데이터 흐름 모니터링](./ui/monitor-audiences.md)
    - [대상의 데이터 흐름 모니터링](./ui/monitor-destinations.md)
    - B2B 모니터링 {#b2b}
       - [프로필 보강 작업 모니터링](./ui/b2b/monitor-profile-enrichment.md)

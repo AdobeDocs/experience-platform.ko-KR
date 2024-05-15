@@ -1,17 +1,17 @@
 ---
-title: Adobe Experience Platform 릴리스 정보 2022년 4월
-description: Adobe Experience Platform의 2022년 4월 릴리스 정보입니다.
+title: Adobe Experience Platform 릴리스 노트 2022년 4월
+description: Adobe Experience Platform에 대한 2022년 4월 릴리스 정보입니다.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
-source-wordcount: '2904'
+source-wordcount: '2670'
 ht-degree: 18%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 일자: 2022년 4월 27일**
+**릴리스 일자: 2022년 4월 27일 목요일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
@@ -69,7 +69,7 @@ Platform은 일별 스냅샷 중에 캡처한 대로 조직 데이터에 대한 
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 세그먼트 대시보드 | 이제 모니터링 대시보드를 사용하여 세그먼트에 대한 데이터 흐름을 모니터링할 수 있습니다. 자세한 내용은 의 안내서를 참조하십시오. [UI에서 세그먼트 모니터링](../../dataflows/ui/monitor-segments.md) |
+| 세그먼트 대시보드 | 이제 모니터링 대시보드를 사용하여 세그먼트에 대한 데이터 흐름을 모니터링할 수 있습니다. 자세한 내용은 의 안내서를 참조하십시오. [UI에서 세그먼트 모니터링](../../dataflows/ui/monitor-audiences.md) |
 
 데이터 흐름에 대한 일반적인 정보는 [데이터 흐름 개요](../../dataflows/home.md). 세그멘테이션에 대한 자세한 내용은 [세그먼테이션 개요](../../segmentation/home.md).
 

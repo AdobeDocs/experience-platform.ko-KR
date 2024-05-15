@@ -1,7 +1,8 @@
 ---
 title: 모니터링 대시보드 개요
 description: Adobe Experience Platform UI에서 모니터링 대시보드를 사용하는 방법을 알아봅니다
-source-git-commit: 21c69ff834dbd0e32831c5c9071e4255fd8258e1
+exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 1%
@@ -100,7 +101,7 @@ Experience Platform UI에서 **[!UICONTROL 모니터링]** 아래에 [!UICONTROL
 
 >[!TAB 대상자]
 
-선택 **[!UICONTROL 대상]** 대상자 및 세분화 작업에 대한 지표를 봅니다. 의 안내서 읽기 [대상자 데이터 모니터링](monitor-segments.md) 추가 정보.
+선택 **[!UICONTROL 대상]** 대상자 및 세분화 작업에 대한 지표를 봅니다. 의 안내서 읽기 [대상자 데이터 모니터링](monitor-audiences.md) 추가 정보.
 
 ![대상자 카드가 선택된 UI의 모니터링 대시보드.](../assets/ui/monitor-overview/audiences.png)
 
@@ -135,5 +136,5 @@ Experience Platform UI에서 **[!UICONTROL 모니터링]** 아래에 [!UICONTROL
 * [소스 데이터 모니터링](monitor-sources.md).
 * [ID 데이터 모니터링](monitor-identities.md).
 * [프로필 데이터 모니터링](monitor-profiles.md).
-* [대상자 데이터 모니터링](monitor-segments.md).
+* [대상자 데이터 모니터링](monitor-audiences.md).
 * [대상 데이터 모니터링](monitor-destinations.md).
