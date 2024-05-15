@@ -8,15 +8,15 @@ exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# 데이터 과학 작업 공간 UI에서 모델을 서비스로 게시 {#publish-a-model-as-a-service}
+# 데이터 과학 작업 영역 UI에서 모델을 서비스로 게시 {#publish-a-model-as-a-service}
 
 >[!CONTEXTUALHELP]
 >id="platform_intelligentservices_publishmodel"
->title="Model as a Service 게시"
+>title="모델을 서비스로 게시"
 >abstract=""
 
 Adobe Experience Platform Data Science Workspace 를 사용하면 교육되고 평가된 모델을 Service로 게시할 수 있으므로 조직 내의 사용자가 자체 모델을 만들 필요 없이 데이터에 점수를 매길 수 있습니다.
