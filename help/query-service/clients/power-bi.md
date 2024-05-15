@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 쿼리 서비스에 Power BI 연결
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스와 Power BI을 연결하는 단계를 안내합니다.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 1%
+source-wordcount: '1073'
+ht-degree: 0%
 
 ---
 
@@ -42,6 +42,10 @@ Npgsql이 제대로 설치되었는지 확인하려면 다음 단계를 진행�
 다음 [!DNL PostgreSQL] 서버 및 데이터베이스에 대한 값을 요청하는 데이터베이스 대화 상자가 나타납니다. 방법에 대한 추가 지침 [Power Query Desktop에서 PostgreSQL 데이터베이스에 연결](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) 공식 문서에서 찾을 수 있음 [!DNL PowerBI] 설명서를 참조하십시오.
 
 이러한 필수 값은 Adobe Experience Platform 자격 증명에서 가져옵니다. 자격 증명을 찾으려면 Platform UI에 로그인하고 를 선택합니다 **[!UICONTROL 쿼리]** 왼쪽 탐색 후 **[!UICONTROL 자격 증명]**. 데이터베이스 이름, 호스트, 포트 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md).
+
+>[!IMPORTANT]
+>
+>Power BI 또는 Tableau 사용자는 쿼리 서비스 자격 증명 탭에서 Customer Journey Analytics을 BI 도구에 연결할 수 있습니다. 방법에 대한 지침은 자격 증명 설명서 를 참조하십시오 [BI 도구를 Customer Journey Analytics에 연결](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 ![자격 증명 탭과 만료 자격 증명이 강조 표시된 Experience Platform 쿼리 작업 영역입니다.](../images/clients/power-bi/query-service-credentials-page.png)
 

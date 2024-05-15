@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 클라이언트를 쿼리 서비스에 연결
 description: 이 문서에서는 다양한 데스크탑 클라이언트 응용 프로그램에서 쿼리 서비스에 연결하는 방법과 해당 연결을 확인하는 방법을 설명합니다.
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
-source-git-commit: 778c65c6310ed4a627be0fd3ae076784cfc8495b
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -29,3 +29,7 @@ ht-degree: 0%
 - [[!DNL PSQL]](./psql.md)
 - [[!DNL RStudio]](./rstudio.md)
 - [[!DNL Tableau]](./tableau.md)
+
+>[!IMPORTANT]
+>
+>Power BI 및 Tableau 사용자는 쿼리 서비스 자격 증명 탭에서 Customer Journey Analytics을 BI 도구에 연결할 수 있습니다. 방법에 대한 지침은 자격 증명 설명서 를 참조하십시오 [BI 도구를 Customer Journey Analytics에 연결](../ui/credentials.md#connect-to-customer-journey-analytics).

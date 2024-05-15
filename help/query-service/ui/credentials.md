@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 쿼리 서비스 자격 증명 안내서
 description: Adobe Experience Platform Query Service는 쿼리를 작성하여 실행하고, 이전에 실행한 쿼리를 보고, 조직 내에서 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
+source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
 workflow-type: tm+mt
-source-wordcount: '1504'
-ht-degree: 2%
+source-wordcount: '1807'
+ht-degree: 1%
 
 ---
 
@@ -47,6 +47,28 @@ Adobe Experience Platform Query Service를 사용하면 외부 클라이언트�
 >![개인 정보 및 보안, 인증 설정 및 최대 세션 수명이 강조 표시된 Admin Console 설정 탭입니다.](../images/ui/credentials/max-session-life.png)
 >
 >에 대한 자세한 내용은 Adobe 도움말 설명서 를 참조하십시오. [고급 설정](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) Admin Console 제공.
+
+### 쿼리 세션 내의 Customer Journey Analytics 데이터에 연결 {#connect-to-customer-journey-analytics}
+
+Power BI 또는 타블로와 함께 Customer Journey Analytics BI 확장을 사용하여 Customer Journey Analytics에 액세스합니다 [데이터 보기](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) SQL과 함께 Query Service를 BI 확장과 통합하여 Query Service 세션 내에서 직접 데이터 보기에 액세스할 수 있습니다. 이 통합은 쿼리 서비스를 PostgreSQL 인터페이스로 사용하는 BI 도구의 기능을 간소화합니다. 이 기능을 사용하면 BI 도구에서 데이터 보기를 복제할 필요가 없고, 플랫폼 간에 일관된 보고를 보장하며, Customer Journey Analytics 데이터를 BI 플랫폼의 다른 소스와 간편하게 통합할 수 있습니다.
+
+방법을 알아보려면 설명서 를 참조하십시오 [쿼리 서비스를 다양한 데스크톱 클라이언트 응용 프로그램에 연결합니다.](../clients/overview.md) 과 같은 [Power BI](../clients/power-bi.md) 또는 [타블로](../clients/tableau.md)
+
+>[!IMPORTANT]
+>
+>이 기능을 사용하려면 Customer Journey Analytics 작업 공간 프로젝트 및 데이터 보기가 필요합니다.
+
+Power BI 또는 타블로에서 Customer Journey Analytics 데이터에 액세스하려면 [!UICONTROL 데이터베이스] 드롭다운 메뉴를 선택한 다음 을 선택합니다. `prod:cja` 사용 가능한 옵션에서 다음으로, 다음을 복사합니다. [!DNL Postgres] Power BI 또는 Tableau 구성에서 사용할 자격 증명 매개 변수(호스트, 포트, 데이터베이스, 사용자 이름 등)입니다.
+
+![데이터베이스 드롭다운이 강조 표시된 쿼리 서비스 자격 증명 탭](../images/ui/credentials/database-dropdown.png)
+
+>[!NOTE]
+>
+>Power BI 또는 Tableau를 Customer Journey Analytics에 연결하면 쿼리 서비스 &#39;동시 세션&#39; 권한이 사용됩니다. 추가 세션 및 쿼리가 필요한 경우 추가 Ad Hoc Query 사용자 팩 추가 기능을 구매하여 5개의 추가 동시 세션 및 1개의 추가 동시 쿼리를 얻을 수 있습니다.
+
+쿼리 편집기 또는 Postgres CLI에서 직접 Customer Journey Analytics 데이터에 액세스할 수도 있습니다. 이렇게 하려면 다음을 참조하십시오 `cja` 데이터베이스(쿼리를 작성할 때) 쿼리 편집기 를 참조하십시오 [쿼리 작성 안내서](./user-guide.md#query-authoring) 쿼리를 작성, 실행 및 저장하는 방법에 대한 자세한 내용을 보려면 여기를 클릭하십시오.
+
+다음을 참조하십시오. [BI 확장 안내서](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) SQL을 사용하여 Customer Journey Analytics 데이터 보기에 액세스하는 방법에 대한 전체 지침입니다.
 
 ## 만료되지 않는 자격 증명 {#non-expiring-credentials}
 

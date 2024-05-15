@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 쿼리 서비스에 타블로 연결
 description: 이 문서에서는 Tableau를 Adobe Experience Platform 쿼리 서비스와 연결하는 단계를 안내합니다.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 1%
+source-wordcount: '476'
+ht-degree: 0%
 
 ---
 
@@ -31,6 +31,10 @@ ht-degree: 1%
 | **[!DNL Password]** | 이 영숫자 문자열은 Experience Platform입니다. **[!UICONTROL 암호]** 자격 증명. 만료되지 않는 자격 증명을 사용하려는 경우 이 값은 `technicalAccountID` 및 `credential` 구성 JSON 파일에서 다운로드되었습니다. 암호 값은 다음 형식을 사용합니다. {technicalAccountId}:{credential}. 만료되지 않는 자격 증명에 대한 구성 JSON 파일은 초기화 중에 Adobe이 복사본을 보관하지 않는 한 번 다운로드됩니다. |
 
 사용자 이름, 암호 및 로그인 자격 증명을 찾는 방법에 대한 자세한 내용은 [자격 증명 안내서](../ui/credentials.md). 자격 증명을 찾으려면 다음 위치에 로그인합니다. [!DNL Platform]을 선택한 다음 을 선택합니다. **[!UICONTROL 쿼리]**, 그 다음 **[!UICONTROL 자격 증명]**.
+
+>[!IMPORTANT]
+>
+>Tableau 또는 Power BI 사용자는 쿼리 서비스 자격 증명 탭에서 Customer Journey Analytics을 BI 도구에 연결할 수 있습니다. 방법에 대한 지침은 자격 증명 설명서 를 참조하십시오 [BI 도구를 Customer Journey Analytics에 연결](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 다음을 확인했는지 확인합니다. **[!UICONTROL SSL 필요]** 상자에 넣은 다음 연결합니다. 다음을 참조하십시오. [SSL 모드 설명서](./ssl-modes.md) Adobe Experience Platform 쿼리 서비스에 대한 서드파티 연결에 대한 SSL 지원에 대해 알아봅니다.
 
