@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Debugger을 사용하여 Adobe Target 구현 테스트
 description: Adobe Experience Platform Debugger을 사용하여 Adobe Target에서 활성화된 웹 사이트를 테스트하고 디버깅하는 방법에 대해 알아봅니다.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: bc6069f2cfa4459860fe98588b293ffeed7fb1f1
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 5%
+source-wordcount: '1035'
+ht-degree: 2%
 
 ---
 
@@ -109,7 +109,7 @@ Platform Debugger의 Target 보기 맨 위에 구현의 전역 구성에 대한 
 | 디버깅 도구 | 설명 |
 | --- | --- |
 | [!DNL Target Console Logging] | 활성화되면 브라우저의 콘솔 탭에서 at.js 로그에 액세스할 수 있습니다. 이 기능은 를 추가하여 활성화할 수도 있습니다 `mboxDebug` 브라우저 URL에 대한 매개 변수(임의 값 포함)를 쿼리합니다. |
-| [!DNL Target Diable] | 활성화되면 페이지에서 모든 Target 기능이 비활성화됩니다. 이를 사용하여 Target 특정 오퍼가 페이지에서 문제를 일으키는지 확인할 수 있습니다. |
+| [!DNL Target Disable] | 활성화되면 페이지에서 모든 Target 기능이 비활성화됩니다. 이를 사용하여 Target 특정 오퍼가 페이지에서 문제를 일으키는지 확인할 수 있습니다. |
 | [!DNL Target Trace] | **참고**: 이 기능을 사용하려면 로그인해야 합니다.<br><br>활성화되면 모든 퀘스트와 함께 추적 토큰이 전송되고 각 응답에서 추적 개체가 반환됩니다. `at.js` 응답을 구문 분석합니다 `window.__targetTraces`. 각 추적 개체에는 [[!DNL Network Requests] tab] 아래에 추가 항목이 있습니다.<ul><li>요청 전후의 속성을 볼 수 있는 프로필 스냅숏입니다.</li><li>일치함 및 일치하지 않음 [활동](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)현재 프로필이 특정 활동에 자격이 되거나 되지 않는 이유를 보여 줍니다.<ul><li>이렇게 하면 프로필이 특정 시점에 대해 자격이 있는 대상과 그 이유를 식별하는 데 도움이 될 수 있습니다.</li><li>Target 문서에는 다양한 활동 유형에 대한 자세한 정보가 포함되어 있습니다.</li></ul></li></ul> |
 
 {style="table-layout:auto"}
