@@ -1,20 +1,17 @@
 ---
-keywords: Experience Platform;홈;인기 항목;Microsoft SQL Server;SQL Server;sql server
-solution: Experience Platform
 title: UI에서 Microsoft SQL Server 소스 연결 만들기
-type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Microsoft SQL Server 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 1828dd76e9ff317f97e9651331df3e49e44efff5
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '465'
 ht-degree: 1%
 
 ---
 
 # 만들기 [!DNL Microsoft SQL Server] UI의 소스 연결
 
-Adobe Experience Platform의 소스 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 다음을 만드는 단계를 제공합니다 [!DNL Microsoft SQL Server] (이하 &quot;라고 한다)[!DNL SQL Server]&quot;) 를 사용하는 소스 커넥터 [!DNL Platform] 사용자 인터페이스.
+이 튜토리얼을 읽고 다음을 연결하는 방법을 알아보십시오. [!DNL Microsoft SQL Server] 사용자 인터페이스를 사용하여 Adobe Experience Platform에 계정을 추가합니다.
 
 ## 시작하기
 
@@ -33,35 +30,43 @@ Adobe Experience Platform의 소스 커넥터는 일정에 따라 외부 소스 
 
 | 자격 증명 | 설명 |
 | ---------- | ----------- |
-| `connectionString` | 와(과) 연결된 연결 문자열 [!DNL SQL Server] 계정입니다. 다음 [!DNL SQL Server] 연결 문자열 패턴: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| 연결 문자열 | 와(과) 연결된 연결 문자열 [!DNL Microsoft SQL Server] 계정입니다. 연결 문자열 패턴은 데이터 소스에 서버 이름을 사용하는지 또는 인스턴스 이름을 사용하는지에 따라 달라집니다.<ul><li>서버 이름을 사용하는 연결 문자열: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>인스턴스 이름을 사용하는 연결 문자열:`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
 
 시작하기에 대한 자세한 내용은 을(를) 참조하십시오. [이 [!DNL SQL Server] 문서](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
 ## 연결 [!DNL SQL Server] account
 
-필요한 자격 증명을 수집했으면 아래 단계에 따라 를 연결할 수 있습니다. [!DNL SQL Server] 계정 위치: [!DNL Platform].
+Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 탐색에서 [!UICONTROL 소스] 작업 영역. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-에 로그인 [Adobe Experience Platform](https://platform.adobe.com) 다음을 선택합니다. **[!UICONTROL 소스]** 왼쪽 탐색 모음에서 다음 위치에 액세스: **[!UICONTROL 소스]** 작업 영역. 다음 **[!UICONTROL 카탈로그]** 화면에는 계정을 만들 수 있는 다양한 소스가 표시됩니다.
+아래 *데이터베이스* 범주, 선택 **[!DNL Microsoft SQL Server]**&#x200B;을 선택한 다음 을 선택합니다 **[!UICONTROL 설정]**.
 
-화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
+>[!TIP]
+>
+>소스 카탈로그의 소스는 **[!UICONTROL 설정]** 지정된 소스에 인증된 계정이 아직 없는 경우 옵션입니다. 인증된 계정이 존재하면 이 옵션은 다음으로 변경됩니다. **[!UICONTROL 데이터 추가]**.
 
-아래 **[!UICONTROL 데이터베이스]** 범주, 선택 **[!UICONTROL Microsoft Server]**. 이 커넥터를 처음 사용하는 경우 다음을 선택합니다. **[!UICONTROL 구성]**. 그렇지 않으면 를 선택합니다. **[!UICONTROL 데이터 추가]** 새로 만들려면 [!DNL SQL Server] 커넥터.
-
-![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
+![Microsoft SQL Server 소스가 있는 소스 카탈로그가 선택되었습니다.](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
 다음 **[!UICONTROL Microsoft SQL Server에 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
 
-### 새 계정
+>[!BEGINTABS]
 
-새 자격 증명을 사용하는 경우 다음을 선택합니다 **[!UICONTROL 새 계정]**. 표시되는 입력 양식에서 이름, 설명(선택 사항) 및 [!DNL SQL Server] 자격 증명. 완료되면 다음을 선택합니다. **[!UICONTROL 연결]** 그런 다음 새 연결을 설정하는 데 시간이 걸릴 수 있습니다.
+>[!TAB 새 계정 만들기]
 
-![](../../../../images/tutorials/create/microsoft-sql-server/new.png)
+새 계정을 만들려면 다음을 선택합니다. **[!UICONTROL 새 계정]** 이름, 설명(선택 사항) 및 자격 증명을 제공합니다.
 
-### 기존 계정
+완료되면 다음을 선택합니다. **[!UICONTROL 소스에 연결]** 그런 다음 새 연결을 설정하는 데 시간이 걸릴 수 있습니다.
 
-기존 계정을 연결하려면 [!DNL SQL Server] 연결할 계정을 선택한 다음 **[!UICONTROL 다음]** 계속합니다.
+![소스 연결 세부 정보를 입력하고 강조 표시한 새 계정 인터페이스입니다.](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
-![](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
+>[!TAB 기존 계정 사용]
+
+기존 계정을 사용하려면 **[!UICONTROL 기존 계정]** 그런 다음 기존 계정 카탈로그에서 사용할 계정을 선택합니다.
+
+**[!UICONTROL 다음]**&#x200B;을 선택하여 계속하십시오.
+
+![기존 계정 목록을 표시하는 기존 계정 인터페이스.](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
+
+>[!ENDTABS]
 
 ## 다음 단계
 
