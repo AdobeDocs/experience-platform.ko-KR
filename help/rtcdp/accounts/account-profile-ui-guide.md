@@ -5,9 +5,9 @@ description: Adobe Real-time Customer Data Platform B2B 에디션을 사용하�
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ B2B 워크플로의 일부로 계정 프로필을 만드는 방법에 대한 자
 
 ![위젯을 표시하는 개요 탭](images/b2b-account-profile-overview.png)
 
-다음에서 설명서를 참조하십시오. [[!UICONTROL 계정 프로필]](../../dashboards/guides/account-profiles.md) 대시보드를 사용하여 자세히 알아보십시오.
+다음에서 설명서를 참조하십시오. [[!UICONTROL 계정 프로필]](../../dashboards/guides/account-profiles.md) 대시보드를 사용하여 자세히 알아보십시오. 다음에서 설명서를 참조하십시오. [Real-time Customer Data Platform Insights 데이터 모델 B2B 에디션](../../dashboards/data-models/cdp-insights-data-model-b2b.md) insights 데이터 모델을 사용하여 대시보드에 대한 사용자 지정 차트를 만드는 방법에 대한 자세한 내용을 참조하십시오.
 
 ## 리드-계정 일치 구성 {#configure-lead-to-account-matching}
 
