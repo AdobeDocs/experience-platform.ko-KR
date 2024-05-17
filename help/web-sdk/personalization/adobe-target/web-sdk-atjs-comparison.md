@@ -3,9 +3,9 @@ title: at.js와 Experience Platform Web SDK 비교
 description: at.js 기능을 Experience Platform Web SDK와 비교하는 방법에 대해 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;의사 결정 범위;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;의사 결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: ca1574f3f95840fce246fb4ed8845583fa0ff093
 workflow-type: tm+mt
-source-wordcount: '2136'
+source-wordcount: '2175'
 ht-degree: 5%
 
 ---
@@ -608,6 +608,27 @@ alloy("sendEvent", {
 
 [추가 정보](../rendering-personalization-content.md#manually-rendering-content)
 
+**예제 3 - 작업을 수행한 후 실행된 이벤트 추적**
+
+이 예제는 버튼을 클릭하는 등의 특정 작업을 수행한 후 실행된 이벤트를 추적합니다.
+다음을 통해 사용자 지정 매개 변수를 추가할 수 있습니다. `__adobe.target` 데이터 개체로 식별됩니다.
+
+```js
+//replicates an at.js trackEvent call
+alloy("sendEvent", {
+    "type": "decisioning.propositionDisplay",
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
+                }]
+            }
+        }
+    }
+});
+```
+
 ## 단일 페이지 애플리케이션에서 보기 변경을 트리거하는 방법
 
 ### at.js 사용
@@ -893,7 +914,7 @@ alloy("sendEvent", {
 
 ![Analytics 설정을 표시하는 데이터 스트림 UI입니다.](assets/analytics-enabled-datastream-config.png)
 
-Server Side Analytics 로깅을 활성화한 경우 Analytics 보고에 올바른 노출 횟수와 변환 횟수를 표시하도록 Analytics와 공유해야 하는 A4T 페이로드를 Edge Network 수준에서 공유하므로 고객이 추가 처리를 수행할 필요가 없습니다.
+Server Side Analytics 로깅을 활성화한 경우 Analytics 보고에서 올바른 노출 횟수 및 전환을 표시하도록 Analytics와 공유해야 하는 A4T 페이로드를 Edge Network 수준에서 공유하므로 고객이 추가 처리를 수행할 필요가 없습니다.
 
 다음은 Server Side Analytics 로깅이 활성화된 경우 데이터가 시스템으로 유입되는 방식입니다.
 
