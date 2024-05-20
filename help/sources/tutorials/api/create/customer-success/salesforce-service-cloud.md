@@ -5,10 +5,10 @@ title: 흐름 서비스 API를 사용하여 Salesforce 서비스 클라우드 �
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Salesforce 서비스 클라우드에 연결하는 방법에 대해 알아봅니다.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
+source-git-commit: 1f13b5fcad683b4c0ede96654e35d6f0c64d9eb7
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 5%
+source-wordcount: '498'
+ht-degree: 4%
 
 ---
 
@@ -32,12 +32,13 @@ ht-degree: 5%
 주문 [!DNL Flow Service] 연결 대상 [!DNL Salesforce Service Cloud], 다음 연결 속성에 대한 값을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
-| ---------- | ----------- |
+| --- | ---|
+| `environmentUrl` | 의 URL [!DNL Salesforce] 소스 인스턴스. |
 | `username` | 에 대한 사용자 이름 [!DNL Salesforce Service Cloud] 사용자 계정입니다. |
 | `password` | 에 대한 암호 [!DNL Salesforce Service Cloud] 계정입니다. |
 | `securityToken` | 에 대한 보안 토큰 [!DNL Salesforce Service Cloud] 계정입니다. |
 | `apiVersion` | (선택 사항) 의 REST API 버전 [!DNL Salesforce Service Cloud] 사용 중인 인스턴스. 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 에 대한 연결 사양 ID [!DNL Salesforce Service Cloud] 은(는) `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 에 대한 연결 사양 ID [!DNL Salesforce Service Cloud] 은(는) `cb66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
 시작에 대한 자세한 내용은 다음을 참조하십시오. [이 Salesforce 서비스 클라우드 문서](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
 
@@ -45,7 +46,7 @@ ht-degree: 5%
 
 Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../../../landing/api-guide.md).
 
-## 기본 연결을 만듭니다
+## 기본 연결 만들기
 
 기본 연결은 소스의 인증 자격 증명, 연결의 현재 상태 및 고유한 기본 연결 ID를 포함하여 소스와 플랫폼 간에 정보를 유지합니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
@@ -75,24 +76,26 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "username": "{USERNAME}",
+              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+              "username": "acme-salesforce-service-cloud",
               "password": "{PASSWORD}",
               "securityToken": "{SECURITY_TOKEN}"
           }
       },
       "connectionSpec": {
-          "id": "b66ab34-8619-49cb-96d1-39b37ede86ea",
+          "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
           "version": "1.0"
       }
   }'
 ```
 
 | 매개변수 | 설명 |
-| --------- | ----------- |
+| ---| --- |
+| `auth.params.environmentUrl` | 의 URL [!DNL Salesforce Service Cloud] 인스턴스. |
 | `auth.params.username` | 와(과) 연계된 사용자 이름 [!DNL Salesforce Service Cloud] 계정입니다. |
 | `auth.params.password` | 과(와) 연계된 암호 [!DNL Salesforce Service Cloud] 계정입니다. |
 | `auth.params.securityToken` | 와(과) 연결된 보안 토큰 [!DNL Salesforce Service Cloud] 계정입니다. |
-| `connectionSpec.id` | 다음 [!DNL Salesforce Service Cloud] 연결 사양 ID: `b66ab34-8619-49cb-96d1-39b37ede86ea` |
+| `connectionSpec.id` | 다음 [!DNL Salesforce Service Cloud] 연결 사양 ID: `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
 
 **응답**
 
