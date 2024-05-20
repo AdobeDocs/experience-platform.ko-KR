@@ -2,10 +2,10 @@
 title: Experience Platform 사용자 인터페이스를 사용하여 Salesforce 계정을 연결합니다.
 description: 사용자 인터페이스를 사용하여 Salesforce 계정을 연결하고 CRM 데이터를 Experience Platform 상태로 만드는 방법을 알아봅니다.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: a5ecd4ab1c543805870b846cfe0fccc5474333d4
+source-git-commit: c543590ef1806e5259da2ffb6833cd030d573ca7
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 0%
+source-wordcount: '737'
+ht-degree: 1%
 
 ---
 
@@ -26,17 +26,38 @@ ht-degree: 0%
 
 ### 필요한 자격 증명 수집 {#gather-required-credentials}
 
-을(를) 인증하려면 [!DNL Salesforce] Experience Platform에 대한 계정에서 다음에 해당하는 값을 제공해야 합니다 [!DNL Salesforce] 자격 증명:
+다음 [!DNL Salesforce] 소스는 기본 인증 및 OAuth2 클라이언트 자격 증명을 지원합니다.
+
+>[!BEGINTABS]
+
+>[!TAB 기본 인증]
+
+연결하려면 다음 자격 증명에 대한 값을 제공해야 합니다. [!DNL Salesforce] 기본 인증을 사용하는 계정입니다.
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| `environmentUrl` | 의 URL [!DNL Salesforce] 소스 인스턴스. |
-| `username` | 의 사용자 이름 [!DNL Salesforce] 사용자 계정입니다. |
-| `password` | 에 대한 암호 [!DNL Salesforce] 사용자 계정입니다. |
-| `securityToken` | 에 대한 보안 토큰 [!DNL Salesforce] 사용자 계정입니다. |
-| `apiVersion` | (선택 사항) 의 REST API 버전 [!DNL Salesforce] 사용 중인 인스턴스. API 버전의 값은 십진수로 형식을 지정해야 합니다. 예를 들어 API 버전을 사용하는 경우 `52`을 누르고 값을 다음으로 입력해야 합니다. `52.0` 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. |
+| 환경 URL | 의 URL [!DNL Salesforce] 소스 인스턴스. |
+| 사용자 이름 | 의 사용자 이름 [!DNL Salesforce] 사용자 계정입니다. |
+| 암호 | 에 대한 암호 [!DNL Salesforce] 사용자 계정입니다. |
+| 보안 토큰 | 에 대한 보안 토큰 [!DNL Salesforce] 사용자 계정입니다. |
+| API 버전 | (선택 사항) 의 REST API 버전 [!DNL Salesforce] 사용 중인 인스턴스. API 버전의 값은 십진수로 형식을 지정해야 합니다. 예를 들어 API 버전을 사용하는 경우 `52`을 누르고 값을 다음으로 입력해야 합니다. `52.0` 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. |
 
 인증에 대한 자세한 내용은 [이 [!DNL Salesforce] 인증 안내서](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+
+>[!TAB OAuth2 클라이언트 자격 증명]
+
+연결하려면 다음 자격 증명에 대한 값을 제공해야 합니다. [!DNL Salesforce] oauth2 클라이언트 자격 증명을 사용하는 계정입니다.
+
+| 자격 증명 | 설명 |
+| --- | --- |
+| 환경 URL | 의 URL [!DNL Salesforce] 소스 인스턴스. |
+| 클라이언트 ID | 클라이언트 ID는 OAuth2 인증의 일부로 클라이언트 암호와 함께 사용됩니다. 클라이언트 ID와 클라이언트 암호를 사용하면 애플리케이션을 식별하여 계정을 대신하여 애플리케이션이 작동할 수 있습니다. [!DNL Salesforce]. |
+| 클라이언트 암호 | 클라이언트 암호는 OAuth2 인증의 일부로 클라이언트 ID와 함께 사용됩니다. 클라이언트 ID와 클라이언트 암호를 사용하면 애플리케이션을 식별하여 계정을 대신하여 애플리케이션이 작동할 수 있습니다. [!DNL Salesforce]. |
+| API 버전 | (선택 사항) 의 REST API 버전 [!DNL Salesforce] 사용 중인 인스턴스. API 버전의 값은 십진수로 형식을 지정해야 합니다. 예를 들어 API 버전을 사용하는 경우 `52`을 누르고 값을 다음으로 입력해야 합니다. `52.0` 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. |
+
+에 OAuth 사용에 대한 자세한 정보 [!DNL Salesforce], 다음을 읽습니다 [[!DNL Salesforce] OAuth 인증 흐름에 대한 안내서](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+
+>[!ENDTABS]
 
 필요한 자격 증명을 수집했으면 아래 단계에 따라 연결할 수 있습니다. [!DNL Salesforce] Experience Platform 계정.
 
