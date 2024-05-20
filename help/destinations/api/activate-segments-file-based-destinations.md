@@ -4,7 +4,7 @@ title: 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로
 description: 흐름 서비스 API를 사용하여 적격 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: b94828381da56fa957b44b77aefa00a8ddd4bbd6
+source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
 workflow-type: tm+mt
 source-wordcount: '4404'
 ht-degree: 4%
@@ -745,7 +745,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-++[!DNL Amazon S3] - 가정된 역할 인증을 사용한 기본 연결 요청
++++[!DNL Amazon S3] - 가정된 역할 인증을 사용한 기본 연결 요청
 
 >[!TIP]
 >

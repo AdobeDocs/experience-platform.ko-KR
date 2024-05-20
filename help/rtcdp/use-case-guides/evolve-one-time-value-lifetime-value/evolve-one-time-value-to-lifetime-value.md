@@ -3,7 +3,7 @@ title: 일회성 고객 가치를 라이프타임 가치로 향상
 description: 특정 고객의 특성, 동작 및 과거 구매를 기반으로 최상의 보완 제품 또는 서비스를 제공하기 위해 개인화된 캠페인을 만드는 방법을 알아봅니다.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 2f1008791a35f33a0379cba14b90334aebf83187
+source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 26%
@@ -27,7 +27,7 @@ ht-degree: 26%
 * 대상자 만들기
 * Adobe Journey Optimizer에서 이러한 대상을 타깃팅하고 Real-Time CDP에서 활성화할 여정을 만듭니다.
 
-![단계별로 일회성 값을 라이프타임 값으로 진화시키는 높은 수준의 시각적 개요.](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){width="500" zoomable="yes"}
+![단계별로 일회성 값을 라이프타임 값으로 진화시키는 높은 수준의 시각적 개요.](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){zoomable="yes"}
 
 ## 전제 조건 및 계획 {#prerequisites-and-planning}
 
@@ -54,7 +54,7 @@ ht-degree: 26%
 
 다음은 Real-Time CDP 및 Journey Optimizer의 다양한 구성 요소에 대한 높은 수준의 아키텍처 보기입니다. 이 다이어그램은 이 페이지에 설명된 사용 사례를 달성하기 위해 데이터가 데이터 수집에서 여정 또는 캠페인을 통해 활성화된 지점까지 두 Experience Platform 앱을 통해 어떻게 이동하는지를 보여 줍니다.
 
-![아키텍처 높은 수준의 시각적 개요.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="600" zoomable="yes"}
+![아키텍처 높은 수준의 시각적 개요.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){zoomable="yes"}
 
 ## 사용 사례를 달성하는 방법: 높은 수준의 개요 {#achieve-the-use-case-high-level}
 
@@ -70,7 +70,7 @@ ht-degree: 26%
 
 >[!BEGINSHADEBOX]
 
-![단계별로 일회성 값을 라이프타임 값으로 진화시키는 높은 수준의 시각적 개요.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="600" zoomable="yes"}
+![단계별로 일회성 값을 라이프타임 값으로 진화시키는 높은 수준의 시각적 개요.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
 1. 스키마 및 데이터 세트를 만든 다음 다음을 위해 표시합니다. [!UICONTROL 프로필].
 2. 데이터는 Web SDK, Mobile Edge SDK 또는 API를 통해 수집되고 Experience Platform에 통합됩니다. Analytics Data Connector도 활용할 수 있지만 여정 지연이 발생할 수 있습니다.
@@ -304,7 +304,7 @@ Adobe 샘플 구현을 기준으로, 이 사용 사례를 달성하려면 다음
 
 특히 아래 이미지에 표시된 대로 사용 사례의 여러 단계에서 두 개의 대상을 만들고 사용해야 합니다.
 
-![강조 표시된 대상자.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="600" zoomable="yes"}
+![강조 표시된 대상자.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){zoomable="yes"}
 
 >[!BEGINTABS]
 
@@ -351,7 +351,7 @@ Adobe 샘플 구현을 기준으로, 이 사용 사례를 달성하려면 다음
 * 라이프타임 여정 - 고가치 저빈도 고객에게 보내는 메시지를 포함합니다.
 * 호출에 응답하고 구독을 구매하는 사용자를 위한 주문 확인 여정.
 
-![강조 표시된 여정.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="600" zoomable="yes"}
+![강조 표시된 여정.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){zoomable="yes"}
 
 아래 목록은 각 Journey 분기에 필요한 정확한 데이터입니다.
 
@@ -361,7 +361,7 @@ Adobe 샘플 구현을 기준으로, 이 사용 사례를 달성하려면 다음
 
 라이프타임 여정은 지난 30일 이내에 타겟팅되지 않은 고가치 및 저빈도 고객의 대상을 해결합니다. 이러한 고객에게 메시지가 표시된 다음 7일 후에도 구매하지 않는 경우 유료 미디어 광고를 표시할 수 있는 대상에 비구매자를 포함할 수 있습니다. 구매하는 경우 개별 탭에 자세히 나와 있는 주문 확인 여정에서 구매자를 설정할 수 있습니다.
 
-![라이프타임 여정 높은 수준의 시각적 개요](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "라이프타임 여정에 대한 일회성 값 높은 수준의 시각적 개요."){width="600" zoomable="yes"}
+![라이프타임 여정 높은 수준의 시각적 개요](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "라이프타임 여정에 대한 일회성 값 높은 수준의 시각적 개요."){zoomable="yes"}
 
 +++세부 여정 논리
 
@@ -383,7 +383,7 @@ Adobe 샘플 구현을 기준으로, 이 사용 사례를 달성하려면 다음
 
 주문 확인 여정은 구매가 홈페이지나 모바일 앱을 통해 이뤄졌는지에 초점을 맞춘다. 고객이 예를 들어 귀사와의 구독 구매를 성공적으로 완료한 후 주문 확인 여정에서 이를 설정할 수 있습니다.
 
-![고객 주문 확인 여정의 높은 수준의 시각적 개요](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "고객 주문 확인 여정의 높은 수준의 시각적 개요"){width="600" zoomable="yes"}
+![고객 주문 확인 여정의 높은 수준의 시각적 개요](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "고객 주문 확인 여정의 높은 수준의 시각적 개요"){zoomable="yes"}
 
 +++여정 논리
 
