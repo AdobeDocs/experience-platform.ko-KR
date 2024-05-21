@@ -3,9 +3,9 @@ title: UI에서 Google PubSub 소스 연결 만들기
 description: Platform 사용자 인터페이스를 사용하여 Google PubSub 소스 커넥터를 만드는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
+source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1098'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,8 @@ ht-degree: 1%
 
 ### 필요한 자격 증명 수집
 
-연결하려면 [!DNL PubSub] 플랫폼에 다음 자격 증명에 대한 유효한 값을 제공해야 합니다.
+연결하려면 아래에 설명된 연결 속성에 대한 값을 제공해야 합니다. [!DNL PubSub] Experience Platform 계정. 인증 및 사전 요구 사항 설정에 대한 자세한 내용은 [[!DNL PubSub source] 개요](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+
 
 >[!BEGINTABS]
 

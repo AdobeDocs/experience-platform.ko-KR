@@ -3,10 +3,10 @@ title: 흐름 서비스 API를 사용하여 Google PubSub 소스 연결 만들�
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Google PubSub 계정에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
+source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 3%
+source-wordcount: '1147'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 ### 필요한 자격 증명 수집
 
-주문 [!DNL Flow Service] 에 연결하려면 [!DNL PubSub], 다음 연결 속성에 대한 값을 제공해야 합니다.
+연결하려면 아래에 설명된 연결 속성에 대한 값을 제공해야 합니다. [!DNL PubSub] 계정 위치: [!DNL Flow Service]. 인증 및 사전 요구 사항 설정에 대한 자세한 내용은 [[!DNL PubSub source] 개요](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ ht-degree: 3%
 
 >[!ENDTABS]
 
-이러한 값에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL PubSub] 인증](https://cloud.google.com/pubsub/docs/authentication) 문서. 서비스 계정 기반 인증을 사용하려면 다음을 참조하십시오 [[!DNL PubSub] 서비스 계정 만들기에 대한 안내서](https://cloud.google.com/docs/authentication/production#create_service_account) 자격 증명을 생성하는 방법에 대한 단계입니다.
+이러한 값에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL PubSub] 인증](https://cloud.google.com/pubsub/docs/authentication) 문서. 서비스 계정 기반 인증을 사용하려면 이 내용을 읽으십시오 [[!DNL PubSub] 서비스 계정 만들기에 대한 안내서](https://cloud.google.com/docs/authentication/production#create_service_account) 자격 증명을 생성하는 방법에 대한 단계입니다.
 
 >[!TIP]
 >
@@ -62,7 +62,7 @@ ht-degree: 3%
 
 Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../../../landing/api-guide.md).
 
-## 기본 연결을 만듭니다
+## 기본 연결 만들기
 
 >[!TIP]
 >
