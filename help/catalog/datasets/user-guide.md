@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 세트 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
+source-git-commit: ed0a259c72832e4fb219855e2a2fc49b3381b85d
 workflow-type: tm+mt
-source-wordcount: '2943'
+source-wordcount: '3080'
 ht-degree: 3%
 
 ---
@@ -74,9 +74,66 @@ ht-degree: 3%
 
 ## 인라인 데이터 세트 작업 {#inline-actions}
 
-이제 데이터 세트 UI는 사용 가능한 각 데이터 세트에 대한 인라인 작업 컬렉션을 제공합니다. 관리할 데이터 세트의 줄임표(...)를 선택하여 팝업 메뉴에서 사용 가능한 옵션을 확인합니다. 사용 가능한 작업은 다음과 같습니다. [[!UICONTROL 데이터 세트 미리 보기]](#preview), [[!UICONTROL 데이터 관리 및 액세스 레이블]](#manage-and-enforce-data-governance), [[!UICONTROL 통합 프로필 활성화]](#enable-profile), [[!UICONTROL 태그 관리]](#add-tags), [[!UICONTROL 폴더로 이동]](#move-to-folders), 및 [[!UICONTROL 삭제]](#delete). 사용 가능한 이러한 작업에 대한 자세한 내용은 해당 섹션에서 확인할 수 있습니다.
+이제 데이터 세트 UI는 사용 가능한 각 데이터 세트에 대한 인라인 작업 컬렉션을 제공합니다. 관리할 데이터 세트의 줄임표(...)를 선택하여 팝업 메뉴에서 사용 가능한 옵션을 확인합니다. 사용 가능한 작업은 다음과 같습니다.
 
-### 데이터 세트 태그 추가 {#add-tags}
+* [[!UICONTROL 데이터 세트 미리 보기]](#preview),
+* [[!UICONTROL 데이터 관리 및 액세스 레이블]](#manage-and-enforce-data-governance)
+* [[!UICONTROL 통합 프로필 활성화]](#enable-profile)
+* [[!UICONTROL 태그 관리]](#manage-tags)
+* [[!UICONTROL 폴더로 이동]](#move-to-folders)
+* [[!UICONTROL 삭제]](#delete).
+
+사용 가능한 이러한 작업에 대한 자세한 내용은 해당 섹션에서 확인할 수 있습니다. 많은 수의 데이터 세트를 동시에 관리하는 방법은 다음을 참조하십시오. [대량 작업](#bulk-actions) 섹션.
+
+### 데이터 세트 미리 보기 {#preview}
+
+의 인라인 옵션 모두에서 데이터 세트 샘플 데이터를 미리 볼 수 있습니다. [!UICONTROL 찾아보기] 탭 및 [!UICONTROL 데이터 세트 활동] 보기. 다음에서 [!UICONTROL 찾아보기] 탭에서 미리 보려는 데이터 세트 이름 옆의 생략 부호(...)를 선택합니다. 옵션 메뉴 목록이 나타납니다. 그런 다음 을 선택합니다. **[!UICONTROL 데이터 세트 미리 보기]** 사용 가능한 옵션 목록에서. 데이터 세트가 비어 있으면 미리보기 링크가 비활성화되고 대신 미리보기를 사용할 수 없다고 표시됩니다.
+
+![선택한 데이터 세트에 대해 줄임표 및 데이터 세트 미리 보기 옵션이 강조 표시된 데이터 세트 작업 영역의 찾아보기 탭입니다.](../images/datasets/user-guide/preview-dataset-option.png)
+
+그러면 데이터 세트에 대한 스키마의 계층적 보기가 오른쪽에 표시되는 미리보기 창이 열립니다.
+
+![데이터 세트에 대한 구조 및 샘플 값에 대한 정보가 포함된 데이터 세트 미리보기 대화 상자가 표시됩니다.](../images/datasets/user-guide/preview-dataset.png)
+
+또는 **[!UICONTROL 데이터 세트 활동]** 화면, 선택 **[!UICONTROL 데이터 세트 미리 보기]** 화면의 오른쪽 상단 모서리 근처에서 최대 100개의 데이터 행을 미리 볼 수 있습니다.
+
+![데이터 세트 미리보기 버튼이 강조 표시됩니다.](../images/datasets/user-guide/select-preview.png)
+
+데이터에 액세스하는 더 강력한 방법은 [!DNL Experience Platform] 다음과 같은 다운스트림 서비스 제공 [!DNL Query Service] 및 [!DNL JupyterLab] 를 클릭하여 데이터를 탐색하고 분석합니다. 자세한 내용은 다음 문서를 참조하십시오.
+
+* [쿼리 서비스 개요](../../query-service/home.md)
+* [JupyterLab 사용 안내서](../../data-science-workspace/jupyterlab/overview.md)
+
+### 데이터 세트에 대한 데이터 거버넌스 관리 및 적용 {#manage-and-enforce-data-governance}
+
+의 인라인 옵션을 선택하여 데이터 세트에 대한 데이터 거버넌스 레이블을 관리할 수 있습니다. [!UICONTROL 찾아보기] 탭. 관리하려는 데이터 세트 이름 옆의 생략 부호(...)를 선택한 후 다음을 수행합니다 **[!UICONTROL 데이터 관리 및 액세스 레이블]** 드롭다운 메뉴를 통해 액세스합니다.
+
+스키마 수준에서 적용되는 데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트와 필드를 분류할 수 있습니다. 다음을 참조하십시오. [데이터 거버넌스 개요](../../data-governance/home.md) 레이블에 대해 자세히 알아보거나 [데이터 사용 레이블 사용 안내서](../../data-governance/labels/overview.md) 데이터 세트에 전달하기 위해 스키마에 레이블을 적용하는 방법에 대한 지침입니다.
+
+## 실시간 고객 프로필에 대한 데이터 세트 활성화 {#enable-profile}
+
+모든 데이터 세트에는 수집된 데이터로 고객 프로필을 보강하는 기능이 있습니다. 이렇게 하려면 데이터 세트에서 사용할 수 있도록 데이터 세트가 준수하는 스키마가 호환되어야 합니다 [!DNL Real-Time Customer Profile]. 호환되는 스키마는 다음 요구 사항을 충족합니다.
+
+* 스키마에 ID 속성으로 지정된 특성이 하나 이상 있습니다.
+* 스키마에는 기본 ID로 정의된 ID 속성이 있습니다.
+
+에 대한 스키마 활성화에 대한 자세한 내용 [!DNL Profile], 다음을 참조하십시오. [스키마 편집기 사용 안내서](../../xdm/tutorials/create-schema-ui.md).
+
+의 인라인 옵션 모두에서 프로필에 대한 데이터 세트를 활성화할 수 있습니다. [!UICONTROL 찾아보기] 탭 및 [!UICONTROL 데이터 세트 활동] 보기. 다음에서 [!UICONTROL 찾아보기] 의 탭 [!UICONTROL 데이터 세트] 작업 영역에서 프로필에 대해 활성화할 데이터 세트의 생략 부호를 선택합니다. 옵션 메뉴 목록이 나타납니다. 그런 다음 을 선택합니다. **[!UICONTROL 통합 프로필 활성화]** 사용 가능한 옵션 목록에서.
+
+![줄임표 및 통합 프로필 활성화 가 강조 표시된 데이터 세트 작업 영역의 찾아보기 탭입니다.](../images/datasets/user-guide/enable-for-profile.png)
+
+또는 데이터 세트의 **[!UICONTROL 데이터 세트 활동]** 화면에서 **[!UICONTROL 프로필]** 내에서 전환 **[!UICONTROL 속성]** 열. 활성화되면 데이터 세트에 수집된 데이터는 고객 프로필을 채우는 데에도 사용됩니다.
+
+>[!NOTE]
+>
+>데이터 세트에 이미 데이터가 포함되어 있고에 대해 활성화된 경우 [!DNL Profile], 기존 데이터는에서 자동으로 사용되지 않습니다. [!DNL Profile]. 다음에 대해 데이터 세트를 활성화한 후 [!DNL Profile], 기존 데이터를 다시 수집하여 고객 프로필에 기여하는 것이 좋습니다.
+
+![데이터 세트 세부 사항 페이지 내에서 프로필 토글이 강조 표시됩니다.](../images/datasets/user-guide/enable-dataset-profiles.png)
+
+프로필에 대해 활성화된 데이터 세트도 이 기준으로 필터링할 수 있습니다. 방법에 대한 섹션 참조 [프로필 사용 데이터 세트 필터링](#filter-profile-enabled-datasets) 추가 정보.
+
+### 데이터 세트 태그 관리 {#manage-tags}
 
 사용자 지정 생성 태그를 추가하여 데이터 세트를 구성하고 검색, 필터링 및 정렬 기능을 개선합니다. 다음에서 [!UICONTROL 찾아보기] 의 탭 [!UICONTROL 데이터 세트] 작업 영역에서 관리할 데이터 세트의 생략 부호를 선택한 다음 **[!UICONTROL 태그 관리]** 드롭다운 메뉴를 통해 액세스합니다.
 
@@ -91,6 +148,52 @@ ht-degree: 3%
 태그가 데이터 세트에 추가되면 해당 태그를 기반으로 데이터 세트를 필터링할 수 있습니다. 방법에 대한 섹션 참조 [태그로 데이터 세트 필터링](#enable-profile) 추가 정보.
 
 쉽게 검색하고 분류할 수 있도록 비즈니스 객체를 분류하는 방법에 대한 자세한 내용은 [메타데이터 분류 관리](../../administrative-tags/ui/managing-tags.md). 이 안내서에서는 적절한 권한이 있는 사용자가 사전 정의된 태그를 만들고, 카테고리를 태그에 할당하고, Platform UI의 태그 및 태그 카테고리에 대한 모든 관련 CRUD 작업을 수행하는 방법에 대해 자세히 설명합니다.
+
+### 폴더로 이동 {#move-to-folders}
+
+더 나은 데이터 세트 관리를 위해 폴더 내에 데이터 세트를 배치할 수 있습니다. 데이터 세트를 폴더로 이동하려면 관리하려는 데이터 세트 이름 옆에 있는 생략 부호(...)를 선택한 다음 를 클릭합니다 **[!UICONTROL 폴더로 이동]** 드롭다운 메뉴를 통해 액세스합니다.
+
+![다음 [!UICONTROL 데이터 세트] 생략 부호 및 가 있는 대시보드 [!UICONTROL 폴더로 이동] 강조 표시됨.](../images/datasets/user-guide/move-to-folder.png)
+
+다음 [!UICONTROL 이동] 폴더 데이터 세트 대화 상자가 나타납니다. 대상자를 이동할 폴더를 선택한 다음 을 선택합니다 **[!UICONTROL 이동]**. 팝업 알림은 데이터 세트 이동이 성공했음을 알려줍니다.
+
+![다음 [!UICONTROL 이동] 데이터 세트 대화 상자 [!UICONTROL 이동] 강조 표시됨.](../images/datasets/user-guide/move-dialog.png)
+
+>[!TIP]
+>
+>데이터 세트 이동 대화 상자에서 직접 폴더를 만들 수도 있습니다. 폴더를 만들려면 폴더 만들기 아이콘(![폴더 만들기 아이콘](../images/datasets/user-guide/create-folder-icon.png))을 클릭하여 제품에서 사용할 수 있습니다.
+>
+>![다음 [!UICONTROL 이동] 폴더 만들기 아이콘이 강조 표시된 데이터 세트 대화 상자.](/help/catalog/images/datasets/user-guide/create-folder.png)
+
+데이터 세트가 폴더에 있으면 특정 폴더에 속하는 데이터 세트만 표시하도록 선택할 수 있습니다. 폴더 구조를 열려면 폴더 표시 아이콘(![폴더 표시 아이콘](../images/datasets/user-guide/show-folders-icon.png)). 그런 다음 선택한 폴더를 선택하여 연결된 모든 데이터 세트를 확인합니다.
+
+![다음 [!UICONTROL 데이터 세트] 데이터 세트 폴더 구조가 표시되고, 폴더 표시 아이콘 및 선택한 폴더가 강조 표시된 대시보드](../images/datasets/user-guide/folder-structure.png)
+
+### 데이터 세트 삭제 {#delete}
+
+의 데이터 세트 인라인 작업에서 데이터 세트를 삭제할 수 있습니다. [!UICONTROL 찾아보기] 탭 또는 오른쪽 상단 [!UICONTROL 데이터 세트 활동] 보기. 다음에서 [!UICONTROL 찾아보기] 을(를) 보고, 삭제하려는 데이터 세트 이름 옆에 있는 생략 부호(...)를 선택합니다. 옵션 메뉴 목록이 나타납니다. 그런 다음 을 선택합니다. **[!UICONTROL 삭제]** 드롭다운 메뉴를 통해 액세스합니다.
+
+![선택한 데이터 세트에 대해 줄임표 및 삭제 옵션이 강조 표시된 데이터 세트 작업 영역의 찾아보기 탭입니다.](../images/datasets/user-guide/inline-delete-dataset.png)
+
+확인 대화 상자가 나타납니다. **[!UICONTROL 삭제]**&#x200B;를 선택하여 확인합니다.
+
+또는 을 선택합니다. **[!UICONTROL 데이터 세트 삭제]** 다음에서 **[!UICONTROL 데이터 세트 활동]** 화면.
+
+>[!NOTE]
+>
+>Adobe 애플리케이션 및 서비스(예: Adobe Analytics, Adobe Audience Manager 또는 [!DNL Offer Decisioning])은(는) 삭제할 수 없습니다.
+
+![데이터 세트 세부 사항 페이지 내에서 데이터 세트 삭제 버튼이 강조 표시됩니다.](../images/datasets/user-guide/delete-dataset.png)
+
+확인 상자가 나타납니다. 선택 **[!UICONTROL 삭제]** 데이터 세트 삭제를 확인합니다.
+
+![삭제 확인 모달이 표시되고 삭제 버튼이 강조 표시됩니다.](../images/datasets/user-guide/confirm-delete.png)
+
+### 프로필 활성화 데이터 세트 삭제
+
+데이터 세트가 프로필에 대해 활성화된 경우 UI를 통해 해당 데이터 세트를 삭제하면 데이터 레이크, ID 서비스 및 프로필 스토어의 해당 데이터 세트와 연결된 모든 프로필 데이터에서도 삭제됩니다.
+
+데이터 세트와 연결된 프로필 데이터를 [!DNL Profile] 실시간 고객 프로필 API를 사용하여 (데이터를 데이터 레이크에 둡니다.) 자세한 내용은 [프로필 시스템 작업 API 끝점 안내서](../../profile/api/profile-system-jobs.md).
 
 ## 데이터 세트 검색 및 필터링 {#search-and-filter}
 
@@ -132,30 +235,24 @@ ht-degree: 3%
 
 구조를 정의하는 스키마를 기준으로 데이터 세트를 필터링할 수 있습니다. 드롭다운 아이콘을 선택하거나 스키마 이름을 텍스트 필드에 입력합니다. 잠재적 일치 목록이 나타납니다. 목록에서 적절한 스키마를 선택합니다.
 
+## 대량 작업 {#bulk-actions}
+
+일괄 작업을 사용하여 운영 효율성을 높이고 여러 데이터 세트에 대해 여러 작업을 동시에 수행할 수 있습니다. 다음과 같은 대량 작업으로 시간을 절약하고 구성된 데이터 구조를 유지 관리할 수 있습니다. [폴더로 이동](#move-to-folders), [태그 편집](#manage-tags), 및 [삭제](#delete) 데이터 세트.
+
+한 번에 두 개 이상의 데이터 세트에 대해 작업하려면 각 행에 확인란이 있는 개별 데이터 세트를 선택하거나 열 헤더 확인란이 있는 전체 페이지를 선택합니다. 선택하면 일괄 작업 막대가 나타납니다.
+
+![수많은 데이터 세트가 선택되어 있고 대량 작업 표시줄이 강조 표시된 데이터 세트 찾아보기 탭입니다.](../images/datasets/user-guide/bulk-actions.png)
+
+대량 작업을 데이터 세트에 적용할 때는 다음 조건이 적용됩니다.
+
+* UI의 다양한 페이지에서 데이터 세트를 선택할 수 있습니다.
+* 필터를 선택하면 선택한 데이터 세트가 재설정됩니다.
+
 ## 만든 날짜별로 데이터 세트 정렬 {#sort}
 
 의 데이터 세트 [!UICONTROL 찾아보기] 탭은 오름차순 또는 내림차순 날짜로 정렬할 수 있습니다. 다음 항목 선택 [!UICONTROL 생성됨] 또는 [!UICONTROL 마지막으로 업데이트됨] 오름차순과 내림차순 간에 번갈아 표시할 열 머리글. 선택하면, 열 머리글의 옆에 위쪽 또는 아래쪽 화살표가 있는 이 항목이 열에 표시됩니다.
 
 ![생성됨 및 마지막 업데이트 열이 강조 표시된 데이터 세트 작업 공간의 찾아보기 탭.](../images/datasets/user-guide/ascending-descending-columns.png)
-
-## 데이터 세트 미리 보기 {#preview}
-
-의 인라인 옵션 모두에서 데이터 세트 샘플 데이터를 미리 볼 수 있습니다. [!UICONTROL 찾아보기] 탭 및 [!UICONTROL 데이터 세트 활동] 보기. 다음에서 [!UICONTROL 찾아보기] 탭에서 미리 보려는 데이터 세트 이름 옆의 생략 부호(...)를 선택합니다. 옵션 메뉴 목록이 나타납니다. 그런 다음 을 선택합니다. **[!UICONTROL 데이터 세트 미리 보기]** 사용 가능한 옵션 목록에서. 데이터 세트가 비어 있으면 미리보기 링크가 비활성화되고 대신 미리보기를 사용할 수 없다고 표시됩니다.
-
-![선택한 데이터 세트에 대해 줄임표 및 데이터 세트 미리 보기 옵션이 강조 표시된 데이터 세트 작업 영역의 찾아보기 탭입니다.](../images/datasets/user-guide/preview-dataset-option.png)
-
-그러면 데이터 세트에 대한 스키마의 계층적 보기가 오른쪽에 표시되는 미리보기 창이 열립니다.
-
-![데이터 세트에 대한 구조 및 샘플 값에 대한 정보가 포함된 데이터 세트 미리보기 대화 상자가 표시됩니다.](../images/datasets/user-guide/preview-dataset.png)
-
-또는 **[!UICONTROL 데이터 세트 활동]** 화면, 선택 **[!UICONTROL 데이터 세트 미리 보기]** 화면의 오른쪽 상단 모서리 근처에서 최대 100개의 데이터 행을 미리 볼 수 있습니다.
-
-![데이터 세트 미리보기 버튼이 강조 표시됩니다.](../images/datasets/user-guide/select-preview.png)
-
-데이터에 액세스하는 더 강력한 방법은 [!DNL Experience Platform] 다음과 같은 다운스트림 서비스 제공 [!DNL Query Service] 및 [!DNL JupyterLab] 를 클릭하여 데이터를 탐색하고 분석합니다. 자세한 내용은 다음 문서를 참조하십시오.
-
-* [쿼리 서비스 개요](../../query-service/home.md)
-* [JupyterLab 사용 안내서](../../data-science-workspace/jupyterlab/overview.md)
 
 ## 데이터 세트 만들기 {#create}
 
@@ -201,81 +298,6 @@ CSV 파일을 사용하여 데이터 세트를 만들면 제공된 CSV 파일과
 >CSV 열 이름은 영숫자로 시작해야 하며 문자, 숫자 및 밑줄만 포함할 수 있습니다.
 
 ![데이터 추가 화면이 표시됩니다. 데이터 세트에 대한 CSV 파일을 업로드할 수 있는 위치가 강조 표시됩니다.](../images/datasets/user-guide/add-csv-data.png)
-
-## 실시간 고객 프로필에 대한 데이터 세트 활성화 {#enable-profile}
-
-모든 데이터 세트에는 수집된 데이터로 고객 프로필을 보강하는 기능이 있습니다. 이렇게 하려면 데이터 세트에서 사용할 수 있도록 데이터 세트가 준수하는 스키마가 호환되어야 합니다 [!DNL Real-Time Customer Profile]. 호환되는 스키마는 다음 요구 사항을 충족합니다.
-
-* 스키마에 ID 속성으로 지정된 특성이 하나 이상 있습니다.
-* 스키마에는 기본 ID로 정의된 ID 속성이 있습니다.
-
-에 대한 스키마 활성화에 대한 자세한 내용 [!DNL Profile], 다음을 참조하십시오. [스키마 편집기 사용 안내서](../../xdm/tutorials/create-schema-ui.md).
-
-의 인라인 옵션 모두에서 프로필에 대한 데이터 세트를 활성화할 수 있습니다. [!UICONTROL 찾아보기] 탭 및 [!UICONTROL 데이터 세트 활동] 보기. 다음에서 [!UICONTROL 찾아보기] 의 탭 [!UICONTROL 데이터 세트] 작업 영역에서 프로필에 대해 활성화할 데이터 세트의 생략 부호를 선택합니다. 옵션 메뉴 목록이 나타납니다. 그런 다음 을 선택합니다. **[!UICONTROL 통합 프로필 활성화]** 사용 가능한 옵션 목록에서.
-
-![줄임표 및 통합 프로필 활성화 가 강조 표시된 데이터 세트 작업 영역의 찾아보기 탭입니다.](../images/datasets/user-guide/enable-for-profile.png)
-
-또는 데이터 세트의 **[!UICONTROL 데이터 세트 활동]** 화면에서 **[!UICONTROL 프로필]** 내에서 전환 **[!UICONTROL 속성]** 열. 활성화되면 데이터 세트에 수집된 데이터는 고객 프로필을 채우는 데에도 사용됩니다.
-
->[!NOTE]
->
->데이터 세트에 이미 데이터가 포함되어 있고에 대해 활성화된 경우 [!DNL Profile], 기존 데이터는에서 자동으로 사용되지 않습니다. [!DNL Profile]. 다음에 대해 데이터 세트를 활성화한 후 [!DNL Profile], 기존 데이터를 다시 수집하여 고객 프로필에 기여하는 것이 좋습니다.
-
-![데이터 세트 세부 사항 페이지 내에서 프로필 토글이 강조 표시됩니다.](../images/datasets/user-guide/enable-dataset-profiles.png)
-
-프로필에 대해 활성화된 데이터 세트도 이 기준으로 필터링할 수 있습니다. 방법에 대한 섹션 참조 [프로필 사용 데이터 세트 필터링](#filter-profile-enabled-datasets) 추가 정보.
-
-## 데이터 세트에 대한 데이터 거버넌스 관리 및 적용 {#manage-and-enforce-data-governance}
-
-의 인라인 옵션을 선택하여 데이터 세트에 대한 데이터 거버넌스 레이블을 관리할 수 있습니다. [!UICONTROL 찾아보기] 탭. 관리하려는 데이터 세트 이름 옆의 생략 부호(...)를 선택한 후 다음을 수행합니다 **[!UICONTROL 데이터 관리 및 액세스 레이블]** 드롭다운 메뉴를 통해 액세스합니다.
-
-스키마 수준에서 적용되는 데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트와 필드를 분류할 수 있습니다. 다음을 참조하십시오. [데이터 거버넌스 개요](../../data-governance/home.md) 레이블에 대해 자세히 알아보거나 [데이터 사용 레이블 사용 안내서](../../data-governance/labels/overview.md) 데이터 세트에 전달하기 위해 스키마에 레이블을 적용하는 방법에 대한 지침입니다.
-
-## 폴더로 이동 {#move-to-folders}
-
-더 나은 데이터 세트 관리를 위해 폴더 내에 데이터 세트를 배치할 수 있습니다. 데이터 세트를 폴더로 이동하려면 관리하려는 데이터 세트 이름 옆에 있는 생략 부호(...)를 선택한 다음 를 클릭합니다 **[!UICONTROL 폴더로 이동]** 드롭다운 메뉴를 통해 액세스합니다.
-
-![다음 [!UICONTROL 데이터 세트] 생략 부호 및 가 있는 대시보드 [!UICONTROL 폴더로 이동] 강조 표시됨.](../images/datasets/user-guide/move-to-folder.png)
-
-다음 [!UICONTROL 이동] 폴더 데이터 세트 대화 상자가 나타납니다. 대상자를 이동할 폴더를 선택한 다음 을 선택합니다 **[!UICONTROL 이동]**. 팝업 알림은 데이터 세트 이동이 성공했음을 알려줍니다.
-
-![다음 [!UICONTROL 이동] 데이터 세트 대화 상자 [!UICONTROL 이동] 강조 표시됨.](../images/datasets/user-guide/move-dialog.png)
-
->[!TIP]
->
->데이터 세트 이동 대화 상자에서 직접 폴더를 만들 수도 있습니다. 폴더를 만들려면 폴더 만들기 아이콘(![폴더 만들기 아이콘](../images/datasets/user-guide/create-folder-icon.png))을 클릭하여 제품에서 사용할 수 있습니다.
->
->![다음 [!UICONTROL 이동] 폴더 만들기 아이콘이 강조 표시된 데이터 세트 대화 상자.](/help/catalog/images/datasets/user-guide/create-folder.png)
-
-데이터 세트가 폴더에 있으면 특정 폴더에 속하는 데이터 세트만 표시하도록 선택할 수 있습니다. 폴더 구조를 열려면 폴더 표시 아이콘(![폴더 표시 아이콘](../images/datasets/user-guide/show-folders-icon.png)). 그런 다음 선택한 폴더를 선택하여 연결된 모든 데이터 세트를 확인합니다.
-
-![다음 [!UICONTROL 데이터 세트] 데이터 세트 폴더 구조가 표시되고, 폴더 표시 아이콘 및 선택한 폴더가 강조 표시된 대시보드](../images/datasets/user-guide/folder-structure.png)
-
-## 데이터 세트 삭제 {#delete}
-
-의 데이터 세트 인라인 작업에서 데이터 세트를 삭제할 수 있습니다. [!UICONTROL 찾아보기] 탭 또는 오른쪽 상단 [!UICONTROL 데이터 세트 활동] 보기. 다음에서 [!UICONTROL 찾아보기] 을(를) 보고, 삭제하려는 데이터 세트 이름 옆에 있는 생략 부호(...)를 선택합니다. 옵션 메뉴 목록이 나타납니다. 그런 다음 을 선택합니다. **[!UICONTROL 삭제]** 드롭다운 메뉴를 통해 액세스합니다.
-
-![선택한 데이터 세트에 대해 줄임표 및 삭제 옵션이 강조 표시된 데이터 세트 작업 영역의 찾아보기 탭입니다.](../images/datasets/user-guide/inline-delete-dataset.png)
-
-확인 대화 상자가 나타납니다. **[!UICONTROL 삭제]**&#x200B;를 선택하여 확인합니다.
-
-또는 을 선택합니다. **[!UICONTROL 데이터 세트 삭제]** 다음에서 **[!UICONTROL 데이터 세트 활동]** 화면.
-
->[!NOTE]
->
->Adobe 애플리케이션 및 서비스(예: Adobe Analytics, Adobe Audience Manager 또는 [!DNL Offer Decisioning])은(는) 삭제할 수 없습니다.
-
-![데이터 세트 세부 사항 페이지 내에서 데이터 세트 삭제 버튼이 강조 표시됩니다.](../images/datasets/user-guide/delete-dataset.png)
-
-확인 상자가 나타납니다. 선택 **[!UICONTROL 삭제]** 데이터 세트 삭제를 확인합니다.
-
-![삭제 확인 모달이 표시되고 삭제 버튼이 강조 표시됩니다.](../images/datasets/user-guide/confirm-delete.png)
-
-## 프로필 활성화 데이터 세트 삭제
-
-데이터 세트가 프로필에 대해 활성화된 경우 UI를 통해 해당 데이터 세트를 삭제하면 데이터 레이크, ID 서비스 및 프로필 스토어의 해당 데이터 세트와 연결된 모든 프로필 데이터에서도 삭제됩니다.
-
-데이터 세트와 연결된 프로필 데이터를 [!DNL Profile] 실시간 고객 프로필 API를 사용하여 (데이터를 데이터 레이크에 둡니다.) 자세한 내용은 [프로필 시스템 작업 API 끝점 안내서](../../profile/api/profile-system-jobs.md).
 
 ## 데이터 수집 모니터링
 
