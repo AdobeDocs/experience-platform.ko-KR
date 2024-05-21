@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: df24799e4644a98941b707bb216a4ad434f5ebf9
+source-git-commit: 16313e2109152329a427be9f13fcbd6382353797
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1718'
 ht-degree: 1%
 
 ---
@@ -100,6 +100,7 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Profile Management] | [!UICONTROL 세그먼트 보기] | 사용 가능한 세그먼트에 대한 읽기 전용 액세스 권한. |
 | [!DNL Profile Management] | [!UICONTROL 병합 정책 관리] | 병합 정책을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Profile Management] | [!UICONTROL 병합 정책 보기] | 사용 가능한 병합 정책에 대한 읽기 전용 액세스 권한. |
+| [!DNL Profile Management] | [!UICONTROL 대상자 가져오기] | 가져온 대상자 읽기, 만들기, 편집 및 삭제에 대한 액세스 권한. |
 | [!DNL Profile Management] | [!UICONTROL 세그먼트를 위한 대상 내보내기] | 평가된 대상 세그먼트를 데이터 세트로 내보내는 기능. |
 | [!DNL Profile Management] | [!UICONTROL 대상에 대한 세그먼트 평가] | 세그먼트 정의를 평가하여 대상자에 대한 프로필을 생성하는 기능. |
 | [!DNL Profile Management] | [!UICONTROL B2B AI 보기] | 모든 B2B AI/ML 서비스에 대한 설정 및 구성에 대한 읽기 전용 액세스 권한. |
