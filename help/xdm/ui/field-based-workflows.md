@@ -1,21 +1,17 @@
 ---
-title: 스키마 편집기의 필드 기반 워크플로우(베타)
+title: 스키마 편집기의 필드 기반 워크플로
 description: 기존 필드 그룹의 필드를 XDM(Experience Data Model) 스키마에 개별적으로 추가하는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 07faf4dd749219a955df720a8c740427113a5de2
+source-git-commit: b224783922c3b6c5e2045134be2512748ca2575b
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
 
-# 스키마 편집기의 필드 기반 워크플로우(베타)
-
->[!IMPORTANT]
->
->이 Beta 문서에 설명된 워크플로우는 이제 Adobe Experience Platform에서 일반적으로 사용할 수 있습니다. 스키마 편집기의 필드 기반 워크플로우에 대한 최신 지침은 [스키마 UI 안내서](./resources/schemas.md) 대신, 이 안내서는 곧 제거됩니다.
+# 스키마 편집기의 필드 기반 워크플로
 
 Adobe Experience Platform은 강력한 표준화 세트를 제공합니다 [필드 그룹](../schema/composition.md#field-group) XDM(Experience Data Model) 스키마에서 사용합니다. 이러한 필드 그룹의 구조 및 의미 체계는 플랫폼의 다양한 세분화 사용 사례 및 기타 다운스트림 애플리케이션을 충족하도록 세심하게 조정됩니다. 고유한 비즈니스 요구 사항을 해결하기 위해 사용자 정의 필드 그룹을 정의할 수도 있습니다.
 
@@ -23,7 +19,7 @@ Adobe Experience Platform은 강력한 표준화 세트를 제공합니다 [필�
 
 이 안내서에서는 Platform UI의 스키마에 개별 필드를 추가하는 다양한 방법을 다룹니다.
 
-## 사전 요구 사항
+## 전제 조건
 
 이 자습서에서는 사용자가 [xdm 스키마 구성](../schema/composition.md) 플랫폼 UI에서 스키마 편집기를 사용하는 방법을 설명합니다. 계속하려면 의 프로세스를 시작해야 합니다. [새 스키마 만들기](./resources/schemas.md) 이 안내서를 계속 사용하기 전에 표준 클래스에 할당합니다.
 

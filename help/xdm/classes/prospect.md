@@ -2,16 +2,20 @@
 title: XDM 개별 잠재 고객 프로필 클래스
 description: Experience Data Model(XDM)의 XDM 개별 잠재 고객 프로필 클래스에 대해 알아봅니다.
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f4ddcf14de7a5cec42b5ebc521203cfdd1498a9f
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 3%
+source-wordcount: '390'
+ht-degree: 5%
 
 ---
 
 # [!UICONTROL XDM 개별 잠재 고객 프로필] 클래스
 
 XDM(경험 데이터 모델)에서 [!UICONTROL XDM 개별 잠재 고객 프로필] 클래스는 일반적으로 데이터 파트너로부터 가져온 잠재 고객 프로필을 캡처하여 고객을 주요 고객으로 확보할 수 있습니다.
+
+>[!NOTE]
+>
+>XDM 개별 잠재 고객 프로필의 필드를 식별자로 설정하려면 먼저 최소 하나 이상의 파트너 ID 네임스페이스를 만들어야 합니다. [ID 유형 섹션](../../identity-service/features/namespaces.md)에서 파트너 ID 네임스페이스에 대해 자세히 알아보십시오.
 
 ![XDM Prospect 클래스의 스키마 다이어그램입니다.](../images/classes/individual-prospect-profile.png)
 
