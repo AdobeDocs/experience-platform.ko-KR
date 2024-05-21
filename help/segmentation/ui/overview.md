@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 UI 안내서
 description: Adobe Experience Platform UI에서 대상 및 세그먼트 정의를 만들고 관리하는 방법을 알아봅니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
+source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
 workflow-type: tm+mt
-source-wordcount: '4274'
-ht-degree: 3%
+source-wordcount: '4334'
+ht-degree: 2%
 
 ---
 
@@ -85,7 +85,11 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 | [!UICONTROL 삭제] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 선택한 대상자를 삭제합니다. 다운스트림 대상에 사용되거나 다른 대상에 종속된 대상자 **할 수 없음** 삭제할 수 있습니다. 대상 삭제에 대한 자세한 내용은 [세그먼테이션 FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL 패키지에 추가] | 대상자 구성, 사용자 지정 업로드, 세분화 서비스 | 샌드박스 간에 대상자를 이동합니다. 이 기능에 대한 자세한 내용은 [샌드박스 도구 안내서](../../sandboxes/ui/sandbox-tooling.md). |
 
-페이지 맨 위에는 일정에 모든 대상을 추가하고, 대상을 가져오고, 새 대상을 만들고, 업데이트 주기 분류를 보는 옵션이 있습니다.
+>[!IMPORTANT]
+>
+>대상자를 삭제하기 전에 대상자가 **아님** 계정 기반 대상의 구성 요소로 사용되거나 Adobe Journey Optimizer에서 사용됩니다.
+
+페이지 맨 위에는 일정에 모든 대상을 추가하고, 대상을 가져오고, 새 대상을 만들고, 대상 평가의 요약을 볼 수 있는 옵션이 있습니다.
 
 전환 **[!UICONTROL 모든 대상 예약]** 예약된 세그먼테이션을 활성화합니다. 예약된 세분화에 대한 자세한 내용은 [이 사용 안내서의 예약된 세분화 섹션](#scheduled-segmentation).
 
@@ -95,13 +99,13 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 
 ![대상자 찾아보기 페이지의 상단 탐색 모음이 강조 표시됩니다. 이 막대에는 대상자를 만드는 단추와 대상자를 가져오는 단추가 있습니다.](../images/ui/overview/browse-audiences-top.png)
 
-다음을 선택할 수 있습니다. **[!UICONTROL 업데이트 빈도 요약]** 업데이트 빈도를 보여 주는 파이 차트를 표시합니다.
+다음을 선택할 수 있습니다. **[!UICONTROL 평가 요약]** 대상 평가의 요약을 보여 주는 파이 차트를 표시합니다.
 
-![업데이트 빈도 요약 버튼이 강조 표시됩니다.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+![평가 요약 버튼이 강조 표시됩니다.](../images/ui/overview/browse-audience-evaluation-summary.png)
 
-업데이트 빈도별 대상자 분류를 표시하는 파이 차트가 나타납니다. 차트에는 중간에 있는 총 대상 수가 표시되고, 하단에 일일 배치 평가 시간(UTC)이 표시됩니다. 대상의 여러 부분을 마우스로 가리키면 각 업데이트 빈도 유형에 속하는 대상의 수가 표시됩니다.
+파이 차트가 나타나며 대상 평가별 대상 분류가 표시됩니다. 차트에는 중간에 있는 총 대상 수가 표시되고, 하단에 일일 배치 평가 시간(UTC)이 표시됩니다. 대상의 여러 부분을 마우스로 가리키면 각 업데이트 빈도 유형에 속하는 대상의 수가 표시됩니다.
 
-![업데이트 빈도 파이 차트가 강조 표시되고 배치 세분화 평가 시간도 표시됩니다.](../images/ui/overview/update-frequency-chart.png)
+![대상자 평가 파이 차트가 강조 표시되고 배치 세분화 평가 시간도 표시됩니다.](../images/ui/overview/evaluation-summary.png)
 
 ### 사용자 정의 {#customize}
 
@@ -203,7 +207,7 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 | [!UICONTROL Origin] | 대상자의 출처를 기준으로 필터링할 수 있습니다. 사용 가능한 옵션에는 세그멘테이션 서비스, 사용자 지정 업로드, 대상 구성 및 Audience Manager이 포함됩니다. |
 | [!UICONTROL 임의의 태그 있음] | 태그로 필터링할 수 있습니다. 다음 중 하나를 선택할 수 있습니다. **[!UICONTROL 임의의 태그 있음]** 및 **[!UICONTROL 모든 태그 있음]**. 날짜 **[!UICONTROL 임의의 태그 있음]** 이(가) 선택되면 필터링된 대상자에 다음이 포함됩니다. **임의** 을(를) 추가했습니다. 날짜 **[!UICONTROL 모든 태그 있음]** 이(가) 선택되면 필터링된 대상자에 다음이 포함되어야 합니다. **모두** 을(를) 추가했습니다. |
 | [!UICONTROL 라이프사이클 상태] | 대상자의 라이프사이클 상태에 따라 필터링할 수 있습니다. 사용 가능한 옵션은 다음과 같습니다 [!UICONTROL 삭제됨], [!UICONTROL 초안], [!UICONTROL 비활성], 및 [!UICONTROL 게시됨]. |
-| [!UICONTROL 업데이트 주기] | 대상자의 업데이트 빈도에 따라 필터링할 수 있습니다. 사용 가능한 옵션은 다음과 같습니다 [!UICONTROL 예약됨], [!UICONTROL 연속], 및 [!UICONTROL 온디맨드]. |
+| [!UICONTROL 업데이트 주기] | 대상자의 업데이트 빈도(평가 방법)를 기준으로 필터링할 수 있습니다. 사용 가능한 옵션은 다음과 같습니다 [!UICONTROL 예약됨], [!UICONTROL 연속], 및 [!UICONTROL 온디맨드]. |
 | [!UICONTROL 작성자] | 대상자를 만든 사람을 기준으로 필터링할 수 있습니다. |
 | [!UICONTROL 제작일] | 대상자의 생성 날짜를 기준으로 필터링할 수 있습니다. 대상자가 만들어졌을 때 필터링할 날짜 범위를 선택할 수 있습니다. |
 | [!UICONTROL 수정한 날짜] | 대상자의 마지막 수정 날짜를 기준으로 필터링할 수 있습니다. 대상자를 마지막으로 수정한 시기를 필터링할 날짜 범위를 선택할 수 있습니다. |
@@ -329,6 +333,10 @@ Experience Platform UI에서 **[!UICONTROL 대상]** 을(를) 왼쪽 탐색에�
 ![세그먼트 빌더 작업 공간이 표시됩니다.](../images/ui/overview/segment-builder.png)
 
 ### 대상자 가져오기 {#import-audience}
+
+>[!IMPORTANT]
+>
+>외부에서 생성된 대상자를 가져오려면 **필수** 다음 권한이 있어야 합니다. [!UICONTROL 세그먼트 보기], [!UICONTROL 세그먼트 관리], 및 [!UICONTROL 대상자 가져오기]. 이러한 권한에 대한 자세한 내용은 [액세스 제어 개요](../../access-control/home.md#permissions).
 
 다음을 선택할 수 있습니다. **[!UICONTROL 대상자 가져오기]** 외부에서 생성된 대상자를 가져옵니다.
 
