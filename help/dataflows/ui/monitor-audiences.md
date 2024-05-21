@@ -6,7 +6,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: 716c14f29be24d084111864053e3e4ae884003f0
 workflow-type: tm+mt
 source-wordcount: '1862'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -28,12 +28,12 @@ ht-degree: 2%
    - [내보내기 작업](../../segmentation/api/export-jobs.md): 내보내기 작업은 대상 구성원을 데이터 세트로 지속하는 데 사용되는 비동기 프로세스입니다.
 - [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 만드는 가상 샌드박스를 제공합니다. [!DNL Platform] 인스턴스를 별도의 가상 환경으로 전환하여 디지털 경험 애플리케이션을 개발하고 발전시킵니다.
 
-## 대상자 대시보드 모니터링 {#monitoring-audiences-dashboard}
+## 모니터링 대상자 대시보드 {#monitoring-audiences-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="대상자"
->abstract="대상 보기에는 조직의 모든 대상에 대한 정보와 함께 해당 활성화 및 평가 작업에 대한 추가 정보가 포함되어 있습니다."
+>abstract="대상자 보기에는 조직의 모든 대상자에 대한 정보와 해당 대상자의 활성화 및 평가 작업에 대한 추가 정보가 포함됩니다."
 
 에 액세스하려면 **[!UICONTROL 대상]** 대시보드, 선택 **[!UICONTROL 모니터링]** 왼쪽 탐색. 다음에 한 번 **[!UICONTROL 모니터링]** 페이지에서 **[!UICONTROL 대상]** 카드.
 
@@ -165,12 +165,12 @@ ht-degree: 2%
 | **[!UICONTROL 이름]** | 평가 중인 대상자의 이름입니다. |
 | **[!UICONTROL 프로필 개수]** | 평가 중인 프로필 수입니다. |
 
-## 세그먼테이션 작업 대시보드 모니터링 {#monitoring-segmentation-jobs-dashboard}
+## 모니터링 세분화 작업 대시보드 {#monitoring-segmentation-jobs-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="세분화 작업"
->abstract="세분화 작업 보기에는 모든 대상에 대한 평가 및 내보내기 작업에 대한 정보가 포함되어 있습니다."
+>abstract="세분화 작업 보기에는 모든 대상자에 대한 평가 및 내보내기 작업에 대한 정보가 포함됩니다."
 
 에 액세스하려면 **[!UICONTROL 세분화 작업]** 대시보드, 선택 **[!UICONTROL 세분화 작업]** 다음에서 [!UICONTROL 대상] 대시보드입니다. 다음 [!UICONTROL 모니터링] 대시보드에는 평가 및 내보내기 작업에 대한 지표와 정보가 포함되어 있습니다.
 
