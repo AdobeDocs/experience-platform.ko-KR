@@ -5,9 +5,9 @@ title: OneTrust 통합 소스 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 OneTrust 통합을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+source-git-commit: 71b64894f6a08941b62bf8c6990d6bf0295afdd0
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->다음 [!DNL OneTrust Integration] 소스는 쿠키가 아닌 동의 및 환경 설정 데이터 수집만 지원합니다.
+>다음 [!DNL OneTrust Integration] 소스는 쿠키가 아닌 동의 및 환경 설정 데이터 수집만 지원합니다. 소스 커넥터에 문제가 있는 경우 https://support.onetrust.com에서 OneTrust 지원에 문의하십시오.
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
