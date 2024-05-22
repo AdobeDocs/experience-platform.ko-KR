@@ -5,9 +5,9 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 6beaefb23f4deb382b7844fcf58efbd72b1da2ec
+source-git-commit: 65714e2b18dc787abe074e8448aa1d640c867338
 workflow-type: tm+mt
-source-wordcount: '3122'
+source-wordcount: '3042'
 ht-degree: 0%
 
 ---
@@ -80,13 +80,7 @@ AI Assistant 인터페이스가 나타나고 시작하기 위한 정보가 즉�
 * [!UICONTROL 스키마란?]
 * [!UICONTROL Real-Time CDP의 일반적인 사용 사례 설명]
 
-![AI Assistant의 &quot;시작하기 위한 아이디어&quot; 섹션.](./images/ai-assistant/ideas-to-get-started.png)
-
-AI Assistant와 상호 작용하려면 입력 상자를 사용하여 쿼리 또는 명령을 입력합니다. (**`+`**) 자동 완성 기능과 책갈피 아이콘을 사용하여 책갈피가 지정된 쿼리 및 명령에 액세스할 수 있는 기호를 제공합니다.
-
-![AI Assistant 입력 상자가 강조 표시됩니다.](./images/ai-assistant/interact.png)
-
-## 사용 사례 예: AI Assistant를 사용하여 스키마 생성 프로세스 가속화
+## AI Assistant UI 안내서
 
 >[!NOTE]
 >
@@ -104,97 +98,137 @@ AI Assistant와 상호 작용하려면 입력 상자를 사용하여 쿼리 또�
 
 AI Assistant로부터 응답을 받은 후 여러 옵션 중에서 선택하여 진행할 방법을 결정할 수 있습니다.
 
-### 쿼리 저장 {#save-your-query}
+### AI Assistant 기능 {#features}
 
-+++쿼리 저장 방법의 예를 보려면 선택
+이 섹션에서는 Experience Platform에서 작업 과정 중에 사용할 수 있는 AI Assistant의 다양한 기능에 대해 간략히 설명합니다.
 
-쿼리를 저장하려면 질문 옆에 있는 책갈피 아이콘을 선택합니다.
+<!-- 
+### Save your query {#save-your-query}
 
-![선택한 책갈피의 스크린샷입니다.](./images/ai-assistant/save-your-query.png)
++++Select to view an example of how to save a query
 
-저장된 쿼리에 액세스하려면 입력 상자 아래의 책갈피 아이콘을 선택한 다음 실행할 쿼리를 선택합니다.
+To save your query, select the bookmark icon beside your question.
 
-![책갈피 아이콘 및 저장된 쿼리 목록의 스크린샷입니다.](./images/ai-assistant/bookmarks.png)
+![Screenshot of a selected bookmark.](./images/ai-assistant/save-your-query.png)
 
-+++
+To access your saved queries, select the bookmark icon below the input box, then select the query you would like to run.
+
+![Screenshot of bookmark icon and a list of saved queries.](./images/ai-assistant/bookmarks.png)
+
++++ -->
 
 ### 샌드박스에서 데이터 보기 {#view-data-in-your-sandbox}
 
+쿼리에 따라 AI Assistant는 샌드박스의 데이터와 관련된 추가 정보를 제공합니다. 쿼리에 대한 응답이 특정 샌드박스에 어떻게 적용되는지 보려면 을 선택합니다. **[!UICONTROL 샌드박스에서].**
+
+샌드박스와 관련된 데이터를 볼 때 AI Assistant는 쿼리된 데이터를 표시하는 특정 UI 페이지에 대한 직접 링크를 제공할 수 있습니다.
+
 +++예를 보려면 선택
 
-쿼리에 따라 AI Assistant는 샌드박스의 데이터와 관련된 추가 정보를 제공합니다. 쿼리에 대한 응답이 샌드박스에 어떻게 적용되는지 보려면 을 선택합니다. **[!UICONTROL 샌드박스에서].**
+이 예에서 AI Assistant는 총 수 및 가장 일반적으로 사용되는 5개 필드를 포함하여 샌드박스의 기존 XDM 스키마에 대한 추가 정보를 반환합니다.
 
-이 단계에서 AI 도우미는 해당 특정 오브젝트의 UI 페이지로 직접 연결되는 링크를 제공할 수 있습니다. 아래 예에서 AI 어시스턴트는 [!UICONTROL 스키마] 및 [!UICONTROL 세그먼트] UI 페이지.
-
-![&quot;샌드박스에서&quot; 옵션의 스크린샷입니다.](./images/ai-assistant/in-your-sandbox.png)
+![&quot;샌드박스에서&quot; 드롭다운 창이 열리고 스키마에 대한 추가 정보가 표시됩니다.](./images/ai-assistant/in-your-sandbox.png)
 
 +++
 
-### 응답 확인 {#verify-the-response}
+### 인용 보기 {#view-citations}
+
+모든 답변에 사용할 수 있는 인용을 검토하여 AI 도우미가 반환한 답변을 확인할 수 있습니다.
 
 +++소스 표시 방법의 예를 보려면 선택
 
-인용을 보고 AI Assistant의 응답을 확인하려면 다음을 선택합니다. **[!UICONTROL 소스 표시]**. AI Assistant는 해당 응답을 확증하는 설명서에 대한 링크를 제공합니다. AI Assistant에서 제공하는 쿼리를 사용할 수도 있습니다 [!UICONTROL 관련 제안] 원본 쿼리와 관련된 항목을 더 자세히 살펴보십시오.
+인용을 보고 AI Assistant의 응답을 확인하려면 다음을 선택합니다. **[!UICONTROL 소스 표시]**.
 
-![&quot;소스 표시&quot;의 스크린샷.](./images/ai-assistant/show-sources.png)
+![&quot;소스 표시&quot;가 선택된 AI 비서 응답.](./images/ai-assistant/show-sources.png)
+
+AI Assistant는 인터페이스를 업데이트하며 초기 응답을 확증하는 설명서 링크를 제공합니다. 또한 인용이 활성화되면 AI Assistant는 제공된 설명서를 참조하는 답변의 특정 부분을 나타내기 위해 각주를 포함하도록 응답을 업데이트합니다.
+
+![AI Assistant에서 개념 질문에 대해 제공하는 인용의 드롭다운 메뉴.](./images/ai-assistant/citations.png)
+
+AI Assistant에서 제공하는 쿼리를 사용할 수도 있습니다 **[!UICONTROL 관련 제안]** 원본 쿼리와 관련된 항목을 더 자세히 살펴보십시오.
+
+![관련 제안으로 AI Assistant에서 제공하는 쿼리 목록입니다.](./images/ai-assistant/related-suggestions.png)
 
 +++
 
 ### 사용 데이터 및 시각화 {#usage-data-and-visualization}
 
+AI Assistant가 사용 데이터에 대한 질문에 충분히 응답하려면 활성 샌드박스에 있어야 합니다.
+
 +++사용 데이터 질문 및 데이터 시각화의 예를 보려면 선택
 
-AI Assistant가 조직 내 사용 데이터에 대한 쿼리에 응답하려면 활성 샌드박스에 있어야 합니다.
+아래 예에서는 AI Assistant에 다음 쿼리가 표시됩니다. **&quot;Amazon S3 소스를 사용하여 생성된 데이터 흐름 표시&quot;**&#x200B;그러면 AI Assistant가 데이터 흐름 및 해당 ID를 나열하는 표에 응답합니다. 전체 데이터 테이블을 보려면 오른쪽 상단의 확장 아이콘을 선택합니다.
 
-아래 예에서는 AI Assistant에 다음 쿼리가 제공됩니다. **&quot;1000개 이상의 프로필이 있는 세그먼트 정의를 표시하고 활성화 상태를 포함합니다.&quot;** 그런 다음 AI Assistant가 세그먼트 및 프로필 데이터를 시각화하는 차트로 응답합니다.
+![사용 데이터에 대한 후속 질문입니다.](./images/ai-assistant/usage-data-question.png)
 
-![사용 데이터에 대한 후속 질문입니다.](./images/ai-assistant/data-usage-question.png)
+확장된 테이블 보기가 표시되어 쿼리의 매개 변수를 기반으로 보다 포괄적인 데이터 흐름 목록을 제공합니다.
 
-개별 막대에 마우스를 가져다 대면 특정 데이터를 볼 수 있습니다. 확장 아이콘을 선택하여 차트를 더 크게 볼 수도 있습니다.
+![확장된 테이블 보기.](./images/ai-assistant/table.png)
 
-![데이터 시각화를 보여 주는 후속 질문입니다.](./images/ai-assistant/data-visualization.png)
+사용 데이터 질문을 묻는 메시지가 표시되면 AI 어시스턴트가 답을 계산하는 방법에 대한 설명을 제공합니다. 아래 예에서 AI Assistant는 를 사용하여 생성된 데이터 흐름을 식별하기 위해 수행한 단계에 대해 간략하게 설명합니다. [!DNL Amazon S3] 소스.
 
-시각화의 확장된 보기가 나타납니다. 확장된 모달을 사용하여 데이터를 추가로 검사할 수 있으며, 시각화가 많은 열을 반환할 때 특히 유용합니다.
+![AI Assistant가 응답을 계산한 방법을 보여 주는 세그먼트 정의에 대한 후속 질문입니다.](./images/ai-assistant/answer-explained.png)
 
-![확장된 차트입니다.](./images/ai-assistant/chart-expanded.png)
-
-사용 데이터 질문을 묻는 메시지가 표시되면 AI 어시스턴트가 답을 계산하는 방법에 대한 설명을 제공합니다. 아래 예에서 AI Assistant는 1000개 이상의 프로필과 각각의 활성화 상태가 있는 세그먼트 정의를 표시하기 위해 수행한 단계를 간략하게 설명합니다.
-
-![AI Assistant가 응답을 계산한 방법을 보여 주는 세그먼트 정의에 대한 후속 질문입니다.](./images/ai-assistant/results-explained.png)
-
-쿼리에 필터 및 수정 사항을 제공할 수도 있으며, 포함하는 필터를 기반으로 검색 결과를 렌더링하도록 AI Assistant에 지시할 수 있습니다. 예를 들어, AI 도우미에 카운트 세그먼트 정의의 트렌드를 만들어진 날짜 순서로 표시하도록 요청하고, 총 프로필이 0인 세그먼트 정의를 제거하고, 데이터를 표시할 때 정수 대신 월 이름을 사용할 수 있습니다.
+쿼리에 필터 및 수정 사항을 제공할 수도 있으며, 포함하는 필터를 기반으로 검색 결과를 렌더링하도록 AI Assistant에 지시할 수 있습니다. 예를 들어, AI Assistant에 생성된 날짜 순서로 세그먼트 정의 수 트렌드를 보여 달라고 요청하고, 총 프로필이 0인 세그먼트 정의를 제거하고, 데이터를 표시할 때 정수 대신 월 이름을 사용할 수 있습니다.
 
 +++
 
 ### 자동 완성 사용 {#use-auto-complete}
 
-+++자동 완성의 예를 보려면 선택
-
 자동 완성 기능을 사용하여 샌드박스에 있는 데이터 객체 목록을 수신할 수 있습니다. 자동 완성 권장 사항은 대상자, 스키마, 데이터 세트, 소스 및 대상 도메인에서 사용할 수 있습니다.
+
++++자동 완성의 예를 보려면 선택
 
 더하기 기호()를 포함하여 자동 완성을 사용할 수 있습니다&#x200B;**`+`**)을 클릭하여 검색할 수 있습니다. 또는 더하기 기호(**`+`**)를 입력합니다. 샌드박스의 권장 데이터 개체 목록이 표시된 창이 나타납니다.
 
-![자동 완성의 예](./images/ai-assistant/auto-complete-one.png)
-
-그런 다음 쿼리할 데이터 개체를 선택하여 질문을 완료한 다음 질문을 제출합니다.
-
-![질문 및 답변이 포함된 자동 완성의 예](./images/ai-assistant/auto-complete-two.png)
+![자동 완성의 예](./images/ai-assistant/autocomplete.png)
 
 +++
 
 ### 멀티턴 사용 {#use-multi-turn}
 
-+++다중 회전의 예를 보려면 선택
-
 AI 어시스턴트의 멀티턴 기능을 활용해 경험 중 보다 자연스러운 대화가 가능하다. 주어진 후속 질문에 AI 비서가 답변할 수 있습니다. 그 맥락은 이전의 상호 작용으로부터 추론될 수 있다.
 
-아래 예에서는 AI Assistant에 현재 조직의 총 데이터 흐름 수가 요청되었습니다.
++++다중 회전의 예를 보려면 선택
 
-![다중 회전의 예](./images/ai-assistant/multi-turn-one.png)
+아래 예에서는 먼저 AI Assistant에 총 데이터 흐름 수를 요청한 다음 가장 최근 데이터 흐름 10개를 나열하라는 메시지가 표시됩니다.
 
-다음으로 AI 어시스턴트가 또 다른 후속 요청을 받는다. 이번에는 AI 도우미가 조직에 현재 존재하는 데이터 흐름을 나열하여 응답합니다.
+![다중 회전의 예](./images/ai-assistant/multi-turn.png)
 
-![질문과 대답이 있는 다중 회전의 예](./images/ai-assistant/multi-turn-two.png)
++++
+
+## 피드백 제공 {#feedback}
+
+답변이 제공된 옵션을 사용하여 AI Assistant에서 사용자 경험에 대한 피드백을 제공할 수 있습니다.
+
+피드백을 제공하려면 AI Assistant의 응답을 받은 후 엄지손가락 위로, 엄지손가락 아래로 또는 플래그를 선택한 다음 제공된 텍스트 상자에 피드백을 입력합니다.
+
+![AI 지원의 피드백 옵션.](./images/ai-assistant/provide-feedback.png)
+
+
++++더 많은 예제를 보려면 선택
+
+>[!BEGINTABS]
+
+>[!TAB 엄지 손가락 위로]
+
+썸네일 위로 아이콘을 선택하여 AI 어시스턴트와 함께 경험한 것에 대한 피드백을 제공합니다.
+
+![긍정적인 피드백 창.](./images/ai-assistant/thumbs-up.png)
+
+>[!TAB 엄지 손가락 아래로]
+
+썸네일 아래쪽 아이콘을 선택하여 AI Assistant에 대한 경험을 기반으로 개선될 수 있는 사항에 대한 피드백을 제공합니다. 이 단계에서 경험에 대한 특정 설명을 제공할 수도 있습니다. 의견에 제공된 피드백은 매일 검토됩니다.
+
+![부정적 피드백 창.](./images/ai-assistant/thumbs-down.png)
+
+>[!TAB 플래그]
+
+플래그 아이콘을 선택하여 AI Assistant를 사용한 사용자 경험에 대한 추가 보고서를 제공합니다.
+
+![보고서 결과 창.](./images/ai-assistant/flag.png)
+
+>[!ENDTABS]
 
 +++
 
@@ -261,44 +295,6 @@ AI Assistant에 질문을 할 때 따라야 할 모범 사례에 대한 추가 �
 
 {style="table-layout:auto"}
 
-## 피드백 제공 {#feedback}
-
->[!BEGINSHADEBOX]
-
-**피드백이 요청되었습니다.**
-
-이 Alpha 단계에서 AI Assistant로부터 받은 응답에 대한 피드백을 제공할 수 있습니다. AI Assistant 경험을 지속적으로 개선하기 위해 모든 응답 및 제출된 피드백을 검토합니다.
-
-피드백을 제공하려면 AI Assistant의 응답을 받은 후 엄지손가락을 위로 또는 아래로 선택한 다음 제공된 텍스트 상자에 피드백을 입력합니다. 그런 다음 을 선택합니다. **[!UICONTROL 피드백 제출]** 제출합니다.
-
->[!ENDSHADEBOX]
-
-+++피드백 제공
-
->[!BEGINTABS]
-
->[!TAB 엄지 손가락 위로]
-
-썸네일 위로 아이콘을 선택하여 AI 어시스턴트와 함께 경험한 것에 대한 피드백을 제공합니다.
-
-![긍정적인 피드백 창.](./images/ai-assistant/thumbs-up.png)
-
->[!TAB 엄지 손가락 아래로]
-
-썸네일 아래쪽 아이콘을 선택하여 AI Assistant에 대한 경험을 기반으로 개선될 수 있는 사항에 대한 피드백을 제공합니다. 이 단계에서 경험에 대한 특정 설명을 제공할 수도 있습니다. 의견에 제공된 피드백은 매일 검토됩니다.
-
-![부정적 피드백 창.](./images/ai-assistant/thumbs-down.png)
-
->[!TAB 플래그]
-
-플래그 아이콘을 선택하여 AI Assistant를 사용한 사용자 경험에 대한 추가 보고서를 제공합니다.
-
-![보고서 결과 창.](./images/ai-assistant/flag.png)
-
->[!ENDTABS]
-
-+++
-
 ## 추가 정보 {#additional-information}
 
 AI Assistant for Experience Platform에 대한 자세한 내용은 이 섹션 을 참조하십시오.
@@ -315,27 +311,32 @@ AI Assistant를 사용하여 잡담도 할 수 있지만 이 용량은 현재 �
 
 AI 도우미가 수행할 수 있는 작업에 대해 부정확한 인상을 줄 수 있습니다. 다음 유형의 질문에 잘못 답변할 수 있습니다.
 
-| 예제 질문 | 참고 |
+| 예제 질문 | 참고 사항 |
 | --- | --- |
 | &quot;다음 질문에 답변할 수 있습니까? {ENTITY}?&quot; | AI 도우미가 색인에서 지정된 엔티티를 참조하는 단일 페이지를 찾을 수 있는 한 예 로 응답합니다. |
 | &quot;혹시... **x** 언어?&quot; | AI 어시스턴트는 현재 영어만 지원하지만, 기본 모델이 지원할 수 있어 &#39;예&#39;라고 답할 수도 있다. |
 | &quot;할 수 있어?&quot; | AI 도우미가 아니더라도 예라고 답할 수 있습니다. |
 
-### 팁 {#tips}
+## FAQ {#faq}
 
-다음 섹션에서는 AI Assistant 사용 시 고려해야 할 몇 가지 팁과 해결 방법에 대해 간략하게 설명합니다.
+다음은 AI Assistant와 관련하여 자주 묻는 질문에 대한 답변 목록입니다.
 
-#### 잘못된 정보 출처로 질문에 대한 응답이 있을 수 있습니다
+### AI 비서 정보가 실시간으로 제공됩니까?
 
-사용 데이터에 대한 질문이 설명서를 기반으로 답변을 도출하는 경우가 있습니다. AI 어시스턴트가 질문을 잘못된 정보 소스로 잘못 라우팅할 수 있기 때문이다. 다음을 수행하여 이를 방지할 수 있습니다.
+AI 비서 응답에 제시된 데이터는 매일 업데이트됩니다. 즉, 응답의 데이터는 응답 시 Experience Platform 사용자 인터페이스에 표시될 수 있는 데이터보다 최대 24시간 더 오래될 수 있습니다.
 
-* 더 많은 SQL 유사 언어를 사용하도록 질문 구문 변경
-* 사용할 정보 소스를 명시적으로 호출합니다.
+### AI Assistant는 어떤 Adobe 애플리케이션을 지원합니까?
 
-예를 보려면 아래 표를 참조하십시오.
+AI Assistant는 Adobe Experience Platform, Real-time Customer Data Platform 및 Adobe Journey Optimizer 개념 질문을 지원합니다. 데이터 사용 관련 질문의 경우 AI Assistant는 현재 Real-Time CDP 데이터 객체만 지원합니다.
 
-| 나쁜 질문 | 좋은 질문 | 참고 |
-| --- | --- | --- |
-| 가장 큰 대상은 어디입니까? | 가장 큰 대상은 어디입니까? 데이터 사용. | 답변이 데이터를 기반으로 하도록 AI 도우미에 명시적으로 지시합니다. |
-| 가장 큰 대상은 어디입니까? | 내 가장 큰 대상을 나열합니다. | &quot;...&quot;라는 질문이 문서 기반 질문으로 오인될 수 있는 경우가 있습니다. &quot;list&quot;와 같은 명령을 사용하는 것은 컨텍스트에 있는 데이터로 질문을 하는 것이 더 강력합니다. |
-| 보유한 데이터 세트는 몇 개입니까? | 내 데이터 세트를 카운트합니다. | 원래 질문은 대상에 대해 작동하지만 데이터 세트에서는 작동하지 않을 수 있습니다. |
+### AI Assistant의 기능은 무엇입니까?
+
+AI 어시스턴트가 Adobe 개념 쿼리를 처리할 수 있고 Experience Platform 오브젝트 사용과 관련된 질문에 답변할 수 있다. (예: &quot;활성화된 대상이 몇 명입니까?&quot;)
+
+### AI 어시스턴트가 프로필 데이터에 대한 정보를 제공할 수 있습니까?
+
+아니요. AI Assistant는 프로필 수준 데이터에 액세스할 수 없습니다.
+
+### AI Assistant의 교육 데이터에 내 개인 정보가 활용됩니까?
+
+AI 어시스턴트는 개인정보를 교육 목적으로 활용하지 않습니다. 본인(이름 또는 연락처 정보 포함) 또는 다른 당사자에 대한 개인 정보를 AI Assistant에 제공하지 마십시오.
