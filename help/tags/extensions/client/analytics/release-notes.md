@@ -2,10 +2,10 @@
 title: Adobe Analytics 확장 기능 릴리스 노트
 description: Adobe Experience Platform의 Adobe Analytics 태그 확장 기능에 대한 최신 릴리스 정보입니다.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: a49e0fe6c99f2874a9ca8403c4b69428826a6365
+source-git-commit: fbb8e2e7944fc6ef5be6fb0c6dc0ef256ca65b77
 workflow-type: tm+mt
-source-wordcount: '1416'
-ht-degree: 81%
+source-wordcount: '1438'
+ht-degree: 69%
 
 ---
 
@@ -15,11 +15,19 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->Analytics 태그 확장(종종 업데이트에 대한 응답으로 업데이트되는 경우) [AppMeasurement JavaScript 라이브러리](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR). 다음을 참조하십시오. [AppMeasurement 릴리스 노트](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) 아래에 언급된 특정 버전에 대한 자세한 내용.
+>Analytics 태그 확장(종종 업데이트에 대한 응답으로 업데이트되는 경우) [AppMeasurement JavaScript 라이브러리](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR). 다음을 참조하십시오. [AppMeasurement 릴리스 노트](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ko-KR) 아래에 언급된 특정 버전에 대한 자세한 내용.
+
+## 2024년 3월 4일
+
+**Adobe Analytics 확장 1.9.4**
+
+**기능**:
+
+* 으로 업그레이드됨 [v2.26.0으로 AppMeasurement](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
 
 ## 2023년 9월 15일
 
-**Adobe Analytics Extension 1.9.3**
+**Adobe Analytics 확장 1.9.3**
 
 **기능**:
 
@@ -28,7 +36,7 @@ ht-degree: 81%
 
 ## 2023년 7월 19일
 
-**Adobe Analytics Extension 1.9.2**
+**Adobe Analytics 확장 1.9.2**
 
 **기능**:
 
@@ -36,12 +44,13 @@ ht-degree: 81%
 * 선택적 구성(`decodeLinkParameters` 기본값 `false`)는 더블바이트로 인코딩된 문자가 포함된 링크 URL을 디코딩합니다.
 
 **버그 수정**:
+
 * 높은 엔트로피가 잘못된 브라우저에 대한 추가 오류 처리가 추가되었습니다. [사용자 에이전트 클라이언트 힌트](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API입니다.
 * 변경됨 [POST](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Methods/POST) 사용할 Content-Type 헤더 `x-www-form-urlencoded` 기본적으로.
 
 ## 2022년 9월 23일
 
-**Adobe Analytics Extension 1.9.1**
+**Adobe Analytics 확장 1.9.1**
 
 **기능**:
 
@@ -50,15 +59,15 @@ ht-degree: 81%
 
 ## 2022년 2월 28일
 
-**Adobe Analytics Extension 1.9.0**
+**Adobe Analytics 확장 1.9.0**
 
 **버그 수정**:
 
 * AppMeasurement에서 일부 디버그 문을 제거했습니다.
 
-## 2021년 11월 29일
+## 2021년 11월 29일 화요일
 
-**Adobe Analytics Extension 1.8.8**
+**Adobe Analytics 확장 1.8.8**
 
 **버그 수정**:
 
@@ -66,7 +75,7 @@ ht-degree: 81%
 
 ## 2021년 9월 16일
 
-**Adobe Analytics Extension 1.8.7**
+**Adobe Analytics 확장 1.8.7**
 
 **버그 수정**:
 
@@ -75,16 +84,16 @@ ht-degree: 81%
 
 ## 2021년 8월 24일
 
-**Adobe Analytics Extension 1.8.6**
+**Adobe Analytics 확장 1.8.6**
 
 **버그 수정**:
 
-* 업그레이드됨 [v2.22.1로 AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* 업그레이드됨 [v2.22.1로 AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ko-KR).
 * innerHTML을 사용하는 대신 미러 Activity Map 논리를 위한 폴백 linkName이 업데이트되었습니다.
 
 ## 2020년 8월 6일
 
-**Adobe Analytics Extension 1.8.5**
+**Adobe Analytics 확장 1.8.5**
 
 **버그 수정**:
 
@@ -92,12 +101,12 @@ ht-degree: 81%
 
 **기능**:
 
-* [AppMeasurement가 2.22.0로](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) 업데이트됨.
+* [AppMeasurement가 2.22.0로](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ko-KR) 업데이트됨.
 * 이제 추가 설정이 확인란 대신 아코디언에서 축소되도록 UI에 적게 변경되었습니다.
 
 ## 2020년 6월 2일
 
-**Adobe Analytics Extension 1.8.4**
+**Adobe Analytics 확장 1.8.4**
 
 **버그 수정**:
 
@@ -111,7 +120,7 @@ ht-degree: 81%
 
 ## 2020년 3월 10일
 
-**Adobe Analytics Extension 1.8.3**
+**Adobe Analytics 확장 1.8.3**
 
 **버그 수정**:
 
@@ -120,11 +129,11 @@ ht-degree: 81%
 
 **기능**:
 
-* [AppMeasurement가 2.20.0으로](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) 업데이트됨
+* [AppMeasurement가 2.20.0으로](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ko-KR) 업데이트됨
 
 ## 2020년 3월 2일
 
-**Adobe Analytics Extension 1.8.2**
+**Adobe Analytics 확장 1.8.2**
 
 **버그 수정**:
 
@@ -132,7 +141,7 @@ ht-degree: 81%
 
 **기능**:
 
-* [AppMeasurement가 2.18.0으로](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) 업데이트됨
+* [AppMeasurement가 2.18.0으로](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ko-KR) 업데이트됨
 * Audience Manager 모듈의 DIL 라이브러리가 9.4로 업데이트됨
 * 확장 프로그램의 입력 필드 길이가 늘어남
 * 이제 확장 및 작업 구성의 eVar 및 속성에 Analytics의 친숙한 이름이 표시됩니다.
@@ -141,7 +150,7 @@ ht-degree: 81%
 
 ## 2019년 11월 13일
 
-**Adobe Analytics Extension 1.8.1**
+**Adobe Analytics 확장 1.8.1**
 
 **버그 수정**:
 
@@ -149,7 +158,7 @@ ht-degree: 81%
 
 ## 2019년 11월 1일
 
-**Adobe Analytics Extension 1.8.0**
+**Adobe Analytics 확장 1.8.0**
 
 **버그 수정**:
 
@@ -163,7 +172,7 @@ ht-degree: 81%
 
 ## 2019년 9월 6일
 
-**Adobe Analytics Extension 1.7.8**
+**Adobe Analytics 확장 1.7.8**
 
 **버그 수정**:
 
@@ -172,7 +181,7 @@ ht-degree: 81%
 
 ## 2019년 9월 5일
 
-**Adobe Analytics Extension 1.7.7**
+**Adobe Analytics 확장 1.7.7**
 
 **기능**:
 
@@ -187,7 +196,7 @@ ht-degree: 81%
 
 ## 2019년 7월 18일
 
-**Adobe Analytics Extension 1.7.6**
+**Adobe Analytics 확장 1.7.6**
 
 **기능**:
 
@@ -198,7 +207,7 @@ ht-degree: 81%
 
 ## 2019년 6월 4일
 
-**Adobe Analytics Extension 1.7.5**
+**Adobe Analytics 확장 1.7.5**
 
 **기능**:
 
@@ -212,7 +221,7 @@ ht-degree: 81%
 
 ## 2019년 4월 15일
 
-**Adobe Analytics Extension 1.7.4**
+**Adobe Analytics 확장 1.7.4**
 
 **버그 수정**:
 
@@ -220,7 +229,7 @@ ht-degree: 81%
 
 ## 2019년 4월 12일
 
-**Adobe Analytics Extension 1.7.3**
+**Adobe Analytics 확장 1.7.3**
 
 **버그 수정**:
 
@@ -228,7 +237,7 @@ ht-degree: 81%
 
 ## 2019년 3월 21일
 
-**Adobe Analytics Extension 1.7.2**
+**Adobe Analytics 확장 1.7.2**
 
 **기능**:
 
@@ -239,7 +248,7 @@ ht-degree: 81%
 
 ## 2019년 3월 7일
 
-**Adobe Analytics Extension 1.7.1**
+**Adobe Analytics 확장 1.7.1**
 
 **버그 수정**:
 
@@ -247,7 +256,7 @@ ht-degree: 81%
 
 ## 2019년 2월 11일
 
-**Adobe Analytics Extension 1.6**
+**Adobe Analytics 확장 1.6**
 
 **기능**:
 
@@ -260,7 +269,7 @@ ht-degree: 81%
 
 ## 2018년 11월 9일
 
-**Adobe Analytics Extension 1.5.1**
+**Adobe Analytics 확장 1.5.1**
 
 **버그 수정**:
 
@@ -268,7 +277,7 @@ ht-degree: 81%
 
 ## 2018년 11월 5일
 
-**Adobe Analytics Extension 1.5**
+**Adobe Analytics 확장 1.5**
 
 **기능**:
 
@@ -282,7 +291,7 @@ ht-degree: 81%
 
 ## 2018년 10월 11일
 
-**Adobe Analytics Extension 1.4**
+**Adobe Analytics 확장 1.4**
 
 **기능**:
 
@@ -294,7 +303,7 @@ ht-degree: 81%
 
 ## 2018년 6월 5일
 
-**Adobe Analytics Extension 1.3**
+**Adobe Analytics 확장 1.3**
 
 **기능**:
 
@@ -309,7 +318,7 @@ ht-degree: 81%
 
 ## 2018년 3월 20일
 
-**Adobe Analytics Extension 1.2**
+**Adobe Analytics 확장 1.2**
 
 **기능**:
 
@@ -318,7 +327,7 @@ ht-degree: 81%
 
 ## 2018년 2월 8일
 
-**Adobe Analytics Extension 1.1**
+**Adobe Analytics 확장 1.1**
 
 **기능**:
 
