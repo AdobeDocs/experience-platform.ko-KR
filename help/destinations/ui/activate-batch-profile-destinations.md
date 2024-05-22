@@ -3,10 +3,10 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
+source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
 workflow-type: tm+mt
-source-wordcount: '3879'
-ht-degree: 11%
+source-wordcount: '3937'
+ht-degree: 1%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 11%
 
 대상을 내보낼 때 다음 파일 형식이 지원됩니다.
 
-* CSV로 내보내기
+* CSV
 * JSON
 * 쪽모이 세공
 
@@ -105,18 +105,18 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="파일 내보내기 옵션"
->abstract="**전체 파일 내보내기**&#x200B;를 선택하여 대상자 조건에 적합한 모든 프로필의 전체 스냅샷을 내보냅니다. **증분 파일 내보내기**&#x200B;를 선택하여 마지막 내보내기 이후 대상자 조건에 적합한 프로필만 내보냅니다. <br>첫 번째 증분 파일 내보내기에는 채우기 역할을 하는 대상자에 적합한 모든 프로필이 포함됩니다. 향후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 대상자 조건에 적합한 프로필만 포함됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko-KR#export-incremental-files" text="증분 파일 내보내기"
+>abstract="선택 **전체 파일 내보내기** 을 클릭하여 대상에 적합한 모든 프로필의 전체 스냅샷을 내보냅니다. 선택 **증분 파일 내보내기** 마지막 내보내기 이후 대상에 적합한 프로필만 내보냅니다. <br> 첫 번째 증분 파일 내보내기에는 백필 역할을 하는 대상에 적합한 모든 프로필이 포함됩니다. 이후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 대상자에 적합한 프로필만 포함됩니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="증분 파일 내보내기"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="대상자 평가 후 활성화"
->abstract="일별 세분화 작업이 완료되면 활성화가 실행됩니다. 이렇게 하면 최신 프로필을 내보낼 수 있습니다."
+>title="대상 평가 후 활성화"
+>abstract="활성화는 일별 세그먼테이션 작업이 완료된 후 즉시 실행됩니다. 이렇게 하면 최신 프로필을 내보낼 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
 >title="예약된 활성화"
->abstract="하루 중 고정된 시간에 활성화가 실행됩니다."
+>abstract="활성화는 하루 중 고정된 시간에 실행됩니다."
 
 선택 **[!UICONTROL 전체 파일 내보내기]** 선택한 대상에 대한 모든 프로필 자격의 전체 스냅샷이 포함된 파일 내보내기를 트리거합니다.
 
@@ -155,7 +155,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
 >title="파일 이름 구성"
->abstract="파일 기반 대상의 경우 고유 파일 이름이 대상자당 생성됩니다. 파일 이름 편집기를 사용하여 고유 파일 이름을 만들고 편집하거나 기본 이름을 유지할 수 있습니다."
+>abstract="파일 기반 대상의 경우 대상별로 고유한 파일 이름이 생성됩니다. 파일 이름 편집기를 사용하여 고유한 파일 이름을 만들고 편집하거나 기본 이름을 유지합니다."
 
 선택 **[!UICONTROL 증분 파일 내보내기]** 첫 번째 파일이 선택한 대상에 대한 모든 프로필 자격의 전체 스냅샷이고 후속 파일이 이전 내보내기 이후 증분 프로필 자격인 내보내기를 트리거합니다.
 
@@ -185,7 +185,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="파일 이름 구성"
->abstract="파일 기반 대상의 경우 고유 파일 이름이 대상자당 생성됩니다. 파일 이름 편집기를 사용하여 고유 파일 이름을 만들고 편집하거나 기본 이름을 유지할 수 있습니다."
+>abstract="파일 기반 대상의 경우 대상별로 고유한 파일 이름이 생성됩니다. 파일 이름 편집기를 사용하여 고유한 파일 이름을 만들고 편집하거나 기본 이름을 유지합니다."
 
 대부분의 대상에 대해 기본 파일 이름은 대상 이름, 대상 ID 및 날짜 및 시간 표시기로 구성됩니다. 예를 들어 내보낸 파일 이름을 편집하여 서로 다른 캠페인을 구별하거나 데이터 내보내기 시간을 파일에 추가할 수 있습니다. 일부 대상 개발자는 대상에 대해 다른 기본 파일 이름 추가 옵션이 표시되도록 선택할 수 있습니다.
 
@@ -256,7 +256,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
    ![대상으로 내보낼 수 있는 프로필 속성을 보여 주는 모달 창.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
 
-1. [!BADGE Beta]{type=Informative}
+1. (선택 사항) UI에 있는 매핑된 필드의 순서는 내보낸 CSV 파일의 열 순서에 따라 위에서 아래로 반영되며, 맨 위 행은 CSV 파일의 가장 왼쪽 열입니다. 아래 표시된 대로 매핑 행을 끌어서 놓아 매핑된 필드를 원하는 방식으로 재정렬할 수 있습니다.
 
    >[!NOTE]
    >
@@ -275,7 +275,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
 >title="필수 속성 정보"
->abstract="내보낸 모든 프로필에 포함되어야 하는 XDM 스키마 속성을 선택합니다. 필수 키가 없는 프로필은 대상으로 내보내지 않습니다. 필수 키를 선택하지 않으면 속성과 관계없이 모든 적격 프로필을 내보냅니다."
+>abstract="내보낸 모든 프로필에 포함되어야 하는 XDM 스키마 속성을 선택합니다. 필수 키가 없는 프로필은 대상으로 내보내지 않습니다. 필수 키를 선택하지 않으면 속성에 관계없이 모든 적격 프로필을 내보냅니다."
 
 필수 속성은 모든 프로필 레코드에 선택한 속성이 포함되도록 하는 사용자가 사용할 수 있는 확인란입니다. 예를 들어 내보낸 모든 프로필에는 이메일 주소가 포함됩니다&#x200B;.
 
@@ -289,8 +289,8 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
->title="중복 제거 키 정보"
->abstract="중복 제거 키를 선택하여 내보내기 파일에서 동일한 여러 프로필의 레코드를 제거합니다. 단일 네임스페이스 또는 최대 2개의 XDM 스키마 속성을 중복 제거 키로 선택합니다. 중복 제거 키를 선택하지 않으면 내보내기 파일에서 프로필 항목이 중복될 수 있습니다."
+>title="중복 제거 키 기본 정보"
+>abstract="중복 제거 키를 선택하여 내보내기 파일에서 동일한 프로필의 여러 레코드를 제거합니다. 단일 네임스페이스 또는 최대 2개의 XDM 스키마 속성을 중복 제거 키로 선택합니다. 중복 제거 키를 선택하지 않으면 내보내기 파일에서 프로필 항목이 중복될 수 있습니다."
 
 중복 제거 키는 사용자가 프로필을 중복 제거할 ID를 결정하는 사용자 정의 기본 키입니다&#x200B;.
 
@@ -505,8 +505,8 @@ Adobe Experience Platform은 스키마에서 일반적으로 사용되는 네 �
 [!CONTEXTUALHELP]
 id="platform_destinations_activate_exclude_enrichment_attributes"
 title="보강 속성 제외"
-abstract="모든 속성을 제외하고 선택한 사용자 정의 업로드된 대상자의 프로필을 대상으로 내보내려면 이 옵션을 활성화합니다."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko-KR#select-enrichment-attributes" text="설명서에서 자세히 알아보기"
+abstract="이 옵션을 활성화하면 모든 특성을 제외하면서 선택한 사용자 지정 업로드 대상자의 프로필을 대상으로 내보냅니다."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="설명서에서 자세히 알아보기"
 
 >[!IMPORTANT]
 >
@@ -533,7 +533,7 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/dest
 
 선택 **[!UICONTROL 다음]** 로 이동 [리뷰](#review) 단계.
 
-## 리뷰 {#review}
+## 검토 {#review}
 
 다음에서 **[!UICONTROL 리뷰]** 페이지에서 선택 사항의 요약을 볼 수 있습니다. 선택 **[!UICONTROL 취소]** 흐름을 끊으려면, **[!UICONTROL 뒤로]** 설정을 수정하려면 **[!UICONTROL 완료]** 을 클릭하여 선택 항목을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
@@ -544,9 +544,9 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/dest
 [!CONTEXTUALHELP]
 id="platform_governance_policies_viewApplicableConsentPolicies"
 title="해당 동의 정책 보기"
-abstract="조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;를 구매한 경우 **[!UICONTROL 해당 동의 정책 보기]**&#x200B;를 선택하여 적용된 동의 정책을 조회하고 그 결과로 활성화에 포함된 프로필 수를 확인합니다. 기업이 위에서 언급한 SKU에 액세스할 수 없는 경우 이 컨트롤은 비활성화됩니다."
+abstract="조직이 구매한 경우 **Adobe 헬스케어 실드** 또는 **Adobe 개인정보 보호 및 보안 실드**, 선택 **[!UICONTROL 해당 동의 정책 보기]** 을 클릭하여 적용되는 동의 정책 및 그 결과로 활성화에 포함되는 프로필 수를 확인합니다. 회사에서 위에 언급된 SKU에 액세스할 수 없는 경우 이 제어가 비활성화됩니다."
 
-조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;를 구매한 경우 **[!UICONTROL 해당 동의 정책 보기]**&#x200B;를 선택하여 적용된 동의 정책을 조회하고 그 결과로 활성화에 포함된 프로필 수를 확인합니다. 읽어보기 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 추가 정보.
+조직이 구매한 경우 **Adobe 헬스케어 실드** 또는 **Adobe 개인정보 보호 및 보안 실드**, 선택 **[!UICONTROL 해당 동의 정책 보기]** 을 클릭하여 적용되는 동의 정책 및 그 결과로 활성화에 포함되는 프로필 수를 확인합니다. 읽어보기 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 추가 정보.
 
 ### 데이터 사용 정책 확인 {#data-usage-policy-checks}
 
