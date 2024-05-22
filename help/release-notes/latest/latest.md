@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 5월
 description: Adobe Experience Platform의 2024년 5월 릴리스 정보.
-source-git-commit: 85acffec03986cf56aeba6b8973ac1edf56a9cd6
+source-git-commit: 58de22b51bc721ec584b11e3f87c0ee210c0add5
 workflow-type: tm+mt
-source-wordcount: '1546'
-ht-degree: 19%
+source-wordcount: '1596'
+ht-degree: 18%
 
 ---
 
@@ -71,9 +71,9 @@ Adobe Experience Platform 데이터 거버넌스는 고객 데이터를 관리�
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| 배치 대상에 대한 매핑 필드 순서 바꾸기 | 이제 의 매핑 필드를 드래그 앤 드롭하여 CSV 내보내기의 열 순서를 변경할 수 있습니다. [매핑 단계](../../destinations/ui/activate-batch-profile-destinations.md#mapping). UI에서 매핑된 필드의 순서는 내보낸 CSV 파일의 열 순서에 따라 위에서 아래로 반영되며, 맨 위 행은 CSV 파일의 가장 왼쪽 열입니다. |
+| 배치 대상에 대한 매핑 필드 순서 바꾸기 | 이제 의 매핑 필드를 드래그 앤 드롭하여 CSV 내보내기의 열 순서를 변경할 수 있습니다. [매핑 단계](../../destinations/ui/activate-batch-profile-destinations.md#mapping). UI에서 매핑된 필드의 순서는 내보낸 CSV 파일의 열 순서에 따라 위에서 아래로 반영되며, 맨 위 행은 CSV 파일의 가장 왼쪽 열입니다. <br> ![매핑 순서를 변경하는 방법 보기](../2024/assets/may/reorder-mappings.gif "매핑 순서를 변경하는 방법 보기"){width="100" zoomable="yes"} |
 | 배치 대상에 대해 미리 선택된 기본 내보내기 일정 | 이제 Experience Platform이 각 파일 내보내기에 대한 기본 일정을 자동으로 설정합니다. 다음에서 설명서를 참조하십시오. [대상자 내보내기 예약](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) 기본 일정을 수정하는 방법을 알아봅니다. |
-| 배치 대상에 대한 여러 대상 활성화 일정 편집 | 이제에서 여러 대상에 대한 활성화 일정을 편집할 수 있습니다. [대상 세부 정보 페이지](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). |
+| 배치 대상에 대한 여러 대상 활성화 일정 편집 | 이제 의 배치(파일 기반) 대상으로 내보낸 여러 대상에 대한 활성화 일정을 편집할 수 있습니다 **[!UICONTROL 활성화 데이터]** 의 탭 [대상 세부 정보 페이지](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br> ![여러 대상자를 선택하고 파일 내보내기 일정을 편집하는 방법에 대해 알아봅니다.](../2024/assets/may/bulk-edit-schedule.gif "여러 대상자를 선택하고 파일 내보내기 일정을 편집하는 방법에 대해 알아봅니다."){width="100" zoomable="yes"} |
 | 주문형 여러 대상을 배치 대상으로 내보내기 | 이제 다음을 통해 여러 대상을 선택하여 배치 대상으로 내보낼 수 있습니다. [요청 시 파일 내보내기](../../destinations/ui/export-file-now.md) 기능. |
 
 {style="table-layout:auto"}
