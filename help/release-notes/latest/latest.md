@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 5월
 description: Adobe Experience Platform의 2024년 5월 릴리스 정보.
-source-git-commit: 58de22b51bc721ec584b11e3f87c0ee210c0add5
+source-git-commit: e02892a2cbf5f65a1b9a0eec49722896bd061084
 workflow-type: tm+mt
 source-wordcount: '1596'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
@@ -46,7 +46,7 @@ Adobe Experience Platform의 기타 업데이트:
 
 Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대한 중요한 인사이트를 볼 수 있는 여러 대시보드를 제공합니다.
 
-**새 기능 또는 업데이트된 기능**
+**새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
