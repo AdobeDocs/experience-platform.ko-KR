@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: 실시간 고객 프로필 안내서
-user-guide-description: 고객 데이터를 통합하여 다양한 채널에서 고객과의 상호 작용을 종합적으로 파악합니다.
+user-guide-description: 고객 데이터를 병합하여 채널 전반의 고객 상호 작용을 종합적으로 파악할 수 있습니다.
 feature: Profiles
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 23%
+source-wordcount: '132'
+ht-degree: 14%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 23%
 * [가장자리 프로필](edge-profiles.md)
 * [경험 이벤트 만료](event-expirations.md)
 * [익명 프로필 만료](pseudonymous-profiles.md)
+* [고객 타임스탬프 순서 지정](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
    * [개요](api/overview.md)
    * [시작하기](api/getting-started.md)
@@ -49,7 +50,7 @@ ht-degree: 23%
    * [실시간 고객 프로필에 데이터 추가](tutorials/add-profile-data.md)
    * [프로필에 대한 데이터 세트 구성](tutorials/dataset-configuration.md)
    * [데이터 세트 중복 보고서 생성](tutorials/dataset-overlap-report.md)
-   * [기타 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ko-KR)
+   * [기타 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [개인 정보 보호 요청 처리](privacy.md)
 * [[!DNL Profile] 문제 해결 안내서](troubleshooting.md)
 * [프로필 API 참조](https://www.adobe.com/go/profile-apis-en)
