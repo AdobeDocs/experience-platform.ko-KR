@@ -1,13 +1,13 @@
 ---
 title: sendEvent
-description: Adobe Experience Platform Edge Network로 데이터를 전송합니다.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Adobe Experience Platform Edge Network으로 데이터를 전송합니다.
+exl-id: 83de368d-78d4-4e28-aadd-afaea1ca091d
+source-git-commit: 9ea7b678f5cfa19c7fd1e3ba6633cdeed4084b18
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
 
 ---
-
 
 # `sendEvent`
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 ```js
 alloy("sendEvent", {
   "data": dataObject,
-  "documentUnloading": true,
+  "documentUnloading": false,
   "edgeConfigOverrides": { "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
   "renderDecisions": true,
   "type": "commerce.purchases",
@@ -46,4 +46,4 @@ alloy("sendEvent", {
 
 * **`propositions`**: Edge Network에서 반환되는 제안 배열. 자동으로 렌더링되는 제안에 플래그가 포함됩니다 `renderAttempted` 을 로 설정 `true`.
 * **`inferences`**: 이 사용자에 대한 머신 러닝 정보가 포함된 추론 개체의 배열입니다.
-* **`destinations`**: Edge Network에서 반환되는 대상 개체의 배열입니다.
+* **`destinations`**: Edge Network이 반환하는 대상 개체의 배열입니다.

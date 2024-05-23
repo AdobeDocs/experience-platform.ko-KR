@@ -1,16 +1,17 @@
 ---
 title: documentUnload
 description: JavaScript sendBeacon API를 사용하여 데이터를 Adobe으로 전송합니다.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 7683c0c4-ae2e-46ec-8471-628a10e17afc
+source-git-commit: f12d222e81a39a26bd71ab4bede05aa992889605
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 2%
+source-wordcount: '268'
+ht-degree: 0%
 
 ---
 
 # `documentUnloading`
 
-다음 `documentUnloading` 속성을 사용하면 JavaScript [`sendBeacon`](https://developer.mozilla.org/ko-KR/docs/Web/API/Navigator/sendBeacon) Adobe에 데이터를 보내는 방법. 일반적인 요청이 너무 오래 걸리는 경우 브라우저가 요청을 취소할 수 있습니다. 웹 SDK에 다음을 사용하도록 지시할 수 있습니다. `sendBeacon` 따라서 페이지에서 멀리 탐색한 후 요청이 백그라운드에서 실행됩니다. 데이터 요청을 언로드할 때 브라우저가 취소하지 않도록 하려면 이 속성을 활성화하십시오.
+다음 `documentUnloading` 속성을 사용하면 JavaScript [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) Adobe에 데이터를 보내는 방법. 일반적인 요청이 너무 오래 걸리는 경우 브라우저가 요청을 취소할 수 있습니다. 웹 SDK에 다음을 사용하도록 지시할 수 있습니다. `sendBeacon` 따라서 페이지에서 멀리 탐색한 후 요청이 백그라운드에서 실행됩니다. 데이터 요청을 언로드할 때 브라우저가 취소하지 않도록 하려면 이 속성을 활성화하십시오.
 
 일부 브라우저에서는 전송할 수 있는 데이터 양에 64KB의 제한을 부과합니다. `sendBeacon` 한 번에. 페이로드가 너무 크기 때문에 브라우저가 이벤트를 거부하면 웹 SDK는 일반적인 전송 메서드를 사용하는 것으로 돌아갑니다.
 
@@ -29,7 +30,11 @@ ht-degree: 2%
 
 ## 웹 SDK JavaScript 라이브러리를 사용하여 문서 언로드 구성
 
-설정 `documentUnloading` 를 실행할 때 부울 `sendEvent` 명령입니다. 기본값은 `false`입니다. 이 속성을 다음으로 설정 `true` 을(를) 사용하려면 `sendBeacon` Adobe에 데이터를 보내는 방법.
+설정 `documentUnloading` 를 실행할 때 부울 `sendEvent` 명령입니다. 기본값은 입니다 `false`. 이 속성을 다음으로 설정 `true` 을(를) 사용하려면 `sendBeacon` Adobe에 데이터를 보내는 방법.
+
+>[!IMPORTANT]
+>
+>다음 `documentUnloading` 속성이 과(와) 호환되지 않음 [`renderDecisions`](renderdecisions.md) 속성. 두 속성을 모두 로 설정하면 안 됩니다. `true` 동시에.
 
 ```js
 alloy("sendEvent", {

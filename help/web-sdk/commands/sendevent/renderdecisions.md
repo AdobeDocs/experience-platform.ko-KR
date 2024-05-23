@@ -1,9 +1,10 @@
 ---
 title: renderDecisions
 description: 자동 렌더링에 적합한 개인화된 콘텐츠를 렌더링합니다.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 6f7a3531-c2b6-4e90-a7ad-9f0fe4dc39e9
+source-git-commit: f12d222e81a39a26bd71ab4bede05aa992889605
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
@@ -28,6 +29,10 @@ ht-degree: 0%
 ## 웹 SDK JavaScript 라이브러리를 사용하여 개인화된 콘텐츠 렌더링
 
 설정 `renderDecisions` 를 실행할 때 부울 `sendEvent` 명령입니다. 생략하면 이 속성의 기본값은 `false`. 이 속성을 다음으로 설정 `true` 개인화된 콘텐츠를 자동으로 렌더링하려는 경우.
+
+>[!IMPORTANT]
+>
+>다음 `renderDecisions` 속성이 과(와) 호환되지 않음 [`documentUnloading`](documentunloading.md) 속성. 두 속성을 모두 로 설정하면 안 됩니다. `true` 동시에.
 
 ```js
 alloy("sendEvent", {
