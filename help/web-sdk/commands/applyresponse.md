@@ -1,7 +1,8 @@
 ---
 title: applyResponse
 description: Edge Network의 응답을 사용하여 웹 SDK를 초기화합니다.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 0653b8f7-33f0-43a1-97f5-59a51270f660
+source-git-commit: 74725546163f0807d3188aff5b5ffda9b8d6350b
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
@@ -10,7 +11,7 @@ ht-degree: 0%
 
 # `applyResponse`
 
-다음 `applyResponse` 명령을 사용하면 Edge Network의 응답을 기반으로 다양한 작업을 수행할 수 있습니다. 일반적으로 서버가 Edge Network를 처음 호출하는 하이브리드 배포에서 사용됩니다. 이 명령은 해당 호출에서 응답을 가져와 브라우저에서 웹 SDK를 초기화합니다.
+다음 `applyResponse` 명령을 사용하면 Edge Network의 응답에 따라 다양한 작업을 수행할 수 있습니다. 일반적으로 서버가 Edge Network을 처음 호출하는 하이브리드 배포에서 사용됩니다. 이 명령은 해당 호출에서 응답을 가져와 브라우저에서 웹 SDK를 초기화합니다.
 
 ## 웹 SDK 태그 확장을 사용하여 응답 적용
 
@@ -31,11 +32,11 @@ ht-degree: 0%
 
 * **`renderDecisions`**: 자동 렌더링에 적합한 개인화된 콘텐츠를 웹 SDK가 렌더링하도록 하는 부울입니다. 다음과 같음 [`renderDecisions`](sendevent/renderdecisions.md) 다음에서 [`sendEvent`](sendevent/overview.md) 명령입니다.
 * **`responseHeaders`**: 문자열 헤더 이름을 문자열 헤더 값에 매핑합니다.
-* **`responseBody`**: 필수. 서버 호출에서 Edge Network로의 JSON 응답 본문.
+* **`responseBody`**: 필수. 서버 호출의 Edge Network JSON 응답 본문.
 * **`personalization.sendDisplayEvent`**: 와 동일하게 작동하는 부울 [`personalization.sendDisplayEvent`](sendevent/personalization.md) 다음에서 `sendEvent` 명령입니다.
 
 ```js
-allow("applyResponse",{
+alloy("applyResponse",{
   "renderDecisions": true,
   "responseHeaders": {},
   "responseBody": {},
@@ -51,4 +52,4 @@ allow("applyResponse",{
 
 * **`propositions`**: Edge Network에서 반환되는 제안 배열. 자동으로 렌더링되는 제안에 플래그가 포함됩니다 `renderAttempted` 을 로 설정 `true`.
 * **`inferences`**: 이 사용자에 대한 머신 러닝 정보가 포함된 추론 개체의 배열입니다.
-* **`destinations`**: Edge Network에서 반환되는 대상 개체의 배열입니다.
+* **`destinations`**: Edge Network이 반환하는 대상 개체의 배열입니다.
