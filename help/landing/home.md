@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 개요
 description: Adobe Experience Platform을 사용하면 데이터 과학 및 시스템 학습을 적용하여 풍부한 개인별 경험을 더 잘 설계하고 전달하기 전에 고객 데이터를 중앙 집중화 및 표준화할 수 있습니다.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: ca38a2d72681e4a69304cc765ab6b95d3527d336
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 2%
+source-wordcount: '431'
+ht-degree: 1%
 
 ---
 
@@ -28,13 +28,13 @@ RESTful API를 기반으로 구축, [!DNL Experience Platform] 는 시스템의 
 
 ## [!DNL Experience Platform] 설명서
 
-[!DNL Experience Platform] 설명서는 다양한 기능 및 서비스에 대해 여러 형식으로 제공됩니다. 사용 가능한 설명서 유형에 대한 자세한 내용은 [Platform 설명서 개요](documentation/overview.md).
+[!DNL Experience Platform] 설명서는 다양한 기능 및 애플리케이션에 대해 여러 형식으로 제공됩니다. 사용 가능한 설명서 유형에 대한 자세한 내용은 [Platform 설명서 개요](documentation/overview.md).
 
 특정 항목에 대해 자세히 알아보려면 [!DNL Platform] 서비스, (으)로 돌아가기 [설명서 랜딩 페이지](https://experienceleague.adobe.com/docs/experience-platform.html) 적절한 안내서를 선택합니다.
 
-### 애플리케이션 서비스 설명서 기본 제공 [!DNL Experience Platform]
+### 에 빌드된 응용 프로그램에 대한 설명서 [!DNL Experience Platform]
 
-Adobe은 Experience Platform 위에 여러 애플리케이션 서비스를 구축했습니다. 이러한 애플리케이션에 대한 설명서는 아래에 링크된 해당 안내서에서 찾을 수 있습니다.
+Adobe은 Experience Platform 위에 여러 애플리케이션을 구축했습니다. 이러한 애플리케이션에 대한 설명서는 아래에 링크된 해당 안내서에서 찾을 수 있습니다.
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
@@ -43,11 +43,11 @@ Adobe은 Experience Platform 위에 여러 애플리케이션 서비스를 구�
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
 
-아래 비디오에서는 Experience Platform 위에 구축된 각 애플리케이션 서비스의 사용 사례를 설명합니다.
+아래 비디오에서는 Experience Platform 위에 구축된 각 애플리케이션의 사용 사례를 설명합니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 
-## [!DNL Experience Platform] 자습서
+## [!DNL Experience Platform] 튜토리얼
 
 다음을 시작할 수 있습니다. [!DNL Platform] 수집을 위한 데이터 준비에서 고급 머신 러닝 알고리즘에 이르기까지 모든 것을 다루는 단계별 자습서와 함께 따라하면 빠르고 쉽게 됩니다. 이 자습서는 내에 있는 정보를 보완하기 위해 설계되었습니다. [!DNL Experience Platform] 설명서를 참조하므로 최상의 결과를 얻으려면 튜토리얼을 완료하는 동안 설명서를 계속 사용하십시오.
 

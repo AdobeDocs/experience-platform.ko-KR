@@ -3,9 +3,9 @@ title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 대상자를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1585'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 ## 개요 {#overview}
 
-[!DNL Data Landing Zone]은 Adobe Experience Platform에 의해 프로비저닝된 [!DNL Azure Blob] 스토리지 인터페이스로, 이를 통해 안전한 클라우드 기반 파일 스토리지 시설에 액세스하여 Platform에서 파일을 내보낼 수 있습니다. 액세스 권한이 있습니다. [!DNL Data Landing Zone] 샌드박스당 컨테이너 및 모든 컨테이너의 총 데이터 볼륨은 Platform 제품 및 서비스 라이선스와 함께 제공되는 총 데이터로 제한됩니다. Platform 및 해당 애플리케이션 서비스의 모든 고객: [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], 및 [!DNL Real-Time Customer Data Platform] 이(가) 하나로 프로비저닝됨 [!DNL Data Landing Zone] 샌드박스당 컨테이너. 다음을 통해 컨테이너에 파일을 읽고 쓸 수 있습니다. [!DNL Azure Storage Explorer] 또는 명령줄 인터페이스입니다.
+[!DNL Data Landing Zone]은 Adobe Experience Platform에 의해 프로비저닝된 [!DNL Azure Blob] 스토리지 인터페이스로, 이를 통해 안전한 클라우드 기반 파일 스토리지 시설에 액세스하여 Platform에서 파일을 내보낼 수 있습니다. 액세스 권한이 있습니다. [!DNL Data Landing Zone] 샌드박스당 컨테이너 및 모든 컨테이너의 총 데이터 볼륨은 Platform 제품 및 서비스 라이선스와 함께 제공되는 총 데이터로 제한됩니다. 플랫폼 및 해당 애플리케이션의 모든 고객 [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], 및 [!DNL Real-Time Customer Data Platform] 이(가) 하나로 프로비저닝됨 [!DNL Data Landing Zone] 샌드박스당 컨테이너. 다음을 통해 컨테이너에 파일을 읽고 쓸 수 있습니다. [!DNL Azure Storage Explorer] 또는 명령줄 인터페이스입니다.
 
 [!DNL Data Landing Zone] 는 SAS 기반 인증을 지원하며 데이터는 표준으로 보호됩니다 [!DNL Azure Blob] 중단 및 전송 중인 스토리지 보안 메커니즘. SAS 기반 인증을 통해 [!DNL Data Landing Zone] 공용 인터넷 연결을 통한 컨테이너. 에 액세스하는 데 필요한 네트워크 변경 사항이 없습니다. [!DNL Data Landing Zone] 즉, 네트워크에 대한 허용 목록 또는 교차 영역 설정을 구성할 필요가 없습니다.
 
@@ -37,7 +37,7 @@ Platform은에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을
 | 대상자 원본 | 지원됨 | 설명 |
 ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ Platform은에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
 
-| 쿼리 매개 변수 | 설명 |
+| 쿼리 매개변수 | 설명 |
 | --- | --- |
 | `dlz_destination` | 다음 `dlz_destination` 유형 을 사용하면 API에서 랜딩 영역 대상 컨테이너를 사용 가능한 다른 유형의 컨테이너와 구별할 수 있습니다. |
 
@@ -146,7 +146,7 @@ curl -X GET \
 POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
 ```
 
-| 쿼리 매개 변수 | 설명 |
+| 쿼리 매개변수 | 설명 |
 | --- | --- |
 | `dlz_destination` | 다음 `dlz_destination` 유형 을 사용하면 API에서 랜딩 영역 대상 컨테이너를 사용 가능한 다른 유형의 컨테이너와 구별할 수 있습니다. |
 | `refresh` | 다음 `refresh` 작업을 통해 랜딩 영역 자격 증명을 재설정하고 새 항목을 자동으로 생성할 수 있습니다. `SASToken`. |
@@ -204,7 +204,7 @@ curl -X POST \
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 대상으로 인증 {#authenticate}
+### 대상에 인증 {#authenticate}
 
 다음을 연결했는지 확인하십시오. [!DNL Data Landing Zone] 컨테이너 대상 [!DNL Azure Storage Explorer] 에 설명된대로 [전제 조건](#prerequisites) 섹션. 이유 [!DNL Data Landing Zone] 는 Adobe이 프로비저닝된 스토리지로, Experience Platform UI에서 대상을 인증하기 위해 더 이상 단계를 수행할 필요가 없습니다.
 
@@ -230,7 +230,7 @@ curl -X POST \
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상으로 대상자 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -239,7 +239,7 @@ curl -X POST \
 
 다음을 참조하십시오 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](../../ui/activate-batch-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
-### 예약
+### 일정 조정
 
 다음에서 **[!UICONTROL 예약]** 단계, 다음을 수행할 수 있습니다. [내보내기 일정 설정](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) 에 대한 [!DNL Data Landing Zone] 대상 및 다음을 수행할 수도 있습니다. [내보낸 파일의 이름 구성](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 

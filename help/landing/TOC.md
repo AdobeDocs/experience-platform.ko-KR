@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
-user-guide-description: 안내서, 설명서 및 튜토리얼을 통해 Experience Platform이 개인화된 경험을 실시간으로 고객에게 전달하는 방법에 대해 알아봅니다.
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+user-guide-description: Experience Platform을 통해 가이드, 설명서 및 튜토리얼을 통해 개인화된 경험을 실시간으로 고객에게 전달하는 방법을 알아봅니다.
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 23%
+source-wordcount: '281'
+ht-degree: 14%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 23%
 
 * [플랫폼 개요](home.md)
 * [플랫폼 개요(비디오)](video/platform-overview.md)
-* [Platform 튜토리얼](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ko-KR)
+* [Platform 튜토리얼](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [플랫폼 기반의 고객 경험(비디오)](video/customer-experience.md)
 * [플랫폼에서 제공하는 고객 경험의 배경(비디오)](video/customer-experience-bts.md)
 * 시작하기 {#getting-started}
@@ -30,7 +30,7 @@ ht-degree: 23%
    * [워크플로우 UI 안내서](workflows.md)
    * [브라우저 및 언어 지원](browser-language-support.md)
    * [자기 식별 조사](self-identification.md)
-   * [AI Assistant](ai-assistant.md)
+   * [AI 어시스턴트](ai-assistant.md)
 * EXPERIENCE PLATFORM API {#platform-apis}
    * [Platform API 시작하기](api-guide.md)
    * [Platform API 인증 및 액세스](api-authentication.md)
@@ -40,7 +40,7 @@ ht-degree: 23%
 * 플랫폼 설명서 {#documentation}
    * [개요](documentation/overview.md)
    * [언어 지원](documentation/language-support.md)
-* 플랫폼을 기반으로 구축된 애플리케이션 서비스 {#ecosystem}
+* 플랫폼을 기반으로 구축된 애플리케이션 {#ecosystem}
    * [개요](application-services.md)
    * [Adobe Real-time Customer Data Platform (모든 에디션)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Application and Intelligent Services(비디오)](video/application-intelligent-services.md)
