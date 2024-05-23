@@ -47,7 +47,10 @@ Adobe Experience Platform의 기타 업데이트:
 Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대한 중요한 인사이트를 볼 수 있는 여러 대시보드를 제공합니다.
 
 **새 기능 또는 업데이트된 기능**
-| 기능 | 설명 | | — | — | | 확장 앱 보고를 위한 사용자 지정 가능한 통찰력 | 매끄럽게 [sql 분석 결과를 이해하기 쉽고 비즈니스 친화적인 시각적 형식으로 변환](../../dashboards/data-distiller/customizable-insights/overview.md). 사용자 정의 SQL 쿼리를 사용하여 정확한 데이터 조작 및 다양한 구조화된 데이터 세트에서 동적 차트를 만듭니다. Query pro 모드를 사용하여 SQL로 복잡한 분석을 수행한 다음 사용자 지정 대시보드의 차트를 통해 기술 전문가가 아닌 사용자와 이 분석을 공유하거나 CSV 파일로 내보낼 수 있습니다. |
+
+| 기능 | 설명 |
+| --- | --- |
+| 확장 앱 보고를 위한 사용자 지정 가능한 통찰력 | 매끄럽게 [sql 분석 결과를 이해하기 쉽고 비즈니스 친화적인 시각적 형식으로 변환](../../dashboards/data-distiller/customizable-insights/overview.md). 사용자 정의 SQL 쿼리를 사용하여 정확한 데이터 조작 및 다양한 구조화된 데이터 세트에서 동적 차트를 만듭니다. Query pro 모드를 사용하여 SQL로 복잡한 분석을 수행한 다음 사용자 지정 대시보드의 차트를 통해 기술 전문가가 아닌 사용자와 이 분석을 공유하거나 CSV 파일로 내보낼 수 있습니다. |
 
 {style="table-layout:auto"}
 
