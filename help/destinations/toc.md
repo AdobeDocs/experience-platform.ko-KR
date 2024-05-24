@@ -5,10 +5,10 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 4%
+source-wordcount: '1224'
+ht-degree: 3%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 4%
       * [(베타) Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기](./ui/export-file-now.md)
       * [Experience Platform UI를 사용하여 데이터 세트 내보내기](./ui/export-datasets.md)
       * [(Beta) 새 Beta 클라우드 스토리지 대상에서 마지막 선별 시간 XDM 속성 사용](./ui/activate-last-qualification-time.md)
-      * [(Beta) 계산된 필드를 사용하여 플랫 스키마 파일에서 배열 내보내기](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [(Beta) 계산된 필드를 사용하여 플랫 스키마 파일로 배열을 내보냅니다](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [대상 세부 사항 보기](./ui/destination-details-page.md)
    * [대상 계정 업데이트](./ui/update-accounts.md)
    * [대상 계정 삭제](./ui/delete-destination-account.md)
@@ -83,6 +83,7 @@ ht-degree: 4%
       * [Google Ad Manager 연결](./catalog/advertising/google-ad-manager.md)
       * [(베타) Google Ad Manager 360 연결](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match 연결](./catalog/advertising/google-customer-match.md)
+      * [(베타) Google Customer Match + DV360 연결](./catalog/advertising/google-customer-match-dv360.md)
       * [Google Display &amp; Video 360 연결](./catalog/advertising/google-dv360.md)
       * [Google gtag 확장](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn 인사이트 태그 확장](./catalog/advertising/linkedin.md)
@@ -127,7 +128,7 @@ ht-degree: 4%
       * [Azure Blob 연결](./catalog/cloud-storage/azure-blob.md)
       * [Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Azure 이벤트 허브 연결](./catalog/cloud-storage/azure-event-hubs.md)
-      * [데이터 랜딩 영역](./catalog/cloud-storage/data-landing-zone.md)
+      * [데이터 랜딩 구역](./catalog/cloud-storage/data-landing-zone.md)
       * [Google 클라우드 스토리지](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 연결](./catalog/cloud-storage/sftp.md)
       * [허용 목록에 추가하다 파일 기반 클라우드용 IP 주소 스토리지 대상](./catalog/cloud-storage/ip-address-allow-list.md)
@@ -144,7 +145,7 @@ ht-degree: 4%
       * [Acxiom 잠재 고객 억제](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Acxiom 데이터 개선 사항](./catalog/data-partner/acxiom-data-enhancement.md)
    * eCommerce 대상 {#ecommerce}
-      * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
+      * [SAP COMMERCE](./catalog/ecommerce/sap-commerce.md)
    * 이메일 대상 {#email}
       * [Bizible 확장](./catalog/email/bizible.md)
       * [Marketo 확장](./catalog/email/marketo.md)
@@ -297,4 +298,4 @@ ht-degree: 4%
       * [설명서 셀프서비스 템플릿](./destination-sdk/docs-framework/self-service-template.md)
       * [작성 모범 사례](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [자주 묻는 질문](./destinations-faq.md)
-* [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
