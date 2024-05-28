@@ -2,10 +2,10 @@
 title: Experience Platform 사용자 인터페이스를 사용하여 Salesforce 계정을 연결합니다.
 description: 사용자 인터페이스를 사용하여 Salesforce 계정을 연결하고 CRM 데이터를 Experience Platform 상태로 만드는 방법을 알아봅니다.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
+source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
 workflow-type: tm+mt
 source-wordcount: '829'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -65,7 +65,7 @@ ht-degree: 1%
 
 Platform UI에서 를 선택합니다. **[!UICONTROL 소스]** 을(를) 왼쪽 탐색에서 [!UICONTROL 소스] 작업 영역. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 옵션을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
-아래 *CRM* 범주, 선택 **[!DNL Salesforce]**&#x200B;을 선택한 다음 을 선택합니다 **[!UICONTROL 데이터 추가]**.
+선택 **[!DNL Salesforce]** 다음 아래에 *[!UICONTROL CRM]* 카테고리를 선택한 다음 **[!UICONTROL 데이터 추가]**.
 
 >[!TIP]
 >
