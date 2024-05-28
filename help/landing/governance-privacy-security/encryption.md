@@ -2,9 +2,9 @@
 title: Adobe Experience Platform의 데이터 암호화
 description: Adobe Experience Platform에서 전송 중 및 유휴 상태의 데이터를 암호화하는 방법에 대해 알아봅니다.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: fd31d54339b8d87b80799a9c0fa167cc9a07a33f
+source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '712'
 ht-degree: 0%
 
 ---
@@ -30,25 +30,25 @@ Adobe Experience Platform은 엔터프라이즈 솔루션 전반에 걸쳐 고�
 데이터를 시스템으로 가져온 후 [사용하지 않을 때 암호화](#at-rest), 플랫폼 서비스는 다음과 같은 방법으로 데이터를 보강하고 내보냅니다.
 
 - [대상](../../destinations/home.md) 을 사용하면 Adobe 애플리케이션 및 파트너 애플리케이션에 데이터를 활성화할 수 있습니다.
-- 과 같은 기본 플랫폼 애플리케이션 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home) 또한 데이터를 사용할 수 있습니다.
+- 과 같은 기본 플랫폼 애플리케이션 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/ajo-home) 또한 데이터를 사용할 수 있습니다.
 
 ### mTLS 프로토콜 지원 {#mtls-protocol-support}
 
-이제 mTLS(상호 전송 계층 보안)를 사용하여 HTTP API 대상 및 Adobe Journey Optimizer 사용자 지정 작업에 대한 아웃바운드 연결에서 보안을 강화할 수 있습니다. mTLS는 상호 인증을 위한 종단간 보안 방법으로, 정보를 공유하는 양 당사자가 데이터를 공유하기 전에 자신이 주장하는 사람임을 보장합니다. mTLS에는 TLS와 비교하여 추가 단계가 포함되어 있으며, 이 단계에서 서버는 클라이언트의 인증서를 요청하고 마지막에 검증한다.
+이제 mTLS(상호 전송 계층 보안)를 사용하여 의 아웃바운드 연결에서 보안을 강화할 수 있습니다. [HTTP API 대상](../../destinations/catalog/streaming/http-destination.md) 및 Adobe Journey Optimizer [사용자 지정 작업](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). mTLS는 상호 인증을 위한 종단간 보안 방법으로, 정보를 공유하는 양 당사자가 데이터를 공유하기 전에 자신이 주장하는 사람임을 보장합니다. mTLS에는 TLS와 비교하여 추가 단계가 포함되어 있으며, 이 단계에서 서버는 클라이언트의 인증서를 요청하고 마지막에 검증한다.
 
-#### Adobe Journey Optimizer의 mTLS {#mtls-in-adobe-journey-optimizer}
-
-Adobe Journey Optimizer에서 mTLS는 [사용자 지정 작업](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). 추가 항목 없음 [Adobe Journey Optimizer 사용자 지정 작업에 대한 구성](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) mTLS를 활성화하려면 귀하의 부분에 필요합니다. 사용자 지정 작업의 끝점이 mTLS를 사용하는 경우 시스템은 Adobe Experience Platform 키 저장소에서 인증서를 가져와 자동으로 끝점에 제공합니다(mTLS 연결에 필요한 경우).
-
-이러한 Adobe Journey Optimizer 및 Experience Platform HTTP API 대상 워크플로우에서 mTLS를 사용하려면 Adobe Journey Optimizer 고객 작업 UI 또는 대상 UI에 입력하는 서버 주소에 TLS 프로토콜이 비활성화되어 있고 mTLS만 활성화되어야 합니다. 해당 끝점에서 TLS 1.2 프로토콜이 여전히 활성화되어 있으면 클라이언트 인증을 위한 인증서가 전송되지 않습니다. 즉, 이러한 워크플로우에서 mTLS를 사용하려면 &quot;수신&quot; 서버 엔드포인트가 mTLS여야 합니다 **전용** 연결 끝점을 사용하도록 설정했습니다.
+원하는 경우 [Adobe Journey Optimizer 사용자 지정 작업과 함께 mTLS 사용](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) 및 Experience Platform HTTP API 대상 워크플로, Adobe Journey Optimizer 고객 작업 UI 또는 대상 UI에 입력하는 서버 주소에 TLS 프로토콜이 비활성화되어 있고 mTLS만 활성화되어야 합니다. 해당 끝점에서 TLS 1.2 프로토콜이 여전히 활성화되어 있으면 클라이언트 인증을 위한 인증서가 전송되지 않습니다. 즉, 이러한 워크플로우에서 mTLS를 사용하려면 &quot;수신&quot; 서버 엔드포인트가 mTLS여야 합니다 **전용** 연결 끝점을 사용하도록 설정했습니다.
 
 >[!IMPORTANT]
 >
->mTLS를 활성화하기 위해 Adobe Journey Optimizer 사용자 지정 작업 또는 여정에 추가 구성이 필요하지 않습니다. 이 프로세스는 mTLS 지원 끝점이 검색될 때 자동으로 발생합니다. 각 인증서에 대한 일반 이름(CN) 및 주체 대체 이름(SAN)은 인증서의 일부로 설명서에서 사용할 수 있으며, 원할 경우 소유권 유효성 검사의 추가 계층으로 사용할 수 있습니다.
+>mTLS를 활성화하기 위해 Adobe Journey Optimizer 사용자 지정 작업 또는 HTTP API 대상에 추가 구성이 필요하지 않습니다. 이 프로세스는 mTLS 활성화 끝점이 감지되면 자동으로 발생합니다. 각 인증서에 대한 일반 이름(CN) 및 주체 대체 이름(SAN)은 인증서의 일부로 설명서에서 사용할 수 있으며, 원할 경우 소유권 유효성 검사의 추가 계층으로 사용할 수 있습니다.
 >
 >2000년 5월에 게시된 RFC 2818은 주체 이름 확인을 위해 HTTPS 인증서의 CN(일반 이름) 필드를 사용하는 것을 중단합니다. 대신 &quot;dns name&quot; 유형의 &quot;SAN(주체 대체 이름)&quot;을 사용하는 것이 좋습니다.
 
 ### 인증서 다운로드 {#download-certificates}
+
+>[!NOTE]
+>
+>공개 인증서를 최신 상태로 유지하는 것은 사용자의 책임입니다. 특히 만료일이 다가올 때 인증서를 정기적으로 검토하십시오. 환경에서 최신 복사본을 유지 관리하려면 이 페이지를 책갈피로 지정해야 합니다.
 
 CN 또는 SAN을 확인하여 추가 타사 유효성 검사를 수행하려면 여기에서 관련 인증서를 다운로드할 수 있습니다.
 

@@ -2,10 +2,10 @@
 title: 계정 프로필 대시보드
 description: Adobe Experience Platform은 조직의 B2B 계정 프로필에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
 workflow-type: tm+mt
-source-wordcount: '1800'
-ht-degree: 0%
+source-wordcount: '1675'
+ht-degree: 1%
 
 ---
 
@@ -76,14 +76,13 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 * [계정 프로필 추가됨](#account-profiles-added)
 * [업종별 신규 계정](#accounts-by-industry)
 * [유형별 새 계정](#accounts-by-type)
-* [영업 기회 추가됨](#opportunities-added)
 * [개인 역할별 새로운 기회](#opportunities-by-person-role)
 * [매출액별 새로운 기회](#opportunities-by-revenue)
 * [상태 및 단계별 새로운 기회](#opportunities-by-status-&-stage)
 * [획득한 새로운 영업 기회](#opportunities-won)
+* [기회 추가됨](#opportunities-added)
 * [예측 채점 분포](#predictive-scoring-distribution)
-* [예측 점수 가장 영향력 있는 요인](#predictive-scoring-top-influential-factors)
-* [업종별 총 계정 수](#total-accounts-by-industry)
+* [예측 점수에 가장 영향력 있는 요인](#predictive-scoring-top-influential-factors)
 
 ### 계정 프로필 추가됨 {#account-profiles-added}
 
@@ -102,14 +101,6 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 다음 [!UICONTROL 유형별 새 계정] 위젯은 도넛 차트 내의 단일 지표에 있는 총 계정 수를 표시합니다. 도넛 차트는 이 합계를 구성하는 다양한 계정 유형의 상대적 구성을 보여 줍니다. 색상으로 구분된 키는 포함된 모든 계정 유형에 대한 분류를 제공합니다. 커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 각 계정 유형에 대한 개별 카운트가 대화 상자에 표시됩니다.
 
 ![유형별 새 계정 위젯.](../images/account-profiles/new-accounts-by-type.png)
-
-### 영업 기회 추가됨 {#opportunities-added}
-
-다음 [!UICONTROL 영업 기회 추가됨] 위젯은 선 그래프를 사용하여 일정 기간 동안 매일 추가되는 기회의 수를 표시합니다. 대시보드 맨 위에 있는 글로벌 날짜 필터를 사용하여 분석 기간을 결정합니다. 날짜 필터를 제공하지 않으면 기본 비헤이비어에 오늘 이전 연도에 추가된 기회가 나열됩니다. 그 결과를 이용하여 추가된 기회의 수에서의 추세를 추론할 수 있다.
-
-<!-- Link to date filter documentation from Annamalai -->
-
-![Opportunities 추가 위젯.](../images/account-profiles/opportunities-added.png)
 
 ### 개인 역할별 새로운 기회 {#opportunities-by-person-role}
 
@@ -141,6 +132,14 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 
 ![새로운 기회가 위젯을 이겼습니다.](../images/account-profiles/new-opportunities-won.png)
 
+### 기회 추가됨 {#opportunities-added}
+
+다음 [!UICONTROL 영업 기회 추가됨] 위젯은 선 그래프를 사용하여 일정 기간 동안 매일 추가되는 기회의 수를 표시합니다. 대시보드 맨 위에 있는 글로벌 날짜 필터를 사용하여 분석 기간을 결정합니다. 날짜 필터를 제공하지 않으면 기본 비헤이비어에 오늘 이전 연도에 추가된 기회가 나열됩니다. 그 결과를 이용하여 추가된 기회의 수에서의 추세를 추론할 수 있다.
+
+<!-- Link to date filter documentation from Annamalai -->
+
+![Opportunities 추가 위젯.](../images/account-profiles/opportunities-added.png)
+
 ### 예측 채점 분포 {#predictive-scoring-distribution}
 
 다음 [!UICONTROL 예측 채점 분포] 위젯은 모든 계정 프로필의 점수 분포를 표시하여 판매 파이프라인의 상태를 한 눈에 파악할 수 있도록 합니다. 채점 데이터는 도넛 차트와 세로 막대형 차트를 통해 전달됩니다.
@@ -157,7 +156,7 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 
 ![예측 채점 배포 위젯.](../images/account-profiles/predictive-scoring-distribution.png)
 
-### 예측 점수 가장 영향력 있는 요인 {#predictive-scoring-top-influential-factors}
+### 예측 점수에 가장 영향력 있는 요인 {#predictive-scoring-top-influential-factors}
 
 다음 [!UICONTROL 예측 점수 가장 영향력 있는 요인] 위젯을 통해 각 성향 버킷의 점수를 유도하는 가장 중요한 요소를 이해할 수 있습니다.
 
@@ -170,18 +169,6 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 >글로벌 날짜 범위 필터는 예측 채점 통찰력에 적용되지 않습니다. 예측 채점 위젯은 드롭다운에서 선택한 계정 채점 모델을 기반으로 데이터를 분석합니다.
 
 ![예측 점수 최상위 영향력 있는 요소 위젯.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
-
-### 업종별 총 계정 수 {#total-accounts-by-industry}
-
-이 위젯은 단일 지표에 총 계정 수를 표시하고 도넛 차트를 사용하여 전체 수를 구성하는 산업에 대한 카운트의 비례 크기를 보여 줍니다. 키는 도넛 차트를 구성하는 다양한 산업에 대한 색상 코딩 정보를 제공합니다.
-
->[!NOTE]
->
->이 인사이트가 표시하는 정보는 사용자가 지정한 날짜 범위에 따라 다릅니다. 날짜 필터를 제공하지 않는 경우 인사이트의 기본 동작은 전년도에서 오늘까지 추가된 데이터를 분석합니다.
-
-커서가 도넛 차트의 각 섹션 위로 마우스를 가져가면 서로 다른 업계에 대한 개별 카운트가 대화 상자에 표시됩니다.
-
-![업계 위젯별 총 계정 수.](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ## 다음 단계
 
