@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
+source-git-commit: 060f6bb0ff6f57a84698a27bd9f640c0178e5b51
 workflow-type: tm+mt
-source-wordcount: '1777'
+source-wordcount: '1811'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,16 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 >Google [발표](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) 는 2024년 하반기에 서드파티 쿠키에 대한 Chrome 지원을 중단할 예정입니다. 따라서 타사 쿠키는 더 이상 주요 브라우저에서 지원되지 않습니다.
 >
 >이 변경 사항이 구현되면 Adobe은 다음에 대한 지원을 중단합니다. `demdex` 현재 웹 SDK에서 지원되는 쿠키입니다.
+
+## 버전 2.20.0 - 2024년 5월 21일
+
+**새로운 기능**
+
+* 에 대한 지원이 추가됨 [스트리밍 미디어 컬렉션](../web-sdk/commands/configure/streamingmedia.md).
+
+**수정 사항 및 향상된 기능**
+
+* 동의가 옵트아웃되면 코드 조각 사전 숨김에 의해 기본 콘텐츠가 숨겨지는 버그를 수정했습니다.
 
 ## 버전 2.19.2 - 2024년 1월 10일
 
@@ -92,7 +102,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 **수정 사항 및 향상된 기능**
 
 * 코드가 가 아닌 대체 위치에 주입된 Adobe Target VEC 사용자 지정 코드 작업 문제를 수정했습니다 [!DNL at.js].
-* 일부 에지 사례에서 &quot;referer&quot; 헤더가 Edge Network에 대한 요청에 대해 제대로 설정되지 않던 문제를 해결했습니다.
+* 일부 경계 사례에서 Edge Network 요청에 대해 &quot;referer&quot; 헤더가 제대로 설정되지 않는 문제가 해결되었습니다.
 * 다음과 같은 문제가 해결되었습니다. [사용자 에이전트 클라이언트 힌트](/help/web-sdk/use-cases/client-hints.md) 속성을 잘못된 유형으로 설정할 수 있습니다.
 * 다음과 같은 문제가 해결되었습니다. `placeContext.localTime` 이(가) 스키마와 일치하지 않습니다.
 
@@ -107,7 +117,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 
 * 에 대한 지원이 추가됨 [페이지별 페이지 전체 마이그레이션](home.md#migrating-to-web-sdk). 이제 방문자가 at.js와 Web SDK 페이지 간을 이동할 때 Adobe Target 프로필이 유지됩니다.
 * 에 대한 구성 가능한 지원이 추가되었습니다. [높은 엔트로피 사용자 에이전트 클라이언트 힌트](/help/web-sdk/use-cases/client-hints.md).
-* 에 대한 지원이 추가되었습니다. [`applyResponse`](/help/web-sdk/commands/applyresponse.md) 명령입니다. 이렇게 하면 를 통해 하이브리드 개인화가 활성화됩니다. [Edge Network Server API](../server-api/overview.md).
+* 에 대한 지원이 추가되었습니다. [`applyResponse`](/help/web-sdk/commands/applyresponse.md) 명령입니다. 이렇게 하면 를 통해 하이브리드 개인화가 활성화됩니다. [Edge Network 서버 API](../server-api/overview.md).
 * 이제 QA 모드 링크가 여러 페이지에서 작동합니다.
 
 **수정 사항 및 향상된 기능**
@@ -120,7 +130,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 
 ## 버전 2.12.0 - 2022년 6월 29일
 
-* Edge Network에 대한 요청을 변경하여 `cluster` 쿠키 위치 힌트가 URL의 일부입니다. 이렇게 하면 중간 세션에서 위치를 변경하는(예: VPN을 통해 또는 모바일 장치로 운전하는 등) 사용자가 동일한 에지에 도달하고 동일한 개인화 프로필을 갖게 됩니다.
+* 을(를) 사용하려면 요청을 Edge Network으로 변경하십시오. `cluster` 쿠키 위치 힌트가 URL의 일부입니다. 이렇게 하면 중간 세션에서 위치를 변경하는(예: VPN을 통해 또는 모바일 장치로 운전하는 등) 사용자가 동일한 에지에 도달하고 동일한 개인화 프로필을 갖게 됩니다.
 * getLibraryInfo 명령 응답에서 구성된 함수를 문자열 변환합니다.
 
 ## 버전 2.11.0 - 2022년 6월 13일
@@ -205,7 +215,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 * 동의 환경 설정이 수신되면 해시되어 CMP, Platform Web SDK 및 Platform Edge Network 간의 최적화된 통합을 위해 로컬 저장소에 저장됩니다. 동의 환경 설정을 수집하는 경우 `setConsent` 페이지를 로드할 때마다
 * 2 [후크 모니터링](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` 및 `onCommandRejected`이(가) 추가되었습니다.
 * 버그 수정: 개인화 상호 작용 알림 이벤트에는 사용자가 새 단일 페이지 앱 보기로 이동했다가 원래 보기로 돌아간 다음 전환 대상 요소를 클릭할 때 동일한 활동에 대한 중복 정보가 포함됩니다.
-* 버그 수정: SDK에서 보낸 첫 번째 이벤트에 `documentUnloading` 을 로 설정 `true`, [`sendBeacon`](https://developer.mozilla.org/ko-KR/docs/Web/API/Navigator/sendBeacon) 가 이벤트를 전송하는 데 사용되므로 id가 설정되지 않는 것과 관련된 오류가 발생합니다.
+* 버그 수정: SDK에서 보낸 첫 번째 이벤트에 `documentUnloading` 을 로 설정 `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) 가 이벤트를 전송하는 데 사용되므로 id가 설정되지 않는 것과 관련된 오류가 발생합니다.
 
 ## 버전 2.3.0 - 2020년 11월
 
