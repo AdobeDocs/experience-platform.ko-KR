@@ -6,10 +6,10 @@ breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
 role: Developer
-source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
+source-git-commit: ec801c550740c4cba3481a961599f548518bb032
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 22%
+source-wordcount: '226'
+ht-degree: 14%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 22%
       * [edgeConfigId](commands/configure/edgeconfigid.md)
       * [edgeDomain](commands/configure/edgedomain.md)
       * [idMigrationEnabled](commands/configure/idmigrationenabled.md)
+      * [스트리밍 미디어](commands/configure/streamingmedia.md)
       * [onBeforeEventSend](commands/configure/onbeforeeventsend.md)
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
@@ -52,12 +53,15 @@ ht-degree: 22%
    * [appendIdentityToUrl](commands/appendidentitytourl.md)
    * [propositions 적용](commands/applypropositions.md)
    * [applyResponse](commands/applyresponse.md)
+   * [createMediaSession](commands/createmediasession.md)
    * [getIdentity](commands/getidentity.md)
    * [getLibraryInfo](commands/getlibraryinfo.md)
    * [setConsent](commands/setconsent.md)
    * [set디버그](commands/setdebug.md)
+   * [sendMediaEvent](commands/sendmediaevent.md)
    * [데이터 스트림 재정의 구성](commands/datastream-overrides.md)
    * [명령 응답](commands/command-responses.md)
+   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
 
 * 신원 {#identity}
    * [개요](identity/overview.md)

@@ -2,16 +2,16 @@
 title: 웹 SDK 태그 확장 구성
 description: 태그 UI에서 Experience Platform Web SDK 태그 확장을 구성하는 방법에 대해 알아봅니다.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1734'
 ht-degree: 6%
 
 ---
 
 # 웹 SDK 태그 확장 구성
 
-다음 [!DNL Web SDK] 태그 확장은 Experience Platform Edge Network를 통해 웹 속성에서 Adobe Experience Cloud으로 데이터를 전송합니다.
+다음 [!DNL Web SDK] 태그 확장은 Experience Platform Edge Network을 통해 웹 속성에서 Adobe Experience Cloud으로 데이터를 전송합니다.
 
 확장을 사용하면 데이터를 Platform으로 스트리밍하고 ID를 동기화하며 고객 동의 신호를 처리하고 컨텍스트 데이터를 자동으로 수집할 수 있습니다.
 
@@ -47,7 +47,7 @@ Web SDK 태그 확장 프로그램은에 설치할 속성이 필요합니다. �
 
 이 섹션에서는 사용 가능한 세 가지 환경(프로덕션, 스테이징 및 개발) 각각에 대해 사용해야 하는 데이터스트림을 선택할 수 있습니다.
 
-Edge Network로 요청을 보낼 때 서버측 구성을 참조하는 데 데이터스트림 ID가 사용됩니다. 웹 사이트에서 코드를 변경하지 않고도 구성을 업데이트할 수 있습니다.
+Edge Network에 요청이 전송되면 서버측 구성을 참조하는 데 데이터스트림 ID가 사용됩니다. 웹 사이트에서 코드를 변경하지 않고도 구성을 업데이트할 수 있습니다.
 
 다음 안내서를 참조하십시오 [데이터스트림](../../../../datastreams/overview.md) 데이터 스트림을 구성하는 방법에 대해 알아봅니다.
 
@@ -113,9 +113,24 @@ Adobe 코드 조각 사전 숨김을 사용하는 경우 동일한 항목을 사
 
 ![태그 UI에서 웹 SDK 태그 확장의 데이터 수집 설정을 보여 주는 이미지](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL 콜백 함수]**: 확장에 제공된 콜백 함수를 라고 합니다. [`onBeforeEventSend` 함수](/help/web-sdk/commands/configure/onbeforeeventsend.md) 라이브러리에 있습니다. 이 함수를 사용하면 Edge Network로 전송되기 전에 이벤트를 전체적으로 수정할 수 있습니다.
+* **[!UICONTROL 콜백 함수]**: 확장에 제공된 콜백 함수를 라고 합니다. [`onBeforeEventSend` 함수](/help/web-sdk/commands/configure/onbeforeeventsend.md) 라이브러리에 있습니다. 이 함수를 사용하면 이벤트를 Edge Network으로 보내기 전에 전역적으로 수정할 수 있습니다.
 * **[!UICONTROL 클릭 데이터 수집 활성화]**: Web SDK는 자동으로 링크 클릭 정보를 수집할 수 있습니다. 기본적으로 이 기능은 활성화되어 있지만 이 옵션을 사용하여 비활성화할 수 있습니다. 또한 링크의 레이블은 다음에 나열된 다운로드 표현식 중 하나를 포함하는 경우 다운로드 링크로 표시됩니다. [!UICONTROL 다운로드 링크 한정자] 텍스트 상자. Adobe은 몇 가지 기본 다운로드 링크 한정자를 제공합니다. 필요에 따라 편집할 수 있습니다.
 * **[!UICONTROL 자동으로 수집된 컨텍스트 데이터]**: 기본적으로 Web SDK는 장치, 웹, 환경 및 위치 컨텍스트와 관련된 특정 컨텍스트 데이터를 수집합니다. 이 데이터를 수집하지 않거나 특정 범주의 데이터만 수집하려면 다음을 선택합니다. **[!UICONTROL 특정 컨텍스트 정보]** 수집할 데이터를 선택합니다. 다음을 참조하십시오 [`context`](/help/web-sdk/commands/configure/context.md) 추가 정보.
+
+## 미디어 컬렉션 설정 구성 {#media-collection}
+
+미디어 컬렉션 기능은 웹 사이트에서 미디어 세션과 관련된 데이터를 수집하는 데 도움이 됩니다.
+
+수집된 데이터에는 미디어 재생, 일시 정지, 완료 및 기타 관련 이벤트에 대한 정보가 포함될 수 있습니다. 수집되면 이 데이터를 Adobe Experience Platform 및/또는 Adobe Analytics으로 전송하여 보고서를 생성할 수 있습니다. 이 기능은 웹 사이트에서의 미디어 소비 행동을 추적하고 이해하는 포괄적인 솔루션을 제공합니다.
+
+![태그 UI에서 웹 SDK 태그 확장의 미디어 컬렉션 설정을 보여 주는 이미지](assets/media-collection.png)
+
+
+* **[!UICONTROL 채널]**: 미디어 컬렉션이 발생하는 채널의 이름입니다. 예: `Video channel`.
+* **[!UICONTROL 플레이어 이름]**: 미디어 플레이어의 이름입니다.
+* **[!UICONTROL 응용 프로그램 버전]**: 미디어 플레이어 애플리케이션 버전입니다.
+* **[!UICONTROL 주 핑 간격]**: 기본 콘텐츠에 대한 Ping 빈도(초)입니다. 기본값은 `10`입니다. 값의 범위는 다음과 같습니다. `10` 끝 `50` 초.  값을 지정하지 않으면 를 사용할 때 기본값이 사용됩니다 [자동으로 추적된 세션](../../../../web-sdk/commands/createmediasession.md#automatic).
+* **[!UICONTROL 광고 Ping 간격]**: 광고 콘텐츠에 대한 Ping 빈도(초)입니다. 기본값은 `10`입니다. 값의 범위는 다음과 같습니다. `1` 끝 `10` 초. 값을 지정하지 않으면 를 사용할 때 기본값이 사용됩니다 [자동으로 추적된 세션](../../../../web-sdk/commands/createmediasession.md#automatic)
 
 ## 데이터스트림 재정의 구성 {#datastream-overrides}
 
@@ -126,7 +141,7 @@ Adobe 코드 조각 사전 숨김을 사용하는 경우 동일한 항목을 사
 데이터스트림 구성 재정의는 2단계 프로세스입니다.
 
 1. 먼저 [데이터스트림 구성 페이지](/help/datastreams/configure.md)에서 데이터스트림 구성 재정의를 정의해야 합니다.
-2. 그런 다음 Web SDK 명령을 통하거나 Web SDK 태그 확장을 사용하여 Edge 네트워크에 재정의를 전송해야 합니다.
+2. 그런 다음 웹 SDK 명령을 통하거나 웹 SDK 태그 확장을 사용하여 Edge Network에 재정의를 전송해야 합니다.
 
 데이터 스트림 보기 [구성 재정의 설명서](/help/datastreams/overrides.md) 데이터스트림 구성을 재정의하는 방법에 대한 자세한 지침을 확인하십시오.
 
@@ -140,6 +155,6 @@ Adobe 코드 조각 사전 숨김을 사용하는 경우 동일한 항목을 사
 
 ## 고급 설정 구성
 
-사용 **[!UICONTROL 가장자리 기준 경로]** Edge 네트워크와 상호 작용하는 데 사용되는 기본 경로를 변경해야 하는 경우 필드입니다. 이 경우 업데이트가 필요하지 않지만 Beta 또는 알파에 참여하는 경우 Adobe에서 이 필드를 변경하도록 요청할 수 있습니다.
+사용 **[!UICONTROL 가장자리 기준 경로]** Edge Network과 상호 작용하는 데 사용되는 기본 경로를 변경해야 하는 경우 필드입니다. 이 경우 업데이트가 필요하지 않지만 Beta 또는 알파에 참여하는 경우 Adobe에서 이 필드를 변경하도록 요청할 수 있습니다.
 
 ![웹 SDK 태그 확장 페이지를 사용한 고급 설정을 보여 주는 이미지입니다.](assets/advanced-settings.png)

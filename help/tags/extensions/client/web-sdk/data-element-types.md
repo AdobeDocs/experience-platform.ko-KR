@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK 확장의 데이터 요소 유형
 description: Adobe Experience Platform 웹 SDK 태그 확장에서 제공하는 다양한 데이터 요소 유형에 대해 알아봅니다.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
+source-git-commit: fbca8a47c500e89d82cf636e8cb639f2bb59c2e6
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '653'
 ht-degree: 5%
 
 ---
@@ -60,6 +60,12 @@ XDM 개체 데이터 요소를 사용하면 데이터를 XDM으로 더 쉽게 �
 ![데이터 요소 옵션을 보여 주는 태그 UI의 이미지.](assets/variable-data-element.png)
 
 이 데이터 요소를 만든 후 [변수 업데이트](./action-types.md#update-variable) 수정 작업. 준비가 완료된 경우 이 데이터 요소를 [이벤트 보내기](./action-types.md#send-event) 데이터스트림으로 데이터를 전송하는 작업.
+
+## 미디어: 체감 품질 {#quality-experience}
+
+A **[!UICONTROL 체감 품질]** 데이터 요소는 스트리밍 미디어 이벤트를 Adobe Experience Platform에 전송할 때 유용합니다. 미디어 세션을 만들 때 이 요소를 추가할 수 있으며 다음 미디어 이벤트에는 업데이트된 경험 품질 데이터가 포함됩니다.
+
+![경험 품질 데이터 요소 만들기 화면을 보여 주는 UI 이미지입니다.](assets/qoe-data-element.png)
 
 ## 다음 단계 {#next-steps}
 

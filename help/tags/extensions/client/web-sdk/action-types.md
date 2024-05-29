@@ -3,10 +3,10 @@ title: Adobe Experience Platform 웹 SDK 확장의 작업 유형
 description: Adobe Experience Platform 웹 SDK 태그 확장에서 제공하는 다양한 작업 유형에 대해 알아봅니다.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 377be6d97e6da9b4aaacfa23a188131bd38e66f4
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 2%
+source-wordcount: '1036'
+ht-degree: 1%
 
 ---
 
@@ -48,6 +48,33 @@ Adobe에게 이벤트를 보냅니다. [!DNL Experience Platform] Adobe Experien
 ![](assets/update-variable-set-property.png)
 
 변수 업데이트 작업의 편집기와 XDM 개체 데이터 요소의 편집기 간에는 몇 가지 차이점이 있습니다. 먼저 변수 업데이트 작업에 &quot;xdm&quot; 레이블이 지정된 루트 수준 항목이 있습니다. 이 항목을 클릭하면 전체 개체를 설정하는 데 사용할 데이터 요소를 지정할 수 있습니다. 둘째, 변수 업데이트 작업에는 xdm 개체에서 데이터를 지우는 확인란이 있습니다. 왼쪽의 속성 중 하나를 클릭한 다음 오른쪽의 확인란을 선택하여 값을 지웁니다. 이렇게 하면 변수에 값을 설정하기 전에 현재 값이 지워집니다.
+
+## 미디어 이벤트 보내기 {#send-media-event}
+
+Adobe Experience Platform 및/또는 Adobe Analytics에 미디어 이벤트를 보냅니다. 이 작업은 웹 사이트에서 미디어 이벤트를 추적할 때 유용합니다. 인스턴스를 선택합니다(인스턴스가 두 개 이상인 경우). 작업에는 다음이 필요합니다. `playerId` 추적된 미디어 세션의 고유 식별자를 나타냅니다. 또한 **[!UICONTROL 체감 품질]** 및 a `playhead` 미디어 세션을 시작할 때 데이터 요소입니다.
+
+![미디어 이벤트 보내기 화면을 보여 주는 플랫폼 UI 이미지입니다.](assets/send-media-event.png)
+
+다음 **[!UICONTROL 미디어 이벤트 보내기]** 작업 유형은 다음 속성을 지원합니다.
+
+- **[!UICONTROL 인스턴스]**: 사용 중인 웹 SDK 인스턴스.
+- **[!UICONTROL 미디어 이벤트 유형]**: 추적 중인 미디어 이벤트 유형.
+- **[!UICONTROL 플레이어 ID]**: 미디어 세션 고유 식별자입니다.
+- **[!UICONTROL 플레이헤드]**: 미디어 재생의 현재 위치(초)입니다.
+- **[!UICONTROL 미디어 세션 세부 정보]**: 미디어 시작 이벤트를 전송할 때 필요한 미디어 세션 세부 사항을 지정해야 합니다.
+- **[!UICONTROL 챕터 세부 정보]**: 이 섹션에서는 챕터 시작 미디어 이벤트를 전송할 때 챕터 세부 사항을 지정할 수 있습니다.
+- **[!UICONTROL 광고 세부 정보]**: 전송 시 `AdBreakStart` 이벤트, 필요한 광고 세부 정보를 지정해야 합니다.
+- **[!UICONTROL Advertising pod 세부 정보]**: 를 전송할 때 광고 pod에 대한 세부 정보 `AdStart` 이벤트.
+- **[!UICONTROL 오류 세부 정보]**: 추적 중인 재생 오류에 대한 세부 사항입니다.
+- **[!UICONTROL 상태 업데이트 세부 정보]**: 업데이트 중인 플레이어 상태입니다.
+- **[!UICONTROL 사용자 지정 메타데이터]**: 추적 중인 미디어 이벤트에 대한 사용자 지정 메타데이터입니다.
+- **[!UICONTROL 체감 품질]**: 추적 중인 경험 미디어 품질 데이터입니다.
+
+## Media Analytics 추적기 가져오기 {#get-media-analytics-tracker}
+
+이 작업은 기존 Media Analytics API를 가져오는 데 사용됩니다. 작업을 구성하고 개체 이름이 제공되면 기존 Media Analytics API가 해당 창 개체로 내보내집니다. 아무 것도 제공되지 않으면 (으)로 내보내집니다. `window.Media` 현재 Media JS 라이브러리가 그러하듯이.
+
+![Media Analytics 추적기 가져오기 작업 유형을 보여주는 플랫폼 UI 이미지입니다.](assets/get-media-analytics-tracker.png)
 
 ## 다음 단계 {#next-steps}
 
