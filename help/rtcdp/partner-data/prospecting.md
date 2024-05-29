@@ -1,12 +1,12 @@
 ---
 title: 서드파티 쿠키에 의존하지 않고 새로운 고객 참여 및 확보
-description: 서드파티 쿠키에 의존하지 않고 잠재 고객 발굴 사용 사례를 통해 신규 고객을 유치하고 확보하는 방법을 알아봅니다.
+description: 서드파티 쿠키에 의존하지 않고 전망 사용 사례를 통해 새로운 고객을 참여하고 획득하는 방법을 알아봅니다.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 86%
+ht-degree: 84%
 
 ---
 
@@ -71,7 +71,7 @@ Adobe Real-time Customer Data Platform은 브랜드가 DMP(데이터 관리 플�
 * [데이터 세트](/help/catalog/datasets/overview.md)
 * [소스](/help/sources/home.md)
 * [잠재 고객 프로필](/help/profile/ui/prospect-profile.md)
-* [잠재 고객](/help/segmentation/ui/prospect-audience.md)
+* [잠재 고객 대상자](/help/segmentation/ui/prospect-audience.md)
 * [대상](/help/destinations/home.md)
 
 ### 파트너의 라이선스 서드파티 프로필 세부 정보 {#license-profiles-from-partner}
@@ -110,7 +110,7 @@ Adobe Real-time Customer Data Platform은 브랜드가 DMP(데이터 관리 플�
 
 ![XDM 개별 잠재 고객 프로필 클래스에 대해 사전 구성된 필드.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
-그런 다음 이전에 스키마의 기본 ID로 만든 partnerID ID를 선택해야 합니다. 프로필 레코드에는 기본 식별자가 포함되어야 합니다. 이 단계는 잠재 고객 데이터를 프로필 스토어에 로드하고 세분화 및 활성화에 사용할 수 있는지 확인하는 데 필요합니다.
+그런 다음 이전에 스키마의 기본 ID로 만든 partnerID ID를 선택해야 합니다. 프로필 레코드에는 기본 식별자가 포함되어야 합니다. 이 단계는 Prospect 데이터를 Profile Store에 로드하여 세그멘테이션 및 활성화에 사용할 수 있도록 하는 데 필요합니다.
 
 >[!AVAILABILITY]
 >

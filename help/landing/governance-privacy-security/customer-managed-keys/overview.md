@@ -2,10 +2,10 @@
 title: Adobe Experience Platform의 고객 관리 키
 description: Adobe Experience Platform에 저장된 데이터에 대한 자체 암호화 키를 설정하는 방법에 대해 알아봅니다.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 3%
+source-wordcount: '716'
+ht-degree: 0%
 
 ---
 

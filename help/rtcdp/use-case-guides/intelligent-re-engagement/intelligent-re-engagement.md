@@ -3,10 +3,10 @@ title: 지능형 재참여
 description: 주요 전환 순간에 강력한 연결 환경을 제공하여 방문 빈도가 낮은 고객을 지능적으로 재참여시킵니다.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3894'
-ht-degree: 48%
+ht-degree: 46%
 
 ---
 
@@ -180,7 +180,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++상거래 세부 정보(필드 그룹)
 
-다음 [상거래 세부 정보](/help/xdm/field-groups/event/commerce-details.md) 필드 그룹은 제품 정보(SKU, 이름, 수량) 및 표준 장바구니 작업(주문, 체크아웃, 포기)과 같은 상거래 데이터를 설명하는 데 사용됩니다.
+다음 [Commerce 세부 정보](/help/xdm/field-groups/event/commerce-details.md) 필드 그룹은 제품 정보(SKU, 이름, 수량) 및 표준 장바구니 작업(주문, 체크아웃, 포기)과 같은 상거래 데이터를 설명하는 데 사용됩니다.
 
 | 필드 | 설명 |
 | --- | --- |
@@ -223,7 +223,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 +++상거래 세부 정보(필드 그룹)
 
-다음 [상거래 세부 정보](/help/xdm/field-groups/event/commerce-details.md) 필드 그룹은 제품 정보(SKU, 이름, 수량) 및 표준 장바구니 작업(주문, 체크아웃, 포기)과 같은 상거래 데이터를 설명하는 데 사용됩니다.
+다음 [Commerce 세부 정보](/help/xdm/field-groups/event/commerce-details.md) 필드 그룹은 제품 정보(SKU, 이름, 수량) 및 표준 장바구니 작업(주문, 체크아웃, 포기)과 같은 상거래 데이터를 설명하는 데 사용됩니다.
 
 | 필드 | 설명 |
 | --- | --- |
@@ -344,7 +344,7 @@ Experience Data Model(XDM) 리소스는 [!DNL Adobe Experience Platform]의 [!UI
 
 ### 대상자 만들기 {#create-audience}
 
-재참여 시나리오에서는 대상을 사용하여 프로필 스토어의 프로필 하위 집합이 공유하는 특정 속성이나 동작을 정의하여 마케팅 가능한 사용자 그룹과 고객 기반을 구별합니다. 대상자는 다음과 같은 여러 방법으로 만들 수 있습니다. [!DNL Adobe Experience Platform].
+재참여 시나리오는 대상자를 사용하여 프로필 스토어의 프로필 하위 집합이 공유하는 특정 속성이나 동작을 정의하여 마케팅 가능한 사용자 그룹과 고객 기반을 구분합니다. 대상자는 다음과 같은 여러 방법으로 만들 수 있습니다. [!DNL Adobe Experience Platform].
 
 대상자를 만드는 방법에 대한 자세한 내용은 [audience service UI 안내서](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 

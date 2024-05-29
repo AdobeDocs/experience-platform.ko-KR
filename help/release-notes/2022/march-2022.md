@@ -1,17 +1,17 @@
 ---
-title: Adobe Experience Platform 릴리스 정보 2022년 3월
-description: Adobe Experience Platform의 2022년 3월 릴리스 정보입니다.
+title: Adobe Experience Platform 릴리스 노트 2022년 3월
+description: Adobe Experience Platform의 2022년 3월 릴리스 정보.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 18%
+source-wordcount: '1172'
+ht-degree: 10%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 일자: 2022년 3월 30일**
+**릴리스 일자: 2022년 3월 30일 목요일**
 
 Adobe Experience Platform의 새로운 기능:
 
@@ -65,7 +65,7 @@ Experience Platform을 사용하면 다양한 플랫폼 활동에 대한 이벤�
 
 | 기능 | 설명 |
 | --- | --- |
-| 새로운 기능 경고 규칙 | 이제 데이터 수집과 관련된 소스에 대해 두 가지 새로운 경고 규칙을 사용할 수 있습니다. 의 개요 보기 [경고 규칙](../../observability/alerts/rules.md) 경고 유형 업데이트 목록. |
+| 새 경고 규칙 | 이제 데이터 수집과 관련된 소스에 대해 두 가지 새로운 경고 규칙을 사용할 수 있습니다. 의 개요 보기 [경고 규칙](../../observability/alerts/rules.md) 경고 유형 업데이트 목록. |
 
 {style="table-layout:auto"}
 
@@ -77,15 +77,15 @@ Adobe Experience Platform에서 여러 기능 제공 [!DNL dashboards] 이를 �
 
 ### 프로필 대시보드
 
-Experience Platform 대시보드에는 조직이 Profile Store in Profile에 가지고 있는 속성(레코드) 데이터의 스냅샷이 표시됩니다.
+Experience Platform 대시보드에는 조직이 Profile Store in Profile 내에 가지고 있는 속성(레코드) 데이터의 스냅샷이 표시됩니다.
 
 **업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
 | 세분화되지 않은 프로필 위젯 | 위젯은 세그먼트에 첨부되지 않은 모든 프로필의 총 수를 제공합니다. 생성된 숫자는 마지막 스냅샷을 기준으로 정확하며 조직 전체에서 프로필 활성화 기회를 나타냅니다. 다음을 참조하십시오. [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
-| 세분화되지 않은 프로필 트렌드 위젯 | 이 위젯은 지정된 기간 동안 세그먼트에 연결되지 않은 프로필 개수에 대한 선 그래프 그림을 제공합니다. 30일, 90일, 12개월 기간에 걸쳐 트렌드를 시각화할 수 있습니다. 다음을 참조하십시오. [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
-| ID 위젯별 세분화되지 않은 프로필 | 이 위젯은 고유 식별자별로 분할되지 않은 총 프로필 개수를 분류합니다. 데이터는 막대 차트로 시각화됩니다. 다음을 참조하십시오. [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
+| 세분화되지 않은 프로필 트렌드 위젯 | 이 위젯은 주어진 기간 동안 세그먼트에 첨부되지 않은 프로필 수에 대한 선 그래프 일러스트레이션을 제공합니다. 30일, 90일, 12개월 기간에 걸쳐 트렌드를 시각화할 수 있습니다. 다음을 참조하십시오. [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
+| ID 위젯별 세분화되지 않은 프로필 | 이 위젯은 세그먼트화되지 않은 총 프로필 수를 고유 식별자로 분류합니다. 데이터는 막대 차트로 시각화됩니다. 다음을 참조하십시오. [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
 | 단일 ID 프로필 위젯 | 이 위젯에서는 ID를 만드는 한 가지 유형의 ID(이메일 또는 ECID)만 있는 조직 프로필 수를 제공합니다. 다음을 참조하십시오. [프로필 표준 위젯 설명서](../../dashboards/guides/profiles.md#standard-widgets) 추가 정보. |
 
 {style="table-layout:auto"}
@@ -100,7 +100,7 @@ Experience Platform 대시보드에는 조직이 Profile Store in Profile에 가
 
 | 기능 | 설명 |
 | --- | --- |
-| 대상 수 위젯 | 위젯은 대상을 활성화하고 시스템 내에서 전달할 수 있는 사용 가능한 총 끝점 수를 제공합니다. 이 개수에는 활성 대상과 비활성 대상이 모두 포함됩니다. 다음을 참조하십시오. [대상 표준 위젯 설명서](../../dashboards/guides/destinations.md#standard-widgets) 추가 정보. |
+| 대상 수 위젯 | 위젯은 대상을 활성화하고 시스템 내에서 전달할 수 있는 사용 가능한 총 끝점 수를 제공합니다. 이 숫자는 활성 및 비활성 대상을 모두 포함합니다. 다음을 참조하십시오. [대상 표준 위젯 설명서](../../dashboards/guides/destinations.md#standard-widgets) 추가 정보. |
 
 {style="table-layout:auto"}
 
@@ -108,14 +108,14 @@ Experience Platform 대시보드에는 조직이 Profile Store in Profile에 가
 
 ## 데이터 수집 {#data-collection}
 
-Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe 또는 비 Adobe 대상으로 보강, 변환 및 배포가 가능한 Adobe Experience Platform Edge Network로 보낼 수 있는 기술 제품군을 제공합니다.
+Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe Experience Platform Edge Network으로 전송할 수 있는 기술 제품군을 제공합니다. 이 곳에서 이 데이터를 보강 및 변환하고 Adobe 또는 비 Adobe 대상으로 배포할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | --- | --- |
 | 전역 데이터 스트림 설정 | 이제 데이터스트림을 구성할 때 지리적 위치, 자사 ID 쿠키 및 타사 ID 동기화와 같은 몇 가지 새로운 전역 설정을 구성할 수 있습니다. 의 섹션을 참조하십시오. [데이터스트림 구성](../../datastreams/overview.md#create) 자세한 내용은 데이터스트림 UI 안내서를 참조하십시오. |
-| [Edge Network Server API](../../server-api/overview.md) | Server API를 사용하면 고객이 새로운 인증된 엔드포인트를 사용하여 Experience Platform 에지 네트워크와 상호 작용하여 다양한 데이터 수집, 개인화, 광고 및 마케팅 사용 사례를 강화할 수 있습니다. |
+| [Edge Network 서버 API](../../server-api/overview.md) | Server API를 사용하면 고객이 새로운 인증된 끝점을 사용하여 Experience Platform Edge Network과 상호 작용하여 다양한 데이터 수집, 개인화, 광고 및 마케팅 사용 사례를 강화할 수 있습니다. |
 
 Platform에서의 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../collection/home.md).
 
@@ -143,7 +143,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| 새로운 기능 이제 B2B 사용에 사용할 수 있는 소스 | 이제 B2B 사용 사례용 플랫폼에서 사용 가능한 모든 소스를 사용할 수 있습니다. 다음을 참조하십시오. [소스 카탈로그](../../sources/home.md) 사용 가능한 소스의 전체 목록. |
+| 이제 B2B 사용에 사용할 수 있는 새 소스 | 이제 B2B 사용 사례용 플랫폼에서 사용 가능한 모든 소스를 사용할 수 있습니다. 다음을 참조하십시오. [소스 카탈로그](../../sources/home.md) 사용 가능한 소스의 전체 목록. |
 | 새로운 기능의 일반 출시 [!DNL Oracle Eloqua] 소스 | 이제 다음을 사용할 수 있습니다. [!DNL Oracle Eloqua] 소스에서 데이터를 원활하게 수집 [!DNL Oracle Eloqua] 인스턴스(계정, 캠페인, 연락처)를 플랫폼에 추가합니다. 다음에서 설명서를 참조하십시오. [만들기 [!DNL Oracle Eloqua] 소스 연결](../../sources/connectors/marketing-automation/oracle-eloqua.md) 추가 정보. |
 | 의 API 개선 사항 [!DNL Data Landing Zone] | 다음 [!DNL Data Landing Zone] 이제 소스는 를 사용할 때 파일 속성의 자동 검색을 지원합니다. [!DNL Flow Service] API. 다음에서 설명서를 참조하십시오. [만들기 [!DNL Data Landing Zone] 소스 연결](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) 추가 정보. |
 

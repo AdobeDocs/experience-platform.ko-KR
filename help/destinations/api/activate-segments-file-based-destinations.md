@@ -4,10 +4,10 @@ title: 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로
 description: 흐름 서비스 API를 사용하여 적격 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '4404'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -55,7 +55,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 다음 섹션에서는 Platform에서 파일 기반 대상에 데이터를 활성화하기 위해 알아야 하는 추가 정보를 제공합니다.
 
-### 필요 권한 {#permissions}
+### 필요한 권한 {#permissions}
 
 프로필을 내보내려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
 
@@ -102,7 +102,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 | 대상 | 연결 사양 | 흐름 사양 |
 ---------|----------|---------|
 | Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `1a0514a6-33d4-4c7f-aff8-594799c47549` |
-| Azure Blob 저장소 | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
+| Azure Blob 스토리지 | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
 | Azure Data Lake Gen 2(ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
 | 데이터 랜딩 영역(DLZ) | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
 | Google 클라우드 스토리지 | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
@@ -114,7 +114,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 >[!BEGINTABS]
 
->[!TAB Amazon S3]
+>[!TAB Amazon]
 
 **요청**
 
@@ -344,7 +344,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-   "name":"Connect to Profile Store",
+   "name":"Connect to Profile store",
    "description":"Optional",
    "connectionSpec":{
       "id":"8a9c3494-9708-43d7-ae3f-cda01e5030e1", // this connection spec ID is always the same for Source Connections
@@ -380,7 +380,7 @@ A [기본 연결](https://developer.adobe.com/experience-platform-apis/reference
 
 >[!BEGINTABS]
 
->[!TAB Amazon S3]
+>[!TAB Amazon]
 
 +++[!DNL Amazon S3] - [!DNL Connection spec] 표시 [!DNL auth spec]
 
@@ -707,7 +707,7 @@ A [기본 연결](https://developer.adobe.com/experience-platform-apis/reference
 
 >[!BEGINTABS]
 
->[!TAB Amazon S3]
+>[!TAB Amazon]
 
 **요청**
 
@@ -1023,7 +1023,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | 속성 | 설명 |
 | --------- | ----------- |
-| `specName` | `SFTP with Password` 사용. |
+| `specName` | 사용 `SFTP with Password`. |
 | `domain` | SFTP 저장소 위치의 IP 주소 또는 도메인 이름입니다. |
 | `username` | SFTP 저장소 위치에 로그인할 사용자 이름입니다. |
 | `password` | SFTP 저장소 위치에 로그인할 암호입니다. |
@@ -1069,7 +1069,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | 속성 | 설명 |
 | --------- | ----------- |
-| `specName` | `SFTP with Password` 사용. |
+| `specName` | 사용 `SFTP with Password`. |
 | `domain` | SFTP 저장소 위치의 IP 주소 또는 도메인 이름입니다. |
 | `username` | SFTP 저장소 위치에 로그인할 사용자 이름입니다. |
 | `sshKey` | SFTP 저장소 위치에 로그인하는 데 사용되는 개인 SSH 키입니다. 개인 키의 형식은 Base64로 인코딩된 문자열이어야 하며 암호로 보호되어서는 안 됩니다. |
@@ -1206,7 +1206,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!BEGINTABS]
 
->[!TAB Amazon S3]
+>[!TAB Amazon]
 
 +++[!DNL Amazon S3] - [!DNL Connection spec] 대상 연결 매개 변수 표시
 
@@ -2394,7 +2394,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!BEGINTABS]
 
->[!TAB Amazon S3]
+>[!TAB Amazon]
 
 **요청**
 
@@ -2957,7 +2957,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!BEGINTABS]
 
->[!TAB Amazon S3]
+>[!TAB Amazon]
 
 **요청**
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 익명 프로필 데이터 만료
 description: 이 문서에서는 Adobe Experience Platform 내의 익명 프로필에 대한 데이터 만료 구성에 대한 일반적인 지침을 제공합니다.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 63ea5f112a304259cbf2aee1cc8e4ae01f002a17
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1004'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 익명 프로필 데이터 만료
 
-Adobe Experience Platform에서는 익명 프로필의 만료 시간을 구성하여 사용 사례에 더 이상 유효하지 않거나 유용하지 않은 데이터를 프로필 스토어에서 자동으로 제거할 수 있습니다.
+Adobe Experience Platform에서는 익명 프로필의 만료 시간을 구성하여 사용 사례에 더 이상 유효하지 않거나 유용하지 않은 데이터를 프로필 저장소에서 자동으로 제거할 수 있습니다.
 
 ## 익명 프로필 {#pseudonymous-profile}
 

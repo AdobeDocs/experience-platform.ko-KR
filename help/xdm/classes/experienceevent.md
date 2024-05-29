@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM ExperienceEvent 클래스
 description: XDM ExperienceEvent 클래스와 이벤트 데이터 모델링을 위한 모범 사례에 대해 알아봅니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2672'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -69,7 +69,7 @@ Adobe은 와 함께 사용할 수 있도록 여러 표준 필드 그룹을 제�
 * [[!UICONTROL 캠페인 마케팅 세부 정보]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL 카드 작업]](../field-groups/event/card-actions.md)
 * [[!UICONTROL 채널 세부 사항]](../field-groups/event/channel-details.md)
-* [[!UICONTROL 상거래 세부 정보]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL Commerce 세부 정보]](../field-groups/event/commerce-details.md)
 * [[!UICONTROL 예금 세부 정보]](../field-groups/event/deposit-details.md)
 * [[!UICONTROL 디바이스 거래 세부 정보]](../field-groups/event/device-trade-in-details.md)
 * [[!UICONTROL 식사 예약]](../field-groups/event/dining-reservation.md)

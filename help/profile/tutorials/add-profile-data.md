@@ -4,7 +4,7 @@ title: 실시간 고객 프로필에 데이터 추가
 type: Tutorial
 description: 이 자습서에서는 실시간 고객 프로필에 데이터를 추가하는 데 필요한 단계에 대해 설명합니다.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%

@@ -3,7 +3,7 @@ title: 일회성 고객 가치를 라이프타임 가치로 향상
 description: 특정 고객의 특성, 동작 및 과거 구매를 기반으로 최상의 보완 제품 또는 서비스를 제공하기 위해 개인화된 캠페인을 만드는 방법을 알아봅니다.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 26%
@@ -17,7 +17,7 @@ ht-degree: 26%
 >* 이 페이지에는 설명된 사용 사례를 달성하기 위한 Real-Time CDP 및 Adobe Journey Optimizer의 샘플 구현이 나와 있습니다. 페이지에 제공된 수치, 자격 기준 및 기타 필드를 규범적 수치가 아닌 안내서로 사용하십시오.
 >* 이 사용 사례를 완료하려면 Real-Time CDP 및 Adobe Journey Optimizer에 대한 라이선스가 있어야 합니다. 자세한 내용 [전제 조건 및 계획 섹션](#prerequisites-and-planning) 아래에 있습니다.
 
-일회성 고객 가치 대 라이프타임 가치 사용 사례를 구현하여 브랜드 참여 및 브랜드 충성도를 높입니다. 의 강력한 Experience Platform 기능을 사용하여 여러 채널 또는 여정에서 연결된 고객 경험을 구축합니다. [Real-Time CDP](/help/rtcdp/home.md) 및 [Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home).
+일회성 고객 가치 대 라이프타임 가치 사용 사례를 구현하여 브랜드 참여 및 브랜드 충성도를 높입니다. 의 강력한 Experience Platform 기능을 사용하여 여러 채널 또는 여정에서 연결된 고객 경험을 구축합니다. [Real-Time CDP](/help/rtcdp/home.md) 및 [Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/ajo-home).
 
 타겟팅하는 대상은 지난 3개월 이내에 구매한 적이 없는 속성 방문자입니다.
 

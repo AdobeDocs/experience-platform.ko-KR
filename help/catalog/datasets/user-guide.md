@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 데이터 세트 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: ed0a259c72832e4fb219855e2a2fc49b3381b85d
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3080'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -30,8 +30,8 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"
->title="데이터 세트 활동에 포함된 음수"
->abstract="수집된 레코드에 포함된 음수는 사용자가 선택한 시간 범위에서 특정 배치를 삭제했음을 의미합니다."
+>title="데이터 세트 활동의 음수"
+>abstract="수집된 레코드의 음수는 사용자가 선택한 시간 범위에서 특정 일괄 처리를 삭제했음을 의미합니다."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -48,7 +48,7 @@ ht-degree: 3%
 ![선택한 데이터 세트의 지표 및 시각화가 강조 표시됩니다.](../images/datasets/user-guide/dataset-activity-1.png)
 ![선택한 데이터 세트와 관련된 샘플 배치가 강조 표시됩니다.](../images/datasets/user-guide/dataset-activity-2.png)
 
-## 추가 작업 {#more-actions}
+## 기타 액션 {#more-actions}
 
 다음을 수행할 수 있습니다. [!UICONTROL 삭제] 또는 [!UICONTROL 프로필에 대한 데이터 세트 활성화] 다음에서 [!UICONTROL 데이터 세트] 세부 사항 보기. 사용 가능한 작업을 보려면 **[!UICONTROL ... 자세히]** UI의 오른쪽 상단에서. 드롭다운 메뉴가 나타납니다.
 

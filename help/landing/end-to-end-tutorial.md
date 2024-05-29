@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;CJA;여정 분석;고객 여정 
 title: Adobe Experience Platform 전체 예제 워크플로
 description: Adobe Experience Platform의 기본 종단 간 워크플로를 높은 수준에서 알아봅니다.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1832'
 ht-degree: 1%

@@ -4,7 +4,7 @@ title: 세그먼트 내보내기 작업 API 끝점
 description: 내보내기 작업은 대상 세그먼트 구성원을 데이터 세트로 지속하는 데 사용되는 비동기 프로세스입니다. Adobe Experience Platform Segmentation Service API에서 /export/jobs 끝점을 사용하여 내보내기 작업을 프로그래밍 방식으로 검색, 생성 및 취소할 수 있습니다.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 1%

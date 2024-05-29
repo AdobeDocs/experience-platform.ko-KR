@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 4월
 description: Adobe Experience Platform에 대한 2022년 4월 릴리스 정보입니다.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2670'
 ht-degree: 18%
@@ -177,7 +177,7 @@ AI/ML 서비스는 마케팅 분석가 및 전문가가 고객 경험 사용 사
 
 ### 기여도 AI
 
-Attribution AI는 전환 이벤트로 연결되는 터치포인트에 크레딧을 적용하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다.
+Attribution AI은 전환 이벤트로 이어지는 터치포인트에 크레딧을 제공하는 데 사용됩니다. 이를 통해 마케터는 고객 여정 전반에서 각 개별 마케팅 터치포인트의 마케팅 효과를 수량화할 수 있습니다.
 
 **업데이트된 기능**
 

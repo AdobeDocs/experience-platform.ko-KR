@@ -5,7 +5,7 @@ type: Documentation
 description: Adobe Experience Platform을 사용하면 더 이상 필요하지 않거나 오류로 추가된 실시간 고객 프로필 데이터를 제거하기 위해 프로필 스토어에서 데이터 세트 또는 배치를 삭제할 수 있습니다. 이를 위해서는 프로필 API를 사용하여 프로필 시스템 작업을 생성하거나 요청을 삭제해야 합니다.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1327'
 ht-degree: 2%
@@ -305,4 +305,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이제에서 데이터 세트 및 배치 삭제와 관련된 단계를 이해했습니다. [!DNL Profile Store] 다음 범위 내 [!DNL Experience Platform], 잘못 추가되었거나 조직에 더 이상 필요하지 않은 데이터를 안전하게 삭제할 수 있습니다. 삭제 요청은 실행 취소할 수 없으므로 지금은 필요하지 않고 미래에는 필요하지 않다고 확신하는 데이터만 삭제해야 합니다.
+이제에서 데이터 세트 및 배치 삭제와 관련된 단계를 이해했습니다. [!DNL Profile store] 다음 범위 내 [!DNL Experience Platform], 잘못 추가되었거나 조직에 더 이상 필요하지 않은 데이터를 안전하게 삭제할 수 있습니다. 삭제 요청은 실행 취소할 수 없으므로 지금은 필요하지 않고 미래에는 필요하지 않다고 확신하는 데이터만 삭제해야 합니다.

@@ -2,7 +2,7 @@
 title: Edge 프로필
 description: 에지 프로필과 관련 용어, 에지 프로필에 사용할 수 있는 영역 및 에지 프로필에 사용할 수 있는 서비스에 대해 알아봅니다.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -55,7 +55,7 @@ XPS(Express Profile Service)가 다른 모서리에 있는 프로필을 검색�
 
 ## 다음 단계
 
-이 안내서를 읽은 후에는 Edge 프로필에 대해 사용 가능한 영역 및 서비스에 대한 정보를 포함하여 Edge 프로필에 대한 기본적인 이해를 해야 합니다. Experience Edge Adobe에 대한 자세한 내용은 [Edge 네트워크 개요](../web-sdk/home.md#edge-network).
+이 안내서를 읽은 후에는 Edge 프로필에 대해 사용 가능한 영역 및 서비스에 대한 정보를 포함하여 Edge 프로필에 대한 기본적인 이해를 해야 합니다. Experience Edge Adobe에 대한 자세한 내용은 [Edge Network 개요](../web-sdk/home.md#edge-network).
 
 ## 부록
 

@@ -4,14 +4,14 @@ title: Real-time Customer Data Platform의 세그먼테이션 서비스
 description: Adobe Real-time Customer Data Platform은 Adobe Experience Platform을 기반으로 구축되었으며 다양한 Experience Platform 서비스 및 기능을 활용합니다. 세분화 서비스를 사용하면 고객을 유사한 트레이트를 가진 더 작은 그룹으로 나누어 맞춤형 마케팅을 제공할 수 있습니다.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '543'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
-# [!DNL Real-Time Customer Data Platform]의 [!DNL Segmentation Service]
+# [!DNL Segmentation Service] 위치: [!DNL Real-Time Customer Data Platform]
 
 [!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP)을 사용하면 여러 소스에서 데이터를 가져와 고객을 위해 조정되고 일관된 경험을 제공할 수 있습니다. 를 사용하여 적절한 개인화된 마케팅 캠페인을 제공할 수 있습니다. [!DNL Segmentation Service], Adobe Experience Platform 일부.
 
@@ -29,7 +29,7 @@ Real-Time CDP은 Adobe Experience Platform을 기반으로 구축되었으며 �
 
 Real-time Customer Data Platform에 포함된 고객 AI는 설명이 포함된 개별 수준에서 고객 예측을 생성할 수 있는 기능을 제공합니다.
 
-영향력 있는 요소를 통해 고객 AI는 고객이 무엇을 할 수 있고 왜 하는지 알려 줄 수 있습니다. 또한 Customer AI 예측 및 통찰력을 활용하여 가장 적절한 오퍼와 메시지를 제공함으로써 고객 경험을 개인화할 수 있습니다. 고객 AI는 다음을 지원할 수 있습니다.
+영향력 있는 요소를 통해 Customer AI는 고객이 무엇을 할 수 있고 왜 하는지 알려 줄 수 있습니다. 또한 Customer AI 예측 및 통찰력을 활용하여 가장 적절한 오퍼와 메시지를 제공함으로써 고객 경험을 개인화할 수 있습니다. 고객 AI는 다음을 지원할 수 있습니다.
 
 * 보다 강력한 세분화 및 타깃팅을 위해 정확도가 높은 고객 성향 모델을 제공합니다.
 * 특정 고객 행동의 영향 요인과 가능성 이해.

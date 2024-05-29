@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 일괄 처리 수집 API 안내서
 description: 이 문서에서는 Adobe Experience Platform용 일괄 처리 수집 API를 사용하는 개발자를 위한 포괄적인 안내서를 제공합니다.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '2411'
-ht-degree: 4%
+source-wordcount: '2383'
+ht-degree: 5%
 
 ---
 
@@ -759,7 +759,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 배치를 패치하려면 다음 조건을 충족해야 합니다.
 
 - **프로필 및 속성 업데이트에 대해 활성화된 데이터 세트입니다.** 이 작업은 데이터 세트 태그를 통해 수행되며 `isUpsert:true` 태그에 추가할 태그 `unifiedProfile` 배열입니다. 데이터 세트를 만들거나 업데이트할 기존 데이터 세트를 구성하는 방법을 보여 주는 자세한 단계는 [프로필 업데이트를 위한 데이터 세트 활성화](../../catalog/datasets/enable-upsert.md).
-- **패치할 필드와 프로필의 ID 필드가 포함된 Parquet 파일입니다.** 배치 패치를 위한 데이터 형식은 일반 배치 수집 프로세스와 유사합니다. 필요한 입력은 Parquet 파일이며 업데이트할 필드 외에도 프로필 스토어의 데이터와 일치시키기 위해 업로드된 데이터에는 ID 필드가 포함되어야 합니다.
+- **패치할 필드와 프로필의 ID 필드가 포함된 Parquet 파일입니다.** 배치 패치를 위한 데이터 형식은 일반 배치 수집 프로세스와 유사합니다. 필요한 입력은 Parquet 파일이며, 업데이트할 필드 외에도 프로필 저장소의 데이터와 일치시키기 위해 업로드된 데이터에는 ID 필드가 포함되어야 합니다.
 
 프로필 및 업데이트에 대한 데이터 세트가 활성화되고, 패치할 필드와 필수 ID 필드가 포함된 Parquet 파일이 생성되면 다음 단계를 따를 수 있습니다. [Parquet 파일 수집](#ingest-parquet-files) 일괄 처리 수집을 통해 패치를 완료하려면
 

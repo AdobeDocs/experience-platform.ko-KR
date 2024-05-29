@@ -5,7 +5,7 @@ title: 흐름 서비스 API를 사용하여 배치 대상에 연결하고 데이
 description: 플로우 서비스 API를 사용하여 Experience Platform 시 일괄 클라우드 스토리지 또는 이메일 마케팅 대상을 만들고 데이터를 활성화하는 단계별 지침
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3411'
 ht-degree: 2%
@@ -173,7 +173,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | 속성 | 설명 |
 | --------- | ----------- |
-| `name` | Experience Platform에 대한 기본 연결의 이름을 제공합니다. [!DNL Profile Store]. |
+| `name` | Experience Platform에 대한 기본 연결의 이름을 제공합니다. [!DNL Profile store]. |
 | `description` | 선택적으로 기본 연결에 대한 설명을 제공할 수 있습니다. |
 | `connectionSpec.id` | 에 대한 연결 사양 ID 사용 [Experience Platform 프로필 저장소](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 
@@ -207,7 +207,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Profile Store",
+            "name": "Connecting to Profile store",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -224,7 +224,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | 속성 | 설명 |
 | --------- | ----------- |
-| `name` | Experience Platform에 대한 소스 연결의 이름 제공 [!DNL Profile Store]. |
+| `name` | Experience Platform에 대한 소스 연결의 이름 제공 [!DNL Profile store]. |
 | `description` | 선택적으로 소스 연결에 대한 설명을 제공할 수 있습니다. |
 | `connectionSpec.id` | 에 대한 연결 사양 ID 사용 [Experience Platform 프로필 저장소](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 | `baseConnectionId` | 이전 단계에서 얻은 기본 연결 ID를 사용합니다. |
@@ -234,7 +234,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **응답**
 
-성공적인 응답은 고유 식별자()를 반환합니다.`id`)에 새로 만든 소스 연결 [!DNL Profile Store]. 이를 통해 을(를) 정상적으로 연결했습니다. [!DNL Experience Platform] 데이터. 이 값은 이후 단계에서 필요한 대로 저장하십시오.
+성공적인 응답은 고유 식별자()를 반환합니다.`id`)에 새로 만든 소스 연결 [!DNL Profile store]. 이를 통해 을(를) 정상적으로 연결했습니다. [!DNL Experience Platform] 데이터. 이 값은 이후 단계에서 필요한 대로 저장하십시오.
 
 ```json
 {

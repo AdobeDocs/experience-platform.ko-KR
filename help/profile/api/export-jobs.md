@@ -5,7 +5,7 @@ type: Documentation
 description: 실시간 고객 프로필을 사용하면 속성 데이터와 행동 데이터를 모두 포함하여 여러 소스의 데이터를 함께 가져와서 Adobe Experience Platform 내의 개별 고객에 대한 단일 보기를 구축할 수 있습니다. 그런 다음 프로필 데이터를 데이터 세트로 내보내 추가 처리할 수 있습니다.
 role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fd5042bee9b09182ac643bcc69482a0a2b3f8faa
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 2%
@@ -53,8 +53,7 @@ POST /dataSets
 다음 요청은 페이로드에 구성 매개 변수를 제공하는 새 데이터 세트를 만듭니다.
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/catalog/dataSets \
+curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -99,8 +98,7 @@ POST /export/jobs
 다음 요청은 페이로드에 구성 매개 변수를 제공하는 새 내보내기 작업을 만듭니다.
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/export/jobs \
+curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -119,7 +117,7 @@ curl -X POST \
           "fromIngestTimestamp": "2018-10-25T13:22:04-07:00"
         }
       }
-    }
+    },
     "destination": {
       "datasetId": "5b020a27e7040801dedba61b",
       "segmentPerBatch": false
@@ -200,8 +198,7 @@ GET /export/jobs?{QUERY_PARAMETERS}
 **요청**
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/export/jobs/ \
+curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}'
@@ -342,8 +339,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 **요청**
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/export/jobs/24115 \
+curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/24115 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -419,8 +415,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 **요청**
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/export/jobs/726 \
+curl -X POST https://platform.adobe.io/data/core/ups/export/jobs/726 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \

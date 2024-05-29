@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;데이터 준비;데이터 준�
 title: 데이터 준비를 사용하여 실시간 고객 프로필에 부분 행 업데이트 보내기
 description: 데이터 준비를 사용하여 실시간 고객 프로필에 부분 행 업데이트를 보내는 방법을 알아봅니다.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 0%
@@ -130,7 +130,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 | --- | --- | 
 | `create` | 기본 작업입니다. 에 대한 XDM 엔티티 만들기 메서드를 생성합니다. [!DNL Real-Time Customer Profile]. |
 | `merge` | 에 대한 XDM 엔티티 업데이트 메서드를 생성합니다. [!DNL Real-Time Customer Profile]. |
-| `delete` | 에 대한 XDM 엔티티 삭제 메서드를 생성합니다. [!DNL Real-Time Customer Profile] 및 을(를) 통해 [!DNL Profile Store]. |
+| `delete` | 에 대한 XDM 엔티티 삭제 메서드를 생성합니다. [!DNL Real-Time Customer Profile] 및 을(를) 통해 [!DNL Profile store]. |
 
 다음 작업은에서 지원됩니다. [!DNL Identity Service]:
 

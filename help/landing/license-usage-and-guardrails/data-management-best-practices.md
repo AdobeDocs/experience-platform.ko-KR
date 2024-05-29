@@ -2,10 +2,10 @@
 title: 데이터 관리 라이선스 권한 부여 우수 사례
 description: Adobe Experience Platform을 사용하여 라이선스 권한을 보다 효율적으로 관리하는 데 사용할 수 있는 모범 사례 및 도구에 대해 알아봅니다.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2237'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ Adobe Experience Platform은 데이터를 강력한 고객 프로필로 변환�
 
 Platform은 만들 수 있는 프로필 수와 가져올 수 있는 데이터 양을 설정하는 라이선스를 제공합니다. 소스, 볼륨 또는 데이터 내역을 가져올 수 있는 용량을 고려할 때 데이터 볼륨이 증가하면 라이선스 권한을 초과할 수 있습니다.
 
-이 문서에서는 Adobe Experience Platform을 사용하여 라이선스 권한을 보다 효과적으로 관리하는 데 사용할 수 있는 모범 사례 및 도구에 대한 개요를 설명합니다.
+이 문서에서는 Adobe Experience Platform을 사용하여 라이선스 권한을 보다 효율적으로 관리하는 데 사용할 수 있는 모범 사례 및 도구에 대해 간략하게 설명합니다.
 
 ## Adobe Experience Platform 데이터 스토리지 이해
 
@@ -139,7 +139,7 @@ Adobe Experience Platform의 모든 데이터가 동일한 것은 아닙니다. 
 
 #### 익명 프로필 데이터 만료 {#pseudonymous-profile-expirations}
 
-이 기능을 사용하면 프로필 스토어에서 오래된 익명 프로필을 자동으로 제거할 수 있습니다. 이 기능에 대한 자세한 내용은 [익명 프로필 데이터 만료 개요](../../profile/pseudonymous-profiles.md).
+이 기능을 사용하면 프로필 저장소에서 오래된 익명 프로필을 자동으로 제거할 수 있습니다. 이 기능에 대한 자세한 내용은 [익명 프로필 데이터 만료 개요](../../profile/pseudonymous-profiles.md).
 
 #### 경험 이벤트 만료 {#event-expirations}
 

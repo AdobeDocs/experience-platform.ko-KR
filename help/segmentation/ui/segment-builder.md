@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3633'
-ht-degree: 6%
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="필드"
->abstract="세그먼트 대상을 구성하는 세 가지 필드 유형은 속성, 이벤트와 대상자입니다. 속성을 통해 XDM 개별 프로필 클래스에 속한 프로필 속성을 사용하고, 이벤트를 통해 XDM ExperienceEvent 데이터 요소로 인해 발생하는 작업 또는 이벤트를 기반으로 대상자를 만들고, 대상자를 통해 외부 소스에서 가져온 대상자를 사용할 수 있습니다."
+>abstract="세그먼트 정의를 구성하는 세 가지 필드 유형은 속성, 이벤트 및 대상입니다. 속성을 사용하면 XDM 개별 프로필 클래스에 속하는 프로필 속성을 사용할 수 있고, 이벤트를 사용하면 XDM ExperienceEvent 데이터 요소를 사용하여 수행되는 작업 또는 이벤트를 기반으로 대상자를 만들 수 있으며, 대상자를 사용하면 외부 소스에서 가져온 대상자를 사용할 수 있습니다."
 
 세그먼트 정의의 기본 구성 요소는 속성 및 이벤트입니다. 또한 기존 대상자에 포함된 속성 및 이벤트를 새 정의의 구성 요소로 사용할 수 있습니다.
 
@@ -73,11 +73,11 @@ ht-degree: 6%
 
 | 필드 | 보고서 세트 스키마 A | 보고서 세트 스키마 B |
 | ----- | --------------------- | --------------------- |
-| eVar1 | 참조 도메인 | 로그인 Y/N |
-| eVar2 | 페이지 이름 | 멤버 충성도 ID |
-| eVar3 | URL | 페이지 이름 |
-| eVar4 | 검색어 | 제품 이름 |
-| event1 | 클릭수 | 페이지 보기 횟수 |
+| eVar | 참조 도메인 | 로그인 Y/N |
+| eVar | 페이지 이름 | 멤버 충성도 ID |
+| eVar | URL | 페이지 이름 |
+| eVar | 검색어 | 제품 이름 |
+| event1 | 클릭 수 | 페이지 보기 횟수 |
 | event2 | 페이지 보기 횟수 | 장바구니 추가 |
 | event3 | 장바구니 추가 | 체크아웃 |
 | event4 | 구매 | 구매 |
@@ -232,7 +232,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="병합 정책"
->abstract="병합 정책은 서로 다른 데이터 세트의 병합을 활성화하여 프로필을 형성합니다. 플랫폼에서 기본 병합 정책이 제공되었거나, 또는 [프로필]에서 새로운 기본 병합 정책을 생성할 수 있습니다. 이 대상자에 대해 마케팅 목적에 부합하는 병합 정책을 선택하십시오."
+>abstract="병합 정책을 사용하면 서로 다른 데이터 세트를 병합하여 프로필을 형성할 수 있습니다. 플랫폼에서 기본 병합 정책을 제공했거나 프로필에서 새 기본 병합 정책을 만들 수 있습니다. 이 대상자의 마케팅 목적에 부합하는 병합 정책을 선택하십시오."
 
 [!DNL Experience Platform] 를 사용하면 여러 소스에서 데이터를 한데 모아 각 개별 고객에 대한 전체 보기를 볼 수 있도록 결합할 수 있습니다. 이 데이터를 결합할 때 병합 정책은 [!DNL Platform] 는 을 사용하여 데이터의 우선 순위 지정 방법 및 어떤 데이터가 결합되어 프로필을 만들지 결정합니다.
 
@@ -247,13 +247,13 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="세그먼트 정의 속성"
->abstract="세그먼트 대상 속성 섹션에는 총 프로필 개수와 비교하여 적격 프로필 개수를 표시하는 최종 세그먼트 대상 예상 크기가 표시됩니다. 필요에 따라 대상자 자체를 빌드하기 전에 세그먼트 정의를 조정할 수 있습니다."
+>abstract="세그먼트 정의 속성 섹션에는 결과 세그먼트 정의의 크기 예상치가 표시되며, 전체 프로필 수와 비교하여 적격 프로필의 수가 표시됩니다. 이렇게 하면 대상자 자체를 빌드하기 전에 필요에 따라 세그먼트 정의를 조정할 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
->title="예상치 새로 고침"
->abstract="세그먼트 대상의 예상치를 새로 고쳐 제안된 세그먼트 대상에 적합한 프로필 개수를 미리 볼 수 있습니다. 당일 샘플 데이터의 샘플 크기를 사용하여 대상자 예상치를 생성합니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=ko-KR#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
+>title="예상 새로 고침"
+>abstract="세그먼트 정의 예상 값을 새로 고쳐 제안된 세그먼트 정의에 적합한 프로필 수에 대한 미리 보기를 즉시 볼 수 있습니다. 대상자 예상치는 해당 날짜의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="대상자 예측 및 미리보기"
 
 세그먼트 정의를 작성할 때 **[!UICONTROL 대상 속성]** 작업 영역 오른쪽의 섹션에는 결과 세그먼트 정의의 크기에 대한 예상치가 표시되어 대상 자체를 빌드하기 전에 필요에 따라 세그먼트 정의를 조정할 수 있습니다.
 
