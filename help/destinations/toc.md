@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
+source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1223'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 3%
    * [흐름 서비스 API를 사용하여 파일 기반 대상에 데이터 활성화](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [흐름 서비스 API를 사용하여 스트리밍 대상에 연결하고 데이터를 활성화합니다](./api/streaming-destinations.md)
    * [파일 기반 이메일 마케팅 대상에 연결하고 플로우 서비스 API를 사용하여 데이터를 활성화합니다](./api/connect-activate-batch-destinations.md)
-   * [(Beta) 애드혹 활성화 API를 통해 대상자를 배치 대상으로 활성화합니다](./api/ad-hoc-activation-api.md)
+   * [임시 활성화 API를 통해 대상을 일괄 대상으로 활성화](./api/ad-hoc-activation-api.md)
    * [대상 편집](./api/edit-destination.md)
    * [대상 데이터 흐름 업데이트](./api/update-destination-dataflows.md)
    * [대상 계정 삭제](./api/delete-destination-account.md)
