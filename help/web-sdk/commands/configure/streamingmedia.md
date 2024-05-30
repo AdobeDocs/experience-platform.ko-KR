@@ -1,7 +1,7 @@
 ---
-title: mediaCollection
+title: 스트리밍 미디어
 description: 웹 속성에서 미디어 사용과 관련된 데이터를 수집하도록 웹 SDK를 구성합니다.
-source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
+source-git-commit: c0cb244221215f78f9ef13d8a54a8799ab15df6c
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 6%
