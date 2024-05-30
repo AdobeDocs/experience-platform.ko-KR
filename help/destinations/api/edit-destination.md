@@ -4,10 +4,10 @@ title: 흐름 서비스 API를 사용하여 대상 연결 편집
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 대상 연결의 다양한 구성 요소를 편집하는 방법에 대해 알아봅니다.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 2a72f6886f7a100d0a1bf963eedaed8823a7b313
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 5%
+source-wordcount: '1605'
+ht-degree: 4%
 
 ---
 
@@ -54,7 +54,7 @@ Experience Platform에 속한 리소스를 포함한 모든 리소스 [!DNL Flow
 >
 >다음과 같은 경우 `x-sandbox-name` 헤더가 지정되지 않았습니다. 요청은에서 확인됩니다. `prod` 샌드박스.
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드가 포함된 모든 요청(`POST`, `PUT`, `PATCH`) 추가 미디어 유형 헤더가 필요합니다.
 
 * `Content-Type: application/json`
 
@@ -177,17 +177,19 @@ curl -X GET \
 
 대상 연결의 구성 요소는 대상마다 다릅니다. 예를 들어 [!DNL Amazon S3] 대상 에서는 파일을 내보내는 버킷과 경로를 업데이트할 수 있습니다. 대상 [!DNL Pinterest] 대상, 다음을 업데이트할 수 있습니다. [!DNL Pinterest Advertiser ID] 및 [!DNL Google Customer Match] 다음을 업데이트할 수 있습니다. [!DNL Pinterest Account ID].
 
-대상 연결의 구성 요소를 업데이트하려면에 대한 PATCH 요청을 수행합니다 `/targetConnections/{TARGET_CONNECTION_ID}` 대상 연결 ID, 버전 및 사용할 새 값을 제공하는 동안 끝점이 발생했습니다. 이전 단계에서 원하는 대상에 대한 기존 데이터 흐름을 검사했을 때 대상 연결 ID를 얻었다는 것을 기억하십시오.
+대상 연결의 구성 요소를 업데이트하려면 `PATCH` 에 대한 요청 `/targetConnections/{TARGET_CONNECTION_ID}` 대상 연결 ID, 버전 및 사용할 새 값을 제공하는 동안 끝점이 발생했습니다. 이전 단계에서 원하는 대상에 대한 기존 데이터 흐름을 검사했을 때 대상 연결 ID를 얻었다는 것을 기억하십시오.
 
 >[!IMPORTANT]
 >
->다음 `If-Match` PATCH 요청을 할 때 헤더가 필요합니다. 이 헤더 값은 업데이트하려는 대상 연결의 고유한 버전입니다. 데이터 흐름, 대상 연결 등 플로우 엔티티를 성공적으로 업데이트할 때마다 etag 값이 업데이트됩니다.
+>다음 `If-Match` 만들 때 헤더가 필요합니다. `PATCH` 요청. 이 헤더 값은 업데이트하려는 대상 연결의 고유한 버전입니다. 데이터 흐름, 대상 연결 등 플로우 엔티티를 성공적으로 업데이트할 때마다 etag 값이 업데이트됩니다.
 >
 > GET 최신 버전의 etag 값을 가져오려면 `/targetConnections/{TARGET_CONNECTION_ID}` 끝점, 여기서 `{TARGET_CONNECTION_ID}` 는 업데이트하려는 타겟 연결 ID입니다.
+>
+> 의 값을 반드시 래핑하십시오. `If-Match` 만들 때 아래 예제와 같이 큰 따옴표로 묶인 헤더 `PATCH` 요청.
 
 다음은 다양한 대상 유형에 대한 대상 연결 사양의 매개 변수를 업데이트하는 몇 가지 예입니다. 그러나 모든 대상에 대한 매개 변수를 업데이트하는 일반 규칙은 다음과 같습니다.
 
-연결의 데이터 흐름 ID 가져오기 > 대상 연결 ID 가져오기 > 원하는 매개 변수에 대해 업데이트된 값으로 대상 연결을 PATCH 합니다.
+연결의 데이터 흐름 ID 가져오기 > 대상 연결 ID 가져오기 > `PATCH` 원하는 매개 변수에 대해 업데이트된 값이 있는 target 연결입니다.
 
 >[!BEGINSHADEBOX]
 
@@ -199,7 +201,7 @@ PATCH /targetConnections/{TARGET_CONNECTION_ID}
 
 >[!BEGINTABS]
 
->[!TAB Amazon S3]
+>[!TAB Amazon]
 
 **요청**
 
@@ -332,19 +334,21 @@ curl -X PATCH \
 
 대상의 자격 증명을 업데이트하려면 기본 연결을 편집합니다. 기본 연결의 구성 요소는 대상마다 다릅니다. 예를 들어 [!DNL Amazon S3] 대상, 액세스 키 및 비밀 키를 [!DNL Amazon S3] 위치.
 
-PATCH 기본 연결의 구성 요소를 업데이트하려면 `/connections` 기본 연결 ID, 버전 및 사용할 새 값을 제공하는 동안 끝점이 발생했습니다.
+기본 연결의 구성 요소를 업데이트하려면 `PATCH` 에 대한 요청 `/connections` 기본 연결 ID, 버전 및 사용할 새 값을 제공하는 동안 끝점이 발생했습니다.
 
 에 기본 연결 ID가 있습니다. [이전 단계](#look-up-dataflow-details)매개 변수에 대해 원하는 대상으로 기존 데이터 흐름을 검사한 경우 `baseConnection`.
 
 >[!IMPORTANT]
 >
->다음 `If-Match` PATCH 요청을 할 때 헤더가 필요합니다. 이 헤더의 값은 업데이트하려는 기본 연결의 고유 버전입니다. 데이터 흐름, 기본 연결 등 흐름 엔티티가 성공적으로 업데이트될 때마다 etag 값이 업데이트됩니다.
+>다음 `If-Match` 만들 때 헤더가 필요합니다. `PATCH` 요청. 이 헤더의 값은 업데이트하려는 기본 연결의 고유 버전입니다. 데이터 흐름, 기본 연결 등 흐름 엔티티가 성공적으로 업데이트될 때마다 etag 값이 업데이트됩니다.
 >
 > GET 최신 버전의 Etag 값을 가져오려면 `/connections/{BASE_CONNECTION_ID}` 끝점, 여기서 `{BASE_CONNECTION_ID}` 는 업데이트하려는 기본 연결 ID입니다.
+>
+> 의 값을 반드시 래핑하십시오. `If-Match` 만들 때 아래 예제와 같이 큰 따옴표로 묶인 헤더 `PATCH` 요청.
 
 다음은 다양한 유형의 대상에 대해 기본 연결 사양의 매개 변수를 업데이트하는 몇 가지 예입니다. 그러나 모든 대상에 대한 매개 변수를 업데이트하는 일반 규칙은 다음과 같습니다.
 
-연결의 데이터 흐름 ID를 가져오고 > 기본 연결 ID를 가져오고 > 원하는 매개 변수에 대해 업데이트된 값으로 기본 연결을 PATCH 합니다.
+연결의 데이터 흐름 ID 가져오기 > 기본 연결 ID 가져오기 > `PATCH` 원하는 매개 변수에 대해 업데이트된 값이 있는 기본 연결입니다.
 
 >[!BEGINSHADEBOX]
 
@@ -356,7 +360,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 >[!BEGINTABS]
 
->[!TAB Amazon S3]
+>[!TAB Amazon]
 
 **요청**
 

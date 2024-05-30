@@ -4,9 +4,9 @@ title: 흐름 서비스 API를 사용하여 대상을 파일 기반 대상으로
 description: 흐름 서비스 API를 사용하여 적격 프로필이 있는 파일을 클라우드 스토리지 대상으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: df7b9bb0c5dc4348e8be7a0ea93296e24bc0fb1d
 workflow-type: tm+mt
-source-wordcount: '4404'
+source-wordcount: '4760'
 ht-degree: 3%
 
 ---
@@ -81,7 +81,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 >
 >의 샌드박스에 대한 자세한 내용 [!DNL Experience Platform], 다음을 참조하십시오. [샌드박스 개요 설명서](../../sandboxes/home.md).
 
-페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
+페이로드가 포함된 모든 요청(`POST`, `PUT`, `PATCH`) 추가 미디어 유형 헤더가 필요합니다.
 
 * 컨텐츠 유형: `application/json`
 
@@ -4454,7 +4454,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 >[!ENDSHADEBOX]
 
-마지막으로 방금 만든 매핑 세트 정보로 데이터 흐름을 PATCH 해야 합니다.
+마지막으로 다음을 수행해야 합니다. `PATCH` 방금 만든 매핑 세트 정보가 있는 데이터 흐름입니다.
 
 >[!BEGINSHADEBOX]
 
@@ -4504,11 +4504,88 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ![사용자가 진행 중인 현재 단계를 강조 표시하는 대상을 활성화하는 단계](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-데이터 흐름을 업데이트하려면 `PATCH` 예를들어 데이터 흐름을 업데이트하여 필드를 필수 키 또는 중복 제거 키로 선택할 수 있습니다.
+데이터 흐름을 업데이트하려면 `PATCH` 작업. 예를 들어 데이터 흐름에 마케팅 작업을 추가할 수 있습니다. 또는 데이터 흐름을 업데이트하여 필드를 필수 키 또는 중복 제거 키로 선택할 수 있습니다.
+
+### 마케팅 액션 추가 {#add-marketing-action}
+
+을(를) 추가하려면 [마케팅 액션](/help/data-governance/api/marketing-actions.md)아래의 요청 및 응답 예를 참조하십시오.
+
+>[!IMPORTANT]
+>
+>다음 `If-Match` 만들 때 헤더가 필요합니다. `PATCH` 요청. 이 헤더의 값은 업데이트하려는 데이터 흐름의 고유 버전입니다. 데이터 흐름, 대상 연결 등 플로우 엔티티를 성공적으로 업데이트할 때마다 etag 값이 업데이트됩니다.
+>
+> GET 최신 버전의 etag 값을 가져오려면 `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` 끝점, 여기서 `{ID}` 는 업데이트하려는 데이터 흐름 ID입니다.
+>
+> 의 값을 반드시 래핑하십시오. `If-Match` 만들 때 아래 예제와 같이 큰 따옴표로 묶인 헤더 `PATCH` 요청.
+
+>[!BEGINSHADEBOX]
+
+**요청**
+
+>[!TIP]
+>
+>데이터 흐름에 마케팅 작업을 추가하기 전에 기존 핵심 및 사용자 지정 마케팅 작업을 조회할 수 있습니다. 보기 [기존 마케팅 액션 목록을 검색하는 방법](/help/data-governance/api/marketing-actions.md#list).
+
++++대상 데이터 흐름에 마케팅 작업 추가 - 요청
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+   {
+      "op":"add",
+      "path":"/policy",
+      "value":{
+         "enforcementRefs":[
+            
+         ]
+      }
+   },
+   {
+      "op":"add",
+      "path":"/policy/enforcementRefs/-",
+      "value":"/dulepolicy/marketingActions/custom/6b935bc8-bb9e-451b-a327-0ffddfb91e66/constraints"
+   }
+]'
+```
+
++++
+
+
+**응답**
+
++++마케팅 작업 추가 - 응답
+
+성공적인 응답이 응답 코드를 반환합니다. `200` 업데이트된 데이터 흐름 및 업데이트된 eTag의 ID와 함께.
+
+```json
+{
+    "id": "eb54b3b3-3949-4f12-89c8-64eafaba858f",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
 
 ### 필수 키 추가 {#add-mandatory-key}
 
-을(를) 추가하려면 [필수 키](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes), 아래의 요청 및 응답 예 를 참조하십시오
+을(를) 추가하려면 [필수 키](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes)아래의 요청 및 응답 예를 참조하십시오.
+
+>[!IMPORTANT]
+>
+>다음 `If-Match` 만들 때 헤더가 필요합니다. `PATCH` 요청. 이 헤더의 값은 업데이트하려는 데이터 흐름의 고유 버전입니다. 데이터 흐름, 대상 연결 등 플로우 엔티티를 성공적으로 업데이트할 때마다 etag 값이 업데이트됩니다.
+>
+> GET 최신 버전의 etag 값을 가져오려면 `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` 끝점, 여기서 `{ID}` 는 업데이트하려는 데이터 흐름 ID입니다.
+>
+> 의 값을 반드시 래핑하십시오. `If-Match` 만들 때 아래 예제와 같이 큰 따옴표로 묶인 헤더 `PATCH` 요청.
 
 >[!BEGINSHADEBOX]
 
@@ -4517,12 +4594,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++필수 필드로 ID 추가 - 요청
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4540,12 +4618,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++XDM 속성을 필수 필드로 추가 - 요청
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4579,6 +4658,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 을(를) 추가하려면 [중복 제거 키](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys), 아래의 요청 및 응답 예 를 참조하십시오
 
+>[!IMPORTANT]
+>
+>다음 `If-Match` 만들 때 헤더가 필요합니다. `PATCH` 요청. 이 헤더의 값은 업데이트하려는 데이터 흐름의 고유 버전입니다. 데이터 흐름, 대상 연결 등 플로우 엔티티를 성공적으로 업데이트할 때마다 etag 값이 업데이트됩니다.
+>
+> GET 최신 버전의 etag 값을 가져오려면 `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` 끝점, 여기서 `{ID}` 는 업데이트하려는 데이터 흐름 ID입니다.
+>
+> 의 값을 반드시 래핑하십시오. `If-Match` 만들 때 아래 예제와 같이 큰 따옴표로 묶인 헤더 `PATCH` 요청.
+
 >[!BEGINSHADEBOX]
 
 **요청**
@@ -4586,12 +4673,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++ID를 중복 제거 키로 추가 - 요청
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4612,12 +4700,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++XDM 속성을 중복 제거 키로 추가 - 요청
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
