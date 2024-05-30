@@ -2,10 +2,10 @@
 title: 데이터스트림 만들기 및 구성
 description: 클라이언트측 Web SDK 통합 기능을 다른 Adobe 제품 및 서드파티 대상과 연결하는 방법에 대해 알아봅니다.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 370ab0b2a575cc2b5d17f3ae2b3b0b6a6999c462
+source-git-commit: 43d97ea4d850a36d350894d70a082464a21e449d
 workflow-type: tm+mt
-source-wordcount: '2738'
-ht-degree: 54%
+source-wordcount: '2753'
+ht-degree: 53%
 
 ---
 
@@ -175,7 +175,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 | [!UICONTROL 이벤트 데이터 세트] | **(필수)** 고객 이벤트 데이터가 스트리밍되는 Platform 데이터 세트를 선택합니다. 이 스키마는 [XDM ExperienceEvent 클래스](../xdm/classes/experienceevent.md)를 사용해야 합니다. 추가 데이터 세트를 추가하려면 **[!UICONTROL 이벤트 데이터 세트 추가]**&#x200B;를 선택합니다. |
 | [!UICONTROL 프로필 데이터 세트] | 고객 속성 데이터를 전송할 Platform 데이터 세트를 선택합니다. 이 스키마는 [XDM 개별 프로필 클래스](../xdm/classes/individual-profile.md)를 사용해야 합니다. |
 | [!UICONTROL Offer Decisioning] | 웹 SDK 구현에 대한 Offer decisioning을 활성화합니다. 다음 안내서를 참조하십시오 [Web SDK에서 Offer decisioning 사용](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md) 구현 세부 사항.<br><br>Offer Decisioning 기능에 대한 자세한 내용은 [Adobe Journey Optimizer 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=ko-KR)를 참조하십시오. |
-| [!UICONTROL 에지 세분화] | 사용 [가장자리 세분화](../segmentation/ui/edge-segmentation.md) 이 데이터스트림에 사용됩니다. SDK가 에지 세분화 지원 데이터스트림을 통해 데이터를 전송하는 경우 문제가 있는 해당 프로필의 업데이트된 세그먼트 멤버십이 응답으로 다시 전송됩니다.<br><br>이 옵션은 [다음 페이지 개인화 사용 사례](../destinations/ui/activate-edge-personalization-destinations.md)에 대한 [!UICONTROL 개인화 대상]과 함께 사용될 수 있습니다. |
+| [!UICONTROL 에지 세분화] | 사용 [가장자리 세분화](../segmentation/ui/edge-segmentation.md) 이 데이터스트림에 사용됩니다. 다음의 경우 [웹 SDK](../web-sdk/home.md) 또는 [Edge Network 서버 API](../server-api/overview.md) 에지 세분화가 활성화된 데이터 스트림을 통해 데이터를 전송합니다. 해당 프로필에 대한 업데이트된 대상 멤버십은 응답에서 다시 전송됩니다.<br><br>이 옵션은 다음과 함께 사용할 수 있습니다. **[!UICONTROL 개인화 대상]** 를 통한 동일 페이지 및 다음 페이지 개인화 사용 사례 [에지 대상](../destinations/ui/activate-edge-personalization-destinations.md) 또는 [!DNL Offer Decisioning]. |
 | [!UICONTROL 개인화 대상] | [!UICONTROL 에지 세분화] 확인란을 활성화하고 이 옵션을 활성화하는 경우 데이터스트림을 [사용자 정의 개인화](../destinations/catalog/personalization/custom-personalization.md)와 같은 개인화 대상에 연결할 수 있습니다.<br><br>[개인화 대상 구성](../destinations/ui/activate-edge-personalization-destinations.md)에 대한 구체적인 단계는 대상 설명서를 참조하십시오. |
 | [!UICONTROL Adobe Journey Optimizer] | 사용 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) 이 데이터스트림에 사용됩니다. <br><br> 이 옵션을 활성화하면 데이터스트림은 [!DNL Adobe Journey Optimizer]의 웹 및 앱 기반 인바운드 캠페인에서 개인화된 콘텐츠를 반환할 수 있습니다. 이 옵션을 사용하려면 [!UICONTROL 에지 세분화]를 활성화해야 합니다. If [!UICONTROL Edge 세그멘테이션] 이 선택되지 않으면 이 옵션이 회색으로 표시됩니다. |
 
