@@ -2,7 +2,7 @@
 description: Adobe Experience Platform Destination SDK을 통해 대상 구성을 만들기 위해 API 호출을 구성하는 방법을 알아봅니다.
 title: 대상 구성 만들기
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 3%
@@ -217,7 +217,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `segmentMappingConfig.mapUserInput` | 부울 | 대상 활성화 워크플로의 대상 매핑 ID가 사용자에 의해 입력되는지 여부를 제어합니다. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentId` | 부울 | 대상 활성화 워크플로의 대상 매핑 ID가 Experience Platform 대상 ID인지 여부를 제어합니다. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | 부울 | 대상 활성화 워크플로의 대상 매핑 ID가 Experience Platform 대상 이름인지 여부를 제어합니다. |
-| `segmentMappingConfig.audienceTemplateId` | 부울 | 다음 `instanceId` / [대상 메타데이터 템플릿](../../metadata-api/create-audience-template.md) 이 대상에 사용됩니다. |
+| `segmentMappingConfig.audienceTemplateId` | 문자열 | 다음 `instanceId` / [대상 메타데이터 템플릿](../../metadata-api/create-audience-template.md) 이 대상에 사용됩니다. |
 | `schemaConfig.profileFields` | 배열 | 사전 정의된 항목을 추가할 때 `profileFields` 위의 구성에 표시된 대로 사용자는 Experience Platform 속성을 대상 측의 사전 정의된 속성에 매핑할 수 있습니다. |
 | `schemaConfig.profileRequired` | 부울 | 사용 `true` 위의 예제 구성에 표시된 대로 사용자가 Experience Platform의 프로필 속성을 대상 측의 사용자 지정 속성에 매핑할 수 있어야 하는 경우입니다. |
 | `schemaConfig.segmentRequired` | 부울 | 항상 사용 `segmentRequired:true`. |

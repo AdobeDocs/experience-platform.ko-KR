@@ -2,7 +2,7 @@
 description: Destination SDK으로 빌드된 대상에 대한 대상 메타데이터 설정을 구성하는 방법에 대해 알아봅니다.
 title: 대상 메타데이터 구성
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 3%
@@ -57,7 +57,7 @@ Destination SDK은 대상 플랫폼에서 대상을 프로그래밍 방식으로
 | `mapExperiencePlatformSegmentName` | 부울 | 다음 여부를 나타냅니다. [[!UICONTROL 매핑 ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 대상 활성화 워크플로의 값은 Experience Platform 대상 이름이어야 합니다. |
 | `mapExperiencePlatformSegmentId` | 부울 | 다음 여부를 나타냅니다. [[!UICONTROL 매핑 ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 대상 활성화 워크플로의 값은 Experience Platform 대상 ID여야 합니다. |
 | `mapUserInput` | 부울 | 다음에 대한 사용자 입력 활성화 또는 비활성화 [[!UICONTROL 매핑 ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 대상 활성화 워크플로의 값입니다. 로 설정된 경우 `true`, `audienceTemplateId` 이(가) 있을 수 없습니다. |
-| `audienceTemplateId` | 부울 | 다음 `instanceId` / [대상 메타데이터 템플릿](../../metadata-api/create-audience-template.md) 대상에 사용됩니다. |
+| `audienceTemplateId` | 문자열 | 다음 `instanceId` / [대상 메타데이터 템플릿](../../metadata-api/create-audience-template.md) 대상에 사용됩니다. |
 
 {style="table-layout:auto"}
 
