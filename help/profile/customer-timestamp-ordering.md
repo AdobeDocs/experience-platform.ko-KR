@@ -4,7 +4,7 @@ description: 프로필 데이터의 일관성을 보장하기 위해 데이터 �
 badgePrivateBeta: label="비공개 베타" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: f73b7ac38c681ec5161e2b5e7075f31946a6563e
+source-git-commit: dffbdafc3f063906c8c8fb648ace59b2f1aedab8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Adobe Experience Platform에서는 프로필 스토어로 스트리밍을 통해 데이터를 수집할 때 기본적으로 데이터 순서가 보장되지 않습니다. 고객 타임스탬프 주문을 사용하면 제공된 고객 타임스탬프에 따라 최신 메시지가 프로필 스토어에 보존될 수 있습니다. 그러면 모든 오래된 메시지가 삭제되고 **아님** 세분화 및 대상과 같은 프로필 데이터를 사용하는 다운스트림 서비스에서 사용할 수 있습니다. 따라서 프로필 데이터가 일관되고 소스 시스템과 동기화된 상태를 유지할 수 있습니다.
 
-고객 타임스탬프 순서를 활성화하려면 다음을 사용하십시오. `extSourceSystemAudit.lastUpdatedDate` 필드 내 [외부 소스 시스템 감사 속성 데이터 유형](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) 샌드박스 및 데이터 세트 정보를 참조하여 Adobe 기술 계정 관리자 또는 Adobe 고객 지원 센터에 문의하십시오.
+고객 타임스탬프 순서를 활성화하려면 다음을 사용하십시오. `extSourceSystemAudit.lastUpdatedDate` 필드 내 [외부 소스 시스템 감사 속성 필드 그룹](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) 샌드박스 및 데이터 세트 정보를 참조하여 Adobe 기술 계정 관리자 또는 Adobe 고객 지원 센터에 문의하십시오.
 
 ## 제한
 
