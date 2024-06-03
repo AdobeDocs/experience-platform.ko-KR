@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스트리밍 수집 개요
 description: Adobe Experience Platform용 스트리밍 수집은 클라이언트 및 서버측 장치에서 실시간으로 Experience Platform으로 데이터를 전송하는 방법을 사용자에게 제공합니다.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: c6cff4d30815d3f7bfb61d1672a5d0228a0da60d
+source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '424'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,11 @@ Adobe Experience Platform을 사용하면 를 생성하여 조정되고 일관�
 
 데이터 세트 활성화에 대한 자세한 내용 [!DNL Profile] 및 [!DNL Identity Service], 다음을 읽으십시오. [데이터 세트 안내서 구성](../../profile/tutorials/dataset-configuration.md).
 
-## 스트리밍 수집에 대한 예상 지연 시간은 얼마입니까? [!DNL Platform]?
+## Experience Platform 스트리밍 수집의 예상 대기 시간은 어떻게 됩니까?
+
+>[!IMPORTANT]
+>
+>스트리밍 수집을 위한 가드레일은 샌드박스 수준이 아닌 조직 수준에서 계산됩니다. 즉, 샌드박스당 데이터 사용량이 전체 조직에 해당하는 총 라이선스 사용 권한에 바인딩됩니다. 또한 개발 샌드박스의 데이터 사용은 총 프로필의 10%로 제한됩니다. 라이선스 사용 권한에 대한 자세한 내용은 [데이터 관리 모범 사례 안내서](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 | 대상 | 예상 지연 시간 |
 | --------- | ---------------- |

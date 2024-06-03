@@ -3,14 +3,18 @@ keywords: Experience Platform;문제 해결;보호 기능;지침;
 title: 데이터 수집 보호
 description: Adobe Experience Platform에서의 데이터 수집을 위한 보호 기능에 대해 알아봅니다.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
+source-git-commit: cdc5bb01ef6de8134c6ad4ef6601a748571bf86f
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 1%
+source-wordcount: '646'
+ht-degree: 0%
 
 ---
 
 # 데이터 수집 보호
+
+>[!IMPORTANT]
+>
+>일괄 처리 및 스트리밍 수집에 대한 보호는 샌드박스 수준이 아닌 조직 수준에서 계산됩니다. 즉, 샌드박스당 데이터 사용량이 전체 조직에 해당하는 총 라이선스 사용 권한에 바인딩됩니다. 또한 개발 샌드박스의 데이터 사용은 총 프로필의 10%로 제한됩니다. 라이선스 사용 권한에 대한 자세한 내용은 [데이터 관리 모범 사례 안내서](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 가드레일은 Adobe Experience Platform에서 데이터 및 시스템 사용, 성능 최적화 및 오류나 예기치 않은 결과의 회피를 위한 지침을 제공하는 임계값입니다. 보호 기능은 라이선스 권한과 관련하여 데이터 사용 또는 소비 및 처리를 의미할 수 있습니다.
 
