@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Marketo Engage 소스에 대한 필드 매핑
 description: 아래 표에는 Marketo 데이터 세트의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
+source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
 workflow-type: tm+mt
-source-wordcount: '889'
-ht-degree: 4%
+source-wordcount: '890'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,11 @@ ht-degree: 4%
 
 다음 [!DNL Marketo] 이제 source에서 추가 표준 활동을 지원합니다. 표준 활동을 사용하려면 를 사용하여 스키마를 업데이트해야 합니다. [스키마 자동 생성 유틸리티](../marketo/marketo-namespaces.md) 새 항목을 만들면 `activities` 스키마를 업데이트하지 않으면 매핑 템플릿이 실패하고 스키마에 새 대상 필드가 없습니다. 스키마를 업데이트하지 않도록 선택하는 경우에도 새 데이터 흐름을 만들고 오류를 무시할 수 있습니다. 그러나 새 필드나 업데이트된 필드는 Platform에 수집되지 않습니다.
 
-다음에서 설명서를 참조하십시오. [XDM 경험 이벤트 클래스](../../../../xdm/classes/experienceevent.md) XDM 클래스 및 XDM 필드 그룹에 대한 자세한 정보입니다.
+의 설명서를 읽어 보십시오. [XDM 경험 이벤트 클래스](../../../../xdm/classes/experienceevent.md) XDM 클래스 및 XDM 필드 그룹에 대한 자세한 정보입니다.
+
+>[!NOTE]
+>
+>다음 `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` 소스 필드는 를 사용하여 추가해야 하는 계산된 필드입니다. **[!UICONTROL 계산된 필드 추가]** Experience Platform UI의 옵션 다음에 대한 자습서 읽기: [계산된 필드 추가](../../../../data-prep/ui/mapping.md#calculated-fields) 추가 정보.
 
 | 소스 데이터 세트 | XDM 타겟 필드 | 참고 |
 | -------------- | ---------------- | ----- |
@@ -127,6 +131,7 @@ ht-degree: 4%
 | `directMarketing.emailSent.testVariantID` | `directMarketing.emailSent.testVariantID` |
 | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |
 | `directMarketing.emailSent.automationRunID` | `directMarketing.emailSent.automationRunID` |
+| `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` | `identityMap` | 계산된 필드입니다. |
 
 {style="table-layout:auto"}
 
@@ -293,7 +298,7 @@ ht-degree: 4%
 
 {style="table-layout:auto"}
 
-## 영업 기회 {#opportunities}
+## 기회 {#opportunities}
 
 읽기 [XDM 비즈니스 영업 기회 개요](../../../../xdm/classes/b2b/business-opportunity.md) XDM 클래스에 대한 자세한 내용.
 
@@ -402,16 +407,11 @@ ht-degree: 4%
 | `iif(id != null && id != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", id, "sourceKey", concat(id,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourcePersonKey` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
-| `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | 계산된 필드입니다. |
 | `marketoIsDeleted` | `isDeleted` |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `b2b.convertedContactKey` | 계산된 필드입니다. |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `personComponents.sourceConvertedContactKey` | 계산된 필드입니다. |
 
 {style="table-layout:auto"}
-
->[!NOTE]
->
->다음 `to_object('ECID',arrays_to_objects('id',explode(ecids)))` 소스 필드는 를 사용하여 추가해야 하는 계산된 필드입니다. [!UICONTROL 계산된 필드 추가] Platform UI의 옵션입니다. 다음 튜토리얼 참조: [계산된 필드 추가](../../../../data-prep/ui/mapping.md#calculated-fields) 추가 정보.
 
 ## 다음 단계
 

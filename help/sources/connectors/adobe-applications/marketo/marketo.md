@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Marketo Engage 커넥터
 description: 이 문서에서는 인증, 매핑 및 데이터 지연에 대한 정보를 포함하여 Marketo Engage 소스 커넥터에 대한 개요를 제공합니다.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 50b97ebb8496636a0fccd64d57d7829b1342f87c
+source-git-commit: 0c695e11e7d7c14ef7e047cd007668e1099bf127
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 5%
+source-wordcount: '683'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-[[!DNL Marketo Engage]](https://www.marketo.com/software/)는 리드 관리를 위한 완전한 솔루션이며, 복잡한 구매 여정의 모든 단계에서 고객 경험을 전환하여 고객 경험을 혁신하고자 하는 B2B 마케터입니다.
+[[!DNL Marketo Engage]](https://www.marketo.com/software/) 는 리드 관리를 위한 완전한 솔루션이며, 복잡한 구매 여정의 모든 단계에서 고객 경험을 전환하여 고객 경험을 혁신하고자 하는 B2B 마케터입니다.
 
 포함 [!DNL Marketo Engage] 소스 커넥터에서는 B2B 데이터를 가져올 수 있습니다. [!DNL Marketo Engage] 플랫폼에 연결하고 플랫폼에 연결된 애플리케이션을 사용하여 이 데이터를 최신 상태로 유지하십시오.
 
@@ -60,7 +60,7 @@ XDM과 Platform에서의 역할에 대한 자세한 내용은 다음을 참조�
 * [정적 목록](../mapping/marketo.md#static-lists)
 * [정적 목록 멤버십](../mapping/marketo.md#static-list-memberships)
 * [명명된 계정](../mapping/marketo.md#named-accounts)
-* [영업 기회](../mapping/marketo.md#opportunities)
+* [기회](../mapping/marketo.md#opportunities)
 * [영업 기회 연락처 역할](../mapping/marketo.md#opportunity-contact-roles)
 * [개인](../mapping/marketo.md#persons)
 
@@ -71,7 +71,7 @@ XDM과 Platform에서의 역할에 대한 자세한 내용은 다음을 참조�
 | 대상 | 예상 대기 시간 |
 | ----------- | ---------------- |
 | [!DNL Real-Time Customer Profile] | &lt; 10분 |
-| 데이터 레이크 | &lt; 60분 |
+| 데이터 레이크 | 60분 미만 |
 
 >[!NOTE]
 >
@@ -83,6 +83,7 @@ XDM과 Platform에서의 역할에 대한 자세한 내용은 다음을 참조�
 
 * 연결 방법에 대한 자세한 정보 [!DNL Marketo Engage] 데이터를 플랫폼으로 보내면에서 자습서를 참조하십시오. [만들기 [!DNL Marketo Engage] UI의 소스 연결](../../../tutorials/ui/create/adobe-applications/marketo.md).
    * 스키마를 설정하고 사용자 지정 활동 데이터를 수집하는 방법에 대한 자세한 내용은 [소스 연결 및 데이터 흐름 만들기 [!DNL Marketo Engage] 사용자 지정 활동 데이터](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+   * 에서 ECID 매핑을 마이그레이션하는 방법에 대한 자세한 내용은 [!DNL Person] 데이터 세트를 [!DNL Activity] 데이터 세트, 읽기 [ECID 매핑 마이그레이션 안내서](./migration.md).
 * 에서 사용되는 B2B 네임스페이스 및 스키마의 기본 설정에 대한 자세한 내용 [!DNL Marketo Engage], 다음 설명서를 참조하십시오. [B2B 네임스페이스 및 스키마](./marketo-namespaces.md).
 * 를 찾는 방법에 대한 자세한 내용 [!DNL Marketo Engage] munchkin ID 및 자격 증명 생성, [[!DNL Marketo Engage] 인증 안내서](./marketo-auth.md).
 * 에 적용되는 특정 매핑 규칙에 대한 정보 [!DNL Marketo Engage] 데이터 세트 다음에 대한 설명서를 읽어 보십시오. [[!DNL Marketo Engage] 필드 매핑](../mapping/marketo.md).

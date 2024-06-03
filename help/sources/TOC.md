@@ -5,10 +5,10 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 58239a1d2db7be48cedd4467cb2f94913e387031
+source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
 workflow-type: tm+mt
-source-wordcount: '1039'
-ht-degree: 10%
+source-wordcount: '1043'
+ht-degree: 23%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 10%
          - [Marketo Engage 커넥터](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage 인증 안내서](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B 네임스페이스 및 스키마](connectors/adobe-applications/marketo/marketo-namespaces.md)
+         - [ECID 매핑 마이그레이션 안내서](connectors/adobe-applications/marketo/migration.md)
    - 광고 {#advertising}
       - [Google Ads 커넥터](connectors/advertising/ads.md)
       - [Pinterest 광고](connectors/advertising/pinterest-ads.md)
@@ -51,11 +52,11 @@ ht-degree: 10%
       - [Azure Blob 커넥터](connectors/cloud-storage/blob.md)
       - [Azure Event Hubs 커넥터](connectors/cloud-storage/eventhub.md)
       - [Azure 파일 저장소 커넥터](connectors/cloud-storage/azure-file-storage.md)
-      - [데이터 랜딩 영역](connectors/cloud-storage/data-landing-zone.md)
+      - [데이터 랜딩 구역](connectors/cloud-storage/data-landing-zone.md)
       - [FTP 커넥터](connectors/cloud-storage/ftp.md)
       - [Google 클라우드 스토리지 커넥터](connectors/cloud-storage/google-cloud-storage.md)
-      - [Google Pubsub](connectors/cloud-storage/google-pubsub.md)
-      - [Oracle 개체 스토리지](connectors/cloud-storage/oracle-object-storage.md)
+      - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
+      - [Oracle 오브젝트 스토리지](connectors/cloud-storage/oracle-object-storage.md)
       - [SFTP 커넥터](connectors/cloud-storage/sftp.md)
       - [Amazon S3 및 Azure Blob 커넥터](connectors/cloud-storage/blob-s3.md)
    - 동의 및 환경 설정 {#consent}
@@ -93,8 +94,8 @@ ht-degree: 10%
       - [Snowflake 커넥터](connectors/databases/snowflake.md)
       - [Teradata 밴티지 커넥터](connectors/databases/teradata-vantage.md)
    - 데이터 및 ID 파트너 {#data-partner}
-      - [Acxiom 데이터 섭취](connectors/data-partners/acxiom-data-ingestion.md)
-      - [Acxiom 전망 데이터 가져오기](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Acxiom 데이터 수집](connectors/data-partners/acxiom-data-ingestion.md)
+      - [Acxiom 예상 데이터 가져오기](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
    - 전자 상거래 {#ecommerce}
       - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)
@@ -103,7 +104,7 @@ ht-degree: 10%
    - 로컬 시스템 {#local-system}
       - [로컬 파일 업로드 커넥터](connectors/local-system/local-file-upload.md)
    - 마케팅 자동화 {#marketing-automation}
-      - [브레이즈 커류스](connectors/marketing-automation/braze.md)
+      - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [HubSpot 커넥터](connectors/marketing-automation/hubspot.md)
@@ -125,7 +126,7 @@ ht-degree: 10%
 - API 자습서 {#api-tutorials}
    - 기본 연결 만들기 {#create}
       - 광고 {#advertising}
-         - [Google 광고](tutorials/api/create/advertising/ads.md)
+         - [Google Ads](tutorials/api/create/advertising/ads.md)
          - [Pinterest 광고](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
@@ -133,16 +134,16 @@ ht-degree: 10%
       - 클라우드 스토리지 {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
-         - [Apache HDD](tutorials/api/create/cloud-storage/hdfs.md)
+         - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [Azure Blob](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
-         - [Azure 이벤트 허브](tutorials/api/create/cloud-storage/eventhub.md)
+         - [Azure Event Hubs](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure 파일 스토리지](tutorials/api/create/cloud-storage/azure-file-storage.md)
-         - [데이터 랜딩 영역](tutorials/api/create/cloud-storage/data-landing-zone.md)
+         - [데이터 랜딩 구역](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google 클라우드 스토리지](tutorials/api/create/cloud-storage/google.md)
-         - [Google Pubsub](tutorials/api/create/cloud-storage/google-pubsub.md)
-         - [Oracle 개체 스토리지](tutorials/api/create/cloud-storage/oracle-object-storage.md)
+         - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
+         - [Oracle 오브젝트 스토리지](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - 동의 및 환경 설정 {#consent}
          - [OneTrust 통합](tutorials/api/create/consent-and-preferences/onetrust.md)
@@ -151,19 +152,19 @@ ht-degree: 10%
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [SugarCRM 계정 및 연락처](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM 이벤트](tutorials/api/create/crm/sugarcrm-events.md)
-         - [베바 CRM](tutorials/api/create/crm/veeva.md)
+         - [Veeva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - 고객 성공 {#customer-success}
          - [Oracle 서비스 클라우드](tutorials/api/create/customer-success/oracle-service-cloud.md)
          - [Salesforce 서비스 클라우드](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
-         - [젠데스크](tutorials/api/create/customer-success/zendesk.md)
+         - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - 데이터베이스 {#databases}
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Azure HDInsights의 Apache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsights의 Apache Spark](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [Azure synapse 분석](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure 테이블 스토리지](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -173,12 +174,12 @@ ht-degree: 10%
          - [마리아DB](tutorials/api/create/databases/mariadb.md)
          - [MySQL](tutorials/api/create/databases/mysql.md)
          - [Oracle](tutorials/api/create/databases/oracle.md)
-         - [피닉스](tutorials/api/create/databases/phoenix.md)
-         - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [Phoenix](tutorials/api/create/databases/phoenix.md)
+         - [PostgreSql](tutorials/api/create/databases/postgres.md)
          - [Snowflake 스트리밍](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
-         - [Teradata 밴티지](tutorials/api/create/databases/teradata-vantage.md)
-         - [SQL Server](tutorials/api/create/databases/sql-server.md)
+         - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
+         - [SQL 서버](tutorials/api/create/databases/sql-server.md)
       - 전자 상거래 {#ecommerce}
          - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -247,7 +248,7 @@ ht-degree: 10%
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Marketo 사용자 지정 활동](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
       - 광고 {#advertising}
-         - [Google 광고](tutorials/ui/create/advertising/ads.md)
+         - [Google Ads](tutorials/ui/create/advertising/ads.md)
          - [Pinterest 광고](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
@@ -256,16 +257,16 @@ ht-degree: 10%
       - 클라우드 스토리지 {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
-         - [Apache HDD](tutorials/ui/create/cloud-storage/hdfs.md)
+         - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
-         - [Azure 이벤트 허브](tutorials/ui/create/cloud-storage/eventhub.md)
+         - [Azure Event Hubs](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure 파일 스토리지](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [데이터 랜딩 영역](tutorials/ui/create/cloud-storage/data-landing-zone.md)
+         - [데이터 랜딩 구역](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google 클라우드 스토리지](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
-         - [Google Pubsub](tutorials/ui/create/cloud-storage/google-pubsub.md)
-         - [Oracle 개체 스토리지](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
+         - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
+         - [Oracle 오브젝트 스토리지](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 및 Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - 동의 및 환경 설정 {#consent}
@@ -275,37 +276,37 @@ ht-degree: 10%
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [SugarCRM 계정 및 연락처](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM 이벤트](tutorials/ui/create/crm/sugarcrm-events.md)
-         - [베바 CRM](tutorials/ui/create/crm/veeva.md)
+         - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - 고객 성공 {#customer-success}
          - [Oracle 서비스 클라우드](tutorials/ui/create/customer-success/oracle-service-cloud.md)
          - [Salesforce 서비스 클라우드](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
-         - [젠데스크](tutorials/ui/create/customer-success/zendesk.md)
+         - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - 데이터베이스 {#databases}
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsights의 Apache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsights의 Apache Spark](tutorials/ui/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure synapse 분석](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure 테이블 스토리지](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
-         - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
+         - [Google 큰 쿼리](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
          - [마리아DB](tutorials/ui/create/databases/mariadb.md)
-         - [Microsoft Server](tutorials/ui/create/databases/sql-server.md)
+         - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [MySQL](tutorials/ui/create/databases/mysql.md)
          - [Oracle](tutorials/ui/create/databases/oracle.md)
-         - [피닉스](tutorials/ui/create/databases/phoenix.md)
-         - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
+         - [Phoenix](tutorials/ui/create/databases/phoenix.md)
+         - [PostgreSql](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Snowflake 스트리밍](tutorials/ui/create/databases/snowflake-streaming.md)
-         - [Teradata 밴티지](tutorials/ui/create/databases/teradata-vantage.md)
+         - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - 데이터 및 ID 파트너 {#data-partner}
-         - [Acxiom 데이터 섭취](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
-         - [Acxiom 전망 데이터 가져오기](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Acxiom 데이터 수집](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
+         - [Acxiom 예상 데이터 가져오기](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
          - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
       - 전자 상거래 {#ecommerce}
          - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
@@ -314,7 +315,7 @@ ht-degree: 10%
       - 로컬 시스템 {#local-system}
          - [로컬 파일 업로드](tutorials/ui/create/local-system/local-file-upload.md)
       - 마케팅 자동화 {#marketing-automation}
-         - [브레이즈 커류스](tutorials/ui/create/marketing-automation/braze.md)
+         - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
@@ -347,7 +348,7 @@ ht-degree: 10%
       - [마케팅 자동화 연결 데이터 흐름](tutorials/ui/dataflow/marketing-automation.md)
       - [결제 연결 데이터 흐름](tutorials/ui/dataflow/payments.md)
       - [프로토콜 연결 데이터 흐름](tutorials/ui/dataflow/protocols.md)
-   - [UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기](tutorials/ui/templates.md)
+   - [UI의 템플릿을 사용하여 소스 데이터 흐름 만들기](tutorials/ui/templates.md)
    - [소스 오브젝트 필터링](tutorials/ui/filter.md)
    - [온디맨드 수집](tutorials/ui/on-demand-ingestion.md)
    - [일괄 처리 데이터 흐름 모니터링](tutorials/ui/monitor.md)
@@ -356,7 +357,7 @@ ht-degree: 10%
    - [데이터 흐름 업데이트](tutorials/ui/update-dataflows.md)
    - [계정 삭제](tutorials/ui/delete-accounts.md)
    - [데이터 흐름 삭제](tutorials/ui/delete.md)
-   - [소스 알림 구독](tutorials/ui/alerts.md)
+   - [소스 경고 구독](tutorials/ui/alerts.md)
    - [데이터 흐름을 초안으로 저장](tutorials/ui/draft.md)
 - 셀프서비스 소스(일괄 SDK) {#sdk}
    - [개요](sources-sdk/overview.md)
@@ -394,4 +395,4 @@ ht-degree: 10%
 - [IP 주소 허용 목록](ip-address-allow-list.md)
 - [자주 묻는 질문](./troubleshooting.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
