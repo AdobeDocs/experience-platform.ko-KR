@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 2e1ea70496b8e379d5a9be0f2f321b21da86cf4d
+source-git-commit: e96477882beceb6e370d53df3cc65e8dfb28745f
 workflow-type: tm+mt
-source-wordcount: '2096'
-ht-degree: 25%
+source-wordcount: '2158'
+ht-degree: 24%
 
 ---
 
@@ -13,6 +13,17 @@ ht-degree: 25%
 # Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md).
+
+## 버전 2.23.2 - 2024년 6월 3일
+
+**수정 사항 및 향상된 기능**
+
+* 구성 재정의가 정의될 때 확장 구성을 수정할 때 발생하는 오류를 수정했습니다.
+* 미디어 컬렉션 Ping 간격에 대해 빈 값을 설정할 수 있습니다.
+* 변수 업데이트 작업을 수정할 때 발생하는 오류를 수정했습니다.
+* 구성 재정의에서 ID 동기화 컨테이너 재설정을 허용합니다.
+
+Adobe Experience Platform Web SDK 버전 2.20.0을 포함합니다.
 
 ## 버전 2.23.1 - 2024년 5월 28일
 
