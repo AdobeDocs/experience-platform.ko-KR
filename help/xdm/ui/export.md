@@ -4,14 +4,19 @@ title: UI에서 XDM 스키마 내보내기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 스키마를 다른 샌드박스 또는 조직으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: d25042e80ca5f655a50deac6a65ce9168225d6e6
+source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
 
-# UI에서 XDM 스키마 내보내기
+# UI에서 XDM 스키마 내보내기 {#export-xdm-schemas-in-the-UI}
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_copyjsonstructure"
+>title="JSON 구조 복사"
+>abstract="JSON 구조를 클립보드에 복사하여 선택한 스키마에 대한 내보내기 페이로드를 생성합니다. 이 기능을 사용하여 스키마 라이브러리에 있는 모든 스키마의 세부 정보를 내보냅니다. 그런 다음 내보낸 이 JSON을 사용하여 스키마 및 관련 리소스를 다른 샌드박스 또는 조직으로 가져올 수 있습니다. 이를 통해 다양한 환경 간에 스키마를 단순하고 효율적으로 공유하고 재사용할 수 있습니다."
 
 스키마 라이브러리 내의 모든 리소스는 조직 내의 특정 샌드박스에 포함됩니다. 경우에 따라 샌드박스와 조직 간에 XDM(Experience Data Model) 리소스를 공유할 수 있습니다.
 
@@ -40,6 +45,8 @@ Platform UI의 세부 정보 패널에서 내보내기 페이로드를 생성할
 ![스키마 행 및 [!UICONTROL JSON으로 복사] 강조 표시됨.](../images/ui/export/copy-json.png)
 
 이렇게 하면 스키마 구조를 기반으로 생성된 클립보드에 JSON 페이로드가 복사됩니다. 의 경우[!DNL Loyalty Members]&quot; 위에 표시된 스키마에서는 다음 JSON이 생성됩니다.
+
++++예제 JSON 페이로드를 확장하려면 선택
 
 ```json
 [
@@ -203,6 +210,8 @@ Platform UI의 세부 정보 패널에서 내보내기 페이로드를 생성할
 ]
 ```
 
++++
+
 페이로드를 선택하여 복사할 수도 있습니다. [!UICONTROL 자세히] 스키마 편집기의 오른쪽 상단에서. 드롭다운 메뉴는 두 가지 옵션을 제공합니다. [!UICONTROL JSON 구조 복사] 및 [!UICONTROL 스키마 삭제].
 
 >[!NOTE]
@@ -215,7 +224,7 @@ Platform UI의 세부 정보 패널에서 내보내기 페이로드를 생성할
 
 조직의 테넌트 ID의 각 인스턴스는 로 표시됩니다. `<XDM_TENANTID_PLACEHOLDER>` 페이로드에서. 이러한 자리 표시자는 다음 단계에서 스키마를 가져오는 위치에 따라 적절한 테넌트 ID 값으로 자동으로 대체됩니다.
 
-## API를 사용하여 리소스 가져오기
+## API를 사용하여 리소스 가져오기 {#import-resource-with-api}
 
 스키마에 대한 JSON 내보내기를 복사했으면 POST 요청에 대한 페이로드로 사용할 수 있습니다. `/rpc/import` 스키마 레지스트리 API의 끝점입니다. 다음을 참조하십시오. [끝점 가져오기 안내서](../api/import.md) 원하는 조직 및 샌드박스로 스키마를 전송하는 호출을 구성하는 방법에 대한 세부 정보.
 

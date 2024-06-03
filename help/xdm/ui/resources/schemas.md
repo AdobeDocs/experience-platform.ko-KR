@@ -4,14 +4,14 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법의 기본 사항에 대해 알아봅니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
 workflow-type: tm+mt
 source-wordcount: '3732'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-# UI에서 스키마 생성 및 편집
+# UI에서 스키마 생성 및 편집 {#create-edit-schemas-in-ui}
 
 이 안내서에서는 Adobe Experience Platform UI에서 조직에 대한 XDM(Experience Data Model) 스키마를 만들고, 편집하고, 관리하는 방법에 대한 개요를 제공합니다.
 
@@ -65,7 +65,7 @@ ht-degree: 2%
 
 스키마를 선택하면 [!DNL Schema Editor] 캔버스에 스키마 구조가 표시된 상태로 나타납니다. 이제 다음을 수행할 수 있습니다. [필드 그룹 추가](#add-field-groups) 스키마로(또는 [개별 필드 추가](#add-individual-fields) (해당 그룹에서), [필드 표시 이름 편집](#display-names), 또는 [기존 사용자 정의 필드 그룹 편집](./field-groups.md#edit) 스키마에 가 사용된 경우
 
-## 추가 작업 {#more}
+## 기타 액션 {#more}
 
 스키마 편집기 내에서 빠른 작업을 수행하여 스키마의 JSON 구조를 복사하거나, 실시간 고객 프로필에 대해 활성화되지 않았거나 관련 데이터 세트가 있는 경우 스키마를 삭제할 수도 있습니다. 선택 [!UICONTROL 자세히] 빠른 작업과 함께 드롭다운을 표시하려면 보기 맨 위에 놓습니다.
 
@@ -233,7 +233,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 새 필드가 캔버스에 추가되고 아래에 이름 간격이 지정됩니다. [임차인 ID](../../api/getting-started.md#know-your-tenant_id) 표준 XDM 필드와의 충돌을 방지합니다. 새 필드를 연결한 필드 그룹도 아래에 나타납니다. **[!UICONTROL 필드 그룹]** 왼쪽 레일에서.
 
-![테넌트 ID](../../images/ui/resources/schemas/tenantId.png)
+![임차인 ID](../../images/ui/resources/schemas/tenantId.png)
 
 >[!NOTE]
 >
@@ -281,12 +281,12 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 ![표준 오브젝트에 추가된 필드](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## 실시간 고객 프로필용으로 스키마 활성화 {#profile}
+## 실시간 고객 프로필에 대한 스키마 활성화 {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
->title="프로필용으로 스키마 활성화"
->abstract="스키마가 프로필용으로 활성화되면 이 스키마에서 생성된 모든 데이터 세트는 서로 다른 소스의 데이터를 병합하여 각 고객을 전체적으로 볼 수 있는 실시간 고객 프로필에 참여합니다. 스키마를 사용하여 데이터를 프로필로 수집하면 비활성화될 수 없습니다. 자세한 내용은 설명서를 참조하십시오."
+>title="프로필에 대한 스키마 활성화"
+>abstract="프로필에 대해 스키마를 활성화하면 이 스키마에서 만든 모든 데이터 세트가 실시간 고객 프로필에 참여하며, 이 프로필은 서로 다른 소스의 데이터를 병합하여 각 고객에 대한 전체 보기를 구성합니다. 스키마를 사용하여 데이터를 프로필에 수집하면 비활성화할 수 없습니다. 자세한 내용은 설명서 를 참조하십시오."
 
 [실시간 고객 프로필](../../../profile/home.md) 서로 다른 소스의 데이터를 병합하여 각 개별 고객에 대한 전체 보기를 구성합니다. 스키마에 의해 캡처된 데이터가에서 사용할 수 있도록 스키마를 활성화해야 합니다 [!DNL Profile].
 

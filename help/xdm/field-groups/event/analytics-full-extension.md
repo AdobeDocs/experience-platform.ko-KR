@@ -2,7 +2,7 @@
 title: Adobe Analytics ExperienceEvent 전체 확장 스키마 필드 그룹
 description: Adobe Analytics ExperienceEvent 전체 확장 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 5eb15a7dfff7e6d8ba815ae4f89142ba50166620
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 5%
@@ -37,7 +37,7 @@ ht-degree: 5%
 
 ## `customDimensions` {#custom-dimensions}
 
-`customDimensions` 사용자 정의 캡처 [치수](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html?lang=ko-KR) Analytics에서 추적합니다.
+`customDimensions` 사용자 정의 캡처 [치수](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html) Analytics에서 추적합니다.
 
 ![customDimensions 필드](../../images/field-groups/analytics-full-extension/customDimensions.png)
 
@@ -72,12 +72,12 @@ ht-degree: 5%
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `browserIDStr` | 문자열 | 사용된 브라우저의 Adobe Analytics 식별자(또는 [브라우저 유형 차원](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html?lang=ko-KR)). |
-| `operatingSystemIDStr` | 문자열 | 사용된 운영 체제용 Adobe Analytics 식별자(또는 [운영 체제 유형 차원](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html?lang=ko-KR)). |
+| `browserIDStr` | 문자열 | 사용된 브라우저의 Adobe Analytics 식별자(또는 [브라우저 유형 차원](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)). |
+| `operatingSystemIDStr` | 문자열 | 사용된 운영 체제용 Adobe Analytics 식별자(또는 [운영 체제 유형 차원](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)). |
 
 ## 사용자 정의 이벤트 필드 {#events}
 
-Analytics 확장 필드 그룹은 최대 100개를 캡처하는 10개의 개체 필드를 제공합니다 [사용자 지정 이벤트 지표](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html?lang=ko-KR) 각각, 필드 그룹의 총 1000개
+Analytics 확장 필드 그룹은 최대 100개를 캡처하는 10개의 개체 필드를 제공합니다 [사용자 지정 이벤트 지표](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html) 각각, 필드 그룹의 총 1000개
 
 각 최상위 이벤트 객체에는 해당 범위의 개별 이벤트 객체가 포함되어 있습니다. 예를 들어, `event101to200` 은(는) 다음을 키로 한 이벤트를 포함합니다. `event101` 끝 `event200`.
 
@@ -101,6 +101,6 @@ Analytics 확장 필드 그룹은 최대 100개를 캡처하는 10개의 개체 
 
 ## 다음 단계
 
-이 문서에서는 Analytics 확장 필드 그룹의 구조 및 사용 사례를 다룹니다. 필드 그룹 자체에 대한 자세한 내용은 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
+이 문서에서는 Analytics 확장 필드 그룹의 구조 및 사용 사례에 대해 다룹니다. 필드 그룹 자체에 대한 자세한 내용은 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
 이 필드 그룹을 사용하여 Adobe Experience Platform Web SDK를 사용하여 Analytics 데이터를 수집하는 경우 [데이터스트림 구성](../../../datastreams/overview.md) 를 사용하여 서버측에서 XDM에 데이터를 매핑하는 방법을 알아봅니다.
