@@ -1,11 +1,9 @@
 ---
 title: Adobe Experience Platform의 AI Assistant 개요
 description: AI Assistant, 그 뉘앙스와 사용 사례 및 이를 사용하여 Adobe Experience Platform 및 Real-time Customer Data Platform을 사용하여 워크플로를 신속하게 하는 방법에 대해 알아봅니다.
-hide: true
-hidefromtoc: true
-source-git-commit: fe87a487079f5154f238b2d425cdd249a4724762
+source-git-commit: dd3a7d07c0c78d76c552affef892d5e5c0f0bfb5
 workflow-type: tm+mt
-source-wordcount: '2294'
+source-wordcount: '2371'
 ht-degree: 0%
 
 ---
@@ -72,6 +70,13 @@ AI Assistant를 쿼리하기 전에 고려해야 할 두 가지 유형의 질문
 * 소스 _(현재 계정에 대한 질문에 답변할 수 없습니다.)_
 
 운영 통찰력 질문에 대한 답변이 UI의 현재 상태를 반영하지 않을 수 있습니다. 이러한 질문을 뒷받침하는 데이터는 24시간마다 한 번씩 업데이트됩니다. 예를 들어 사용자가 낮에 Real-Time CDP에서 수행하는 변경 사항은 밤에 데이터 스토어와 동기화된 다음 아침에 사용자 질문에 대해 사용할 수 있게 됩니다. 객체와 관련된 특정 데이터를 조회하려면 샌드박스에 로그인해야 합니다.
+
+### 기능 범위 {#feature-scope}
+
+현재 AI Assistant의 범위는 다음과 같습니다.
+
+* [제품 지식](./home.md#product-knowledge): AI Assistant는 Experience Platform, Real-time Customer Data Platform 및 Adobe Journey Optimizer에 대한 제품 지식 질문에 답변할 수 있습니다. Customer Journey Analytics을 위해 제품 지식 항목을 자세히 살펴볼 수도 있지만, Customer Journey Analytics UI를 통해서만 가능합니다.
+* [Operational insights](./home.md#operational-insights): 속성, 대상, 데이터 흐름, 데이터 세트, 대상, 여정, 스키마 및 소스와 같은 데이터 개체에 대한 작동 통찰력에 대한 질문이 있는 경우 AI Assistant에 질문할 수 있습니다.
 
 ## 기능 액세스 {#feature-access}
 
