@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM 시스템 개요
 description: 표준화와 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 작업입니다.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: 48caa318f0e951979db4fd2c94624a73311422d6
 workflow-type: tm+mt
-source-wordcount: '2117'
-ht-degree: 4%
+source-wordcount: '2101'
+ht-degree: 0%
 
 ---
 
@@ -48,12 +48,12 @@ Platform에서 스키마를 관리하고 상호 작용하는 방법에 대한 �
 * [XDM UI 안내서](./ui/overview.md)
 * [스키마 레지스트리 API 안내서](./api/overview.md)
 
-## XDM 시스템의 데이터 비헤이비어 {#data-behaviors}
+## XDM 시스템의 데이터 동작 {#data-behaviors}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
->title="데이터 비헤이비어"
->abstract="Experience Platform에서 사용할 데이터는 레코드, 시계열과 애드혹 등 세 가지 비헤이비어 유형으로 그룹화됩니다. 레코드 스키마는 주제 속성에 대한 정보를 제공하지만 시계열 스키마는 작업 수행 시 시스템 스냅샷을 캡처합니다. 애드혹 스키마는 단일 데이터 세트에서만 사용하는 네임스페이스인 필드를 캡처합니다. Platform의 데이터 비헤이비어에 대한 자세한 내용은 설명서를 참조하십시오."
+>title="데이터 동작"
+>abstract="Experience Platform에서 사용하기 위한 데이터는 레코드, 시계열 및 애드혹, 이렇게 세 가지 동작 유형으로 그룹화됩니다. 레코드 스키마는 제목의 속성에 대한 정보를 제공하는 반면, 시계열 스키마는 작업이 수행된 시간에 시스템의 스냅샷을 캡처합니다. 임시 스키마는 단일 데이터 세트에서만 사용할 수 있도록 네임스페이스가 지정된 필드를 캡처합니다. 플랫폼의 데이터 동작에 대한 자세한 내용은 설명서를 참조하십시오."
 
 Experience Platform에서 사용하기 위한 데이터는 다음 세 가지 동작 유형으로 그룹화됩니다.
 
@@ -118,10 +118,6 @@ Experience Platform에 데이터 수집을 시작하려면 카탈로그 서비�
 Real-Time Customer Profile은 타깃팅되고 개인화된 경험 관리를 위한 중앙 집중식 고객 프로필을 제공합니다. 각 프로필에는 모든 시스템에서 집계된 데이터가 포함되어 있으며 프로필 주체와 관련된 이벤트의 실행 가능한 타임스탬프가 지정된 계정이 포함됩니다. 이러한 이벤트는 Experience Platform과 함께 사용하는 모든 시스템에서 발생했을 수 있습니다.
 
 실시간 고객 프로필은 다음을 기반으로 스키마 형식의 데이터를 사용합니다. [!UICONTROL XDM 개별 프로필] 및 [!UICONTROL XDM ExperienceEvent] 클래스를 참조하고 해당 데이터를 기반으로 쿼리에 응답합니다.
-
->[!NOTE]
->
->실시간 고객 프로필은 다음을 수행합니다 **아님** 다른 클래스를 기반으로 하는 스키마 지원 [!UICONTROL XDM ExperienceEvent] 클래스.
 
 시스템은 각 고객 프로필의 인스턴스를 유지 관리하며 데이터를 함께 병합하여 개인에 대한 &quot;단일 신뢰할 수 있는 소스&quot;를 구성합니다. 이러한 통합 데이터는 &quot;유니온 스키마&quot;(경우에 따라 &quot;유니온 뷰&quot;라고도 함)라고 하는 것을 사용하여 표시됩니다. 유니온 스키마는 동일한 클래스를 구현하는 모든 스키마의 필드를 단일 스키마로 집계합니다. UI 또는 API를 사용하여 스키마를 작성할 때 실시간 고객 프로필에 사용할 스키마를 활성화하고 태그를 지정하여 유니온에 포함할 수 있습니다. 그러면 태그가 지정된 스키마가 프로필에 제공되는 스키마 정의에 참여합니다.
 
