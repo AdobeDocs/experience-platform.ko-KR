@@ -1,9 +1,10 @@
 ---
 title: AI Assistant의 개인정보 보호, 보안 및 거버넌스
 description: AI Assistant의 개인정보 보호, 보안 및 거버넌스 사례에 대해 알아봅니다.
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 371e065d-c2dd-4233-b78e-a42757fce853
+source-git-commit: 1762fcbcc730ccb08340a71383c90404c3fea614
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,6 @@ AI Assistant에서 기대할 수 있는 고객 신뢰 중심 기능에 대해 �
 * 현재 AI Assistant는 교육 목적으로도 개인 데이터를 사용하지 않습니다.
 * AI 어시스턴트는 소비자 데이터를 인식하지 못합니다.
 * 모든 기존 항목 [액세스 제어](../access-control/home.md) 정책은 AI Assistant에서 부여됩니다.
-   * 개체에 대해 개체 수준 액세스 제어가 지원됩니다. 속성에 대한 객체 수준 액세스 제어 지원이 곧 제공될 예정입니다.
    * 새로운 속성 기반 액세스 제어 정책은 최대 24시간 후에 AI Assistant에 반영됩니다.*
 * AI Assistant와 상호 작용하려면 명시적인 권한이 있어야 합니다.
    * 다음을 사용하여 Experience Platform 및 Journey Optimizer에 대한 권한을 다르게 설정할 수 있습니다. [권한 UI](../access-control/abac/ui/permissions.md) 및 다음을 사용할 수 있습니다. [Admin Console](../access-control/ui/browse.md) Customer Journey Analytics에 대한 권한을 할당할 수 있습니다.
