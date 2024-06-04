@@ -6,14 +6,18 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: c425d1016bed80113b879a683114861d839b79eb
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 1%
+source-wordcount: '1685'
+ht-degree: 2%
 
 ---
 
 # 데이터 활성화 보호
+
+>[!IMPORTANT]
+>
+>판매 주문에서 라이선스 권한을 확인하고 해당 권한을 확인하십시오. [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html) 이 보호 기능 페이지 외에 실제 사용 제한에서도 사용할 수 있습니다.
 
 이 페이지에서는 활성화 동작과 관련된 기본 사용량 및 요금 제한을 제공합니다. 다음 가드레일을 검토할 때 올바른 것으로 간주됩니다. [대상에 연결됨](/help/destinations/ui/connect-destination.md).
 

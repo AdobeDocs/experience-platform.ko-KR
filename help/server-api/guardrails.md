@@ -1,16 +1,16 @@
 ---
-title: Edge Network Server API의 성능 보호 기능
+title: Edge Network 서버 API에 대한 성능 보호
 description: 최적의 성능 보호 내에서 서버 API를 사용하는 방법에 대해 알아봅니다.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '531'
 ht-degree: 2%
 
 ---
 
 
-# Edge Network Server API의 성능 보호 기능
+# Edge Network 서버 API에 대한 성능 보호
 
 ## 개요 {#overview}
 
@@ -18,14 +18,18 @@ ht-degree: 2%
 
 Adobe은 사용 제한 초과로 인한 성능 저하의 책임이 없습니다. 성능 가드레일을 지속적으로 초과하는 고객은 성능 저하를 방지하기 위해 추가 처리 용량을 요청할 수 있습니다.
 
+>[!IMPORTANT]
+>
+>판매 주문에서 라이선스 권한을 확인하고 해당 권한을 확인하십시오. [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html) 이 보호 기능 페이지 외에 실제 사용 제한에서도 사용할 수 있습니다.
+
 ## 정의
 
-* **사용 가능** 은 5분 간격으로 오류와 함께 실패하지 않고 프로비저닝된 Edge Network API와만 관련된 Experience Platform Edge Network에서 처리된 요청의 백분율로 계산됩니다. 테넌트가 주어진 5분 간격으로 요청을 수행하지 않은 경우 해당 간격은 100%로 간주됩니다.
+* **사용 가능** 은 오류와 함께 실패하지 않고 프로비저닝된 Edge Network API와만 관련이 있는 Experience Platform Edge Network에서 처리된 요청의 백분율로, 각 5분 간격에 대해 계산됩니다. 테넌트가 주어진 5분 간격으로 요청을 수행하지 않은 경우 해당 간격은 100%로 간주됩니다.
 * **월별 가동 시간 비율** 주어진 지역에 대해 한 달에 있는 5분 간격 모두에 대한 가용성의 평균으로 계산됩니다.
 * An **업스트림** 는 Adobe 서버측 전달, Adobe Edge 세그멘테이션 또는 Adobe Target과 같은 특정 데이터스트림에 대해 활성화된 Edge Network 뒤의 서비스입니다.
 * A **요청 단위** 는 데이터 스트림에 대해 구성된 요청 및 하나의 업스트림에 대한 8KB 조각에 해당합니다.
 * A **요청** 은 고객 소유 애플리케이션에서 로 보내는 단일 메시지입니다. [!DNL Server API]. 요청에는 하나 이상의 요청 단위가 포함될 수 있습니다.
-* An **오류** 은(는) Edge 네트워크로 인해 실패하는 모든 요청입니다 [내부 서비스 오류](error-handling.md).
+* An **오류** 은(는) Edge Network으로 인해 실패한 모든 요청입니다 [내부 서비스 오류](error-handling.md).
 
 ## 서비스 제한
 

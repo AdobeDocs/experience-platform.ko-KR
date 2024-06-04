@@ -3,9 +3,9 @@ keywords: Experience Platform;쿼리;쿼리 서비스;문제 해결;보호 기�
 title: 쿼리 서비스 보호
 description: 이 문서에서는 쿼리 사용을 최적화하는 데 도움이 되는 쿼리 서비스 데이터의 사용 제한에 대한 정보를 제공합니다.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1181'
 ht-degree: 1%
 
 ---
@@ -13,8 +13,11 @@ ht-degree: 1%
 # 쿼리 서비스 보호
 
 가드레일은 Adobe Experience Platform에서 데이터 및 시스템 사용, 성능 최적화 및 오류나 예기치 않은 결과의 회피를 안내하는 임계값입니다.
-
 이 문서에서는 라이선스 권한과 관련하여 데이터를 쿼리할 때 시스템 성능을 최적화하는 데 도움이 되도록 쿼리 서비스 데이터에 대한 기본 사용 제한을 제공합니다.
+
+>[!IMPORTANT]
+>
+>판매 주문에서 라이선스 권한을 확인하고 해당 권한을 확인하십시오. [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html) 이 보호 기능 페이지 외에 실제 사용 제한에서도 사용할 수 있습니다.
 
 ## 전제 조건
 

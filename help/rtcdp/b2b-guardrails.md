@@ -2,14 +2,14 @@
 keywords: 프로필;실시간 고객 프로필;문제 해결;가드레일;지침;제한;엔티티;기본 엔티티;차원 엔티티;RTCDP;CDP;B2B 에디션;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;b2b;cdp;
 title: Real-time Customer Data Platform B2B 에디션의 기본 보호 기능
 type: Documentation
-description: Adobe Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다. 이 문서에서는 Adobe Real-time Customer Data Platform B2B 에디션을 사용하여 최적의 시스템 성능을 위해 데이터를 모델링하는 데 도움이 되는 기본 사용 및 속도 제한을 제공합니다.
+description: Adobe Experience Platform은 기존 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다. 이 문서에서는 Adobe Real-time Customer Data Platform B2B 에디션을 사용하여 최적의 시스템 성능을 위해 데이터를 모델링하는 데 도움이 되는 기본 사용 및 속도 제한을 제공합니다.
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 2%
+source-wordcount: '1817'
+ht-degree: 1%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 2%
 >이 문서에 설명된 제한 사항은 Real-time Customer Data Platform B2B 에디션에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B 에디션의 전체 기본 제한 목록의 경우 이러한 제한을 다음에 요약된 일반적인 Adobe Experience Platform 제한과 결합합니다. [실시간 고객 프로필 데이터 설명서 보호](../profile/guardrails.md).
 
 Real-time Customer Data Platform B2B 에디션을 사용하면 행동 통찰력 및 고객 속성을 기반으로 개인화된 크로스 채널 경험을 실시간 고객 프로필 및 계정 프로필의 형태로 제공할 수 있습니다. 프로필에 대한 이러한 새로운 접근 방식을 지원하기 위해 Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다.
+
+>[!IMPORTANT]
+>
+>판매 주문에서 라이선스 권한을 확인하고 해당 권한을 확인하십시오. [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html) 이 보호 기능 페이지 외에 실제 사용 제한에서도 사용할 수 있습니다.
 
 이 문서는 최적의 시스템 성능을 위해 데이터를 모델링하는 데 도움이 되는 기본 사용 및 속도 제한을 제공합니다. 다음 가드레일을 검토할 때 데이터를 올바르게 모델링했다고 가정합니다. 데이터 모델링 방법에 대한 질문이 있는 경우 고객 서비스 담당자에게 문의하십시오.
 

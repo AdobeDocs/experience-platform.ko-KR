@@ -3,9 +3,9 @@ title: Real-Time CDP 가드 레일
 description: Real-Time CDP의 다양한 서비스 및 영역에서 데이터 가드레일에 대해 알아봅니다.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '392'
 ht-degree: 1%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 1%
 # Real-Time CDP 가드 레일
 
 가드레일은 Real-Time CDP에서 데이터 및 시스템 사용, 성능 최적화 및 오류나 예기치 않은 결과의 회피를 위한 지침을 제공하는 임계값입니다. 보호 기능은 라이선스 권한과 관련하여 데이터 사용 또는 소비 및 처리를 의미할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>판매 주문에서 라이선스 권한을 확인하고 해당 권한을 확인하십시오. [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html) 이 보호 기능 페이지 외에 실제 사용 제한에서도 사용할 수 있습니다.
 
 여기에서 시작하여 아래 링크를 따라 Real-Time CDP의 다양한 서비스 및 영역에서 발생하는 모든 보호 기능에 대해 알아보십시오.
 

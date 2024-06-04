@@ -3,16 +3,20 @@ keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침
 title: ID 서비스 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1526'
-ht-degree: 0%
+source-wordcount: '1549'
+ht-degree: 1%
 
 ---
 
 # 의 보호 기능 [!DNL Identity Service] 데이터
 
 이 문서에서는 의 사용 및 요금 제한에 대한 정보를 제공합니다. [!DNL Identity Service] id 그래프 사용을 최적화하는 데 도움이 되는 데이터입니다. 다음 가드레일을 검토할 때 데이터를 올바르게 모델링했다고 가정합니다. 데이터 모델링 방법에 대한 질문이 있는 경우 고객 서비스 담당자에게 문의하십시오.
+
+>[!IMPORTANT]
+>
+>판매 주문에서 라이선스 권한을 확인하고 해당 권한을 확인하십시오. [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html) 이 보호 기능 페이지 외에 실제 사용 제한에서도 사용할 수 있습니다.
 
 ## 시작하기
 
@@ -63,7 +67,7 @@ ht-degree: 0%
 삭제 우선 순위는 다음과 같습니다.
 
 1. 쿠키 ID
-2. 장치 ID
+2. 디바이스 ID
 3. 교차 장치 ID, 이메일 및 전화
 
 ### 규칙 #2 삭제는 ID에 저장된 타임스탬프를 기반으로 합니다
