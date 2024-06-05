@@ -2,9 +2,9 @@
 title: Adobe Experience Platform의 AI Assistant 개요
 description: AI Assistant, 그 뉘앙스와 사용 사례 및 이를 사용하여 Adobe Experience Platform 및 Real-time Customer Data Platform을 사용하여 워크플로를 신속하게 하는 방법에 대해 알아봅니다.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+source-git-commit: b51291e6c3663c6d6e6d416f0d2c37563c852155
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '679'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform의 AI Assistant는 Adobe 애플리케이션에서 워�
 
 >[!IMPORTANT]
 >
->AI Assistant를 사용하려면 먼저 사용자 계약에 동의해야 합니다. 사용자 계약에는 공개 베타 계약도 포함되어 있습니다. 추가 AI Assistant 기능이 Beta 용량으로 롤아웃될 때 이를 사용할 수 있도록 합니다.
+>다음에 동의해야 합니다. [사용자 계약](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) 먼저 AI Assistant를 사용할 수 있습니다. 사용자 계약에는 공개 베타 계약도 포함되어 있습니다. 추가 AI Assistant 기능이 Beta 용량으로 롤아웃될 때 이를 사용할 수 있도록 합니다.
 
 +++사용자 계약 인터페이스를 보려면 선택
 
