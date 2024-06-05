@@ -4,9 +4,9 @@ title: 라이선스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0613a0c713ea3559e03d2228e2b9e6be7232a1f0
+source-git-commit: b1fac3d523ebdf765bec038cde6a667d9af71243
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2135'
 ht-degree: 1%
 
 ---
@@ -158,6 +158,10 @@ Platform UI 내에서 라이선스 사용 대시보드로 이동하려면 다음
 | [!UICONTROL 팩의 스트리밍 세분화 없음] | 새 데이터가 스트리밍 플로우를 통해 세분화 서비스로 들어감에 따라 팩은 개인 프로필의 세그먼트 멤버십을 업데이트합니다. 세그먼트 멤버십은 이전 동작을 고려하지 않고 현재 개인 프로필 속성과 현재 이벤트의 값을 기반으로 평가됩니다. 스트리밍 세분화는 공유 기능입니다. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
+
+>[!TIP]
+>
+>판매 주문에서 라이선스 권한을 확인하여 &#39;스토리지 허용량&#39;과 같은 지표를 계산할 수 있습니다.<br>예를 들어,<ul><li>저장 허용 = 계약에 포함된 &quot;승인된 프로필&quot; 수 X 평균 프로필 풍부도</li></ul>
 
 이러한 지표의 사용 가능 여부 및 이러한 각 지표의 특정 정의는 조직이 구입한 라이선스에 따라 다릅니다. 각 지표에 대한 자세한 정의는 해당 제품 설명 설명서를 참조하십시오.
 

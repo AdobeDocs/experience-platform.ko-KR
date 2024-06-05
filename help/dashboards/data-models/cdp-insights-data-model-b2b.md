@@ -4,9 +4,9 @@ description: Real-time Customer Data Platform Insights 데이터 모델(B2B 에�
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: e94343e61e98f69fa28ecd61aec9267460a7f616
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Real-Time CDP B2B 보고에서는 계정 프로필 데이터와 계정 및 기�
 
 #### 업종별 새 계정 사용 사례 {#accounts-by-industry}
 
-에 사용되는 논리 [!UICONTROL 업종별 신규 계정] insight는 계정 프로필 수와 상대적인 크기에 따라 상위 5개 업종을 반환합니다. 다음을 참조하십시오. [[!UICONTROL 업종별 계정] 위젯 설명서](../guides/account-profiles.md#accounts-by-industry) 추가 정보.
+에 사용되는 논리 [!UICONTROL 업종별 신규 계정] insight는 계정 프로필 수와 상대적인 크기에 따라 상위 5개 업종을 반환합니다. 다음을 참조하십시오. [[!UICONTROL 업종별 신규 계정] 위젯 설명서](../guides/account-profiles.md#accounts-by-industry) 추가 정보.
 
 >[!TIP]
 >
