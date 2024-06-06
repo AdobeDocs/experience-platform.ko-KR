@@ -2,9 +2,9 @@
 title: 메타 전환 API 확장 개요
 description: Adobe Experience Platform의 이벤트 전달을 위한 메타 전환 API 확장에 대해 알아봅니다.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: f7fdfbf9afcecb255668d5d6393b87918114b067
+source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
 workflow-type: tm+mt
-source-wordcount: '2578'
+source-wordcount: '2583'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 다음 [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) 을(를) 통해 서버측 마케팅 데이터를 [!DNL Meta] 광고 타겟팅을 최적화하고, 작업당 비용을 줄이고, 결과를 측정하는 기술을 제공합니다. 이벤트가 다음에 연결됨 [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) ID 및 는 클라이언트측 이벤트와 유사한 방식으로 처리됩니다.
 
-사용 [!DNL Meta Conversions API] 확장에서는 의 API 기능을 활용할 수 있습니다. [이벤트 전달](../../../ui/event-forwarding/overview.md) 데이터를 보낼 규칙 [!DNL Meta] Adobe Experience Platform Edge Network에서 이 문서에서는 확장을 설치하고 이벤트 전달에서 해당 기능을 사용하는 방법을 다룹니다 [규칙](../../../ui/managing-resources/rules.md).
+사용 [!DNL Meta Conversions API] 확장에서는 의 API 기능을 활용할 수 있습니다. [이벤트 전달](../../../ui/event-forwarding/overview.md) 데이터를 보낼 규칙 [!DNL Meta] Adobe Experience Platform Edge Network. 이 문서에서는 확장을 설치하고 이벤트 전달에서 해당 기능을 사용하는 방법을 다룹니다 [규칙](../../../ui/managing-resources/rules.md).
 
 ## 데모
 
@@ -53,15 +53,15 @@ ht-degree: 0%
 
 확장이 설치되었으며 이제 이벤트 전달 규칙에 해당 기능을 사용할 수 있습니다.
 
-## Meta Business Extension(MBE)과 통합 {#mbe}
+## facebook 및 Instagram 확장과 통합 {#facebook}
 
-MBE(Meta Business Extensions) 기능 향상으로 Meta Business 계정을 빠르게 인증할 수 있습니다. 그러면 자동으로 [!UICONTROL 픽셀 ID] 및 메타 전환 API [!UICONTROL 액세스 토큰]를 사용하면 메타 전환 API를 더 쉽게 설치하고 구성할 수 있습니다.
+facebook 및 Instagram 확장을 사용하는 통합을 사용하면 메타 비즈니스 계정을 빠르게 인증할 수 있습니다. 그러면 자동으로 [!UICONTROL 픽셀 ID] 및 메타 전환 API [!UICONTROL 액세스 토큰]를 사용하면 메타 전환 API를 더 쉽게 설치하고 구성할 수 있습니다.
 
-를 설치할 때 MBE에 인증하라는 대화 상자가 나타납니다. [!UICONTROL 메타 전환 API] 확장명.
+다음을 설치할 때 Facebook 및 Instagram에서 인증하라는 대화 상자 프롬프트가 표시됩니다. [!UICONTROL 메타 전환 API] 확장명.
 
 ![다음 [!UICONTROL 메타 전환 API 확장] 설치 페이지 강조 표시 [!UICONTROL 메타에 연결].](../../../images/extensions/server/meta/mbe-extension-install.png)
 
-MBE에서 인증하라는 대화 상자 프롬프트가 이벤트 전달 내의 빠른 시작 워크플로우 UI에도 나타납니다.
+facebook 및 Instagram에서 인증하라는 대화 상자 프롬프트가 이벤트 전달 내의 빠른 시작 워크플로우 UI에도 표시됩니다.
 
 ![빠른 시작 워크플로우 UI 강조 표시 [!UICONTROL 메타에 연결].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
 
@@ -129,7 +129,7 @@ MBE에서 인증하라는 대화 상자 프롬프트가 이벤트 전달 내의 
 
 빠른 시작 기능을 사용하면 메타 전환 API 및 메타 픽셀 확장을 사용하여 쉽고 효율적으로 설정할 수 있습니다. 이 도구는 Adobe 태그 및 이벤트 전달에서 수행되는 여러 단계를 자동화하여 설정 시간을 크게 줄입니다.
 
-이 기능은 필요한 규칙 및 데이터 요소와 함께 새로 자동 생성된 태그 및 이벤트 전달 속성에 메타 전환 API 및 메타 픽셀 확장 기능을 자동으로 설치하고 구성합니다. 또한 Experience Platform Web SDK 및 데이터 스트림을 자동으로 설치 및 구성합니다. 마지막으로, 빠른 시작 기능은 이벤트 전달 및 Experience Platform Edge Network를 통해 실시간으로 클라이언트측 데이터 수집 및 서버측 이벤트 전달을 가능하게 하는 개발 환경의 지정된 URL에 라이브러리를 자동으로 게시합니다.
+이 기능은 필요한 규칙 및 데이터 요소와 함께 새로 자동 생성된 태그 및 이벤트 전달 속성에 메타 전환 API 및 메타 픽셀 확장 기능을 자동으로 설치하고 구성합니다. 또한 Experience Platform Web SDK 및 데이터 스트림을 자동으로 설치 및 구성합니다. 마지막으로, 빠른 시작 기능은 이벤트 전달 및 Experience Platform Edge Network을 통해 클라이언트측 데이터 수집 및 서버측 이벤트 전달을 실시간으로 사용할 수 있도록 개발 환경의 지정된 URL에 라이브러리를 자동으로 게시합니다.
 
 다음 비디오에서는 빠른 시작 기능에 대해 소개합니다.
 
@@ -190,7 +190,7 @@ MBE에서 인증하라는 대화 상자 프롬프트가 이벤트 전달 내의 
 
 ![이벤트를 표시하지 않는 태그 속성 페이지](../../../images/extensions/server/meta/edit-rule.png)
 
-다음 항목 선택 [!UICONTROL 이벤트 유형]. 이 예제에서는 다음을 선택하겠습니다. [!UICONTROL 클릭] 이벤트를 만들고, 이벤트가 **.add-to-cart 버튼** 이(가) 선택되어 있습니다. **[!UICONTROL 변경사항 유지]**&#x200B;를 선택합니다.
+다음 항목 선택 [!UICONTROL 이벤트 유형]. 이 예제에서는 다음을 선택하겠습니다. [!UICONTROL 클릭] 이벤트를 만들고, 이벤트가 **.add-to-cart 버튼** 이(가) 선택되어 있습니다. 선택 **[!UICONTROL 변경 내용 유지]**.
 
 ![클릭 이벤트를 보여주는 이벤트 구성 화면](../../../images/extensions/server/meta/event-configuration.png)
 
