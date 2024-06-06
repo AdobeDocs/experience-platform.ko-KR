@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience Platform의 AI 지원
 description: AI Assistant를 사용하여 Experience Platform 및 Real-time Customer Data Platform 개념과 객체에 대한 사용 정보를 탐색하고 이해하는 방법에 대해 알아봅니다.
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
+source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1379'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ Adobe Experience Platform UI에서 AI Assistant를 사용하는 방법을 알려
 
 AI Assistant를 실행하려면 **[!UICONTROL AI Assistant 아이콘]** Experience Platform UI의 상단 헤더에서
 
-![AI Assistant 아이콘이 선택되고 AI Assistant 인터페이스가 열린 Experience Platform 홈 페이지.](./images/ai-assistant.png)
+![AI Assistant 아이콘이 선택되고 AI Assistant 인터페이스가 열린 Experience Platform 홈 페이지.](./images/ai-assistant-full-icon.png)
 
 AI Assistant 인터페이스가 나타나고 시작하기 위한 정보가 즉시 제공됩니다. 아래에 제공된 옵션을 사용할 수 있습니다. [!UICONTROL 시작하기 위한 아이디어] 다음과 같은 질문과 명령에 답변하려면
 
@@ -86,9 +87,13 @@ AI Assistant가 작동 인사이트에 대한 질문에 충분히 응답하려�
 
 +++Operational Insights 질문의 예를 보려면 선택
 
-아래 예에서는 AI Assistant에 다음 쿼리가 표시됩니다. **&quot;Amazon S3 소스를 사용하여 생성된 데이터 흐름 표시&quot;**&#x200B;그러면 AI Assistant가 데이터 흐름 및 해당 ID를 나열하는 표에 응답합니다. 전체 데이터 테이블을 보려면 오른쪽 상단의 확장 아이콘을 선택합니다.
+아래 예에서는 AI Assistant에 다음 쿼리가 표시됩니다. **&quot;Amazon S3 소스를 사용하여 생성된 데이터 흐름 표시&quot;**.
 
-![운영 통찰력에 대한 후속 질문.](./images/usage-data-question.png)
+![운영 통찰력에 대한 질문입니다.](./images/op-insights-question.png)
+
+그러면 AI Assistant가 데이터 흐름 및 해당 ID를 나열하는 테이블로 응답합니다. 전체 데이터 테이블을 보려면 오른쪽 상단의 확장 아이콘을 선택합니다.
+
+![운영 통찰력 대답](./images/op-insights-answer.png)
 
 확장된 테이블 보기가 표시되어 쿼리의 매개 변수를 기반으로 보다 포괄적인 데이터 흐름 목록을 제공합니다.
 
@@ -96,9 +101,13 @@ AI Assistant가 작동 인사이트에 대한 질문에 충분히 응답하려�
 
 작동 인사이트 질문이 표시되면 AI Assistant는 답을 도출하는 방법에 대한 설명을 제공합니다. 아래 예에서 AI Assistant는 를 사용하여 생성된 데이터 흐름을 식별하기 위해 수행한 단계에 대해 간략하게 설명합니다. [!DNL Amazon S3] 소스.
 
-![AI Assistant가 응답을 계산한 방법을 보여 주는 세그먼트 정의에 대한 후속 질문입니다.](./images/answer-explained.png)
+![AI 비서가 답변 계산 방법에 대한 설명을 제공합니다.](./images/answer-explained.png)
 
 질문에 대한 필터 및 수정 사항을 제공할 수도 있으며, AI Assistant가 사용자가 포함하는 필터를 기반으로 검색 결과를 렌더링하도록 할 수 있습니다. 예를 들어, AI Assistant에 생성된 날짜 순서로 세그먼트 정의 수 트렌드를 보여 달라고 요청하고, 총 프로필이 0인 세그먼트 정의를 제거하고, 데이터를 표시할 때 정수 대신 월 이름을 사용할 수 있습니다.
+
+**참고:** Operational Insights 답변은 현재 Beta 버전입니다. AI Assistant 사용자 인터페이스에서 툴팁 아이콘을 선택하여 베타 알림을 보고 설명서 링크를 확인할 수 있습니다.
+
+![AI Assistant 도구 설명 아이콘이 선택되었습니다.](./images/op-insights-beta-note.png)
 
 +++
 
@@ -122,7 +131,27 @@ AI 어시스턴트의 멀티턴 기능을 활용해 경험 중 보다 자연스�
 
 아래 예에서는 먼저 AI Assistant에 총 데이터 흐름 수를 요청한 다음 가장 최근 데이터 흐름 10개를 나열하라는 메시지가 표시됩니다.
 
-![다중 회전의 예](./images/multi-turn.png)
+![다중 회전의 예](./images/multiturn.png)
+
+재설정하려면 줄임표(**`...`**) AI Assistant 인터페이스에서 다음을 선택합니다 **[!UICONTROL 새 대화 시작]**. 이를 통해 항목을 변경할 의도가 있음을 AI Assistant에 알려 주며, 실패하거나 잘못된 정보를 참조하는 쿼리 문제를 해결할 때 특히 도움이 될 수 있습니다.
+
+![선택한 줄임표 및 새 대화 시작 옵션이 있습니다.](./images/reset.png)
+
++++
+
+### 검색 기능 사용 {#use-discoverability}
+
+AI Assistant의 검색 기능 기능을 사용하여 AI Assistant가 지원하는 엔티티로 그룹화된 일반 주제 목록을 볼 수 있습니다.
+
++++검색 기능의 예를 보려면 선택
+
+검색 기능을 보려면 AI Assistant 인터페이스 상단 헤더에 있는 전구 아이콘을 선택합니다.
+
+![AI Assistant 검색 기능.](./images/lightbulb.png)
+
+그런 다음 범주를 선택한 다음 제공된 목록에서 프롬프트를 선택합니다. 이 기능을 사용하면 AI Assistant가 답할 수 있는 질문 유형을 더 잘 이해할 수 있습니다. 자유 텍스트 또는 를 사용하여 샌드박스와 관련된 특정 세부 사항으로 기존 프롬프트를 업데이트할 수도 있습니다. [자동 완성](#use-auto-complete).
+
+![AI 도우미가 검색 가능성을 묻는 메시지를 표시합니다.](./images/prompt.png)
 
 +++
 
@@ -133,8 +162,6 @@ AI 어시스턴트의 멀티턴 기능을 활용해 경험 중 보다 자연스�
 피드백을 제공하려면 AI Assistant의 응답을 받은 후 엄지손가락 위로, 엄지손가락 아래로 또는 플래그를 선택한 다음 제공된 텍스트 상자에 피드백을 입력합니다.
 
 ![AI 지원의 피드백 옵션.](./images/provide-feedback.png)
-
-재설정하려면 줄임표(**`...`**) AI Assistant 인터페이스에서 다음을 선택합니다 **[!UICONTROL 새 대화 시작]**. 이를 통해 항목을 변경할 의도가 있음을 AI Assistant에 알려 주며, 실패하거나 잘못된 정보를 참조하는 쿼리 문제를 해결할 때 특히 도움이 될 수 있습니다.
 
 +++더 많은 예제를 보려면 선택
 
