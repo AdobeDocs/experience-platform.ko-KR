@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 16313e2109152329a427be9f13fcbd6382353797
+source-git-commit: 734a34e9acf80300c28ca14587198fb7eaf83c17
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1731'
 ht-degree: 1%
 
 ---
@@ -79,12 +79,24 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 
 | 카테고리 | 사용 권한 | 설명 |
 | --- | --- | --- |
+| [!DNL AI Assistant] | [!UICONTROL AI Assistant 활성화] | 질문할 수 있는 능력 [AI 지원](../ai-assistant/access.md) 질문. |
+| [!DNL AI Assistant] | [!UICONTROL Operational Insights 보기] | 다음에 대한 응답을 얻을 수 있는 액세스 권한: [운영 통찰력](../ai-assistant/home.md##operational-insights) 쿼리. |
 | [!DNL Alerts] | [!UICONTROL 경고 내역 보기] | 경고 내역에 대한 읽기 전용 액세스 권한. |
 | [!DNL Alerts] | [!UICONTROL 경고 해결] | 경고를 읽고, 편집하고, 삭제할 수 있는 액세스 권한 |
 | [!DNL Alerts] | [!UICONTROL 경고 보기] | 경고에 대한 읽기 전용 액세스 권한. |
 | [!DNL Alerts] | [!UICONTROL 경고 관리] | 경고 내역을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Computed Attributes] | [!UICONTROL 계산된 속성 보기] | 계산된 속성 탭, 인벤토리 및 세부 정보에 대한 읽기 전용 액세스 권한. |
 | [!DNL Computed Attributes] | [!UICONTROL 계산된 속성 관리] | 계산된 속성을 읽고, 만들고, 삭제하고, 비활성화할 수 있는 액세스 권한. |
+| [!DNL Dashboards] | [!UICONTROL 라이선스 사용 대시보드 보기] | 라이선스 사용 대시보드를 보려면 읽기 전용 권한입니다. |
+| [!DNL Dashboards] | [!UICONTROL 표준 대시보드 관리] | Data Warehouse에 아직 없는 사용자 지정 특성을 추가합니다. |
+| [!DNL Data Governance] | [!UICONTROL 사용 레이블 관리] | 사용 레이블을 읽고, 만들고, 삭제할 수 있는 액세스 권한. |
+| [!DNL Data Governance] | [!UICONTROL 데이터 사용 정책 관리] | 데이터 사용 정책을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
+| [!DNL Data Governance] | [!UICONTROL 데이터 사용 정책 보기] | 조직에 속한 데이터 사용 정책에 대한 읽기 전용 액세스 권한. |
+| [!DNL Data Governance] | [!UICONTROL 사용자 활동 로그 보기] | 기록된 보기에 대한 읽기 전용 액세스 [감사 로그](../landing/governance-privacy-security/audit-logs/overview.md) 플랫폼 활동 |
+| [!DNL Data Ingestion] | [!UICONTROL 소스 관리] | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있는 액세스 권한. |
+| [!DNL Data Ingestion] | [!UICONTROL 소스 보기] | 에서 사용 가능한 소스에 대한 읽기 전용 액세스 **[!UICONTROL 카탈로그]** 의 탭 및 인증된 소스 **[!UICONTROL 찾아보기]** 탭. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 파트너 악수를 작성, 수락 및 거부하여 두 조직을 연결하고 활성화할 수 있는 액세스 권한 [!DNL Segment Match] 흐름. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | 읽기, 만들기, 편집 및 게시 액세스 권한 [!DNL Segment Match] 활성 파트너와 피드를 연결합니다. |
 | [!DNL Data Lifecycle] | [!UICONTROL 데이터 라이프사이클 보기] | 데이터 라이프사이클에 대한 읽기 전용 액세스 권한. |
 | [!DNL Data Lifecycle] | [!UICONTROL 데이터 수명 주기 관리] | 데이터 라이프사이클을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Data Modeling] | [!UICONTROL 스키마 관리] | 스키마 및 관련 리소스를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
@@ -94,6 +106,16 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Data Management] | [!UICONTROL 데이터 세트 관리] | 데이터 세트 읽기, 만들기, 편집 및 삭제에 대한 액세스 권한. 스키마에 대한 읽기 전용 액세스 권한. |
 | [!DNL Data Management] | [!UICONTROL 데이터 세트 보기] | 데이터 세트 및 스키마에 대한 읽기 전용 액세스 권한. |
 | [!DNL Data Management] | [!UICONTROL 데이터 모니터링] | 모니터링 데이터 세트 및 스트림에 대한 읽기 전용 액세스. |
+| [!DNL Data Science Workspace] | [!UICONTROL 데이터 과학 작업 영역 관리] | 에서 읽기, 만들기, 편집 및 삭제 액세스 권한 [!DNL Data Science Workspace]. |
+| [!DNL Destinations] | [!UICONTROL 대상 보기] | 에서 사용 가능한 대상을 보기 위한 읽기 전용 액세스 **[!UICONTROL 카탈로그]** 의 탭 및 인증된 대상 **[!UICONTROL 찾아보기]** 탭. |
+| [!DNL Destinations] | [!UICONTROL 대상 관리] | 대상 연결 및 대상 계정을 읽고 만들고 삭제할 수 있는 액세스 권한. |
+| [!DNL Destinations] | [!UICONTROL 대상 활성화] | 사용자에게 기존 대상에 대한 세그먼트를 활성화할 수 있는 기능을 제공합니다. 활성화 워크플로에서 매핑 단계를 활성화합니다. 이 권한에는 [!UICONTROL 대상 보기] 대상에 데이터를 활성화하는 사용자에게 부여할 권한. |
+| [!DNL Destinations] | [!UICONTROL 매핑 없이 세그먼트 활성화] | 사용자에게 를 표시하지 않고 기존 대상에 대한 세그먼트를 활성화할 수 있는 기능을 제공합니다. [매핑 단계](../destinations/ui/activate-batch-profile-destinations.md#mapping). 사용자는 활성화 워크플로에서 세그먼트를 추가하거나 제거할 수 있지만 매핑된 속성 또는 ID를 추가하거나 제거할 수 없습니다. 이 권한에는 [!UICONTROL 대상 보기] 대상에 데이터를 활성화하는 사용자에게 부여할 권한. |
+| [!DNL Destinations] | [!UICONTROL 데이터 세트 대상 관리 및 활성화] | 데이터 세트 내보내기 흐름을 읽고, 만들고, 편집하고, 비활성화하는 기능입니다. 생성된 활성 데이터 세트에 대한 데이터도 활성화할 수 있습니다. 이 권한에는 [!UICONTROL 대상 보기] 대상에 데이터를 활성화하는 사용자에게 부여할 권한. |
+| [!DNL Destinations] | [!UICONTROL 대상 작성] | 을 사용하여 대상을 작성할 수 있는 기능 [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
+| [!DNL Identity Management] | [!UICONTROL ID 네임스페이스 관리] | ID 네임스페이스를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
+| [!DNL Identity Management] | [!UICONTROL ID 네임스페이스 보기] | ID 네임스페이스에 대한 읽기 전용 액세스 권한. |
+| [!DNL Identity Management] | [!UICONTROL ID 그래프 보기] | ID 그래프에 대한 읽기 전용 액세스 권한. |
 | [!DNL Profile Management] | [!UICONTROL 프로필 관리] | 고객 프로필에 사용되는 데이터 세트를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. 사용 가능한 프로필에 대한 읽기 전용 액세스 권한. |
 | [!DNL Profile Management] | [!UICONTROL 프로필 보기] | 사용 가능한 프로필에 대한 읽기 전용 액세스 권한. |
 | [!DNL Profile Management] | [!UICONTROL 세그먼트 관리] | 세그먼트 읽기, 만들기, 편집 및 삭제 액세스 권한. |
@@ -107,31 +129,11 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Profile Management] | [!UICONTROL B2B AI 관리] | 모든 B2B AI/ML 서비스에 대한 설정 및 구성을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Profile Management] | [!UICONTROL B2B 프로필 보기] | B2B 엔티티 프로필(예: 계정, 영업 기회 등), 모든 B2B AI/ML 서비스에 대한 설정 및 구성, B2B 대시보드 위젯에 대한 읽기 전용 액세스입니다. |
 | [!DNL Profile Management] | [!UICONTROL B2B 프로필 관리] | B2B 엔티티 프로필(예: 계정, 영업 기회 등)을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한입니다. 모든 B2B AI/ML 서비스 및 B2B 대시보드 위젯에 대한 설정 및 구성에 대한 읽기 전용 액세스입니다. |
-| [!DNL Identity Management] | [!UICONTROL ID 네임스페이스 관리] | ID 네임스페이스를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
-| [!DNL Identity Management] | [!UICONTROL ID 네임스페이스 보기] | ID 네임스페이스에 대한 읽기 전용 액세스 권한. |
-| [!DNL Identity Management] | [!UICONTROL ID 그래프 보기] | ID 그래프에 대한 읽기 전용 액세스 권한. |
+| [!DNL Query Service] | [!UICONTROL 쿼리 관리] | Platform 데이터에 대한 구조화된 SQL 쿼리를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
+| [!DNL Query Service] | [!UICONTROL 쿼리 서비스 통합 관리] | 쿼리 서비스 액세스에 대한 만료되지 않는 자격 증명을 생성, 업데이트 및 삭제할 수 있는 액세스 권한입니다. |
 | [!DNL Sandbox Administration] | [!UICONTROL 샌드박스 관리] | 샌드박스를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Sandbox Administration] | [!UICONTROL 샌드박스 보기] | 조직에 속한 샌드박스에 대한 읽기 전용 액세스 권한. |
 | [!DNL Sandbox Administration] | [!UICONTROL 샌드박스 재설정] | 샌드박스를 재설정하는 기능. |
-| [!DNL Destinations] | [!UICONTROL 대상 보기] | 에서 사용 가능한 대상을 보기 위한 읽기 전용 액세스 **[!UICONTROL 카탈로그]** 의 탭 및 인증된 대상 **[!UICONTROL 찾아보기]** 탭. |
-| [!DNL Destinations] | [!UICONTROL 대상 관리] | 대상 연결 및 대상 계정을 읽고 만들고 삭제할 수 있는 액세스 권한. |
-| [!DNL Destinations] | [!UICONTROL 대상 활성화] | 사용자에게 기존 대상에 대한 세그먼트를 활성화할 수 있는 기능을 제공합니다. 활성화 워크플로에서 매핑 단계를 활성화합니다. 이 권한에는 [!UICONTROL 대상 보기] 대상에 데이터를 활성화하는 사용자에게 부여할 권한. |
-| [!DNL Destinations] | [!UICONTROL 매핑 없이 세그먼트 활성화] | 사용자에게 를 표시하지 않고 기존 대상에 대한 세그먼트를 활성화할 수 있는 기능을 제공합니다. [매핑 단계](../destinations/ui/activate-batch-profile-destinations.md#mapping). 사용자는 활성화 워크플로에서 세그먼트를 추가하거나 제거할 수 있지만 매핑된 속성 또는 ID를 추가하거나 제거할 수 없습니다. 이 권한에는 [!UICONTROL 대상 보기] 대상에 데이터를 활성화하는 사용자에게 부여할 권한. |
-| [!DNL Destinations] | [!UICONTROL 데이터 세트 대상 관리 및 활성화] | 데이터 세트 내보내기 흐름을 읽고, 만들고, 편집하고, 비활성화하는 기능입니다. 생성된 활성 데이터 세트에 대한 데이터도 활성화할 수 있습니다. 이 권한에는 [!UICONTROL 대상 보기] 대상에 데이터를 활성화하는 사용자에게 부여할 권한. |
-| [!DNL Destinations] | [!UICONTROL 대상 작성] | 을 사용하여 대상을 작성할 수 있는 기능 [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
-| [!DNL Data Ingestion] | [!UICONTROL 소스 관리] | 소스를 읽고, 만들고, 편집하고, 비활성화할 수 있는 액세스 권한. |
-| [!DNL Data Ingestion] | [!UICONTROL 소스 보기] | 에서 사용 가능한 소스에 대한 읽기 전용 액세스 **[!UICONTROL 카탈로그]** 의 탭 및 인증된 소스 **[!UICONTROL 찾아보기]** 탭. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 파트너 악수를 작성, 수락 및 거부하여 두 조직을 연결하고 활성화할 수 있는 액세스 권한 [!DNL Segment Match] 흐름. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | 읽기, 만들기, 편집 및 게시 액세스 권한 [!DNL Segment Match] 활성 파트너와 피드를 연결합니다. |
-| [!DNL Data Science Workspace] | [!UICONTROL 데이터 과학 작업 영역 관리] | 에서 읽기, 만들기, 편집 및 삭제 액세스 권한 [!DNL Data Science Workspace]. |
-| 데이터 거버넌스 | [!UICONTROL 사용 레이블 관리] | 사용 레이블을 읽고, 만들고, 삭제할 수 있는 액세스 권한. |
-| 데이터 거버넌스 | [!UICONTROL 데이터 사용 정책 관리] | 데이터 사용 정책을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
-| 데이터 거버넌스 | [!UICONTROL 데이터 사용 정책 보기] | 조직에 속한 데이터 사용 정책에 대한 읽기 전용 액세스 권한. |
-| 데이터 거버넌스 | [!UICONTROL 사용자 활동 로그 보기] | 기록된 보기에 대한 읽기 전용 액세스 [감사 로그](../landing/governance-privacy-security/audit-logs/overview.md) 플랫폼 활동 |
-| [!DNL Dashboards] | [!UICONTROL 라이선스 사용 대시보드 보기] | 라이선스 사용 대시보드를 보려면 읽기 전용 권한입니다. |
-| [!DNL Dashboards] | [!UICONTROL 표준 대시보드 관리] | Data Warehouse에 아직 없는 사용자 지정 특성을 추가합니다. |
-| [!DNL Query Service] | [!UICONTROL 쿼리 관리] | Platform 데이터에 대한 구조화된 SQL 쿼리를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
-| [!DNL Query Service] | [!UICONTROL 쿼리 서비스 통합 관리] | 쿼리 서비스 액세스에 대한 만료되지 않는 자격 증명을 생성, 업데이트 및 삭제할 수 있는 액세스 권한입니다. |
 
 ## 다음 단계
 
