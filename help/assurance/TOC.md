@@ -5,10 +5,10 @@ breadcrumb-title: Assurance 안내서
 user-guide-description: Adobe Experience Platform Assurance를 사용하면 모바일 애플리케이션 내에서 데이터를 수집하거나 경험을 제공하는 방식을 검사하고, 증명하고, 시뮬레이션하고, 검증할 수 있습니다.
 feature: Assurance
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 3c2d7fafb2d4385c8631c6737c5753f3b669e203
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 94%
+source-wordcount: '71'
+ht-degree: 88%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 94%
 - 보기 횟수 {#view}
    - [이벤트 트랜잭션](./views/event-transactions.md)
    - [확장 기능 버전](./views/extension-versions.md)
+   - [Edge 게재](./views/edge-delivery.md)
    - [인앱 메시지](./views/in-app-messaging.md)
    - [온디바이스 보기](./views/on-device-views.md)
    - [Places Service](./views/places-service.md)
