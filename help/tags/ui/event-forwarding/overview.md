@@ -1,12 +1,12 @@
 ---
 title: 이벤트 전달 개요
-description: Platform Edge Network를 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있도록 Adobe Experience Platform의 이벤트 게재에 대해 알아봅니다.
+description: Platform Edge Network을 사용하여 태그 구현을 변경하지 않고 작업을 실행할 수 있는 Adobe Experience Platform의 이벤트 전달에 대해 알아봅니다.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 16f9ee9d14326f857b444c2361b894aca06b04d6
 workflow-type: tm+mt
-source-wordcount: '1160'
-ht-degree: 6%
+source-wordcount: '1178'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 다음 사항을 참조하십시오 [문서](../../term-updates.md) 용어 변경에 대한 통합 참조.
 
 Adobe Experience Platform의 이벤트 전달을 사용하면 수집된 이벤트 데이터를 서버측 처리를 위해 대상으로 전송할 수 있습니다. 이벤트 전달은 Adobe Experience Platform Edge Network을 사용하여 클라이언트에서 일반적으로 수행되는 작업을 실행하여 웹 페이지 및 앱 가중치를 줄입니다. 태그와 유사한 방식으로 구현된 이벤트 전달 규칙은 데이터를 변환하여 새 대상으로 전송할 수 있지만 웹 브라우저와 같은 클라이언트 애플리케이션에서 이 데이터를 전송하는 대신 Adobe 서버에서 전송됩니다.
 
@@ -112,6 +112,12 @@ Experience Platform 전달은 태그와 별도로 고유한 속성 저장소를 
 ## 비밀 {#secrets}
 
 이벤트 전달을 통해 데이터를 전송하는 서버를 인증하는 데 사용할 수 있는 비밀을 생성, 관리 및 저장할 수 있습니다. 다음 안내서를 참조하십시오 [비밀](./secrets.md) 사용 가능한 암호 유형의 종류와 UI에서 암호 유형을 구현하는 방법에 대해 설명합니다.
+
+## 비디오 개요 {#video}
+
+다음 비디오는 이벤트 전달 및 Real-Time CDP 연결을 더 잘 이해하는 데 도움을 주기 위한 것입니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429308)
 
 ## 다음 단계
 
