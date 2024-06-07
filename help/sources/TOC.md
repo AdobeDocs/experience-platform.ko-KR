@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
+source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1046'
 ht-degree: 23%
 
 ---
@@ -350,6 +350,7 @@ ht-degree: 23%
       - [프로토콜 연결 데이터 흐름](tutorials/ui/dataflow/protocols.md)
    - [UI의 템플릿을 사용하여 소스 데이터 흐름 만들기](tutorials/ui/templates.md)
    - [소스 오브젝트 필터링](tutorials/ui/filter.md)
+   - [암호화된 데이터 수집](tutorials/ui/encryped-ingestion.md)
    - [온디맨드 수집](tutorials/ui/on-demand-ingestion.md)
    - [일괄 처리 데이터 흐름 모니터링](tutorials/ui/monitor.md)
    - [스트리밍 데이터 흐름 모니터링](tutorials/ui/monitor-streaming.md)
