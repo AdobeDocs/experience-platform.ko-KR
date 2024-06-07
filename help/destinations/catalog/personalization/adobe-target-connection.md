@@ -3,9 +3,9 @@ keywords: target 개인화, 대상, experience platform 대상, adobe target 대
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: ddc15a36e83ebe059f3b4f81f3feccb2d3a4a4f0
+source-git-commit: e5c34ffb9b27ddad0c6523a7279fdf712c84f3ff
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1555'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
-| 2024년 4월 | 기능 및 설명서 업데이트 | 이제 데이터 스트림 ID를 사용하여 로 Target 대상에 연결할 때 다음을 수행합니다 *필요 없음* 를 사용하여 에지 세분화를 위해 데이터스트림을 활성화해야 합니다. 즉, 수행할 수 있는 사용 사례는 다르지만 Target 대상이 일괄 처리 및 스트리밍 대상에서 작동합니다. 다음에서 테이블 보기: [연결 매개 변수](#parameters) 섹션에 자세히 설명되어 있습니다. |
+| 2024년 4월 | 기능 및 설명서 업데이트 | 이제 Target 대상에 연결하고 데이터 스트림 ID를 사용할 때 *필요 없음* 를 사용하여 에지 세분화를 위해 데이터스트림을 활성화해야 합니다. 즉, 수행할 수 있는 사용 사례는 다르지만 Target 대상이 일괄 처리 및 스트리밍 대상에서 작동합니다. 다음에서 테이블 보기: [연결 매개 변수](#parameters) 섹션에 자세히 설명되어 있습니다. |
 | 2024년 1월 | 기능 및 설명서 업데이트 | 이제 기본 프로덕션 샌드박스 및 기타 기본이 아닌 샌드박스에 대해 Adobe Target 연결에 대상 및 프로필 속성을 공유할 수 있습니다. |
 | 2023년 6월 | 기능 및 설명서 업데이트 | 2023년 6월부터 새 Adobe Target 대상 연결을 구성할 때 대상을 공유할 Adobe Target 작업 영역을 선택할 수 있습니다. 자세한 내용은 [연결 매개변수](#parameters) 섹션을 참조하십시오. 추가로 작업 영역에 대한 자세한 내용은 Adobe Target에서 [작업 공간을 구성하는 방법](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html)에 대한 튜토리얼을 참조하십시오. |
 | 2023년 5월 | 기능 및 설명서 업데이트 | 2023년 5월 현재 **[!UICONTROL Adobe Target]** 연결 지원 [속성 기반 개인화](../../ui/activate-edge-personalization-destinations.md#map-attributes) 및 는 일반적으로 모든 고객이 사용할 수 있습니다. |
@@ -62,9 +62,9 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 
 >[!IMPORTANT]
 >
->이 대상에 대해 활성화하는 대상자는 [Active-On-Edge 병합 정책](../../../segmentation/ui/segment-builder.md#merge-policies). 다음 [!DNL Active-On-Edge] 병합 정책을 사용하면 대상이 지속적으로 평가됩니다 [가장자리에](../../../segmentation/ui/edge-segmentation.md) 및 은 실시간 및 다음 페이지 개인화 사용 사례에 사용할 수 있습니다.
-> 다른 병합 정책을 사용하는 대상을 Edge 대상에 매핑하면 해당 대상이 평가되지 않습니다.
-> 다음 지침을 따르십시오. [병합 정책 만들기](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy), 및 을(를) 활성화해야 합니다. **[!UICONTROL Active-On-Edge 병합 정책]** 토글.
+>활성화 시 *동일 페이지 및 다음 페이지 개인화 사용 사례에 대한 edge audiences*, 대상자 *필수* 사용 [active-on-edge 병합 정책](../../../segmentation/ui/segment-builder.md#merge-policies). 다음 [!DNL active-on-edge] 병합 정책을 사용하면 대상이 지속적으로 평가됩니다 [가장자리에](../../../segmentation/ui/edge-segmentation.md) 및 은 실시간 및 다음 페이지 개인화 사용 사례에 사용할 수 있습니다.  읽어보기 [사용 가능한 모든 사용 사례](#parameter)구현 유형에 따라 달라질 수 있습니다.
+>다른 병합 정책을 사용하는 Edge 대상을 Adobe Target 대상에 매핑하면 실시간 및 다음 페이지 사용 사례에 대해 해당 대상이 평가되지 않습니다.
+>다음 지침을 따르십시오. [병합 정책 만들기](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy), 및 을(를) 활성화해야 합니다. **[!UICONTROL Active-On-Edge 병합 정책]** 토글.
 
 
 | 대상자 원본 | 지원됨 | 설명 |
