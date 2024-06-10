@@ -3,11 +3,10 @@ title: 콘텐츠 API 엔드포인트
 description: Privacy Service API를 사용하여 액세스 데이터를 검색하는 방법에 대해 알아봅니다.
 role: Developer
 badgePrivateBeta: label="비공개 베타" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: c527771e051d39032642afae33945a45e5183a5f
+exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
+source-git-commit: e3a453ad166fe244b82bd1f90e669579fcf09d17
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -18,15 +17,13 @@ ht-degree: 0%
 >
 >다음 `/content` 엔드포인트가 현재 beta 상태이고 조직에서 아직 액세스하지 못할 수 있습니다. 기능 및 설명서는 변경될 수 있습니다.
 
-<!-- Q) Should this be called 'access information' or 'customer content'? -->
-
-&#39;액세스 정보&#39;(개인 정보 주체가 액세스 권한을 요청할 수 있는 정보)를 검색할 때 향상된 보안을 사용합니다. 에 대한 응답에 제공된 다운로드 URL `/jobs/{JOB_ID}` 이제 GET 요청이 Adobe 서비스 엔드포인트를 가리킵니다. 그런 다음 GET 요청을 할 수 있습니다. `/jobs/:JOB_ID/content` 고객 데이터를 JSON 형식으로 반환합니다. 이 액세스 방법은 보안을 강화하기 위해 인증 및 액세스 제어의 여러 계층을 구현합니다.
+사용 `/content` 안전하게 검색할 엔드포인트 *액세스 정보* (개인정보 보호 주체가 정당하게 액세스를 요청할 수 있는 정보). 에 대한 응답에 제공된 다운로드 URL `/jobs/{JOB_ID}` GET 요청이 Adobe 서비스 끝점을 가리킵니다. 그런 다음 GET 요청을 할 수 있습니다. `/jobs/:JOB_ID/content` 고객 데이터를 JSON 형식으로 반환합니다. 이 액세스 방법은 보안을 강화하기 위해 인증 및 액세스 제어의 여러 계층을 구현합니다.
 
 이 안내서를 사용하기 전에 다음을 참조하십시오. [시작 안내서](./getting-started.md) 아래 예제 API 호출에 제공된 필수 인증 헤더에 대한 정보입니다.
 
 >[!TIP]
 >
->필요한 액세스 정보에 대한 작업 ID를 현재 모르는 경우 `/jobs`을 엔드포인트로 설정하고 추가 쿼리 매개 변수를 사용하여 결과를 필터링합니다. 사용 가능한 쿼리 매개 변수의 전체 목록은 [개인 정보 작업 끝점 안내서](./privacy-jobs.md).
+>필요한 액세스 정보에 대한 작업 ID를 현재 모르는 경우 `/jobs` 을 엔드포인트로 설정하고 추가 쿼리 매개 변수를 사용하여 결과를 필터링합니다. 사용 가능한 쿼리 매개 변수의 전체 목록은 [개인 정보 작업 끝점 안내서](./privacy-jobs.md).
 
 ## 개인 정보 작업 정보 검색
 
@@ -81,7 +78,7 @@ curl -X GET \
         "processedDate":"04/12/2024 04:08 PM GMT",
         "productStatusResponse":{"status":"submitted"
         }}],
-    "downloadUrl":"https://platform-stage.adobe.io/data/core/privacy/jobs/dbe3a6a6-f8e6-11ee-a365-8d1d6df81cc5/content",
+    "downloadUrl":"https://platform.adobe.io/data/core/privacy/jobs/dbe3a6a6-f8e6-11ee-a365-8d1d6df81cc5/content",
     "regulation":"gdpr"
 }
 ```
@@ -144,10 +141,3 @@ curl -X GET \
 
 응답은 zip 파일(*.zip)입니다. 정보는 보장될 수 없지만 일반적으로 JSON 형식으로 반환됩니다. 추출된 데이터는 모든 형식으로 반환될 수 있습니다.
 
-<!-- ## Constraints {#constraints}
-
-During this private beta, the following constraints apply when using the `/content` endpoint:
-
-- The new `/content` download URL is only available in STAGE environments. It is not yet available in PROD environments
-- The `downloadUrl` should not be present in the JSON response unless the job has a `complete` status. Within the beta, the `downloadUrl` appears before a privacy job is complete.
-- The `downloadUrl` is also currently provided for `delete` jobs (which should never have a download URL). -->
