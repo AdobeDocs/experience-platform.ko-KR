@@ -2,9 +2,9 @@
 description: 대상 메타데이터 템플릿을 사용하여 대상에서 대상을 프로그래밍 방식으로 생성, 업데이트 또는 삭제합니다. Adobe은 마케팅 API의 사양을 기반으로 구성할 수 있는 확장 가능한 대상 메타데이터 템플릿을 제공합니다. 템플릿을 정의, 테스트 및 제출하면 Adobe이 이 템플릿을 사용하여 대상에 대한 API 호출을 구조화합니다.
 title: 대상자 메타데이터 관리
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -523,7 +523,7 @@ Experience Platform UI(사용자 인터페이스)에서 대상에 대상을 활�
 
 템플릿에서 모든 매개 변수에 대한 설명 찾기 [대상자 템플릿 만들기](../metadata-api/create-audience-template.md) API 참조.
 
-## 대상 메타데이터 템플릿에 사용되는 매크로
+## 대상 메타데이터 템플릿에 사용되는 매크로 {#macros}
 
 Experience Platform과 API 간에 대상 ID, 액세스 토큰, 오류 메시지 등의 정보를 전달하기 위해 대상 템플릿에는 사용할 수 있는 매크로가 포함됩니다. 이 페이지의 세 가지 구성 예제에 사용된 매크로에 대한 설명은 아래를 참조하십시오.
 
