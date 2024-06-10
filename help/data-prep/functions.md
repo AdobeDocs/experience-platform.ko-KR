@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 데이터 준비 매핑 기능
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: ac90dc055a1e4d1d8127899f668e619deab2d19e
+source-git-commit: 6509447ff2e67eac7b6b41754981cd18eb52562e
 workflow-type: tm+mt
-source-wordcount: '5792'
-ht-degree: 2%
+source-wordcount: '5805'
+ht-degree: 1%
 
 ---
 
@@ -25,11 +25,13 @@ ht-degree: 2%
 >
 >계층과 상호 작용할 때 하위 속성에 점(`.`), 백슬래시( )를 사용해야 합니다`\`)를 클릭하여 특수 문자를 이스케이프 처리합니다. 자세한 내용은 의 안내서를 참조하십시오. [특수 문자 이스케이프 처리](home.md#escape-special-characters).
 
-또한 필드 이름이 인 경우 **임의** 다음 예약 키워드 중 하나를 래핑해야 합니다. `${}`:
+필드 이름이 인 경우 **임의** 다음 예약 키워드 중 하나를 래핑해야 합니다. `${}{}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors, do, function, empty, size
 ```
+
+또한 예약된 키워드에는 이 페이지에 나열된 매퍼 함수도 포함됩니다.
 
 하위 필드 내의 데이터는 점 표기법을 사용하여 액세스할 수 있습니다. 예를 들어 `name` 개체, 액세스 `firstName` 필드, 사용 `name.firstName`.
 
@@ -61,7 +63,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | ltrim | 문자열의 시작에서 공백을 제거합니다. | <ul><li>문자열: **필수** 공백을 제거할 문자열입니다.</li></ul> | ltrim(STRING) | ltrim(&quot; hello&quot;) | &quot;hello&quot; |
 | rtrim | 문자열 끝에서 공백을 제거합니다. | <ul><li>문자열: **필수** 공백을 제거할 문자열입니다.</li></ul> | rtrim(STRING) | rtrim(&quot;hello &quot;) | &quot;hello&quot; |
 | trim | 문자열의 시작과 끝에서 공백을 제거합니다. | <ul><li>문자열: **필수** 공백을 제거할 문자열입니다.</li></ul> | trim(STRING) | trim(&quot; hello &quot;) | &quot;hello&quot; |
-| 다음과 같음 | 두 문자열을 비교하여 동일한지 확인합니다. 이 함수는 대/소문자를 구분합니다. | <ul><li>STRING1: **필수** 비교할 첫 번째 문자열입니다.</li><li>STRING2: **필수** 비교할 두 번째 문자열입니다.</li></ul> | 문자열1&#x200B;.equals(&#x200B;STRING2) | &quot;string1&quot;. &#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
+| 같음 | 두 문자열을 비교하여 동일한지 확인합니다. 이 함수는 대/소문자를 구분합니다. | <ul><li>STRING1: **필수** 비교할 첫 번째 문자열입니다.</li><li>STRING2: **필수** 비교할 두 번째 문자열입니다.</li></ul> | 문자열1&#x200B;.equals(&#x200B;STRING2) | &quot;string1&quot;. &#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
 | equalsIgnoreCase | 두 문자열을 비교하여 동일한지 확인합니다. 이 함수는 **아님** 대/소문자를 구분합니다. | <ul><li>STRING1: **필수** 비교할 첫 번째 문자열입니다.</li><li>STRING2: **필수** 비교할 두 번째 문자열입니다.</li></ul> | 문자열1&#x200B;.equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;. &#x200B;equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
 
 {style="table-layout:auto"}
@@ -275,13 +277,13 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | 사용자 에이전트 문자열에서 운영 체제 이름을 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
-| ua_os_version_major | 사용자 에이전트 문자열에서 운영 체제의 주요 버전을 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major&#x200B;s(&quot;Mozilla/5.0(iPhone, CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
+| ua_os_version_major | 사용자 에이전트 문자열에서 운영 체제의 주요 버전을 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major&#x200B;s(&quot;Mozilla/5.0(iPhone, CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | IOS 5 |
 | ua_os_version | 사용자 에이전트 문자열에서 운영 체제 버전을 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
 | ua_os_name_version | 사용자 에이전트 문자열에서 운영 체제 이름과 버전을 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
 | ua_agent_version | 사용자 에이전트 문자열에서 에이전트 버전을 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
 | ua_agent_version_major | 사용자 에이전트 문자열에서 에이전트 이름과 주요 버전을 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_agent_version_major&#x200B;(USER_AGENT) | ua_agent_version_major&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
 | ua_agent_name | 사용자 에이전트 문자열에서 에이전트 이름을 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
-| ua_device_class | 사용자 에이전트 문자열에서 장치 클래스를 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 전화 |
+| ua_device_class | 사용자 에이전트 문자열에서 장치 클래스를 추출합니다. | <ul><li>사용자 에이전트(_A): **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 휴대폰 |
 
 {style="table-layout:auto"}
 
@@ -362,7 +364,7 @@ address.line1 -> addr.addrLine1
 | --- | --- |
 | 공간 | %20 |
 | ! | %21 |
-| ” | %22 |
+| &quot; | %22 |
 | # | %23 |
 | $ | %24 |
 | % | %25 |
@@ -401,7 +403,7 @@ address.line1 -> addr.addrLine1
 | 알 수 없음 | 알 수 없는 장치입니다. 이들은 보통 다음과 같다. `useragents` 장치에 대한 정보가 포함되어 있지 않습니다. |
 | 모바일 | 아직 식별되지 않은 모바일 디바이스. 이 모바일 디바이스는 eReader, 태블릿, 전화기, 시계 등일 수 있다. |
 | 태블릿 | 화면이 큰 모바일 디바이스(일반적으로 7인치 이상). |
-| 전화 | 화면이 작은 모바일 디바이스(일반적으로 7&quot; 미만). |
+| 휴대폰 | 화면이 작은 모바일 디바이스(일반적으로 7&quot; 미만). |
 | 시청 | 화면이 작은 모바일 디바이스(일반적으로 2&quot; 미만). 이러한 디바이스들은 일반적으로 전화/태블릿 타입의 디바이스를 위한 추가 스크린으로서 동작한다. |
 | 증강 현실 | AR 기능이 있는 모바일 장치입니다. |
 | 가상 현실 | VR 기능이 있는 모바일 장치입니다. |
