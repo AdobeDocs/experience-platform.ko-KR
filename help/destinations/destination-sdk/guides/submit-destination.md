@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 작성된 제품화된 대상을 검토하기 위해 제출해야 하는 모든 정보를 제공합니다.
 title: Destination SDK에서 작성된 제품화된 대상을 검토하기 위해 제출
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,8 @@ ht-degree: 0%
 >* Adobe 팀이 초기 제출 후 구성을 업데이트하라는 요청을 받으면 업데이트를 수행한 후 다른 대상 게시 요청을 제출해야 합니다.
 >
 >* 대상이 Experience Platform 카탈로그에 라이브된 후에도 구성을 업데이트해야 하는 경우 구성에 반영될 업데이트에 대해 새 대상 게시 요청을 제출해야 합니다.
+>
+>* 검토 타임라인과 필수 아티팩트는 업데이트하려는 새 대상 및 기존 대상에 대해 동일합니다.
 
 대상을 다음에 게시하기 전 [Experience Platform 대상 카탈로그](/help/destinations/catalog/overview.md), Adobe에게 대상 및 수행한 테스트에 대한 특정 정보를 제공하여 사용자가 플랫폼으로 데이터를 활성화할 때 최상의 경험을 누릴 수 있도록 해야 합니다.
 
@@ -260,7 +262,7 @@ ISV(Independent Software Vendor) 또는 SI(System Integrator)가 [제품화 통�
 대상 카탈로그에는 각 대상 카드에 대한 로고가 포함되어 있습니다. 제출 이메일에 대상에 대한 로고가 있는 이미지를 포함합니다.
 
 이미지 요구 사항은 다음과 같습니다.
-* **포맷**: `SVG`
+* **형식**: `SVG`
 * **크기**: 2MB 미만
 
 ## 샘플 이메일 다운로드 {#download-sample-email}
