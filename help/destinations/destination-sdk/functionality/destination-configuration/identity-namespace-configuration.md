@@ -2,10 +2,10 @@
 description: Destination SDK으로 빌드된 대상에 대해 지원되는 타겟 ID를 구성하는 방법에 대해 알아봅니다.
 title: ID 네임스페이스 구성
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
+source-git-commit: 606685c1f0b607ca586e477cb9825ec551d537cc
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 4%
+source-wordcount: '918'
+ht-degree: 1%
 
 ---
 
@@ -13,11 +13,15 @@ ht-degree: 4%
 
 Experience Platform은 id 네임스페이스를 사용하여 특정 id 유형을 설명합니다. 예를 들어 이라는 ID 네임스페이스 `Email` 는 과 같은 값을 식별합니다. `name@email.com` 이메일 주소로 사용하십시오.
 
-Destination SDK을 통해 실시간(스트리밍) 대상을 만들 때 및 [파트너 스키마 구성](schema-configuration.md) 사용자가 프로필 속성 및 id를에 매핑할 수 있으려면 대상 플랫폼에서 지원하는 id 네임스페이스도 정의해야 합니다. 예를 들어 대상 플랫폼에서 해시된 이메일 및 [!DNL IDFA], 다음과 같이 이 두 ID를 정의해야 합니다. [이 문서의 뒷부분에 설명되어 있다](#supported-parameters).
+생성하는 대상 유형(스트리밍 또는 파일 기반)에 따라 다음 ID 네임스페이스 요구 사항을 염두에 두십시오.
 
-대상자를 스트리밍 대상으로 활성화할 때, 사용자는 타겟 프로필 속성 외에 타겟 ID도 매핑해야 합니다. 그렇지 않으면 대상자가 대상 플랫폼에 활성화되지 않습니다.
+* Destination SDK을 통해 실시간(스트리밍) 대상을 만들 때 및 [파트너 스키마 구성](schema-configuration.md) 사용자가 프로필 속성 및 id를 매핑할 수 있도록 다음을 정의해야 합니다 *최소 하나* 대상 플랫폼에서 지원하는 id 네임스페이스. 예를 들어 대상 플랫폼에서 해시된 이메일 및 [!DNL IDFA], 다음과 같이 이 두 ID를 정의해야 합니다. [이 문서의 뒷부분에 설명되어 있습니다.](#supported-parameters).
 
-Destination SDK을 통해 파일 기반 대상을 만들 때 ID 네임스페이스 구성은 선택 사항입니다.
+  >[!IMPORTANT]
+  >
+  >대상자를 스트리밍 대상으로 활성화할 때 사용자도 매핑해야 합니다 _하나 이상의 대상 id_, target 프로필 속성 외에 사용할 수도 있습니다. 그렇지 않으면 대상자가 대상 플랫폼에 활성화되지 않습니다.
+
+* Destination SDK을 통해 파일 기반 대상을 만들 때 ID 네임스페이스의 구성은 다음과 같습니다 _선택 사항_.
 
 Experience Platform의 ID 네임스페이스에 대한 자세한 내용은 [id 네임스페이스 설명서](../../../../identity-service/features/namespaces.md).
 
@@ -114,7 +118,7 @@ Experience Platform 고객은 데이터를 해시된 형식 또는 일반 텍스
    }
 ```
 
-해시되지 않은 소스 필드를 사용할 때 이 옵션을 선택하면 Adobe Experience Platform에서 활성화 시 해당 필드를 자동으로 해시할 수 있습니다.
+해시되지 않은 소스 필드를 사용할 때 Adobe Experience Platform이 활성화 시 자동으로 해시하도록 하려면 이 옵션을 선택합니다.
 
 해시되지 않은 소스 속성을 대상이 해시할 것으로 예상하는 타겟 속성에 매핑할 때(예: `email_lc_sha256` 또는 `phone_sha256`), 다음을 확인합니다. **변환 적용** 활성화 시 Adobe Experience Platform이 소스 속성을 자동으로 해시하도록 하는 옵션입니다.
 

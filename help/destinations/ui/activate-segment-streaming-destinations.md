@@ -3,10 +3,10 @@ title: 스트리밍 대상으로 대상 데이터 활성화
 type: Tutorial
 description: 스트리밍 대상에 매핑하여 Adobe Experience Platform에 있는 대상을 활성화하는 방법을 알아봅니다.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f741e62b3340b743e465edf3f7a007580b3f61be
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 7%
+source-wordcount: '1164'
+ht-degree: 1%
 
 ---
 
@@ -62,6 +62,10 @@ ht-degree: 7%
 >[!IMPORTANT]
 >
 >이 단계는 일부 대상 스트리밍 대상에만 적용됩니다. 대상에 이 없는 경우 **[!UICONTROL 매핑]** 단계, 다음으로 건너뛰기 [대상자 예약](#scheduling).
+>
+>대상자를 스트리밍 대상으로 활성화할 때 매핑해야 합니다 *하나 이상의 target id 네임스페이스*, target 프로필 속성 외에 사용할 수도 있습니다. 그렇지 않으면 대상자가 대상 플랫폼에 활성화되지 않습니다.
+> ![필수 ID 네임스페이스 매핑을 보여 주는 매핑 단계 이미지.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+
 
 일부 대상 스트리밍 대상에서는 소스 속성이나 ID 네임스페이스를 선택하여 대상의 타겟 ID로 매핑해야 합니다.
 
@@ -92,7 +96,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="변환 적용"
->abstract="해시되지 않은 소스 필드를 사용할 때 이 옵션을 선택하면 Adobe Experience Platform에서 활성화 시 해당 필드를 자동으로 해시할 수 있습니다."
+>abstract="해시되지 않은 소스 필드를 사용할 때 Adobe Experience Platform이 활성화 시 자동으로 해시하도록 하려면 이 옵션을 선택합니다."
 
 해시되지 않은 소스 속성을 대상이 해시할 것으로 예상하는 타겟 속성에 매핑할 때(예: `email_lc_sha256` 또는 `phone_sha256`), 다음을 확인합니다. **변환 적용** 활성화 시 Adobe Experience Platform이 소스 속성을 자동으로 해시하도록 하는 옵션입니다.
 
@@ -103,7 +107,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="종료 날짜"
->abstract="대상자 예약에 종료 날짜를 추가할 수 없습니다."
+>abstract="대상자 일정에 대한 종료 일자를 추가할 수 없습니다."
 
 기본적으로 **[!UICONTROL 대상자 일정]** 페이지에는 현재 활성화 플로우에서 선택한 새로 선택한 대상만 표시됩니다.
 
@@ -129,7 +133,7 @@ ht-degree: 7%
 
 1. 선택 **[!UICONTROL 다음]** 로 이동 [!UICONTROL 리뷰] 페이지를 가리키도록 업데이트하는 중입니다.
 
-## 리뷰 {#review}
+## 검토 {#review}
 
 다음에서 **[!UICONTROL 리뷰]** 페이지에서 선택 사항의 요약을 볼 수 있습니다. 선택 **[!UICONTROL 취소]** 흐름을 끊으려면, **[!UICONTROL 뒤로]** 설정을 수정하려면 **[!UICONTROL 완료]** 을 클릭하여 선택 항목을 확인하고 데이터를 대상으로 보내기 시작합니다.
 
@@ -137,7 +141,7 @@ ht-degree: 7%
 
 ### 동의 정책 평가 {#consent-policy-evaluation}
 
-조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;를 구매한 경우 **[!UICONTROL 해당 동의 정책 보기]**&#x200B;를 선택하여 적용된 동의 정책을 조회하고 그 결과로 활성화에 포함된 프로필 수를 확인합니다. 읽어보기 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 추가 정보.
+조직이 구매한 경우 **Adobe 헬스케어 실드** 또는 **Adobe 개인정보 보호 및 보안 실드**, 선택 **[!UICONTROL 해당 동의 정책 보기]** 을 클릭하여 적용되는 동의 정책 및 그 결과로 활성화에 포함되는 프로필 수를 확인합니다. 읽어보기 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 추가 정보.
 
 ### 데이터 사용 정책 확인 {#data-usage-policy-checks}
 
