@@ -3,10 +3,10 @@ title: (API) Oracle Eloqua 연결
 description: (API) Oracle Eloqua 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Oracle Eloqua 내에서 활성화할 수 있습니다.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: cf7ad18fa3d8f074371a0f03e09e218d37be5e01
 workflow-type: tm+mt
-source-wordcount: '2042'
-ht-degree: 4%
+source-wordcount: '2033'
+ht-degree: 1%
 
 ---
 
@@ -92,12 +92,12 @@ Platform에서 로 데이터를 내보내려면 [!DNL Oracle Eloqua] 계정 이(
 
 다음 범위 내 **[!UICONTROL 대상]** > **[!UICONTROL 카탈로그]** 검색 대상 [!DNL (API) Oracle Eloqua]. 또는 아래에서 찾을 수 있습니다 **[!UICONTROL 이메일 마케팅]** 범주.
 
-### 대상으로 인증 {#authenticate}
+### 대상에 인증 {#authenticate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
 >title="회사 이름\사용자 이름"
->abstract="이 필드에 `{COMPANY_NAME}\{USERNAME}` 양식으로 Oracle Eloqua의 회사 이름과 사용자 이름을 입력합니다."
+>abstract="양식에서 Eloqua Oracle의 회사 이름과 사용자 이름으로 이 필드를 채웁니다 `{COMPANY_NAME}\{USERNAME}`"
 
 아래의 필수 필드를 입력하십시오. 다음을 참조하십시오. [수집 [!DNL Oracle Eloqua] 자격 증명](#gather-credentials) 섹션에 자세히 설명되어 있습니다.
 * **[!UICONTROL 암호]**: 의 암호 [!DNL Oracle Eloqua] 계정입니다.
@@ -113,8 +113,9 @@ Platform에서 로 데이터를 내보내려면 [!DNL Oracle Eloqua] 계정 이(
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_pod"
 >title="Pod"
->abstract="Pod 번호를 찾으려면 Oracle Eloqua에 로그인하십시오. 정상적으로 로그인하고 나면 브라우저의 URL을 기록해 둡니다. "
->additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle 기술 자료 - Pod 번호 찾기"
+>abstract="pod 번호를 찾으려면 Oracle Eloqua에 로그인합니다. 성공적으로 로그인하면 브라우저의 URL을 확인합니다. "
+
+<!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 ![대상 세부 사항을 보여주는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
@@ -129,7 +130,7 @@ Platform에서 로 데이터를 내보내려면 [!DNL Oracle Eloqua] 계정 이(
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상으로 대상자 활성화 {#activate}
+## 이 대상에 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

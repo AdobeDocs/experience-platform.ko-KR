@@ -1,0 +1,178 @@
+---
+title: 네임스페이스 우선 순위
+description: ID 서비스의 네임스페이스 우선 순위에 대해 알아봅니다.
+badge: Beta
+source-git-commit: 85da193f422a1708999fb59b7ea095f4447d6bdf
+workflow-type: tm+mt
+source-wordcount: '1464'
+ht-degree: 1%
+
+---
+
+# 네임스페이스 우선 순위
+
+>[!AVAILABILITY]
+>
+>이 기능은 아직 사용할 수 없습니다. ID 그래프 연결 규칙에 대한 베타 프로그램은 개발 샌드박스에서 7월에 시작될 예정입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+
+모든 고객 구현은 특정 조직의 목표를 충족하도록 고유하고 맞춤화되며, 따라서 지정된 네임스페이스의 중요성은 고객마다 다릅니다. 실제 사례는 다음과 같습니다.
+
+* 한편으로는 이메일 네임스페이스가 개인 엔티티를 나타내므로 사용자별로 고유한 것으로 간주할 수 있습니다. 반면 다른 고객은 이메일 네임스페이스를 신뢰할 수 없는 식별자로 간주할 수 있으므로 단일 CRM ID를 이메일 네임스페이스의 여러 ID에 연결할 수 있습니다.
+* &quot;로그인 ID&quot; 네임스페이스를 사용하여 온라인 동작을 수집할 수 있습니다. 이 로그인 ID는 CRM ID와 1:1 관계를 가질 수 있으며, 이는 CRM 시스템의 속성을 저장하고 가장 중요한 네임스페이스로 간주될 수 있습니다. 이 경우 CRM ID 네임스페이스가 개인을 더 정확하게 표현하는 반면 로그인 ID 네임스페이스는 두 번째로 가장 중요하다고 판단합니다.
+
+ID 서비스에서 프로필이 형성되고 세그먼트화되는 방식에 영향을 주므로 네임스페이스의 중요성을 반영하는 구성을 수행해야 합니다.
+
+## 우선 순위 결정
+
+네임스페이스 우선 순위 결정은 다음 요소를 기반으로 합니다.
+
+### ID 그래프 구조
+
+조직의 그래프 구조가 계층화된 경우 네임스페이스 우선 순위는 이를 반영하여 그래프 축소에서 올바른 링크가 제거되도록 해야 합니다.
+
+>[!TIP]
+>
+>* &quot;그래프 축소&quot;는 여러 개별 프로필이 실수로 하나의 ID 그래프에 병합되는 시나리오를 의미합니다.
+>
+>* 레이어 그래프는 여러 수준의 링크가 있는 ID 그래프를 나타냅니다. 세 개의 레이어가 있는 그래프의 예를 보려면 아래 이미지를 보십시오.
+
+![그래프 레이어 다이어그램](../images/namespace-priority/graph-layers.png)
+
+### 네임스페이스의 의미론적 의미
+
+ID는 실제 개체를 나타냅니다. ID 그래프에 표시되는 객체는 세 개입니다. 중요도 순서로 다음과 같습니다.
+
+* 사람(크로스 디바이스, 이메일, 전화번호)
+* 하드웨어 장치
+* 웹 브라우저(쿠키)
+
+개인 네임스페이스는 웹 브라우저에 비해 상대적으로 변경이 불가능한 하드웨어 장치(예: IDFA, GAID)에 비해 상대적으로 변경이 불가능합니다. 기본적으로 사용자(사용자)는 항상 단일 엔티티이며, 여러 하드웨어 장치(전화, 노트북, 태블릿 등)를 사용하고 여러 브라우저(Google Chrome, Safari, FireFox 등)를 사용할 수 있습니다.
+
+이 주제에 접근하는 또 다른 방법은 카디널리티를 통해서이다. 주어진 개인에 대해 몇 개의 ID가 만들어집니까? 대부분의 경우 한 사람은 CRM ID, 소수의 하드웨어 장치 식별자(IDFA/GAID 재설정은 자주 발생하지 않아야 함) 및 훨씬 더 많은 쿠키(개인이 여러 장치에서 굽거나 시크릿 모드를 사용하거나 지정된 시간에 쿠키를 재설정할 수 있음)를 갖게 됩니다. 일반적으로, **낮은 카디널리티는 높은 값을 갖는 네임스페이스를 나타냅니다.**.
+
+<!-- ## Step 2: Validate your namespace priority settings
+
+Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md). -->
+
+## 네임스페이스 우선 순위 구성
+
+네임스페이스 우선 순위는 다음을 사용하여 구성할 수 있습니다. [!UICONTROL ID 설정]. 다음에서 [!UICONTROL ID 설정] 인터페이스에서 네임스페이스를 드래그 앤 드롭하여 상대적 중요도를 결정할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>디바이스/쿠키 네임스페이스에 개인 네임스페이스보다 우선 순위를 지정할 수 없습니다. 이 제한은 잘못된 구성이 발생하지 않도록 합니다.
+
+## 네임스페이스 우선 순위 사용
+
+현재 네임스페이스 우선 순위는 실시간 고객 프로필의 시스템 동작에 영향을 줍니다. 아래 다이어그램은 이 개념을 보여 줍니다. 자세한 내용은 의 안내서를 참조하십시오. [Adobe Experience Platform 및 애플리케이션 아키텍처 다이어그램](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+
+![네임스페이스 우선 순위 응용 프로그램 범위의 다이어그램입니다](../images/namespace-priority/application-scope.png)
+
+### ID 서비스: ID 최적화 알고리즘
+
+비교적 복잡한 그래프 구조의 경우, 네임스페이스 우선 순위는 그래프 축소 시나리오가 발생할 때 올바른 링크가 제거되도록 하는 데 중요한 역할을 합니다. 자세한 내용은 [[!DNL Identity Optimization Algorithm] 개요](../identity-graph-linking-rules/identity-optimization-algorithm.md).
+
+### 실시간 고객 프로필: 경험 이벤트에 대한 기본 ID 결정
+
+* 경험 이벤트의 경우 지정된 샌드박스에 대해 ID 설정을 구성하면 기본 ID는 앞으로 가장 높은 네임스페이스 우선 순위에 따라 결정됩니다.
+   * 이는 체험 행사가 그 자체로 역동적이기 때문이다. ID 맵에는 3개 이상의 ID가 포함될 수 있으며 네임스페이스 우선 순위는 가장 중요한 네임스페이스가 경험 이벤트에 연결되어 있도록 합니다.
+* 그 결과 다음과 같은 구성이 이루어집니다 **실시간 고객 프로필에서 더 이상 사용되지 않음**:
+   * WebSDK의 데이터 요소 유형에 대한 &quot;기본&quot; 확인란입니다.
+   * XDM 경험 이벤트 클래스 스키마에서 기본 ID로 표시된 모든 필드.
+   * Adobe Analytics 소스 커넥터(ECID 또는 AAID)의 기본 기본 ID 설정.
+* 반면에, **네임스페이스 우선 순위는 프로필 레코드의 기본 id를 결정하지 않습니다.**.
+   * 프로필 레코드의 경우 Experience Platform UI의 스키마 작업 영역을 사용하여 기본 ID를 포함한 ID 필드를 정의할 수 있습니다. 의 안내서 읽기 [ui에서 id 필드 정의](../../xdm/ui/fields/identity.md) 추가 정보.
+
+>[!NOTE]
+>
+>* 네임스페이스 우선 순위는 입니다. **네임스페이스의 속성**. 네임스페이스에 할당되어 상대적 중요도를 나타내는 숫자 값입니다.
+>
+>* 기본 ID는 프로필 조각이 저장되는 ID입니다. 프로필 조각은 특정 사용자에 대한 정보, 즉 속성(일반적으로 CRM 레코드를 통해 수집됨) 또는 이벤트(일반적으로 경험 이벤트 또는 온라인 데이터에서 수집됨)를 저장하는 데이터 레코드입니다.
+
+### 그래프 시나리오 예
+
+이 섹션에서는 우선 순위 구성이 데이터에 어떤 영향을 미칠 수 있는지 예를 제공합니다.
+
+주어진 샌드박스에 대해 다음 구성이 설정되었다고 가정해 봅시다.
+
+| 네임스페이스 | 네임스페이스의 실제 애플리케이션 | 우선 순위 |
+| --- | --- | --- |
+| CRMID | 사용자 | 1 |
+| IDFA | Apple 하드웨어 장치(iPhone, IPad 등) | 2 |
+| GAID | Google 하드웨어 장치(Google Pixel, Pixelbook 등) | 3 |
+| ECID | 웹 브라우저 (Firefox, Safari, Google Chrome 등) | 4 |
+| AAID | 웹 브라우저 | 5 |
+
+{style="table-layout:auto"}
+
+위에 설명된 구성이 주어지면 사용자 작업과 기본 ID 결정은 다음과 같이 해결됩니다.
+
+| 사용자 작업(경험 이벤트) | 인증 상태 | 데이터 소스 | ID 맵 | 기본 ID(프로필 조각의 기본 키) |
+| --- | --- | --- | --- | --- |
+| 신용 카드 오퍼 페이지 보기 | 인증되지 않음(익명) | Web SDK | {ECID} | ECID |
+| 도움말 페이지 보기 | 인증되지 않음 | Mobile SDK | {ECID, IDFA} | IDFA |
+| 당좌 예금 잔액 조회 | Authenticated | Web SDK | {CRM ID, ECID} | CRM ID |
+| 주택 융자에 등록 | Authenticated | Analytics 소스 커넥터 | {CRM ID, ECID, AAID} | CRM ID |
+| $1,000를 수표에서 저축으로 전송 | Authenticated | Mobile SDK | {CRM ID, GAID, ECID} | CRM ID |
+
+{style="table-layout:auto"}
+
+### 세그먼테이션 서비스: 세그먼트 멤버십 메타데이터 저장소
+
+![세그먼트 멤버십 저장소 다이어그램](../images/namespace-priority/segment-membership-storage.png)
+
+지정된 병합 프로필의 경우, 세그먼트 멤버십은 우선 순위가 가장 높은 네임스페이스가 있는 ID에 대해 저장됩니다.
+
+예를 들어 다음 두 가지 프로필이 있다고 가정해 보겠습니다.
+
+* 첫 번째 프로필은 John을 나타냅니다.
+* 두 번째 프로필은 제인을 나타냅니다.
+
+John과 Jane이 장치를 공유하는 경우 ECID(웹 브라우저)가 한 사람에서 다른 사람으로 이동합니다. 단, 이는 John과 Jane에 대해 저장된 세그먼트 멤버십 정보에 영향을 주지 않습니다.
+
+세그먼트 자격 기준이 ECID에 대해 저장된 익명 이벤트만을 기반으로 하는 경우 Jane은 해당 세그먼트에 대한 자격을 갖습니다
+
+## 기타 Experience Platform 서비스에 대한 영향 {#implications}
+
+이 섹션에서는 네임스페이스 우선 순위가 다른 Experience Platform 서비스에 어떤 영향을 미칠 수 있는지 간략하게 설명합니다.
+
+### 고급 데이터 수명주기 관리
+
+데이터 위생 레코드 삭제 요청은 특정 ID에 대해 다음 방식으로 작동합니다.
+
+* 실시간 고객 프로필: 지정된 ID를 기본 ID로 하는 프로필 조각을 삭제합니다. **이제 네임스페이스의 우선 순위에 따라 프로필의 기본 ID가 결정됩니다.**
+* 데이터 레이크: 지정된 ID를 기본 ID로 하는 레코드를 삭제합니다.
+
+자세한 내용은 [고급 수명 주기 관리 개요](../../hygiene/home.md).
+
+### 데이터 레이크
+
+데이터 레이크로의 데이터 수집은에 구성된 기본 ID 설정을 계속 적용합니다. [웹 SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) 및 스키마.
+
+데이터 레이크는 네임스페이스 우선 순위를 기반으로 기본 ID를 결정하지 않습니다. 예를 들어 Adobe Customer Journey Analytics은 Customer Journey Analytics이 데이터 레이크의 데이터를 소비하므로 네임스페이스 우선 순위가 활성화된 후에도(예: 새 연결에 데이터 세트 추가) ID 맵에서 값을 계속 사용합니다.
+
+### XDM(경험 데이터 모델) 스키마
+
+XDM 개인 프로필과 같이 XDM 경험 이벤트가 아닌 스키마는 모든 항목을 계속 적용합니다. [id로 표시하는 필드](../../xdm/ui/fields/identity.md).
+
+XDM 스키마에 대한 자세한 내용은 [스키마 개요](../../xdm/home.md).
+
+### 인텔리전트 서비스
+
+데이터를 선택할 때 점수를 계산하는 이벤트와 계산된 점수를 저장하는 이벤트를 결정하는 데 사용할 네임스페이스를 지정해야 합니다. 개인을 나타내는 네임스페이스를 선택하는 것이 좋습니다.
+
+* WebSDk를 사용하여 웹 동작 데이터를 수집하는 경우 ID 맵 내에서 CRM ID 네임스페이스를 선택하는 것이 좋습니다.
+* Analytics 소스 커넥터를 사용하여 웹 동작 데이터를 수집하는 경우 ID 설명자(CRM ID)를 선택해야 합니다.
+
+이 구성은 인증된 이벤트를 사용해서만 점수를 계산하는 결과를 초래합니다.
+
+자세한 내용은 의 문서를 참조하십시오. [Attribution AI](../../intelligent-services/attribution-ai/overview.md) 및 [고객 AI](../../intelligent-services/customer-ai/overview.md).
+
+### Privacy Service
+
+[Privacy Service 삭제 요청](../privacy.md) 지정된 id에 대해 다음과 같은 방식으로 작동합니다.
+
+* 실시간 고객 프로필: 지정된 ID 값을 기본 ID로 하는 프로필 조각을 삭제합니다. **이제 네임스페이스의 우선 순위에 따라 프로필의 기본 ID가 결정됩니다.**
+* 데이터 레이크: 지정된 ID를 기본 또는 보조 ID로 사용하는 레코드를 삭제합니다.
+
+자세한 내용은 [Privacy service 개요](../../privacy-service/home.md).
