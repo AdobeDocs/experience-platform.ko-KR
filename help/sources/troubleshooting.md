@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 소스 문제 해결
 description: 이 문서에서는 Adobe Experience Platform 소스에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 소스 문제 해결 안내서
 
-이 문서에서는 Adobe Experience Platform 소스에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 기타 관련 질문 및 문제 해결 [!DNL Platform] 모든 상황에서 발생하는 서비스를 포함한 서비스 [!DNL Platform] API입니다. 다음을 참조하십시오. [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md).
+이 문서에서는 Adobe Experience Platform 소스에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 기타 관련 질문 및 문제 해결 [!DNL Platform] 모든 상황에서 발생하는 서비스를 포함한 서비스 [!DNL Platform] API, 다음을 참조하십시오. [Experience Platform 문제 해결 안내서](../landing/troubleshooting.md).
 
 ## 자주 묻는 질문
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 - LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, 점 문자(.) 및 점 문자(..) 두 개를 사용할 수 없습니다.
 - 배치당 최대 파일 수는 1500개이며 최대 배치 크기는 100GB입니다.
 - 행당 최대 속성 또는 필드 수는 10,000개입니다.
-- 사용자당 전송할 수 있는 분당 최대 배치 수는 138개입니다.
+- 사용자당 전송할 수 있는 분당 최대 배치 수는 2000개입니다.
 
 ### 지원되는 데이터 유형은 무엇입니까?
 

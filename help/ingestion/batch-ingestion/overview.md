@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 일괄 처리 수집 API 개요
 description: 'Adobe Experience Platform 일괄 처리 수집 API 를 사용하면 데이터를 플랫폼에 일괄 처리 파일로 수집할 수 있습니다. 수집되는 데이터는 CRM 시스템의 플랫 파일(예: Parquet 파일)의 프로필 데이터이거나 Experience Data Model(XDM) 레지스트리의 알려진 스키마를 준수하는 데이터일 수 있습니다.'
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 4%
@@ -44,7 +44,7 @@ Adobe Experience Platform 일괄 처리 수집 API 를 사용하면 데이터를
 - 배치당 최대 파일 수: 1500
 - 최대 배치 크기: 100GB
 - 행당 최대 속성 또는 필드 수: 10000
-- 사용자당 분당 데이터 레이크의 최대 배치 수: 138
+- 분당 데이터 레이크의 사용자당 최대 배치 수: 2000
 
 >[!NOTE]
 >
