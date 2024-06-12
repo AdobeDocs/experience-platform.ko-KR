@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 스키마 컴포지션 기본 사항
 description: XDM(Experience Data Model) 스키마와 Adobe Experience Platform에서 스키마를 구성하기 위한 빌딩 블록, 원칙 및 모범 사례에 대해 알아봅니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 1b3d20610a48fc48c84dc4901d7b09db4bb8fa1f
+source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
 workflow-type: tm+mt
-source-wordcount: '4236'
-ht-degree: 6%
+source-wordcount: '4293'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 XDM(Experience Data Model) 스키마와 Adobe Experience Platform에서 스키마를 구성하기 위한 빌딩 블록, 원칙 및 모범 사례에 대해 알아봅니다. XDM 및 내에서 사용되는 방법에 대한 일반 정보 [!DNL Platform], 다음을 참조하십시오. [XDM 시스템 개요](../home.md).
 
-## 스키마 이해 {#understanding-schemas}
+## 스키마 이해하기 {#understanding-schemas}
 
 스키마는 데이터의 구조와 형식을 나타내고 유효성을 검사하는 규칙 세트입니다. 스키마는 높은 수준에서 실제 개체(예: 사람)에 대한 추상적인 정의를 제공하고, 해당 개체의 각 인스턴스에 포함되어야 하는 데이터(예: 이름, 성, 생일 등)에 대한 개요를 제공합니다.
 
@@ -53,7 +53,7 @@ Experience Platform에 사용하기 위한 데이터는 다음 두 가지 동작
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="스키마의 ID"
->abstract="ID는 이메일 주소 또는 마케팅 ID와 같은 주제를 식별하는 데 사용할 수 있는 스키마 내의 핵심 필드입니다. 이러한 필드는 각 개인의 ID 그래프를 구성하고 고객 프로필을 만드는 데 사용됩니다. 스키마의 ID에 대한 자세한 내용은 설명서를 참조하십시오."
+>abstract="ID는 이메일 주소 또는 마케팅 ID와 같이 주제를 식별하는 데 사용할 수 있는 스키마 내의 키 필드입니다. 이러한 필드는 각 개인에 대한 ID 그래프를 구성하고 고객 프로필을 작성하는 데 사용됩니다. 스키마의 ID에 대한 자세한 내용은 설명서를 참조하십시오."
 
 스키마는 데이터를 Experience Platform에 수집하는 데 사용됩니다. 이 데이터는 여러 서비스에 걸쳐 개별 엔터티의 단일 통합 보기를 만드는 데 사용할 수 있습니다. 따라서 고객 ID용 스키마를 디자인할 때는 데이터의 출처와 관계없이 주제를 식별하는 데 사용할 수 있는 필드를 고려하는 것이 중요합니다.
 
@@ -170,7 +170,12 @@ Experience Platform은 표준 빌딩 블록이 결합되어 스키마를 만드�
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class"
 >title="클래스"
->abstract="모든 스키마는 단일 클래스를 기반으로 합니다. 클래스는 해당 클래스를 기반으로 하는 모든 스키마를 포함하는 스키마의 동작 및 공통 속성을 정의합니다. 클래스가 스키마 구성에 포함되는 방법에 대한 자세한 내용은 설명서를 참조하십시오."
+>abstract="모든 스키마는 단일 클래스를 기반으로 합니다. 클래스는 스키마의 비헤이비어 및 해당 클래스를 기반으로 하는 모든 스키마에 포함되어야 하는 공통 속성을 정의합니다. 클래스가 스키마 컴포지션과 어떻게 관련되어 있는지 자세히 알아보려면 설명서를 참조하십시오."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class_industries"
+>title="업계 유형"
+>abstract="비즈니스와 관련된 산업을 선택하는 경우, 머신 러닝 모델은 소스 필드를 업계 표준에 맞는 표준 필드 그룹과 더 정확하게 매핑하여 더 나은 데이터 조직을 제공할 수 있습니다. 이렇게 하면 데이터 통합이 산업별 요구 사항에 맞게 조정되고 보다 정확하고 적절한 데이터 통찰력을 얻을 수 있습니다."
 
 스키마 작성은 클래스를 할당하는 것부터 시작됩니다. 클래스는 스키마에 포함될 데이터의 동작 측면(레코드 또는 시계열)을 정의합니다. 이 외에도 클래스는 해당 클래스를 기반으로 하는 모든 스키마가 포함해야 하는 가장 적은 수의 공통 속성을 설명하고 여러 호환되는 데이터 세트가 병합될 수 있는 방법을 제공합니다.
 
@@ -189,12 +194,12 @@ Adobe은 몇 가지 표준(&quot;코어&quot;) XDM 클래스를 제공합니다.
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
 >title="필드 그룹"
->abstract="필드 그룹은 추가 속성으로 스키마를 확장할 수 있는 재사용 가능한 구성 요소입니다. 대부분의 필드 그룹은 특정 클래스와만 호환됩니다. Adobe에서 정의한 표준 필드 그룹을 사용하거나 고유한 사용자 정의 필드 그룹을 수동으로 정의할 수 있습니다. 필드 그룹이 스키마 구성에 포함되는 방법에 대한 자세한 내용은 설명서를 참조하십시오."
+>abstract="필드 그룹은 추가 속성으로 스키마를 확장할 수 있는 재사용 가능한 구성 요소입니다. 대부분의 필드 그룹은 특정 클래스와만 호환됩니다. Adobe으로 정의된 표준 필드 그룹을 사용하거나 사용자 정의 필드 그룹을 수동으로 정의할 수 있습니다. 필드 그룹이 스키마 구성에 관여하는 방법에 대한 자세한 내용은 설명서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"
 >title="필수 필드 그룹"
->abstract="이 필드 그룹은 사용 중인 소스에 필요합니다. 이러한 이유로 스키마에서 삭제할 수 없습니다."
+>abstract="사용 중인 원본에는 이 필드 그룹이 필요합니다. 따라서 스키마에서 삭제할 수 없습니다."
 
 필드 그룹은 개인 세부 정보, 호텔 환경 설정 또는 주소와 같은 특정 기능을 구현하는 하나 이상의 필드를 정의하는 재사용 가능한 구성 요소입니다. 필드 그룹은 호환 가능한 클래스를 구현하는 스키마의 일부로 포함하기 위한 것입니다.
 
@@ -240,7 +245,7 @@ Experience Platform은 다음과 같은 여러 가지 공통 데이터 유형을
 
 * 문자열
 * 정수
-* 이중
+* 더블
 * 부울
 * 배열
 * 오브젝트
@@ -275,7 +280,7 @@ Experience Platform은 다음과 같은 여러 가지 공통 데이터 유형을
 
 ![4개의 스키마와 여기에 기여하는 필드 그룹의 흐름 다이어그램입니다.](../images/schema-composition/composition.png)
 
-### 합집합 {#union}
+### 유니온 {#union}
 
 Experience Platform을 사용하면 특정 사용 사례에 맞게 스키마를 구성할 수 있지만 특정 클래스 유형에 대한 스키마의 &quot;결합&quot;을 확인할 수도 있습니다. 이전 다이어그램은 XDM ExperienceEvent 클래스를 기반으로 하는 두 스키마와 을 기반으로 하는 두 스키마를 보여 줍니다 [!DNL XDM Individual Profile] 클래스. 아래에 표시된 결합은 동일한 클래스를 공유하는 모든 스키마의 필드를 집계합니다([!DNL XDM ExperienceEvent] 및 [!DNL XDM Individual Profile], 각각 참조).
 

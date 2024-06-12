@@ -2,9 +2,9 @@
 title: 계정 프로필 대시보드
 description: Adobe Experience Platform은 조직의 B2B 계정 프로필에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: 8e05b0ae06250f8cd55b361a8176963e0dce8e92
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1763'
 ht-degree: 1%
 
 ---
@@ -169,6 +169,14 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 >글로벌 날짜 범위 필터는 예측 채점 통찰력에 적용되지 않습니다. 예측 채점 위젯은 드롭다운에서 선택한 계정 채점 모델을 기반으로 데이터를 분석합니다.
 
 ![예측 점수 최상위 영향력 있는 요소 위젯.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
+### 데이터를 로드할 수 없음 오류 {#errors}
+
+위젯 표시 경우 *[!UICONTROL 로드할 수 없습니다. 다시 시도하십시오.]* B2B 엔티티에 대해 사용 가능한 데이터가 없기 때문입니다. 예를 들어 아래에 표시된 위젯 [!UICONTROL 개인 역할별 새로운 기회]은(는) 메시지를 표시합니다.&quot;[!UICONTROL 로드할 수 없습니다. 다시 시도하십시오.]&quot;이 샌드박스에는 사용 가능한 영업 기회 데이터가 없으므로.
+
+![인사이트를 로드할 수 없음 오류.](../images/account-profiles/unable-to-load.png)
+
+문제를 해결하려면 다음과 같은 B2B 엔티티 데이터를 수집해야 합니다. *영업 기회 직원* 데이터를 샌드박스로 복사합니다. 48시간 후 데이터가 위젯에 반영됩니다.
 
 ## 다음 단계
 

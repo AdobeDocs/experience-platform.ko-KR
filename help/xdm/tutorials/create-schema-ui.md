@@ -5,7 +5,7 @@ title: 스키마 편집기를 사용하여 스키마 만들기
 type: Tutorial
 description: 이 자습서에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
+source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 0%
@@ -49,10 +49,6 @@ Adobe Experience Platform 사용자 인터페이스를 사용하여 를 만들�
 다음 [!UICONTROL 스키마 만들기] 워크플로가 나타납니다. 그런 다음 스키마의 기본 클래스를 선택합니다. 의 핵심 클래스 중에서 선택할 수 있습니다. [!UICONTROL XDM 개별 프로필] 및 [!UICONTROL XDM ExperienceEvent], 또는 [!UICONTROL 기타] 만약 이 수업들이 당신의 목적에 맞지 않는다면. 다음 [!UICONTROL 기타] 클래스 옵션을 사용하면 다음 중 하나를 수행할 수 있습니다. [새 클래스 만들기](#create-new-class) 또는 다른 기존 클래스 중에서 선택할 수 있습니다.
 
 다음을 참조하십시오. [XDM 개별 프로필](../classes/individual-profile.md) 및 [XDM ExperienceEvent](../classes/experienceevent.md) 설명서입니다. 이 자습서에서는 다음을 선택하십시오. **[!UICONTROL XDM 개별 프로필]** 뒤에 오는 **[!UICONTROL 다음]**.
-
-
-
-<!--  -->
 
 <!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
 

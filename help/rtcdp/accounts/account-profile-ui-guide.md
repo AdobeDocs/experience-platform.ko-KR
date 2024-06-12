@@ -5,9 +5,9 @@ description: Adobe Real-time Customer Data Platform B2B 에디션을 사용하�
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
+source-git-commit: 96f29d5c64bb29125d8a63dd3ddb3bdedb5ebd52
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1680'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ B2B 워크플로의 일부로 계정 프로필을 만드는 방법에 대한 자
 
 선택 **[!UICONTROL 프로필]** 아래에 [!UICONTROL 계정] 왼쪽 탐색에서 계정 프로필의 개요를 확인합니다. 아래 [!UICONTROL 개요] 탭, 대시보드에는 단일 진입점에 위젯을 표시하는 그래픽 또는 차트가 표시됩니다.
 
-![위젯을 표시하는 개요 탭](images/b2b-account-profile-overview.png)
+![왼쪽 탐색 메뉴의 프로필 및 개요가 강조 표시된 계정 프로필 개요 탭](images/b2b-account-profile-overview.png)
 
 다음에서 설명서를 참조하십시오. [[!UICONTROL 계정 프로필]](../../dashboards/guides/account-profiles.md) 대시보드를 사용하여 자세히 알아보십시오. 다음에서 설명서를 참조하십시오. [Real-time Customer Data Platform Insights 데이터 모델 B2B 에디션](../../dashboards/data-models/cdp-insights-data-model-b2b.md) insights 데이터 모델을 사용하여 대시보드에 대한 사용자 지정 차트를 만드는 방법에 대한 자세한 내용을 참조하십시오.
 
@@ -38,7 +38,7 @@ B2B 워크플로의 일부로 계정 프로필을 만드는 방법에 대한 자
 
 리드-계정 일치를 구성하려면 **[!UICONTROL 프로필]** 아래에 [!UICONTROL 계정] 왼쪽 탐색. 다음에서 **[!UICONTROL 개요]** 탭, 선택 **[!UICONTROL 설정]** 오른쪽 상단에서
 
-![설정 선택](images/b2b-configuring-accounts-profile.png)
+![설정이 강조 표시된 계정 프로필 개요 탭.](images/b2b-configuring-accounts-profile.png)
 
 다음 **[!UICONTROL 계정 설정]** 대화 상자가 열립니다. 여기에서 **[!UICONTROL 리드-계정 일치 활성화]** 기능을 활성화하려면 전환하십시오. 드롭다운 메뉴를 사용하여 선택 **[!UICONTROL 매일]** 대상: **[!UICONTROL 일치하는 케이던스]** 설정. 마지막으로 관련 항목 선택 **[!UICONTROL 일치 기준]** 옵션 뒤에 오는 **[!UICONTROL 저장]** 을 클릭하여 설정을 확인하고 **[!UICONTROL 계정 프로필]** 화면.
 
