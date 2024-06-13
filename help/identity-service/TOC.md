@@ -5,10 +5,10 @@ breadcrumb-title: Platform Identity Service 안내서
 user-guide-description: 다양한 디바이스와 시스템에서 고객 ID를 연결하여 개인화된 디지털 경험을 전달할 수 있습니다.
 feature: Identities
 role: Admin,Developer
-source-git-commit: f04587fe325c1515545e4067845976aafc7d68ed
+source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 18%
+source-wordcount: '129'
+ht-degree: 17%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 18%
       - [ID 최적화 알고리즘](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [네임스페이스 우선 순위](./identity-graph-linking-rules/namespace-priority.md)
       - [예제 시나리오](./identity-graph-linking-rules/example-scenarios.md)
+      - [그래프 시뮬레이션 UI](./identity-graph-linking-rules/graph-simulation.md)
    - [ECID 개요](./features/ecid.md)
 - [구현 안내서](implementation.md)
 - [ID 데이터 보호](guardrails.md)

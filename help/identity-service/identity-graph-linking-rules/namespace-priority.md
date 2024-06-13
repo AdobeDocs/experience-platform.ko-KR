@@ -2,9 +2,10 @@
 title: 네임스페이스 우선 순위
 description: ID 서비스의 네임스페이스 우선 순위에 대해 알아봅니다.
 badge: Beta
-source-git-commit: 85da193f422a1708999fb59b7ea095f4447d6bdf
+exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
+source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1519'
 ht-degree: 1%
 
 ---
@@ -50,9 +51,9 @@ ID는 실제 개체를 나타냅니다. ID 그래프에 표시되는 객체는 �
 
 이 주제에 접근하는 또 다른 방법은 카디널리티를 통해서이다. 주어진 개인에 대해 몇 개의 ID가 만들어집니까? 대부분의 경우 한 사람은 CRM ID, 소수의 하드웨어 장치 식별자(IDFA/GAID 재설정은 자주 발생하지 않아야 함) 및 훨씬 더 많은 쿠키(개인이 여러 장치에서 굽거나 시크릿 모드를 사용하거나 지정된 시간에 쿠키를 재설정할 수 있음)를 갖게 됩니다. 일반적으로, **낮은 카디널리티는 높은 값을 갖는 네임스페이스를 나타냅니다.**.
 
-<!-- ## Step 2: Validate your namespace priority settings
+## 네임스페이스 우선 순위 설정 유효성 검사
 
-Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md). -->
+네임스페이스의 우선 순위를 정하는 방법에 대한 아이디어가 있으면 그래프 시뮬레이션 도구를 사용하여 다양한 그래프 축소 시나리오를 테스트하고 우선 순위 구성이 예상 그래프 결과를 반환하는지 확인할 수 있습니다. 자세한 내용은 사용 안내서를 참조하십시오 [그래프 시뮬레이션 도구](./graph-simulation.md).
 
 ## 네임스페이스 우선 순위 구성
 
