@@ -3,19 +3,24 @@ solution: Experience Platform
 title: Real-time Customer Data Platform 및 Adobe Journey Optimizer에 사용 가능한 사용 사례 플레이북.
 description: Real-time Customer Data Platform 및 Adobe Journey Optimizer의 모든 플레이북 목록입니다.
 role: User
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
+source-git-commit: 6573fdede3bd25bac556531e45f8abefc576f857
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
-
 
 # 사용 가능한 사용 사례 플레이북
 
 Real-time Customer Data Platform 및 Adobe Journey Optimizer에서 검색하고 사용할 수 있는 모든 플레이북에 대한 개요를 살펴보려면 이 페이지를 참조하십시오.
 
 ## Journey Optimizer의 사용 사례 플레이북 {#optimizer-playbooks}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_list"
+>title="사용 가능한 플레이북"
+>abstract="Real-time Customer Data Platform 및 Adobe Journey Optimizer의 모든 플레이북 목록입니다."
 
 | 플레이북 이름 | 설명 |
 | ------------- |  ----------- |
