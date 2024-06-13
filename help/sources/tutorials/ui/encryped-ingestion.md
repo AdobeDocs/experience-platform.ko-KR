@@ -3,7 +3,8 @@ title: 소스 UI 작업 영역에서 암호화된 데이터 수집
 description: 소스 UI 작업 영역에서 암호화된 데이터를 수집하는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: f2a0a9b84dfd3c1d32c8049148d38ef4d2ec822e
+exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
+source-git-commit: a11f469cb54421e0ca30c7c5878128e216470f7f
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 7%
