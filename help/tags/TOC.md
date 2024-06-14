@@ -6,10 +6,10 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
+source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 36%
+source-wordcount: '765'
+ht-degree: 35%
 
 ---
 
@@ -251,6 +251,8 @@ ht-degree: 36%
          * [개요](./extensions/server/twitter/overview.md)
       * [!DNL Tiktok] 웹 이벤트 API {#tiktok}
          * [개요](./extensions/server/tiktok/overview.md)
+      * [!DNL The Trade Desk] {#thetradedesk}
+         * [개요](./extensions/server/tradedesk/overview.md)
       * [!DNL Zendesk] 이벤트 API {#zendesk}
          * [개요](./extensions/server/zendesk/overview.md)
 * 확장 개발 {#extension-dev}
@@ -322,5 +324,5 @@ ht-degree: 36%
 * [FAQ](./faq.md)
 * [용어 업데이트](./term-updates.md)
 * [Internet Explorer 10 및 11에 대한 지원 중단](./ie-deprecation.md)
-* [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
 
