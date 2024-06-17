@@ -3,18 +3,16 @@ title: 트레이드 데스크 실시간 전환 API 확장 개요
 description: Adobe Experience Platform의 이벤트 전달을 위한 Trade Desk 실시간 전환 API 확장에 대해 알아봅니다.
 hide: true
 hidefromtoc: true
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: d9d185685106ac160dcbefc5e9567a85c8302a73
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 1%
+source-wordcount: '930'
+ht-degree: 2%
 
 ---
 
 # [!DNL The Trade Desk Real-Time Conversions API] 확장 개요
 
-[[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) 이벤트를 보낼 수 있습니다. [!DNL The Trade Desk] 리타겟팅 및 속성을 활용합니다.
-
-다음을 사용할 수 있습니다. [!DNL The Trade Desk Real-Time Conversions API] Adobe Experience Platform Edge Network에서 (으)로 데이터를 전송하는 확장 [!DNL The Trade Desk] 에서 API의 기능을 활용하여 [이벤트 전달](../../../ui/event-forwarding/overview.md) 규칙.
+다음을 사용할 수 있습니다. [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) Adobe Experience Platform Edge Network에서 (으)로 데이터를 전송하는 확장 [!DNL The Trade Desk] 에서 API의 기능을 활용하여 [이벤트 전달](../../../ui/event-forwarding/overview.md) 규칙.
 
 사용 [!DNL The Trade Desk Real-Time Conversions API] 확장에서는 의 API 기능을 활용할 수 있습니다. [이벤트 전달](../../../ui/event-forwarding/overview.md) 데이터를 보낼 규칙 [!DNL The Trade Desk] Adobe Experience Platform Edge Network.
 
@@ -79,7 +77,7 @@ ht-degree: 1%
 | 클라이언트 IP | 클라이언트 IPv4 또는 IPv6 IP 주소입니다. |
 | 광고 ID | 이벤트에 대한 고유 광고 ID. |
 | 광고 ID 유형 | 광고 ID 속성에 지정된 광고 ID의 유형: TDID, IDFA, AAID, DAID, NAID, IDL, EUID 또는 UID2. |
-| 노출 | 이벤트가 기여하는 노출에 대한 고유 ID 역할을 하는 36자 문자열(대시 포함). |
+| 노출 횟수 | 이벤트가 기여하는 노출에 대한 고유 ID 역할을 하는 36자 문자열(대시 포함). |
 | 주문 ID | 이벤트의 관련 주문 식별자. |
 | td1-td10 | 추가 전환 메타데이터를 제공하는 데 사용할 수 있는 10개의 순차적으로 번호가 매겨진 사용자 지정 동적 속성입니다. |
 
@@ -91,7 +89,8 @@ ht-degree: 1%
 
 **[!UICONTROL 개체 요청 매개 변수]**
 
-항목, 개인 정보 보호 및 데이터 처리와 같은 JSON 형식의 요청 매개 변수에 대해 알아보려면 다음 섹션을 참조하십시오.
+추가 정보가 포함된 JSON 개체. 축소된 키-값 입력 세트를 사용하거나 원시 JSON을 제공하는 옵션이 있습니다. 또한 디스크를 선택하여 데이터 요소에서 동적 데이터를 검색할 수 있습니다(![디스크 아이콘](../../../images/extensions/server/tradedesk/disk-icon.png))를 클릭하여 제품에서 사용할 수 있습니다.
+
 
 ![다음 [!DNL Object Request Parameters] 사용 가능한 필드를 보여주는 섹션입니다.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
@@ -99,14 +98,14 @@ ht-degree: 1%
 
 **[!UICONTROL 구성 재정의]**
 
->참고
+>[!NOTE]
 >
 >다음 [!UICONTROL 구성 재정의] 필드를 사용하면 다른 필드를 설정할 수 있습니다 [!DNL Advertiser ID] 및/또는 [!DNL Merchant ID] 모든 규칙에서.
 
 | 입력 | 설명 |
 | --- | --- |
-| 광고주 ID | 확장 구성에 제공된 광고주 ID를 재정의하려는 광고주 ID입니다. |
-| 판매자 ID | 확장 구성에서 제공한 판매자 ID를 재정의하려는 판매자 ID입니다. |
+| 광고주 ID | 해당 이벤트와 연결된 광고주의 고유 식별자입니다. 확장 구성에서 제공한 ID를 재정의하기 위해 다른 광고주 ID를 제공할 수 있습니다. |
+| 판매자 ID | 각 판매자가 제공한 고유 식별자 [!DNL The Trade Desk] 전체 온보딩 절차. 확장 구성에서 제공한 ID를 재정의하기 위해 다른 판매자 ID를 제공할 수 있습니다. |
 
 ![다음 [!DNL Configuration Overrides] 사용 가능한 필드를 보여주는 섹션입니다.](../../../images/extensions/server/tradedesk/configure-overrides.png)
 
