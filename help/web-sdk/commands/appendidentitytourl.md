@@ -1,7 +1,8 @@
 ---
 title: appendIdentityToUrl
 description: 앱, 웹 및 도메인 간에 개인화된 경험을 보다 정확하게 전달합니다.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
+source-git-commit: 153c5bae42c027c25a38a8b63070249d1b1a8f01
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 0%
@@ -18,7 +19,7 @@ URL에 추가되고 생성된 쿼리 문자열은 `adobe_mc`. 웹 SDK에서 ECID
 >
 >동의를 제공하지 않은 경우 이 메서드의 URL은 변경되지 않은 상태로 반환됩니다. 이 명령은 즉시 실행되며 동의 업데이트를 기다리지 않습니다.
 
-## 웹 SDK 확장을 사용하여 URL에 ID 추가
+## 웹 SDK 확장을 사용하여 URL에 ID 추가 {#extension}
 
 URL에 ID 추가는 Adobe Experience Platform 데이터 수집 태그 인터페이스의 규칙 내에서 작업으로 수행됩니다.
 
