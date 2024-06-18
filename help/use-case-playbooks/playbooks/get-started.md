@@ -4,9 +4,9 @@ title: 사용 사례 플레이북 시작
 description: 사용 사례 플레이북 기능을 시작하는 방법에 대해 알아봅니다.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: fe87b8cdeaca5e4e852a8819534f4a5c4023ca52
+source-git-commit: dfb4549a09628f2fed947ddf76167db28354eb92
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '953'
 ht-degree: 15%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 15%
 
 # 시작하기
 
-Real-time Customer Data Platform 및 Adobe Journey Optimizer용으로 설계된 사용 사례 플레이북에 대한 계정을 설정하는 방법을 알아봅니다. 세 가지 주요 구성 단계는 다음과 같습니다.
+자동으로 설정되지 않은 경우 Real-time Customer Data Platform 및 Adobe Journey Optimizer용으로 설계된 사용 사례 플레이북에 대한 계정을 설정하는 방법을 알아봅니다. 세 가지 주요 구성 단계는 다음과 같습니다.
 
 * 샌드박스 만들기
 * 사용자 권한 구성
@@ -87,7 +87,7 @@ Real-time Customer Data Platform 및 Adobe Journey Optimizer용으로 설계된 
 
 ## Journey Optimizer에서 샌드박스 및 채널 표면 구성 {#configure-channel-surfaces}
 
-조직에 라이센스가 부여된 경우 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html), 그리고 Journey Optimizer용으로 설계된 플레이북을 사용하려는 경우 샌드박스에서 메시지에 필요한 기술 매개 변수를 정의하는 채널 사전 설정을 구성해야 합니다. [Adobe Journey Optimizer에서 채널 표면을 설정하는 방법에 대해 알아봅니다](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
+조직에 라이센스가 부여된 경우 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ko-KR), 그리고 Journey Optimizer용으로 설계된 플레이북을 사용하려는 경우 샌드박스에서 메시지에 필요한 기술 매개 변수를 정의하는 채널 사전 설정을 구성해야 합니다. [Adobe Journey Optimizer에서 채널 표면을 설정하는 방법에 대해 알아봅니다](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
 
 Journey Optimizer에서 플레이북의 인스턴스를 생성하려면 이메일, 푸시 및 SMS 알림에 대한 채널 표면을 구성해야 합니다.
 

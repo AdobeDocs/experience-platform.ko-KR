@@ -1,85 +1,74 @@
 ---
 solution: Experience Platform
-title: 적합한 플레이북 살펴보기
-description: 사용 사례 지원 플레이북에 적합한 플레이북을 찾는 방법을 알아보십시오.
+title: 플레이북 살펴보기
+description: 플레이북의 갤러리를 탐색하고 영감을 주는 샌드박스를 시작하는 방법에 대해 알아봅니다.
 role: User
-exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: ad3f746580f85e77cba390208d147b35b6854e10
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 96%
+source-wordcount: '711'
+ht-degree: 2%
 
 ---
 
-# 적합한 플레이북 살펴보기
+# 플레이북 살펴보기
 
-플레이북을 사용하려면 **[!UICONTROL 사용 사례 플레이북] > [!UICONTROL 플레이북]**&#x200B;으로 이동합니다. 페이지에서 다양한 검색 및 필터링 옵션을 찾아보고 사용하여 특정 플레이북을 선택하고 시작합니다.
+사용 사례 플레이북은 모든 Adobe Experience Platform 고객에게 추가 비용 없이 제공됩니다. Experience Platform UI에서 사용 사례 플레이북의 풍부한 갤러리에 액세스하려면 다음을 선택합니다. **[!UICONTROL 플레이북]** 왼쪽 탐색에서.
 
-## 검색 및 필터링 {#search-and-filter}
+![사용 사례 플레이북 갤러리.](/help/use-case-playbooks/assets/playbooks/discover/playbooks-gallery.png)
 
-페이지에서 사용할 수 있는 검색 창과 필터를 사용하여 사용 사례에 적합한 플레이북을 찾습니다.
+![왼쪽 탐색 막대에서 사용 사례 플레이북에 직접 액세스합니다.](/help/use-case-playbooks/assets/playbooks/discover/left-nav-playbooks.png)
 
-예를 들어 전환, 참여 또는 유지와 같이 타겟팅하려는 마케팅 단계를 기반으로 사용할 수 있는 플레이북을 필터링할 수 있습니다. 표시되는 플레이북을 현재 속한 산업별 또는 액세스 권한이 있는 제품 자격(Adobe Journey Optimizer 또는 Real-Time CDP)으로 필터링할 수도 있습니다.
+세부 정보 페이지로 이동할 플레이북을 선택한 다음 을 선택합니다. **[!UICONTROL 영감을 주는 샌드박스로 이동]**. 확인 모달이 나타납니다. 선택 **확인** 다양한 사용 사례를 탐색하고 실험할 수 있는 영감을 주는 샌드박스로 이동합니다.
 
-![마케팅 단계, 업계 또는 제품별로 플레이북 필터링](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
+샌드박스를 생성할 수 있는 권한이 없는 경우 관리자에게 문의하여 영감을 주는 샌드박스를 생성하십시오.
 
-검색 기능을 사용하여 적합한 플레이북을 찾을 수도 있습니다. 아래에서 장바구니를 포기한 사용자와 소통하는 데 도움이 되는 플레이북을 찾는 방법의 예시를 참조하십시오.
+>[!TIP]
+>
+>영감을 주는 샌드박스는 Adobe Experience Platform 내의 개발 샌드박스로, 라이브 프로덕션 환경에서 구현하기 전에 다양한 사용 사례를 만들고, 테스트하고, 실험할 수 있습니다.
 
-![장바구니를 포기한 사용자와 소통.](/help/use-case-playbooks/assets/playbooks/ui-guide/engage-abandoned-cart.gif)
+![영감을 주는 샌드박스로 이동합니다.](/help/use-case-playbooks/assets/playbooks/discover/inspirational-sandbox.png)
 
-또는 아래에서 볼 수 있듯이 고객에게 도달하기 위해 사용하려는 채널별로 사용 가능한 플레이북을 필터링할 수 있습니다.
+영감을 주는 샌드박스를 아직 설정하지 않았다면 다음을 선택합니다. **[!UICONTROL 영감을 주는 샌드박스 만들기]**. 모달이 나타납니다. 다음을 입력합니다. **이름** 및 **제목** 필수 필드 상자에서 **만들기**. 영감을 주는 샌드박스를 만들고 나면 [권한 정의](/help/access-control/home.md) 인스턴스를 만들기 위해 사용 사례 플레이북 세부 사항 페이지로 돌아가기 전에.
 
-![채널별로 필터링](/help/use-case-playbooks/assets/playbooks/ui-guide/channel-select-filter.gif)
+![영감을 주는 샌드박스를 제작합니다.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox.png)
 
-필터 및 검색 옵션을 실험하여 적합한 플레이북을 찾습니다.
+![영감을 주는 샌드박스를 제작하려면 이름과 제목을 입력합니다.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox-modal.png)
 
-## 플레이북 보기 및 자산 생성 {#view-playbook-generate-assets}
+영감을 주는 샌드박스 외부에서 사용 사례 플레이북을 선택하면 인스턴스를 만들 수 없습니다. 세부 정보 페이지에서 **영감을 주는 샌드박스로 이동** 기존 영감을 주는 샌드박스로 이동한 다음 **[!UICONTROL 인스턴스 만들기]**.
 
-플레이북을 결정하고 인스턴스를 만들기 전에 요구 사항에 맞는지 검사해야 합니다. 다루는 사용 사례를 더 잘 이해할 수 있도록 모든 플레이북에는 아래 나열된 섹션이 포함되어 있습니다. 계속해서 자산을 생성할 준비가 되면 **[!UICONTROL 인스턴스 만들기]**&#x200B;를 선택합니다.
+샌드박스를 생성할 수 있는 권한이 없는 경우 관리자에게 문의하여 영감을 주는 샌드박스를 생성하십시오.
 
-### 마인드맵 {#mindmap}
+![샌드박스를 생성할 수 있는 권한이 없습니다.](/help/use-case-playbooks/assets/playbooks/discover/no-permissions-to-create-sandbox.png)
 
-플레이북의 마인드맵 섹션을 사용하여 플레이북을 유용하게 활용할 수 있는 워크플로의 단계를 이해하십시오. 생성된 모든 오브젝트가 사용 사례의 대상이 되는 담당자의 관점에서 사용 사례를 달성하는 데 도움이 되는 방식의 흐름을 시각화합니다.
+할당된 샌드박스 수의 한도에 도달한 경우 조직 관리자에게 문의하여 한도를 늘리거나 일부 활성 샌드박스를 비활성화 또는 제거하라는 메시지가 나타납니다. 샌드박스 제한이 조정되거나 활성 샌드박스 수가 감소되면 영감을 주는 샌드박스를 계속 만들 수 있습니다.
 
-마인드맵은 사용자 여정에 누가 도달했는지에 대한 정의로 시작하여 새로운 메시지나 주의 사항과 같이 Adobe가 전달한 사항이 있는지 또는 대상 담당자가 다음 메시지나 이벤트를 트리거한 것인지 여부를 매 단계에서 설명합니다.
+![샌드박스 제한에 도달했습니다.](/help/use-case-playbooks/assets/playbooks/discover/sandbox-limit-reached.png)
 
-![플레이북 마인드맵이 강조 표시되었습니다.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
+영감을 주는 샌드박스를 만들 때 이메일, 푸시 및 SMS 알림에 대한 채널 표면이 자동으로 설정되지 않습니다. IT 관리자에게 문의하여 인스턴스를 수동으로 구성하십시오. 그렇지 않으면 인스턴스 만들기에 실패할 수 있습니다.
 
-### 요약 {#summary}
+![채널 사전 설정을 구성합니다.](/help/use-case-playbooks/assets/playbooks/discover/configure-channel-presets.png)
 
->[!CONTEXTUALHELP]
->id="platform_playbooks_assets"
->title="에셋"
->abstract="이 항목은 이 플레이북에서 생성된 자산입니다. 플레이북 인스턴스를 만든 후에 영감을 주는 샌드박스에서 자산을 확인하고 원하는 대로 다른 샌드박스로 승격할 수 있습니다."
+## Journey Optimizer에서 샌드박스 및 채널 표면 구성 {#configure-channel-surfaces}
 
-요약 섹션을 검사하여 플레이북에서 인스턴스를 생성한 후 어떤 자산이 생성되는지 파악하십시오. 각 플레이북에 대해 생성되는 자산은 플레이북이 지원하는 사용 사례에 맞게 조정됩니다. 아래에서 요약 섹션의 모든 항목에 대한 자세한 정보를 얻으십시오.
+조직에 라이센스가 부여된 경우 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=ko-KR), 그리고 Journey Optimizer용으로 설계된 플레이북을 사용하려는 경우 샌드박스에서 메시지에 필요한 기술 매개 변수를 정의하는 채널 사전 설정을 구성해야 합니다. [Adobe Journey Optimizer에서 채널 표면을 설정하는 방법에 대해 알아봅니다](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
 
-| 항목 | 설명 |
----------|----------|
-| **[!UICONTROL 타겟 대상자]** | 이 사용 사례 플레이북을 통해 소통하고자 하는 담당자를 설명합니다. |
-| **[!UICONTROL 마케팅 채널]** | 플레이북에서 대상으로 하는 담당자에게 도달하는 데 사용되는 채널을 설명합니다. |
-| **[!UICONTROL 기술 자산]** | 플레이북 인스턴스를 만든 후에 생성되는 기술 자산 목록입니다. 생성된 자산은 사용 사례에 따라 플레이북마다 다릅니다. 일부 플레이북은 스키마, 세그먼트 및 여정을 생성할 수 있습니다. 다른 플레이북은 대상을 생성할 수 있습니다. 생성된 자산을 사용하고 재사용하는 방법에 대한 자세한 내용은 인스턴스 만들기 및 재사용 안내서의 [생성된 자산 이해](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) 섹션을 참조하십시오. |
+Journey Optimizer에서 플레이북의 인스턴스를 생성하려면 이메일, 푸시 및 SMS 알림에 대한 채널 표면을 구성해야 합니다.
 
-{style="table-layout:auto"}
+### 전자 메일 채널 표면
 
-![강조 표시된 플레이북 요약](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-summary.png)
+다음으로 이동 `Channels` Journey Optimizer 인터페이스에서 다음을 수행합니다. 아직 구성되지 않은 경우 마케팅 이메일 및 트랜잭션 메시지를 위한 별도의 하위 도메인 및 IP 풀을 구성합니다. 다음은 주문 확인 이메일과 같은 트랜잭션 메시지가 고객에게 전달되도록 하는 모범 사례입니다. 이름, 이메일 주소 및 추가 설정을 입력합니다. 선택 **제출** 페이지 오른쪽 상단에서 마케팅 채널 표면을 만듭니다. 의 설명서를 읽어 보십시오. [전자 메일 채널 표면 설정 방법](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
-### 인스턴스 {#instances}
+### SMS 채널 표면
 
-인스턴스 섹션까지 아래로 스크롤하여 귀하 또는 팀원이 이미 생성한 플레이북의 인스턴스에 대한 개요를 확인하십시오. 다양한 컨트롤을 사용하여 사용자가 만든 인스턴스만 볼 수 있도록 표시된 인스턴스를 정렬하고 필터링할 수 있습니다. 또한 아래와 같이 각 인스턴스에 대한 다양한 정보를 볼 수 있습니다.
+SMS 채널 표면을 만들려면 먼저 SMS API 자격 증명을 만들고 기본 공급업체(예: Sinch)를 선택합니다. SMS 채널 표면의 이름을 지정하고(예: SMS 마케팅) 구성을 선택한 다음 발신자 번호를 입력합니다. 선택 **제출** 페이지 오른쪽 상단에서 SMS 채널 표면을 저장합니다. 의 설명서를 읽어 보십시오. [sms 채널 표면을 설정하는 방법](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=ko#message-preset-sms).
 
-| 항목 | 설명 |
-|---------|----------|
-| **[!UICONTROL 이름]** | 플레이북을 기반으로 하는 인스턴스 이름입니다. 인스턴스 이름과 설명을 사용자 정의할 수 있습니다. 자세한 내용은 [인스턴스 메타데이터를 편집하는 방법](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata)에 대한 섹션을 참조하십시오. |
-| **[!UICONTROL 상태]** | 인스턴스 상태를 나타냅니다. **[!UICONTROL 제출된]** 인스턴스를 사용할 준비가 되었습니다. |
-| **[!UICONTROL 생성일]** | 인스턴스가 생성된 시기를 나타냅니다. |
-| **[!UICONTROL 제작자]** | 인스턴스를 만든 사람을 나타냅니다. |
-| **[!UICONTROL 마지막 수정일]** | 인스턴스가 마지막으로 수정된 시기를 나타냅니다. |
+또한 주문 확인과 같은 트랜잭션 메시지가 포함된 플레이북에 대한 채널을 구성합니다.
 
-{style="table-layout:auto"}
+### 푸시 채널 표면
 
-![플레이북 인스턴스가 강조 표시되었습니다.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-instances.png)
+앱 표면이 Experience Platform 또는 데이터 컬렉션 인터페이스에서 구성되었는지 확인합니다. 이는 데이터 수집 환경에서 앱 표면이 어떻게 보이는지 설명합니다.
 
-## 다음 단계 - 플레이북 인스턴스 만들기 {#next-steps-create-instance}
+## 다음 단계 {#next-steps}
 
-플레이북을 진행하고 인스턴스를 생성할 준비가 되면 **[!UICONTROL 인스턴스 만들기]**&#x200B;를 선택하여 플레이북을 진행하고 기술 자산을 생성합니다. 자세한 내용은 [플레이북 인스턴스를 만들고 공유하고 재사용하는 방법](/help/use-case-playbooks/playbooks/create-share-reuse.md)에 관한 안내서를 참조하십시오.
+이 문서를 읽고 나면 영감을 주는 샌드박스를 설정하는 방법을 알아보고 Platform 내에서 사용 사례 플레이북에 액세스하는 다양한 방법을 숙지해야 합니다. 다음 단계로, 방법 을 읽어 보십시오. [찾기](/help/use-case-playbooks/playbooks/find.md) 올바른 플레이북입니다.
+
