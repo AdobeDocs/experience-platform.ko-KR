@@ -3,9 +3,9 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;사용자 인
 title: UI의 프로필 세부 정보 사용자 정의
 description: 이 안내서는 Adobe Experience Platform UI 내에서 실시간 고객 프로필 데이터가 표시되는 방식을 맞춤화하기 위한 단계별 지침을 제공합니다.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 69ac6d3f98675df11183082ecbbb49d18ddb57af
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1394'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,11 @@ Adobe Experience Platform 사용자 인터페이스 내에서 를 보고 상호 
 
 ![현재 카드의 속성을 구성하는 속성이 강조 표시됩니다.](../images/profile-customization/select-before.png)
 
-사용 가능한 유니온 스키마 필드를 선택하여 편집 중인 카드의 속성을 사용자 정의할 수 있습니다. 선택한 필드 옆에 확인 표시가 나타나고 선택한 속성 목록에 자동으로 추가됩니다. 카드에 표시하고자 하는 모든 속성을 추가한 후 을 선택합니다 **[!UICONTROL 선택]** (으)로 돌아가기 **[!UICONTROL 위젯 편집]** 화면.
+사용 가능한 유니온 스키마 필드를 선택하여 편집 중인 카드의 속성을 사용자 정의할 수 있습니다. 필드를 선택할 때 파일 경로 이름이나 표시 이름을 표시하도록 선택할 수 있습니다. 이 두 디스플레이 간을 전환하려면 **[!UICONTROL 표시 이름 표시]** 토글.
+
+![다음 [!UICONTROL 표시 이름 표시] [프로필 세부 정보] 페이지에서 토글이 강조 표시됩니다.](../images/profile-customization/show-display-names.png)
+
+선택한 필드 옆에 확인 표시가 나타나고 선택한 속성 목록에 자동으로 추가됩니다. 카드에 표시하고자 하는 모든 속성을 추가한 후 을 선택합니다 **[!UICONTROL 선택]** (으)로 돌아가기 **[!UICONTROL 위젯 편집]** 화면.
 
 ![새로 추가된 속성이 강조 표시됩니다.](../images/profile-customization/select-after.png)
 

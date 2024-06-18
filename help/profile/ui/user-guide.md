@@ -3,9 +3,9 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 실시간 고객 프로필 UI 안내서
 description: 실시간 고객 프로파일은 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 다양한 채널의 데이터를 취합하여 각 개별 고객을 전체적으로 파악할 수 있도록 합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하기 위한 안내서 역할을 합니다.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2155'
 ht-degree: 0%
 
 ---
@@ -132,9 +132,13 @@ Experience Platform UI에서 **[!UICONTROL 프로필]** 을(를) 왼쪽 탐색�
 
 표시되는 기본 필드를 조직 수준에서 변경하여 기본 프로필 속성을 표시할 수도 있습니다. 속성 추가 및 제거, 대시보드 패널 크기 조정을 위한 단계별 지침을 포함하여 이러한 필드를 사용자 지정하는 방법에 대해 자세히 알아보려면 [프로필 세부 사항 사용자 정의 안내서](profile-customization.md).
 
-![세부 정보 탭이 강조 표시됩니다. 프로필 세부 사항이 표시됩니다.](../images/user-guide/profile-detail.png)
+![세부 정보 탭이 강조 표시됩니다. 프로필 세부 사항이 표시됩니다.](../images/user-guide/profile-detail-row-name.png)
 
-사용 가능한 탭 중 하나를 선택하여 개별 고객 프로필과 관련된 추가 정보를 볼 수 있습니다. 이러한 탭에는 속성, 이벤트 및 현재 프로필이 자격을 갖춘 대상자를 보여 주는 대상자 멤버십 탭이 포함됩니다.
+속성 이름을 표시 이름으로 보는 것과 필드 경로 이름으로 보는 것 사이에서 전환하도록 선택할 수도 있습니다. 이 두 디스플레이 간을 전환하려면 **[!UICONTROL 표시 이름 표시]** 토글.
+
+![디스플레이 이름 표시 토글이 강조 표시되고 디스플레이 이름이 속성 아래에 표시됩니다.](../images/user-guide/profile-detail.png)
+
+개별 고객 프로필과 관련된 추가 정보를 보려면 사용 가능한 다른 탭 중 하나를 선택합니다. 이러한 탭에는 속성, 이벤트 및 현재 프로필이 자격을 갖춘 대상자를 보여 주는 대상자 멤버십 탭이 포함됩니다.
 
 ### 속성 탭
 
