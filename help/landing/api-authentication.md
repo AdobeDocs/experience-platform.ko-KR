@@ -4,10 +4,10 @@ title: Experience Platform API 인증 및 액세스
 type: Tutorial
 description: 이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
+source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
 workflow-type: tm+mt
-source-wordcount: '2204'
-ht-degree: 8%
+source-wordcount: '2149'
+ht-degree: 2%
 
 ---
 
@@ -50,7 +50,7 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 
 ### 개발자 액세스 권한 얻기 {#gain-developer-access}
 
-다음 연락처로 이동 [!DNL Admin Console] 를 사용하여 귀하를 Experience Platform 제품 프로필에 개발자로 추가할 조직의 관리자 [[!DNL Admin Console]](https://adminconsole.adobe.com/). 다음을 참조하십시오. [!DNL Admin Console] 다음 방법에 대한 특정 지침 설명서 [제품 프로필에 대한 개발자 액세스 관리](https://helpx.adobe.com/kr/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+다음 연락처로 이동 [!DNL Admin Console] 를 사용하여 귀하를 Experience Platform 제품 프로필에 개발자로 추가할 조직의 관리자 [[!DNL Admin Console]](https://adminconsole.adobe.com/). 다음을 참조하십시오. [!DNL Admin Console] 다음 방법에 대한 특정 지침 설명서 [제품 프로필에 대한 개발자 액세스 관리](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 개발자로 할당되면에서 통합 만들기를 시작할 수 있습니다. [Adobe Developer 콘솔](https://www.adobe.com/go/devs_console_ui). 이러한 통합은 외부 앱 및 서비스에서 Adobe API로의 파이프라인입니다.
 
@@ -88,15 +88,15 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 >
 >다음 항목 선택 **[!UICONTROL 문서 보기]** 별도의 브라우저 창에서 완료로 이동하는 옵션 [Experience Platform API 참조 설명서](https://developer.adobe.com/experience-platform-apis/).
 
-### OAuth 서버 간 인증 유형 선택 {#select-oauth-server-to-server}
+### 다음 항목 선택 [!UICONTROL OAuth 서버 간] 인증 유형 {#select-oauth-server-to-server}
 
-그런 다음 인증 유형을 선택하여 액세스 토큰을 생성하고 Experience Platform API에 액세스합니다.
+그런 다음 [!UICONTROL OAuth 서버 간] 액세스 토큰을 생성하고 Experience Platform API에 액세스하기 위한 인증 유형입니다.
 
 >[!IMPORTANT]
 >
->다음 항목 선택 **[!UICONTROL OAuth 서버 간]** 이 메서드만이 향후 지원되는 유일한 메서드가 됩니다. 다음 **[!UICONTROL 서비스 계정(JWT)]** 메서드가 더 이상 사용되지 않습니다. JWT 인증 방법을 사용하는 통합은 2025년 1월 1일까지 계속 작동하지만, Adobe은 해당 날짜 이전에 기존 통합을 새 OAuth 서버 간 방법으로 마이그레이션할 것을 강력히 권장합니다. 섹션에서 추가 정보 가져오기 [!BADGE 더 이상 사용되지 않음]{type=negative}[JSON 웹 토큰(JWT) 생성](#jwt).
+>다음 **[!UICONTROL OAuth 서버 간]** 메서드는 앞으로 지원되는 유일한 토큰 생성 메서드입니다. 이전에 지원된 **[!UICONTROL 서비스 계정(JWT)]** 메서드는 더 이상 사용되지 않으며 새 통합에 대해 선택할 수 없습니다. JWT 인증 방법을 사용하는 기존 통합은 2025년 1월 1일까지 계속 작동하지만 Adobe은 기존 통합을 새 통합으로 마이그레이션할 것을 강력히 권장합니다 [!UICONTROL OAuth 서버 간] 해당 날짜 이전의 메서드입니다. 섹션에서 추가 정보 가져오기 [!BADGE 더 이상 사용되지 않음]{type=negative}[JSON 웹 토큰(JWT) 생성](#jwt).
 
-![Experience Platform API를 선택합니다.](./images/api-authentication/oauth-authentication-method.png)
+![Experience Platform API에 대한 OAuth 서버 간 인증 방법을 선택합니다.](./images/api-authentication/oauth-authentication-method.png)
 
 ### 통합할 제품 프로필 선택 {#select-product-profiles}
 
@@ -154,10 +154,10 @@ Postman 환경 및 컬렉션을 사용하여 액세스 토큰을 생성할 수�
 
 >[!WARNING]
 >
-액세스 토큰을 생성하기 위한 JWT 메서드가 더 이상 사용되지 않습니다. 모든 새 통합은 [OAuth 서버 간 인증 방법](#select-oauth-server-to-server). 또한 Adobe 기존 통합을 OAuth 메서드로 마이그레이션할 것을 권장합니다. 다음 중요한 설명서를 참조하십시오.
+액세스 토큰을 생성하기 위한 JWT 메서드가 더 이상 사용되지 않습니다. 모든 새 통합은 [OAuth 서버 간 인증 방법](#select-oauth-server-to-server). 또한 Adobe을 사용하려면 통합이 계속 작동하도록 2025년 1월 1일까지 기존 통합을 OAuth 메서드로 마이그레이션해야 합니다. 다음 중요한 설명서를 참조하십시오.
 > 
 * [JWT에서 OAuth로의 애플리케이션 마이그레이션 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
-* [OAuth를 사용한 신규 및 기존 애플리케이션 구현 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+* [OAuth를 사용하는 신규 및 기존 애플리케이션에 대한 구현 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
 * [OAuth 서버 간 자격 증명 메서드 사용의 이점](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ 더 이상 사용되지 않는 정보 보기
@@ -313,7 +313,7 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 
 ### 제품 프로필에 개발자 추가 {#add-developers-to-product-profile}
 
-[[!DNL Admin Console]](https://adminconsole.adobe.com/)으로 이동한 뒤 Adobe ID로 로그인합니다.
+다음으로 이동 [[!DNL Admin Console]](https://adminconsole.adobe.com/) Adobe ID으로 로그인합니다.
 
 선택 **[!UICONTROL 제품]**&#x200B;을 선택한 다음 을 선택합니다. **[!UICONTROL Adobe Experience Platform]** 을 클릭합니다.
 
