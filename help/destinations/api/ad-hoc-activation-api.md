@@ -5,10 +5,10 @@ title: 임시 활성화 API를 통해 대상을 일괄 대상으로 활성화
 description: 이 문서에서는 활성화 전에 수행되는 세분화 작업을 포함하여 임시 활성화 API를 통해 대상을 활성화하기 위한 전체적인 워크플로를 보여 줍니다.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 6304dabb6125b7eddcac16bcbf8abcc36a4c9dc2
+source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 1%
+source-wordcount: '1612'
+ht-degree: 0%
 
 ---
 
@@ -84,7 +84,7 @@ Experience Platform의 리소스는 특정 가상 샌드박스로 격리될 수 
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
-* Content-Type: `application/json`
+* 컨텐츠 유형: `application/json`
 
 ## 3단계: Platform UI에서 활성화 흐름 만들기 {#activation-flow}
 
@@ -167,15 +167,19 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | 속성 | 설명 |
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | 대상자를 활성화할 대상 인스턴스의 ID입니다. Platform UI에서 로 이동하여 이러한 ID를 가져올 수 있습니다. **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]** 을 탭하고 원하는 대상 행을 클릭하여 오른쪽 레일에서 대상 ID를 표시합니다. 자세한 내용은 [대상 작업 영역 설명서](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 선택한 대상에 활성화할 대상의 ID입니다. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 선택한 대상에 활성화할 대상의 ID입니다. 임시 API를 사용하여 플랫폼 생성 대상과 외부(사용자 지정 업로드) 대상을 내보낼 수 있습니다. 외부 대상을 활성화할 때 대상 ID 대신 시스템 생성 ID를 사용하십시오. 대상자 UI의 대상자 요약 보기에서 시스템 생성 ID를 찾을 수 있습니다. <br> ![선택하지 않아야 하는 대상 ID 보기.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "선택하지 않아야 하는 대상 ID 보기."){width="100" zoomable="yes"} <br> ![사용해야 하는 시스템 생성 대상 ID 보기.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "사용해야 하는 시스템 생성 대상 ID 보기."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-### 내보내기 ID를 사용하는 요청(더 이상 사용되지 않음) {#request-deprecated}
+### 내보내기 ID가 있는 요청 {#request-export-ids}
+
+<!--
 
 >[!IMPORTANT]
 >
->**더 이상 사용되지 않는 요청 유형**. 이 예제 유형은 API 버전 1의 요청 유형을 설명합니다. 임시 활성화 API v2에서는 최신 대상 내보내기 작업 ID를 포함할 필요가 없습니다.
+>**Deprecated request type**. This example type describes the request type for the API version 1. In the v2 of the ad-hoc activation API, you do not need to include the latest audience export job ID.
+
+-->
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
