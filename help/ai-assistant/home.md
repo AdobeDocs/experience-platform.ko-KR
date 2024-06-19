@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform의 AI Assistant 개요
-description: AI Assistant, 그 뉘앙스와 사용 사례 및 이를 사용하여 Adobe Experience Platform 및 Real-time Customer Data Platform을 사용하여 워크플로를 신속하게 하는 방법에 대해 알아봅니다.
+description: AI 어시스턴트, 그 미묘한 차이와 사용 사례, 그리고 이를 사용하여 Adobe Experience Platform 및 Real-Time Customer Data Platform을 통해 워크플로를 가속화하는 방법에 대해 알아봅니다.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9ee39ee1f877fa13acdca8a1d8549cf4692b39aa
+source-git-commit: e8939132c1508e1dfc4028e6c8ff23662d6c2b2b
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 1%
+source-wordcount: '820'
+ht-degree: 6%
 
 ---
 
@@ -55,7 +55,7 @@ AI Assistant를 쿼리하기 전에 고려해야 할 두 가지 유형의 질문
 
 {style="table-layout:auto"}
 
-### Operational insights {#operational-insights}
+### 운영 통찰력 {#operational-insights}
 
 >[!IMPORTANT]
 >
@@ -69,14 +69,18 @@ AI Assistant를 쿼리하기 전에 고려해야 할 두 가지 유형의 질문
 
 다음 도메인에서 운영 통찰력에 대해 AI Assistant에 질문할 수 있습니다.
 
-* 속성
-* 대상자
-* 데이터 흐름
-* 데이터 세트
-* 대상 _(계정에 대한 질문과 데이터 흐름에 대한 일부 질문은 현재 답변할 수 없습니다.)_
-* 여정
-* 스키마 _(필드 그룹에 대한 질문에 지금은 답변할 수 없습니다.)_
-* 소스 _(현재 계정에 대한 질문에 답변할 수 없습니다.)_
+| 도메인 | 지원되는 메타데이터 |
+| --- | --- |
+| 속성 | <ul><li>속성 이름 조회</li><li>속성 - 스키마 관계</li><li>속성 - 데이터 세트 관계</li><li>속성 - 대상 관계</li><li>속성 - 대상 관계</li><li>사용되지 않은 속성</li></ul> |
+| 대상자 | <ul><li>대상자 수</li><li>대상자 유형(스트리밍 또는 일괄 처리)</li><li>생성/수정 날짜</li><li>활성화 상태</li><li>프로필 개수</li><li>중복 대상자</li><li>대상 정의 조회</li><li>대상 - 속성 관계</li><li>대상자 - 데이터 세트 관계</li><li>대상 - 대상 관계</li><li>InSegment 규칙</li><li>조회 이름 지정</li><li>이름 및 ID 조회 |
+| 데이터 흐름 | <ul><li>데이터 흐름 카운트</li><li>데이터 흐름 상태</li><li>데이터 흐름 - 데이터 세트 관계</li><li>데이터 흐름 - 소스 관계</li></ul> |
+| 데이터 세트 | <ul><li>데이터 세트 수</li><li>프로필 활성화 상태</li><li>생성/수정 날짜</li><li>데이터 세트 - 스키마 관계</li><li>데이터 세트 - 대상 관계</li><li>데이터 세트 - 속성 관계</li><li>데이터 세트 - 데이터 흐름 관계</li><li>조회 이름 지정 </li><li>이름 및 ID 조회</li></ul> |
+| 대상 | <ul><li>구성된 대상 카운트</li><li>대상 - 대상 관계</li><li>대상 속성 관계</li></ul> |
+| 여정 | <ul><li>카운트</li><li>조회 이름 지정</li><li>이름 및 ID 조회</li><li>여정 상태</li><li>트리거된 상태(대상자 대 이벤트)</li><li>생성/수정 날짜</li><li>반복 빈도</li></ul> |
+| 스키마 | <ul><li>스키마 카운트</li><li>생성/수정 날짜</li><li>스키마 클래스 유형</li><li>스키마 - 속성 관계</li><li>스키마 - 데이터 세트 관계</li><li>스키마 - 대상 관계</li><li>프로필 활성화 상태</li><li>조회 이름 지정</li><li>이름 및 ID 조회</li></ul> |
+| 소스 | <ul><li>계정 수</li><li>계정 상태</li><li>각 계정에 대한 활성/비활성 데이터 흐름</li><li>소스 커넥터 - 데이터 흐름 관계</li><li>소스 계정 - 데이터 흐름 관계</li></ul> |
+
+{style="table-layout:auto"}
 
 운영 통찰력 질문에 대한 답변이 UI의 현재 상태를 반영하지 않을 수 있습니다. 이러한 질문을 뒷받침하는 데이터는 24시간마다 한 번씩 업데이트됩니다. 예를 들어 사용자가 낮에 Real-Time CDP에서 수행하는 변경 사항은 밤에 데이터 스토어와 동기화된 다음 아침에 사용자 질문에 대해 사용할 수 있게 됩니다. 객체와 관련된 특정 데이터를 조회하려면 샌드박스에 로그인해야 합니다.
 

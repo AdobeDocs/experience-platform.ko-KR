@@ -2,9 +2,9 @@
 title: Adobe Experience Platform의 AI 지원
 description: AI Assistant를 사용하여 Experience Platform 및 Real-time Customer Data Platform 개념과 객체에 대한 사용 정보를 탐색하고 이해하는 방법에 대해 알아봅니다.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
+source-git-commit: 94245fe25828025b60ea57ddebede2b3ccf890eb
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # AI Assistant UI 안내서
 
 Adobe Experience Platform UI에서 AI Assistant를 사용하는 방법을 알려면 이 안내서를 참조하십시오.
+
+다음 비디오는 AI Assistant에 대한 이해를 돕기 위한 것입니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 ## Experience Platform UI에서 AI 지원에 액세스
 
@@ -81,7 +85,7 @@ AI Assistant가 제공하는 제안 사항을 사용할 수도 있습니다 **[!
 
 +++
 
-### Operational insights {#operational-insights}
+### 운영 통찰력 {#operational-insights}
 
 AI Assistant가 작동 인사이트에 대한 질문에 충분히 응답하려면 활성 샌드박스 상태에 있어야 합니다.
 
@@ -111,6 +115,22 @@ AI Assistant가 작동 인사이트에 대한 질문에 충분히 응답하려�
 
 +++
 
+### Operational Insights 응답 확인 {#verify-responses}
+
+AI Assistant에서 제공하는 SQL 쿼리를 사용하여 운영 통찰력 질문과 관련된 각 응답을 확인할 수 있습니다.
+
++++Operational Insights 응답 확인 예를 보려면 선택
+
+Operational Insights 질문에 대한 답변을 받은 후 을 선택합니다. **[!UICONTROL 소스 표시]** 다음을 선택합니다. **[!UICONTROL 소스 쿼리 보기]**.
+
+![소스 쿼리 보기](./images/view-source-query.png)
+
+작동 인사이트 질문으로 쿼리하면 AI Assistant는 사용자가 답을 계산하는 데 걸린 프로세스를 확인하는 데 사용할 수 있는 SQL 쿼리를 제공합니다. 이 원본 쿼리는 확인 목적으로만 사용되며 쿼리 서비스에서 지원되지 않습니다.
+
+![소스 쿼리의 예](./images/source-query.png)
+
++++
+
 ### 자동 완성 사용 {#use-auto-complete}
 
 자동 완성 기능을 사용하여 샌드박스에 있는 데이터 객체 목록을 수신할 수 있습니다. 자동 완성 권장 사항은 대상자, 스키마, 데이터 세트, 소스 및 대상 도메인에서 사용할 수 있습니다.
@@ -132,6 +152,14 @@ AI 어시스턴트의 멀티턴 기능을 활용해 경험 중 보다 자연스�
 아래 예에서는 먼저 AI Assistant에 총 데이터 흐름 수를 요청한 다음 가장 최근 데이터 흐름 10개를 나열하라는 메시지가 표시됩니다.
 
 ![다중 회전의 예](./images/multiturn.png)
+
++++
+
+### 새 대화 시작
+
+AI Assistant를 사용하여 새 대화를 재설정 및 시작하여 주제를 변경할 수 있습니다.
+
++++대화 재설정의 예를 보려면 선택
 
 재설정하려면 줄임표(**`...`**) AI Assistant 인터페이스에서 다음을 선택합니다 **[!UICONTROL 새 대화 시작]**. 이를 통해 항목을 변경할 의도가 있음을 AI Assistant에 알려 주며, 실패하거나 잘못된 정보를 참조하는 쿼리 문제를 해결할 때 특히 도움이 될 수 있습니다.
 
