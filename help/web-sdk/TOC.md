@@ -6,10 +6,10 @@ breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
 role: Developer
-source-git-commit: ec801c550740c4cba3481a961599f548518bb032
+source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 14%
+source-wordcount: '224'
+ht-degree: 22%
 
 ---
 
@@ -91,7 +91,6 @@ ht-degree: 14%
       * [Web SDK에서 웹 인앱 메시지 지원 구성](personalization/web-in-app-messaging.md)
 
 * 동의 {#consent}
-   * [동의 지원](consent/supporting-consent.md)
    * IAB 투명성 및 동의 프레임워크 2.0 {#iab-tcf}
       * [개요](consent/iab-tcf/overview.md)
       * [태그와 통합](consent/iab-tcf/with-tags.md)

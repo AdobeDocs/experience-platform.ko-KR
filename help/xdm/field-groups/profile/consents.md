@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 동의 및 환경 설정 스키마 필드 그룹
 description: 동의 및 환경 설정 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -185,7 +185,7 @@ ht-degree: 0%
 
 ## 동의 및 환경 설정 변경 처리
 
-고객이 웹 사이트에서 동의 또는 환경 설정을 변경할 경우 이러한 변경 사항을 수집하여 를 사용하여 즉시 적용해야 합니다. [Adobe Experience Platform 웹 SDK](/help/web-sdk/consent/supporting-consent.md). 고객이 데이터 수집을 옵트아웃하면 모든 데이터 수집을 즉시 중단해야 합니다. 고객이 개인화를 옵트아웃하는 경우 방문하는 다음 페이지에 개인화가 없어야 합니다.
+고객이 웹 사이트에서 동의 또는 환경 설정을 변경할 경우 이러한 변경 사항을 수집하여 를 사용하여 즉시 적용해야 합니다. [Adobe Experience Platform 웹 SDK](../../../web-sdk/commands/setconsent.md). 고객이 데이터 수집을 옵트아웃하면 모든 데이터 수집을 즉시 중단해야 합니다. 고객이 개인화를 옵트아웃하는 경우 방문하는 다음 페이지에 개인화가 없어야 합니다.
 
 ## 다음 단계
 

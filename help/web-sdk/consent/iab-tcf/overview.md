@@ -3,16 +3,16 @@ title: Adobe Experience Platform 웹 SDK의 IAB TCF 2.0 지원
 description: Adobe Experience Platform 웹 SDK를 사용하여 IAB TCF 2.0 동의 환경 설정을 지원하는 방법을 알아봅니다
 keywords: 동의;setConsent;프로필 개인 정보 필드 그룹;경험 이벤트 개인 정보 필드 그룹;개인 정보 필드 그룹;IAB TCF 2.0;Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
 
 # Adobe Experience Platform 웹 SDK의 IAB TCF 2.0 지원
 
-Adobe Experience Platform Web SDK는 Interactive Advertising Bureau Transparency &amp; Consent Framework 버전 2.0(IAB TCF 2.0)을 지원합니다. 이 안내서에서는 Adobe Real-time Customer Data Platform, Audience Manager, 경험 이벤트, Adobe Analytics 및 Edge Network와 통합된 Adobe Experience Platform Web SDK를 통해 IAB TCF 2.0을 지원하기 위한 요구 사항을 보여줍니다.
+Adobe Experience Platform Web SDK는 Interactive Advertising Bureau Transparency &amp; Consent Framework 버전 2.0(IAB TCF 2.0)을 지원합니다. 이 안내서에서는 Adobe Real-time Customer Data Platform, Audience Manager, 경험 이벤트, Adobe Analytics 및 Edge Network과 통합하는 Adobe Experience Platform Web SDK를 통해 IAB TCF 2.0을 지원하기 위한 요구 사항을 보여줍니다.
 
 또한 다음 안내서를 통해 태그와 함께/없이 IAB TCF 2.0을 통합하는 방법을 학습할 수 있습니다.
 
@@ -71,14 +71,14 @@ XDM 경험 이벤트를 Analytics 히트로 변환하는 방법에 대한 자세
 
 Adobe Experience Platform Web SDK에는 `setConsent` iab TCF 2.0을 사용하여 고객의 동의 환경 설정을 모든 Adobe 서비스에 전달하는 명령입니다. Real-Time CDP과 통합하는 경우 고객 프로필을 업데이트합니다. Audience Manager과 통합하는 경우 고객 정보가 업데이트됩니다. 이를 호출하면 향후 경험 이벤트 전송 허용 여부를 제어하는 all-or-nothing 동의 환경 설정이 있는 쿠키도 설정됩니다. 동의가 변경될 때마다 이 작업을 호출하기 위한 것입니다. 이후 페이지 로드 시 Edge Network 동의 쿠키를 읽어 경험 이벤트를 전송할 수 있는지 여부와 ID 쿠키를 설정할 수 있는지 여부를 결정합니다.
 
-Audience Manager의 IAB TCF 2.0 통합과 마찬가지로 Edge Network는 고객이 다음 목적에 대한 명시적 동의를 제공한 경우 동의합니다.
+Audience Manager의 IAB TCF 2.0 통합과 마찬가지로, Edge Network은 고객이 다음 목적에 대한 명시적 동의를 제공한 경우 동의합니다.
 
 - **목적 1:** 장치에 대한 정보 저장 및/또는 액세스
 - **목적 10:** 제품 개발 및 개선
 - **특수 목적 1:** 보안을 보장하고, 사기를 방지하고, 디버그를 수행할 수 있습니다. (IAB TCF 규정에 따라, 이는 항상 동의합니다.)
 - **Adobe 공급업체 권한:** Adobe 동의(공급업체 565)
 
-에 대한 자세한 내용은 `setConsent` 명령,에서 설명서 읽기 [동의 지원](../../consent/supporting-consent.md).
+에 대한 자세한 내용은 `setConsent` 명령에서 전용 웹 SDK 설명서를 읽어 보십시오. [setConsent](../../../web-sdk/commands/setconsent.md).
 
 ### 경험 이벤트에 동의 추가
 

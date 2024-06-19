@@ -3,7 +3,7 @@ title: Adobe Experience Platform 웹 SDK 확장의 작업 유형
 description: Adobe Experience Platform 웹 SDK 태그 확장에서 제공하는 다양한 작업 유형에 대해 알아봅니다.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: e5fd8a53cfd612034d12a761ac4779ed930557d4
+source-git-commit: fb9f7757d77b221c733bbed5124fa576a6b02ed2
 workflow-type: tm+mt
 source-wordcount: '1264'
 ht-degree: 1%
@@ -47,7 +47,7 @@ Adobe에게 이벤트를 보냅니다. [!DNL Experience Platform] Adobe Experien
 
 ## 동의 설정 {#set-consent}
 
-사용자로부터 동의를 받은 후에는 &quot;동의 설정&quot; 작업 유형을 사용하여 Adobe Experience Platform Web SDK에 이 동의를 전달해야 합니다. 현재 &quot;Adobe&quot; 및 &quot;IAB TCF&quot;, 2가지 유형의 표준이 지원됩니다. 다음을 참조하십시오 [고객 동의 환경 설정 지원](/help/web-sdk/consent/supporting-consent.md). Adobe 버전 2.0을 사용하는 경우 데이터 요소 값만 지원됩니다. 동의 오브젝트로 확인되는 데이터 요소를 만들어야 합니다.
+사용자로부터 동의를 받은 후에는 &quot;동의 설정&quot; 작업 유형을 사용하여 Adobe Experience Platform Web SDK에 이 동의를 전달해야 합니다. 현재 &quot;Adobe&quot; 및 &quot;IAB TCF&quot;, 2가지 유형의 표준이 지원됩니다. 다음을 참조하십시오 [고객 동의 환경 설정 지원](../../../../web-sdk/commands/setconsent.md). Adobe 버전 2.0을 사용하는 경우 데이터 요소 값만 지원됩니다. 동의 오브젝트로 확인되는 데이터 요소를 만들어야 합니다.
 
 이 작업에서는 동의를 받은 후 ID를 동기화할 수 있도록 ID 맵을 포함할 선택적 필드도 제공됩니다. 동기화는 동의 호출이 처음 실행될 수 있으므로 동의가 &quot;보류 중&quot; 또는 &quot;종료&quot;로 구성된 경우에 유용합니다.
 

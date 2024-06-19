@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform의 동의 처리
 description: Adobe 2.0 표준을 사용하여 Adobe Experience Platform에서 고객 동의 신호를 처리하는 방법에 대해 알아봅니다.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '1557'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Adobe Experience Platform을 사용하면 고객으로부터 수집한 동의 �
 * [Adobe Experience Platform ID 서비스](/help/identity-service/home.md): 디바이스와 시스템 간에 ID를 연결하여 고객 경험 데이터의 단편화로 인해 발생하는 근본적인 문제를 해결합니다.
 * [실시간 고객 프로필](/help/profile/home.md): 사용 [!DNL Identity Service] 데이터 세트에서 실시간으로 세부 고객 프로필을 만드는 기능. 실시간 고객 프로필은 데이터 레이크에서 데이터를 가져와 별도의 데이터 저장소에 고객 프로필을 유지합니다.
 * [Adobe Experience Platform 웹 SDK](/help/web-sdk/home.md): 다양한 Platform 서비스를 고객 응대 웹 사이트에 통합할 수 있는 클라이언트측 JavaScript 라이브러리.
-   * [SDK 동의 명령](/help/web-sdk/consent/supporting-consent.md): 이 안내서에 표시된 동의 관련 SDK 명령에 대한 사용 사례 개요.
+   * [SDK 동의 명령](../../../../web-sdk/commands/setconsent.md): 이 안내서에 표시된 동의 관련 SDK 명령에 대한 사용 사례 개요.
 * [Adobe Experience Platform 세그멘테이션 서비스](/help/segmentation/home.md): 실시간 고객 프로필 데이터를 유사한 트레이트를 공유하고 마케팅 전략에 유사하게 반응하는 개인 그룹으로 나눌 수 있습니다.
 
 ## 동의 처리 흐름 요약 {#summary}
@@ -51,7 +51,7 @@ CMP 동의 변경 후크에서 트리거한 SDK 명령 외에도 동의 데이�
 >
 >위에 언급된 XDM 동의 필드의 구조에 대한 자세한 내용은 [[!UICONTROL 동의 및 환경 설정] 데이터 유형](/help/xdm/data-types/consents.md).
 
-시스템이 구성되면 Platform Web SDK는 현재 사용자에 대한 데이터 수집 동의 값을 해석하여 데이터를 Adobe Experience Platform Edge Network로 전송할지, 클라이언트에서 삭제할지, 데이터 수집 권한이 yes 또는 no로 설정될 때까지 유지할지를 결정합니다.
+시스템이 구성되면 Platform Web SDK는 현재 사용자에 대한 데이터 수집 동의 값을 해석하여 데이터를 Adobe Experience Platform Edge Network으로 보내야 하는지, 클라이언트에서 삭제해야 하는지, 데이터 수집 권한이 yes 또는 no로 설정될 때까지 지속되어야 하는지 결정합니다.
 
 ## CMP 내에서 고객 동의 데이터를 생성하는 방법 결정 {#consent-data}
 

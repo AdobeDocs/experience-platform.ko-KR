@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experience Platform에서 IAB TCF 2.0 지원
 description: Adobe Experience Platform에서 세그먼트를 대상으로 활성화할 때 고객 동의 선택 사항을 전달하도록 데이터 작업 및 스키마를 구성하는 방법에 대해 알아보십시오.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '2492'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Adobe Experience Platform은 등록된 항목의 일부입니다. [IAB TCF 2.0 �
 * [Adobe Experience Platform ID 서비스](/help/identity-service/home.md): 디바이스와 시스템 간에 ID를 연결하여 고객 경험 데이터의 단편화로 인해 발생하는 근본적인 문제를 해결합니다.
 * [실시간 고객 프로필](/help/profile/home.md): 사용 [!DNL Identity Service] 을(를) 사용하여 실시간으로 데이터 세트에서 세부 고객 프로필을 만들 수 있습니다. [!DNL Real-Time Customer Profile] 는 데이터 레이크에서 데이터를 가져오고 고객 프로필을 별도의 데이터 저장소에 유지합니다.
 * [Adobe Experience Platform 웹 SDK](/help/web-sdk/home.md): 다양한 Platform 서비스를 고객 응대 웹 사이트에 통합할 수 있는 클라이언트측 JavaScript 라이브러리.
-   * [SDK 동의 명령](/help/web-sdk/consent/supporting-consent.md): 이 안내서에 표시된 동의 관련 SDK 명령에 대한 사용 사례 개요.
+   * [SDK 동의 명령](../../../../web-sdk/commands/setconsent.md): 이 안내서에 표시된 동의 관련 SDK 명령에 대한 사용 사례 개요.
 * [Adobe Experience Platform 세그멘테이션 서비스](/help/segmentation/home.md): 나눌 수 있습니다. [!DNL Real-Time Customer Profile] 데이터는 유사한 트레이트를 공유하고 마케팅 전략에 유사하게 반응하는 개인 그룹으로 나뉩니다.
 
 위에 나열된 플랫폼 서비스 외에도 다음을 잘 알고 있어야 합니다. [대상](/help/data-governance/home.md) 플랫폼 생태계에서 그들의 역할.
