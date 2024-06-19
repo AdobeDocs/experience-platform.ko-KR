@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 6월
 description: Adobe Experience Platform의 2024년 6월 릴리스 정보.
-source-git-commit: 03a88554e8b7793d8e91bc867ce67a00f620b622
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: e1b56c6150274748c35fedfc1e1b6bbbf66d1bfb
 workflow-type: tm+mt
-source-wordcount: '1144'
-ht-degree: 20%
+source-wordcount: '1195'
+ht-degree: 19%
 
 ---
 
@@ -71,6 +72,7 @@ JWT 인증 방법을 사용하는 기존 API 통합은 2025년 1월 1일까지 �
 | ----------- | ----------- |
 | 외부 대상을 내보내기 위한 임시 내보내기 API의 개선 사항 | 이제 임시 내보내기 API를 사용하여 외부(사용자 지정 업로드) 대상을 내보낼 수 있습니다. [자세히 보기](/help/destinations/api/ad-hoc-activation-api.md) . |
 | (Beta) 내보내기 배열 지원의 베타 단계에서 지원되는 추가 함수 | 이전에는 대상을 파일 기반 대상으로 활성화하고 계산된 필드 사용을 선택할 때 데이터 준비를 통해 사용할 수 있는 대상 하위 집합을 사용하는 것으로 제한되었습니다. 이제 이러한 제한이 완화되었으며 고객은 대상을 파일 기반 대상으로 내보낼 때 데이터 준비를 통해 사용할 수 있는 모든 기능에 액세스할 수 있습니다. [자세히 보기](/help/destinations/ui/export-arrays-calculated-fields.md#supported-functions). |
+| 매핑 단계에서 데이터가 있는 필드만 표시 | 이제 프로필 속성을 대상에 매핑할 때 모든 프로필 속성 간에 전환하거나 데이터가 포함된 프로필 속성만 전환할 수 있습니다. 기본적으로 데이터가 있는 필드만 표시됩니다. 다음에 대한 활성화 안내서 참조: [일괄 처리](../../destinations/ui/activate-batch-profile-destinations.md#mapping) 및 [스트리밍](../../destinations/ui/activate-segment-streaming-destinations.md#mapping) 대상 을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -117,4 +119,3 @@ JWT 인증 방법을 사용하는 기존 API 통합은 2025년 1월 1일까지 �
 - 모든 항목의 목록 가져오기 [이용할 수 있는 플레이북](/help/use-case-playbooks/playbooks/playbooks-list.md), 제품별로 그룹화됨(Real-Time CDP 또는 Journey Optimizer).
 - 다음에 대해 알아보기 [권한](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) 플레이북과 플레이북이 만드는 자산을 사용해야 합니다.
 - 이해 [데이터 인식 기능](/help/use-case-playbooks/playbooks/data-awareness.md) 생성된 에셋을 다른 샌드박스 환경에 복제할 수 있습니다.
-
