@@ -2,16 +2,16 @@
 title: Adobe Experience Platform 릴리스 노트 2024년 6월
 description: Adobe Experience Platform의 2024년 6월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b2b38c1b540d074998e96712465ff52c68371004
+source-git-commit: af27ca20b7d611bb6f6b13b57dfc2df1f643a0b6
 workflow-type: tm+mt
-source-wordcount: '1358'
-ht-degree: 17%
+source-wordcount: '1357'
+ht-degree: 18%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2024년 6월**
+**릴리스 일자: 2024년 6월 18일 수요일**
 
 >[!TIP]
 >
