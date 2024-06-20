@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2024년 6월
 description: Adobe Experience Platform의 2024년 6월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b9707c40beec3000456510a8a384a0af58d6d9fa
+source-git-commit: b2b38c1b540d074998e96712465ff52c68371004
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1358'
+ht-degree: 17%
 
 ---
 
@@ -127,7 +127,7 @@ ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-
 
 시작하려면 다음을 읽으십시오. [사용 사례 플레이북 개요](/help/use-case-playbooks/playbooks/overview.md): 인스턴스를 만들고 생성된 에셋을 다른 샌드박스 환경으로 가져오는 방법을 포함하여 플레이북의 기능, 용도 및 엔드투엔드 데모에 대한 개요를 제공합니다.
 
-다양한 사용 사례 플레이북을 실험하고 탐색하기 위해 영감을 주는 샌드박스에 액세스하고 설정하는 방법에 대해 알아보려면 다음을 참조하십시오. [올바른 플레이북 살펴보기](/help/use-case-playbooks/playbooks/discover.md) 문서.
+다양한 사용 사례 플레이북을 실험하고 탐색하기 위해 영감을 주는 샌드박스에 액세스하고 설정하는 방법에 대해 알아보려면 다음을 참조하십시오. [사용 사례 플레이북으로 이동](/help/use-case-playbooks/playbooks/navigate.md) 문서.
 
 에 대해 자세히 알아보기 [!DNL Use Case Playbooks], 다음 설명서 페이지를 참조하십시오.
 

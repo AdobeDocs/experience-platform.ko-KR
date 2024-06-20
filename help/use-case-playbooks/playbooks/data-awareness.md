@@ -4,14 +4,14 @@ title: 사용 사례 플레이북의 데이터 인식 개요
 description: 최종 영감을 주는 샌드박스에서 생성된 에셋을 다른 샌드박스에 복사하여 가치 실현 시간을 단축하는 방법에 대해 알아봅니다.
 role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# 플레이북에서 생성한 에셋을 다른 샌드박스에 게시 {#publish-to-other-sandboxes}
+# Publish 플레이북에서 생성한 에셋을 다른 샌드박스에 {#publish-to-other-sandboxes}
 
 사용 사례 플레이북은 일반적인 마케팅 사용 사례에 대한 대상, 스키마 또는 여정과 같은 에셋을 생성하도록 설계된 마케팅 템플릿입니다. 영감을 주는 샌드박스에서 플레이북으로 생성된 에셋을 테스트할 수 있으며 준비가 되면 에셋을 다른 개발 샌드박스로 가져와서 해당 샌드박스에서 사용할 수 있는 데이터로 추가 테스트를 수행할 수 있습니다. 테스트가 만족스러우면 개발 샌드박스의 자산을 프로덕션 샌드박스로 이동할 수 있습니다.
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 전제 조건 {#prerequisites}
 
-이 자습서를 읽기 전에 [사용 가능한 사용 사례 플레이북 템플릿](/help/use-case-playbooks/playbooks/discover.md#search-and-filter) 및 [인스턴스 만들기](/help/use-case-playbooks/playbooks/create-share-reuse.md) 선호하는 플레이북의
+이 자습서를 읽기 전에 [사용 가능한 사용 사례 플레이북 템플릿](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) 및 [인스턴스 만들기](/help/use-case-playbooks/playbooks/create-share-reuse.md) 선호하는 플레이북의
 
 인스턴스를 생성하면 영감을 주는 샌드박스에서 여정, 세그먼트, 스키마 및 메시지와 같은 자산 세트가 생성됩니다. 이러한 자산을 다른 샌드박스로 복사하는 방법에 대해 알아보려면 계속 읽으십시오.
 
@@ -29,11 +29,11 @@ ht-degree: 0%
 >
 > 패키지를 다른 개발 샌드박스로만 가져올 수 있습니다. 필요한 모든 변경 또는 업데이트를 수행한 후 해당 개발 샌드박스에서 프로덕션으로 자산 또는 패키지를 가져올 수 있습니다. 사용 사례 플레이북 샌드박스에서 프로덕션으로 직접 가져올 수 없습니다.
 
-1. 영감을 주는 샌드박스에서 다른 샌드박스로 오브젝트를 가져오려면 사용 사례 플레이북의 원하는 인스턴스를 찾아 다음을 선택합니다 **[!UICONTROL 다른 샌드박스에 게시]** 를 클릭하여 아티팩트를 패키지로 내보냅니다.
+1. 영감을 주는 샌드박스에서 다른 샌드박스로 오브젝트를 가져오려면 사용 사례 플레이북의 원하는 인스턴스를 찾아 다음을 선택합니다 **[!UICONTROL 다른 샌드박스로 Publish]** 를 클릭하여 아티팩트를 패키지로 내보냅니다.
 
    ![다양한 사용 사례 인스턴스를 보여 주는 GIF](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
 
-2. 을(를) 선택하면 **[!UICONTROL 다른 샌드박스에 게시]** 버튼을 누르면 모달이 나타납니다. 이름과 설명(선택 사항)을 입력하고 다음을 선택합니다. **[!UICONTROL 만들기]**. 이 단계에서는 생성된 에셋을 다른 샌드박스로 가져올 수 있는 패키지로 번들로 묶습니다.
+2. 을(를) 선택하면 **[!UICONTROL 다른 샌드박스로 Publish]** 버튼을 누르면 모달이 나타납니다. 이름과 설명(선택 사항)을 입력하고 다음을 선택합니다. **[!UICONTROL 만들기]**. 이 단계에서는 생성된 에셋을 다른 샌드박스로 가져올 수 있는 패키지로 번들로 묶습니다.
 
    ![패키지를 만들기 위한 모달](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 

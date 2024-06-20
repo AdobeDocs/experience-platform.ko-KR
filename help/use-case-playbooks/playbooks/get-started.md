@@ -4,7 +4,7 @@ title: 사용 사례 플레이북 시작
 description: 사용 사례 플레이북 기능을 시작하는 방법에 대해 알아봅니다.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: dfb4549a09628f2fed947ddf76167db28354eb92
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 15%
@@ -113,4 +113,4 @@ SMS 채널 표면을 만들려면 먼저 SMS API 자격 증명을 만들고 기�
 
 ## 다음 단계 {#next-steps}
 
-이 문서의 모든 단계를 수행했으므로 왼쪽 탐색에서 사용 사례 플레이북을 사용할 수 있는 개발 샌드박스를 생성해야 합니다. 이제 팀원에게 플레이북을 보고 관리하고 에셋을 생성하는 데 필요한 권한을 부여하는 방법도 알아봅니다. 다음 단계로 방법 읽기 [적합한 플레이북 살펴보기](/help/use-case-playbooks/playbooks/discover.md) 다음을 위해: [인스턴스에서 인스턴스 만들기](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+이 문서의 모든 단계를 수행했으므로 왼쪽 탐색에서 사용 사례 플레이북을 사용할 수 있는 개발 샌드박스를 생성해야 합니다. 이제 팀원에게 플레이북을 보고 관리하고 에셋을 생성하는 데 필요한 권한을 부여하는 방법도 알아봅니다. 다음 단계로 방법 읽기 [올바른 플레이북 선택](/help/use-case-playbooks/playbooks/choose.md) 다음을 위해: [인스턴스에서 인스턴스 만들기](/help/use-case-playbooks/playbooks/create-share-reuse.md).

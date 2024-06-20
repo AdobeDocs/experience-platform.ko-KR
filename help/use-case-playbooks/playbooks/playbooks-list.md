@@ -4,9 +4,9 @@ title: Real-time Customer Data Platform 및 Adobe Journey Optimizer에 사용 �
 description: Real-time Customer Data Platform 및 Adobe Journey Optimizer의 모든 플레이북 목록입니다.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 6573fdede3bd25bac556531e45f8abefc576f857
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -77,4 +77,4 @@ Real-time Customer Data Platform 및 Adobe Journey Optimizer에서 검색하고 
 
 ## 다음 단계
 
-이제 사용 가능한 플레이북에 대해 알아보았으므로 [discover 안내서](/help/use-case-playbooks/playbooks/discover.md) 사용자 인터페이스에서 플레이북을 시작하는 방법을 이해합니다.
+이제 사용 가능한 플레이북에 대해 알고 있으므로 이 을 읽으십시오. [안내서](/help/use-case-playbooks/playbooks/choose.md) 플레이북을 시작하는 방법을 이해하고 사용자 인터페이스에서 적합한 플레이북을 선택합니다.

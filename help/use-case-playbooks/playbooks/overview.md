@@ -4,10 +4,10 @@ title: 사용 사례 플레이북 개요
 description: Experience Platform의 사용 사례 플레이북 기능을 사용하여 다양한 마케팅 사용 사례를 시작하는 방법을 알아봅니다.
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 31%
+source-wordcount: '533'
+ht-degree: 30%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 31%
 * **[사용 사례 플레이북의 개요](#overview)**
 * [필요한 구성 및 권한 시작](/help/use-case-playbooks/playbooks/get-started.md)
 * [사용 가능한 사용 사례 플레이북](/help/use-case-playbooks/playbooks/playbooks-list.md)
-* [적합한 플레이북 살펴보기](/help/use-case-playbooks/playbooks/discover.md)
+* [다양한 플레이북 중에서 선택](/help/use-case-playbooks/playbooks/choose.md)
 * [플레이북 인스턴스 만들기, 공유 및 재사용](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [데이터 인식 기능을 사용하여 플레이북에서 생성한 에셋을 다른 환경에 복사](/help/use-case-playbooks/playbooks/data-awareness.md)
 * [문제 해결 및 알려진 제한 사항](troubleshooting.md)
@@ -54,7 +54,7 @@ ht-degree: 31%
 
 ## UI 안내서 {#ui-guides}
 
-사용하려는 플레이북을 결정한 후 UI에서 선택하고 시작합니다. 의 UI 안내서 읽기 [올바른 플레이북을 찾는 방법](/help/use-case-playbooks/playbooks/discover.md) 및 [플레이북 인스턴스를 생성, 공유 및 재사용하는 방법](/help/use-case-playbooks/playbooks/create-share-reuse.md) 인스턴스를 만들고 플레이북을 최대한 활용하는 방법에 대한 전체 정보. 영감을 주는 샌드박스에서 다른 개발 샌드박스로, 그리고 프로덕션으로 다양한 에셋을 프로모션하는 방법을 알아보려면 의 설명서를 참조하십시오. [데이터 인식](/help/use-case-playbooks/playbooks/data-awareness.md).
+사용하려는 플레이북을 결정한 후 UI에서 선택하고 시작합니다. 의 UI 안내서 읽기 [선택 항목에서 올바른 플레이북을 선택하는 방법](/help/use-case-playbooks/playbooks/choose.md) 및 [플레이북 인스턴스를 생성, 공유 및 재사용하는 방법](/help/use-case-playbooks/playbooks/create-share-reuse.md) 인스턴스를 만들고 플레이북을 최대한 활용하는 방법에 대한 전체 정보. 영감을 주는 샌드박스에서 다른 개발 샌드박스로, 그리고 프로덕션으로 다양한 에셋을 프로모션하는 방법을 알아보려면 의 설명서를 참조하십시오. [데이터 인식](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## 문제 해결 및 알려진 제한 사항 {#trouble-shooting-known-limitations}
 
