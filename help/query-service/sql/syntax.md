@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문에 대해 자세히 설명합니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 42f4d8d7a03173aec703cf9bc7cccafb21df0b69
+source-git-commit: 4b1d17afa3d9c7aac81ae869e2743a5def81cf83
 workflow-type: tm+mt
-source-wordcount: '4111'
+source-wordcount: '4256'
 ht-degree: 2%
 
 ---
@@ -104,20 +104,34 @@ GROUPING SETS ( grouping_element [, ...] )
 #### 예
 
 ```sql
-SELECT * FROM Customers SNAPSHOT SINCE 123;
+SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT AS OF 345;
+SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN HEAD AND 123;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 345 AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
 
-SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
 
-SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+(SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
+  INNER JOIN 
+(SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
+  ON a.id = b.id;
 ```
+
+아래 표에서는 SNAPSHOT 절 내의 각 구문 옵션의 의미를 설명합니다.
+
+| 구문 | 의미 |
+|-------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| `SINCE start_snapshot_id` | 지정된 스냅샷 ID(제외)에서 시작하는 데이터를 읽습니다. |
+| `AS OF end_snapshot_id` | 지정된 스냅샷 ID(포함)에 있는 그대로 데이터를 읽습니다. |
+| `BETWEEN start_snapshot_id AND end_snapshot_id` | 지정된 시작 및 끝 스냅숏 ID 사이에서 데이터를 읽습니다. 그것은 다음을 제외합니다. `start_snapshot_id` 및 포함 `end_snapshot_id`. |
+| `BETWEEN HEAD AND start_snapshot_id` | 첫 번째 스냅숏 앞의 데이터를 지정된 시작 스냅숏 ID(포함)로 읽습니다. 참고: 이 값은에서 행만 반환합니다. `start_snapshot_id`. |
+| `BETWEEN end_snapshot_id AND TAIL` | 지정된 바로 뒤에 있는 데이터를 읽습니다. `end-snapshot_id` 스냅샷 ID를 제외한 데이터 세트의 끝까지. 즉, 다음과 같은 경우 `end_snapshot_id` 는 데이터 세트의 마지막 스냅샷으로, 마지막 스냅샷 외에는 스냅샷이 없기 때문에 쿼리에서 0개 행을 반환합니다. |
+| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | 지정된 스냅샷 ID에서 시작하는 데이터를 읽습니다. `table_to_be_queried` 및 의 데이터와 연결합니다. `table_to_be_joined` 에 있던 그대로 `your_chosen_snapshot_id`. 조인은 조인되는 두 테이블의 ID 열에서 일치하는 ID를 기반으로 합니다. |
 
 A `SNAPSHOT` 절은 테이블이나 테이블 별칭과 함께 작동하지만 하위 쿼리나 뷰 위에서는 작동하지 않습니다. A `SNAPSHOT` 절 어디서나 사용 가능 `SELECT` 테이블에 대한 쿼리를 적용할 수 있습니다.
 
@@ -128,8 +142,6 @@ A `SNAPSHOT` 절은 테이블이나 테이블 별칭과 함께 작동하지만 �
 >두 스냅샷 ID 간에 쿼리하는 경우 시작 스냅샷이 만료되고 선택적 대체 동작 플래그(`resolve_fallback_snapshot_on_failure`)가 설정되어 있습니다.
 >
 >- 선택적 대체 동작 플래그를 설정하면 쿼리 서비스가 사용 가능한 가장 이른 스냅샷을 선택하고 이를 시작 스냅샷으로 설정한 다음 가장 이른 스냅샷과 지정된 종료 스냅샷 사이에 데이터를 반환합니다. 이 데이터는 **포괄** 사용 가능한 가장 빠른 스냅샷
->
->- 선택적 폴백 비헤이비어 플래그가 설정되지 않은 경우 오류가 반환됩니다.
 
 ### WHERE 절
 
