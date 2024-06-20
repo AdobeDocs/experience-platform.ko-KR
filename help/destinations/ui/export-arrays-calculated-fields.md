@@ -4,9 +4,9 @@ type: Tutorial
 description: 계산된 필드를 사용하여 플랫 스키마 파일의 배열을 Real-Time CDP에서 클라우드 스토리지 대상으로 내보내는 방법에 대해 알아봅니다.
 badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
+source-git-commit: 787aaef26fab5ca3acff8303f928efa299cafa93
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1477'
 ht-degree: 5%
 
 ---
@@ -31,9 +31,13 @@ ht-degree: 5%
 * [UI 안내서 및 개요](/help/data-prep/ui/mapping.md#calculated-fields)
 * [데이터 준비 기능](/help/data-prep/functions.md)
 
+<!--
+
 >[!IMPORTANT]
 >
->위에 나열된 모든 함수가 지원되는 것은 아닙니다. *필드를 클라우드 스토리지 대상으로 내보낼 때* 계산된 필드 기능 사용. 다음을 참조하십시오. [지원되는 함수 섹션](#supported-functions) 자세한 내용은 아래를 참조하십시오.
+>Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
+
+-->
 
 ## Platform의 배열 및 기타 개체 유형 {#arrays-strings-other-objects}
 
@@ -86,7 +90,9 @@ Experience Platform의 다른 필드 유형에는 배열 필드가 포함됩니�
 
 ## 지원되는 함수 {#supported-functions}
 
-계산된 필드의 베타 릴리스 및 대상에 대한 배열 지원에서는 다음 함수만 지원됩니다.
+모든 문서화 [데이터 준비 기능](/help/data-prep/functions.md) 는 데이터를 파일 기반 대상으로 활성화할 때 지원됩니다.
+
+그러나 현재 다음 기능에 대해서는 계산된 필드의 베타 릴리스와 대상에 대한 어레이 지원에서만 광범위한 사용 사례 설명 및 샘플 출력 정보가 제공됩니다.
 
 * `join`
 * `coalesce`
