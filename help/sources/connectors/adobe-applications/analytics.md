@@ -2,10 +2,10 @@
 title: 보고서 세트 데이터용 Adobe Analytics Source Connector
 description: 이 문서에서는 Analytics에 대한 개요를 제공하고 Analytics 데이터의 사용 사례를 설명합니다.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 7812cfa44e1fcbe71d7b6231dc0b31c727c93a31
+source-git-commit: d56a37c5b1c5768b3f6811be9d30d45628fdabca
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 2%
+source-wordcount: '1189'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +47,7 @@ XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../../xdm/home.md).
 
 플랫폼의 Analytics 데이터에 대한 예상 대기 시간은 아래 표에 요약되어 있습니다. 지연은 고객 구성, 데이터 볼륨 및 소비자 애플리케이션에 따라 달라집니다. 예를 들어 Analytics 구현이 `A4T` 파이프라인 지연 시간은 5~10분으로 늘어납니다.
 
-| 분석 데이터 | 예상 대기 시간 |
+| Analytics 데이터 | 예상 대기 시간 |
 | -------------- | ---------------- |
 | 새 데이터 받는 사람 [!DNL Real-Time Customer Profile] (A4T **아님** 활성화됨) | 2분 미만 |
 | 새 데이터 받는 사람 [!DNL Real-Time Customer Profile] (A4T **은(는)** 활성화됨) | 최대 30분 |
@@ -89,11 +89,17 @@ Customer Journey Analytics 지연에 대한 자세한 내용은 다음을 참조
 * `endUserIDs._experience.mcid.id`
 * `endUserIDs._experience.aacustomid.id`
 
-이들 필드는 ID로 표시되지 않습니다. 대신 동일한 ID가 XDM에 복사됩니다 `identityMap` 키-값 쌍으로:
+이러한 필드는 ID로 표시되지 않습니다. 대신 동일한 ID(이벤트에 있는 경우)가 XDM에 복사됩니다 `identityMap` 키-값 쌍으로:
 
 * `{ "key": "AAID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
 * `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
 * `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
+
+ID나 ID가 `identityMap`, `endUserIDs._experience.mcid.namespace.code` 또한 가 동일한 이벤트에 대해 설정됩니다.
+
+* AAID가 있는 경우, `endUserIDs._experience.aaid.namespace.code` 가 &quot;AAID&quot;로 설정되어 있습니다.
+* ECID가 있으면, `endUserIDs._experience.mcid.namespace.code` 가 &quot;ECID&quot;로 설정되어 있습니다.
+* AACUSTOMID가 있으면, `endUserIDs._experience.aacustomid.namespace.code` 는 &quot;AACUSTOMID&quot;로 설정됩니다.
 
 ID 맵에서 ECID가 있으면 이벤트의 기본 ID로 표시됩니다. 이 경우 AAID는 다음과 같은 이유로 ECID에 기반할 수 있습니다. [ID 서비스 유예 기간](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). 그렇지 않으면 AAID가 이벤트의 기본 ID로 표시됩니다. AACUSTOMID는 이벤트의 기본 ID로 표시되지 않습니다. 그러나 AACUSTOMID가 있으면 Experience Cloud 작업 순서에 따라 AAID가 AACUSTOMID를 기반으로 합니다.
 
