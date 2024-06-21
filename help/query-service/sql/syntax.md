@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문에 대해 자세히 설명합니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 4b1d17afa3d9c7aac81ae869e2743a5def81cf83
+source-git-commit: d2cb7c3d1968a33300d480e63c4cb007df3cce7b
 workflow-type: tm+mt
-source-wordcount: '4256'
+source-wordcount: '4305'
 ht-degree: 2%
 
 ---
@@ -312,7 +312,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 | `RESTRICT` | 모드의 기본값입니다. 지정하면 스키마가 삭제되고 **아님** 모든 테이블을 포함합니다. |
 | `CASCADE` | 지정하면 스키마가 스키마에 있는 모든 테이블과 함께 삭제됩니다. |
 
-## 보기 만들기
+## 보기 만들기 {#create-view}
+
+SQL 보기는 SQL 문의 결과 집합을 기반으로 하는 가상 테이블입니다. 를 사용하여 보기 만들기 `CREATE VIEW` 명령문을 작성하고 이름을 지정하십시오. 그런 다음 해당 이름을 사용하여 쿼리 결과를 다시 참조할 수 있습니다. 이렇게 하면 복잡한 쿼리를 더 쉽게 재사용할 수 있습니다.
 
 다음 구문은 `CREATE VIEW` 데이터 세트를 쿼리합니다. 이 데이터 세트는 ADLS 또는 가속화된 스토어 데이터 세트일 수 있습니다.
 

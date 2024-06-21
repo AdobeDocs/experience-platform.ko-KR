@@ -4,10 +4,10 @@ title: 라이선스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b1fac3d523ebdf765bec038cde6a667d9af71243
+source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
 workflow-type: tm+mt
-source-wordcount: '2135'
-ht-degree: 1%
+source-wordcount: '2103'
+ht-degree: 7%
 
 ---
 
@@ -16,21 +16,14 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="라이선스 사용 대시보드"
->abstract="라이선스 사용 대시보드는 구입한 Adobe Experience Platform 제품에 대한 통찰력을 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량 및 계약된 라이선스 금액을 포함하여 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 공간에는 특정 샌드박스 내의 각 제품에 대한 지표 분류가 표시됩니다."
+>abstract="라이선스 사용 대시보드는 구매한 Adobe Experience Platform 제품에 대한 인사이트를 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 계약된 라이선스 금액 등 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="라이선스 사용 대시보드"
->abstract="라이선스 사용 대시보드는 구입한 Adobe Experience Platform 제품에 대한 통찰력을 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량 및 계약된 라이선스 금액을 포함하여 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 공간에는 특정 샌드박스 내의 각 제품에 대한 지표 분류가 표시됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="데이터 세트 만료"
+>abstract="라이선스 사용 대시보드는 구매한 Adobe Experience Platform 제품에 대한 인사이트를 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 계약된 라이선스 금액 등 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=ko-KR" text="데이터 세트 만료"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
-
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseUsage_reduction"
->title="사용 감소 방법"
->abstract="사용량을 줄이기 위해 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/ko/docs/platform-learn/tutorials/data-hygiene/pseudonymous-profile-and-event-expiration" text="익명 프로필 데이터 만료 비디오"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료 설명서"
 
 Adobe Experience Platform을 통해 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있습니다 [!UICONTROL 라이선스 사용] 대시보드입니다. 여기에 표시되는 정보는 Platform 인스턴스의 일별 스냅샷 중에 캡처됩니다.
 
