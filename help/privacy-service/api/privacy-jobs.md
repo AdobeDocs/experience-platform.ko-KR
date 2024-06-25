@@ -5,9 +5,9 @@ title: 개인 정보 작업 API 엔드포인트
 description: Privacy Service API를 사용하여 Experience Cloud 애플리케이션에 대한 개인 정보 작업을 관리하는 방법을 알아봅니다.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 0ffc9648fbc6e6aa3c43a7125f25a98452e8af9a
+source-git-commit: e8e8a9267ddcf7ee9d1d199da8d157ed5f36d344
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1821'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{REGULATION}` | 쿼리할 규정 유형. 허용되는 값은 다음과 같습니다. <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>의 개요 보기 [지원되는 규정](../regulations/overview.md) 위의 값이 나타내는 개인 정보 보호 규정에 대한 자세한 정보입니다. |
+| `{REGULATION}` | 쿼리할 규정 유형. 허용되는 값은 다음과 같습니다. <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`gdpr` - 참고: 이는 와 관련된 요청에도 사용됩니다. **ccpa** 규정.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>의 개요 보기 [지원되는 규정](../regulations/overview.md) 위의 값이 나타내는 개인 정보 보호 규정에 대한 자세한 정보입니다. |
 | `{PAGE}` | 0 기반 번호 매기기를 사용하여 표시할 데이터 페이지입니다. 기본값은 `0`입니다. |
 | `{SIZE}` | 각 페이지에 표시할 결과 수. 기본값은 입니다 `100` 최대값은 입니다. `1000`. 최대값을 초과하면 API가 400 코드 오류를 반환합니다. |
 | `{status}` | 기본 동작은 모든 상태를 포함하는 것입니다. 상태 유형을 지정하면 요청은 해당 상태 유형과 일치하는 개인 정보 작업만 반환합니다. 허용되는 값은 다음과 같습니다. <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -165,7 +165,6 @@ curl -X POST \
     "include": ["Analytics", "AudienceManager","profileService"],
     "expandIds": false,
     "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
     "mergePolicyId": 124,
     "regulation": "ccpa"
 }'
@@ -178,7 +177,6 @@ curl -X POST \
 | `include` **(필수)** | 처리에 포함할 Adobe 제품의 배열입니다. 이 값이 없거나 비어 있으면 요청이 거부됩니다. 조직이 통합한 제품만 포함합니다. 의 섹션을 참조하십시오. [허용된 제품 값](appendix.md) 자세한 내용은 부록에서 확인하십시오. |
 | `expandIDs` | 로 설정된 경우 선택 사항인 속성 `true`는 애플리케이션에서 ID를 처리하기 위한 최적화를 나타냅니다(현재는 에서만 지원됨). [!DNL Analytics]). 생략하면 이 값의 기본값은 입니다. `false`. |
 | `priority` | 요청 처리에 대한 우선 순위를 설정하는 Adobe Analytics에서 사용하는 선택적 속성입니다. 허용되는 값은 다음과 같습니다 `normal` 및 `low`. If `priority` 생략된 경우 기본 동작은 다음과 같습니다. `normal`. |
-| `analyticsDeleteMethod` | Adobe Analytics에서 개인 데이터를 처리하는 방법을 지정하는 선택적 속성입니다. 이 속성에는 두 가지 가능한 값이 허용됩니다. <ul><li>`anonymize`: 특정 사용자 ID 컬렉션에서 참조하는 모든 데이터는 익명으로 처리됩니다. If `analyticsDeleteMethod` 가 생략되면 기본 동작입니다.</li><li>`purge`: 모든 데이터가 완전히 제거됩니다.</li></ul> |
 | `mergePolicyId` | 실시간 고객 프로필에 대한 개인 정보 요청을 할 때(`profileService`)에 대해 선택적으로 특정 항목의 ID를 제공할 수 있습니다 [병합 정책](../../profile/merge-policies/overview.md) ID 결합에 사용할 수 있습니다. 병합 정책을 지정하여 개인 정보 보호 요청은 고객에 대한 데이터를 반환할 때 대상 정보를 포함할 수 있습니다. 요청당 하나의 병합 정책만 지정할 수 있습니다. 병합 정책이 제공되지 않으면 세그멘테이션 정보가 응답에 포함되지 않습니다. |
 | `regulation` **(필수)** | 개인 정보 보호 작업에 대한 규정. 다음 값이 허용됩니다. <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>의 개요 보기 [지원되는 규정](../regulations/overview.md) 위의 값이 나타내는 개인 정보 보호 규정에 대한 자세한 정보입니다. |
 
