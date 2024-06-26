@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 791d854599cf1476f1ebb9584198433c91765efa
+source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1233'
 ht-degree: 6%
 
 ---
@@ -145,6 +145,8 @@ ht-degree: 6%
    * 데이터 및 ID 파트너 {#data-partner}
       * [Acxiom 잠재 고객 억제](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Acxiom 데이터 개선 사항](./catalog/data-partner/acxiom-data-enhancement.md)
+      * [Merkury Enterprise 연결](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
+      * [Merkury Enterprise ID](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md)
    * eCommerce 대상 {#ecommerce}
       * [SAP COMMERCE](./catalog/ecommerce/sap-commerce.md)
    * 이메일 대상 {#email}
