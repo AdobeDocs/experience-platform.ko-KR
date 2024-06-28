@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
+source-git-commit: 82e9263293462a223b635e828b95cb2b098886c7
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1241'
 ht-degree: 5%
 
 ---
@@ -89,7 +89,8 @@ ht-degree: 5%
       * [LinkedIn 인사이트 태그 확장](./catalog/advertising/linkedin.md)
       * [LiveRamp - 온보드 연결](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - 배포 연결](./catalog/advertising/liveramp-distribution.md)
-      * [Magnite 스트리밍 실시간 연결](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [(Beta) Magnite 배치](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [(Beta) Magnite 스트리밍 실시간 연결](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing 연결](./catalog/advertising/bing.md)
       * [Pinterest 전환 추적 확장](./catalog/advertising/pinterest-extension.md)
       * [Pinterest 고객 목록 연결](./catalog/advertising/pinterest.md)
