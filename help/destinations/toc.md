@@ -5,10 +5,10 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
+source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 6%
+source-wordcount: '1237'
+ht-degree: 5%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 6%
       * [LiveRamp 식별자를 기반으로 조정된 대상에 대상 활성화](./ui/activate-curated-destinations.md)
       * [대상에 대한 잠재 고객 활성화](./ui/activate-prospect-audiences.md)
       * [대상에 대한 계정 대상자 활성화](./ui/activate-account-audiences.md)
-      * [(베타) Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기](./ui/export-file-now.md)
+      * [(Beta) Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기](./ui/export-file-now.md)
       * [Experience Platform UI를 사용하여 데이터 세트 내보내기](./ui/export-datasets.md)
       * [(Beta) 새 Beta 클라우드 스토리지 대상에서 마지막 선별 시간 XDM 속성 사용](./ui/activate-last-qualification-time.md)
       * [(Beta) 계산된 필드를 사용하여 플랫 스키마 파일에서 배열 내보내기](/help/destinations/ui/export-arrays-calculated-fields.md)
@@ -65,30 +65,31 @@ ht-degree: 6%
       * [Marketo Engage 연결](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate 연결](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform 대상 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
-   * 광고 대상{#advertising}
-      * [광고 대상 개요](./catalog/advertising/overview.md)
+   * Advertising 대상{#advertising}
+      * [Advertising 대상 개요](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud 연결](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud 확장](./catalog/advertising/adobe-advertising-cloud.md)
-      * [(베타) Amazon 광고 연결](./catalog/advertising/amazon-ads.md)
+      * [(Beta) Amazon 광고 연결](./catalog/advertising/amazon-ads.md)
       * [Awin 광고주 전환 태그 확장](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag 확장](./catalog/advertising/awin-mastertag.md)
       * [Bing Ads UET(Universal Event Tracking) 확장](./catalog/advertising/bing-ads.md)
       * [분기 확장](./catalog/advertising/branch.md)
-      * [(베타) 크리테오 연결](./catalog/advertising/criteo.md)
-      * [DoubleClick Floodlight (Beta) 확장](./catalog/advertising/doubleclick-floodlight.md)
+      * [(Beta) 크리테오 연결](./catalog/advertising/criteo.md)
+      * [DoubleClick Floodlight(Beta) 확장](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook 픽셀 확장](./catalog/advertising/facebook-pixel.md)
       * [Flashtalk OneTag 확장](./catalog/advertising/flashtalking.md)
       * [Google 광고 연결](./catalog/advertising/google-ads-destination.md)
       * [Google 광고 확장](./catalog/advertising/google-ads-extension.md)
       * [Google Ad Manager 연결](./catalog/advertising/google-ad-manager.md)
-      * [(베타) Google Ad Manager 360 연결](./catalog/advertising/google-ad-manager-360-connection.md)
+      * [(Beta) Google Ad Manager 360 연결](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match 연결](./catalog/advertising/google-customer-match.md)
-      * [(베타) Google Customer Match + DV360 연결](./catalog/advertising/google-customer-match-dv360.md)
+      * [(Beta) Google Customer Match + DV360 연결](./catalog/advertising/google-customer-match-dv360.md)
       * [Google Display &amp; Video 360 연결](./catalog/advertising/google-dv360.md)
       * [Google gtag 확장](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn 인사이트 태그 확장](./catalog/advertising/linkedin.md)
       * [LiveRamp - 온보드 연결](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - 배포 연결](./catalog/advertising/liveramp-distribution.md)
+      * [Magnite 스트리밍 실시간 연결](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing 연결](./catalog/advertising/bing.md)
       * [Pinterest 전환 추적 확장](./catalog/advertising/pinterest-extension.md)
       * [Pinterest 고객 목록 연결](./catalog/advertising/pinterest.md)
@@ -112,7 +113,7 @@ ht-degree: 6%
       * [Gainsight PX 연결](./catalog/analytics/gainsight-px.md)
       * [Google 전역 사이트 태그 확장](./catalog/analytics/gtag-analytics.md)
       * [Google Universal Analytics 확장](./catalog/analytics/google-universal-analytics.md)
-      * [JW Player Analytics(베타) 확장](./catalog/analytics/jw-player-analytics.md)
+      * [JW Player Analytics(Beta) 확장](./catalog/analytics/jw-player-analytics.md)
       * [Nielsen BSDK 확장](./catalog/analytics/nielsen-bsdk.md)
       * [Nielsen IMA Handler 확장](./catalog/analytics/nielsen-ima.md)
       * [Nielsen VideoJS Player Handler 확장](./catalog/analytics/nielsen-videojs.md)
@@ -176,8 +177,8 @@ ht-degree: 6%
       * [브레이즈 연결](./catalog/mobile-engagement/braze.md)
       * [선 연결](./catalog/mobile-engagement/line.md)
       * [Moengage 연결](./catalog/mobile-engagement/moengage.md)
-   * 개인화 대상 {#personalization}
-      * [개인화 대상 개요](./catalog/personalization/overview.md)
+   * Personalization 대상 {#personalization}
+      * [Personalization 대상 개요](./catalog/personalization/overview.md)
       * [(제한된 가용성) 대상 분석](./catalog/personalization/audience-analysis.md)
       * [Adobe Commerce 연결](./catalog/personalization/adobe-commerce.md)
       * [Adobe Target 연결](./catalog/personalization/adobe-target-connection.md)
@@ -189,7 +190,7 @@ ht-degree: 6%
       * [Experience Cloud ID 서비스 확장](./catalog/personalization/adobe-ecid.md)
       * [Gainsight 확장](./catalog/personalization/gainsight.md)
       * [KickFire 확장](./catalog/personalization/kickfire.md)
-      * [Marketo 웹 개인화 확장](./catalog/personalization/marketo-web-personalization.md)
+      * [Marketo 웹 Personalization 확장](./catalog/personalization/marketo-web-personalization.md)
       * [Pega 고객 의사 결정 허브 연결](./catalog/personalization/pega.md)
       * [Pega 프로필 연결](./catalog/personalization/pega-profile.md)
    * 소셜 대상{#social}
