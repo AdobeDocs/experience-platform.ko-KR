@@ -6,9 +6,9 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '769'
 ht-degree: 35%
 
 ---
@@ -142,7 +142,7 @@ ht-degree: 35%
          * [개요](./extensions/client/brightcove/overview.md)
          * [릴리스 정보](./extensions/client/brightcove/release-notes.md)
       * [호출 추적 지표](https://exchange.adobe.com/apps/ec/107695)
-      * [채널 소스 식별자](https://exchange.adobe.com/apps/ec/101412)
+      * [채널 Source 식별자](https://exchange.adobe.com/apps/ec/101412)
       * [치타 경험](https://exchange.adobe.com/apps/ec/102759)
       * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
       * 일반 Analytics 플러그인 {#plugins}
@@ -299,6 +299,7 @@ ht-degree: 35%
       * [규칙](./api/endpoints/rules.md)
       * [규칙 구성 요소](./api/endpoints/rule-components.md)
       * [확장 패키지](./api/endpoints/extension-packages.md)
+      * [확장 패키지 사용 인증](./api/endpoints/extension-package-usage-authorizations.md)
       * [확장](./api/endpoints/extensions.md)
       * [라이브러리](./api/endpoints/libraries.md)
       * [빌드](./api/endpoints/builds.md)
