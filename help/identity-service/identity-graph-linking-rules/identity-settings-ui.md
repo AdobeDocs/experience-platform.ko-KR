@@ -4,11 +4,59 @@ description: ID 설정 사용자 인터페이스를 사용하는 방법을 알�
 hide: true
 hidefromtoc: true
 badge: Beta
-source-git-commit: 232d55c02d07e0ddad66ad19e4cc5815bfed3d4d
+source-git-commit: 605aa5ed2db2bfd7f787f2dff9fa00cee2afbce6
 workflow-type: tm+mt
-source-wordcount: '16'
-ht-degree: 6%
+source-wordcount: '478'
+ht-degree: 0%
 
 ---
 
 # ID 설정 UI
+
+>[!AVAILABILITY]
+>
+>이 기능은 아직 사용할 수 없습니다. ID 그래프 연결 규칙에 대한 베타 프로그램은 개발 샌드박스에서 7월에 시작될 예정입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+
+ID 설정은 고유한 네임스페이스를 지정하고 네임스페이스 우선 순위를 구성하는 데 사용할 수 있는 Adobe Experience Platform ID 서비스 UI의 기능입니다.
+
+ID 설정 도구를 사용하는 방법을 배우려면 이 안내서를 참조하십시오.
+
+## 사전 요구 사항
+
+ID 설정 작업을 시작하기 전에 다음 문서를 참조하십시오.
+
+* [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
+* [네임스페이스 우선 순위](./namespace-priority.md)
+* [그래프 시뮬레이션](./graph-simulation.md)
+
+## ID 설정 구성
+
+ID 설정에 액세스하려면 Adobe Experience Platform UI에서 ID 서비스 작업 영역으로 이동한 다음 을 선택합니다 **[!UICONTROL 설정]**.
+
+![ID 설정 버튼이 선택되었습니다.](../images/rules/identity-ui.png)
+
+ID 설정 페이지가 나타나고 프로덕션 샌드박스에서 구성을 완료하기 전에 개발 샌드박스에서 ID 설정을 먼저 테스트하고 유효성을 검사하라는 확인 메시지가 표시됩니다.
+
+![ID 설정 페이지입니다.](../images/rules/identity-settings.png)
+
+ID 설정 페이지는 다음 두 섹션으로 나뉩니다. [!UICONTROL 개인 네임스페이스] 및 [!UICONTROL 디바이스 또는 쿠키 네임스페이스]. 개인 네임스페이스는 단일 개인에 대한 식별자입니다. 장치 간 ID, 이메일 주소 및 전화 번호일 수 있습니다. 디바이스 또는 쿠키 네임스페이스는 디바이스 및 웹 브라우저에 대한 식별자이며 개인 네임스페이스보다 높은 우선 순위를 부여할 수 없습니다. 또한 디바이스 또는 쿠키 네임스페이스를 고유한 네임스페이스로 지정할 수 없습니다.
+
+### 고유한 네임스페이스 지정
+
+고유한 네임스페이스를 지정하려면 [!UICONTROL 그래프당 고유] 해당 네임스페이스에 해당하는 확인란입니다. ID 설정 구성에 대해 둘 이상의 고유한 네임스페이스를 선택할 수 있습니다.
+
+![두 개의 고유한 네임스페이스가 선택되었습니다.](../images/rules/unique-namespaces.png)
+
+고유한 네임스페이스가 설정되면 그래프에서 더 이상 고유한 네임스페이스를 포함하는 여러 ID를 가질 수 없습니다. 예를 들어 Analytics 사용자 지정 ID를 고유 네임스페이스로 지정한 경우 그래프는 Analytics 사용자 지정 ID 네임스페이스와 함께 하나의 ID만 가질 수 있습니다. 자세한 내용은 [id 최적화 알고리즘 개요](./identity-optimization-algorithm.md#unique-namespace).
+
+### 네임스페이스 우선 순위 구성
+
+네임스페이스 우선 순위를 구성하려면 ID 설정 메뉴에서 네임스페이스를 선택한 다음 해당 네임스페이스를 원하는 순서로 드래그 앤 드롭합니다. 높은 우선 순위를 부여하려면 네임스페이스를 목록에 높게 배치하고, 반대로 낮은 우선 순위를 부여하려면 네임스페이스를 목록에 낮게 배치하십시오. 우선 순위가 가장 높은 네임스페이스도 고유한 네임스페이스로 지정해야 합니다.
+
+구성을 마쳤으면 다음을 선택합니다. **[!UICONTROL 다음]**. 확인 메시지가 나타납니다. 이 영업 기회를 사용하여 구성이 올바른지 확인한 다음 **[!UICONTROL 완료]**.
+
+![유효성 검사 페이지입니다.](../images/rules/validate.png)
+
+새 설정이 이미 수집된 ID 그래프 및 경험 이벤트 프로필 조각의 기존 링크에 영향을 주지 않는다는 경고가 표시됩니다. 확인하려면 샌드박스 이름을 입력한 다음 을 선택합니다. **[!UICONTROL 확인]**.
+
+![확인 창입니다.](../images/rules/confirm.png)
