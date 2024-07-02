@@ -2,10 +2,10 @@
 title: Adobe Campaign Managed Cloud Services 연결
 description: Adobe Campaign Managed Cloud Services은 크로스채널 고객 경험을 디자인할 수 있는 플랫폼과 시각적 캠페인 오케스트레이션, 실시간 상호 작용 관리 및 크로스채널 실행 환경을 제공합니다.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: 9757931f03f57b722c47955d83cb074629d9a883
+source-git-commit: 299868e5ca1b8fde667c4c0ec9a7435634a1717d
 workflow-type: tm+mt
-source-wordcount: '1589'
-ht-degree: 1%
+source-wordcount: '1633'
+ht-degree: 2%
 
 ---
 
@@ -25,15 +25,21 @@ Campaign을 사용하여 다음을 수행할 수 있습니다.
 * 이메일, 모바일, 온라인 및 오프라인 채널을 고객 여정에 통합,
 * 의미 있고 시의적절한 메시지 및 오퍼 게재를 자동화합니다.
 
->[!IMPORTANT]
->
->Adobe Campaign Managed Cloud Services 연결을 사용할 때는 다음 보호 기능에 유의하십시오.
->
->* 최대 50개의 세그먼트는 [활성화됨](#activate) 대상,
->* 각 세그먼트에 대해 최대 20개의 필드를 추가할 수 있습니다. [맵](#map) Adobe Campaign으로
->* Azure Blob 스토리지 DLZ(데이터 랜딩 영역)의 데이터 유지 : 7일,
->* 활성화 빈도는 최소 3시간입니다.
->* 이 연결에서 지원되는 최대 파일 이름 길이는 255자입니다. 다음을 수행하는 경우 [내보낸 파일 이름 구성](../../ui/activate-batch-profile-destinations.md#configure-file-names)파일 이름이 255자를 초과하지 않는지 확인하십시오. 최대 파일 이름 길이를 초과하면 활성화 오류가 발생합니다.
+## 가드레일 {#guardrails}
+
+Adobe Campaign Managed Cloud Services 연결을 사용할 때는 다음 보호 기능에 유의하십시오.
+
+* 다음을 수행할 수 있습니다. [활성화](#activate) 이 대상에 대한 최대 25개의 대상자입니다.
+
+  의 값을 업데이트하여 이 제한을 변경할 수 있습니다. **NmsCdp_Aep_Audience_List_Limit** 의 옵션 **[!UICONTROL 관리]** > **[!UICONTROL 플랫폼]** > **[!UICONTROL 옵션]** Campaign 탐색기 폴더.
+
+* 각 대상자에 대해 최대 20개의 필드를 추가할 수 있습니다. [맵](#map) Adobe Campaign으로.
+
+  의 값을 업데이트하여 이 제한을 변경할 수 있습니다. **NmsCdp_Aep_Destinations_Max_Columns** 의 옵션 **[!UICONTROL 관리]** > **[!UICONTROL 플랫폼]** > **[!UICONTROL 옵션]** Campaign 탐색기 폴더.
+
+* Azure Blob 스토리지 DLZ(데이터 랜딩 영역)의 데이터 유지 : 7일.
+* 활성화 빈도는 최소 3시간입니다.
+* 이 연결에서 지원되는 최대 파일 이름 길이는 255자입니다. 다음을 수행하는 경우 [내보낸 파일 이름 구성](../../ui/activate-batch-profile-destinations.md#configure-file-names)파일 이름이 255자를 초과하지 않는지 확인하십시오. 최대 파일 이름 길이를 초과하면 활성화 오류가 발생합니다.
 
 ## 사용 사례 {#use-cases}
 
@@ -41,12 +47,12 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
 * Adobe Experience Platform은 id 그래프, analytics의 행동 데이터, 오프라인 및 온라인 데이터 병합 등과 같은 정보를 통합하는 고객 프로필을 만듭니다. 이 통합을 통해 해당 Adobe Experience Platform 기반 대상을 사용하여 Adobe Campaign 내에 이미 존재하는 세분화 기능을 강화할 수 있으므로 Campaign에서 해당 데이터를 활성화할 수 있습니다.
 
-  예를 들어 스포츠 의류 회사는 Adobe Experience Platform에서 제공하는 스마트 세그먼트를 활용하고 Adobe Campaign을 사용하여 활성화함으로써 Adobe Campaign에서 지원하는 다양한 채널에서 고객 기반에 연결하려고 합니다. 메시지를 보낸 후에는 발신, 열기 및 클릭과 같은 Adobe Campaign의 경험 데이터로 Adobe Experience Platform의 고객 프로필을 개선하려고 합니다.
+  예를 들어 스포츠 의류 회사는 Adobe Experience Platform에서 제공하는 대상자를 활용하고 Adobe Campaign을 사용하여 활성화함으로써 Adobe Campaign에서 지원하는 다양한 채널에서 해당 고객 기반에 연결하려고 합니다. 메시지를 보낸 후에는 발신, 열기 및 클릭과 같은 Adobe Campaign의 경험 데이터로 Adobe Experience Platform의 고객 프로필을 개선하려고 합니다.
 
   그 결과, Adobe Experience Cloud 생태계 전반에서 보다 일관적인 크로스 채널 캠페인과 다양한 고객 프로필이 적용되어 빠르게 학습할 수 있습니다.
 
 
-* Campaign의 세그먼트 활성화 외에도 Adobe Campaign Managed Services 대상을 활용하여 Adobe Experience Platform의 프로필에 연결된 추가 프로필 속성을 가져오고 동기화 프로세스를 통해 Adobe Campaign 데이터베이스에서 업데이트되도록 할 수 있습니다.
+* Campaign의 대상 활성화 외에도 Adobe Campaign Managed Services 대상을 활용하여 Adobe Experience Platform의 프로필에 연결된 추가 프로필 속성을 가져오고 동기화 프로세스를 통해 Adobe Campaign 데이터베이스에서 업데이트되도록 할 수 있습니다.
 
   예를 들어 Adobe Experience Platform에서 옵트인 및 옵트아웃 값을 캡처한다고 가정해 보겠습니다. 이 연결을 사용하면 이러한 값을 Adobe Campaign으로 가져오고 정기적으로 업데이트되도록 동기화 프로세스를 유지할 수 있습니다.
 
@@ -66,7 +72,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 | ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 에 대한 다음 문서를 참조하십시오. [ECID](/help/identity-service/features/ecid.md) 추가 정보. |
 | email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 속성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션, 보유 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
 | phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 속성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션, 보유 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
-| GAID | Google 광고 ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
+| GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
 
 {style="table-layout:auto"}
@@ -77,7 +83,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 의 프로필 속성 선택 화면에서 선택한 대로 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성)와 함께 세그먼트의 모든 멤버를 내보냅니다. [대상 활성화 워크플로](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 의 프로필 속성 선택 화면에서 선택한 대로 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성)와 함께 대상의 모든 구성원을 내보냅니다. [대상 활성화 워크플로](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | 내보내기 빈도 | **[!UICONTROL 일괄 처리]** | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. 자세한 내용 [배치 파일 기반 대상](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -117,7 +123,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
 마케팅 작업에 대한 자세한 내용은 [데이터 사용 정책 개요](/help/data-governance/policies/overview.md) 페이지를 가리키도록 업데이트하는 중입니다.
 
-## 이 대상에 대한 세그먼트 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -172,7 +178,7 @@ Adobe Campaign Manage Service 대상을 사용하는 방법과 시기를 더 잘
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
-대상 **[!UICONTROL 프로필 동기화(업데이트만 해당)]**, 데이터는 대상에서 활성화된 세그먼트에 의해 타겟팅된 각 프로필에 대한 Campaign 데이터베이스에 자동으로 업데이트됩니다.
+대상 **[!UICONTROL 프로필 동기화(업데이트만 해당)]**, 데이터는 대상에서 활성화된 대상자에 의해 타겟팅된 각 프로필에 대한 Campaign 데이터베이스에 자동으로 업데이트됩니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
