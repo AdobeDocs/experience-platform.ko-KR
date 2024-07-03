@@ -3,9 +3,9 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: f0f66146bc65a9c5a1bcfee21aba44546cda6900
 workflow-type: tm+mt
-source-wordcount: '3961'
+source-wordcount: '3975'
 ht-degree: 11%
 
 ---
@@ -131,7 +131,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
    >[!NOTE]
    >
-   >다음 **[!UICONTROL 세그먼트 평가 후]** 아래 설명된 옵션은 일부 베타 고객만 사용할 수 있습니다.
+   >다음 **[!UICONTROL 세그먼트 평가 후]** 아래 설명된 옵션은 Beta 고객을 선택하는 경우에만 사용할 수 있습니다.
 
    사용 **[!UICONTROL 세그먼트 평가 후]** 옵션을 사용하여 일별 플랫폼 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행합니다. 이 옵션을 사용하면 활성화 작업이 실행될 때 최신 프로필을 대상으로 내보냅니다.
 
@@ -231,7 +231,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
    ![매핑 워크플로에서 강조 표시된 새 필드 컨트롤을 추가합니다.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
-1. 오른쪽 화살표를 선택합니다. **[!UICONTROL 소스 필드]** 입력.
+1. 오른쪽 화살표를 선택합니다. **[!UICONTROL Source 필드]** 입력.
 
    ![매핑 워크플로에서 강조 표시된 소스 필드 컨트롤을 선택합니다.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
@@ -432,7 +432,7 @@ Adobe은 다음과 같은 ID 네임스페이스를 선택할 것을 권장합니
 >
 > 예를 들어, 필드가 `person.name.firstName` 에는 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있습니다. 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은 [Adobe Experience Platform의 데이터 거버넌스](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
-### [!BADGE 베타]{type=Informative} 계산된 필드를 통해 배열 내보내기 {#export-arrays-calculated-fields}
+### [!BADGE Beta]{type=Informative} 계산된 필드를 통해 배열 내보내기 {#export-arrays-calculated-fields}
 
 Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 어레이 개체를 내보낼 수 있습니다. 자세한 내용 [배열 및 계산된 필드 내보내기](/help/destinations/ui/export-arrays-calculated-fields.md) 기능에 액세스하려면 Adobe 담당자에게 문의하십시오.
 
@@ -442,13 +442,22 @@ Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 
 
 #### 대상 멤버십 속성은 매핑 워크플로를 통해 선택할 수 없습니다.
 
-알려진 제한 사항으로 인해 현재 를 사용할 수 없습니다. **[!UICONTROL 필드 선택]** 추가할 창 `segmentMembership.status` 를 파일로 내보냅니다. 대신 값을 수동으로 붙여넣어야 합니다 `xdm: segmentMembership.status` 아래 표시된 대로 스키마 필드로 이동합니다.
+알려진 제한 사항으로 인해 현재 를 사용할 수 없습니다. **[!UICONTROL 필드 선택]** 추가할 창 `segmentMembership.seg_namespace.seg_id.status` 를 파일로 내보냅니다. 대신 값을 수동으로 붙여넣어야 합니다 `xdm: segmentMembership.seg_namespace.seg_id.status` 아래 표시된 대로 스키마 필드로 이동합니다.
 
 ![활성화 워크플로의 매핑 단계에서 대상 멤버십의 해결 방법을 보여 주는 화면 기록입니다.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
-파일 내보내기는 여부에 따라 다음과 같은 방법으로 달라집니다 `segmentMembership.status` 이(가) 선택됨:
-* 다음과 같은 경우 `segmentMembership.status` 필드를 선택하고 내보낸 파일에는 다음이 포함됩니다. **[!UICONTROL 활성]** 초기 전체 스냅샷의 멤버 및 새로 **[!UICONTROL 활성]** 및 **[!UICONTROL 만료됨]** 이후 증분 내보내기의 멤버
-* 다음과 같은 경우 `segmentMembership.status` 필드가 선택되지 않았습니다. 내보낸 파일에는 **[!UICONTROL 활성]** 초기 전체 스냅샷 및 이후 증분 내보내기의 멤버
+
+>[!NOTE]
+>
+클라우드 스토리지 대상의 경우 기본적으로 다음 속성이 매핑에 추가됩니다.
+>
+* `segmentMembership.seg_namespace.seg_id.status`
+* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+
+파일 내보내기는 여부에 따라 다음과 같은 방법으로 달라집니다 `segmentMembership.seg_namespace.seg_id.status` 이(가) 선택됨:
+
+* 다음과 같은 경우 `segmentMembership.seg_namespace.seg_id.status` 필드를 선택하고 내보낸 파일에는 다음이 포함됩니다. **[!UICONTROL 활성]** 초기 전체 스냅샷의 멤버 및 새로 **[!UICONTROL 활성]** 및 **[!UICONTROL 만료됨]** 이후 증분 내보내기의 멤버
+* 다음과 같은 경우 `segmentMembership.seg_namespace.seg_id.status` 필드가 선택되지 않았습니다. 내보낸 파일에는 **[!UICONTROL 활성]** 초기 전체 스냅샷 및 이후 증분 내보내기의 멤버
 
 자세한 내용 [파일 기반 대상에 대한 프로필 내보내기 동작](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
@@ -488,19 +497,19 @@ Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 
 
 >[!NOTE]
 >
-Adobe Experience Platform은 스키마에서 일반적으로 사용되는 네 가지 권장 속성으로 선택 사항을 미리 채웁니다. `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+Adobe Experience Platform은 스키마에서 일반적으로 사용되는 네 가지 권장 속성으로 선택 사항을 미리 채웁니다. `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![대상자 활성화 워크플로의 매핑 단계에서 미리 채워진 권장 속성을 보여 주는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-알려진 제한 사항으로 인해 현재 를 사용할 수 없습니다. **[!UICONTROL 필드 선택]** 추가할 창 `segmentMembership.status` 를 파일로 내보냅니다. 대신 값을 수동으로 붙여넣어야 합니다 `xdm: segmentMembership.status` 아래 표시된 대로 스키마 필드로 이동합니다.
+알려진 제한 사항으로 인해 현재 를 사용할 수 없습니다. **[!UICONTROL 필드 선택]** 추가할 창 `segmentMembership.seg_namespace.seg_id.status` 를 파일로 내보냅니다. 대신 값을 수동으로 붙여넣어야 합니다 `xdm: segmentMembership.seg_namespace.seg_id.status` 아래 표시된 대로 스키마 필드로 이동합니다.
 >
 ![활성화 워크플로의 매핑 단계에서 대상 멤버십의 해결 방법을 보여 주는 화면 기록입니다.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
-파일 내보내기는 다음에 따라 달라집니다 `segmentMembership.status` 이(가) 선택됨:
-* 다음과 같은 경우 `segmentMembership.status` 필드를 선택하고 내보낸 파일에는 다음이 포함됩니다. **[!UICONTROL 활성]** 초기 전체 스냅샷의 멤버 및 **[!UICONTROL 활성]** 및 **[!UICONTROL 만료됨]** 이후 증분 내보내기의 멤버
-* 다음과 같은 경우 `segmentMembership.status` 필드가 선택되지 않았습니다. 내보낸 파일에는 **[!UICONTROL 활성]** 초기 전체 스냅샷 및 이후 증분 내보내기의 멤버
+파일 내보내기는 다음에 따라 달라집니다 `segmentMembership.seg_namespace.seg_id.status` 이(가) 선택됨:
+* 다음과 같은 경우 `segmentMembership.seg_namespace.seg_id.status` 필드를 선택하고 내보낸 파일에는 다음이 포함됩니다. **[!UICONTROL 활성]** 초기 전체 스냅샷의 멤버 및 **[!UICONTROL 활성]** 및 **[!UICONTROL 만료됨]** 이후 증분 내보내기의 멤버
+* 다음과 같은 경우 `segmentMembership.seg_namespace.seg_id.status` 필드가 선택되지 않았습니다. 내보낸 파일에는 **[!UICONTROL 활성]** 초기 전체 스냅샷 및 이후 증분 내보내기의 멤버
 
 ## 보강 속성 선택 {#select-enrichment-attributes}
 
