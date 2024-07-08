@@ -2,10 +2,10 @@
 title: 자동화된 데이터 세트 만료
 description: Adobe Experience Platform UI에서 데이터 세트 만료를 예약하는 방법을 알아봅니다.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 19%
+source-wordcount: '871'
+ht-degree: 18%
 
 ---
 
@@ -26,7 +26,13 @@ ht-degree: 19%
 
 >[!NOTE]
 >
->데이터 세트 만료는 현재 Adobe Experience Platform Edge Network에서 데이터를 삭제하지 않습니다. 그러나 데이터 세트가 만료되도록 설정된 후에는 데이터가 Edge Network 내부에 남아 있을 가능성이 없습니다. 데이터 세트 만료에 대한 15일 서비스 라이선스 계약이 데이터가 삭제되기 전 Edge Network 내부에 존재하는 14일 기간과 겹치기 때문입니다.
+>데이터 세트 만료는 현재 Adobe Experience Platform Edge Network에서 데이터를 삭제하지 않습니다. 그러나 데이터 세트가 만료되도록 설정된 후에는 데이터가 Edge Network 내에 남아 있을 가능성이 없습니다. 데이터 세트 만료에 대한 15일 서비스 라이선스 계약이 데이터가 삭제되기 전에 Edge Network 내에 존재하는 14일 기간과 겹치기 때문입니다.
+
+고급 데이터 수명 주기 관리에서는 [데이터 세트 만료 끝점](../api/dataset-expiration.md) 및 를 통해 기본 ID를 사용하여 ID 삭제(행 수준 데이터) [작업 주문 엔드포인트](../api/workorder.md). 데이터 세트 만료 및 [레코드 삭제](./record-delete.md) 플랫폼 UI를 통해 자세한 내용은 연결된 설명서 를 참조하십시오.
+
+>[!NOTE]
+>
+>데이터 수명 주기는 일괄 삭제를 지원하지 않습니다.
 
 ## 데이터 세트 만료 일정 예약 {#schedule-dataset-expiration}
 

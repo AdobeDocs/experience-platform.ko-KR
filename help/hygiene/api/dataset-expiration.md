@@ -3,10 +3,10 @@ title: 데이터 세트 만료 API 끝점
 description: 데이터 위생 API의 /ttl 끝점을 사용하면 Adobe Experience Platform에서 데이터 세트 만료를 프로그래밍 방식으로 예약할 수 있습니다.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
+source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
 workflow-type: tm+mt
-source-wordcount: '2166'
-ht-degree: 2%
+source-wordcount: '2217'
+ht-degree: 1%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 다음 `/ttl` 데이터 위생 API의 끝점을 사용하면 Adobe Experience Platform의 데이터 세트에 대한 만료 날짜를 예약할 수 있습니다.
 
-데이터 세트 만료는 시간이 지연된 삭제 작업일 뿐입니다. 데이터 세트는 중간에 보호되지 않으므로 만료에 도달하기 전에 다른 방법으로 삭제할 수 있습니다.
+데이터 세트 만료는 시간이 지연된 삭제 작업일 뿐입니다. 데이터 세트 는 그 동안 보호되지 않으므로 만료에 도달하기 전에 다른 방법으로 삭제될 수 있습니다.
 
 >[!NOTE]
 >
->만료가 특정 순시로 적시되어 있지만 실제 삭제가 시작되기 전에 만료 후 최대 24시간의 지연이 있을 수 있습니다. 삭제가 시작되면 플랫폼 시스템에서 데이터 세트의 모든 추적이 제거되기까지 최대 7일이 걸릴 수 있습니다.
+>만료는 특정 시점으로 지정되지만 만료 후 실제 삭제가 시작되기까지 최대 24시간이 지연될 수 있습니다. 삭제가 시작되면 데이터 세트의 모든 추적이 Platform 시스템에서 제거되기까지 최대 7일이 걸릴 수 있습니다.
 
 데이터 세트 삭제가 실제로 시작되기 전에 언제든지 만료를 취소하거나 트리거 시간을 수정할 수 있습니다. 데이터 세트 만료를 취소한 후 새 만료를 설정하여 다시 열 수 있습니다.
 
@@ -27,6 +27,12 @@ ht-degree: 2%
 >[!WARNING]
 >
 >데이터 세트가 만료되도록 설정된 경우 다운스트림 워크플로우가 부정적인 영향을 받지 않도록 데이터를 해당 데이터 세트로 수집할 수 있는 모든 데이터 흐름을 수동으로 변경해야 합니다.
+
+Advanced Data Lifecycle Management는 데이터 세트 만료 끝점을 통한 데이터 세트 삭제와 [작업 주문 엔드포인트](./workorder.md). 다음을 관리할 수도 있습니다. [데이터 세트 만료](../ui/dataset-expiration.md) 및 [레코드 삭제](../ui/record-delete.md) 플랫폼 UI를 통해 자세한 내용은 연결된 설명서 를 참조하십시오.
+
+>[!NOTE]
+>
+>데이터 수명 주기는 일괄 삭제를 지원하지 않습니다.
 
 ## 시작하기
 
@@ -40,7 +46,7 @@ ht-degree: 2%
 
 GET 요청을 통해 조직의 모든 데이터 세트 만료를 나열할 수 있습니다. 쿼리 매개 변수를 사용하여 적절한 결과에 대한 응답을 필터링할 수 있습니다.
 
-**API 형식**
+**API 포맷**
 
 ```http
 GET /ttl?{QUERY_PARAMETERS}
@@ -65,11 +71,11 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답에는 데이터 세트의 만료 결과가 표시됩니다. 다음 예제는 공백에 대해 잘렸습니다.
+성공적인 응답에는 결과 데이터 세트 만료가 나열됩니다. 다음 예제는 공백에서 잘렸습니다.
 
 >[!IMPORTANT]
 >
->다음 `ttlId` 또한 이 응답으로 `{DATASET_EXPIRATION_ID}`. 둘 다 데이터 세트 만료에 대한 고유 식별자를 참조합니다.
+>응답`{DATASET_EXPIRATION_ID}`에서 `ttlId` 는 . 둘 다 데이터 세트 만료에 대한 고유 식별자를 나타냅니다.
 
 ```json
 {
@@ -95,13 +101,13 @@ curl -X GET \
 | 속성 | 설명 |
 | --- | --- |
 | `total_count` | 목록 호출의 매개 변수와 일치하는 데이터 세트 만료 수입니다. |
-| `results` | 반환된 데이터 세트 만료에 대한 세부 정보를 포함합니다. 데이터 세트 만료의 속성에 대한 자세한 내용은 만들기 응답 섹션을 참조하십시오. [조회 호출](#lookup). |
+| `results` | 반환된 데이터 세트 만료에 대한 세부 정보를 포함합니다. 데이터 세트 만료의 속성에 대한 자세한 내용은 조회 호출](#lookup)을 [만들기 위한 응답 섹션을 참조하세요. |
 
 {style="table-layout:auto"}
 
-## 데이터 세트 만료 조회 {#lookup}
+## 데이터 세트 만료 Look {#lookup}
 
-데이터 세트 만료를 조회하려면 다음 중 하나를 사용하여 GET 요청을 수행합니다. `{DATASET_ID}` 또는 `{DATASET_EXPIRATION_ID}`.
+데이터 세트 만료를 조회하려면 또는 `{DATASET_EXPIRATION_ID}`를 사용하여 `{DATASET_ID}` GET 요청하십시오.
 
 >[!IMPORTANT]
 >
@@ -194,13 +200,13 @@ curl -X GET \
 
 ## 데이터 세트 만료 만들기 {#create}
 
-지정된 기간 후에 시스템에서 데이터가 제거되도록 하려면 데이터 세트 ID와 만료 날짜 및 시간을 ISO 8601 형식으로 제공하여 특정 데이터 세트에 대한 만료를 예약하십시오.
+지정된 기간 후에 시스템에서 데이터가 제거되도록 하려면 ISO 8601 포맷에서 데이터 세트 ID와 만료 날짜 및 시간을 제공하여 특정 데이터 세트에 대한 만료를 예약합니다.
 
-데이터 세트 만료를 만들려면 아래 그림과 같이 POST 요청을 수행하고 페이로드 내에 아래 언급된 값을 제공합니다.
+데이터 세트 만료를 만들려면 아래 표시된 대로 POST 요청 수행하고 페이로드 내에 아래에 언급된 값을 제공합니다.
 
 >[!NOTE]
 >
->404 오류가 발생하면 요청에 슬래시가 추가로 없는지 확인합니다. 뒤쪽 슬래시로 인해 POST 요청이 실패할 수 있습니다.
+>404 오류가 발생하면 요청 요청에 추가 슬래시가 없는지 확인합니다. 후행 슬래시로 인해 POST 요청 실패할 수 있습니다.
 
 **API 형식**
 
@@ -257,16 +263,16 @@ curl -X POST \
 | `ttlId` | 데이터 세트 만료 ID입니다. |
 | `datasetId` | 이 만료가 적용되는 데이터 세트의 ID입니다. |
 | `datasetName` | 이 만료가 적용되는 데이터 세트의 표시 이름입니다. |
-| `sandboxName` | 대상 데이터 세트가 있는 샌드박스의 이름입니다. |
+| `sandboxName` | 타겟 데이터 세트가 있는 샌드박스의 이름입니다. |
 | `imsOrg` | 조직의 ID입니다. |
 | `status` | 데이터 세트 만료의 현재 상태입니다. |
-| `expiry` | 데이터 세트를 삭제할 예약된 날짜 및 시간입니다. |
-| `updatedAt` | 만료를 마지막으로 업데이트한 시점의 타임스탬프입니다. |
+| `expiry` | 데이터 세트 삭제가 예약된 날짜 및 시간입니다. |
+| `updatedAt` | 만료가 마지막으로 업데이트된 시점의 타임스탬프입니다. |
 | `updatedBy` | 만료를 마지막으로 업데이트한 사용자입니다. |
 | `displayName` | 만료 요청의 표시 이름입니다. |
 | `description` | 만료 요청에 대한 설명. |
 
-데이터 세트에 대한 데이터 세트 만료가 이미 존재하는 경우 400(잘못된 요청) HTTP 상태가 발생합니다. 실패한 응답은 그러한 데이터 세트 만료가 존재하지 않거나 데이터 세트에 대한 액세스 권한이 없는 경우 404(찾을 수 없음) HTTP 상태를 반환합니다.
+400(잘못된 요청) HTTP 상태는 데이터 세트에 대한 데이터 세트 만료가 이미 존재하는 경우에 발생합니다. 이러한 데이터 세트 만료가 없거나 데이터 세트에 액세스할 수 없는 경우 실패한 응답은 404(찾을 수 없음) HTTP 상태를 반환합니다.
 
 ## 데이터 세트 만료 업데이트 {#update}
 
@@ -274,9 +280,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->만료 날짜 및 시간을 변경할 경우 향후 최소 24시간 이상이어야 합니다. 이렇게 강제 지연된 경우 만료를 취소하거나 다시 예약할 수 있으며 실수로 데이터가 손실되는 것을 방지할 수 있습니다.
+>만료 날짜 및 시간을 변경하는 경우 최소 24시간 후여야 합니다. 이 강제 지연은 만료를 취소하거나 다시 예약하고 실수로 인한 데이터 손실을 방지할 수 있는 기회 역할을 합니다.
 
-**API 형식**
+**API 포맷**
 
 ```http
 PUT /ttl/{DATASET_EXPIRATION_ID}
@@ -284,11 +290,11 @@ PUT /ttl/{DATASET_EXPIRATION_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{DATASET_EXPIRATION_ID}` | 변경하려는 데이터 세트 만료의 ID입니다. 참고: 이를 라고 합니다. `ttlId` 응답. |
+| `{DATASET_EXPIRATION_ID}` | 변경하려는 데이터 세트 만료 ID입니다. 참고: 이를 `ttlId` 응답이라고 합니다. |
 
 **요청**
 
-다음 요청은 데이터 세트 만료를 예약합니다. `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` 2024년 말(그리니치 표준시)에 발생합니다. 기존 데이터 세트 만료가 발견되면 해당 만료가 새 데이터 세트로 업데이트됩니다 `expiry` 값.
+다음 요청 은 2024년 말(그리니치 표준시)에 발생하도록 데이터 세트 만료 `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` 를 다시 예약합니다. 기존 데이터 세트 만료가 발견되면 해당 만료가 새 `expiry` 값으로 업데이트됩니다.
 
 ```shell
 curl -X PUT \
@@ -309,7 +315,7 @@ curl -X PUT \
 | --- | --- |
 | `expiry` | **필수** ISO 8601 형식의 날짜 및 시간입니다. 문자열에 명시적 시간대 오프셋이 없으면 시간대는 UTC로 간주됩니다. 시스템 내의 데이터 수명은 제공된 만료 값에 따라 설정된다. 동일한 데이터 세트의 이전 만료 타임스탬프는 사용자가 제공한 새 만료 값으로 대체됩니다. 이 날짜 및 시간은 최소 이상이어야 합니다. **향후 24시간**. |
 | `displayName` | 만료 요청의 표시 이름입니다. |
-| `description` | 만료 요청에 대한 선택적 설명. |
+| `description` | 만료 요청 설명(선택적)입니다. |
 
 {style="table-layout:auto"}
 
@@ -343,11 +349,11 @@ curl -X PUT \
 
 {style="table-layout:auto"}
 
-실패한 응답은 그러한 데이터 세트 만료가 존재하지 않는 경우 404(찾을 수 없음) HTTP 상태를 반환합니다.
+이러한 데이터 세트 만료가 없는 경우 실패한 응답은 404(찾을 수 없음) HTTP 상태를 반환합니다.
 
 ## 데이터 세트 만료 취소 {#delete}
 
-DELETE 요청을 통해 데이터 세트 만료를 취소할 수 있습니다.
+DELETE 요청을 수행하여 데이터 세트 만료를 취소할 수 있습니다.
 
 >[!NOTE]
 >
@@ -460,23 +466,23 @@ curl -X GET \
 | `displayName` | 만료 요청의 표시 이름입니다. |
 | `description` | 만료 요청에 대한 설명. |
 | `imsOrg` | 조직의 ID입니다. |
-| `history` | 만료 업데이트 기록을 개체 배열로 나열하며 각 개체에는 `status`, `expiry`, `updatedAt`, 및 `updatedBy` 업데이트 시 만료에 대한 속성입니다. |
+| `history` | 만료에 대한 업데이트 기록을 개체 배열로 나열하며, 각 개체에는 업데이트 시점의 만료에 대한 , `expiry`, `updatedAt`및 `updatedBy` 특성이 포함됩니다`status`. |
 
 {style="table-layout:auto"}
 
 ## 부록
 
-### 수락된 쿼리 매개 변수 {#query-params}
+### 허용되는 쿼리 매개 변수 {#query-params}
 
-다음 표에서는 사용 가능한 쿼리 매개 변수가 다음과 같은 경우 간략하게 설명합니다. [데이터 세트 만료 나열](#list):
+다음 표에서는 데이터 세트 만료를 나열할 때 [사용할 수 있는 쿼리 매개 변수에 대해 간략하게 설명합니다.](#list)
 
 >[!NOTE]
 >
->다음 `description`, `displayName`, 및 `datasetName` 매개 변수에는 모두 LIKE 값으로 검색하는 기능이 포함되어 있습니다. 즉, 문자열 &quot;Name1&quot;을 검색하여 &quot;Name123&quot;, &quot;Name183&quot;, &quot;DisplayName1234&quot;라는 예약된 데이터 세트 만료를 찾을 수 있습니다.
+>`description`, `displayName`및 `datasetName` 매개 변수에는 모두 LIKE 값으로 검색할 수 있는 기능이 포함되어 있습니다. 즉, 문자열 &quot;Name1&quot;을 검색하여 &quot;Name123&quot;, &quot;Name183&quot;, &quot;DisplayName1234&quot;라는 예약된 데이터 세트 만료를 찾을 수 있습니다.
 
 | 매개변수 | 설명 | 예 |
 | --- | --- | --- |
-| `author` | 만료 대상 `created_by` 는 검색 문자열과 일치합니다. 검색 문자열이 다음으로 시작되는 경우 `LIKE` 또는 `NOT LIKE`나머지 부분은 SQL 검색 패턴으로 처리됩니다. 그렇지 않으면 전체 검색 문자열은 의 전체 컨텐츠와 정확히 일치해야 하는 리터럴 문자열로 처리됩니다. `created_by` 필드. | `author=LIKE %john%`, `author=John Q. Public` |
+| `author` | 가 검색 문자열과 일치하는 만료 `created_by` 와 일치합니다. 검색 문자열이 또는 `NOT LIKE`로 시작하는 `LIKE` 경우 나머지는 SQL 검색 패턴으로 처리됩니다. 그렇지 않으면 전체 검색 문자열은 필드의 전체 컨텐츠 내용과 정확히 일치해야 하는 리터럴 문자열로 처리됩니다 `created_by` . | `author=LIKE %john%`, `author=John Q. Public` |
 | `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | 표시된 간격에서 언제든지 취소된 만료와 일치합니다. 이 설정은 만료가 나중에 다시 열린 경우에도 적용됩니다(동일한 데이터 세트에 대해 새 만료로 설정). | `updatedDate=2022-01-01` |
 | `completedDate` / `completedToDate` / `completedFromDate` | 지정된 간격 동안 완료된 만료와 일치합니다. | `completedToDate=2021-11-11-06:00` |
 | `createdDate` | 지정된 시간에 시작하여 24시간 기간에 생성된 만료와 일치합니다.<br><br>시간 없이 날짜 (예: `2021-12-07`)는 해당 날짜의 시작 날짜/시간을 나타냅니다. 따라서 `createdDate=2021-12-07` 은(는) 의 2021년 12월 7일에 생성된 모든 만료를 나타냅니다. `00:00:00` 에서 `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
@@ -487,8 +493,8 @@ curl -X GET \
 | `description` |   | `description=Handle expiration of Acme information through the end of 2024.` |
 | `displayName` | 표시 이름에 제공된 검색 문자열이 포함된 만료와 일치합니다. 일치는 대/소문자를 구분하지 않습니다. | `displayName=License Expiry` |
 | `executedDate` / `executedFromDate` / `executedToDate` | 정확한 실행 날짜, 실행 종료 날짜 또는 실행 시작 날짜를 기준으로 결과를 필터링합니다. 특정 날짜, 특정 날짜 이전 또는 특정 날짜 이후에 작업 실행과 관련된 데이터 또는 레코드를 검색하는 데 사용됩니다. | `executedDate=2023-02-05T19:34:40.383615Z` |
-| `expiryDate` / `expiryToDate` / `expiryFromDate` | 지정된 간격 동안 실행될 만료일 또는 이미 실행된 만료일과 일치합니다. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
-| `limit` | 반환할 최대 만료 수를 나타내는 1에서 100 사이의 정수입니다. 기본값은 25입니다. | `limit=50` |
+| `expiryDate` / `expiryToDate` / `expiryFromDate` | 지정된 간격 동안 실행 예정이거나 이미 실행된 만료와 일치합니다. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
+| `limit` | 반환할 최대 만료 횟수를 나타내는 1에서 100 사이의 정수입니다. 기본값은 25입니다. | `limit=50` |
 | `orderBy` | 다음 `orderBy` query 매개 변수는 API에서 반환되는 결과의 정렬 순서를 지정합니다. 하나 이상의 필드를 기준으로 데이터를 오름차순(ASC) 또는 내림차순(DESC) 순서로 정렬하는 데 사용합니다. ASC, DESC를 각각 지정하려면 + 또는 - 접두사를 사용하십시오. 다음 값이 허용됩니다. `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
 | `orgId` | 조직 ID가 매개 변수의 ID와 일치하는 데이터 세트 만료와 일치합니다. 이 값의 기본값은 `x-gw-ims-org-id` 헤더와 는 요청이 서비스 토큰을 제공하지 않는 한 무시됩니다. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `page` | 반환할 만료 페이지를 나타내는 정수입니다. | `page=3` |
@@ -496,7 +502,7 @@ curl -X GET \
 | `search` | 지정된 문자열이 만료 ID와 정확히 일치하는 만료 일치 또는 **포함됨** 다음 필드 중 하나에서:<br><ul><li>작성자</li><li>표시 이름</li><li>설명</li><li>표시 이름</li><li>데이터 세트 이름</li></ul> | `search=TESTING` |
 | `status` | 쉼표로 구분된 상태 목록입니다. 포함된 경우 응답은 현재 상태가 나열된 데이터 세트 만료와 일치합니다. | `status=pending,cancelled` |
 | `ttlId` | 만료 요청을 해당 ID와 일치시킵니다. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
-| `updatedDate` / `updatedToDate` / `updatedFromDate` | 좋아요 `createdDate` / `createdFromDate` / `createdToDate`를 조정할 때 반드시 필요합니다. 하지만 은 생성 시간 대신 데이터 세트 만료의 업데이트 시간과 일치합니다.<br><br>만료는 작성, 취소 또는 실행 시기를 포함하여 모든 편집 시 업데이트된 것으로 간주됩니다. | `updatedDate=2022-01-01` |
+| `updatedDate`/ / `updatedToDate``updatedFromDate` | 좋아요 `createdDate` / `createdFromDate` / `createdToDate`를 조정할 때 반드시 필요합니다. 하지만 은 생성 시간 대신 데이터 세트 만료의 업데이트 시간과 일치합니다.<br><br>만료는 생성, 취소 또는 실행될 때를 포함하여 모든 편집 시 업데이트된 것으로 간주됩니다. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
 
