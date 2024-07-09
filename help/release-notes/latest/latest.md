@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2024년 6월
 description: Adobe Experience Platform의 2024년 6월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: af27ca20b7d611bb6f6b13b57dfc2df1f643a0b6
+source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
 workflow-type: tm+mt
 source-wordcount: '1357'
 ht-degree: 18%
@@ -38,7 +38,7 @@ Adobe Experience Platform의 AI Assistant는 Adobe 애플리케이션에서 워�
 | --- | --- |
 | Experience Platform의 AI 지원 | 이제 Experience Platform에서 AI Assistant를 사용할 수 있습니다. AI Assistant는 Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer 및 Customer Journey Analytics을 지원합니다. <br> ![Experience Platform의 AI 지원 .](../2024/assets/june/ai-assistant-full.png "Experience Platform의 AI 지원 ."){width="100" zoomable="yes"} <br> 이 기능에 대한 자세한 내용은 [AI Assistant UI 안내서](../../ai-assistant/ui-guide.md). |
 | 제품 지식 질문 지원 | [제품 지식](../../ai-assistant/home.md#product-knowledge) 는 Experience League 설명서에 기반을 둔 개념과 주제로, 뾰족한 학습, 개방형 검색 및 문제 해결에 사용할 수 있습니다. 다음과 같은 AI Assistant 제품 지식 질문을 할 수 있습니다. <ul><li>유사 대상은 무엇입니까?</li><li>프로필 풍부성은 어떻게 계산됩니까?</li><li> 데이터가 수집된 후 프로필 활성화 스키마를 삭제할 수 있습니까?</li></ul> |
-| [!BADGE 베타]운영 통찰력 질문에 대한 {type=Informative} 지원 | [Operational insights](../../ai-assistant/home.md#operational-insights) 카운트, 조회 및 계보 영향을 포함한 메타데이터 오브젝트에 대해 AI Assistant가 생성하는 답변입니다. Operational insights는 샌드박스 내의 데이터를 보지 않습니다. 다음과 같은 AI Assistant 운영 인사이트 질문을 할 수 있습니다. <ul><li>활성 상태인 대상은 무엇입니까?</li><li>보유한 데이터 세트는 몇 개입니까?</li><li>라이브 여정에 사용되는 대상자를 나열합니다.</li></ul> Operational Insights 는 속성, 대상, 데이터 흐름, 데이터 세트, 대상, 여정, 스키마 및 소스 도메인에서 지원됩니다. |
+| [!BADGE Beta]운영 통찰력 질문에 대한 {type=Informative} 지원 | [Operational insights](../../ai-assistant/home.md#operational-insights) 카운트, 조회 및 계보 영향을 포함한 메타데이터 오브젝트에 대해 AI Assistant가 생성하는 답변입니다. Operational insights는 샌드박스 내의 데이터를 보지 않습니다. 다음과 같은 AI Assistant 운영 인사이트 질문을 할 수 있습니다. <ul><li>활성 상태인 대상은 무엇입니까?</li><li>보유한 데이터 세트는 몇 개입니까?</li><li>라이브 여정에 사용되는 대상자를 나열합니다.</li></ul> Operational Insights 는 속성, 대상, 데이터 흐름, 데이터 세트, 대상, 여정, 스키마 및 소스 도메인에서 지원됩니다. |
 | AI Assistant 액세스 | Experience Platform, Real-Time CDP 및 Journey Optimizer용 AI 도우미에 액세스하려면 다음을 포함하는 역할에 추가되어야 합니다. **AI Assistant 활성화** 및 **Operational Insights 보기** 사용 권한. 자세한 내용은 [기능 액세스 안내서](../../ai-assistant/access.md). 다음에 대한 Admin Console을 사용해야 합니다. [Customer Journey Analytics에서 액세스](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant?lang=en#feature-access). |
 
 AI Assistant에 대한 자세한 내용은 [AI Assistant 개요](../../ai-assistant/home.md).
@@ -72,7 +72,7 @@ JWT 인증 방법을 사용하는 기존 API 통합은 2025년 1월 1일까지 �
 | 기능 | 설명 |
 | ----------- | ----------- |
 | 외부 대상을 내보내기 위한 임시 내보내기 API의 개선 사항 | 이제 임시 내보내기 API를 사용하여 외부(사용자 지정 업로드) 대상을 내보낼 수 있습니다. [자세히 보기](/help/destinations/api/ad-hoc-activation-api.md) . |
-| (Beta) 내보내기 배열 지원의 베타 단계에서 지원되는 추가 함수 | 이전에는 대상을 파일 기반 대상으로 활성화하고 계산된 필드 사용을 선택할 때 데이터 준비를 통해 사용할 수 있는 대상 하위 집합을 사용하는 것으로 제한되었습니다. 이제 이러한 제한이 완화되었으며 고객은 대상을 파일 기반 대상으로 내보낼 때 데이터 준비를 통해 사용할 수 있는 모든 기능에 액세스할 수 있습니다. [자세히 보기](/help/destinations/ui/export-arrays-calculated-fields.md#supported-functions). |
+| (Beta) 내보내기 어레이 지원의 베타 단계에서 지원되는 추가 기능 | 이전에는 대상을 파일 기반 대상으로 활성화하고 계산된 필드 사용을 선택할 때 데이터 준비를 통해 사용할 수 있는 대상 하위 집합을 사용하는 것으로 제한되었습니다. 이제 이러한 제한이 완화되었으며 고객은 대상을 파일 기반 대상으로 내보낼 때 데이터 준비를 통해 사용할 수 있는 모든 기능에 액세스할 수 있습니다. [자세히 보기](/help/destinations/ui/export-arrays-calculated-fields.md#supported-functions). |
 | 매핑 단계에서 데이터가 있는 필드만 표시 | 이제 프로필 속성을 대상에 매핑할 때 모든 프로필 속성 간에 전환하거나 데이터가 포함된 프로필 속성만 전환할 수 있습니다. 기본적으로 데이터가 있는 필드만 표시됩니다. 다음에 대한 활성화 안내서 참조: [일괄 처리](../../destinations/ui/activate-batch-profile-destinations.md#mapping) 및 [스트리밍](../../destinations/ui/activate-segment-streaming-destinations.md#mapping) 대상 을 참조하십시오. |
 
 {style="table-layout:auto"}
@@ -87,7 +87,7 @@ Adobe Experience Platform Identity Service를 사용하여 디바이스와 시�
 
 | 기능 | 설명 |
 | --- | --- |
-| [!BADGE 베타]{type=Informative} ID 그래프 연결 규칙 | Beta 프로그램 참가자는 ID 그래프 연결 규칙을 사용하여 &quot;공유 장치&quot; 및 기타 그래프 축소 시나리오를 방지하여 시스템에서 개인 엔티티 표현을 보장할 수 있습니다. 이 목표를 달성하기 위해 Beta 프로그램 참가자는 개발 샌드박스 환경의 세 가지 기능에 액세스할 수 있습니다. <ul><li>그래프 알고리즘의 작동 방식을 이해하는 그래프 시뮬레이션 도구입니다.</li><li>고유한 네임스페이스 및 네임스페이스 우선 순위를 구성하는 ID 설정 화면입니다.</li><li>수집된 그래프에 대한 통찰력을 얻기 위한 ID 대시보드.</li></ul> 또한 Beta 프로그램에는 프로필 동작 안정성 개선이 포함됩니다. 자세한 내용은 [id 그래프 연결 규칙](../../identity-service/identity-graph-linking-rules/overview.md) 설명서를 참조하십시오. |
+| [!BADGE Beta]{type=Informative} ID 그래프 연결 규칙 | Beta 프로그램 참가자는 ID 그래프 연결 규칙을 사용하여 &quot;공유 장치&quot; 및 기타 그래프 축소 시나리오를 방지하여 시스템에서 개인 엔티티 표현을 보장할 수 있습니다. 이 목표를 달성하기 위해 Beta 프로그램 참가자는 개발 샌드박스 환경의 세 가지 기능에 액세스할 수 있습니다. <ul><li>그래프 알고리즘의 작동 방식을 이해하는 그래프 시뮬레이션 도구입니다.</li><li>고유한 네임스페이스 및 네임스페이스 우선 순위를 구성하는 ID 설정 화면입니다.</li><li>수집된 그래프에 대한 통찰력을 얻기 위한 ID 대시보드.</li></ul> 또한 Beta 프로그램에는 프로필 동작 안정성 개선이 포함됩니다. 자세한 내용은 [id 그래프 연결 규칙](../../identity-service/identity-graph-linking-rules/overview.md) 설명서를 참조하십시오. |
 
 {style="table-layout:auto"}
 

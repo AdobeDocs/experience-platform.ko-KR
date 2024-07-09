@@ -1,11 +1,9 @@
 ---
 title: Merkury Enterprise ID 대상
 description: Adobe Experience Platform UI를 사용하여 Merkury Enterprise ID 대상 연결을 만드는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
-source-git-commit: 66a0a085e696dbe13d0368da395f655c7ca01a97
+source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1469'
 ht-degree: 2%
 
 ---
@@ -15,33 +13,33 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->대상 커넥터 및 설명서 페이지는 Merkury 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 Merkury 계정 담당자에게 문의하십시오.
+>대상 커넥터 및 설명서 페이지는 [!DNL Merkury] 팀. 문의 사항이나 업데이트 요청이 있으면 다음으로 문의하십시오. [!DNL Merkury] 계정 담당자.
 
 ## 개요
 
-Merkury Enterprise Identity 대상을 사용하여 보다 정확하고 포괄적이며 통찰력 있는 소비자 프로필을 빌드합니다. 향상된 프로필 데이터를 통해 마케터는 더 나은 통찰력, 세그먼트 및 모델을 제공할 수 있으므로 보다 정확한 타겟팅 및 예측 모델링을 수행할 수 있습니다.
+사용 [!DNL Merkury Enterprise Identity] 보다 정확하고 포괄적이며 통찰력 있는 소비자 프로필을 구축할 대상. 향상된 프로필 데이터를 통해 마케터는 더 나은 통찰력, 세그먼트 및 모델을 제공할 수 있으므로 보다 정확한 타겟팅 및 예측 모델링을 수행할 수 있습니다.
 
 ![수집 및 활성화를 포함하여 Merkury와 Experience Platform 간의 상호 연결을 보여 주는 다이어그램](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
 
-이 설명서 페이지의 단계에 따라 Adobe Experience Platform 사용자 인터페이스를 사용하여 Merkury ID 대상 연결을 만들고 식별 및 강화를 위한 대상을 활성화합니다.
+이 설명서 페이지의 단계에 따라 [!DNL Merkury Identity] 대상 연결 및 Adobe Experience Platform 사용자 인터페이스를 사용한 식별 및 데이터 보강 대상 활성화.
 
 >[!NOTE]
 >
->Merkury Connect 계정으로 미디어 대상에 대상을 활성화하려는 경우 Merkury Connections 대상을 대신 사용하십시오.
+>를 사용하여 미디어 대상에 대한 대상자를 활성화하려는 경우 [!DNL Merkury Connect] 계정, 사용 [!DNL Merkury Connections] 대상 을 사용하십시오.
 
 ![Experience Platform 대상 카탈로그에서 강조 표시된 Merkury Enterprise Identity 대상 카드입니다.](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
 
 ## 사용 사례
 
-Merkury Enterprise Identity Destination은 다음과 같은 Merkury 기능에 대한 소비자 PII를 안전하게 전송하는 기능을 제공합니다.
+다음 [!DNL Merkury Enterprise Identity] 대상 은 다음에 대한 소비자 PII를 안전하게 전송하는 기능을 제공합니다. [!DNL Merkury] 기능:
 
-* **데이터 품질**: 데이터 위생 및 표준화로 소비자 프로필 데이터 품질을 개선합니다. Merkury에는 미국 우편 위생 및 이동 식별 기능이 포함되어 있어 가장 고급 DM 마케팅 사용 사례를 지원합니다.
-* **ID 확인**: Merkury Individual 및 Household ID로 알려 고객에 대한 정확하고 포괄적인 단일 보기를 구축합니다. Merkury ID는 2억 6,800만 명 이상의 사용자에 대한 Merkury의 포괄적인 미국 성인 소비자 ID 그래프에서 제공하는 심층적인 프로필 연결 기능을 제공합니다.
-* **데이터 보강**: Merkury 데이터를 통한 더 나은 통찰력과 개인화를 촉진합니다. Merkury Data에는 인구 통계학적, 라이프스타일, 재무, 생활 이벤트 및 Merkury Data Suite의 구매 데이터에 이르기까지 사용 가능한 10,000개 이상의 데이터 속성이 포함되어 있습니다.
+* **데이터 품질**: 데이터 위생 및 표준화로 소비자 프로필 데이터 품질을 개선합니다. [!DNL Merkury] 에는 미국 우편 위생 및 이동 식별이 포함되어 있어 가장 고급 DM 마케팅 사용 사례를 지원합니다.
+* **ID 확인**: 의 안내에 따라 고객에 대한 정확하고 포괄적인 단일 보기 구축 [!DNL Merkury] 개인 및 세대 ID. Merkury ID는에서 제공하는 심층적인 프로필 링크 기능을 제공합니다. [!DNL Merkury]의 포괄적인 미국 성인 소비자 정체성 그래프는 2억 6천 8백만 명 이상입니다.
+* **데이터 보강**: 를 통해 더 나은 통찰력과 개인화 촉진 [!DNL Merkury Data]. [!DNL Merkury Data] 에는 인구 통계학적, 라이프스타일, 재무, 생활 이벤트 및 구매 데이터와 같은 10,000개 이상의 데이터 속성이 포함되어 있습니다. [!DNL Merkury Data Suite].
 
 >[!NOTE]
 >
->이러한 사용 사례는 대상 및 소스 커넥터의 조합을 통해 실행됩니다. 고객은 이 대상 커넥터를 사용하여 데이터 보강 목적으로 기존 고객 레코드를 내보내는 것부터 시작합니다. Merkury의 서비스는 파일을 검색하고 검색하며 Merkury의 데이터로 보강하고 파일을 생성합니다. 그런 다음 해당 Merkury Source 커넥터 소스 카드를 사용하여 하이드레이션된 고객 프로필을 다시 Adobe Real-Time CDP으로 수집합니다.
+>이러한 사용 사례는 대상 및 소스 커넥터의 조합을 통해 실행됩니다. 고객은 이 대상 커넥터를 사용하여 데이터 보강 목적으로 기존 고객 레코드를 내보내는 것부터 시작합니다. [!DNL Merkury]의 서비스는 파일을 검색하고 다음을 통해 보강합니다. [!DNL Merkury]의 데이터를 참조하고 파일을 생성합니다. 그런 다음 고객은 해당 [!DNL Merkury] Source 커넥터 소스 카드를 사용하여 하이드레이션된 고객 프로필을 다시 Adobe Real-Time CDP으로 수집합니다.
 
 ## 전제 조건
 
@@ -54,7 +52,7 @@ Merkury Enterprise Identity Destination은 다음과 같은 Merkury 기능에 �
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| GAID | Google 광고 ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
+| GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
 | ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 에 대한 다음 문서를 참조하십시오. [ECID](/help/identity-service/features/ecid.md) 추가 정보. |
 | phone_sha256 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원됩니다. 소스 필드에 해시되지 않은 속성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션, 보유 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
@@ -77,11 +75,9 @@ Merkury Enterprise Identity Destination은 다음과 같은 Merkury 기능에 �
 ## 내보내기 유형 및 빈도
 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
-
-|**Audience**|**Supported**|**Description origin**|            
-|---|---|---|      
-|Segmentation Service|✓|Audiences generated through the Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
-Custom uploads|X|Audiences [[imported]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.
+|**대상자**|**지원됨**|**설명 원본**|\
+|—|—|\
+✓ |세그먼테이션 서비스|Experience Platform을 통해 생성된 대상 [[세그먼테이션 서비스]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).| 사용자 지정 업로드|X|대상 [[가져옴]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) csv 파일에서 Experience Platform으로 변환했습니다.
 
 {style="table-layout:auto"}
 
@@ -124,7 +120,7 @@ Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대
 
 >[!NOTE]
 >
->CSV 옵션을 선택하면 구분 기호, 따옴표 문자, 이스케이프 문자, 빈 값, Null 값, 압축 형식 및 매니페스트 파일 포함 옵션이 표시되므로 머큐리 팀이 계정에 대한 적절한 설정을 확인해야 합니다.
+>CSV 옵션, 구분 기호, 따옴표 문자, 이스케이프 문자, 빈 값, Null 값, 압축 형식 및 매니페스트 파일 포함 옵션을 선택할 때 Merkury 팀에 문의하여 계정에 대한 적절한 설정을 확인하십시오.
 
 ![csv 이미지 옵션](../../assets/catalog/data-partners/merkury-identity/media/image8.png)
 
@@ -145,20 +141,20 @@ Merkury Enterprise ID 대상을 사용하여 이미 정의된 계정이 목록 �
 
 >[!IMPORTANT]
 >
->* 데이터를 활성화하려면 대상 보기, 대상 활성화, 프로필 보기 및 세그먼트 보기 액세스 제어 권한이 필요합니다. 액세스 제어 개요를 읽거나 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
->* ID를 내보내려면 ID 그래프 보기 액세스 제어 권한이 필요합니다.
+>* 데이터를 활성화하려면 **대상 보기**, **대상 활성화**, **프로필 보기**, 및 **세그먼트 보기** 액세스 제어 권한. 액세스 제어 개요를 읽거나 제품 관리자에게 문의하여 필요한 권한을 얻으십시오.
+>* ID를 내보내려면 **ID 그래프 보기** 액세스 제어 권한.
 
 읽기 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
 ## 매핑 제안
 
-Merkury 측에서 파일을 올바르게 처리하려면 이름 및 주소 요소가 필요합니다. 모든 요소가 필요한 것은 아니지만 가능한 한 많이 제공하면 성공적인 일치를 수행하는 데 도움이 됩니다.
+의 올바른 파일 처리 [!DNL Merkury] side에는 이름 및 주소 요소가 필요합니다. 모든 요소가 필요한 것은 아니지만 가능한 한 많이 제공하면 성공적인 일치를 수행하는 데 도움이 됩니다.
 
-매핑 제안은 고객이 프로필 속성을 매핑할 수 있는 머큐리 처리에서 사용하는 대상 측의 속성을 나열하는 아래 표에 제공됩니다. 모든 요소가 필요한 것은 아니므로 이러한 요소를 제안으로 취급하십시오. 소스 값은 계정의 필요에 따라 달라집니다.
+매핑 제안은에서 사용하는 대상 측의 속성을 나열하는 아래 표에 제공됩니다. [!DNL Merkury] 고객이 프로필 속성을 매핑할 수 있도록 처리하는 중입니다. 모든 요소가 필요한 것은 아니므로 이러한 요소를 제안으로 취급하십시오. 소스 값은 계정의 필요에 따라 달라집니다.
 
-| 대상 필드 | 소스 설명 |
+| 대상 필드 | Source 설명 |
 |---|---|
-| ID | Merkury Enterprise Identity Resolution Source 커넥터를 통해 Experience Platform에 머큐리 데이터를 매핑하는 데 사용할 ID 필드 |
+| ID | 매핑에 사용할 ID 필드 [!DNL Merkury] 를 통해 Experience Platform 할 데이터 [!DNL Merkury Enterprise Identity] Source 커넥터 |
 | Input_First_Name | 다음 `person.name.firstName` Experience Platform의 값입니다. |
 | Input_Last_Name | 다음 `person.name.lastName` Experience Platform의 값입니다. |
 | Input_Address_Line_1 | 다음 `mailingAddress.street` Experience Platform의 값입니다. |
@@ -181,4 +177,4 @@ Merkury 측에서 파일을 올바르게 처리하려면 이름 및 주소 요�
 
 ## 다음 단계
 
-이 자습서를 따라 Experience Platform에서 Merkury 관리 S3 위치로 프로필 데이터를 내보내는 데이터 흐름을 만들었습니다. 그런 다음 처리를 설정할 수 있도록 Merkury 담당자에게 계정 이름, 파일 이름 및 버킷 경로를 문의해야 합니다.
+이 자습서를 따라 Experience Platform에서 로 프로필 데이터를 내보내는 데이터 흐름을 만들었습니다. [!DNL Merkury] 관리되는 S3 위치입니다. 다음으로, 다음 연락처로 문의해야 합니다. [!DNL Merkury] 처리 설정이 가능하도록 계정 이름, 파일 이름 및 버킷 경로를 가진 대표.
