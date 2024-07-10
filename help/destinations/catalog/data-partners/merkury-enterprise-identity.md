@@ -75,9 +75,11 @@ ht-degree: 2%
 ## 내보내기 유형 및 빈도
 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
-|**대상자**|**지원됨**|**설명 원본**|\
-|—|—|\
-✓ |세그먼테이션 서비스|Experience Platform을 통해 생성된 대상 [[세그먼테이션 서비스]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).| 사용자 지정 업로드|X|대상 [[가져옴]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) csv 파일에서 Experience Platform으로 변환했습니다.
+
+|**대상자**|**지원됨**|**설명 원본**|
+|---|---|---|
+|Segmentation Service|✓|Audiences generated through the Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
+|Custom uploads|X|Audiences [[imported]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.|
 
 {style="table-layout:auto"}
 
