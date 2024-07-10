@@ -1,15 +1,15 @@
 ---
-title: (베타) [!DNL Google Ad Manager 360] 연결
+title: (Beta) [!DNL Google Ad Manager 360] 연결
 description: Google Ad Manager 360은 게시자에게 웹 사이트, 비디오 및 모바일 앱에서의 광고 표시를 관리할 수 있는 수단을 제공하는 Google의 광고 제공 플랫폼입니다.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 153b827d385b4a3f86a2432bf533ec543f12ea4e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1206'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# (베타) [!DNL Google Ad Manager 360] 연결
+# (Beta) [!DNL Google Ad Manager 360] 연결
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->이 대상은 현재 베타 버전이며 제한된 수의 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 [!DNL Google Ad Manager 360] 연결, Adobe 담당자에게 연락하여 [!DNL organization ID].
+>이 대상은 현재 Beta에 있으며 제한된 수의 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 [!DNL Google Ad Manager 360] 연결, Adobe 담당자에게 연락하여 [!DNL organization ID].
 
 다음 [!DNL Google Ad Manager 360] 대상 내보내기 [!DNL CSV] 에 있는 파일 [!DNL Google Cloud Storage] 버킷. 를 내보내면 [!DNL CSV] 파일을 로 가져와야 합니다 [!DNL Google Ad Manager 360] 계정입니다.
 
@@ -52,9 +52,9 @@ ht-degree: 0%
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 대상에 인증하려면 필수 필드를 입력한 다음 을(를) 선택합니다. **[!UICONTROL 대상에 연결]**.
 
@@ -104,8 +104,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="대상 이름에 대상 ID 추가"
->abstract="이 대상의 대상 이름에 다음과 같이 Experience Platform의 대상 ID를 포함하려면 이 옵션을 선택하십시오. `Audience Name (Audience ID)`"
+>title="대상자 이름에 대상자 ID 추가"
+>abstract="이 대상에서 대상자 이름에 다음과 같이 Experience Platform의 대상자 ID가 포함되도록 하려면 이 옵션을 선택하십시오. `Audience Name (Audience ID)`"
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
@@ -125,7 +125,7 @@ ht-degree: 0%
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

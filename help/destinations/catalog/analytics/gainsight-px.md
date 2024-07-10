@@ -2,13 +2,13 @@
 title: Gainsight PX 연결
 description: Gainsight PX 대상을 사용하여 Gainsight PX 플랫폼으로 세그멘테이션 정보를 보냅니다.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '890'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
-
 
 # Gainsight PX 연결 {#gainsight-px}
 
@@ -51,7 +51,7 @@ Gainsight PX는 아래 표에 설명된 ID 활성화를 지원합니다. 자세�
 | 대상자 원본 | 지원됨 | 설명 |
 |---|---|---|
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | X | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | X | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 

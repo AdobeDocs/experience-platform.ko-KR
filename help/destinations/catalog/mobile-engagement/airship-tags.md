@@ -3,7 +3,7 @@ keywords: 비행선 태그;비행선 목적지
 title: 비행선 태그 연결
 description: Airship 내에서 타깃팅할 대상 태그로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '970'
 ht-degree: 2%
@@ -41,9 +41,9 @@ Adobe Experience Platform 대상자를 다음으로 보내기 전에 [!DNL Airsh
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -132,7 +132,7 @@ Adobe Experience Platform의 대상자 개념은 와 유사합니다 [태그](ht
 
 ## 매핑 고려 사항 {#mapping-considerations}
 
-[!DNL Airship] 태그는 장치 인스턴스를 나타내는 채널(예: iPhone) 또는 사용자의 모든 장치를 고객 ID와 같은 공통 식별자에 매핑하는 명명된 사용자에 설정할 수 있습니다. 스키마에 기본 ID로 일반 텍스트(해시되지 않은) 이메일 주소가 있는 경우 **[!UICONTROL 소스 속성]** 및 을(를) 다음에 매핑 [!DNL Airship] 아래의 오른쪽 열에 이름이 지정된 사용자 **[!UICONTROL 타겟 ID]**&#x200B;아래에 표시된 대로 를 클릭합니다.
+[!DNL Airship] 태그는 장치 인스턴스를 나타내는 채널(예: iPhone) 또는 사용자의 모든 장치를 고객 ID와 같은 공통 식별자에 매핑하는 명명된 사용자에 설정할 수 있습니다. 스키마에 기본 ID로 일반 텍스트(해시되지 않은) 이메일 주소가 있는 경우 **[!UICONTROL Source 속성]** 및 을(를) 다음에 매핑 [!DNL Airship] 아래의 오른쪽 열에 이름이 지정된 사용자 **[!UICONTROL 타겟 ID]**&#x200B;아래에 표시된 대로 를 클릭합니다.
 
 ![명명된 사용자 매핑](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 

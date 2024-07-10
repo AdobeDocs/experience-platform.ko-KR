@@ -3,7 +3,7 @@ keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin;
 title: Linkedin 일치하는 대상 연결
 description: 해시된 이메일을 기반으로 대상 타겟팅, 개인화 및 억제에 대한 LinkedIn 캠페인용 프로필을 활성화합니다.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 4%
@@ -30,7 +30,7 @@ ht-degree: 4%
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| GAID | Google 광고 ID | 소스 ID가 GAID 네임스페이스인 경우 이 대상 ID를 선택합니다. |
+| GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 이 대상 ID를 선택합니다. |
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 이 대상 ID를 선택합니다. |
 | email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 의 지침을 따르십시오. [ID 일치 요구 사항](#id-matching-requirements-id-matching-requirements) 및 에서는 각각 일반 텍스트와 해시된 이메일에 적절한 네임스페이스를 사용합니다. 소스 필드에 해시되지 않은 속성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션, 보유 [!DNL Platform] 활성화 시 데이터를 자동으로 해시합니다. |
 
@@ -41,9 +41,9 @@ ht-degree: 4%
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ ht-degree: 4%
 
 을(를) 사용하기 전에 [!UICONTROL LinkedIn 일치 대상] 대상, 다음을 확인하십시오. [!DNL LinkedIn Campaign Manager] 계정이 다음을 보유함: [!DNL Creative Manager] 권한 수준 이상입니다.
 
-을(를) 편집하는 방법에 대해 알아보려면 [!DNL LinkedIn Campaign Manager] 사용자 권한, 참조 [광고 계정에 대한 사용자 권한 추가, 편집 및 제거](https://www.linkedin.com/help/lms/answer/5753) linkedIn 설명서에서 확인할 수 있습니다.
+을(를) 편집하는 방법에 대해 알아보려면 [!DNL LinkedIn Campaign Manager] 사용자 권한, 참조 [Advertising 계정에 대한 사용자 권한 추가, 편집 및 제거](https://www.linkedin.com/help/lms/answer/5753) linkedIn 설명서에서 확인할 수 있습니다.
 
 ## ID 일치 요구 사항 {#id-matching-requirements}
 

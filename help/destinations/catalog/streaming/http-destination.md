@@ -4,10 +4,10 @@ title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 서드파티 HTTP 끝점으로 전송하여 자체 분석을 실행하거나 Experience Platform 외부로 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: e9ed96a15d6bba16165c67e53467b7f51a866014
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '2639'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -34,9 +34,9 @@ HTTP 끝점은 고객의 자체 시스템 또는 타사 솔루션이 될 수 있
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -121,7 +121,7 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_clientcredentialstype"
 >title="클라이언트 자격 증명 유형"
->abstract="선택 **본문이 인코딩됨** 클라이언트 ID 및 클라이언트 암호를 요청 본문에 포함하거나 **기본 인증** 인증 헤더에 클라이언트 ID 및 클라이언트 암호를 포함합니다. 설명서에서 예제를 참조하십시오."
+>abstract="**인코딩된 본문 형식**&#x200B;을 선택하여 요청 본문에 클라이언트 ID와 클라이언트 암호를 포함하거나, **기본 인증**&#x200B;을 선택하여 인증 헤더에 클라이언트 ID와 클라이언트 암호를 포함할 수 있습니다. 설명서의 예 보기"
 
 #### 전달자 토큰 인증 {#bearer-token-authentication}
 
@@ -169,27 +169,27 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
 >title="헤더"
->abstract="대상 호출에 포함할 사용자 지정 헤더를 다음 형식으로 입력합니다. `header1:value1,header2:value2,...headerN:valueN`"
+>abstract="이 형식(예: `header1:value1,header2:value2,...headerN:valueN`)에 따라 대상 호출에 포함될 사용자 정의 헤더를 입력합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
->title="HTTP 끝점"
->abstract="프로필 데이터를 보낼 HTTP 끝점의 URL입니다."
+>title="HTTP 엔드포인트"
+>abstract="프로필 데이터를 전송할 HTTP 엔드포인트의 URL입니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="세그먼트 이름 포함"
->abstract="데이터 내보내기에 내보낼 대상자의 이름을 포함시키려면 전환합니다. 이 옵션을 선택한 상태에서 데이터 내보내기 예제에 대한 설명서를 봅니다."
+>abstract="데이터 내보내기에 내보내는 대상자 이름이 포함되도록 하려면 전환하십시오. 이 옵션을 선택한 경우 데이터 내보내기 예는 설명서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="세그먼트 타임스탬프 포함"
->abstract="대상자를 만들고 업데이트할 때 UNIX 타임스탬프와, 대상자가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 데이터 내보내기에 포함하도록 하려면 전환합니다. 이 옵션을 선택한 상태에서 데이터 내보내기 예제에 대한 설명서를 봅니다."
+>abstract="대상자를 생성 및 업데이트하거나 대상자를 대상에 매핑하여 활성화하는 경우 데이터 내보내기에 Unix 타임스탬프가 포함되도록 하려면 전환하십시오. 이 옵션을 선택한 경우 데이터 내보내기 예는 설명서를 참조하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
->title="쿼리 매개 변수"
->abstract="필요한 경우 쿼리 매개 변수를 HTTP 끝점 URL에 추가할 수 있습니다. 다음과 같이 사용하는 쿼리 매개 변수의 형식을 지정합니다. `parameter1=value&parameter2=value`."
+>title="쿼리 매개변수"
+>abstract="필요한 경우 쿼리 매개변수를 HTTP 엔드포인트의 URL에 추가할 수 있습니다. 사용하는 쿼리 매개변수 형식(예: `parameter1=value&parameter2=value`)을 지정합니다."
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
@@ -199,7 +199,7 @@ curl --location --request POST 'https://some-api.com/token' \
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명을 입력합니다.
 * **[!UICONTROL 헤더]**: 대상 호출에 포함할 사용자 지정 헤더를 다음 형식으로 입력합니다. `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL HTTP 끝점]**: 프로필 데이터를 전송할 HTTP 끝점의 URL입니다.
-* **[!UICONTROL 쿼리 매개 변수]**: 원할 경우 HTTP 끝점 URL에 쿼리 매개 변수를 추가할 수 있습니다. 다음과 같이 사용하는 쿼리 매개 변수의 형식을 지정합니다. `parameter1=value&parameter2=value`.
+* **[!UICONTROL 쿼리 매개 변수]**: 원할 경우 HTTP 끝점 URL에 쿼리 매개 변수를 추가할 수 있습니다. 사용하는 쿼리 매개변수 형식(예: `parameter1=value&parameter2=value`)을 지정합니다.
 * **[!UICONTROL 세그먼트 이름 포함]**: 데이터 내보내기에 내보낼 대상자의 이름을 포함하려면 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 다음을 참조하십시오. [내보낸 데이터](#exported-data) 추가 아래에 섹션을 추가했습니다.
 * **[!UICONTROL 세그먼트 타임스탬프 포함]**: 대상자를 만들고 업데이트할 때 UNIX 타임스탬프와, 대상자가 활성화 대상에 매핑될 때 UNIX 타임스탬프를 데이터 내보내기에 포함하도록 하려면 전환합니다. 이 옵션을 선택한 데이터 내보내기의 예는 다음을 참조하십시오. [내보낸 데이터](#exported-data) 추가 아래에 섹션을 추가했습니다.
 
@@ -209,7 +209,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

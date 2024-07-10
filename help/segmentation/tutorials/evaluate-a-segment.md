@@ -4,10 +4,10 @@ title: 세그먼트 결과 평가 및 액세스
 type: Tutorial
 description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트 정의를 평가하고 세그멘테이션 결과에 액세스하는 방법에 대해 알아보려면 이 자습서를 따르십시오.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1599'
-ht-degree: 2%
+source-wordcount: '1594'
+ht-degree: 1%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 2%
 
 [예약된 평가](#scheduled-evaluation) (&#39;예약된 세그먼테이션&#39;이라고도 함) 특정 시간에 내보내기 작업 실행을 위한 반복 일정을 만들 수 있지만 [온디맨드 평가](#on-demand-evaluation) 에는 대상자를 즉시 빌드하기 위한 세그먼트 작업 생성이 포함됩니다. 각 단계에 대한 단계는 아래에 요약되어 있습니다.
 
-아직 완료하지 않은 경우 [segmentation API를 사용하여 세그먼트 정의 만들기](./create-a-segment.md) 튜토리얼 또는 을 사용하여 세그먼트 정의를 만들었습니다. [세그먼트 빌더](../ui/overview.md), 이 자습서를 계속 진행하기 전에 그렇게 하십시오.
+아직 완료하지 않은 경우 [segmentation API를 사용하여 세그먼트 정의 만들기](./create-a-segment.md) 튜토리얼 또는 을 사용하여 세그먼트 정의를 만들었습니다. [세그먼트 빌더](../ui/segment-builder.md), 이 자습서를 계속 진행하기 전에 그렇게 하십시오.
 
 ## 예약된 평가 {#scheduled-evaluation}
 

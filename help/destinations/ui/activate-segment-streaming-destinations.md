@@ -3,7 +3,7 @@ title: 스트리밍 대상으로 대상 데이터 활성화
 type: Tutorial
 description: 스트리밍 대상에 매핑하여 Adobe Experience Platform에 있는 대상을 활성화하는 방법을 알아봅니다.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 6%
@@ -52,7 +52,7 @@ ht-degree: 6%
 출처에 따라 여러 유형의 대상 중에서 선택할 수 있습니다.
 
 * **[!UICONTROL 세분화 서비스]**: 세분화 서비스에 의해 Experience Platform 내에서 생성된 대상자. 다음을 참조하십시오. [세그멘테이션 설명서](../../segmentation/ui/overview.md) 을 참조하십시오.
-* **[!UICONTROL 사용자 정의 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드된 대상자 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL 사용자 정의 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드된 대상자 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience).
 * 다른 Adobe 솔루션에서 가져온 다른 유형의 대상, 예: [!DNL Audience Manager].
 
 ![대상자 선택 단계에서 강조 표시된 여러 대상자입니다.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
@@ -73,7 +73,7 @@ ht-degree: 6%
 
    ![강조 표시된 새 매핑 컨트롤을 추가합니다.](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
-1. 오른쪽 화살표를 선택합니다. **[!UICONTROL 소스 필드]** 입력.
+1. 오른쪽 화살표를 선택합니다. **[!UICONTROL Source 필드]** 입력.
 
    ![소스 필드 컨트롤을 강조 표시합니다.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 

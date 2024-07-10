@@ -1,9 +1,10 @@
 ---
-title: Acxiom 잠재 고객 억제
+title: Acxiom Prospect-Suppression
 description: Acxiom 대상에 자사 대상을 내보내고 Acxiom이 알려지거나 전환된 고객을 억제하도록 합니다. 그런 다음 Acxiom 소스 커넥터를 사용하여 알려진 고객 또는 전환된 고객이 제거된 Acxiom의 잠재 목록을 수집하고 활성화합니다.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1466'
 ht-degree: 2%
@@ -58,7 +59,7 @@ Acxiom의 서비스는 파일을 검색하여 추가 선택 기준과 함께 사
 | 대상자 원본 | 지원됨 | 설명 |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | x | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | x | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -143,14 +144,14 @@ Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대
 
 처리에는 이름 및 주소 요소가 필요하지만, 모든 요소가 필요한 것은 아닙니다. 가능한 한 많이 제공하면 성공적인 일치에 도움이 됩니다.  매핑 제안은 고객이 프로필 속성을 매핑할 수 있는 Acxiom 처리에 사용되는 대상 측의 속성을 나열하는 아래 표에 제공됩니다.  모든 요소가 필요한 것은 아니며 소스 값은 계정의 요구 사항에 따라 달라지므로 이는 제안으로 취급해야 합니다.
 
-| 대상 필드 | 소스 설명 |
+| 대상 필드 | Source 설명 |
 |--------------|-------------------------------------------------------------|
 | 이름 | 다음 `person.name.fullName` Experience Platform의 값입니다. |
 | 이름 | 다음 `person.name.firstName` Experience Platform의 값입니다. |
 | 성 | 다음 `person.name.lastName` Experience Platform의 값입니다. |
 | address1 | 다음 `mailingAddress.street1` Experience Platform의 값입니다. |
 | address2 | 다음 `mailingAddress.street2` Experience Platform의 값입니다. |
-| city | 다음 `mailingAddress.city` Experience Platform의 값입니다. |
+| 도시 | 다음 `mailingAddress.city` Experience Platform의 값입니다. |
 | state | 다음 `mailingAddress.state` Experience Platform의 값입니다. |
 | zip | 다음 `mailingAddress.postalCode` Experience Platform의 값입니다. |
 
@@ -164,7 +165,7 @@ Experience Platform 시 버킷에 액세스하려면 다음 자격 증명에 대
 
 제출 전 데이터 흐름을 요약하려면 검토 페이지를 사용하십시오
 
-![검토](../../assets/catalog/data-partner/acxiom/image-destination-review.png)
+![리뷰](../../assets/catalog/data-partner/acxiom/image-destination-review.png)
 
 ## 데이터 내보내기 유효성 검사 {#exported-data}
 

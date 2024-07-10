@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform에 대한 2023년 9월 릴리스 정보입니다.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '2263'
 ht-degree: 24%
@@ -98,7 +98,7 @@ Experience Platform은 소비자 레코드 및 데이터 세트에 대한 프로
 
 | 기능 | 설명 |
 | --- | --- |
-| [!BADGE 베타]{type=Informative} 레코드 삭제(제한된 릴리스) | Adobe Experience Platform의 고급 데이터 수명주기 관리 기능인 자동화된 데이터 세트 만료 및 레코드 삭제 를 통해 고객 약속 및 라이선스 계약을 충족하도록 모든 데이터 저장소에서 데이터 라이프사이클을 관리합니다.<br>자동화된 데이터 세트 만료로 전체 데이터 세트를 삭제하고 데이터 세트를 삭제할 날짜 및 시간을 설정할 수 있습니다.<br>레코드 삭제를 사용하면 기본 ID를 타겟팅하여 개별 소비자 프로필을 삭제할 수 있습니다. UI를 통해 또는 CSV/JSON 파일 업로드를 통해 개별적으로 기본 ID를 제공할 수 있습니다. 다음을 참조하십시오. [레코드 삭제 설명서](../../hygiene/ui/record-delete.md) 추가 정보 |
+| [!BADGE Beta]{type=Informative} 레코드 삭제(제한된 릴리스) | Adobe Experience Platform의 고급 데이터 수명주기 관리 기능인 자동화된 데이터 세트 만료 및 레코드 삭제 를 통해 고객 약속 및 라이선스 계약을 충족하도록 모든 데이터 저장소에서 데이터 라이프사이클을 관리합니다.<br>자동화된 데이터 세트 만료로 전체 데이터 세트를 삭제하고 데이터 세트를 삭제할 날짜 및 시간을 설정할 수 있습니다.<br>레코드 삭제를 사용하면 기본 ID를 타겟팅하여 개별 소비자 프로필을 삭제할 수 있습니다. UI를 통해 또는 CSV/JSON 파일 업로드를 통해 개별적으로 기본 ID를 제공할 수 있습니다. 다음을 참조하십시오. [레코드 삭제 설명서](../../hygiene/ui/record-delete.md) 추가 정보 |
 | 데이터 세트 만료 | 자동화된 데이터 세트 만료로 데이터를 최소화하고 라이선스 계약을 계속 제어할 수 있습니다. 전체 데이터 세트를 삭제하여 데이터 볼륨을 줄이고 데이터 세트를 삭제할 날짜와 시간을 설정합니다. 다음을 참조하십시오. [데이터 세트 만료 설명서](../../hygiene/ui/dataset-expiration.md) 추가 정보. |
 
 {style="table-layout:auto"}
@@ -134,7 +134,7 @@ Add these to release notes as they go out
 | 기능 | 설명 |
 | ----------- | ----------- |
 | Real-Time CDP의 데이터 내보내기 | 다음 [데이터 세트 내보내기](../../destinations/ui/export-datasets.md) 이제 기능을 일반적으로 사용할 수 있습니다. 다음을 참조하십시오 [Experience Platform 앱을 기반으로 내보낼 수 있는 데이터 세트](../../destinations/ui/export-datasets.md#datasets-to-export) 을(를) 구입하고 다음을 확인하십시오. [데이터 세트 내보내기 보호](/help/destinations/guardrails.md#dataset-exports). |
-| (베타) 배열 유형 개체 내보내기 지원 | 기본 값(문자열, int 또는 부울 값) 배열을 클라우드 스토리지 대상에 플랫 스키마 파일로 내보냅니다. 의 기능에 대해 자세히 알아보십시오 [설명서](../../destinations/ui/export-arrays-calculated-fields.md). |
+| (Beta) 배열 유형 개체 내보내기 지원 | 기본 값(문자열, int 또는 부울 값) 배열을 클라우드 스토리지 대상에 플랫 스키마 파일로 내보냅니다. 의 기능에 대해 자세히 알아보십시오 [설명서](../../destinations/ui/export-arrays-calculated-fields.md). |
 | Destination SDK의 동적 드롭다운 선택기 | 이제 Destination SDK을 통해 대상을 만들 때 다음을 사용할 수 있습니다. [동적 드롭다운 선택기](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) 드롭다운 선택기의 필드를 API에서 검색한 값으로 채우기. |
 
 **수정 사항 및 개선 사항** {#destinations-fixes-and-enhancements}
@@ -220,7 +220,7 @@ ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 사용자 정의 가능한 열 | 이제 크기 조정 가능한 열을 사용하여 Audience Portal의 레이아웃을 사용자 정의할 수 있습니다. 이 기능에 대한 자세한 내용은 [세그멘테이션 UI 안내서](../../segmentation/ui/overview.md#customize). |
+| 사용자 정의 가능한 열 | 이제 크기 조정 가능한 열을 사용하여 Audience Portal의 레이아웃을 사용자 정의할 수 있습니다. 이 기능에 대한 자세한 내용은 [Audience Portal 개요](../../segmentation/ui/audience-portal.md#customize). |
 | 빈도 분류 업데이트 | 이제 조직 내 대상자의 업데이트 주기 분류를 볼 수 있습니다. 이 기능에 대한 자세한 내용은 [세그멘테이션 UI 안내서](../../segmentation/ui/overview.md#browse). |
 
 세분화 서비스에 대한 자세한 내용은 [세그먼테이션 서비스 개요](../../segmentation/home.md).

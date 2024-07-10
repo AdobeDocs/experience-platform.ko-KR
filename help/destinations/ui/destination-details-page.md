@@ -3,7 +3,7 @@ keywords: 대상;대상;대상 세부 사항 페이지;대상 세부 사항 페�
 title: 대상 세부 사항 보기
 description: 개별 대상에 대한 세부 정보 페이지에서는 대상 세부 정보에 대한 개요를 제공합니다. 대상 세부 사항에는 대상 이름, ID, 대상에 매핑된 대상자 및 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤이 포함됩니다.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1106'
 ht-degree: 0%
@@ -115,7 +115,7 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 
 ![활성화 데이터 보기 스트리밍 대상](../assets/ui/details-page/activation-data-streaming.png)
 
-### [!BADGE 베타]{type=Informative} 활성화 플로우에서 여러 대상 제거 {#bulk-remove}
+### [!BADGE Beta]{type=Informative} 활성화 플로우에서 여러 대상 제거 {#bulk-remove}
 
 >[!NOTE]
 >
@@ -139,4 +139,4 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 
 >[!NOTE]
 >
-대상자의 세부 정보 페이지 탐색에 대한 자세한 내용은 [세그멘테이션 UI 개요](../../segmentation/ui/overview.md#segment-details).
+대상자의 세부 정보 페이지 탐색에 대한 자세한 내용은 [Audience Portal 개요](../../segmentation/ui/audience-portal.md#segment-details).

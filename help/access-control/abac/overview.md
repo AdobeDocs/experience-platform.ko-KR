@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 개요
 description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 정보를 제공합니다
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 900e0dc323e9055a92313788a4a191c615d0b8cd
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1864'
 ht-degree: 13%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 13%
 | 정책 | 정책은 속성을 함께 가져와서 허용되는 작업과 허용되지 않는 작업을 설정하는 문입니다. 정책은 로컬 또는 전역일 수 있으며 다른 정책을 무시할 수 있습니다. |
 | 리소스 | 리소스는 주체가 액세스할 수 있거나 액세스할 수 없는 에셋 또는 개체입니다. 리소스는 세그먼트 또는 스키마 필드일 수 있습니다. |
 | 역할 | 역할은 Platform 인스턴스와 상호 작용하고 액세스 제어 정책의 블록을 구성하는 사용자 유형을 분류하는 방법입니다. 역할 기반 액세스 제어 환경에서 사용자 액세스 프로비저닝은 일반적인 책임과 요구 사항을 통해 그룹화됩니다. 역할에는 주어진 권한 집합이 있으며 조직의 멤버들은 필요한 보기 또는 쓰기 액세스 범위에 따라 하나 이상의 역할에 할당될 수 있습니다. |
-| 제목 | 제목은 작업을 수행하기 위해 리소스에 대한 액세스를 요청하는 사용자입니다. |
+| 주제 | 제목은 작업을 수행하기 위해 리소스에 대한 액세스를 요청하는 사용자입니다. |
 | 사용자 그룹 | 사용자 그룹은 함께 그룹화된 여러 사용자이며 동일한 기능을 실행할 수 있는 액세스 권한을 갖습니다. |
 
 ## 권한
@@ -98,7 +98,7 @@ Admin Console에서 새 권한 인터페이스로 모든 Experience Platform 기
 >
 >요약하면 대상 및 속성 기반 액세스 제어 작업 시 다음과 같은 의미에 유의하십시오.
 >
->* 에서 액세스하고 볼 수 있는 권한이 있는 세그먼트만 활성화할 수 있습니다. [세그먼트 찾아보기 보기](/help/segmentation/ui/overview.md#browse) 및 [세그먼트 단계 선택](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) 활성화 워크플로.
+>* 액세스 및 보기 권한이 있는 대상만 활성화할 수 있습니다. [대상자 포털](/help/segmentation/ui/audience-portal.md#browse) 및 [세그먼트 단계 선택](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) 활성화 워크플로.
 >* 다음에서 [활성화 워크플로의 매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), 액세스 권한이 있는 필드만 보고 선택하여 활성화할 수 있습니다.
 >* 내보내기 위해 매핑된 모든 필드에 대한 액세스 권한이 없는 기존 대상에 대해 추가 세그먼트를 활성화하려고 하면 활성화 워크플로가 차단됩니다.
 

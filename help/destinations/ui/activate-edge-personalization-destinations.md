@@ -3,7 +3,7 @@ title: Edge 개인화 대상에 대한 대상자 활성화
 description: 동일 페이지 및 다음 페이지 개인화 사용 사례를 위해 Adobe Experience Platform에서 Edge 개인화 대상으로 대상을 활성화하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 2%
@@ -47,11 +47,11 @@ Adobe Target 및 사용자 지정 개인화 대상에 대상 및 프로필 속�
 
 ## 사용 사례 {#use-cases}
 
-Adobe Target과 같은 Adobe 개인화 솔루션 또는 고유한 개인화 파트너 플랫폼(예: [!DNL Optimizely], [!DNL Pega]를 통해 보다 심층적인 고객 개인화 경험을 제공할 수 있는 독점 시스템(예: 사내 CMS)은 물론 [사용자 정의 개인화](../catalog/personalization/custom-personalization.md) 대상. 이 모든 것은 Experience Platform Edge Network 데이터 수집 및 세그멘테이션 기능을 활용합니다.
+Adobe Target과 같은 Adobe 개인화 솔루션 또는 고유한 개인화 파트너 플랫폼(예: [!DNL Optimizely], [!DNL Pega]를 통해 보다 심층적인 고객 개인화 경험을 제공할 수 있는 독점 시스템(예: 사내 CMS)은 물론 [사용자 지정 Personalization](../catalog/personalization/custom-personalization.md) 대상. 이 모든 것은 Experience Platform Edge Network 데이터 수집 및 세그멘테이션 기능을 활용합니다.
 
 아래 설명된 사용 사례에는 사이트 개인화 및 타깃팅된 온사이트 광고가 모두 포함됩니다.
 
-이러한 사용 사례를 활성화하려면 고객은 Experience Platform에서 대상과 프로필 속성 정보를 모두 검색하고 이 정보를 다음 중 하나로 전송하는 빠르고 간소화된 방법이 필요합니다. [Adobe Target](../catalog/personalization/adobe-target-connection.md) 또는 [사용자 정의 개인화](../catalog/personalization/custom-personalization.md) Experience Platform UI의 연결.
+이러한 사용 사례를 활성화하려면 고객은 Experience Platform에서 대상과 프로필 속성 정보를 모두 검색하고 이 정보를 다음 중 하나로 전송하는 빠르고 간소화된 방법이 필요합니다. [Adobe Target](../catalog/personalization/adobe-target-connection.md) 또는 [사용자 지정 Personalization](../catalog/personalization/custom-personalization.md) Experience Platform UI의 연결.
 
 ### 동일 페이지 개인화 {#same-page}
 
@@ -77,13 +77,13 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 고유한 개인화 파�
 
 개인화 대상을 설정하는 첫 번째 단계는 Experience Platform Web SDK에 대한 데이터 스트림을 구성하는 것입니다. 이 작업은 데이터 수집 UI에서 수행됩니다.
 
-데이터 스트림을 구성할 때에서 **[!UICONTROL Adobe Experience Platform]** 둘 다 **[!UICONTROL Edge 세그멘테이션]** 및 **[!UICONTROL 개인화 대상]** 이(가) 선택되어 있습니다.
+데이터 스트림을 구성할 때에서 **[!UICONTROL Adobe Experience Platform]** 둘 다 **[!UICONTROL Edge 세그멘테이션]** 및 **[!UICONTROL Personalization 대상]** 이(가) 선택되어 있습니다.
 
 >[!TIP]
 >
->2024년 4월 릴리스부터 다음의 경우 에지 세분화 확인란을 선택할 필요가 없습니다. [Adobe Target에 대한 연결 구성](/help/destinations/catalog/personalization/adobe-target-connection.md). 이 경우, [다음 세션 개인화](#next-session) 은 사용 가능한 유일한 개인화 사용 사례입니다.
+>2024년 4월 릴리스부터 다음과 같은 경우에는 Edge 세분화 확인란을 선택할 필요가 없습니다 [Adobe Target에 대한 연결 구성](/help/destinations/catalog/personalization/adobe-target-connection.md). 이 경우, [다음 세션 개인화](#next-session) 은 사용 가능한 유일한 개인화 사용 사례입니다.
 
-![에지 세분화 및 개인화 대상이 강조 표시된 데이터 스트림 구성입니다.](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
+![Edge 세그멘테이션 및 Personalization 대상이 강조 표시된 데이터스트림 구성](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
 데이터 스트림을 설정하는 방법에 대한 자세한 내용은 [Platform Web SDK 설명서](../../datastreams/configure.md#aep).
 
@@ -93,7 +93,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 고유한 개인화 파�
 
 >[!IMPORTANT]
 >
->현재 Edge 대상은 를 사용하는 대상의 활성화만 지원합니다. [Active-On-Edge 병합 정책](../../segmentation/ui/segment-builder.md#merge-policies) 을(를) 기본값으로 설정합니다. 다른 병합 정책을 사용하는 대상을 Edge 대상에 매핑하면 해당 대상이 평가되지 않습니다.
+>현재 Edge 대상은 를 사용하는 대상의 활성화만 지원합니다. [Active-on-Edge 병합 정책](../../segmentation/ui/segment-builder.md#merge-policies) 을(를) 기본값으로 설정합니다. 다른 병합 정책을 사용하는 대상을 Edge 대상에 매핑하면 해당 대상이 평가되지 않습니다.
 
 다음 지침을 따르십시오. [병합 정책 만들기](../../profile/merge-policies/ui-guide.md#create-a-merge-policy), 및 을(를) 활성화해야 합니다. **[!UICONTROL Active-On-Edge 병합 정책]** 토글.
 
@@ -141,7 +141,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 고유한 개인화 파�
 출처에 따라 여러 유형의 대상 중에서 선택할 수 있습니다.
 
 * **[!UICONTROL 세분화 서비스]**: 세분화 서비스에 의해 Experience Platform 내에서 생성된 대상자. 다음을 참조하십시오. [세그멘테이션 설명서](../../segmentation/ui/overview.md) 을 참조하십시오.
-* **[!UICONTROL 사용자 정의 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드된 대상자 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL 사용자 정의 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드된 대상자 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience).
 * 다른 Adobe 솔루션에서 가져온 다른 유형의 대상, 예: [!DNL Audience Manager].
 
 ![여러 대상이 강조 표시된 활성화 워크플로의 대상 선택 단계입니다.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -150,7 +150,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 고유한 개인화 파�
 
 >[!IMPORTANT]
 >
->프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 **[!UICONTROL 사용자 정의 개인화]** 대상을 사용하려면 다음을 사용해야 합니다. [Edge Network 서버 API](../../server-api/overview.md) 속성 기반 개인화에 대한 대상을 구성할 때. 모든 서버 API 호출은 [인증된 컨텍스트](../../server-api/authentication.md).
+>프로필 속성에 중요한 데이터가 포함될 수 있습니다. 이 데이터를 보호하려면 **[!UICONTROL 사용자 지정 Personalization]** 대상을 사용하려면 다음을 사용해야 합니다. [Edge Network 서버 API](../../server-api/overview.md) 속성 기반 개인화에 대한 대상을 구성할 때. 모든 서버 API 호출은 [인증된 컨텍스트](../../server-api/authentication.md).
 >
 ><br>통합에 웹 SDK 또는 Mobile SDK를 이미 사용 중인 경우 서버측 통합을 추가하여 서버 API를 통해 속성을 검색할 수 있습니다.
 >
@@ -164,7 +164,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 고유한 개인화 파�
 
 ### 소스 속성 선택 {#select-source-attributes}
 
-소스 속성을 추가하려면 **[!UICONTROL 새 필드 추가]** 에 대한 제어 **[!UICONTROL 소스 필드]** 아래와 같이 열을 검색하고 원하는 XDM 속성 필드로 이동합니다.
+소스 속성을 추가하려면 **[!UICONTROL 새 필드 추가]** 에 대한 제어 **[!UICONTROL Source 필드]** 아래와 같이 열을 검색하고 원하는 XDM 속성 필드로 이동합니다.
 
 ![매핑 단계에서 대상 속성을 선택하는 방법을 보여 주는 화면 기록입니다.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
@@ -174,7 +174,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 고유한 개인화 파�
 
 >[!NOTE]
 >
->대상 속성 선택은 에만 적용됩니다. [사용자 정의 개인화](../catalog/personalization/custom-personalization.md) 대상 플랫폼에서 친숙한 이름 필드 매핑을 지원하기 위한 활성화 워크플로.
+>대상 속성 선택은 에만 적용됩니다. [사용자 지정 Personalization](../catalog/personalization/custom-personalization.md) 대상 플랫폼에서 친숙한 이름 필드 매핑을 지원하기 위한 활성화 워크플로.
 
 ![매핑 단계에서 XDM 속성을 선택하는 방법을 보여 주는 화면 레코딩](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
@@ -192,7 +192,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 고유한 개인화 파�
 
 선택 **[!UICONTROL 다음]** 로 이동 [!UICONTROL 리뷰] 페이지를 가리키도록 업데이트하는 중입니다.
 
-## 리뷰 {#review}
+## 검토 {#review}
 
 다음에서 **[!UICONTROL 리뷰]** 페이지에서 선택 사항의 요약을 볼 수 있습니다. 선택 **[!UICONTROL 취소]** 흐름을 끊으려면, **[!UICONTROL 뒤로]** 설정을 수정하려면 **[!UICONTROL 완료]** 을 클릭하여 선택 항목을 확인하고 데이터를 대상으로 보내기 시작합니다.
 

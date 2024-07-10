@@ -5,10 +5,10 @@ breadcrumb-title: Segmentation Service 안내서
 user-guide-description: Adobe Experience Platform에서 생성한 세그먼트 정의 또는 외부 소스를 사용하여 실시간 고객 프로필 데이터에서 대상자를 빌드하십시오.
 feature: Segments
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 62a174e6f3b1bd1b0bc518ff7e5f236893e9e5d3
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 35%
+source-wordcount: '185'
+ht-degree: 42%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 35%
    - [에지 세분화](api/edge-segmentation.md)
    - [내보내기 작업](api/export-jobs.md)
    - [미리 보기 및 예상](api/previews-and-estimates.md)
-   - [일정](api/schedules.md)
+   - [예약](api/schedules.md)
    - [세그먼트 정의](api/segment-definitions.md)
    - [세그먼트 작업](api/segment-jobs.md)
    - [세그먼트 검색](api/segment-search.md)
@@ -33,11 +33,12 @@ ht-degree: 35%
 - 세분화 UI {#ui}
    - [개요](ui/overview.md)
    - [대상 대시보드](ui/audience-dashboard.md)
+   - [대상자 포털](ui/audience-portal.md)
    - [대상자 구성](ui/audience-composition.md)
    - [세그먼트 빌더](ui/segment-builder.md)
    - [계정 대상자](ui/account-audiences.md)
-   - [유사 대상](ui/lookalike-audiences.md)
-   - [잠재 고객](ui/prospect-audience.md)
+   - [유사 대상자](ui/lookalike-audiences.md)
+   - [잠재 고객 대상자](ui/prospect-audience.md)
    - [에지 세분화](ui/edge-segmentation.md)
    - [스트리밍 세분화](ui/streaming-segmentation.md)
    - [스트리밍 세분화(비디오)](video/streaming-segmentation-overview.md)
@@ -48,7 +49,7 @@ ht-degree: 35%
       - [문제 해결](ui/segment-match/troubleshooting.md)
 - [동의 준수](consents.md)
 - [다중 엔티티 세그멘테이션](multi-entity-segmentation.md)
-- 프로필 쿼리 언어 {#pql}
+- Profile Query Language {#pql}
    - [개요](pql/overview.md)
    - [부울 함수](pql/boolean-functions.md)
    - [비교 함수](pql/comparison-functions.md)
@@ -63,7 +64,7 @@ ht-degree: 35%
    - [논리적 수량자](pql/logical-quantifiers.md)
    - [기타 함수](pql/misc-functions.md)
 - 튜토리얼 {#tutorials}
-   - [세그먼트 만들기](tutorials/create-a-segment.md)
+   - [세그먼트 생성](tutorials/create-a-segment.md)
    - [세그먼트 만들기(비디오)](video/create-segment.md)
    - [동적 세그먼트 만들기(비디오)](video/create-a-dynamic-segment.md)
    - [다중 엔티티 세그먼트 만들기(비디오)](video/create-multi-entity-segments.md)
@@ -73,4 +74,4 @@ ht-degree: 35%
    - [세그먼트에 대한 데이터 사용 규정 준수 적용](tutorials/governance.md)
 - [자주 묻는 질문](./faq.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

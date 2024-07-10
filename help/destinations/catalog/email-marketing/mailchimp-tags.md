@@ -2,7 +2,8 @@
 title: Mailchimp 태그
 description: Mailchimp 태그 대상을 사용하면 계정 데이터를 내보내고 Mailchimp 내에서 활성화하여 연락처에 참여할 수 있습니다.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -86,9 +87,9 @@ API 키의 예는 다음과 같습니다. `0123456789abcdef0123456789abcde-us14`
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -167,13 +168,13 @@ XDM 필드를 [!DNL Mailchimp Tags] 대상 필드에서 아래 단계를 수행�
 1. 다음에서 **[!UICONTROL 매핑]** 단계, 선택 **[!UICONTROL 새 매핑 추가]**. 화면에 새 매핑 행이 표시됩니다.
 1. 다음에서 **[!UICONTROL 소스 필드 선택]** 창, 선택 **[!UICONTROL ID 네임스페이스 선택]** 및 선택 `Email` id 네임스페이스.
 
-   ![ID 네임스페이스에서 소스 필드를 이메일로 사용하는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+   ![ID 네임스페이스에서 Source 필드를 이메일로 사용하는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
 1. 다음에서 **[!UICONTROL 대상 필드 선택]** 창, 선택 **[!UICONTROL ID 네임스페이스 선택]** 및 선택 `Email` id 네임스페이스.
 
    ![ID 네임스페이스에서 타겟 필드를 이메일로 사용하는 플랫폼 UI 스크린샷입니다.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
-   XDM 프로필 스키마와 [!DNL Mailchimp Tags] 은(는) 다음과 같습니다. | 소스 필드 | 대상 필드 | 필수 | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| 예 |
+   XDM 프로필 스키마와 [!DNL Mailchimp Tags] 은(는) 다음과 같습니다. | Source 필드 | 대상 필드 | 필수 | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| 예 |
 
    완료된 매핑의 예가 아래에 나와 있습니다.
    ![필드 매핑을 보여주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)

@@ -3,7 +3,7 @@ title: Experience Cloud 대상자
 description: Real-time Customer Data Platform에서 다양한 Experience Cloud 앱으로 대상을 공유하는 방법을 알아봅니다.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 188398e3483541ca482f5c1cfdce307160ada2da
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1703'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 이 대상을 사용하여 Real-Time CDP에서 Audience Manager 및 Adobe Analytics으로 대상을 활성화합니다.
 
-대상을 Adobe Analytics으로 보내려면 Audience Manager 라이선스가 필요합니다. 자세한 내용은 [Audience Analytics 개요](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=ko).
+대상을 Adobe Analytics으로 보내려면 Audience Manager 라이선스가 필요합니다. 자세한 내용은 [Audience Analytics 개요](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en).
 
 대상을 다른 Adobe 솔루션으로 보내려면 Real-Time CDP에서 로 직접 연결을 사용합니다. [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) 및 [Marketo Engage](../adobe/marketo-engage.md).
 
@@ -112,7 +112,7 @@ Real-Time CDP에서 대상이 처음 활성화된 시간과 Audience Manager 및
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
 | ECID | Experience Cloud ID | ECID를 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 에 대한 다음 문서를 참조하십시오. [ECID](/help/identity-service/features/ecid.md) 추가 정보. |
-| GAID | Google 광고 ID | 기본 ID(Google Advertising ID)가 있는 Real-Time CDP에 수집된 프로필을 이 대상으로 내보낼 수 있습니다. |
+| GAID | GOOGLE ADVERTISING ID | 기본 ID(Google Advertising ID)가 GAID인 Real-Time CDP에 수집된 프로필을 이 대상으로 내보낼 수 있습니다. |
 | IDFA | 광고주용 Apple ID | IDFA(Apple ID for Advertisers)의 기본 ID를 사용하여 Real-Time CDP에 수집된 프로필을 이 대상으로 내보낼 수 있습니다. |
 | email_lc_sha256 | SHA256 알고리즘으로 해시된 이메일 주소 | 해시된 이메일 주소의 기본 ID를 사용하여 Real-Time CDP에 수집된 프로필을 이 대상으로 내보낼 수 있습니다. |
 
@@ -123,9 +123,9 @@ Real-Time CDP에서 대상이 처음 활성화된 시간과 Audience Manager 및
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
----------|----------|----------|
+| ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 

@@ -2,10 +2,11 @@
 title: SAP Commerce 연결
 description: SAP Commerce 대상 커넥터를 사용하여 SAP 계정의 고객 레코드를 업데이트합니다.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: 9bb2cf5adcd48f9d111ba04b8c93129367dd12f8
+exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '2245'
-ht-degree: 2%
+source-wordcount: '2246'
+ht-degree: 3%
 
 ---
 
@@ -118,10 +119,10 @@ Platform에서 로 데이터를 내보내려면 [!DNL SAP Commerce] 계정, 다�
 
 이 대상은 아래 표에 설명된 대상의 활성화도 지원합니다.
 
-| 대상자 유형 | 설명 |
----------|----------|
+| 대상자 유형 | 지원됨 | 설명 |
+| ------------- | --------- | ----------- |
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 

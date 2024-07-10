@@ -3,10 +3,10 @@ keywords: target 개인화, 대상, experience platform 대상, adobe target 대
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: e5c34ffb9b27ddad0c6523a7279fdf712c84f3ff
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1555'
-ht-degree: 2%
+ht-degree: 11%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 2%
 |---|---|---|
 | 2024년 4월 | 기능 및 설명서 업데이트 | 이제 Target 대상에 연결하고 데이터 스트림 ID를 사용할 때 *필요 없음* 를 사용하여 에지 세분화를 위해 데이터스트림을 활성화해야 합니다. 즉, 수행할 수 있는 사용 사례는 다르지만 Target 대상이 일괄 처리 및 스트리밍 대상에서 작동합니다. 다음에서 테이블 보기: [연결 매개 변수](#parameters) 섹션에 자세히 설명되어 있습니다. |
 | 2024년 1월 | 기능 및 설명서 업데이트 | 이제 기본 프로덕션 샌드박스 및 기타 기본이 아닌 샌드박스에 대해 Adobe Target 연결에 대상 및 프로필 속성을 공유할 수 있습니다. |
-| 2023년 6월 | 기능 및 설명서 업데이트 | 2023년 6월부터 새 Adobe Target 대상 연결을 구성할 때 대상을 공유할 Adobe Target 작업 영역을 선택할 수 있습니다. 자세한 내용은 [연결 매개변수](#parameters) 섹션을 참조하십시오. 추가로 작업 영역에 대한 자세한 내용은 Adobe Target에서 [작업 공간을 구성하는 방법](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html)에 대한 튜토리얼을 참조하십시오. |
+| 2023년 6월 | 기능 및 설명서 업데이트 | 2023년 6월부터 새 Adobe Target 대상 연결을 구성할 때 대상을 공유할 Adobe Target 작업 영역을 선택할 수 있습니다. 자세한 내용은 [연결 매개변수](#parameters) 섹션을 참조하십시오. 추가로 작업 영역에 대한 자세한 내용은 Adobe Target에서 [작업 공간을 구성하는 방법](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ko-KR)에 대한 튜토리얼을 참조하십시오. |
 | 2023년 5월 | 기능 및 설명서 업데이트 | 2023년 5월 현재 **[!UICONTROL Adobe Target]** 연결 지원 [속성 기반 개인화](../../ui/activate-edge-personalization-destinations.md#map-attributes) 및 는 일반적으로 모든 고객이 사용할 수 있습니다. |
 
 {style="table-layout:auto"}
@@ -70,7 +70,7 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | X | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | X | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -89,9 +89,9 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
->title="데이터 스트림 ID 정보"
->abstract="이 옵션은 대상자가 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에는 Target 구성이 활성화된 데이터스트림만 표시됩니다. 에지 세분화를 사용하려면 데이터 스트림 ID를 선택해야 합니다. 없음 을 선택하면 가장자리 세분화를 사용하는 모든 사용 사례가 비활성화됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="데이터스트림 선택에 대한 자세한 정보"
+>title="데이터스트림 ID 정보"
+>abstract="이 옵션은 대상자에 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에 Target 구성이 활성화된 데이터스트림만 표시됩니다. 에지 세분화를 사용하려면 데이터스트림 ID를 선택해야 합니다. 없음을 선택하면 에지 세분화를 사용하는 모든 사용 사례가 비활성화됩니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=ko-KR#parameters" text="데이터스트림 선택에 대해 자세히 알아보기"
 
 >[!IMPORTANT]
 > 
@@ -101,13 +101,13 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 
 Adobe Experience Platform은 자동으로 회사의 Adobe Target 인스턴스에 연결합니다. 인증이 필요하지 않습니다.
 
-### 연결 매개 변수 {#parameters}
+### 연결 매개변수 {#parameters}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_workspace"
 >title="Adobe Target 작업 영역 정보"
->abstract="대상자를 공유할 Adobe Target 작업 영역을 선택합니다. 각 Adobe Target 연결에 대해 단일 작업 영역을 선택할 수 있습니다. 활성화하면 적용 가능한 Experience Platform 데이터 사용 레이블에 따라 대상자가 선택한 작업공간으로 라우팅됩니다."
->additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html" text="Adobe Target 작업 공간에 대해 자세히 알아보기"
+>abstract="대상자를 공유할 Adobe Target 작업 영역을 선택하십시오. 각 Adobe Target 연결에 대해 단일 작업 영역을 선택할 수 있습니다. 활성화 시 대상자는 해당하는 Experience Platform 데이터 사용 레이블을 따르는 동안 선택한 작업 영역으로 라우팅됩니다."
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ko-KR" text="Adobe Target 작업 영역에 대해 자세히 알아보기"
 
 While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정보를 제공해야 합니다.
 
@@ -123,9 +123,9 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
   | Adobe Target 구현 *없이* 웹 SDK | Adobe Target 구현 *포함* 웹 SDK | Adobe Target 구현 *포함* 웹 SDK *및* 에지 세분화 끄기 |
   |---|---|---|
-  | <ul><li>데이터 스트림은 필요하지 않습니다. Adobe Target은 다음을 통해 배포할 수 있습니다. [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [서버측](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), 또는 [잡종](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) 구현 방법.</li><li>[에지 세분화](../../../segmentation/ui/edge-segmentation.md) 은(는) 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md) 은(는) 지원되지 않습니다.</li><li>대상 및 프로필 속성을 의 Adobe Target 연결에 공유할 수 있습니다. *기본 프로덕션 샌드박스* 및 기본값이 아닌 샌드박스.</li><li>데이터 스트림 ID를 사용하지 않고 다음 세션 개인화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Adobe Target 및 Experience Platform이 서비스로 구성된 데이터 스트림이 필요합니다.</li><li>에지 세분화는 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md#use-cases) 이 지원됩니다.</li><li>다른 샌드박스의 대상 및 프로필 속성 공유가 지원됩니다.</li></ul> | <ul><li>Adobe Target 및 Experience Platform이 서비스로 구성된 데이터 스트림이 필요합니다.</li><li>날짜 [데이터스트림 구성](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), 을(를) 선택하지 마십시오. **에지 세분화** 확인란.</li><li>[다음 세션 개인화](../../ui/activate-edge-personalization-destinations.md#next-session) 은(는) 지원됩니다.</li><li>다른 샌드박스의 대상 및 프로필 속성 공유가 지원됩니다.</li></ul> |
+  | <ul><li>데이터 스트림은 필요하지 않습니다. Adobe Target은 다음을 통해 배포할 수 있습니다. [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [서버측](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), 또는 [잡종](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) 구현 방법.</li><li>[Edge 세그멘테이션](../../../segmentation/ui/edge-segmentation.md) 은(는) 지원되지 않습니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md) 은(는) 지원되지 않습니다.</li><li>대상 및 프로필 속성을 의 Adobe Target 연결에 공유할 수 있습니다. *기본 프로덕션 샌드박스* 및 기본값이 아닌 샌드박스.</li><li>데이터 스트림 ID를 사용하지 않고 다음 세션 개인화를 구성하려면 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Adobe Target 및 Experience Platform이 서비스로 구성된 데이터 스트림이 필요합니다.</li><li>Edge 세그멘테이션은 예상대로 작동합니다.</li><li>[동일 페이지 및 다음 페이지 개인화](../../ui/activate-edge-personalization-destinations.md#use-cases) 이 지원됩니다.</li><li>다른 샌드박스의 대상 및 프로필 속성 공유가 지원됩니다.</li></ul> | <ul><li>Adobe Target 및 Experience Platform이 서비스로 구성된 데이터 스트림이 필요합니다.</li><li>날짜 [데이터스트림 구성](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), 을(를) 선택하지 마십시오. **Edge 세그멘테이션** 확인란.</li><li>[다음 세션 개인화](../../ui/activate-edge-personalization-destinations.md#next-session) 은(는) 지원됩니다.</li><li>다른 샌드박스의 대상 및 프로필 속성 공유가 지원됩니다.</li></ul> |
 
-* **작업 영역**: Adobe Target 선택 [작업 영역](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) 대상자를 공유할 대상. 각 Adobe Target 연결에 대해 단일 작업 영역을 선택할 수 있습니다. 활성화 시 대상자는 적용 가능한 단계에 따라 선택한 작업공간으로 라우팅됩니다 [Experience Platform 데이터 사용 레이블](../../../data-governance/labels/overview.md).
+* **Workspace**: Adobe Target 선택 [작업 영역](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=ko-KR) 대상자를 공유할 대상. 각 Adobe Target 연결에 대해 단일 작업 영역을 선택할 수 있습니다. 활성화 시 대상자는 적용 가능한 단계에 따라 선택한 작업공간으로 라우팅됩니다 [Experience Platform 데이터 사용 레이블](../../../data-governance/labels/overview.md).
 
 >[!NOTE]
 >
@@ -139,7 +139,7 @@ While [설정 중](../../ui/connect-destination.md) 이 대상에는 다음 정�
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

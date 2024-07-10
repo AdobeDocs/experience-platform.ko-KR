@@ -3,7 +3,8 @@ title: Acxiom 데이터 개선 사항
 description: 이 커넥터를 사용하여 데이터 강화를 위해 Real-Time CDP에서 Acxiom으로 자사 Adobe 프로필을 활성화하고 마케팅 채널 전반에서 사용할 수 있습니다. 그런 다음 Acxiom 소스를 사용하여 고급 데이터가 포함된 프로필을 가져오고 Real-Time CDP에서 작업할 수 있습니다.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1346'
 ht-degree: 2%
@@ -56,7 +57,7 @@ ht-degree: 2%
 | 대상자 원본 | 지원됨 | 설명 |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | x | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | x | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -143,14 +144,14 @@ Acxiom 측에서 파일을 올바르게 처리하려면 이름 및 주소 요소
 
 매핑 제안은 고객이 프로필 속성을 매핑할 수 있는 Acxiom 처리에 사용되는 대상 측의 속성을 나열하는 아래 표에 제공됩니다. 모든 요소가 필요한 것은 아니며 소스 값은 계정의 요구 사항에 따라 달라지므로 이러한 요소를 제안으로 처리합니다.
 
-| 대상 필드 | 소스 설명 |
+| 대상 필드 | Source 설명 |
 |--------------|-------------------------------------------------------------|
 | 이름 | 다음 `person.name.fullName` Experience Platform의 값입니다. |
 | 이름 | 다음 `person.name.firstName` Experience Platform의 값입니다. |
 | 성 | 다음 `person.name.lastName` Experience Platform의 값입니다. |
 | address1 | 다음 `mailingAddress.street1` Experience Platform의 값입니다. |
 | address2 | 다음 `mailingAddress.street2` Experience Platform의 값입니다. |
-| city | 다음 `mailingAddress.city` Experience Platform의 값입니다. |
+| 도시 | 다음 `mailingAddress.city` Experience Platform의 값입니다. |
 | state | 다음 `mailingAddress.state` Experience Platform의 값입니다. |
 | zip | 다음 `mailingAddress.postalCode` Experience Platform의 값입니다. |
 

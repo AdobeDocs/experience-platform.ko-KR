@@ -4,7 +4,7 @@ title: 세분화 서비스 API를 사용하여 세그먼트 정의 만들기
 type: Tutorial
 description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트 정의를 개발, 테스트, 미리 보기 및 저장하는 방법을 배우려면 이 자습서를 따르십시오.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 9966385968540701f66acbb70c0810906650b7e1
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1066'
 ht-degree: 6%
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 이 문서에서는 다음을 사용하여 세그먼트 정의를 개발, 테스트, 미리 보기 및 저장하는 자습서를 제공합니다. [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-사용자 인터페이스를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세한 내용은 [세그먼트 빌더 안내서](../ui/overview.md).
+사용자 인터페이스를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세한 내용은 [세그먼트 빌더 안내서](../ui/segment-builder.md).
 
 ## 시작하기
 
@@ -53,7 +53,7 @@ ht-degree: 6%
 
 ## 세그먼트 정의 개발
 
-세그먼테이션의 첫 번째 단계는 세그먼트 정의를 정의하는 것입니다. 세그먼트 정의는 작성된 쿼리를 캡슐화하는 개체입니다 [!DNL Profile Query Language] (PQL). 이 개체를 PQL 술어라고도 합니다. PQL 술어는 제공하는 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트 정의에 대한 규칙을 정의합니다 [!DNL Real-Time Customer Profile]. 다음을 참조하십시오. [PQL 안내서](../pql/overview.md) PQL 쿼리 작성에 대한 자세한 내용
+세그먼테이션의 첫 번째 단계는 세그먼트 정의를 정의하는 것입니다. 세그먼트 정의는 작성된 쿼리를 캡슐화하는 개체입니다 [!DNL Profile Query Language] (PQL). 이 개체를 PQL 술어라고도 합니다. PQL 조건자는 제공한 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트 정의에 대한 규칙을 정의합니다 [!DNL Real-Time Customer Profile]. 다음을 참조하십시오. [PQL 안내서](../pql/overview.md) PQL 쿼리 작성에 대한 자세한 정보입니다.
 
 에 POST 요청을 하여 새 세그먼트 정의를 만들 수 있습니다. `/segment/definitions` 의 엔드포인트 [!DNL Segmentation] API. 다음 예제에서는 세그먼트 정의를 성공적으로 정의하는 데 필요한 정보를 포함하여 정의 요청의 형식을 지정하는 방법을 간략하게 설명합니다.
 
@@ -63,7 +63,7 @@ ht-degree: 6%
 
 세그먼트 정의를 개발할 때 내의 예상 및 미리보기 도구를 사용할 수 있습니다. [!DNL Real-Time Customer Profile] 예상되는 대상을 격리하는 데 도움이 되는 요약 수준 정보를 봅니다. 예상치는 예상 대상 크기 및 신뢰 구간과 같은 세그먼트 정의에 대한 통계 정보를 제공합니다. 미리 보기는 세그먼트 정의에 대해 페이지가 매겨진 자격 프로필 목록을 제공하므로 결과를 예상과 비교할 수 있습니다.
 
-대상자를 예측하고 미리 봄으로써 원하는 결과가 나올 때까지 PQL 술어를 테스트하고 최적화할 수 있습니다. 그런 다음 이 술어를 업데이트된 세그먼트 정의에 사용할 수 있습니다.
+대상자를 예측하고 미리 보면 원하는 결과가 나올 때까지 PQL 술어를 테스트하고 최적화하여 업데이트된 세그먼트 정의에 사용할 수 있습니다.
 
 세그먼트 정의를 미리 보거나 예상 값을 가져오는 데 필요한 두 가지 단계가 있습니다.
 

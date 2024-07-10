@@ -4,7 +4,7 @@ title: 활성화 개요
 type: Tutorial
 description: Adobe Experience Platform의 대상을 다양한 유형의 대상으로 활성화하는 방법을 알아봅니다.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 1%
@@ -52,7 +52,7 @@ Adobe Experience Platform은 다양한 대상을 지원합니다. 대상자 활�
 
 ### 대상 세부 사항 페이지에서 대상 활성화 {#activate-audience-details}
 
-대상 세부 사항 페이지에서 대상을 대상으로 활성화할 수 있습니다. 다음을 참조하십시오 [대상자 세부 정보](../../segmentation/ui/overview.md#audience-details) 추가 정보.
+대상 세부 사항 페이지에서 대상을 대상으로 활성화할 수 있습니다. 다음을 참조하십시오 [대상자 세부 정보](../../segmentation/ui/audience-portal.md#audience-details) 추가 정보.
 
 선택한 대상에 따라 아래 문서에 설명된 단계에 따라 활성화 워크플로우를 완료합니다.
 

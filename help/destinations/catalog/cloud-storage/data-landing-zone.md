@@ -3,10 +3,10 @@ title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 대상자를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1585'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -35,9 +35,9 @@ Platform은에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -204,7 +204,7 @@ curl -X POST \
 
 이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
-### 대상에 인증 {#authenticate}
+### 대상으로 인증 {#authenticate}
 
 다음을 연결했는지 확인하십시오. [!DNL Data Landing Zone] 컨테이너 대상 [!DNL Azure Storage Explorer] 에 설명된대로 [전제 조건](#prerequisites) 섹션. 이유 [!DNL Data Landing Zone] 는 Adobe이 프로비저닝된 스토리지로, Experience Platform UI에서 대상을 인증하기 위해 더 이상 단계를 수행할 필요가 없습니다.
 
@@ -230,7 +230,7 @@ curl -X POST \
 
 대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
 
-## 이 대상에 대상자 활성화 {#activate}
+## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 

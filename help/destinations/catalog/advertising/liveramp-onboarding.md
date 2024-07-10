@@ -3,7 +3,7 @@ title: LiveRamp - 온보드 연결
 description: LiveRamp 커넥터를 사용하여 Adobe Real-time Customer Data Platform에서 LiveRamp Connect로 대상을 온보딩하는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1941'
 ht-degree: 3%
@@ -37,9 +37,9 @@ Experience Platform에서 (으)로 데이터를 보내기 전에 [!DNL LiveRamp 
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -127,7 +127,7 @@ Experience Platform에서 (으)로 데이터를 보내기 전에 [!DNL LiveRamp 
 
 읽기 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](/help/destinations/ui/activate-batch-profile-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
 
-### 예약 {#scheduling}
+### 일정 조정 {#scheduling}
 
 다음에서 [!UICONTROL 예약] 단계: 아래 표시된 설정을 사용하여 각 대상에 대한 내보내기 일정을 만듭니다.
 
@@ -211,7 +211,7 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 * `Expired`: 프로필이 더 이상 대상자에 적합하지 않지만 과거에 자격이 있습니다.
 * `""`(빈 문자열): 프로필이 대상자에 대해 정격되지 않았습니다.
 
-예를 들어 내보낸 CSV 파일에는 하나가 있습니다 `email` 속성입니다. Experience Platform에서 시작된 두 대상 [세분화 서비스](../../../segmentation/home.md), 및 1 [가져옴](../../../segmentation/ui/overview.md#importing-an-audience) 외부 대상, 형태는 다음과 같습니다.
+예를 들어 내보낸 CSV 파일에는 하나가 있습니다 `email` 속성입니다. Experience Platform에서 시작된 두 대상 [세분화 서비스](../../../segmentation/home.md), 및 1 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) 외부 대상, 형태는 다음과 같습니다.
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,7 +223,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-위의 예에서 `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` 및 `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` 섹션에서는 세분화 서비스에서 시작된 대상자에 대해 설명하고 `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` 플랫폼으로 가져온 대상자를 다음과 같이 설명합니다. [사용자 지정 업로드](../../../segmentation/ui/overview.md#importing-an-audience).
+위의 예에서 `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` 및 `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` 섹션에서는 세분화 서비스에서 시작된 대상자에 대해 설명하고 `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` 플랫폼으로 가져온 대상자를 다음과 같이 설명합니다. [사용자 지정 업로드](../../../segmentation/ui/audience-portal.md#import-audience).
 
 Platform은 각각에 대해 하나의 CSV 파일을 생성하므로 [병합 정책 ID](../../../profile/merge-policies/overview.md)또한 각 병합 정책 ID에 대해 별도의 데이터 흐름 실행을 생성합니다.
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 스트리밍 세분화 UI 안내서
 description: Adobe Experience Platform에서의 스트리밍 세그먼테이션을 사용하면 데이터 풍부성에 초점을 맞추면서 거의 실시간으로 세그먼테이션을 수행할 수 있습니다. 스트리밍 세분화를 사용하면 데이터가 플랫폼에 들어올 때 세그먼트 자격이 부여되어 세분화 작업을 예약하고 실행할 필요가 줄어듭니다. 이 기능을 사용하면 이제 데이터가 플랫폼으로 전달될 때 대부분의 세그먼트 규칙을 평가할 수 있습니다. 즉, 예약된 세그먼테이션 작업을 실행하지 않고도 세그먼트 멤버십을 최신 상태로 유지합니다.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '1541'
+source-wordcount: '1537'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->스트리밍 세분화를 사용하려면 조직에 대해 예약된 세분화를 활성화해야 합니다. 예약된 세그먼테이션 활성화에 대한 자세한 내용은 다음을 참조하십시오. [세분화 사용 안내서의 스트리밍 세분화 섹션](./overview.md#scheduled-segmentation).
+>스트리밍 세분화를 사용하려면 조직에 대해 예약된 세분화를 활성화해야 합니다. 예약된 세그먼테이션 활성화에 대한 자세한 내용은 다음을 참조하십시오. [대상 포털 개요](./audience-portal.md#scheduled-segmentation).
 
 쿼리가 다음 기준 중 하나를 충족하면 스트리밍 세분화를 통해 자동으로 평가됩니다.
 
-| 쿼리 유형 | 세부 사항 | 예 |
+| 쿼리 유형 | 세부 정보 | 예 |
 | ---------- | ------- | ------- |
 | 단일 이벤트 | 시간 제한 없이 들어오는 단일 이벤트를 참조하는 모든 세그먼트 정의. | ![이 슬라이드에는 단일 이벤트의 예가 나와 있습니다.](../images/ui/streaming-segmentation/incoming-hit.png) |
 | 상대 기간 내의 단일 이벤트 | 단일 수신 이벤트를 참조하는 모든 세그먼트 정의. | ![상대 시간 창 내의 단일 이벤트의 예가 표시됩니다.](../images/ui/streaming-segmentation/relative-hit-success.png) |
@@ -75,7 +75,7 @@ ht-degree: 0%
 >
 >세그먼트 정의가 상태 없음에서 실현됨으로 전환되거나 종료에서 실현됨으로 전환되는 경우 적격으로 간주됩니다. 세그먼트 정의가 실현에서 종료로 이동하는 경우 부적격 세그먼트로 간주됩니다.
 >
->이러한 상태에 대한 자세한 내용은 [세그먼테이션 개요](./overview.md#browse).
+>이러한 상태에 대한 자세한 내용은 [Audience Portal 개요](./audience-portal.md#customize).
 
 ![시간 경과에 따른 프로필 카드가 강조 표시되어 시간 경과에 따른 프로필의 선 그래프를 표시합니다.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 

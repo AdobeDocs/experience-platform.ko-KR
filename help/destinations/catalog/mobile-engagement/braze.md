@@ -3,7 +3,7 @@ keywords: 모바일; 브레이즈; 메시지;
 title: 브레이즈 연결
 description: Braze는 고객과 고객이 사랑하는 브랜드 간의 관련성 있고 기억에 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 2%
@@ -49,9 +49,9 @@ ht-degree: 2%
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | ✓ | 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
 
 {style="table-layout:auto"}
 
@@ -115,18 +115,18 @@ XDM 필드를 [!DNL Braze] 대상 필드에서 다음 단계를 수행합니다.
 
 ![대상 추가 매핑 동기화](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-다음에서 [!UICONTROL 소스 필드] 섹션에서 빈 필드 옆에 있는 화살표 단추를 클릭합니다.
+다음에서 [!UICONTROL Source 필드] 섹션에서 빈 필드 옆에 있는 화살표 단추를 클릭합니다.
 
-![대상 소스 매핑 동기화](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
+![브레이즈 대상 Source 매핑](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
 다음에서 [!UICONTROL 소스 필드 선택] 창에서 다음 두 범주의 XDM 필드 중에서 선택할 수 있습니다.
 * [!UICONTROL 속성 선택]: 이 옵션을 사용하여 XDM 스키마의 특정 필드를 [!DNL Braze] 특성.
 
-![대상 매핑 소스 속성 고정](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
+![대상 매핑 Source 속성 고정](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
 * [!UICONTROL ID 네임스페이스 선택]: 이 옵션을 사용하여 를 매핑합니다. [!DNL Platform] 에 대한 id 네임스페이스 [!DNL Braze] 네임스페이스입니다.
 
-![대상 매핑 소스 네임스페이스 동기화](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
+![대상 매핑 Source 네임스페이스 브레이징](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
 소스 필드를 선택한 다음 **[!UICONTROL 선택]**.
 
