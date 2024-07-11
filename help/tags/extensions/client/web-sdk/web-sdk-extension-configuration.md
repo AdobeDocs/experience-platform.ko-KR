@@ -2,10 +2,10 @@
 title: 웹 SDK 태그 확장 구성
 description: 태그 UI에서 Experience Platform Web SDK 태그 확장을 구성하는 방법에 대해 알아봅니다.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 6%
+source-wordcount: '2012'
+ht-degree: 5%
 
 ---
 
@@ -111,11 +111,29 @@ Adobe 코드 조각 사전 숨김을 사용하는 경우 동일한 항목을 사
 
 ## 데이터 수집 설정 구성 {#data-collection}
 
-![태그 UI에서 웹 SDK 태그 확장의 데이터 수집 설정을 보여 주는 이미지](assets/web-sdk-ext-collection.png)
+데이터 수집 구성 설정을 관리합니다. JavaScript 라이브러리의 유사한 설정은 [`configure`](/help/web-sdk/commands/configure/overview.md) 명령입니다.
 
-* **[!UICONTROL 콜백 함수]**: 확장에 제공된 콜백 함수를 라고 합니다. [`onBeforeEventSend` 함수](/help/web-sdk/commands/configure/onbeforeeventsend.md) 라이브러리에 있습니다. 이 함수를 사용하면 이벤트를 Edge Network으로 보내기 전에 전역적으로 수정할 수 있습니다.
-* **[!UICONTROL 클릭 데이터 수집 활성화]**: Web SDK는 자동으로 링크 클릭 정보를 수집할 수 있습니다. 기본적으로 이 기능은 활성화되어 있지만 이 옵션을 사용하여 비활성화할 수 있습니다. 또한 링크의 레이블은 다음에 나열된 다운로드 표현식 중 하나를 포함하는 경우 다운로드 링크로 표시됩니다. [!UICONTROL 다운로드 링크 한정자] 텍스트 상자. Adobe은 몇 가지 기본 다운로드 링크 한정자를 제공합니다. 필요에 따라 편집할 수 있습니다.
-* **[!UICONTROL 자동으로 수집된 컨텍스트 데이터]**: 기본적으로 Web SDK는 장치, 웹, 환경 및 위치 컨텍스트와 관련된 특정 컨텍스트 데이터를 수집합니다. 이 데이터를 수집하지 않거나 특정 범주의 데이터만 수집하려면 다음을 선택합니다. **[!UICONTROL 특정 컨텍스트 정보]** 수집할 데이터를 선택합니다. 다음을 참조하십시오 [`context`](/help/web-sdk/commands/configure/context.md) 추가 정보.
+![태그 UI에서 웹 SDK 태그 확장의 데이터 수집 설정을 보여 주는 이미지입니다.](assets/web-sdk-ext-collection.png)
+
+* **[!UICONTROL 이벤트 전송 콜백 전]**: Adobe으로 전송된 페이로드를 평가하고 수정하는 콜백 함수입니다. 사용 `content` 페이로드를 수정하는 콜백 함수 내의 변수입니다. 이 콜백은 과 동일한 태그입니다. [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) JavaScript 라이브러리에서 참조할 수 있습니다.
+* **[!UICONTROL 내부 링크 클릭 수 수집]**: 사이트 또는 속성 내부의 링크 추적 데이터 수집을 활성화하는 확인란입니다. 이 확인란을 활성화하면 이벤트 그룹화 옵션이 표시됩니다.
+   * **[!UICONTROL 이벤트 그룹화 없음]**: 링크 추적 데이터가 별도의 이벤트로 Adobe에 전송됩니다. 별도의 이벤트에서 전송된 링크 클릭으로 Adobe Experience Platform에 전송된 데이터의 계약적 사용이 늘어날 수 있습니다.
+   * **[!UICONTROL 세션 저장소를 사용한 이벤트 그룹화]**: 다음 페이지 이벤트가 발생할 때까지 링크 추적 데이터를 세션 저장소에 저장합니다. 다음 페이지에서는 저장된 링크 추적 데이터와 페이지 보기 데이터가 동시에 Adobe으로 전송됩니다. Adobe은 내부 링크를 추적할 때 이 설정을 활성화할 것을 권장합니다.
+   * **[!UICONTROL 로컬 개체를 사용한 이벤트 그룹화]**: 다음 페이지 이벤트가 발생할 때까지 링크 추적 데이터를 로컬 개체에 저장합니다. 방문자가 새 페이지로 이동하면 링크 추적 데이터가 손실됩니다. 이 설정은 단일 페이지 애플리케이션 컨텍스트에서 가장 유용합니다.
+* **[!UICONTROL 외부 링크 클릭 수 수집]**: 외부 링크 컬렉션을 활성화하는 확인란입니다.
+* **[!UICONTROL 다운로드 링크 클릭 수 수집]**: 다운로드 링크의 컬렉션을 활성화하는 확인란입니다.
+* **[!UICONTROL 다운로드 링크 한정자]**: 링크 URL을 다운로드 링크로 규정하는 정규 표현식입니다.
+* **[!UICONTROL 필터 클릭 속성]**: 컬렉션 전에 클릭 관련 속성을 평가하고 수정하는 콜백 함수입니다. 이 함수는 [!UICONTROL 이벤트 전송 콜백 전].
+* **컨텍스트 설정**: 특정 XDM 필드를 채우는 방문자 정보를 자동으로 수집합니다. 다음을 선택할 수 있습니다. **[!UICONTROL 모든 기본 컨텍스트 정보]** 또는 **[!UICONTROL 특정 컨텍스트 정보]**. 와 동등한 태그입니다. [`context`](/help/web-sdk/commands/configure/context.md) JavaScript 라이브러리에서 참조할 수 있습니다.
+   * **[!UICONTROL 웹]**: 현재 페이지에 대한 정보를 수집합니다.
+   * **[!UICONTROL 장치]**: 사용자 장치에 대한 정보를 수집합니다.
+   * **[!UICONTROL 환경]**: 사용자의 브라우저에 대한 정보를 수집합니다.
+   * **[!UICONTROL 위치 컨텍스트]**: 사용자 위치에 대한 정보를 수집합니다.
+   * **[!UICONTROL 높은 엔트로피 사용자 에이전트 힌트]**: 사용자 장치에 대한 자세한 정보를 수집합니다.
+
+>[!TIP]
+>
+다음 **[!UICONTROL 링크 전에 전송 을 클릭합니다]** 필드는 이미 구성된 속성에만 표시되는 더 이상 사용되지 않는 콜백입니다. 와 동등한 태그입니다. [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) JavaScript 라이브러리에서 참조할 수 있습니다. 사용 **[!UICONTROL 필터 클릭 속성]** 콜백을 사용하여 클릭 데이터를 필터링하거나 조정하거나 **[!UICONTROL 이벤트 전송 콜백 전]** Adobe으로 전송되는 전체 페이로드를 필터링하거나 조정합니다. 둘 다 **[!UICONTROL 필터 클릭 속성]** 콜백 및 **[!UICONTROL 링크 전에 전송 을 클릭합니다]** 콜백이 설정되며 **[!UICONTROL 필터 클릭 속성]** 콜백이 실행됩니다.
 
 ## 미디어 컬렉션 설정 구성 {#media-collection}
 
@@ -155,6 +173,6 @@ Adobe 코드 조각 사전 숨김을 사용하는 경우 동일한 항목을 사
 
 ## 고급 설정 구성
 
-사용 **[!UICONTROL 가장자리 기준 경로]** Edge Network과 상호 작용하는 데 사용되는 기본 경로를 변경해야 하는 경우 필드입니다. 이 경우 업데이트가 필요하지 않지만 Beta 또는 알파에 참여하는 경우 Adobe에서 이 필드를 변경하도록 요청할 수 있습니다.
+사용 **[!UICONTROL Edge 기본 경로]** Edge Network과 상호 작용하는 데 사용되는 기본 경로를 변경해야 하는 경우 필드입니다. 이 경우 업데이트가 필요하지 않지만 Beta 또는 알파에 참여하는 경우 Adobe에서 이 필드를 변경하도록 요청할 수 있습니다.
 
 ![웹 SDK 태그 확장 페이지를 사용한 고급 설정을 보여 주는 이미지입니다.](assets/advanced-settings.png)

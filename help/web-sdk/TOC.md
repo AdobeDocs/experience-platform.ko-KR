@@ -6,9 +6,9 @@ breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
 role: Developer
-source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
+source-git-commit: 14f9c2240d1a650cc267bd997ea35d7923f71b2b
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '225'
 ht-degree: 22%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 22%
    * 구성 {#configure}
       * [개요](commands/configure/overview.md)
       * [클릭콜렉션활성화됨](commands/configure/clickcollectionenabled.md)
+      * [clickCollection](commands/configure/clickcollection.md)
       * [컨텍스트](commands/configure/context.md)
       * [debugEnable](commands/configure/debugenabled.md)
       * [defaultConsent](commands/configure/defaultconsent.md)
@@ -56,12 +57,12 @@ ht-degree: 22%
    * [createMediaSession](commands/createmediasession.md)
    * [getIdentity](commands/getidentity.md)
    * [getLibraryInfo](commands/getlibraryinfo.md)
+   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
    * [setConsent](commands/setconsent.md)
    * [set디버그](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
    * [데이터 스트림 재정의 구성](commands/datastream-overrides.md)
    * [명령 응답](commands/command-responses.md)
-   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
 
 * 신원 {#identity}
    * [개요](identity/overview.md)
@@ -71,7 +72,7 @@ ht-degree: 22%
 * 개인화 {#personalization}
    * [디스플레이 이벤트 관리](personalization/display-events.md)
    * [개인화된 콘텐츠 렌더링](personalization/rendering-personalization-content.md)
-   * [하이브리드 구현을 통한 개인화](personalization/hybrid-personalization.md)
+   * [하이브리드 구현을 통한 Personalization](personalization/hybrid-personalization.md)
    * [플리커 관리](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [개요](personalization/adobe-target/target-overview.md)
