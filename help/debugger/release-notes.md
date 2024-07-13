@@ -4,21 +4,34 @@ description: Adobe Experience Platform Debugger에 대한 최신 릴리스 정�
 keywords: debugger;experience Platform Debugger 확장 프로그램;chrome;확장 프로그램;릴리스 정보
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a381760d3f19e04a70581d4adbb8095c92fb2e56
+source-git-commit: c99234cf3f5af9abe590c90fbdefc7d50c1539da
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '758'
 ht-degree: 5%
 
 ---
 
 # Adobe Experience Platform Debugger 릴리스 노트
 
+## 버전 1.6.0 - 2024년 7월 11일
+
+### 새로운 기능
+
+* 사용자가 기술 및 개인 데이터 수집을 옵트인/옵트아웃할 수 있도록 허용합니다.
+
+### 수정 사항 및 개선 사항
+
+* Firefox 스크립트 삽입 및 개인정보 처리방침 링크를 수정합니다.
+* 누락된 Analytics 요청 캡처
+* 복잡한 콘솔 메시지가 많은 페이지의 충돌을 수정합니다.
+* Adobe Experience Platform Debugger을 Manifest v3 확장으로 업데이트합니다.
+
 ## 버전 1.5.4 - 2023년 12월 19일
 
 ### 수정 사항 및 개선 사항
 
 * 설정이 유지되지 않는 문제가 해결되었습니다.
-* Analytics 사후 처리 히트를 보는 동안 디버거가 충돌하는 문제를 해결했습니다.
+* Analytics Post 처리 히트를 보는 동안 디버거가 충돌하는 문제를 해결했습니다.
 
 ## 버전 1.5.3 - 2023년 12월 6일
 
@@ -47,7 +60,7 @@ ht-degree: 5%
 
 * Analytics 이벤트가 무시되거나 중복되는 문제가 해결되었습니다.
 * 최대 상태 저장소 크기를 초과하는 문제가 해결되었습니다.
-* 에지 로그 검색에서 이벤트를 필터링하지 못하는 문제가 해결되었습니다.
+* Edge 로그 검색에서 이벤트를 필터링하지 않는 문제를 수정했습니다.
 
 ## 버전 1.5.0 - 2023년 10월 19일
 
@@ -62,7 +75,7 @@ ht-degree: 5%
 * Target 추적이 표시되지 않는 문제를 해결했습니다.
 * &#39;피드백 보내기&#39; 버튼을 수정했습니다.
 * 버전 ≥2.18.0에 대한 웹 SDK 요약에서 누락된 &quot;데이터 스트림 ID&quot;를 수정했습니다.
-* 에지 로그를 검색할 수 없는 문제를 해결했습니다.
+* Edge 로그를 검색할 수 없는 문제를 해결했습니다.
 * 특정 계정 유형에 대한 추가 프로필에 대한 메모를 추가했습니다.
 
 ## 버전 1.4.1 - 2022년 11월 1일
@@ -112,9 +125,9 @@ ht-degree: 5%
 
 ## 버전 1.1.0 - 2021년 10월 5일
 
-* 원격 디버깅 시각화 - Adobe Experience Platform 웹 SDK > Edge Transactions 섹션에서 원격 디버깅 이벤트를 시각적 순서도로 구성합니다.
+* 원격 디버깅 시각화 - Adobe Experience Platform Web SDK > Edge 트랜잭션 섹션의 원격 디버깅 이벤트를 시각적 순서도로 구성합니다.
 * 새 원격 디버깅 세션을 시작할 때 페이지에서 사용된 Adobe Experience Platform Web SDK 조직이 로그인한 조직과 일치해야 합니다.
-* 연결된 탭에 대한 에지 트랜잭션만 표시합니다. Target 추적 로그는 로그 > 에지 섹션에서 계속 사용할 수 있습니다.
+* 연결된 탭에 대한 에지 트랜잭션만 표시합니다. Target 추적 로그는 로그 > Edge 섹션에서 계속 사용할 수 있습니다.
 * 페이지에서 Adobe Experience Platform Web SDK의 각 인스턴스에 대해 별도의 데이터 스트림 ID 구성 재정의를 허용합니다. 디버그 활성화 토글 추가.
 * Adobe Target 추적 토큰이 Adobe Experience Platform Web SDK에 대한 원격 디버깅 세션과 함께 항상 전송되지 않던 문제를 수정했습니다.
 
