@@ -2,10 +2,10 @@
 title: ID 그래프 연결 규칙 구성 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 badge: Beta
-source-git-commit: d8a36650b2cd3ec9683763f536ea5c2c2e27455c
+source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 5%
+source-wordcount: '807'
+ht-degree: 4%
 
 ---
 
@@ -26,29 +26,28 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 
 시작하기 전에 먼저 시스템의 인증된 이벤트에 항상 개인 식별자가 포함되어 있는지 확인해야 합니다.
 
-<!-- ## Set permissions {#set-permissions}
+## 권한 설정 {#set-permissions}
 
-The first step in the implementation process for Identity Service is to ensure that your Experience Platform account is added to a role that is provisioned with the necessary permissions. Your administrator can configure permissions for your account by navigating to the Permissions UI in Adobe Experience Cloud. From there, your account must be added to a role with the following permissions:
+ID 서비스 구현 프로세스의 첫 번째 단계는 Experience Platform 계정이 필요한 권한으로 프로비저닝된 역할에 추가되도록 하는 것입니다. 관리자는 Adobe Experience Cloud의 권한 UI로 이동하여 계정에 대한 권한을 구성할 수 있습니다. 여기에서 계정은 다음 권한이 있는 역할에 추가되어야 합니다.
 
-* manage-identity-settings
-* view-identity-dashboard
-* view-identity-simulation
+* [!UICONTROL ID 설정 보기]: ID 네임스페이스 찾아보기 페이지에서 고유한 네임스페이스 및 네임스페이스 우선 순위를 볼 수 있도록 이 권한을 적용합니다.
+* [!UICONTROL ID 설정 편집]: ID 설정을 편집하고 저장하려면 이 권한을 적용하세요.
 
-For more information on permissions, read the [permissions guide](../../access-control/abac/ui/permissions.md). -->
+사용 권한에 대한 자세한 내용은 [사용 권한 안내서](../../access-control/abac/ui/permissions.md)를 참조하세요.
 
 ## ID 네임스페이스 만들기 {#namespace}
 
-데이터에 필요한 경우 먼저 조직에 적합한 네임스페이스를 만들어야 합니다. 사용자 지정 네임스페이스를 만드는 방법에 대한 단계는 의 안내서를 참조하십시오 [ui에서 사용자 정의 네임스페이스 만들기](../features/namespaces.md#create-custom-namespaces).
+데이터에 필요한 경우 먼저 조직에 적합한 네임스페이스를 만들어야 합니다. 사용자 지정 네임스페이스를 만드는 방법에 대한 단계는 [UI에서 사용자 지정 네임스페이스 만들기](../features/namespaces.md#create-custom-namespaces)에 대한 안내서를 참조하십시오.
 
 ## 그래프 시뮬레이션 도구 사용 {#graph-simulation}
 
-다음으로 이동 [그래프 시뮬레이션 도구](./graph-simulation.md) ID 서비스 UI 작업 공간. 그래프 시뮬레이션 도구를 사용하여 다양한 고유한 네임스페이스 및 네임스페이스 우선 순위 구성으로 구축된 ID 그래프를 시뮬레이션할 수 있습니다.
+그런 다음 Identity Service UI 작업 영역에서 [그래프 시뮬레이션 도구](./graph-simulation.md)로 이동합니다. 그래프 시뮬레이션 도구를 사용하여 다양한 고유한 네임스페이스 및 네임스페이스 우선 순위 구성으로 구축된 ID 그래프를 시뮬레이션할 수 있습니다.
 
 다양한 구성을 만들어 그래프 시뮬레이션 도구를 사용하여 ID 최적화 알고리즘 및 특정 구성이 그래프의 동작 방식에 어떻게 영향을 줄 수 있는지 배우고 더 잘 이해할 수 있습니다.
 
 ## ID 설정 구성 {#identity-settings}
 
-그래프의 동작 방식에 대해 잘 알고 있는 경우 [id 설정 도구](./identity-settings-ui.md) ID 서비스 UI 작업 공간.
+그래프의 동작 방식을 보다 잘 이해했으면 Identity Service UI 작업 영역의 [ID 설정 도구](./identity-settings-ui.md)로 이동합니다.
 
 ID 설정 도구를 사용하여 고유한 네임스페이스를 지정하고 우선 순위별로 네임스페이스를 구성합니다. 설정 적용이 끝나면 새 설정이 ID 서비스에 반영되기까지 최소 6시간이 걸리기 때문에 데이터 수집을 진행하려면 최소 6시간 이상 기다려야 합니다.
 
@@ -58,13 +57,13 @@ ID 설정 도구를 사용하여 고유한 네임스페이스를 지정하고 �
 
 실시간 고객 프로필로 데이터를 수집하려면 스키마에 기본 ID로 지정된 필드가 하나 이상 포함되어 있는지 확인해야 합니다. 기본 ID를 설정하여 프로필 수집에 주어진 스키마를 활성화할 수 있습니다.
 
-스키마를 만드는 방법에 대한 지침은 의 안내서를 참조하십시오 [ui에서 XDM 스키마 만들기](../../xdm/tutorials/create-schema-ui.md).
+스키마를 만드는 방법에 대한 지침은 [UI에서 XDM 스키마 만들기](../../xdm/tutorials/create-schema-ui.md)에 대한 안내서를 참조하십시오.
 
 ## 데이터 세트 만들기 {#dataset}
 
 그런 다음 데이터 세트를 만들어 수집할 데이터의 구조를 제공합니다. 데이터 세트는 스키마(열) 및 필드(행)를 포함하는 데이터 수집을 위한 저장소 및 관리 구조입니다. 데이터 세트는 스키마와 함께 작동하며 데이터를 실시간 고객 프로필로 수집하려면 프로필 수집에 대해 데이터 세트를 활성화해야 합니다. 프로필에 대해 데이터 세트를 활성화하려면 프로필 수집에 대해 활성화된 스키마를 참조해야 합니다.
 
-데이터 세트를 만드는 방법에 대한 지침은 [데이터 세트 UI 안내서](../../catalog/datasets/user-guide.md).
+데이터 집합을 만드는 방법에 대한 지침은 [데이터 집합 UI 안내서](../../catalog/datasets/user-guide.md)를 참조하세요.
 
 ## 데이터 수집 {#ingest}
 
@@ -86,4 +85,4 @@ ID 설정 도구를 사용하여 고유한 네임스페이스를 지정하고 �
 >
 >데이터가 수집되면 XDM 원시 데이터 페이로드는 변경되지 않습니다. UI에 기본 ID 구성이 계속 표시될 수 있습니다. 그러나 이러한 구성은 ID 설정에 의해 재정의됩니다.
 
-피드백의 경우 **[!UICONTROL Beta 피드백]** 옵션을 선택할 수 있습니다.
+피드백에 대해서는 Identity Service UI 작업 영역에서 **[!UICONTROL Beta 피드백]** 옵션을 사용하십시오.
