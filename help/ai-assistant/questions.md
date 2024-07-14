@@ -2,9 +2,9 @@
 title: AI Assistant 질문 안내서
 description: AI Assistant를 쿼리할 때 사용할 수 있는 예제 질문에 대해 알려면 이 문서를 참조하십시오.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 26e27e7a62731fe43ef203741121b22226078b28
+source-git-commit: 6860e1dc03920feaf0dfa83d09c4fca8f85a2ac2
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1694'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 AI Assistant를 쿼리할 때 사용할 수 있는 예제 질문 세트는에 대해 이 문서를 참조하십시오.
 
-이 문서를 사용하여 다음에 대한 팁을 배울 수도 있습니다. [질문 문구 작성 방법](#phrasing-your-questions) 를 사용하면 AI Assistant에서 최적의 응답을 얻을 수 있습니다.
+또한 이 문서를 사용하여 AI Assistant에서 최적의 응답을 얻기 위해 [질문 문구를 작성하는 방법](#phrasing-your-questions)에 대한 팁을 배울 수 있습니다.
 
 ## 목표 기반 질문 {#objectives-questions}
 
@@ -22,58 +22,58 @@ AI Assistant를 쿼리할 때 사용할 수 있는 예제 질문 세트는에 �
 | 목표 | 설명 | 예 |
 | --- | --- | --- |
 | 학습 개념 및 지속적인 워크플로 | <ul><li>초보 사용자는 AI Assistant를 사용하여 Real-Time CDP 및 Adobe Journey Optimizer 개념을 학습하고 익숙하지 않은 제품 및 기능을 온보딩할 수 있습니다.</li><li>숙련된 사용자는 AI Assistant를 사용하여 워크플로우를 차단할 수 있는 경계 사례를 해결할 수 있습니다. | <ul><li>여정 분석에서 대시보드를 설정하려면 어떻게 해야 합니까?</li><li>Real-Time CDP의 사용 사례를 알려 주십시오.</li></ul> |
-| 문제 해결 | AI Assistant를 사용하여 워크플로우에서 발생할 수 있는 기본 오류를 디버깅하는 방법을 학습합니다. | <ul><li>이 오류는 무엇입니까? {ERROR_MESSAGE} 비열해?</li><li>&quot;Luma: 이메일 대상자&quot;라는 대상자를 삭제할 수 없는 이유는 무엇입니까?</li></ul> |
+| 문제 해결 | AI Assistant를 사용하여 워크플로우에서 발생할 수 있는 기본 오류를 디버깅하는 방법을 학습합니다. | <ul><li>이 오류 {ERROR_MESSAGE}은(는) 무엇을 의미합니까?</li><li>&quot;Luma: 이메일 대상자&quot;라는 대상자를 삭제할 수 없는 이유는 무엇입니까?</li></ul> |
 | 샌드박스 위생 | AI Assistant를 사용하여 중복 또는 사용하지 않는 오브젝트를 식별하면 샌드박스를 효율적으로 관리할 수 있습니다. | <ul><li>비슷한 관객들을 보여주실 수 있나요?</li><li>연관된 데이터 세트가 없는 스키마가 있습니까?</li></ul> |
 | 값 분석 | AI Assistant를 사용하여 가장 많이 사용되는 데이터 객체를 식별하고 성능 지표를 평가하거나 가장 중요한 데이터 객체를 찾습니다. | <ul><li>Luma: 이메일 대상자 세그먼트 정의에 있는 프로필은 몇 개입니까?</li><li>대상이 언제 대상 Experience Cloud 대상으로 활성화되었습니까?</li></ul> |
 | 검색 | AI 비서를 사용하여 대상, 데이터 세트, 대상, 스키마 및 소스와 같은 지원되는 Experience Platform 개체를 찾습니다. | <ul><li>지난 분기에 생성된 이름에 &quot;Luma&quot;가 포함된 대상을 나열합니다.</li><li>Luma: 사용자 지정 작업 XDM 스키마에는 어떤 속성이 있습니까?</li></ul> |
-| 영향 분석 | AI Assistant를 사용하여 특정 워크플로우에서 사용된 데이터 객체를 식별하여 변경 사항의 영향을 평가할 수 있습니다. | <ul><li>대상이 사용하는 항목 `homeAddress.city` &quot;Luma: PersonProfiles&quot; 스키마에서?</li><li>은(는) 어떤 데이터 세트입니까? `consents.marketing.push.val` 프로필 속성이에 저장됩니까?</li></ul> |
+| 영향 분석 | AI Assistant를 사용하여 특정 워크플로우에서 사용된 데이터 객체를 식별하여 변경 사항의 영향을 평가할 수 있습니다. | <ul><li>&quot;Luma: PersonProfiles&quot; 스키마에서 `homeAddress.city`을(를) 사용하는 대상은 무엇입니까?</li><li>`consents.marketing.push.val` 프로필 특성이 저장된 데이터 세트는 무엇입니까?</li></ul> |
 
 {style="table-layout:auto"}
 
 ## 엔티티별 운영 통찰력 및 제품 지식 질문{#objects-questions}
 
-다음 질문은 데이터 객체별로 그룹화되며 다음 중 하나로 분류됩니다 [운영 통찰력](./home.md#operational-insights) 또는 [제품 지식](./home.md#product-knowledge).
+다음 질문은 데이터 개체별로 그룹화되어 [운영 인사이트](./home.md#operational-insights) 또는 [제품 지식](./home.md#product-knowledge) 중 하나로 분류됩니다.
 
-* **대상 - 운영 통찰력**
+* **대상 - Operational insights**
    * 다른 대상을 사용하는 대상
    * 대상자 간 프로필 수 분포는 어떻게 됩니까?
-   * 이전에 마지막으로 수정한 대상자 표시 {RELATIVE_DATE}.
+   * {RELATIVE_DATE} 전에 마지막으로 수정한 대상자를 표시합니다.
    * 프로필이 0개인 대상자는 무엇입니까?
-   * 다음과 같음 {USE_AUTO_COMPLETE_TO_FILL_AUDIENCE_NAME} 다른 대상자에서 사용하시겠습니까?
-* **속성 - Operational insights**
-   * xdm 속성이 있는 대상 {ATTRIBUTE_PATH} 세그먼트 정의에?
+   * {USE_AUTO_COMPLETE_TO_FILL_AUDIENCE_NAME}이(가) 다른 대상자에서 사용되고 있습니까?
+* **특성 - Operational insights**
+   * 세그먼트 정의에 xdm 특성 {ATTRIBUTE_PATH}이(가) 있는 대상은 무엇입니까?
    * 대상에서 사용되지 않는 XDM 스키마 속성 수는?
-   * xdm 속성이 있는 스키마 {ATTRIBUTE_PATH} 안에?
+   * xdm 특성 {ATTRIBUTE_PATH}이(가) 포함된 스키마는 무엇입니까?
    * 활성화된 XDM 속성은 무엇입니까?
    * 프로필이 10개 이상인 대상자에서 어떤 XDM 속성이 사용됩니까?
 * **데이터 흐름 - Operational insights**
-   * 데이터 흐름이 기여하는 항목 {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} 데이터 세트?
+   * {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} 데이터 세트에 기여하는 데이터 흐름은 무엇입니까?
    * 사용되지 않거나 더 이상 데이터가 수신되지 않는 소스 데이터 흐름
    * 보유한 소스 데이터 흐름을 나열합니다.
    * 각 소스 커넥터에 대해 구성된 데이터 흐름은 무엇입니까?
-* **데이터 세트 - 운영 통찰력**
+* **데이터 세트 - Operational insights**
    * 동일한 스키마를 사용하여 수집된 데이터 세트 수는 얼마입니까?
-   * 연결된 소스 커넥터 {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} 데이터 세트?
+   * {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} 데이터 세트와 연결된 소스 커넥터는 무엇입니까?
    * 각 대상자에서 사용되는 데이터 세트는 무엇입니까?
    * 데이터 세트에서 사용되지 않는 스키마는 무엇입니까?
    * 보유한 데이터 세트는 몇 개입니까?
-* **대상 - 운영 통찰력**
+* **대상 - 운영 인사이트**
    * 활성 상태인 대상은 무엇입니까?
    * 0개의 대상이 활성화된 대상 계정은 무엇입니까?
    * 각 대상에 대해 활성화된 대상자는 몇 명입니까?
    * 활성화된 대상자 수가 가장 많은 대상은 무엇입니까?
-* **여정 - 운영 통찰력**
+* **여정 - Operational insights**
    * 나에게 여정이 몇 개나 있습니까?
-   * 생성된 여정 {RELATIVE_DATE} (예: 지난 주) 또는 {RELATIVE_DATE} (예: 특정 날짜 이전/이후/날짜)
-   * 수정된 여정 목록 표시 {RELATIVE_DATE} (예: 지난 주) 또는 {RELATIVE_DATE} (예: 특정 날짜 이전/이후/날짜)
+   * {RELATIVE_DATE}(예: 지난 주) 또는 {RELATIVE_DATE}(예: 특정 날짜 이전/이후/날짜)에 만들어진 여정은 무엇입니까?
+   * {RELATIVE_DATE}(예: 지난 주) 또는 {RELATIVE_DATE}(예: 특정 날짜 이전/이후/날짜)에 수정된 여정 목록을 표시하시겠습니까?
    * 보유한 라이브 여정을 나열합니다.
    * 라이브 여정에 사용되는 대상자를 나열합니다.
 * **소스 - Operational insights**
    * 활성 상태인 소스는 무엇입니까?
-   * 데이터 세트와 연결된 소스 커넥터 {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME}.
+   * 데이터 집합 {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME}과(와) 연결된 소스 커넥터가 있습니다.
    * 연결된 계정 수가 가장 많은 소스 커넥터는 무엇입니까?
    * 데이터 흐름과 관련 소스 커넥터를 보여 줍니다.
-* **중요 학습 - 제품 지식(Real-Time CDP 및 Journey Optimizer)**
+* **중요 학습 - 제품 정보(Real-Time CDP 및 Journey Optimizer)**
    * 유사 대상은 무엇입니까?
    * 사용자 그룹은 역할과 어떻게 관련됩니까?
    * 데이터 유형과 필드 그룹은 언제 사용해야 합니까?
@@ -84,6 +84,30 @@ AI Assistant를 쿼리할 때 사용할 수 있는 예제 질문 세트는에 �
    * 데이터가 수집된 후 프로필 활성화 스키마를 삭제할 수 있습니까?
    * 대상을 삭제할 수 없는 이유
    * 대상자를 평가하고 결과를 타겟팅할 수 있는 데 시간이 얼마나 걸립니까?
+
++++제안된 프롬프트의 추가 목록을 보려면 선택
+
+* 데이터가 수집된 후 프로필 활성화 스키마를 삭제할 수 있습니까?
+* 사용자 그룹은 역할과 어떻게 관련됩니까?
+* 데이터 유형과 필드 그룹은 언제 사용해야 합니까?&#39;
+* ID와 기본 또는 외래 키 간의 차이점은 무엇입니까?&#39;
+* 세그먼트를 평가하고 결과를 타겟팅할 수 있는 데 시간이 얼마나 걸립니까?
+* 프로필 풍부성은 어떻게 계산됩니까?&#39;
+* Real-Time CDP에 대한 몇 가지 일반적인 사용 사례를 알려주십시오.
+* 세그먼트를 삭제할 수 없는 이유
+* 프로필에 대해 스키마를 활성화한 후 변경할 수 있는 유형은 무엇입니까?
+* AEP의 대시보드에 액세스할 수 없는 이유는 무엇입니까?
+* xdm 특성 {FIELD_PATH}을(를) 사용하는 세그먼트 수
+* 다른 세그먼트에서 사용되는 세그먼트가 있습니까?
+* {SCHEMA_NAME} 스키마에 {STRING}이(가) 포함된 필드는 무엇입니까?
+* 세그먼트 정의에 xdm 특성 {FULL_ATTRIBUTE_PATH}이(가) 있는 대상은 무엇입니까?
+* xdm 특성 {FULL_ATTRIBUTE_PATH}이(가) 포함된 스키마는 무엇입니까?
+* 사용되지 않거나 더 이상 데이터가 수신되지 않는 소스 데이터 흐름
+* 보유한 라이브 여정을 나열합니다.
+* 라이브 여정에 사용되는 대상자를 나열합니다.
+* 활성 상태인 소스는 무엇입니까?
+
++++
 
 ## 질문 표현 {#phrasing-your-questions}
 
@@ -99,7 +123,7 @@ AI Assistant에 질문을 할 때 따라야 할 모범 사례에 대한 자세�
 
 | 실행 | 예 |
 | --- | --- |
-| <ul><li>검색하거나 분석할 개체 또는 정보에 대해 구체적으로 지정합니다.</li><li>데이터 개체 이름을 따옴표로 묶어 보십시오. 개체 이름의 일부만 알고 있는 경우에는 질문에 이를 지정할 수도 있습니다.</li><li>사용 [오브젝트 자동 완성](./ui-guide.md#use-auto-complete) ai Assistant가 쿼리 컨텍스트를 더 잘 이해할 수 있도록 도와줍니다.</li></ul> | <ul><li>어느 데이터 세트가 &quot;Luma - 충성도&quot; 스키마를 사용합니까?</li><li>이름에 &quot;Luma&quot;가 있는 활성화된 세그먼트를 표시합니다. 프로필 개수별로 등급을 지정합니다.</li></ul> |
+| <ul><li>검색하거나 분석할 개체 또는 정보에 대해 구체적으로 지정합니다.</li><li>데이터 개체 이름을 따옴표로 묶어 보십시오. 개체 이름의 일부만 알고 있는 경우에는 질문에 이를 지정할 수도 있습니다.</li><li>AI 관리자가 쿼리의 컨텍스트를 더 잘 이해할 수 있도록 [개체 자동 완성](./ui-guide.md#use-auto-complete)을 사용하십시오.</li></ul> | <ul><li>어느 데이터 세트가 &quot;Luma - 충성도&quot; 스키마를 사용합니까?</li><li>이름에 &quot;Luma&quot;가 있는 활성화된 세그먼트를 표시합니다. 프로필 개수별로 등급을 지정합니다.</li></ul> |
 | <ul><li>모호함을 피하고 명확한 언어 사용</li><li>쿼리의 명확성을 높이려면 정확한 용어를 사용하십시오.</li><li>Adobe Experience Platform 관련 질문을 할 때는 응답의 관련성을 개선하기 위해 Experience Platform 관련 용어를 사용하십시오.</li></ul> | <ul><li>ACME Audience에는 프로필이 몇 개 있습니까?</li><li>활성화된 대상자에 사용된 상위 5개의 XDM 속성을 표시합니다.</li></ul> |
 | <ul><li>컨텍스트를 제공하거나 결과를 필터링할 기준을 지정하십시오.</li><li>질문의 필터 기준을 사용하여 응답의 데이터 볼륨을 제한합니다.</li></ul> | <ul><li>활성화되지 않았으며 6개월 이상 전에 만들어지고 수정한 적이 없는 대상을 표시합니다.</li><li>&quot;ACME 대상&quot;에 활성화되고 프로필이 10000개 이상 있는 대상자 표시</li></ul> |
 
@@ -115,6 +139,51 @@ AI Assistant에 질문을 할 때 따라야 할 모범 사례에 대한 자세�
 
 {style="table-layout:auto"}
 
+## 지원되지 않는 질문의 예 {#unsupported-questions}
+
+다음은 현재 AI Assistant에서 지원하지 않는 질문 목록입니다.
+
++++지원되지 않는 질문의 예를 보려면 선택
+
+### 운영 통찰력
+
+* 이 샌드박스 [특정 기준(예: &quot;Live in California&quot;])을 충족하는 프로필의 수는 몇 개입니까?
+* 이 프로필 {PROFILE_INFO/ATTRIBUTE_VALUE}이(가) 속한 세그먼트는 무엇입니까?
+* 데이터 세트에 이메일이 있는 프로필은 몇 개입니까?
+* 이 샌드박스에서 최대 프로필 수를 구성하는 데이터 세트는 무엇입니까?
+* 레코드 수가 가장 많은 데이터 세트는 무엇입니까?
+* {RELATIVE_DATE}에서 얼마나 많은 세그먼트가 삭제되었습니까?
+* 내 데이터 세트 중 가장 큰 크기를 갖는 데이터 세트는 무엇입니까?
+* {AUDIENCE_NAME}의 프로필을 지정하십시오.
+* 내 샌드박스의 총 프로필 수는 얼마입니까
+* 대상 {AUDIENCE_NAME}과(와) 연결된 ID 네임스페이스의 수는 몇 개입니까?
+* 오늘 평가된 모든 대상 세그먼트의 보고서 표시
+* 몇 개의 세그먼트에 겹치는 프로필이 있습니까?
+* {DATASET_NAME}(으)로 로드되는 일괄 처리 수
+* 얼마나 많은 활성 오퍼가 있습니까?
+* 얼마나 많은 활성 캠페인이 있습니까?
+* 내 데이터 소스는 어디에서 가져오나요?
+* 가장 큰 데이터 세트 또는 데이터 소스는 무엇입니까?
+* 이러한 스키마를 생성한 사용자 목록을 가져올 수 있습니까?
+
+### 문제 해결
+
+* 이 일괄 처리 {BATCH_NAME/BATCH_ID}이(가) 아직 처리 중인 이유는 무엇입니까?
+* 이 대상 {AUDIENCE_NAME}에 대해 자격이 있는 사람이 없는 이유는 무엇입니까?
+* 고객 AI가 표시되지 않습니다. 왜, 어떻게 수정합니까?
+* 데이터 세트 미리보기를 볼 수 없습니다. 왜 및 어떻게 수정합니까?
+* {SEGMENT/DATASET/SCHEMA_NAME}을(를) 삭제할 수 없는 이유는 무엇입니까?
+* 쿼리 서비스에 액세스할 수 있습니까?
+
+### 작업 및 자동화
+
+* {DATASET_NAME}에서 하나의 레코드를 제공하는 쿼리를 작성하십시오.
+* /schemas/{schemaId}/fields/{fieldPath}/values에 샘플 API 호출을 작성합니다.
+* 나를 위한 소스/대상을 설정합니다.
+* 기준 {USER_SPECIFIC_CRITERIA}을(를) 사용하여 나를 위한 대상을 만듭니다.
+
++++
+
 ## 다음 단계
 
-이제 이 문서를 읽고 AI Assistant에 대한 질문을 최적화하는 방법에 대해 이해할 수 있습니다. 워크플로우 중에 기능을 사용하는 방법에 대한 자세한 내용은 [AI Assistant UI 안내서](ui-guide.md).
+이제 이 문서를 읽고 AI Assistant에 대한 질문을 최적화하는 방법에 대해 이해할 수 있습니다. 워크플로우 중에 기능을 사용하는 방법에 대한 자세한 내용은 [AI Assistant UI 안내서](ui-guide.md)를 참조하십시오.
