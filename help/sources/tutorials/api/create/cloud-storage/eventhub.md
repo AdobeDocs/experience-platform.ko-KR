@@ -1,35 +1,35 @@
 ---
-title: 흐름 서비스 API를 사용하여 Azure Event Hubs 소스 연결 만들기
+title: 흐름 서비스 API를 사용하여 Azure Event Hubs Source 연결 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Azure Event Hubs 계정에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1492'
 ht-degree: 2%
 
 ---
 
-# 만들기 [!DNL Azure Event Hubs] 를 사용한 소스 연결 [!DNL Flow Service] API
+# [!DNL Flow Service] API를 사용하여 [!DNL Azure Event Hubs] 소스 연결 만들기
 
 >[!IMPORTANT]
 >
->다음 [!DNL Azure Event Hubs] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
+>[!DNL Azure Event Hubs] 원본은 Real-time Customer Data Platform Ultimate를 구입한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
 
-연결 방법에 대해 알아보려면 이 튜토리얼 을 참조하십시오 [!DNL Azure Event Hubs] (이하 &quot;라고 한다)[!DNL Event Hubs]&quot;) Experience Platform 대상, 사용 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)을(를) 사용하여 [!DNL Azure Event Hubs](이하 &quot;[!DNL Event Hubs]&quot;)을(를) Experience Platform에 연결하는 방법을 알아보려면 이 자습서를 읽어 보십시오.
 
 ## 시작하기
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-- [소스](../../../../home.md): [!DNL Experience Platform] 를 사용하여 수신 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다. [!DNL Platform] 서비스.
-- [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 만드는 가상 샌드박스를 제공합니다. [!DNL Platform] 인스턴스를 별도의 가상 환경으로 전환하여 디지털 경험 애플리케이션을 개발하고 발전시킵니다.
+- [원본](../../../../home.md): [!DNL Experience Platform]에서는 데이터를 다양한 원본에서 수집할 수 있으며 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공합니다.
+- [샌드박스](../../../../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-다음 섹션은 성공적으로 연결하기 위해 알아야 하는 추가 정보를 제공합니다 [!DNL Event Hubs] 를 사용하여 플랫폼으로 [!DNL Flow Service] API.
+다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL Event Hubs]을(를) 플랫폼에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### 필요한 자격 증명 수집
 
-주문 [!DNL Flow Service] 을(를) 사용하여 [!DNL Event Hubs] 계정, 다음 연결 속성에 대한 값을 제공해야 합니다.
+[!DNL Flow Service]이(가) [!DNL Event Hubs] 계정에 연결하려면 다음 연결 속성에 대한 값을 제공해야 합니다.
 
 >[!BEGINTABS]
 
@@ -38,60 +38,60 @@ ht-degree: 2%
 | 자격 증명 | 설명 |
 | --- | --- |
 | `sasKeyName` | SAS 키 이름이라고도 하는 인증 규칙의 이름입니다. |
-| `sasKey` | 의 기본 키 [!DNL Event Hubs] 네임스페이스입니다. 다음 `sasPolicy` 해당 `sasKey` 은(는) 다음을 포함해야 합니다. `manage` 에 대해 순서대로 구성된 권한 [!DNL Event Hubs] 채울 목록입니다. |
-| `namespace` | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. An [!DNL Event Hubs] 네임스페이스는 하나 이상을 만들 수 있는 고유한 범위 컨테이너를 제공합니다 [!DNL Event Hubs]. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 다음 [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `sasKey` | [!DNL Event Hubs] 네임스페이스의 기본 키입니다. [!DNL Event Hubs] 목록을 채우려면 `sasKey`에 해당하는 `sasPolicy`에 `manage` 권한이 구성되어 있어야 합니다. |
+| `namespace` | 액세스 중인 [!DNL Event Hub]의 네임스페이스입니다. [!DNL Event Hub] 네임스페이스는 하나 이상의 [!DNL Event Hubs]을(를) 만들 수 있는 고유한 범위 컨테이너를 제공합니다. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
 >[!TAB SAS 인증]
 
 | 자격 증명 | 설명 |
 | --- | --- |
 | `sasKeyName` | SAS 키 이름이라고도 하는 인증 규칙의 이름입니다. |
-| `sasKey` | 의 기본 키 [!DNL Event Hubs] 네임스페이스입니다. 다음 `sasPolicy` 해당 `sasKey` 은(는) 다음을 포함해야 합니다. `manage` 에 대해 순서대로 구성된 권한 [!DNL Event Hubs] 채울 목록입니다. |
-| `namespace` | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. An [!DNL Event Hubs] 네임스페이스는 하나 이상을 만들 수 있는 고유한 범위 컨테이너를 제공합니다 [!DNL Event Hubs]. |
-| `eventHubName` | 에 대한 이름 [!DNL Event Hubs] 소스. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 다음 [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `sasKey` | [!DNL Event Hubs] 네임스페이스의 기본 키입니다. [!DNL Event Hubs] 목록을 채우려면 `sasKey`에 해당하는 `sasPolicy`에 `manage` 권한이 구성되어 있어야 합니다. |
+| `namespace` | 액세스 중인 [!DNL Event Hub]의 네임스페이스입니다. [!DNL Event Hub] 네임스페이스는 하나 이상의 [!DNL Event Hubs]을(를) 만들 수 있는 고유한 범위 컨테이너를 제공합니다. |
+| `eventHubName` | [!DNL Azure Event Hub] 이름을 입력하십시오. [!DNL Event Hub] 이름에 대한 자세한 내용은 [Microsoft 설명서](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)를 참조하십시오. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
-의 공유 액세스 서명(SAS) 인증에 대한 자세한 내용 [!DNL Event Hubs], 다음을 읽습니다 [[!DNL Azure] sas 사용 안내서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+[!DNL Event Hubs]의 SAS(공유 액세스 서명) 인증에 대한 자세한 내용은 [[!DNL Azure] SAS 사용 가이드](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)를 참조하십시오.
 
 >[!TAB 이벤트 허브 Azure Active Directory 인증]
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| `tenantId` | 권한을 요청하려는 테넌트 ID입니다. 테넌트 ID는 GUID 또는 친숙한 이름으로 포맷할 수 있습니다. **참고**: 테넌트 ID는에서 &quot;디렉터리 ID&quot;라고 합니다. [!DNL Microsoft Azure] 인터페이스. |
-| `clientId` | 앱에 할당된 애플리케이션 ID입니다. 에서 이 ID를 검색할 수 있습니다. [!DNL Microsoft Entra ID] 을(를) 등록한 포털 [!DNL Azure Active Directory]. |
-| `clientSecretValue` | 앱을 인증하기 위해 클라이언트 ID와 함께 사용되는 클라이언트 암호입니다. 에서 클라이언트 암호를 검색할 수 있습니다 [!DNL Microsoft Entra ID] 을(를) 등록한 포털 [!DNL Azure Active Directory]. |
-| `namespace` | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. An [!DNL Event Hubs] 네임스페이스는 하나 이상을 만들 수 있는 고유한 범위 컨테이너를 제공합니다 [!DNL Event Hubs]. |
+| `tenantId` | 권한을 요청하려는 테넌트 ID입니다. 테넌트 ID는 GUID 또는 친숙한 이름으로 포맷할 수 있습니다. **참고**: 테넌트 ID는 [!DNL Microsoft Azure] 인터페이스에서 &quot;디렉터리 ID&quot;라고 합니다. |
+| `clientId` | 앱에 할당된 애플리케이션 ID입니다. [!DNL Azure Active Directory]을(를) 등록한 [!DNL Microsoft Entra ID] 포털에서 이 ID를 검색할 수 있습니다. |
+| `clientSecretValue` | 앱을 인증하기 위해 클라이언트 ID와 함께 사용되는 클라이언트 암호입니다. [!DNL Azure Active Directory]을(를) 등록한 [!DNL Microsoft Entra ID] 포털에서 클라이언트 암호를 검색할 수 있습니다. |
+| `namespace` | 액세스 중인 [!DNL Event Hub]의 네임스페이스입니다. [!DNL Event Hub] 네임스페이스는 하나 이상의 [!DNL Event Hubs]을(를) 만들 수 있는 고유한 범위 컨테이너를 제공합니다. |
 
-에 대한 자세한 내용 [!DNL Azure Active Directory], 다음을 읽습니다 [Microsoft Entra ID 사용에 대한 Azure 안내서](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+[!DNL Azure Active Directory]에 대한 자세한 내용은 [Microsoft Entra ID 사용에 대한 Azure 안내서](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application)를 참조하세요.
 
->[!TAB 이벤트 허브 범위 Azure Active Directory 인증]
+>[!TAB 이벤트 허브에서 Azure Active Directory 인증 범위를 지정함]
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| `tenantId` | 권한을 요청하려는 테넌트 ID입니다. 테넌트 ID는 GUID 또는 친숙한 이름으로 포맷할 수 있습니다. **참고**: 테넌트 ID는에서 &quot;디렉터리 ID&quot;라고 합니다. [!DNL Microsoft Azure] 인터페이스. |
-| `clientId` | 앱에 할당된 애플리케이션 ID입니다. 에서 이 ID를 검색할 수 있습니다. [!DNL Microsoft Entra ID] 을(를) 등록한 포털 [!DNL Azure Active Directory]. |
-| `clientSecretValue` | 앱을 인증하기 위해 클라이언트 ID와 함께 사용되는 클라이언트 암호입니다. 에서 클라이언트 암호를 검색할 수 있습니다 [!DNL Microsoft Entra ID] 을(를) 등록한 포털 [!DNL Azure Active Directory]. |
-| `namespace` | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. An [!DNL Event Hubs] 네임스페이스는 하나 이상을 만들 수 있는 고유한 범위 컨테이너를 제공합니다 [!DNL Event Hubs]. |
-| `eventHubName` | 에 대한 이름 [!DNL Event Hubs] 소스. |
+| `tenantId` | 권한을 요청하려는 테넌트 ID입니다. 테넌트 ID는 GUID 또는 친숙한 이름으로 포맷할 수 있습니다. **참고**: 테넌트 ID는 [!DNL Microsoft Azure] 인터페이스에서 &quot;디렉터리 ID&quot;라고 합니다. |
+| `clientId` | 앱에 할당된 애플리케이션 ID입니다. [!DNL Azure Active Directory]을(를) 등록한 [!DNL Microsoft Entra ID] 포털에서 이 ID를 검색할 수 있습니다. |
+| `clientSecretValue` | 앱을 인증하기 위해 클라이언트 ID와 함께 사용되는 클라이언트 암호입니다. [!DNL Azure Active Directory]을(를) 등록한 [!DNL Microsoft Entra ID] 포털에서 클라이언트 암호를 검색할 수 있습니다. |
+| `namespace` | 액세스 중인 [!DNL Event Hub]의 네임스페이스입니다. [!DNL Event Hub] 네임스페이스는 하나 이상의 [!DNL Event Hubs]을(를) 만들 수 있는 고유한 범위 컨테이너를 제공합니다. |
+| `eventHubName` | [!DNL Azure Event Hub] 이름을 입력하십시오. [!DNL Event Hub] 이름에 대한 자세한 내용은 [Microsoft 설명서](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)를 참조하십시오. |
 
 >[!ENDTABS]
 
-이러한 값에 대한 자세한 내용은 [이 이벤트 허브 문서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+이러한 값에 대한 자세한 내용은 [이 이벤트 허브 문서](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)를 참조하세요.
 
 ### Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../../../landing/api-guide.md).
+Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ## 기본 연결 만들기
 
 >[!TIP]
 >
->만든 후에는 의 인증 유형을 변경할 수 없습니다. [!DNL Event Hubs] 기본 연결. 인증 유형을 변경하려면 새 기본 연결을 만들어야 합니다.
+>만든 후에는 [!DNL Event Hubs] 기본 연결의 인증 유형을 변경할 수 없습니다. 인증 유형을 변경하려면 새 기본 연결을 만들어야 합니다.
 
-소스 연결을 만드는 첫 번째 단계는 [!DNL Event Hubs] 소스 및 기본 연결 ID 생성. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
+원본 연결을 만드는 첫 번째 단계는 [!DNL Event Hubs] 원본을 인증하고 기본 연결 ID를 생성하는 것입니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-POST 기본 연결 ID를 만들려면 `/connections` 을(를) 제공하는 동안 엔드포인트 [!DNL Event Hubs] 요청 매개 변수의 일부로 인증 자격 증명을 사용합니다.
+기본 연결 ID를 만들려면 [!DNL Event Hubs] 인증 자격 증명을 요청 매개 변수의 일부로 제공하는 동안 `/connections` 끝점에 POST 요청을 하십시오.
 
 **API 형식**
 
@@ -103,7 +103,7 @@ POST /connections
 
 >[!TAB 표준 인증]
 
-POST 표준 인증을 사용하여 계정을 만들려면 `/connections` 에 대한 값을 제공하는 동안 엔드포인트 `sasKeyName`, `sasKey`, 및 `namespace`.
+표준 인증을 사용하여 계정을 만들려면 `sasKeyName`, `sasKey` 및 `namespace`에 대한 값을 제공하는 동안 `/connections` 끝점에 POST 요청을 합니다.
 
 +++요청
 
@@ -137,14 +137,14 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | SAS 키 이름이라고도 하는 인증 규칙의 이름입니다. |
 | `auth.params.sasKey` | 생성된 공유 액세스 서명입니다. |
-| `auth.params.namespace` | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. |
-| `connectionSpec.id` | 다음 [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | 액세스 중인 [!DNL Event Hubs]의 네임스페이스입니다. |
+| `connectionSpec.id` | [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
 
 +++응답
 
-성공한 응답은 고유 식별자를 포함하여 새로 생성된 기본 연결의 세부 정보를 반환합니다(`id`). 다음 단계에서 소스 연결을 만들려면 이 연결 ID가 필요합니다.
+성공한 응답은 고유 식별자(`id`)를 포함하여 새로 만든 기본 연결의 세부 정보를 반환합니다. 다음 단계에서 소스 연결을 만들려면 이 연결 ID가 필요합니다.
 
 ```json
 {
@@ -157,7 +157,7 @@ curl -X POST \
 
 >[!TAB SAS 인증]
 
-POST SAS 인증을 사용하여 계정을 만들려면 `/connections` 에 대한 값을 제공하는 동안 엔드포인트 `sasKeyName`, `sasKey`,`namespace`, 및 `eventHubName`.
+SAS 인증을 사용하여 계정을 만들려면 `sasKeyName`, `sasKey`, `namespace` 및 `eventHubName`에 대한 값을 제공하는 동안 `/connections` 끝점에 POST 요청을 합니다.
 
 +++요청
 
@@ -192,15 +192,15 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | SAS 키 이름이라고도 하는 인증 규칙의 이름입니다. |
 | `auth.params.sasKey` | 생성된 공유 액세스 서명입니다. |
-| `auth.params.namespace` | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. |
-| `params.eventHubName` | 에 대한 이름 [!DNL Event Hubs] 소스. |
-| `connectionSpec.id` | 다음 [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | 액세스 중인 [!DNL Event Hubs]의 네임스페이스입니다. |
+| `params.eventHubName` | [!DNL Event Hubs] 소스의 이름입니다. |
+| `connectionSpec.id` | [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
 
 +++응답
 
-성공한 응답은 고유 식별자를 포함하여 새로 생성된 기본 연결의 세부 정보를 반환합니다(`id`). 다음 단계에서 소스 연결을 만들려면 이 연결 ID가 필요합니다.
+성공한 응답은 고유 식별자(`id`)를 포함하여 새로 만든 기본 연결의 세부 정보를 반환합니다. 다음 단계에서 소스 연결을 만들려면 이 연결 ID가 필요합니다.
 
 ```json
 {
@@ -213,7 +213,7 @@ curl -X POST \
 
 >[!TAB 이벤트 허브 Azure Active Directory 인증]
 
-POST Azure Active Directory Auth를 사용하여 계정을 만들려면 `/connections` 에 대한 값을 제공하는 동안 엔드포인트 `tenantId`, `clientId`,`clientSecretValue`, 및 `namespace`.
+Azure Active Directory 인증을 사용하여 계정을 만들려면 `tenantId`, `clientId`, `clientSecretValue` 및 `namespace`에 대한 값을 제공하는 동안 `/connections` 끝점에 POST 요청을 하세요.
 
 +++요청
 
@@ -246,17 +246,17 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `auth.params.tenantId` | 애플리케이션의 테넌트 ID입니다. **참고**: 테넌트 ID는에서 &quot;디렉터리 ID&quot;라고 합니다. [!DNL Microsoft Azure] 인터페이스. |
+| `auth.params.tenantId` | 애플리케이션의 테넌트 ID입니다. **참고**: 테넌트 ID는 [!DNL Microsoft Azure] 인터페이스에서 &quot;디렉터리 ID&quot;라고 합니다. |
 | `auth.params.clientId` | 조직의 클라이언트 ID입니다. |
 | `auth.params.clientSecretValue` | 조직의 클라이언트 암호 값입니다. |
-| `auth.params.namespace` | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. |
-| `connectionSpec.id` | 다음 [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | 액세스 중인 [!DNL Event Hubs]의 네임스페이스입니다. |
+| `connectionSpec.id` | [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
 
 +++응답
 
-성공한 응답은 고유 식별자를 포함하여 새로 생성된 기본 연결의 세부 정보를 반환합니다(`id`). 다음 단계에서 소스 연결을 만들려면 이 연결 ID가 필요합니다.
+성공한 응답은 고유 식별자(`id`)를 포함하여 새로 만든 기본 연결의 세부 정보를 반환합니다. 다음 단계에서 소스 연결을 만들려면 이 연결 ID가 필요합니다.
 
 ```json
 {
@@ -267,9 +267,9 @@ curl -X POST \
 
 +++
 
->[!TAB 이벤트 허브 범위 Azure Active Directory 인증]
+>[!TAB 이벤트 허브에서 Azure Active Directory 인증 범위를 지정함]
 
-POST Azure Active Directory Auth를 사용하여 계정을 만들려면 `/connections` 에 대한 값을 제공하는 동안 엔드포인트 `tenantId`, `clientId`,`clientSecretValue`, `namespace`, 및 `eventHubName`.
+Azure Active Directory 인증을 사용하여 계정을 만들려면 `tenantId`, `clientId`, `clientSecretValue`, `namespace` 및 `eventHubName`에 대한 값을 제공하는 동안 `/connections` 끝점에 POST 요청을 만듭니다.
 
 +++요청
 
@@ -303,18 +303,18 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `auth.params.tenantId` | 애플리케이션의 테넌트 ID입니다. **참고**: 테넌트 ID는에서 &quot;디렉터리 ID&quot;라고 합니다. [!DNL Microsoft Azure] 인터페이스. |
+| `auth.params.tenantId` | 애플리케이션의 테넌트 ID입니다. **참고**: 테넌트 ID는 [!DNL Microsoft Azure] 인터페이스에서 &quot;디렉터리 ID&quot;라고 합니다. |
 | `auth.params.clientId` | 조직의 클라이언트 ID입니다. |
 | `auth.params.clientSecretValue` | 조직의 클라이언트 암호 값입니다. |
-| `auth.params.namespace` | 의 네임스페이스 [!DNL Event Hubs] 에 액세스하고 있습니다. |
-| `auth.params.eventHubName` | 에 대한 이름 [!DNL Event Hubs] 소스. |
-| `connectionSpec.id` | 다음 [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.namespace` | 액세스 중인 [!DNL Event Hubs]의 네임스페이스입니다. |
+| `auth.params.eventHubName` | [!DNL Event Hubs] 소스의 이름입니다. |
+| `connectionSpec.id` | [!DNL Event Hubs] 연결 사양 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++
 
 +++응답
 
-성공한 응답은 고유 식별자를 포함하여 새로 생성된 기본 연결의 세부 정보를 반환합니다(`id`). 다음 단계에서 소스 연결을 만들려면 이 연결 ID가 필요합니다.
+성공한 응답은 고유 식별자(`id`)를 포함하여 새로 만든 기본 연결의 세부 정보를 반환합니다. 다음 단계에서 소스 연결을 만들려면 이 연결 ID가 필요합니다.
 
 ```json
 {
@@ -331,11 +331,11 @@ curl -X POST \
 
 >[!TIP]
 >
->An [!DNL Event Hubs] 소비자 그룹은 주어진 시간에 단일 흐름에만 사용할 수 있습니다.
+>[!DNL Event Hubs] 소비자 그룹은 지정된 시간에 단일 흐름에만 사용할 수 있습니다.
 
 소스 연결은 데이터가 수집되는 외부 소스와의 연결을 만들고 관리합니다. 소스 연결은 데이터 소스, 데이터 형식 및 데이터 흐름을 만드는 데 필요한 소스 연결 ID와 같은 정보로 구성됩니다. 소스 연결 인스턴스는 테넌트 및 조직에만 해당됩니다.
 
-POST 소스 연결을 만들려면 `/sourceConnections` 의 엔드포인트 [!DNL Flow Service] API.
+소스 연결을 만들려면 [!DNL Flow Service] API의 `/sourceConnections` 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -377,14 +377,14 @@ curl -X POST \
 | --- | --- |
 | `name` | 소스 연결의 이름입니다. 소스 연결에 대한 정보를 조회할 때 소스 연결의 이름이 설명적인지 확인합니다. |
 | `description` | 소스 연결에 대한 자세한 정보를 포함하도록 제공할 수 있는 선택적 값입니다. |
-| `baseConnectionId` | 의 연결 ID [!DNL Event Hubs] 이전 단계에서 생성된 소스. |
-| `connectionSpec.id` | 의 고정 연결 사양 ID [!DNL Event Hubs]. 이 ID는 `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
-| `data.format` | 형식 [!DNL Event Hubs] 수집할 데이터. 현재 지원되는 데이터 형식은 `json`. |
-| `params.eventHubName` | 에 대한 이름 [!DNL Event Hubs] 소스. |
-| `params.dataType` | 이 매개 변수는 수집되는 데이터의 유형을 정의합니다. 지원되는 데이터 유형은 다음과 같습니다. `raw` 및 `xdm`. |
-| `params.reset` | 이 매개 변수는 데이터를 읽는 방법을 정의합니다. 사용 `latest` 최신 데이터에서 읽기를 시작하고 `earliest` 스트림에서 사용 가능한 첫 번째 데이터에서 읽기를 시작합니다. 이 매개 변수는 선택 사항이며 기본값은 입니다. `earliest` 제공되지 않는 경우 |
-| `params.consumerGroup` | 에 사용할 게시 또는 구독 메커니즘 [!DNL Event Hubs]. 이 매개 변수는 선택 사항이며 기본값은 입니다. `$Default` 제공되지 않는 경우 다음을 참조하십시오. [[!DNL Event Hubs] 이벤트 소비자에 대한 안내서](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) 추가 정보. **참고**: 안 [!DNL Event Hubs] 소비자 그룹은 주어진 시간에 단일 흐름에만 사용할 수 있습니다. |
+| `baseConnectionId` | 이전 단계에서 생성된 [!DNL Event Hubs] 소스의 연결 ID입니다. |
+| `connectionSpec.id` | [!DNL Event Hubs]에 대한 고정 연결 사양 ID입니다. 이 ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `data.format` | 수집할 [!DNL Event Hubs] 데이터의 형식입니다. 현재 지원되는 데이터 형식은 `json`뿐입니다. |
+| `params.eventHubName` | [!DNL Event Hubs] 소스의 이름입니다. |
+| `params.dataType` | 이 매개 변수는 수집되는 데이터의 유형을 정의합니다. 지원되는 데이터 형식은 `raw` 및 `xdm`입니다. |
+| `params.reset` | 이 매개 변수는 데이터를 읽는 방법을 정의합니다. `latest`을(를) 사용하여 가장 최근 데이터에서 읽기를 시작하고 `earliest`을(를) 사용하여 스트림에서 사용 가능한 첫 번째 데이터에서 읽기를 시작합니다. 이 매개 변수는 선택 사항이며 지정하지 않은 경우 기본값은 `earliest`입니다. |
+| `params.consumerGroup` | [!DNL Event Hubs]에 사용할 게시 또는 구독 메커니즘입니다. 이 매개 변수는 선택 사항이며 지정하지 않은 경우 기본값은 `$Default`입니다. 자세한 내용은 이 [[!DNL Event Hubs] 이벤트 소비자 가이드](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers)를 참조하세요. **참고**: [!DNL Event Hubs] 소비자 그룹은 지정된 시간에 단일 흐름에만 사용할 수 있습니다. |
 
 ## 다음 단계
 
-이 자습서를 따라 [!DNL Event Hubs] 를 사용한 소스 연결 [!DNL Flow Service] API. 다음 자습서에서 이 소스 연결 ID를 사용하여 다음을 수행할 수 있습니다. [다음을 사용하여 스트리밍 데이터 흐름 만들기 [!DNL Flow Service] API](../../collect/streaming.md).
+이 자습서에 따라 [!DNL Flow Service] API를 사용하여 [!DNL Event Hubs] 소스 연결을 만들었습니다. 다음 자습서에서 이 원본 연결 ID를 사용하여 [API를 사용하여 스트리밍 데이터 흐름을 만들 [!DNL Flow Service] 수 있습니다](../../collect/streaming.md).
