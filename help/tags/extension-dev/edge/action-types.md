@@ -4,8 +4,8 @@ description: Edge 속성에서 태그 확장에 대한 작업 유형 라이브�
 exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 42%
+source-wordcount: '377'
+ht-degree: 34%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 태그 규칙에서 작업은 규칙 조건이 평가를 통과한 후에 수행되는 작업입니다. 작업 유형은 확장에서 제공하며 해당 효과는 확장 작성자에 의해 완전히 정의됩니다.
 

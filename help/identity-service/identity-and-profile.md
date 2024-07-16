@@ -5,7 +5,7 @@ exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
 source-git-commit: 2b6700b2c19b591cf4e60006e64ebd63b87bdb2a
 workflow-type: tm+mt
 source-wordcount: '631'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->이 페이지에서는 병합 정책이 ID 그래프를 사용한다고 가정합니다. 실시간 고객 프로필의 병합 정책에 대한 자세한 내용은 [병합 정책 및 id 결합](../profile/merge-policies/overview.md#identity-stitching).
+>이 페이지에서는 병합 정책이 ID 그래프를 사용한다고 가정합니다. 실시간 고객 프로필의 병합 정책에 대한 자세한 내용은 [병합 정책 및 ID 결합](../profile/merge-policies/overview.md#identity-stitching)에 대한 설명서를 참조하십시오.
 
 ID 서비스와 실시간 고객 프로필을 함께 사용할 수 있지만, Adobe Experience Platform의 두 가지 기능은 기본적으로 동일하지 않습니다.
 
@@ -42,9 +42,9 @@ ID 서비스와 실시간 고객 프로필 간의 주요 차이점은 다음과 
 * 먼저 실시간 고객 프로필은 ID 그래프를 참조하고 모든 ID를 검색합니다.
 * 그런 다음 프로필은 ID 그래프에서 기본 ID가 있는 프로필 조각을 검색합니다.
 * 성공하면 Profile than은 기존의 모든 이벤트와 속성을 병합합니다.
-   * 속성 정보가 충돌하는 경우 병합 방법에 따라 속성이 선택됩니다. 자세한 내용은 [병합 정책 개요](../profile/merge-policies/overview.md).
+   * 속성 정보가 충돌하는 경우 병합 방법에 따라 속성이 선택됩니다. 자세한 내용은 [병합 정책 개요](../profile/merge-policies/overview.md)를 참조하십시오.
 
-![ID 서비스 및 프로필 병합의 작동 방식을 자세히 설명하는 순서도입니다.](./images/merge-profile-process.png)
+![ID 서비스 및 프로필 병합이 작동하는 방식을 자세히 설명하는 순서도입니다.](./images/merge-profile-process.png)
 
 ## 필드를 ID로 지정
 

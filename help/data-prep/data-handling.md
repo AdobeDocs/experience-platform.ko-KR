@@ -6,8 +6,8 @@ description: 이 문서는 데이터 준비에서 다양한 데이터 유형을 
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 13%
+source-wordcount: '602'
+ht-degree: 8%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 13%
 
 소스 유형이 문자열이고 대상 유형이 부울이면 데이터 준비는 값을 자동으로 구문 분석하고 소스 값을 부울로 변환할 수 있습니다.
 
-값 `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true`, 및 `TRUE` 이 되도록 자동으로 구문 분석됩니다. `true`.
+값 `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true` 및 `TRUE`은(는) 자동으로 구문 분석되어 `true`이(가) 됩니다.
 
-값 `n`, `N`, `no`, `NO`, `off`, `OFF`, `false`, 및 `FALSE` 이 되도록 자동으로 구문 분석됩니다. `false`.
+값 `n`, `N`, `no`, `NO`, `off`, `OFF`, `false` 및 `FALSE`은(는) 자동으로 구문 분석되어 `false`이(가) 됩니다.
 
 ## 날짜 {#dates}
 
@@ -40,10 +40,10 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | 매개변수 | 설명 |
 | --------- | ----------- |
 | `{DATE}` | 필수 여부. 날짜를 나타내는 문자열입니다. |
-| `{FORMAT}` | 선택 사항입니다. 소스 날짜의 형식을 나타내는 문자열입니다. 문자열 서식에 대한 자세한 내용은 [날짜/시간 형식 문자열 섹션](#format). |
+| `{FORMAT}` | 선택 사항입니다. 소스 날짜의 형식을 나타내는 문자열입니다. 문자열 형식에 대한 자세한 내용은 [날짜/시간 형식 문자열 섹션](#format)에서 확인할 수 있습니다. |
 | `{DEFAULT_DATE}` | 선택 사항입니다. 제공된 날짜가 null인 경우 반환될 기본 날짜. |
 
-예를 들어 표현식은 `date(orderDate, "yyyy-MM-dd")` 이(가) 다음을 전환합니다. `orderDate` 값 &quot;2020년 12월 31일&quot;을 datetime 값 &quot;2020-12-31&quot;로 바꿉니다.
+예를 들어 `date(orderDate, "yyyy-MM-dd")` 식은 `orderDate` 값 &quot;2020년 12월 31일&quot;을 datetime 값 &quot;2020-12-31&quot;로 변환합니다.
 
 ### 날짜 함수 전환
 
@@ -81,8 +81,8 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | 기호 | 의미 | 프레젠테이션 | 예 |
 | ------ | ------- | ------------ | ------- |
 | G | 시대 | 텍스트 | AD; 안노 도니; A |
-| Y | 연도, ISO 주 기준 | 숫자 | 1996; 96 |
-| y | 년 | 숫자 | 2004; 04 |
+| Y | 연도, ISO 주 기준 | 숫자 | 1996년; 96년 |
+| y | 년 | 숫자 | 2004년; 04년 |
 | M/L | 월(한 해 기준) | 숫자/텍스트 | 7; 07; 7; 7; J |
 | w | 주(한 해 기준) | 숫자 | 27 |
 | W | 해당 월의 주 | 숫자 | 3 |
@@ -108,4 +108,4 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 
 ## 지도 {#maps}
 
-맵은에서 현재 지원되지 않습니다. [!DNL Data Prep].
+맵은 현재 [!DNL Data Prep]에서 지원되지 않습니다.

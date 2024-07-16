@@ -8,7 +8,7 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '35'
-ht-degree: 62%
+ht-degree: 65%
 
 ---
 
@@ -19,4 +19,4 @@ ht-degree: 62%
 - [데이터 액세스 API](api.md)
 - 튜토리얼 {#tutorials}
    - [데이터 세트 데이터 보기](tutorials/dataset-data.md)
-- [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

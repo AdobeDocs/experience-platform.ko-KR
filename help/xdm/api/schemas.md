@@ -6,26 +6,26 @@ description: 스키마 레지스트리 API의 /schemas 끝점을 사용하면 ex
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1443'
 ht-degree: 2%
 
 ---
 
 # 스키마 엔드포인트
 
-스키마는 Adobe Experience Platform에 수집하려는 데이터에 대한 블루프린트로 간주할 수 있습니다. 각 스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. 다음 `/schemas` 의 엔드포인트 [!DNL Schema Registry] API를 사용하면 경험 애플리케이션 내에서 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
+스키마는 Adobe Experience Platform에 수집하려는 데이터에 대한 블루프린트로 간주할 수 있습니다. 각 스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. [!DNL Schema Registry] API의 `/schemas` 끝점을 사용하면 경험 응용 프로그램 내에서 스키마를 프로그래밍 방식으로 관리할 수 있습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 API 끝점은 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](./getting-started.md) 관련 설명서에 대한 링크, 이 문서의 샘플 API 호출 읽기에 대한 안내서 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보입니다.
+이 가이드에 사용된 API 끝점은 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
 ## 스키마 목록 검색 {#list}
 
-아래에 모든 스키마를 나열할 수 있습니다. `global` 또는 `tenant` 에 대한 GET 요청을 하여 컨테이너 `/global/schemas` 또는 `/tenant/schemas`, 각각
+`/global/schemas` 또는 `/tenant/schemas`에 각각 GET 요청을 하여 `global` 또는 `tenant` 컨테이너 아래에 모든 스키마를 나열할 수 있습니다.
 
 >[!NOTE]
 >
->리소스를 나열할 때 스키마 레지스트리는 결과 세트를 300개 항목으로 제한합니다. 이 제한을 초과하는 리소스를 반환하려면 페이징 매개 변수를 사용해야 합니다. 또한 추가 쿼리 매개 변수를 사용하여 결과를 필터링하고 반환되는 리소스 수를 줄이는 것이 좋습니다. 의 섹션을 참조하십시오. [쿼리 매개 변수](./appendix.md#query) 자세한 내용은 부록 문서를 참조하십시오.
+>리소스를 나열할 때 스키마 레지스트리는 결과 세트를 300개 항목으로 제한합니다. 이 제한을 초과하는 리소스를 반환하려면 페이징 매개 변수를 사용해야 합니다. 또한 추가 쿼리 매개 변수를 사용하여 결과를 필터링하고 반환되는 리소스 수를 줄이는 것이 좋습니다. 자세한 내용은 부록 문서의 [쿼리 매개 변수](./appendix.md#query)에 대한 섹션을 참조하십시오.
 
 **API 형식**
 
@@ -35,14 +35,14 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{CONTAINER_ID}` | 검색할 스키마를 저장하는 컨테이너입니다. `global` Adobe 생성 스키마 또는 `tenant` 조직에서 소유한 스키마용. |
-| `{QUERY_PARAMS}` | 결과를 필터링 기준으로 사용할 선택적 쿼리 매개 변수입니다. 다음을 참조하십시오. [부록 문서](./appendix.md#query) 사용 가능한 매개 변수 목록입니다. |
+| `{CONTAINER_ID}` | 검색할 스키마를 저장하는 컨테이너입니다. Adobe이 만든 스키마의 경우 `global`, 조직에서 소유한 스키마의 경우 `tenant`입니다. |
+| `{QUERY_PARAMS}` | 결과를 필터링 기준으로 사용할 선택적 쿼리 매개 변수입니다. 사용 가능한 매개 변수 목록은 [부록 문서](./appendix.md#query)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 다음에서 스키마 목록을 검색합니다. `tenant` 컨테이너, 사용 `orderby` 쿼리 매개 변수를 사용하여 다음을 기준으로 결과 정렬 `title` 특성.
+다음 요청은 `orderby` 쿼리 매개 변수를 사용하여 `title` 특성별로 결과를 정렬하여 `tenant` 컨테이너에서 스키마 목록을 검색합니다.
 
 ```shell
 curl -X GET \
@@ -54,18 +54,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-응답 형식은 다음에 따라 다릅니다. `Accept` 헤더가 요청에서 전송되었습니다. 다음 `Accept` 머리글을 사용하여 스키마를 나열할 수 있습니다.
+응답 형식은 요청에서 보낸 `Accept` 헤더에 따라 다릅니다. 스키마를 나열하는 데 다음 `Accept` 헤더를 사용할 수 있습니다.
 
-| `Accept` 머리글 | 설명 |
+| `Accept` 헤더 | 설명 |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스 목록을 만드는 데 권장되는 헤더입니다. (제한: 300) |
-| `application/vnd.adobe.xed+json` | 원본과 함께 각 리소스에 대한 전체 JSON 스키마를 반환합니다. `$ref` 및 `allOf` 포함. (제한: 300) |
+| `application/vnd.adobe.xed+json` | 원본 `$ref` 및 `allOf`이(가) 포함된 각 리소스에 대해 전체 JSON 스키마를 반환합니다. (제한: 300) |
 
 {style="table-layout:auto"}
 
 **응답**
 
-위의 요청은 `application/vnd.adobe.xed-id+json` `Accept` 따라서 응답에는 다음만 포함됩니다. `title`, `$id`, `meta:altId`, 및 `version` 각 스키마에 대한 속성. 다른 항목 사용 `Accept` 헤더 (`application/vnd.adobe.xed+json`)는 각 스키마의 모든 속성을 반환합니다. 적절한 항목 선택 `Accept` 응답에 필요한 정보에 따라 다릅니다.
+위의 요청에서 `application/vnd.adobe.xed-id+json` `Accept` 헤더를 사용했으므로 응답에는 각 스키마에 대한 `title`, `$id`, `meta:altId` 및 `version` 특성만 포함됩니다. 다른 `Accept` 헤더(`application/vnd.adobe.xed+json`)를 사용하면 각 스키마의 모든 특성이 반환됩니다. 응답에 필요한 정보에 따라 적절한 `Accept` 헤더를 선택합니다.
 
 ```json
 {
@@ -109,14 +109,14 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{CONTAINER_ID}` | 검색할 스키마를 저장하는 컨테이너입니다. `global` Adobe 생성 스키마 또는 `tenant` 조직 소유의 스키마용입니다. |
-| `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 조회하려는 스키마의 수입니다. |
+| `{CONTAINER_ID}` | 검색할 스키마를 저장하는 컨테이너입니다. Adobe 생성 스키마의 경우 `global`, 조직에서 소유한 스키마의 경우 `tenant`. |
+| `{SCHEMA_ID}` | 조회할 스키마의 `meta:altId` 또는 URL로 인코딩된 `$id`입니다. |
 
 {style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 로 지정된 스키마를 검색합니다. `meta:altId` 값을 경로에 추가합니다.
+다음 요청은 경로의 `meta:altId` 값으로 지정된 스키마를 검색합니다.
 
 ```shell
 curl -X GET \
@@ -128,22 +128,22 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-응답 형식은 다음에 따라 다릅니다. `Accept` 헤더가 요청에서 전송되었습니다. 모든 조회 요청에는 `version` 에 포함 `Accept` 머리글입니다. 다음 `Accept` 머리글을 사용할 수 있습니다.
+응답 형식은 요청에서 보낸 `Accept` 헤더에 따라 다릅니다. 모든 조회 요청에는 `Accept` 헤더에 `version`이(가) 포함되어야 합니다. 다음 `Accept` 헤더를 사용할 수 있습니다.
 
-| `Accept` 머리글 | 설명 |
+| `Accept` 헤더 | 설명 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version=1` | 원시 `$ref` 및 `allOf`에는 제목과 설명이 있습니다. |
-| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 및 `allOf` 해결됨, 제목 및 설명 포함. |
-| `application/vnd.adobe.xed-notext+json; version=1` | 원시 `$ref` 및 `allOf`, 제목 또는 설명 없음. |
-| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 및 `allOf` 해결됨, 제목 또는 설명 없음. |
+| `application/vnd.adobe.xed+json; version=1` | `$ref` 및 `allOf`이(가) 있는 Raw에 제목 및 설명이 있습니다. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 및 `allOf`이(가) 확인되었으며 제목 및 설명이 있습니다. |
+| `application/vnd.adobe.xed-notext+json; version=1` | `$ref` 및 `allOf`이(가) 포함된 원시 버전이며 제목 또는 설명이 없습니다. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 및 `allOf`이(가) 해결되었습니다. 제목 또는 설명이 없습니다. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 및 `allOf` 해결됨, 설명자가 포함됨. |
-| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` 및 `allOf` 해결됨, 제목 및 설명 포함. 더 이상 사용되지 않는 필드는 `meta:status` 속성 `deprecated`. |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` 및 `allOf`이(가) 확인되었으며 제목 및 설명이 있습니다. 사용되지 않는 필드는 `deprecated`의 `meta:status` 특성으로 표시됩니다. |
 
 {style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 스키마의 세부 정보를 반환합니다. 반환되는 필드는 다음에 따라 다릅니다 `Accept` 헤더가 요청에서 전송되었습니다. 다른 실험 `Accept` 응답 비교와 사용 사례에 가장 적합한 헤더를 결정하는 헤더입니다.
+성공적인 응답은 스키마의 세부 정보를 반환합니다. 반환되는 필드는 요청에서 보낸 `Accept` 헤더에 따라 다릅니다. 다른 `Accept` 헤더를 실험하여 응답을 비교하고 사용 사례에 가장 적합한 헤더를 확인합니다.
 
 ```json
 {
@@ -200,7 +200,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->아래 예제 호출은 클래스의 최소 구성 요구 사항을 사용하고 필드 그룹을 포함하지 않고 API에서 스키마를 만드는 방법의 기본 예제일 뿐입니다. 필드 그룹 및 데이터 유형을 사용하여 필드를 할당하는 방법을 포함하여 API에서 스키마를 만드는 방법에 대한 전체 단계는 다음을 참조하십시오. [스키마 만들기 튜토리얼](../tutorials/create-schema-api.md).
+>아래 예제 호출은 클래스의 최소 구성 요구 사항을 사용하고 필드 그룹을 포함하지 않고 API에서 스키마를 만드는 방법의 기본 예제일 뿐입니다. 필드 그룹 및 데이터 형식을 사용하여 필드를 할당하는 방법을 포함하여 API에서 스키마를 만드는 방법에 대한 전체 단계는 [스키마 만들기 자습서](../tutorials/create-schema-api.md)를 참조하십시오.
 
 **API 형식**
 
@@ -210,7 +210,7 @@ POST /tenant/schemas
 
 **요청**
 
-요청에는 다음 항목이 포함되어야 합니다. `allOf` 을 참조하는 속성 `$id` 수업 중. 이 속성은 스키마가 구현할 &quot;기본 클래스&quot;를 정의합니다. 이 예제에서 기본 클래스는 이전에 만든 &quot;Property Information&quot; 클래스입니다.
+요청의 `$id`을(를) 참조하는 `allOf` 특성이 포함되어 있어야 합니다. 이 속성은 스키마가 구현할 &quot;기본 클래스&quot;를 정의합니다. 이 예제에서 기본 클래스는 이전에 만든 &quot;Property Information&quot; 클래스입니다.
 
 ```SHELL
 curl -X POST \
@@ -234,13 +234,13 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `allOf` | 각 객체가 스키마가 구현하는 필드가 있는 클래스 또는 필드 그룹을 참조하는 객체의 배열입니다. 각 객체에는 단일 속성(`$ref`) 해당 값은 `$id` 새 스키마가 구현할 클래스 또는 필드 그룹 내. 추가 필드 그룹이 0개 이상인 하나의 클래스를 제공해야 합니다. 위의 예에서 `allOf` array는 스키마의 클래스입니다. |
+| `allOf` | 각 객체가 스키마가 구현하는 필드가 있는 클래스 또는 필드 그룹을 참조하는 객체의 배열입니다. 각 개체에는 새 스키마가 구현할 클래스 또는 필드 그룹의 `$id`을(를) 나타내는 값을 가진 단일 속성(`$ref`)이 있습니다. 추가 필드 그룹이 0개 이상인 하나의 클래스를 제공해야 합니다. 위의 예에서 `allOf` 배열의 단일 개체는 스키마의 클래스입니다. |
 
 {style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 HTTP 상태 201(생성됨) 및 다음을 포함하여 새로 생성된 스키마의 세부 사항이 포함된 페이로드를 반환합니다. `$id`, `meta:altId`, 및 `version`. 이 값은 읽기 전용이며 [!DNL Schema Registry].
+성공한 응답은 HTTP 상태 201(생성됨)과 `$id`, `meta:altId` 및 `version`을(를) 포함하여 새로 생성된 스키마의 세부 정보가 포함된 페이로드를 반환합니다. 이 값은 읽기 전용이며 [!DNL Schema Registry]에 의해 할당됩니다.
 
 ```JSON
 {
@@ -275,17 +275,17 @@ curl -X POST \
 }
 ```
 
-에 대한 GET 요청 수행 [모든 스키마 나열](#list) 이제 테넌트 컨테이너에 새 스키마가 포함됩니다. 다음을 수행할 수 있습니다. [조회(GET) 요청](#lookup) url 인코딩 사용 `$id` 새 스키마를 직접 볼 수 있는 URI입니다.
+이제 테넌트 컨테이너에 [모든 스키마를 나열](#list)하는 GET 요청을 수행하면 새 스키마가 포함됩니다. URL로 인코딩된 `$id` URI를 사용하여 [조회(GET) 요청](#lookup)을 수행하여 새 스키마를 직접 볼 수 있습니다.
 
-스키마에 필드를 추가하려면 다음을 수행할 수 있습니다. [PATCH 작업](#patch) 스키마에 필드 그룹을 추가하려면 `allOf` 및 `meta:extends` 배열입니다.
+스키마에 필드를 추가하려면 [PATCH 작업](#patch)을 수행하여 스키마의 `allOf` 및 `meta:extends` 배열에 필드 그룹을 추가할 수 있습니다.
 
 ## 스키마 업데이트 {#put}
 
-PUT 작업을 통해 전체 스키마를 바꿀 수 있으며, 기본적으로 리소스를 다시 작성할 수 있습니다. PUT 요청을 통해 스키마를 업데이트할 때 본문에는 다음과 같은 경우에 필요한 모든 필드가 포함되어야 합니다. [새 스키마 만들기](#create) POST 요청에서.
+PUT 작업을 통해 전체 스키마를 바꿀 수 있으며, 기본적으로 리소스를 다시 작성할 수 있습니다. PUT 요청을 통해 스키마를 업데이트할 때 본문에는 POST 요청에 [새 스키마를 만들 때](#create)에 필요한 모든 필드가 포함되어야 합니다.
 
 >[!NOTE]
 >
->스키마를 완전히 대체하지 않고 일부만 업데이트하려면 의 섹션을 참조하십시오 [스키마의 일부 업데이트](#patch).
+>스키마의 일부를 완전히 바꾸는 대신 일부만 업데이트하려면 [스키마의 일부 업데이트](#patch)의 섹션을 참조하십시오.
 
 **API 형식**
 
@@ -295,13 +295,13 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 다시 쓸 스키마의 수입니다. |
+| `{SCHEMA_ID}` | 다시 쓸 스키마의 `meta:altId` 또는 URL로 인코딩된 `$id`입니다. |
 
 {style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 기존 스키마를 변경하여 바꿉니다 `title`, `description`, 및 `allOf` 속성.
+다음 요청은 기존 스키마를 대체하여 `title`, `description` 및 `allOf` 특성을 변경합니다.
 
 ```SHELL
 curl -X PUT \
@@ -362,11 +362,11 @@ curl -X PUT \
 
 ## 스키마의 일부 업데이트 {#patch}
 
-PATCH 요청을 사용하여 스키마의 일부를 업데이트할 수 있습니다. 다음 [!DNL Schema Registry] 는 다음을 포함한 모든 표준 JSON 패치 작업을 지원합니다. `add`, `remove`, 및 `replace`. JSON 패치에 대한 자세한 내용은 [API 기본 사항 안내서](../../landing/api-fundamentals.md#json-patch).
+PATCH 요청을 사용하여 스키마의 일부를 업데이트할 수 있습니다. [!DNL Schema Registry]은(는) `add`, `remove` 및 `replace`을(를) 포함한 모든 표준 JSON 패치 작업을 지원합니다. JSON 패치에 대한 자세한 내용은 [API 기본 사항 안내서](../../landing/api-fundamentals.md#json-patch)를 참조하십시오.
 
 >[!NOTE]
 >
->개별 필드를 업데이트하는 대신 전체 리소스를 새 값으로 바꾸려면 [PUT 작업을 사용하여 스키마 바꾸기](#put).
+>개별 필드를 업데이트하는 대신 전체 리소스를 새 값으로 바꾸려면 [PUT 작업을 사용하여 스키마 바꾸기](#put)에 대한 섹션을 참조하십시오.
 
 가장 일반적인 PATCH 작업 중 하나는 아래 예제에서 알 수 있듯이 이전에 정의한 필드 그룹을 스키마에 추가하는 것입니다.
 
@@ -378,15 +378,15 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SCHEMA_ID}` | URL로 인코딩됨 `$id` URI 또는 `meta:altId` 업데이트할 스키마의 이름입니다. |
+| `{SCHEMA_ID}` | 업데이트할 스키마의 URL 인코딩 `$id` URI 또는 `meta:altId`입니다. |
 
 {style="table-layout:auto"}
 
 **요청**
 
-아래 예제 요청에서는 해당 필드 그룹의 을(를) 추가하여 스키마에 새 필드 그룹을 추가합니다. `$id` 두 값 모두 `meta:extends` 및 `allOf` 배열입니다.
+아래 예제 요청에서는 해당 필드 그룹의 `$id` 값을 `meta:extends` 및 `allOf` 배열 모두에 추가하여 스키마에 새 필드 그룹을 추가합니다.
 
-요청 본문은 배열 형식을 취하며, 나열된 각 객체는 개별 필드에 대한 특정 변경 사항을 나타냅니다. 각 객체에는 수행할 작업이 포함됩니다(`op`) 작업을 수행할 필드(`path`) 및 해당 작업에 포함해야 하는 정보(`value`).
+요청 본문은 배열 형식을 취하며, 나열된 각 객체는 개별 필드에 대한 특정 변경 사항을 나타냅니다. 각 개체에는 수행할 작업(`op`), 작업을 수행할 필드(`path`) 및 해당 작업에 포함할 정보(`value`)가 포함됩니다.
 
 ```SHELL
 curl -X PATCH\
@@ -414,7 +414,7 @@ curl -X PATCH\
 
 **응답**
 
-응답은 두 작업이 모두 성공적으로 수행되었음을 보여 줍니다. 필드 그룹 `$id` 이(가)에 추가되었습니다. `meta:extends` 배열 및 참조(`$ref`) 필드 그룹에 추가합니다. `$id` 이제에 표시됩니다. `allOf` 배열입니다.
+응답은 두 작업이 모두 성공적으로 수행되었음을 보여 줍니다. 필드 그룹 `$id`이(가) `meta:extends` 배열에 추가되었으며 필드 그룹 `$id`에 대한 참조(`$ref`)가 이제 `allOf` 배열에 나타납니다.
 
 ```JSON
 {
@@ -455,7 +455,7 @@ curl -X PATCH\
 
 ## 실시간 고객 프로필에서 사용할 스키마 활성화 {#union}
 
-스키마가 참여하기 위해 [실시간 고객 프로필](../../profile/home.md), 다음을 추가해야 합니다. `union` 스키마에 태그 지정 `meta:immutableTags` 배열입니다. 해당 스키마에 대한 PATCH 요청을 수행하면 이를 수행할 수 있습니다.
+스키마가 [실시간 고객 프로필](../../profile/home.md)에 참여하려면 스키마의 `meta:immutableTags` 배열에 `union` 태그를 추가해야 합니다. 해당 스키마에 대한 PATCH 요청을 수행하면 이를 수행할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -469,13 +469,13 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SCHEMA_ID}` | URL로 인코딩됨 `$id` URI 또는 `meta:altId` 을(를) 활성화하려는 스키마에 대해 설명합니다. |
+| `{SCHEMA_ID}` | URL로 인코딩된 `$id` URI 또는 활성화할 스키마의 `meta:altId`입니다. |
 
 {style="table-layout:auto"}
 
 **요청**
 
-아래 예제 요청에서는 `meta:immutableTags` 기존 스키마에 대한 배열로, 배열에 단일 문자열 값 제공 `union` 프로필에서 사용할 수 있도록 설정합니다.
+아래 예제 요청에서는 기존 스키마에 `meta:immutableTags` 배열을 추가하여 배열에 `union`의 단일 문자열 값을 제공하여 프로필에서 사용할 수 있도록 합니다.
 
 ```SHELL
 curl -X PATCH\
@@ -496,7 +496,7 @@ curl -X PATCH\
 
 **응답**
 
-성공적인 응답은 업데이트된 스키마의 세부 정보를 반환하며 `meta:immutableTags` 배열이 추가되었습니다.
+성공한 응답은 업데이트된 스키마의 세부 정보를 반환하여 `meta:immutableTags` 배열이 추가되었음을 나타냅니다.
 
 ```JSON
 {
@@ -538,7 +538,7 @@ curl -X PATCH\
 }
 ```
 
-이제 이 스키마의 클래스에 대한 유니온을 보고 스키마의 필드가 표시되는지 확인할 수 있습니다. 다음을 참조하십시오. [유니온 엔드포인트 안내서](./unions.md) 추가 정보.
+이제 이 스키마의 클래스에 대한 유니온을 보고 스키마의 필드가 표시되는지 확인할 수 있습니다. 자세한 내용은 [유니온 끝점 안내서](./unions.md)를 참조하십시오.
 
 ## 스키마 삭제 {#delete}
 
@@ -552,7 +552,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SCHEMA_ID}` | URL로 인코딩됨 `$id` URI 또는 `meta:altId` 을(를) 삭제하려는 스키마에 대해 설명합니다. |
+| `{SCHEMA_ID}` | 삭제할 스키마의 URL 인코딩 `$id` URI 또는 `meta:altId`입니다. |
 
 {style="table-layout:auto"}
 
@@ -571,4 +571,4 @@ curl -X DELETE \
 
 성공적인 응답은 HTTP 상태 204(콘텐츠 없음) 및 빈 본문을 반환합니다.
 
-스키마에 조회(GET) 요청을 시도하여 삭제를 확인할 수 있습니다. 다음을 포함해야 합니다. `Accept` 요청의 헤더이지만 스키마가 스키마 레지스트리에서 제거되었으므로 HTTP 상태 404(찾을 수 없음)를 수신해야 합니다.
+스키마에 조회(GET) 요청을 시도하여 삭제를 확인할 수 있습니다. `Accept` 헤더를 요청에 포함해야 하지만 스키마가 스키마 레지스트리에서 제거되었기 때문에 HTTP 상태 404(찾을 수 없음)를 수신해야 합니다.

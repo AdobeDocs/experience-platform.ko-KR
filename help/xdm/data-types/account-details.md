@@ -5,15 +5,15 @@ exl-id: 17254393-263e-4000-9bd2-815a9e842533
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '409'
-ht-degree: 5%
+ht-degree: 11%
 
 ---
 
-# [!UICONTROL 계정 세부 정보] 데이터 유형
+# [!UICONTROL 계정 세부 정보] 데이터 형식
 
-[!UICONTROL 계정 세부 정보] 는 비즈니스 조직과 관련된 세부 사항을 설명하는 표준 경험 데이터 모델(XDM) 데이터 유형입니다.
+[!UICONTROL 계정 세부 정보]은(는) 비즈니스 조직과 관련된 세부 정보를 설명하는 표준 경험 데이터 모델(XDM) 데이터 형식입니다.
 
-![데이터 유형 구조](../images/data-types/account-details.png)
+![데이터 형식 구조](../images/data-types/account-details.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
@@ -25,16 +25,16 @@ ht-degree: 5%
 | `SICDescription` | 문자열 | SIC 코드를 기반으로 한 조직의 기간 업무에 대한 간략한 설명. |
 | `companyProductAndServices` | 문자열 | 조직에서 처리하거나 비즈니스를 수행하는 제품 및 서비스. |
 | `facebookPageUrl` | 문자열 | 조직의 Facebook 계정에 대한 웹 사이트 링크입니다. |
-| `industry` | 문자열 | 이 조직이 속해 있는 산업입니다. 이는 자유 형식의 필드이며 쿼리에 대해 구조화된 값을 사용하거나 `xdm:classifier` 속성. |
+| `industry` | 문자열 | 이 조직이 속해 있는 산업입니다. 자유 형식의 필드이며 쿼리에 대해 구조화된 값을 사용하거나 `xdm:classifier` 속성을 사용하는 것이 좋습니다. |
 | `jigsaw` | 문자열 | 조직의 Data.com 키입니다. |
 | `linkedinPageUrl` | 문자열 | 조직의 LinkedIn 계정에 대한 웹 사이트 링크입니다. |
-| `logoUrl` | 문자열 | Salesforce 인스턴스의 URL과 결합할 경로(예: `https://yourInstance.salesforce.com/`)을 클릭하여 조직과 연결된 소셜 네트워크 프로필 이미지를 요청할 URL을 생성합니다. 생성된 URL은 조직의 소셜 네트워크 프로필 이미지에 대한 HTTP 리디렉션(코드 302)을 반환합니다. |
-| `marketSegment` | 문자열 | 조직이 참여하는 지정된 시장 대상자입니다. 이는 자유 형식의 필드이며 쿼리에 대해 구조화된 값을 사용하거나 `xdm:identifier` 속성. |
+| `logoUrl` | 문자열 | 조직과 연결된 소셜 네트워크 프로필 이미지를 요청할 URL을 생성하기 위해 Salesforce 인스턴스의 URL과 결합할 경로(예: `https://yourInstance.salesforce.com/`)입니다. 생성된 URL은 조직의 소셜 네트워크 프로필 이미지에 대한 HTTP 리디렉션(코드 302)을 반환합니다. |
+| `marketSegment` | 문자열 | 조직이 참여하는 지정된 시장 대상자입니다. 자유 형식의 필드이며 쿼리에 대해 구조화된 값을 사용하거나 `xdm:identifier` 속성을 사용하는 것이 좋습니다. |
 | `numberOfEmployees` | 정수 | 조직의 직원 수. |
 | `organizationType` | 문자열 | 조직 유형을 설명하는 레이블입니다. |
 | `primaryEmailDomain` | 문자열 | 조직에서 직원에게 사용하는 기본 이메일 도메인입니다. |
-| `rating` | 이중 | 이 조직에 대한 계산된 점수 또는 별점. `1` 가능한 최대 등급을 나타냅니다. `0` 는 가능한 최소 등급입니다. |
-| `tickerSymbol` | 문자열 | 이 계정의 주식 시장 기호. 최대 20자. |
+| `rating` | 더블 | 이 조직에 대한 계산된 점수 또는 별점. `1`은(는) 가능한 최대 등급을 나타내고 `0`은(는) 가능한 최소 등급입니다. |
+| `tickerSymbol` | 문자열 | 해당 계정의 스톡 마켓 기호. 최대 20자. |
 | `twitterHandleUrl` | 문자열 | 조직의 twitter 핸들에 대한 웹 사이트 링크입니다. |
 | `website` | 문자열 | 조직 웹 사이트의 URL. |
 

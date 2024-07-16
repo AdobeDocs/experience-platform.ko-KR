@@ -11,17 +11,17 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL 관심 영역 인터랙션] 데이터 유형
+# [!UICONTROL 관심 영역 상호 작용] 데이터 형식
 
-[!UICONTROL 관심 영역 인터랙션] 는 모바일 장치가 범위 내에 있을 때 모바일 애플리케이션에 ID 정보를 전달하는 무선 장치를 설명하는 표준 XDM 데이터 유형입니다.
+[!UICONTROL 관심 영역 상호 작용]은 모바일 장치가 범위 내에 있을 때 ID 정보를 모바일 응용 프로그램에 전달하는 무선 장치를 설명하는 표준 XDM 데이터 형식입니다.
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
 | `poiDetail` | [[!UICONTROL 관심 영역 세부 정보]](./poi-details.md) | 이벤트를 발생시킨 POI에 대한 세부 정보를 설명합니다. |
-| `poiEntries` | 오브젝트 | 사용자가 POI를 입력한 횟수를 설명합니다. 다음 두 가지 속성을 포함합니다. <ul><li>`id`: 측정값에 대한 고유 식별자.</li><li>`value`: 측정값의 수량 값입니다.</li></ul> |
-| `poiExits` | 오브젝트 | 사용자가 POI를 종료한 횟수를 설명합니다. 다음 두 가지 속성을 포함합니다. <ul><li>`id`: 측정값에 대한 고유 식별자.</li><li>`value`: 측정값의 수량 값입니다.</li></ul> |
+| `poiEntries` | 오브젝트 | 사용자가 POI를 입력한 횟수를 설명합니다. 다음 두 가지 속성을 포함합니다. <ul><li>`id`: 측정값의 고유 식별자입니다.</li><li>`value`: 측정값의 수량 값입니다.</li></ul> |
+| `poiExits` | 오브젝트 | 사용자가 POI를 종료한 횟수를 설명합니다. 다음 두 가지 속성을 포함합니다. <ul><li>`id`: 측정값의 고유 식별자입니다.</li><li>`value`: 측정값의 수량 값입니다.</li></ul> |
 
 {style="table-layout:auto"}
 

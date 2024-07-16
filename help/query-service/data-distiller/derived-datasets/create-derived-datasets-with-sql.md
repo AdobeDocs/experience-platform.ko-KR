@@ -51,9 +51,9 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-또는 Platform UI를 통해 프로필에 대해 데이터 세트를 활성화할 수도 있습니다. 데이터 세트를 프로필에 대해 활성화된 것으로 표시하는 방법에 대한 자세한 내용은 [실시간 고객 프로필 설명서에 대한 데이터 세트 활성화](../../../catalog/datasets/user-guide.md#enable-profile).
+또는 Platform UI를 통해 프로필에 대해 데이터 세트를 활성화할 수도 있습니다. 프로필에 대해 활성화된 데이터 세트로 표시하는 방법에 대한 자세한 내용은 [실시간 고객 프로필에 데이터 세트 활성화](../../../catalog/datasets/user-guide.md#enable-profile)를 참조하십시오.
 
-아래 예제 쿼리에서 `decile_table` 데이터 세트가 다음으로 생성됨 `id` 을 기본 id 열로 사용하고 네임스페이스를 포함합니다. `IDFA`. 또한 라는 필드가 있습니다. `decile1Month` 맵 데이터 형식의 . 생성된 테이블(`decile_table`)이 프로필에 대해 활성화됩니다.
+아래 예제 쿼리에서 `id`을(를) 기본 ID 열로 사용하여 `decile_table` 데이터 집합을 만들고 네임스페이스는 `IDFA`입니다. 맵 데이터 형식의 이름이 `decile1Month`인 필드도 있습니다. 만든 테이블(`decile_table`)이 프로필에 대해 활성화되어 있습니다.
 
 ```sql
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
@@ -69,13 +69,13 @@ Created Table DataSet Id
 (1 row)
 ```
 
-사용 `label='PROFILE'` 에 `CREATE TABLE` 프로필 사용 데이터 세트를 만드는 명령입니다. 다음 `upsert` 기능은 기본적으로 켜져 있습니다. 다음 `upsert` 기능을 다음을 사용하여 덮어쓸 수 있습니다. `ALTER` 아래 예에 표시된 대로 명령.
+`CREATE TABLE` 명령에 `label='PROFILE'`을(를) 사용하여 프로필이 활성화된 데이터 세트를 만듭니다. `upsert` 기능은 기본적으로 켜져 있습니다. 아래 예제와 같이 `ALTER` 명령을 사용하여 `upsert` 기능을 덮어쓸 수 있습니다.
 
 ```sql
 ALTER TABLE <your_table_name> DROP label upsert;
 ```
 
-사용 방법에 대한 자세한 내용은 SQl 구문 설명서 를 참조하십시오 [테이블 변경](../../sql/syntax.md#alter-table) 명령 및 [ctas 쿼리의 일부로 레이블](../../sql/syntax.md#create-table-as-select).
+[ALTER TABLE](../../sql/syntax.md#alter-table) 명령 및 [CTAS 쿼리의 일부로 레이블](../../sql/syntax.md#create-table-as-select)을 사용하는 방법에 대한 자세한 내용은 SQl 구문 설명서를 참조하십시오.
 
 ## SQL을 통해 파생 데이터 세트를 관리하는 데 도움이 되는 구문
 
@@ -91,7 +91,7 @@ ALTER TABLE your_decile_table ADD label 'PROFILE';
 
 >[!NOTE]
 >
->를 성공적으로 실행할 때 `ALTER TABLE` 명령을 실행하면 콘솔이 `ALTER SUCCESS`.
+>`ALTER TABLE` 명령을 성공적으로 실행하면 콘솔이 `ALTER SUCCESS`을(를) 반환합니다.
 
 ### 기존 데이터 세트에 기본 ID 추가 {#add-primary-identity}
 
@@ -107,11 +107,11 @@ ALTER TABLE <your_table_name> ADD CONSTRAINT primary identity NAMESPACE
 ALTER TABLE test1_dataset ADD CONSTRAINT PRIMARY KEY(id2) NAMESPACE 'IDFA';
 ```
 
-제공된 예에서 `id2` 은(는) 의 기존 열입니다 `test1_dataset`.
+제공된 예에서 `id2`은(는) `test1_dataset`의 기존 열입니다.
 
 ### 프로필에 대한 데이터 세트 비활성화 {#disable-dataset-for-profile}
 
-프로파일 사용에 대해 테이블을 비활성화하려면 DROP 명령을 사용해야 합니다. 를 사용하는 SQL 문 예 `DROP` 아래에 이 표시됩니다.
+프로파일 사용에 대해 테이블을 비활성화하려면 DROP 명령을 사용해야 합니다. `DROP`을(를) 사용하는 SQL 문의 예는 아래에 나와 있습니다.
 
 ```sql
 ALTER TABLE table_name DROP LABEL 'PROFILE';
@@ -123,7 +123,7 @@ ALTER TABLE table_name DROP LABEL 'PROFILE';
 ALTER TABLE decile_table DROP label 'PROFILE';
 ```
 
-이 SQL 문은 API 호출 사용에 대한 효율적인 대체 방법을 제공합니다. 자세한 내용은 다음 방법에 대한 설명서를 참조하십시오 [데이터 세트 API를 사용하여 Real-Time CDP에서 사용할 데이터 세트 비활성화](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
+이 SQL 문은 API 호출 사용에 대한 효율적인 대체 방법을 제공합니다. 자세한 내용은 [데이터 세트 API를 사용하여 Real-Time CDP에서 사용할 데이터 세트를 비활성화](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile)하는 방법에 대한 설명서를 참조하십시오.
 
 ### 데이터 세트에 대한 업데이트 및 삽입 기능 허용 {#enable-upsert-functionality-for-dataset}
 
@@ -141,7 +141,7 @@ ALTER TABLE table_name ADD LABEL 'UPSERT';
 ALTER TABLE table_with_a_decile ADD label 'UPSERT';
 ```
 
-이 SQL 문은 API 호출 사용에 대한 효율적인 대체 방법을 제공합니다. 자세한 내용은 다음 방법에 대한 설명서를 참조하십시오 [데이터 세트 API를 사용하여 Real-Time CDP 및 업데이트에 사용할 데이터 세트 활성화](../../../catalog/datasets/enable-upsert.md#enable-the-dataset).
+이 SQL 문은 API 호출 사용에 대한 효율적인 대체 방법을 제공합니다. 자세한 내용은 [데이터 세트 API를 사용하여 Real-Time CDP 및 업데이트에 사용할 데이터 세트를 활성화](../../../catalog/datasets/enable-upsert.md#enable-the-dataset)하는 방법에 대한 설명서를 참조하십시오.
 
 ### 데이터 세트에 대한 업데이트 및 삽입 기능 비활성화 {#disable-upsert-functionality-for-dataset}
 
@@ -161,7 +161,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 
 ### 각 테이블과 연관된 추가 테이블 정보 표시 {#show-labels-for-tables}
 
-프로필이 활성화된 데이터 세트에 대해 추가 메타데이터가 유지됩니다. 사용 `SHOW TABLES` 추가 항목을 표시하는 명령 `labels` 열과 연관된 레이블에 대한 정보를 제공합니다.
+프로필이 활성화된 데이터 세트에 대해 추가 메타데이터가 유지됩니다. `SHOW TABLES` 명령을 사용하여 테이블과 연결된 레이블에 대한 정보를 제공하는 추가 `labels` 열을 표시합니다.
 
 이 명령의 출력 예는 다음과 같습니다.
 
@@ -174,7 +174,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 (3 rows)
 ```
 
-이 예제에서 다음을 확인할 수 있습니다. `table_with_a_decile` 이(가) 프로필에 대해 활성화되고 다음과 같은 레이블이 적용됨 [&#39;업데이트&#39;](#enable-upsert-functionality-for-dataset), [&#39;프로필&#39;](#enable-existing-dataset-for-profile) 앞에서 설명한 대로
+앞에서 설명한 대로 `table_with_a_decile`이(가) 프로필에 대해 활성화되어 있고 [&#39; 업데이트&#39;](#enable-upsert-functionality-for-dataset), [&#39; 프로필&#39;](#enable-existing-dataset-for-profile) 등의 레이블이 적용된 것을 예제에서 확인할 수 있습니다.
 
 ### SQL로 필드 그룹 만들기
 
@@ -188,8 +188,8 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 
 >[!IMPORTANT]
 >
->다음 경우에 SQL을 통한 필드 그룹 만들기가 실패합니다. `label` 플래그가 문에 제공되지 않거나 필드 그룹이 이미 있는 경우.
->쿼리에 다음 항목이 포함되어 있는지 확인합니다. `IF NOT EXISTS` 필드 그룹이 이미 있으므로 쿼리가 실패하는 것을 방지하기 위한 절입니다.
+>문에 `label` 플래그가 제공되지 않았거나 필드 그룹이 이미 있는 경우 SQL을 통한 필드 그룹 만들기가 실패합니다.
+>필드 그룹이 이미 있으므로 쿼리가 실패하는 것을 방지하기 위해 쿼리에 `IF NOT EXISTS` 절이 포함되어 있는지 확인하십시오.
 
 실제 예는 아래에 표시된 것과 유사하게 나타날 수 있습니다.
 
@@ -199,11 +199,11 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 이 문이 성공적으로 실행되면 생성된 필드 그룹 ID가 반환됩니다. 예 `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-방법 설명서 참조 [스키마 편집기에서 새 필드 그룹 만들기](../../../xdm/ui/resources/field-groups.md#create) 또는 [스키마 레지스트리 API](../../../xdm/api/field-groups.md#create) 를 참조하십시오.
+대체 메서드에 대한 자세한 내용은 [스키마 편집기에서 새 필드 그룹을 만드는 방법](../../../xdm/ui/resources/field-groups.md#create) 또는 [스키마 레지스트리 API](../../../xdm/api/field-groups.md#create)를 사용하는 방법에 대한 설명서를 참조하십시오.
 
 ### 필드 그룹 끌어 놓기
 
-스키마 레지스트리에서 필드 그룹을 제거해야 하는 경우가 있습니다. 이 작업은 다음을 실행하여 수행합니다. `DROP FIELDGROUP` 필드 그룹 ID가 있는 명령입니다.
+스키마 레지스트리에서 필드 그룹을 제거해야 하는 경우가 있습니다. 필드 그룹 ID로 `DROP FIELDGROUP` 명령을 실행하면 됩니다.
 
 ```sql
 DROP FIELDGROUP [IF EXISTS] <your_field_group_id>;
@@ -217,11 +217,11 @@ DROP FIELDGROUP field_group_for_test123;
 
 >[!IMPORTANT]
 >
->필드 그룹이 없으면 SQL을 통해 필드 그룹을 삭제할 수 없습니다. 문에 다음 항목이 포함되어 있는지 확인합니다. `IF EXISTS` 쿼리가 실패하는 것을 방지하기 위한 절입니다.
+>필드 그룹이 없으면 SQL을 통해 필드 그룹을 삭제할 수 없습니다. 쿼리 실패를 방지하기 위해 문에 `IF EXISTS` 절이 포함되어 있는지 확인하십시오.
 
 ### 테이블의 필드 그룹 이름 및 ID 모두 표시
 
-다음 `SHOW FIELDGROUPS` 명령은 테이블의 이름, 필드 그룹 ID 및 소유자를 포함하는 테이블을 반환합니다.
+`SHOW FIELDGROUPS` 명령은 테이블의 이름, 필드 그룹 ID 및 소유자가 포함된 테이블을 반환합니다.
 
 이 명령의 출력 예는 다음과 같습니다.
 
@@ -237,4 +237,4 @@ DROP FIELDGROUP field_group_for_test123;
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 SQL을 사용하여 파생된 데이터 세트를 기반으로 프로필 및 업데이트 사용 데이터 세트를 만드는 방법을 더 잘 이해할 수 있습니다. 이제 일괄 처리 수집 워크플로우로 이 데이터 세트를 사용하여 프로필 데이터를 업데이트할 준비가 되었습니다. Adobe Experience Platform으로 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../../ingestion/home.md).
+이 문서를 읽은 후에는 SQL을 사용하여 파생된 데이터 세트를 기반으로 프로필 및 업데이트 사용 데이터 세트를 만드는 방법을 더 잘 이해할 수 있습니다. 이제 일괄 처리 수집 워크플로우로 이 데이터 세트를 사용하여 프로필 데이터를 업데이트할 준비가 되었습니다. Adobe Experience Platform으로 데이터 수집에 대한 자세한 내용은 [데이터 수집 개요](../../../ingestion/home.md)를 읽는 것부터 시작해 보십시오.

@@ -4,7 +4,7 @@ description: Reactor API에서 /audit_events 끝점을 호출하는 방법을 �
 exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '254'
 ht-degree: 3%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 3%
 
 >[!WARNING]
 >
->의 구현 `/audit_events` 기능이 추가, 제거 및 재작업될 때 끝점이 유동적입니다.
+>기능이 추가, 제거 및 다시 만들어짐에 따라 `/audit_events` 끝점의 구현이 유동적입니다.
 
-감사 이벤트는 변경 시 생성된 Reactor API의 다른 리소스에 대한 특정 변경 사항의 기록입니다. 다음은 를 사용하여 구독할 수 있는 시스템 이벤트입니다. [callback](./callbacks.md). 다음 `/audit_events` Reactor API의 끝점을 사용하면 experience 애플리케이션 내에서 감사 이벤트를 프로그래밍 방식으로 관리할 수 있습니다.
+감사 이벤트는 변경 시 생성된 Reactor API의 다른 리소스에 대한 특정 변경 사항의 기록입니다. [callback](./callbacks.md)을 사용하여 구독할 수 있는 시스템 이벤트입니다. Reactor API의 `/audit_events` 끝점을 사용하면 경험 응용 프로그램 내에서 감사 이벤트를 프로그래밍 방식으로 관리할 수 있습니다.
 
-감사 이벤트는 `{RESOURCE_TYPE}.{EVENT}`, 예: `build.created` 또는 `rule.updated`.
+감사 이벤트는 `build.created` 또는 `rule.updated`과(와) 같이 `{RESOURCE_TYPE}.{EVENT}` 형식으로 구성되어 있습니다.
 
 리소스 유형은 다음 중 하나일 수 있습니다.
 
@@ -39,11 +39,11 @@ ht-degree: 3%
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
+이 가이드에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 [시작 안내서](../getting-started.md)에서 API 인증 방법에 대한 중요한 정보를 검토하십시오.
 
 ## 감사 이벤트 목록 검색 {#list}
 
-에 GET 요청을 하여 조직에서 소유한 모든 속성에 대한 감사 이벤트 목록을 검색할 수 있습니다. `/audit_events` 엔드포인트.
+`/audit_events` 끝점에 대한 GET 요청을 통해 조직에서 소유한 모든 속성의 감사 이벤트 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -170,7 +170,7 @@ GET /audit_events/{AUDIT_EVENT_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `AUDIT_EVENT_ID` | 다음 `id` 조회하려는 감사 이벤트입니다. |
+| `AUDIT_EVENT_ID` | 조회할 감사 이벤트의 `id`입니다. |
 
 {style="table-layout:auto"}
 

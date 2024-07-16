@@ -2,7 +2,8 @@
 title: Real-Time CDP의 샘플 사용 사례
 description: 샘플 교차 서비스 사용 사례를 확인하여 Real-Time CDP 구현을 최대한 활용하십시오.
 feature: Use Cases
-source-git-commit: a58476e0a52cce763a114b2b4f4314fdb2e3f4c9
+exl-id: 2d92a9d3-7648-4241-904e-48f5b2e16023
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -39,7 +40,7 @@ Adobe Real-Time CDP은 파트너 식별자를 광범위하게 지원하므로 �
     </a>
     </div>
     <p>
-    <em>서드파티 쿠키에 의존하지 않고 새로운 고객 참여 및 확보</em>
+    <em>서드파티 쿠키에 의존하지 않고 새 고객 참여 및 확보</em>
     <p>
   </td>
   <td>
@@ -61,11 +62,11 @@ Adobe Real-Time CDP은 파트너 식별자를 광범위하게 지원하므로 �
     </a>
     <div>
       <a href="../partner-data/offsite-retargeting.md">
-    <strong>인증되지 않은 방문자에 대한 오프사이트 재타겟팅</strong>
+    <strong>인증되지 않은 방문자의 오프사이트 재타겟팅</strong>
     </a>
     </div>
     <p>
-    <em>인증되지 않은 방문자의 대상을 작성하고 파트너가 제공한 영속성 ID를 사용하여 대상을 재타겟팅하는 방법에 대해 알아봅니다.</em>
+    <em>인증되지 않은 방문자의 대상을 만들고 파트너가 제공한 지속적인 ID를 사용하여 대상을 다시 타깃팅하는 방법에 대해 알아봅니다.</em>
     <p>
   </td>
   </tr>
@@ -81,17 +82,17 @@ Adobe Real-Time CDP은 파트너 식별자를 광범위하게 지원하므로 �
     </a>
     <div>
       <a href="../partner-data/supplement-first-party-profiles.md">
-    <strong>파트너가 제공한 속성으로 자사 프로필 보완</strong>
+    <strong>파트너가 제공한 특성으로 자사 프로필 보완</strong>
     </a>
     </div>
     <p>
-    <em>신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완하여 데이터 기반을 개선하고, 고객 기반에 대한 새로운 통찰력을 얻고, 대상 최적화를 향상시킵니다.</em>
+    <em>신뢰할 수 있는 데이터 파트너의 특성을 사용하여 자사 프로필을 보완하여 데이터 기반을 개선하고 고객 기반에 대한 새로운 통찰력을 확보하며 대상 최적화를 향상시킵니다.</em>
     <p>
   </td>
   </tr>
   </table>
 
-## 개인화, 통찰력, 참여 {#personalization-insights-engagement}
+## Personalization, 통찰력, 참여 {#personalization-insights-engagement}
 
 <table style="margin-top: 0 !important">
 <tr>
@@ -101,11 +102,11 @@ Adobe Real-Time CDP은 파트너 식별자를 광범위하게 지원하므로 �
     </a>
     <div>
       <a href="../partner-data/prospecting.md">
-    <strong>지능형 재참여</strong>
+    <strong>지능적인 재참여</strong>
     </a>
     </div>
     <p>
-    <em>지능적이고 책임 있는 방식으로 전환을 포기한 고객을 다시 참여시킵니다. 소멸된 고객과 경험을 통해 전환을 늘리고 클라이언트 라이프타임 값을 높일 수 있습니다.</em>
+    <em>지능적이고 책임감 있는 방법으로 전환을 포기한 고객을 다시 참여시키십시오. 소멸된 고객을 경험으로 참여시켜 전환을 늘리고 클라이언트 라이프타임 값을 높이십시오.</em>
     <p>
   </td>
   </tr>

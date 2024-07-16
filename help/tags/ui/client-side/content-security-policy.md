@@ -4,8 +4,8 @@ description: Adobe Experience Platform에서 웹 사이트를 태그와 통합�
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '1080'
-ht-degree: 57%
+source-wordcount: '1074'
+ht-degree: 54%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 CSP(콘텐츠 보안 정책)는 XSS(교차 사이트 스크립팅) 공격을 방지하는 보안 기능입니다. 이는 실제로는 알 수 없는 곳에서 가져온 것이지만 출처를 신뢰할 수 있는 것처럼 브라우저를 속여 악의적인 콘텐츠를 실행하게 할 때 발생합니다. CSP를 사용하면 사용자를 대신하여 브라우저가 스크립트가 실제로 신뢰할 수 있는 소스에서 오고 있는지 확인할 수 있습니다.
 
@@ -27,7 +27,7 @@ Adobe Experience Platform의 태그는 웹 사이트에서 스크립트를 동�
 
 태그가 CSP와 작동하도록 하려면 극복해야 할 두 가지 주요 과제가 있습니다.
 
-* **태그 라이브러리의 소스는 신뢰할 수 있어야 합니다.** 이 조건이 충족되지 않으면 태그 라이브러리 및 기타 필수 JavaScript 파일이 브라우저에 의해 차단되고 페이지에서 로드되지 않습니다.
+* **태그 라이브러리의 원본을 신뢰할 수 있어야 합니다.** 이 조건이 충족되지 않으면 태그 라이브러리 및 기타 필수 JavaScript 파일이 브라우저에 의해 차단되고 페이지에서 로드되지 않습니다.
 * **인라인 스크립트를 허용해야 합니다.**&#x200B;이 조건이 충족되지 않으면 맞춤형 코드 규칙 작업이 페이지에서 차단되며 제대로 실행되지 않습니다.
 
 보안이 강화되면 콘텐츠 작성자를 대신하여 더 많은 양의 작업이 필요합니다. 태그를 사용하고 CSP를 제 위치에 보유하려면 다른 스크립트를 안전한 것으로 잘못 표시하지 않고 두 문제를 모두 해결해야 합니다. 이 문서의 나머지 부분에서는 이 작업을 수행하는 방법에 대한 지침을 제공합니다.
@@ -54,7 +54,7 @@ Content-Security-Policy: script-src 'self'
 
 ### Adobe 관리 호스팅
 
-[Adobe 관리 호스트](../publishing/hosts/managed-by-adobe-host.md)를 사용하는 경우 빌드를 `assets.adobedtm.com`에서 관리합니다. 다음을 지정해야 합니다. `self` 이미 로드하는 스크립트를 중단하지 않도록 안전한 도메인으로 사용되지만 `assets.adobedtm.com` 를 안전한 항목으로 나열할 수 없습니다. 그렇지 않으면 태그 라이브러리가 페이지에 로드되지 않습니다. 이 경우 다음 구성을 사용해야 합니다.
+[Adobe 관리 호스트](../publishing/hosts/managed-by-adobe-host.md)를 사용하는 경우 빌드를 `assets.adobedtm.com`에서 관리합니다. 이미 로드하는 스크립트를 중단하지 않도록 `self`을(를) 안전한 도메인으로 지정해야 하지만 안전한 항목으로 나열하려면 `assets.adobedtm.com`이(가) 필요하며 그렇지 않은 경우 태그 라이브러리가 페이지에 로드되지 않습니다. 이 경우 다음 구성을 사용해야 합니다.
 
 **HTTP 헤더**
 
@@ -65,7 +65,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **HTML `<meta>` 태그**
 
 
-태그 라이브러리를 로드해야 하는 중요한 전제 조건이 있습니다. [비동기적으로](./asynchronous-deployment.md). 태그 라이브러리의 동기식 로드와 작동하지 않습니다(결과: 제대로 실행되지 않는 콘솔 오류 및 규칙).
+태그 라이브러리를 [비동기적으로](./asynchronous-deployment.md)로드해야 하는 중요한 전제 조건이 있습니다. 태그 라이브러리의 동기식 로드와 작동하지 않습니다(결과: 제대로 실행되지 않는 콘솔 오류 및 규칙).
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
@@ -82,7 +82,7 @@ CSP는 기본적으로 인라인 스크립트를 허용하지 않으므로 이�
 
 >[!NOTE]
 >
->CSP 사양은 해시를 사용하는 세 번째 옵션에 대한 세부 사항이 있지만 이 접근 방식은 태그와 같은 태그 관리 시스템에 적합하지 않습니다. Platform에서 태그와 함께 해시를 사용하는 것의 제한 사항에 대한 자세한 내용은 다음을 참조하십시오. [SRI(Subresource Integrity) 안내서](./sri.md).
+>CSP 사양은 해시를 사용하는 세 번째 옵션에 대한 세부 사항이 있지만 이 접근 방식은 태그와 같은 태그 관리 시스템에 적합하지 않습니다. Platform의 태그에 해시를 사용하는 제한 사항에 대한 자세한 내용은 [SRI(Subresource Integrity) 안내서](./sri.md)를 참조하십시오.
 
 ### 임시 허용 {#nonce}
 
@@ -158,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 이 문서를 읽은 후에는 태그 라이브러리 파일 및 인라인 스크립트를 수락하도록 CSP 헤더를 구성하는 방법을 이해할 수 있어야 합니다.
 
-추가 보안 조치로서 SRI(Subresource Integrity)를 사용하여 가져온 라이브러리 빌드의 유효성을 확인할 수도 있습니다. 그러나 이 기능은 태그와 같은 태그 관리 시스템과 함께 사용할 때 몇 가지 주요 제한 사항이 있습니다. 다음 안내서를 참조하십시오 [플랫폼의 SRI 호환성](./sri.md) 추가 정보.
+추가 보안 조치로서 SRI(Subresource Integrity)를 사용하여 가져온 라이브러리 빌드의 유효성을 확인할 수도 있습니다. 그러나 이 기능은 태그와 같은 태그 관리 시스템과 함께 사용할 때 몇 가지 주요 제한 사항이 있습니다. 자세한 내용은 [Platform의 SRI 호환성](./sri.md)에 대한 안내서를 참조하십시오.

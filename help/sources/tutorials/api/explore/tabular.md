@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;홈;인기 항목;소스;API;탐색;흐름 서비스
-title: 흐름 서비스 API를 사용하여 테이블 형식 소스 탐색
+title: 흐름 서비스 API를 사용하여 표 형식 Source 탐색
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 테이블 기반 소스의 컨텐츠와 구조를 살펴봅니다.
 exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
 source-git-commit: 3bdeec8284873b8d9368f833b24e9922ed489019
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 2%
+source-wordcount: '465'
+ht-degree: 5%
 
 ---
 
-# 다음을 사용하여 데이터 테이블 탐색 [!DNL Flow Service] API
+# [!DNL Flow Service] API를 사용하여 데이터 테이블 탐색
 
-이 자습서에서는 를 사용하여 데이터 테이블의 구조와 컨텐츠를 탐색하고 미리 보는 방법에 대한 단계를 제공합니다 [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
+이 자습서에서는 [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API를 사용하여 데이터 테이블의 구조와 콘텐츠를 탐색하고 미리 보는 방법에 대한 단계를 제공합니다.
 
 >[!NOTE]
 >
@@ -22,16 +22,16 @@ ht-degree: 2%
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [소스](../../../home.md): [!DNL Experience Platform] 를 사용하여 수신 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다. [!DNL Platform] 서비스.
-* [샌드박스](../../../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 만드는 가상 샌드박스를 제공합니다. [!DNL Platform] 인스턴스를 별도의 가상 환경으로 전환하여 디지털 경험 애플리케이션을 개발하고 발전시킵니다.
+* [원본](../../../home.md): [!DNL Experience Platform]에서는 데이터를 다양한 원본에서 수집할 수 있으며 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공합니다.
+* [샌드박스](../../../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 ### Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../../landing/api-guide.md).
+Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ## 데이터 테이블 탐색
 
-에 GET 요청을 하여 데이터 테이블의 구조에 대한 정보를 검색할 수 있습니다. [!DNL Flow Service] 소스의 기본 연결 ID를 제공하는 동안 API입니다.
+소스의 기본 연결 ID를 제공하는 동안 [!DNL Flow Service] API에 대한 GET 요청을 통해 데이터 테이블의 구조에 대한 정보를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 소스의 테이블 배열을 반환합니다. Platform으로 가져올 테이블을 찾아 기록해 두십시오. `path` 속성을 다음 단계에서 제공해야 구조를 검사할 수 있습니다.
+성공적인 응답은 소스의 테이블 배열을 반환합니다. 플랫폼으로 가져올 테이블을 찾고 `path` 속성을 기록해 두십시오. 다음 단계에서 테이블 구조를 검사하기 위해 테이블을 제공해야 합니다.
 
 ```json
 [
@@ -79,7 +79,7 @@ curl -X GET \
 
 ## 표 구조 Inspect
 
-GET 데이터 테이블의 내용을 검사하려면 [!DNL Flow Service] 쿼리 매개 변수로 테이블의 경로를 지정하는 동안 API입니다.
+데이터 테이블의 내용을 검사하려면 테이블의 경로를 쿼리 매개 변수로 지정하면서 [!DNL Flow Service] API에 대한 GET 요청을 수행합니다.
 
 **API 형식**
 
@@ -105,7 +105,7 @@ curl -X GET \
 
 **응답**
 
-성공한 응답은 지정된 테이블의 내용과 구조에 대한 정보를 반환합니다. 각 테이블 열에 대한 세부 사항은 의 요소 내에 있습니다. `columns` 배열입니다.
+성공한 응답은 지정된 테이블의 내용과 구조에 대한 정보를 반환합니다. 각 테이블의 열에 대한 세부 정보는 `columns` 배열의 요소 내에 있습니다.
 
 ```json
 {
@@ -188,9 +188,9 @@ curl -X GET \
 
 ## 다음 단계
 
-이 자습서를 따라 데이터 테이블의 구조 및 내용에 대한 정보를 수집했습니다. 또한 Platform으로 수집하려는 표의 경로를 검색했습니다. 이 정보를 사용하여 소스 연결 및 데이터 흐름을 만들어 데이터를 플랫폼으로 가져올 수 있습니다. 를 사용하여 소스 연결 및 데이터 흐름을 만드는 방법에 대한 특정 단계는 다음 자습서를 참조하십시오 [!DNL Flow Service] API:
+이 자습서를 따라 데이터 테이블의 구조 및 내용에 대한 정보를 수집했습니다. 또한 Platform으로 수집하려는 표의 경로를 검색했습니다. 이 정보를 사용하여 소스 연결 및 데이터 흐름을 만들어 데이터를 플랫폼으로 가져올 수 있습니다. [!DNL Flow Service] API를 사용하여 소스 연결 및 데이터 흐름을 만드는 방법에 대한 특정 단계는 다음 튜토리얼을 참조하십시오.
 
-* [광고 소스](../collect/advertising.md)
+* [Advertising 소스](../collect/advertising.md)
 * [CRM 소스](../collect/crm.md)
 * [고객 성공 소스](../collect/customer-success.md)
 * [데이터베이스 소스](../collect/database-nosql.md)

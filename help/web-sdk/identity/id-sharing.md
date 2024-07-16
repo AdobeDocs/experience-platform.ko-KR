@@ -20,7 +20,7 @@ Adobe Experience Platform Web SDK는 방문자 ID 공유 기능을 지원하여 
 
 ### 모바일 앱과 모바일 웹 사이트 간에 일관된 개인화 제공
 
-의류 회사는 고객의 관심사를 기반으로 고객의 경험을 개인화하고 WebViews도 로드하는 모바일 애플리케이션에서 개인화를 정확하게 유지하고자 합니다. 모바일-웹 ID 공유 기능을 사용하면 를 전달하여 앱과 모바일 웹 콘텐츠에서 동일한 방문자 식별자를 사용하여 고객에게 가장 정확한 오퍼가 표시되도록 할 수 있습니다. [!DNL ECID] 모바일 웹 URL에 연결합니다.
+의류 회사는 고객의 관심사를 기반으로 고객의 경험을 개인화하고 WebViews도 로드하는 모바일 애플리케이션에서 개인화를 정확하게 유지하고자 합니다. Mobile-to-Web ID 공유 기능을 사용하면 [!DNL ECID]을(를) 모바일 웹 URL에 전달하여 앱과 모바일 웹 콘텐츠에서 동일한 방문자 식별자를 사용하여 고객에게 가장 정확한 오퍼가 표시되도록 할 수 있습니다.
 
 ### 도메인 간에 일관된 개인화 제공
 
@@ -32,29 +32,29 @@ Adobe Experience Platform Web SDK는 방문자 ID 공유 기능을 지원하여 
 
 ## 전제 조건 {#prerequisites}
 
-모바일-웹 및 도메인 간 ID 공유를 사용하려면 다음을 사용해야 합니다. [!DNL Web SDK] 버전 2.11.0 이상
+모바일-웹 및 도메인 간 ID 공유를 사용하려면 [!DNL Web SDK] 버전 2.11.0 이상을 사용해야 합니다.
 
-Edge Network 모바일 구현의 경우 이 기능은 [Edge Network용 ID](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) 확장 프로그램은 버전 1.1.0부터 시작됩니다(iOS 및 Android).
+Edge Network 모바일 구현의 경우, 이 기능은 버전 1.1.0(iOS 및 Android)부터 시작되는 [Edge Network ID](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) 확장에서 지원됩니다.
 
-이 기능은 와 호환됩니다. [!DNL VisitorAPI.js] 버전 1.7.0 이상
+이 기능은 [!DNL VisitorAPI.js] 버전 1.7.0 이상과도 호환됩니다.
 
 ## Mobile-to-web ID 공유 {#mobile-to-web}
 
-사용 `getUrlVariables` 의 API [Edge Network용 ID](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) 식별자를 쿼리 매개 변수로 검색하고 열 때 URL에 첨부하는 확장명 [!DNL webViews].
+[!DNL webViews]을(를) 열 때 [Edge Network ID](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) 확장의 `getUrlVariables` API를 사용하여 식별자를 쿼리 매개 변수로 검색하고 URL에 첨부합니다.
 
-웹 SDK가 동의하는 데 추가 구성이 필요하지 않습니다. `ECID` 쿼리 문자열의 값입니다.
+웹 SDK가 쿼리 문자열에서 `ECID` 값을 수락하는 데 추가 구성이 필요하지 않습니다.
 
 쿼리 문자열 매개 변수에는 다음이 포함됩니다.
 
 * `MCID`: Experience Cloud ID(`ECID`)
-* `MCORGID`: EXPERIENCE CLOUD `orgID` 다음 항목과 일치해야 합니다. `orgID` 에서 구성됨 [!DNL Web SDK].
-* `TS`: 5분을 초과할 수 없는 타임스탬프 매개 변수입니다.
+* `MCORGID`: [!DNL Web SDK]에 구성된 `orgID`과(와) 일치해야 하는 Experience Cloud `orgID`입니다.
+* `TS`: 타임스탬프 매개 변수는 5분을 초과할 수 없습니다.
 
 
-Mobile-to-web ID 공유는 `adobe_mc` 매개 변수. 다음의 경우 `adobe_mc` 매개 변수가 있고 유효합니다. `ECID` 쿼리 문자열에서 Edge Network에 대한 첫 번째 요청의 id 맵에 자동으로 추가됩니다. 이후의 모든 에지 네트워크 상호 작용에서는 `ECID`.
+Mobile-to-web ID 공유에서는 `adobe_mc` 매개 변수를 사용합니다. `adobe_mc` 매개 변수가 있고 유효하면 쿼리 문자열의 `ECID`이(가) Edge Network에 수행된 첫 번째 요청에서 ID 맵에 자동으로 추가됩니다. 모든 후속 Edge Network 상호 작용에서는 해당 `ECID`을(를) 사용합니다.
 
-모바일 앱에서 WebView로 방문자 ID를 전달하는 방법에 대한 자세한 내용은 [WebView 처리](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
+모바일 앱에서 WebView로 방문자 ID를 전달하는 방법에 대한 자세한 내용은 [WebViews 처리](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation)에 대한 설명서를 참조하십시오.
 
 ## 도메인 간 ID 공유 구현 {#cross-domain-sharing}
 
-다음을 참조하십시오. [`appendIdentityToUrl`](../commands/appendidentitytourl.md) 웹 SDK 태그 확장 및 웹 SDK JavaScript 라이브러리를 모두 사용하는 구현 지침에 대한 명령입니다.
+Web SDK 태그 확장과 Web SDK JavaScript 라이브러리를 모두 사용하는 구현 지침은 [`appendIdentityToUrl`](../commands/appendidentitytourl.md) 명령을 참조하십시오.

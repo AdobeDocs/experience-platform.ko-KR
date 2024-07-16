@@ -5,7 +5,7 @@ description: 모든 XDM(Experience Data Model) 데이터 유형은 Adobe 세그�
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '478'
 ht-degree: 3%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 3%
 
 ## 날짜 데이터
 
-날짜 데이터를 사용하면 특정 시작/종료 날짜를 사용하거나 아래 표에 표시된 것처럼 날짜 관련 문을 사용하여 세그먼트 정의에 시간 기반 컨텍스트를 할당할 수 있습니다. 한 가지 구현은 언제든지 브랜드와 상호 작용한 고객 대상을 만들 수 있습니다 *올해* 및 도 활성화되었습니다. *다음 범위 내* 지난 며칠.
+날짜 데이터를 사용하면 특정 시작/종료 날짜를 사용하거나 아래 표에 표시된 것처럼 날짜 관련 문을 사용하여 세그먼트 정의에 시간 기반 컨텍스트를 할당할 수 있습니다. 한 구현에서 *올해*&#x200B;에는 언제든지 브랜드와 상호 작용하고 지난 며칠 동안은 *이내*&#x200B;에서도 활성 상태인 고객을 대상으로 만들 수 있습니다.
 
 | 예제 필드 | 일자 관련 명세서 | 타임라인 |
 | ------------- | ------------------------ | --------- |
@@ -37,11 +37,11 @@ ht-degree: 3%
 
 ## 경험 이벤트
 
-Adobe Experience Platform 스키마로서 [!DNL XDM ExperienceEvents] 과 명시적 및 암시적 고객 상호 작용 기록 [!DNL Platform]- 상호 작용이 발생한 시점의 시스템 스냅샷을 포함하여 통합된 애플리케이션 [!DNL ExperienceEvents] 는 팩트 레코드입니다. 따라서 세그먼트 정의 중에 사용할 수 있는 데이터 소스입니다.
+[!DNL XDM ExperienceEvents]은(는) Adobe Experience Platform 스키마로서 [!DNL Platform] 통합 응용 프로그램과의 명시적 및 암시적 고객 상호 작용을 기록합니다. 여기에는 상호 작용이 발생한 시점의 시스템 스냅숏이 포함됩니다. [!DNL ExperienceEvents]은(는) 팩트 레코드입니다. 따라서 세그먼트 정의 중에 사용할 수 있는 데이터 소스입니다.
 
 아래 표에서 볼 수 있듯이 이벤트 데이터는 이벤트 행동을 개선하고 이벤트 속성을 지정하는 데 도움이 되는 키워드를 사용하여 렌더링됩니다.
 
-| 키워드 | Use |
+| 키워드 | 사용 |
 | ------- | --- |
 | 포함/제외 | 데이터의 포함 또는 누락을 통한 이벤트의 동작을 설명합니다. |
 | 임의/모두 | 자격을 부여하는 세그먼트 정의의 수를 결정하는 데 도움이 됩니다. |
@@ -52,11 +52,11 @@ Adobe Experience Platform 스키마로서 [!DNL XDM ExperienceEvents] 과 명시
 
 외부 대상은 새 세그먼트 정의에 해당 속성 규칙을 추가하여 새 세그먼트 정의의 구성 요소로 사용할 수도 있습니다.
 
-현재 Adobe Audience Manager만 외부 대상으로 지원되며 향후 추가 소스가 활성화됩니다. Platform과 함께 Adobe Audience Manager 대상 사용에 대한 자세한 내용은 [Adobe Audience Manager 설명서의 대상 공유 안내서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+현재 Adobe Audience Manager만 외부 대상으로 지원되며 향후 추가 소스가 활성화됩니다. 플랫폼과 함께 Adobe Audience Manager 대상 사용에 대한 자세한 내용은 Adobe Audience Manager 설명서의 [대상 공유 안내서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)에서 확인할 수 있습니다.
 
 ### 세그먼트 정의 공유
 
-플랫폼에서 생성된 세그먼트 정의는 다른 세그먼트 내에서 사용할 수 있습니다 [Adobe Experience Cloud 핵심 서비스](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html). 이 기능을 활성화하려면 솔루션 설계자나 컨설턴트에게 문의해야 합니다.
+플랫폼에서 만든 세그먼트 정의는 다른 [Adobe Experience Cloud 핵심 서비스](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ko-KR) 내에서 사용할 수 있습니다. 이 기능을 활성화하려면 솔루션 설계자나 컨설턴트에게 문의해야 합니다.
 
 ## 기타 데이터 유형
 
@@ -65,7 +65,7 @@ Adobe Experience Platform 스키마로서 [!DNL XDM ExperienceEvents] 과 명시
 - URI(Uniform Resource Identifier)
 - 열거형
 - 숫자
-- 길게
+- Long
 - 정수
 - 짧음
 - 바이트

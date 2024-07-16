@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
 title: PQL 맵 함수
-description: PQL(프로필 쿼리 언어)은 맵과의 상호 작용을 더 쉽게 만드는 기능을 제공합니다.
+description: Profile Query Language(PQL)는 맵과의 상호 작용을 용이하게 하는 기능을 제공합니다.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '156'
-ht-degree: 7%
+ht-degree: 6%
 
 ---
 
 # 맵 함수
 
-[!DNL Profile Query Language] (PQL)은 맵과의 상호 작용을 더 쉽게 만드는 기능을 제공합니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md).
+[!DNL Profile Query Language](PQL)은(는) 맵과의 상호 작용을 더 쉽게 하는 함수를 제공합니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
 
-## 가져오기
+## 다운로드
 
-다음 `get` 함수는 특정 키에 대한 맵의 값을 검색하는 데 사용됩니다.
+`get` 함수는 특정 키에 대한 맵의 값을 검색하는 데 사용됩니다.
 
 **형식**
 
@@ -26,7 +26,7 @@ ht-degree: 7%
 
 **예**
 
-다음 PQL 쿼리는 키에 대한 ID 맵의 값을 가져옵니다 `example@example.com`.
+다음 PQL 쿼리는 키 `example@example.com`에 대한 ID 맵의 값을 가져옵니다.
 
 ```sql
 identityMap.get("example@example.com")
@@ -34,7 +34,7 @@ identityMap.get("example@example.com")
 
 ## 키
 
-다음 `keys` 함수는 특정 맵에 대한 모든 키를 검색하는 데 사용됩니다.
+`keys` 함수는 특정 맵의 모든 키를 검색하는 데 사용됩니다.
 
 **형식**
 
@@ -44,7 +44,7 @@ identityMap.get("example@example.com")
 
 **예**
 
-다음 PQL 쿼리는 맵의 모든 키를 가져옵니다 `identityMap`.
+다음 PQL 쿼리는 맵 `identityMap`에 대한 모든 키를 가져옵니다.
 
 ```sql
 identityMap.keys()
@@ -52,7 +52,7 @@ identityMap.keys()
 
 ## 값
 
-다음 `values` 함수는 주어진 맵의 모든 값을 검색하는 데 사용됩니다.
+`values` 함수는 지정된 맵의 모든 값을 검색하는 데 사용됩니다.
 
 **형식**
 
@@ -62,7 +62,7 @@ identityMap.keys()
 
 **예**
 
-다음 PQL 쿼리는 맵의 모든 값을 가져옵니다 `identityMap`.
+다음 PQL 쿼리는 맵 `identityMap`의 모든 값을 가져옵니다.
 
 ```sql
 identityMap.values()
@@ -70,4 +70,4 @@ identityMap.values()
 
 ## 다음 단계
 
-맵 함수에 대해 배웠으므로 이제 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 함수에 대한 자세한 내용은 다음을 참조하십시오. [프로필 쿼리 언어 개요](./overview.md).
+맵 함수에 대해 배웠으므로 이제 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 함수에 대한 자세한 내용은 [Profile Query Language 개요](./overview.md)를 참조하십시오.

@@ -4,20 +4,20 @@ description: Reactor API에서 /extensions 끝점을 호출하는 방법을 알�
 exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 4%
 
 ---
 
 # 확장 엔드포인트
 
-Reactor API에서 확장은 의 설치된 인스턴스를 나타냅니다. [확장 패키지](./extension-packages.md). 확장을 사용하면 확장 패키지로 정의된 기능을 [속성](./properties.md). 이러한 기능은 작성 시 활용됩니다 [확장](./data-elements.md) 및 [규칙 구성 요소](./rule-components.md).
+Reactor API에서 확장은 [확장 패키지](./extension-packages.md)의 설치된 인스턴스를 나타냅니다. 확장을 사용하면 확장 패키지로 정의된 기능을 [property](./properties.md)에서 사용할 수 있습니다. 이러한 기능은 [확장](./data-elements.md) 및 [규칙 구성 요소](./rule-components.md)를 만들 때 활용됩니다.
 
 확장은 정확히 하나의 속성에 속합니다. 속성은 여러 개의 확장을 가질 수 있지만 지정된 확장 패키지의 설치된 인스턴스를 두 개 이상 가질 수 없습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
+이 가이드에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 [시작 안내서](../getting-started.md)에서 API 인증 방법에 대한 중요한 정보를 검토하십시오.
 
 ## 확장 목록 검색 {#list}
 
@@ -31,13 +31,13 @@ GET properties/{PROPERTY_ID}/extensions
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 다음 `id` 를 추가합니다. |
+| `{PROPERTY_ID}` | 확장을 나열할 속성의 `id`입니다. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 확장을 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>다음 안내서를 참조하십시오 [응답 필터링](../guides/filtering.md) 추가 정보.
+>쿼리 매개 변수를 사용하여 나열된 확장을 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>자세한 내용은 [응답 필터링](../guides/filtering.md)에 대한 안내서를 참조하세요.
 
 **요청**
 
@@ -160,7 +160,7 @@ GET 요청 경로에 해당 ID를 제공하여 확장을 조회할 수 있습니
 
 >[!NOTE]
 >
->확장이 삭제되면 시스템에서 삭제된 것으로 플래그가 지정되지만 실제로 제거되지는 않습니다. 따라서 삭제된 확장을 검색할 수 있습니다. 삭제된 확장은 의 존재로 식별할 수 있습니다. `deleted_at` 의 속성 `meta` / 반환된 확장 데이터의.
+>확장이 삭제되면 시스템에서 삭제된 것으로 플래그가 지정되지만 실제로 제거되지는 않습니다. 따라서 삭제된 확장을 검색할 수 있습니다. 반환된 확장 데이터의 `meta`에 `deleted_at` 속성이 있으면 삭제된 확장을 식별할 수 있습니다.
 
 **API 형식**
 
@@ -170,7 +170,7 @@ GET /extensions/{EXTENSION_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `EXTENSION_ID` | 다음 `id` 조회하려는 확장에 대해 자세히 알아보십시오. |
+| `EXTENSION_ID` | 조회할 확장의 `id`입니다. |
 
 {style="table-layout:auto"}
 
@@ -280,7 +280,7 @@ curl -X GET \
 
 ## 확장 만들기 또는 업데이트 {#create}
 
-확장은 [확장 패키지](./extension-packages.md) 설치된 확장을 속성에 추가합니다. 설치 작업이 완료되면 확장이 성공적으로 설치되었는지 여부를 나타내는 응답이 반환됩니다.
+확장은 [확장 패키지](./extension-packages.md)를 참조하고 설치된 확장을 속성에 추가하여 만듭니다. 설치 작업이 완료되면 확장이 성공적으로 설치되었는지 여부를 나타내는 응답이 반환됩니다.
 
 **API 형식**
 
@@ -290,7 +290,7 @@ POST /properties/{PROPERTY_ID}/extensions
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 다음 `id` 확장을 설치할 속성의 입니다. |
+| `PROPERTY_ID` | 확장을 설치할 속성의 `id`입니다. |
 
 {style="table-layout:auto"}
 
@@ -326,7 +326,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `relationships.extension_package` | **(필수)** 설치 중인 확장 패키지의 ID를 참조하는 개체입니다. |
-| `attributes.delegate_descriptor_id` | 확장에 사용자 지정 설정이 필요한 경우 위임 설명자 ID도 필요합니다. 다음 안내서를 참조하십시오 [위임 설명자 ID](../guides/delegate-descriptor-ids.md) 추가 정보. |
+| `attributes.delegate_descriptor_id` | 확장에 사용자 지정 설정이 필요한 경우 위임 설명자 ID도 필요합니다. 자세한 내용은 [설명자 ID 위임](../guides/delegate-descriptor-ids.md)에 대한 안내서를 참조하십시오. |
 | `attributes.enabled` | 확장이 활성화되었는지 여부를 나타내는 부울. |
 | `attributes.settings` | 문자열로 표시되는 설정 JSON 개체입니다. |
 
@@ -436,13 +436,13 @@ PATCH /extensions/{EXTENSION_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `EXTENSION_ID` | 다음 `id` 를 추가합니다. |
+| `EXTENSION_ID` | 수정할 확장의 `id`입니다. |
 
 {style="table-layout:auto"}
 
 **요청**
 
-에서와 같이 [확장 만들기](#create), 수정된 패키지의 로컬 버전은 양식 데이터를 통해 업로드해야 합니다.
+[확장 만들기](#create)와 마찬가지로 수정된 패키지의 로컬 버전은 양식 데이터를 통해 업로드해야 합니다.
 
 ```shell
 curl -X PATCH \
@@ -467,14 +467,14 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes` | 수정할 속성입니다. 확장의 경우 다음을 수정할 수 있습니다 `delegate_descriptor_id`, `enabled`, 및 `settings` 속성. |
-| `meta.action` | 은(는) 다음 값에 포함해야 합니다. `revise` 수정할 때 |
+| `attributes` | 수정할 속성입니다. 확장의 경우 `delegate_descriptor_id`, `enabled` 및 `settings` 특성을 수정할 수 있습니다. |
+| `meta.action` | 수정할 때 `revise` 값으로 포함해야 합니다. |
 
 {style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 수정된 확장의 세부 사항을 반환하며 `meta.latest_revision_number` 속성이 1씩 증가했습니다.
+성공적인 응답은 수정된 확장의 세부 정보를 반환하며 해당 `meta.latest_revision_number` 속성은 1씩 증가했습니다.
 
 ```json
 {
@@ -576,7 +576,7 @@ DELETE /extensions/{EXTENSION_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `EXTENSION_ID` | 다음 `id` 삭제할 확장의 경우입니다. |
+| `EXTENSION_ID` | 삭제할 확장의 `id`입니다. |
 
 {style="table-layout:auto"}
 
@@ -596,17 +596,17 @@ curl -X DELETE \
 
 ## 확장 노트 관리 {#notes}
 
-확장은 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에 대해 텍스트 기반 메모를 만들고 검색할 수 있습니다. 다음을 참조하십시오. [notes 엔드포인트 안내서](./notes.md) 확장 및 기타 호환 리소스에 대한 메모를 관리하는 방법에 대한 자세한 정보.
+확장은 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에 대해 텍스트 기반 메모를 만들고 검색할 수 있습니다. 확장 및 기타 호환 리소스에 대한 메모를 관리하는 방법에 대한 자세한 내용은 [메모 끝점 안내서](./notes.md)를 참조하십시오.
 
 ## 확장에 대한 관련 리소스 검색 {#related}
 
-다음 호출은 확장에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. 날짜 [확장 조회](#lookup), 이러한 관계는 아래에 나열됩니다. `relationships` 속성.
+다음 호출은 확장에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. [확장을 조회](#lookup)할 때 이러한 관계는 `relationships` 속성 아래에 나열됩니다.
 
-다음을 참조하십시오. [관계 안내서](../guides/relationships.md) Reactor API의 관계에 대한 자세한 정보입니다.
+Reactor API의 관계에 대한 자세한 내용은 [관계 안내서](../guides/relationships.md)를 참조하십시오.
 
 ### 확장에 대한 관련 라이브러리 나열 {#libraries}
 
-확장을 활용하는 라이브러리를 추가할 수 있습니다. `/libraries` 조회 요청의 경로에 매핑됩니다.
+조회 요청의 경로에 `/libraries`을(를) 추가하여 확장을 활용하는 라이브러리를 나열할 수 있습니다.
 
 **API 형식**
 
@@ -616,7 +616,7 @@ GET  /extensions/{EXTENSION_ID}/libraries
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{EXTENSION_ID}` | 다음 `id` 라이브러리를 나열할 확장의 입니다. |
+| `{EXTENSION_ID}` | 라이브러리를 나열할 확장의 `id`입니다. |
 
 {style="table-layout:auto"}
 
@@ -728,7 +728,7 @@ curl -X GET \
 
 ### 확장에 대한 관련 수정 사항 나열 {#revisions}
 
-확장을 추가하여 이전 버전의 확장을 나열할 수 있습니다 `/revisions` 조회 요청의 경로에 매핑됩니다.
+조회 요청의 경로에 `/revisions`을(를) 추가하여 확장의 이전 수정 버전을 나열할 수 있습니다.
 
 **API 형식**
 
@@ -738,7 +738,7 @@ GET  /extensions/{EXTENSION_ID}/revisions
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{EXTENSION_ID}` | 다음 `id` 개정 버전을 나열할 확장의 일부입니다. |
+| `{EXTENSION_ID}` | 수정본을 나열할 확장의 `id`입니다. |
 
 {style="table-layout:auto"}
 
@@ -942,7 +942,7 @@ curl -X GET \
 
 ### 확장에 대한 관련 확장 패키지 조회 {#extension}
 
-확장을 추가하면 확장의 기반이 되는 확장 패키지를 조회할 수 있습니다 `/extension_package` GET 요청 경로로 이동합니다.
+GET 요청 경로에 `/extension_package`을(를) 추가하여 확장의 기반이 되는 확장 패키지를 조회할 수 있습니다.
 
 **API 형식**
 
@@ -952,7 +952,7 @@ GET  /extensions/{EXTENSION_ID}/extension_package
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{EXTENSION_ID}` | 다음 `id` 조회하려는 확장의 확장에 대해 설명합니다. |
+| `{EXTENSION_ID}` | 확장을 조회할 확장의 `id`입니다. |
 
 {style="table-layout:auto"}
 
@@ -1177,7 +1177,7 @@ curl -X GET \
 
 ### 확장에 대한 관련 원본 조회 {#origin}
 
-확장을 추가하여 확장의 출처를 조회할 수 있습니다 `/origin` GET 요청 경로로 이동합니다. 확장의 원본은 현재 개정을 만들기 위해 업데이트된 이전 개정입니다.
+GET 요청 경로에 `/origin`을(를) 추가하여 확장의 원본을 조회할 수 있습니다. 확장의 원본은 현재 개정을 만들기 위해 업데이트된 이전 개정입니다.
 
 **API 형식**
 
@@ -1187,7 +1187,7 @@ GET  /extensions/{EXTENSION_ID}/origin
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{EXTENSION_ID}` | 다음 `id` 원본을 조회하려는 확장의 경우입니다. |
+| `{EXTENSION_ID}` | 원본을 조회할 확장의 `id`입니다. |
 
 {style="table-layout:auto"}
 
@@ -1297,7 +1297,7 @@ curl -X GET \
 
 ### 확장에 대한 관련 속성 조회 {#property}
 
-확장을 소유하는 속성을 추가하여 조회할 수 있습니다 `/property` GET 요청 경로로 이동합니다.
+GET 요청 경로에 `/property`을(를) 추가하여 확장을 소유한 속성을 조회할 수 있습니다.
 
 **API 형식**
 
@@ -1307,7 +1307,7 @@ GET  /extensions/{EXTENSION_ID}/property
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{EXTENSION_ID}` | 다음 `id` 속성을 조회할 확장의 속성입니다. |
+| `{EXTENSION_ID}` | 속성을 조회할 확장의 `id`입니다. |
 
 {style="table-layout:auto"}
 

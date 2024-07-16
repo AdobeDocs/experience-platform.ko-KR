@@ -11,13 +11,13 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL 채널 세부 사항] 스키마 필드 그룹
+# [!UICONTROL 채널 세부 정보] 스키마 필드 그룹
 
 >[!NOTE]
 >
->여러 스키마 필드 그룹의 이름이 변경되었습니다. 다음에 대한 문서 보기: [필드 그룹 이름 업데이트](../name-updates.md) 추가 정보.
+>여러 스키마 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../name-updates.md)에 대한 문서를 참조하십시오.
 
-[!UICONTROL 채널 세부 사항] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)ID, 채널 유형, 미디어 유형 및 위치 유형 등 채널 정보를 설명하는 데 사용됩니다.
+[!UICONTROL 채널 세부 정보]은(는) ID, 채널 유형, 미디어 유형 및 위치 유형과 같은 채널 정보를 설명하는 데 사용되는 [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)의 표준 스키마 필드 그룹입니다.
 
 ![](../../images/field-groups/channel-details.png)
 

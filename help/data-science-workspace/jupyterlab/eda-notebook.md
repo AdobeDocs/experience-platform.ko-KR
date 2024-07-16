@@ -7,7 +7,7 @@ description: 이 안내서는 탐색적 데이터 분석(EDA) Notebook을 사용
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '2760'
+source-wordcount: '2766'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ EDA 노트북 예제는 웹 기반 데이터를 염두에 두고 최적화되었
 
 ## 시작하기
 
-이 안내서를 읽기 전에 다음을 검토하십시오. [[!DNL JupyterLab] 사용 안내서](./overview.md) 를 개괄적으로 소개하는 [!DNL JupyterLab] 및 Data Science Workspace에서의 역할. 또한 고유한 데이터를 사용하는 경우 다음 설명서를 검토하십시오. [에서 데이터 액세스 [!DNL Jupyterlab] notebooks](./access-notebook-data.md). 이 안내서에는 노트북 데이터 제한에 대한 중요한 정보가 포함되어 있습니다.
+이 안내서를 읽기 전에 [[!DNL JupyterLab] 사용 안내서](./overview.md)를 검토하여 [!DNL JupyterLab]에 대한 자세한 소개와 Data Science Workspace에서의 역할에 대해 알아보십시오. 또한 사용자의 데이터를 사용하는 경우 [notebooks](./access-notebook-data.md)의 데이터 액세스에 대한 설명서를 검토하십시오.  [!DNL Jupyterlab]  이 안내서에는 노트북 데이터 제한에 대한 중요한 정보가 포함되어 있습니다.
 
-이 전자 필기장은 Analytics Analysis Workspace에 있는 Adobe Analytics Experience Events 데이터 형식의 중간값 데이터 세트를 사용합니다. EDA 노트북을 사용하려면 다음 값으로 데이터 테이블을 정의해야 합니다 `target_table` 및 `target_table_id`. 모든 중간값 데이터 세트를 사용할 수 있습니다.
+이 전자 필기장은 Analytics Analysis Workspace에 있는 Adobe Analytics Experience Events 데이터 형식의 중간값 데이터 세트를 사용합니다. EDA 전자 필기장을 사용하려면 다음 값 `target_table` 및 `target_table_id`을(를) 사용하여 데이터 테이블을 정의해야 합니다. 모든 중간값 데이터 세트를 사용할 수 있습니다.
 
-이러한 값을 찾으려면 다음에 설명된 단계를 수행합니다. [python의 데이터 세트에 쓰기](./access-notebook-data.md#write-python) 섹션: JupyterLab 데이터 액세스 안내서. 데이터 세트 이름(`target_table`)는 데이터 세트 디렉터리에 있습니다. 데이터 세트를 마우스 오른쪽 단추로 클릭하여 전자 필기장에서 데이터를 탐색하거나 쓰면 데이터 세트 ID(`target_table_id`)는 실행 코드 항목에 제공됩니다.
+이러한 값을 찾으려면 JupyterLab 데이터 액세스 가이드의 [python에 있는 데이터 집합에 쓰기](./access-notebook-data.md#write-python) 섹션에 설명된 단계를 따릅니다. 데이터 집합 이름(`target_table`)이 데이터 집합 디렉터리에 있습니다. 데이터 집합을 마우스 오른쪽 단추로 클릭하여 전자 필기장의 데이터를 탐색하거나 쓰면 실행 코드 항목에 데이터 집합 ID(`target_table_id`)가 제공됩니다.
 
 ## 데이터 검색
 
@@ -34,7 +34,7 @@ EDA 노트북 예제는 웹 기반 데이터를 염두에 두고 최적화되었
 
 ### 라이브러리 구성
 
-JupyterLab은 여러 라이브러리를 지원합니다. 다음 코드를 붙여넣은 후 코드 셀에서 실행하여 이 예제에 사용된 모든 필수 패키지를 수집하고 설치할 수 있습니다. 이 예제 이외의 추가 또는 대체 패키지를 사용하여 자신의 데이터 분석을 수행할 수 있습니다. 지원되는 패키지 목록의 경우 을(를) 복사하여 붙여 넣습니다. `!pip list --format=columns` 새 셀에서.
+JupyterLab은 여러 라이브러리를 지원합니다. 다음 코드를 붙여넣은 후 코드 셀에서 실행하여 이 예제에 사용된 모든 필수 패키지를 수집하고 설치할 수 있습니다. 이 예제 이외의 추가 또는 대체 패키지를 사용하여 자신의 데이터 분석을 수행할 수 있습니다. 지원되는 패키지 목록을 보려면 새 셀에 `!pip list --format=columns`을(를) 복사하여 붙여 넣으십시오.
 
 ```python
 !pip install colorama
@@ -62,11 +62,11 @@ pd.set_option('display.expand_frame_repr', False)
 pd.set_option('display.max_colwidth', -1)
 ```
 
-### Adobe Experience Platform에 연결 [!DNL Query Service]
+### Adobe Experience Platform [!DNL Query Service]에 연결
 
-[!DNL JupyterLab] 플랫폼에서 를 사용하여 [!DNL Python] 다음을 통해 데이터에 액세스하는 전자 필기장 [쿼리 서비스](https://www.adobe.com/go/query-service-home-en). 를 통해 데이터 액세스 [!DNL Query Service] 은 우수한 실행 시간으로 인해 큰 데이터 세트를 처리하는 데 유용할 수 있습니다. 다음을 사용하여 데이터 쿼리 [!DNL Query Service] 에는 10분의 처리 시간 제한이 있습니다.
+플랫폼의 [!DNL JupyterLab]을(를) 사용하면 [!DNL Python] 전자 필기장의 SQL을 사용하여 [쿼리 서비스](https://www.adobe.com/go/query-service-home-en)를 통해 데이터에 액세스할 수 있습니다. [!DNL Query Service]을(를) 통해 데이터에 액세스하면 실행 시간이 길어 대용량 데이터 세트를 처리하는 데 유용할 수 있습니다. [!DNL Query Service]을(를) 사용하여 데이터를 쿼리하는 데 10분의 처리 시간 제한이 있습니다.
 
-사용하기 전에 [!DNL Query Service] 위치: [!DNL JupyterLab], 다음에 대해 잘 이해하고 있는지 확인합니다. [[!DNL Query Service] SQL 구문](https://www.adobe.com/go/query-service-sql-syntax-en).
+[!DNL JupyterLab]에서 [!DNL Query Service]을(를) 사용하기 전에 [[!DNL Query Service] SQL 구문](https://www.adobe.com/go/query-service-sql-syntax-en)을(를) 이해하고 있는지 확인하십시오.
 
 JupyterLab에서 쿼리 서비스를 활용하려면 먼저 작업 중인 Python 노트북과 쿼리 서비스 간에 연결을 만들어야 합니다. 이 작업은 다음 셀을 실행하여 수행할 수 있습니다.
 
@@ -76,7 +76,7 @@ qs_connect()
 
 ### 탐색할 중간값 데이터 세트 정의
 
-데이터 쿼리 및 탐색을 시작하려면 midvalues 데이터 세트 테이블을 제공해야 합니다. 복사 및 바꾸기 `table_name` 및 `table_id` 고유한 데이터 테이블 값이 있는 값.
+데이터 쿼리 및 탐색을 시작하려면 midvalues 데이터 세트 테이블을 제공해야 합니다. `table_name` 및 `table_id` 값을 복사하여 고유한 데이터 테이블 값으로 바꾸십시오.
 
 ```python
 target_table = "table_name"
@@ -118,7 +118,7 @@ target_day = "(01,02,03)" ## The target days
 
 ### 데이터 세트 검색
 
-모든 매개 변수를 구성했으면 를 시작했습니다. [!DNL Query Service], 그리고 날짜 범위가 있으면 데이터 행을 읽을 준비가 된 것입니다. 읽는 행의 수를 제한해야 합니다.
+모든 매개 변수를 구성하고 [!DNL Query Service]을(를) 시작했으며 날짜 범위가 있으면 데이터 행을 읽을 준비가 된 것입니다. 읽는 행의 수를 제한해야 합니다.
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -151,13 +151,13 @@ ColumnNames_Types.columns = ["Column_Name", "Data_Type"]
 ColumnNames_Types
 ```
 
-![열 이름 및 데이터 유형 목록](../images/jupyterlab/eda/data-columns.PNG)
+![열 이름 및 데이터 형식 목록](../images/jupyterlab/eda/data-columns.PNG)
 
 ### 데이터 세트 트렌드 탐색
 
 다음 섹션에는 데이터의 트렌드와 패턴을 탐색하는 데 사용되는 네 가지 예제 쿼리가 포함되어 있습니다. 아래에 제공된 예들은 완전하지는 않지만, 보다 일반적으로 살펴지는 특징들 중 일부를 포함한다.
 
-**지정된 날의 시간별 활동 수**
+**지정된 날의 시간별 활동 개수**
 
 이 쿼리는 하루 동안의 작업 및 클릭 수를 분석합니다. 출력은 그날의 각 시간에 대한 활동 카운트에 대한 지표를 포함하는 표 형태로 표시됩니다.
 
@@ -197,11 +197,11 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![쿼리 1에 대한 막대 그래프 출력](../images/jupyterlab/eda/activity-count-by-hour-of-day.png)
+쿼리 1에 대한 ![막대 그래프 출력](../images/jupyterlab/eda/activity-count-by-hour-of-day.png)
 
-**지정된 날에 열람한 상위 10개 페이지**
+**특정 날짜에 가장 많이 본 페이지 10개**
 
-이 쿼리는 주어진 날 동안 가장 많이 본 페이지를 분석합니다. 출력은 페이지 이름 및 페이지 보기 수에 대한 지표가 포함된 표 형태로 표시됩니다.
+이 쿼리는 주어진 날 동안 가장 많이 본 페이지를 분석합니다. 출력은 페이지 이름 및 페이지 보기 수에 대한 지표를 포함하는 표 형태로 표시됩니다.
 
 ```sql
 %%read_sql query_4_df -c QS_CONNECTION
@@ -238,7 +238,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![상위 10개 조회함](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.png)
+![가장 많이 본 페이지 10개](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.png)
 
 **사용자 활동별로 그룹화된 상위 10개 도시**
 
@@ -281,9 +281,9 @@ iplot(fig)
 
 ![상위 10개 도시](../images/jupyterlab/eda/top-ten-cities-by-user-activity.png)
 
-**상위 10개 조회 제품**
+**가장 많이 본 제품 10개**
 
-이 쿼리는 가장 많이 본 10개 제품 목록을 제공합니다. 아래 예에서는 `Explode()` 함수는 `productlistitems` 객체를 고유한 행에 추가합니다. 이를 통해 중첩된 쿼리를 수행하여 다양한 SKU에 대한 제품 보기를 집계할 수 있습니다.
+이 쿼리는 가장 많이 본 10개 제품 목록을 제공합니다. 아래 예제에서는 `Explode()` 함수를 사용하여 `productlistitems` 개체의 각 제품을 고유한 행으로 반환합니다. 이를 통해 중첩된 쿼리를 수행하여 다양한 SKU에 대한 제품 보기를 집계할 수 있습니다.
 
 ```sql
 %%read_sql query_7_df -c QS_CONNECTION
@@ -337,17 +337,17 @@ iplot(fig)
 
 이 섹션에서는 다음 기능이 생성되고 탐색됩니다.
 
-- `COUNT_UNIQUE_PRODUCTS_PURCHASED`: 구매한 고유 제품 수입니다.
-- `COUNT_CHECK_OUTS`: 체크아웃 수입니다.
-- `COUNT_PURCHASES`: 구매 횟수.
+- `COUNT_UNIQUE_PRODUCTS_PURCHASED`: 구매한 고유 제품의 수입니다.
+- `COUNT_CHECK_OUTS`: 체크 아웃 수입니다.
+- `COUNT_PURCHASES`: 구매 횟수입니다.
 - `COUNT_INSTANCE_PRODUCTADDS`: 제품 추가 인스턴스 수입니다.
-- `NUMBER_VISITS`: 방문 횟수.
+- `NUMBER_VISITS`: 방문 횟수입니다.
 - `COUNT_PAID_SEARCHES`: 유료 검색 수입니다.
 - `DAYS_SINCE_VISIT`: 마지막 방문 이후의 일 수입니다.
-- `TOTAL_ORDER_REVENUE`: 총 주문 매출입니다.
-- `DAYS_SINCE_PURCHASE`: 이전 구매 이후 경과된 일 수입니다.
-- `AVG_GAP_BETWEEN_ORDERS_DAYS`: 일 단위의 평균 구매 간격.
-- `STATE_CITY`: 시/도 및 시/도를 포함합니다.
+- `TOTAL_ORDER_REVENUE`: 총 주문 매출액.
+- `DAYS_SINCE_PURCHASE`: 이전 구매 이후 일 수입니다.
+- `AVG_GAP_BETWEEN_ORDERS_DAYS`: 일 단위 평균 구매 간격.
+- `STATE_CITY`: 시/도 및 구/군/시를 포함합니다.
 
 데이터 집계를 계속하기 전에 탐색적 데이터 분석에 사용되는 예측 변수에 대한 매개 변수를 정의해야 합니다. 즉, 데이터 과학 모델에서 원하는 것은 무엇입니까? 일반적인 매개변수에는 목표, 예측 기간 및 분석 기간이 포함됩니다.
 
@@ -367,7 +367,7 @@ threshold = 1
 
 ### 기능 및 목표 생성을 위한 데이터 집계
 
-탐색적 분석을 시작하려면 프로필 수준에서 목표를 만든 다음 데이터 세트를 집계해야 합니다. 이 예에서는 두 개의 쿼리가 제공됩니다. 첫 번째 쿼리에는 목표 생성이 포함됩니다. 두 번째 쿼리는 첫 번째 쿼리에 포함되지 않은 변수를 포함하도록 업데이트해야 합니다. 다음을 업데이트할 수 있습니다. `limit` 쿼리용. 다음 쿼리를 수행하면 이제 집계된 데이터를 탐색할 수 있습니다.
+탐색적 분석을 시작하려면 프로필 수준에서 목표를 만든 다음 데이터 세트를 집계해야 합니다. 이 예에서는 두 개의 쿼리가 제공됩니다. 첫 번째 쿼리에는 목표 생성이 포함됩니다. 두 번째 쿼리는 첫 번째 쿼리에 포함되지 않은 변수를 포함하도록 업데이트해야 합니다. 쿼리에 대해 `limit`을(를) 업데이트할 수 있습니다. 다음 쿼리를 수행하면 이제 집계된 데이터를 탐색할 수 있습니다.
 
 ```sql
 %%read_sql target_df -d -c QS_CONNECTION
@@ -451,19 +451,19 @@ Data['TARGET'].fillna(0, inplace=True)
 
 다음 세 개의 예제 셀은 병합이 성공했는지 확인하는 데 사용됩니다.
 
-`Data.shape` (11913, 12)와 같이 열 수 뒤에 행 수가 옵니다.
+`Data.shape`은(는) 열 수 다음에 행 수를 반환합니다(예: 11913, 12).
 
 ```python
 Data.shape
 ```
 
-`Data.head(5)` 5개의 데이터 행이 있는 테이블을 반환합니다. 반환된 테이블에는 프로필 ID에 매핑된 집계된 데이터의 12개 열이 모두 포함되어 있습니다.
+`Data.head(5)`은(는) 5개의 데이터 행이 있는 테이블을 반환합니다. 반환된 테이블에는 프로필 ID에 매핑된 집계된 데이터의 12개 열이 모두 포함되어 있습니다.
 
 ```python
 Data.head(5)
 ```
 
-![테이블 예](../images/jupyterlab/eda/raw-aggregate-data.PNG)
+![예제 테이블](../images/jupyterlab/eda/raw-aggregate-data.PNG)
 
 이 셀에서는 고유한 프로필 수를 인쇄합니다.
 
@@ -515,7 +515,7 @@ iplot(fig)
 
 >[!TIP]
 >
->이상치를 수정하려면 작업 중인 비즈니스와 산업에 대한 이해가 필요합니다. 이상형이라는 이유만으로 관측을 포기할 수 없는 경우도 있다. 이상치는 합법적인 관찰이 될 수 있으며 종종 가장 흥미로운 관찰입니다. 이상값을 삭제하는 방법에 대한 자세한 내용은 [선택적 데이터 정리 단계](#optional-data-clean).
+>이상치를 수정하려면 작업 중인 비즈니스와 산업에 대한 이해가 필요합니다. 이상형이라는 이유만으로 관측을 포기할 수 없는 경우도 있다. 이상치는 합법적인 관찰이 될 수 있으며 종종 가장 흥미로운 관찰입니다. 이상값 삭제에 대한 자세한 내용은 [선택적 데이터 정리 단계](#optional-data-clean)를 참조하세요.
 
 ```python
 TARGET = Data.TARGET
@@ -556,7 +556,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![이상치 그래프](../images/jupyterlab/eda/outliers.png)
+![이상값 그래프](../images/jupyterlab/eda/outliers.png)
 
 ### 일변량 분석
 
@@ -589,7 +589,7 @@ for column in Data_numerical.columns[0:]:
     sns.distplot(Data_numerical[column], color = A, kde=False, bins=6, hist_kws={'alpha': 0.4});
 ```
 
-![수치 데이터 그래프](../images/jupyterlab/eda/univaiate-graphs.png)
+![숫자 데이터 그래프](../images/jupyterlab/eda/univaiate-graphs.png)
 
 ### 범주형 데이터
 
@@ -610,7 +610,7 @@ for column in Data_categorical.columns[0:]:
         sns.countplot(x=column, data = Data_categorical, palette="Set2");
 ```
 
-![이화론적 기둥](../images/jupyterlab/eda/graph-category.PNG)
+![연역학적 열](../images/jupyterlab/eda/graph-category.PNG)
 
 ### 단일 고유 값만 있는 열 제거
 
@@ -628,11 +628,11 @@ for col in Data.columns:
             Data.drop(col,inplace=True,axis=1)
 ```
 
-단일 값 열을 제거했으면 다음을 사용하여 나머지 열에 오류가 있는지 확인합니다. `Data.columns` 새 셀에서 명령.
+단일 값 열을 제거했으면 새 셀에서 `Data.columns` 명령을 사용하여 나머지 열에 오류가 있는지 확인합니다.
 
 ### 누락된 값에 대해 수정
 
-다음 섹션에서는 누락된 값을 수정하는 방법에 대한 몇 가지 샘플 접근 방식을 다룹니다. 이벤트 위의 데이터에서 하나의 열에만 누락 값이 있지만 아래의 예제 셀은 모든 데이터 유형에 대한 값을 수정합니다. 다음과 같은 보고서가 포함됩니다.
+다음 섹션에서는 누락된 값을 수정하는 방법에 대한 몇 가지 샘플 접근 방식을 다룹니다. 이벤트 위의 데이터에서 하나의 열에만 누락 값이 있지만 아래의 예제 셀은 모든 데이터 유형에 대한 값을 수정합니다. 여기에는 다음이 포함됩니다.
 
 - 숫자 데이터 유형: 입력 0 또는 가능한 경우 최대
 - 범주별 데이터 유형: 입력 모달 값
@@ -674,11 +674,11 @@ for column in Missing_cat:
 
 이변량 분석은 피쳐와 대상 변수와 같은 두 값 세트 간의 관계를 이해하는 데 도움이 됩니다. 서로 다른 플롯은 범주형 및 수치 데이터 유형에 적합하므로 이 분석은 각 데이터 유형에 대해 별도로 수행해야 합니다. 다음 차트는 이변량 분석에 권장됩니다.
 
-- **상관 관계**: 상관 계수는 두 피쳐 간의 관계의 강도를 측정한 것입니다. 상관관계는 -1과 1 사이의 값을 가지며, 여기서 1은 강한 양의 관계를 나타내고, -1은 강한 음의 관계를 나타내며, 0의 결과는 전혀 관계가 없음을 나타낸다.
-- **플롯 연결**: 쌍 플롯은 각 변수 간의 관계를 시각화하는 간단한 방법입니다. 데이터의 각 변수 간의 관계 매트릭스를 생성합니다.
-- **열 지도**: Heatmap은 데이터 세트의 모든 변수에 대한 상관 계수입니다.
-- **상자 그림**: 상자 그래프는 5개의 숫자 요약(최소, 1분위(Q1), 중간값, 3분위(Q3) 및 최대)을 기반으로 데이터 분포를 표시하는 표준화된 방법입니다.
-- **계산 플롯**: 카운트 플롯은 일부 범주형 기능에 대한 히스토그램 또는 막대 그래프와 같습니다. 특정 범주 유형에 따라 항목의 발생 횟수를 보여줍니다.
+- **상관 관계**: 상관 계수는 두 기능 간의 관계의 강도를 측정한 것입니다. 상관관계는 -1과 1 사이의 값을 가지며, 여기서 1은 강한 양의 관계를 나타내고, -1은 강한 음의 관계를 나타내며, 0의 결과는 전혀 관계가 없음을 나타낸다.
+- **쌍 플롯**: 쌍 플롯은 각 변수 간의 관계를 시각화하는 간단한 방법입니다. 데이터의 각 변수 간의 관계 매트릭스를 생성합니다.
+- **Heatmap**: Heatmap은 데이터 집합에 있는 모든 변수의 상관 계수입니다.
+- **상자 그림**: 상자 그림은 5개의 숫자 요약(최소, 1분위(Q1), 중간값, 3분위(Q3) 및 최대)을 기반으로 데이터 분포를 표시하는 표준화된 방법입니다.
+- **계산 도표**: 계산 도표는 막대 그래프나 일부 범주형 기능의 막대 그래프와 같습니다. 특정 범주 유형에 따라 항목의 발생 횟수를 보여줍니다.
 
 &#39;목표&#39; 변수와 예측 변수/기능 간의 관계를 이해하기 위해 데이터 형식을 기반으로 차트가 사용됩니다. 숫자 피쳐의 경우 &#39;goal&#39; 변수가 범주형 변수이면 상자 플롯을 사용하고, &#39;goal&#39; 변수가 숫자이면 쌍 플롯과 히트맵을 사용해야 합니다.
 
@@ -723,9 +723,9 @@ else:
 
 ![플롯](../images/jupyterlab/eda/bivariant-graphs.png)
 
-![열 지도](../images/jupyterlab/eda/bi-graph10.PNG)
+![히트맵](../images/jupyterlab/eda/bi-graph10.PNG)
 
-**범주형 예측인자**
+**범주 예측 변수**
 
 다음 예제를 사용하여 각 범주형 변수의 상위 10개 범주에 대한 빈도 플롯을 플롯하고 볼 수 있습니다.
 
@@ -784,7 +784,7 @@ else:
     print(Imp_features)
 ```
 
-![중요한 기능](../images/jupyterlab/eda/important-feature-model.PNG)
+![중요 기능](../images/jupyterlab/eda/important-feature-model.PNG)
 
 ### 인사이트 예
 
@@ -800,15 +800,15 @@ else:
     sns.lmplot("DAYS_SINCE_VISIT", "TOTAL_ORDER_REVENUE", Data, hue="TARGET", fit_reg=False);
 ```
 
-![인사이트 예](../images/jupyterlab/eda/insight.PNG)
+![인사이트 예제](../images/jupyterlab/eda/insight.PNG)
 
 ## 선택적 데이터 정리 단계 {#optional-data-clean}
 
 이상치를 수정하려면 작업 중인 비즈니스와 산업에 대한 이해가 필요합니다. 이상형이라는 이유만으로 관측을 포기할 수 없는 경우도 있다. 이상치는 합법적인 관찰이 될 수 있으며 종종 가장 흥미로운 관찰입니다.
 
-이상값 및 삭제 여부에 대한 자세한 내용은 [분석 요소](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
+이상값과 삭제 여부에 대한 자세한 내용은 [분석 요소](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/)에서 이 항목을 참조하십시오.
 
-다음 예제 셀 캡 및 바닥글 데이터 포인트는 다음을 사용하여 이상값입니다. [사분위간 범위](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
+다음 예제에서는 [사분위수 범위](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244)를 사용하는 이상값의 셀 상한 및 단계 데이터 포인트를 보여 줍니다.
 
 ```python
 TARGET = Data.TARGET
@@ -830,4 +830,4 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 탐색적 데이터 분석을 완료한 후 모델을 만들 준비가 되었습니다. 또는 파생한 데이터 및 인사이트를 사용하여 Power BI과 같은 도구를 사용하여 대시보드를 만들 수 있습니다.
 
-Adobe Experience Platform은 모델 생성 프로세스를 레서피(모델 인스턴스)와 모델, 이렇게 두 단계로 구분합니다. 레시피 만들기 프로세스를 시작하려면 다음 설명서를 참조하십시오. [jupyerLab Notebooks에서 레시피 만들기](./create-a-model.md). 이 문서에는 레시피인 만들기, 교육 및 채점에 대한 정보와 예가 포함되어 있습니다. [!DNL JupyterLab] Notebooks.
+Adobe Experience Platform은 모델 생성 프로세스를 레서피(모델 인스턴스)와 모델, 이렇게 두 단계로 구분합니다. 레시피 만들기 프로세스를 시작하려면 [JupyerLab Notebooks에서 레시피 만들기](./create-a-model.md)에 대한 설명서를 참조하십시오. 이 문서에는 [!DNL JupyterLab] Notebooks에서 레시피를 만들고, 교육하고, 채점하기 위한 정보와 예제가 포함되어 있습니다.

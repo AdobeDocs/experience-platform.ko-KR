@@ -4,8 +4,8 @@ description: Adobe Experience Platform의 태그에 대해 자주 묻는 질문�
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
 source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
 workflow-type: tm+mt
-source-wordcount: '1044'
-ht-degree: 26%
+source-wordcount: '1032'
+ht-degree: 23%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](./term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](./term-updates.md)를 참조하십시오.
 
 이 문서에서는 Adobe Experience Platform의 태그에 대해 자주 묻는 질문에 대한 답변을 제공합니다.
 
@@ -29,7 +29,7 @@ ht-degree: 26%
 
 ## 태그는 얼마인가요?
 
-태그에 대한 추가 요금은 없습니다. 모든 경우에 사용할 수 있습니다. [!DNL Adobe Experience Cloud] 고객.
+태그에 대한 추가 요금은 없습니다. 모든 [!DNL Adobe Experience Cloud] 고객이 사용할 수 있습니다.
 
 ## 현재 플러그인이 있다고 들었습니다. 플러그인은 무엇입니까?
 
@@ -45,7 +45,7 @@ ht-degree: 26%
 
 Adobe에는 동일한 확장 프로그램 개발 방법을 사용하여 자체 회사 내에서만 사용할 수 있는 고유한 비공개 확장 프로그램을 구축하려는 고객이 많이 있습니다.
 
-확장을 개발하려면 [확장 개발 개요](./extension-dev/overview.md) 페이지를 가리키도록 업데이트하는 중입니다.
+확장을 개발하려면 [확장 개발 개요](./extension-dev/overview.md) 페이지를 확인하십시오.
 
 ## 태그가 회사의 보안 표준을 충족합니까?
 
@@ -73,24 +73,24 @@ Adobe에는 동일한 확장 프로그램 개발 방법을 사용하여 자체 �
 
 ## 태그가 지원하는 브라우저는 무엇입니까?
 
-지원되는 브라우저 를 참조하십시오 [여기](./extension-dev/browsers.md).
+지원되는 브라우저 [여기](./extension-dev/browsers.md)를 참조하세요.
 
 대부분의 Adobe 클라이언트는 현재 브라우저에서 최신 웹 플랫폼 기능을 활용하여 단일 페이지 애플리케이션과 대화형 Ajax 중심의 웹 사이트 및 페이지를 포함하여 더 나은 사용자 경험을 만듭니다. 대부분의 클라이언트가 사이트를 통해 보다 최신 접근 방식으로 전환하고 있으므로 이러한 접근 방식을 구현하는 태그와 같은 솔루션을 요구합니다.
 
 ## 태그는 기본 모바일 앱에서 작동합니까?
 
-예! 이제 태그는 새 Adobe Experience Platform에 대한 모바일 속성 및 구성을 지원합니다 [모바일 SDK](https://sdkdocs.com) 를 사용하여 기본 모바일 앱 환경에서 데이터 수집 및 전달을 구현할 수 있습니다. 자세한 내용은 [설명서](https://sdkdocs.com)를 참조하십시오.
+예! 이제 태그는 기본 모바일 앱 환경에서 데이터 수집 및 전달을 구현할 수 있도록 새 Adobe Experience Platform [Mobile SDK](https://sdkdocs.com)에 대한 모바일 속성 및 구성을 지원합니다. 자세한 내용은 [설명서](https://sdkdocs.com)를 참조하십시오.
 
 ## UI에서 내 계정을 로드하는 동안 오류가 발생한 이유는 무엇입니까?
 
-계정을 로드하는 동안 오류가 발생했다는 메시지가 표시되면 계정이 태그에 대한 제품 프로필에 속해 있지 않은 것입니다. 다음 안내서를 참조하십시오 [권한 관리](../collection/permissions.md) Adobe Admin Console에서 제품 프로필을 구성하여 UI의 데이터 수집 기능에 대한 액세스 권한을 부여하는 방법을 알아봅니다.
+계정을 로드하는 동안 오류가 발생했다는 메시지가 표시되면 계정이 태그에 대한 제품 프로필에 속해 있지 않은 것입니다. Adobe Admin Console에서 제품 프로필을 구성하여 UI의 데이터 수집 기능에 대한 액세스 권한을 부여하는 방법을 알아보려면 [권한 관리](../collection/permissions.md)에 대한 안내서를 참조하십시오.
 
 ## UI에 속성을 추가할 수 없는 이유는 무엇입니까?
 
 UI에 로그인할 때 새 속성을 만들 수 없는 경우 이는 계정이 속성 관리 권한이 있는 제품 프로필에 속하지 않음을 의미합니다.
 
-다음 안내서를 참조하십시오 [권한 관리](../collection/permissions.md) Adobe Admin Console에서 제품 프로필을 구성하여 속성 관리 권한을 부여하는 방법을 알아봅니다. 태그의 다양한 권한에 대한 자세한 내용은 [태그에 대한 사용자 권한](./ui/administration/user-permissions.md).
+Adobe Admin Console에서 제품 프로필을 구성하여 속성 관리 권한을 부여하는 방법을 알아보려면 [권한 관리](../collection/permissions.md)에 대한 안내서를 참조하십시오. 태그의 다른 권한에 대한 자세한 내용은 [태그에 대한 사용자 권한](./ui/administration/user-permissions.md)에 대한 개요를 참조하십시오.
 
 ## 다른 질문이 있을 경우 어떻게 합니까?
 
-다른 질문이 있는 경우 [Adobe Experience Platform 데이터 수집 커뮤니티 페이지](https://adobe.com/go/launchme) Experience League 시 또는 [커뮤니티 Slack 작업 영역](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) 개발자 및 기술 구현 항목.
+다른 질문이 있는 경우 Experience League의 [Adobe Experience Platform 데이터 수집 커뮤니티 페이지](https://adobe.com/go/launchme)에 문의하거나 개발자 및 기술 구현 항목을 위한 [커뮤니티 Slack 작업 공간](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform)에 참여하십시오.

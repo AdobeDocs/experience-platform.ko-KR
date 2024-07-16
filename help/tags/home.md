@@ -5,7 +5,7 @@ exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
 source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
 source-wordcount: '588'
-ht-degree: 65%
+ht-degree: 53%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](./term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](./term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform의 태그는 Adobe의 차세대 태그 관리 기능입니다. 태그는 관련 고객 환경을 향상하는 데 필요한 모든 분석, 마케팅 및 광고 태그를 배포하고 관리하는 간단한 방법을 고객에게 제공합니다.
 
-태그는 라고 하는 자체 통합을 구축하고 유지할 수 있는 권한을 누구에게나 부여합니다. *확장*. [!DNL Adobe Experience Cloud] 고객은 앱 스토어 환경에서 이러한 확장을 사용할 수 있으므로 태그를 신속하게 설치, 구성 및 배포할 수 있습니다.
+태그는 *확장*&#x200B;이라고 하는 자체 통합을 구축하고 유지할 수 있는 권한을 누구에게나 부여합니다. [!DNL Adobe Experience Cloud] 고객은 앱 스토어 환경에서 이러한 확장을 사용할 수 있으므로 태그를 신속하게 설치, 구성 및 배포할 수 있습니다.
 
-태그는 다음 대상에게 제공됩니다 [!DNL Adobe Experience Cloud] 부가가치 기능으로 포함된 고객.
+태그는 포함된 부가 가치 기능으로 [!DNL Adobe Experience Cloud] 고객에게 제공됩니다.
 
 ## 주요 이점 {#key-benefits}
 
@@ -31,7 +31,7 @@ Adobe Experience Platform의 태그는 Adobe의 차세대 태그 관리 기능�
 
 오른쪽 패널의 제품 도움말에서 태그에 대한 자세한 내용을 살펴보고 사용 가능한 추가 리소스를 확인하십시오.
 
-![데이터 수집 UI의 태그 속성입니다.](./images/ui/tags-overview/tags-properties.png)
+![데이터 수집 UI의 태그 속성](./images/ui/tags-overview/tags-properties.png)
 
 ### 확장 {#extensions}
 

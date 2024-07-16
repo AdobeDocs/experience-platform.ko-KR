@@ -14,12 +14,12 @@ ht-degree: 1%
 
 # ID의 클러스터 내역 가져오기
 
-ID는 다양한 장치 그래프 실행 과정에서 클러스터를 이동할 수 있습니다. [!DNL Identity Service] 시간이 지남에 따라 주어진 id의 클러스터 연결을 확인할 수 있습니다.
+ID는 다양한 장치 그래프 실행 과정에서 클러스터를 이동할 수 있습니다. [!DNL Identity Service]은(는) 시간이 지남에 따라 특정 id의 클러스터 연결을 볼 수 있습니다.
 
-선택 사항 사용 `graph-type` 클러스터를 가져올 출력 유형을 나타내는 매개 변수입니다. 옵션은 다음과 같습니다.
+선택적 `graph-type` 매개 변수를 사용하여 클러스터를 가져올 출력 형식을 지정하십시오. 옵션은 다음과 같습니다.
 
 - `None` - ID 결합을 수행하지 않습니다.
-- `Private Graph` - 개인 ID 그래프를 기반으로 ID 결합을 수행합니다. 없는 경우 `graph-type` 이(가) 제공되면 기본값입니다.
+- `Private Graph` - 개인 ID 그래프를 기반으로 ID 결합을 수행합니다. `graph-type`이(가) 제공되지 않으면 기본값입니다.
 
 ## 단일 ID의 클러스터 내역 가져오기
 
@@ -31,7 +31,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 
 **요청**
 
-옵션 1: ID를 네임스페이스(`nsId`, ID별) 및 ID 값(`id`).
+옵션 1: ID를 네임스페이스(`nsId`, ID별) 및 ID 값(`id`)으로 제공합니다.
 
 ```shell
 curl -X GET \
@@ -42,7 +42,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 2: ID를 네임스페이스(`ns`, 이름별) 및 ID 값(`id`).
+옵션 2: ID를 네임스페이스(`ns`, 이름별) 및 ID 값(`id`)으로 제공합니다.
 
 ```shell
 curl -X GET \
@@ -53,7 +53,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 3: ID를 XID(`xid`). ID의 XID를 얻는 방법에 대한 자세한 내용은 이 문서의 다음 내용 섹션을 참조하십시오 [id에 대한 XID를 가져오는 중](./list-native-id.md).
+옵션 3: ID를 XID(`xid`)로 제공합니다. ID의 XID를 얻는 방법에 대한 자세한 내용은 [ID에 대한 XID 가져오기](./list-native-id.md)에 대한 이 문서의 섹션을 참조하십시오.
 
 ```shell
 curl -X GET \
@@ -66,7 +66,7 @@ curl -X GET \
 
 ## 여러 ID의 클러스터 내역 가져오기
 
-사용 `POST` 메서드와 동일한 일괄 처리 `GET` 위에서 설명한 방법으로 여러 id의 클러스터 기록을 반환합니다.
+`POST` 메서드를 위에서 설명한 `GET` 메서드와 동등한 일괄 처리로 사용하여 여러 ID의 클러스터 내역을 반환합니다.
 
 >[!NOTE]
 >
@@ -109,7 +109,7 @@ POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 
 **스텁 요청**
 
-사용 `x-uis-cst-ctx: stub` 헤더가 스터브된 응답을 반환합니다. 이는 서비스가 완료되는 동안 조기 통합 개발 진행을 용이하게 하기 위한 임시 솔루션입니다. 더 이상 필요하지 않으면 더 이상 사용되지 않습니다.
+`x-uis-cst-ctx: stub` 헤더를 사용하면 stubbed 응답이 반환됩니다. 이는 서비스가 완료되는 동안 조기 통합 개발 진행을 용이하게 하기 위한 임시 솔루션입니다. 더 이상 필요하지 않으면 더 이상 사용되지 않습니다.
 
 ```shell
 curl -X POST \
@@ -218,4 +218,4 @@ curl -X POST \
 
 ## 다음 단계
 
-다음 튜토리얼을 진행하십시오. [id 매핑 나열](./list-identity-mappings.md)
+다음 튜토리얼로 이동하여 [ID 매핑을 나열](./list-identity-mappings.md)

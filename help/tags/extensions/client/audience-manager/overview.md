@@ -4,8 +4,8 @@ description: Adobe Experience Platform에서의 Adobe Audience Manager 태그 �
 exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 71%
+source-wordcount: '451'
+ht-degree: 62%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Audience Manager 태그 확장을 사용하면 Audience Manager에서 사용하는 DIL 코드와 Adobe Experience Platform의 속성을 통합할 수 있습니다.
 
@@ -21,13 +21,13 @@ Audience Manager 태그 확장을 사용하면 Audience Manager에서 사용하�
 
 >[!NOTE]
 >
->이 확장은 Adobe Analytics 데이터의 이벤트 전달에 사용하기 위한 것이 아닙니다. 이벤트 전달의 경우 [Adobe Analytics 확장](../analytics/overview.md).
+>이 확장은 Adobe Analytics 데이터의 이벤트 전달에 사용하기 위한 것이 아닙니다. 이벤트 전달의 경우 [Adobe Analytics 확장](../analytics/overview.md)을 사용하십시오.
 
 ## Adobe Audience Manager 확장 구성
 
-Adobe Audience Manager 확장이 아직 설치되지 않은 경우 속성을 연 다음 을 선택합니다 **[!UICONTROL 확장 > 카탈로그]**, Adobe Audience Manager 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**.
+Adobe Audience Manager 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고 Adobe Audience Manager 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
 
-확장을 구성하려면 를 엽니다. [!UICONTROL 확장] 탭을 클릭하고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**.
+확장을 구성하려면 [!UICONTROL 확장] 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
 
 ### DIL 설정
 
@@ -45,7 +45,7 @@ DIL(데이터 통합 라이브러리) 버전을 표시합니다.
 
 URL이 제외된 경로와 일치하는 경우 확장이 로드되지 않습니다.
 
-선택 **[!UICONTROL 경로 추가]** 제외된 URL을 지정합니다.
+제외된 URL을 지정하려면 **[!UICONTROL 경로 추가]**&#x200B;를 선택하십시오.
 
 URL이 정규 표현식인 경우 Regex를 활성화합니다.
 
@@ -65,11 +65,11 @@ siteCatalyst.init 파일을 구성하려면 코드 편집기를 사용합니다.
 
 [DIL.create](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html)에서 사용되는 초기화 속성과 [visitorService 개체](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_visitor_service.html)의 네임스페이스 하위 속성을 추가합니다. 두 개의 샘플 사용 사례는 코드 편집기에서 코드 주석에 포함되어 있습니다.
 
-선택 **[!UICONTROL 항목 선택]** 속성을 더 추가합니다.
+속성을 더 추가하려면 **[!UICONTROL 항목 선택]**&#x200B;을 선택하십시오.
 
 i 아이콘을 마우스로 가리키면 각 속성이 수행하는 작업을 확인할 수 있습니다. [Audience Manager DIL 설명서](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html)에서 속성에 대한 자세한 내용을 찾을 수 있습니다.
 
-선택 **[!UICONTROL 저장]** 확장 구성을 마치면 됩니다.
+확장 구성을 마치면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
 ## Adobe Audience Manager 확장 작업 유형
 

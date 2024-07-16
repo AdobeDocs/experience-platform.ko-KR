@@ -8,7 +8,7 @@ role: User,Developer,Admin
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '90'
-ht-degree: 41%
+ht-degree: 44%
 
 ---
 
@@ -38,4 +38,4 @@ ht-degree: 41%
    * [마케팅 액션](api/marketing-actions.md)
    * [평가](api/evaluation.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

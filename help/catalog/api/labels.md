@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # 데이터 세트 서비스 API의 데이터 사용 레이블
 
-카탈로그 서비스 API와 별도로 [!DNL Dataset Service] API는 데이터 세트의 데이터 사용 레이블을 관리하기 위한 끝점을 제공합니다. 이러한 끝점을 호출하는 방법에 대한 단계는 의 안내서를 참조하십시오. [api를 사용하여 데이터 사용 레이블 관리](../../data-governance/labels/dataset-api.md) (Adobe Experience Platform 데이터 거버넌스 설명서)
+카탈로그 서비스 API와 별도로 [!DNL Dataset Service] API는 데이터 세트의 데이터 사용 레이블을 관리하는 끝점을 제공합니다. 이러한 끝점을 호출하는 방법에 대한 단계는 Adobe Experience Platform 데이터 거버넌스 설명서에서 [API를 사용하여 데이터 사용 레이블 관리](../../data-governance/labels/dataset-api.md)에 대한 안내서를 참조하십시오.

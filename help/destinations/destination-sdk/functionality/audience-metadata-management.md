@@ -13,17 +13,17 @@ ht-degree: 0%
 
 대상 메타데이터 템플릿을 사용하여 대상에서 대상을 프로그래밍 방식으로 생성, 업데이트 또는 삭제합니다. Adobe은 마케팅 API의 사양을 기반으로 구성할 수 있는 확장 가능한 대상 메타데이터 템플릿을 제공합니다. 구성을 정의, 테스트 및 제출하면 Adobe에서 대상에 대한 API 호출을 구성하는 데 사용됩니다.
 
-다음을 사용하여 이 문서에 설명된 기능을 구성할 수 있습니다. `/authoring/audience-templates` API 엔드포인트. 읽기 [메타데이터 템플릿 만들기](../metadata-api/create-audience-template.md) 엔드포인트에서 수행할 수 있는 전체 작업 목록입니다.
+`/authoring/audience-templates` API 끝점을 사용하여 이 문서에 설명된 기능을 구성할 수 있습니다. 끝점에서 수행할 수 있는 전체 작업 목록은 [메타데이터 템플릿 만들기](../metadata-api/create-audience-template.md)를 참조하십시오.
 
 ## 대상 메타데이터 관리 엔드포인트를 사용해야 하는 경우 {#when-to-use}
 
 API 구성에 따라 Experience Platform에서 대상을 구성할 때 대상 메타데이터 관리 끝점을 사용해야 하거나 사용하지 않아도 될 수 있습니다. 아래 의사 결정 트리 다이어그램을 사용하여 대상 메타데이터 엔드포인트를 사용할 시점과 대상에 대한 대상 메타데이터 템플릿을 구성하는 방법을 이해할 수 있습니다.
 
-![의사 결정 트리 다이어그램](../assets/functionality/audience-metadata-decision-tree.png)
+![결정 트리 다이어그램](../assets/functionality/audience-metadata-decision-tree.png)
 
 ## 대상 메타데이터 관리에서 지원하는 사용 사례 {#use-cases}
 
-Destination SDK에서 대상 메타데이터를 지원하므로 Experience Platform 대상을 구성할 때 Platform 사용자가 대상에 대상을 매핑하고 활성화할 때 여러 옵션 중 하나를 제공할 수 있습니다. 의 매개 변수를 통해 사용자가 사용할 수 있는 옵션을 제어할 수 있습니다. [대상 메타데이터 구성](../functionality/destination-configuration/audience-metadata-configuration.md) 섹션에 자세히 설명되어 있습니다.
+Destination SDK에서 대상 메타데이터를 지원하므로 Experience Platform 대상을 구성할 때 Platform 사용자가 대상에 대상을 매핑하고 활성화할 때 여러 옵션 중 하나를 제공할 수 있습니다. 대상 구성의 [대상 메타데이터 구성](../functionality/destination-configuration/audience-metadata-configuration.md) 섹션에서 매개 변수를 통해 사용자가 사용할 수 있는 옵션을 제어할 수 있습니다.
 
 ### 사용 사례 1 - 서드파티 API가 있으며 사용자는 매핑 ID를 입력할 필요가 없습니다.
 
@@ -45,7 +45,7 @@ Experience Platform UI(사용자 인터페이스)에서 대상에 대상을 활�
 
 위에 나열된 사용 사례를 지원하기 위해 Adobe은 API 사양에 맞게 조정하도록 사용자 지정할 수 있는 일반 템플릿을 제공합니다.
 
-일반 템플릿을 사용하여 다음과 같은 작업을 수행할 수 있습니다 [새 대상 템플릿 만들기](../metadata-api/create-audience-template.md) api가 다음을 지원하는 경우:
+API가 다음을 지원하는 경우 일반 템플릿을 사용하여 [새 대상 템플릿을 만들 수 있습니다](../metadata-api/create-audience-template.md).
 
 * HTTP 메서드: POST, GET, PUT, DELETE, PATCH
 * 인증 유형: 새로 고침 토큰이 포함된 OAuth 1, OAuth 2, 전달자 토큰이 포함된 OAuth 2
@@ -57,7 +57,7 @@ Experience Platform UI(사용자 인터페이스)에서 대상에 대상을 활�
 
 이 섹션에는 구성의 기본 섹션에 대한 설명과 함께 참조를 위해 일반 대상 메타데이터 구성의 세 가지 예가 포함됩니다. URL, 헤더, 요청 및 응답 본문이 세 가지 예제 구성 간에 어떻게 다른지 확인합니다. 이는 세 샘플 플랫폼의 마케팅 API에 대한 사양이 다르기 때문입니다.
 
-일부 예제에서 매크로 필드는 다음과 같습니다 `{{authData.accessToken}}` 또는 `{{segment.name}}` 는 URL에 사용되고, 다른 예에서는 헤더 또는 요청 본문에 사용됩니다. 마케팅 API 사양에 따라 다릅니다.
+일부 예제에서는 `{{authData.accessToken}}` 또는 `{{segment.name}}`과(와) 같은 매크로 필드가 URL에 사용되고, 다른 예제에서는 헤더 또는 요청 본문에 사용됩니다. 마케팅 API 사양에 따라 다릅니다.
 
 | 템플릿 섹션 | 설명 |
 |--- |--- |
@@ -521,7 +521,7 @@ Experience Platform UI(사용자 인터페이스)에서 대상에 대상을 활�
 }
 ```
 
-템플릿에서 모든 매개 변수에 대한 설명 찾기 [대상자 템플릿 만들기](../metadata-api/create-audience-template.md) API 참조.
+[대상 템플릿 만들기](../metadata-api/create-audience-template.md) API 참조에서 템플릿의 모든 매개 변수에 대한 설명을 찾으십시오.
 
 ## 대상 메타데이터 템플릿에 사용되는 매크로 {#macros}
 
@@ -534,8 +534,8 @@ Experience Platform과 API 간에 대상 ID, 액세스 토큰, 오류 메시지 
 | `{{segment.id}}` | Experience Platform에서 대상 ID에 액세스할 수 있습니다. |
 | `{{customerData.accountId}}` | 대상 구성에서 설정한 계정 ID 필드에 액세스할 수 있습니다. |
 | `{{oauth2ServiceAccessToken}}` | OAuth 2 구성에 따라 액세스 토큰을 동적으로 생성할 수 있습니다. |
-| `{{authData.accessToken}}` | 액세스 토큰을 API 엔드포인트에 전달할 수 있습니다. 사용 `{{authData.accessToken}}` Experience Platform이 대상에 연결하는 데 만료되지 않는 토큰을 사용해야 하는 경우, 그렇지 않으면 를 사용하십시오. `{{oauth2ServiceAccessToken}}` 액세스 토큰을 생성합니다. |
-| `{{body.segments[0].segment.id}}` | 생성된 대상자의 고유 식별자를 키 값으로 반환합니다. `externalAudienceId`. |
+| `{{authData.accessToken}}` | 액세스 토큰을 API 엔드포인트에 전달할 수 있습니다. Experience Platform이 만료되지 않는 토큰을 사용하여 대상에 연결해야 하는 경우 `{{authData.accessToken}}`을(를) 사용하고, 그렇지 않으면 `{{oauth2ServiceAccessToken}}`을(를) 사용하여 액세스 토큰을 생성하십시오. |
+| `{{body.segments[0].segment.id}}` | 만들어진 대상자의 고유 식별자를 키 `externalAudienceId`의 값으로 반환합니다. |
 | `{{error.message}}` | Experience Platform UI의 사용자에게 표시되는 오류 메시지를 반환합니다. |
 
 {style="table-layout:auto"}

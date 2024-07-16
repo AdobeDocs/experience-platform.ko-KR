@@ -36,4 +36,4 @@ ht-degree: 33%
    * [프로필 업데이트(업데이트)에 대한 데이터 세트 활성화](datasets/enable-upsert.md)
 * [데이터 레이크에서 개인 정보 보호 요청 처리](privacy.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/catalog/)
-* [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # 다중 엔티티 세그멘테이션 개요
 
-다중 엔티티 세그멘테이션은 Adobe Experience Platform의 일부로 사용할 수 있는 고급 기능입니다 [!DNL Segmentation Service]. 이 기능을 사용하면 을 확장할 수 있습니다 [!DNL Real-Time Customer Profile] 제품 또는 스토어와 관련된 데이터와 같이, 조직에서 정의할 수 있는 &quot;사람이 아닌&quot; 데이터(일명 &quot;차원 엔티티&quot;)가 포함된 데이터입니다. 다중 엔티티 세그먼테이션은 고유한 비즈니스 요구 사항과 관련된 데이터를 기반으로 세그먼트 정의를 정의할 때 유연성을 제공하며 데이터베이스 쿼리에 대한 전문 지식이 없어도 수행할 수 있습니다. 다중 엔티티 세그먼테이션을 사용하면 데이터 스트림을 비싸게 변경하거나 백엔드 데이터 병합을 기다리지 않고도 세그먼트 정의에 주요 데이터를 추가할 수 있습니다.
+다중 엔터티 세분화는 Adobe Experience Platform [!DNL Segmentation Service]의 일부로 사용할 수 있는 고급 기능입니다. 이 기능을 사용하면 제품 또는 스토어와 관련된 데이터와 같이 조직에서 정의할 수 있는 &quot;사람이 아닌&quot; 추가 데이터(&quot;차원 엔터티&quot;라고도 함)로 [!DNL Real-Time Customer Profile] 데이터를 확장할 수 있습니다. 다중 엔티티 세그먼테이션은 고유한 비즈니스 요구 사항과 관련된 데이터를 기반으로 세그먼트 정의를 정의할 때 유연성을 제공하며 데이터베이스 쿼리에 대한 전문 지식이 없어도 수행할 수 있습니다. 다중 엔티티 세그먼테이션을 사용하면 데이터 스트림을 비싸게 변경하거나 백엔드 데이터 병합을 기다리지 않고도 세그먼트 정의에 주요 데이터를 추가할 수 있습니다.
 
 ## 시작하기
 
 다중 엔티티 세그멘테이션을 사용하려면 세그멘테이션과 관련된 다양한 Adobe Experience Platform 서비스에 대한 작업 이해가 필요합니다. 이 안내서를 계속하기 전에 다음 설명서를 검토하십시오.
 
-* [[!DNL Real-Time Customer Profile]](../profile/home.md): 여러 소스에서 집계한 데이터를 기반으로 통합 소비자 프로필을 실시간으로 제공합니다.
-   * [프로필 보호 기능](../profile/guardrails.md): 다음에서 지원하는 데이터 모델을 만드는 모범 사례 [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): 다음에서 대상자를 빌드할 수 있습니다. [!DNL Real-Time Customer Profile] 데이터.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): 여러 원본에서 집계한 데이터를 기반으로 통합 소비자 프로필을 실시간으로 제공합니다.
+   * [프로필 보호](../profile/guardrails.md): [!DNL Profile]에서 지원하는 데이터 모델을 만드는 모범 사례입니다.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): [!DNL Real-Time Customer Profile] 데이터에서 대상을 만들 수 있습니다.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-   * [스키마 컴포지션 기본 사항](../xdm/schema/composition.md#union): Experience Platform에 사용할 스키마를 작성하는 모범 사례에 대해 알아봅니다. 세그먼테이션을 최대한 활용하려면 데이터에 따라 프로필 및 이벤트가 수집되는지 확인하십시오. [데이터 모델링 우수 사례](../xdm/schema/best-practices.md).
+   * [스키마 작성의 기본 사항](../xdm/schema/composition.md#union): Experience Platform에 사용할 스키마를 작성하는 모범 사례를 알아봅니다. 세그먼테이션을 최대한 활용하려면 [데이터 모델링 모범 사례](../xdm/schema/best-practices.md)에 따라 데이터가 프로필 및 이벤트로 수집되는지 확인하십시오.
 
 ## 사용 사례
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 ## 다중 엔티티 세그먼트 정의 만들기
 
-다중 엔티티 세그먼트 정의를 생성하려면 먼저 를 사용하기 전에 스키마 간의 관계를 정의해야 합니다. [!DNL Segmentation] 세그먼트 정의를 빌드하기 위한 API 또는 세그먼트 빌더 UI.
+다중 엔터티 세그먼트 정의를 만들려면 먼저 [!DNL Segmentation] API 또는 세그먼트 빌더 UI를 사용하여 세그먼트 정의를 빌드하기 전에 스키마 간의 관계를 정의해야 합니다.
 
 ### 관계 정의
 
@@ -58,4 +58,4 @@ XDM(Experience Data Model) 스키마 구조 내에서 관계를 정의하는 것
 
 ## 다중 엔티티 세그먼트 정의 평가 및 액세스
 
-세그먼트 정의를 만든 후 Segmentation API를 사용하여 결과를 평가하고 액세스할 수 있습니다. 다중 엔티티 세그먼트 정의를 평가하는 것은 표준 세그먼트 정의를 평가하는 것과 매우 유사합니다. 이 프로세스는 Segmentation API를 통해서만 수행할 수 있습니다. API를 사용하여 세그먼트 정의를 평가하고 액세스하는 방법을 보여주는 자세한 안내서는 다음을 참조하십시오. [세그먼트 정의 평가 및 액세스](./tutorials/evaluate-a-segment.md) 튜토리얼.
+세그먼트 정의를 만든 후 Segmentation API를 사용하여 결과를 평가하고 액세스할 수 있습니다. 다중 엔티티 세그먼트 정의를 평가하는 것은 표준 세그먼트 정의를 평가하는 것과 매우 유사합니다. 이 프로세스는 Segmentation API를 통해서만 수행할 수 있습니다. API를 사용하여 세그먼트 정의를 평가하고 액세스하는 방법을 보여주는 자세한 안내서는 [세그먼트 정의 평가 및 액세스](./tutorials/evaluate-a-segment.md) 자습서를 참조하십시오.

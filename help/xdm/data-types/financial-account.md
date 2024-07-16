@@ -9,9 +9,9 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL 금융 계정] 데이터 유형
+# [!UICONTROL 금융 계정] 데이터 형식
 
-[!UICONTROL 금융 계정] 는 유형, 소유자 및 현재 잔액을 포함한 금융 계정의 세부 정보를 설명하는 표준 XDM 데이터 유형입니다.
+[!UICONTROL 금융 계정]은(는) 유형, 소유자 및 현재 잔액을 포함한 금융 계정의 세부 정보를 설명하는 표준 XDM 데이터 형식입니다.
 
 ![](../images/data-types/financial-account.png)
 
@@ -24,4 +24,4 @@ ht-degree: 8%
 
 {style="table-layout:auto"}
 
-데이터 유형에 대한 자세한 내용은 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).
+데이터 형식에 대한 자세한 내용은 [공용 XDM 저장소](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json)를 참조하십시오.

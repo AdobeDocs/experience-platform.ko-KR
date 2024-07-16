@@ -4,8 +4,8 @@ description: Adobe Experience Platform의 Marketo Munchkin 태그 확장 기능�
 exl-id: 8efc5203-91fc-4e89-be8f-74bf1aeeee5f
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 75%
+source-wordcount: '210'
+ht-degree: 55%
 
 ---
 
@@ -13,19 +13,19 @@ ht-degree: 75%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 이 확장 프로그램을 사용하여 [!DNL Marketo Munchkin] JavaScript 추적 코드와 속성을 통합합니다. [!DNL Marketo Munchkin] JavaScript를 사용하면 Marketo 랜딩 페이지 및 외부 웹 페이지에 대한 최종 사용자 페이지 방문 수 및 탐색 수를 추적할 수 있습니다.
 
 ## Marketo Munchkin 확장 프로그램 설치
 
-If [!DNL Marketo Munchkin] 확장이 아직 설치되지 않았습니다. 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**, 마우스로 가리키기 [!DNL Marketo Munchkin] 확장 및 선택 **[!UICONTROL 설치]**.
+[!DNL Marketo Munchkin] 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고 [!DNL Marketo Munchkin] 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
 
 이 확장 프로그램에는 필요한 구성이 없습니다.
 
 ## Marketo Munchkin 확장 프로그램 작업 유형
 
-이 섹션에서는 [!DNL Marketo Munchkin] 확장 프로그램에서 사용할 수 있는 작업 유형을 설명합니다.
+이 섹션에서는 [!DNL Marketo Munchkin] 확장에서 사용할 수 있는 작업 유형을 설명합니다.
 
 ### 초기화
 

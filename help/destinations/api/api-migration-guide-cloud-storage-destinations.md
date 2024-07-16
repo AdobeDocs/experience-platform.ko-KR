@@ -6,7 +6,7 @@ type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
 source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
@@ -19,12 +19,12 @@ ht-degree: 0%
 
 ## 마이그레이션 컨텍스트 {#migration-context}
 
-시작 [2022년 10월](/help/release-notes/2022/october-2022.md#new-or-updated-destinations)를 사용하면 Experience Platform 외부에서 파일을 내보낼 때 새로운 파일 내보내기 기능을 사용하여 향상된 사용자 정의 기능에 액세스할 수 있습니다.
+[2022년 10월](/help/release-notes/2022/october-2022.md#new-or-updated-destinations)부터 Experience Platform 외부에서 파일을 내보낼 때 새로운 파일 내보내기 기능을 사용하여 향상된 사용자 지정 기능에 액세스할 수 있습니다.
 
 * 추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
-* 를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능 [새 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* 을(를) 선택하는 기능 [파일 유형](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) 내보낸 파일.
-* 다음에 대한 기능: [내보낸 CSV 데이터 파일의 형식 사용자 지정](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+* [새 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에 사용자 지정 파일 헤더를 설정하는 기능.
+* 내보낸 파일의 [파일 형식](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)을(를) 선택하는 기능.
+* [내보낸 CSV 데이터 파일의 형식을 사용자 지정](/help/destinations/ui/batch-destinations-file-formatting-options.md)하는 기능.
 
 이 기능은 아래 나열된 Beta 클라우드 스토리지 카드에서 지원됩니다.
 
@@ -42,19 +42,19 @@ Commenting out the three net new cloud storage destinations
 
 -->
 
-현재 Experience Platform UI에는 세 대상의 두 가지 대상 카드가 나란히 표시됩니다. 아래에 표시된 항목은 [!DNL Amazon S3] 기존 및 새 대상. 모든 경우에, 카드에 **베타** 는 새 대상 카드입니다.
+현재 Experience Platform UI에는 세 대상의 두 가지 대상 카드가 나란히 표시됩니다. [!DNL Amazon S3] 이전 및 새 대상이 아래에 표시되어 있습니다. 모든 경우에 **Beta**(으)로 표시된 카드가 새 대상 카드입니다.
 
-![두 Amazon S3 대상 카드의 나란히 표시된 이미지](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+![나란히 표시된 두 Amazon S3 대상 카드의 이미지입니다.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-기능이 향상된 이러한 대상은 처음에 베타로 제공되었지만, *이제 Adobe이 모든 Real-Time CDP 고객을 새로운 클라우드 스토리지 대상으로 이동합니다*. 이미 사용 중인 고객 [!DNL Amazon S3], [!DNL Azure Blob]또는 SFTP인 경우 기존 데이터 흐름이 새 카드로 마이그레이션됩니다. 마이그레이션의 일부인 특정 변경 내용에 대한 자세한 내용은 계속 읽어보십시오.
+기능이 향상된 이 대상은 처음에 베타 버전으로 제공되었지만 *Adobe은 이제 모든 Real-Time CDP 고객을 새 클라우드 스토리지 대상으로 이동*&#x200B;하고 있습니다. 이미 [!DNL Amazon S3], [!DNL Azure Blob] 또는 SFTP를 사용 중인 고객의 경우 기존 데이터 흐름이 새 카드로 마이그레이션됩니다. 마이그레이션의 일부인 특정 변경 내용에 대한 자세한 내용은 계속 읽어보십시오.
 
 ## 이 페이지의 적용 대상 {#who-this-applies-to}
 
-이미 을(를) 사용하고 있는 경우 [플로우 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 프로필을 Amazon S3, Azure Blob 또는 SFTP 클라우드 스토리지 대상으로 내보내려면 이 API 마이그레이션 가이드가 적용됩니다.
+이미 [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 사용하여 프로필을 Amazon S3, Azure Blob 또는 SFTP 클라우드 저장소 대상으로 내보내는 경우 이 API 마이그레이션 가이드가 적용됩니다.
 
-스크립트를에서 실행 중인 경우 [!DNL Amazon S3], [!DNL Azure Blob]또는 Experience Platform에서 내보낸 파일 위에 있는 SFTP 클라우드 저장소 위치는 매핑 단계와 관련하여 새 카드의 연결 및 흐름 사양과 관련하여 일부 매개 변수가 변경되고 있다는 점에 유의하십시오.
+Experience Platform에서 내보낸 파일 위에 [!DNL Amazon S3], [!DNL Azure Blob] 또는 SFTP 클라우드 저장소 위치에서 스크립트가 실행 중인 경우 매핑 단계와 관련하여 새 카드의 연결 및 흐름 사양과 관련하여 일부 매개 변수가 변경되고 있다는 점에 유의하십시오.
 
-예를 들어 스크립트를 사용하여 의 대상 데이터 흐름을 필터링하는 경우 [!DNL Amazon S3] 대상, 의 연결 사양 기반 [!DNL Amazon S3] 대상: 연결 사양이 변경되므로 필터를 업데이트해야 합니다.
+예를 들어 스크립트를 사용하여 [!DNL Amazon S3] 대상의 연결 사양을 기반으로 [!DNL Amazon S3] 대상에 대한 대상 데이터 흐름을 필터링한 경우 연결 사양이 변경되므로 필터를 업데이트해야 합니다.
 
 ## 관련 설명서 링크 {#relevant-documentation-links}
 
@@ -68,32 +68,32 @@ TBD if we keep this link but will likely remove it
 
 -->
 * [대상을 클라우드 스토리지 대상으로 내보내는 API 튜토리얼](/help/destinations/api/activate-segments-file-based-destinations.md)
-* [대상 플로우 서비스 API 참조 설명서](https://developer.adobe.com/experience-platform-apis/references/destinations/)
+* [대상 흐름 서비스 API 참조 설명서](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
 ## 이전 버전과 호환 불가능한 변경 사항 요약 {#summary-backwards-incompatible-changes}
 
-새 대상으로 마이그레이션하면 기존의 모든 데이터가에 [!DNL Amazon S3], [!DNL Azure Blob]및 SFTP 대상에는 이제 새 타겟 연결과 기본 연결이 할당됩니다. 프로필 매핑 단계도 변경됩니다. 이전 버전과 호환 불가능한 변경 사항은 각 대상에 대해 아래 섹션에 요약되어 있습니다. 다음 항목도 보기 [대상 용어집](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 아래 다이어그램의 용어에 대한 자세한 정보입니다.
+새 대상으로 마이그레이션하면 [!DNL Amazon S3], [!DNL Azure Blob] 및 SFTP 대상에 대한 기존의 모든 데이터 흐름에 새 대상 연결 및 기본 연결이 할당됩니다. 프로필 매핑 단계도 변경됩니다. 이전 버전과 호환 불가능한 변경 사항은 각 대상에 대해 아래 섹션에 요약되어 있습니다. 아래 다이어그램의 용어에 대한 자세한 내용은 [대상 용어집](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)도 참조하세요.
 
 ![마이그레이션 안내서 개요 이미지](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
 
-### 이전 버전과 호환 불가능한 변경 사항 [!DNL Amazon S3] 대상 {#changes-amazon-s3-destination}
+### [!DNL Amazon S3] 대상에 대해 이전 버전과 호환되지 않는 변경 내용 {#changes-amazon-s3-destination}
 
-API 사용자의 이전 버전과 호환 불가능한 변경 사항이 업데이트되었습니다 `connection spec ID` 및 `flow spec ID` 아래 표에 표시된 대로:
+API 사용자에 대해 이전 버전과 호환되지 않는 변경 내용은 아래 표에 표시된 대로 업데이트된 `connection spec ID` 및 `flow spec ID`입니다.
 
-| [!DNL Amazon S3] | 기존 | 새로운 기능 |
+| [!DNL Amazon S3] | 레거시 | 새로운 기능 |
 |---------|----------|---------|
 | 흐름 사양 | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 1a0514a6-33d4-4c7f-aff8-594799c47549 |
 | 연결 사양 | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
 
-에 대한 전체 레거시 및 새 기본 연결 및 대상 연결 예제 보기 [!DNL Amazon S3] 을 참조하십시오. 기본 연결을 만드는 데 필요한 매개 변수 [!DNL Amazon S3] 대상은 변경되지 않습니다.
+아래 탭에서 [!DNL Amazon S3]에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예제를 봅니다. [!DNL Amazon S3] 대상에 대한 기본 연결을 만드는 데 필요한 매개 변수가 변경되지 않습니다.
 
 마찬가지로 타겟 연결을 만드는 데 필요한 매개 변수에는 이전 버전과 호환되지 않는 변경 사항이 없습니다.
 
 >[!BEGINTABS]
 
->[!TAB 레거시 기본 연결 및 대상 연결]
+>[!TAB 기존 기본 연결 및 대상 연결]
 
-+++이전 보기 [!DNL base connection] 대상 [!DNL Amazon S3]
++++[!DNL Amazon S3]에 대한 레거시 [!DNL base connection] 보기
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -126,7 +126,7 @@ API 사용자의 이전 버전과 호환 불가능한 변경 사항이 업데이
 
 +++
 
-+++이전 보기 [!DNL target connection] 대상 [!DNL Amazon S3]
++++[!DNL Amazon S3]에 대한 레거시 [!DNL target connection] 보기
 
 ```json {line-numbers="true" start-line="1" highlight="12"}
 {
@@ -166,7 +166,7 @@ API 사용자의 이전 버전과 호환 불가능한 변경 사항이 업데이
 
 >[!TAB 새 기본 연결 및 대상 연결]
 
-+++새로 보기 [!DNL base connection] 대상 [!DNL Amazon S3]
++++[!DNL Amazon S3]에 대한 새 [!DNL base connection] 보기
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -199,7 +199,7 @@ API 사용자의 이전 버전과 호환 불가능한 변경 사항이 업데이
 
 +++
 
-+++새로 보기 [!DNL target connection] 대상 [!DNL Amazon S3]
++++[!DNL Amazon S3]에 대한 새 [!DNL target connection] 보기
 
 ```json {line-numbers="true" start-line="1" highlight="12, 16-27"}
 {
@@ -248,24 +248,24 @@ API 사용자의 이전 버전과 호환 불가능한 변경 사항이 업데이
 
 >[!ENDTABS]
 
-### 이전 버전과 호환 불가능한 변경 사항 [!DNL Azure Blob] 대상 {#changes-azure-blob-destination}
+### [!DNL Azure Blob] 대상에 대해 이전 버전과 호환되지 않는 변경 내용 {#changes-azure-blob-destination}
 
-API 사용자의 이전 버전과 호환 불가능한 변경 사항이 업데이트되었습니다 `connection spec ID` 및 `flow spec ID` 아래 표에 표시된 대로:
+API 사용자에 대해 이전 버전과 호환되지 않는 변경 내용은 아래 표에 표시된 대로 업데이트된 `connection spec ID` 및 `flow spec ID`입니다.
 
-| [!DNL Azure Blob] | 기존 | 새로운 기능 |
+| [!DNL Azure Blob] | 레거시 | 새로운 기능 |
 |---------|----------|---------|
 | 흐름 사양 | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 752d422f-b16f-4f0d-b1c6-26e448e3b388 |
 | 연결 사양 | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 
-에 대한 전체 레거시 및 새 기본 연결 및 대상 연결 예제 보기 [!DNL Azure Blob] 을 참조하십시오. Azure Blob 대상에 대한 기본 연결을 만드는 데 필요한 매개 변수가 변경되지 않습니다.
+아래 탭에서 [!DNL Azure Blob]에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예제를 봅니다. Azure Blob 대상에 대한 기본 연결을 만드는 데 필요한 매개 변수가 변경되지 않습니다.
 
 마찬가지로 타겟 연결을 만드는 데 필요한 매개 변수에는 이전 버전과 호환되지 않는 변경 사항이 없습니다.
 
 >[!BEGINTABS]
 
->[!TAB 레거시 기본 연결 및 대상 연결]
+>[!TAB 기존 기본 연결 및 대상 연결]
 
-+++이전 보기 [!DNL base connection] 대상 [!DNL Azure Blob]
++++[!DNL Azure Blob]에 대한 레거시 [!DNL base connection] 보기
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -297,7 +297,7 @@ API 사용자의 이전 버전과 호환 불가능한 변경 사항이 업데이
 
 +++
 
-+++이전 보기 [!DNL target connection] 대상 [!DNL Azure Blob]
++++[!DNL Azure Blob]에 대한 레거시 [!DNL target connection] 보기
 
 ```json {line-numbers="true" start-line="1" highlight="13"}
 {
@@ -338,7 +338,7 @@ API 사용자의 이전 버전과 호환 불가능한 변경 사항이 업데이
 
 >[!TAB 새 기본 연결 및 대상 연결]
 
-+++새로 보기 [!DNL base connection] 대상 [!DNL Azure Blob]
++++[!DNL Azure Blob]에 대한 새 [!DNL base connection] 보기
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -370,7 +370,7 @@ API 사용자의 이전 버전과 호환 불가능한 변경 사항이 업데이
 
 +++
 
-+++새로 보기 [!DNL target connection] 대상 [!DNL Azure Blob]
++++[!DNL Azure Blob]에 대한 새 [!DNL target connection] 보기
 
 ```json {line-numbers="true" start-line="1" highlight="13, 17-25"}
 {
@@ -422,24 +422,24 @@ API 사용자의 이전 버전과 호환 불가능한 변경 사항이 업데이
 
 ### SFTP 대상에 대한 이전 버전과 호환 불가능한 변경 사항 {#changes-sftp-destination}
 
-API 사용자의 이전 버전과 호환 불가능한 변경 사항이 업데이트되었습니다 `connection spec ID` 및 `flow spec ID` 아래 표에 표시된 대로:
+API 사용자에 대해 이전 버전과 호환되지 않는 변경 내용은 아래 표에 표시된 대로 업데이트된 `connection spec ID` 및 `flow spec ID`입니다.
 
-| SFTP | 기존 | 새로운 기능 |
+| SFTP | 레거시 | 새로운 기능 |
 |---------|----------|---------|
 | 흐름 사양 | 71471eba-b620-49e4-90fd-23f1fa0174d8 | fd36aaa4-bf2b-43fb-9387-43785eeeb799 |
 | 연결 사양 | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
 위의 업데이트된 흐름 및 연결 사양 외에 SFTP 기본 연결을 만들 때 필요한 매개 변수에 대한 변경 사항이 있습니다.
 
-* 이전에는 SFTP 대상에 대한 기본 연결에 `host` 매개 변수. 이제 이 매개 변수의 이름이 (으)로 변경되었습니다. `domain`.
+* 이전에는 SFTP 대상에 대한 기본 연결에 `host` 매개 변수가 필요했습니다. 이제 이 매개 변수의 이름이 `domain`(으)로 바뀌었습니다.
 
 SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아래 탭에서 보고, 변경되는 줄이 강조 표시됩니다. SFTP 대상에 대한 대상 연결을 만드는 데 필요한 매개 변수는 변경되지 않습니다.
 
 >[!BEGINTABS]
 
->[!TAB 레거시 기본 연결 및 대상 연결]
+>[!TAB 기존 기본 연결 및 대상 연결]
 
-+++이전 보기 [!DNL base connection] SFTP용 - 암호 인증
++++SFTP용 레거시 [!DNL base connection] 보기 - 암호 인증
 
 ```json {line-numbers="true" start-line="1" highlight="5,15"}
 {
@@ -473,7 +473,7 @@ SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아�
 
 +++
 
-+++이전 보기 [!DNL base connection] 대상 [!DNL SFTP - SSH key] 인증
++++1} 인증에 대한 레거시 [!DNL base connection] 보기[!DNL SFTP - SSH key]
 
 ```json {line-numbers="true" start-line="1" highlight="5,15"}
 {
@@ -508,7 +508,7 @@ SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아�
 
 +++
 
-+++이전 보기 [!DNL target connection] SFTP용
++++SFTP용 레거시 [!DNL target connection] 보기
 
 ```json {line-numbers="true" start-line="1" highlight="13"}
 {
@@ -548,7 +548,7 @@ SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아�
 
 >[!TAB 새 기본 연결 및 대상 연결]
 
-+++새로 보기 [!DNL base connection] 대상 [!DNL SFTP - password authentication]
++++[!DNL SFTP - password authentication]에 대한 새 [!DNL base connection] 보기
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -583,7 +583,7 @@ SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아�
 
 +++
 
-+++새로 보기 [!DNL base connection] 대상 [!DNL SFTP - SSH key] 인증
++++[!DNL SFTP - SSH key] 인증을 위한 새 [!DNL base connection] 보기
 
 ```json {line-numbers="true" start-line="1" highlight="5,12"}
 {
@@ -617,7 +617,7 @@ SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아�
 
 +++
 
-+++새로 보기 [!DNL target connection] SFTP용
++++SFTP용 새 [!DNL target connection] 보기
 
 ```json {line-numbers="true" start-line="1" highlight="13, 17-25"}
 {
@@ -666,15 +666,15 @@ SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아�
 
 >[!ENDTABS]
 
-### 다음에 공통되는 이전 버전과 호환 불가능한 변경 사항 [!DNL Amazon S3], [!DNL Azure Blob]및 SFTP 대상 {#changes-all-destinations}
+### [!DNL Amazon S3], [!DNL Azure Blob] 및 SFTP 대상에 공통되는 이전 버전과 호환되지 않는 변경 내용 {#changes-all-destinations}
 
 세 대상 모두 의 프로필 선택기 단계는 매핑 단계로 대체되며, 필요한 경우 내보낸 파일의 열 헤더 이름을 변경할 수 있습니다. 이전 속성 선택기 단계 왼쪽과 새 매핑 단계 오른쪽이 있는 아래 나란히 표시되는 이미지를 참조하십시오.
 
 ![마이그레이션 안내서 개요 이미지](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
-다음 방법에 주목하십시오. `profileSelectors` 기존 예제의 오브젝트가 새 오브젝트로 대체됩니다. `profileMapping` 개체.
+기존 예제의 `profileSelectors` 개체가 새 `profileMapping` 개체로 어떻게 바뀌는지 확인합니다.
 
-설정에 대한 전체 정보 찾기 `profileMapping` 의 오브젝트 [데이터를 클라우드 스토리지 대상으로 내보내는 API 튜토리얼](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
+데이터를 클라우드 저장소 대상으로 내보내기](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping)하기 위한 [API 자습서에서 `profileMapping` 개체 설정에 대한 전체 정보를 확인하십시오.
 
 >[!BEGINTABS]
 
@@ -744,11 +744,11 @@ SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아�
 
 +++
 
->[!TAB 새로운 변형 매개 변수]
+>[!TAB 새 변환 매개 변수]
 
 +++마이그레이션 후 변형 매개 변수의 예 보기
 
-아래 구성 예제에서 확인할 수 있는 방법 `profileSelectors` 필드가 (으)로 대체됨 `profileMapping` 개체.
+아래 구성 예제에서 `profileSelectors` 필드가 `profileMapping` 개체로 대체된 방법을 확인할 수 있습니다.
 
 ```json {line-numbers="true" start-line="1" highlight="4-12, 18-20"}
 {
@@ -782,17 +782,17 @@ SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아�
 
 ## 마이그레이션 타임라인 및 작업 항목 {#timeline-and-action-items}
 
-기존 데이터 흐름을 의 새 대상 카드로 마이그레이션합니다. [!DNL Amazon S3], [!DNL Azure Blob], 및 SFTP 대상은 조직이 마이그레이션할 준비가 되는 즉시 늦지 않게 발생합니다. **2023년 7월 26일**.
+[!DNL Amazon S3], [!DNL Azure Blob] 및 SFTP 대상에 대한 새 대상 카드로 레거시 데이터 흐름을 마이그레이션하는 작업은 조직이 마이그레이션할 준비가 되는 즉시 **2023년 7월 26일**&#x200B;까지 수행됩니다.
 
 마이그레이션 날짜가 다가오면 Adobe에서 미리 알림 이메일을 받게 됩니다. 준비 시 아래의 작업 항목 섹션을 읽고 마이그레이션을 준비하십시오.
 
 ### 작업 항목 {#action-items}
 
-의 마이그레이션에 대비하여 [!DNL Amazon S3], [!DNL Azure Blob], 및 SFTP 클라우드 스토리지 대상을 새 카드에 매핑하려면 아래 제안된 대로 스크립트 및 자동화된 API 호출을 업데이트할 준비를 하십시오.
+[!DNL Amazon S3], [!DNL Azure Blob] 및 SFTP 클라우드 저장소 대상을 새 카드로 마이그레이션할 준비를 하려면 아래 제안된 대로 스크립트 및 자동화된 API 호출을 업데이트하십시오.
 
-1. 기존 스크립트나 자동화된 API 호출 업데이트 [!DNL Amazon S3], [!DNL Azure Blob]또는 2023년 7월 26일까지 SFTP 클라우드 스토리지 대상. 기존 연결 사양 또는 흐름 사양을 활용하는 자동화된 모든 API 호출 또는 스크립트를 새 연결 사양 또는 흐름 사양으로 업데이트해야 합니다.
+1. 2023년 7월 26일까지 기존 [!DNL Amazon S3], [!DNL Azure Blob] 또는 SFTP 클라우드 저장소 대상에 대한 스크립트 또는 자동화된 API 호출을 업데이트합니다. 기존 연결 사양 또는 흐름 사양을 활용하는 자동화된 모든 API 호출 또는 스크립트를 새 연결 사양 또는 흐름 사양으로 업데이트해야 합니다.
 2. 7월 26일 이전에 스크립트가 업데이트되면 Adobe 계정 담당자에게 문의하십시오.
-3. 예를 들어 `targetConnectionSpecId` 는 데이터 흐름이 새 대상 카드로 마이그레이션되었는지 확인하는 플래그로 사용할 수 있습니다. 다음을 사용하여 스크립트를 업데이트할 수 있습니다. `if` 에서 레거시 및 업데이트된 target 연결 사양을 보는 조건 `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` 데이터 흐름이 마이그레이션되었는지 확인합니다. 각 대상에 대해 이 페이지의 특정 섹션에서 레거시 및 새 연결 사양 ID를 볼 수 있습니다.
+3. 예를 들어 `targetConnectionSpecId`을(를) 플래그로 사용하여 데이터 흐름이 새 대상 카드로 마이그레이션되었는지 확인할 수 있습니다. `if` 조건으로 스크립트를 업데이트하여 `flow.inheritedAttributes.targetConnections[0].connectionSpec.id`의 레거시 및 업데이트된 대상 연결 사양을 확인하고 데이터 흐름이 마이그레이션되었는지 확인할 수 있습니다. 각 대상에 대해 이 페이지의 특정 섹션에서 레거시 및 새 연결 사양 ID를 볼 수 있습니다.
 4. 데이터 흐름이 마이그레이션되는 시기에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
 5. 7월 26일 이후에는 모든 데이터 흐름이 마이그레이션됩니다. 이제 기존 데이터 흐름에 새 흐름 엔티티(연결 사양, 흐름 사양, 기본 연결 및 대상 연결)가 생깁니다. 기존 흐름 엔티티를 사용하는 사용자 측의 모든 스크립트 또는 API 호출이 작동하지 않습니다.
 
@@ -802,4 +802,4 @@ SFTP에 대한 전체 기존 및 새 기본 연결 및 대상 연결 예를 아�
 
 ## 다음 단계 {#next-steps}
 
-이제 이 페이지를 읽고 클라우드 스토리지 대상의 마이그레이션을 준비하기 위해 어떤 조치도 취해야 하는지 알 수 있습니다. 또한 Experience Platform에서 파일을 원하는 클라우드 스토리지 대상으로 내보내도록 API 기반 워크플로를 설정할 때 참조할 설명서 페이지를 알 수 있습니다. 다음으로, API 튜토리얼을 보고 다음을 수행할 수 있습니다. [클라우드 스토리지 대상으로 데이터 내보내기](/help/destinations/api/activate-segments-file-based-destinations.md).
+이제 이 페이지를 읽고 클라우드 스토리지 대상의 마이그레이션을 준비하기 위해 어떤 조치도 취해야 하는지 알 수 있습니다. 또한 Experience Platform에서 파일을 원하는 클라우드 스토리지 대상으로 내보내도록 API 기반 워크플로를 설정할 때 참조할 설명서 페이지를 알 수 있습니다. 다음으로 API 자습서를 보고 [클라우드 저장소 대상으로 데이터 내보내기](/help/destinations/api/activate-segments-file-based-destinations.md)를 할 수 있습니다.

@@ -4,8 +4,8 @@ description: 빌드의 개념과 Adobe Experience Platform 내에서 작동하�
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '787'
-ht-degree: 53%
+source-wordcount: '784'
+ht-degree: 48%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 53%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 빌드는 클라이언트 장치에서 실행되는 모든 코드가 들어 있는 파일 세트입니다.
 
@@ -42,7 +42,7 @@ ht-degree: 53%
 
 빌드의 기본 파일 형식은 확장, 데이터 요소 및 규칙이 사용자가 원하는 방식으로 실행되는 데 필요한 모든 코드를 포함하고 있는 파일 패키지입니다.
 
-하지만 경우에 따라 실행 가능한 클라이언트측 코드 파일이 아니라, .zip 보관 파일을 선호할 수 있습니다. 예를 들어 빌드를 직접 호스팅하고 다른 배포에 이 빌드를 사용하려는 경우 보관 파일을 만들 수 있습니다. 자체 호스팅되는 경로에 있는 모든 항목을 라이브러리 필드에 제공하면 환경을 저장할 수 있습니다. 새 코드와 함께 보관된 다운로드에 대한 링크를 사용할 수 있습니다. 라이브러리가 빌드되면 Akamai에 zip 파일을 배포하고에서 다운로드할 수 있는 옵션이 있습니다. `assets.adobedtm.com/...`.
+하지만 경우에 따라 실행 가능한 클라이언트측 코드 파일이 아니라, .zip 보관 파일을 선호할 수 있습니다. 예를 들어 빌드를 직접 호스팅하고 다른 배포에 이 빌드를 사용하려는 경우 보관 파일을 만들 수 있습니다. 자체 호스팅되는 경로에 있는 모든 항목을 라이브러리 필드에 제공하면 환경을 저장할 수 있습니다. 새 코드와 함께 보관된 다운로드에 대한 링크를 사용할 수 있습니다. 라이브러리가 빌드되면 Akamai에 zip 파일을 배포하고 `assets.adobedtm.com/...`에서 다운로드할 수 있습니다.
 
 >[!NOTE]
 >
@@ -76,6 +76,6 @@ ht-degree: 53%
 
 확장 개발자가 해당 확장에 축소된 코드를 제공하는 경우 Platform은 축소 해제된 빌드에 축소 해제된 코드를 제공하지 않습니다. 마찬가지로, Platform 사용자가 축소된 코드를 사용자 지정 코드 상자에 입력하면 해당 코드가 축소 해제된 빌드에서 축소됩니다. Platform은 축소를 해제하지 않습니다.
 
-축소에 대한 자세한 내용은 [이 스택 경로 문서](https://blog.stackpath.com/glossary/minification/).
+축소에 대한 자세한 내용은 [이 스택 경로 문서](https://blog.stackpath.com/glossary/minification/)를 참조하십시오.
 
 빌드를 수행할 때 먼저 축소 해제된 라이브러리를 구성한 다음 전체 라이브러리를 한 번에 축소합니다.

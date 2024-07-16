@@ -11,13 +11,13 @@ ht-degree: 5%
 
 # CSV 템플릿을 스키마 변환 API 엔드포인트로
 
-다음 `/rpc/csv2schema` 의 엔드포인트 [!DNL Schema Registry] API를 사용하면 CSV 파일을 템플릿으로 사용하여 XDM(경험 데이터 모델) 스키마를 자동으로 만들 수 있습니다. 이 끝점을 사용하면 템플릿을 만들어 스키마 필드를 대량 가져오고 수동 API 또는 UI 작업을 줄일 수 있습니다.
+[!DNL Schema Registry] API의 `/rpc/csv2schema` 끝점을 사용하면 CSV 파일을 템플릿으로 사용하여 XDM(경험 데이터 모델) 스키마를 자동으로 만들 수 있습니다. 이 끝점을 사용하면 템플릿을 만들어 스키마 필드를 대량 가져오고 수동 API 또는 UI 작업을 줄일 수 있습니다.
 
 ## 시작하기
 
-다음 `/rpc/csv2schema` 끝점이 의 일부임 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](./getting-started.md) 관련 설명서에 대한 링크, 이 문서의 샘플 API 호출 읽기에 대한 안내서 및 Adobe Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보입니다.
+`/rpc/csv2schema` 끝점은 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 Adobe Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
-다음 `/rpc/csv2schema` 끝점은 이 지원하는 원격 프로시저 호출(RPC)의 일부입니다. [!DNL Schema Registry]. 의 다른 끝점과 달리 [!DNL Schema Registry] API, RPC 끝점에는 다음과 같은 추가 헤더가 필요하지 않습니다. `Accept` 또는 `Content-Type`, 및 를 사용하지 않음 `CONTAINER_ID`. 대신 `/rpc` 아래 API 호출에 나와 있는 대로 네임스페이스.
+`/rpc/csv2schema` 끝점은 [!DNL Schema Registry]에서 지원하는 원격 프로시저 호출(RPC)의 일부입니다. [!DNL Schema Registry] API의 다른 끝점과 달리 RPC 끝점에는 `Accept` 또는 `Content-Type`과(와) 같은 추가 헤더가 필요하지 않으며 `CONTAINER_ID`을(를) 사용하지 않습니다. 대신 아래 API 호출에 나와 있는 대로 `/rpc` 네임스페이스를 사용해야 합니다.
 
 ## CSV 파일 요구 사항
 
@@ -25,37 +25,37 @@ ht-degree: 5%
 
 | CSV 헤더 위치 | CSV 헤더 이름 | 필수/선택 사항 | 설명 |
 | --- | --- | --- | --- |
-| 1 | `isIgnored` | 선택 사항입니다 | 포함 시 로 설정 `true`는 필드가 API 업로드에 준비되지 않았으므로 무시해야 함을 나타냅니다. |
+| 1 | `isIgnored` | 선택 사항입니다 | 포함되고 `true`(으)로 설정된 경우 필드가 API 업로드에 준비되지 않았으므로 무시해야 함을 나타냅니다. |
 | 2 | `isCustom` | 필수 여부 | 필드가 사용자 정의 필드인지 여부를 나타냅니다. |
 | 3 | `fieldGroupId` | 선택 사항입니다 | 사용자 정의 필드를 연결해야 하는 필드 그룹의 ID입니다. |
-| 4 | `fieldGroupName` | (설명 참조) | 이 필드를 연결할 필드 그룹의 이름입니다.<br><br>기존 표준 필드를 확장하지 않는 사용자 정의 필드의 경우 선택 사항입니다. 비워 두면 이름이 자동으로 할당됩니다.<br><br>표준 필드 그룹을 확장하는 표준 필드 또는 사용자 정의 필드에 필요하며, 이 필드는 `fieldGroupId`. |
-| 5 | `fieldPath` | 필수 여부 | 필드에 대한 전체 XED 점 표기법 경로. 표준 필드 그룹의 모든 필드를 포함하려면 다음을 수행합니다. `fieldGroupName`), 값을 로 설정합니다. `ALL`. |
+| 4 | `fieldGroupName` | (설명 참조) | 이 필드를 연결할 필드 그룹의 이름입니다.<br><br>기존 표준 필드를 확장하지 않는 사용자 지정 필드의 경우 선택 사항입니다. 비워 두면 이름이 자동으로 할당됩니다.<br><br>표준 필드 그룹을 확장하는 표준 필드 또는 사용자 지정 필드에 필요합니다. `fieldGroupId`을(를) 쿼리하는 데 사용됩니다. |
+| 5 | `fieldPath` | 필수 여부 | 필드에 대한 전체 XED 점 표기법 경로. 표준 필드 그룹의 모든 필드를 포함하려면(`fieldGroupName`에 표시됨) 값을 `ALL`(으)로 설정하십시오. |
 | 6 | `displayName` | 선택 사항입니다 | 필드의 제목 또는 친숙한 표시 이름입니다. 제목이 있는 경우 제목의 별칭이 될 수도 있습니다. |
 | 7 | `fieldDescription` | 선택 사항입니다 | 필드에 대한 설명입니다. 설명이 있는 경우 해당 설명의 별칭도 될 수 있습니다. |
-| 8 | `dataType` | (설명 참조) | 다음을 나타냅니다. [기본 데이터 유형](../schema/field-constraints.md#basic-types) 필드용입니다. 모든 사용자 정의 필드에 필수입니다.<br><br>If `dataType` 이(가) (으)로 설정됨 `object`, 중 하나 `properties` 또는 `$ref` 동일한 행에 대해서도 정의해야 하지만 둘 다 정의해서는 안 됩니다. |
+| 8 | `dataType` | (설명 참조) | 필드에 대한 [기본 데이터 형식](../schema/field-constraints.md#basic-types)을(를) 나타냅니다. 모든 사용자 정의 필드에 필수입니다.<br><br>`dataType`이(가) `object`(으)로 설정된 경우 같은 행에 대해 `properties` 또는 `$ref`도 정의해야 하지만 둘 다 정의해서는 안 됩니다. |
 | 9 | `isRequired` | 선택 사항입니다 | 데이터 수집에 필드가 필요한지 여부를 나타냅니다. |
-| 10 | `isArray` | 선택 사항입니다 | 필드가 표시된 배열인지 여부를 나타냅니다. `dataType`. |
+| 10 | `isArray` | 선택 사항입니다 | 필드가 표시된 `dataType`의 배열인지 여부를 나타냅니다. |
 | 11 | `isIdentity` | 선택 사항입니다 | 필드가 ID 필드인지 여부를 나타냅니다. |
-| 12 | `identityNamespace` | 다음과 같은 경우 필수 `isIdentity` true임 | 다음 [id 네임스페이스](../../identity-service/features/namespaces.md) id 필드. |
+| 12 | `identityNamespace` | `isIdentity`이(가) true인 경우 필요합니다. | ID 필드에 대한 [ID 네임스페이스](../../identity-service/features/namespaces.md)입니다. |
 | 13 | `isPrimaryIdentity` | 선택 사항입니다 | 필드가 스키마의 기본 ID인지 여부를 나타냅니다. |
 | 14 | `minimum` | 선택 사항입니다 | (숫자 필드만 해당) 필드의 최소값입니다. |
 | 15 | `maximum` | 선택 사항입니다 | (숫자 필드만 해당) 필드의 최대값입니다. |
-| 16 | `enum` | 선택 사항입니다 | 필드에 대한 열거형 값 목록으로서, 배열로 표현됩니다(예: `[value1,value2,value3]`). |
+| 16 | `enum` | 선택 사항입니다 | 필드에 대한 열거형 값 목록으로, 배열로 표현됩니다(예: `[value1,value2,value3]`). |
 | 17 | `stringPattern` | 선택 사항입니다 | (문자열 필드만 해당) 데이터 수집 중에 유효성 검사를 통과하기 위해 문자열 값이 일치해야 하는 정규 표현식 패턴입니다. |
 | 18 | `format` | 선택 사항입니다 | (문자열 필드만 해당) 문자열 필드의 형식입니다. |
 | 19 | `minLength` | 선택 사항입니다 | (문자열 필드만 해당) 문자열 필드의 최소 길이입니다. |
 | 20 | `maxLength` | 선택 사항입니다 | (문자열 필드만 해당) 문자열 필드의 최대 길이입니다. |
-| 21 | `properties` | (설명 참조) | 다음과 같은 경우 필수 `dataType` 이(가) (으)로 설정됨 `object` 및 `$ref` 가 정의되지 않았습니다. 오브젝트 본문을 JSON 문자열로 정의합니다(예: `{"myField": {"type": "string"}}`). |
-| 22 | `$ref` | (설명 참조) | 다음과 같은 경우 필수 `dataType` 이(가) (으)로 설정됨 `object` 및 `properties` 가 정의되지 않았습니다. 다음을 정의합니다. `$id` 객체 유형에 대해 참조된 객체(예: `https://ns.adobe.com/xdm/context/person`). |
-| 23 | `comment` | 선택 사항입니다 | 날짜 `isIgnored` 이(가) (으)로 설정됨 `true`, 이 열은 스키마의 헤더 정보를 제공하는 데 사용됩니다. |
+| 21 | `properties` | (설명 참조) | `dataType`이(가) `object`(으)로 설정되어 있고 `$ref`이(가) 정의되지 않은 경우 필요합니다. 개체 본문을 JSON 문자열로 정의합니다(예: `{"myField": {"type": "string"}}`). |
+| 22 | `$ref` | (설명 참조) | `dataType`이(가) `object`(으)로 설정되어 있고 `properties`이(가) 정의되지 않은 경우 필요합니다. 개체 유형(예: `https://ns.adobe.com/xdm/context/person`)에 대해 참조된 개체의 `$id`을(를) 정의합니다. |
+| 23 | `comment` | 선택 사항입니다 | `isIgnored`이(가) `true`(으)로 설정된 경우 이 열은 스키마의 헤더 정보를 제공하는 데 사용됩니다. |
 
 {style="table-layout:auto"}
 
-다음을 참조하십시오 [CSV 템플릿](../assets/sample-csv-template.csv) 를 사용하여 CSV 파일의 형식을 지정하는 방법을 결정합니다.
+다음 [CSV 템플릿](../assets/sample-csv-template.csv)을 참조하여 CSV 파일의 형식을 지정하는 방법을 확인하십시오.
 
 ## CSV 파일에서 내보내기 페이로드 만들기
 
-CSV 템플릿을 설정한 후에는 파일을 로 보낼 수 있습니다. `/rpc/csv2schema` 끝점을 지정하고 내보내기 페이로드로 변환합니다.
+CSV 템플릿을 설정한 후에는 파일을 `/rpc/csv2schema` 끝점으로 보내고 내보내기 페이로드로 변환할 수 있습니다.
 
 **API 형식**
 
@@ -83,7 +83,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `csv-file` | 로컬 컴퓨터에 저장된 CSV 템플릿의 경로입니다. |
-| `schema-class-id` | 다음 `$id` XDM의 [클래스](../schema/composition.md#class) 이 스키마에 사용될 것입니다. |
+| `schema-class-id` | 이 스키마에 사용할 XDM [class](../schema/composition.md#class)의 `$id`입니다. |
 | `schema-name` | 스키마의 표시 이름입니다. |
 | `schema-description` | 스키마에 대한 설명입니다. |
 
@@ -360,6 +360,6 @@ curl -X POST \
 
 ## 스키마 페이로드 가져오기
 
-CSV 파일에서 내보내기 페이로드를 생성한 후 해당 페이로드를 로 전송할 수 있습니다. `/rpc/import` 스키마를 생성할 끝점입니다.
+CSV 파일에서 내보내기 페이로드를 생성한 후 해당 페이로드를 `/rpc/import` 엔드포인트로 전송하여 스키마를 생성할 수 있습니다.
 
-다음을 참조하십시오. [끝점 가져오기 안내서](./import.md) 내보내기 페이로드에서 스키마를 생성하는 방법에 대한 자세한 내용
+내보내기 페이로드에서 스키마를 생성하는 방법에 대한 자세한 내용은 [끝점 가져오기 안내서](./import.md)를 참조하십시오.

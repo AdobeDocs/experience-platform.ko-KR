@@ -8,7 +8,7 @@ role: User,Developer
 source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
 source-wordcount: '321'
-ht-degree: 21%
+ht-degree: 19%
 
 ---
 
@@ -27,9 +27,9 @@ ht-degree: 21%
       - [개요](data-distiller/derived-datasets/overview.md)
       - [SQL을 사용하여 파생 데이터 세트 만들기](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [십분위수 기반 파생 데이터 세트 만들기](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - 확장 앱 보고를 위한 사용자 지정 가능한 통찰력 {#customizable-insights}
+   - 확장 앱 보고에 대한 사용자 지정 가능한 인사이트 {#customizable-insights}
       - [개요](data-distiller/customizable-insights/overview.md)
-      - [Query pro 모드](data-distiller/customizable-insights/query-pro-mode.md)
+      - [쿼리 프로 모드](data-distiller/customizable-insights/query-pro-mode.md)
       - [가속화된 쿼리 보내기](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [Reporting insights 데이터 모델 안내서](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - AI/ML 기능 파이프라인 {#ml-feature-pipelines}
@@ -43,7 +43,7 @@ ht-degree: 21%
    - [개요](use-cases/overview.md)
    - [찾아보기 중단됨](use-cases/abandoned-browse.md)
    - [속성 분석](use-cases/attribution-analysis.md)
-   - [봇 필터링](use-cases/bot-filtering.md)
+   - [보트 필터링](use-cases/bot-filtering.md)
    - [이벤트의 트렌드 보고서 만들기](use-cases/trended-report-of-events.md)
    - [동의 분석](use-cases/consent-analysis.md)
    - [고객 생애 가치](use-cases/customer-lifetime-value.md)
@@ -66,7 +66,7 @@ ht-degree: 21%
    - [데이터 중복 제거](key-concepts/deduplication.md)
    - [데이터 세트 샘플](key-concepts/dataset-samples.md)
    - [데이터 세트 통계 계산](key-concepts/dataset-statistics.md)
-- 클라이언트를 쿼리 서비스에 연결 {#clients}
+- 클라이언트를 쿼리 서비스 {#clients}에 연결
    - [클라이언트 연결 개요](clients/overview.md)
    - [SSL 모드](./clients/ssl-modes.md)
    - [아쿠아 데이터 스튜디오](clients/aqua-data-studio.md)
@@ -92,7 +92,7 @@ ht-degree: 21%
    - [시작하기](api/getting-started.md)
    - [쿼리](api/queries.md)
    - [연결 매개변수](api/connection-parameters.md)
-   - [일정](api/scheduled-queries.md)
+   - [예약](api/scheduled-queries.md)
    - [예약된 쿼리에 대해 실행](api/runs-scheduled-queries.md)
    - [쿼리 템플릿](api/query-templates.md)
    - [가속화된 쿼리](api/accelerated-queries.md)
@@ -116,4 +116,4 @@ ht-degree: 21%
 - [자주 묻는 질문](troubleshooting-guide.md)
 - [허용 목록에 추가하다 IP 주소](ip-address-allowlist.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

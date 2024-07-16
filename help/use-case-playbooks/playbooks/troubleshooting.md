@@ -22,11 +22,11 @@ ht-degree: 0%
 
 ![문제 해결](/help/use-case-playbooks/assets/playbooks/troubleshooting/troubleshooting-ajo.png)
 
-이는 Journey Optimizer 플레이북이 이메일, 푸시 및 SMS 채널에 대한 메시지를 만들기 때문입니다. 읽기 [시작하기](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) 안내서를 사용하여 여러 서피스를 구성할 수 있습니다.
+이는 Journey Optimizer 플레이북이 이메일, 푸시 및 SMS 채널에 대한 메시지를 만들기 때문입니다. 다른 표면을 구성하려면 [시작](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) 안내서를 읽어 보십시오.
 
-## 상태 *실패* 새 인스턴스 생성 시 {#status-failed}
+## 새 인스턴스를 만들 때 *실패* 상태 {#status-failed}
 
-인스턴스를 만들려고 할 때 실패 메시지가 표시되는 경우, 관리자가 사용자에게 필요한 사용자 권한을 부여하지 않았기 때문일 수 있습니다. 플레이북에는 다양한 에셋이 포함되어 있으며 사용자가 플레이북의 인스턴스를 성공적으로 만들려면 해당 에셋을 만들 수 있는 권한이 필요합니다. 다음을 참조하십시오. [권한](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) 권한 설정 방법에 대한 이 안내서의 섹션입니다.
+인스턴스를 만들려고 할 때 실패 메시지가 표시되는 경우, 관리자가 사용자에게 필요한 사용자 권한을 부여하지 않았기 때문일 수 있습니다. 플레이북에는 다양한 에셋이 포함되어 있으며 사용자가 플레이북의 인스턴스를 성공적으로 만들려면 해당 에셋을 만들 수 있는 권한이 필요합니다. 사용 권한을 설정하는 방법은 이 안내서의 [사용 권한](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) 섹션을 참조하십시오.
 
 ## 가져오기 실패 {#import-failure}
 

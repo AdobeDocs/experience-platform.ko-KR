@@ -5,7 +5,7 @@ description: 이 문서에서는 셀프서비스 소스(Batch SDK)를 사용하�
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '522'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 인증 사양은 Adobe Experience Platform 사용자가 소스에 연결하는 방법을 정의합니다.
 
-다음 `authSpec` 스토리지 시스템에는 소스를 플랫폼에 연결하는 데 필요한 인증 매개 변수에 대한 정보가 포함되어 있습니다. 지정된 모든 소스는 서로 다른 여러 유형의 인증을 지원할 수 있습니다.
+`authSpec` 배열에는 원본을 플랫폼에 연결하는 데 필요한 인증 매개 변수에 대한 정보가 포함되어 있습니다. 지정된 모든 소스는 서로 다른 여러 유형의 인증을 지원할 수 있습니다.
 
 ## 인증 사양
 
@@ -181,7 +181,7 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
 
 ## 예제 인증 사양
 
-다음은 를 사용하여 완료된 인증 사양의 예입니다. [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md) 소스.
+다음은 [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md) 원본을 사용하여 완료된 인증 사양의 예입니다.
 
 ```json
   "authSpec": [
@@ -237,4 +237,4 @@ OAuth 2 새로 고침 코드는 임시 액세스 토큰 및 새로 고침 토큰
 
 ## 다음 단계
 
-인증 사양을 채워 Platform에 통합할 소스에 대한 소스 사양을 계속 구성할 수 있습니다. 다음에 대한 문서 보기: [소스 세부 항목 구성](./sourcespec.md) 추가 정보.
+인증 사양을 채워 Platform에 통합할 소스에 대한 소스 사양을 계속 구성할 수 있습니다. 자세한 내용은 [소스 사양 구성](./sourcespec.md)에 대한 문서를 참조하십시오.

@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform의 데이터 세트
 
-Real-time Customer Data Platform 사용자 인터페이스 내에서는 조직이 만든 모든 데이터 세트를 보고 관리할 수 있을 뿐만 아니라 새 데이터 세트를 만들 수 있습니다. UI에서 데이터 세트를 찾아보려면 **[!UICONTROL 데이터 세트]** 왼쪽 탐색에서. 다음 **[!UICONTROL 찾아보기]** 탭에는 이름, 생성됨(날짜 및 시간), 소스, 스키마 및 마지막 배치 상태를 표시하는 열과 데이터 세트가 마지막으로 업데이트된 날짜 및 시간을 포함하는 데이터 세트 목록이 포함되어 있습니다.
+Real-time Customer Data Platform 사용자 인터페이스 내에서는 조직이 만든 모든 데이터 세트를 보고 관리할 수 있을 뿐만 아니라 새 데이터 세트를 만들 수 있습니다. UI에서 데이터 세트를 찾아보려면 왼쪽 탐색에서 **[!UICONTROL 데이터 세트]**&#x200B;를 선택하십시오. **[!UICONTROL 찾아보기]** 탭에는 이름, 만든 날짜 및 시간, 원본, 스키마, 마지막 일괄 처리 상태, 데이터 집합이 마지막으로 업데이트된 날짜 및 시간을 표시하는 열이 포함된 데이터 세트 목록이 포함되어 있습니다.
 
-의 데이터 세트에 대한 정보 [!DNL Experience Platform], 를 읽는 것부터 시작합니다. [데이터 세트 개요](../../catalog/datasets/overview.md).
+[!DNL Experience Platform]의 데이터 세트에 대한 자세한 내용은 [데이터 세트 개요](../../catalog/datasets/overview.md)를 읽는 것부터 시작하십시오.

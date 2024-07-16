@@ -1,13 +1,13 @@
 ---
 keywords: Analytics 매핑 필드;분석 매핑
 solution: Experience Platform
-title: Adobe Analytics 소스 커넥터에 대한 매핑 필드
-description: Analytics 소스 커넥터를 사용하여 Adobe Analytics 필드를 XDM 필드에 매핑합니다.
+title: Adobe Analytics Source 커넥터에 대한 매핑 필드
+description: Analytics Source Connector를 사용하여 Adobe Analytics 필드를 XDM 필드에 매핑합니다.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
 workflow-type: tm+mt
 source-wordcount: '2388'
-ht-degree: 14%
+ht-degree: 8%
 
 ---
 
@@ -40,22 +40,22 @@ Adobe Experience Platform을 사용하면 Analytics 소스를 통해 Adobe Analy
 | `m_page_url` | `web.webPageDetails.URL` | 문자열 | 페이지 조회수의 URL입니다. |
 | `m_pagename` | `web.webPageDetails.pageViews.value` | 문자열 | 페이지 이름이 있는 히트에서 1과 같습니다. 이 기능은 Adobe Analytics 페이지 보기 수 지표와 유사합니다. |
 | `m_referrer` | `web.webReferrer.URL` | 문자열 | 이전 페이지의 페이지 URL. |
-| `m_search_page_num` | `search.pageDepth` | 정수 | 모든 검색 페이지 등급 차원에 사용됩니다. 사용자가 사이트에 클릭 스루하기 전에 사이트가 표시된 검색 결과 페이지를 나타냅니다. |
+| `m_search_page_num` | `search.pageDepth` | 정수 | 모든 검색 페이지 등급 차원에 사용됩니다. 사용자가 사이트를 클릭스루하기 전에 사이트가 표시된 검색 결과 페이지를 나타냅니다. |
 | `m_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | 문자열 | 상태 변수입니다. |
 | `m_user_server` | `web.webPageDetails.server` | 문자열 | 서버 차원에 사용되는 변수입니다. |
 | `m_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | 문자열 | 우편번호 차원을 채우는 데 사용되는 변수입니다. |
 | `accept_language` | `environment.browserDetails.acceptLanguage` | 문자열 | Accept-Language HTTP 헤더에 표시된 대로 모든 수락된 언어를 나열합니다. |
 | `homepage` | `web.webPageDetails.isHomePage` | 부울 | 더 이상 사용되지 않습니다. 현재 URL이 브라우저의 홈 페이지인 경우 표시됩니다. |
 | `ipv6` | `environment.ipV6` | 문자열 |
-| `j_jscript` | `environment.browserDetails.javaScriptVersion` | 문자열 | 브라우저가 지원하는 JavaScript 버전입니다. |
+| `j_jscript` | `environment.browserDetails.javaScriptVersion` | 문자열 | 브라우저가 지원하는 JavaScript 버전. |
 | `user_agent` | `environment.browserDetails.userAgent` | 문자열 | HTTP 헤더에서 전송된 사용자 에이전트 문자열입니다. |
-| `mobileappid` | `application.name` | 문자열 | 다음 형식으로 저장된 모바일 앱 ID입니다. `[AppName][BundleVersion]`. |
+| `mobileappid` | `application.name` | 문자열 | `[AppName][BundleVersion]` 형식으로 저장된 모바일 앱 ID입니다. |
 | `mobiledevice` | `device.model` | 문자열 | 모바일 장치의 이름입니다. iOS에서는 쉼표로 구분된 2자리 문자열로 저장됩니다. 첫 번째 숫자는 디바이스 생성을 나타내고 두 번째 숫자는 디바이스 제품군을 나타냅니다. |
 | `pointofinterest` | `placeContext.POIinteraction.POIDetail.`<br/>`name` | 문자열 | 모바일 서비스에서 사용됩니다. 관심 영역을 나타냅니다. |
-| `pointofinterestdistance` | `placeContext.POIinteraction.POIDetail.`<br/>`geoInteractionDetails.distanceToCenter` | 숫자 | 모바일 서비스에서 사용됩니다. 관심 영역 거리를 나타냅니다. |
-| `mobileplaceaccuracy` | `placeContext.POIinteraction.POIDetail.`<br/>`geoInteractionDetails.deviceGeoAccuracy` | 숫자 | 컨텍스트 데이터 변수 a.loc.acc에서 수집됩니다. 수집 시 GPS의 정확도를 미터 단위로 나타냅니다. |
-| `mobileplacecategory` | `placeContext.POIinteraction.POIDetail.`<br/>`category` | 문자열 | 컨텍스트 데이터 변수 a.loc.category에서 수집됩니다. 특정 위치의 카테고리를 설명합니다. |
-| `mobileplaceid` | `placeContext.POIinteraction.POIDetail.`<br/>`POIID` | 문자열 | 컨텍스트 데이터 변수 a.loc.id에서 수집됩니다. 지정된 관심 영역에 대한 식별자입니다. |
+| `pointofinterestdistance` | `placeContext.POIinteraction.POIDetail.`<br/>`geoInteractionDetails.distanceToCenter` | 번호 | 모바일 서비스에서 사용됩니다. 관심 영역 거리를 나타냅니다. |
+| `mobileplaceaccuracy` | `placeContext.POIinteraction.POIDetail.`<br/>`geoInteractionDetails.deviceGeoAccuracy` | 번호 | 컨텍스트 데이터 변수 a.loc.acc에서 수집됩니다. 수집 시 GPS의 정확도를 미터 단위로 나타냅니다. |
+| `mobileplacecategory` | `placeContext.POIinteraction.POIDetail.`<br/>`category` | 문자열 | 컨텍스트 데이터 변수 a.loc.category에서 수집됩니다. 특정 위치의 범주를 설명합니다. |
+| `mobileplaceid` | `placeContext.POIinteraction.POIDetail.`<br/>`POIID` | 문자열 | 컨텍스트 데이터 변수 a.loc.id에서 수집됩니다. 특정 관심 영역에 대한 식별자. |
 | `video` | `media.mediaTimed.primaryAssetReference.`<br/>`_id` | 문자열 | 비디오의 이름입니다. |
 | `videoad` | `advertising.adAssetReference._id` | 문자열 | 광고 자산 식별자. |
 | `videocontenttype` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`broadcastContentType` | 문자열 | 비디오 콘텐츠 유형입니다. 모든 비디오 보기에 대해 자동으로 &quot;비디오&quot;로 설정됩니다. |
@@ -74,8 +74,8 @@ Adobe Experience Platform을 사용하면 Analytics 소스를 통해 Adobe Analy
 | `videoshowtype` | `media.mediaTimed.primaryAssetReference.`<br/>`showType` | 문자열 | 비디오 표시 유형. |
 | `videoadload` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`adLoadType` | 문자열 | 비디오 광고가 로드됩니다. |
 | `videofeedtype` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`sourceFeed` | 문자열 | 비디오 피드 유형. |
-| `mobilebeaconmajor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMajor` | 숫자 | Mobile Services 비콘 Major. |
-| `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | 숫자 | Mobile Services 비콘 Minor. |
+| `mobilebeaconmajor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMajor` | 번호 | Mobile Services 비콘 Major. |
+| `mobilebeaconminor` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.beaconMinor` | 번호 | Mobile Services 비콘 Minor. |
 | `mobilebeaconuuid` | `placeContext.POIinteraction.POIDetail.`<br/>`beaconInteractionDetails.proximityUUID` | 문자열 | Mobile Services 비콘 UUID |
 | `videosessionid` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`_id` | 문자열 | 비디오 세션 ID. |
 | `videogenre` | `media.mediaTimed.primaryAssetReference.`<br/>`_iptc4xmpExt.Genre` | 배열 | 비디오 장르. | {title(객체), description(객체), type(객체), meta:xdmType(객체), items(문자열), meta:xdmField(객체)} |
@@ -120,7 +120,7 @@ Adobe Experience Platform을 사용하면 Analytics 소스를 통해 Adobe Analy
 
 ## 필드 분할 매핑
 
-이러한 필드에는 단일 소스가 있지만 **복수** XDM 위치.
+이러한 필드에는 단일 소스가 있지만 **다중** XDM 위치에 매핑됩니다.
 
 | Analytics 필드 | XDM 필드 | XDM 유형 | 설명 |
 | --------------- | --------- | -------- | ---------- |
@@ -144,34 +144,34 @@ ADC에서 제공되는 선택 필드는 변환해야 하며 XDM에서 Adobe Anal
 | `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | 오브젝트 | 히트에서 트리거된 표준 상거래 이벤트. | {id (문자열), 값 (숫자)} |
 | `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | 오브젝트 | 히트에서 트리거된 사용자 지정 이벤트입니다. | {id (오브젝트), value (오브젝트)} |
 | `m_geo_country` | `placeContext.geo.countryCode` | 문자열 | IP를 기반으로 하는, 히트가 발생한 국가의 약어입니다. |
-| `m_geo_latitude` | `placeContext.geo._schema.latitude` | 숫자 | <!-- MISSING --> |
-| `m_geo_longitude` | `placeContext.geo._schema.longitude` | 숫자 | <!-- MISSING --> |
+| `m_geo_latitude` | `placeContext.geo._schema.latitude` | 번호 | <!-- MISSING --> |
+| `m_geo_longitude` | `placeContext.geo._schema.longitude` | 번호 | <!-- MISSING --> |
 | `m_java_enabled` | `environment.browserDetails.javaEnabled` | 부울 | Java™이 활성화되어 있는지 여부를 나타내는 플래그입니다. |
-| `m_latitude` | `placeContext.geo._schema.latitude` | 숫자 | <!-- MISSING --> |
-| `m_longitude` | `placeContext.geo._schema.longitude` | 숫자 | <!-- MISSING --> |
+| `m_latitude` | `placeContext.geo._schema.latitude` | 번호 | <!-- MISSING --> |
+| `m_longitude` | `placeContext.geo._schema.longitude` | 번호 | <!-- MISSING --> |
 | `m_page_event_var1` | `web.webInteraction.URL` | 문자열 | 링크 추적 이미지 요청에만 사용되는 변수입니다. 이 변수에는 클릭한 다운로드 링크, 종료 링크 또는 사용자 지정 링크의 URL이 포함됩니다. |
 | `m_page_event_var2` | `web.webInteraction.name` | 문자열 | 링크 추적 이미지 요청에만 사용되는 변수입니다. 지정된 경우 링크의 사용자 지정 이름이 나열됩니다. |
 | `m_page_type` | `web.webPageDetails.isErrorPage` | 부울 | 페이지를 찾을 수 없음 차원을 채우는 데 사용되는 변수입니다. 이 변수는 비어 있거나 &quot;ErrorPage&quot;를 포함해야 합니다. |
-| `m_pagename_no_url` | `web.webPageDetails.name` | 숫자 | 페이지 이름(설정된 경우)입니다. 지정된 페이지가 없으면 이 값은 비워 둡니다. |
+| `m_pagename_no_url` | `web.webPageDetails.name` | 번호 | 페이지 이름(설정된 경우)입니다. 지정된 페이지가 없으면 이 값은 비워 둡니다. |
 | `m_paid_search` | `search.isPaid` | 부울 | 히트가 유료 검색 감지와 일치하는 경우 설정되는 플래그입니다. |
 | `m_product_list` | `productListItems[].items` | 배열 | products 변수를 통해 전달되는 제품 목록입니다. | {SKU(문자열), 수량(정수), priceTotal(숫자)} |
-| `m_ref_type` | `web.webReferrer.type` | 문자열 | 히트에 대한 참조 유형을 나타내는 숫자 ID입니다.<br/>`1`: 사이트 내부<br/>`2`: 기타 웹 사이트<br/>`3`: 검색 엔진<br/>`4`: 하드 드라이브<br/>`5`: USENET<br/>`6`: 입력/책갈피 표시(레퍼러 없음)<br/>`7`: 이메일<br/>`8`: JavaScript 없음<br/>`9`: 소셜 네트워크 |
+| `m_ref_type` | `web.webReferrer.type` | 문자열 | 히트에 대한 참조 유형을 나타내는 숫자 ID입니다.<br/>`1`: 사이트 내부<br/>`2`: 기타 웹 사이트<br/>`3`: 검색 엔진<br/>`4`: 하드 드라이브<br/>`5`: USENET<br/>`6`: 입력/책갈피 표시(레퍼러 없음)<br/>`7`: 전자 메일<br/>`8`: JavaScript 없음<br/>`9`: 소셜 네트워크 |
 | `m_search_engine` | `search.searchEngine` | 문자열 | 방문자를 사이트로 유도한 검색 엔진을 나타내는 숫자 ID입니다. |
-| `post_currency` | `commerce.order.currencyCode` | 문자열 | 거래 중에 사용된 통화 코드입니다. |
+| `post_currency` | `commerce.order.currencyCode` | 문자열 | 거래 중에 사용된 통화 코드. |
 | `post_cust_hit_time_gmt` | `timestamp` | 문자열 | 타임스탬프가 활성화된 데이터 세트에서만 사용됩니다. UNIX® 시간을 기준으로 히트와 함께 전송된 타임스탬프입니다. |
 | `post_cust_visid` | `identityMap` | 오브젝트 | 고객 방문자 ID입니다. |
 | `post_cust_visid` | `endUserIDs._experience.aacustomid.primary` | 부울 | 고객 방문자 ID입니다. |
 | `post_cust_visid` | `endUserIDs._experience.aacustomid.namespace.code` | 문자열 | 고객 방문자 ID입니다. |
 | `post_visid_high` + `visid_low` | `identityMap` | 오브젝트 | 방문에 대한 고유 식별자. |
 | `post_visid_high` + `visid_low` | `endUserIDs._experience.aaid.id` | 문자열 | 방문에 대한 고유 식별자. |
-| `post_visid_high` | `endUserIDs._experience.aaid.primary` | 부울 | 과 함께 사용됨 `visid_low` 방문을 고유하게 식별합니다. |
-| `post_visid_high` | `endUserIDs._experience.aaid.namespace.code` | 문자열 | 과 함께 사용됨 `visid_low` 방문을 고유하게 식별합니다. |
+| `post_visid_high` | `endUserIDs._experience.aaid.primary` | 부울 | 방문을 고유하게 식별하기 위해 `visid_low`과(와) 함께 사용됩니다. |
+| `post_visid_high` | `endUserIDs._experience.aaid.namespace.code` | 문자열 | 방문을 고유하게 식별하기 위해 `visid_low`과(와) 함께 사용됩니다. |
 | `post_visid_low` | `identityMap` | 오브젝트 | 방문을 고유하게 식별하기 위해 visid_high와 함께 사용됩니다. |
 | `hit_time_gmt` | `receivedTimestamp` | 문자열 | UNIX® 시간을 기반으로 한 히트의 타임스탬프입니다. |
 | `hitid_high` + `hitid_low` | `_id` | 문자열 | 히트를 식별하는 고유 식별자입니다. |
 | `hitid_low` | `_id` | 문자열 | 히트를 고유하게 식별하기 위해 hitid_high와 함께 사용됩니다. |
 | `ip` | `environment.ipV4` | 문자열 | 이미지 요청의 HTTP 헤더를 기반으로 한 IP 주소입니다. |
-| `j_jscript` | `environment.browserDetails.javaScriptEnabled` | 부울 | 사용된 JavaScript 버전입니다. |
+| `j_jscript` | `environment.browserDetails.javaScriptEnabled` | 부울 | 사용된 JavaScript 버전. |
 | `mcvisid_high` + `mcvisid_low` | identityMap | 오브젝트 | Experience Cloud 방문자 ID입니다. |
 | `mcvisid_high` + `mcvisid_low` | endUserID_experience.mcid.id | 문자열 | ECID(Experience Cloud ID)는 MCID라고도 하며 경우에 따라 네임스페이스에서 사용됩니다. |
 | `mcvisid_high` | `endUserIDs._experience.mcid.primary` | 부울 | ECID(Experience Cloud ID)는 MCID라고도 하며 경우에 따라 네임스페이스에서 사용됩니다. |
@@ -188,7 +188,7 @@ ADC에서 제공되는 선택 필드는 변환해야 하며 XDM에서 Adobe Anal
 
 선택 필드(&quot;게시물 값&quot;이라고 함)에는 Adobe이 처리 규칙, VISTA 규칙 및 조회 테이블을 사용하여 값을 조정한 후의 데이터가 포함됩니다. 대부분의 게시물 값에는 사전 처리된 대응 항목이 있습니다. 조직은 사전 처리된 필드, 사후 처리된 필드 또는 둘 다를 사용할지 여부를 결정할 수 있습니다.
 
-쿼리 서비스를 사용하여 이러한 변환을 수행하는 방법에 대한 자세한 내용은 [Adobe 정의 함수](/help/query-service/sql/adobe-defined-functions.md) ( 쿼리 서비스 사용 안내서)를 참조하십시오.
+쿼리 서비스를 사용하여 이러한 변환을 수행하는 방법에 대한 자세한 내용은 쿼리 서비스 사용 안내서의 [Adobe 정의 함수](/help/query-service/sql/adobe-defined-functions.md)를 참조하십시오.
 
 | Analytics 필드 | XDM 필드 | XDM 유형 | 설명 |
 | --------------- | --------- | -------- | ---------- |
@@ -230,14 +230,14 @@ ADC에서 제공되는 선택 필드는 변환해야 하며 XDM에서 Adobe Anal
 | `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | 오브젝트 | 히트에서 트리거된 표준 상거래 이벤트. | {id (문자열), 값 (숫자)} |
 | `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | 오브젝트 | 히트에서 트리거된 사용자 지정 이벤트입니다. | {id (오브젝트), value (오브젝트)} |
 | `post_java_enabled` | `environment.browserDetails.javaEnabled` | 부울 | Java™이 활성화되어 있는지 여부를 나타내는 플래그입니다. |
-| `post_latitude` | `placeContext.geo._schema.latitude` | 숫자 | <!-- MISSING --> |
-| `post_longitude` | `placeContext.geo._schema.longitude` | 숫자 | <!-- MISSING --> |
+| `post_latitude` | `placeContext.geo._schema.latitude` | 번호 | <!-- MISSING --> |
+| `post_longitude` | `placeContext.geo._schema.longitude` | 번호 | <!-- MISSING --> |
 | `post_page_event` | `web.webInteraction.type` | 문자열 | 이미지 요청(표준 히트, 다운로드 링크, 종료 링크 또는 클릭한 사용자 지정 링크)에서 전송된 히트 유형입니다. |
-| `post_page_event` | `web.webInteraction.linkClicks.value` | 숫자 | 히트가 링크 클릭인 경우 1입니다. 이는 Adobe Analytics의 페이지 이벤트 지표와 유사합니다. |
+| `post_page_event` | `web.webInteraction.linkClicks.value` | 번호 | 히트가 링크 클릭인 경우 1입니다. 이는 Adobe Analytics의 페이지 이벤트 지표와 유사합니다. |
 | `post_page_event_var1` | `web.webInteraction.URL` | 문자열 | 이 변수는 링크 추적 이미지 요청에만 사용됩니다. 클릭한 다운로드 링크, 종료 링크 또는 사용자 지정 링크의 URL입니다. |
 | `post_page_event_var2` | `web.webInteraction.name` | 문자열 | 이 변수는 링크 추적 이미지 요청에만 사용됩니다. 링크의 사용자 지정 이름입니다. |
 | `post_page_type` | `web.webPageDetails.isErrorPage` | 부울 | 페이지를 찾을 수 없음 차원을 채우는 데 사용됩니다. 이 변수는 비어 있거나 &quot;ErrorPage&quot;를 포함해야 합니다. |
-| `post_pagename_no_url` | `web.webPageDetails.name` | 숫자 | 페이지 이름(설정된 경우)입니다. 지정된 페이지가 없으면 이 값은 비워 둡니다. |
+| `post_pagename_no_url` | `web.webPageDetails.name` | 번호 | 페이지 이름(설정된 경우)입니다. 지정된 페이지가 없으면 이 값은 비워 둡니다. |
 | `post_product_list` | `productListItems[].items` | 배열 | products 변수를 통해 전달되는 제품 목록입니다. | {SKU(문자열), 수량(정수), priceTotal(숫자)} |
 | `post_search_engine` | `search.searchEngine` | 문자열 | 방문자를 사이트로 유도한 검색 엔진을 나타내는 숫자 ID입니다. |
 | `mvvar1_instances` | `.list.items[]` | 오브젝트 | 변수 값 목록입니다. 구현에 따라 구분된 사용자 지정 값 목록을 포함합니다. |
@@ -247,8 +247,8 @@ ADC에서 제공되는 선택 필드는 변환해야 하며 XDM에서 Adobe Anal
 | `first_hit_ref_type` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.type` | 문자열 | 방문자의 첫 번째 레퍼러 유형을 나타내는 숫자 ID입니다. |
 | `first_hit_time_gmt` | `_experience.analytics.endUser.`<br/>`firstTimestamp` | 정수 | UNIX® 시간에서 방문자의 첫 번째 히트 타임스탬프입니다. |
 | `geo_country` | `placeContext.geo.countryCode` | 문자열 | IP를 기반으로 한, 히트가 발생한 국가의 약어입니다. |
-| `geo_latitude` | `placeContext.geo._schema.latitude` | 숫자 | <!-- MISSING --> |
-| `geo_longitude` | `placeContext.geo._schema.longitude` | 숫자 | <!-- MISSING --> |
+| `geo_latitude` | `placeContext.geo._schema.latitude` | 번호 | <!-- MISSING --> |
+| `geo_longitude` | `placeContext.geo._schema.longitude` | 번호 | <!-- MISSING --> |
 | `paid_search` | `search.isPaid` | 부울 | 히트가 유료 검색 감지와 일치하는 경우 설정되는 플래그입니다. |
 | `ref_type` | `web.webReferrer.type` | 문자열 | 히트에 대한 참조 유형을 나타내는 숫자 ID입니다. |
 | `visit_paid_search` | `_experience.analytics.session.`<br/>`search.isPaid` | 부울 | 방문의 첫 번째 히트가 유료 검색 히트에서 왔는지를 나타내는 플래그(1=유료, 0=유료 아님)입니다. |

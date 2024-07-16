@@ -4,8 +4,8 @@ description: Adobe Experience Platform에서 웹 확장에 대한 라이브러�
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
 source-git-commit: b3754c94843f32ba58aa1e020dface1179372de3
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 70%
+source-wordcount: '372'
+ht-degree: 63%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 >[!IMPORTANT]
 >
@@ -71,4 +71,4 @@ module.exports = function(settings) {
 }
 ```
 
-`runs on startup` 은 즉시 기록되지만 `runs when necessary` 내보낸 함수를 태그 엔진에서 호출한 경우에만 기록됩니다. 특정 모듈의 용도는 필요하지 않지만, 함수를 내보내기 전에 필요한 설정을 수행하여 이 기능을 활용할 수 있습니다.
+`runs on startup`은(는) 즉시 기록되지만 `runs when necessary`은(는) 내보낸 함수를 태그 엔진에서 호출한 이후에만 기록됩니다. 특정 모듈의 용도는 필요하지 않지만, 함수를 내보내기 전에 필요한 설정을 수행하여 이 기능을 활용할 수 있습니다.

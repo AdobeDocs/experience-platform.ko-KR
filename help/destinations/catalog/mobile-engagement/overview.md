@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## 지원되는 모바일 참여 대상 {#supported-destinations}
 
-[!DNL Adobe Experience Platform] 는 현재 다음 모바일 참여 대상을 지원합니다.
+[!DNL Adobe Experience Platform]은(는) 현재 다음 모바일 참여 대상을 지원합니다.
 
 * [비행선 속성 연결](airship-attributes.md)
 * [비행선 태그 연결](airship-tags.md)

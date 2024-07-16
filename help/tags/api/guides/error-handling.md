@@ -4,7 +4,7 @@ description: Reactor API에서 오류를 처리하는 방법에 대해 알아봅
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1057'
 ht-degree: 0%
 
 ---
@@ -13,12 +13,12 @@ ht-degree: 0%
 
 Reactor API를 호출하는 동안 문제가 발생하면 다음 방법 중 하나로 오류가 반환될 수 있습니다.
 
-* **즉각적인 오류**: 즉각적인 오류가 발생하는 요청을 수행할 때 API에 의해 오류 응답이 반환되고, HTTP 상태는 발생한 일반 오류 유형을 반영합니다.
-* **지연된 오류**: 지연된 오류(예: 비동기 활동)를 초래하는 API 요청을 수행할 때에서 API에 의해 오류가 반환될 수 있습니다. `meta.status_details` 관련 리소스.
+* **즉각적인 오류**: 즉각적인 오류가 발생하는 요청을 수행할 때 API에서 오류 응답을 반환합니다. HTTP 상태는 발생한 일반적인 오류 유형을 반영합니다.
+* **지연된 오류**: 지연된 오류(예: 비동기 활동)를 발생시키는 API 요청을 수행할 때 관련 리소스의 `meta.status_details`에 있는 API에서 오류가 반환될 수 있습니다.
 
 ## 오류 형식
 
-오류 응답은 다음을 준수하는 것을 목표로 합니다. [JSON:API 오류 사양](http://jsonapi.org/format/#errors)및 는 일반적으로 다음 구조를 준수합니다.
+오류 응답은 [JSON:API 오류 사양](http://jsonapi.org/format/#errors)을 준수하는 것을 목표로 하며 일반적으로 다음 구조를 준수합니다.
 
 ```json
 {
@@ -44,9 +44,9 @@ Reactor API를 호출하는 동안 문제가 발생하면 다음 방법 중 하�
 | `id` | 문제가 발생하는 특정 항목에 대한 고유 식별자입니다. |
 | `status` | 이 문제에 적용할 수 있는 HTTP 상태 코드이며, 문자열 값으로 표현됩니다. |
 | `code` | 문자열 값으로 표현되는 애플리케이션별 오류 코드. |
-| `title` | 사람이 인식할 수 있는 짧은 문제 요약 **변경하지 말아야 함** 현지화 목적을 제외하고 발생 시 ~ 발생 시. |
-| `detail` | 사람이 인식할 수 있는 이 문제 발생 관련 설명. 좋아요 `title`, 이 필드의 값은 현지화될 수 있습니다. |
-| `source` | 다음 멤버를 선택적으로 포함하여 오류 소스에 대한 참조를 포함하는 객체입니다.<ul><li>`pointer`: a [JSON 포인터(RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901) 요청 문서에서 연결된 엔티티를 참조하는 문자열(예: `/data` 기본 데이터 객체의 경우 또는 `/data/attributes/title` (특정 속성의 경우).</li></ul> |
+| `title` | 로컬라이제이션의 목적을 제외하고 **이(가) 발생 항목에서 발생 항목으로 변경**&#x200B;해서는 안 되는 문제에 대해 사람이 인식할 수 있는 간단한 요약입니다. |
+| `detail` | 사람이 인식할 수 있는 이 문제 발생 관련 설명. `title`과(와) 마찬가지로 이 필드의 값은 현지화할 수 있습니다. |
+| `source` | 다음 멤버를 선택적으로 포함하여 오류 소스에 대한 참조를 포함하는 객체입니다.<ul><li>`pointer`: 요청 문서에서 연결된 엔터티를 참조하는 [JSON 포인터(RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901) 문자열(예: 기본 데이터 개체의 경우 `/data`, 특정 특성의 경우 `/data/attributes/title`).</li></ul> |
 | `meta` | 오류에 대한 비표준 메타데이터를 포함하는 객체입니다. |
 
 {style="table-layout:auto"}
@@ -60,7 +60,7 @@ Reactor API를 호출하는 동안 문제가 발생하면 다음 방법 중 하�
 | `authentication-failure` | IMS 액세스 토큰이 잘못되었습니다. 다시 로그인하여 새 액세스 토큰을 받을 수 있습니다. 또는 기술 계정의 경우 새 JWT를 생성하고 IMS 액세스 토큰으로 바꿉니다. |
 | `connection-refused` | 서버에 연결할 수 없습니다. |
 | `decrypt-bad-passphrase` | 제공된 암호로 데이터의 암호를 해독할 수 없습니다. |
-| `decrypt-failed` | 제공된 개인 키로 데이터의 암호를 해독할 수 없습니다. 키가 로컬에서 작동하고 공백이 잘렸는지 확인합니다. |
+| `decrypt-failed` | 제공된 개인 키로 데이터의 암호를 해독할 수 없습니다. 키가 로컬에서 작동하고 공백이 트리밍되었는지 확인합니다. |
 | `decrypt-no-data` | 개인 키가 없으면 데이터의 암호를 해독할 수 없습니다. 암호화된 개인 키를 제공하십시오. |
 | `delegate-descriptor-unresolved` | 확장에서 이 위임 설명자에 대한 예상 정의를 제공하지 않았습니다. 확장을 업데이트해야 할 수 있습니다. |
 | `deleted-resources` | 라이브러리에 추가하려는 리소스가 삭제되었습니다. |
@@ -74,7 +74,7 @@ Reactor API를 호출하는 동안 문제가 발생하면 다음 방법 중 하�
 | `host-required` | 이 라이브러리에 할당된 환경에 올바른 호스트가 없습니다. 라이브러리에 할당된 환경을 확인합니다. 그런 다음 해당 환경에 유효한 호스트를 할당합니다. |
 | `host-type-error` | SFTP 호스트만 사용하기 전에 자격 증명을 확인해야 하므로 해당 호스트 유형에 대해서만 사전 테스트를 사용할 수 있습니다. |
 | `illegal-custom-code-transform` | customCode 변환은 사용할 수 없습니다. 함수 또는 파일 변형을 지정하십시오. |
-| `ims-not-authorized` | 계정을 인증하는 도중 알 수 없는 오류가 발생했습니다. 나중에 다시 시도하십시오. |
+| `ims-not-authorized` | 계정을 인증하는 도중 알 수 없는 오류가 발생했습니다. 나중에 다시 시도해 주십시오. |
 | `ims-session-error` | 로그인 세션에 문제가 있습니다. 로그아웃했다가 다시 로그인하십시오. |
 | `internal-error` | 내부 오류가 발생했습니다. 잠시 기다린 후 다시 시도해 주십시오. 문제가 지속되면 클라이언트 지원 센터에 문의하십시오. |
 | `invalid-data_element` | 잘못된 데이터 요소를 라이브러리에 추가할 수 없습니다. |
@@ -92,7 +92,7 @@ Reactor API를 호출하는 동안 문제가 발생하면 다음 방법 중 하�
 | `not-authorized` | 이 사용자 계정에는 이 작업을 수행하는 데 필요한 권한이 없습니다. |
 | `not-found` | 기록을 찾을 수 없습니다. 검색하려는 개체의 ID를 확인합니다. |
 | `not-unique` | 사용하려는 이름이 이미 사용 중입니다. 이 리소스의 경우 &#39;name&#39; 속성은 고유해야 합니다. |
-| `public-release-not-authorized` | 확장의 공개 릴리스는 다음을 통해 조정됩니다. `launch-ext-dev@adobe.com`. 다음에 대한 문서 보기: [확장 해제](../../extension-dev/submit/release.md) 추가 정보. |
+| `public-release-not-authorized` | 확장의 공개 릴리스는 `launch-ext-dev@adobe.com`에 의해 조정됩니다. 자세한 내용은 [확장 릴리스](../../extension-dev/submit/release.md)에 대한 문서를 참조하십시오. |
 | `read-only` | 이 리소스는 읽기 전용이므로 수정할 수 없습니다. |
 | `session-timeout` | 사용자 세션이 만료되었습니다. 로그아웃했다가 다시 로그인하십시오. |
 | `sftp-authentication-failed` | SFTP 연결에 대한 인증에 실패했습니다. |

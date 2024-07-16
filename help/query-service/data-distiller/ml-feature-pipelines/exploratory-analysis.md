@@ -4,18 +4,18 @@ description: Data Distiller을 사용하여 Python 노트북에서 데이터를 
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
 source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 16%
+source-wordcount: '760'
+ht-degree: 13%
 
 ---
 
 # 탐색적 데이터 분석
 
-이 문서에서는 Data Distiller을 사용하여 의 데이터를 탐색하고 분석하기 위한 몇 가지 기본 예와 모범 사례를 제공합니다. [!DNL Python] 전자 필기장.
+이 문서에서는 Data Distiller을 사용하여 [!DNL Python] 전자 필기장의 데이터를 탐색하고 분석하는 기본 예제와 모범 사례를 제공합니다.
 
 ## 시작하기
 
-이 안내서를 계속 진행하기 전에 의 Data Distiller에 대한 연결을 만들었는지 확인하십시오. [!DNL Python] 전자 필기장. 방법에 대한 지침은 설명서 를 참조하십시오 [연결 [!DNL Python] notebook에서 Data Distiller으로](./establish-connection.md).
+이 안내서를 계속하기 전에 [!DNL Python] 전자 필기장에서 Data Distiller에 대한 연결을 만들었는지 확인하십시오. [Data Distiller에  [!DNL Python] 전자 필기장을 연결](./establish-connection.md)하는 방법에 대한 지침은 설명서를 참조하세요.
 
 ## 기본 통계 얻기 {#basic-statistics}
 
@@ -42,9 +42,9 @@ df
 
 ## 대용량 데이터 세트의 샘플 버전 만들기 {#create-dataset-sample}
 
-쿼리하려는 데이터 세트가 매우 크거나 탐색적 쿼리의 정확한 결과가 필요하지 않은 경우 [샘플링 기능](../../key-concepts/dataset-samples.md) 데이터 Distiller 쿼리에 사용할 수 있습니다. 2단계 프로세스입니다.
+쿼리하려는 데이터 세트가 너무 크거나 탐색적 쿼리의 정확한 결과가 필요하지 않은 경우 Data Distiller 쿼리에 사용할 수 있는 [샘플링 기능](../../key-concepts/dataset-samples.md)을 사용하십시오. 2단계 프로세스입니다.
 
-- 첫 번째, **분석** 지정된 샘플링 비율로 샘플링된 버전을 만드는 데이터 집합입니다.
+- 먼저 데이터 집합을 **분석**&#x200B;하여 지정된 샘플링 비율로 샘플링된 버전을 만듭니다.
 - 그런 다음, 샘플링된 데이터 세트 버전을 쿼리합니다. 샘플링된 데이터 세트에 적용하는 함수에 따라 출력을 전체 데이터 세트에 대한 숫자로 조정할 수 있습니다
 
 ### 5% 샘플 만들기 {#create-sample}
@@ -64,7 +64,7 @@ qs_cursor.query(analyze_table_query, output="raw")
 
 ### 샘플 보기 {#view-sample}
 
-다음을 사용할 수 있습니다. `sample_meta` 함수 를 사용하십시오. 아래의 코드 조각은 `sample_meta` 함수.
+`sample_meta` 함수를 사용하여 지정된 데이터 집합에서 만든 샘플을 볼 수 있습니다. 아래의 코드 조각은 `sample_meta` 함수를 사용하는 방법을 보여 줍니다.
 
 ```python
 sampled_version_of_table_query = f'''SELECT sample_meta('{table_name}')'''
@@ -105,7 +105,7 @@ Approximate count: 1284600.0 using 5.0% sample
 
 ## 이메일 단계 분석 {#email-funnel-analysis}
 
-단계 분석은 목표 결과에 도달하는 데 필요한 단계와 이러한 각 단계를 통과하는 사용자 수를 이해하는 방법입니다. 아래 예제는 뉴스레터를 구독하는 사용자에게 연결되는 단계를 간단하게 분석하는 방법을 보여 줍니다. 구독 결과는 의 이벤트 유형으로 표시됩니다. `web.formFilledOut`.
+단계 분석은 목표 결과에 도달하는 데 필요한 단계와 이러한 각 단계를 통과하는 사용자 수를 이해하는 방법입니다. 아래 예제는 뉴스레터를 구독하는 사용자에게 연결되는 단계를 간단하게 분석하는 방법을 보여 줍니다. 구독 결과가 이벤트 유형 `web.formFilledOut`(으)로 표시됩니다.
 
 먼저 쿼리를 실행하여 각 단계의 사용자 수를 가져옵니다.
 
@@ -138,7 +138,7 @@ funnel_df
 
 ### 그래프 쿼리 결과 {#plot-results}
 
-그런 다음 다음을 사용하여 쿼리 결과를 플롯합니다. [!DNL Python] `plotly` 라이브러리:
+그런 다음 [!DNL Python] `plotly` 라이브러리를 사용하여 쿼리 결과를 플롯합니다.
 
 ```python
 import plotly.express as px
@@ -152,18 +152,18 @@ fig.show()
 
 **샘플 출력**
 
-![eventType 이메일 단계의 인포그래픽입니다.](../../images/data-distiller/email-funnel.png)
+![eventType 전자 메일 단계의 인포그래픽입니다.](../../images/data-distiller/email-funnel.png)
 
 ## 이벤트 상관 관계 {#event-correlations}
 
-또 다른 일반적인 분석은 이벤트 유형과 대상 전환 이벤트 유형 간의 상관 관계를 계산하는 것입니다. 이 예제에서 구독 이벤트는 `web.formFilledOut`. 이 예에서는 [!DNL Spark] 함수 는 다음 단계를 수행하기 위해 데이터 Distiller 쿼리에서 사용할 수 있습니다.
+또 다른 일반적인 분석은 이벤트 유형과 대상 전환 이벤트 유형 간의 상관 관계를 계산하는 것입니다. 이 예제에서 구독 이벤트는 `web.formFilledOut`(으)로 표시됩니다. 이 예제에서는 Data Distiller 쿼리에서 사용할 수 있는 [!DNL Spark] 함수를 사용하여 다음 단계를 수행합니다.
 
 1. 프로필별로 각 이벤트 유형에 대한 이벤트 수를 카운트합니다.
-2. 프로필에서 각 이벤트 유형의 개수를 집계하고, 각 이벤트 유형의 상관 관계를 `web,formFilledOut`.
+2. 프로필에서 각 이벤트 유형의 개수를 집계하고 `web,formFilledOut`과(와) 각 이벤트 유형의 상관 관계를 계산합니다.
 3. 카운트 및 상관 관계의 데이터 프레임을 대상 이벤트가 있는 각 피쳐(이벤트 유형 카운트)의 피어슨 상관 계수 표로 변환합니다.
 4. 플롯에서 결과를 시각화합니다.
 
-다음 [!DNL Spark] 함수는 데이터를 집계하여 작은 결과 테이블을 반환하므로 전체 데이터 세트에서 이 유형의 쿼리를 실행할 수 있습니다.
+[!DNL Spark] 함수는 데이터를 집계하여 작은 결과 테이블을 반환하므로 전체 데이터 집합에서 이 형식의 쿼리를 실행할 수 있습니다.
 
 ```python
 large_correlation_query=f'''
@@ -215,7 +215,7 @@ large_correlation_df
 
 |   | webFormsFilled_totalUsers | advertisingClicks_totalUsers | productViews_totalUsers | productPurchases_totalUsers | propositionDismisses_totaUsers | propositionDisplays_totaUsers | propositionInteracts_totalUsers | emailClicks_totalUsers | emailOpens_totalUsers | webLinksClicks_totalUsers | ... | webForms_advertisingClicks | webForms_productViews | webForms_제품 구매 | webForms_propositionDismisses | webForms_propositionInteracts | webForms_emailClicks | webForms_emailOpen | webForms_emailSends | webForms_webLinkClicks | webForms_webPageViews |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | … | 0.026805 | 0.2779 | None | 0.06014 | 0.143656 | 0.305657 | 0.218874 | 0.192836 | 0.259353 | None |
+| 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | ... | 0.026805 | 0.2779 | None | 0.06014 | 0.143656 | 0.305657 | 0.218874 | 0.192836 | 0.259353 | None |
 
 {style="table-layout:auto"}
 
@@ -234,7 +234,7 @@ corrdf.fillna(0)
 
 **샘플 출력**:
 
-|    | 변수를 채우는 방법을 설명합니다 | 값 | 기능 | pearsonCorrelation |
+|    | 변수 | 값 | 기능 | pearsonCorrelation |
 | --- | ---  |  ---  |  ---  | --- |
 | 0 | `webForms_EmailOpens` | 0.218874 | 이메일 열람수 | 0.218874 |
 | 1 | `webForms_advertisingClicks` | 0.026805 | advertisingClicks | 0.026805 |
@@ -249,7 +249,7 @@ corrdf.fillna(0)
 | 10 | `webForms_webPageViews` | 0.000000 | webPageViews | 0.000000 |
 
 
-마지막으로 과의 상관 관계를 시각화할 수 있습니다. `matplotlib` [!DNL Python] 라이브러리:
+마지막으로 `matplotlib` [!DNL Python] 라이브러리와의 상관 관계를 시각화할 수 있습니다.
 
 ```python
 import matplotlib.pyplot as plt
@@ -258,8 +258,8 @@ sns.barplot(data=corrdf.fillna(0), y="feature", x="pearsonCorrelation")
 ax.set_title("Pearson Correlation of Events with the outcome event")
 ```
 
-![이벤트 결과 이벤트의 Pearson 상관 관계에 대한 막대 그래프](../../images/data-distiller/pearson-correlations.png)
+![이벤트 결과의 Pearson 상관 관계에 대한 막대 그래프](../../images/data-distiller/pearson-correlations.png)
 
 ## 다음 단계
 
-이 문서를 읽고 Data Distiller을 사용하여 의 데이터를 탐색하고 분석하는 방법을 배웠습니다. [!DNL Python] 전자 필기장. 머신 러닝 환경에서 Experience Platform에서 피드 사용자 지정 모델로의 기능 파이프라인을 만드는 다음 단계는 다음과 같습니다 [머신 러닝을 위한 엔지니어 기능](./feature-engineering.md).
+이 문서를 읽고 Data Distiller을 사용하여 [!DNL Python] 전자 필기장의 데이터를 탐색하고 분석하는 방법을 배웠습니다. Experience Platform에서 머신 러닝 환경의 피드 사용자 지정 모델까지 기능 파이프라인을 만드는 다음 단계는 [머신 러닝용 기능 엔지니어](./feature-engineering.md)입니다.

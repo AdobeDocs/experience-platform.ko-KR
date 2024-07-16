@@ -6,7 +6,7 @@ description: Product Recommendations 레시피를 통해 고객의 요구 사항
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '466'
 ht-degree: 3%
 
 ---
@@ -25,14 +25,14 @@ Product Recommendations 레시피는 머신 러닝을 사용하여 과거 제품
 
 ## 시작하려면 어떻게 해야 합니까?
 
-Adobe Experience Platform Lab 자습서를 따라 시작할 수 있습니다(아래 랩 링크 참조). 이 튜토리얼에서는 다음을 따라 Jupyter Notebook에서 Product Recommendations 레시피를 만드는 방법을 보여줍니다. [조리법 전자 필기장](../jupyterlab/create-a-model.md) 워크플로 및 의 레시피 구현 [!DNL Experience Platform] [!DNL Data Science Workspace].
+Adobe Experience Platform Lab 자습서를 따라 시작할 수 있습니다(아래 랩 링크 참조). 이 자습서에서는 [Notebook to recipe](../jupyterlab/create-a-model.md) 워크플로에 따라 [!DNL Experience Platform] [!DNL Data Science Workspace]에서 레시피를 구현하여 Jupyter Notebook에서 Product Recommendations 레시피를 만드는 방법을 보여줍니다.
 
-* [랩: 데이터 과학 작업 영역을 통해 미래 예측](https://expleague.azureedge.net/labs/L777/index.html)
+* [랩: 데이터 과학 Workspace으로 미래 예측](https://expleague.azureedge.net/labs/L777/index.html)
 * [랩 리소스](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## 데이터 스키마
 
-이 레시피는 사용자 지정 [XDM 스키마](../../xdm/schema/field-dictionary.md) 입력 및 출력 데이터를 모델링하려면 다음을 수행합니다.
+이 레시피는 사용자 지정 [XDM 스키마](../../xdm/schema/field-dictionary.md)를 사용하여 입력 및 출력 데이터를 모델링합니다.
 
 ### 입력 데이터 스키마
 
@@ -40,7 +40,7 @@ Adobe Experience Platform Lab 자습서를 따라 시작할 수 있습니다(아
 | --- | --- |
 | itemId | 문자열 |
 | interactionType | 문자열 |
-| timestamp | 문자열 |
+| 타임스탬프 | 문자열 |
 | userId | 문자열 |
 
 ### 출력 데이터 스키마

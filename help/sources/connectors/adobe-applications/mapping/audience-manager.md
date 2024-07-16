@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;홈;인기 항목;Audience Manager 매핑;audience manager 매핑
 solution: Experience Platform
-title: Adobe Audience Manager 소스 커넥터에 대한 매핑 필드
+title: Adobe Audience Manager Source 커넥터에 대한 매핑 필드
 description: Adobe Audience Manager 데이터(실시간, 온보딩 및 프로필 데이터)를 Audience Manager 소스 커넥터의 해당 XDM(Experience Data Model) 필드에 매핑하는 방법을 알아봅니다.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 아래 표에는 Adobe Audience Manager 데이터의 필드(실시간, 온보딩 및 프로필 데이터)와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 
-다음을 참조하십시오. [XDM 필드 사전](../../../../xdm/schema/field-dictionary.md) 각 XDM 필드에 대한 자세한 내용을 보려면.
+각 XDM 필드에 대한 자세한 내용은 [XDM 필드 사전](../../../../xdm/schema/field-dictionary.md)을 참조하십시오.
 
 ## 실시간 데이터
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 | 실시간 데이터 필드 | XDM 필드 |
 | --- | --- |
 | `requestIds[]` | `ExperienceEvent.identityMap["ECID"]` |
-| `requestIds[]` | `ExperienceEvent.endUserIds` - *endUserIds에 있는 네임스페이스에만 해당되며 첫 번째 값만 해당합니다.* |
+| `requestIds[]` | `ExperienceEvent.endUserIds` - *endUserIds에 있는 네임스페이스에만 해당되며 첫 번째 값에만 해당됩니다.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
 | `primaryDeviceId` | ExperienceEvent.endUserIds - *endUserIds에 있는 네임스페이스에만 해당되며 첫 번째 값만 해당합니다.* |
 | `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |

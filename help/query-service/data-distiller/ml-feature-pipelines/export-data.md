@@ -4,16 +4,16 @@ description: Data Distiller으로 만든 준비된 교육 데이터 세트를 ML
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 3%
+source-wordcount: '457'
+ht-degree: 5%
 
 ---
 
 # 외부 ML 환경으로 데이터 내보내기
 
-이 문서에서는 Data Distiller으로 만든 준비된 교육 데이터 세트를 ML 환경에서 읽어 모델을 교육하고 점수를 매길 수 있는 클라우드 스토리지 위치에 공유하는 방법을 보여 줍니다. 이 예제에서는 교육 데이터 세트를 [데이터 랜딩 영역(DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). 기계 학습 환경에서 작업하는 데 필요한 경우 저장소 대상을 변경할 수 있습니다.
+이 문서에서는 Data Distiller으로 만든 준비된 교육 데이터 세트를 ML 환경에서 읽어 모델을 교육하고 점수를 매길 수 있는 클라우드 스토리지 위치에 공유하는 방법을 보여 줍니다. 이 예제에서는 교육 데이터 세트를 [DLZ(데이터 랜딩 영역)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md)(으)로 내보냅니다. 기계 학습 환경에서 작업하는 데 필요한 경우 저장소 대상을 변경할 수 있습니다.
 
-다음 [대상에 대한 흐름 서비스](https://developer.adobe.com/experience-platform-apis/references/destinations/) 계산된 기능 데이터 세트를 적절한 클라우드 스토리지 위치에 랜딩하여 기능 파이프라인을 완료하는 데 사용됩니다.
+[대상에 대한 흐름 서비스](https://developer.adobe.com/experience-platform-apis/references/destinations/)는 계산된 기능 데이터 세트를 적절한 클라우드 저장소 위치에 랜딩하여 기능 파이프라인을 완료하는 데 사용됩니다.
 
 ## 소스 연결 만들기 {#create-source-connection}
 
@@ -42,9 +42,9 @@ source_connection_id = source_res["id"]
 | 클라우드 스토리지 유형 | 연결 사양 ID |
 |-----------------------|--------------------------------------|
 | Amazon S3 | 4fce964d-3f37-408f-9778-e597338a21ee |
-| Azure Blob 저장소 | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
+| Azure Blob 스토리지 | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 | Azure 데이터 레이크 | be2c3209-53bc-47e7-ab25-145db8b873e1 |
-| 데이터 랜딩 영역 | 10440537-2a7b-4583-ac39-ed38d4b848e8 |
+| 데이터 랜딩 구역 | 10440537-2a7b-4583-ac39-ed38d4b848e8 |
 | Google 클라우드 스토리지 | c5d93acb-ea8b-4b14-8f53-02138444ae99 |
 | SFTP | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
@@ -88,9 +88,9 @@ target_connection_id = target_res["id"]
 | 클라우드 스토리지 유형 | 흐름 사양 ID |
 |-----------------------|--------------------------------------|
 | Amazon S3 | 269ba276-16fc-47db-92b0-c1049a3c131f |
-| Azure Blob 저장소 | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
+| Azure Blob 스토리지 | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
 | Azure 데이터 레이크 | 17be2013-2549-41ce-96e7-a70363bec293 |
-| 데이터 랜딩 영역 | cd2fc47e-e838-4f38-a581-8fff2f99b63a |
+| 데이터 랜딩 구역 | cd2fc47e-e838-4f38-a581-8fff2f99b63a |
 | Google 클라우드 스토리지 | 585c15c4-6cbf-4126-8f87-e26bff78b657 |
 | SFTP | 354d6aad-4754-46e4-a576-1b384561c440 |
 
@@ -170,7 +170,7 @@ activation_res
 
 ## 데이터 랜딩 영역에 대한 공유 간소화
 
-데이터 세트를 데이터 랜딩 영역에 보다 쉽게 공유하려면 `aepp` 라이브러리가 다음을 제공합니다. `exportDatasetToDataLandingZone` 단일 함수 호출에서 위의 단계를 실행하는 함수:
+데이터 집합을 데이터 랜딩 영역에 더 쉽게 공유하기 위해 `aepp` 라이브러리는 단일 함수 호출에서 위의 단계를 실행하는 `exportDatasetToDataLandingZone` 함수를 제공합니다.
 
 ```python
 from aepp import exportDatasetToDataLandingZone

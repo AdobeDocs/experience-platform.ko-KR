@@ -3,7 +3,7 @@ title: 확장 기능 버전 보기
 description: 이 안내서에는 Adobe Experience Platform Assurance의 확장 기능 버전 보기에 대한 정보가 자세히 나와 있습니다.
 exl-id: a3a649da-1ef1-45a3-a1ed-6a7bc16c2987
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 100%
 

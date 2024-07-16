@@ -11,13 +11,13 @@ ht-degree: 4%
 
 # 확장 패키지 사용 승인 끝점
 
-확장 패키지는 [확장](./extensions.md) 확장 개발자가 작성한 경우입니다. 태그 사용자가 사용할 수 있는 추가 기능은 확장 패키지로 정의됩니다. 이러한 기능에는 주 모듈 및 공유 모듈이 포함될 수 있지만, 이러한 모듈은 다음과 같이 가장 자주 제공됩니다. [규칙 구성 요소](./rule-components.md) (이벤트, 조건 및 작업) 및 [데이터 요소](./data-elements.md).
+확장 패키지는 확장 개발자가 작성한 [확장](./extensions.md)을 나타냅니다. 태그 사용자가 사용할 수 있는 추가 기능은 확장 패키지로 정의됩니다. 이러한 기능에는 기본 모듈과 공유 모듈이 포함될 수 있지만, [규칙 구성 요소](./rule-components.md)(이벤트, 조건 및 작업) 및 [데이터 요소](./data-elements.md)(으)로 제공되는 경우가 가장 많습니다.
 
-확장 패키지는 개발자의 소유입니다. [회사](./companies.md). 확장 패키지의 소유자는 다른 비즈니스에 패키지의 개인 버전을 사용하도록 승인할 수 있습니다. 승인된 각 비즈니스에는 단일 확장 패키지에 대한 사용 승인이 제공되며, 이는 패키지의 모든 향후 및 현재 비공개 버전에 대해 유효합니다.
+확장 패키지는 개발자의 [회사](./companies.md)에 의해 소유됩니다. 확장 패키지의 소유자는 다른 비즈니스에 패키지의 개인 버전을 사용하도록 승인할 수 있습니다. 승인된 각 비즈니스에는 단일 확장 패키지에 대한 사용 승인이 제공되며, 이는 패키지의 모든 향후 및 현재 비공개 버전에 대해 유효합니다.
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
+이 가이드에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 [시작 안내서](../getting-started.md)에서 API 인증 방법에 대한 중요한 정보를 검토하십시오.
 
 ## 확장 패키지에 대한 확장 패키지 사용 권한 검색 {#list}
 
@@ -31,7 +31,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriza
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{PROPERTY_ID}` | 다음 `ID` 목록에 추가할 확장 패키지 사용 승인이 있는 속성의 입니다. |
+| `{PROPERTY_ID}` | 나열할 확장 패키지 사용 승인이 있는 속성의 `ID`입니다. |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ curl -X GET \
 
 ## 확장 패키지 사용 인증 만들기 {#create}
 
-각각에 대한 확장 패키지 사용 권한 만들기 [확장 패키지](./extension-packages.md) 및 `{ORG_ID}` 을(를) 인증할 조직입니다. 새 확장 패키지 사용 권한 부여를 만들려면 아래 끝점에 POST 요청을 하십시오.
+권한을 부여하려는 조직의 각 [확장 패키지](./extension-packages.md) 및 `{ORG_ID}`에 대해 확장 패키지 사용 권한을 만듭니다. 새 확장 패키지 사용 권한 부여를 만들려면 아래 끝점에 POST 요청을 하십시오.
 
 **API 형식**
 
@@ -112,7 +112,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriz
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 다음 `ID` 인증을 만들려는 확장 패키지의 경우입니다.&quot; |
+| `EXTENSION_PACKAGE_ID` | 인증을 만들려는 확장 패키지의 `ID`입니다.&quot; |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes.authorized_org_id` | 다음 `ID` 을(를) 인증할 조직입니다. |
+| `attributes.authorized_org_id` | 권한을 부여할 조직의 `ID`입니다. |
 
 **응답**
 
@@ -183,7 +183,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->위의 예제 응답에서 권한 부여는 현재 `pending_approval` 스테이지. 확장 패키지를 사용하기 전에 조직에서 승인을 받아야 합니다. 조직의 사용자는 권한 부여가 승인 보류 중인 동안 비공개 확장 패키지를 검색할 수 있지만 설치할 수 없고 확장 카탈로그에서 찾을 수 없습니다.
+>위의 예제 응답에서 권한 부여는 현재 `pending_approval` 단계에 있습니다. 확장 패키지를 사용하기 전에 조직에서 승인을 받아야 합니다. 조직의 사용자는 권한 부여가 승인 보류 중인 동안 비공개 확장 패키지를 검색할 수 있지만 설치할 수 없고 확장 카탈로그에서 찾을 수 없습니다.
 
 ## 확장 패키지 사용 승인 목록 검색 {#list_authorizations}
 
@@ -264,7 +264,7 @@ curl -X GET \
 
 ## 확장 패키지 사용 권한 삭제 {#delete}
 
-확장 패키지 사용 인증을 삭제하려면 다음을 포함하십시오. `ID` DELETE 요청의 경로에 있습니다. 이렇게 하면 승인된 조직이 카탈로그에서 확장 패키지의 개인 버전을 보고 해당 속성에 설치하지 못합니다.
+확장 패키지 사용 인증을 삭제하려면 DELETE 요청의 경로에 해당 `ID`을(를) 포함하십시오. 이렇게 하면 승인된 조직이 카탈로그에서 확장 패키지의 개인 버전을 보고 해당 속성에 설치하지 못합니다.
 
 >[!NOTE]
 >
@@ -278,7 +278,7 @@ DELETE /extension_package_usage_authorizations/{ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `ID` | 다음 `ID` 삭제하려는 확장 패키지 사용 권한 |
+| `ID` | 삭제하려는 확장 패키지 사용 권한 중 `ID`입니다. |
 
 {style="table-layout:auto"}
 
@@ -298,11 +298,11 @@ curl -X DELETE \
 
 ## 확장 패키지 사용 인증 업데이트 {#update}
 
-확장 패키지 사용 승인을 승인하거나 거부하려면 다음을 포함하십시오. `ID` PATCH 요청의 경로에 있습니다.
+확장 패키지 사용 승인을 승인하거나 거부하려면 PATCH 요청의 경로에 해당 `ID`을(를) 포함하십시오.
 
 >[!NOTE]
 >
->회사에 대한 확장 패키지 사용 승인을 승인하거나 거부하려면 다음을 수행해야 합니다. `manage_properties` 권한.
+>회사에 대한 확장 패키지 사용 승인을 승인하거나 거부하려면 `manage_properties` 권한이 있어야 합니다.
 
 **API 형식**
 
@@ -312,7 +312,7 @@ PATCH /extension_package_usage_authorizations/{ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `ID` | 다음 `ID` 삭제하려는 확장 패키지 사용 권한 |
+| `ID` | 삭제하려는 확장 패키지 사용 권한 중 `ID`입니다. |
 
 {style="table-layout:auto"}
 
@@ -338,7 +338,7 @@ curl -X PATCH \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes` | 수정할 속성입니다. 확장 패키지 사용 승인의 경우 이를 수정할 수 있습니다. `state`. |
+| `attributes` | 수정할 속성입니다. 확장 패키지 사용 승인의 경우 `state`을(를) 수정할 수 있습니다. |
 
 **응답**
 
@@ -398,7 +398,7 @@ GET /extension_package_usage_authorizations/{ID}/extension_package
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `ID` | 다음 `ID` 검색할 확장 패키지 사용 권한 중 하나입니다. |
+| `ID` | 검색할 확장 패키지 사용 권한 부여 `ID`입니다. |
 
 {style="table-layout:auto"}
 

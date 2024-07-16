@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Adobe Experience Platform 도움말의 통합 태그
 breadcrumb-title: 통합 태그 안내서
-user-guide-description: 통합 태그를 사용하여 메타데이터 분류법을 관리합니다. 태그 카테고리 및 태그를 만드는 방법을 알아봅니다.
+user-guide-description: 통합 태그를 사용하여 메타데이터 분류를 관리합니다. 태그 범주 및 태그를 만드는 방법에 대해 알아보십시오.
 source-git-commit: cc8e7074eafae11887486b0cec54154d96eb5a5c
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 53%
+ht-degree: 93%
 
 ---
 

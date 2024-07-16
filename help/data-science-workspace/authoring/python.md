@@ -3,18 +3,18 @@ keywords: Experience Platform;홈;인기 항목;데이터 액세스;python sdk;�
 solution: Experience Platform
 title: Data Science Workspace에서 Python을 사용하여 데이터 액세스
 type: Tutorial
-description: 다음 문서에는 Data Science Workspace에서 사용하기 위해 Python의 데이터에 액세스하는 방법에 대한 예가 포함되어 있습니다.
+description: 다음 문서에는 데이터 과학 Workspace에서 사용하기 위해 Python의 데이터에 액세스하는 방법에 대한 예가 포함되어 있습니다.
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
 
 # Data Science Workspace에서 Python을 사용하여 데이터 액세스
 
-다음 문서에는 Data Science Workspace에서 사용하기 위해 Python을 사용하여 데이터에 액세스하는 방법에 대한 예가 포함되어 있습니다. JupyterLab Notebooks를 사용한 데이터 액세스에 대한 자세한 내용은 [JupyterLab 노트북 데이터 액세스](../jupyterlab/access-notebook-data.md) 설명서를 참조하십시오.
+다음 문서에는 데이터 과학 Workspace에서 사용하기 위해 Python을 사용하여 데이터에 액세스하는 방법에 대한 예가 포함되어 있습니다. JupyterLab Notebooks를 사용하여 데이터에 액세스하는 방법에 대한 자세한 내용은 [JupyterLab Notebooks 데이터 액세스](../jupyterlab/access-notebook-data.md) 설명서를 참조하십시오.
 
 ## 데이터 세트 읽기
 
@@ -53,7 +53,7 @@ partitions = dataset.get_partitions_info()
 
 DISTINCT 절을 사용하면 행/열 수준에서 모든 고유 값을 가져와 응답에서 모든 중복 값을 제거할 수 있습니다.
 
-사용 예 `distinct()` 함수는 아래에 나와 있습니다.
+`distinct()` 함수를 사용하는 예는 아래에서 확인할 수 있습니다.
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
@@ -85,9 +85,9 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### 항목별 순서
 
-ORDER BY 절을 사용하면 수신된 결과를 지정된 열을 기준으로 특정 순서(오름차순 또는 내림차순)로 정렬할 수 있습니다. 이 작업은 다음을 사용하여 수행합니다 `sort()` 함수.
+ORDER BY 절을 사용하면 수신된 결과를 지정된 열을 기준으로 특정 순서(오름차순 또는 내림차순)로 정렬할 수 있습니다. 이 작업은 `sort()` 함수를 사용하여 수행됩니다.
 
-사용 예 `sort()` 함수는 아래에 나와 있습니다.
+`sort()` 함수를 사용하는 예는 아래에서 확인할 수 있습니다.
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
@@ -97,7 +97,7 @@ df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 
 LIMIT 절을 사용하면 데이터 집합에서 받는 레코드 수를 제한할 수 있습니다.
 
-사용 예 `limit()` 함수는 아래에 나와 있습니다.
+`limit()` 함수를 사용하는 예는 아래에서 확인할 수 있습니다.
 
 ```python
 df = dataset_reader.limit(100).read()
@@ -107,7 +107,7 @@ df = dataset_reader.limit(100).read()
 
 OFFSET 절을 사용하면 처음부터 행을 건너뛰고 이후 지점에서 행 반환을 시작할 수 있습니다. LIMIT와 함께 사용하여 블록의 행을 반복할 수 있습니다.
 
-사용 예 `offset()` 함수는 아래에 나와 있습니다.
+`offset()` 함수를 사용하는 예는 아래에서 확인할 수 있습니다.
 
 ```python
 df = dataset_reader.offset(100).read()
@@ -136,7 +136,7 @@ write_tracker = dataset_writer.write(<your_dataFrame>, file_format='json')
 
 >[!NOTE]
 >
->데이터 경로는 다음과 같습니다 **아님** 저장됨. 해당 데이터에 해당하는 경로를 저장해야 합니다.
+>데이터 경로가 **저장되지 않음**. 해당 데이터에 해당하는 경로를 저장해야 합니다.
 
 ### 사용자 공간에 쓰기
 
@@ -158,4 +158,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## 다음 단계
 
-Adobe Experience Platform 데이터 과학 작업 영역에서는 위의 코드 샘플을 사용하여 데이터를 읽고 쓰는 레서피 샘플을 제공합니다. 데이터에 액세스하기 위해 Python을 사용하는 방법에 대해 자세히 알아보려면 [데이터 과학 작업 공간 Python GitHub 저장소](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
+Adobe Experience Platform Data Science Workspace은 위의 코드 샘플을 사용하여 데이터를 읽고 쓰는 레서피 샘플을 제공합니다. 데이터에 액세스하는 데 Python을 사용하는 방법에 대해 자세히 알아보려면 [Data Science Workspace Python GitHub 저장소](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail)를 검토하십시오.

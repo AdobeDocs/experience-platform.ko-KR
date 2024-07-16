@@ -6,8 +6,8 @@ description: 이 문서에서는 ETL(추출, 변환, 로드) 개발자에게 발
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 1%
+source-wordcount: '474'
+ht-degree: 2%
 
 ---
 
@@ -19,14 +19,14 @@ ht-degree: 1%
 
 ### 샘플 파일
 
-샘플 CSV 및 JSON 파일은 공개 ETL 참조에서 사용할 수 있습니다 [!DNL GitHub] Adobe에 의해 유지 관리되는 리포지토리:
+샘플 CSV 및 JSON 파일은 Adobe에서 유지 관리하는 공개 ETL 참조 [!DNL GitHub] 리포지토리에서 사용할 수 있습니다.
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
 ### CSV 예
 
-다음 CRM 데이터를 (으)로 내보냈습니다 `CRM_profiles.csv`:
+다음 CRM 데이터를 `CRM_profiles.csv`(으)로 내보냈습니다.
 
 ```shell
 TITLE   F_NAME  L_NAME  GENDER  DOB EMAIL   CRMID   ECID    LOYALTYID   ECID2   PHONE   STREET  CITY    STATE   COUNTRY ZIP LAT LONG
@@ -42,7 +42,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### 매핑
 
 CRM 데이터에 대한 매핑 요구 사항은 다음 표에 요약되어 있으며 다음 변환을 포함합니다.
-- ID 열 대상 `identityMap` 속성
+- `identityMap` 속성에 대한 ID 열
 - 생년월일(DOB) - 연월일
 - 문자열을 중복 또는 짧은 정수로 바꿉니다.
 
@@ -52,8 +52,8 @@ CRM 데이터에 대한 매핑 요구 사항은 다음 표에 요약되어 있�
 | F_NAME | person.name.firstName | 문자열로 복사 |
 | L_NAME | person.name.lastName | 문자열로 복사 |
 | 성별 | person.gender | Gender를 해당 person.gender 열거형 값으로 변환 |
-| DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | birthDayAndMonth를 문자열로 변환<br/>birthDate를 문자열로 변환<br/>birthYear를 짧은 int로 변환 |
-| 이메일 | personalEmail.address | 문자열로 복사 |
+| DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | birthDayAndMonth를 string으로 변환<br/>birthDate를 string으로 변환<br/>birthYear를 short int로 변환 |
+| EMAIL | personalEmail.address | 문자열로 복사 |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | idMap의 CRMID 배열에 문자열로 복사하고 기본 을 false로 설정합니다. |
 | ECID | identityMap.ECID[{&quot;id&quot;:x, primary: false}] | idMap에서 ECID 배열의 첫 번째 항목에 문자열로 복사하고 기본 을 false로 설정합니다. |
 | 충혈- | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | identityMap의 LOYALTYID 배열에 문자열로 복사하고 Primary를 true로 설정합니다. |
@@ -70,7 +70,7 @@ CRM 데이터에 대한 매핑 요구 사항은 다음 표에 요약되어 있�
 
 ### 출력 XDM
 
-다음 샘플은에 표시된 대로 XDM으로 변환된 CSV의 처음 두 행을 보여 줍니다. `CRM_profiles.json`:
+다음 샘플은 `CRM_profiles.json`과 같이 XDM으로 변환된 CSV의 처음 두 행을 보여 줍니다.
 
 ```json
 {
@@ -176,7 +176,7 @@ CRM 데이터에 대한 매핑 요구 사항은 다음 표에 요약되어 있�
 
 ### 데이터 프레임 예
 
-다음 예제 데이터 프레임의 구조가 를 구현하는 스키마에 매핑되었습니다. [!DNL XDM Individual Profile] 클래스 및 에는 해당 형식의 스키마와 관련된 가장 일반적인 필드가 포함되어 있습니다.
+다음 예제 데이터 프레임의 구조는 [!DNL XDM Individual Profile] 클래스를 구현하는 스키마에 매핑되었으며 해당 형식의 스키마와 관련된 가장 일반적인 필드를 포함합니다.
 
 ```python
 [
@@ -282,11 +282,11 @@ Adobe Experience Platform에서 사용하기 위해 데이터 프레임을 구�
 
 ID 배열에 대한 매핑 요구 사항은 다음 표에 요약되어 있습니다.
 
-| ID 필드 | identityMap 필드 | 데이터 형식 |
+| ID 필드 | identityMap 필드 | 데이터 유형 |
 | -------------- | ----------------- | --------- |
 | id[0].id | identityMap[이메일][{"id"}] | 문자열로 복사 |
 | id[1].id | identityMap[CRMID][{"id"}] | 문자열로 복사 |
-| id[2].id | identityMap[충혈-][{"id"}] | 문자열로 복사 |
+| id[2].id | identityMap[LOYALTYID][{"id"}] | 문자열로 복사 |
 
 ### 출력 XDM
 

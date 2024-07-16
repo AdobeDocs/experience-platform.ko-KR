@@ -8,7 +8,7 @@ role: Developer
 source-git-commit: 3c2d7fafb2d4385c8631c6737c5753f3b669e203
 workflow-type: tm+mt
 source-wordcount: '71'
-ht-degree: 88%
+ht-degree: 91%
 
 ---
 
@@ -20,14 +20,14 @@ ht-degree: 88%
 - 보기 횟수 {#view}
    - [이벤트 트랜잭션](./views/event-transactions.md)
    - [확장 기능 버전](./views/extension-versions.md)
-   - [Edge 게재](./views/edge-delivery.md)
+   - [Edge Delivery](./views/edge-delivery.md)
    - [인앱 메시지](./views/in-app-messaging.md)
    - [온디바이스 보기](./views/on-device-views.md)
    - [Places Service](./views/places-service.md)
    - [푸시 디버그 보기](./views/push-debug-view.md)
    - [유효성 검사 요약](./views/validation-summary.md)
    - [Adobe Analytics](./views/adobe-analytics.md)
-   - [Analytics 이벤트 2.0(베타)](./views/adobe-analytics-edge.md)
+   - [Analytics 이벤트 2.0 (Beta)](./views/adobe-analytics-edge.md)
    - [스트리밍 미디어용 Adobe Analytics](./views/adobe-analytics-streaming-media.md)
 - 튜토리얼 {#tutorials}
    - [Assurance 구현](./tutorials/implement-assurance.md)

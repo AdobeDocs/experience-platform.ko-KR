@@ -4,8 +4,8 @@ description: Adobe Experience Platform의 Adobe Target용 태그 확장에 대�
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 73%
+source-wordcount: '1179'
+ht-degree: 71%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -23,9 +23,9 @@ ht-degree: 73%
 >
 > Adobe Target 확장을 사용하려면 at.js가 필요합니다. 이 확장은 mbox.js를 지원하지 않습니다.
 
-Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음 을 선택합니다 **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 클릭하고 Target 확장을 마우스로 가리킨 다음 을 선택합니다 **[!UICONTROL 설치]**.
+Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고 Target 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
 
-확장을 구성하려면 를 엽니다. [!UICONTROL 확장] 탭을 클릭하고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**.
+확장을 구성하려면 [!UICONTROL 확장] 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
 
 ![](../../../images/ext-target-config.png)
 
@@ -72,7 +72,7 @@ Target이 브라우저에서 쿠키를 설정하는 위치를 결정합니다.
 
 #### Target 사용자 인터페이스에서 사용할 수 있는 기타 at.js 설정
 
-에서 사용할 수 있는 몇 가지 설정 [!UICONTROL at.js 설정 편집] Target UI의 페이지는 Target 확장의 일부가 아닙니다. 다음은 추천 해결 방법입니다.
+Target UI의 [!UICONTROL at.js 설정 편집] 페이지에서 사용할 수 있는 몇 가지 설정은 Target 확장의 일부가 아닙니다. 다음은 추천 해결 방법입니다.
 
 * Auto-create global mbox. 이 설정은 Target 확장에서 글로벌 Mbox 실행 작업에 의해 대체됩니다.
 * Library Header. 이 설정은 Target 확장의 일부가 아닙니다. Target 로드 작업을 사용하기 전에 Core Extension>Custom Code 작업에서 at.js 앞에 로드해야 하는 코드를 지정합니다.
@@ -129,7 +129,7 @@ Target 확장이 설치되면 적어도 한 개의 규칙을 만들어 적절하
 
 ## 비동기 배포를 통한 Adobe Target 확장
 
-태그는 비동기식으로 배포할 수 있습니다. Target을 통해 비동기식으로 Target 라이브러리를 로드하는 경우 태그도 비동기식으로 로드됩니다. 이 시나리오는 완벽하게 지원되지만, 처리해야 하는 한 가지 추가 고려 사항이 있습니다.
+태그는 비동기식으로 배포할 수 있습니다. Target을 통해 비동기식으로 태그 라이브러리를 로드하는 경우 Target도 비동기식으로 로드됩니다. 이 시나리오는 완벽하게 지원되지만, 처리해야 하는 한 가지 추가 고려 사항이 있습니다.
 
 비동기 배포의 경우, Target 라이브러리가 완전히 로드되고 콘텐츠 교환이 수행되기 전에 페이지에서 기본 콘텐츠 렌더링을 완료할 수 있습니다. 이렇게 하면 Target에서 지정한 개인화된 콘텐츠로 대체되기 전에 기본 콘텐츠가 잠깐 나타나는 &quot;깜박임&quot;이라고 하는 것이 나타날 수 있습니다. 이러한 깜박임이 발생하지 않도록 하려면 콘텐츠 깜박임을 방지하기 위해 코드 조각 사전 숨김을 사용하여 태그 번들을 비동기식으로 로드하는 것이 좋습니다.
 

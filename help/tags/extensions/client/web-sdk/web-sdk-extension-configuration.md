@@ -11,7 +11,7 @@ ht-degree: 5%
 
 # 웹 SDK 태그 확장 구성
 
-다음 [!DNL Web SDK] 태그 확장은 Experience Platform Edge Network을 통해 웹 속성에서 Adobe Experience Cloud으로 데이터를 전송합니다.
+[!DNL Web SDK] 태그 확장은 Experience Platform Edge Network을 통해 웹 속성에서 Adobe Experience Cloud으로 데이터를 보냅니다.
 
 확장을 사용하면 데이터를 Platform으로 스트리밍하고 ID를 동기화하며 고객 동의 신호를 처리하고 컨텍스트 데이터를 자동으로 수집할 수 있습니다.
 
@@ -19,15 +19,15 @@ ht-degree: 5%
 
 ## 웹 SDK 태그 확장 설치 {#install}
 
-Web SDK 태그 확장 프로그램은에 설치할 속성이 필요합니다. 아직 이 작업을 수행하지 않았다면 의 설명서를 참조하십시오. [태그 속성 만들기](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
+Web SDK 태그 확장 프로그램은에 설치할 속성이 필요합니다. 아직 작성하지 않았다면 [태그 속성 만들기](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)에 대한 설명서를 참조하십시오.
 
-속성을 만든 후 속성을 열고 **[!UICONTROL 확장]** 왼쪽 막대의 탭입니다.
+속성을 만든 후 속성을 열고 왼쪽 막대에서 **[!UICONTROL 확장]** 탭을 선택합니다.
 
-다음 항목 선택 **[!UICONTROL 카탈로그]** 탭. 사용 가능한 확장 목록에서 [!DNL Web SDK] 확장 및 선택 **[!UICONTROL 설치]**.
+**[!UICONTROL 카탈로그]** 탭을 선택합니다. 사용 가능한 확장 목록에서 [!DNL Web SDK] 확장을 찾아 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
 
-![웹 SDK 확장이 선택된 태그 UI를 보여 주는 이미지](assets/web-sdk-install.png)
+![선택한 웹 SDK 확장의 태그 UI를 보여 주는 이미지](assets/web-sdk-install.png)
 
-선택 후 **[!UICONTROL 설치]**, 웹 SDK 태그 확장을 구성하고 구성을 저장해야 합니다.
+**[!UICONTROL 설치]**&#x200B;를 선택한 후 Web SDK 태그 확장을 구성하고 구성을 저장해야 합니다.
 
 >[!NOTE]
 >
@@ -39,9 +39,9 @@ Web SDK 태그 확장 프로그램은에 설치할 속성이 필요합니다. �
 
 ![태그 UI에서 웹 SDK 태그 확장의 일반 설정을 보여 주는 이미지](assets/web-sdk-ext-general.png)
 
-* **[!UICONTROL 이름]**: Adobe Experience Platform 웹 SDK 확장은 페이지에서 여러 인스턴스를 지원합니다. 이 이름은 태그 구성이 있는 여러 조직에 데이터를 전송하는 데 사용됩니다. 인스턴스 이름의 기본값은 입니다. `alloy`. 그러나 인스턴스 이름을 유효한 JavaScript 개체 이름으로 변경할 수 있습니다.
+* **[!UICONTROL 이름]**: Adobe Experience Platform Web SDK 확장은 페이지에서 여러 인스턴스를 지원합니다. 이 이름은 태그 구성이 있는 여러 조직에 데이터를 전송하는 데 사용됩니다. 인스턴스 이름은 기본적으로 `alloy`입니다. 그러나 인스턴스 이름을 유효한 JavaScript 개체 이름으로 변경할 수 있습니다.
 * **[!UICONTROL IMS 조직 ID]**: Adobe 시 데이터를 전송할 조직의 ID입니다. 대부분의 경우 자동으로 채워진 기본값을 사용합니다. 페이지에 인스턴스가 여러 개 있으면 이 필드를 데이터를 보낼 두 번째 조직의 값으로 채웁니다.
-* **[!UICONTROL Edge 도메인]**: 확장에서 데이터를 보내고 받는 도메인입니다. Adobe은 이 확장에 자사 도메인(CNAME)을 사용하는 것을 권장합니다. 기본 타사 도메인은 개발 환경에서 작동하지만, 프로덕션 환경에는 적합하지 않습니다. 자사 CNAME을 설정하는 방법에 대한 지침은 [여기](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=ko-KR)에 나와 있습니다.
+* **[!UICONTROL Edge 도메인]**: 확장 프로그램에서 데이터를 보내고 받는 도메인입니다. Adobe은 이 확장에 자사 도메인(CNAME)을 사용하는 것을 권장합니다. 기본 타사 도메인은 개발 환경에서 작동하지만, 프로덕션 환경에는 적합하지 않습니다. 자사 CNAME을 설정하는 방법에 대한 지침은 [여기](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=ko-KR)에 나와 있습니다.
 
 ## 데이터 스트림 설정 구성 {#datastreams}
 
@@ -49,9 +49,9 @@ Web SDK 태그 확장 프로그램은에 설치할 속성이 필요합니다. �
 
 Edge Network에 요청이 전송되면 서버측 구성을 참조하는 데 데이터스트림 ID가 사용됩니다. 웹 사이트에서 코드를 변경하지 않고도 구성을 업데이트할 수 있습니다.
 
-다음 안내서를 참조하십시오 [데이터스트림](../../../../datastreams/overview.md) 데이터 스트림을 구성하는 방법에 대해 알아봅니다.
+데이터 스트림을 구성하는 방법을 알아보려면 [데이터 스트림](../../../../datastreams/overview.md)의 안내서를 참조하십시오.
 
-사용 가능한 드롭다운 메뉴에서 데이터 스트림을 선택하거나 **[!UICONTROL 값 입력]** 각 환경에 대한 사용자 지정 데이터 스트림 ID를 입력합니다.
+사용 가능한 드롭다운 메뉴에서 데이터 스트림을 선택하거나 **[!UICONTROL 값 입력]**&#x200B;을 선택하고 각 환경에 대한 사용자 지정 데이터 스트림 ID를 입력할 수 있습니다.
 
 ![태그 UI에서 웹 SDK 태그 확장의 데이터 스트림 설정을 보여 주는 이미지](assets/web-sdk-ext-datastreams.png)
 
@@ -61,7 +61,7 @@ Edge Network에 요청이 전송되면 서버측 구성을 참조하는 데 데�
 
 기본 동의 수준이 사용자 프로필에 저장되지 않습니다.
 
-![태그 UI에서 웹 SDK 태그 확장의 개인 정보 설정을 보여 주는 이미지](assets/web-sdk-ext-privacy.png)
+![태그 UI에서 Web SDK 태그 확장의 개인 정보 설정을 보여 주는 이미지](assets/web-sdk-ext-privacy.png)
 
 | [!UICONTROL 기본 동의 수준] | 설명 |
 | --- | --- |
@@ -72,28 +72,28 @@ Edge Network에 요청이 전송되면 서버측 구성을 참조하는 데 데�
 
 >[!TIP]
 >
->사용 **[!UICONTROL 출력]** 또는 **[!UICONTROL 보류 중]** 비즈니스 운영에 대해 명시적인 사용자 동의가 필요한 경우.
+>비즈니스 작업에 대한 명시적 사용자 동의가 필요한 경우 **[!UICONTROL Out]** 또는 **[!UICONTROL 보류 중]**&#x200B;을(를) 사용합니다.
 
 ## ID 설정 구성 {#identity}
 
 이 섹션에서는 사용자 ID를 처리할 때 웹 SDK의 동작을 정의할 수 있습니다.
 
-![태그 UI에서 웹 SDK 태그 확장의 ID 설정을 보여 주는 이미지](assets/web-sdk-ext-identity.png)
+![태그 UI에서 Web SDK 태그 확장의 ID 설정을 보여 주는 이미지](assets/web-sdk-ext-identity.png)
 
-* **[!UICONTROL VisitorAPI에서 ECID 마이그레이션]**: 이 옵션은 기본적으로 활성화되어 있습니다. 이 기능이 활성화되면 SDK는 `AMCV` 및 `s_ecid` 쿠키 및 설정 `AMCV` 사용한 쿠키 [!DNL Visitor.js]. 이 기능은 일부 페이지에서 를 사용하고 있을 수 있으므로 Web SDK로 마이그레이션할 때 중요합니다 [!DNL Visitor.js]. 이 옵션을 사용하면 SDK에서 동일한 옵션을 계속 사용할 수 있습니다 [!DNL ECID] 따라서 사용자가 두 명의 개별 사용자로 식별되지 않습니다.
-* **[!UICONTROL 서드파티 쿠키 사용]**: 이 옵션이 활성화되면 Web SDK는 사용자 식별자를 서드파티 쿠키에 저장하려고 합니다. 성공하면 사용자는 각 도메인에서 별도의 사용자로 식별되지 않고 여러 도메인을 탐색할 때 단일 사용자로 식별됩니다. 이 옵션이 활성화된 경우 브라우저가 서드파티 쿠키를 지원하지 않거나 사용자가 서드파티 쿠키를 허용하지 않도록 구성한 경우 SDK에서 여전히 서드파티 쿠키에 사용자 식별자를 저장하지 못할 수 있습니다. 이 경우 SDK는 자사 도메인에만 식별자를 저장합니다.
+* **[!UICONTROL VisitorAPI에서 ECID 마이그레이션]**: 이 옵션은 기본적으로 사용됩니다. 이 기능이 활성화되면 SDK는 `AMCV` 및 `s_ecid` 쿠키를 읽고 [!DNL Visitor.js]에서 사용하는 `AMCV` 쿠키를 설정할 수 있습니다. 일부 페이지에서 [!DNL Visitor.js]을(를) 사용하고 있을 수 있으므로 이 기능은 Web SDK로 마이그레이션할 때 중요합니다. 이 옵션을 사용하면 사용자가 두 명의 개별 사용자로 식별되지 않도록 SDK에서 동일한 [!DNL ECID]을(를) 계속 사용할 수 있습니다.
+* **[!UICONTROL 타사 쿠키 사용]**: 이 옵션이 활성화되면 Web SDK는 사용자 식별자를 타사 쿠키에 저장하려고 합니다. 성공하면 사용자는 각 도메인에서 별도의 사용자로 식별되지 않고 여러 도메인을 탐색할 때 단일 사용자로 식별됩니다. 이 옵션이 활성화된 경우 브라우저가 서드파티 쿠키를 지원하지 않거나 사용자가 서드파티 쿠키를 허용하지 않도록 구성한 경우 SDK에서 여전히 서드파티 쿠키에 사용자 식별자를 저장하지 못할 수 있습니다. 이 경우 SDK는 자사 도메인에만 식별자를 저장합니다.
 
   >[!IMPORTANT]
-  >>서드파티 쿠키는 [자사 디바이스 ID](../../../../web-sdk/identity/first-party-device-ids.md) Web SDK의 기능입니다.
+  >>타사 쿠키는 Web SDK의 [자사 장치 ID](../../../../web-sdk/identity/first-party-device-ids.md) 기능과 호환되지 않습니다.
 자사 디바이스 ID를 사용하거나 서드파티 쿠키를 사용할 수 있지만 두 기능을 동시에 사용할 수는 없습니다.
   >
 ## 개인화 설정 구성 {#personalization}
 
 이 섹션에서는 개인화된 콘텐츠가 로드되는 동안 페이지의 특정 부분을 숨기는 방법을 구성할 수 있습니다. 이렇게 하면 방문자에게만 개인화된 페이지가 표시됩니다.
 
-![태그 UI에서 웹 SDK 태그 확장의 개인화 설정을 보여 주는 이미지](assets/web-sdk-ext-personalization.png)
+![태그 UI에서 Web SDK 태그 확장의 개인화 설정을 보여 주는 이미지](assets/web-sdk-ext-personalization.png)
 
-* **[!UICONTROL Target을 at.js에서 Web SDK로 마이그레이션]**: 이 옵션을 사용하여 활성화합니다 [!DNL Web SDK] 기존 을 읽고 씁니다. `mbox` 및 `mboxEdgeCluster` at.js에서 사용하는 쿠키 `1.x` 또는 `2.x` 라이브러리. 이렇게 하면 Web SDK를 사용하는 페이지에서 at.js를 사용하는 페이지로 이동하는 동안 방문자 프로필을 유지하는 데 도움이 됩니다 `1.x` 또는 `2.x` 라이브러리 및 그 반대의 경우도 가능합니다.
+* **[!UICONTROL Target을 at.js에서 Web SDK로 마이그레이션]**: [!DNL Web SDK]이(가) at.js `1.x` 또는 `2.x` 라이브러리에서 사용하는 레거시 `mbox` 및 `mboxEdgeCluster` 쿠키를 읽고 쓸 수 있도록 하려면 이 옵션을 사용하십시오. 이렇게 하면 Web SDK를 사용하는 페이지에서 at.js `1.x` 또는 `2.x` 라이브러리를 사용하는 페이지로 이동하거나 그 반대로 이동하는 동안 방문자 프로필을 유지하는 데 도움이 됩니다.
 
 ### 스타일 미리 숨기기 {#prehiding-style}
 
@@ -103,37 +103,37 @@ Edge Network에 요청이 전송되면 서버측 구성을 참조하는 데 데�
 
 코드 조각 사전 숨김은 Web SDK 라이브러리가 비동기적으로 로드될 때 유용합니다. 이 경우 깜박임을 방지하려면 Web SDK 라이브러리가 로드되기 전에 콘텐츠를 숨기는 것이 좋습니다.
 
-코드 조각 사전 숨김을 사용하려면 코드 조각을 복사하여 내부에 붙여 넣습니다. `<head>` 페이지의 요소입니다.
+코드 조각 사전 숨김을 사용하려면 해당 코드 조각을 복사하여 페이지의 `<head>` 요소 내부에 붙여넣습니다.
 
 >[!IMPORTANT]
 >
-Adobe 코드 조각 사전 숨김을 사용하는 경우 동일한 항목을 사용하는 것이 좋습니다 [!DNL CSS] 에서 사용하는 규칙입니다. [스타일 미리 숨기기](#prehiding-style).
+Adobe 코드 조각 사전 숨김을 사용하는 경우 [사전 숨김 스타일](#prehiding-style)에서 사용하는 규칙과 동일한 [!DNL CSS] 규칙을 사용하는 것이 좋습니다.
 
 ## 데이터 수집 설정 구성 {#data-collection}
 
-데이터 수집 구성 설정을 관리합니다. JavaScript 라이브러리의 유사한 설정은 [`configure`](/help/web-sdk/commands/configure/overview.md) 명령입니다.
+데이터 수집 구성 설정을 관리합니다. [`configure`](/help/web-sdk/commands/configure/overview.md) 명령을 사용하여 JavaScript 라이브러리에서 유사한 설정을 사용할 수 있습니다.
 
-![태그 UI에서 웹 SDK 태그 확장의 데이터 수집 설정을 보여 주는 이미지입니다.](assets/web-sdk-ext-collection.png)
+![태그 UI에서 Web SDK 태그 확장의 데이터 수집 설정을 보여 주는 이미지입니다.](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL 이벤트 전송 콜백 전]**: Adobe으로 전송된 페이로드를 평가하고 수정하는 콜백 함수입니다. 사용 `content` 페이로드를 수정하는 콜백 함수 내의 변수입니다. 이 콜백은 과 동일한 태그입니다. [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) JavaScript 라이브러리에서 참조할 수 있습니다.
-* **[!UICONTROL 내부 링크 클릭 수 수집]**: 사이트 또는 속성 내부의 링크 추적 데이터 수집을 활성화하는 확인란입니다. 이 확인란을 활성화하면 이벤트 그룹화 옵션이 표시됩니다.
-   * **[!UICONTROL 이벤트 그룹화 없음]**: 링크 추적 데이터가 별도의 이벤트로 Adobe에 전송됩니다. 별도의 이벤트에서 전송된 링크 클릭으로 Adobe Experience Platform에 전송된 데이터의 계약적 사용이 늘어날 수 있습니다.
-   * **[!UICONTROL 세션 저장소를 사용한 이벤트 그룹화]**: 다음 페이지 이벤트가 발생할 때까지 링크 추적 데이터를 세션 저장소에 저장합니다. 다음 페이지에서는 저장된 링크 추적 데이터와 페이지 보기 데이터가 동시에 Adobe으로 전송됩니다. Adobe은 내부 링크를 추적할 때 이 설정을 활성화할 것을 권장합니다.
-   * **[!UICONTROL 로컬 개체를 사용한 이벤트 그룹화]**: 다음 페이지 이벤트가 발생할 때까지 링크 추적 데이터를 로컬 개체에 저장합니다. 방문자가 새 페이지로 이동하면 링크 추적 데이터가 손실됩니다. 이 설정은 단일 페이지 애플리케이션 컨텍스트에서 가장 유용합니다.
-* **[!UICONTROL 외부 링크 클릭 수 수집]**: 외부 링크 컬렉션을 활성화하는 확인란입니다.
-* **[!UICONTROL 다운로드 링크 클릭 수 수집]**: 다운로드 링크의 컬렉션을 활성화하는 확인란입니다.
+* **[!UICONTROL Adobe 전송 전 콜백]**: 이벤트에 전송된 페이로드를 평가하고 수정하는 콜백 함수입니다. 콜백 함수 내의 `content` 변수를 사용하여 페이로드를 수정하십시오. 이 콜백은 JavaScript 라이브러리의 [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md)에 해당하는 태그입니다.
+* **[!UICONTROL 내부 링크 클릭 수 수집]**: 사이트 또는 속성 내부에서 링크 추적 데이터를 수집할 수 있는 확인란입니다. 이 확인란을 활성화하면 이벤트 그룹화 옵션이 표시됩니다.
+   * **[!UICONTROL Adobe 그룹화가 없습니다]**: 링크 추적 데이터가 별도의 이벤트에서 이벤트에 전송됩니다. 별도의 이벤트에서 전송된 링크 클릭으로 Adobe Experience Platform에 전송된 데이터의 계약적 사용이 늘어날 수 있습니다.
+   * **[!UICONTROL 세션 저장소를 사용하여 이벤트 그룹화]**: 다음 페이지 이벤트까지 세션 저장소에 링크 추적 데이터를 저장합니다. 다음 페이지에서는 저장된 링크 추적 데이터와 페이지 보기 데이터가 동시에 Adobe으로 전송됩니다. Adobe은 내부 링크를 추적할 때 이 설정을 활성화할 것을 권장합니다.
+   * **[!UICONTROL 로컬 개체를 사용한 이벤트 그룹화]**: 다음 페이지 이벤트까지 링크 추적 데이터를 로컬 개체에 저장합니다. 방문자가 새 페이지로 이동하면 링크 추적 데이터가 손실됩니다. 이 설정은 단일 페이지 애플리케이션 컨텍스트에서 가장 유용합니다.
+* **[!UICONTROL 외부 링크 클릭 수 수집]**: 외부 링크 수집을 활성화하는 확인란입니다.
+* **[!UICONTROL 다운로드 링크 클릭 수 수집]**: 다운로드 링크를 수집할 수 있는 확인란입니다.
 * **[!UICONTROL 다운로드 링크 한정자]**: 링크 URL을 다운로드 링크로 규정하는 정규 표현식입니다.
-* **[!UICONTROL 필터 클릭 속성]**: 컬렉션 전에 클릭 관련 속성을 평가하고 수정하는 콜백 함수입니다. 이 함수는 [!UICONTROL 이벤트 전송 콜백 전].
-* **컨텍스트 설정**: 특정 XDM 필드를 채우는 방문자 정보를 자동으로 수집합니다. 다음을 선택할 수 있습니다. **[!UICONTROL 모든 기본 컨텍스트 정보]** 또는 **[!UICONTROL 특정 컨텍스트 정보]**. 와 동등한 태그입니다. [`context`](/help/web-sdk/commands/configure/context.md) JavaScript 라이브러리에서 참조할 수 있습니다.
-   * **[!UICONTROL 웹]**: 현재 페이지에 대한 정보를 수집합니다.
-   * **[!UICONTROL 장치]**: 사용자 장치에 대한 정보를 수집합니다.
+* **[!UICONTROL 클릭 속성 필터링]**: 컬렉션 전에 클릭 관련 속성을 평가하고 수정하는 콜백 함수입니다. 이 함수는 [!UICONTROL 이벤트 보내기 전 ] 전에 실행됩니다.
+* **컨텍스트 설정**: 특정 XDM 필드를 채우는 방문자 정보를 자동으로 수집합니다. **[!UICONTROL 모든 기본 컨텍스트 정보]** 또는 **[!UICONTROL 특정 컨텍스트 정보]**&#x200B;를 선택할 수 있습니다. JavaScript 라이브러리의 [`context`](/help/web-sdk/commands/configure/context.md)에 해당하는 태그입니다.
+   * **[!UICONTROL Web]**: 현재 페이지에 대한 정보를 수집합니다.
+   * **[!UICONTROL 장치]**: 사용자의 장치에 대한 정보를 수집합니다.
    * **[!UICONTROL 환경]**: 사용자의 브라우저에 대한 정보를 수집합니다.
    * **[!UICONTROL 위치 컨텍스트]**: 사용자 위치에 대한 정보를 수집합니다.
    * **[!UICONTROL 높은 엔트로피 사용자 에이전트 힌트]**: 사용자 장치에 대한 자세한 정보를 수집합니다.
 
 >[!TIP]
 >
-다음 **[!UICONTROL 링크 전에 전송 을 클릭합니다]** 필드는 이미 구성된 속성에만 표시되는 더 이상 사용되지 않는 콜백입니다. 와 동등한 태그입니다. [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) JavaScript 라이브러리에서 참조할 수 있습니다. 사용 **[!UICONTROL 필터 클릭 속성]** 콜백을 사용하여 클릭 데이터를 필터링하거나 조정하거나 **[!UICONTROL 이벤트 전송 콜백 전]** Adobe으로 전송되는 전체 페이로드를 필터링하거나 조정합니다. 둘 다 **[!UICONTROL 필터 클릭 속성]** 콜백 및 **[!UICONTROL 링크 전에 전송 을 클릭합니다]** 콜백이 설정되며 **[!UICONTROL 필터 클릭 속성]** 콜백이 실행됩니다.
+**[!UICONTROL 링크 클릭 전 전송]** 필드는 이미 구성된 속성에만 표시되는 더 이상 사용되지 않는 콜백입니다. JavaScript 라이브러리의 [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md)에 해당하는 태그입니다. **[!UICONTROL 필터 클릭 속성]** 콜백을 사용하여 클릭 데이터를 필터링하거나 조정하거나 **[!UICONTROL 이벤트 보내기 전 켜기 콜백]**&#x200B;을 사용하여 Adobe으로 전송되는 전체 페이로드를 필터링하거나 조정합니다. **[!UICONTROL 필터 클릭 속성]** 콜백과 **[!UICONTROL 링크 클릭 보내기 전]** 콜백이 모두 설정된 경우 **[!UICONTROL 필터 클릭 속성]** 콜백만 실행됩니다.
 
 ## 미디어 컬렉션 설정 구성 {#media-collection}
 
@@ -141,14 +141,14 @@ Adobe 코드 조각 사전 숨김을 사용하는 경우 동일한 항목을 사
 
 수집된 데이터에는 미디어 재생, 일시 정지, 완료 및 기타 관련 이벤트에 대한 정보가 포함될 수 있습니다. 수집되면 이 데이터를 Adobe Experience Platform 및/또는 Adobe Analytics으로 전송하여 보고서를 생성할 수 있습니다. 이 기능은 웹 사이트에서의 미디어 소비 행동을 추적하고 이해하는 포괄적인 솔루션을 제공합니다.
 
-![태그 UI에서 웹 SDK 태그 확장의 미디어 컬렉션 설정을 보여 주는 이미지](assets/media-collection.png)
+![태그 UI에서 Web SDK 태그 확장의 미디어 컬렉션 설정을 보여 주는 이미지](assets/media-collection.png)
 
 
 * **[!UICONTROL 채널]**: 미디어 컬렉션이 발생하는 채널의 이름입니다. 예: `Video channel`.
 * **[!UICONTROL 플레이어 이름]**: 미디어 플레이어의 이름입니다.
-* **[!UICONTROL 응용 프로그램 버전]**: 미디어 플레이어 애플리케이션 버전입니다.
-* **[!UICONTROL 주 핑 간격]**: 기본 콘텐츠에 대한 Ping 빈도(초)입니다. 기본값은 `10`입니다. 값의 범위는 다음과 같습니다. `10` 끝 `50` 초.  값을 지정하지 않으면 를 사용할 때 기본값이 사용됩니다 [자동으로 추적된 세션](../../../../web-sdk/commands/createmediasession.md#automatic).
-* **[!UICONTROL 광고 Ping 간격]**: 광고 콘텐츠에 대한 Ping 빈도(초)입니다. 기본값은 `10`입니다. 값의 범위는 다음과 같습니다. `1` 끝 `10` 초. 값을 지정하지 않으면 를 사용할 때 기본값이 사용됩니다 [자동으로 추적된 세션](../../../../web-sdk/commands/createmediasession.md#automatic)
+* **[!UICONTROL 응용 프로그램 버전]**: 미디어 플레이어 응용 프로그램의 버전입니다.
+* **[!UICONTROL 기본 ping 간격]**: 기본 콘텐츠에 대한 ping 빈도(초)입니다. 기본값은 `10`입니다. 값의 범위는 `10`초에서 `50`초까지입니다.  값을 지정하지 않으면 [자동으로 추적된 세션](../../../../web-sdk/commands/createmediasession.md#automatic)을 사용할 때 기본값이 사용됩니다.
+* **[!UICONTROL 광고 ping 간격]**: 광고 콘텐츠에 대한 ping 빈도(초)입니다. 기본값은 `10`입니다. 값의 범위는 `1`초에서 `10`초까지입니다. 값을 지정하지 않으면 [자동으로 추적된 세션](../../../../web-sdk/commands/createmediasession.md#automatic)을 사용할 때 기본값이 사용됩니다.
 
 ## 데이터스트림 재정의 구성 {#datastream-overrides}
 
@@ -161,7 +161,7 @@ Adobe 코드 조각 사전 숨김을 사용하는 경우 동일한 항목을 사
 1. 먼저 [데이터스트림 구성 페이지](/help/datastreams/configure.md)에서 데이터스트림 구성 재정의를 정의해야 합니다.
 2. 그런 다음 웹 SDK 명령을 통하거나 웹 SDK 태그 확장을 사용하여 Edge Network에 재정의를 전송해야 합니다.
 
-데이터 스트림 보기 [구성 재정의 설명서](/help/datastreams/overrides.md) 데이터스트림 구성을 재정의하는 방법에 대한 자세한 지침을 확인하십시오.
+데이터스트림 구성을 재정의하는 방법에 대한 자세한 지침은 데이터스트림 [구성 재정의 설명서](/help/datastreams/overrides.md)를 참조하십시오.
 
 웹 SDK 명령을 통해 재정의를 전달하는 대신 아래 표시된 태그 확장 화면에서 재정의를 구성할 수 있습니다.
 
@@ -169,10 +169,10 @@ Adobe 코드 조각 사전 숨김을 사용하는 경우 동일한 항목을 사
 >
 데이터 스트림 재정의는 환경별로 구성해야 합니다. 개발, 스테이징 및 프로덕션 환경에는 모두 별도의 재정의가 있습니다. 아래 화면에 표시된 전용 옵션을 사용하여 설정 간을 복사할 수 있습니다.
 
-![웹 SDK 태그 확장 페이지를 사용한 데이터 스트림 구성 재정의를 보여 주는 이미지입니다.](assets/datastream-overrides.png)
+![웹 SDK 태그 확장 페이지를 사용하여 데이터 스트림 구성 재정의를 표시하는 이미지입니다.](assets/datastream-overrides.png)
 
 ## 고급 설정 구성
 
-사용 **[!UICONTROL Edge 기본 경로]** Edge Network과 상호 작용하는 데 사용되는 기본 경로를 변경해야 하는 경우 필드입니다. 이 경우 업데이트가 필요하지 않지만 Beta 또는 알파에 참여하는 경우 Adobe에서 이 필드를 변경하도록 요청할 수 있습니다.
+Edge Network과 상호 작용하는 데 사용되는 기본 경로를 변경해야 하는 경우 **[!UICONTROL Edge 기본 경로]** 필드를 사용하십시오. 이 경우 업데이트가 필요하지 않지만 Beta 또는 알파에 참여하는 경우 Adobe에서 이 필드를 변경하도록 요청할 수 있습니다.
 
-![웹 SDK 태그 확장 페이지를 사용한 고급 설정을 보여 주는 이미지입니다.](assets/advanced-settings.png)
+![Web SDK 태그 확장 페이지를 사용하여 고급 설정을 보여 주는 이미지입니다.](assets/advanced-settings.png)

@@ -4,8 +4,8 @@ description: Adobe Experience Platform의 코어 확장에 대한 최신 릴리�
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1644'
-ht-degree: 49%
+source-wordcount: '1632'
+ht-degree: 46%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 49%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 ## 2023년 3월 29일
 
@@ -31,7 +31,7 @@ v3.4.1
       * 쿼리 문자열 매개 변수
       * 트래픽 소스
       * 변수
-* 를 사용하도록 events/EntersViewport 위임을 변경합니다. [교차 관찰자 API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) 뷰포트에 들어오는 요소를 수동으로 감지하는 대신,
+* 뷰포트에 들어오는 요소를 수동으로 검색하는 대신 [교차 관찰자 API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)를 사용하도록 events/EntersViewport 대리자를 변경합니다.
 * DTM 쿠키를 LocalStorage로 마이그레이션하던 코드를 제거합니다.
 * LocalStorage 및 SessionStorage API를 사용할 수 없는 경우 콘솔에 경고를 기록합니다.
 
@@ -39,7 +39,7 @@ v3.4.1
 
 v3.3.0
 
-* 다음 사항을 변경합니다. [직접 호출 작업 트리거](./overview.md#direct-call-action) 직접 호출 규칙으로 전송할 사용자 지정 이벤트 정보를 제공할 수 있습니다.
+* 직접 호출 규칙에 보낼 사용자 지정 이벤트 정보를 제공할 수 있도록 [직접 호출 트리거 작업](./overview.md#direct-call-action)을 변경합니다.
 
 ## 2021년 10월 8일
 
@@ -88,7 +88,7 @@ v3.0.0
 
 * PDCL-6153: 캐시된 사용자 지정 코드 작업에 대해 정규화된 URL을 안정적으로 가져올 수 있는 지원을 추가합니다.
 
-코어 확장의 v3.0.0은 의 변경 사항과 연결됩니다. [Turbine 웹 런타임 v27.2.0](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0): 사용자의 회사가 Premium CDN을 지원하는 경우 사용자가 많은 Adobe 관리 호스팅 지역 간에 라이브러리를 로드할 수 있습니다.
+코어 확장의 v3.0.0은 Turbine 웹 런타임](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)의 [v27.2.0의 변경 사항과 함께 적용되므로 사용자의 회사에서 Premium CDN을 지원하는 경우 많은 Adobe 관리 호스팅 영역 간에 라이브러리를 로드할 수 있습니다.
 
 이 업그레이드는 Premium CDN이 없는 사용자에 대해 선택 사항이며 이전 버전과 호환됩니다. 회사에서 Premium CDN이 활성화된 고객은 필수입니다.
 
@@ -117,13 +117,13 @@ v2.0.4
 
 * 다양한 필드에 대한 데이터 요소 지원이 추가되었습니다. &#39;Time on Page&#39;, &#39;Enters Viewport&#39;, &#39;Hover&#39; 및 &#39;Media Time Played&#39; 이벤트에 데이터 요소 지원이 추가되었습니다. 조건: &#39;사이트에서 보낸 시간&#39; 및 &#39;값 비교&#39;
 * 링크 지연을 사용할 때 ctrl/cmd+클릭 및 마우스 가운데 버튼을 클릭할 수 있는 기본 동작에 대한 지원을 추가합니다.
-* **클릭 이벤트의 링크 지연을 &quot;더 이상 지원되지 않음&quot;으로 표시했습니다.** - 자세한 내용은 [데이터 수집 블로그](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) Adobe Experience Platform용
+* **클릭 이벤트에 대한 링크 지연을 &quot;더 이상 지원되지 않음&quot;으로 표시했습니다.** - 자세한 내용은 Adobe Experience Platform의 [데이터 수집 블로그](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403)에서 확인할 수 있습니다.
 
 ## 2021년 1월 6일
 
 v1.9.0
 
-* **새 &quot;직접 호출 트리거&quot; 작업** - 이제 코어 확장에 라는 새 작업 유형이 포함됩니다. `Trigger Direct Call`.  다른 규칙의 작업을 통해 직접 호출 규칙을 트리거하려는 경우 이 유형을 사용할 수 있습니다. 이 메서드는 `_satellite.track()` 메서드에 직접 매핑됩니다. 이 공헌에 대해 Jan Exner에게 대단히 감사드립니다.
+* **새 &quot;직접 호출 트리거&quot; 작업** - 이제 코어 확장에 `Trigger Direct Call`(이)라는 새 작업 유형이 포함됩니다.  다른 규칙의 작업을 통해 직접 호출 규칙을 트리거하려는 경우 이 유형을 사용할 수 있습니다. 이 메서드는 `_satellite.track()` 메서드에 직접 매핑됩니다. 이 공헌에 대해 Jan Exner에게 대단히 감사드립니다.
 
 ## 2020년 12월 8일
 
@@ -181,7 +181,7 @@ v1.6.2
 
 v1.6.1
 
-* **CSP 임시 항목 지원** - 코어 확장에는 이제 선택적 구성 매개 변수가 있습니다. 임시 항목을 참조하는 데이터 요소를 추가할 수 있습니다. 구성된 경우 태그가 페이지에 추가하는 모든 인라인 스크립트는 사용자가 구성한 임시 항목을 사용합니다. 이 변경 사항은 태그 스크립트가 CSP 환경에서 로드될 수 있도록 컨텐츠 보안 정책을 임시로 사용할 수 있도록 지원합니다. CSP에서 태그 사용에 대한 자세한 내용을 볼 수 있습니다 [여기](../../../ui/client-side/content-security-policy.md).
+* **CSP 임시 항목 지원** - 코어 확장에는 이제 선택적 구성 매개 변수가 있습니다. 임시 항목을 참조하는 데이터 요소를 추가할 수 있습니다. 구성된 경우 태그가 페이지에 추가하는 모든 인라인 스크립트는 사용자가 구성한 임시 항목을 사용합니다. 이 변경 사항은 태그 스크립트가 CSP 환경에서 로드될 수 있도록 컨텐츠 보안 정책을 임시로 사용할 수 있도록 지원합니다. CSP에서 태그를 사용하는 방법에 대한 자세한 내용은 [여기](../../../ui/client-side/content-security-policy.md)에서 확인할 수 있습니다.
 
 ## 2019년 6월 18일
 
@@ -209,7 +209,7 @@ v1.4.2
 ## 2018년 11월 8일
 
 * **Persist Cohort 옵션** 집단 유지 옵션이 샘플링 조건에 추가되었습니다. 이 옵션은 세션 간 샘플 집단 내외에 사용자를 유지하는 효과가 있습니다. 예를 들어 &quot;persist cohort&quot; 확인란이 선택되어 있고 제공된 방문자에 대해 처음 실행된 조건이 true를 반환하는 경우, 동일한 방문자에 대해 이후에 실행되는 모든 조건은 true를 반환합니다. 마찬가지로, &quot;persist cohort&quot; 확인란이 선택되어 있고 제공된 방문자에 대해 처음 실행된 조건이 false를 반환하는 경우, 동일한 방문자에 대해 이후에 실행되는 모든 조건은 false를 반환합니다.
-* **버그 수정** - 태그가 동기적으로 로드되었지만 잘못 설치된(에 대한 호출이 없음) 페이지에서 Page Bottom 이벤트와 사용자 지정 코드 작업을 사용하는 규칙이 발생하는 문제가 해결되었습니다. `_satellite.pageBottom()`)를 지정하면 웹 사이트 컨텐츠가 지워집니다.
+* **버그 수정** - 태그가 동기적으로 로드되었지만 잘못 설치된(`_satellite.pageBottom()`에 대한 호출이 없음) 페이지에서 Page Bottom 이벤트와 사용자 지정 코드 작업을 사용하는 규칙이 웹 사이트 콘텐츠를 지우는 문제가 해결되었습니다.
 * **버그 수정** - 브라우저의 DOMContentLoaded 이벤트가 실행된 후 태그 라이브러리가 비동기적으로 로드되고 로드를 마치면 뷰포트 입력이 작동하지 않는 문제가 해결되었습니다.
 
 ## 2018년 5월 24일

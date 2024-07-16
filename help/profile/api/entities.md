@@ -14,17 +14,17 @@ ht-degree: 1%
 
 # 엔티티 끝점(프로필 액세스)
 
-Adobe Experience Platform을 사용하면 다음에 액세스할 수 있습니다. [!DNL Real-Time Customer Profile] restFul API 또는 사용자 인터페이스를 사용하는 데이터. 이 안내서에서는 API를 사용하여 &quot;프로필&quot;로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다. 를 사용하여 프로필에 액세스하는 방법에 대한 자세한 내용은 [!DNL Platform] UI, 다음을 참조하십시오. [프로필 사용 안내서](../ui/user-guide.md).
+Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 [!DNL Real-Time Customer Profile] 데이터에 액세스할 수 있습니다. 이 안내서에서는 API를 사용하여 &quot;프로필&quot;로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다. [!DNL Platform] UI를 사용하여 프로필에 액세스하는 방법에 대한 자세한 내용은 [프로필 사용 안내서](../ui/user-guide.md)를 참조하십시오.
 
 ## 시작하기
 
-이 안내서에 사용된 API 끝점은 [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). 계속하기 전에 다음을 검토하십시오. [시작 안내서](getting-started.md) 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출 읽기에 대한 안내서 및 를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보 [!DNL Experience Platform] API.
+이 가이드에 사용된 API 끝점은 [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)의 일부입니다. 계속하기 전에 [시작 안내서](getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 [!DNL Experience Platform] API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
 ## ID별 프로필 데이터 액세스
 
-다음에 액세스할 수 있습니다. [!DNL Profile] 에 GET 요청을 하여 엔티티 `/access/entities` 엔드포인트 및 일련의 쿼리 매개 변수로 엔티티 id 제공. 이 ID는 ID 값(`entityId`) 및 id 네임스페이스(`entityIdNS`).
+`/access/entities` 끝점에 대한 GET 요청을 만들고 엔터티의 ID를 일련의 쿼리 매개 변수로 제공하여 [!DNL Profile] 엔터티에 액세스할 수 있습니다. 이 ID는 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
 
-요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다. 유효한 매개 변수의 전체 목록은 [쿼리 매개 변수](#query-parameters) 부록의 섹션.
+요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다. 부록의 [쿼리 매개 변수](#query-parameters) 섹션에 올바른 매개 변수의 전체 목록이 제공됩니다.
 
 **API 형식**
 
@@ -120,7 +120,7 @@ curl -X GET \
 
 ## ID 목록으로 프로필 데이터 액세스
 
-에 POST 요청을 하여 여러 프로필 엔티티에 ID로 액세스할 수 있습니다. `/access/entities` 엔드포인트 및 페이로드에 id 제공 이러한 ID는 ID 값(`entityId`) 및 id 네임스페이스(`entityIdNS`).
+`/access/entities` 끝점에 대한 POST 요청을 만들고 페이로드에 ID를 제공하여 여러 프로필 엔터티에 ID로 액세스할 수 있습니다. 이러한 ID는 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
 
 **API 형식**
 
@@ -181,7 +181,7 @@ curl -X POST \
 
 | 속성 | 설명 |
 |---|---|
-| `schema.name` | ***(필수)*** 엔티티가 속한 XDM 스키마의 이름입니다. |
+| `schema.name` | ***(필수)*** 엔터티가 속한 XDM 스키마의 이름입니다. |
 | `fields` | 문자열 배열로 반환될 XDM 필드. 기본적으로 모든 필드가 반환됩니다. |
 | `identities` | ***(필수)*** 액세스하려는 엔터티의 ID 목록이 포함된 배열입니다. |
 | `identities.entityId` | 액세스하려는 엔티티의 ID입니다. |
@@ -189,7 +189,7 @@ curl -X POST \
 | `timeFilter.startTime` | 시간 범위 필터의 시작 시간이 포함됩니다. 밀리초 단위여야 합니다. 지정하지 않은 경우 기본값은 사용 가능한 시간의 시작입니다. |
 | `timeFilter.endTime` | 시간 범위 필터의 종료 시간, 제외됨. 밀리초 단위여야 합니다. 지정하지 않은 경우 기본값은 사용 가능한 시간의 끝입니다. |
 | `limit` | 반환할 레코드 수입니다. 반환된 경험 이벤트 수만 적용됩니다. 기본값: 1,000. |
-| `orderby` | 타임스탬프별로 검색된 경험 이벤트를 다음으로 작성된 정렬 순서 `(+/-)timestamp` 기본값이 인 `+timestamp`. |
+| `orderby` | `(+/-)timestamp`(으)로 기록되고 기본값은 `+timestamp`인 타임스탬프별 검색된 경험 이벤트의 정렬 순서입니다. |
 | `withCA` | 조회를 위해 계산된 속성을 활성화하는 기능 플래그. 기본값: false. |
 
 **응답**
@@ -334,9 +334,9 @@ curl -X POST \
 
 ## ID별로 프로필에 대한 시계열 이벤트에 액세스
 
-에 GET 요청을 하여 연결된 프로필 엔티티의 ID로 시계열 이벤트에 액세스할 수 있습니다. `/access/entities` 엔드포인트. 이 ID는 ID 값(`entityId`) 및 id 네임스페이스(`entityIdNS`).
+`/access/entities` 끝점에 대한 GET 요청을 수행하여 연결된 프로필 엔터티의 ID로 시계열 이벤트에 액세스할 수 있습니다. 이 ID는 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
 
-요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다. 유효한 매개 변수의 전체 목록은 [쿼리 매개 변수](#query-parameters) 부록의 섹션.
+요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다. 부록의 [쿼리 매개 변수](#query-parameters) 섹션에 올바른 매개 변수의 전체 목록이 제공됩니다.
 
 **API 형식**
 
@@ -346,7 +346,7 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 **요청**
 
-다음 요청은 ID로 프로필 엔티티를 찾고 속성 값을 검색합니다 `endUserIDs`, `web`, 및 `channel` (엔티티와 연관된 모든 시계열 이벤트).
+다음 요청은 ID별로 프로필 엔터티를 찾고 엔터티와 연결된 모든 시계열 이벤트에 대한 속성 `endUserIDs`, `web` 및 `channel`의 값을 검색합니다.
 
 ```shell
 curl -X GET \
@@ -363,7 +363,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->요청에서 한도를 1로 지정했습니다(`limit=1`), 따라서 `count` 아래 응답은 1이고 하나의 엔티티만 반환됩니다.
+>요청에서 1개(`limit=1`)의 제한을 지정했으므로 아래 응답의 `count`은(는) 1이며 하나의 엔터티만 반환됩니다.
 
 ```json
 {
@@ -414,11 +414,11 @@ curl -X GET \
 
 ### 후속 결과 페이지 액세스
 
-시계열 이벤트를 검색할 때 결과에 페이지가 매겨집니다. 후속 결과 페이지가 있는 경우 `_page.next` 속성에는 ID가 포함됩니다. 또한 `_links.next.href` 속성은 다음 페이지를 검색하기 위한 요청 URI를 제공합니다. 결과를 검색하려면 다음에 대한 다른 GET 요청을 `/access/entities` 엔드포인트, 그러나 다음을 대체해야 합니다. `/entities` 제공된 URI의 값으로.
+시계열 이벤트를 검색할 때 결과에 페이지가 매겨집니다. 후속 결과 페이지가 있으면 `_page.next` 속성에 ID가 포함됩니다. 또한 `_links.next.href` 속성은 다음 페이지를 검색하기 위한 요청 URI를 제공합니다. 결과를 검색하려면 `/access/entities` 끝점에 대해 다른 GET 요청을 수행하되, `/entities`을(를) 제공된 URI의 값으로 바꾸어야 합니다.
 
 >[!NOTE]
 >
->실수로 반복하지 않도록 주의하십시오 `/entities/` 요청 경로에서. 한 번만 나타나야 하는데, `/access/entities?start=...`
+>요청 경로에서 `/entities/`을(를) 실수로 반복하지 않도록 하십시오. `/access/entities?start=...`과(와) 같은 한 번만 표시됩니다.
 
 **API 형식**
 
@@ -428,11 +428,11 @@ GET /access/{NEXT_URI}
 
 | 매개변수 | 설명 |
 |---|---|
-| `{NEXT_URI}` | 다음에서 가져온 URI 값 `_links.next.href`. |
+| `{NEXT_URI}` | `_links.next.href`에서 가져온 URI 값입니다. |
 
 **요청**
 
-다음 요청은 를 사용하여 다음 결과 페이지를 검색합니다. `_links.next.href` 요청 경로로서의 URI입니다.
+다음 요청은 `_links.next.href` URI를 요청 경로로 사용하여 다음 결과 페이지를 검색합니다.
 
 ```shell
 curl -X GET \
@@ -445,7 +445,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 다음 결과 페이지를 반환합니다. 이 응답에는 의 빈 문자열 값으로 표시되는 후속 결과 페이지가 없습니다. `_page.next` 및 `_links.next.href`.
+성공적인 응답은 다음 결과 페이지를 반환합니다. 이 응답에는 `_page.next` 및 `_links.next.href`의 빈 문자열 값이 나타내는 후속 결과 페이지가 없습니다.
 
 ```json
 {
@@ -496,7 +496,7 @@ curl -X GET \
 
 ## ID별로 여러 프로필에 대한 시계열 이벤트에 액세스
 
-에 POST 요청을 하여 연결된 여러 프로필에서 시계열 이벤트에 액세스할 수 있습니다. `/access/entities` 엔드포인트 및 페이로드에 프로필 id 제공. 이러한 ID는 각각 ID 값(`entityId`) 및 id 네임스페이스(`entityIdNS`).
+`/access/entities` 끝점에 대한 POST 요청을 만들고 페이로드에 프로필 ID를 제공하여 연결된 여러 프로필에서 시계열 이벤트에 액세스할 수 있습니다. 이러한 ID는 각각 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
 
 **API 형식**
 
@@ -547,12 +547,12 @@ curl -X POST \
 
 | 속성 | 설명 |
 |---|---|
-| `schema.name` | **(필수)** 검색할 엔티티의 XDM 스키마 |
-| `relatedSchema.name` | If `schema.name` 은(는) `_xdm.context.experienceevent` 이 값은 시계열 이벤트와 관련된 프로필 엔티티에 대한 스키마를 지정해야 합니다. |
+| `schema.name` | **(필수)** 검색할 엔터티의 XDM 스키마 |
+| `relatedSchema.name` | `schema.name`이(가) `_xdm.context.experienceevent`인 경우 이 값은 시계열 이벤트와 관련된 프로필 엔터티의 스키마를 지정해야 합니다. |
 | `identities` | **(필수)** 연결된 시계열 이벤트를 검색할 프로필 배열 목록입니다. 배열의 각 항목은 1) ID 값과 네임스페이스로 구성된 정규화된 ID를 사용하거나 2) XID를 제공하는 두 가지 방법 중 하나로 설정됩니다. |
 | `fields` | 지정된 필드 집합에 반환된 데이터를 격리합니다. 이 옵션을 사용하여 검색된 데이터에 포함된 스키마 필드를 필터링합니다. 예: personalEmail,person.name,person.gender |
 | `mergePolicyId` | 반환된 데이터를 제어하는 데 사용할 병합 정책을 식별합니다. 서비스 호출에 지정되지 않은 경우 해당 스키마에 대한 조직의 기본값이 사용됩니다. 기본 병합 정책이 구성되지 않은 경우 기본값은 프로필 병합 및 ID 결합 없음을 의미합니다. |
-| `orderby` | 타임스탬프별로 검색된 경험 이벤트를 다음으로 작성된 정렬 순서 `(+/-)timestamp` 기본값이 인 `+timestamp`. |
+| `orderby` | `(+/-)timestamp`(으)로 기록되고 기본값은 `+timestamp`인 타임스탬프별 검색된 경험 이벤트의 정렬 순서입니다. |
 | `timeFilter.startTime` | 시계열 개체를 필터링할 시작 시간(밀리초)을 지정합니다. |
 | `timeFilter.endTime` | 시계열 오브젝트를 필터링할 종료 시간(밀리초)을 지정합니다. |
 | `limit` | 반환할 최대 개체 수를 지정하는 숫자 값입니다. 기본값: 1000 |
@@ -768,19 +768,19 @@ curl -X POST \
 }`
 ```
 
-이 예제 응답에서 첫 번째로 나열된 프로필(&quot;GkouAW-yD9aoRCPhRYROJ-TetAFW&quot;)은에 대한 값을 제공합니다. `_links.next.payload`: 이 프로필에 대한 추가 결과 페이지가 있음을 의미합니다. 에 대한 다음 섹션을 참조하십시오. [추가 결과 액세스](#access-additional-results) 추가 결과에 액세스하는 방법에 대한 자세한 내용을 보려면 여기를 클릭하십시오 .
+이 예제 응답에서 첫 번째로 나열된 프로필(&quot;GkouAW-yD9aoRCPhRYROJ-TetAFW&quot;)은 `_links.next.payload`에 대한 값을 제공합니다. 즉, 이 프로필에 대한 추가 결과 페이지가 있습니다. 추가 결과에 액세스하는 방법에 대한 자세한 내용은 [추가 결과 액세스](#access-additional-results)에 대한 다음 섹션을 참조하십시오.
 
 ### 추가 결과 액세스 {#access-additional-results}
 
-시계열 이벤트를 검색할 때 반환되는 결과가 많을 수 있으므로 결과의 페이지가 매겨지는 경우가 많습니다. 특정 프로필에 대한 후속 결과 페이지가 있는 경우 `_links.next.payload` 해당 프로필의 값에는 페이로드 개체가 포함됩니다.
+시계열 이벤트를 검색할 때 반환되는 결과가 많을 수 있으므로 결과의 페이지가 매겨지는 경우가 많습니다. 특정 프로필에 대한 후속 결과 페이지가 있으면 해당 프로필의 `_links.next.payload` 값에 페이로드 개체가 포함됩니다.
 
-요청 본문에서 이 페이로드를 사용하여 추가 POST 요청을 수행할 수 있습니다. `access/entities` 해당 프로필에 대한 시계열 데이터의 후속 페이지를 검색하는 엔드포인트.
+요청 본문에서 이 페이로드를 사용하여 `access/entities` 끝점에 대한 추가 POST 요청을 수행하여 해당 프로필에 대한 시계열 데이터의 후속 페이지를 검색할 수 있습니다.
 
 ## 여러 스키마 엔티티의 시계열 이벤트에 액세스
 
-관계 설명자를 통해 연결된 여러 엔티티에 액세스할 수 있습니다. 다음 예제 API 호출은 두 스키마 간의 관계가 이미 정의되어 있다고 가정합니다. 관계 설명자에 대한 자세한 내용은 [!DNL Schema Registry] API 개발자 안내서 [descriptors 끝점 안내서](../../xdm/api/descriptors.md).
+관계 설명자를 통해 연결된 여러 엔티티에 액세스할 수 있습니다. 다음 예제 API 호출은 두 스키마 간의 관계가 이미 정의되어 있다고 가정합니다. 관계 설명자에 대한 자세한 내용은 [!DNL Schema Registry] API 개발자 안내서 [설명자 끝점 안내서](../../xdm/api/descriptors.md)를 참조하십시오.
 
-액세스할 데이터를 지정하기 위해 요청 경로에 쿼리 매개 변수를 포함할 수 있습니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다. 유효한 매개 변수의 전체 목록은 [쿼리 매개 변수](#query-parameters) 부록의 섹션.
+액세스할 데이터를 지정하기 위해 요청 경로에 쿼리 매개 변수를 포함할 수 있습니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다. 부록의 [쿼리 매개 변수](#query-parameters) 섹션에 올바른 매개 변수의 전체 목록이 제공됩니다.
 
 **API 형식**
 
@@ -884,31 +884,31 @@ curl -X GET \
 
 ### 후속 결과 페이지 액세스
 
-시계열 이벤트를 검색할 때 결과에 페이지가 매겨집니다. 후속 결과 페이지가 있는 경우 `_page.next` 속성에는 ID가 포함됩니다. 또한 `_links.next.href` 속성은에 대한 추가 GET 요청을 수행하여 후속 페이지를 검색하기 위한 요청 URI를 제공합니다. `access/entities` 엔드포인트.
+시계열 이벤트를 검색할 때 결과에 페이지가 매겨집니다. 후속 결과 페이지가 있으면 `_page.next` 속성에 ID가 포함됩니다. 또한 `_links.next.href` 속성은 `access/entities` 끝점에 대한 추가 GET 요청을 수행하여 후속 페이지를 검색하기 위한 요청 URI를 제공합니다.
 
 ## 다음 단계
 
-이 안내서를 따라 에 성공적으로 액세스했습니다 [!DNL Real-Time Customer Profile] 데이터 필드, 프로필 및 시계열 데이터. 에 저장된 다른 데이터 리소스에 액세스하는 방법에 대해 알아보려면 [!DNL Platform], 다음을 참조하십시오. [데이터 액세스 개요](../../data-access/home.md).
+이 안내서를 따라 [!DNL Real-Time Customer Profile]개의 데이터 필드, 프로필 및 시계열 데이터에 성공적으로 액세스했습니다. [!DNL Platform]에 저장된 다른 데이터 리소스에 액세스하는 방법에 대한 자세한 내용은 [데이터 액세스 개요](../../data-access/home.md)를 참조하세요.
 
 ## 부록 {#appendix}
 
-다음 섹션에서는 액세스와 관련된 추가 정보를 제공합니다 [!DNL Profile] API를 사용하는 데이터.
+다음 섹션에서는 API를 사용하여 [!DNL Profile] 데이터에 액세스하는 것과 관련된 추가 정보를 제공합니다.
 
-### 쿼리 매개 변수 {#query-parameters}
+### 쿼리 매개변수 {#query-parameters}
 
-에 대한 GET 요청의 경로에는 다음 매개 변수가 사용됩니다 `/access/entities` 엔드포인트. 액세스하려는 프로필 엔티티를 식별하고 응답에서 반환되는 데이터를 필터링합니다. 필수 매개 변수에는 레이블이 지정되고 나머지는 선택 사항입니다.
+다음 매개 변수는 `/access/entities` 끝점에 대한 GET 요청 경로에 사용됩니다. 액세스하려는 프로필 엔티티를 식별하고 응답에서 반환되는 데이터를 필터링합니다. 필수 매개 변수에는 레이블이 지정되고 나머지는 선택 사항입니다.
 
 | 매개변수 | 설명 | 예 |
 |---|---|---|
-| `schema.name` | **(필수)** 검색할 엔티티의 XDM 스키마 | `schema.name=_xdm.context.experienceevent` |
-| `relatedSchema.name` | If `schema.name` 는 &quot;_xdm.context.experienceevent&quot;이며 이 값은 시계열 이벤트와 관련된 프로필 엔티티에 대한 스키마를 지정해야 합니다. | `relatedSchema.name=_xdm.context.profile` |
-| `entityId` | **(필수)** 엔티티의 ID입니다. 이 매개 변수의 값이 XID가 아닌 경우 ID 네임스페이스 매개 변수도 제공해야 합니다(참조). `entityIdNS` 아래). | `entityId=janedoe@example.com` |
-| `entityIdNS` | If `entityId` 이(가) XID로 제공되지 않습니다. 이 필드는 ID 네임스페이스를 지정해야 합니다. | `entityIdNE=email` |
-| `relatedEntityId` | If `schema.name` 는 &quot;_xdm.context.experienceevent&quot;이며 이 값은 관련 프로필 엔티티의 id 네임스페이스를 지정해야 합니다. 이 값은 와 동일한 규칙을 따릅니다. `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
-| `relatedEntityIdNS` | If `schema.name` 은(는) &quot;_xdm.context.experienceevent&quot;이므로, 이 값은에 지정된 엔티티에 대한 id 네임스페이스를 지정해야 합니다. `relatedEntityId`. | `relatedEntityIdNS=CRMID` |
+| `schema.name` | **(필수)** 검색할 엔터티의 XDM 스키마 | `schema.name=_xdm.context.experienceevent` |
+| `relatedSchema.name` | `schema.name`이(가) &quot;_xdm.context.experienceevent&quot;인 경우 이 값은 시계열 이벤트와 관련된 프로필 엔터티에 대한 스키마를 지정해야 합니다. | `relatedSchema.name=_xdm.context.profile` |
+| `entityId` | **(필수)** 엔터티의 ID입니다. 이 매개 변수의 값이 XID가 아닌 경우 ID 네임스페이스 매개 변수도 제공해야 합니다(아래 `entityIdNS` 참조). | `entityId=janedoe@example.com` |
+| `entityIdNS` | `entityId`이(가) XID로 제공되지 않으면 이 필드에 ID 네임스페이스를 지정해야 합니다. | `entityIdNE=email` |
+| `relatedEntityId` | `schema.name`이(가) &quot;_xdm.context.experienceevent&quot;인 경우 이 값은 관련 프로필 엔티티의 ID 네임스페이스를 지정해야 합니다. 이 값은 `entityId`과(와) 동일한 규칙을 따릅니다. | `relatedEntityId=69935279872410346619186588147492736556` |
+| `relatedEntityIdNS` | `schema.name`이(가) &quot;_xdm.context.experienceevent&quot;인 경우 이 값은 `relatedEntityId`에 지정된 엔터티의 ID 네임스페이스를 지정해야 합니다. | `relatedEntityIdNS=CRMID` |
 | `fields` | 응답에서 반환된 데이터를 필터링합니다. 검색할 데이터에 포함할 스키마 필드 값을 지정하려면 이 옵션을 사용합니다. 여러 필드의 경우, 공백 없이 쉼표로 값을 구분하십시오. | `fields=personalEmail,person.name,person.gender` |
 | `mergePolicyId` | 반환된 데이터를 제어하는 데 사용할 병합 정책을 식별합니다. 호출에 지정되지 않은 경우 해당 스키마에 대한 조직의 기본값이 사용됩니다. 기본 병합 정책이 구성되지 않은 경우 기본값은 프로필 병합 및 ID 결합 없음을 의미합니다. | `mergePoilcyId=5aa6885fcf70a301dabdfa4a` |
-| `orderBy` | 타임스탬프별로 검색된 경험 이벤트를 다음으로 작성된 정렬 순서 `(+/-)timestamp` 기본값이 인 `+timestamp`. | `orderby=-timestamp` |
+| `orderBy` | `(+/-)timestamp`(으)로 기록되고 기본값은 `+timestamp`인 타임스탬프별 검색된 경험 이벤트의 정렬 순서입니다. | `orderby=-timestamp` |
 | `startTime` | 시계열 개체를 필터링할 시작 시간(밀리초)을 지정합니다. | `startTime=1539838505` |
 | `endTime` | 시계열 오브젝트를 필터링할 종료 시간(밀리초)을 지정합니다. | `endTime=1539838510` |
 | `limit` | 반환할 최대 개체 수를 지정하는 숫자 값입니다. 기본값: 1000 | `limit=100` |

@@ -13,21 +13,21 @@ ht-degree: 2%
 
 # 세그먼트 작업 엔드포인트
 
-세그먼트 작업은 요청 시 대상 세그먼트를 만드는 비동기 프로세스입니다. 을(를) 참조합니다. [세그먼트 정의](./segment-definitions.md)및 기타 [병합 정책](../../profile/api/merge-policies.md) 방법 제어 [!DNL Real-Time Customer Profile] 은 프로필 조각에서 겹치는 속성을 병합합니다. 세그먼트 작업이 성공적으로 완료되면 처리 중에 발생할 수 있는 오류와 대상자의 최종 크기 등 세그먼트에 대한 다양한 정보를 수집할 수 있습니다.
+세그먼트 작업은 요청 시 대상 세그먼트를 만드는 비동기 프로세스입니다. [!DNL Real-Time Customer Profile]이(가) 프로필 조각에서 겹치는 특성을 병합하는 방법을 제어하는 [병합 정책](../../profile/api/merge-policies.md)뿐만 아니라 [세그먼트 정의](./segment-definitions.md)을(를) 참조합니다. 세그먼트 작업이 성공적으로 완료되면 처리 중에 발생할 수 있는 오류와 대상자의 최종 크기 등 세그먼트에 대한 다양한 정보를 수집할 수 있습니다.
 
 이 안내서에서는 세그먼트 작업을 더 잘 이해하는 데 도움이 되는 정보를 제공하며 API를 사용하여 기본 작업을 수행하기 위한 샘플 API 호출을 포함합니다.
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [!DNL Adobe Experience Platform Segmentation Service] API. 계속하기 전에 다음을 검토하십시오. [시작 안내서](./getting-started.md) 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보입니다.
+이 가이드에 사용된 끝점은 [!DNL Adobe Experience Platform Segmentation Service] API의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
 
 ## 세그먼트 작업 목록 검색 {#retrieve-list}
 
-에 GET 요청을 하여 조직의 모든 세그먼트 작업 목록을 검색할 수 있습니다. `/segment/jobs` 엔드포인트.
+`/segment/jobs` 끝점에 대한 GET 요청을 수행하여 조직에 대한 모든 세그먼트 작업 목록을 검색할 수 있습니다.
 
 **API 형식**
 
-다음 `/segment/jobs` 엔드포인트는 결과를 필터링하는 데 도움이 되는 몇 가지 쿼리 매개 변수를 지원합니다. 이러한 매개 변수는 선택 사항이지만 값비싼 오버헤드를 줄이는 데 도움이 되도록 사용하는 것이 좋습니다. 매개 변수 없이 이 끝점을 호출하면 조직에서 사용할 수 있는 모든 내보내기 작업을 검색합니다. 여러 매개 변수를 포함할 수 있으며 앰퍼샌드(`&`).
+`/segment/jobs` 끝점은 결과를 필터링하는 데 도움이 되는 몇 가지 쿼리 매개 변수를 지원합니다. 이러한 매개 변수는 선택 사항이지만 값비싼 오버헤드를 줄이는 데 도움이 되도록 사용하는 것이 좋습니다. 매개 변수 없이 이 끝점을 호출하면 조직에서 사용할 수 있는 모든 내보내기 작업을 검색합니다. 여러 매개 변수를 포함할 수 있으며 앰퍼샌드(`&`)로 구분됩니다.
 
 ```http
 GET /segment/jobs
@@ -41,8 +41,8 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `start` | 반환된 세그먼트 작업의 시작 오프셋을 지정합니다. | `start=1` |
 | `limit` | 페이지당 반환되는 세그먼트 작업 수를 지정합니다. | `limit=20` |
 | `status` | 상태를 기반으로 결과를 필터링합니다. 지원되는 값은 NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELLING, CANCELLED입니다. | `status=NEW` |
-| `sort` | 반환된 세그먼트 작업의 순서를 지정합니다. 형식으로 작성됨 `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
-| `property` | 작업을 필터링하고 지정된 필터와 정확히 일치하는 항목을 가져옵니다. 다음 형식 중 하나로 쓸 수 있습니다. <ul><li>`[jsonObjectPath]==[value]` - 개체 키 필터링</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - 배열 내 필터링</li></ul> | `property=segments~segmentId==workInUS` |
+| `sort` | 반환된 세그먼트 작업의 순서를 지정합니다. `[attributeName]:[desc|asc]` 형식으로 작성되었습니다. | `sort=creationTime:desc` |
+| `property` | 작업을 필터링하고 지정된 필터와 정확히 일치하는 항목을 가져옵니다. 다음 형식 중 하나로 쓸 수 있습니다. <ul><li>`[jsonObjectPath]==[value]` - 개체 키 필터링</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - 배열에서 필터링</li></ul> | `property=segments~segmentId==workInUS` |
 
 **요청**
 
@@ -60,7 +60,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **세그먼트 작업에서 1500개 이하의 세그먼트 정의**
 
-세그먼트 작업에서 1500개 미만의 세그먼트 정의를 실행하는 경우 모든 세그먼트 정의의 전체 목록이 `children.segments` 특성.
+세그먼트 작업에서 1500개 미만의 세그먼트 정의가 실행되고 있는 경우 모든 세그먼트 정의의 전체 목록이 `children.segments` 특성 내에 표시됩니다.
 
 >[!NOTE]
 >
@@ -168,7 +168,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **1500개 이상의 세그먼트 정의**
 
-세그먼트 작업에서 1500개가 넘는 세그먼트 정의를 실행하는 경우 `children.segments` 속성이 표시됨 `*`모든 세그먼트 정의가 평가됨을 나타냅니다.
+세그먼트 작업에서 1500개가 넘는 세그먼트 정의가 실행되고 있는 경우 `children.segments` 특성에는 모든 세그먼트 정의가 평가되고 있음을 나타내는 `*`이(가) 표시됩니다.
 
 >[!NOTE]
 >
@@ -267,7 +267,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `status` | 세그먼트 작업의 현재 상태입니다. 상태에 대한 잠재적 값에는 &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;CANCELING&quot;, &quot;CANCELLED&quot;, &quot;FAILED&quot; 및 &quot;SUCCEEDED&quot;가 있습니다. |
 | `segments` | 세그먼트 작업 내에서 반환된 세그먼트 정의에 대한 정보를 포함하는 객체입니다. |
 | `segments.segment.id` | 세그먼트 정의의 ID입니다. |
-| `segments.segment.expression` | PQL로 작성된 세그먼트 정의의 표현식에 대한 정보가 포함된 객체입니다. |
+| `segments.segment.expression` | PQL으로 작성된 세그먼트 정의의 표현식에 대한 정보를 포함하는 객체입니다. |
 | `metrics` | 세그먼트 작업에 대한 진단 정보를 포함하는 개체입니다. |
 | `metrics.totalTime` | 세분화 작업이 시작 및 종료된 시간과 총 소요 시간에 대한 정보가 포함된 개체입니다. |
 | `metrics.profileSegmentationTime` | 세분화 평가가 시작되고 종료된 시간 및 총 소요 시간에 대한 정보가 포함된 개체입니다. |
@@ -278,7 +278,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 ## 새 세그먼트 작업 만들기 {#create}
 
-에 POST 요청을 하여 새 세그먼트 작업을 만들 수 있습니다. `/segment/jobs` 엔드포인트 및 새 대상자를 만들려는 세그먼트 정의의 ID가 본문에 포함됩니다.
+`/segment/jobs` 끝점에 대한 POST 요청을 만들고 본문에 새 대상을 만들 세그먼트 정의의 ID를 포함하여 새 세그먼트 작업을 만들 수 있습니다.
 
 **API 형식**
 
@@ -308,7 +308,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `segmentId` | 세그먼트 작업을 생성할 세그먼트 정의의 ID입니다. 이러한 세그먼트 정의는 다른 병합 정책에 속할 수 있습니다. 세그먼트 정의에 대한 자세한 내용은 [세그먼트 정의 엔드포인트 안내서](./segment-definitions.md). |
+| `segmentId` | 세그먼트 작업을 생성할 세그먼트 정의의 ID입니다. 이러한 세그먼트 정의는 다른 병합 정책에 속할 수 있습니다. 세그먼트 정의에 대한 자세한 내용은 [세그먼트 정의 끝점 안내서](./segment-definitions.md)를 참조하십시오. |
 
 **응답**
 
@@ -409,7 +409,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `status` | 세그먼트 작업의 현재 상태입니다. 세그먼트 작업이 새로 생성되므로 상태는 항상 &quot;NEW&quot;가 됩니다. |
 | `segments` | 이 세그먼트 작업이 실행 중인 세그먼트 정의에 대한 정보를 포함하는 개체입니다. |
 | `segments.segment.id` | 제공한 세그먼트 정의의 ID입니다. |
-| `segments.segment.expression` | PQL로 작성된 세그먼트 정의의 표현식에 대한 정보가 포함된 객체입니다. |
+| `segments.segment.expression` | PQL으로 작성된 세그먼트 정의의 표현식에 대한 정보를 포함하는 객체입니다. |
 
 **1500개 이상의 세그먼트 정의**
 
@@ -417,7 +417,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 >[!NOTE]
 >
->1500개가 넘는 세그먼트 정의를 사용하여 세그먼트 작업을 만들 수 있지만, 이는 **매우 권장되지 않음**.
+>1500개가 넘는 세그먼트 정의로 세그먼트 작업을 만들 수 있지만 **권장되지 않습니다**.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -441,7 +441,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `schema.name` | 세그먼트 정의에 대한 스키마의 이름입니다. |
-| `segments.segmentId` | 1500개가 넘는 세그먼트로 세그먼트 작업을 실행하는 경우 다음을 전달해야 합니다 `*` 모든 세그먼트에서 세그먼테이션 작업을 실행함을 나타내는 세그먼트 ID입니다. |
+| `segments.segmentId` | 1500개가 넘는 세그먼트로 세그먼트 작업을 실행하는 경우 모든 세그먼트로 세그먼테이션 작업을 실행함을 나타내려면 `*`을(를) 세그먼트 ID로 전달해야 합니다. |
 
 **응답**
 
@@ -526,13 +526,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | 속성 | 설명 |
 | -------- | ----------- |
 | `id` | 새로 생성된 세그먼트 작업에 대한 시스템에서 생성한 읽기 전용 식별자입니다. |
-| `status` | 세그먼트 작업의 현재 상태입니다. 세그먼트 작업이 새로 생성되므로 상태는 항상 입니다. `NEW`. |
+| `status` | 세그먼트 작업의 현재 상태입니다. 세그먼트 작업을 새로 만들었으므로 상태는 항상 `NEW`입니다. |
 | `segments` | 이 세그먼트 작업이 실행 중인 세그먼트 정의에 대한 정보를 포함하는 개체입니다. |
-| `segments.segment.id` | 다음 `*` 는 조직 내의 모든 세그먼트 정의에 대해 이 세그먼트 작업이 실행 중임을 의미합니다. |
+| `segments.segment.id` | `*`은(는) 조직 내의 모든 세그먼트 정의에 대해 이 세그먼트 작업이 실행되고 있음을 의미합니다. |
 
 ## 특정 세그먼트 작업 검색 {#get}
 
-에 GET 요청을 하여 특정 세그먼트 작업에 대한 자세한 정보를 검색할 수 있습니다. `/segment/jobs` 엔드포인트 및 요청 경로에서 검색하려는 세그먼트 작업의 ID 제공.
+`/segment/jobs` 끝점에 대한 GET 요청을 만들고 요청 경로에 검색할 세그먼트 작업의 ID를 제공하여 특정 세그먼트 작업에 대한 자세한 정보를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -542,7 +542,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | 속성 | 설명 |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | 다음 `id` 검색할 세그먼트 작업의 값입니다. |
+| `{SEGMENT_JOB_ID}` | 검색할 세그먼트 작업의 `id` 값입니다. |
 
 **요청**
 
@@ -560,7 +560,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **세그먼트 작업에서 1500개 이하의 세그먼트 정의**
 
-세그먼트 작업에서 1500개 미만의 세그먼트 정의를 실행하는 경우 모든 세그먼트 정의의 전체 목록이 `children.segments` 특성.
+세그먼트 작업에서 1500개 미만의 세그먼트 정의가 실행되고 있는 경우 모든 세그먼트 정의의 전체 목록이 `children.segments` 특성 내에 표시됩니다.
 
 ```json
 {
@@ -624,7 +624,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **1500개 이상의 세그먼트 정의**
 
-세그먼트 작업에서 1500개가 넘는 세그먼트 정의를 실행하는 경우 `children.segments` 속성이 표시됨 `*`모든 세그먼트 정의가 평가됨을 나타냅니다.
+세그먼트 작업에서 1500개가 넘는 세그먼트 정의가 실행되고 있는 경우 `children.segments` 특성에는 모든 세그먼트 정의가 평가되고 있음을 나타내는 `*`이(가) 표시됩니다.
 
 ```json
 {
@@ -708,12 +708,12 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 | `status` | 세그먼트 작업의 현재 상태입니다. 상태에 대한 잠재적 값에는 &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;CANCELING&quot;, &quot;CANCELLED&quot;, &quot;FAILED&quot; 및 &quot;SUCCEEDED&quot;가 있습니다. |
 | `segments` | 세그먼트 작업 내에서 반환된 세그먼트 정의에 대한 정보를 포함하는 객체입니다. |
 | `segments.segment.id` | 세그먼트 정의의 ID입니다. |
-| `segments.segment.expression` | PQL로 작성된 세그먼트 정의의 표현식에 대한 정보가 포함된 객체입니다. |
+| `segments.segment.expression` | PQL으로 작성된 세그먼트 정의의 표현식에 대한 정보를 포함하는 객체입니다. |
 | `metrics` | 세그먼트 작업에 대한 진단 정보를 포함하는 개체입니다. |
 
 ## 세그먼트 작업 일괄 검색 {#bulk-get}
 
-에 POST 요청을 하여 여러 세그먼트 작업에 대한 자세한 정보를 검색할 수 있습니다. `/segment/jobs/bulk-get` 엔드포인트 및 제공  `id` 요청 본문에 있는 세그먼트 작업의 값입니다.
+`/segment/jobs/bulk-get` 끝점에 대한 POST 요청을 만들고 요청 본문에 세그먼트 작업의 `id` 값을 제공하여 여러 세그먼트 작업에 대한 자세한 정보를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -744,7 +744,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **응답**
 
-성공적인 응답은 요청된 세그먼트 작업과 함께 HTTP 상태 207을 반환합니다. 그러나 의 값은 `children.segments` 속성은 세그먼트 작업이 1500개가 넘는 세그먼트 정의에 대해 실행 중인지 여부에 따라 다릅니다.
+성공적인 응답은 요청된 세그먼트 작업과 함께 HTTP 상태 207을 반환합니다. 그러나 `children.segments` 특성의 값은 세그먼트 작업이 1500개가 넘는 세그먼트 정의에 대해 실행 중인지 여부에 따라 다릅니다.
 
 >[!NOTE]
 >
@@ -802,11 +802,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 | `status` | 세그먼트 작업의 현재 상태입니다. 상태에 대한 잠재적 값에는 &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;CANCELING&quot;, &quot;CANCELLED&quot;, &quot;FAILED&quot; 및 &quot;SUCCEEDED&quot;가 있습니다. |
 | `segments` | 세그먼트 작업 내에서 반환된 세그먼트 정의에 대한 정보를 포함하는 객체입니다. |
 | `segments.segment.id` | 세그먼트 정의의 ID입니다. |
-| `segments.segment.expression` | PQL로 작성된 세그먼트 정의의 표현식에 대한 정보가 포함된 객체입니다. |
+| `segments.segment.expression` | PQL으로 작성된 세그먼트 정의의 표현식에 대한 정보를 포함하는 객체입니다. |
 
 ## 특정 세그먼트 작업 취소 또는 삭제 {#delete}
 
-에 DELETE 요청을 하여 특정 세그먼트 작업을 삭제할 수 있습니다. `/segment/jobs` 엔드포인트 및 요청 경로에 삭제할 세그먼트 작업의 ID 제공
+`/segment/jobs` 끝점에 DELETE 요청을 하고 요청 경로에 삭제할 세그먼트 작업의 ID를 제공하여 특정 세그먼트 작업을 삭제할 수 있습니다.
 
 >[!NOTE]
 >
@@ -820,7 +820,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 | 속성 | 설명 |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | 다음 `id` 삭제할 세그먼트 작업의 값입니다. |
+| `{SEGMENT_JOB_ID}` | 삭제할 세그먼트 작업의 `id` 값입니다. |
 
 **요청**
 

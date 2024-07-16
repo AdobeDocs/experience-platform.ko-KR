@@ -15,19 +15,19 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 > * Adobe은 이 페이지에 책갈피를 지정하고 3개월마다 다시 방문하여 최신 IP 주소를 확인하는 것을 권장합니다. Adobe은 새 IP 범위에 대한 알림을 제공하지 않습니다.
-> * Adobe은 SFTP 서버로 데이터 내보내기를 지원하지만 데이터를 내보내는 데 권장되는 클라우드 스토리지 위치는 다음과 같습니다 [!DNL Amazon S3] 및 [!DNL Azure Blob].
+> * Adobe에서 SFTP 서버로 데이터 내보내기를 지원하지만 데이터를 내보내는 데 권장되는 클라우드 저장소 위치는 [!DNL Amazon S3] 및 [!DNL Azure Blob]입니다.
 
 ## 적용 가능성 {#applicability}
 
 이 페이지의 IP 범위 정보는 대상 카탈로그의 다음 파일 기반 클라우드 스토리지 커넥터에 적용됩니다.
 
 * [[!UICONTROL Amazon S3]](./amazon-s3.md)
-* [[!UICONTROL Google 클라우드 스토리지]](google-cloud-storage.md)
+* [[!UICONTROL Google 클라우드 저장소]](google-cloud-storage.md)
 * [SFTP](./sftp.md)
 
 >[!IMPORTANT]
 >
->이 페이지에 설명된 IP 범위는 다음과 같습니다 *아님* 다음 파일 기반 클라우드 스토리지 대상에 대해 지원됩니다. [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] 및 [!UICONTROL 데이터 랜딩 영역].
+>이 페이지에 문서화된 IP 범위는 파일 기반 클라우드 저장소 대상 [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] 및 [!UICONTROL 데이터 랜딩 영역]에 대해 *지원되지 않음*&#x200B;입니다.
 
 ## 개요 {#overview}
 

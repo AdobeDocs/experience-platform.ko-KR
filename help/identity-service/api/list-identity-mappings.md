@@ -28,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **요청**
 
-옵션 1: ID를 네임스페이스(`nsId`, ID별) 및 ID 값(`id`).
+옵션 1: ID를 네임스페이스(`nsId`, ID별) 및 ID 값(`id`)으로 제공합니다.
 
 ```shell
 curl -X GET \
@@ -39,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 2: ID를 네임스페이스(`ns`, 이름별) 및 ID 값(`id`).
+옵션 2: ID를 네임스페이스(`ns`, 이름별) 및 ID 값(`id`)으로 제공합니다.
 
 ```shell
 curl -X GET \
@@ -50,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 3: ID를 XID(`xid`). ID의 XID를 얻는 방법에 대한 자세한 내용은 이 문서의 다음 내용 섹션을 참조하십시오 [id에 대한 XID를 가져오는 중](./list-native-id.md).
+옵션 3: ID를 XID(`xid`)로 제공합니다. ID의 XID를 얻는 방법에 대한 자세한 내용은 [ID에 대한 XID 가져오기](./list-native-id.md)에 대한 이 문서의 섹션을 참조하십시오.
 
 ```shell
 curl -X GET \
@@ -63,7 +63,7 @@ curl -X GET \
 
 ### 여러 ID에 대한 ID 매핑 가져오기
 
-사용 `POST` 메서드와 동일한 일괄 처리 `GET` 위에서 설명한 여러 id에 대한 매핑을 검색하는 방법입니다.
+여러 ID에 대한 매핑을 검색하려면 위에서 설명한 `GET` 메서드에 해당하는 일괄 처리로 `POST` 메서드를 사용하십시오.
 
 >[!NOTE]
 >
@@ -86,7 +86,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 }
 ```
 
-옵션 2: ID 목록을 복합 ID로 제공합니다. 여기서 각 ID는 네임스페이스 ID별로 ID 값 및 네임스페이스를 지정합니다. 이 예에서는 기본값을 덮어쓰면서 이 메서드를 사용하는 방법을 보여 줍니다 `graph-type` 비공개 그래프의
+옵션 2: ID 목록을 복합 ID로 제공합니다. 여기서 각 ID는 네임스페이스 ID별로 ID 값 및 네임스페이스를 지정합니다. 이 예에서는 &quot;개인 그래프&quot;의 기본 `graph-type`을(를) 덮어쓰면서 이 메서드를 사용하는 방법을 보여 줍니다.
 
 ```shell
 {
@@ -145,7 +145,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-입력한 내용과 관련된 ID가 없는 경우 `HTTP 204` 응답 코드가 내용 없이 반환됩니다.
+입력한 ID와 관련된 ID가 없으면 `HTTP 204` 응답 코드가 콘텐츠 없이 반환됩니다.
 
 **응답**
 
@@ -183,9 +183,9 @@ curl -X POST \
 }
 ```
 
-- `lastAssociationTime`: 입력 ID가 이 ID와 마지막으로 연결된 시점의 타임스탬프입니다.
-- `regions`: 를 제공합니다. `regionId` 및 `lastAssociationTime` 신원 확인
+- `lastAssociationTime`: 입력 ID가 이 ID와 마지막으로 연결된 시점의 타임스탬프.
+- `regions`: ID가 표시된 위치에 대한 `regionId` 및 `lastAssociationTime`을(를) 제공합니다.
 
 ## 다음 단계
 
-다음 튜토리얼을 진행하십시오. [사용 가능한 네임스페이스 나열](./list-namespaces.md).
+다음 자습서를 진행하여 [사용 가능한 네임스페이스를 나열](./list-namespaces.md)합니다.

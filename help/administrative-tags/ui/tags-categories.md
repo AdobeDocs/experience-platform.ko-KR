@@ -4,7 +4,7 @@ title: 태그 카테고리
 description: 이 문서는 Adobe Experience Cloud의 통합 태그 카테고리 관리에 대한 정보를 제공합니다.
 exl-id: 0369d4e1-c091-4702-890a-3882a4916217
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 100%
 

@@ -11,7 +11,7 @@ ht-degree: 8%
 
 # [!UICONTROL 제품 카탈로그] 스키마 필드 그룹
 
-[!UICONTROL 제품 카탈로그] 는 의 표준 스키마 필드 그룹입니다. [[!UICONTROL 제품] 클래스](../../classes/product.md) 제품 카탈로그 관련 속성을 캡처할 수 있습니다.
+[!UICONTROL 제품 카탈로그]는 제품 카탈로그와 관련된 속성을 캡처하는 [[!UICONTROL 제품] 클래스](../../classes/product.md)의 표준 스키마 필드 그룹입니다.
 
 ![](../../images/field-groups/product/product-catalog.png)
 
@@ -22,4 +22,4 @@ ht-degree: 8%
 
 {style="table-layout:auto"}
 
-필드 그룹에 대한 자세한 내용은 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).
+필드 그룹에 대한 자세한 내용은 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json)를 참조하세요.

@@ -7,37 +7,37 @@ description: 흐름 서비스 API를 사용하여 계정을 삭제하는 방법�
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '336'
 ht-degree: 2%
 
 ---
 
 # 흐름 서비스 API를 사용하여 계정 삭제
 
-다음을 사용하여 오류가 있거나 더 이상 사용되지 않는 소스 계정을 삭제할 수 있습니다. [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+오류가 있거나 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)을(를) 사용하여 더 이상 사용되지 않는 소스 계정을 삭제할 수 있습니다.
 
 API를 사용하여 계정을 삭제하는 방법에 대한 절차는 다음 튜토리얼을 참조하십시오.
 
 ## 시작하기
 
-이 자습서에서는 유효한 연결 ID가 있어야 합니다. 유효한 연결 ID가 없는 경우 [소스 개요](../../home.md) 이 자습서를 시도하기 전에 설명된 단계를 따르십시오.
+이 자습서에서는 유효한 연결 ID가 있어야 합니다. 올바른 연결 ID가 없는 경우 [소스 개요](../../home.md)에서 선택한 커넥터를 선택하고 이 자습서를 시도하기 전에 설명된 단계를 따르십시오.
 
 또한 이 자습서에서는 Adobe Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../home.md): [!DNL Experience Platform] 를 사용하여 수신 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다. [!DNL Platform] 서비스.
-* [샌드박스](../../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 만드는 가상 샌드박스를 제공합니다. [!DNL Platform] 인스턴스를 별도의 가상 환경으로 전환하여 디지털 경험 애플리케이션을 개발하고 발전시킵니다.
+* [원본](../../home.md): [!DNL Experience Platform]에서는 데이터를 다양한 원본에서 수집할 수 있으며 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공합니다.
+* [샌드박스](../../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 ### Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../landing/api-guide.md).
+Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ## 계정 삭제
 
 >[!TIP]
 >
->소스 계정을 삭제하기 전에 먼저 소스 계정과 연결된 기존 데이터 흐름을 삭제해야 합니다. 기존 데이터 흐름을 삭제하려면 다음 자습서를 참조하십시오 [소스 데이터 흐름 삭제](./delete-dataflows.md).
+>소스 계정을 삭제하기 전에 먼저 소스 계정과 연결된 기존 데이터 흐름을 삭제해야 합니다. 기존 데이터 흐름을 삭제하려면 [소스 데이터 흐름 삭제](./delete-dataflows.md)에 대한 자습서를 참조하십시오.
 
-계정을 삭제하려면 다음에 대한 DELETE 요청을 [!DNL Flow Service] 삭제할 계정에 해당하는 기본 연결 ID를 제공하는 동안 API입니다.
+계정을 삭제하려면 삭제할 계정에 해당하는 기본 연결 ID를 제공하면서 [!DNL Flow Service] API에 DELETE 요청을 합니다.
 
 **API 형식**
 
@@ -68,6 +68,6 @@ curl -X DELETE \
 
 ## 다음 단계
 
-이 자습서에 따라 [!DNL Flow Service] 기존 계정을 삭제하는 API입니다.
+이 자습서에 따라 [!DNL Flow Service] API를 사용하여 기존 계정을 삭제했습니다.
 
-사용자 인터페이스를 사용하여 이러한 작업을 수행하는 방법에 대한 단계는 의 자습서를 참조하십시오. [UI에서 계정 삭제](../../tutorials/ui/delete-accounts.md).
+사용자 인터페이스를 사용하여 이러한 작업을 수행하는 방법에 대한 단계는 [UI에서 계정 삭제](../../tutorials/ui/delete-accounts.md)에 대한 자습서를 참조하십시오.

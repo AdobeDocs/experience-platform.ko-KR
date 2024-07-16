@@ -4,8 +4,8 @@ description: Adobe Experience Platform의 특정 태그 리소스에 텍스트 �
 exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 65%
+source-wordcount: '310'
+ht-degree: 50%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 참고는 Adobe Experience Platform의 특정 태그 리소스에 추가할 수 있는 텍스트 주석입니다. 참고는 다음 리소스에 첨부할 수 있습니다.
 
@@ -39,7 +39,7 @@ ht-degree: 65%
 
 참고할 수 있는 리소스가 있으면 화면 오른쪽에 좁은 레일이 표시됩니다.  참고에 대한 아이콘이 레일에 있습니다.  리소스에 첨부된 현재 참고 수가 이 아이콘에 표시됩니다.
 
-선택 **[!UICONTROL 메모]** 오른쪽 레일을 확장하면 참고가 표시됩니다. 최근 참고가 맨 위에 있습니다.  새 참고를 추가하려면 맨 위의 상자에 참고 텍스트를 입력하고 를 선택합니다 **[!UICONTROL 메모 추가]**.
+**[!UICONTROL 메모]**&#x200B;를 선택하여 오른쪽 레일을 확장하면 참고가 표시됩니다. 최근 참고가 맨 위에 있습니다.  새 참고를 추가하려면 맨 위의 상자에 참고 텍스트를 입력하고 **[!UICONTROL 참고를 추가]**&#x200B;를 선택하십시오.
 
 ## 기타
 

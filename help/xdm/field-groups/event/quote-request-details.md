@@ -11,7 +11,7 @@ ht-degree: 6%
 
 # [!UICONTROL 견적 요청 세부 정보] 스키마 필드 그룹
 
-[!UICONTROL 견적 요청 세부 정보] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md). 필드 그룹은 단일 `quotes` 보험 증서, 헬스케어, 제조 주문 및 첨단 기술 주문을 포함하여 다양한 유형의 견적에 대한 요청 프로세스 세부 정보를 캡처하는 스키마 객체.
+[!UICONTROL 견적 요청 세부 정보]은(는) [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)에 대한 표준 스키마 필드 그룹입니다. 필드 그룹은 스키마에 단일 `quotes` 개체를 제공합니다. 이 스키마는 보험 증권, 의료, 제조 주문 및 첨단 기술 주문을 비롯한 다양한 유형의 견적에 대한 요청 프로세스 세부 정보를 캡처합니다.
 
 ![](../../images/field-groups/quote-request-details.png)
 
@@ -25,4 +25,4 @@ ht-degree: 6%
 
 {style="table-layout:auto"}
 
-필드 그룹에 대한 자세한 내용은 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).
+필드 그룹에 대한 자세한 내용은 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json)를 참조하세요.

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;개발자 안내서;엔드포인트;Data Science Workspace;인기 항목;mlservices;sensei 머신 러닝 api
+keywords: Experience Platform;개발자 안내서;엔드포인트;Data Science Workspace;인기 주제;mlservices;sensei 머신 러닝 api
 solution: Experience Platform
 title: MLServices API 끝점
 description: MLService는 이전에 개발된 모델에 액세스하고 재사용할 수 있는 기능을 조직에 제공하는 게시된 교육된 모델입니다. MLSservices의 주요 기능은 일정에 따라 교육 및 채점을 자동화하는 기능입니다. 예약된 교육 실행은 모델의 효율성과 정확성을 유지하는 데 도움이 될 수 있으며, 예약된 채점 실행은 새로운 통찰력이 일관되게 생성되도록 할 수 있습니다.
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 MLService는 이전에 개발된 모델에 액세스하고 재사용할 수 있는 기능을 조직에 제공하는 게시된 교육된 모델입니다. MLSservices의 주요 기능은 일정에 따라 교육 및 채점을 자동화하는 기능입니다. 예약된 교육 실행은 모델의 효율성과 정확성을 유지하는 데 도움이 될 수 있으며, 예약된 채점 실행은 새로운 통찰력이 일관되게 생성되도록 할 수 있습니다.
 
-자동화된 교육 및 채점 일정은 시작 타임스탬프, 종료 타임스탬프 및 빈도로 표시됩니다. [크론 표현식](https://en.wikipedia.org/wiki/Cron). 다음과 같은 경우 일정을 정의할 수 있습니다. [mlsService 만들기](#create-an-mlservice) 또는 적용자 [기존 MLService 업데이트](#update-an-mlservice).
+자동화된 교육 및 채점 일정은 시작 타임스탬프, 종료 타임스탬프 및 [cron 식](https://en.wikipedia.org/wiki/Cron)(으)로 표시되는 빈도로 정의됩니다. [MLService를 만들거나](#create-an-mlservice)할 때 일정을 정의하거나 [기존 MLService를 업데이트하여](#update-an-mlservice)적용할 수 있습니다.
 
 ## MLService 만들기 {#create-an-mlservice}
 
@@ -77,7 +77,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 고유 식별자( )를 포함하여 새로 생성된 MLService의 세부 사항이 포함된 페이로드를 반환합니다`id`), 교육용 실험 ID(`trainingExperimentId`), 채점을 위한 실험 ID(`scoringExperimentId`) 및 입력 교육 데이터 세트 ID(`trainingDataSetId`).
+성공적인 응답은 고유 식별자(`id`), 교육용 실험 ID(`trainingExperimentId`), 채점용 실험 ID(`scoringExperimentId`) 및 입력 교육 데이터 세트 ID(`trainingDataSetId`)를 포함하여 새로 생성된 MLService의 세부 정보가 포함된 페이로드를 반환합니다.
 
 ```json
 {
@@ -108,7 +108,7 @@ curl -X POST \
 
 ## MLService 목록 검색 {#retrieve-a-list-of-mlservices}
 
-단일 GET 요청을 수행하여 MLService 목록을 검색할 수 있습니다. 결과를 필터링하기 위해 요청 경로에 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 목록은 의 부록 섹션을 참조하십시오. [자산 검색을 위한 쿼리 매개 변수](./appendix.md#query).
+단일 GET 요청을 수행하여 MLService 목록을 검색할 수 있습니다. 결과를 필터링하기 위해 요청 경로에 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 목록은 [자산 검색을 위한 쿼리 매개 변수](./appendix.md#query)의 부록 섹션을 참조하십시오.
 
 **API 형식**
 
@@ -120,12 +120,12 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{QUERY_PARAMETER}` | 다음 중 하나 [사용 가능한 쿼리 매개 변수](./appendix.md#query) 결과를 필터링하는 데 사용됩니다. |
+| `{QUERY_PARAMETER}` | 결과를 필터링하는 데 사용되는 [사용 가능한 쿼리 매개 변수](./appendix.md#query) 중 하나입니다. |
 | `{VALUE}` | 이전 쿼리 매개 변수의 값입니다. |
 
 **요청**
 
-다음 요청에는 쿼리가 포함되어 있으며 동일한 MLInstance ID( )를 공유하는 MLService 목록을 검색합니다.`{MLINSTANCE_ID}`).
+다음 요청에는 쿼리가 포함되어 있으며 동일한 MLInstance ID(`{MLINSTANCE_ID}`)를 공유하는 MLService 목록을 검색합니다.
 
 ```shell
 curl -X GET \
@@ -138,7 +138,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 MLService 목록과 해당 MLService ID( )를 포함한 세부 정보를 반환합니다.`{MLSERVICE_ID}`), 교육용 실험 ID(`{TRAINING_ID}`), 채점을 위한 실험 ID(`{SCORING_ID}`) 및 입력 교육 데이터 세트 ID(`{DATASET_ID}`).
+성공적인 응답은 MLService ID(`{MLSERVICE_ID}`), 교육용 실험 ID(`{TRAINING_ID}`), 채점용 실험 ID(`{SCORING_ID}`) 및 입력 교육 데이터 세트 ID(`{DATASET_ID}`)를 포함하여 MLService 목록과 세부 정보를 반환합니다.
 
 ```json
 {
@@ -175,7 +175,7 @@ curl -X GET \
 GET /mlServices/{MLSERVICE_ID}
 ```
 
-* `{MLSERVICE_ID}`: 유효한 MLService ID입니다.
+* `{MLSERVICE_ID}`: 올바른 MLService ID입니다.
 
 **요청**
 
@@ -215,7 +215,7 @@ curl -X GET \
 
 >[!TIP]
 >
->이 PUT GET 요청의 성공을 보장하려면 먼저 다음 작업을 수행하는 것이 좋습니다. [ID별로 MLService 검색](#retrieve-a-specific-mlservice). 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청에 대한 페이로드로 적용합니다.
+>이 PUT 요청의 성공을 보장하려면 먼저 [ID별로 MLService를 검색](#retrieve-a-specific-mlservice)하는 GET 요청을 수행하는 것이 좋습니다. 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청에 대한 페이로드로 적용합니다.
 
 **API 형식**
 
@@ -223,7 +223,7 @@ curl -X GET \
 PUT /mlServices/{MLSERVICE_ID}
 ```
 
-* `{MLSERVICE_ID}`: 유효한 MLService ID입니다.
+* `{MLSERVICE_ID}`: 올바른 MLService ID입니다.
 
 **요청**
 

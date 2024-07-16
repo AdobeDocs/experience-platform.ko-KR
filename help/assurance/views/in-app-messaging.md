@@ -3,8 +3,8 @@ title: 인앱 메시지 보기
 description: 이 안내서에는 Adobe Experience Platform Assurance의 인앱 메시지 보기에 대한 정보가 자세히 나와 있습니다.
 exl-id: 6131289a-aebb-4b3a-9045-4b2cf23415f8
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '682'
+workflow-type: tm+mt
+source-wordcount: '686'
 ht-degree: 100%
 
 ---

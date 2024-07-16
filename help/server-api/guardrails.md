@@ -20,16 +20,16 @@ Adobe은 사용 제한 초과로 인한 성능 저하의 책임이 없습니다.
 
 >[!IMPORTANT]
 >
->판매 주문에서 라이선스 권한을 확인하고 해당 권한을 확인하십시오. [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html) 이 보호 기능 페이지 외에 실제 사용 제한에서도 사용할 수 있습니다.
+>이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을(를) 확인하십시오.
 
 ## 정의
 
-* **사용 가능** 은 오류와 함께 실패하지 않고 프로비저닝된 Edge Network API와만 관련이 있는 Experience Platform Edge Network에서 처리된 요청의 백분율로, 각 5분 간격에 대해 계산됩니다. 테넌트가 주어진 5분 간격으로 요청을 수행하지 않은 경우 해당 간격은 100%로 간주됩니다.
-* **월별 가동 시간 비율** 주어진 지역에 대해 한 달에 있는 5분 간격 모두에 대한 가용성의 평균으로 계산됩니다.
-* An **업스트림** 는 Adobe 서버측 전달, Adobe Edge 세그멘테이션 또는 Adobe Target과 같은 특정 데이터스트림에 대해 활성화된 Edge Network 뒤의 서비스입니다.
-* A **요청 단위** 는 데이터 스트림에 대해 구성된 요청 및 하나의 업스트림에 대한 8KB 조각에 해당합니다.
-* A **요청** 은 고객 소유 애플리케이션에서 로 보내는 단일 메시지입니다. [!DNL Server API]. 요청에는 하나 이상의 요청 단위가 포함될 수 있습니다.
-* An **오류** 은(는) Edge Network으로 인해 실패한 모든 요청입니다 [내부 서비스 오류](error-handling.md).
+* **가용성**&#x200B;은(는) 5분 간격으로 오류와 함께 실패하지 않고 프로비저닝된 Edge Network API에만 관련된 Experience Platform Edge Network에서 처리된 요청의 백분율로 계산됩니다. 테넌트가 주어진 5분 간격으로 요청을 수행하지 않은 경우 해당 간격은 100%로 간주됩니다.
+* 특정 지역에 대한 **월별 가동 시간 비율**&#x200B;은 한 달에 5분 간격 모두에 대한 가용성의 평균으로 계산됩니다.
+* **업스트림**&#x200B;은(는) Adobe 서버측 전달, Adobe Edge 세그멘테이션 또는 Adobe Target과 같은 특정 데이터 스트림에 대해 활성화된 Edge Network 뒤의 서비스입니다.
+* **요청 단위**&#x200B;은(는) 8KB 요청 조각과 데이터 스트림에 대해 구성된 업스트림 하나에 해당합니다.
+* **요청**&#x200B;은(는) 고객 소유 응용 프로그램에서 [!DNL Server API](으)로 보내는 단일 메시지입니다. 요청에는 하나 이상의 요청 단위가 포함될 수 있습니다.
+* **error**&#x200B;은(는) Edge Network [내부 서비스 오류](error-handling.md)(으)로 인해 실패한 요청입니다.
 
 ## 서비스 제한
 
@@ -37,7 +37,7 @@ Adobe은 사용 제한 초과로 인한 성능 저하의 책임이 없습니다.
 
 ### 요청 단위
 
-모든 제한이 다음에 걸쳐 적용되고 표준화됨: **요청 단위(RU)**&#x200B;로 정의됨 **8KB 조각** 데이터 스트림에 구성된 하나의 업스트림 서비스로 이동하는 요청.
+데이터 스트림에 구성된 하나의 업스트림 서비스로 이동하는 요청의 **8KB 조각**(으)로 정의된 **요청 단위(RU)**&#x200B;에 대해 모든 제한이 적용되고 표준화되었습니다.
 
 #### 예시
 
@@ -74,7 +74,7 @@ Adobe은 사용 제한 초과로 인한 성능 저하의 책임이 없습니다.
 Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보호, 종단 간 지연 정보 및 라이선스 정보에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
-* [엔드 투 엔드 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 다양한 Experience Platform 서비스용.
-* [Real-time Customer Data Platform (B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams).
+* [Real-time Customer Data Platform(B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

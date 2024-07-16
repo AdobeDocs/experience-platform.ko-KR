@@ -14,33 +14,33 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-다음 [!DNL Braze] 대상 은 프로필 데이터를에 전송하는 데 도움이 됩니다. [!DNL Braze].
+[!DNL Braze] 대상은 프로필 데이터를 [!DNL Braze](으)로 전송하는 데 도움이 됩니다.
 
-[!DNL Braze] 는 고객과 고객이 사랑하는 브랜드 간의 관련성 있고 기억에 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
+[!DNL Braze]은(는) 고객과 고객이 사랑하는 브랜드 간의 관련성 있고 기억에 남는 경험을 제공하는 포괄적인 고객 참여 플랫폼입니다.
 
-프로필 데이터를 (으)로 보내려면 [!DNL Braze], 먼저 대상에 연결해야 합니다.
+[!DNL Braze]에 프로필 데이터를 보내려면 먼저 대상에 연결해야 합니다.
 
 ## 대상 세부 사항 {#specifics}
 
-다음 세부 사항에 유의하십시오. [!DNL Braze] 대상:
+[!DNL Braze] 대상에 해당하는 다음 세부 정보를 참고하십시오.
 
-* [!DNL Adobe Experience Platform] 대상자를 (으)로 내보냅니다. [!DNL Braze] 다음 아래에 `AdobeExperiencePlatformSegments` 특성.
+* [!DNL Adobe Experience Platform]개의 대상을 `AdobeExperiencePlatformSegments` 특성 아래의 [!DNL Braze](으)로 내보냅니다.
 
 >[!NOTE]
 >
->추가 사용자 지정 속성을 (으)로 전송해야 합니다. [!DNL Braze] 이(가) 다음을 증가시킬 수 있습니다. [!DNL Braze] 데이터 포인트 사용량. 다음 사용자와 상의하십시오. [!DNL Braze] 계정 관리자가 추가 사용자 지정 특성을 보내기 전에.
+>추가 사용자 지정 특성을 [!DNL Braze]에 보내면 [!DNL Braze] 데이터 포인트 사용량이 늘어날 수 있습니다. 추가 사용자 지정 특성을 보내기 전에 [!DNL Braze] 계정 관리자에게 문의하십시오.
 
 ## 사용 사례 {#use-cases}
 
-마케터는 대상이 내장된 모바일 참여 대상에서 사용자를 타겟팅하려고 합니다 [!DNL Adobe Experience Platform]. 또한 의 속성을 기반으로 개인화된 경험을 전달하려고 합니다 [!DNL Adobe Experience Platform] 대상자 및 프로필이 업데이트되는 즉시 프로필 [!DNL Adobe Experience Platform].
+마케터는 [!DNL Adobe Experience Platform]에 내장된 대상자를 사용하여 모바일 참여 대상에서 사용자를 타깃팅하려고 합니다. 또한 대상자와 프로필이 [!DNL Adobe Experience Platform]에서 업데이트되는 즉시 [!DNL Adobe Experience Platform] 프로필의 특성을 기반으로 개인화된 경험을 전달하려고 합니다.
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Braze] 는 아래 표에 설명된 id 활성화를 지원합니다.
+[!DNL Braze]은(는) 아래 표에 설명된 ID 활성화를 지원합니다.
 
 | 대상 ID | 설명 | 고려 사항 |
 |---|---|---|
-| external_id | 사용자 정의 [!DNL Braze] 모든 id의 매핑을 지원하는 식별자. | 다음을 보낼 수 있습니다. [신원](../../../identity-service/features/namespaces.md) (으)로 [!DNL Braze] 대상 을 매핑하기만 하면 됩니다. [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | 모든 ID의 매핑을 지원하는 사용자 지정 [!DNL Braze] 식별자입니다. | [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation)에 매핑하기만 하면 [identity](../../../identity-service/features/namespaces.md)을(를) [!DNL Braze] 대상으로 보낼 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -50,8 +50,8 @@ ht-degree: 2%
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -61,8 +61,8 @@ ht-degree: 2%
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 필드 매핑에 따라 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성) 및/또는 ID와 함께 세그먼트의 모든 멤버를 내보냅니다.[!DNL Adobe Experience Platform] 대상자를 (으)로 내보냅니다. [!DNL Braze] 다음 아래에 `AdobeExperiencePlatformSegments` 특성. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. 자세한 내용 [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations). |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | 필드 매핑에 따라 원하는 스키마 필드(예: 이메일 주소, 전화번호, 성) 및/또는 ID와 함께 세그먼트의 모든 멤버를 내보냅니다.[!DNL Adobe Experience Platform]개의 대상을 `AdobeExperiencePlatformSegments` 특성 아래의 [!DNL Braze](으)로 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -70,100 +70,100 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 > 
->대상에 연결하려면 다음이 필요합니다. **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+>대상에 연결하려면 **[!UICONTROL 대상 보기]** 및 **[!UICONTROL 대상 관리]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
-이 대상에 연결하려면 다음과같이 하십시오. [대상 구성 자습서](../../ui/connect-destination.md). 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
+이 대상에 연결하려면 [대상 구성 자습서](../../ui/connect-destination.md)에 설명된 단계를 따르십시오. 대상 구성 워크플로에서 아래 두 섹션에 나열된 필드를 채웁니다.
 
 ### 대상으로 인증 {#authenticate}
 
-대상에 인증하려면 필수 필드를 입력한 다음 을(를) 선택합니다. **[!UICONTROL 대상에 연결]**.
+대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
 
-* **[!UICONTROL 계정 토큰 동기화]**: 사용자 [!DNL Braze] [!DNL API] 키. 다음을 얻는 방법에 대한 자세한 지침을 확인할 수 있습니다. [!DNL API] 키: [REST API 키 개요](https://www.braze.com/docs/api/api_key/).
+* **[!UICONTROL 계정 토큰 동기화]**: [!DNL Braze] [!DNL API] 키입니다. [!DNL API] 키를 가져오는 방법에 대한 자세한 지침은 [REST API 키 개요](https://www.braze.com/docs/api/api_key/)에서 확인할 수 있습니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 이름을 입력합니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명을 입력합니다.
-* **[!UICONTROL 끝점 인스턴스]**: 사용자에게 묻기 [!DNL Braze] 사용해야 하는 엔드포인트 인스턴스를 나타냅니다.
+* **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 이름을 입력하십시오.
+* **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명을 입력하십시오.
+* **[!UICONTROL 끝점 인스턴스]**: 사용할 끝점 인스턴스를 [!DNL Braze] 담당자에게 문의하십시오.
 
 ### 경고 활성화 {#enable-alerts}
 
-경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 다음 안내서를 참조하십시오. [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
+대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
->* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
-다음을 참조하십시오 [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md) 이 대상에 대한 대상자 활성화에 대한 지침을 참조하십시오.
+이 대상에 대한 대상 활성화에 대한 지침은 [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](../../ui/activate-segment-streaming-destinations.md)를 참조하십시오.
 
 ## 매핑 고려 사항 {#mapping-considerations}
 
-대상 데이터를에서 올바로 보내려면 [!DNL Adobe Experience Platform] (으)로 [!DNL Braze] 대상, 필드 매핑 단계를 거쳐야 합니다.
+대상 데이터를 [!DNL Adobe Experience Platform]에서 [!DNL Braze] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야 합니다.
 
-매핑은 와(과) 사이에 링크 만들기로 구성됩니다. [!DNL Experience Data Model] 의 (XDM) 스키마 필드 [!DNL Platform] account 및 대상 항목의 해당 등가물
+매핑은 [!DNL Platform] 계정의 [!DNL Experience Data Model](XDM) 스키마 필드와 대상 대상의 해당 필드 필드 사이에 링크를 만드는 것으로 구성됩니다.
 
-XDM 필드를 [!DNL Braze] 대상 필드에서 다음 단계를 수행합니다.
+XDM 필드를 [!DNL Braze] 대상 필드에 올바르게 매핑하려면 다음 단계를 따르십시오.
 
-다음에서 [!UICONTROL 매핑] 단계, 클릭 **[!UICONTROL 새 매핑 추가]**.
+[!UICONTROL 매핑] 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 클릭합니다.
 
-![대상 추가 매핑 동기화](../../assets/catalog/mobile-engagement/braze/mapping.png)
+![대상 병합 매핑 추가](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-다음에서 [!UICONTROL Source 필드] 섹션에서 빈 필드 옆에 있는 화살표 단추를 클릭합니다.
+[!UICONTROL Source 필드] 섹션에서 빈 필드 옆에 있는 화살표 단추를 클릭합니다.
 
-![브레이즈 대상 Source 매핑](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
+![대상 Source 매핑 중단](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
-다음에서 [!UICONTROL 소스 필드 선택] 창에서 다음 두 범주의 XDM 필드 중에서 선택할 수 있습니다.
-* [!UICONTROL 속성 선택]: 이 옵션을 사용하여 XDM 스키마의 특정 필드를 [!DNL Braze] 특성.
+[!UICONTROL 소스 필드 선택] 창에서 다음 두 범주의 XDM 필드 중 하나를 선택할 수 있습니다.
+* [!UICONTROL 특성 선택]: 이 옵션을 사용하여 XDM 스키마의 특정 필드를 [!DNL Braze] 특성에 매핑합니다.
 
-![대상 매핑 Source 속성 고정](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
+![대상 매핑 Source 특성 동기화](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL ID 네임스페이스 선택]: 이 옵션을 사용하여 를 매핑합니다. [!DNL Platform] 에 대한 id 네임스페이스 [!DNL Braze] 네임스페이스입니다.
+* [!UICONTROL ID 네임스페이스 선택]: 이 옵션을 사용하여 [!DNL Platform] ID 네임스페이스를 [!DNL Braze] 네임스페이스에 매핑합니다.
 
-![대상 매핑 Source 네임스페이스 브레이징](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
+![대상 매핑 Source 네임스페이스 동기화](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
-소스 필드를 선택한 다음 **[!UICONTROL 선택]**.
+소스 필드를 선택한 다음 **[!UICONTROL 선택]**&#x200B;을 클릭합니다.
 
-다음에서 [!UICONTROL 대상 필드] 섹션에서 필드 오른쪽에 있는 매핑 아이콘을 클릭합니다.
+[!UICONTROL 대상 필드] 섹션에서 필드 오른쪽에 있는 매핑 아이콘을 클릭합니다.
 
 ![대상 매핑 동기화](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-다음에서 [!UICONTROL 대상 필드 선택] 창에서 다음 두 범주의 대상 필드 중에서 선택할 수 있습니다.
-* [!UICONTROL ID 네임스페이스 선택]: 이 옵션을 사용하여 매핑합니다. [!DNL Platform] 네임스페이스 식별 [!DNL Braze] id 네임스페이스.
-* [!UICONTROL 사용자 지정 속성 선택]: 이 옵션을 사용하여 XDM 속성을 사용자 지정에 매핑합니다 [!DNL Braze] 에서 정의한 속성 [!DNL Braze] 계정입니다. <br> 이 옵션을 사용하여 기존 XDM 속성의 이름을으로 바꿀 수도 있습니다 [!DNL Braze]. 예를 들어 를 매핑합니다. `lastName` 사용자 지정에 대한 XDM 속성 `Last_Name` 의 속성 [!DNL Braze]을(를) 통해 `Last_Name` 의 속성 [!DNL Braze]가 없는 경우 매핑합니다. `lastName` XDM 속성입니다.
+[!UICONTROL 대상 필드 선택] 창에서 다음 두 범주의 대상 필드 중에서 선택할 수 있습니다.
+* [!UICONTROL ID 네임스페이스 선택]: 이 옵션을 사용하여 [!DNL Platform] ID 네임스페이스를 [!DNL Braze] ID 네임스페이스에 매핑합니다.
+* [!UICONTROL 사용자 지정 특성 선택]: 이 옵션을 사용하여 XDM 특성을 [!DNL Braze] 계정에 정의한 사용자 지정 [!DNL Braze] 특성에 매핑합니다. <br> 이 옵션을 사용하여 기존 XDM 특성의 이름을 [!DNL Braze](으)로 바꿀 수도 있습니다. 예를 들어 `lastName` XDM 특성을 [!DNL Braze]의 사용자 지정 `Last_Name` 특성에 매핑하면 [!DNL Braze]에 `Last_Name` 특성이 아직 존재하지 않는 경우 이 특성을 만들고 `lastName` XDM 특성을 매핑합니다.
 
 ![대상 매핑 필드 동기화](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
-대상 필드를 선택한 다음 **[!UICONTROL 선택]**.
+대상 필드를 선택한 다음 **[!UICONTROL 선택]**&#x200B;을 클릭합니다.
 
 이제 목록에 필드 매핑이 표시됩니다.
 
-![대상 매핑 동기화 완료](../../assets/catalog/mobile-engagement/braze/mapping-complete.png)
+![대상 매핑 중단 완료](../../assets/catalog/mobile-engagement/braze/mapping-complete.png)
 
 매핑을 더 추가하려면 이전 단계를 반복합니다.
 
 ## 매핑 예 {#mapping-example}
 
-XDM 프로필 스키마와 [!DNL Braze] 인스턴스에는 다음 속성과 ID가 포함되어 있습니다.
+XDM 프로필 스키마와 [!DNL Braze] 인스턴스에 다음 특성과 ID가 포함되어 있다고 가정합니다.
 
 |  | XDM 프로필 스키마 | [!DNL Braze] 인스턴스 |
 |---|---|---|
-| 속성 | <ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul> | <ul><li><code>이름</code></li><li><code>성</code></li><li><code>전화번호</code></li></ul> |
-| ID | <ul><li><code>이메일</code></li><li><code>Google 광고 ID (GAID)</code></li><li><code>IDFA(광고주용 Apple ID)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
+| 속성 | <ul><li><code>사람.이름.이름</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul> | <ul><li><code>이름</code></li><li><code>성</code></li><li><code>전화 번호</code></li></ul> |
+| ID | <ul><li><code>전자 메일</code></li><li><code>Google 광고 ID(GAID)</code></li><li><code>IDFA(광고주용 Apple ID)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
 
 올바른 매핑은 다음과 같습니다.
 
-![브레이즈 대상 매핑 예](../../assets/catalog/mobile-engagement/braze/mapping-example.png)
+![대상 병합 예제](../../assets/catalog/mobile-engagement/braze/mapping-example.png)
 
 ## 내보낸 데이터 {#exported-data}
 
-데이터가 성공적으로 로 내보내졌는지 확인하려면 [!DNL Braze] 대상, 다음을 확인: [!DNL Braze] 계정입니다. [!DNL Adobe Experience Platform] 대상자를 (으)로 내보냅니다. [!DNL Braze] 다음 아래에 `AdobeExperiencePlatformSegments` 특성.
+데이터를 [!DNL Braze] 대상으로 내보냈는지 확인하려면 [!DNL Braze] 계정을 확인하세요. [!DNL Adobe Experience Platform]개의 대상을 `AdobeExperiencePlatformSegments` 특성 아래의 [!DNL Braze](으)로 내보냅니다.
 
 ## 문제 해결 {#troubleshooting}
 
@@ -175,4 +175,4 @@ XDM 프로필 스키마와 [!DNL Braze] 인스턴스에는 다음 속성과 ID�
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
-모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스 시행, 참조: [데이터 거버넌스 개요](../../../data-governance/home.md).
+데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](../../../data-governance/home.md)를 참조하십시오.

@@ -11,25 +11,25 @@ ht-degree: 0%
 
 # Adobe Experience Platform 웹 SDK 구성
 
-웹 SDK에 대한 구성은 `configure` 명령입니다. 웹 SDK 구성은 라이브러리 또는 태그 확장을 사용할 때마다 반드시 수행해야 하는 중요한 필수 단계입니다.
+`configure` 명령을 사용하여 웹 SDK를 구성합니다. 웹 SDK 구성은 라이브러리 또는 태그 확장을 사용할 때마다 반드시 수행해야 하는 중요한 필수 단계입니다.
 
 ## 태그 확장을 사용하여 웹 SDK 구성 {#configure-tag-extension}
 
 태그 확장을 통해 웹 SDK를 구성하려면 아래 단계를 따르십시오.
 
-1. 에 로그인 [experience.adobe.com](https://experience.adobe.com) Adobe ID 자격 증명을 사용합니다.
-1. 다음으로 이동 **[!UICONTROL 데이터 수집]** > **[!UICONTROL 태그]**.
+1. Adobe ID 자격 증명을 사용하여 [experience.adobe.com](https://experience.adobe.com)에 로그인합니다.
+1. **[!UICONTROL 데이터 수집]** > **[!UICONTROL 태그]**(으)로 이동합니다.
 1. 원하는 태그 속성을 선택합니다.
-1. 다음으로 이동 **[!UICONTROL 확장]**&#x200B;을 클릭한 다음 을 클릭합니다 **[!UICONTROL 구성]** 다음에 있음 [!UICONTROL Adobe Experience Platform 웹 SDK] 카드.
-1. 로 이동 [웹 SDK 태그 확장 구성 페이지](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 모든 구성 옵션에 대한 자세한 내용을 보려면 를 참조하십시오.
+1. **[!UICONTROL 확장]**(으)로 이동한 다음 [!UICONTROL Adobe Experience Platform Web SDK] 카드에서 **[!UICONTROL 구성]**&#x200B;을 클릭합니다.
+1. 모든 구성 옵션에 대한 자세한 내용을 보려면 [웹 SDK 태그 확장 구성 페이지](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)로 이동하십시오.
 
 이러한 구성 설정은 확장을 사용하여 데이터를 Adobe으로 전송할 때마다 설정됩니다.
 
 ## JavaScript 라이브러리를 사용하여 웹 SDK 구성 {#configure-js}
 
-실행 `configure` 명령입니다. 이 명령은 다음과 같은 다른 웹 SDK 명령을 호출하기 전에 필요합니다. [`sendEvent`](../sendevent/overview.md).
+`configure` 명령을 실행합니다. 이 명령은 [`sendEvent`](../sendevent/overview.md)과 같은 다른 웹 SDK 명령을 호출하기 전에 필요합니다.
 
-다음 [`edgeConfigId`](edgeconfigid.md) 및 [`orgId`](orgid.md) 속성이 필요합니다. 다른 모든 속성은 조직의 구현 요구 사항에 따라 선택 사항입니다.
+[`edgeConfigId`](edgeconfigid.md) 및 [`orgId`](orgid.md) 속성이 필요합니다. 다른 모든 속성은 조직의 구현 요구 사항에 따라 선택 사항입니다.
 
 지원되는 각 명령에 대한 자세한 내용은 이 사용 안내서의 목차를 참조하십시오.
 

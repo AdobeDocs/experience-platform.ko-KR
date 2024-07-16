@@ -6,34 +6,34 @@ exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
 source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
 source-wordcount: '390'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# 사용 [!DNL Adobe Journey Optimizer] (으)로 [!DNL Platform Web SDK]
+# [!DNL Platform Web SDK]에 [!DNL Adobe Journey Optimizer] 사용 중
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] 에서 관리되는 개인화된 경험을 제공하고 렌더링할 수 있습니다. [!DNL Adobe Journey Optimizer] 웹 채널에 연결합니다. WYSIWYG 편집기를 사용할 수 있습니다. [!DNL Adobe Journey Optimizer] [웹 채널](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)또는 시각적이지 않은 인터페이스인 [코드 기반 경험 채널](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) 을(를) 만들고, 활성화하고, 게재하려면 [!DNL Journey Optimizer Web] 캠페인 및 개인화 경험.
+[!DNL Adobe Experience Platform] [!DNL Web SDK]은(는) [!DNL Adobe Journey Optimizer]에서 관리되는 개인화된 경험을 웹 채널에 전달하고 렌더링할 수 있습니다. WYSIWYG 편집기, [!DNL Adobe Journey Optimizer] [웹 채널](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 또는 [코드 기반 경험 채널](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based)인 비시각적 인터페이스를 사용하여 [!DNL Journey Optimizer Web] 캠페인 및 개인화 경험을 만들고, 활성화하고, 제공할 수 있습니다.
 
 >[!IMPORTANT]
 >
->읽기 [Adobe Journey Optimizer 웹 채널 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=ko) 시작하는 방법에 대한 자세한 내용 [!DNL Journey Optimizer Web] 경험 작성 및 보고.
+>[!DNL Journey Optimizer Web] 경험 작성 및 보고 시작하기에 대한 자세한 내용은 [Adobe Journey Optimizer 웹 채널 설명서](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=ko)를 참조하십시오.
 
 ## 용어 {#terminology}
 
-**[!UICONTROL 표면]**: 웹 표면은 URI로 식별되는 페이지의 웹 페이지 또는 위치이며, 여기서 [!DNL Adobe Journey Optimizer] 경험 콘텐츠가 전달됩니다.
+**[!UICONTROL 표면]**: 웹 표면은 [!DNL Adobe Journey Optimizer] 경험 콘텐츠가 전달될 URI로 식별된 페이지의 웹 페이지나 위치입니다.
 
-**[!UICONTROL 제안]**: 위치 [!DNL Adobe Journey Optimizer], propositions는 다음에서 선택한 경험과 관련이 있습니다. [!DNL Journey Optimizer Campaign].
+**[!UICONTROL 제안]**: [!DNL Adobe Journey Optimizer]에서 제안은 [!DNL Journey Optimizer Campaign]에서 선택한 경험과 상관 관계가 있습니다.
 
-## 활성화 중 [!DNL Adobe Journey Optimizer] {#enable-ajo}
+## [!DNL Adobe Journey Optimizer] 사용 {#enable-ajo}
 
-을(를) 사용하려면 [!DNL Adobe Journey Optimizer]을(를) 통해 아래 단계를 수행합니다.
+[!DNL Adobe Journey Optimizer]을(를) 사용하려면 아래 단계를 따르십시오.
 
-1. 다음을 통과하십시오. [전제 조건](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) 다음에서 [!DNL Adobe Journey Optimizer] [웹 경험 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), 특히
-   * 설정 [!DNL Adobe Experience Cloud Visual Editing Helper].
-   * 사용 [!DNL Adobe Journey Optimizer] (으)로 [데이터스트림](../../../datastreams/overview.md).
-   * 활성화 [!UICONTROL Active-On-Edge 병합 정책] 옵션을 선택합니다.
+1. [!DNL Adobe Journey Optimizer] [웹 경험 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)에서 [필수 구성 요소](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites)를 살펴보십시오. 구체적으로 다음과 같습니다.
+   * [!DNL Adobe Experience Cloud Visual Editing Helper]을(를) 설정합니다.
+   * [데이터스트림](../../../datastreams/overview.md)에서 [!DNL Adobe Journey Optimizer]을(를) 사용하도록 설정합니다.
+   * [!UICONTROL Active-On-Edge 병합 정책] 옵션을 사용하도록 설정합니다.
 
-2. 추가 `renderDecisions` 이벤트 옵션 설정 `renderDecisions` 끝 `true` 웹 페이지 표면에 전달된 Journey Optimizer 컨텐츠 제안을 자동으로 렌더링합니다.
+2. 이벤트에 `renderDecisions` 옵션을 추가합니다. 웹 페이지 표면에 전달된 Journey Optimizer 컨텐츠 제안을 자동으로 렌더링하려면 `renderDecisions`을(를) `true`(으)로 설정하십시오.
 
    ```javascript
    alloy("sendEvent", {
@@ -42,7 +42,7 @@ ht-degree: 1%
    })
    ```
 
-3. 이벤트에서 추가 서피스를 지정합니다(선택 사항). 기본적으로 웹 SDK는 현재 웹 페이지에 대한 웹 표면을 자동으로 생성하고 Edge Network에 대한 요청에 포함합니다. 필요한 경우 요청에서 추가 서피스를 지정하여 요청에 포함할 수 있습니다. `personalization.surfaces` 옵션 `sendEvent` 명령 또는 **[!UICONTROL 표면]** [[!UICONTROL 이벤트 보내기] 작업](../../../tags/extensions/client/web-sdk/action-types.md#send-event) 웹 SDK 확장 구성.
+3. 이벤트에서 추가 서피스를 지정합니다(선택 사항). 기본적으로 웹 SDK는 현재 웹 페이지에 대한 웹 표면을 자동으로 생성하고 Edge Network에 대한 요청에 포함합니다. 필요한 경우 `sendEvent` 명령의 `personalization.surfaces` 옵션이나 Web SDK 확장의 해당 **[!UICONTROL 표면]** [[!UICONTROL 이벤트 보내기] 작업](../../../tags/extensions/client/web-sdk/action-types.md#send-event) 구성에서 이를 지정하여 요청에 추가 표면을 포함할 수 있습니다.
 
    ```javascript
    alloy("sendEvent", {
@@ -53,9 +53,9 @@ ht-degree: 1%
    })
    ```
 
-   ![확장-추가-표면](./assets/extension-add-surface.png)
+   ![확장 추가 표면](./assets/extension-add-surface.png)
 
-   이벤트 표면은에 포함됩니다. `query.personalization.surfaces` 요청 필드:
+   이벤트 표면이 `query.personalization.surfaces` 요청 필드에 포함되어 있습니다.
 
    ```json
    {
@@ -80,17 +80,17 @@ ht-degree: 1%
    }
    ```
 
-4. 다른 개인화 기능과 유사하게 **[코드 조각 사전 숨김](../manage-flicker.md)** 경험을 가져오는 동안 페이지의 특정 부분만 숨깁니다.
+4. 다른 개인화 기능과 마찬가지로 경험을 가져오는 동안 페이지의 특정 부분만 숨기도록 **[코드 조각 사전 숨김](../manage-flicker.md)**&#x200B;을 추가할 수 있습니다.
 
 ## Adobe Journey Optimizer 웹 경험 만들기 {#create-ajo-web-experiences}
 
-다음 [웹 캠페인 작성](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) 의 지침 [!DNL Adobe Journey Optimizer] [웹 경험 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 만들려면 [!DNL Journey Optimizer Web] 캠페인 및 경험.
+[!DNL Journey Optimizer Web]개의 캠페인 및 경험을 만들려면 [!DNL Adobe Journey Optimizer] [웹 경험 안내서](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)의 [웹 캠페인 작성](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) 지침을 따르십시오.
 
 ## 개인화된 콘텐츠 렌더링 {#rendering-personalized-content}
 
-다음에서 설명서를 참조하십시오. [개인화 콘텐츠 렌더링](../rendering-personalization-content.md) 추가 정보.
+자세한 내용은 [개인화 콘텐츠 렌더링](../rendering-personalization-content.md)에 대한 설명서를 참조하십시오.
 
-웹 표면에 대한 Adobe Journey Optimizer 제안은 다음과 유사한 방식으로 처리됩니다. `__view__` 결정 범위 제안. 특히 다음과 같은 경우 `renderDecisions` 옵션이 로 설정되어 있습니다. `true` 다음에서 `sendEvent` 이 명령은 웹 SDK에 의해 자동으로 렌더링됩니다.
+웹 표면에 대한 Adobe Journey Optimizer 제안은 `__view__` 결정 범위 제안과 유사한 방식으로 처리됩니다. 특히 `sendEvent` 명령에서 `renderDecisions` 옵션을 `true`(으)로 설정하면 웹 SDK가 이 옵션을 자동으로 렌더링합니다.
 
 샘플 Journey Optimizer 콘텐츠 제안:
 
@@ -145,6 +145,6 @@ ht-degree: 1%
 
 ## 디버깅 {#debugging}
 
-Adobe Journey Optimizer 개인화 구현을 디버깅하려면 [Web SDK 디버깅](/help/web-sdk/use-cases/debugging.md). [!DNL Adobe Journey Optimizer] 다음을 사용하여 문제를 해결할 때 디버그 추적을 사용할 수 있습니다. [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). 다음을 사용하여 이벤트 확인 `AJO:` 접두사입니다.
+Adobe Journey Optimizer 개인화 구현을 디버깅하려면 [Web SDK 디버깅](/help/web-sdk/use-cases/debugging.md)을 사용하십시오. [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/)을(를) 사용하여 문제를 해결할 때 [!DNL Adobe Journey Optimizer] 디버그 추적을 사용할 수 있습니다. `AJO:` 접두사가 있는 이벤트를 확인합니다.
 
 ![assurance-ajo-trace](./assets/assurance-ajo-trace.png)

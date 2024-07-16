@@ -6,38 +6,38 @@ description: 스키마 레지스트리 API의 /union 끝점을 사용하면 경�
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '899'
 ht-degree: 1%
 
 ---
 
 # 유니온 엔드포인트
 
-유니온(또는 유니온 뷰)은 동일한 클래스( )를 공유하는 모든 스키마의 필드를 집계하는 시스템 생성 읽기 전용 스키마입니다.[!DNL XDM ExperienceEvent] 또는 [!DNL XDM Individual Profile]) 및에 대해 활성화됩니다. [[!DNL Real-Time Customer Profile]](../../profile/home.md).
+유니온(또는 유니온 보기)은 동일한 클래스([!DNL XDM ExperienceEvent] 또는 [!DNL XDM Individual Profile])를 공유하고 [[!DNL Real-Time Customer Profile]](../../profile/home.md)에 대해 활성화된 모든 스키마의 필드를 집계하는 시스템 생성 읽기 전용 스키마입니다.
 
-이 문서에서는 다양한 작업에 대한 샘플 호출을 포함하여 스키마 레지스트리 API에서 유니온을 사용하여 작업하기 위한 필수 개념을 다룹니다. XDM의 조합에 대한 일반 정보는 [스키마 컴포지션 기본 사항](../schema/composition.md#union).
+이 문서에서는 다양한 작업에 대한 샘플 호출을 포함하여 스키마 레지스트리 API에서 유니온을 사용하여 작업하기 위한 필수 개념을 다룹니다. XDM의 유니온에 대한 자세한 내용은 [스키마 컴포지션의 기본 사항](../schema/composition.md#union)에서 유니온에 대한 섹션을 참조하십시오.
 
 ## 유니온 스키마 필드
 
-다음 [!DNL Schema Registry] 유니온 스키마 내에 다음 세 개의 키 필드가 자동으로 포함됩니다. `identityMap`, `timeSeriesEvents`, 및 `segmentMembership`.
+[!DNL Schema Registry]은(는) 유니온 스키마 내에 세 개의 키 필드를 자동으로 포함합니다. `identityMap`, `timeSeriesEvents` 및 `segmentMembership`.
 
 ### ID 맵
 
-유니온 스키마 `identityMap` 는 유니온의 연결된 레코드 스키마 내에 있는 알려진 id를 나타냅니다. ID 맵은 ID를 네임스페이스로 처리된 다른 배열로 구분합니다. 나열된 각 ID는 그 자체로 고유한 ID를 포함하는 객체입니다 `id` 값. 다음을 참조하십시오. [Identity Service 설명서](../../identity-service/home.md) 추가 정보.
+유니온 스키마의 `identityMap`은(는) 유니온의 연결된 레코드 스키마 내의 알려진 ID를 나타냅니다. ID 맵은 ID를 네임스페이스로 처리된 다른 배열로 구분합니다. 나열된 각 ID는 그 자체로 고유한 `id` 값을 포함하는 개체입니다. 자세한 내용은 [ID 서비스 설명서](../../identity-service/home.md)를 참조하세요.
 
 ### 시계열 이벤트
 
-다음 `timeSeriesEvents` 배열은 유니온과 연결된 레코드 스키마와 관련된 시계열 이벤트 목록입니다. 프로필 데이터를 데이터 세트로 내보내면 이 배열이 각 레코드에 포함됩니다. 이 기능은 모델이 레코드 특성 외에 프로필의 전체 동작 기록이 필요한 머신 러닝과 같은 다양한 사용 사례에 유용합니다.
+`timeSeriesEvents` 배열은 유니온과 연결된 레코드 스키마와 관련된 시계열 이벤트 목록입니다. 프로필 데이터를 데이터 세트로 내보내면 이 배열이 각 레코드에 포함됩니다. 이 기능은 모델이 레코드 특성 외에 프로필의 전체 동작 기록이 필요한 머신 러닝과 같은 다양한 사용 사례에 유용합니다.
 
 ### 세그먼트 멤버십 맵
 
-다음 `segmentMembership` 맵은 세그먼트 정의 평가 결과를 저장합니다. 다음을 사용하여 세그먼트 작업이 성공적으로 실행되는 경우 [세그먼테이션 API](https://www.adobe.io/experience-platform-apis/references/segmentation/)를 입력하면 맵이 업데이트됩니다. `segmentMembership` 또한 Platform에 수집되는 사전 평가된 모든 대상을 저장하여 Adobe Audience Manager과 같은 다른 솔루션과 통합할 수 있습니다. 다음 튜토리얼 참조: [api를 사용하여 대상자 만들기](../../segmentation/tutorials/create-a-segment.md) 추가 정보.
+`segmentMembership` 맵은 세그먼트 정의를 평가한 결과를 저장합니다. [세그먼테이션 API](https://www.adobe.io/experience-platform-apis/references/segmentation/)를 사용하여 세그먼트 작업이 성공적으로 실행되면 맵이 업데이트됩니다. `segmentMembership`은(는) Platform에 수집되는 미리 평가된 대상도 모두 저장하여 Adobe Audience Manager과 같은 다른 솔루션과 통합할 수 있습니다. 자세한 내용은 [API를 사용하여 대상자 만들기](../../segmentation/tutorials/create-a-segment.md)에 대한 자습서를 참조하십시오.
 
 ## 유니온 목록 검색 {#list}
 
-을(를) 설정할 때 `union` 태그에 스키마 추가, [!DNL Schema Registry] 스키마가 기반으로 하는 클래스의 유니온에 스키마를 자동으로 추가합니다. 해당 클래스에 대한 유니온이 없는 경우 새 유니온이 자동으로 생성됩니다. 다음 `$id` (연합의 경우)는 표준과 유사합니다 `$id` 기타 [!DNL Schema Registry] 리소스(두 개의 밑줄 및 &quot;union&quot;이라는 단어가 추가된 유일한 차이점)`__union`).
+스키마에 `union` 태그를 설정하면 [!DNL Schema Registry]이(가) 스키마를 기반으로 하는 클래스의 유니온에 스키마를 자동으로 추가합니다. 해당 클래스에 대한 유니온이 없는 경우 새 유니온이 자동으로 생성됩니다. 유니온에 대한 `$id`은(는) 다른 [!DNL Schema Registry] 리소스의 표준 `$id`과(와) 유사하지만 두 개의 밑줄 및 &quot;유니온&quot;(`__union`)이라는 단어가 추가된 차이점만 있습니다.
 
-에 GET 요청을 하여 사용 가능한 조합 목록을 볼 수 있습니다. `/tenant/unions` 엔드포인트.
+`/tenant/unions` 끝점에 대한 GET 요청을 수행하면 사용 가능한 유니온 목록을 볼 수 있습니다.
 
 **API 형식**
 
@@ -57,18 +57,18 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
-응답 형식은 다음에 따라 다릅니다. `Accept` 헤더가 요청에서 전송되었습니다. 다음 `Accept` 헤더는 유니온 목록을 만드는 데 사용할 수 있습니다.
+응답 형식은 요청에서 보낸 `Accept` 헤더에 따라 다릅니다. 유니온 목록을 만드는 데 다음 `Accept` 헤더를 사용할 수 있습니다.
 
-| `Accept` 머리글 | 설명 |
+| `Accept` 헤더 | 설명 |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스 목록을 만드는 데 권장되는 헤더입니다. (제한: 300) |
-| `application/vnd.adobe.xed+json` | 원본과 함께 각 리소스에 대한 전체 JSON 클래스를 반환합니다. `$ref` 및 `allOf` 포함. (제한: 300) |
+| `application/vnd.adobe.xed+json` | 원본 `$ref` 및 `allOf`이(가) 포함된 각 리소스에 대한 전체 JSON 클래스를 반환합니다. (제한: 300) |
 
 {style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 HTTP 상태 200(OK) 및 `results` 응답 본문의 배열입니다. 유니온이 정의된 경우 각 유니온에 대한 세부 사항이 배열 내의 객체로 제공됩니다. 유니온이 정의되지 않은 경우 HTTP 상태 200(OK)이 여전히 반환되지만 `results` 배열이 비어 있습니다.
+응답이 성공하면 응답 본문에 HTTP 상태 200(OK) 및 `results` 배열이 반환됩니다. 유니온이 정의된 경우 각 유니온에 대한 세부 사항이 배열 내의 객체로 제공됩니다. 유니온이 정의되지 않은 경우 HTTP 상태 200(OK)이 계속 반환되지만 `results` 배열이 비어 있습니다.
 
 ```JSON
 {
@@ -91,11 +91,11 @@ curl -X GET \
 
 ## 유니온 조회 {#lookup}
 
-다음을 포함하는 GET 요청을 수행하여 특정 결합을 볼 수 있습니다. `$id` 또한 Accept 헤더에 따라 결합 세부 정보의 일부 또는 전체가 표시됩니다.
+`$id`을(를) 포함하는 GET 요청을 수행하고 Accept 헤더에 따라 특정 유니온 세부 정보의 일부 또는 전부를 볼 수 있습니다.
 
 >[!NOTE]
 >
->조합 조회는 다음을 사용하여 사용할 수 있습니다. `/unions` 및 `/schemas` 에서 사용하도록 설정하기 위한 엔드포인트 [!DNL Profile] 를 데이터 세트로 내보냅니다.
+>유니온 조회는 `/unions` 및 `/schemas` 끝점을 사용하여 [!DNL Profile] 내보내기에서 데이터 집합으로 사용할 수 있도록 설정할 수 있습니다.
 
 **API 형식**
 
@@ -106,7 +106,7 @@ GET /tenant/schemas/{UNION_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{UNION_ID}` | URL로 인코딩됨 `$id` 조회할 조합의 URI입니다. 유니온 스키마의 URI에 &quot;union__이 추가됩니다. |
+| `{UNION_ID}` | 조회할 유니온의 URL 인코딩 `$id` URI입니다. 유니온 스키마의 URI에 &quot;union__이 추가됩니다. |
 
 {style="table-layout:auto"}
 
@@ -122,20 +122,20 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-유니온 조회 요청에는 `version` Accept 헤더에 포함됩니다.
+유니온 조회 요청에는 Accept 헤더에 `version`이(가) 포함되어야 합니다.
 
 유니온 스키마 조회에 다음 Accept 헤더를 사용할 수 있습니다.
 
-| Accept | 설명 |
+| 수락 | 설명 |
 | -------|------------ |
-| `application/vnd.adobe.xed+json; version=1` | 원시 `$ref` 및 `allOf`. 제목 및 설명을 포함합니다. |
-| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 속성 및 `allOf` 해결되었습니다. 제목 및 설명을 포함합니다. |
+| `application/vnd.adobe.xed+json; version=1` | `$ref` 및 `allOf`(으)로 원시 제목 및 설명을 포함합니다. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref`개 특성 및 `allOf`개 확인됨. 제목 및 설명을 포함합니다. |
 
 {style="table-layout:auto"}
 
 **응답**
 
-성공적인 응답은 클래스를 구현하는 모든 스키마의 유니온 보기를 반환합니다. `$id` 이(가) 요청 경로에 제공되었습니다.
+응답이 성공하면 요청 경로에 `$id`이(가) 제공된 클래스를 구현하는 모든 스키마의 유니온 보기가 반환됩니다.
 
 응답 형식은 요청에서 전송된 Accept 헤더에 따라 다릅니다. 다른 Accept 헤더로 테스트하여 응답을 비교하고 사용 사례에 가장 적합한 헤더를 결정합니다.
 
@@ -180,11 +180,11 @@ curl -X GET \
 
 ## 유니온 멤버십에 대한 스키마 활성화 {#enable}
 
-스키마가 해당 클래스의 유니온에 포함되려면 `union` 태그를 스키마의 `meta:immutableTags` 특성. PATCH에 을(를) 추가하도록 요청하여 이를 수행할 수 있습니다. `meta:immutableTags` 단일 문자열 값이 인 배열 `union` 해당 스키마에 매핑됩니다. 다음을 참조하십시오. [스키마 엔드포인트 안내서](./schemas.md#union) (자세한 예:
+스키마가 해당 클래스의 유니온에 포함되려면 스키마의 `meta:immutableTags` 특성에 `union` 태그를 추가해야 합니다. 단일 문자열 값이 `union`인 `meta:immutableTags` 배열을 해당 스키마에 추가하도록 PATCH 요청을 수행하면 됩니다. 자세한 예제는 [스키마 끝점 안내서](./schemas.md#union)를 참조하십시오.
 
 ## 유니온에 스키마 나열 {#list-schemas}
 
-GET 특정 유니온에 포함된 스키마를 확인하기 위해 `/tenant/schemas` 엔드포인트. 사용 `property` 쿼리 매개 변수에서 다음을 포함하는 스키마만 반환하도록 응답을 구성할 수 있습니다 `meta:immutableTags` 필드와 a `meta:class` 액세스 중인 유니온의 클래스와 같습니다.
+특정 유니온에 속하는 스키마를 확인하기 위해 `/tenant/schemas` 끝점에 대한 GET 요청을 수행할 수 있습니다. `property` 쿼리 매개 변수를 사용하여 `meta:immutableTags` 필드가 포함된 스키마만 반환하도록 응답을 구성할 수 있으며, `meta:class`은(는) 액세스하는 공용 구조체 클래스와 동일합니다.
 
 **API 형식**
 
@@ -194,13 +194,13 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{CLASS_ID}` | 다음 `$id` 유니온 활성화 스키마를 나열할 클래스의 입니다. |
+| `{CLASS_ID}` | 유니온 사용 스키마를 나열할 클래스의 `$id`입니다. |
 
 {style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 의 유니온에 포함된 모든 스키마 목록을 검색합니다. [!DNL XDM Individual Profile] 클래스.
+다음 요청은 [!DNL XDM Individual Profile] 클래스에 대한 유니온의 일부인 모든 스키마 목록을 검색합니다.
 
 ```SHELL
 curl -X GET \
@@ -212,12 +212,12 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-응답 형식은 다음에 따라 다릅니다. `Accept` 헤더가 요청에서 전송되었습니다. 다음 `Accept` 머리글을 사용하여 스키마를 나열할 수 있습니다.
+응답 형식은 요청에서 보낸 `Accept` 헤더에 따라 다릅니다. 스키마를 나열하는 데 다음 `Accept` 헤더를 사용할 수 있습니다.
 
-| `Accept` 머리글 | 설명 |
+| `Accept` 헤더 | 설명 |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | 각 리소스에 대한 간단한 요약을 반환합니다. 리소스 목록을 만드는 데 권장되는 헤더입니다. (제한: 300) |
-| `application/vnd.adobe.xed+json` | 원본과 함께 각 리소스에 대한 전체 JSON 스키마를 반환합니다. `$ref` 및 `allOf` 포함. (제한: 300) |
+| `application/vnd.adobe.xed+json` | 원본 `$ref` 및 `allOf`이(가) 포함된 각 리소스에 대해 전체 JSON 스키마를 반환합니다. (제한: 300) |
 
 {style="table-layout:auto"}
 

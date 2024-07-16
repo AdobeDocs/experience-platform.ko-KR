@@ -4,24 +4,24 @@ description: Reactor API에서 /profiles 엔드포인트를 호출하는 방법�
 exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 5%
+source-wordcount: '161'
+ht-degree: 3%
 
 ---
 
 # 프로필 끝점
 
-Reactor API에서 프로필은 Adobe Experience Platform 사용자를 나타냅니다. Reactor API는 자체 사용자 및 권한 데이터베이스를 유지 관리하지 않고 대신 에서 관리하는 Adobe ID를 사용합니다 [Adobe의 ID 관리 시스템(IMS)](https://helpx.adobe.com/kr/enterprise/using/identity.html).
+Reactor API에서 프로필은 Adobe Experience Platform 사용자를 나타냅니다. Reactor API는 자체 사용자 및 사용 권한 데이터베이스를 유지 관리하지 않으며 대신 [Adobe의 IMS(ID 관리 시스템)](https://helpx.adobe.com/kr/enterprise/using/identity.html)에서 관리하는 Adobe ID를 사용합니다.
 
 프로필에는 로그인한 사용자가 속한 모든 조직, 각 조직 내에 속한 제품 프로필 및 각 제품 프로필에서 부여한 권한을 비롯하여 로그인한 사용자에 대한 모든 정보가 포함되어 있습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
+이 가이드에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 [시작 안내서](../getting-started.md)에서 API 인증 방법에 대한 중요한 정보를 검토하십시오.
 
 ## 현재 프로필 검색 {#lookup}
 
-에 GET 요청을 하여 현재 로그인한 프로필의 세부 정보를 검색할 수 있습니다. `/profile` 엔드포인트.
+`/profile` 끝점에 대한 GET 요청을 통해 현재 로그인한 프로필의 세부 정보를 검색할 수 있습니다.
 
 **API 형식**
 

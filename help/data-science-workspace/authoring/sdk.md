@@ -13,15 +13,15 @@ ht-degree: 1%
 
 # 모델 작성 SDK
 
-모델 작성 SDK를 사용하면 다음에서 사용할 수 있는 사용자 지정 머신 러닝 레서피 및 기능 파이프라인을 개발할 수 있습니다. [!DNL Adobe Experience Platform] 데이터 과학 작업 영역, 구현 가능한 템플릿 제공 [!DNL PySpark] 및 [!DNL Spark (Scala)].
+모델 작성 SDK를 사용하면 [!DNL Adobe Experience Platform] Data Science Workspace에서 사용할 수 있는 사용자 지정 기계 학습 레시피 및 기능 파이프라인을 개발하여 [!DNL PySpark] 및 [!DNL Spark (Scala)]에서 구현 가능한 템플릿을 제공할 수 있습니다.
 
 이 문서에서는 모델 작성 SDK 내에 있는 다양한 클래스에 대한 정보를 제공합니다.
 
 ## DataLoader {#dataloader}
 
-DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환과 관련된 모든 항목을 캡슐화합니다. 입력 데이터의 예로는 교육, 채점 또는 기능 엔지니어링을 위한 데이터가 있습니다. 데이터 로더는 추상 클래스를 확장합니다. `DataLoader` 및 은(는) abstract 메서드를 재정의해야 합니다. `load`.
+DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환과 관련된 모든 항목을 캡슐화합니다. 입력 데이터의 예로는 교육, 채점 또는 기능 엔지니어링을 위한 데이터가 있습니다. 데이터 로더는 추상 클래스 `DataLoader`을(를) 확장하며 추상 메서드 `load`을(를) 재정의해야 합니다.
 
-**PySparc**
+**PySpark**
 
 다음 표에서는 PySpark 데이터 로더 클래스의 추상 메서드에 대해 설명합니다.
 
@@ -49,9 +49,9 @@ DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환�
     </tbody>
 </table>
 
-**스파크**
+**Spark**
 
-다음 표에서는 의 추상 메서드를 설명합니다. [!DNL Spark] 데이터 로더 클래스:
+다음 표에서는 [!DNL Spark] 데이터 로더 클래스의 추상 메서드에 대해 설명합니다.
 
 <table>
     <thead>
@@ -76,11 +76,11 @@ DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환�
     </tbody>
 </table>
 
-### 에서 데이터 로드 [!DNL Platform] 데이터 세트 {#load-data-from-a-platform-dataset}
+### [!DNL Platform] 데이터 집합에서 데이터 로드 {#load-data-from-a-platform-dataset}
 
-다음 예제는 [!DNL Platform] ID별 데이터를 반환하고 데이터 세트 ID(`datasetId`)는 구성 파일에서 정의된 속성입니다.
+다음 예제에서는 ID별로 [!DNL Platform] 데이터를 검색하고 DataFrame을 반환합니다. 여기서 데이터 집합 ID(`datasetId`)는 구성 파일에서 정의된 속성입니다.
 
-**PySparc**
+**PySpark**
 
 ```python
 # PySpark
@@ -128,7 +128,7 @@ class MyDataLoader(DataLoader):
         return pd
 ```
 
-**스파크(Scala)**
+**Spark(Scala)**
 
 ```scala
 // Spark
@@ -193,11 +193,11 @@ class MyDataLoader extends DataLoader {
 
 ## 데이터 보호기 {#datasaver}
 
-DataSaver 클래스는 채점 또는 기능 엔지니어링의 데이터를 포함하여 출력 데이터 저장과 관련된 모든 항목을 캡슐화합니다. 데이터 저장자는 추상 클래스를 확장합니다. `DataSaver` 및 은(는) abstract 메서드를 재정의해야 합니다. `save`.
+DataSaver 클래스는 채점 또는 기능 엔지니어링의 데이터를 포함하여 출력 데이터 저장과 관련된 모든 항목을 캡슐화합니다. 데이터 저장자는 추상 클래스 `DataSaver`을(를) 확장하며 추상 메서드 `save`을(를) 재정의해야 합니다.
 
-**PySparc**
+**PySpark**
 
-다음 표에서는 의 추상 메서드를 설명합니다. [!DNL PySpark] Data Saver 클래스:
+다음 표에서는 [!DNL PySpark] 데이터 보호기 클래스의 추상 메서드를 설명합니다.
 
 <table>
     <thead>
@@ -223,9 +223,9 @@ DataSaver 클래스는 채점 또는 기능 엔지니어링의 데이터를 포�
     </tbody>
 </table>
 
-**스파크(Scala)**
+**Spark(Scala)**
 
-다음 표에서는 의 추상 메서드를 설명합니다. [!DNL Spark] Data Saver 클래스:
+다음 표에서는 [!DNL Spark] 데이터 보호기 클래스의 추상 메서드를 설명합니다.
 
 <table>
     <thead>
@@ -250,17 +250,17 @@ DataSaver 클래스는 채점 또는 기능 엔지니어링의 데이터를 포�
     </tbody>
 </table>
 
-### 에 데이터 저장 [!DNL Platform] 데이터 세트 {#save-data-to-a-platform-dataset}
+### [!DNL Platform] 데이터 집합에 데이터 저장 {#save-data-to-a-platform-dataset}
 
-에 데이터를 저장하려면 [!DNL Platform] 데이터 세트인 경우 구성 파일에 속성을 제공하거나 정의해야 합니다.
+데이터를 [!DNL Platform] 데이터 집합에 저장하려면 구성 파일에 속성을 제공하거나 정의해야 합니다.
 
-- 유효 [!DNL Platform] 데이터를 저장할 데이터 세트 ID
+- 데이터를 저장할 올바른 [!DNL Platform] 데이터 세트 ID
 - 조직에 속한 테넌트 ID입니다
 
-다음 예제에서는 데이터를 저장합니다(`prediction`)에 [!DNL Platform] 데이터 세트, 데이터 세트 ID(`datasetId`) 및 임차인 ID(`tenantId`)는 구성 파일 내에서 정의된 속성입니다.
+다음 예제에서는 데이터(`prediction`)를 [!DNL Platform] 데이터 집합에 저장합니다. 여기서 데이터 집합 ID(`datasetId`) 및 테넌트 ID(`tenantId`)는 구성 파일 내에서 정의된 속성입니다.
 
 
-**PySparc**
+**PySpark**
 
 ```python
 # PySpark
@@ -325,7 +325,7 @@ class MyDataSaver(DataSaver):
             .save()
 ```
 
-**스파크(Scala)**
+**Spark(Scala)**
 
 ```scala
 // Spark
@@ -393,11 +393,11 @@ class ScoringDataSaver extends DataSaver {
 
 ## 데이터 집합 변환기 {#datasettransformer}
 
-DatasetTransformer 클래스는 데이터 집합의 구조를 수정하고 변환합니다. 다음 [!DNL Sensei Machine Learning Runtime] 는 이 구성 요소를 정의할 필요가 없으며, 요구 사항에 따라 구현됩니다.
+DatasetTransformer 클래스는 데이터 집합의 구조를 수정하고 변환합니다. [!DNL Sensei Machine Learning Runtime]은(는) 이 구성 요소를 정의할 필요가 없으며 요구 사항에 따라 구현됩니다.
 
 기능 파이프라인과 관련하여 데이터 세트 변환기를 기능 파이프라인 팩토리와 함께 사용하여 기능 엔지니어링을 위한 데이터를 준비할 수 있습니다.
 
-**PySparc**
+**PySpark**
 
 다음 표에서는 PySpark 데이터 세트 변환기 클래스의 클래스 메서드에 대해 설명합니다.
 
@@ -425,9 +425,9 @@ DatasetTransformer 클래스는 데이터 집합의 구조를 수정하고 변�
     </tbody>
 </table>
 
-**스파크(Scala)**
+**Spark(Scala)**
 
-다음 표에서는 의 추상 메서드를 설명합니다. [!DNL Spark] 데이터 집합 변환기 클래스:
+다음 표에서는 [!DNL Spark] 데이터 집합 변환기 클래스의 추상 메서드를 설명합니다.
 
 <table>
     <thead>
@@ -456,7 +456,7 @@ DatasetTransformer 클래스는 데이터 집합의 구조를 수정하고 변�
 
 FeaturePipelineFactory 클래스에는 기능 추출 알고리즘이 포함되어 있으며 처음부터 끝까지 기능 파이프라인의 단계를 정의합니다.
 
-**PySparc**
+**PySpark**
 
 다음 표에서는 PySpark FeaturePipelineFactory의 클래스 메서드에 대해 설명합니다.
 
@@ -496,9 +496,9 @@ FeaturePipelineFactory 클래스에는 기능 추출 알고리즘이 포함되�
     </tbody>
 </table>
 
-**스파크(Scala)**
+**Spark(Scala)**
 
-다음 표에서는 [!DNL Spark] 기능 파이프라인 팩토리:
+다음 표에서는 [!DNL Spark] FeaturePipelineFactory의 클래스 메서드를 설명합니다.
 
 <table>
     <thead>
@@ -536,9 +536,9 @@ FeaturePipelineFactory 클래스에는 기능 추출 알고리즘이 포함되�
 
 ## PipelineFactory {#pipelinefactory}
 
-PipelineFactory 클래스는 모델 교육 및 점수에 대한 메서드와 정의를 캡슐화합니다. 여기서 교육 논리 및 알고리즘은 [!DNL Spark] 파이프라인.
+PipelineFactory 클래스는 모델 교육 및 채점에 대한 메서드와 정의를 캡슐화합니다. 여기서 교육 논리 및 알고리즘은 [!DNL Spark] 파이프라인 형식으로 정의됩니다.
 
-**PySparc**
+**PySpark**
 
 다음 표에서는 PySpark PipelineFactory의 클래스 메서드에 대해 설명합니다.
 
@@ -605,9 +605,9 @@ PipelineFactory 클래스는 모델 교육 및 점수에 대한 메서드와 정
     </tbody>
 </table>
 
-**스파크(Scala)**
+**Spark(Scala)**
 
-다음 표에서는 [!DNL Spark] PipelineFactory:
+다음 표에서는 [!DNL Spark] PipelineFactory의 클래스 메서드를 설명합니다.
 
 <table>
     <thead>
@@ -647,7 +647,7 @@ PipelineFactory 클래스는 모델 교육 및 점수에 대한 메서드와 정
 
 MLEvaluator 클래스는 평가 지표를 정의하고 교육 및 테스트 데이터 세트를 결정하는 메서드를 제공합니다.
 
-**PySparc**
+**PySpark**
 
 다음 표에서는 PySpark MLEvaluator의 클래스 메서드에 대해 설명합니다.
 
@@ -689,9 +689,9 @@ MLEvaluator 클래스는 평가 지표를 정의하고 교육 및 테스트 데�
     </tbody>
 </table>
 
-**스파크(Scala)**
+**Spark(Scala)**
 
-다음 표에서는 [!DNL Spark] MLEvaluator:
+다음 표에서는 [!DNL Spark] MLEvaluator의 클래스 메서드를 설명합니다.
 
 <table>
     <thead>

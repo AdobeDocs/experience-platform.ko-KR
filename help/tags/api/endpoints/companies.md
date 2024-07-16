@@ -4,24 +4,24 @@ description: Reactor API에서 /companies 끝점을 호출하는 방법을 알�
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '237'
 ht-degree: 3%
 
 ---
 
 # 회사 엔드포인트
 
-회사는 고객 조직(일반적으로 비즈니스)을 나타냅니다. Reactor API에서 이러한 회사는 조직 ID와 1:1로 일치합니다. API 사용자는 액세스 권한이 있는 회사에 대한 가시성만 갖습니다. 한 회사에 여러 항목이 있을 수 있습니다. [속성](./properties.md). 속성은 정확히 하나의 회사에 속합니다.
+회사는 고객 조직(일반적으로 비즈니스)을 나타냅니다. Reactor API에서 이러한 회사는 조직 ID와 1:1로 일치합니다. API 사용자는 액세스 권한이 있는 회사에 대한 가시성만 갖습니다. 회사에 [개 속성](./properties.md)이 많이 포함될 수 있습니다. 속성은 정확히 하나의 회사에 속합니다.
 
-다음 `/companies` reactor API의 끝점을 사용하면 experience 애플리케이션 내에서 액세스할 수 있는 회사를 프로그래밍 방식으로 검색할 수 있습니다.
+Reactor API의 `/companies` 끝점을 사용하면 경험 응용 프로그램 내에서 액세스할 수 있는 회사를 프로그래밍 방식으로 검색할 수 있습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
+이 가이드에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 [시작 안내서](../getting-started.md)에서 API 인증 방법에 대한 중요한 정보를 검토하십시오.
 
 ## 회사 목록 검색 {#list}
 
-에 GET 요청을 하여 사용할 권한이 있는 회사를 나열할 수 있습니다. `/companies` 엔드포인트. 대부분의 경우 정확히 하나가 있습니다.
+`/companies` 끝점에 대한 GET 요청을 수행하여 사용할 권한이 있는 회사를 나열할 수 있습니다. 대부분의 경우 정확히 하나가 있습니다.
 
 **API 형식**
 
@@ -31,7 +31,7 @@ GET /companies
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 다음 속성에 따라 나열된 회사를 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오 [응답 필터링](../guides/filtering.md) 추가 정보.
+>쿼리 매개 변수를 사용하여 다음 속성에 따라 나열된 회사를 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>자세한 내용은 [응답 필터링](../guides/filtering.md)에 대한 안내서를 참조하세요.
 
 **요청**
 
@@ -119,7 +119,7 @@ GET /companies/{COMPANY_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{COMPANY_ID}` | 다음 `id` 조회할 회사의 값입니다. |
+| `{COMPANY_ID}` | 조회할 회사의 `id` 값입니다. |
 
 {style="table-layout:auto"}
 

@@ -4,24 +4,24 @@ description: Reactor API에서 /rule_components 끝점을 호출하는 방법을
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1151'
 ht-degree: 3%
 
 ---
 
 # 규칙 구성 요소 끝점
 
-데이터 수집 태그에서 [규칙](./rules.md) 배포된 리소스 동작 제어 [라이브러리](./libraries.md). **규칙 구성 요소** 는 규칙을 구성하는 개별 부분입니다. 규칙이 레시피인 경우 규칙 구성 요소는 구성 요소 중 하나입니다. 다음 `/rule_components` Reactor API의 끝점을 사용하면 규칙 구성 요소를 프로그래밍 방식으로 관리할 수 있습니다.
+데이터 수집 태그에서 [규칙](./rules.md)은(는) 배포된 [라이브러리](./libraries.md)에 있는 리소스의 동작을 제어합니다. **규칙 구성 요소**&#x200B;는 규칙을 구성하는 개별 부분입니다. 규칙이 레시피인 경우 규칙 구성 요소는 구성 요소 중 하나입니다. Reactor API의 `/rule_components` 끝점을 사용하면 규칙 구성 요소를 프로그래밍 방식으로 관리할 수 있습니다.
 
 >[!NOTE]
 >
->이 문서에서는 Reactor API에서 규칙 구성 요소를 관리하는 방법을 다룹니다. UI에서 규칙 및 규칙 구성 요소와 상호 작용하는 방법에 대한 자세한 내용은 [UI 안내서](../../ui/managing-resources/rules.md).
+>이 문서에서는 Reactor API에서 규칙 구성 요소를 관리하는 방법을 다룹니다. UI에서 규칙 및 규칙 구성 요소와 상호 작용하는 방법에 대한 자세한 내용은 [UI 안내서](../../ui/managing-resources/rules.md)를 참조하십시오.
 
 규칙 구성 요소에는 세 가지 기본 유형이 있습니다.
 
 | 규칙 구성 요소 유형 | 설명 |
 | --- | --- |
-| 이벤트 | 이벤트는 규칙에 대한 트리거입니다. 이 규칙은 이벤트가 클라이언트 장치에서 런타임에 발생할 때 시작됩니다. &quot;[!UICONTROL 라이브러리 로드]&quot;, &quot;[!UICONTROL 페이지 상단]&quot;, 및 &quot;[!UICONTROL 클릭]&quot;는 이벤트의 예입니다. |
+| 이벤트 | 이벤트는 규칙에 대한 트리거입니다. 이 규칙은 이벤트가 클라이언트 장치에서 런타임에 발생할 때 시작됩니다. &quot;[!UICONTROL 라이브러리 로드]&quot;, &quot;[!UICONTROL 페이지 상단]&quot; 및 &quot;[!UICONTROL 클릭]&quot;은(는) 이벤트의 예입니다. |
 | 조건 | 조건은 작업이 실행되기 전에 특정 기준이 충족되는지 여부를 평가하는 것입니다. 이벤트가 발생하면 조건이 평가됩니다. 규칙의 작업은 모든 조건이 충족되는 경우에만 실행됩니다. |
 | 작업 | Adobe Analytics 비콘 보내기, 사용자 지정 방문자 ID 검색 또는 특정 mbox 실행과 같이 규칙이 실제로 수행할 작업입니다. |
 
@@ -29,11 +29,11 @@ ht-degree: 3%
 
 규칙 구성 요소는 정확히 하나의 규칙에 속합니다. 규칙에는 많은 규칙 구성 요소가 포함될 수 있습니다.
 
-규칙 구성 요소는 정확히 하나의 [확장](./extensions.md). 확장은 많은 규칙 구성 요소 유형을 제공할 수 있습니다.
+규칙 구성 요소는 정확히 하나의 [확장](./extensions.md)에 의해 제공됩니다. 확장은 많은 규칙 구성 요소 유형을 제공할 수 있습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
+이 가이드에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 [시작 안내서](../getting-started.md)에서 API 인증 방법에 대한 중요한 정보를 검토하십시오.
 
 ## 규칙 구성 요소 목록 검색 {#list}
 
@@ -47,13 +47,13 @@ GET /rules/{RULE_ID}/rule_components
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `RULE_ID` | 다음 `id` 구성 요소를 나열할 규칙의 경우 |
+| `RULE_ID` | 나열할 구성 요소가 있는 규칙의 `id`입니다. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->쿼리 매개 변수를 사용하여 나열된 규칙 구성 요소를 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>다음 안내서를 참조하십시오 [응답 필터링](../guides/filtering.md) 추가 정보.
+>쿼리 매개 변수를 사용하여 나열된 규칙 구성 요소를 다음 속성에 따라 필터링할 수 있습니다.<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>자세한 내용은 [응답 필터링](../guides/filtering.md)에 대한 안내서를 참조하세요.
 
 **요청**
 
@@ -186,7 +186,7 @@ GET /rule_components/{RULE_COMPONENT_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `RULE_COMPONENT_ID` | 다음 `id` 조회하려는 규칙 구성 요소. |
+| `RULE_COMPONENT_ID` | 조회할 규칙 구성 요소의 `id`입니다. |
 
 {style="table-layout:auto"}
 
@@ -310,13 +310,13 @@ POST /properties/{PROPERTY_ID}/rule_components
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `PROPERTY_ID` | 다음 `id` 아래에 규칙 구성 요소를 정의하는 속성입니다. |
+| `PROPERTY_ID` | 아래에 규칙 구성 요소를 정의하는 속성의 `id`입니다. |
 
 {style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 새 규칙 구성 요소를 만듭니다. 페이로드에서 `relationships` 속성은 구성 요소를 특정 규칙 및 기존 확장과 연결합니다. 다음 안내서를 참조하십시오 [관계](../guides/relationships.md) 추가 정보.
+다음 요청은 새 규칙 구성 요소를 만듭니다. 페이로드에서 `relationships` 속성은 구성 요소를 특정 규칙 및 기존 확장과 연결합니다. 자세한 내용은 [관계](../guides/relationships.md)에 대한 안내서를 참조하세요.
 
 ```shell
 curl -X POST \
@@ -359,15 +359,15 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `attributes.delegate_descriptor_id` | **(필수)** 정의할 수 있는 규칙 구성 요소 유형은에서 제공합니다. [확장 패키지](./extension-packages.md). 새 규칙 구성 요소를 만들 때 이 규칙 구성 요소의 기반이 되는 확장 패키지, 구성 요소의 유형(이벤트, 조건 또는 작업) 및 확장에서 정의한 특정 구성 요소(예: 핵심 확장의 &quot;Click&quot; 이벤트)의 이름을 나타내는 위임 설명자 ID를 제공해야 합니다.<br><br>다음 안내서를 참조하십시오 [위임 설명자 ID](../guides/delegate-descriptor-ids.md) 추가 정보. |
-| `attributes.name` | **(필수)** 사람이 인식할 수 있는 규칙 구성 요소 이름. |
+| `attributes.delegate_descriptor_id` | **(필수)** 정의할 수 있는 규칙 구성 요소 유형은 [확장 패키지](./extension-packages.md)에서 제공합니다. 새 규칙 구성 요소를 만들 때 이 규칙 구성 요소의 기반이 되는 확장 패키지, 구성 요소의 유형(이벤트, 조건 또는 작업) 및 확장에서 정의한 특정 구성 요소(예: 핵심 확장의 &quot;Click&quot; 이벤트)의 이름을 나타내는 위임 설명자 ID를 제공해야 합니다.<br><br>자세한 내용은 [설명자 ID 위임](../guides/delegate-descriptor-ids.md)의 안내서를 참조하십시오. |
+| `attributes.name` | **(필수)** 사람이 인식할 수 있는 규칙 구성 요소 이름입니다. |
 | `attributes.delay_next` | 이후 작업을 지연할지 여부를 나타내는 부울입니다. |
 | `attributes.order` | 유형별로 구성 요소를 로드하는 순서를 나타내는 정수. |
 | `attributes.rule_order` | 실행할 관련 규칙의 우선 순위를 나타내는 정수입니다. |
 | `attributes.settings` | 문자열로 표시되는 설정 JSON 개체입니다. |
 | `attributes.timeout` | 순서대로 실행되는 작업의 시간 제한을 나타내는 정수. |
-| `relationships` | 규칙 구성 요소에 필요한 관계를 설정하는 객체입니다. 두 가지 관계를 설정해야 합니다. <ol><li>`extension`: 이 규칙 구성 요소를 정의하는 확장입니다. 확장 패키지가 로 표시된 확장과 동일해야 합니다. `delegate_descriptor_id`.</li><li>`rules`: 이 구성 요소가 정의되는 규칙입니다.</li></ol>관계에 대한 일반적인 정보는 [관계 안내서](../guides/relationships.md). |
-| `type` | 만들어지는 리소스의 유형입니다. 이 끝점의 경우 값은 다음과 같아야 합니다. `rule_components`. |
+| `relationships` | 규칙 구성 요소에 필요한 관계를 설정하는 객체입니다. 두 가지 관계를 설정해야 합니다. <ol><li>`extension`: 이 규칙 구성 요소를 정의하는 확장입니다. 확장 패키지가 `delegate_descriptor_id`(으)로 표시된 확장과 동일해야 합니다.</li><li>`rules`: 이 구성 요소를 정의하는 규칙입니다.</li></ol>관계에 대한 일반적인 정보는 [관계 안내서](../guides/relationships.md)를 참조하세요. |
+| `type` | 만들어지는 리소스의 유형입니다. 이 끝점의 경우 값은 `rule_components`이어야 합니다. |
 
 {style="table-layout:auto"}
 
@@ -473,7 +473,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->규칙 구성 요소를 업데이트하면 상위 규칙의 `updated_at` 타임스탬프.
+>규칙 구성 요소를 업데이트하면 상위 규칙의 `updated_at` 타임스탬프도 업데이트됩니다.
 
 **API 형식**
 
@@ -483,13 +483,13 @@ PATCH /rule_components/{RULE_COMPONENT_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `RULE_COMPONENT_ID` | 다음 `id` 업데이트하려는 규칙 구성 요소. |
+| `RULE_COMPONENT_ID` | 업데이트할 규칙 구성 요소의 `id`입니다. |
 
 {style="table-layout:auto"}
 
 **요청**
 
-다음 요청은 `order` 및 `settings` 기존 규칙 구성 요소에 대한 속성입니다.
+다음 요청은 기존 규칙 구성 요소에 대한 `order` 및 `settings` 특성을 업데이트합니다.
 
 ```shell
 curl -X PATCH \
@@ -513,8 +513,8 @@ curl -X PATCH \
 | 속성 | 설명 |
 | --- | --- |
 | `attributes` | 규칙 구성 요소가 규칙 구성 요소에 대해 업데이트될 속성을 나타내는 객체입니다. 규칙 구성 요소에 대해 다음 속성을 업데이트할 수 있습니다. <ul><li>`delay_next`</li><li>`delegate_descriptor_id`</li><li>`name`</li><li>`order`</li><li>`rule_order`</li><li>`settings`</li><li>`timeout`</li></ul> |
-| `id` | 다음 `id` 업데이트하려는 규칙 구성 요소 다음과 일치해야 합니다. `{RULE_COMPONENT_ID}` 요청 경로에 제공된 값입니다. |
-| `type` | 업데이트 중인 리소스 유형. 이 끝점의 경우 값은 다음과 같아야 합니다. `rule_components`. |
+| `id` | 업데이트할 규칙 구성 요소의 `id`입니다. 요청 경로에 제공된 `{RULE_COMPONENT_ID}` 값과 일치해야 합니다. |
+| `type` | 업데이트 중인 리소스 유형. 이 끝점의 경우 값은 `rule_components`이어야 합니다. |
 
 {style="table-layout:auto"}
 
@@ -626,7 +626,7 @@ DELETE /rule_components/{RULE_COMPONENT_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `RULE_COMPONENT_ID` | 다음 `id` 삭제할 규칙 구성 요소의 일부입니다. |
+| `RULE_COMPONENT_ID` | 삭제할 규칙 구성 요소의 `id`입니다. |
 
 {style="table-layout:auto"}
 
@@ -646,17 +646,17 @@ curl -X DELETE \
 
 ## 규칙 구성 요소에 대한 참고 사항 관리 {#notes}
 
-규칙 구성 요소는 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에 대해 텍스트 기반 메모를 만들고 검색할 수 있습니다. 다음을 참조하십시오. [notes 엔드포인트 안내서](./notes.md) 규칙 구성 요소 및 기타 호환 리소스에 대한 메모를 관리하는 방법에 대한 자세한 정보.
+규칙 구성 요소는 &quot;주목할 만한&quot; 리소스입니다. 즉, 각 개별 리소스에 대해 텍스트 기반 메모를 만들고 검색할 수 있습니다. 규칙 구성 요소 및 기타 호환되는 리소스에 대한 메모를 관리하는 방법에 대한 자세한 내용은 [메모 끝점 안내서](./notes.md)를 참조하십시오.
 
 ## 규칙 구성 요소에 대한 관련 리소스 검색 {#related}
 
-다음 호출은 규칙 구성 요소에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. 날짜 [규칙 구성 요소 조회](#lookup), 이러한 관계는 아래에 나열됩니다. `relationships` 규칙 구성 요소입니다.
+다음 호출은 규칙 구성 요소에 대한 관련 리소스를 검색하는 방법을 보여 줍니다. [규칙 구성 요소를 조회](#lookup)할 때 이러한 관계는 `relationships` 규칙 구성 요소 아래에 나열됩니다.
 
-다음을 참조하십시오. [관계 안내서](../guides/relationships.md) Reactor API의 관계에 대한 자세한 정보입니다.
+Reactor API의 관계에 대한 자세한 내용은 [관계 안내서](../guides/relationships.md)를 참조하십시오.
 
 ### 규칙 구성 요소에 대한 관련 규칙 나열 {#rules}
 
-를 추가하여 특정 규칙 구성 요소를 활용하는 규칙을 나열할 수 있습니다 `/rules` 조회 요청의 경로에 매핑됩니다.
+조회 요청의 경로에 `/rules`을(를) 추가하여 특정 규칙 구성 요소를 활용하는 규칙을 나열할 수 있습니다.
 
 **API 형식**
 
@@ -666,7 +666,7 @@ GET  /rule_components/{RULE_COMPONENT_ID}/rules
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | 다음 `id` 규칙을 나열할 규칙 구성 요소. |
+| `{RULE_COMPONENT_ID}` | 규칙을 나열할 규칙 구성 요소의 `id`입니다. |
 
 {style="table-layout:auto"}
 
@@ -760,7 +760,7 @@ curl -X GET \
 
 ### 규칙 구성 요소에 대한 관련 확장 조회 {#extension}
 
-를 추가하여 규칙 구성 요소를 제공하는 확장을 조회할 수 있습니다 `/extension` 조회 요청의 경로에 매핑됩니다.
+조회 요청의 경로에 `/extension`을(를) 추가하여 규칙 구성 요소를 제공하는 확장을 조회할 수 있습니다.
 
 **API 형식**
 
@@ -770,7 +770,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/extension
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | 다음 `id` 확장자가 조회하려는 규칙 구성 요소. |
+| `{RULE_COMPONENT_ID}` | 확장을 조회할 규칙 구성 요소의 `id`입니다. |
 
 {style="table-layout:auto"}
 
@@ -880,7 +880,7 @@ curl -X GET \
 
 ### 규칙 구성 요소에 대한 관련 원본 조회 {#origin}
 
-를 추가하여 규칙 구성 요소의 원본(이전 개정)을 조회할 수 있습니다 `/origin` 조회 요청의 경로에 매핑됩니다.
+조회 요청의 경로에 `/origin`을(를) 추가하여 규칙 구성 요소의 원본(이전 버전)을 조회할 수 있습니다.
 
 **API 형식**
 
@@ -890,7 +890,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/origin
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | 다음 `id` 조회하려는 원본이 있는 규칙 구성 요소. |
+| `{RULE_COMPONENT_ID}` | 원본을 조회할 규칙 구성 요소의 `id`입니다. |
 
 {style="table-layout:auto"}
 

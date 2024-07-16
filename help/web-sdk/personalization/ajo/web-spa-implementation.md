@@ -5,7 +5,7 @@ exl-id: 1883251b-2d59-46d3-ac74-b8657edd0325
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '866'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Experience Platform Web SDK는 단일 페이지 애플리케이션(SPA)과
 
 ## XDM 보기 및 단일 페이지 애플리케이션 {#web-spa-xdm}
 
-Journey Optimizer 웹 편집기는 라는 개념을 이용합니다 _조회수_.
+Journey Optimizer 웹 편집기는 _보기_&#x200B;라는 개념을 사용합니다.
 
 보기는 SPA 경험을 함께 구성하는 시각적 요소의 논리 그룹입니다. 따라서 단일 페이지 애플리케이션은 사용자 상호 작용을 기반으로 URL 대신 보기를 통해 전환으로 간주할 수 있습니다. 보기는 일반적으로 전체 사이트, 단일 페이지 또는 페이지 내의 그룹화된 시각적 요소를 나타낼 수 있습니다.
 
@@ -37,21 +37,21 @@ Journey Optimizer 웹 편집기는 라는 개념을 이용합니다 _조회수_.
 
 * 홈 사이트로 이동하면 영웅 이미지는 사이트에서 사용할 수 있는 다양한 제품 카탈로그뿐만 아니라 시즌 컬렉션을 홍보합니다. 이 경우, 전체 홈 화면에 대해 뷰를 정의할 수 있습니다. 이 견해는 간단히 &quot;홈&quot;이라고 할 수 있다.
 
-  ![홈 페이지를 보여주는 샘플 웹 사이트 이미지.](assets/web-spa-home.png)
+  ![홈 페이지를 표시하는 샘플 웹 사이트 이미지입니다.](assets/web-spa-home.png)
 
-* 고객이 비즈니스에서 판매하는 제품에 대한 관심이 높아짐에 따라 **남성** 링크를 클릭합니다. 홈 페이지와 비슷한 전체 **남성** 페이지는 보기로 정의할 수 있습니다. 이 보기의 이름은 &quot;men&quot;으로 지정할 수 있습니다.
+* 고객이 비즈니스에서 판매하는 제품에 더 관심이 많아지면 **남성** 링크를 클릭하기로 합니다. 홈 페이지와 마찬가지로 **Men** 페이지 전체를 보기로 정의할 수 있습니다. 이 보기의 이름은 &quot;men&quot;으로 지정할 수 있습니다.
 
-  ![특정 보기를 표시하는 샘플 웹 사이트 이미지.](assets/web-spa-men.png)
+  ![특정 보기를 표시하는 샘플 웹 사이트 이미지입니다.](assets/web-spa-men.png)
 
 * 보기를 전체 사이트 또는 사이트의 시각적 요소 그룹으로 정의할 수 있으므로 제품 사이트에 표시된 네 가지 제품을 그룹화하여 보기로 간주할 수 있습니다. 이 보기의 이름은 &quot;products&quot;로 지정할 수 있습니다.
 
-  ![특정 보기를 표시하는 샘플 웹 사이트 이미지.](assets/web-spa-men-products.png)
+  ![특정 보기를 표시하는 샘플 웹 사이트 이미지입니다.](assets/web-spa-men-products.png)
 
-* 고객이 를 클릭하기로 결정하면 **모든 남성용 제품** 버튼을 클릭하여 사이트에서 더 많은 제품을 탐색합니다. 이 경우 웹 사이트 URL은 변경되지 않지만, 표시되는 제품의 두 번째 행만 나타내는 보기를 여기에 만들 수 있습니다. 보기 이름은 &quot;products-page-2&quot;일 수 있습니다.
+* 고객이 **모든 남성용 제품** 단추를 클릭하여 사이트에서 더 많은 제품을 탐색하기로 결정하면 이 경우 웹 사이트 URL은 변경되지 않지만, 표시되는 두 번째 제품 행만 표시하는 보기를 여기에 만들 수 있습니다. 보기 이름은 &quot;products-page-2&quot;일 수 있습니다.
 
 * 고객은 사이트에서 몇 가지 제품을 구매하기로 하고 체크아웃 화면으로 진행합니다. 장바구니 화면 자체를 &quot;장바구니&quot;라는 보기와 연결할 수 있습니다. 또는 아래의 권장 제품을 처리하기 위해 체크아웃 화면 내에서 다른 보기를 사용할 수 있습니다.
 
-  ![특정 보기를 표시하는 샘플 웹 사이트 이미지.](assets/web-spa-cart.png)
+  ![특정 보기를 표시하는 샘플 웹 사이트 이미지입니다.](assets/web-spa-cart.png)
 
 보기의 개념은 이보다 훨씬 더 확장될 수 있다. 다음은 사이트에서 정의할 수 있는 보기의 몇 가지 예입니다.
 
@@ -61,11 +61,11 @@ Adobe Journey Optimizer에서 XDM 보기를 활용하여 마케터가 Journey Op
 
 이 경우 일회용 개발자 설정을 완료하려면 다음 단계를 수행해야 합니다.
 
-1. 설치 [Adobe Experience Platform 웹 SDK](/help/web-sdk/install/overview.md) 및 확인 [웹 채널 사전 요구 사항](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html) 페이지를 가리키도록 업데이트하는 중입니다.
+1. [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md)를 설치하고 [웹 채널 필수 구성 요소](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html) 페이지를 확인하십시오.
 
 2. 개인화할 단일 페이지 애플리케이션에서 모든 XDM 보기를 확인합니다.
 
-3. XDM 보기를 정의한 후 해당 보기에 컨텐츠를 전달하려면 를 구현해야 합니다 `sendEvent()` 함수 `renderDecisions` 을 로 설정 `true` 단일 페이지 애플리케이션에서 해당 XDM 보기를 사용할 수 있습니다. XDM 보기를 전달해야 합니다. `xdm.web.webPageDetails.viewName`. 이 단계를 통해 마케터는 Journey Optimizer 웹 편집기 내에서 이러한 보기를 검색하고 해당 보기에 대한 콘텐츠 수정 사항을 적용할 수 있습니다.
+3. XDM 보기를 정의한 후 해당 보기에 콘텐츠를 전달하려면 `renderDecisions`이(가) `true`(으)로 설정된 `sendEvent()` 함수와 단일 페이지 애플리케이션에서 해당 XDM 보기를 구현해야 합니다. XDM 보기를 `xdm.web.webPageDetails.viewName`에 전달해야 합니다. 이 단계를 통해 마케터는 Journey Optimizer 웹 편집기 내에서 이러한 보기를 검색하고 해당 보기에 대한 콘텐츠 수정 사항을 적용할 수 있습니다.
 
 ```js
  alloy("sendEvent", {
@@ -82,19 +82,19 @@ Adobe Journey Optimizer에서 XDM 보기를 활용하여 마케터가 Journey Op
 
 >[!NOTE]
 >
->첫 번째 `sendEvent()` 를 호출하면 최종 사용자에게 렌더링해야 하는 모든 XDM 보기를 가져오고 캐시합니다. 후속 `sendEvent()` 전달된 XDM 보기가 있는 호출은 캐시에서 읽히고 서버 호출 없이 렌더링됩니다.
+>첫 번째 `sendEvent()` 호출에서 최종 사용자에게 렌더링해야 하는 모든 XDM 보기를 가져오고 캐시합니다. 전달된 XDM 보기를 사용한 후속 `sendEvent()` 호출은 캐시에서 읽히고 서버 호출 없이 렌더링됩니다.
 
 ## `sendEvent()` 함수 예제
 
-이 섹션에서는 를 호출하는 방법을 보여 주는 두 가지 예를 간략하게 설명합니다. `sendEvent()` 가상 전자 상거래 SPA에 대해 React에서 작동합니다.
+이 섹션에서는 가상의 전자 상거래 SPA에 대해 React에서 `sendEvent()` 함수를 호출하는 방법을 보여 주는 두 가지 예를 간략하게 설명합니다.
 
 ### 예제 1: A/B 테스트 홈 페이지 {#web-spa-sample-1}
 
 마케팅 팀은 전체 홈 페이지에서 A/B 테스트를 실행하려고 합니다.
 
-![단일 페이지 애플리케이션 샘플 페이지.](assets/web-spa-home.png)
+![단일 페이지 응용 프로그램 샘플 페이지입니다.](assets/web-spa-home.png)
 
-전체 홈 사이트에서 A/B 테스트를 실행하려면 `sendEvent()` 은(는) XDM을 사용하여 호출해야 합니다. `viewName` 을 로 설정 `home`:
+전체 홈 사이트에서 A/B 테스트를 실행하려면 XDM `viewName`을(를) `home`(으)로 설정하여 `sendEvent()`을(를) 호출해야 합니다.
 
 ```js
 function onViewChange() {
@@ -137,7 +137,7 @@ history.listen(onViewChange);
 
 마케팅 팀은 사용자가 클릭하여 모든 남성 제품을 표시한 후 가격 레이블 색상을 빨간색으로 변경함으로써 제품의 두 번째 행을 개인화하려고 합니다.
 
-![개인화된 제품이 있는 단일 페이지 애플리케이션 샘플 페이지.](assets/web-spa-men-products.png)
+![개인 맞춤화된 제품이 있는 단일 페이지 응용 프로그램 샘플 페이지입니다.](assets/web-spa-men-products.png)
 
 ```js
 function onViewChange(viewName) {

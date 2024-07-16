@@ -3,8 +3,8 @@ title: Adobe Experience Platform Assurance 사용
 description: 이 안내서에서는 Adobe Experience Platform Assurance를 설치하고 구현한 후에 사용하는 방법을 설명합니다.
 exl-id: 872c83d1-82e8-40d8-9b66-3e51a91a955f
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '402'
+workflow-type: tm+mt
+source-wordcount: '400'
 ht-degree: 100%
 
 ---

@@ -14,17 +14,17 @@ ht-degree: 2%
 
 # 마케팅 액션 엔드포인트
 
-Adobe Experience Platform 데이터 거버넌스 컨텍스트에서 마케팅 작업은 [!DNL Experience Platform] 데이터 소비자는 데이터 사용 정책 위반 여부를 확인할 필요가 있습니다.
+Adobe Experience Platform 데이터 거버넌스 컨텍스트에서 마케팅 액션은 [!DNL Experience Platform] 데이터 소비자가 수행하는 액션으로, 데이터 사용 정책 위반을 확인해야 합니다.
 
-다음을 사용하여 조직의 마케팅 작업을 관리할 수 있습니다. `/marketingActions` 정책 서비스 API의 끝점입니다.
+Policy Service API의 `/marketingActions` 끝점을 사용하여 조직의 마케팅 작업을 관리할 수 있습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 API 엔드포인트는 [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](./getting-started.md) 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출 읽기에 대한 안내서 및 를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보 [!DNL Experience Platform] API.
+이 가이드에 사용된 API 끝점은 [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 [!DNL Experience Platform] API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
 ## 마케팅 액션 목록 검색 {#list}
 
-에 GET 요청을 하여 핵심 또는 사용자 지정 마케팅 작업 목록을 검색할 수 있습니다. `/marketingActions/core` 또는 `/marketingActions/custom`, 각각
+`/marketingActions/core` 또는 `/marketingActions/custom`에 각각 GET 요청을 하여 핵심 또는 사용자 지정 마케팅 작업 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -48,7 +48,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 검색된 각 마케팅 작업에 대한 세부 정보를 반환합니다(다음을 포함). `name` 및 `href`. 다음 `href` 다음 경우에 마케팅 액션을 식별하는 데 값이 사용됨: [데이터 사용 정책 만들기](policies.md#create-policy).
+응답이 성공하면 `name` 및 `href`을(를) 포함하여 검색된 각 마케팅 작업에 대한 세부 정보가 반환됩니다. `href` 값은 [데이터 사용 정책을 만들 때](policies.md#create-policy) 마케팅 작업을 식별하는 데 사용됩니다.
 
 ```json
 {
@@ -102,12 +102,12 @@ curl -X GET \
 | --- | --- |
 | `_page.count` | 반환된 총 마케팅 작업 수입니다. |
 | `children` | 검색된 마케팅 작업의 세부 정보가 포함된 객체의 배열입니다. |
-| `name` | 다음의 경우 고유 식별자로 작동하는 마케팅 작업의 이름 [특정 마케팅 작업 조회](#lookup). |
-| `_links.self.href` | 마케팅 액션에 대한 URI 참조로, 다음을 완료하는 데 사용할 수 있습니다. `marketingActionsRefs` 다음과 같은 경우 배열 [데이터 사용 정책 만들기](policies.md#create-policy). |
+| `name` | [특정 마케팅 작업을 조회](#lookup)할 때 고유 식별자 역할을 하는 마케팅 작업의 이름입니다. |
+| `_links.self.href` | [데이터 사용 정책을 만들 때`marketingActionsRefs` 배열을 완료하는 데 사용할 수 있는 마케팅 작업에 대한 URI 참조입니다](policies.md#create-policy). |
 
 ## 특정 마케팅 액션 조회 {#lookup}
 
-마케팅 작업을 포함하여 특정 마케팅 작업의 세부 정보를 조회합니다. `name` GET 요청 경로에 있는 속성입니다.
+마케팅 작업의 `name` 속성을 GET 요청 경로에 포함하여 특정 마케팅 작업의 세부 정보를 조회합니다.
 
 **API 형식**
 
@@ -118,11 +118,11 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 다음 `name` 조회할 마케팅 작업의 속성입니다. |
+| `{MARKETING_ACTION_NAME}` | 조회할 마케팅 액션의 `name` 속성입니다. |
 
 **요청**
 
-다음 요청은 이라는 사용자 지정 마케팅 작업을 검색합니다. `combineData`.
+다음 요청은 이름이 `combineData`인 사용자 지정 마케팅 작업을 검색합니다.
 
 ```shell
 curl -X GET \
@@ -135,7 +135,7 @@ curl -X GET \
 
 **응답**
 
-응답 개체에는 경로( )를 포함한 마케팅 작업에 대한 세부 정보가 포함되어 있습니다.`_links.self.href`다음과 같은 경우 마케팅 작업을 참조해야 합니다. [데이터 사용 정책 정의](policies.md#create-policy) (`marketingActionsRefs`).
+응답 개체에는 [데이터 사용 정책을 정의](policies.md#create-policy)(`marketingActionsRefs`)할 때 마케팅 작업을 참조하는 데 필요한 경로(`_links.self.href`)를 포함하여 마케팅 작업에 대한 세부 정보가 포함되어 있습니다.
 
 ```JSON
 {
@@ -172,7 +172,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **요청**
 
-다음 요청은 이라는 새 마케팅 작업을 만듭니다. `crossSiteTargeting`동일한 이름의 마케팅 작업이 시스템에 아직 존재하지 않는 경우. 다음과 같은 경우 `crossSiteTargeting` 마케팅 액션이 존재하지 않습니다. 대신 이 호출은 페이로드에 제공된 속성을 기반으로 해당 마케팅 액션을 업데이트합니다.
+다음 요청은 이름이 같은 마케팅 작업이 시스템에 아직 없는 경우 이름이 `crossSiteTargeting`인 새 마케팅 작업을 만듭니다. `crossSiteTargeting` 마케팅 작업이 있으면 이 호출은 대신 페이로드에 제공된 속성을 기반으로 해당 마케팅 작업을 업데이트합니다.
 
 ```shell
 curl -X PUT \
@@ -190,7 +190,7 @@ curl -X PUT \
 
 | 속성 | 설명 |
 | --- | --- |
-| `name` | 만들거나 업데이트할 마케팅 액션의 이름입니다. <br><br>**중요 사항**: 이 속성은 다음과 일치해야 합니다. `{MARKETING_ACTION_NAME}` 그렇지 않으면 HTTP 400(잘못된 요청) 오류가 발생합니다. 즉, 마케팅 액션이 만들어지면 `name` 속성을 변경할 수 없습니다. |
+| `name` | 만들거나 업데이트할 마케팅 액션의 이름입니다. <br><br>**중요**: 이 속성은 경로의 `{MARKETING_ACTION_NAME}`과(와) 일치해야 합니다. 그렇지 않으면 HTTP 400(잘못된 요청) 오류가 발생합니다. 즉, 마케팅 액션이 만들어지면 해당 `name` 속성을 변경할 수 없습니다. |
 | `description` | 마케팅 작업에 대한 추가 컨텍스트를 제공하기 위한 선택적 설명입니다. |
 
 **응답**
@@ -249,4 +249,4 @@ curl -X DELETE \
 
 성공한 응답은 빈 응답 본문과 함께 HTTP 상태 200(OK)을 반환합니다.
 
-다음을 시도하여 삭제를 확인할 수 있습니다 [마케팅 액션 조회](#look-up). 마케팅 작업이 시스템에서 제거된 경우 HTTP 404(찾을 수 없음) 오류가 표시됩니다.
+[마케팅 액션을 조회](#look-up)하여 삭제를 확인할 수 있습니다. 마케팅 작업이 시스템에서 제거된 경우 HTTP 404(찾을 수 없음) 오류가 표시됩니다.

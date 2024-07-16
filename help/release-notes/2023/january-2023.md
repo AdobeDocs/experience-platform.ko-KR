@@ -36,7 +36,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| HIPAA 준비 | Healthcare Shield 고객은 이제 기여도 AI 및 기타 특정 Experience Platform 기반의 애플리케이션에서 보호된 상태 정보를 수신, 사용, 유지 관리 또는 전송할 수 있습니다. Healthcare Shield는 HIPAA의 적용을 받는 법인 또는 비즈니스 제휴자인 의료 고객을 위한 것입니다. 자세한 내용은 [HIPAA, Adobe 제품 및 서비스](https://www.adobe.com/kr/trust/compliance/hipaa-ready.html)에 관한 설명서를 참조하십시오. |
+| HIPAA 준비 | Healthcare Shield 고객은 이제 기여도 AI 및 기타 특정 Experience Platform 기반의 애플리케이션에서 보호된 상태 정보를 수신, 사용, 유지 관리 또는 전송할 수 있습니다. Healthcare Shield는 HIPAA의 적용을 받는 법인 또는 비즈니스 제휴자인 의료 고객을 위한 것입니다. 자세한 내용은 [HIPAA, Adobe 제품 및 서비스](https://www.adobe.com/trust/compliance/hipaa-ready.html)에 관한 설명서를 참조하십시오. |
 | 추가 점수 데이터 세트 열 편집 | 이제 기존 모델을 편집할 때 추가 점수 데이터 세트 열(보고 열)을 추가하거나 제거할 수 있습니다. 이렇게 하면 속성 점수의 유연성이 확장되어 모델이 이미 생성된 후 추가 차원에 대한 인사이트를 제공합니다. 자세한 내용은 [기여도 UI 안내서](../../intelligent-services/attribution-ai/user-guide.md)를 참조하십시오. |
 
 {style="table-layout:auto"}
@@ -51,7 +51,7 @@ Real-Time Customer Data Platform용 고객 AI를 사용하여 크기에 따라 �
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| HIPAA 준비 | Healthcare Shield 고객은 이제 Real-Time Customer Data Platform용 고객 AI 및 기타 특정 Experience Platform 기반의 애플리케이션에서 보호된 상태 정보를 수신, 사용, 유지 관리 또는 전송할 수 있습니다. Healthcare Shield는 HIPAA의 적용을 받는 법인 또는 비즈니스 제휴자인 의료 고객을 위한 것입니다. 자세한 내용은 [HIPAA, Adobe 제품 및 서비스](https://www.adobe.com/kr/trust/compliance/hipaa-ready.html)에 관한 설명서를 읽어 보십시오. |
+| HIPAA 준비 | Healthcare Shield 고객은 이제 Real-Time Customer Data Platform용 고객 AI 및 기타 특정 Experience Platform 기반의 애플리케이션에서 보호된 상태 정보를 수신, 사용, 유지 관리 또는 전송할 수 있습니다. Healthcare Shield는 HIPAA의 적용을 받는 법인 또는 비즈니스 제휴자인 의료 고객을 위한 것입니다. 자세한 내용은 [HIPAA, Adobe 제품 및 서비스](https://www.adobe.com/trust/compliance/hipaa-ready.html)에 관한 설명서를 읽어 보십시오. |
 
 {style="table-layout:auto"}
 

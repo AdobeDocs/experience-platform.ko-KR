@@ -11,7 +11,7 @@ ht-degree: 77%
 
 # 데이터스트림 개요
 
-데이터스트림은 Adobe Experience Platform Web 및 Mobile SDK 구현 시 서버측 구성을 나타냅니다. 동안 [`configure`](/help/web-sdk/commands/configure/overview.md) sdk의 명령은 클라이언트에서 처리해야 하는 항목을 제어합니다(예: `edgeDomain`) 데이터스트림은 SDK에 대한 다른 모든 구성을 처리합니다. Adobe Experience Platform Edge Network로 요청이 전송되면 `edgeConfigId`는 데이터스트림을 참조하는 데 사용됩니다. 이를 통해 웹 사이트에서 코드를 변경하지 않고도 서버측 구성을 업데이트할 수 있습니다.
+데이터스트림은 Adobe Experience Platform Web 및 Mobile SDK 구현 시 서버측 구성을 나타냅니다. SDK의 [`configure`](/help/web-sdk/commands/configure/overview.md) 명령은 클라이언트에서 처리해야 하는 항목을 제어하는 반면(`edgeDomain` 등), 데이터스트림은 SDK에 대한 다른 모든 구성을 처리합니다. Adobe Experience Platform Edge Network로 요청이 전송되면 `edgeConfigId`는 데이터스트림을 참조하는 데 사용됩니다. 이를 통해 웹 사이트에서 코드를 변경하지 않고도 서버측 구성을 업데이트할 수 있습니다.
 
 Adobe Experience Platform UI 또는 데이터 수집 UI 내의 왼쪽 탐색 영역에서 **[!UICONTROL 데이터스트림]**&#x200B;을 선택하여 데이터스트림을 만들고 관리할 수 있습니다.
 
@@ -57,7 +57,7 @@ HIPAA 지원 서비스가 아닌 기존 데이터스트림에서 스키마를 �
 
 ### 감사 로그
 
-Experience Platform에서 감사 로그 형식으로 데이터스트림 활동을 모니터링할 수 있습니다. 감사 로그에 표시되는 사항 **사용자** 수행됨 **내용** 작업 및 **조건**&#x200B;는 데이터 스트림과 관련된 문제를 해결하는 데 도움이 되는 기타 컨텍스트 기반 데이터와 함께 기업이 기업 데이터 관리 정책 및 규제 요구 사항을 준수하는 데 도움이 됩니다.
+Experience Platform에서 감사 로그 형식으로 데이터스트림 활동을 모니터링할 수 있습니다. 감사 로그는 **누가**&#x200B;에서 **무엇을** 작업하고 **언제**&#x200B;을(를) 수행했으며, 데이터 스트림과 관련된 문제를 해결하는 데 도움이 되는 다른 상황별 데이터와 함께 귀사에서 기업 데이터 관리 정책 및 규제 요구 사항을 준수하도록 도와줍니다.
 
 사용자가 데이터스트림을 생성하고 업데이트하거나 삭제할 때마다 감사 로그를 생성하여 작업을 기록합니다. 사용자가 [데이터 수집을 위한 데이터 준비](./data-prep.md)를 통해 매핑을 생성하고 업데이트하거나 삭제할 때도 마찬가지입니다. 데이터스트림 또는 매핑이 업데이트되었는지 여부와 상관없이 결과 감사 로그는 [!UICONTROL 데이터스트림] 리소스 유형으로 분류됩니다.
 

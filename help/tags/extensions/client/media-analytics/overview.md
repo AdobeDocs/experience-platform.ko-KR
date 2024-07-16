@@ -5,7 +5,7 @@ exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
 source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
 source-wordcount: '949'
-ht-degree: 80%
+ht-degree: 76%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 80%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Media Analytics for Audio 및 Video 확장(Media Analytics 확장) 설치, 구성 및 구현 관련 정보에 대해서는 이 설명서를 참조합니다. 예제 및 샘플 링크와 함께 이 확장을 사용하여 규칙을 만들 때 사용할 수 있는 옵션이 포함되어 있습니다.
 
-MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 2.x SDK)를 추가합니다. 이 확장은 다음을 추가하는 기능을 제공합니다 `MediaHeartbeat` 태그 사이트 또는 프로젝트에 대한 추적기 인스턴스. MA 확장을 사용하려면 다음 두 개의 확장이 추가로 필요합니다.
+MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 2.x SDK)를 추가합니다. 이 확장은 태그 사이트 또는 프로젝트에 `MediaHeartbeat` 추적기 인스턴스를 추가하는 기능을 제공합니다. MA 확장을 사용하려면 다음 두 개의 확장이 추가로 필요합니다.
 
 * [Analytics 확장](../analytics/overview.md)
 * [Experience Cloud ID 확장](../id-service/overview.md)
@@ -33,9 +33,9 @@ MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 2.x SDK)를 추가
 
 ## MA 확장 설치 및 구성
 
-* **설치 -** MA 확장을 설치하려면 확장 속성을 열고 **[!UICONTROL 확장 > 카탈로그]**, 마우스로 가리키기 **[!UICONTROL 오디오 및 비디오용 Adobe Medium 분석]** 확장 및 선택 **[!UICONTROL 설치]**.
+* **설치 -** MA 확장을 설치하려면 확장 속성을 열고 **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고 **[!UICONTROL 오디오 및 비디오용 Adobe Medium 분석]** 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
 
-* **구성 -** MA 확장을 구성하려면 [!UICONTROL 확장] 탭을 클릭하고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**:
+* **구성 -** MA 확장을 구성하려면 [!UICONTROL 확장] 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
 
 ![MA 확장 구성](../../../images/ext-va-config.jpg)
 
@@ -59,7 +59,7 @@ MA(Media Analytics) 확장은 Core JavaScript Media SDK(Media 2.x SDK)를 추가
 
 ### 웹 페이지/JS 앱에서 사용
 
-MA 확장은 의 &quot;Export APIs to Window Object&quot; 설정을 활성화하여 글로벌 창 개체에서 MediaHeartbeat API를 내보냅니다. [!UICONTROL 구성] 페이지를 가리키도록 업데이트하는 중입니다. 구성된 변수 이름 아래에 API를 내보냅니다. 예를 들어 변수 이름이 `ADB`가 되도록 구성된 경우 MediaHeartbeat는 `window.ADB.MediaHeartbeat`로 액세스할 수 있습니다.
+MA 확장은 [!UICONTROL 구성] 페이지에서 &quot;Export APIs to Window Object&quot; 설정을 활성화하여 글로벌 창 개체에서 MediaHeartbeat API를 내보냅니다. 구성된 변수 이름 아래에 API를 내보냅니다. 예를 들어 변수 이름이 `ADB`가 되도록 구성된 경우 MediaHeartbeat는 `window.ADB.MediaHeartbeat`로 액세스할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -178,7 +178,7 @@ MA 확장은 `get-instance` 및 `media-heartbeat` 공유 모듈을 다른 확장
 
 >[!NOTE]
 >
->**테스트:** 이 릴리스에서 확장을 테스트하려면 다음을 업로드해야 합니다. [플랫폼](../../../extension-dev/submit/upload-and-test.md)모든 종속 확장에 대한 액세스 권한이 있는 경우입니다.
+>**테스트:** 이 릴리스에서 확장을 테스트하려면 모든 종속 확장에 대한 액세스 권한이 있는 [플랫폼](../../../extension-dev/submit/upload-and-test.md)에 업로드해야 합니다.
 
 
 <!--

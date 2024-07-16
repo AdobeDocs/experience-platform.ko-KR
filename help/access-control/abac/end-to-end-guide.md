@@ -19,16 +19,16 @@ Adobe Experience Platform에서 속성 기반 액세스 제어를 사용하여 �
 
 >[!NOTE]
 >
->이 문서는 액세스 제어 정책의 사용 사례를 중점적으로 다룹니다. 을(를) 제어하는 정책을 설정하려는 경우 **사용** 플랫폼 사용자가 액세스할 수 있는 데이터가 아닌 의 전체 안내서를 참조하십시오. [데이터 거버넌스](../../data-governance/e2e.md) 대신,
+>이 문서는 액세스 제어 정책의 사용 사례를 중점적으로 다룹니다. 플랫폼 사용자가 액세스할 수 있는 데이터가 아닌 데이터의 **사용**&#x200B;을 제어하는 정책을 설정하는 경우 대신 [데이터 거버넌스](../../data-governance/e2e.md)에 대한 전체 안내서를 참조하십시오.
 
 ## 시작하기
 
 이 자습서에서는 다음 플랫폼 구성 요소를 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM)] 시스템](../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-   * [스키마 컴포지션 기본 사항](../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
-   * [스키마 편집기 튜토리얼](../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 정의 스키마를 만드는 방법을 알아봅니다.
-* [Adobe Experience Platform 세그멘테이션 서비스](../../segmentation/home.md): 내의 세그먼테이션 엔진 [!DNL Platform] 고객 행동 및 속성을 기반으로 고객 프로필에서 대상 세그먼트를 만드는 데 사용됩니다.
+   * [스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
+   * [스키마 편집기 튜토리얼](../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아봅니다.
+* [Adobe Experience Platform 세분화 서비스](../../segmentation/home.md): [!DNL Platform] 내의 세분화 엔진은 고객 동작 및 특성을 기반으로 고객 프로필에서 대상 세그먼트를 만드는 데 사용됩니다.
 
 ### 사용 사례 개요
 
@@ -36,31 +36,31 @@ Adobe Experience Platform에서 속성 기반 액세스 제어를 사용하여 �
 
 의료 서비스 제공업체로서 조직의 리소스에 대한 액세스를 구성하려고 합니다.
 
-* 내부 마케팅 팀에서 액세스할 수 있어야 합니다. **[!UICONTROL PHI/규제 상태 데이터]** 데이터.
-* 외부 에이전트에서 액세스할 수 없습니다. **[!UICONTROL PHI/규제 상태 데이터]** 데이터.
+* 내부 마케팅 팀에서 **[!UICONTROL PHI/ 규제 상태 데이터]** 데이터에 액세스할 수 있어야 합니다.
+* 외부 에이전트에서 **[!UICONTROL PHI/ 규제 상태 데이터]** 데이터에 액세스할 수 없습니다.
 
 이렇게 하려면 역할, 리소스 및 정책을 구성해야 합니다.
 
 다음을 수행할 수 있습니다.
 
-* [사용자의 역할에 레이블 지정](#label-roles): 마케팅 그룹이 외부 에이전시와 협력하는 의료 공급자(ACME 비즈니스 그룹)의 예를 사용합니다.
-* [리소스에 레이블 지정(스키마 필드 및 세그먼트)](#label-resources): 할당 **[!UICONTROL PHI/규제 상태 데이터]** 스키마 리소스 및 세그먼트에 레이블을 지정합니다.
+* [사용자의 역할에 레이블 지정](#label-roles): 마케팅 그룹이 외부 에이전시와 함께 작동하는 의료 공급자(ACME 비즈니스 그룹)의 예를 사용하십시오.
+* [리소스(스키마 필드 및 세그먼트)에 레이블 지정](#label-resources): 스키마 리소스 및 세그먼트에 **[!UICONTROL PHI/ 규제 상태 데이터]** 레이블을 지정합니다.
 * 
-   * [이들을 함께 연결하는 정책을 활성화합니다.](#policy): 리소스의 레이블을 역할의 레이블에 연결하여 스키마 필드 및 세그먼트에 대한 액세스를 금지하는 기본 정책을 활성화합니다. 그러면 레이블이 일치하는 사용자에게 모든 샌드박스의 스키마 필드 및 세그먼트에 대한 액세스 권한이 제공됩니다.
+   * [함께 연결할 정책 활성화:](#policy): 기본 정책을 사용하도록 설정하여 리소스의 레이블을 역할의 레이블에 연결하여 스키마 필드 및 세그먼트에 대한 액세스를 차단합니다. 그러면 레이블이 일치하는 사용자에게 모든 샌드박스의 스키마 필드 및 세그먼트에 대한 액세스 권한이 제공됩니다.
 
 ## 권한
 
-[!UICONTROL 권한] 는 관리자가 사용자 역할과 정책을 정의하여 제품 애플리케이션 내의 기능 및 개체에 대한 권한을 관리할 수 있는 Experience Cloud 영역입니다.
+[!UICONTROL 권한]은(는) 관리자가 사용자 역할과 정책을 정의하여 제품 응용 프로그램 내의 기능 및 개체에 대한 권한을 관리할 수 있는 Experience Cloud 영역입니다.
 
-까지 [!UICONTROL 권한], 역할을 만들고 관리하며, 이러한 역할에 대해 원하는 리소스 권한을 할당할 수 있습니다. [!UICONTROL 권한] 또한 레이블, 샌드박스 및 특정 역할과 연관된 사용자를 관리할 수 있습니다.
+[!UICONTROL 권한]을 통해 역할을 만들고 관리하며 이러한 역할에 대해 원하는 리소스 권한을 할당할 수 있습니다. [!UICONTROL 권한]을 통해 레이블, 샌드박스 및 특정 역할과 연결된 사용자를 관리할 수도 있습니다.
 
 관리자 권한이 없는 경우 시스템 관리자에게 문의하여 액세스 권한을 받으십시오.
 
-관리자 권한이 있으면 다음 위치로 이동하십시오. [Adobe Experience Cloud](https://experience.adobe.com/) Adobe 자격 증명을 사용하여 로그인합니다. 로그인하면 **[!UICONTROL 개요]** 관리자 권한이 있는 조직에 대한 페이지가 나타납니다. 이 페이지에는 조직이 구독한 제품과 함께 사용자 및 관리자를 조직에 추가할 수 있는 다른 컨트롤이 표시됩니다. 선택 **[!UICONTROL 권한]** 를 클릭하여 Platform 통합을 위한 작업 영역을 엽니다.
+관리자 권한이 있으면 [Adobe Experience Cloud](https://experience.adobe.com/)(으)로 이동하여 Adobe 자격 증명을 사용하여 로그인하십시오. 로그인하면 관리자 권한이 있는 조직의 **[!UICONTROL 개요]** 페이지가 나타납니다. 이 페이지에는 조직이 구독한 제품과 함께 사용자 및 관리자를 조직에 추가할 수 있는 다른 컨트롤이 표시됩니다. **[!UICONTROL 권한]**&#x200B;을 선택하여 Platform 통합을 위한 작업 영역을 엽니다.
 
 ![Adobe Experience Cloud에서 선택 중인 권한 제품을 보여 주는 이미지](../images/flac-ui/flac-select-product.png)
 
-Platform UI에 대한 권한 작업 공간이 나타나고 **[!UICONTROL 역할]** 페이지를 가리키도록 업데이트하는 중입니다.
+Platform UI에 대한 권한 작업 영역이 표시되어 **[!UICONTROL 역할]** 페이지에서 열립니다.
 
 ## 역할에 레이블 적용 {#label-roles}
 
@@ -95,15 +95,15 @@ Platform UI에 대한 권한 작업 공간이 나타나고 **[!UICONTROL 역할]
 
 역할은 Platform 인스턴스와 상호 작용하는 사용자 유형을 분류하는 방법이며 액세스 제어 정책을 작성하는 빌딩 블록입니다. 역할에는 지정된 권한 집합이 있으며, 필요한 액세스 범위에 따라 조직 구성원을 하나 이상의 역할에 할당할 수 있습니다.
 
-시작하려면 다음을 선택합니다. **[!UICONTROL ACME 비즈니스 그룹]** 에서 **[!UICONTROL 역할]** 페이지를 가리키도록 업데이트하는 중입니다.
+시작하려면 **[!UICONTROL 역할]** 페이지에서 **[!UICONTROL ACME 비즈니스 그룹]**&#x200B;을(를) 선택하십시오.
 
 ![역할에서 선택 중인 ACME 비즈니스 역할을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
-그런 다음 을 선택합니다. **[!UICONTROL 레이블]** 다음을 선택합니다. **[!UICONTROL 레이블 추가]**.
+**[!UICONTROL 레이블]**&#x200B;을 선택한 다음 **[!UICONTROL 레이블 추가]**&#x200B;를 선택합니다.
 
-![레이블 탭에서 레이블 추가가 선택되어 있음을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
+![레이블 탭에서 선택된 레이블 추가를 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-조직의 모든 레이블 목록이 나타납니다. 선택 **[!UICONTROL RHD]** 레이블을 추가하려면 **[!UICONTROL PHI/규제 상태 데이터]**. 레이블 옆에 파란색 확인 표시가 나타날 수 있도록 잠시 기다렸다가 을(를) 선택합니다 **[!UICONTROL 저장]**.
+조직의 모든 레이블 목록이 나타납니다. **[!UICONTROL PHI/규제 상태 데이터]**&#x200B;에 대한 레이블을 추가하려면 **[!UICONTROL RHD]**&#x200B;을(를) 선택하십시오. 레이블 옆에 파란색 확인 표시가 나타날 때까지 잠시 기다렸다가 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
 ![선택 및 저장되는 RHD 레이블을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
@@ -113,17 +113,17 @@ Platform UI에 대한 권한 작업 공간이 나타나고 **[!UICONTROL 역할]
 
 ## 스키마 필드에 레이블 적용 {#label-resources}
 
-로 사용자 역할을 구성했으므로 [!UICONTROL RHD] label, 다음 단계는 해당 역할에 대해 제어하려는 리소스에 동일한 레이블을 추가하는 것입니다.
+[!UICONTROL RHD] 레이블로 사용자 역할을 구성했으므로 다음 단계에서는 해당 역할에 대해 제어할 리소스에 동일한 레이블을 추가합니다.
 
-선택 **[!UICONTROL 스키마]** 왼쪽 탐색에서 을(를) 선택한 다음 **[!UICONTROL ACME 헬스케어]** 표시되는 스키마 목록에서 제외합니다.
+왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택한 다음 표시되는 스키마 목록에서 **[!UICONTROL ACME 의료 서비스]**&#x200B;를 선택하십시오.
 
 ![스키마 탭에서 선택된 ACME 의료 서비스 스키마를 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-그런 다음 을 선택합니다. **[!UICONTROL 레이블]** 를 클릭하여 스키마와 연결된 필드를 표시하는 목록을 표시합니다. 여기에서 한 번에 하나 또는 여러 필드에 레이블을 할당할 수 있습니다. 다음 항목 선택 **[!UICONTROL 혈당]** 및 **[!UICONTROL 인슐린 수준]** 필드를 선택한 다음 **[!UICONTROL 액세스 및 데이터 거버넌스 레이블 적용]**.
+그런 다음 **[!UICONTROL 레이블]**&#x200B;을 선택하여 스키마와 연결된 필드를 표시하는 목록을 확인합니다. 여기에서 한 번에 하나 또는 여러 필드에 레이블을 할당할 수 있습니다. **[!UICONTROL 혈당]** 및 **[!UICONTROL 인슐린 수준]** 필드를 선택한 다음 **[!UICONTROL 액세스 및 데이터 거버넌스 레이블 적용]**&#x200B;을 선택하십시오.
 
-![선택 중인 혈당 및 인슐린 수준을 보여 주고 선택 중인 액세스 및 데이터 거버넌스 레이블을 적용하는 이미지](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![혈당 및 인슐린 수준을 선택하고 액세스 및 데이터 거버넌스 레이블을 적용하는 것을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
-다음 **[!UICONTROL 레이블 편집]** 스키마 필드에 적용할 레이블을 선택할 수 있는 대화 상자가 나타납니다. 이 사용 사례의 경우 **[!UICONTROL PHI/규제 상태 데이터]** 레이블을 지정한 다음 을 선택합니다 **[!UICONTROL 저장]**.
+스키마 필드에 적용할 레이블을 선택할 수 있는 **[!UICONTROL 레이블 편집]** 대화 상자가 나타납니다. 이 사용 사례의 경우 **[!UICONTROL PHI/ 규제 상태 데이터]** 레이블을 선택한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
 ![선택 및 저장되는 RHD 레이블을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
 
@@ -139,42 +139,42 @@ Platform UI에 대한 권한 작업 공간이 나타나고 **[!UICONTROL 역할]
 
 스키마 필드에 레이블 지정을 완료한 후에는 세그먼트에 레이블 지정을 시작할 수 있습니다.
 
-선택 **[!UICONTROL 세그먼트]** 왼쪽 탐색에서. 조직에서 사용 가능한 세그먼트 목록이 표시됩니다. 이 예에서는 다음 두 세그먼트에 중요한 상태 데이터가 포함되어 있으므로 레이블을 지정합니다.
+왼쪽 탐색에서 **[!UICONTROL 세그먼트]**&#x200B;를 선택합니다. 조직에서 사용 가능한 세그먼트 목록이 표시됩니다. 이 예에서는 다음 두 세그먼트에 중요한 상태 데이터가 포함되어 있으므로 레이블을 지정합니다.
 
 * 혈당 >100
 * 인슐린 &lt;50
 
-선택 **[!UICONTROL 혈당 >100]** 세그먼트 레이블을 지정하는 것을 시작합니다.
+세그먼트 레이블을 지정하려면 **[!UICONTROL 혈당 > 100]**&#x200B;을(를) 선택하십시오.
 
-![세그먼트 탭에서 100 이상의 혈당이 선택되었음을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-segment.png)
+![세그먼트 탭에서 혈당 100을 선택하는 것을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-segment.png)
 
-세그먼트 **[!UICONTROL 세부 사항]** 화면이 나타납니다. 선택 **[!UICONTROL 액세스 관리]**.
+세그먼트 **[!UICONTROL 세부 정보]** 화면이 나타납니다. **[!UICONTROL 액세스 관리]**&#x200B;를 선택합니다.
 
 ![액세스 관리 선택을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
 
-다음 **[!UICONTROL 레이블 편집]** 세그먼트에 적용할 레이블을 선택할 수 있는 대화 상자가 나타납니다. 이 사용 사례의 경우 **[!UICONTROL PHI/규제 상태 데이터]** 레이블을 지정한 다음 을 선택합니다 **[!UICONTROL 저장]**.
+세그먼트에 적용할 레이블을 선택할 수 있는 **[!UICONTROL 레이블 편집]** 대화 상자가 나타납니다. 이 사용 사례의 경우 **[!UICONTROL PHI/ 규제 상태 데이터]** 레이블을 선택한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
 ![선택 중인 RHD 레이블 및 저장을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
 
-위의 단계를 다음 방법으로 반복합니다 **[!UICONTROL 인슐린 &lt;50]**.
+**[!UICONTROL 인슐린 &lt;50]**(으)로 위의 단계를 반복합니다.
 
 ## 액세스 제어 정책 활성화 {#policy}
 
 기본 액세스 제어 정책은 레이블을 활용하여 특정 플랫폼 리소스에 액세스할 수 있는 사용자 역할을 정의합니다. 이 예에서는 스키마 필드에 해당 레이블이 있는 역할에 없는 사용자의 경우 모든 샌드박스에서 스키마 필드 및 세그먼트에 대한 액세스가 거부됩니다.
 
-액세스 제어 정책을 활성화하려면 다음을 선택합니다 [!UICONTROL 권한] 왼쪽 탐색에서 을(를) 선택한 다음 **[!UICONTROL 정책]**.
+액세스 제어 정책을 활성화하려면 왼쪽 탐색에서 [!UICONTROL 권한]을 선택한 다음 **[!UICONTROL 정책]**&#x200B;을 선택하십시오.
 
 ![표시된 정책 목록](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-그런 다음 줄임표(`...`) 정책 이름 옆에 드롭다운에 역할을 편집, 활성화, 삭제 또는 복제할 컨트롤이 표시됩니다. 선택 **[!UICONTROL 활성화]** 드롭다운에서 을 클릭합니다.
+그런 다음 정책 이름 옆에 있는 줄임표(`...`)를 선택합니다. 드롭다운에 역할을 편집, 활성화, 삭제 또는 복제할 컨트롤이 표시됩니다. 드롭다운에서 **[!UICONTROL 활성화]**&#x200B;를 선택합니다.
 
-![정책을 활성화하기 위한 드롭다운](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+정책을 활성화하기 위한 ![드롭다운](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-활성화를 확인하라는 메시지가 표시되는 정책 활성화 대화 상자가 나타납니다. 선택 **[!UICONTROL 확인]**.
+활성화를 확인하라는 메시지가 표시되는 정책 활성화 대화 상자가 나타납니다. **[!UICONTROL 확인]**&#x200B;을 선택합니다.
 
-![정책 활성화 대화 상자](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+![정책 대화 상자 활성화](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
-정책 활성화 확인이 수신되며 사용자가 (으)로 돌아갑니다. [!UICONTROL 정책] 페이지를 가리키도록 업데이트하는 중입니다.
+정책 활성화를 확인하면 [!UICONTROL 정책] 페이지로 돌아갑니다.
 
 ![정책 확인 활성화](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
@@ -259,7 +259,7 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 역할, 스키마 필드 및 세그먼트에 레이블 적용을 완료했습니다. 이러한 역할에 할당된 외부 에이전시에서는 스키마, 데이터 세트 및 프로필 보기에서 이러한 레이블과 해당 값을 볼 수 없습니다. 또한 이러한 필드는 세그먼트 빌더를 사용할 때 세그먼트 정의에서 사용할 수 없도록 제한됩니다.
 
-속성 기반 액세스 제어에 대한 자세한 내용은 [속성 기반 액세스 제어 개요](./overview.md).
+특성 기반 액세스 제어에 대한 자세한 내용은 [특성 기반 액세스 제어 개요](./overview.md)를 참조하십시오.
 
 다음 비디오에서는 속성 기반 액세스 제어에 대한 이해를 돕기 위해 역할, 리소스 및 정책을 구성하는 방법에 대해 설명합니다.
 

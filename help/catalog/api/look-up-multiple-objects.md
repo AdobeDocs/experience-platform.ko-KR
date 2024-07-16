@@ -13,11 +13,11 @@ ht-degree: 1%
 
 # 여러 카탈로그 개체 조회
 
-개체당 하나의 요청을 수행하는 대신 여러 개의 특정 개체를 보려는 경우 [!DNL Catalog] 에서는 동일한 유형의 여러 개체를 요청하는 간단한 바로 가기를 제공합니다. 단일 GET 요청을 사용하여 쉼표로 구분된 ID 목록을 포함하여 여러 특정 개체를 반환할 수 있습니다.
+개체당 하나의 요청을 하는 대신 여러 개의 특정 개체를 보려면 [!DNL Catalog]에서 같은 형식의 여러 개체를 요청하기 위한 간단한 바로 가기를 제공합니다. 단일 GET 요청을 사용하여 쉼표로 구분된 ID 목록을 포함하여 여러 특정 개체를 반환할 수 있습니다.
 
 >[!NOTE]
 >
->특정 요청 시 [!DNL Catalog] 개체, 다음을 수행하는 것이 좋습니다. `properties` 쿼리 매개 변수를 사용하여 필요한 속성만 반환합니다.
+>특정 [!DNL Catalog]개의 개체를 요청하는 경우에도 필요한 속성만 반환하려면 `properties` 쿼리 매개 변수를 사용하는 것이 좋습니다.
 
 **API 형식**
 
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | 매개변수 | 설명 |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 검색할 객체. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | 검색할 [!DNL Catalog] 개체의 형식입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{ID}` | 검색할 특정 개체 중 하나에 대한 식별자입니다. |
 
 **요청**
@@ -46,11 +46,11 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 요청된 속성(`name`, `description`, 및 `files`)을 참조하십시오.
+성공한 응답은 각각에 대해 요청된 속성(`name`, `description` 및 `files`)만 포함하는 지정된 데이터 세트 목록을 반환합니다.
 
 >[!NOTE]
 >
->반환된 개체에 로 표시된 요청된 속성이 하나 이상 포함되어 있지 않은 경우 `properties` 쿼리하면 다음과 같이 포함된 요청된 속성만 응답됩니다. ***`Sample Dataset 3`*** 및 ***`Sample Dataset 4`*** 아래요.
+>반환된 개체에 `properties` 쿼리로 표시된 요청된 속성이 하나 이상 포함되어 있지 않으면 아래 ***`Sample Dataset 3`*** 및 ***`Sample Dataset 4`***&#x200B;과(와) 같이 포함된 요청된 속성만 응답에서 반환합니다.
 
 ```json
 {

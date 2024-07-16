@@ -7,7 +7,7 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '40'
-ht-degree: 52%
+ht-degree: 55%
 
 ---
 
@@ -17,4 +17,4 @@ ht-degree: 52%
 - [ETL 통합 개발](home.md)
 - [ETL 변환](transformations.md)
 - [ETL 워크플로우](workflow.md)
-- [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

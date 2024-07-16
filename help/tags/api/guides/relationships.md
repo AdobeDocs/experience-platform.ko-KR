@@ -4,7 +4,7 @@ description: 각 리소스에 대한 관계 요구 사항을 포함하여 Reacto
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '809'
 ht-degree: 6%
 
 ---
@@ -18,16 +18,16 @@ Reactor API의 리소스는 서로 관련이 있는 경우가 많습니다. 이 
 필수 또는 선택 사항인지 여부에 관계없이 관계는 관련 리소스가 생성될 때 시스템에 의해 자동으로 설정되거나 수동으로 생성되어야 합니다. 수동으로 관계를 만드는 경우 해당 리소스에 따라 두 가지 방법이 있습니다.
 
 * [페이로드로 만들기](#payload)
-* [URL로 만들기](#url) (라이브러리만 해당)
+* [URL로 만들기](#url)(라이브러리만 해당)
 
-의 섹션을 참조하십시오. [관계 요구 사항](#requirements) 각 리소스 유형에 대해 호환되는 관계 목록 및 해당되는 경우 해당 관계를 설정하는 데 필요한 메서드를 참조하십시오.
+각 리소스 유형에 대해 호환되는 관계 목록과 해당되는 경우 해당 관계를 설정하는 데 필요한 메서드를 보려면 [관계 요구 사항](#requirements)의 섹션을 참조하십시오.
 
 ## 페이로드로 관계 만들기 {#payload}
 
-리소스를 처음 만들 때 일부 관계를 수동으로 설정해야 합니다. 이를 수행하려면 다음을 제공해야 합니다. `relationship` 상위 리소스를 처음 만들 때 요청 페이로드의 개체입니다. 이러한 관계의 예는 다음과 같습니다.
+리소스를 처음 만들 때 일부 관계를 수동으로 설정해야 합니다. 이렇게 하려면 먼저 상위 리소스를 만들 때 요청 페이로드에 `relationship` 개체를 제공해야 합니다. 이러한 관계의 예는 다음과 같습니다.
 
-* [데이터 요소 만들기](../endpoints/data-elements.md#create) 필요한 확장 기능 포함
-* [환경 만들기](../endpoints/environments.md#create) 필수 호스트 관계 사용
+* 필요한 확장을 사용하여 [데이터 요소 만들기](../endpoints/data-elements.md#create)
+* 필수 호스트 관계를 사용하여 [환경을 만드는 중](../endpoints/environments.md#create)
 
 **API 형식**
 
@@ -44,7 +44,7 @@ POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
 
 **요청**
 
-다음 요청은 새 를 만듭니다 `rule_component`, 와 관계 설정 `rules` 및 `extension`.
+다음 요청은 새 `rule_component`을(를) 만들어 `rules` 및 `extension`과(와) 관계를 설정합니다.
 
 ```shell
 curl -X POST \
@@ -84,16 +84,16 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `relationships` | 페이로드로 관계를 만들 때 제공해야 하는 개체입니다. 이 개체의 각 키는 특정 관계 유형을 나타냅니다. 위의 예에서, `extension` 및 `rules` 관계는 다음과 같이 설정됩니다. `rule_components`. 다른 리소스에 대해 호환되는 관계 유형에 대한 자세한 내용은 [자원별 관계 요구 사항](#relationship-requirements-by-resource). |
-| `data` | 아래에 제공된 각 관계 유형 `relationship` 객체에는 다음이 포함되어야 합니다: `data` 속성, 참조 `id` 및 `type` 을(를) 통해 관계를 설정하고 있습니다. 형식을 지정하여 동일한 유형의 여러 리소스와 관계를 만들 수 있습니다. `data` 속성을 객체의 배열로 사용하며 각 객체에는 `id` 및 `type` 적용 가능한 리소스 |
-| `id` | 리소스의 고유 ID입니다. 각 `id` 형제자매와 동반해야 합니다. `type` 속성, 해당 리소스의 유형을 나타냅니다. |
-| `type` | 형제 자매가 참조하는 리소스의 유형 `id` 필드. 허용되는 값은 다음과 같습니다 `data_elements`, `rules`, `extensions`, 및 `environments`. |
+| `relationships` | 페이로드로 관계를 만들 때 제공해야 하는 개체입니다. 이 개체의 각 키는 특정 관계 유형을 나타냅니다. 위의 예에서는 `rule_components`에 해당하는 `extension` 및 `rules` 관계가 설정되어 있습니다. 다른 리소스에 대해 호환되는 관계 유형에 대한 자세한 내용은 [리소스별 관계 요구 사항](#relationship-requirements-by-resource)에 대한 섹션을 참조하십시오. |
+| `data` | `relationship` 개체에 제공된 각 관계 형식에는 관계가 설정되는 리소스의 `id` 및 `type`을(를) 참조하는 `data` 속성이 있어야 합니다. `data` 속성을 개체 배열로 형식을 지정하여 같은 형식의 여러 리소스와 관계를 만들 수 있습니다. 각 개체에는 적용 가능한 리소스의 `id` 및 `type`이(가) 포함되어 있습니다. |
+| `id` | 리소스의 고유 ID입니다. 각 `id`에는 해당 리소스의 유형을 나타내는 형제 `type` 속성이 있어야 합니다. |
+| `type` | 형제 `id` 필드에서 참조한 리소스의 유형입니다. 허용되는 값은 `data_elements`, `rules`, `extensions` 및 `environments`입니다. |
 
 {style="table-layout:auto"}
 
 ## URL로 관계 만들기 {#url}
 
-도서관은 다른 자원과 달리 자신의 전용 자원을 통해 관계를 구축한다 `/relationship` 엔드포인트. 해당 예는 다음과 같습니다.
+다른 리소스와 달리 라이브러리는 전용 `/relationship` 끝점을 통해 관계를 설정합니다. 해당 예는 다음과 같습니다.
 
 * [라이브러리에 확장, 데이터 요소 및 규칙 추가](../endpoints/libraries.md#add-resources)
 * [환경에 라이브러리 할당](../endpoints/libraries.md#environment)
@@ -108,11 +108,11 @@ POST /properties/{PROPERTY_ID}/libraries/{LIBRARY_ID}/relationships/{RESOURCE_TY
 | --- | --- |
 | `{PROPERTY_ID}` | 라이브러리가 속한 속성의 ID입니다. |
 | `{LIBRARY_ID}` | 관계를 만들 라이브러리의 ID입니다. |
-| `{RESOURCE_TYPE}` | 관계가 타겟팅하는 리소스의 유형입니다. 사용 가능한 값은 다음과 같습니다 `environment`, `data_elements`, `extensions`, 및 `rules`. |
+| `{RESOURCE_TYPE}` | 관계가 타겟팅하는 리소스의 유형입니다. 사용 가능한 값은 `environment`, `data_elements`, `extensions` 및 `rules`입니다. |
 
 **요청**
 
-다음 요청은 `/relationships/environment` 환경과의 관계를 만드는 라이브러리의 종단점입니다.
+다음 요청은 라이브러리에 대해 `/relationships/environment` 끝점을 사용하여 환경과의 관계를 만듭니다.
 
 ```shell
 curl -X POST \
@@ -132,9 +132,9 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `data` | 를 참조하는 개체 `id` 및 `type` 관계의 대상 리소스. 동일한 유형의 여러 리소스로 관계를 만드는 경우(예: `extensions` 및 `rules`), `data` 속성은 개체의 배열로 형식화되어야 하며, 각 개체에는 `id` 및 `type` 적용 가능한 리소스 |
-| `id` | 리소스의 고유 ID입니다. 각 `id` 형제자매와 동반해야 합니다. `type` 속성, 해당 리소스의 유형을 나타냅니다. |
-| `type` | 형제 자매가 참조하는 리소스의 유형 `id` 필드. 허용되는 값은 다음과 같습니다 `data_elements`, `rules`, `extensions`, 및 `environments`. |
+| `data` | 관계에 대한 대상 리소스의 `id` 및 `type`을(를) 참조하는 개체입니다. 같은 유형의 여러 리소스(예: `extensions` 및 `rules`)로 관계를 만드는 경우 `data` 속성은 개체 배열로 형식이 지정되어야 하며 각 개체에는 적용 가능한 리소스의 `id` 및 `type`이(가) 포함되어 있습니다. |
+| `id` | 리소스의 고유 ID입니다. 각 `id`에는 해당 리소스의 유형을 나타내는 형제 `type` 속성이 있어야 합니다. |
+| `type` | 형제 `id` 필드에서 참조한 리소스의 유형입니다. 허용되는 값은 `data_elements`, `rules`, `extensions` 및 `environments`입니다. |
 
 {style="table-layout:auto"}
 
@@ -150,8 +150,8 @@ curl -X POST \
 
 | 관계 | 필수 여부 | 페이로드로 만들기 | URL로 만들기 |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ 덧신 |  |  |
-| `entity` | ✓ |  |  |
+| `property` | ✓ 덧신 | | |
+| `entity` | ✓ 덧신 | | |
 
 {style="table-layout:auto"}
 
@@ -159,12 +159,12 @@ curl -X POST \
 
 | 관계 | 필수 여부 | 페이로드로 만들기 | URL로 만들기 |
 | :--- | :---: | :---: | :---: |
-| `data_elements` |  |  |  |
-| `extensions` |  |  |  |
-| `rules` |  |  |  |
-| `environment` | ✓ |  |  |
-| `library` | ✓ |  |  |
-| `property` | ✓ |  |  |
+| `data_elements` | | | |
+| `extensions` | | | |
+| `rules` | | | |
+| `environment` | ✓ 덧신 | | |
+| `library` | ✓ 덧신 | | |
+| `property` | ✓ 덧신 | | |
 
 {style="table-layout:auto"}
 
@@ -172,7 +172,7 @@ curl -X POST \
 
 | 관계 | 필수 여부 | 페이로드로 만들기 | URL로 만들기 |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | ✓ 덧신 | | |
 
 {style="table-layout:auto"}
 
@@ -180,7 +180,7 @@ curl -X POST \
 
 | 관계 | 필수 여부 | 페이로드로 만들기 | URL로 만들기 |
 | :--- | :---: | :---: | :---: |
-| `properties` |  |  |  |
+| `properties` | | | |
 
 {style="table-layout:auto"}
 
@@ -188,14 +188,14 @@ curl -X POST \
 
 | 관계 | 필수 여부 | 페이로드로 만들기 | URL로 만들기 |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
-| `updated_with_extension` | ✓ |  |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ 덧신 | | |
+| `notes` | | | |
+| `property` | ✓ 덧신 | | |
+| `origin` | ✓ 덧신 | | |
+| `extension` | ✓ 덧신 | ✓ 덧신 | |
+| `updated_with_extension` | ✓ 덧신 | | |
+| `updated_with_extension_package` | ✓ 덧신 | | |
 
 {style="table-layout:auto"}
 
@@ -203,10 +203,10 @@ curl -X POST \
 
 | 관계 | 필수 여부 | 페이로드로 만들기 | URL로 만들기 |
 | :--- | :---: | :---: | :---: |
-| `library` |  |  |  |
-| `builds` |  |  |  |
-| `host` | ✓ | ✓ |  |
-| `property` | ✓ |  |  |
+| `library` | | | |
+| `builds` | | | |
+| `host` | ✓ 덧신 | ✓ 덧신 | |
+| `property` | ✓ 덧신 | | |
 
 {style="table-layout:auto"}
 
@@ -214,13 +214,13 @@ curl -X POST \
 
 | 관계 | 필수 여부 | 페이로드로 만들기 | URL로 만들기 |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension_package` | ✓ | ✓ |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ 덧신 | | |
+| `notes` | | | |
+| `property` | ✓ 덧신 | | |
+| `origin` | ✓ 덧신 | | |
+| `extension_package` | ✓ 덧신 | ✓ 덧신 | |
+| `updated_with_extension_package` | ✓ 덧신 | | |
 
 {style="table-layout:auto"}
 
@@ -228,7 +228,7 @@ curl -X POST \
 
 | 관계 | 필수 여부 | 페이로드로 만들기 | URL로 만들기 |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | ✓ 덧신 | | |
 
 {style="table-layout:auto"}
 
@@ -236,15 +236,15 @@ curl -X POST \
 
 | 관계 | 필수 여부 | 페이로드로 만들기 | URL로 만들기 |
 | :--- | :---: | :---: | :---: |
-| `builds` |  |  |  |
-| `environment` |  |  | ✓ |
-| `data_elements` |  |  | ✓ |
-| `extensions` |  |  | ✓ |
-| `rules` |  |  | ✓ |
-| `notes` |  |  |  |
-| `upstream_library` | ✓ |  |  |
-| `property` | ✓ |  |  |
-| `last_build` |  |  |  |
+| `builds` | | | |
+| `environment` | | | ✓ 덧신 |
+| `data_elements` | | | ✓ 덧신 |
+| `extensions` | | | ✓ 덧신 |
+| `rules` | | | ✓ 덧신 |
+| `notes` | | | |
+| `upstream_library` | ✓ 덧신 | | |
+| `property` | ✓ 덧신 | | |
+| `last_build` | | | |
 
 {style="table-layout:auto"}
 
@@ -252,7 +252,7 @@ curl -X POST \
 
 | 관계 | 필수 여부 | 페이로드로 만들기 | URL로 만들기 |
 | :--- | :---: | :---: | :---: |
-| `resource` | ✓ |  |  |
+| `resource` | ✓ 덧신 | | |
 
 {style="table-layout:auto"}
 
@@ -260,13 +260,13 @@ curl -X POST \
 
 | 관계 | 필수 여부 | 페이로드로 만들기 | URL로 만들기 |
 | :--- | :---: | :---: | :---: |
-| `company` | ✓ |  |  |
-| `callbacks` |  |  |  |
-| `environments` |  |  |  |
-| `libraries` |  |  |  |
-| `data_elements` |  |  |  |
-| `extensions` |  |  |  |
-| `extensions` |  |  |  |
+| `company` | ✓ 덧신 | | |
+| `callbacks` | | | |
+| `environments` | | | |
+| `libraries` | | | |
+| `data_elements` | | | |
+| `extensions` | | | |
+| `extensions` | | | |
 
 {style="table-layout:auto"}
 
@@ -274,14 +274,14 @@ curl -X POST \
 
 | 관계 | 필수 여부 | 페이로드로 만들기 | URL로 만들기 |
 | :--- | :---: | :---: | :---: |
-| `updated_with_extensions_package` | ✓ |  |  |
-| `updated_with_extension` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
-| `notes` |  |  |  |
-| `origin` | ✓ |  |  |
-| `property` | ✓ |  |  |
-| `rules` | ✓ | ✓ |  |
-| `revisions` | ✓ |  |  |
+| `updated_with_extensions_package` | ✓ 덧신 | | |
+| `updated_with_extension` | ✓ 덧신 | | |
+| `extension` | ✓ 덧신 | ✓ 덧신 | |
+| `notes` | | | |
+| `origin` | ✓ 덧신 | | |
+| `property` | ✓ 덧신 | | |
+| `rules` | ✓ 덧신 | ✓ 덧신 | |
+| `revisions` | ✓ 덧신 | | |
 
 {style="table-layout:auto"}
 
@@ -289,17 +289,17 @@ curl -X POST \
 
 | 관계 | 필수 여부 | 페이로드로 만들기 | URL로 만들기 |
 | :--- | :---: | :---: | :---: |
-| `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
-| `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `rule_components` |  |  |  |
+| `libraries` | | | |
+| `revisions` | ✓ 덧신 | | |
+| `notes` | | | |
+| `property` | ✓ 덧신 | | |
+| `origin` | ✓ 덧신 | | |
+| `rule_components` | | | |
 
 ### 비밀
 
 | 관계 | 필수 여부 | 페이로드로 만들기 | URL로 만들기 |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  | ✓ |
-| `environment` | ✓ | ✓ |  |
+| `property` | ✓ 덧신 | | ✓ 덧신 |
+| `environment` | ✓ 덧신 | ✓ 덧신 | |
 

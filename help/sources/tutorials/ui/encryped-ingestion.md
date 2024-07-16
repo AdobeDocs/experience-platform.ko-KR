@@ -1,5 +1,5 @@
 ---
-title: 소스 UI 작업 영역에서 암호화된 데이터 수집
+title: 소스 UI Workspace에서 암호화된 데이터 수집
 description: 소스 UI 작업 영역에서 암호화된 데이터를 수집하는 방법을 알아봅니다.
 hide: true
 hidefromtoc: true
@@ -7,7 +7,7 @@ exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 source-git-commit: a11f469cb54421e0ca30c7c5878128e216470f7f
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 7%
+ht-degree: 54%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_isFileEncrypted"
 >title="파일이 암호화되어 있습니까?"
->abstract="이미 암호화된 파일을 수집하는 경우 이 토글을 선택합니다."
+>abstract="이미 암호화된 파일을 수집하는 경우 이 토글을 선택하십시오."
 
 
 >[!CONTEXTUALHELP]
@@ -34,5 +34,5 @@ ht-degree: 7%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_createCustomKey"
->title="사용자 지정 키 만들기"
->abstract="원할 경우 서명 확인 키 쌍을 만들고 암호화된 데이터에 대한 사용자 지정 키를 만들 수 있습니다."
+>title="사용자 정의 키 만들기"
+>abstract="필요한 경우 서명 확인 키 쌍을 만들고 암호화된 데이터에 대한 사용자 정의 키를 만들 수 있습니다."

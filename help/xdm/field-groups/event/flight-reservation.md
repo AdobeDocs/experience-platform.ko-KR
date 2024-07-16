@@ -6,51 +6,51 @@ exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '625'
-ht-degree: 4%
+ht-degree: 10%
 
 ---
 
 # [!UICONTROL 비행 예약] 스키마 필드 그룹
 
-[!UICONTROL 비행 예약] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md) 비행 예약 관련 정보를 캡처하는 데 사용됩니다.
+[!UICONTROL 비행 예약]은(는) 비행 예약 관련 정보를 캡처하는 데 사용되는 [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)의 표준 스키마 필드 그룹입니다.
 
-필드 그룹은 의 확장입니다 [!UICONTROL 예약 세부 정보] 필드 그룹 및 단일 개체 유형 필드 아래에 있는 동일한 필드를 모두 포함합니다. `reservations`. 이러한 일반 필드 외에도 [!UICONTROL 비행 예약] 또한 다음을 포함 `flightReservations` 배열입니다. 이 객체 배열은 항공 여행에 고유한 속성을 가진 하나 이상의 예약을 설명하는 데 사용됩니다.
+필드 그룹은 [!UICONTROL 예약 세부 정보] 필드 그룹의 확장이며 단일 개체 유형 필드 `reservations`에 있는 동일한 필드를 모두 포함합니다. 이러한 일반 필드 외에도 [!UICONTROL 비행 예약]에는 `flightReservations` 배열도 포함됩니다. 이 객체 배열은 항공 여행에 고유한 속성을 가진 하나 이상의 예약을 설명하는 데 사용됩니다.
 
 >[!NOTE]
 >
->이 문서에서는 `flightReservations` 배열입니다. 아래에 제공된 다른 필드에 대한 자세한 내용은 `reservations` 개체를 참조하십시오. [[!UICONTROL 예약 세부 정보] 필드 그룹 참조](./reservation-details.md).
+>이 문서에서는 `flightReservations` 배열에 대한 세부 정보를 다룹니다. `reservations` 개체 아래에 제공된 다른 필드에 대한 자세한 내용은 [[!UICONTROL 예약 세부 정보] 필드 그룹 참조](./reservation-details.md)를 참조하십시오.
 
 ![비행 예약 구조](../../images/field-groups/flight-reservation/structure.png)
 
 ## `flightReservations`
 
-`flightReservations` 는 비행 예약 목록을 나타내는 객체 배열입니다. 예를 들어, 예약 이벤트에 여행에서 여러 연결 항공편을 예약하는 경우 이러한 예약은 다음과 같은 개별 객체로 나열될 수 있습니다. `flightReservations` 단일 이벤트용
+`flightReservations`은(는) 비행 예약 목록을 나타내는 개체 배열입니다. 예를 들어, 여행 중에 여러 연결 항공편을 예약하는 예약 이벤트가 포함된 경우 이러한 예약은 단일 이벤트에 대해 `flightReservations` 아래에 개별 객체로 나열될 수 있습니다.
 
-아래에 제공된 각 객체의 구조 `flightReservations` 아래에 제공됩니다.
+`flightReservations` 아래에 제공된 각 개체의 구조는 아래에 나와 있습니다.
 
 ![flightReservations 구조](../../images/field-groups/flight-reservation/flightReservations.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `flightCheckIn` | 오브젝트 | 비행 체크인에 대한 세부 정보를 캡처합니다. 객체에는 다음 속성이 포함됩니다.<ul><li>`arrivalAirportCode`: (문자열) 도착 도시의 공항 코드입니다.</li><li>`boardingGroup`: (문자열) 탑승 순서에 대한 항공사별 표시기입니다.</li><li>`checkInMethod`: (문자열) 카운터, 온라인, 키오스크 또는 셀프서비스 등 체크인을 사용한 메서드입니다.</li><li>`checkedBags`: (정수) 항공편에 대해 확인된 수하물 수입니다.</li><li>`checkedPassengers`: (정수) 동일한 예약 수에 여러 승객이 존재하는 경우, 항공편에 대해 체크인된 승객 수입니다.</li><li>`confirmationNumber`: (문자열) 예약 확인 번호 또는 식별자입니다.</li><li>`departureAirportCode`: (문자열) 출발 도시의 공항 코드입니다.</li><li>`flightNumber`: (문자열) 예약 중인 항공편의 항공편 번호입니다.</li></ul> |
-| `flightStatusSearch` | 오브젝트 | 비행 상태를 검색할 때 반환되는 세부 정보를 캡처합니다. 객체에는 다음 속성이 포함됩니다.<ul><li>`arrivalAirportCode`: (문자열) 도착 도시의 공항 코드입니다.</li><li>`boardingGroup`: (문자열) 탑승 순서에 대한 항공사별 표시기입니다.</li><li>`departureAirportCode`: (문자열) 출발 도시의 공항 코드입니다.</li><li>`departureDate`: (DateTime) 예약 중인 항공기 출발일입니다.</li><li>`flightNumber`: (문자열) 예약 중인 항공편의 항공편 번호입니다.</li><li>`searchCount`: (정수) 예약된 항공편 상태가 검색된 횟수입니다.</li></ul> |
+| `flightCheckIn` | 오브젝트 | 비행 체크인에 대한 세부 정보를 캡처합니다. 객체에는 다음 속성이 포함됩니다.<ul><li>`arrivalAirportCode`: (문자열) 도착 도시의 공항 코드입니다.</li><li>`boardingGroup`: (문자열) 탑승 순서에 대한 항공사별 표시기입니다.</li><li>`checkInMethod`: (문자열) 메서드는 카운터, 온라인, 키오스크 또는 셀프 서비스 등 체크인을 사용했습니다.</li><li>`checkedBags`: (정수) 비행기 수하물 수입니다.</li><li>`checkedPassengers`: (정수) 동일한 예약 수에 여러 승객이 있는 경우 비행기 탑승 체크한 승객 수입니다.</li><li>`confirmationNumber`: (문자열) 예약 확인 번호 또는 식별자입니다.</li><li>`departureAirportCode`: (문자열) 출발 도시의 공항 코드입니다.</li><li>`flightNumber`: (문자열) 예약 중인 항공편의 항공편 번호입니다.</li></ul> |
+| `flightStatusSearch` | 오브젝트 | 비행 상태를 검색할 때 반환되는 세부 정보를 캡처합니다. 객체에는 다음 속성이 포함됩니다.<ul><li>`arrivalAirportCode`: (문자열) 도착 도시의 공항 코드입니다.</li><li>`boardingGroup`: (문자열) 탑승 순서에 대한 항공사별 표시기입니다.</li><li>`departureAirportCode`: (문자열) 출발 도시의 공항 코드입니다.</li><li>`departureDate`: (DateTime) 예약 중인 항공기 출발일입니다.</li><li>`flightNumber`: (문자열) 예약 중인 항공편의 항공편 번호입니다.</li><li>`searchCount`: (정수) 예약된 항공편 상태를 검색한 횟수입니다.</li></ul> |
 | `agentID` | 문자열 | 예약 담당 에이전트 또는 예약자(해당하는 경우). |
 | `aircraftID` | 문자열 | 항공기용 식별자. |
 | `aircraftType` | 문자열 | 항공기 유형. |
 | `arrivalAirportCode` | 문자열 | 도착 도시의 공항 코드. |
-| `arrivalDate` | DateTime | 예약 중인 항공기 도착일. |
+| `arrivalDate` | 날짜/시간 | 예약 중인 항공기 도착일, |
 | `cancellation` | 정수 | 이 값은 예약이 취소되면 캡처됩니다. |
 | `confirmationNumber` | 문자열 | 예약 확인 번호 또는 식별자. |
 | `created` | 문자열 | 이 값은 예약이 생성되면 캡처됩니다. |
 | `currencyCode` | 문자열 | 구매 시 사용되는 ISO 4217 통화 코드. |
 | `departureAirportCode` | 문자열 | 출발 도시의 공항 코드. |
-| `departureDate` | DateTime | 예약 중인 항공기 출발일. |
-| `fareClass` | 문자열 | 예약 중인 항공기 요금제. |
+| `departureDate` | 날짜/시간 | 예약 중인 항공기 출발일. |
+| `fareClass` | 문자열 | 예약 중인 항공기 요금제, |
 | `flightNumber` | 문자열 | 예약 중인 항공편의 항공편 번호. |
 | `length` | 정수 | 총 예약 일수. |
 | `loyaltyID` | 문자열 | 예약 목록에 있는 승객을 위한 고객 충성도 또는 보상 프로그램 ID. |
 | `modification` | 정수 | 이 값은 예약이 수정되면 캡처됩니다. |
-| `modificationDate` | DateTime | 예약을 마지막으로 수정한 시간입니다. |
+| `modificationDate` | 날짜/시간 | 예약을 마지막으로 수정한 시간입니다. |
 | `numberOfAdults` | 정수 | 예약한 성인 수입니다. |
 | `numberOfChildren` | 정수 | 예약과 연계된 하위 항목 수. |
 | `passengerID` | 문자열 | 예약과 연계된 승객 정보. |

@@ -6,16 +6,16 @@ description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에�
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
-source-wordcount: '1486'
-ht-degree: 3%
+source-wordcount: '1468'
+ht-degree: 2%
 
 ---
 
 # 쿼리 서비스의 Adobe 정의 SQL 함수
 
-여기에서 Adobe 정의 함수(ADF라고 함)는 Adobe Experience Platform Query Service에 사전 작성된 함수로, 일반적인 비즈니스 관련 작업을 수행할 수 있도록 도와줍니다 [!DNL Experience Event] 데이터. 여기에는 다음의 함수가 포함됩니다. [세션화](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) 및 [속성](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) Adobe Analytics에서 발견된 것과 비슷합니다.
+Adobe 정의 함수(여기서는 ADF라고 함)는 [!DNL Experience Event] 데이터에 대해 일반적인 비즈니스 관련 작업을 수행하는 데 도움이 되는 Adobe Experience Platform Query Service의 미리 빌드된 함수입니다. 여기에는 Adobe Analytics에 있는 것과 같은 [세션화](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) 및 [속성](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)에 대한 함수가 포함됩니다.
 
-이 문서는에서 사용할 수 있는 Adobe 정의 함수에 대한 정보를 제공합니다. [!DNL Query Service].
+이 문서에서는 [!DNL Query Service]에서 사용할 수 있는 Adobe 정의 함수에 대한 정보를 제공합니다.
 
 >[!NOTE]
 >
@@ -23,11 +23,11 @@ ht-degree: 3%
 
 ## 창 함수 {#window-functions}
 
-대부분의 비즈니스 논리는 고객의 접점을 수집하고 시간별로 주문해야 합니다. 이 지원은에서 제공합니다. [!DNL Spark] 창 함수 형식의 SQL. 창 함수는 표준 SQL의 일부이며 다른 여러 SQL 엔진에서 지원됩니다.
+대부분의 비즈니스 논리는 고객의 접점을 수집하고 시간별로 주문해야 합니다. 이 지원은 [!DNL Spark] SQL에서 창 함수 형식으로 제공됩니다. 창 함수는 표준 SQL의 일부이며 다른 여러 SQL 엔진에서 지원됩니다.
 
-창 함수는 합계를 갱신하고 정렬된 하위 집합의 각 행에 대해 단일 항목을 반환합니다. 가장 기본적인 집계 함수는 `SUM()`. `SUM()` 는 행을 가져와서 합계 하나를 제공합니다. 대신 신청하시면 `SUM()` 이를 창 함수로 변환하면 각 행의 누적 합계가 표시됩니다.
+창 함수는 합계를 갱신하고 정렬된 하위 집합의 각 행에 대해 단일 항목을 반환합니다. 가장 기본적인 집계 함수는 `SUM()`입니다. `SUM()`이(가) 내 행을 가져와서 합계 하나를 제공합니다. 대신 창에 `SUM()`을(를) 적용하여 창 함수로 변환하면 각 행의 누적 합계가 표시됩니다.
 
-의 대다수 [!DNL Spark] SQL 도우미는 해당 행의 상태가 추가된 상태에서 창의 각 행을 업데이트하는 창 함수입니다.
+대부분의 [!DNL Spark] SQL 도우미는 해당 행의 상태가 추가된 상태에서 창의 각 행을 업데이트하는 창 함수입니다.
 
 **쿼리 구문**
 
@@ -43,11 +43,11 @@ OVER ({PARTITION} {ORDER} {FRAME})
 
 ## 세션화
 
-을 사용하여 작업할 때 [!DNL Experience Event] 웹 사이트, 모바일 애플리케이션, 대화형 음성 응답 시스템 또는 기타 고객 상호 작용 채널에서 시작된 데이터로, 관련 활동 기간에 이벤트를 그룹화할 수 있는 경우 도움이 됩니다. 일반적으로 제품 조사, 청구서 결제, 계좌 잔액 확인, 애플리케이션 작성 등과 같은 활동을 유도하는 특정 의도가 있습니다.
+웹 사이트, 모바일 애플리케이션, 대화형 음성 응답 시스템 또는 기타 고객 상호 작용 채널에서 가져온 [!DNL Experience Event] 데이터로 작업할 때 관련 활동 기간에 이벤트를 그룹화할 수 있는지 확인하는 데 도움이 됩니다. 일반적으로 제품 조사, 청구서 결제, 계좌 잔액 확인, 애플리케이션 작성 등과 같은 활동을 유도하는 특정 의도가 있습니다.
 
 이러한 그룹화 또는 데이터 세션화는 이벤트를 연결하여 고객 경험에 대한 더 많은 컨텍스트를 발견하는 데 도움이 됩니다.
 
-Adobe Analytics의 세션화에 대한 자세한 내용은 [컨텍스트 인식 세션](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Adobe Analytics의 세션화에 대한 자세한 내용은 [컨텍스트 인식 세션](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)에 대한 설명서를 참조하십시오.
 
 **쿼리 구문**
 
@@ -60,7 +60,7 @@ SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FR
 | `{TIMESTAMP}` | 데이터 세트에 있는 타임스탬프 필드입니다. |
 | `{EXPIRATION_IN_SECONDS}` | 현재 세션이 끝나고 새 세션이 시작되는 것을 확인하기 위해 이벤트 사이에 필요한 초 수입니다. |
 
-내의 매개변수에 대한 설명 `OVER()` 함수는에서 찾을 수 있습니다. [창 기능 섹션](#window-functions).
+`OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](#window-functions)에 있습니다.
 
 **예제 쿼리**
 
@@ -96,7 +96,7 @@ LIMIT 10
 (10 rows)
 ```
 
-제공된 샘플 쿼리에 대한 결과는에 제공됩니다. `session` 열. 다음 `session` 열은 다음 구성 요소로 구성됩니다.
+제공된 샘플 쿼리에 대한 결과는 `session` 열에 제공됩니다. `session` 열은 다음 구성 요소로 구성됩니다.
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -105,7 +105,7 @@ LIMIT 10
 | 매개 변수 | 설명 |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | 현재 레코드와 이전 레코드 간의 시간 차이(초)입니다. |
-| `{NUM}` | 에 정의된 키에 대한 고유한 세션 번호(1부터 시작) `PARTITION BY` / 창 함수. |
+| `{NUM}` | 창 함수의 `PARTITION BY`에 정의된 키에 대한 고유 세션 번호(1부터 시작)입니다. |
 | `{IS_NEW}` | 레코드가 세션의 첫 번째 레코드인지 여부를 식별하는 데 사용되는 부울입니다. |
 | `{DEPTH}` | 세션 내 현재 레코드의 깊이입니다. |
 
@@ -124,7 +124,7 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | 데이터 세트에 있는 타임스탬프 필드입니다. |
 | `{TEST_EXPRESSION}` | 데이터의 필드를 확인할 표현식입니다. 예: `application.launches > 0`. |
 
-내의 매개변수에 대한 설명 `OVER()` 함수는에서 찾을 수 있습니다. [창 기능 섹션](#window-functions).
+`OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](#window-functions)에 있습니다.
 
 **예제 쿼리**
 
@@ -161,7 +161,7 @@ SELECT
 (10 rows)
 ```
 
-제공된 샘플 쿼리에 대한 결과는에 제공됩니다. `session` 열. 다음 `session` 열은 다음 구성 요소로 구성됩니다.
+제공된 샘플 쿼리에 대한 결과는 `session` 열에 제공됩니다. `session` 열은 다음 구성 요소로 구성됩니다.
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -170,7 +170,7 @@ SELECT
 | 매개 변수 | 설명 |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | 현재 레코드와 이전 레코드 간의 시간 차이(초)입니다. |
-| `{NUM}` | 에 정의된 키에 대한 고유한 세션 번호(1부터 시작) `PARTITION BY` / 창 함수. |
+| `{NUM}` | 창 함수의 `PARTITION BY`에 정의된 키에 대한 고유 세션 번호(1부터 시작)입니다. |
 | `{IS_NEW}` | 레코드가 세션의 첫 번째 레코드인지 여부를 식별하는 데 사용되는 부울입니다. |
 | `{DEPTH}` | 세션 내 현재 레코드의 깊이입니다. |
 
@@ -189,7 +189,7 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | 데이터 세트에 있는 타임스탬프 필드입니다. |
 | `{TEST_EXPRESSION}` | 데이터의 필드를 확인할 표현식입니다. 예: `application.launches > 0`. |
 
-내의 매개변수에 대한 설명 `OVER()` 함수는에서 찾을 수 있습니다. [창 기능 섹션](#window-functions).
+`OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](#window-functions)에 있습니다.
 
 **예제 쿼리**
 
@@ -226,7 +226,7 @@ SELECT
 (10 rows)
 ```
 
-제공된 샘플 쿼리에 대한 결과는에 제공됩니다. `session` 열. 다음 `session` 열은 다음 구성 요소로 구성됩니다.
+제공된 샘플 쿼리에 대한 결과는 `session` 열에 제공됩니다. `session` 열은 다음 구성 요소로 구성됩니다.
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -235,7 +235,7 @@ SELECT
 | 매개 변수 | 설명 |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | 현재 레코드와 이전 레코드 간의 시간 차이(초)입니다. |
-| `{NUM}` | 에 정의된 키에 대한 고유한 세션 번호(1부터 시작) `PARTITION BY` / 창 함수. |
+| `{NUM}` | 창 함수의 `PARTITION BY`에 정의된 키에 대한 고유 세션 번호(1부터 시작)입니다. |
 | `{IS_NEW}` | 레코드가 세션의 첫 번째 레코드인지 여부를 식별하는 데 사용되는 부울입니다. |
 | `{DEPTH}` | 세션 내 현재 레코드의 깊이입니다. |
 
@@ -248,7 +248,7 @@ SELECT
 
 ### 이전 페이지
 
-창 내에서 정의된 단계 수만큼 떨어진 특정 필드의 이전 값을 결정합니다. 이 예제에서 `WINDOW` 함수는 다음 프레임으로 구성됩니다. `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` 현재 행 및 모든 후속 행을 보도록 ADF를 설정합니다.
+창 내에서 정의된 단계 수만큼 떨어진 특정 필드의 이전 값을 결정합니다. 예제에서 `WINDOW` 함수는 현재 행과 모든 후속 행을 보도록 ADF를 설정하는 `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`의 프레임으로 구성됩니다.
 
 **쿼리 구문**
 
@@ -260,9 +260,9 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | --------- | ----------- |
 | `{KEY}` | 이벤트의 열 또는 필드. |
 | `{SHIFT}` | (선택 사항) 현재 이벤트에서 벗어난 이벤트 수입니다. 기본값은 1입니다. |
-| `{IGNORE_NULLS}` | (선택 사항) null 여부를 나타내는 부울 `{KEY}` 값은 무시해야 합니다. 기본적으로 값은 입니다. `false`. |
+| `{IGNORE_NULLS}` | (선택 사항) null `{KEY}` 값을 무시할지 여부를 나타내는 부울입니다. 기본적으로 값은 `false`입니다. |
 
-내의 매개변수에 대한 설명 `OVER()` 함수는에서 찾을 수 있습니다. [창 기능 섹션](#window-functions).
+`OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](#window-functions)에 있습니다.
 
 **예제 쿼리**
 
@@ -295,11 +295,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-제공된 샘플 쿼리에 대한 결과는에 제공됩니다. `previous_page` 열. 다음 내의 값 `previous_page` 열은 `{KEY}` ADF에서 사용됩니다.
+제공된 샘플 쿼리에 대한 결과는 `previous_page` 열에 제공됩니다. `previous_page` 열 내의 값은 ADF에 사용된 `{KEY}`을(를) 기반으로 합니다.
 
 ### 다음 페이지
 
-정의된 단계 수만큼 떨어진 특정 필드의 다음 값을 결정합니다. 이 예제에서 `WINDOW` 함수는 다음 프레임으로 구성됩니다. `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` 현재 행 및 모든 후속 행을 보도록 ADF를 설정합니다.
+정의된 단계 수만큼 떨어진 특정 필드의 다음 값을 결정합니다. 예제에서 `WINDOW` 함수는 현재 행과 모든 후속 행을 보도록 ADF를 설정하는 `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING`의 프레임으로 구성됩니다.
 
 **쿼리 구문**
 
@@ -311,9 +311,9 @@ NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | --------- | ----------- |
 | `{KEY}` | 이벤트의 열 또는 필드. |
 | `{SHIFT}` | (선택 사항) 현재 이벤트에서 벗어난 이벤트 수입니다. 기본값은 1입니다. |
-| `{IGNORE_NULLS}` | (선택 사항) null 여부를 나타내는 부울 `{KEY}` 값은 무시해야 합니다. 기본적으로 값은 입니다. `false`. |
+| `{IGNORE_NULLS}` | (선택 사항) null `{KEY}` 값을 무시할지 여부를 나타내는 부울입니다. 기본적으로 값은 `false`입니다. |
 
-내의 매개변수에 대한 설명 `OVER()` 함수는에서 찾을 수 있습니다. [창 기능 섹션](#window-functions).
+`OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](#window-functions)에 있습니다.
 
 **예제 쿼리**
 
@@ -347,7 +347,7 @@ LIMIT 10
 (10 rows)
 ```
 
-제공된 샘플 쿼리에 대한 결과는에 제공됩니다. `previous_page` 열. 다음 내의 값 `previous_page` 열은 `{KEY}` ADF에서 사용됩니다.
+제공된 샘플 쿼리에 대한 결과는 `previous_page` 열에 제공됩니다. `previous_page` 열 내의 값은 ADF에 사용된 `{KEY}`을(를) 기반으로 합니다.
 
 ## 간격
 
@@ -371,7 +371,7 @@ TIME_BETWEEN_PREVIOUS_MATCH(
 | `{EVENT_DEFINITION}` | 이전 이벤트를 평가하는 표현식. |
 | `{TIME_UNIT}` | 출력 단위입니다. 가능한 값에는 일, 시간, 분 및 초가 포함됩니다. 기본값은 초입니다. |
 
-내의 매개변수에 대한 설명 `OVER()` 함수는에서 찾을 수 있습니다. [창 기능 섹션](#window-functions).
+`OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](#window-functions)에 있습니다.
 
 **예제 쿼리**
 
@@ -415,7 +415,7 @@ LIMIT 10
 (10 rows)
 ```
 
-제공된 샘플 쿼리에 대한 결과는에 제공됩니다. `average_minutes_since_registration` 열. 다음 내의 값 `average_minutes_since_registration` 열은 현재 이벤트와 이전 이벤트 간의 시간 차이입니다. 시간 단위는 이전에 의 `{TIME_UNIT}`.
+제공된 샘플 쿼리에 대한 결과는 `average_minutes_since_registration` 열에 제공됩니다. `average_minutes_since_registration` 열 내의 값은 현재 이벤트와 이전 이벤트 간의 시간 차이입니다. 시간 단위는 `{TIME_UNIT}`에서 이전에 정의되었습니다.
 
 ### 다음 일치 사이의 시간
 
@@ -433,7 +433,7 @@ TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PAR
 | `{EVENT_DEFINITION}` | 다음 이벤트를 평가하는 표현식. |
 | `{TIME_UNIT}` | (선택 사항) 출력 단위입니다. 가능한 값에는 일, 시간, 분 및 초가 포함됩니다. 기본값은 초입니다. |
 
-내의 매개변수에 대한 설명 `OVER()` 함수는에서 찾을 수 있습니다. [창 기능 섹션](#window-functions).
+`OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](#window-functions)에 있습니다.
 
 **예제 쿼리**
 
@@ -477,11 +477,11 @@ LIMIT 10
 (10 rows)
 ```
 
-제공된 샘플 쿼리에 대한 결과는에 제공됩니다. `average_minutes_until_order_confirmation` 열. 다음 내의 값 `average_minutes_until_order_confirmation` 열은 현재 이벤트와 다음 이벤트 간의 시간 차이입니다. 시간 단위는 이전에 의 `{TIME_UNIT}`.
+제공된 샘플 쿼리에 대한 결과는 `average_minutes_until_order_confirmation` 열에 제공됩니다. `average_minutes_until_order_confirmation` 열 내의 값은 현재 이벤트와 다음 이벤트 간의 시간 차이입니다. 시간 단위는 `{TIME_UNIT}`에서 이전에 정의되었습니다.
 
 ## 다음 단계
 
-여기에 설명된 함수를 사용하여 자신의 쿼리에 액세스하기 위한 쿼리를 작성할 수 있습니다 [!DNL Experience Event] 데이터 세트 [!DNL Query Service]. 에서 쿼리 작성에 대한 자세한 내용 [!DNL Query Service]에 대한 설명서를 참조하십시오. [쿼리 만들기](../best-practices/writing-queries.md).
+여기에 설명된 함수를 사용하여 [!DNL Query Service]을(를) 사용하여 자신의 [!DNL Experience Event] 데이터 세트에 액세스하는 쿼리를 작성할 수 있습니다. [!DNL Query Service]에서 쿼리를 작성하는 방법에 대한 자세한 내용은 [쿼리 만들기](../best-practices/writing-queries.md)에 대한 설명서를 참조하십시오.
 
 ## 추가 리소스
 

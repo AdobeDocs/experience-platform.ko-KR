@@ -1,21 +1,21 @@
 ---
 title: 방문자 식별
-description: Adobe Experience Platform Edge Network Server API가 방문자를 식별하는 방법에 대해 알아봅니다
+description: Adobe Experience Platform Edge Network 서버 API가 방문자를 식별하는 방법에 대해 알아봅니다
 seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
 keywords: 에지 네트워크;게이트웨이;api;방문자;식별
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '151'
-ht-degree: 5%
+ht-degree: 3%
 
 ---
 
 # 방문자 식별
 
-Edge Network Server API는 [자사 ID를 통한 방문자 식별([!DNL FPID])](visitor-identification-fpid.md).
+Edge Network 서버 API는 자사 ID([!DNL FPID])를 통해 [방문자 ID](visitor-identification-fpid.md)를 지원합니다.
 
-모든 사용자 ID는 `identityMap` 필드 그룹입니다. 이 필드 그룹은 AEP 웹 SDK에 포함되어 있습니다 `ExperienceEvent` mixin.
+`identityMap` 필드 그룹에 모든 사용자 ID를 제공해야 합니다. 이 필드 그룹은 AEP 웹 SDK `ExperienceEvent` mixin에 포함되어 있습니다.
 
 ```json
 {
@@ -38,12 +38,12 @@ Edge Network Server API는 [자사 ID를 통한 방문자 식별([!DNL FPID])](v
 
 ## 장치 식별자 {#identifiers}
 
-에지 네트워크 내에서 디바이스를 식별할 수 있는 방법에는 여러 가지가 있습니다. 지원되는 ID에 대한 개요는 아래 표를 참조하십시오.
+Edge Network 내에서 디바이스를 식별할 수 있는 방법에는 여러 가지가 있습니다. 지원되는 ID에 대한 개요는 아래 표를 참조하십시오.
 
 | ID 네임스페이스 | 관리자 | 설명 |
 | --- | --- | --- |
-| `FPID` | Customer | `FPID` 이(가) 자동으로 `ECID` 따라서 Edge Network를 통해 `ECID` 도 작동합니다.  <br><br> 일관된 디바이스 식별을 위해 이러한 ID는 디바이스에서 지속되고 각 요청 시 제공되어야 합니다. 웹 상호 작용의 경우 브라우저 쿠키로 저장하는 작업이 포함됩니다. |
-| `IDFA`/`GAID` | Experience Platform | 여러 애플리케이션에서 사용자를 식별할 수 있으므로 이러한 ID는으로 인코딩되지 않습니다 `ECID` Edge Network에서. |
+| `FPID` | 고객 | `FPID`은(는) Edge Network에 의해 `ECID`(으)로 자동으로 인코딩되므로 `ECID`이 필요한 솔루션도 작동합니다.  <br><br> 일관된 장치 식별을 위해 이러한 ID는 장치에서 유지되고 각 요청에 제공되어야 합니다. 웹 상호 작용의 경우 브라우저 쿠키로 저장하는 작업이 포함됩니다. |
+| `IDFA`/`GAID` | Experience Platform | 응용 프로그램에서 사용자를 식별할 수 있으므로 이러한 ID는 Edge Network이 `ECID`에 인코딩하지 않습니다. |
 
 <!--
 | `ECID` | Adobe | `ECID` is required when leveraging and integrating with Adobe Analytics and Adobe Audience Manager. <br><br> For consistent device identification, these IDs must be persisted on the device and supplied on each request. For web interactions, this involves storing them as browser cookies. |

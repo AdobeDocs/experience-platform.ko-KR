@@ -1,22 +1,22 @@
 ---
 title: DNL The Weather Channel의 날씨 데이터로 데이터 수집 향상
 description: DNL The Weather Channel의 날씨 데이터로 데이터스트림을 통해 수집하는 데이터를 향상시킵니다.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
+source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 68%
 
 ---
 
-
-# 의 날씨 데이터로 데이터 수집 기능 향상 [!DNL The Weather Channel]
+# [!DNL The Weather Channel]의 날씨 데이터로 데이터 수집 향상
 
 Adobe는 데이터스트림을 통해 수집한 데이터에 미국 날씨에 대한 컨텍스트를 추가 제공하기 위해 [!DNL [The Weather Company]](https://www.ibm.com/weather)와(과) 파트너 관계를 맺고 있습니다. Experience Platform에서 분석, 타기팅 및 대상자 생성에 이 데이터를 사용할 수 있습니다.
 
-사용 가능한 데이터에는 세 가지 유형이 있습니다. [!DNL The Weather Channel]:
+[!DNL The Weather Channel]에서 사용할 수 있는 데이터 유형은 다음 세 가지입니다.
 
 * **[!UICONTROL 현재 날씨]**: 해당 위치를 기준으로 한 사용자의 현재 기상 조건. 여기에는 현재 기온, 강수량, 구름 범위 등이 포함됩니다.
-* **[!UICONTROL 예보된 날씨]**: 예측에는 사용자 위치에 대한 1, 2, 3, 5, 7 및 10일 예측이 포함됩니다.
+* **[!UICONTROL 예측된 날씨]**: 예측에는 사용자 위치에 대한 1, 2, 3, 5, 7 및 10일 예측이 포함됩니다.
 * **[!UICONTROL 트리거]**: 트리거는 다양하고 유의미한 기상 조건에 매핑하는 특정 조합입니다. 날씨 트리거에는 세 가지 유형이 있습니다.
 
    * **[!UICONTROL 날씨 트리거]**: 날씨가 춥거나 비가 오는 날 등 유의미한 조건. 이는 기후에 따라 정의가 달라질 수 있습니다.
@@ -27,10 +27,10 @@ Adobe는 데이터스트림을 통해 수집한 데이터에 미국 날씨에 �
 
 날씨 데이터를 사용하기 전에 다음 전제 조건을 충족하는지 확인합니다.
 
-* 사용할 날씨 데이터에 라이선스를 부여해야 합니다. [!DNL The Weather Channel]. 그러면 계정에서 활성화됩니다.
-* 날씨 데이터는 데이터스트림을 통해서만 사용할 수 있습니다. 날씨 데이터를 사용하려면 다음을 사용해야 합니다. [!DNL Web SDK], [!DNL Mobile Edge Extension] 또는 [서버 API](../../server-api/overview.md) 이 데이터를 포함합니다.
+* [!DNL The Weather Channel]에서 사용할 날씨 데이터에 라이선스를 부여해야 합니다. 그러면 계정에서 활성화됩니다.
+* 날씨 데이터는 데이터스트림을 통해서만 사용할 수 있습니다. 날씨 데이터를 사용하려면 [!DNL Web SDK], [!DNL Mobile Edge Extension] 또는 [Server API](../../server-api/overview.md)를 사용하여 이 데이터를 포함해야 합니다.
 * 데이터스트림에서 [[!UICONTROL 지리적 위치]](../configure.md#advanced-options)를 활성화해야 합니다.
-* 추가 [기상 필드 그룹](#schema-configuration) 사용 중인 스키마에 매핑됩니다.
+* 사용 중인 스키마에 [날씨 필드 그룹](#schema-configuration)을(를) 추가합니다.
 
 ## 프로비저닝 {#provisioning}
 
@@ -62,11 +62,11 @@ Adobe는 데이터스트림을 통해 수집한 데이터에 미국 날씨에 �
 
 ### Adobe Customer Journey Analytics {#cja}
 
-데이터스트림에 지정된 데이터 세트의 [!DNL Adobe Customer Journey Analytics]에서 날씨 데이터를 사용할 수 있습니다. 날씨 속성인 한 [스키마에 추가됨](#prerequisites-prerequisites), 사용 가능 대상: [데이터 보기에 추가](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html) 위치: [!DNL Customer Journey Analytics].
+데이터스트림에 지정된 데이터 세트의 [!DNL Adobe Customer Journey Analytics]에서 날씨 데이터를 사용할 수 있습니다. 날씨 특성이 [스키마에 추가됨](#prerequisites-prerequisites)이면 [!DNL Customer Journey Analytics]의 [데이터 보기에 추가](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html)할 수 있습니다.
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-날씨 데이터는 다음 위치에서 사용할 수 있습니다. [Real-time Customer Data Platform](../../rtcdp/overview.md): 대상자에 사용됩니다. 날씨 데이터는 이벤트에 첨부됩니다.
+날씨 데이터는 대상자에서 사용할 수 있도록 [Real-time Customer Data Platform](../../rtcdp/overview.md)에서 사용할 수 있습니다. 날씨 데이터는 이벤트에 첨부됩니다.
 
 ![날씨 이벤트를 표시하는 세그먼트 빌더](../assets/data-enrichment/weather/schema-builder.png)
 

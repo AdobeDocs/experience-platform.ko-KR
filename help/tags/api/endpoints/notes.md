@@ -4,7 +4,7 @@ description: Reactor API에서 /notes 끝점을 호출하는 방법을 알아봅
 exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '512'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ Reactor API에서 참고는 특정 리소스에 추가할 수 있는 텍스트 �
 * 다른 팀원에게 지침 제공
 * 기록 컨텍스트 기록
 
-다음 `/notes` Reactor API의 끝점을 사용하면 이러한 메모를 프로그래밍 방식으로 관리할 수 있습니다.
+Reactor API의 `/notes` 끝점을 사용하면 이러한 메모를 프로그래밍 방식으로 관리할 수 있습니다.
 
 참고는 다음 리소스에 적용할 수 있습니다.
 
@@ -41,11 +41,11 @@ Reactor API에서 참고는 특정 리소스에 추가할 수 있는 텍스트 �
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [반응기 API](https://www.adobe.io/experience-platform-apis/references/reactor/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) API 인증 방법에 대한 중요한 정보를 제공합니다.
+이 가이드에 사용된 끝점은 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 [시작 안내서](../getting-started.md)에서 API 인증 방법에 대한 중요한 정보를 검토하십시오.
 
 ## 메모 목록 검색 {#list}
 
-를 추가하여 리소스에 대한 노트 목록을 검색할 수 있습니다 `/notes` 해당 리소스에 대한 GET 요청 경로로 이동합니다.
+해당 리소스에 대한 GET 요청의 경로에 `/notes`을(를) 추가하여 리소스에 대한 참고 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -56,7 +56,7 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | 매개변수 | 설명 |
 | --- | --- |
 | `RESOURCE_TYPE` | 메모를 가져오는 리소스의 유형입니다. 다음 값 중 하나여야 합니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | 다음 `id` 메모를 나열할 특정 리소스. |
+| `RESOURCE_ID` | 메모를 나열할 특정 리소스의 `id`입니다. |
 
 {style="table-layout:auto"}
 
@@ -131,7 +131,7 @@ GET /notes/{NOTE_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `NOTE_ID` | 다음 `id` 조회하려는 메모. |
+| `NOTE_ID` | 조회할 메모의 `id`입니다. |
 
 {style="table-layout:auto"}
 
@@ -187,7 +187,7 @@ curl -X GET \
 >
 >새 메모를 작성하기 전에 메모를 편집할 수 없으며 삭제할 수 있는 유일한 방법은 해당 리소스를 삭제하는 것입니다.
 
-다음을 추가하여 새 메모를 만들 수 있습니다. `/notes` 해당 리소스에 대한 POST 요청 경로로 이동합니다.
+해당 리소스에 대한 POST 요청의 경로에 `/notes`을(를) 추가하여 새 메모를 만들 수 있습니다.
 
 **API 형식**
 
@@ -198,7 +198,7 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 | 매개변수 | 설명 |
 | --- | --- |
 | `RESOURCE_TYPE` | 메모를 작성 중인 리소스의 유형입니다. 다음 값 중 하나여야 합니다. <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | 다음 `id` 메모를 만들 특정 리소스. |
+| `RESOURCE_ID` | 메모를 만들 특정 리소스의 `id`입니다. |
 
 {style="table-layout:auto"}
 
@@ -225,7 +225,7 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `type` | **(필수)** 업데이트 중인 리소스 유형. 이 끝점의 경우 값은 다음과 같아야 합니다. `notes`. |
+| `type` | **(필수)** 업데이트 중인 리소스 유형입니다. 이 끝점의 경우 값은 `notes`이어야 합니다. |
 | `attributes.text` | **(필수)** 메모를 구성하는 텍스트입니다. 각 참고는 512개의 유니코드 문자로 제한됩니다. |
 
 {style="table-layout:auto"}

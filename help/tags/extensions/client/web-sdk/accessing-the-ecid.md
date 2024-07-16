@@ -12,30 +12,30 @@ ht-degree: 1%
 
 # ECID 액세스
 
-다음 [!DNL Experience Cloud Identity (ECID)] 는 사용자가 웹 사이트를 방문할 때 할당되는 영구 식별자입니다. 특정 상황에서는 [!DNL ECID] (예: 서드파티로 보내기). 또 다른 사용 사례는 [!DNL ECID] 사용자 지정 XDM 필드의 경우, ID 맵에 보유할 수도 있습니다.
+[!DNL Experience Cloud Identity (ECID)]은(는) 사용자가 웹 사이트를 방문할 때 할당된 영구 식별자입니다. 경우에 따라 [!DNL ECID]에 액세스하여 서드파티로 보낼 수도 있습니다. 다른 사용 사례에서는 ID 맵에 보유할 뿐만 아니라 사용자 지정 XDM 필드에서 [!DNL ECID]을(를) 설정하는 것입니다.
 
-다음 중 하나를 통해 ECID에 액세스할 수 있습니다. [데이터 수집을 위한 데이터 준비](../../../../datastreams/data-prep.md) (권장) 또는 태그를 통해.
+[데이터 수집을 위한 데이터 준비](../../../../datastreams/data-prep.md)(권장) 또는 태그를 통해 ECID에 액세스할 수 있습니다.
 
 ## 데이터 준비를 통해 ECID에 액세스(기본 방법) {#accessing-ecid-data-prep}
 
-ID 맵에 보유할 뿐만 아니라 사용자 지정 XDM 필드에서 ECID를 설정하려면 다음을 설정할 수 있습니다. `source` 다음 경로로 이동합니다.
+ID 맵에 ECID를 보유하는 것 외에도 사용자 지정 XDM 필드에서 ECID를 설정하려면 `source`을(를) 다음 경로로 설정합니다.
 
 ```js
 xdm.identityMap.ECID[0].id
 ```
 
-그런 다음 타겟을 필드가 유형인 XDM 경로로 설정합니다 `string`.
+그런 다음 대상을 필드가 `string` 유형인 XDM 경로로 설정합니다.
 
 ![](./assets/access-ecid-data-prep.png)
 
 ## 태그
 
-에 액세스해야 하는 경우 [!DNL ECID] 클라이언트측에서는 아래 설명된 대로 태그 접근 방식을 사용합니다.
+클라이언트측의 [!DNL ECID]에 액세스해야 하는 경우 아래 설명된 대로 태그 접근 방식을 사용하십시오.
 
-1. 속성이 다음으로 구성되었는지 확인합니다. [규칙 구성 요소 시퀀싱](../../../ui/managing-resources/rules.md#sequencing) 활성화되었습니다.
-1. 새 규칙을 만듭니다. 이 규칙은 을(를) 캡처하는 데만 사용해야 합니다. [!DNL ECID] 다른 중요한 작업 없이
-1. 추가 [!UICONTROL 라이브러리가 로드됨] 이벤트를 규칙에 추가합니다.
-1. 추가 [!UICONTROL 사용자 지정 코드] 다음 코드를 사용하여 규칙에 대한 작업(SDK 인스턴스에 대해 구성한 이름이 이라고 가정) `alloy` 그리고 같은 이름의 데이터 요소가 이미 없습니다.)
+1. 속성이 [규칙 구성 요소 시퀀싱](../../../ui/managing-resources/rules.md#sequencing)을 사용하도록 구성되어 있는지 확인하십시오.
+1. 새 규칙을 만듭니다. 이 규칙은 다른 중요한 작업 없이 [!DNL ECID]을(를) 캡처하는 데만 사용해야 합니다.
+1. 규칙에 [!UICONTROL Library Loaded] 이벤트를 추가합니다.
+1. 다음 코드를 사용하여 [!UICONTROL 사용자 지정 코드] 작업을 규칙에 추가합니다(SDK 인스턴스에 대해 구성한 이름이 `alloy`이고 같은 이름의 데이터 요소가 아직 없다고 가정).
 
    ```js
     return alloy("getIdentity")
@@ -46,4 +46,4 @@ xdm.identityMap.ECID[0].id
 
 1. 규칙을 저장합니다.
 
-그러면 다음에 액세스할 수 있습니다. [!DNL ECID] 를 사용하는 후속 규칙에서 `%ECID%` 또는 `_satellite.getVar("ECID")`: 다른 데이터 요소에 액세스할 수 있습니다.
+그런 다음 다른 데이터 요소에 액세스하는 것처럼 `%ECID%` 또는 `_satellite.getVar("ECID")`을(를) 사용하여 후속 규칙의 [!DNL ECID]에 액세스할 수 있습니다.

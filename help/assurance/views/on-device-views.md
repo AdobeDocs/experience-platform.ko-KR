@@ -3,7 +3,7 @@ title: 온디바이스 보기
 description: 이 안내서에는 Adobe Experience Platform Assurance를 사용하는 디바이스에서 다양한 보기가 표시되는 방식이 나와 있습니다.
 exl-id: aa0b09e6-88e0-4f06-be57-df7536a9fa2f
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 100%
 

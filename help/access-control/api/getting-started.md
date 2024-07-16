@@ -14,36 +14,36 @@ ht-degree: 20%
 
 # [!DNL Access Control] API 안내서
 
-[!DNL Access control] 대상 [!DNL Experience Platform] 를 통해 관리됩니다. [Adobe Admin Console](https://adminconsole.adobe.com). 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다. 다음을 참조하십시오. [액세스 제어 개요](../home.md) 추가 정보.
+[!DNL Experience Platform]에 대한 [!DNL Access control]은(는) [Adobe Admin Console](https://adminconsole.adobe.com)을(를) 통해 관리됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다. 자세한 내용은 [액세스 제어 개요](../home.md)를 참조하십시오.
 
-이 개발자 안내서에서는 요청에 대한 형식을 지정하는 방법에 대한 정보를 제공합니다. [[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/)및 는 다음 작업을 다룹니다.
+이 개발자 가이드는 [[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/)에 대한 요청의 형식을 지정하는 방법에 대한 정보를 제공하며 다음 작업을 다룹니다.
 
 - [권한 및 리소스 유형의 목록 이름](./permissions-and-resource-types.md)
 - [현재 사용자에 대한 유효 액세스 정책 보기](./effective-policies.md)
 
 ## 시작하기
 
-다음 섹션에서는 를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다. [!DNL Access Control] API.
+다음 섹션에서는 [!DNL Access Control] API를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
-이 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 다음에서 [!DNL Experience Platform] 문제 해결 가이드.
+이 안내서에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request)에 대한 섹션을 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-을 호출하기 위해 [!DNL Platform] API, 먼저 다음을 완료해야 합니다. [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - 인증: 전달자 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
+- x-api 키: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-의 모든 리소스 [!DNL Experience Platform] 특정 가상 샌드박스로 격리됩니다. 에 대한 모든 요청 [!DNL Platform] API에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->의 샌드박스에 대한 자세한 내용 [!DNL Platform], 다음을 참조하십시오. [샌드박스 개요 설명서](../../sandboxes/home.md).
+>[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 

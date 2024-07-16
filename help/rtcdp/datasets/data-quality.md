@@ -17,4 +17,4 @@ Adobe Real-time Customer Data Platform(Real-Time CDP)를 사용하면 여러 소
 
 Real-Time CDP은 Adobe Experience Platform을 기반으로 구축되었으며 다양한 Experience Platform 서비스 및 기능을 활용합니다. 따라서 데이터가 수집될 때 확인 및 유효성이 검사될 것임을 확신할 수 있습니다.
 
-데이터 수집 시 확인 사항 및 모범 사례에 대한 자세한 내용은 [데이터 품질 설명서](../../ingestion/quality/overview.md).
+데이터를 수집할 때 확인 및 모범 사례에 대한 자세한 내용은 [데이터 품질 설명서](../../ingestion/quality/overview.md)를 참조하십시오.

@@ -5,7 +5,7 @@ description: Adobe Target 이벤트 필드를 Adobe Experience Platform에서 �
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '431'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 | **`dataSource`** | | 모든 클라이언트에 대해 &quot;1&quot;로 구성됩니다. |
 | `dataSource._id` | 요청과 함께 전달할 수 없는 시스템 생성 값입니다. | 해당 데이터 소스의 고유 ID. 데이터 소스를 만든 개인 또는 시스템에서 제공됩니다. |
 | `dataSource.code` | 요청과 함께 전달할 수 없는 시스템 생성 값입니다. | 전체 @id 바로 가기. 하나 이상의 코드 또는 @id을 사용할 수 있습니다. 경우에 따라 이 코드를 데이터 소스 통합 코드라고 합니다. |
-| `dataSource.tags` | 요청과 함께 전달할 수 없는 시스템 생성 값입니다. | 태그는 특정 데이터 소스로 표시되는 별칭이 해당 별칭을 사용하는 애플리케이션에 의해 어떻게 해석되어야 하는지 나타내는 데 사용됩니다.<br><br>예:<br><ul><li>`isAVID`: Analytics 방문자 ID를 나타내는 데이터 소스.</li><li>`isCRSKey`: CRS의 키로 사용해야 하는 별칭을 나타내는 데이터 소스입니다.</li></ul>태그는 데이터 소스가 생성될 때 설정되지만, 지정된 데이터 소스를 참조할 때 파이프라인 메시지에도 포함됩니다. |
+| `dataSource.tags` | 요청과 함께 전달할 수 없는 시스템 생성 값입니다. | 태그는 특정 데이터 소스로 표시되는 별칭이 해당 별칭을 사용하는 애플리케이션에 의해 어떻게 해석되어야 하는지 나타내는 데 사용됩니다.<br><br>예:<br><ul><li>`isAVID`: Analytics 방문자 ID를 나타내는 데이터 소스입니다.</li><li>`isCRSKey`: CRS의 키로 사용해야 하는 별칭을 나타내는 데이터 소스입니다.</li></ul>태그는 데이터 소스가 생성될 때 설정되지만, 지정된 데이터 소스를 참조할 때 파이프라인 메시지에도 포함됩니다. |
 | **`timestamp`** | 이벤트 타임스탬프 |
 | **`channel`** | `context.channel` | 보기 게재에서만 작동합니다. 옵션은 &quot;web&quot; 및 &quot;mobile&quot;이며, 기본값은 &quot;web&quot;입니다. |
 | **`endUserIds`** |
@@ -40,8 +40,8 @@ ht-degree: 0%
 | `environment.viewportWidth` | `mboxRequest.screenWidth` |
 | `environment.colorDepth` | `mboxRequest.colorDepth` |
 | `environment.carrier` | 요청의 IP 주소를 기반으로 확인된 이동통신사 이름입니다. |
-| `environment.ipV4` | `mboxRequest.ipAddress` (V4 형식인 경우) |
-| `environment.ipV6` | `mboxRequest.ipAddress` (V6 형식인 경우) |
+| `environment.ipV4` | `mboxRequest.ipAddress`(V4 형식인 경우) |
+| `environment.ipV6` | `mboxRequest.ipAddress`(V6 형식인 경우) |
 | **`experience`** |
 | `experience.target.clientCode` | `mboxRequest.client` |
 | `experience.target.mboxName` | `mboxRequest.mboxName` |
@@ -57,7 +57,7 @@ ht-degree: 0%
 | `experience.target.activities[i].activityEvents` | 사용자가 이 이벤트와 함께 히트한 활동 이벤트의 세부 정보를 포함합니다. |
 | **`device`** |
 | `device.typeIDService` | `XDMDevice.Device.TypeIDService.typeIDService_deviceatlas` |
-| `device.type` | 의 다음 속성 중 하나 `deviceAtlas` (또는 NULL): <ul><li>`type_mobile`</li><li>`type_tablet`</li><li>`type_desktop`</li><li>`type_ereader`</li><li>`type_television`</li><li>`type_settop`</li><li>`type_mediaplayer`</li></ul> |
+| `device.type` | `deviceAtlas`의 다음 속성 중 하나(또는 NULL): <ul><li>`type_mobile`</li><li>`type_tablet`</li><li>`type_desktop`</li><li>`type_ereader`</li><li>`type_television`</li><li>`type_settop`</li><li>`type_mediaplayer`</li></ul> |
 | `device.typeID` | (빈 문자열) |
 | `device.manufacturer` | `deviceAtlas.manufacturer` |
 | `device.model` | `deviceAtlas.model` |

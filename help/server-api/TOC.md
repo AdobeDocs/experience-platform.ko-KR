@@ -22,12 +22,12 @@ ht-degree: 60%
 * 데이터 수집 {#data-collection}
    * [단일 이벤트 데이터 수집](interactive-data-collection.md)
    * [일괄 처리 이벤트 데이터 수집](non-interactive-data-collection.md)
-* 다른 Adobe 솔루션과 상호 작용 {#interacting-other-adobe-solutions}
+* 다른 Adobe 솔루션 {#interacting-other-adobe-solutions}과(와) 상호 작용
    * [Adobe Analytics과 상호 작용](interacting-adobe-analytics.md)
 * 개인화 {#personalization}
-   * [개인화 개요](personalization-overview.md)
-   * [Adobe Target을 통한 개인화](personalization-target.md)
-   * [offer decisioning을 통한 개인화](personalization-offer-decisioning.md)
+   * [Personalization 개요](personalization-overview.md)
+   * [Adobe Target을 통한 Personalization](personalization-target.md)
+   * [Offer decisioning을 통한 Personalization](personalization-offer-decisioning.md)
 * [위치 힌트](location-hints.md)
 * [오류 처리](error-handling.md)
 * [문제 해결](troubleshooting.md)

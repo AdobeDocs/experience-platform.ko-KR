@@ -15,11 +15,11 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > * Adobe은 이 페이지에 책갈피를 지정하고 3개월마다 다시 방문하여 최신 IP 주소를 확인하는 것을 권장합니다. Adobe은 새 IP 범위에 대한 알림을 제공하지 않습니다.
-> * Adobe은 SFTP 서버로 데이터 내보내기를 지원하지만 데이터를 내보내는 데 권장되는 클라우드 스토리지 위치는 다음과 같습니다 [!DNL Amazon S3] 및 [!DNL Azure Blob].
+> * Adobe에서 SFTP 서버로 데이터 내보내기를 지원하지만 데이터를 내보내는 데 권장되는 클라우드 저장소 위치는 [!DNL Amazon S3] 및 [!DNL Azure Blob]입니다.
 
 ## 개요 {#overview}
 
-이 페이지에서는 데이터를 Experience Platform에서 로 안전하게 내보내기 위해 허용 목록에 추가하다에 추가할 수 있는 IP 주소를 제공합니다. [SFTP 서버](../destinations/catalog/cloud-storage/sftp.md).
+이 페이지에서는 데이터를 [SFTP 서버](../destinations/catalog/cloud-storage/sftp.md)(으)로 안전하게 내보내기 위해 허용 목록에 추가하다 Experience Platform에 추가할 수 있는 IP 주소를 제공합니다.
 
 네트워크 방화벽을 통해 네트워크 액세스 제어를 정의할 수 있습니다. 적절한 IP 범위를 지정하여 데이터 전송 서비스에 트래픽을 허용할 수 있습니다.
 

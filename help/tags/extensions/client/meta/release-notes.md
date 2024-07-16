@@ -3,8 +3,8 @@ title: 메타 픽셀 확장에 대한 릴리스 노트
 description: Adobe Experience Platform의 메타 픽셀 확장에 대한 최신 릴리스 정보입니다.
 source-git-commit: 8e447324e324c9770dcfa348df92c429454b06d6
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 23%
+source-wordcount: '121'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 23%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 ## 2023년 2월 13일
 

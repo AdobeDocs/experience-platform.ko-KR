@@ -19,10 +19,10 @@ ht-degree: 0%
 
 # Experience Platform UI에서 병합 정책 만들기
 
-이 비디오에서는 Adobe Experience Platform 내의 병합 정책에 대한 기본 이해를 제공하고 Platform 사용자 인터페이스를 사용하여 병합 정책을 정의하는 방법에 대해 설명합니다. 병합 정책에 대해 자세히 알아보려면 [병합 정책 개요](../merge-policies/overview.md).
+이 비디오에서는 Adobe Experience Platform 내의 병합 정책에 대한 기본 이해를 제공하고 Platform 사용자 인터페이스를 사용하여 병합 정책을 정의하는 방법에 대해 설명합니다. 병합 정책에 대해 자세히 알아보려면 [병합 정책 개요](../merge-policies/overview.md)를 읽는 것부터 시작하십시오.
 
 >[!NOTE]
 >
->Experience Platform 사용자 인터페이스는 자주 업데이트되며, 이 비디오 녹화 이후에 변경되었을 수 있습니다. 최신 정보는 다음을 참조하십시오. [병합 정책 UI 안내서](../merge-policies/ui-guide.md).
+>Experience Platform 사용자 인터페이스는 자주 업데이트되며, 이 비디오 녹화 이후에 변경되었을 수 있습니다. 최신 정보는 [병합 정책 UI 안내서](../merge-policies/ui-guide.md)를 참조하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330433?quality=12&learn=on&captions=eng)

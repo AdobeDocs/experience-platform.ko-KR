@@ -5,7 +5,7 @@ exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
 source-git-commit: 32aa453ca40c0500da0fec8957db978c319a3dbe
 workflow-type: tm+mt
 source-wordcount: '142'
-ht-degree: 47%
+ht-degree: 26%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 47%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform의 태그 런타임(클라이언트의 웹 사이트에 제공됨)은 여러 브라우저와 호환됩니다.
 

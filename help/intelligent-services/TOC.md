@@ -8,14 +8,14 @@ role: User
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 31%
+ht-degree: 34%
 
 ---
 
 
 # Adobe Intelligent Services {#intelligent-services}
 
-- [Intelligent Services 개요](home.md)
+- [인텔리전트 서비스 개요](home.md)
 - [Intelligent Services에서 사용할 데이터 준비](data-preparation.md)
 - Attribution AI {#attribution-ai}
    - [개요](attribution-ai/overview.md)
@@ -32,10 +32,10 @@ ht-degree: 31%
       - [거버넌스 정책](attribution-ai/aai-data-governance/governance-policies.md)
    - [쿼리 서비스를 사용하여 점수 분석](attribution-ai/aai-query-service.md)
    - [오류 문제 해결](attribution-ai/troubleshooting.md)
-- 컨텐츠 태깅 {#content-commerce-ai}
+- 콘텐츠 태그 지정 {#content-commerce-ai}
    - [개요](content-commerce-ai/overview.md)
    - [시작하기](content-commerce-ai/getting-started.md)
-   - 컨텐츠 태그 지정 API{#api}
+   - 콘텐츠 태그 지정 API{#api}
       - [색상 태깅](content-commerce-ai/api/color-tagging.md)
       - [키워드 태그 지정](content-commerce-ai/api/keyword-tagging.md)
       - [텍스트 유무 및 시각적 문자 인식](content-commerce-ai/api/optical-character-recognition.md)
@@ -48,11 +48,11 @@ ht-degree: 31%
       - [인사이트 살펴보기](customer-ai/user-guide/discover-insights.md)
       - [Customer AI 점수를 사용하여 세그먼트 만들기](customer-ai/user-guide/create-segment.md)
       - [점수 다운로드](customer-ai/user-guide/download-scores.md)
-   - [오류 문제 해결](customer-ai/troubleshooting.md)
+   - [문제 해결 오류](customer-ai/troubleshooting.md)
    - 데이터 거버넌스 {#cai-data-governance}
       - [액세스 제어](customer-ai/cai-data-governance/access-controls.md)
       - [감사 로그](customer-ai/cai-data-governance/audit-logs.md)
       - [고객 관리 키](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [데이터 거버넌스](customer-ai/cai-data-governance/data-governance.md)
       - [거버넌스 정책](customer-ai/cai-data-governance/governance-policies.md)
-- [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

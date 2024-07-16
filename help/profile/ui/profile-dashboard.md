@@ -13,10 +13,10 @@ ht-degree: 0%
 
 # [!UICONTROL 프로필] 대시보드 {#profile-dashboard}
 
-Adobe Experience Platform UI(사용자 인터페이스)는 의 중요 정보를 볼 수 있는 대시보드를 제공합니다 [!DNL Real-Time Customer Profile] 일별 스냅샷 중에 캡처된 데이터.
+Adobe Experience Platform UI(사용자 인터페이스)는 일일 스냅숏 중에 캡처한 대로 [!DNL Real-Time Customer Profile] 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 
-에 액세스하고 와 상호 작용하는 방법에 대한 자세한 지침은 [!UICONTROL 프로필] UI의 대시보드 를 방문하거나 대시보드에 표시된 사용 가능한 지표에 대해 자세히 알아보려면 다음을 방문하십시오. [[!UICONTROL 프로필] 대시보드 안내서](../../dashboards/guides/profiles.md).
+UI에서 [!UICONTROL 프로필] 대시보드에 액세스하고 상호 작용하는 방법과 대시보드에 표시된 사용 가능한 지표에 대한 자세한 지침은 [[!UICONTROL 프로필] 대시보드 안내서](../../dashboards/guides/profiles.md)를 참조하세요.
 
-Experience Platform 사용자 인터페이스 내의 모든 대시보드 기능에 대한 개요를 알려면 [대시보드 개요](../../dashboards/home.md).
+Experience Platform 사용자 인터페이스의 모든 대시보드 기능에 대한 개요를 보려면 [대시보드 개요](../../dashboards/home.md)를 읽는 것부터 시작하십시오.
 
 ![프로필 대시보드가 표시됩니다.](../images/profile-dashboard/dashboard-overview.png)

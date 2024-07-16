@@ -23,31 +23,31 @@ Adobe Experience Platform 내의 대시보드는 Platform 사용자 인터페이
 
 ## 대시보드 다운로드
 
-대시보드 다운로드를 시작하려면 다운로드할 대시보드로 이동합니다(예: [!UICONTROL 프로필] 대시보드)를 클릭한 다음 추가 옵션 메뉴(**`...`**)을 클릭하여 제품에서 사용할 수 있습니다. 그런 다음 을 선택합니다. **[!UICONTROL 다운로드]**.
+대시보드 다운로드를 시작하려면 다운로드할 대시보드(예: [!UICONTROL 프로필] 대시보드)로 이동한 다음 대시보드의 오른쪽 상단 모서리에서 추가 옵션 메뉴(**`...`**)를 선택합니다. 그런 다음 **[!UICONTROL 다운로드]**&#x200B;를 선택합니다.
 
 ![줄임표 및 다운로드 드롭다운이 강조 표시된 Experience Platform 프로필 대시보드입니다.](images/download/download-button.png)
 
 ## 미리 보기 PDF
 
-선택 후 **[!UICONTROL 다운로드]**&#x200B;를 클릭하면 브라우저의 기본 인쇄 메뉴가 열립니다. 이 예에서는 Google Chrome 인쇄 메뉴가 표시됩니다.
+**[!UICONTROL 다운로드]**&#x200B;를 선택하면 브라우저의 기본 인쇄 메뉴가 열립니다. 이 예에서는 Google Chrome 인쇄 메뉴가 표시됩니다.
 
 인쇄 메뉴를 사용하면 저장할 PDF을 미리 볼 수 있습니다. PDF은 Platform UI에 표시되는 대시보드 위젯의 실제 표현이며 PDF 크기는 현재 표시되는 모든 대시보드 위젯을 단일 페이지에 표시하도록 자동으로 조정됩니다.
 
-![프로파일 개요는 오른쪽에 인쇄 옵션 패널이 있는 단일 페이지 형식으로 표시됩니다.](images/download/download-chrome-print.png)
+![오른쪽에 인쇄 옵션 패널이 있는 단일 페이지 형식으로 표시되는 프로필 개요입니다.](images/download/download-chrome-print.png)
 
 PDF은 Experience Platform 로고, 대시보드 이름, 사용자 이름 및 대시보드를 다운로드한 날짜 및 시간이 포함된 자동으로 생성된 헤더를 포함합니다. 이 정보는 읽기 전용이므로 PDF에서 편집할 수 없습니다.
 
-![자동으로 생성된 헤더가 강조 표시된 인쇄 미리보기를 닫습니다.](images/download/download-pdf.png)
+![자동으로 생성된 헤더가 강조 표시된 인쇄 미리 보기를 닫습니다.](images/download/download-pdf.png)
 
 ## PDF으로 저장
 
-PDF을 미리 본 후 다음을 선택합니다. **저장** PDF을 저장할 위치를 선택합니다.
+PDF을 미리 본 후 **저장**&#x200B;을 선택하여 PDF을 저장할 위치를 선택합니다.
 
 >[!NOTE]
 >
->필요한 경우 **대상** 선택할 드롭다운 **PDF으로 저장** 해당 옵션이 자동으로 선택되지 않은 경우
+>필요한 경우 해당 옵션이 자동으로 선택되지 않은 경우 **대상** 드롭다운을 사용하여 **PDF으로 저장**&#x200B;을 선택할 수 있습니다.
 
-![PDF 개요가 대상 드롭다운으로 프로필 인쇄로 저장 옵션이 강조 표시된 단일 페이지 형식으로 표시됩니다.](images/download/download-chrome-print-destination.png)
+![PDF 개요가 대상 드롭다운으로 저장 인쇄 옵션이 강조 표시된 단일 페이지 형식으로 표시됩니다.](images/download/download-chrome-print-destination.png)
 
 ## 대시보드 PDF 사용자 지정
 
@@ -55,13 +55,13 @@ PDF을 미리 본 후 다음을 선택합니다. **저장** PDF을 저장할 위
 
 예를 들어 세 개의 표준 위젯 위에 스택된 여러 전체 너비 위젯을 포함하도록 프로필 대시보드의 모양을 수정할 수 있습니다.
 
-![길어진 위젯 표시를 보여 주는 프로필 대시보드.](images/download/download-modify.png)
+![길쭉한 위젯을 표시하는 프로필 대시보드입니다.](images/download/download-modify.png)
 
 업데이트된 대시보드를 다운로드하도록 선택하면 사용자 지정된 PDF 대시보드의 모양과 일치하는 새 프로필 미리보기가 표시됩니다. 또한 PDF의 크기를 자동으로 조정하여 모든 표시되는 위젯이 한 페이지 PDF에 포함되도록 합니다.
 
-![프로파일 개요는 오른쪽에 인쇄 옵션 패널이 있는 단일 페이지 형식으로 표시됩니다.](images/download/download-chrome-print-modified.png)
+![오른쪽에 인쇄 옵션 패널이 있는 단일 페이지 형식으로 표시되는 프로필 개요입니다.](images/download/download-chrome-print-modified.png)
 
-대시보드 맞춤화에 대한 자세한 내용은 [대시보드 사용자 지정 개요](customize/overview.md).
+대시보드 사용자 지정에 대한 자세한 내용은 [대시보드 사용자 지정 개요](customize/overview.md)를 참조하세요.
 
 ## 다음 단계
 

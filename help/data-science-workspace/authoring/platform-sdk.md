@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;개발자 안내서;SDK;데이터 액세스 SDK;Data Science Workspace;인기 있는 주제
+keywords: Experience Platform;개발자 안내서;SDK;데이터 액세스 SDK;Data Science Workspace;인기 항목
 solution: Experience Platform
 title: Adobe Experience Platform Platform SDK를 사용한 모델 작성
 description: 이 자습서에서는 data_access_sdk_python을 Python 및 R에서 모두 새로운 Python platform_sdk로 변환하는 방법에 대한 정보를 제공합니다.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 5%
+source-wordcount: '486'
+ht-degree: 3%
 
 ---
 
-# Adobe Experience Platform을 사용한 모델 작성 [!DNL Platform] SDK
+# Adobe Experience Platform [!DNL Platform] SDK를 사용하여 모델 작성
 
-이 자습서에서는 전환에 대한 정보를 제공합니다 `data_access_sdk_python` 새로운 Python으로 `platform_sdk` Python과 R 둘 다에서. 이 자습서에서는 다음 작업에 대해 설명합니다.
+이 자습서에서는 `data_access_sdk_python`을(를) Python과 R 모두에서 새 Python `platform_sdk`(으)로 변환하는 방법에 대한 정보를 제공합니다. 이 자습서에서는 다음 작업에 대해 설명합니다.
 
 - [빌드 인증](#build-authentication)
 - [기본 데이터 읽기](#basic-reading-of-data)
@@ -21,11 +21,11 @@ ht-degree: 5%
 
 ## 빌드 인증 {#build-authentication}
 
-을 호출하려면 인증이 필요합니다. [!DNL Adobe Experience Platform]는 API 키, 조직 ID, 사용자 토큰 및 서비스 토큰으로 구성됩니다.
+[!DNL Adobe Experience Platform]을(를) 호출하려면 인증이 필요하며 API 키, 조직 ID, 사용자 토큰 및 서비스 토큰으로 구성되어 있습니다.
 
 ### Python
 
-Jupyter Notebook을 사용하는 경우 아래 코드를 사용하여 `client_context`:
+Jupyter Notebook을 사용하는 경우 아래 코드를 사용하여 `client_context`을(를) 빌드하십시오.
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
@@ -43,7 +43,7 @@ client_context = ClientContext(api_key={API_KEY},
 
 ### R
 
-Jupyter Notebook을 사용하는 경우 아래 코드를 사용하여 `client_context`:
+Jupyter Notebook을 사용하는 경우 아래 코드를 사용하여 `client_context`을(를) 빌드하십시오.
 
 ```r
 library(reticulate)
@@ -68,7 +68,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## 기본 데이터 읽기 {#basic-reading-of-data}
 
-새로운 기능 [!DNL Platform] SDK의 경우 최대 읽기 크기는 32GB이며 최대 읽기 시간은 10분입니다.
+새 [!DNL Platform] SDK의 경우 최대 읽기 크기는 32GB이며 최대 읽기 시간은 10분입니다.
 
 읽기 시간이 너무 오래 걸리는 경우 다음 필터링 옵션 중 하나를 사용할 수 있습니다.
 
@@ -79,7 +79,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 >[!NOTE]
 >
->조직은 다음 내에서 설정됩니다. `client_context`.
+>조직이 `client_context` 내에 설정되어 있습니다.
 
 ### Python
 
@@ -105,7 +105,7 @@ df
 
 ## 오프셋 및 제한으로 필터링 {#filter-by-offset-and-limit}
 
-일괄 처리 ID로 필터링하는 기능은 더 이상 지원되지 않으므로 데이터를 읽는 범위를 지정하려면 다음을 사용해야 합니다 `offset` 및 `limit`.
+일괄 처리 ID로 필터링하는 기능은 더 이상 지원되지 않으므로 데이터를 읽는 범위를 지정하려면 `offset` 및 `limit`을(를) 사용해야 합니다.
 
 ### Python
 
@@ -145,15 +145,15 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-새로운 [!DNL Platform] SDK는 다음 작업을 지원합니다.
+새 [!DNL Platform] SDK는 다음 작업을 지원합니다.
 
 | 작업 | 함수 |
 | --------- | -------- |
-| 다음과 같음 (`=`) | `eq()` |
-| 보다 큼 (`>`) | `gt()` |
-| 크거나 같음 (`>=`) | `ge()` |
-| 미만 (`<`) | `lt()` |
-| 작거나 같음 (`<=`) | `le()` |
+| 같음(`=`) | `eq()` |
+| 보다 큼(`>`) | `gt()` |
+| 보다 크거나 같음(`>=`) | `ge()` |
+| 보다 작음(`<`) | `lt()` |
+| 보다 작거나 같음(`<=`) | `le()` |
 | 및 (`&`) | `And()` |
 | 또는 (`|`) | `Or()` |
 
@@ -195,7 +195,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->조직은 다음 내에서 설정됩니다. `client_context`.
+>조직이 `client_context` 내에 설정되어 있습니다.
 
 Python 및 R로 데이터를 쓰려면 아래의 예제 중 하나를 사용하십시오.
 
@@ -220,4 +220,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## 다음 단계
 
-을(를) 구성했으면 `platform_sdk` 데이터 로더에서, 데이터는 준비를 거치고 다음 로 분할됩니다. `train` 및 `val` 데이터 세트. 데이터 준비 및 기능 엔지니어링에 대한 자세한 내용은 다음 섹션에서 확인하십시오. [데이터 준비 및 기능 엔지니어링](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) 을 사용하여 레시피를 만드는 자습서에서 [!DNL JupyterLab] 전자 필기장.
+`platform_sdk` 데이터 로더를 구성하면 데이터가 준비 과정을 거친 다음 `train` 및 `val` 데이터 세트로 분할됩니다. 데이터 준비 및 기능 엔지니어링에 대한 자세한 내용은 [!DNL JupyterLab] 전자 필기장을 사용하여 레시피를 만드는 자습서의 [데이터 준비 및 기능 엔지니어링](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering)에 대한 섹션을 참조하십시오.

@@ -5,7 +5,7 @@ exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '412'
-ht-degree: 50%
+ht-degree: 44%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 50%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 데이터 수집 태그의 컨텍스트에서 작업은 규칙 이벤트가 발생하고 모든 조건이 평가를 통과한 후에 수행되는 작업입니다.
 
@@ -29,7 +29,7 @@ ht-degree: 50%
 
 작업 유형은 일반적으로 다음과 같이 구성됩니다.
 
-1. A [보기](./views.md) 사용자가 작업에 대한 설정을 수정할 수 있는 Experience Platform UI 및 데이터 수집 UI 내에 표시됩니다.
+1. 사용자가 작업에 대한 설정을 수정할 수 있도록 허용하는 Experience Platform UI 및 데이터 수집 UI에 표시되는 [보기](./views.md).
 2. 설정을 해석하고 작업을 수행하기 위해 태그 런타임 라이브러리 내에 전달되는 라이브러리 모듈입니다.
 
 ```js

@@ -4,7 +4,7 @@ description: 이 안내서에서는 Admin Console로 관리하여 Adobe Experien
 exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
 source-git-commit: 95e5dad03741d06ee33a10c48b481b792140f7f1
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '199'
 ht-degree: 100%
 
 ---

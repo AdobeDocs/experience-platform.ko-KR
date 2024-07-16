@@ -22,7 +22,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->위의 세 가지 자격 증명 외에도 많은 Platform API에 유효한 자격 증명이 필요합니다 `{SANDBOX_NAME}` 헤더로 제공될 예정입니다. 다음을 참조하십시오. [샌드박스 개요](../sandboxes/home.md) 샌드박스 및 [샌드박스 관리 엔드포인트](/help/sandboxes/api/sandboxes.md#list) 조직에서 사용할 수 있는 샌드박스를 나열하는 방법에 대한 설명서입니다.
+>위의 세 가지 자격 증명 외에도 많은 Platform API에는 헤더로 제공할 수 있는 올바른 `{SANDBOX_NAME}`이(가) 필요합니다. 샌드박스에 대한 자세한 내용은 [샌드박스 개요](../sandboxes/home.md)를, 조직에서 사용할 수 있는 샌드박스를 나열하는 방법은 [샌드박스 관리 끝점](/help/sandboxes/api/sandboxes.md#list) 설명서를 참조하십시오.
 
 애플리케이션 및 사용자의 보안을 유지하려면 OAuth와 같은 표준을 사용하여 Experience Platform API에 대한 모든 요청을 인증 및 승인해야 합니다.
 
@@ -40,8 +40,8 @@ Experience Platform API를 성공적으로 호출하려면 다음 조건을 충�
 
 또한 이 자습서를 완료하려면 Adobe ID이 있어야 합니다. Adobe ID이 없는 경우 다음 단계를 사용하여 만들 수 있습니다.
 
-1. 다음으로 이동 [Adobe Developer 콘솔](https://console.adobe.io).
-2. 선택 **[!UICONTROL 새 계정 만들기]**.
+1. [Adobe Developer Console](https://console.adobe.io)(으)로 이동합니다.
+2. **[!UICONTROL 새 계정 만들기]**&#x200B;를 선택합니다.
 3. 등록 프로세스를 완료합니다.
 
 ## Experience Platform을 위한 개발자 및 사용자 액세스 권한 획득 {#gain-developer-user-access}
@@ -50,57 +50,57 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 
 ### 개발자 액세스 권한 얻기 {#gain-developer-access}
 
-다음 연락처로 이동 [!DNL Admin Console] 를 사용하여 귀하를 Experience Platform 제품 프로필에 개발자로 추가할 조직의 관리자 [[!DNL Admin Console]](https://adminconsole.adobe.com/). 다음을 참조하십시오. [!DNL Admin Console] 다음 방법에 대한 특정 지침 설명서 [제품 프로필에 대한 개발자 액세스 관리](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+[[!DNL Admin Console]](https://adminconsole.adobe.com/)을(를) 사용하여 Experience Platform 제품 프로필에 개발자로 추가하려면 조직의 [!DNL Admin Console] 관리자에게 문의하십시오. [제품 프로필에 대한 개발자 액세스를 관리](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)하는 방법에 대한 특정 지침은 [!DNL Admin Console] 설명서를 참조하세요.
 
-개발자로 할당되면에서 통합 만들기를 시작할 수 있습니다. [Adobe Developer 콘솔](https://www.adobe.com/go/devs_console_ui). 이러한 통합은 외부 앱 및 서비스에서 Adobe API로의 파이프라인입니다.
+개발자로 할당되면 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)에서 통합 만들기를 시작할 수 있습니다. 이러한 통합은 외부 앱 및 서비스에서 Adobe API로의 파이프라인입니다.
 
 ### 사용자 액세스 권한 얻기 {#gain-user-access}
 
-사용자 [!DNL Admin Console] 관리자가 귀하를 동일한 제품 프로필에 사용자로 추가해야 합니다. 사용자 액세스를 사용하면 UI에서 사용자가 수행하는 API 작업의 결과를 볼 수 있습니다.
+[!DNL Admin Console] 관리자도 귀하를 동일한 제품 프로필에 사용자로 추가해야 합니다. 사용자 액세스를 사용하면 UI에서 사용자가 수행하는 API 작업의 결과를 볼 수 있습니다.
 
-다음 안내서를 참조하십시오 [에서 사용자 그룹 관리 [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) 추가 정보.
+자세한 내용은 [에서 사용자 그룹 관리 [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html)에 대한 안내서를 참조하십시오.
 
 ## API 키(클라이언트 ID) 및 조직 ID 생성 {#generate-credentials}
 
 >[!NOTE]
 >
->에서 이 문서를 팔로우하는 경우 [Privacy Service API 안내서](../privacy-service/api/getting-started.md), 이제 해당 안내서로 돌아가서 고유한 액세스 자격 증명을 생성할 수 있습니다 [!DNL Privacy Service].
+>[Privacy Service API 안내서](../privacy-service/api/getting-started.md)에서 이 문서를 팔로우하는 경우 이제 해당 안내서로 돌아가서 [!DNL Privacy Service]에 고유한 액세스 자격 증명을 생성할 수 있습니다.
 
-을 통해 개발자 및 사용자에게 플랫폼에 대한 액세스 권한이 부여되면 [!DNL Admin Console], 다음 단계는 를 생성하는 것입니다. `{ORG_ID}` 및 `{API_KEY}` Adobe Developer 콘솔의 자격 증명입니다. 이러한 자격 증명은 한 번만 생성하면 되며 향후 Platform API 호출에서 재사용할 수 있습니다.
+[!DNL Admin Console]을(를) 통해 개발자 및 사용자에게 플랫폼에 대한 액세스 권한을 부여한 후 다음 단계는 Adobe Developer Console에서 `{ORG_ID}` 및 `{API_KEY}` 자격 증명을 생성하는 것입니다. 이러한 자격 증명은 한 번만 생성하면 되며 향후 Platform API 호출에서 재사용할 수 있습니다.
 
 ### 프로젝트에 Experience Platform 추가 {#add-platform-to-project}
 
-다음으로 이동 [Adobe Developer 콘솔](https://www.adobe.com/go/devs_console_ui) Adobe ID으로 로그인합니다. 다음은에 대한 자습서에 설명된 단계를 따릅니다. [빈 프로젝트 만들기](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) Adobe Developer 콘솔 설명서에서 확인할 수 있습니다.
+[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)(으)로 이동하여 Adobe ID으로 로그인합니다. 그런 다음 Adobe Developer Console 설명서에서 [빈 프로젝트 만들기](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/)에 대한 자습서에 설명된 단계를 수행합니다.
 
-새 프로젝트를 만들었으면 다음을 선택합니다. **[!UICONTROL API 추가]** 다음에 있음 **[!UICONTROL 프로젝트 개요]** 화면.
+새 프로젝트를 만든 후에는 **[!UICONTROL 프로젝트 개요]** 화면에서 **[!UICONTROL API 추가]**&#x200B;를 선택합니다.
 
 >[!TIP]
 >
 >여러 조직에 대해 프로비저닝된 경우 인터페이스의 오른쪽 상단에 있는 조직 선택기를 사용하여 필요한 조직에 있는지 확인합니다.
 
-![API 추가 옵션이 강조 표시된 Developer Console 화면입니다.](./images/api-authentication/add-api.png)
+API 추가 옵션이 강조 표시된 ![Developer Console 화면.](./images/api-authentication/add-api.png)
 
-다음 **[!UICONTROL API 추가]** 화면이 나타납니다. Adobe Experience Platform에 대한 제품 아이콘을 선택한 다음 을 선택합니다. **[!UICONTROL EXPERIENCE PLATFORM API]** 선택하기 전 **[!UICONTROL 다음]**.
+**[!UICONTROL API 추가]** 화면이 나타납니다. Adobe Experience Platform의 제품 아이콘을 선택한 후 **[!UICONTROL 다음]**&#x200B;을 선택하기 전에 **[!UICONTROL Experience Platform API]**&#x200B;를 선택하십시오.
 
-![Experience Platform API를 선택합니다.](./images/api-authentication/platform-api.png)
+![Experience Platform API를 선택하십시오.](./images/api-authentication/platform-api.png)
 
 >[!TIP]
 >
->다음 항목 선택 **[!UICONTROL 문서 보기]** 별도의 브라우저 창에서 완료로 이동하는 옵션 [Experience Platform API 참조 설명서](https://developer.adobe.com/experience-platform-apis/).
+>**[!UICONTROL 문서 보기]** 옵션을 선택하여 별도의 브라우저 창에서 전체 [Experience Platform API 참조 설명서](https://developer.adobe.com/experience-platform-apis/)(으)로 이동합니다.
 
-### 다음 항목 선택 [!UICONTROL OAuth 서버 간] 인증 유형 {#select-oauth-server-to-server}
+### [!UICONTROL OAuth 서버 간] 인증 유형 선택 {#select-oauth-server-to-server}
 
-그런 다음 [!UICONTROL OAuth 서버 간] 액세스 토큰을 생성하고 Experience Platform API에 액세스하기 위한 인증 유형입니다.
+그런 다음 [!UICONTROL OAuth 서버 간] 인증 유형을 선택하여 액세스 토큰을 생성하고 Experience Platform API에 액세스합니다.
 
 >[!IMPORTANT]
 >
->다음 **[!UICONTROL OAuth 서버 간]** 메서드는 앞으로 지원되는 유일한 토큰 생성 메서드입니다. 이전에 지원된 **[!UICONTROL 서비스 계정(JWT)]** 메서드는 더 이상 사용되지 않으며 새 통합에 대해 선택할 수 없습니다. JWT 인증 방법을 사용하는 기존 통합은 2025년 1월 1일까지 계속 작동하지만 Adobe은 기존 통합을 새 통합으로 마이그레이션할 것을 강력히 권장합니다 [!UICONTROL OAuth 서버 간] 해당 날짜 이전의 메서드입니다. 섹션에서 추가 정보 가져오기 [!BADGE 더 이상 사용되지 않음]{type=negative}[JSON 웹 토큰(JWT) 생성](#jwt).
+>**[!UICONTROL OAuth 서버 간]** 메서드는 앞으로 지원되는 유일한 토큰 생성 메서드입니다. 이전에 지원된 **[!UICONTROL 서비스 계정(JWT)]** 메서드는 더 이상 사용되지 않으며 새 통합에 대해 선택할 수 없습니다. JWT 인증 방법을 사용하는 기존 통합은 2025년 1월 1일까지 계속 작동하지만, Adobe은 해당 날짜 이전에 기존 통합을 새 [!UICONTROL OAuth 서버 간] 방법으로 마이그레이션할 것을 강력히 권장합니다. [!BADGE 사용되지 않음] 섹션에서 자세한 정보를 확인하세요.{type=negative}[JSON 웹 토큰(JWT) 생성](#jwt).
 
-![Experience Platform API에 대한 OAuth 서버 간 인증 방법을 선택합니다.](./images/api-authentication/oauth-authentication-method.png)
+![Experience Platform API에 대한 OAuth 서버 간 인증 방법을 선택하십시오.](./images/api-authentication/oauth-authentication-method.png)
 
 ### 통합할 제품 프로필 선택 {#select-product-profiles}
 
-다음에서 **[!UICONTROL API 구성]** 화면, 선택 **[!UICONTROL AEP-Default-All-Users]**.
+**[!UICONTROL API 구성]** 화면에서 **[!UICONTROL AEP-Default-All-Users]**&#x200B;를 선택합니다.
 
 <!--
 Your integration's service account will gain access to granular features through the product profiles selected here.
@@ -109,11 +109,11 @@ Your integration's service account will gain access to granular features through
 
 >[!IMPORTANT]
 >
-Platform의 특정 기능에 액세스하려면 필요한 속성 기반 액세스 제어 권한을 부여하는 시스템 관리자도 필요합니다. 자세한 내용은 섹션 을 참조하십시오 [필요한 속성 기반 액세스 제어 권한 얻기](#get-abac-permissions).
+Platform의 특정 기능에 액세스하려면 필요한 속성 기반 액세스 제어 권한을 부여하는 시스템 관리자도 필요합니다. [필요한 특성 기반 액세스 제어 권한 얻기](#get-abac-permissions) 섹션에서 자세히 알아보세요.
 
-![통합할 제품 프로필을 선택합니다.](./images/api-authentication/select-product-profiles.png)
+![통합할 제품 프로필을 선택하십시오.](./images/api-authentication/select-product-profiles.png)
 
-선택 **[!UICONTROL 구성된 API 저장]** 준비가 되면.
+준비가 되면 **[!UICONTROL 구성된 API 저장]**&#x200B;을(를) 선택하십시오.
 
 위에서 설명한 Experience Platform API와의 통합 설정 단계에 대한 연습은 아래 비디오 튜토리얼에서도 사용할 수 있습니다.
 
@@ -121,12 +121,12 @@ Platform의 특정 기능에 액세스하려면 필요한 속성 기반 액세�
 
 ### 자격 증명 수집 {#gather-credentials}
 
-API가 프로젝트에 추가되면 **[!UICONTROL EXPERIENCE PLATFORM API]** 프로젝트 페이지에는 모든 Experience Platform API 호출에 필요한 다음 자격 증명이 표시됩니다.
+API가 프로젝트에 추가되면 프로젝트에 대한 **[!UICONTROL Experience Platform API]** 페이지에 Experience Platform API 호출에 필요한 다음 자격 증명이 표시됩니다.
 
-![Developer Console에서 API 추가 후 통합 정보.](./images/api-authentication/api-integration-information.png)
+![개발자 콘솔에서 API를 추가한 후의 통합 정보](./images/api-authentication/api-integration-information.png)
 
-* `{API_KEY}` ([!UICONTROL 클라이언트 ID])
-* `{ORG_ID}` ([!UICONTROL 조직 ID])
+* `{API_KEY}`([!UICONTROL 클라이언트 ID])
+* `{ORG_ID}`([!UICONTROL 조직 ID])
 
 <!--
 
@@ -142,53 +142,53 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 ## 액세스 토큰 생성 {#generate-access-token}
 
-다음 단계는 를 생성하는 것입니다. `{ACCESS_TOKEN}` platform API 호출에 사용할 자격 증명입니다. 의 값과 다르게 `{API_KEY}` 및 `{ORG_ID}`Platform API를 계속 사용하려면 24시간마다 새 토큰을 생성해야 합니다. 선택 **[!UICONTROL 액세스 토큰 생성]**&#x200B;아래에 표시된 대로 를 클릭합니다.
+다음 단계는 Platform API 호출에 사용할 `{ACCESS_TOKEN}` 자격 증명을 생성하는 것입니다. `{API_KEY}` 및 `{ORG_ID}`의 값과 달리 Platform API를 계속 사용하려면 24시간마다 새 토큰을 생성해야 합니다. 아래와 같이 **[!UICONTROL 액세스 토큰 생성]**&#x200B;을 선택하십시오.
 
 ![액세스 토큰을 생성하는 방법 표시](././images/api-authentication/generate-access-token.gif)
 
 >[!TIP]
 >
-Postman 환경 및 컬렉션을 사용하여 액세스 토큰을 생성할 수도 있습니다. 자세한 내용은 다음 섹션을 참조하십시오 [Postman을 사용하여 API 호출 인증 및 테스트](#use-postman).
+Postman 환경 및 컬렉션을 사용하여 액세스 토큰을 생성할 수도 있습니다. 자세한 내용은 [Postman을 사용하여 API 호출 인증 및 테스트](#use-postman)에 대한 섹션을 참조하십시오.
 
-## [!BADGE 더 이상 사용되지 않음]{type=negative} JSON 웹 토큰(JWT) 생성 {#jwt}
+## [!BADGE 사용되지 않음]{type=negative} JSON 웹 토큰(JWT) 생성 {#jwt}
 
 >[!WARNING]
 >
-액세스 토큰을 생성하기 위한 JWT 메서드가 더 이상 사용되지 않습니다. 모든 새 통합은 [OAuth 서버 간 인증 방법](#select-oauth-server-to-server). 또한 Adobe을 사용하려면 통합이 계속 작동하도록 2025년 1월 1일까지 기존 통합을 OAuth 메서드로 마이그레이션해야 합니다. 다음 중요한 설명서를 참조하십시오.
+액세스 토큰을 생성하기 위한 JWT 메서드가 더 이상 사용되지 않습니다. 모든 새 통합은 [OAuth 서버 간 인증 방법](#select-oauth-server-to-server)을 사용하여 만들어야 합니다. 또한 Adobe을 사용하려면 통합이 계속 작동하도록 2025년 1월 1일까지 기존 통합을 OAuth 메서드로 마이그레이션해야 합니다. 다음 중요한 설명서를 참조하십시오.
 > 
-* [JWT에서 OAuth로의 애플리케이션 마이그레이션 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
-* [OAuth를 사용하는 신규 및 기존 애플리케이션에 대한 구현 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
-* [OAuth 서버 간 자격 증명 메서드 사용의 이점](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
+* [JWT에서 OAuth로의 응용 프로그램 마이그레이션 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+* [OAuth를 사용하는 새 응용 프로그램과 이전 응용 프로그램에 대한 구현 안내서](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+* [OAuth 서버 간 자격 증명 메서드를 사용할 때의 이점](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ 더 이상 사용되지 않는 정보 보기
 
-다음 단계는 계정 자격 증명을 기반으로 JSON 웹 토큰(JWT)을 생성하는 것입니다. 이 값은 다음을 생성하는 데 사용됩니다. `{ACCESS_TOKEN}` platform API 호출에 사용하기 위한 자격 증명으로, 24시간마다 다시 생성해야 합니다.
+다음 단계는 계정 자격 증명을 기반으로 JSON 웹 토큰(JWT)을 생성하는 것입니다. 이 값은 Platform API 호출에 사용할 `{ACCESS_TOKEN}` 자격 증명을 생성하는 데 사용되며 24시간마다 다시 생성해야 합니다.
 
 >[!IMPORTANT]
 >
-이 자습서의 목적을 위해 아래 단계에서는 Developer Console 내에서 JWT를 생성하는 방법을 간략하게 설명합니다. 하지만 이 생성 방법은 테스트 및 평가 목적으로만 사용해야 합니다.
+이 자습서의 목적을 위해 아래 단계에서는 Developer Console 내에서 JWT를 생성하는 방법을 간략히 설명합니다. 하지만 이 생성 방법은 테스트 및 평가 목적으로만 사용해야 합니다.
 >
-일반 사용을 위해 JWT를 자동으로 생성해야 합니다. 프로그래밍 방식으로 JWT를 생성하는 방법에 대한 자세한 내용은 [서비스 계정 인증 안내서](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) Adobe Developer에서
+일반 사용을 위해 JWT를 자동으로 생성해야 합니다. 프로그래밍 방식으로 JWT를 생성하는 방법에 대한 자세한 내용은 Adobe Developer의 [서비스 계정 인증 안내서](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/)를 참조하십시오.
 
-선택 **[!UICONTROL 서비스 계정(JWT)]** 왼쪽 탐색에서 을(를) 선택합니다. **[!UICONTROL JWT 생성]**.
+왼쪽 탐색에서 **[!UICONTROL 서비스 계정(JWT)]**&#x200B;을 선택한 다음 **[!UICONTROL JWT 생성]**&#x200B;을 선택합니다.
 
 ![](././images/api-authentication/generate-jwt.png)
 
-아래에 제공된 텍스트 상자 **[!UICONTROL 사용자 지정 JWT 생성]**&#x200B;에 Platform API를 서비스 계정에 추가할 때 이전에 생성한 개인 키의 컨텐츠를 붙여넣습니다. 그런 다음 을 선택합니다. **[!UICONTROL 토큰 생성]**.
+**[!UICONTROL 사용자 지정 JWT 생성]**&#x200B;에 제공된 텍스트 상자에 Platform API를 서비스 계정에 추가할 때 이전에 생성한 개인 키의 내용을 붙여 넣습니다. 그런 다음 **[!UICONTROL 토큰 생성]**&#x200B;을 선택하십시오.
 
 ![](././images/api-authentication/paste-key.png)
 
-페이지는 액세스 토큰을 생성할 수 있는 샘플 cURL 명령과 함께 생성된 JWT를 표시하도록 업데이트됩니다. 이 자습서에서는 다음을 선택하십시오. **[!UICONTROL 복사]** 다음에 **[!UICONTROL 생성된 JWT]** 토큰을 클립보드에 복사합니다.
+페이지는 액세스 토큰을 생성할 수 있는 샘플 cURL 명령과 함께 생성된 JWT를 표시하도록 업데이트됩니다. 이 자습서에서는 토큰을 클립보드에 복사하려면 **[!UICONTROL 생성된 JWT]** 옆에 있는 **[!UICONTROL 복사]**&#x200B;를 선택하십시오.
 
 ![](././images/api-authentication/copy-jwt.png)
 
 **액세스 토큰 생성**
 
-JWT를 생성했으면 API 호출에서 사용하여 다음을 생성할 수 있습니다. `{ACCESS_TOKEN}`. 의 값과 다르게 `{API_KEY}` 및 `{ORG_ID}`Platform API를 계속 사용하려면 24시간마다 새 토큰을 생성해야 합니다.
+JWT를 생성했으면 API 호출에서 사용하여 `{ACCESS_TOKEN}`을(를) 생성할 수 있습니다. `{API_KEY}` 및 `{ORG_ID}`의 값과 달리 Platform API를 계속 사용하려면 24시간마다 새 토큰을 생성해야 합니다.
 
 **요청**
 
-다음 요청은 새 를 생성합니다 `{ACCESS_TOKEN}` 페이로드에 제공된 자격 증명을 기반으로 합니다. 이 끝점은 양식 데이터만 페이로드로 허용하므로 값을 지정해야 합니다. `Content-Type` 헤더 `multipart/form-data`.
+다음 요청은 페이로드에 제공된 자격 증명을 기반으로 새 `{ACCESS_TOKEN}`을(를) 생성합니다. 이 끝점은 양식 데이터만 페이로드로 허용하므로 `multipart/form-data`의 `Content-Type` 헤더를 지정해야 합니다.
 
 ```shell
 curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
@@ -200,9 +200,9 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | 속성 | 설명 |
 | --- | --- |
-| `{API_KEY}` | 다음 `{API_KEY}` ([!UICONTROL 클라이언트 ID])에서 검색한 값 [이전 단계](#api-ims-secret). |
-| `{SECRET}` | 에서 검색한 클라이언트 암호 [이전 단계](#api-ims-secret). |
-| `{JWT}` | 에서 생성한 JWT [이전 단계](#jwt). |
+| `{API_KEY}` | [이전 단계](#api-ims-secret)에서 검색한 `{API_KEY}`([!UICONTROL 클라이언트 ID]). |
+| `{SECRET}` | [이전 단계](#api-ims-secret)에서 검색한 클라이언트 암호입니다. |
+| `{JWT}` | [이전 단계](#jwt)에서 생성한 JWT. |
 
 >[!NOTE]
 >
@@ -220,15 +220,15 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | 속성 | 설명 |
 | --- | --- |
-| `token_type` | 유형 of 토큰이 반환되고 있습니다. 액세스 토큰의 경우 이 값은 항상 입니다 `bearer`. |
-| `access_token` | 생성됨 `{ACCESS_TOKEN}`. 이 값, 단어 접두사 `Bearer`은(는) (으)로 필요합니다. `Authentication` 모든 플랫폼 API 호출에 대한 헤더입니다. |
+| `token_type` | 유형 of 토큰이 반환되고 있습니다. 액세스 토큰의 경우 이 값은 항상 `bearer`입니다. |
+| `access_token` | 생성된 `{ACCESS_TOKEN}`. 접두사가 `Bearer`인 이 값은 모든 Platform API 호출에 `Authentication` 헤더로 필요합니다. |
 | `expires_in` | 액세스 토큰이 만료될 때까지 남은 시간(밀리초)입니다. 이 값이 0에 도달하면 새 액세스 토큰을 생성해야 Platform API를 계속 사용할 수 있습니다. |
 
 +++
 
 ## 액세스 자격 증명 테스트 {#test-credentials}
 
-액세스 토큰, API 키 및 조직 ID 의 세 가지 필수 자격 증명을 모두 수집하면 다음 API 호출을 시도할 수 있습니다. 이 호출은 모든 표준을 나열합니다. [!DNL Experience Data Model] 조직에서 사용할 수 있는 (XDM) 클래스. 에서 호출을 가져오고 실행합니다. [Postman](#use-postman).
+액세스 토큰, API 키 및 조직 ID 의 세 가지 필수 자격 증명을 모두 수집하면 다음 API 호출을 시도할 수 있습니다. 이 호출은 조직에서 사용할 수 있는 모든 표준 [!DNL Experience Data Model](XDM) 클래스를 나열합니다. [Postman](#use-postman)에서 호출을 가져오고 실행합니다.
 
 >[!BEGINSHADEBOX]
 
@@ -269,11 +269,11 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 >[!IMPORTANT]
 >
-위의 호출로 액세스 자격 증명을 테스트할 수 있지만, 올바른 속성 기반 액세스 제어 권한을 보유하지 않으면 여러 리소스에 액세스하거나 수정할 수 없습니다. 자세한 내용 **필요한 속성 기반 액세스 제어 권한 얻기** 아래 섹션.
+위의 호출로 액세스 자격 증명을 테스트할 수 있지만, 올바른 속성 기반 액세스 제어 권한을 보유하지 않으면 여러 리소스에 액세스하거나 수정할 수 없습니다. 아래의 **필요한 특성 기반 액세스 제어 권한 가져오기** 섹션에서 자세히 알아보세요.
 
 ## 필요한 속성 기반 액세스 제어 권한 얻기 {#get-abac-permissions}
 
-Experience Platform 내에서 여러 리소스에 액세스하거나 수정하려면 적절한 액세스 제어 권한이 있어야 합니다. 시스템 관리자는 다음 권한을 부여할 수 있습니다. [필요한 권한](/help/access-control/ui/permissions.md). 다음에 대한 섹션에서 자세한 정보 가져오기 [역할에 대한 API 자격 증명 관리](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
+Experience Platform 내에서 여러 리소스에 액세스하거나 수정하려면 적절한 액세스 제어 권한이 있어야 합니다. 시스템 관리자는 사용자에게 [필요한 권한](/help/access-control/ui/permissions.md)을 부여할 수 있습니다. [역할에 대한 API 자격 증명 관리](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role)에 대한 섹션에서 자세한 정보를 확인하세요.
 
 시스템 관리자가 API를 통해 Platform 리소스에 액세스하는 데 필요한 권한을 부여하는 방법에 대한 자세한 내용은 아래 비디오 튜토리얼에서도 확인할 수 있습니다.
 
@@ -281,21 +281,21 @@ Experience Platform 내에서 여러 리소스에 액세스하거나 수정하�
 
 ## Postman을 사용하여 API 호출 인증 및 테스트 {#use-postman}
 
-[Postman](https://www.postman.com/) 는 개발자가 RESTful API를 탐색하고 테스트할 수 있도록 하는 인기 있는 도구입니다. Experience Platform Postman 컬렉션 및 환경을 사용하여 Experience Platform API를 통한 작업 속도를 높일 수 있습니다. 자세한 내용 [Experience Platform에서 Postman 사용](/help/landing/postman.md) 컬렉션 및 환경 시작하기
+[Postman](https://www.postman.com/)은(는) 개발자가 RESTful API를 탐색하고 테스트할 수 있도록 하는 인기 있는 도구입니다. Experience Platform Postman 컬렉션 및 환경을 사용하여 Experience Platform API를 통한 작업 속도를 높일 수 있습니다. [Experience Platform에서 Postman 사용](/help/landing/postman.md) 및 컬렉션 및 환경 시작하기에 대해 자세히 알아보십시오.
 
 Experience Platform 컬렉션 및 환경과 함께 Postman 사용에 대한 자세한 내용은 아래 비디오 튜토리얼에서도 확인할 수 있습니다.
 
-**Experience Platform API와 함께 사용할 Postman 환경 다운로드 및 가져오기**
+**Experience Platform API에 사용할 Postman 환경을 다운로드하여 가져오기**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=106)
 
-**Postman 컬렉션을 사용하여 액세스 토큰 생성**
+**Postman 컬렉션을 사용하여 액세스 토큰을 생성합니다**
 
-다운로드 [Identity Management 서비스 Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) 또한 아래 비디오를 시청하여 액세스 토큰을 생성하는 방법을 살펴보십시오.
+[Identity Management 서비스 Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims)을 다운로드하고 아래 비디오를 시청하여 액세스 토큰을 생성하는 방법을 알아보십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
 
-**Experience Platform API Postman 컬렉션 다운로드 및 API와 상호 작용**
+**Experience Platform API Postman 컬렉션을 다운로드하고 API와 상호 작용**
 
 >[!VIDEO](https://video.tv.adobe.com/v/29704/?learn=on)
 
@@ -313,25 +313,25 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 
 ### 제품 프로필에 개발자 추가 {#add-developers-to-product-profile}
 
-다음으로 이동 [[!DNL Admin Console]](https://adminconsole.adobe.com/) Adobe ID으로 로그인합니다.
+[[!DNL Admin Console]](https://adminconsole.adobe.com/)(으)로 이동하여 Adobe ID으로 로그인합니다.
 
-선택 **[!UICONTROL 제품]**&#x200B;을 선택한 다음 을 선택합니다. **[!UICONTROL Adobe Experience Platform]** 을 클릭합니다.
+**[!UICONTROL 제품]**&#x200B;을 선택한 다음 제품 목록에서 **[!UICONTROL Adobe Experience Platform]**&#x200B;을 선택합니다.
 
 ![Admin Console의 제품 목록](././images/api-authentication/products.png)
 
-다음에서 **[!UICONTROL 제품 프로필]** 탭, 선택 **[!UICONTROL AEP-Default-All-Users]**. 또는 검색 창을 사용하여 이름을 입력하여 제품 프로필을 검색합니다.
+**[!UICONTROL 제품 프로필]** 탭에서 **[!UICONTROL AEP-Default-All-Users]**&#x200B;를 선택합니다. 또는 검색 창을 사용하여 이름을 입력하여 제품 프로필을 검색합니다.
 
 ![제품 프로필 검색](././images/api-authentication/select-product-profile.png)
 
-다음 항목 선택 **[!UICONTROL 개발자]** 탭을 선택한 다음 를 선택합니다 **[!UICONTROL 개발자 추가]**.
+**[!UICONTROL 개발자]** 탭을 선택한 다음 **[!UICONTROL 개발자 추가]**&#x200B;를 선택합니다.
 
 ![개발자 탭에서 개발자 추가](././images/api-authentication/add-developer1.png)
 
-개발자 입력 **[!UICONTROL 이메일 또는 사용자 이름]**. 유효 [!UICONTROL 이메일 또는 사용자 이름] 개발자 세부 사항이 표시됩니다. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
+개발자의 **[!UICONTROL 전자 메일 또는 사용자 이름]**&#x200B;을(를) 입력하십시오. 유효한 [!UICONTROL 전자 메일 또는 사용자 이름]에 개발자 세부 정보가 표시됩니다. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
-![이메일 또는 사용자 이름을 사용하여 개발자 추가](././images/api-authentication/add-developer-email.png)
+![전자 메일 또는 사용자 이름을 사용하여 개발자 추가](././images/api-authentication/add-developer-email.png)
 
-개발자가 추가되고에 표시됩니다. [!UICONTROL 개발자] 탭.
+개발자가 추가되었으며 [!UICONTROL 개발자] 탭에 나타납니다.
 
 ![개발자 탭에 나열된 개발자](././images/api-authentication/developer-added.png)
 
@@ -359,28 +359,28 @@ In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-A
 
 시스템 관리자는 Experience Platform UI의 역할에 API를 할당할 수 있습니다.
 
-선택 **[!UICONTROL 권한]** API를 추가할 역할입니다. 다음 항목 선택 **[!UICONTROL API 자격 증명]** 탭을 선택한 다음 를 선택합니다 **[!UICONTROL API 자격 증명 추가]**.
+**[!UICONTROL 권한]** 및 API를 추가할 역할을 선택하십시오. **[!UICONTROL API 자격 증명]** 탭을 선택한 다음 **[!UICONTROL API 자격 증명 추가]**&#x200B;를 선택합니다.
 
-![선택한 역할의 API 자격 증명 탭](././images/api-authentication/api-credentials.png)
+선택한 역할의 ![API 자격 증명 탭](././images/api-authentication/api-credentials.png)
 
-역할에 추가할 API를 선택한 다음 를 선택합니다 **[!UICONTROL 저장]**.
+역할에 추가할 API를 선택한 다음 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
 ![선택할 수 있는 API 목록](././images/api-authentication/select-api.png)
 
-(으)로 돌아갑니다. [!UICONTROL API 자격 증명] 새로 추가된 API가 나열된 탭입니다.
+새로 추가된 API가 나열된 [!UICONTROL API 자격 증명] 탭으로 돌아갑니다.
 
-![새로 추가된 API가 있는 API 자격 증명 탭](././images/api-authentication/api-credentials-with-added-api.png)
+새로 추가된 API가 있는 ![API 자격 증명 탭](././images/api-authentication/api-credentials-with-added-api.png)
 
 ## 추가 리소스 {#additional-resources}
 
 Experience Platform API를 시작하는 데 도움이 필요하면 아래 연결된 추가 리소스를 참조하십시오
 
 * [Experience Platform API 인증 및 액세스](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=ko) 비디오 튜토리얼 페이지
-* [Identity Management 서비스 Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) 액세스 토큰 생성용
-* [Experience Platform API Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)
+* 액세스 토큰을 생성하기 위한 [Identity Management 서비스 Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims)
+* [API Postman 컬렉션 Experience Platform](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽고 Platform API에 대한 액세스 자격 증명을 수집하고 성공적으로 테스트했습니다. 이제 를 통해 제공되는 예제 API 호출과 함께 따를 수 있습니다. [설명서](../landing/documentation/overview.md).
+이 문서를 읽고 Platform API에 대한 액세스 자격 증명을 수집하고 성공적으로 테스트했습니다. 이제 [설명서](../landing/documentation/overview.md) 전체에서 제공된 예제 API 호출과 함께 따라갈 수 있습니다.
 
-이 자습서에서 수집한 인증 값 외에도 많은 Platform API에 유효한 값이 필요합니다 `{SANDBOX_NAME}` 헤더로 제공될 예정입니다. 자세한 내용은 [샌드박스 개요](../sandboxes/home.md)를 참조하십시오.
+이 자습서에서 수집한 인증 값 외에도 많은 Platform API를 사용하려면 헤더로 올바른 `{SANDBOX_NAME}`을(를) 제공해야 합니다. 자세한 내용은 [샌드박스 개요](../sandboxes/home.md)를 참조하십시오.

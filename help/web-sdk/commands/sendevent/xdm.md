@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `xdm`
 
-다음 `xdm` 개체에는 Adobe으로 전송된 데이터 페이로드가 포함되어 있습니다. 이 오브젝트 내에 설정된 필드는 데이터 세트의 스키마에 정의된 요소에 직접 매핑됩니다.
+`xdm` 개체에 Adobe에 전송된 데이터 페이로드가 포함되어 있습니다. 이 오브젝트 내에 설정된 필드는 데이터 세트의 스키마에 정의된 요소에 직접 매핑됩니다.
 
 Adobe Experience Platform은 스키마를 사용하여 데이터의 구조를 일관되고 재사용 가능한 방식으로 설명합니다. 여러 시스템에서 데이터를 일관되게 정의하면 의미를 쉽게 유지할 수 있으므로 데이터의 가치를 얻을 수 있습니다.
 
@@ -19,20 +19,20 @@ Adobe Experience Platform은 스키마를 사용하여 데이터의 구조를 �
 
 ## Web SDK 확장을 사용하여 XDM 개체 구성
 
-설정 **[!UICONTROL XDM]** 는 태그 규칙 작업 내에 있는 객체입니다. 다음 [XDM 개체](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) 에서는 다른 데이터 요소를 해당 XDM 필드에 매핑하는 직관적인 인터페이스를 제공합니다.
+**[!UICONTROL XDM]** 개체를 태그 규칙의 동작 내에서 설정합니다. [XDM 개체](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object)는 다른 데이터 요소를 해당 XDM 필드에 매핑하는 직관적인 인터페이스를 제공합니다.
 
-1. 에 로그인 [experience.adobe.com](https://experience.adobe.com) Adobe ID 자격 증명을 사용합니다.
-1. 다음으로 이동 **[!UICONTROL 데이터 수집]** > **[!UICONTROL 태그]**.
+1. Adobe ID 자격 증명을 사용하여 [experience.adobe.com](https://experience.adobe.com)에 로그인합니다.
+1. **[!UICONTROL 데이터 수집]** > **[!UICONTROL 태그]**(으)로 이동합니다.
 1. 원하는 태그 속성을 선택합니다.
-1. 다음으로 이동 **[!UICONTROL 규칙]**&#x200B;을 클릭한 다음 원하는 규칙을 선택합니다.
-1. 아래 [!UICONTROL 작업]를 클릭하고 기존 작업을 선택하거나 작업을 만듭니다.
-1. 설정 [!UICONTROL 확장] 드롭다운 필드 **[!UICONTROL Adobe Experience Platform 웹 SDK]**, 및 설정 [!UICONTROL 작업 유형] 끝 **[!UICONTROL 이벤트 보내기]**.
-1. 에서 원하는 개체가 포함된 데이터 요소를 제공합니다. **[!UICONTROL XDM]** 필드.
-1. 클릭 **[!UICONTROL 변경 내용 유지]**&#x200B;그런 다음 게시 워크플로우를 실행합니다.
+1. **[!UICONTROL 규칙]**(으)로 이동한 다음 원하는 규칙을 선택합니다.
+1. [!UICONTROL 작업]에서 기존 작업을 선택하거나 작업을 만드십시오.
+1. [!UICONTROL 확장] 드롭다운 필드를 **[!UICONTROL Adobe Experience Platform Web SDK]**(으)로 설정하고 [!UICONTROL 작업 유형]을(를) **[!UICONTROL 이벤트 보내기]**(으)로 설정합니다.
+1. **[!UICONTROL XDM]** 필드에 원하는 개체가 포함된 데이터 요소를 제공하십시오.
+1. **[!UICONTROL 변경 내용 유지]**&#x200B;를 클릭한 다음 게시 워크플로우를 실행하십시오.
 
 ## 웹 SDK JavaScript 라이브러리를 사용하여 XDM 개체 구성
 
-설정 `xdm` 개체를 실행할 때 `sendEvent` 명령입니다. 이 개체의 계층 구조가 구성된 데이터 세트의 스키마와 일치하는지 확인하십시오. 다음 두 가지를 모두 포함할 수 있습니다. `xdm` 오브젝트 및 [`data`](data.md) 같은 오브젝트 `sendEvent` 명령입니다.
+`sendEvent` 명령을 실행할 때 `xdm` 개체를 설정합니다. 이 개체의 계층 구조가 구성된 데이터 세트의 스키마와 일치하는지 확인하십시오. 동일한 `sendEvent` 명령에 `xdm` 개체와 [`data`](data.md) 개체를 모두 포함할 수 있습니다.
 
 ```js
 alloy("sendEvent", {
@@ -40,7 +40,7 @@ alloy("sendEvent", {
 });
 ```
 
-다음 예제에서는 [Commerce 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/event/commerce-details.md):
+다음 예제에서는 [Commerce 세부 정보 스키마 필드 그룹](/help/xdm/field-groups/event/commerce-details.md)을 사용합니다.
 
 ```javascript
 alloy("sendEvent",{

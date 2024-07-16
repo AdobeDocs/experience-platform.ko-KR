@@ -16,7 +16,7 @@ ht-degree: 3%
 >
 >선택한 사용자에 대한 조기 액세스에서 Adobe Experience Platform Web SDK의 Offer decisioning을 사용할 수 있습니다. 일부 조직에서는 이 기능을 사용할 수 없습니다.
 
-Adobe Experience Platform [!DNL Web SDK] 은 Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI(사용자 인터페이스) 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
+Adobe Experience Platform [!DNL Web SDK]은(는) Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI(사용자 인터페이스) 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 
 ## 전제 조건
 
@@ -26,9 +26,9 @@ Adobe Experience Platform [!DNL Web SDK] 은 Offer Decisioning에서 관리되�
 
 ## 용어
 
-offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니다. 자세한 내용을 알고 추가 약관을 보려면 다음을 방문하십시오. [Offer decisioning 용어집](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니다. 자세한 내용을 알고 추가 약관을 보려면 [Offer decisioning 용어집](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)을 참조하세요.
 
-* **결정 범위:** offer decisioning의 경우 결정 범위는 offer decisioning 서비스가 오퍼를 제안하는 데 사용할 활동 및 배치 ID가 포함된 JSON의 Base64로 인코딩된 문자열입니다.
+* **결정 범위:** Offer decisioning의 경우 결정 범위는 offer decisioning 서비스에서 오퍼를 제안하는 데 사용할 활동 및 배치 ID가 포함된 JSON의 Base64로 인코딩된 문자열입니다.
 
   *결정 범위 JSON:*
 
@@ -47,28 +47,28 @@ offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니�
 
   >[!TIP]
   >
-  >다음에서 결정 범위 값을 복사할 수 있습니다. **활동 개요** UI의 페이지.
+  >UI의 **활동 개요** 페이지에서 결정 범위 값을 복사할 수 있습니다.
 
   ![결정 복사 설정.](assets/decision-scope-copy.png)
 
-* **데이터스트림:** 자세한 내용은 다음을 참조하십시오. [데이터스트림](/help/datastreams/overview.md) 설명서를 참조하십시오.
+* **데이터스트림:** 자세한 내용은 [데이터스트림](/help/datastreams/overview.md) 설명서를 참조하십시오.
 
-* **신원**: 자세한 내용은 이 설명서 의 개요를 참조하십시오 [Platform Web SDK에서 ID 서비스 사용](../../identity/overview.md).
+* **ID**: 자세한 내용은 [Platform Web SDK에서 ID 서비스를 사용하는 방법](../../identity/overview.md)에 대한 개요를 설명하는 이 설명서를 참조하십시오.
 
 ## 활성화 Offer decisioning
 
 offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
-1. 에서 Adobe Experience Platform 활성화됨 [데이터스트림](/help/datastreams/overview.md) 및 &quot;Offer decisioning&quot; 상자를 선택합니다.
+1. [데이터 스트림](/help/datastreams/overview.md)에서 Adobe Experience Platform을 사용하도록 설정하고 &quot;Offer decisioning&quot; 상자를 선택합니다.
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. 다음 지침을 따르십시오 [sdk 설치](/help/web-sdk/install/overview.md) (SDK는 독립 실행형 또는 UI를 통해 설치할 수 있습니다. 다음을 참조하십시오. [태그 빠른 시작 안내서](/help/tags/quick-start/quick-start.md))를 참조하십시오.
-1. 다음을 사용하여 Offer decisioning에 대한 SDK 구성 `personalization.decisionScopes`. 추가적인 Offer decisioning 관련 단계는 아래에 나와 있습니다.
+1. 지침에 따라 [SDK를 설치](/help/web-sdk/install/overview.md)하십시오(SDK는 독립 실행형으로 또는 UI를 통해 설치할 수 있습니다.). 자세한 내용은 [태그 빠른 시작 안내서](/help/tags/quick-start/quick-start.md))를 참조하십시오.
+1. `personalization.decisionScopes`을(를) 사용하여 Offer decisioning에 대한 SDK를 구성합니다. 추가적인 Offer decisioning 관련 단계는 아래에 나와 있습니다.
 
    * 독립 실행형 SDK 설치
 
-      1. 다음을 사용하여 &quot;sendEvent&quot; 작업 구성 `personalization.decisionScopes`
+      1. `personalization.decisionScopes`(으)로 &quot;sendEvent&quot; 작업 구성
 
      ```javascript
      alloy("sendEvent", {
@@ -86,29 +86,29 @@ offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
       1. [태그 속성 만들기](/help/tags/ui/administration/companies-and-properties.md)
       1. [포함 코드 추가](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. &quot;데이터스트림&quot; 드롭다운에서 구성을 선택하여 생성한 데이터스트림으로 Platform Web SDK 확장을 설치하고 구성합니다. 다음에서 설명서를 참조하십시오. [확장](/help/tags/ui/managing-resources/extensions/overview.md).
+      1. &quot;데이터스트림&quot; 드롭다운에서 구성을 선택하여 생성한 데이터스트림으로 Platform Web SDK 확장을 설치하고 구성합니다. [확장](/help/tags/ui/managing-resources/extensions/overview.md)에 대한 설명서를 참조하세요.
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. 필요한 항목 만들기 [데이터 요소](/help/tags/ui/managing-resources/data-elements.md). 최소한 Platform Web SDK ID 맵 및 Platform Web SDK XDM 개체 데이터 요소를 만들어야 합니다.
+      1. 필요한 [데이터 요소](/help/tags/ui/managing-resources/data-elements.md)를 만듭니다. 최소한 Platform Web SDK ID 맵 및 Platform Web SDK XDM 개체 데이터 요소를 만들어야 합니다.
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
 
-      1. 사용자 만들기 [규칙](/help/tags/ui/managing-resources/rules.md).
+      1. [규칙](/help/tags/ui/managing-resources/rules.md)을 만듭니다.
 
-         * Platform Web SDK 이벤트 보내기 작업 추가 및 관련 작업 추가 `decisionScopes` 해당 작업 구성에 추가
+         * Platform Web SDK 이벤트 보내기 작업을 추가하고 해당 작업의 구성에 관련 `decisionScopes`을(를) 추가합니다.
 
          ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
 
-      1. [라이브러리 만들기 및 게시](/help/tags/ui/publishing/libraries.md) 사용자가 구성한 모든 관련 규칙, 데이터 요소 및 확장 포함
+      1. 구성한 모든 관련 규칙, 데이터 요소 및 확장이 포함된 [라이브러리를 만들고 게시](/help/tags/ui/publishing/libraries.md)
 
 ## 샘플 요청 및 응답
 
-### 1개 `decisionScopes` 값
+### 1개의 `decisionScopes` 값
 
 **요청**
 
@@ -139,8 +139,8 @@ offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
 | 속성 | 필수 여부 | 설명 | 제한 | 예 |
 |---|---|---|---|---|
-| `identityMap` | 예 | 다음을 참조하십시오. [Identity Service 설명서](../../identity/overview.md). | 요청당 하나의 ID. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }` 질문에 답합니다. <br><br> 참고: 사용자는 다음을 포함할 필요가 없습니다 `ECID` API 호출의 매개 변수입니다. 이 매개 변수는 필요한 경우 호출에 자동으로 추가됩니다. |
-| `decisionScopes` | 예 | 활동 및 배치 ID가 포함된 JSON의 Base64 인코딩 문자열 배열입니다. | 최대 30 `decisionScopes` 요청에 따라. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
+| `identityMap` | 예 | 이 [ID 서비스 설명서](../../identity/overview.md)를 참조하세요. | 요청당 하나의 ID. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }` 질문에 답합니다. <br><br> 참고: 사용자는 API 호출에 `ECID` 매개 변수를 포함할 필요가 없습니다. 이 매개 변수는 필요한 경우 호출에 자동으로 추가됩니다. |
+| `decisionScopes` | 예 | 활동 및 배치 ID가 포함된 JSON의 Base64 인코딩 문자열 배열입니다. | 요청당 최대 30 `decisionScopes`. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
 **응답**
 
@@ -203,7 +203,7 @@ offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
 | `deliveryUrl` | 제안된 오퍼와 연결된 이미지 컨텐츠(URL 형식). | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | JSON 오브젝트 형식으로 제안된 오퍼와 연관된 특성입니다. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
 
-### 복수 `decisionScopes` 값
+### 여러 `decisionScopes` 값
 
 **요청**
 
@@ -236,8 +236,8 @@ offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
 | 속성 | 필수 여부 | 설명 | 제한 | 예 |
 |---|---|---|---|---|
-| `identityMap` | 예 | 다음을 참조하십시오. [Identity Service 설명서](../../identity/overview.md). | 요청당 하나의 ID. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }` 질문에 답합니다. <br><br> 참고: 사용자는 다음을 포함할 필요가 없습니다 `ECID` API 호출의 매개 변수입니다. 이 매개 변수는 필요한 경우 호출에 자동으로 추가됩니다. |
-| `decisionScopes` | 예 | 활동 및 배치 ID가 포함된 JSON의 Base64 인코딩 문자열 배열입니다. | 최대 30 `decisionScopes` 요청에 따라. | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
+| `identityMap` | 예 | 이 [ID 서비스 설명서](../../identity/overview.md)를 참조하세요. | 요청당 하나의 ID. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }` 질문에 답합니다. <br><br> 참고: 사용자는 API 호출에 `ECID` 매개 변수를 포함할 필요가 없습니다. 이 매개 변수는 필요한 경우 호출에 자동으로 추가됩니다. |
+| `decisionScopes` | 예 | 활동 및 배치 ID가 포함된 JSON의 Base64 인코딩 문자열 배열입니다. | 요청당 최대 30 `decisionScopes`. | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
 
 **응답**
 
@@ -332,4 +332,4 @@ offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
 ## 제한 사항
 
-일부 오퍼 제한 사항은 현재 모바일 Edge Network 워크플로에서 지원되지 않습니다(예: 한도). 한도 필드 값은 모든 사용자에게 오퍼를 제공할 수 있는 횟수를 지정합니다. 자세한 내용은 [오퍼 자격 규칙 및 제한 설명서](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+일부 오퍼 제한 사항은 현재 모바일 Edge Network 워크플로에서 지원되지 않습니다(예: 한도). 한도 필드 값은 모든 사용자에게 오퍼를 제공할 수 있는 횟수를 지정합니다. 자세한 내용은 [오퍼 자격 규칙 및 제약 조건 설명서](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)를 참조하세요.

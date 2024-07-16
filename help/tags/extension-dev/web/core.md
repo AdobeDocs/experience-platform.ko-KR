@@ -4,8 +4,8 @@ description: 웹 확장 내에서 사용할 수 있는 핵심 라이브러리 �
 exl-id: 7fb63208-aed0-4add-b6da-8e4aea063d0a
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 82%
+source-wordcount: '295'
+ht-degree: 70%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 이 문서에서는 웹 확장 내에서 사용할 수 있는 핵심 라이브러리 모듈 목록을 제공합니다. `require('@adobe/{MODULE}')`를 사용하여 이러한 모듈에 액세스할 수 있습니다. 여기서 `{MODULE}`은 핵심 모듈의 이름입니다.
 

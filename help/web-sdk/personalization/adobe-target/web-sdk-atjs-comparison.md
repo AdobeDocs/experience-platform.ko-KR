@@ -6,7 +6,7 @@ exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
 source-git-commit: ca1574f3f95840fce246fb4ed8845583fa0ff093
 workflow-type: tm+mt
 source-wordcount: '2175'
-ht-degree: 5%
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 ## 개요
 
-이 문서에서는 `at.js` 라이브러리 및 Experience Platform Web SDK입니다.
+이 문서에서는 `at.js` 라이브러리와 Experience Platform Web SDK의 차이점에 대한 개요를 제공합니다.
 
 ## 라이브러리 설치
 
@@ -26,7 +26,7 @@ ht-degree: 5%
 
 사전 빌드된 버전은 CDN에서 사용할 수 있습니다. 페이지에서 직접 CDN의 라이브러리를 참조하거나, 자체 인프라에서 다운로드하여 호스팅할 수 있습니다. 축소 및 축소 해제된 형식으로 사용할 수 있습니다. 축소되지 않은 버전은 디버깅에 유용합니다.
 
-다음을 참조하십시오 [JavaScript 라이브러리를 사용하여 웹 SDK 설치](/help/web-sdk/install/library.md) 추가 정보.
+자세한 내용은 [JavaScript 라이브러리를 사용하여 웹 SDK 설치](/help/web-sdk/install/library.md)를 참조하십시오.
 
 ## 라이브러리 구성
 
@@ -73,19 +73,19 @@ window.adobe.target.init(window, document, {
 
 ### 웹 SDK 구성
 
-SDK에 대한 구성은 [`configure`](/help/web-sdk/commands/configure/overview.md) 명령입니다. 다음 `configure` 명령: *항상* 먼저 호출됩니다.
+[`configure`](/help/web-sdk/commands/configure/overview.md) 명령을 사용하여 SDK를 구성합니다. `configure` 명령은 먼저 호출된 *always*&#x200B;입니다.
 
 ## 페이지 로드 타겟 오퍼를 요청하고 자동으로 렌더링하는 방법
 
 ### at.js 사용
 
-at.js 2.x 사용(설정을 활성화하는 경우) `pageLoadEnabled`, 라이브러리는 을 사용하여 Target Edge에 대한 호출을 트리거합니다. `execute -> pageLoad`. 모든 설정이 기본값으로 설정되어 있으면 사용자 지정 코딩이 필요하지 않습니다.at.js가 페이지에 추가되고 브라우저에 의해 로드되면 Target Edge 호출이 실행됩니다.
+at.js 2.x를 사용하는 경우 설정 `pageLoadEnabled`을(를) 사용하면 라이브러리가 `execute -> pageLoad`(으)로 Target Edge 호출을 트리거합니다. 모든 설정이 기본값으로 설정되어 있으면 사용자 지정 코딩이 필요하지 않습니다. at.js가 페이지에 추가되고 브라우저에 의해 로드되면 Target Edge 호출이 실행됩니다.
 
 ### Web SDK 사용
 
-Adobe Target 내에서 만들어진 컨텐츠 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 는 SDK를 통해 자동으로 검색 및 렌더링할 수 있습니다.
+Adobe Target의 [시각적 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 내에서 만든 콘텐츠를 SDK에서 자동으로 검색하고 렌더링할 수 있습니다.
 
-Target 오퍼를 요청하고 자동으로 렌더링하려면 `sendEvent` 명령 및 설정 `renderDecisions` 옵션 대상 `true`. 이렇게 하면 SDK가 자동 렌더링에 적합한 개인화된 콘텐츠를 자동으로 렌더링합니다.
+Target 오퍼를 요청하고 자동으로 렌더링하려면 `sendEvent` 명령을 사용하고 `renderDecisions` 옵션을 `true`(으)로 설정하십시오. 이렇게 하면 SDK가 자동 렌더링에 적합한 개인화된 콘텐츠를 자동으로 렌더링합니다.
 
 예:
 
@@ -219,7 +219,7 @@ adobe.target.getOffers({
 
 ### Web SDK 사용
 
-실행 `sendEvent` 다음 특수 범위의 명령 `decisionScopes`: `__view__`. 이 범위는 Target에서 모든 페이지 로드 활동을 가져오고 모든 보기를 미리 가져오는 신호로 사용됩니다. 또한 Web SDK는 모든 VEC 보기 기반 활동을 평가하려고 합니다. 보기 프리페치를 사용하지 않도록 설정하는 기능은 현재 웹 SDK에서 지원되지 않습니다.
+`decisionScopes`: `__view__`에서 특수 범위로 `sendEvent` 명령을 실행합니다. 이 범위는 Target에서 모든 페이지 로드 활동을 가져오고 모든 보기를 미리 가져오는 신호로 사용됩니다. 또한 Web SDK는 모든 VEC 보기 기반 활동을 평가하려고 합니다. 보기 프리페치를 사용하지 않도록 설정하는 기능은 현재 웹 SDK에서 지원되지 않습니다.
 
 개인화 콘텐츠에 액세스하려면 SDK가 서버로부터 성공적인 응답을 받은 후에 호출되는 콜백 함수를 제공할 수 있습니다. 콜백에는 반환된 개인화 콘텐츠가 포함된 제안 속성이 포함될 수 있는 결과 개체가 제공됩니다.
 
@@ -270,7 +270,7 @@ alloy("sendEvent", {
 
 ### at.js 사용
 
-를 사용하여 양식 기반 작성기 활동을 가져올 수 있습니다. `getOffer` 함수:
+`getOffer` 함수를 사용하여 양식 기반 작성기 활동을 가져올 수 있습니다.
 
 예 1:
 
@@ -305,7 +305,8 @@ adobe.target.getOffers({
 
 ### Web SDK 사용
 
-를 사용하여 양식 기반 작성기 기반 활동을 가져올 수 있습니다. `sendEvent` 명령 및 mbox 이름 전달 `decisionScopes` 옵션을 선택합니다. 다음 `sendEvent` 명령은 요청된 활동/제안을 포함하는 개체로 해결된 약속을 반환합니다. `propositions` 배열은 다음과 같습니다.
+`sendEvent` 명령을 사용하고 `decisionScopes` 옵션 아래에 mbox 이름을 전달하여 양식 기반 작성기 기반 활동을 가져올 수 있습니다. `sendEvent` 명령은 요청된 활동/제안을 포함하는 개체로 해결된 약속을 반환합니다.
+다음은 `propositions` 배열의 모양입니다.
 
 ```javascript
 [
@@ -426,7 +427,7 @@ alloy("sendEvent", {
 
 ### at.js 사용
 
-다음을 사용하여 Target 활동을 적용할 수 있습니다. `applyOffers` 함수: `adobe.target.applyOffer(options)`
+`applyOffers` 함수를 사용하여 Target 활동을 적용할 수 있습니다. `adobe.target.applyOffer(options)`
 
 예:
 
@@ -437,12 +438,12 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-에 대해 자세히 알아보기 `applyOffers` 다음에서 명령 [전용 설명서](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html).
+[전용 설명서](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html)에서 `applyOffers` 명령에 대해 자세히 알아보세요.
 
 
 ### Web SDK 사용
 
-다음을 사용하여 Target 활동을 적용할 수 있습니다. `applyPropositions` 명령입니다.
+`applyPropositions` 명령을 사용하여 Target 활동을 적용할 수 있습니다.
 
 예:
 
@@ -452,13 +453,13 @@ alloy("applyPropositions", {
 });
 ```
 
-에 대해 자세히 알아보기 `applyPropositions` 다음에서 명령 [전용 설명서](../../personalization/rendering-personalization-content.md#applypropositions).
+[전용 설명서](../../personalization/rendering-personalization-content.md#applypropositions)에서 `applyPropositions` 명령에 대해 자세히 알아보세요.
 
 ## 이벤트 추적 방법
 
 ### at.js 사용
 
-다음을 사용하여 이벤트를 추적할 수 있습니다. `trackEvent` 함수 또는 사용 `sendNotifications`.
+`trackEvent` 함수 또는 `sendNotifications`을(를) 사용하여 이벤트를 추적할 수 있습니다.
 
 이 함수는 클릭 및 전환과 같은 사용자 작업을 보고하는 요청을 실행합니다. 응답의 활동은 전달하지 않습니다.
 
@@ -493,14 +494,14 @@ adobe.target.sendNotifications({
 
 ### Web SDK 사용
 
-를 호출하여 이벤트 및 사용자 작업을 추적할 수 있습니다. `sendEvent` 명령, 채우기 `_experience.decisioning.propositions` XDM 필드 그룹 및 설정 `eventType` 다음 2개 값 중 하나로 변환:
+`sendEvent` 명령을 호출하고 `_experience.decisioning.propositions` XDM 필드 그룹을 채우고 `eventType`을(를) 두 값 중 하나로 설정하여 이벤트와 사용자 작업을 추적할 수 있습니다.
 
 * `decisioning.propositionDisplay`: Target 활동을 렌더링한다는 신호를 보냅니다.
 * `decisioning.propositionInteract`: 마우스 클릭과 같이 사용자가 활동과 상호 작용하도록 신호를 보냅니다.
 
-다음 `_experience.decisioning.propositions` XDM 필드 그룹은 개체의 배열입니다. 각 개체의 속성은 `result.propositions` 에서 반환됩니다. `sendEvent` 명령: `{ id, scope, scopeDetails }`
+`_experience.decisioning.propositions` XDM 필드 그룹은 개체의 배열입니다. 각 개체의 속성은 `sendEvent` 명령에서 반환되는 `result.propositions`에서 파생됩니다. `{ id, scope, scopeDetails }`
 
-**예제 1 - 추적 a `decisioning.propositionDisplay` 활동을 렌더링한 후 이벤트**
+**예 1 - 활동을 렌더링한 후 `decisioning.propositionDisplay` 이벤트를 추적합니다**
 
 ```javascript
 alloy("sendEvent", {
@@ -559,7 +560,7 @@ alloy("sendEvent", {
 });
 ```
 
-**예제 2 - 추적 a `decisioning.propositionInteract` 클릭 지표가 발생한 후 이벤트**
+**예 2 - 클릭 지표가 발생한 후 `decisioning.propositionInteract` 이벤트를 추적합니다**
 
 ```javascript
 alloy("sendEvent", {
@@ -608,10 +609,10 @@ alloy("sendEvent", {
 
 [추가 정보](../rendering-personalization-content.md#manually-rendering-content)
 
-**예제 3 - 작업을 수행한 후 실행된 이벤트 추적**
+**예 3 - 작업을 수행한 후 실행된 이벤트 추적**
 
 이 예제는 버튼을 클릭하는 등의 특정 작업을 수행한 후 실행된 이벤트를 추적합니다.
-다음을 통해 사용자 지정 매개 변수를 추가할 수 있습니다. `__adobe.target` 데이터 개체로 식별됩니다.
+`__adobe.target` 데이터 개체를 통해 사용자 지정 매개 변수를 추가할 수 있습니다.
 
 ```js
 //replicates an at.js trackEvent call
@@ -633,7 +634,7 @@ alloy("sendEvent", {
 
 ### at.js 사용
 
-사용 `adobe.target.triggerView` 함수. 이 함수는 새 페이지를 로드할 때마다 또는 페이지의 구성 요소가 다시 렌더링될 때 호출할 수 있습니다. 시각적 경험 작성기(VEC)를 사용하여 A/B 테스트 및 경험 타깃팅(XT) 활동을 만들려면 단일 페이지 애플리케이션(SPA)에 대해 adobe.target.triggerView()를 구현해야 합니다. 사이트에서 adobe.target.triggerView()가 구현되지 않으면 SPA에 VEC를 활용할 수 없습니다.
+`adobe.target.triggerView` 함수를 사용합니다. 이 함수는 새 페이지를 로드할 때마다 또는 페이지의 구성 요소가 다시 렌더링될 때 호출할 수 있습니다. 시각적 경험 작성기(VEC)를 사용하여 A/B 테스트 및 경험 타깃팅(XT) 활동을 만들려면 단일 페이지 애플리케이션(SPA)에 대해 adobe.target.triggerView()를 구현해야 합니다. 사이트에서 adobe.target.triggerView()가 구현되지 않으면 SPA에 VEC를 활용할 수 없습니다.
 
 **예**
 
@@ -646,7 +647,7 @@ adobe.target.triggerView("homeView")
 
 ### Web SDK 사용
 
-단일 페이지 응용 프로그램을 트리거하거나 신호를 보내려면 `web.webPageDetails.viewName` 아래 속성 `xdm` 옵션 `sendEvent` 명령입니다. 웹 SDK는 다음에 대한 오퍼가 있는 경우 보기 캐시를 확인합니다. `viewName` 에 지정됨 `sendEvent` 그러면 페이지가 실행되고 디스플레이 알림 이벤트가 전송됩니다.
+단일 페이지 응용 프로그램 보기 변경을 트리거하거나 신호를 보내려면 `sendEvent` 명령의 `xdm` 옵션 아래에 `web.webPageDetails.viewName` 속성을 설정합니다. Web SDK는 보기 캐시를 검사합니다. `sendEvent`에 지정된 `viewName`에 대한 오퍼가 있으면 이 오퍼를 실행하고 표시 알림 이벤트를 보냅니다.
 
 **예**
 
@@ -667,7 +668,7 @@ alloy("sendEvent", {
 
 ## 응답 토큰 활용 방법
 
-Adobe Target에서 반환된 개인화 컨텐츠에는 다음이 포함됩니다 [응답 토큰](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html): 활동, 오퍼, 경험, 사용자 프로필, 지역 정보 등에 대한 세부 사항입니다. 이러한 세부 정보는 서드파티 도구와 공유하거나 디버깅에 사용할 수 있습니다. Adobe Target 사용자 인터페이스에서 응답 토큰을 구성할 수 있습니다.
+Adobe Target에서 반환된 Personalization 콘텐츠에는 활동, 오퍼, 경험, 사용자 프로필, 지역 정보 등에 대한 세부 정보인 [응답 토큰](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)이 포함됩니다. 이러한 세부 정보는 서드파티 도구와 공유하거나 디버깅에 사용할 수 있습니다. Adobe Target 사용자 인터페이스에서 응답 토큰을 구성할 수 있습니다.
 
 ### at.js 사용
 
@@ -690,7 +691,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >Platform Web SDK 버전 2.6.0 이상을 사용 중인지 확인하십시오.
 
-응답 토큰은 `propositions` 의 결과에 노출되어 있는 `sendEvent` 명령입니다. 각 제안에는 다음 배열이 포함됩니다 `items`, 각 항목에는 `meta` Target 관리 UI에서 활성화된 경우 응답 토큰으로 채워진 개체입니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
+응답 토큰은 `sendEvent` 명령의 결과에 노출된 `propositions`의 일부로 반환됩니다. 각 제안에는 `items`의 배열이 포함되어 있으며 Target 관리 UI에서 응답 토큰이 활성화된 경우 각 항목에는 응답 토큰으로 채워진 `meta` 개체가 있습니다. [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 **예**
 
@@ -733,10 +734,11 @@ alloy("sendEvent", {
 
 ### at.js 사용
 
-at.js를 사용하여 를 설정하여 플리커를 관리할 수 있습니다 `bodyHidingEnabled: true` 따라서 at.js는 DOM 변경 사항을 가져오고 적용하기 전에 개인화된 컨테이너를 미리 숨기는 것을 담당합니다.
-개인화된 콘텐츠가 포함된 페이지 섹션은 at.js를 재정의하여 사전에 숨길 수 있습니다 `bodyHiddenStyle`.
-기본적으로 `bodyHiddenStyle` 전체 HTML 숨기기 `body`.
-두 설정 모두 다음을 사용하여 재정의할 수 있습니다. `window.targetGlobalSettings`. `window.targetGlobalSettings` 는 at.js를 로드하기 전에 배치해야 합니다.
+at.js를 사용하면 at.js가 처리할 수 있도록 `bodyHidingEnabled: true`을(를) 설정하여 플리커를 관리할 수 있습니다.
+dom 변경 사항을 가져오고 적용하기 전에 개인화된 컨테이너를 미리 숨깁니다.
+at.js `bodyHiddenStyle`을(를) 재정의하여 개인화된 콘텐츠가 포함된 페이지 섹션을 미리 숨길 수 있습니다.
+기본적으로 `bodyHiddenStyle`은(는) 전체 HTML `body`을(를) 숨깁니다.
+두 설정 모두 `window.targetGlobalSettings`을(를) 사용하여 재정의할 수 있습니다. at.js를 로드하기 전에 `window.targetGlobalSettings`을(를) 배치해야 합니다.
 
 ### Web SDK 사용
 
@@ -776,9 +778,9 @@ at.js를 사용하여 지원되는 A4T 로깅에는 두 가지 유형이 있습�
 
 #### Analytics 클라이언트측 로깅
 
-**예제 1: Target 전역 설정 사용**
+**예 1: Target 전역 설정 사용**
 
-Analytics 클라이언트측 로깅은 다음을 설정하여 활성화할 수 있습니다. `analyticsLogging: client_side` at.js 설정에서 또는 `window.targetglobalSettings` 개체.
+Analytics 클라이언트 측 로깅은 at.js 설정에서 `analyticsLogging: client_side`을(를) 설정하거나 `window.targetglobalSettings` 개체를 재정의하여 사용할 수 있습니다.
 이 옵션이 설정되면 반환되는 페이로드의 형식은 다음과 같습니다.
 
 ```json
@@ -794,7 +796,7 @@ Analytics 클라이언트측 로깅은 다음을 설정하여 활성화할 수 �
 
 그런 다음 데이터 삽입 API를 통해 페이로드를 Analytics에 전달할 수 있습니다.
 
-예제 2: 구성 `getOffers` 함수:
+예제 2: 모든 `getOffers` 함수에서 구성:
 
 ```javascript
 adobe.target.getOffers({
@@ -846,14 +848,14 @@ adobe.target.getOffers({
 }
 ```
 
-Analytics 페이로드(`tnta` token)은 다음을 사용하여 Analytics 히트에 포함해야 합니다. [데이터 삽입 API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+Analytics 페이로드(`tnta` 토큰)는 [데이터 삽입 API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)를 사용하여 Analytics 히트에 포함해야 합니다.
 
 #### Analytics 서버측 로깅
 
-Analytics 서버측 로깅은 다음을 설정하여 활성화할 수 있습니다. `analyticsLogging: server_side` at.js 설정에서 또는 `window.targetglobalSettings` 개체.
+Analytics Server Side 로깅은 at.js 설정에서 `analyticsLogging: server_side`을(를) 설정하거나 `window.targetglobalSettings` 개체를 재정의하여 사용할 수 있습니다.
 그런 다음 데이터는 다음과 같이 흐릅니다.
 
-![Analytics 서버측 로깅 워크플로우를 보여 주는 다이어그램](assets/a4t-server-side-atjs.png)
+![Analytics 서버측 로깅 워크플로를 보여 주는 다이어그램](assets/a4t-server-side-atjs.png)
 
 [자세히 알아보기](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
@@ -868,10 +870,10 @@ Web SDK는 또한 다음을 지원합니다.
 
 해당 DataStream 구성에 대해 Adobe Analytics이 비활성화된 경우 Analytics 클라이언트 측 로깅이 활성화됩니다.
 
-![Analytics 클라이언트측 로깅 워크플로우를 보여 주는 다이어그램](assets/analytics-disabled-datastream-config.png)
+![Analytics 클라이언트 측 로깅 워크플로를 보여 주는 다이어그램](assets/analytics-disabled-datastream-config.png)
 
-고객은 Analytics 토큰( )에 액세스할 수 있습니다.`tnta`)을 사용하여 Analytics와 공유해야 합니다. [데이터 삽입 API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
-을(를) 연결하여 `sendEvent` 결과 제안 배열을 명령하고 반복합니다.
+고객은 [데이터 삽입 API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)를 사용하여 Analytics와 공유해야 하는 Analytics 토큰(`tnta`)에 액세스할 수 있습니다
+에서 `sendEvent` 명령을 체인화하고 결과 제안 배열을 반복합니다.
 
 **예**
 
@@ -912,9 +914,10 @@ alloy("sendEvent", {
 
 해당 데이터 스트림 구성에 대해 Analytics가 활성화되면 Analytics Server Side 로깅이 활성화됩니다.
 
-![Analytics 설정을 표시하는 데이터 스트림 UI입니다.](assets/analytics-enabled-datastream-config.png)
+Analytics 설정을 표시하는 ![데이터스트림 UI.](assets/analytics-enabled-datastream-config.png)
 
-Server Side Analytics 로깅을 활성화한 경우 Analytics 보고에서 올바른 노출 횟수 및 전환을 표시하도록 Analytics와 공유해야 하는 A4T 페이로드를 Edge Network 수준에서 공유하므로 고객이 추가 처리를 수행할 필요가 없습니다.
+서버측 분석 로깅을 활성화한 경우 Analytics 보고가 표시되도록 Analytics와 공유해야 하는 A4T 페이로드가 표시됩니다
+정확한 노출 횟수 및 전환 횟수는 Edge Network 수준에서 공유되므로 고객이 추가 처리를 하지 않아도 됩니다.
 
 다음은 Server Side Analytics 로깅이 활성화된 경우 데이터가 시스템으로 유입되는 방식입니다.
 
@@ -924,7 +927,7 @@ Server Side Analytics 로깅을 활성화한 경우 Analytics 보고에서 올�
 
 ### at.js 사용
 
-Target Standard/Premium UI에서 설정을 구성하거나 REST API를 사용하는 대신 `window.targetGlobalSettings`를 사용하여 at.js 라이브러리의 설정을 재정의할 수 있습니다.
+Target Standard/Premium UI에서 설정을 구성하거나 REST API를 사용하는 대신 `window.targetGlobalSettings`을(를) 사용하여 at.js 라이브러리의 설정을 재정의할 수 있습니다.
 
 at.js가 로드되기 전에 또는 관리 > 구현 > at.js 설정 편집 > 코드 설정 > 라이브러리 헤더에서 재정의를 정의해야 합니다.
 
@@ -983,7 +986,7 @@ adobe.target.getOffers({
 
 ### Web SDK 사용
 
-Target 프로필을 업데이트하려면 `sendEvent` 명령 및 설정 `data.__adobe.target` 속성, 키 이름 접두사 사용 `profile`.
+Target 프로필을 업데이트하려면 `sendEvent` 명령을 사용하고 `data.__adobe.target` 속성을 설정하여 `profile`을(를) 사용하여 키 이름 앞에 추가합니다.
 
 **예**
 
@@ -1043,7 +1046,7 @@ adobe.target.getOffers({
 
 ### Web SDK 사용
 
-권장 사항 데이터를 보내려면 `sendEvent` 명령 및 설정 `data.__adobe.target` 속성, 키 이름 접두사 사용 `entity`.
+권장 사항 데이터를 보내려면 `sendEvent` 명령을 사용하고 `data.__adobe.target` 속성을 설정하여 `entity`을(를) 사용하여 키 이름 앞에 추가합니다.
 
 **예**
 
@@ -1065,7 +1068,7 @@ alloy("sendEvent", {
 
 ### at.js 사용
 
-at.js를 사용하는 여러 가지 방법으로 보낼 수 있습니다 `mbox3rdPartyId`, 사용 `getOffer` 또는 `getOffers`:
+at.js를 사용하여 `mbox3rdPartyId`을(를) 보내고 `getOffer` 또는 `getOffers`을(를) 사용하는 방법은 여러 가지가 있습니다.
 
 **예 1**
 
@@ -1097,10 +1100,10 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-또는 다음을 설정하는 방법이 있습니다. `mbox3rdPartyId` 다음 중 하나 `targetPageParams` 또는 `targetPageParamsAll`.
-설정 시 `targetPageParams`, 다음에 대한 요청에서 전송됩니다. `target-global-mbox` (으)로도 알려짐) `pag-lLoad`.
-권장 사항은 다음을 사용하여 설정해야 합니다. `targetPageParamsAll` 모든 target 요청에서 전송됩니다.
-사용의 이점 `targetPageParamsAll` 다음을 정의할 수 있습니다. `mbox3rdPartyId` 페이지에서 를 한 번 클릭하면 모든 target 요청에 권한이 부여됩니다 `mbox3rdPartyId`.
+또는 `targetPageParams` 또는 `targetPageParamsAll`에서 `mbox3rdPartyId`을(를) 설정하는 방법이 있습니다.
+`targetPageParams`에서 설정하면 `pag-lLoad`이라고도 하는 `target-global-mbox`에 대한 요청에서 전송됩니다.
+권장 사항은 모든 대상 요청에서 전송되므로 `targetPageParamsAll`을(를) 사용하여 설정됩니다.
+`targetPageParamsAll`을(를) 사용하면 페이지에서 `mbox3rdPartyId`을(를) 한 번 정의할 수 있으므로 모든 대상 요청에 올바른 `mbox3rdPartyId`이(가) 있는지 확인할 수 있습니다.
 
 ```javascript
 window.targetPageParamsAll = function() {
@@ -1122,13 +1125,13 @@ window.targetPageParams = function() {
 
 ### Web SDK 사용
 
-Web SDK는 Target 타사 ID를 지원합니다. 그러나 몇 가지 단계가 더 필요합니다. 해결책을 찾기 전에, 우리는 그것에 대해 조금 이야기 해야 한다 `identityMap`.
+Web SDK는 Target 타사 ID를 지원합니다. 그러나 몇 가지 단계가 더 필요합니다. 해결 방법을 찾기 전에 `identityMap`에 대해 잠시 이야기해야 합니다.
 ID 맵을 사용하면 여러 ID를 보낼 수 있습니다. 모든 ID는 네임스페이스가 지정됩니다. 각 네임스페이스에는 하나 이상의 ID가 있을 수 있습니다. 특정 ID를 기본 ID로 표시할 수 있습니다.
 이 지식을 바탕으로 Target 타사 ID를 사용하도록 웹 SDK를 설정하는 데 필요한 단계를 확인할 수 있습니다.
 
 1. 데이터 스트림 구성 페이지에서 Target 타사 ID를 포함할 네임스페이스를 설정합니다.
 
-![Target 타사 ID 네임스페이스 필드를 표시하는 데이터 스트림 UI](assets/mbox-3-party-id-setup.png)
+![Target 타사 ID 네임스페이스 필드를 표시하는 데이터스트림 UI](assets/mbox-3-party-id-setup.png)
 
 1. 다음과 같이 모든 sendEvent 명령에 해당 ID 네임스페이스를 보냅니다.
 
@@ -1152,7 +1155,7 @@ alloy("sendEvent", {
 
 ### at.js 사용
 
-at.js를 사용하면 두 가지 방법으로 속성 토큰을 설정할 수 있습니다 `targetPageParams` 또는 `targetPageParamsAll`. 사용 `targetPageParams` 속성 토큰을 `target-global-mbox` 호출하지만 사용 `targetPageParamsAll` 모든 target 호출에 토큰을 추가합니다.
+at.js를 사용하여 속성 토큰을 설정하는 방법에는 `targetPageParams` 또는 `targetPageParamsAll`을 사용하는 두 가지가 있습니다. `targetPageParams`을(를) 사용하면 속성 토큰이 `target-global-mbox` 호출에 추가되지만 `targetPageParamsAll`을(를) 사용하면 토큰이 모든 대상 호출에 추가됩니다.
 
 **예 1**
 
@@ -1177,14 +1180,14 @@ window.targetPageParams = function() {
 ### Web SDK 사용
 
 고객은 Web SDK를 사용하여 데이터스트림 구성을 설정할 때 Adobe Target 네임스페이스 아래에 있는 속성을 더 높은 수준에서 설정할 수 있습니다.
-![Adobe Target 설정을 보여 주는 데이터 스트림 UI입니다.](assets/at-property-setup.png)
+![Adobe Target 설정을 표시하는 데이터스트림 UI.](assets/at-property-setup.png)
 즉, 특정 데이터 스트림 구성에 대한 모든 Target 호출에 해당 속성 토큰이 포함됩니다.
 
 ## mbox를 미리 가져오는 방법
 
 ### at.js 사용
 
-이 기능은 at.js 2.x에서만 사용할 수 있습니다. at.js 2.x에는 라는 새 함수가 있습니다. `getOffers`. `getOffers` 고객이 하나 이상의 mbox에 대해 콘텐츠를 미리 가져올 수 있도록 허용합니다. 다음은 한 예입니다.
+이 기능은 at.js 2.x에서만 사용할 수 있습니다. at.js 2.x에는 이름이 `getOffers`인 새 함수가 있습니다. `getOffers`을(를) 통해 고객은 하나 이상의 mbox에 대한 콘텐츠를 미리 가져올 수 있습니다. 다음은 한 예입니다.
 
 ```javascript
 adobe.target.getOffers({
@@ -1207,7 +1210,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-참고: 다음을 수행하는 것이 좋습니다. `mbox` 다음에서 `mboxes` 배열에는 자체 인덱스가 있습니다. 일반적으로 첫 번째 mbox에는 `index=0`, 다음 항목 `index=1`등
+참고: `mboxes` 배열의 모든 `mbox`에 자체 인덱스가 있는지 확인하는 것이 좋습니다. 일반적으로 첫 번째 mbox에는 `index=0`, 다음 mbox에는 `index=1` 등이 있습니다.
 
 ### Web SDK 사용
 
@@ -1221,16 +1224,16 @@ At.js는 다음 디버깅 기능을 노출합니다.
 
 * Mbox 비활성화 - Target을 가져오고 렌더링하지 않도록 비활성화하여 페이지가 Target 상호 작용 없이 중단되었는지 확인
 * Mbox 디버그 - at.js는 모든 작업을 기록합니다.
-* Target 추적 - Bullseye에서 생성된 mbox 추적 토큰을 사용하면 의사 결정 프로세스에 참여한 세부 사항이 있는 추적 개체를 다음에서 사용할 수 있습니다. `window.___target_trace` 오브젝트
+* 대상 추적 - Bullseye에서 생성된 mbox 추적 토큰을 사용하면 `window.___target_trace` 개체에서 의사 결정 프로세스에 참여한 세부 정보가 포함된 추적 개체를 사용할 수 있습니다.
 
-참고: 이러한 모든 디버깅 기능은에서 향상된 기능을 통해 사용할 수 있습니다. [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+참고: 이러한 모든 디버깅 기능은 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)의 향상된 기능으로 사용할 수 있습니다
 
 ### Web SDK 사용
 
 Web SDK를 사용할 때 여러 디버깅 기능을 사용할 수 있습니다.
 
-* 사용 [보증](/help/assurance/home.md)
+* [보증](/help/assurance/home.md) 사용
 * [웹 SDK 디버그 활성화됨](/help/web-sdk/use-cases/debugging.md)
-* 사용 [Web SDK 모니터링 후크](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* 사용 [Adobe Experience Platform Debugger](/help/debugger/home.md)
+* [웹 SDK 모니터링 후크 사용](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
+* [Adobe Experience Platform Debugger](/help/debugger/home.md) 사용
 * 대상 추적

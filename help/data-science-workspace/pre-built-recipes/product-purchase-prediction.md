@@ -6,8 +6,8 @@ description: '제품 구매 예측 레시피를 사용하면 특정 유형의 �
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 6%
+source-wordcount: '392'
+ht-degree: 5%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 6%
 
 ## 데이터 스키마
 
-이 레시피는 다음을 사용합니다. [XDM 스키마](../../xdm/home.md) 를 클릭하여 데이터를 모델링합니다. 이 레시피에 사용되는 스키마는 아래에 표시되어 있습니다.
+이 레시피는 [XDM 스키마](../../xdm/home.md)를 사용하여 데이터를 모델링합니다. 이 레시피에 사용되는 스키마는 아래에 표시되어 있습니다.
 
 | 필드 이름 | 유형 |
 | --- | --- |
@@ -56,6 +56,6 @@ ht-degree: 6%
 
 ## 알고리즘
 
-먼저, 의 교육 데이터 세트 *제품 예측* 스키마가 로드되었습니다. 여기에서 모델은 다음을 사용하여 교육됩니다. [랜덤 포레스트 분류자](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). 랜덤 포레스트 분류기는 개선된 예측 성능을 얻기 위해 다수의 알고리즘을 결합하는 알고리즘을 가리키는, 일종의 혼재 알고리즘이다. 알고리즘 이면의 아이디어는 랜덤 포레스트 분류기가 여러 개의 결정 트리를 작성하고 병합하여 보다 정확하고 안정적인 예측을 만든다는 것이다.
+먼저 *ProductPrediction* 스키마의 교육 데이터 세트가 로드됩니다. 여기서 모델은 [랜덤 포리스트 분류기](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)를 사용하여 학습됩니다. 랜덤 포레스트 분류기는 개선된 예측 성능을 얻기 위해 다수의 알고리즘을 결합하는 알고리즘을 가리키는, 일종의 혼재 알고리즘이다. 알고리즘 이면의 아이디어는 랜덤 포레스트 분류기가 여러 개의 결정 트리를 작성하고 병합하여 보다 정확하고 안정적인 예측을 만든다는 것이다.
 
 이 프로세스는 트레이닝 데이터의 하위 집합을 무작위로 선택하는 결정 트리의 세트를 생성하는 것으로 시작한다. 이후 각 의사 결정 트리에 대한 결과를 평균한다.

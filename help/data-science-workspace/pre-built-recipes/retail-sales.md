@@ -6,7 +6,7 @@ description: 소매 판매 레시피를 사용하여 특정 기간 동안 초기
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '580'
 ht-degree: 2%
 
 ---
@@ -30,13 +30,13 @@ ht-degree: 2%
 
 ## 시작하려면 어떻게 해야 합니까?
 
-다음을 수행하여 시작할 수 있습니다. [튜토리얼](../jupyterlab/create-a-model.md).
+이 [자습서](../jupyterlab/create-a-model.md)를 따라 시작할 수 있습니다.
 
 이 튜토리얼에서는 Jupyter Notebook에서 소매 판매 레시피를 만들고, Notebook을 사용하여 Adobe Experience Platform에서 레시피를 만드는 레시피 워크플로우를 살펴봅니다.
 
 ## 데이터 스키마
 
-이 레시피는 다음을 사용합니다. [XDM 스키마](../../xdm/schema/field-dictionary.md) 를 클릭하여 데이터를 모델링합니다. 이 레시피에 사용되는 스키마는 아래에 표시되어 있습니다.
+이 레시피는 [XDM 스키마](../../xdm/schema/field-dictionary.md)를 사용하여 데이터를 모델링합니다. 이 레시피에 사용되는 스키마는 아래에 표시되어 있습니다.
 
 | 필드 이름 | 유형 |
 | --- | --- |
@@ -55,7 +55,7 @@ ht-degree: 2%
 
 ## 알고리즘
 
-먼저, 의 교육 데이터 세트 *DSWRetailSales* 스키마가 로드되었습니다. 여기에서 모델은 다음을 사용하여 교육됩니다. [그레이디언트 부스팅 회귀 알고리즘](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). 그레이디언트 부스팅은 약한 학습자(무작위 찬스보다 적어도 약간 나은 학습자)가 이전의 학습자의 약점을 개선하는 데 초점을 맞춘 학습자의 연속을 형성할 수 있다는 아이디어를 사용한다. 이들을 함께 사용하여 강력한 예측 모델을 만들 수 있습니다.
+먼저 *DSWRetailSales* 스키마의 교육 데이터 세트가 로드됩니다. 여기서 모델은 [그라데이션 부스팅 회귀 알고리즘](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)을 사용하여 학습됩니다. 그레이디언트 부스팅은 약한 학습자(무작위 찬스보다 적어도 약간 나은 학습자)가 이전의 학습자의 약점을 개선하는 데 초점을 맞춘 학습자의 연속을 형성할 수 있다는 아이디어를 사용한다. 이들을 함께 사용하여 강력한 예측 모델을 만들 수 있습니다.
 
 이 과정은 손실 함수, 약한 학습자, 가산 모형의 세 가지 요소를 포함한다.
 

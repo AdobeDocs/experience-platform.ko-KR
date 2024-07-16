@@ -4,14 +4,14 @@ description: Adobe Experience Platform의 일반 Analytics 플러그인 태그 �
 exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '352'
 ht-degree: 55%
 
 ---
 
 # 일반 Analytics 플러그인 릴리스 노트
 
-## 2022년 6월 03일
+## 2022년 6월 3일
 
 ### 일반 Analytics 플러그인 확장 프로그램 3.0.7
 

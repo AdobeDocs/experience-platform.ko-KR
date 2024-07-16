@@ -15,7 +15,7 @@ ht-degree: 1%
 
 여러 기본 제공 Spark SQL 함수를 사용하여 Adobe Experience Platform Query Service로 SQL 기능을 확장할 수 있습니다. 이 문서에서는 쿼리 서비스에서 지원하는 Spark SQL 함수를 나열합니다.
 
-구문, 사용 방법 및 예를 포함하여 함수에 대한 자세한 내용은 [Spark SQL 함수 설명서](https://spark.apache.org/docs/latest/api/sql/index.html).
+구문, 사용 방법, 예제 등 함수에 대한 자세한 내용은 [Spark SQL 함수 설명서](https://spark.apache.org/docs/latest/api/sql/index.html)를 참조하십시오.
 
 >[!NOTE]
 >
@@ -96,10 +96,10 @@ ht-degree: 1%
 | ----------------- | ----------- |
 | [`!`](https://spark.apache.org/docs/latest/api/sql/index.html#_1) 또는 [`not`](https://spark.apache.org/docs/latest/api/sql/index.html#not) | 논리적 아님 |
 | [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | 보다 작음 |
-| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | 작거나 같음 |
+| [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | 보다 작거나 같음 |
 | [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | 다음과 같음 |
 | [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | 보다 큼 |
-| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | 크거나 같음 |
+| [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | 보다 크거나 같음 |
 | [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | 비트 전용 또는 |
 | [`\|`](https://spark.apache.org/docs/latest/api/sql/index.html#_17) | 비트 OR |
 | [`~`](https://spark.apache.org/docs/latest/api/sql/index.html#_19) | 비트 아님 |
@@ -139,8 +139,8 @@ ht-degree: 1%
 | [`next_day`](https://spark.apache.org/docs/latest/api/sql/index.html#next_day) | 입력보다 1일 늦게 반환 |
 | [`quarter`](https://spark.apache.org/docs/latest/api/sql/index.html#quarter) | 입력의 사분기를 반환합니다. |
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | 문자열의 초 반환 |
-| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | 문자열을 날짜로 변환합니다. **참고:** 문자열 **필수** 형식이어야 합니다. `yyyy-mm-ddTHH24:MM:SS`. |
-| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | 문자열을 타임스탬프로 변환합니다. **참고:** 문자열 **필수** 형식이어야 합니다. `yyyy-mm-ddTHH24:MM:SS`. |
+| [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | 문자열을 날짜로 변환합니다. **참고:** 문자열 **must**&#x200B;은(는) `yyyy-mm-ddTHH24:MM:SS` 형식입니다. |
+| [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | 문자열을 타임스탬프로 변환합니다. **참고:** 문자열 **must**&#x200B;은(는) `yyyy-mm-ddTHH24:MM:SS` 형식입니다. |
 | [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | 문자열을 UNIX® 타임스탬프로 변환합니다. |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | 문자열을 UTC 타임스탬프로 변환 |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | 날짜 자르기 |
@@ -250,7 +250,7 @@ ht-degree: 1%
 | [`concat_ws`](https://spark.apache.org/docs/latest/api/sql/index.html#concat_ws) | 분리자와 연결 |
 | [`count`](https://spark.apache.org/docs/latest/api/sql/index.html#count) | 행의 총 개수 반환 |
 | [`decode`](https://spark.apache.org/docs/latest/api/sql/index.html#decode) | 문자 집합을 사용하여 디코딩 |
-| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | 반환 [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)번째 입력 |
+| [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)번째 입력 반환 |
 | [`encode`](https://spark.apache.org/docs/latest/api/sql/index.html#encode) | 문자 집합을 사용하여 인코딩 |
 | [`first`](https://spark.apache.org/docs/latest/api/sql/index.html#first), [`first_value`](https://spark.apache.org/docs/latest/api/sql/index.html#first_value) | 첫 번째 값 반환 |
 | [`grouping`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping) | 열이 그룹화되었는지 보여 줍니다. |
@@ -259,7 +259,7 @@ ht-degree: 1%
 | [`json_tuple`](https://spark.apache.org/docs/latest/api/sql/index.html#json_tuple) | JSON 입력에서 튜플 반환 |
 | [`lag`](https://spark.apache.org/docs/latest/api/sql/index.html#lag), [`lead`](https://spark.apache.org/docs/latest/api/sql/index.html#lead) | 오프셋 이전 값 반환 |
 | [`last`](https://spark.apache.org/docs/latest/api/sql/index.html#last), [`last_value`](https://spark.apache.org/docs/latest/api/sql/index.html#last_value) | 마지막 값 반환 |
-| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | 첫 번째 반환 [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) 자 |
+| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | 처음 [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)자를 반환합니다. |
 | [`length`](https://spark.apache.org/docs/latest/api/sql/index.html#length) | 문자열의 길이 반환 |
 | [`levenshtein`](https://spark.apache.org/docs/latest/api/sql/index.html#levenshtein) | 문자열 간 Levenshtein 거리 반환 |
 | [`locate`](https://spark.apache.org/docs/latest/api/sql/index.html#locate), [`position`](https://spark.apache.org/docs/latest/api/sql/index.html#position) | 하위 문자열의 첫 번째 발생 위치 반환 |
@@ -285,7 +285,7 @@ ht-degree: 1%
 | [`shiftright`](https://spark.apache.org/docs/latest/api/sql/index.html#shiftright) | 부호 있는 비트 시프트 오른쪽 |
 | [`shiftrightunsigned`](https://spark.apache.org/docs/latest/api/sql/index.html#shiftrightunsigned) | 부호 없는 비트 시프트 오른쪽 |
 | [`size`](https://spark.apache.org/docs/latest/api/sql/index.html#size) | 배열 크기 반환 |
-| [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | 다음을 사용하여 문자열 반환 [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) 공백 |
+| [`space`](https://spark.apache.org/docs/latest/api/sql/index.html#space) | [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)개의 공백이 있는 문자열 반환 |
 | [`split`](https://spark.apache.org/docs/latest/api/sql/index.html#split) | 문자열 분할 |
 | [`substring_index`](https://spark.apache.org/docs/latest/api/sql/index.html#substring_index) | 하위 문자열의 인덱스 반환 |
 | [`window`](https://spark.apache.org/docs/latest/api/sql/index.html#window) | 창 |

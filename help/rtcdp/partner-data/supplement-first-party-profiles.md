@@ -137,5 +137,5 @@ Commenting out links for now
 Real-Time CDP에서 파트너 데이터 지원을 통해 활성화된 추가 사용 사례를 살펴보십시오.
 
 * Real-Time CDP에서 서드파티 데이터 지원을 사용하여 [데이터 파트너의 잠재 고객 프로필로 프로필 기반을 확장하고 데이터 파트너와 협력하여 신규 고객에게 도달하거나 확보할 수 있습니다](/help/rtcdp/partner-data/prospecting.md).
-* [파트너 지원 방문자 인식을 사용하여 알 수 없는 방문자에 대한 온사이트 경험 개인화](/help/rtcdp/partner-data/onsite-personalization.md) 방문에서 사용자 인증이 없거나 브랜드와 이전 기록이 있는 경우.
-* [잠재 고객 프로필 및 잠재 고객 활성화 확장](/help/destinations/ui/activate-prospect-audiences.md) 대상을 선택합니다.
+* [파트너 지원 방문자 인식을 사용하여 알 수 없는 방문자에 대한 온사이트 경험을 개인화합니다](/help/rtcdp/partner-data/onsite-personalization.md) 방문에서 사용자 인증을 받지 않았거나 브랜드에 대한 이전 기록이 없는 경우.
+* 대상을 선택할 수 있도록 [잠재 고객 프로필 및 잠재 고객 활성화](/help/destinations/ui/activate-prospect-audiences.md)를 확장했습니다.

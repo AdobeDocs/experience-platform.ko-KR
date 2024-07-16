@@ -28,13 +28,13 @@ Adobe Real-Time CDP 대상자는 두 가지 방법으로 Magnite: Streaming Plat
 
 
 Magnite에 대한 자세한 내용은 아래를 계속 읽어 보십시오. 스트리밍 배치 대상, 연결 방법, 여기에 Adobe Real-Time CDP 대상자를 활성화하는 방법.
-실시간 대상에 대한 자세한 내용은 [이 문서](magnite-streaming.md) 대신,
+실시간 대상에 대한 자세한 내용은 대신 [이 문서](magnite-streaming.md)를 참조하십시오.
 
 >[!IMPORTANT]
 >
 >이 대상 커넥터는 베타 버전이며 일부 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
 >
->대상 커넥터 및 설명서 페이지는 [!DNL Magnite] 팀. 문의 사항이나 업데이트 요청은 다음 주소로 직접 문의하십시오. `adobe-tech@magnite.com`.
+>대상 커넥터 및 문서 페이지는 [!DNL Magnite] 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청이 있으면 `adobe-tech@magnite.com`(으)로 직접 연락하십시오.
 
 ## 사용 사례 {#use-cases}
 
@@ -54,15 +54,15 @@ Magnite Streaming을 통해 활성화된 모든 대상: 배치 대상은 배치/
 
 ## 전제 조건 {#prerequisites}
 
-Adobe Experience Platform에서 Magnite 대상을 사용하려면 먼저 Magnite 스트리밍 계정이 있어야 합니다. 다음 항목이 있는 경우: [!DNL Magnite Streaming] 계정, 다음으로 연락하십시오. [!DNL Magnite] 액세스하기 위해 자격 증명을 제공할 계정 관리자 [!DNL Magnite's] 대상. 이(가) 없는 경우 [!DNL Magnite Streaming] 계정, adobe-tech@magnite.com에 문의하십시오.
+Adobe Experience Platform에서 Magnite 대상을 사용하려면 먼저 Magnite 스트리밍 계정이 있어야 합니다. [!DNL Magnite Streaming] 계정이 있는 경우 [!DNL Magnite] 계정 관리자에게 연락하여 [!DNL Magnite's] 대상에 액세스하기 위한 자격 증명을 제공받으십시오. [!DNL Magnite Streaming] 계정이 없는 경우 adobe-tech@magnite.com에 문의하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
-Magnite 스트리밍: 배치 대상은 다음을 수신할 수 있습니다. *임의* Adobe CDP의 소스 식별 현재 이 대상에는 매핑할 Target ID 필드가 3개 있습니다.
+Magnite 스트리밍: 일괄 처리 대상은 Adobe CDP로부터 *모든* ID 소스를 받을 수 있습니다. 현재 이 대상에는 매핑할 Target ID 필드가 3개 있습니다.
 
 >[!NOTE]
 >
->*임의* id 소스는 magnite_deviceId 대상 ID 중 하나에 매핑할 수 있습니다.
+>*모든* ID 원본을 magnite_deviceId 대상 ID에 매핑할 수 있습니다.
 
 | 대상 ID | 설명 | 고려 사항 |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
@@ -76,8 +76,8 @@ Magnite 스트리밍: 배치 대상은 다음을 수신할 수 있습니다. *�
 
 | 대상자 원본 | 지원됨 | 설명 |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform을 통해 생성된 대상자 [세분화 서비스](../../../segmentation/home.md). |
-| 사용자 정의 업로드 | ✓ 덧신 | 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience) csv 파일에서 Experience Platform으로 변환했습니다. |
+| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Magnite 스트리밍: 배치 대상은 다음을 수신할 수 있습니다. *�
 | 항목 | 유형 | 참고 |
 |-----------------------------|----------|----------|
 | 내보내기 유형 | 대상자 내보내기 | Magnite Streaming: 배치 대상에 사용된 식별자(이름, 전화번호 또는 기타)로 대상자의 모든 구성원을 내보냅니다. |
-| 내보내기 빈도 | 배치 | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. 일괄 처리에 대해 자세히 알아보기 [파일 기반 대상](/help/destinations/destination-types.md). |
+| 내보내기 빈도 | 배치 | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. 일괄 처리 [파일 기반 대상](/help/destinations/destination-types.md)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -100,7 +100,7 @@ Adobe 경험 카탈로그에서 Magnite Streaming: 배치 대상을 찾습니다
 
 기존 계정이 이미 있는 경우 계정 유형 옵션을 &quot;기존 계정&quot;으로 변경하여 찾을 수 있습니다. 그렇지 않으면 아래에 계정을 만듭니다.
 
-새 계정을 만들고 처음으로 대상에 인증하려면 필수 &quot;S3 액세스 키&quot; 및 &quot;S3 비밀 키&quot; 필드(계정 관리자를 통해 제공됨)를 입력하고 다음을 선택합니다 **[!UICONTROL 대상에 연결]**
+새 계정을 만들고 처음으로 대상에 인증하려면 필수 &quot;S3 액세스 키&quot; 및 &quot;S3 비밀 키&quot; 필드(계정 관리자를 통해 제공됨)를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을 선택합니다.
 
 ![대상 구성 인증 필드가 비어 있음](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
 
@@ -112,47 +112,49 @@ Adobe 경험 카탈로그에서 Magnite Streaming: 배치 대상을 찾습니다
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
 
-* **[!UICONTROL 이름]**: 나중에 이 대상 연결/인스턴스를 인식하게 될 이름입니다.
-* **[!UICONTROL 설명]**: 나중에 이 대상 연결/인스턴스를 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 소스 파트너 이름]**: Magnite Streaming의 플랫폼에서 소스로 사용할 이름입니다
+* **[!UICONTROL 이름]**: 이 대상 연결/인스턴스를 인식할 이름입니다.
+미래.
+* **[!UICONTROL 설명]**: 이 항목을 식별하는 데 도움이 되는 설명입니다
+향후 대상 연결/인스턴스.
+* **[!UICONTROL 원본 파트너의 이름]**: Magnite Streaming의 플랫폼에서 원본으로 사용할 이름입니다.
 
-![대상 구성 인증 필드가 채워짐](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
+![대상 구성 인증 필드를 채웠습니다](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
 >[!NOTE]
 >
 >여러 ID 유형(GAID, IDFA 등)을 전송하려는 경우 배치 대상을 사용하는 경우 각각에 대해 새 대상 연결/인스턴스가 필요합니다. 자세한 내용은 Magnite 계정 담당자에게 문의하십시오.
 
-그런 다음 을 선택하여 진행할 수 있습니다. **[!UICONTROL 다음]**
+그런 다음 **[!UICONTROL 다음]**&#x200B;을 선택하여 계속할 수 있습니다.
 
 다음 화면인 &quot;거버넌스 정책 및 시행 작업(선택 사항)&quot;에서는 필요한 경우 관련 데이터 거버넌스 정책을 선택할 수 있습니다. &quot;데이터 내보내기&quot;는 일반적으로 Magnite 스트리밍 배치 대상에 대해 선택됩니다.
 
 ![선택적 거버넌스 정책 및 시행 작업](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
-선택한 후 또는 이 선택적 화면을 건너뛰려면 다음을 선택합니다. **[!UICONTROL 만들기]**
+선택한 후 또는 이 선택적 화면을 건너뛰려면 **[!UICONTROL 만들기]**&#x200B;를 선택하세요.
 
 ### 경고 활성화 {#enable-alerts}
 
-경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 다음 안내서를 참조하십시오. [UI를 사용하여 대상 경고 구독](../../ui/alerts.md).
+경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
-대상 연결에 대한 세부 정보를 제공했으면 을 선택합니다. **[!UICONTROL 다음]**.
+대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
 ### 이 대상에 대한 세그먼트 활성화 {#activate}
 
 >[!IMPORTANT]
 > 
->* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]**, 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
->* 내보내려면 *id*, 다음이 필요합니다. **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions). <br> ![워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다.](/help/destinations/assets/overview/export-identities-to-destination.png "워크플로우에서 강조 표시된 ID 네임스페이스를 선택하여 대상에 대한 대상자를 활성화합니다."){width="100" zoomable="yes"}
+>* 데이터를 활성화하려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 대상 활성화]**, **[!UICONTROL 프로필 보기]** 및 **[!UICONTROL 세그먼트 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
+>* *ID*&#x200B;을(를) 내보내려면 **[!UICONTROL ID 그래프 보기]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. <br> ![대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오.](/help/destinations/assets/overview/export-identities-to-destination.png "대상자를 대상으로 활성화하려면 워크플로에서 강조 표시된 ID 네임스페이스를 선택하십시오."){width="100" zoomable="yes"}
 
-읽기 [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](/help/destinations/ui/activate-batch-profile-destinations.md) 대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침
+대상 세그먼트를 이 대상으로 활성화하는 방법에 대한 지침은 [대상 데이터를 일괄 프로필 내보내기 대상으로 활성화](/help/destinations/ui/activate-batch-profile-destinations.md)를 참조하십시오.
 
 ### 속성 및 ID 매핑 {#map}
 
-다음에서 **[!UICONTROL Source 필드]**, 디바이스의 속성이나 id를 선택할 수 있습니다. 이 예제에서는 &quot;DeviceId&quot;라는 사용자 지정 IdentityMap을 선택했습니다
+**[!UICONTROL Source 필드]**에서 장치에 대한 특성이나 ID를 선택할 수 있습니다. 이 예제에서는 &quot;DeviceId&quot;라는 사용자 지정 IdentityMap을 선택했습니다
 ![원하는 데이터 필드를 device_id 필드에 매핑](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
-다음에서 **[!UICONTROL 대상 필드]**:
-![적절한 장치 유형 대상 id 선택](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) 다음을 참조하십시오 [지원되는 ID](#supported-identities) 추가 정보.
-이 예제에서는 **[!UICONTROL 대상 필드]**: magnite_deviceId_CUSTOM, 이유: **[!UICONTROL Source 필드]** 은(는) 사용자 지정 IdentityMap: DeviceID로 정의되었습니다.
+**[!UICONTROL 대상 필드]**에서:
+![적절한 장치 유형 대상 ID를 선택합니다](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) 자세한 내용은 [지원되는 ID](#supported-identities)를 참조하십시오.
+이 예제에서는 **[!UICONTROL Source 필드]**&#x200B;이(가) 사용자 지정 IdentityMap: DeviceID로 정의되어 있으므로 **[!UICONTROL Target 필드]**: magnite_deviceId_CUSTOM을 선택했습니다.
 
 >[!NOTE]
 >
@@ -167,7 +169,7 @@ Adobe 경험 카탈로그에서 Magnite Streaming: 배치 대상을 찾습니다
 >
 > 대상자에게 이전에 Magnite Streaming으로 알려진 기존 세그먼트 ID가 있는 경우 매핑 ID를 제공해야 합니다. 그렇지 않으면 &quot;없음&quot;을 매핑 ID로 사용해야 합니다.
 >
-> 각 대상에 대한 파일 이름을 구성할 때 추가할 &quot;사용자 지정 텍스트&quot; 필드를 통해 매핑 ID를 포함하십시오. 매핑 ID는 다음과 같이 추가됩니다. `{previous_filename}\_\[MAPPING_ID\].` 이 대상자가 Magnite Streaming을 처음 사용하는 경우 매핑 ID를 제공하지 않으면 &quot;사용자 정의 텍스트&quot; 필드에 &quot;없음&quot;을 입력해야 합니다. 이 경우 새 파일 이름은 다음과 같아야 합니다. `{previous_filename}\_\[NONE\]`.
+> 각 대상에 대한 파일 이름을 구성할 때 추가할 &quot;사용자 지정 텍스트&quot; 필드를 통해 매핑 ID를 포함하십시오. 매핑 ID가 `{previous_filename}\_\[MAPPING_ID\].`(으)로 추가됩니다. 이 대상자가 Magnite Streaming을 처음 사용하는 경우 매핑 ID를 제공하지 않을 경우 &quot;사용자 지정 텍스트&quot; 필드에 &quot;없음&quot;을 입력해야 합니다. 이 경우 새 파일 이름은 `{previous_filename}\_\[NONE\]`이어야 합니다.
 
 ## 내보낸 데이터/데이터 내보내기 유효성 검사 {#exported-data}
 
@@ -177,12 +179,12 @@ Adobe 경험 카탈로그에서 Magnite Streaming: 배치 대상을 찾습니다
 
 >[!NOTE]
 >
->Magnite 스트리밍 배치 대상으로 활성화/전달된 대상자는 *replace* Magnite Streaming Real-Time 대상을 통해 활성화/전달된 동일한 대상. 세그먼트 이름을 사용하여 세그먼트를 조회하는 경우 Magnite Streaming Platform에서 일괄 처리를 수집하고 처리할 때까지 실시간으로 세그먼트를 찾을 수 없습니다.
+>Magnite 스트리밍 일괄 처리 대상으로 활성화/전달된 대상은 Magnite 스트리밍 실시간 대상을 통해 활성화/전달된 동일한 대상을 *바꾸기*&#x200B;합니다. 세그먼트 이름을 사용하여 세그먼트를 조회하는 경우 Magnite Streaming Platform에서 일괄 처리를 수집하고 처리할 때까지 실시간으로 세그먼트를 찾을 수 없습니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
-모두 [!DNL Adobe Experience Platform] 대상은 데이터를 처리할 때 데이터 사용 정책을 준수합니다. 방법에 대한 자세한 정보 [!DNL Adobe Experience Platform] 데이터 거버넌스 적용, 다음을 읽습니다. [데이터 거버넌스 개요](/help/data-governance/home.md).
+데이터를 처리할 때 모든 [!DNL Adobe Experience Platform] 대상이 데이터 사용 정책을 준수합니다. [!DNL Adobe Experience Platform]에서 데이터 거버넌스를 적용하는 방법에 대한 자세한 내용은 [데이터 거버넌스 개요](/help/data-governance/home.md)를 참조하십시오.
 
 ## 추가 리소스 {#additional-resources}
 
-추가 도움말 설명서를 보려면 [매그나이트 도움말 센터](https://help.magnite.com/help).
+추가 도움말 문서를 보려면 [Magnite 도움말 센터](https://help.magnite.com/help)를 방문하세요.

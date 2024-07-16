@@ -4,8 +4,8 @@ description: Adobe Experience Platform의 AEM Asset Insights 태그 확장에 �
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 79%
+source-wordcount: '1062'
+ht-degree: 77%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 이 확장은 [AEM 자산 통찰력](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)과 함께 사용됩니다. 보다 구체적으로 설명하면 &quot;pageTracker&quot; 프로세스 및 포함 코드를 대체합니다. 구성된 경우, 이 확장은 자산 *노출* 및 *클릭* 지표를 Adobe Analytics로 전송하며 해당 지표는 이후 AEM 자산 통찰력 보고서로 가져옵니다. 그런 다음 AEM 자산 통찰력 또는 Adobe Analytics Project Workspaces를 사용하여 자산 지표를 보고할 수 있습니다.
 
@@ -24,40 +24,40 @@ ht-degree: 79%
 Analytics의 AEM 자산 보고서에는 세 개의 AEM 차원이 포함됩니다.
 
 * 자산 ID
-* 자산 소스
+* 에셋 Source
 * 클릭한 자산
 
 다음 두 가지 지표도 있습니다.
 * 자산 노출 횟수
 * 자산 클릭 수.
 
-이러한 보고서는 Analytics 관리자를 사용하여 활성화해야 합니다( 선택 **[!UICONTROL 분석] > [!UICONTROL 관리자] > [!UICONTROL 보고서 세트] > `<report suite>` > [!UICONTROL 설정 편집] > [!UICONTROL AEM] > [!UICONTROL AEM Assets 보고]**)를 입력하면 이 확장을 사용하여 값을 채울 수 있습니다.
+이 확장을 사용하여 이러한 보고서를 채우려면 Analytics 관리자(**[!UICONTROL Analytics] > [!UICONTROL 관리자] > [!UICONTROL 보고서 세트] > `<report suite>` > [!UICONTROL 설정 편집] > [!UICONTROL AEM] > [!UICONTROL AEM Assets 보고]** 선택)를 사용하여 이를 활성화해야 합니다.
 
-&quot;*Adobe Analytics*&quot;Adobe Experience Platform용 태그 확장은 동일한 웹 속성에 설치해야 합니다.
+Adobe Experience Platform용 &quot;*Adobe Analytics*&quot; 태그 확장은 동일한 웹 속성에 설치해야 합니다.
 
 ### AEM(Adobe Experience Manager)
 
-1. [AEM 자산 통찰력](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)을 사용합니다. AEM에서 다음을 선택합니다. **[!UICONTROL 도구 > 에셋]**&#x200B;을(를) 열고 **[!UICONTROL Insights 구성]** 패널.
+1. [AEM 자산 통찰력](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html)을 사용합니다. AEM에서 **[!UICONTROL 도구 > Assets]**&#x200B;을 선택한 다음 **[!UICONTROL Insights 구성]** 패널을 엽니다.
 
 1. UUID 추적을 비활성화합니다. 
 
    >[!IMPORTANT]
    >
-   >이 확장은 *아님* AEM 자산 구성 설정인 경우 함수 **[!UICONTROL UUID 추적 비활성화]** 이(가) 선택되었습니다. 기본적으로 선택되어 있지 않습니다.
+   >AEM Asset 구성 설정 **[!UICONTROL UUID 추적 비활성화]**&#x200B;를 선택한 경우 이 확장은 *not* 함수가 됩니다. 기본적으로 선택되어 있지 않습니다.
 
    ![UUID 추적 비활성화](images/disableassets.jpg)
 
 ## AEM(Adobe Experience Manager) 구성
 
-이 섹션에서는 Adobe Experience Platform에서 태그를 사용하여 AEM을 구성하는 방법, AEM에서 자산 통찰력을 활성화하는 방법 및 자산에 대해 UUID 추적을 활성화하는 방법에 대해 설명합니다.
+이 섹션에서는 Adobe Experience Platform에서 태그를 사용하여 AEM을 구성하는 방법, AEM에서 Asset Insight를 활성화하는 방법 및 Assets에 대해 UUID 추적을 활성화하는 방법에 대해 설명합니다.
 
 ### 태그와 AEM 통합
 
-Adobe Experience Manager와 [Platform ](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)의 권장 통합은 Adobe I/O를 통해 수행됩니다.
+Adobe Experience Manager과 [Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)의 권장 통합은 Adobe I/O을 통해 수행됩니다.
 
-1. [Adobe I/O을 사용하여 AEM과 태그 연결](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html).
+1. [Adobe I/O을 사용하여 태그와 AEM 연결](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html).
 
-2. [Adobe Experience Platform Cloud Service 구성 만들기](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html).
+2. [Adobe Experience Platform Cloud Service 구성을 만듭니다](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html).
 
 ### AEM에서 자산 통찰력 활성화
 

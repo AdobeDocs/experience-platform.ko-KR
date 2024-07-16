@@ -5,21 +5,21 @@ exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
 source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
 workflow-type: tm+mt
 source-wordcount: '474'
-ht-degree: 8%
+ht-degree: 1%
 
 ---
 
 # 감사 이벤트 엔드포인트
 
-감사 로그는 다양한 서비스 및 기능에 대한 사용자 활동의 세부 정보를 제공하는 데 사용됩니다. 로그에 기록된 각 작업에는 작업 유형, 날짜 및 시간, 작업을 수행한 사용자의 이메일 ID 및 작업 유형과 관련된 추가 속성을 나타내는 메타데이터가 포함됩니다. 다음 `/audit/events` 의 엔드포인트 [!DNL Audit Query] API를 사용하면 의 조직 활동에 대한 이벤트 데이터를 프로그래밍 방식으로 검색할 수 있습니다 [!DNL Platform].
+감사 로그는 다양한 서비스 및 기능에 대한 사용자 활동의 세부 정보를 제공하는 데 사용됩니다. 로그에 기록된 각 작업에는 작업 유형, 날짜 및 시간, 작업을 수행한 사용자의 이메일 ID 및 작업 유형과 관련된 추가 속성을 나타내는 메타데이터가 포함됩니다. [!DNL Audit Query] API의 `/audit/events` 끝점을 사용하면 [!DNL Platform]에서 조직의 활동에 대한 이벤트 데이터를 프로그래밍 방식으로 검색할 수 있습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 API 끝점은 [[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-apis/references/audit-query/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](./getting-started.md) 관련 설명서에 대한 링크, 이 문서에서 샘플 API 호출 읽기에 대한 안내서 및 를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보 [!DNL Experience Platform] API.
+이 가이드에 사용된 API 끝점은 [[!DNL Audit Query] API](https://developer.adobe.com/experience-platform-apis/references/audit-query/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 [!DNL Experience Platform] API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
 ## 감사 이벤트 나열
 
-에 GET 요청을 하여 이벤트 데이터를 검색할 수 있습니다. `/audit/events` 페이로드에서 검색할 이벤트를 지정하는 엔드포인트.
+페이로드에서 검색할 이벤트를 지정하여 `/audit/events` 끝점에 대한 GET 요청을 수행하면 이벤트 데이터를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -27,11 +27,11 @@ ht-degree: 8%
 GET /audit/events
 ```
 
-다음 [!DNL Audit Query] API는 이벤트를 나열할 때 페이지 및 필터 결과에 대한 쿼리 매개 변수의 사용을 지원합니다.
+[!DNL Audit Query] API는 이벤트를 나열할 때 페이지 및 필터 결과를 쿼리 매개 변수로 사용할 수 있도록 지원합니다.
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `limit` | 응답에서 반환할 최대 레코드 수입니다. 기본값 `limit` 는 50입니다. |
+| `limit` | 응답에서 반환할 최대 레코드 수입니다. 기본 `limit`은(는) 50입니다. |
 | `start` | 반환된 검색 결과의 첫 번째 항목에 대한 포인터입니다. 다음 결과 페이지에 액세스하려면 이 매개 변수는 제한으로 표시된 것과 동일한 양만큼 증가해야 합니다. 예: limit=50인 요청에 대한 다음 결과 페이지에 액세스하려면 매개 변수 start=50을 사용한 다음 그 다음 페이지에 대해 start=100을 사용하는 등의 작업을 수행합니다. |
 | `queryId` | /audit/events 끝점에 쿼리할 때 응답에는 queryId 문자열 속성이 포함됩니다. 별도의 호출에서 동일한 쿼리를 만들려면 검색 매개 변수를 다시 수동으로 구성하는 대신 ID 값을 단일 쿼리 매개 변수로 포함할 수 있습니다. |
 
@@ -146,7 +146,7 @@ curl -X POST \
 | --- | --- |
 | `customerAuditLogList` | 개체가 요청에 지정된 각 이벤트를 나타내는 배열입니다. 각 개체에는 필터 구성 및 반환된 이벤트 데이터에 대한 정보가 들어 있습니다. |
 | `userEmail` | 이벤트를 수행한 사용자의 이메일입니다. |
-| `eventType` | 이벤트 유형. 이벤트 유형은 다음과 같습니다 `Core` 및 `Enhanced`. |
+| `eventType` | 이벤트 유형. 이벤트 유형에는 `Core` 및 `Enhanced`이(가) 포함됩니다. |
 | `imsOrgId` | 이벤트가 발생한 조직의 ID입니다. |
 | `permissionResource` | 권한을 제공한 제품 또는 기능이 작업을 수행합니다. 리소스는 다음 중 하나일 수 있습니다. <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
 | `permissionType` | 작업과 관련된 권한 유형입니다. |

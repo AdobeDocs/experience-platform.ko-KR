@@ -6,7 +6,7 @@ exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1189'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [!DNL Adobe Experience Platform Segmentation Service] API. 계속하기 전에 다음을 검토하십시오. [시작 안내서](./getting-started.md) 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보입니다.
+이 가이드에 사용된 끝점은 [!DNL Adobe Experience Platform Segmentation Service] API의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)에서 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
 
 시작 섹션에 설명된 필수 헤더 외에도 세그먼트 검색 끝점에 대한 모든 요청에는 다음 추가 헤더가 필요합니다.
 
@@ -37,8 +37,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | 매개 변수 | 설명 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(필수)** 위치 {SCHEMA} 검색 객체와 연관된 스키마 클래스 값을 나타냅니다. 현재는 `_xdm.context.segmentdefinition` 은(는) 지원됩니다. |
-| `s={SEARCH_TERM}` | *(선택 사항)* 위치 {SEARCH_TERM} 는 Microsoft의 구현을 준수하는 쿼리를 나타냅니다. [Lucene 검색 구문](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 검색어를 지정하지 않으면 연결된 모든 레코드가 `schema.name` 반환됩니다. 보다 자세한 설명은 [부록](#appendix) 이 문서. |
+| `schema.name={SCHEMA}` | **(필수)** 여기서 {SCHEMA}은(는) 검색 개체와 연결된 스키마 클래스 값을 나타냅니다. 현재 `_xdm.context.segmentdefinition`만 지원됩니다. |
+| `s={SEARCH_TERM}` | *(선택 사항)* 여기서 {SEARCH_TERM}은(는) Microsoft의 [Lucene의 검색 구문 구현](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)을 준수하는 쿼리를 나타냅니다. 검색어를 지정하지 않으면 `schema.name`과(와) 연결된 모든 레코드가 반환됩니다. 자세한 설명은 이 문서의 [부록](#appendix)에서 확인할 수 있습니다. |
 
 **요청**
 
@@ -97,12 +97,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | 매개 변수 | 설명 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(필수)** 위치 {SCHEMA} 검색 개체와 연결된 스키마 클래스 값을 포함합니다. 현재는 `_xdm.context.segmentdefinition` 은(는) 지원됩니다. |
-| `namespace={NAMESPACE}` | **(필수)** 위치 {NAMESPACE} 검색할 네임스페이스를 포함합니다. |
-| `s={SEARCH_TERM}` | *(선택 사항)* 위치 {SEARCH_TERM} Microsoft의 구현을 준수하는 쿼리 포함 [Lucene 검색 구문](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 검색어를 지정하지 않으면 연결된 모든 레코드가 `schema.name` 반환됩니다. 보다 자세한 설명은 [부록](#appendix) 이 문서. |
-| `entityId={ENTITY_ID}` | *(선택 사항)* 지정된 폴더 내에서만 검색할 수 있도록 제한합니다. {ENTITY_ID}. |
-| `limit={LIMIT}` | *(선택 사항)* 위치 {LIMIT} 반환할 검색 결과 수를 나타냅니다. 기본값은 50입니다. |
-| `page={PAGE}` | *(선택 사항)* 위치 {PAGE} 검색된 쿼리의 결과를 페이지 지정하는 데 사용되는 페이지 번호를 나타냅니다. 페이지 번호 시작 위치: **0**. |
+| `schema.name={SCHEMA}` | **(필수)** 여기서 {SCHEMA}은(는) 검색 개체와 연결된 스키마 클래스 값을 포함합니다. 현재 `_xdm.context.segmentdefinition`만 지원됩니다. |
+| `namespace={NAMESPACE}` | **(필수)** 여기서 {NAMESPACE}은(는) 검색할 네임스페이스를 포함합니다. |
+| `s={SEARCH_TERM}` | *(선택 사항)* 여기서 {SEARCH_TERM}에는 Microsoft의 [Lucene의 검색 구문 구현](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)을 준수하는 쿼리가 포함되어 있습니다. 검색어를 지정하지 않으면 `schema.name`과(와) 연결된 모든 레코드가 반환됩니다. 자세한 설명은 이 문서의 [부록](#appendix)에서 확인할 수 있습니다. |
+| `entityId={ENTITY_ID}` | *(선택 사항)* {ENTITY_ID}(으)로 지정된 폴더 내에서만 검색할 수 있도록 제한합니다. |
+| `limit={LIMIT}` | *(선택 사항)* 여기서 {LIMIT}은(는) 반환할 검색 결과 수를 나타냅니다. 기본값은 50입니다. |
+| `page={PAGE}` | *(선택 사항)* 여기서 {PAGE}은(는) 검색된 쿼리 결과의 페이지 매김에 사용되는 페이지 번호를 나타냅니다. 페이지 번호는 **0**&#x200B;에 시작됩니다. |
 
 
 **요청**
@@ -168,9 +168,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | 매개 변수 | 설명 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(필수)** 위치 {SCHEMA} 검색 개체와 연결된 스키마 클래스 값을 포함합니다. 현재는 `_xdm.context.segmentdefinition` 은(는) 지원됩니다. |
-| `namespace={NAMESPACE}` | **(필수)** 위치 {NAMESPACE} 검색할 네임스페이스를 포함합니다. |
-| `entityId={ENTITY_ID}` | **(필수)** 구조 정보를 가져올 검색 개체의 ID로, 다음과같이 지정됩니다. {ENTITY_ID}. |
+| `schema.name={SCHEMA}` | **(필수)** 여기서 {SCHEMA}은(는) 검색 개체와 연결된 스키마 클래스 값을 포함합니다. 현재 `_xdm.context.segmentdefinition`만 지원됩니다. |
+| `namespace={NAMESPACE}` | **(필수)** 여기서 {NAMESPACE}은(는) 검색할 네임스페이스를 포함합니다. |
+| `entityId={ENTITY_ID}` | **(필수)** 구조적 정보를 가져올 검색 개체의 ID로서, {ENTITY_ID}(으)로 지정되었습니다. |
 
 **요청**
 
@@ -223,9 +223,9 @@ curl -X GET \
 
 ## 부록 {#appendix}
 
-다음 섹션에서는 검색어의 작동 방식에 대한 추가 정보를 제공합니다. 검색 쿼리는 다음과 같은 방식으로 작성됩니다. `s={FieldName}:{SearchExpression}`. 따라서 예를 들어 AAM 또는 라는 세그먼트 정의를 검색하려면 [!DNL Platform], 다음 검색 쿼리를 사용합니다. `s=segmentName:AAM%20OR%20Platform`.
+다음 섹션에서는 검색어의 작동 방식에 대한 추가 정보를 제공합니다. 검색 쿼리는 `s={FieldName}:{SearchExpression}` 방식으로 작성됩니다. 따라서 예를 들어 AAM 또는 [!DNL Platform]이라는 세그먼트 정의를 검색하려면 다음 검색 쿼리를 사용합니다. `s=segmentName:AAM%20OR%20Platform`.
 
->  모범 사례의 경우 위에 표시된 예제와 같이 검색 표현식을 HTML으로 인코딩해야 합니다.
+>  모범 사례를 보려면 위의 예제와 같이 검색 식을 HTML 인코딩해야 합니다.
 
 ### 필드 검색 {#search-fields}
 
@@ -244,20 +244,20 @@ curl -X GET \
 
 다음 표에는 세그먼트 검색 API를 사용할 때 검색 쿼리가 작동하는 방식에 대한 세부 사항이 나와 있습니다.
 
->  다음 예는 더 나은 명확성을 위해 비-HTML 인코딩 형식으로 표시됩니다. 모범 사례를 위해 HTML은 검색 표현식을 인코딩합니다.
+>  다음 예제는 보다 명확하게 하기 위해 HTML이 아닌 인코딩 형식으로 표시됩니다. 모범 사례를 위해 HTML은 검색 표현식을 인코딩합니다.
 
 | 검색 표현식 예 | 설명 |
 | ------------------------- | ----------- |
 | foo | 아무 단어나 검색합니다. 검색 가능한 필드에 &quot;foo&quot;라는 단어가 있으면 결과가 반환됩니다. |
-| foo 및 BAR | 부울 검색. 다음과 같은 경우 결과가 반환됩니다. **모두** 단어 &quot;foo&quot; 및 &quot;bar&quot;는 검색 가능한 필드에서 찾을 수 있습니다. |
-| foo 또는 BAR | 부울 검색. 다음과 같은 경우 결과가 반환됩니다. **다음 중 하나** 단어 &quot;foo&quot; 또는 단어 &quot;bar&quot;는 검색 가능한 필드 중 하나에서 찾을 수 있습니다. |
+| foo 및 BAR | 부울 검색. 검색 가능한 필드에 **모두** 단어 &quot;foo&quot;와 &quot;bar&quot;가 있으면 결과가 반환됩니다. |
+| foo 또는 BAR | 부울 검색. 검색 가능한 필드에 **단어 &quot;foo&quot; 또는 단어 &quot;bar&quot;가**&#x200B;있으면 결과가 반환됩니다. |
 | foo NOT 막대 | 부울 검색. 단어 &quot;foo&quot;를 찾았지만 단어 &quot;bar&quot;를 검색 가능한 필드에서 찾을 수 없는 경우 결과가 반환됩니다. |
-| 이름: foo 및 막대 | 부울 검색. 다음과 같은 경우 결과가 반환됩니다. **모두** &quot;foo&quot; 및 &quot;bar&quot;라는 단어는 &quot;name&quot; 필드에 있습니다. |
+| 이름: foo 및 막대 | 부울 검색. **두 단어 모두** &quot;foo&quot; 및 &quot;bar&quot;가 &quot;name&quot; 필드에 있으면 결과가 반환됩니다. |
 | 실행* | 와일드카드 검색입니다. 별표(*)를 사용하면 0개 이상의 문자가 일치합니다. 즉, 검색 가능한 필드의 내용에 &quot;실행&quot;으로 시작하는 단어가 포함된 경우 결과가 반환됩니다. 예를 들어 &quot;runs&quot;, &quot;running&quot;, &quot;runner&quot; 또는 &quot;runt&quot;이라는 단어가 나타나는 경우 결과가 반환됩니다. |
 | 캠? | 와일드카드 검색입니다. 물음표 사용(?) 는 정확히 하나의 문자만 일치합니다. 즉, 검색 가능한 필드의 내용이 &quot;cam&quot; 및 추가 문자로 시작하는 경우 결과를 반환합니다. 예를 들어 &quot;camp&quot; 또는 &quot;cams&quot;라는 단어가 나타나면 결과를 반환하지만, &quot;camera&quot; 또는 &quot;campfire&quot;라는 단어가 나타나면 결과를 반환하지 않습니다. |
 | &quot;파란색 우산&quot; | 구문 검색입니다. 검색 가능한 필드의 내용에 &quot;파란색 우산&quot; 전체 구문이 포함된 경우 결과가 반환됩니다. |
-| 파랑\~ | 흐릿한 검색입니다. 물결표 뒤에 0~2 사이의 숫자를 입력하여 편집 거리를 지정할 수도 있습니다. 예를 들어 &quot;blue\~1&quot;은 &quot;blue&quot;, &quot;blues&quot; 또는 &quot;glue&quot;를 반환합니다. 유사 항목 검색 가능 **전용** 구문이 아닌 용어에 적용됩니다. 그러나 각 단어의 끝에 물결표를 추가할 수 있습니다. 따라서 예를 들어 &quot;camping\~ in\~ the\~ summer\~&quot;는 &quot;여름의 캠핑&quot;과 일치합니다. |
-| &quot;hotel airport&quot;\~5 | 근접 검색. 이 유형의 검색은 문서에서 서로 가까운 검색어를 찾는 데 사용됩니다. 예를 들어, 구 `"hotel airport"~5` 문서에서 서로 5단어 이내에 있는 &quot;hotel&quot;과 &quot;airport&quot;라는 용어를 찾습니다. |
-| `/a[0-9]+b$/` | 정규 표현식 검색입니다. 이 유형의 검색은 RegExp 클래스에 설명된 대로 슬래시 &quot;/&quot; 사이의 내용을 기반으로 일치 항목을 찾습니다. 예를 들어 &quot;motel&quot; 또는 &quot;hotel&quot;이 포함된 문서를 찾으려면 `/[mh]otel/`. 정규 표현식 검색은 단일 단어에 대해 일치합니다. |
+| 파랑\~ | 흐릿한 검색입니다. 물결표 뒤에 0~2 사이의 숫자를 입력하여 편집 거리를 지정할 수도 있습니다. 예를 들어 &quot;blue\~1&quot;은 &quot;blue&quot;, &quot;blues&quot; 또는 &quot;glue&quot;를 반환합니다. 유사 항목 검색은 구문이 아닌 용어에 **only**&#x200B;할 수 있습니다. 그러나 각 단어의 끝에 물결표를 추가할 수 있습니다. 따라서 예를 들어 &quot;camping\~ in\~ the\~ summer\~&quot;는 &quot;여름의 캠핑&quot;과 일치합니다. |
+| &quot;hotel airport&quot;\~5 | 근접 검색. 이 유형의 검색은 문서에서 서로 가까운 검색어를 찾는 데 사용됩니다. 예를 들어 `"hotel airport"~5` 구문은 문서에서 서로 5단어 이내의 &quot;hotel&quot; 및 &quot;airport&quot;라는 용어를 찾습니다. |
+| `/a[0-9]+b$/` | 정규 표현식 검색입니다. 이 유형의 검색은 RegExp 클래스에 설명된 대로 슬래시 &quot;/&quot; 사이의 내용을 기반으로 일치 항목을 찾습니다. 예를 들어 &quot;motel&quot; 또는 &quot;hotel&quot;이 포함된 문서를 찾으려면 `/[mh]otel/`을(를) 지정하십시오. 정규 표현식 검색은 단일 단어에 대해 일치합니다. |
 
-쿼리 구문에 대한 자세한 내용은 [Lucene 쿼리 구문 설명서](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).
+쿼리 구문에 대한 자세한 내용은 [Lucene 쿼리 구문 설명서](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)를 참조하십시오.

@@ -12,13 +12,13 @@ ht-degree: 2%
 ---
 
 
-# [!UICONTROL 개인 연락처 세부 정보] 스키마 필드 그룹
+# [!UICONTROL 개인 연락처 정보] 스키마 필드 그룹
 
 >[!NOTE]
 >
->여러 스키마 필드 그룹의 이름이 변경되었습니다. 다음에 대한 문서 보기: [필드 그룹 이름 업데이트](../name-updates.md) 추가 정보.
+>여러 스키마 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../name-updates.md)에 대한 문서를 참조하십시오.
 
-[!UICONTROL 개인 연락처 세부 정보] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md) 개인 연락처 정보를 설명합니다.
+[!UICONTROL 개인 연락처 정보]은(는) 개별 사용자의 연락처 정보를 설명하는 [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md)의 표준 스키마 필드 그룹입니다.
 
 ![](../../images/field-groups/personal-contact-details.png)
 
@@ -28,7 +28,7 @@ ht-degree: 2%
 | `homeAddress` | [우편 주소](../../data-types/postal-address.md) | 사용자의 거주 주소를 설명합니다. |
 | `homePhone` | [전화 번호](../../data-types/phone-number.md) | 사용자의 집 전화 번호를 설명합니다. |
 | `mobilePhone` | [전화 번호](../../data-types/phone-number.md) | 사용자의 휴대폰 번호를 설명합니다. |
-| `personalEmail` | [이메일 주소](../../data-types/email-address.md) | 개인의 이메일 주소를 설명합니다. |
+| `personalEmail` | [전자 메일 주소](../../data-types/email-address.md) | 개인의 이메일 주소를 설명합니다. |
 
 {style="table-layout:auto"}
 

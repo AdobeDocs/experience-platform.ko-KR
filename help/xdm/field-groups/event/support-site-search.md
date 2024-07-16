@@ -9,9 +9,9 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL 지원 사이트 검색] 스키마 필드 그룹
+# [!UICONTROL 사이트 검색 지원] 스키마 필드 그룹
 
-[!UICONTROL 지원 사이트 검색] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md). 단일 `siteKnowledge.supportSiteSearch` 지원 사이트 검색에 대한 정보를 캡처하는 스키마에 대한 객체입니다.
+[!UICONTROL 사이트 검색 지원]은(는) [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)에 대한 표준 스키마 필드 그룹입니다. 지원 사이트 검색에 대한 정보를 캡처하는 스키마에 단일 `siteKnowledge.supportSiteSearch` 개체를 제공합니다.
 
 ![](../../images/field-groups/support-site-search.png)
 
@@ -21,4 +21,4 @@ ht-degree: 5%
 
 {style="table-layout:auto"}
 
-필드 그룹에 대한 자세한 내용은 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).
+필드 그룹에 대한 자세한 내용은 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json)를 참조하세요.

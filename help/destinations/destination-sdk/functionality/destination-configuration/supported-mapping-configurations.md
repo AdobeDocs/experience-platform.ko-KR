@@ -23,7 +23,7 @@ Destination SDK으로 빌드된 대상은 대상 유형을 기반으로 특정 I
 
 >[!IMPORTANT]
 >
->Destination SDK에서 지원하는 모든 매개변수 이름 및 값은 다음과 같습니다. **대소문자 구분**. 대소문자 구분 오류를 방지하려면 설명서에 표시된 대로 매개 변수 이름과 값을 정확히 사용하십시오.
+>Destination SDK에서 지원하는 모든 매개 변수 이름과 값은 **대/소문자를 구분합니다**. 대소문자 구분 오류를 방지하려면 설명서에 표시된 대로 매개 변수 이름과 값을 정확히 사용하십시오.
 
 ## 스트리밍 대상에 대해 지원되는 매핑 {#streaming-mappings}
 
@@ -64,11 +64,11 @@ Destination SDK으로 구축된 실시간(스트리밍) 대상은 아래 표에 
 
 대상 필드 매핑을 선택할 때는 대상 사용자 지정 속성의 이름을 수동으로 입력해야 합니다.
 
-![사용자 지정 속성 선택을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
+![사용자 지정 특성 선택을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
 
 결과 UI 경험이 아래 이미지에 표시됩니다.
 
-![스트리밍 대상의 사용자 지정 속성에 대한 XDM 속성 매핑을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
+![스트리밍 대상의 사용자 지정 특성에 대한 XDM 특성 매핑을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
 
 ### ID 네임스페이스를 파트너 ID 네임스페이스에 매핑 {#streaming-identity-to-identity}
 
@@ -76,7 +76,7 @@ Destination SDK으로 구축된 실시간(스트리밍) 대상은 아래 표에 
 
 결과 UI 경험이 아래 이미지에 표시됩니다.
 
-![스트리밍 대상의 ID에 대한 ID 매핑을 보여주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
+![스트리밍 대상의 ID에 대한 ID 매핑을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
 
 ## 파일 기반 대상에 대해 지원되는 매핑 {#batch-mappings}
 
@@ -118,11 +118,11 @@ Destination SDK으로 빌드된 파일 기반 대상은 아래 표에 설명된 
 
 결과 UI 경험이 아래 이미지에 표시됩니다.
 
-![파일 기반 대상의 사용자 지정 속성에 대한 XDM 매핑을 보여 주는 Platform UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
+![파일 기반 대상에 대한 사용자 지정 특성에 대한 XDM 매핑을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
 
 사용자는 기본 이름을 그대로 두거나 대상 필드 선택 화면에 사용자 지정 속성 이름을 입력할 수 있습니다.
 
-![파일 기반 대상에 대한 사용자 지정 타겟 속성 선택을 보여 주는 Platform UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![파일 기반 대상에 대한 사용자 지정 대상 특성 선택을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 ### ID 네임스페이스를 사용자 지정 속성에 매핑 {#batch-identity-to-custom}
 
@@ -130,11 +130,11 @@ Destination SDK으로 빌드된 파일 기반 대상은 아래 표에 설명된 
 
 ID 네임스페이스를 소스 필드로 선택하면 대상 필드에 동등한 ID 네임스페이스가 자동으로 채워집니다. 대상 필드를 사용자 지정 속성으로 바꾸려면 사용자가 대상 필드 선택 화면에 사용자 지정 속성 이름을 입력해야 합니다.
 
-![파일 기반 대상에 대한 사용자 지정 타겟 속성 선택을 보여 주는 Platform UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![파일 기반 대상에 대한 사용자 지정 대상 특성 선택을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 결과 UI 경험이 아래 이미지에 표시됩니다.
 
-![파일 기반 대상의 사용자 지정 속성에 대한 ID 매핑을 보여 주는 Platform UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
+![파일 기반 대상의 사용자 지정 특성에 대한 ID 매핑을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
 
 ### ID 네임스페이스를 파트너 ID 네임스페이스에 매핑 {#batch-identity-to-identity}
 
@@ -144,7 +144,7 @@ ID 네임스페이스를 소스 필드로 선택하면 대상 필드에 동등�
 
 결과 UI 경험이 아래 이미지에 표시됩니다.
 
-![파일 기반 대상의 ID에 대한 ID 매핑을 보여주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
+![파일 기반 대상의 ID에 대한 ID 매핑을 보여 주는 플랫폼 UI 스크린샷입니다.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
 
 
 ## 다음 단계 {#next-steps}

@@ -4,8 +4,8 @@ description: Adobe Experience Platform의 Adobe Experience Cloud Identity 서비
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 81%
+source-wordcount: '792'
+ht-degree: 73%
 
 ---
 
@@ -13,19 +13,19 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Cloud ID 확장 구성 및 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
-이 확장 기능을 사용하여 Experience Cloud ID 서비스를 속성과 통합합니다. Experience Cloud ID 서비스를 사용하여 사이트 방문자에 대해 고유하고 영구적인 식별자를 만들고 저장할 수 있습니다.
+이 확장을 사용하여 Experience Cloud ID 서비스를 속성과 통합합니다. Experience Cloud ID 서비스를 사용하여 사이트 방문자에 대해 고유하고 영구적인 식별자를 만들고 저장할 수 있습니다.
 
 ## Experience Cloud ID 확장 구성
 
 이 섹션에서는 Experience Cloud ID 확장을 구성할 때 사용할 수 있는 옵션에 대한 참조를 제공합니다.
 
-Experience Cloud ID 확장이 아직 설치되지 않은 경우 속성을 연 다음 을 선택합니다 **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 클릭하고 Experience Cloud ID 확장을 마우스로 가리킨 다음 을 선택합니다 **[!UICONTROL 설치]**.
+Experience Cloud ID 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고 Experience Cloud ID 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
 
-확장을 구성하려면 Extensions 탭을 열고 확장을 마우스로 가리킨 다음 을 선택합니다 **[!UICONTROL 구성]**.
+확장을 구성하려면 Extensions 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
 
 ![](../../../images/optin.jpg)
 
@@ -43,7 +43,7 @@ URL이 지정된 경로와 일치하는 경우 Experience Cloud ID가 로드되�
 
 (선택 사항) 정규 표현식인 경우 Regex를 활성화합니다.
 
-선택 **[!UICONTROL 추가]** 다른 경로를 제외합니다.
+다른 경로를 제외하려면 **[!UICONTROL 추가]**&#x200B;를 선택하십시오.
 
 ### 옵트인
 
@@ -73,7 +73,7 @@ URL이 지정된 경로와 일치하는 경우 Experience Cloud ID가 로드되�
 
 저장소가 활성화된 경우 옵트인 쿠키가 만료되는 시간을 초 단위로 지정합니다.
 
-숫자를 입력한 다음 드롭다운 목록에서 시간 단위를 선택합니다. 예를 들어 2를 입력하고 를 선택합니다 **[!UICONTROL 주]**. 기본값은 13개월입니다.
+숫자를 입력한 다음 드롭다운 목록에서 시간 단위를 선택합니다. 예를 들어 2를 입력하고 **[!UICONTROL 주]**&#x200B;를 선택합니다. 기본값은 13개월입니다.
 
 **권한?**
 
@@ -89,7 +89,7 @@ URL이 지정된 경로와 일치하는 경우 Experience Cloud ID가 로드되�
 
 ### 변수
 
-이름-값 쌍을 Experience Cloud ID 인스턴스 속성으로 설정합니다. 드롭다운을 사용하여 변수를 선택한 다음 값을 입력하거나 선택합니다. 각 변수에 대한 자세한 내용은 [Experience Cloud ID 서비스 설명서](https://experiencecloud.adobe.com/resources/help/ko_KR/mcvid/mcvid-overview.html).
+이름-값 쌍을 Experience Cloud ID 인스턴스 속성으로 설정합니다. 드롭다운을 사용하여 변수를 선택한 다음 값을 입력하거나 선택합니다. 각 변수에 대한 자세한 내용은 [Experience Cloud ID 서비스 설명서](https://experiencecloud.adobe.com/resources/help/ko_KR/mcvid/mcvid-overview.html)를 참조하세요.
 
 ## Experience Cloud ID 확장 작업 유형
 
@@ -117,5 +117,5 @@ URL이 지정된 경로와 일치하는 경우 Experience Cloud ID가 로드되�
    * Authenticated
    * 로그아웃됨
 
-1. (선택 사항) 선택 **[!UICONTROL 추가]** 를 클릭하여 더 많은 고객 ID를 설정합니다.
-1. **[!UICONTROL 변경사항 유지]**&#x200B;를 선택합니다.
+1. (선택 사항) 더 많은 고객 ID를 설정하려면 **[!UICONTROL 추가]**&#x200B;를 선택하십시오.
+1. **[!UICONTROL 변경 내용 유지]**&#x200B;를 선택합니다.

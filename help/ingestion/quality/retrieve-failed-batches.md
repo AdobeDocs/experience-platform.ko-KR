@@ -7,43 +7,43 @@ description: 이 자습서에서는 데이터 수집 API를 사용하여 실패�
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 2%
+source-wordcount: '643'
+ht-degree: 13%
 
 ---
 
 # 데이터 액세스 API를 사용하여 실패한 일괄 처리 검색
 
-Adobe Experience Platform은 데이터를 업로드하고 수집하는 두 가지 방법을 제공합니다. 다양한 파일 유형(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 수집이나 데이터를 삽입할 수 있는 스트리밍 수집을 사용할 수 있습니다. [!DNL Platform] 실시간으로 스트리밍 엔드포인트 사용.
+Adobe Experience Platform은 데이터를 업로드하고 수집하는 두 가지 방법을 제공합니다. 다양한 파일 형식(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 수집이나 스트리밍 끝점을 사용하여 실시간으로 해당 데이터를 [!DNL Platform]에 삽입할 수 있는 스트리밍 수집을 사용할 수 있습니다.
 
-이 자습서에서는 을 사용하여 실패한 배치에 대한 정보를 검색하는 단계를 다룹니다. [!DNL Data Ingestion] API.
+이 자습서에서는 [!DNL Data Ingestion] API를 사용하여 실패한 일괄 처리에 대한 정보를 검색하는 단계를 다룹니다.
 
 ## 시작하기
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다.
-- [[!DNL Data Ingestion]](../home.md): 데이터를 전송할 수 있는 방법 [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+- [[!DNL Data Ingestion]](../home.md): 데이터를 [!DNL Experience Platform]에 보낼 수 있는 메서드입니다.
 
 ### 샘플 API 호출 읽기
 
-이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 포맷의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용되는 규칙에 대한 자세한 내용은 의 섹션을 참조하십시오. [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 다음에서 [!DNL Experience Platform] 문제 해결 가이드.
+이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request)에 대한 섹션을 참조하십시오.
 
 ### 필수 헤더에 대한 값 수집
 
-을 호출하기 위해 [!DNL Platform] API, 먼저 다음을 완료해야 합니다. [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). 인증 자습서를 완료하면 모든 항목에서 필요한 각 헤더에 대한 값이 제공됩니다 [!DNL Experience Platform] 아래와 같이 API 호출:
+[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-의 모든 리소스 [!DNL Experience Platform], 다음에 속하는 항목 포함 [!DNL Schema Registry]는 특정 가상 샌드박스로 분리됩니다. 에 대한 모든 요청 [!DNL Platform] API에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Schema Registry]에 속하는 리소스를 포함한 [!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리됩니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->의 샌드박스에 대한 자세한 내용 [!DNL Platform], 다음을 참조하십시오. [샌드박스 개요 설명서](../../sandboxes/home.md).
+>[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -51,7 +51,7 @@ Adobe Experience Platform은 데이터를 업로드하고 수집하는 두 가�
 
 ### 샘플 일괄 처리 실패
 
-이 자습서에서는 달의 값을 로 설정하는 형식이 잘못된 타임스탬프가 있는 샘플 데이터를 사용합니다. **00**&#x200B;아래에 표시된 대로 :
+이 자습서에서는 아래 표시된 대로 월 값을 **00**(으)로 설정하는 형식이 잘못된 샘플 데이터를 사용합니다.
 
 ```json
 {
@@ -133,7 +133,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-위의 응답을 사용하여 성공한 일괄 처리의 청크와 실패한 청크를 확인할 수 있습니다. 이 응답에서 파일이 `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` 실패한 일괄 처리를 포함합니다.
+위의 응답을 사용하여 성공한 일괄 처리의 청크와 실패한 청크를 확인할 수 있습니다. 이 응답에서 `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` 파일에 실패한 일괄 처리가 포함되어 있음을 확인할 수 있습니다.
 
 ## 실패한 일괄 처리 다운로드
 
@@ -184,7 +184,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ## 다음 단계
 
-이 자습서를 읽은 후 실패한 배치에서 오류를 검색하는 방법을 배웠습니다. 일괄 처리에 대한 자세한 내용은 [일괄 처리 수집 개발자 안내서](../batch-ingestion/overview.md). 스트리밍 수집에 대한 자세한 내용은 [스트리밍 연결 자습서 만들기](../tutorials/create-streaming-connection.md).
+이 자습서를 읽은 후 실패한 배치에서 오류를 검색하는 방법을 배웠습니다. 일괄 처리 수집에 대한 자세한 내용은 [일괄 처리 수집 개발자 안내서](../batch-ingestion/overview.md)를 참조하십시오. 스트리밍 수집에 대한 자세한 내용은 [스트리밍 연결 만들기 자습서](../tutorials/create-streaming-connection.md)를 참조하십시오.
 
 ## 부록
 
@@ -211,7 +211,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### XDM 스키마 누락
 
-다음 경우에 이 오류가 표시됩니다. `schemaRef` 대상: `xdmMeta` 누락되었습니다.
+이 오류는 `xdmMeta`에 대한 `schemaRef`이(가) 누락된 경우 표시됩니다.
 
 ```json
 {
@@ -226,7 +226,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### 소스 이름 누락
 
-다음 경우에 이 오류가 표시됩니다. `source` 헤더에 이(가) 없습니다. `name`.
+헤더의 `source`에 `name`이(가) 없는 경우 이 오류가 표시됩니다.
 
 ```json
 {
@@ -242,7 +242,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### XDM 엔티티 누락
 
-이 오류가 없으면 이 오류가 표시됩니다. `xdmEntity` 있음.
+이 오류는 `xdmEntity`이(가) 없는 경우 표시됩니다.
 
 ```json
 {

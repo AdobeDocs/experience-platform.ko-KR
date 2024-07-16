@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform Insights 데이터 모델 B2B 에디션
 
-B2B 에디션용 Real-time Customer Data Platform 인사이트 데이터 모델은 인사이트를 제공하는 데이터 모델과 SQL을 노출합니다 [계정 프로필](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). 이러한 SQL 쿼리 템플릿을 사용자 지정하여 B2B 마케팅 및 KPI(주요 성능 지표) 사용 사례에 대한 Real-Time CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 인사이트를 대시보드의 사용자 정의 위젯으로 사용할 수 있습니다.
+B2B 에디션용 Real-time Customer Data Platform 인사이트 데이터 모델은 [계정 프로필](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview)에 대한 인사이트를 제공하는 데이터 모델 및 SQL을 노출합니다. 이러한 SQL 쿼리 템플릿을 사용자 지정하여 B2B 마케팅 및 KPI(주요 성능 지표) 사용 사례에 대한 Real-Time CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 인사이트를 대시보드의 사용자 정의 위젯으로 사용할 수 있습니다.
 
 >[!AVAILABILITY]
 >
->이 기능은 Real-Time CDP Prime 및 Ultimate 패키지를 구입한 고객이 사용할 수 있습니다. 사용 가능한 설명서 참조 [Real-Time CDP 에디션](../../rtcdp/overview.md#rtcdp-editions) 자세한 내용을 보거나 Adobe 담당자에게 문의하십시오.
+>이 기능은 Real-Time CDP Prime 및 Ultimate 패키지를 구입한 고객이 사용할 수 있습니다. 자세한 내용은 사용 가능한 [Real-Time CDP 버전](../../rtcdp/overview.md#rtcdp-editions)에 대한 설명서를 참조하거나 Adobe 담당자에게 문의하십시오.
 
 <!-- 
 See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
@@ -25,7 +25,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## 전제 조건
 
-이 안내서를 사용하려면 사용자 정의 대시보드에 대한 작업 이해가 필요합니다. 의 설명서를 읽어 보십시오. [사용자 지정 대시보드를 만드는 방법](../user-defined-dashboards.md) 이 안내서를 계속하기 전에.
+이 안내서를 사용하려면 사용자 정의 대시보드에 대한 작업 이해가 필요합니다. 이 안내서를 계속하기 전에 [사용자 지정 대시보드를 만드는 방법](../user-defined-dashboards.md)에 대한 설명서를 읽어 보십시오.
 
 ## Real-Time CDP B2B 인사이트 보고서 및 사용 사례 {#B2B-insight-reports-and-use-cases}
 
@@ -52,13 +52,13 @@ Real-Time CDP B2B 보고에서는 계정 프로필 데이터와 계정 및 기�
 
 #### 업종별 새 계정 사용 사례 {#accounts-by-industry}
 
-에 사용되는 논리 [!UICONTROL 업종별 신규 계정] insight는 계정 프로필 수와 상대적인 크기에 따라 상위 5개 업종을 반환합니다. 다음을 참조하십시오. [[!UICONTROL 업종별 신규 계정] 위젯 설명서](../guides/account-profiles.md#accounts-by-industry) 추가 정보.
+[!UICONTROL 업종별 새 계정] 인사이트에 사용된 논리는 상위 5개 업종을 계정 프로필 수와 상대 크기에 따라 반환합니다. 자세한 내용은 [[!UICONTROL 업종별 새 계정] 위젯 설명서](../guides/account-profiles.md#accounts-by-industry)를 참조하십시오.
 
 >[!TIP]
 >
 >이 SQL 쿼리를 사용자 지정하여 상위 5개 산업보다 많거나 적은 수의 산업을 반환할 수 있습니다.
 
-다음을 생성하는 SQL [!UICONTROL 업종별 신규 계정] 인사이트는 아래의 축소 가능한 섹션에 표시됩니다.
+[!UICONTROL 업종별 새 계정] 인사이트를 생성하는 SQL은 아래 축소 가능 섹션에 표시됩니다.
 
 +++SQL 쿼리
 
@@ -97,9 +97,9 @@ LIMIT 5000;
 
 #### 유형별 새 계정 사용 사례 {#accounts-by-type}
 
-에 사용되는 논리 [!UICONTROL 유형별 새 계정] insight는 계정 유형별 숫자 분류를 반환합니다. 이러한 통찰력은 리소스 할당 또는 마케팅 전략을 포함하여 비즈니스 전략 및 운영을 안내하는 데 도움이 될 수 있습니다. 다음을 참조하십시오. [[!UICONTROL 유형별 새 계정] 위젯 설명서](../guides/account-profiles.md#accounts-by-type) 추가 정보.
+[!UICONTROL 유형별 새 계정] 인사이트에 사용된 논리는 해당 유형별 계정의 숫자 분류를 반환합니다. 이러한 통찰력은 리소스 할당 또는 마케팅 전략을 포함하여 비즈니스 전략 및 운영을 안내하는 데 도움이 될 수 있습니다. 자세한 내용은 [[!UICONTROL 유형별 새 계정] 위젯 설명서](../guides/account-profiles.md#accounts-by-type)를 참조하십시오.
 
-다음을 생성하는 SQL [!UICONTROL 유형별 새 계정] 인사이트는 아래의 축소 가능한 섹션에 표시됩니다.
+[!UICONTROL 유형별 새 계정] 인사이트를 생성하는 SQL은 아래 축소 가능 섹션에 표시됩니다.
 
 +++SQL 쿼리
 

@@ -7,7 +7,7 @@ exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '692'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 
@@ -15,22 +15,22 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->여러 스키마 필드 그룹의 이름이 변경되었습니다. 다음에 대한 문서 보기: [필드 그룹 이름 업데이트](../name-updates.md) 추가 정보.
+>여러 스키마 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../name-updates.md)에 대한 문서를 참조하십시오.
 
-[!UICONTROL 통신 구독] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md) 요금제, 패키지 및 개별 제품 구독을 포함한 고객의 통신 구독 플랜을 설명합니다.
+[!UICONTROL 통신 구독]은(는) 요금제, 패키지 및 개별 제품 구독을 포함한 고객의 통신 구독 계획을 설명하는 [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md)에 대한 표준 스키마 필드 그룹입니다.
 
-필드 그룹은 단일 개체 유형 필드를 제공합니다. `telecomSubscription`아래에 속성이 설명되어 있는
+필드 그룹은 아래에 속성이 설명된 단일 개체 유형 필드 `telecomSubscription`을(를) 제공합니다.
 
 ![통신 구독 구조](../../images/field-groups/telecom-subscription/structure.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `internetSubscription` | 오브젝트 배열 | 데이터 상한, 연결 유형 및 속도 세부 정보 등 인터넷 구독 플랜 세부 정보를 설명합니다. 다음을 참조하십시오. [아래 섹션](#internetSubscription) 추가 정보. |
-| `landlineSubscription` | 오브젝트 배열 | 선택한 기능, 시간(분) 및 다이얼 플랜 등 유선전화 구독 플랜에 대한 세부 정보를 설명합니다. 다음을 참조하십시오. [아래 섹션](#landlineSubscription) 추가 정보. |
-| `mediaSubscription` | 오브젝트 배열 | 채널 수 및 포함된 스트리밍 서비스를 포함한 미디어 구독 플랜 세부 정보에 대해 설명합니다. 다음을 참조하십시오. [아래 섹션](#mediaSubscription) 추가 정보. |
-| `mobileSubscription` | 오브젝트 배열 | 줄 수, 데이터 요금, 비용 등을 포함한 모바일 구독 플랜 세부 정보에 대해 설명합니다. 다음을 참조하십시오. [아래 섹션](#mobileSubscription) 추가 정보. |
-| `primarySubscriber` | [[!UICONTROL 개인]](../../data-types/person.md) | 구독 소유자를 설명합니다. |
-| `bundleName` | 문자열 | 고객이 등록된 모든 유형의 구독 번들 이름(예: )을 캡처합니다. `Internet + Media`. |
+| `internetSubscription` | 오브젝트 배열 | 데이터 상한, 연결 유형 및 속도 세부 정보 등 인터넷 구독 플랜 세부 정보를 설명합니다. 자세한 내용은 아래 [섹션](#internetSubscription)을 참조하세요. |
+| `landlineSubscription` | 오브젝트 배열 | 선택한 기능, 시간(분) 및 다이얼 플랜 등 유선전화 구독 플랜에 대한 세부 정보를 설명합니다. 자세한 내용은 아래 [섹션](#landlineSubscription)을 참조하세요. |
+| `mediaSubscription` | 오브젝트 배열 | 채널 수 및 포함된 스트리밍 서비스를 포함한 미디어 구독 플랜 세부 정보에 대해 설명합니다. 자세한 내용은 아래 [섹션](#mediaSubscription)을 참조하세요. |
+| `mobileSubscription` | 오브젝트 배열 | 줄 수, 데이터 요금, 비용 등을 포함한 모바일 구독 플랜 세부 정보에 대해 설명합니다. 자세한 내용은 아래 [섹션](#mobileSubscription)을 참조하세요. |
+| `primarySubscriber` | [[!UICONTROL 사용자]](../../data-types/person.md) | 구독 소유자를 설명합니다. |
+| `bundleName` | 문자열 | 고객이 등록된 모든 유형의 구독 번들 이름(예: `Internet + Media`)을 캡처합니다. |
 | `primaryPartyID` | 문자열 | 구독 담당 직원을 위한 식별자(일반적으로 디바이스 전화번호 가능). |
 
 {style="table-layout:auto"}
@@ -42,7 +42,7 @@ ht-degree: 6%
 
 ## `internetSubscription` {#internetSubscription}
 
-`internetSubscription` 는 오브젝트 배열로 제공됩니다. 각 객체의 구조는 아래에 설명되어 있습니다.
+`internetSubscription`은(는) 개체 배열로 제공됩니다. 각 객체의 구조는 아래에 설명되어 있습니다.
 
 ![인터넷 구독](../../images/field-groups/telecom-subscription/internetSubscription.png)
 
@@ -59,7 +59,7 @@ ht-degree: 6%
 
 ## `landlineSubscription` {#landlineSubscription}
 
-`landlineSubscription` 는 오브젝트 배열로 제공됩니다. 각 객체의 구조는 아래에 설명되어 있습니다.
+`landlineSubscription`은(는) 개체 배열로 제공됩니다. 각 객체의 구조는 아래에 설명되어 있습니다.
 
 ![유선전화 구독](../../images/field-groups/telecom-subscription/landlineSubscription.png)
 
@@ -82,7 +82,7 @@ ht-degree: 6%
 
 ## `mediaSubscription` {#mediaSubscription}
 
-`mediaSubscription` 는 오브젝트 배열로 제공됩니다. 각 객체의 구조는 아래에 설명되어 있습니다.
+`mediaSubscription`은(는) 개체 배열로 제공됩니다. 각 객체의 구조는 아래에 설명되어 있습니다.
 
 ![mediaSubscription](../../images/field-groups/telecom-subscription/mediaSubscription.png)
 
@@ -96,7 +96,7 @@ ht-degree: 6%
 
 ## `mobileSubscription` {#mobileSubscription}
 
-`mobileSubscription` 는 오브젝트 배열로 제공됩니다. 각 객체의 구조는 아래에 설명되어 있습니다.
+`mobileSubscription`은(는) 개체 배열로 제공됩니다. 각 객체의 구조는 아래에 설명되어 있습니다.
 
 ![mobileSubscription](../../images/field-groups/telecom-subscription/mobileSubscription.png)
 

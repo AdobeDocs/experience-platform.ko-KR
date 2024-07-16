@@ -16,9 +16,9 @@ ht-degree: 0%
 
 디버깅은 기본적으로 비활성화되어 있지만 네 가지 방법으로 전환할 수 있습니다. 이러한 메서드를 조합하여 사용하면 개발 워크플로에서 가장 편리한 디버깅을 활성화하거나 비활성화할 수 있습니다.
 
-## 사용 `debugEnabled` 다음에서 `configure` 명령
+## `configure` 명령에 `debugEnabled` 사용
 
-설정 `debugEnabled` 확장을 구성할 때 부울을 true로 설정합니다. 이 옵션은 사이트의 페이지를 방문하는 모든 사람에게 디버깅을 사용할 수 있으므로 일반적으로 개발 환경에 사용됩니다.
+확장을 구성할 때 `debugEnabled` 부울을 true로 설정하십시오. 이 옵션은 사이트의 페이지를 방문하는 모든 사람에게 디버깅을 사용할 수 있으므로 일반적으로 개발 환경에 사용됩니다.
 
 ```js
 alloy("configure", {
@@ -28,9 +28,9 @@ alloy("configure", {
 });
 ```
 
-다음을 참조하십시오 [`debugEnabled`](../commands/configure/debugenabled.md) 추가 정보.
+자세한 내용은 [`debugEnabled`](../commands/configure/debugenabled.md)을(를) 참조하십시오.
 
-## 사용 `setDebug` 명령
+## `setDebug` 명령 사용
 
 위의 부울과 유사하게, 이 명령은 페이지의 모든 방문자에 대해 디버깅을 활성화합니다.
 
@@ -38,11 +38,11 @@ alloy("configure", {
 alloy("setDebug", {"enabled": true});
 ```
 
-다음을 참조하십시오. [`setDebug`](../commands/setdebug.md) 명령 을 참조하십시오.
+자세한 내용은 [`setDebug`](../commands/setdebug.md) 명령을 참조하십시오.
 
 ## 쿼리 문자열 매개 변수 설정
 
-쿼리 문자열을 추가하여 디버깅을 활성화할 수 있습니다 `?alloy_debug=true` 를 입력합니다. 예:
+쿼리 문자열 `?alloy_debug=true`을(를) URL 끝에 추가하여 디버깅을 활성화할 수 있습니다. 예:
 
 `http://example.com/?alloy_debug=true`
 
@@ -52,6 +52,6 @@ alloy("setDebug", {"enabled": true});
 
 Adobe Experience Platform Debugger은 웹 페이지를 검사하고 Experience Cloud 제품 구현을 디버깅하는 데 도움이 되는 강력한 도구입니다. AEP 웹 SDK 섹션의 구성 탭에서 디버깅을 활성화할 수 있습니다.
 
-![디버거 활성화](../assets/enable-debugging.png)
+![디버거 사용](../assets/enable-debugging.png)
 
-다음을 참조하십시오 [Adobe Experience Platform Debugger 개요](/help/debugger/home.md) 추가 정보.
+자세한 내용은 [Adobe Experience Platform Debugger 개요](/help/debugger/home.md)를 참조하십시오.

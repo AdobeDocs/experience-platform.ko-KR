@@ -12,20 +12,20 @@ ht-degree: 2%
 ---
 
 
-# [!UICONTROL 회사 연락처 세부 정보] 스키마 필드 그룹
+# [!UICONTROL 작업 연락처 세부 정보] 스키마 필드 그룹
 
 >[!NOTE]
 >
->여러 스키마 필드 그룹의 이름이 변경되었습니다. 다음에 대한 문서 보기: [필드 그룹 이름 업데이트](../name-updates.md) 추가 정보.
+>여러 스키마 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../name-updates.md)에 대한 문서를 참조하십시오.
 
-[!UICONTROL 회사 연락처 세부 정보] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md). 필드 그룹은 해당 개인이 속한 회사 주소, 회사 이메일, 회사 전화번호 및 조직 등 개인과 관련된 직업 정보를 캡처하는 여러 필드를 제공합니다.
+[!UICONTROL 작업 연락처 세부 정보]은(는) [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md)의 표준 스키마 필드 그룹입니다. 필드 그룹은 해당 개인이 속한 회사 주소, 회사 이메일, 회사 전화번호 및 조직 등 개인과 관련된 직업 정보를 캡처하는 여러 필드를 제공합니다.
 
 ![](../../images/field-groups/work-contact-details.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
 | `workAddress` | [우편 주소](../../data-types/postal-address.md) | 사용자의 회사 주소를 설명합니다. |
-| `workEmail` | [이메일 주소](../../data-types/email-address.md) | 사용자의 회사 이메일 주소를 설명합니다. |
+| `workEmail` | [전자 메일 주소](../../data-types/email-address.md) | 사용자의 회사 이메일 주소를 설명합니다. |
 | `workPhone` | [전화 번호](../../data-types/phone-number.md) | 사용자의 회사 전화 번호를 설명합니다. |
 | `organizations` | 문자열(배열) | 개인이 멤버인 조직을 나타내는 자유 형식 문자열 배열입니다. |
 

@@ -1,7 +1,8 @@
 ---
 title: 고차 함수로 배열 관리 및 데이터 유형 매핑
 description: Query Service에서 배열을 관리하고 데이터 형식을 고차 함수로 매핑하는 방법에 대해 알아봅니다. 실용적인 예는 일반적인 사용 사례와 함께 제공된다.
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 `transform(array<T>, function<T, U>): array<U>`
 
-위의 코드 조각은 배열의 각 요소에 함수를 적용하고 변환된 요소의 새 배열을 반환합니다. 특히 `transform` 함수는 T 유형의 배열을 가져오고 각 요소를 T 유형에서 U 유형으로 변환합니다. 그런 다음 U 형식의 배열을 반환합니다. 실제 유형 T와 U는 변환 함수의 특정 용도에 따라 다릅니다.
+위의 코드 조각은 배열의 각 요소에 함수를 적용하고 변환된 요소의 새 배열을 반환합니다. 특히 `transform` 함수는 T 형식의 배열을 사용하고 각 요소를 T 형식에서 U 형식으로 변환합니다. 그런 다음 U 형식의 배열을 반환합니다. 실제 유형 T와 U는 변환 함수의 특정 용도에 따라 다릅니다.
 
 `transform(array<T>, function<T, Int, U>): array<U>`
 
@@ -26,7 +27,7 @@ ht-degree: 0%
 
 **예**
 
-아래의 SQL 예제에서는 이 사용 사례를 보여 줍니다. 쿼리는 지정된 테이블에서 제한된 행 집합을 검색하여 `productListItems` 을 곱하여 배열 `priceTotal` 73으로 각 항목의 특성. 결과에는 `_id`, `productListItems`, 및 변환된 `price_in_inr` 열. 선택은 특정 타임스탬프 범위를 기반으로 합니다.
+아래의 SQL 예제에서는 이 사용 사례를 보여 줍니다. 쿼리는 지정된 테이블에서 제한된 행 집합을 검색하여 각 항목의 `priceTotal` 특성에 73을 곱하여 `productListItems` 배열을 변환합니다. 결과에는 `_id`, `productListItems` 및 변환된 `price_in_inr` 열이 포함됩니다. 선택은 특정 타임스탬프 범위를 기반으로 합니다.
 
 ```sql
 SELECT _id,
@@ -59,11 +60,11 @@ LIMIT  10;
 
 `exists(array<T>, function<T, boolean>): boolean`
 
-위의 스니펫에서 `exists` 함수는 배열의 각 요소에 적용되며 부울 값을 반환합니다. 부울은 배열에 지정된 조건을 충족하는 요소가 하나 이상 있는지 여부를 나타냅니다. 이 경우 특정 SKU를 사용하는 제품이 존재하는지 확인합니다.
+위의 코드 조각에서 `exists` 함수는 배열의 각 요소에 적용되며 부울 값을 반환합니다. 부울은 배열에 지정된 조건을 충족하는 요소가 하나 이상 있는지 여부를 나타냅니다. 이 경우 특정 SKU를 사용하는 제품이 존재하는지 확인합니다.
 
 **예**
 
-아래 SQL 예제에서 쿼리는 `productListItems` 다음에서 `geometrixxx_999_xdm_pqs_1batch_10k_rows` 테이블 및 SKU가 같은 요소가 `123679` 다음에서 `productListItems` 배열이 존재합니다. 그런 다음 특정 범위의 타임스탬프를 기반으로 결과를 필터링하고 최종 결과를 10개의 행으로 제한합니다.
+아래 SQL 예제에서 쿼리는 `geometrixxx_999_xdm_pqs_1batch_10k_rows` 테이블에서 `productListItems`을(를) 가져오고 `productListItems` 배열에서 SKU가 `123679`과(와) 같은 요소가 있는지 평가합니다. 그런 다음 특정 범위의 타임스탬프를 기반으로 결과를 필터링하고 최종 결과를 10개의 행으로 제한합니다.
 
 ```sql
 SELECT productListItems
@@ -102,7 +103,7 @@ productListItems
 
 **예**
 
-아래 쿼리는 `productListItems` 열, 필터를 적용하여 SKU가 100000보다 큰 요소만 포함하고 결과 세트를 특정 타임스탬프 범위 내의 행으로 제한합니다. 그런 다음 필터링된 배열에 별칭을 지정합니다. `_filter` 출력에서.
+아래 쿼리는 `productListItems` 열을 선택하고, SKU가 100000보다 큰 요소만 포함하도록 필터를 적용하고, 결과 집합을 특정 타임스탬프 범위 내의 행으로 제한합니다. 그런 다음 필터링된 배열은 출력에서 `_filter`(으)로 별칭이 지정됩니다.
 
 ```sql
 SELECT productListItems,
@@ -136,7 +137,7 @@ productListItems | _filter
 
 **예**
 
-이 쿼리 예는 다음에서 최대 SKU 값을 계산합니다. `productListItems` 지정된 타임스탬프 범위 내에 배열되며 결과가 두 배가 됩니다. 출력에는 원본이 포함됩니다 `productListItems` 배열 및 계산됨 `max_value`.
+이 쿼리 예제는 지정된 타임스탬프 범위 내의 `productListItems` 배열에서 최대 SKU 값을 계산하고 결과를 두 배로 늘립니다. 출력에는 원본 `productListItems` 배열과 계산된 `max_value`이(가) 포함됩니다.
 
 ```sql
 SELECT productListItems,
@@ -175,7 +176,7 @@ productListItems | max_value
 
 **예**
 
-다음 쿼리는 `zip_with` 함수 를 사용하여 두 배열에서 값 쌍을 만듭니다. 이 작업은 의 SKU 값을 추가하여 수행합니다. `productListItems` 배열을 정수 시퀀스로 변환하고, 이 시퀀스는 `Sequence` 함수. 결과가 원본과 함께 선택됩니다. `productListItems` 열 및 은 타임스탬프 범위를 기반으로 제한됩니다.
+다음 쿼리는 `zip_with` 함수를 사용하여 두 배열에서 값 쌍을 만듭니다. 이 작업은 `productListItems` 배열의 SKU 값을 `Sequence` 함수를 사용하여 생성된 정수 시퀀스에 추가하여 수행합니다. 원래 `productListItems` 열과 함께 결과가 선택되었으며 타임스탬프 범위에 따라 제한됩니다.
 
 ```sql
 SELECT productListItems,
@@ -250,7 +251,7 @@ productListItems     | map_from_entries
 
 `map_form_arrays(array<K>, array<V>): map<K, V>`
 
-다음 `map_form_arrays` 함수는 두 배열에서 쌍을 이루는 값을 사용하여 맵을 만듭니다.
+`map_form_arrays` 함수는 두 배열에서 쌍을 이루는 값을 사용하여 맵을 만듭니다.
 
 >[!IMPORTANT]
 >
@@ -258,7 +259,7 @@ productListItems     | map_from_entries
 
 **예**
 
-아래의 SQL은 키를 사용하여 생성된 일련 번호인 맵을 만듭니다. `Sequence` 함수 및 값은 `productListItems` 배열입니다. 쿼리에서 `productListItems` 열 및 사용 `Map_from_arrays` 생성된 숫자 시퀀스 및 배열 요소를 기반으로 맵을 만드는 함수입니다. 결과는 10개의 행으로 제한되며 타임스탬프 범위를 기반으로 필터링됩니다.
+아래 SQL은 `Sequence` 함수를 사용하여 생성된 일련 번호이고 값이 `productListItems` 배열의 요소인 맵을 만듭니다. 쿼리는 `productListItems` 열을 선택하고 `Map_from_arrays` 함수를 사용하여 생성된 숫자 시퀀스 및 배열의 요소를 기반으로 맵을 만듭니다. 결과는 10개의 행으로 제한되며 타임스탬프 범위를 기반으로 필터링됩니다.
 
 ```sql
 SELECT productListItems,
@@ -296,11 +297,11 @@ productListItems     | map_from_entries
 
 `map_concat(map<K, V>, ...): map<K, V>`
 
-다음 `map_concat` 위의 코드 조각에 있는 function은 여러 맵을 인수로 가져와서 입력 맵의 모든 키-값 쌍을 결합하는 새 맵을 반환합니다. 이 함수는 여러 맵을 단일 맵으로 연결하고, 결과 맵에는 입력 맵의 모든 키-값 쌍이 포함됩니다.
+위 코드 조각의 `map_concat` 함수는 여러 맵을 인수로 사용하고 입력 맵의 모든 키-값 쌍을 결합하는 새 맵을 반환합니다. 이 함수는 여러 맵을 단일 맵으로 연결하고, 결과 맵에는 입력 맵의 모든 키-값 쌍이 포함됩니다.
 
 **예**
 
-아래의 SQL은 각 항목이 있는 맵을 만듭니다. `productListItems` 는 시퀀스 번호와 연결되어 다른 맵과 연결되고, 여기서 키는 특정 시퀀스 범위에서 생성됩니다.
+아래의 SQL은 `productListItems`의 각 항목이 시퀀스 번호와 연결된 맵을 만듭니다. 이 맵은 특정 시퀀스 범위에서 키가 생성되는 다른 맵과 연결됩니다.
 
 ```sql
 SELECT productListItems,
@@ -345,7 +346,7 @@ productListItems     | map_from_entries
 
 **예**
 
-쿼리에서 `identitymap` 테이블의 열 `geometrixxx_999_xdm_pqs_1batch_10k_rows` 키와 연관된 값을 추출합니다. `AAID` 각 행에 대해. 결과는 지정된 타임스탬프 범위 내에 있는 행으로 제한되며 쿼리는 출력을 10개 행으로 제한합니다.
+쿼리가 테이블 `geometrixxx_999_xdm_pqs_1batch_10k_rows`에서 `identitymap` 열을 선택하고 각 행에 대해 키 `AAID`과(와) 연결된 값을 추출합니다. 결과는 지정된 타임스탬프 범위 내에 있는 행으로 제한되며 쿼리는 출력을 10개 행으로 제한합니다.
 
 ```sql
 SELECT identitymap,
@@ -383,7 +384,7 @@ LIMIT 10;
 
 **예**
 
-아래 쿼리는 `identitymap` 열 및 `Cardinality` 함수는 내의 각 맵에 있는 요소의 수를 계산합니다. `identitymap`. 결과는 10개의 행으로 제한되며 지정된 타임스탬프 범위를 기반으로 필터링됩니다.
+아래 쿼리는 `identitymap` 열을 검색하고 `Cardinality` 함수는 `identitymap` 내의 각 맵에서 요소의 수를 계산합니다. 결과는 10개의 행으로 제한되며 지정된 타임스탬프 범위를 기반으로 필터링됩니다.
 
 ```sql
 SELECT identitymap,
@@ -421,7 +422,7 @@ LIMIT  10;
 
 **예**
 
-아래 쿼리는 `productListItems` 열에서 배열에서 중복 항목을 제거하고 지정된 타임스탬프 범위를 기반으로 출력을 10개 행으로 제한합니다.
+아래 쿼리는 `productListItems` 열을 선택하고 배열에서 중복된 항목을 제거하며 지정된 타임스탬프 범위를 기준으로 출력을 10행으로 제한합니다.
 
 ```sql
 SELECT productListItems,
@@ -457,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 다음 상위 함수 예는 유사한 레코드 검색 사용 사례의 일부로 설명되어 있습니다. 각 기능의 사용 예제와 설명은 해당 문서의 각 섹션에 나와 있습니다.
 
-다음 [`transform` 함수 예](../use-cases/retrieve-similar-records.md#length-adjustment) 제품 목록의 토큰화를 다룹니다.
+[`transform` 함수 예제](../use-cases/retrieve-similar-records.md#length-adjustment)은(는) 제품 목록의 토큰화를 다룹니다.
 
-다음 [`filter` 함수 예](../use-cases/retrieve-similar-records.md#filter-results) 텍스트 데이터에서 관련 정보를 보다 정교하고 정확하게 추출하는 방법을 보여 줍니다.
+[`filter` 함수 예제](../use-cases/retrieve-similar-records.md#filter-results)에서는 텍스트 데이터에서 관련 정보를 보다 정교하고 정확하게 추출하는 방법을 보여 줍니다.
 
-다음 [`reduce` 함수](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) 다양한 분석 및 계획 프로세스에서 중추적 역할을 할 수 있는 누적 값 또는 합계를 도출하는 방법을 제공합니다.
+[`reduce` 함수](../use-cases/retrieve-similar-records.md#higher-order-function-solutions)은(는) 다양한 분석 및 계획 프로세스에서 중추적 역할을 할 수 있는 누적 값 또는 합계를 도출하는 방법을 제공합니다.

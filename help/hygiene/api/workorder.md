@@ -14,25 +14,25 @@ ht-degree: 1%
 
 # 작업 주문 끝점 {#work-order-endpoint}
 
-다음 `/workorder` 데이터 위생 API의 끝점을 사용하면 Adobe Experience Platform에서 레코드 삭제 요청을 프로그래밍 방식으로 관리할 수 있습니다.
+데이터 위생 API의 `/workorder` 끝점을 사용하면 Adobe Experience Platform에서 레코드 삭제 요청을 프로그래밍 방식으로 관리할 수 있습니다.
 
 >[!IMPORTANT]
 > 
->레코드 삭제 기능은 현재 베타 버전이며 다음에서만 사용할 수 있습니다. **제한된 릴리스**. 모든 고객이 이용할 수 있는 것은 아닙니다. 레코드 삭제 요청은 제한된 릴리스의 조직에만 사용할 수 있습니다.
+>레코드 삭제 기능은 현재 Beta에 있으며 **제한된 릴리스**&#x200B;에서만 사용할 수 있습니다. 모든 고객이 이용할 수 있는 것은 아닙니다. 레코드 삭제 요청은 제한된 릴리스의 조직에만 사용할 수 있습니다.
 >
->레코드 삭제는 데이터 정리, 익명 데이터 제거 또는 데이터 최소화에 사용됩니다. 다음과 같습니다 **아님** GDPR(일반 데이터 보호 규정)과 같은 개인 정보 보호 규정에 관한 데이터 주체 권한 요청(준수)에 사용됩니다. 모든 규정 준수 사용 사례에 대해 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 대신,
+>레코드 삭제는 데이터 정리, 익명 데이터 제거 또는 데이터 최소화에 사용됩니다. GDPR(일반 데이터 보호 규정)과 같은 개인 정보 보호 규정과 관련된 데이터 주체 권한 요청(준수)에 사용할 **not**&#x200B;입니다. 모든 규정 준수 사용 사례의 경우 대신 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md)을(를) 사용하십시오.
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 데이터 위생 API의 일부입니다. 계속하기 전에 다음을 검토하십시오. [개요](./overview.md) 관련 설명서에 대한 링크, 이 문서의 샘플 API 호출 읽기에 대한 안내서 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보입니다.
+이 안내서에 사용된 끝점은 데이터 위생 API의 일부입니다. 계속하기 전에 [개요](./overview.md)에서 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 검토하십시오.
 
 ## 레코드 삭제 요청 만들기 {#create}
 
-에 POST 요청을 하여 단일 데이터 세트 또는 모든 데이터 세트에서 하나 이상의 ID를 삭제할 수 있습니다. `/workorder` 엔드포인트.
+`/workorder` 끝점에 대한 POST 요청을 만들어 단일 데이터 세트 또는 모든 데이터 세트에서 하나 이상의 ID를 삭제할 수 있습니다.
 
 >[!IMPORTANT]
 > 
->매월 제출할 수 있는 총 고유 ID 레코드 삭제 횟수에는 제한이 있습니다. 이러한 제한은 라이선스 계약을 기반으로 합니다. Adobe Real-time Customer Data Platform 및 Adobe Journey Optimizer의 모든 에디션을 구입한 조직은 매월 최대 10만 건의 ID 레코드 삭제를 제출할 수 있습니다. 구입한 조직 **Adobe 헬스케어 실드** 또는 **Adobe 개인정보 보호 및 보안 실드** 매달 최대 60만 개의 id 레코드 삭제를 제출할 수 있습니다.<br>단일 [ui를 통해 삭제 요청 기록](../ui/record-delete.md) 을(를) 통해 한 번에 10,000개의 ID를 제출할 수 있습니다. 레코드를 삭제하는 API 메서드를 사용하면 100,000개의 ID를 한 번에 제출할 수 있습니다.<br>최대 ID 제한까지, 요청당 가능한 많은 ID를 제출하는 것이 좋습니다. 많은 양의 ID를 삭제하려는 경우 낮은 볼륨 또는 레코드당 하나의 ID 삭제 요청을 제출하지 않아야 합니다.
+>매월 제출할 수 있는 총 고유 ID 레코드 삭제 횟수에는 제한이 있습니다. 이러한 제한은 라이선스 계약을 기반으로 합니다. Adobe Real-time Customer Data Platform 및 Adobe Journey Optimizer의 모든 에디션을 구입한 조직은 매월 최대 10만 건의 ID 레코드 삭제를 제출할 수 있습니다. **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;을(를) 구매한 조직은 매월 최대 60만 개의 ID 레코드 삭제를 제출할 수 있습니다.<br>UI를 통한 단일 [레코드 삭제 요청](../ui/record-delete.md)을 통해 한 번에 10,000개의 ID를 제출할 수 있습니다. 레코드를 삭제하는 API 메서드를 사용하면 100,000개의 ID를 한 번에 제출할 수 있습니다.<br>가능한 한 많은 ID를 요청당 ID 한도까지 제출하는 것이 좋습니다. 많은 양의 ID를 삭제하려는 경우 낮은 볼륨 또는 레코드당 하나의 ID 삭제 요청을 제출하지 않아야 합니다.
 
 **API 형식**
 
@@ -46,7 +46,7 @@ POST /workorder
 
 **요청**
 
-의 값에 따라 `datasetId` 요청 페이로드에 제공된 API 호출은 모든 데이터 세트 또는 지정한 단일 데이터 세트에서 ID를 삭제합니다. 다음 요청은 특정 데이터 세트에서 3개의 ID를 삭제합니다.
+요청 페이로드에 제공된 `datasetId`의 값에 따라 API 호출은 모든 데이터 세트 또는 지정한 단일 데이터 세트에서 ID를 삭제합니다. 다음 요청은 특정 데이터 세트에서 3개의 ID를 삭제합니다.
 
 ```shell
 curl -X POST \
@@ -86,11 +86,11 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `action` | 수행할 작업입니다. 값을 로 설정해야 합니다. `delete_identity` 레코드 삭제에 사용됩니다. |
-| `datasetId` | 단일 데이터 세트에서 삭제하는 경우 이 값은 해당 데이터 세트의 ID여야 합니다. 모든 데이터 세트에서 삭제하는 경우 값을 로 설정하십시오. `ALL`.<br><br>단일 데이터 세트를 지정하는 경우 데이터 세트와 연결된 XDM(Experience Data Model) 스키마에 기본 ID가 정의되어 있어야 합니다. 데이터 세트에 기본 ID가 없는 경우 데이터 라이프사이클 요청으로 수정하려면 데이터 세트에 ID 맵이 있어야 합니다.<br>ID 맵이 존재하는 경우 라는 최상위 수준의 필드로 표시됩니다. `identityMap`.<br>데이터 세트 행의 ID 맵에는 여러 ID가 있을 수 있지만 하나만 기본으로 표시할 수 있습니다. `"primary": true` 을(를) 강제로 포함하려면 을(를) 포함해야 합니다. `id` 기본 id와 일치시키십시오. |
+| `action` | 수행할 작업입니다. 레코드를 삭제하려면 값을 `delete_identity`(으)로 설정해야 합니다. |
+| `datasetId` | 단일 데이터 세트에서 삭제하는 경우 이 값은 해당 데이터 세트의 ID여야 합니다. 모든 데이터 세트에서 삭제하는 경우 값을 `ALL`(으)로 설정하십시오.<br><br>단일 데이터 집합을 지정하는 경우 데이터 집합의 관련 XDM(Experience Data Model) 스키마에 기본 ID가 정의되어 있어야 합니다. 데이터 세트에 기본 ID가 없는 경우 데이터 라이프사이클 요청으로 수정하려면 데이터 세트에 ID 맵이 있어야 합니다.<br>ID 맵이 있으면 `identityMap`(이)라는 최상위 수준의 필드로 표시됩니다.<br>데이터 집합 행의 ID 맵에는 여러 ID가 있을 수 있지만, 한 ID만 기본으로 표시할 수 있습니다. `id`이(가) 기본 ID와 일치하도록 하려면 `"primary": true`을(를) 포함해야 합니다. |
 | `displayName` | 레코드 삭제 요청에 대한 표시 이름입니다. |
 | `description` | 레코드 삭제 요청에 대한 설명. |
-| `identities` | 정보를 삭제하려는 하나 이상의 사용자 ID가 포함된 배열입니다. 각 ID는 [id 네임스페이스](../../identity-service/features/namespaces.md) 및 값:<ul><li>`namespace`: 단일 문자열 속성을 포함합니다. `code`: id 네임스페이스를 나타냅니다. </li><li>`id`: ID 값입니다.</ul>If `datasetId` 각 엔터티가 속한 단일 데이터 세트를 지정합니다. `identities` 스키마의 기본 id와 동일한 id 네임스페이스를 사용해야 합니다.<br><br>If `datasetId` 이(가) (으)로 설정됨 `ALL`, `identities` 각 데이터 세트가 다를 수 있으므로 배열이 단일 네임스페이스로 제한되지 않습니다. 그러나 요청은에서 보고한 대로 조직에서 사용할 수 있는 네임스페이스에 제약을 받습니다 [ID 서비스](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | 정보를 삭제하려는 하나 이상의 사용자 ID가 포함된 배열입니다. 각 ID는 [ID 네임스페이스](../../identity-service/features/namespaces.md) 및 값으로 구성됩니다.<ul><li>`namespace`: ID 네임스페이스를 나타내는 단일 문자열 속성 `code`을(를) 포함합니다. </li><li>`id`: ID 값입니다.</ul>`datasetId`에서 단일 데이터 집합을 지정하는 경우 `identities`의 각 엔터티는 스키마의 기본 ID와 동일한 ID 네임스페이스를 사용해야 합니다.<br><br>`datasetId`이(가) `ALL`(으)로 설정되어 있으면 각 데이터 세트가 다를 수 있으므로 `identities` 배열이 단일 네임스페이스로 제한되지 않습니다. 그러나 [ID 서비스](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces)에서 보고한 대로 요청이 여전히 조직에서 사용할 수 있는 네임스페이스로 제한되어 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -119,18 +119,18 @@ curl -X POST \
 | `workorderId` | 삭제 주문 ID. 나중에 삭제 상태를 조회하는 데 사용할 수 있습니다. |
 | `orgId` | 조직 ID입니다. |
 | `bundleId` | 이 삭제 순서가 연결된 번들의 ID이며, 디버깅 목적으로 사용됩니다. 여러 삭제 주문이 함께 번들로 포함되어 다운스트림 서비스에서 처리됩니다. |
-| `action` | 작업 주문에 의해 수행되는 작업입니다. 레코드 삭제의 경우 값은 다음과 같습니다. `identity-delete`. |
+| `action` | 작업 주문에 의해 수행되는 작업입니다. 레코드 삭제의 경우 값은 `identity-delete`입니다. |
 | `createdAt` | 삭제 순서가 생성된 시점의 타임스탬프입니다. |
 | `updatedAt` | 삭제 순서가 마지막으로 업데이트된 시점의 타임스탬프입니다. |
 | `status` | 삭제 주문의 현재 상태입니다. |
 | `createdBy` | 삭제 순서를 만든 사용자입니다. |
-| `datasetId` | 요청의 대상이 되는 데이터 세트의 ID입니다. 요청이 모든 데이터 세트에 대한 것이면 값이 로 설정됩니다. `ALL`. |
+| `datasetId` | 요청의 대상이 되는 데이터 세트의 ID입니다. 모든 데이터 세트에 대한 요청인 경우 값이 `ALL`(으)로 설정됩니다. |
 
 {style="table-layout:auto"}
 
 ## 레코드 삭제 상태 검색 {#lookup}
 
-이후 [레코드 삭제 요청 만들기](#create), GET 요청을 사용하여 상태를 확인할 수 있습니다.
+[레코드 삭제 요청을 만들기](#create)한 후 GET 요청을 사용하여 레코드 상태를 확인할 수 있습니다.
 
 **API 형식**
 
@@ -140,7 +140,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{WORK_ORDER_ID}` | 다음 `workorderId` 조회 중인 레코드 삭제. |
+| `{WORK_ORDER_ID}` | 조회 중인 레코드 삭제 `workorderId`입니다. |
 
 {style="table-layout:auto"}
 
@@ -197,17 +197,17 @@ curl -X GET \
 | `workorderId` | 삭제 주문 ID. 나중에 삭제 상태를 조회하는 데 사용할 수 있습니다. |
 | `orgId` | 조직 ID입니다. |
 | `bundleId` | 이 삭제 순서가 연결된 번들의 ID이며, 디버깅 목적으로 사용됩니다. 여러 삭제 주문이 함께 번들로 포함되어 다운스트림 서비스에서 처리됩니다. |
-| `action` | 작업 주문에 의해 수행되는 작업입니다. 레코드 삭제의 경우 값은 다음과 같습니다. `identity-delete`. |
+| `action` | 작업 주문에 의해 수행되는 작업입니다. 레코드 삭제의 경우 값은 `identity-delete`입니다. |
 | `createdAt` | 삭제 순서가 생성된 시점의 타임스탬프입니다. |
 | `updatedAt` | 삭제 순서가 마지막으로 업데이트된 시점의 타임스탬프입니다. |
 | `status` | 삭제 주문의 현재 상태입니다. |
 | `createdBy` | 삭제 순서를 만든 사용자입니다. |
-| `datasetId` | 요청의 대상이 되는 데이터 세트의 ID입니다. 요청이 모든 데이터 세트에 대한 것이면 값이 로 설정됩니다. `ALL`. |
-| `productStatusDetails` | 요청과 관련된 다운스트림 프로세스의 현재 상태를 나열하는 배열입니다. 각 배열 객체에는 다음 속성이 포함됩니다.<ul><li>`productName`: 다운스트림 서비스의 이름입니다.</li><li>`productStatus`: 다운스트림 서비스의 요청 현재 처리 상태입니다.</li><li>`createdAt`: 서비스에서 가장 최근 상태를 게시한 시점의 타임스탬프입니다.</li></ul> |
+| `datasetId` | 요청의 대상이 되는 데이터 세트의 ID입니다. 모든 데이터 세트에 대한 요청인 경우 값이 `ALL`(으)로 설정됩니다. |
+| `productStatusDetails` | 요청과 관련된 다운스트림 프로세스의 현재 상태를 나열하는 배열입니다. 각 배열 객체에는 다음 속성이 포함됩니다.<ul><li>`productName`: 다운스트림 서비스의 이름입니다.</li><li>`productStatus`: 다운스트림 서비스의 현재 요청 처리 상태입니다.</li><li>`createdAt`: 서비스에서 가장 최근 상태를 게시한 시점의 타임스탬프입니다.</li></ul> |
 
 ## 레코드 삭제 요청 업데이트
 
-다음을 업데이트할 수 있습니다. `displayName` 및 `description` PUT 요청을 통해 레코드를 삭제할 수 있습니다.
+PUT 요청을 통해 레코드를 삭제할 `displayName` 및 `description`을(를) 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -217,7 +217,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{WORK_ORDER_ID}` | 다음 `workorderId` 조회 중인 레코드 삭제. |
+| `{WORK_ORDER_ID}` | 조회 중인 레코드 삭제 `workorderId`입니다. |
 
 {style="table-layout:auto"}
 
@@ -292,12 +292,12 @@ curl -X PUT \
 | `workorderId` | 삭제 주문 ID. 나중에 삭제 상태를 조회하는 데 사용할 수 있습니다. |
 | `orgId` | 조직 ID입니다. |
 | `bundleId` | 이 삭제 순서가 연결된 번들의 ID이며, 디버깅 목적으로 사용됩니다. 여러 삭제 주문이 함께 번들로 포함되어 다운스트림 서비스에서 처리됩니다. |
-| `action` | 작업 주문에 의해 수행되는 작업입니다. 레코드 삭제의 경우 값은 다음과 같습니다. `identity-delete`. |
+| `action` | 작업 주문에 의해 수행되는 작업입니다. 레코드 삭제의 경우 값은 `identity-delete`입니다. |
 | `createdAt` | 삭제 순서가 생성된 시점의 타임스탬프입니다. |
 | `updatedAt` | 삭제 순서가 마지막으로 업데이트된 시점의 타임스탬프입니다. |
 | `status` | 삭제 주문의 현재 상태입니다. |
 | `createdBy` | 삭제 순서를 만든 사용자입니다. |
-| `datasetId` | 요청의 대상이 되는 데이터 세트의 ID입니다. 요청이 모든 데이터 세트에 대한 것이면 값이 로 설정됩니다. `ALL`. |
-| `productStatusDetails` | 요청과 관련된 다운스트림 프로세스의 현재 상태를 나열하는 배열입니다. 각 배열 객체에는 다음 속성이 포함됩니다.<ul><li>`productName`: 다운스트림 서비스의 이름입니다.</li><li>`productStatus`: 다운스트림 서비스의 요청 현재 처리 상태입니다.</li><li>`createdAt`: 서비스에서 가장 최근 상태를 게시한 시점의 타임스탬프입니다.</li></ul> |
+| `datasetId` | 요청의 대상이 되는 데이터 세트의 ID입니다. 모든 데이터 세트에 대한 요청인 경우 값이 `ALL`(으)로 설정됩니다. |
+| `productStatusDetails` | 요청과 관련된 다운스트림 프로세스의 현재 상태를 나열하는 배열입니다. 각 배열 객체에는 다음 속성이 포함됩니다.<ul><li>`productName`: 다운스트림 서비스의 이름입니다.</li><li>`productStatus`: 다운스트림 서비스의 현재 요청 처리 상태입니다.</li><li>`createdAt`: 서비스에서 가장 최근 상태를 게시한 시점의 타임스탬프입니다.</li></ul> |
 
 {style="table-layout:auto"}

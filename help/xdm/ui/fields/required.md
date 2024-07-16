@@ -16,19 +16,19 @@ XDM(Experience Data Model)에서 필수 필드는 데이터 수집 중에 특정
 
 >[!IMPORTANT]
 >
->스키마 필드의 필요 여부에 관계없이 Platform은 를 승인하지 않습니다 `null` 또는 수집된 모든 필드의 값이 비어 있습니다. 레코드나 이벤트에 특정 필드에 대한 값이 없는 경우 해당 필드의 키를 수집 페이로드에서 제외해야 합니다.
+>스키마 필드의 필요 여부에 관계없이, Platform은 수집된 모든 필드에 대해 `null` 또는 빈 값을 허용하지 않습니다. 레코드나 이벤트에 특정 필드에 대한 값이 없는 경우 해당 필드의 키를 수집 페이로드에서 제외해야 합니다.
 
-날짜 [새 필드 정의](./overview.md#define) Adobe Experience Platform 사용자 인터페이스에서 다음을 선택하여 필수 필드로 설정할 수 있습니다. **[!UICONTROL 필수]** 오른쪽 레일의 확인란 선택 **[!UICONTROL 적용]** 변경 사항을 스키마에 적용합니다.
+Adobe Experience Platform 사용자 인터페이스에서 [새 필드를 정의](./overview.md#define)할 때 오른쪽 레일에서 **[!UICONTROL 필수]** 확인란을 선택하여 필수 필드로 설정할 수 있습니다. **[!UICONTROL 적용]**&#x200B;을 선택하여 스키마에 변경 내용을 적용합니다.
 
 ![필수 확인란](../../images/ui/fields/required/root.png)
 
-필드가 테넌트 ID 개체 아래의 루트 수준 속성이면 해당 경로는 **[!UICONTROL 필수 필드]** 왼쪽 레일에서.
+필드가 테넌트 ID 개체 아래의 루트 수준 특성인 경우 해당 경로는 왼쪽 레일의 **[!UICONTROL 필수 필드]** 아래에 즉시 나타납니다.
 
-![루트 레벨 필수 필드](../../images/ui/fields/required/applied.png)
+![루트 수준 필수 필드](../../images/ui/fields/required/applied.png)
 
-그러나 필수 필드가 필수 필드로 표시되지 않은 오브젝트 내에 중첩된 경우 중첩된 필드는 아래에 표시되지 않습니다 **[!UICONTROL 필수 필드]** 왼쪽 레일에서.
+그러나 필수 필드가 필수 필드로 표시되지 않은 개체 내에 중첩된 경우 중첩된 필드가 왼쪽 레일의 **[!UICONTROL 필수 필드]** 아래에 표시되지 않습니다.
 
-아래 예에서는 `internalSKU` 필드가 필요에 따라 설정되지만 상위 오브젝트 `SKUs` 아님. 이 경우 다음과 같은 경우에는 유효성 검사 오류가 발생하지 않습니다 `SKUs` 하위 필드가 있더라도 데이터 수집 시 제외됨 `internalSKU` 필수 항목으로 표시됩니다. 즉, 반면에 `SKUs` 은(는) 선택 사항이며 다음을 포함해야 합니다. `internalSKU` 포함된 이벤트의 필드.
+아래 예에서 `internalSKU` 필드는 필요에 따라 설정되지만 상위 개체 `SKUs`은(는) 설정되지 않습니다. 이 경우 하위 필드 `internalSKU`이(가) 필수 항목으로 표시되더라도 데이터를 수집할 때 `SKUs`을(를) 제외하는 경우 유효성 검사 오류가 발생하지 않습니다. 즉, `SKUs`은(는) 선택 사항이지만 포함된 이벤트에 `internalSKU` 필드를 포함해야 합니다.
 
 ![중첩된 필수 필드](../../images/ui/fields/required/nested.png)
 
@@ -38,4 +38,4 @@ XDM(Experience Data Model)에서 필수 필드는 데이터 수집 중에 특정
 
 ## 다음 단계
 
-이 안내서에서는 UI에서 필수 필드를 정의하는 방법을 다룹니다. 의 개요 보기 [UI의 필드 정의](./overview.md#special) 에서 다른 XDM 필드 유형을 정의하는 방법을 알아보려면 [!DNL Schema Editor].
+이 안내서에서는 UI에서 필수 필드를 정의하는 방법을 다룹니다. [!DNL Schema Editor]에서 다른 XDM 필드 유형을 정의하는 방법을 알아보려면 [UI의 필드 정의](./overview.md#special)에 대한 개요를 참조하십시오.

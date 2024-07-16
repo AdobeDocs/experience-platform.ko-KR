@@ -17,4 +17,4 @@ ht-degree: 63%
 * [플랫폼에 대한 사용자 정의 접근성](custom.md)
 * [플랫폼 설명서](https://experienceleague.adobe.com/docs/experience-platform.html)
 * [플랫폼 개요](https://www.adobe.com/go/platform-overview-en)
-* [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

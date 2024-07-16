@@ -47,4 +47,4 @@ ht-degree: 29%
 - [UI에서 ID 필드 정의](label-identities.md)
 - [개인 정보 보호 요청 처리](privacy.md)
 - [문제 해결 안내서](troubleshooting-guide.md)
-- [Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+- [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

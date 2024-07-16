@@ -48,10 +48,10 @@ Platform을 사용하면 사용자 정의 필드 그룹 및 데이터 유형을 
 
 >[!IMPORTANT]
 >
->SPI 및 PII는 [XDM 개별 프로필](../classes/individual-profile.md) 및 [XDM ExperienceEvent](../classes/experienceevent.md) 클래스입니다. 데이터 삭제, 개인정보 보호 및 거버넌스 목적을 위한 우수 사례로서, 다른 사용자 지정 또는 표준 XDM 클래스에서 SPI 및 PII를 저장하지 마십시오.
+>SPI 및 PII는 [XDM 개별 프로필](../classes/individual-profile.md) 및 [XDM ExperienceEvent](../classes/experienceevent.md) 클래스에만 저장해야 합니다. 데이터 삭제, 개인정보 보호 및 거버넌스 목적을 위한 우수 사례로서, 다른 사용자 지정 또는 표준 XDM 클래스에서 SPI 및 PII를 저장하지 마십시오.
 
 ## 다음 단계
 
-이 문서에서는 XDM의 중요 및 개인 데이터와 관련된 주요 고려 사항을 다룹니다. 비즈니스 사용 사례를 가장 잘 충족하도록 스키마를 모델링하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오 [데이터 모델링 우수 사례](./best-practices.md).
+이 문서에서는 XDM의 중요 및 개인 데이터와 관련된 주요 고려 사항을 다룹니다. 비즈니스 사용 사례에 가장 적합하게 스키마를 모델링하는 방법에 대한 자세한 내용은 [데이터 모델링 모범 사례](./best-practices.md)에 대한 안내서를 참조하십시오.
 
-Experience Platform의 데이터 거버넌스 및 개인 정보 보호 기능에 대한 자세한 내용은 [거버넌스, 개인 정보 보호 및 보안](../../landing/governance-privacy-security/overview.md).
+Experience Platform의 데이터 거버넌스 및 개인 정보 보호 기능에 대한 자세한 내용은 [거버넌스, 개인 정보 보호 및 보안에 대한 개요](../../landing/governance-privacy-security/overview.md)를 참조하세요.

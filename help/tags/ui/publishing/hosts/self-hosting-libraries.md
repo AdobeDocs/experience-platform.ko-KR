@@ -5,7 +5,7 @@ exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
 source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
 workflow-type: tm+mt
 source-wordcount: '489'
-ht-degree: 70%
+ht-degree: 63%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
-Adobe Experience Platform의 태그를 사용하면 라는 파일 세트를 생성할 수 있습니다. [빌드](../builds.md). 이 파일 세트는 런타임 시 응용 프로그램의 동작을 제어합니다.
+Adobe Experience Platform의 태그를 사용하면 [build](../builds.md)라는 파일 집합을 만들 수 있습니다. 이 파일 세트는 런타임 시 응용 프로그램의 동작을 제어합니다.
 
 빌드는 클라이언트 장치가 런타임 시 필요에 따라 검색할 수 있도록 임의의 위치에서 호스팅해야 합니다.
 
@@ -23,7 +23,7 @@ Adobe Experience Platform의 태그를 사용하면 라는 파일 세트를 생�
 
 ## Adobe에서 관리 {#managed-by-adobe}
 
-Adobe는 웹 호스팅 사업을 진행하고 있지 않습니다. Adobe에서 호스팅을 관리하도록 선택한 경우, 사용자의 빌드는 Adobe와 계약을 맺은 타사 CDN(콘텐츠 전달 네트워크)으로 전달됩니다.
+Adobe은 웹 호스팅 사업이 아닙니다. Adobe에서 호스팅을 관리하도록 선택한 경우, 사용자의 빌드는 Adobe와 계약을 맺은 타사 CDN(콘텐츠 전달 네트워크)으로 전달됩니다.
 
 현재 기본 CDN 제공업체는 Akamai입니다. Akamai에 호스팅된 파일의 도메인은 `assets.adobedtm.com`입니다.
 

@@ -6,7 +6,7 @@ description: 스키마 레지스트리 API의 /sampledata 끝점을 사용하면
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '311'
 ht-degree: 1%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 1%
 
 데이터를 Adobe Experience Platform에 수집하려면 데이터의 형식 및 구조가 기존 XDM(경험 데이터 모델) 스키마를 준수해야 합니다. 특정 데이터 세트에 대한 스키마의 복잡성에 따라 데이터 세트에서 수집 시 예상하는 데이터의 정확한 모양을 결정하는 것이 어려울 수 있습니다.
 
-사용 `/sampledata` 의 엔드포인트 [!DNL Schema Registry] API를 사용하면 이전에 만든 스키마에 대한 예제 수집 개체를 생성할 수 있습니다.
+[!DNL Schema Registry] API에서 `/sampledata` 끝점을 사용하여 이전에 만든 스키마에 대한 예제 수집 개체를 생성할 수 있습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 끝점은 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 계속하기 전에 다음을 검토하십시오. [시작 안내서](./getting-started.md) 관련 설명서에 대한 링크, 이 문서의 샘플 API 호출 읽기에 대한 안내서 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보입니다.
+이 가이드에 사용된 끝점은 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
-샘플 데이터 끝점은 [!DNL Schema Registry]. 의 다른 끝점과 달리 [!DNL Schema Registry] API, RPC 끝점에는 다음과 같은 추가 헤더가 필요하지 않습니다. `Accept` 또는 `Content-Type`, 및 를 사용하지 않음 `CONTAINER_ID`. 대신 `/rpc` 네임스페이스. 아래 API 호출에 나와 있습니다.
+샘플 데이터 끝점은 [!DNL Schema Registry]에서 지원하는 RPC(원격 프로시저 호출)의 일부입니다. [!DNL Schema Registry] API의 다른 끝점과 달리 RPC 끝점에는 `Accept` 또는 `Content-Type`과(와) 같은 추가 헤더가 필요하지 않으며 `CONTAINER_ID`을(를) 사용하지 않습니다. 대신 아래 API 호출에 나와 있는 대로 `/rpc` 네임스페이스를 사용해야 합니다.
 
 ## 스키마에 대한 샘플 데이터 검색
 
@@ -35,7 +35,7 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 샘플 데이터를 생성할 스키마의 수입니다. |
+| `{SCHEMA_ID}` | 샘플 데이터를 생성할 스키마의 `meta:altId` 또는 URL로 인코딩된 `$id`입니다. |
 
 {style="table-layout:auto"}
 

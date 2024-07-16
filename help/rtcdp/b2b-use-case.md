@@ -16,11 +16,11 @@ ht-degree: 2%
 
 Real-time Customer Data Platform B2B 에디션은 기존 Real-Time CDP 및 Adobe Experience Platform 오퍼링을 확장하여 B2B 데이터 및 워크플로를 지원합니다. 이 문서에서는 B2B 에디션에서 제공하는 추가적인 이점을 보여주는 사용 사례를 제공합니다. 자동 프로필 변수에는 다음이 포함됩니다.
 
-- 서로 다른 분산된 데이터 소스의 개인 및 계정 데이터를 결합하여 고객을 더 잘 이해하고 더 정확한 세분화를 가능하게 하는 포괄적인 보기를 생성합니다. 다음에서 설명서를 참조하십시오. [xdm 스키마 관계 생성](./schemas/b2b.md) 를 다양한 B2B 소스와 함께 사용하십시오.
-- 관련 엔티티의 속성을 기반으로 대상을 세그먼트화합니다. 여기에는 계정, 영업 기회, 캠페인 및 마케팅 목록이 포함됩니다. 대상은 더 이상 개인 속성 및 경험 이벤트에만 국한되지 않습니다. 다음을 참조하십시오. [B2B 세그멘테이션 설명서](./segmentation/b2b.md) B2B 관련 대상 만들기에 대한 자세한 예는 를 참조하십시오.
+- 서로 다른 분산된 데이터 소스의 개인 및 계정 데이터를 결합하여 고객을 더 잘 이해하고 더 정확한 세분화를 가능하게 하는 포괄적인 보기를 생성합니다. 자세한 내용은 다양한 B2B 소스와 함께 사용하기 위한 [XDM 스키마 관계 만들기](./schemas/b2b.md)에 대한 설명서를 참조하십시오.
+- 관련 엔티티의 속성을 기반으로 대상을 세그먼트화합니다. 여기에는 계정, 영업 기회, 캠페인 및 마케팅 목록이 포함됩니다. 대상은 더 이상 개인 속성 및 경험 이벤트에만 국한되지 않습니다. B2B 관련 대상을 만드는 방법에 대한 자세한 예는 [B2B 세그멘테이션 설명서](./segmentation/b2b.md)를 참조하십시오.
 - 여러 계정과 관련된 한 사람의 사용 사례를 기본적으로 지원합니다.
 
-## 사용 사례
+## 활용 사례
 
 기술기업 보데아는 신제품을 보유하고 있으며 이메일과 LinkedIn 광고 캠페인으로 동시에 고객을 공략하고자 한다. Bodea는 마케팅 캠페인의 효율성을 극대화하기 위해 이전에 자사 제품에 100만 달러 이상을 소비하고 지난 달 새 제품 페이지를 방문한 기존 계정과 관련된 사람들을 타겟팅하려고 합니다.
 
@@ -38,7 +38,7 @@ Marketo 2에서는 Townsend가 계정 2로 기록됩니다. 또한 계정 2에�
 
 통합 및 추가적인 기업 통제를 위해 Bodea는 Marketo 1의 계정 1(및 CRM 1)과 Marketo 2의 계정 2(및 CRM 2)가 동일한 회사임을 나타내는 기록을 유지 관리하는 기본 데이터 관리 (MDM) 시스템을 갖습니다.
 
-지난 달에, `p2@townsend.com` 새 제품 페이지를 방문하고 Marketo 1에서 웹 방문을 기록했습니다.
+지난 달에 `p2@townsend.com`님이 새 제품 페이지를 방문했으며 웹 방문은 Marketo 1에 의해 기록되었습니다.
 
 ![계정 정보 다이어그램](./assets/account-info.png)
 
@@ -60,7 +60,7 @@ Real-Time CDP B2B 에디션을 통해 Bodea의 마케팅 팀은 다음과 같은
 
 - 모든 개별 소스(여러 Marketo 및 CRM 인스턴스 및 기본 데이터 관리)의 데이터를 Real-Time CDP B2B Edition에 결합합니다.
 
-RT-CDP B2B 에디션을 사용하면 Bodea가 Marketo Engage 소스 커넥터를 사용하여 Marketo 1과 Marketo 2의 B2B 데이터를 Experience Platform으로 가져오고 Platform 연결 애플리케이션을 사용하여 이 데이터를 최신 상태로 유지할 수 있습니다. 다음을 참조하십시오. [Marketo 소스 커넥터](../sources/connectors/adobe-applications/marketo/marketo.md) 설명서 를 참조하십시오.
+RT-CDP B2B 에디션을 사용하면 Bodea가 Marketo Engage Source 커넥터 를 사용하여 Marketo 1 및 Marketo 2의 B2B 데이터를 Experience Platform으로 가져오고 Platform 연결 애플리케이션을 사용하여 이 데이터를 최신 상태로 유지할 수 있습니다. 자세한 내용은 [Marketo 소스 커넥터](../sources/connectors/adobe-applications/marketo/marketo.md) 설명서를 참조하십시오.
 
 CRM1의 B2B 데이터 (사람, 계정, 기회 및 활동 )가 Marketo 1에 동기화됩니다. 마찬가지로 CRM 2의 모든 B2B 데이터가 Marketo 2로 동기화됩니다. 이러한 파일은 Marketo 소스 커넥터를 통해 Adobe Experience Platform에 동기화됩니다. 그러나 Bodea가 CRM의 추가 데이터를 Experience Platform으로 가져오려는 경우 기존 CRM 커넥터를 사용할 수 있습니다.
 
@@ -83,7 +83,7 @@ CRM1의 B2B 데이터 (사람, 계정, 기회 및 활동 )가 Marketo 1에 동�
    - 및
    - 지난 달에 제품 페이지를 방문했습니다.
 
-- Bodea의 새로운 마케팅 캠페인의 가장 효율적인 수신자인 대상자를 만듭니다. 이 예에서 RT-CDP, B2B 에디션은 마케터가 `p2@townsend.com` 를 이 마케팅 캠페인의 올바른 타겟으로 사용합니다.
+- Bodea의 새로운 마케팅 캠페인의 가장 효율적인 수신자인 대상자를 만듭니다. 이 예에서 RT-CDP, B2B 에디션은 마케터가 `p2@townsend.com`을(를) 이 마케팅 캠페인에 대한 올바른 대상으로 식별하는 데 도움이 됩니다.
 
 Bodea는 Marketo Engage 및 LinkedIn 대상을 사용함으로써 마케팅 팀을 위한 엔드 투 엔드 CXM(고객 경험 관리) 솔루션을 갖추고 있습니다. Experience Platform에서 만든 대상자는 정적 목록으로 표시되는 Marketo 대상에 푸시됩니다. 그러면 이 대상자는 Marketo 마케팅 캠페인에 자동으로 추가됩니다. 동시에 RT-CDP B2B 에디션을 통해 LinkedIn 마케팅 캠페인으로 대상자를 보낼 수도 있습니다.
 

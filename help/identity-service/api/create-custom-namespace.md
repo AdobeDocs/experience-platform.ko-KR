@@ -14,9 +14,9 @@ ht-degree: 3%
 
 # ID 서비스 API에서 사용자 지정 네임스페이스 만들기
 
-사용 [!DNL Identity Namespace] API를 사용하면 조직에서만 사용할 수 있는 사용자 지정 ID 네임스페이스를 만들 수 있습니다.
+[!DNL Identity Namespace] API를 사용하면 조직에서만 사용할 수 있는 사용자 지정 ID 네임스페이스를 만들 수 있습니다.
 
-사용자 지정 네임스페이스 만들기에 대한 권장 사항은 을 참조하십시오. [id 서비스 FAQ 설명서](../troubleshooting-guide.md).
+사용자 지정 네임스페이스 만들기에 대한 권장 사항은 [ID 서비스 FAQ 설명서](../troubleshooting-guide.md)를 참조하십시오.
 
 >[!NOTE]
 >
@@ -64,4 +64,4 @@ curl -X POST \
 
 ## 다음 단계
 
-다음 튜토리얼을 진행하십시오. [id의 기본 ID 나열](./list-native-id.md)
+다음 튜토리얼로 이동하여 [ID의 기본 ID를 나열](./list-native-id.md)합니다.

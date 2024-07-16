@@ -27,4 +27,4 @@ ht-degree: 23%
    - [대상의 데이터 흐름 모니터링](./ui/monitor-destinations.md)
    - B2B 모니터링 {#b2b}
       - [프로필 보강 작업 모니터링](./ui/b2b/monitor-profile-enrichment.md)
-- [플로우 서비스 API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+- [흐름 서비스 API](https://www.adobe.io/experience-platform-apis/references/flow-service/)

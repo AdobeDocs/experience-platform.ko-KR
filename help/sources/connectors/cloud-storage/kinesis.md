@@ -1,45 +1,45 @@
 ---
-title: Amazon Kinesis 소스 커넥터 개요
+title: Amazon Kinesis Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Amazon Kinesis을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '486'
 ht-degree: 1%
 
 ---
 
-# [!DNL Amazon Kinesis] 소스
+# [!DNL Amazon Kinesis] 원본
 
 >[!IMPORTANT]
 >
->다음 [!DNL Amazon Kinesis] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
+>[!DNL Amazon Kinesis] 원본은 Real-time Customer Data Platform Ultimate를 구입한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
 
-Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform], 및 [!DNL Azure]. 이러한 시스템의 데이터를 로 가져올 수 있습니다 [!DNL Platform].
+Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]과(와) 같은 클라우드 공급업체에 기본 연결을 제공합니다. 이러한 시스템에서 데이터를 [!DNL Platform](으)로 가져올 수 있습니다.
 
-클라우드 스토리지 소스는 고유한 데이터를으로 가져올 수 있습니다 [!DNL Platform] 를 다운로드하거나, 형식을 지정하거나, 업로드할 필요가 없습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. [!DNL Platform] 에서 데이터를 가져올 수 있습니다. [!DNL Amazon Kinesis] 실시간으로.
+클라우드 저장소 소스는 다운로드, 포맷 또는 업로드 없이도 자신의 데이터를 [!DNL Platform](으)로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. [!DNL Platform]을(를) 사용하면 [!DNL Amazon Kinesis]에서 실시간으로 데이터를 가져올 수 있습니다.
 
 >[!NOTE]
 >
->다음에 대한 척도 요소 [!DNL Kinesis] 대용량 데이터를 수집해야 하는 경우 늘려야 합니다. 현재, 에서 가져올 수 있는 최대 데이터 볼륨입니다 [!DNL Kinesis] platform에 대한 계정은 초당 4000개의 레코드입니다. 더 많은 볼륨 데이터를 확장 및 수집하려면 Adobe 담당자에게 문의하십시오.
+>많은 양의 데이터를 수집해야 하는 경우 [!DNL Kinesis]에 대한 크기 조정 요소를 늘려야 합니다. 현재 [!DNL Kinesis] 계정에서 플랫폼으로 가져올 수 있는 최대 데이터 볼륨은 초당 레코드 4000개입니다. 더 많은 볼륨 데이터를 확장 및 수집하려면 Adobe 담당자에게 문의하십시오.
 
 ## 전제 조건
 
-다음 단원에서는 다음을 만들기 전에 필요한 필수 구성 요소 설정에 대해 자세히 설명합니다. [!DNL Kinesis] 소스 연결.
+다음 단원에서는 [!DNL Kinesis] 원본 연결을 만들기 전에 필요한 필수 구성 요소 설정에 대한 자세한 정보를 제공합니다.
 
 ### 액세스 정책 설정
 
-A [!DNL Kinesis] stream을 사용하려면 원본 연결을 만드는 데 다음 권한이 필요합니다.
+[!DNL Kinesis] 스트림에는 원본 연결을 만드는 데 다음 권한이 필요합니다.
 
 - `GetShardIterator`
 - `GetRecords`
 - `DescribeStream`
 - `ListStreams`
 
-이러한 권한은 [!DNL Kinesis] 자격 증명을 입력하고 데이터 스트림을 선택하면 콘솔에서 및 을(를) 확인합니다.
+이러한 권한은 [!DNL Kinesis] 콘솔을 통해 정렬되며 자격 증명을 입력하고 데이터 스트림을 선택하면 플랫폼이 확인합니다.
 
-아래 예는 를 만드는 데 필요한 최소 액세스 권한을 표시합니다. [!DNL Kinesis] 소스 연결.
+아래 예제에서는 [!DNL Kinesis] 원본 연결을 만드는 데 필요한 최소 액세스 권한을 표시합니다.
 
 ```json
 {
@@ -68,11 +68,11 @@ A [!DNL Kinesis] stream을 사용하려면 원본 연결을 만드는 데 다음
 | `kinesis:DescribeStream` | 샤드 ID를 생성하는 데 필요한 샤드 맵을 포함하는 스트림 관련 정보를 반환하는 작업입니다. |
 | `kinesis:ListStreams` | UI에서 선택할 수 있는 사용 가능한 스트림을 나열하는 데 필요한 작업입니다. |
 
-에 대한 액세스 제어에 대한 자세한 내용 [!DNL Kinesis] 데이터 스트림, 다음 참조 [[!DNL Kinesis] 문서](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
+[!DNL Kinesis] 데이터 스트림에 대한 액세스를 제어하는 방법에 대한 자세한 내용은 다음 [[!DNL Kinesis] 문서](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html)를 참조하십시오.
 
 ### 반복자 유형 구성
 
-[!DNL Kinesis] 는 데이터를 읽는 순서를 지정할 수 있도록 다음 반복자 유형을 지원합니다.
+[!DNL Kinesis]은(는) 데이터를 읽는 순서를 지정할 수 있도록 다음 반복자 형식을 지원합니다.
 
 | 반복자 유형 | 설명 |
 | ------------- | ----------- |
@@ -82,13 +82,13 @@ A [!DNL Kinesis] stream을 사용하려면 원본 연결을 만드는 데 다음
 | `TRIM_HORIZON` | 가장 오래된 데이터 레코드부터 데이터를 읽습니다. |
 | `LATEST` | 가장 최근 데이터 레코드부터 데이터를 읽습니다. |
 
-A [!DNL Kinesis] UI 소스는 현재 `TRIM_HORIZON`, API는 두 가지를 모두 지원합니다. `TRIM_HORIZON` 및 `LATEST` 를 데이터 가져오기 위한 모드로 사용하십시오. Platform이 다음에 사용하는 기본 반복자 값 [!DNL Kinesis] 소스: `TRIM_HORIZON`.
+[!DNL Kinesis] UI 원본은 현재 `TRIM_HORIZON`만 지원하며 API는 데이터를 가져오기 위한 모드로 `TRIM_HORIZON`과(와) `LATEST`을(를) 모두 지원합니다. Platform이 [!DNL Kinesis] 소스에 사용하는 기본 반복자 값은 `TRIM_HORIZON`입니다.
 
-반복자 유형에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL Kinesis] 문서](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
+반복자 유형에 대한 자세한 내용은 다음 [[!DNL Kinesis] 문서](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax)를 참조하십시오.
 
-## 연결 [!DNL Amazon Kinesis] 끝 [!DNL Platform]
+## [!DNL Amazon Kinesis]을(를) [!DNL Platform]에 연결
 
-아래 설명서는 연결 방법에 대한 정보를 제공합니다 [!DNL Amazon Kinesis] 끝 [!DNL Platform] api 또는 사용자 인터페이스 사용:
+아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Amazon Kinesis]을(를) [!DNL Platform]에 연결하는 방법에 대한 정보를 제공합니다.
 
 ### API 사용
 

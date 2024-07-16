@@ -2,11 +2,11 @@
 keywords: Experience Platform;개발자 안내서;Data Science Workspace;인기 주제;실시간 머신 러닝;
 solution: Experience Platform
 title: 실시간 머신 러닝 개요
-description: 실시간 머신 러닝은 최종 사용자를 위한 디지털 경험 콘텐츠의 관련성을 크게 향상시킬 수 있습니다. 이는 Experience Platform 에지 네트워크에서 실시간 추론 및 지속적인 학습을 활용함으로써 가능하다.
+description: 실시간 머신 러닝은 최종 사용자를 위한 디지털 경험 콘텐츠의 관련성을 크게 향상시킬 수 있습니다. 이는 Experience Platform Edge Network에 실시간 추론 및 지속적 학습을 활용함으로써 가능하다.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '553'
 ht-degree: 1%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 1%
 >
 >아직 모든 사용자가 실시간 머신 러닝을 사용할 수 있는 것은 아닙니다. 이 기능은 알파에 있으며 아직 테스트 중입니다. 이 문서는 변경될 수 있습니다.
 
-실시간 머신 러닝은 최종 사용자를 위한 디지털 경험 콘텐츠의 관련성을 크게 향상시킬 수 있습니다. 이는 의 실시간 추론 및 지속적인 학습을 활용하여 가능합니다. [!DNL Experience Platform Edge Network].
+실시간 머신 러닝은 최종 사용자를 위한 디지털 경험 콘텐츠의 관련성을 크게 향상시킬 수 있습니다. 이는 [!DNL Experience Platform Edge Network]에서 실시간 추론 및 연속 학습을 활용하여 가능합니다.
 
-Hub와 모두에서 매끄러운 계산의 조합 [!DNL Edge] 관련성과 반응성이 모두 있는 초 개인화된 경험을 제공하는 데 전통적으로 관련된 지연 시간을 크게 줄입니다. 따라서 실시간 머신 러닝은 동기식 의사 결정에 대한 지연 시간이 매우 짧은 추론을 제공합니다. 예를 들면 개인화된 웹 페이지 콘텐츠를 렌더링하거나 오퍼 또는 할인을 표시하여 웹 스토어에서 이탈을 줄이고 전환을 늘리는 방법이 있습니다.
+허브와 [!DNL Edge] 모두에서 매끄러운 계산을 결합하면 일반적으로 관련성이 있고 반응적인 초 개인화된 경험을 제공하는 데 관련된 지연 시간이 크게 줄어듭니다. 따라서 실시간 머신 러닝은 동기식 의사 결정에 대한 지연 시간이 매우 짧은 추론을 제공합니다. 예를 들면 개인화된 웹 페이지 콘텐츠를 렌더링하거나 오퍼 또는 할인을 표시하여 웹 스토어에서 이탈을 줄이고 전환을 늘리는 방법이 있습니다.
 
 ## 실시간 머신 러닝 아키텍처 {#architecture}
 
@@ -35,7 +35,7 @@ Hub와 모두에서 매끄러운 계산의 조합 [!DNL Edge] 관련성과 반�
 
 ### 데이터 수집 및 준비
 
-데이터 수집 및 변환 [!DNL Experience Data Model] Adobe Experience Platform의 (XDM). 이 데이터는 모델 교육에 사용됩니다. XDM에 대한 자세한 내용은 [XDM 개요](../../xdm/home.md).
+Adobe Experience Platform에서 데이터를 수집하고 XDM([!DNL Experience Data Model])으로 변환합니다. 이 데이터는 모델 교육에 사용됩니다. XDM에 대한 자세한 내용은 [XDM 개요](../../xdm/home.md)를 참조하세요.
 
 ### 작성
 
@@ -43,7 +43,7 @@ Hub와 모두에서 매끄러운 계산의 조합 [!DNL Edge] 관련성과 반�
 
 ### 배포
 
-에 모델 배포 [!DNL Edge Network] 에서 실시간 머신 러닝 서비스를 만들려면 [!UICONTROL 서비스 갤러리] 예측 API 엔드포인트 사용.
+예측 API 끝점을 사용하여 [!UICONTROL 서비스 갤러리]에서 실시간 머신 러닝 서비스를 만들려면 [!DNL Edge Network]에 모델을 배포하십시오.
 
 ### 추론
 
@@ -62,19 +62,19 @@ Hub와 모두에서 매끄러운 계산의 조합 [!DNL Edge] 관련성과 반�
 > Alpha 제한 사항:
 > - 현재는 ONNX 기반 모델만 지원됩니다.
 > - 노드에 사용된 함수는 serialize할 수 없습니다. 예를 들어, Pandas 노드에서 사용되는 람다 함수입니다.
-> - 그 후 20초 동안 수면을 취합니다 [!DNL Edge] 배포는 수동으로 수행됩니다.
-> - 딥 러닝의 경우 다음과 같은 방식으로 데이터를 전송해야 합니다. `df.values` 를 호출하면 DL 모델에서 사용할 수 있는 배열을 반환합니다. 이는 ONNX 모델 채점 노드가 을 사용하기 때문입니다 `df.values` 모델에 대한 점수를 매기기 위해 출력을 보냅니다.
+> - [!DNL Edge] 배포가 수동으로 완료된 후 20초 동안 절전 모드가 실행됩니다.
+> - 딥러닝의 경우 `df.values`이(가) 호출될 때 DL 모델에서 허용하는 배열을 반환하는 방식으로 데이터를 전송해야 합니다. 이는 ONNX 모델 채점 노드가 `df.values`을(를) 사용하고 모델에 대해 채점하도록 출력을 보내기 때문입니다.
 
 
 ### 기능:
 
 | | Alpha(5월) |
 | --- | --- |
-| **기능** | - RTML 전자 필기장 템플릿을 사용하여 사용자 지정 머신 러닝 모델을 작성, 테스트 및 배포합니다. <br> - 사전 교육된 머신 러닝 모델 가져오기를 지원합니다. <br> - 실시간 머신 러닝 SDK. <br> - 작성 노드의 시작 세트 <br> - Adobe Experience Platform 허브에 배포됩니다. |
+| **기능** | - RTML 전자 필기장 템플릿을 사용하여 사용자 지정 머신 러닝 모델을 작성, 테스트 및 배포합니다. <br> - 미리 교육된 머신 러닝 모델 가져오기를 지원합니다. <br> - 실시간 머신 러닝 SDK. <br> - 작성 노드의 시작 집합입니다. <br> - Adobe Experience Platform 허브에 배포되었습니다. |
 | **가용성** | 북미 |
-| **노드 작성** | 판다스 <br> - ScikitLearn <br> - ONNXNode <br> - 분할 <br> - ModelUpload <br> - OneHotEncoder |
+| **노드 작성** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
 | **채점 실행 시간** | ONNX |
 
 ## 다음 단계
 
-다음을 따라 시작할 수 있습니다. [시작하기](./getting-started.md) 가이드. 이 안내서에서는 실시간 머신 러닝 모델을 만드는 데 필요한 모든 사전 요구 사항을 설정하는 과정을 안내합니다.
+[시작](./getting-started.md) 안내서를 따라 시작할 수 있습니다. 이 안내서에서는 실시간 머신 러닝 모델을 만드는 데 필요한 모든 사전 요구 사항을 설정하는 과정을 안내합니다.

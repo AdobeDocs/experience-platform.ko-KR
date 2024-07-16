@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # Google 데이터 레이어 확장
 
-Google 데이터 레이어 확장을 사용하면 Tags 구현에서 Google 데이터 레이어를 사용할 수 있습니다. 확장은 Google 솔루션 및 Google 오픈 소스와 독립적으로 또는 동시에 사용할 수 있습니다 [데이터 레이어 도우미 라이브러리](https://github.com/google/data-layer-helper).
+Google 데이터 레이어 확장을 사용하면 Tags 구현에서 Google 데이터 레이어를 사용할 수 있습니다. 확장 프로그램은 Google 솔루션 및 Google의 오픈 소스 [데이터 레이어 도우미 라이브러리](https://github.com/google/data-layer-helper)와 함께 독립적으로 또는 동시에 사용할 수 있습니다.
 
-도우미 라이브러리는 ACDL(Adobe 클라이언트 데이터 레이어)에 유사한 이벤트 기반 기능을 제공합니다. Google 데이터 레이어 확장의 데이터 요소, 규칙 및 작업은 의 기능과 유사한 기능을 제공합니다. [ACDL 확장](../client-data-layer/overview.md).
+도우미 라이브러리는 ACDL(Adobe 클라이언트 데이터 레이어)에 유사한 이벤트 기반 기능을 제공합니다. Google 데이터 레이어 확장의 데이터 요소, 규칙 및 작업은 [ACDL 확장](../client-data-layer/overview.md)의 기능과 유사한 기능을 제공합니다.
 
 ## 설치
 
-확장을 설치하려면 데이터 수집 UI에서 확장 카탈로그로 이동하고 다음을 선택합니다 **[!UICONTROL Google 데이터 레이어]**.
+확장을 설치하려면 데이터 수집 UI에서 확장 카탈로그로 이동하고 **[!UICONTROL Google 데이터 레이어]**&#x200B;를 선택합니다.
 
 확장이 설치되면 Adobe Experience Platform 태그 라이브러리의 모든 로드에서 데이터 레이어를 만들거나 해당 데이터 레이어에 액세스합니다.
 
@@ -25,7 +25,7 @@ Google 데이터 레이어 확장을 사용하면 Tags 구현에서 Google 데�
 
 확장 구성을 사용하여 확장에서 사용하는 데이터 계층의 이름을 정의할 수 있습니다. Adobe Experience Platform Tags가 로드될 때 구성된 이름의 데이터 레이어가 없으면 확장에서 만듭니다.
 
-데이터 레이어 이름 기본값은 Google 기본 이름입니다 `dataLayer`.
+데이터 레이어 이름 기본값은 Google 기본 이름 `dataLayer`입니다.
 
 >[!NOTE]
 >
@@ -35,27 +35,27 @@ Google 데이터 레이어 확장을 사용하면 Tags 구현에서 Google 데�
 
 >[!NOTE]
 >
->단어 _이벤트_ Adobe Experience Platform Tags에서 이벤트 기반 데이터 레이어를 사용하면 이 오버로드됩니다. _이벤트_ 다음과 같을 수 있습니다.
+>Adobe Experience Platform Tags에서 이벤트 기반 데이터 레이어를 사용할 때 _event_ 단어가 오버로드됩니다. _이벤트_&#x200B;은(는) 다음과 같을 수 있습니다.
 > - Adobe Experience Platform 태그 이벤트(라이브러리가 로드됨 등).
 > - JavaScript 이벤트.
-> - 를 사용하여 데이터 레이어로 푸시된 데이터 _이벤트_ 키워드.
+> - _event_ 키워드를 사용하여 데이터 레이어로 푸시된 데이터입니다.
 
 확장은 데이터 레이어에서 변경 사항을 수신 대기할 수 있는 기능을 제공합니다.
 
 >[!NOTE]
 >
->의 사용을 이해하는 것이 중요합니다. _이벤트_ 키워드 : 데이터가 Adobe 클라이언트 데이터 레이어와 유사하게 Google 데이터 레이어에 푸시될 때. 다음 _이벤트_ 키워드는 Google 데이터 레이어 및 이 확장의 동작을 변경합니다.\
+>Adobe 클라이언트 데이터 레이어와 마찬가지로 Google 데이터 레이어에 데이터를 푸시할 때 _event_ 키워드의 사용을 이해하는 것이 중요합니다. _event_ 키워드는 Google 데이터 계층의 동작을 변경하므로 이 확장을 변경합니다.\
 > 이 점에 대해 잘 모르는 경우 Google 설명서를 읽어보거나 조사를 수행하십시오.
 
 ### Google 이벤트 유형
 
-Google에서는 Google 태그 관리자와 `push()` 방법 및 Google Analytics 4(다음을 사용) `gtag()` 메서드를 사용합니다.
+Google에서는 `push()` 메서드를 사용하는 Google Tag Manager와 `gtag()` 메서드를 사용하는 Google Analytics 4의 두 가지 푸시 이벤트 수단을 지원합니다.
 
-1.2.1 이전 버전의 Google 데이터 레이어 확장 기능에서는 만들어진 이벤트만 지원됨 `push()`: 이 페이지의 코드 예제에 나와 있습니다.
+1.2.1 이전의 Google 데이터 레이어 확장 버전은 이 페이지의 코드 예제와 같이 `push()`에서 만든 이벤트만 지원합니다.
 
-버전 1.2.1 이상에서는 를 사용하여 만든 이벤트를 지원합니다 `gtag()`.  이 옵션은 선택 사항이며 확장 구성 대화 상자에서 활성화할 수 있습니다.
+버전 1.2.1 이상에서는 `gtag()`을(를) 사용하여 만든 이벤트를 지원합니다.  이 옵션은 선택 사항이며 확장 구성 대화 상자에서 활성화할 수 있습니다.
 
-에 대한 자세한 내용 `push()` 및 `gtag()` events, see the [Google 설명서](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  확장 기능의 구성 및 규칙 대화 상자에도 정보가 제공됩니다.
+`push()` 및 `gtag()` 이벤트에 대한 자세한 내용은 [Google 설명서](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag)를 참조하세요.  확장 기능의 구성 및 규칙 대화 상자에도 정보가 제공됩니다.
 
 ### 데이터 레이어의 모든 푸시를 수신합니다.
 
@@ -99,7 +99,7 @@ dataLayer.push({"data":"something"})
 
 이벤트를 지정하는 경우 이벤트 리스너는 특정 문자열과 일치하는 모든 이벤트를 추적합니다.
 
-예, 설정 `myEvent` 이 구성을 사용하면 리스너가 다음 푸시 이벤트만 추적합니다.
+예를 들어 이 구성을 사용할 때 `myEvent`을(를) 설정하면 리스너는 다음 푸시 이벤트만 추적합니다.
 
 ```js
 dataLayer.push({"event":"myEvent"})
@@ -107,7 +107,7 @@ dataLayer.push({"event":"myEvent"})
 
 (ECMAScript / JavaScript) 정규 표현식을 사용하여 이벤트 이름을 일치시킬 수 있습니다.
 
-예를 들어 &#39;myEvent\d&#39;를 설정하면 추적됩니다. `myEvent` 숫자(\d) 사용:
+예를 들어 &#39;myEvent\d&#39;를 설정하면 숫자(\d)로 `myEvent`이(가) 추적됩니다.
 
 ```js
 dataLayer.push({"event":"myEvent1"})
@@ -157,4 +157,4 @@ dataLayer.push({"event":"myEvent2"})
 
 확장의 데이터 요소 및 이벤트 대화 상자에는 자세한 사용 정보 및 예가 포함되어 있습니다.
 
-추가 일반 정보는 [프로젝트 추가 정보](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
+추가 일반 정보는 [프로젝트 추가 정보](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)에 있습니다.

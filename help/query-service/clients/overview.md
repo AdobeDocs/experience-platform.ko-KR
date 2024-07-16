@@ -11,13 +11,13 @@ ht-degree: 0%
 
 ---
 
-# 클라이언트 연결 대상 [!DNL Query Service]
+# 클라이언트를 [!DNL Query Service]에 연결
 
-이 섹션에서는 에 연결하는 방법을 설명합니다. [!DNL Query Service] 다양한 데스크탑 클라이언트 애플리케이션 및 이러한 연결을 확인하는 방법에 대해 설명합니다. [!DNL Query Service] 를 사용합니다. [!DNL PostgreSQL] 프로토콜이므로 이 섹션의 지침은 사용 방법을 설명합니다 [!DNL PostgreSQL] 쿼리를 연결하고 작성하는 도구 및 드라이버.
+이 단원에서는 다양한 데스크톱 클라이언트 응용 프로그램에서 [!DNL Query Service]에 연결하는 방법과 해당 연결을 확인하는 방법에 대해 설명합니다. [!DNL Query Service]은(는) [!DNL PostgreSQL] 프로토콜을 사용하므로 이 섹션의 지침에서는 [!DNL PostgreSQL] 도구 및 드라이버를 사용하여 쿼리를 연결하고 작성하는 방법에 대해 설명합니다.
 
 >[!IMPORTANT]
 >
->Query Service 대화형 Postgres API에 대한 프로덕션 환경의 TLS/SSL 인증서는 2024년 1월 24일 수요일에 새로 고쳐졌습니다.<br>연간 요구 사항이지만 Adobe의 TLS/SSL 인증서 공급자가 인증서 계층 구조를 업데이트함에 따라 체인의 루트 인증서도 변경되었습니다. 인증서 기관 목록에 루트 인증서가 누락된 경우 특정 Postgres 클라이언트에 영향을 줄 수 있습니다. 예를 들어 PSQL CLI 클라이언트는 루트 인증서를 명시적 파일에 추가해야 할 수 있습니다 `~/postgresql/root.crt`, 그렇지 않으면 오류가 발생할 수 있습니다. 예, `psql: error: SSL error: certificate verify failed`. 다음을 참조하십시오. [공식 PostgreSQL 설명서](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) 자세한 내용은 을 참조하십시오.<br>추가할 루트 인증서는에서 다운로드할 수 있습니다. [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
+>Query Service 대화형 Postgres API에 대한 프로덕션 환경의 TLS/SSL 인증서는 2024년 1월 24일 수요일에 새로 고쳐졌습니다.<br>연간 요구 사항이지만 Adobe의 TLS/SSL 인증서 공급자가 인증서 계층 구조를 업데이트함에 따라 체인의 루트 인증서도 변경되었습니다. 인증서 기관 목록에 루트 인증서가 누락된 경우 특정 Postgres 클라이언트에 영향을 줄 수 있습니다. 예를 들어 PSQL CLI 클라이언트는 루트 인증서를 명시적 파일 `~/postgresql/root.crt`에 추가해야 할 수 있습니다. 그렇지 않으면 오류가 발생할 수 있습니다. 예, `psql: error: SSL error: certificate verify failed`. 이 문제에 대한 자세한 내용은 [공식 PostgreSQL 설명서](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES)를 참조하십시오.<br>추가할 루트 인증서를 [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem)에서 다운로드할 수 있습니다.
 
 다음 클라이언트에 대한 지침이 제공됩니다.
 
@@ -32,4 +32,4 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Power BI 및 Tableau 사용자는 쿼리 서비스 자격 증명 탭에서 Customer Journey Analytics을 BI 도구에 연결할 수 있습니다. 방법에 대한 지침은 자격 증명 설명서 를 참조하십시오 [BI 도구를 Customer Journey Analytics에 연결](../ui/credentials.md#connect-to-customer-journey-analytics).
+>Power BI 및 Tableau 사용자는 쿼리 서비스 자격 증명 탭에서 Customer Journey Analytics을 BI 도구에 연결할 수 있습니다. [BI 도구를 Customer Journey Analytics에 연결](../ui/credentials.md#connect-to-customer-journey-analytics)하는 방법에 대한 지침은 자격 증명 설명서를 참조하세요.

@@ -4,7 +4,7 @@ description: 보고서 템플릿을 사용함으로써 Power BI를 사용하여 
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
 source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1465'
 ht-degree: 92%
 
 ---
@@ -17,7 +17,7 @@ Power BI 보고서 템플릿 기능을 사용하면 Adobe Experience Platform의
 
 ## 시작하기
 
-이 자습서를 계속하기 전에 다음을 잘 이해하는 것이 좋습니다. [스키마 구성](../../xdm/schema/composition.md) Experience Platform 및 을 통해 실시간 고객 프로필에 특성이 포함되는 방법 [유니온 스키마](../../xdm/schema/composition.md#union).
+이 자습서를 계속하기 전에 Experience Platform의 [스키마 구성](../../xdm/schema/composition.md)과, [공용 구조체 스키마](../../xdm/schema/composition.md#union)를 통해 특성이 실시간 고객 프로필에 포함되는 방법을 잘 이해하는 것이 좋습니다.
 
 Power BI 애플리케이션 통합을 설치하려면 먼저 사용자가 다음과 같은 Platform 권한을 획득해야 합니다.
 

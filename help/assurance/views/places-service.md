@@ -3,7 +3,7 @@ title: 장소 보기
 description: 이 안내서에는 Adobe Experience Platform Assurance의 장소 보기에 대한 정보가 자세히 나와 있습니다.
 exl-id: 23086aae-8894-4350-aa02-7e2faabe000d
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 100%
 

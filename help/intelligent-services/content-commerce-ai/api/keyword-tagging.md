@@ -6,7 +6,7 @@ description: 키워드 태그 지정 서비스는 텍스트 문서가 제공되�
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '444'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 키워드 태깅 서비스는 텍스트 문서가 주어지면 해당 문서의 주제를 가장 잘 설명하는 키워드나 핵심 구문을 자동으로 추출합니다. 키워드를 추출하기 위해 NER(Named Entity Recognition) 및 비감독 키워드 태깅(Unsupervised Keyword Tagging) 알고리즘의 조합이 사용된다.
 
-다음 표에는 이름이 지정된 엔티티가 나열되어 있습니다. [!DNL Content Tagging] 다음을 식별할 수 있습니다.
+다음 표에는 [!DNL Content Tagging]에서 식별할 수 있는 명명된 엔터티가 나열되어 있습니다.
 
 | 엔티티 이름 | 설명 |
 | --- | --- |
@@ -42,7 +42,7 @@ POST /services/v2/predict
 
 표시된 입력 매개 변수에 대한 자세한 내용은 예제 페이로드 아래의 표를 참조하십시오.
 
-이 [샘플 pdf](../pdf-files/simple-text.pdf) 이 문서에 표시된 예제에서 파일이 사용되었습니다.
+이 [샘플 pdf](../pdf-files/simple-text.pdf) 파일은 이 문서에 표시된 예제에서 사용되었습니다.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -88,7 +88,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **입력 매개 변수**
 
-| 속성 | 설명 | 필수입니다 |
+| 속성 | 설명 | 필수 |
 | --- | --- | --- |
 | `top_n` | 반환할 결과 수. 0: 모든 결과를 반환합니다. 임계값과 함께 사용할 경우 반환되는 결과 수는 제한보다 작습니다. | 아니요 |
 | `min_relevance` | 결과가 반환되어야 하는 점수 임계값. 매개 변수를 제외하여 모든 결과를 반환합니다. | 아니요 |
@@ -97,9 +97,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `last_semantic_unit_type` | 계층 구조 응답에서 의미 단위만 지정된 수준까지 반환합니다. &quot;key_phrase&quot;는 주요 구문만 반환하고, &quot;linked_entity&quot;는 주요 구문과 해당 연결된 엔티티만 반환하며, &quot;concept&quot;는 주요 구문, 연결된 엔티티 및 개념을 반환합니다. | 아니요 |
 | `entity_types` | 키 구문으로 반환될 엔티티의 유형입니다. | 아니요 |
 
-**문서 객체**
+**문서 개체**
 
-| 이름 | 데이터 형식 | 필수 여부 | 기본값 | 값 | 설명 |
+| 이름 | 데이터 유형 | 필수 여부 | 기본 | 값 | 설명 |
 | -----| --------- | -------- | ------- | ------ | ----------- |
 | `repo:path` | 문자열 | - | - | - | 주요 구문을 추출할 문서의 사전 서명된 URL입니다. |
 | `sensei:repoType` | 문자열 | - | - | HTTPS | 문서가 저장되는 저장소 유형입니다. |
@@ -108,7 +108,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **응답**
 
-성공적인 응답은 추출된 키워드가 포함된 JSON 개체를 반환합니다. `response` 배열입니다.
+성공적인 응답은 추출된 키워드가 포함된 JSON 개체를 `response` 배열에 반환합니다.
 
 ```json
 {

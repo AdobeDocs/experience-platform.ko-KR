@@ -15,9 +15,9 @@ Experience Platform에서 대상으로 데이터를 내보낼 때 Experience Pla
 
 Destination SDK은 대상 플랫폼에서 대상을 프로그래밍 방식으로 생성, 업데이트 또는 삭제하는 데 사용할 수 있는 도구를 제공합니다.
 
-이 구성 요소가 Destination SDK으로 만든 통합에 어디에 맞는지 이해하려면 의 다이어그램을 참조하십시오. [구성 옵션](../configuration-options.md) 설명서 또는 방법에 대한 안내서 참조 [Destination SDK을 사용하여 스트리밍 대상 구성](../../guides/configure-destination-instructions.md#create-destination-configuration).
+이 구성 요소가 Destination SDK으로 만든 통합에 어떻게 적합한지 이해하려면 [구성 옵션](../configuration-options.md) 설명서에서 다이어그램을 참조하거나 [Destination SDK을 사용하여 스트리밍 대상을 구성하는 방법](../../guides/configure-destination-instructions.md#create-destination-configuration)에 대한 안내서를 참조하십시오.
 
-다음을 통해 대상 메타데이터 템플릿을 구성할 수 있습니다. `/authoring/audience-templates` 엔드포인트. 대상 메타데이터 구성을 만든 후 다음을 사용할 수 있습니다. `/authoring/destinations` 를 구성하는 엔드포인트 `audienceMetadataConfig` 섹션. 이 섹션에서는 대상 템플릿에 매핑해야 하는 대상 메타데이터를 대상에 알려줍니다.
+`/authoring/audience-templates` 끝점을 통해 대상 메타데이터 템플릿을 구성할 수 있습니다. 대상 메타데이터 구성을 만든 후 `/authoring/destinations` 끝점을 사용하여 `audienceMetadataConfig` 섹션을 구성할 수 있습니다. 이 섹션에서는 대상 템플릿에 매핑해야 하는 대상 메타데이터를 대상에 알려줍니다.
 
 이 페이지에 표시된 구성 요소를 구성할 수 있는 자세한 API 호출 예는 다음 API 참조 페이지를 참조하십시오.
 
@@ -28,7 +28,7 @@ Destination SDK은 대상 플랫폼에서 대상을 프로그래밍 방식으로
 
 >[!IMPORTANT]
 >
->Destination SDK에서 지원하는 모든 매개변수 이름 및 값은 다음과 같습니다. **대소문자 구분**. 대소문자 구분 오류를 방지하려면 설명서에 표시된 대로 매개 변수 이름과 값을 정확히 사용하십시오.
+>Destination SDK에서 지원하는 모든 매개 변수 이름과 값은 **대/소문자를 구분합니다**. 대소문자 구분 오류를 방지하려면 설명서에 표시된 대로 매개 변수 이름과 값을 정확히 사용하십시오.
 
 ## 지원되는 통합 유형 {#supported-integration-types}
 
@@ -54,10 +54,10 @@ Destination SDK은 대상 플랫폼에서 대상을 프로그래밍 방식으로
 
 | 매개변수 | 유형 | 설명 |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | 부울 | 다음 여부를 나타냅니다. [[!UICONTROL 매핑 ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 대상 활성화 워크플로의 값은 Experience Platform 대상 이름이어야 합니다. |
-| `mapExperiencePlatformSegmentId` | 부울 | 다음 여부를 나타냅니다. [[!UICONTROL 매핑 ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 대상 활성화 워크플로의 값은 Experience Platform 대상 ID여야 합니다. |
-| `mapUserInput` | 부울 | 다음에 대한 사용자 입력 활성화 또는 비활성화 [[!UICONTROL 매핑 ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 대상 활성화 워크플로의 값입니다. 로 설정된 경우 `true`, `audienceTemplateId` 이(가) 있을 수 없습니다. |
-| `audienceTemplateId` | 문자열 | 다음 `instanceId` / [대상 메타데이터 템플릿](../../metadata-api/create-audience-template.md) 대상에 사용됩니다. |
+| `mapExperiencePlatformSegmentName` | 부울 | 대상 활성화 워크플로의 [[!UICONTROL 매핑 ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 값이 Experience Platform 대상 이름이어야 하는지 여부를 나타냅니다. |
+| `mapExperiencePlatformSegmentId` | 부울 | 대상 활성화 워크플로의 [[!UICONTROL 매핑 ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 값이 Experience Platform 대상 ID여야 하는지 여부를 나타냅니다. |
+| `mapUserInput` | 부울 | 대상 활성화 워크플로에서 [[!UICONTROL 매핑 ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 값에 대한 사용자 입력을 활성화하거나 비활성화합니다. `true`(으)로 설정된 경우 `audienceTemplateId`이(가) 있을 수 없습니다. |
+| `audienceTemplateId` | 문자열 | 대상에 사용되는 [대상 메타데이터 템플릿](../../metadata-api/create-audience-template.md)의 `instanceId`입니다. |
 
 {style="table-layout:auto"}
 

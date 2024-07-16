@@ -13,11 +13,11 @@ ht-degree: 2%
 
 Destination SDK을 통해 생성된 모든 대상은 기본적으로 내역 프로필 자격을 지원합니다. 즉, 사용자가 처음으로 대상에 대한 활성화 데이터 흐름을 설정할 때 첫 번째 내보내기에는 해당 세그먼트에 대해 자격이 부여된 모든 대상 멤버가 포함됩니다.
 
-이 동작은 `"backfillHistoricalProfileData":true` 대상 구성의 매개 변수입니다.
+이 동작은 대상 구성의 `"backfillHistoricalProfileData":true` 매개 변수에 의해 정의됩니다.
 
 >[!IMPORTANT]
 >
->내역 프로필 자격은 Destination SDK 및 를 통해 생성된 모든 대상에 대해 활성화됩니다. `backfillHistoricalProfileData` 매개 변수는 사용자가 구성할 수 없습니다.
+>Destination SDK을 통해 만든 모든 대상에 대해 이전 프로필 자격을 사용할 수 있으며 `backfillHistoricalProfileData` 매개 변수는 사용자가 구성할 수 없습니다.
 
 ## 지원되는 통합 유형 {#supported-integration-types}
 

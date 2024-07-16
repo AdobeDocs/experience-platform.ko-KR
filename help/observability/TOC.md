@@ -7,7 +7,7 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '55'
-ht-degree: 60%
+ht-degree: 61%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 60%
 # Observability Insights {#observability}
 
 * [Observability Insights 개요](./home.md)
-* 가시성 통찰력 API {#api}
+* Observability Insights API {#api}
    * [개요](./api/overview.md)
    * [시작하기](./api/getting-started.md)
    * [지표](./api/metrics.md)
@@ -25,4 +25,4 @@ ht-degree: 60%
    * [UI 안내서](./alerts/ui.md)
    * [I/O 이벤트 알림 구독](./alerts/subscribe.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
-* [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

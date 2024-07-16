@@ -20,7 +20,7 @@ If you would like to have more details on development consideration, [please rea
 
 확장을 설치하려면 Experience Platform UI 또는 데이터 수집 UI에서 확장 카탈로그로 이동하고 클라이언트 데이터 레이어 Adobe 를 선택합니다.
 
-![카탈로그의 ACDL 확장 보기](./images/catalog.png)
+카탈로그의 ![ACDL 확장 보기](./images/catalog.png)
 
 <!-- (GitHub link?)
 There is also the possibility to fork this project. You can download this github project, realize the change that you deem required for your specific use-case and re-upload it on your Organization as a private extension.
@@ -31,11 +31,11 @@ This installation will not be supported on our end.<br>
 
 ## 확장 보기
 
-기본적으로 ACDL 스크립트는 변수 이름으로 새 데이터 레이어를 만듭니다 `adobeDataLayer`. 확장 보기는 원하는 경우 이 이름을 변경할 수 있는 기능을 제공합니다. 설정한 이름은 태그가 로드될 때 인스턴스화됩니다.
+기본적으로 ACDL 스크립트는 변수 이름이 `adobeDataLayer`인 새 데이터 계층을 만듭니다. 확장 보기는 원하는 경우 이 이름을 변경할 수 있는 기능을 제공합니다. 설정한 이름은 태그가 로드될 때 인스턴스화됩니다.
 
 >[!NOTE]
 >
->개체 이름을 변경할 때 원본 `adobeDataLayer` 개체가 여전히 인스턴스화되고 있으며 선택한 새 변수 이름으로 복제되고 있습니다.
+>개체 이름을 변경할 때 원래 `adobeDataLayer` 개체가 여전히 인스턴스화되고 있으며 선택한 새 변수 이름으로 복제됩니다.
 
 ## 이벤트
 
@@ -75,13 +75,13 @@ This installation will not be supported on our end.<br>
 
 이벤트를 지정하는 경우 이벤트 리스너는 특정 문자열과 일치하는 모든 이벤트를 추적합니다.
 
-예, 설정 `myEvent` 이 구성을 사용하면 리스너가 다음 푸시 이벤트만 추적합니다.
+예를 들어 이 구성을 사용할 때 `myEvent`을(를) 설정하면 리스너는 다음 푸시 이벤트만 추적합니다.
 
 * `adobeDataLayer.push({"event":"myEvent"})`
 
 이벤트 리스너의 범위를 변경할 수도 있습니다. 다른 옵션은 아래에 요약되어 있습니다.
 
-* `all`: 이 옵션은 기본 옵션이며, 위에서 선택한 조건이 과거에 충족되거나 나중에 푸시될 때마다 규칙을 트리거합니다. 비동기 구현을 사용하는 경우 이 옵션이 가장 안전합니다.
+* `all`: 이 옵션은 기본 옵션이며 위에서 선택한 조건이 과거에 충족되거나 나중에 푸시될 때마다 규칙을 트리거합니다. 비동기 구현을 사용하는 경우 이 옵션이 가장 안전합니다.
 * `future`: 이 옵션은 조건과 일치하는 새 푸시 이벤트가 데이터 레이어로 전송될 때만 규칙을 트리거합니다.
 * `past`: 이 옵션은 조건과 일치하는 이전 푸시 이벤트에 대해서만 규칙을 트리거합니다. 조건에 일치하는 새 푸시는 무시되며 더 이상 규칙을 트리거하지 않습니다.
 
@@ -95,7 +95,7 @@ This installation will not be supported on our end.<br>
 
 그러나 현재 푸시 방법 중에 이전에 설정한 정보를 완전히 제거할 가능성은 없습니다.
 
-다음 **계산된 상태 재설정 및 설정** 작업은 마지막 계산된 상태를 복사하고 데이터 레이어 개체를 비운 다음 마지막 상태를 다시 푸시합니다.
+**계산된 상태 재설정 및 설정** 작업은 마지막 계산된 상태를 복사하고 데이터 레이어 개체를 비운 다음 마지막 상태를 다시 푸시합니다.
 
 ### 데이터 레이어로 푸시
 
@@ -120,13 +120,13 @@ This installation will not be supported on our end.<br>
 데이터 레이어 계산된 상태 데이터 요소는 구성 방법에 따라 다음 두 가지 중 하나를 반환할 수 있습니다.
 
 * 전체 데이터 계층 상태: 기본적으로 전체 데이터 계층 계산됨 상태가 반환됩니다.
-* 특정 경로: 데이터 레이어에서 반환할 경로를 지정할 수 있습니다. 경로는 점 표기법을 사용하여 지정됩니다(예: `data.foo`).
+* 특정 경로: 데이터 레이어에서 반환할 경로를 지정할 수 있습니다. 점 표기법을 사용하여 경로를 지정합니다(예: `data.foo`).
 
 ### 데이터 레이어 크기
 
 이 데이터 요소는 데이터 레이어의 크기를 반환합니다. 데이터 레이어의 크기는 이 개체에 푸시된 요소의 수로 표시됩니다.
 
-다음 푸시 이벤트 목록이 주어지면 이 데이터 요소는 정수를 반환합니다 `2`:
+다음 푸시 이벤트 목록이 주어지면 이 데이터 요소는 정수 `2`을(를) 반환합니다.
 
 ```js
 adobeDataLayer.push({"event":"myEvent"})

@@ -2,19 +2,19 @@
 title: 통합 태그 엔드포인트
 description: Adobe Experience Platform API를 사용하여 태그 범주와 태그를 만들고, 업데이트하고, 관리하고, 삭제하는 방법에 대해 알아봅니다.
 role: Developer
-source-git-commit: ede314d0cbe50514090915fccf7ef3c2a5254b7a
+exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 3%
 
 ---
 
-
 # 통합 태그 엔드포인트
 
 >[!IMPORTANT]
 >
->이 끝점 세트의 끝점 URL은 `https://experience.adobe.io`.
+>이 끝점 집합의 끝점 URL은 `https://experience.adobe.io`입니다.
 
 태그는 메타데이터 분류를 관리하여 비즈니스 객체를 보다 쉽게 검색하고 분류할 수 있도록 해 주는 기능입니다. 그런 다음 이러한 태그를 태그 범주에 추가하여 추가 그룹으로 구성할 수 있습니다.
 
@@ -22,19 +22,19 @@ ht-degree: 3%
 
 ## 시작하기
 
-이 안내서에 사용되는 끝점은 Adobe Experience Platform API의 일부입니다. 계속하기 전에 다음을 검토하십시오. [시작 안내서](./getting-started.md) 필수 헤더 및 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보
+이 안내서에 사용되는 끝점은 Adobe Experience Platform API의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 필요한 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 할 중요한 정보를 확인하십시오
 
 ### 용어집
 
-다음 용어집에서는 **태그** 및 a **태그 범주**.
+다음 용어집에서는 **tag**&#x200B;과(와) **tag 범주** 간의 차이점을 강조 표시합니다.
 
-- **태그**: 태그를 사용하면 비즈니스 객체에 대한 메타데이터 분류법을 관리할 수 있으므로 이러한 객체를 분류하여 보다 쉽게 검색하고 분류할 수 있습니다.
+- **태그**: 태그를 사용하면 비즈니스 개체의 메타데이터 분류법을 관리할 수 있으므로 더 쉽게 검색하고 분류할 수 있도록 이러한 개체를 분류할 수 있습니다.
    - **분류되지 않은 태그**: 분류되지 않은 태그는 태그 범주에 속하지 않는 태그입니다. 기본적으로 생성된 태그는 분류되지 않습니다.
-- **태그 범주**: 태그 범주를 사용하면 태그를 의미 있는 세트로 그룹화할 수 있으므로 태그의 목적에 더 많은 컨텍스트를 제공할 수 있습니다.
+- **태그 범주**: 태그 범주를 사용하면 태그를 의미 있는 집합으로 그룹화할 수 있으므로 태그의 목적에 더 많은 컨텍스트를 제공할 수 있습니다.
 
 ## 태그 범주 목록 검색 {#get-tag-categories}
 
-에 GET 요청을 하여 조직에 속한 태그 범주 목록을 검색할 수 있습니다. `/tagCategory` 엔드포인트.
+`/tagCategory` 끝점에 대한 GET 요청을 통해 조직에 속한 태그 범주 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -49,9 +49,9 @@ GET /tagCategory?{QUERY_PARAMETERS}
 | --------------- | ----------- | ------- |
 | `start` | 결과 목록이 시작되는 위치입니다. 이를 사용하여 결과의 페이지 매김을 위한 시작 색인을 나타낼 수 있습니다. | `start=a` |
 | `limit` | 페이지당 검색할 최대 태그 범주 수입니다. | `limit=20` |
-| `property` | 태그 범주를 검색할 때 필터링할 속성입니다. 지원되는 값은 다음과 같습니다. &lt;ul><li>`name`: 태그 카테고리의 이름입니다.</li></ul> | `property=name==category` |
-| `sortBy` | 태그 범주가 정렬되는 순서. 지원되는 값: `name`, `createdAt`, 및 `modifiedAt`. | `sortBy=name` |
-| `sortOrder` | 태그 범주가 정렬되는 방향입니다. 지원되는 값: `asc` 및 `desc`. | `sortOrder=asc` |
+| `property` | 태그 범주를 검색할 때 필터링할 속성입니다. 지원되는 값은 다음과 같습니다. &lt;ul≥<li>`name`: 태그 범주의 이름입니다.</li></ul> | `property=name==category` |
+| `sortBy` | 태그 범주가 정렬되는 순서. 지원되는 값은 `name`, `createdAt` 및 `modifiedAt`입니다. | `sortBy=name` |
+| `sortOrder` | 태그 범주가 정렬되는 방향입니다. 지원되는 값은 `asc` 및 `desc`입니다. | `sortOrder=asc` |
 
 **요청**
 
@@ -104,7 +104,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory
 >
 >시스템 관리자와 제품 관리자만 이 API 호출을 사용할 수 있습니다.
 
-에 POST 요청을 하여 새 태그 카테고리를 만들 수 있습니다. `/tagCategory` 엔드포인트.
+`/tagCategory` 끝점에 POST 요청을 하여 새 태그 범주를 만들 수 있습니다.
 
 **API 형식**
 
@@ -159,7 +159,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
 
 ## 특정 태그 범주 검색 {#get-tag-category}
 
-에 GET 요청을 하여 조직에 속한 특정 태그 범주를 검색할 수 있습니다. `/tagCategory` 엔드포인트 및 태그 범주의 ID 지정.
+`/tagCategory` 끝점에 GET 요청을 하고 태그 범주의 ID를 지정하여 조직에 속한 특정 태그 범주를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -224,7 +224,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-44
 >
 >시스템 관리자와 제품 관리자만 이 API 호출을 사용할 수 있습니다.
 
-에 PATCH 요청을 하여 조직에 속한 특정 태그 범주의 세부 정보를 업데이트할 수 있습니다. `/tagCategory` 엔드포인트 및 태그 범주의 ID 지정.
+`/tagCategory` 끝점에 PATCH 요청을 하고 태그 범주의 ID를 지정하여 조직에 속한 특정 태그 범주의 세부 정보를 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -256,8 +256,8 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
-| `op` | 완료된 작업입니다. 특정 태그 범주를 업데이트하려면 이 값을 로 설정합니다. `replace`. |
-| `path` | 업데이트할 필드의 경로입니다. 지원되는 값: `name` 및 `description`. |
+| `op` | 완료된 작업입니다. 특정 태그 범주를 업데이트하려면 이 값을 `replace`(으)로 설정하십시오. |
+| `path` | 업데이트할 필드의 경로입니다. 지원되는 값은 `name` 및 `description`입니다. |
 | `value` | 업데이트할 필드의 업데이트된 값. |
 | `from` | 업데이트할 필드의 원래 값입니다. |
 
@@ -291,7 +291,7 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 >
 >시스템 관리자와 제품 관리자만 이 API 호출을 사용할 수 있습니다.
 
-에 DELETE 요청을 하여 조직에 속한 특정 태그 범주를 삭제할 수 있습니다. `/tagCategory` 엔드포인트 및 태그 범주의 ID 지정.
+`/tagCategory` 끝점에 DELETE 요청을 하고 태그 범주의 ID를 지정하여 조직에 속한 특정 태그 범주를 삭제할 수 있습니다.
 
 **API 형식**
 
@@ -323,7 +323,7 @@ curl -X DELETE https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b
 
 ## 태그 목록 검색 {#get-tags}
 
-에 GET 요청을 하여 조직에 속한 태그 목록을 검색할 수 있습니다. `/tags` 엔드포인트 및 태그 카테고리의 ID입니다.
+`/tags` 끝점과 태그 범주의 ID에 대한 GET 요청을 통해 조직에 속한 태그 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -338,9 +338,9 @@ GET /tags?{QUERY_PARAMETERS}
 | --------------- | ----------- | ------- |
 | `start` | 결과 목록이 시작되는 위치입니다. 이를 사용하여 결과의 페이지 매김을 위한 시작 색인을 나타낼 수 있습니다. | `start=a` |
 | `limit` | 페이지당 검색할 최대 태그 수입니다. | `limit=20` |
-| `property` | 태그를 검색할 때 필터링할 속성입니다. 지원되는 값은 다음과 같습니다.<ul><li>`name`: 태그의 이름입니다.</li><li>`archived`: 태그의 보관 또는 보관 해제 여부. 이 값을 다음 중 하나로 설정할 수 있습니다. `true` 또는 `false`.</li><li>`tagCategoryId`: 태그가 속한 태그 범주의 ID입니다.</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
-| `sortBy` | 태그를 정렬하는 순서. 지원되는 값: `name`, `createdAt`, 및 `modifiedAt`. | `sortBy=name` |
-| `sortOrder` | 태그 범주가 정렬되는 방향입니다. 지원되는 값: `asc` 및 `desc`. | `sortOrder=asc` |
+| `property` | 태그를 검색할 때 필터링할 속성입니다. 지원되는 값은 다음과 같습니다.<ul><li>`name`: 태그의 이름입니다.</li><li>`archived`: 태그가 보관되었는지 또는 보관 해제되었는지 여부입니다. 이 값은 `true` 또는 `false` 중 하나로 설정할 수 있습니다.</li><li>`tagCategoryId`: 태그가 속한 태그 범주의 ID입니다.</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
+| `sortBy` | 태그를 정렬하는 순서. 지원되는 값은 `name`, `createdAt` 및 `modifiedAt`입니다. | `sortBy=name` |
+| `sortOrder` | 태그 범주가 정렬되는 방향입니다. 지원되는 값은 `asc` 및 `desc`입니다. | `sortOrder=asc` |
 
 
 **요청**
@@ -506,9 +506,9 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags?property=tagCategoryId=
 >
 >시스템 관리자와 제품 관리자만 이 API 호출을 사용하여 지정된 태그 범주에 새 태그를 만들 수 있습니다.
 >
->분류되지 않은 태그를 만드는 경우 다음을 수행합니다 **아님** 관리자 권한이 필요합니다.
+>분류되지 않은 태그를 만드는 경우 **not**&#x200B;은(는) 관리자 권한이 필요합니다.
 
-에 POST 요청을 하여 새 태그를 만들 수 있습니다. `/tags` 엔드포인트.
+`/tags` 끝점에 대한 POST 요청을 수행하여 새 태그를 만들 수 있습니다.
 
 **API 형식**
 
@@ -575,7 +575,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags
 
 ## 특정 태그 검색 {#get-tag}
 
-에 GET 요청을 하여 조직에 속한 특정 태그를 검색할 수 있습니다. `/tags` 끝점 및 검색할 태그의 ID 지정.
+`/tags` 끝점에 대한 GET 요청을 만들고 검색할 태그의 ID를 지정하여 조직에 속한 특정 태그를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -633,13 +633,13 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 | `modifiedBy` | 태그를 마지막으로 업데이트한 사용자의 ID입니다. |
 | `tagCategoryId` | 태그가 속한 태그 범주의 ID입니다. |
 | `tagCategoryName` | 태그가 속한 태그 범주의 이름입니다. |
-| `archived` | 태그의 보관 상태입니다. 로 설정된 경우 `true`: 태그가 보관됨을 의미합니다. |
+| `archived` | 태그의 보관 상태입니다. `true`(으)로 설정하면 태그가 보관됩니다. |
 
 +++
 
 ## 태그 유효성 검사 {#validate-tags}
 
-에 POST 요청을 하여 태그가 있는지 확인할 수 있습니다. `/tags/validate` 엔드포인트.
+`/tags/validate` 끝점에 대한 POST 요청을 통해 태그가 있는지 확인할 수 있습니다.
 
 **API 형식**
 
@@ -668,7 +668,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 | 속성 | 설명 |
 | -------- | ----------- |
 | `ids` | 유효성을 검사할 태그 ID 목록이 포함된 배열입니다. |
-| `entity` | 유효성 검사를 요청하는 엔티티입니다. 다음을 사용할 수 있습니다. `{API_KEY}` 이 매개 변수의 값입니다. |
+| `entity` | 유효성 검사를 요청하는 엔티티입니다. 이 매개 변수에 `{API_KEY}` 값을 사용할 수 있습니다. |
 
 +++
 
@@ -705,7 +705,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 
 ## 특정 태그 업데이트 {#update-tag}
 
-에 PATCH 요청을 하여 지정된 태그를 업데이트할 수 있습니다. `/tags` 엔드포인트 및 업데이트할 태그의 ID 제공
+`/tags` 끝점에 PATCH 요청을 하고 업데이트할 태그의 ID를 제공하여 지정된 태그를 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -737,8 +737,8 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `op` | 수행해야 하는 작업입니다. 이 사용 사례에서는 항상 로 설정됩니다. `replace`. |
-| `path` | 업데이트할 필드의 경로입니다. 지원되는 값: `name`, `archived`, 및 `tagCategoryId`. |
+| `op` | 수행해야 하는 작업입니다. 이 사용 사례에서는 항상 `replace`(으)로 설정됩니다. |
+| `path` | 업데이트할 필드의 경로입니다. 지원되는 값은 `name`, `archived` 및 `tagCategoryId`입니다. |
 | `value` | 업데이트할 필드의 업데이트된 값. |
 | `from` | 업데이트할 필드의 원래 값입니다. |
 
@@ -773,9 +773,9 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 >
 >시스템 관리자와 제품 관리자만 이 API 호출을 사용할 수 있습니다.
 >
->또한 태그는 **할 수 없음** 모든 비즈니스 오브젝트와 연계될 수 있습니다. **필수** 태그를 삭제하기 전에 먼저 보관하십시오. 를 사용하여 태그를 보관할 수 있습니다. [태그 끝점 업데이트](#update-tag).
+>또한 태그를 삭제하려면 **태그를 비즈니스 개체에 연결할 수**&#x200B;없으며 **반드시**&#x200B;보관해야 합니다. [태그 끝점 업데이트](#update-tag)를 사용하여 태그를 보관할 수 있습니다.
 
-에 DELETE 태그를 만들어 특정 태그를 삭제할 수 있습니다. `/tags` 엔드포인트 및 삭제하려는 태그의 ID 지정
+`/tags` 끝점에 DELETE 태그를 만들고 삭제할 태그의 ID를 지정하여 특정 태그를 삭제할 수 있습니다.
 
 **API 형식**
 
@@ -807,4 +807,4 @@ curl -X DELETE https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-8
 
 ## 다음 단계
 
-이 안내서를 읽은 후에는 Adobe Experience Platform API를 사용하여 태그와 태그 범주를 만들고, 관리하고, 삭제하는 방법을 더 잘 이해할 수 있습니다. UI를 사용하여 태그를 관리하는 방법에 대한 자세한 내용은 [태그 관리 안내서](../ui/managing-tags.md). UI를 사용하여 태그 범주를 관리하는 방법에 대한 자세한 내용은 [태그 카테고리 안내서](../ui/tags-categories.md).
+이 안내서를 읽은 후에는 Adobe Experience Platform API를 사용하여 태그와 태그 범주를 만들고, 관리하고, 삭제하는 방법을 더 잘 이해할 수 있습니다. UI를 사용하여 태그를 관리하는 방법에 대한 자세한 내용은 [태그 관리 가이드](../ui/managing-tags.md)를 참조하십시오. UI를 사용하여 태그 범주를 관리하는 방법에 대한 자세한 내용은 [태그 범주 안내서](../ui/tags-categories.md)를 참조하십시오.

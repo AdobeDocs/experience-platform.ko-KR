@@ -7,8 +7,8 @@ description: Adobe Experience Platform은 비즈니스 사례, 법적 의무 및
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 11%
+source-wordcount: '278'
+ht-degree: 1%
 
 ---
 
@@ -22,14 +22,14 @@ Customer AI의 모든 데이터 거버넌스 관련 설정은 Adobe Experience P
 
 플랫폼에서 사용하는 데이터 세트에 생성된 데이터 사용 레이블 및 정책은 Customer AI 구성 워크플로에 표시될 수 있습니다. 이러한 레이블은 레이블이 지정된 필드를 사용하는 사용자를 중지하거나 경고합니다.
 
-이러한 통합을 통해 규정 준수를 보다 효율적으로 관리할 수 있습니다. 조직의 데이터 관리자는 사용을 제한하는 정책을 설정할 수 있습니다. 따라서 데이터 관리자에 의해 정의된 정책을 준수하는 데이터를 사용할 수 있습니다. 의 설명서를 읽어 보십시오. [레이블 및 정책](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html) 자세히 알아보십시오.
+이러한 통합을 통해 규정 준수를 보다 효율적으로 관리할 수 있습니다. 조직의 데이터 관리자는 사용을 제한하는 정책을 설정할 수 있습니다. 따라서 데이터 관리자에 의해 정의된 정책을 준수하는 데이터를 사용할 수 있습니다. 자세한 내용은 [레이블 및 정책](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html)에 대한 설명서를 읽어 보십시오.
 
 ## 동의 정책 {#consent-policy}
 
-고객 AI는 귀하의 동의 환경 설정을 따릅니다. 다음 작업을 완료하면 [동의 정책 설정 및 활성화](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ko#consent-policy), 고객 AI는 귀하로부터 수집된 동의 데이터를 처리합니다. 동의 된 데이터만 모델의 후속 실행에서 모델의 점수를 매기는 데 사용됩니다. 새 점수는 이전 점수를 대체하며 세그멘테이션에 사용할 수 있습니다. 이 기능은 현재 HealthCare Shield 고객 및 Privacy and Security Shield 고객만 사용할 수 있습니다.
+고객 AI는 귀하의 동의 환경 설정을 따릅니다. [동의 정책을 설정하고 활성화](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=ko#consent-policy)하면 Customer AI가 귀하로부터 수집된 동의 데이터를 적용합니다. 동의 된 데이터만 모델의 후속 실행에서 모델의 점수를 매기는 데 사용됩니다. 새 점수는 이전 점수를 대체하며 세그멘테이션에 사용할 수 있습니다. 이 기능은 현재 HealthCare Shield 고객 및 Privacy and Security Shield 고객만 사용할 수 있습니다.
 
 이 기능에 대한 자세한 내용은 다음 페이지를 참조하십시오.
 
-[Customer AI에서 시작하기](../../customer-ai/getting-started.md)
-[Adobe Experience Platform 및 애플리케이션](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
-[Adobe Experience Cloud 아키텍처 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html)
+[Customer AI에서 시작](../../customer-ai/getting-started.md)
+[Adobe Experience Platform 및 응용 프로그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
+[Adobe Experience Cloud 아키텍처 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=ko-KR)

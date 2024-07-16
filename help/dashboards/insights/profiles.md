@@ -5,7 +5,7 @@ exl-id: f3792076-3e01-4e26-8788-32927202a2e5
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1661'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 1%
 
 프로필을 구동하는 SQL에 액세스하여 프로필 인사이트를 파악한 다음 고유한 인사이트를 생성하여 프로필을 구성하는 고객 및 소비자 경험을 더욱 탐색합니다. 기존 Real-Time CDP 데이터 모델 SQL을 영감으로 사용하여 원시 데이터를 새로운 실행 가능한 통찰력으로 변환하여 고유한 비즈니스 요구 사항에 맞는 쿼리를 만듭니다.
 
-다음을 참조하십시오. [SQL 설명서 보기](../view-sql.md) 플랫폼 UI를 통해 통찰력의 SQL을 직접 조정하는 방법에 대한 자세한 내용.
+플랫폼 UI를 통해 인사이트의 SQL을 직접 조정하는 방법에 대한 자세한 내용은 [SQL 보기 설명서](../view-sql.md)를 참조하십시오.
 
-다음 인사이트를 의 일부로 사용할 수 있습니다. [프로필 대시보드](../guides/profiles.md) 또는 사용자 지정 [사용자 정의 대시보드](../user-defined-dashboards.md). 다음을 참조하십시오. [사용자 지정 개요](../customize/overview.md) 대시보드 또는 를 사용자 지정하는 방법에 대한 지침 [새 위젯 만들기 및 편집](../customize/custom-widgets.md) 위젯 라이브러리 및 [사용자 정의 대시보드](../user-defined-dashboards.md#create-widget).
+다음 인사이트는 모두 [프로필 대시보드](../guides/profiles.md) 또는 사용자 지정 [사용자 정의 대시보드](../user-defined-dashboards.md)의 일부로 사용할 수 있습니다. 위젯 라이브러리 및 [사용자 정의 대시보드](../user-defined-dashboards.md#create-widget)에서 대시보드를 사용자 정의하거나 [새 위젯을 만들고 편집](../customize/custom-widgets.md)하는 방법에 대한 지침은 [사용자 정의 개요](../customize/overview.md)를 참조하세요.
 
 ## 병합 정책별 대상자 중복 {#audience-overlap-by-merge-policy}
 
@@ -64,9 +64,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-다음을 참조하십시오. [병합 정책 위젯 설명서를 통한 대상 중복](../guides/profiles.md#audience-overlap-by-merge-policy) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [병합 정책 위젯별 대상 겹치기 설명서](../guides/profiles.md#audience-overlap-by-merge-policy)를 참조하십시오.
 
-## 대상 중복 보고서 {#audience-overlap-report}
+## 대상자 오버랩 보고서 {#audience-overlap-report}
 
 이 통찰력에 의해 답변된 질문:
 
@@ -131,7 +131,7 @@ SELECT source_segment_name,
 
 +++
 
-다음을 참조하십시오. [대상 중복 보고서 위젯 설명서](../guides/profiles.md#audience-overlap-report) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 중복 보고서 위젯 설명서](../guides/profiles.md#audience-overlap-report)를 참조하십시오.
 
 ## 대상자(수) {#audiences}
 
@@ -159,9 +159,9 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-다음을 참조하십시오. [대상 위젯 설명서](../guides/profiles.md#audiences) 를 참조하십시오.
+이 인사이트의 모양과 기능에 대한 자세한 내용은 [대상 위젯 설명서](../guides/profiles.md#audiences)를 참조하세요.
 
-## 대상 상태에 매핑된 대상자 {#audiences-mapped-to-destination-status}
+## 대상 상태에 매핑된 대상자 그룹 {#audiences-mapped-to-destination-status}
 
 이 통찰력에 의해 답변된 질문:
 
@@ -191,7 +191,7 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-다음을 참조하십시오. [대상 상태 위젯 설명서에 매핑된 대상자](../guides/profiles.md#audiences-mapped-to-destination-status) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 상태 위젯 설명서에 매핑된 대상](../guides/profiles.md#audiences-mapped-to-destination-status)을(를) 참조하십시오.
 
 ## 대상자 크기 {#audiences-size}
 
@@ -224,9 +224,9 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-다음을 참조하십시오. [대상 크기 위젯 설명서](../guides/profiles.md#audiences-size) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 크기 위젯 설명서](../guides/profiles.md#audiences-size)를 참조하세요.
 
-## 고객 AI 점수 분배 {#customer-ai-distribution-of-scores}
+## 고객 AI 점수 분포 {#customer-ai-distribution-of-scores}
 
 이 통찰력에 의해 답변된 질문:
 
@@ -361,9 +361,9 @@ SELECT b.model_name,
 
 +++
 
-다음을 참조하십시오. [점수 위젯 설명서의 고객 AI 배포](../guides/profiles.md#customer-ai-distribution-of-scores) 를 참조하십시오.
+이 인사이트의 모양과 기능에 대한 자세한 내용은 [점수 위젯 설명서의 고객 AI 배포](../guides/profiles.md#customer-ai-distribution-of-scores)를 참조하십시오.
 
-## Customer AI 점수 요약 {#customer-ai-scoring-summary}
+## 고객 AI 점수 요약 {#customer-ai-scoring-summary}
 
 이 통찰력에 의해 답변된 질문:
 
@@ -402,13 +402,13 @@ SELECT model_name,
 
 +++
 
-다음을 참조하십시오. [Customer AI 점수 요약 위젯 설명서](../guides/profiles.md#customer-ai-scoring-summary) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [Customer AI 채점 요약 위젯 설명서](../guides/profiles.md#customer-ai-scoring-summary)를 참조하십시오.
 
 ## ID 중첩 {#identity-overlap}
 
 이 통찰력에 의해 답변된 질문:
 
-- 어떤 게 공통적인 교차점이죠 [!UICONTROL ID 유형 A] 및 [!UICONTROL ID 유형 B]?
+- [!UICONTROL ID 유형 A]과(와) [!UICONTROL ID 유형 B] 간의 일반적인 교집합은 무엇입니까?
 - 특정 ID 유형의 중복을 기반으로 고객 대상을 세분화하여 타깃팅된 마케팅 전략을 향상하려면 어떻게 해야 합니까?
 - 교차하는 영역 내에서 캠페인 성과를 평가함으로써 얻을 수 있는 통찰력은 무엇입니까?
 - 이 캠페인 성과 인사이트를 사용하여 향후 마케팅 노력을 최적화하는 방법은 무엇입니까?
@@ -459,7 +459,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-다음을 참조하십시오. [ID 중복 위젯 설명서](../guides/profiles.md#identity-overlap) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [ID 중복 위젯 설명서](../guides/profiles.md#identity-overlap)를 참조하세요.
 
 ## 프로필 개수 {#profile-count}
 
@@ -481,9 +481,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-이 인사이트의 모양과 기능에 대한 전체 정보는 [프로필 개수 위젯 안내서](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
+이 인사이트의 모양 및 기능에 대한 전체 정보는 [프로필 개수 위젯 가이드](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count)에서 찾을 수 있습니다.
 
-다음을 참조하십시오. [프로필 개수 위젯 설명서](../guides/profiles.md#profile-count) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 위젯 설명서](../guides/profiles.md#profile-count)를 참조하세요.
 
 ## 프로필 개수 변경 {#profile-count-change}
 
@@ -528,7 +528,7 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-다음을 참조하십시오. [프로필 개수 변경 위젯 설명서](../guides/profiles.md#profile-count-change) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 변경 위젯 설명서](../guides/profiles.md#profile-count-change)를 참조하세요.
 
 ## 프로필 개수 변경 트렌드 {#profile-count-change-trend}
 
@@ -562,7 +562,7 @@ SELECT date_key,
 
 +++
 
-다음을 참조하십시오. [프로필 개수 변경 트렌드 위젯 설명서](../guides/profiles.md#profile-count-change-trend) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 변경 트렌드 위젯 설명서](../guides/profiles.md#profile-count-change-trend)를 참조하세요.
 
 ## 프로필 개수 트렌드 {#profile-count-trend}
 
@@ -593,7 +593,7 @@ SELECT date_key,
 
 +++
 
-다음을 참조하십시오. [프로필 개수 트렌드 위젯 설명서](../guides/profiles.md#profile-count-trend) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 트렌드 위젯 설명서](../guides/profiles.md#profile-count-trend)를 참조하세요.
 
 ## ID별 프로필 {#profiles-by-identity}
 
@@ -622,7 +622,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-다음을 참조하십시오. [ID 위젯 설명서별 프로필](../guides/profiles.md#profiles-by-identity) 를 참조하십시오.
+이 인사이트의 모양과 기능에 대한 자세한 내용은 [ID 위젯 설명서별 프로필](../guides/profiles.md#profiles-by-identity)을 참조하십시오.
 
 ## 프로필 개수 변경 트렌드 {#profiles-count-change-trend}
 
@@ -656,7 +656,7 @@ SELECT date_key,
 
 +++
 
-다음을 참조하십시오. [프로필 개수 변경 트렌드 위젯 설명서](../guides/profiles.md#profiles-count-change-trend) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [프로필 개수 변경 트렌드 위젯 설명서](../guides/profiles.md#profiles-count-change-trend)를 참조하세요.
 
 ## ID별 프로필 개수 변경 트렌드 {#profiles-count-change-trend-by-identity}
 
@@ -697,7 +697,7 @@ SELECT date_key,
 
 +++
 
-다음을 참조하십시오. [ID 위젯 설명서별 프로필 수 변경 트렌드](../guides/profiles.md#profiles-count-change-trend-by-identity) 를 참조하십시오.
+이 인사이트의 모양과 기능에 대한 자세한 내용은 [ID 위젯 설명서별 프로필 개수 변경 트렌드](../guides/profiles.md#profiles-count-change-trend-by-identity)를 참조하십시오.
 
 ## 단일 ID 프로필 {#single-identity-profiles}
 
@@ -722,7 +722,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-다음을 참조하십시오. [단일 ID 프로필 위젯 설명서](../guides/profiles.md#single-identity-profiles) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [단일 ID 프로필 위젯 설명서](../guides/profiles.md#single-identity-profiles)를 참조하세요.
 
 ## ID별 단일 ID 프로필 {#single-identity-profiles-by-identity}
 
@@ -749,7 +749,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-다음을 참조하십시오. [ID 위젯 설명서별 단일 ID 프로필](../guides/profiles.md#single-identity-profiles-by-identity) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [ID 위젯별 단일 ID 프로필 설명서](../guides/profiles.md#single-identity-profiles-by-identity)를 참조하십시오.
 
 ## 분할되지 않은 프로필 {#unsegmented-profiles}
 
@@ -773,12 +773,12 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-다음을 참조하십시오. [세분화되지 않은 프로필 위젯 설명서](../guides/profiles.md#unsegmented-profiles) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [세그먼테이션되지 않은 프로필 위젯 설명서](../guides/profiles.md#unsegmented-profiles)를 참조하십시오.
 
 ## 다음 단계
 
 이제 이 문서를 읽고 대시보드 인사이트를 생성하는 SQL과 이 분석이 해결하는 일반적인 질문을 이해합니다. 이제 SQL을 편집하고 반복하여 고유한 인사이트를 생성할 수 있습니다.
 
-다음을 참조하십시오. [SQL 설명서 보기](../view-sql.md) 자세한 내용은 양식 UI를 통해 통찰력의 SQL을 직접 조정하는 방법을 참조하십시오.
+PLatform UI를 통해 직접 인사이트의 SQL을 조정하는 방법에 대한 자세한 내용은 [SQL 보기 설명서](../view-sql.md)를 참조하십시오.
 
-다음에 대한 인사이트를 생성하는 SQL을 읽고 이해할 수도 있습니다. [대상](./audiences.md), [계정 프로필](./account-profiles.md), 및 [대상](./destinations.md) 대시보드.
+[대상](./audiences.md), [계정 프로필](./account-profiles.md) 및 [대상](./destinations.md) 대시보드에 대한 인사이트를 생성하는 SQL을 읽고 이해할 수도 있습니다.

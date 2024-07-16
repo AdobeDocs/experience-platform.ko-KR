@@ -4,7 +4,7 @@ description: Experience Platform 내의 스키마 편집기를 사용하여 경�
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
 source-git-commit: 4fa98df9dcc296ba7cb141cb22df116524a0eb0c
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -17,21 +17,21 @@ XDM(Experience Data Model)은 데이터가 수집된 후 스키마 필드를 더
 
 >[!NOTE]
 >
->데이터를 스키마로 수집하기 전에 불필요한 필드 그룹을 제거할 수 있습니다. 다음에서 설명서를 참조하십시오. [스키마에서 필드 그룹을 제거하는 방법](../ui/resources/schemas.md#remove-fields) 추가 정보.
+>데이터를 스키마로 수집하기 전에 불필요한 필드 그룹을 제거할 수 있습니다. 자세한 내용은 [스키마에서 필드 그룹을 제거하는 방법](../ui/resources/schemas.md#remove-fields)에 대한 설명서를 참조하십시오.
 
-스키마에 데이터가 수집되면 더 이상 변경하지 않고 스키마에서 필드를 제거할 수 없습니다. 이 경우 를 사용하여 스키마 또는 사용자 지정 리소스 내의 원하지 않는 필드를 사용하지 않을 수 있습니다. [스키마 편집기](./create-schema-ui.md) 또는 [스키마 레지스트리 API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
+스키마에 데이터가 수집되면 더 이상 변경하지 않고 스키마에서 필드를 제거할 수 없습니다. 이 경우 [스키마 편집기](./create-schema-ui.md) 또는 [스키마 레지스트리 API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)를 사용하여 스키마 또는 사용자 지정 리소스 내의 원치 않는 필드를 사용하지 않을 수 있습니다.
 
-이 문서에서는 Experience Platform 사용자 인터페이스에서 스키마 편집기를 사용하여 다양한 XDM 리소스에 대한 필드를 사용하지 않는 방법을 다룹니다. API를 사용하여 XDM 필드를 사용하지 않는 방법에 대한 자세한 내용은 다음 자습서를 참조하십시오 [스키마 레지스트리 API를 사용하여 XDM 필드 사용 중단](./field-deprecation-api.md).
+이 문서에서는 Experience Platform 사용자 인터페이스에서 스키마 편집기를 사용하여 다양한 XDM 리소스에 대한 필드를 사용하지 않는 방법을 다룹니다. API를 사용하여 XDM 필드를 사용하지 않는 방법은 [스키마 레지스트리 API를 사용하여 XDM 필드 사용하지 않는 방법](./field-deprecation-api.md)에 대한 자습서를 참조하십시오.
 
 ## 필드 사용 안 함 {#deprecate}
 
-사용자 정의 필드를 사용하지 않으려면 편집할 스키마에 대한 스키마 편집기로 이동합니다. 에서 사용하지 않을 필드를 선택합니다. [!UICONTROL 구조] 캔버스의 섹션에 있는 마지막 항목이 **[!UICONTROL 사용하지 않음]** 다음에서 [!UICONTROL 필드 속성].
+사용자 정의 필드를 사용하지 않으려면 편집할 스키마에 대한 스키마 편집기로 이동합니다. 캔버스의 [!UICONTROL 구조] 섹션에서 사용하지 않을 필드를 선택한 다음 [!UICONTROL 필드 속성]에서 **[!UICONTROL 사용하지 않음]**&#x200B;을 선택합니다.
 
-![필드가 선택되고 사용 중단되는 스키마 편집기.](../images/tutorials/field-deprecation/deprecate-single-field.png)
+![필드가 선택되어 있고 더 이상 사용되지 않는 스키마 편집기입니다.](../images/tutorials/field-deprecation/deprecate-single-field.png)
 
-선택 사항을 확인하고 필드가 유니온 스키마의 UI 보기에서 제거되고 다운스트림 UI에서 숨겨짐을 알리는 대화 상자가 나타납니다. 작업을 완료하려면 을 선택합니다. **[!UICONTROL 확인]**.
+선택 사항을 확인하고 필드가 유니온 스키마의 UI 보기에서 제거되고 다운스트림 UI에서 숨겨짐을 알리는 대화 상자가 나타납니다. 작업을 완료하려면 **[!UICONTROL 확인]**&#x200B;을 선택하세요.
 
-![확인 이 강조 표시된 필드 사용 안 함 대화 상자.](../images/tutorials/field-deprecation/deprecate-field-dialog.png)
+![확인을 강조 표시한 필드 사용 안 함 대화 상자.](../images/tutorials/field-deprecation/deprecate-field-dialog.png)
 
 이제 필드가 UI 보기에서 제거됩니다.
 
@@ -41,24 +41,24 @@ XDM(Experience Data Model)은 데이터가 수집된 후 스키마 필드를 더
 
 ## 사용되지 않는 필드 표시 {#show-deprecated}
 
-이전에 더 이상 사용되지 않는 필드를 보려면 스키마 편집기에서 관련 스키마로 이동합니다. 다음 항목 선택 **[!UICONTROL 사용되지 않는 필드 표시]** 의 확인란 [!UICONTROL 컴포지션] 캔버스의 섹션입니다.
+이전에 더 이상 사용되지 않는 필드를 보려면 스키마 편집기에서 관련 스키마로 이동합니다. 캔버스의 [!UICONTROL 컴포지션] 섹션에서 **[!UICONTROL 사용되지 않는 필드 표시]** 확인란을 선택하십시오.
 
-이제 사용되지 않는 필드가 UI 보기에 표시됩니다. 선택 **[!UICONTROL 저장]** 설정을 확인합니다.
+이제 사용되지 않는 필드가 UI 보기에 표시됩니다. 설정을 확인하려면 **[!UICONTROL 저장]**&#x200B;을 선택하세요.
 
-![필드가 선택된 스키마 편집기, 더 이상 사용되지 않는 필드 표시 및 저장 강조 표시.](../images/tutorials/field-deprecation/show-deprecated-fields.png)
+![필드가 선택된 스키마 편집기, 사용되지 않는 필드 표시 및 강조 표시된 저장.](../images/tutorials/field-deprecation/show-deprecated-fields.png)
 
 ## 필드 사용 중단 해제 {#undeprecate-fields}
 
-더 이상 사용되지 않는 필드를 실행 취소하려면 먼저 [사용되지 않는 필드 표시](#show-deprecated) 위에서 설명한 대로 편집기의 사용 중단되는 필드를 선택합니다 [!UICONTROL 구조] 섹션. 그런 다음 을 선택합니다. **[!UICONTROL 사용하지 않음]** 다음에서 [!UICONTROL 필드 속성] 사이드바 뒤에 오는 **[!UICONTROL 저장]**.
+더 이상 사용되지 않는 필드를 실행 취소하려면 먼저 [위에서 설명한 대로 더 이상 사용되지 않는 필드를 표시](#show-deprecated)한 다음, 편집기의 [!UICONTROL 구조] 섹션에서 더 이상 사용되지 않는 필드를 선택하십시오. [!UICONTROL 필드 속성] 사이드바에서 **[!UICONTROL 사용 중단 해제]**&#x200B;를 선택한 다음 **[!UICONTROL 저장]**&#x200B;을 선택하십시오.
 
 ![더 이상 사용되지 않는 필드, 사용 중단 해제 및 저장 이 강조 표시된 스키마 편집기.](../images/tutorials/field-deprecation/undeprecate-single-field.png)
 
-다음 [!UICONTROL 필드 사용 중단 해제] 대화 상자가 나타납니다. 변경 사항을 확인하려면 다음을 선택합니다. **[!UICONTROL 확인]**.
+[!UICONTROL 필드 사용 중단 해제] 대화 상자가 나타납니다. 변경 내용을 확인하려면 **[!UICONTROL 확인]**&#x200B;을 선택하세요.
 
-![다음 [!UICONTROL 필드 사용 중단 해제] 확인 이 강조 표시된 대화 상자.](../images/tutorials/field-deprecation/undeprecate-field-dialog.png)
+![확인 강조 표시된 [!UICONTROL 필드 사용 중단 해제] 대화 상자.](../images/tutorials/field-deprecation/undeprecate-field-dialog.png)
 
 이제 필드가 UI 보기 및 다운스트림 UI에 표준으로 표시됩니다. 이제 필드를 사용하지 않는 옵션이 제공됩니다.
 
 ## 다음 단계
 
-이 문서에서는 스키마 편집기 UI를 사용하여 XDM 필드를 사용하지 않는 방법을 다룹니다. 사용자 지정 리소스에 대한 필드 구성에 대한 자세한 내용은 [api에서 XDM 필드 정의](./custom-fields-api.md). 설명자 관리에 대한 자세한 내용은 [descriptors 끝점 안내서](../api/descriptors.md).
+이 문서에서는 스키마 편집기 UI를 사용하여 XDM 필드를 사용하지 않는 방법을 다룹니다. 사용자 지정 리소스에 대한 필드 구성에 대한 자세한 내용은 [API의 XDM 필드 정의](./custom-fields-api.md)에 대한 안내서를 참조하십시오. 설명자 관리에 대한 자세한 내용은 [설명자 끝점 안내서](../api/descriptors.md)를 참조하십시오.

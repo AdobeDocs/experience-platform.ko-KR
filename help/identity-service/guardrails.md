@@ -10,19 +10,19 @@ ht-degree: 1%
 
 ---
 
-# 의 보호 기능 [!DNL Identity Service] 데이터
+# [!DNL Identity Service] 데이터 보호 기능
 
-이 문서에서는 의 사용 및 요금 제한에 대한 정보를 제공합니다. [!DNL Identity Service] id 그래프 사용을 최적화하는 데 도움이 되는 데이터입니다. 다음 가드레일을 검토할 때 데이터를 올바르게 모델링했다고 가정합니다. 데이터 모델링 방법에 대한 질문이 있는 경우 고객 서비스 담당자에게 문의하십시오.
+이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되도록 [!DNL Identity Service] 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다. 다음 가드레일을 검토할 때 데이터를 올바르게 모델링했다고 가정합니다. 데이터 모델링 방법에 대한 질문이 있는 경우 고객 서비스 담당자에게 문의하십시오.
 
 >[!IMPORTANT]
 >
->판매 주문에서 라이선스 권한을 확인하고 해당 권한을 확인하십시오. [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html) 이 보호 기능 페이지 외에 실제 사용 제한에서도 사용할 수 있습니다.
+>이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을(를) 확인하십시오.
 
 ## 시작하기
 
 다음 Experience Platform 서비스는 ID 데이터 모델링과 관련되어 있습니다.
 
-* [ID](home.md): Platform으로 수집될 때 서로 다른 데이터 소스의 ID를 브리지합니다.
+* [ID](home.md): Bridge ID가 플랫폼에 수집될 때 서로 다른 데이터 소스의 ID입니다.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): 여러 소스의 데이터를 사용하여 통합 소비자 프로필을 만듭니다.
 
 ## 데이터 모델 제한
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 | 가드레일 | 제한 | 참고 |
 | --- | --- | --- |
-| 그래프의 ID 수 | 50 | 50개의 연결된 ID가 있는 그래프가 업데이트되면 ID 서비스는 &quot;선입 선출&quot; 메커니즘을 적용하고 가장 오래된 ID를 삭제하여 이 그래프의 최신 ID에 사용할 공간을 만듭니다(**참고**: 실시간 고객 프로필은 영향을 받지 않습니다.) 삭제는 ID 유형 및 타임스탬프를 기반으로 합니다. 제한은 샌드박스 수준에서 적용됩니다. 자세한 내용은 의 섹션을 참조하십시오. [삭제 논리 이해](#deletion-logic). |
+| 그래프의 ID 수 | 50 | 50개의 연결된 ID가 있는 그래프가 업데이트되면 ID 서비스는 &quot;선입 선출&quot; 메커니즘을 적용하고 가장 오래된 ID를 삭제하여 이 그래프의 최신 ID를 위한 공간을 만듭니다(**참고**: 실시간 고객 프로필은 영향을 받지 않습니다). 삭제는 ID 유형 및 타임스탬프를 기반으로 합니다. 제한은 샌드박스 수준에서 적용됩니다. 자세한 내용은 [삭제 논리 이해](#deletion-logic)의 섹션을 참조하십시오. |
 | 단일 배치 수집을 위한 ID 링크 수 | 50 | 단일 일괄 처리에는 원치 않는 그래프 병합을 유발하는 이례적인 ID가 포함될 수 있습니다. 이를 방지하기 위해 ID 서비스는 50개 이상의 ID에 이미 연결된 ID를 수집하지 않습니다. |
 | XDM 레코드의 ID 수 | 20 | 필요한 최소 XDM 레코드 수는 2개입니다. |
 | 사용자 정의 네임스페이스 수 | None | 만들 수 있는 사용자 정의 네임스페이스의 수에는 제한이 없습니다. |
@@ -56,7 +56,7 @@ ht-degree: 1%
 
 ### ID 네임스페이스 수집
 
-2023년 3월 31일부터 Identity Service는 신규 고객에 대한 Adobe Analytics ID(AAID) 수집을 차단합니다. 이 ID는 일반적으로 [Adobe Analytics 소스](../sources/connectors/adobe-applications/analytics.md) 및 [Adobe Audience Manager 소스](../sources//connectors/adobe-applications/audience-manager.md) 및 는 ECID가 동일한 웹 브라우저를 나타내므로 중복됩니다. 이 기본 구성을 변경하려면 Adobe 계정 팀에 문의하십시오.
+2023년 3월 31일부터 Identity Service는 신규 고객에 대한 Adobe Analytics ID(AAID) 수집을 차단합니다. 이 ID는 일반적으로 [Adobe Analytics 소스](../sources/connectors/adobe-applications/analytics.md) 및 [Adobe Audience Manager 소스](../sources//connectors/adobe-applications/audience-manager.md)를 통해 수집되며 ECID가 동일한 웹 브라우저를 나타내므로 중복됩니다. 이 기본 구성을 변경하려면 Adobe 계정 팀에 문의하십시오.
 
 ## 생산 능력의 ID 그래프가 업데이트될 때의 삭제 논리 이해 {#deletion-logic}
 
@@ -98,13 +98,13 @@ ht-degree: 1%
 삭제는 ID 서비스의 데이터에만 발생하며 실시간 고객 프로필에는 발생하지 않습니다.
 
 * ECID가 더 이상 ID 그래프의 일부가 아니기 때문에 이 동작은 결과적으로 단일 ECID로 더 많은 프로필을 만들 수 있습니다.
-* 지정 가능한 대상 자격 번호 내에 계속 있으려면 을 활성화하는 것이 좋습니다 [익명 프로필 데이터 만료](../profile/pseudonymous-profiles.md) 이전 프로필을 삭제합니다.
+* 지정 가능한 대상 권한 번호를 계속 사용하려면 [익명 프로필 데이터 만료](../profile/pseudonymous-profiles.md)을(를) 활성화하여 이전 프로필을 삭제하는 것이 좋습니다.
 
 #### 실시간 고객 프로필 및 WebSDK: 기본 ID 삭제
 
 CRM ID에 대해 인증된 이벤트를 유지하려면 기본 ID를 ECID에서 CRM ID로 변경하는 것이 좋습니다. 이 변경 사항을 구현하는 방법에 대한 단계는 다음 문서를 참조하십시오.
 
-* [Experience Platform 태그에 대한 ID 맵 구성](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
+* [Experience Platform 태그에 대한 ID 맵을 구성합니다](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Experience Platform Web SDK의 ID 데이터](../web-sdk/identity/overview.md#using-identitymap)
 
 ### 예제 시나리오
@@ -114,11 +114,11 @@ CRM ID에 대해 인증된 이벤트를 유지하려면 기본 ID를 ECID에서 
 *다이어그램 메모:*
 
 * `t` = 타임스탬프.
-* 타임스탬프 값은 지정된 ID의 최신성에 해당합니다. 예를 들어, `t1` 는 첫 번째로 연결된 id(가장 오래된)를 나타내고 `t51` 는 연결된 최신 id를 나타냅니다.
+* 타임스탬프 값은 지정된 ID의 최신성에 해당합니다. 예를 들어 `t1`은(는) 연결된 첫 번째 ID(가장 오래된)를 나타내고 `t51`은(는) 연결된 최신 ID를 나타냅니다.
 
-이 예에서 왼쪽의 그래프를 새 ID로 업데이트하려면 먼저 ID 서비스에서 가장 오래된 타임스탬프가 있는 기존 ID를 삭제합니다. 그러나 가장 오래된 ID는 장치 ID이므로 Identity Service는 삭제 우선 순위 목록에서 더 높은 유형의 네임스페이스에 도달할 때까지 해당 ID를 건너뜁니다. 이 경우 입니다. `ecid-3`. 삭제 우선 순위 유형이 더 높은 가장 오래된 ID가 제거되면 그래프가 새 링크로 업데이트됩니다. `ecid-51`.
+이 예에서 왼쪽의 그래프를 새 ID로 업데이트하려면 먼저 ID 서비스에서 가장 오래된 타임스탬프가 있는 기존 ID를 삭제합니다. 그러나 가장 오래된 ID는 장치 ID이므로 ID 서비스는 삭제 우선 순위 목록에서 더 높은 유형의 네임스페이스에 도달할 때까지 해당 ID를 건너뜁니다. 이 경우 `ecid-3`입니다. 삭제 우선 순위 유형이 더 높은 가장 오래된 ID가 제거되면 그래프가 새 링크 `ecid-51`(으)로 업데이트됩니다.
 
-* 드문 경우지만 동일한 타임스탬프와 ID 유형을 가진 두 개의 ID가 있는 경우 Identity Service는 다음을 기준으로 ID를 정렬합니다 [XID](./api/list-native-id.md) 삭제를 수행합니다.
+* 드문 경우지만 동일한 타임스탬프와 ID 유형을 가진 두 개의 ID가 있는 경우 Identity Service는 [XID](./api/list-native-id.md)을(를) 기반으로 ID를 정렬하고 삭제합니다.
 
 ![최신 ID를 수용하기 위해 삭제되는 가장 오래된 ID의 예](./images/graph-limits-v3.png)
 
@@ -126,14 +126,14 @@ CRM ID에 대해 인증된 이벤트를 유지하려면 기본 ID를 ECID에서 
 
 >[!BEGINTABS]
 
->[!TAB 수신 이벤트]
+>[!TAB 들어오는 이벤트]
 
 *다이어그램 메모:*
 
-* 다음 다이어그램은에서 를 가정합니다 `timestamp=50`: id 그래프에 50개의 id가 존재합니다.
-* `(...)` 는 그래프 내에 이미 연결되어 있는 다른 ID를 나타냅니다.
+* 다음 다이어그램은 `timestamp=50`에 ID 그래프에 50개의 ID가 있다고 가정합니다.
+* `(...)`은(는) 그래프 내에 이미 연결되어 있는 다른 ID를 나타냅니다.
 
-이 예에서 ECID:32110은 수집되고 의 큰 그래프에 연결됩니다. `timestamp=51`, 따라서 ID 50개의 제한을 초과합니다.
+이 예에서 ECID:32110은 수집되고 `timestamp=51`에 큰 그래프에 연결되어 50개의 ID 제한을 초과합니다.
 
 ![](./images/guardrails/before-split.png)
 
@@ -155,16 +155,16 @@ ECID:35577을 삭제하면 CRM ID:60013 및 CRM ID:25212을 현재 삭제된 ECI
 
 >[!BEGINTABS]
 
->[!TAB 수신 이벤트]
+>[!TAB 들어오는 이벤트]
 
 *다이어그램 메모:*
 
-* 다음 다이어그램은에서 를 가정합니다 `timestamp=50`: id 그래프에 50개의 id가 존재합니다.
-* `(...)` 는 그래프 내에 이미 연결되어 있는 다른 ID를 나타냅니다.
+* 다음 다이어그램은 `timestamp=50`에 ID 그래프에 50개의 ID가 있다고 가정합니다.
+* `(...)`은(는) 그래프 내에 이미 연결되어 있는 다른 ID를 나타냅니다.
 
 삭제 논리로 인해 일부 &quot;허브&quot; ID도 삭제될 수 있습니다. 이러한 허브 ID는 연결되지 않은 여러 개별 ID에 연결된 노드를 나타냅니다.
 
-아래 예에서 ECID:21011은 다음 위치에서 수집되고 그래프에 연결됩니다. `timestamp=51`, 따라서 ID 50개의 제한을 초과합니다.
+아래 예에서 ECID:21011이 수집되고 `timestamp=51`에 그래프에 연결되므로 ID 제한이 50개를 초과합니다.
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
@@ -173,7 +173,7 @@ ECID:35577을 삭제하면 CRM ID:60013 및 CRM ID:25212을 현재 삭제된 ECI
 따라서 ID 서비스는 ID 그래프에서 가장 오래된 ID만 삭제합니다(이 경우 ECID:35577). ECID:35577을 삭제하면 다음 항목도 삭제됩니다.
 
 * CRM ID: 60013과 현재 삭제된 ECID:35577 간의 링크로 인해 그래프 분할 시나리오가 발생합니다.
-* IDFA: 32110, IDFA: 02383 및 다음으로 표시되는 나머지 ID `(...)`. 이러한 ID는 개별적으로 다른 ID와 연결되어 있지 않으므로 그래프로 표시할 수 없으므로 삭제됩니다.
+* IDFA: 32110, IDFA: 02383 및 `(...)`(으)로 표시되는 나머지 ID입니다. 이러한 ID는 개별적으로 다른 ID와 연결되어 있지 않으므로 그래프로 표시할 수 없으므로 삭제됩니다.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
 
@@ -187,7 +187,7 @@ ECID:35577을 삭제하면 CRM ID:60013 및 CRM ID:25212을 현재 삭제된 ECI
 
 ## 다음 단계
 
-자세한 내용은 다음 설명서를 참조하십시오. [!DNL Identity Service]:
+[!DNL Identity Service]에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [[!DNL Identity Service] 개요](home.md)
 * [ID 그래프 뷰어](features/identity-graph-viewer.md)
@@ -195,7 +195,7 @@ ECID:35577을 삭제하면 CRM ID:60013 및 CRM ID:25212을 현재 삭제된 ECI
 Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보호, 종단 간 지연 정보 및 라이선스 정보에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
-* [엔드 투 엔드 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 다양한 Experience Platform 서비스용.
-* [Real-time Customer Data Platform (B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams).
+* [Real-time Customer Data Platform(B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

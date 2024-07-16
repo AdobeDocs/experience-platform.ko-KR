@@ -17,7 +17,7 @@ ht-degree: 60%
 
 1. 웹 페이지 자체에서 데이터 레이어를 XDM으로 다시 포맷합니다.
 2. 태그 기본 데이터 요소 기능을 사용하여 웹 페이지의 기존 데이터 레이어 형식을 XDM으로 다시 지정합니다.
-3. 데이터 수집을 위한 데이터 준비를 사용하여 Edge Network를 통해 웹 페이지의 기존 데이터 레이어 형식을 XDM으로 다시 포맷합니다.
+3. 데이터 수집을 위한 데이터 준비를 사용하여 Edge Network을 통해 웹 페이지의 기존 데이터 레이어 형식을 XDM으로 다시 지정합니다.
 
 이 안내서는 세 번째 옵션에 중점을 둡니다.
 
@@ -25,14 +25,14 @@ ht-degree: 60%
 
 데이터 수집을 위한 데이터 준비가 유용한 두 가지 사용 사례가 있습니다.
 
-1. 웹 사이트에는 잘 구성되고 관리되며 유지되는 데이터 레이어가 있으며 JavaScript 조작을 사용하여 페이지에서 XDM으로 변환하는 대신 Edge Network로 직접 전송하는 것이 좋습니다(태그 데이터 요소 또는 수동 JavaScript 조작을 통해).
+1. 웹 사이트에는 잘 구성되고, 관리되고, 유지되는 데이터 레이어가 있으며 JavaScript 조작을 사용하여 페이지의 XDM으로 변환하는 대신(태그 데이터 요소를 통해 또는 수동으로 JavaScript 조작을 통해) Edge Network으로 직접 전송하는 기본 설정이 있습니다.
 2. 태그 이외의 태그 지정 시스템이 사이트에 배포됩니다.
 
-## WebSDK를 통해 Edge 네트워크에 기존 데이터 계층 보내기 {#send-datalayer-via-websdk}
+## WebSDK를 통해 Edge Network에 기존 데이터 레이어 보내기 {#send-datalayer-via-websdk}
 
-기존 데이터 레이어는 [`data`](/help/web-sdk/commands/sendevent/data.md) 내의 개체 `sendEvent` 명령입니다.
+기존 데이터 레이어는 `sendEvent` 명령 내에서 [`data`](/help/web-sdk/commands/sendevent/data.md) 개체를 사용하여 보내야 합니다.
 
-태그를 사용하는 경우 **[!UICONTROL 데이터]** 필드 **[!UICONTROL 이벤트 보내기]** 에 설명된 대로 작업 유형 [웹 SDK 태그 확장 설명서](/help/tags/extensions/client/web-sdk/action-types.md).
+태그를 사용하는 경우 [Web SDK 태그 확장 설명서](/help/tags/extensions/client/web-sdk/action-types.md)에 설명된 대로 **[!UICONTROL 이벤트 보내기]** 작업 유형의 **[!UICONTROL 데이터]** 필드를 사용해야 합니다.
 
 이 안내서의 나머지 부분에서는 WebSDK에서 데이터 레이어를 전송한 후 XDM 표준에 매핑하는 방법에 중점을 둡니다.
 
@@ -54,7 +54,7 @@ ht-degree: 60%
 
 데이터스트림에 대한 기본 구성을 완료한 후 **[!UICONTROL 매핑 저장 및 추가]**&#x200B;를 선택하면 **[!UICONTROL 데이터 선택]** 단계가 표시됩니다. 여기서 Platform으로 전송할 데이터의 구조를 나타내는 샘플 JSON 오브젝트를 제공해야 합니다.
 
-데이터 계층에서 바로 속성을 캡처하려면 JSON 오브젝트에는 단일 루트 속성이 있어야 합니다`data`. 의 하위 속성 `data` 그런 다음 캡처할 데이터 레이어 속성에 매핑되는 방식으로 개체를 구성해야 합니다. 아래 섹션을 선택하여 `data` 루트로 형식이 제대로 지정된 JSON 오브젝트의 예제를 확인합니다.
+데이터 계층에서 바로 속성을 캡처하려면 JSON 오브젝트에는 단일 루트 속성이 있어야 합니다`data`. 그런 다음 캡처할 데이터 레이어 속성에 매핑되는 방식으로 `data` 개체의 하위 속성을 구성해야 합니다. 아래 섹션을 선택하여 `data` 루트로 형식이 제대로 지정된 JSON 오브젝트의 예제를 확인합니다.
 
 `data` 루트가 포함된 +++샘플 JSON 파일
 
@@ -154,7 +154,7 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 
 옵션을 선택하여 오브젝트를 파일로 업로드하거나 원시 오브젝트를 대신 제공된 텍스트 상자에 붙여넣을 수 있습니다. JSON이 유효한 경우 오른쪽 패널에 미리보기 스키마가 표시됩니다. 계속하려면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
-![예상 수신 데이터의 JSON 샘플입니다.](assets/data-prep/select-data.png)
+![수신 데이터의 JSON 샘플입니다.](assets/data-prep/select-data.png)
 
 >[!NOTE]
 >
@@ -164,26 +164,26 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 
 **[!UICONTROL 매핑]** 단계가 표시되면 Platform에서 소스 데이터의 필드를 대상 이벤트 스키마의 필드에 매핑할 수 있습니다. 여기서 두 가지 방법으로 매핑을 구성할 수 있습니다.
 
-* [매핑 규칙 만들기](#create-mapping) 수동 프로세스를 통해 이 데이터스트림에 대한 것입니다.
+* 수동 프로세스를 통해 이 데이터 스트림에 대한 [매핑 규칙을 만듭니다](#create-mapping).
 * 기존 데이터스트림에서 [매핑 규칙을 가져옵니다](#import-mapping).
 
 ### 매핑 규칙 만들기 {#create-mapping}
 
-매핑 규칙을 만들려면 다음을 선택합니다. **[!UICONTROL 새 매핑 추가]**.
+매핑 규칙을 만들려면 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다.
 
 ![새 매핑을 추가합니다.](assets/data-prep/add-new-mapping.png)
 
 소스 아이콘(![ 소스 아이콘](assets/data-prep/source-icon.png))을 선택하고 표시되는 대화 상자에서 제공된 캔버스에서 매핑하려는 소스 필드를 선택합니다. 필드가 선택되면 **[!UICONTROL 선택]** 버튼을 사용하여 계속합니다.
 
-![소스 스키마에서 매핑할 필드 선택.](assets/data-prep/source-mapping.png)
+![원본 스키마에서 매핑할 필드를 선택합니다.](assets/data-prep/source-mapping.png)
 
 다음으로 스키마 아이콘(![스키마 아이콘](assets/data-prep/schema-icon.png))을 선택하여 대상 이벤트 스키마에 유사한 대화 상자를 엽니다. **[!UICONTROL 선택]**&#x200B;을 사용하여 확인 전에 데이터를 매핑하려는 필드를 선택합니다.
 
-![대상 스키마에서 매핑할 필드 선택.](assets/data-prep/target-mapping.png)
+![대상 스키마에서 매핑할 필드를 선택합니다.](assets/data-prep/target-mapping.png)
 
 완료된 필드 매핑이 표시되면 매핑 페이지가 다시 나타납니다. 매핑이 완료된 총 필드 수를 반영하도록 **[!UICONTROL 매핑 프로세스]** 섹션이 업데이트됩니다.
 
-![필드가 정상적으로 매핑되었으며 진행률이 반영되었습니다.](assets/data-prep/field-mapped.png)
+![진행률이 반영된 필드가 정상적으로 매핑되었습니다.](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
@@ -201,7 +201,7 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 
 시작하려면 **[!UICONTROL 매핑 가져오기]**&#x200B;를 선택합니다.
 
-![매핑 가져오기 버튼이 선택 중입니다.](assets/data-prep/import-mapping-button.png)
+![매핑 가져오기 단추가 선택되어 있습니다.](assets/data-prep/import-mapping-button.png)
 
 표시되는 대화 상자에서 가져오려는 매핑 규칙이 있는 데이터스트림을 선택합니다. 데이터스트림이 선택되면 **[!UICONTROL 미리보기]**&#x200B;를 선택합니다.
 
@@ -213,7 +213,7 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 
 다음 화면에는 선택한 데이터스트림에 대해 저장된 매핑 규칙의 미리보기가 표시됩니다. 표시된 매핑이 예상한 매핑인지 확인한 다음 **[!UICONTROL 가져오기]**&#x200B;를 선택하여 매핑을 확인하고 새 데이터스트림에 추가합니다.
 
-![가져올 매핑 규칙.](assets/data-prep/import-mapping-rules.png)
+![가져올 매핑 규칙입니다.](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -223,7 +223,7 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 
 위 단계를 따라 나머지 필드를 대상 스키마에 계속 매핑합니다. 사용 가능한 모든 소스 필드를 매핑할 필요는 없지만 필요에 따라 설정된 대상 스키마의 모든 필드를 매핑해야 이 단계를 완료할 수 있습니다. **[!UICONTROL 필수 필드]** 카운터는 아직 현재 구성에 매핑되지 않은 필수 필드의 수를 표시합니다.
 
-필수 필드 수가 0에 도달하고 매핑이 만족스러우면 다음을 선택합니다. **[!UICONTROL 저장]** 을 눌러 변경 사항을 완료합니다.
+필수 필드 수가 0에 도달하고 매핑에 만족하면 **[!UICONTROL 저장]**&#x200B;을 선택하여 변경 내용을 완료합니다.
 
 ![매핑 완료](assets/data-prep/mapping-complete.png)
 

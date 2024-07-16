@@ -7,43 +7,43 @@ description: 이 자습서에서는 스키마 레지스트리 API를 사용하�
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '2588'
-ht-degree: 1%
+source-wordcount: '2583'
+ht-degree: 2%
 
 ---
 
-# 를 사용하여 스키마 만들기 [!DNL Schema Registry] API
+# [!DNL Schema Registry] API를 사용하여 스키마 만들기
 
-다음 [!DNL Schema Registry] 은(는) 다음에 액세스하는 데 사용됩니다. [!DNL Schema Library] Adobe Experience Platform 내. 다음 [!DNL Schema Library] Adobe에서 사용할 수 있는 리소스 포함, [!DNL Experience Platform] 사용하는 애플리케이션을 사용하는 파트너 및 공급업체. 레지스트리는 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다.
+[!DNL Schema Registry]은(는) Adobe Experience Platform 내에서 [!DNL Schema Library]에 액세스하는 데 사용됩니다. [!DNL Schema Library]에는 응용 프로그램을 사용하는 Adobe, [!DNL Experience Platform]개의 파트너 및 공급업체에서 사용할 수 있는 리소스가 포함되어 있습니다. 레지스트리는 사용 가능한 모든 라이브러리 리소스에 액세스할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다.
 
-이 튜토리얼에서는 [!DNL Schema Registry] 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내하는 API입니다. 에서 사용자 인터페이스를 사용하려면 다음을 수행하십시오 [!DNL Experience Platform], [스키마 편집기 튜토리얼](create-schema-ui.md) 는 스키마 편집기에서 유사한 작업을 수행하기 위한 단계별 지침을 제공합니다.
+이 자습서에서는 [!DNL Schema Registry] API를 사용하여 표준 클래스를 사용하여 스키마를 구성하는 단계를 안내합니다. [!DNL Experience Platform]에서 사용자 인터페이스를 사용하려면 [스키마 편집기 자습서](create-schema-ui.md)에서 스키마 편집기에서 유사한 작업을 수행하는 방법에 대한 단계별 지침을 제공합니다.
 
 >[!NOTE]
 >
->CSV 데이터를 플랫폼으로 수집하는 경우 [해당 데이터를 AI가 생성한 권장 사항에 의해 생성된 XDM 스키마에 매핑합니다](../../ingestion/tutorials/map-csv/recommendations.md) (현재 Beta 버전). 직접 스키마를 생성할 필요가 없습니다.
+>CSV 데이터를 플랫폼으로 수집하는 경우 스키마를 직접 수동으로 만들지 않아도 AI가 생성한 권장 사항으로 만든 XDM 스키마에 해당 데이터를 [매핑](../../ingestion/tutorials/map-csv/recommendations.md)(현재 베타 버전)할 수 있습니다.
 
 ## 시작하기
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): 표준화된 프레임워크 [!DNL Experience Platform] 고객 경험 데이터를 구성합니다.
-   * [스키마 컴포지션 기본 사항](../schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
-* [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스의 집계 데이터를 기반으로 통합 실시간 소비자 프로필을 제공합니다.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 만드는 가상 샌드박스를 제공합니다. [!DNL Platform] 인스턴스를 별도의 가상 환경으로 전환하여 디지털 경험 애플리케이션을 개발하고 발전시킵니다.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+   * [스키마 컴포지션의 기본 사항](../schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform]은(는) 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
-이 자습서를 시작하기 전에 다음을 검토하십시오. [개발자 안내서](../api/getting-started.md) 를 성공적으로 호출하기 위해 알아야 하는 중요한 정보 [!DNL Schema Registry] API. 여기에는 다음 항목이 포함됩니다. `{TENANT_ID}`, &quot;컨테이너&quot;의 개념 및 요청을 하는 데 필요한 헤더( `Accept` 헤더 및 가능한 값).
+이 자습서를 시작하기 전에 [개발자 안내서](../api/getting-started.md)에서 [!DNL Schema Registry] API를 성공적으로 호출하기 위해 알아야 할 중요한 정보를 검토하십시오. 여기에는 `{TENANT_ID}`, &quot;컨테이너&quot; 개념 및 요청을 하는 데 필요한 헤더가 포함됩니다(`Accept` 헤더 및 가능한 값에 특별한 주의를 기울임).
 
-이 자습서에서는 소매 충성도 프로그램의 멤버와 관련된 데이터를 설명하는 충성도 멤버 스키마를 구성하는 단계를 안내합니다. 시작하기 전에 를 미리 볼 수 있습니다. [전체 충성도 멤버 스키마](#complete-schema) 부록에서.
+이 자습서에서는 소매 충성도 프로그램의 멤버와 관련된 데이터를 설명하는 충성도 멤버 스키마를 구성하는 단계를 안내합니다. 시작하기 전에 부록에서 [충성도 멤버 완료 스키마](#complete-schema)를 미리 볼 수 있습니다.
 
 ## 표준 클래스를 사용하여 스키마 구성
 
-스키마는 수집하려는 데이터에 대한 블루프린트로 간주할 수 있습니다 [!DNL Experience Platform]. 각 스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. 즉, 스키마를 정의하기 위해 필드 그룹을 추가할 필요는 없지만 대부분의 경우 하나 이상의 필드 그룹이 사용됩니다.
+스키마는 [!DNL Experience Platform]에 수집할 데이터에 대한 블루프린트로 간주할 수 있습니다. 각 스키마는 클래스와 0개 이상의 스키마 필드 그룹으로 구성됩니다. 즉, 스키마를 정의하기 위해 필드 그룹을 추가할 필요는 없지만 대부분의 경우 하나 이상의 필드 그룹이 사용됩니다.
 
 ### 클래스 할당
 
 스키마 작성 프로세스는 클래스 선택부터 시작됩니다. 클래스는 데이터의 주요 동작 측면(레코드 및 시계열)과 수집할 데이터를 설명하는 데 필요한 최소 필드를 정의합니다.
 
-이 자습서에서 만드는 스키마는 [!DNL XDM Individual Profile] 클래스. [!DNL XDM Individual Profile] 는 레코드 동작을 정의하기 위해 Adobe에서 제공하는 표준 클래스입니다. 비헤이비어에 대한 자세한 내용은 [스키마 컴포지션 기본 사항](../schema/composition.md).
+이 자습서에서 만드는 스키마는 [!DNL XDM Individual Profile] 클래스를 사용합니다. [!DNL XDM Individual Profile]은(는) 레코드 동작을 정의하기 위해 Adobe에서 제공하는 표준 클래스입니다. 동작에 대한 자세한 내용은 [스키마 컴포지션의 기본 사항](../schema/composition.md)에서 확인할 수 있습니다.
 
 클래스를 할당하려면 테넌트 컨테이너에서 새 스키마를 만들기(POST)하기 위한 API 호출이 수행됩니다. 이 호출에는 스키마가 구현할 클래스가 포함됩니다. 각 스키마는 하나의 클래스만 구현할 수 있습니다.
 
@@ -55,7 +55,7 @@ POST /tenant/schemas
 
 **요청**
 
-요청에는 다음 항목이 포함되어야 합니다. `allOf` 을 참조하는 속성 `$id` 수업 중. 이 속성은 스키마가 구현할 &quot;기본 클래스&quot;를 정의합니다. 이 예제에서 기본 클래스는 [!DNL XDM Individual Profile] 클래스. 다음 `$id` / [!DNL XDM Individual Profile] 클래스는 의 값으로 사용됩니다. `$ref` 의 필드 `allOf` 아래에 배열이 있습니다.
+요청의 `$id`을(를) 참조하는 `allOf` 특성이 포함되어 있어야 합니다. 이 속성은 스키마가 구현할 &quot;기본 클래스&quot;를 정의합니다. 이 예제에서 기본 클래스는 [!DNL XDM Individual Profile] 클래스입니다. [!DNL XDM Individual Profile] 클래스의 `$id`이(가) 아래 `allOf` 배열의 `$ref` 필드 값으로 사용됩니다.
 
 ```SHELL
 curl -X POST \
@@ -79,7 +79,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 요청은 을 포함하여 새로 생성된 스키마의 세부 사항이 포함된 응답 본문과 함께 HTTP 응답 상태 201(생성됨)을 반환합니다. `$id`, `meta:altIt`, 및 `version`. 이 값은 읽기 전용이며 [!DNL Schema Registry].
+성공적인 요청은 `$id`, `meta:altIt` 및 `version`을(를) 포함하여 새로 만든 스키마의 세부 정보가 포함된 응답 본문과 함께 HTTP 응답 상태 201(생성됨)을 반환합니다. 이 값은 읽기 전용이며 [!DNL Schema Registry]에 의해 할당됩니다.
 
 ```JSON
 {
@@ -129,7 +129,7 @@ curl -X POST \
 
 ### 스키마 조회
 
-새로 만든 스키마를 보려면 를 사용하여 조회(GET) 요청을 수행합니다. `meta:altId` 또는 URL로 인코딩됨 `$id` 스키마의 URI.
+새로 만든 스키마를 보려면 스키마에 대해 `meta:altId` 또는 URL 인코딩 `$id` URI를 사용하여 조회(GET) 요청을 수행하십시오.
 
 **API 형식**
 
@@ -139,7 +139,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 조회하려는 스키마의 수입니다. |
+| `{SCHEMA_ID}` | 조회할 스키마의 `meta:altId` 또는 URL로 인코딩된 `$id`입니다. |
 
 **요청**
 
@@ -155,7 +155,7 @@ curl -X GET \
 
 **응답**
 
-응답 형식은 다음에 따라 다릅니다. `Accept` 헤더가 요청과 함께 전송되었습니다. 다른 항목으로 실험 시도 `Accept` 머리글을 사용하여 사용자의 요구 사항에 가장 적합한 머리글을 확인할 수 있습니다.
+응답 형식은 요청과 함께 전송된 `Accept` 헤더에 따라 다릅니다. 필요에 가장 적합한 헤더를 확인하려면 다른 `Accept` 헤더로 테스트해 보십시오.
 
 ```JSON
 {
@@ -205,7 +205,7 @@ curl -X GET \
 
 이제 충성도 멤버 스키마를 만들고 확인했으므로 필드 그룹을 추가할 수 있습니다.
 
-선택한 스키마 클래스에 따라 사용할 수 있는 다양한 표준 필드 그룹이 있습니다. 각 필드 그룹에는 `intendedToExtend` 해당 필드 그룹과 호환되는 클래스를 정의하는 필드입니다.
+선택한 스키마 클래스에 따라 사용할 수 있는 다양한 표준 필드 그룹이 있습니다. 각 필드 그룹에는 해당 필드 그룹과 호환되는 클래스를 정의하는 `intendedToExtend` 필드가 포함되어 있습니다.
 
 필드 그룹은 &quot;이름&quot; 또는 &quot;주소&quot;와 같이 동일한 정보를 캡처해야 하는 모든 스키마에서 재사용할 수 있는 개념을 정의합니다.
 
@@ -217,13 +217,13 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 필드 그룹을 추가할 스키마의 수입니다. |
+| `{SCHEMA_ID}` | 필드 그룹을 추가할 스키마의 `meta:altId` 또는 URL로 인코딩된 `$id`입니다. |
 
 **요청**
 
-이 요청은 다음 내에 필드를 포함하도록 충성도 멤버 스키마를 업데이트합니다. [[!UICONTROL 인구 통계 세부 정보] 필드 그룹](../field-groups/profile/demographic-details.md) (`profile-person-details`).
+이 요청은 [[!UICONTROL 인구 통계 세부 정보] 필드 그룹](../field-groups/profile/demographic-details.md)(`profile-person-details`) 내의 필드를 포함하도록 충성도 멤버 스키마를 업데이트합니다.
 
-를 추가하여 `profile-person-details` 필드 그룹인 충성도 멤버 스키마는 이제 충성도 프로그램 멤버의 이름, 성 및 생일과 같은 인구 통계학적 정보를 캡처합니다.
+`profile-person-details` 필드 그룹을 추가하면 이제 충성도 멤버 스키마가 이름, 성, 생일 등 충성도 프로그램 멤버의 인구 통계학적 정보를 캡처합니다.
 
 ```SHELL
 curl -X PATCH \
@@ -240,7 +240,7 @@ curl -X PATCH \
 
 **응답**
 
-응답은에서 새로 추가된 필드 그룹을 보여 줍니다. `meta:extends` 배열 및 포함 `$ref` 을(를) 의 필드 그룹으로 `allOf` 특성.
+응답이 `meta:extends` 배열에 새로 추가된 필드 그룹을 표시하며 `allOf` 특성의 필드 그룹에 대한 `$ref`을(를) 포함합니다.
 
 ```JSON
 {
@@ -304,10 +304,9 @@ curl -X PATCH \
 
 >[!TIP]
 >
->사용 가능한 모든 필드 그룹을 검토하여 각각에 포함된 필드를 숙지하는 것이 좋습니다. &quot;전역&quot; 및 &quot;테넌트&quot; 컨테이너 각각에 대해 요청을 수행하고 &quot;meta:intendedToExtend&quot; 필드가 사용 중인 클래스와 일치하는 필드 그룹만 반환하여 특정 클래스에서 사용할 수 있는 모든 필드 그룹을 나열(GET)할 수 있습니다. 이 경우 [!DNL XDM Individual Profile] 클래스, 따라서 [!DNL XDM Individual Profile] `$id` 사용:
+>사용 가능한 모든 필드 그룹을 검토하여 각각에 포함된 필드를 숙지하는 것이 좋습니다. &quot;전역&quot; 및 &quot;테넌트&quot; 컨테이너 각각에 대해 요청을 수행하고 &quot;meta:intendedToExtend&quot; 필드가 사용 중인 클래스와 일치하는 필드 그룹만 반환하여 특정 클래스에서 사용할 수 있는 모든 필드 그룹을 나열(GET)할 수 있습니다. 이 경우 [!DNL XDM Individual Profile] 클래스이므로 [!DNL XDM Individual Profile] `$id`이(가) 사용됩니다.
 >
->
-```http
+>```http
 >GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 >GET /tenant/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 >```
@@ -320,14 +319,14 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 업데이트 중인 스키마의 입니다. |
+| `{SCHEMA_ID}` | 업데이트하는 스키마의 `meta:altId` 또는 URL 인코딩 `$id`입니다. |
 
 **요청**
 
 이 요청은 다음 표준 필드 그룹 내에 필드를 포함하도록 충성도 멤버 스키마를 업데이트합니다.
 
-* [[!UICONTROL 개인 연락처 세부 정보]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`): 집 주소, 이메일 주소 및 집 전화 등의 연락처 정보를 추가합니다.
-* [[!UICONTROL 고객 충성도 세부 정보]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`): 집 주소, 이메일 주소 및 집 전화 등의 연락처 정보를 추가합니다.
+* [[!UICONTROL 개인 연락처 정보]](../field-groups/profile/personal-contact-details.md)(`profile-personal-details`): 집 주소, 전자 메일 주소 및 집 전화 등의 연락처 정보를 추가합니다.
+* [[!UICONTROL 충성도 세부 정보]](../field-groups/profile/loyalty-details.md)(`profile-loyalty-details`): 집 주소, 전자 메일 주소 및 집 전화 등의 연락처 정보를 추가합니다.
 
 ```SHELL
 curl -X PATCH \
@@ -345,9 +344,9 @@ curl -X PATCH \
 
 **응답**
 
-응답은에서 새로 추가된 필드 그룹을 보여 줍니다. `meta:extends` 배열 및 포함 `$ref` 을(를) 의 필드 그룹으로 `allOf` 특성.
+응답은 `meta:extends` 배열에서 새로 추가된 필드 그룹을 표시하며 `allOf` 특성의 필드 그룹에 대한 `$ref`을(를) 포함합니다.
 
-이제 충성도 멤버 스키마에 4개가 포함되어야 합니다. `$ref` 의 값 `allOf` 배열: `profile`, `profile-person-details`, `profile-personal-details`, 및 `profile-loyalty-details` 아래와 같이 표시됩니다.
+충성도 멤버 스키마에는 이제 아래와 같이 `allOf` 배열에 `profile`, `profile-person-details`, `profile-personal-details` 및 `profile-loyalty-details`, 이렇게 네 개의 `$ref` 값이 있어야 합니다.
 
 ```JSON
 {
@@ -421,13 +420,13 @@ curl -X PATCH \
 
 ### 새 필드 그룹 정의
 
-표준 [!UICONTROL 고객 충성도 세부 정보] 필드 그룹은 스키마에 유용한 충성도 관련 필드를 제공합니다. 표준 필드 그룹에는 포함되지 않는 추가 충성도 필드가 있습니다.
+표준 [!UICONTROL 충성도 세부 정보] 필드 그룹은 스키마에 유용한 충성도 관련 필드를 제공하지만, 표준 필드 그룹에 포함되지 않는 추가 충성도 필드가 있습니다.
 
-이러한 필드를 추가하기 위해 내에서 고유한 사용자 지정 필드 그룹을 정의할 수 있습니다. `tenant` 컨테이너. 이러한 필드 그룹은 조직에 고유하며 조직 외부의 다른 사용자가 표시하거나 편집할 수 없습니다.
+이러한 필드를 추가하려면 `tenant` 컨테이너 내에 사용자 지정 필드 그룹을 정의할 수 있습니다. 이러한 필드 그룹은 조직에 고유하며 조직 외부의 다른 사용자가 표시하거나 편집할 수 없습니다.
 
-새 필드 그룹을 만들기(POST)하려면 요청에 `meta:intendedToExtend` 필드가 포함된 필드 `$id` 필드 그룹과 호환되는 기본 클래스와 필드 그룹에 포함될 속성입니다.
+새 필드 그룹을 만들기(POST)하려면 필드 그룹과 호환되는 기본 클래스에 대한 `$id`이(가) 포함된 `meta:intendedToExtend` 필드와 필드 그룹에 포함될 속성을 요청에 포함해야 합니다.
 
-모든 사용자 지정 속성은 아래에 중첩되어야 합니다. `TENANT_ID` 다른 필드 그룹 또는 필드와의 충돌을 피하십시오.
+다른 필드 그룹 또는 필드와의 충돌을 방지하려면 `TENANT_ID` 아래에 사용자 지정 속성을 중첩해야 합니다.
 
 **API 형식**
 
@@ -437,7 +436,7 @@ POST /tenant/fieldgroups
 
 **요청**
 
-이 요청은 이(가) 있는 새 필드 그룹을 만듭니다. `loyaltyTier` 회사의 특정 충성도 프로그램과 관련된 네 개의 필드가 포함된 개체: `id`, `effectiveDate`, `currentThreshold`, 및 `nextThreshold`.
+이 요청은 회사 특정 충성도 프로그램에 해당하는 4개의 필드(`id`, `effectiveDate`, `currentThreshold` 및 `nextThreshold`)가 포함된 `loyaltyTier` 개체가 있는 새 필드 그룹을 만듭니다.
 
 ```SHELL
 curl -X POST\
@@ -501,7 +500,7 @@ curl -X POST\
 
 **응답**
 
-성공적인 요청은 을 포함하여 새로 생성된 필드 그룹의 세부 정보가 포함된 응답 본문과 함께 HTTP 응답 상태 201(생성됨)을 반환합니다. `$id`, `meta:altIt`, 및 `version`. 이 값은 읽기 전용이며 [!DNL Schema Registry].
+성공적인 요청은 `$id`, `meta:altIt` 및 `version`을(를) 포함하여 새로 생성된 필드 그룹의 세부 정보가 포함된 응답 본문과 함께 HTTP 응답 상태 201(생성됨)을 반환합니다. 이 값은 읽기 전용이며 [!DNL Schema Registry]에 의해 할당됩니다.
 
 ```JSON
 {
@@ -589,7 +588,7 @@ curl -X POST\
 
 ### 스키마에 사용자 정의 필드 그룹 추가
 
-이제 의 동일한 단계를 따를 수 있습니다. [표준 필드 그룹 추가](#add-a-field-group) 새로 만든 이 필드 그룹을 스키마에 추가합니다.
+이제 동일한 단계에 따라 [표준 필드 그룹을 추가](#add-a-field-group)하여 새로 만든 이 필드 그룹을 스키마에 추가할 수 있습니다.
 
 **API 형식**
 
@@ -599,7 +598,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 스키마의 입니다. |
+| `{SCHEMA_ID}` | 스키마의 `meta:altId` 또는 URL 인코딩 `$id`. |
 
 **요청**
 
@@ -620,7 +619,7 @@ curl -X PATCH \
 
 **응답**
 
-이제 응답에에 새로 추가된 필드 그룹이 표시되므로 필드 그룹이 성공적으로 추가된 것을 볼 수 있습니다. `meta:extends` 배열 및 포함 `$ref` 을(를) 의 필드 그룹으로 `allOf` 특성.
+이제 응답에 `meta:extends` 배열에 새로 추가된 필드 그룹이 표시되고 `allOf` 특성의 필드 그룹에 대한 `$ref`이(가) 포함되어 있으므로 필드 그룹이 성공적으로 추가되었음을 확인할 수 있습니다.
 
 ```JSON
 {
@@ -711,7 +710,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 스키마의 입니다. |
+| `{SCHEMA_ID}` | 스키마의 `meta:altId` 또는 URL 인코딩 `$id`. |
 
 **요청**
 
@@ -727,9 +726,9 @@ curl -X GET \
 
 **응답**
 
-를 사용하여 `application/vnd.adobe.xed-full+json; version=1` `Accept` 머리글에서 모든 속성을 표시하는 전체 스키마를 볼 수 있습니다. 이러한 속성은 스키마를 구성하는 데 사용된 클래스 및 필드 그룹이 제공한 필드입니다. 아래 예제 응답에서는 공간에 대해 최근에 추가한 필드만 표시됩니다. 에서 모든 속성과 해당 속성을 포함한 전체 스키마를 볼 수 있습니다. [부록](#appendix) 이 문서의 끝에 있습니다.
+`application/vnd.adobe.xed-full+json; version=1` `Accept` 헤더를 사용하면 모든 속성을 표시하는 전체 스키마를 볼 수 있습니다. 이러한 속성은 스키마를 구성하는 데 사용된 클래스 및 필드 그룹이 제공한 필드입니다. 아래 예제 응답에서는 공간에 대해 최근에 추가한 필드만 표시됩니다. 이 문서의 끝에 있는 [부록](#appendix)에서 모든 속성과 해당 특성을 포함한 전체 스키마를 볼 수 있습니다.
 
-아래 `"properties"`, 다음을 볼 수 있습니다. `_{TENANT_ID}` 사용자 지정 필드 그룹을 추가할 때 생성된 네임스페이스입니다. 해당 네임스페이스 내에는 `loyaltyTier` 필드 그룹을 만들 때 정의된 개체와 필드.
+`"properties"`에서 사용자 지정 필드 그룹을 추가할 때 만들어진 `_{TENANT_ID}` 네임스페이스를 볼 수 있습니다. 해당 네임스페이스 안에는 필드 그룹을 만들 때 정의된 `loyaltyTier` 개체와 필드가 있습니다.
 
 ```JSON
 {
@@ -831,7 +830,7 @@ POST /tenant/datatypes
 
 **요청**
 
-데이터 형식을 정의할 필요는 없습니다 `meta:extends` 또는 `meta:intendedToExtend` 필드 및 필드는 충돌을 방지하기 위해 테넌트 ID 아래에 중첩될 필요가 없습니다.
+데이터 형식을 정의하면 `meta:extends` 또는 `meta:intendedToExtend` 필드가 필요하지 않으며 충돌을 방지하기 위해 테넌트 ID 아래에 필드를 중첩할 필요가 없습니다.
 
 ```SHELL
 curl -X POST \
@@ -883,7 +882,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 요청은 을 포함하여 새로 생성된 데이터 유형의 세부 사항이 포함된 응답 본문과 함께 HTTP 응답 상태 201(생성됨)을 반환합니다. `$id`, `meta:altIt`, 및 `version`. 이 값은 읽기 전용이며 [!DNL Schema Registry].
+성공적인 요청은 `$id`, `meta:altIt` 및 `version`을(를) 포함하여 새로 만든 데이터 형식의 세부 정보가 포함된 응답 본문과 함께 HTTP 응답 상태 201(생성됨)을 반환합니다. 이 값은 읽기 전용이며 [!DNL Schema Registry]에 의해 할당됩니다.
 
 ```JSON
 {
@@ -956,11 +955,11 @@ curl -X POST \
 }
 ```
 
-인코딩된 URL을 사용하여 조회(GET) 요청을 수행할 수 있습니다 `$id` 새 데이터 형식을 직접 볼 수 있는 URI입니다. 다음을 포함해야 합니다. `version` (으)로 `Accept` 조회 요청에 대한 헤더입니다.
+URL로 인코딩된 `$id` URI를 사용하여 조회(GET) 요청을 수행하여 새 데이터 형식을 직접 볼 수 있습니다. 조회 요청을 위해 `Accept` 헤더에 `version`을(를) 포함해야 합니다.
 
 ### 스키마에서 데이터 유형 사용
 
-충성도 계층 데이터 유형이 생성되었으므로 를 업데이트(PATCH)할 수 있습니다. `loyaltyTier` 이전에 필드 대신 데이터 형식을 참조하기 위해 만든 필드 그룹의 필드입니다.
+충성도 계층 데이터 형식이 만들어졌으므로 이전에 있었던 필드 대신 데이터 형식을 참조하기 위해 만든 필드 그룹의 `loyaltyTier` 필드를 업데이트(PATCH)할 수 있습니다.
 
 **API 형식**
 
@@ -970,7 +969,7 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | 다음 `meta:altId` 또는 URL 인코딩됨 `$id` 업데이트할 필드 그룹의 |
+| `{FIELD_GROUP_ID}` | 업데이트할 필드 그룹의 `meta:altId` 또는 URL 인코딩 `$id`입니다. |
 
 **요청**
 
@@ -999,7 +998,7 @@ curl -X PATCH \
 
 **응답**
 
-이제 응답에 참조(`$ref`)을 클릭하여 제품에서 데이터 유형으로 `loyaltyTier` 이전에 정의한 필드 대신 개체를 사용합니다.
+이제 응답에는 이전에 정의된 필드 대신 `loyaltyTier` 개체의 데이터 형식에 대한 참조(`$ref`)가 포함됩니다.
 
 ```JSON
 {
@@ -1066,7 +1065,7 @@ curl -X PATCH \
 }
 ```
 
-지금 스키마를 조회하기 위해 GET 요청을 수행하는 경우 `loyaltyTier` 속성은 아래의 데이터 형식에 대한 참조를 표시합니다. `meta:referencedFrom`:
+지금 스키마를 조회하기 위해 GET 요청을 수행하는 경우 `loyaltyTier` 속성에 `meta:referencedFrom` 아래의 데이터 형식에 대한 참조가 표시됩니다.
 
 ```JSON
 "_{TENANT_ID}": {
@@ -1113,13 +1112,13 @@ curl -X PATCH \
 
 ### ID 설명자 정의
 
-스키마는 데이터를에 수집하는 데 사용됩니다. [!DNL Experience Platform]. 이 데이터는 궁극적으로 여러 서비스에 걸쳐 사용되어 개인에 대한 통합된 단일 보기를 만듭니다. 이 프로세스를 지원하기 위해 주요 필드를 &quot;ID&quot;로 표시할 수 있으며 데이터 수집 시 해당 필드의 데이터가 해당 개인의 &quot;ID 그래프&quot;에 삽입됩니다. 그런 다음 는 그래프 데이터에 액세스할 수 있습니다. [[!DNL Real-Time Customer Profile]](../../profile/home.md) 및 기타 [!DNL Experience Platform] 각 개별 고객에 대한 통합된 뷰를 제공하는 서비스.
+스키마는 데이터를 [!DNL Experience Platform](으)로 수집하는 데 사용됩니다. 이 데이터는 궁극적으로 여러 서비스에 걸쳐 사용되어 개인에 대한 통합된 단일 보기를 만듭니다. 이 프로세스를 지원하기 위해 주요 필드를 &quot;ID&quot;로 표시할 수 있으며 데이터 수집 시 해당 필드의 데이터가 해당 개인의 &quot;ID 그래프&quot;에 삽입됩니다. 그런 다음 [[!DNL Real-Time Customer Profile]](../../profile/home.md) 및 기타 [!DNL Experience Platform] 서비스에서 그래프 데이터에 액세스하여 각 개별 고객에 대한 결합된 보기를 제공할 수 있습니다.
 
-일반적으로 &quot;ID&quot;로 표시되는 필드에는 이메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유 ID 필드. 좋은 ID 필드일 수도 있으므로 조직 고유의 식별자를 고려하십시오.
+일반적으로 &quot;ID&quot;로 표시되는 필드에는 전자 메일 주소, 전화 번호, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID 또는 기타 고유 ID 필드가 포함됩니다. 좋은 ID 필드일 수도 있으므로 조직 고유의 식별자를 고려하십시오.
 
-ID 설명자로 하여금 `sourceProperty` / `sourceSchema` 는 ID로 간주해야 하는 고유 식별자입니다.
+ID 설명자는 `sourceSchema`의 `sourceProperty`이(가) ID로 간주해야 하는 고유 식별자라는 신호를 보냅니다.
 
-설명자 작업에 대한 자세한 내용은 [스키마 레지스트리 개발자 안내서](../api/getting-started.md).
+설명자 작업에 대한 자세한 내용은 [스키마 레지스트리 개발자 안내서](../api/getting-started.md)를 참조하십시오.
 
 **API 형식**
 
@@ -1129,7 +1128,7 @@ POST /tenant/descriptors
 
 **요청**
 
-다음 요청은 의 ID 설명자를 정의합니다. `personalEmail.address` 충성도 멤버 스키마에 대한 필드입니다. 이는 다음을 말해줍니다. [!DNL Experience Platform] 충성도 멤버의 이메일 주소를 식별자에 사용하여 개인에 대한 정보를 결합하는 데 도움이 됩니다. 또한 이 호출은 을 설정하여 이 필드를 스키마의 기본 ID로 설정합니다. `xdm:isPrimary` 끝 `true`, 요구 사항 [실시간 고객 프로필에서 사용할 스키마 활성화](#profile).
+다음 요청은 충성도 멤버 스키마의 `personalEmail.address` 필드에 ID 설명자를 정의합니다. 이를 통해 [!DNL Experience Platform]이(가) 충성도 멤버의 이메일 주소를 식별자에 사용하여 개인에 대한 정보를 결합하는 데 도움을 줄 수 있습니다. 또한 이 호출은 `xdm:isPrimary`을(를) `true`(으)로 설정하여 이 필드를 스키마의 기본 ID로 설정합니다. 이는 [실시간 고객 프로필에서 사용할 스키마를 활성화](#profile)하기 위한 요구 사항입니다.
 
 ```SHELL
 curl -X POST \
@@ -1152,11 +1151,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->사용 가능한 &quot;xdm:namespace&quot; 값을 나열하거나 [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). &quot;xdm:property&quot;의 값은 사용된 &quot;xdm:namespace&quot;에 따라 &quot;xdm:code&quot; 또는 &quot;xdm:id&quot;일 수 있습니다.
+>[[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service)을(를) 사용하여 사용 가능한 &quot;xdm:namespace&quot; 값을 나열하거나 새 값을 만들 수 있습니다. &quot;xdm:property&quot;의 값은 사용된 &quot;xdm:namespace&quot;에 따라 &quot;xdm:code&quot; 또는 &quot;xdm:id&quot;일 수 있습니다.
 
 **응답**
 
-성공적인 응답은 새로 생성된 설명자(해당 설명자 포함)의 세부 정보가 포함된 응답 본문과 함께 HTTP 상태 201(생성됨)을 반환합니다 `@id`. 다음 `@id` 은(는) 다음에 의해 할당된 읽기 전용 필드입니다. [!DNL Schema Registry] API의 설명자를 참조하는 데 사용됩니다.
+성공한 응답은 `@id`을(를) 포함하여 새로 생성된 설명자의 세부 정보가 포함된 응답 본문과 함께 HTTP 상태 201(생성됨)을 반환합니다. `@id`은(는) [!DNL Schema Registry]에서 지정한 읽기 전용 필드이며 API의 설명자를 참조하는 데 사용됩니다.
 
 ```JSON
 {
@@ -1176,17 +1175,17 @@ curl -X POST \
 }
 ```
 
-## 에서 사용할 스키마 활성화 [!DNL Real-Time Customer Profile] {#profile}
+## [!DNL Real-Time Customer Profile]에서 사용할 스키마 활성화 {#profile}
 
-스키마에 기본 ID 설명자가 적용되면 다음에서 사용할 로열티 멤버 스키마를 활성화할 수 있습니다. [!DNL Real-Time Customer Profile] 를 추가하여 `union` 에 태그 지정 `meta:immutableTags` 특성.
+스키마에 기본 ID 설명자가 적용되면 `meta:immutableTags` 특성에 `union` 태그를 추가하여 [!DNL Real-Time Customer Profile]에서 사용할 충성도 멤버 스키마를 활성화할 수 있습니다.
 
 >[!NOTE]
 >
->유니온 뷰 작업에 대한 자세한 내용은 [합집합](../api/unions.md) 다음에서 [!DNL Schema Registry] 개발자 안내서.
+>유니온 뷰 작업에 대한 자세한 내용은 [!DNL Schema Registry] 개발자 가이드의 [유니온](../api/unions.md)에 대한 섹션을 참조하십시오.
 
-### 추가 `union` 태그
+### `union` 태그 추가
 
-병합 유니온 뷰에 스키마를 포함하려면 `union` 태그를 다음에 추가해야 합니다 `meta:immutableTags` 스키마의 속성입니다. 이 작업은 스키마를 업데이트하고 를 추가하기 위한 PATCH 요청을 통해 수행됩니다 `meta:immutableTags` 값이 인 배열 `union`.
+병합된 유니온 보기에 스키마를 포함하려면 `union` 태그를 스키마의 `meta:immutableTags` 특성에 추가해야 합니다. 이 작업은 스키마를 업데이트하고 값이 `union`인 `meta:immutableTags` 배열을 추가하라는 PATCH 요청을 통해 수행됩니다.
 
 **API 형식**
 
@@ -1196,7 +1195,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SCHEMA_ID}` | 다음 `meta:altId` 또는 URL로 인코딩 `$id` 프로필에 대해 활성화하려는 스키마. |
+| `{SCHEMA_ID}` | 프로필에 사용할 수 있는 스키마의 `meta:altId` 또는 URL로 인코딩된 `$id`입니다. |
 
 **요청**
 
@@ -1215,7 +1214,7 @@ curl -X PATCH \
 
 **응답**
 
-응답은 작업이 성공적으로 수행되었으며 스키마에 이제 최상위 속성, `meta:immutableTags`: &quot;union&quot; 값을 포함하는 배열입니다.
+응답이 작업을 성공적으로 수행했으며 스키마에 이제 &quot;union&quot; 값을 포함하는 배열인 최상위 특성 `meta:immutableTags`이(가) 포함되어 있음을 보여 줍니다.
 
 ```JSON
 {
@@ -1299,9 +1298,9 @@ curl -X PATCH \
 
 ### 유니온에 스키마 나열
 
-이제 스키마를에 성공적으로 추가했습니다. [!DNL XDM Individual Profile] 합집합. 동일한 유니온에 속하는 모든 스키마 목록을 보려면 쿼리 매개 변수를 사용하여 GET 요청을 수행하여 응답을 필터링할 수 있습니다.
+이제 스키마를 [!DNL XDM Individual Profile] 유니온에 추가했습니다. 동일한 유니온에 속하는 모든 스키마 목록을 보려면 쿼리 매개 변수를 사용하여 GET 요청을 수행하여 응답을 필터링할 수 있습니다.
 
-사용 `property` 쿼리 매개 변수에서 를 포함하는 스키마만 `meta:immutableTags` 이 있는 필드 `meta:class` 다음과 같음 `$id` / [!DNL XDM Individual Profile] 클래스가 반환됩니다.
+`property` 쿼리 매개 변수를 사용하여 [!DNL XDM Individual Profile] 클래스의 `$id`과(와) 동일한 `meta:class`을(를) 갖는 `meta:immutableTags` 필드가 포함된 스키마만 반환되도록 지정할 수 있습니다.
 
 **API 형식**
 
@@ -1311,7 +1310,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **요청**
 
-아래 예제 요청은 [!DNL XDM Individual Profile] 합집합.
+아래 예제 요청은 [!DNL XDM Individual Profile] 유니온의 일부인 모든 스키마를 반환합니다.
 
 ```SHELL
 curl -X GET \
@@ -1325,7 +1324,7 @@ curl -X GET \
 
 **응답**
 
-응답은 두 요구 사항을 모두 충족하는 스키마만 포함하는 필터링된 스키마 목록입니다. 여러 쿼리 매개 변수를 사용할 때는 AND 관계가 가정된다는 점을 기억하십시오. 목록 응답의 형식은 다음에 따라 다릅니다. `Accept` 헤더가 요청에서 전송되었습니다.
+응답은 두 요구 사항을 모두 충족하는 스키마만 포함하는 필터링된 스키마 목록입니다. 여러 쿼리 매개 변수를 사용할 때는 AND 관계가 가정된다는 점을 기억하십시오. 목록 응답의 형식은 요청에서 보낸 `Accept` 헤더에 따라 다릅니다.
 
 ```JSON
 {
@@ -1375,7 +1374,7 @@ curl -X GET \
 
 이 자습서 전체에서 생성된 전체 충성도 멤버 스키마는 다음 부록에서 사용할 수 있습니다. 스키마를 보면 필드 그룹이 전체 구조에 어떻게 기여하고 데이터 수집에 사용할 수 있는 필드를 확인할 수 있습니다.
 
-두 개 이상의 스키마를 만들면 관계 설명자를 사용하여 스키마 간의 관계를 정의할 수 있습니다. 다음 튜토리얼 참조: [두 스키마 간의 관계 정의](relationship-api.md) 추가 정보. 레지스트리에서 모든 작업(GET, POST, PUT, PATCH 및 DELETE)을 수행하는 방법에 대한 자세한 예는 다음을 참조하십시오. [스키마 레지스트리 개발자 안내서](../api/getting-started.md) api를 사용하여 작업하는 동안.
+두 개 이상의 스키마를 만들면 관계 설명자를 사용하여 스키마 간의 관계를 정의할 수 있습니다. 자세한 내용은 [두 스키마 간의 관계 정의](relationship-api.md)에 대한 자습서를 참조하십시오. 레지스트리에서 모든 작업(GET, POST, PUT, PATCH 및 DELETE)을 수행하는 방법에 대한 자세한 예는 API를 사용하는 동안 [스키마 레지스트리 개발자 안내서](../api/getting-started.md)를 참조하십시오.
 
 ## 부록 {#appendix}
 
@@ -1385,7 +1384,7 @@ curl -X GET \
 
 이 자습서 전체에서 스키마는 소매 로열티 프로그램의 구성원을 설명하도록 구성됩니다.
 
-스키마가 다음을 구현함 [!DNL XDM Individual Profile] 여러 필드 그룹을 분류하고 결합합니다. 표준을 사용하여 충성도 멤버에 대한 정보를 캡처합니다 [!DNL Demographic Details], [!UICONTROL 개인 연락처 세부 정보], 및 [!UICONTROL 고객 충성도 세부 정보] 필드 그룹 및 자습서 중에 정의된 사용자 정의 충성도 계층 필드 그룹을 통해서도 가능합니다.
+스키마는 [!DNL XDM Individual Profile] 클래스를 구현하고 여러 필드 그룹을 결합합니다. 표준 [!DNL Demographic Details], [!UICONTROL 개인 연락처 세부 정보] 및 [!UICONTROL 충성도 세부 정보] 필드 그룹을 사용하는 충성도 멤버에 대한 정보를 캡처할 뿐만 아니라 자습서 중에 정의된 사용자 지정 충성도 계층 필드 그룹을 통해서도 캡처합니다.
 
 다음은 JSON 형식으로 완료된 충성도 멤버 스키마를 보여 줍니다.
 

@@ -15,7 +15,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->Analytics 태그 확장(종종 업데이트에 대한 응답으로 업데이트되는 경우) [AppMeasurement JavaScript 라이브러리](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR). 다음을 참조하십시오. [AppMeasurement 릴리스 노트](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ko-KR) 아래에 언급된 특정 버전에 대한 자세한 내용.
+>Analytics 태그 확장(종종 [AppMeasurement JavaScript 라이브러리](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR) 업데이트에 대한 응답으로 업데이트되는 경우). 아래 언급된 특정 버전에 대한 자세한 내용은 [AppMeasurement 릴리스 정보](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ko-KR)를 참조하세요.
 
 ## 2024년 3월 4일
 
@@ -23,7 +23,7 @@ ht-degree: 69%
 
 **기능**:
 
-* 으로 업그레이드됨 [v2.26.0으로 AppMeasurement](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
+* [AppMeasurement을 v2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0)(으)로 업그레이드했습니다.
 
 ## 2023년 9월 15일
 
@@ -31,7 +31,7 @@ ht-degree: 69%
 
 **기능**:
 
-* 으로 업그레이드됨 [v2.25.0으로 AppMeasurement](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+* [AppMeasurement을 v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0)(으)로 업그레이드했습니다.
 
 
 ## 2023년 7월 19일
@@ -40,13 +40,13 @@ ht-degree: 69%
 
 **기능**:
 
-* 으로 업그레이드됨 [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
-* 선택적 구성(`decodeLinkParameters` 기본값 `false`)는 더블바이트로 인코딩된 문자가 포함된 링크 URL을 디코딩합니다.
+* [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0)(으)로 업그레이드되었습니다.
+* 더블바이트로 인코딩된 문자가 포함된 링크 URL을 디코딩하는 선택적 구성(`decodeLinkParameters` 기본 `false`)이 추가되었습니다.
 
 **버그 수정**:
 
-* 높은 엔트로피가 잘못된 브라우저에 대한 추가 오류 처리가 추가되었습니다. [사용자 에이전트 클라이언트 힌트](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API입니다.
-* 변경됨 [POST](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Methods/POST) 사용할 Content-Type 헤더 `x-www-form-urlencoded` 기본적으로.
+* 높은 엔트로피 [사용자 에이전트 클라이언트 힌트](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API가 잘못된 브라우저에 대한 추가 오류 처리를 추가했습니다.
+* 기본적으로 `x-www-form-urlencoded`을(를) 사용하도록 [POST](https://developer.mozilla.org/ko-KR/docs/Web/HTTP/Methods/POST) Content-Type 헤더를 변경했습니다.
 
 ## 2022년 9월 23일
 
@@ -55,7 +55,7 @@ ht-degree: 69%
 **기능**:
 
 * AppMeasurement v2.23.0으로 업그레이드되었습니다.
-* 확장은 이제 높은 엔트로피를 수집할 수 있다 [사용자 에이전트 클라이언트 힌트](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 최신 버전의 AppMeasurement에서 지원됩니다.
+* 이제 확장은 최신 버전의 AppMeasurement에서 지원하는 높은 엔트로피 [사용자 에이전트 클라이언트 힌트](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)를 수집할 수 있습니다.
 
 ## 2022년 2월 28일
 
@@ -88,7 +88,7 @@ ht-degree: 69%
 
 **버그 수정**:
 
-* 업그레이드됨 [v2.22.1로 AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ko-KR).
+* [AppMeasurement을 v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ko-KR)(으)로 업그레이드했습니다.
 * innerHTML을 사용하는 대신 미러 Activity Map 논리를 위한 폴백 linkName이 업데이트되었습니다.
 
 ## 2020년 8월 6일

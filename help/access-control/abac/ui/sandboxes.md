@@ -12,11 +12,11 @@ ht-degree: 1%
 
 # 샌드박스 관리
 
-샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션으로, 디지털 경험 애플리케이션의 개발 프로세스와 매끄럽게 통합할 수 있습니다. 샌드박스 내에서 수행되는 모든 콘텐츠 및 작업은 해당 샌드박스로만 제한되고 다른 샌드박스에는 영향을 주지 않습니다. 샌드박스에 대한 자세한 내용은 [샌드박스 개요](../../../sandboxes/home.md).
+샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션으로, 디지털 경험 애플리케이션의 개발 프로세스와 매끄럽게 통합할 수 있습니다. 샌드박스 내에서 수행되는 모든 콘텐츠 및 작업은 해당 샌드박스로만 제한되고 다른 샌드박스에는 영향을 주지 않습니다. 샌드박스에 대한 자세한 내용은 [샌드박스 개요](../../../sandboxes/home.md)를 참조하십시오.
 
 ## 샌드박스 구성
 
-샌드박스가 할당되거나 사용되는 세부 정보 및 역할을 보려면 **[!UICONTROL 샌드박스]** 탭.
+샌드박스가 할당된 세부 정보 및 역할을 보려면 **[!UICONTROL 샌드박스]** 탭을 선택하십시오.
 
 ![flac-sandboxes-tab](../../images/flac-ui/flac-sandboxes-tab.png)
 
@@ -26,10 +26,10 @@ ht-degree: 1%
 
 ![flac-sandboxes-details](../../images/flac-ui/flac-sandboxes-details.png)
 
-다음 항목 선택 **[!UICONTROL 역할]** 탭으로 이동하여 샌드박스가 할당된 역할을 확인합니다.
+샌드박스가 할당된 역할을 보려면 **[!UICONTROL 역할]** 탭을 선택하십시오.
 
 ![flac-sandboxes-roles](../../images/flac-ui/flac-sandboxes-roles.png)
 
 ## 다음 단계
 
-이제 샌드박스 세부 정보 및 현재 할당된 역할을 보는 방법을 배웠습니다. Experience Platform의 샌드박스에 대한 높은 수준의 개요는 [샌드박스 개요 설명서](../../sanboxes/../ui/overview.md).
+이제 샌드박스 세부 정보 및 현재 할당된 역할을 보는 방법을 배웠습니다. Experience Platform의 샌드박스에 대한 높은 수준의 개요는 [샌드박스 개요 설명서](../../sanboxes/../ui/overview.md)를 참조하십시오.

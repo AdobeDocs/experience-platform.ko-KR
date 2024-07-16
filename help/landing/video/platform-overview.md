@@ -18,6 +18,6 @@ ht-degree: 0%
 
 이 비디오에서는 Experience Platform에 대해 간략히 소개하고 해결하는 몇 가지 비즈니스 과제에 대해 설명합니다.
 
-자세한 내용은 [Experience Platform 개요](../home.md).
+자세한 내용은 [Experience Platform 개요](../home.md)를 참조하세요.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)

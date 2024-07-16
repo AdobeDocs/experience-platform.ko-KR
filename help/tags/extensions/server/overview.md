@@ -5,7 +5,7 @@ exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
 source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
 source-wordcount: '166'
-ht-degree: 19%
+ht-degree: 2%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 19%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -22,11 +22,11 @@ ht-degree: 19%
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-다음은 서버측 이벤트 전달 확장에 대한 설명서 목록입니다. 사용 가능한 클라이언트측 확장 목록에 대해서는 [태그 확장 참조](../client/overview.md) 대신,
+다음은 서버측 이벤트 전달 확장에 대한 설명서 목록입니다. 사용 가능한 클라이언트측 확장 목록에 대해서는 [태그 확장 참조](../client/overview.md)를 대신 참조하십시오.
 
 >[!NOTE]
 >
->확장 이름 뒤에 별표(*)가 붙는 것은 설치 및 사용 지침이 포함된 Adobe Exchange의 확장 목록에 대한 링크입니다. 다른 모든 링크는 Adobe Experience League에 있는 확장 의 설명서를 가리킵니다.
+>별표(*) 뒤에 오는 모든 확장 이름은 설치 및 사용 지침이 포함된 Adobe Exchange의 확장 목록에 연결됩니다. 다른 모든 링크는 Adobe Experience League에 있는 확장 의 설명서를 가리킵니다.
 
 * [Adobe Experience Platform 클라우드 커넥터](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)

@@ -4,8 +4,8 @@ description: 이 문서에서는 쿼리 서비스를 사용하여 첫 번째 및
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
 source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1419'
-ht-degree: 1%
+source-wordcount: '1418'
+ht-degree: 0%
 
 ---
 
@@ -17,14 +17,14 @@ ht-degree: 1%
 
 이 문서 전체의 SQL 예제는 Adobe Analytics 데이터에 일반적으로 사용되는 쿼리입니다. 이 자습서에서는 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [보고서 세트 데이터용 Adobe Analytics 소스 커넥터 개요](../../sources/connectors/adobe-applications/mapping/analytics.md).
-* [Analytics 필드 매핑 설명서](../../sources/connectors/adobe-applications/mapping/analytics.md) 쿼리 서비스와 함께 사용할 분석 데이터를 수집 및 매핑하는 방법에 대한 자세한 정보를 제공합니다.
+* [보고서 세트 데이터 개요용 Adobe Analytics 소스 커넥터](../../sources/connectors/adobe-applications/mapping/analytics.md).
+* [Analytics 필드 매핑 설명서](../../sources/connectors/adobe-applications/mapping/analytics.md)에서 쿼리 서비스에 사용할 분석 데이터를 수집 및 매핑하는 방법에 대한 자세한 정보를 제공합니다.
 * [Attribution IQ 개요](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
 * [Adobe Analytics 속성 패널 안내서](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
 
-내의 매개변수에 대한 설명 `OVER()` 함수는에서 찾을 수 있습니다. [창 기능 섹션](../sql/adobe-defined-functions.md#window-functions). 다음 [Adobe 마케팅 및 상거래 용어 용어집](https://business.adobe.com/glossary/index.html) 사용할 수도 있습니다.
+`OVER()` 함수 내의 매개 변수에 대한 설명은 [window 함수 섹션](../sql/adobe-defined-functions.md#window-functions)에 있습니다. [Adobe 마케팅 및 Commerce 용어 용어집](https://business.adobe.com/glossary/index.html)도 사용할 수 있습니다.
 
-다음 각 사용 사례에 대해 사용자 정의할 템플릿으로 매개 변수가 있는 SQL 쿼리 예제가 제공됩니다. 표시되는 모든 위치에 매개 변수를 제공합니다. `{ }` 평가에 관심이 있는 SQL 예제에서 다음을 수행합니다.
+다음 각 사용 사례에 대해 사용자 정의할 템플릿으로 매개 변수가 있는 SQL 쿼리 예제가 제공됩니다. 평가하려는 SQL 예제에 `{ }`이(가) 표시되는 모든 위치에 매개 변수를 제공합니다.
 
 ## 목표
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 ## 속성 쿼리 매개 변수 {#attribution-query-parameters}
 
-아래 표는 첫 번째 터치 및 마지막 터치 속성 쿼리에 사용되는 매개 변수의 분석 및 설명을 제공합니다.
+아래 표는 첫 번째 터치 및 마지막 터치 속성 쿼리에 사용되는 매개 변수의 분류 및 설명을 제공합니다.
 
 | 매개변수 | 설명 |
 |---|---|
@@ -47,11 +47,11 @@ ht-degree: 1%
 | `{CHANNEL_VALUE}` | 쿼리의 대상 채널인 열 또는 필드입니다. |
 | `{EXP_TIMEOUT}` | 쿼리가 첫 번째 터치 이벤트를 검색하는 채널 이벤트까지 남은 시간(초)입니다. |
 | `{EXP_CONDITION}` | 채널의 만료 지점을 결정하는 조건입니다. |
-| `{EXP_BEFORE}` | 채널이 지정된 조건 전 또는 후에 만료되는지 여부를 나타내는 부울, `{EXP_CONDITION}`, 충족됩니다. 이 기능은 주로 세션의 만료 조건에 대해 활성화되어 이전 세션에서 첫 번째 터치가 선택되지 않도록 합니다. 기본적으로 이 값은 로 설정됩니다. `false`. |
+| `{EXP_BEFORE}` | 지정된 조건 `{EXP_CONDITION}`이(가) 충족되기 전이나 후에 채널이 만료되는지 여부를 나타내는 부울입니다. 이 기능은 주로 세션의 만료 조건에 대해 활성화되어 이전 세션에서 첫 번째 터치가 선택되지 않도록 합니다. 기본적으로 이 값은 `false`(으)로 설정됩니다. |
 
 ## 쿼리 결과 열 구성 요소 {#query-result-column-components}
 
-속성 쿼리에 대한 결과는 다음 중 하나에서 제공됩니다. `first_touch` 또는 `last_touch` 열. 이러한 열은 다음 구성 요소로 구성됩니다.
+속성 쿼리의 결과는 `first_touch` 또는 `last_touch` 열에 제공됩니다. 이러한 열은 다음 구성 요소로 구성됩니다.
 
 ```console
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -59,16 +59,16 @@ ht-degree: 1%
 
 | 매개 변수 | 설명 |
 | ---------- | ----------- |
-| `{NAME}` | 다음 `{CHANNEL_NAME}`: Azure Data Factory(ADF)의 레이블로 입력되었습니다. |
-| `{VALUE}` | 값: 부터 `{CHANNEL_VALUE}` 지정된 내의 마지막 터치입니다. `{EXP_TIMEOUT}` 간격 |
-| `{TIMESTAMP}` | 의 타임스탬프 [!DNL Experience Event] 마지막 터치가 발생한 위치 |
+| `{NAME}` | Azure Data Factory(ADF)에 레이블로 입력한 `{CHANNEL_NAME}`입니다. |
+| `{VALUE}` | 지정된 `{EXP_TIMEOUT}` 간격 내의 마지막 터치인 `{CHANNEL_VALUE}`의 값 |
+| `{TIMESTAMP}` | 마지막 터치가 발생한 [!DNL Experience Event]의 타임스탬프 |
 | `{FRACTION}` | 소수 값으로 표현되는 마지막 터치 속성입니다. |
 
 ### 첫 번째 터치 속성 {#first-touch}
 
 첫 번째 터치 속성은 소비자가 접한 초기 채널에 대한 성공적인 결과에 대한 책임을 100% 승인합니다. 이 SQL 예제는 후속 고객 작업을 유도한 상호 작용을 강조 표시하는 데 사용됩니다.
 
-아래 쿼리는 첫 번째 터치 속성 값과 타겟에 있는 채널의 세부 정보를 반환합니다 [!DNL Experience Event] 데이터 세트. 또한 `struct` 각 행에 대한 첫 번째 터치 값, 타임스탬프 및 속성을 사용하는 선택한 채널의 객체입니다.
+아래 쿼리는 첫 번째 터치 속성 값과 대상 [!DNL Experience Event] 데이터 집합에 있는 채널의 세부 정보를 반환합니다. 또한 각 행에 대해 첫 번째 터치 값, 타임스탬프 및 속성을 사용하여 선택한 채널에 대한 `struct` 개체를 반환합니다.
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ ht-degree: 1%
 ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-잠재적으로 필요한 매개 변수의 전체 목록 및 설명은 [속성 쿼리 매개 변수 섹션](#attribution-query-parameters).
+잠재적으로 필요한 매개 변수의 전체 목록 및 설명은 [속성 쿼리 매개 변수 섹션](#attribution-query-parameters)을 참조하세요.
 
 **예제 쿼리**
 
@@ -98,7 +98,7 @@ LIMIT 10
 
 **결과**
 
-아래 결과에서 초기 추적 코드 `em:946426` 에서 가져옴 [!DNL Experience Event] 데이터 세트. 이 추적 코드는 100%로 분류됩니다. (`1.0`)를 사용하여 고객 작업을 수행할 수 있습니다.
+아래 결과에서는 [!DNL Experience Event] 데이터 집합에서 초기 추적 코드 `em:946426`을(를) 가져옵니다. 이 추적 코드는 첫 번째 상호 작용이었으므로 고객 작업에 대한 100%(`1.0`)의 책임으로 인한 것입니다.
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
@@ -116,13 +116,13 @@ LIMIT 10
 (10 rows)
 ```
 
-에 표시되는 결과 분류 `first_touch` 열을 보려면 [열 구성 요소 섹션](#query-result-column-components).
+`first_touch` 열에 표시된 결과를 분류하려면 [열 구성 요소 섹션](#query-result-column-components)을 참조하세요.
 
 ### 마지막 터치 속성 {#second-touch}
 
 마지막 터치 속성은 소비자가 접한 마지막 채널에 대한 성공적인 결과에 대한 책임을 100% 승인합니다. 이 SQL 예는 일련의 고객 작업에서 최종 상호 작용을 강조 표시하는 데 사용됩니다.
 
-쿼리는 마지막 터치 속성 값과 타겟에 있는 채널의 세부 정보를 반환합니다 [!DNL Experience Event] 데이터 세트. 또한 `struct` 각 행에 대한 마지막 터치 값, 타임스탬프 및 속성이 있는 선택한 채널의 객체입니다.
+쿼리가 마지막 터치 속성 값과 대상 [!DNL Experience Event] 데이터 집합에 있는 채널의 세부 정보를 반환합니다. 또한 각 행에 대한 마지막 터치 값, 타임스탬프 및 속성을 사용하여 선택한 채널에 대한 `struct` 개체를 반환합니다.
 
 **쿼리 구문**
 
@@ -145,7 +145,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 **결과**
 
-아래에 표시된 결과에서 반환된 개체의 추적 코드는 각 개체의 마지막 상호 작용입니다 [!DNL Experience Event] 레코딩. 각 코드는 100% 연결됩니다(`1.0`) 마지막 상호 작용이었으므로 고객의 작업에 대한 책임입니다.
+아래에 표시된 결과에서 반환된 개체의 추적 코드는 각 [!DNL Experience Event] 레코드에서 마지막 상호 작용입니다. 각 코드는 마지막 상호 작용이었으므로 고객의 작업에 대한 100%(`1.0`) 책임에 연결됩니다.
 
 ```console
                  id                |       timestamp       | trackingCode |                   last_touch                   
@@ -163,13 +163,13 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-에 표시되는 결과 분류 `last_touch` 열을 보려면 [열 구성 요소 섹션](#query-result-column-components).
+`last_touch` 열에 표시된 결과를 분류하려면 [열 구성 요소 섹션](#query-result-column-components)을 참조하세요.
 
 ### 만료 조건이 있는 첫 번째 터치 속성 {#first-touch-attribution-with-expiration-condition}
 
-이 쿼리는 의 일부 내에서 일련의 고객 작업으로 이어진 상호 작용을 확인하는 데 사용됩니다. [!DNL Experience Event] 선택한 조건에 따라 데이터 세트가 결정됩니다.
+이 쿼리는 선택 조건에 따라 결정된 [!DNL Experience Event] 데이터 집합의 일부 내에서 일련의 고객 작업을 유도한 상호 작용을 확인하는 데 사용됩니다.
 
-쿼리는 타겟의 단일 채널에 대한 첫 번째 터치 속성 값과 세부 정보를 반환합니다 [!DNL Experience Event] 조건 후 또는 이전에 만료되는 데이터 세트. 또한 `struct` 선택한 채널에 대해 반환되는 각 행에 대한 첫 번째 터치 값, 타임스탬프 및 속성을 가진 객체입니다.
+쿼리는 조건 후 또는 이전에 만료되는 대상 [!DNL Experience Event] 데이터 집합의 단일 채널에 대한 첫 번째 터치 속성 값과 세부 정보를 반환합니다. 또한 선택한 채널에 대해 반환된 각 행에 대해 첫 번째 터치 값, 타임스탬프 및 속성이 있는 `struct` 개체도 반환합니다.
 
 **쿼리 구문**
 
@@ -179,11 +179,11 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-잠재적으로 필요한 매개 변수의 전체 목록 및 설명은 [속성 쿼리 매개 변수 섹션](#attribution-query-parameters).
+잠재적으로 필요한 매개 변수의 전체 목록 및 설명은 [속성 쿼리 매개 변수 섹션](#attribution-query-parameters)을 참조하세요.
 
 **예제 쿼리**
 
-아래 표시된 예에서는 구매가 기록됩니다 (`commerce.purchases.value IS NOT NULL`)를 결과에서 4일(7월 15일, 21일, 23일 및 29일)마다 지정하고, 각 날의 초기 추적 코드는 100%에 연결됩니다(`1.0`) 고객 작업에 대한 책임.
+아래 예에서는 결과에 표시된 4일(7월 15일, 21일, 23일 및 29일) 각각에 구매가 기록(`commerce.purchases.value IS NOT NULL`)되고 각 날의 초기 추적 코드는 고객 작업에 대한 100%(`1.0`) 책임으로 연결됩니다.
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -214,13 +214,13 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-에 표시되는 결과 분류 `first_touch` 열을 보려면 [열 구성 요소 섹션](#query-result-column-components).
+`first_touch` 열에 표시된 결과를 분류하려면 [열 구성 요소 섹션](#query-result-column-components)을 참조하세요.
 
 ### 만료 시간 제한이 있는 첫 번째 터치 속성 {#first-touch-attribution-with-expiration-timeout}
 
 이 쿼리는 선택한 기간 내에서 성공적인 고객 행동을 유도한 상호 작용을 찾는 데 사용됩니다.
 
-아래 쿼리는 타겟의 단일 채널에 대한 첫 번째 터치 속성 값과 세부 정보를 반환합니다 [!DNL Experience Event] 지정된 기간의 데이터 세트입니다. 이 쿼리는 `struct` 선택한 채널에 대해 반환되는 각 행에 대한 첫 번째 터치 값, 타임스탬프 및 속성을 가진 객체입니다.
+아래 쿼리는 지정된 기간 동안 대상 [!DNL Experience Event] 데이터 집합의 단일 채널에 대한 첫 번째 터치 속성 값과 세부 정보를 반환합니다. 쿼리는 선택한 채널에 대해 반환된 각 행에 대해 첫 번째 터치 값, 타임스탬프 및 속성이 포함된 `struct` 개체를 반환합니다.
 
 **쿼리 구문**
 
@@ -230,7 +230,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-잠재적으로 필요한 매개 변수의 전체 목록 및 설명은 [속성 쿼리 매개 변수 섹션](#attribution-query-parameters).
+잠재적으로 필요한 매개 변수의 전체 목록 및 설명은 [속성 쿼리 매개 변수 섹션](#attribution-query-parameters)을 참조하세요.
 
 **예제 쿼리**
 
@@ -265,13 +265,13 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-에 표시되는 결과 분류 `first_touch` 열을 보려면 [열 구성 요소 섹션](#query-result-column-components).
+`first_touch` 열에 표시된 결과를 분류하려면 [열 구성 요소 섹션](#query-result-column-components)을 참조하세요.
 
 ### 만료 조건이 있는 마지막 터치 속성 {#last-touch-attribution-with-expiration-condition}
 
-이 쿼리는 의 일부 내에서 일련의 고객 작업에서 마지막 상호 작용을 찾는 데 사용됩니다 [!DNL Experience Event] 선택한 조건에 따라 데이터 세트가 결정됩니다.
+이 쿼리는 선택 조건에 따라 결정된 [!DNL Experience Event] 데이터 집합의 일부 내에서 일련의 고객 작업에서 마지막 상호 작용을 찾는 데 사용됩니다.
 
-아래 쿼리는 대상의 단일 채널에 대한 마지막 터치 속성 값과 세부 정보를 반환합니다 [!DNL Experience Event] 조건 후 또는 이전에 만료되는 데이터 세트. 이 쿼리는 `struct` 선택한 채널에 대해 반환된 각 행의 마지막 터치 값, 타임스탬프 및 속성을 가진 객체입니다.
+아래 쿼리는 대상 [!DNL Experience Event] 데이터 집합의 단일 채널에 대한 마지막 터치 속성 값과 세부 정보를 반환하며 조건 이후 또는 이전에 만료됩니다. 쿼리는 선택한 채널에 대해 반환된 각 행의 마지막 터치 값, 타임스탬프 및 속성이 포함된 `struct` 개체를 반환합니다.
 
 **쿼리 구문**
 
@@ -281,11 +281,11 @@ ATTRIBUTION_LAST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-잠재적으로 필요한 매개 변수의 전체 목록 및 설명은 [속성 쿼리 매개 변수 섹션](#attribution-query-parameters).
+잠재적으로 필요한 매개 변수의 전체 목록 및 설명은 [속성 쿼리 매개 변수 섹션](#attribution-query-parameters)을 참조하세요.
 
 **예제 쿼리**
 
-아래 표시된 예에서는 구매가 기록됩니다 (`commerce.purchases.value IS NOT NULL`)를 추적의 결과로 나타내는 4일(7월 15일, 21일, 23일 및 29일)에 각각 지정하고, 각 날의 마지막 추적 코드는 100%에 할당됩니다.`1.0`) 고객 작업에 대한 책임.
+아래 예에서는 결과에 표시된 4일(7월 15일, 21일, 23일 및 29일) 각각에 구매가 기록(`commerce.purchases.value IS NOT NULL`)되고 각 날의 마지막 추적 코드는 고객 작업에 대한 100%(`1.0`) 책임으로 연결됩니다.
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -316,11 +316,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-에 표시되는 결과 분류 `last_touch` 열을 보려면 [열 구성 요소 섹션](#query-result-column-components).
+`last_touch` 열에 표시된 결과를 분류하려면 [열 구성 요소 섹션](#query-result-column-components)을 참조하세요.
 
 ### 만료 시간 제한이 있는 마지막 터치 속성 {#last-touch-attribution-with-expiration-timeout}
 
-이 쿼리는 선택한 시간 간격 내에서 마지막 상호 작용을 찾는 데 사용됩니다. 쿼리는 대상의 단일 채널에 대한 마지막 터치 속성 값과 세부 정보를 반환합니다 [!DNL Experience Event] 지정된 기간의 데이터 세트입니다. 이 쿼리는 `struct` 선택한 채널에 대해 반환된 각 행의 마지막 터치 값, 타임스탬프 및 속성을 가진 객체입니다.
+이 쿼리는 선택한 시간 간격 내에서 마지막 상호 작용을 찾는 데 사용됩니다. 쿼리가 지정된 기간 동안 대상 [!DNL Experience Event] 데이터 집합의 단일 채널에 대한 마지막 터치 속성 값과 세부 정보를 반환합니다. 쿼리는 선택한 채널에 대해 반환된 각 행의 마지막 터치 값, 타임스탬프 및 속성이 포함된 `struct` 개체를 반환합니다.
 
 **쿼리 구문**
 
@@ -330,11 +330,11 @@ ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-잠재적으로 필요한 매개 변수의 전체 목록 및 설명은 [속성 쿼리 매개 변수 섹션](#attribution-query-parameters).
+잠재적으로 필요한 매개 변수의 전체 목록 및 설명은 [속성 쿼리 매개 변수 섹션](#attribution-query-parameters)을 참조하세요.
 
 **예제 쿼리**
 
-아래 표시된 예에서 각 고객 작업에 대해 반환되는 마지막 터치는 다음 7일 이내의 최종 상호 작용입니다(`expTimeout = 86400 * 7`).
+아래 표시된 예에서 각 고객 작업에 대해 반환되는 마지막 터치는 다음 7일(`expTimeout = 86400 * 7`) 내의 최종 상호 작용입니다.
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -365,4 +365,4 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-에 표시되는 결과 분류 `last_touch` 열을 보려면 [열 구성 요소 섹션](#query-result-column-components).
+`last_touch` 열에 표시된 결과를 분류하려면 [열 구성 요소 섹션](#query-result-column-components)을 참조하세요.

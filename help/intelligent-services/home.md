@@ -18,7 +18,7 @@ ht-degree: 2%
 >title="인텔리전트 서비스 개요"
 >abstract=""
 
-인텔리전트 서비스는 마케팅 분석가 및 전문가가 고객 경험 사용 사례에서 인공 지능(AI) 및 머신 러닝을 활용할 수 있는 권한을 부여합니다. 이를 통해 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준의 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다. 또한 마케팅 실무자는에서 예측을 활성화할 수 있습니다 [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform], 및 타사 응용 프로그램.
+인텔리전트 서비스는 마케팅 분석가 및 전문가가 고객 경험 사용 사례에서 인공 지능(AI) 및 머신 러닝을 활용할 수 있는 권한을 부여합니다. 이를 통해 마케팅 분석가는 데이터 과학 전문 지식 없이도 비즈니스 수준의 구성을 사용하여 기업의 요구 사항에 맞는 예측을 설정할 수 있습니다. 또한 마케팅 담당자는 [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform] 및 서드파티 애플리케이션에서 예측을 활성화할 수 있습니다.
 
 다음 비디오는 Intelligent Services에 대한 이해를 돕기 위해 설계되었습니다. 이 비디오에서는 예제 비즈니스 사용 사례를 사용하여 높은 수준의 워크플로를 설명하고 Attribution AI 및 고객 AI의 기능에 대해 설명합니다.
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ## 인텔리전트 서비스의 이점
 
-지능형 서비스, 기본 제공 [!DNL Adobe Experience Platform]는 고객 경험을 담당하는 마케터에게 AI-as-a-service에 대한 액세스 권한을 부여하여 누구나 쉽게 고객 행동을 예측하거나, 캠페인의 영향을 측정하거나, 모든 투자에 대한 보다 나은 수익을 보장할 수 있도록 합니다. 다음은 Intelligent Services가 제공하는 몇 가지 이점입니다.
+[!DNL Adobe Experience Platform]에 구축된 Intelligent Services는 고객 경험을 담당하는 마케터에게 AI-as-a-Service에 대한 액세스 권한을 부여하므로 누구나 쉽게 고객 행동을 예측하거나, 캠페인의 영향을 측정하거나, 모든 투자에 대한 보다 나은 수익을 보장할 수 있습니다. 다음은 Intelligent Services가 제공하는 몇 가지 이점입니다.
 
 ### 비용 효율적인 시장 출시 속도
 
@@ -44,7 +44,7 @@ Adobe은 심층적인 CXM 경험과 결합된 AI/ML 전문 지식을 갖추고 �
 
 ### 수집
 
-고객 데이터는에서 XDM(Experience Data Model)으로 수집 및 변환됩니다. [!DNL Adobe Experience Platform]. XDM에 대한 자세한 내용은 [XDM 개요](../xdm/home.md).
+고객 데이터는 [!DNL Adobe Experience Platform]에서 XDM(Experience Data Model)으로 수집 및 변환됩니다. XDM에 대한 자세한 내용은 [XDM 개요](../xdm/home.md)를 참조하세요.
 
 ### 구성
 
@@ -56,8 +56,8 @@ Adobe은 심층적인 CXM 경험과 결합된 AI/ML 전문 지식을 갖추고 �
 
 ### 동작 수행
 
-마지막으로, 통찰력 소비, 애플리케이션 활성화 등 예측을 통해 수행할 작업을 결정할 수 있습니다. [!DNL Adobe Experience Cloud]및 사용자 지정 대시보드 빌드를 참조하십시오.
+마지막으로, 인사이트 소비, [!DNL Adobe Experience Cloud]에서 애플리케이션 활성화, 사용자 지정 대시보드 작성 등 예측을 통해 수행할 작업을 결정할 수 있습니다.
 
 ## 다음 단계
 
-현재 지능형 서비스는 Attribution AI 및 고객 AI를 제공합니다. Attribution AI을 사용하면 마케터가 채널 및 캠페인 전반에서 마케팅 효과를 지능적으로 높일 수 있습니다. Attribution AI에 대해 자세히 알아보려면 [Attribution AI 개요](./attribution-ai/overview.md). 고객 AI를 통해 마케터는 고객 경험을 초 개인화할 수 있습니다. Customer AI에 대한 자세한 내용은 [Customer AI 개요](./customer-ai/overview.md).
+현재 지능형 서비스는 Attribution AI 및 고객 AI를 제공합니다. Attribution AI을 사용하면 마케터가 채널 및 캠페인 전반에서 마케팅 효과를 지능적으로 높일 수 있습니다. Attribution AI에 대해 자세히 알아보려면 [Attribution AI 개요](./attribution-ai/overview.md)를 참조하세요. 고객 AI를 통해 마케터는 고객 경험을 초 개인화할 수 있습니다. Customer AI에 대한 자세한 내용은 [Customer AI 개요](./customer-ai/overview.md)를 참조하십시오.

@@ -14,13 +14,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->여러 스키마 필드 그룹의 이름이 변경되었습니다. 다음에 대한 문서 보기: [필드 그룹 이름 업데이트](../name-updates.md) 추가 정보.
+>여러 스키마 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../name-updates.md)에 대한 문서를 참조하십시오.
 
-[!UICONTROL IdentityMap] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md). 필드 그룹은 네임스페이스로 입력된 사용자 ID 세트가 포함된 단일 맵 필드를 제공합니다.
+[!UICONTROL IdentityMap]은(는) [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md)의 표준 스키마 필드 그룹입니다. 필드 그룹은 네임스페이스로 입력된 사용자 ID 세트가 포함된 단일 맵 필드를 제공합니다.
 
-![의 다이어그램 [!UICONTROL IdentityMap] 스키마 필드 그룹](../../images/field-groups/identitymap.png)
+![[!UICONTROL IdentityMap] 스키마 필드 그룹의 다이어그램](../../images/field-groups/identitymap.png)
 
-에서 ID 맵에 대한 섹션을 참조하십시오. [스키마 컴포지션 기본 사항](../../schema/composition.md#identityMap) 사용 사례의 이점 및 단점 등 사용 사례에 대한 자세한 정보.
+사용 사례의 이점 및 단점 등 자세한 내용은 [스키마 컴포지션 기본 사항](../../schema/composition.md#identityMap)의 ID 맵 섹션을 참조하십시오.
 
 **예**
 
@@ -38,4 +38,4 @@ ht-degree: 0%
 }
 ```
 
-필드 그룹에 대한 자세한 내용은 [전체 스키마](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) 공용 XDM 리포지토리.
+필드 그룹에 대한 자세한 내용은 공개 XDM 저장소의 [전체 스키마](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json)을(를) 참조하십시오.

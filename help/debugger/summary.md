@@ -15,7 +15,7 @@ ht-degree: 85%
 
 # 요약 탭
 
-Adobe Experience Platform Debugger을 실행하려면 브라우저에서 검사할 페이지를 연 다음 아이콘(![](images/start-icon.jpg))을 클릭하여 제품에서 사용할 수 있습니다. 확장 프로그램은 **요약** 탭.
+Adobe Experience Platform Debugger을 실행하려면 브라우저에서 검사할 페이지를 연 다음 브라우저 모음에서 아이콘(![](images/start-icon.jpg))을 선택합니다. 확장은 **요약** 탭에서 열립니다.
 
 ![](images/summary.jpg)
 
@@ -77,11 +77,11 @@ Experience Platform Debugger에는 각 솔루션에 대한 다음 정보가 표�
  <tbody> 
   <tr> 
    <td colname="col1"> <p>이름 </p> </td> 
-   <td colname="col2"> <p>태그의 이름 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> 속성</a> </p> </td> 
+   <td colname="col2"> <p>태그 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> 속성</a>의 이름 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>버전 </p> </td> 
-   <td colname="col2"> <p>Turbine 버전입니다</a> </p> </td> 
+   <td colname="col2"> <p>Turbine</a>의 버전 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>빌드 날짜 </p> </td> 
@@ -89,7 +89,7 @@ Experience Platform Debugger에는 각 솔루션에 대한 다음 정보가 표�
   </tr> 
   <tr> 
    <td colname="col1"> <p>환경 </p> </td> 
-   <td colname="col2"> <p>다음 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ko-KR" format="https" scope="external"> 환경</a> 태그 라이브러리에서 사용됨 </p> </td> 
+   <td colname="col2"> <p>태그 라이브러리에서 사용하는 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ko-KR" format="https" scope="external"> 환경</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>확장 </p> </td> 

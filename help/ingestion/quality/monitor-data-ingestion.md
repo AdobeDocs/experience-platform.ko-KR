@@ -7,13 +7,13 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
 source-wordcount: '649'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
 # 데이터 수집 모니터링
 
-데이터 수집을 사용하면 데이터를 Adobe Experience Platform에 수집할 수 있습니다. 다양한 파일 유형(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 수집이나 데이터를 수집할 수 있는 스트리밍 수집을 사용할 수 있습니다. [!DNL Platform] 실시간으로 스트리밍 엔드포인트 사용.
+데이터 수집을 사용하면 데이터를 Adobe Experience Platform에 수집할 수 있습니다. 다양한 파일 형식(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 수집이나 스트리밍 끝점을 사용하여 실시간으로 [!DNL Platform]에 데이터를 수집할 수 있는 스트리밍 수집을 사용할 수 있습니다.
 
 이 사용 안내서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터를 모니터링하는 방법에 대한 단계를 제공합니다. 이 안내서를 사용하려면 Adobe ID이 있어야 하며 Adobe Experience Platform에 액세스할 수 있어야 합니다.
 
@@ -28,11 +28,11 @@ ht-degree: 3%
 
 >[!TIP]
 >
->특정 날짜의 총 이벤트를 계산하려면 다음 식을 사용합니다. `total events / day = ingestion rate * 60 * 60 * 24`.
+>특정 날짜의 총 이벤트를 계산하려면 `total events / day = ingestion rate * 60 * 60 * 24` 식을 사용합니다.
 
-다음에서 [EXPERIENCE PLATFORM UI](https://platform.adobe.com), 선택 **[!UICONTROL 모니터링]** 왼쪽 탐색 메뉴에서 **[!UICONTROL 전체 스트리밍]**.
+[Experience Platform UI](https://platform.adobe.com)의 왼쪽 탐색 메뉴에서 **[!UICONTROL 모니터링]**&#x200B;을 선택한 다음 **[!UICONTROL 전체 스트리밍]**&#x200B;을 선택합니다.
 
-다음 **[!UICONTROL 전체 스트리밍]** 모니터링 페이지가 나타납니다. 이 작업 영역은에서 수신하는 스트리밍된 이벤트의 비율을 표시하는 그래프를 제공합니다 [!DNL Platform]에 의해 성공적으로 처리된 스트리밍된 이벤트의 비율을 표시하는 그래프 [[!DNL Real-Time Customer Profile]](../../profile/home.md): 수신 데이터의 세부 목록이 표시됩니다.
+**[!UICONTROL 스트리밍 전체]** 모니터링 페이지가 나타납니다. 이 작업 영역에서는 [!DNL Platform]이(가) 받는 스트리밍된 이벤트의 비율을 표시하는 그래프, [[!DNL Real-Time Customer Profile]](../../profile/home.md)이(가) 성공적으로 처리한 스트리밍된 이벤트의 비율을 표시하는 그래프 및 들어오는 데이터의 세부 목록을 제공합니다.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -40,11 +40,11 @@ ht-degree: 3%
 
 ![](../images/quality/monitor-data-flows/events-received.png)
 
-아래 그래프는 성공적으로 처리된 스트리밍된 이벤트의 비율( )을 [!DNL Profile] 지난 7일 동안 이 날짜 범위는 강조 표시된 버튼을 선택하여 다양한 기간을 표시하도록 조정할 수 있습니다.
+아래 그래프는 지난 7일 동안 [!DNL Profile]이(가) 성공적으로 처리한 스트리밍된 이벤트의 비율을 보여 줍니다. 이 날짜 범위는 강조 표시된 버튼을 선택하여 다양한 기간을 표시하도록 조정할 수 있습니다.
 
 >[!NOTE]
 >
->이 그래프에 데이터를 표시하려면 데이터가 다음과 같아야 합니다. **명백하게** 다음에 대해 활성화됨 [!DNL Profile]. 다음에 대한 스트리밍 데이터를 활성화하는 방법을 알아보려면 [!DNL Profile], 다음을 읽습니다 [데이터 세트 사용 안내서](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>이 그래프에 데이터를 표시하려면 데이터가 [!DNL Profile]에 대해 **명시적으로** 활성화되어 있어야 합니다. [!DNL Profile]에 대한 스트리밍 데이터를 사용하도록 설정하는 방법에 대해 알아보려면 [데이터 세트 사용 안내서](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)를 읽어 보십시오.
 
 ![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 
@@ -66,15 +66,15 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->수집된 행에 오류가 있는 경우 이러한 행은 **아님** 결과 메시지로 인해 잘못된 XDM이 발생하지 않는 한 삭제합니다.
+>수집된 행에 오류가 있으면 결과 메시지로 인해 잘못된 XDM이 발생하지 않는 한 이러한 행은 **not**&#x200B;됩니다.
 
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
 
 ## 일괄 처리 전체 데이터 수집 모니터링
 
-다음에서 [[!DNL Experience Platform UI]](https://platform.adobe.com), 선택 **[!UICONTROL 모니터링]** 왼쪽 탐색 메뉴에서 을 클릭합니다.
+[[!DNL Experience Platform UI]](https://platform.adobe.com)의 왼쪽 탐색 메뉴에서 **[!UICONTROL 모니터링]**&#x200B;을 선택합니다.
 
-다음 **[!UICONTROL 엔드투엔드 일괄 처리]** 이전에 수집된 배치 목록이 표시된 모니터링 페이지가 나타납니다. 해당 레코드에 대한 자세한 내용을 보려면 배치를 선택할 수 있습니다.
+이전에 수집된 일괄 처리 목록을 표시하는 **[!UICONTROL 일괄 처리 전체]** 모니터링 페이지가 나타납니다. 해당 레코드에 대한 자세한 내용을 보려면 배치를 선택할 수 있습니다.
 
 ![](../images/quality/monitor-data-flows/batch-monitoring.png)
 
@@ -92,6 +92,6 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->수집된 행에 오류가 있는 경우 이러한 행은 **아님** 결과 메시지로 인해 잘못된 XDM이 발생하지 않는 한 삭제합니다.
+>수집된 행에 오류가 있으면 결과 메시지로 인해 잘못된 XDM이 발생하지 않는 한 이러한 행은 **not**&#x200B;됩니다.
 
 ![](../images/quality/monitor-data-flows/failed-streaming-error.png)

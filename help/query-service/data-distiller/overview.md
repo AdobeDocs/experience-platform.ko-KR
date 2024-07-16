@@ -35,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## 가드레일
 
-다음을 참조하십시오. [쿼리 서비스 보호 기능](../guardrails.md) 라이선스 자격과 관련하여 쿼리 서비스 데이터의 기본 사용 제한에 대한 문서입니다.
+라이선스 자격과 관련하여 쿼리 서비스 데이터의 기본 사용 제한에 대한 [쿼리 서비스 보호](../guardrails.md) 문서를 참조하십시오.
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits

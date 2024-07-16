@@ -4,8 +4,8 @@ description: Adobe Experience Platform의 일반적인 Analytics 태그 확장�
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 77%
+source-wordcount: '399'
+ht-degree: 68%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 일반 Analytics 플러그인 확장 프로그램 구성 및 이 확장 프로그램을 사용하여 [!DNL Adobe Analytics] 확장 프로그램을 늘릴 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -71,4 +71,4 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->위의 플러그인에 대한 자세한 내용은 [Analytics 설명서](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html).
+>위의 플러그인에 대한 자세한 내용은 [Analytics 설명서](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html)를 참조하십시오.

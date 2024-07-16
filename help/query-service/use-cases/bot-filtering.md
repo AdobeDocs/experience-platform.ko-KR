@@ -4,14 +4,14 @@ description: 이 문서에서는 쿼리 서비스 및 머신 러닝을 사용하
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '909'
 ht-degree: 5%
 
 ---
 
-# 에서 보트 필터링 [!DNL Query Service] 머신 러닝 사용
+# 기계 학습을 사용하여 [!DNL Query Service]에서 보트 필터링
 
-봇 활동은 분석 지표에 영향을 미치고 데이터 무결성을 손상시킬 수 있습니다. Adobe Experience Platform [!DNL Query Service] 보트 필터링 프로세스를 통해 데이터 품질을 유지하는 데 사용할 수 있습니다.
+봇 활동은 분석 지표에 영향을 미치고 데이터 무결성을 손상시킬 수 있습니다. Adobe Experience Platform [!DNL Query Service]은(는) 보트 필터링 프로세스를 통해 데이터 품질을 유지하는 데 사용할 수 있습니다.
 
 보트 필터링을 사용하면 웹 사이트와 비인간적인 상호 작용으로 인해 발생하는 데이터 오염을 광범위하게 제거하여 데이터 품질을 유지할 수 있습니다. 이 프로세스는 SQL 쿼리와 머신 러닝을 결합하여 수행됩니다.
 
@@ -23,9 +23,9 @@ ht-degree: 5%
 
 이 프로세스의 일부로 머신 러닝 모델을 교육해야 하므로 이 문서에서는 하나 이상의 머신 러닝 환경에 대한 작업 지식을 가정합니다.
 
-이 예에서는 를 사용합니다. [!DNL Jupyter Notebook] 를 개발 환경으로 사용하십시오. 여러 가지 옵션이 있긴 하지만, [!DNL Jupyter Notebook] 은 계산 요구 사항이 낮은 오픈 소스 웹 애플리케이션이므로 권장됩니다. 다음과 같을 수 있습니다 [공식 사이트에서 다운로드됨](https://jupyter.org/).
+이 예제에서는 [!DNL Jupyter Notebook]을(를) 개발 환경으로 사용합니다. 사용할 수 있는 옵션은 많지만 계산 요구 사항이 낮은 오픈 소스 웹 응용 프로그램이므로 [!DNL Jupyter Notebook]을(를) 사용하는 것이 좋습니다. 공식 사이트에서 [다운로드](https://jupyter.org/)할 수 있습니다.
 
-## 사용 [!DNL Query Service] 보트 활동에 대한 임계값을 정의하려면
+## 보트 활동에 대한 임계값을 정의하려면 [!DNL Query Service]을(를) 사용하십시오.
 
 봇 탐지를 위한 데이터를 추출하는 데 사용되는 두 가지 속성은 다음과 같습니다.
 
@@ -34,7 +34,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->사용 `mcid` 은 아래 예에 표시된 대로 Experience Cloud 방문자 ID에 대한 네임스페이스 참조에서 계속 찾을 수 있습니다.
+>아래 예제에서 볼 수 있듯이 Experience Cloud 방문자 ID에 대한 네임스페이스 참조에서 `mcid`을(를) 사용하고 있습니다.
 
 다음 SQL 문은 보트 활동을 식별하는 초기 예를 제공합니다. 문은 방문자가 1분 내에 50번의 클릭을 수행하면 사용자가 봇이라고 가정합니다.
 
@@ -49,7 +49,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-표현식은 ECID(`mcid`) 임계값을 충족하지만 다른 간격의 트래픽 스파이크를 해결하지 않는 모든 방문자의 수입니다.
+이 식은 임계값을 충족하지만 다른 간격의 트래픽 스파이크를 해결하지는 않는 모든 방문자의 ECID(`mcid`)를 필터링합니다.
 
 ## 머신 러닝을 통해 보트 탐지 기능 향상
 
@@ -57,7 +57,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
 
 예제 문은 클릭 수가 각각 300과 1800인 5분 및 30분 기간을 포함하도록 최대 60번의 클릭으로 1분에서 확장됩니다.
 
-example 문은 각 ECID에 대한 최대 클릭 수를 수집합니다(`mcid`을 참조하십시오. 초기 명령문은 1분(60초), 5분(300초) 및 1시간(즉, 1800초) 기간을 포함하도록 확장되었습니다.
+예제 문은 여러 기간 동안 각 ECID(`mcid`)의 최대 클릭 수를 수집합니다. 초기 명령문은 1분(60초), 5분(300초) 및 1시간(즉, 1800초) 기간을 포함하도록 확장되었습니다.
 
 ```sql
 SELECT table_count_1_min.mcid AS id, 
@@ -116,11 +116,11 @@ FROM   ( ( (SELECT mcid,
 
 ## 머신 러닝을 사용하여 새로운 스파이크 임계값 식별
 
-그런 다음 결과 쿼리 데이터 세트를 CSV 형식으로 내보낸 다음 로 가져옵니다. [!DNL Jupyter Notebook]. 해당 환경에서 현재 머신 러닝 라이브러리를 사용하여 머신 러닝 모델을 교육할 수 있습니다. 자세한 내용은 문제 해결 안내서 를 참조하십시오. [에서 데이터를 내보내는 방법 [!DNL Query Service] CSV 형식으로](../troubleshooting-guide.md#export-csv)
+그런 다음 결과 쿼리 데이터 세트를 CSV 형식으로 내보낸 다음 [!DNL Jupyter Notebook](으)로 가져옵니다. 해당 환경에서 현재 머신 러닝 라이브러리를 사용하여 머신 러닝 모델을 교육할 수 있습니다. [데이터를  [!DNL Query Service] CSV 형식으로 내보내는 방법](../troubleshooting-guide.md#export-csv)에 대한 자세한 내용은 문제 해결 안내서를 참조하십시오
 
-처음에 설정된 애드혹 스파이크 임계값은 데이터 기반이 아니므로 정확도가 떨어집니다. 머신 러닝 모델을 사용하여 매개변수를 임계값으로 교육할 수 있습니다. 따라서 의 수를 줄여 쿼리 효율성을 높일 수 있습니다 `GROUP BY` 불필요한 기능을 제거하여 키워드를 생성합니다.
+처음에 설정된 애드혹 스파이크 임계값은 데이터 기반이 아니므로 정확도가 떨어집니다. 머신 러닝 모델을 사용하여 매개변수를 임계값으로 교육할 수 있습니다. 따라서 불필요한 기능을 제거하여 `GROUP BY` 키워드 수를 줄여 쿼리 효율성을 높일 수 있습니다.
 
-이 예에서는 기본적으로 와 함께 설치되는 Scikit-Learn 머신 러닝 라이브러리를 사용합니다. [!DNL Jupyter Notebook]. &quot;pandas&quot; python 라이브러리도 여기서 사용하기 위해 수입됩니다. 다음 명령이에 입력됩니다. [!DNL Jupyter Notebook].
+이 예제에서는 [!DNL Jupyter Notebook]과(와) 함께 기본적으로 설치된 Scikit-Learn 머신 러닝 라이브러리를 사용합니다. &quot;pandas&quot; python 라이브러리도 여기서 사용하기 위해 수입됩니다. 다음 명령이 [!DNL Jupyter Notebook]에 입력되었습니다.
 
 ```shell
 import pandas as ps
@@ -153,22 +153,22 @@ tree.plot_tree(clf,feature_names=X.columns)
 plt.show()
 ```
 
-다음에서 반환된 값 [!DNL Jupyter Notebook] 이 예제는 다음과 같습니다.
+이 예제의 [!DNL Jupyter Notebook]에서 반환된 값은 다음과 같습니다.
 
 ```text
 Model Accuracy: 0.99935
 ```
 
-![의 통계 출력 [!DNL Jupyter Notebook] 머신 러닝 모델.](../images/use-cases/jupiter-notebook-output.png)
+![기계 학습 모델 [!DNL Jupyter Notebook]의 통계 출력.](../images/use-cases/jupiter-notebook-output.png)
 
 위의 예에 나타난 모형에 대한 결과는 99% 이상 정확하다.
 
-의사 결정 트리 분류기는 의 데이터를 사용하여 트레이닝될 수 있으므로 [!DNL Query Service] 예약된 쿼리를 사용하는 정기적인 케이던스에서는 높은 정확도로 보트 활동을 필터링하여 데이터 무결성을 보장할 수 있습니다. 머신 러닝 모델에서 파생된 매개 변수를 사용하면 모델에서 만든 매우 정확한 매개 변수로 원래 쿼리를 업데이트할 수 있습니다.
+의사 결정 트리 분류자는 예약된 쿼리를 사용하여 정기적으로 [!DNL Query Service]의 데이터를 사용하여 학습할 수 있으므로 높은 정확도로 보트 활동을 필터링하여 데이터 무결성을 보장할 수 있습니다. 머신 러닝 모델에서 파생된 매개 변수를 사용하면 모델에서 만든 매우 정확한 매개 변수로 원래 쿼리를 업데이트할 수 있습니다.
 
 예제 모델은 5분 동안 130개가 넘는 상호 작용을 하는 모든 방문자가 봇이라는 높은 정확도로 결정되었습니다. 이제 이 정보를 사용하여 보트 필터링 SQL 쿼리를 구체화할 수 있습니다.
 
 ## 다음 단계
 
-이 문서를 읽으면 사용 방법을 더 잘 이해할 수 있습니다 [!DNL Query Service] 봇 활동을 결정하고 필터링하는 머신 러닝이 포함됩니다.
+이 문서를 읽으면 [!DNL Query Service] 및 머신 러닝을 사용하여 보트 활동을 결정하고 필터링하는 방법을 더 잘 이해할 수 있습니다.
 
-의 이점을 보여주는 기타 문서 [!DNL Query Service] 조직의 전략적 비즈니스 통찰력은 다음과 같습니다. [중단된 찾아보기 사용 사례](./abandoned-browse.md) 예.
+조직의 전략적 비즈니스 인사이트에 대한 [!DNL Query Service]의 이점을 보여 주는 다른 문서는 [중단된 찾아보기 사용 사례](./abandoned-browse.md) 예입니다.

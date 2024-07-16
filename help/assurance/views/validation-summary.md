@@ -3,8 +3,8 @@ title: 유효성 검사 편집기 보기
 description: 이 안내서에는 Adobe Experience Platform Assurance의 유효성 검사 편집기 보기에 대한 정보가 자세히 나와 있습니다.
 exl-id: 09be531c-8dc3-48b8-814f-b7a06adf1da3
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '527'
+workflow-type: tm+mt
+source-wordcount: '502'
 ht-degree: 100%
 
 ---

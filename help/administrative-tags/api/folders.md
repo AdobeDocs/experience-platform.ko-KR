@@ -2,19 +2,19 @@
 title: 폴더 끝점
 description: Adobe Experience Platform API를 사용하여 폴더를 만들고, 업데이트하고, 관리하고, 삭제하는 방법에 대해 알아봅니다.
 role: Developer
-source-git-commit: 8f9a2b5a2063b76518302eb9de38b628c87416e1
+exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 4%
 
 ---
 
-
 # 폴더 엔드포인트
 
 >[!IMPORTANT]
 >
->이 끝점 세트의 끝점 URL은 `https://experience.adobe.io`.
+>이 끝점 집합의 끝점 URL은 `https://experience.adobe.io`입니다.
 
 폴더는 보다 쉽게 탐색하고 분류할 수 있도록 비즈니스 객체를 보다 효율적으로 구성할 수 있는 기능입니다.
 
@@ -22,11 +22,11 @@ ht-degree: 4%
 
 ## 시작하기
 
-계속하기 전에 다음을 검토하십시오. [시작 안내서](./getting-started.md) 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보입니다.
+계속하기 전에 [시작 안내서](./getting-started.md)에서 필수 헤더와 예제 API 호출을 읽는 방법 등 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
 
 ## 폴더 목록 검색 {#list}
 
-에 GET 요청을 하여 조직에 속한 폴더 목록을 검색할 수 있습니다. `/folder` 끝점 및 폴더 유형 및 상위 폴더 ID 지정.
+`/folder` 끝점에 대한 GET 요청을 만들고 폴더 유형 및 상위 폴더 ID를 지정하여 조직에 속한 폴더 목록을 검색할 수 있습니다.
 
 **API 형식**
 
@@ -36,8 +36,8 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | 폴더 내에 포함된 객체의 유형입니다. 지원되는 값은 다음과 같습니다 `segment` 및 `dataset`. |
-| `{PARENT_FOLDER_ID}` | 폴더 목록을 검색하는 상위 폴더의 ID입니다. 모든 상위 폴더 목록을 보려면 폴더 ID를 사용하십시오 `root`. |
+| `{FOLDER_TYPE}` | 폴더 내에 포함된 객체의 유형입니다. 지원되는 값은 `segment` 및 `dataset`입니다. |
+| `{PARENT_FOLDER_ID}` | 폴더 목록을 검색하는 상위 폴더의 ID입니다. 모든 상위 폴더 목록을 보려면 폴더 ID `root`을(를) 사용하십시오. |
 
 **요청**
 
@@ -113,7 +113,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/root/subfo
 
 ## 새 폴더 만들기 {#create}
 
-에 POST 요청을 하여 새 폴더를 만들 수 있습니다. `/folder` 끝점 및 폴더 유형 지정.
+`/folder` 끝점에 대한 POST 요청을 만들고 폴더 유형을 지정하여 새 폴더를 만들 수 있습니다.
 
 **API 형식**
 
@@ -123,7 +123,7 @@ POST /folder/{FOLDER_TYPE}
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | 폴더 내에 포함된 객체의 유형입니다. 지원되는 값은 다음과 같습니다 `segment` 및 `dataset`. |
+| `{FOLDER_TYPE}` | 폴더 내에 포함된 객체의 유형입니다. 지원되는 값은 `segment` 및 `dataset`입니다. |
 
 **요청**
 
@@ -185,7 +185,7 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folder/dataset
 
 ## 특정 폴더 검색 {#get}
 
-에 GET 요청을 하여 조직에 속한 특정 폴더를 검색할 수 있습니다. `/folder` 끝점 및 폴더 유형 및 폴더의 ID를 지정합니다.
+`/folder` 끝점에 대한 GET 요청을 만들고 폴더 유형 및 폴더의 ID를 지정하여 조직에 속하는 특정 폴더를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -195,7 +195,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | 폴더 내에 포함된 객체의 유형입니다. 지원되는 값은 다음과 같습니다 `segment` 및 `dataset`. |
+| `{FOLDER_TYPE}` | 폴더 내에 포함된 객체의 유형입니다. 지원되는 값은 `segment` 및 `dataset`입니다. |
 | `{FOLDER_ID}` | 검색 중인 폴더의 ID입니다. |
 
 **요청**
@@ -250,13 +250,13 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 | `createdAt` | 폴더가 생성된 시간의 타임스탬프입니다. |
 | `modifiedBy` | 폴더를 마지막으로 업데이트한 사용자의 ID입니다. |
 | `modifiedAt` | 폴더가 마지막으로 업데이트된 시간의 타임스탬프입니다. |
-| `status` | 요청한 폴더의 상태입니다. 지원되는 값: `IN_USE` 및 `ARCHIVED`. |
+| `status` | 요청한 폴더의 상태입니다. 지원되는 값은 `IN_USE` 및 `ARCHIVED`입니다. |
 
 +++
 
 ## 지정된 폴더의 유효성 검사 {#validate}
 
-에 GET 요청을 하여 폴더에 객체가 있을 수 있는지 확인할 수 있습니다. `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` 을 종료하고 폴더 유형과 ID를 모두 제공합니다.
+`/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` 끝점에 대한 GET 요청을 통해 폴더에 개체가 있을 수 있는지 확인하고 폴더 유형과 ID를 모두 제공할 수 있습니다.
 
 **API 형식**
 
@@ -266,7 +266,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | 폴더 내에 포함된 객체의 유형입니다. 지원되는 값은 다음과 같습니다 `segment` 및 `dataset`. |
+| `{FOLDER_TYPE}` | 폴더 내에 포함된 객체의 유형입니다. 지원되는 값은 `segment` 및 `dataset`입니다. |
 | `{FOLDER_ID}` | 확인 중인 폴더의 ID입니다. |
 
 **요청**
@@ -316,7 +316,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 
 ## 특정 폴더 업데이트 {#update}
 
-에 PATCH 요청을 하여 조직에 속한 특정 폴더의 세부 정보를 업데이트할 수 있습니다. `/folder` 끝점 및 폴더 유형 및 폴더의 ID를 지정합니다.
+`/folder` 끝점에 대한 PATCH 요청을 하고 폴더 유형과 폴더 ID를 지정하여 조직에 속한 특정 폴더의 세부 정보를 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -326,7 +326,7 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | 폴더 내에 포함된 객체의 유형입니다. 지원되는 값은 다음과 같습니다 `segment` 및 `dataset`. |
+| `{FOLDER_TYPE}` | 폴더 내에 포함된 객체의 유형입니다. 지원되는 값은 `segment` 및 `dataset`입니다. |
 | `{FOLDER_ID}` | 업데이트 중인 폴더의 ID입니다. |
 
 **요청**
@@ -378,7 +378,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 
 ## 특정 폴더 삭제 {#delete}
 
-에 DELETE 요청을 하여 조직에 속한 특정 폴더를 삭제할 수 있습니다. `/folder` 폴더 유형 및 폴더의 ID를 지정합니다.
+`/folder`에 DELETE 요청을 하고 폴더 유형 및 폴더의 ID를 지정하여 조직에 속한 특정 폴더를 삭제할 수 있습니다.
 
 ***API 형식**
 
@@ -388,7 +388,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | 폴더 내에 포함된 객체의 유형입니다. 지원되는 값은 다음과 같습니다 `segment` 및 `dataset`. |
+| `{FOLDER_TYPE}` | 폴더 내에 포함된 객체의 유형입니다. 지원되는 값은 `segment` 및 `dataset`입니다. |
 | `{FOLDER_ID}` | 삭제 중인 폴더의 ID입니다. |
 
 **요청**

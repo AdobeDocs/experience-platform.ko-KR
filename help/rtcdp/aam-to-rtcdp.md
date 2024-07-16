@@ -23,7 +23,7 @@ Audience Manager에서 Real-Time CDP로의 발전을 고려할 때 지금이 바
 
 Adobe는 세그먼트를 다음과 같이 분류하는 것을 권장합니다.
 
-* 를 통해 Experience Platform에 보낼 수 있는 세그먼트 [[!UICONTROL Audience Manager 소스 커넥터]](/help/sources/connectors/adobe-applications/audience-manager.md), 데이터 종속성이 없고, 대상 또는 활성화와 관련된 문제가 없으며, Real-Time CDP을 통해 세그멘테이션 규칙을 만들 수 있습니다 [세그먼트 빌더](/help/segmentation/ui/segment-builder.md) 나중에.
+* 데이터 종속성이 없고, 대상 또는 Experience Platform에 대한 문제가 없으며, 나중에 Real-Time CDP [Audience Manager 빌더](/help/segmentation/ui/segment-builder.md)를 통해 세그멘테이션 규칙을 만들 수 있으므로 [[!UICONTROL 세그먼트 Source 커넥터]](/help/sources/connectors/adobe-applications/audience-manager.md)를 통해 세그먼트로 보낼 수 있습니다.
 * 지원할 수 있는 규칙이 있지만 Real-Time CDP에서 사용할 수 없는 데이터를 포함할 수 있는 세그먼트.
 * Real-Time CDP에서 만들 수 없고 기능이 없는 세그먼트입니다.
 

@@ -4,8 +4,8 @@ description: Adobe Experience Platform에서 다양한 태그 확장 기능 유�
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 22%
+source-wordcount: '935'
+ht-degree: 18%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 22%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform의 태그 주요 목표 중 하나는 Adobe 외부의 엔지니어가 웹 사이트 및 모바일 애플리케이션에서 추가 기능을 노출할 수 있는 개방형 에코시스템을 구축하는 것입니다. 이 작업은 태그 확장을 통해 수행됩니다. 태그 속성에 확장을 설치하면 해당 확장의 기능을 속성의 모든 사용자가 사용할 수 있게 됩니다.
 
@@ -25,29 +25,29 @@ Adobe Experience Platform의 태그 주요 목표 중 하나는 Adobe 외부의 
 
 ### 매니페스트 파일
 
-매니페스트 파일([`extension.json`](./manifest.md))는 디렉터리의 루트에 있어야 합니다. 이 파일은 확장의 구성과 특정 파일이 디렉터리 내에 있는 위치를 설명합니다. 매니페스트는 다음과 유사하게 작동합니다. [`package.json`](https://docs.npmjs.com/files/package.json) 의 파일 [npm](https://www.npmjs.com/) 프로젝트.
+디렉터리 루트에 매니페스트 파일([`extension.json`](./manifest.md))이 있어야 합니다. 이 파일은 확장의 구성과 특정 파일이 디렉터리 내에 있는 위치를 설명합니다. 매니페스트는 [npm](https://www.npmjs.com/) 프로젝트의 [`package.json`](https://docs.npmjs.com/files/package.json) 파일과 유사하게 작동합니다.
 
 ### 라이브러리 모듈
 
-라이브러리 모듈은 서로 다른 [구성 요소](#components) 확장이 제공하는 논리(즉, 태그 런타임 라이브러리 내에서 내보내는 논리)입니다. 각 라이브러리 모듈 파일의 내용은 [CommonJS 모듈 표준](https://nodejs.org/api/modules.html#modules-commonjs-modules).
+라이브러리 모듈은 확장에서 제공하는 다양한 [구성 요소](#components)를 설명하는 파일입니다(즉, 태그 런타임 라이브러리 내에서 내보내는 논리). 각 라이브러리 모듈 파일의 내용은 [CommonJS 모듈 표준](https://nodejs.org/api/modules.html#modules-commonjs-modules)을 따라야 합니다.
 
-예를 들어 &quot;비콘 보내기&quot;라는 작업 유형을 작성하는 경우, 비콘을 보내는 논리를 포함하는 파일이 있어야 합니다. JavaScript를 사용하는 경우 파일을 호출할 수 있습니다. `sendBeacon.js`. 이 파일의 내용은 태그 런타임 라이브러리 내에서 내보내집니다.
+예를 들어 &quot;비콘 보내기&quot;라는 작업 유형을 작성하는 경우, 비콘을 보내는 논리를 포함하는 파일이 있어야 합니다. JavaScript을 사용하는 경우 파일을 `sendBeacon.js`(으)로 호출할 수 있습니다. 이 파일의 내용은 태그 런타임 라이브러리 내에서 내보내집니다.
 
-라이브러리 모듈 파일이에 위치를 설명한다면 확장 디렉토리 내의 원하는 위치에 배치할 수 있습니다. `extension.json`.
+`extension.json`에 라이브러리 모듈 파일이 있는 위치를 설명하면 확장 디렉터리의 원하는 위치에 라이브러리 모듈 파일을 넣을 수 있습니다.
 
 ### 보기 횟수
 
-보기는 로 로드할 수 있는 HTML 파일입니다. [`iframe` 요소](https://developer.mozilla.org/ko-KR/docs/Web/HTML/Element/iframe) 특히 Platform UI 및 데이터 수집 UI를 통해 태그 애플리케이션 내에서. 보기에는 확장에서 제공하는 스크립트가 포함되어야 하며, 애플리케이션과 통신하기 위해 작은 API를 따라야 합니다.
+보기는 특히 Platform UI 및 데이터 수집 UI를 통해 태그 응용 프로그램 내의 [`iframe` 요소](https://developer.mozilla.org/ko-KR/docs/Web/HTML/Element/iframe)에 로드할 수 있는 HTML 파일입니다. 보기에는 확장에서 제공하는 스크립트가 포함되어야 하며, 애플리케이션과 통신하기 위해 작은 API를 따라야 합니다.
 
-확장에 대해 가장 중요한 보기 파일은 해당 구성입니다. 의 섹션을 참조하십시오. [확장 구성](#configuration) 추가 정보.
+확장에 대해 가장 중요한 보기 파일은 해당 구성입니다. 자세한 내용은 [확장 구성](#configuration)의 섹션을 참조하십시오.
 
 보기 내에서 사용되는 라이브러리에 대해서는 제한이 없습니다. 즉, jQuery, Underscore, React, Angular, Bootstrap 또는 기타 항목을 사용할 수 있습니다. 그러나 확장이 UI와 유사한 모양과 느낌을 갖도록 하는 것이 좋습니다.
 
-모든 보기 관련 파일(HTML, CSS, JavaScript)을 라이브러리 모듈 파일과 분리된 단일 하위 디렉터리에 배치하는 것이 좋습니다. 위치 `extension.json`, 이 보기의 하위 디렉터리가 있는 위치를 설명할 수 있습니다. 그런 다음 Platform은 웹 서버에서 이 하위 디렉터리(및 이 하위 디렉터리만)를 처리합니다.
+모든 보기 관련 파일(HTML, CSS, JavaScript)을 라이브러리 모듈 파일과 분리된 단일 하위 디렉터리에 배치하는 것이 좋습니다. `extension.json`에서 이 보기의 하위 디렉터리 위치를 설명할 수 있습니다. 그런 다음 Platform은 웹 서버에서 이 하위 디렉터리(및 이 하위 디렉터리만)를 처리합니다.
 
 ## 라이브러리 구성 요소 {#components}
 
-각 확장은 기능 세트를 정의합니다. 이러한 기능은에 포함되어 구현됩니다 [라이브러리](../ui/publishing/libraries.md) 웹 사이트 또는 앱에 배포됩니다. 라이브러리는 조건, 작업, 데이터 요소 등을 포함한 개별 구성 요소의 컬렉션입니다. 각 라이브러리 구성 요소는 태그 런타임 내에서 내보내는 재사용 가능한 코드 조각(확장에서 제공)입니다.
+각 확장은 기능 세트를 정의합니다. 이러한 기능은 웹 사이트 또는 앱에 배포된 [라이브러리](../ui/publishing/libraries.md)에 포함되어 구현됩니다. 라이브러리는 조건, 작업, 데이터 요소 등을 포함한 개별 구성 요소의 컬렉션입니다. 각 라이브러리 구성 요소는 태그 런타임 내에서 내보내는 재사용 가능한 코드 조각(확장에서 제공)입니다.
 
 웹 확장을 개발하는지 또는 Edge 확장을 개발하는지에 따라 사용 가능한 구성 요소 유형과 사용 사례가 달라집니다. 각 확장 유형에 사용할 수 있는 구성 요소에 대한 개요는 아래 하위 섹션을 참조하십시오.
 
@@ -55,7 +55,7 @@ Adobe Experience Platform의 태그 주요 목표 중 하나는 Adobe 외부의 
 
 웹 확장에서 규칙은 이벤트를 통해 트리거되며 지정된 조건 세트가 충족될 경우 특정 작업을 실행할 수 있습니다. 자세한 내용은 [웹 확장의 모듈 흐름](./web/flow.md)에 대한 개요를 참조하십시오.
 
-이외에도 [핵심 모듈](./web/core.md) Adobe에서 제공하는 웹 확장에서 다음 라이브러리 구성 요소를 정의할 수 있습니다.
+Adobe에서 제공하는 [코어 모듈](./web/core.md) 외에도 웹 확장에서 다음 라이브러리 구성 요소를 정의할 수 있습니다.
 
 * [이벤트](./web/event-types.md)
 * [조건](./web/condition-types.md)
@@ -65,11 +65,11 @@ Adobe Experience Platform의 태그 주요 목표 중 하나는 Adobe 외부의 
 
 >[!NOTE]
 >
->웹 확장에서 라이브러리 구성 요소를 구현하는 데 필요한 형식에 대한 자세한 내용은 [모듈 형식 개요](./web/format.md).
+>웹 확장에서 라이브러리 구성 요소를 구현하는 데 필요한 형식에 대한 자세한 내용은 [모듈 형식 개요](./web/format.md)를 참조하십시오.
 
 ### Edge 확장의 구성 요소 {#edge}
 
-Edge 확장에서 규칙은 조건 검사를 통해 트리거되며 이러한 검사에 통과할 경우 특정 작업을 실행합니다. 다음에서 개요 보기: [에지 확장 흐름](./edge/flow.md) 추가 정보.
+Edge 확장에서 규칙은 조건 검사를 통해 트리거되며 이러한 검사에 통과할 경우 특정 작업을 실행합니다. 자세한 내용은 [Edge 확장 흐름](./edge/flow.md)에 대한 개요를 참조하십시오.
 
 Edge 확장에서 다음 라이브러리 구성 요소를 정의할 수 있습니다.
 
@@ -89,8 +89,8 @@ Edge 확장에서 다음 라이브러리 구성 요소를 정의할 수 있습�
 
 사용자가 UI의 속성에 확장을 설치하면 확장 구성 보기가 표시되며, 설치를 완료하려면 확장을 완료해야 합니다.
 
-자세한 내용은 의 안내서를 참조하십시오. [확장 구성](./configuration.md).
+자세한 내용은 [확장 구성](./configuration.md)에 대한 안내서를 참조하세요.
 
 ## 확장 제출
 
-확장 빌드를 완료하면 제출하여 Platform의 확장 카탈로그에 나열할 수 있습니다. 다음을 참조하십시오. [확장 제출 프로세스 개요](./submit/overview.md) 추가 정보.
+확장 빌드를 완료하면 제출하여 Platform의 확장 카탈로그에 나열할 수 있습니다. 자세한 내용은 [확장 제출 프로세스 개요](./submit/overview.md)를 참조하십시오.

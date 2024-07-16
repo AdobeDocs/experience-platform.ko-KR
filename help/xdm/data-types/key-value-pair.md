@@ -9,9 +9,9 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL 키 값 쌍] 데이터 유형
+# [!UICONTROL 키 값 쌍] 데이터 형식
 
-[!UICONTROL 키 값 쌍] 는 일반 키-값 쌍의 세부 사항을 캡처하는 표준 경험 데이터 모델(XDM) 데이터 유형입니다. 이 데이터 형식은 [[!UICONTROL Adobe Analytics ExperienceEvent 전체 확장] 필드 그룹](../field-groups/event/analytics-full-extension.md) 목록 변수의 배열 항목을 설명합니다.
+[!UICONTROL 키 값 쌍]은(는) 일반 키-값 쌍의 세부 정보를 캡처하는 표준 경험 데이터 모델(XDM) 데이터 형식입니다. 이 데이터 형식은 [[!UICONTROL Adobe Analytics ExperienceEvent 전체 확장] 필드 그룹](../field-groups/event/analytics-full-extension.md)에서 목록 변수의 배열 항목을 설명하는 데 사용됩니다.
 
 ![키 값 쌍 구조](../images/data-types/key-value-pair.png)
 
@@ -22,4 +22,4 @@ ht-degree: 5%
 
 {style="table-layout:auto"}
 
-데이터 유형에 대한 자세한 내용은 [공용 XDM 저장소](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/keyvalue.schema.json).
+데이터 형식에 대한 자세한 내용은 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/keyvalue.schema.json)를 참조하세요.

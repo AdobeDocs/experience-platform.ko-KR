@@ -20,15 +20,15 @@ ht-degree: 4%
 
 역할은 관리자, 전문가 또는 최종 사용자가 조직의 리소스에 액세스할 수 있는 권한을 정의합니다. 역할 기반 액세스 제어 환경에서 사용자 액세스 프로비저닝은 일반적인 책임과 요구 사항을 통해 그룹화됩니다. 역할에는 주어진 권한 집합이 있으며 조직의 멤버들은 필요한 보기 또는 쓰기 액세스 범위에 따라 하나 이상의 역할에 할당될 수 있습니다.
 
-다음 `/roles` 속성 기반 액세스 제어 API의 끝점을 사용하면 조직의 역할을 프로그래밍 방식으로 관리할 수 있습니다.
+특성 기반 액세스 제어 API의 `/roles` 끝점을 사용하면 조직에서 프로그래밍 방식으로 역할을 관리할 수 있습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 API 끝점은 특성 기반 액세스 제어 API의 일부입니다. 계속하기 전에 다음을 검토하십시오. [시작 안내서](./getting-started.md) 관련 설명서에 대한 링크, 이 문서의 샘플 API 호출 읽기에 대한 안내서 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보입니다.
+이 안내서에 사용된 API 끝점은 특성 기반 액세스 제어 API의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
 ## 역할 목록 검색 {#list}
 
-에 GET 요청을 하여 조직에 속한 기존 역할을 모두 나열할 수 있습니다. `/roles` 엔드포인트.
+`/roles` 끝점에 대한 GET 요청을 통해 조직에 속한 기존 역할을 모두 나열할 수 있습니다.
 
 **API 형식**
 
@@ -105,7 +105,7 @@ curl -X GET \
 | `id` | 역할에 해당하는 ID입니다. 이 ID는 자동으로 생성됩니다. |
 | `name` | 역할의 이름입니다. |
 | `description` | description 속성은 역할에 대한 추가 정보를 제공합니다. |
-| `roleType` | 역할의 지정된 유형입니다. 역할 유형에 사용할 수 있는 값은 다음과 같습니다. `user-defined` 및 `system-defined`. |
+| `roleType` | 역할의 지정된 유형입니다. 역할 유형에 사용할 수 있는 값은 `user-defined` 및 `system-defined`입니다. |
 | `permissionSets` | 권한 집합은 관리자가 역할에 적용할 수 있는 권한 그룹을 나타냅니다. 관리자는 개별 권한을 할당하는 대신 역할에 권한 집합을 할당할 수 있습니다. 이를 통해 권한 그룹을 포함하는 사전 정의된 역할에서 사용자 정의 역할을 만들 수 있습니다. |
 | `sandboxes` | 이 속성은 특정 역할에 대해 프로비저닝된 조직 내의 샌드박스를 표시합니다. |
 | `subjectAttributes` | 주체와 주체가 액세스할 수 있는 Platform 리소스 간의 상관 관계를 나타내는 특성입니다. |
@@ -113,7 +113,7 @@ curl -X GET \
 
 ## 역할 조회 {#lookup}
 
-해당하는 역할을 포함하는 GET 요청을 만들어 개별 역할을 조회할 수 있습니다 `roleId` 요청 경로에서.
+요청 경로에 해당 `roleId`을(를) 포함하는 GET 요청을 만들어 개별 역할을 조회할 수 있습니다.
 
 **API 형식**
 
@@ -127,7 +127,7 @@ GET /roles/{ROLE_ID}
 
 **요청**
 
-다음 요청은 다음에 대한 정보를 검색합니다. `{ROLE_ID}`.
+다음 요청은 `{ROLE_ID}`에 대한 정보를 검색합니다.
 
 ```shell
 curl -X GET \
@@ -172,7 +172,7 @@ curl -X GET \
 | `id` | 역할에 해당하는 ID입니다. 이 ID는 자동으로 생성됩니다. |
 | `name` | 역할의 이름입니다. |
 | `description` | description 속성은 역할에 대한 추가 정보를 제공합니다. |
-| `roleType` | 역할의 지정된 유형입니다. 역할 유형에 사용할 수 있는 값은 다음과 같습니다. `user-defined` 및 `system-defined`. |
+| `roleType` | 역할의 지정된 유형입니다. 역할 유형에 사용할 수 있는 값은 `user-defined` 및 `system-defined`입니다. |
 | `permissionSets` | 권한 집합은 관리자가 역할에 적용할 수 있는 권한 그룹을 나타냅니다. 관리자는 개별 권한을 할당하는 대신 역할에 권한 집합을 할당할 수 있습니다. 이를 통해 권한 그룹을 포함하는 사전 정의된 역할에서 사용자 정의 역할을 만들 수 있습니다. |
 | `sandboxes` | 이 속성은 특정 역할에 대해 프로비저닝된 조직 내의 샌드박스를 표시합니다. |
 | `subjectAttributes` | 주체와 주체가 액세스할 수 있는 Platform 리소스 간의 상관 관계를 나타내는 특성입니다. |
@@ -180,7 +180,7 @@ curl -X GET \
 
 ## 역할 ID로 주제 조회
 
-에 GET 요청을 하여 제목을 검색할 수도 있습니다. `/roles` 를 제공하는 동안 엔드포인트 {ROLE_ID}.
+{ROLE_ID}을(를) 제공하는 동안 `/roles` 끝점에 대한 GET 요청을 만들어 주제를 검색할 수도 있습니다.
 
 **API 형식**
 
@@ -194,7 +194,7 @@ GET /roles/{ROLE_ID}/subjects
 
 **요청**
 
-다음 요청은 과 연관된 주제를 검색합니다. `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
+다음 요청은 `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`과(와) 연결된 주제를 검색합니다.
 
 ```shell
 curl -X GET \
@@ -256,7 +256,7 @@ curl -X GET \
 
 ## 역할 만들기 {#create}
 
-새 역할을 만들려면 POST 요청을에 `/roles` 역할의 이름, 설명 및 역할 유형에 대한 값을 제공하는 동안 끝점이 발생했습니다.
+새 역할을 만들려면 역할의 이름, 설명 및 역할 유형에 대한 값을 제공하면서 `/roles` 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -283,7 +283,7 @@ curl -X POST \
 | --- | --- |
 | `name` | 역할의 이름입니다. 이 기능을 사용하여 역할에 대한 정보를 조회할 수 있으므로 역할 이름이 설명적인지 확인하십시오. |
 | `description` | (선택 사항) 역할에 대한 자세한 정보를 제공하기 위해 포함할 수 있는 설명 값입니다. |
-| `roleType` | 역할의 지정된 유형입니다. 역할 유형에 사용할 수 있는 값은 다음과 같습니다. `user-defined` 및 `system-defined`. |
+| `roleType` | 역할의 지정된 유형입니다. 역할 유형에 사용할 수 있는 값은 `user-defined` 및 `system-defined`입니다. |
 
 **응답**
 
@@ -320,7 +320,7 @@ curl -X POST \
 | `id` | 역할에 해당하는 ID입니다. 이 ID는 자동으로 생성됩니다. |
 | `name` | 역할의 이름입니다. |
 | `description` | description 속성은 역할에 대한 추가 정보를 제공합니다. |
-| `roleType` | 역할의 지정된 유형입니다. 역할 유형에 사용할 수 있는 값은 다음과 같습니다. `user-defined` 및 `system-defined`. |
+| `roleType` | 역할의 지정된 유형입니다. 역할 유형에 사용할 수 있는 값은 `user-defined` 및 `system-defined`입니다. |
 | `permissionSets` | 권한 집합은 관리자가 역할에 적용할 수 있는 권한 그룹을 나타냅니다. 관리자는 개별 권한을 할당하는 대신 역할에 권한 집합을 할당할 수 있습니다. 이를 통해 권한 그룹을 포함하는 사전 정의된 역할에서 사용자 정의 역할을 만들 수 있습니다. |
 | `sandboxes` | 이 속성은 특정 역할에 대해 프로비저닝된 조직 내의 샌드박스를 표시합니다. |
 | `subjectAttributes` | 주체와 주체가 액세스할 수 있는 Platform 리소스 간의 상관 관계를 나타내는 특성입니다. |
@@ -328,7 +328,7 @@ curl -X POST \
 
 ## 역할 업데이트 {#patch}
 
-에 PATCH 요청을 하여 역할의 속성을 업데이트할 수 있습니다. `/roles` 적용할 작업에 해당 역할 ID 및 값을 제공하는 동안 끝점이 발생했습니다.
+적용할 작업에 해당 역할 ID와 값을 제공하는 동안 `/roles` 끝점에 PATCH 요청을 수행하여 역할의 속성을 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -361,7 +361,7 @@ curl -X PATCH \
 
 | 작업 | 설명 |
 | --- | --- |
-| `op` | 역할을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 다음이 포함됩니다. `add`, `replace`, 및 `remove`. |
+| `op` | 역할을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 `add`, `replace` 및 `remove`이(가) 포함됩니다. |
 | `path` | 업데이트할 매개 변수의 경로입니다. |
 | `value` | 매개 변수를 업데이트할 새 값입니다. |
 
@@ -400,7 +400,7 @@ curl -X PATCH \
 | `id` | 역할에 해당하는 ID입니다. 이 ID는 자동으로 생성됩니다. |
 | `name` | 역할의 이름입니다. |
 | `description` | description 속성은 역할에 대한 추가 정보를 제공합니다. |
-| `roleType` | 역할의 지정된 유형입니다. 역할 유형에 사용할 수 있는 값은 다음과 같습니다. `user-defined` 및 `system-defined`. |
+| `roleType` | 역할의 지정된 유형입니다. 역할 유형에 사용할 수 있는 값은 `user-defined` 및 `system-defined`입니다. |
 | `permissionSets` | 권한 집합은 관리자가 역할에 적용할 수 있는 권한 그룹을 나타냅니다. 관리자는 개별 권한을 할당하는 대신 역할에 권한 집합을 할당할 수 있습니다. 이를 통해 권한 그룹을 포함하는 사전 정의된 역할에서 사용자 정의 역할을 만들 수 있습니다. |
 | `sandboxes` | 이 속성은 특정 역할에 대해 프로비저닝된 조직 내의 샌드박스를 표시합니다. |
 | `subjectAttributes` | 주체와 주체가 액세스할 수 있는 Platform 리소스 간의 상관 관계를 나타내는 특성입니다. |
@@ -408,7 +408,7 @@ curl -X PATCH \
 
 ## 역할 ID로 역할 업데이트 {#put}
 
-에 PUT 요청을 하여 역할을 업데이트할 수 있습니다. `/roles` 끝점을 지정하고 업데이트할 역할에 해당하는 역할 ID를 지정합니다.
+`/roles` 끝점에 대한 PUT 요청을 만들고 업데이트할 역할에 해당하는 역할 ID를 지정하여 역할을 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -418,7 +418,7 @@ PUT /roles/{ROLE_ID}
 
 **요청**
 
-다음 요청은 역할 ID에 대한 이름, 설명 및 역할 유형을 업데이트합니다. `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
+다음 요청은 역할 ID의 이름, 설명 및 역할 유형을 업데이트합니다. `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
 
 ```shell
 curl -X PUT \
@@ -437,7 +437,7 @@ curl -X PUT \
 | --- | --- |
 | `name` | 업데이트된 역할 이름. |
 | `description` | 역할에 대한 업데이트된 설명. |
-| `roleType` | 역할의 지정된 유형입니다. 역할 유형에 사용할 수 있는 값은 다음과 같습니다. `user-defined` 및 `system-defined`. |
+| `roleType` | 역할의 지정된 유형입니다. 역할 유형에 사용할 수 있는 값은 `user-defined` 및 `system-defined`입니다. |
 
 **응답**
 
@@ -474,7 +474,7 @@ curl -X PUT \
 | `id` | 역할에 해당하는 ID입니다. 이 ID는 자동으로 생성됩니다. |
 | `name` | 역할의 이름입니다. |
 | `description` | description 속성은 역할에 대한 추가 정보를 제공합니다. |
-| `roleType` | 역할의 지정된 유형입니다. 역할 유형에 사용할 수 있는 값은 다음과 같습니다. `user-defined` 및 `system-defined`. |
+| `roleType` | 역할의 지정된 유형입니다. 역할 유형에 사용할 수 있는 값은 `user-defined` 및 `system-defined`입니다. |
 | `permissionSets` | 권한 집합은 관리자가 역할에 적용할 수 있는 권한 그룹을 나타냅니다. 관리자는 개별 권한을 할당하는 대신 역할에 권한 집합을 할당할 수 있습니다. 이를 통해 권한 그룹을 포함하는 사전 정의된 역할에서 사용자 정의 역할을 만들 수 있습니다. |
 | `sandboxes` | 이 속성은 특정 역할에 대해 프로비저닝된 조직 내의 샌드박스를 표시합니다. |
 | `subjectAttributes` | 주체와 주체가 액세스할 수 있는 Platform 리소스 간의 상관 관계를 나타내는 특성입니다. |
@@ -482,7 +482,7 @@ curl -X PUT \
 
 ## 역할 ID로 제목 업데이트
 
-역할과 연결된 주제를 업데이트하려면 PATCH에 `/roles` 업데이트할 주체의 역할 ID를 제공하는 동안 끝점이 발생했습니다.
+역할과 연결된 주체를 업데이트하려면 업데이트할 주체의 역할 ID를 제공하는 동안 `/roles` 끝점에 대한 PATCH 요청을 만듭니다.
 
 **API 형식**
 
@@ -496,7 +496,7 @@ PATCH /roles/{ROLE_ID}/subjects
 
 **요청**
 
-다음 요청은 과 연관된 주제를 업데이트합니다. `{ROLE_ID}`.
+다음 요청은 `{ROLE_ID}`과(와) 관련된 주제를 업데이트합니다.
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
@@ -515,7 +515,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 | 작업 | 설명 |
 | --- | --- |
-| `op` | 역할을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 다음이 포함됩니다. `add`, `replace`, 및 `remove`. |
+| `op` | 역할을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 `add`, `replace` 및 `remove`이(가) 포함됩니다. |
 | `path` | 업데이트할 매개 변수의 경로입니다. |
 | `value` | 매개 변수를 업데이트할 새 값입니다. |
 
@@ -552,7 +552,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 ## 역할 삭제 {#delete}
 
-역할을 삭제하려면 다음에 대한 DELETE 요청을 `/roles` 삭제할 역할의 ID를 지정하는 동안 끝점이 발생했습니다.
+역할을 삭제하려면 삭제할 역할의 ID를 지정하는 동안 `/roles` 끝점에 대한 DELETE 요청을 만듭니다.
 
 **API 형식**
 
@@ -566,7 +566,7 @@ DELETE /roles/{ROLE_ID}
 
 **요청**
 
-다음 요청은 ID가 인 역할을 삭제합니다. `{ROLE_ID}`.
+다음 요청은 ID가 `{ROLE_ID}`인 역할을 삭제합니다.
 
 ```shell
 curl -X DELETE \
@@ -584,7 +584,7 @@ curl -X DELETE \
 
 ## API 자격 증명 추가 {#apicredential}
 
-API 자격 증명을 추가하려면 PATCH 요청을에 `/roles` 주체의 역할 ID를 제공하는 동안 끝점이 발생했습니다.
+API 자격 증명을 추가하려면 주체의 역할 ID를 제공하는 동안 `/roles` 끝점에 PATCH 요청을 만듭니다.
 
 **API 형식**
 
@@ -605,7 +605,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 | 작업 | 설명 |
 | --- | --- |
-| `op` | 역할을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 다음이 포함됩니다. `add`, `replace`, 및 `remove`. |
+| `op` | 역할을 업데이트하는 데 필요한 작업을 정의하는 데 사용되는 작업 호출입니다. 작업에는 `add`, `replace` 및 `remove`이(가) 포함됩니다. |
 | `path` | 추가할 매개 변수의 경로입니다. |
 | `value` | 매개 변수를 추가할 값입니다. |
 

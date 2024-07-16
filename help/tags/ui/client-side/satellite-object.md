@@ -5,7 +5,7 @@ exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 source-git-commit: 309f3cce82c5d6c7f10c08b05da6d9c6c44631b6
 workflow-type: tm+mt
 source-wordcount: '1290'
-ht-degree: 40%
+ht-degree: 38%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 40%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
-이 문서는 클라이언트측의 참조 역할을 합니다 `_satellite` 개체와 이 개체로 수행할 수 있는 다양한 기능.
+이 문서는 클라이언트측 `_satellite` 개체 및 이 개체를 사용하여 수행할 수 있는 다양한 기능에 대한 참조 역할을 합니다.
 
 ## `track`
 
@@ -31,7 +31,7 @@ _satellite.track(identifier: string [, detail: *] )
 _satellite.track('contact_submit', { name: 'John Doe' });
 ```
 
-`track` 코어 태그 확장의 지정된 식별자로 구성된 직접 호출 이벤트 유형을 사용하여 모든 규칙을 실행합니다. 위의 예에서는 구성된 식별자가 `contact_submit`인 Direct Call 이벤트 유형을 사용하여 모든 규칙을 트리거합니다. 관련 정보가 들어 있는 선택적 개체도 전달됩니다. 세부 개체는 조건 또는 작업의 텍스트 필드 내에 `%event.detail%`을 입력하거나, 사용자 지정 코드 조건 또는 작업에서 코드 편집기 내에 `event.detail`을 입력하여 액세스할 수 있습니다.
+`track`은(는) 코어 태그 확장의 지정된 식별자로 구성된 Direct Call 이벤트 유형을 사용하여 모든 규칙을 실행합니다. 위의 예에서는 구성된 식별자가 `contact_submit`인 Direct Call 이벤트 유형을 사용하여 모든 규칙을 트리거합니다. 관련 정보가 들어 있는 선택적 개체도 전달됩니다. 세부 개체는 조건 또는 작업의 텍스트 필드 내에 `%event.detail%`을 입력하거나, 사용자 지정 코드 조건 또는 작업에서 코드 편집기 내에 `event.detail`을 입력하여 액세스할 수 있습니다.
 
 ## `getVar`
 
@@ -51,9 +51,9 @@ var product = _satellite.getVar('product');
 
 >[!NOTE]
 >
->백분율(`%`) 태그 구현의 많은 양식 필드에 대한 변수를 참조하는 구문으로 호출의 필요성을 줄였습니다. `_satellite.getVar()`. 예를 들어 `%product%` 는 제품 데이터 요소 또는 사용자 지정 변수의 값에 액세스합니다.
+>백분율(`%`) 구문을 사용하여 태그 구현의 여러 양식 필드에 대한 변수를 참조할 수 있으므로 `_satellite.getVar()`을(를) 호출할 필요가 줄어듭니다. 예를 들어 `%product%`을(를) 사용하면 제품 데이터 요소 또는 사용자 지정 변수의 값에 액세스합니다.
 
-이벤트가 규칙을 트리거할 때 해당 규칙의 를 전달할 수 있습니다 `event` 에 오브젝트 추가 `_satellite.getVar()` 다음과 같이:
+이벤트가 규칙을 트리거할 때 다음과 같이 규칙의 해당 `event` 개체를 `_satellite.getVar()`에 전달할 수 있습니다.
 
 ```javascript
 // event refers to the calling rule's event
@@ -64,7 +64,7 @@ var rule = _satellite.getVar('return event rule', event);
 
 >[!NOTE]
 >
->다음 `setVar` 코드는 태그에 지정된 데이터 요소와 완전히 별개입니다.
+>`setVar` 코드는 Tags에 지정된 데이터 요소와 완전히 별개입니다.
 
 **코드**
 
@@ -78,7 +78,7 @@ _satellite.setVar(name: string, value: *)
 _satellite.setVar('product', 'Circuit Pro');
 ```
 
-`setVar()` 지정된 이름과 값으로 사용자 지정 변수를 설정합니다. 변수 값은 나중에 `_satellite.getVar()`를 사용하여 액세스할 수 있습니다.
+`setVar()`이(가) 지정된 이름과 값으로 사용자 지정 변수를 설정합니다. 변수 값은 나중에 `_satellite.getVar()`를 사용하여 액세스할 수 있습니다.
 
 키가 변수 이름이고 값이 해당 변수 값인 개체를 전달하여 한 번에 여러 변수를 선택적으로 설정할 수 있습니다.
 
@@ -128,7 +128,7 @@ _satellite.logger.error(message: string)
 _satellite.logger.error('No product ID found.');
 ```
 
-다음 `logger` 개체를 사용하면 브라우저 콘솔에 메시지를 기록할 수 있습니다. 이 메시지는 사용자가 태그 디버깅을 활성화한 경우( 를 호출하여 활성화한 경우에만 표시됩니다 `_satellite.setDebug(true)` 또는 적절한 브라우저 확장 사용).
+`logger` 개체를 사용하면 메시지를 브라우저 콘솔에 기록할 수 있습니다. 사용자가 태그 디버깅을 사용하도록 설정한 경우에만 메시지가 표시됩니다(`_satellite.setDebug(true)` 호출 또는 적절한 브라우저 확장 사용).
 
 ### 사용 중단 경고 로깅
 
@@ -146,11 +146,11 @@ _satellite.logger.deprecation('This method is no longer supported, please use [n
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` 쿠키를 읽고 쓰는 기능이 포함되어 있습니다. 타사 라이브러리 js-쿠키의 노출된 사본입니다. 이 라이브러리의 고급 사용에 대한 자세한 내용은 [js-cookie 설명서](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie`에 쿠키를 읽고 쓰는 기능이 포함되어 있습니다. 타사 라이브러리 js-쿠키의 노출된 사본입니다. 이 라이브러리의 고급 사용에 대한 자세한 내용은 [js-cookie 설명서](https://www.npmjs.com/package/js-cookie#basic-usage)를 검토하세요.
 
 ### 쿠키 설정 {#cookie-set}
 
-쿠키를 설정하려면 를 사용합니다. `_satellite.cookie.set()`.
+쿠키를 설정하려면 `_satellite.cookie.set()`을(를) 사용합니다.
 
 **코드**
 
@@ -160,7 +160,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->옛날에 [`setCookie`](#setCookie) 쿠키를 설정하는 메서드입니다. 이 함수 호출에 대한 세 번째(선택 사항) 인수는 쿠키의 만료 시간(일)을 나타내는 정수입니다. 이 새 메서드에서는 &quot;attributes&quot; 개체를 세 번째 인수로 대신 사용합니다. 새 메서드를 사용하여 쿠키의 만료를 설정하려면 다음을 제공해야 합니다 `expires` 속성 객체의 속성을 설정하고 원하는 값으로 설정합니다. 아래 예제에서 이를 확인할 수 있습니다.
+>쿠키를 설정하는 이전 [`setCookie`](#setCookie) 메서드에서 이 함수 호출에 대한 세 번째(선택 사항) 인수는 쿠키의 만료 시간(일)을 나타내는 정수입니다. 이 새 메서드에서는 &quot;attributes&quot; 개체를 세 번째 인수로 대신 사용합니다. 새 메서드를 사용하여 쿠키의 만료를 설정하려면 특성 개체에 `expires` 속성을 제공하고 원하는 값으로 설정해야 합니다. 아래 예제에서 이를 확인할 수 있습니다.
 
 **예**
 
@@ -172,7 +172,7 @@ _satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
 
 ### 쿠키 검색 {#cookie-get}
 
-쿠키를 검색하려면 `_satellite.cookie.get()`.
+쿠키를 검색하려면 `_satellite.cookie.get()`을(를) 사용하십시오.
 
 **코드**
 
@@ -190,7 +190,7 @@ var product = _satellite.cookie.get('product');
 
 ### 쿠키 제거 {#cookie-remove}
 
-쿠키를 제거하려면 `_satellite.cookie.remove()`.
+쿠키를 제거하려면 `_satellite.cookie.remove()`을(를) 사용합니다.
 
 **코드**
 
@@ -218,7 +218,7 @@ _satellite.buildInfo
 
 ### `turbineVersion`
 
-다음이 제공됩니다. [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) 현재 라이브러리 내에서 사용되는 버전입니다.
+현재 라이브러리 내에서 사용되는 [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) 버전을 제공합니다.
 
 ### `turbineBuildDate`
 
@@ -260,7 +260,7 @@ _satellite.environment
 | 속성 | 설명 |
 | --- | --- |
 | `id` | 환경의 ID입니다. |
-| `stage` | 이 라이브러리가 빌드된 환경입니다. 가능한 값은 다음과 같습니다 `development`, `staging`, 및 `production`. |
+| `stage` | 이 라이브러리가 빌드된 환경입니다. 가능한 값은 `development`, `staging` 및 `production`입니다. |
 
 ## `notify`
 
@@ -280,7 +280,7 @@ _satellite.notify(message: string[, level: number])
 _satellite.notify('Hello world!');
 ```
 
-`notify` 브라우저 콘솔에 메시지를 기록합니다. 이 메시지는 사용자가 태그 디버깅을 활성화한 경우( 를 호출하여 활성화한 경우에만 표시됩니다 `_satellite.setDebug(true)` 또는 적절한 브라우저 확장 사용).
+`notify`이(가) 브라우저 콘솔에 메시지를 기록합니다. 사용자가 태그 디버깅을 사용하도록 설정한 경우에만 메시지가 표시됩니다(`_satellite.setDebug(true)` 호출 또는 적절한 브라우저 확장 사용).
 
 기록되는 메시지의 스타일링 및 필터링에 영향을 주는 선택적 로깅 수준을 전달할 수 있습니다. 지원되는 수준은 다음과 같습니다.
 
@@ -386,7 +386,7 @@ _satellite._monitors
 
 **샘플**
 
-태그 라이브러리를 실행하는 웹 페이지에서 HTML에 코드 조각을 추가합니다. 일반적으로 코드는에 삽입됩니다 `<head>` 다음 앞에 있는 요소 `<script>` 태그 라이브러리를 로드하는 요소입니다. 이렇게 하면 모니터가 태그 라이브러리에서 발생하는 가장 빠른 시스템 이벤트를 포착할 수 있습니다. 예:
+태그 라이브러리를 실행하는 웹 페이지에서 HTML에 코드 조각을 추가합니다. 일반적으로 코드는 태그 라이브러리를 로드하는 `<script>` 요소 앞에 있는 `<head>` 요소에 삽입됩니다. 이렇게 하면 모니터가 태그 라이브러리에서 발생하는 가장 빠른 시스템 이벤트를 포착할 수 있습니다. 예:
 
 ```html
 <!DOCTYPE html>
@@ -428,7 +428,7 @@ _satellite._monitors
 </html>
 ```
 
-첫 번째 스크립트 요소에서 태그 라이브러리가 아직 로드되지 않았으므로 는 초기입니다. `_satellite` 개체가 생성되고에 배열이 있습니다. `_satellite._monitors` 초기화되었습니다. 그러면 스크립트가 해당 배열에 모니터 개체를 추가합니다. 모니터 개체는 나중에 태그 라이브러리에 의해 호출되는 다음 메서드를 지정할 수 있습니다.
+첫 번째 스크립트 요소에서 태그 라이브러리가 아직 로드되지 않았으므로 초기 `_satellite` 개체가 만들어지고 `_satellite._monitors`의 배열이 초기화됩니다. 그러면 스크립트가 해당 배열에 모니터 개체를 추가합니다. 모니터 개체는 나중에 태그 라이브러리에 의해 호출되는 다음 메서드를 지정할 수 있습니다.
 
 ### `ruleTriggered`
 
@@ -436,7 +436,7 @@ _satellite._monitors
 
 ### `ruleCompleted`
 
-이 함수는 규칙이 완전히 처리된 후에 호출됩니다. 즉, 이벤트가 발생하고 모든 조건이 전달되고 모든 작업이 실행된 후에 호출됩니다. 에 전달된 이벤트 개체 `ruleCompleted` 완료된 규칙에 대한 정보가 포함되어 있습니다.
+이 함수는 규칙이 완전히 처리된 후에 호출됩니다. 즉, 이벤트가 발생하고 모든 조건이 전달되고 모든 작업이 실행된 후에 호출됩니다. `ruleCompleted`에 전달된 이벤트 개체에 완료된 규칙에 대한 정보가 포함되어 있습니다.
 
 ### `ruleConditionFailed`
 

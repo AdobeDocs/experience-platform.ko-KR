@@ -5,13 +5,13 @@ exl-id: 49851544-9118-4b73-b1d1-4cf49b3f1dee
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '176'
-ht-degree: 8%
+ht-degree: 24%
 
 ---
 
-# [!UICONTROL 카드 작업] 스키마 필드 그룹
+# [!UICONTROL 카드 동작] 스키마 필드 그룹
 
-[!UICONTROL 카드 작업] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md). 필드 그룹은 단일 `personalFinances.cardActions` 카드 유형, 활성화 상태 및 잠금 상태 등 카드 작업에 대한 세부 정보를 캡처하는 스키마에 대한 필드입니다.
+[!UICONTROL 카드 동작]은(는) [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)의 표준 스키마 필드 그룹입니다. 필드 그룹은 스키마에 단일 `personalFinances.cardActions` 필드를 제공하여 카드 유형, 활성화 상태 및 잠금 상태와 같은 카드 작업에 대한 세부 정보를 캡처합니다.
 
 ![](../../images/field-groups/card-actions.png)
 
@@ -31,4 +31,4 @@ ht-degree: 8%
 
 {style="table-layout:auto"}
 
-필드 그룹에 대한 자세한 내용은 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json).
+필드 그룹에 대한 자세한 내용은 [공개 XDM 저장소](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json)를 참조하세요.

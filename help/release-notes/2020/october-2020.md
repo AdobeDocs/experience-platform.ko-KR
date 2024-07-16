@@ -7,50 +7,50 @@ author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1015'
-ht-degree: 4%
+source-wordcount: '1017'
+ht-degree: 14%
 
 ---
 
-# Adobe Experience Platform 릴리스 노트
+# Adobe Experience Platform 릴리스 정보
 
 **릴리스 날짜: 2020년 10월 14일**
 
 - [데이터 준비](#data-prep)
 - [실시간 고객 프로필](#profile)
-- [세분화 서비스](#segmentation)
+- [Segmentation Service](#segmentation)
 - [소스](#sources)
 - [가치 창출 시간](#time-to-value)
 
 ## 데이터 준비 {#data-prep}
 
-데이터 준비를 통해 데이터 엔지니어는 데이터를 XDM(Experience Data Model)에 매핑하고, 변환하고, 유효성을 확인할 수 있습니다.
+데이터 준비를 사용하면 데이터 엔지니어가 XDM(Experience Data Model)과의 데이터를 매핑, 변환 및 확인할 수 있습니다.
 
 **주요 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| `is_set` 함수 위에 있어야 합니다 | 다음 `is_set` 함수를 사용하면 소스 데이터 내에 속성이 있는지 확인할 수 있습니다. `is_set` 은 과 함께 사용할 수 있습니다. `is_empty` 속성 존재 여부 및 속성 내 값 존재 여부를 모두 확인합니다. |
-| `get_values` 함수 위에 있어야 합니다 | 다음 `get_values` 함수를 사용하면 지정된 키에 대한 입력 맵에서 값을 가져올 수 있습니다. |
+| `is_set` 함수 | `is_set` 함수를 사용하면 원본 데이터 내에 특성이 있는지 확인할 수 있습니다. `is_set`을(를) `is_empty`과(와) 함께 사용하여 특성이 있는지, 특성 내에 값이 있는지 확인할 수 있습니다. |
+| `get_values` 함수 | `get_values` 함수를 사용하면 지정된 키에 대한 입력 맵에서 값을 가져올 수 있습니다. |
 
-자세한 내용은 다음을 참조하십시오. [데이터 준비 개요](../../data-prep/home.md).
+자세한 내용은 [데이터 준비 개요](../../data-prep/home.md)를 참조하십시오.
 
 ## 실시간 고객 프로필 {#profile}
 
-Adobe Experience Platform을 사용하면 고객이 브랜드와 상호 작용하는 장소나 시기에 상관없이 고객이 통합적이고 일관적이며 적절한 경험을 제공할 수 있습니다. 포함 [!DNL Real-Time Customer Profile]에서는 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 여러 채널의 데이터를 결합하는 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. [!DNL Profile] 에서는 모든 고객 상호 작용에 대해 실행 가능한 타임스탬프 계정을 제공하는 통합 보기로 다양한 고객 데이터를 통합할 수 있습니다.
+Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드와 상호 작용하는지에 관계없이 고객을 위한 조직화되고 일관되며 관련성 높은 경험을 제공할 수 있습니다. [!DNL Real-Time Customer Profile]을(를) 사용하면 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 여러 채널의 데이터를 결합하는 각 개별 고객에 대한 거시적인 보기를 확인할 수 있습니다. [!DNL Profile]을(를) 사용하면 모든 고객 인터랙션에 대해 실행 가능한 타임스탬프 계정을 제공하는 통합 보기로 다양한 고객 데이터를 통합할 수 있습니다.
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 프로필 미리보기 API 추가 | 프로필 미리보기 API(`/previewsamplestatus`)에는 이제 조직 전체에서 총 프로필 조각 분류를 보고 id 네임스페이스 전체에서 프로필 조각 분포를 보는 기능이 포함됩니다. |
+| 프로필 미리보기 API 추가 | 프로필 미리 보기 API(`/previewsamplestatus`)에는 이제 조직 전체의 총 프로필 조각 분류를 보고 ID 네임스페이스 전반에 걸친 프로필 조각 분포를 보는 기능이 포함됩니다. |
 | 유니온 스키마 보기 업데이트 | Experience Platform UI에서 사용자는 ID 및 관계 필드와 같은 표면 키 속성뿐만 아니라 유니온 스키마에 기여하는 모든 스키마 및 데이터 세트에 대한 정보를 더 쉽게 찾을 수 있습니다. 이러한 업데이트는 프로필이 올바르게 구성되었는지, ID가 올바르게 결합되었는지, 데이터가 성공적으로 수집되었는지 문제를 해결하고 확인하는 기능을 향상시킵니다. |
 
-에 대한 자세한 내용 [!DNL Real-Time Customer Profile]를 사용하여 작업하기 위한 자습서 및 모범 사례를 포함 [!DNL Profile] 데이터, 다음을 읽으십시오. [실시간 고객 프로필 개요](../../profile/home.md).
+[!DNL Profile] 데이터 작업에 대한 튜토리얼 및 모범 사례를 포함하여 [!DNL Real-Time Customer Profile]에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md)를 참조하십시오.
 
-## 세분화 서비스 {#segmentation}
+## Segmentation Service {#segmentation}
 
-Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 빌드하고 대상에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. [!DNL Real-Time Customer Profile] 데이터. 이러한 세그먼트는에서 중앙 집중식으로 구성 및 유지 관리됩니다. [!DNL Platform]를 사용하여 모든 Adobe 애플리케이션에서 간편하게 액세스할 수 있습니다.
+Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 빌드하고 [!DNL Real-Time Customer Profile] 데이터에서 대상을 생성할 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 세그먼트는 [!DNL Platform]에서 중앙에서 구성 및 유지 관리되므로 모든 Adobe 응용 프로그램에서 쉽게 액세스할 수 있습니다.
 
-[!DNL Segmentation Service] 은 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 프로필의 특정 하위 집합을 정의합니다. 세그먼트는 브랜드와의 고객 상호 작용을 나타내는 레코드 데이터(예: 인구 통계학적 정보) 또는 시계열 이벤트를 기반으로 할 수 있습니다.
+[!DNL Segmentation Service]는 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 프로필의 특정 하위 집합을 정의합니다. 세그먼트는 기록 데이터(예: 인구 통계 정보) 또는 고객과 브랜드의 상호 작용을 나타내는 시계열 이벤트를 기반으로 할 수 있습니다.
 
 **새로운 기능**
 
@@ -58,22 +58,22 @@ Adobe Experience Platform 세그멘테이션 서비스는 세그먼트를 빌드
 | ------- | ----------- |
 | 스트리밍 세분화 제한 제거 | 전환 확인 기간에 대한 7일 제한이 제거되었습니다. |
 
-에 대한 자세한 내용 [!DNL Segmentation Service], 다음을 참조하십시오. [세그먼테이션 개요](../../segmentation/home.md)
+[!DNL Segmentation Service]에 대한 자세한 내용은 [세그먼테이션 개요](../../segmentation/home.md)를 참조하십시오.
 
 ## 소스 {#sources}
 
-Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. [!DNL Platform] 서비스. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+Adobe Experience Platform은 외부 소스에서 데이터를 수집하는 동시에 [!DNL Platform] 서비스를 사용하여 해당 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 서드파티 소프트웨어 및 CRM 시스템과 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
-[!DNL Experience Platform] 는 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스를 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
+[!DNL Experience Platform]에서는 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API와 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
 **새로운 기능**
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| SFTP에 대한 SSH 인증 지원 | SFTP 계정을 연결할 수 있습니다. [!DNL Platform] rsa/DSA 열기 SSH 키를 사용합니다. 다음을 참조하십시오. [SFTP 개요](../../sources/connectors/cloud-storage/sftp.md) 추가 정보. |
-| UX 개선 사항 | 다음에 대한 데이터 세트를 활성화할 수 있습니다. [!DNL Profile] 데이터 수집 프로세스 동안. 다음을 참조하십시오. [클라우드 스토리지 데이터 흐름 워크플로](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 튜토리얼 을 참조하십시오. |
+| SFTP에 대한 SSH 인증 지원 | RSA/DSA Open SSH 키를 사용하여 SFTP 계정을 [!DNL Platform]에 연결할 수 있습니다. 자세한 내용은 [SFTP 개요](../../sources/connectors/cloud-storage/sftp.md)를 참조하세요. |
+| UX 개선 사항 | 데이터 수집 프로세스 중에 [!DNL Profile]에 대한 데이터 세트를 활성화할 수 있습니다. 자세한 내용은 [클라우드 저장소 데이터 흐름 워크플로](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 자습서를 참조하십시오. |
 
-소스에 대해 자세히 알아보려면 [소스 개요](../../sources/home.md).
+소스에 대한 자세한 내용은 [소스 개요](../../sources/home.md)를 참조하세요.
 
 ## 가치 창출 시간 {#time-to-value}
 
@@ -85,7 +85,7 @@ Adobe Experience Platform은 마케팅 운영 팀이 광범위한 데이터 엔�
 
 #### 스키마
 
-유용성과 워크플로를 업그레이드하고 스키마 구성 내의 주요 필드에 대한 즉시 사용 가능한 통찰력, 표준화 및 투명성을 제공합니다. &quot;결합 스키마&quot;로 표현되는 개별 데이터 모델의 조합에 대한 데이터 계보를 노출하여 실시간 고객 프로필에 구조 및 구성 요소에 대한 통찰력을 제공합니다.
+유용성과 워크플로를 업그레이드하고 스키마 구성 내의 주요 필드에 대한 즉시 사용 가능한 통찰력, 표준화 및 투명성을 제공합니다. &quot;결합 스키마&quot;로 표현되는 개별 데이터 모델의 조합에 대한 데이터 계보를 노출하여 실시간 고객 프로필에 구조 및 구성요소에 대한 통찰력을 제공합니다.
 
 - 스키마 워크플로우 업그레이드
    - 스키마 편집기의 자동화된 설정과 목표에 따른 스키마 필드 그룹 권장 사항으로 가장 일반적인 유형의 XDM 스키마에 바로 가기를 사용합니다

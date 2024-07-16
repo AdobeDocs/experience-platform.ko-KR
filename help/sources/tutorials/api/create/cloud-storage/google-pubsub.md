@@ -1,5 +1,5 @@
 ---
-title: 흐름 서비스 API를 사용하여 Google PubSub 소스 연결 만들기
+title: 흐름 서비스 API를 사용하여 Google PubSub Source 연결 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Google PubSub 계정에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
@@ -10,26 +10,26 @@ ht-degree: 2%
 
 ---
 
-# 만들기 [!DNL Google PubSub] 흐름 서비스 API를 사용한 소스 연결
+# 흐름 서비스 API를 사용하여 [!DNL Google PubSub] Source 연결 만들기
 
 >[!IMPORTANT]
 >
->다음 [!DNL Google PubSub] 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 소스 카탈로그에서 사용할 수 있습니다.
+>[!DNL Google PubSub] 원본은 Real-time Customer Data Platform Ultimate를 구입한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
 
-이 자습서에서는 연결하는 단계를 안내합니다 [!DNL Google PubSub] (이하 &quot;라고 한다)[!DNL PubSub]&quot;) Experience Platform 대상, 사용 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+이 자습서에서는 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>)를 사용하여 [!DNL Google PubSub](이하 &quot;[!DNL PubSub]&quot;)을(를) Experience Platform에 연결하는 단계를 안내합니다.
 
 ## 시작하기
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [소스](../../../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 개선할 수 있는 기능을 제공하면서 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+* [소스](../../../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-다음 섹션은 성공적으로 연결하기 위해 알아야 하는 추가 정보를 제공합니다 [!DNL PubSub] 를 사용하여 플랫폼으로 [!DNL Flow Service] API.
+다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL PubSub]을(를) 플랫폼에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### 필요한 자격 증명 수집
 
-연결하려면 아래에 설명된 연결 속성에 대한 값을 제공해야 합니다. [!DNL PubSub] 계정 위치: [!DNL Flow Service]. 인증 및 사전 요구 사항 설정에 대한 자세한 내용은 [[!DNL PubSub source] 개요](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+[!DNL PubSub] 계정을 [!DNL Flow Service]에 연결하려면 아래에 설명된 연결 속성에 대한 값을 제공해야 합니다. 인증 및 필수 구성 요소 설정에 대한 자세한 내용은 [[!DNL PubSub source] 개요](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites)를 참조하세요.
 
 >[!BEGINTABS]
 
@@ -37,22 +37,22 @@ ht-degree: 2%
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| `projectId` | 인증에 필요한 프로젝트 ID [!DNL PubSub]. |
-| `credentials` | 인증에 필요한 자격 증명 [!DNL PubSub]. 자격 증명에서 공백을 제거한 후 전체 JSON 파일을 넣었는지 확인해야 합니다. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 대상 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 다음 [!DNL PubSub] 연결 사양 ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `projectId` | [!DNL PubSub]을(를) 인증하는 데 필요한 프로젝트 ID입니다. |
+| `credentials` | [!DNL PubSub]을(를) 인증하는 데 필요한 자격 증명입니다. 자격 증명에서 공백을 제거한 후 전체 JSON 파일을 넣었는지 확인해야 합니다. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 대상 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL PubSub] 연결 사양 ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 >[!TAB 주제 및 구독 기반 인증]
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| `credentials` | 인증에 필요한 자격 증명 [!DNL PubSub]. 자격 증명에서 공백을 제거한 후 전체 JSON 파일을 넣었는지 확인해야 합니다. |
-| `topicName` | 메시지 피드를 나타내는 리소스의 이름입니다. 의 특정 데이터 스트림에 대한 액세스 권한을 제공하려면 항목 이름을 지정해야 합니다 [!DNL PubSub] 소스. 주제 이름 형식은 다음과 같습니다. `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
-| `subscriptionName` | 의 이름 [!DNL PubSub] 구독. 위치 [!DNL PubSub]가입을 사용하면 메시지가 게시된 주제를 구독하여 메시지를 받을 수 있습니다. **참고**: 단일 [!DNL PubSub] 구독은 하나의 데이터 흐름에만 사용할 수 있습니다. 여러 데이터 흐름을 만들려면 구독이 여러 개 있어야 합니다. 구독 이름 형식은 다음과 같습니다. `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 대상 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. 다음 [!DNL PubSub] 연결 사양 ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `credentials` | [!DNL PubSub]을(를) 인증하는 데 필요한 자격 증명입니다. 자격 증명에서 공백을 제거한 후 전체 JSON 파일을 넣었는지 확인해야 합니다. |
+| `topicName` | 메시지 피드를 나타내는 리소스의 이름입니다. [!DNL PubSub] 원본의 특정 데이터 스트림에 대한 액세스 권한을 제공하려면 항목 이름을 지정해야 합니다. 항목 이름 형식은 `projects/{PROJECT_ID}/topics/{TOPIC_ID}`입니다. |
+| `subscriptionName` | [!DNL PubSub] 구독 이름. [!DNL PubSub]에서 구독을 사용하면 메시지가 게시된 주제를 구독하여 메시지를 받을 수 있습니다. **참고**: 단일 [!DNL PubSub] 구독은 하나의 데이터 흐름에만 사용할 수 있습니다. 여러 데이터 흐름을 만들려면 구독이 여러 개 있어야 합니다. 구독 이름 형식은 `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`입니다. |
+| `connectionSpec.id` | 연결 사양은 기본 및 소스 대상 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL PubSub] 연결 사양 ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 >[!ENDTABS]
 
-이러한 값에 대한 자세한 내용은 다음을 참조하십시오 [[!DNL PubSub] 인증](https://cloud.google.com/pubsub/docs/authentication) 문서. 서비스 계정 기반 인증을 사용하려면 이 내용을 읽으십시오 [[!DNL PubSub] 서비스 계정 만들기에 대한 안내서](https://cloud.google.com/docs/authentication/production#create_service_account) 자격 증명을 생성하는 방법에 대한 단계입니다.
+이러한 값에 대한 자세한 내용은 이 [[!DNL PubSub] 인증](https://cloud.google.com/pubsub/docs/authentication) 문서를 참조하십시오. 서비스 계정 기반 인증을 사용하려면 자격 증명을 생성하는 방법에 대한 단계를 보려면 이 [[!DNL PubSub] 서비스 계정 만들기에 대한 안내서](https://cloud.google.com/docs/authentication/production#create_service_account)를 읽어 보십시오.
 
 >[!TIP]
 >
@@ -60,23 +60,23 @@ ht-degree: 2%
 
 ### Platform API 사용
 
-Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 의 안내서를 참조하십시오. [platform API 시작하기](../../../../../landing/api-guide.md).
+Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
 
 ## 기본 연결 만들기
 
 >[!TIP]
 >
->만든 후에는 의 인증 유형을 변경할 수 없습니다. [!DNL Google PubSub] 기본 연결. 인증 유형을 변경하려면 새 기본 연결을 만들어야 합니다.
+>만든 후에는 [!DNL Google PubSub] 기본 연결의 인증 유형을 변경할 수 없습니다. 인증 유형을 변경하려면 새 기본 연결을 만들어야 합니다.
 
-소스 연결을 만드는 첫 번째 단계는 [!DNL PubSub] 소스 및 기본 연결 ID 생성. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
+원본 연결을 만드는 첫 번째 단계는 [!DNL PubSub] 원본을 인증하고 기본 연결 ID를 생성하는 것입니다. 기본 연결 ID를 사용하면 소스 내에서 파일을 탐색 및 탐색하고 데이터 유형 및 형식에 대한 정보를 포함하여 수집할 특정 항목을 식별할 수 있습니다.
 
-POST 기본 연결 ID를 만들려면 `/connections` 을(를) 제공하는 동안 엔드포인트 [!DNL PubSub] 요청 매개 변수의 일부로 인증 자격 증명을 사용합니다.
+기본 연결 ID를 만들려면 [!DNL PubSub] 인증 자격 증명을 요청 매개 변수의 일부로 제공하는 동안 `/connections` 끝점에 POST 요청을 하십시오.
 
-다음 [!DNL PubSub] 소스를 사용하면 인증 중에 허용할 액세스 유형을 지정할 수 있습니다. 루트 액세스를 갖도록 계정을 설정하거나 특정 항목에 대한 액세스를 제한할 수 있습니다 [!DNL PubSub] 주제 및 구독.
+[!DNL PubSub] 원본에서 인증 중에 허용할 액세스 형식을 지정할 수 있습니다. 루트 액세스를 갖도록 계정을 설정하거나 특정 [!DNL PubSub] 주제 및 구독에 대한 액세스를 제한할 수 있습니다.
 
 >[!NOTE]
 >
->에 할당된 사용자(역할) [!DNL PubSub] 프로젝트는 내에서 생성된 모든 주제 및 구독에서 상속됩니다. [!DNL PubSub] 프로젝트. 주도자(역할)가 특정 주제에 액세스할 수 있도록 하려면 해당 주도자(역할)도 주제의 해당 구독에 추가해야 합니다. 자세한 내용은 [[!DNL PubSub] 액세스 제어에 대한 설명서](<https://cloud.google.com/pubsub/docs/access-control>).
+>[!DNL PubSub] 프로젝트에 할당된 사용자(역할)는 [!DNL PubSub] 프로젝트 내에서 만든 모든 주제 및 구독에서 상속됩니다. 주도자(역할)가 특정 주제에 액세스할 수 있도록 하려면 해당 주도자(역할)도 주제의 해당 구독에 추가해야 합니다. 자세한 내용은 액세스 제어에 대한 [[!DNL PubSub] 설명서를 읽어보세요](<https://cloud.google.com/pubsub/docs/access-control>).
 
 **API 형식**
 
@@ -88,7 +88,7 @@ POST /connections
 
 >[!TAB 프로젝트 기반 인증]
 
-POST 프로젝트 기반 인증으로 기본 연결을 만들려면 `/connections` 엔드포인트 및 제공 `projectId` 및 `credentials` 를 입력합니다.
+프로젝트 기반 인증으로 기본 연결을 만들려면 `/connections` 끝점에 대한 POST 요청을 만들고 요청 본문에 `projectId` 및 `credentials`을(를) 제공하십시오.
 
 +++요청
 
@@ -119,15 +119,15 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `auth.params.projectId` | 인증에 필요한 프로젝트 ID [!DNL PubSub]. |
-| `auth.params.credentials` | 인증에 필요한 자격 증명 또는 키 [!DNL PubSub]. |
-| `connectionSpec.id` | 다음 [!DNL PubSub] 연결 사양 ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `auth.params.projectId` | [!DNL PubSub]을(를) 인증하는 데 필요한 프로젝트 ID입니다. |
+| `auth.params.credentials` | [!DNL PubSub]을(를) 인증하는 데 필요한 자격 증명 또는 키입니다. |
+| `connectionSpec.id` | [!DNL PubSub] 연결 사양 ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 ++++
 
 +++응답
 
-성공한 응답은 고유 식별자를 포함하여 새로 생성된 연결의 세부 정보를 반환합니다(`id`). 다음 단계에서 소스 연결을 만들려면 이 기본 연결 ID가 필요합니다.
+응답이 성공하면 고유 식별자(`id`)를 포함하여 새로 만든 연결의 세부 정보가 반환됩니다. 다음 단계에서 소스 연결을 만들려면 이 기본 연결 ID가 필요합니다.
 
 ```json
 {
@@ -140,7 +140,7 @@ curl -X POST \
 
 >[!TAB 주제 및 구독 기반 인증]
 
-POST 주제 및 구독 기반 인증을 사용하여 기본 연결을 만들려면 `/connections` 엔드포인트 및 제공 `credentials`, `topicName`, 및 `subscriptionName` 를 입력합니다.
+주제 및 구독 기반 인증을 사용하여 기본 연결을 만들려면 `/connections` 끝점에 대한 POST 요청을 만들고 요청 본문에 `credentials`, `topicName` 및 `subscriptionName`을(를) 제공하십시오.
 
 +++요청
 
@@ -172,16 +172,16 @@ curl -X POST \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `auth.params.credentials` | 인증에 필요한 자격 증명 또는 키 [!DNL PubSub]. |
-| `auth.params.topicName` | 에 대한 프로젝트 ID 및 주제 ID 쌍 [!DNL PubSub] 액세스 권한을 제공하려는 소스. |
-| `auth.params.subscriptionName` | 에 대한 프로젝트 ID 및 구독 ID 쌍 [!DNL PubSub] 액세스 권한을 제공하려는 소스. |
-| `connectionSpec.id` | 다음 [!DNL PubSub] 연결 사양 ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `auth.params.credentials` | [!DNL PubSub]을(를) 인증하는 데 필요한 자격 증명 또는 키입니다. |
+| `auth.params.topicName` | 액세스 권한을 제공하려는 [!DNL PubSub] 소스의 프로젝트 ID 및 항목 ID 쌍입니다. |
+| `auth.params.subscriptionName` | 액세스를 제공할 [!DNL PubSub] 소스의 프로젝트 ID 및 구독 ID 쌍입니다. |
+| `connectionSpec.id` | [!DNL PubSub] 연결 사양 ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 +++
 
 +++응답
 
-성공한 응답은 고유 식별자를 포함하여 새로 생성된 연결의 세부 정보를 반환합니다(`id`). 다음 단계에서 소스 연결을 만들려면 이 기본 연결 ID가 필요합니다.
+응답이 성공하면 고유 식별자(`id`)를 포함하여 새로 만든 연결의 세부 정보가 반환됩니다. 다음 단계에서 소스 연결을 만들려면 이 기본 연결 ID가 필요합니다.
 
 ```json
 {
@@ -199,7 +199,7 @@ curl -X POST \
 
 소스 연결은 데이터가 수집되는 외부 소스와의 연결을 만들고 관리합니다. 소스 연결은 데이터 소스, 데이터 형식 및 데이터 흐름을 만드는 데 필요한 소스 연결 ID와 같은 정보로 구성됩니다. 소스 연결 인스턴스는 테넌트 및 조직에만 해당됩니다.
 
-POST 소스 연결을 만들려면 `/sourceConnections` 의 엔드포인트 [!DNL Flow Service] API.
+소스 연결을 만들려면 [!DNL Flow Service] API의 `/sourceConnections` 끝점에 대한 POST 요청을 만듭니다.
 
 **API 형식**
 
@@ -240,16 +240,16 @@ curl -X POST \
 | --- | --- |
 | `name` | 소스 연결의 이름입니다. 소스 연결에 대한 정보를 조회할 때 소스 연결의 이름이 설명적인지 확인합니다. |
 | `description` | 소스 연결에 대한 자세한 정보를 포함하도록 제공할 수 있는 선택적 값입니다. |
-| `baseConnectionId` | 의 기본 연결 ID [!DNL PubSub] 이전 단계에서 생성된 소스. |
-| `connectionSpec.id` | 의 고정 연결 사양 ID [!DNL PubSub]. 이 ID는 `70116022-a743-464a-bbfe-e226a7f8210c` |
-| `data.format` | 형식 [!DNL PubSub] 수집할 데이터. 현재 지원되는 데이터 형식은 `json`. |
-| `params.topicName` | 의 이름 [!DNL PubSub] 주제. 위치 [!DNL PubSub]: 주제는 메시지 피드를 나타내는 명명된 리소스입니다. |
-| `params.subscriptionName` | 특정 주제에 해당하는 구독 이름. 위치 [!DNL PubSub], 구독을 통해 주제에서 메시지를 읽을 수 있습니다. 한 개의 주제에 하나 이상의 구독을 할당할 수 있습니다. |
-| `params.dataType` | 이 매개 변수는 수집되는 데이터의 유형을 정의합니다. 지원되는 데이터 유형은 다음과 같습니다. `raw` 및 `xdm`. |
+| `baseConnectionId` | 이전 단계에서 생성된 [!DNL PubSub] 소스의 기본 연결 ID입니다. |
+| `connectionSpec.id` | [!DNL PubSub]에 대한 고정 연결 사양 ID입니다. 이 ID: `70116022-a743-464a-bbfe-e226a7f8210c` |
+| `data.format` | 수집할 [!DNL PubSub] 데이터의 형식입니다. 현재 지원되는 데이터 형식은 `json`뿐입니다. |
+| `params.topicName` | [!DNL PubSub] 주제의 이름입니다. [!DNL PubSub]에서 주제는 메시지 피드를 나타내는 명명된 리소스입니다. |
+| `params.subscriptionName` | 특정 주제에 해당하는 구독 이름. [!DNL PubSub]에서 구독을 통해 주제의 메시지를 읽을 수 있습니다. 한 개의 주제에 하나 이상의 구독을 할당할 수 있습니다. |
+| `params.dataType` | 이 매개 변수는 수집되는 데이터의 유형을 정의합니다. 지원되는 데이터 형식은 `raw` 및 `xdm`입니다. |
 
 **응답**
 
-성공적인 응답은 고유 식별자()를 반환합니다.`id`)을 참조하십시오. 데이터 흐름을 만들려면 다음 자습서에서 이 ID가 필요합니다.
+성공한 응답은 새로 만든 원본 연결의 고유 식별자(`id`)를 반환합니다. 데이터 흐름을 만들려면 다음 자습서에서 이 ID가 필요합니다.
 
 ```json
 {
@@ -260,4 +260,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이 자습서를 따라 [!DNL PubSub] 를 사용한 소스 연결 [!DNL Flow Service] API. 다음 자습서에서 이 소스 연결 ID를 사용하여 다음을 수행할 수 있습니다. [다음을 사용하여 스트리밍 데이터 흐름 만들기 [!DNL Flow Service] API](../../collect/streaming.md).
+이 자습서에 따라 [!DNL Flow Service] API를 사용하여 [!DNL PubSub] 소스 연결을 만들었습니다. 다음 자습서에서 이 원본 연결 ID를 사용하여 [API를 사용하여 스트리밍 데이터 흐름을 만들 [!DNL Flow Service] 수 있습니다](../../collect/streaming.md).

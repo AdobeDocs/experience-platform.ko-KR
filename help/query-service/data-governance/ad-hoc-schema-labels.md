@@ -25,16 +25,16 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [경험 데이터 모델(XDM) 시스템](../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [XDM(경험 데이터 모델) 시스템](../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Platform UI에서 스키마 및 기타 리소스를 만들고 관리하는 방법을 알아봅니다.
-* [[!DNL Data Governance]](../../data-governance/home.md): 방법 알아보기 [!DNL Data Governance] 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 사항 및 정책을 준수할 수 있습니다.
-* [속성 기반 액세스 제어](../../access-control/abac/overview.md): 속성 기반 액세스 제어는 관리자가 속성에 따라 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있도록 해 주는 Adobe Experience Platform의 기능입니다. 속성은 Ad Hoc 또는 일반 스키마 필드에 추가된 레이블과 같이 객체에 추가된 메타데이터일 수 있습니다. 관리자는 사용자 액세스 권한을 관리하기 위해 속성이 포함된 액세스 정책을 정의합니다.
+* [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance]을(를) 통해 고객 데이터를 관리하고 데이터 사용에 적용되는 규정, 제한 및 정책 준수를 확인하는 방법에 대해 알아봅니다.
+* [특성 기반 액세스 제어](../../access-control/abac/overview.md): 특성 기반 액세스 제어는 관리자가 특성을 기반으로 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있도록 하는 Adobe Experience Platform의 기능입니다. 속성은 Ad Hoc 또는 일반 스키마 필드에 추가된 레이블과 같이 객체에 추가된 메타데이터일 수 있습니다. 관리자는 사용자 액세스 권한을 관리하기 위해 속성이 포함된 액세스 정책을 정의합니다.
 
 ## 애드혹 스키마 만들기
 
 쿼리가 실행되고 결과가 생성되면 Ad Hoc 스키마가 자동으로 생성되고 스키마 인벤토리에 추가됩니다.
 
-데이터 레이블을 추가하려면 다음으로 이동합니다. [!UICONTROL 스키마] 을 선택하여 대시보드 찾아보기 탭 [!UICONTROL 스키마] 플랫폼 UI의 왼쪽 레일에서. 스키마 인벤토리가 표시됩니다.
+데이터 레이블을 추가하려면 Platform UI의 왼쪽 레일에서 [!UICONTROL 스키마]를 선택하여 [!UICONTROL 스키마] 대시보드 찾아보기 탭으로 이동합니다. 스키마 인벤토리가 표시됩니다.
 
 >[!NOTE]
 >
@@ -42,41 +42,41 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 ## Platform UI의 스키마 인벤토리에서 임시 스키마 살펴보기 {#discover-ad-hoc-schemas}
 
-Platform UI에서 임시 스키마 표시를 활성화하려면 필터 아이콘(![필터 아이콘](../images/data-governance/filter.png))을 클릭하여 검색 필드의 왼쪽에 있는 다음 을 선택합니다**[!UICONTROL 임시 스키마 표시] 표시되는 왼쪽 레일에
+Platform UI에서 임시 스키마 표시를 활성화하려면 필터 아이콘(![필터 아이콘)을 선택합니다.](../images/data-governance/filter.png)) 검색 필드의 왼쪽에 있는 다음 나타나는 왼쪽 레일에서 **[!UICONTROL 임시 스키마 표시]를 선택합니다.
 
-![스키마 대시보드 필터 옵션 왼쪽 레일에 &#39;임시 스키마 표시&#39; 토글이 활성화되어 있습니다.](../images/data-governance/adhoc-schema-toggle.png)
+![스키마 대시보드 필터 옵션이 &#39;임시 스키마 표시&#39; 토글이 활성화된 왼쪽 레일입니다.](../images/data-governance/adhoc-schema-toggle.png)
 
 사용 가능한 목록에서 최근에 생성된 임시 스키마의 이름을 선택합니다. 임시 스키마 구조의 시각화가 나타납니다.
 
-![예제 임시 스키마 구조 다이어그램입니다.](../images/data-governance/adhoc-schema-structure-diagram.png)
+![임시 스키마 구조 다이어그램의 예입니다.](../images/data-governance/adhoc-schema-structure-diagram.png)
 
 ## 거버넌스 레이블 편집
 
-임시 스키마에 대한 데이터 레이블을 편집하려면 [!UICONTROL 레이블] 탭. 레이블 작업 영역에서는 임시 스키마 필드에 레이블을 적용, 생성 및 편집하고 UI를 통해 액세스 권한을 제어할 수 있습니다. Ad Hoc 스키마 내의 모든 필드가 여기에 표시됩니다.
+임시 스키마의 데이터 레이블을 편집하려면 [!UICONTROL 레이블] 탭을 선택하십시오. 레이블 작업 영역에서는 임시 스키마 필드에 레이블을 적용, 생성 및 편집하고 UI를 통해 액세스 권한을 제어할 수 있습니다. Ad Hoc 스키마 내의 모든 필드가 여기에 표시됩니다.
 
 ## 스키마 또는 필드의 레이블 편집
 
-전체 스키마에 대한 레이블을 편집하려면 연필 아이콘(![연필 아이콘.](../images/data-governance/edit-icon.png))을 클릭하여 스키마 이름 옆에 추가합니다. [!UICONTROL 레이블] 탭.
+전체 스키마의 레이블을 편집하려면 연필 아이콘(![연필 아이콘)을 선택합니다.[!UICONTROL 레이블] 탭 아래에 있는 스키마 이름의 측면에 ](../images/data-governance/edit-icon.png))을(를) 추가합니다.
 
 ![연필 아이콘이 강조 표시된 스키마 작업 영역의 레이블 보기입니다.](../images/data-governance/edit-entire-schema-labels.png)
 
-기존 필드에 레이블을 적용하려면 목록에서 하나 이상의 필드를 선택한 후 다음을 수행합니다 [!UICONTROL 거버넌스 레이블 편집] 오른쪽 사이드바에서
+기존 필드에 레이블을 적용하려면 목록에서 하나 이상의 필드를 선택한 다음 오른쪽 사이드바에서 [!UICONTROL 거버넌스 레이블 편집]을 선택합니다.
 
 ![오른쪽 사이드바에서 &#39;거버넌스 레이블 편집&#39; 옵션이 강조 표시된 스키마 작업 영역의 레이블 보기입니다.](../images/data-governance/edit-governance-labels.png)
 
 ## 레이블 편집 팝오버
 
-다음 [!UICONTROL 레이블 편집] 팝오버가 표시됩니다. 이 보기에서 UI를 통해 기존 거버넌스 레이블을 만들거나 편집할 수 있습니다.
+[!UICONTROL 레이블 편집] 팝오버가 나타납니다. 이 보기에서 UI를 통해 기존 거버넌스 레이블을 만들거나 편집할 수 있습니다.
 
 ![레이블 편집 팝오버](../images/data-governance/edit-labels-popover.png)
 
-방법에 대한 지침은 설명서 를 참조하십시오 [선택한 스키마 또는 필드에 대한 레이블 생성 또는 편집](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
+[선택한 스키마 또는 필드의 레이블을 만들거나 편집하는 방법](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field)에 대한 지침은 설명서를 참조하세요.
 
 >[!NOTE]
 >
 >새 레이블을 만들거나 기존 레이블을 편집하려면 조직에 대한 관리자 권한이 필요합니다. 관리자 권한이 없는 경우 시스템 관리자에게 문의하여 액세스 권한을 받으십시오.
 
-권한 작업 영역을 사용하여 레이블을 만들 수도 있습니다. 다음을 참조하십시오. [권한 작업 영역에서 레이블 만들기에 대한 안내서](../../access-control/abac/ui/labels.md) 설명서를 참조하십시오.
+권한 작업 영역을 사용하여 레이블을 만들 수도 있습니다. 지침은 [권한 작업 영역에서 레이블 만들기에 대한 안내서](../../access-control/abac/ui/labels.md)를 참조하십시오.
 
 적절한 수준의 속성 기반 액세스 제어가 적용되면 사용자가 액세스할 수 없는 데이터에 액세스하려고 할 때 쿼리 서비스를 통해 실행되는 모든 쿼리에 다음과 같은 시스템 동작이 적용됩니다.
 

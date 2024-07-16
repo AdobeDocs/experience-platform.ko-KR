@@ -5,7 +5,7 @@ exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
 source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1069'
-ht-degree: 72%
+ht-degree: 69%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 >[!NOTE]
 >
->이 확장은 더 이상 사용되지 않으며 [Adobe Experience Platform 웹 SDK](../web-sdk/overview.md).
+>이 확장은 [Adobe Experience Platform Web SDK](../web-sdk/overview.md)을 위해 더 이상 사용되지 않습니다.
 
 이 확장 기능은 새 확장으로 포트되고 있습니다. 다음은 현재 기능을 간단히 비교한 것입니다.
 
@@ -37,21 +37,21 @@ ht-degree: 72%
 
 이 섹션에서는 Adobe Experience Platform 확장을 구성할 때 사용할 수 있는 옵션에 대한 참조를 제공합니다.
 
-Adobe Experience Platform 확장이 아직 설치되지 않은 경우 속성을 연 다음 을 선택합니다 **[!UICONTROL 확장 > 카탈로그]**, Adobe Experience Platform 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**.
+Adobe Experience Platform 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고 Adobe Experience Platform 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
 
-확장을 구성하려면 를 엽니다. [!UICONTROL 확장] 탭을 클릭하고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**.
+확장을 구성하려면 [!UICONTROL 확장] 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
 
 ![](../../../images/adobe-experience-platform-extension-configuration.png)
 
 ### 스트리밍 연결
 
-스트리밍 연결을 선택하는 것은 Adobe Experience Platform으로 데이터 스트리밍을 시작하기 위한 첫 단계입니다. 스트리밍 연결 콤보 상자에서 하나를 선택할 수 있습니다. 스트리밍 연결은 필수 필드입니다. 만든 스트리밍 연결이 없는 경우 다음을 선택하여 만들 수 있습니다. **[!UICONTROL 스트리밍 연결 만들기]** 단추를 클릭합니다.
+스트리밍 연결을 선택하는 것은 Adobe Experience Platform으로 데이터 스트리밍을 시작하기 위한 첫 단계입니다. 스트리밍 연결 콤보 상자에서 하나를 선택할 수 있습니다. 스트리밍 연결은 필수 필드입니다. 만든 스트리밍 연결이 없는 경우 **[!UICONTROL 스트리밍 연결 만들기]** 버튼을 선택하여 만들 수 있습니다.
 
-다음을 선택하는 경우 **[!UICONTROL 스트리밍 연결 만들기]** 모달 창이 나타납니다.
+**[!UICONTROL 스트리밍 연결 만들기]**&#x200B;를 선택하면 모달 창이 나타납니다.
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-모달에는 사용자의 요구 사항에 맞게 변경할 수 있는 미리 채워진 값이 있는 필드가 포함되어 있습니다. 스트리밍 연결을 두 개 이상 만들려는 경우에는 **[!UICONTROL 데이터 소스]** 필드는 고유해야 합니다. 다음을 사용하여 다른 스트리밍 연결을 만들려고 합니다. **[!UICONTROL 데이터 소스]** 다른 연결에 이미 사용한 경우 실패합니다.
+모달에는 사용자의 요구 사항에 맞게 변경할 수 있는 미리 채워진 값이 있는 필드가 포함되어 있습니다. 스트리밍 연결을 두 개 이상 만들 계획이라면 **[!UICONTROL 데이터 Source]** 필드는 고유해야 합니다. 다른 연결에 이미 사용한 **[!UICONTROL 데이터 Source]**&#x200B;을(를) 사용하여 다른 스트리밍 연결을 만들려고 하면 실패합니다.
 
 스트리밍 끝점을 선택하면 스트리밍 끝점 URL 및 소스가 표시됩니다.
 
@@ -120,7 +120,7 @@ ID 매핑 섹션에는 여러 행이 포함될 수 있습니다. 각 행에 특�
 
 ID 매핑 섹션 내에 여러 개의 ID가 있는 경우 한 개의 ID만 기본으로 표시할 수 있습니다.
 
-스키마에 다음 항목이 있는 경우 `xdm:identityMap` 필드 및 동시에 다른 필드가 기본 id 필드로 표시되면 id 매핑 섹션 내의 기본 열이 표시되지 않습니다.
+스키마에 `xdm:identityMap` 필드가 있고 동시에 다른 필드가 기본 ID 필드로 표시되면 ID 매핑 섹션 내의 기본 열이 표시되지 않습니다.
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-section-not-primary.png)
 

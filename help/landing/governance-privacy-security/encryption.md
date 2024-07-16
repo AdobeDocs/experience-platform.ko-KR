@@ -15,28 +15,28 @@ Adobe Experience Platform은 엔터프라이즈 솔루션 전반에 걸쳐 고�
 
 다음 프로세스 흐름 다이어그램은 Experience Platform이 데이터를 수집, 암호화 및 유지하는 방법을 보여 줍니다.
 
-![Experience Platform으로 데이터를 수집, 암호화 및 지속하는 방법을 보여 주는 다이어그램입니다.](../images/governance-privacy-security/encryption/flow.png)
+![Experience Platform에서 데이터를 수집, 암호화 및 유지하는 방법을 보여 주는 다이어그램입니다.](../images/governance-privacy-security/encryption/flow.png)
 
 ## 전송 중인 데이터 {#in-transit}
 
-플랫폼과 모든 외부 구성 요소 간에 전송되는 모든 데이터는 HTTPS를 사용하여 안전하고 암호화된 연결을 통해 수행됩니다 [TLS v1.2](https://datatracker.ietf.org/doc/html/rfc5246).
+플랫폼과 외부 구성 요소 간에 전송 중인 모든 데이터는 HTTPS [TLS v1.2](https://datatracker.ietf.org/doc/html/rfc5246)을(를) 사용하여 안전하고 암호화된 연결을 통해 수행됩니다.
 
 일반적으로 데이터는 다음 세 가지 방법으로 플랫폼에 가져옵니다.
 
-- [데이터 수집](../../collection/home.md) 기능을 사용하면 웹 사이트 및 모바일 애플리케이션이 데이터를 Platform Edge Network으로 전송하여 수집을 준비하고 준비할 수 있습니다.
-- [소스 커넥터](../../sources/home.md) Adobe Experience Cloud 애플리케이션 및 기타 엔터프라이즈 데이터 소스에서 플랫폼으로 직접 데이터를 스트리밍합니다.
-- Adobe이 아닌 ETL(추출, 변환, 로드) 도구에서 [일괄 처리 수집 API](../../ingestion/batch-ingestion/overview.md) 소비용입니다.
+- [데이터 수집](../../collection/home.md) 기능을 사용하면 웹 사이트 및 모바일 응용 프로그램에서 스테이징 및 수집 준비를 위해 Platform Edge Network으로 데이터를 전송할 수 있습니다.
+- [Source 커넥터](../../sources/home.md) 데이터를 Adobe Experience Cloud 응용 프로그램 및 기타 엔터프라이즈 데이터 소스에서 플랫폼으로 직접 스트리밍합니다.
+- Adobe이 아닌 ETL(추출, 변환, 로드) 도구는 사용을 위해 데이터를 [일괄 처리 수집 API](../../ingestion/batch-ingestion/overview.md)에 보냅니다.
 
-데이터를 시스템으로 가져온 후 [사용하지 않을 때 암호화](#at-rest), 플랫폼 서비스는 다음과 같은 방법으로 데이터를 보강하고 내보냅니다.
+데이터가 시스템에 추가되고 [사용하지 않을 때 암호화됨](#at-rest)되면 플랫폼 서비스는 다음과 같은 방법으로 데이터를 보강하고 내보냅니다.
 
-- [대상](../../destinations/home.md) 을 사용하면 Adobe 애플리케이션 및 파트너 애플리케이션에 데이터를 활성화할 수 있습니다.
-- 과 같은 기본 플랫폼 애플리케이션 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/ajo-home) 또한 데이터를 사용할 수 있습니다.
+- [대상](../../destinations/home.md)을(를) 사용하면 Adobe 응용 프로그램 및 파트너 응용 프로그램에 데이터를 활성화할 수 있습니다.
+- [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=ko) 및 [Adobe Journey Optimizer](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/ajo-home)과 같은 기본 플랫폼 응용 프로그램에서도 데이터를 사용할 수 있습니다.
 
 ### mTLS 프로토콜 지원 {#mtls-protocol-support}
 
-이제 mTLS(상호 전송 계층 보안)를 사용하여 의 아웃바운드 연결에서 보안을 강화할 수 있습니다. [HTTP API 대상](../../destinations/catalog/streaming/http-destination.md) 및 Adobe Journey Optimizer [사용자 지정 작업](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). mTLS는 상호 인증을 위한 종단간 보안 방법으로, 정보를 공유하는 양 당사자가 데이터를 공유하기 전에 자신이 주장하는 사람임을 보장합니다. mTLS에는 TLS와 비교하여 추가 단계가 포함되어 있으며, 이 단계에서 서버는 클라이언트의 인증서를 요청하고 마지막에 검증한다.
+이제 mTLS(상호 전송 계층 보안)를 사용하여 [HTTP API 대상](../../destinations/catalog/streaming/http-destination.md) 및 Adobe Journey Optimizer [사용자 지정 작업](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions)에 대한 아웃바운드 연결에서 보안을 강화할 수 있습니다. mTLS는 상호 인증을 위한 종단간 보안 방법으로, 정보를 공유하는 양 당사자가 데이터를 공유하기 전에 자신이 주장하는 사람임을 보장합니다. mTLS에는 TLS와 비교하여 추가 단계가 포함되어 있으며, 이 단계에서 서버는 클라이언트의 인증서를 요청하고 마지막에 검증한다.
 
-원하는 경우 [Adobe Journey Optimizer 사용자 지정 작업과 함께 mTLS 사용](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) 및 Experience Platform HTTP API 대상 워크플로, Adobe Journey Optimizer 고객 작업 UI 또는 대상 UI에 입력하는 서버 주소에 TLS 프로토콜이 비활성화되어 있고 mTLS만 활성화되어야 합니다. 해당 끝점에서 TLS 1.2 프로토콜이 여전히 활성화되어 있으면 클라이언트 인증을 위한 인증서가 전송되지 않습니다. 즉, 이러한 워크플로우에서 mTLS를 사용하려면 &quot;수신&quot; 서버 엔드포인트가 mTLS여야 합니다 **전용** 연결 끝점을 사용하도록 설정했습니다.
+[Adobe Journey Optimizer 사용자 지정 작업과 함께 mTLS를 사용](https://experienceleague.adobe.com/ko/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) 및 Experience Platform HTTP API 대상 워크플로우를 사용하려면 Adobe Journey Optimizer 고객 작업 UI 또는 대상 UI에 입력하는 서버 주소에 TLS 프로토콜이 비활성화되어 있고 mTLS만 활성화되어야 합니다. 해당 끝점에서 TLS 1.2 프로토콜이 여전히 활성화되어 있으면 클라이언트 인증을 위한 인증서가 전송되지 않습니다. 즉, 이러한 워크플로에서 mTLS를 사용하려면 &quot;받는 중&quot; 서버 끝점이 mTLS **only** 사용 연결 끝점이어야 합니다.
 
 >[!IMPORTANT]
 >
@@ -57,10 +57,10 @@ CN 또는 SAN을 확인하여 추가 타사 유효성 검사를 수행하려면 
 
 ## 유휴 상태 데이터 {#at-rest}
 
-Platform에서 수집 및 사용하는 데이터는 원본 또는 파일 형식에 관계없이 시스템에서 관리하는 모든 데이터가 포함된 매우 세분화된 데이터 저장소인 데이터 레이크에 저장됩니다. 데이터 레이크에서 지속되는 모든 데이터는 격리된 위치에서 암호화, 저장 및 관리됩니다 [[!DNL Microsoft Azure Data Lake] 스토리지](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) 조직에 고유한 인스턴스.
+Platform에서 수집 및 사용하는 데이터는 원본 또는 파일 형식에 관계없이 시스템에서 관리하는 모든 데이터가 포함된 매우 세분화된 데이터 저장소인 데이터 레이크에 저장됩니다. 데이터 레이크에서 지속되는 모든 데이터는 조직에 고유한 격리된 [[!DNL Microsoft Azure Data Lake] 저장소](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) 인스턴스에서 암호화, 저장 및 관리됩니다.
 
-사용하지 않는 데이터를 Azure Data Lake Storage에서 암호화하는 방법에 대한 자세한 내용은 다음을 참조하십시오. [공식 Azure 설명서](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
+사용하지 않는 데이터를 Azure Data Lake Storage에서 암호화하는 방법에 대한 자세한 내용은 [공식 Azure 설명서](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption)를 참조하세요.
 
 ## 다음 단계
 
-이 문서는 Platform에서 데이터가 암호화되는 방식에 대한 높은 수준의 개요를 제공했습니다. Platform의 보안 절차에 대한 자세한 내용은 [거버넌스, 개인 정보 보호 및 보안](./overview.md) Experience League 시 또는 [플랫폼 보안 백서](https://www.adobe.com/content/dam/cc/en/security/pdfs/AEP_SecurityOverview.pdf).
+이 문서는 Platform에서 데이터가 암호화되는 방식에 대한 높은 수준의 개요를 제공했습니다. Platform의 보안 절차에 대한 자세한 내용은 Experience League에서 [거버넌스, 개인 정보 및 보안에 대한 개요](./overview.md)를 참조하거나 [Platform 보안 백서](https://www.adobe.com/content/dam/cc/en/security/pdfs/AEP_SecurityOverview.pdf)를 참조하십시오.

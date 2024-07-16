@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->액세스 정책은 조직의 사용자가 액세스할 수 있는 Adobe Experience Platform 대신 데이터가 에서 사용되는 방식을 제어하는 데이터 사용 정책과 혼동하지 않습니다. 만들기에 대한 안내서 참조 [데이터 사용 정책](../../../data-governance/policies/create.md) 추가 정보.
+>액세스 정책은 조직의 사용자가 액세스할 수 있는 Adobe Experience Platform 대신 데이터가 에서 사용되는 방식을 제어하는 데이터 사용 정책과 혼동하지 않습니다. 자세한 내용은 [데이터 사용 정책](../../../data-governance/policies/create.md) 만들기에 대한 안내서를 참조하세요.
 
 <!-- ## Create a new policy
 
@@ -120,29 +120,29 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 >[!IMPORTANT]
 >
->기본적으로 [!UICONTROL 자동 포함] 모든 고객에 대해 기능이 켜집니다. 즉, 모든 샌드박스가 정책에 추가됩니다.
+>기본적으로 모든 고객에 대해 [!UICONTROL 자동 포함] 기능이 설정되어 있으므로 모든 샌드박스가 정책에 추가됩니다.
 
 >[!NOTE]
 >
->다음 **[!UICONTROL 기본 레이블 기반 액세스 제어 정책]** 현재 정책에 대한 구성만 사용할 수 있습니다.
+>**[!UICONTROL Default-Label-Based-Access-Control-Policy]** 정책만 현재 구성할 수 있습니다.
 
-정책과 연결된 샌드박스를 보려면 **[!UICONTROL 정책]** 탭.
+정책과 연결된 샌드박스를 보려면 **[!UICONTROL 정책]** 탭에서 정책을 선택합니다.
 
-![사용 가능한 기존 정책 목록을 표시하는 정책 페이지](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![사용 가능한 기존 정책 목록을 표시하는 정책 페이지입니다.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-그런 다음 정책을 선택하고 **[!UICONTROL 샌드박스]** 탭. 정책과 연결된 샌드박스 목록이 표시됩니다.
+정책을 선택한 다음 **[!UICONTROL 샌드박스]** 탭을 선택합니다. 정책과 연결된 샌드박스 목록이 표시됩니다.
 
-![사용 가능한 기존 정책 목록을 표시하는 정책 페이지](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+![사용 가능한 기존 정책 목록을 표시하는 정책 페이지입니다.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
 
 ### 모든 샌드박스에 정책 추가
 
-사용 **[!UICONTROL 자동 포함]** 전환 **[!UICONTROL 샌드박스]** 모든 샌드박스에 대한 정책을 활성화하는 탭입니다.
+**[!UICONTROL 샌드박스]** 탭의 **[!UICONTROL 자동 포함]** 토글을 사용하여 모든 샌드박스에 대한 정책을 활성화합니다.
 
-![다음 [!UICONTROL 샌드박스] 다음을 표시하는 탭 [!UICONTROL 자동 포함] 토글.](../../images/flac-ui/abac-policies-auto-include.png)
+![[!UICONTROL 자동 포함] 전환을 표시하는 [!UICONTROL 샌드박스] 탭입니다.](../../images/flac-ui/abac-policies-auto-include.png)
 
-다음 **[!UICONTROL 자동 포함 활성화]** 선택 내용을 확인하는 대화 상자가 나타납니다. 선택 **[!UICONTROL 사용]** 구성 설정을 완료합니다.
+**[!UICONTROL 자동 포함 사용]** 대화 상자가 나타나 선택 내용을 확인할 수 있습니다. 구성 설정을 완료하려면 **[!UICONTROL 사용]**&#x200B;을 선택하세요.
 
-![다음 [!UICONTROL 자동 포함 활성화] 대화 상자 강조 표시 [!UICONTROL 사용].](../../images/flac-ui/abac-policies-auto-include-enable.png)
+![자동 포함 사용] 대화 상자 강조 표시 [!UICONTROL 사용].](../../images/flac-ui/abac-policies-auto-include-enable.png)[!UICONTROL 
 
 >[!SUCCESS]
 >
@@ -152,19 +152,19 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 >[!IMPORTANT]
 >
->다음 경우에 기본적으로 향후 샌드박스가 정책에 포함되지 않습니다. [!UICONTROL 자동 포함] 토글이 꺼집니다. 정책에 샌드박스를 수동으로 관리하고 추가해야 합니다.
+>[!UICONTROL 자동 포함] 토글이 꺼지면 향후 샌드박스가 기본적으로 정책에 포함되지 않습니다. 정책에 샌드박스를 수동으로 관리하고 추가해야 합니다.
 
-사용 **[!UICONTROL 자동 포함]** 전환 **[!UICONTROL 샌드박스]** 모든 샌드박스에 대한 정책을 비활성화하려면 탭을 사용하십시오.
+**[!UICONTROL 샌드박스]** 탭의 **[!UICONTROL 자동 포함]** 토글을 사용하여 모든 샌드박스에 대한 정책을 사용하지 않도록 설정합니다.
 
-![다음 [!UICONTROL 샌드박스] 다음을 표시하는 탭 [!UICONTROL 자동 포함] 토글.](../../images/flac-ui/abac-policies-auto-include.png)
+![[!UICONTROL 자동 포함] 전환을 표시하는 [!UICONTROL 샌드박스] 탭입니다.](../../images/flac-ui/abac-policies-auto-include.png)
 
-다음에서 **[!UICONTROL 샌드박스]** 탭, 선택 **[!UICONTROL 샌드박스 추가]** 이 정책이 적용될 샌드박스를 선택합니다.
+**[!UICONTROL 샌드박스]** 탭에서 **[!UICONTROL 샌드박스 추가]**&#x200B;를 선택하여 이 정책이 적용될 샌드박스를 선택합니다.
 
-![다음 [!UICONTROL 샌드박스] 정책에 추가된 샌드박스 목록을 표시하는 탭입니다.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+![정책에 추가된 샌드박스 목록을 표시하는 [!UICONTROL 샌드박스] 탭입니다.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
 
 샌드박스 목록이 나타납니다. 목록에서 추가할 샌드박스를 선택합니다. 또는 검색 창을 사용하여 샌드박스를 검색합니다. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
-![다음 [!UICONTROL 샌드박스 추가] 정책에 추가할 수 있는 기존 샌드박스 목록을 표시하는 페이지입니다.](../../images/flac-ui/abac-policies-sandboxes-list.png)
+![정책에 추가할 수 있는 기존 샌드박스 목록을 표시하는 [!UICONTROL 샌드박스 추가] 페이지입니다.](../../images/flac-ui/abac-policies-sandboxes-list.png)
 
 >[!SUCCESS]
 >
@@ -172,13 +172,13 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 ### 정책에서 샌드박스 제거
 
-샌드박스를 제거하려면 **X** 아이콘을 클릭합니다.
+샌드박스를 제거하려면 샌드박스 이름 옆에 있는 **X** 아이콘을 선택하십시오.
 
-![다음 [!UICONTROL 샌드박스] 샌드박스 목록을 표시하는 탭으로, [!UICONTROL X] 삭제.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+![샌드박스 목록을 표시하는 [!UICONTROL 샌드박스] 탭에서 삭제할 [!UICONTROL X]을(를) 강조 표시합니다.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
 
-다음 **[!UICONTROL 제거]** 선택 내용을 확인하는 대화 상자가 나타납니다. 선택 **[!UICONTROL 확인]** 제거 완료.
+**[!UICONTROL 제거]** 대화 상자가 표시되어 선택을 확인하라는 메시지가 표시됩니다. **[!UICONTROL 확인]**&#x200B;을 선택하여 제거를 완료합니다.
 
-![다음 [!UICONTROL 제거] 대화 상자 강조 표시 [!UICONTROL 확인].](../../images/flac-ui/abac-policies-remove-sandbox.png)
+![[!UICONTROL 확인]을 강조 표시하는 [!UICONTROL 제거] 대화 상자](../../images/flac-ui/abac-policies-remove-sandbox.png)
 
 >[!SUCCESS]
 >
@@ -186,23 +186,23 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 ## 정책 활성화
 
-기존 정책을 활성화하려면 다음에서 정책을 선택합니다 **[!UICONTROL 정책]** 탭.
+기존 정책을 활성화하려면 **[!UICONTROL 정책]** 탭에서 정책을 선택합니다.
 
 ![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-그런 다음 줄임표(`…`) 정책 이름 옆에 드롭다운에 역할을 편집, 활성화, 삭제 또는 복제할 컨트롤이 표시됩니다. 드롭다운에서 활성화 를 선택합니다.
+그런 다음 정책 이름 옆의 생략 부호(`…`)를 선택합니다. 드롭다운에 역할을 편집, 활성화, 삭제 또는 복제할 컨트롤이 표시됩니다. 드롭다운에서 활성화 를 선택합니다.
 
-![flac 정책 활성화](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-다음 **[!UICONTROL 정책 활성화]** 대화 상자가 나타나고 활성화를 확인하라는 메시지가 표시됩니다.
+**[!UICONTROL 정책 활성화]** 대화 상자가 나타나고 활성화를 확인하는 메시지가 표시됩니다.
 
-![flac 정책 활성화 확인](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
 
-(으)로 돌아갑니다. **[!UICONTROL 정책]** 탭과 활성화 확인 팝업이 나타납니다. 정책 상태가 활성으로 표시됩니다.
+**[!UICONTROL 정책]** 탭으로 돌아왔고 활성화 팝업이 나타납니다. 정책 상태가 활성으로 표시됩니다.
 
-![flac 정책 활성화됨](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
+![플래그 정책 활성화됨](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
 ## 다음 단계
 
-정책이 활성화되면 다음 단계로 진행할 수 있습니다 [역할에 대한 권한 관리](permissions.md).
+정책이 활성화되면 [역할에 대한 권한을 관리](permissions.md)하기 위한 다음 단계로 진행할 수 있습니다.

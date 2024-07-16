@@ -7,7 +7,7 @@ exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
 workflow-type: tm+mt
 source-wordcount: '376'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -35,18 +35,18 @@ Adobe Experience Platform은 다음과 같은 이메일 마케팅 대상을 지�
 
 ## 새 이메일 마케팅 대상에 연결 {#connect-destination}
 
-캠페인을 위한 이메일 마케팅 대상으로 대상자를 보내려면 먼저 Platform이 대상에 연결해야 합니다. 다음을 참조하십시오. [대상 만들기 튜토리얼](../../ui/connect-destination.md) 새 대상 설정에 대한 자세한 정보.
+캠페인을 위한 이메일 마케팅 대상으로 대상자를 보내려면 먼저 Platform이 대상에 연결해야 합니다. 새 대상 설정에 대한 자세한 내용은 [대상 만들기 자습서](../../ui/connect-destination.md)를 참조하십시오.
 
 ## 이메일 마케팅 대상으로 대상자를 활성화할 때의 모범 사례 {#best-practices}
 
 ### ID 선택 {#identity}
 
-Adobe은 다음 위치에서 고유 식별자를 선택할 것을 권장합니다. [유니온 스키마](../../../profile/home.md#profile-fragments-and-union-schemas). 사용자 ID를 키로 사용하는 필드입니다. 가장 일반적으로 이 필드는 이메일 주소이지만 고객 충성도 프로그램 ID 또는 전화번호일 수도 있습니다. 스키마에서 가장 일반적인 고유 식별자 및 해당 XDM 필드는 아래 표를 참조하십시오.
+Adobe [유니온 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 사용자 ID를 키로 사용하는 필드입니다. 가장 일반적으로 이 필드는 이메일 주소이지만 고객 충성도 프로그램 ID 또는 전화번호일 수도 있습니다. 스키마에서 가장 일반적인 고유 식별자 및 해당 XDM 필드는 아래 표를 참조하십시오.
 
 | 고유 식별자 | 통합 스키마의 XDM 필드 |
 |----------------- | ---------------------------|
-| Email Address | `personalEmail.address` |
-| 전화 | `mobilePhone.number` |
+| 이메일 주소 | `personalEmail.address` |
+| 휴대폰 | `mobilePhone.number` |
 | 고객 충성도 프로그램 ID | `Customer-defined XDM field` |
 
 {style="table-layout:auto"}
@@ -59,7 +59,7 @@ Adobe은 다음 위치에서 고유 식별자를 선택할 것을 권장합니�
 |------ | ---------|
 | 이름 | `person.name.firstName` |
 | 성 | `person.name.lastName` |
-| 전화 | `mobilePhone.number` |
+| 휴대폰 | `mobilePhone.number` |
 | 주소 구/군/시 | `homeAddress.city` |
 | 주소 상태 | `homeAddress.stateProvince` |
 | 주소 우편 번호 | `homeAddress.postalCode` |
@@ -74,7 +74,7 @@ Adobe은 다음 위치에서 고유 식별자를 선택할 것을 권장합니�
 
 다른 대상은 파일을 클라우드 스토리지 위치로 내보냅니다. 내보내기가 완료되면 클라우드 스토리지 위치에서 이메일 마케팅 대상으로 데이터를 가져와야 합니다.
 
-다음 링크를 따르십시오. [지원되는 이메일 마케팅 대상](#supported-destinations) 섹션을 통해 각 이메일 마케팅 대상에 대해 대상자를 활성화하는 방법을 알아보십시오.
+[지원되는 이메일 마케팅 대상](#supported-destinations) 섹션의 링크를 따라 각 이메일 마케팅 대상에 대해 대상자를 활성화하는 방법을 알아보십시오.
 
 ## 추가 리소스 {#additional-resources}
 

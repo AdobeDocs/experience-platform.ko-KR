@@ -18,7 +18,7 @@ ht-degree: 42%
 - [세그먼테이션 서비스 개요](home.md)
 - [세분화 데이터 유형](data-types.md)
 - [세그먼테이션 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
-- 세그먼테이션 API {#api}
+- 세분화 API {#api}
    - [개요](api/overview.md)
    - [시작하기](api/getting-started.md)
    - [대상자](api/audiences.md)
@@ -74,4 +74,4 @@ ht-degree: 42%
    - [세그먼트에 대한 데이터 사용 규정 준수 적용](tutorials/governance.md)
 - [자주 묻는 질문](./faq.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+- [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

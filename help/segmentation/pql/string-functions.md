@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
 title: PQL 문자열 함수
-description: PQL(프로필 쿼리 언어)은 문자열과의 상호 작용을 더 간단하게 하는 함수를 제공합니다.
+description: Profile Query Language(PQL)는 문자열과 상호 작용을 더 간단하게 하는 함수를 제공합니다.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 6%
+source-wordcount: '815'
+ht-degree: 5%
 
 ---
 
 # 문자열 함수
 
-[!DNL Profile Query Language] (PQL)은 문자열과의 상호 작용을 더 간단하게 하는 함수를 제공합니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md).
+[!DNL Profile Query Language](PQL)에서는 문자열과의 상호 작용을 더 간단하게 하는 함수를 제공합니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
 
 ## 좋아요
 
-다음 `like` 함수는 문자열이 지정된 패턴과 일치하는지 확인하는 데 사용합니다.
+`like` 함수는 문자열이 지정된 패턴과 일치하는지 확인하는 데 사용합니다.
 
 **형식**
 
@@ -27,7 +27,7 @@ ht-degree: 6%
 | 인수 | 설명 |
 | --------- | ----------- |
 | `{STRING_1}` | 확인을 수행하는 문자열입니다. |
-| `{STRING_2}` | 첫 번째 문자열과 일치하는 표현식. 표현식을 만드는 데 지원되는 두 가지 특수 문자는 다음과 같습니다. `%` 및 `_`. <ul><li>`%` 는 0개 이상의 문자를 나타내는 데 사용됩니다.</li><li>`_` 는 정확히 하나의 문자를 나타내는 데 사용됩니다.</li></ul> |
+| `{STRING_2}` | 첫 번째 문자열과 일치하는 표현식. 식을 만드는 데 지원되는 특수 문자 `%`과(와) `_`이(가) 있습니다. <ul><li>`%`은(는) 0개 이상의 문자를 나타내는 데 사용됩니다.</li><li>`_`은(는) 정확히 하나의 문자를 나타내는 데 사용됩니다.</li></ul> |
 
 **예**
 
@@ -39,7 +39,7 @@ city like "%es%"
 
 ## 다음으로 시작
 
-다음 `startsWith` 함수는 문자열이 지정된 하위 문자열로 시작하는지 확인하는 데 사용합니다.
+`startsWith` 함수는 문자열이 지정된 하위 문자열로 시작하는지 확인하는 데 사용합니다.
 
 **형식**
 
@@ -55,7 +55,7 @@ city like "%es%"
 
 **예**
 
-다음 PQL 쿼리는 대소문자 구분을 통해 개인의 이름이 &quot;Joe&quot;로 시작하는지 여부를 결정합니다.
+다음 PQL 쿼리는 대/소문자 구분을 통해 개인의 이름이 &quot;Joe&quot;로 시작하는지 여부를 결정합니다.
 
 ```sql
 person.name.startsWith("Joe")
@@ -63,7 +63,7 @@ person.name.startsWith("Joe")
 
 ## 다음으로 시작하지 않음
 
-다음 `doesNotStartWith` 함수는 문자열이 지정된 하위 문자열로 시작되지 않는지 확인하는 데 사용합니다.
+`doesNotStartWith` 함수는 문자열이 지정된 하위 문자열로 시작되지 않는지 확인하는 데 사용합니다.
 
 **형식**
 
@@ -87,7 +87,7 @@ person.name.doesNotStartWith("Joe")
 
 ## 다음으로 끝남
 
-다음 `endsWith` 함수는 문자열이 지정된 하위 문자열로 끝나는지 확인하는 데 사용합니다.
+`endsWith` 함수는 문자열이 지정된 하위 문자열로 끝나는지 확인하는 데 사용합니다.
 
 **형식**
 
@@ -111,7 +111,7 @@ person.emailAddress.endsWith(".com")
 
 ## 다음으로 끝나지 않음
 
-다음 `doesNotEndWith` 함수는 문자열이 지정된 하위 문자열로 끝나지 않은지 확인하는 데 사용합니다.
+`doesNotEndWith` 함수는 문자열이 지정된 하위 문자열로 끝나지 않은지 확인하는 데 사용합니다.
 
 **형식**
 
@@ -127,7 +127,7 @@ person.emailAddress.endsWith(".com")
 
 **예**
 
-다음 PQL 쿼리는 대소문자 구분을 통해 개인의 이메일 주소가 &quot;.com&quot;으로 끝나지 않은지 결정합니다.
+다음 PQL 쿼리는 대소문자 구분을 통해 개인의 이메일 주소가 &quot;.com&quot;으로 끝나지 않는 경우를 결정합니다.
 
 ```sql
 person.emailAddress.doesNotEndWith(".com")
@@ -135,7 +135,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## 다음 포함
 
-다음 `contains` 함수는 문자열에 지정된 하위 문자열이 포함되어 있는지 확인하는 데 사용합니다.
+`contains` 함수는 문자열에 지정된 하위 문자열이 포함되어 있는지 확인하는 데 사용합니다.
 
 **형식**
 
@@ -157,9 +157,9 @@ person.emailAddress.doesNotEndWith(".com")
 person.emailAddress.contains("2010@gm")
 ```
 
-## 다음을 포함하지 않음
+## 포함하지 않음
 
-다음 `doesNotContain` 함수는 문자열에 지정된 하위 문자열이 포함되어 있지 않은지 확인하는 데 사용합니다.
+`doesNotContain` 함수는 문자열에 지정된 하위 문자열이 포함되어 있지 않은지 확인하는 데 사용합니다.
 
 **형식**
 
@@ -181,9 +181,9 @@ person.emailAddress.contains("2010@gm")
 person.emailAddress.doesNotContain("2010@gm")
 ```
 
-## 다음과 같음
+## 같음
 
-다음 `equals` 함수는 문자열이 지정된 문자열과 같은지 확인하는 데 사용합니다.
+`equals` 함수는 문자열이 지정된 문자열과 같은지 확인하는 데 사용합니다.
 
 **형식**
 
@@ -198,7 +198,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 **예**
 
-다음 PQL 쿼리는 대소문자 구분을 통해 개인의 이름이 &quot;John&quot;인지 여부를 결정합니다.
+다음 PQL 쿼리는 대/소문자 구분을 통해 개인의 이름이 &quot;John&quot;인지 여부를 결정합니다.
 
 ```sql
 person.name.equals("John")
@@ -206,7 +206,7 @@ person.name.equals("John")
 
 ## 다음과 같지 않음
 
-다음 `notEqualTo` 함수는 문자열이 지정된 문자열과 같지 않은지 확인하는 데 사용합니다.
+`notEqualTo` 함수는 문자열이 지정된 문자열과 같지 않은지 확인하는 데 사용합니다.
 
 **형식**
 
@@ -221,7 +221,7 @@ person.name.equals("John")
 
 **예**
 
-다음 PQL 쿼리는 대소문자 구분을 통해 개인의 이름이 &quot;John&quot;이 아닌지 확인합니다.
+다음 PQL 쿼리는 대소문자 구분을 통해 개인의 이름이 &quot;John&quot;이 아님을 확인합니다.
 
 ```sql
 person.name.notEqualTo("John")
@@ -229,7 +229,7 @@ person.name.notEqualTo("John")
 
 ## 일치
 
-다음 `matches` 함수는 문자열이 특정 정규 표현식과 일치하는지 확인하는 데 사용합니다. 다음을 참조하십시오. [이 문서](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) 를 참조하십시오.
+`matches` 함수는 문자열이 특정 정규 표현식과 일치하는지 확인하는 데 사용합니다. 정규식의 일치 패턴에 대한 자세한 내용은 [이 문서](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)를 참조하십시오.
 
 **형식**
 
@@ -239,7 +239,7 @@ person.name.notEqualTo("John")
 
 **예**
 
-다음 PQL 쿼리는 대/소문자를 구분하지 않고 개인의 이름이 &quot;John&quot;으로 시작하는지 여부를 결정합니다.
+다음 PQL 쿼리는 대/소문자를 구분하지 않고 개인 이름이 &quot;John&quot;으로 시작하는지 여부를 결정합니다.
 
 ```sql
 person.name.matches("(?i)^John")
@@ -247,11 +247,11 @@ person.name.matches("(?i)^John")
 
 >[!NOTE]
 >
->다음과 같은 정규 표현식 함수를 사용하는 경우 `\w`, 본인 **필수** 백슬래시 문자를 이스케이프 처리합니다. 그러니까, 그냥 쓰는 대신 `\w`, 추가 백슬래시를 포함하고 작성해야 합니다 `\\w`.
+>`\w`과(와) 같은 정규 표현식 함수를 사용하는 경우 **반드시** 백슬래시 문자를 이스케이프 처리합니다. 따라서 `\w`만 쓰는 대신 추가 백슬래시를 포함하고 `\\w`을(를) 써야 합니다.
 
 ## 정규 표현식 그룹
 
-다음 `regexGroup` 제공된 정규 표현식을 기반으로 특정 정보를 추출하는 데 함수를 사용합니다.
+`regexGroup` 함수는 제공된 정규 표현식을 기반으로 특정 정보를 추출하는 데 사용됩니다.
 
 **형식**
 
@@ -269,8 +269,8 @@ emailAddress.regexGroup("@(\\w+)", 1)
 
 >[!NOTE]
 >
->다음과 같은 정규 표현식 함수를 사용하는 경우 `\w`, 본인 **필수** 백슬래시 문자를 이스케이프 처리합니다. 그러니까, 그냥 쓰는 대신 `\w`, 추가 백슬래시를 포함하고 작성해야 합니다 `\\w`.
+>`\w`과(와) 같은 정규 표현식 함수를 사용하는 경우 **반드시** 백슬래시 문자를 이스케이프 처리합니다. 따라서 `\w`만 쓰는 대신 추가 백슬래시를 포함하고 `\\w`을(를) 써야 합니다.
 
 ## 다음 단계
 
-이제 문자열 함수에 대해 배웠으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 함수에 대한 자세한 내용은 다음을 참조하십시오. [프로필 쿼리 언어 개요](./overview.md).
+이제 문자열 함수에 대해 배웠으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 함수에 대한 자세한 내용은 [Profile Query Language 개요](./overview.md)를 참조하십시오.

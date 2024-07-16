@@ -19,12 +19,12 @@ ht-degree: 0%
 
 # Experience Platform UI의 스트리밍 세분화
 
-다음 비디오는 스트리밍 세분화에 대한 이해를 지원하기 위한 것입니다. 여기에서는 고객 경험의 예제와 함께 의 주요 기능을 간단히 살펴볼 수 있습니다 [!DNL Platform] 인터페이스. 스트리밍 세분화 및 UI에서 스트리밍 세분화를 수행하는 방법에 대한 자세한 내용은 다음을 참조하십시오. [스트리밍 세분화 UI 안내서](../ui/streaming-segmentation.md).
+다음 비디오는 스트리밍 세분화에 대한 이해를 지원하기 위한 것입니다. 여기에는 고객 경험의 예제와 [!DNL Platform] 인터페이스의 주요 기능에 대한 빠른 둘러보기가 표시됩니다. 스트리밍 세분화 및 UI에서 스트리밍 세분화를 수행하는 방법에 대한 자세한 내용은 [스트리밍 세분화 UI 안내서](../ui/streaming-segmentation.md)를 참조하십시오.
 
-세분화 API를 사용한 스트리밍 세분화에 관심이 있는 경우 다음을 참조하십시오. [스트리밍 세분화 API 안내서](../api/streaming-segmentation.md).
+세분화 API를 사용한 스트리밍 세분화에 관심이 있는 경우 [스트리밍 세분화 API 안내서](../api/streaming-segmentation.md)를 참조하십시오.
 
 >[!NOTE]
 >
->Experience Platform 사용자 인터페이스는 자주 업데이트되며, 이 비디오 녹화 이후에 변경되었을 수 있습니다. 최신 정보는 다음을 참조하십시오. [스트리밍 세분화 UI 안내서](../ui/streaming-segmentation.md).
+>Experience Platform 사용자 인터페이스는 자주 업데이트되며, 이 비디오 녹화 이후에 변경되었을 수 있습니다. 최신 정보는 [스트리밍 세분화 UI 안내서](../ui/streaming-segmentation.md)를 참조하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)

@@ -5,7 +5,7 @@ exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '502'
-ht-degree: 65%
+ht-degree: 52%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 규칙 컨텍스트에서는 이벤트가 발생한 후 조건이 평가됩니다. 규칙이 계속 처리되려면 모든 조건이 true를 반환해야 합니다. 예외는 사용자가 명시적으로 &quot;예외&quot; 버킷에 조건을 배치하는 경우로, 이 경우 버킷 내의 모든 조건은 처리를 계속하려면 false를 반환해야 합니다.
 
@@ -29,7 +29,7 @@ ht-degree: 65%
 
 조건 유형은 일반적으로 다음과 같이 구성됩니다.
 
-1. A [보기](./views.md) 사용자가 조건에 대한 설정을 수정할 수 있는 Experience Platform UI 및 데이터 수집 UI 내에 표시됩니다.
+1. 사용자가 조건에 대한 설정을 수정할 수 있도록 허용하는 Experience Platform UI 및 데이터 수집 UI에 표시되는 [보기](./views.md).
 2. 설정을 해석하고 조건을 평가하기 위해 태그 런타임 라이브러리 내에서 전달되는 라이브러리 모듈입니다.
 
 조건 유형 라이브러리 모듈에는 &quot;참 또는 거짓 평가&quot;라는 하나의 목표가 있습니다. 평가 대상은 사용자가 결정합니다.
@@ -42,7 +42,7 @@ module.exports = function(settings) {
 };
 ```
 
-이제 Adobe Experience Platform 사용자가 호스트 이름을 구성할 수 있도록 하려는 상황을 고려해 보겠습니다. 사용자가 호스트 이름을 입력한 다음 설정 객체에 호스트 이름을 저장하도록 허용할 수 있습니다. 객체는 다음과 같을 수 있습니다.
+이제 Adobe Experience Platform 사용자가 호스트 이름을 구성할 수 있도록 하려는 상황을 생각해 보겠습니다. 사용자가 호스트 이름을 입력한 다음 설정 객체에 호스트 이름을 저장하도록 허용할 수 있습니다. 객체는 다음과 같을 수 있습니다.
 
 ```js
 {

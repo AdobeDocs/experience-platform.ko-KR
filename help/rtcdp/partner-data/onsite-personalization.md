@@ -259,11 +259,11 @@ XDM 데이터 옆에 있는 데이터베이스 아이콘을 선택하고 `pageVi
 
 #### 대상자 만들기 및 에지 세분화 설정
 
-Platform UI에서 다음으로 이동합니다. **[!UICONTROL 고객]** > **[!UICONTROL 대상]** 웹 사이트 방문자를 캡처할 대상을 만들 수 있습니다.
+Platform UI에서 **[!UICONTROL 고객]** > **[!UICONTROL 대상]**(으)로 이동하여 웹 사이트 방문자를 캡처할 대상을 만듭니다.
 
-![대상자로 이동하는 방법 보기](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+![대상자로 이동하는 방법을 봅니다.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-다음으로 대상을 설정해야 합니다. [가장자리 세분화](/help/segmentation/ui/edge-segmentation.md) 따라서 방문자가 웹 자산을 방문할 때 방문자의 대상 멤버십이 실시간으로 평가됩니다.
+방문자가 웹 속성을 방문할 때 방문자의 대상 멤버십이 실시간으로 평가되도록 대상을 [에지 세분화](/help/segmentation/ui/edge-segmentation.md)로 설정해야 합니다.
 
 에지 대상자에 대한 [활성 온 에지 병합 정책](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy)도 설정하도록 합니다.
 
@@ -287,4 +287,4 @@ Real-Time CDP에서 파트너 데이터 지원을 통해 활성화된 추가 사
 
 * [신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완](/help/rtcdp/partner-data/supplement-first-party-profiles.md)하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선합니다.
 * Real-Time CDP에서 서드파티 데이터 지원을 사용하여 [데이터 파트너의 잠재 고객 프로필로 프로필 기반을 확장하고 데이터 파트너와 협력하여 신규 고객에게 도달하거나 확보할 수 있습니다](/help/rtcdp/partner-data/prospecting.md).
-* [잠재 고객 프로필 및 잠재 고객 활성화 확장](/help/destinations/ui/activate-prospect-audiences.md) 대상을 선택합니다.
+* 대상을 선택할 수 있도록 [잠재 고객 프로필 및 잠재 고객 활성화](/help/destinations/ui/activate-prospect-audiences.md)를 확장했습니다.

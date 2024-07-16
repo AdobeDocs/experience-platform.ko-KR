@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # 카탈로그 개체 바꾸기
 
-의 내용을 덮어쓸 수 있습니다. [!DNL Catalog] 전체 리소스가 요청 페이로드로 대체되는 PUT 요청을 사용하는 개체입니다.
+전체 리소스가 요청 페이로드로 대체되는 PUT 요청을 사용하여 [!DNL Catalog] 개체의 콘텐츠를 덮어쓸 수 있습니다.
 
 >[!NOTE]
 >
->내의 몇 가지 특정 필드만 업데이트하면 되는 경우 [!DNL Catalog] PATCH 요청을 사용하는 것이 더 효율적일 수 있습니다.
+>[!DNL Catalog] 개체 내의 일부 특정 필드만 업데이트해야 하는 경우 PATCH 요청을 사용하는 것이 더 효율적일 수 있습니다.
 
 **API 형식**
 
@@ -27,7 +27,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 유형 [!DNL Catalog] 바꿀 개체입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | 대체할 [!DNL Catalog] 개체의 형식입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | 업데이트할 특정 개체의 식별자입니다. |
 
 **요청**

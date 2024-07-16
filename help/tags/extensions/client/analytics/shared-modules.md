@@ -4,8 +4,8 @@ description: Adobe Experience Platform의 Adobe Analytics 태그 확장에서 �
 exl-id: f1d7cb2b-0058-46f9-983c-079079e06057
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 77%
+source-wordcount: '425'
+ht-degree: 70%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 [Adobe Analytics 확장](./overview.md)은 Experience 애플리케이션에 통합할 수 있는 서로 다른 두 개의 [공유 모듈](../../../extension-dev/web/shared.md)을 제공합니다. 이러한 모듈은 다음 섹션에 설명되어 있습니다.
 
@@ -47,7 +47,7 @@ if (getTracker) {
 }
 ```
 
-If `getTracker` 은(는) `undefined`, Adobe Analytics 확장이 태그 라이브러리에 없습니다. Adobe Analytics가 설치되지 않은 경우 어떤 기능이 손실될 것인지를 정확하게 반영하도록 기록된 메시지를 사용자 지정할 수 있습니다.
+`getTracker`이(가) `undefined`인 경우 Adobe Analytics 확장이 태그 라이브러리에 없습니다. Adobe Analytics가 설치되지 않은 경우 어떤 기능이 손실될 것인지를 정확하게 반영하도록 기록된 메시지를 사용자 지정할 수 있습니다.
 
 
 ## [!DNL augment-tracker]

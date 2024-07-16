@@ -4,8 +4,8 @@ description: Adobe Experience Platform의 Adobe Target v2 태그 확장 기능�
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 61%
+source-wordcount: '1318'
+ht-degree: 58%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -23,9 +23,9 @@ ht-degree: 61%
 >
 >Adobe Target 확장을 사용하려면 At.js 2.x가 필요합니다.
 
-Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음 을 선택합니다 **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 클릭하고 Target 확장을 마우스로 가리킨 다음 을 선택합니다 **[!UICONTROL 설치]**.
+Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음, **[!UICONTROL 확장 > 카탈로그]**&#x200B;를 선택하고 Target 확장을 마우스로 가리킨 다음 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
 
-확장을 구성하려면 Extensions 탭을 열고 확장을 마우스로 가리킨 다음 을 선택합니다 **[!UICONTROL 구성]**.
+확장을 구성하려면 Extensions 탭을 열고 확장을 마우스로 가리킨 다음 **[!UICONTROL 구성]**&#x200B;을 선택합니다.
 
 ![](../../../images/targetv2config.png)
 
@@ -37,11 +37,11 @@ Adobe Target 확장이 아직 설치되지 않은 경우 속성을 연 다음 �
 
 #### 클라이언트 코드
 
-클라이언트 코드는 Target의 계정 식별자입니다. 이 코드는 거의 항상 기본값으로 유지해야 합니다. 데이터 요소를 사용하여 변경할 수 있습니다.
+클라이언트 코드는 Target의 계정 식별자입니다. 이 값은 거의 항상 기본값으로 유지해야 합니다. 데이터 요소를 사용하여 변경할 수 있습니다.
 
 #### 조직 ID
 
-이 ID는 구현을 Adobe Experience Cloud 계정에 연결합니다. 이 코드는 거의 항상 기본값으로 유지해야 합니다. 데이터 요소를 사용하여 변경할 수 있습니다.
+이 ID는 구현을 Adobe Experience Cloud 계정에 연결합니다. 이 값은 거의 항상 기본값으로 유지해야 합니다. 데이터 요소를 사용하여 변경할 수 있습니다.
 
 #### 서버 도메인
 
@@ -71,7 +71,7 @@ Target 확장은 규칙의 Then 부분에서 다음 작업을 제공합니다.
 
 ### 온디바이스 의사 결정으로 Target 로드
 
-Target을 로드하는 것이 적절할 수 있는 태그 규칙에 이 작업을 추가합니다. [온디바이스 의사 결정](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html) 규칙 컨텍스트에서 활성화되었습니다. 온디바이스 의사 결정이 활성화된 at.js 라이브러리가 페이지에 로드됩니다. 대부분의 구현에서 사이트의 모든 페이지에 Target을 로드해야 합니다. Adobe은 Target 호출 앞에 Target 호출이 있는 경우에만 디바이스에서 의사 결정 작업과 함께 로드 의사 결정을 사용하는 것을 권장합니다. 그렇지 않으면 Analytics 호출이 지연되는 것과 같은 문제가 발생할 수 있습니다.
+규칙 컨텍스트에서 [온디바이스 의사 결정](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html)을 사용하도록 설정한 Target을 로드하는 것이 적절할 수 있는 태그 규칙에 이 작업을 추가합니다. 온디바이스 의사 결정이 활성화된 at.js 라이브러리가 페이지에 로드됩니다. 대부분의 구현에서 사이트의 모든 페이지에 Target을 로드해야 합니다. Adobe은 Target 호출 앞에 온디바이스 의사 결정 작업이 있는 경우에만 Target 로드를 사용하는 것을 권장합니다. 그렇지 않으면 Analytics 호출이 지연되는 것과 같은 문제가 발생할 수 있습니다.
 
 구성이 필요하지 않습니다.
 
@@ -91,7 +91,7 @@ Target을 로드하는 것이 적절할 수 있는 태그 규칙에 이 작업�
 
 ### 페이지 로드 요청 실행
 
-이 작업 유형을 사용하면 Target이 페이지를 로드할 때 요청을 실행할 수 있습니다. Target 로드 작업을 먼저 사용해야 합니다.
+이 작업 유형을 사용하면 페이지가 로드될 때 Target에서 요청을 실행할 수 있습니다. Target 로드 작업을 먼저 사용해야 합니다.
 
 깜박임을 방지하기 위해 본문 숨김을 활성화할지 여부와 본문 요소를 숨길 때 사용되는 스타일을 지정해야 합니다. 다음 옵션을 사용할 수 있습니다.
 
@@ -121,7 +121,7 @@ Target 확장이 설치되면 하나 이상의 규칙을 만들어 적절하게 
 
 ## 비동기 배포를 통한 Adobe Target 확장
 
-태그는 비동기식으로 배포할 수 있습니다. Target을 통해 비동기식으로 Target 라이브러리를 로드하는 경우 태그도 비동기식으로 로드됩니다. 이 시나리오는 완벽하게 지원되지만, 처리해야 하는 한 가지 추가 고려 사항이 있습니다.
+태그는 비동기식으로 배포할 수 있습니다. Target을 통해 비동기식으로 태그 라이브러리를 로드하는 경우 Target도 비동기식으로 로드됩니다. 이 시나리오는 완벽하게 지원되지만, 처리해야 하는 한 가지 추가 고려 사항이 있습니다.
 
 비동기 배포의 경우, Target 라이브러리가 완전히 로드되고 콘텐츠 교환이 수행되기 전에 페이지에서 기본 콘텐츠 렌더링을 완료할 수 있습니다. 이렇게 하면 Target에서 지정한 개인화된 콘텐츠로 대체되기 전에 기본 콘텐츠가 잠깐 나타나는 &quot;깜박임&quot;이라고 하는 것이 나타날 수 있습니다. 이러한 깜박임이 발생하지 않도록 하려면 콘텐츠 깜박임을 방지하기 위해 코드 조각 사전 숨김을 사용하여 태그 번들을 비동기식으로 로드하는 것이 좋습니다.
 

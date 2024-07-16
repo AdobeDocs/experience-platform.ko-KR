@@ -22,7 +22,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **요청**
 
-다음 요청은 `name` / [!DNL MailChimp] 이전 단계에서 소스가 생성되었습니다.
+다음 요청은 이전 단계에서 만든 [!DNL MailChimp] 소스의 `name`을(를) 업데이트합니다.
 
 ```shell
 PUT -X GET \

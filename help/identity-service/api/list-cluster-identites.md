@@ -20,10 +20,10 @@ ht-degree: 1%
 
 단일 ID에 대해 모든 클러스터 구성원을 검색합니다.
 
-선택 사항을 사용할 수 있습니다 `graph-type` 클러스터를 가져올 id 그래프를 나타내는 매개 변수입니다. 옵션은 다음과 같습니다.
+선택적 `graph-type` 매개 변수를 사용하여 클러스터를 가져올 ID 그래프를 나타낼 수 있습니다. 옵션은 다음과 같습니다.
 
 - 없음 - ID 결합을 수행하지 않습니다.
-- 비공개 그래프 - 비공개 ID 그래프를 기반으로 ID 결합을 수행합니다. 없는 경우 `graph-type` 이(가) 제공되면 기본값입니다.
+- 비공개 그래프 - 비공개 ID 그래프를 기반으로 ID 결합을 수행합니다. `graph-type`이(가) 제공되지 않으면 기본값입니다.
 
 **API 형식**
 
@@ -33,7 +33,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **요청**
 
-옵션 1: ID를 네임스페이스(`nsId`, ID별) 및 ID 값(`id`).
+옵션 1: ID를 네임스페이스(`nsId`, ID별) 및 ID 값(`id`)으로 제공합니다.
 
 ```shell
 curl -X GET \
@@ -44,7 +44,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 2: ID를 네임스페이스(`ns`, 이름별) 및 ID 값(`id`).
+옵션 2: ID를 네임스페이스(`ns`, 이름별) 및 ID 값(`id`)으로 제공합니다.
 
 ```shell
 curl -X GET \
@@ -55,7 +55,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-옵션 3: ID를 XID(`xid`). ID의 XID를 얻는 방법에 대한 자세한 내용은 이 문서의 다음 내용 섹션을 참조하십시오 [id에 대한 XID를 가져오는 중](./list-native-id.md).
+옵션 3: ID를 XID(`xid`)로 제공합니다. ID의 XID를 얻는 방법에 대한 자세한 내용은 [ID에 대한 XID 가져오기](./list-native-id.md)에 대한 이 문서의 섹션을 참조하십시오.
 
 ```shell
 curl -X GET \
@@ -68,7 +68,7 @@ curl -X GET \
 
 ## 여러 ID에 대해 연결된 ID 가져오기
 
-사용 `POST` 을(를) 배치로 해당 `GET` 다수의 id들의 클러스터들 내의 id들을 반환하기 위해 위에서 설명된 방법.
+`POST`을(를) 위에서 설명한 `GET` 메서드와 동등한 일괄 처리로 사용하여 여러 ID 클러스터의 ID를 반환합니다.
 
 >[!NOTE]
 >
@@ -86,7 +86,7 @@ POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
 
 **스텁 요청**
 
-사용 `x-uis-cst-ctx: stub` 헤더가 스터브된 응답을 반환합니다. 이는 서비스가 완료되는 동안 조기 통합 개발 진행을 용이하게 하기 위한 임시 솔루션입니다. 더 이상 필요하지 않으면 더 이상 사용되지 않습니다.
+`x-uis-cst-ctx: stub` 헤더를 사용하면 stubbed 응답이 반환됩니다. 이는 서비스가 완료되는 동안 조기 통합 개발 진행을 용이하게 하기 위한 임시 솔루션입니다. 더 이상 필요하지 않으면 더 이상 사용되지 않습니다.
 
 ```shell
 curl -X POST \
@@ -144,7 +144,7 @@ curl -X POST \
 
 **응답**
 
-**&#39;Stubbed&#39; 응답**
+**&#39;스텁된&#39; 응답**
 
 ```json
 {
@@ -242,4 +242,4 @@ curl -X POST \
 
 ## 다음 단계
 
-다음 튜토리얼을 진행하십시오. [id 클러스터 내역 나열](./list-cluster-history.md)
+다음 자습서로 이동하여 [ID의 클러스터 내역을 나열합니다](./list-cluster-history.md)

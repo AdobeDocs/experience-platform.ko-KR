@@ -4,7 +4,7 @@ description: Adobe Admin Console을 사용하여 Adobe Experience Platform Priva
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1481'
 ht-degree: 95%
 
 ---
@@ -65,11 +65,11 @@ Privacy Service 권한을 관리하려면 [Admin Console](https://adminconsole.a
 
 프로필에 대한 권한을 편집할 때 사용 가능한 권한은 왼쪽 열에 나열되고 프로필에 포함된 권한은 오른쪽 열에 나열됩니다. 두 열 사이에 이동하려면 나열된 권한을 선택합니다.
 
-![사용 가능하고 포함된 권한 열.](./images/permissions/edit-permissions.png)
+![사용 가능한 권한 열과 포함된 권한 열입니다.](./images/permissions/edit-permissions.png)
 
 권한은 카테고리로 구성됩니다. 카테고리 간에 전환하려면 왼쪽 탐색 영역에서 원하는 카테고리를 선택합니다.
 
-![다음 [!UICONTROL 판매 거부] 섹션 아래에 표시됩니다.](./images/permissions/switch-category.png)
+![권한 아래의 [!UICONTROL 판매 거부] 섹션.](./images/permissions/switch-category.png)
 
 구성 권한을 완료하면 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 

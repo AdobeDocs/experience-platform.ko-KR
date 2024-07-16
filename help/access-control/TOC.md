@@ -8,7 +8,7 @@ role: Admin
 source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
 workflow-type: tm+mt
 source-wordcount: '127'
-ht-degree: 44%
+ht-degree: 45%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 44%
 # 액세스 제어 {#access-control}
 
 * [액세스 제어 개요](home.md)
-* 속성 기반 액세스 제어 {#abac}
+* 특성 기반 액세스 제어 {#abac}
    * [개요](abac/overview.md)
    * [전체 안내서](abac/end-to-end-guide.md)
    * [액세스 레이블을 사용하여 대상 데이터 흐름에 대한 사용자 액세스 관리](/help/access-control/abac/apply-access-labels-destinations.md)
@@ -28,7 +28,7 @@ ht-degree: 44%
       * [역할](abac/ui/roles.md)
       * [샌드박스](abac/ui/sandboxes.md)
       * [사용자](abac/ui/users.md)
-   * 속성 기반 액세스 제어 API {#abac-api}
+   * 특성 기반 액세스 제어 API {#abac-api}
       * [개요](abac/api/overview.md)
       * [시작하기](abac/api/getting-started.md)
       * [역할](abac/api/roles.md)
@@ -47,4 +47,4 @@ ht-degree: 44%
    * [유효한 정책 보기](api/effective-policies.md)
 * [문제 해결 안내서](troubleshooting-guide.md)
 * [API 참조](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

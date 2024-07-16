@@ -4,16 +4,16 @@ title: 대상 서버 구성 만들기
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '2039'
-ht-degree: 9%
+source-wordcount: '2036'
+ht-degree: 5%
 
 ---
 
 # 대상 서버 구성 만들기
 
-대상 서버를 만드는 것은 Destination SDK으로 고유한 대상을 만드는 첫 번째 단계입니다. 대상 서버에는 [server](../../functionality/destination-server/server-specs.md) 및 [템플릿](../../functionality/destination-server/templating-specs.md) 사양, [메시지 포맷](../../functionality/destination-server/message-format.md)및 [파일 서식](../../functionality/destination-server/file-formatting.md) 옵션(파일 기반 대상).
+대상 서버를 만드는 것은 Destination SDK으로 고유한 대상을 만드는 첫 번째 단계입니다. 대상 서버에는 [서버](../../functionality/destination-server/server-specs.md) 및 [템플릿](../../functionality/destination-server/templating-specs.md) 사양, [메시지 형식](../../functionality/destination-server/message-format.md) 및 [파일 형식](../../functionality/destination-server/file-formatting.md) 옵션(파일 기반 대상의 경우)에 대한 구성 옵션이 포함되어 있습니다.
 
-이 페이지는 를 사용하여 고유한 대상 서버를 만드는 데 사용할 수 있는 API 요청 및 페이로드를 예시합니다. `/authoring/destination-servers` API 엔드포인트.
+이 페이지는 `/authoring/destination-servers` API 끝점을 사용하여 고유한 대상 서버를 만드는 데 사용할 수 있는 API 요청 및 페이로드를 예시합니다.
 
 이 끝점을 통해 구성할 수 있는 기능에 대한 자세한 설명은 다음 문서를 참조하십시오.
 
@@ -24,19 +24,19 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->Destination SDK에서 지원하는 모든 매개변수 이름 및 값은 다음과 같습니다. **대소문자 구분**. 대소문자 구분 오류를 방지하려면 설명서에 표시된 대로 매개 변수 이름과 값을 정확히 사용하십시오.
+>Destination SDK에서 지원하는 모든 매개 변수 이름과 값은 **대/소문자를 구분합니다**. 대소문자 구분 오류를 방지하려면 설명서에 표시된 대로 매개 변수 이름과 값을 정확히 사용하십시오.
 
 ## 대상 서버 API 작업 시작 {#get-started}
 
-계속하기 전에 다음을 검토하십시오. [시작 안내서](../../getting-started.md) 필수 대상 작성 권한 및 필수 헤더를 가져오는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보입니다.
+계속하기 전에 [시작 안내서](../../getting-started.md)에서 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
 
 ## 대상 서버 구성 만들기 {#create}
 
-다음을 수행하여 새 대상 서버 구성을 만들 수 있습니다. `POST` 에 대한 요청 `/authoring/destination-servers` 엔드포인트.
+`/authoring/destination-servers` 끝점에 대한 `POST` 요청을 수행하여 새 대상 서버 구성을 만들 수 있습니다.
 
 >[!TIP]
 >
->**API 엔드포인트**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
+>**API 끝점**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
 **API 형식**
 
@@ -48,7 +48,7 @@ POST /authoring/destination-servers
 
 ### 정적 스키마 대상 서버 만들기 {#static-destination-servers}
 
-을 사용하는 대상에 대한 대상 서버의 예는 아래 탭에서 을 참조하십시오. [정적 스키마](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
+[정적 스키마](../../functionality/destination-configuration/schema-configuration.md#attributes-schema)를 사용하는 대상에 대한 대상 서버의 아래 예제 탭에서 참조하십시오.
 
 아래의 샘플 페이로드에는 각 대상 서버 유형에서 지원하는 모든 매개 변수가 포함되어 있습니다. 요청에 모든 매개 변수를 포함할 필요는 없습니다. 페이로드는 필요에 따라 사용자 정의할 수 있습니다.
 
@@ -94,14 +94,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 매개변수 | 유형 | 설명 |
 | -------- | ----------- | ----------- |
-| `name` | 문자열 | *필수 여부.* Adobe 시에만 표시되는 서버의 친숙한 이름을 나타냅니다. 이 이름은 파트너나 고객에게 표시되지 않습니다. 예 `Moviestar destination server`. |
-| `destinationServerType` | 문자열 | *필수 여부.* 다음으로 설정 `URL_BASED` 실시간(스트리밍) 대상의 경우. |
-| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수 여부.* <ul><li>사용 `PEBBLE_V1` Adobe에서 URL을 `value` 아래 필드. 다음과 같은 엔드포인트가 있는 경우 이 옵션을 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`, 여기서 `region` 부품은 고객마다 다를 수 있습니다. 이 경우 를 구성해야 합니다. `region` as a [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md) 다음에서 [대상 구성](../destination-configuration/create-destination-configuration.md. </li><li> 사용 `NONE` Adobe 측에 변환이 필요하지 않은 경우, 예를 들어 다음과 같은 엔드포인트가 있는 경우: `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | 문자열 | *필수 여부.* Experience Platform이 연결해야 하는 API 끝점의 주소를 입력합니다. |
-| `httpTemplate.httpMethod` | 문자열 | *필수 여부.* Adobe이 서버 호출에 사용할 메서드입니다. 옵션은 다음과 같습니다 `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
-| `httpTemplate.requestBody.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
-| `httpTemplate.requestBody.value` | 문자열 | *필수 여부.* 이 문자열은 Platform 고객의 데이터를 서비스가 기대하는 형식으로 변환하는 문자 이스케이프 처리된 버전입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 섹션 사용](../../functionality/destination-server/message-format.md#using-templating). </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> 간단한 변환의 예를 보려면 [프로필 속성](../../functionality/destination-server/message-format.md#attributes) 변환. </li></ul> |
-| `httpTemplate.contentType` | 문자열 | *필수 여부.* 서버가 허용하는 콘텐츠 유형입니다. 이 값은 다음과 같을 수 있습니다. `application/json`. |
+| `name` | 문자열 | *필수.* Adobe에 대해서만 표시되는 서버의 이름을 나타냅니다. 이 이름은 파트너나 고객에게 표시되지 않습니다. 예 `Moviestar destination server`. |
+| `destinationServerType` | 문자열 | *필수.실시간(스트리밍) 대상에 대해*&#x200B;을(를) `URL_BASED`(으)로 설정합니다. |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe이 아래 `value` 필드의 URL을 변환해야 하는 경우 `PEBBLE_V1`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있고 고객 간에 `region` 부분이 다를 수 있는 경우 이 옵션을 사용합니다. 이 경우 [대상 구성](../destination-configuration/create-destination-configuration.md)에서 `region`을(를) [고객 데이터 필드](../../functionality/destination-configuration/customer-data-fields.md)(으)로 구성해야 합니다. </li><li> Adobe 측에서 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items` 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오.</li></ul> |
+| `urlBasedDestination.url.value` | 문자열 | *필수.* Experience Platform이 연결해야 하는 API 끝점의 주소를 입력합니다. |
+| `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe이 서버 호출에 사용할 메서드입니다. 옵션은 `GET`, `PUT`, `POST`, `DELETE`, `PATCH`입니다. |
+| `httpTemplate.requestBody.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
+| `httpTemplate.requestBody.value` | 문자열 | *필수.* 이 문자열은 플랫폼 고객의 데이터를 서비스에 필요한 형식으로 변환하는 문자 이스케이프 처리된 버전입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. </li><li> 간단한 변환의 예를 보려면 [프로필 특성](../../functionality/destination-server/message-format.md#attributes) 변환을 참조하십시오. </li></ul> |
+| `httpTemplate.contentType` | 문자열 | *필수.* 서버가 허용하는 콘텐츠 형식입니다. 이 값은 `application/json`일 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -117,7 +117,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **Amazon S3 대상 서버 만들기**
 
-다음을 만들어야 합니다. [!DNL Amazon S3] 대상 서버 파일 기반 구성 시 아래에 표시된 서버와 유사 [!DNL Amazon S3] 대상.
+파일 기반 [!DNL Amazon S3] 대상을 구성할 때 아래에 표시된 것과 유사한 [!DNL Amazon S3] 대상 서버를 만들어야 합니다.
 
 +++요청
 
@@ -208,12 +208,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | 매개변수 | 유형 | 설명 |
 |---|---|---|
 | `name` | 문자열 | 대상 연결의 이름입니다. |
-| `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. 대상 [!DNL Amazon S3], 다음으로 설정 `FILE_BASED_S3`. |
-| `fileBasedS3Destination.bucket.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
-| `fileBasedS3Destination.bucket.value` | 문자열 | 의 이름입니다. [!DNL Amazon S3] 이 대상에서 사용할 버킷. |
-| `fileBasedS3Destination.path.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
+| `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. [!DNL Amazon S3]의 경우 `FILE_BASED_S3`(으)로 설정하십시오. |
+| `fileBasedS3Destination.bucket.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
+| `fileBasedS3Destination.bucket.value` | 문자열 | 이 대상에서 사용할 [!DNL Amazon S3] 버킷의 이름입니다. |
+| `fileBasedS3Destination.path.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
 | `fileBasedS3Destination.path.value` | 문자열 | 내보낸 파일을 호스팅할 대상 폴더의 경로입니다. |
-| `fileConfigurations` | N/A | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
+| `fileConfigurations` | N/A | 이러한 설정을 구성하는 방법에 대한 자세한 내용은 [파일 서식 구성](../../functionality/destination-server/file-formatting.md)을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -227,9 +227,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!TAB SFTP]
 
-**만들기 [!DNL SFTP] 대상 서버**
+**대상 서버 [!DNL SFTP]을(를) 만듭니다**
 
-다음을 만들어야 합니다. [!DNL SFTP] 대상 서버 파일 기반 구성 시 아래에 표시된 서버와 유사 [!DNL SFTP] 대상.
+파일 기반 [!DNL SFTP] 대상을 구성할 때 아래에 표시된 것과 유사한 [!DNL SFTP] 대상 서버를 만들어야 합니다.
 
 +++요청
 
@@ -318,14 +318,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | 매개변수 | 유형 | 설명 |
 |---|---|---|
 | `name` | 문자열 | 대상 연결의 이름입니다. |
-| `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. 대상 [!DNL SFTP] 대상, 다음으로 설정 `FILE_BASED_SFTP`. |
-| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
+| `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. [!DNL SFTP] 대상의 경우 `FILE_BASED_SFTP`(으)로 설정하십시오. |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
 | `fileBasedSFTPDestination.rootDirectory.value` | 문자열 | 대상 스토리지의 루트 디렉토리입니다. |
-| `fileBasedSFTPDestination.hostName.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
 | `fileBasedSFTPDestination.hostName.value` | 문자열 | 대상 스토리지의 호스트 이름입니다. |
 | `port` | 정수 | SFTP 파일 서버 포트입니다. |
 | `encryptionMode` | 문자열 | 파일 암호화를 사용할지 여부를 나타냅니다. 지원되는 값: <ul><li>PGP</li><li>None</li></ul> |
-| `fileConfigurations` | N/A | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
+| `fileConfigurations` | N/A | 이러한 설정을 구성하는 방법에 대한 자세한 내용은 [파일 서식 구성](../../functionality/destination-server/file-formatting.md)을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -337,11 +337,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++
 
->[!TAB Azure 데이터 레이크 스토리지]
+>[!TAB Azure 데이터 레이크 저장소]
 
-**만들기 [!DNL Azure Data Lake Storage] 대상 서버**
+**대상 서버 [!DNL Azure Data Lake Storage]을(를) 만듭니다**
 
-다음을 만들어야 합니다. [!DNL Azure Data Lake Storage] 대상 서버 파일 기반 구성 시 아래에 표시된 서버와 유사 [!DNL Azure Data Lake Storage] 대상.
+파일 기반 [!DNL Azure Data Lake Storage] 대상을 구성할 때 아래에 표시된 것과 유사한 [!DNL Azure Data Lake Storage] 대상 서버를 만들어야 합니다.
 
 +++요청
 
@@ -428,10 +428,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | 매개변수 | 유형 | 설명 |
 |---|---|---|
 | `name` | 문자열 | 대상 연결의 이름입니다. |
-| `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. 대상 [!DNL Azure Data Lake Storage] 대상, 다음으로 설정 `FILE_BASED_ADLS_GEN2`. |
-| `fileBasedAdlsGen2Destination.path.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
+| `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. [!DNL Azure Data Lake Storage] 대상의 경우 `FILE_BASED_ADLS_GEN2`(으)로 설정하십시오. |
+| `fileBasedAdlsGen2Destination.path.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
 | `fileBasedAdlsGen2Destination.path.value` | 문자열 | 내보낸 파일을 호스팅할 대상 폴더의 경로입니다. |
-| `fileConfigurations` | N/A | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
+| `fileConfigurations` | N/A | 이러한 설정을 구성하는 방법에 대한 자세한 내용은 [파일 서식 구성](../../functionality/destination-server/file-formatting.md)을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -445,9 +445,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!TAB Azure Blob 저장소]
 
-**만들기 [!DNL Azure Blob Storage] 대상 서버**
+**대상 서버 [!DNL Azure Blob Storage]을(를) 만듭니다**
 
-다음을 만들어야 합니다. [!DNL Azure Blob Storage] 대상 서버 파일 기반 구성 시 아래에 표시된 서버와 유사 [!DNL Azure Blob Storage] 대상.
+파일 기반 [!DNL Azure Blob Storage] 대상을 구성할 때 아래에 표시된 것과 유사한 [!DNL Azure Blob Storage] 대상 서버를 만들어야 합니다.
 
 +++요청
 
@@ -538,12 +538,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | 매개변수 | 유형 | 설명 |
 |---|---|---|
 | `name` | 문자열 | 대상 연결의 이름입니다. |
-| `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. 대상 [!DNL Azure Blob Storage] 대상, 다음으로 설정 `FILE_BASED_AZURE_BLOB`. |
-| `fileBasedAzureBlobDestination.path.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
+| `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. [!DNL Azure Blob Storage] 대상의 경우 `FILE_BASED_AZURE_BLOB`(으)로 설정하십시오. |
+| `fileBasedAzureBlobDestination.path.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
 | `fileBasedAzureBlobDestination.path.value` | 문자열 | 내보낸 파일을 호스팅할 대상 폴더의 경로입니다. |
-| `fileBasedAzureBlobDestination.container.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
-| `fileBasedAzureBlobDestination.container.value` | 문자열 | 의 이름입니다. [!DNL Azure Blob Storage] 이 대상에서 사용할 컨테이너입니다. |
-| `fileConfigurations` | N/A | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
+| `fileBasedAzureBlobDestination.container.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
+| `fileBasedAzureBlobDestination.container.value` | 문자열 | 이 대상에서 사용할 [!DNL Azure Blob Storage] 컨테이너의 이름입니다. |
+| `fileConfigurations` | N/A | 이러한 설정을 구성하는 방법에 대한 자세한 내용은 [파일 서식 구성](../../functionality/destination-server/file-formatting.md)을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -555,11 +555,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++
 
->[!TAB 데이터 랜딩 영역(DLZ)]
+>[!TAB DLZ(데이터 랜딩 영역)]
 
-**만들기 [!DNL Data Landing Zone (DLZ)] 대상 서버**
+**대상 서버 [!DNL Data Landing Zone (DLZ)]을(를) 만듭니다**
 
-다음을 만들어야 합니다. [!DNL Data Landing Zone (DLZ)] 대상 서버 파일 기반 구성 시 아래에 표시된 서버와 유사 [!DNL Data Landing Zone (DLZ)] 대상.
+파일 기반 [!DNL Data Landing Zone (DLZ)] 대상을 구성할 때 아래에 표시된 것과 유사한 [!DNL Data Landing Zone (DLZ)] 대상 서버를 만들어야 합니다.
 
 +++요청
 
@@ -647,10 +647,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | 매개변수 | 유형 | 설명 |
 |---|---|---|
 | `name` | 문자열 | 대상 연결의 이름입니다. |
-| `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. 대상 [!DNL Data Landing Zone] 대상, 다음으로 설정 `FILE_BASED_DLZ`. |
-| `fileBasedDlzDestination.path.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
+| `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. [!DNL Data Landing Zone] 대상의 경우 `FILE_BASED_DLZ`(으)로 설정하십시오. |
+| `fileBasedDlzDestination.path.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
 | `fileBasedDlzDestination.path.value` | 문자열 | 내보낸 파일을 호스팅할 대상 폴더의 경로입니다. |
-| `fileConfigurations` | N/A | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
+| `fileConfigurations` | N/A | 이러한 설정을 구성하는 방법에 대한 자세한 내용은 [파일 서식 구성](../../functionality/destination-server/file-formatting.md)을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -662,11 +662,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++
 
->[!TAB Google 클라우드 스토리지]
+>[!TAB Google 클라우드 저장소]
 
-**만들기 [!DNL Google Cloud Storage] 대상 서버**
+**대상 서버 [!DNL Google Cloud Storage]을(를) 만듭니다**
 
-다음을 만들어야 합니다. [!DNL Google Cloud Storage] 대상 서버 파일 기반 구성 시 아래에 표시된 서버와 유사 [!DNL Google Cloud Storage] 대상.
+파일 기반 [!DNL Google Cloud Storage] 대상을 구성할 때 아래에 표시된 것과 유사한 [!DNL Google Cloud Storage] 대상 서버를 만들어야 합니다.
 
 +++요청
 
@@ -757,12 +757,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | 매개변수 | 유형 | 설명 |
 |---|---|---|
 | `name` | 문자열 | 대상 연결의 이름입니다. |
-| `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. 대상 [!DNL Google Cloud Storage] 대상, 다음으로 설정 `FILE_BASED_GOOGLE_CLOUD`. |
-| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
-| `fileBasedGoogleCloudStorageDestination.bucket.value` | 문자열 | 의 이름입니다. [!DNL Google Cloud Storage] 이 대상에서 사용할 버킷. |
-| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
+| `destinationServerType` | 문자열 | 대상 플랫폼에 따라 이 값을 설정하십시오. [!DNL Google Cloud Storage] 대상의 경우 `FILE_BASED_GOOGLE_CLOUD`(으)로 설정하십시오. |
+| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
+| `fileBasedGoogleCloudStorageDestination.bucket.value` | 문자열 | 이 대상에서 사용할 [!DNL Google Cloud Storage] 버킷의 이름입니다. |
+| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
 | `fileBasedGoogleCloudStorageDestination.path.value` | 문자열 | 내보낸 파일을 호스팅할 대상 폴더의 경로입니다. |
-| `fileConfigurations` | N/A | 다음을 참조하십시오 [파일 포맷 구성](../../functionality/destination-server/file-formatting.md) 이러한 설정을 구성하는 방법에 대한 자세한 내용은 을 참조하십시오. |
+| `fileConfigurations` | N/A | 이러한 설정을 구성하는 방법에 대한 자세한 내용은 [파일 서식 구성](../../functionality/destination-server/file-formatting.md)을 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -780,7 +780,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 동적 스키마를 사용하면 지원되는 타겟 속성을 동적으로 검색하고 고유한 API를 기반으로 스키마를 생성할 수 있습니다. 스키마를 구성하려면 먼저 동적 스키마에 대한 대상 서버를 구성해야 합니다.
 
-을 사용하는 대상에 대한 대상 서버의 예는 아래 탭에서 을 참조하십시오 [동적 스키마](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
+[동적 스키마](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration)를 사용하는 대상에 대한 대상 서버의 예제 아래 탭에서 참조하십시오.
 
 아래 샘플 페이로드에는 동적 스키마 서버에 필요한 모든 매개 변수가 포함되어 있습니다.
 
@@ -790,7 +790,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **동적 스키마 서버 만들기**
 
-고유한 API 끝점에서 프로필 스키마를 검색하는 대상을 구성할 때 아래에 표시된 것과 유사한 동적 스키마 서버를 만들어야 합니다. 정적 스키마와 달리 동적 스키마는 `profileFields` 배열입니다. 대신 동적 스키마는 스키마 구성을 검색하는 위치에서 자체 API에 연결되는 동적 스키마 서버를 사용합니다.
+고유한 API 끝점에서 프로필 스키마를 검색하는 대상을 구성할 때 아래에 표시된 것과 유사한 동적 스키마 서버를 만들어야 합니다. 정적 스키마와 달리 동적 스키마는 `profileFields` 배열을 사용하지 않습니다. 대신 동적 스키마는 스키마 구성을 검색하는 위치에서 자체 API에 연결되는 동적 스키마 서버를 사용합니다.
 
 +++요청
 
@@ -826,13 +826,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 매개변수 | 유형 | 설명 |
 | -------- | ----------- | ----------- |
-| `name` | 문자열 | *필수 여부.* Adobe 시에만 표시되는 동적 스키마 서버의 친숙한 이름을 나타냅니다. |
-| `destinationServerType` | 문자열 | *필수 여부.* 다음으로 설정 `URL_BASED` 동적 스키마 서버용. |
-| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수 여부.* <ul><li>사용 `PEBBLE_V1` Adobe에서 URL을 `value` 아래 필드. 다음과 같은 엔드포인트가 있는 경우 이 옵션을 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> 사용 `NONE` Adobe 측에 변환이 필요하지 않은 경우, 예를 들어 다음과 같은 엔드포인트가 있는 경우: `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | 문자열 | *필수 여부.* 활성화 워크플로의 매핑 단계에서 Experience Platform이 연결할 API 끝점의 주소를 입력하고 스키마 필드를 검색하여 대상 필드로 채웁니다. |
-| `httpTemplate.httpMethod` | 문자열 | *필수 여부.* Adobe이 서버 호출에 사용할 메서드입니다. 동적 스키마 서버의 경우 다음을 사용합니다. `GET`. |
-| `responseFields.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
-| `responseFields.value` | 문자열 | *필수 여부.* 이 문자열은 파트너 API에서 받은 응답을 Platform UI에 표시되는 파트너 스키마로 변환하는 문자 이스케이프 변환 템플릿입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 섹션 사용](../../functionality/destination-server/message-format.md#using-templating). </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> 간단한 변환의 예를 보려면 [프로필 속성](../../functionality/destination-server/message-format.md#attributes) 변환. </li></ul> |
+| `name` | 문자열 | *필수.* 동적 스키마 서버의 알기 쉬운 이름을 나타내며, Adobe 시에만 표시됩니다. |
+| `destinationServerType` | 문자열 | *필수.동적 스키마 서버에 대해*&#x200B;을(를) `URL_BASED`(으)로 설정합니다. |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe이 아래 `value` 필드의 URL을 변환해야 하는 경우 `PEBBLE_V1`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있는 경우 이 옵션을 사용합니다. </li><li> Adobe 측에서 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items` 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오.</li></ul> |
+| `urlBasedDestination.url.value` | 문자열 | *필수.* 활성화 워크플로의 매핑 단계에서 Experience Platform이 연결할 API 끝점의 주소를 입력하고 스키마 필드를 검색하여 대상 필드로 채웁니다. |
+| `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe이 서버 호출에 사용할 메서드입니다. 동적 스키마 서버의 경우 `GET`을(를) 사용합니다. |
+| `responseFields.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
+| `responseFields.value` | 문자열 | *필수.* 이 문자열은 파트너 API에서 받은 응답을 플랫폼 UI에 표시될 파트너 스키마로 변환하는 문자 이스케이프 변환 템플릿입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. </li><li> 간단한 변환의 예를 보려면 [프로필 특성](../../functionality/destination-server/message-format.md#attributes) 변환을 참조하십시오. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -850,7 +850,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ### 동적 드롭다운 대상 서버 만들기 {#dynamic-dropdown-servers}
 
-사용 [동적 드롭다운](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) 를 사용하여 고유한 API를 기반으로 드롭다운 고객 데이터 필드를 동적으로 검색하고 채울 수 있습니다. 예를 들어 대상 연결에 사용할 기존 사용자 계정 목록을 검색할 수 있습니다.
+[동적 드롭다운](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors)을(를) 사용하여 고유한 API를 기반으로 드롭다운 고객 데이터 필드를 동적으로 검색하고 채웁니다. 예를 들어 대상 연결에 사용할 기존 사용자 계정 목록을 검색할 수 있습니다.
 
 동적 드롭다운 고객 데이터 필드를 구성하려면 먼저 동적 드롭다운에 대한 대상 서버를 구성해야 합니다.
 
@@ -923,14 +923,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 매개변수 | 유형 | 설명 |
 | -------- | ----------- | ----------- |
-| `name` | 문자열 | *필수 여부.* 동적 드롭다운 서버의 친숙한 이름을 나타내며 Adobe에만 표시됩니다. |
-| `destinationServerType` | 문자열 | *필수 여부.* 다음으로 설정 `URL_BASED` 동적 드롭다운 서버. |
-| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수 여부.* <ul><li>사용 `PEBBLE_V1` Adobe에서 URL을 `value` 아래 필드. 다음과 같은 엔드포인트가 있는 경우 이 옵션을 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> 사용 `NONE` Adobe 측에 변환이 필요하지 않은 경우, 예를 들어 다음과 같은 엔드포인트가 있는 경우: `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | 문자열 | *필수 여부.* Experience Platform이 연결해야 하는 API 끝점의 주소를 입력하고 드롭다운 값을 검색합니다. |
-| `httpTemplate.httpMethod` | 문자열 | *필수 여부.* Adobe이 서버 호출에 사용할 메서드입니다. 동적 드롭다운 서버의 경우 다음을 사용합니다. `GET`. |
+| `name` | 문자열 | *필수.* 동적 드롭다운 서버의 알기 쉬운 이름을 나타내며, Adobe 사용자에게만 표시됩니다. |
+| `destinationServerType` | 문자열 | *필수.동적 드롭다운 서버에 대해*&#x200B;을(를) `URL_BASED`(으)로 설정합니다. |
+| `urlBasedDestination.url.templatingStrategy` | 문자열 | *필수.* <ul><li>Adobe이 아래 `value` 필드의 URL을 변환해야 하는 경우 `PEBBLE_V1`을(를) 사용합니다. `https://api.moviestar.com/data/{{customerData.region}}/items`과(와) 같은 끝점이 있는 경우 이 옵션을 사용합니다. </li><li> Adobe 측에서 변환이 필요하지 않은 경우(예: `https://api.moviestar.com/data/items` 같은 끝점이 있는 경우) `NONE`을(를) 사용하십시오.</li></ul> |
+| `urlBasedDestination.url.value` | 문자열 | *필수.* Experience Platform이 연결할 API 끝점의 주소를 입력하고 드롭다운 값을 검색합니다. |
+| `httpTemplate.httpMethod` | 문자열 | *필수.* Adobe이 서버 호출에 사용할 메서드입니다. 동적 드롭다운 서버의 경우 `GET`을(를) 사용합니다. |
 | `httpTemplate.headers` | 오브젝트 | *Optiona.l* 동적 드롭다운 서버에 연결하는 데 필요한 모든 헤더를 포함합니다. |
-| `responseFields.templatingStrategy` | 문자열 | *필수 여부.*`PEBBLE_V1` 사용. |
-| `responseFields.value` | 문자열 | *필수 여부.* 이 문자열은 API에서 받은 응답을 Platform UI에 표시될 값으로 변환하는 문자 이스케이프 변환 템플릿입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 섹션 사용](../../functionality/destination-server/message-format.md#using-templating). </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7). |
+| `responseFields.templatingStrategy` | 문자열 | *필수.* `PEBBLE_V1` 사용. |
+| `responseFields.value` | 문자열 | *필수.* 이 문자열은 API에서 받은 응답을 플랫폼 UI에 표시될 값으로 변환하는 문자 이스케이프 변환 템플릿입니다. <br> <ul><li> 템플릿 작성 방법에 대한 자세한 내용은 [템플릿 사용 섹션](../../functionality/destination-server/message-format.md#using-templating)을 참조하십시오. </li><li> 문자 이스케이프에 대한 자세한 내용은 [RFC JSON 표준, 섹션 7](https://tools.ietf.org/html/rfc8259#section-7)을 참조하세요. |
 
 {style="table-layout:auto"}
 
@@ -946,11 +946,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API 오류 처리 {#error-handling}
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors) 플랫폼 문제 해결 안내서에서 확인할 수 있습니다.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 
-이 문서를 읽고 나면 이제 Destination SDK을 통해 새 대상 서버를 만드는 방법을 알 수 있습니다 `/authoring/destination-servers` API 엔드포인트.
+이 문서를 읽은 후에는 Destination SDK `/authoring/destination-servers` API 끝점을 통해 새 대상 서버를 만드는 방법을 알 수 있습니다.
 
 이 끝점으로 수행할 수 있는 작업에 대한 자세한 내용은 다음 문서를 참조하십시오.
 

@@ -4,7 +4,7 @@ title: Destination SDK으로 빌드된 스트리밍 대상에 대한 속도 제�
 exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 파트너가 빌드한 대상은 다양한 오류를 반환하고 다른 속도 제한 정책을 사용할 수 있습니다. 이 페이지에서는 Experience Platform이 스트리밍 대상에서 반환되는 다양한 유형의 오류를 처리하는 방법을 설명합니다.
 
-Destination SDK을 사용하여 대상을 구성할 때 두 가지 합계 유형 중에서 선택할 수 있습니다. [최적 작업 집계](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) 및 [구성 가능한 집계](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation). 선택하는 집계 유형에 따라 아래에서 Experience Platform이 오류 및 비율 제한을 처리하는 방법을 읽어 보십시오.
+Destination SDK을 사용하여 대상을 구성할 때 두 가지 집계 유형, 즉 [최고 작업 집계](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)와 [구성 가능한 집계](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 중에서 선택할 수 있습니다. 선택하는 집계 유형에 따라 아래에서 Experience Platform이 오류 및 비율 제한을 처리하는 방법을 읽어 보십시오.
 
 ## 최상의 작업 집계 {#best-effort-aggregation}
 
@@ -26,7 +26,7 @@ Destination SDK을 사용하여 대상을 구성할 때 두 가지 합계 유형
 * Experience Platform이 데이터를 플랫폼으로 보내려고 다시 시도하는 오류:
    * HTTP 응답 코드 420 및 429
    * 500보다 큰 HTTP 응답 코드
-* Experience Platform 오류 *다음이 아님* 데이터를 플랫폼으로 다시 보내십시오. 플랫폼이 반환한 다른 모든 데이터
+* Experience Platform *이(가) 데이터를 플랫폼으로 다시 보내지* 않는 오류: 플랫폼에서 반환된 다른 모든 오류
 
 ### 재시도 접근 방식 설명 {#retry-approach}
 

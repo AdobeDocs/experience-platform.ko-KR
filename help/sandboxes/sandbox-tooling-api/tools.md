@@ -4,8 +4,8 @@ description: 샌드박스 도구 API의 /tools 끝점을 사용하면 Adobe Expe
 exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 19%
+source-wordcount: '150'
+ht-degree: 20%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 19%
 
 샌드박스 도구를 사용하면 다양한 아티팩트를 선택하여 패키지로 내보낼 수 있습니다. 패키지는 단일 개체 또는 여러 개체로 구성될 수 있습니다. 패키지에 포함되는 모든 개체는 동일한 샌드박스에서 가져온 개체여야 합니다.
 
-다음 `/tools` 샌드박스 도구 API의 끝점을 사용하면 작업 JSON 데이터를 나열하고 검색할 수 있습니다.
+샌드박스 도구 API의 `/tools` 끝점을 사용하면 작업 JSON 데이터를 나열하고 검색할 수 있습니다.
 
 ## 작업 세부 정보 {#details}
 
-작업 JSON 데이터를 독립적으로 가져오려면 다음을 위한 GET 요청을 수행합니다. `/tools` 을(를) 종단하여 작업의 ID를 제공하십시오.
+작업 JSON 데이터를 독립적으로 가져오려면 `/tools` 끝점에 GET 요청을 하고 작업 ID를 제공합니다.
 
 **API 형식**
 
@@ -31,7 +31,7 @@ GET /tools/job/{JOB_ID}
 
 **요청**
 
-다음 요청은 다음에 대한 정보를 검색합니다. {JOB_ID}.
+다음 요청은 {JOB_ID}에 대한 정보를 검색합니다.
 
 ```shell
 curl -X GET \
@@ -43,7 +43,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 쿼리된 작업 ID에 대한 세부 정보를 반환하여 다음과 같이 실시간 상태 업데이트를 제공합니다. `completedTasks` 및 `failedTasks` 작업이 진행됨에 따라 업데이트됩니다.
+성공한 응답은 쿼리된 작업 ID에 대한 세부 정보를 반환하며, 작업이 진행됨에 따라 `completedTasks` 및 `failedTasks`이(가) 업데이트됨에 따라 실시간 상태 업데이트를 제공합니다.
 
 ```json
 {

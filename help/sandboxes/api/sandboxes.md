@@ -14,15 +14,15 @@ ht-degree: 3%
 
 # 샌드박스 관리 엔드포인트
 
-Adobe Experience Platform의 샌드박스는 프로덕션 환경에 영향을 주지 않고 기능을 테스트하고 실험을 실행하며 사용자 지정 구성을 만들 수 있는 격리된 개발 환경을 제공합니다. 다음 `/sandboxes` 의 엔드포인트 [!DNL Sandbox] API를 사용하면 플랫폼에서 샌드박스를 프로그래밍 방식으로 관리할 수 있습니다.
+Adobe Experience Platform의 샌드박스는 프로덕션 환경에 영향을 주지 않고 기능을 테스트하고 실험을 실행하며 사용자 지정 구성을 만들 수 있는 격리된 개발 환경을 제공합니다. [!DNL Sandbox] API의 `/sandboxes` 끝점을 사용하면 플랫폼에서 샌드박스를 프로그래밍 방식으로 관리할 수 있습니다.
 
 ## 시작하기
 
-이 안내서에 사용된 API 끝점은 [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). 계속하기 전에 다음을 검토하십시오. [시작 안내서](./getting-started.md) 관련 설명서에 대한 링크, 이 문서의 샘플 API 호출 읽기에 대한 안내서 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보입니다.
+이 가이드에 사용된 API 끝점은 [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
 ## 샌드박스 목록 검색 {#list}
 
-에 GET 요청을 하여 조직에 속한 모든 샌드박스를 나열할 수 있습니다(활성 또는 기타). `/sandboxes` 엔드포인트.
+`/sandboxes` 끝점에 GET 요청을 하여 조직에 속한 모든 샌드박스(활성 또는 기타)를 나열할 수 있습니다.
 
 **API 형식**
 
@@ -32,7 +32,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | 매개변수 | 설명 |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | 결과를 필터링 기준으로 사용할 선택적 쿼리 매개 변수입니다. 의 섹션을 참조하십시오. [쿼리 매개 변수](./appendix.md#query) 추가 정보. |
+| `{QUERY_PARAMS}` | 결과를 필터링 기준으로 사용할 선택적 쿼리 매개 변수입니다. 자세한 내용은 [쿼리 매개 변수](./appendix.md#query)의 섹션을 참조하십시오. |
 
 **요청**
 
@@ -47,7 +47,7 @@ curl -X GET \
 
 **응답**
 
-성공적인 응답은 다음과 같은 세부 정보를 포함하여 조직에 속한 샌드박스 목록을 반환합니다. `name`, `title`, `state`, 및 `type`.
+응답이 성공하면 `name`, `title`, `state` 및 `type`과(와) 같은 세부 정보를 포함하여 조직에 속한 샌드박스 목록이 반환됩니다.
 
 ```json
 {
@@ -130,14 +130,14 @@ curl -X GET \
 | --- | --- |
 | `name` | 샌드박스의 이름. 이 속성은 API 호출에서 조회 목적으로 사용됩니다. |
 | `title` | 샌드박스의 표시 이름입니다. |
-| `state` | 샌드박스의 현재 처리 상태입니다. 샌드박스의 상태는 다음 중 하나일 수 있습니다. <br/><ul><li>`creating`: 샌드박스가 생성되었지만 시스템에 의해 아직 프로비저닝되고 있습니다.</li><li>`active`: 샌드박스가 생성되고 활성화됩니다.</li><li>`failed`: 오류로 인해 시스템에서 샌드박스를 프로비저닝할 수 없어 샌드박스가 비활성화되었습니다.</li><li>`deleted`: 샌드박스가 수동으로 비활성화되었습니다.</li></ul> |
-| `type` | 샌드박스 유형. 현재 지원되는 샌드박스 유형은 다음과 같습니다 `development` 및 `production`. |
+| `state` | 샌드박스의 현재 처리 상태입니다. 샌드박스의 상태는 다음 중 하나일 수 있습니다. <br/><ul><li>`creating`: 샌드박스가 만들어졌지만 시스템에 의해 아직 프로비저닝되고 있습니다.</li><li>`active`: 샌드박스가 만들어지고 활성 상태입니다.</li><li>`failed`: 오류로 인해 시스템에서 샌드박스를 프로비저닝할 수 없어 샌드박스가 비활성화되었습니다.</li><li>`deleted`: 샌드박스를 수동으로 사용하지 않도록 설정했습니다.</li></ul> |
+| `type` | 샌드박스 유형. 현재 지원되는 샌드박스 유형은 `development` 및 `production`입니다. |
 | `isDefault` | 이 샌드박스가 조직의 기본 프로덕션 샌드박스인지 여부를 나타내는 부울 속성. |
 | `eTag` | 샌드박스의 특정 버전에 대한 식별자. 버전 제어 및 캐싱 효율성에 사용되며 이 값은 샌드박스가 변경될 때마다 업데이트됩니다. |
 
 ## 샌드박스 조회 {#lookup}
 
-샌드박스를 포함하는 GET 요청을 만들어 개별 샌드박스를 조회할 수 있습니다. `name` 요청 경로의 속성입니다.
+요청 경로에 샌드박스의 `name` 속성을 포함하는 GET 요청을 만들어 개별 샌드박스를 조회할 수 있습니다.
 
 **API 형식**
 
@@ -147,7 +147,7 @@ GET /sandboxes/{SANDBOX_NAME}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 다음 `name` 조회할 샌드박스의 속성입니다. |
+| `{SANDBOX_NAME}` | 조회할 샌드박스의 `name` 속성입니다. |
 
 **요청**
 
@@ -163,7 +163,7 @@ curl -X GET \
 
 **응답**
 
-성공한 응답은 다음을 포함하여 샌드박스의 세부 정보를 반환합니다. `name`, `title`, `state`, 및 `type`.
+성공한 응답은 `name`, `title`, `state` 및 `type`을(를) 포함하여 샌드박스의 세부 정보를 반환합니다.
 
 ```json
 {
@@ -185,8 +185,8 @@ curl -X GET \
 | --- | --- |
 | `name` | 샌드박스의 이름. 이 속성은 API 호출에서 조회 목적으로 사용됩니다. |
 | `title` | 샌드박스의 표시 이름입니다. |
-| `state` | 샌드박스의 현재 처리 상태입니다. 샌드박스의 상태는 다음 중 하나일 수 있습니다. <ul><li>**생성 중**: 샌드박스가 생성되었지만 시스템에 의해 아직 프로비저닝되고 있습니다.</li><li>**활성**: 샌드박스가 생성되고 활성화됩니다.</li><li>**실패**: 오류로 인해 시스템에서 샌드박스를 프로비저닝할 수 없어 샌드박스가 비활성화되었습니다.</li><li>**삭제됨**: 샌드박스가 수동으로 비활성화되었습니다.</li></ul> |
-| `type` | 샌드박스 유형. 현재 지원되는 샌드박스 유형은 다음과 같습니다. `development` 및 `production`. |
+| `state` | 샌드박스의 현재 처리 상태입니다. 샌드박스의 상태는 다음 중 하나일 수 있습니다. <ul><li>**만들기**: 샌드박스가 만들어졌지만 시스템에 의해 아직 프로비저닝되고 있습니다.</li><li>**활성**: 샌드박스가 만들어지고 활성 상태입니다.</li><li>**실패**: 오류로 인해 시스템에서 샌드박스를 프로비저닝할 수 없으며 비활성화되었습니다.</li><li>**삭제됨**: 샌드박스가 수동으로 비활성화되었습니다.</li></ul> |
+| `type` | 샌드박스 유형. 현재 지원되는 샌드박스 유형은 `development` 및 `production`입니다. |
 | `isDefault` | 이 샌드박스가 조직의 기본 샌드박스인지 여부를 나타내는 부울 속성. 일반적으로 프로덕션 샌드박스입니다. |
 | `eTag` | 샌드박스의 특정 버전에 대한 식별자. 버전 제어 및 캐싱 효율성에 사용되며 이 값은 샌드박스가 변경될 때마다 업데이트됩니다. |
 
@@ -194,13 +194,13 @@ curl -X GET \
 
 >[!NOTE]
 >
->새 샌드박스가 생성되면 먼저 의 제품 프로필에 해당 새 샌드박스를 추가해야 합니다 [Adobe Admin Console](https://adminconsole.adobe.com/) 새 샌드박스 사용을 시작하기 전에 다음에서 설명서를 참조하십시오. [제품 프로필에 대한 권한 관리](../../access-control/ui/permissions.md) 제품 프로필에 샌드박스를 프로비저닝하는 방법에 대한 정보입니다.
+>새 샌드박스가 만들어지면 새 샌드박스 사용을 시작하려면 먼저 [Adobe Admin Console](https://adminconsole.adobe.com/)에서 제품 프로필에 새 샌드박스를 추가해야 합니다. 제품 프로필에 샌드박스를 프로비저닝하는 방법에 대한 자세한 내용은 [제품 프로필에 대한 권한 관리](../../access-control/ui/permissions.md)에 대한 설명서를 참조하십시오.
 
-에 POST 요청을 하여 새 개발 또는 프로덕션 샌드박스를 만들 수 있습니다. `/sandboxes` 엔드포인트.
+`/sandboxes` 끝점에 대한 POST 요청을 만들어 새 개발 또는 프로덕션 샌드박스를 만들 수 있습니다.
 
 ### 개발 샌드박스 만들기
 
-개발 샌드박스를 생성하려면 다음을 제공해야 합니다. `type` 값이 인 속성 `development` 요청 페이로드에서.
+개발 샌드박스를 만들려면 요청 페이로드에 `development` 값이 있는 `type` 특성을 제공해야 합니다.
 
 **API 형식**
 
@@ -230,11 +230,11 @@ curl -X POST \
 | --- | --- |
 | `name` | 향후 요청에서 샌드박스에 액세스하는 데 사용할 식별자. 이 값은 고유해야 하며 가능한 한 수사적으로 만드는 것이 좋습니다. 이 값에는 공백이나 특수 문자를 사용할 수 없습니다. |
 | `title` | Platform 사용자 인터페이스에서 표시 목적으로 사용되는 사람이 인식할 수 있는 이름. |
-| `type` | 만들 샌드박스 유형입니다. 비프로덕션 샌드박스의 경우 이 값은 다음과 같아야 합니다. `development`. |
+| `type` | 만들 샌드박스 유형입니다. 비프로덕션 샌드박스의 경우 이 값은 `development`이어야 합니다. |
 
 **응답**
 
-성공적인 응답은 새로 생성된 샌드박스의 세부 정보를 반환하며 `state` 은(는) &quot;생성 중&quot;입니다.
+성공한 응답은 새로 만든 샌드박스의 세부 정보를 반환하며 해당 `state`이(가) &quot;만들기&quot; 중임을 표시합니다.
 
 ```json
 {
@@ -248,11 +248,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->샌드박스는 시스템에서 프로비저닝되는 데 약 30초가 걸리고 그 이후에는 `state` 은 &quot;활성&quot; 또는 &quot;실패&quot;가 됩니다.
+>샌드박스는 시스템에서 프로비저닝되는 데 약 30초가 걸리고 그 후 `state`이(가) &quot;활성&quot; 또는 &quot;실패&quot;됩니다.
 
 ### 프로덕션 샌드박스 만들기
 
-프로덕션 샌드박스를 만들려면 다음을 제공해야 합니다. `type` 값이 인 속성 `production` 요청 페이로드에서.
+프로덕션 샌드박스를 만들려면 요청 페이로드에 `production` 값이 있는 `type` 특성을 제공해야 합니다.
 
 **API 형식**
 
@@ -283,11 +283,11 @@ curl -X POST \
 | --- | --- |
 | `name` | 향후 요청에서 샌드박스에 액세스하는 데 사용할 식별자. 이 값은 고유해야 하며 가능한 한 수사적으로 만드는 것이 좋습니다. 이 값에는 공백이나 특수 문자를 사용할 수 없습니다. |
 | `title` | Platform 사용자 인터페이스에서 표시 목적으로 사용되는 사람이 인식할 수 있는 이름. |
-| `type` | 만들 샌드박스 유형입니다. 프로덕션 샌드박스의 경우 이 값은 다음과 같아야 합니다. `production`. |
+| `type` | 만들 샌드박스 유형입니다. 프로덕션 샌드박스의 경우 이 값은 `production`이어야 합니다. |
 
 **응답**
 
-성공적인 응답은 새로 생성된 샌드박스의 세부 정보를 반환하며 `state` 은(는) &quot;생성 중&quot;입니다.
+성공한 응답은 새로 만든 샌드박스의 세부 정보를 반환하며 해당 `state`이(가) &quot;만들기&quot; 중임을 표시합니다.
 
 ```json
 {
@@ -301,15 +301,15 @@ curl -X POST \
 
 >[!NOTE]
 >
->샌드박스는 시스템에서 프로비저닝되는 데 약 30초가 걸리고 그 이후에는 `state` 은 &quot;활성&quot; 또는 &quot;실패&quot;가 됩니다.
+>샌드박스는 시스템에서 프로비저닝되는 데 약 30초가 걸리고 그 후 `state`이(가) &quot;활성&quot; 또는 &quot;실패&quot;됩니다.
 
 ## 샌드박스 업데이트 {#put}
 
-샌드박스를 포함하는 PATCH 요청을 만들어 샌드박스에서 하나 이상의 필드를 업데이트할 수 있습니다 `name` 요청 경로 및 요청 페이로드에서 업데이트할 속성입니다.
+요청 경로에 샌드박스의 `name`을(를) 포함하고 PATCH 페이로드에서 업데이트할 속성을 포함하는 요청 요청을 만들어 샌드박스에 있는 하나 이상의 필드를 업데이트할 수 있습니다.
 
 >[!NOTE]
 >
->현재는 샌드박스만 `title` 속성을 업데이트할 수 있습니다.
+>현재 샌드박스의 `title` 속성만 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -319,11 +319,11 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 다음 `name` 업데이트할 샌드박스의 속성입니다. |
+| `{SANDBOX_NAME}` | 업데이트할 샌드박스의 `name` 속성입니다. |
 
 **요청**
 
-다음 요청은 `title` &quot;acme&quot;라는 샌드박스의 속성입니다.
+다음 요청은 &quot;acme&quot;라는 샌드박스의 `title` 속성을 업데이트합니다.
 
 ```shell
 curl -X PATCH \
@@ -353,7 +353,7 @@ curl -X PATCH \
 
 ## 샌드박스 재설정 {#reset}
 
-샌드박스에는 샌드박스에서 기본값이 아닌 모든 리소스를 삭제하는 &quot;공장 재설정&quot; 기능이 있습니다. 샌드박스를 포함하는 PUT 요청을 수행하여 샌드박스를 재설정할 수 있습니다 `name` 요청 경로에서.
+샌드박스에는 샌드박스에서 기본값이 아닌 모든 리소스를 삭제하는 &quot;공장 재설정&quot; 기능이 있습니다. PUT 경로에 샌드박스의 `name`을(를) 포함하는 요청 요청을 만들어 샌드박스를 재설정할 수 있습니다.
 
 **API 형식**
 
@@ -363,8 +363,8 @@ PUT /sandboxes/{SANDBOX_NAME}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 다음 `name` 재설정할 샌드박스의 속성입니다. |
-| `validationOnly` | 실제 요청을 하지 않고 샌드박스 재설정 작업에 대해 사전 확인을 수행할 수 있는 선택적 매개 변수입니다. 이 매개 변수를 다음으로 설정 `validationOnly=true` 을(를) 사용하여 재설정하려는 샌드박스에 Adobe Analytics, Adobe Audience Manager 또는 세그먼트 공유 데이터가 포함되어 있는지 확인합니다. |
+| `{SANDBOX_NAME}` | 재설정할 샌드박스의 `name` 속성입니다. |
+| `validationOnly` | 실제 요청을 하지 않고 샌드박스 재설정 작업에 대해 사전 확인을 수행할 수 있는 선택적 매개 변수입니다. 이 매개 변수를 `validationOnly=true`(으)로 설정하여 재설정하려는 샌드박스에 Adobe Analytics, Adobe Audience Manager 또는 세그먼트 공유 데이터가 포함되어 있는지 확인합니다. |
 
 **요청**
 
@@ -392,7 +392,7 @@ curl -X PUT \
 >
 >샌드박스가 재설정되면 시스템에서 프로비저닝하는 데 약 30초가 소요됩니다.
 
-성공한 응답은 업데이트된 샌드박스의 세부 정보를 반환하며 `state` 은(는) &quot;재설정 중&quot;입니다.
+성공한 응답은 업데이트된 샌드박스의 세부 정보를 반환하며 해당 `state`이(가) &quot;재설정 중&quot;임을 표시합니다.
 
 ```json
 {
@@ -405,7 +405,7 @@ curl -X PUT \
 }
 ```
 
-기본 프로덕션 샌드박스와 사용자가 만든 모든 프로덕션 샌드박스는 그 안에 호스팅되는 ID 그래프가 Adobe Analytics에서 용으로 사용되는 경우에도 재설정할 수 없습니다. [CDA(Cross Device Analytics)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 기능 또는 ID 그래프 내에서 호스팅되는 를 Adobe Audience Manager에서 [사용자 기반 대상(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) 기능.
+Adobe Analytics Adobe Audience Manager 기본 프로덕션 샌드박스와 사용자가 만든 모든 프로덕션 샌드박스는 ID 그래프 내에서 호스팅되는 것이 [CDA(Cross Device Analytics)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 기능에도 사용되는 경우 또는 ID 그래프 내에서 호스팅되는 것이 [PBD(People Based Destinations)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) 기능에도 사용되는 경우 재설정할 수 없습니다.
 
 다음은 샌드박스가 재설정되지 않도록 할 수 있는 가능한 예외 목록입니다.
 
@@ -432,7 +432,7 @@ curl -X PUT \
 }
 ```
 
-과 공유하는 양방향 세그먼트에 사용되는 프로덕션 샌드박스를 재설정하도록 진행할 수 있습니다 [!DNL Audience Manager] 또는 [!DNL Audience Core Service] 를 추가하여 `ignoreWarnings` 매개 변수를 요청에 추가합니다.
+`ignoreWarnings` 매개 변수를 요청에 추가하여 [!DNL Audience Manager] 또는 [!DNL Audience Core Service]과(와) 공유하는 양방향 세그먼트에 사용되는 프로덕션 샌드박스를 재설정할 수 있습니다.
 
 **API 형식**
 
@@ -442,8 +442,8 @@ PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 다음 `name` 재설정할 샌드박스의 속성입니다. |
-| `ignoreWarnings` | 유효성 검사를 건너뛰고 와 공유하는 양방향 세그먼트에 사용되는 프로덕션 샌드박스를 강제로 재설정할 수 있는 선택적 매개 변수입니다 [!DNL Audience Manager] 또는 [!DNL Audience Core Service]. 이 매개 변수는 기본 프로덕션 샌드박스에 적용할 수 없습니다. |
+| `{SANDBOX_NAME}` | 재설정할 샌드박스의 `name` 속성입니다. |
+| `ignoreWarnings` | 유효성 검사를 건너뛰고 [!DNL Audience Manager] 또는 [!DNL Audience Core Service]과(와) 공유하는 양방향 세그먼트에 사용되는 프로덕션 샌드박스를 강제로 다시 설정할 수 있는 선택적 매개 변수입니다. 이 매개 변수는 기본 프로덕션 샌드박스에 적용할 수 없습니다. |
 
 **요청**
 
@@ -463,7 +463,7 @@ curl -X PUT \
 
 **응답**
 
-성공한 응답은 업데이트된 샌드박스의 세부 정보를 반환하며 `state` 은(는) &quot;재설정 중&quot;입니다.
+성공한 응답은 업데이트된 샌드박스의 세부 정보를 반환하며 해당 `state`이(가) &quot;재설정 중&quot;임을 표시합니다.
 
 ```json
 {
@@ -480,13 +480,13 @@ curl -X PUT \
 
 >[!IMPORTANT]
 >
->기본 프로덕션 샌드박스는 삭제할 수 없습니다.
+>기본 프로덕션 샌드박스를 삭제할 수 없습니다.
 
-샌드박스를 포함하는 DELETE 요청을 만들어 샌드박스를 삭제할 수 있습니다 `name` 요청 경로에서.
+DELETE 경로에 샌드박스의 `name`을(를) 포함하는 요청 요청을 만들어 샌드박스를 삭제할 수 있습니다.
 
 >[!NOTE]
 >
->이 API 호출을 수행하면 샌드박스의 `status` 속성을 &quot;삭제&quot;로 변경하고 비활성화합니다. GET 요청은 삭제된 후에도 샌드박스의 세부 정보를 검색할 수 있습니다.
+>이 API 호출을 수행하면 샌드박스의 `status` 속성이 &quot;삭제됨&quot;으로 업데이트되고 비활성화됩니다. GET 요청은 삭제된 후에도 샌드박스의 세부 정보를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -496,9 +496,9 @@ DELETE /sandboxes/{SANDBOX_NAME}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 다음 `name` 을(를) 삭제하려는 샌드박스 입니다. |
-| `validationOnly` | 실제 요청을 하지 않고 샌드박스 삭제 작업에 대해 사전 확인을 수행할 수 있는 선택적 매개 변수입니다. 이 매개 변수를 다음으로 설정 `validationOnly=true` 을(를) 사용하여 재설정하려는 샌드박스에 Adobe Analytics, Adobe Audience Manager 또는 세그먼트 공유 데이터가 포함되어 있는지 확인합니다. |
-| `ignoreWarnings` | 유효성 검사를 건너뛰고 와 공유하는 양방향 세그먼트에 사용되는 사용자가 만든 프로덕션 샌드박스를 강제로 삭제할 수 있는 선택적 매개 변수입니다 [!DNL Audience Manager] 또는 [!DNL Audience Core Service]. 이 매개 변수는 기본 프로덕션 샌드박스에 적용할 수 없습니다. |
+| `{SANDBOX_NAME}` | 삭제할 샌드박스의 `name`입니다. |
+| `validationOnly` | 실제 요청을 하지 않고 샌드박스 삭제 작업에 대해 사전 확인을 수행할 수 있는 선택적 매개 변수입니다. 이 매개 변수를 `validationOnly=true`(으)로 설정하여 재설정하려는 샌드박스에 Adobe Analytics, Adobe Audience Manager 또는 세그먼트 공유 데이터가 포함되어 있는지 확인합니다. |
+| `ignoreWarnings` | 유효성 검사를 건너뛰고 [!DNL Audience Manager] 또는 [!DNL Audience Core Service]과(와) 공유하는 양방향 세그먼트에 사용되는 사용자가 만든 프로덕션 샌드박스를 강제로 삭제할 수 있는 선택적 매개 변수입니다. 이 매개 변수는 기본 프로덕션 샌드박스에 적용할 수 없습니다. |
 
 **요청**
 
@@ -514,7 +514,7 @@ curl -X DELETE \
 
 **응답**
 
-성공한 응답은 샌드박스의 업데이트된 세부 정보를 반환하며 `state` 은(는) &quot;삭제됨&quot;입니다.
+성공한 응답이 샌드박스의 업데이트된 세부 정보를 반환하여 해당 `state`이(가) &quot;삭제됨&quot;임을 표시합니다.
 
 ```json
 {

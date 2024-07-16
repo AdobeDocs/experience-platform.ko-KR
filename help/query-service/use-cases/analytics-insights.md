@@ -4,22 +4,22 @@ description: 이 문서에서는 쿼리 서비스를 사용하여 수집된 Adob
 exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '237'
 ht-degree: 1%
 
 ---
 
 # 웹 및 모바일 상호 작용에 대한 Analytics 통찰력
 
-Adobe Experience Platform에서는 XDM(경험 데이터 모델) 필드를 사용하여 Adobe Analytics 보고서 세트에서 데이터를 수집하여 데이터 세트를 채울 수 있습니다. 이 분석 데이터는 다음 내용에 부합하도록 수정됩니다. [!DNL XDM ExperienceEvent] 클래스. 그런 다음 쿼리 서비스에서 SQL 쿼리를 실행하여 이 데이터를 사용하여 디지털 플랫폼에 대한 사용자 동작으로부터 중요한 통찰력을 생성할 수 있습니다.
+Adobe Experience Platform에서는 XDM(경험 데이터 모델) 필드를 사용하여 Adobe Analytics 보고서 세트에서 데이터를 수집하여 데이터 세트를 채울 수 있습니다. 이 분석 데이터는 [!DNL XDM ExperienceEvent] 클래스에 맞게 수정되었습니다. 그런 다음 쿼리 서비스에서 SQL 쿼리를 실행하여 이 데이터를 사용하여 디지털 플랫폼에 대한 사용자 동작으로부터 중요한 통찰력을 생성할 수 있습니다.
 
 이 문서에서는 웹 및 모바일 Analytics 데이터에서 통찰력을 생성할 때 일반적인 사용 사례를 보여 주는 다양한 샘플 SQL 쿼리를 제공합니다.
 
-다음을 참조하십시오. [Analytics 필드 매핑 설명서](../../sources/connectors/adobe-applications/mapping/analytics.md) analytics 데이터 수집 및 매핑에 대한 자세한 내용은 를 참조하십시오.
+분석 데이터 수집 및 매핑에 대한 자세한 내용은 [분석 필드 매핑 설명서](../../sources/connectors/adobe-applications/mapping/analytics.md)를 참조하십시오.
 
 ## 시작하기
 
-다음 각 사용 사례에 대해 사용자 정의할 템플릿으로 매개 변수가 있는 SQL 쿼리 예제가 제공됩니다. 표시되는 모든 위치에 매개 변수를 제공합니다. `{ }` 평가하려는 데이터 세트, eVar, 이벤트 또는 시간대에 대한 SQL 예제.
+다음 각 사용 사례에 대해 사용자 정의할 템플릿으로 매개 변수가 있는 SQL 쿼리 예제가 제공됩니다. 평가하려는 데이터 세트, eVar, 이벤트 또는 시간대에 대한 SQL 예제에서 `{ }`이(가) 표시되는 모든 위치에 매개 변수를 제공합니다.
 
 ## 목표
 

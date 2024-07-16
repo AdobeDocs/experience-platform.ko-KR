@@ -3,8 +3,8 @@ title: Adobe Experience Platform Assurance 개요
 description: Adobe Experience Platform Assurance를 사용하면 모바일 애플리케이션 내에서 데이터를 수집하거나 경험을 제공하는 방식을 검사하고, 증명하고, 시뮬레이션하고, 검증할 수 있습니다.
 exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '824'
+workflow-type: tm+mt
+source-wordcount: '808'
 ht-degree: 100%
 
 ---

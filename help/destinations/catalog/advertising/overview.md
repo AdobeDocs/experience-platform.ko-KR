@@ -1,16 +1,16 @@
 ---
 keywords: 광고 대상;대상;플랫폼 대상
-title: 광고 대상 개요
+title: Advertising 대상 개요
 description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 이러한 플랫폼에 익명 대상을 공유합니다.'
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
 source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
 source-wordcount: '263'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 광고 대상 개요 {#advertising-destinations}
+# Advertising 대상 개요 {#advertising-destinations}
 
 ## 개요 {#overview}
 
@@ -22,17 +22,17 @@ Adobe Experience Platform을 수요 측 플랫폼(DSP), 공급 측 플랫폼(SSP
 
 현재 Experience Platform은 아래에 나열된 광고 대상을 지원합니다.
 
-연결과 확장의 차이점을 이해하려면 [연결](../../destination-types.md#connections) 대상 유형 및 범주 페이지에서 참조할 수 있습니다.
+연결과 확장의 차이점을 이해하려면 대상 유형 및 범주 페이지에서 [연결](../../destination-types.md#connections)을 참조하십시오.
 
 ### 연결
 
 * [Adobe Advertising Cloud 연결](adobe-advertising-cloud-connection.md)
-* [(베타) Amazon 광고 연결](amazon-ads.md)
-* [(베타) 크리테오 연결](criteo.md)
+* [(Beta) Amazon 광고 연결](amazon-ads.md)
+* [(Beta) 크리테오 연결](criteo.md)
 * [Google Display &amp; Video 360 연결](google-dv360.md)
 * [Google 광고 연결](google-ads-destination.md)
 * [Google Ad Manager 연결](google-ad-manager.md)
-* [(베타) Google Ad Manager 360 연결](google-ad-manager-360-connection.md)
+* [(Beta) Google Ad Manager 360 연결](google-ad-manager-360-connection.md)
 * [Google Customer Match 연결](google-customer-match.md)
 * [Microsoft Bing 연결](bing.md)
 * [Pinterest 고객 목록 연결](pinterest.md)
@@ -46,7 +46,7 @@ Adobe Experience Platform을 수요 측 플랫폼(DSP), 공급 측 플랫폼(SSP
 
 * [Adobe Advertising Cloud 확장](adobe-advertising-cloud.md)
 * [Awin Advertising 변환 태그 확장](awin-conversiontag.md)
-* [Awin Advertising Mastertag 확장](awin-mastertag.md)
+* [Awin Advertising 마스터태그 확장](awin-mastertag.md)
 * [Bing Ads 범용 이벤트 추적 확장](bing-ads.md)
 * [분기 확장](branch.md)
 * [DoubleClick Floodlight 확장](doubleclick-floodlight.md)
@@ -60,4 +60,4 @@ Adobe Experience Platform을 수요 측 플랫폼(DSP), 공급 측 플랫폼(SSP
 
 ## 새 광고 대상에 연결 {#connect-destination}
 
-캠페인을 위해 대상을 광고 대상으로 보내려면 먼저 플랫폼에서 대상에 연결해야 합니다. 다음을 참조하십시오. [대상 만들기 튜토리얼](../../ui/connect-destination.md) 새 대상 설정에 대한 자세한 정보.
+캠페인을 위해 대상을 광고 대상으로 보내려면 먼저 플랫폼에서 대상에 연결해야 합니다. 새 대상 설정에 대한 자세한 내용은 [대상 만들기 자습서](../../ui/connect-destination.md)를 참조하십시오.

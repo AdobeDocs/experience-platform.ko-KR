@@ -1,5 +1,5 @@
 ---
-title: Adobe Target을 통한 개인화
+title: Adobe Target을 통한 Personalization
 description: Server API를 사용하여 Adobe Target에서 생성된 개인화된 경험을 전달하고 렌더링하는 방법에 대해 알아봅니다.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
 source-git-commit: ddffe9bf30741b457f7de1099b50ac1624fca927
@@ -9,29 +9,29 @@ ht-degree: 1%
 
 ---
 
-# Adobe Target을 통한 개인화
+# Adobe Target을 통한 Personalization
 
 ## 개요 {#overview}
 
-Edge Network Server API는 의 도움을 받아 Adobe Target에서 생성된 개인화된 경험을 제공하고 렌더링할 수 있습니다. [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
+Edge Network 서버 API는 [양식 기반 경험 작성기](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)의 도움을 받아 Adobe Target에서 만들어진 개인화된 경험을 전달하고 렌더링할 수 있습니다.
 
 >[!IMPORTANT]
 >
->을(를) 통해 생성된 개인화 경험 [Target VEC(시각적 경험 작성기)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 는 서버 API에서 완전히 지원되지 않습니다. 서버 API는 **검색** VEC에서 만든 활동이지만 서버 API에서는 만들 수 없습니다. **렌더링** VEC에서 만든 활동. VEC에서 만든 활동을 렌더링하려면 를 구현하십시오. [하이브리드 개인화](../web-sdk/personalization/hybrid-personalization.md) 웹 SDK 및 Edge Network Server API 사용.
+>[Target VEC(시각적 경험 작성기)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)를 통해 만들어진 Personalization 경험은 서버 API에서 완전히 지원되지 않습니다. 서버 API는 VEC에서 만든 활동을 **검색**&#x200B;할 수 있지만 서버 API는 VEC에서 만든 활동을 **렌더링**&#x200B;할 수 없습니다. VEC에서 만든 활동을 렌더링하려면 Web SDK 및 Edge Network 서버 API를 사용하여 [하이브리드 개인화](../web-sdk/personalization/hybrid-personalization.md)를 구현하십시오.
 
 ## 데이터 스트림 구성 {#configure-your-datastream}
 
 Adobe Target과 함께 서버 API를 사용하려면 먼저 데이터 스트림 구성에서 Adobe Target 개인화를 활성화해야 합니다.
 
-다음을 참조하십시오. [데이터스트림에 서비스 추가 가이드](../datastreams/overview.md#adobe-target-settings): Adobe Target 활성화 방법에 대한 자세한 정보를 제공합니다.
+Adobe Target 사용 방법에 대한 자세한 내용은 [데이터 스트림에 서비스 추가 가이드](../datastreams/overview.md#adobe-target-settings)를 참조하십시오.
 
-데이터 스트림을 구성할 때 다음에 대한 값을 제공할 수 있습니다(선택 사항). [!DNL Property Token], [!DNL Target Environment ID], 및 [!DNL Target Third Party ID Namespace].
+데이터 스트림을 구성할 때 [!DNL Property Token], [!DNL Target Environment ID] 및 [!DNL Target Third Party ID Namespace]에 대한 값을 제공할 수 있습니다(선택적).
 
-![Adobe Target이 선택된 상태에서 데이터 스트림 서비스 구성 화면을 표시하는 UI 이미지](assets/target-datastream.png)
+Adobe Target이 선택된 상태에서 데이터 스트림 서비스 구성 화면을 표시하는 ![UI 이미지](assets/target-datastream.png)
 
 ## 사용자 지정 매개 변수 {#custom-parameters}
 
-에 있는 대부분의 필드 [!DNL XDM] 각 요청의 일부는 점 표기법으로 일련화된 다음 사용자 정의 또는 로 Target에 전송됩니다 [!DNL mbox] 매개 변수.
+각 요청의 [!DNL XDM] 부분에 있는 대부분의 필드는 점 표기법으로 serialize된 다음 사용자 지정 또는 [!DNL mbox] 매개 변수로 Target에 전송됩니다.
 
 
 ### 예 {#custom-parameters-example}
@@ -56,7 +56,7 @@ Target에서 대상을 만들 때 다음 값을 사용자 지정 매개 변수�
 
 ## Target 프로필 업데이트 {#profile-update}
 
-다음 [!DNL Server API] Target 프로필에 대한 업데이트를 허용합니다. Target 프로필을 업데이트하려면에서 프로필 데이터가 전달되었는지 확인합니다. `data` 다음 형식의 요청 부분입니다.
+[!DNL Server API]에서 대상 프로필을 업데이트할 수 있습니다. Target 프로필을 업데이트하려면 프로필 데이터가 다음 형식의 요청의 `data` 부분으로 전달되었는지 확인하십시오.
 
 ```json
 "data":  {
@@ -71,7 +71,7 @@ Target에서 대상을 만들 때 다음 값을 사용자 지정 매개 변수�
 
 ### 스키마 {#schemas}
 
-요청의 쿼리 부분은 Target에서 반환되는 콘텐츠를 결정합니다. 아래 `personalization` 개체, `schemas` target에서 반환할 콘텐츠의 유형을 결정합니다.
+요청의 쿼리 부분은 Target에서 반환되는 콘텐츠를 결정합니다. `personalization` 개체 아래에서 `schemas`은(는) Target에서 반환할 콘텐츠의 형식을 결정합니다.
 
 어떤 종류의 오퍼를 검색할지 확실하지 않은 경우 Edge Network에 대한 개인화 쿼리에 4개의 스키마를 모두 포함해야 합니다.
 
@@ -79,18 +79,18 @@ Target에서 대상을 만들 때 다음 값을 사용자 지정 매개 변수�
 https://ns.adobe.com/personalization/html-content-item
 * **JSON 기반 오퍼:**
 https://ns.adobe.com/personalization/json-content-item
-* **Target 리디렉션 오퍼**
+* **리디렉션 오퍼 타깃팅**
 https://ns.adobe.com/personalization/redirect-item
-* **Target DOM 조작 오퍼**
+* **DOM 조작 오퍼 타깃팅**
 https://ns.adobe.com/personalization/dom-action
 
 ### 결정 범위 {#decision-scopes}
 
-Adobe Target [!DNL mbox] 이름은 다음에 포함되어야 합니다. `decisionScopes` 적절한 컨텐츠를 반환하는 배열.
+적절한 콘텐츠를 반환하려면 Adobe Target [!DNL mbox] 이름이 `decisionScopes` 배열에 포함되어야 합니다.
 
 #### 예 {#decision-scopes-example}
 
-아래 예에서는 네 가지 오퍼 유형이 모두 이라는 Target 활동과 함께 요청됩니다. `serverapimbox`.
+아래 예제에서는 `serverapimbox`(이)라는 Target 활동과 함께 네 가지 오퍼 형식을 모두 요청합니다.
 
 ```json
 "query":{
@@ -199,7 +199,7 @@ curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### 응답 {#response}
 
-Edge Network는 아래 응답과 유사한 응답을 반환합니다.
+Edge Network은 아래 응답과 유사한 응답을 반환합니다.
 
 ```json
 {
@@ -270,9 +270,9 @@ Edge Network는 아래 응답과 유사한 응답을 반환합니다.
 }
 ```
 
-방문자가 Adobe Target에 전송된 데이터를 기반으로 개인화 활동을 수행할 수 있는 경우 관련 활동 콘텐츠가 `handle` 객체. 여기서 유형은 입니다. `personalization:decisions`.
+방문자가 Adobe Target에 전송된 데이터를 기반으로 개인화 활동을 사용할 수 있는 경우 관련 활동 콘텐츠가 `handle` 개체에서 검색됩니다. 여기서 유형은 `personalization:decisions`입니다.
 
-경우에 따라 다른 콘텐츠가 아래에 반환됩니다. `handle` 또한. 다른 콘텐츠 유형은 Target 개인화와 관련이 없습니다. 방문자가 여러 활동을 수행할 수 있는 경우 각 활동은 별개입니다 `personalization` 배열에 있는 개체입니다.
+`handle`에서도 다른 콘텐츠가 반환되는 경우가 있습니다. 다른 콘텐츠 유형은 Target 개인화와 관련이 없습니다. 방문자가 여러 활동을 수행할 수 있는 경우 각 활동은 배열에서 별도의 `personalization` 개체가 됩니다.
 
 아래 표는 응답의 해당 부분에 대한 주요 요소를 설명합니다.
 
@@ -290,6 +290,6 @@ Edge Network는 아래 응답과 유사한 응답을 반환합니다.
 
 ## 서버측 개인화 샘플 애플리케이션 {#sample}
 
-에 있는 샘플 애플리케이션 [이 URL](https://github.com/adobe/alloy-samples/tree/main/target/personalization-server-side) Adobe Experience Platform을 사용하여 Adobe Target에서 개인화 콘텐츠를 가져오는 방법을 보여 줍니다. 웹 페이지는 반환된 개인화 콘텐츠에 따라 변경됩니다.
+[이 URL](https://github.com/adobe/alloy-samples/tree/main/target/personalization-server-side)에 있는 샘플 응용 프로그램은 Adobe Experience Platform을 사용하여 Adobe Target에서 개인화 콘텐츠를 가져오는 방법을 보여 줍니다. 웹 페이지는 반환된 개인화 콘텐츠에 따라 변경됩니다.
 
-이 샘플은 _아님_ 과 같은 클라이언트측 라이브러리에 의존 [!DNL Web SDK] 을 클릭하여 개인화 콘텐츠를 가져옵니다. 대신 Adobe Experience Platform API를 사용하여 개인화 콘텐츠를 가져옵니다. 그런 다음 반환된 개인화 컨텐츠를 기반으로 HTML 서버측을 생성합니다.
+이 샘플은 [!DNL Web SDK]과(와) 같은 클라이언트측 라이브러리에 의존하여 개인화 콘텐츠를 가져오지 _않습니다_. 대신 Adobe Experience Platform API를 사용하여 개인화 콘텐츠를 가져옵니다. 그런 다음 반환된 개인화 컨텐츠를 기반으로 HTML 서버측을 생성합니다.

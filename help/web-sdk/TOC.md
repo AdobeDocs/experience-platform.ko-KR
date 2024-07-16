@@ -18,13 +18,13 @@ ht-degree: 22%
 
 * [Web SDK 개요](home.md)
 * [릴리스 정보](release-notes.md)
-* Web SDK 설치 {#install}
+* 웹 SDK 설치 {#install}
    * [개요](install/overview.md)
    * [태그 확장을 사용하여 웹 SDK 설치](install/extension.md)
    * [JavaScript 라이브러리를 사용하여 웹 SDK 설치](install/library.md)
    * [NPM 패키지를 사용하여 Web SDK 설치](install/npm.md)
 * 명령 {#commands}
-   * 구성 {#configure}
+   * {#configure} 구성
       * [개요](commands/configure/overview.md)
       * [클릭콜렉션활성화됨](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)
@@ -64,7 +64,7 @@ ht-degree: 22%
    * [데이터 스트림 재정의 구성](commands/datastream-overrides.md)
    * [명령 응답](commands/command-responses.md)
 
-* 신원 {#identity}
+* ID {#identity}
    * [개요](identity/overview.md)
    * [자사 디바이스 ID](identity/first-party-device-ids.md)
    * [모바일-웹 및 도메인 간 ID 공유](identity/id-sharing.md)
@@ -92,7 +92,7 @@ ht-degree: 22%
       * [Web SDK에서 웹 인앱 메시지 지원 구성](personalization/web-in-app-messaging.md)
 
 * 동의 {#consent}
-   * IAB 투명성 및 동의 프레임워크 2.0 {#iab-tcf}
+   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
       * [개요](consent/iab-tcf/overview.md)
       * [태그와 통합](consent/iab-tcf/with-tags.md)
       * [태그 없이 통합](consent/iab-tcf/without-tags.md)

@@ -7,13 +7,13 @@ exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 4%
+ht-degree: 10%
 
 ---
 
-# [!UICONTROL 웹 인터랙션] 데이터 유형
+# [!UICONTROL 웹 인터랙션] 데이터 형식
 
-[!UICONTROL 웹 인터랙션] 는 초기 페이지 로드가 완료된 후 웹 페이지에서 발생한 상호 작용에 대한 정보를 설명하는 표준 경험 데이터 모델(XDM) 데이터 유형입니다. 단일 페이지 웹 앱(SPA)과 같이 새 페이지 로드를 트리거하지 않는 리치 웹 애플리케이션에서 상호 작용을 기록하기 위한 것입니다.
+[!UICONTROL 웹 상호 작용]은(는) 초기 페이지 로드가 완료된 후 웹 페이지에서 발생한 상호 작용에 대한 정보를 설명하는 표준 XDM(경험 데이터 모델) 데이터 형식입니다. 단일 페이지 웹 앱(SPA)과 같이 새 페이지 로드를 트리거하지 않는 리치 웹 애플리케이션에서 상호 작용을 기록하기 위한 것입니다.
 
 <img src="../images/data-types/web-interaction.PNG" width="500" /><br />
 

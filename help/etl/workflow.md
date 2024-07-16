@@ -6,7 +6,7 @@ description: 다양한 ETL(추출, 변환 및 로드) 도구는 형식이 다를
 exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 다음 다이어그램은 일반적인 ETL 작업과 표준 상호 작용을 기반으로 하는 일반적인 사용자 경험의 모형을 제공합니다. 이러한 이미지는 특정 ETL 사용자 경험에 맞게 쉽게 조정할 수 있습니다.
 
-아래에 설명된 작업은 다음 단계에 요약된 단계에 설명되어 있습니다. [ETL 통합 안내서](home.md). 일부 단계는 특정 &quot;그림&quot;을 참조하고 다른 단계는 여기에 표시된 워크플로와 유사한 작업을 설명합니다.
+아래 표시된 작업은 [ETL 통합 안내서](home.md)에 설명된 단계에 설명되어 있습니다. 일부 단계는 특정 &quot;그림&quot;을 참조하고 다른 단계는 여기에 표시된 워크플로와 유사한 작업을 설명합니다.
 
 ### 그림 1 - 새 Adobe Experience Platform 커넥터 구성:
 
@@ -33,11 +33,11 @@ ht-degree: 0%
 
 ![](images/image4.png)
 
-### 그림 4 - 새로운 변환 UI, 선택 [!DNL Experience Platform] 연결:
+### 그림 4 - 새 변환 UI, [!DNL Experience Platform] 연결 선택:
 
 ![](images/image5.png)
 
-### 그림 5 - 소스 찾아보기 [!DNL Experience Platform] 데이터 세트:
+### 그림 5 - 소스 [!DNL Experience Platform] 데이터 세트 찾아보기:
 
 ![](images/image6.png)
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 ![](images/image10.png)
 
-### 그림 10 - 정의 [!DNL Experience Data Model] (XDM) 타겟 데이터 세트:
+### 그림 10 - [!DNL Experience Data Model](XDM) 대상 데이터 세트 정의:
 
 ![](images/image11.png)
 

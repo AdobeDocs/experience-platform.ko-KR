@@ -4,14 +4,14 @@ description: 감사 쿼리 API를 사용하여 Experience Platform에서 감사 
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
 source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 5%
+source-wordcount: '158'
+ht-degree: 3%
 
 ---
 
 # 감사 이벤트 목록 내보내기
 
-에 GET 요청을 하여 이벤트 데이터를 검색할 수 있습니다. `/audit/export` 페이로드에서 검색할 이벤트를 지정하는 엔드포인트.
+페이로드에서 검색할 이벤트를 지정하여 `/audit/export` 끝점에 대한 GET 요청을 수행하면 이벤트 데이터를 검색할 수 있습니다.
 
 **API 형식**
 
@@ -41,4 +41,4 @@ curl -X POST \
 
 **응답**
 
-내보내기를 위해 결과가 CSV 파일로 생성됩니다. 성공적인 응답은 응답 본문이 없는 HTTP 307을 반환합니다. 내보내기 파일에 대한 링크는에 제공됩니다. `Location` 응답 헤더.
+내보내기를 위해 결과가 CSV 파일로 생성됩니다. 성공적인 응답은 응답 본문이 없는 HTTP 307을 반환합니다. 내보내기 파일에 대한 링크는 `Location` 응답 헤더에 제공됩니다.

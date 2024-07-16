@@ -2,7 +2,7 @@
 keywords: Experience Platform;홈;인기 항목;IP 주소;IP 주소;IP 주소 허용 목록; 허용 목록
 description: 소스 커넥터를 사용하기 전에 허용 목록에 IP 주소를 추가해야 합니다.
 solution: Experience Platform
-title: 소스 연결을 위한 IP 주소 허용 목록
+title: Source 연결에 대한 IP 주소 허용 목록
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 source-git-commit: bcd74083169c40966d7de8ba7b79082931a6744d
 workflow-type: tm+mt
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 ## 스트리밍 소스에 대한 IP 주소 허용 목록 {#streaming}
 
-스트리밍 소스의 데이터 전송 서비스에 대한 트래픽을 허용하려면 허용 목록에 다음 IP 주소를 추가해야 합니다. [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md), 및 [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+[[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) 및 [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md)과(와) 같은 스트리밍 소스에 대한 데이터 전송 서비스에 트래픽을 허용하려면 다음 IP 주소를 허용 목록에 추가해야 합니다.
 
 >[!BEGINTABS]
 

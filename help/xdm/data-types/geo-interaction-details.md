@@ -7,21 +7,21 @@ exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
-# [!UICONTROL 지리적 인터랙션 세부 정보] 데이터 유형
+# [!UICONTROL 지역 상호 작용 세부 정보] 데이터 형식
 
-[!UICONTROL 지리적 인터랙션 세부 정보] 는 지리적으로 정의된 영역에 포함된 현재 상태를 설명하는 표준 XDM 데이터 유형입니다.
+[!UICONTROL 지리적 인터랙션 세부 정보]는 지리적으로 정의된 영역에 포함된 현재 상태를 설명하는 표준 XDM 데이터 형식입니다.
 
 <img src="../images/data-types/geo-interaction-details.png" width="400" /><br />
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
-| `geoShape` | [[!UICONTROL 지역 모습]](./geo-shape.md) | 상호 작용 중인 영역의 지역 모양을 설명합니다. 이 필드는 상자, 원 또는 다각형을 설명할 수 있습니다. |
-| `deviceGeoAccuracy` | 이중 | 지리 측정 장치 또는 메커니즘의 정확도(측정단위: 미터). |
-| `distanceToCenter` | 이중 | 지역 서클의 경우 지역 중심까지의 거리(미터 단위)입니다. |
+| `geoShape` | [[!UICONTROL 지역 셰이프]](./geo-shape.md) | 상호 작용 중인 영역의 지역 모양을 설명합니다. 이 필드는 상자, 원 또는 다각형을 설명할 수 있습니다. |
+| `deviceGeoAccuracy` | 더블 | 지리 측정 디바이스 또는 메커니즘의 정확도(측정단위: 미터). |
+| `distanceToCenter` | 더블 | 지역 서클의 경우 지역 중심까지의 거리(미터 단위)입니다. |
 
 {style="table-layout:auto"}
 

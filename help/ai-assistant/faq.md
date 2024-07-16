@@ -1,7 +1,8 @@
 ---
 title: AI Assistant FAQ
 description: AI Assistant와 관련하여 자주 묻는 질문에 대한 답변에 대해 알아봅니다
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 17a07c11-7bc6-4cba-be0a-d75fdb567053
+source-git-commit: da5a4e099909d7994b9bbe408a70039d34c14b50
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -16,14 +17,14 @@ ht-degree: 0%
 
 AI 비서 응답에 제시된 데이터는 매일 업데이트됩니다. 즉, 응답의 데이터는 응답 시 Experience Platform 사용자 인터페이스에 표시될 수 있는 데이터보다 최대 24시간 더 오래될 수 있습니다.
 
-액세스 제어에도 동일한 원칙이 적용됩니다. AI Assistant에 액세스 제어 및 권한 구성의 변경 사항을 반영하는 데 최대 24시간이 걸릴 수 있습니다. 자세한 내용은 의 안내서를 참조하십시오. [ai Assistant의 개인 정보 보호](./privacy.md).
+액세스 제어에도 동일한 원칙이 적용됩니다. AI Assistant에 액세스 제어 및 권한 구성의 변경 사항을 반영하는 데 최대 24시간이 걸릴 수 있습니다. 자세한 내용은 [AI Assistant의 개인 정보 보호](./privacy.md)에 대한 안내서를 참조하십시오.
 
 ## AI Assistant는 어떤 Adobe 애플리케이션을 지원합니까?
 
 현재 AI Assistant의 범위는 다음과 같습니다.
 
 * [제품 지식](./home.md#product-knowledge): AI Assistant는 Experience Platform, Real-time Customer Data Platform 및 Adobe Journey Optimizer에 대한 제품 지식 질문에 답변할 수 있습니다. Customer Journey Analytics을 위해 제품 지식 항목을 자세히 살펴볼 수도 있지만, Customer Journey Analytics UI를 통해서만 가능합니다.
-* [Operational insights](./home.md#operational-insights): 속성, 대상, 데이터 흐름, 데이터 세트, 대상, 여정, 스키마 및 소스와 같은 데이터 개체에 대한 작동 통찰력에 대한 질문이 있는 경우 AI Assistant에 질문할 수 있습니다.
+* [작동 인사이트](./home.md#operational-insights): 특성, 대상, 데이터 흐름, 데이터 세트, 대상, 여정, 스키마 및 원본과 같은 데이터 개체에 대한 작동 인사이트에 대한 질문과 함께 AI Assistant에 물을 수 있습니다.
 
 ## AI Assistant의 기능은 무엇입니까?
 

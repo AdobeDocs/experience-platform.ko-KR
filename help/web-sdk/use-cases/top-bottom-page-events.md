@@ -33,11 +33,11 @@ ht-degree: 1%
 
 ## 페이지 상단 이벤트 예 {#top-of-page}
 
-아래 코드 샘플은 개인화를 요청하지만 요청하지 않는 페이지 이벤트 구성의 맨 위를 나타냅니다 [디스플레이 이벤트 보내기](../personalization/display-events.md#send-sendEvent-calls) 자동으로 렌더링된 제안에 사용됩니다. 다음 [이벤트 표시](../personalization/display-events.md#send-sendEvent-calls) 은 페이지 하단 이벤트의 일부로 전송됩니다.
+아래 코드 샘플은 개인화를 요청하지만 자동으로 렌더링된 제안에 대해 [디스플레이 이벤트를 전송](../personalization/display-events.md#send-sendEvent-calls)하지 않는 페이지 이벤트 구성의 맨 위를 나타냅니다. [디스플레이 이벤트](../personalization/display-events.md#send-sendEvent-calls)은(는) 페이지 하단 이벤트의 일부로 전송됩니다.
 
 >[!BEGINTABS]
 
->[!TAB 페이지 상단 이벤트]
+>[!TAB 페이지 이벤트 상단]
 
 ```js
 alloy("sendEvent", {
@@ -51,9 +51,9 @@ alloy("sendEvent", {
 
 | 매개 변수 | 필수/선택 사항 | 설명 |
 |---|---|---|
-| `type` | 필수 여부 | 이 매개 변수를 다음으로 설정 `decisioning.propositionFetch`. 이 특수 이벤트 유형은 Adobe Analytics에 이 이벤트를 삭제하도록 지시합니다. Customer Journey Analytics을 사용할 때 이러한 이벤트를 삭제하도록 필터를 설정할 수도 있습니다. |
-| `renderDecisions` | 필수 여부 | 이 매개 변수를 다음으로 설정 `true`. 이 매개 변수는 Edge Network에서 반환한 결정을 렌더링하도록 Web SDK에 지시합니다. |
-| `personalization.sendDisplayEvent` | 필수 여부 | 이 매개 변수를 다음으로 설정 `false`. 이렇게 하면 디스플레이 이벤트의 전송이 중지됩니다. |
+| `type` | 필수 여부 | 이 매개 변수를 `decisioning.propositionFetch`(으)로 설정하십시오. 이 특수 이벤트 유형은 Adobe Analytics에 이 이벤트를 삭제하도록 지시합니다. Customer Journey Analytics을 사용할 때 이러한 이벤트를 삭제하도록 필터를 설정할 수도 있습니다. |
+| `renderDecisions` | 필수 여부 | 이 매개 변수를 `true`(으)로 설정하십시오. 이 매개 변수는 Web SDK에 Edge Network이 반환하는 결정을 렌더링하도록 합니다. |
+| `personalization.sendDisplayEvent` | 필수 여부 | 이 매개 변수를 `false`(으)로 설정하십시오. 이렇게 하면 디스플레이 이벤트의 전송이 중지됩니다. |
 
 >[!ENDTABS]
 
@@ -63,11 +63,11 @@ alloy("sendEvent", {
 
 >[!TAB 자동 렌더링된 제안]
 
-아래 코드 샘플은 페이지에 자동으로 렌더링되었지만 에서 디스플레이 이벤트가 억제된 제안에 대한 디스플레이 이벤트를 전송하는 페이지 이벤트 구성의 아래쪽을 나타냅니다 [페이지 상단](#top-of-page) 이벤트.
+아래 코드 샘플은 페이지에 자동으로 렌더링되었지만 [페이지 상단](#top-of-page) 이벤트에서 표시 이벤트가 억제된 제안에 대한 표시 이벤트를 보내는 페이지 이벤트 구성의 아래쪽을 나타냅니다.
 
 >[!NOTE]
 >
->이 시나리오에서는 페이지 이벤트의 하단을 호출해야 합니다 _이후_ 1페이지의 맨 위에 있습니다. 그러나 페이지 하단의 이벤트는 페이지 1의 상단이 완료될 때까지 기다릴 필요가 없습니다.
+>이 시나리오에서는 페이지 이벤트 _after_&#x200B;의 하단을 페이지 이벤트의 상단으로 호출해야 합니다. 그러나 페이지 하단의 이벤트는 페이지 1의 상단이 완료될 때까지 기다릴 필요가 없습니다.
 
 ```js
 alloy("sendEvent", {
@@ -80,7 +80,7 @@ alloy("sendEvent", {
 
 | 매개변수 | 필수/선택 사항 | 설명 |
 |---|---|---|
-| `personalization.includeRenderedPropositions` | 필수 여부 | 이 매개 변수를 다음으로 설정 `true`. 이렇게 하면 페이지 이벤트의 맨 위에서 억제된 표시 이벤트를 보낼 수 있습니다. |
+| `personalization.includeRenderedPropositions` | 필수 여부 | 이 매개 변수를 `true`(으)로 설정하십시오. 이렇게 하면 페이지 이벤트의 맨 위에서 억제된 표시 이벤트를 보낼 수 있습니다. |
 | `xdm` | 선택 사항입니다 | 이 섹션을 사용하여 페이지 이벤트 하단에 필요한 모든 데이터를 포함합니다. |
 
 >[!TAB 수동으로 렌더링된 제안]
@@ -117,8 +117,8 @@ alloy("sendEvent", {
 
 | 매개 변수 | 필수/선택 사항 | 설명 |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | 필수 여부 | 이 섹션에서는 수동으로 렌더링된 제안을 정의합니다. 이 제안을 포함해야 합니다. `ID`, `scope`, 및 `scopeDetails`. 방법 설명서 참조 [수동으로 개인화 렌더링](../personalization/rendering-personalization-content.md#manually) 수동으로 렌더링된 콘텐츠의 디스플레이 이벤트를 기록하는 방법에 대한 자세한 정보. 수동으로 렌더링된 개인화 콘텐츠는 페이지 조회수 하단에 포함되어야 합니다. |
-| `xdm._experience.decisioning.propositionEventType` | 필수 여부 | 이 매개 변수를 다음으로 설정 `display: 1`. |
+| `xdm._experience.decisioning.propositions` | 필수 여부 | 이 섹션에서는 수동으로 렌더링된 제안을 정의합니다. 제안 `ID`, `scope` 및 `scopeDetails`을(를) 포함해야 합니다. 수동으로 렌더링된 콘텐츠의 표시 이벤트를 기록하는 방법에 대한 자세한 내용은 [수동으로 개인화를 렌더링](../personalization/rendering-personalization-content.md#manually)하는 방법에 대한 설명서를 참조하십시오. 수동으로 렌더링된 개인화 콘텐츠는 페이지 조회수 하단에 포함되어야 합니다. |
+| `xdm._experience.decisioning.propositionEventType` | 필수 여부 | 이 매개 변수를 `display: 1`(으)로 설정하십시오. |
 | `xdm` | 선택 사항입니다 | 이 섹션을 사용하여 페이지 이벤트 하단에 필요한 모든 데이터를 포함합니다. |
 
 >[!ENDTABS]
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 >[!TAB 첫 페이지 보기]
 
-아래 예에는 필요한 를 추가하는 작업이 포함되어 있습니다 `xdm.web.webPageDetails.viewName` 매개 변수. 이것이 바로 단일 페이지 애플리케이션입니다. 다음 `viewName` 이 예제는 페이지 로드에서 로드되는 보기입니다.
+아래 예에는 필수 `xdm.web.webPageDetails.viewName` 매개 변수의 추가가 포함됩니다. 이것이 바로 단일 페이지 애플리케이션입니다. 이 예제의 `viewName`은(는) 페이지 로드 시 로드되는 보기입니다.
 
 ```js
 // Top of page, render decisions for the "home" view.
@@ -191,7 +191,7 @@ alloy("sendEvent", {
 
 >[!TAB 두 번째 페이지 보기(옵션 2)]
 
-여전히 페이지 히트의 하단을 지연해야 하는 경우 다음을 사용할 수 있습니다. `applyPropositions` 페이지 조회수의 맨 위에 사용됩니다. 개인화를 가져올 필요가 없고 Analytics 데이터를 기록할 필요가 없으므로 Edge Network에 요청할 필요가 없습니다.
+여전히 페이지 히트의 하단을 지연해야 하는 경우 페이지 히트의 상단에 `applyPropositions`을(를) 사용할 수 있습니다. 개인화를 가져올 필요가 없고 Analytics 데이터를 기록할 필요가 없으므로 Edge Network에 요청할 필요가 없습니다.
 
 ```js
 // top of page, render the decisions already fetched for the "cart" view.
@@ -222,4 +222,4 @@ alloy("sendEvent", {
 
 ## GitHub 샘플 {#github-sample}
 
-다음 위치에 있는 샘플: [이 주소](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) Experience Platform 및 Web SDK를 사용하여 페이지 맨 위에서 개인화를 요청하고 맨 아래에서 분석 지표를 전송하는 방법을 보여 줍니다. 샘플을 다운로드하여 로컬에서 실행하여 페이지 이벤트의 상단과 하단의 작동 방식을 이해할 수 있습니다.
+[이 주소](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom)에 있는 샘플은 Experience Platform 및 Web SDK를 사용하여 페이지 맨 위에서 개인화를 요청하고 맨 아래에서 분석 지표를 보내는 방법을 보여 줍니다. 샘플을 다운로드하여 로컬에서 실행하여 페이지 이벤트의 상단과 하단의 작동 방식을 이해할 수 있습니다.

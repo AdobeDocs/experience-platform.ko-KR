@@ -16,9 +16,9 @@ ht-degree: 14%
 
 >[!NOTE]
 >
->여러 스키마 필드 그룹의 이름이 변경되었습니다. 다음에 대한 문서 보기: [필드 그룹 이름 업데이트](../name-updates.md) 추가 정보.
+>여러 스키마 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../name-updates.md)에 대한 문서를 참조하십시오.
 
-[!UICONTROL 최종 사용자 ID 세부 정보] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)여러 Adobe 애플리케이션에서 개인의 id 정보를 설명하는 데 사용됩니다. 필드 그룹은 루트 수준을 제공합니다. `endUserIDs` 개체(자체 읽기 전용 포함) `_experience` 데이터가 수집될 때 값이 자동으로 업데이트되는 필드입니다.
+[!UICONTROL 최종 사용자 ID 세부 정보]은(는) [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)의 표준 스키마 필드 그룹으로, 여러 Adobe 응용 프로그램에서 개인의 ID 정보를 설명하는 데 사용됩니다. 필드 그룹은 루트 수준 `endUserIDs` 개체를 제공합니다. 이 개체에는 데이터가 수집될 때 값이 자동으로 업데이트되는 읽기 전용 `_experience` 필드가 포함되어 있습니다.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 

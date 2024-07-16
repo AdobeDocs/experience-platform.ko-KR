@@ -4,8 +4,8 @@ title: 대상 게시 요청 만들기
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 2%
+source-wordcount: '448'
+ht-degree: 1%
 
 ---
 
@@ -17,26 +17,26 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->**API 엔드포인트**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
+>**API 끝점**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-대상을 구성하고 테스트한 후 검토 및 게시를 위해 Adobe에 제출할 수 있습니다. 읽기 [Destination SDK에서 작성된 대상을 검토하기 위해 제출](../guides/submit-destination.md) 다른 모든 단계는 대상 제출 프로세스의 일부로 수행해야 합니다.
+대상을 구성하고 테스트한 후 검토 및 게시를 위해 Adobe에 제출할 수 있습니다. 대상 제출 프로세스의 일부로 수행해야 하는 다른 모든 단계에 대해 [Destination SDK에 작성된 대상을 검토하려면 제출](../guides/submit-destination.md)을 읽으십시오.
 
 다음과 같은 경우에 게시 요청을 제출하려면 게시 대상 API 엔드포인트를 사용합니다.
 
 * Destination SDK 파트너로서 모든 Experience Platform 조직에서 모든 Experience Platform 고객이 사용할 수 있는 제품화된 대상을 만들고 싶을 수 있습니다.
-* 다음을 수행합니다. *모든 업데이트* 을 참조하십시오. 구성 업데이트는 Experience Platform 팀이 승인하는 새 게시 요청을 제출한 후에만 대상에 반영됩니다.
+* 구성에 대해 *모든 업데이트*&#x200B;합니다. 구성 업데이트는 Experience Platform 팀이 승인하는 새 게시 요청을 제출한 후에만 대상에 반영됩니다.
 
 >[!IMPORTANT]
 >
->Destination SDK에서 지원하는 모든 매개변수 이름 및 값은 다음과 같습니다. **대소문자 구분**. 대소문자 구분 오류를 방지하려면 설명서에 표시된 대로 매개 변수 이름과 값을 정확히 사용하십시오.
+>Destination SDK에서 지원하는 모든 매개 변수 이름과 값은 **대/소문자를 구분합니다**. 대소문자 구분 오류를 방지하려면 설명서에 표시된 대로 매개 변수 이름과 값을 정확히 사용하십시오.
 
 ## 대상 게시 API 작업 시작 {#get-started}
 
-계속하기 전에 다음을 검토하십시오. [시작 안내서](../getting-started.md) 필수 대상 작성 권한 및 필수 헤더를 가져오는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보입니다.
+계속하기 전에 [시작 안내서](../getting-started.md)에서 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
 
 ## 게시할 대상 구성 제출 {#create}
 
-에 POST 요청을 하여 게시할 대상 구성을 제출할 수 있습니다. `/authoring/destinations/publish` 엔드포인트.
+`/authoring/destinations/publish` 끝점에 POST 요청을 하여 게시할 대상 구성을 제출할 수 있습니다.
 
 **API 형식**
 
@@ -46,7 +46,7 @@ POST /authoring/destinations/publish
 
 +++요청
 
-다음 요청은 페이로드에 제공된 매개 변수로 구성된 조직에 게시를 위한 대상을 제출합니다. 아래 페이로드에는 이 허용하는 모든 매개 변수가 포함되어 있습니다. `/authoring/destinations/publish` 엔드포인트.
+다음 요청은 페이로드에 제공된 매개 변수로 구성된 조직에 게시를 위한 대상을 제출합니다. 아래 페이로드에는 `/authoring/destinations/publish` 끝점에서 허용하는 모든 매개 변수가 포함되어 있습니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -64,8 +64,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 매개변수 | 유형 | 설명 |
 |---------|----------|------|
-| `destinationId` | 문자열 | 게시를 위해 제출하는 대상 구성의 대상 ID입니다. 를 사용하여 대상 구성의 대상 ID 가져오기 [대상 구성 검색](../authoring-api/destination-configuration/retrieve-destination-configuration.md) API 호출. |
-| `destinationAccess` | 문자열 | 사용 `ALL` 모든 Experience Platform 고객의 카탈로그에 대상이 표시됩니다. |
+| `destinationId` | 문자열 | 게시를 위해 제출하는 대상 구성의 대상 ID입니다. [대상 구성 검색](../authoring-api/destination-configuration/retrieve-destination-configuration.md) API 호출을 사용하여 대상 구성의 대상 ID를 가져옵니다. |
+| `destinationAccess` | 문자열 | 대상에 대해 `ALL`을(를) 사용하여 모든 Experience Platform 고객의 카탈로그에 표시하십시오. |
 
 {style="table-layout:auto"}
 
@@ -79,7 +79,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API 오류 처리
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오 [API 상태 코드](../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../landing/troubleshooting.md#request-header-errors) 플랫폼 문제 해결 안내서에서 확인할 수 있습니다.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계
 

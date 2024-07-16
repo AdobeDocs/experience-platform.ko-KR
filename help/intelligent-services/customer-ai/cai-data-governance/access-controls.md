@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >속성 기반 액세스 제어는 현재 제한된 릴리스에서만 사용할 수 있습니다.
 
-[속성 기반 액세스 제어](../../../access-control/abac/overview.md) 는 관리자가 속성에 따라 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있도록 해주는 Adobe Experience Platform의 기능입니다. 속성은 스키마 필드 또는 세그먼트에 추가된 레이블과 같이 객체에 추가된 메타데이터일 수 있습니다. 관리자는 사용자 액세스 권한을 관리하기 위해 속성이 포함된 액세스 정책을 정의합니다.
+[특성 기반 액세스 제어](../../../access-control/abac/overview.md)는 관리자가 특성을 기반으로 특정 개체 및/또는 기능에 대한 액세스를 제어할 수 있도록 해주는 Adobe Experience Platform의 기능입니다. 속성은 스키마 필드 또는 세그먼트에 추가된 레이블과 같이 객체에 추가된 메타데이터일 수 있습니다. 관리자는 사용자 액세스 권한을 관리하기 위해 속성이 포함된 액세스 정책을 정의합니다.
 
 이 기능을 사용하면 XDM(Experience Data Model) 스키마 필드에 조직 또는 데이터 사용 범위를 정의하는 레이블로 레이블을 지정할 수 있습니다. 이와 동시에 관리자는 사용자 및 역할 관리 인터페이스를 사용하여 XDM 스키마 필드를 둘러싼 액세스 정책을 정의하고 사용자 또는 사용자 그룹(내부, 외부 또는 타사 사용자)에 부여된 액세스를 더 잘 관리할 수 있습니다. 또한 속성 기반 액세스 제어를 통해 관리자는 특정 세그먼트에 대한 액세스를 관리할 수 있습니다.
 
@@ -28,22 +28,22 @@ ht-degree: 0%
 
 ![서비스 모델 결과의 제한된 필드가 강조 표시된 Customer AI 작업 영역입니다.](../images/user-guide/unavailable-functionalities.png)
 
-Customer AI 작업 영역의 맨 위 **insights 페이지**, 사이드바, 점수 정의, id 및 프로필 속성의 세부 정보에 모두 &quot;액세스 제한됨&quot;이 표시됩니다.
+Customer AI 작업 영역 **인사이트 페이지**&#x200B;의 맨 위에서 사이드바, 점수 정의, ID 및 프로필 속성에 있는 세부 사항이 모두 &quot;액세스 제한됨&quot;으로 표시되어 있습니다.
 
-![스키마의 제한된 필드가 강조 표시된 Customer AI 작업 영역](../images/user-guide/access-restricted.png)
+![스키마의 제한된 필드가 강조 표시된 Customer AI 작업 영역입니다.](../images/user-guide/access-restricted.png)
 
-에서 제한된 스키마를 사용하여 데이터 세트를 미리 볼 때 **[!UICONTROL 모델 워크플로우 만들기]** 페이지를 가리키면 다음과 같은 경고가 표시됩니다 [!UICONTROL 액세스 제한으로 인해 특정 정보가 데이터 세트 미리 보기에 표시되지 않습니다.]
+**[!UICONTROL 모델 워크플로 만들기]** 페이지에서 제한된 스키마가 있는 데이터 집합을 미리 보면 [!UICONTROL 액세스 제한으로 인해 특정 정보가 데이터 집합 미리 보기에 표시되지 않습니다.]
 
-![제한된 스키마 결과가 강조 표시된 미리보기 데이터 세트의 제한된 필드가 있는 Customer AI 작업 공간.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
+![제한된 스키마 결과가 강조 표시된 미리 보기 데이터 세트의 제한된 필드가 있는 Customer AI 작업 영역입니다.](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
 
-제한된 정보가 있는 모델을 만든 후 **[!UICONTROL 목표 정의]** 단계: 맨 위에 경고가 표시됩니다. [!UICONTROL 액세스 제한으로 인해 특정 정보가 구성에 표시되지 않습니다.]
+제한된 정보가 있는 모델을 만들고 **[!UICONTROL 목표 정의]** 단계로 진행하면 맨 위에 경고가 표시됩니다. [!UICONTROL 액세스 제한으로 인해 특정 정보가 구성에 표시되지 않습니다.]
 
 ![서비스 모델 결과의 제한된 필드가 강조 표시된 Customer AI 작업 영역입니다.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
-액세스 제어를 사용할 때 **고객 AI 보기** 및 **고객 AI 관리** 권한은 고객 AI의 다양한 기능에 대한 액세스 권한을 부여합니다. 다음 **고객 AI 관리** 권한을 사용하면 다음 작업을 수행할 수 있습니다. **만들기**,**업데이트**, **삭제**, **활성화**, 또는 **disable** 모델 기간 **고객 AI 보기** 읽거나 볼 수 있습니다. 다음 **만들기**, **업데이트** 및 **삭제** 작업은 감사 로그로 기록됩니다.
+액세스 제어를 사용할 때 **고객 AI 보기** 및 **고객 AI 관리** 권한은 고객 AI의 다양한 기능에 대한 액세스 권한을 부여합니다. **Customer AI 관리** 권한을 사용하면 모델을 **생성**,**업데이트**, **삭제**, **활성화** 또는 **비활성화**&#x200B;할 수 있고 **Customer AI 보기**&#x200B;를 사용하면 모델을 읽거나 볼 수 있습니다. **만들기**, **업데이트** 및 **삭제** 작업이 감사 로그에 기록됩니다.
 
-자세한 내용은 설명서 를 참조하십시오 [액세스 제어에 대한 권한 할당](../../../access-control/home.md) 또는 방법 [감사 로그를 사용하여 액세스 및 활동 모니터링](../../../landing/governance-privacy-security/audit-logs/overview.md).
+[액세스 제어에 대한 권한 할당](../../../access-control/home.md) 또는 [감사 로그를 사용하여 액세스 및 활동을 모니터링하는 방법](../../../landing/governance-privacy-security/audit-logs/overview.md)에 대해 알아보려면 설명서를 참조하세요.
 
 ## 다음 단계
 
-이 안내서를 읽으면에서 액세스 제어의 주요 원칙을 소개합니다 [!DNL Experience Platform]. 이제 을(를) 계속할 수 있습니다. [액세스 제어 사용 안내서](../overview.md) 를 사용하는 방법에 대한 자세한 단계는 [!DNL Admin Console] 제품 프로필을 만들고 다음에 대한 권한을 할당하려면 [!DNL Platform].
+이 안내서를 읽으면 [!DNL Experience Platform]에서 액세스 제어의 주요 원칙에 대해 알아보게 됩니다. 이제 [!DNL Admin Console]을(를) 사용하여 제품 프로필을 만들고 [!DNL Platform]에 대한 권한을 할당하는 방법에 대한 자세한 단계를 보려면 [액세스 제어 사용 안내서](../overview.md)로 계속할 수 있습니다.

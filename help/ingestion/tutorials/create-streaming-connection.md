@@ -18,4 +18,4 @@ Adobe Experience Platform으로 데이터 스트리밍을 시작하려면 스트
 
 스트리밍 연결을 등록한 후 데이터 생성자는 데이터를 Platform에 스트리밍하는 데 사용할 수 있는 고유한 URL을 갖게 됩니다.
 
-인증된 스트리밍 연결을 만드는 방법에 대해 알아보려면 다음을 참조하십시오. [HTTP API 소스 API 안내서](../../sources/tutorials/api/create/streaming/http.md).
+인증된 스트리밍 연결을 만드는 방법에 대해 알아보려면 [HTTP API 원본 API 안내서](../../sources/tutorials/api/create/streaming/http.md)를 읽어 보십시오.

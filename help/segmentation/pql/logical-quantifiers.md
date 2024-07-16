@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: PQL 논리적 수량자
-description: 논리적 수량자는 PQL(프로필 쿼리 언어)의 배열로 조건을 어설션하는 데 사용할 수 있습니다.
+title: PQL 논리 정량자
+description: 논리 한정자는 Profile Query Language(PQL)의 배열로 조건을 어설션하는 데 사용할 수 있습니다.
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 4%
+source-wordcount: '203'
+ht-degree: 3%
 
 ---
 
 # 논리적 수량자 함수
 
-논리 한정자를 사용하여 배열의 조건을 어설션할 수 있습니다. [!DNL Profile Query Language] (PQL). 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md).
+논리 한정자는 [!DNL Profile Query Language](PQL)의 배열로 조건을 어설션하는 데 사용할 수 있습니다. 다른 PQL 함수에 대한 자세한 내용은 [[!DNL Profile Query Language] 개요](./overview.md)를 참조하세요.
 
 ## 존재함
 
-다음 `exists` 제공된 조건을 충족하는 경우 함수는 배열에 있는 항목의 존재를 결정합니다.
+`exists` 함수는 제공된 조건을 충족하는 경우 배열에 항목이 있는지 확인합니다.
 
 **형식**
 
@@ -33,7 +33,7 @@ exists {VARIABLE} from {EXPRESSION} : {CONDITION}
 
 **예**
 
-다음 PQL 쿼리는 가격이 50달러보다 크거나 SKU가 &quot;PS&quot;인 모든 이벤트를 가져옵니다.
+다음 PQL 쿼리는 50달러 이상이거나 SKU가 &quot;PS&quot;인 모든 이벤트를 가져옵니다.
 
 ```sql
 exists E from xEvent where (E.commerce.item.price > 50), I from E.productListItems where I.SKU = "PS"
@@ -41,7 +41,7 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## 모든 항목
 
-다음 `forall` 함수는 특정 조건을 모두 충족하는 배열의 모든 항목을 결정합니다.
+`forall` 함수는 특정 조건을 모두 충족하는 배열의 모든 항목을 결정합니다.
 
 **형식**
 
@@ -58,7 +58,7 @@ forall {VARIABLE} from {EXPRESSION} : {CONDITION}
 
 **예**
 
-다음 PQL 쿼리는 50달러 이상인 동시에 SKU가 &quot;PS&quot;인 모든 이벤트를 가져옵니다.
+다음 PQL 쿼리는 50달러 이상이고 SKU가 &quot;PS&quot;인 모든 이벤트를 가져옵니다.
 
 ```sql
 forall E from xEvent where (E.commerce.item.price > 50), I from E.productListItems where I.SKU = "PS"
@@ -66,4 +66,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## 다음 단계
 
-이제 논리 수량자에 대해 배웠으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 함수에 대한 자세한 내용은 다음을 참조하십시오. [프로필 쿼리 언어 개요](./overview.md).
+이제 논리 정량자에 대해 배웠으므로 PQL 쿼리 내에서 사용할 수 있습니다. 다른 PQL 함수에 대한 자세한 내용은 [Profile Query Language 개요](./overview.md)를 참조하십시오.

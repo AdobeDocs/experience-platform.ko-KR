@@ -17,6 +17,6 @@ ht-degree: 13%
 
 Adobe Experience Platform Debugger은 Google Chrome 브라우저에 설치할 수 있습니다. 브라우저에 확장을 설치하려면 아래 링크를 따르십시오.
 
-* [크롬](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+* [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
-Chrome 확장 프로그램을 설치한 후 아이콘(![](images/start-icon.jpg))가 확장 막대에 추가됩니다. 이 아이콘을 선택하여 확장을 엽니다.
+Chrome 확장을 설치하면 확장 모음에 아이콘(![](images/start-icon.jpg))이 추가됩니다. 이 아이콘을 선택하여 확장을 엽니다.

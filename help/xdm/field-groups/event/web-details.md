@@ -15,9 +15,9 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->여러 스키마 필드 그룹의 이름이 변경되었습니다. 다음에 대한 문서 보기: [필드 그룹 이름 업데이트](../name-updates.md) 추가 정보.
+>여러 스키마 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../name-updates.md)에 대한 문서를 참조하십시오.
 
-[!UICONTROL 웹 세부 정보] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)인터랙션, 페이지 세부 정보 및 레퍼러 등 웹 세부 정보 이벤트 관련 정보를 설명하는 데 사용됩니다.
+[!UICONTROL 웹 세부 정보]은(는) [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)의 표준 스키마 필드 그룹으로, 상호 작용, 페이지 세부 정보 및 레퍼러와 같은 웹 세부 정보 이벤트 관련 정보를 설명하는 데 사용됩니다.
 
 ![](../../images/field-groups/web-details.png)
 

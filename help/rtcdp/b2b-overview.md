@@ -16,7 +16,7 @@ ht-degree: 4%
 
 Adobe Real-time Customer Data Platform(Real-Time CDP)을 기반으로 구축된 Real-Time CDP B2B 에디션은 B2B 서비스 모델을 운영하는 마케터용으로 특별히 빌드되었습니다. 여러 소스의 데이터를 함께 가져와서 사람 및 계정 프로필의 단일 보기로 결합합니다. 마케터는 이 통합 데이터를 통해 특정 대상자를 정확하게 타겟팅하고 사용 가능한 모든 채널에서 해당 대상자를 참여시킬 수 있습니다.
 
-Real-Time CDP B2B 에디션과 해당 B2C 에디션을 구별하는 다양한 Adobe Experience Platform 기능에 대한 개선 사항이 있습니다. 여기에는 B2B 사용 사례용 XDM(Experience Data Model) 개선 사항, ID 확인 및 프로필 세분화로의 업그레이드, 사용자 지정 커넥터 및 대상 등이 포함됩니다 [!DNL Marketo Engage]. 다음 [!DNL Marketo] 커넥터를 사용하면 B2B 브랜드가 리드를 육성하고 계정 기반 마케팅 작업을 향상시키기 위해 업계 최고의 B2B 참여 데이터를 행동 정보와 연결할 수 있습니다.
+Real-Time CDP B2B 에디션과 해당 B2C 에디션을 구별하는 다양한 Adobe Experience Platform 기능에 대한 개선 사항이 있습니다. 여기에는 B2B 사용 사례용 XDM(Experience Data Model) 개선, ID 확인 및 프로필 세분화로의 업그레이드, [!DNL Marketo Engage]의 사용자 지정 커넥터 및 대상이 포함됩니다. [!DNL Marketo] 커넥터를 사용하면 B2B 브랜드가 리드를 육성하고 계정 기반 마케팅 작업을 향상시키기 위해 업계 최고의 B2B 참여 데이터를 행동 정보와 연결할 수 있습니다.
 
 Real-Time CDP B2B 에디션을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 
@@ -28,9 +28,9 @@ Real-Time CDP B2B 에디션의 개선 사항에 대한 보다 포괄적인 세�
 
 ## XDM
 
-Real-Time CDP B2B 에디션은 B2B 목적을 위해 데이터를 캡처하고 구조화하는 몇 가지 새로운 XDM 스키마 클래스, 필드 그룹 및 관계 유형을 제공합니다. 의 개요 보기 [Real-Time CDP B2B 에디션의 XDM](./schemas/b2b.md) 이러한 각 개선 사항에 대한 분류입니다.
+Real-Time CDP B2B 에디션은 B2B 목적을 위해 데이터를 캡처하고 구조화하는 몇 가지 새로운 XDM 스키마 클래스, 필드 그룹 및 관계 유형을 제공합니다. 이러한 각 개선 사항에 대한 자세한 내용은 Real-Time CDP B2B 에디션의 [XDM에 대한 개요](./schemas/b2b.md)를 참조하십시오.
 
-사전 구성된 B2B 스키마를 사용하면 표준화되고 실행 가능한 구조로 데이터를 가져올 수 있습니다. 많은 새 스키마 클래스는 와 같은 주류 CRM에서 발생하는 클래스에 거의 직접 매핑됩니다. [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo]및 기타 B2B 데이터 소스. Real-Time CDP B2B 에디션을 사용하면 B2B 소스의 데이터를 플랫폼으로 간단하게 가져올 수 있고 결과를 손쉽게 감사할 수 있습니다.
+사전 구성된 B2B 스키마를 사용하면 표준화되고 실행 가능한 구조로 데이터를 가져올 수 있습니다. 많은 새 스키마 클래스는 [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo] 및 기타 B2B 데이터 소스와 같은 주요 CRM에서 발생하는 클래스에 거의 직접 매핑됩니다. Real-Time CDP B2B 에디션을 사용하면 B2B 소스의 데이터를 플랫폼으로 간단하게 가져올 수 있고 결과를 손쉽게 감사할 수 있습니다.
 
 이러한 XDM 개선 사항을 통해 B2B 중심 소스 및 대상을 통해 데이터를 더 잘 수집 및 활성화할 수 있으므로 데이터 통합 및 프레젠테이션을 향상시켜 보다 다양하고 유연한 사용 사례를 제공할 수 있습니다.
 
@@ -59,19 +59,19 @@ Real-Time CDP B2B 에디션이 사람, 회사, 속성 및 행동과 관련된 �
 
 ## B2B 소스
 
-Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. 다음 [!DNL Marketo] 소스를 사용하면 B2B 데이터를 Platform에 스트리밍하고 Platform 연결 애플리케이션을 사용하여 이 데이터를 최신 상태로 유지할 수 있습니다. 의 인스턴스 수를 지원합니다. [!DNL Marketo] (여러 인스턴스가 있는 대기업에 이익) 및 는 데이터가 병합되는 단일 조직으로 가져옵니다.
+Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. [!DNL Marketo] 소스를 사용하면 B2B 데이터를 플랫폼으로 스트리밍하고 플랫폼에 연결된 응용 프로그램을 사용하여 이 데이터를 최신 상태로 유지할 수 있습니다. 여러 개의 [!DNL Marketo] 인스턴스를 지원하며(여러 인스턴스가 있는 대기업에 유익함) 데이터가 병합되는 단일 조직으로 가져옵니다.
 
 >[!NOTE]
 >
->다음 [!DNL Marketo] 소스: **아님** Real-Time CDP B2B 에디션 사용에 필요합니다.
+>Real-Time CDP B2B 에디션을 사용하는 데 필요한 [!DNL Marketo] 원본은 **not**&#x200B;입니다.
 
-다음을 참조하십시오. [Real-Time CDP B2B 에디션의 소스](./sources/b2b.md) Marketo 및 B2B 데이터를 Platform으로 가져오는 방법에 대한 자세한 내용은 설명서 를 참조하십시오.
+Marketo 및 B2B 데이터를 플랫폼으로 가져오는 방법에 대한 자세한 내용은 [Real-Time CDP B2B 에디션의 소스](./sources/b2b.md) 설명서를 참조하십시오.
 
 ## B2B 대상
 
 Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads 및 Google Ad Manager와 같은 Experience Platform 대상을 Real-Time CDP B2B Edition에서 사용할 수 있으며 완전히 지원합니다. 또한 Marketo Engage 대상은 Platform에서 세그먼트 멤버십 데이터를 스트리밍하고 Marketo의 목록으로 사용할 수 있도록 합니다.
 
-다음에서 개요 보기: [Marketo Engage 대상](../destinations/catalog/adobe/marketo-engage.md) 추가 정보.
+자세한 내용은 [Marketo Engage 대상](../destinations/catalog/adobe/marketo-engage.md)에 대한 개요를 참조하십시오.
 
 CRM이 두 개 이상인 회사의 경우 Real-Time CDP B2B 에디션은 Marketo 또는 CRM의 인스턴스를 분리하도록 대상 커넥터를 구성하는 옵션을 제공합니다. 필요한 경우 각 인스턴스에 대상 커넥터를 구성하고 각 CRM 인스턴스에 독립적으로 대상자를 보낼 수 있습니다.
 

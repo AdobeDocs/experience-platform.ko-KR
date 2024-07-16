@@ -7,13 +7,13 @@ exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '174'
-ht-degree: 6%
+ht-degree: 35%
 
 ---
 
-# [!UICONTROL 지역] 데이터 유형
+# [!UICONTROL 지역] 데이터 형식
 
-[!UICONTROL 지역] 이벤트가 관찰된 지리적 영역을 설명하는 표준 XDM 데이터 유형입니다.
+[!UICONTROL 지역]은 이벤트가 관찰된 지역을 설명하는 표준 XDM 데이터 형식입니다.
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 
@@ -22,11 +22,11 @@ ht-degree: 6%
 | `_schema` | [[!UICONTROL 지리적 좌표]](./geo-coordinates.md) | 장소의 지리적 좌표를 설명합니다. |
 | `_id` | 문자열 | 좌표에 대한 시스템 생성 고유 ID. |
 | `city` | 문자열 | 도시 이름. |
-| `countryCode` | 문자열 | 문자 <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> 국가 코드. |
+| `countryCode` | 문자열 | 두 문자 <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> 국가용 코드입니다. |
 | `dmaID` | 정수 | 닐슨 미디어 리서치에 의해 지정된 마켓 구역. |
 | `msaID` | 정수 | 관찰이 발생한 미국 대도시 통계 지역. |
-| `postalCode` | 문자열 | 위치의 우편 번호입니다. 우편 번호는 모든 국가에서 사용할 수 없습니다. 일부 국가에서는 우편 번호의 일부만 포함됩니다. |
-| `stateProvince` | 문자열 | 관찰 대상 주 또는 시/도 부분. 형식은 를 따릅니다. [ISO 3166-2(국가 및 하위 부문)](https://www.unece.org/cefact/locode/subdivisions.html) 표준. |
+| `postalCode` | 문자열 | 위치의 우편번호, 우편번호를 모든 국가에서 사용할 수 없습니다. 일부 국가에서는 우편번호의 일부만 포함됩니다. |
+| `stateProvince` | 문자열 | 관찰 대상 주 또는 시/도 부분. 형식은 [ISO 3166-2(국가 및 하위 부문)](https://www.unece.org/cefact/locode/subdivisions.html) 표준을 따릅니다. |
 
 {style="table-layout:auto"}
 

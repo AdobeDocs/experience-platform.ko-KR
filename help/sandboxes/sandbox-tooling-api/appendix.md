@@ -4,14 +4,14 @@ description: 이 문서에서는 샌드박스 도구 API 작업과 관련된 추
 exl-id: fdfa019d-ce0e-456b-b591-7d96d1115e02
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '180'
 ht-degree: 1%
 
 ---
 
 # 샌드박스 API 안내서 부록
 
-이 문서에서는 작업 관련 추가 정보를 제공합니다 [!DNL Sandbox] API.
+이 문서에서는 [!DNL Sandbox] API 작업과 관련된 추가 정보를 제공합니다.
 
 ## 쿼리 매개 변수 사용 {#query}
 
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->다음 `limit` 을 전달하여 개별적으로 시작할 수 있습니다.
+>`limit`을(를) 전달하고 개별적으로 시작할 수 있습니다.
 
 | 매개변수 | 설명 |
 | --- | --- |

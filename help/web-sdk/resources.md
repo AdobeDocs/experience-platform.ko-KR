@@ -13,6 +13,6 @@ ht-degree: 4%
 
 # 유용한 문서
 
-* [Adobe Experience Platform Web SDK 및 Edge Network를 통해 구현의 문제점 해결](https://medium.com/adobetech/solving-implementation-pain-points-with-adobe-experience-platform-web-sdk-and-edge-network-880b635e6819)
-* [Adobe Experience Platform Web SDK 및 Edge Network를 통해 웹 사이트 성능 향상](https://medium.com/adobetech/boosting-website-performance-with-adobe-experience-platform-web-sdk-and-edge-network-329fcf70fdf9)
-* [태그를 사용한 Adobe Experience Platform Web SDK 구현에 대한 안내서](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ko-KR)
+* [Adobe Experience Platform Web SDK 및 Edge Network을 사용하여 구현 불만 사항 해결](https://medium.com/adobetech/solving-implementation-pain-points-with-adobe-experience-platform-web-sdk-and-edge-network-880b635e6819)
+* [Adobe Experience Platform Web SDK 및 Edge Network을 사용하여 웹 사이트 성능 향상](https://medium.com/adobetech/boosting-website-performance-with-adobe-experience-platform-web-sdk-and-edge-network-329fcf70fdf9)
+* [태그를 사용하여 Adobe Experience Platform Web SDK를 구현하는 방법에 대한 안내서](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ko-KR)

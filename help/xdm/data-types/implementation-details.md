@@ -9,11 +9,11 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL 구현 세부 사항] 데이터 유형
+# [!UICONTROL 구현 세부 정보] 데이터 형식
 
-[!UICONTROL 구현 세부 사항] 는 API 또는 SDK와 같은 기술 구현을 설명하는 표준 경험 데이터 모델(XDM) 데이터 유형입니다.
+[!UICONTROL 구현 세부 사항]은(는) API 또는 SDK와 같은 기술 구현을 설명하는 표준 XDM(Experience Data Model) 데이터 형식입니다.
 
-![데이터 유형 구조](../images/data-types/implementation-details.png)
+![데이터 형식 구조](../images/data-types/implementation-details.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

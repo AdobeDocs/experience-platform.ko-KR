@@ -9,74 +9,74 @@ ht-degree: 0%
 
 ---
 
-# 구성 [!DNL Azure] 주요 자격 증명 모음
+# [!DNL Azure] 키 자격 증명 모음 구성
 
-CMK(고객 관리 키)는 [!DNL Microsoft Azure] 키 보관소. 시작하려면 다음을 사용하여 작업해야 합니다. [!DNL Azure] 새 enterprise 계정을 만들거나 기존 enterprise 계정을 사용하고 아래 단계에 따라 Key Vault를 만듭니다.
+CMK(고객 관리 키)는 [!DNL Microsoft Azure] 키 저장소의 키만 지원합니다. 시작하려면 [!DNL Azure](으)로 새 엔터프라이즈 계정을 만들거나 기존 엔터프라이즈 계정을 사용하여 아래 단계에 따라 키 자격 증명 모음을 만들어야 합니다.
 
 >[!IMPORTANT]
 >
->표준, 프리미엄 및 관리 HSM 계층만 [!DNL Azure] Key Vault가 지원됩니다. [!DNL Azure Dedicated HSM] 및 [!DNL Azure Payments HSM] 은(는) 지원되지 않습니다. 다음을 참조하십시오. [[!DNL Azure] 설명서](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) 제공되는 주요 관리 서비스에 대한 자세한 정보.
+>[!DNL Azure] Key Vault에 대한 Standard, Premium 및 Managed HSM 계층만 지원됩니다. [!DNL Azure Dedicated HSM] 및 [!DNL Azure Payments HSM]은(는) 지원되지 않습니다. 제공되는 키 관리 서비스에 대한 자세한 내용은 [[!DNL Azure] 설명서](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services)를 참조하세요.
 
 >[!NOTE]
 >
 >아래 설명서에서는 Key Vault를 만드는 기본 단계만 다룹니다. 이 지침 외에 조직의 정책에 따라 Key Vault를 구성해야 합니다.
 
-에 로그인합니다 [!DNL Azure] 포털 및 검색 창에서 찾기 **[!DNL Key vaults]** 서비스 목록 아래에.
+[!DNL Azure] 포털에 로그인하고 검색 창을 사용하여 서비스 목록에서 **[!DNL Key vaults]**&#x200B;을(를) 찾습니다.
 
-![의 검색 기능 [!DNL Microsoft Azure] 포함 [!DNL Key vaults] 검색 결과에서 강조 표시됩니다.](../../images/governance-privacy-security/customer-managed-keys/access-key-vaults.png)
+![검색 결과에 [!DNL Key vaults]이(가) 강조 표시된 [!DNL Microsoft Azure]의 검색 기능.](../../images/governance-privacy-security/customer-managed-keys/access-key-vaults.png)
 
-다음 **[!DNL Key vaults]** 서비스를 선택하면 페이지가 나타납니다. 여기에서 다음을 선택합니다. **[!DNL Create]**.
+서비스를 선택하면 **[!DNL Key vaults]** 페이지가 나타납니다. 여기에서 **[!DNL Create]**&#x200B;을(를) 선택합니다.
 
-![다음 [!DNL Key vaults] 의 대시보드 [!DNL Microsoft Azure] 포함 [!DNL Create] 강조 표시됨.](../../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)
+[!DNL Create]이(가) 강조 표시된 [!DNL Microsoft Azure]의 [!DNL Key vaults] 대시보드입니다.](../../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)![
 
 제공된 양식을 사용하여 이름 및 할당된 리소스 그룹을 포함하여 Key Vault에 대한 기본 세부 정보를 입력합니다.
 
 >[!WARNING]
 >
->대부분의 옵션은 기본값으로 둘 수 있지만 **일시 삭제 및 제거 보호 옵션을 활성화했는지 확인합니다.**. 이러한 기능을 켜지 않으면 Key Vault가 삭제될 경우 데이터에 대한 액세스 권한이 손실될 수 있습니다.
+>대부분의 옵션은 기본값으로 둘 수 있지만 **일시 삭제 및 제거 보호 옵션을 사용하도록 설정해야 합니다**. 이러한 기능을 켜지 않으면 Key Vault가 삭제될 경우 데이터에 대한 액세스 권한이 손실될 수 있습니다.
 >
->![다음 [!DNL Microsoft Azure] [!DNL Create a Key Vault] 소프트 삭제 및 제거 보호 기능이 강조 표시된 워크플로우입니다.](../../images/governance-privacy-security/customer-managed-keys/basic-config.png)
+>![일시 삭제 및 제거 보호가 강조 표시된 [!DNL Microsoft Azure] [!DNL Create a Key Vault] 워크플로우입니다.](../../images/governance-privacy-security/customer-managed-keys/basic-config.png)
 
 여기에서 Key Vault 생성 워크플로우를 계속 진행하고 조직의 정책에 따라 다양한 옵션을 구성합니다.
 
-다음에 도착하면 **[!DNL Review + create]** 단계에서는 유효성 검사를 진행하는 동안 Key Vault의 세부 사항을 검토할 수 있습니다. 유효성 검사가 성공하면 다음을 선택합니다. **[!DNL Create]** 을 클릭하여 프로세스를 완료합니다.
+**[!DNL Review + create]** 단계에 도달하면 유효성 검사를 진행하는 동안 Key Vault의 세부 사항을 검토할 수 있습니다. 유효성 검사가 성공하면 **[!DNL Create]**&#x200B;을(를) 선택하여 프로세스를 완료합니다.
 
-![[만들기]가 강조 표시된 Microsoft Azure 키 저장소 검토 및 만들기 페이지입니다.](../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
+![Microsoft Azure 키 자격 증명 모음 검토 및 만들기 페이지의 [만들기]가 강조 표시되어 있습니다.](../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
 ## 액세스 구성 {#configure-access}
 
-그런 다음 주요 자격 증명 모음에 대해 Azure 역할 기반 액세스 제어를 사용하도록 설정합니다. 선택 **[!DNL Access configuration]** 다음에서 [!DNL Settings] 왼쪽 탐색 영역에서 섹션을 선택한 다음 **[!DNL Azure role-based access control]** 을 클릭하여 설정을 활성화할 수 있습니다. CMK 앱은 나중에 Azure 역할과 연결해야 하므로 이 단계는 필수입니다. 역할 할당은 두 문서 모두에 설명되어 있습니다. [API](./api-set-up.md#assign-to-role) 및 [UI](./ui-set-up.md#assign-to-role) 워크플로.
+그런 다음 주요 자격 증명 모음에 대해 Azure 역할 기반 액세스 제어를 사용하도록 설정합니다. 왼쪽 탐색의 [!DNL Settings] 섹션에서 **[!DNL Access configuration]**&#x200B;을(를) 선택한 다음 **[!DNL Azure role-based access control]**&#x200B;을(를) 선택하여 설정을 사용하도록 설정합니다. CMK 앱은 나중에 Azure 역할과 연결해야 하므로 이 단계는 필수입니다. 역할 할당은 [API](./api-set-up.md#assign-to-role) 및 [UI](./ui-set-up.md#assign-to-role) 워크플로 모두에서 문서화되었습니다.
 
-![다음 [!DNL Microsoft Azure] 대시보드 [!DNL Access configuration] 및 [!DNL Azure role-based access control] 강조 표시됨.](../../images/governance-privacy-security/customer-managed-keys/access-configuration.png)
+![[!DNL Access configuration] 및 [!DNL Azure role-based access control]이(가) 강조 표시된 [!DNL Microsoft Azure] 대시보드입니다.](../../images/governance-privacy-security/customer-managed-keys/access-configuration.png)
 
 ## 네트워킹 옵션 구성 {#configure-network-options}
 
-Key Vault가 특정 가상 네트워크에 대한 공개 액세스를 제한하거나 공개 액세스를 완전히 비활성화하도록 구성된 경우 권한을 부여해야 합니다 [!DNL Microsoft] 방화벽 예외입니다.
+특정 가상 네트워크에 대한 공개 액세스를 제한하거나 공개 액세스를 완전히 사용하지 않도록 Key Vault가 구성된 경우 [!DNL Microsoft]에 방화벽 예외를 부여해야 합니다.
 
-선택 **[!DNL Networking]** 왼쪽 탐색. 아래 **[!DNL Firewalls and virtual networks]**, 확인란을 선택합니다. **[!DNL Allow trusted Microsoft services to bypass this firewall]**&#x200B;을 선택한 다음 을 선택합니다. **[!DNL Apply]**.
+왼쪽 탐색에서 **[!DNL Networking]**&#x200B;을(를) 선택합니다. **[!DNL Firewalls and virtual networks]**&#x200B;에서 **[!DNL Allow trusted Microsoft services to bypass this firewall]** 확인란을 선택한 다음 **[!DNL Apply]**&#x200B;을(를) 선택합니다.
 
-![다음 [!DNL Networking] 탭 / [!DNL Microsoft Azure] 포함 [!DNL Networking] 및 [!DNL Allow trusted Microsoft surfaces to bypass this firewall] 강조 표시된 예외.](../../images/governance-privacy-security/customer-managed-keys/networking.png)
+![[!DNL Networking] 및 [!DNL Allow trusted Microsoft surfaces to bypass this firewall] 예외가 강조 표시된 [!DNL Microsoft Azure]의 [!DNL Networking] 탭입니다.](../../images/governance-privacy-security/customer-managed-keys/networking.png)
 
 ### 키 생성 {#generate-a-key}
 
-Key Vault를 만든 후에는 새 키를 생성할 수 있습니다. 다음 위치로 이동 **[!DNL Keys]** 탭하고 선택 **[!DNL Generate/Import]**.
+Key Vault를 만든 후에는 새 키를 생성할 수 있습니다. **[!DNL Keys]** 탭으로 이동하여 **[!DNL Generate/Import]**&#x200B;을(를) 선택합니다.
 
-![다음 [!DNL Keys] 탭 / [!DNL Azure] 포함 [!DNL Generate import] 강조 표시됨.](../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
+![강조 표시된 [!DNL Generate import]이(가) 있는 [!DNL Azure]의 [!DNL Keys] 탭.](../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-제공된 양식을 사용하여 키의 이름을 입력하고 다음 중 하나를 선택합니다. **RSA** 또는 **RSA-HSM** 키 유형. 최소한, **[!DNL RSA key size]** 은(는) 이상이어야 합니다. **3072** 다음에 필요한 비트 수 [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] 는 RSA 3027과도 호환됩니다.
+제공된 양식을 사용하여 키의 이름을 입력하고 키 유형으로 **RSA** 또는 **RSA-HSM**&#x200B;을(를) 선택하십시오. 최소한 **[!DNL RSA key size]**&#x200B;은(는) [!DNL Cosmos DB]에 필요한 최소 **3072**&#x200B;비트 이상이어야 합니다. [!DNL Azure Data Lake Storage]은(는) RSA 3027과도 호환됩니다.
 
 >[!NOTE]
 >
 >키를 Adobe에 보내는 데 필요하므로 키에 제공한 이름을 기억하십시오.
 
-나머지 컨트롤을 사용하여 생성하거나 가져올 키를 원하는 대로 구성합니다. 완료되면 다음을 선택합니다. **[!DNL Create]**.
+나머지 컨트롤을 사용하여 생성하거나 가져올 키를 원하는 대로 구성합니다. 완료되면 **[!DNL Create]**&#x200B;을(를) 선택합니다.
 
-![다음 [!DNL Create a key] 대시보드 [!DNL 3072] 강조 표시된 비트입니다.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
+![[!DNL 3072]비트가 강조 표시된 [!DNL Create a key] 대시보드입니다.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
 구성된 키가 자격 증명 모음의 키 목록에 나타납니다.
 
-![다음 [!DNL Keys] 키 이름이 강조 표시된 작업 공간.](../../images/governance-privacy-security/customer-managed-keys/key-added.png)
+![키 이름이 강조 표시된 [!DNL Keys] 작업 영역입니다.](../../images/governance-privacy-security/customer-managed-keys/key-added.png)
 
 ## 다음 단계
 
-고객 관리 키 기능을 설정하는 1회 프로세스를 계속하려면 다음 중 하나를 사용하여 계속합니다. [API](./api-set-up.md) 또는 [UI](./ui-set-up.md) 고객 관리 키 설정 안내서입니다.
+고객 관리 키 기능을 설정하는 1회 프로세스를 계속하려면 [API](./api-set-up.md) 또는 [UI](./ui-set-up.md) 고객 관리 키 설정 안내서를 계속 사용하십시오.

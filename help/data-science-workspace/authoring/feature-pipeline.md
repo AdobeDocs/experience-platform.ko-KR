@@ -6,7 +6,7 @@ description: Adobe Experience Platform을 사용하면 Sensei Machine Learning F
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1415'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Adobe Experience Platform을 사용하면 Sensei Machine Learning Framework 런타임(이하 &quot;런타임&quot;이라 함)을 통해 규모에 맞게 기능 엔지니어링을 수행할 수 있는 사용자 지정 기능 파이프라인을 작성하고 만들 수 있습니다.
 
-이 문서에서는 기능 파이프라인에 있는 다양한 클래스에 대해 설명하고 를 사용하여 사용자 정의 기능 파이프라인을 생성하기 위한 단계별 자습서를 제공합니다. [모델 작성 SDK](./sdk.md) in PySpark스파크 .
+이 문서에서는 기능 파이프라인에 있는 다양한 클래스에 대해 설명하고 PySpark의 [Model Authoring SDK](./sdk.md)를 사용하여 사용자 지정 기능 파이프라인을 만들기 위한 단계별 자습서를 제공합니다.
 
 기능 파이프라인이 실행될 때 다음 워크플로가 수행됩니다.
 
@@ -29,7 +29,7 @@ Adobe Experience Platform을 사용하면 Sensei Machine Learning Framework 런�
 4. 피쳐 파이프라인은 선택한 모델로서 구배 부스팅 회귀기(Gradient Boosting Regressor)가 있는 단계를 정의합니다.
 5. 파이프라인을 사용하여 트레이닝 데이터에 적합하고 트레이닝된 모델이 생성됩니다.
 6. 모델은 채점 데이터 세트로 변환됩니다.
-7. 그런 다음 출력의 관심 있는 열을 선택하고 다시 로 저장합니다. [!DNL Experience Platform] 관련 데이터 포함.
+7. 그런 다음 출력의 관심 있는 열을 선택하고 관련 데이터가 있는 [!DNL Experience Platform]에 다시 저장합니다.
 
 ## 시작하기
 
@@ -39,7 +39,7 @@ Adobe Experience Platform을 사용하면 Sensei Machine Learning Framework 런�
 - 변환된 스키마와 해당 스키마를 기반으로 하는 빈 데이터 세트.
 - 출력 스키마 및 해당 스키마를 기반으로 하는 빈 데이터 세트
 
-위의 모든 데이터 세트를 [!DNL Platform] UI. 이를 설정하려면 제공된 Adobe을 사용하십시오 [부트스트랩 스크립트](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
+위의 모든 데이터 세트를 [!DNL Platform] UI에 업로드해야 합니다. 이를 설정하려면 Adobe이 제공한 [부트스트랩 스크립트](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)를 사용하십시오.
 
 ## 기능 파이프라인 클래스
 
@@ -93,21 +93,21 @@ Adobe Experience Platform을 사용하면 Sensei Machine Learning Framework 런�
 ]
 ```
 
-다음을 정의하는 클래스 메서드를 통해 구성 JSON에 액세스할 수 있습니다. `config_properties` 를 매개 변수로 사용하십시오. 예:
+`config_properties`을(를) 매개 변수로 정의하는 모든 클래스 메서드를 통해 구성 JSON에 액세스할 수 있습니다. 예:
 
-**PySparc**
+**PySpark**
 
 ```python
 dataset_id = str(config_properties.get(dataset_id))
 ```
 
-다음을 참조하십시오. [파이프라인.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) 보다 심층적인 구성 예를 제공하기 위해 Data Science Workspace에서 제공하는 파일입니다.
+자세한 구성 예제는 Data Science Workspace에서 제공하는 [pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) 파일을 참조하십시오.
 
 ### DataLoader를 사용하여 입력 데이터 준비 {#prepare-the-input-data-with-dataloader}
 
-DataLoader는 입력 데이터를 검색하고 필터링합니다. DataLoader의 구현은 추상 클래스를 확장해야 합니다. `DataLoader` 및 abstract 메서드 재정의 `load`.
+DataLoader는 입력 데이터를 검색하고 필터링합니다. DataLoader를 구현하려면 추상 클래스 `DataLoader`을(를) 확장하고 추상 메서드 `load`을(를) 재정의해야 합니다.
 
-다음 예제에서는 [!DNL Platform] ID별 데이터 세트를 반환하고 데이터 세트 ID( )인 DataFrame으로 반환합니다.`dataset_id`)는 구성 파일에서 정의된 속성입니다.
+다음 예제에서는 ID별로 [!DNL Platform] 데이터 집합을 검색하여 DataFrame으로 반환합니다. 여기서 데이터 집합 ID(`dataset_id`)는 구성 파일에서 정의된 속성입니다.
 
 **PySpark 예**
 
@@ -283,9 +283,9 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
 
 ### DataSaver로 기능 데이터 세트 저장 {#store-your-feature-dataset-with-datasaver}
 
-DataSaver는 결과 기능 데이터 세트를 저장소 위치에 저장하는 역할을 합니다. DataSaver 구현은 추상 클래스를 확장해야 합니다. `DataSaver` 및 abstract 메서드 재정의 `save`.
+DataSaver는 결과 기능 데이터 세트를 저장소 위치에 저장하는 역할을 합니다. DataSaver 구현은 추상 클래스 `DataSaver`을(를) 확장하고 추상 메서드 `save`을(를) 재정의해야 합니다.
 
-다음 예제에서는 데이터를 저장하는 DataSaver 클래스를 [!DNL Platform] ID별 데이터 세트. 여기서 데이터 세트 ID(`featureDatasetId`) 및 임차인 ID(`tenantId`)은 구성에서 정의된 속성입니다.
+다음 예제에서는 데이터를 ID별로 [!DNL Platform] 데이터 집합으로 저장하는 DataSaver 클래스를 확장합니다. 여기서 데이터 집합 ID(`featureDatasetId`) 및 테넌트 ID(`tenantId`)는 구성에 정의된 속성입니다.
 
 **PySpark 예**
 
@@ -386,11 +386,11 @@ scoring.dataSaver: MyDatasetSaver
 
 ## API를 사용하여 기능 파이프라인 엔진 만들기 {#create-feature-pipeline-engine-api}
 
-기능 파이프라인을 작성했으므로 이제에서 기능 파이프라인 끝점을 호출할 도커 이미지를 생성해야 합니다. [!DNL Sensei Machine Learning] API. 기능 파이프라인 끝점을 호출하려면 도커 이미지 URL이 필요합니다.
+기능 파이프라인을 작성했으므로 [!DNL Sensei Machine Learning] API에서 기능 파이프라인 끝점을 호출하려면 도커 이미지를 만들어야 합니다. 기능 파이프라인 끝점을 호출하려면 도커 이미지 URL이 필요합니다.
 
 >[!TIP]
 >
->도커 URL이 없는 경우 다음을 방문하십시오. [소스 파일을 레시피에 패키징](../models-recipes/package-source-files-recipe.md) 도커 호스트 URL 만들기에 대한 단계별 연습에 대한 자습서입니다.
+>Docker URL이 없는 경우 [레시피에 소스 파일 패키지](../models-recipes/package-source-files-recipe.md) 자습서를 방문하여 Docker 호스트 URL 만들기에 대한 단계별 설명을 확인하십시오.
 
 선택적으로 다음 Postman 컬렉션을 사용하여 기능 파이프라인 API 워크플로우를 완료할 수 있습니다.
 
@@ -398,27 +398,27 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### 기능 파이프라인 엔진 만들기 {#create-engine-api}
 
-도커 이미지 위치가 있으면 다음 작업을 수행할 수 있습니다 [기능 파이프라인 엔진 만들기](../api/engines.md#feature-pipeline-docker) 사용 [!DNL Sensei Machine Learning] 에 대한 POST을 수행하여 API `/engines`. 기능 파이프라인 엔진을 생성하면 엔진 고유 식별자()가 제공됩니다.`id`). 계속하기 전에 이 값을 저장하십시오.
+도커 이미지 위치가 있으면 `/engines`에 대한 POST을 수행하여 [!DNL Sensei Machine Learning] API를 사용하여 [기능 파이프라인 엔진을 만들기](../api/engines.md#feature-pipeline-docker)할 수 있습니다. 기능 파이프라인 엔진을 생성하면 엔진 고유 식별자(`id`)가 제공됩니다. 계속하기 전에 이 값을 저장하십시오.
 
 ### 인스턴스 만들기 {#create-mlinstance}
 
-새로 만든 항목 사용 `engineID`, 다음을 수행해야 합니다. [mliStance 만들기](../api/mlinstances.md#create-an-mlinstance) 에 POST 요청을 하여 `/mlInstance` 엔드포인트. 성공적인 응답은 고유 식별자( )를 포함하여 새로 생성된 MLInstance의 세부 사항이 포함된 페이로드를 반환합니다`id`) 다음 API 호출에 사용됩니다.
+새로 만든 `engineID`을(를) 사용하여 `/mlInstance` 끝점에 대한 POST 요청을 만들어 [MLIstance를 만들고](../api/mlinstances.md#create-an-mlinstance)해야 합니다. 성공적인 응답은 다음 API 호출에 사용된 고유 식별자(`id`)를 포함하여 새로 생성된 MLInstance의 세부 정보가 포함된 페이로드를 반환합니다.
 
 ### 실험 만들기 {#create-experiment}
 
-다음으로, 다음을 수행해야 합니다 [실험 만들기](../api/experiments.md#create-an-experiment). 실험을 생성하려면 MLIstance 고유 식별자()가 있어야 합니다.`id`) 및 을(를) 위한 POST 요청 `/experiment` 엔드포인트. 성공적인 응답은 고유 식별자( )를 포함하여 새로 생성된 실험의 세부 사항이 포함된 페이로드를 반환합니다`id`) 다음 API 호출에 사용됩니다.
+그런 다음 [실험을 만들기](../api/experiments.md#create-an-experiment)해야 합니다. 실험을 만들려면 MLIstance 고유 식별자(`id`)가 있어야 하며 `/experiment` 끝점에 대한 POST 요청을 수행해야 합니다. 성공적인 응답은 다음 API 호출에 사용된 고유 식별자(`id`)를 포함하여 새로 만들어진 실험의 세부 정보가 포함된 페이로드를 반환합니다.
 
 ### 실험 실행 기능 파이프라인 작업 지정 {#specify-feature-pipeline-task}
 
-실험을 작성한 후 실험의 모드를 로 변경해야 합니다. `featurePipeline`. 모드를 변경하려면 다음 위치에 추가 POST을 하십시오. [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) (으)로 `EXPERIMENT_ID` 그리고 본문에서 보내기 `{ "mode":"featurePipeline"}` 피쳐 파이프라인 실험 실행을 지정합니다.
+실험을 만든 후에는 실험의 모드를 `featurePipeline`(으)로 변경해야 합니다. 모드를 변경하려면 `EXPERIMENT_ID`을(를) 사용하여 [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring)에 추가 POST을 하고 본문에서 `{ "mode":"featurePipeline"}`을(를) 전송하여 기능 파이프라인 실험 실행을 지정하십시오.
 
-완료되면 에게 GET 요청을 합니다. `/experiments/{EXPERIMENT_ID}` 끝 [실험 상태 검색](../api/experiments.md#retrieve-specific) 실험 상태 업데이트가 완료될 때까지 기다립니다.
+완료되면 `/experiments/{EXPERIMENT_ID}`에게 [실험 상태를 검색](../api/experiments.md#retrieve-specific)하도록 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
 
 ### 실험 실행 교육 작업 지정 {#training}
 
-다음으로, 다음을 수행해야 합니다 [교육 실행 작업 지정](../api/experiments.md#experiment-training-scoring). POST 대상 `experiments/{EXPERIMENT_ID}/runs` 본문에서 모드를 로 설정합니다. `train` 교육 매개 변수가 포함된 일련의 작업을 전송할 수도 있습니다. 성공적인 응답은 요청된 실험의 세부 사항이 포함된 페이로드를 반환합니다.
+다음으로 [교육 실행 작업을 지정](../api/experiments.md#experiment-training-scoring)해야 합니다. `experiments/{EXPERIMENT_ID}/runs`에 POST을 지정하고 본문에서 모드를 `train`(으)로 설정하고 교육 매개 변수가 포함된 작업 배열을 보냅니다. 성공적인 응답은 요청된 실험의 세부 사항이 포함된 페이로드를 반환합니다.
 
-완료되면 에게 GET 요청을 합니다. `/experiments/{EXPERIMENT_ID}` 끝 [실험 상태 검색](../api/experiments.md#retrieve-specific) 실험 상태 업데이트가 완료될 때까지 기다립니다.
+완료되면 `/experiments/{EXPERIMENT_ID}`에게 [실험 상태를 검색](../api/experiments.md#retrieve-specific)하도록 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
 
 ### 실험 실행 채점 작업 지정 {#scoring}
 
@@ -426,9 +426,9 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 >
 > 이 단계를 완료하려면 실험과 연결된 성공적인 교육 실행이 하나 이상 있어야 합니다.
 
-성공적인 교육 실행 후 다음을 수행해야 합니다. [채점 실행 작업 지정](../api/experiments.md#experiment-training-scoring). POST 대상 `experiments/{EXPERIMENT_ID}/runs` 본문 안에 다음을 설정합니다. `mode` &quot;score&quot;에 대한 속성입니다. 채점 실험 실행이 시작됩니다.
+교육 실행이 완료되면 [채점 실행 작업을 지정](../api/experiments.md#experiment-training-scoring)해야 합니다. `experiments/{EXPERIMENT_ID}/runs`에 POST을 지정하고 본문에서 `mode` 특성을 &quot;score&quot;로 설정합니다. 채점 실험 실행이 시작됩니다.
 
-완료되면 에게 GET 요청을 합니다. `/experiments/{EXPERIMENT_ID}` 끝 [실험 상태 검색](../api/experiments.md#retrieve-specific) 실험 상태 업데이트가 완료될 때까지 기다립니다.
+완료되면 `/experiments/{EXPERIMENT_ID}`에게 [실험 상태를 검색](../api/experiments.md#retrieve-specific)하도록 GET을 요청하고 실험 상태가 업데이트될 때까지 기다립니다.
 
 채점이 완료되면 기능 파이프라인이 작동되어야 합니다.
 
@@ -436,4 +436,4 @@ https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-이 문서를 읽은 후에는 모델 작성 SDK를 사용하여 기능 파이프라인을 작성하고 도커 이미지를 생성한 다음 도커 이미지 URL을 사용하여 [!DNL Sensei Machine Learning] API. 이제 를 사용하여 데이터 세트를 계속 변환하고 데이터 기능을 규모에 맞게 추출할 준비가 되었습니다. [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
+이 문서를 읽은 후에는 모델 작성 SDK를 사용하여 기능 파이프라인을 작성하고 도커 이미지를 만든 다음 도커 이미지 URL을 사용하여 [!DNL Sensei Machine Learning] API를 사용하여 기능 파이프라인 모델을 만들었습니다. 이제 [[!DNL Sensei Machine Learning API]](../api/getting-started.md)을(를) 사용하여 데이터 집합을 계속 변환하고 데이터 기능을 규모에 맞게 추출할 준비가 되었습니다.

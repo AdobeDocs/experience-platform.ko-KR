@@ -15,12 +15,12 @@ ht-degree: 8%
 
 # Adobe Experience Platform Debugger 개요
 
-의 Adobe Experience Platform Debugger 확장 [크롬](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 는 웹 페이지를 살펴보고 Adobe Experience Cloud 솔루션이 구현되는 방식과 관련된 문제를 찾는 데 도움이 됩니다.
+[Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)용 Adobe Experience Platform Debugger 확장은 웹 페이지를 검사하고 Adobe Experience Cloud 솔루션이 구현되는 방식과 관련된 문제를 찾는 데 도움이 됩니다.
 
 Platform Debugger를 다른 Adobe 활성화 솔루션과 함께 사용하여 다음을 수행할 수 있습니다.
 
-1. 사용 [태그](../tags/home.md) 를 활성화하는 코드를 삽입하려면 [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html) 페이지의 제품.
-1. 사용 [**[!UICONTROL Auditor ]**탭](./auditor/overview.md) 를 사용하여 구현을 테스트할 수 있습니다.
+1. [태그](../tags/home.md)을(를) 사용하여 페이지에서 [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ko-KR) 제품을 활성화하는 코드를 삽입합니다.
+1. Platform Debugger의 [**[!UICONTROL Auditor ]**탭](./auditor/overview.md)을 사용하여 구현을 테스트하십시오.
 1. Platform Debugger의 이벤트 기반 및 솔루션별 도구를 사용하여 감사에서 발견한 문제를 디버깅하거나 구현에 대한 다른 정보를 검사합니다.
 
 >[!NOTE]
@@ -34,7 +34,7 @@ Platform Debugger를 다른 Adobe 활성화 솔루션과 함께 사용하여 다
 Platform Debugger에서 수집한 정보를 사용하여 Experience Cloud 솔루션이 구현되는 방식을 더 잘 이해할 수 있습니다. 예:
 
 * **태그**: 페이지에 배포되는 속성, 환경, 빌드를 확인합니다.
-* **Adobe Target**: 자격이 되거나 되지 않는 활동 및 그 이유를 확인합니다.
+* **Adobe Target**: 자격 조건을 충족한 활동 또는 자격 조건을 충족하지 못한 활동 및 그 이유를 확인합니다.
 * **Adobe Analytics**: 현재 페이지에서 활성화된 보고서 세트를 확인합니다.
 
 ## 비디오 튜토리얼

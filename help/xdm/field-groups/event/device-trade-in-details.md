@@ -11,15 +11,15 @@ ht-degree: 4%
 
 ---
 
-# [!UICONTROL 디바이스 거래 세부 정보] 스키마 필드 그룹
+# [!UICONTROL 장치 거래 세부 정보] 스키마 필드 그룹
 
 >[!NOTE]
 >
->여러 스키마 필드 그룹의 이름이 변경되었습니다. 다음에 대한 문서 보기: [필드 그룹 이름 업데이트](../name-updates.md) 추가 정보.
+>여러 스키마 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../name-updates.md)에 대한 문서를 참조하십시오.
 
-[!UICONTROL 디바이스 거래 세부 정보] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md). 단일 필드(`deviceTradeInDetails`)는 트레이드 인 값, 원래 디바이스 ID 및 새 디바이스 ID를 포함하여 디바이스 트레이드 인 거래를 설명합니다.
+[!UICONTROL Device Trade-In Details]은(는) [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)의 표준 스키마 필드 그룹입니다. 거래 값, 원래 장치 ID 및 새 장치 ID를 포함하여 장치 거래 거래를 설명하는 단일 필드(`deviceTradeInDetails`)를 제공합니다.
 
-![디바이스 거래 세부 정보 구조](../../images/field-groups/device-trade-in-details.png)
+![장치 거래 세부 정보 구조](../../images/field-groups/device-trade-in-details.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

@@ -6,8 +6,8 @@ description: 매핑할 수 있는 다른 일련화 형식과 API에서 고유한
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 4%
+source-wordcount: '666'
+ht-degree: 1%
 
 ---
 
@@ -17,9 +17,9 @@ XDM(경험 데이터 모델) 스키마에서 필드 유형은 필드에 포함�
 
 ## 시작하기
 
-이 안내서를 사용하기 전에 다음을 검토하십시오. [스키마 컴포지션 기본 사항](./composition.md) XDM 스키마, 클래스 및 스키마 필드 그룹을 소개합니다.
+이 안내서를 사용하기 전에 XDM 스키마, 클래스 및 스키마 필드 그룹에 대한 소개는 [스키마 컴포지션의 기본 사항](./composition.md)을 검토하십시오.
 
-API에서 고유한 필드 유형을 정의할 계획이라면 [스키마 레지스트리 개발자 안내서](../api/getting-started.md) 에 사용자 정의 필드를 포함하도록 필드 그룹 및 데이터 유형을 만드는 방법을 알아봅니다. Experience Platform UI를 사용하여 스키마를 만드는 경우 [UI의 필드 정의](../ui/fields/overview.md) 사용자 지정 필드 그룹 및 데이터 형식 내에서 정의하는 필드에 대한 제약 조건을 구현하는 방법을 알아봅니다.
+API에서 고유한 필드 유형을 정의할 계획이라면 [스키마 레지스트리 개발자 안내서](../api/getting-started.md)로 시작하여 사용자 지정 필드를 포함할 필드 그룹 및 데이터 유형을 만드는 방법을 배우는 것이 좋습니다. Experience Platform UI를 사용하여 스키마를 만드는 경우 [UI의 필드 정의](../ui/fields/overview.md)에 대한 안내서를 참조하여 사용자 지정 필드 그룹 및 데이터 형식 내에서 정의한 필드에 대한 제약 조건을 구현하는 방법에 대해 알아보십시오.
 
 ## 기본 구조 및 예 {#basic-types}
 
@@ -27,7 +27,7 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
 
 >[!NOTE]
 >
->다음을 참조하십시오. [API 기본 사항 안내서](../../landing/api-fundamentals.md#json-schema) 플랫폼 API의 JSON 스키마 및 기타 기본 기술에 대한 자세한 내용.
+>JSON 스키마 및 Platform API의 다른 기본 기술에 대한 자세한 내용은 [API 기본 사항 안내서](../../landing/api-fundamentals.md#json-schema)를 참조하십시오.
 
 다음 표에서는 해당 유형을 준수하는 예제 값과 함께 각 XDM 유형이 JSON 스키마에서 표시되는 방식을 간략하게 설명합니다.
 
@@ -60,7 +60,11 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 9007199254740991, "minimum": -9007199254740991 }</pre>
+{
+  "type": "integer",
+  "maximum": 9007199254740991,
+  "minimum": -9007199254740991
+}</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -68,7 +72,11 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
       <td>[!UICONTROL 정수]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 2147483648, "minimum": -2147483648 }</pre>
+{
+  "type": "integer",
+  "maximum": 2147483648,
+  "minimum": -2147483648
+}</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -76,7 +84,11 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 32768, "minimum": -32768 }</pre>
+{
+  "type": "integer",
+  "maximum": 32768,
+  "minimum": -32768
+}</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -84,7 +96,11 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 128, "minimum": -128 }</pre>
+{
+  "type": "integer",
+  "maximum": 128,
+  "minimum": -128
+}</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -92,7 +108,10 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
       <td>[!UICONTROL 날짜]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "string", "format": "date" }</pre>
+{
+  "type": "string",
+  "format": "date"
+}</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -100,7 +119,10 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "string", "format": "date-time" }</pre>
+{
+  "type": "string",
+  "format": "date-time"
+}</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -115,7 +137,7 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
   </tbody>
 </table>
 
-**모든 날짜 형식 문자열은 ISO 8601 표준([RFC 3339, 섹션 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
+**날짜 형식의 모든 문자열은 ISO 8601 표준([RFC 3339, 섹션 5.6](https://tools.ietf.org/html/rfc3339#section-5.6))을 준수해야 합니다.*
 
 ## XDM 유형을 다른 형식으로 매핑
 
@@ -127,24 +149,24 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
 
 >[!NOTE]
 >
->아래 표에 나열된 표준 XDM 유형 중 [!UICONTROL 맵] 유형도 포함됩니다. 맵은 데이터가 특정 값에 매핑되는 키로 표시되는 경우 또는 키가 정적 스키마에 합리적으로 포함될 수 없고 데이터 값으로 처리되어야 하는 경우 표준 스키마에서 사용됩니다.
+>아래 표에 나열된 표준 XDM 유형 중 [!UICONTROL Map] 유형도 포함됩니다. 맵은 데이터가 특정 값에 매핑되는 키로 표시되는 경우 또는 키가 정적 스키마에 합리적으로 포함될 수 없고 데이터 값으로 처리되어야 하는 경우 표준 스키마에서 사용됩니다.
 >
->대부분의 표준 XDM 구성 요소는 맵 유형을 사용하며 [사용자 정의 맵 필드 정의](../tutorials/custom-fields-api.md#custom-maps) 원하는 경우. 아래 표에 맵 유형이 포함된 이유는 기존 데이터가 현재 아래에 나열된 형식으로 저장되어 있는 경우 XDM에 매핑하는 방법을 결정하는 데 도움이 되기 위한 것입니다.
+>대부분의 표준 XDM 구성 요소는 맵 유형을 사용하며, 원하는 경우 [사용자 지정 맵 필드를 정의](../tutorials/custom-fields-api.md#custom-maps)할 수도 있습니다. 아래 표에 맵 유형이 포함된 이유는 기존 데이터가 현재 아래에 나열된 형식으로 저장되어 있는 경우 XDM에 매핑하는 방법을 결정하는 데 도움이 되기 위한 것입니다.
 
 ### Parquet, Spark SQL 및 Java {#parquet}
 
 | XDM 유형 | 쪽모이 세공 | Spark SQL | Java |
 | --- | --- | --- | --- |
-| [!UICONTROL 문자열] | 유형: `BYTE_ARRAY`<br>주석: `UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL 문자열] | 형식: `BYTE_ARRAY`<br>주석: `UTF8` | `StringType` | `java.lang.String` |
 | [!UICONTROL 숫자] | 유형: `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL 길게] | 유형: `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL 정수] | 유형: `INT32`<br>주석: `INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL 짧음] | 유형: `INT32`<br>주석: `INT_16` | `ShortType` | `java.lang.Short` |
-| [!UICONTROL 바이트] | 유형: `INT32`<br>주석: `INT_8` | `ByteType` | `java.lang.Short` |
-| [!UICONTROL 날짜] | 유형: `INT32`<br>주석: `DATE` | `DateType` | `java.util.Date` |
-| [!UICONTROL DateTime] | 유형: `INT64`<br>주석: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
+| [!UICONTROL 정수] | 형식: `INT32`<br>주석: `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL 짧음] | 형식: `INT32`<br>주석: `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL 바이트] | 형식: `INT32`<br>주석: `INT_8` | `ByteType` | `java.lang.Short` |
+| [!UICONTROL 날짜] | 형식: `INT32`<br>주석: `DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL DateTime] | 형식: `INT64`<br>주석: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
 | [!UICONTROL 부울] | 유형: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL 맵] | `MAP`-주석이 있는 그룹<br><br>(`<key-type>` 은(는) 다음과 같아야 합니다. `STRING`) | `MapType`<br><br>(`keyType` 은(는) 다음과 같아야 합니다. `StringType`) | `java.util.Map` |
+| [!UICONTROL 맵] | `MAP` 주석이 있는 그룹<br><br>(`<key-type>`은(는) `STRING`이어야 합니다.) | `MapType`<br><br>(`keyType`은(는) `StringType`이어야 함) | `java.util.Map` |
 
 {style="table-layout:auto"}
 
@@ -177,11 +199,11 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
 | [!UICONTROL 바이트] | `int` | `Integer` | `int32` |
 | [!UICONTROL 날짜] | `date` | `Integer`<br>(Unix 밀리초) | `int64`<br>(Unix 밀리초) |
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix 밀리초) | `int64`<br>(Unix 밀리초) |
-| [!UICONTROL 부울] | `bool` | `Integer`<br>(0/1 바이너리) | `bool` |
+| [!UICONTROL 부울] | `bool` | `Integer`<br>(0/1 이진) | `bool` |
 | [!UICONTROL 맵] | `object` | `map` | `map<key_type, value_type>` |
 
 {style="table-layout:auto"}
 
 ## API에서 XDM 필드 유형 정의 {#define-fields}
 
-스키마 레지스트리 API를 사용하면 형식 및 선택적 제약 조건을 사용하여 사용자 지정 필드를 정의할 수 있습니다. 다음 안내서를 참조하십시오 [스키마 레지스트리 API에서 사용자 정의 필드 정의](../tutorials/custom-fields-api.md) 추가 정보.
+스키마 레지스트리 API를 사용하면 형식 및 선택적 제약 조건을 사용하여 사용자 지정 필드를 정의할 수 있습니다. 자세한 내용은 [스키마 레지스트리 API에서 사용자 지정 필드 정의](../tutorials/custom-fields-api.md)에 대한 안내서를 참조하십시오.

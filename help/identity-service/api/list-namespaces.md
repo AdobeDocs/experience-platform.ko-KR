@@ -33,7 +33,7 @@ curl -X GET \
 
 **응답**
 
-응답에는 개체 배열이 포함되며 각 개체는 사용 가능한 네임스페이스를 나타냅니다. &quot;&quot;가 있는 네임스페이스[!UICONTROL 사용자 정의]&quot; 값 &quot;[!UICONTROL false]&quot;&quot;는 표준 네임스페이스이지만 &quot;&quot;을(를) 포함하는 네임스페이스[!UICONTROL 사용자 정의]&quot; 값 &quot;[!UICONTROL true]&quot;는 조직에서 생성한 네임스페이스입니다.
+응답에는 개체 배열이 포함되며 각 개체는 사용 가능한 네임스페이스를 나타냅니다. &quot;[!UICONTROL custom]&quot; 값이 &quot;[!UICONTROL false]&quot;인 네임스페이스는 표준 네임스페이스이지만 &quot;[!UICONTROL custom]&quot; 값이 &quot;[!UICONTROL true]&quot;인 네임스페이스는 조직에서 만든 네임스페이스입니다.
 
 >[!NOTE]
 >
@@ -79,4 +79,4 @@ curl -X GET \
 
 ## 다음 단계
 
-다음 튜토리얼을 진행하십시오. [사용자 지정 네임스페이스 만들기](./create-custom-namespace.md)
+다음 자습서로 이동하여 [사용자 지정 네임스페이스를 만듭니다](./create-custom-namespace.md)

@@ -4,7 +4,7 @@ title: 샘플 프로필을 사용하여 스트리밍 대상 테스트
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '607'
 ht-degree: 1%
 
 ---
@@ -14,29 +14,29 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->**API 엔드포인트**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
+>**API 끝점**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
 
-이 페이지에서는 다음을 사용하여 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. `/authoring/testing/destinationInstance/` 대상이 올바르게 구성되었는지 테스트하고 구성된 대상에 대한 데이터 흐름의 무결성을 확인하는 API 엔드포인트. 이 끝점에서 지원하는 기능에 대한 설명은 다음을 참조하십시오. [대상 구성 테스트](streaming-destination-testing-overview.md).
+이 페이지에서는 `/authoring/testing/destinationInstance/` API 끝점을 사용하여 대상이 올바르게 구성되었는지 테스트하고 구성된 대상에 대한 데이터 흐름의 무결성을 확인하기 위해 수행할 수 있는 모든 API 작업을 나열하고 설명합니다. 이 끝점에서 지원하는 기능에 대한 설명은 [대상 구성을 테스트](streaming-destination-testing-overview.md)를 참조하십시오.
 
 호출에 프로필을 추가하거나 추가하지 않고 테스트 끝점에 요청을 수행합니다. 요청에 프로필을 보내지 않는 경우 Adobe이 내부적으로 프로필을 생성하여 요청에 추가합니다.
 
-다음을 사용할 수 있습니다. [샘플 프로필 생성 API](sample-profile-generation-api.md) 대상 테스트 API에 대한 요청에 사용할 프로필을 만듭니다.
+[샘플 프로필 생성 API](sample-profile-generation-api.md)를 사용하여 대상 테스트 API에 대한 요청에 사용할 프로필을 만들 수 있습니다.
 
 ## 대상 인스턴스 ID를 가져오는 방법 {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >
->* 이 API를 사용하려면 Experience Platform UI에 대상에 대한 기존 연결이 있어야 합니다. 읽기 [대상에 연결](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 및 [대상에 대한 프로필 및 대상자 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) 추가 정보.
-> * 대상에 대한 연결을 설정한 후에 이 끝점에 대한 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다. [대상과의 연결 검색](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
->![UI 이미지 대상 인스턴스 ID를 가져오는 방법](../../assets/testing-api/get-destination-instance-id.png)
+>* 이 API를 사용하려면 Experience Platform UI에 대상에 대한 기존 연결이 있어야 합니다. 자세한 내용은 [대상에 연결](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 및 [대상에 프로필 및 대상자 활성화](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html)를 참조하십시오.
+> * 대상에 대한 연결을 설정한 후 [대상과의 연결을 탐색](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html)할 때 이 끝점에 대한 API 호출에 사용해야 하는 대상 인스턴스 ID를 가져옵니다.
+>![대상 인스턴스 ID](../../assets/testing-api/get-destination-instance-id.png)을(를) 가져오는 방법 UI 이미지
 
 ## 대상 테스트 API 작업 시작 {#get-started}
 
-계속하기 전에 다음을 검토하십시오. [시작 안내서](../../getting-started.md) 필수 대상 작성 권한 및 필수 헤더를 가져오는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보입니다.
+계속하기 전에 [시작 안내서](../../getting-started.md)에서 필요한 대상 작성 권한 및 필수 헤더를 얻는 방법을 포함하여 API를 성공적으로 호출하기 위해 알아야 하는 중요한 정보를 검토하십시오.
 
 ## 호출에 프로필을 추가하지 않고 대상 구성을 테스트합니다 {#test-without-adding-profiles}
 
-에 POST 요청을 하여 대상 구성을 테스트할 수 있습니다. `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` 엔드포인트 및 테스트 중인 대상의 대상 인스턴스 ID 제공
+`authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` 끝점에 대한 POST 요청을 만들고 테스트 중인 대상의 대상 인스턴스 ID를 제공하여 대상 구성을 테스트할 수 있습니다.
 
 **API 형식**
 
@@ -51,7 +51,7 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 
 **요청**
 
-다음 요청은 대상의 REST API 끝점을 호출합니다. 이 요청은 `{DESTINATION_INSTANCE_ID}` 쿼리 매개 변수.
+다음 요청은 대상의 REST API 끝점을 호출합니다. `{DESTINATION_INSTANCE_ID}` 쿼리 매개 변수로 요청을 구성했습니다.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
@@ -166,7 +166,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## 호출에 추가된 프로필을 사용하여 대상 구성 테스트 {#test-with-added-profiles}
 
-에 POST 요청을 하여 대상 구성을 테스트할 수 있습니다. `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` 엔드포인트 및 테스트 중인 대상의 대상 인스턴스 ID 제공
+`authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` 끝점에 대한 POST 요청을 만들고 테스트 중인 대상의 대상 인스턴스 ID를 제공하여 대상 구성을 테스트할 수 있습니다.
 
 **API 형식**
 
@@ -180,7 +180,7 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 
 **요청**
 
-다음 요청은 대상의 REST API 끝점을 호출합니다. 요청은 페이로드에 제공된 매개 변수와 `{DESTINATION_INSTANCE_ID}` 쿼리 매개 변수.
+다음 요청은 대상의 REST API 끝점을 호출합니다. 페이로드에 제공된 매개 변수와 `{DESTINATION_INSTANCE_ID}` 쿼리 매개 변수로 요청을 구성합니다.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
@@ -322,8 +322,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## API 오류 처리 {#api-error-handling}
 
-Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors) 플랫폼 문제 해결 안내서에서 확인할 수 있습니다.
+Destination SDK API 엔드포인트는 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 플랫폼 문제 해결 안내서에서 [API 상태 코드](../../../../landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](../../../../landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계
 
-이 문서를 읽고 나면 이제 대상을 테스트하는 방법을 알 수 있습니다. 이제 Adobe을 사용할 수 있습니다 [셀프서비스 설명서 프로세스](../../docs-framework/documentation-instructions.md) 을 클릭하여 대상에 대한 설명서 페이지를 만듭니다.
+이 문서를 읽고 나면 이제 대상을 테스트하는 방법을 알 수 있습니다. 이제 Adobe [셀프 서비스 설명서 프로세스](../../docs-framework/documentation-instructions.md)를 사용하여 대상에 대한 설명서 페이지를 만들 수 있습니다.

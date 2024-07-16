@@ -5,7 +5,7 @@ exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1124'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 1%
 
 대상자를 지원하는 SQL에 액세스하여 대상자 인사이트를 파악한 다음 고유한 인사이트를 생성하여 대상자를 구성하는 ID 및 프로필을 추가로 살펴봅니다. 기존 Real-Time CDP 데이터 모델 SQL을 영감으로 사용하여 원시 데이터를 새로운 실행 가능한 통찰력으로 변환하여 고유한 비즈니스 요구 사항에 맞는 쿼리를 만듭니다.
 
-다음을 참조하십시오. [SQL 설명서 보기](../view-sql.md) 자세한 내용은 양식 UI를 통해 통찰력의 SQL을 직접 조정하는 방법을 참조하십시오.
+PLatform UI를 통해 직접 인사이트의 SQL을 조정하는 방법에 대한 자세한 내용은 [SQL 보기 설명서](../view-sql.md)를 참조하십시오.
 
-다음 인사이트를 의 일부로 사용할 수 있습니다. [대상자 대시보드](../guides/audiences.md) 또는 사용자 지정 [사용자 정의 대시보드](../user-defined-dashboards.md). 다음을 참조하십시오. [사용자 지정 개요](../customize/overview.md) 대시보드 또는 를 사용자 지정하는 방법에 대한 지침 [새 위젯 만들기 및 편집](../customize/custom-widgets.md) 위젯 라이브러리 및 [사용자 정의 대시보드](../user-defined-dashboards.md#create-widget).
+다음 인사이트는 모두 [대상 대시보드](../guides/audiences.md) 또는 사용자 지정 [사용자 정의 대시보드](../user-defined-dashboards.md)의 일부로 사용할 수 있습니다. 위젯 라이브러리 및 [사용자 정의 대시보드](../user-defined-dashboards.md#create-widget)에서 대시보드를 사용자 정의하거나 [새 위젯을 만들고 편집](../customize/custom-widgets.md)하는 방법에 대한 지침은 [사용자 정의 개요](../customize/overview.md)를 참조하세요.
 
-다음 인사이트를 의 일부로 사용할 수 있습니다. [대상자 대시보드](../guides/audiences.md) 또는 사용자 지정 대시보드.
+다음 인사이트는 모두 [대상 대시보드](../guides/audiences.md) 또는 사용자 지정 대시보드의 일부로 사용할 수 있습니다.
 
-## 대상 중복 보고서 {#audience-overlap-report}
+## 대상자 오버랩 보고서 {#audience-overlap-report}
 
 이 통찰력에 의해 답변된 질문:
 
@@ -86,7 +86,7 @@ SELECT source_segment_name,
 
 +++
 
-다음을 참조하십시오. [대상 중복 보고서 위젯 설명서](../guides/audiences.md#audience-overlap-report) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 중복 보고서 위젯 설명서](../guides/audiences.md#audience-overlap-report)를 참조하십시오.
 
 ## 대상자 오버랩 {#audience-overlap}
 
@@ -133,7 +133,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-다음을 참조하십시오. [Audience overlap 위젯 설명서](../guides/audiences.md#audience-overlap) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 중복 위젯 설명서](../guides/audiences.md#audience-overlap)를 참조하십시오.
 
 ## 대상자 크기 변경 트렌드 {#audience-size-change-trend}
 
@@ -174,7 +174,7 @@ SELECT date_key,
 
 +++
 
-다음을 참조하십시오. [대상 크기 변경 트렌드 위젯 설명서](../guides/audiences.md#audience-size-change-trend) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 크기 변경 트렌드 위젯 설명서](../guides/audiences.md#audience-size-change-trend)를 참조하세요.
 
 ## ID별 대상자 크기 트렌드 {#audience-size-trend-by-identity}
 
@@ -207,7 +207,7 @@ SELECT sum(count_of_profiles) AS identities,
 
 +++
 
-다음을 참조하십시오. [ID 위젯 설명서별 대상 크기 트렌드](../guides/audiences.md#audience-size-trend-by-identity) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [ID 위젯 설명서별 대상 크기 트렌드](../guides/audiences.md#audience-size-trend-by-identity)를 참조하십시오.
 
 ## 대상자 크기 트렌드 {#audience-size-trend}
 
@@ -238,7 +238,7 @@ SELECT date_key,
 
 +++
 
-다음을 참조하십시오. [대상 크기 트렌드 위젯 설명서](../guides/audiences.md#audience-size-trend) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 크기 트렌드 위젯 설명서](../guides/audiences.md#audience-size-trend)를 참조하세요.
 
 ## 대상자 크기 {#audience-size}
 
@@ -266,9 +266,9 @@ WHERE
 
 +++
 
-다음을 참조하십시오. [대상 크기 위젯 설명서](../guides/audiences.md#audience-size) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 크기 위젯 설명서](../guides/audiences.md#audience-size)를 참조하세요.
 
-## 고객 AI 점수 분배 {#customer-ai-distribution-of-scores}
+## 고객 AI 점수 분포 {#customer-ai-distribution-of-scores}
 
 이 통찰력에 의해 답변된 질문:
 
@@ -409,9 +409,9 @@ SELECT b.model_name,
 
 +++
 
-다음을 참조하십시오. [점수 위젯 설명서의 고객 AI 배포](../guides/audiences.md#customer-ai-distribution-of-scores) 를 참조하십시오.
+이 인사이트의 모양과 기능에 대한 자세한 내용은 [점수 위젯 설명서의 고객 AI 배포](../guides/audiences.md#customer-ai-distribution-of-scores)를 참조하십시오.
 
-## Customer AI 점수 요약 {#customer-ai-scoring-summary}
+## 고객 AI 점수 요약 {#customer-ai-scoring-summary}
 
 이 통찰력에 의해 답변된 질문:
 
@@ -454,13 +454,13 @@ SELECT model_name,
 
 +++
 
-다음을 참조하십시오. [Customer AI 점수 요약 위젯 설명서](../guides/audiences.md#customer-ai-scoring-summary) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [Customer AI 채점 요약 위젯 설명서](../guides/audiences.md#customer-ai-scoring-summary)를 참조하십시오.
 
 ## ID 중첩 {#identity-overlap}
 
 이 통찰력에 의해 답변된 질문:
 
-- 어떤 게 공통적인 교차점이죠 [!UICONTROL ID 유형 A] 및 [!UICONTROL ID 유형 B] 필터링된 대상자용?
+- 필터링된 대상에 대해 [!UICONTROL ID 유형 A]과(와) [!UICONTROL ID 유형 B] 간의 일반적인 교집합은 무엇입니까?
 - 특정 ID 유형의 중복을 기반으로 고객 대상을 세분화하여 타깃팅된 마케팅 전략을 향상하려면 어떻게 해야 합니까?
 - 교차하는 영역 내에서 캠페인 성과를 평가함으로써 얻을 수 있는 통찰력은 무엇입니까?
 - 이러한 통찰력을 기반으로 향후 마케팅 노력을 최적화하려면 어떻게 해야 합니까?
@@ -514,7 +514,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-다음을 참조하십시오. [ID 중복 위젯 설명서](../guides/audiences.md#identity-overlap) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [ID 중복 위젯 설명서](../guides/audiences.md#identity-overlap)를 참조하세요.
 
 ## ID별 프로필 {#profiles-by-identity}
 
@@ -542,7 +542,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-다음을 참조하십시오. [ID 위젯 설명서별 프로필](../guides/audiences.md#profiles-by-identity) 를 참조하십시오.
+이 인사이트의 모양과 기능에 대한 자세한 내용은 [ID 위젯 설명서별 프로필](../guides/audiences.md#profiles-by-identity)을 참조하십시오.
 
 ## 예약된 활성화 {#scheduled-activations}
 
@@ -577,12 +577,12 @@ SELECT p.destination_platform ,
 
 +++
 
-다음을 참조하십시오. [예약된 활성화 위젯 설명서](../guides/audiences.md#scheduled-activations) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [예약된 활성화 위젯 설명서](../guides/audiences.md#scheduled-activations)를 참조하십시오.
 
 ## 다음 단계
 
 이제 이 문서를 읽고 대시보드 인사이트를 생성하는 SQL과 이 분석이 해결하는 일반적인 질문을 이해합니다. 이제 SQL을 편집하고 반복하여 고유한 인사이트를 생성할 수 있습니다.
 
-다음을 참조하십시오. [SQL 설명서 보기](../view-sql.md) 자세한 내용은 양식 UI를 통해 통찰력의 SQL을 직접 조정하는 방법을 참조하십시오.
+PLatform UI를 통해 직접 인사이트의 SQL을 조정하는 방법에 대한 자세한 내용은 [SQL 보기 설명서](../view-sql.md)를 참조하십시오.
 
-다음에 대한 인사이트를 생성하는 SQL을 읽고 이해할 수도 있습니다. [프로필](./profiles.md), [계정 프로필](./account-profiles.md) 및 [대상](./destinations.md) 대시보드.
+[프로필](./profiles.md), [계정 프로필](./account-profiles.md) 및 [대상](./destinations.md) 대시보드에 대한 인사이트를 생성하는 SQL을 읽고 이해할 수도 있습니다.

@@ -8,7 +8,7 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 20%
+ht-degree: 18%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 20%
    - [부분 일괄 처리 수집](batch-ingestion/partial.md)
    - [문제 해결](batch-ingestion/troubleshooting.md)
 - 튜토리얼 {#tutorials}
-   - XDM에 CSV 파일 매핑 {#map-csv}
+   - XDM {#map-csv}에 CSV 파일 매핑
       - [개요](./tutorials/map-csv/overview.md)
       - [CSV 파일을 기존 스키마에 매핑](./tutorials/map-csv/existing-schema.md)
       - [AI가 생성한 권장 사항을 사용하여 CSV 파일 매핑](./tutorials/map-csv/recommendations.md)
@@ -46,7 +46,7 @@ ht-degree: 20%
    - [스트리밍 수집 유효성 검사](quality/streaming-validation.md)
    - [데이터 수집 알림](quality/subscribe-events.md)
 - [데이터 수집 보호](guardrails.md)
-- [소스 커넥터](source-connectors.md)
+- [Source 커넥터](source-connectors.md)
 - [일괄 처리 수집 API 참조](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [스트리밍 수집 API 참조](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

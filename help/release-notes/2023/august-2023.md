@@ -4,14 +4,14 @@ description: Adobe Experience Platform에 대한 2023년 8월 릴리스 정보�
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '1750'
-ht-degree: 40%
+source-wordcount: '1739'
+ht-degree: 35%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2023년 8월 23일**
+**릴리스 날짜: 2023년 8월 23일 목요일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
@@ -29,7 +29,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
-Experience Platform을 기반으로 구축된 Real-Time Customer Data Platform([!DNL Real-Time CDP])으로 기업은 알려진 데이터와 알 수 없는 데이터를 수집하여 고객 여정 전반에 걸쳐 지능적인 의사 결정을 통해 고객 프로필을 활성화할 수 있습니다.
+Experience Platform을 기반으로 구축된 Real-time Customer Data Platform([!DNL Real-Time CDP])은 기업이 알려진 데이터와 알 수 없는 데이터를 통합하여 고객 여정 전반에 걸쳐 지능적인 의사 결정으로 고객 프로필을 활성화할 수 있도록 지원합니다.
 
 [!DNL Real-Time CDP]는 여러 기업의 데이터 소스를 결합하여 실시간으로 고객 프로필을 생성합니다. 이러한 프로필에서 구축된 세그먼트는 다운스트림 대상으로 전송되어 모든 채널과 디바이스에서 일대일로 개인 설정된 고객 경험을 제공할 수 있습니다.
 
@@ -37,12 +37,12 @@ Experience Platform을 기반으로 구축된 Real-Time Customer Data Platform([
 
 | 기능 | 설명 |
 | --- | --- |
-| 지능형 재참여 사용 사례 안내서 | 다음 [지능형 재참여](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) 사용 사례 안내서에서는 지능적이고 책임 있는 방식으로 전환을 완료하기 전에 포기한 고객을 다시 참여시키는 방법에 대한 세부 정보를 제공합니다. 이 안내서에서는 다음 예제 여정을 사용하여 고객을 다시 참여시킵니다. <ul><li>재참여 여정 - 제품 탐색을 중단한 고객을 타깃팅합니다.</li><li>포기한 장바구니 여정 - 장바구니에 제품을 배치했지만 아직 구매를 완료하지 않은 고객을 타깃팅합니다.</li><li>주문 확인 여정 - 제품 구매에 초점</li></ul> 아래 부분에 있는 자세한 피드백 옵션 링크를 사용하십시오. [지능형 재참여 사용 사례 안내서](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) 피드백을 제공할 수 있습니다. |
-| 파트너 데이터 지원 | 파트너 소스 잠재 고객 프로필 및 파트너 ID를 사용하여 Real-Time CDP에서 상위 단계 마케팅을 실행하여 신규 고객에게 도달하고 자사 데이터를 보강합니다. <ul><li>고객 확보 및 주소 지정 기능: 선택한 데이터 파트너의 쿠키 없는 식별자 및 해시된 PII를 활용하여 새로운 순 고객에게 도달하고 서드파티 쿠키 의존성을 줄입니다.</li><li>단일 시스템의 전체 단계 마케팅: 단일 시스템의 예상 및 알려진 고객을 위한 셀프서비스 세분화, 대상자 큐레이션 및 기본 활성화.</li><li>신뢰 기반: 특허를 획득한 데이터 사용, 레이블 지정, 액세스 제어 등을 통해 파트너 데이터 및 프로필을 책임감 있게 시장에 적용합니다. 자세한 내용은 다음 사용 사례 안내서를 참조하십시오. 이제 전망 사용 사례 안내서를 사용할 수 있습니다. 잠재 고객 활용 사례 안내서를 읽고 잠재 고객 활용 사례를 통해 신규 고객을 유치하는 방법을 알아보십시오.<ul><li>[전망](../../rtcdp/partner-data/prospecting.md)</li><li>[온사이트 개인화](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[자사 프로필 보완](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[잠재 고객 활성화](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
+| 지능형 재참여 사용 사례 안내서 | [지능형 재참여](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) 사용 사례 안내서에서는 지능적이고 책임감 있는 방식으로 전환을 완료하기 전에 전환을 포기한 고객을 재참여하는 방법에 대한 자세한 내용을 제공합니다. 이 안내서에서는 다음 예제 여정을 사용하여 고객을 다시 참여시킵니다. <ul><li>재참여 여정 - 제품 탐색을 중단한 고객을 타깃팅합니다.</li><li>포기한 장바구니 여정 - 장바구니에 제품을 배치했지만 아직 구매를 완료하지 않은 고객을 타깃팅합니다.</li><li>주문 확인 여정 - 제품 구매에 초점</li></ul> 피드백을 제공하려면 [지능형 재참여 사용 사례 안내서](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)의 하단에 있는 자세한 피드백 옵션 링크를 사용하십시오. |
+| 파트너 데이터 지원 | 파트너 소스 잠재 고객 프로필 및 파트너 ID를 사용하여 Real-Time CDP에서 상위 단계 마케팅을 실행하여 신규 고객에게 도달하고 자사 데이터를 보강합니다. <ul><li>고객 확보 및 주소 지정 기능: 선택한 데이터 파트너의 쿠키 없는 식별자 및 해시된 PII를 활용하여 새로운 순 고객에게 도달하고 서드파티 쿠키 의존성을 줄입니다.</li><li>단일 시스템의 전체 단계 마케팅: 단일 시스템의 예상 및 알려진 고객을 위한 셀프서비스 세분화, 대상자 큐레이션 및 기본 활성화.</li><li>신뢰 기반: 특허를 획득한 데이터 사용, 레이블 지정, 액세스 제어 등을 통해 파트너 데이터 및 프로필을 책임감 있게 시장에 적용합니다. 자세한 내용은 다음 사용 사례 안내서를 참조하십시오. 이제 전망 사용 사례 안내서를 사용할 수 있습니다. 잠재 고객 활용 사례 안내서를 읽고 잠재 고객 활용 사례를 통해 신규 고객을 유치하는 방법을 알아보십시오.<ul><li>[전망](../../rtcdp/partner-data/prospecting.md)</li><li>[온사이트 개인화](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[자사 프로필 추가](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[잠재 고객 활성화](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
 
 {style="table-layout:auto"}
 
-자세한 내용은 다음을 참조하십시오. [Real-Time CDP 개요](../../rtcdp/overview.md).
+자세한 내용은 [Real-Time CDP 개요](../../rtcdp/overview.md)를 참조하십시오.
 
 ## 속성 기반 액세스 제어 {#abac}
 
@@ -54,11 +54,11 @@ Experience Platform을 기반으로 구축된 Real-Time Customer Data Platform([
 
 | 기능 | 설명 |
 | --- | --- |
-| 권한 정책 샌드박스 구성 | 새로운 [권한 정책 샌드박스 구성](../../access-control/abac/ui/policies.md) 이 기능을 사용하면 요구 사항과 요구 사항에 따라 모든 샌드박스 또는 선택한 수의 샌드박스에 속성 기반 액세스 제어 정책을 적용할 수 있습니다. |
+| 권한 정책 샌드박스 구성 | 새 [권한 정책 샌드박스 구성](../../access-control/abac/ui/policies.md) 기능을 사용하면 요구 사항과 요구 사항에 따라 모든 샌드박스 또는 선택한 수의 샌드박스에 특성 기반 액세스 제어 정책을 적용할 수 있습니다. |
 
 {style="table-layout:auto"}
 
-속성 기반 액세스 제어에 대한 자세한 내용은 [속성 기반 액세스 제어 개요](../../access-control/abac/overview.md). 속성 기반 액세스 제어 워크플로에 대한 포괄적인 안내서는 [속성 기반 액세스 제어 엔드투엔드 안내서](../../access-control/abac/end-to-end-guide.md).
+특성 기반 액세스 제어에 대한 자세한 내용은 [특성 기반 액세스 제어 개요](../../access-control/abac/overview.md)를 참조하십시오. 특성 기반 액세스 제어 워크플로에 대한 포괄적인 지침을 보려면 [특성 기반 액세스 제어 전체 안내서](../../access-control/abac/end-to-end-guide.md)를 읽어 보십시오.
 
 ## 대시보드 {#dashboards}
 
@@ -68,7 +68,7 @@ Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터�
 
 | 기능 | 설명 |
 | --- | --- |
-| 동의 분석 및 추적 사용 사례 | 을(를) 사용하여 Real-Time CDP 데이터에 대한 다양한 마케팅 사용 사례에 대한 동의 대시보드를 작성하는 방법을 알아봅니다. [동의 분석 및 추적 문서](../../dashboards/insights-use-cases/consent-analysis.md). 비즈니스 요구에 적합한 속성으로 대상자를 만든 다음 Adobe Experience Platform UI에서 사전 구성된 위젯을 사용하여 통찰력을 소비하는 방법에 대해 자세히 설명합니다. 또한 사용자 정의 대시보드 기능을 사용하여 사용자 정의 위젯을 빌드하는 방법에 대한 지침을 제공합니다. 이 문서에서는 동의 트렌드 및 동의 중복 사용 사례를 다룹니다. |
+| 동의 분석 및 추적 사용 사례 | [동의 분석 및 추적 문서](../../dashboards/insights-use-cases/consent-analysis.md)를 사용하여 Real-Time CDP 데이터에 대한 다양한 마케팅 사용 사례에 대한 동의 대시보드를 작성하는 방법을 알아봅니다. 비즈니스 요구에 적합한 속성으로 대상자를 만든 다음 Adobe Experience Platform UI에서 사전 구성된 위젯을 사용하여 통찰력을 소비하는 방법에 대해 자세히 설명합니다. 또한 사용자 정의 대시보드 기능을 사용하여 사용자 정의 위젯을 빌드하는 방법에 대한 지침을 제공합니다. 이 문서에서는 동의 트렌드 및 동의 중복 사용 사례를 다룹니다. |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 {style="table-layout:auto"}
 
-자세한 내용은 다음을 참조하십시오. [데이터 컬렉션 개요](../../tags/home.md).
+자세한 내용은 [데이터 컬렉션 개요](../../tags/home.md)를 참조하십시오.
 
 ## 데이터 수집 {#data-ingestion}
 
@@ -98,7 +98,7 @@ Adobe Experience Platform은 데이터의 모든 유형과 지연 시간을 수�
 | --- | --- |
 | 데이터 수집 워크플로 변경 사항 | 지정된 데이터 유형보다 큰 값을 포함하는 데이터 행(예: 정수 데이터 유형으로 전달된 긴 데이터)이 거부되고 오류 메시지가 보고됩니다. 이전에는 이러한 행이 경고 없이 거부되었습니다. |
 
-자세한 내용은 다음을 참조하십시오. [데이터 수집 개요](../../ingestion/home.md).
+자세한 내용은 [데이터 수집 개요](../../ingestion/home.md)를 참조하십시오.
 
 ## 데이터 준비 {#data-prep}
 
@@ -112,7 +112,7 @@ Adobe Experience Platform은 데이터의 모든 유형과 지연 시간을 수�
 
 {style="table-layout:auto"}
 
-자세한 내용은 다음을 참조하십시오. [데이터 준비 개요](../../data-prep/home.md).
+자세한 내용은 [데이터 준비 개요](../../data-prep/home.md)를 참조하십시오.
 
 ## 대상 {#destinations}
 
@@ -120,8 +120,8 @@ Adobe Experience Platform은 데이터의 모든 유형과 지연 시간을 수�
 
 **새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
 
-- 이제 다음을 수행할 수 있습니다. [잠재 고객 활성화](../../destinations/ui/activate-prospect-audiences.md) 클라우드 스토리지 대상으로 마이그레이션하는 것이 좋습니다.
-- 일반 [활성화 보호](../../destinations/guardrails.md#general-activation-guardrails) 샌드박스당 최대 100개의 대상이 다음으로 업데이트되었습니다. _엄격한 제한_.
+- 이제 클라우드 저장소 대상에 대해 [잠재 고객 대상을 활성화](../../destinations/ui/activate-prospect-audiences.md)할 수 있습니다.
+- 샌드박스당 최대 100개 대상의 일반 [활성화 보호](../../destinations/guardrails.md#general-activation-guardrails)가 _하드 제한_&#x200B;으로 업데이트되었습니다.
 
 대상에 대한 일반적인 정보는 [대상 개요](../../destinations/home.md)를 참조하십시오.
 
@@ -133,7 +133,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 | 구성 요소 유형 | 이름 | 설명 |
 | --- | --- | --- |
-| 클래스 | [[!UICONTROL XDM 개별 잠재 고객 프로필]](https://github.com/adobe/xdm/pull/1758/files) | 이 클래스를 사용하여 데이터 공급업체의 단계 상단 고객 확보 사용 사례에서 소싱된 잠재 고객 프로필을 가져옵니다. 다음을 참조하십시오. [[!UICONTROL XDM 개별 잠재 고객 프로필]](../../xdm/classes/prospect.md) 설명서를 참조하여 예제를 확인하고 자세히 알아보십시오. |
+| 클래스 | [[!UICONTROL XDM 개별 잠재 고객 프로필]](https://github.com/adobe/xdm/pull/1758/files) | 이 클래스를 사용하여 데이터 공급업체의 주요 고객 확보 사용 사례에서 가져온 잠재 고객 프로필을 가져올 수 있습니다. 예제를 보고 자세히 알아보려면 [[!UICONTROL XDM 개별 잠재 고객 프로필]](../../xdm/classes/prospect.md) 설명서를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -141,12 +141,12 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 | 구성 요소 유형 | 이름 | 설명 업데이트 |
 | --- | --- | --- |
-| 확장([!UICONTROL Adobe Analytics ExperienceEvent 전체 확장]) | [[!UICONTROL 컨텍스트 데이터]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL 컨텍스트 데이터] 맵 개체가에 추가됨 [!UICONTROL Adobe Analytics ExperienceEvent 전체 확장] Adobe Analytics에 컨텍스트 데이터를 제공합니다. |
-| 필드 그룹 | 다수 | 몇 개의 필드가에 추가됨 [[!UICONTROL 보강된 이벤트 세그먼트 세부 정보]](https://github.com/adobe/xdm/pull/1760/files). |
+| 확장([!UICONTROL Adobe Analytics ExperienceEvent 전체 확장]) | [[!UICONTROL 컨텍스트 데이터]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL 컨텍스트 데이터] 맵 개체가 [!UICONTROL Adobe Analytics ExperienceEvent 전체 확장]에 추가되어 Adobe Analytics에 컨텍스트 데이터를 제공합니다. |
+| 필드 그룹 | 다수 | [[!UICONTROL 보강된 이벤트 세그먼트 세부 정보]](https://github.com/adobe/xdm/pull/1760/files)에 여러 필드가 추가되었습니다. |
 
 {style="table-layout:auto"}
 
-자세한 내용은 다음을 참조하십시오. [XDM 시스템 개요](../../xdm/home.md).
+자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
 ## ID 서비스 {#identity-service}
 
@@ -156,9 +156,9 @@ Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 �
 
 | 기능 | 설명 |
 | --- | --- |
-| ID 그래프 제한 변경 | 9월 말까지 ID 그래프가 그래프당 50개의 ID로 변경되고 최신 ID가 수집됩니다. 따라서 가장 오래된 ID는 수집 타임스탬프 및 ID 유형에 따라 삭제되며 쿠키 ID 유형이 먼저 삭제됩니다. 현재 ID 그래프의 ID 제한은 그래프당 150개이며 이 제한에 도달하면 그래프가 더 이상 업데이트되지 않습니다. 프로덕션 샌드박스에 다음이 포함된 경우 계정 담당자에게 문의하여 ID 유형 변경을 요청하십시오. <ul><li>개인 식별자(예: CRM ID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.</li><li>쿠키/장치 식별자가 교차 장치 ID 유형으로 구성된 사용자 지정 네임스페이스입니다.</li></ul> Adobe 엔지니어링에서 이러한 요청을 수동으로 처리합니다. 자세한 내용은 [id 서비스 데이터 보호](../../identity-service/guardrails.md). |
+| ID 그래프 제한 변경 | 9월 말까지 ID 그래프가 그래프당 50개의 ID로 변경되고 최신 ID가 수집됩니다. 따라서 가장 오래된 ID는 수집 타임스탬프 및 ID 유형에 따라 삭제되며 쿠키 ID 유형이 먼저 삭제됩니다. 현재 ID 그래프의 ID 제한은 그래프당 150개이며 이 제한에 도달하면 그래프가 더 이상 업데이트되지 않습니다. 프로덕션 샌드박스에 다음이 포함된 경우 계정 담당자에게 문의하여 ID 유형 변경을 요청하십시오. <ul><li>개인 식별자(예: CRM ID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.</li><li>쿠키/장치 식별자가 교차 장치 ID 유형으로 구성된 사용자 지정 네임스페이스입니다.</li></ul> Adobe 엔지니어링에서 이러한 요청을 수동으로 처리합니다. 자세한 내용은 ID 서비스 데이터에 대한 [보호 기능](../../identity-service/guardrails.md)을 참조하세요. |
 
-자세한 내용은 다음을 참조하십시오. [ID 서비스 개요](../../identity-service/home.md).
+자세한 내용은 [ID 서비스 개요](../../identity-service/home.md)를 참조하십시오.
 
 ## Segmentation Service {#segmentation}
 
@@ -168,11 +168,11 @@ Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 �
 
 | 기능 | 설명 |
 | --- | --- |
-| 유사 대상(제한된 가용성) | 유사 대상은 각 대상에 대한 지능적인 통찰력을 제공하며 머신 러닝 기반 통찰력을 활용하여 마케팅 캠페인을 통해 고부가가치 고객을 식별하고 타깃팅합니다. 유사 대상을 사용하면 성과가 좋은 대상과 유사한 고객을 타겟팅하거나 이전에 전환된 대상과 유사한 고객을 타겟팅하는 확장된 대상을 만들 수 있습니다. 유사 대상에 대한 자세한 내용은 [유사 대상 개요](../../segmentation/ui/lookalike-audiences.md). |
+| 유사 대상(제한된 가용성) | 유사 대상은 각 대상에 대한 지능적인 통찰력을 제공하며 머신 러닝 기반 통찰력을 활용하여 마케팅 캠페인을 통해 고부가가치 고객을 식별하고 타깃팅합니다. 유사 대상을 사용하면 성과가 좋은 대상과 유사한 고객을 타겟팅하거나 이전에 전환된 대상과 유사한 고객을 타겟팅하는 확장된 대상을 만들 수 있습니다. 유사 대상에 대한 자세한 내용은 [유사 대상 개요](../../segmentation/ui/lookalike-audiences.md)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
-자세한 내용은 다음을 참조하십시오. [세그먼테이션 개요](../../segmentation/home.md).
+자세한 내용은 [세그먼테이션 개요](../../segmentation/home.md)를 참조하십시오.
 
 ## 소스 {#sources}
 
@@ -182,10 +182,10 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| 의 일반 가용성 [!DNL SugarCRM] | [!DNL SugarCRM] 이제 소스를 사용할 수 있습니다. [!DNL SugarCRM Accounts & Contacts] 및 [!DNL SugarCRM Events] 소스를 사용하여 데이터를 사용자의 [!DNL SugarCRM] 계정에서 Experience Platform으로 가져옵니다. 자세한 내용은 [[!DNL SugarCRM] 개요](../../sources/connectors/crm/sugarcrm.md)를 참조하십시오. |
-| UI의 소스 데이터 흐름에 대한 온디맨드 수집 지원 | 이제 UI에서 기존 소스 데이터 흐름에 대한 주문형 흐름 실행을 만들 수 있습니다. 자세한 내용은 의 안내서를 참조하십시오. [ui를 사용하여 소스에 대한 온디맨드 플로우 실행 생성](../../sources/tutorials/ui/on-demand-ingestion.md). |
-| Adobe Analytics에 대해 새로운 `correlationID` 필드 지원 | 이제 Adobe Analytics 소스 커넥터 스키마에서 `_experience.decisioning.propositions.scopeDetails.correlationID` 필드를 사용할 수 있습니다. 이 필드는 A4T 분류를 지원하는 데 사용되며 2023년 9월부터 채워질 예정입니다. |
+| [!DNL SugarCRM]의 일반 가용성 | 이제 [!DNL SugarCRM]개의 소스를 사용할 수 있습니다. [!DNL SugarCRM Accounts & Contacts] 및 [!DNL SugarCRM Events] 소스를 사용하여 데이터를 사용자의 [!DNL SugarCRM] 계정에서 Experience Platform으로 가져옵니다. 자세한 내용은 [[!DNL SugarCRM] 개요](../../sources/connectors/crm/sugarcrm.md)를 참조하십시오. |
+| UI의 소스 데이터 흐름에 대한 온디맨드 수집 지원 | 이제 UI에서 기존 소스 데이터 흐름에 대한 주문형 흐름 실행을 만들 수 있습니다. 자세한 내용은 [UI를 사용하여 소스에 대한 주문형 흐름 실행을 만드는 방법](../../sources/tutorials/ui/on-demand-ingestion.md)에 대한 안내서를 참조하십시오. |
+| Adobe Analytics의 새 `correlationID` 필드 지원 | 이제 Adobe Analytics 소스 커넥터 스키마에서 `_experience.decisioning.propositions.scopeDetails.correlationID` 필드를 사용할 수 있습니다. 이 필드는 A4T 분류 지원에 사용되며 2023년 9월부터 채워집니다. |
 
 {style="table-layout:auto"}
 
-자세한 내용은 다음을 참조하십시오. [소스 개요](../../sources/home.md).
+자세한 내용은 [소스 개요](../../sources/home.md)를 참조하십시오.

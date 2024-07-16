@@ -1,12 +1,12 @@
 ---
 title: 서드파티 쿠키에 의존하지 않고 새로운 고객 참여 및 확보
-description: 서드파티 쿠키에 의존하지 않고 전망 사용 사례를 통해 새로운 고객을 참여하고 획득하는 방법을 알아봅니다.
+description: 서드파티 쿠키에 의존하지 않고 잠재 고객 발굴 사용 사례를 통해 신규 고객을 유치하고 확보하는 방법을 알아봅니다.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 84%
+ht-degree: 85%
 
 ---
 
@@ -124,7 +124,7 @@ Adobe Real-time Customer Data Platform은 브랜드가 DMP(데이터 관리 플�
 
 #### 스키마의 모든 필드에 서드파티 데이터 거버넌스 레이블 추가
 
-스키마를 구성하는 모든 필드에 서드파티 데이터 거버넌스 레이블을 추가하는 것이 좋습니다. 이는 서드파티 데이터의 책임 있는 사용을 보장하고 데이터 유출 위험을 최소화하기 위해 중요합니다. 에 대한 추가 정보 찾기 [타사 데이터 거버넌스 레이블](../../data-governance/labels/reference.md#partner-ecosystem-labels).
+스키마를 구성하는 모든 필드에 서드파티 데이터 거버넌스 레이블을 추가하는 것이 좋습니다. 이는 서드파티 데이터의 책임 있는 사용을 보장하고 데이터 유출 위험을 최소화하기 위해 중요합니다. [타사 데이터 거버넌스 레이블](../../data-governance/labels/reference.md#partner-ecosystem-labels)에 대한 자세한 정보를 확인하십시오.
 
 이렇게 하려면 아래 단계를 수행합니다.
 
@@ -197,7 +197,7 @@ Real-Time CDP에 방금 로드한 잠재 고객 프로필이 잠재 고객 프�
 
 ![잠재 고객 프로필 검사 방법의 보기.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-자세한 내용 [잠재 고객 프로필](/help/profile/ui/prospect-profile.md).
+[잠재 고객 프로필](/help/profile/ui/prospect-profile.md)에 대해 자세히 알아보세요.
 
 ### 잠재 고객 대상자 만들기 {#create-prospect-audiences}
 
@@ -213,20 +213,20 @@ Real-Time CDP의 세분화 기능을 사용하여 잠재 고객 프로필에서 
 * 배치 프로필 평가 전용
 * 시계열 이벤트를 기반으로 하는 대상자 구축 지원 안 함
 
-자세한 내용 [잠재 고객](/help/segmentation/ui/prospect-audience.md).
+[잠재 고객](/help/segmentation/ui/prospect-audience.md)에 대해 자세히 알아보세요.
 
 ### 잠재 고객 프로필을 대상으로 활성화 {#activate-to-destinations}
 
 잠재 고객 대상자를 대상으로 내보내 활용할 수 있습니다. 현재 특정 클라우드 스토리지 대상만 잠재 고객 프로필 활성화를 지원합니다.
 
-![잠재 고객을 지원하는 대상.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+잠재 고객을 지원하는 ![대상.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
-[자세히 보기](/help/destinations/ui/activate-prospect-audiences.md) 클라우드 스토리지 대상에 대한 잠재 고객 활성화 정보.
+클라우드 저장소 대상에 대한 잠재 고객 활성화에 대해 [자세히 알아보세요](/help/destinations/ui/activate-prospect-audiences.md).
 
 ## 파트너 데이터 지원을 통해 달성한 기타 사용 사례 {#other-use-cases}
 
 Real-Time CDP에서 파트너 데이터 지원을 통해 활성화된 추가 사용 사례를 살펴보십시오.
 
 * [신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완](/help/rtcdp/partner-data/supplement-first-party-profiles.md)하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선합니다.
-* [파트너 지원 방문자 인식을 사용하여 알 수 없는 방문자에 대한 온사이트 경험 개인화](/help/rtcdp/partner-data/onsite-personalization.md) 방문에서 사용자 인증이 없거나 브랜드와 이전 기록이 있는 경우.
-* [잠재 고객 프로필 및 잠재 고객 활성화 확장](/help/destinations/ui/activate-prospect-audiences.md) 대상을 선택합니다.
+* [파트너 지원 방문자 인식을 사용하여 알 수 없는 방문자에 대한 온사이트 경험을 개인화합니다](/help/rtcdp/partner-data/onsite-personalization.md) 방문에서 사용자 인증을 받지 않았거나 브랜드에 대한 이전 기록이 없는 경우.
+* 대상을 선택할 수 있도록 [잠재 고객 프로필 및 잠재 고객 활성화](/help/destinations/ui/activate-prospect-audiences.md)를 확장했습니다.

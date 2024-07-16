@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # 쿼리 서비스 SQL 참조
 
-[!DNL Query Service] 표준 ANSI SQL을 사용할 수 있는 기능을 제공합니다. `SELECT` 문 및 기타 제한된 명령. [!DNL Query Service] 에는 데이터 정의 언어 또는 데이터 조작 언어 기능이 포함되어 있지 않습니다. 서비스를 통해 쿼리된 데이터는 다음 위치에서 가져옵니다. [!DNL Experience Data Lake]: 변경할 수 없는 데이터 세트가 포함되어 있습니다.
+[!DNL Query Service]은(는) `SELECT` 문 및 기타 제한된 명령에 표준 ANSI SQL을 사용할 수 있는 기능을 제공합니다. [!DNL Query Service]에 데이터 정의 언어 또는 데이터 조작 언어 기능이 포함되어 있지 않습니다. 서비스를 통해 쿼리된 데이터는 대부분 변경할 수 없는 데이터 세트가 포함된 [!DNL Experience Data Lake]에서 가져옵니다.

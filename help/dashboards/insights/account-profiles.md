@@ -7,19 +7,19 @@ exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
 source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
 source-wordcount: '549'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # 계정 프로필 인사이트
 
-[계정 프로필](../../rtcdp/accounts/account-profile-overview.md) 은 여러 마케팅 채널 및 조직 시스템을 포함하여 다양한 소스의 계정 정보를 통합하는 데 사용됩니다. 이러한 통합 보기를 통해 고객 계정을 포괄적으로 이해하고 B2B 마케팅 캠페인을 향상시킬 수 있습니다. 데이터 모델 분석을 통해 얻은 인사이트를 통해 Adobe Real-time Customer Data Platform B2B 데이터에 보다 쉽게 액세스하고, 이해할 수 있으며, 의사 결정에 영향을 줄 수 있습니다.
+[계정 프로필](../../rtcdp/accounts/account-profile-overview.md)은(는) 여러 마케팅 채널 및 조직 시스템을 포함하여 다양한 소스의 계정 정보를 통합하는 데 사용됩니다. 이러한 통합 보기를 통해 고객 계정을 포괄적으로 이해하고 B2B 마케팅 캠페인을 향상시킬 수 있습니다. 데이터 모델 분석을 통해 얻은 인사이트를 통해 Adobe Real-time Customer Data Platform B2B 데이터에 보다 쉽게 액세스하고, 이해할 수 있으며, 의사 결정에 영향을 줄 수 있습니다.
 
 통찰력을 향상시키는 SQL에 액세스하여 B2B 데이터를 더 잘 이해하고, 사용자 지정이 가능한 자신만의 통찰력을 생성하여 고객 계정 정보를 더 자세히 살펴볼 수 있습니다. 기존 Real-Time CDP 데이터 모델 SQL을 영감으로 사용하여 원시 데이터를 새로운 실행 가능한 통찰력으로 변환하여 고유한 비즈니스 요구 사항에 맞는 쿼리를 만듭니다.
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-다음 인사이트를 의 일부로 사용할 수 있습니다. [계정 프로필 대시보드](../guides/account-profiles.md) 또는 [사용자 지정 대시보드](../user-defined-dashboards.md). 다음을 참조하십시오. [사용자 지정 개요](../customize/overview.md) 대시보드 또는 를 사용자 지정하는 방법에 대한 지침 [새 위젯 만들기 및 편집](../customize/custom-widgets.md) 위젯 라이브러리 및 [사용자 정의 대시보드](../user-defined-dashboards.md#create-widget).
+다음 인사이트는 모두 [계정 프로필 대시보드](../guides/account-profiles.md) 또는 [사용자 지정 대시보드](../user-defined-dashboards.md)의 일부로 사용할 수 있습니다. 위젯 라이브러리 및 [사용자 정의 대시보드](../user-defined-dashboards.md#create-widget)에서 대시보드를 사용자 정의하거나 [새 위젯을 만들고 편집](../customize/custom-widgets.md)하는 방법에 대한 지침은 [사용자 정의 개요](../customize/overview.md)를 참조하세요.
 
 ## 계정 프로필 추가됨 {#account-profiles-added}
 
@@ -106,7 +106,7 @@ LIMIT  5000;
 
 +++
 
-## 영업 기회 추가됨 {#opportunities-added}
+## 기회 추가됨 {#opportunities-added}
 
 이 통찰력에 의해 답변된 질문:
 
@@ -287,4 +287,4 @@ ORDER BY  d.date_key limit 5000;
 
 <!-- Add link above Learn how to [generate insights with SQL](). after April release -->
 
-다음에 대한 인사이트를 생성하는 SQL을 읽고 이해할 수도 있습니다. [프로필](./profiles.md), [대상](./audiences.md), 및 [대상](./destinations.md) 대시보드.
+[프로필](./profiles.md), [대상](./audiences.md) 및 [대상](./destinations.md) 대시보드에 대한 인사이트를 생성하는 SQL을 읽고 이해할 수도 있습니다.

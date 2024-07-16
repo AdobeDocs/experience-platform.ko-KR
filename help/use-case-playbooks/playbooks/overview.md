@@ -29,7 +29,7 @@ ht-degree: 30%
 
 ## 개요 {#overview}
 
-[!UICONTROL 사용 사례 플레이북] 는 Real-Time CDP 또는 Adobe Journey Optimizer을 시작할 때 원하는 사용 사례를 달성하기 위해 무엇을 시작해야 하는지 또는 올바른 에셋을 만드는 방법을 정확히 모를 수 있는 문제를 극복하는 데 도움이 됩니다. 사용 사례 플레이북은 다음을 통해 여기에서 도움을 줄 수 있습니다.
+[!UICONTROL 사용 사례 플레이북]을 통해 Real-Time CDP 또는 Adobe Journey Optimizer을 시작할 때 원하는 사용 사례를 달성하기 위해 무엇을 시작해야 하는지 또는 올바른 자산을 만드는 방법을 정확히 알 수 없는 경우 문제를 해결할 수 있습니다. 사용 사례 플레이북은 다음을 통해 여기에서 도움을 줄 수 있습니다.
 
 * 영감을 위한 사용 사례 표시
 * 준비가 되면 프로덕션에 사용, 테스트 및 홍보할 수 있도록 다양한 에셋을 만듭니다.
@@ -50,11 +50,11 @@ ht-degree: 30%
 
 ## 가용성 {#availability}
 
-일부 [!UICONTROL 사용 사례 플레이북] 은 Real-Time CDP 사용 사례에 맞게 조정되지만 다른 기능은 Journey Optimizer을 사용하는 고객에게 가장 적합합니다. 카탈로그를 탐색하여 제품 및 사용 사례에 가장 적합한 플레이북을 찾습니다. 에서 Real-Time CDP 및 Journey Optimizer에 대해 자세히 알아보십시오. [Adobe 제품 설명](https://helpx.adobe.com/legal/product-descriptions.html).
+일부 [!UICONTROL 사용 사례 플레이북]은(는) Real-Time CDP 사용 사례에 맞게 조정되지만 다른 플레이북은 Journey Optimizer 사용 고객에게 가장 적합합니다. 카탈로그를 탐색하여 제품 및 사용 사례에 가장 적합한 플레이북을 찾습니다. [제품 설명 Adobe](https://helpx.adobe.com/legal/product-descriptions.html)에서 Real-Time CDP 및 Journey Optimizer에 대해 자세히 알아보세요.
 
 ## UI 안내서 {#ui-guides}
 
-사용하려는 플레이북을 결정한 후 UI에서 선택하고 시작합니다. 의 UI 안내서 읽기 [선택 항목에서 올바른 플레이북을 선택하는 방법](/help/use-case-playbooks/playbooks/choose.md) 및 [플레이북 인스턴스를 생성, 공유 및 재사용하는 방법](/help/use-case-playbooks/playbooks/create-share-reuse.md) 인스턴스를 만들고 플레이북을 최대한 활용하는 방법에 대한 전체 정보. 영감을 주는 샌드박스에서 다른 개발 샌드박스로, 그리고 프로덕션으로 다양한 에셋을 프로모션하는 방법을 알아보려면 의 설명서를 참조하십시오. [데이터 인식](/help/use-case-playbooks/playbooks/data-awareness.md).
+사용하려는 플레이북을 결정한 후 UI에서 선택하고 시작합니다. [선택한 플레이북에서 올바른 플레이북을 선택하는 방법](/help/use-case-playbooks/playbooks/choose.md) 및 [플레이북 인스턴스를 만들고, 공유하고, 재사용하는 방법](/help/use-case-playbooks/playbooks/create-share-reuse.md)에 대한 UI 안내서를 읽고 인스턴스를 만들고, 플레이북을 최대한 활용하는 방법에 대한 자세한 내용을 확인하십시오. 영감을 주는 샌드박스에서 다른 개발 샌드박스로, 프로덕션으로 다양한 자산을 홍보하는 방법을 알아보려면 [데이터 인식](/help/use-case-playbooks/playbooks/data-awareness.md)에 대한 설명서를 읽어 보십시오.
 
 ## 문제 해결 및 알려진 제한 사항 {#trouble-shooting-known-limitations}
 

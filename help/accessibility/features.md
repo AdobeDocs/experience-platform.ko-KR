@@ -6,8 +6,8 @@ description: 키보드 탐색, 색상 팔레트 및 대비, 보조 기술 지원
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 3%
+source-wordcount: '481'
+ht-degree: 0%
 
 ---
 
@@ -31,16 +31,16 @@ Experience Platform은 전체 키보드 접근성을 지원하기 위해 노력�
 * Esc 키(Esc)는 대화 상자가 있을 때 대화 상자를 닫는 취소 단추 역할을 합니다.
 * Experience Platform은 선택한 요소 주위에 파란색 테두리를 표시하여 현재 포커스가 있는 UI 요소를 명확하게 표시합니다.
 
-![선택한 요소 주위에 나타나는 파란색 테두리로 초점이 적용되었음을 나타냅니다.](images/profile-overview-tab.png)
+![포커스가 적용되었음을 나타내기 위해 선택한 요소 주위에 파란색 테두리가 표시됩니다.](images/profile-overview-tab.png)
 
 ## 색상 팔레트 및 대비
 
-Experience Platform이 다음 작업을 수행함: [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) 색상 대비 요구 사항을 포함한 적합성. Experience Platform UI는 저시력 또는 색각 이상이 있는 사용자가 편하게 볼 수 있도록 애플리케이션의 충분한 대비를 제공합니다.
+Experience Platform은 색상 대비 요구 사항을 포함하여 [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) 적합성을 준수하기 위해 최선을 다합니다. Experience Platform UI는 저시력 또는 색각 이상이 있는 사용자가 편하게 볼 수 있도록 애플리케이션의 충분한 대비를 제공합니다.
 
-![Experience Platform UI의 홈 페이지에 표시되는 색상 팔레트 및 대비입니다.](images/homepage.png)
+![Experience Platform UI의 홈 페이지에 있는 색상 팔레트 및 대비](images/homepage.png)
 
 ## 필수 필드 유효성 검사
 
 데이터를 추가하거나 스키마를 생성하거나 세그먼트를 정의할 때 필수 필드는 시각적으로, 필드의 텍스트 레이블 옆에 별표를 사용하여 프로그래밍 방식으로 모두 표시됩니다. 이러한 필드는 필드에 잘못된 데이터를 입력하고 저장 시 유효성 검사를 트리거합니다. 필수 필드가 유효성 검사를 통과하지 못하면 오류 아이콘과 함께 빨간색으로 요약되고 수정해야 하는 문제에 대한 서면 설명도 표시됩니다.
 
-![유효성 검사를 통과하지 못한 필수 필드를 닫습니다. 필드가 빨간색으로 표시되고 오류 아이콘이 표시됩니다.](images/field-validation.png)
+![유효성 검사를 통과하지 못한 필수 필드를 닫습니다. 필드가 빨간색으로 표시되고 오류 아이콘이 있습니다.](images/field-validation.png)

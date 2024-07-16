@@ -6,34 +6,34 @@ type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '3550'
-ht-degree: 6%
+source-wordcount: '3524'
+ht-degree: 4%
 
 ---
 
-# 를 사용하여 데이터 세트 내보내기 [!DNL Flow Service API]
+# [!DNL Flow Service API]을(를) 사용하여 데이터 세트 내보내기
 
 >[!AVAILABILITY]
 >
 >* 이 기능은 Real-Time CDP Prime 및 Ultimate 패키지, Adobe Journey Optimizer 또는 Customer Journey Analytics을 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 
-이 문서에서는 을(를) 사용하는 데 필요한 워크플로에 대해 설명합니다 [!DNL Flow Service API] 내보내기 [데이터 세트](/help/catalog/datasets/overview.md) Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 [!DNL Amazon S3], SFTP 위치 또는 [!DNL Google Cloud Storage].
+이 문서에서는 [!DNL Flow Service API]을(를) 사용하여 [데이터 세트](/help/catalog/datasets/overview.md)를 Adobe Experience Platform에서 선호하는 클라우드 저장소 위치(예: [!DNL Amazon S3], SFTP 위치 또는 [!DNL Google Cloud Storage])로 내보내는 데 필요한 워크플로에 대해 설명합니다.
 
 >[!TIP]
 >
->Experience Platform 사용자 인터페이스를 사용하여 데이터 세트를 내보낼 수도 있습니다. 읽기 [데이터 세트 내보내기 UI 자습서](/help/destinations/ui/export-datasets.md) 추가 정보.
+>Experience Platform 사용자 인터페이스를 사용하여 데이터 세트를 내보낼 수도 있습니다. 자세한 내용은 [데이터 세트 내보내기 UI 자습서](/help/destinations/ui/export-datasets.md)를 참조하십시오.
 
 ## 내보내기에 사용 가능한 데이터 세트 {#datasets-to-export}
 
 내보낼 수 있는 데이터 세트는 Experience Platform 애플리케이션(Real-Time CDP, Adobe Journey Optimizer), 계층(Prime 또는 Ultimate) 및 구입한 모든 추가 기능(예: Data Distiller)에 따라 다릅니다.
 
-다음을 참조하십시오. [UI 튜토리얼 페이지의 표](/help/destinations/ui/export-datasets.md#datasets-to-export) 내보낼 수 있는 데이터 세트를 이해합니다.
+내보낼 수 있는 데이터 세트를 이해하려면 UI 자습서 페이지의 [표](/help/destinations/ui/export-datasets.md#datasets-to-export)를 참조하십시오.
 
 ## 지원되는 대상 {#supported-destinations}
 
 현재, 스크린샷에 강조 표시되고 아래에 나열된 클라우드 스토리지 대상으로 데이터 세트를 내보낼 수 있습니다.
 
-![데이터 세트 내보내기를 지원하는 대상](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+데이터 집합 내보내기를 지원하는 ![대상](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -48,36 +48,36 @@ ht-degree: 6%
 
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
-* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Adobe Experience Platform에 성공적으로 수집된 모든 데이터는 [!DNL Data Lake] 데이터 세트로. 데이터 세트는 스키마(열) 및 필드(행)를 포함하는 데이터 수집을 위한 저장소 및 관리 구조입니다. 데이터 세트에는 저장하는 데이터의 다양한 측면을 설명하는 메타데이터도 포함됩니다.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] 단일 파티션을 만드는 가상 샌드박스를 제공합니다. [!DNL Platform] 인스턴스를 별도의 가상 환경으로 전환하여 디지털 경험 애플리케이션을 개발하고 발전시킵니다.
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Adobe Experience Platform에 성공적으로 수집된 모든 데이터는 [!DNL Data Lake] 내에서 데이터 세트로 유지됩니다. 데이터 세트는 스키마(열) 및 필드(행)를 포함하는 데이터 수집을 위한 저장소 및 관리 구조입니다. 데이터 세트에는 저장하는 데이터의 다양한 측면을 설명하는 메타데이터도 포함됩니다.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform]은(는) 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 데이터 세트를 Platform의 클라우드 스토리지 대상으로 내보내기 위해 알아야 하는 추가 정보를 제공합니다.
 
-### 필요 권한 {#permissions}
+### 필요한 권한 {#permissions}
 
-데이터 세트를 내보내려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 데이터 세트 보기]**, 및 **[!UICONTROL 데이터 세트 대상 관리 및 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions). 읽기 [액세스 제어 개요](/help/access-control/ui/overview.md) 필요한 권한을 얻으려면 제품 관리자에게 문의하십시오.
+데이터 세트를 내보내려면 **[!UICONTROL 대상 보기]**, **[!UICONTROL 데이터 세트 보기]** 및 **[!UICONTROL 데이터 세트 대상 관리 및 활성화]** [액세스 제어 권한](/help/access-control/home.md#permissions)이 필요합니다. [액세스 제어 개요](/help/access-control/ui/overview.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
-데이터 세트를 내보내는 데 필요한 권한이 있고 대상이 데이터 세트 내보내기를 지원하는지 확인하려면 대상 카탈로그를 확인하십시오. 대상에 다음 항목이 있는 경우 **[!UICONTROL 활성화]** 또는 **[!UICONTROL 데이터 세트 내보내기]** 을 제어한 다음 적절한 사용 권한을 갖습니다.
+데이터 세트를 내보내는 데 필요한 권한이 있고 대상이 데이터 세트 내보내기를 지원하는지 확인하려면 대상 카탈로그를 확인하십시오. 대상에 **[!UICONTROL 활성화]** 또는 **[!UICONTROL 데이터 세트 내보내기]** 컨트롤이 있는 경우 적절한 권한이 있습니다.
 
 ### 샘플 API 호출 읽기 {#reading-sample-api-calls}
 
-이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 문서에 사용된 규칙에 대한 자세한 내용은 [ 문제 해결 안내서의 ](../../landing/troubleshooting.md#how-do-i-format-an-api-request)예제 API 호출을 읽는 방법[!DNL Experience Platform] 섹션을 참조하세요.
+이 튜토리얼에서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 [!DNL Experience Platform] 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../landing/troubleshooting.md#how-do-i-format-an-api-request)에 대한 섹션을 참조하십시오.
 
 ### 필수 및 선택적 헤더에 대한 값 수집 {#gather-values-headers}
 
-을 호출하기 위해 [!DNL Platform] API, 먼저 다음을 완료해야 합니다. [Experience Platform 인증 자습서](https://www.adobe.com/go/platform-api-authentication-en). 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Platform]개의 API를 호출하려면 먼저 [Experience Platform 인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 * 인증: 전달자 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
+* x-api 키: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-의 리소스 [!DNL Experience Platform] 는 특정 가상 샌드박스로 격리될 수 있습니다. 에 대한 요청에서 [!DNL Platform] API에서는 작업이 수행될 샌드박스의 이름과 ID를 지정할 수 있습니다. 이러한 매개 변수는 선택 사항입니다.
+[!DNL Experience Platform]의 리소스는 특정 가상 샌드박스로 격리될 수 있습니다. [!DNL Platform] API에 대한 요청에서 작업을 수행할 샌드박스의 이름과 ID를 지정할 수 있습니다. 이러한 매개 변수는 선택 사항입니다.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->의 샌드박스에 대한 자세한 내용 [!DNL Experience Platform], 다음을 참조하십시오. [샌드박스 개요 설명서](../../sandboxes/home.md).
+>[!DNL Experience Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
@@ -85,11 +85,11 @@ ht-degree: 6%
 
 ### API 참조 설명서 {#api-reference-documentation}
 
-이 자습서에서 모든 API 작업에 대한 참조 설명서를 함께 찾을 수 있습니다. 다음을 참조하십시오. [[!DNL Flow Service] - Adobe Developer 웹 사이트의 대상 API 설명서](https://developer.adobe.com/experience-platform-apis/references/destinations/). 이 자습서와 API 참조 설명서를 동시에 사용하는 것이 좋습니다.
+이 자습서에서 모든 API 작업에 대한 참조 설명서를 함께 찾을 수 있습니다. Adobe Developer 웹 사이트](https://developer.adobe.com/experience-platform-apis/references/destinations/)에서 [[!DNL Flow Service] - 대상 API 설명서를 참조하십시오. 이 자습서와 API 참조 설명서를 동시에 사용하는 것이 좋습니다.
 
 ### 용어집 {#glossary}
 
-이 API 자습서에서 보게 되는 용어에 대한 설명은 [용어집 섹션](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) API 참조 설명서의
+이 API 자습서에서 보게 되는 용어에 대한 설명은 API 참조 설명서의 [용어집 섹션](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary)을 참조하십시오.
 
 ### 원하는 대상에 대한 연결 사양 및 흐름 사양 수집 {#gather-connection-spec-flow-spec}
 
@@ -107,7 +107,7 @@ ht-degree: 6%
 
 {style="table-layout:auto"}
 
-다양한 을(를) 구성하려면 이 ID가 필요합니다 [!DNL Flow Service] 엔티티. 또한 의 일부를 참조해야 합니다 [!DNL Connection Spec] 를 읽어들일 수 있도록 특정 엔티티를 설정할 수 있습니다. [!DNL Connection Spec] 출처: [!DNL Flow Service APIs]. 표의 모든 대상에 대한 연결 사양을 검색하는 아래 예를 참조하십시오.
+다양한 [!DNL Flow Service] 엔터티를 만들려면 이러한 ID가 필요합니다. [!DNL Flow Service APIs]에서 [!DNL Connection Spec]을(를) 검색할 수 있도록 특정 엔터티를 설정하려면 [!DNL Connection Spec] 자체의 일부를 참조해야 합니다. 표의 모든 대상에 대한 연결 사양을 검색하는 아래 예를 참조하십시오.
 
 >[!BEGINTABS]
 
@@ -115,7 +115,7 @@ ht-degree: 6%
 
 **요청**
 
-+++검색 [!DNL connection spec] 대상 [!DNL Amazon S3]
++++1}에 대해 [!DNL connection spec] 검색[!DNL Amazon S3]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -149,7 +149,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++검색 [!DNL connection spec] 대상 [!DNL Azure Blob Storage]
++++1}에 대해 [!DNL connection spec] 검색[!DNL Azure Blob Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -183,7 +183,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++검색 [!DNL connection spec] 대상 [!DNL Azure Data Lake Gen 2(ADLS Gen2])
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2]에 대해 [!DNL connection spec] 검색)
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -217,7 +217,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++검색 [!DNL connection spec] 대상 [!DNL Data Landing Zone(DLZ)]
++++1}에 대해 [!DNL connection spec] 검색[!DNL Data Landing Zone(DLZ)]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -247,11 +247,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Google 클라우드 스토리지]
+>[!TAB Google 클라우드 저장소]
 
 **요청**
 
-+++검색 [!DNL connection spec] 대상 [!DNL Google Cloud Storage]
++++1}에 대해 [!DNL connection spec] 검색[!DNL Google Cloud Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
@@ -285,7 +285,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **요청**
 
-+++검색 [!DNL connection spec] SFTP용
++++SFTP에 대해 [!DNL connection spec] 검색
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/36965a81-b1c6-401b-99f8-22508f1e6a26' \
@@ -317,7 +317,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-클라우드 스토리지 대상에 대한 데이터 세트 데이터 흐름을 설정하려면 아래 단계를 따르십시오. 일부 단계의 경우 요청 및 응답은 다양한 클라우드 스토리지 대상 간에 다릅니다. 이러한 경우 페이지의 탭을 사용하여 데이터 세트를 연결 및 내보내려는 대상에 대한 요청 및 응답을 검색합니다. 올바른 을(를) 사용하십시오 [!DNL connection spec] 및 [!DNL flow spec] 을(를) 구성하려는 대상에 대해 선택합니다.
+클라우드 스토리지 대상에 대한 데이터 세트 데이터 흐름을 설정하려면 아래 단계를 따르십시오. 일부 단계의 경우 요청 및 응답은 다양한 클라우드 스토리지 대상 간에 다릅니다. 이러한 경우 페이지의 탭을 사용하여 데이터 세트를 연결 및 내보내려는 대상에 대한 요청 및 응답을 검색합니다. 구성 중인 대상에 올바른 [!DNL connection spec] 및 [!DNL flow spec]을(를) 사용하십시오.
 
 ## 데이터 세트 목록 검색 {#retrieve-list-of-available-datasets}
 
@@ -340,7 +340,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-적격한 데이터 세트를 검색하려면 [!DNL connection spec] 요청 URL에 사용된 ID는 데이터 레이크 소스 연결 사양 ID여야 합니다. `23598e46-f560-407b-88d5-ea6207e49db0`및 두 개의 쿼리 매개 변수 `outputField=datasets` 및 `outputType=activationDatasets` 을(를) 지정해야 합니다. 다른 모든 쿼리 매개 변수는 [카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+적격 데이터 세트를 검색하려면 요청 URL에 사용된 [!DNL connection spec] ID는 데이터 레이크 소스 연결 사양 ID `23598e46-f560-407b-88d5-ea6207e49db0`이어야 하며 두 개의 쿼리 매개 변수 `outputField=datasets` 및 `outputType=activationDatasets`을(를) 지정해야 합니다. 다른 모든 쿼리 매개 변수는 [카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/)에서 지원하는 표준 매개 변수입니다.
 
 +++
 
@@ -427,7 +427,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 성공적인 응답에는 활성화 가능한 데이터 세트 목록이 포함되어 있습니다. 이러한 데이터 세트는 다음 단계에서 소스 연결을 구성할 때 사용할 수 있습니다.
 
-반환된 각 데이터 세트에 대한 다양한 응답 매개 변수에 대한 자세한 내용은 [데이터 세트 API 개발자 설명서](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
+반환된 각 데이터 세트에 대한 다양한 응답 매개 변수에 대한 자세한 내용은 [데이터 세트 API 개발자 설명서](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets)를 참조하십시오.
 
 ## 소스 연결 만들기 {#create-source-connection}
 
@@ -488,26 +488,26 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDSHADEBOX]
 
-성공적인 응답은 ID( )를 반환합니다.`id`)을 참조하십시오. `etag`. 소스 연결 ID는 나중에 데이터 흐름을 만들 때 필요하므로 기록해 두십시오.
+성공한 응답은 새로 만든 원본 연결의 ID(`id`)와 `etag`을(를) 반환합니다. 소스 연결 ID는 나중에 데이터 흐름을 만들 때 필요하므로 기록해 두십시오.
 
 또한 다음 사항을 기억하십시오.
 
-* 이 단계에서 생성된 소스 연결은 해당 데이터 세트를 대상으로 활성화하기 위해 데이터 흐름에 연결되어야 합니다. 다음을 참조하십시오. [데이터 흐름 만들기](#create-dataflow) 소스 연결을 데이터 흐름에 연결하는 방법에 대한 정보 섹션입니다.
+* 이 단계에서 생성된 소스 연결은 해당 데이터 세트를 대상으로 활성화하기 위해 데이터 흐름에 연결되어야 합니다. 데이터 흐름에 원본 연결을 연결하는 방법에 대한 자세한 내용은 [데이터 흐름 만들기](#create-dataflow) 섹션을 참조하십시오.
 * 소스 연결의 데이터 세트 ID는 만든 후에 수정할 수 없습니다. 소스 연결에서 데이터 세트를 추가하거나 제거해야 하는 경우 새 소스 연결을 만들고 새 소스 연결의 ID를 데이터 흐름에 연결해야 합니다.
 
 ## (대상) 기본 연결 만들기 {#create-base-connection}
 
 ![데이터 세트 내보내기 워크플로의 3단계를 보여 주는 다이어그램](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
 
-기본 연결은 대상에 자격 증명을 안전하게 저장합니다. 대상 유형에 따라 해당 대상에 대해 인증하는 데 필요한 자격 증명이 달라질 수 있습니다. 이러한 인증 매개 변수를 찾으려면 먼저 [!DNL connection spec] 섹션에 설명된 대로 원하는 대상에 대해 [연결 사양 및 흐름 사양 수집](#gather-connection-spec-flow-spec) 그리고 다음을 살펴보십시오. `authSpec` 응답. 다음 탭을 참조하십시오. `authSpec` 지원되는 모든 대상의 속성입니다.
+기본 연결은 대상에 자격 증명을 안전하게 저장합니다. 대상 유형에 따라 해당 대상에 대해 인증하는 데 필요한 자격 증명이 달라질 수 있습니다. 이러한 인증 매개 변수를 찾으려면 먼저 [연결 사양 및 흐름 사양 수집](#gather-connection-spec-flow-spec) 섹션에 설명된 대로 원하는 대상에 대해 [!DNL connection spec]을(를) 검색한 다음 응답의 `authSpec`을(를) 확인하십시오. 지원되는 모든 대상의 `authSpec` 속성을 보려면 아래 탭을 참조하십시오.
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
 
-+++[!DNL Amazon S3] - [!DNL Connection spec] 표시 [!DNL auth spec]
++++[!DNL Amazon S3] - [!DNL Connection spec] - [!DNL auth spec] 표시
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
+아래 [!DNL connection spec] 예제에서 인라인 메모가 있는 강조 표시된 줄을 참고하십시오. 이 줄은 [!DNL connection spec]에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다.
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -552,9 +552,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Azure Blob 저장소]
 
-+++[!DNL Azure Blob Storage] - [!DNL Connection spec] 표시 [!DNL auth spec]
++++[!DNL Azure Blob Storage] - [!DNL Connection spec] - [!DNL auth spec] 표시
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
+아래 [!DNL connection spec] 예제에서 인라인 메모가 있는 강조 표시된 줄을 참고하십시오. 이 줄은 [!DNL connection spec]에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다.
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -593,9 +593,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] 표시 [!DNL auth spec]
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] - [!DNL auth spec] 표시
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
+아래 [!DNL connection spec] 예제에서 인라인 메모가 있는 강조 표시된 줄을 참고하십시오. 이 줄은 [!DNL connection spec]에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다.
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -649,11 +649,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB 데이터 랜딩 영역(DLZ)]
 
-+++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] 표시 [!DNL auth spec]
++++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] - [!DNL auth spec] 표시
 
 >[!NOTE]
 >
->데이터 랜딩 영역 대상에는 [!DNL auth spec].
+>데이터 랜딩 영역 대상에 [!DNL auth spec]이(가) 필요하지 않습니다.
 
 ```json
 {
@@ -669,11 +669,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Google 클라우드 스토리지]
+>[!TAB Google 클라우드 저장소]
 
-+++[!DNL Google Cloud Storage] - [!DNL Connection spec] 표시 [!DNL auth spec]
++++[!DNL Google Cloud Storage] - [!DNL Connection spec] - [!DNL auth spec] 표시
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
+아래 [!DNL connection spec] 예제에서 인라인 메모가 있는 강조 표시된 줄을 참고하십시오. 이 줄은 [!DNL connection spec]에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다.
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -716,13 +716,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL Connection spec] 표시 [!DNL auth spec]
++++SFTP - [!DNL Connection spec], [!DNL auth spec] 표시
 
 >[!NOTE]
 >
->SFTP 대상에는 [!DNL auth spec]암호와 SSH 키 인증을 모두 지원합니다.
+>SFTP 대상은 암호와 SSH 키 인증을 모두 지원하므로 [!DNL auth spec]에 두 개의 개별 항목을 포함합니다.
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 아래 예제 : 파일에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. [!DNL connection spec].
+아래 [!DNL connection spec] 예제에서 인라인 메모가 있는 강조 표시된 줄을 참고하십시오. 이 줄은 [!DNL connection spec]에서 인증 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다.
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -806,7 +806,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-인증 사양에 지정된 속성(예: `authSpec` 응답에서 아래 예와 같이 각 대상 유형에 맞는 필수 자격 증명으로 기본 연결을 만들 수 있습니다.
+인증 사양(즉, 응답의 `authSpec`)에 지정된 속성을 사용하여 아래 예와 같이 각 대상 유형에 맞는 필수 자격 증명으로 기본 연결을 만들 수 있습니다.
 
 >[!BEGINTABS]
 
@@ -818,7 +818,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 인증 자격 증명을 얻는 방법에 대한 자세한 내용은 [대상에 인증](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) 섹션(Amazon S3 대상 설명서 페이지 참조)
+>필요한 인증 자격 증명을 얻는 방법에 대한 자세한 내용은 Amazon S3 대상 설명서 페이지의 [대상에 대한 인증](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -869,7 +869,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 인증 자격 증명을 얻는 방법에 대한 자세한 내용은 [대상에 인증](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) 섹션( Azure Blob 저장 공간 대상 설명서 페이지)에 표시됩니다.
+>필요한 인증 자격 증명을 얻는 방법에 대한 자세한 내용은 Azure Blob 저장소 대상 설명서 페이지의 [대상에 인증](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -919,7 +919,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 인증 자격 증명을 얻는 방법에 대한 자세한 내용은 [대상에 인증](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) 섹션( Azure Data Lake Gen 2(ADLS Gen2) 대상 설명서 페이지).
+>필요한 인증 자격 증명을 얻는 방법에 대한 자세한 내용은 Azure Data Lake Gen 2(ADLS Gen2) 대상 설명서 페이지의 [대상에 인증](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -972,7 +972,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->데이터 랜딩 영역 대상에 인증 자격 증명이 필요하지 않습니다. 자세한 내용은 [대상에 인증](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) 섹션( 데이터 랜딩 영역 대상 설명서 페이지)을 참조하십시오.
+>데이터 랜딩 영역 대상에 인증 자격 증명이 필요하지 않습니다. 자세한 내용은 데이터 랜딩 영역 대상 설명서 페이지의 [대상에 대한 인증](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) 섹션을 참조하십시오.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1002,7 +1002,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Google 클라우드 스토리지]
+>[!TAB Google 클라우드 저장소]
 
 **요청**
 
@@ -1010,7 +1010,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 인증 자격 증명을 얻는 방법에 대한 자세한 내용은 [대상에 인증](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) 섹션( Google 클라우드 스토리지 대상 설명서 페이지 )에 표시됩니다.
+>필요한 인증 자격 증명을 얻는 방법에 대한 자세한 내용은 Google 클라우드 저장소 대상 설명서 페이지의 [대상에 대한 인증](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -1061,7 +1061,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 인증 자격 증명을 얻는 방법에 대한 자세한 내용은 [대상에 인증](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) 섹션( SFTP 대상 설명서 페이지)
+>필요한 인증 자격 증명을 얻는 방법에 대한 자세한 내용은 SFTP 대상 설명서 페이지의 [대상에 인증](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -1096,7 +1096,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 인증 자격 증명을 얻는 방법에 대한 자세한 내용은 [대상에 인증](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) 섹션( SFTP 대상 설명서 페이지)
+>필요한 인증 자격 증명을 얻는 방법에 대한 자세한 내용은 SFTP 대상 설명서 페이지의 [대상에 인증](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) 섹션을 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -1148,19 +1148,19 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![데이터 세트 내보내기 워크플로의 4단계를 보여 주는 다이어그램](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
-다음으로 데이터 세트에 대한 내보내기 매개 변수를 저장하는 타겟 연결을 만들어야 합니다. 내보내기 매개 변수에는 위치, 파일 형식, 압축 및 기타 세부 사항이 포함됩니다. 다음을 참조하십시오. `targetSpec` 각 대상 유형에 대해 지원되는 속성을 파악하기 위해 대상의 연결 사양에 제공되는 속성입니다. 다음 탭을 참조하십시오. `targetSpec` 지원되는 모든 대상의 속성입니다.
+다음으로 데이터 세트에 대한 내보내기 매개 변수를 저장하는 타겟 연결을 만들어야 합니다. 내보내기 매개 변수에는 위치, 파일 형식, 압축 및 기타 세부 사항이 포함됩니다. 각 대상 유형에 대해 지원되는 속성을 이해하려면 대상의 연결 사양에 제공된 `targetSpec` 속성을 참조하십시오. 지원되는 모든 대상의 `targetSpec` 속성을 보려면 아래 탭을 참조하십시오.
 
 >[!WARNING]
 >
->JSON 파일로 내보내기는 압축 모드에서만 지원됩니다. 다음으로 내보내기 [!DNL Parquet] 파일은 압축 및 압축되지 않은 모드에서 지원됩니다.
+>JSON 파일로 내보내기는 압축 모드에서만 지원됩니다. [!DNL Parquet] 파일로 내보내기는 압축 및 압축 해제 모드에서 지원됩니다.
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
 
-+++[!DNL Amazon S3] - [!DNL Connection spec] 대상 연결 매개 변수 표시
++++대상 연결 매개 변수를 표시하는 [!DNL Amazon S3] - [!DNL Connection spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 데이터 세트 내보내기 대상에 적용할 수 있습니다.
+아래 [!DNL connection spec] 예제에서 인라인 메모가 있는 강조 표시된 줄을 메모하십시오. 연결 사양에서 [!DNL target spec] 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. 아래 예제에서 데이터 집합 내보내기 대상에 적용할 수 있는 대상 매개 변수가 *not*&#x200B;인지 확인할 수 있습니다.
 
 ```json {line-numbers="true" start-line="1" highlight="10,41,56"}
 {
@@ -1244,9 +1244,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Azure Blob 저장소]
 
-+++[!DNL Azure Blob Storage] - [!DNL Connection spec] 대상 연결 매개 변수 표시
++++대상 연결 매개 변수를 표시하는 [!DNL Azure Blob Storage] - [!DNL Connection spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 데이터 세트 내보내기 대상에 적용할 수 있습니다.
+아래 [!DNL connection spec] 예제에서 인라인 메모가 있는 강조 표시된 줄을 메모하십시오. 연결 사양에서 [!DNL target spec] 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. 아래 예제에서 데이터 집합 내보내기 대상에 적용할 수 있는 대상 매개 변수가 *not*&#x200B;인지 확인할 수 있습니다.
 
 ```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
@@ -1319,9 +1319,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] 대상 연결 매개 변수 표시
++++대상 연결 매개 변수를 표시하는 [!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 데이터 세트 내보내기 대상에 적용할 수 있습니다.
+아래 [!DNL connection spec] 예제에서 인라인 메모가 있는 강조 표시된 줄을 메모하십시오. 연결 사양에서 [!DNL target spec] 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. 아래 예제에서 데이터 집합 내보내기 대상에 적용할 수 있는 대상 매개 변수가 *not*&#x200B;인지 확인할 수 있습니다.
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1385,9 +1385,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB 데이터 랜딩 영역(DLZ)]
 
-+++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] 대상 연결 매개 변수 표시
++++대상 연결 매개 변수를 표시하는 [!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 데이터 세트 내보내기 대상에 적용할 수 있습니다.
+아래 [!DNL connection spec] 예제에서 인라인 메모가 있는 강조 표시된 줄을 메모하십시오. 연결 사양에서 [!DNL target spec] 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. 아래 예제에서 데이터 집합 내보내기 대상에 적용할 수 있는 대상 매개 변수가 *not*&#x200B;인지 확인할 수 있습니다.
 
 ```json {line-numbers="true" start-line="1" highlight="9,21,36"}
 "items": [
@@ -1448,11 +1448,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Google 클라우드 스토리지]
+>[!TAB Google 클라우드 저장소]
 
-+++[!DNL Google Cloud Storage] - [!DNL Connection spec] 대상 연결 매개 변수 표시
++++대상 연결 매개 변수를 표시하는 [!DNL Google Cloud Storage] - [!DNL Connection spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 데이터 세트 내보내기 대상에 적용할 수 있습니다.
+아래 [!DNL connection spec] 예제에서 인라인 메모가 있는 강조 표시된 줄을 메모하십시오. 연결 사양에서 [!DNL target spec] 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. 아래 예제에서 데이터 집합 내보내기 대상에 적용할 수 있는 대상 매개 변수가 *not*&#x200B;인지 확인할 수 있습니다.
 
 ```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
@@ -1524,9 +1524,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL Connection spec] 대상 연결 매개 변수 표시
++++SFTP - 대상 연결 매개 변수를 표시하는 [!DNL Connection spec]
 
-인라인 메모가 있는 강조 표시된 줄을 [!DNL connection spec] 를 찾을 위치에 대한 추가 정보를 제공하는 아래 예 [!DNL target spec] 연결 사양의 매개변수. 아래 예제에서 대상 매개 변수를 확인할 수 있습니다. *아님* 데이터 세트 내보내기 대상에 적용할 수 있습니다.
+아래 [!DNL connection spec] 예제에서 인라인 메모가 있는 강조 표시된 줄을 메모하십시오. 연결 사양에서 [!DNL target spec] 매개 변수를 찾을 위치에 대한 추가 정보를 제공합니다. 아래 예제에서 데이터 집합 내보내기 대상에 적용할 수 있는 대상 매개 변수가 *not*&#x200B;인지 확인할 수 있습니다.
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1599,12 +1599,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++[!DNL Amazon S3] - Target 연결 요청
++++[!DNL Amazon S3] - 대상 연결 요청
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [대상 세부 사항 입력](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 의 섹션 [!DNL Amazon S3] 대상 설명서 페이지.
->기타 지원되는 값 `datasetFileType`API 참조 설명서를 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [!DNL Amazon S3] 대상 설명서 페이지의 [대상 세부 정보 채우기](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 섹션을 참조하십시오.
+>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -1652,12 +1652,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++[!DNL Azure Blob Storage] - Target 연결 요청
++++[!DNL Azure Blob Storage] - 대상 연결 요청
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [대상 세부 사항 입력](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) 의 섹션 [!DNL Azure Blob Storage] 대상 설명서 페이지.
->기타 지원되는 값 `datasetFileType`API 참조 설명서를 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [!DNL Azure Blob Storage] 대상 설명서 페이지의 [대상 세부 정보 채우기](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) 섹션을 참조하십시오.
+>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
 
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
@@ -1706,12 +1706,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++[!DNL Azure Blob Storage] - Target 연결 요청
++++[!DNL Azure Blob Storage] - 대상 연결 요청
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [대상 세부 사항 입력](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) Azure의 섹션 [!DNL Data Lake Gen 2(ADLS Gen2)] 대상 설명서 페이지.
->기타 지원되는 값 `datasetFileType`API 참조 설명서를 참조하십시오.
+>필요한 대상 매개 변수를 가져오는 방법에 대한 자세한 내용은 Azure [!DNL Data Lake Gen 2(ADLS Gen2)] 대상 설명서 페이지의 [대상 세부 정보를 채우기](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) 섹션을 참조하세요.
+>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -1758,12 +1758,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++[!DNL Data Landing Zone] - Target 연결 요청
++++[!DNL Data Landing Zone] - 대상 연결 요청
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [대상 세부 사항 입력](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) 의 섹션 [!DNL Data Landing Zone] 대상 설명서 페이지.
->기타 지원되는 값 `datasetFileType`API 참조 설명서를 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [!DNL Data Landing Zone] 대상 설명서 페이지의 [대상 세부 정보 채우기](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) 섹션을 참조하십시오.
+>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -1806,16 +1806,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Google 클라우드 스토리지]
+>[!TAB Google 클라우드 저장소]
 
 **요청**
 
-+++[!DNL Google Cloud Storage] - Target 연결 요청
++++[!DNL Google Cloud Storage] - 대상 연결 요청
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [대상 세부 사항 입력](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) 의 섹션 [!DNL Google Cloud Storage] 대상 설명서 페이지.
->기타 지원되는 값 `datasetFileType`API 참조 설명서를 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [!DNL Google Cloud Storage] 대상 설명서 페이지의 [대상 세부 정보 채우기](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) 섹션을 참조하십시오.
+>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
 
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
@@ -1868,8 +1868,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 [대상 세부 사항 입력](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) 섹션( SFTP 대상 설명서 페이지)
->기타 지원되는 값 `datasetFileType`API 참조 설명서를 참조하십시오.
+>필요한 대상 매개 변수를 얻는 방법에 대한 자세한 내용은 SFTP 대상 설명서 페이지의 [대상 세부 정보를 입력하십시오](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) 섹션을 참조하십시오.
+>`datasetFileType`의 다른 지원되는 값은 API 참조 설명서를 참조하십시오.
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -1916,7 +1916,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 응답에서 Target 연결 ID를 확인합니다. 이 ID는 데이터 세트를 내보내기 위한 데이터 흐름을 만들 때 다음 단계에서 필수입니다.
 
-## 데이터 흐름을 만듭니다 {#create-dataflow}
+## 데이터 흐름 만들기 {#create-dataflow}
 
 ![데이터 세트 내보내기 워크플로의 5단계를 보여 주는 다이어그램](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
 
@@ -1928,7 +1928,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++데이터 세트 데이터 흐름 만들기 [!DNL Amazon S3] 대상 - 요청
++++[!DNL Amazon S3] 대상에 대한 데이터 세트 데이터 흐름 만들기 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -1981,7 +1981,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++데이터 세트 데이터 흐름 만들기 [!DNL Azure Blob Storage] 대상 - 요청
++++[!DNL Azure Blob Storage] 대상에 대한 데이터 세트 데이터 흐름 만들기 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2034,7 +2034,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++데이터 세트 데이터 흐름 만들기 [!DNL Azure Data Lake Gen 2(ADLS Gen2)] 대상 - 요청
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] 대상에 대한 데이터 세트 데이터 흐름 만들기 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2087,7 +2087,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **요청**
 
-+++데이터 세트 데이터 흐름 만들기 [!DNL Data Landing Zone] 대상 - 요청
++++[!DNL Data Landing Zone] 대상에 대한 데이터 세트 데이터 흐름 만들기 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2136,11 +2136,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Google 클라우드 스토리지]
+>[!TAB Google 클라우드 저장소]
 
 **요청**
 
-+++데이터 세트 데이터 흐름 만들기 [!DNL Google Cloud Storage] 대상 - 요청
++++[!DNL Google Cloud Storage] 대상에 대한 데이터 세트 데이터 흐름 만들기 - 요청
 
 추가 정보를 제공하는 요청 예제에서 인라인 주석이 있는 강조 표시된 줄을 확인합니다. 요청을 선택한 터미널에 복사 붙여넣을 때 요청에서 인라인 주석을 제거합니다.
 
@@ -2321,11 +2321,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-다음에 대한 정보를 찾을 수 있습니다. [데이터 흐름에서 반환된 다양한 매개 변수는 API를 실행합니다.](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) API 참조 설명서에서 참조하십시오.
+API 참조 설명서에서 데이터 흐름에서 반환된 [다양한 매개 변수](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns)에 대한 정보를 찾을 수 있습니다.
 
 ## 데이터 세트 내보내기 성공 확인 {#verify}
 
-데이터 세트를 내보낼 때 Experience Platform에서 `.json` 또는 `.parquet` 파일을 제공한 저장소 위치에 있습니다. 제공된 내보내기 일정에 따라 새 파일이 저장소 위치에 저장됩니다. [데이터 흐름 만들기](#create-dataflow).
+데이터 세트를 내보낼 때 Experience Platform은 사용자가 제공한 저장소 위치에 `.json` 또는 `.parquet` 파일을 만듭니다. [데이터 흐름을 만들 때](#create-dataflow)제공한 내보내기 일정에 따라 저장소 위치에 새 파일이 저장될 것으로 예상합니다.
 
 Experience Platform은 지정한 저장소 위치에 내보낸 데이터 세트 파일을 저장하는 폴더 구조를 만듭니다. 내보내기 시간마다 아래 패턴을 따라 새 폴더가 만들어집니다.
 
@@ -2335,20 +2335,20 @@ Experience Platform은 지정한 저장소 위치에 내보낸 데이터 세트 
 
 ### 샘플 데이터 세트 파일 {#sample-files}
 
-스토리지 위치에 이러한 파일이 있으면 내보내기가 성공적으로 수행되었는지 확인할 수 있습니다. 내보낸 파일의 구조를 이해하기 위해 샘플을 다운로드할 수 있습니다 [.parquet 파일](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) 또는 [.json 파일](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
+스토리지 위치에 이러한 파일이 있으면 내보내기가 성공적으로 수행되었는지 확인할 수 있습니다. 내보낸 파일의 구조를 이해하기 위해 샘플 [.parquet 파일](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) 또는 [.json 파일](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json)을 다운로드할 수 있습니다.
 
 #### 압축된 데이터 세트 파일 {#compressed-dataset-files}
 
-의 단계에서 [target 연결 만들기](#create-target-connection)를 클릭하고, 내보낼 데이터 세트 파일을 압축하도록 선택할 수 있습니다.
+[대상 연결을 만듭니다](#create-target-connection) 단계에서는 압축할 내보낸 데이터 세트 파일을 선택할 수 있습니다.
 
 압축할 때 두 파일 유형 간의 파일 형식 차이를 확인합니다.
 
-* 압축된 JSON 파일을 내보낼 때 내보내는 파일 형식은 다음과 같습니다. `json.gz`
-* 압축된 Parquet 파일을 내보낼 때 내보내는 파일 형식은 다음과 같습니다. `gz.parquet`
+* 압축된 JSON 파일을 내보낼 때 내보낸 파일 형식은 `json.gz`입니다.
+* 압축된 Parquet 파일을 내보낼 때 내보낸 파일 형식은 `gz.parquet`입니다.
 
 ## API 오류 처리 {#api-error-handling}
 
-이 자습서의 API 끝점은 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 을(를) 참조하십시오 [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors) 오류 응답 해석에 대한 자세한 내용은 플랫폼 문제 해결 안내서를 참조하십시오.
+이 자습서의 API 끝점은 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 오류 응답 해석에 대한 자세한 내용은 플랫폼 문제 해결 안내서의 [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors)를 참조하십시오.
 
 ## 다음 단계 {#next-steps}
 

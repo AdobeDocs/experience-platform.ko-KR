@@ -1,6 +1,6 @@
 ---
 title: 네트워크 탭
-description: Adobe Experience Platform Debugger의 네트워크 탭을 사용하는 방법에 대해 알아봅니다.
+description: Adobe Experience Platform Debugger에서 네트워크 탭을 사용하는 방법에 대해 알아봅니다.
 keywords: debugger;experience Platform Debugger 확장 프로그램;chrome;확장 프로그램;네트워크;정보
 seo-description: Experience Platform Debugger Network screen
 seo-title: Network Tab
@@ -15,7 +15,7 @@ ht-degree: 62%
 
 # 네트워크 탭
 
-다음 **네트워크** 탭은 페이지에서 수행된 모든 Adobe Experience Cloud 솔루션 호출을 집계하여 왼쪽에서 오른쪽으로 표시합니다. 표준 매개 변수는 친숙한 이름으로 자동으로 레이블이 지정되며, 동일한 역할에 따라 일반 매개 변수를 그룹화하여 정렬됩니다.
+**네트워크** 탭은 페이지에서 수행된 모든 Adobe Experience Cloud 솔루션 호출을 집계하여 왼쪽에서 오른쪽으로 표시합니다. 표준 매개 변수는 친숙한 이름으로 자동으로 레이블이 지정되며, 동일한 역할에 따라 일반 매개 변수를 그룹화하여 정렬됩니다.
 
 ![](images/network.jpg)
 
@@ -29,7 +29,7 @@ ht-degree: 62%
 
 ![](images/network-analytics.jpg)
 
-모든 솔루션이 표시되도록 돌아가려면 을 선택합니다. **[!UICONTROL 네트워크]**
+모든 솔루션이 표시되도록 돌아가려면 **[!UICONTROL 네트워크]**&#x200B;를 선택하십시오.
 
 확장된 보기를 보려면 네트워크 보기에서 항목을 선택합니다. 확장된 보기 창에서 표시된 정보를 클립보드에 복사할 수 있습니다.
 
@@ -39,6 +39,6 @@ ht-degree: 62%
 
 ![](images/copy.jpg)-->
 
-목록을 지우려면 **[!UICONTROL 이벤트 제거]**.
+목록을 지우려면 **[!UICONTROL 이벤트 제거]**&#x200B;를 선택하십시오.
 
-이 화면의 정보가 포함된 Excel 파일을 다운로드하려면 **[!UICONTROL 다운로드]**.
+이 화면의 정보가 포함된 Excel 파일을 다운로드하려면 **[!UICONTROL 다운로드]**&#x200B;를 선택하십시오.

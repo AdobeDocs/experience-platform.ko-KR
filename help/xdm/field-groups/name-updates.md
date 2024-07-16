@@ -7,7 +7,7 @@ exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '287'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -21,30 +21,30 @@ ht-degree: 2%
 | 이전 이름 | 업데이트된 이름 |
 | --- | --- |
 | [!UICONTROL 경험 이벤트 개인 정보 mixin] | [!UICONTROL 개인 정보 세부 정보] |
-| [!UICONTROL ExperienceEvent 애플리케이션 세부 사항] | [!UICONTROL 애플리케이션 세부 정보] |
-| [!UICONTROL ExperienceEvent 채널 세부 사항] | [!UICONTROL 채널 세부 사항] |
-| [!UICONTROL ExperienceEvent 상거래 세부 사항] | [!UICONTROL 상거래 세부 정보] |
-| [!UICONTROL Advertising용 ExperienceEvent 세부 정보] | [!UICONTROL 광고 세부 정보] |
-| [!UICONTROL 마케팅을 위한 ExperienceEvent 세부 정보] | [!UICONTROL 캠페인 마케팅 세부 정보] |
+| [!UICONTROL ExperienceEvent 응용 프로그램 세부 정보] | [!UICONTROL 응용 프로그램 세부 정보] |
+| [!UICONTROL ExperienceEvent 채널 세부 정보] | [!UICONTROL 채널 세부 정보] |
+| [!UICONTROL ExperienceEvent 상거래 세부 정보] | [!UICONTROL Commerce 세부 정보] |
+| [!UICONTROL 광고를 위한 ExperienceEvent 세부 정보] | [!UICONTROL Advertising 세부 정보] |
+| [!UICONTROL 마케팅용 ExperienceEvent 세부 정보] | [!UICONTROL 캠페인 마케팅 세부 정보] |
 | [!UICONTROL 미디어에 대한 ExperienceEvent 세부 정보] | [!UICONTROL 미디어 인터랙션 세부 정보] |
 | [!UICONTROL 검색을 위한 ExperienceEvent 세부 정보] | [!UICONTROL 세부 정보 검색] |
 | [!UICONTROL ExperienceEvent 다이렉트 마케팅 세부 정보] | [!UICONTROL 다이렉트 마케팅 세부 정보] |
 | [!UICONTROL ExperienceEvent EndUserID] | [!UICONTROL 최종 사용자 ID 세부 정보] |
 | [!UICONTROL ExperienceEvent 환경 세부 정보] | [!UICONTROL 환경 세부 정보] |
-| [!UICONTROL ExperienceEvent 구현 세부 사항] | [!UICONTROL 구현 세부 정보] |
+| [!UICONTROL ExperienceEvent 구현 세부 정보] | [!UICONTROL 구현 세부 정보] |
 | [!UICONTROL ExperienceEvent 프로필 결합 세부 정보] | [!UICONTROL 프로필 결합] |
 | [!UICONTROL ExperienceEvent 세그먼트 멤버십 세부 정보] | [!UICONTROL 세그먼트 멤버십 세부 정보] |
 | [!UICONTROL ExperienceEvent 기술 세부 정보] | [!UICONTROL 기술 세부 정보] |
-| [!UICONTROL ExperienceEvent 웹 세부 사항] | [!UICONTROL 웹 세부 정보] |
-| [!UICONTROL 프로필 다이렉트 마케팅] | [!UICONTROL 다이렉트 마케팅 담당자 세부 정보] |
+| [!UICONTROL ExperienceEvent 웹 세부 정보] | [!UICONTROL 웹 세부 정보] |
+| [!UICONTROL 프로필 다이렉트 마케팅] | [!UICONTROL 다이렉트 마케팅 연락처 세부 정보] |
 | [!UICONTROL 프로필 사용자 세부 정보] | [!UICONTROL 인구 통계 세부 정보] |
-| [!UICONTROL 프로필 개인 세부 정보] | [!UICONTROL 개인 연락처 세부 정보] |
-| [!UICONTROL 프로필 전화] | [!UICONTROL 전화번호 세부 정보] |
+| [!UICONTROL 프로필 개인 정보] | [!UICONTROL 개인 연락처 정보] |
+| [!UICONTROL 프로필 전화] | [!UICONTROL 전화 번호 세부 정보] |
 | [!UICONTROL 프로필 환경 설정 세부 정보] | [!UICONTROL 환경 설정 세부 정보] |
-| [!UICONTROL 프로필 개인정보 보호] | [!UICONTROL 개인 정보 세부 정보] |
+| [!UICONTROL 프로필 개인 정보] | [!UICONTROL 개인 정보 세부 정보] |
 | [!UICONTROL 프로필 푸시 세부 정보] | [!UICONTROL 푸시 알림 토큰 세부 정보] |
 | [!UICONTROL 프로필 세분화] | [!UICONTROL 세그먼트 멤버십 세부 정보] |
 | [!UICONTROL 프로필 구독] | [!UICONTROL 구독 세부 정보] |
-| [!UICONTROL 프로필 작업 세부 정보] | [!UICONTROL 회사 연락처 세부 정보] |
+| [!UICONTROL 프로필 작업 세부 정보] | [!UICONTROL 회사 연락처 정보] |
 | [!UICONTROL 푸시 알림 세부 정보] | [!UICONTROL 푸시 알림 세부 정보] |
-| [!UICONTROL 세그먼트 표현식] | [!UICONTROL 세그먼트 표현식 세부 정보] |
+| [!UICONTROL 세그먼트 식] | [!UICONTROL 세그먼트 식 세부 정보] |

@@ -2,10 +2,11 @@
 title: Adobe Experience Platform 쿼리 서비스에서 지원되는 사용 사례
 description: Adobe Experience Platform 쿼리 서비스에서 지원되는 사용 사례를 알아봅니다.
 keywords: 쿼리 서비스;사용 사례
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+exl-id: eba8050d-be3a-41b6-8175-4f6b2b2ef7b0
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '137'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -16,8 +17,7 @@ ht-degree: 1%
 이 섹션의 각 문서에는 각 사용 사례를 구현하는 방법에 대한 정보가 포함되어 있습니다. 다음 추천 문서는 쿼리 서비스가 제공하는 다기능성을 보여 줍니다.
 
 - [찾아보기 중단됨](./abandoned-browse.md)
-- [봇 필터링](./bot-filtering.md)
+- [보트 필터링](./bot-filtering.md)
 - [고객 생애 가치](./customer-lifetime-value.md)
 - [성향 점수 결정](./propensity-score.md)
 - [유사 항목 일치](./fuzzy-match.md)
-

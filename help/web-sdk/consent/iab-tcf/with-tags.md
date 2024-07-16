@@ -11,23 +11,23 @@ ht-degree: 0%
 
 # 태그와 Platform Web SDK 확장을 사용하여 IAB TCF 2.0 지원 통합
 
-Adobe Experience Platform Web SDK는 Interactive Advertising Bureau Transparency &amp; Consent Framework 버전 2.0(IAB TCF 2.0)을 지원합니다. 이 안내서에서는 Adobe Experience Platform Web SDK 태그 확장을 사용하여 Adobe에 IAB TCF 2.0 동의 정보를 전송하기 위한 태그 속성을 설정하는 방법을 보여 줍니다.
+Adobe Experience Platform Web SDK는 대화형 Advertising Bureau Transparency &amp; Consent Framework, 버전 2.0(IAB TCF 2.0)을 지원합니다. 이 안내서에서는 Adobe Experience Platform Web SDK 태그 확장을 사용하여 Adobe에 IAB TCF 2.0 동의 정보를 전송하기 위한 태그 속성을 설정하는 방법을 보여 줍니다.
 
-태그를 사용하지 않으려면 의 안내서를 참조하십시오. [태그 없이 IAB TCF 2.0 사용](./without-tags.md).
+태그를 사용하지 않으려면 [태그 없이 IAB TCF 2.0 사용](./without-tags.md)에 대한 안내서를 참조하십시오.
 
 ## 시작하기
 
 태그 및 Platform Web SDK 확장과 함께 IAB TCF 2.0을 사용하려면 XDM 스키마 및 데이터 세트를 사용할 수 있어야 합니다.
 
-또한 이 안내서를 사용하려면 Adobe Experience Platform Web SDK에 대한 작업 이해 권한이 필요합니다. 빠른 새로 고침은 다음을 참조하십시오. [Adobe Experience Platform Web SDK 개요](../../home.md) 및 [FAQ(자주 묻는 질문)](../../faq.md) 설명서를 참조하십시오.
+또한 이 안내서를 사용하려면 Adobe Experience Platform Web SDK에 대한 작업 이해 권한이 필요합니다. 빠른 새로 고침은 [Adobe Experience Platform Web SDK 개요](../../home.md) 및 [자주 묻는 질문](../../faq.md) 설명서를 참조하십시오.
 
 ## 기본 동의 설정
 
-확장 구성 내에는 기본 동의에 대한 설정이 있습니다. 이는 동의 쿠키가 없는 고객의 행동을 제어합니다. 동의 쿠키가 없는 고객을 위해 경험 이벤트를 큐에 추가하려면 이 설정을 로 설정합니다. `pending`. 동의 쿠키가 없는 고객을 위해 경험 이벤트를 취소하려면 이 항목을 로 설정합니다. `out`. 데이터 요소를 사용하여 기본 동의 값을 동적으로 설정할 수도 있습니다. 다음을 참조하십시오 [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) 추가 정보.
+확장 구성 내에는 기본 동의에 대한 설정이 있습니다. 이는 동의 쿠키가 없는 고객의 행동을 제어합니다. 동의 쿠키가 없는 고객을 위해 경험 이벤트를 큐에 넣으려면 이를 `pending`(으)로 설정하십시오. 동의 쿠키가 없는 고객을 위해 경험 이벤트를 삭제하려면 이를 `out`(으)로 설정하십시오. 데이터 요소를 사용하여 기본 동의 값을 동적으로 설정할 수도 있습니다. 자세한 내용은 [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md)을(를) 참조하십시오.
 
 ## 동의 정보로 프로필 업데이트 {#consent-code-1}
 
-을 호출하려면 [`setConsent`](/help/web-sdk/commands/setconsent.md) 고객 동의 환경 설정이 변경된 경우 태그 규칙을 만듭니다. 새 이벤트를 추가하여 시작하고 코어 확장의 &quot;사용자 지정 코드&quot; 이벤트 유형을 선택합니다.
+고객 동의 환경 설정이 변경되었을 때 [`setConsent`](/help/web-sdk/commands/setconsent.md) 작업을 호출하려면 태그 규칙을 만듭니다. 새 이벤트를 추가하여 시작하고 코어 확장의 &quot;사용자 지정 코드&quot; 이벤트 유형을 선택합니다.
 
 새 이벤트에 다음 코드 샘플을 사용하십시오.
 
@@ -53,7 +53,7 @@ addEventListener();
 
 이 사용자 지정 코드는 다음 두 가지 작업을 수행합니다.
 
-* 두 개의 데이터 요소를 설정합니다. 하나는 동의 문자열로 설정하고 하나는 `gdprApplies` 플래그. 이 기능은 나중에 &quot;동의 설정&quot; 작업을 작성할 때 유용합니다.
+* 두 개의 데이터 요소를 설정합니다. 하나는 동의 문자열로 설정하고 하나는 `gdprApplies` 플래그로 설정합니다. 이 기능은 나중에 &quot;동의 설정&quot; 작업을 작성할 때 유용합니다.
 
 * 동의 환경 설정이 변경되면 규칙을 트리거합니다. 동의 환경 설정이 변경될 때마다 &quot;동의 설정&quot; 작업을 사용해야 합니다. 확장에 &quot;동의 설정&quot; 작업을 추가하고 양식을 다음과 같이 입력합니다.
 
@@ -62,7 +62,7 @@ addEventListener();
 * 값: &quot;%IAB TCF 동의 문자열%&quot;
 * GDPR 적용: &quot;%IAB TCF 동의 GDPR%&quot;
 
-![IAB 동의 작업 설정](../../assets/consent/iab-tcf/with-launch/iab-action.png)
+![IAB 동의 설정 작업](../../assets/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
@@ -70,13 +70,13 @@ addEventListener();
 
 ## 경험 이벤트에 대한 XDM 데이터 요소 생성
 
-동의 문자열은 XDM 경험 이벤트에 포함되어야 합니다. 이렇게 하려면 XDM 개체 데이터 요소를 사용합니다. 새 XDM 개체 데이터 요소를 만들거나 이미 만든 데이터 요소를 이벤트 전송에 사용합니다. 경험 이벤트 개인 정보 보호 스키마 필드 그룹을 스키마에 추가한 경우 `consentStrings` xdm 개체의 키입니다.
+동의 문자열은 XDM 경험 이벤트에 포함되어야 합니다. 이렇게 하려면 XDM 개체 데이터 요소를 사용합니다. 새 XDM 개체 데이터 요소를 만들거나 이미 만든 데이터 요소를 이벤트 전송에 사용합니다. 스키마에 경험 이벤트 개인 정보 보호 스키마 필드 그룹을 추가한 경우 XDM 개체에 `consentStrings` 키가 있어야 합니다.
 
-1. 선택 **[!UICONTROL 동의 문자열]**.
+1. **[!UICONTROL consentStrings]**&#x200B;를 선택하십시오.
 
-1. 선택 **[!UICONTROL 개별 항목 제공]** 및 선택 **[!UICONTROL 항목 추가]**.
+1. **[!UICONTROL 개별 항목 제공]**&#x200B;을 선택하고 **[!UICONTROL 항목 추가]**&#x200B;를 선택합니다.
 
-1. 확장 **[!UICONTROL consentString]** 머리글을 클릭하고 첫 번째 항목을 확장한 다음 다음 값을 입력합니다.
+1. **[!UICONTROL consentString]** 제목을 확장하고 첫 번째 항목을 확장한 다음 다음 값을 입력하십시오.
 
 * `consentStandard`: IAB TCF
 * `consentStandardVersion`: 2.0
@@ -111,7 +111,7 @@ function addEventListener() {
 addEventListener();
 ```
 
-이 코드는 이전 사용자 지정 코드와 동일하지만, 두 코드 모두 `useractioncomplete` 및 `tcloaded` 이벤트가 처리됩니다. 다음 [이전 사용자 지정 코드](#consent-code-1) 는 고객이 환경 설정을 처음 선택할 때만 트리거됩니다. 이 코드는 고객이 이미 환경 설정을 선택한 경우에도 트리거됩니다. 예를 들어 두 번째 페이지 로드 시.
+이 코드는 `useractioncomplete` 및 `tcloaded` 이벤트가 모두 처리된다는 점을 제외하면 이전 사용자 지정 코드와 동일합니다. [이전 사용자 지정 코드](#consent-code-1)은(는) 고객이 처음으로 기본 설정을 선택할 때만 트리거됩니다. 이 코드는 고객이 이미 환경 설정을 선택한 경우에도 트리거됩니다. 예를 들어 두 번째 페이지 로드 시.
 
 Platform Web SDK 확장에서 &quot;이벤트 보내기&quot; 작업을 추가합니다. XDM 필드 내에서 이전 섹션에서 만든 XDM 데이터 요소를 선택합니다.
 
@@ -121,4 +121,4 @@ Platform Web SDK 확장에서 &quot;이벤트 보내기&quot; 작업을 추가�
 
 ## 다음 단계
 
-Platform Web SDK 확장과 함께 IAB TCF 2.0을 사용하는 방법에 대해 배웠으므로 Adobe Analytics 또는 Adobe Real-time Customer Data Platform과 같은 다른 Adobe 솔루션과 통합하도록 선택할 수도 있습니다. 다음을 참조하십시오. [IAB 투명성 및 동의 프레임워크 2.0 개요](./overview.md) 추가 정보.
+Platform Web SDK 확장과 함께 IAB TCF 2.0을 사용하는 방법에 대해 배웠으므로 Adobe Analytics 또는 Adobe Real-time Customer Data Platform과 같은 다른 Adobe 솔루션과 통합하도록 선택할 수도 있습니다. 자세한 내용은 [IAB Transparency &amp; Consent Framework 2.0 개요](./overview.md)를 참조하십시오.

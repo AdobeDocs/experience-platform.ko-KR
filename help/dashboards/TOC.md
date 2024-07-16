@@ -8,7 +8,7 @@ role: Developer,User
 source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 28%
+ht-degree: 34%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 28%
 * [대시보드를 다운로드하여 PDF](download.md)
 * 데이터 Distiller {#data-distiller}
    * [개요](data-distiller/overview.md)
-   * 확장 앱 보고를 위한 사용자 지정 가능한 통찰력 {#customizable-insights}
+   * 확장 앱 보고에 대한 사용자 지정 가능한 인사이트 {#customizable-insights}
       * [개요](data-distiller/customizable-insights/overview.md)
       * [쿼리 프로 모드(SQL 차트 생성)](data-distiller/customizable-insights/query-pro-mode.md)
       * 필터 {#filters}
@@ -42,7 +42,7 @@ ht-degree: 28%
    * [대상자](insights/audiences.md)
    * [대상](insights/destinations.md)
    * [계정 프로필](insights/account-profiles.md)
-* 대시보드 맞춤화 {#customize}
+* 대시보드 {#customize} 사용자 지정
    * [사용자 지정 개요](customize/overview.md)
    * [대시보드 수정](customize/modify.md)
    * [위젯 라이브러리](customize/widget-library.md)
@@ -54,8 +54,8 @@ ht-degree: 28%
 * 사용 가능한 데이터 모델 {#data-models}
    * [Real-time Customer Data Platform Insights 데이터 모델 B2B 에디션](data-models/cdp-insights-data-model-b2b.md)
    * [Real-time Customer Data Platform Insights 데이터 모델 B2C 에디션](data-models/cdp-insights-data-model-b2c.md)
-* 애플리케이션 통합 {#integrations}
+* 응용 프로그램 통합 {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [쿼리 대시보드 데이터 세트](query.md)
 * [인사이트 SQL 보기](view-sql.md)
-* [Platform 릴리스 정보](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

@@ -17,12 +17,12 @@ ht-degree: 2%
 
 <!-- When configuring a destination, you must specify an authentication rule and one or more `destinationServerId` parameters, corresponding to the destination servers that define where the data will be delivered to. In most cases, the authentication rule that you should use is `CUSTOMER_AUTHENTICATION`.  -->
 
-이 구성 요소가 Destination SDK으로 만든 통합에 어디에 맞는지 이해하려면 의 다이어그램을 참조하십시오. [구성 옵션](../configuration-options.md) 설명서 또는 다음 대상 구성 개요 페이지를 참조하십시오.
+이 구성 요소가 Destination SDK으로 만든 통합에 어디에 맞는지 이해하려면 [구성 옵션](../configuration-options.md) 설명서의 다이어그램을 참조하거나 다음 대상 구성 개요 페이지를 참조하십시오.
 
 * [Destination SDK을 사용하여 스트리밍 대상 구성](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Destination SDK을 사용하여 파일 기반 대상 구성](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-다음을 통해 대상 게재 설정을 구성할 수 있습니다. `/authoring/destinations` 엔드포인트. 이 페이지에 표시된 구성 요소를 구성할 수 있는 자세한 API 호출 예는 다음 API 참조 페이지를 참조하십시오.
+`/authoring/destinations` 끝점을 통해 대상 게재 설정을 구성할 수 있습니다. 이 페이지에 표시된 구성 요소를 구성할 수 있는 자세한 API 호출 예는 다음 API 참조 페이지를 참조하십시오.
 
 * [대상 구성 만들기](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [대상 구성 업데이트](../../authoring-api/destination-configuration/update-destination-configuration.md)
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK에서 지원하는 모든 매개변수 이름 및 값은 다음과 같습니다. **대소문자 구분**. 대소문자 구분 오류를 방지하려면 설명서에 표시된 대로 매개 변수 이름과 값을 정확히 사용하십시오.
+>Destination SDK에서 지원하는 모든 매개 변수 이름과 값은 **대/소문자를 구분합니다**. 대소문자 구분 오류를 방지하려면 설명서에 표시된 대로 매개 변수 이름과 값을 정확히 사용하십시오.
 
 ## 지원되는 통합 유형 {#supported-integration-types}
 
@@ -48,16 +48,16 @@ ht-degree: 2%
 
 | 매개변수 | 유형 | 설명 |
 |---------|----------|------|
-| `authenticationRule` | 문자열 | 방법을 나타냅니다. [!DNL Platform] 대상에 연결해야 합니다. 지원되는 값:<ul><li>`CUSTOMER_AUTHENTICATION`: Platform 고객이 설명된 인증 방법을 통해 시스템에 로그인한 경우 이 옵션을 사용합니다 [여기](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: Adobe과 대상 및 간 글로벌 인증 시스템이 있는 경우 이 옵션을 사용합니다. [!DNL Platform] 고객은 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없습니다. 이 경우 다음을 사용하여 자격 증명 개체를 만들어야 합니다 [자격 증명 API](../../credentials-api/create-credential-configuration.md) 구성. </li><li>`NONE`: 데이터를 대상 플랫폼으로 보내는 데 인증이 필요하지 않은 경우 이 옵션을 사용합니다. </li></ul> |
-| `destinationServerId` | 문자열 | 다음 `instanceId` / [대상 서버](../../authoring-api/destination-server/create-destination-server.md) 데이터를 내보내려는 대상. |
-| `deliveryMatchers.type` | 문자열 | <ul><li>파일 기반 대상에 대한 대상 전달을 구성할 때 항상 이 설정을 로 설정하십시오. `SOURCE`.</li><li>스트리밍 대상에 대한 대상 게재를 구성할 때 `deliveryMatchers` 섹션은 필수가 아닙니다.</li></ul> |
-| `deliveryMatchers.value` | 문자열 | <ul><li>파일 기반 대상에 대한 대상 전달을 구성할 때 항상 이 설정을 로 설정하십시오. `batch`.</li><li>스트리밍 대상에 대한 대상 게재를 구성할 때 `deliveryMatchers` 섹션은 필수가 아닙니다.</li></ul> |
+| `authenticationRule` | 문자열 | [!DNL Platform]이(가) 대상에 연결하는 방법을 나타냅니다. 지원되는 값:<ul><li>`CUSTOMER_AUTHENTICATION`: Platform 고객이 [여기](customer-authentication.md)에서 설명한 인증 방법을 통해 시스템에 로그인하는 경우 이 옵션을 사용합니다.</li><li>`PLATFORM_AUTHENTICATION`: Adobe과 대상 사이에 전역 인증 시스템이 있고 [!DNL Platform] 고객이 대상에 연결하기 위해 인증 자격 증명을 제공할 필요가 없는 경우 이 옵션을 사용합니다. 이 경우 [자격 증명 API](../../credentials-api/create-credential-configuration.md) 구성을 사용하여 자격 증명 개체를 만들어야 합니다. </li><li>`NONE`: 데이터를 대상 플랫폼으로 보내는 데 인증이 필요하지 않은 경우 이 옵션을 사용합니다. </li></ul> |
+| `destinationServerId` | 문자열 | 데이터를 내보내려는 [대상 서버](../../authoring-api/destination-server/create-destination-server.md)의 `instanceId`입니다. |
+| `deliveryMatchers.type` | 문자열 | <ul><li>파일 기반 대상에 대한 대상 게재를 구성할 때는 항상 `SOURCE`(으)로 설정하십시오.</li><li>스트리밍 대상에 대한 대상 게재를 구성할 때 `deliveryMatchers` 섹션이 필요하지 않습니다.</li></ul> |
+| `deliveryMatchers.value` | 문자열 | <ul><li>파일 기반 대상에 대한 대상 게재를 구성할 때는 항상 `batch`(으)로 설정하십시오.</li><li>스트리밍 대상에 대한 대상 게재를 구성할 때 `deliveryMatchers` 섹션이 필요하지 않습니다.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## 스트리밍 대상에 대한 대상 게재 설정 {#destination-delivery-streaming}
 
-아래 예는 스트리밍 대상에 대한 대상 게재 설정을 구성하는 방법을 보여줍니다. 다음 사항에 주의하십시오. `deliveryMatchers` 스트리밍 대상에는 섹션이 필요하지 않습니다.
+아래 예는 스트리밍 대상에 대한 대상 게재 설정을 구성하는 방법을 보여줍니다. 스트리밍 대상에는 `deliveryMatchers` 섹션이 필요하지 않습니다.
 
 >[!BEGINSHADEBOX]
 
@@ -76,7 +76,7 @@ ht-degree: 2%
 
 ## 파일 기반 대상에 대한 대상 게재 설정 {#destination-delivery-file-based}
 
-아래 예제는 파일 기반 대상에 대해 대상 게재 설정을 구성하는 방법을 보여 줍니다. 다음 사항에 주의하십시오. `deliveryMatchers` 파일 기반 대상에는 섹션이 필요합니다.
+아래 예제는 파일 기반 대상에 대해 대상 게재 설정을 구성하는 방법을 보여 줍니다. 파일 기반 대상에는 `deliveryMatchers` 섹션이 필요합니다.
 
 >[!BEGINSHADEBOX]
 

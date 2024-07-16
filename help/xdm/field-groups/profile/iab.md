@@ -11,13 +11,13 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL IAB TCF 2.0 동의] 프로필 스키마의 필드 그룹
+# 프로필 스키마에 대한 [!UICONTROL IAB TCF 2.0 동의] 필드 그룹
 
 >[!NOTE]
 >
->이 문서에서는 [!UICONTROL IAB TCF 2.0 동의] xdm 개인 프로필 클래스에 대한 스키마 필드 그룹. XDM ExperienceEvent 클래스를 위한 필드 그룹의 경우 다음을 참조하십시오. [문서](../event/iab.md) 대신,
+>이 문서에서는 XDM 개별 프로필 클래스에 대한 [!UICONTROL IAB TCF 2.0 동의] 스키마 필드 그룹을 다룹니다. XDM ExperienceEvent 클래스의 필드 그룹은 대신 다음 [문서](../event/iab.md)을(를) 참조하십시오.
 
-[!UICONTROL IAB TCF 2.0 동의] 는 의 표준 스키마 필드 그룹입니다. [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md) 시간 경과에 따른 동의 변경 패턴을 추적하기 위해 타임스탬프가 지정된 시리즈 IAB 동의 문자열을 캡처하는 데 사용됩니다.
+[!UICONTROL IAB TCF 2.0 동의]은(는) 타임스탬프가 지정된 시리즈 IAB 동의 문자열을 캡처하여 시간에 따른 동의 변경 패턴을 추적하는 데 사용되는 [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md)에 대한 표준 스키마 필드 그룹입니다.
 
 ![](../../images/field-groups/iab-profile.png)
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-다음 JSON은 의 구조를 보여 줍니다. `identityPrivacyInfo` 맵.
+다음 JSON은 `identityPrivacyInfo` 맵의 구조를 보여 줍니다.
 
 ```json
 {
@@ -50,15 +50,15 @@ ht-degree: 1%
 }
 ```
 
-예제에서처럼 의 각 루트 수준 키 `xdm:identityPrivacyInfo` 는 Identity 서비스에서 인식하는 ID 네임스페이스에 해당합니다. 또한 각 네임스페이스 속성에는 키가 해당 네임스페이스에 대한 고객의 해당 ID 값과 일치하는 하위 속성이 하나 이상 있어야 합니다. 이 예에서 고객은 Experience Cloud ID(`ECID`) 값 `13782522493631189`.
+예제에서 볼 수 있듯이 `xdm:identityPrivacyInfo`의 각 루트 수준 키는 Identity Service에서 인식하는 ID 네임스페이스에 해당합니다. 또한 각 네임스페이스 속성에는 키가 해당 네임스페이스에 대한 고객의 해당 ID 값과 일치하는 하위 속성이 하나 이상 있어야 합니다. 이 예제에서 고객은 `13782522493631189`의 Experience Cloud ID(`ECID`) 값으로 식별됩니다.
 
 >[!NOTE]
 >
 >위의 예에서는 단일 네임스페이스/값 쌍을 사용하여 고객의 ID를 나타내지만 다른 네임스페이스에 대해 키를 추가할 수 있으며 각 네임스페이스에는 여러 개의 ID 값이 있을 수 있으며 각 ID 값에는 고유한 TCF 동의 환경 설정이 있습니다.
 
-각 ID 값에 대해 `identityIABConsent` id에 대한 TCF 동의 값을 제공하는 속성을 제공해야 합니다. 이 속성의 값은 다음을 준수해야 합니다. [[!UICONTROL 동의 문자열] 데이터 유형](../../data-types/consent-string.md).
+각 ID 값에 대해 ID에 대한 TCF 동의 값을 제공하는 `identityIABConsent` 속성을 제공해야 합니다. 이 속성의 값은 [[!UICONTROL 동의 문자열] 데이터 형식](../../data-types/consent-string.md)을 준수해야 합니다.
 
-다음 안내서를 참조하십시오 [플랫폼에서 IAB TCF 2.0 지원](../../../landing/governance-privacy-security/consent/iab/overview.md) 이 필드 그룹의 사용 사례에 대한 자세한 정보입니다. 필드 그룹 자체에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
+이 필드 그룹의 사용 사례에 대한 자세한 내용은 ](../../../landing/governance-privacy-security/consent/iab/overview.md) 플랫폼의 [IAB TCF 2.0 지원 가이드를 참조하십시오. 필드 그룹 자체에 대한 자세한 내용은 공개 XDM 저장소를 참조하십시오.
 
 * [채워진 예](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [전체 스키마](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

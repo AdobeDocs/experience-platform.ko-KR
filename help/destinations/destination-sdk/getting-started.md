@@ -4,8 +4,8 @@ title: Destination SDK 시작
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 5%
+source-wordcount: '583'
+ht-degree: 1%
 
 ---
 
@@ -17,16 +17,16 @@ ht-degree: 5%
 
 ## 용어 {#terminology}
 
-이 안내서에서는 조직, 샌드박스 등 플랫폼별 개념을 사용합니다. 다음을 참조하십시오. [Experience Platform 용어집](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) (이 용어 및 기타 용어의 정의)
+이 안내서에서는 조직, 샌드박스 등 플랫폼별 개념을 사용합니다. 이러한 용어와 기타 용어에 대한 정의는 [Experience Platform 용어집](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html)을 참조하세요.
 
 ## 필요한 인증 자격 증명 가져오기 {#obtain-authentication-credentials}
 
-Destination SDK은 [Adobe I/O](https://www.adobe.io/) 인증을 위한 게이트웨이 Destination SDK 종단점에 대한 API를 호출하려면 API 호출에 특정 헤더를 제공해야 합니다. Adobe Exchange 팀과 협력하여 [Adobe Developer 콘솔](https://developer.adobe.com/console).
+Destination SDK은 인증을 위해 [Adobe I/O](https://www.adobe.io/) 게이트웨이를 사용합니다. Destination SDK 종단점에 대한 API를 호출하려면 API 호출에 특정 헤더를 제공해야 합니다. Adobe Exchange 팀과 함께 [Adobe Developer Console](https://developer.adobe.com/console)에 대한 인증을 설정합니다.
 
-Destination SDK API 끝점을 성공적으로 호출하려면 다음을 따르십시오. [Experience Platform 인증 자습서](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ko). &quot;&quot;에서 자습서를 시작합니다.[API 키, 조직 ID 및 클라이언트 암호 생성](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; 단계. Adobe 교환 팀이 이전 단계를 처리합니다. 인증 자습서를 완료하면 아래와 같이 Destination SDK API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
+Destination SDK API 끝점을 정상적으로 호출하려면 [Experience Platform 인증 자습서](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ko)를 따르십시오. &quot;[API 키, 조직 ID 및 클라이언트 암호 생성](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot; 단계에서 자습서를 시작합니다. Adobe Exchange 팀이 이전 단계를 처리합니다. 인증 자습서를 완료하면 아래와 같이 Destination SDK API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
 
-* `x-api-key: {API_KEY}`클라이언트 ID라고도 합니다
-* `x-gw-ims-org-id: {ORG_ID}`를 조직 ID라고도 합니다
+* `x-api-key: {API_KEY}`(클라이언트 ID라고도 함)
+* `x-gw-ims-org-id: {ORG_ID}`(조직 ID라고도 함)
 * `Authorization: Bearer {ACCESS_TOKEN}` 질문에 답합니다. 액세스 토큰의 만료 시간은 밀리초 단위로 표시되는 24시간이므로 새로 고쳐야 합니다. 액세스 토큰을 새로 고치려면 인증 자습서에 설명된 단계를 반복합니다.
 
 <!--
@@ -56,7 +56,7 @@ Adobe Exchange 팀은 Destination SDK API 엔드포인트 호출에 사용해야
 
 ## RBAC(역할 기반 액세스 제어) {#rbac}
 
-에 설명된 Destination SDK API 엔드포인트를 사용하려면 [참조 설명서](functionality/configuration-options.md), 다음이 필요합니다. **[!UICONTROL 대상 작성]** 액세스 제어 권한. Adobe Exchange 팀과 협력하여에서 이 권한을 귀하에게 할당하십시오. [Adobe Admin Console](https://adminconsole.adobe.com/).
+[참조 설명서](functionality/configuration-options.md)에 설명된 Destination SDK API 끝점을 사용하려면 **[!UICONTROL 대상 작성]** 액세스 제어 권한이 필요합니다. Adobe Exchange 팀과 함께 [Adobe Admin Console](https://adminconsole.adobe.com/)에서 이 권한을 귀하에게 할당해 보세요.
 
 ![대상 작성 권한](./assets/destination-authoring-permission.png)
 
@@ -80,5 +80,5 @@ Adobe Exchange 팀은 Destination SDK API 엔드포인트 호출에 사용해야
    * [Destination SDK을 사용하여 스트리밍 대상 구성](guides/configure-destination-instructions.md)
    * [Destination SDK을 사용하여 파일 기반 대상 구성](guides/configure-file-based-destination-instructions.md)
 
-* 모든 작업에 대해 다음을 참조하십시오. [대상 작성 API 설명서](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
-* 사용 [대상 작성 API Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) Destination SDK API 끝점을 사용하여 대상을 구성합니다. Postman을 시작하려면 다음을 참조하십시오. [환경 및 컬렉션을 가져오는 단계](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) 및 a [Postman 환경 만들기에 대한 비디오 안내서](https://video.tv.adobe.com/v/28832).
+* 모든 작업에 대해서는 [대상 작성 API 설명서](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)를 참조하십시오.
+* [대상 작성 API Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)을(를) 사용하여 Destination SDK API 끝점을 사용하여 대상을 구성합니다. Postman을 시작하려면 환경 및 컬렉션을 가져오는 [단계](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) 및 Postman 환경을 만드는 [비디오 안내서](https://video.tv.adobe.com/v/28832)를 참조하세요.

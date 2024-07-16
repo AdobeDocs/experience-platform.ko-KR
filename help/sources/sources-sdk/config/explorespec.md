@@ -84,4 +84,4 @@ ht-degree: 1%
 
 ## 다음 단계
 
-탐색 사양을 채운 상태에서 를 사용하여 전체 연결 사양을 생성할 수 있습니다. [!DNL Flow Service] API. 다음을 참조하십시오. [셀프서비스 소스(일괄 처리 SDK) API 안내서](../api/api-overview.md) 추가 정보.
+탐색 사양이 채워지면 [!DNL Flow Service] API를 사용하여 전체 연결 사양을 만들 수 있습니다. 자세한 내용은 [Self-Service Sources(Batch SDK) API 안내서](../api/api-overview.md)를 참조하십시오.

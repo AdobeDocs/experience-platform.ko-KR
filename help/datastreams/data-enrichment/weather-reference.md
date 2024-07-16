@@ -3,8 +3,8 @@ title: 날씨 데이터 필드 매핑
 description: The Weather Channel 통합 기능의 일부로 제공되는 사용 가능한 날씨 데이터 필드에 대한 참조 페이지.
 exl-id: bc0f158b-f9d0-424a-aa21-953e8380473f
 source-git-commit: e2122008fcae1016db03d6b5f56e4fa25520f9d0
-workflow-type: ht
-source-wordcount: '12238'
+workflow-type: tm+mt
+source-wordcount: '12787'
 ht-degree: 100%
 
 ---

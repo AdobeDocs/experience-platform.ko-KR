@@ -3,8 +3,8 @@ title: Adobe Experience Platform Assurance 문제 해결 안내서
 description: 이 문서는 Adobe Experience Platform Assurance를 사용할 때 발생하는 일반적인 문제에 대한 솔루션을 간략하게 설명합니다.
 exl-id: 8078e6f6-ca18-4939-a417-40ebf5a52e24
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '526'
+workflow-type: tm+mt
+source-wordcount: '453'
 ht-degree: 100%
 
 ---

@@ -31,7 +31,7 @@ Analytics 대상은 방문자가 사이트에서 콘텐츠와 상호 작용하�
 * [Gainsight PX 연결](gainsight-px.md)
 * [Google 글로벌 사이트 태그 분석 확장](gtag-analytics.md)
 * [Google Universal Analytics 확장](google-universal-analytics.md)
-* [JW Player Analytics(베타) 확장](jw-player-analytics.md)
+* [JW Player Analytics(Beta) 확장](jw-player-analytics.md)
 * [Nielsen BSDK 확장](nielsen-bsdk.md)
 * [Nielsen IMA Handler 확장](nielsen-ima.md)
 * [Nielsen VideoJS Player Handler 확장](nielsen-videojs.md)

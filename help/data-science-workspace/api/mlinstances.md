@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;개발자 안내서;엔드포인트;Data Science Workspace;인기 항목;인스턴스;sensei machine learning api
+keywords: Experience Platform;개발자 안내서;엔드포인트;Data Science Workspace;인기 주제;인스턴스;sensei machine learning api
 solution: Experience Platform
 title: MLInstances API 끝점
 description: MLInstance는 교육 매개 변수, 채점 매개 변수 또는 하드웨어 리소스 구성을 정의하는 적절한 구성 세트와 기존 엔진의 페어링입니다.
@@ -14,13 +14,13 @@ ht-degree: 3%
 
 # MLInstances 끝점
 
-MLInstance는 기존 의 쌍입니다 [엔진](./engines.md) 교육 매개 변수, 채점 매개 변수 또는 하드웨어 리소스 구성을 정의하는 적절한 구성 세트를 사용하여
+MLInstance는 모든 교육 매개 변수, 채점 매개 변수 또는 하드웨어 리소스 구성을 정의하는 적절한 구성 집합이 있는 기존 [엔진](./engines.md)의 쌍입니다.
 
 ## 인스턴스 만들기 {#create-an-mlinstance}
 
-유효한 엔진 ID( )로 구성된 POST 페이로드를 제공하면서 요청 요청을 수행하여 MLInstance를 만들 수 있습니다.`{ENGINE_ID}`) 및 적절한 기본 구성 세트를 사용할 수 있습니다.
+올바른 엔진 ID(`{ENGINE_ID}`) 및 적절한 기본 구성 집합으로 구성된 POST 페이로드를 제공하는 동안 요청 요청을 수행하여 MLInstance를 만들 수 있습니다.
 
-엔진 ID가 PySpark 또는 Spark 엔진을 참조하는 경우 코어 수 또는 메모리 양과 같은 계산 리소스의 양을 구성할 수 있습니다. Python 엔진이 참조되는 경우 교육 및 채점 목적으로 CPU 또는 GPU를 사용할 것인지 선택할 수 있습니다. 다음에 대한 부록 섹션을 참조하십시오. [PySpark 및 Spark 리소스 구성](./appendix.md#resource-config) 및 [Python CPU 및 GPU 구성](./appendix.md#cpu-gpu-config) 추가 정보.
+엔진 ID가 PySpark 또는 Spark 엔진을 참조하는 경우 코어 수 또는 메모리 양과 같은 계산 리소스의 양을 구성할 수 있습니다. Python 엔진이 참조되는 경우 교육 및 채점 목적으로 CPU 또는 GPU를 사용할 것인지 선택할 수 있습니다. 자세한 내용은 [PySpark 및 Spark 리소스 구성](./appendix.md#resource-config) 및 [Python CPU 및 GPU 구성](./appendix.md#cpu-gpu-config)의 부록 섹션을 참조하십시오.
 
 **API 형식**
 
@@ -83,7 +83,7 @@ curl -X POST \
 
 **응답**
 
-성공적인 응답은 고유 식별자( )를 포함하여 새로 생성된 MLInstance의 세부 사항이 포함된 페이로드를 반환합니다`id`).
+응답이 성공하면 고유 식별자(`id`)를 포함하여 새로 만든 MLInstance의 세부 정보가 포함된 페이로드가 반환됩니다.
 
 ```json
 {
@@ -130,7 +130,7 @@ curl -X POST \
 
 ## 인스턴스 목록 검색
 
-단일 GET 요청을 수행하여 인스턴스 목록을 검색할 수 있습니다. 결과를 필터링하기 위해 요청 경로에 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 목록은 의 부록 섹션을 참조하십시오. [자산 검색을 위한 쿼리 매개 변수](./appendix.md#query).
+단일 GET 요청을 수행하여 인스턴스 목록을 검색할 수 있습니다. 결과를 필터링하기 위해 요청 경로에 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 목록은 [자산 검색을 위한 쿼리 매개 변수](./appendix.md#query)의 부록 섹션을 참조하십시오.
 
 **API 형식**
 
@@ -142,7 +142,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{QUERY_PARAMETER}` | 다음 중 하나 [사용 가능한 쿼리 매개 변수](./appendix.md#query) 결과를 필터링하는 데 사용됩니다. |
+| `{QUERY_PARAMETER}` | 결과를 필터링하는 데 사용되는 [사용 가능한 쿼리 매개 변수](./appendix.md#query) 중 하나입니다. |
 | `{VALUE}` | 이전 쿼리 매개 변수의 값입니다. |
 
 **요청**
@@ -275,7 +275,7 @@ curl -X GET \
 
 >[!TIP]
 >
->이 PUT GET 요청의 성공을 보장하려면 먼저 다음 작업을 수행하는 것이 좋습니다. [ID로 MLInstance 검색](#retrieve-specific). 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청에 대한 페이로드로 적용합니다.
+>이 PUT 요청이 성공하도록 하려면 먼저 [ID로 MLInstance를 검색](#retrieve-specific)하는 GET 요청을 수행하는 것이 좋습니다. 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청에 대한 페이로드로 적용합니다.
 
 다음 샘플 API 호출은 이러한 속성을 초기에 보유하는 동안 MLInstance의 교육 및 채점 매개 변수를 업데이트합니다.
 

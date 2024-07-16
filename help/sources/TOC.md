@@ -8,7 +8,7 @@ role: Developer
 source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
 workflow-type: tm+mt
 source-wordcount: '1046'
-ht-degree: 23%
+ht-degree: 30%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 23%
 
 - [소스 개요](home.md)
 - 사용 가능한 소스 커넥터 {#connectors}
-   - Adobe 애플리케이션 {#adobe-applications}
+   - Adobe 응용 프로그램 {#adobe-applications}
       - [Analytics 분류 소스](connectors/adobe-applications/classifications.md)
       - [Analytics 소스](connectors/adobe-applications/analytics.md)
       - [Audience Manager 소스](connectors/adobe-applications/audience-manager.md)
@@ -37,14 +37,14 @@ ht-degree: 23%
          - [Marketo Engage 인증 안내서](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B 네임스페이스 및 스키마](connectors/adobe-applications/marketo/marketo-namespaces.md)
          - [ECID 매핑 마이그레이션 안내서](connectors/adobe-applications/marketo/migration.md)
-   - 광고 {#advertising}
+   - Advertising {#advertising}
       - [Google Ads 커넥터](connectors/advertising/ads.md)
       - [Pinterest 광고](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
       - [Mixpanel 커넥터](connectors/analytics/mixpanel.md)
       - [펜도](connectors/analytics/pendo-webhook.md)
       - [RainFocus](connectors/analytics/rainfocus.md)
-   - 클라우드 스토리지 {#cloud-storage}
+   - 클라우드 저장소 {#cloud-storage}
       - [Amazon Kinesis 커넥터](connectors/cloud-storage/kinesis.md)
       - [Amazon S3 커넥터](connectors/cloud-storage/s3.md)
       - [Apache HDFS 커넥터](connectors/cloud-storage/hdfs.md)
@@ -123,15 +123,15 @@ ht-degree: 23%
       - [일반 REST API 커넥터](connectors/protocols/generic-rest.md)
    - 스트리밍 {#streaming}
       - [HTTP API 커넥터](connectors/streaming/http.md)
-- API 자습서 {#api-tutorials}
-   - 기본 연결 만들기 {#create}
-      - 광고 {#advertising}
+- API 튜토리얼 {#api-tutorials}
+   - 기본 연결 {#create} 만들기
+      - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
          - [Pinterest 광고](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
          - [펜도](tutorials/api/create/analytics/pendo-webhook.md)
-      - 클라우드 스토리지 {#cloud-storage}
+      - 클라우드 저장소 {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
@@ -175,11 +175,11 @@ ht-degree: 23%
          - [MySQL](tutorials/api/create/databases/mysql.md)
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
-         - [PostgreSql](tutorials/api/create/databases/postgres.md)
+         - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Snowflake 스트리밍](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
-         - [SQL 서버](tutorials/api/create/databases/sql-server.md)
+         - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - 전자 상거래 {#ecommerce}
          - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -216,7 +216,7 @@ ht-degree: 23%
       - [결제 데이터 탐색](tutorials/api/explore/payments.md)
       - [프로토콜 데이터 탐색](tutorials/api/explore/protocols.md)
       - [데이터 테이블 탐색](tutorials/api/explore/tabular.md)
-   - 데이터 수집 {#collect}
+   - {#collect} 데이터 수집
       - [광고 데이터 수집](tutorials/api/collect/advertising.md)
       - [클라우드 스토리지 데이터 수집](tutorials/api/collect/cloud-storage.md)
       - [CRM 데이터 수집](tutorials/api/collect/crm.md)
@@ -238,8 +238,8 @@ ht-degree: 23%
    - [암호화된 데이터 수집](tutorials/api/encrypt-data.md)
    - [데이터 흐름을 초안으로 저장](tutorials/api/draft.md)
 - UI 튜토리얼 {#ui-tutorials}
-   - 소스 연결 만들기 {#create}
-      - Adobe 애플리케이션 {#adobe-applications}
+   - 원본 연결 {#create} 만들기
+      - Adobe 응용 프로그램 {#adobe-applications}
          - [Adobe Analytics (보고서 세트 데이터)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (분류 데이터)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -247,14 +247,14 @@ ht-degree: 23%
          - [고객 속성](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Marketo 사용자 지정 활동](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - 광고 {#advertising}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
          - [Pinterest 광고](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [펜도](tutorials/ui/create/analytics/pendo-webhook.md)
          - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
-      - 클라우드 스토리지 {#cloud-storage}
+      - 클라우드 저장소 {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
@@ -291,7 +291,7 @@ ht-degree: 23%
          - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure 테이블 스토리지](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
-         - [Google 큰 쿼리](tutorials/ui/create/databases/bigquery.md)
+         - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
@@ -300,7 +300,7 @@ ht-degree: 23%
          - [MySQL](tutorials/ui/create/databases/mysql.md)
          - [Oracle](tutorials/ui/create/databases/oracle.md)
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
-         - [PostgreSql](tutorials/ui/create/databases/postgres.md)
+         - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Snowflake 스트리밍](tutorials/ui/create/databases/snowflake-streaming.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
@@ -335,7 +335,7 @@ ht-degree: 23%
          - [일반 OData](tutorials/ui/create/protocols/odata.md)
       - 스트리밍 {#streaming}
          - [HTTP API](tutorials/ui/create/streaming/http.md)
-   - 데이터 흐름 구성 {#dataflow}
+   - 데이터 흐름 {#dataflow} 구성
       - [Advertising 연결 데이터 흐름](tutorials/ui/dataflow/advertising.md)
       - [Analytics 연결 데이터 흐름](tutorials/ui/dataflow/analytics.md)
       - [일괄 클라우드 스토리지 연결 데이터 흐름](tutorials/ui/dataflow/batch/cloud-storage.md)
@@ -348,7 +348,7 @@ ht-degree: 23%
       - [마케팅 자동화 연결 데이터 흐름](tutorials/ui/dataflow/marketing-automation.md)
       - [결제 연결 데이터 흐름](tutorials/ui/dataflow/payments.md)
       - [프로토콜 연결 데이터 흐름](tutorials/ui/dataflow/protocols.md)
-   - [UI의 템플릿을 사용하여 소스 데이터 흐름 만들기](tutorials/ui/templates.md)
+   - [UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기](tutorials/ui/templates.md)
    - [소스 오브젝트 필터링](tutorials/ui/filter.md)
    - [암호화된 데이터 수집](tutorials/ui/encryped-ingestion.md)
    - [온디맨드 수집](tutorials/ui/on-demand-ingestion.md)
@@ -358,16 +358,16 @@ ht-degree: 23%
    - [데이터 흐름 업데이트](tutorials/ui/update-dataflows.md)
    - [계정 삭제](tutorials/ui/delete-accounts.md)
    - [데이터 흐름 삭제](tutorials/ui/delete.md)
-   - [소스 경고 구독](tutorials/ui/alerts.md)
+   - [소스 알림 구독](tutorials/ui/alerts.md)
    - [데이터 흐름을 초안으로 저장](tutorials/ui/draft.md)
-- 셀프서비스 소스(일괄 SDK) {#sdk}
+- 셀프 서비스 소스(일괄 처리 SDK) {#sdk}
    - [개요](sources-sdk/overview.md)
-   - 연결 사양 구성 {#config}
+   - 연결 사양 {#config} 구성
       - [구성 옵션](sources-sdk/config/config.md)
       - [인증 사양 구성](sources-sdk/config/authspec.md)
       - [소스 사양 구성](sources-sdk/config/sourcespec.md)
       - [탐색 사양 구성](sources-sdk/config/explorespec.md)
-   - 셀프서비스 소스(일괄 처리 SDK) API 안내서 {#self-serve-api}
+   - 셀프 서비스 소스(일괄 처리 SDK) API 안내서 {#self-serve-api}
       - [셀프서비스 소스(일괄 SDK) API 개요](sources-sdk/api/api-overview.md)
       - [시작하기](sources-sdk/api/getting-started.md)
       - [연결 사양 만들기](sources-sdk/api/create.md)
@@ -396,4 +396,4 @@ ht-degree: 23%
 - [IP 주소 허용 목록](ip-address-allow-list.md)
 - [자주 묻는 질문](./troubleshooting.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Platform 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
+- [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)

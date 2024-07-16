@@ -4,14 +4,14 @@ description: Analytics 데이터 세트의 머천다이징 변수에 액세스�
 exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1103'
-ht-degree: 3%
+source-wordcount: '1089'
+ht-degree: 1%
 
 ---
 
 # 분석 데이터에서 머천다이징 변수 반환 및 사용
 
-쿼리 서비스를 사용하여 Adobe Analytics에서 Adobe Experience Platform으로 데이터 세트로 수집된 데이터를 관리합니다. 다음 섹션에서는 Analytics 데이터 세트의 머천다이징 변수에 액세스하는 데 사용할 수 있는 샘플 쿼리를 제공합니다. 에 대한 자세한 내용은 설명서 를 참조하십시오 [Adobe Analytics 데이터 수집 및 매핑 방법](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics 소스를 통해
+쿼리 서비스를 사용하여 Adobe Analytics에서 Adobe Experience Platform으로 데이터 세트로 수집된 데이터를 관리합니다. 다음 섹션에서는 Analytics 데이터 세트의 머천다이징 변수에 액세스하는 데 사용할 수 있는 샘플 쿼리를 제공합니다. Analytics 소스를 통해 [Adobe Analytics 데이터를 수집 및 매핑하는 방법](../../sources/connectors/adobe-applications/mapping/analytics.md)에 대한 자세한 내용은 설명서를 참조하십시오
 
 ## 머천다이징 변수 {#merchandising-variables}
 
@@ -26,9 +26,9 @@ Adobe Analytics에서 사용자 정의 제품 수준 데이터는 머천다이�
 
 이러한 변수를 제품 구문 머천다이징 변수라고 합니다. 이렇게 하면 고객의 검색 결과에 있는 제품별 &quot;할인 금액&quot; 또는 제품의 &quot;페이지 내 위치&quot;에 대한 정보와 같은 정보를 수집할 수 있습니다.
 
-제품 구문 사용에 대한 자세한 내용은 의 Adobe Analytics 설명서를 참조하십시오. [제품 구문을 사용한 eVar 구현](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
+제품 구문 사용에 대한 자세한 내용은 [제품 구문을 사용하여 eVar 구현](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax)에 대한 Adobe Analytics 설명서를 참조하십시오.
 
-아래 섹션에서는 의 머천다이징 변수에 액세스하는 데 필요한 XDM 필드에 대해 간략히 설명합니다. [!DNL Analytics] 데이터 세트:
+아래 섹션에서는 [!DNL Analytics] 데이터 세트의 머천다이징 변수에 액세스하는 데 필요한 XDM 필드에 대해 간략히 설명합니다.
 
 ### eVar
 
@@ -36,25 +36,25 @@ Adobe Analytics에서 사용자 정의 제품 수준 데이터는 머천다이�
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
-* `#`: 액세스 중인 배열의 색인입니다.
+* `#`: 액세스 중인 배열의 인덱스입니다.
 * `evar#`: 액세스 중인 특정 eVar 변수입니다.
 
-### 사용자 정의 이벤트
+### 사용자 지정 이벤트
 
 ```console
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
-* `#`: 액세스 중인 배열의 색인입니다.
+* `#`: 액세스 중인 배열의 인덱스입니다.
 * `event#`: 액세스 중인 특정 사용자 지정 이벤트 변수입니다.
 
 ## 제품 구문 사용 사례 {#product-use-cases}
 
-다음 사용 사례는에서 머천다이징 eVar 반환에 중점을 둡니다. `productListItems` SQL을 사용하는 스토리지 시스템
+다음 사용 사례에서는 SQL을 사용하여 `productListItems` 배열에서 머천다이징 eVar을 반환하는 데 중점을 둡니다.
 
 ### 머천다이징 eVar 및 이벤트 반환
 
-아래 쿼리는 의 첫 번째 제품에 대한 머천다이징 eVar 및 이벤트를 반환합니다. `productListItems` 배열입니다.
+아래 쿼리는 `productListItems` 배열에 있는 첫 번째 제품에 대한 머천다이징 eVar 및 이벤트를 반환합니다.
 
 ```sql
 SELECT
@@ -70,7 +70,7 @@ LIMIT 10
 
 ### productListItems 배열을 분해하고 각 제품에 대한 머천다이징 eVar 및 이벤트를 반환합니다.
 
-다음 쿼리에서는 `productListItems` 는 제품당 각 머천다이징 eVar 및 이벤트를 배열하고 반환합니다. 다음 `_id` 원래 히트에 대한 관계를 표시하는 필드가 포함됩니다. 다음 `_id` 값은 데이터 세트에 대한 고유한 기본 키입니다.
+다음 쿼리는 `productListItems` 배열을 확장하고 제품당 각 머천다이징 eVar 및 이벤트를 반환합니다. 원래 히트에 대한 관계를 표시하기 위해 `_id` 필드가 포함됩니다. `_id` 값은 데이터 집합에 대한 고유한 기본 키입니다.
 
 >[!NOTE]
 >
@@ -110,14 +110,14 @@ Adobe Analytics에 있는 다른 유형의 머천다이징 변수는 전환 변�
 
 1. 사용자가 전환 구문 활성화 머천다이징 eVar6을 &quot;internal search:winter hat&quot;으로 설정하는 &quot;winter hat&quot;에 대한 내부 검색을 수행합니다.
 2. 사용자가 &quot;와플 비니&quot;를 클릭하고 제품 세부 사항 페이지에 도달합니다.\
-   a. 이곳에 착륙하면 `Product View` $12.99에 &quot;waffle beanie&quot;를 위한 이벤트.\
-   b. 이후 `Product View` 가 바인딩 이벤트로 구성되면, 제품 &quot;waffle beanie&quot;가 이제 &quot;internal search:winter hat&quot;의 eVar6 값에 바인딩됩니다. &quot;와플 비니&quot; 제품이 수집될 때마다 &quot;내부 검색:겨울 모자&quot;와 연결됩니다. 이 작업은 eVar 만료 설정에 도달하거나 새 eVar6 값이 설정되고 해당 제품에서 바인딩 이벤트가 다시 발생할 때까지 발생합니다.
-3. 사용자가 제품을 장바구니에 추가하여 `Cart Add` 이벤트.
+   a. 여기에서 랜딩하면 $12.99에 &quot;waffle beanie&quot;에 대한 `Product View` 이벤트가 실행됩니다.\
+   b. `Product View`이(가) 바인딩 이벤트로 구성되었으므로 이제 제품 &quot;waffle beanie&quot;가 &quot;internal search:winter hat&quot;의 eVar6 값에 바인딩됩니다. &quot;와플 비니&quot; 제품이 수집될 때마다 &quot;내부 검색:겨울 모자&quot;와 연결됩니다. 이 작업은 eVar 만료 설정에 도달하거나 새 eVar6 값이 설정되고 해당 제품에서 바인딩 이벤트가 다시 발생할 때까지 발생합니다.
+3. 사용자가 제품을 장바구니에 추가하여 `Cart Add` 이벤트를 실행합니다.
 4. 사용자는 &quot;summer shirt&quot;에 대한 다른 내부 검색을 수행하여 전환 구문이 활성화된 머천다이징 eVar6을 &quot;internal search:summer shirt&quot;으로 설정합니다.
 5. 사용자가 &quot;sporty t-shirt&quot;를 선택하고 제품 세부 사항 페이지에 도달합니다.\
-   a. 이곳에 착륙하면 `Product View` $19.99에 &quot;sporty t-shirt를 위한 이벤트.\
-   b. (으)로 `Product View` event 는 바인딩 이벤트입니다. 이제 제품 &quot;sporty t-shirt&quot;가 &quot;internal search:summer shirt&quot;의 eVar 6 값에 바인딩됩니다. 이전 제품인 &quot;waffle beanie&quot;는 여전히 &quot;internal search:waffle beanie&quot;의 eVar 6 값에 바인딩되어 있습니다.
-6. 사용자가 제품을 장바구니에 추가하여 `Cart Add` 이벤트.
+   a. 여기에서 랜딩하면 &quot;sporty t-shirt $19.99에 대한 `Product View` 이벤트가 시작됩니다.\
+   b. `Product View` 이벤트가 바인딩 이벤트이므로 제품 &quot;sporty t-shirt&quot;가 이제 &quot;internal search:summer shirt&quot;의 eVar6 값에 바인딩됩니다. 이전 제품인 &quot;waffle beanie&quot;는 여전히 &quot;internal search:waffle beanie&quot;의 eVar 6 값에 바인딩되어 있습니다.
+6. 사용자가 제품을 장바구니에 추가하여 `Cart Add` 이벤트를 실행합니다.
 7. 사용자가 두 제품 모두 체크아웃합니다.
 
 보고에서 주문, 매출, 제품 보기 및 장바구니 추가는 eVar 6에 대해 보고 가능하며 바인딩된 제품의 활동에 맞춰 정렬됩니다.
@@ -127,9 +127,9 @@ Adobe Analytics에 있는 다른 유형의 머천다이징 변수는 전환 변�
 | 내부 검색:여름 셔츠 | 19.99 | 1 | 1 | 1 |
 | 내부 검색:winter hat | 12.99 | 1 | 1 | 1 |
 
-전환 변수 구문 사용에 대한 자세한 내용은 의 Adobe Analytics 설명서를 참조하십시오. [전환 변수 구문을 사용한 eVar 구현](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
+전환 변수 구문 사용에 대한 자세한 내용은 [전환 변수 구문을 사용하여 eVar 구현](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax)에 대한 Adobe Analytics 설명서를 참조하십시오.
 
-아래는 에서 전환 변수 구문을 생성하는 XDM 필드입니다 [!DNL Analytics] 데이터 세트:
+다음은 [!DNL Analytics] 데이터 집합에서 전환 변수 구문을 생성하는 XDM 필드입니다.
 
 #### eVar
 
@@ -145,7 +145,7 @@ _experience.analytics.customDimensions.evars.evar#
 productListItems[#].sku
 ```
 
-* `#`: 액세스 중인 배열의 색인입니다.
+* `#`: 액세스 중인 배열의 인덱스입니다.
 
 ## 전환 변수 사용 사례 {#conversion-variable-use-cases}
 
@@ -220,4 +220,4 @@ LIMIT 100
 
 이 문서를 읽으면 제품 구문을 사용하여 머천다이징 eVar을 반환하고 전환 변수 구문을 사용하여 값을 특정 제품에 바인딩하는 방법을 더 잘 이해할 수 있습니다.
 
-아직 읽지 않았다면 다음을 읽어야 합니다. [웹 및 모바일 인터랙션에 대한 Analytics 인사이트 설명서](./analytics-insights.md) 다음 이 비디오에서는 일반적인 사용 사례를 제공하고 쿼리 서비스를 사용하여 웹 및 모바일 Adobe Analytics 데이터에서 실행 가능한 통찰력을 만드는 방법을 보여 줍니다.
+아직 읽지 않았다면 다음에 있는 [웹 및 모바일 상호 작용에 대한 분석 인사이트](./analytics-insights.md)를 읽어야 합니다. 이 비디오에서는 일반적인 사용 사례를 제공하고 쿼리 서비스를 사용하여 웹 및 모바일 Adobe Analytics 데이터에서 실행 가능한 통찰력을 만드는 방법을 보여 줍니다.

@@ -3,8 +3,8 @@ title: Adobe Experience Platform Assurance 확장 기능 구현
 description: 이 안내서에서는 Adobe Experience Platform Assurance 확장 기능을 구현하고 설치하는 방법을 설명합니다.
 exl-id: b7bd1bb1-1606-4d00-97e0-c329c86d8ca4
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '400'
+workflow-type: tm+mt
+source-wordcount: '386'
 ht-degree: 100%
 
 ---

@@ -17,39 +17,39 @@ ht-degree: 0%
 >
 >이 설명서 페이지에서는 다이어그램 하단에 강조 표시된 연결에 대한 프로필 내보내기 동작만 설명합니다.
 
-![대상 다이어그램 유형](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
+![대상 다이어그램의 유형](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
 ## 스트리밍 대상의 메시지 집계
 
-대상 유형별 특정 정보로 이동하기 전에 다음에 대한 메시지 수집 개념을 이해하는 것이 중요합니다 *스트리밍 대상*.
+대상 유형별 특정 정보로 이동하기 전에 *스트리밍 대상*&#x200B;에 대한 메시지 집계 개념을 이해하는 것이 중요합니다.
 
 Experience Platform 대상은 데이터를 HTTPS 호출로 API 기반 통합에 내보냅니다. 다른 업스트림 서비스에서 일괄 처리 수집, 스트리밍 수집, 일괄 처리 세분화, 스트리밍 세분화 또는 ID 그래프 변경의 결과로 프로필이 업데이트되었다는 알림을 받으면 데이터를 내보내고 스트리밍 대상으로 전송합니다.
 
 프로필은 대상 API 엔드포인트로 발송되기 전에 HTTPS 메시지로 집계됩니다.
 
-다음을 수행합니다. [Facebook 대상](/help/destinations/catalog/social/facebook.md) 포함 *[구성 가능한 집계](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy as a example - 데이터가 집계된 방식으로 전송됩니다. 여기서 destinations 서비스는 프로필 서비스 업스트림에서 모든 수신 데이터를 가져와서 다음 중 하나로 집계한 후 Facebook에 전달합니다.
+예를 들어 *[구성 가능한 집계](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 정책을 사용하여 [Facebook 대상](/help/destinations/catalog/social/facebook.md)을 사용합니다. 데이터는 집계된 방식으로 전송됩니다. 대상 서비스는 프로필 서비스 업스트림에서 들어오는 모든 데이터를 가져와서 다음 중 하나로 집계한 후 Facebook에 전달합니다.
 
 * 레코드 수(최대 10,000개) 또는
 * 시간 창 간격(300초)
 
-위의 임계값 중 어느 것이든 먼저 충족하면 Facebook으로 내보내기가 트리거됩니다. 그래서, [!DNL Facebook Custom Audiences] 대시보드에서 10,000개 레코드 단위로 Experience Platform에서 들어오는 대상이 표시될 수 있습니다. 데이터가 300초 내보내기 간격보다 빠르게 처리 및 집계되고, 모든 레코드가 처리될 때까지 약 2~3분마다 더 빠르게 전송되므로 2~3분마다 10,000개의 레코드가 표시될 수 있습니다. 레코드가 부족하여 10,000개의 일괄 처리를 구성할 수 없는 경우 시간 창 임계값이 충족될 때 현재 레코드 수가 그대로 전송되므로 더 작은 일괄 처리가 Facebook으로 전송되는 것을 볼 수도 있습니다.
+위의 임계값 중 어느 것이든 먼저 충족하면 Facebook으로 내보내기가 트리거됩니다. 따라서 [!DNL Facebook Custom Audiences] 대시보드에는 10,000개의 레코드 단위로 Experience Platform에서 들어오는 대상이 표시될 수 있습니다. 데이터가 300초 내보내기 간격보다 빠르게 처리 및 집계되고, 모든 레코드가 처리될 때까지 약 2~3분마다 더 빠르게 전송되므로 2~3분마다 10,000개의 레코드가 표시될 수 있습니다. 레코드가 부족하여 10,000개의 일괄 처리를 구성할 수 없는 경우 시간 창 임계값이 충족될 때 현재 레코드 수가 그대로 전송되므로 더 작은 일괄 처리가 Facebook으로 전송되는 것을 볼 수도 있습니다.
 
-다른 예로, [HTTP API 대상](/help/destinations/catalog/streaming/http-destination.md), 다음에 대한 *[최적 작업 집계](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 정책, 포함 `maxUsersPerRequest: 10`. 즉, 이 대상에 대한 HTTP 호출이 실행되기 전에 최대 10개의 프로필이 집계되지만, Experience Platform은 대상 서비스가 업스트림 서비스에서 업데이트된 재평가 정보를 수신하는 즉시 대상에 프로필을 디스패치하려고 합니다.
+다른 예로, `maxUsersPerRequest: 10`과(와) 함께 *[최고 노력 집계](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 정책을 사용하는 [HTTP API 대상](/help/destinations/catalog/streaming/http-destination.md)을(를) 고려해 보십시오. 즉, 이 대상에 대한 HTTP 호출이 실행되기 전에 최대 10개의 프로필이 집계되지만, Experience Platform은 대상 서비스가 업스트림 서비스에서 업데이트된 재평가 정보를 수신하는 즉시 대상에 프로필을 디스패치하려고 합니다.
 
-집계 정책은 구성이 가능하며, 대상 개발자는 API 끝점 다운스트림의 속도 제한을 가장 잘 충족하도록 집계 정책을 구성하는 방법을 결정할 수 있습니다. 자세한 내용 [집계 정책](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) Destination SDK 설명서에서 확인할 수 있습니다.
+집계 정책은 구성이 가능하며, 대상 개발자는 API 끝점 다운스트림의 속도 제한을 가장 잘 충족하도록 집계 정책을 구성하는 방법을 결정할 수 있습니다. Destination SDK 설명서에서 [집계 정책](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)에 대해 자세히 알아보십시오.
 
 ## 스트리밍 프로필 내보내기(엔터프라이즈) 대상 {#streaming-profile-destinations}
 
 >[!IMPORTANT]
 >
-> Enterprise 대상은 다음에만 사용할 수 있습니다. [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객.
+> Enterprise 대상은 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객만 사용할 수 있습니다.
 
-다음 [enterprise 대상](/help/destinations/destination-types.md#streaming-profile-export) Experience Platform 에는 Amazon Kinesis, Azure Event Hubs 및 HTTP API가 있습니다.
+Experience Platform의 [엔터프라이즈 대상](/help/destinations/destination-types.md#streaming-profile-export)은(는) Amazon Kinesis, Azure Event Hubs 및 HTTP API입니다.
 
 Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 프로필에 대한 관련 업데이트가 발생한 경우에만 데이터를 API 엔드포인트로 내보내도록 프로필 내보내기 동작을 엔터프라이즈 대상으로 최적화합니다. 프로필은 다음과 같은 경우 대상으로 내보내집니다.
 
-* 의 변경으로 프로필 업데이트가 결정됨 [대상자 멤버십](/help/xdm/field-groups/profile/segmentation.md) 대상에 매핑된 대상자 중 하나 이상에 대해 예를 들어 프로필이 대상에 매핑된 대상자 중 하나에 대해 자격이 있거나 대상에 매핑된 대상자 중 하나를 종료했습니다.
-* 프로필 업데이트는 의 변경 사항으로 결정됩니다. [id 맵](/help/xdm/field-groups/profile/identitymap.md). 예를 들어 대상에 매핑된 대상자 중 하나에 대해 이미 자격이 있는 프로필이 ID 맵 특성에 새 ID를 추가했습니다.
+* 대상에 매핑된 대상자 중 하나 이상에 대한 [대상자 멤버십](/help/xdm/field-groups/profile/segmentation.md)의 변경으로 프로필 업데이트가 결정되었습니다. 예를 들어 프로필이 대상에 매핑된 대상자 중 하나에 대해 자격이 있거나 대상에 매핑된 대상자 중 하나를 종료했습니다.
+* 프로필 업데이트는 [ID 맵](/help/xdm/field-groups/profile/identitymap.md)의 변경 내용으로 결정됩니다. 예를 들어 대상에 매핑된 대상자 중 하나에 대해 이미 자격이 있는 프로필이 ID 맵 특성에 새 ID를 추가했습니다.
 * 프로필 업데이트는 대상에 매핑된 속성 중 하나 이상에 대한 속성 변경에 의해 결정되었습니다. 예를 들어 매핑 단계에서 대상에 매핑된 속성 중 하나가 프로필에 추가됩니다.
 
 위에서 설명한 모든 경우에 관련 업데이트가 발생한 프로필만 대상으로 내보냅니다. 예를 들어 대상 흐름에 매핑된 대상자에 100명의 멤버가 있고 5개의 새 프로필이 세그먼트에 해당하는 경우 대상으로 내보내는 것은 증분 것이며 5개의 새 프로필만 포함합니다.
@@ -58,11 +58,11 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 ### 데이터 내보내기를 결정하는 사항 및 내보내기에 포함되는 사항
 
-주어진 프로필에 대해 내보내는 데이터와 관련하여 의 두 가지 다른 개념을 이해하는 것이 중요합니다 *엔터프라이즈 대상으로 데이터 내보내기를 결정하는 것은 무엇입니까* 및 *내보내기에 포함되는 데이터*.
+지정된 프로필에 대해 내보내는 데이터와 관련하여 *엔터프라이즈 대상으로 데이터 내보내기를 결정하는 요소* 및 *내보내기에 포함되는 데이터*&#x200B;의 두 가지 다른 개념을 이해하는 것이 중요합니다.
 
 | 대상 내보내기를 결정하는 사항 | 대상 내보내기에 포함된 사항 |
 |---------|----------|
-| <ul><li>매핑된 속성 및 대상은 대상 내보내기에 대한 큐 역할을 합니다. 즉, 매핑된 대상자의 상태가 (에서) 변경되는 경우 `null` 끝 `realized` 또는 부터 `realized` 끝 `exiting`) 매핑된 속성이 업데이트되면 대상 내보내기가 시작됩니다.</li><li>ID는 현재 Enterprise 대상에 매핑될 수 없으므로 주어진 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>다음 `segmentMembership` 객체에는 활성화 데이터 흐름에 매핑된 대상자가 포함됩니다. 이 대상자 상태는 자격 또는 대상자 종료 이벤트 후 변경되었습니다. 프로필의 자격이 되는 매핑되지 않은 다른 대상자가 동일한 대상자에 속하는 경우 대상 내보내기의 일부가 될 수 있습니다 [병합 정책](/help/profile/merge-policies/overview.md) 활성화 데이터 흐름에서 매핑된 대상자입니다. </li><li>의 모든 ID `identityMap` 객체도 포함됩니다(현재 Experience Platform은 enterprise 대상에서 id 매핑을 지원하지 않습니다.).</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
+| <ul><li>매핑된 속성 및 대상은 대상 내보내기에 대한 큐 역할을 합니다. 즉, 매핑된 대상이 상태를 `null`에서 `realized`(으)로 또는 `realized`에서 `exiting`(으)로 변경하거나 매핑된 특성을 업데이트하면 대상 내보내기가 시작됩니다.</li><li>ID는 현재 Enterprise 대상에 매핑될 수 없으므로 주어진 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>`segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 대상이 포함되어 있습니다. 이 경우 자격 또는 대상 종료 이벤트 후 프로필의 상태가 변경되었습니다. 프로필이 자격을 갖춘 매핑되지 않은 다른 대상자가 활성화 데이터 흐름에서 매핑된 대상자와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 대상 내보내기의 일부가 될 수 있습니다. </li><li>`identityMap` 개체의 모든 ID도 포함됩니다(Experience Platform은 현재 Enterprise 대상에서 ID 매핑을 지원하지 않음).</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -76,7 +76,7 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 ![엔터프라이즈 대상 데이터 흐름](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-대상으로 프로필을 내보내는 방법은 대상 중 하나를 선택하거나 종료하는 프로필에 의해 결정됩니다. *세 개의 매핑된 세그먼트*. 그러나 데이터 내보내기에서 `segmentMembership` 특정 프로필이 그룹의 구성원이고, 내보내기를 트리거한 대상과 동일한 병합 정책을 공유하는 경우, 매핑되지 않은 다른 대상자가 나타날 수 있습니다. 프로필이 다음에 대한 자격이 있는 경우: **DeLorean 자동차를 사용하는 고객** 대상자이지만 **&quot;백 투 더 퓨처&quot; 영화 감상** 및 **의 팬** 세그먼트를 가리키면 이 다른 두 대상도 `segmentMembership` 데이터 흐름에서 매핑되지 않은 데이터 내보내기의 객체입니다. 이러한 객체가 과 동일한 병합 정책을 공유하는 경우 **DeLorean 자동차를 사용하는 고객** 세그먼트.
+대상으로의 프로필 내보내기는 *3개의 매핑된 세그먼트 중 하나를 사용하거나 종료하는 프로필에 의해 결정됩니다*. 그러나 데이터 내보내기에서 `segmentMembership` 개체에 매핑되지 않은 다른 대상이 나타날 수 있습니다. 특정 프로필이 이 대상의 구성원이고 이 대상이 내보내기를 트리거한 대상과 동일한 병합 정책을 공유하는 경우. 프로필이 **Customer with DeLorean Cars** 대상자를 대상으로 하지만 **Watched &quot;Back to the Future&quot; 동영상** 및 **Science fans** 세그먼트의 구성원이면 **DeLorean Cars를 사용하는 고객** 세그먼트와 동일한 병합 정책을 공유하는 경우 이 두 대상이 데이터 흐름에서 매핑되지 않았더라도 데이터 내보내기의 `segmentMembership` 개체에도 표시됩니다.
 
 프로필 속성 관점에서 위에 매핑된 네 개의 속성에 대한 변경 사항은 대상 내보내기를 결정하고 프로필에 있는 네 개의 매핑된 속성 중 하나는 데이터 내보내기에 표시됩니다.
 
@@ -84,18 +84,18 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 >[!TIP]
 >
-> 에서 다양한 엔터프라이즈 대상으로 내보낸 데이터의 예를 볼 수 있습니다. [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md#exported-data), [Azure 이벤트 허브](/help/destinations/catalog/cloud-storage/azure-event-hubs.md#exported-data), 및 [HTTP API](/help/destinations/catalog/streaming/http-destination.md#exported-data) 대상 설명서 페이지.
+> [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md#exported-data), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md#exported-data) 및 [HTTP API](/help/destinations/catalog/streaming/http-destination.md#exported-data) 대상 설명서 페이지에서 다양한 Enterprise 대상으로 내보낸 데이터의 예를 볼 수 있습니다.
 
 ## 스트리밍 API 기반 대상 {#streaming-api-based-destinations}
 
 facebook, 트레이드 데스크 및 기타 API 기반 통합과 같은 스트리밍 대상에 대한 프로필 내보내기 동작은 엔터프라이즈 대상에 대해 위에서 설명한 동작과 매우 유사합니다.
 
-스트리밍 대상의 예는 다음에 속한 대상입니다. [소셜 및 광고 카테고리](/help/destinations/destination-types.md#categories) 카탈로그에서.
+스트리밍 대상의 예로는 카탈로그의 [소셜 및 광고 범주](/help/destinations/destination-types.md#categories)에 속하는 대상을 들 수 있습니다.
 
 Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 프로필에 대한 관련 업데이트가 발생한 경우에만 데이터를 스트리밍 API 기반 대상으로 내보내도록 스트리밍 대상에 대한 프로필 내보내기 동작을 최적화합니다. 프로필은 다음과 같은 경우 대상으로 내보내집니다.
 
-* 의 변경으로 프로필 업데이트가 결정됨 [대상자 멤버십](/help/xdm/field-groups/profile/segmentation.md) 대상에 매핑된 대상자 중 하나 이상에 대해 예를 들어 프로필이 대상에 매핑된 대상자 중 하나에 대해 자격이 있거나 대상에 매핑된 대상자 중 하나를 종료했습니다.
-* 프로필 업데이트는 의 변경 사항으로 결정됩니다. [id 맵](/help/xdm/field-groups/profile/identitymap.md) 이 대상 인스턴스에 대해 내보내도록 표시된 id 네임스페이스에 대해 사용됩니다. 예를 들어 대상에 매핑된 대상자 중 하나에 대해 이미 자격이 있는 프로필이 ID 맵 특성에 새 ID를 추가했습니다.
+* 대상에 매핑된 대상자 중 하나 이상에 대한 [대상자 멤버십](/help/xdm/field-groups/profile/segmentation.md)의 변경으로 프로필 업데이트가 결정되었습니다. 예를 들어 프로필이 대상에 매핑된 대상자 중 하나에 대해 자격이 있거나 대상에 매핑된 대상자 중 하나를 종료했습니다.
+* 프로필 업데이트는 이 대상 인스턴스에 대한 내보내기로 표시된 ID 네임스페이스에 대한 [ID 맵](/help/xdm/field-groups/profile/identitymap.md)의 변경으로 결정됩니다. 예를 들어 대상에 매핑된 대상자 중 하나에 대해 이미 자격이 있는 프로필이 ID 맵 특성에 새 ID를 추가했습니다.
 * 프로필 업데이트는 대상에 매핑된 속성 중 하나 이상에 대한 속성 변경에 의해 결정되었습니다. 예를 들어 매핑 단계에서 대상에 매핑된 속성 중 하나가 프로필에 추가됩니다.
 * 자동 동의 시행이 구성되고 프로필이 옵트아웃되면 프로필에 대한 동의가 변경됩니다. 자동화된 동의 적용은 프로필이 대상의 타깃팅에 포함되지 않도록 대상을 종료한 이벤트를 대상으로 보냅니다.
 
@@ -109,7 +109,7 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 | 대상 내보내기를 결정하는 사항 | 대상 내보내기에 포함된 사항 |
 |---------|----------|
-| <ul><li>매핑된 속성 및 대상은 대상 내보내기에 대한 큐 역할을 합니다. 즉, 매핑된 대상자의 상태가 (에서) 변경되는 경우 `null` 끝 `realized` 또는 부터 `realized` 끝 `exiting`) 매핑된 속성이 업데이트되면 대상 내보내기가 시작됩니다.</li><li>ID 맵의 변경 사항은 다음에 대해 추가/제거되는 ID로 정의됩니다. [id 그래프](/help/identity-service/features/identity-graph-viewer.md) 프로필, 내보내기 위해 매핑된 id 네임스페이스의 경우</li><li>속성에 대한 변경 사항은 대상에 매핑된 속성에 대한 모든 업데이트로 정의됩니다.</li></ul> | <ul><li>대상에 매핑되고 변경된 대상자는 `segmentMembership` 개체. 일부 시나리오에서는 여러 호출을 사용하여 내보낼 수 있습니다. 또한, 일부 시나리오에서는 변경되지 않은 일부 대상자가 호출에 포함될 수도 있습니다. 어떤 경우든 매핑된 대상자만 내보내집니다.</li><li>의 대상에 매핑된 네임스페이스의 모든 ID `identityMap` 객체도 포함됩니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
+| <ul><li>매핑된 속성 및 대상은 대상 내보내기에 대한 큐 역할을 합니다. 즉, 매핑된 대상이 상태를 `null`에서 `realized`(으)로 또는 `realized`에서 `exiting`(으)로 변경하거나 매핑된 특성을 업데이트하면 대상 내보내기가 시작됩니다.</li><li>ID 맵의 변경 사항은 내보내기를 위해 매핑된 ID 네임스페이스에 대해 프로필의 [ID 그래프](/help/identity-service/features/identity-graph-viewer.md)에 대해 추가/제거된 ID로 정의됩니다.</li><li>속성에 대한 변경 사항은 대상에 매핑된 속성에 대한 모든 업데이트로 정의됩니다.</li></ul> | <ul><li>대상에 매핑되고 변경된 대상은 `segmentMembership` 개체에 포함됩니다. 일부 시나리오에서는 여러 호출을 사용하여 내보낼 수 있습니다. 또한, 일부 시나리오에서는 변경되지 않은 일부 대상자가 호출에 포함될 수도 있습니다. 어떤 경우든 매핑된 대상자만 내보내집니다.</li><li>`identityMap` 개체의 대상에 매핑된 네임스페이스의 모든 ID도 포함됩니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -123,7 +123,7 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 ![스트리밍 대상 데이터 흐름](/help/destinations/assets/how-destinations-work/streaming-destination-example-dataflow.png)
 
-대상으로 프로파일을 내보내는 방법은 매핑된 세 세그먼트 중 하나를 선택하거나 종료하는 프로파일에 의해 결정됩니다. 프로필이 다음에 대한 자격이 있는 경우 **DeLorean 자동차를 사용하는 고객** 세그먼트, 내보내기가 트리거됩니다. 다른 대상(**도시 - 달라스** 및 **기본 사이트 활성**&#x200B;프로필에 가능한 상태 중 하나( )가 있는 대상자가 있는 경우 를 내보낼 수도 있습니다.`realized` 또는 `exited`). 매핑되지 않은 대상(예: **의 팬**)은 내보내지지 않습니다.
+대상으로 프로파일을 내보내는 방법은 매핑된 세 세그먼트 중 하나를 선택하거나 종료하는 프로파일에 의해 결정됩니다. **Customer with DeLorean Cars** 세그먼트에 적합한 프로필이 있으면 내보내기가 트리거됩니다. 프로필에 가능한 상태(`realized` 또는 `exited`) 중 하나가 있는 대상이 있는 경우 다른 대상(**구 - 댈러스** 및 **기본 사이트 활성**)도 내보낼 수 있습니다. 매핑되지 않은 대상(예: **SF 팬**)은 내보내지지 않습니다.
 
 프로필 속성 관점에서 위에 매핑된 세 가지 속성에 대한 변경 사항이 대상 내보내기를 결정합니다.
 
@@ -131,11 +131,11 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 ## 배치(파일 기반) 대상 {#file-based-destinations}
 
-프로필을 로 내보낼 때 [파일 기반 대상](/help/destinations/destination-types.md#file-based) Experience Platform에서 사용할 수 있는 세 가지 유형의 스케줄(아래 나열됨)과 두 가지 파일 내보내기 옵션(전체 또는 증분 파일)이 있습니다. 이러한 모든 설정은 여러 대상이 단일 대상 데이터 흐름에 매핑되는 경우에도 대상 수준에서 설정됩니다.
+Experience Platform에서 [파일 기반 대상](/help/destinations/destination-types.md#file-based)(으)로 프로필을 내보낼 때 세 가지 유형의 일정(아래 나열됨)과 두 가지 파일 내보내기 옵션(전체 또는 증분 파일)을 사용할 수 있습니다. 이러한 모든 설정은 여러 대상이 단일 대상 데이터 흐름에 매핑되는 경우에도 대상 수준에서 설정됩니다.
 
 * 예약된 내보내기: 대상을 구성하고, 세그먼트를 하나 이상 추가하고, 전체 또는 증분 파일을 내보내려는 경우 선택하고, 파일을 내보내야 하는 매일 또는 하루에 여러 번 설정된 시간을 선택합니다. 예를 들어 오후 5시 내보내기 시간은 대상에 적합한 프로필이 모두 오후 5시에 내보내짐을 의미합니다.
 * 세그먼트 평가 후: 내보내기는 일일 대상자 평가 작업이 실행된 직후에 트리거됩니다. 즉, 파일에서 내보낸 프로필 번호가 세그먼트의 가장 최근에 평가된 모집단에 최대한 가깝습니다.
-* 온디맨드 내보내기([지금 파일 내보내기](/help/destinations/ui/export-file-now.md)): 최신 대상자 평가 작업을 기반으로 정기적인 예약된 내보내기 위에 전체 파일을 한 번 내보냅니다.
+* 온디맨드 내보내기([지금 파일 내보내기](/help/destinations/ui/export-file-now.md)): 최신 대상 평가 작업을 기반으로 정기적인 예약된 내보내기 위에 전체 파일을 한 번 내보냅니다.
 
 위의 내보내기 상황에서 내보낸 파일에는 내보낼 XDM 속성으로 선택한 열과 함께 내보내기에 적합한 프로필이 포함됩니다.
 
@@ -145,9 +145,9 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 ### 증분 파일 내보내기 {#incremental-file-exports}
 
-프로필의 모든 업데이트가 증분 파일 내보내기에 포함할 프로필을 평가하는 것은 아닙니다. 예를 들어 프로필에 속성을 추가하거나 제거한 경우 내보내기에 프로필이 포함되지 않습니다. 다음 대상이 되는 프로필만 해당 `segmentMembership` 변경된 속성은 내보낸 파일에 포함됩니다. 즉, 프로필이 대상자의 일부가 되거나 대상에서 제거된 경우에만 증분 파일 내보내기에 포함됩니다.
+프로필의 모든 업데이트가 증분 파일 내보내기에 포함할 프로필을 평가하는 것은 아닙니다. 예를 들어 프로필에 속성을 추가하거나 제거한 경우 내보내기에 프로필이 포함되지 않습니다. `segmentMembership` 특성이 변경된 프로필만 내보낸 파일에 포함됩니다. 즉, 프로필이 대상자의 일부가 되거나 대상에서 제거된 경우에만 증분 파일 내보내기에 포함됩니다.
 
-마찬가지로 새 ID(새 이메일 주소, 전화 번호, ECID 등)가 [id 그래프](/help/identity-service/features/identity-graph-viewer.md)는 새 증분 파일 내보내기에 프로필을 포함하는 이유를 나타내지 않습니다.
+마찬가지로 새 ID(새 전자 메일 주소, 전화 번호, ECID 등)가 [ID 그래프](/help/identity-service/features/identity-graph-viewer.md)의 프로필에 추가되는 경우, 이는 새 증분 파일 내보내기에 프로필을 포함시켜야 하는 이유를 나타내지 않습니다.
 
 새 대상이 대상 매핑에 추가되는 경우 자격 요건 및 다른 세그먼트에 대한 내보내기에 영향을 주지 않습니다. 내보내기 예약은 대상자별로 개별적으로 구성되며 대상이 동일한 대상 데이터 흐름에 추가된 경우에도 파일은 모든 세그먼트에 대해 별도로 내보내집니다.
 
@@ -155,12 +155,12 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 예를 들어, 대상이 증분 파일 업데이트를 내보내는 아래 표시된 내보내기 설정에서 프로필이 증분 파일 내보내기에 포함되어 있는지 여부에 대해서는 다음 상황을 참고하십시오.
 
-![선택한 몇 가지 속성을 사용하여 설정을 내보냅니다.](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
+![선택한 여러 특성이 있는 내보내기 설정입니다.](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
 
 * 프로필이 세그먼트에 적합하거나 적합하지 않을 때 증분 파일 내보내기에 프로필이 포함됩니다.
-* 프로필은 *아님* 새 전화 번호가 id 그래프에 추가되면 증분 파일 내보내기에 포함됩니다.
-* 프로필은 *아님* 매핑된 XDM 필드의 값이 다음과 같은 경우 증분 파일 내보내기에 포함됨 `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address` 은 프로필에서 업데이트됩니다.
-* 다음 시간 마다 `segmentMembership.status` XDM 필드는 대상 활성화 워크플로에서 매핑되며 대상을 종료하는 프로필은 `exited` 상태.
+* 새 전화 번호가 ID 그래프에 추가되면 증분 파일 내보내기에 프로필이 *포함되지 않음*&#x200B;됩니다.
+* 프로필에서 `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address`과(와) 같은 매핑된 XDM 필드의 값이 업데이트되면 증분 파일 내보내기에 프로필이 *not*&#x200B;이(가) 포함됩니다.
+* 대상 활성화 워크플로에서 `segmentMembership.status` XDM 필드가 매핑될 때마다 대상을 종료하는 프로필이 `exited` 상태의 내보낸 증분 파일에도 포함됩니다.
 
 >[!ENDSHADEBOX]
 
@@ -174,7 +174,7 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 | 대상 내보내기를 결정하는 사항 | 내보낸 파일에 포함된 내용 |
 |---------|----------|
-| <ul><li>UI 또는 API 및 사용자 작업에 설정된 내보내기 일정(선택 [지금 파일 내보내기](/help/destinations/ui/export-file-now.md) UI에서 또는 [임시 활성화 API](/help/destinations/api/ad-hoc-activation-api.md)) 대상 내보내기의 시작을 확인합니다.</li></ul> | 전체 파일 내보내기에서 최신 대상 평가를 기반으로 한 세그먼트의 전체 활성 프로필 모집단은 각 파일 내보내기에 포함됩니다. 내보내기 위해 선택한 각 XDM 속성에 대한 최신 값도 각 파일의 열로 포함됩니다. 종료됨 상태의 프로필은 파일 내보내기에 포함되지 않습니다. |
+| <ul><li>UI 또는 API 및 사용자 작업에 설정된 내보내기 일정(UI에서 [지금 파일 내보내기](/help/destinations/ui/export-file-now.md)를 선택하거나 [임시 활성화 API](/help/destinations/api/ad-hoc-activation-api.md)를 사용)이 대상 내보내기의 시작을 결정합니다.</li></ul> | 전체 파일 내보내기에서 최신 대상 평가를 기반으로 한 세그먼트의 전체 활성 프로필 모집단은 각 파일 내보내기에 포함됩니다. 내보내기 위해 선택한 각 XDM 속성에 대한 최신 값도 각 파일의 열로 포함됩니다. 종료됨 상태의 프로필은 파일 내보내기에 포함되지 않습니다. |
 
 {style="table-layout:fixed"}
 
@@ -184,7 +184,7 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 | 대상 내보내기를 결정하는 사항 | 내보낸 파일에 포함된 내용 |
 |---------|----------|
-| <ul><li>UI 또는 API에 설정된 내보내기 일정에 따라 대상 내보내기의 시작이 결정됩니다.</li><li>프로필의 대상 멤버십에 대한 변경 사항(세그먼트에서 적격 또는 부적격)이 발생하면 증분 내보내기에 포함할 프로필이 적합합니다. 프로필의 속성 또는 ID 맵 변경 *금지* 증분 내보내기에 포함할 프로필을 검증합니다.</li></ul> | <p>내보내기를 위해 선택한 각 XDM 속성에 대한 최신 정보와 함께 대상 멤버십이 변경된 프로필입니다.</p><p>종료한 상태의 프로필은 다음과 같은 경우 대상 내보내기에 포함됩니다. `segmentMembership.status` 매핑 단계에서 XDM 필드를 선택합니다.</p> |
+| <ul><li>UI 또는 API에 설정된 내보내기 일정에 따라 대상 내보내기의 시작이 결정됩니다.</li><li>프로필의 대상 멤버십에 대한 변경 사항(세그먼트에서 적격 또는 부적격)이 발생하면 증분 내보내기에 포함할 프로필이 적합합니다. 프로필 *do not*&#x200B;에 대한 특성 또는 ID 맵의 변경 사항은 증분 내보내기에 포함할 프로필을 검증합니다.</li></ul> | <p>내보내기를 위해 선택한 각 XDM 속성에 대한 최신 정보와 함께 대상 멤버십이 변경된 프로필입니다.</p><p>매핑 단계에서 `segmentMembership.status` XDM 필드를 선택한 경우 종료된 상태의 프로필이 대상 내보내기에 포함됩니다.</p> |
 
 {style="table-layout:fixed"}
 
@@ -196,4 +196,4 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 이 문서를 읽고 나면 이제 스트리밍, 엔터프라이즈 및 파일 기반 대상으로 프로필 내보내기에서 표시될 내용을 알 수 있습니다.
 
-다음으로, 방법에 대해 읽을 수 있습니다. [id가 처리됨](/help/destinations/how-destinations-work/identity-handling.md) 활성화 워크플로에서.
+다음으로 활성화 워크플로에서 [ID가 처리되는 방법](/help/destinations/how-destinations-work/identity-handling.md)에 대해 읽을 수 있습니다.

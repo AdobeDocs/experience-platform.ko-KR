@@ -6,7 +6,7 @@ exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
 source-wordcount: '271'
-ht-degree: 36%
+ht-degree: 0%
 
 ---
 
@@ -22,4 +22,4 @@ ht-degree: 36%
 
 조직에서 이 기능을 활성화하면 활동이 발생할 때 감사 로그가 자동으로 수집됩니다. 로그 수집을 수동으로 활성화할 필요가 없습니다.
 
-감사 로그를 보고 내보내려면 Adobe Console의 감사 로그 액세스 액세스 제어 권한이 필요합니다. Attribution AI 기능에 대한 개별 권한을 관리하는 방법을 알아보려면 [액세스 제어 설명서](../aai-data-governance/access-controls.md).
+감사 로그를 보고 내보내려면 Adobe 콘솔의 감사 로그 액세스 액세스 액세스 제어 권한이 있어야 합니다. Attribution AI 기능에 대한 개별 권한을 관리하는 방법을 알아보려면 [액세스 제어 설명서](../aai-data-governance/access-controls.md)를 참조하세요.

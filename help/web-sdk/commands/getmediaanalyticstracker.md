@@ -1,19 +1,19 @@
 ---
 title: getMediaAnalyticsTracker
 description: Media Analytics 추적기 개체를 만들고 이를 사용하여 미디어 이벤트를 추적하는 방법에 대해 알아봅니다.
-source-git-commit: 9384c1cc15441199e898d6cc0850e5422253f106
+exl-id: ae968da8-7763-4b2a-a716-3014ba0d270d
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 3%
 
 ---
 
-
 # `getMediaAnalyticsTracker`
 
-이 웹 SDK 명령은 Media Analytics 추적기를 검색합니다. 이 명령을 사용하여 개체 인스턴스를 만든 다음, [미디어 JS 라이브러리](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html), 미디어 이벤트를 추적합니다.
+이 웹 SDK 명령은 Media Analytics 추적기를 검색합니다. 이 명령을 사용하여 개체 인스턴스를 만든 다음 [Media JS 라이브러리](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)에서 제공한 것과 동일한 API를 사용하여 미디어 이벤트를 추적할 수 있습니다.
 
-다음 `getMediaAnalyticsTracker` 명령은 기존 Media Analytics API를 반환합니다.
+`getMediaAnalyticsTracker` 명령은 레거시 Media Analytics API를 반환합니다.
 
 
 | 메서드 이름 | 설명 | 구문 |

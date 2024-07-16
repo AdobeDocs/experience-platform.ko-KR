@@ -17,12 +17,12 @@ ht-degree: 0%
 
 Web SDK를 사용하면 두 가지 방법으로 디스플레이 이벤트를 전송할 수 있습니다.
 
-* [자동](#send-automatically): 개인화된 콘텐츠가 페이지에 렌더링된 직후. 방법 설명서 참조 [개인화된 콘텐츠 렌더링](rendering-personalization-content.md) 추가 정보.
-* [수동](#send-sendEvent-calls), 후속 작업 `sendEvent` 호출.
+* 개인화된 콘텐츠가 페이지에 렌더링되면 바로 [자동으로](#send-automatically). 자세한 내용은 [개인화된 콘텐츠를 렌더링](rendering-personalization-content.md)하는 방법에 대한 설명서를 참조하십시오.
+* 후속 `sendEvent`번의 호출을 통해 [수동으로](#send-sendEvent-calls).
 
 >[!NOTE]
 >
->디스플레이 이벤트는 를 호출할 때 자동으로 전송되지 않습니다. `applyPropositions` 함수.
+>`applyPropositions` 함수를 호출할 때 표시 이벤트가 자동으로 전송되지 않습니다.
 
 ## 디스플레이 이벤트를 자동으로 보내기 {#send-automatically}
 
@@ -33,29 +33,29 @@ Web SDK를 사용하면 두 가지 방법으로 디스플레이 이벤트를 전
 * `renderDecisions: true`
 * `personalization.sendDisplayNotifications: true` 또는 지정되지 않음
 
-Web SDK는 의 결과로 개인화가 렌더링되면 바로 디스플레이 이벤트를 보냅니다. `sendEvent` 호출합니다.
+Web SDK는 `sendEvent` 호출의 결과로 개인화가 렌더링되면 바로 디스플레이 이벤트를 보냅니다.
 
 ## 후속 sendEvent 호출에서 표시 이벤트 보내기 {#send-sendEvent-calls}
 
-비교 대상 [자동으로](#send-automatically) 디스플레이 이벤트 보내기(후속 이벤트에 포함할 때) `sendEvent` 호출 시 호출에 페이지 로드에 대한 자세한 정보를 포함할 수도 있습니다. 이는 개인화된 콘텐츠를 요청할 때 이용할 수 없었던 추가 정보일 수 있다.
+[자동으로](#send-automatically)에서 표시 이벤트를 보내는 것과 비교하여 후속 `sendEvent` 호출에 이 이벤트를 포함하면 호출에 페이지 로드에 대한 자세한 정보를 포함할 수 있습니다. 이는 개인화된 콘텐츠를 요청할 때 이용할 수 없었던 추가 정보일 수 있다.
 
-또한 디스플레이 이벤트를에서 전송 `sendEvent` 호출은 Adobe Analytics 사용 시 바운스 비율 오류를 최소화합니다.
+또한 `sendEvent` 호출에서 표시 이벤트를 보내면 Adobe Analytics 사용 시 바운스 비율 오류가 최소화됩니다.
 
 >[!IMPORTANT]
 >
->수동으로 렌더링된 제안을 사용하는 경우 디스플레이 이벤트는 를 통해서만 지원됩니다. `sendEvent` 호출. 이 경우 디스플레이 이벤트를 자동으로 전송할 수 없습니다.
+>수동으로 렌더링된 제안을 사용하는 경우 디스플레이 이벤트는 `sendEvent` 호출을 통해서만 지원됩니다. 이 경우 디스플레이 이벤트를 자동으로 전송할 수 없습니다.
 
 ### 자동으로 렌더링된 제안에 대한 디스플레이 이벤트 보내기 {#auto-rendered-propositions}
 
-자동으로 렌더링된 제안에 대한 표시 이벤트를 보내려면 `sendEvent` 호출:
+자동으로 렌더링된 제안에 대한 표시 이벤트를 보내려면 `sendEvent` 호출에서 다음 매개 변수를 구성해야 합니다.
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: false` 페이지 조회수의 맨 위에
+* 페이지 조회수의 맨 위에 대한 `personalization.sendDisplayNotifications: false`
 
-디스플레이 이벤트를 보내려면 `sendEvent` 포함 `personalization.includePendingDisplayNotifications: true`
+디스플레이 이벤트를 보내려면 `personalization.includePendingDisplayNotifications: true`(으)로 `sendEvent`에 전화
 
 ### 수동으로 렌더링된 제안에 대한 디스플레이 이벤트 보내기 {#manually-rendered-propositions}
 
-수동으로 렌더링된 제안에 대한 표시 이벤트를 보내려면 해당 이벤트를 `_experience.decisioning.propositions` XDM 필드(포함) `id`, `scope`, 및 `scopeDetails` 제안의 필드.
+수동으로 렌더링된 제안에 대한 표시 이벤트를 보내려면 제안에 포함된 `id`, `scope` 및 `scopeDetails` 필드를 포함하여 `_experience.decisioning.propositions` XDM 필드에 해당 이벤트를 포함해야 합니다.
 
-또한 다음을 설정합니다. `include _experience.decisioning.propositionEventType.display` 필드 대상 `1`.
+또한 `include _experience.decisioning.propositionEventType.display` 필드를 `1`(으)로 설정하십시오.

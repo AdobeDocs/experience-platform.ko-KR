@@ -5,7 +5,7 @@ exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
 source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
 workflow-type: tm+mt
 source-wordcount: '1139'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 2%
 
 이를 구동하는 SQL에 액세스하여 대상 인사이트를 파악한 다음 고유한 인사이트를 생성하여 Adobe Experience Platform에서 대상 플랫폼으로의 데이터 활성화를 자세히 살펴봅니다. 기존 Real-Time CDP 데이터 모델 SQL을 영감으로 사용하여 원시 데이터를 새로운 실행 가능한 통찰력으로 변환하여 고유한 비즈니스 요구 사항에 맞는 쿼리를 만듭니다.
 
-다음을 참조하십시오. [SQL 설명서 보기](../view-sql.md) 자세한 내용은 양식 UI를 통해 통찰력의 SQL을 직접 조정하는 방법을 참조하십시오.
+PLatform UI를 통해 직접 인사이트의 SQL을 조정하는 방법에 대한 자세한 내용은 [SQL 보기 설명서](../view-sql.md)를 참조하십시오.
 
-다음 인사이트를 의 일부로 사용할 수 있습니다. [대상 대시보드](../guides/destinations.md) 또는 사용자 지정 [사용자 정의 대시보드](../user-defined-dashboards.md). 다음을 참조하십시오. [사용자 지정 개요](../customize/overview.md) 대시보드 또는 를 사용자 지정하는 방법에 대한 지침 [새 위젯 만들기 및 편집](../customize/custom-widgets.md) 위젯 라이브러리 및 [사용자 정의 대시보드](../user-defined-dashboards.md#create-widget).
+다음 인사이트는 모두 [대상 대시보드](../guides/destinations.md) 또는 사용자 지정 [사용자 정의 대시보드](../user-defined-dashboards.md)의 일부로 사용할 수 있습니다. 위젯 라이브러리 및 [사용자 정의 대시보드](../user-defined-dashboards.md#create-widget)에서 대시보드를 사용자 정의하거나 [새 위젯을 만들고 편집](../customize/custom-widgets.md)하는 방법에 대한 지침은 [사용자 정의 개요](../customize/overview.md)를 참조하세요.
 
 ## 활성화된 대상자 {#activated-audiences}
 
@@ -48,7 +48,7 @@ WHERE
 
 +++
 
-다음을 참조하십시오. [활성화된 대상 위젯 설명서](../guides/destinations.md#activated-audiences) 를 참조하십시오.
+이 인사이트의 모양과 기능에 대한 자세한 내용은 [활성화된 대상 위젯 설명서](../guides/destinations.md#activated-audiences)를 참조하십시오.
 
 ## 모든 대상에 대해 활성화된 대상자 {#activated-audiences-across-all-destinations}
 
@@ -71,7 +71,7 @@ WHERE
 
 +++
 
-다음을 참조하십시오. [모든 대상 위젯 설명서에서 활성화된 대상](../guides/destinations.md#activated-audiences-across-all-destinations) 를 참조하십시오.
+이 인사이트의 모양과 기능에 대한 자세한 내용은 [모든 대상 위젯에서 활성화된 대상 설명서](../guides/destinations.md#activated-audiences-across-all-destinations)를 참조하십시오.
 
 ## 대상 플랫폼별 활성 대상 {#active-destinations-by-destination-platform}
 
@@ -96,7 +96,7 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-다음을 참조하십시오. [대상 플랫폼 위젯 설명서별 활성 대상](../guides/destinations.md#active-destinations-by-destination-platform) 를 참조하십시오.
+이 인사이트의 모양과 기능에 대한 자세한 내용은 [대상 플랫폼 위젯 설명서별 활성 대상](../guides/destinations.md#active-destinations-by-destination-platform)을 참조하십시오.
 
 ## 대상자 크기 트렌드 {#audience-size-trend}
 
@@ -142,7 +142,7 @@ SELECT d.destination_name,
 
 +++
 
-다음을 참조하십시오. [대상 크기 트렌드 위젯 설명서](../guides/destinations.md#audience-size-trend) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 크기 트렌드 위젯 설명서](../guides/destinations.md#audience-size-trend)를 참조하세요.
 
 ## 공통 대상자 {#common-audiences}
 
@@ -214,7 +214,7 @@ SELECT k.destination_name1,
 
 +++
 
-다음을 참조하십시오. [일반 대상 위젯 설명서](../guides/destinations.md#common-audiences) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [일반 대상 위젯 설명서](../guides/destinations.md#common-audiences)를 참조하세요.
 
 ## 대상 상태 {#destination-status}
 
@@ -238,7 +238,7 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-다음을 참조하십시오. [대상 상태 위젯 설명서](../guides/destinations.md#destination-status) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [대상 상태 위젯 설명서](../guides/destinations.md#destination-status)를 참조하세요.
 
 ## 대상 개수 {#destinations-count}
 
@@ -256,7 +256,7 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-다음을 참조하십시오. [대상 수 위젯 설명서](../guides/destinations.md#destinations-count) 를 참조하십시오.
+이 인사이트의 모양과 기능에 대한 자세한 내용은 [대상 수 위젯 설명서](../guides/destinations.md#destinations-count)를 참조하세요.
 
 ## 매핑된 대상자 상태 {#mapped-audience-health}
 
@@ -325,7 +325,7 @@ SELECT destination_name,
 
 +++
 
-다음을 참조하십시오. [매핑된 대상자 상태 위젯 설명서](../guides/destinations.md#mapped-audience-health) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [매핑된 대상자 상태 위젯 설명서](../guides/destinations.md#mapped-audience-health)를 참조하십시오.
 
 ## 매핑된 대상자 {#mapped-audiences}
 
@@ -345,7 +345,7 @@ WHERE destination_id = 1458738325;
 
 +++
 
-다음을 참조하십시오. [매핑된 대상자 위젯 설명서](../guides/destinations.md#mapped-audiences) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [매핑된 대상자 위젯 설명서](../guides/destinations.md#mapped-audiences)를 참조하십시오.
 
 <!-- Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
@@ -393,7 +393,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-다음을 참조하십시오. [가장 많이 사용되는 대상 위젯 문서](../guides/destinations.md#most-used-destinations) 를 참조하십시오.
+이 인사이트의 모양과 기능에 대한 자세한 내용은 [가장 많이 사용된 대상 위젯 설명서](../guides/destinations.md#most-used-destinations)를 참조하세요.
 
 ## 최근 활성화된 대상자 {#recently-activated-audiences}
 
@@ -424,7 +424,7 @@ LIMIT
 
 +++
 
-다음을 참조하십시오. [최근에 활성화된 대상 위젯 설명서](../guides/destinations.md#recently-activated-audiences) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [최근에 활성화된 대상 위젯 설명서](../guides/destinations.md#recently-activated-audiences)를 참조하십시오.
 
 ## 대상별로 최근 활성화된 대상자 {#recently-activated-audiences-by-destination}
 
@@ -455,7 +455,7 @@ SELECT c.destination_name,
 
 +++
 
-다음을 참조하십시오. [대상 위젯 설명서별로 최근에 활성화된 대상](../guides/destinations.md#recently-activated-audiences-by-destination) 를 참조하십시오.
+이 인사이트의 모양 및 기능에 대한 자세한 내용은 [최근 활성화된 대상 위젯별 설명서](../guides/destinations.md#recently-activated-audiences-by-destination)를 참조하십시오.
 
 ## 최근에 생성된 대상 {#recently-created-destinations}
 
@@ -484,7 +484,7 @@ LIMIT
 
 +++
 
-다음을 참조하십시오. [최근에 생성된 대상 위젯 설명서](../guides/destinations.md#recently-created-destinations) 를 참조하십시오.
+이 인사이트의 모양과 기능에 대한 자세한 내용은 [최근에 만든 대상 위젯 설명서](../guides/destinations.md#recently-created-destinations)를 참조하십시오.
 
 <!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
 
@@ -511,6 +511,6 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 이제 이 문서를 읽고 대시보드 인사이트를 생성하는 SQL과 이 분석이 해결하는 일반적인 질문을 이해합니다. 이제 이러한 SQL 쿼리를 편집하고 반복하여 고유한 인사이트를 생성할 수 있습니다.
 
-다음을 참조하십시오. [SQL 설명서 보기](../view-sql.md) 자세한 내용은 양식 UI를 통해 통찰력의 SQL을 직접 조정하는 방법을 참조하십시오.
+PLatform UI를 통해 직접 인사이트의 SQL을 조정하는 방법에 대한 자세한 내용은 [SQL 보기 설명서](../view-sql.md)를 참조하십시오.
 
-다음에 대한 인사이트를 생성하는 SQL을 읽고 이해할 수도 있습니다. [프로필](./profiles.md), [계정 프로필](./account-profiles.md) 및 [대상](./audiences.md) 대시보드.
+[프로필](./profiles.md), [계정 프로필](./account-profiles.md) 및 [대상](./audiences.md) 대시보드에 대한 인사이트를 생성하는 SQL을 읽고 이해할 수도 있습니다.

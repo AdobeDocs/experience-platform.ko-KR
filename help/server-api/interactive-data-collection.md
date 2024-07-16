@@ -17,9 +17,9 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->다음 `/interact` endpoint는 주로 Experience Platform SDK에서 사용하도록 설계되었습니다. 이 종단점은 추가 변경 사항이며 해당 동작은 예고 없이 발전할 수 있습니다. 예를 들어 나중에 응답 페이로드에 새 항목이 추가될 수 있습니다.
+>`/interact` 끝점은 주로 Experience Platform SDK에서 사용하도록 디자인되었습니다. 이 종단점은 추가 변경 사항이며 해당 동작은 예고 없이 발전할 수 있습니다. 예를 들어 나중에 응답 페이로드에 새 항목이 추가될 수 있습니다.
 
-서버 응답에는 하나 이상이 포함됩니다 `Handle` 개체. 아래 표시된 대로.
+아래 표시된 대로 서버 응답에 하나 이상의 `Handle` 개체가 포함되어 있습니다.
 
 ## API 호출 예
 
@@ -71,7 +71,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### 응답 {#response}
 
-성공적인 응답이 HTTP 상태를 반환합니다. `200 OK`, 하나 이상 포함 `Handle` 객체(데이터 스트림 구성에서 활성화된 실시간 에지 서비스에 따라 다름)
+성공한 응답은 데이터 스트림 구성에서 활성화된 실시간 에지 서비스에 따라 하나 이상의 `Handle` 개체와 함께 HTTP 상태 `200 OK`을(를) 반환합니다.
 
 ```json
 {

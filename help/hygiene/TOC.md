@@ -16,7 +16,7 @@ ht-degree: 64%
 # 고급 데이터 수명주기 관리 {#data-lifecycle}
 
 * [고급 데이터 수명주기 관리 개요](./home.md)
-* 데이터 라이프사이클 UI {#ui}
+* 데이터 수명 주기 UI {#ui}
    * [개요](./ui/overview.md)
    * [자동화된 데이터 세트 만료 일정](./ui/dataset-expiration.md)
    * [(Beta) 레코드 삭제](./ui/record-delete.md)
@@ -25,6 +25,6 @@ ht-degree: 64%
    * [개요](./api/overview.md)
    * [데이터 세트 만료](./api/dataset-expiration.md)
    * [레코드 삭제](./api/jobs.md)
-   * [(베타) 레코드 삭제](./api/workorder.md)
+   * [(Beta) 레코드 삭제](./api/workorder.md)
    * [할당량](./api/quota.md)
 * [모범 사례](./best-practices.md)

@@ -10,11 +10,11 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL 거래] 데이터 유형
+# [!UICONTROL 트랜잭션] 데이터 형식
 
-[!UICONTROL 거래] 는 화폐 거래의 세부 사항을 설명하는 표준 경험 데이터 모델(XDM) 데이터 유형입니다.
+[!UICONTROL Transaction]은(는) 통화 거래의 세부 정보를 설명하는 표준 경험 데이터 모델(XDM) 데이터 형식입니다.
 
-![거래 구조](../images/data-types/transaction.png)
+![트랜잭션 구조](../images/data-types/transaction.png)
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

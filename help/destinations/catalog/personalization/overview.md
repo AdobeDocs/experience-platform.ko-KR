@@ -1,20 +1,20 @@
 ---
-keywords: 개인화;개인화
-title: 개인화 대상 개요
-description: 개인화 플랫폼은 개별 행동에서 데이터와 통찰력을 수집합니다. 이러한 플랫폼은 마케터가 익명 데이터를 탐색하고, 이전 활동을 기반으로 또는 유사한 습관을 가진 대상의 일부로 잠재 고객에게 오퍼 또는 광고를 제공하는 데 도움이 될 수 있습니다.
+keywords: 개인화;Personalization
+title: Personalization 대상 개요
+description: Personalization 플랫폼은 개별 행동에서 데이터와 통찰력을 수집합니다. 이러한 플랫폼은 마케터가 익명 데이터를 탐색하고, 이전 활동을 기반으로 또는 유사한 습관을 가진 대상의 일부로 잠재 고객에게 오퍼 또는 광고를 제공하는 데 도움이 될 수 있습니다.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 14%
+source-wordcount: '150'
+ht-degree: 9%
 
 ---
 
-# 개인화 대상 개요 {#personalization-destinations}
+# Personalization 대상 개요 {#personalization-destinations}
 
 ## 개요 {#overview}
 
-개인화 플랫폼은 개별 행동에서 데이터와 통찰력을 수집합니다. 이러한 플랫폼은 마케터가 익명 데이터를 탐색하고, 이전 활동을 기반으로 또는 유사한 습관을 가진 대상의 일부로 잠재 고객에게 오퍼 또는 광고를 제공하는 데 도움이 될 수 있습니다.
+Personalization 플랫폼은 개별 행동에서 데이터와 통찰력을 수집합니다. 이러한 플랫폼은 마케터가 익명 데이터를 탐색하고, 이전 활동을 기반으로 또는 유사한 습관을 가진 대상의 일부로 잠재 고객에게 오퍼 또는 광고를 제공하는 데 도움이 될 수 있습니다.
 
 ## 지원되는 개인화 대상 {#supported-destinations}
 
@@ -37,4 +37,4 @@ ht-degree: 14%
 * [Experience Cloud ID 서비스 확장](adobe-ecid.md)
 * [Gainsight 확장](gainsight.md)
 * [킥파이어 확장](kickfire.md)
-* [Marketo 웹 개인화 확장](marketo-web-personalization.md)
+* [Marketo 웹 Personalization 확장](marketo-web-personalization.md)

@@ -6,7 +6,7 @@ description: 컨텐츠 태그 지정 API에서 OCR(텍스트 현재 상태/광�
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 source-git-commit: 82722ddf7ff543361177b555fffea730a7879886
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '693'
 ht-degree: 3%
 
 ---
@@ -74,7 +74,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **응답**
 
-성공한 응답은 다음 위치에서 감지된 텍스트를 반환합니다. `tags` 요청에서 전달된 각 이미지에 대한 목록입니다. 특정 이미지에 텍스트가 없다면, `is_text_present` 0이고 `tags` 은(는) 빈 목록입니다.
+성공한 응답은 요청에서 전달된 각 이미지에 대해 `tags` 목록에서 검색된 텍스트를 반환합니다. 특정 이미지에 텍스트가 없으면 `is_text_present`은(는) 0이고 `tags`은(는) 빈 목록입니다.
 
 [result0, result1, ...]: 각 입력 문서에 대한 응답 목록입니다. 각 결과는 키가 있는 dict입니다.
 
@@ -195,7 +195,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 }
 ```
 
-| 속성 | 설명 | 필수입니다 |
+| 속성 | 설명 | 필수 |
 | --- | --- | --- |
 | `documents` | 목록의 각 항목이 하나의 이미지를 나타내는 JSON 요소 목록입니다. 이 목록의 일부로 전달된 모든 매개 변수는 해당 목록 요소에 대해 목록 외부에 지정된 전역 매개 변수를 재정의합니다. | 예 |
 | `sensei:multipart_field_name` | 입력 파일 경로를 읽을 field_name입니다. | 예 |
@@ -207,7 +207,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `min_probability` | 인식된 단어의 최소 확률은 얼마인가? 이미지에서 추출되고 min_probability보다 더 큰 확률을 갖는 단어만 서비스에서 반환됩니다. 기본값은 0.2로 설정되어 있습니다. | 아니요 |
 | `min_relevance` | 인식된 단어의 최소 연관성은 무엇입니까? 이미지에서 추출되고 min_relevance보다 더 큰 관련성을 갖는 단어만 서비스에 의해 반환됩니다. 기본값은 0.01로 설정되어 있습니다. 관련성은 전체 이미지와 비교하여 추출된 텍스트의 테두리 상자 영역의 분율로 계산됩니다. 0.01은 이미지의 최소 1%를 차지하는 텍스트로 변환됩니다. | 아니요 |
 
-| 이름 | 데이터 형식 | 필수 여부 | 기본값 | 값 | 설명 |
+| 이름 | 데이터 유형 | 필수 여부 | 기본 | 값 | 설명 |
 | -----| --------- | -------- | ------- | ------ | ----------- |
 | `repo:path` | 문자열 | - | - | - | 텍스트를 추출해야 하는 이미지의 사전 서명된 URL. |
 | `sensei:repoType` | 문자열 | - | - | HTTPS | 이미지가 저장되는 저장소의 유형입니다. |

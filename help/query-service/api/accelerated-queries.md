@@ -12,19 +12,19 @@ ht-degree: 1%
 
 # 가속화된 쿼리 끝점
 
-Data Distiller SKU의 일부로서 [쿼리 서비스 API](https://developer.adobe.com/experience-platform-apis/references/query-service/) 상태 비저장 쿼리를 가속화된 저장소에 만들 수 있습니다. 반환된 결과는 집계된 데이터를 기반으로 합니다. 결과의 지연 시간이 줄어 보다 대화식 정보 교환이 가능합니다. 가속화된 쿼리 API를 사용하여 성능을 향상할 수도 있습니다 [사용자 정의 대시보드](../../dashboards/user-defined-dashboards.md).
+Data Distiller SKU의 일부로 [쿼리 서비스 API](https://developer.adobe.com/experience-platform-apis/references/query-service/)를 사용하면 상태 비저장 쿼리를 가속 스토어에 만들 수 있습니다. 반환된 결과는 집계된 데이터를 기반으로 합니다. 결과의 지연 시간이 줄어 보다 대화식 정보 교환이 가능합니다. 가속화된 쿼리 API는 [사용자 정의 대시보드](../../dashboards/user-defined-dashboards.md)를 제공하는 데에도 사용됩니다.
 
-이 안내서를 계속하기 전에 다음을 읽고 이해했는지 확인하십시오. [쿼리 서비스 API 안내서](./getting-started.md) 쿼리 서비스 API를 성공적으로 사용하십시오.
+이 안내서를 계속하기 전에 쿼리 서비스 API를 성공적으로 사용하려면 [쿼리 서비스 API 안내서](./getting-started.md)를 읽고 이해했는지 확인하십시오.
 
 ## 시작하기
 
-Data Distiller SKU는 쿼리 가속 스토어를 사용해야 합니다. 다음을 참조하십시오. [포장](../packaging.md) 및 [보호 기능](../guardrails.md#query-accelerated-store), 및 [라이선스](../data-distiller/license-usage.md) Data Distiller SKU와 관련된 설명서입니다. Data Distiller SKU가 없는 경우 Adobe 고객 서비스 담당자에게 자세한 내용을 문의하십시오.
+Data Distiller SKU는 쿼리 가속 스토어를 사용해야 합니다. Data Distiller SKU와 관련된 [패키징](../packaging.md) 및 [보호 기능](../guardrails.md#query-accelerated-store), [라이선스](../data-distiller/license-usage.md) 설명서를 참조하십시오. Data Distiller SKU가 없는 경우 Adobe 고객 서비스 담당자에게 자세한 내용을 문의하십시오.
 
 다음 섹션에서는 쿼리 서비스 API를 통해 상태 비저장 방식으로 쿼리 가속 저장소에 액세스하는 데 필요한 API 호출에 대해 자세히 설명합니다. 각 호출에는 일반 API 형식, 필요한 헤더를 보여주는 샘플 요청 및 샘플 응답이 포함됩니다.
 
 ## 가속화된 쿼리 실행 {#run-accelerated-query}
 
-에 POST 요청 `/accelerated-queries` 가속 쿼리를 실행하기 위한 끝점입니다. 쿼리가 요청 페이로드에 직접 포함되거나 템플릿 ID로 참조됩니다.
+가속화된 쿼리를 실행하려면 `/accelerated-queries` 끝점에 POST을 요청하세요. 쿼리가 요청 페이로드에 직접 포함되거나 템플릿 ID로 참조됩니다.
 
 **API 형식**
 
@@ -36,7 +36,7 @@ POST /accelerated-queries
 
 >[!IMPORTANT]
 >
->에 대한 요청 `/accelerated-queries` 끝점에는 SQL 문이나 템플릿 ID가 필요하지만 둘 다 필요하지는 않습니다. 요청에서 두 을(를) 모두 제출하면 오류가 발생합니다.
+>`/accelerated-queries` 끝점에 대한 요청에는 SQL 문이나 템플릿 ID가 필요하지만 둘 다 필요하지는 않습니다. 요청에서 두 을(를) 모두 제출하면 오류가 발생합니다.
 
 다음 요청은 요청 본문의 SQL 쿼리를 가속 저장소로 제출합니다.
 
@@ -80,9 +80,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
 
 | 속성 | 설명 |
 |---|---|
-| `dbName` | 가속화된 쿼리를 만드는 데이터베이스의 이름입니다. 값 `dbName` 다음 형식을 사용해야 함: `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. 제공된 데이터베이스가 가속화된 저장소 내에 있어야 합니다. 그렇지 않으면 요청에서 오류가 발생합니다. 또한 다음을 확인해야 합니다 `x-sandbox-name` 의 헤더 및 샌드박스 이름 `dbName` 동일한 샌드박스를 참조하십시오. |
+| `dbName` | 가속화된 쿼리를 만드는 데이터베이스의 이름입니다. `dbName`의 값은 `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}` 형식을 사용해야 합니다. 제공된 데이터베이스가 가속화된 저장소 내에 있어야 합니다. 그렇지 않으면 요청에서 오류가 발생합니다. 또한 `dbName`의 `x-sandbox-name` 헤더와 샌드박스 이름이 동일한 샌드박스를 참조하는지 확인해야 합니다. |
 | `sql` | SQL 문 문자열입니다. 허용되는 최대 크기는 1000000자입니다. |
-| `templateId` | 에 POST 요청을 할 때 템플릿으로 생성되어 저장되는 쿼리의 고유 식별자 `/templates` 엔드포인트. |
+| `templateId` | `/templates` 끝점에 대한 POST 요청이 수행될 때 만들어져 템플릿으로 저장되는 쿼리의 고유 식별자입니다. |
 | `name` | 가속화된 쿼리에 대한 사람 친화적인 수사적 이름(선택 사항)입니다. |
 | `description` | 다른 사용자가 쿼리의 목적을 이해할 수 있도록 쿼리의 의도에 대한 선택적 주석입니다. 허용되는 최대 크기는 1000바이트입니다. |
 
@@ -209,6 +209,6 @@ curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
 | `resultsMeta` | 이 개체에는 결과에 반환되는 각 열의 메타데이터가 포함되어 있으므로 사용자가 각 열의 이름과 유형을 알 수 있습니다. |
 | `resultsMeta._adhoc` | 단일 데이터 세트에서만 사용할 수 있도록 네임스페이스가 지정된 필드가 있는 임시 경험 데이터 모델(XDM) 스키마. |
 | `resultsMeta._adhoc.type` | Ad Hoc 스키마의 데이터 유형입니다. |
-| `resultsMeta._adhoc.meta:xdmType` | XDM 필드 유형에 대해 시스템에서 생성한 값입니다. 사용 가능한 유형에 대한 자세한 내용은 [사용 가능한 XDM 유형](../../xdm/tutorials/custom-fields-api.md). |
+| `resultsMeta._adhoc.meta:xdmType` | XDM 필드 유형에 대해 시스템에서 생성한 값입니다. 사용 가능한 형식에 대한 자세한 내용은 [사용 가능한 XDM 형식](../../xdm/tutorials/custom-fields-api.md)에 대한 설명서를 참조하십시오. |
 | `resultsMeta._adhoc.properties` | 쿼리된 데이터 세트의 열 이름입니다. |
 | `resultsMeta._adhoc.results` | 쿼리된 데이터 세트의 행 이름입니다. 반환된 각 열이 반영됩니다. |

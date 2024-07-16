@@ -7,7 +7,7 @@ badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/leg
 exl-id: d3afbabb-005d-4537-831a-857c88043759
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '859'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ B2B 마케터는 마케팅 단계의 맨 위에서 여러 가지 문제에 직�
 
 >[!NOTE]
 >
->[!DNL Marketo] 데이터 소스는 개인 프로필 수준에서 전환 이벤트를 제공할 수 있는 유일한 데이터 소스이므로 현재 필요합니다.
+>[!DNL Marketo] 데이터 원본은 개인 프로필 수준에서 전환 이벤트를 제공할 수 있는 유일한 데이터 원본이므로 현재 필요합니다.
 
 예측 리드 및 계정 점수는 트리 기반(랜덤 포레스트/그래디언트 부스팅) 머신 러닝 방법을 사용하여 예측 리드 점수화 모델을 구축합니다.
 
@@ -37,13 +37,13 @@ B2B 마케터는 마케팅 단계의 맨 위에서 여러 가지 문제에 직�
 | 목표 유형 | 필드 |
 | --- | --- |
 | `leadOperation.convertLead` | <ul><li>`leadOperation.convertLead.convertedStatus`</li><li>`leadOperation.convertLead.assignTo`</li></ul> |
-| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>예: `opportunityEvent.dataValueChanges.attributeName` 다음과 같음 `Stage` 및 `opportunityEvent.dataValueChanges.newValue` 다음과 같음 `Contract`</ul> |
+| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>예: `opportunityEvent.dataValueChanges.attributeName`은(는) `Stage`이고 `opportunityEvent.dataValueChanges.newValue`은(는) `Contract`입니다.</ul> |
 
 이 알고리즘에서는 다음 속성과 입력 데이터를 고려합니다.
 
 * 개인 프로필
 
-| XDM 필드 | 필수/선택적 |
+| XDM 필드 | 필수/선택 사항 |
 | --- | --- |
 | `personComponents.sourceAccountKey.sourceKey` | 필수 여부 |
 | `workAddress.country` | 선택 사항입니다 |
@@ -52,21 +52,21 @@ B2B 마케터는 마케팅 단계의 맨 위에서 여러 가지 문제에 직�
 
 >[!NOTE]
 > 
->알고리즘에서는 `sourceAccountKey.sourceKey` person:personComponents 필드 그룹의 필드.
+>이 알고리즘은 Person:personComponents 필드 그룹의 `sourceAccountKey.sourceKey` 필드만 검사합니다.
 
 * 계정 프로필
 
-| XDM 필드 | 필수/선택적 |
+| XDM 필드 | 필수/선택 사항 |
 | --- | --- |
 | `accountKey.sourceKey` | 필수 여부 |
 | `extSourceSystemAudit.createdDate` | 필수 여부 |
 | `accountOrganization.industry` | 선택 사항입니다 |
 | `accountOrganization.numberOfEmployees` | 선택 사항입니다 |
-| `accountOrganization.annualRevenue.amount` | 옵션 |
+| `accountOrganization.annualRevenue.amount` | 선택 사항입니다 |
 
 * 경험 이벤트
 
-| XDM 필드 | 필수/선택적 |
+| XDM 필드 | 필수/선택 사항 |
 | --- | --- |
 | `_id` | 필수 여부 |
 | `personKey.sourceKey` | 필수 여부 |
@@ -86,11 +86,11 @@ B2B 마케터는 마케팅 단계의 맨 위에서 여러 가지 문제에 직�
 
 채점 작업은 매일 실행되며 결과는 프로필 속성 및 계정 속성으로 저장되며 세그먼트 정의 및 개인화에 사용할 수 있습니다. 계정 개요 대시보드에서 기본 분석 인사이트를 사용할 수도 있습니다.
 
-자세한 내용은 설명서 를 참조하십시오 [예측 리드 및 계정 점수 관리](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) 서비스.
+[예측 리드 및 계정 점수를 관리](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) 서비스를 관리하는 방법에 대한 자세한 내용은 설명서를 참조하세요.
 
 ## 예측 리드 및 계정 점수 책정 결과 보기 {#how-to-view}
 
-작업 실행 후 결과는 이름 아래에 각 모델의 새 시스템 데이터 세트에 저장됩니다 `LeadsAI.Scores` - ***점수 이름***. 각 점수 필드 그룹은 다음 위치에 있습니다. `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
+작업 실행 후 결과는 이름 `LeadsAI.Scores` - ***점수 이름***&#x200B;의 각 모델에 대한 새 시스템 데이터 집합에 저장됩니다. 각 점수 필드 그룹은 `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`에 있을 수 있습니다.
 
 | 속성 | 설명 |
 | --- | --- |
@@ -102,13 +102,13 @@ B2B 마케터는 마케팅 단계의 맨 위에서 여러 가지 문제에 직�
 
 ### 고객 프로필 점수 보기
 
-개인 프로필에 대한 예측 점수를 보려면 다음을 선택합니다. **[!UICONTROL 프로필]** 왼쪽 패널의 고객 섹션에 id 네임스페이스와 id 값을 입력합니다. 완료되면 다음을 선택합니다. **[!UICONTROL 보기]**.
+개인 프로필에 대한 예측 점수를 보려면 왼쪽 패널의 고객 섹션에서 **[!UICONTROL 프로필]**&#x200B;을 선택한 다음 ID 네임스페이스와 ID 값을 입력하십시오. 완료되면 **[!UICONTROL 보기]**&#x200B;를 선택하세요.
 
 그런 다음 목록에서 프로필을 선택합니다.
 
 ![고객 프로필](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-다음 **[!UICONTROL 세부 사항]** 이제 페이지에 예측 점수가 포함됩니다. 예측 점수 옆에 있는 차트 아이콘을 클릭합니다.
+이제 **[!UICONTROL 세부 정보]** 페이지에 예측 점수가 포함됩니다. 예측 점수 옆에 있는 차트 아이콘을 클릭합니다.
 
 ![고객 프로필 예측 점수](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 
@@ -124,4 +124,4 @@ B2B 마케터는 마케팅 단계의 맨 위에서 여러 가지 문제에 직�
 * 다음 채점 작업(날짜)
 * 다음 교육 작업(일자)
 
-자세한 내용은 [예측 리드 및 계정 점수에 대한 작업 모니터링](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+자세한 내용은 [예측 리드 및 계정 점수에 대한 작업 모니터링](/help/dataflows/ui/b2b/monitor-profile-enrichment.md)에 대한 설명서를 참조하십시오.
