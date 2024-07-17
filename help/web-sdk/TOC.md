@@ -6,9 +6,9 @@ breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
 role: Developer
-source-git-commit: 14f9c2240d1a650cc267bd997ea35d7923f71b2b
+source-git-commit: bb2c0b5483bf0b50e98e21bef23d1667660d1981
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '226'
 ht-degree: 22%
 
 ---
@@ -26,6 +26,7 @@ ht-degree: 22%
 * 명령 {#commands}
    * {#configure} 구성
       * [개요](commands/configure/overview.md)
+      * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
       * [클릭콜렉션활성화됨](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)
       * [컨텍스트](commands/configure/context.md)
