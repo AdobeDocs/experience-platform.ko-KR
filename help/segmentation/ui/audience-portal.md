@@ -1,9 +1,9 @@
 ---
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
-source-git-commit: c724baba6972e1a033c18b63ab824149567d20fb
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '3673'
+source-wordcount: '3693'
 ht-degree: 3%
 
 ---
@@ -258,6 +258,10 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 ### 대상자 합계 {#audience-total}
 
 **[!UICONTROL 대상자 합계]** 섹션에는 대상자에 적합한 총 프로필 수가 표시됩니다.
+
+>[!NOTE]
+>
+>내보내기 작업이 완료된 후 대상 총 개수를 업데이트하는 데 최대 30분이 걸릴 수 있습니다.
 
 예상 값은 해당 날짜의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다. 프로필 스토어에 엔티티가 100만 개 미만인 경우 전체 데이터 세트가 사용됩니다. 엔티티가 1~2천만 개인 경우 100만 엔티티가 사용되며, 엔티티가 2,000만 개를 초과하는 경우 전체 엔티티의 5%가 사용됩니다. 예상 값 생성에 대한 자세한 내용은 대상 만들기 자습서의 [예상 값 생성 섹션](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)에서 확인할 수 있습니다.
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '1913'
+source-wordcount: '1951'
 ht-degree: 0%
 
 ---
@@ -268,14 +268,18 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## 대상자 게시
 
-대상을 작성한 후 **[!UICONTROL Publish]**&#x200B;을(를) 선택하여 저장하고 게시할 수 있습니다.
+>[!IMPORTANT]
+>
+>대상 구성을 게시할 때 Real-Time CDP 대상 또는 Adobe Journey Optimizer 채널과 같은 다운스트림 서비스에서 사용하기 위해 대상 구성을 평가하고 활성화하는 데 최대 48시간이 걸릴 수 있습니다.
 
-![Publish 단추가 강조 표시되어 대상을 저장하고 게시하는 방법을 보여 줍니다.](../images/ui/audience-composition/publish.png)
+컴포지션을 만든 후 **[!UICONTROL Publish]**&#x200B;을(를) 선택하여 저장하고 게시할 수 있습니다.
+
+![Publish 단추가 강조 표시되어 컴포지션을 저장하고 게시하는 방법을 보여 줍니다.](../images/ui/audience-composition/publish.png)
 
 대상자를 만드는 동안 오류가 발생하면 문제를 해결하는 방법을 알려주는 경고가 표시됩니다.
 
-![Publish 단추가 강조 표시되어 대상을 저장하고 게시하는 방법을 보여 줍니다.](../images/ui/audience-composition/audience-alert.png)
+![Publish 단추가 강조 표시되어 컴포지션을 저장하고 게시하는 방법을 보여 줍니다.](../images/ui/audience-composition/audience-alert.png)
 
 ## 다음 단계
 
-대상 컴포지션은 다양한 블록 유형에서 대상을 만들 수 있는 풍부한 워크플로를 제공합니다. 세분화 서비스 UI의 다른 부분에 대한 자세한 내용은 [세분화 서비스 사용 안내서](./overview.md)를 참조하세요.
+대상 컴포지션은 다양한 블록 유형에서 컴포지션을 만들 수 있는 풍부한 워크플로를 제공합니다. 세분화 서비스 UI의 다른 부분에 대한 자세한 내용은 [세분화 서비스 사용 안내서](./overview.md)를 참조하세요.
