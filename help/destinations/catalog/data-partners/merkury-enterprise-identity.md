@@ -1,7 +1,7 @@
 ---
 title: Merkury Enterprise ID 대상
 description: Adobe Experience Platform UI를 사용하여 Merkury Enterprise ID 대상 연결을 만드는 방법을 알아봅니다.
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 2%
@@ -75,10 +75,11 @@ ht-degree: 2%
 ## 내보내기 유형 및 빈도
 
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
-|**대상**|**지원됨**|**설명 원본**|\
-|—|—|\
-✓ |세그먼테이션 서비스|Experience Platform [[세그먼테이션 서비스]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home)을(를) 통해 생성된 대상자|
-사용자 지정 업로드|X|대상 [[가져옴]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)을(를) CSV 파일에서 Experience Platform으로 가져옵니다.
+
+| **대상자** | **지원됨** | **설명 원본** |
+|---|---|---|      
+| Segmentation Service | ✓ 덧신 | Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home)을(를) 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | X | 대상 [[가져옴]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)을(를) CSV 파일에서 Experience Platform으로 가져옵니다. |
 
 {style="table-layout:auto"}
 

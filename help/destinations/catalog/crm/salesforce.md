@@ -3,7 +3,7 @@ keywords: crm;CRM;CRM 대상;salesforce crm;salesforce crm 대상
 title: Salesforce CRM 연결
 description: Salesforce CRM 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce CRM 내에서 활성화할 수 있습니다.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: d9ff92138a5de774f011dd9b2e5f1cdc3371bacf
 workflow-type: tm+mt
 source-wordcount: '2821'
 ht-degree: 1%
@@ -134,7 +134,7 @@ Platform에서 Salesforce 계정으로 데이터를 내보내려면 [!DNL Salesf
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
----------|----------|---------|
+|---------|----------|---------|
 | 내보내기 유형 | **[!UICONTROL 프로필 기반]** | <ul><li>필드 매핑에 따라 원하는 스키마 필드 *(예: 이메일 주소, 전화 번호, 성)*&#x200B;과(와) 함께 세그먼트의 모든 멤버를 내보냅니다.</li><li> [!DNL Salesforce CRM]의 각 대상 상태는 [대상 예약](#schedule-segment-export-example) 단계 동안 제공된 **[!UICONTROL 매핑 ID]** 값을 기반으로 플랫폼에서 해당 대상 상태로 업데이트됩니다.</li></ul> |
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | <ul><li>스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요.</li></ul> |
 
@@ -153,13 +153,14 @@ Platform에서 Salesforce 계정으로 데이터를 내보내려면 [!DNL Salesf
 ### 대상으로 인증 {#authenticate}
 
 대상에 인증하려면 아래의 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오. 자세한 내용은 [수집 [!DNL Salesforce CRM] 자격 증명](#gather-credentials) 섹션을 참조하십시오.
+
 | 자격 증명 | 설명 |
-| — | — |
-| **[!UICONTROL 사용자 이름]** | [!DNL Salesforce] 계정 사용자 이름. |
-| **[!UICONTROL 암호]** | [!DNL Salesforce] 보안 토큰이 추가된 [!DNL Salesforce] 계정 암호로 구성된 연결된 문자열.<br>연결된 값은 `{PASSWORD}{TOKEN}` 형식입니다.<br> 참고: 중괄호나 공백을 사용하지 마십시오.<br>예를 들어 [!DNL Salesforce] 암호가 `MyPa$$w0rd123`이고 [!DNL Salesforce] 보안 토큰이 `TOKEN12345....0000`인 경우 **[!UICONTROL 암호]** 필드에서 사용할 연결된 값은 `MyPa$$w0rd123TOKEN12345....0000`입니다. |
+| --- | --- |
+| **[!UICONTROL 사용자 이름]** | [!DNL Salesforce] 계정 사용자 이름입니다. |
+| **[!UICONTROL 암호]** | [!DNL Salesforce] 보안 토큰과 함께 추가된 [!DNL Salesforce] 계정 암호로 구성된 연결된 문자열.<br>연결된 값은 `{PASSWORD}{TOKEN}` 형식입니다.<br> 참고: 중괄호나 공백을 사용하지 마십시오.<br>예를 들어 [!DNL Salesforce] 암호가 `MyPa$$w0rd123`이고 [!DNL Salesforce] 보안 토큰이 `TOKEN12345....0000`인 경우 **[!UICONTROL 암호]** 필드에서 사용할 연결된 값은 `MyPa$$w0rd123TOKEN12345....0000`입니다. |
 | **[!UICONTROL 사용자 지정 도메인]** | [!DNL Salesforce] 도메인 접두사입니다. <br>예를 들어 도메인이 *`d5i000000isb4eak-dev-ed`.my.salesforce.com*&#x200B;이면 `d5i000000isb4eak-dev-ed`을(를) 값으로 제공해야 합니다. |
-| **[!UICONTROL 클라이언트 ID]** | [!DNL Salesforce]에서 앱 `Consumer Key`을(를) 연결했습니다. |
-| **[!UICONTROL 클라이언트 암호]** | [!DNL Salesforce]에서 앱 `Consumer Secret`을(를) 연결했습니다. |
+| **[!UICONTROL 클라이언트 ID]** | [!DNL Salesforce]이(가) 앱 `Consumer Key`에 연결했습니다. |
+| **[!UICONTROL 클라이언트 암호]** | [!DNL Salesforce]이(가) 앱 `Consumer Secret`에 연결했습니다. |
 
 인증 방법을 보여 주는 ![플랫폼 UI 스크린샷입니다.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
@@ -212,12 +213,13 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
    * 세그먼트 내에서 *연락처*&#x200B;와 함께 작업하는 경우 [연락처](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm)에 대한 Salesforce의 개체 참조 를 참조하여 업데이트할 필드에 대한 매핑을 정의하십시오.
    * 위의 링크에서 필드 설명에 언급된 단어 *Required*&#x200B;을(를) 검색하여 필수 필드를 식별할 수 있습니다.
    * 내보내거나 업데이트할 필드에 따라 XDM 프로필 스키마와 [!DNL (API) Salesforce CRM] 사이에 매핑을 추가합니다.
-|Source 필드|대상 필드| 메모 |
-| — | — | — |
-|`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-|`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 연락처의 성(최대 80자). |\
-     |`xdm: person.name.firstName`|`Attribute: FirstName`| 연락처의 이름은 최대 40자입니다. |
-|`xdm: personalEmail.address`|`Attribute: Email`| 연락처의 이메일 주소입니다. |
+
+     | 소스 필드 | 대상 필드 | 참고 |
+     | --- | --- | --- |
+     | `IdentityMap: crmID` | `Identity: SalesforceId` | `Mandatory` |
+     | `xdm: person.name.lastName` | `Attribute: LastName` | `Mandatory` 질문에 답합니다. 연락처의 성(최대 80자). |
+     | `xdm: person.name.firstName` | `Attribute: FirstName` | 연락처의 이름은 최대 40자입니다. |
+     | `xdm: personalEmail.address` | `Attribute: Email` | 연락처의 이메일 주소입니다. |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
      ![Target 매핑을 보여 주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
@@ -227,12 +229,13 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
    * 세그먼트 내에서 *리드*&#x200B;를 사용하여 작업하는 경우 [리드](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm)에 대한 Salesforce의 개체 참조를 참조하여 업데이트할 필드에 대한 매핑을 정의하십시오.
    * 위의 링크에서 필드 설명에 언급된 단어 *Required*&#x200B;을(를) 검색하여 필수 필드를 식별할 수 있습니다.
    * 내보내거나 업데이트할 필드에 따라 XDM 프로필 스키마와 [!DNL (API) Salesforce CRM] 사이에 매핑을 추가합니다.
-|Source 필드|대상 필드| 메모 |
-| — | — | — |
-|`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-|`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 리드 최대 80자의 성. |\
-     |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. 리드의 회사. |
-|`xdm: personalEmail.address`|`Attribute: Email`| 잠재 고객의 이메일 주소입니다. |
+
+     | 소스 필드 | 대상 필드 | 참고 |
+     | --- | --- | --- |
+     | `IdentityMap: crmID` | `Identity: SalesforceId` | `Mandatory` |
+     | `xdm: person.name.lastName` | `Attribute: LastName` | `Mandatory` 질문에 답합니다. 리드 최대 80자의 성. |
+     | `xdm: b2b.companyName` | `Attribute: Company` | `Mandatory` 질문에 답합니다. 리드의 회사. |
+     | `xdm: personalEmail.address` | `Attribute: Email` | 잠재 고객의 이메일 주소입니다. |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
      ![Target 매핑을 보여 주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/salesforce/mappings-leads.png)
@@ -255,9 +258,10 @@ XDM 필드를 [!DNL (API) Salesforce CRM] 대상 필드에 올바르게 매핑�
 
 위에 표시된 대로 [!DNL Salesforce] **[!UICONTROL 필드 이름]**&#x200B;은(는) [!DNL Salesforce CRM] **[!UICONTROL 매핑 ID]** 내에 지정된 값과 정확히 일치합니다.
 
-사용 사례에 따라 활성화된 모든 대상을 동일한 [!DNL Salesforce] 사용자 정의 필드 또는 [!DNL Salesforce CRM]의 다른 **[!UICONTROL 필드 이름]**에 매핑할 수 있습니다. 위에 표시된 이미지를 기반으로 한 일반적인 예는 다음과 같을 수 있습니다.
+사용 사례에 따라 활성화된 모든 대상을 동일한 [!DNL Salesforce] 사용자 정의 필드 또는 [!DNL Salesforce CRM]의 다른 **[!UICONTROL 필드 이름]**&#x200B;에 매핑할 수 있습니다. 위에 표시된 이미지를 기반으로 한 일반적인 예는 다음과 같을 수 있습니다.
+
 | [!DNL Salesforce CRM] 세그먼트 이름 | [!DNL Salesforce] **[!UICONTROL 필드 이름]** | [!DNL Salesforce CRM] **[!UICONTROL 매핑 ID]** |
-| — | — | — |
+| --- | --- | --- |
 | crm_1_seg | `crm_1_seg` | `crm_1_seg` |
 | crm_2_seg | `crm_2_seg` | `crm_2_seg` |
 
