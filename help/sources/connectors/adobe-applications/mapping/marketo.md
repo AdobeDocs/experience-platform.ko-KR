@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Marketo Engage Source에 대한 필드 매핑
 description: 아래 표에는 Marketo 데이터 세트의 필드와 해당 XDM 필드 간의 매핑이 포함되어 있습니다.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
+source-git-commit: 3084ed50f3665c7b33863f3a1aab4236c182c503
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 2%
@@ -280,7 +280,7 @@ XDM 클래스에 대한 자세한 내용은 [XDM 비즈니스 계정 개요](../
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | `"${MUNCHKIN_ID}"`의 값이 자동으로 대체됩니다. |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
 | `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | 기본 ID. `"${MUNCHKIN_ID}"`의 값이 자동으로 대체됩니다. |
-| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey`은(는) 보조 ID입니다. `{CRM_ORG_ID}` 및 `{CRM_TYPE}`의 값이 자동으로 바뀝니다. |
+| `iif(externalSourceId != null && externalSourceId != "", to_object("sourceType", externalSourceType, "sourceInstanceID", externalSourceInstanceId, "sourceID", externalSourceId, "sourceKey", externalSourceKey), iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null))` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey`은(는) 보조 ID입니다. `{CRM_ORG_ID}` 및 `{CRM_TYPE}`의 값이 자동으로 바뀝니다. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
