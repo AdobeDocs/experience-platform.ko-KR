@@ -3,9 +3,9 @@ title: Google 클라우드 스토리지 연결
 description: Google Cloud Storage에 연결하고 대상을 활성화하거나 데이터 세트를 내보내는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 679c1723965271b6a9c1b5b873cf8ac8de67458d
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1228'
 ht-degree: 2%
 
 ---
@@ -114,6 +114,22 @@ ht-degree: 2%
 경고를 활성화하여 대상에 대한 데이터 흐름 상태에 대한 알림을 받을 수 있습니다. 목록에서 경고를 선택하여 데이터 흐름 상태에 대한 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 대상 경고 구독](../../ui/alerts.md)에 대한 안내서를 참조하십시오.
 
 대상 연결에 대한 세부 정보를 모두 제공했으면 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
+
+### 필요한 [!DNL Google Cloud Storage] 권한 {#required-google-cloud-storage-permission}
+
+데이터를 [!DNL Google Cloud Storage] 저장소 위치에 연결하고 내보내려면 버킷에 대해 다음 [!DNL Google Cloud Storage] 권한이 필요합니다.
+
+*`orgpolicy.policy.get`
+*`resourcemanager.projects.get`
+*`resourcemanager.projects.list`
+*`storage.managedFolders.create`
+*`storage.multipartUploads.abort`
+*`storage.multipartUploads.create`
+*`storage.multipartUploads.listParts`
+*`storage.objects.create`
+*`storage.objects.list`
+
+[!DNL Google Cloud Storage]의 [액세스 제어 및 권한](https://cloud.google.com/storage/docs/access-control/iam-permissions)에 대해 자세히 알아보세요.
 
 ## 이 대상으로 대상자 활성화 {#activate}
 
