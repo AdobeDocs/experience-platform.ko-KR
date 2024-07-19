@@ -3,9 +3,9 @@ title: 데이터 세트 만료 API 끝점
 description: 데이터 위생 API의 /ttl 끝점을 사용하면 Adobe Experience Platform에서 데이터 세트 만료를 프로그래밍 방식으로 예약할 수 있습니다.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
+source-git-commit: 911089ec641d9fbb436807b04dd38e00fd47eecf
 workflow-type: tm+mt
-source-wordcount: '2217'
+source-wordcount: '1964'
 ht-degree: 1%
 
 ---
@@ -388,88 +388,6 @@ curl -X DELETE \
 
 성공한 응답이 HTTP 상태 204(콘텐츠 없음)를 반환하고 만료의 `status` 특성이 `cancelled`(으)로 설정되어 있습니다.
 
-## 데이터 세트의 만료 상태 내역 검색 {#retrieve-expiration-history}
-
-특정 데이터 세트의 만료 상태 기록을 조회하려면 조회 요청에서 `{DATASET_ID}` 및 `include=history` 쿼리 매개 변수를 사용하십시오. 결과에는 데이터 세트 만료, 적용된 모든 업데이트 및 해당 취소 또는 실행(해당되는 경우)에 대한 정보가 포함됩니다. `{DATASET_EXPIRATION_ID}`을(를) 사용하여 데이터 집합 만료 상태 기록을 검색할 수도 있습니다.
-
-**API 형식**
-
-```http
-GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{DATASET_EXPIRATION_ID}?include=history
-```
-
-| 매개변수 | 설명 |
-| --- | --- |
-| `{DATASET_ID}` | 만료 내역을 조회할 데이터 세트의 ID입니다. |
-| `{DATASET_EXPIRATION_ID}` | 데이터 세트 만료 ID입니다. 참고: 응답에서 이 이름을 `ttlId`이라고 합니다. |
-
-{style="table-layout:auto"}
-
-**요청**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14?include=history \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**응답**
-
-성공한 응답은 기록된 각 업데이트에 대한 `status`, `expiry`, `updatedAt` 및 `updatedBy` 특성에 대한 세부 정보를 제공하는 `history` 배열로 데이터 집합 만료의 세부 정보를 반환합니다.
-
-```json
-{
-  "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
-  "datasetId": "62759f2ede9e601b63a2ee14",
-  "datasetName": "Example Dataset",
-  "sandboxName": "prod",
-  "displayName": "Expiration Request 123",
-  "description": "Expiration Request 123 Description",
-  "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
-  "status": "cancelled",
-  "expiry": "2022-05-09T23:47:30.071186Z",
-  "updatedAt": "2022-05-09T23:47:30.071186Z",
-  "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-  "history": [
-    {
-      "status": "created",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:38:40.393115Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    },
-    {
-      "status": "updated",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    },
-    {
-      "status": "cancelled",
-      "expiry": "2022-05-09T23:47:30.071186Z",
-      "updatedAt": "2022-05-09T23:47:30.071186Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    }
-  ]
-}
-```
-
-| 속성 | 설명 |
-| --- | --- |
-| `ttlId` | 데이터 세트 만료 ID입니다. |
-| `datasetId` | 이 만료가 적용되는 데이터 세트의 ID입니다. |
-| `datasetName` | 이 만료가 적용되는 데이터 세트의 표시 이름입니다. |
-| `sandboxName` | 대상 데이터 세트가 있는 샌드박스의 이름입니다. |
-| `displayName` | 만료 요청의 표시 이름입니다. |
-| `description` | 만료 요청에 대한 설명. |
-| `imsOrg` | 조직의 ID입니다. |
-| `history` | 만료 업데이트 내역을 개체 배열로 나열합니다. 각 개체에는 업데이트 시 만료에 대한 `status`, `expiry`, `updatedAt` 및 `updatedBy` 특성이 들어 있습니다. |
-
-{style="table-layout:auto"}
-
 ## 부록
 
 ### 수락된 쿼리 매개 변수 {#query-params}
@@ -482,18 +400,14 @@ curl -X GET \
 
 | 매개변수 | 설명 | 예 |
 | --- | --- | --- |
-| `author` | `created_by`이(가) 검색 문자열과 일치하는 만료와 일치합니다. 검색 문자열이 `LIKE` 또는 `NOT LIKE`(으)로 시작하면 나머지는 SQL 검색 패턴으로 처리됩니다. 그렇지 않으면 전체 검색 문자열은 `created_by` 필드의 전체 내용과 정확히 일치해야 하는 리터럴 문자열로 처리됩니다. | `author=LIKE %john%`, `author=John Q. Public` |
-| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | 표시된 간격에서 언제든지 취소된 만료와 일치합니다. 이 설정은 만료가 나중에 다시 열린 경우에도 적용됩니다(동일한 데이터 세트에 대해 새 만료로 설정). | `updatedDate=2022-01-01` |
-| `completedDate` / `completedToDate` / `completedFromDate` | 지정된 간격 동안 완료된 만료와 일치합니다. | `completedToDate=2021-11-11-06:00` |
-| `createdDate` | 지정된 시간에 시작하여 24시간 기간에 생성된 만료와 일치합니다.<br><br>시간이 없는 날짜(예: `2021-12-07`)는 해당 날짜의 시작 날짜/시간을 나타냅니다. 따라서 `createdDate=2021-12-07`은(는) `00:00:00`부터 `23:59:59.999999999`(UTC)까지 2021년 12월 7일에 만들어진 모든 만료를 참조합니다. | `createdDate=2021-12-07` |
-| `createdFromDate` | 표시된 시간 또는 그 이후에 생성된 만료와 일치합니다. | `createdFromDate=2021-12-07T00:00:00Z` |
-| `createdToDate` | 표시된 시간 또는 그 전에 생성된 만료와 일치합니다. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
+| `author` | `author` 쿼리 매개 변수를 사용하여 데이터 세트 만료를 가장 최근에 업데이트한 사람을 찾으십시오. 생성 후 업데이트가 없는 경우 만료의 원래 생성자와 일치합니다. 이 매개 변수는 `created_by` 필드가 검색 문자열에 해당하는 만료와 일치합니다.<br>검색 문자열이 `LIKE` 또는 `NOT LIKE`(으)로 시작하는 경우 나머지는 SQL 검색 패턴으로 처리됩니다. 그렇지 않으면 전체 검색 문자열은 `created_by` 필드의 전체 내용과 정확히 일치해야 하는 리터럴 문자열로 처리됩니다. | `author=LIKE %john%`, `author=John Q. Public` |
 | `datasetId` | 특정 데이터 세트에 적용되는 만료와 일치합니다. | `datasetId=62b3925ff20f8e1b990a7434` |
 | `datasetName` | 데이터 세트 이름에 제공된 검색 문자열이 포함된 만료와 일치합니다. 일치는 대/소문자를 구분하지 않습니다. | `datasetName=Acme` |
 | `description` |   | `description=Handle expiration of Acme information through the end of 2024.` |
 | `displayName` | 표시 이름에 제공된 검색 문자열이 포함된 만료와 일치합니다. 일치는 대/소문자를 구분하지 않습니다. | `displayName=License Expiry` |
 | `executedDate` / `executedFromDate` / `executedToDate` | 정확한 실행 날짜, 실행 종료 날짜 또는 실행 시작 날짜를 기준으로 결과를 필터링합니다. 특정 날짜, 특정 날짜 이전 또는 특정 날짜 이후에 작업 실행과 관련된 데이터 또는 레코드를 검색하는 데 사용됩니다. | `executedDate=2023-02-05T19:34:40.383615Z` |
-| `expiryDate` / `expiryToDate` / `expiryFromDate` | 지정된 간격 동안 실행될 만료일 또는 이미 실행된 만료일과 일치합니다. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
+| `expiryDate` | 지정된 날짜의 24시간 동안 발생한 만료와 일치합니다. | `2024-01-01` |
+| `expiryToDate` / `expiryFromDate` | 지정된 간격 동안 실행될 만료일 또는 이미 실행된 만료일과 일치합니다. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 | `limit` | 반환할 최대 만료 수를 나타내는 1에서 100 사이의 정수입니다. 기본값은 25입니다. | `limit=50` |
 | `orderBy` | `orderBy` 쿼리 매개 변수는 API에서 반환된 결과의 정렬 순서를 지정합니다. 하나 이상의 필드를 기준으로 데이터를 오름차순(ASC) 또는 내림차순(DESC) 순서로 정렬하는 데 사용합니다. ASC, DESC를 각각 지정하려면 + 또는 - 접두사를 사용하십시오. 허용되는 값은 `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`입니다. | `-datasetName` |
 | `orgId` | 조직 ID가 매개 변수의 ID와 일치하는 데이터 세트 만료와 일치합니다. 이 값은 기본적으로 `x-gw-ims-org-id` 헤더의 값으로 설정되며, 요청에서 서비스 토큰을 제공하지 않는 한 무시됩니다. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
@@ -502,7 +416,8 @@ curl -X GET \
 | `search` | 지정된 문자열이 만료 ID와 정확히 일치하거나 다음 필드 중 하나에서 **포함됨**&#x200B;인 만료와 일치합니다.<br><ul><li>작성자</li><li>표시 이름</li><li>설명</li><li>표시 이름</li><li>데이터 세트 이름</li></ul> | `search=TESTING` |
 | `status` | 쉼표로 구분된 상태 목록입니다. 포함된 경우 응답은 현재 상태가 나열된 데이터 세트 만료와 일치합니다. | `status=pending,cancelled` |
 | `ttlId` | 만료 요청을 해당 ID와 일치시킵니다. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
-| `updatedDate` / `updatedToDate` / `updatedFromDate` | `createdDate` / `createdFromDate` / `createdToDate`과(와) 유사하지만, 생성 시간 대신 데이터 세트 만료의 업데이트 시간과 일치합니다.<br><br>만료를 만들거나 취소하거나 실행할 때를 포함하여 모든 편집 시 만료를 업데이트한 것으로 간주합니다. | `updatedDate=2022-01-01` |
+| `updatedDate` | 지정된 날짜의 24시간 창에서 업데이트된 만료와 일치합니다. | `2024-01-01` |
+| `updatedToDate` / `updatedFromDate` | 지정된 시간에 시작하여 24시간 창에서 업데이트된 만료와 일치합니다.<br><br>만료를 만들거나 취소하거나 실행할 때를 포함하여 모든 편집 시 만료를 업데이트한 것으로 간주합니다. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
 
