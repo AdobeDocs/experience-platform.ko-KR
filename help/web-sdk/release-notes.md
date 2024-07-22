@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 060f6bb0ff6f57a84698a27bd9f640c0178e5b51
+source-git-commit: 47cf9cdb7c59ce8459ecb8823787b5145d5f5621
 workflow-type: tm+mt
-source-wordcount: '1811'
+source-wordcount: '1857'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,20 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 >Google [이(가) 2024년 하반기에 서드파티 쿠키에 대한 Chrome 지원을 중단할 계획을 ](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout)발표했습니다. 따라서 타사 쿠키는 더 이상 주요 브라우저에서 지원되지 않습니다.
 >
 >이 변경 사항이 구현되면 Adobe은 현재 웹 SDK에서 지원되는 `demdex` 쿠키에 대한 지원을 중단합니다.
+
+## 버전 2.21.1 - 2024년 7월 18일
+
+**수정 사항 및 개선 사항**
+
+* NPM 라이브러리를 사용할 때 발생하는 빌드 오류를 수정했습니다.
+
+## 버전 2.21.0 - 2024년 7월 16일
+
+**새로운 기능**
+
+* 자동 제안 상호 작용 추적에 대한 지원이 추가되었습니다.
+* alloy.js 파일을 제공하는 사용자 지정 빌드 스크립트가 추가되었습니다.
+* ActivityMap 및 이벤트 그룹화 지원을 통해 클릭 수집이 개선되었습니다.
 
 ## 버전 2.20.0 - 2024년 5월 21일
 

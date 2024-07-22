@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5086e6419c14356b47963b8445389a0048ad11d7
+source-git-commit: e874459cd3018e0cf2358e590c6ec5eb0f7b4c98
 workflow-type: tm+mt
-source-wordcount: '2158'
+source-wordcount: '2192'
 ht-degree: 24%
 
 ---
@@ -13,6 +13,15 @@ ht-degree: 24%
 # Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md)를 참조하십시오.
+
+## 버전 2.25.0 - 2024년 7월 18일
+
+**새로운 기능**
+
+* Adobe Journey Optimizer에서 자동 추적 개인화에 대한 지원이 추가되었습니다.
+* 향상된 클릭 컬렉션을 관리하는 새로운 설정이 도입되었습니다.
+
+Adobe Experience Platform Web SDK 버전 2.21.1을 포함합니다.
 
 ## 버전 2.24.0 - 2024년 6월 5일
 
