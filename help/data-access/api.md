@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Data Access API 안내서
 description: Data Access API는 개발자에게 Experience Platform 내에서 수집된 데이터 세트의 검색 가능성과 액세스 가능성에 초점을 맞춘 RESTful 인터페이스를 제공하여 Adobe Experience Platform을 지원합니다.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: d8694c094ae4a7284e4a3ed0ae5bc3dc198e501a
+source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '554'
 ht-degree: 4%
 
 ---
 
 # 데이터 액세스 API 안내서
+
+>[!IMPORTANT]
+>
+>데이터 액세스 API가 이제 **사용되지 않음**&#x200B;됩니다. Adobe Experience Platform에서 데이터를 내보내려면 대상 을 사용하는 것이 좋습니다. 자세한 내용은 [데이터 집합 내보내기 대상 설명서](../destinations/destination-types.md#dataset-export-destinations)를 참조하세요.
 
 Data Access API는 [!DNL Experience Platform] 내에서 수집된 데이터 세트의 검색 기능 및 접근성에 중점을 둔 RESTful 인터페이스를 사용자에게 제공하여 Adobe Experience Platform을 지원합니다.
 
@@ -19,7 +23,7 @@ Data Access API는 [!DNL Experience Platform] 내에서 수집된 데이터 세�
 
 ## API 사양 참조
 
-Swagger API 참조 설명서는 [여기](https://developer.adobe.com/experience-platform-apis/references/data-access/)에서 찾을 수 있습니다.
+OpenAPI 참조 설명서는 [여기](https://developer.adobe.com/experience-platform-apis/references/data-access/)에서 찾을 수 있습니다.
 
 ## 용어 {#terminology}
 

@@ -2,9 +2,9 @@
 title: 쿼리 일정
 description: Adobe Experience Platform UI를 통해 예약된 쿼리 실행을 자동화하고, 쿼리 일정을 삭제 또는 비활성화하고, 사용 가능한 예약 옵션을 활용하는 방법을 알아봅니다.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
 workflow-type: tm+mt
-source-wordcount: '1822'
+source-wordcount: '1848'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ ht-degree: 0%
 ### 일정 세부 정보 추가 {#schedule-details}
 
 [일정 세부 정보] 페이지가 나타납니다. 이 페이지에서 예약된 쿼리에 대한 다양한 세부 정보를 편집할 수 있습니다. 세부 정보에는 예약된 쿼리의 [실행 빈도 및 평일](#scheduled-query-frequency), 시작 및 종료 날짜, 결과를 내보낼 데이터 세트, [쿼리 상태 경고](#alerts-for-query-status)가 포함됩니다.
+
+>[!IMPORTANT]
+>
+>쿼리 스케줄러 UI는 무기한 또는 영구적인 예약을 지원하지 않습니다. 종료 날짜를 지정해야 합니다. 종료 날짜에는 상한이 없습니다.
 
 ![일정 세부 정보 패널이 강조 표시되었습니다.](../images/ui/query-schedules/schedule-details.png)
 
