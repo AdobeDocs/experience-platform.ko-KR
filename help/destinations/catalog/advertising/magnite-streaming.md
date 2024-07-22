@@ -1,31 +1,31 @@
 ---
-title: Magnite 스트리밍 실시간 대상 연결
+title: Magnite 실시간 대상 연결
 description: 이 대상을 사용하여 Adobe CDP 대상자를 Magnite 스트리밍 플랫폼에 실시간으로 전달하십시오.
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1297'
 ht-degree: 1%
 
 ---
 
 
-# (Beta) Magnite 스트리밍: 실시간 대상 연결
+# (Beta) Magnite: 실시간 대상 연결
 
 ## 개요 {#overview}
 
-Adobe Experience Platform의 [!DNL Magnite Streaming: Real-Time] 및 Magnite Streaming: 일괄 처리 대상을 통해 Magnite Streaming 플랫폼에서 타깃팅 및 활성화를 위해 대상을 매핑하고 내보낼 수 있습니다.
+Adobe Experience Platform의 [!DNL Magnite: Real-Time] 및 [Magnite: Batch](/help/destinations/catalog/advertising/magnite-batch.md) 대상은 Magnite 스트리밍 플랫폼에서 타깃팅 및 활성화를 위해 대상을 매핑하고 내보내는 데 도움이 됩니다.
 
-대상을 [!DNL Magnite Streaming] 플랫폼으로 활성화하려면 Magnite Streaming: 실시간 및 Magnite Streaming: 배치 대상을 모두 사용해야 하는 2단계 프로세스입니다.
+[!DNL Magnite Streaming] 플랫폼으로 대상을 활성화하려면 Magnite: Real-Time과 Magnite: Batch 대상을 모두 사용해야 하는 2단계 프로세스입니다.
 
 대상자를 [!DNL Magnite Streaming]에 활성화하려면 다음을 수행해야 합니다.
 
-* 이 페이지에 표시된 대로 [!DNL Magnite Streaming: Real-Time] 대상의 대상자를 활성화합니다.
-* Magnite Streaming: 배치 대상에서 동일한 대상을 활성화합니다. [!DNL Magnite Streaming: Batch] 대상은 필수 구성 요소입니다. [!DNL Magnite Streaming] 일괄 처리 대상에서 대상자를 활성화하지 못하면 통합이 실패하고 대상자가 활성화되지 않습니다.
+* 이 페이지에 표시된 대로 [!DNL Magnite: Real-Time] 대상의 대상자를 활성화합니다.
+* Magnite: 배치 대상에서 동일한 대상을 활성화합니다. [!DNL Magnite: Batch] 대상은 필수 구성 요소입니다. [!DNL Magnite Streaming] 일괄 처리 대상에서 대상자를 활성화하지 못하면 통합이 실패하고 대상자가 활성화되지 않습니다.
 
-참고: 실시간 대상을 사용하면 [!DNL Magnite: Streaming]에서 실시간으로 대상을 받지만, 실시간 대상은 플랫폼에만 일시적으로 저장할 수 있으며, 며칠 내에 시스템에서 제거됩니다. 따라서 Magnite: Streaming Real-Time 대상을 사용하려면 *또한* Magnite Streaming: Batch 대상을 사용해야 합니다. 즉, Real-Time 대상에 대해 활성화하는 각 대상도 Batch 대상에 대해 활성화해야 합니다.
+참고: 실시간 대상을 사용하는 경우 [!DNL Magnite Streaming]이(가) 실시간으로 대상을 받지만 Magnite는 해당 플랫폼에 실시간 대상자를 일시적으로 저장할 수 있으며 2일 이내에 시스템에서 제거됩니다. 따라서 Magnite: Real-Time 대상을 사용하려면 *또한* Magnite: Batch 대상을 사용해야 합니다. Real-Time 대상에 대해 활성화하는 각 대상도 Batch 대상에 대해 활성화해야 합니다.
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ Adobe Experience Platform의 [!DNL Magnite Streaming: Real-Time] 및 Magnite Str
 
 ## 사용 사례 {#use-cases}
 
-[!DNL Magnite Streaming: Real-Time] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례를 소개합니다.
+[!DNL Magnite: Real-Time] 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례를 소개합니다.
 
 ### 활성화 및 타기팅 {#activation-and-targeting}
 
@@ -48,11 +48,11 @@ Adobe Experience Platform에서 [!DNL Magnite] 대상을 사용하려면 먼저 
 
 ## 지원되는 ID {#supported-identities}
 
-[!DNL Magnite Streaming: Real-Time] 대상은 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/identity-service/features/namespaces.md)에 대해 자세히 알아보세요.
+[!DNL Magnite: Real-Time] 대상은 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/identity-service/features/namespaces.md)에 대해 자세히 알아보세요.
 
 | 대상 ID | 설명 | 고려 사항 |
 |-------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| device_id | 디바이스 또는 ID에 대한 고유 식별자. 유형에 관계없이 모든 장치 ID 및 자사 ID를 허용합니다. | 지원하는 ID 유형에는 PPUID, GAID, IDFA 및 TV Device ID가 포함되지만 이에 제한되지 않습니다. |
+| device_id | 디바이스 또는 ID에 대한 고유 식별자. 유형에 관계없이 모든 장치 ID 및 자사 ID를 허용합니다. | Magnite에서 지원하는 ID 유형에는 PPUID, GAID, IDFA 및 TV Device ID가 포함되지만 이에 국한되지 않습니다. |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Adobe Experience Platform에서 [!DNL Magnite] 대상을 사용하려면 먼저 
 
 | 항목 | 유형 | 참고 |
 |------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | [!DNL Magnite Streaming: Real-Time] 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 세그먼트의 모든 구성원(대상자)을 내보내고 있습니다. |
+| 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | [!DNL Magnite: Real-Time] 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 세그먼트의 모든 구성원(대상자)을 내보내고 있습니다. |
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
@@ -162,13 +162,13 @@ Real-Time 대상을 사용하는 이 예제는 Magnite device_id 대상 필드�
 
 -->
 
-* Post-ingest에서는 대상이 몇 분 안에 [!DNL Magnite Streaming]에 나타나야 하며 거래에 적용될 수 있습니다. Adobe Experience Platform의 활성화 단계 동안 공유된 세그먼트 ID를 조회하여 이를 확인할 수 있습니다.
+* 수집 후 대상자는 몇 분 내에 [!DNL Magnite Streaming]에 나타나야 하며 거래에 적용될 수 있습니다. Adobe Experience Platform의 활성화 단계 동안 공유된 세그먼트 ID를 조회하여 이를 확인할 수 있습니다.
 
-## [!DNL Magnite Streaming: Batch]대상을 통해 동일한 대상 활성화
+## [!DNL Magnite: Batch]대상을 통해 동일한 대상 활성화
 
-Real-Time 대상을 사용하여 [!DNL Magnite Streaming]과(와) 공유되는 대상도 Magnite Streaming: Batch 대상을 사용하여 공유해야 합니다. 올바르게 구성되면 [!DNL Magnite Streaming] UI의 세그먼트 이름이 Adobe Experience Platform 일일 이후 업데이트에 사용된 세그먼트 이름을 반영하도록 업데이트됩니다.
+Real-Time 대상을 사용하여 [!DNL Magnite Streaming]과(와) 공유되는 대상도 Magnite: Batch 대상을 사용하여 공유해야 합니다. 올바르게 구성되면 [!DNL Magnite Streaming] UI의 세그먼트 이름이 Adobe Experience Platform 일일 이후 업데이트에 사용된 세그먼트 이름을 반영하도록 업데이트됩니다.
 
-마지막으로, 배치 대상이 통합에 대해 구성되지 않은 경우 Magnite Streaming: 배치 대상 문서를 통해 지금 설정합니다.
+마지막으로, 배치 대상이 통합에 대해 구성되지 않은 경우 Magnite: 배치 대상 문서를 통해 지금 설정합니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 

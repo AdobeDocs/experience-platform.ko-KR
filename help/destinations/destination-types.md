@@ -3,9 +3,9 @@ keywords: 대상;대상;대상 유형
 title: 대상 유형 및 범주
 description: Adobe Experience Platform의 다양한 유형과 범주에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '804'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platform에서는 서로 다른 대상 유형(연결, 데이터
 
 마지막으로, 대상 카탈로그의 모든 조직에서 사용할 수 있는 공개 대상과 Real-Time CDP Ultimate 고객이 특정 내보내기 사용 사례를 충족하기 위해 만들 수 있는 비공개 대상을 연결할 수도 있습니다.
 
-![대상 다이어그램의 유형](./assets/destination-types/types-of-destinations-no-highlight.png)
+![대상 다이어그램의 유형입니다.](./assets/destination-types/types-of-destinations-no-highlight.png "대상 다이어그램의 유형"){zoomable="yes"}
 
 ## 연결 {#connections}
 
@@ -33,17 +33,17 @@ Adobe Experience Platform의 **[!UICONTROL 프로필 내보내기]**, **[!UICONT
 * [스트리밍 프로필 내보내기 대상(엔터프라이즈 대상)](#streaming-profile-export)
 * [배치(파일 기반) 대상](#file-based)
 
-### 스트리밍 프로필 내보내기 대상(엔터프라이즈 대상) {#streaming-profile-export}
+### 고급 엔터프라이즈 대상(스트리밍 프로필 내보내기 대상) {#streaming-profile-export}
 
 >[!IMPORTANT]
 >
->Enterprise 대상 또는 스트리밍 프로필 내보내기 대상은 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객만 사용할 수 있습니다.
+>고급 엔터프라이즈 대상 또는 스트리밍 프로필 내보내기 대상은 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객만 사용할 수 있습니다.
 
-Enterprise 대상 Data Connectors를 사용하여 데이터 동기화, 분석 및 추가적인 프로필 보강 사용 사례를 위해 내부 시스템 또는 다른 서드파티 시스템에 거의 실시간으로 Adobe Real-time Customer Data Platform 프로필을 제공합니다.
+고급 엔터프라이즈 대상 Data Connectors를 사용하여 데이터 동기화, 분석 및 추가적인 프로필 보강 사용 사례를 위해 Adobe Real-time Customer Data Platform 프로필을 거의 실시간으로 내부 시스템이나 다른 서드파티 시스템에 전달합니다.
 
 이러한 대상은 대상자 및 프로필 데이터를 Experience Platform 데이터 스트림으로 수신합니다.
 
-엔터프라이즈 대상에는 다음이 포함됩니다.
+고급 엔터프라이즈 대상에는 다음이 포함됩니다.
 
 * [HTTP API 대상](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
@@ -81,7 +81,7 @@ Experience Platform에서 다양한 대상으로 세 가지 유형의 대상을 
 
 대상 카드의 기호는 각 대상으로 내보낼 수 있는 대상 유형을 보여 줍니다.
 
-![내보낼 수 있는 대상 형식을 보여 주는 기호가 있는 대상 카드의 예입니다.](/help/destinations/assets/destination-types/types-of-audiences.png)
+![내보낼 수 있는 대상 유형을 보여 주는 기호가 있는 예제 대상 카드입니다.](/help/destinations/assets/destination-types/types-of-audiences.png "내보낼 수 있는 대상 형식을 보여 주는 기호가 있는 대상 카드의 예입니다."){zoomable="yes"}
 
 
 ## 데이터 세트 내보내기 대상 {#dataset-export-destinations}
@@ -114,4 +114,4 @@ Experience Platform에서 다양한 대상으로 세 가지 유형의 대상을 
 
 [대상 카탈로그](https://platform.adobe.com/destination/catalog)의 연결 및 확장은 달성하는 데 도움이 되는 마케팅 작업에 따라 대상 범주(**Advertising**, **클라우드 저장소**, **설문 조사 플랫폼**, **이메일 마케팅** 등)별로 그룹화됩니다. 각 범주와 각 범주에 포함된 대상에 대한 자세한 내용은 [대상 카탈로그 설명서](./catalog/overview.md)를 참조하세요.
 
-![카탈로그 페이지에서 강조 표시된 대상 범주.](./assets/destination-types/destination-categories-menu.png)
+![카탈로그 페이지에서 강조 표시된 대상 범주.](./assets/destination-types/destination-categories-menu.png "카탈로그 페이지에서 강조 표시된 대상 범주."){zoomable="yes"}

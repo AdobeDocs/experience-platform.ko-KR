@@ -1,34 +1,34 @@
 ---
-title: Magnite 스트리밍 일괄 처리 대상
+title: Magnite 배치 대상
 description: 이 대상을 사용하여 Adobe CDP 대상자를 Magnite 스트리밍 플랫폼에 일괄적으로 전달하십시오.
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1663'
 ht-degree: 1%
 
 ---
 
 
-# Magnite 스트리밍: 배치 연결 {#magnite-streaming-batch}
+# Magnite: 배치 연결 {#magnite-streaming-batch}
 
 ## 개요 {#overview}
 
-이 문서에서는 Magnite Streaming: 배치 대상에 대해 설명하고 대상자를 활성화하고 내보내는 방법을 이해하는 데 도움이 되는 샘플 사용 사례를 제공합니다.
+이 문서에서는 Magnite: 배치 대상에 대해 설명하고 대상자를 활성화하고 내보내는 방법을 이해하는 데 도움이 되는 샘플 사용 사례를 제공합니다.
 
-Adobe Real-Time CDP 대상자는 두 가지 방법으로 Magnite: Streaming Platform에 제공될 수 있습니다. 이들은 하루에 한 번 제공되거나 실시간으로 제공될 수 있습니다.
+Adobe Real-Time CDP 대상자는 하루에 한 번, 또는 실시간으로 제공될 수 있는 두 가지 방법으로 Magnite 스트리밍 플랫폼에 제공될 수 있습니다.
 
-1. 하루에 한 번만 대상자를 전달하려는 경우 Magnite: Streaming Batch 대상을 사용하여 대상자를 Magnite: Streaming Batch 파일로 매일 S3 배치 파일을 전달하여 스트리밍할 수 있습니다. 이러한 일괄 처리 대상은 2일 동안만 저장되는 실시간 대상과 달리 플랫폼에는 무기한 저장됩니다.
+1. 하루에 한 번만 대상자를 전달하려는 경우, 일일 S3 배치 파일 전달을 통해 대상자를 Magnite 스트리밍으로 전달하는 Magnite: Batch 대상을 사용할 수 있습니다. 이러한 일괄 처리 대상자는 이틀 동안만 저장되는 실시간 대상자와 달리 Magnite 플랫폼에 무기한으로 저장됩니다.
 
-2. 그러나 실시간으로 대상자를 전달하거나 전달해야 하는 경우 Magnite: Streaming Real-Time 대상을 사용해야 합니다. 실시간 대상을 사용할 때 Magnite: 스트리밍은 실시간으로 대상을 받지만, 당사의 플랫폼에는 실시간 대상을 일시적으로 저장할 수 있을 뿐이며, 며칠 내에 시스템에서 제거됩니다. 따라서 Magnite: Streaming Real-Time 대상을 사용하려는 경우 Magnite: Streaming Batch 대상도 사용해야 합니다. 이 대상은 Real-Time 대상에 대해 활성화하는 각 대상이며 배치 대상에도 활성화해야 합니다.
+2. 하지만 대상자를 더 자주 전달하거나 전달해야 하는 경우에는 [Magnite Real-Time](/help/destinations/catalog/advertising/magnite-streaming.md) 대상을 사용해야 합니다. 실시간 대상 사용 시 Magnite 스트리밍은 실시간으로 대상자를 받지만 Magnite는 자사 플랫폼에 실시간 대상자를 일시적으로 저장할 수 있을 뿐이며 2일 이내에 시스템에서 제거됩니다. 따라서 Magnite 실시간 대상을 사용하려면 *또한* Magnite: Batch 대상을 사용해야 합니다. Real-Time 대상에 대해 활성화하는 각 대상도 Batch 대상에 대해 활성화해야 합니다.
 
-요약: 하루에 한 번만 Adobe Real-Time CDP 대상을 전달하려는 경우 Magnite: Streaming Batch 대상만 사용하며 대상은 하루에 한 번 전달됩니다. Adobe Real-Time CDP 대상을 실시간으로 전달하려면 Magnite: Streaming Batch 대상과 Magnite: Streaming Real-Time 대상을 모두 사용합니다. 자세한 내용은 Magnite: Streaming에 문의하십시오.
+요약: 하루에 한 번만 Adobe Real-Time CDP 대상자를 전달하려는 경우 Magnite: Batch 대상만 사용하며 대상자는 하루에 한 번 전달됩니다. Adobe Real-Time CDP 대상을 실시간으로 전달하려면 Magnite: 배치 대상 및 Magnite 실시간 대상을 *모두*&#x200B;사용합니다. 자세한 내용은 Magnite: Streaming에 문의하십시오.
 
 
-Magnite에 대한 자세한 내용은 아래를 계속 읽어 보십시오. 스트리밍 배치 대상, 연결 방법, 여기에 Adobe Real-Time CDP 대상자를 활성화하는 방법.
-실시간 대상에 대한 자세한 내용은 대신 [이 문서](magnite-streaming.md)를 참조하십시오.
+Magnite에 대한 자세한 내용은 아래를 계속 읽어 보십시오. 배치 대상, 연결 방법, 여기에 Adobe Real-Time CDP 대상자를 활성화하는 방법.
+실시간 대상에 대한 자세한 내용은 대신 [이 설명서 페이지](magnite-streaming.md)를 참조하세요.
 
 >[!IMPORTANT]
 >
@@ -38,31 +38,31 @@ Magnite에 대한 자세한 내용은 아래를 계속 읽어 보십시오. 스�
 
 ## 사용 사례 {#use-cases}
 
-Magnite 스트리밍: 일괄 처리 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례를 소개합니다.
+Magnite: 배치 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도록 Adobe Experience Platform 고객이 이 대상을 사용하여 해결할 수 있는 샘플 사용 사례를 소개합니다.
 
 ### 사용 사례 #1 {#use-case-1}
 
-Magnite 스트리밍: 실시간 대상에서 대상을 활성화했습니다.
+Magnite 실시간 대상에서 대상을 활성화했습니다.
 
-Magnite 스트리밍: 실시간 대상을 통해 활성화된 모든 대상도 Magnite 스트리밍: 배치 대상을 사용해야 합니다. 배치 게재의 데이터는 Magnite 스트리밍 플랫폼 내에서 실시간 게재의 데이터를 대체/지속하기 위한 것입니다.
+배치 게재의 데이터는 Magnite 스트리밍 플랫폼 내에서 실시간 게재의 데이터를 대체/지속하기 위한 것이므로 Magnite 실시간 대상을 통해 활성화된 모든 대상도 Magnite: 배치 대상을 사용해야 합니다.
 
 ### 사용 사례 #2 {#use-case-2}
 
 Magnite Streaming 플랫폼에 대한 배치/일일 케이던스로만 대상을 활성화하려고 합니다.
 
-Magnite Streaming을 통해 활성화된 모든 대상: 배치 대상은 배치/일별 케이던스로 제공된 후 Magnite Streaming 플랫폼에서 타깃팅할 수 있습니다.
+Magnite: 배치 대상을 통해 활성화된 모든 대상자는 배치/일별 케이던스로 전달되며 Magnite 스트리밍 플랫폼에서 타깃팅에 사용할 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
-Adobe Experience Platform에서 Magnite 대상을 사용하려면 먼저 Magnite 스트리밍 계정이 있어야 합니다. [!DNL Magnite Streaming] 계정이 있는 경우 [!DNL Magnite] 계정 관리자에게 연락하여 [!DNL Magnite's] 대상에 액세스하기 위한 자격 증명을 제공받으십시오. [!DNL Magnite Streaming] 계정이 없는 경우 adobe-tech@magnite.com에 문의하십시오.
+Adobe Experience Platform에서 [!DNL Magnite] 대상을 사용하려면 먼저 Magnite 스트리밍 계정이 있어야 합니다. [!DNL Magnite Streaming] 계정이 있는 경우 [!DNL Magnite] 계정 관리자에게 연락하여 [!DNL Magnite's] 대상에 액세스하기 위한 자격 증명을 제공받으십시오. [!DNL Magnite Streaming] 계정이 없는 경우 adobe-tech@magnite.com에 문의하십시오.
 
 ## 지원되는 ID {#supported-identities}
 
-Magnite 스트리밍: 일괄 처리 대상은 Adobe CDP로부터 *모든* ID 소스를 받을 수 있습니다. 현재 이 대상에는 매핑할 Target ID 필드가 3개 있습니다.
+Magnite: 배치 대상은 Adobe CDP로부터 *모든* ID 소스를 받을 수 있습니다. 현재 이 대상에는 매핑할 Target ID 필드가 3개 있습니다.
 
 >[!NOTE]
 >
->*모든* ID 원본을 magnite_deviceId 대상 ID에 매핑할 수 있습니다.
+>*모든* ID 원본을 `magnite_deviceId` 대상 ID에 매핑할 수 있습니다.
 
 | 대상 ID | 설명 | 고려 사항 |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
@@ -85,7 +85,7 @@ Magnite 스트리밍: 일괄 처리 대상은 Adobe CDP로부터 *모든* ID 소
 
 | 항목 | 유형 | 참고 |
 |-----------------------------|----------|----------|
-| 내보내기 유형 | 대상자 내보내기 | Magnite Streaming: 배치 대상에 사용된 식별자(이름, 전화번호 또는 기타)로 대상자의 모든 구성원을 내보냅니다. |
+| 내보내기 유형 | 대상자 내보내기 | Magnite: 배치 대상에 사용된 식별자(이름, 전화번호 또는 기타)로 대상자의 모든 구성원을 내보냅니다. |
 | 내보내기 빈도 | 배치 | 배치 대상은 파일을 3, 6, 8, 12 또는 24시간 단위로 다운스트림 플랫폼으로 내보냅니다. 일괄 처리 [파일 기반 대상](/help/destinations/destination-types.md)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
@@ -96,7 +96,7 @@ Magnite 스트리밍: 일괄 처리 대상은 Adobe CDP로부터 *모든* ID 소
 
 ### 대상으로 인증 {#authenticate}
 
-Adobe 경험 카탈로그에서 Magnite Streaming: 배치 대상을 찾습니다. 추가 옵션 단추(\..)를 클릭한 다음 대상 연결/인스턴스를 구성합니다.
+Adobe 경험 카탈로그에서 Magnite: 배치 대상을 찾습니다. 추가 옵션 단추(\..)를 클릭한 다음 대상 연결/인스턴스를 구성합니다.
 
 기존 계정이 이미 있는 경우 계정 유형 옵션을 &quot;기존 계정&quot;으로 변경하여 찾을 수 있습니다. 그렇지 않으면 아래에 계정을 만듭니다.
 
@@ -126,7 +126,7 @@ Adobe 경험 카탈로그에서 Magnite Streaming: 배치 대상을 찾습니다
 
 그런 다음 **[!UICONTROL 다음]**&#x200B;을 선택하여 계속할 수 있습니다.
 
-다음 화면인 &quot;거버넌스 정책 및 시행 작업(선택 사항)&quot;에서는 필요한 경우 관련 데이터 거버넌스 정책을 선택할 수 있습니다. &quot;데이터 내보내기&quot;는 일반적으로 Magnite 스트리밍 배치 대상에 대해 선택됩니다.
+다음 화면인 &quot;거버넌스 정책 및 시행 작업(선택 사항)&quot;에서는 필요한 경우 관련 데이터 거버넌스 정책을 선택할 수 있습니다. &quot;데이터 내보내기&quot;는 일반적으로 Magnite: 배치 대상에 대해 선택됩니다.
 
 ![선택적 거버넌스 정책 및 시행 작업](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
@@ -175,11 +175,11 @@ Adobe 경험 카탈로그에서 Magnite Streaming: 배치 대상을 찾습니다
 
 대상이 업로드되면 대상이 올바르게 생성 및 업로드되었는지 확인할 수 있습니다.
 
-* Magnite 스트리밍 배치 대상은 S3 파일을 매일 케이던스로 Magnite 스트리밍에 전달합니다. 게재 및 수집 후 대상/세그먼트는 Magnite Streaming에 나타나야 하며 거래에 적용될 수 있습니다. Adobe Experience Platform의 활성화 단계 동안 공유된 세그먼트 ID 또는 세그먼트 이름을 조회하여 이를 확인할 수 있습니다.
+* Magnite: 배치 대상은 S3 파일을 매일 케이던스로 Magnite 스트리밍에 전달합니다. 게재 및 수집 후 대상/세그먼트는 Magnite Streaming에 나타나야 하며 거래에 적용될 수 있습니다. Adobe Experience Platform의 활성화 단계 동안 공유된 세그먼트 ID 또는 세그먼트 이름을 조회하여 이를 확인할 수 있습니다.
 
 >[!NOTE]
 >
->Magnite 스트리밍 일괄 처리 대상으로 활성화/전달된 대상은 Magnite 스트리밍 실시간 대상을 통해 활성화/전달된 동일한 대상을 *바꾸기*&#x200B;합니다. 세그먼트 이름을 사용하여 세그먼트를 조회하는 경우 Magnite Streaming Platform에서 일괄 처리를 수집하고 처리할 때까지 실시간으로 세그먼트를 찾을 수 없습니다.
+>Magnite에 활성화/전달된 대상: 배치 대상은 Magnite 실시간 대상을 통해 활성화/전달된 동일한 대상을 *바꾸기*&#x200B;합니다. 세그먼트 이름을 사용하여 세그먼트를 조회하는 경우 Magnite Streaming Platform에서 일괄 처리를 수집하고 처리할 때까지 실시간으로 세그먼트를 찾을 수 없습니다.
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
