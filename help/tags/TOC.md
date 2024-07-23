@@ -6,9 +6,9 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
+source-git-commit: 5cbc2f6809156bc1a554154527ff2c5e35d3a922
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '773'
 ht-degree: 35%
 
 ---
@@ -316,6 +316,7 @@ ht-degree: 35%
       * [위임 설명자 ID](./api/guides/delegate-descriptor-ids.md)
       * [값 암호화](./api/guides/encrypting-values.md)
       * [오류 처리](./api/guides/error-handling.md)
+      * [비공개 확장 패키지 공유](./api/guides/extension-packages.md)
       * [응답 필터링](./api/guides/filtering.md)
       * [응답 페이지 지정](./api/guides/pagination.md)
       * [응답 정렬](./api/guides/sorting.md)

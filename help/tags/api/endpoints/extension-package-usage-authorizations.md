@@ -1,13 +1,13 @@
 ---
 title: 확장 패키지 사용 권한 부여 끝점
 description: Reactor API에서 /extension_package_usage 권한 부여 끝점을 호출하는 방법을 알아봅니다.
-source-git-commit: fdf01451527e2fab8eb6e6f9d7b4901a85381450
+exl-id: ad3fb704-7d2f-45ec-b80b-ea4d327f2205
+source-git-commit: 9cdd349e0eccb4498d88f24a84b0f1c116b0adfe
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 4%
 
 ---
-
 
 # 확장 패키지 사용 승인 끝점
 
@@ -185,7 +185,7 @@ curl -X POST \
 >
 >위의 예제 응답에서 권한 부여는 현재 `pending_approval` 단계에 있습니다. 확장 패키지를 사용하기 전에 조직에서 승인을 받아야 합니다. 조직의 사용자는 권한 부여가 승인 보류 중인 동안 비공개 확장 패키지를 검색할 수 있지만 설치할 수 없고 확장 카탈로그에서 찾을 수 없습니다.
 
-## 확장 패키지 사용 승인 목록 검색 {#list_authorizations}
+## 확장 패키지 사용 승인 목록 검색 {#list-authorizations}
 
 GET 요청을 통해 확장 패키지 사용 승인 목록을 검색할 수 있습니다.
 
@@ -386,7 +386,7 @@ curl -X PATCH \
 >
 >승인이 승인되면 조직에서 속성에 확장 패키지를 설치할 수 있습니다.
 
-## 확장 패키지 사용 권한 부여를 위해 확장 패키지에 대한 데이터 검색 {#retrieve_data}
+## 확장 패키지 사용 권한 부여를 위해 확장 패키지에 대한 데이터 검색 {#retrieve-data}
 
 GET 요청을 하여 확장 패키지 사용 승인에 대한 확장 패키지에 대한 데이터를 검색할 수 있습니다.
 
