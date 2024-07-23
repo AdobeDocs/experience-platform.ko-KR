@@ -3,9 +3,9 @@ keywords: 대상;대상;대상 유형
 title: 대상 유형 및 범주
 description: Adobe Experience Platform의 다양한 유형과 범주에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
+source-git-commit: 13ceaa53b53f17457c8d2c914b3fd05f6af2441b
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '805'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,11 @@ Adobe Experience Platform에서는 서로 다른 대상 유형(연결, 데이터
 
 마지막으로, 대상 카탈로그의 모든 조직에서 사용할 수 있는 공개 대상과 Real-Time CDP Ultimate 고객이 특정 내보내기 사용 사례를 충족하기 위해 만들 수 있는 비공개 대상을 연결할 수도 있습니다.
 
+>[!BEGINSHADEBOX]
+
 ![대상 다이어그램의 유형입니다.](./assets/destination-types/types-of-destinations-no-highlight.png "대상 다이어그램의 유형"){zoomable="yes"}
+
+>[!ENDSHADEBOX]
 
 ## 연결 {#connections}
 
@@ -30,8 +34,8 @@ Adobe Experience Platform의 **[!UICONTROL 프로필 내보내기]**, **[!UICONT
 
 프로필 내보내기 대상은 원시 데이터를 수신하며, 이때 기본 키는 이메일 주소입니다. Experience Platform은 현재 두 가지 유형의 프로필 내보내기 대상을 지원합니다.
 
-* [스트리밍 프로필 내보내기 대상(엔터프라이즈 대상)](#streaming-profile-export)
 * [배치(파일 기반) 대상](#file-based)
+* [고급 엔터프라이즈 대상(스트리밍 프로필 내보내기 대상)](#streaming-profile-export)
 
 ### 고급 엔터프라이즈 대상(스트리밍 프로필 내보내기 대상) {#streaming-profile-export}
 
