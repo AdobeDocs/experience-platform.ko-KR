@@ -1,16 +1,16 @@
 ---
-title: Adobe Experience Platform 쿼리 서비스에서 지원되는 사용 사례
+title: 실제 예
 description: Adobe Experience Platform 쿼리 서비스에서 지원되는 사용 사례를 알아봅니다.
 keywords: 쿼리 서비스;사용 사례
 exl-id: eba8050d-be3a-41b6-8175-4f6b2b2ef7b0
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 8d8cceafa5def20b64d06dcc3b52629f9ee4b39d
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
-# 지원되는 사용 사례
+# 실제 예
 
 쿼리 서비스는 업계 및 비즈니스 시나리오 전반에 걸쳐 다양한 사용 사례에 대한 솔루션을 제공합니다. 이러한 실제 사례는 다양한 요구 사항을 해결하는 데 있어 서비스의 유연성과 효과를 보여 줍니다. 쿼리 서비스가 특정 비즈니스 요구에 가치를 부여하는 방법을 알아보려면 사용 사례 문서의 포괄적인 컬렉션을 살펴보십시오. 쿼리 서비스를 사용하여 향상된 운영 효율성 및 비즈니스 성공을 위한 통찰력과 솔루션을 제공하는 방법에 대해 알아봅니다.
 

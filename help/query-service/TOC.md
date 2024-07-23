@@ -5,10 +5,10 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
+source-git-commit: 3e4fe58deb48622129c919b8c4a93ba4e57c4338
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 19%
+source-wordcount: '323'
+ht-degree: 18%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 19%
       - [ML용 엔지니어 기능](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [ML 환경으로 데이터 내보내기](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML 데이터 파이프라인 강화 통합 워크플로](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- 사용 사례 {#use-cases}
+- 실제 예 {#use-cases}
    - [개요](use-cases/overview.md)
    - [찾아보기 중단됨](use-cases/abandoned-browse.md)
    - [속성 분석](use-cases/attribution-analysis.md)
@@ -47,6 +47,7 @@ ht-degree: 19%
    - [이벤트의 트렌드 보고서 만들기](use-cases/trended-report-of-events.md)
    - [동의 분석](use-cases/consent-analysis.md)
    - [고객 생애 가치](use-cases/customer-lifetime-value.md)
+   - [데이터 탐색](./use-cases/data-exploration.md)
    - [십분위수 기반 파생 데이터 세트](use-cases/deciles-use-case.md)
    - [유사 항목 일치](use-cases/fuzzy-match.md)
    - [사용자의 페이지 보기 나열](use-cases/list-visitor-sessions.md)

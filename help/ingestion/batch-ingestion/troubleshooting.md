@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 일괄 처리 수집 문제 해결 안내서
 description: 이 설명서는 Adobe Experience Platform 배치 데이터 수집 API와 관련하여 자주 묻는 질문에 대한 답변을 제공합니다.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1426'
 ht-degree: 1%
 
 ---
@@ -212,11 +212,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ### 배치가 성공적으로 수집되었는지 확인할 수 있는 방법이 있습니까?
 
-배치 상태가 &quot;활성&quot;이면 배치가 성공적으로 수집되었습니다. 일괄 처리 상태를 확인하려면 자세한 [이전](#how-is-batch-ingestion-monitored) 단계를 따르세요.
+예. 일괄 처리 상태가 &quot;활성&quot;이면 일괄 처리가 정상적으로 수집되었습니다. 일괄 처리 상태를 확인하려면 자세한 [이전](#how-is-batch-ingestion-monitored) 단계를 따르세요.
 
-### 일괄 처리가 실패하면 어떻게 됩니까?
+### 일괄 처리가 실패하면 어떻게 됩니까? {#what-if-a-batch-fails}
 
-일괄 처리가 실패하면 일괄 처리의 실패 이유를 페이로드의 `errors` 섹션에서 확인할 수 있습니다. 오류의 예는 아래에서 확인할 수 있습니다.
+일괄 처리가 실패하면 프로세스가 중지되고 `Failure` 상태가 반환됩니다. 실패한 이유는 페이로드의 `errors` 섹션에서 확인할 수 있습니다. 오류의 예는 아래에서 확인할 수 있습니다.
 
 ```json
     "errors":[
