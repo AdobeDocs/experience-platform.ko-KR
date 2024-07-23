@@ -3,7 +3,7 @@ title: at.js와 Experience Platform Web SDK 비교
 description: at.js 기능을 Experience Platform Web SDK와 비교하는 방법에 대해 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;의사 결정 범위;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;의사 결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: ca1574f3f95840fce246fb4ed8845583fa0ff093
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '2175'
 ht-degree: 2%
@@ -746,7 +746,7 @@ at.js `bodyHiddenStyle`을(를) 재정의하여 개인화된 콘텐츠가 포함
 
 ```javascript
 alloy("configure", {
-  edgeConfigId: "configurationId",
+  datastreamId: "configurationId",
   orgId: "orgId@AdobeOrg",
   debugEnabled: true,
   prehidingStyle: "body { opacity: 0 !important }"

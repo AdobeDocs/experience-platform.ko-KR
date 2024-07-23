@@ -1,13 +1,13 @@
 ---
 title: 클릭콜렉션활성화됨
 description: 링크 클릭 데이터가 자동으로 수집되는지 여부를 결정하도록 Web SDK를 구성하는 방법에 대해 알아봅니다.
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
-
 
 # `clickCollectionEnabled`
 
@@ -33,14 +33,13 @@ Web SDK는 `onClick` 특성이 없는 경우 `<a>` 및 `<area>` HTML 요소에 �
 
 ## 웹 SDK 태그 확장을 사용하여 자동 링크 추적 활성화 {#tag-extension}
 
-[태그 확장을 구성](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)할 때 **[!UICONTROL 클릭 데이터 수집 사용]** 확인란을 선택하십시오.
+이 변수는 태그 확장에 의해 자동으로 관리되므로 명시적으로 설정할 필요가 없습니다. [태그 확장을 구성](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)할 때 다음 중 하나를 선택하면 해당 링크 추적 데이터가 수집됩니다.
 
-1. Adobe ID 자격 증명을 사용하여 [experience.adobe.com](https://experience.adobe.com)에 로그인합니다.
-1. **[!UICONTROL 데이터 수집]** > **[!UICONTROL 태그]**(으)로 이동합니다.
-1. 원하는 태그 속성을 선택합니다.
-1. **[!UICONTROL 확장]**(으)로 이동한 다음 [!UICONTROL Adobe Experience Platform Web SDK] 카드에서 **[!UICONTROL 구성]**&#x200B;을 클릭합니다.
-1. [!UICONTROL 데이터 수집] 섹션까지 아래로 스크롤한 다음 **[!UICONTROL 데이터 수집 사용]** 확인란을 선택합니다.
-1. **[!UICONTROL 저장]**&#x200B;을 클릭한 다음 변경 내용을 게시합니다.
+* [!UICONTROL 내부 링크 클릭 수 수집]
+* [!UICONTROL 외부 링크 클릭 수 수집]
+* [!UICONTROL 다운로드 링크 클릭 수 수집]
+
+자세한 내용은 [`clickCollection`](clickcollection.md)을(를) 참조하십시오.
 
 ## 웹 SDK JavaScript 라이브러리를 사용하여 자동 링크 추적 활성화 {#library}
 
@@ -48,7 +47,7 @@ Web SDK는 `onClick` 특성이 없는 경우 `<a>` 및 `<area>` HTML 요소에 �
 
 ```js
 alloy(configure, {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: false
 });

@@ -1,11 +1,11 @@
 ---
 title: 여러 웹 SDK 인스턴스 사용
 description: 여러 Experience Platform 웹 SDK 속성과 상호 작용하는 방법을 알아봅니다.
-keywords: 여러 속성;구성;sendEvent;edgeConfigId;orgId;
+keywords: 여러 속성
 exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
@@ -38,24 +38,24 @@ SDK를 사용하면 기본 코드의 배열에 다른 이름을 추가하여 각
 
 ```javascript
 titanium("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
 titanium("sendEvent", {
-  "data": {
-    "key": "value"
+  data: {
+    key: "value"
   }
 });
 
 copper("configure", {
-  "edgeConfigId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
-  "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
+  datastreamId: "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
+  orgId: "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
 copper("sendEvent", {
-  "data": {
-    "key": "value"
+  data: {
+    key: "value"
   }
 });
 ```
@@ -64,4 +64,4 @@ copper("sendEvent", {
 
 >[!IMPORTANT]
 >
->쿠키와의 충돌을 방지하려면 각 웹 SDK 인스턴스에 고유한 `edgeConfigId`과(와) 고유한 `orgId`이(가) 있어야 합니다.
+>쿠키와의 충돌을 방지하려면 각 웹 SDK 인스턴스에 고유한 `datastreamId`과(와) 고유한 `orgId`이(가) 있어야 합니다.
