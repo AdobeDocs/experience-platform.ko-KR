@@ -2,9 +2,9 @@
 title: 개인화에 Web SDK와 함께 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform Web SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 69406293dce5fdfc832adff801f1991626dafae0
+source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: '1364'
 ht-degree: 1%
 
 ---
@@ -192,77 +192,31 @@ alloy("sendEvent",
 
 예를 들어 웹 사이트에는 웹 사이트의 세 범주 링크(남성, 여성 및 아동)에 해당하는 세 가지 결정 범위가 포함되어 있으며 사용자가 최종적으로 방문한 범주를 추적하려고 합니다. 콘텐츠가 요청될 때 범주가 지속되지 않도록 `__save` 플래그를 `false`(으)로 설정하여 이러한 요청을 보냅니다. 콘텐츠가 시각화되면 기록할 해당 특성에 대한 적절한 페이로드(`eventToken` 및 `stateToken` 포함)를 보냅니다.
 
-<!--Save profile or entity attributes by default with:
-
-```js
-alloy ( "sendEvent" , {
-  renderDecisions : true,
-  data : {
-    __adobe : {
-      target : {
-        "__save" : true // Optional. __save=true is the default 
-        "profile.gender" : "female",
-        "profile.age" : 30,
-        "entity.name" : "T-shirt",
-        "entity.id" : "1234",
-      }
-    }
-  }
-} ) ; 
-```
--->
-
 아래 예제에서는 trackEvent 스타일 메시지를 보내고, 프로필 스크립트를 실행하고, 속성을 저장하고, 이벤트를 즉시 기록합니다.
 
 ```js
-alloy ( "sendEvent" , {
-  renderDecisions : true,
-  data : {
-    __adobe : {
-      target : {
-        "profile.gender" : "female",
-        "profile.age" : 30,
-        "entity.name" : "T-shirt" ,
-        "entity.id" : "1234" ,
-        "track": {
-          "scopes": [ "mbox1", "mbox2"],
-          "type": "display|click|..."
+alloy("sendEvent", {
+    "renderDecisions": true,
+    "data": {
+        "xdm": { // Experience Event XDM data },
+            "__adobe": {
+                "target": {
+                    " __save": true|false,
+                    //defaults to true if omitted 
+                    "profile.gender": "female",
+                    "profile.age": 30,
+                    "entity.name": "T-shirt",
+                    "entity.id": "1234"
+                }
+            }
         }
-      }
     }
-  }
-} ) ;
+})
 ```
 
 >[!NOTE]
 >
->`__save` 지시문이 생략되면 나머지 요청이 미리 설정된 개인화인 경우에도 요청이 실행된 것처럼 프로필 및 엔티티 속성이 즉시 저장됩니다. `__save` 지시문은 프로필 및 엔터티 특성에만 관련이 있습니다. 추적 개체가 있으면 `__save` 지시문이 무시됩니다. 데이터가 즉시 저장되고 알림이 기록됩니다.
-
-프로필 데이터가 있는 **`sendEvent`**
-
-```js
-alloy("sendEvent", {
-   renderDecisions: true|false,
-   xdm: { // Experience Event XDM data },
-   data: { // Freeform data }
-});
-```
-
-**Adobe Target에 프로필 특성을 보내는 방법:**
-
-```js
-alloy("sendEvent", {
-  "renderDecisions": true,
-  "data": {
-    "__adobe": {
-      "target": {
-        "profile.gender": "female",
-        "profile.age": 30
-      }
-    }
-  }
-});
-```
+>`__save` 지시문이 생략되면 프로필 및 엔티티 속성이 즉시 저장됩니다. `__save` 지시문은 프로필 특성 및 엔터티 세부 사항에만 관련됩니다.
 
 ## 권장 사항 요청
 
@@ -302,6 +256,34 @@ alloy("sendEvent", {
   }
 });
 ```
+
+## mbox 전환 지표 표시 {#display-mbox-conversion-metrics}
+
+아래 샘플은 콘텐츠나 활동에 대한 자격이 없어도 디스플레이 mbox 전환을 추적하고 프로필 매개 변수를 Adobe Target에 보내는 방법을 보여 줍니다.
+
+```js
+alloy("sendEvent", {
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "conversion-step-1" //example scope name
+                }],
+                "propositionEventType": {
+                    "display": 1
+                }
+            }
+        },
+        "eventType": "decisioning.propositionDisplay"
+    }
+});
+```
+
+
+| 속성 | 설명 |
+|---------|----------|
+| `xdm._experience.decisioning.propositions[x].scope` | 성공 지표를 와 연결할 범위입니다(Target 측의 특정 활동에 기여함). |
+| `xdm._experience.decisioning.propositions[x].eventType` | 의도한 이벤트 유형을 설명하는 문자열입니다. 이 사용 사례에 대해 `"decisioning.propositionDisplay"`(으)로 설정하십시오. |
 
 ## 디버깅
 
