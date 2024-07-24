@@ -3,9 +3,9 @@ title: 그래프 시뮬레이션 UI 안내서
 description: ID 서비스 UI에서 그래프 시뮬레이션을 사용하는 방법을 알아봅니다.
 badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 4c49bec7974dafe18d18deded6ddc936ece47dc3
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1436'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->이 기능은 아직 사용할 수 없습니다. ID 그래프 연결 규칙에 대한 베타 프로그램은 개발 샌드박스에서 7월에 시작될 예정입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+>ID 그래프 연결 규칙은 현재 Beta 버전입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오. 기능 및 설명서는 변경될 수 있습니다.
 
 [!DNL Graph Simulation]은(는) 특정 조합의 ID가 지정된 ID에서 ID 그래프가 작동하는 방식과 [ID 최적화 알고리즘](./identity-optimization-algorithm.md)을 구성하는 방법을 시뮬레이션하는 데 사용할 수 있는 ID 서비스 UI의 도구입니다.
 
@@ -172,6 +172,8 @@ Adobe Experience Platform UI에서 [!DNL Graph Simulation]에 액세스할 수 �
 
 이 문서를 읽으면 이제 [!DNL Graph Simulation] 도구를 사용하여 특정 규칙 및 구성 집합이 있는 경우 ID 데이터가 처리되는 방식을 더 잘 이해할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
-* [ID 그래프 연결 규칙](overview.md)
-* [ID 최적화 알고리즘](identity-optimization-algorithm.md)
-* [네임스페이스 우선 순위](namespace-priority.md)
+* [ID 그래프 연결 규칙](./overview.md)
+* [구성 안내서](./configuration.md)
+* [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
+* [네임스페이스 우선 순위](./namespace-priority.md)
+* [그래프 구성 예](./example-configurations.md)

@@ -3,9 +3,9 @@ title: 네임스페이스 우선 순위
 description: ID 서비스의 네임스페이스 우선 순위에 대해 알아봅니다.
 badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 5d19a22dc8d1b7f0151008d14b2f5bf89c85c638
+source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1567'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->이 기능은 아직 사용할 수 없습니다. ID 그래프 연결 규칙에 대한 베타 프로그램은 개발 샌드박스에서 7월에 시작될 예정입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+>ID 그래프 연결 규칙은 현재 Beta 버전입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오. 기능 및 설명서는 변경될 수 있습니다.
 
 모든 고객 구현은 특정 조직의 목표를 충족하도록 고유하고 맞춤화되며, 따라서 지정된 네임스페이스의 중요성은 고객마다 다릅니다. 실제 사례는 다음과 같습니다.
 

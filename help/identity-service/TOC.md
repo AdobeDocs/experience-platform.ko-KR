@@ -5,7 +5,7 @@ breadcrumb-title: Platform Identity Service 안내서
 user-guide-description: 다양한 디바이스와 시스템에서 고객 ID를 연결하여 개인화된 디지털 경험을 전달할 수 있습니다.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 30e19f53bb29977cf4255cb2dba688d8bbbf6b2b
+source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 29%
@@ -24,12 +24,13 @@ ht-degree: 29%
    - [ID 서비스에서 삭제](./features/deletion.md)
    - ID 그래프 연결 규칙 {#identity-graph-linking-rules}
       - [기능 개요](./identity-graph-linking-rules/overview.md)
+      - [구성 안내서](./identity-graph-linking-rules/configuration.md)
       - [ID 최적화 알고리즘](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [네임스페이스 우선 순위](./identity-graph-linking-rules/namespace-priority.md)
-      - [예제 시나리오](./identity-graph-linking-rules/example-scenarios.md)
       - [그래프 시뮬레이션 UI](./identity-graph-linking-rules/graph-simulation.md)
-      - [ID 그래프 연결 규칙 구성 안내서](./identity-graph-linking-rules/configuration.md)
       - [ID 설정](./identity-graph-linking-rules/identity-settings-ui.md)
+      - [고객 시나리오 예](./identity-graph-linking-rules/example-scenarios.md)
+      - [그래프 구성 예](./identity-graph-linking-rules/example-configurations.md)
    - [ECID 개요](./features/ecid.md)
 - [구현 안내서](implementation.md)
 - [ID 데이터 보호](guardrails.md)

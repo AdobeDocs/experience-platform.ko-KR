@@ -3,9 +3,9 @@ title: ID 최적화 알고리즘
 description: ID 서비스의 ID 최적화 알고리즘에 대해 알아봅니다.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 5d19a22dc8d1b7f0151008d14b2f5bf89c85c638
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1565'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->이 기능은 아직 사용할 수 없습니다. ID 그래프 연결 규칙에 대한 베타 프로그램은 개발 샌드박스에서 7월에 시작될 예정입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+>ID 그래프 연결 규칙은 현재 Beta 버전입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오. 기능 및 설명서는 변경될 수 있습니다.
 
 ID 최적화 알고리즘은 ID 그래프가 단일 사용자를 나타내도록 도와주는 ID 서비스에 대한 그래프 알고리즘으로, 실시간 고객 프로필에서 원치 않는 ID 병합을 방지합니다.
 
@@ -162,6 +162,7 @@ ECID는 인증되지 않은(익명) 이벤트를 저장하는 반면 CRM ID는 �
 ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [ID 그래프 연결 규칙 개요](./overview.md)
+* [네임스페이스 우선 순위](./namespace-priority.md)
 * [ID 그래프 연결 규칙을 구성하기 위한 예제 시나리오](./example-scenarios.md)
 * [ID 연결 논리](../features/identity-linking-logic.md)
 * [ID 서비스 및 실시간 고객 프로필](../identity-and-profile.md)

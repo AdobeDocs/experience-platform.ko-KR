@@ -3,9 +3,9 @@ title: ID 그래프 연결 규칙 개요
 description: Identity Service의 Identity Graph 연결 규칙에 대해 알아봅니다.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1177'
 ht-degree: 1%
 
 ---
@@ -14,12 +14,16 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->이 기능은 아직 사용할 수 없습니다. ID 그래프 연결 규칙에 대한 베타 프로그램은 개발 샌드박스에서 7월에 시작될 예정입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+>ID 그래프 연결 규칙은 현재 Beta 버전입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오. 기능 및 설명서는 변경될 수 있습니다.
 
 ## 목차
 
 * [개요](./overview.md)
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
+* [네임스페이스 우선 순위](./namespace-priority.md)
+* [그래프 시뮬레이션 UI](./graph-simulation.md)
+* [ID 설정 UI](./identity-settings-ui.md)
+* [그래프 구성 예](./configuration.md)
 * [예제 시나리오](./example-scenarios.md)
 
 Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용하면 데이터가 완벽하게 수집되고 병합된 모든 프로필이 CRM ID와 같은 개인 식별자를 통해 단일 개별 사용자를 나타낸다고 쉽게 가정할 수 있습니다. 그러나 특정 데이터가 서로 다른 여러 프로필을 하나의 프로필로 병합하려고 할 수 있는 시나리오가 있습니다(&quot;그래프 축소&quot;). 이러한 원치 않는 병합을 방지하기 위해 ID 그래프 연결 규칙을 통해 제공된 구성을 사용하고 사용자를 위한 정확한 개인화를 허용할 수 있습니다.
