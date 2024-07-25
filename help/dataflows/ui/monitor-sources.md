@@ -2,7 +2,7 @@
 description: 모니터링 대시보드를 사용하여 소스에서 수집된 데이터를 모니터링하는 방법에 대해 알아봅니다.
 title: UI에서 소스에 대한 데이터 흐름 모니터링
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 11%
@@ -83,13 +83,13 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 
 {style="table-layout:auto"}
 
-특정 데이터 흐름에서 수집되는 데이터를 모니터링하려면 소스 옆에 있는 필터 아이콘 ![filter](../assets/ui/monitor-sources/filter.png)을(를) 선택하십시오.
+특정 데이터 흐름에서 수집되는 데이터를 모니터링하려면 소스 옆에 있는 필터 아이콘 ![filter](/help/images/icons/filter-add.png)을(를) 선택하십시오.
 
 ![지정된 원본 옆에 있는 필터 아이콘을 선택하여 특정 데이터 흐름을 모니터링합니다.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 지표 테이블은 선택한 소스에 해당하는 활성 데이터 흐름 테이블로 업데이트됩니다. 이 단계에서는 해당 데이터 세트 및 데이터 유형과 마지막으로 활성화된 시간을 나타내는 타임스탬프를 포함하여 데이터 흐름에 대한 추가 정보를 볼 수 있습니다.
 
-데이터 흐름을 추가로 검사하려면 데이터 흐름 옆에 있는 필터 아이콘 ![filter](../assets/ui/monitor-sources/filter.png)을(를) 선택하십시오.
+데이터 흐름을 추가로 검사하려면 데이터 흐름 옆에 있는 필터 아이콘 ![filter](/help/images/icons/filter-add.png)을(를) 선택하십시오.
 
 ![모니터링 대시보드의 데이터 흐름 테이블입니다.](../assets/ui/monitor-sources/select-dataflow.png)
 
@@ -97,7 +97,7 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 
 데이터 흐름 실행은 데이터 흐름 실행의 인스턴스를 나타냅니다. 예를 들어 데이터 흐름이 시간별로 오전 9:00, 오전 10:00 및 오전 11:00에 실행되도록 예약되어 있는 경우 흐름 실행의 인스턴스가 3개 있습니다. 플로우 실행은 특정 조직에만 해당됩니다.
 
-특정 데이터 흐름 실행 반복의 지표를 검사하려면 데이터 흐름 옆에 있는 필터 아이콘 ![filter](../assets/ui/monitor-sources/filter.png)을(를) 선택하십시오.
+특정 데이터 흐름 실행 반복의 지표를 검사하려면 데이터 흐름 옆에 있는 필터 아이콘 ![filter](/help/images/icons/filter-add.png)을(를) 선택하십시오.
 
 ![데이터 흐름 실행 지표 페이지입니다.](../assets/ui/monitor-sources/dataflow-page.png)
 

@@ -4,7 +4,7 @@ description: Adobe Experience Platform의 이벤트 전달을 위한 Trade Desk 
 hide: true
 hidefromtoc: true
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
-source-git-commit: 161cb8a587026012bb07acce9da67037feb5391c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 2%
@@ -90,7 +90,7 @@ ht-degree: 2%
 
 **[!UICONTROL 개체 요청 매개 변수]**
 
-추가 정보가 포함된 JSON 개체. 축소된 키-값 입력 세트를 사용하거나 원시 JSON을 제공하는 옵션이 있습니다. 또한 오른쪽의 디스크(![디스크 아이콘](../../../images/extensions/server/tradedesk/disk-icon.png))를 선택하여 데이터 요소에서 동적 데이터를 검색할 수 있습니다.
+추가 정보가 포함된 JSON 개체. 축소된 키-값 입력 세트를 사용하거나 원시 JSON을 제공하는 옵션이 있습니다. 또한 오른쪽의 디스크(![디스크 아이콘](/help/images/icons/database.png))를 선택하여 데이터 요소에서 동적 데이터를 검색할 수 있습니다.
 
 
 ![사용 가능한 필드를 표시하는 [!DNL Object Request Parameters] 섹션입니다.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)

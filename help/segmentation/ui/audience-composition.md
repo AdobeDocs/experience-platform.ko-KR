@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 8bc03889ff108630bd20fe47f2c2920ceba5069b
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ![대상 구성 UI.](../images/ui/audience-composition/audience-composition.png)
 
-제목과 설명을 포함하여 컴포지션의 세부 정보를 변경하려면 ![슬라이더](../images/ui/audience-composition/sliders.png) 버튼을 선택합니다.
+제목과 설명을 포함하여 컴포지션의 세부 정보를 변경하려면 ![슬라이더](/help/images/icons/properties.png) 버튼을 선택합니다.
 
 **[!UICONTROL 컴포지션 속성]** 팝오버가 나타납니다. 여기에 제목과 설명을 포함하여 컴포지션의 세부 정보를 삽입할 수 있습니다.
 
@@ -114,7 +114,7 @@ ht-degree: 0%
 
 ### 속성별 제외 {#exclude-attribute}
 
-특성별로 제외하는 경우 **[!UICONTROL 제외 규칙]** 섹션 내에서 ![필터](../images/ui/audience-composition/filter-attribute.png) 아이콘을 선택하여 제외할 특성을 선택할 수 있습니다.
+특성별로 제외하는 경우 **[!UICONTROL 제외 규칙]** 섹션 내에서 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택하여 제외할 특성을 선택할 수 있습니다.
 
 ![특성 섹션이 강조 표시되어 제외할 특성을 선택할 위치를 표시합니다.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -140,7 +140,7 @@ ht-degree: 0%
 
 **[!UICONTROL 강화]** 블록이 추가되었습니다. 이 블록을 선택하면 데이터 보강에 대한 세부 정보가 오른쪽 레일에 표시됩니다. 여기에는 블록의 레이블 및 데이터 보강 세트가 포함됩니다.
 
-대상자를 보강할 데이터 집합을 선택하려면 ![필터](../images/ui/audience-composition/filter-attribute.png) 아이콘을 선택하십시오.
+대상자를 보강할 데이터 집합을 선택하려면 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택하십시오.
 
 ![필터 단추가 강조 표시되어 있습니다. 이 옵션을 선택하면 [!UICONTROL 데이터 세트 선택] 팝오버가 표시됩니다.](../images/ui/audience-composition/enrich-select-dataset.png)
 
@@ -160,7 +160,7 @@ ht-degree: 0%
 
 ![데이터 보강 기준] 영역이 강조 표시되어 있습니다.](../images/ui/audience-composition/enrichment-criteria.png)[!UICONTROL 
 
-**[!UICONTROL Source 가입 키]**&#x200B;를 선택하려면 ![필터](../images/ui/audience-composition/filter-attribute.png) 아이콘을 선택하십시오.
+**[!UICONTROL Source 가입 키]**&#x200B;를 선택하려면 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택하십시오.
 
 ![[!UICONTROL Source 조인 키]에 대한 필터 아이콘이 강조 표시되어 있습니다.](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
@@ -168,7 +168,7 @@ ht-degree: 0%
 
 ![원본 조인 키로 사용할 특성이 강조 표시됩니다.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-**[!UICONTROL 데이터 보강 데이터 집합 조인 키]**&#x200B;를 선택하려면 ![필터](../images/ui/audience-composition/filter-attribute.png) 아이콘을 선택하십시오.
+**[!UICONTROL 데이터 보강 데이터 집합 조인 키]**&#x200B;를 선택하려면 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택하십시오.
 
 ![데이터 보강 데이터 집합 조인 키]에 대한 필터 아이콘이 강조 표시되어 있습니다.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)[!UICONTROL 
 
@@ -216,7 +216,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ![등급 블록의 세부 정보와 함께 등급 블록이 강조 표시됩니다.](../images/ui/audience-composition/rank.png)
 
-대상의 등급을 지정할 특성을 선택하려면 ![filter](../images/ui/audience-composition/filter-attribute.png) 아이콘을 선택하십시오.
+대상의 등급을 지정할 특성을 선택하려면 ![filter](/help/images/icons/project-edit.png) 아이콘을 선택하십시오.
 
 ![필터 아이콘이 강조 표시되어 프로필 특성 선택 화면에 액세스하기 위해 선택할 항목을 보여 줍니다.](../images/ui/audience-composition/select-rank-attribute.png)
 
@@ -250,7 +250,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ### 속성으로 분할 {#split-attribute}
 
-속성별로 분할하면 제공된 속성을 기준으로 대상자가 분할됩니다. 분할할 특성을 선택하려면 **[!UICONTROL 분할]** 블록을 선택한 다음 ![필터](../images/ui/audience-composition/filter-attribute.png) 아이콘을 선택합니다.
+속성별로 분할하면 제공된 속성을 기준으로 대상자가 분할됩니다. 분할할 특성을 선택하려면 **[!UICONTROL 분할]** 블록을 선택한 다음 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택합니다.
 
 ![필터 단추를 선택하여 특성별로 필터링하는 방법을 표시합니다.](../images/ui/audience-composition/select-split-attribute.png)
 

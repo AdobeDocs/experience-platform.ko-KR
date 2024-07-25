@@ -5,7 +5,7 @@ solution: Experience Platform
 title: UI에서 Source 연결 계정 세부 정보 업데이트
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 1%
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 **[!UICONTROL 계정]** 페이지가 나타납니다. 이 페이지에는 소스, 사용자 이름, 데이터 흐름 수 및 생성 날짜에 대한 정보를 포함하여 볼 수 있는 계정 목록이 있습니다.
 
-왼쪽 상단의 필터 아이콘 ![filter](../../images/tutorials/update/filter.png)을(를) 선택하여 정렬 패널을 시작합니다.
+왼쪽 상단의 필터 아이콘 ![filter](/help/images/icons/filter.png)을(를) 선택하여 정렬 패널을 시작합니다.
 
 ![accounts-list](../../images/tutorials/update/accounts-list.png)
 

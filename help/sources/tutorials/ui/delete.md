@@ -5,7 +5,7 @@ solution: Experience Platform
 title: UI에서 데이터 흐름 삭제
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 1%
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 **[!UICONTROL 데이터 흐름]** 페이지가 나타납니다. 이 페이지에는 대상 데이터 세트, 소스, 계정 이름 및 생성 날짜에 대한 정보를 포함하여 볼 수 있는 데이터 흐름 목록이 있습니다.
 
-왼쪽 상단의 필터 아이콘(![filter-icon](../../images/tutorials/delete/filter.png))을 선택하여 정렬 패널을 시작합니다.
+왼쪽 상단의 필터 아이콘(![filter-icon](/help/images/icons/filter.png))을 선택하여 정렬 패널을 시작합니다.
 
 ![데이터 흐름](../../images/tutorials/delete/dataflows.png)
 

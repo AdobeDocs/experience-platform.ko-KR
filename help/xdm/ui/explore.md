@@ -5,7 +5,7 @@ title: UI에서 스키마 리소스 살펴보기
 description: Experience Platform 사용자 인터페이스에서 기존 스키마, 클래스, 스키마 필드 그룹 및 데이터 유형을 탐색하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1078'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택�
 
 ![](../images/ui/explore/tabs.png)
 
-필터 아이콘(![필터 아이콘 이미지](../images/ui/explore/icon.png))은 나열된 결과를 좁히기 위해 왼쪽 레일에 컨트롤을 표시합니다. 표시되는 컨트롤은 나열되는 리소스 유형에 따라 다릅니다.
+필터 아이콘(![필터 아이콘 이미지](/help/images/icons/filter.png))은 나열된 결과를 좁히기 위해 왼쪽 레일에 컨트롤을 표시합니다. 표시되는 컨트롤은 나열되는 리소스 유형에 따라 다릅니다.
 
 예를 들어 Adobe에서 제공하는 표준 데이터 형식만 표시하도록 목록을 필터링하려면 **[!UICONTROL 형식]** 및 **[!UICONTROL Adobe]** 섹션에서 각각 **[!UICONTROL 데이터 형식]** 및 **[!UICONTROL 소유자]**&#x200B;를 선택하십시오.
 
@@ -56,7 +56,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택�
 
 ### 표준 클래스 및 필드 그룹 표시기 {#standard-class-and-field-group-indicator}
 
-스키마 편집기 내에서 표준(Adobe 생성) 클래스와 필드 그룹은 자물쇠 아이콘(![자물쇠 아이콘)으로 표시됩니다.](../images/ui/explore/padlock-icon.png) 질문에 답합니다. 자물쇠는 클래스 또는 필드 그룹 이름 옆의 왼쪽 레일과 시스템 생성 리소스의 일부인 스키마 다이어그램의 필드 옆에 나타납니다.
+스키마 편집기 내에서 표준(Adobe 생성) 클래스와 필드 그룹은 자물쇠 아이콘(![자물쇠 아이콘)으로 표시됩니다.](/help/images/icons/lock-closed.png) 질문에 답합니다. 자물쇠는 클래스 또는 필드 그룹 이름 옆의 왼쪽 레일과 시스템 생성 리소스의 일부인 스키마 다이어그램의 필드 옆에 나타납니다.
 
 ![자물쇠 아이콘이 강조 표시된 스키마 편집기](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -94,7 +94,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택�
 
 ID 필드가 포함된 스키마를 검사할 때 이러한 필드는 스키마에 제공하는 클래스 또는 필드 그룹 아래의 왼쪽 레일에 나열됩니다. 중첩된 깊이에 관계없이 캔버스에 필드를 표시하려면 왼쪽 레일에서 ID 필드 이름을 선택합니다.
 
-캔버스에서 ID 필드가 지문 아이콘(![지문 아이콘 이미지](../images/ui/explore/identity-symbol.png))으로 강조 표시됩니다. ID 필드의 이름을 선택하면 [ID 네임스페이스](../../identity-service/features/namespaces.md) 및 필드가 스키마의 기본 ID인지 여부와 같은 추가 정보를 볼 수 있습니다.
+캔버스에서 ID 필드가 지문 아이콘(![지문 아이콘 이미지](/help/images/icons/identity-service.png))으로 강조 표시됩니다. ID 필드의 이름을 선택하면 [ID 네임스페이스](../../identity-service/features/namespaces.md) 및 필드가 스키마의 기본 ID인지 여부와 같은 추가 정보를 볼 수 있습니다.
 
 ![](../images/ui/explore/identity-field.png)
 

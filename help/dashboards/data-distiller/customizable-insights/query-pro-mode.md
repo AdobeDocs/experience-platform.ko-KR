@@ -2,7 +2,7 @@
 title: Query Pro 모드
 description: Adobe Experience Platform UI에서 SQL 쿼리를 사용하여 사용자 정의 대시보드용 차트를 생성하는 방법에 대해 알아봅니다.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -35,7 +35,7 @@ UI 요소에 대한 자세한 내용은 [쿼리 편집기 사용 안내서](../.
 >
 >전역 필터를 사용하려면 SQL에 쿼리 매개 변수를 배치한 다음 해당 쿼리 매개 변수를 위젯 작성기의 전역 필터에 연결해야 합니다. 아래 스크린샷에서는 `CONSENT_VALUE_FILTER`이(가) SQL에서 전역 필터에 대한 쿼리 매개 변수로 사용됩니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 [전역 필터 설명서](./filters/global-filter.md#enable-global-filter)를 참조하세요.
 
-쿼리를 실행하려면 실행 아이콘(![실행 아이콘)을 선택합니다.](../../images/customizable-insights/run-icon.png)). 쿼리 편집기에 결과 탭이 표시됩니다. 그런 다음 구성을 확인하고 위젯 작성기를 열려면 **[!UICONTROL 선택]**&#x200B;을 선택합니다.
+쿼리를 실행하려면 실행 아이콘(![실행 아이콘)을 선택합니다.](/help/images/icons/play.png)). 쿼리 편집기에 결과 탭이 표시됩니다. 그런 다음 구성을 확인하고 위젯 작성기를 열려면 **[!UICONTROL 선택]**&#x200B;을 선택합니다.
 
 >[!TIP]
 >
@@ -45,7 +45,7 @@ UI 요소에 대한 자세한 내용은 [쿼리 편집기 사용 안내서](../.
 
 ## 위젯 채우기 {#populate-widget}
 
-이제 위젯 작성기가 실행된 SQL의 열로 채워집니다. 대시보드 유형은 왼쪽 위에 표시되어 있습니다. 이 경우 [!UICONTROL 수동 SQL 항목]입니다. 연필 아이콘(![연필 아이콘)을 선택합니다.언제든지 SQL을 편집할 수 있습니다.](../../images/customizable-insights/edit-icon.png)
+이제 위젯 작성기가 실행된 SQL의 열로 채워집니다. 대시보드 유형은 왼쪽 위에 표시되어 있습니다. 이 경우 [!UICONTROL 수동 SQL 항목]입니다. 연필 아이콘(![연필 아이콘)을 선택합니다.언제든지 SQL을 편집할 수 있습니다.](/help/images/icons/edit.png)
 
 >[!TIP]
 >
@@ -57,13 +57,13 @@ UI 요소에 대한 자세한 내용은 [쿼리 편집기 사용 안내서](../.
 
 ### 속성 추가 {#add-attributes}
 
-위젯에 특성을 추가하려면 더하기 아이콘(![더하기 아이콘)을 선택합니다.](../../images/customizable-insights/add-icon.png))을 클릭합니다. 표시되는 드롭다운 메뉴를 사용하여 SQL에서 결정한 옵션에서 차트에 속성을 추가할 수 있습니다. 차트 유형마다 X축 및 Y축 드롭다운과 같은 옵션이 다릅니다.
+위젯에 특성을 추가하려면 더하기 아이콘(![더하기 아이콘)을 선택합니다.](/help/images/icons/add-circle.png))을 클릭합니다. 표시되는 드롭다운 메뉴를 사용하여 SQL에서 결정한 옵션에서 차트에 속성을 추가할 수 있습니다. 차트 유형마다 X축 및 Y축 드롭다운과 같은 옵션이 다릅니다.
 
 이 도넛 차트 예제에서 옵션은 크기와 색상입니다. 색상은 도넛 차트 결과를 분류하며 크기는 사용된 실제 지표입니다. [!UICONTROL 색상] 필드에 특성을 추가하여 해당 특성의 구성에 따라 결과를 다른 색상으로 분할합니다.
 
 >[!TIP]
 >
->위쪽 및 아래쪽 화살표 아이콘(![위쪽 및 아래쪽 화살표 아이콘막대 또는 선 차트에서 X축과 Y축의 배열을 전환합니다.](../../images/customizable-insights/switch-axis-icon.png)
+>위쪽 및 아래쪽 화살표 아이콘(![위쪽 및 아래쪽 화살표 아이콘막대 또는 선 차트에서 X축과 Y축의 배열을 전환합니다.](/help/images/icons/switch.png)
 
 ![추가 아이콘 드롭다운과 스위치 화살표가 강조 표시된 위젯 작성기입니다.](../../images/customizable-insights/add-icon-and-switch-arrows.png)
 
@@ -73,7 +73,7 @@ UI 요소에 대한 자세한 내용은 [쿼리 편집기 사용 안내서](../.
 
 ## 위젯 속성 {#properties}
 
-속성 아이콘(![속성 아이콘)을 선택합니다.](../../images/customizable-insights/properties-icon.png))을(를) 오른쪽 레일에서 클릭하여 속성 패널을 엽니다. [!UICONTROL 속성] 패널에서 **[!UICONTROL 위젯 제목]** 텍스트 필드에 위젯 이름을 입력합니다. 차트의 다양한 측면 이름을 변경할 수도 있습니다.
+속성 아이콘(![속성 아이콘)을 선택합니다.](/help/images/icons/properties.png))을(를) 오른쪽 레일에서 클릭하여 속성 패널을 엽니다. [!UICONTROL 속성] 패널에서 **[!UICONTROL 위젯 제목]** 텍스트 필드에 위젯 이름을 입력합니다. 차트의 다양한 측면 이름을 변경할 수도 있습니다.
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ UI 요소에 대한 자세한 내용은 [쿼리 편집기 사용 안내서](../.
 
 ![편집이 강조 표시된 사용자 지정 대시보드입니다.](../../images/customizable-insights/edit-dashboard.png)
 
-**[!UICONTROL 필터 추가]**&#x200B;를 선택하여 [[!UICONTROL 날짜 필터]](#create-date-filter) 또는 [[!UICONTROL 전역 필터]](#create-global-filter)를 만듭니다. 만든 후에는 [필터 아이콘](#select-global-filter)(![필터 아이콘에서 모든 전역 및 날짜 필터를 사용할 수 있습니다.](../../images/customizable-insights/filter.png))을(를) 사용합니다.
+**[!UICONTROL 필터 추가]**&#x200B;를 선택하여 [[!UICONTROL 날짜 필터]](#create-date-filter) 또는 [[!UICONTROL 전역 필터]](#create-global-filter)를 만듭니다. 만든 후에는 [필터 아이콘](#select-global-filter)(![필터 아이콘에서 모든 전역 및 날짜 필터를 사용할 수 있습니다.](/help/images/icons/filter.png))을(를) 사용합니다.
 
 ![필터 추가 드롭다운 메뉴가 강조 표시된 사용자 지정 대시보드입니다.](../../images/customizable-insights/add-filter.png)
 

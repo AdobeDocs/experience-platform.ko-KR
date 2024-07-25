@@ -2,7 +2,7 @@
 title: UI에서 사용자 지정 활동 데이터에 대한 Source 연결 및 데이터 흐름 Marketo Engage 만들기
 description: 이 자습서에서는 사용자 지정 활동 데이터를 Adobe Experience Platform으로 가져오기 위해 UI에서 Marketo Engage 소스 연결 및 데이터 흐름을 만드는 단계를 제공합니다.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
@@ -127,7 +127,7 @@ Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선
 
 ![원본 데이터 구조입니다.](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
 
-대상 필드를 추가하려면 스키마 아이콘 ![스키마 아이콘](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png)을 선택한 다음 대상 스키마에서 사용자 지정 활동 필드를 선택하십시오.
+대상 필드를 추가하려면 스키마 아이콘 ![스키마 아이콘](/help/images/icons/schema.png)을 선택한 다음 대상 스키마에서 사용자 지정 활동 필드를 선택하십시오.
 
 ![대상 스키마 구조입니다.](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
 

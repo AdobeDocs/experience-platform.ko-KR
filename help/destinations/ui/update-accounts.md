@@ -4,7 +4,7 @@ title: 대상 계정 업데이트
 type: Tutorial
 description: 이 자습서에는 Adobe Experience Platform UI에서 대상 계정을 업데이트하는 단계가 나와 있습니다
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 0%
@@ -33,11 +33,11 @@ ht-degree: 0%
 
    ![계정 탭](../assets/ui/update-accounts/accounts-tab.png)
 
-2. 왼쪽 상단의 필터 아이콘 ![Filter-icon](../assets/ui/update-accounts/filter.png)을(를) 선택하여 정렬 패널을 시작합니다. 정렬 패널에서는 모든 대상의 목록을 제공합니다. 목록에서 대상을 두 개 이상 선택하여 선택한 대상과 연관된 계정의 필터링된 선택을 확인할 수 있습니다.
+2. 왼쪽 상단의 필터 아이콘 ![Filter-icon](/help/images/icons/filter.png)을(를) 선택하여 정렬 패널을 시작합니다. 정렬 패널에서는 모든 대상의 목록을 제공합니다. 목록에서 대상을 두 개 이상 선택하여 선택한 대상과 연관된 계정의 필터링된 선택을 확인할 수 있습니다.
 
    ![대상 계정 필터링](../assets/ui/update-accounts/filter-accounts.png)
 
-3. 업데이트하려는 계정 이름 옆의 생략 부호(`...`)를 선택합니다. 팝업 패널이 표시되어 계정을 **[!UICONTROL 대상자 활성화]**, **[!UICONTROL 세부 정보 편집]** 및 **[!UICONTROL 삭제]**&#x200B;하는 옵션을 제공합니다. 계정 정보를 편집하려면 ![세부 정보 편집 단추](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 세부 정보 편집 단추]** 단추를 선택하십시오.
+3. 업데이트하려는 계정 이름 옆의 생략 부호(`...`)를 선택합니다. 팝업 패널이 표시되어 계정을 **[!UICONTROL 대상자 활성화]**, **[!UICONTROL 세부 정보 편집]** 및 **[!UICONTROL 삭제]**&#x200B;하는 옵션을 제공합니다. 계정 정보를 편집하려면 ![세부 정보 편집 단추](/help/images/icons/edit.png) **[!UICONTROL 세부 정보 편집 단추]** 단추를 선택하십시오.
 
    ![계정 편집](../assets/ui/update-accounts/accounts-edit.png)
 

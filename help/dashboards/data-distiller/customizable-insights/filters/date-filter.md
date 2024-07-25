@@ -2,7 +2,7 @@
 title: 날짜 필터 만들기
 description: 사용자 정의 인사이트를 날짜별로 필터링하는 방법을 알아봅니다.
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '662'
 ht-degree: 0%
@@ -94,6 +94,6 @@ LIMIT  0;
 
 ## 날짜 필터 삭제 {#delete-date-filter}
 
-날짜 필터를 제거하려면 필터 삭제 아이콘(![필터 삭제 아이콘](../../../images/customizable-insights/delete-filter-icon.png))을 선택합니다.
+날짜 필터를 제거하려면 필터 삭제 아이콘(![필터 삭제 아이콘](/help/images/icons/filter-delete.png))을 선택합니다.
 
 ![필터 삭제 아이콘이 강조 표시된 사용자 지정 대시보드입니다.](../../../images/customizable-insights/delete-date-filter.png)

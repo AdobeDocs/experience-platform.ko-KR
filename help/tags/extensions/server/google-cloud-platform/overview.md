@@ -3,7 +3,7 @@ title: Google Cloud Platform 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장은 Edge Network 이벤트를 Google Cloud Platform으로 전송합니다.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: c5da1889-f917-42aa-b3a4-9557c31d6ee8
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 1%
@@ -47,8 +47,8 @@ ht-degree: 1%
 | 입력 | 설명 |
 | --- | --- |
 | [!UICONTROL 주제] | 이벤트 전달에서 이벤트를 받을 주제입니다. 값의 형식은 `projects/{projectName}/topics/{topicName}`이어야 합니다. |
-| [!UICONTROL 데이터] | 이 필드에는 JSON 형식으로 [!DNL Cloud Pub/Sub] 주제에 전달될 데이터가 포함되어 있습니다.<br><br>**[!UICONTROL 원본]** 옵션에서 JSON 개체를 제공된 텍스트 필드에 직접 붙여넣거나 데이터 요소 아이콘(![데이터 집합 아이콘](../../../images/extensions/server/aws/data-element-icon.png))을 선택하여 기존 데이터 요소 목록에서 데이터를 나타낼 수 있습니다.<br><br>UI 편집기를 통해 각 키-값 쌍을 수동으로 추가하려면 **[!UICONTROL JSON 키-값 쌍 편집기]** 옵션을 사용할 수도 있습니다. 각 값은 원시 입력으로 나타내거나 데이터 요소를 대신 선택할 수 있습니다. |
-| [!UICONTROL 특성] | 이 필드에는 메시지와 함께 보낼 추가 속성이 있는 JSON 오브젝트가 포함됩니다.<br><br>**[!UICONTROL 원본]** 옵션에서 JSON 개체를 제공된 텍스트 필드에 직접 붙여넣거나 데이터 요소 아이콘(![데이터 집합 아이콘](../../../images/extensions/server/aws/data-element-icon.png))을 선택하여 기존 데이터 요소 목록에서 데이터를 나타낼 수 있습니다.<br><br>UI 편집기를 통해 각 키-값 쌍을 수동으로 추가하려면 **[!UICONTROL JSON 키-값 쌍 편집기]** 옵션을 사용할 수도 있습니다. 각 값은 원시 입력으로 나타내거나 데이터 요소를 대신 선택할 수 있습니다. |
+| [!UICONTROL 데이터] | 이 필드에는 JSON 형식으로 [!DNL Cloud Pub/Sub] 주제에 전달될 데이터가 포함되어 있습니다.<br><br>**[!UICONTROL 원본]** 옵션에서 JSON 개체를 제공된 텍스트 필드에 직접 붙여넣거나 데이터 요소 아이콘(![데이터 집합 아이콘](/help/images/icons/database.png))을 선택하여 기존 데이터 요소 목록에서 데이터를 나타낼 수 있습니다.<br><br>UI 편집기를 통해 각 키-값 쌍을 수동으로 추가하려면 **[!UICONTROL JSON 키-값 쌍 편집기]** 옵션을 사용할 수도 있습니다. 각 값은 원시 입력으로 나타내거나 데이터 요소를 대신 선택할 수 있습니다. |
+| [!UICONTROL 특성] | 이 필드에는 메시지와 함께 보낼 추가 속성이 있는 JSON 오브젝트가 포함됩니다.<br><br>**[!UICONTROL 원본]** 옵션에서 JSON 개체를 제공된 텍스트 필드에 직접 붙여넣거나 데이터 요소 아이콘(![데이터 집합 아이콘](/help/images/icons/database.png))을 선택하여 기존 데이터 요소 목록에서 데이터를 나타낼 수 있습니다.<br><br>UI 편집기를 통해 각 키-값 쌍을 수동으로 추가하려면 **[!UICONTROL JSON 키-값 쌍 편집기]** 옵션을 사용할 수도 있습니다. 각 값은 원시 입력으로 나타내거나 데이터 요소를 대신 선택할 수 있습니다. |
 
 {style="table-layout:auto"}
 

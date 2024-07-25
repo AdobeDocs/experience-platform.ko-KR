@@ -3,7 +3,7 @@ title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 4%
@@ -205,21 +205,21 @@ Experience Platform은 지정한 저장소 위치에 내보낸 데이터 세트 
 
    >[!TIP]
    > 
-   >왼쪽 상단의 필터 아이콘 ![Filter-icon](../assets/ui/edit-activation/filter.png)을(를) 선택하여 정렬 패널을 시작합니다. 정렬 패널에서는 모든 대상의 목록을 제공합니다. 목록에서 두 개 이상의 대상을 선택하여 선택한 대상과 연관된 데이터 흐름의 필터링된 선택을 확인할 수 있습니다.
+   >왼쪽 상단의 필터 아이콘 ![Filter-icon](/help/images/icons/filter.png)을(를) 선택하여 정렬 패널을 시작합니다. 정렬 패널에서는 모든 대상의 목록을 제공합니다. 목록에서 두 개 이상의 대상을 선택하여 선택한 대상과 연관된 데이터 흐름의 필터링된 선택을 확인할 수 있습니다.
 
-1. **[!UICONTROL 활성화 데이터]** 열에서 데이터 세트 컨트롤을 선택하여 이 내보내기 데이터 흐름에 매핑된 모든 데이터 세트를 봅니다.
+2. **[!UICONTROL 활성화 데이터]** 열에서 데이터 세트 컨트롤을 선택하여 이 내보내기 데이터 흐름에 매핑된 모든 데이터 세트를 봅니다.
 
    ![활성화 데이터 열에서 사용 가능한 데이터 세트 탐색 옵션이 강조 표시되어 있습니다.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. [!BADGE Beta] 대상에 대한 **[!UICONTROL 활성화 데이터]** 페이지가 나타납니다. 데이터 세트 목록 왼쪽의 확인란을 사용하여 제거할 데이터 세트를 선택한 다음 오른쪽 레일에서 **[!UICONTROL 데이터 세트 제거]**&#x200B;를 선택하여 데이터 세트 제거 확인 대화 상자를 트리거합니다.
+3. [!BADGE Beta] 대상에 대한 **[!UICONTROL 활성화 데이터]** 페이지가 나타납니다. 데이터 세트 목록 왼쪽의 확인란을 사용하여 제거할 데이터 세트를 선택한 다음 오른쪽 레일에서 **[!UICONTROL 데이터 세트 제거]**&#x200B;를 선택하여 데이터 세트 제거 확인 대화 상자를 트리거합니다.
 
    >[!NOTE]
    >
-   >이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
+이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
 
    ![오른쪽 레일에서 데이터 집합 제거 컨트롤을 표시하는 데이터 집합 제거 대화 상자.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
-1. 확인 대화 상자에서 **[!UICONTROL 제거]**&#x200B;를 선택하여 대상으로 내보내기에서 데이터 세트를 즉시 제거합니다.
+4. 확인 대화 상자에서 **[!UICONTROL 제거]**&#x200B;를 선택하여 대상으로 내보내기에서 데이터 세트를 즉시 제거합니다.
 
    ![데이터 흐름에서 데이터 집합 제거 확인 옵션을 보여 주는 대화 상자.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 

@@ -3,7 +3,7 @@ title: Linkedin 전환 API 이벤트 전달 확장
 description: 이 Adobe Experience Platform 이벤트 전달 확장을 사용하면 Linkedin 마케팅 캠페인의 성능을 측정할 수 있습니다.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -52,7 +52,7 @@ ht-degree: 1%
 | --- | --- |
 | [!UICONTROL 이메일] | 전환 이벤트와 연계된 연락처의 이메일 주소. 제공된 값이 이미 SHA256 문자열인 경우가 아니면 이메일 값은 SHA256의 확장 코드에 의해 인코딩됩니다. |
 | [!UICONTROL LinkedIn 자사 광고 추적 UUID] | 자사 쿠키 ID입니다. 광고주가 클릭 URL에 클릭 ID 매개 변수 `li_fat_id`을(를) 추가하는 자사 쿠키를 활성화하려면 [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/help/lms/answer/a423304/enable-first-party-cookies-on-a-linkedin-insight-tag)에서 향상된 전환 추적을 활성화해야 합니다. |
-| [!UICONTROL 고객 정보 데이터] | 이 필드에는 메시지와 함께 전송될 추가 속성이 있는 JSON 오브젝트가 포함됩니다.<br><br>**[!UICONTROL 원본]** 옵션에서 JSON 개체를 제공된 텍스트 필드에 직접 붙여넣거나 데이터 요소 아이콘(![데이터 집합 아이콘](../../../images/extensions/server/aws/data-element-icon.png))을 선택하여 기존 데이터 요소 목록에서 데이터를 나타낼 수 있습니다.<br><br>UI 편집기를 통해 각 키-값 쌍을 수동으로 추가하려면 **[!UICONTROL JSON 키-값 쌍 편집기]** 옵션을 사용할 수도 있습니다. 각 값은 원시 입력으로 나타내거나 데이터 요소를 대신 선택할 수 있습니다. 허용되는 키 값은 `firstName`, `lastName`, `companyName`, `title` 및 `country`입니다. |
+| [!UICONTROL 고객 정보 데이터] | 이 필드에는 메시지와 함께 전송될 추가 속성이 있는 JSON 오브젝트가 포함됩니다.<br><br>**[!UICONTROL 원본]** 옵션에서 JSON 개체를 제공된 텍스트 필드에 직접 붙여넣거나 데이터 요소 아이콘(![데이터 집합 아이콘](/help/images/icons/database.png))을 선택하여 기존 데이터 요소 목록에서 데이터를 나타낼 수 있습니다.<br><br>UI 편집기를 통해 각 키-값 쌍을 수동으로 추가하려면 **[!UICONTROL JSON 키-값 쌍 편집기]** 옵션을 사용할 수도 있습니다. 각 값은 원시 입력으로 나타내거나 데이터 요소를 대신 선택할 수 있습니다. 허용되는 키 값은 `firstName`, `lastName`, `companyName`, `title` 및 `country`입니다. |
 
 {style="table-layout:auto"}
 

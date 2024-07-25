@@ -6,7 +6,7 @@ hide: true
 hidefromtoc: true
 role: Developer, Admin, User
 exl-id: 85944720-8551-491c-8991-dd9668beb0ca
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 1%
@@ -59,7 +59,7 @@ ht-degree: 1%
 특정 데이터 흐름에 액세스 레이블을 적용하려면 다음을 수행하십시오.
 
 1. **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]**(으)로 이동하여 사용자의 액세스를 제한하려는 대상 데이터 흐름을 찾습니다.
-1. [!UICONTROL 이름] 열에서 줄임표(`...`)를 선택하고 ![세부 정보 편집 컨트롤](/help/access-control/images/olac/key-icon.svg) **[!UICONTROL 액세스 레이블 적용]** 컨트롤을 사용하여 새 레이블을 추가하고 데이터 흐름의 기존 레이블을 관리합니다.
+1. [!UICONTROL 이름] 열에서 줄임표(`...`)를 선택하고 ![세부 정보 편집 컨트롤](/help/images/icons/key.png) **[!UICONTROL 액세스 레이블 적용]** 컨트롤을 사용하여 새 레이블을 추가하고 데이터 흐름의 기존 레이블을 관리합니다.
    ![대상 작업 영역의 찾아보기 보기에서 액세스 레이블 적용을 선택합니다.](/help/access-control/images/olac/apply-access-labels.png)
 1. 대상 데이터 흐름에 추가할 레이블을 선택하고 **[!UICONTROL 저장]**을(를) 선택합니다.
    ![대상 데이터 흐름에 적용할 액세스 레이블을 선택합니다.](/help/access-control/images/olac/view-access-labels.png)

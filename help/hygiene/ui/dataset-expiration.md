@@ -2,7 +2,7 @@
 title: 자동화된 데이터 세트 만료
 description: Adobe Experience Platform UI에서 데이터 세트 만료를 예약하는 방법을 알아봅니다.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 18%
@@ -55,11 +55,11 @@ Advanced Data Lifecycle Management는 [데이터 세트 만료 끝점](../api/da
 
 ### 날짜 및 데이터 세트 선택 {#select-date-and-dataset}
 
-**[!UICONTROL 요청된 작업]** 섹션에서 데이터 집합을 삭제할 날짜를 선택합니다. 날짜를 `mm/dd/yyyy` 형식으로 수동으로 입력하거나 달력 아이콘(![달력 아이콘)을 선택할 수 있습니다.대화 상자에서 날짜를 선택하려면 ](../images/ui/ttl/calendar-icon.png))
+**[!UICONTROL 요청된 작업]** 섹션에서 데이터 집합을 삭제할 날짜를 선택합니다. 날짜를 `mm/dd/yyyy` 형식으로 수동으로 입력하거나 달력 아이콘(![달력 아이콘)을 선택할 수 있습니다.대화 상자에서 날짜를 선택하려면 ](/help/images/icons/calendar.png))
 
 ![데이터 집합에 대해 선택한 만료 날짜가 강조 표시된 일정 대화 상자입니다.](../images/ui/ttl/select-date.png)
 
-그런 다음 **[!UICONTROL 데이터 집합 세부 정보]**&#x200B;에서 데이터베이스 아이콘(![데이터베이스 아이콘)을 선택합니다.](../images/ui/ttl/database-icon.png))을 클릭하여 데이터 집합 선택 대화 상자를 엽니다. 목록에서 만료를 적용할 데이터 집합을 선택한 다음 **[!UICONTROL 완료]**&#x200B;를 선택하십시오.
+그런 다음 **[!UICONTROL 데이터 집합 세부 정보]**&#x200B;에서 데이터베이스 아이콘(![데이터베이스 아이콘)을 선택합니다.](/help/images/icons/database.png))을 클릭하여 데이터 집합 선택 대화 상자를 엽니다. 목록에서 만료를 적용할 데이터 집합을 선택한 다음 **[!UICONTROL 완료]**&#x200B;를 선택하십시오.
 
 ![데이터 세트를 선택하고 [!UICONTROL 완료]를 강조 표시한 상태로 [!UICONTROL 데이터 세트 선택] 대화 상자가 표시됩니다.](../images/ui/ttl/select-dataset.png)
 

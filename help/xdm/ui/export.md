@@ -4,7 +4,7 @@ title: UI에서 XDM 스키마 내보내기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 스키마를 다른 샌드박스 또는 조직으로 내보내는 방법을 알아봅니다.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 11%
@@ -40,7 +40,7 @@ Platform UI를 사용하여 XDM 리소스를 내보낼 수 있지만 워크플�
 >
 >찾고 있는 XDM 리소스를 찾는 방법에 대한 자세한 내용은 [XDM 리소스 탐색](./explore.md)에 대한 안내서를 참조하십시오.
 
-그런 다음 사용 가능한 옵션에서 **[!UICONTROL JSON 복사]** 아이콘(![복사 아이콘](../images/ui/export/icon.png))을 선택합니다.
+그런 다음 사용 가능한 옵션에서 **[!UICONTROL JSON 복사]** 아이콘(![복사 아이콘](/help/images/icons/copy.png))을 선택합니다.
 
 ![스키마 행과 [!UICONTROL JSON으로 복사]가 강조 표시된 스키마 작업 영역.](../images/ui/export/copy-json.png)
 

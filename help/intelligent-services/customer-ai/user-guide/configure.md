@@ -5,7 +5,7 @@ feature: Customer AI
 title: Customer AI 인스턴스 구성
 description: AI/ML 서비스는 다양한 사용 사례에 맞게 구성할 수 있는 사용하기 쉬운 Adobe Sensei 서비스로 고객 AI를 제공합니다. 다음 섹션에서는 고객 AI의 인스턴스를 구성하는 단계를 제공합니다.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2827'
 ht-degree: 0%
@@ -72,7 +72,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 서비스]**&#x200B;를 선택�
 
 ![데이터 세트 선택](../images/user-guide/select-datasets.png)
 
-데이터 집합 옆에 있는 정보 아이콘 ![정보 아이콘](../images/user-guide/info-icon.png)을 선택하면 데이터 집합 미리 보기 팝오버가 열립니다.
+데이터 집합 옆에 있는 정보 아이콘 ![정보 아이콘](/help/images/icons/info.png)을 선택하면 데이터 집합 미리 보기 팝오버가 열립니다.
 
 ![데이터 세트 선택 및 검색](../images/user-guide/dataset-info.png)
 

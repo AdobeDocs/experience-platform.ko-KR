@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 클래스 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 클래스를 만들고 편집하는 방법을 알아봅니다.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 5%
@@ -74,7 +74,7 @@ Platform UI에서 클래스를 만드는 방법에는 두 가지가 있습니다
 
 ![검색 창, [!UICONTROL 사용자 지정] 및 [!UICONTROL 업종]이 강조 표시된 [!UICONTROL 스키마 만들기] 워크플로입니다.](../../images/ui/resources/classes/filter-and-search.png)
 
-적절한 클래스를 결정하는 데 도움이 되도록 정보(![정보 아이콘)가 있습니다.](../../images/ui/resources/classes/info.png)) 및 미리 보기(![미리 보기 아이콘각 클래스의 아이콘입니다. ](../../images/ui/resources/classes/preview.png) 정보 아이콘은 연관된 클래스 및 산업에 대한 설명을 제공하는 대화 상자를 엽니다. 미리 보기 아이콘은 스키마 다이어그램과 해당 속성이 포함된 클래스의 미리 보기 대화 상자를 엽니다.
+적절한 클래스를 결정하는 데 도움이 되도록 정보(![정보 아이콘)가 있습니다.](/help/images/icons/info.png)) 및 미리 보기(![미리 보기 아이콘각 클래스의 아이콘입니다. ](/help/images/icons/preview.png) 정보 아이콘은 연관된 클래스 및 산업에 대한 설명을 제공하는 대화 상자를 엽니다. 미리 보기 아이콘은 스키마 다이어그램과 해당 속성이 포함된 클래스의 미리 보기 대화 상자를 엽니다.
 
 ![스키마 다이어그램과 클래스 속성이 강조 표시된 선택한 클래스의 미리 보기입니다.](../../images/ui/resources/classes/class-preview.png)
 

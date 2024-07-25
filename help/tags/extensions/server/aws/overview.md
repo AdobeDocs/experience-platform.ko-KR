@@ -3,7 +3,7 @@ title: AWS 확장 개요
 description: Adobe Experience Platform의 이벤트 전달을 위한 AWS 확장에 대해 알아봅니다.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -66,7 +66,7 @@ ht-degree: 0%
 
 | 입력 | 설명 |
 | --- | --- |
-| [!UICONTROL 페이로드] | 이 필드에는 JSON 형식의 [!DNL Kinesis] 데이터 스트림으로 전달될 데이터가 포함되어 있습니다.<br><br>**[!UICONTROL 원본]** 옵션에서 JSON 개체를 제공된 텍스트 필드에 직접 붙여넣거나 데이터 요소 아이콘(![데이터 집합 아이콘](../../../images/extensions/server/aws/data-element-icon.png))을 선택하여 페이로드를 나타낼 기존 데이터 요소 목록에서 선택할 수 있습니다.<br><br>UI 편집기를 통해 각 키-값 쌍을 수동으로 추가하려면 **[!UICONTROL JSON 키-값 쌍 편집기]** 옵션을 사용할 수도 있습니다. 각 값은 원시 입력으로 나타내거나 데이터 요소를 대신 선택할 수 있습니다. |
+| [!UICONTROL 페이로드] | 이 필드에는 JSON 형식의 [!DNL Kinesis] 데이터 스트림으로 전달될 데이터가 포함되어 있습니다.<br><br>**[!UICONTROL 원본]** 옵션에서 JSON 개체를 제공된 텍스트 필드에 직접 붙여넣거나 데이터 요소 아이콘(![데이터 집합 아이콘](/help/images/icons/database.png))을 선택하여 페이로드를 나타낼 기존 데이터 요소 목록에서 선택할 수 있습니다.<br><br>UI 편집기를 통해 각 키-값 쌍을 수동으로 추가하려면 **[!UICONTROL JSON 키-값 쌍 편집기]** 옵션을 사용할 수도 있습니다. 각 값은 원시 입력으로 나타내거나 데이터 요소를 대신 선택할 수 있습니다. |
 
 {style="table-layout:auto"}
 

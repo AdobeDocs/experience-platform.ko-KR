@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 대상에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '3337'
 ht-degree: 10%
@@ -178,7 +178,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 >title="활성화"
 >abstract="대상 활성화 보기에는 고유한 ID를 생성하기 위해 실시간 고객 프로필에서 가져온 대상자의 활성화 상태 및 지표에 대한 정보가 포함됩니다."
 
-[!UICONTROL 모니터링] 대시보드에 액세스하려면 왼쪽 탐색에서 **[!UICONTROL 모니터링]**(![모니터링 아이콘](../assets/ui/monitor-destinations/monitoring-icon.png))을 선택하십시오. [!UICONTROL 모니터링] 페이지에서 [!UICONTROL 대상]을 선택하세요. [!UICONTROL 모니터링] 대시보드에는 대상 실행 작업에 대한 지표 및 정보가 포함되어 있습니다.
+[!UICONTROL 모니터링] 대시보드에 액세스하려면 왼쪽 탐색에서 **[!UICONTROL 모니터링]**(![모니터링 아이콘](/help/images/icons/monitoring.png))을 선택하십시오. [!UICONTROL 모니터링] 페이지에서 [!UICONTROL 대상]을 선택하세요. [!UICONTROL 모니터링] 대시보드에는 대상 실행 작업에 대한 지표 및 정보가 포함되어 있습니다.
 
 [!UICONTROL 대상] 대시보드를 사용하여 활성화 흐름의 상태에 대한 전반적인 아이디어를 얻을 수 있습니다. 먼저 모든 일괄 처리 및 스트리밍 대상에 대한 집계된 수준에서 통찰력을 얻은 다음 데이터 흐름, 데이터 흐름 실행 및 활성화된 대상에 대한 세부 보기로 드릴다운하여 활성화 데이터를 자세히 살펴봅니다. [!UICONTROL 모니터링] 대시보드의 화면은 활성화 시나리오에서 발생할 수 있는 문제를 해결하는 데 도움이 되는 지표 및 오류 설명을 통해 실행 가능한 통찰력을 제공합니다.
 
@@ -199,7 +199,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 ![활성화된 대상에 대해 강조 표시된 전환 확인 날짜 범위 제어 변경](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-화살표 아이콘(![화살표 아이콘](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png))을 사용하여 대상 유형(스트리밍 또는 배치)에 따라 활성화 세부 정보에 대한 정보를 한눈에 표시하는 화면 상단의 카드를 확장하거나 종료합니다.
+화살표 아이콘(![화살표 아이콘](/help/images/icons/chevron-up.png))을 사용하여 대상 유형(스트리밍 또는 배치)에 따라 활성화 세부 정보에 대한 정보를 한눈에 표시하는 화면 상단의 카드를 확장하거나 종료합니다.
 
 - **[!UICONTROL 스트리밍 활성화 비율]**: 활성화 또는 건너뛴 수신 ID의 백분율을 나타냅니다. 이 비율을 계산하는 데 사용되는 수식은 이 페이지의 [스트리밍 대상에 대한 데이터 흐름 실행](#dataflow-runs-for-streaming-destinations) 섹션에서 위에 자세히 설명되어 있습니다.
 - **[!UICONTROL 일괄 처리 실패 데이터 흐름 실행]**: 선택한 시간 간격에서 실패한 데이터 흐름 실행 수를 나타냅니다.
@@ -226,13 +226,13 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 ![드롭다운 선택기를 사용하여 대상 필터링](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-또한 검색 막대에 대상을 입력하여 단일 대상으로 격리할 수 있습니다. 대상의 데이터 흐름을 보려면 그 옆에 있는 필터 ![필터](../assets/ui/monitor-destinations/filter-add.png)를 선택하여 활성 데이터 흐름 목록을 볼 수 있습니다.
+또한 검색 막대에 대상을 입력하여 단일 대상으로 격리할 수 있습니다. 대상의 데이터 흐름을 보려면 그 옆에 있는 필터 ![필터](/help/images/icons/filter-add.png)를 선택하여 활성 데이터 흐름 목록을 볼 수 있습니다.
 
 ![모니터링 보기에서 강조 표시된 검색 창을 사용하여 대상을 필터링합니다.](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 모든 대상에 대한 기존 데이터 흐름을 모두 보려면 **[!UICONTROL 데이터 흐름]**&#x200B;을 선택하십시오.
 
-마지막 데이터 흐름 실행별로 정렬된 데이터 흐름 목록이 나타납니다. 모니터링할 대상을 찾아 그 옆에서 필터 ![필터](../assets/ui/monitor-destinations/filter-add.png)을(를) 선택한 다음 자세히 알아보려는 데이터 흐름 옆에서 필터 ![필터](../assets/ui/monitor-destinations/filter-add.png)을(를) 선택하면 특정 데이터 흐름에 대한 추가 세부 정보를 볼 수 있습니다.
+마지막 데이터 흐름 실행별로 정렬된 데이터 흐름 목록이 나타납니다. 모니터링할 대상을 찾아 그 옆에서 필터 ![필터](/help/images/icons/filter-add.png)을(를) 선택한 다음 자세히 알아보려는 데이터 흐름 옆에서 필터 ![필터](/help/images/icons/filter-add.png)을(를) 선택하면 특정 데이터 흐름에 대한 추가 세부 정보를 볼 수 있습니다.
 
 ![모니터링 대시보드에 강조 표시된 모든 데이터 흐름입니다.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
@@ -269,7 +269,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 ![데이터 흐름 패널에서 강조 표시된 대상.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 대상자 수준 보기에서 지표는 선택한 시간 범위 내의 여러 데이터 흐름 실행 간에 집계됩니다. 데이터 흐름 실행이 여러 개 있는 경우 대상 수준에서 드릴다운하여 선택한 대상으로 필터링한 각 데이터 흐름 실행에 대한 분류를 확인할 수 있습니다.
-필터 단추 ![filter](../assets/ui/monitor-destinations/filter-add.png)을(를) 사용하여 데이터 흐름의 각 대상에 대한 데이터 흐름 실행 보기로 드릴다운합니다.
+필터 단추 ![filter](/help/images/icons/filter-add.png)을(를) 사용하여 데이터 흐름의 각 대상에 대한 데이터 흐름 실행 보기로 드릴다운합니다.
 
 ### 데이터 흐름 실행 페이지 {#dataflow-runs-page}
 
@@ -283,7 +283,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 ![대상에 대한 데이터 흐름 실행을 필터링하는 방법을 보여 주는 라디오 단추.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
-특정 데이터 흐름 실행에 대한 자세한 내용을 보려면 데이터 흐름 실행 시작 시간 옆에 있는 필터 ![filter](../assets/ui/monitor-destinations/filter-add.png)을(를) 선택하여 데이터 흐름 실행 세부 정보 페이지를 보십시오.
+특정 데이터 흐름 실행에 대한 자세한 내용을 보려면 데이터 흐름 실행 시작 시간 옆에 있는 필터 ![filter](/help/images/icons/filter-add.png)을(를) 선택하여 데이터 흐름 실행 세부 정보 페이지를 보십시오.
 
 ![데이터 흐름 실행 특정 데이터 흐름 실행에 대한 자세한 정보를 드릴다운하는 모니터링 대시보드의 필터.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 

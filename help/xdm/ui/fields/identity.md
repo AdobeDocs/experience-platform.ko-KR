@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 ID 필드 정의
 description: Experience Platform 사용자 인터페이스에서 ID 필드를 정의하는 방법을 알아봅니다.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 6%
@@ -46,7 +46,7 @@ ID 필드는 플랫폼에서 고객 ID 그래프를 구성하는 방법에 대�
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-캔버스는 변경 내용을 반영하도록 업데이트되며, 선택한 필드는 ID로 지정하기 위해 지문 기호(![](../../images/ui/fields/special/identity-symbol.png))를 받습니다. 왼쪽 레일에서 이제 ID 필드가 스키마에 필드를 제공하는 클래스 또는 스키마 필드 그룹의 이름 아래에 나열됩니다.
+캔버스는 변경 내용을 반영하도록 업데이트되며, 선택한 필드는 ID로 지정하기 위해 지문 기호(![](/help/images/icons/identity-service.png))를 받습니다. 왼쪽 레일에서 이제 ID 필드가 스키마에 필드를 제공하는 클래스 또는 스키마 필드 그룹의 이름 아래에 나열됩니다.
 
 필드도 기본 ID로 설정된 경우 왼쪽 레일의 **[!UICONTROL 필수 필드]** 아래에 나열됩니다. 스키마 구조 내에 ID 필드가 중첩되면 모든 상위 필드도 필요에 따라 나열됩니다.
 

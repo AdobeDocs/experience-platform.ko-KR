@@ -2,7 +2,7 @@
 title: 스키마 편집기의 필드 기반 워크플로
 description: 기존 필드 그룹의 필드를 XDM(Experience Data Model) 스키마에 개별적으로 추가하는 방법을 알아봅니다.
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 19e0a26958ec57ccbc614be53b5aaacce7ce9450
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1301'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Adobe Experience Platform은 XDM(경험 데이터 모델) 스키마에서 사용
 
 일부 표준 필드는 동일한 이름을 공유하지만 구조는 출신 필드 그룹에 따라 달라질 수 있습니다. 표준 필드가 필드 그룹 구조의 상위 오브젝트 내에 중첩된 경우 하위 필드가 추가되면 상위 필드도 스키마에 포함됩니다.
 
-표준 필드 옆에 있는 미리 보기 아이콘(![미리 보기 아이콘](../images/ui/field-based-workflows/preview-icon.png))을 선택하여 해당 필드 그룹의 구조를 보고 중첩 방법을 더 잘 이해합니다. 스키마에 표준 필드를 추가하려면 더하기 아이콘(![더하기 아이콘](../images/ui/field-based-workflows/add-icon.png))을 선택합니다.
+표준 필드 옆에 있는 미리 보기 아이콘(![미리 보기 아이콘](/help/images/icons/preview.png))을 선택하여 해당 필드 그룹의 구조를 보고 중첩 방법을 더 잘 이해합니다. 스키마에 표준 필드를 추가하려면 더하기 아이콘(![더하기 아이콘](/help/images/icons/add-circle.png))을 선택합니다.
 
 ![제안된 표준 필드의 항목에 강조 표시된 추가 아이콘입니다.](../images/ui/field-based-workflows/add-standard-field.png)
 

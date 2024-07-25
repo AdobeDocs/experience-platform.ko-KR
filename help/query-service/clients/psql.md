@@ -4,7 +4,7 @@ solution: Experience Platform
 title: PSQL을 쿼리 서비스에 연결
 description: PSQL은 컴퓨터에 PostgreSQL을 설치할 때 제공되는 명령줄 인터페이스입니다. 다음 지침에 따라 설치할 수 있습니다.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
@@ -21,7 +21,7 @@ PSQL은 컴퓨터에 [!DNL PostgreSQL]을(를) 설치할 때 설치되는 명령
 
 컴퓨터에 PSQL을 설치한 후 쿼리 서비스와 PSQL을 연결할 준비가 되었습니다. [!DNL Platform] UI로 돌아간 다음 **[!UICONTROL 쿼리]**, **[!UICONTROL 자격 증명]**&#x200B;을 차례로 선택합니다.
 
-**[!UICONTROL PSQL 명령]** 섹션에서 **[!UICONTROL 클립보드에 복사]** 아이콘(![복사 아이콘](../images/clients/psql/copy-icon.png))을 선택하여 명령 문자열을 복사합니다.
+**[!UICONTROL PSQL 명령]** 섹션에서 **[!UICONTROL 클립보드에 복사]** 아이콘(![복사 아이콘](/help/images/icons/copy.png))을 선택하여 명령 문자열을 복사합니다.
 
 ![복사 아이콘이 강조 표시된 쿼리 대시보드 자격 증명 탭입니다.](../images/clients/psql/connect-bi.png)
 

@@ -2,7 +2,7 @@
 title: 메타 전환 API 확장 개요
 description: Adobe Experience Platform의 이벤트 전달을 위한 메타 전환 API 확장에 대해 알아봅니다.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2583'
 ht-degree: 0%
@@ -160,7 +160,7 @@ facebook 및 Instagram에서 인증하라는 대화 상자 프롬프트가 이�
 
 ![초기 설정 완료 확인 화면](../../../images/extensions/server/meta/setup-complete.png)
 
-**[!UICONTROL 사이트에 코드 추가]** 대화 상자에서 복사 ![Copy](../../../images/extensions/server/meta/copy-icon.png) 함수를 사용하여 제공된 코드를 복사하여 원본 웹 사이트의 `<head>`에 붙여넣습니다. 구현되면 **[!UICONTROL 유효성 검사 시작]**&#x200B;을 선택하십시오.
+**[!UICONTROL 사이트에 코드 추가]** 대화 상자에서 복사 ![Copy](/help/images/icons/copy.png) 함수를 사용하여 제공된 코드를 복사하여 원본 웹 사이트의 `<head>`에 붙여넣습니다. 구현되면 **[!UICONTROL 유효성 검사 시작]**&#x200B;을 선택하십시오.
 
 ![사이트 대화 상자에 코드 추가](../../../images/extensions/server/meta/add-code-on-your-site.png)
 

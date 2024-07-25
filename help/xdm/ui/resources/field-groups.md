@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 스키마 필드 그룹 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마 필드 그룹을 만들고 편집하는 방법을 알아봅니다.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '999'
 ht-degree: 8%
@@ -56,7 +56,7 @@ Adobe Experience Platform은 광범위한 마케팅 사용 사례를 다루는 �
 
 >[!NOTE]
 >
->조직에서 정의한 사용자 정의 필드 그룹만 완전히 편집하고 사용자 정의할 수 있습니다. Adobe으로 정의된 코어 필드 그룹의 경우 개별 스키마의 컨텍스트 내에서 해당 필드의 표시 이름만 편집할 수 있습니다. 이러한 속성은 자물쇠 아이콘(![자물쇠 아이콘)으로 스키마 편집기에 표시됩니다.](../../images/ui/explore/padlock-icon.png)). 자세한 내용은 [스키마 필드에 대한 표시 이름 편집](./schemas.md#display-names)의 섹션을 참조하십시오.
+>조직에서 정의한 사용자 정의 필드 그룹만 완전히 편집하고 사용자 정의할 수 있습니다. Adobe으로 정의된 코어 필드 그룹의 경우 개별 스키마의 컨텍스트 내에서 해당 필드의 표시 이름만 편집할 수 있습니다. 이러한 속성은 자물쇠 아이콘(![자물쇠 아이콘)으로 스키마 편집기에 표시됩니다.](/help/images/icons/lock-closed.png)). 자세한 내용은 [스키마 필드에 대한 표시 이름 편집](./schemas.md#display-names)의 섹션을 참조하십시오.
 >
 >사용자 정의 필드 그룹이 데이터 수집을 위해 스키마에 저장되고 사용된 후에는 필드 그룹에 추가 변경만 수행할 수 있습니다. 자세한 내용은 [스키마 진화의 규칙](../../schema/composition.md#evolution)을 참조하십시오.
 

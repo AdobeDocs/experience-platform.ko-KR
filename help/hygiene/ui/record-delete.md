@@ -3,7 +3,7 @@ title: 레코드 삭제
 description: Adobe Experience Platform UI에서 레코드를 삭제하는 방법을 알아봅니다.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 8%
@@ -51,7 +51,7 @@ Platform의 ID에 대한 자세한 내용은 다음 설명서를 참조하십시
 
 다음 단계는 단일 데이터 세트에서 레코드를 삭제할지 또는 모든 데이터 세트에서 레코드를 삭제할지를 결정하는 것입니다. 이 옵션을 사용할 수 없는 경우 안내서의 [ID 제공](#provide-identities) 섹션을 계속하십시오.
 
-**[!UICONTROL 레코드 세부 정보]** 섹션에서 라디오 단추를 사용하여 특정 데이터 세트와 모든 데이터 세트 중에서 선택합니다. **[!UICONTROL 데이터 세트 선택]**&#x200B;을 선택한 경우 데이터베이스 아이콘(![데이터베이스 아이콘](../images/ui/record-delete/database-icon.png))을 선택하여 사용 가능한 데이터 세트 목록을 제공하는 대화 상자를 엽니다. 목록에서 원하는 데이터 세트를 선택한 다음 **[!UICONTROL 완료]**&#x200B;를 선택합니다.
+**[!UICONTROL 레코드 세부 정보]** 섹션에서 라디오 단추를 사용하여 특정 데이터 세트와 모든 데이터 세트 중에서 선택합니다. **[!UICONTROL 데이터 세트 선택]**&#x200B;을 선택한 경우 데이터베이스 아이콘(![데이터베이스 아이콘](/help/images/icons/database.png))을 선택하여 사용 가능한 데이터 세트 목록을 제공하는 대화 상자를 엽니다. 목록에서 원하는 데이터 세트를 선택한 다음 **[!UICONTROL 완료]**&#x200B;를 선택합니다.
 
 ![데이터 세트를 선택하고 [!UICONTROL 완료]를 강조 표시한 상태로 [!UICONTROL 데이터 세트 선택] 대화 상자가 표시됩니다.](../images/ui/record-delete/select-dataset.png)
 
@@ -130,7 +130,7 @@ ID를 한 번에 하나씩 입력할 수 있는 컨트롤이 나타납니다. **
 
 ![ID 필드가 있는 요청 만들기 워크플로를 수동으로 추가했습니다.](../images/ui/record-delete/identity-added.png)
 
-더 많은 ID를 추가하려면 더하기 아이콘(![더하기 아이콘)을 선택하십시오.](../images/ui/record-delete/plus-icon.png)) 행 중 하나 옆에 있거나 **[!UICONTROL ID 추가]**&#x200B;를 선택합니다.
+더 많은 ID를 추가하려면 더하기 아이콘(![더하기 아이콘)을 선택하십시오.](/help/images/icons/tree-expand-all.png)) 행 중 하나 옆에 있거나 **[!UICONTROL ID 추가]**&#x200B;를 선택합니다.
 
 ![더하기 아이콘과 ID 추가 아이콘이 강조 표시된 요청 생성 워크플로우입니다.](../images/ui/record-delete/more-identities.png)
 

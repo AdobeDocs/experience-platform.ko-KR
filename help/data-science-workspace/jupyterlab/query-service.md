@@ -5,7 +5,7 @@ title: Jupyter Notebook의 쿼리 서비스
 type: Tutorial
 description: Adobe Experience Platform에서는 쿼리 서비스를 JupyterLab에 표준 기능으로 통합하여 데이터 과학 Workspace에서 SQL(Structured Query Language)을 사용할 수 있습니다. 이 자습서에서는 Adobe Analytics 데이터를 탐색, 변환 및 분석하는 일반적인 사용 사례에 대한 샘플 SQL 쿼리를 보여 줍니다.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 0%
@@ -98,7 +98,7 @@ ht-degree: 0%
 
 개별 전자 필기장 셀에 다음 SQL 쿼리를 입력합니다. 해당 셀에서 을 선택한 다음 **[!UICONTROL 재생]** 버튼을 선택하여 쿼리를 실행합니다. 성공한 쿼리 결과 또는 오류 로그는 실행된 셀 아래에 표시됩니다.
 
-전자 필기장이 오랫동안 비활성 상태이면 전자 필기장과 [!DNL Query Service] 간의 연결이 끊어질 수 있습니다. 이 경우 전원 단추 옆에 있는 오른쪽 상단의 **다시 시작** 단추 ![다시 시작 단추](../images/jupyterlab/user-guide/restart_button.png)를 선택하여 [!DNL JupyterLab]을(를) 다시 시작합니다.
+전자 필기장이 오랫동안 비활성 상태이면 전자 필기장과 [!DNL Query Service] 간의 연결이 끊어질 수 있습니다. 이 경우 전원 단추 옆에 있는 오른쪽 상단의 **다시 시작** 단추 ![다시 시작 단추](/help/images/icons/restart.png)를 선택하여 [!DNL JupyterLab]을(를) 다시 시작합니다.
 
 노트북 커널은 재설정되지만 셀은 남아 있다가 모든 셀을 다시 실행하여 중지된 위치에서 계속 진행합니다.
 

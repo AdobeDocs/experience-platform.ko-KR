@@ -4,7 +4,7 @@ description: Adobe Experience Platform Identity Service는 디바이스와 시�
 title: UI에서 ID에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 9%
@@ -62,7 +62,7 @@ Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 �
 | **[!UICONTROL 그래프 업데이트됨]** | 새 에지로 업데이트된 기존 ID 그래프 수입니다. |
 | **[!UICONTROL 실패한 총 데이터 흐름]** | 실패한 데이터 흐름 실행 수입니다. |
 
-소스 이름 옆에 있는 필터 아이콘 ![필터 아이콘](../assets/ui/monitor-identities/filter.png)을 선택하여 선택한 소스의 데이터 흐름에 대한 ID 처리 정보를 볼 수 있습니다.
+소스 이름 옆에 있는 필터 아이콘 ![필터 아이콘](/help/images/icons/filter.png)을 선택하여 선택한 소스의 데이터 흐름에 대한 ID 처리 정보를 볼 수 있습니다.
 
 ![필터 아이콘이 강조 표시되어 있습니다. 이 아이콘을 선택하면 선택한 소스의 데이터 흐름을 볼 수 있습니다.](../assets/ui/monitor-identities/sources-filter.png)
 
@@ -87,7 +87,7 @@ Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 �
 | **[!UICONTROL 그래프 업데이트됨]** | 새 에지로 업데이트된 기존 ID 그래프 수입니다. |
 | **[!UICONTROL 실패한 총 데이터 흐름]** | 실패한 데이터 흐름 실행 수입니다. |
 
-[!DNL Identity] 데이터 흐름 실행에 대한 자세한 내용을 보려면 데이터 흐름 실행 시작 시간 옆에 있는 필터 아이콘 ![filter](../assets/ui/monitor-identities/filter.png)을(를) 선택하십시오.
+[!DNL Identity] 데이터 흐름 실행에 대한 자세한 내용을 보려면 데이터 흐름 실행 시작 시간 옆에 있는 필터 아이콘 ![filter](/help/images/icons/filter.png)을(를) 선택하십시오.
 
 ![필터 아이콘이 강조 표시되어 있습니다. 이 아이콘을 선택하면 선택한 데이터 흐름에 대한 세부 정보를 볼 수 있습니다.](../assets/ui/monitor-identities/dataflows-filter.png)
 

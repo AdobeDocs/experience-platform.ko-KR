@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 데이터 사용 레이블 관리
 description: 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 사용 레이블 작업을 위한 단계를 다룹니다.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1538'
 ht-degree: 17%
@@ -71,7 +71,7 @@ ht-degree: 17%
 
 ![데이터 거버넌스가 강조 표시된 [!UICONTROL 데이터 집합] 작업 영역의 [!UICONTROL 데이터 거버넌스] 탭.](../images/labels/dataset-governance.png)
 
-데이터 집합 수준에서 데이터 사용 레이블을 편집하려면 먼저 연필 아이콘(![연필 아이콘)을 선택하십시오.](../images/labels/edit-icon.png))을(를) 데이터 집합 이름의 행에 포함합니다.
+데이터 집합 수준에서 데이터 사용 레이블을 편집하려면 먼저 연필 아이콘(![연필 아이콘)을 선택하십시오.](/help/images/icons/edit.png))을(를) 데이터 집합 이름의 행에 포함합니다.
 
 ![연필 편집 아이콘이 강조 표시된 [!UICONTROL 데이터 집합] 작업 영역의 [!UICONTROL 데이터 거버넌스] 탭.](../images/labels/dataset-level-edit.png)
 

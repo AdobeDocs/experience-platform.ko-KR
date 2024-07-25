@@ -5,7 +5,7 @@ title: 스키마 편집기를 사용하여 스키마 만들기
 type: Tutorial
 description: 이 튜토리얼에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 1%
@@ -115,7 +115,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 
 >[!NOTE]
 >
->스키마 편집기 내에서 표준(Adobe 생성) 클래스와 필드 그룹은 자물쇠 아이콘(![자물쇠 아이콘)으로 표시됩니다.](../images/ui/explore/padlock-icon.png) 질문에 답합니다. 자물쇠는 클래스 또는 필드 그룹 이름 옆의 왼쪽 레일과 시스템 생성 리소스의 일부인 스키마 다이어그램의 필드 옆에 나타납니다.
+>스키마 편집기 내에서 표준(Adobe 생성) 클래스와 필드 그룹은 자물쇠 아이콘(![자물쇠 아이콘)으로 표시됩니다.](/help/images/icons/lock-closed.png) 질문에 답합니다. 자물쇠는 클래스 또는 필드 그룹 이름 옆의 왼쪽 레일과 시스템 생성 리소스의 일부인 스키마 다이어그램의 필드 옆에 나타납니다.
 >
 >![자물쇠 아이콘이 강조 표시된 스키마 편집기](../images/ui/explore/padlock-icon-highlight.png)
 

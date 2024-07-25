@@ -2,7 +2,7 @@
 title: 글로벌 필터 만들기
 description: 사용자 지정 전역 적용 필터를 사용하여 데이터 인사이트를 필터링하는 방법을 알아봅니다.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 사용자 지정된 전역 필터를 사용하여 SQL에서 제공하는 통찰력을 빠르게 변경할 수 있습니다.
 
-[!UICONTROL 전역 필터 만들기] 대화 상자가 열립니다. 전역 필터를 만드는 것은 SQL을 사용하여 통찰력을 만드는 것과 동일한 프로세스를 따릅니다. 먼저 쿼리할 데이터베이스(Insights 데이터 모델)를 선택한 다음 쿼리 편집기에서 사용자 지정 SQL을 입력하고 마지막으로 실행 아이콘(![실행 아이콘.](../../../images/customizable-insights/run-icon.png))을 선택합니다.
+[!UICONTROL 전역 필터 만들기] 대화 상자가 열립니다. 전역 필터를 만드는 것은 SQL을 사용하여 통찰력을 만드는 것과 동일한 프로세스를 따릅니다. 먼저 쿼리할 데이터베이스(Insights 데이터 모델)를 선택한 다음 쿼리 편집기에서 사용자 지정 SQL을 입력하고 마지막으로 실행 아이콘(![실행 아이콘.](/help/images/icons/play.png))을 선택합니다.
 
 >[!IMPORTANT]
 >
@@ -57,6 +57,6 @@ ht-degree: 0%
 
 ## 글로벌 필터 선택 {#select-global-filter}
 
-모든 사용자 지정 필터를 나열하는 [!UICONTROL 필터] 대화 상자를 열려면 필터 아이콘(![필터 아이콘)을 선택합니다.](../../../images/customizable-insights/filter.png))을(를) 클릭합니다. 그런 다음 대시보드 인사이트에 효과를 적용하려면 전역 필터의 드롭다운 메뉴에서 옵션을 선택한 다음 **[!UICONTROL 적용]**&#x200B;을 선택합니다.
+모든 사용자 지정 필터를 나열하는 [!UICONTROL 필터] 대화 상자를 열려면 필터 아이콘(![필터 아이콘)을 선택합니다.](/help/images/icons/filter.png))을(를) 클릭합니다. 그런 다음 대시보드 인사이트에 효과를 적용하려면 전역 필터의 드롭다운 메뉴에서 옵션을 선택한 다음 **[!UICONTROL 적용]**&#x200B;을 선택합니다.
 
 ![필터 대화 상자가 강조 표시된 사용자 지정 대시보드입니다.](../../../images/customizable-insights/custom-filters.png)

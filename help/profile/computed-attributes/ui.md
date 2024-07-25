@@ -2,7 +2,7 @@
 title: 계산된 속성 UI 안내서
 description: Adobe Experience Platform UI를 사용하여 계산된 속성을 만들고, 보고, 업데이트하는 방법을 알아봅니다.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1576'
 ht-degree: 6%
@@ -32,7 +32,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 프로필]**, **[!UI
 
 ![[!UICONTROL 프로필] 섹션과 [!UICONTROL 계산된 특성] 탭이 강조 표시되어 사용자가 계산된 특성 검색 페이지에 액세스하는 방법을 보여 줍니다.](./images/ui/browse.png)
 
-표시할 필드를 선택하려면 ![열 구성 아이콘](./images/ui/configure-icon.png)을 선택하여 표시할 필드를 추가하거나 제거할 수 있습니다.
+표시할 필드를 선택하려면 ![열 구성 아이콘](/help/images/icons/column-settings.png)을 선택하여 표시할 필드를 추가하거나 제거할 수 있습니다.
 
 | 필드 | 설명 |
 | ----- | ----------- |
@@ -47,7 +47,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 프로필]**, **[!UI
 | [!UICONTROL 생성일] | 계산된 속성이 생성된 날짜와 시간을 보여 주는 타임스탬프입니다. |
 | [!UICONTROL 마지막 수정일] | 계산된 속성이 마지막으로 수정된 날짜와 시간을 보여 주는 타임스탬프입니다. |
 
-라이프사이클 상태에 따라 표시된 계산된 속성을 필터링할 수도 있습니다. ![단계](./images/ui/filter-icon.png) 아이콘을 선택하십시오.
+라이프사이클 상태에 따라 표시된 계산된 속성을 필터링할 수도 있습니다. ![단계](/help/images/icons/filter.png) 아이콘을 선택하십시오.
 
 ![필터 아이콘이 강조 표시되어 있습니다.](./images/ui/select-filter.png)
 

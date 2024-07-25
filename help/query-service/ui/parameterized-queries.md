@@ -2,7 +2,7 @@
 title: 매개 변수가 있는 쿼리
 description: Adobe Experience Platform UI에서 매개 변수가 있는 쿼리를 사용하는 방법에 대해 알아봅니다.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 11%
@@ -47,7 +47,7 @@ SELECT
 
 UI에서 매개 변수가 있는 쿼리를 만들려면 쿼리 편집기로 이동합니다. 자세한 지침은 [쿼리 편집기 액세스](./user-guide.md#accessing-query-editor)에 대한 섹션을 참조하십시오.
 
-`'$'` 서문을 사용하여 텍스트 편집기의 쿼리에 쿼리 매개변수를 입력합니다. 그런 다음 [!UICONTROL 콘솔] 옆에 있는 **[!UICONTROL 쿼리 매개 변수]** 탭을 선택하고 키에 대해 누락된 값을 추가합니다. 필요한 키에 값을 추가하지 않으면 쿼리를 실행할 수 없습니다. 경고 아이콘(![경고 아이콘.](../images/ui/parameterized-queries/alert-icon.png))이(가) 쿼리 매개 변수 섹션에 비어 있는 [!UICONTROL 값] 입력 필드 옆에 나타납니다.
+`'$'` 서문을 사용하여 텍스트 편집기의 쿼리에 쿼리 매개변수를 입력합니다. 그런 다음 [!UICONTROL 콘솔] 옆에 있는 **[!UICONTROL 쿼리 매개 변수]** 탭을 선택하고 키에 대해 누락된 값을 추가합니다. 필요한 키에 값을 추가하지 않으면 쿼리를 실행할 수 없습니다. 경고 아이콘(![경고 아이콘.](/help/images/icons/alert.png))이(가) 쿼리 매개 변수 섹션에 비어 있는 [!UICONTROL 값] 입력 필드 옆에 나타납니다.
 
 >[!NOTE]
 >

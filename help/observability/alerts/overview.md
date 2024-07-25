@@ -4,7 +4,7 @@ title: 경고 개요
 description: 경고 규칙이 정의되는 구조를 포함하여 Adobe Experience Platform에서의 다양한 경고에 대해 알아봅니다.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 3%
@@ -31,7 +31,7 @@ Platform 경고를 한 번 전송하거나 해결할 때까지 사전 정의된 
 | --- | --- |
 | 반드시 문제가 있음을 나타내지는 않습니다. | 잠재적으로 원하지 않는 상태를 나타냅니다. |
 | 반복하지 않습니다. | 이상 상태가 지속되면 반복할 수 있습니다. |
-| 해당 예는 다음과 같습니다.<ul><li>데이터 수집이 완료되었습니다.</li><li>쿼리 실행이 완료되었습니다.</li><li>데이터가 삭제되었습니다.</li></ul> | 해당 예는 다음과 같습니다.<ul><li>수집 기간이 SLA(서비스 수준 계약)를 초과합니다.</li><li>지난 24시간 동안 일일 섭취는 발생하지 않았습니다.</li><li>스트림 프로세서의 오류 속도가 구성된 임계값을 초과합니다.</li><li>총 프로필 수가 권한을 초과합니다.</li></ul> |
+| 해당 예는 다음과 같습니다.<ul><li>데이터 수집이 완료되었습니다.</li><li>쿼리 실행이 완료되었습니다.</li><li>데이터가 삭제되었습니다.</li></ul> | 해당 예는 다음과 같습니다.<ul><li>수집 기간이 서비스 수준 계약(SLA)을 초과합니다.</li><li>지난 24시간 동안 일일 섭취는 발생하지 않았습니다.</li><li>스트림 프로세서의 오류 속도가 구성된 임계값을 초과합니다.</li><li>총 프로필 수가 권한을 초과합니다.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -83,7 +83,7 @@ Platform UI에서 경고로 작업하려면 Adobe Admin Console을 통해 다음
 >
 >플랫폼에서 권한을 관리하는 방법에 대한 자세한 내용은 [액세스 제어 설명서](../../access-control/ui/overview.md)를 참조하세요.
 
-경고 보기 권한으로 오른쪽 상단 모서리에서 벨 아이콘(![벨 아이콘](../images/alerts/overview/icon.png))을 선택하여 받은 경고를 볼 수 있습니다.
+경고 보기 권한으로 오른쪽 상단 모서리에서 벨 아이콘(![벨 아이콘](/help/images/icons/bell.png))을 선택하여 받은 경고를 볼 수 있습니다.
 
 ![](../images/alerts/overview/ui.png)
 

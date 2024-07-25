@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Attribution AI UI 안내서
 description: 이 문서는 Intelligent Services 사용자 인터페이스에서 Attribution AI과 상호 작용하기 위한 안내서 역할을 합니다.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2450'
 ht-degree: 0%
@@ -63,7 +63,7 @@ UI의 오른쪽에 있는 컨트롤을 사용하여 서비스 모델을 편집, 
 
 ![데이터 세트 선택](./images/user-guide/select-datasets.png)
 
-데이터 집합 옆에 있는 정보 아이콘 ![정보 아이콘](./images/user-guide/info-icon.png)을 선택하면 데이터 집합 미리 보기 팝오버가 열립니다.
+데이터 집합 옆에 있는 정보 아이콘 ![정보 아이콘](/help/images/icons/info.png)을 선택하면 데이터 집합 미리 보기 팝오버가 열립니다.
 
 ![데이터 세트 선택 및 검색](./images/user-guide/dataset-preview.png)
 

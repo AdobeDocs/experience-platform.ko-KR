@@ -3,7 +3,7 @@ description: Adobe Experience Platform UI에서 템플릿을 사용하여 B2B �
 title: UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 10%
@@ -174,7 +174,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 
 +++
 
-선택한 비즈니스 유형에 따라 템플릿 목록이 나타납니다. 템플릿의 샘플 데이터를 미리 보려면 템플릿 이름 옆에 있는 미리 보기 아이콘 ![미리 보기 아이콘](../../images/tutorials/templates/preview-icon.png)을 선택하십시오.
+선택한 비즈니스 유형에 따라 템플릿 목록이 나타납니다. 템플릿의 샘플 데이터를 미리 보려면 템플릿 이름 옆에 있는 미리 보기 아이콘 ![미리 보기 아이콘](/help/images/icons/preview.png)을 선택하십시오.
 
 ![미리 보기 아이콘이 강조 표시된 템플릿 목록입니다.](../../images/tutorials/templates/templates.png)
 

@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform B2B 에디션에서 두 스키마 간의 관계 정의
 description: Adobe Real-time Customer Data Platform B2B 에디션에서 두 스키마 간의 다대일 관계를 정의하는 방법을 알아봅니다.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 15%
@@ -97,7 +97,7 @@ Adobe Real-time Customer Data Platform B2B 에디션은 [계정](../classes/b2b/
 >
 >현재 소스 스키마에서 참조 스키마까지 다대일 및 일대일 관계만 정의할 수 있습니다. 일대다 관계의 경우 &quot;다&quot;를 나타내는 관계 필드를 스키마에 정의해야 합니다.
 
-관계 필드를 설정하려면 캔버스 내에서 해당 필드 옆에 있는 화살표 아이콘(![화살표 아이콘](../images/tutorials/relationship-b2b/arrow.png))을 선택하십시오. [!DNL Opportunities] 스키마의 경우 계정과 다대일 관계를 설정하는 것이 목표이므로 `accountKey.sourceKey` 필드입니다.
+관계 필드를 설정하려면 캔버스 내에서 해당 필드 옆에 있는 화살표 아이콘(![화살표 아이콘](/help/images/icons/alias.png))을 선택하십시오. [!DNL Opportunities] 스키마의 경우 계정과 다대일 관계를 설정하는 것이 목표이므로 `accountKey.sourceKey` 필드입니다.
 
 ![관계 단추](../images/tutorials/relationship-b2b/relationship-button.png)
 

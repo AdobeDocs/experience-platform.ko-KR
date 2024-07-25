@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 UI 안내서
 description: Adobe Experience Platform UI에서 대상 및 세그먼트 정의를 만들고 관리하는 방법을 알아봅니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: acfe91144175e136955ffd9f0cdae2c351217c16
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 1%
@@ -69,7 +69,7 @@ Audience Portal에 대한 자세한 내용은 [Audience Portal 개요](./audienc
 | 액세스 관리 | 대상에 속하는 액세스 레이블을 관리합니다. 액세스 레이블에 대한 자세한 내용은 [레이블 관리](../../access-control/abac/ui/labels.md)에 대한 설명서를 참조하십시오. |
 | 삭제 | 선택한 대상자를 삭제합니다. 다운스트림 대상에 사용되거나 다른 대상에 종속된 대상은 **삭제할 수 없습니다**. 대상자 삭제에 대한 자세한 내용은 [세그먼테이션 FAQ](../faq.md#lifecycle-states)를 참조하십시오. |
 
-![표 사용자 지정](../images/ui/overview/customize-table.png) 아이콘을 선택하여 표시되는 필드를 변경할 수 있습니다.
+![표 사용자 지정](/help/images/icons/column-settings.png) 아이콘을 선택하여 표시되는 필드를 변경할 수 있습니다.
 
 ![표 사용자 지정 단추가 강조 표시되어 있습니다. 이 단추를 선택하면 대상자 구성 페이지에 표시되는 필드를 사용자 지정할 수 있습니다.](../images/ui/overview/compositions-select-customize-table.png)
 

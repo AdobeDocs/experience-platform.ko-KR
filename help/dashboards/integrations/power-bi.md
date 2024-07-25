@@ -2,10 +2,10 @@
 title: Platform 대시보드용 Power BI 보고서 템플릿
 description: 보고서 템플릿을 사용함으로써 Power BI를 사용하여 Experience Platform 데이터를 탐색합니다.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
-source-wordcount: '1465'
-ht-degree: 92%
+source-wordcount: '1467'
+ht-degree: 91%
 
 ---
 
@@ -144,7 +144,7 @@ Power BI에 대시보드를 설치하면 기본적으로 모든 사용자에게 
 
 ## Power BI 애플리케이션 통합 삭제
 
-대시보드를 삭제하려면 대시보드 인벤토리로 이동한 다음 대시보드 이름 옆에 있는 삭제 아이콘(![](../images/power-bi/delete-icon.png))을 선택합니다.
+대시보드를 삭제하려면 대시보드 인벤토리로 이동한 다음 대시보드 이름 옆에 있는 삭제 아이콘(![삭제 아이콘](/help/images/icons/delete.png))을 선택합니다.
 
 >[!NOTE]
 >

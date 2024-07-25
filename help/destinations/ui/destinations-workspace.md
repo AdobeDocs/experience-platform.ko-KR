@@ -3,7 +3,7 @@ keywords: 플랫폼;대상;대상 작업 영역;작업 영역;ui;대상 ui;카�
 title: 대상 작업 영역
 description: 대상 작업 영역은 개요, 카탈로그, 찾아보기, 계정 및 시스템 보기의 5개 섹션으로 구성되어 있습니다. 아래 섹션에 설명되어 있습니다.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: dad07add8c5f9cc98a187c2e2222a51611dbd1a2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 0%
@@ -69,9 +69,9 @@ Adobe Experience Platform의 왼쪽 탐색 모음에서 **[!UICONTROL 대상]**&
 
 >[!TIP]
 >
-> * [!UICONTROL Platform] 열에서 줄임표(`...`)를 선택하고 ![컨트롤 활성화](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 활성화&#x200B;]**/**[!UICONTROL &#x200B;대상 활성화&#x200B;]**/**[!UICONTROL &#x200B;데이터 세트 내보내기&#x200B;]**컨트롤을 사용하여 대상 또는 데이터 세트를 해당 대상으로 내보냅니다.
-> * [!UICONTROL 플랫폼] 열에서 줄임표(`...`)를 선택하고 ![세부 정보 편집 컨트롤](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL 세부 정보 편집&#x200B;]**컨트롤을 사용하여 기존 대상 계정의 세부 정보를 [업데이트](update-accounts.md)합니다.
-> * [!UICONTROL Platform] 열에서 줄임표(`...`)를 선택하고 ![Delete 컨트롤](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Delete ]**컨트롤을 사용하여 기존 대상 계정을 [삭제](delete-destination-account.md)합니다.
+> * [!UICONTROL Platform] 열에서 줄임표(`...`)를 선택하고 ![컨트롤 활성화](/help/images/icons/data-add.png)**[!UICONTROL 활성화&#x200B;]**/**[!UICONTROL &#x200B;대상 활성화&#x200B;]**/**[!UICONTROL &#x200B;데이터 세트 내보내기&#x200B;]**컨트롤을 사용하여 대상 또는 데이터 세트를 해당 대상으로 내보냅니다.
+> * [!UICONTROL 플랫폼] 열에서 줄임표(`...`)를 선택하고 ![세부 정보 편집 컨트롤](/help/images/icons/edit.png)**[!UICONTROL 세부 정보 편집&#x200B;]**컨트롤을 사용하여 기존 대상 계정의 세부 정보를 [업데이트](update-accounts.md)합니다.
+> * [!UICONTROL Platform] 열에서 줄임표(`...`)를 선택하고 ![Delete 컨트롤](/help/images/icons/delete.png)**[!UICONTROL Delete ]**컨트롤을 사용하여 기존 대상 계정을 [삭제](delete-destination-account.md)합니다.
 
 ![계정 탭](../assets/ui/workspace/destination-account-options.png)
 
@@ -91,10 +91,10 @@ Adobe Experience Platform의 왼쪽 탐색 모음에서 **[!UICONTROL 대상]**&
 
 >[!TIP]
 >
-> * [!UICONTROL 이름] 열에서 줄임표(`...`)를 선택하고 ![대상 활성화 컨트롤](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 활성화&#x200B;]**컨트롤을 사용하여 대상 또는 데이터 집합을 해당 대상으로 내보냅니다.
-> * [!UICONTROL 이름] 열에서 줄임표(`...`)를 선택하고 ![삭제 컨트롤](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 삭제&#x200B;]**컨트롤을 사용하여 대상에 대한 기존 연결을 [제거](delete-destinations.md)합니다.
-> * [!UICONTROL 이름] 열에서 줄임표(`...`)를 선택하고 ![모니터링 제어에서 보기](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 모니터링에서 보기&#x200B;]**제어를 사용하여 [모니터링 대시보드](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)에서 이 대상에 대한 활성화 정보를 봅니다.
-> * [!UICONTROL 이름] 열에서 줄임표(`...`)를 선택하고 ![경고 구독 ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL 경고 구독&#x200B;]**컨트롤을 사용하여 대상 데이터 흐름 경고를 구독합니다. 경고를 구독하면 플로우 실행의 상태, 성공 또는 실패와 관련된 메시지를 받을 수 있습니다. 대상 데이터 흐름 경고에 대한 자세한 내용은 [컨텍스트 내 대상 경고 구독](alerts.md)을 참조하십시오.
+> * [!UICONTROL 이름] 열에서 줄임표(`...`)를 선택하고 ![대상 활성화 컨트롤](/help/images/icons/data-add.png)**[!UICONTROL 활성화&#x200B;]**컨트롤을 사용하여 대상 또는 데이터 집합을 해당 대상으로 내보냅니다.
+> * [!UICONTROL 이름] 열에서 줄임표(`...`)를 선택하고 ![삭제 컨트롤](/help/images/icons/delete.png)**[!UICONTROL 삭제&#x200B;]**컨트롤을 사용하여 대상에 대한 기존 연결을 [제거](delete-destinations.md)합니다.
+> * [!UICONTROL 이름] 열에서 줄임표(`...`)를 선택하고 ![모니터링 제어에서 보기](/help/images/icons/monitoring.png)**[!UICONTROL 모니터링에서 보기&#x200B;]**제어를 사용하여 [모니터링 대시보드](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)에서 이 대상에 대한 활성화 정보를 봅니다.
+> * [!UICONTROL 이름] 열에서 줄임표(`...`)를 선택하고 ![경고 구독 ](/help/images/icons/alert-add.png)**[!UICONTROL 경고 구독&#x200B;]**컨트롤을 사용하여 대상 데이터 흐름 경고를 구독합니다. 경고를 구독하면 플로우 실행의 상태, 성공 또는 실패와 관련된 메시지를 받을 수 있습니다. 대상 데이터 흐름 경고에 대한 자세한 내용은 [컨텍스트 내 대상 경고 구독](alerts.md)을 참조하십시오.
 
 ![탭 찾아보기](../assets/ui/workspace/browse-tab.png)
 

@@ -4,7 +4,7 @@ title: 대상자 대시보드
 description: Adobe Experience Platform은 조직이 만든 대상자에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3132'
 ht-degree: 9%
@@ -235,7 +235,7 @@ Adobe은 대상과 관련된 다양한 지표를 시각화하는 데 사용할 �
 
 ![더 보기 기능이 강조 표시된 대상 중복 보고서 위젯입니다.](../images/audiences/audience-overlap-report.png)
 
-[!UICONTROL 대상 중복 보고서] 대화 상자가 나타납니다. 이 대화 상자에는 최대 50개의 대상 중복 분석 행이 6개의 열로 분류되어 포함될 수 있습니다. 설정 아이콘(![설정 아이콘을 선택합니다.](../images/audiences/settings-icon.png)) 테이블에서 열을 제거하거나 추가합니다.
+[!UICONTROL 대상 중복 보고서] 대화 상자가 나타납니다. 이 대화 상자에는 최대 50개의 대상 중복 분석 행이 6개의 열로 분류되어 포함될 수 있습니다. 설정 아이콘(![설정 아이콘을 선택합니다.](/help/images/icons/settings.png)) 테이블에서 열을 제거하거나 추가합니다.
 
 ![대상 겹침 보고서 대화 상자](../images/audiences/audience-overlap-report-dialog.png)
 

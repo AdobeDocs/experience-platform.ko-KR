@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 열거형 필드 및 제안 값 정의
 description: Experience Platform 사용자 인터페이스의 문자열 필드에 대한 열거형 및 제안 값을 정의하는 방법을 알아봅니다.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 8%
@@ -40,7 +40,7 @@ XDM(Experience Data Model)에서 문자열 필드에는 해당 필드에 수집�
 
 **[!UICONTROL 값]** 열 아래에서 필드를 제한할 정확한 값을 입력해야 합니다. 원할 경우 제약 조건에 대해 사용자에게 친숙한 **[!UICONTROL 표시 이름]**&#x200B;을 제공할 수 있습니다. 이는 세그먼테이션에서 값이 표시되는 방식에 영향을 줍니다.
 
-**[!UICONTROL 행 추가]**&#x200B;를 사용하여 원하는 제약 조건 및 선택적 레이블을 열거형에 추가하거나 이전에 추가한 행 옆에 있는 삭제 아이콘(![삭제 아이콘의 이미지](../../images/ui/fields/enum/remove-icon.png))을 선택하여 제거합니다. 완료되면 **[!UICONTROL 적용]**&#x200B;을 선택하여 스키마에 변경 내용을 적용합니다.
+**[!UICONTROL 행 추가]**&#x200B;를 사용하여 원하는 제약 조건 및 선택적 레이블을 열거형에 추가하거나 이전에 추가한 행 옆에 있는 삭제 아이콘(![삭제 아이콘의 이미지](/help/images/icons/remove-circle.png))을 선택하여 제거합니다. 완료되면 **[!UICONTROL 적용]**&#x200B;을 선택하여 스키마에 변경 내용을 적용합니다.
 
 ![UI의 문자열 필드에 대해 채워진 열거형 값과 표시 이름을 보여 주는 이미지](../../images/ui/fields/enum/enum-confirm.png)
 
@@ -52,7 +52,7 @@ XDM(Experience Data Model)에서 문자열 필드에는 해당 필드에 수집�
 
 ![UI에서 선택한 제안 값 옵션을 보여 주는 이미지](../../images/ui/fields/enum/suggested-add-row.png)
 
-**[!UICONTROL 표시 이름]** 열 아래에서 세분화 UI에 표시할 값에 대해 사용자에게 친숙한 이름을 제공하십시오. 제안된 값을 더 추가하려면 **[!UICONTROL 행 추가]**&#x200B;를 다시 선택하고 필요에 따라 프로세스를 반복합니다. 이전에 추가한 행을 제거하려면 해당 행 옆에 있는 ![삭제 아이콘](../../images/ui/fields/enum/remove-icon.png)을 선택합니다.
+**[!UICONTROL 표시 이름]** 열 아래에서 세분화 UI에 표시할 값에 대해 사용자에게 친숙한 이름을 제공하십시오. 제안된 값을 더 추가하려면 **[!UICONTROL 행 추가]**&#x200B;를 다시 선택하고 필요에 따라 프로세스를 반복합니다. 이전에 추가한 행을 제거하려면 해당 행 옆에 있는 ![삭제 아이콘](/help/images/icons/remove-circle.png)을 선택합니다.
 
 완료되면 **[!UICONTROL 적용]**&#x200B;을 선택하여 스키마에 변경 내용을 적용합니다.
 
@@ -68,7 +68,7 @@ XDM(Experience Data Model)에서 문자열 필드에는 해당 필드에 수집�
 
 ![UI의 문자열 필드에 대해 채워진 열거형 값과 표시 이름을 보여 주는 이미지](../../images/ui/fields/enum/suggested-standard.png)
 
-표준 필드에 대해 제안된 새 값을 추가하려면 **[!UICONTROL 행 추가]**&#x200B;를 선택하십시오. 조직에서 이전에 추가한 제안 값을 제거하려면 해당 행 옆에 있는 ![삭제 아이콘](../../images/ui/fields/enum/remove-icon.png)을 선택합니다.
+표준 필드에 대해 제안된 새 값을 추가하려면 **[!UICONTROL 행 추가]**&#x200B;를 선택하십시오. 조직에서 이전에 추가한 제안 값을 제거하려면 해당 행 옆에 있는 ![삭제 아이콘](/help/images/icons/remove-circle.png)을 선택합니다.
 
 ![UI의 문자열 필드에 대해 채워진 열거형 값과 표시 이름을 보여 주는 이미지](../../images/ui/fields/enum/suggested-standard-add.png)
 

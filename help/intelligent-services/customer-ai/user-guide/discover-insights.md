@@ -5,7 +5,7 @@ feature: Customer AI
 title: Customer AI로 인사이트 탐색
 description: 이 문서는 Intelligent Services Customer AI 사용자 인터페이스에서 서비스 인스턴스 인사이트와 상호 작용하기 위한 안내서 역할을 합니다.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2098'
 ht-degree: 1%
@@ -180,7 +180,7 @@ Platform UI에서 새 세그먼트를 보려면 왼쪽 탐색에서 **[!UICONTRO
 
 ![버킷 예](../images/insights/churn_tab.png)
 
-표시되는 예상 및 실제 요금에 대한 시간대를 필터링할 수 있습니다. **달력 아이콘** ![아이콘](../images/insights/calendar_icon.png)을 선택한 다음 새 날짜 범위를 선택하십시오. 각 버킷의 결과가 새 날짜 범위 내에 표시되도록 업데이트됩니다.
+표시되는 예상 및 실제 요금에 대한 시간대를 필터링할 수 있습니다. **달력 아이콘** ![아이콘](/help/images/icons/calendar.png)을 선택한 다음 새 날짜 범위를 선택하십시오. 각 버킷의 결과가 새 날짜 범위 내에 표시되도록 업데이트됩니다.
 
 ![날짜 선택기](../images/insights/date_selector.png)
 

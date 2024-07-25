@@ -2,7 +2,7 @@
 title: ID 그래프 뷰어
 description: ID 그래프는 특정 고객에 대한 서로 다른 ID 간의 관계 맵으로, 고객이 다양한 채널에서 브랜드와 상호 작용하는 방식을 시각적으로 보여 줍니다.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1402'
 ht-degree: 6%
@@ -46,7 +46,7 @@ ID 그래프를 보려면 ID 네임스페이스와 해당 값을 제공한 다�
 
 >[!TIP]
 >
->조직에서 사용 가능한 모든 ID 네임스페이스 목록이 있는 패널을 보려면 표 아이콘 ![표 아이콘](../images/identity-graph-viewer/table-icon.png)을(를) 선택하십시오. 유효한 ID 값이 연결되어 있는 한 모든 ID 네임스페이스를 사용할 수 있습니다. 자세한 내용은 [ID 네임스페이스 안내서](./namespaces.md)를 참조하십시오.
+>조직에서 사용 가능한 모든 ID 네임스페이스 목록이 있는 패널을 보려면 표 아이콘 ![표 아이콘](/help/images/icons/table.png)을(를) 선택하십시오. 유효한 ID 값이 연결되어 있는 한 모든 ID 네임스페이스를 사용할 수 있습니다. 자세한 내용은 [ID 네임스페이스 안내서](./namespaces.md)를 참조하십시오.
 
 ![ID 그래프 조회 화면에 제공된 ID 네임스페이스와 해당 값입니다.](../images/graph-viewer/namespace-and-value.png)
 

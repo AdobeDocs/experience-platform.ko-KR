@@ -2,7 +2,7 @@
 title: 데이터 수집을 위한 데이터 준비
 description: Adobe Experience Platform Web 및 Mobile SDK용 데이터스트림 구성 시 데이터를 Experience Data Model(XDM) 이벤트 스키마에 매핑하는 방법에 대해 알아봅니다.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 60%
@@ -173,11 +173,11 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 
 ![새 매핑을 추가합니다.](assets/data-prep/add-new-mapping.png)
 
-소스 아이콘(![ 소스 아이콘](assets/data-prep/source-icon.png))을 선택하고 표시되는 대화 상자에서 제공된 캔버스에서 매핑하려는 소스 필드를 선택합니다. 필드가 선택되면 **[!UICONTROL 선택]** 버튼을 사용하여 계속합니다.
+소스 아이콘(![ 소스 아이콘](/help/images/icons/source.png))을 선택하고 표시되는 대화 상자에서 제공된 캔버스에서 매핑하려는 소스 필드를 선택합니다. 필드가 선택되면 **[!UICONTROL 선택]** 버튼을 사용하여 계속합니다.
 
 ![원본 스키마에서 매핑할 필드를 선택합니다.](assets/data-prep/source-mapping.png)
 
-다음으로 스키마 아이콘(![스키마 아이콘](assets/data-prep/schema-icon.png))을 선택하여 대상 이벤트 스키마에 유사한 대화 상자를 엽니다. **[!UICONTROL 선택]**&#x200B;을 사용하여 확인 전에 데이터를 매핑하려는 필드를 선택합니다.
+다음으로 스키마 아이콘(![스키마 아이콘](/help/images/icons/schema.png))을 선택하여 대상 이벤트 스키마에 유사한 대화 상자를 엽니다. **[!UICONTROL 선택]**&#x200B;을 사용하여 확인 전에 데이터를 매핑하려는 필드를 선택합니다.
 
 ![대상 스키마에서 매핑할 필드를 선택합니다.](assets/data-prep/target-mapping.png)
 

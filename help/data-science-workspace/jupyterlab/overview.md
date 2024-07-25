@@ -4,7 +4,7 @@ solution: Experience Platform
 title: JupyterLab UI 개요
 description: JupyterLab은 Project Jupyter를 위한 웹 기반 사용자 인터페이스이며 Adobe Experience Platform에 긴밀하게 통합됩니다. 데이터 과학자가 Jupyter Notebooks, 코드 및 데이터를 사용할 수 있는 대화형 개발 환경을 제공합니다. 이 문서에서는 JupyterLab 및 해당 기능에 대한 개요와 일반적인 작업을 수행하는 지침을 제공합니다.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1812'
 ht-degree: 2%
@@ -116,9 +116,9 @@ Experience Platform의 JupyterLab 통합은 아키텍처 변경 사항, 디자�
 
 ### [!DNL JupyterLab] 종료 및 다시 시작
 
-[!DNL JupyterLab]에서 세션을 종료하여 추가 리소스가 사용되지 않도록 할 수 있습니다. 먼저 **전원 아이콘** ![전원 아이콘](../images/jupyterlab/user-guide/power_button.png)을 선택한 다음 세션을 종료하는 팝오버에서 **[!UICONTROL 시스템 종료]**&#x200B;를 선택하십시오. 12시간 동안 아무 활동이 없으면 노트북 세션이 자동으로 종료됩니다.
+[!DNL JupyterLab]에서 세션을 종료하여 추가 리소스가 사용되지 않도록 할 수 있습니다. 먼저 **전원 아이콘** ![전원 아이콘](/help/images/icons/power.png)을 선택한 다음 세션을 종료하는 팝오버에서 **[!UICONTROL 시스템 종료]**&#x200B;를 선택하십시오. 12시간 동안 아무 활동이 없으면 노트북 세션이 자동으로 종료됩니다.
 
-[!DNL JupyterLab]을(를) 다시 시작하려면 전원 아이콘 왼쪽에 있는 **다시 시작 아이콘** ![다시 시작 아이콘](../images/jupyterlab/user-guide/restart_button.png)을(를) 선택한 다음 표시되는 팝오버에서 **[!UICONTROL 다시 시작]**&#x200B;을(를) 선택하십시오.
+[!DNL JupyterLab]을(를) 다시 시작하려면 전원 아이콘 왼쪽에 있는 **다시 시작 아이콘** ![다시 시작 아이콘](/help/images/icons/restart.png)을(를) 선택한 다음 표시되는 팝오버에서 **[!UICONTROL 다시 시작]**&#x200B;을(를) 선택하십시오.
 
 ![jupyterlab 종료](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 

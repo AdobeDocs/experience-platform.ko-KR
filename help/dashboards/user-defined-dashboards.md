@@ -2,7 +2,7 @@
 title: 사용자 지정 대시보드
 description: 맞춤형 위젯을 만들고, 추가하고, 편집하여 주요 지표를 시각화할 수 있는 사용자 정의 대시보드를 만들고 관리하는 방법을 알아봅니다.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -30,7 +30,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 <!-- >[!NOTE]
 >
->To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
 >![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 [!UICONTROL 대시보드 만들기] 대화 상자가 나타납니다. 만들려는 위젯 컬렉션에 대해 사용자에게 친숙한 설명 이름을 입력하고 **[!UICONTROL 저장]**&#x200B;을 선택합니다.
@@ -68,7 +68,7 @@ Data Distiller SKU를 구매한 사용자에게는 사용자 지정 SQL 쿼리�
 
 >[!TIP]
 >
->정보 아이콘(![정보 아이콘)을 선택합니다.](./images/user-defined-dashboards/info-icon.png)) 데이터 레일에 표시할 시간이 너무 긴 경우 전체 데이터 모델 이름을 볼 수 있습니다.
+>정보 아이콘(![정보 아이콘)을 선택합니다.](/help/images/icons/info.png)) 데이터 레일에 표시할 시간이 너무 긴 경우 전체 데이터 모델 이름을 볼 수 있습니다.
 
 ![데이터 선택 대화 상자](./images/user-defined-dashboards/select-data-model-dialog.png)
 
@@ -94,17 +94,17 @@ Data Distiller SKU를 구매한 사용자에게는 사용자 지정 SQL 쿼리�
 
 이제 위젯 작성기가 선택한 테이블의 데이터로 채워집니다.
 
-데이터 모델과 현재 선택한 테이블이 왼쪽 레일의 맨 위에 표시되고 위젯을 만드는 데 사용할 수 있는 특성이 [!UICONTROL 특성] 열에 나열됩니다. 목록을 스크롤하는 대신 검색 창을 사용하여 특성을 찾거나 연필 아이콘(![연필 아이콘)을 선택하여 선택한 데이터 모델을 변경할 수 있습니다.](./images/user-defined-dashboards/edit-icon.png))을(를) 왼쪽 레일에 둡니다.
+데이터 모델과 현재 선택한 테이블이 왼쪽 레일의 맨 위에 표시되고 위젯을 만드는 데 사용할 수 있는 특성이 [!UICONTROL 특성] 열에 나열됩니다. 목록을 스크롤하는 대신 검색 창을 사용하여 특성을 찾거나 연필 아이콘(![연필 아이콘)을 선택하여 선택한 데이터 모델을 변경할 수 있습니다.](/help/images/icons/edit.png))을(를) 왼쪽 레일에 둡니다.
 
 ![위젯 작성기 내의 데이터로 채워진 위젯입니다.](./images/user-defined-dashboards/populated-widget-composer.png)
 
 #### 속성 추가 및 필터링 {#add-and-filter-attributes}
 
-추가 아이콘(![추가 아이콘)을 선택합니다.](./images/user-defined-dashboards/add-icon.png)) 속성 이름 옆의 위젯에 속성을 추가합니다. 표시되는 드롭다운 메뉴를 사용하여 속성을 위젯의 X축, Y축, 색상 또는 필터 중 하나로 추가할 수 있습니다. [!UICONTROL Color] 특성을 사용하면 색상을 기준으로 X축 및 Y축 표시 결과를 구분할 수 있습니다. 이렇게 하려면 세 번째 속성의 구성에 따라 결과를 다른 색상으로 분할합니다.
+추가 아이콘(![추가 아이콘)을 선택합니다.](/help/images/icons/add-circle.png)) 속성 이름 옆의 위젯에 속성을 추가합니다. 표시되는 드롭다운 메뉴를 사용하여 속성을 위젯의 X축, Y축, 색상 또는 필터 중 하나로 추가할 수 있습니다. [!UICONTROL Color] 특성을 사용하면 색상을 기준으로 X축 및 Y축 표시 결과를 구분할 수 있습니다. 이렇게 하려면 세 번째 속성의 구성에 따라 결과를 다른 색상으로 분할합니다.
 
 >[!TIP]
 >
->X축과 Y축의 배열을 전환하려면 위쪽 및 아래쪽 화살표 아이콘(![위쪽 및 아래쪽 화살표 아이콘)을 선택합니다.](./images/user-defined-dashboards/switch-axis-icon.png))을(를) 사용하여 배열을 전환합니다.
+>X축과 Y축의 배열을 전환하려면 위쪽 및 아래쪽 화살표 아이콘(![위쪽 및 아래쪽 화살표 아이콘)을 선택합니다.](/help/images/icons/switch.png))을(를) 사용하여 배열을 전환합니다.
 
 ![추가 아이콘 드롭다운이 강조 표시된 위젯 작성기입니다.](./images/user-defined-dashboards/attributes-dropdown.png)
 
@@ -132,7 +132,7 @@ Data Distiller SKU를 구매한 사용자에게는 사용자 지정 SQL 쿼리�
 
 ### 위젯 속성
 
-속성 아이콘(![속성 아이콘)을 선택합니다.](./images/user-defined-dashboards/properties-icon.png))을(를) 오른쪽 레일에서 클릭하여 속성 패널을 엽니다. [!UICONTROL 속성] 패널에서 [!UICONTROL 위젯 제목] 텍스트 필드에 위젯 이름을 입력합니다.
+속성 아이콘(![속성 아이콘)을 선택합니다.](/help/images/icons/properties.png))을(를) 오른쪽 레일에서 클릭하여 속성 패널을 엽니다. [!UICONTROL 속성] 패널에서 [!UICONTROL 위젯 제목] 텍스트 필드에 위젯 이름을 입력합니다.
 
 ![속성 아이콘과 위젯 제목 필드가 강조 표시된 속성 패널입니다.](./images/user-defined-dashboards/properties-panel.png)
 
@@ -146,7 +146,7 @@ Data Distiller SKU를 구매한 사용자에게는 사용자 지정 SQL 쿼리�
 
 >[!TIP]
 >
->속성 아이콘(![속성 아이콘)을 선택합니다.](./images/user-defined-dashboards/properties-icon.png))을(를) 만들 때 자세히 확인할 수 있습니다. 표시되는 대화 상자에서 대시보드 이름을 변경할 수 있습니다.
+>속성 아이콘(![속성 아이콘)을 선택합니다.](/help/images/icons/properties.png))을(를) 만들 때 자세히 확인할 수 있습니다. 표시되는 대화 상자에서 대시보드 이름을 변경할 수 있습니다.
 
 이 작업 영역에 있는 동안 위젯을 다시 정렬하고 크기를 조정할 수 있습니다. 대시보드 이름과 구성된 레이아웃을 유지하려면 **[!UICONTROL 저장]**&#x200B;을(를) 선택하십시오.
 
@@ -162,7 +162,7 @@ Adobe Real-time Customer Data Platform 인사이트 대시보드에 대한 각 �
 >
 >기존 사용자 정의 대시보드 간에 전환하려면 왼쪽 탐색 막대에서 대시보드 를 선택한 다음 인벤토리 목록에서 대시보드 이름을 선택합니다.
 
-연필 아이콘(![연필 아이콘)을 선택합니다.사용자 지정 대시보드의 오른쪽 상단에서 ](./images/user-defined-dashboards/edit-icon.png))을(를) 클릭하여 편집 모드로 전환합니다.
+연필 아이콘(![연필 아이콘)을 선택합니다.사용자 지정 대시보드의 오른쪽 상단에서 ](/help/images/icons/edit.png))을(를) 클릭하여 편집 모드로 전환합니다.
 
 ![연필 아이콘이 강조 표시된 사용자 지정 대시보드입니다.](./images/user-defined-dashboards/edit-mode.png)
 

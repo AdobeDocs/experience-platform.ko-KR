@@ -2,7 +2,7 @@
 title: Ad Hoc 스키마에 대한 속성 기반 액세스 제어 지원
 description: Adobe Experience Platform 쿼리 서비스를 통해 생성된 임시 스키마의 데이터 필드에 대한 액세스를 제한하는 안내서입니다.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 2%
@@ -42,7 +42,7 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 ## Platform UI의 스키마 인벤토리에서 임시 스키마 살펴보기 {#discover-ad-hoc-schemas}
 
-Platform UI에서 임시 스키마 표시를 활성화하려면 필터 아이콘(![필터 아이콘)을 선택합니다.](../images/data-governance/filter.png)) 검색 필드의 왼쪽에 있는 다음 나타나는 왼쪽 레일에서 **[!UICONTROL 임시 스키마 표시]를 선택합니다.
+Platform UI에서 임시 스키마 표시를 활성화하려면 필터 아이콘(![필터 아이콘)을 선택합니다.](/help/images/icons/filter.png)) 검색 필드의 왼쪽에 있는 다음 나타나는 왼쪽 레일에서 **[!UICONTROL 임시 스키마 표시]를 선택합니다.
 
 ![스키마 대시보드 필터 옵션이 &#39;임시 스키마 표시&#39; 토글이 활성화된 왼쪽 레일입니다.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -56,7 +56,7 @@ Platform UI에서 임시 스키마 표시를 활성화하려면 필터 아이콘
 
 ## 스키마 또는 필드의 레이블 편집
 
-전체 스키마의 레이블을 편집하려면 연필 아이콘(![연필 아이콘)을 선택합니다.[!UICONTROL 레이블] 탭 아래에 있는 스키마 이름의 측면에 ](../images/data-governance/edit-icon.png))을(를) 추가합니다.
+전체 스키마의 레이블을 편집하려면 연필 아이콘(![연필 아이콘)을 선택합니다.[!UICONTROL 레이블] 탭 아래에 있는 스키마 이름의 측면에 ](/help/images/icons/edit.png))을(를) 추가합니다.
 
 ![연필 아이콘이 강조 표시된 스키마 작업 영역의 레이블 보기입니다.](../images/data-governance/edit-entire-schema-labels.png)
 

@@ -2,7 +2,7 @@
 title: AI가 생성한 Recommendations을 사용하여 XDM 스키마에 CSV 파일 매핑
 description: 이 튜토리얼에서는 AI가 생성한 권장 사항을 사용하여 CSV 파일을 XDM 스키마에 매핑하는 방법을 다룹니다.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 1%
@@ -74,7 +74,7 @@ ML 모델이 실행되어 데이터 흐름 구성 및 업로드된 CSV 파일을
 
 >[!NOTE]
 >
->소스-타겟 필드 매핑 워크플로우 동안 다양한 기준을 기반으로 스키마의 모든 필드를 필터링할 수 있습니다. 기본 동작은 매핑된 필드를 모두 표시하는 것입니다. 표시된 필드를 변경하려면 검색 입력 필드 옆에 있는 필터 아이콘을 선택하고 드롭다운 옵션에서 선택합니다.<br> ![필터 아이콘과 드롭다운 메뉴가 강조 표시된 XDM 스키마 만들기 워크플로우에 대한 CSV의 매핑 단계입니다.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "필터 아이콘과 드롭다운 메뉴가 강조 표시된 XDM 스키마 생성 워크플로우에 대한 CSV의 매핑 단계입니다."){width="100" zoomable="yes"}
+>소스-타겟 필드 매핑 워크플로우 동안 다양한 기준을 기반으로 스키마의 모든 필드를 필터링할 수 있습니다. 기본 동작은 매핑된 필드를 모두 표시하는 것입니다. 표시된 필드를 변경하려면 검색 입력 필드 옆에 있는 필터 아이콘을 선택하고 드롭다운 옵션에서 선택합니다.<br> ![필터 아이콘과 드롭다운 메뉴가 강조 표시된 CSV에서 XDM 스키마 만들기 워크플로우로의 매핑 단계입니다.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "필터 아이콘과 드롭다운 메뉴가 강조 표시된 XDM 스키마 생성 워크플로우에 대한 CSV의 매핑 단계입니다."){width="100" zoomable="yes"}
 
 필요에 따라 여기에서 [필드 매핑을 편집](#edit-mappings)하거나 [연결된 필드 그룹을 변경](#edit-schema)할 수 있습니다. 만족하면 **[!UICONTROL 완료]**&#x200B;를 선택하여 매핑을 완료하고 이전에 구성한 데이터 흐름을 시작합니다. CSV 데이터는 시스템에 수집되고 다운스트림 플랫폼 서비스에서 사용할 수 있도록 생성된 스키마 구조를 기반으로 데이터 세트를 채웁니다.
 
@@ -90,7 +90,7 @@ CSV 필드는 ML 모델을 사용하여 기존 XDM 필드 그룹에 자동으로
 
 ![스키마 트리 옆에 있는 [!UICONTROL 편집] 단추가 선택되어 있습니다.](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
-매핑의 모든 필드에 대한 표시 이름, 데이터 유형 및 필드 그룹을 편집할 수 있는 대화 상자가 나타납니다. **[!UICONTROL 적용]**&#x200B;을 선택하기 전에 소스 필드 옆에 있는 편집 아이콘(![편집 아이콘](../../images/tutorials/map-csv-recommendations/edit-icon.png))을 선택하여 오른쪽 열에서 세부 정보를 편집합니다.
+매핑의 모든 필드에 대한 표시 이름, 데이터 유형 및 필드 그룹을 편집할 수 있는 대화 상자가 나타납니다. **[!UICONTROL 적용]**&#x200B;을 선택하기 전에 소스 필드 옆에 있는 편집 아이콘(![편집 아이콘](/help/images/icons/edit.png))을 선택하여 오른쪽 열에서 세부 정보를 편집합니다.
 
 ![원본 필드에 대한 권장 필드 그룹이 변경되었습니다.](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 

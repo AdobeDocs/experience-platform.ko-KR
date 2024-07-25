@@ -3,7 +3,7 @@ title: Google Ads Enhanced Conversions 확장
 description: Adobe Experience Platform의 이벤트 전달을 위한 Google Ads Enhanced Conversion 확장에 대해 알아봅니다.
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -103,7 +103,7 @@ ht-degree: 1%
 확장을 구성하려면 다음 두 필수 필드를 채워야 합니다.
 
 1. **[!UICONTROL 고객 ID]**: [!DNL Google Ads] 계정을 고유하게 식별하는 ID입니다. 이 값을 찾으려면 [!DNL Google Ads]에 로그인한 다음 **[!DNL Help]** > **[!DNL Customer ID]**(으)로 이동합니다.
-1. **[!UICONTROL 액세스 토큰 데이터 요소]**: 데이터 요소 아이콘(![데이터 요소 아이콘](../../../images/extensions/server/google-ads-enhanced-conversions/data-element-icon.png))을 선택하고 [이전 단계에서 구성한](#create-secret-data-element)Google OAuth 2 비밀 데이터 요소를 메뉴에서 선택합니다.
+2. **[!UICONTROL 액세스 토큰 데이터 요소]**: 데이터 요소 아이콘(![데이터 요소 아이콘](/help/images/icons/database.png))을 선택하고 [이전 단계에서 구성한](#create-secret-data-element)Google OAuth 2 비밀 데이터 요소를 메뉴에서 선택합니다.
 
 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택하여 확장을 설치합니다.
 

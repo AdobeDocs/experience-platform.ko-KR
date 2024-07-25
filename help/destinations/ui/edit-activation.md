@@ -4,7 +4,7 @@ title: 활성화 데이터 흐름 편집
 type: Tutorial
 description: 이 문서의 단계에 따라 Adobe Experience Platform에서 기존 활성화 데이터 흐름을 편집합니다.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Adobe Experience Platform에서 내보낸 대상 및 프로필 속성, 내보내
 
    ![대상 찾아보기](../assets/ui/edit-activation/browse-destinations.png)
 
-2. 왼쪽 상단의 필터 아이콘 ![Filter-icon](../assets/ui/edit-activation/filter.png)을(를) 선택하여 정렬 패널을 시작합니다. 정렬 패널에서는 모든 대상의 목록을 제공합니다. 목록에서 두 개 이상의 대상을 선택하여 선택한 대상과 연관된 데이터 흐름의 필터링된 선택을 확인할 수 있습니다.
+2. 왼쪽 상단의 필터 아이콘 ![Filter-icon](/help/images/icons/filter.png)을(를) 선택하여 정렬 패널을 시작합니다. 정렬 패널에서는 모든 대상의 목록을 제공합니다. 목록에서 두 개 이상의 대상을 선택하여 선택한 대상과 연관된 데이터 흐름의 필터링된 선택을 확인할 수 있습니다.
 
    ![대상 필터링](../assets/ui/edit-activation/filter-destinations.png)
 

@@ -2,7 +2,7 @@
 title: Insight SQL 보기
 description: 프로필, 대상자, 대상 및 맞춤화된 인사이트 뒤에 있는 SQL을 보고 쿼리 편집기를 통해 요청 시 쿼리를 실행합니다.
 exl-id: fd728926-c113-4593-92b1-916a02d09d41
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->복사 아이콘(![복사 아이콘)을 선택하여 전체 SQL 문을 클립보드에 복사할 수 있습니다.대화 상자의 오른쪽 맨 위에 있는 ](./images/view-sql/copy-icon.png)).
+>복사 아이콘(![복사 아이콘)을 선택하여 전체 SQL 문을 클립보드에 복사할 수 있습니다.대화 상자의 오른쪽 맨 위에 있는 ](/help/images/icons/copy.png)).
 
 ![강조 표시된 SQL 문이 있는 인사이트 대화 상자입니다.](./images/view-sql/sql-dialog.png)
 

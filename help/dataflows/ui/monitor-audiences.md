@@ -3,7 +3,7 @@ description: Experience Platform 사용자 인터페이스를 사용하여 세�
 title: UI에서 대상에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 716c14f29be24d084111864053e3e4ae884003f0
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1862'
 ht-degree: 4%
@@ -64,7 +64,7 @@ ht-degree: 4%
 | **[!UICONTROL 마지막 활성화 ID]** | 대상자의 마지막 활성화 작업에서 활성화된 ID의 수입니다. |
 | **[!UICONTROL 마지막 활성화 대상]** | 대상자의 마지막 활성화 작업이 활성화된 대상 이름입니다. |
 
-필터 아이콘(![필터 아이콘)을 선택하여 결과를 특정 대상자에게 필터링하고 해당 세분화 작업을 볼 수 있습니다.](../assets/ui/monitor-audiences/filter-icon.png)). 세그먼테이션 작업은 시간 순서대로 정렬되며, 가장 최근 세그먼테이션 작업이 먼저 표시됩니다.
+필터 아이콘(![필터 아이콘)을 선택하여 결과를 특정 대상자에게 필터링하고 해당 세분화 작업을 볼 수 있습니다.](/help/images/icons/filter-add.png)). 세그먼테이션 작업은 시간 순서대로 정렬되며, 가장 최근 세그먼테이션 작업이 먼저 표시됩니다.
 
 ![필터 아이콘이 강조 표시되어 있습니다. 이 옵션을 선택하면 지정된 대상에 대한 세분화 작업을 볼 수 있습니다.](../assets/ui/monitor-audiences/filter-audience.png)
 
@@ -89,7 +89,7 @@ ht-degree: 4%
 | **[!UICONTROL ID 활성화됨]** | 세분화 작업이 활성화 중인 ID 수입니다. 각 프로필에는 여러 ID가 있을 수 있습니다. 예를 들어 프로필에는 이메일, 전화 번호 및 고객 충성도 번호가 ID로 있을 수 있습니다. |
 | **[!UICONTROL 대상 이름]** | 세분화 작업이 활성화 중인 대상 이름입니다. |
 
-필터 아이콘(![필터 아이콘을 선택하여 특정 세분화 작업을 추가로 필터링하고 세부 정보를 볼 수 있습니다.](../assets/ui/monitor-audiences/filter-icon.png)). 필터링할 수 있는 세분화 작업에는 활성화 작업과 평가 작업이 있습니다.
+필터 아이콘(![필터 아이콘을 선택하여 특정 세분화 작업을 추가로 필터링하고 세부 정보를 볼 수 있습니다.](/help/images/icons/filter.png)). 필터링할 수 있는 세분화 작업에는 활성화 작업과 평가 작업이 있습니다.
 
 ### 활성화 작업 세부 정보 {#activation-job-details}
 

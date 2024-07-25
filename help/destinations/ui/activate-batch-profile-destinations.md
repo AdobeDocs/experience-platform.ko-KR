@@ -3,7 +3,7 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '3975'
 ht-degree: 11%
@@ -529,14 +529,14 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/dest
 
 각 외부 대상에 대한 데이터 보강 속성을 선택하려면 아래 단계를 따르십시오.
 
-1. **[!UICONTROL 데이터 보강 특성]** 열에서 ![편집 단추](../assets/ui/activate-batch-profile-destinations/edit-button.svg)(편집) 단추를 선택합니다.
-2. **[!UICONTROL 데이터 보강 특성 추가]**를 선택합니다. 새 빈 스키마 필드가 표시됩니다.
+1. **[!UICONTROL 데이터 보강 특성]** 열에서 ![편집 단추](/help/images/icons/edit.png)(편집) 단추를 선택합니다.
+1. **[!UICONTROL 데이터 보강 특성 추가]**를 선택합니다. 새 빈 스키마 필드가 표시됩니다.
    데이터 보강 특성 모달 화면을 표시하는 ![UI 이미지입니다.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
-3. 빈 필드 오른쪽의 버튼을 선택하여 필드 선택 화면을 엽니다.
-4. 대상자를 위해 내보낼 속성을 선택합니다.
+1. 빈 필드 오른쪽의 버튼을 선택하여 필드 선택 화면을 엽니다.
+1. 대상자를 위해 내보낼 속성을 선택합니다.
    데이터 보강 특성 목록을 표시하는 ![UI 이미지입니다.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
-5. 내보낼 특성을 모두 추가한 후 **[!UICONTROL 저장 및 닫기]**&#x200B;를 선택합니다.
-6. 각 외부 대상에 대해 이 단계를 반복합니다.
+1. 내보낼 특성을 모두 추가한 후 **[!UICONTROL 저장 및 닫기]**&#x200B;를 선택합니다.
+1. 각 외부 대상에 대해 이 단계를 반복합니다.
 
 특성을 내보내지 않고 대상에 외부 대상을 활성화하려면 **[!UICONTROL 데이터 보강 특성 제외]** 전환을 사용하도록 설정하십시오. 이 옵션을 사용하면 외부 대상에서 프로필을 내보내지만 해당 속성이 대상으로 전송되지 않습니다.
 

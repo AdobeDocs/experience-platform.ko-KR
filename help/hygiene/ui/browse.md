@@ -2,7 +2,7 @@
 title: 데이터 라이프사이클 작업 주문 찾아보기
 description: Adobe Experience Platform 사용자 인터페이스에서 기존 데이터 라이프사이클 작업 주문을 보고 관리하는 방법을 알아봅니다.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 27%
@@ -31,7 +31,7 @@ UI에서 **[!UICONTROL 데이터 수명 주기]** 작업 영역에 처음 액세
 
 ![[!UICONTROL 데이터 집합] 탭을 표시하는 이미지](../images/ui/browse/dataset-tab.png)
 
-단계 아이콘(![단계 아이콘 이미지](../images/ui/browse/funnel-icon.png))을 선택하여 표시된 작업 주문에 대한 필터 목록을 확인합니다.
+단계 아이콘(![단계 아이콘 이미지](/help/images/icons/filter.png))을 선택하여 표시된 작업 주문에 대한 필터 목록을 확인합니다.
 
 ![표시된 작업 순서 필터의 이미지](../images/ui/browse/filters.png)
 

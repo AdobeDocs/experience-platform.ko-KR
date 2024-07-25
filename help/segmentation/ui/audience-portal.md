@@ -1,13 +1,13 @@
 ---
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
+source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
 workflow-type: tm+mt
 source-wordcount: '3693'
 ht-degree: 3%
 
 ---
-
 
 # Audience Portal 개요
 
@@ -90,7 +90,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 ### 사용자 지정 {#customize}
 
-![필터 특성 아이콘](../images/ui/audience-portal/filter-attribute.png)을 선택하여 Audience Portal에 필드를 추가할 수 있습니다. 이러한 추가 필드에는 라이프사이클 상태, 업데이트 주기, 마지막 업데이트자, 설명, 작성자 및 액세스 레이블이 포함됩니다.
+![필터 특성 아이콘](/help/images/icons/column-settings.png)을 선택하여 Audience Portal에 필드를 추가할 수 있습니다. 이러한 추가 필드에는 라이프사이클 상태, 업데이트 주기, 마지막 업데이트자, 설명, 작성자 및 액세스 레이블이 포함됩니다.
 
 | 필드 | 설명 |
 | ----- | ----------- |
@@ -116,7 +116,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 | [!UICONTROL 기존] | 마지막 일괄 처리 세그먼트 작업이 실행된 이후 지난 24시간 동안 세그먼트에 **남아**&#x200B;된 프로필의 수입니다. |
 | [!UICONTROL 종료] | 마지막 일괄 처리 세그먼트 작업이 실행된 이후 지난 24시간 동안 세그먼트를 **종료**&#x200B;한 프로필 수입니다. |
 
-표시할 필드를 선택한 후 표시된 열의 너비를 다시 조정할 수도 있습니다. 열 사이의 영역을 드래그하거나 크기를 조정할 열의 ![화살표 아이콘](../images/ui/audience-portal/arrow-icon.png)을 선택한 다음 **[!UICONTROL 열 크기 조정]**&#x200B;을 선택하여 이 작업을 수행할 수 있습니다.
+표시할 필드를 선택한 후 표시된 열의 너비를 다시 조정할 수도 있습니다. 열 사이의 영역을 드래그하거나 크기를 조정할 열의 ![화살표 아이콘](/help/images/icons/chevron-down.png)을 선택한 다음 **[!UICONTROL 열 크기 조정]**&#x200B;을 선택하여 이 작업을 수행할 수 있습니다.
 
 ![열 크기 조정 단추가 강조 표시되어 있습니다.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
@@ -177,7 +177,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 다양한 설정에 따라 대상자를 필터링할 수도 있습니다.
 
-사용 가능한 대상을 필터링하려면 ![필터 아이콘](../images/ui/audience-portal/filter-icon.png)을 선택하세요.
+사용 가능한 대상을 필터링하려면 ![필터 아이콘](/help/images/icons/filter.png)을 선택하세요.
 
 ![필터 아이콘이 강조 표시된 대상자 찾아보기 페이지가 표시됩니다.](../images/ui/audience-portal/browse-select-filter.png)
 

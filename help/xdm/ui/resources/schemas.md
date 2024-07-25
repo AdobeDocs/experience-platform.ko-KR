@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법의 기본 사항에 대해 알아봅니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
-source-wordcount: '3732'
+source-wordcount: '3736'
 ht-degree: 2%
 
 ---
@@ -117,7 +117,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 >[!TIP]
 >
->나열된 모든 필드 그룹의 경우 정보 아이콘(![](../../images/ui/resources/schemas/info-icon.png))을 가리키거나 포커스를 설정하여 필드 그룹이 캡처하는 데이터 종류에 대한 간단한 설명을 볼 수 있습니다. 미리 보기 아이콘(![](../../images/ui/resources/schemas/preview-icon.png))을 선택하여 필드 그룹이 제공하는 필드 구조를 확인한 후 스키마에 추가할 수도 있습니다.
+>나열된 모든 필드 그룹의 경우 정보 아이콘(![정보 아이콘](/help/images/icons/info.png))을 마우스로 가리키거나 포커스를 설정하여 필드 그룹이 캡처하는 데이터 종류에 대한 간단한 설명을 볼 수 있습니다. 미리 보기 아이콘(![미리 보기 아이콘](/help/images/icons/preview.png))을 선택하여 필드 그룹이 제공하는 필드 구조를 확인한 후 스키마에 추가할 수도 있습니다.
 
 필드 그룹을 선택한 후 **[!UICONTROL 필드 그룹 추가]**&#x200B;를 선택하여 스키마에 추가합니다.
 
@@ -129,7 +129,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 >[!NOTE]
 >
->스키마 편집기 내에서 표준(Adobe 생성) 클래스와 필드 그룹은 자물쇠 아이콘(![자물쇠 아이콘)으로 표시됩니다.](../../images/ui/explore/padlock-icon.png) 질문에 답합니다. 자물쇠는 클래스 또는 필드 그룹 이름 옆의 왼쪽 레일과 시스템 생성 리소스의 일부인 스키마 다이어그램의 필드 옆에 나타납니다.
+>스키마 편집기 내에서 표준(Adobe 생성) 클래스와 필드 그룹은 자물쇠 아이콘(![자물쇠 아이콘)으로 표시됩니다.](/help/images/icons/lock-closed.png) 질문에 답합니다. 자물쇠는 클래스 또는 필드 그룹 이름 옆의 왼쪽 레일과 시스템 생성 리소스의 일부인 스키마 다이어그램의 필드 옆에 나타납니다.
 >
 >![자물쇠 아이콘이 강조 표시된 스키마 편집기](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -189,7 +189,7 @@ JSON 구조 복사 기능을 사용하면 스키마 및 데이터 파이프라�
 
 일부 표준 필드는 동일한 이름을 공유하지만 구조는 출신 필드 그룹에 따라 달라질 수 있습니다. 표준 필드가 필드 그룹 구조의 상위 오브젝트 내에 중첩된 경우 하위 필드가 추가되면 상위 필드도 스키마에 포함됩니다.
 
-표준 필드 옆에 있는 미리 보기 아이콘(![미리 보기 아이콘](../../images/ui/resources/schemas/preview-icon.png))을 선택하여 해당 필드 그룹의 구조를 보고 중첩 방법을 더 잘 이해합니다. 스키마에 표준 필드를 추가하려면 더하기 아이콘(![더하기 아이콘](../../images/ui/resources/schemas/add-icon.png))을 선택합니다.
+표준 필드 옆에 있는 미리 보기 아이콘(![미리 보기 아이콘](/help/images/icons/preview.png))을 선택하여 해당 필드 그룹의 구조를 보고 중첩 방법을 더 잘 이해합니다. 스키마에 표준 필드를 추가하려면 더하기 아이콘(![더하기 아이콘](/help/images/icons/add-circle.png))을 선택합니다.
 
 ![표준 필드 추가](../../images/ui/resources/schemas/add-standard-field.png)
 

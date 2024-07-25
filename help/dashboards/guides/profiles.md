@@ -4,7 +4,7 @@ title: 프로필 대시보드
 description: Adobe Experience Platform은 조직의 실시간 고객 프로필 데이터에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '4997'
 ht-degree: 9%
@@ -470,7 +470,7 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ![더 보기 기능이 강조 표시된 대상 중복 보고서 위젯입니다.](../images/profiles/profiles-audience-overlap-report.png)
 
-[!UICONTROL 대상 중복 보고서] 대화 상자가 나타납니다. 이 대화 상자에는 최대 50개의 대상 중복 분석 행이 6개의 열로 분류되어 포함될 수 있습니다. 테이블에서 열을 제거하거나 추가하려면 설정 아이콘(![설정 아이콘](../images/profiles/settings-icon.png))을 선택합니다.
+[!UICONTROL 대상 중복 보고서] 대화 상자가 나타납니다. 이 대화 상자에는 최대 50개의 대상 중복 분석 행이 6개의 열로 분류되어 포함될 수 있습니다. 테이블에서 열을 제거하거나 추가하려면 설정 아이콘(![설정 아이콘](/help/images/icons/settings.png))을 선택합니다.
 
 ![대상 겹침 보고서 대화 상자](../images/profiles/profiles-audience-overlap-report-dialog.png)
 

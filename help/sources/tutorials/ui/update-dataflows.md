@@ -5,7 +5,7 @@ solution: Experience Platform
 title: UI에서 Source 연결 데이터 흐름 업데이트
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: cef5c203acf3318445399669336166e6627ebe66
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 9%
@@ -36,7 +36,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 
 [!UICONTROL 데이터 흐름] 페이지에는 해당 대상 데이터 집합, 원본 및 계정 이름에 대한 정보를 포함하여 기존의 모든 데이터 흐름의 목록이 포함되어 있습니다.
 
-목록을 정렬하려면 왼쪽 상단의 필터 아이콘 ![filter](../../images/tutorials/update/filter.png)을(를) 선택하여 정렬 패널을 사용하십시오.
+목록을 정렬하려면 왼쪽 상단의 필터 아이콘 ![filter](/help/images/icons/filter.png)을(를) 선택하여 정렬 패널을 사용하십시오.
 
 ![filter-dataflows](../../images/tutorials/update-dataflows/filter-dataflows.png)
 

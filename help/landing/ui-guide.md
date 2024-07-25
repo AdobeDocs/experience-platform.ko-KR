@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experience Platform UI 개요
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -75,17 +75,17 @@ Platform UI의 맨 위 탐색 모음에는 현재 로그인한 조직이 표시�
 
 ### 애플리케이션 전환
 
-위쪽 탐색의 오른쪽에 있는 다음 항목은 ![응용 프로그램 전환기](./images/user-guide/app-switcher-icon.png) 아이콘으로 표시되는 **응용 프로그램 전환기**&#x200B;입니다. 이 아이콘을 선택하면 Experience Platform, Analytics, Assets 등과 같이 조직에서 액세스할 수 있는 Adobe 애플리케이션 간에 전환할 수 있습니다.
+위쪽 탐색의 오른쪽에 있는 다음 항목은 ![응용 프로그램 전환기](/help/images/icons/apps.png) 아이콘으로 표시되는 **응용 프로그램 전환기**&#x200B;입니다. 이 아이콘을 선택하면 Experience Platform, Analytics, Assets 등과 같이 조직에서 액세스할 수 있는 Adobe 애플리케이션 간에 전환할 수 있습니다.
 
 ### 도움말
 
-응용 프로그램 전환기 오른쪽에는 ![물음표/도움말](./images/user-guide/help-icon.png) 아이콘으로 표시되는 **도움말 및 지원 메뉴**&#x200B;가 있습니다. 이 아이콘을 선택하면 몇 가지 도움말 및 지원 리소스가 포함된 팝오버 메뉴가 나타납니다. **[!UICONTROL 도움말]** 탭에는 현재 사용 중인 페이지에 대한 관련 문서 목록이 표시됩니다. **[!UICONTROL 지원]** 탭에서 Adobe 지원 팀과 함께 지원 티켓을 만들 수 있습니다. **[!UICONTROL 피드백]** 탭에서 플랫폼에 대한 피드백을 Adobe에 제출할 수 있습니다.
+응용 프로그램 전환기 오른쪽에는 ![물음표/도움말](/help/images/icons/help.png) 아이콘으로 표시되는 **도움말 및 지원 메뉴**&#x200B;가 있습니다. 이 아이콘을 선택하면 몇 가지 도움말 및 지원 리소스가 포함된 팝오버 메뉴가 나타납니다. **[!UICONTROL 도움말]** 탭에는 현재 사용 중인 페이지에 대한 관련 문서 목록이 표시됩니다. **[!UICONTROL 지원]** 탭에서 Adobe 지원 팀과 함께 지원 티켓을 만들 수 있습니다. **[!UICONTROL 피드백]** 탭에서 플랫폼에 대한 피드백을 Adobe에 제출할 수 있습니다.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
 ### 알림 및 공지
 
-**알림 섹션**&#x200B;에서 ![벨/알림 및 공지](images/user-guide/notification-icon.png) 아이콘으로 표시됩니다. **[!UICONTROL 알림]** 탭에는 제품 및 기타 관련 업데이트에 대한 중요한 정보가 표시되고 **[!UICONTROL 공지]** 탭에는 서비스 유지 관리에 대한 정보가 표시됩니다.
+**알림 섹션**&#x200B;에서 ![벨/알림 및 공지](/help/images/icons/bell.png) 아이콘으로 표시됩니다. **[!UICONTROL 알림]** 탭에는 제품 및 기타 관련 업데이트에 대한 중요한 정보가 표시되고 **[!UICONTROL 공지]** 탭에는 서비스 유지 관리에 대한 정보가 표시됩니다.
 
 ### 사용자 프로필
 

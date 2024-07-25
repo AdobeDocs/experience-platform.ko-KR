@@ -2,7 +2,7 @@
 title: 쿼리 서비스 감사 로그 통합
 description: 쿼리 서비스 감사 로그는 다양한 사용자 작업에 대한 기록을 유지 관리하여 문제 해결 또는 기업 데이터 관리 정책 및 규정 요구 사항 준수에 대한 감사 추적을 구성합니다. 이 자습서에서는 쿼리 서비스와 관련된 감사 로그 기능에 대한 개요를 제공합니다.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Platform UI에서 감사 로그 대시보드를 보려면 [!DNL Data Governance]
 
 ## [!DNL Query Service] 감사 로그 수행 {#perform-an-audit-log}
 
-[!DNL Query Service] 활동에 대한 감사를 수행하려면 왼쪽 탐색에서 **[!UICONTROL 감사]**&#x200B;를 선택한 다음 단계 아이콘(![필터 아이콘)을 선택하십시오.](../images/audit-log/filter.png)) 필터 컨트롤 목록을 표시하여 결과를 좁히는 데 도움이 됩니다.
+[!DNL Query Service] 활동에 대한 감사를 수행하려면 왼쪽 탐색에서 **[!UICONTROL 감사]**&#x200B;를 선택한 다음 단계 아이콘(![필터 아이콘)을 선택하십시오.](/help/images/icons/filter.png)) 필터 컨트롤 목록을 표시하여 결과를 좁히는 데 도움이 됩니다.
 
 ![왼쪽 탐색 및 필터 컨트롤에 &quot;Audits&quot;가 강조 표시된 플랫폼 UI 감사 로그 대시보드입니다.](../images/audit-log/filter-controls.png)
 

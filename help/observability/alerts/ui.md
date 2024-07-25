@@ -4,7 +4,7 @@ title: 경고 UI 안내서
 description: Experience Platform 사용자 인터페이스에서 경고를 관리하는 방법을 알아봅니다.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 8d63e9fa4c7eb09ffb90edca612a6e6d44dd18fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '626'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 Adobe Experi
 
 경고 알림은 이메일로 직접 전달될 수 있습니다.
 
-알림 및 공지를 표시하려면 오른쪽 상단 리본에 있는 벨 아이콘(![벨 아이콘](../images/alerts/ui/bell-icon.png))을 선택하십시오. 표시되는 드롭다운에서 cog 아이콘(![cog 아이콘](../images/alerts/ui/cog-icon.png))을 선택하여 Experience Cloud 환경 설정 페이지에 액세스합니다.
+알림 및 공지를 표시하려면 오른쪽 상단 리본에 있는 벨 아이콘(![벨 아이콘](/help/images/icons/bell.png))을 선택하십시오. 표시되는 드롭다운에서 cog 아이콘(![cog 아이콘](/help/images/icons/settings.png))을 선택하여 Experience Cloud 환경 설정 페이지에 액세스합니다.
 
 ![벨 아이콘과 톱니바퀴 아이콘을 강조 표시하는 경고 목록입니다.](../images/alerts/ui/edit-preferences.png)
 

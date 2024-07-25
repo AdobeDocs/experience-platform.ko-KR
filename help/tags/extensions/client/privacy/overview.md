@@ -2,7 +2,7 @@
 title: Adobe 개인 정보 보호 확장 개요
 description: Adobe Experience Platform의 Adobe 개인 정보 보호 태그 확장에 대해 알아봅니다.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 2%
@@ -95,7 +95,7 @@ Adobe 개인 정보 보호 태그 확장을 사용할 때 데이터 요소 형�
 
 ![작업 유형 선택](../../../images/extensions/client/privacy/action-type.png)
 
-오른쪽 패널은 작업의 콜백 역할을 할 데이터 요소를 선택하라는 메시지를 표시합니다. 데이터베이스 아이콘(![데이터베이스 아이콘](../../../images/extensions/client/privacy/database.png))을 선택하고 목록에서 이전에 만든 데이터 요소를 선택합니다. 계속하려면 **[!UICONTROL 변경 내용 유지]**&#x200B;를 선택하십시오.
+오른쪽 패널은 작업의 콜백 역할을 할 데이터 요소를 선택하라는 메시지를 표시합니다. 데이터베이스 아이콘(![데이터베이스 아이콘](/help/images/icons/database.png))을 선택하고 목록에서 이전에 만든 데이터 요소를 선택합니다. 계속하려면 **[!UICONTROL 변경 내용 유지]**&#x200B;를 선택하십시오.
 
 ![데이터 요소 선택](../../../images/extensions/client/privacy/add-data-element.png)
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 프로필 보강 작업 모니터링
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 2%
@@ -77,7 +77,7 @@ ht-degree: 2%
 
 이 섹션에서는 페이지에 표시되는 지표를 필터링할 수 있는 모니터링 인터페이스의 다양한 UI(사용자 인터페이스) 옵션에 대해 설명합니다.
 
-화살표 아이콘(![화살표 아이콘](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png))을 사용하여 프로필 보강 작업에 대한 정보를 한눈에 표시하는 화면 상단의 카드를 확장하거나 종료합니다.
+화살표 아이콘(![화살표 아이콘](/help/images/icons/chevron-up.png))을 사용하여 프로필 보강 작업에 대한 정보를 한눈에 표시하는 화면 상단의 카드를 확장하거나 종료합니다.
 
 ![화살표 아이콘 UI 컨트롤을 표시하는 화면 녹화](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 

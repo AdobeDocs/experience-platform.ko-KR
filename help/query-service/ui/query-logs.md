@@ -2,7 +2,7 @@
 title: 쿼리 로그
 description: 쿼리가 실행될 때마다 쿼리 로그가 자동으로 생성되며 UI를 통해 문제 해결에 도움을 줄 수 있습니다. 이 문서에서는 UI의 쿼리 서비스 로그 섹션을 사용하고 탐색하는 방법에 대해 간략하게 설명합니다.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Adobe Experience Platform은 API 및 UI를 통해 발생하는 모든 쿼리 이
 
 ## 사용자 지정 및 검색 {#customize-and-search}
 
-쿼리 서비스 로그는 사용자 지정 가능한 테이블 형식으로 표시됩니다. 표 열을 사용자 지정하려면 설정 아이콘(![설정 아이콘)을 선택합니다.](../images/ui/query-log/settings-icon.png))이(가) 화면 오른쪽에 있습니다. 각 열을 선택 취소할 수 있는 [!UICONTROL 표 사용자 지정] 대화 상자가 나타납니다.
+쿼리 서비스 로그는 사용자 지정 가능한 테이블 형식으로 표시됩니다. 표 열을 사용자 지정하려면 설정 아이콘(![설정 아이콘)을 선택합니다.](/help/images/icons/column-settings.png))이(가) 화면 오른쪽에 있습니다. 각 열을 선택 취소할 수 있는 [!UICONTROL 표 사용자 지정] 대화 상자가 나타납니다.
 
 검색 필드에 템플릿 이름을 입력하여 특정 쿼리 템플릿과 관련된 로그를 검색할 수도 있습니다.
 
@@ -67,13 +67,13 @@ Adobe Experience Platform은 API 및 UI를 통해 발생하는 모든 쿼리 이
 
 ## 로그 편집 {#edit-logs}
 
-각 행의 템플릿 이름 또는 SQL 코드 조각 옆에 연필 아이콘(![연필 아이콘)이 있습니다.](../images/ui/query-log/edit-icon.png)) 쿼리 편집기로 이동하는 데 사용할 수 있습니다. 그런 다음 편집기에서 편집을 위해 쿼리를 미리 채웁니다.
+각 행의 템플릿 이름 또는 SQL 코드 조각 옆에 연필 아이콘(![연필 아이콘)이 있습니다.](/help/images/icons/edit.png)) 쿼리 편집기로 이동하는 데 사용할 수 있습니다. 그런 다음 편집기에서 편집을 위해 쿼리를 미리 채웁니다.
 
 ![연필 아이콘이 강조 표시된 쿼리 로그 작업 영역입니다.](../images/ui/query-log/edit-query.png)
 
 ## 로그 필터링 {#filter-logs}
 
-다양한 설정을 기반으로 쿼리 로그 목록을 필터링할 수 있습니다. 필터 아이콘(![필터 아이콘을 선택합니다.](../images/ui/query-log/filter-icon.png)) 작업 영역의 왼쪽 상단에서 왼쪽 레일에서 필터 옵션 집합을 엽니다.
+다양한 설정을 기반으로 쿼리 로그 목록을 필터링할 수 있습니다. 필터 아이콘(![필터 아이콘을 선택합니다.](/help/images/icons/filter.png)) 작업 영역의 왼쪽 상단에서 왼쪽 레일에서 필터 옵션 집합을 엽니다.
 
 ![필터 아이콘이 강조 표시된 쿼리 로그 작업 영역입니다.](../images/ui/query-log/log-filter.png)
 

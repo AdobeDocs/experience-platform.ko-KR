@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 자동 정책 시행
 description: 이 문서에서는 Experience Platform의 대상에 대한 대상을 활성화할 때 데이터 사용 정책이 자동으로 적용되는 방법에 대해 설명합니다.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2109'
 ht-degree: 0%
@@ -104,7 +104,7 @@ Experience Platform에서 정책 집행은 다음 계보와 관련이 있습니�
 
 ![데이터 계보 그래프가 강조 표시된 정책 위반 대화 상자입니다.](../images/enforcement/data-lineage.png)
 
-**[!UICONTROL 필터]** 아이콘(![필터 아이콘)을 사용할 수도 있습니다.](../images/enforcement/filter.png))을(를) 사용하여 표시된 엔터티를 범주별로 필터링할 수 있습니다. 데이터를 표시하려면 적어도 두 개의 카테고리를 선택해야 합니다.
+**[!UICONTROL 필터]** 아이콘(![필터 아이콘)을 사용할 수도 있습니다.](/help/images/icons/filter.png))을(를) 사용하여 표시된 엔터티를 범주별로 필터링할 수 있습니다. 데이터를 표시하려면 적어도 두 개의 카테고리를 선택해야 합니다.
 
 ![데이터 계보 필터 및 드롭다운 메뉴가 강조 표시된 정책 위반 대화 상자입니다.](../images/enforcement/lineage-filter.png)
 

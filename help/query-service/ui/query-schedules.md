@@ -2,7 +2,7 @@
 title: 쿼리 일정
 description: Adobe Experience Platform UI를 통해 예약된 쿼리 실행을 자동화하고, 쿼리 일정을 삭제 또는 비활성화하고, 사용 가능한 예약 옵션을 활용하는 방법을 알아봅니다.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '1848'
 ht-degree: 0%
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 ![데이터 세트 세부 정보와 [!UICONTROL 새 데이터 세트에 만들기 및 추가] 옵션이 강조 표시된 일정 세부 정보 패널.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-또는 **[!UICONTROL 기존 데이터 집합에 추가]**&#x200B;를 선택한 다음 데이터 집합 아이콘(![데이터 집합 아이콘.](../images/ui/query-schedules/dataset-icon.png))을 선택하십시오.
+또는 **[!UICONTROL 기존 데이터 집합에 추가]**&#x200B;를 선택한 다음 데이터 집합 아이콘(![데이터 집합 아이콘.](/help/images/icons/database.png))을 선택하십시오.
 
 ![데이터 세트 세부 정보 및 기존 데이터 세트에 추가 기능이 강조 표시된 예약 세부 정보 패널.](../images/ui/query-schedules/dataset-details-existing.png)
 

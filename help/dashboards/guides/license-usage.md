@@ -4,7 +4,7 @@ title: 라이선스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2103'
 ht-degree: 7%
@@ -101,7 +101,7 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 
 ![라이선스 사용 대시보드의 세부 정보 탭입니다.](../images/license-usage/details-tab.png)
 
-이 보기에서 ![검사 아이콘을 선택할 수 있습니다.해당 지표에 대한 시각화를 보기 위해 샌드박스 이름 옆에 ](../images/license-usage/inspect-icon.png)이(가) 있습니다. 해당 지표에 대한 시각화와 함께 대화 상자가 열립니다.
+이 보기에서 ![검사 아이콘을 선택할 수 있습니다.해당 지표에 대한 시각화를 보기 위해 샌드박스 이름 옆에 ](/help/images/icons/inspect.png)이(가) 있습니다. 해당 지표에 대한 시각화와 함께 대화 상자가 열립니다.
 
 ### 시각화 {#visualizations}
 

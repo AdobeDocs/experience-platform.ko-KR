@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 305aa7f44cd64d9a0ae704fe9aa01d2d1c536ade
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3743'
 ht-degree: 6%
@@ -141,7 +141,7 @@ ht-degree: 6%
 
 ![열거형 목록에 포함되지 않은 값을 삽입하는 경우 표시되는 경고입니다.](../images/ui/segment-builder/enum-warning.png)
 
-여러 값을 만드는 경우 일괄 업로드를 사용하여 한 번에 모든 값을 추가할 수 있습니다. ![더하기 아이콘](../images/ui/segment-builder/plus-icon.png)을 선택하여 **[!UICONTROL 일괄 값 추가]** 팝오버를 표시합니다.
+여러 값을 만드는 경우 일괄 업로드를 사용하여 한 번에 모든 값을 추가할 수 있습니다. ![더하기 아이콘](/help/images/icons/add-circle.png)을 선택하여 **[!UICONTROL 일괄 값 추가]** 팝오버를 표시합니다.
 
 ![더하기 아이콘이 강조 표시되어 일괄 업로드 팝오버에 액세스하기 위해 선택할 수 있는 단추를 표시합니다.](../images/ui/segment-builder/add-bulk-values.png)
 
@@ -287,7 +287,7 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 >
 >세그먼트 정의에 대한 예상 값 생성에 대한 자세한 내용은 세그먼트 정의 생성 자습서의 [예상 값 생성 섹션](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)에서 확인할 수 있습니다.
 
-평가 방법을 선택할 수도 있습니다. 사용하려는 평가 방법을 알고 있는 경우 드롭다운 목록을 사용하여 원하는 평가 방법을 선택할 수 있습니다. 이 세그먼트 정의가 사용할 수 있는 평가 유형을 알아보려면 찾아보기 아이콘 ![돋보기 폴더 아이콘](../images/ui/segment-builder/segment-evaluation-select-icon.png)을(를) 선택하여 사용 가능한 세그먼트 정의 평가 방법 목록을 확인할 수 있습니다.
+평가 방법을 선택할 수도 있습니다. 사용하려는 평가 방법을 알고 있는 경우 드롭다운 목록을 사용하여 원하는 평가 방법을 선택할 수 있습니다. 이 세그먼트 정의가 사용할 수 있는 평가 유형을 알아보려면 찾아보기 아이콘 ![돋보기 폴더 아이콘](/help/images/icons/folder-search.png)을(를) 선택하여 사용 가능한 세그먼트 정의 평가 방법 목록을 확인할 수 있습니다.
 
 [!UICONTROL 평가 메서드 적격성] 팝오버가 나타납니다. 이 팝오버에는 사용 가능한 평가 방법인 일괄 처리, 스트리밍 및 에지가 표시됩니다. 팝오버는 적격 및 부적격 평가 방법을 보여 줍니다. 세그먼트 정의에 사용한 매개 변수에 따라 특정 평가 방법에 적합하지 않을 수 있습니다. 각 평가 방법의 요구 사항에 대한 자세한 내용은 [스트리밍 세분화](./streaming-segmentation.md#query-types) 또는 [에지 세분화](./edge-segmentation.md#query-types) 개요를 참조하십시오.
 

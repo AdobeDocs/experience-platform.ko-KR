@@ -2,7 +2,7 @@
 title: 데이터 수집 전체 개요
 description: Adobe Experience Platform의 데이터 수집 기능을 사용하여 Adobe Experience Cloud 솔루션으로 이벤트 데이터를 전송하는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2616'
 ht-degree: 0%
@@ -228,7 +228,7 @@ XDM 개체 유형에 대한 구성 대화 상자가 나타납니다. 대화 상�
 
 ![작업 유형](./images/e2e/action-type.png)
 
-이벤트 보내기 작업을 구성하는 추가 옵션을 표시하도록 화면이 업데이트됩니다. **[!UICONTROL Type]**&#x200B;에서 사용자 지정 형식 값을 제공하여 `eventType` XDM 필드를 채울 수 있습니다. **[!UICONTROL XDM 데이터]**&#x200B;에서 이전에 만든 XDM 데이터 형식의 이름을 제공하거나(퍼센트 기호로 둘러싸임) 데이터베이스 아이콘(![데이터베이스 아이콘](./images/e2e/database-symbol.png))을 선택하여 목록에서 선택합니다. 이는 궁극적으로 Edge Network에게 전송되는 데이터입니다.
+이벤트 보내기 작업을 구성하는 추가 옵션을 표시하도록 화면이 업데이트됩니다. **[!UICONTROL Type]**&#x200B;에서 사용자 지정 형식 값을 제공하여 `eventType` XDM 필드를 채울 수 있습니다. **[!UICONTROL XDM 데이터]**&#x200B;에서 이전에 만든 XDM 데이터 형식의 이름을 제공하거나(퍼센트 기호로 둘러싸임) 데이터베이스 아이콘(![데이터베이스 아이콘](/help/images/icons/database.png))을 선택하여 목록에서 선택합니다. 이는 궁극적으로 Edge Network에게 전송되는 데이터입니다.
 
 완료되면 **[!UICONTROL 변경 내용 유지]**&#x200B;를 선택합니다.
 

@@ -2,7 +2,7 @@
 title: 감사 로그 개요
 description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어떤 작업을 수행했는지 확인하는 방법에 대해 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 36%
@@ -94,7 +94,7 @@ Platform UI의 **[!UICONTROL 감사]** 작업 영역에서 다양한 Experience 
 >이 새로운 기능 때문에 표시되는 데이터는 2022년 3월까지만 유지됩니다. 선택한 리소스에 따라 2022년 1월부터 이전 데이터를 사용할 수 있습니다.
 
 
-단계 아이콘(![필터 아이콘](../../images/audit-logs/icon.png))을 선택하여 결과를 좁히는 데 도움이 되는 필터 컨트롤 목록을 표시합니다. 선택한 다양한 필터에 관계없이 마지막 1000개의 레코드만 표시됩니다.
+단계 아이콘(![필터 아이콘](/help/images/icons/filter.png))을 선택하여 결과를 좁히는 데 도움이 되는 필터 컨트롤 목록을 표시합니다. 선택한 다양한 필터에 관계없이 마지막 1000개의 레코드만 표시됩니다.
 
 ![필터링된 작업 로그가 강조 표시된 감사 대시보드입니다.](../../images/audit-logs/filters.png)
 
