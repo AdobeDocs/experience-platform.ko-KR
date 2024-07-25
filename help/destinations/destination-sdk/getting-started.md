@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Adobe Experience Platform Destination SDK 사용을 인증하고 시작하는 방법에 대해 설명합니다. 여기에는 Adobe I/O 인증 자격 증명, 샌드박스 이름 및 대상 작성 액세스 제어 권한을 얻는 방법에 대한 지침이 포함되어 있습니다.
 title: Destination SDK 시작
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
+source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '593'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ## 용어 {#terminology}
 
-이 안내서에서는 조직, 샌드박스 등 플랫폼별 개념을 사용합니다. 이러한 용어와 기타 용어에 대한 정의는 [Experience Platform 용어집](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html)을 참조하세요.
+이 안내서에서는 조직, 샌드박스 등 플랫폼별 개념을 사용합니다. 이러한 용어에 대한 정의는 [Experience Platform 용어집](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html)을 참조하세요. 이 기능과 직접 관련된 용어는 [Destination SDK 용어집](/help/destinations/destination-sdk/glossary.md)을 참조하세요.
 
 ## 필요한 인증 자격 증명 가져오기 {#obtain-authentication-credentials}
 

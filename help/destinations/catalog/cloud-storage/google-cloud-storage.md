@@ -3,7 +3,7 @@ title: Google 클라우드 스토리지 연결
 description: Google Cloud Storage에 연결하고 대상을 활성화하거나 데이터 세트를 내보내는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 679c1723965271b6a9c1b5b873cf8ac8de67458d
+source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
 workflow-type: tm+mt
 source-wordcount: '1228'
 ht-degree: 2%
@@ -119,15 +119,15 @@ ht-degree: 2%
 
 데이터를 [!DNL Google Cloud Storage] 저장소 위치에 연결하고 내보내려면 버킷에 대해 다음 [!DNL Google Cloud Storage] 권한이 필요합니다.
 
-*`orgpolicy.policy.get`
-*`resourcemanager.projects.get`
-*`resourcemanager.projects.list`
-*`storage.managedFolders.create`
-*`storage.multipartUploads.abort`
-*`storage.multipartUploads.create`
-*`storage.multipartUploads.listParts`
-*`storage.objects.create`
-*`storage.objects.list`
+* `orgpolicy.policy.get`
+* `resourcemanager.projects.get`
+* `resourcemanager.projects.list`
+* `storage.managedFolders.create`
+* `storage.multipartUploads.abort`
+* `storage.multipartUploads.create`
+* `storage.multipartUploads.listParts`
+* `storage.objects.create`
+* `storage.objects.list`
 
 [!DNL Google Cloud Storage]의 [액세스 제어 및 권한](https://cloud.google.com/storage/docs/access-control/iam-permissions)에 대해 자세히 알아보세요.
 
