@@ -5,9 +5,9 @@ title: 머신 러닝 인사이트를 통해 실시간 고객 프로필 강화
 type: Tutorial
 description: 이 문서에서는 머신 러닝 통찰력을 통해 실시간 고객 프로필을 보강하는 방법에 대한 안내서를 제공합니다.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: afa27069c7490848398c92973dd77810564b5993
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,13 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Data Science Workspace]은(는) 데이터 예측 및 통찰력을 생성하기 위해 머신 러닝 모델을 만들고, 평가하고, 활용할 수 있는 도구와 리소스를 제공합니다. 머신 러닝 인사이트가 [!DNL Profile]을(를) 사용할 수 있는 데이터 세트로 수집되면 동일한 데이터도 [!DNL Profile] 레코드로 수집되어 [!DNL Adobe Experience Platform Segmentation Service]을(를) 사용하여 세그먼트화할 수 있습니다.
 
+세분화 프로세스는 대상자에 대한 평가 방법에 따라 다릅니다. 대상이 **스트리밍**(으)로 구성된 경우 모델이 작성한 모든 새 업데이트를 프로필에 실시간으로 처리합니다. 그러나 대상자가 **일괄 처리** 평가를 위해 구성된 경우 새 값은 다음 일괄 처리에서 평가됩니다.
+
 이 문서에서는 기계 학습 통찰력을 통해 [!DNL Real-Time Customer Profile]을(를) 보강할 수 있는 자습서에 대한 링크를 제공합니다.
 
 ## 시작하기
 
-아래 튜토리얼을 완료하려면 [!DNL Profile] 데이터를 수집하고 세그먼트를 만드는 방법에 대해 잘 알고 있어야 합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
+아래 튜토리얼을 완료하려면 [!DNL Profile] 데이터 수집 및 대상 만들기에 대한 작업 이해가 필요합니다. 이 자습서를 시작하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 각 개별 고객에 대한 완전한 통합 표현을 제공합니다.
 - [[!DNL Identity Service]](../../identity-service/home.md): 플랫폼에 수집되는 서로 다른 데이터 원본의 ID를 연결하여 [!DNL Real-Time Customer Profile]을(를) 사용하도록 설정합니다.
@@ -41,20 +43,20 @@ Adobe Experience Platform [!DNL Data Science Workspace]은(는) 데이터 예측
 
 스키마와 데이터 세트가 준비되면 적절한 모델을 사용하여 채점 실행을 수행함으로써 채점 데이터를 생성하고 데이터 세트에 수집할 수 있습니다.
 
-## [!DNL Segment Builder]을(를) 사용하여 세그먼트 만들기 {#create-segments-using-the-segment-builder}
+## [!DNL Segment Builder]을(를) 사용하여 대상 만들기 {#create-audiences-using-the-segment-builder}
 
-[!DNL Profile]이(가) 활성화된 데이터 세트에 대한 채점 데이터 인사이트를 생성하고 수집한 후 [!DNL Segment Builder]을(를) 사용하여 동적 세그먼트를 만들 수 있습니다.
+[!DNL Profile]이(가) 활성화된 데이터 세트에 대한 채점 데이터 인사이트를 생성하고 수집한 후 [!DNL Segment Builder]을(를) 사용하여 동적 대상을 만들 수 있습니다.
 
 [!DNL Segment Builder]은(는) [!DNL Profile] 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다. 자세한 내용은 [[!DNL Segment Builder] 사용 안내서](../../segmentation/ui/segment-builder.md)를 참조하세요.
 
 - 속성, 이벤트 및 기존 대상의 조합을 빌딩 블록으로 사용하여 세그먼트 정의 작성.
-- 규칙 빌더 캔버스 및 컨테이너를 사용하여 세그먼트 규칙이 실행되는 순서를 제어합니다.
+- 규칙 빌더 캔버스 및 컨테이너를 사용하여 대상 규칙이 실행되는 순서를 제어합니다.
 - 예상 대상의 예상치를 보고 필요에 따라 세그먼트 정의를 조정할 수 있습니다.
 - 예약된 세분화에 대해 모든 세그먼트 정의를 활성화합니다.
 - 스트리밍 세분화에 대해 지정된 세그먼트 정의를 사용하도록 설정하는 중입니다.
 
 ## 다음 단계 {#next-steps}
 
-세그먼트 및 [!DNL Segment Builder]에 대한 자세한 내용은 [세그먼테이션 서비스 개요](../../segmentation/home.md)를 참조하세요.
+대상 및 [!DNL Segment Builder]에 대해 자세히 알아보려면 [세그먼테이션 서비스 개요](../../segmentation/home.md)를 읽어 보세요.
 
 [!DNL Real-Time Customer Profile]에 대한 자세한 내용은 [실시간 고객 프로필 개요](../../profile/home.md)를 참조하세요.
