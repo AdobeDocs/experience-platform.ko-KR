@@ -1,9 +1,10 @@
 ---
 title: SQL로 일괄 처리 수집 탐색, 문제 해결 및 확인
-description: Adobe Experience Platform의 데이터 수집 프로세스를 이해하고 관리하는 방법에 대해 알아봅니다. 이 문서에는 배치를 확인하고, 오류를 처리하고, 수집된 데이터를 쿼리하는 방법이 포함되어 있습니다.
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+description: Adobe Experience Platform의 데이터 수집 프로세스를 이해하고 관리하는 방법에 대해 알아봅니다. 이 문서에는 배치를 확인하고 수집된 데이터를 쿼리하는 방법이 포함되어 있습니다.
+exl-id: 8f49680c-42ec-488e-8586-50182d50e900
+source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,6 @@ ht-degree: 0%
 
 이 문서에서는 SQL을 사용하여 수집된 일괄 처리의 레코드를 확인하고 검증하는 방법을 설명합니다. 이 문서에서는 다음 방법을 설명합니다.
 
-- 수집 프로세스 중에 발생할 수 있는 오류 처리
 - 데이터 세트 일괄 처리 메타데이터 액세스
 - 일괄 처리를 쿼리하여 데이터 무결성 문제 해결 및 보장
 
@@ -26,7 +26,6 @@ ht-degree: 0%
 
 - **데이터 수집**: 관련된 다양한 방법 및 프로세스를 포함하여 데이터를 플랫폼으로 수집하는 방법에 대한 기본 사항을 알아보려면 [데이터 수집 개요](../../ingestion/home.md)를 참조하십시오.
 - **일괄 처리 수집**: 일괄 처리 수집의 기본 개념에 대해 알아보려면 [일괄 처리 수집 API 개요](../../ingestion/batch-ingestion/overview.md)를 참조하십시오. 특히 &quot;일괄 처리&quot;란 무엇이며 플랫폼의 데이터 수집 프로세스 내에서 작동하는 방식입니다.
-- **데이터 수집에서 오류 처리**: 데이터 수집 중에 발생할 수 있는 [다른 유형의 오류](../../ingestion/quality/error-diagnostics.md#retrieve-errors)와 [이를 처리하는 방법](../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails)에 대해 알아봅니다.
 - **데이터 세트의 시스템 메타데이터**: 시스템 메타데이터 필드를 사용하여 수집된 데이터를 추적하고 쿼리하는 방법에 대해 알아보려면 [카탈로그 서비스 개요](../../catalog/home.md)를 참조하십시오.
 - **XDM(Experience Data Model)**: XDM 스키마 및 플랫폼에 수집된 데이터의 구조와 형식을 나타내고 확인하는 방법에 대해 알아보려면 [스키마 UI 개요](../../xdm/ui/overview.md) 및 [의 스키마 구성 기본 사항&#39;](../../xdm/schema/composition.md)을 참조하세요.
 
@@ -57,11 +56,7 @@ GROUP BY _acp_system_metadata
 
 이러한 결과는 시스템이 데이터를 데이터 레이크에 배치 및 저장하는 가장 효율적인 방법을 결정하므로 입력 배치 수가 출력 배치 수와 반드시 일치하지 않는다는 것을 보여 줍니다.
 
-다음 예제에서는 다른 데이터 세트를 사용하여 이 점을 보여 줍니다.
-
->[!NOTE]
->
->이 예제를 실행하려면 제공된 샘플 파일([`drug_checkout_data`](../images/use-cases/drug_checkout_data.zip))을 플랫폼으로 수집하고 스키마 매핑을 구성할 수 있습니다.
+이 예제에서는 CSV 파일을 플랫폼으로 가져와서 `drug_checkout_data`(이)라는 데이터 세트를 만든 것으로 가정합니다.
 
 `drug_checkout_data` 파일은 35,000개의 레코드로 구성된 많이 중첩된 집합입니다. SQL 문 `SELECT * FROM drug_orders;`을(를) 사용하여 JSON 기반 `drug_orders` 데이터 집합에서 첫 번째 레코드 집합을 미리 봅니다.
 
@@ -97,7 +92,7 @@ GROUP  BY _acp_system_metadata
 
 >[!TIP]
 >
->배치 ID 및 해당 배치 ID와 연관된 쿼리 레코드를 검색하려면 먼저 플랫폼 내에서 배치를 생성해야 합니다. 프로세스를 직접 테스트하려는 경우 CSV 데이터를 플랫폼으로 수집할 수 있습니다. AI가 생성한 권장 사항을 사용하여 [CSV 파일을 기존 XDM 스키마에 매핑](../../ingestion/tutorials/map-csv/recommendations.md)하는 방법에 대한 안내서를 읽어 보십시오. 편의를 위해 [샘플 프로필 CSV 파일](../images/use-cases/sample-profiles.csv)을 여기에 사용할 수 있습니다.
+>배치 ID 및 해당 배치 ID와 연관된 쿼리 레코드를 검색하려면 먼저 플랫폼 내에서 배치를 생성해야 합니다. 프로세스를 직접 테스트하려는 경우 CSV 데이터를 플랫폼으로 수집할 수 있습니다. AI가 생성한 권장 사항을 사용하여 [CSV 파일을 기존 XDM 스키마에 매핑](../../ingestion/tutorials/map-csv/recommendations.md)하는 방법에 대한 안내서를 읽어 보십시오.
 
 일괄 처리를 수집했으면 데이터를 수집한 데이터 세트의 [!UICONTROL 데이터 세트 활동 탭](으)로 이동해야 합니다.
 
