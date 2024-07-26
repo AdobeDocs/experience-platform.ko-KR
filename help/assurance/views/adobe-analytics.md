@@ -2,14 +2,18 @@
 title: Assurance에서 Adobe Analytics 보기
 description: 이 안내서에서는 Adobe Experience Platform Assurance와 함께 Adobe Analytics를 사용하는 방법을 설명합니다.
 exl-id: e5cc72b0-d6d6-430b-9321-4835c1f77581
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 515f58175a8ccba03581ce4d7faf23fdfed3571e
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 100%
+source-wordcount: '394'
+ht-degree: 89%
 
 ---
 
 # Assurance에서 Adobe Analytics 보기
+
+>[!IMPORTANT]
+>
+>Analytics 이벤트 보기는 **Analytics 이벤트 2.0(Beta) 플러그인**&#x200B;에 통합됩니다.  향후 Assurance에서 제거됩니다. Assurance 세션을 위한 Analytics 디버깅에 **Analytics 이벤트 2.0(Beta) 플러그인**&#x200B;을 사용하는 것이 좋습니다.
 
 Adobe Analytics와 Adobe Experience Platform Assurance를 통합하면 Adobe Analytics 구현을 디버깅하고 확인하는 사용자에게 보다 자세한 SDK 이벤트 보기를 지원합니다. 이제 보기에 [Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/adobe-analytics/)에서 Adobe Analytics로 전송된 작업/상태 이벤트 및 수명 주기가 표시됩니다. 이 보기에는 각 보고서 세트의 처리 규칙을 적용한 후 이벤트가 처리되는 방법에 대한 정보를 제공하는 “응답” 세부 정보도 있습니다.
 
