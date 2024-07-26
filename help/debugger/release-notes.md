@@ -4,14 +4,20 @@ description: Adobe Experience Platform Debugger에 대한 최신 릴리스 정�
 keywords: debugger;experience Platform Debugger 확장 프로그램;chrome;확장 프로그램;릴리스 정보
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: c99234cf3f5af9abe590c90fbdefc7d50c1539da
+source-git-commit: 877e38154f6959d50bd0620290c2dce9decfc2b5
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '781'
 ht-degree: 5%
 
 ---
 
 # Adobe Experience Platform Debugger 릴리스 노트
+
+## 버전 1.6.1 - 2024년 7월 25일
+
+### 수정 사항 및 개선 사항
+
+* 사용자가 새 태그 포함 코드를 추가하지 않은 페이지에 추가할 수 없는 문제를 수정했습니다.
 
 ## 버전 1.6.0 - 2024년 7월 11일
 
@@ -31,7 +37,7 @@ ht-degree: 5%
 ### 수정 사항 및 개선 사항
 
 * 설정이 유지되지 않는 문제가 해결되었습니다.
-* Analytics Post 처리 히트를 보는 동안 디버거가 충돌하는 문제를 해결했습니다.
+* Analytics 사후 처리 히트를 보는 동안 디버거가 충돌하는 문제를 해결했습니다.
 
 ## 버전 1.5.3 - 2023년 12월 6일
 
