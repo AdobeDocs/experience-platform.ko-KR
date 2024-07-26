@@ -2,9 +2,9 @@
 title: 대상 FAQ
 description: 대상자 및 기타 세분화 관련 개념에 대한 FAQ에 대한 답변을 살펴보십시오.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 5e677e53677cd28787004043e9fcc9b94e631fc8
+source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
 workflow-type: tm+mt
-source-wordcount: '4187'
+source-wordcount: '4362'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,16 @@ Adobe Experience Platform [!DNL Segmentation Service]에서는 [!DNL Real-Time C
 
 예. 기본 식별자가 일치하면 외부에서 생성된 대상자가 플랫폼의 기존 프로필과 병합됩니다. 이 데이터를 조정하는 데 최대 24시간이 걸릴 수 있습니다. 프로필 데이터가 아직 존재하지 않는 경우 데이터가 수집될 때 새 프로필이 생성됩니다.
 
+### Audience Portal로 가져온 외부 생성 대상에 대한 고객 동의 환경 설정은 어떻게 적용됩니까?{#consent}
+
+고객 데이터가 여러 채널에서 캡처되므로 ID 결합 및 병합 정책을 통해 이 데이터를 하나의 실시간 고객 프로필에 통합할 수 있습니다. 고객의 동의 환경 설정에 대한 정보는 프로필 수준에서 저장되고 평가됩니다.
+
+다운스트림 대상은 활성화하기 전에 각 프로필에서 동의 정보를 확인합니다. 각 프로필의 동의 정보를 특정 대상에 대한 동의 요구 사항과 비교합니다. 프로필이 요구 사항을 충족하지 않으면 해당 프로필이 대상으로 전송되지 않습니다.
+
+외부 대상자를 Audience Portal에 수집하면 이메일 또는 ECID와 같은 기본 ID를 사용하여 기존 프로필과 결합됩니다. 그 결과, 기존의 동의 정책은 활성화 전반에 걸쳐 계속 적용됩니다.
+
+페이로드 변수가 프로필 저장소가 아닌 데이터 레이크에 저장된 **not**&#x200B;이므로 **not**&#x200B;은(는) 외부에서 생성된 대상자와 함께 동의 정보를 포함해야 합니다. 대신 **반드시**&#x200B;프로필 데이터를 가져오는 Adobe Experience Platform 수집 채널을 사용합니다.
+
 ### 외부에서 생성된 대상을 사용하여 다른 대상을 작성할 수 있습니까?
 
 예. 외부에서 생성된 모든 대상은 대상 인벤토리에 표시되며 [세그먼트 빌더](./ui/segment-builder.md)에서 대상을 작성할 때 사용할 수 있습니다.
@@ -80,7 +90,7 @@ Adobe Experience Platform [!DNL Segmentation Service]에서는 [!DNL Real-Time C
 
 ### 외부에서 생성된 대상자를 활성화할 수 있는 곳은 어디입니까?
 
-외부에서 생성된 대상자는 모든 RTCDP 대상에 매핑될 수 있으며 Adobe Journey Optimizer 캠페인에서 사용할 수 있습니다.
+외부에서 생성된 대상자는 어떤 대상에든 매핑될 수 있으며 Adobe Journey Optimizer 캠페인에서 사용할 수 있습니다.
 
 ### 얼마나 빨리 외부에서 생성된 대상을 활성화할 준비가 됩니까?
 
