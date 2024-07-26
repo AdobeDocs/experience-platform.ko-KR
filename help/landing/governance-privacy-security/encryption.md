@@ -2,9 +2,9 @@
 title: Adobe Experience Platform의 데이터 암호화
 description: Adobe Experience Platform에서 전송 중 및 유휴 상태의 데이터를 암호화하는 방법에 대해 알아봅니다.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,8 @@ CN 또는 SAN을 확인하여 추가 타사 유효성 검사를 수행하려면 
 
 - [Adobe Journey Optimizer 공개 인증서](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
 - [대상 서비스 공개 인증서](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
+
+MTLS 끝점에 GET 요청을 하여 공개 인증서를 안전하게 검색할 수도 있습니다. 자세한 내용은 [공개 인증서 끝점 설명서](../../data-governance/mtls-api/public-certificate-endpoint.md)를 참조하세요.
 
 ## 유휴 상태 데이터 {#at-rest}
 

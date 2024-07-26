@@ -4,9 +4,9 @@ title: HTTP API 연결
 description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 서드파티 HTTP 끝점으로 전송하여 자체 분석을 실행하거나 Experience Platform 외부로 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: fffeb2221c4e25bae8386419de1646c89aa93a06
 workflow-type: tm+mt
-source-wordcount: '2639'
+source-wordcount: '2664'
 ht-degree: 8%
 
 ---
@@ -76,6 +76,8 @@ HTTP API 대상을 사용하여 데이터를 Experience Platform 밖으로 내�
 [!DNL Common Name](CN) 및 [!DNL Subject Alternative Names](SAN)을 확인하여 추가 타사 유효성 검사를 수행하려면 아래 인증서를 다운로드할 수 있습니다.
 
 * [HTTP API mTLS 공개 인증서](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
+
+MTLS 끝점에 GET 요청을 하여 공개 인증서를 안전하게 검색할 수도 있습니다. 자세한 내용은 [공개 인증서 끝점 설명서](../../../data-governance/mtls-api/public-certificate-endpoint.md)를 참조하세요.
 
 ## 허용 목록에 추가하다 IP 주소 {#ip-address-allowlist}
 

@@ -5,10 +5,10 @@ breadcrumb-title: Data Governance 안내서
 user-guide-description: 레이블, 마케팅 활동 및 거버넌스 정책 사용을 통해 데이터 사용 제한을 적용합니다.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8837d719fbdf2864995c0d73a87a41c4b119cfb7
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 44%
+source-wordcount: '99'
+ht-degree: 43%
 
 ---
 
@@ -30,6 +30,10 @@ ht-degree: 44%
    * [개요](enforcement/overview.md)
    * [자동 적용](enforcement/auto-enforcement.md)
    * [API 기반 적용](enforcement/api-enforcement.md)
+* MTLS 서비스 API {#mtls-api}
+   * [개요](mtls-api/overview.md)
+   * [시작하기](mtls-api/getting-started.md)
+   * [공개 인증서 끝점](mtls-api/public-certificate-endpoint.md)
 * 정책 서비스 API {#api}
    * [개요](api/overview.md)
    * [시작하기](api/getting-started.md)

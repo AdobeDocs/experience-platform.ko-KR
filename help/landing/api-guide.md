@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform API 시작하기
 description: Adobe Experience Platform은 서로 밀접하게 연결된 API 서비스를 제공합니다. 이 안내서에는 사용 가능한 서비스, CRUD 작업에 필요한 헤더, 오류 메시지, Postman 컬렉션 및 샘플 API 호출에 대한 정보가 포함되어 있습니다.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: c728d63c22593ca56999dd0bb6679dea7de0e00a
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1446'
 ht-degree: 0%
 
 ---
@@ -124,8 +124,10 @@ curl -X GET \
 | [[!DNL Catalog Service] API 안내서](.././catalog/api/getting-started.md) | [!DNL Catalog Service] API를 통해 개발자는 Adobe Experience Platform에서 데이터 세트 메타데이터를 관리할 수 있습니다. 여기에는 데이터 위치, 처리 단계, 처리 중 발생한 오류 및 데이터 보고서가 포함됩니다. |
 | [[!DNL Data Access] API 안내서](.././data-access/api.md) | [!DNL Data Access] API를 통해 개발자는 Experience Platform 내에서 수집된 데이터 세트에 대한 정보를 검색할 수 있습니다. 여기에는 데이터 세트 파일 액세스 및 다운로드, 헤더 정보 검색, 실패 및 성공한 배치 나열, 미리보기 CSV/Parquet 파일 다운로드 등이 포함됩니다. |
 | [[!DNL Dataset Service] API 안내서](.././data-governance/labels/dataset-api.md) | 데이터 세트 서비스 API를 사용하면 데이터 세트에 대한 사용 레이블을 적용하고 편집할 수 있습니다. Adobe Experience Platform의 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 카탈로그 서비스 API와 별개입니다. |
+| [[!DNL Data Hygiene API guide]](../hygiene/api/overview.md) | [!DNL Data Hygiene] API를 사용하면 Adobe Experience Platform에서 고객의 저장된 개인 데이터를 프로그래밍 방식으로 수정하거나 삭제할 수 있으며 데이터 세트의 만료 날짜를 예약할 수 있습니다. |
 | [[!DNL Edge Network Server] API 안내서](../server-api/overview.md) | [!DNL Edge Network Server API]은(는) 다양한 데이터 수집, 개인화, 광고 및 마케팅 사용 사례에 사용할 수 있습니다. [!DNL Server API]은(는) 서버, 장치 [!DNL IoT]개, 셋톱 박스 및 다양한 다른 장치에서 사용할 수 있습니다. |
 | [[!DNL Identity Service] API 안내서](.././identity-service/api/getting-started.md) | [!DNL Identity Service] API를 통해 개발자는 Adobe Experience Platform의 ID 그래프를 사용하여 크로스 디바이스, 크로스 채널 및 거의 실시간으로 고객을 식별할 수 있습니다. |
+| [[!DNL MTLS Service API guide]](../data-governance/mtls-api/overview.md) | [!DNL MTLS Service] API를 사용하면 조직의 Adobe에서 발급한 공개 인증서를 안전하게 검색할 수 있습니다. |
 | [[!DNL Observability Insights] API 안내서](.././observability/api/overview.md) | [!DNL Observability Insights]은(는) 개발자가 Adobe Experience Platform의 주요 가시성 지표를 표시할 수 있도록 하는 RESTful API입니다. 이러한 지표는 플랫폼 사용 통계, 플랫폼 서비스에 대한 상태 점검, 내역 트렌드 및 다양한 플랫폼 기능에 대한 성능 지표에 대한 통찰력을 제공합니다. |
 | [[!DNL Policy Service] API 안내서](.././data-governance/api/overview.md) <br>(데이터 거버넌스) | [!DNL Policy Service] API를 사용하면 데이터 사용 레이블 및 정책을 만들고 관리하여 특정 데이터 사용 레이블이 포함된 데이터에 대해 취할 수 있는 마케팅 작업을 결정할 수 있습니다. 데이터 세트 및 필드에 레이블을 적용하려면 [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) 안내서를 참조하세요. |
 | [[!DNL Privacy Service] API 안내서](.././privacy-service/api/getting-started.md) | [!DNL Privacy Service] API를 통해 개발자는 법적 개인 정보 보호 규정을 준수하여 Experience Cloud 애플리케이션에서 개인 데이터에 액세스하거나 삭제하기 위한 고객 요청을 만들고 관리할 수 있습니다. |
