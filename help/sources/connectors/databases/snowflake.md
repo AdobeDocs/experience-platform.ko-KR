@@ -3,9 +3,9 @@ title: Snowflake Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Snowflake을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 8b0f6eca87deedd8090830e3375d5099bfb0dfc0
+source-git-commit: 8d6baef1549498e137d336ac2c8a42428496dedf
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,82 @@ ht-degree: 0%
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 Experience Platform은 타사 데이터베이스에서 데이터를 수집하는 기능을 지원합니다. 플랫폼은 관계형, NoSQL 또는 데이터 웨어하우스와 같은 다양한 유형의 데이터베이스에 연결할 수 있습니다. 데이터베이스 공급자에 대한 지원에는 [!DNL Snowflake]이(가) 포함됩니다.
+
+## 전제 조건 {#prerequisites}
+
+이 섹션에서는 [!DNL Snowflake] 원본을 Experience Platform에 연결하기 전에 완료해야 하는 설정 작업에 대해 설명합니다.
+
+### 계정 식별자 검색 {#retrieve-your-account-identifier}
+
+Experience Platform 시 계정 식별자를 사용하여 [!DNL Snowflake] 인스턴스를 인증하게 되므로 [!DNL Snowflake] UI 대시보드에서 계정 식별자를 검색해야 합니다.
+
+계정 식별자를 검색하려면:
+
+* [[!DNL Snowflake] 응용 프로그램 UI 대시보드](https://app.snowflake.com/)에서 내 계정으로 이동합니다.
+* 왼쪽 탐색에서 **[!DNL Accounts]**&#x200B;을(를) 선택한 후 헤더에서 **[!DNL Active Accounts]**&#x200B;을(를) 선택합니다.
+* 그런 다음 정보 아이콘을 선택하고 을(를) 선택한 다음 현재 URL의 도메인 이름을 복사합니다.
+
+![Snowflake 이름이 선택된 도메인 UI 대시보드입니다.](../../images/tutorials/create/snowflake/snowflake-dashboard.png)
+
+### 개인 키 검색 {#retrieve-your-private-key}
+
+[!DNL Snowflake] 연결에 키 쌍 인증을 사용하는 경우 Experience Platform에 연결하기 전에 개인 키도 생성해야 합니다.
+
+>[!BEGINTABS]
+
+>[!TAB 암호화된 개인 키를 만듭니다]
+
+암호화된 [!DNL Snowflake] 개인 키를 생성하려면 터미널에서 다음 명령을 실행하십시오.
+
+```shell
+openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
+```
+
+성공하면 개인 키를 PEM 형식으로 받아야 합니다.
+
+```shell
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+MIIE6T...
+-----END ENCRYPTED PRIVATE KEY-----
+```
+
+>[!TAB 암호화되지 않은 개인 키를 만듭니다]
+
+암호화되지 않은 [!DNL Snowflake] 개인 키를 생성하려면 터미널에서 다음 명령을 실행하십시오.
+
+```shell
+openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
+```
+
+성공하면 개인 키를 PEM 형식으로 받아야 합니다.
+
+```shell
+-----BEGIN PRIVATE KEY-----
+MIIE6T...
+-----END PRIVATE KEY-----
+```
+
+>[!ENDTABS]
+
+그런 다음 개인 키를 가져와서 [!DNL Base64]에서 인코딩하십시오. [!DNL Snowflake] 개인 키에 대해 변환이나 형식 변환을 수행하지 않도록 하십시오. 또한 [!DNL Base64]에서 인코딩하기 전에 개인 키 끝에 후행 줄바꿈 문자가 없는지 확인해야 합니다.
+
+### 구성 확인
+
+[!DNL Snowflake] 데이터에 대한 원본 연결을 만들려면 먼저 다음 구성도 충족하는지 확인해야 합니다.
+
+* 지정된 사용자에게 할당된 기본 웨어하우스는 Experience Platform 인증 시 입력한 웨어하우스와 동일해야 합니다.
+* 지정된 사용자에게 할당된 기본 역할은 Experience Platform 인증 시 입력한 것과 동일한 데이터베이스에 액세스할 수 있어야 합니다.
+
+역할 및 웨어하우스를 확인하려면:
+
+* 왼쪽 탐색에서 **[!DNL Admin]**&#x200B;을(를) 선택한 다음 **[!DNL Users & Roles]**&#x200B;을(를) 선택합니다.
+* 적절한 사용자를 선택한 다음 오른쪽 상단 모서리에서 줄임표(`...`)를 선택합니다.
+* 표시되는 [!DNL Edit user] 창에서 [!DNL Default Role](으)로 이동하여 지정된 사용자와 연결된 역할을 봅니다.
+* 같은 창에서 [!DNL Default Warehouse](으)로 이동하여 지정된 사용자와 연결된 웨어하우스를 봅니다.
+
+![Snowflake 및 웨어하우스를 확인할 수 있는 역할 UI입니다.](../../images/tutorials/create/snowflake/snowflake-configs.png)
+
+인코딩이 완료되면 Experience Platform 시 [!DNL Base64] 인코딩된 개인 키를 사용하여 [!DNL Snowflake] 계정을 인증할 수 있습니다.
 
 ## IP 주소 허용 목록
 
