@@ -2,9 +2,9 @@
 description: 이 페이지는 Adobe Experience Platform Destination SDK을 통해 대상 템플릿을 만드는 데 사용되는 API 호출을 예시합니다.
 title: 대상자 템플릿 만들기
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 3447a1c6959419c36fd55359496284daf90e26cf
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '622'
 ht-degree: 3%
 
 ---
@@ -50,135 +50,202 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
 {
-   "metadataTemplate":{
-      "name":"string",
-      "create":{
-         "url":"string",
-         "httpMethod":"string",
-         "headers":[
-            {
-               "header":"string",
-               "value":"string"
-            }
-         ],
-         "requestBody":{
-            
-         },
-         "responseFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ]
+  "metadataTemplate": {
+    "name": "Test Webhook Audience Template",
+    "create": {
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/segments",
+      "httpMethod": "POST",
+      "headers": [
+        {
+          "value": "application/json",
+          "header": "Content-Type"
+        },
+        {
+          "value": "Bearer {{authData.token}}",
+          "header": "Authorization"
+        }
+      ],
+      "requestBody": {
+        "json": {
+          "name": "{{segment.name}}",
+          "type": "segment",
+          "metadata": {
+            "org_id": "{{destination.imsOrgId}}",
+            "sandbox": "{{destination.sandboxName}}",
+            "destination_id": "{{destination.id}}",
+            "destination_name": "{{destination.name}}",
+            "segmentEnrichmentAttributes": "{% set columns = [] %}{% for atr in segmentEnrichmentAttributes %}{% set columns = columns|merge([atr.source]) %}{% endfor %}{{ columns | toJson }}"
+          },
+          "external_id": "{{segment.id}}"
+        }
       },
-      "update":{
-         "url":"string",
-         "httpMethod":"string",
-         "headers":[
-            {
-               "header":"string",
-               "value":"string"
-            }
-         ],
-         "requestBody":{
-            
-         },
-         "responseFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ]
+      "responseFields": [
+        {
+          "value": "{{headers.X-Request-Id}}",
+          "name": "externalAudienceId"
+        }
+      ],
+      "responseErrorFields": [
+        {
+          "value": "{{root}}",
+          "name": "message"
+        }
+      ]
+    },
+    "update": {
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/segments/{{segment.alias}}",
+      "httpMethod": "PUT",
+      "headers": [
+        {
+          "value": "application/json",
+          "header": "Content-Type"
+        },
+        {
+          "value": "Bearer {{authData.token}}",
+          "header": "Authorization"
+        }
+      ],
+      "requestBody": {
+        "json": {
+          "name": "{{segment.name}}",
+          "type": "segment",
+          "metadata": {
+            "org_id": "{{destination.imsOrgId}}",
+            "sandbox": "{{destination.sandboxName}}",
+            "destination_id": "{{destination.id}}",
+            "destination_name": "{{destination.name}}",
+            "segmentEnrichmentAttributes": "{% set columns = [] %}{% for atr in segmentEnrichmentAttributes %}{% set columns = columns|merge([atr.source]) %}{% endfor %}{{ columns | toJson }}"
+          },
+          "external_id": "{{segment.id}}"
+        }
       },
-      "delete":{
-         "url":"string",
-         "httpMethod":"string",
-         "headers":[
-            {
-               "header":"string",
-               "value":"string"
-            }
-         ],
-         "requestBody":{
-            
-         },
-         "responseFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ]
+      "responseFields": [
+        {
+          "value": "{{headers.X-Request-Id}}",
+          "name": "externalAudienceId"
+        }
+      ],
+      "responseErrorFields": [
+        {
+          "value": "{{root}}",
+          "name": "message"
+        }
+      ]
+    },
+    "delete": {
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/segments/{{segment.alias}}",
+      "httpMethod": "DELETE",
+      "headers": [
+        {
+          "value": "Bearer {{authData.token}}",
+          "header": "Authorization"
+        }
+      ],
+      "responseErrorFields": [
+        {
+          "value": "{{root}}",
+          "name": "message"
+        }
+      ]
+    },
+    "createDestination": {
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/createDestination",
+      "httpMethod": "POST",
+      "headers": [
+        {
+          "value": "application/json",
+          "header": "Content-Type"
+        },
+        {
+          "value": "Bearer {{authData.token}}",
+          "header": "Authorization"
+        }
+      ],
+      "requestBody": {
+        "json": {
+          "name": "{{destination.name}}",
+          "type": "destination",
+          "metadata": {
+            "org_id": "{{destination.imsOrgId}}",
+            "sandbox": "{{destination.sandboxName}}",
+            "destination_id": "{{destination.id}}",
+            "destination_name": "{{destination.name}}",
+            "enrichmentAttributes": "{{destination.enrichmentAttributes}}"
+          },
+          "external_id": "{{destination.id}}"
+        }
       },
-      "validate":{
-         "url":"string",
-         "httpMethod":"string",
-         "headers":[
-            {
-               "header":"string",
-               "value":"string"
-            }
-         ],
-         "requestBody":{
-            
-         },
-         "responseFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ]
+      "responseFields": [
+        {
+          "value": "{{headers.X-Request-Id}}",
+          "name": "externalAudienceId"
+        }
+      ],
+      "responseErrorFields": [
+        {
+          "value": "{{root}}",
+          "name": "message"
+        }
+      ]
+    },
+    "updateDestination": {
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/updateDestination",
+      "httpMethod": "POST",
+      "headers": [
+        {
+          "value": "application/json",
+          "header": "Content-Type"
+        },
+        {
+          "value": "Bearer {{authData.token}}",
+          "header": "Authorization"
+        }
+      ],
+      "requestBody": {
+        "json": {
+          "name": "{{destination.name}}",
+          "type": "destination",
+          "metadata": {
+            "org_id": "{{destination.imsOrgId}}",
+            "sandbox": "{{destination.sandboxName}}",
+            "destination_id": "{{destination.id}}",
+            "destination_name": "{{destination.name}}",
+            "enrichmentAttributes": "{{destination.enrichmentAttributes}}"
+          },
+          "external_id": "{{destination.id}}"
+        }
       },
-      "notify":{
-         "url":"string",
-         "httpMethod":"string",
-         "headers":[
-            {
-               "header":"string",
-               "value":"string"
-            }
-         ],
-         "requestBody":{
-            
-         },
-         "responseFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ],
-         "responseErrorFields":[
-            {
-               "name":"string",
-               "value":"string"
-            }
-         ]
-      }
-   },
-   "validations":[
+      "responseFields": [
+        {
+          "value": "{{headers.X-Request-Id}}",
+          "name": "externalAudienceId"
+        }
+      ],
+      "responseErrorFields": [
+        {
+          "value": "{{root}}",
+          "name": "message"
+        }
+      ]
+    },
+    "deleteDestination": {
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/deleteDestination",
+      "httpMethod": "DELETE",
+      "headers": [
+        {
+          "value": "Bearer {{authData.token}}",
+          "header": "Authorization"
+        }
+      ],
+      "responseErrorFields": [
+        {
+          "value": "{{root}}",
+          "name": "message"
+        }
+      ]
+    }
+  },
+  "validations":[
       {
          "field":"string",
          "regex":"string"
@@ -189,12 +256,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 | 속성 | 유형 | 설명 |
 | -------- | ----------- | ----------- |
-| `name` | 문자열 | 대상의 대상 메타데이터 템플릿 이름입니다. 이 이름은 Experience Platform 사용자 인터페이스의 모든 파트너 관련 오류 메시지에 나타나며 그 뒤에는 `metadataTemplate.create.errorSchemaMap`에서 구문 분석된 오류 메시지가 나타납니다. |
-| `url` | 문자열 | 플랫폼에서 대상을 생성, 업데이트, 삭제 또는 확인하는 데 사용되는 API의 URL 및 엔드포인트. 두 가지 업계 예는 `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` 및 `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`입니다. |
+| `name` | 문자열 | 대상의 대상 메타데이터 템플릿 이름입니다. 이 이름은 Experience Platform 사용자 인터페이스의 모든 파트너별 오류 메시지에 표시됩니다. |
+| `url` | 문자열 | 플랫폼에서 대상 및/또는 데이터 흐름을 생성, 업데이트, 삭제 또는 확인하는 데 사용되는 API의 URL 및 엔드포인트. 두 가지 업계 예는 `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` 및 `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`입니다. |
 | `httpMethod` | 문자열 | 대상에서 대상을 프로그래밍 방식으로 만들기, 업데이트, 삭제 또는 확인하기 위해 종단점에서 사용되는 메서드입니다. 예: `POST`, `PUT`, `DELETE` |
 | `headers.header` | 문자열 | API 호출에 추가해야 하는 모든 HTTP 헤더를 지정합니다. 예, `"Content-Type"` |
 | `headers.value` | 문자열 | API 호출에 추가해야 하는 HTTP 헤더 값을 지정합니다. 예, `"application/x-www-form-urlencoded"` |
-| `requestBody` | 문자열 | API로 전송해야 하는 메시지 본문의 콘텐츠를 지정합니다. `requestBody` 개체에 추가해야 하는 매개 변수는 API에서 허용하는 필드에 따라 다릅니다. 예를 들어 대상 메타데이터 기능 문서에서 [첫 번째 템플릿 예제](../functionality/audience-metadata-management.md#example-1)를 참조하십시오. |
+| `requestBody` | 문자열 | API로 전송해야 하는 메시지 본문의 콘텐츠를 지정합니다. `requestBody` 개체에 추가해야 하는 매개 변수는 API에서 허용하는 필드에 따라 다릅니다. 메시지 본문에 포함할 수 있는 내용을 알아보려면 [지원되는 매크로 설명서](../functionality/audience-metadata-management.md#macros)를 참조하세요. |
 | `responseFields.name` | 문자열 | 호출 시 API가 반환하는 응답 필드를 지정합니다. 예를 들어 대상 메타데이터 기능 문서에서 [템플릿 예제](../functionality/audience-metadata-management.md#examples)를 참조하십시오. |
 | `responseFields.value` | 문자열 | API가 호출될 때 반환되는 응답 필드의 값을 지정합니다. |
 | `responseErrorFields.name` | 문자열 | 호출 시 API가 반환하는 응답 필드를 지정합니다. 예를 들어 대상 메타데이터 기능 문서에서 [템플릿 예제](../functionality/audience-metadata-management.md#examples)를 참조하십시오. |

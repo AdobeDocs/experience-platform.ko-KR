@@ -2,9 +2,9 @@
 description: 대상 메타데이터 템플릿을 사용하여 대상에서 대상을 프로그래밍 방식으로 생성, 업데이트 또는 삭제합니다. Adobe은 마케팅 API의 사양을 기반으로 구성할 수 있는 확장 가능한 대상 메타데이터 템플릿을 제공합니다. 템플릿을 정의, 테스트 및 제출하면 Adobe이 이 템플릿을 사용하여 대상에 대한 API 호출을 구조화합니다.
 title: 대상자 메타데이터 관리
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
+source-git-commit: 6c4a2f9f6b338ec03b99ee1d7e91f7d9c0347b08
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
@@ -53,11 +53,10 @@ API가 다음을 지원하는 경우 일반 템플릿을 사용하여 [새 대�
 
 사용 사례에서 요구하는 경우 Adobe 엔지니어링 팀이 사용자와 협력하여 사용자 정의 필드로 일반 템플릿을 확장할 수 있습니다.
 
-## 구성 예 {#configuration-examples}
 
-이 섹션에는 구성의 기본 섹션에 대한 설명과 함께 참조를 위해 일반 대상 메타데이터 구성의 세 가지 예가 포함됩니다. URL, 헤더, 요청 및 응답 본문이 세 가지 예제 구성 간에 어떻게 다른지 확인합니다. 이는 세 샘플 플랫폼의 마케팅 API에 대한 사양이 다르기 때문입니다.
+## 지원되는 템플릿 이벤트 {#supported-events}
 
-일부 예제에서는 `{{authData.accessToken}}` 또는 `{{segment.name}}`과(와) 같은 매크로 필드가 URL에 사용되고, 다른 예제에서는 헤더 또는 요청 본문에 사용됩니다. 마케팅 API 사양에 따라 다릅니다.
+아래 표는 대상 메타데이터 템플릿에서 지원하는 이벤트에 대해 설명합니다.
 
 | 템플릿 섹션 | 설명 |
 |--- |--- |
@@ -66,10 +65,21 @@ API가 다음을 지원하는 경우 일반 템플릿을 사용하여 [새 대�
 | `delete` | API를 HTTP 호출하고, 플랫폼에서 세그먼트/대상을 프로그래밍 방식으로 삭제하는 데 필요한 모든 구성 요소(URL, HTTP 메서드, 헤더, 요청 및 응답 본문)를 포함합니다. |
 | `validate` | 파트너 API를 호출하기 전에 템플릿 구성의 모든 필드에 대한 유효성 검사를 실행합니다. 예를 들어 사용자의 계정 ID가 올바르게 입력되었는지 확인할 수 있습니다. |
 | `notify` | 파일 기반 대상에만 적용됩니다. 성공적인 파일 내보내기를 알리기 위해 API에 대한 HTTP 호출을 수행하는 데 필요한 모든 구성 요소(URL, HTTP 메서드, 헤더, 요청 및 응답 본문)를 포함합니다. |
+| `createDestination` | API를 HTTP 호출하고, 플랫폼에서 데이터 흐름을 프로그래밍 방식으로 만들고, 정보를 다시 Adobe Experience Platform으로 동기화하는 데 필요한 모든 구성 요소(URL, HTTP 메서드, 헤더, 요청 및 응답 본문)를 포함합니다. |
+| `updateDestination` | API를 HTTP 호출하고, 플랫폼의 데이터 흐름을 프로그래밍 방식으로 업데이트하고, 정보를 다시 Adobe Experience Platform에 동기화하는 데 필요한 모든 구성 요소(URL, HTTP 메서드, 헤더, 요청 및 응답 본문)를 포함합니다. |
+| `deleteDestination` | API를 HTTP 호출하고, 플랫폼에서 데이터 흐름을 프로그래밍 방식으로 삭제하는 데 필요한 모든 구성 요소(URL, HTTP 메서드, 헤더, 요청 및 응답 본문)를 포함합니다. |
 
 {style="table-layout:auto"}
 
-### 스트리밍 예 1 {#example-1}
+## 구성 예 {#configuration-examples}
+
+이 섹션에는 참조를 위해 일반 대상 메타데이터 구성의 예가 포함됩니다.
+
+세 가지 예제 구성 간에 URL, 헤더 및 요청 본문이 어떻게 다른지 확인합니다. 이는 세 샘플 플랫폼의 마케팅 API에 대한 사양이 다르기 때문입니다.
+
+일부 예제에서는 `{{authData.accessToken}}` 또는 `{{segment.name}}`과(와) 같은 매크로 필드가 URL에 사용되고, 다른 예제에서는 헤더 또는 요청 본문에 사용됩니다. 사용은 마케팅 API 사양에 따라 다릅니다.
+
++++스트리밍 예 1
 
 ```json
 {
@@ -178,7 +188,9 @@ API가 다음을 지원하는 경우 일반 템플릿을 사용하여 [새 대�
 }
 ```
 
-### 스트리밍 예 2 {#example-2}
++++
+
++++스트리밍 예 2
 
 ```json
 {
@@ -272,7 +284,9 @@ API가 다음을 지원하는 경우 일반 템플릿을 사용하여 [새 대�
 }
 ```
 
-### 스트리밍 예 3 {#example-3}
++++
+
++++스트리밍 예 3
 
 ```json
 {
@@ -374,8 +388,9 @@ API가 다음을 지원하는 경우 일반 템플릿을 사용하여 [새 대�
 }
 ```
 
++++
 
-### 파일 기반 예제 {#example-file-based}
++++파일 기반 예제
 
 ```json
 {
@@ -521,6 +536,8 @@ API가 다음을 지원하는 경우 일반 템플릿을 사용하여 [새 대�
 }
 ```
 
++++
+
 [대상 템플릿 만들기](../metadata-api/create-audience-template.md) API 참조에서 템플릿의 모든 매개 변수에 대한 설명을 찾으십시오.
 
 ## 대상 메타데이터 템플릿에 사용되는 매크로 {#macros}
@@ -537,5 +554,12 @@ Experience Platform과 API 간에 대상 ID, 액세스 토큰, 오류 메시지 
 | `{{authData.accessToken}}` | 액세스 토큰을 API 엔드포인트에 전달할 수 있습니다. Experience Platform이 만료되지 않는 토큰을 사용하여 대상에 연결해야 하는 경우 `{{authData.accessToken}}`을(를) 사용하고, 그렇지 않으면 `{{oauth2ServiceAccessToken}}`을(를) 사용하여 액세스 토큰을 생성하십시오. |
 | `{{body.segments[0].segment.id}}` | 만들어진 대상자의 고유 식별자를 키 `externalAudienceId`의 값으로 반환합니다. |
 | `{{error.message}}` | Experience Platform UI의 사용자에게 표시되는 오류 메시지를 반환합니다. |
+| `{{{segmentEnrichmentAttributes}}}` | 특정 대상에 대한 모든 데이터 보강 속성에 액세스할 수 있습니다.  이 매크로는 `create`, `update` 및 `delete` 이벤트에서 지원됩니다. 데이터 보강 특성은 [사용자 지정 업로드 대상자](destination-configuration/schema-configuration.md#external-audiences)에만 사용할 수 있습니다. 데이터 보강 특성 선택이 어떻게 작동하는지 확인하려면 [일괄 대상자 활성화 가이드](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)를 참조하세요. |
+| `{{destination.name}}` | 대상의 이름을 반환합니다. |
+| `{{destination.sandboxName}}` | 대상이 구성된 Experience Platform 샌드박스의 이름을 반환합니다. |
+| `{{destination.id}}` | 대상 구성의 ID를 반환합니다. |
+| `{{destination.imsOrgId}}` | 대상이 구성된 IMS 조직 ID를 반환합니다. |
+| `{{destination.enrichmentAttributes}}` | 대상에 매핑된 모든 대상에 대한 모든 데이터 보강 속성에 액세스할 수 있습니다. 이 매크로는 `createDestination`, `updateDestination` 및 `deleteDestination` 이벤트에서 지원됩니다. 데이터 보강 특성은 [사용자 지정 업로드 대상자](destination-configuration/schema-configuration.md#external-audiences)에만 사용할 수 있습니다. 데이터 보강 특성 선택이 어떻게 작동하는지 확인하려면 [일괄 대상자 활성화 가이드](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)를 참조하세요. |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | 대상에 매핑된 특정 외부 대상자에 대한 데이터 보강 속성에 액세스할 수 있습니다. 데이터 보강 특성은 [사용자 지정 업로드 대상자](destination-configuration/schema-configuration.md#external-audiences)에만 사용할 수 있습니다. 데이터 보강 특성 선택이 어떻게 작동하는지 확인하려면 [일괄 대상자 활성화 가이드](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)를 참조하세요. |
 
 {style="table-layout:auto"}
