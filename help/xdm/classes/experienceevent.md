@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent 클래스
 description: XDM ExperienceEvent 클래스와 이벤트 데이터 모델링을 위한 모범 사례에 대해 알아봅니다.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 5537485206c1625ca661d6b33f7bba08538a0fa3
 workflow-type: tm+mt
-source-wordcount: '2672'
+source-wordcount: '2761'
 ht-degree: 0%
 
 ---
@@ -105,6 +105,7 @@ Adobe은 [!DNL XDM ExperienceEvent] 클래스와 함께 사용할 여러 표준 
 | `advertising.timePlayed` | 이 이벤트는 특정 시간 미디어 에셋에서 사용자가 사용한 시간을 추적합니다. |
 | `application.close` | 이 이벤트는 애플리케이션이 닫히거나 백그라운드로 전송되면 추적합니다. |
 | `application.launch` | 이 이벤트는 애플리케이션을 시작하거나 포그라운드로 가져올 때 추적합니다. |
+| `click` | **사용하지 않음** 대신 `decisioning.propositionInteract`을(를) 사용하십시오. |
 | `commerce.backofficeCreditMemoIssued` | 이 이벤트는 고객에게 신용 공지가 발행되면 추적합니다. |
 | `commerce.backofficeOrderCancelled` | 이 이벤트는 이전에 시작된 구매 프로세스가 완료 전에 종료되면 추적합니다. |
 | `commerce.backofficeOrderItemsShipped` | 이 이벤트는 구매한 항목이 실제로 고객에게 배송된 경우를 추적합니다. |
@@ -119,11 +120,12 @@ Adobe은 [!DNL XDM ExperienceEvent] 클래스와 함께 사용할 여러 표준 
 | `commerce.productViews` | 이 이벤트는 제품이 하나 이상의 보기를 수신하면 추적합니다. |
 | `commerce.purchases` | 이 이벤트는 주문이 수락되면 추적합니다. 이것은 상거래 전환에서 유일한 필수 작업입니다. 구매 이벤트에는 참조된 제품 목록이 있어야 합니다. |
 | `commerce.saveForLaters` | 이 이벤트는 제품 위시리스트 등 향후 사용을 위해 제품 목록이 저장되면 추적합니다. |
-| `decisioning.propositionDisplay` | 이 이벤트는 의사 결정 제안이 사용자에게 표시되면 추적합니다. |
-| `decisioning.propositionDismiss` | 이 이벤트는 제공된 오퍼에 참여하지 않기로 결정한 경우 추적합니다. |
-| `decisioning.propositionInteract` | 이 이벤트는 한 사람이 의사 결정 제안과 상호 작용할 때 추적합니다. |
+| `decisioning.propositionDisplay` | 이 이벤트는 웹 SDK가 페이지에 표시되는 내용에 대한 정보를 자동으로 전송할 때 사용됩니다. 하지만 페이지 히트의 상단과 하단과 같은 다른 방식으로 표시 정보를 이미 포함하고 있는 경우에는 이 이벤트 유형이 필요하지 않습니다. 페이지 히트의 맨 아래에서 원하는 이벤트 유형을 선택할 수 있습니다. |
+| `decisioning.propositionDismiss` | 이 이벤트 유형은 Adobe Journey Optimizer 신청 내 메시지 또는 콘텐츠 카드가 기각될 때 사용됩니다. |
+| `decisioning.propositionFetch` | 이벤트가 주로 의사 결정을 가져오기 위한 것임을 나타내는 데 사용됩니다. Adobe Analytics에서 이 이벤트를 자동으로 삭제합니다. |
+| `decisioning.propositionInteract` | 이 이벤트 유형은 개인화된 콘텐츠에서 클릭 수와 같은 상호 작용을 추적하는 데 사용됩니다. |
 | `decisioning.propositionSend` | 이 이벤트는 잠재 고객에게 추천 또는 고려 제안을 보내기로 결정한 경우 추적합니다. |
-| `decisioning.propositionTrigger` | 이 이벤트는 제안 프로세스의 활성화를 추적합니다. 오퍼를 표시할지 묻는 특정 조건 또는 작업이 발생했습니다. |
+| `decisioning.propositionTrigger` | 이 유형의 이벤트는 [Web SDK](../../web-sdk/home.md)에서 로컬 저장소에 저장되지만 Experience Edge으로 전송되지 않습니다. 규칙 세트가 충족될 때마다 이벤트가 생성되고 로컬 저장소에 저장됩니다(해당 설정이 활성화된 경우). |
 | `delivery.feedback` | 이 이벤트는 이메일 게재와 같은 게재의 피드백 이벤트를 추적합니다. |
 | `directMarketing.emailBounced` | 이 이벤트는 개인에게 전송된 이메일이 반송되면 추적합니다. |
 | `directMarketing.emailBouncedSoft` | 이 이벤트는 개인에게 보낸 이메일이 소프트 바운스되면 추적합니다. |
@@ -132,6 +134,7 @@ Adobe은 [!DNL XDM ExperienceEvent] 클래스와 함께 사용할 여러 표준 
 | `directMarketing.emailOpened` | 이 이벤트는 사용자가 마케팅 이메일을 열었을 때 추적합니다. |
 | `directMarketing.emailSent` | 이 이벤트는 마케팅 이메일이 사용자에게 전송되면 추적합니다. |
 | `directMarketing.emailUnsubscribed` | 이 이벤트는 사용자가 마케팅 이메일의 구독을 취소하면 추적합니다. |
+| `display` | **사용하지 않음** 대신 `decisioning.propositionDisplay`을(를) 사용하십시오. |
 | `inappmessageTracking.dismiss` | 이 이벤트는 인앱 메시지가 무시되면 추적합니다. |
 | `inappmessageTracking.display` | 이 이벤트는 인앱 메시지가 표시되면 추적합니다. |
 | `inappmessageTracking.interact` | 이 이벤트는 인앱 메시지가 상호 작용할 때 추적합니다. |
@@ -146,33 +149,34 @@ Adobe은 [!DNL XDM ExperienceEvent] 클래스와 함께 사용할 여러 표준 
 | `leadOperation.statusInCampaignProgressionChanged` | 이 이벤트는 캠페인에서 잠재 고객의 상태가 변경되면 추적합니다. |
 | `listOperation.addToList` | 이 이벤트는 마케팅 목록에 개인이 추가되면 추적합니다. |
 | `listOperation.removeFromList` | 이 이벤트는 마케팅 목록에서 개인이 제거되면 추적합니다. |
-| `media.adBreakComplete` | 이 이벤트는 `adBreakComplete` 이벤트가 발생하면 추적합니다. 이 이벤트는 광고 브레이크가 시작될 때 트리거됩니다. |
-| `media.adBreakStart` | 이 이벤트는 `adBreakStart` 이벤트가 발생하면 추적합니다. 이 이벤트는 광고 브레이크가 끝날 때 트리거됩니다. |
-| `media.adComplete` | 이 이벤트는 `adComplete` 이벤트가 발생하면 추적합니다. 이 이벤트는 광고가 완료되면 트리거됩니다. |
-| `media.adSkip` | 이 이벤트는 `adSkip` 이벤트가 발생하면 추적합니다. 이 이벤트는 광고를 건너뛸 때 트리거됩니다. |
-| `media.adStart` | 이 이벤트는 `adStart` 이벤트가 발생하면 추적합니다. 이 이벤트는 광고가 시작될 때 트리거됩니다. |
-| `media.bitrateChange` | 이 이벤트는 `bitrateChange` 이벤트가 발생하면 추적합니다. 이 이벤트는 비트 전송률이 변경될 때 트리거됩니다. |
-| `media.bufferStart` | 이 이벤트는 `bufferStart` 이벤트가 발생하면 추적합니다. 이 이벤트는 미디어가 버퍼링되기 시작할 때 트리거됩니다. |
-| `media.chapterComplete` | 이 이벤트는 `chapterComplete` 이벤트가 발생하면 추적합니다. 이 이벤트는 미디어의 챕터 완료 시 트리거됩니다. |
-| `media.chapterSkip` | 이 이벤트는 `chapterSkip` 이벤트가 발생하면 추적합니다. 이 이벤트는 사용자가 미디어 콘텐츠 내의 다른 섹션 또는 챕터로 앞이나 뒤로 건너뛸 때 트리거됩니다. |
-| `media.chapterStart` | 이 이벤트는 `chapterStart` 이벤트가 발생하면 추적합니다. 이 이벤트는 미디어 콘텐츠 내의 특정 섹션 또는 챕터의 시작 시 트리거됩니다. |
+| `media.adBreakComplete` | 이 이벤트는 광고 브레이크를 완료한다는 신호를 보냅니다. |
+| `media.adBreakStart` | 이 이벤트는 광고 브레이크를 시작한다는 신호를 보냅니다. |
+| `media.adComplete` | 이 이벤트는 광고가 완료되었음을 나타냅니다. |
+| `media.adSkip` | 이 이벤트는 광고를 건너뛸 때 신호를 보냅니다. |
+| `media.adStart` | 이 이벤트는 광고를 시작한다는 신호를 보냅니다. |
+| `media.bitrateChange` | 이 이벤트는 비트 전송률이 변경되면 신호를 보냅니다. |
+| `media.bufferStart` | 버퍼링이 시작되면 `media.bufferStart` 이벤트 유형이 전송됩니다. 특정 `bufferResume` 이벤트 유형이 없습니다. `bufferStart` 이벤트 다음에 `play` 이벤트가 전송될 때 버퍼링이 다시 시작된 것으로 간주됩니다. |
+| `media.chapterComplete` | 이 이벤트는 챕터를 완료한다는 신호를 보냅니다. |
+| `media.chapterSkip` | 이 이벤트는 사용자가 다른 섹션이나 챕터로 앞이나 뒤로 건너뛸 때 트리거됩니다. |
+| `media.chapterStart` | 이 이벤트는 챕터를 시작한다는 신호를 보냅니다. |
 | `media.downloaded` | 이 이벤트는 미디어가 다운로드한 콘텐츠가 발생하면 추적합니다. |
-| `media.error` | 이 이벤트는 `error` 이벤트가 발생하면 추적합니다. 이 이벤트는 미디어 재생 중에 오류 또는 문제가 발생할 때 트리거됩니다. |
-| `media.pauseStart` | 이 이벤트는 `pauseStart` 이벤트가 발생하면 추적합니다. 이 이벤트는 사용자가 미디어 재생에서 일시 중지를 시작할 때 트리거됩니다. |
-| `media.ping` | 이 이벤트는 `ping` 이벤트가 발생하면 추적합니다. 미디어 리소스의 가용성을 확인합니다. |
-| `media.play` | 이 이벤트는 `play` 이벤트가 발생하면 추적합니다. 이 이벤트는 미디어 콘텐츠가 재생 중일 때 트리거되며, 사용자의 활성 소비를 나타냅니다. |
-| `media.sessionComplete` | 이 이벤트는 `sessionComplete` 이벤트가 발생하면 추적합니다. 이 이벤트는 미디어 재생 세션의 끝을 표시합니다. |
-| `media.sessionEnd` | 이 이벤트는 `sessionEnd` 이벤트가 발생하면 추적합니다. 이 이벤트는 미디어 세션의 종료를 나타냅니다. 이 결론에는 미디어 플레이어를 닫거나 재생을 중지하는 작업이 포함될 수 있습니다. |
-| `media.sessionStart` | 이 이벤트는 `sessionStart` 이벤트가 발생하면 추적합니다. 이 이벤트는 미디어 재생 세션의 시작을 표시합니다. 사용자가 미디어 파일 재생을 시작할 때 트리거됩니다. |
-| `media.statesUpdate` | 이 이벤트는 `statesUpdate` 이벤트가 발생하면 추적합니다. 플레이어 상태 추적 기능을 오디오 또는 비디오 스트림에 연결할 수 있습니다. 표준 상태는 fullscreen, mute, closedCaptioning, pictureInPicture 및 inFocus입니다. |
+| `media.error` | 이 이벤트는 미디어 재생 중에 오류가 발생하면 신호를 보냅니다. |
+| `media.pauseStart` | 이 이벤트는 `pauseStart` 이벤트가 발생하면 추적합니다. 이 이벤트는 사용자가 미디어 재생에서 일시 중지를 시작할 때 트리거됩니다. 다시 시작 이벤트 유형이 없습니다. 다시 시작은 재생 이벤트를 `pauseStart` 뒤에 보낼 때 추론됩니다. |
+| `media.ping` | `media.ping` 이벤트 유형은 진행 중인 재생 상태를 나타내는 데 사용됩니다. 기본 콘텐츠의 경우, 이 이벤트는 재생 중에 10초마다 전송되어야 하며 재생이 시작된 후 10초부터 시작됩니다. 광고 콘텐츠의 경우 광고 추적 중에 매초마다 전송되어야 합니다. Ping 이벤트는 요청 본문에 매개 변수 맵을 포함하지 않아야 합니다. |
+| `media.play` | `media.play` 이벤트 유형은 플레이어가 다른 상태(예: `buffering,` `paused`(사용자가 다시 시작할 때) 또는 `error`(복구될 때)에서 `playing` 상태로 전환될 때 전송됩니다. 여기에는 자동 재생과 같은 시나리오도 포함됩니다. 이 이벤트는 플레이어의 `on('Playing')` 콜백에 의해 트리거됩니다. |
+| `media.sessionComplete` | 이 이벤트는 기본 콘텐츠의 끝에 도달하면 전송됩니다. |
+| `media.sessionEnd` | `media.sessionEnd` 이벤트 유형은 사용자가 보기를 중단하여 반환할 가능성이 낮은 경우 세션을 즉시 닫도록 Media Analytics 백엔드에 알립니다. 이 이벤트가 전송되지 않으면, 10분 동안 활동이 없거나 플레이헤드 이동 없이 30분 후에 세션이 시간 초과됩니다. 해당 세션 ID를 사용하는 후속 미디어 호출은 무시됩니다. |
+| `media.sessionStart` | `media.sessionStart` 이벤트 유형이 세션 시작 호출과 함께 전송됩니다. 응답을 받으면 위치 헤더에서 세션 ID가 추출되고 수집 서버에 대한 모든 후속 이벤트 호출에 사용됩니다. |
+| `media.statesUpdate` | 이 이벤트는 `statesUpdate` 이벤트가 발생하면 추적합니다. 플레이어 상태 추적 기능을 오디오 또는 비디오 스트림에 연결할 수 있습니다. 표준 상태는 `fullscreen`, `mute`, `closedCaptioning`, `pictureInPicture` 및 `inFocus`입니다. |
 | `opportunityEvent.addToOpportunity` | 이 이벤트는 한 사람이 기회에 추가되면 추적합니다. |
 | `opportunityEvent.opportunityUpdated` | 이 이벤트는 기회가 업데이트되면 추적합니다. |
 | `opportunityEvent.removeFromOpportunity` | 이 이벤트는 영업 기회에서 개인이 제거되면 추적합니다. |
+| `personalization.request` | **사용하지 않음** 대신 `decisioning.propositionFetch`을(를) 사용하십시오. |
 | `pushTracking.applicationOpened` | 이 이벤트는 사용자가 푸시 알림에서 애플리케이션을 열 때 추적합니다. |
 | `pushTracking.customAction` | 이 이벤트는 사용자가 푸시 알림에서 사용자 지정 작업을 선택할 때 추적합니다. |
 | `web.formFilledOut` | 이 이벤트는 사용자가 웹 페이지에서 양식을 작성할 때 추적합니다. |
-| `web.webinteraction.linkClicks` | 이 이벤트는 링크가 한 번 이상 선택된 경우 추적합니다. |
-| `web.webpagedetails.pageViews` | 이 이벤트는 웹 페이지가 하나 이상의 보기를 받으면 추적합니다. |
+| `web.webinteraction.linkClicks` | 이 이벤트는 링크 클릭이 웹 SDK에 의해 자동으로 기록되었음을 나타냅니다. |
+| `web.webpagedetails.pageViews` | 이 이벤트 유형은 히트를 페이지 보기로 표시하는 표준 방법입니다. |
 | `location.entry` | 이 이벤트는 특정 위치에 있는 사용자 또는 장치의 항목을 추적합니다. |
 | `location.exit` | 이 이벤트는 특정 위치에서 개인 또는 장치의 종료를 추적합니다. |
 
