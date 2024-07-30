@@ -3,9 +3,9 @@ keywords: Experience Platform;문제 해결;보호 기능;지침;
 title: 데이터 수집 보호
 description: Adobe Experience Platform에서의 데이터 수집을 위한 보호 기능에 대해 알아봅니다.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: a574e30a12f56618e8bfaff988aa095025b36a28
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,9 @@ ht-degree: 0%
 | 일괄 처리 소스를 사용한 데이터 레이크 수집 | <ul><li>[!DNL Azure Blob], [!DNL Amazon S3] 및 [!DNL SFTP]과(와) 같은 일괄 처리 수집 소스를 사용하여 시간당 최대 200GB의 데이터를 데이터 레이크로 수집할 수 있습니다.</li><li>배치 크기는 256MB에서 100GB 사이여야 합니다. 압축되지 않은 데이터와 압축된 데이터 모두에 적용됩니다. 압축된 데이터가 데이터 레이크에서 압축되지 않은 경우 이러한 제한 사항이 적용됩니다.</li><li>배치당 최대 파일 수는 1500개입니다.</li><li>파일 또는 폴더의 최소 크기는 1바이트입니다. 0바이트 크기 파일 또는 폴더는 수집할 수 없습니다.</li></ul> | 데이터 수집에 사용할 수 있는 소스 카탈로그의 경우 [소스 개요](../sources/home.md)를 읽어 보십시오. |
 | 프로필에 일괄 처리 수집 | <ul><li>레코드 클래스의 최대 크기는 100KB(하드)입니다.</li><li>ExperienceEvent 클래스의 최대 크기는 10KB(하드)입니다.</li></ul> | |
 | 하루에 수집된 프로필 또는 ExperienceEvent 배치 수 | **하루에 수집할 수 있는 프로필 또는 ExperienceEvent 일괄 처리의 최대 수는 90개입니다.** 이는 매일 수집된 프로필 및 ExperienceEvent 배치의 합계가 90개를 초과할 수 없음을 의미합니다. 추가 배치를 수집하면 시스템 성능에 영향을 줍니다. | 이는 소프트 제한입니다. 소프트 제한을 넘어설 수 있지만 소프트 제한은 시스템 성능에 대한 권장 지침을 제공합니다. |
+| 암호화된 데이터 수집 | 단일 암호화 파일의 최대 지원 크기는 1GB입니다. 예를 들어 단일 데이터 흐름 실행에서 2GB 이상의 데이터를 수집할 수 있지만 데이터 흐름 실행의 개별 파일이 1GB를 초과할 수는 없습니다. | 자세한 내용은 [암호화된 데이터 수집 API 안내서](../sources/tutorials/api/encrypt-data.md)를 참조하십시오. |
+
+{style="table-layout:auto"}
 
 ## 스트리밍 수집 보호 기능
 
@@ -46,6 +49,8 @@ ht-degree: 0%
 | 수집 유형 | 지침 | 참고 |
 | --- | --- | --- |
 | 스트리밍 소스 | <ul><li>최대 레코드 크기는 1MB이며 권장 크기는 10KB입니다.</li><li>스트리밍 소스는 데이터 레이크로 수집할 때 초당 4000~5000개의 요청을 지원합니다. 이는 기존 소스 연결뿐만 아니라 새로 생성된 소스 연결 모두에 적용됩니다. **참고**: 스트리밍 데이터가 데이터 레이크로 완전히 처리되려면 최대 30분이 걸릴 수 있습니다.</li><li>스트리밍 소스는 프로필로 데이터를 수집하거나 스트리밍 세분화를 수행할 때 초당 최대 1500개의 요청을 지원합니다.</li></ul> | [!DNL Kafka], [!DNL Azure Event Hubs] 및 [!DNL Amazon Kinesis]과(와) 같은 스트리밍 원본은 [!DNL Data Collection Core Service](DCCS) 경로를 사용하지 않으며 다른 처리량 제한을 가질 수 있습니다. 데이터 수집에 사용할 수 있는 소스 카탈로그는 [소스 개요](../sources/home.md)를 참조하십시오. |
+
+{style="table-layout:auto"}
 
 ## 다음 단계
 
