@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 UI 안내서
 description: Adobe Experience Platform UI에서 대상 및 세그먼트 정의를 만들고 관리하는 방법을 알아봅니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 1%
+source-wordcount: '1043'
+ht-degree: 2%
 
 ---
 
@@ -89,6 +89,12 @@ Audience Portal에 대한 자세한 내용은 [Audience Portal 개요](./audienc
 대상자가 구성되는 방식을 보려면 [!UICONTROL 대상자] 탭에서 대상자의 이름을 선택하십시오.
 
 대상을 구성하는 빌딩 블록이 포함된 [대상 구성] 페이지가 나타납니다. 대상 구성을 사용하는 방법에 대한 자세한 내용은 [대상 구성 UI 안내서](./audience-composition.md)를 참조하십시오.
+
+## 페더레이션된 대상자 구성 {#fac}
+
+대상 구성 및 세그먼트 정의 외에 Adobe Federated Audience Composition을 사용하여 기본 데이터를 복사하지 않고 Enterprise 데이터 세트에서 새 대상을 작성하고 이러한 대상을 Adobe Experience Platform Audience Portal에 저장할 수 있습니다. Enterprise Data Warehouse에서 페더레이션된 구성된 대상 데이터를 활용하여 Adobe Experience Platform의 기존 대상을 강화할 수도 있습니다. [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)에 대한 안내서를 읽어 보십시오.
+
+![조직의 Federated Audience Composition에서 만든 대상 목록입니다.](../images/ui/overview/federated-audience-composition.png)
 
 ## 스트리밍 세분화 {#streaming-segmentation}
 

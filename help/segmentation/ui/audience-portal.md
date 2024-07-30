@@ -2,9 +2,9 @@
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
 workflow-type: tm+mt
-source-wordcount: '3725'
+source-wordcount: '3826'
 ht-degree: 3%
 
 ---
@@ -25,6 +25,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 - [대상자 만들기](#create-audience)
    - [세그먼트 빌더를 사용하여 대상자 만들기](#segment-builder)
    - [대상 구성을 사용하여 대상 만들기](#audience-composition)
+   - [Federated Audience Composition을 사용하여 기존 Data Warehouse의 데이터를 사용하여 대상을 만듭니다](#fac)(제한된 가용성)
 - [외부에서 생성된 대상 가져오기](#import-audience)
 
 대상자 포털을 열려면 세분화 섹션 내에서 **[!UICONTROL 찾아보기]** 탭을 선택합니다.
@@ -339,6 +340,12 @@ UI 또는 API를 사용하여 예약된 평가에 대해 대상을 활성화할 
 **[!UICONTROL 규칙 작성]**&#x200B;을 선택하면 세그먼트 빌더로 이동합니다. 이 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 세그먼트 정의를 작성하고 편집하기 위한 직관적인 컨트롤을 제공합니다. 세그먼트 정의 만들기에 대한 자세한 내용은 [세그먼트 빌더 안내서](./segment-builder.md)를 참조하세요.
 
 ![세그먼트 빌더 작업 영역이 표시됩니다.](../images/ui/audience-portal/segment-builder.png)
+
+### 페더레이션된 대상자 구성 {#fac}
+
+대상 구성 및 세그먼트 정의 외에 Adobe Federated Audience Composition을 사용하여 기본 데이터를 복사하지 않고 Enterprise 데이터 세트에서 새 대상을 작성하고 이러한 대상을 Adobe Experience Platform Audience Portal에 저장할 수 있습니다. Enterprise Data Warehouse에서 페더레이션된 구성된 대상 데이터를 활용하여 Adobe Experience Platform의 기존 대상을 강화할 수도 있습니다. [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)에 대한 안내서를 읽어 보십시오.
+
+![조직의 Federated Audience Composition에서 만든 대상 목록입니다.](../images/ui/overview/federated-audience-composition.png)
 
 ## 대상자 가져오기 {#import-audience}
 

@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 82e9263293462a223b635e828b95cb2b098886c7
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1248'
 ht-degree: 5%
 
 ---
@@ -65,6 +65,7 @@ ht-degree: 5%
       * [Marketo Engage 연결](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate 연결](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform 대상 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Federated Audience Composition 연결(제한된 가용성)](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising 대상{#advertising}
       * [Advertising 대상 개요](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud 연결](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -141,7 +142,7 @@ ht-degree: 5%
       * [지원 연결](catalog/crm/outreach.md)
       * [Zendesk 연결](catalog/crm/zendesk.md)
    * 데이터 관리 플랫폼 대상 {#data-management}
-      * [DMP(데이터 관리 플랫폼) 대상 개요](./catalog/data-management/overview.md)
+      * [데이터 관리 플랫폼(DMP) 대상 개요](./catalog/data-management/overview.md)
       * [Audience Manager DIL 확장](./catalog/data-management/aam-dil-extension.md)
       * [Zeta 마케팅 플랫폼](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
    * 데이터 및 ID 파트너 {#data-partner}

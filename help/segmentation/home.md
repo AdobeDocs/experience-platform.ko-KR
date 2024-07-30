@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 개요
 description: Adobe Experience Platform 세분화 서비스 및 플랫폼 생태계에서 수행하는 역할에 대해 알아봅니다.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1700'
 ht-degree: 14%
 
 ---
@@ -51,6 +51,14 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >스키마가 확장되는 경우 모든 향후 업로드는 그에 따라 새로 추가된 필드를 업데이트해야 합니다. [!DNL Experience Data Model](XDM) 사용자 지정에 대한 자세한 내용은 [스키마 편집기 튜토리얼](../xdm/tutorials/create-schema-ui.md)을(를) 참조하십시오.
 >
 >또한 데이터 세트에서 경험 이벤트 만료 값이 활성화되면 생성된 세그먼트 정의의 멤버십에 영향을 줄 수 있습니다. 이 기능이 세분화에 미치는 영향에 대한 자세한 내용은 [경험 이벤트 만료](../profile/event-expirations.md)에 대한 안내서를 참조하십시오.
+
+### 페더레이션된 대상자 구성 {#fac}
+
+대상 구성 및 세그먼트 정의 외에 Adobe Federated Audience Composition을 사용하여 기본 데이터를 복사하지 않고 Enterprise 데이터 세트에서 새 대상을 작성하고 이러한 대상을 Adobe Experience Platform Audience Portal에 저장할 수 있습니다. Enterprise Data Warehouse에서 페더레이션된 구성된 대상 데이터를 활용하여 Adobe Experience Platform의 기존 대상을 강화할 수도 있습니다. [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)에 대한 안내서를 읽어 보십시오.
+
+>[!AVAILABILITY]
+>
+>페더레이션된 대상자 구성은 현재 조직 집합에만 사용할 수 있습니다(제한된 가용성). 자세한 내용은 Adobe 직원에게 문의하십시오.
 
 ## 대상자 평가 {#evaluate-segments}
 

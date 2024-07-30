@@ -5,10 +5,10 @@ breadcrumb-title: Segmentation Service 안내서
 user-guide-description: Adobe Experience Platform에서 생성한 세그먼트 정의 또는 외부 소스를 사용하여 실시간 고객 프로필 데이터에서 대상자를 빌드하십시오.
 feature: Segments
 role: User
-source-git-commit: 62a174e6f3b1bd1b0bc518ff7e5f236893e9e5d3
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 42%
+source-wordcount: '191'
+ht-degree: 40%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 42%
    - [대상자 포털](ui/audience-portal.md)
    - [대상자 구성](ui/audience-composition.md)
    - [세그먼트 빌더](ui/segment-builder.md)
+   - [페더레이션 대상 구성(제한된 가용성)](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
    - [계정 대상자](ui/account-audiences.md)
    - [유사 대상자](ui/lookalike-audiences.md)
    - [잠재 고객 대상자](ui/prospect-audience.md)
