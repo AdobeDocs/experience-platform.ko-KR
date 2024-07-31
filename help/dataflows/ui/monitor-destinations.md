@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 대상에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: ee63f5ee6cca98e0b5838dc2de656d1d615a0b3a
 workflow-type: tm+mt
-source-wordcount: '3337'
+source-wordcount: '3549'
 ht-degree: 10%
 
 ---
@@ -86,7 +86,7 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 각 개별 데이터 흐름 실행에는 다음 세부 사항이 표시됩니다.
 
-- **[!UICONTROL 데이터 흐름 실행 시작]**: 데이터 흐름 실행이 시작된 시간입니다. 스트리밍 데이터 흐름 실행의 경우, Experience Platform은 데이터 흐름 실행 시작을 기반으로 한 지표를 시간별 지표 형태로 캡처합니다. 스트리밍 데이터 흐름 실행의 경우, 데이터 흐름 실행이 예를 들어 오후 10:30에 시작된 경우 지표는 UI에서 시작 시간을 오후 10:00으로 표시합니다.
+- **[!UICONTROL 데이터 흐름 실행 시작]**: 데이터 흐름 실행이 시작된 시간입니다. 스트리밍 데이터 흐름 실행의 경우, Experience Platform은 데이터 흐름 실행 시작을 기반으로 한 지표를 시간별 지표 형태로 캡처합니다. 즉, 스트리밍 데이터 흐름 실행의 경우 데이터 흐름 실행이 예를 들어 오후 10시 30분에 시작된 경우 지표는 UI에서 시작 시간을 오후 10시로 표시합니다.
 - **[!UICONTROL 처리 시간]**: 데이터 흐름 실행을 처리하는 데 걸린 시간입니다.
    - **[!UICONTROL 완료됨]** 실행의 경우 처리 시간 지표는 항상 1시간을 표시합니다.
    - 아직 **[!UICONTROL 처리 중]** 상태인 데이터 흐름 실행의 경우 모든 지표를 캡처하는 창이 1시간 이상 열려 있어 데이터 흐름 실행에 해당하는 모든 지표를 처리합니다. 예를 들어 오전 9시 30분에 시작된 데이터 흐름 실행은 모든 지표를 캡처하고 처리하기 위해 1시간 30분 동안 처리 상태를 유지할 수 있습니다. 그런 다음 처리 창이 닫히고 데이터 흐름 실행 상태가 **완료됨**(으)로 업데이트되면 표시된 처리 시간이 1시간으로 변경됩니다.
@@ -107,6 +107,16 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 세부 정보 페이지에는 실패한 ID와 제외된 ID 목록도 표시됩니다. 오류 코드, ID 수 및 설명을 포함하여 실패한 ID와 제외된 ID 모두에 대한 정보가 표시됩니다. 기본적으로 목록에는 실패한 ID가 표시됩니다. 건너뛴 ID를 표시하려면 **[!UICONTROL 제외된 ID]** 전환을 선택합니다.
 
 ![오류 메시지가 강조 표시된 스트리밍 대상의 데이터 흐름 레코드입니다.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
+
+#### (Beta) 스트리밍 대상에 대한 대상 수준 데이터 흐름 실행 모니터링 {#audience-level-dataflow-runs-for-streaming-destinations}
+
+데이터 흐름의 일부인 각 대상에 대해 대상 수준에서 분류된 활성화, 제외 또는 실패한 ID에 대한 정보를 볼 수 있습니다. 스트리밍 대상에 대한 대상 수준 모니터링은 현재 [[!DNL Google Customer Match + Display & Video 360] 대상](/help/destinations/catalog/advertising/google-customer-match-dv360.md)에만 사용할 수 있음을 이해하는 데 도움이 됩니다.
+
+![스트리밍 대상에 대한 대상 수준 모니터링](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
+
+>[!NOTE]
+>
+>대상 탭에서 **[!UICONTROL 받은 프로필]** 수가 데이터 흐름 실행에 대해 받은 프로필 수와 항상 일치하지 않을 수 있습니다. 이는 지정된 프로필이 데이터 흐름 실행에서 활성화되는 두 개 이상의 대상에 속할 수 있기 때문입니다.
 
 ### 일괄 처리 대상에 대한 데이터 흐름 실행 {#dataflow-runs-for-batch-destinations}
 
@@ -166,12 +176,25 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 ![오류 메시지가 강조 표시된 일괄 처리 대상에 대한 데이터 흐름 레코드입니다.](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
+### 모니터링에서 보기 {#view-in-monitoring}
+
+모니터링 대시보드에서 특정 데이터 흐름 및 해당 데이터 흐름에 대한 풍부한 정보를 보도록 선택할 수도 있습니다. 모니터링 대시보드에서 데이터 흐름에 대한 정보를 보려면 다음과 같이 하십시오.
+
+1. **[!UICONTROL 연결]** > **[!UICONTROL 대상]** > **[!UICONTROL 찾아보기]** 탭으로 이동
+2. 검사할 데이터 흐름으로 이동합니다.
+3. 줄임표 기호와 ![모니터링 아이콘](/help/images/icons/monitoring.png) **[!UICONTROL 모니터링에서 보기]**&#x200B;를 선택하십시오.
+
+![데이터 흐름에 대한 자세한 내용을 보려면 대상 워크플로의 모니터링에서 보기를 선택하십시오.](/help/dataflows/assets/ui/monitor-destinations/view-in-monitoring.png)
+
+>[!SUCCESS]
+>
+>이제 모니터링 대시보드에서 데이터 흐름 및 관련 데이터 흐름 실행에 대한 정보를 볼 수 있습니다. 자세한 내용은 아래 섹션을 참조하십시오.
+
 ## 대상 대시보드 모니터링 {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
->- 대상 모니터링 기능은 현재 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화](/help/destinations/catalog/personalization/custom-personalization.md) 대상을 제외한&#x200B;*Experience Platform의 모든 대상에 대해 지원됩니다.*
->- [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) 및 [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 대상의 경우 제외, 실패 및 활성화된 ID와 관련된 지표를 예측합니다. 활성화 데이터의 볼륨이 높을수록 지표의 정확도가 높아집니다.
+>대상 모니터링 기능은 현재 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 및 [사용자 지정 개인화](/help/destinations/catalog/personalization/custom-personalization.md) 대상을 제외한&#x200B;*Experience Platform의 모든 대상에 대해 지원됩니다.*
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
@@ -208,17 +231,20 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 **[!UICONTROL 활성화]** 그래프는 기본적으로 표시되며 비활성화하여 아래 대상 목록을 확장할 수 있습니다. 그래프를 비활성화하려면 **[!UICONTROL 지표 및 그래프]** 전환을 선택하십시오.
 
-**[!UICONTROL 활성화]** 패널에 하나 이상의 기존 계정이 포함된 대상 목록이 표시됩니다. 이 목록에는 수신된 프로필, 활성화된 ID, 실패한 ID, 제외된 ID, 활성화율, 실패한 총 데이터 흐름 및 이러한 대상에 대한 마지막 업데이트 날짜에 대한 정보도 포함됩니다. 모든 대상 유형에 모든 지표를 사용할 수 있는 것은 아닙니다. 아래 표는 대상 유형, 스트리밍 또는 배치별로 사용할 수 있는 지표와 정보를 간략하게 설명합니다.
+**[!UICONTROL 활성화]** 패널에 하나 이상의 기존 계정이 포함된 대상 목록이 표시됩니다. 이 목록에는 수신된 프로필, 활성화된 ID, 실패한 ID, 제외된 ID, 활성화율, 실패한 총 데이터 흐름 및 이러한 대상에 대한 마지막 업데이트 날짜에 대한 정보도 포함됩니다. 모든 대상 유형에 모든 지표를 사용할 수 있는 것은 아닙니다. 아래 표는 대상 유형별로 사용할 수 있는 지표와 정보를 간략하게 설명합니다.
 
 | 지표 | 대상 유형 |
----------|----------|
-| **[!UICONTROL 받은 프로필]** | 스트리밍 및 일괄 처리 |
-| **[!UICONTROL ID 활성화됨]** | 스트리밍 및 일괄 처리 |
-| **[!UICONTROL ID 실패]** | 스트리밍 |
-| **[!UICONTROL 제외된 ID]** | 스트리밍 및 일괄 처리 |
+|--------------------------------------|-----------------------|
+| **[!UICONTROL 받은 레코드]** | 스트리밍 및 일괄 처리 |
+| **[!UICONTROL 레코드 활성화됨]** | 스트리밍 및 일괄 처리 |
+| **[!UICONTROL 기록 실패]** | 스트리밍 |
+| **[!UICONTROL 생략된 레코드]** | 스트리밍 및 일괄 처리 |
+| **[!UICONTROL 데이터 형식]** | 스트리밍 및 일괄 처리 |
 | **[!UICONTROL 활성화 비율]** | 스트리밍 |
 | **[!UICONTROL 실패한 총 데이터 흐름]** | 배치 |
 | **[!UICONTROL 마지막으로 업데이트됨]** | 스트리밍 및 일괄 처리 |
+
+{style="table-layout:auto"}
 
 ![활성화된 모든 대상이 강조 표시된 대시보드 모니터링.](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
@@ -256,15 +282,15 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 ### 대상자 수준 보기 {#segment-level-view}
 
-**[!UICONTROL 대상]**&#x200B;을(를) 선택하면 선택한 시간 범위 내에서 선택한 데이터 흐름에 활성화된 대상 목록이 표시됩니다. 이 화면에는 활성화된 ID, 제외된 ID와 마지막 데이터 흐름 실행의 상태 및 시간에 대한 대상 수준 정보가 포함되어 있습니다. 제외되고 활성화된 ID에 대한 지표를 검토하여 대상이 성공적으로 활성화되었는지 여부를 확인할 수 있습니다.
+**[!UICONTROL 대상]**&#x200B;을(를) 선택하면 선택한 시간 범위 내에서 선택한 데이터 흐름에 활성화된 대상 목록이 표시됩니다. 이 화면에는 활성화된 레코드, 제외된 레코드에 대한 대상 수준 정보와 마지막 데이터 흐름 실행의 상태 및 시간이 포함됩니다. 제외되고 활성화된 레코드에 대한 지표를 검토하여 대상이 성공적으로 활성화되었는지 여부를 확인할 수 있습니다.
 
-예를 들어 &quot;Loyalty Members in California&quot;라는 대상을 Amazon S3 대상 &quot;Loyalty Members California December&quot;로 활성화합니다. 선택한 대상자에 100개의 프로필이 있지만 100개의 프로필 중 80개만 충성도 ID 특성을 포함하고 있으며 내보내기 매핑 규칙을 `loyalty.id`이(가) 필요함으로 정의했다고 가정해 보겠습니다. 이 경우 대상 수준에서 80개의 ID가 활성화되고 20개의 ID가 제외되는 것을 볼 수 있습니다.
+예를 들어 &quot;Loyalty Members in California&quot;라는 대상을 Amazon S3 대상 &quot;Loyalty Members California December&quot;로 활성화합니다. 선택한 대상자에 100개의 프로필이 있지만 100개의 레코드 중 80개만 충성도 ID 특성을 포함하고 있으며 내보내기 매핑 규칙을 `loyalty.id`이(가) 필요함으로 정의했다고 가정해 보겠습니다. 이 경우 대상 수준에서 80개의 레코드가 활성화되고 20개의 레코드가 제외됩니다.
 
 >[!IMPORTANT]
 >
 >대상 수준 지표와 관련된 현재 제한 사항을 참고하십시오.
->- 대상자 수준 보기는 현재 배치 대상에만 사용할 수 있습니다.
->- 대상자 수준 지표는 현재 성공적인 데이터 흐름 실행에 대해서만 기록됩니다. 실패한 데이터 흐름 실행 및 제외된 레코드에 대해서는 기록되지 않습니다.
+>- 현재 대상 수준 보기는 일괄 처리(파일 기반) 대상 및 [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) 스트리밍 대상에만 사용할 수 있습니다. 추가 스트리밍 대상에 대한 롤아웃이 계획되어 있습니다.
+>- 배치 대상의 경우, 현재 대상자 수준 지표는 성공적인 데이터 흐름 실행에 대해서만 기록됩니다. 실패한 데이터 흐름 실행 및 제외된 레코드에 대해서는 기록되지 않습니다. 스트리밍 대상으로 데이터 흐름이 실행되는 경우 활성화 및 제외된 레코드에 대해 지표가 캡처되고 표시됩니다.
 
 ![데이터 흐름 패널에서 강조 표시된 대상.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
@@ -273,13 +299,13 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
 ### 데이터 흐름 실행 페이지 {#dataflow-runs-page}
 
-데이터 흐름 실행 페이지에는 데이터 흐름 실행 시작 시간, 처리 시간, 받은 프로필, 활성화된 ID, 제외된 ID, 실패한 ID, 활성화 비율 및 상태를 포함한 데이터 흐름 실행에 대한 정보가 표시됩니다.
+데이터 흐름 실행 페이지에는 데이터 흐름 실행 시작 시간, 처리 시간, 받은 레코드, 활성화된 레코드, 제외된 레코드, 실패한 레코드, 활성화 비율 및 상태를 비롯한 데이터 흐름 실행에 대한 정보가 표시됩니다.
 
 [대상 수준 보기](#segment-level-view)에서 데이터 흐름 실행 페이지로 드릴다운하면 다음 옵션을 사용하여 데이터 흐름 실행을 필터링할 수 있습니다.
 
-- **[!UICONTROL 실패한 ID로 데이터 흐름 실행]**: 선택한 대상에 대해 이 옵션은 활성화하지 못한 모든 데이터 흐름 실행을 나열합니다. 특정 데이터 흐름 실행의 ID가 실패한 이유를 검사하려면 해당 데이터 흐름 실행에 대한 [데이터 흐름 실행 세부 정보 페이지](#dataflow-run-details-page)를 참조하십시오.
-- **[!UICONTROL ID를 건너뛰고 데이터 흐름 실행]**: 선택한 대상에 대해 이 옵션은 일부 ID가 완전히 활성화되지 않았고 일부 프로필은 건너뛰었던 모든 데이터 흐름 실행을 나열합니다. 특정 데이터 흐름 실행의 ID를 건너뛰는 이유를 검사하려면 해당 데이터 흐름 실행에 대한 [데이터 흐름 실행 세부 정보 페이지](#dataflow-run-details-page)를 참조하십시오.
-- **[!UICONTROL 활성화된 ID로 데이터 흐름 실행]**: 선택한 대상에 대해 이 옵션은 성공적으로 활성화된 ID가 있는 모든 데이터 흐름 실행을 나열합니다.
+- **[!UICONTROL 실패한 레코드로 데이터 흐름 실행]**: 선택한 대상에 대해 이 옵션은 활성화하지 못한 모든 데이터 흐름 실행을 나열합니다. 특정 데이터 흐름 실행의 레코드가 실패한 이유를 검사하려면 해당 데이터 흐름 실행에 대한 [데이터 흐름 실행 세부 정보 페이지](#dataflow-run-details-page)를 참조하십시오.
+- **[!UICONTROL 제외된 레코드로 데이터 흐름 실행]**: 선택한 대상에 대해 이 옵션은 일부 레코드가 완전히 활성화되지 않았고 일부 프로필은 건너뛴 모든 데이터 흐름 실행을 나열합니다. 특정 데이터 흐름 실행의 레코드를 건너뛰는 이유를 검사하려면 해당 데이터 흐름 실행에 대한 [데이터 흐름 실행 세부 정보 페이지](#dataflow-run-details-page)를 참조하십시오.
+- **[!UICONTROL 활성화된 레코드로 데이터 흐름 실행]**: 선택한 대상에 대해 이 옵션은 활성화된 레코드가 있는 모든 데이터 흐름 실행을 나열합니다.
 
 ![대상에 대한 데이터 흐름 실행을 필터링하는 방법을 보여 주는 라디오 단추.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
@@ -295,13 +321,13 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 - **[!UICONTROL IMS 조직 ID]**: 데이터 흐름이 속한 조직입니다.
 - **[!UICONTROL 마지막 업데이트]**: 데이터 흐름 실행을 마지막으로 업데이트한 시간입니다.
 
-또한 세부 정보 페이지에는 데이터 흐름 실행 오류와 대상 간을 전환하는 토글이 있습니다. 이 옵션은 일괄 처리 대상의 데이터 흐름 실행에만 사용할 수 있습니다.
+또한 세부 정보 페이지에는 데이터 흐름 실행 오류와 대상 간을 전환하는 토글이 있습니다. 이 옵션은 일괄 처리 대상의 데이터 흐름 실행과 [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) 스트리밍 대상에만 사용할 수 있습니다.
 
-데이터 흐름 실행 오류 보기에는 실패한 ID와 제외된 ID 목록이 표시됩니다. 오류 코드, ID 수 및 설명을 포함하여 실패한 ID와 제외된 ID 모두에 대한 정보가 표시됩니다. 기본적으로 목록에는 실패한 ID가 표시됩니다. 건너뛴 ID를 표시하려면 **[!UICONTROL 제외된 ID]** 전환을 선택합니다.
+데이터 흐름 실행 오류 보기에는 실패한 레코드와 건너뛴 레코드 목록이 표시됩니다. 오류 코드, ID 카운트 및 설명을 포함하여 실패 및 생략된 레코드에 대한 정보가 표시됩니다. 기본적으로 이 목록에는 실패한 레코드가 표시됩니다. 건너뛴 레코드를 표시하려면 **[!UICONTROL 건너뛴 레코드]** 전환을 선택합니다.
 
 ![제외된 ID가 모니터링 보기에서 강조 표시된 토글](../assets/ui/monitor-destinations/identities-excluded.png)
 
-**[!UICONTROL 대상]**&#x200B;을(를) 선택하면 선택한 데이터 흐름 실행에서 활성화된 대상 목록이 표시됩니다. 이 화면에는 활성화된 ID, 제외된 ID와 마지막 데이터 흐름 실행의 상태 및 시간에 대한 대상 수준 정보가 포함되어 있습니다.
+**[!UICONTROL 대상]**&#x200B;을(를) 선택하면 선택한 데이터 흐름 실행에서 활성화된 대상 목록이 표시됩니다. 이 화면에는 활성화된 레코드, 제외된 레코드에 대한 대상 수준 정보와 마지막 데이터 흐름 실행의 상태 및 시간이 포함됩니다.
 
 ![데이터 흐름 실행 세부 정보 화면에서 대상을 봅니다.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
