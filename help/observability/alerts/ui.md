@@ -4,7 +4,7 @@ title: 경고 UI 안내서
 description: Experience Platform 사용자 인터페이스에서 경고를 관리하는 방법을 알아봅니다.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9004a2203996f0fd64833a03f211232ebf14e3e4
 workflow-type: tm+mt
 source-wordcount: '626'
 ht-degree: 0%
