@@ -3,7 +3,7 @@ title: Google Customer Match + Display & Video 360 연결
 description: Google Customer Match + Display & Video 360 대상 커넥터를 사용하면 Experience Platform의 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail 및 YouTube과 같은 Google의 소유 및 운영 속성에서 고객에게 연락하고 다시 연결할 수 있습니다.
 badgeBeta: label="Beta" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: c3de72a0f90578803b969f32cc484047089099bd
+source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
 workflow-type: tm+mt
 source-wordcount: '1999'
 ht-degree: 1%
@@ -223,11 +223,11 @@ For details on how to find the [!DNL App ID], refer to the [Google official docu
 
 ![활성화 워크플로의 매핑 단계에서 강조 표시된 변환 컨트롤을 적용하십시오.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
 
-## 대상 모니터링
+## 대상 모니터링 {#monitor-destination}
 
 대상에 연결하고 대상 데이터 흐름을 설정한 후 Real-Time CDP의 [모니터링 기능](/help/dataflows/ui/monitor-destinations.md)을 사용하여 각 데이터 흐름 실행에서 대상에 활성화된 프로필 레코드에 대한 광범위한 정보를 얻을 수 있습니다.
 
-[!DNL Google Customer Match + Display & Video 360] 연결에 대한 모니터링 정보에는 각 데이터 흐름 및 데이터 흐름 실행에서 활성화, 제외 및 실패한 ID와 관련된 대상 수준 정보가 포함되어 있습니다. 기능에 대해 자세히 알아보십시오.
+[!DNL Google Customer Match + Display & Video 360] 연결에 대한 모니터링 정보에는 각 데이터 흐름 및 데이터 흐름 실행에서 활성화, 제외 및 실패한 ID와 관련된 대상 수준 정보가 포함되어 있습니다. 기능에 대해 [자세히 읽어보세요](/help/dataflows/ui/monitor-destinations.md#segment-level-view).
 
 ## 대상자 활성화가 성공했는지 확인 {#verify-activation}
 
