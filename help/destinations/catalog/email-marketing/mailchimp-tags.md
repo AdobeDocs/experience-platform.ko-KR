@@ -3,7 +3,7 @@ title: Mailchimp 태그
 description: Mailchimp 태그 대상을 사용하면 계정 데이터를 내보내고 Mailchimp 내에서 활성화하여 연락처에 참여할 수 있습니다.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -175,9 +175,10 @@ XDM 필드를 [!DNL Mailchimp Tags] 대상 필드에 올바르게 매핑하려�
    ![ID 네임스페이스에서 Target 필드가 전자 메일로 포함된 플랫폼 UI 스크린샷.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
    XDM 프로필 스키마와 [!DNL Mailchimp Tags] 간의 매핑은 다음과 같습니다.
-| Source 필드 | 대상 필드 | 필수 |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: Email`| 예 |
+
+   | 소스 필드 | 대상 필드 | 필수 |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: Email` | 예 |
 
    완료된 매핑의 예가 아래에 나와 있습니다.
    ![필드 매핑을 보여 주는 플랫폼 UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)

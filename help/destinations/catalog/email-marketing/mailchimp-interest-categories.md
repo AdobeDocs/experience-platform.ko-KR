@@ -3,10 +3,10 @@ title: Mailchimp 관심 범주
 description: Mailchimp(Intuit Mailchimp라고도 함)는 기업이 메일링 목록 및 이메일 마케팅 캠페인을 사용하여 연락처(고객, 고객 또는 기타 이해 당사자)를 관리하고 상담하는 데 사용하는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다. 이 커넥터를 사용하여 관심사 및 선호도에 따라 연락처를 정렬합니다.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2299'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -168,12 +168,13 @@ XDM 필드를 [!DNL Mailchimp Interest Categories] 대상 필드에 올바르게
 1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 ID를 선택하거나 **[!UICONTROL 특성 선택]** 범주를 선택하고 [!DNL Mailchimp] API에서 채워진 특성 목록에서 선택하십시오. *선택한 [!DNL Mailchimp] 대상에 추가한 모든 사용자 지정 특성을 대상 필드로 선택할 수도 있습니다.*
 
    XDM 프로필 스키마와 [!DNL Mailchimp Interest Categories] 간에 사용할 수 있는 매핑은 다음과 같습니다.
-| Source 필드 | 대상 필드 | 메모 |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: email`| 필수: 예 |
-|`xdm: person.name.firstName`|`Attribute: FNAME`| |
-|`xdm: person.name.lastName`|`Attribute: LNAME`| |
-|`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
+
+   | 소스 필드 | 대상 필드 | 참고 |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: email` | 필수: 예 |
+   | `xdm: person.name.firstName` | `Attribute: FNAME` | |
+   | `xdm: person.name.lastName` | `Attribute: LNAME` | |
+   | `xdm: person.birthDayAndMonth` | `Attribute: BIRTHDAY` | |
 
    또한 `ADDRESS`은(는) [!DNL Mailchimp] 대상 내에서 `merge field`(으)로 알려진 특수 대상 필드입니다. [[!DNL Mailchimp] 설명서](https://mailchimp.com/developer/marketing/docs/merge-fields/)은(는) 필수 키를 `addr1`, `city`, `state` 및 `zip`(으)로 정의하며 선택적 키 `addr2` 및 `country`을(를) 정의합니다. 이러한 필드의 값은 문자열이어야 합니다. `ADDRESS` 필드 매핑이 있는 경우 대상이 `ADDRESS` 개체를 [!DNL Mailchimp] API에 전달하여 업데이트합니다. 매핑되지 않은 `ADDRESS` 필드의 기본값은 `NULL`입니다. 단, 기본값은 `US`입니다.
 

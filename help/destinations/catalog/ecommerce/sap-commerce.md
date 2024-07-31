@@ -3,7 +3,7 @@ title: SAP Commerce 연결
 description: SAP Commerce 대상 커넥터를 사용하여 SAP 계정의 고객 레코드를 업데이트합니다.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 3%
@@ -194,6 +194,7 @@ Platform에서 [!DNL SAP Commerce] 계정으로 데이터를 내보내려면 다
 #### `customerNumberSAP` ID 매핑
 
 `customerNumberSAP` ID는 이 대상에 대한 필수 매핑입니다. 매핑하려면 아래 단계를 따르십시오.
+
 1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**를 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
    ![새 매핑 추가 단추가 강조 표시된 플랫폼 UI 스크린샷입니다.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 `customerNumberSAP`을(를) 선택합니다.
@@ -211,6 +212,7 @@ Platform에서 [!DNL SAP Commerce] 계정으로 데이터를 내보내려면 다
 #### 속성 매핑
 
 XDM 프로필 스키마와 [!DNL SAP Subscription Billing] 계정 사이에 업데이트할 다른 특성을 추가하려면 아래 단계를 반복합니다.
+
 1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**를 선택합니다. 이제 새 매핑 행이 화면에 표시됩니다.
    ![새 매핑 추가 단추가 강조 표시된 플랫폼 UI 스크린샷입니다.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 XDM 특성을 선택합니다.
@@ -302,8 +304,9 @@ XDM 프로필 스키마와 [!DNL SAP Subscription Billing] 계정 사이에 업�
 활성화된 각 Platform 대상에 대해 이 섹션을 반복합니다.
 
 두 대상을 선택한 위에 표시된 이미지에 따라 매핑은 다음과 같습니다.
+
 | [!DNL SAP Commerce] 대상 이름 | [!DNL SAP Subscription Billing] **[!UICONTROL 참조 형식]** | [!DNL SAP Commerce] **[!UICONTROL 매핑 ID]** 값 |
-| — | — | — |
+| --- | --- | --- |
 | sap_audience1 | `SAP_1` | `SAP_1` |
 | SAP 대상2 | `SAP_2` | `SAP_2` |
 

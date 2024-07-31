@@ -4,7 +4,7 @@ title: Microsoft Dynamics 365 연결
 description: Microsoft Dynamics 365 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Microsoft Dynamics 365 내에서 활성화할 수 있습니다.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2019'
 ht-degree: 1%
@@ -170,9 +170,10 @@ ht-degree: 1%
      ![Contactid에 대한 Target 매핑을 보여 주는 Platform UI 스크린샷](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * XDM 프로필 스키마와 [!DNL Dynamics 365] 인스턴스 간에 다음 매핑을 추가합니다.
-|XDM 프로필 스키마|[!DNL Dynamics 365] 인스턴스| 필수|
-|—|—|
-|`contactid`|`contactid`| 예 |
+
+     | XDM 프로필 스키마 | [!DNL Dynamics 365] 인스턴스 | 필수 |
+     |---|---|---|
+     | `contactid` | `contactid` | 예 |
 
    * **[!UICONTROL 사용자 지정 특성 선택]**: 소스 필드를 **[!UICONTROL 특성 이름]** 필드에 정의한 사용자 지정 특성에 매핑하려면 이 옵션을 선택하십시오. 지원되는 특성의 전체 목록은 [[!DNL Dynamics 365] 설명서](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties)를 참조하세요.
      ![이메일에 대한 대상 매핑을 보여 주는 플랫폼 UI 스크린샷](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
@@ -183,14 +184,16 @@ ht-degree: 1%
      > * 또한 [!DNL Dynamics 365] [날짜 또는 타임스탬프](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) 대상 필드에 매핑된 날짜 또는 타임스탬프 원본 필드가 있는 경우 매핑된 값이 비어 있지 않은지 확인하십시오. 내보낸 필드 값이 비어 있으면 *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* 오류 메시지가 표시되고 데이터가 업데이트되지 않습니다. [!DNL Dynamics 365] 제한입니다.
 
    * 예를 들어 업데이트할 값에 따라 XDM 프로필 스키마와 [!DNL Dynamics 365] 인스턴스 사이에 다음 매핑을 추가합니다.
-|XDM 프로필 스키마|[!DNL Dynamics 365] 인스턴스|
-|—|—|
-|`person.name.firstName`|`firstname`|
-|`person.name.lastName`|`lastname`|
-|`personalEmail.address`|`emailaddress1`|
+
+     | XDM 프로필 스키마 | [!DNL Dynamics 365] 인스턴스 |
+     |---|---|
+     | `person.name.firstName` | `firstname` |
+     | `person.name.lastName` | `lastname` |
+     | `personalEmail.address` | `emailaddress1` |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
-     ![Target 매핑을 보여 주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+
+   ![Target 매핑을 보여 주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
 ### 대상자 내보내기 예약 및 예제 {#schedule-audience-export-example}
 

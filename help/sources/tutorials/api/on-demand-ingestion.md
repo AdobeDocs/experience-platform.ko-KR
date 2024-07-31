@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;흐름 서비스;
 title: 흐름 서비스 API를 사용하여 온디맨드 수집에 대한 흐름 실행 만들기
 description: 흐름 서비스 API를 사용하여 온디맨드 수집을 위한 흐름 실행을 만드는 방법을 알아봅니다
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: cea12160656ba0724789db03e62213022bacd645
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 1%
@@ -104,6 +104,7 @@ curl -X POST \
 | --- | --- |
 | `id` | 새로 생성된 플로우 실행의 ID입니다. 테이블 기반 실행 사양에 대한 자세한 내용은 [흐름 사양 검색](../api/collect/database-nosql.md#specs)에 대한 안내서를 참조하십시오. |
 | `etag` | 흐름 실행의 리소스 버전입니다. |
+
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
 | `updatedAt` | The unix timestamp that designates when the flow run was last updated. |

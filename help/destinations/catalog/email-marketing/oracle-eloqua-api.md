@@ -3,10 +3,10 @@ title: (API) Oracle Eloqua 연결
 description: (API) Oracle Eloqua 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Oracle Eloqua 내에서 활성화할 수 있습니다.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: cf7ad18fa3d8f074371a0f03e09e218d37be5e01
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2033'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -148,19 +148,21 @@ XDM 필드를 [!DNL Oracle Eloqua] 대상 필드에 매핑하려면 다음 단�
 1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다. 화면에 새 매핑 행이 표시됩니다.
 1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 XDM 특성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을 선택하고 ID를 선택합니다.
 1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 ID를 선택하거나 **[!UICONTROL 사용자 지정 특성 선택]**&#x200B;을(를) 선택하고 **[!UICONTROL 특성 이름]** 필드에 원하는 특성 이름을 입력합니다. 제공한 특성 이름은 [!DNL Oracle Eloqua]의 기존 연락처 특성과 일치해야 합니다. [!DNL Oracle Eloqua]에서 사용할 수 있는 정확한 특성 이름은 [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html)을(를) 참조하십시오.
+
    * 다음 단계를 반복하여 XDM 프로필 스키마와 [!DNL Oracle Eloqua] 사이에 필요한 속성 매핑과 원하는 속성 매핑을 모두 추가합니다.
-| Source 필드 | 대상 필드 | 필수 |
-|—|—|
-|`IdentityMap: Eid`|`Identity: EloquaId`| 예 |
-|`xdm: personalEmail.address`|`Attribute: emailAddress`| 예 |
-|`xdm: personName.firstName`|`Attribute: firstName`| |
-|`xdm: personName.lastName`|`Attribute: lastName`| |
-|`xdm: workAddress.street1`|`Attribute: address1`| |
-|`xdm: workAddress.street2`|`Attribute: address2`| |
-|`xdm: workAddress.street3`|`Attribute: address3`| |
-|`xdm: workAddress.postalCode`|`Attribute: postalCode`| |
-|`xdm: workAddress.country`|`Attribute: country`| |
-|`xdm: workAddress.city`|`Attribute: city`| |
+
+     | 소스 필드 | 대상 필드 | 필수 |
+     |---|---|---|
+     | `IdentityMap: Eid` | `Identity: EloquaId` | 예 |
+     | `xdm: personalEmail.address` | `Attribute: emailAddress` | 예 |
+     | `xdm: personName.firstName` | `Attribute: firstName` | |
+     | `xdm: personName.lastName` | `Attribute: lastName` | |
+     | `xdm: workAddress.street1` | `Attribute: address1` | |
+     | `xdm: workAddress.street2` | `Attribute: address2` | |
+     | `xdm: workAddress.street3` | `Attribute: address3` | |
+     | `xdm: workAddress.postalCode` | `Attribute: postalCode` | |
+     | `xdm: workAddress.country` | `Attribute: country` | |
+     | `xdm: workAddress.city` | `Attribute: city` | |
 
    * 위 매핑의 예가 아래에 나와 있습니다.
      특성 매핑이 있는 ![Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)

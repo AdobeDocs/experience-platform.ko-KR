@@ -4,7 +4,7 @@ title: LINE 연결
 description: LINE 대상을 사용하면 Platform 대상자에 프로필을 추가하고 연결된 사용자에게 개인화된 경험을 전달할 수 있습니다.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 2%
@@ -121,8 +121,9 @@ ht-degree: 2%
 대상 데이터를 Adobe Experience Platform에서 [!DNL LINE] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야합니다. 매핑은 Platform 계정의 XDM(Experience Data Model) 스키마 필드와 대상 대상의 해당 필드 간에 링크를 만드는 것으로 구성됩니다. XDM 필드를 [!DNL LINE] 대상 필드에 올바르게 매핑하려면 다음 단계를 따르십시오.
 
 소스 ID에 따라 다음 대상 ID 네임스페이스를 매핑해야 합니다.
-| 대상 ID | Source 필드 | 대상 필드 |
-| — | — | — |
+
+| 대상 ID | 소스 필드 | 대상 필드 |
+| --- | --- | --- |
 | 광고주용 ID(IFA) | `IDFA` 또는 `GAID` | `LineId` |
 | LINE 사용자 ID | `UserID` | `LineId` |
 

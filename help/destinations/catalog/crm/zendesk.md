@@ -3,10 +3,10 @@ title: Zendesk 연결
 description: Zendesk 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Zendesk 내에서 활성화할 수 있습니다.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1469'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -121,12 +121,14 @@ XDM 필드를 [!DNL Zendesk] 대상 필드에 올바르게 매핑하려면 다�
 1. **[!UICONTROL 매핑]** 단계에서 **[!UICONTROL 새 매핑 추가]**&#x200B;를 선택합니다. 화면에 새 매핑 행이 표시됩니다.
 1. **[!UICONTROL 소스 필드 선택]** 창에서 **[!UICONTROL 특성 선택]** 범주를 선택하고 XDM 특성을 선택하거나 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을 선택하고 ID를 선택합니다.
 1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]** 범주를 선택하고 대상 ID를 선택하거나 **[!UICONTROL 특성 선택]** 범주를 선택하고 지원되는 스키마 특성 중 하나를 선택합니다.
+
    * 다음 필수 매핑을 추가하려면 다음 단계를 반복하십시오. XDM 프로필 스키마와 [!DNL Zendesk] 인스턴스 간에 업데이트할 다른 특성을 추가할 수도 있습니다.
-|Source 필드|대상 필드| 필수|
-|—|—|
-|`xdm: person.name.lastName`|`xdm: last_name`| 예 |
-|`IdentityMap: Email`|`Identity: email`| 예 |
-|`xdm: person.name.firstName`|`xdm: first_name`| |
+
+     | 소스 필드 | 대상 필드 | 필수 |
+     |---|---|---|
+     | `xdm: person.name.lastName` | `xdm: last_name` | 예 |
+     | `IdentityMap: Email` | `Identity: email` | 예 |
+     | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
      특성 매핑이 있는 ![Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/zendesk/mappings.png)

@@ -3,7 +3,7 @@ title: Salesforce Marketing Cloud 계정 참여
 description: Salesforce Marketing Cloud 계정 참여(이전의 Pardot) 대상을 사용하여 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce Marketing Cloud 계정 참여 내에서 활성화하는 방법에 대해 알아봅니다.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 2%
@@ -153,11 +153,12 @@ XDM 필드를 [!DNL Marketing Cloud Account Engagement] 대상 필드에 올바�
 1. **[!UICONTROL 대상 필드 선택]** 창에서 **[!UICONTROL ID 네임스페이스 선택]**&#x200B;을(를) 선택하고 ID를 선택하거나 **[!UICONTROL 사용자 지정 특성 선택]** 범주를 선택하고 [[!DNL Prospect API fields]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#fields) 목록에서 사용 가능한 스키마를 지정합니다.
 
    * XDM 프로필 스키마와 [!DNL Marketing Cloud Account Engagement] 사이에 매핑을 추가하려면 다음 단계를 반복합니다.
-| Source 필드 | 대상 필드 | 필수 |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: email`| 예 |
-|`xdm: MailingAddress.city`|`xdm: city`| |
-|`xdm: person.name.firstName`|`Attribute: firstName`| |
+
+     | 소스 필드 | 대상 필드 | 필수 |
+     | --- | --- | --- |
+     | `IdentityMap: Email` | `Identity: email` | 예 |
+     | `xdm: MailingAddress.city` | `xdm: city` | |
+     | `xdm: person.name.firstName` | `Attribute: firstName` | |
 
    * 위 매핑의 예가 아래에 나와 있습니다.
      ![Target 매핑을 보여 주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)

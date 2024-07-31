@@ -2,7 +2,7 @@
 title: (API) Salesforce Marketing Cloud 연결
 description: Salesforce Marketing Cloud(이전의 ExactTarget) 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 Salesforce Marketing Cloud 내에서 활성화할 수 있습니다.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2895'
 ht-degree: 1%
@@ -241,16 +241,18 @@ XDM 필드를 [!DNL (API) Salesforce Marketing Cloud] 대상 필드에 올바르
 [!DNL Salesforce Marketing Cloud]의 예제 특성이 아래에 표시되어 있습니다.
 ![특성을 표시하는 Salesforce Marketing Cloud UI 스크린샷입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
-[!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL 매핑 ID]**의 위치를 나타내는 예는 다음과 같습니다.
-![대상자 내보내기 일정을 보여 주는 Platform UI 스크린샷 예](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
+[!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL 매핑 ID]**&#x200B;의 위치를 나타내는 예는 다음과 같습니다.
+
+대상자 내보내기 일정을 보여 주는 ![Platform UI 스크린샷 예입니다.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 표시된 대로 [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL 매핑 ID]**&#x200B;는 [!DNL Salesforce Marketing Cloud] **[!UICONTROL 필드 이름]** 내에 지정된 값과 정확히 일치해야 합니다.
 
 활성화된 각 플랫폼 세그먼트에 대해 이 섹션을 반복합니다.
 
 위에 표시된 이미지를 기반으로 한 일반적인 예는 다음과 같을 수 있습니다.
+
 | [!DNL (API) Salesforce Marketing Cloud] 세그먼트 이름 | [!DNL Salesforce Marketing Cloud] **[!UICONTROL 필드 이름]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL 매핑 ID]** |
-| — | — | — |
+| --- | --- | --- |
 | salesforce mc 대상 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc 대상 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
 

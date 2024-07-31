@@ -3,7 +3,7 @@ keywords: crm;CRM;CRM 대상;Outreach;Outreach crm 대상
 title: 지원 연결
 description: 전달 대상을 사용하면 계정 데이터를 내보내고 비즈니스 요구 사항에 맞게 전달 내에서 활성화할 수 있습니다.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -155,18 +155,20 @@ ht-degree: 2%
      ![OutreachId를 사용한 Target 매핑을 보여 주는 플랫폼 UI 스크린샷](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * XDM 프로필 스키마와 [!DNL Outreach] 인스턴스 간에 다음 매핑을 추가합니다.
-|XDM 프로필 스키마|[!DNL Outreach] 인스턴스| 필수|
-|—|—|
-|`Oid`|`OutreachId`| 예 |
+
+     | XDM 프로필 스키마 | [!DNL Outreach] 인스턴스 | 필수 |
+     |---|---|---|
+     | `Oid` | `OutreachId` | 예 |
 
    * **[!UICONTROL 사용자 지정 특성 선택]**: 소스 필드를 [!UICONTROL 특성 이름] 필드에 정의한 사용자 지정 특성에 매핑하려면 이 옵션을 선택하십시오. 지원되는 속성의 전체 목록은 [[!DNL Outreach] 잠재 고객 설명서](https://api.outreach.io/api/v2/docs#prospect)를 참조하십시오.
      ![LastName을 사용한 대상 매핑을 보여 주는 플랫폼 UI 스크린샷](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * 예를 들어 업데이트할 값에 따라 XDM 프로필 스키마와 [!DNL Outreach] 인스턴스 사이에 다음 매핑을 추가합니다.
-|XDM 프로필 스키마|[!DNL Outreach] 인스턴스|
-|—|—|
-|`person.name.firstName`|`firstName`|
-|`person.name.lastName`|`lastName`|
+
+     | XDM 프로필 스키마 | [!DNL Outreach] 인스턴스 |
+     |---|---|
+     | `person.name.firstName` | `firstName` |
+     | `person.name.lastName` | `lastName` |
 
    * 이러한 매핑을 사용하는 예는 다음과 같습니다.
      ![Target 매핑을 보여 주는 Platform UI 스크린샷 예입니다.](../../assets/catalog/crm/outreach/mappings.png)
