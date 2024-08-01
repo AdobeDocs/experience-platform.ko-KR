@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform Web SDK에 대해 자주 묻는 질문에 대한 답변을 받아 보십시오.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 002a57d1d5cfb2e7bdbd9b587e77ca4487a28f65
+source-git-commit: cd2ac132c77d5d2e90c0f881d7b89a3c339fed6f
 workflow-type: tm+mt
-source-wordcount: '2268'
+source-wordcount: '2184'
 ht-degree: 1%
 
 ---
@@ -198,16 +198,6 @@ Adobe Experience Platform Web SDK는 최신 버전의 Google Chrome, Safari, Fir
 ```
 
 이 태그는 `window.Promise`이(가) 올바른 Promise 구현인지 확인하는 스크립트를 로드합니다.
-
->[!NOTE]
->
->다른 Promise 구현을 로드하도록 선택한 경우 `Promise.prototype.finally`을(를) 지원하는지 확인하십시오.
-
-### Internet Explorer 지원
-
-Adobe Experience Platform SDK는 비동기 작업의 완료를 통신하는 방법인 약속을 사용합니다. SDK에서 사용하는 [Promise](https://developer.mozilla.org/ko-KR/docs/Web/JavaScript/Reference/Global_Objects/Promise) 구현은 [!DNL Internet Explorer]을(를) 제외한 모든 대상 브라우저에서 기본적으로 지원됩니다. [!DNL Internet Explorer]에서 SDK를 사용하려면 `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill)가 있어야 합니다.
-
-폴리필을 약속하는 데 사용할 수 있는 라이브러리 중 하나는 약속 폴리필입니다. NPM으로 설치하는 방법에 대한 자세한 내용은 [promise-polyfill 설명서](https://www.npmjs.com/package/promise-polyfill)를 참조하세요.
 
 >[!NOTE]
 >
