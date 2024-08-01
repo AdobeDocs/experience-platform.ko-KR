@@ -5,10 +5,10 @@ title: 레이블 API 끝점
 description: Policy Service API를 사용하여 Experience Platform에서 데이터 사용 레이블을 관리하는 방법을 알아봅니다.
 role: Developer
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 77d68a42b16c78cdc2b55f7776ba1c8ec98d8acd
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 3%
+source-wordcount: '536'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->`/labels` 끝점은 데이터 사용 레이블을 검색, 생성 및 업데이트하는 데만 사용됩니다. API 호출을 사용하여 데이터 세트 및 필드에 레이블을 추가하는 방법에 대한 단계는 [데이터 세트 레이블 관리](../labels/dataset-api.md)에 대한 안내서를 참조하십시오.
+>`/labels` 끝점은 데이터 사용 레이블을 검색, 생성 및 업데이트하는 데만 사용됩니다. 레이블을 삭제할 수 없습니다. 그러나 API 호출을 사용하여 데이터 세트 및 필드에 레이블을 추가하거나 제거할 수 있습니다. 지침은 [데이터 세트 레이블 관리](../labels/dataset-api.md) 문서에 대한 안내서를 참조하십시오.
 
 ## 시작하기
 
@@ -163,6 +163,10 @@ curl -X GET \
 ## 사용자 지정 레이블 만들기 또는 업데이트 {#create-update}
 
 사용자 지정 레이블을 만들거나 업데이트하려면 [!DNL Policy Service] API에 대한 PUT 요청을 수행해야 합니다.
+
+>[!NOTE]
+>
+>데이터 집합에서 레이블을 제거하려면 데이터 집합 서비스 API에서 [PUT 요청을 수행하거나](../labels/dataset-api.md#remove) [데이터 집합 UI](../labels/user-guide.md#remove-labels-from-a-dataset)를 사용할 수 있습니다.
 
 **API 형식**
 

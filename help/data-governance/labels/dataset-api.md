@@ -4,9 +4,9 @@ solution: Experience Platform
 title: API를 사용하여 데이터 세트의 데이터 사용 레이블 관리
 description: 데이터 세트 서비스 API를 사용하면 데이터 세트에 대한 사용 레이블을 적용하고 편집할 수 있습니다. Adobe Experience Platform의 데이터 카탈로그 기능의 일부이지만 데이터 세트 메타데이터를 관리하는 카탈로그 서비스 API와 별개입니다.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 8db484e4a65516058d701ca972fcbcb6b73abb31
+source-git-commit: 9eda7068eb2a3fd5e59fbeff69c85abfad5ccf39
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1340'
 ht-degree: 1%
 
 ---
@@ -166,6 +166,10 @@ curl -X POST \
 ## 데이터 세트에서 레이블 제거 {#remove}
 
 기존 필드 레이블의 하위 집합으로 기존 `optionalLabels` 값을 업데이트하거나, 빈 목록을 업데이트하여 완전히 제거하여 이전에 적용된 모든 필드 레이블을 제거할 수 있습니다. [!DNL Dataset Service] API에 PUT 요청을 하여 이전에 적용된 레이블을 업데이트하거나 제거합니다.
+
+>[!NOTE]
+>
+>`labels` 매개 변수에 대해 빈 목록을 제공하여 데이터 집합의 레이블을 완전히 제거할 수 있습니다. 데이터 세트에서 레이블을 유지하는 것은 필수가 아닙니다.
 
 **API 형식**
 

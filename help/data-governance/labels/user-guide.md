@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 데이터 사용 레이블 관리
 description: 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 사용 레이블 작업을 위한 단계를 다룹니다.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7a4de0491057747c7ce4d7bc4378da453f3b3a1c
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1550'
 ht-degree: 17%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 17%
 
 ## 레이블 관리 {#manage-labels}
 
-데이터에 레이블을 적용하려면 &quot;prod&quot;라는 기본 프로덕션 샌드박스에서 사용할 **[!UICONTROL 사용 레이블 관리]** 권한이 필요합니다. 사용자 지정 레이블을 만들려면 제품 프로필에 대한 관리 권한도 있어야 합니다. 각 조직에는 적용 가능한 레이블 목록이 하나만 있으며 현재 레이블 삭제는 지원되지 않습니다.
+데이터에 레이블을 적용하려면 &quot;prod&quot;라는 기본 프로덕션 샌드박스에서 사용할 **[!UICONTROL 사용 레이블 관리]** 권한이 필요합니다. 사용자 지정 레이블을 만들려면 제품 프로필에 대한 관리 권한도 있어야 합니다. 각 조직에는 적용 가능한 레이블 목록이 하나만 있습니다. 레이블을 **삭제할 수 없습니다**. 대신 데이터 세트가 적용되는 데이터 세트 또는 필드에서 제거할 수 있습니다.
 
 권한을 할당하는 방법에 대한 자세한 내용은 [권한을 구성하는 방법](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) 또는 [액세스 제어 개요](../../access-control/home.md)에 대한 안내서를 참조하십시오. 조직의 Admin Console에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
 
