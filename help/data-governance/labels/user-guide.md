@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 데이터 사용 레이블 관리
 description: 이 안내서에서는 Adobe Experience Platform 사용자 인터페이스 내에서 데이터 사용 레이블 작업을 위한 단계를 다룹니다.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 7a4de0491057747c7ce4d7bc4378da453f3b3a1c
+source-git-commit: c1722c59c437215ce578a1a44cf0cad3b03ceca9
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1549'
 ht-degree: 17%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 17%
 >
 >![데이터 거버넌스 정책 위반이 위반 요약 및 데이터 계보 다이어그램이 강조 표시된 대화 상자를 발견했습니다.](../images/labels/policy-violation-dialog.png)
 >
->부분 정책 위반에 대한 자세한 내용은 [데이터 사용 정책 위반 설명서](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation)를 참조하십시오.
+>부분 정책 위반에 대한 자세한 내용은 [데이터 사용 정책 위반 설명서](../enforcement/auto-enforcement.md#data-usage-violation)를 참조하십시오.
 
 스키마 수준에서 데이터 사용 레이블을 관리하려면 기존 스키마를 선택하거나 새 스키마를 만들어야 합니다. Adobe Experience Platform에 로그인한 후 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택하여 **[!UICONTROL 스키마]** 작업 영역을 엽니다. 이 페이지에는 각 스키마와 관련된 유용한 세부 정보와 함께 조직에 속하는 생성된 모든 스키마가 나열됩니다.
 
