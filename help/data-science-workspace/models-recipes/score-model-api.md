@@ -5,14 +5,20 @@ title: Sensei 머신 러닝 API를 사용하여 모델 점수 매기기
 type: Tutorial
 description: 이 자습서에서는 Sensei 머신 러닝 API를 활용하여 실험 및 실험 실행을 만드는 방법을 보여줍니다.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '570'
 ht-degree: 1%
 
 ---
 
 # [!DNL Sensei Machine Learning API]을(를) 사용하여 모델에 점수 매기기
+
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 이 자습서에서는 API를 활용하여 실험 및 실험 실행을 만드는 방법을 보여줍니다. Sensei 머신 러닝 API의 모든 끝점 목록은 [이 문서](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)를 참조하십시오.
 
@@ -36,7 +42,7 @@ curl -X POST \
 
 `{ORG_ID}`: 고유한 Adobe Experience Platform 통합에서 조직 자격 증명을 찾았습니다.\
 `{ACCESS_TOKEN}`: 인증 후 제공한 특정 전달자 토큰 값입니다.\
-`{API_KEY}`: 고유한 Adobe Experience Platform 통합에서 특정 API 키 값을 찾았습니다.\
+`{API_KEY}`: 고유한 Adobe Experience Platform 통합에서 찾은 특정 API 키 값입니다.\
 `{JSON_PAYLOAD}`: 보낼 실험 실행 개체입니다. 자습서에서 사용하는 예는 다음과 같습니다.
 
 ```JSON

@@ -5,22 +5,28 @@ title: MLServices API 끝점
 description: MLService는 이전에 개발된 모델에 액세스하고 재사용할 수 있는 기능을 조직에 제공하는 게시된 교육된 모델입니다. MLSservices의 주요 기능은 일정에 따라 교육 및 채점을 자동화하는 기능입니다. 예약된 교육 실행은 모델의 효율성과 정확성을 유지하는 데 도움이 될 수 있으며, 예약된 채점 실행은 새로운 통찰력이 일관되게 생성되도록 할 수 있습니다.
 role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '910'
 ht-degree: 2%
 
 ---
 
 # MLServices 끝점
 
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
+
 MLService는 이전에 개발된 모델에 액세스하고 재사용할 수 있는 기능을 조직에 제공하는 게시된 교육된 모델입니다. MLSservices의 주요 기능은 일정에 따라 교육 및 채점을 자동화하는 기능입니다. 예약된 교육 실행은 모델의 효율성과 정확성을 유지하는 데 도움이 될 수 있으며, 예약된 채점 실행은 새로운 통찰력이 일관되게 생성되도록 할 수 있습니다.
 
-자동화된 교육 및 채점 일정은 시작 타임스탬프, 종료 타임스탬프 및 [cron 식](https://en.wikipedia.org/wiki/Cron)(으)로 표시되는 빈도로 정의됩니다. [MLService를 만들거나](#create-an-mlservice)할 때 일정을 정의하거나 [기존 MLService를 업데이트하여](#update-an-mlservice)적용할 수 있습니다.
+자동화된 교육 및 채점 일정은 시작 타임스탬프, 종료 타임스탬프 및 cron 표현식](https://en.wikipedia.org/wiki/Cron)으로 표시되는 빈도 로 정의됩니다[. 일정은 MLService를 만들 때 [정의하거나 기존 MLService](#create-an-mlservice)](#update-an-mlservice)를 업데이트하여 [적용할 수 있습니다.
 
 ## MLService 만들기 {#create-an-mlservice}
 
-POST 요청 및 서비스 이름과 유효한 MLInstance ID를 제공하는 페이로드를 수행하여 MLService를 만들 수 있습니다. MLService를 만드는 데 사용되는 MLInstance에는 기존 교육 실험이 필요하지 않지만 해당 실험 ID와 교육 실행 ID를 제공하여 기존 교육 모델로 MLService를 만들도록 선택할 수 있습니다.
+POST 요청 및 서비스 이름과 유효한 MLInstance ID를 제공하는 페이로드를 수행하여 MLService를 만들 수 있습니다. MLService를 만드는 데 사용되는 MLInstance는 기존 교육 실험이 필요하지 않지만 해당 실험 ID 및 교육 실행 ID를 제공하여 기존 학습된 모델을 사용하여 MLService를 만들도록 선택할 수 있습니다.
 
 **API 형식**
 
@@ -61,7 +67,7 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `name` | MLService에 대해 원하는 이름입니다. 이 MLService에 해당하는 서비스는 서비스 이름으로 서비스 갤러리 UI에 표시될 이 값을 상속합니다. |
-| `description` | MLService에 대한 선택적 설명입니다. 이 MLService에 해당하는 서비스는 서비스 설명으로 서비스 갤러리 UI에 표시될 이 값을 상속합니다. |
+| `description` | MLService에 대한 선택적 설명입니다. 이 MLService에 해당하는 서비스는 서비스 갤러리 UI에 서비스 설명으로 표시될 이 값을 상속합니다. |
 | `mlInstanceId` | 유효한 MLInstance ID입니다. |
 | `trainingDataSetId` | 제공되는 경우 MLInstance의 기본 데이터 세트 ID를 오버라이드하는 교육 데이터 세트 ID입니다. MLService를 만드는 데 사용된 MLInstance에서 교육 데이터 세트를 정의하지 않는 경우 적절한 교육 데이터 세트 ID를 제공해야 합니다. |
 | `trainingExperimentId` | 선택적으로 제공할 수 있는 실험 ID. 이 값이 제공되지 않으면 MLService를 만들면 MLInstance의 기본 구성을 사용하여 새 실험도 만들어집니다. |
@@ -71,13 +77,13 @@ curl -X POST \
 | `trainingSchedule.endTime` | 예약된 교육 실행이 종료되는 타임스탬프입니다. |
 | `trainingSchedule.cron` | 자동화된 교육 실행의 빈도를 정의하는 cron 표현식. |
 | `scoringSchedule` | 자동화된 채점 실행에 대한 일정. 이 속성이 정의된 경우 MLService는 일정에 따라 채점 실행을 자동으로 수행합니다. |
-| `scoringSchedule.startTime` | 예약된 채점 실행이 시작되는 타임스탬프입니다. |
-| `scoringSchedule.endTime` | 예약된 채점 실행이 종료되는 타임스탬프입니다. |
-| `scoringSchedule.cron` | 자동화된 채점 실행의 빈도를 정의하는 크론 표현식입니다. |
+| `scoringSchedule.startTime` | 예약된 점수 실행이 시작되는 타임스탬프입니다. |
+| `scoringSchedule.endTime` | 예약된 점수 실행이 종료되는 타임스탬프입니다. |
+| `scoringSchedule.cron` | 자동화된 점수 매기기 실행의 빈도 를 정의하는 cron 표현식입니다. |
 
 **응답**
 
-성공적인 응답은 고유 식별자(`id`), 교육용 실험 ID(`trainingExperimentId`), 채점용 실험 ID(`scoringExperimentId`) 및 입력 교육 데이터 세트 ID(`trainingDataSetId`)를 포함하여 새로 생성된 MLService의 세부 정보가 포함된 페이로드를 반환합니다.
+성공적인 응답은 고유 식별자(),`id` 교육에 대한 실험 ID(`trainingExperimentId`), 점수에 대한 실험 ID(`scoringExperimentId`) 및 입력 교육 데이터 세트 ID(`trainingDataSetId`)를 포함하여 새로 생성된 MLService의 세부 정보가 포함된 페이로드를 반환합니다.
 
 ```json
 {
@@ -175,7 +181,7 @@ curl -X GET \
 GET /mlServices/{MLSERVICE_ID}
 ```
 
-* `{MLSERVICE_ID}`: 올바른 MLService ID입니다.
+* `{MLSERVICE_ID}`: 유효한 MLService ID입니다.
 
 **요청**
 
@@ -321,7 +327,7 @@ curl -X DELETE \
 }
 ```
 
-## MLInstance ID별로 MLServices 삭제
+## MLInstance ID로 MLServices 삭제
 
 MLInstance ID를 쿼리 매개 변수로 지정하는 DELETE 요청을 수행하여 특정 MLInstance에 속하는 모든 MLService를 삭제할 수 있습니다.
 

@@ -1,17 +1,23 @@
 ---
-keywords: Experience Platform;개발자 안내서;Data Science Workspace;인기 주제;실시간 머신 러닝;노드 참조;
+keywords: Experience Platform; 개발자 안내서; 데이터 과학 작업 영역; 인기 있는 주제; 실시간 기계 학습; 노드 참조;
 solution: Experience Platform
-title: 실시간 머신 러닝 Notebook 관리
-description: 다음 안내서에서는 Adobe Experience Platform JupyterLab에서 실시간 머신 러닝 애플리케이션을 빌드하는 데 필요한 단계에 대해 설명합니다.
+title: 실시간 기계 학습 노트북 관리
+description: 다음 안내서에서는 Adobe Experience Platform JupyterLab에서 실시간 머신 러닝 애플리케이션을 빌드 하는 데 필요한 단계를 간략하게 설명합니다.
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1686'
 ht-degree: 0%
 
 ---
 
-# 실시간 머신 러닝 노트북 관리(Alpha)
+# 실시간 기계 학습 노트북 관리(알파)
+
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 >[!IMPORTANT]
 >
@@ -25,9 +31,9 @@ Adobe Experience Platform UI의 **데이터 과학**&#x200B;에서 **[!UICONTROL
 
 ![JupyterLab 열기](../images/rtml/open-jupyterlab.png)
 
-[!DNL JupyterLab] 런처가 나타납니다. *실시간 머신 러닝*&#x200B;까지 아래로 스크롤하고 **[!UICONTROL 실시간 ML]** 전자 필기장을 선택하십시오. 예제 데이터 세트가 있는 예제 노트북 셀이 포함된 템플릿이 열립니다.
+[!DNL JupyterLab] 런처가 나타납니다. *실시간 머신 러닝*&#x200B;까지 아래로 스크롤하고 **[!UICONTROL 실시간 ML]** 전자 필기장을 선택하십시오. 예제 데이터 세트와 함께 예제 Notebook 셀이 포함된 템플릿이 열립니다.
 
-![빈 python](../images/rtml/authoring-notebook.png)
+![빈 파이썬](../images/rtml/authoring-notebook.png)
 
 ## 노드 가져오기 및 검색
 
@@ -69,9 +75,9 @@ pprint(nf.discover_nodes())
 
 ![메모 목록](../images/rtml/node-list.png)
 
-## 실시간 머신 러닝 모델 교육
+## 실시간 기계 학습 모델 학습
 
-다음 옵션 중 하나를 사용하여 [!DNL Python] 코드를 작성하여 데이터를 읽고, 전처리하고, 분석합니다. 그런 다음 자체 ML 모델을 교육하고 ONNX 형식으로 직렬화한 다음 실시간 머신 러닝 모델 스토어에 업로드해야 합니다.
+다음 옵션 중 하나를 사용하여 데이터를 읽고, 전처리하고, 분석하는 코드를 작성 [!DNL Python] 합니다. 다음, 사용자 고유의 ML 모델을 학습시키고, ONNX 포맷 형식으로 직렬화한 다음, 실시간 기계 학습 모델 스토어에 업로드해야 합니다.
 
 - [JupyterLab 노트북에서 나만의 모델 교육](#training-your-own-model)
 - [사전 교육을 받은 ONNX 모델을 JupyterLab 노트북에 업로드](#pre-trained-model-upload)
@@ -94,11 +100,11 @@ Adobe Experience Platform 내에서 데이터 세트를 사용하려면 아래 �
 
 ![데이터 세트 액세스](../images/rtml/access-dataset.png)
 
-완료되면 마우스 오른쪽 단추를 클릭하고 수첩 하단에 생성한 셀을 삭제합니다.
+완료되면 Notebook 아래쪽에서 생성한 셀을 마우스 오른쪽 단추로 클릭하고 삭제합니다.
 
-### 교육 속성
+### 학습 속성
 
-제공된 템플릿을 사용하여 `config_properties` 내에서 교육 속성을 수정하십시오.
+제공된 템플릿 을 사용하여 에 있는 `config_properties`교육 속성을 수정합니다.
 
 ```python
 config_properties = {
@@ -111,15 +117,15 @@ config_properties = {
 
 ### 모델 준비
 
-**[!UICONTROL 실시간 ML]** 템플릿을 사용하여 ML 모델을 분석, 사전 처리, 교육 및 평가해야 합니다. 이는 데이터 변환을 적용하고 교육 파이프라인을 구축하여 수행됩니다.
+**[!UICONTROL 실시간 ML]** 템플릿 을 사용하여 ML 모델을 분석, 사전 처리, 훈련 및 평가해야 합니다. 이 작업은 데이터 변환을 적용하고 교육 파이프라인을 구축하여 수행됩니다.
 
 **데이터 변환**
 
-**[!UICONTROL 실시간 ML]** 템플릿 **데이터 변환** 셀을 수정하여 고유한 데이터 집합에서 작업해야 합니다. 일반적으로 열 이름 변경, 데이터 롤업 및 데이터 준비/기능 엔지니어링이 포함됩니다.
+실시간 ML ]**템플릿**&#x200B;데이터 변환&#x200B;**셀은**[!UICONTROL &#x200B;사용자 고유의 데이터 세트 세트와 함께 작동하도록 수정해야 합니다. 일반적으로 여기에는 열 이름 바꾸기, 데이터 롤업 및 데이터 준비/기능 엔지니어링이 포함됩니다.
 
 >[!NOTE]
 >
->다음 예제는 `[ ... ]`을(를) 사용하여 가독성을 위해 압축되었습니다. 전체 코드 셀에 대한 *실시간 ML* 템플릿 데이터 변환 섹션을 보고 확장하십시오.
+>다음 예는 가독성을 위해 를 사용하여 `[ ... ]`압축한 것입니다. 전체 코드 셀에 *대한 실시간 ML* 템플릿 데이터 변환 섹션을 보고 확장하세요.
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid': 'ecid',
@@ -202,7 +208,7 @@ df_final = pd.get_dummies(df_final, columns = cat_cols)
 
 다음으로 교육 파이프라인을 생성해야 합니다. ONNX 파일을 변환하고 생성해야 하는 경우를 제외하면 다른 교육 파이프라인 파일과 유사합니다.
 
-이전 셀에 정의된 데이터 변환을 사용하여 템플릿을 수정합니다. 아래에 강조 표시된 다음 코드는 기능 파이프라인에서 ONNX 파일을 생성하는 데 사용됩니다. 전체 파이프라인 코드 셀에 대한 *실시간 ML* 템플릿을 확인하십시오.
+이전 셀에 정의된 데이터 변환을 사용하여 템플릿을 수정합니다. 아래에 강조 표시된 다음 코드는 기능 파이프라인에서 ONNX 파일을 생성하는 데 사용됩니다. 전체 파이프라인 코드 셀에 대한 실시간 ML *템플릿 보기*.
 
 ```python
 #for generating onnx
@@ -225,7 +231,7 @@ def generate_onnx_resources(self):
     print("Model onnx created")
 ```
 
-교육 파이프라인을 완료하고 데이터 변환을 통해 데이터를 수정했으면 다음 셀을 사용하여 교육을 실행합니다.
+교육 파이프라인을 완료하고 데이터 변환을 통해 데이터를 수정한 후에는 다음 셀을 사용하여 교육을 실행합니다.
 
 ```python
 model = train(config_properties, df_final)
@@ -233,7 +239,7 @@ model = train(config_properties, df_final)
 
 ### ONNX 모델 생성 및 업로드
 
-성공적인 교육 실행이 완료되면 ONNX 모델을 생성하고 학습된 모델을 Real-time Machine Learning 모델 저장소에 업로드해야 합니다. 다음 셀을 실행하면 ONNX 모델이 다른 모든 노트북과 함께 왼쪽 레일에 나타납니다.
+교육 실행이 성공적으로 완료되면 ONNX 모델을 생성하고 학습된 모델을 실시간 기계 학습 모델 스토어에 업로드 해야 합니다. 다음 셀을 실행하면 ONNX 모델이 다른 모든 Notebook과 함께 왼쪽 레일 옆에 표시됩니다.
 
 ```python
 import os
@@ -252,7 +258,7 @@ model_path = "model.onnx"
 
 >[!NOTE]
 >
->다음 셀은 편집하거나 삭제할 수 없으며 실시간 머신 러닝 애플리케이션이 작동하는 데 필요합니다.
+>다음 셀은 편집하거나 삭제할 수 없으며 실시간 기계 학습 애플리케이션 작동에 필요합니다.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -264,9 +270,9 @@ print("Model ID: ", model_id)
 
 ![ONNX 모델](../images/rtml/onnx-model-rail.png)
 
-### 사전 교육을 받은 자체 ONNX 모델 업로드 {#pre-trained-model-upload}
+### 사용자 고유의 미리 학습된 ONNX 모델 업로드 {#pre-trained-model-upload}
 
-[!DNL JupyterLab] 전자 필기장에 있는 업로드 단추를 사용하여 미리 학습된 ONNX 모델을 [!DNL Data Science Workspace] 전자 필기장 환경에 업로드합니다.
+Notebook에 있는 [!DNL JupyterLab] 업로드 버튼 사용하여 미리 학습된 ONNX 모델을 [!DNL Data Science Workspace] Notebooks 환경에 업로드.
 
 ![업로드 아이콘](../images/rtml/upload.png)
 
@@ -288,7 +294,7 @@ ONNX 모델 이름과 일치하도록 *실시간 ML* 전자 필기장의 `model_
 >
 > 사용 중인 데이터 유형에 따라 노드가 여러 개 있을 수 있습니다. 다음 예제에서는 *Real-time ML* 템플릿의 단일 노드만 간략하게 설명합니다. 전체 코드 셀에 대한 *실시간 ML* 템플릿 *노드 작성* 섹션을 확인하십시오.
 
-아래의 Pandas 노드는 `"import": "map"`을(를) 사용하여 메서드 이름을 매개 변수의 문자열로 가져온 다음 매개 변수를 맵 함수로 입력합니다. 아래 예제에서는 `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`을(를) 사용하여 이 작업을 수행합니다. 맵을 준비한 후에는 `inplace`을(를) `True` 또는 `False`(으)로 설정할 수 있습니다. 변환을 그대로 적용할지 여부를 기준으로 `inplace`을(를) `True` 또는 `False`(으)로 설정합니다. 기본적으로 `"inplace": False`은(는) 새 열을 만듭니다. 새 열 이름을 제공하기 위한 지원이 후속 릴리스에서 추가되도록 설정되었습니다. 마지막 줄 `cols`은(는) 단일 열 이름 또는 열 목록일 수 있습니다. 변형을 적용할 열을 지정합니다. 이 예제에서는 `leasing`을(를) 지정합니다. 사용 가능한 노드 및 사용 방법에 대한 자세한 내용은 [노드 참조 안내서](./node-reference.md)를 참조하십시오.
+아래 Pandas 노드 는 메소드 이름을 매개 변수에서 문자열로 가져온 다음 매개 변수를 맵 함수로 입력하는 데 사용합니다 `"import": "map"` . 아래 예제에서는 `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`을(를) 사용하여 이 작업을 수행합니다. 맵을 준비한 후에는 as 또는 `False`를 설정할 수 `inplace` `True` 있습니다. 변환을 그대로 적용할지 여부를 기준으로 `inplace`을(를) `True` 또는 `False`(으)로 설정합니다. 기본적으로 `"inplace": False`은(는) 새 열을 만듭니다. 새 열 이름을 제공하기 위한 지원이 후속 릴리스에서 추가되도록 설정되었습니다. 마지막 줄 `cols`은(는) 단일 열 이름 또는 열 목록일 수 있습니다. 변형을 적용할 열을 지정합니다. 이 예제에서는 `leasing`을(를) 지정합니다. 사용 가능한 노드 및 사용 방법에 대한 자세한 내용은 [노드 참조 안내서](./node-reference.md)를 참조하십시오.
 
 ```python
 # Renaming leasing column using Pandas Node
@@ -306,7 +312,7 @@ leasing_mapper_node = Pandas(params={'import': 'map',
 
 노드를 만든 후 다음 단계는 그래프를 만들기 위해 노드를 함께 체인으로 연결하는 것입니다.
 
-먼저 배열을 작성하여 그래프의 일부인 모든 노드를 나열합니다.
+배열을 만들어 그래프의 일부인 모든 노드를 나열하여 시작.
 
 ```python
 nodes = [json_df_node, 
@@ -328,11 +334,11 @@ nodes = [json_df_node,
         onnx_node]
 ```
 
-그런 다음, 노드를 모서리와 연결합니다. 각 튜플은 [!DNL Edge] 연결입니다.
+다음, 노드를 가장자리와 연결합니다. 각 튜플은 연결입니다 [!DNL Edge] .
 
 >[!TIP]
 >
-> 노드가 서로 선형적으로 종속되므로(각 노드는 이전 노드의 출력에 의존함) 간단한 파이썬 목록 이해를 사용하여 링크를 만들 수 있습니다. 노드가 여러 입력에 의존하는 경우 자체 연결을 추가하십시오.
+> 노드가 서로 선형적으로 종속되므로(각 노드는 이전 노드의 출력에 따라 다름) 간단한 Python 목록 이해를 사용하여 링크를 만들 수 있습니다. 노드가 여러 입력에 의존하는 경우 자체 연결을 추가하십시오.
 
 ```python
 edges = [(nodes[i], nodes[i+1]) for i in range(len(nodes)-1)]
@@ -426,13 +432,13 @@ time.sleep(20)
 
 ### Edge 엔드포인트에 대한 점수
 
-*Real-time ML* 템플릿 내의 다음 셀을 사용하여 [!DNL Edge] 서비스에 대한 점수를 매기십시오.
+실시간 ML 템플릿 내에서 *다음 셀을 사용하여 서비스에 대해 점수를 매깁니다[!DNL Edge].*
 
-가장자리 대비 ![점수](../images/rtml/scoring-edge.png)
+![우위를 점하는 점수](../images/rtml/scoring-edge.png)
 
-채점이 완료되면 [!DNL Edge]에서 [!DNL Edge] URL, 페이로드 및 채점 출력이 반환됩니다.
+점수 매기기가 완료되면 [!DNL Edge] URL, 페이로드 및 점수가 매겨진 출력이 [!DNL Edge] 반환됩니다.
 
-## [!DNL Edge]에서 배포된 앱 나열
+## 배포된 앱을 [!DNL Edge]
 
 [!DNL Edge]에 현재 배포된 앱 목록을 생성하려면 다음 코드 셀을 실행하십시오. 이 셀은 편집하거나 삭제할 수 없습니다.
 
@@ -441,7 +447,7 @@ services = edge_utils.list_deployed_services()
 print(services)
 ```
 
-반환된 응답은 배포된 서비스의 배열입니다.
+반환되는 응답은 배포된 서비스의 배열입니다.
 
 ```json
 [
@@ -455,11 +461,11 @@ print(services)
 ]
 ```
 
-## [!DNL Edge]에서 배포된 앱 또는 서비스 ID 삭제(선택 사항)
+## 배포된 앱 또는 서비스 ID를 (선택 사항)에서 [!DNL Edge] 삭제
 
 >[!CAUTION]
 >
->이 셀은 배포된 Edge 애플리케이션을 삭제하는 데 사용됩니다. 배포된 [!DNL Edge] 응용 프로그램을 삭제해야 하는 경우가 아니면 다음 셀을 사용하지 마십시오.
+>이 셀은 배포된 Edge 애플리케이션 항목을 삭제하는 데 사용됩니다. 배포 [!DNL Edge] 된 애플리케이션 파일을 삭제해야 하는 경우가 아니면 다음 셀을 사용하지 마십시오.
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
@@ -470,4 +476,4 @@ else:
 
 ## 다음 단계
 
-위의 자습서에 따라 ONNX 모델을 교육하고 실시간 머신 러닝 모델 저장소에 업로드했습니다. 또한 실시간 머신 러닝 모델에 점수를 매기고 배포했습니다. 모델 작성에 사용할 수 있는 노드에 대해 자세히 알아보려면 [노드 참조 안내서](./node-reference.md)를 참조하십시오.
+위의 튜토리얼 내용을 따르면 ONNX 모델을 성공적으로 학습시키고 실시간 기계 학습 모델 스토어에 업로드했습니다. 또한 실시간 머신 러닝 모델에 점수를 매기고 배포했습니다. 모델 작성에 사용할 수 있는 노드에 대해 자세히 알아보려면 [노드 참조 안내서](./node-reference.md)를 참조하십시오.

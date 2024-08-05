@@ -5,14 +5,20 @@ title: 머신 러닝 인사이트를 통해 실시간 고객 프로필 강화
 type: Tutorial
 description: 이 문서에서는 머신 러닝 통찰력을 통해 실시간 고객 프로필을 보강하는 방법에 대한 안내서를 제공합니다.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: afa27069c7490848398c92973dd77810564b5993
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
 
 # 기계 학습 통찰력을 사용하여 [!DNL Real-Time Customer Profile] 강화
+
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 Adobe Experience Platform [!DNL Data Science Workspace]은(는) 데이터 예측 및 통찰력을 생성하기 위해 머신 러닝 모델을 만들고, 평가하고, 활용할 수 있는 도구와 리소스를 제공합니다. 머신 러닝 인사이트가 [!DNL Profile]을(를) 사용할 수 있는 데이터 세트로 수집되면 동일한 데이터도 [!DNL Profile] 레코드로 수집되어 [!DNL Adobe Experience Platform Segmentation Service]을(를) 사용하여 세그먼트화할 수 있습니다.
 

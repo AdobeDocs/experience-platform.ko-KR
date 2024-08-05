@@ -5,14 +5,20 @@ title: 소매 판매 스키마 및 데이터 세트 미리 보기
 type: Tutorial
 description: 다음 문서에서는 Adobe Experience Platform에서 스키마 및 데이터 세트를 미리 보는 방법에 대해 간략하게 설명합니다.
 exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '259'
 ht-degree: 3%
 
 ---
 
 # 소매 판매 스키마 및 데이터 세트 미리 보기
+
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 [소매 판매 스키마 및 데이터 세트](./create-retails-sales-dataset.md) 자습서에서 부트스트랩 스크립트가 성공적으로 완료되면. [!DNL Experience Platform]에서 출력 스키마와 데이터 세트를 볼 수 있습니다. 스키마 및 데이터 세트를 보려면 아래 단계를 따르십시오.
 

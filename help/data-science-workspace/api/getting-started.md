@@ -5,14 +5,20 @@ title: Sensei 머신 러닝 API 안내서
 description: Sensei 머신 러닝 API를 통해 개발자는 다양한 데이터 과학 Workspace 리소스에 대한 CRUD 작업을 수행할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 14%
+source-wordcount: '255'
+ht-degree: 12%
 
 ---
 
 # [!DNL Sensei Machine Learning] API 안내서
+
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 [!DNL Sensei Machine Learning] API는 데이터 과학자가 알고리즘 온보딩에서 실험 및 서비스 배포에 이르기까지 머신 러닝 서비스를 구성하고 관리할 수 있는 메커니즘을 제공합니다.
 

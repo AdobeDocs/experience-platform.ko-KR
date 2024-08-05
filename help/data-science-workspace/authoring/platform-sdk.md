@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Adobe Experience Platform Platform SDK를 사용한 모델 작성
 description: 이 자습서에서는 data_access_sdk_python을 Python 및 R에서 모두 새로운 Python platform_sdk로 변환하는 방법에 대한 정보를 제공합니다.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '509'
 ht-degree: 3%
 
 ---
 
 # Adobe Experience Platform [!DNL Platform] SDK를 사용하여 모델 작성
+
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 이 자습서에서는 `data_access_sdk_python`을(를) Python과 R 모두에서 새 Python `platform_sdk`(으)로 변환하는 방법에 대한 정보를 제공합니다. 이 자습서에서는 다음 작업에 대해 설명합니다.
 

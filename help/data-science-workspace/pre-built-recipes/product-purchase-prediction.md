@@ -4,14 +4,20 @@ solution: Experience Platform
 title: 제품 구매 예측 레서피
 description: '제품 구매 예측 레시피를 사용하면 특정 유형의 고객 구매 이벤트(예: 제품 구매)의 가능성을 예측할 수 있습니다.'
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '415'
 ht-degree: 5%
 
 ---
 
 # 제품 구매 예측 레서피
+
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 제품 구매 예측 레시피를 사용하면 특정 유형의 고객 구매 이벤트(예: 제품 구매)의 가능성을 예측할 수 있습니다.
 

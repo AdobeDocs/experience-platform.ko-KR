@@ -5,14 +5,20 @@ title: Jupyter Notebook의 쿼리 서비스
 type: Tutorial
 description: Adobe Experience Platform에서는 쿼리 서비스를 JupyterLab에 표준 기능으로 통합하여 데이터 과학 Workspace에서 SQL(Structured Query Language)을 사용할 수 있습니다. 이 자습서에서는 Adobe Analytics 데이터를 탐색, 변환 및 분석하는 일반적인 사용 사례에 대한 샘플 SQL 쿼리를 보여 줍니다.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
 
 # Jupyter Notebook의 쿼리 서비스
+
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 [!DNL Adobe Experience Platform]을(를) 사용하면 [!DNL Query Service]을(를) [!DNL JupyterLab]에 표준 기능으로 통합하여 [!DNL Data Science Workspace]의 SQL(Structured Query Language)을 사용할 수 있습니다.
 

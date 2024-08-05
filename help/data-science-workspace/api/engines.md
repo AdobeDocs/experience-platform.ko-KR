@@ -1,26 +1,32 @@
 ---
-keywords: Experience Platform;개발자 안내서;엔드포인트;Data Science Workspace;인기 주제;엔진;sensei 머신 러닝 api
+keywords: Experience Platform; 개발자 안내서; 끝점; 데이터 과학 작업 영역; 인기 있는 주제; 엔진; Sensei Machine Learning API
 solution: Experience Platform
 title: 엔진 API 엔드포인트
-description: 엔진은 데이터 과학 Workspace에서 머신 러닝 모델을 위한 기초입니다. 여기에는 특정 문제를 해결하는 머신 러닝 알고리즘, 기능 엔지니어링을 수행하는 기능 파이프라인 또는 둘 다가 포함됩니다.
+description: 엔진은 데이터 과학 Workspace에서 머신 러닝 모델을 위한 기초입니다. 여기에는 특정 문제를 해결하는 기계 학습 알고리즘, 기능 엔지니어링을 수행하는 기능 파이프라인 또는 둘 다가 포함됩니다.
 role: Developer
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1188'
 ht-degree: 2%
 
 ---
 
 # 엔진 엔드포인트
 
-엔진은 데이터 과학 Workspace에서 머신 러닝 모델을 위한 기초입니다. 여기에는 특정 문제를 해결하는 머신 러닝 알고리즘, 기능 엔지니어링을 수행하는 기능 파이프라인 또는 둘 다가 포함됩니다.
+>[!NOTE]
+>
+>Data Science 작업 영역은(는) 더 이상 구매할 수 없습니다.
+>
+>이 설명서는 데이터 과학 작업 영역 이전에 사용 권한이 있는 기존 고객을 대상으로 합니다.
 
-## Docker 레지스트리 조회
+엔진은 기계 학습의 기초입니다 데이터 과학 작업 영역 모델. 여기에는 특정 문제를 해결하는 기계 학습 알고리즘, 기능 엔지니어링을 수행하는 기능 파이프라인 또는 둘 다가 포함됩니다.
+
+## Docker 레지스트리 Look up
 
 >[!TIP]
 >
->Docker URL이 없는 경우 [레시피에 소스 파일 패키지](../models-recipes/package-source-files-recipe.md) 자습서를 방문하여 Docker 호스트 URL 만들기에 대한 단계별 설명을 확인하십시오.
+>Docker URL가 없는 경우 Docker 호스트 URL 만드는 방법에 대한 단계별 연습을 위해 패키지 원본 파일을 레서피](../models-recipes/package-source-files-recipe.md) 튜토리얼로 방문[.
 
 Docker 호스트 URL, 사용자 이름 및 암호를 포함하여 패키지된 레서피 파일을 업로드하려면 Docker 레지스트리 자격 증명이 필요합니다. 다음 GET 요청을 수행하여 이 정보를 조회할 수 있습니다.
 
@@ -42,7 +48,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 **응답**
 
-성공적인 응답이 Docker URL(`host`), 사용자 이름(`username`) 및 암호(`password`)를 포함하여 Docker 레지스트리의 세부 사항이 포함된 페이로드를 반환합니다.
+성공적인 응답은 Docker URL(`host`), 사용자 이름(`username`) 및 암호(`password`)를 포함하여 Docker 레지스트리의 세부 정보가 포함된 페이로드를 반환합니다.
 
 >[!NOTE]
 >
@@ -104,7 +110,7 @@ curl -X POST \
 
 **PySpark/Scala 요청**
 
-PySpark 레시피를 요청할 때 `executionType` 및 `type`은(는) &quot;PySpark&quot;입니다. Scala 레시피를 요청할 때 `executionType` 및 `type`은(는) &quot;Spark&quot;입니다. 다음 Scala 레시피 예제에서는 Spark를 사용합니다.
+PySpark 레시피를 요청 할 때 and `type` 는 `executionType` &quot;PySpark&quot;입니다. Scala 레시피를 요청 할 때 and `type` 는 `executionType` &quot;Spark&quot;입니다. 다음 Scala 레서피 예제에서는 Spark를 사용합니다.
 
 ```shell
 curl -X POST \
@@ -134,16 +140,16 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `name` | 원하는 엔진 이름. 이 엔진에 해당하는 레시피는 레시피의 이름으로 UI에 표시될 이 값을 상속합니다. |
-| `description` | 엔진에 대한 선택적 설명. 이 엔진에 해당하는 레시피는 레시피의 설명으로 UI에 표시될 이 값을 상속합니다. 이 속성은 필수입니다. 설명을 제공하지 않으려면 해당 값을 빈 문자열로 설정하십시오. |
-| `type` | 엔진의 실행 유형입니다. 이 값은 도커 이미지가 빌드되는 언어에 해당합니다. 이 값은 Spark 또는 PySpark로 설정할 수 있습니다. |
-| `mlLibrary` | PySpark 및 Scala 레시피의 엔진을 만들 때 필요한 필드입니다. 이 필드는 `databricks-spark`(으)로 설정해야 합니다. |
+| `name` | 엔진에 원하는 이름입니다. 이 엔진에 해당하는 레시피는 이 값을 상속받아 UI 내에 레시피 이름으로 표시됩니다. |
+| `description` | 엔진에 대한 선택적 설명입니다. 이 엔진에 해당하는 레시피는 이 값을 상속받아 UI 설명으로 표시됩니다. 이 속성 요소는 필수입니다. 설명을 제공하지 않으려면 해당 값을 빈 문자열로 설정합니다. |
+| `type` | 엔진의 실행 유형입니다. 이 값은 Docker 이미지가 빌드되는 언어에 해당합니다. 값은 Spark 또는 PySpark로 설정할 수 있습니다. |
+| `mlLibrary` | PySpark 및 Scala 레시피용 엔진을 만들 때 필요한 필드입니다. 이 필드는 로 설정해야 `databricks-spark`합니다. |
 | `artifacts.default.image.location` | 도커 이미지의 위치입니다. Azure ACR 또는 공개(인증되지 않음) Dockerhub만 지원됩니다. |
 | `artifacts.default.image.executionType` | 엔진의 실행 유형입니다. 이 값은 도커 이미지가 빌드되는 언어에 해당합니다. &quot;Spark&quot; 또는 &quot;PySpark&quot;일 수 있습니다. |
 
 **응답**
 
-성공한 응답은 고유 식별자(`id`)를 포함하여 새로 만든 엔진의 세부 정보가 포함된 페이로드를 반환합니다. 다음 예제 응답은 Python 엔진에 대한 것입니다. 모든 엔진 응답은 다음 형식을 따릅니다.
+성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 만든 엔진의 세부 정보가 포함된 페이로드를 반환합니다. 다음 예제 응답은 Python 엔진에 대한 것입니다. 모든 엔진 응답은 다음 포맷 형식을 팔로우 합니다.
 
 ```json
 {
@@ -170,11 +176,11 @@ curl -X POST \
 }
 ```
 
-## 도커 URL을 사용하여 기능 파이프라인 엔진 생성 {#feature-pipeline-docker}
+## Docker URL을 사용하여 기능 파이프라인 엔진 만들기 {#feature-pipeline-docker}
 
-POST 요청을 수행하면서 해당 메타데이터와 도커 이미지를 참조하는 도커 URL을 제공하여 기능 파이프라인 엔진을 생성할 수 있습니다.
+Docker 이미지를 참조하는 메타데이터 및 Docker URL 제공하는 동안 POST 요청 수행하여 기능 파이프라인 엔진을 만들 수 있습니다.
 
-**API 형식**
+**API 포맷**
 
 ```https
 POST /engines
@@ -213,19 +219,19 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --- | --- |
-| `type` | 엔진의 실행 유형입니다. 이 값은 도커 이미지가 빌드되는 언어에 해당합니다. 이 값은 Spark 또는 PySpark로 설정할 수 있습니다. |
-| `algorithm` | 사용 중인 알고리즘에서 이 값을 `fp`(기능 파이프라인)으로 설정하십시오. |
-| `name` | 피쳐 파이프라인 엔진에 대해 원하는 이름입니다. 이 엔진에 해당하는 레시피는 레시피의 이름으로 UI에 표시될 이 값을 상속합니다. |
-| `description` | 엔진에 대한 선택적 설명. 이 엔진에 해당하는 레시피는 레시피의 설명으로 UI에 표시될 이 값을 상속합니다. 이 속성은 필수입니다. 설명을 제공하지 않으려면 해당 값을 빈 문자열로 설정하십시오. |
+| `type` | 엔진의 실행 유형입니다. 이 값은 Docker 이미지가 빌드되는 언어에 해당합니다. 값은 Spark 또는 PySpark로 설정할 수 있습니다. |
+| `algorithm` | 사용 중인 알고리즘은 이 값을 (기능 파이프라인)으로 `fp` 설정합니다. |
+| `name` | 기능 파이프라인 엔진에 대해 원하는 이름입니다. 이 엔진에 해당하는 레시피는 이 값을 상속받아 UI 내에 레시피 이름으로 표시됩니다. |
+| `description` | 엔진에 대한 선택적 설명입니다. 이 엔진에 해당하는 레시피는 이 값을 상속받아 UI 설명으로 표시됩니다. 이 속성은 필수입니다. 설명을 제공하지 않으려면 해당 값을 빈 문자열로 설정하십시오. |
 | `mlLibrary` | PySpark 및 Scala 레시피의 엔진을 만들 때 필요한 필드입니다. 이 필드는 `databricks-spark`(으)로 설정해야 합니다. |
-| `artifacts.default.image.location` | 도커 이미지의 위치입니다. Azure ACR 또는 공개(인증되지 않음) Dockerhub만 지원됩니다. |
-| `artifacts.default.image.executionType` | 엔진의 실행 유형입니다. 이 값은 도커 이미지가 빌드되는 언어에 해당합니다. &quot;Spark&quot; 또는 &quot;PySpark&quot;일 수 있습니다. |
-| `artifacts.default.image.packagingType` | 엔진의 패키징 타입. 이 값은 `docker`(으)로 설정해야 합니다. |
+| `artifacts.default.image.location` | Docker 이미지의 위치입니다. Azure ACR 또는 공용(인증되지 않은) Dockerhub만 지원됩니다. |
+| `artifacts.default.image.executionType` | 엔진의 실행 유형입니다. 이 값은 Docker 이미지가 빌드되는 언어에 해당합니다. &quot;Spark&quot; 또는 &quot;PySpark&quot;일 수 있습니다. |
+| `artifacts.default.image.packagingType` | 엔진의 패키징 타입입니다. 이 값은 로 설정해야 `docker`합니다. |
 | `artifacts.default.defaultMLInstanceConfigs` | `pipeline.json` 구성 파일 매개 변수입니다. |
 
 **응답**
 
-성공한 응답은 고유 식별자(`id`)를 포함하여 새로 만든 기능 파이프라인 엔진의 세부 정보가 포함된 페이로드를 반환합니다. 다음 예제 응답은 PySpark 기능 파이프라인 엔진에 대한 것입니다.
+성공적인 응답은 고유 식별자(`id`)를 포함하여 새로 만든 기능 파이프라인 엔진의 세부 정보가 포함된 페이로드를 반환합니다. 다음 예제 응답은 PySpark 기능 파이프라인 엔진에 대한 것입니다.
 
 ```json
 {
@@ -254,7 +260,7 @@ curl -X POST \
 
 ## 엔진 목록 검색
 
-단일 GET 요청을 수행하여 엔진 목록을 검색할 수 있습니다. 결과를 필터링하기 위해 요청 경로에 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 목록은 [자산 검색을 위한 쿼리 매개 변수](./appendix.md#query)의 부록 섹션을 참조하십시오.
+단일 GET 요청 수행으로 엔진 목록을 검색할 수 있습니다. 결과를 필터링하는 데 도움이 되도록 요청 경로에서 쿼리 매개 변수를 지정할 수 있습니다. 사용 가능한 쿼리 목록은 [자산 검색을 위한 쿼리 매개 변수](./appendix.md#query)의 부록 섹션을 참조하십시오.
 
 **API 형식**
 
@@ -339,7 +345,7 @@ GET /engines/{ENGINE_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{ENGINE_ID}` | 기존 엔진의 ID. |
+| `{ENGINE_ID}` | 기존 엔진의 ID입니다. |
 
 **요청**
 
@@ -387,9 +393,9 @@ curl -X GET \
 
 >[!NOTE]
 >
->이 PUT 요청의 성공을 보장하려면 먼저 [ID로 엔진을 검색](#retrieve-specific)하는 GET 요청을 수행하는 것이 좋습니다. 그런 다음 반환된 JSON 개체를 수정 및 업데이트하고 수정된 JSON 개체 전체를 PUT 요청에 대한 페이로드로 적용합니다.
+>이 PUT 요청의 성공을 보장하려면 먼저 [ID로 엔진을 검색](#retrieve-specific)하는 GET 요청을 수행하는 것이 좋습니다. 그런 다음 반환된 JSON 객체를 수정 및 업데이트하고 수정된 JSON 객체 전체를 PUT 요청 페이로드로 적용합니다.
 
-다음 샘플 API 호출은 이러한 속성을 처음 사용하는 동안 엔진의 이름과 설명을 업데이트합니다.
+다음 샘플 API 호출은 엔진의 이름과 설명을 업데이트하지만 처음에는 이러한 속성을 가지고 있습니다.
 
 ```json
 {
@@ -416,7 +422,7 @@ PUT /engines/{ENGINE_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{ENGINE_ID}` | 기존 엔진의 ID. |
+| `{ENGINE_ID}` | 기존 엔진의 ID입니다. |
 
 **요청**
 

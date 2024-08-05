@@ -1,22 +1,28 @@
 ---
-keywords: Experience Platform;모델 점수 매기기;데이터 과학 Workspace;인기 항목;ui;채점 실행;채점 결과
+keywords: Experience Platform; 모델 점수 매기기; 데이터 과학 작업 영역; 인기 있는 주제; UI; 득점 실행; 채점 결과
 solution: Experience Platform
-title: 데이터 과학 Workspace UI에서 모델에 점수 매기기
+title: 데이터 과학 작업 영역 UI에서 모델 점수 매기기
 type: Tutorial
-description: Adobe Experience Platform 데이터 과학 Workspace의 채점은 입력 데이터를 기존의 훈련된 모델에 공급하여 달성할 수 있습니다. 그런 다음 채점 결과가 저장되고 지정된 출력 데이터 세트에 새 배치로 볼 수 있습니다.
+description: Adobe Experience Platform Data Science 작업 영역의 점수 매기기는 입력 데이터를 기존의 학습된 모델에 공급하여 달성할 수 있습니다. 그런 다음 점수 매기기 결과가 저장되고 지정된 출력 데이터 세트 에서 새 일괄 처리로 볼 수 있습니다.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '670'
 ht-degree: 1%
 
 ---
 
-# 데이터 과학 Workspace UI에서 모델에 점수 매기기
+# 데이터 과학 작업 영역 UI에서 모델 점수 매기기
 
-Adobe Experience Platform [!DNL Data Science Workspace]에서 채점을 수행하려면 훈련된 기존 모델에 입력 데이터를 넣으십시오. 그런 다음 채점 결과가 저장되고 지정된 출력 데이터 세트에 새 배치로 볼 수 있습니다.
+>[!NOTE]
+>
+>Data Science 작업 영역은(는) 더 이상 구매할 수 없습니다.
+>
+>이 설명서는 데이터 과학 작업 영역 이전에 사용 권한이 있는 기존 고객을 대상으로 합니다.
 
-이 자습서에서는 [!DNL Data Science Workspace] 사용자 인터페이스에서 모델을 평가하는 데 필요한 단계를 보여 줍니다.
+Adobe Experience Platform [!DNL Data Science Workspace] 의 점수 매기기는 입력 데이터를 기존의 학습된 모델에 공급하여 수행할 수 있습니다. 그런 다음 점수 매기기 결과가 저장되고 지정된 출력 데이터 세트 에서 새 일괄 처리로 볼 수 있습니다.
+
+이 튜토리얼 에서는 사용자 인터페이스에서 [!DNL Data Science Workspace] 모델의 점수를 매기는 데 필요한 단계를 보여 줍니다.
 
 ## 시작하기
 
@@ -40,20 +46,20 @@ Adobe Experience Platform [!DNL Data Science Workspace]에서 채점을 수행�
 
 ![](../images/models-recipes/score/scoring_input.png)
 
-출력 채점 데이터 세트를 선택합니다. 이는 채점 결과가 저장되는 전용 출력 데이터 세트입니다. 선택을 확인하고 **[!UICONTROL 다음]**&#x200B;을(를) 선택합니다.
+출력 채점 데이터 세트를 선택합니다. 이는 채점 결과가 저장되는 전용 출력 데이터 세트입니다. 선택을 확인하고 다음&#x200B;]**선택을 선택합니다**[!UICONTROL .
 
 ![](../images/models-recipes/score/scoring_results.png)
 
-워크플로우의 마지막 단계에서 채점 실행을 구성하라는 메시지가 표시됩니다. 이 구성은 모델에서 채점 실행에 사용됩니다.
-모델을 생성하는 동안 설정된 상속된 매개변수는 제거할 수 없습니다. 값을 두 번 클릭하거나 항목을 마우스로 가리키면서 되돌리기 아이콘을 선택하여 상속되지 않은 매개 변수를 편집하거나 되돌릴 수 있습니다.
+작업 과정 마지막 단계에서는 점수 실행을 구성하라는 메시지가 표시됩니다. 이러한 구성은 점수 매기기 실행을 위해 모델에서 사용됩니다.
+모델을 만드는 동안 설정된 상속된 매개 변수는 제거할 수 없습니다. 값을 두 번 클릭하거나 항목 위로 마우스를 가져간 상태에서 되돌리기 아이콘을 선택하여 상속되지 않은 매개변수를 편집하거나 되돌릴 수 있습니다.
 
 ![구성](../images/models-recipes/score/configuration.png)
 
-채점 구성을 검토하고 확인하고 **[!UICONTROL 완료]**&#x200B;를 선택하여 채점 실행을 만들고 실행합니다. **[!UICONTROL 채점 실행]** 탭으로 이동되었으며 **[!UICONTROL 보류 중]** 상태의 새 채점 실행이 표시됩니다.
+채점 구성을 검토하고 확인하고 **[!UICONTROL 완료]**&#x200B;를 선택하여 채점 실행을 만들고 실행합니다. 득점 실행 탭 으로 **[!UICONTROL 이동되고 보류 중]** 상태의 **[!UICONTROL 새 득점 실행이]** 표시됩니다.
 
-![채점 실행 탭](../images/models-recipes/score/scoring_runs_tab.png)
+![득점 득점 탭](../images/models-recipes/score/scoring_runs_tab.png)
 
-채점 실행은 다음 상태 중 하나로 표시될 수 있습니다.
+점수 실행은 다음 상태 중 하나로 표시될 수 있습니다.
 - 보류 중
 - 완료
 - 실패
@@ -75,19 +81,19 @@ Adobe Experience Platform [!DNL Data Science Workspace]에서 채점을 수행�
 
 ![실행 세부 정보](../images/models-recipes/score/view_details.png)
 
-선택한 채점 실행의 상태가 &quot;완료&quot; 또는 &quot;실패&quot;이면 **[!UICONTROL 활동 로그 보기]** 링크를 사용할 수 있습니다. 채점 실행이 실패할 경우 실행 로그는 실패 이유를 확인하는 데 유용한 정보를 제공할 수 있습니다. 실행 로그를 다운로드하려면 **[!UICONTROL 활동 로그 보기]**&#x200B;를 선택하십시오.
+선택한 채점 실행의 상태가 &quot;완료&quot; 또는 &quot;실패&quot;이면 **[!UICONTROL 활동 로그 보기]** 링크를 사용할 수 있습니다. 채점 실행이 실패할 경우 실행 로그는 실패 이유를 확인하는 데 유용한 정보를 제공할 수 있습니다. 실행 로그를 다운로드하려면 활동 로그&#x200B;]**보기 를 선택합니다**[!UICONTROL .
 
-![보기 로그 선택](../images/models-recipes/score/view_logs.png)
+![로그 보기 선택](../images/models-recipes/score/view_logs.png)
 
-**[!UICONTROL 활동 로그 보기]** 팝오버가 표시됩니다. 관련 로그를 자동으로 다운로드할 URL을 선택하십시오.
+활동 로그&#x200B;]**보기 팝오버가**[!UICONTROL &#x200B;나타납니다. 연결된 로그를 자동으로 다운로드할 URL을 선택합니다.
 
 ![](../images/models-recipes/score/activity_logs.png)
 
-**[!UICONTROL 채점 결과 데이터 세트 미리 보기]**&#x200B;를 선택하여 채점 결과를 볼 수도 있습니다.
+데이터 세트 미리 보기 채점 결과를 선택하여  **[!UICONTROL 채점 결과를 볼 수도 있습니다]**.
 
 ![미리 보기 결과 선택](../images/models-recipes/score/view_results.png)
 
-출력 데이터 세트의 미리보기가 제공됩니다.
+출력 데이터 세트 미리 보기가 제공됩니다.
 
 ![결과 미리 보기](../images/models-recipes/score/preview_results.png)
 

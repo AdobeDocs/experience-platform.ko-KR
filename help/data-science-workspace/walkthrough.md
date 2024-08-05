@@ -4,15 +4,21 @@ solution: Experience Platform
 title: 데이터 과학 Workspace 교육 과정
 description: 이 문서에서는 Adobe Experience Platform 데이터 과학 Workspace 교육 과정에 대한 링크와 설명을 제공합니다.
 exl-id: d814846e-52a9-46c6-831a-3399241959f2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Data Science Workspace] 과정
+
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 이 문서에서는 Adobe Experience Platform Data Science Workspace 과정의 예상 학습 결과에 대해 설명합니다. 과정을 보려면 Adobe ID을 사용하여 Experience League에 로그인해야 합니다.
 

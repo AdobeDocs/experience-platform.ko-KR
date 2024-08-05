@@ -4,14 +4,20 @@ solution: Experience Platform
 title: 제품 추천 레시피
 description: Product Recommendations 레시피를 통해 고객의 요구 사항과 관심사에 맞게 개인화된 제품 추천을 제공할 수 있습니다. 고객의 구매 내역은 정확한 예측 모델을 통해 고객이 관심을 가질 수 있는 제품에 대한 통찰력을 제공할 수 있습니다.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 3%
+source-wordcount: '489'
+ht-degree: 2%
 
 ---
 
 # 제품 추천 레시피
+
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 Product Recommendations 레시피를 통해 고객의 요구 사항과 관심사에 맞게 개인화된 제품 추천을 제공할 수 있습니다. 고객의 구매 내역은 정확한 예측 모델을 통해 고객이 관심을 가질 수 있는 제품에 대한 통찰력을 제공할 수 있습니다.
 

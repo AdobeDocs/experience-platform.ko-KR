@@ -1,17 +1,23 @@
 ---
-keywords: Experience Platform;JupyterLab;노트북;Data Science Workspace;인기 주제;jupyterlab
+keywords: Experience Platform; 주피터랩; 노트북; 데이터 과학 작업 영역; 인기 있는 주제; 주피터랩
 solution: Experience Platform
 title: JupyterLab UI 개요
-description: JupyterLab은 Project Jupyter를 위한 웹 기반 사용자 인터페이스이며 Adobe Experience Platform에 긴밀하게 통합됩니다. 데이터 과학자가 Jupyter Notebooks, 코드 및 데이터를 사용할 수 있는 대화형 개발 환경을 제공합니다. 이 문서에서는 JupyterLab 및 해당 기능에 대한 개요와 일반적인 작업을 수행하는 지침을 제공합니다.
+description: JupyterLab은 Project Jupyter의 웹 기반 사용자 인터페이스이며 Adobe Experience Platform 에 긴밀하게 통합되어 있습니다. 데이터 사이언티스트가 Jupyter Notebook, 코드 및 데이터로 작업할 수 있는 대화형 개발 환경을 제공합니다. 이 문서에서는 JupiterLab 및 해당 기능에 대한 개요와 일반적인 작업을 수행하기 위한 지침을 제공합니다.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1835'
 ht-degree: 2%
 
 ---
 
 # [!DNL JupyterLab] UI 개요
+
+>[!NOTE]
+>
+>Data Science 작업 영역은(는) 더 이상 구매할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 [!DNL JupyterLab]은(는) [Project Jupyter](https://jupyter.org/)용 웹 기반 사용자 인터페이스이며 Adobe Experience Platform에 긴밀하게 통합되어 있습니다. 데이터 과학자가 Jupyter Notebooks, 코드 및 데이터를 사용할 수 있는 대화형 개발 환경을 제공합니다.
 
@@ -21,37 +27,37 @@ ht-degree: 2%
 
 Experience Platform의 JupyterLab 통합은 아키텍처 변경 사항, 디자인 고려 사항, 맞춤형 노트북 확장, 사전 설치된 라이브러리 및 Adobe 테마 인터페이스와 함께 제공됩니다.
 
-다음 목록에서는 Platform의 JupyterLab에 고유한 기능 중 일부를 간략하게 설명합니다.
+다음 목록에서는 Platform JupyterLab에 고유한 몇 가지 기능에 대해 간략하게 설명합니다.
 
 | 기능 | 설명 |
 | --- | --- |
 | **커널** | 커널은 전자 필기장과 다른 [!DNL JupyterLab] 프런트 엔드에서 다양한 프로그래밍 언어로 코드를 실행하고 검사하는 기능을 제공합니다. [!DNL Experience Platform]은(는) [!DNL Python], R, PySpark 및 [!DNL Spark]에서 개발을 지원하는 추가 커널을 제공합니다. 자세한 내용은 [커널](#kernels) 섹션을 참조하십시오. |
 | **데이터 액세스** | 읽기 및 쓰기 기능을 완벽하게 지원하므로 [!DNL JupyterLab] 내에서 기존 데이터 세트에 직접 액세스할 수 있습니다. |
-| **[!DNL Platform]서비스 통합** | 기본 제공 통합을 사용하면 [!DNL JupyterLab] 내에서 직접 다른 [!DNL Platform] 서비스를 활용할 수 있습니다. 지원되는 통합의 전체 목록은 [다른 플랫폼 서비스와 통합](#service-integration) 섹션에 나와 있습니다. |
+| **[!DNL Platform]서비스 통합** | 내장된 통합을 통해 내에서 [!DNL JupyterLab]직접 다른 [!DNL Platform] 서비스를 활용할 수 있습니다. 지원되는 통합의 전체 목록은 다른 Platform 서비스와의 통합 섹션에 [나와 있습니다](#service-integration). |
 | **인증** | <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">JupyterLab의 기본 제공 보안 모델</a> 외에도 플랫폼 서비스 간 통신을 포함하여 응용 프로그램과 Experience Platform 간의 모든 상호 작용은 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System](IMS)</a>을(를) 통해 암호화되고 인증됩니다. |
 | **개발 라이브러리** | [!DNL Experience Platform]에서 [!DNL JupyterLab]은(는) [!DNL Python], R 및 PySpark에 사전 설치된 라이브러리를 제공합니다. 지원되는 라이브러리의 전체 목록은 [부록](#supported-libraries)을 참조하십시오. |
-| **라이브러리 컨트롤러** | 미리 설치된 라이브러리가 사용자의 요구 사항에 맞지 않으면 Python 및 R용으로 추가 라이브러리를 설치할 수 있으며, [!DNL Platform]의 무결성을 유지하고 데이터를 안전하게 유지하기 위해 격리된 컨테이너에 임시로 저장됩니다. 자세한 내용은 [커널](#kernels) 섹션을 참조하십시오. |
+| **라이브러리 컨트롤러** | 미리 설치된 라이브러리가 사용자의 요구 사항에 맞지 않으면 Python 및 R용으로 추가 라이브러리를 설치할 수 있으며, [!DNL Platform]의 무결성을 유지하고 데이터를 안전하게 유지하기 위해 격리된 컨테이너에 임시로 저장됩니다. [자세한 내용은 kernels](#kernels) 섹션을 참조하십시오. |
 
 >[!NOTE]
 >
->추가 라이브러리는 라이브러리가 설치된 세션에만 사용할 수 있습니다. 새 세션을 시작할 때 필요한 추가 라이브러리를 다시 설치해야 합니다.
+>추가 라이브러리는 해당 라이브러리가 설치된 세션에서만 사용할 수 있습니다. 새 세션을 시작할 때 필요한 추가 라이브러리를 다시 설치해야 합니다.
 
-## 다른 [!DNL Platform] 서비스와 통합 {#service-integration}
+## 다른 [!DNL Platform] 서비스와의 통합 {#service-integration}
 
-표준화 및 상호 운용성은 [!DNL Experience Platform]의 핵심 개념입니다. [!DNL Platform]에 포함된 IDE로 [!DNL JupyterLab]을(를) 통합하면 다른 [!DNL Platform] 서비스와 상호 작용할 수 있으므로 [!DNL Platform]을(를) 최대한 활용할 수 있습니다. [!DNL JupyterLab]에서 다음 [!DNL Platform]개의 서비스를 사용할 수 있습니다.
+표준화 및 상호 운용성은 의 [!DNL Experience Platform]핵심 개념입니다. on [!DNL Platform] 을 [!DNL JupyterLab] 임베디드 IDE로 통합하면 다른 [!DNL Platform] 서비스와 상호 작용할 수 있으므로 잠재력을 최대한 활용할 [!DNL Platform] 수 있습니다. 에서 사용할 수 있는 서비스는 다음과 같습니다 [!DNL Platform] [!DNL JupyterLab].
 
 * **[!DNL Catalog Service]:** 읽기 및 쓰기 기능을 사용하여 데이터 세트에 액세스하고 데이터 세트를 탐색합니다.
 * **[!DNL Query Service]:** SQL을 사용하여 데이터 세트에 액세스하고 탐색하므로 대량의 데이터를 처리할 때 데이터 액세스 오버헤드가 줄어듭니다.
 * 한 번의 클릭으로 레시피를 만들 수 있을 뿐만 아니라 데이터를 교육하고 평가할 수 있는 기능을 갖춘 **[!DNL Sensei ML Framework]:** 모델 개발.
-* **[!DNL Experience Data Model (XDM)]:** 표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 [XDM(경험 데이터 모델)](https://www.adobe.com/go/xdm-home-en)은(는) 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 작업입니다.
+* **[!DNL Experience Data Model (XDM)]:** 표준화 및 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. [Adobe Systems으로 구동되는 XDM(Experience Data Model)](https://www.adobe.com/go/xdm-home-en)은 고객 경험 데이터를 표준화하고 고객 경험 관리에 대한 스키마를 정의하기 위한 노력입니다.
 
 >[!NOTE]
 >
->[!DNL JupyterLab]의 일부 [!DNL Platform] 서비스 통합이 특정 커널로 제한됩니다. 자세한 내용은 [커널](#kernels)의 섹션을 참조하십시오.
+>일부 [!DNL Platform] [!DNL JupyterLab] 서비스 통합은 특정 커널로 제한됩니다. 자세한 내용은 커널](#kernels)에 대한 [섹션을 참조하십시오.
 
-## 주요 기능 및 공통 작업
+## 주요 기능 및 일반 작업
 
-[!DNL JupyterLab]의 주요 기능에 대한 정보 및 일반적인 작업 수행에 대한 지침은 아래 섹션에 나와 있습니다.
+의 주요 기능에 [!DNL JupyterLab] 대한 정보와 일반 작업 수행 지침은 아래 섹션에 나와 있습니다.
 
 * [JupyterLab 액세스](#access-jupyterlab)
 * [JupyterLab 인터페이스](#jupyterlab-interface)
@@ -60,9 +66,9 @@ Experience Platform의 JupyterLab 통합은 아키텍처 변경 사항, 디자�
 * [커널 세션](#kernel-sessions)
 * [런처](#launcher)
 
-### [!DNL JupyterLab] 액세스 {#access-jupyterlab}
+### 접근 [!DNL JupyterLab] {#access-jupyterlab}
 
-[Adobe Experience Platform](https://platform.adobe.com)의 왼쪽 탐색 열에서 **[!UICONTROL 전자 필기장]**&#x200B;을 선택합니다. [!DNL JupyterLab]이(가) 완전히 초기화될 때까지 잠시 기다립니다.
+Adobe Experience Platform](https://platform.adobe.com)의 [왼쪽 탐색 열에서 전자 필기장을&#x200B;]**선택합니다**[!UICONTROL . 완전히 초기화될 때까지 [!DNL JupyterLab] 약간의 시간을 허용합니다.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -74,20 +80,20 @@ Experience Platform의 JupyterLab 통합은 아키텍처 변경 사항, 디자�
 
 인터페이스 맨 위에 있는 메뉴 모음에는 [!DNL JupyterLab]에서 사용할 수 있는 작업을 키보드 단축키로 표시하는 최상위 메뉴가 있습니다.
 
-* **파일:** 파일 및 디렉터리 관련 작업
-* **편집:** 문서 및 기타 활동 편집과 관련된 작업
-* [!DNL JupyterLab]의 모양을 변경하는 **보기:** 동작
-* **실행:** 전자 필기장 및 코드 콘솔과 같은 다른 활동에서 코드를 실행하기 위한 작업
+* **파일:** 파일 및 디렉터리와 관련된 작업
+* **편집:** 문서 편집 및 기타 활동과 관련된 작업
+* **보기:**[!DNL JupyterLab]
+* **실행:** Notebook 및 코드 콘솔과 같은 다양한 활동에서 코드를 실행하기 위한 작업
 * **커널:** 커널 관리를 위한 작업
-* **탭:** 열려 있는 문서 및 활동 목록입니다.
+* **탭:** 열려 있는 문서 및 활동 목록
 * **설정:** 일반 설정 및 고급 설정 편집기
-* **도움말:** [!DNL JupyterLab] 및 커널 도움말 링크 목록
+* **도움말:** 커널 도움말 링크 목록 [!DNL JupyterLab]
 
 **왼쪽 사이드바**
 
-왼쪽 사이드바에는 클릭 가능한 탭이 있으며, 이 탭에서는 다음 기능에 액세스할 수 있습니다.
+왼쪽 사이드바에는 다음 기능에 액세스할 수 있는 클릭 가능 탭이 있습니다.
 
-* **파일 브라우저:** 저장된 전자 필기장 문서 및 디렉터리 목록
+* **파일 브라우저:** 저장된 노트북 문서 및 디렉터리 목록
 * **데이터 탐색기:** 데이터 세트와 스키마를 검색, 액세스 및 탐색
 * **커널 및 터미널 실행 중:** 종료 기능이 있는 활성 커널 및 터미널 세션 목록
 * **명령:** 유용한 명령 목록
@@ -110,13 +116,13 @@ Experience Platform의 JupyterLab 통합은 아키텍처 변경 사항, 디자�
 
 >[!NOTE]
 >
->Notebooks의 경우 조직당 하나의 GPU만 제공됩니다. GPU가 사용 중이면 현재 GPU를 예약한 사용자가 릴리스할 때까지 기다려야 합니다. GPU를 로그아웃하거나 4시간 이상 유휴 상태로 두면 됩니다.
+>Notebooks의 경우 조직당 하나의 GPU만 제공됩니다. GPU가 사용 중인 경우 현재 GPU를 예약한 사용자 사용자가 GPU를 해제할 때까지 기다려야 합니다. 이 작업은 GPU를 로깅 아웃하거나 4시간 이상 유휴 상태로 두어 수행할 수 있습니다.
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
 
-### [!DNL JupyterLab] 종료 및 다시 시작
+### 종료 및 다시 시작 [!DNL JupyterLab]
 
-[!DNL JupyterLab]에서 세션을 종료하여 추가 리소스가 사용되지 않도록 할 수 있습니다. 먼저 **전원 아이콘** ![전원 아이콘](/help/images/icons/power.png)을 선택한 다음 세션을 종료하는 팝오버에서 **[!UICONTROL 시스템 종료]**&#x200B;를 선택하십시오. 12시간 동안 아무 활동이 없으면 노트북 세션이 자동으로 종료됩니다.
+에서는 [!DNL JupyterLab]세션을 종료하여 더 이상 리소스가 사용되지 않도록 할 수 있습니다. 먼저 **전원 아이콘** ![전원 아이콘](/help/images/icons/power.png)을 선택한 다음 세션을 종료하는 팝오버에서 **[!UICONTROL 시스템 종료]**&#x200B;를 선택하십시오. 12시간 동안 아무 활동이 없으면 노트북 세션이 자동으로 종료됩니다.
 
 [!DNL JupyterLab]을(를) 다시 시작하려면 전원 아이콘 왼쪽에 있는 **다시 시작 아이콘** ![다시 시작 아이콘](/help/images/icons/restart.png)을(를) 선택한 다음 표시되는 팝오버에서 **[!UICONTROL 다시 시작]**&#x200B;을(를) 선택하십시오.
 
@@ -130,17 +136,17 @@ Experience Platform의 JupyterLab 통합은 아키텍처 변경 사항, 디자�
 
 일반적인 셀 작업은 아래에 설명되어 있습니다.
 
-* **셀 추가:** 전자 필기장 메뉴에서 더하기 기호(**+**)를 클릭하여 빈 셀을 추가합니다. 새 셀은 현재 상호 작용하고 있는 셀 아래에 배치되거나 특정 셀이 포커스에 있지 않은 경우 수첩의 끝에 배치됩니다.
+* **셀 추가:** Notebook 메뉴에서 더하기 기호(**+**)를 클릭하여 빈 셀을 추가합니다. 새로 만들기 셀은 현재 상호 작용 중인 셀 아래 또는 특정 셀이 포커스 안에 없는 경우 Notebook 끝에 배치됩니다.
 
-* **셀 이동:** 이동할 셀의 오른쪽에 커서를 놓은 다음 셀을 클릭하여 새 위치로 끕니다. 또한 한 전자 필기장에서 다른 전자 필기장으로 셀을 이동하면 해당 내용과 함께 셀이 복제됩니다.
+* **셀 이동하기:** 이동하려는 셀의 오른쪽에 커서를 놓은 다음, 셀을 클릭하고 새로운 위치로 드래그하십시오. 또한 한 Notebook에서 다른 Notebook으로 셀을 이동하면 해당 내용과 함께 셀이 복제됩니다.
 
-* **셀 실행:** 실행하려는 셀의 본문을 클릭한 다음 전자 필기장 메뉴에서 **재생** 아이콘(**▶**)을 클릭합니다. 커널이 실행을 처리할 때 별표(**\***)가 셀의 실행 카운터에 표시되며 완료 시 정수로 대체됩니다.
+* **셀 실행:** 실행하려는 셀의 본문을 클릭한 다음 Notebook 메뉴에서 재생&#x200B;**아이콘(**▶**)을 클릭합니다.** 별표(**\***)는 커널이 실행을 처리할 때 셀의 실행 카운터에 표시되며 완료되면 정수로 바뀝니다.
 
 * **셀 삭제:** 삭제할 셀의 본문을 클릭한 다음 **가위** 아이콘을 클릭합니다.
 
 ### 커널 {#kernels}
 
-노트북 커널은 노트북 셀을 처리하는 언어별 컴퓨팅 엔진입니다. [!DNL JupyterLab]은(는) [!DNL Python] 외에도 R, PySpark 및 [!DNL Spark](Scala)에서 추가 언어 지원을 제공합니다. 전자 필기장 문서를 열면 연결된 커널이 실행됩니다. 노트북 셀이 실행될 때, 커널은 계산을 수행하고 상당한 CPU 및 메모리 리소스를 소비할 수 있는 결과를 생성한다. 할당된 메모리는 커널을 종료할 때까지 해제되지 않습니다.
+노트북 커널은 노트북 셀을 처리하기 위한 언어별 컴퓨팅 엔진입니다. 뿐만 아니라 [!DNL Python]R [!DNL JupyterLab] , PySpark 및 [!DNL Spark] (Scala)에서 추가 언어 지원을 제공합니다. 노트북 문서를 열면 연결된 커널이 시작됩니다. 노트북 셀이 실행되면 커널이 계산을 수행하고 상당한 CPU 및 메모리 리소스를 소비할 수 있는 결과를 생성합니다. 할당된 메모리는 커널이 종료될 때까지 해제되지 않습니다.
 
 특정 기능 및 기능은 아래 표에 설명된 대로 특정 커널로 제한됩니다.
 
@@ -152,7 +158,7 @@ Experience Platform의 JupyterLab 통합은 아키텍처 변경 사항, 디자�
 
 ### 커널 세션 {#kernel-sessions}
 
-[!DNL JupyterLab]의 각 활성 전자 필기장 또는 활동이 커널 세션을 사용합니다. 왼쪽 사이드바에서 **터미널 및 커널 실행** 탭을 확장하면 모든 활성 세션을 찾을 수 있습니다. 노트북용 커널의 종류와 상태는 노트북 인터페이스의 오른쪽 상단을 관찰하여 확인할 수 있다. 아래 다이어그램에서 전자 필기장의 연결된 커널은 **[!DNL Python]3**&#x200B;이고 현재 상태는 오른쪽에 회색 원으로 표시됩니다. 속이 빈 원은 공회전 핵을 의미하며, 속이 빈 원은 사용 중인 핵을 의미한다.
+각 활성 Notebook 또는 활동은 [!DNL JupyterLab] 커널 세션을 활용합니다. 모든 활성 세션은 왼쪽 사이드바에서 Running terminals and kernels **(터미널 및 커널 실행 중) 탭 을 확장**&#x200B;하여 찾을 수 있습니다. 노트북용 커널의 유형과 상태는 노트북 인터페이스의 오른쪽 상단을 관찰하여 식별할 수 있습니다. 아래 다이어그램에서 Notebook의 연결된 커널은 3 **이고**[!DNL Python] 현재 상태는 오른쪽에 회색 원으로 표시됩니다. 속이 빈 원은 유휴 커널을 의미하고 단색 원은 사용 중인 커널을 의미합니다.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
@@ -164,14 +170,14 @@ Experience Platform의 JupyterLab 통합은 아키텍처 변경 사항, 디자�
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
-사용자 지정된 *런처*&#x200B;는 다음을 포함하여 작업을 시작하는 데 도움이 되는 지원되는 커널에 대한 유용한 전자 필기장 서식 파일을 제공합니다.
+사용자 지정된 *Launcher* 는 다음을 포함하여 작업을 시작하는 데 도움이 되는 지원되는 커널에 대한 유용한 Notebook 템플릿을 제공합니다.
 
 | 템플릿 | 설명 |
 | --- | --- |
-| 비어 있음 | 빈 전자 필기장 파일입니다. |
-| 스타터 | 샘플 데이터를 사용하여 데이터 탐색을 보여 주는 미리 채워진 노트북입니다. |
-| 소매 판매 | 샘플 데이터를 사용하여 [소매 판매 레시피](../pre-built-recipes/retail-sales.md)를 제공하는 미리 채워진 전자 필기장입니다. |
-| 레시피 빌더 | [!DNL JupyterLab]에서 레시피를 만들기 위한 전자 필기장 템플릿입니다. 레시피 작성 과정을 시연하고 설명하는 코드와 주석으로 미리 채워져 있다. 자세한 연습은 [레시피 튜토리얼 자습서](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en)를 참조하세요. |
+| 빈 | 빈 노트북 파일입니다. |
+| 스타터 | 샘플 데이터를 사용한 데이터 탐색을 보여 주는 미리 채워진 Notebook입니다. |
+| 소매 판매 | 샘플 데이터를 사용하는 소매 판매 레서피](../pre-built-recipes/retail-sales.md) 기능이 포함된 [미리 채워진 노트북입니다. |
+| 레서피 빌더 | 에서 [!DNL JupyterLab]레서피 작성을 위한 노트북 템플릿. 레서피 생성 프로세스를 보여주고 설명하는 코드와 해설로 미리 채워져 있습니다. 자세한 연습은 [레시피 튜토리얼 자습서](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en)를 참조하세요. |
 | [!DNL Query Service] | 규모에 맞게 데이터를 분석하는 샘플 워크플로우를 제공하는 [!DNL JupyterLab]에서 직접 [!DNL Query Service]의 사용을 보여 주는 미리 채워진 전자 필기장입니다. |
 | XDM 이벤트 | 데이터 구조 전반에서 공통되는 기능에 초점을 맞춰, 가치 후 경험 이벤트 데이터에 대한 데이터 탐색을 보여 주는 미리 채워진 노트북입니다. |
 | XDM 쿼리 | 경험 이벤트 데이터에 대한 샘플 비즈니스 쿼리를 보여 주는 미리 채워진 노트북. |
@@ -186,7 +192,7 @@ Experience Platform의 JupyterLab 통합은 아키텍처 변경 사항, 디자�
         <th><strong>비어 있음</strong></th>
         <th><strong>스타터</strong></th>
         <th><strong>소매 판매</strong></th>
-        <th><strong>레시피 빌더</strong></th>
+        <th><strong>레서피 빌더</strong></th>
         <th><strong>[!DNL Query Service]</strong></th>
         <th><strong>XDM 이벤트</strong></th>
         <th><strong>XDM 쿼리</strong></th>
@@ -243,7 +249,7 @@ Experience Platform의 JupyterLab 통합은 아키텍처 변경 사항, 디자�
     </tr>
 </table>
 
-새 *런처*&#x200B;를 열려면 **파일 > 새 런처**&#x200B;을 클릭하세요. 또는 왼쪽 사이드바에서 **파일 브라우저**&#x200B;를 확장하고 더하기 기호(**+**)를 클릭합니다.
+새 *런처*&#x200B;를 열려면 런처&#x200B;**파일 > 새로 만들기 클릭합니다**. 또는 왼쪽 사이드바에서 파일 브라우저&#x200B;**확장**&#x200B;하고 더하기 기호(**+**)를 클릭합니다.
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
@@ -259,5 +265,5 @@ Python, R 및 PySpark에서 지원되는 패키지 목록을 보려면 새 셀�
 
 또한 다음 종속성이 사용되지만 나열되지 않습니다.
 * CUDA 11.2
-* CUDNN 8.1
+* 커던 8.1
 

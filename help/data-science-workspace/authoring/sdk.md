@@ -4,22 +4,28 @@ solution: Experience Platform
 title: 모델 작성 SDK
 description: 모델 작성 SDK를 사용하면 Adobe Experience Platform Data Science Workspace에서 사용할 수 있는 사용자 정의 머신 러닝 레서피 및 기능 파이프라인을 개발하고 PySpark 및 Spark(Scala)에서 구현 가능한 템플릿을 제공할 수 있습니다.
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '1000'
 ht-degree: 1%
 
 ---
 
 # 모델 작성 SDK
 
-모델 작성 SDK를 사용하면 [!DNL Adobe Experience Platform] Data Science Workspace에서 사용할 수 있는 사용자 지정 기계 학습 레시피 및 기능 파이프라인을 개발하여 [!DNL PySpark] 및 [!DNL Spark (Scala)]에서 구현 가능한 템플릿을 제공할 수 있습니다.
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
+>
+>이 설명서는 데이터 과학 작업 영역 이전에 사용 권한이 있는 기존 고객을 대상으로 합니다.
 
-이 문서에서는 모델 작성 SDK 내에 있는 다양한 클래스에 대한 정보를 제공합니다.
+Model Authoring SDK를 사용하면 Data Science 작업 영역에서 [!DNL Adobe Experience Platform] 사용할 수 있는 사용자 지정 기계 학습 레서피 및 기능 파이프라인을 개발하여 구현 [!DNL Spark (Scala)]가능한 템플릿을 제공할 수 있습니다[!DNL PySpark].
 
-## DataLoader {#dataloader}
+이 문서에서는 모델 작성 SDK에 있는 다양한 클래스에 대한 정보를 제공합니다.
 
-DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환과 관련된 모든 항목을 캡슐화합니다. 입력 데이터의 예로는 교육, 채점 또는 기능 엔지니어링을 위한 데이터가 있습니다. 데이터 로더는 추상 클래스 `DataLoader`을(를) 확장하며 추상 메서드 `load`을(를) 재정의해야 합니다.
+## 데이터 로더 {#dataloader}
+
+DataLoader 클래스는 원시 입력 데이터의 검색, 필터링 및 반환과 관련된 모든 것을 캡슐화합니다. 입력 데이터의 예로는 교육, 점수 매기기 또는 기능 엔지니어링에 대한 데이터가 있습니다. 데이터 로더는 추상 클래스 `DataLoader`을(를) 확장하며 추상 메서드 `load`을(를) 재정의해야 합니다.
 
 **PySpark**
 
@@ -210,7 +216,7 @@ DataSaver 클래스는 채점 또는 기능 엔지니어링의 데이터를 포�
         <tr>
             <td>
                 <p><code>save(self, configProperties, dataframe)</code></p>
-                <p>출력 데이터를 DataFrame으로 수신하여 Platform 데이터 세트에 저장합니다.</p>
+                <p>출력 데이터를 DataFrame으로 수신하여 Platform 데이터 세트에 저장</p>
             </td>
             <td>
                 <ul>
@@ -252,7 +258,7 @@ DataSaver 클래스는 채점 또는 기능 엔지니어링의 데이터를 포�
 
 ### [!DNL Platform] 데이터 집합에 데이터 저장 {#save-data-to-a-platform-dataset}
 
-데이터를 [!DNL Platform] 데이터 집합에 저장하려면 구성 파일에 속성을 제공하거나 정의해야 합니다.
+데이터를 데이터 세트에 [!DNL Platform] 스토어하려면 구성 파일에서 속성을 제공하거나 정의해야 합니다.
 
 - 데이터를 저장할 올바른 [!DNL Platform] 데이터 세트 ID
 - 조직에 속한 테넌트 ID입니다
@@ -260,7 +266,7 @@ DataSaver 클래스는 채점 또는 기능 엔지니어링의 데이터를 포�
 다음 예제에서는 데이터(`prediction`)를 [!DNL Platform] 데이터 집합에 저장합니다. 여기서 데이터 집합 ID(`datasetId`) 및 테넌트 ID(`tenantId`)는 구성 파일 내에서 정의된 속성입니다.
 
 
-**PySpark**
+**파이스파크**
 
 ```python
 # PySpark
@@ -325,7 +331,7 @@ class MyDataSaver(DataSaver):
             .save()
 ```
 
-**Spark(Scala)**
+**스파크(스칼라)**
 
 ```scala
 // Spark
@@ -425,9 +431,9 @@ DatasetTransformer 클래스는 데이터 집합의 구조를 수정하고 변�
     </tbody>
 </table>
 
-**Spark(Scala)**
+**스파크(스칼라)**
 
-다음 표에서는 [!DNL Spark] 데이터 집합 변환기 클래스의 추상 메서드를 설명합니다.
+다음 표에서는 데이터 세트 변환기 클래스의 추상 메서드에 [!DNL Spark] 대해 설명합니다.
 
 <table>
     <thead>
@@ -511,7 +517,7 @@ FeaturePipelineFactory 클래스에는 기능 추출 알고리즘이 포함되�
         <tr>
             <td>
                 <p><i>요약</i><br/><code>createPipeline(configProperties)</code></p>
-                <p>일련의 변환기가 포함된 파이프라인 생성 및 반환</p>
+                <p>일련의 트랜스포머를 포함하는 파이프라인 만들기 및 반환Create and return a pipeline that contains a series of Transformers</p>
             </td>
             <td>
                 <ul>
@@ -521,8 +527,8 @@ FeaturePipelineFactory 클래스에는 기능 추출 알고리즘이 포함되�
         </tr>
         <tr>
             <td>
-                <p><i>요약</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
-                <p>구성 속성에서 매개변수 맵을 검색하고 반환합니다.</p>
+                <p><i>추상적인</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
+                <p>구성 속성에서 매개 변수 맵 검색 및 반환</p>
             </td>
             <td>
                 <ul>
@@ -605,9 +611,9 @@ PipelineFactory 클래스는 모델 교육 및 채점에 대한 메서드와 정
     </tbody>
 </table>
 
-**Spark(Scala)**
+**스파크(스칼라)**
 
-다음 표에서는 [!DNL Spark] PipelineFactory의 클래스 메서드를 설명합니다.
+다음 표에서는 PipelineFactory의 클래스 메서드에 [!DNL Spark] 대해 설명합니다.
 
 <table>
     <thead>
@@ -619,7 +625,7 @@ PipelineFactory 클래스는 모델 교육 및 채점에 대한 메서드와 정
     <tbody>
         <tr>
             <td>
-                <p><i>요약</i><br/><code>apply(configProperties)</code></p>
+                <p><i>추상적인</i><br/><code>apply(configProperties)</code></p>
                 <p>모델 교육 및 채점에 대한 논리 및 알고리즘이 포함된 파이프라인 생성 및 반환</p>
             </td>
             <td>

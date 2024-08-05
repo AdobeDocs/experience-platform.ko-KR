@@ -5,14 +5,20 @@ title: 데이터 과학 Workspace UI에서 모델 예약
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace을 사용하면 머신 러닝 서비스에서 예약된 채점 및 교육 실행을 설정할 수 있습니다. 교육 및 채점 프로세스를 자동화하면 데이터 내의 패턴을 따라가며 시간이 지남에 따라 서비스의 효율성을 유지 및 향상시키는 데 도움이 될 수 있습니다.
 exl-id: 51f6f328-7c63-4de1-9184-2ba526bb82e2
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
 # 데이터 과학 Workspace UI에서 모델 예약
+
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 Adobe Experience Platform [!DNL Data Science Workspace]을(를) 사용하면 머신 러닝 서비스에서 예약된 채점 및 교육 실행을 설정할 수 있습니다. 교육 및 채점 프로세스를 자동화하면 데이터 내 패턴을 준수하여 시간을 통해 서비스의 효율성을 유지 및 향상시키는 데 도움이 될 수 있습니다.
 

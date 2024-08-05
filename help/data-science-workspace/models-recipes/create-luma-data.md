@@ -5,14 +5,20 @@ title: Luma 웹 스키마 및 데이터 세트 만들기
 type: Tutorial
 description: 이 자습서에서는 Luma 데모 성향 모델에 필요한 사전 요구 사항 및 에셋을 제공합니다.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
 
 # Luma 성향 모델 스키마 및 데이터 세트 만들기
+
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 이 자습서에서는 다른 모든 [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 자습서에 필요한 사전 요구 사항 및 자산을 제공합니다. 완료되면 사용자와 조직에서 다음 스키마와 데이터 세트를 사용할 수 있습니다.
 

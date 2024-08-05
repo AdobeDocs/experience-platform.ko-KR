@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;홈;데이터 과학 Workspace;인기 주제;데이터 과학 작업 영역;데이터 과학
+keywords: Experience Platform; 집; 데이터 과학 작업 영역; 인기 있는 주제; 데이터 과학 작업 영역; 데이터 과학
 solution: Experience Platform
-title: 데이터 과학 Workspace 개요
-description: 이 안내서에서는 Adobe Experience Platform의 데이터 과학 Workspace과 관련된 주요 개념에 대한 개요를 제공합니다.
+title: 데이터 과학 작업 영역 개요
+description: 이 안내서에서는 Adobe Experience Platform의 데이터 과학 작업 영역과 관련된 주요 개념에 대한 개요를 제공합니다.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: fa52aa668d21f71c0da6b35c933713f068e36b28
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '2448'
+source-wordcount: '2411'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Experience League에 기능에 대한 설명서가 있다고 해서 모든 고객에게 그 기능이 제공된다고 보장되지는 않습니다. 이 기능은 Adobe Experience Platform 또는 Adobe Experience Platform Intelligence 라이선스를 구입한 기존 고객만 사용할 수 있습니다. 구매한 SKU/제품과 관련된 기능 및 기타 세부 사항을 이해하려면 공식 제품 설명을 참조하십시오.
-
+>Data Science 작업 영역은(는) 더 이상 구매할 수 없습니다.
+>
+>이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 Adobe Experience Platform [!DNL Data Science Workspace]은(는) 머신 러닝 및 인공 지능을 사용하여 데이터에서 통찰력을 제공합니다. Adobe Experience Platform에 통합된 [!DNL Data Science Workspace]은(는) Adobe 솔루션 전반에서 콘텐츠 및 데이터 자산을 사용하여 예측을 수행하는 데 도움이 됩니다.
 
@@ -32,10 +33,10 @@ Adobe Experience Platform [!DNL Data Science Workspace]은(는) 머신 러닝 �
 데이터에서부터 통찰력까지 가져오는 것은 많은 비용을 들여야 합니다. 일반적으로 지능적인 서비스를 제공하는 머신 러닝 모델 또는 레시피를 개발하기 위해 집중적이고 시간이 많이 소요되는 데이터 연구를 수행하는 숙련된 데이터 과학자가 필요합니다. 그 과정은 길고, 기술은 복잡하며, 숙련된 데이터 과학자는 찾기 어려울 수 있다.
 
 [!DNL Data Science Workspace]을(를) 통해 Adobe Experience Platform을 사용하면 다음 기능을 통해 경험 중심의 AI를 전사적으로 제공하여 데이터를 인사이트 코드로 간소화하고 가속화할 수 있습니다.
-- 머신 러닝 프레임워크 및 런타임
-- Adobe Experience Platform에 저장된 데이터에 대한 통합 액세스
-- [!DNL Experience Data Model](XDM)에 빌드된 통합 데이터 스키마
-- 머신 러닝/AI 및 빅 데이터 세트 관리에 필수적인 컴퓨팅 능력
+- 기계 학습 프레임워크 및 런타임A machine learning framework and runtime
+- Adobe Experience Platform 에 저장된 데이터에 대한 통합 액세스
+- XDM(Unified Data Schema 기반 [!DNL Experience Data Model] )
+- 기계 학습/AI 및 대규모 데이터 세트 관리에 필수적인 컴퓨팅 성능
 - AI 기반 경험으로의 도약을 가속화하기 위한 사전 구축된 머신 러닝 레시피
 - 다양한 기술 수준의 데이터 과학자를 위한 레서피 작성, 재사용 및 수정 간소화
 - 개발자 없이 몇 번의 클릭만으로 지능형 서비스 게시 및 공유, 개인화된 고객 경험의 지속적인 최적화를 위한 모니터링 및 재교육
@@ -51,23 +52,23 @@ Adobe Experience Platform [!DNL Data Science Workspace]은(는) 머신 러닝 �
 | [!DNL Data Science Workspace] | [!DNL Experience Platform] 내의 [!DNL Data Science Workspace]을(를) 통해 고객은 [!DNL Experience Platform] 및 Adobe 솔루션의 데이터를 활용하는 머신 러닝 모델을 만들어 지능형 통찰력과 예측을 생성하여 쾌적한 최종 사용자 디지털 경험을 제공할 수 있습니다. |
 | 인공 지능 | 인공지능은 시각 지각, 음성 인식, 의사결정, 언어 간 번역 등 인간의 지능이 통상적으로 요구되는 업무를 수행할 수 있는 컴퓨터 시스템의 이론과 개발이다. |
 | 머신 러닝 | 머신 러닝은 컴퓨터가 명시적으로 프로그래밍되지 않고 학습할 수 있도록 하는 학문의 분야이다. |
-| [!DNL Sensei] ML 프레임워크 | [!DNL Sensei] ML 프레임워크는 [!DNL Experience Platform]의 데이터를 활용하여 데이터 과학자가 머신 러닝 기반의 인텔리전스 서비스를 보다 빠르고 확장 가능하며 재사용 가능한 방식으로 개발할 수 있도록 지원하는 Adobe 전반의 통합 머신 러닝 프레임워크입니다. |
-| [!DNL Experience Data Model] | [!DNL Experience Data Model](XDM)은 고객 경험 관리를 위해 [!DNL Profile] 및 [!DNL ExperienceEvent]과(와) 같은 표준 스키마를 정의하기 위한 Adobe의 표준화 작업입니다. |
+| [!DNL Sensei] ML 프레임워크 | [!DNL Sensei] ML Framework는 데이터를 [!DNL Experience Platform] 활용하여 데이터 과학자가 더 빠르고 확장 가능하며 재사용 가능한 방식으로 머신 러닝 기반 인텔리전스 서비스를 개발할 수 있도록 지원하는 Adobe Systems 전반의 통합 머신 러닝 프레임워크입니다. |
+| [!DNL Experience Data Model] | [!DNL Experience Data Model](XDM)은 고객 경험 관리를 위해 및 와 [!DNL ExperienceEvent]같은 [!DNL Profile] 표준 스키마를 정의하기 위해 Adobe Systems 에서 제공하는 표준화 노력 리드 입니다. |
 | [!DNL JupyterLab] | [!DNL JupyterLab]은(는) Project Jupyter의 오픈 소스 웹 기반 인터페이스이며 [!DNL Experience Platform]에 긴밀하게 통합됩니다. |
 | 레서피 | 레시피는 Adobe의 모델 사양 용어이며 훈련된 모델을 구축하고 실행하여 특정 비즈니스 문제를 해결하는 데 필요한 특정 머신 러닝, AI 알고리즘 또는 알고리즘, 처리 논리 및 구성의 앙상블을 나타내는 최상위 컨테이너입니다. |
-| 모델 | 모델은 비즈니스 사용 사례를 해결하기 위해 내역 데이터 및 구성을 사용하여 교육되는 머신 러닝 레시피의 인스턴스입니다. |
-| 교육 | 교육은 레이블이 지정된 데이터에서 패턴과 통찰력을 배우는 프로세스입니다. |
-| 교육된 모델 | 트레이닝된 모델은 모델 트레이닝 프로세스의 실행 가능한 출력을 나타내며, 여기서 트레이닝 데이터의 세트가 모델 인스턴스에 적용되었다. 훈련된 모델은 이 모델에서 생성된 모든 지능형 웹 서비스에 대한 참조를 유지 관리합니다. 훈련된 모델은 채점을 하고 지능형 웹 서비스를 만드는 데 적합합니다. 훈련된 모델에 대한 수정 사항은 새 버전으로 추적할 수 있습니다. |
-| 채점 | 채점은 훈련된 모델을 사용하여 데이터에서 통찰력을 생성하는 프로세스입니다. |
-| 서비스 | 배포된 서비스는 API를 통해 인공 지능, 머신 러닝 모델 또는 고급 알고리즘의 기능을 노출하므로 다른 서비스나 애플리케이션에서 지능형 앱을 만드는 데 사용할 수 있습니다. |
+| 모델 | 모델은 비즈니스 사용 사례를 해결하기 위해 내역 데이터 및 구성을 사용하여 학습된 기계 학습 레서피의 인스턴스입니다. |
+| 교육 | 학습은 레이블이 지정된 데이터에서 패턴과 인사이트를 학습하는 프로세스입니다. |
+| 학습된 모델 | 트레이닝된 모델은 모델 트레이닝 프로세스의 실행 가능한 출력을 나타내며, 여기서 트레이닝 데이터의 세트가 모델 인스턴스에 적용되었다. 학습된 모델은 이 모델에서 생성된 모든 지능형 웹 서비스에 대한 참조를 유지 관리합니다. 학습된 모델은 점수를 매기고 지능형 웹 서비스를 만드는 데 적합합니다. 학습된 모델에 대한 수정 사항은 새 버전으로 추적할 수 있습니다. |
+| 채점 | 점수 매기기는 학습된 모델을 사용하여 데이터에서 인사이트를 생성하는 프로세스입니다. |
+| 서비스 | 배포된 서비스는 API를 통해 인공 인텔리전스, 기계 학습 모델 또는 고급 알고리즘의 기능을 노출하므로 다른 서비스 또는 애플리케이션에서 사용하여 지능형 앱을 만들 수 있습니다. |
 
-다음 차트는 레서피, 모델, 교육 실행 및 채점 실행 간의 계층 관계를 간략하게 설명합니다.
+다음 차트는 Recipes, Models, Training Runs 및 Scoring Runs 간의 계층적 관계를 간략하게 설명합니다.
 
 ![](./images/home/recipe_hiearchy_ui.png)
 
 ## [!DNL Data Science Workspace] 이해 
 
-[!DNL Data Science Workspace]을(를) 사용하면 데이터 과학자가 대규모 데이터 세트에서 통찰력을 발견하는 번거로운 프로세스를 간소화할 수 있습니다. 일반적인 기계 학습 프레임워크와 런타임을 기반으로 구축된 [!DNL Data Science Workspace]은(는) 고급 워크플로우 관리, 모델 관리 및 확장성을 제공합니다. 지능형 서비스는 머신 러닝 레서피 재사용을 지원하여 Adobe 제품 및 솔루션을 사용하여 생성된 다양한 애플리케이션을 지원합니다.
+를 사용하면 [!DNL Data Science Workspace]데이터 사이언티스트가 대규모 데이터 세트에서 인사이트를 발견하는 번거로운 프로세스를 간소화할 수 있습니다. 공통 기계 학습 프레임워크 및 런타임을 기반으로 구축되어 [!DNL Data Science Workspace] 고급 작업 과정 관리, 모델 관리 및 확장성을 제공합니다. 지능형 서비스는 Adobe Systems 제품 및 솔루션을 사용하여 만든 다양한 응용 프로그램을 구동하기 위해 기계 학습 레서피의 재사용을 지원합니다.
 
 ### 원스톱 데이터 액세스
 
@@ -77,15 +78,15 @@ Adobe Experience Platform [!DNL Data Science Workspace]은(는) 머신 러닝 �
 
 ### 사전 빌드된 머신 러닝 레시피
 
-[!DNL Data Science Workspace]에는 소매 판매 예측 및 예외 항목 탐지와 같은 일반적인 비즈니스 요구 사항을 위해 미리 만들어진 머신 러닝 레시피가 포함되어 있으므로 데이터 과학자와 개발자는 처음부터 시작할 필요가 없습니다. 현재 제공되는 레시피는 [제품 구매 예측](./pre-built-recipes/product-purchase-prediction.md), [제품 추천](./pre-built-recipes/product-recommendations.md) 및 [소매 판매](./pre-built-recipes/retail-sales.md)입니다.
+[!DNL Data Science Workspace] 일반적인 비즈니스 요구 사항에 대한 사전 구축된 기계 학습 레시피, 좋아요 소매 판매 예측 및 이상 감지가 포함되어 있으므로 데이터 과학자와 개발자가 처음부터 시작할 필요가 없습니다. 현재 제공되는 레시피는 [제품 구매 예측](./pre-built-recipes/product-purchase-prediction.md), [제품 추천](./pre-built-recipes/product-recommendations.md) 및 [소매 판매](./pre-built-recipes/retail-sales.md)입니다.
 
 [//]: # (The built-in recipe gallery offers recommendations for prebuilt recipes based on your business needs.)
 
-원하는 경우 미리 만들어진 레시피를 사용자의 요구 사항에 맞게 조정하거나, 레시피를 가져오거나, 처음부터 시작하여 사용자 지정 레시피를 만들 수 있습니다. 그러나 일단 레시피를 교육하고 하이퍼튜닝을 하면 몇 번의 클릭만으로 맞춤형 지능형 서비스를 만들 수 있으므로 개발자가 필요로 하지 않으며 타기팅된 개인화된 디지털 경험을 구축할 준비가 된 것입니다.
+원하는 경우 사전 빌드된 레서피 필요에 맞게 조정하거나, 레서피 가져오거나, 처음부터 시작하여 사용자 지정 레서피 빌드 수 있습니다. 그러나 일단 레서피 학습을 하고 하이퍼 튜닝을 하면 사용자 지정 지능형 서비스를 만드는 데 개발자가 필요하지 않으며, 몇 번의 클릭만으로 타겟팅되고 개인화된 디지털 경험 빌드 준비가 완료됩니다.
 
-### 데이터 과학자에 초점을 맞춘 워크플로우
+### 데이터 과학자에 초점을 맞춘 워크플로
 
-데이터 과학에 대한 전문 지식의 수준이 무엇이든 [!DNL Data Science Workspace]을(를) 사용하면 데이터에서 통찰력을 찾고 이를 디지털 경험에 적용하는 프로세스를 단순화하고 가속화할 수 있습니다.
+데이터 과학 전문 지식 [!DNL Data Science Workspace] 수준에 관계없이 데이터에서 인사이트를 찾고 이를 디지털 경험에 적용하는 프로세스를 간소화하고 가속화하는 데 도움이 됩니다.
 
 ### 데이터 탐색
 
@@ -107,7 +108,7 @@ Adobe Experience Platform에서는 크로스 채널 데이터가 중앙 집중�
 
 ### 실험
 
-데이터 과학 Workspace은 실험 프로세스에 엄청난 유연성을 제공합니다. 레시피부터 시작하세요. 그런 다음 하이퍼-튜닝 매개 변수와 같은 고유한 특성과 쌍을 이루는 동일한 코어 알고리즘을 사용하여 별도의 인스턴스를 생성합니다. 필요한 만큼 인스턴스를 생성하고, 각 인스턴스를 원하는 만큼 교육하고 점수를 매길 수 있습니다. 교육하면 [!DNL Data Science Workspace]에서 평가 지표와 함께 레시피, 레시피 인스턴스 및 교육된 인스턴스를 추적하므로 따로 교육할 필요가 없습니다.
+데이터 과학 작업 영역는 실험 프로세스에 엄청난 유연성을 제공합니다. 레서피 시작. 그런 다음 하이퍼 튜닝 매개 변수와 같은 고유한 특성과 쌍을 이루는 동일한 핵심 알고리즘을 사용하여 별도의 인스턴스 만들기를 수행합니다. 필요한 만큼 인스턴스를 만들고 원하는 만큼 각 인스턴스 교육하고 점수를 매길 수 있습니다. 교육하면 [!DNL Data Science Workspace]에서 평가 지표와 함께 레시피, 레시피 인스턴스 및 교육된 인스턴스를 추적하므로 따로 교육할 필요가 없습니다.
 
 ### 운영화
 
@@ -130,13 +131,13 @@ Adobe의 최우선 과제는 데이터 보안을 유지하는 것입니다. Adob
 보안은 Adobe 보안 제품 수명 주기의 일부로 소프트웨어 및 서비스에 내장되어 있습니다.
 Adobe 데이터 및 소프트웨어 보안, 규정 준수 등에 대해 알아보려면 https://www.adobe.com/security.html의 보안 페이지를 방문하십시오.
 
-## [!DNL Data Science Workspace] 작업 중
+## [!DNL Data Science Workspace] 행동
 
-예측 및 인사이트는 웹 사이트를 방문하거나, 콜센터에 문의하거나, 기타 디지털 경험을 사용하는 각 고객에게 고도로 개인화된 경험을 제공하는 데 필요한 정보를 제공합니다. [!DNL Data Science Workspace]에서 일상적인 작업을 수행하는 방법을 소개합니다.
+예측 및 통찰력은 웹 사이트를 방문하거나, 콜센터 센터에 문의하거나, 기타 디지털 경험에 참여하는 각 고객에게 고도로 개인화된 경험 경험을 제공하는 데 필요한 정보를 제공합니다. 일상 업무가 이루어지 [!DNL Data Science Workspace]는 방식은 다음과 같습니다.
 
 ### 문제 정의
 
-그것은 모두 비즈니스 문제로 시작합니다. 예를 들어 온라인 콜센터는 부정적인 고객 감정을 긍정적으로 바꾸는 데 도움이 되는 컨텍스트가 필요합니다.
+그것은 모두 비즈니스 문제로 시작합니다. 예를 들어, 온라인 콜센터 부정적인 고객 감정을 긍정적으로 바꾸는 데 도움이 되는 컨텍스트가 필요합니다.
 
 고객에 대한 자료는 충분히 있습니다. 사이트를 탐색하고 장바구니에 항목을 담았으며 주문까지 했습니다. 이메일을 받았거나 쿠폰을 사용했거나 이전에 콜센터에 문의했을 수 있습니다. 그런 다음 레시피는 고객 및 해당 활동에 대해 사용 가능한 데이터를 사용하여 구매 성향을 파악하고 고객이 인식하고 사용할 가능성이 있는 오퍼를 추천해야 합니다.
 
@@ -160,13 +161,13 @@ Adobe Experience Platform의 모든 데이터는 표준화된 XDM 스키마를 �
 
 ![](./images/home/notebook_templates-new.png)
 
-### 레시피 작성
+### 작성자 레서피
 
-모든 요구 사항을 충족하는 레시피를 이미 찾았다면 실험으로 넘어갈 수 있습니다. 또는 [!DNL Jupyter Notebook]에서 [!DNL Data Science Workspace] 작성 런타임을 활용하여 레시피를 약간 수정하거나 처음부터 레시피를 만들 수 있습니다. 작성 런타임을 사용하면 [!DNL Data Science Workspace] 교육 및 채점 워크플로우를 모두 사용할 수 있으며 나중에 레시피를 변환하여 조직의 다른 사용자가 저장하고 다시 사용할 수 있습니다.
+모든 요구 사항을 충족하는 레서피 를 이미 찾았다면 실험으로 넘어갈 수 있습니다. 또는 의 작성 런타임[!DNL Jupyter Notebook]을 활용하여 [!DNL Data Science Workspace] 레서피 내용을 약간 수정하거나 처음부터 새로 만들 수 있습니다. 작성 런타임을 사용하면 교육 및 점수 매기기 작업 과정을 사용하고 [!DNL Data Science Workspace] 나중에 레서피를 전환하여 조직의 다른 사용자가 저장하고 다시 사용할 수 있습니다.
 
-[!DNL Data Science Workspace]에 레시피를 가져와서 지능형 서비스를 만들 때 실험 워크플로를 활용할 수도 있습니다.
+또한 레서피 를 가져 [!DNL Data Science Workspace] 와서 지능형 서비스를 만들 때 실험 워크플로우를 활용할 수 있습니다.
 
-### 레시피 실험
+### 레서피 실험
 
 핵심 머신 러닝 알고리즘을 통합하는 레시피를 통해 하나의 레시피로 많은 레시피 인스턴스를 만들 수 있습니다. 이러한 레시피 인스턴스를 모델이라고 합니다. 모델은 작동 효율성과 효능을 최적화하기 위해 교육 및 평가를 필요로 하며, 이 프로세스는 일반적으로 시행착오로 구성된다.
 
@@ -176,17 +177,17 @@ Adobe Experience Platform의 모든 데이터는 표준화된 XDM 스키마를 �
 
 ![](./images/home/evaluation_metrics.png)
 
-[!DNL Data Science Workspace]에서 모델을 교육하고 평가하는 방법에 대해 알아보려면 [API](./models-recipes/train-evaluate-model-api.md) 또는 [UI](./models-recipes/train-evaluate-model-ui.md) 튜토리얼을 방문하십시오.
+[에서 모델을 [!DNL Data Science Workspace]훈련하고 평가하는 방법에 대한 튜토리얼 API](./models-recipes/train-evaluate-model-api.md) 또는 [UI](./models-recipes/train-evaluate-model-ui.md) 참조하십시오.
 
-### 모델 작업
+### 모델 운용
 
-비즈니스 요구 사항에 적합한 숙련된 레시피를 선택했다면 개발자 지원 없이 [!DNL Data Science Workspace]에서 지능형 서비스를 만들 수 있습니다. 몇 번의 클릭만으로 코딩이 필요하지 않습니다. 게시된 지능형 서비스는 모델을 다시 만들 필요 없이 조직의 다른 구성원이 액세스할 수 있습니다.
+비즈니스 요구 사항에 적합한 숙련된 레시피를 선택했다면 개발자 지원 없이 [!DNL Data Science Workspace]에서 지능형 서비스를 만들 수 있습니다. 몇 번의 클릭만으로 코딩이 필요하지 않습니다. 게시된 지능형 서비스는 모델을 다시 작성할 필요 없이 조직의 다른 구성원이 액세스할 수 있습니다.
 
-게시된 지능형 서비스는 새로운 데이터를 사용할 수 있을 때 수시로 자동으로 교육하도록 구성할 수 있습니다. 이렇게 하면 시간이 지남에 따라 서비스가 효율성과 효과를 유지할 수 있습니다.
+게시된 Intelligent Service는 새 데이터를 사용할 수 있게 되면 수시로 사용하여 자동으로 학습하도록 구성할 수 있습니다. 이렇게 하면 시간이 지남에 따라 서비스의 효율성과 효능이 유지됩니다.
 
 ## 다음 단계
 
-[!DNL Data Science Workspace]은(는) 데이터 수집에서 알고리즘, 모든 기술 수준의 데이터 과학자를 위한 지능형 서비스에 이르기까지 데이터 과학 워크플로를 간소화하고 단순화하는 데 도움이 됩니다. [!DNL Data Science Workspace]이(가) 제공하는 정교한 도구를 사용하면 데이터에서 통찰력을 얻는 시간을 크게 단축할 수 있습니다.
+[!DNL Data Science Workspace] 데이터 수집에서 알고리즘, 모든 기술 수준의 데이터 과학자를 위한 지능형 서비스에 이르기까지 데이터 과학 작업 과정 간소화 및 단순화를 지원합니다. [!DNL Data Science Workspace]이(가) 제공하는 정교한 도구를 사용하면 데이터에서 통찰력을 얻는 시간을 크게 단축할 수 있습니다.
 
 더 중요한 것은 [!DNL Data Science Workspace]이(가) Adobe의 주요 마케팅 플랫폼의 데이터 과학 및 알고리즘 최적화 기능을 엔터프라이즈 데이터 과학자의 손에 넣었다는 것입니다. 처음으로 기업은 Adobe의 강력한 머신 러닝 및 AI 기능을 활용하여 대규모로 고도로 개인화된 고객 경험을 제공함으로써 독점 알고리즘을 플랫폼에 도입할 수 있습니다.
 
