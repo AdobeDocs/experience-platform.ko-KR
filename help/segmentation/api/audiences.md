@@ -3,9 +3,9 @@ title: 대상 API 엔드포인트
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 대상 끝점을 사용하여 프로그래밍 방식으로 조직의 대상을 만들고, 관리하고, 업데이트합니다.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 87b491339469e69653cad79b657bd1edfbca1de9
+source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1869'
 ht-degree: 2%
 
 ---
@@ -73,7 +73,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 60,
             "profileInstanceId": "ups",
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
@@ -236,8 +235,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
         },
         "labels": [
           "core/C1"
-        ],
-        "ttlInDays": 60
+        ]
     }'
 ```
 
@@ -249,7 +247,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `expression` | 대상의 Profile Query Language(PQL) 표현식입니다. PQL 식에 대한 자세한 내용은 [PQL 식 안내서](../pql/overview.md)를 참조하세요. |
 | `schema` | 대상의 XDM(Experience Data Model) 스키마. |
 | `labels` | 대상과 관련된 객체 수준 데이터 사용 및 속성 기반 액세스 제어 레이블입니다. |
-| `ttlInDays` | 대상의 데이터 만료 값(일)을 나타냅니다. |
 
 +++
 
@@ -317,7 +314,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
      "schema": {
       "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -462,7 +458,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -619,7 +614,6 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-45
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -845,7 +839,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-get
          "schema": {
             "name": "_xdm.context.profile"
          },
-         "ttlInDays": 30,
          "imsOrgId": "{ORG_ID}",
          "sandbox": {
             "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
