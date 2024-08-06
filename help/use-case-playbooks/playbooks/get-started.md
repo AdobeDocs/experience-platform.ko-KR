@@ -4,10 +4,10 @@ title: 사용 사례 플레이북 시작
 description: 사용 사례 플레이북 기능을 시작하는 방법에 대해 알아봅니다.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 15%
+source-wordcount: '990'
+ht-degree: 14%
 
 ---
 
@@ -19,6 +19,8 @@ ht-degree: 15%
 * 샌드박스 만들기
 * 사용자 권한 구성
 * 이메일, 푸시 및 SMS 알림에 대한 Journey Optimizer 채널 표면 구성(Journey Optimizer 플레이북을 사용할 계획인 경우)
+
+Experience Platform UI에서 사용 사례 플레이북의 다양한 갤러리에 액세스하려면 왼쪽 탐색에서 **[!UICONTROL 플레이북]**&#x200B;을 선택하십시오. [사용 사례 플레이북을 탐색](../playbooks/navigate.md)하고 [영감을 주는 샌드박스](../playbooks/navigate.md)를 시작하는 방법에 대한 설명서를 읽어 보십시오.
 
 ## 사용 사례 플레이북 구성 - 비디오 연습 {#video}
 

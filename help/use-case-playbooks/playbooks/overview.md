@@ -4,9 +4,9 @@ title: 사용 사례 플레이북 개요
 description: Experience Platform의 사용 사례 플레이북 기능을 사용하여 다양한 마케팅 사용 사례를 시작하는 방법을 알아봅니다.
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '529'
 ht-degree: 30%
 
 ---
@@ -29,10 +29,12 @@ ht-degree: 30%
 
 ## 개요 {#overview}
 
-[!UICONTROL 사용 사례 플레이북]을 통해 Real-Time CDP 또는 Adobe Journey Optimizer을 시작할 때 원하는 사용 사례를 달성하기 위해 무엇을 시작해야 하는지 또는 올바른 자산을 만드는 방법을 정확히 알 수 없는 경우 문제를 해결할 수 있습니다. 사용 사례 플레이북은 다음을 통해 여기에서 도움을 줄 수 있습니다.
+[!UICONTROL 사용 사례 플레이북]을 통해 Real-Time CDP 또는 Adobe Journey Optimizer을 시작할 때 원하는 사용 사례를 달성하기 위해 무엇을 시작해야 하는지 또는 올바른 자산을 만드는 방법을 정확히 알 수 없는 경우 문제를 해결할 수 있습니다.
 
-* 영감을 위한 사용 사례 표시
-* 준비가 되면 프로덕션에 사용, 테스트 및 홍보할 수 있도록 다양한 에셋을 만듭니다.
+사용 사례 플레이북은 다음을 통해 여기에서 도움을 줄 수 있습니다.
+
+* [사용 사례에서 더 빠르게 시작하기 위해 사용 가능한 플레이북 카탈로그 소개](../playbooks/playbooks-list.md)
+* [다른 에셋 만들기](../playbooks/create-share-reuse.md)
 
 ![모든 플레이북 보기](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 
