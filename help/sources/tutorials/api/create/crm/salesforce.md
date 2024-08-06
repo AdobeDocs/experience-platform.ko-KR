@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 Salesforce 기본 연결 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Salesforce 계정에 연결하는 방법에 대해 알아봅니다.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 7d450ba3357389a2934f187e4838e534d698dd4a
+source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '782'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 3%
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| `environmentUrl` | [!DNL Salesforce] 원본 인스턴스의 URL입니다. |
+| `environmentUrl` | [!DNL Salesforce] 원본 인스턴스의 URL입니다. `environmentUrl`의 형식은 `https://[domain].my.salesforce.com`입니다. |
 | `username` | [!DNL Salesforce] 사용자 계정의 사용자 이름입니다. |
 | `password` | [!DNL Salesforce] 사용자 계정의 암호입니다. |
 | `securityToken` | [!DNL Salesforce] 사용자 계정의 보안 토큰입니다. |
@@ -51,7 +51,7 @@ OAuth 2 클라이언트 자격 증명을 사용하여 [!DNL Salesforce] 계정�
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| `environmentUrl` | [!DNL Salesforce] 원본 인스턴스의 URL입니다. |
+| `environmentUrl` | [!DNL Salesforce] 원본 인스턴스의 URL입니다. `environmentUrl`의 형식은 `https://[domain].my.salesforce.com`입니다. |
 | `clientId` | 클라이언트 ID는 OAuth2 인증의 일부로 클라이언트 암호와 함께 사용됩니다. 클라이언트 ID와 클라이언트 암호를 사용하면 응용 프로그램을 [!DNL Salesforce]에 식별하여 응용 프로그램이 계정을 대신하여 작동할 수 있습니다. |
 | `clientSecret` | 클라이언트 암호는 OAuth2 인증의 일부로 클라이언트 ID와 함께 사용됩니다. 클라이언트 ID와 클라이언트 암호를 사용하면 응용 프로그램을 [!DNL Salesforce]에 식별하여 응용 프로그램이 계정을 대신하여 작동할 수 있습니다. |
 | `apiVersion` | 사용 중인 [!DNL Salesforce] 인스턴스의 REST API 버전입니다. API 버전의 값은 십진수로 형식을 지정해야 합니다. 예를 들어 API 버전 `52`을(를) 사용하는 경우 값을 `52.0`(으)로 입력해야 합니다. 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. 이 값은 OAuth2 클라이언트 자격 증명 인증에 필수입니다. |

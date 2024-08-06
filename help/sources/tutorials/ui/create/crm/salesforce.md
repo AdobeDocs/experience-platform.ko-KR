@@ -2,9 +2,9 @@
 title: Experience Platform 사용자 인터페이스를 사용하여 Salesforce 계정을 연결합니다.
 description: 사용자 인터페이스를 사용하여 Salesforce 계정을 연결하고 CRM 데이터를 Experience Platform 상태로 만드는 방법을 알아봅니다.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
+source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '841'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 3%
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| 환경 URL | [!DNL Salesforce] 원본 인스턴스의 URL입니다. |
+| 환경 URL | [!DNL Salesforce] 원본 인스턴스의 URL입니다. 환경 URL의 형식은 `https://[domain].my.salesforce.com`입니다. |
 | 사용자 이름 | [!DNL Salesforce] 사용자 계정의 사용자 이름입니다. |
 | 암호 | [!DNL Salesforce] 사용자 계정의 암호입니다. |
 | 보안 토큰 | [!DNL Salesforce] 사용자 계정의 보안 토큰입니다. |
@@ -50,7 +50,7 @@ OAuth2 클라이언트 자격 증명을 사용하여 [!DNL Salesforce] 계정에
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| 환경 URL | [!DNL Salesforce] 원본 인스턴스의 URL입니다. |
+| 환경 URL | [!DNL Salesforce] 원본 인스턴스의 URL입니다. 환경 URL의 형식은 `https://[domain].my.salesforce.com`입니다. |
 | 클라이언트 ID | 클라이언트 ID는 OAuth2 인증의 일부로 클라이언트 암호와 함께 사용됩니다. 클라이언트 ID와 클라이언트 암호를 사용하면 응용 프로그램을 [!DNL Salesforce]에 식별하여 응용 프로그램이 계정을 대신하여 작동할 수 있습니다. |
 | 클라이언트 암호 | 클라이언트 암호는 OAuth2 인증의 일부로 클라이언트 ID와 함께 사용됩니다. 클라이언트 ID와 클라이언트 암호를 사용하면 응용 프로그램을 [!DNL Salesforce]에 식별하여 응용 프로그램이 계정을 대신하여 작동할 수 있습니다. |
 | API 버전 | 사용 중인 [!DNL Salesforce] 인스턴스의 REST API 버전입니다. API 버전의 값은 십진수로 형식을 지정해야 합니다. 예를 들어 API 버전 `52`을(를) 사용하는 경우 값을 `52.0`(으)로 입력해야 합니다. 이 필드를 비워 두면 Experience Platform은 자동으로 사용 가능한 최신 버전을 사용합니다. |
