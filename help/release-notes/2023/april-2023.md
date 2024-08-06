@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 정보 2023년 4월
 description: Adobe Experience Platform의 2023년 4월 릴리스 정보입니다.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2038'
 ht-degree: 98%
@@ -174,7 +174,7 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 세그먼트 멤버십 맵 | 이전 발표(2월)에 대한 후속 조치로 2023년 5월 15일에 세그먼트 멤버십 수명 주기의 중복을 없애기 위해 `Existing` 상태는 세그먼트 구성원 맵에서 더 이상 사용되지 않습니다. 이러한 변경 후에 세그먼트에 적격한 프로필은 `Realized`로 표시되고 부적격 프로필은 계속 `Exited`로 표시됩니다.<br/><br/> [기업 대상](../../destinations/destination-types.md#streaming-profile-export)(Amazon Kinesis, Azure Event Hubs, HTTP API)을 사용하고 있으며 `Existing` 상태에 따라 자동화된 다운스트림 프로세스가 있을 경우 이러한 변경 사항은 영향을 미칠 수 있습니다. 이 경우에 해당하면 다운스트림 통합을 검토하십시오. 특정 시간 이후에 새로 인증된 프로필을 확인하려는 경우 세그먼트 멤버십 맵에서 `Realized` 상태 및 `lastQualificationTime`을 조합하여 사용하도록 하십시오. 자세한 내용은 Adobe 담당자에게 문의하십시오. |
+| 세그먼트 멤버십 맵 | 이전 발표(2월)에 대한 후속 조치로 2023년 5월 15일에 세그먼트 멤버십 수명 주기의 중복을 없애기 위해 `Existing` 상태는 세그먼트 구성원 맵에서 더 이상 사용되지 않습니다. 이러한 변경 후에 세그먼트에 적격한 프로필은 `Realized`로 표시되고 부적격 프로필은 계속 `Exited`로 표시됩니다.<br/><br/> [기업 대상](../../destinations/destination-types.md#advanced-enterprise-destinations)(Amazon Kinesis, Azure Event Hubs, HTTP API)을 사용하고 있으며 `Existing` 상태에 따라 자동화된 다운스트림 프로세스가 있을 경우 이러한 변경 사항은 영향을 미칠 수 있습니다. 이 경우에 해당하면 다운스트림 통합을 검토하십시오. 특정 시간 이후에 새로 인증된 프로필을 확인하려는 경우 세그먼트 멤버십 맵에서 `Realized` 상태 및 `lastQualificationTime`을 조합하여 사용하도록 하십시오. 자세한 내용은 Adobe 담당자에게 문의하십시오. |
 
 {style="table-layout:auto"}
 

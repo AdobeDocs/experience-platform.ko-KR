@@ -4,7 +4,7 @@ type: Tutorial
 description: 스트리밍 프로필 기반 대상으로 대상자를 전송하여 Adobe Experience Platform에 있는 대상자 데이터를 활성화하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-이 문서에서는 Adobe Experience Platform에서 프로필 기반 대상 스트리밍([엔터프라이즈 대상](/help/destinations/destination-types.md#streaming-profile-export)이라고도 함)으로 대상 데이터를 활성화하는 데 필요한 워크플로에 대해 설명합니다.
+이 문서에서는 Adobe Experience Platform에서 프로필 기반 대상 스트리밍([엔터프라이즈 대상](/help/destinations/destination-types.md#advanced-enterprise-destinations)이라고도 함)으로 대상 데이터를 활성화하는 데 필요한 워크플로에 대해 설명합니다.
 
 이 문서는 다음 세 가지 대상에 적용됩니다.
 

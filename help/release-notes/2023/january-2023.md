@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 정보 2023년 1월
 description: Adobe Experience Platform의 2023년 1월 릴리스 정보입니다.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2224'
 ht-degree: 99%
@@ -175,7 +175,7 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 
 사용 중단 후에 세그먼트에 적격한 프로필은 `Realized`로 표시되고, 부적격 프로필은 계속 `Exited`로 표시됩니다. 이렇게 하면 `Active` 및 `Expired` 세그먼트 상태의 파일 기반 대상과 동등해집니다.
 
-[기업 대상](../../destinations/destination-types.md#streaming-profile-export)(Amazon Kinesis, Azure Event Hubs, HTTP API)을 사용하고 있으며 `Existing` 상태에 따라 자동화된 다운스트림 프로세스가 있을 경우 이러한 변경 사항은 영향을 미칠 수 있습니다. 이 경우에 해당하는 경우 다운스트림 통합을 검토하십시오. 특정 시간 이후에 새로 인증된 프로필을 확인하려는 경우 세그먼트 멤버십 맵에서 `Realized` 상태 및 `lastQualificationTime`을 조합하여 사용하도록 하십시오. 자세한 내용은 Adobe 담당자에게 문의하십시오.
+[기업 대상](../../destinations/destination-types.md#advanced-enterprise-destinations)(Amazon Kinesis, Azure Event Hubs, HTTP API)을 사용하고 있으며 `Existing` 상태에 따라 자동화된 다운스트림 프로세스가 있을 경우 이러한 변경 사항은 영향을 미칠 수 있습니다. 이 경우에 해당하는 경우 다운스트림 통합을 검토하십시오. 특정 시간 이후에 새로 인증된 프로필을 확인하려는 경우 세그먼트 멤버십 맵에서 `Realized` 상태 및 `lastQualificationTime`을 조합하여 사용하도록 하십시오. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 
 프로필 데이터 작업에 대한 튜토리얼 및 모범 사례를 포함하여 실시간 고객 프로필에 대해 자세히 알아보려면 [실시간 고객 프로필 개요](../../profile/home.md)를 참조하십시오.
 

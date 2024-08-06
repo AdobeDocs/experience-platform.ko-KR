@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 2%
@@ -92,7 +92,7 @@ ht-degree: 2%
 
 ### Edge 개인화 대상 활성화 {#edge-destinations-activation}
 
-아래 가드레일은 [에지 개인화 대상](/help/destinations/destination-types.md#streaming-profile-export)을 통해 활성화하는 데 적용됩니다.
+아래 가드레일은 [에지 개인화 대상](/help/destinations/destination-types.md#advanced-enterprise-destinations)을 통해 활성화하는 데 적용됩니다.
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |

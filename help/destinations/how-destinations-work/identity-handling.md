@@ -2,7 +2,7 @@
 title: 대상 활성화 워크플로에서의 ID 처리
 description: 대상 유형에 따라 활성화 워크플로에서 ID 내보내기가 처리되는 방법을 알아봅니다
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1163'
 ht-degree: 0%
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 ## Enterprise 대상 {#enterprise-destinations}
 
-[Enterprise 대상](/help/destinations/destination-types.md#streaming-profile-export)([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP API)은(는) Enterprise 통합 사용 사례를 위해 설계되었으므로 데이터 내보내기에 특정 ID가 필요하지 않습니다. 그러나 원하는 경우 ID를 XDM 속성이나 ID 맵에서 내보낼 수 있습니다. ID 맵에서 `personalEmail.address` XDM 특성과 ID `ECID` 및 `email_lc_sha256`(해시된 이메일 주소)을(를) 모두 포함하는 HTTP 대상으로 내보낸 데이터의 [예를 봅니다](/help/destinations/catalog/streaming/http-destination.md#exported-data).
+[Enterprise 대상](/help/destinations/destination-types.md#advanced-enterprise-destinations)([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP API)은(는) Enterprise 통합 사용 사례를 위해 설계되었으므로 데이터 내보내기에 특정 ID가 필요하지 않습니다. 그러나 원하는 경우 ID를 XDM 속성이나 ID 맵에서 내보낼 수 있습니다. ID 맵에서 `personalEmail.address` XDM 특성과 ID `ECID` 및 `email_lc_sha256`(해시된 이메일 주소)을(를) 모두 포함하는 HTTP 대상으로 내보낸 데이터의 [예를 봅니다](/help/destinations/catalog/streaming/http-destination.md#exported-data).
 
 ## Personalization 대상 {#personalization-destinations}
 

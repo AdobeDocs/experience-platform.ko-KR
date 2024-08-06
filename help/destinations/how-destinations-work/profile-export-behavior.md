@@ -2,7 +2,7 @@
 title: 프로필 내보내기 동작
 description: Experience Platform 대상에서 지원되는 다양한 통합 패턴 간에 프로필 내보내기 동작이 어떻게 다른지 알아봅니다.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Experience Platform 대상은 데이터를 HTTPS 호출로 API 기반 통합에 
 >
 > Enterprise 대상은 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객만 사용할 수 있습니다.
 
-Experience Platform의 [엔터프라이즈 대상](/help/destinations/destination-types.md#streaming-profile-export)은(는) Amazon Kinesis, Azure Event Hubs 및 HTTP API입니다.
+Experience Platform의 [엔터프라이즈 대상](/help/destinations/destination-types.md#advanced-enterprise-destinations)은(는) Amazon Kinesis, Azure Event Hubs 및 HTTP API입니다.
 
 Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 프로필에 대한 관련 업데이트가 발생한 경우에만 데이터를 API 엔드포인트로 내보내도록 프로필 내보내기 동작을 엔터프라이즈 대상으로 최적화합니다. 프로필은 다음과 같은 경우 대상으로 내보내집니다.
 
