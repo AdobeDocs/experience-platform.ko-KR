@@ -1,7 +1,7 @@
 ---
 audience: user
-user-guide-title: Audience Manager 확장 활성화 안내서
-user-guide-description: Audience Manager 확장 활성화를 통해 Audience Manager에서 소셜 및 광고 대상까지 대상자를 활성화합니다.
+user-guide-title: Audience Manager 확장 기능 활성화 안내서
+user-guide-description: Audience Manager 확장 기능 활성화를 통해 Audience Manager에서 소셜 및 광고 대상까지 대상자를 활성화합니다.
 description: 이 문서에는 Adobe Audience Manager 확장 활성화에 대한 목차 목록이 있습니다
 feature: Destinations
 role: Admin,User
