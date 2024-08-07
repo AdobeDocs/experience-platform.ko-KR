@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 편집기 UI 안내서
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서, Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 이를 통해 개발 목적으로 대화형 쿼리를 실행하고 비대화형 쿼리를 실행하여 Experience Platform의 데이터 세트를 채울 수 있습니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
 workflow-type: tm+mt
-source-wordcount: '2432'
+source-wordcount: '2430'
 ht-degree: 0%
 
 ---
@@ -223,9 +223,9 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 ![쿼리 편집기 콘솔의 결과 탭에 쿼리 실행 결과가 표시됩니다.](../images/ui/query-editor/query-results.png)
 
-## 사용 사례 {#use-cases}
+## 예시 {#examples}
 
-쿼리 서비스는 업계 및 비즈니스 시나리오 전반에 걸쳐 다양한 사용 사례에 대한 솔루션을 제공합니다. 이러한 실제 사례는 다양한 요구 사항을 해결하는 데 있어 서비스의 유연성과 효과를 보여 줍니다. [Query Service가 특정 비즈니스 요구 사항에 가치를 부여하는 방법을 확인하려면](../use-cases/overview.md) 사용 사례 문서의 포괄적인 컬렉션을 살펴보십시오. 쿼리 서비스를 사용하여 향상된 운영 효율성 및 비즈니스 성공을 위한 통찰력과 솔루션을 제공하는 방법에 대해 알아봅니다.
+쿼리 서비스는 업계 및 비즈니스 시나리오 전반에 걸쳐 다양한 사용 사례에 대한 솔루션을 제공합니다. 이러한 사례는 다양한 요구 사항을 해결할 때 서비스의 유연성과 효과를 보여 줍니다. [Query Service가 특정 비즈니스 요구 사항에 가치를 부여하는 방법을 확인하려면](../use-cases/overview.md) 사용 사례 문서의 포괄적인 컬렉션을 살펴보십시오. 쿼리 서비스를 사용하여 향상된 운영 효율성 및 비즈니스 성공을 위한 통찰력과 솔루션을 제공하는 방법에 대해 알아봅니다.
 
 <!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
 

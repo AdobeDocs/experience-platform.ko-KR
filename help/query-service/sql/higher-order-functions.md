@@ -1,10 +1,10 @@
 ---
 title: 고차 함수로 배열 관리 및 데이터 유형 매핑
-description: Query Service에서 배열을 관리하고 데이터 형식을 고차 함수로 매핑하는 방법에 대해 알아봅니다. 실용적인 예는 일반적인 사용 사례와 함께 제공된다.
+description: Query Service에서 배열을 관리하고 데이터 형식을 고차 함수로 매핑하는 방법에 대해 알아봅니다. 예제는 일반적인 사용 사례와 함께 제공됩니다.
 exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
