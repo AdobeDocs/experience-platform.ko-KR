@@ -4,16 +4,16 @@ title: 다양한 플레이북 중에서 선택
 description: 사용 사례에 맞는 플레이북을 선택하여 플레이북을 활성화하는 방법에 대해 알아봅니다.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ea735c486ca88de05f2ee2a8e40c68e3ef29c4fd
+source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
 workflow-type: tm+mt
 source-wordcount: '757'
-ht-degree: 90%
+ht-degree: 88%
 
 ---
 
 # 다양한 플레이북 중에서 선택
 
-플레이북을 사용하려면 **[!UICONTROL 사용 사례 플레이북] > [!UICONTROL 플레이북]**&#x200B;으로 이동합니다. 페이지에서 다양한 검색 및 필터링 옵션을 찾아보고 사용하여 특정 플레이북을 선택하고 시작합니다.
+플레이북을 사용하려면 왼쪽 탐색에서 **[!UICONTROL 플레이북]**&#x200B;을 선택하세요. 페이지에서 다양한 검색 및 필터링 옵션을 찾아보고 사용하여 특정 플레이북을 선택하고 시작합니다.
 
 ## 검색 및 필터링 {#search-and-filter}
 
