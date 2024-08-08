@@ -3,10 +3,10 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 14c534abe51a43d45f8709657a6049a463f35045
+source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
 workflow-type: tm+mt
-source-wordcount: '4024'
-ht-degree: 11%
+source-wordcount: '4069'
+ht-degree: 10%
 
 ---
 
@@ -32,8 +32,13 @@ ht-degree: 11%
 ## 내보내기에 지원되는 파일 형식 {#supported-file-formats-export}
 
 >[!CONTEXTUALHELP]
->id="legacy_dataflow_needs_schedule_end_date"
+>id="dataset_dataflow_needs_schedule_end_date_header"
 >title="이 데이터 흐름의 종료 날짜 업데이트"
+>abstract="이 대상에 대한 최근 업데이트로 인해 이제 데이터 흐름에 종료 날짜가 필요합니다. Adobe이 기본 종료 날짜를 2025년 3월 1일로 설정했습니다. 원하는 종료 날짜로 업데이트하십시오. 그렇지 않으면 기본 날짜에 데이터 내보내기가 중지됩니다."
+
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="이 데이터 흐름 본문의 종료 날짜 업데이트"
 >abstract="이 대상에 대한 최근 업데이트로 인해 이제 데이터 흐름에 종료 날짜가 필요합니다. Adobe이 기본 종료 날짜를 2025년 3월 1일로 설정했습니다. 원하는 종료 날짜로 업데이트하십시오. 그렇지 않으면 기본 날짜에 데이터 내보내기가 중지됩니다."
 
 대상을 내보낼 때 다음 파일 형식이 지원됩니다.
@@ -522,7 +527,6 @@ Adobe Experience Platform은 스키마에서 일반적으로 사용되는 네 �
 id="platform_destinations_activate_exclude_enrichment_attributes"
 title="보강 속성 제외"
 abstract="모든 속성을 제외하고 선택한 사용자 정의 업로드된 대상자의 프로필을 대상으로 내보내려면 이 옵션을 활성화합니다."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko-KR#select-enrichment-attributes" text="설명서에서 자세히 알아보기"
 
 >[!IMPORTANT]
 >
