@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 데이터베이스 소스에 대한 
 type: Tutorial
 description: 이 자습서에서는 데이터베이스에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 이를 Platform에 수집하는 단계를 다룹니다.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1417'
 ht-degree: 2%
 
 ---
@@ -669,7 +669,7 @@ curl -X POST \
 | `transformations.params.mappingId` | 데이터베이스와 연계된 매핑 ID. |
 | `scheduleParams.startTime` | epoch 시간 내 데이터 흐름의 시작 시간입니다. |
 | `scheduleParams.frequency` | 데이터 흐름이 데이터를 수집하는 빈도입니다. 허용되는 값은 `once`, `minute`, `hour`, `day` 또는 `week`입니다. |
-| `scheduleParams.interval` | 간격은 두 개의 연속 흐름 실행 사이의 기간을 지정합니다. 간격 값은 0이 아닌 정수여야 합니다. 빈도가 `once`(으)로 설정된 경우 간격이 필요하지 않으며 다른 빈도 값의 경우 `15`보다 크거나 같아야 합니다. |
+| `scheduleParams.interval` | 간격은 두 개의 연속 흐름 실행 사이의 기간을 지정합니다. 간격 값은 0이 아닌 정수여야 합니다. 각 주파수에 대해 허용되는 최소 간격 값은 다음과 같습니다.<ul><li>**한 번**: 해당 없음</li><li>**분**: 15</li><li>**시간**: 1</li><li>**일**: 1</li><li>**주**: 1</li></ul> |
 
 **응답**
 

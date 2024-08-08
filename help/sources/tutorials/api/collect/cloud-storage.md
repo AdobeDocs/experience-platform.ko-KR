@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 클라우드 스토리지 소스에 
 type: Tutorial
 description: 이 튜토리얼에서는 소스 커넥터 및 API를 사용하여 서드파티 클라우드 스토리지에서 데이터를 검색하고 플랫폼으로 가져오는 단계를 설명합니다.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1741'
+source-wordcount: '1742'
 ht-degree: 2%
 
 ---
@@ -661,7 +661,7 @@ curl -X POST \
 | `transformations.params.mappingId` | [매핑 ID](#mapping)이(가) 이전 단계에서 검색되었습니다. |
 | `scheduleParams.startTime` | epoch 시간 내 데이터 흐름의 시작 시간입니다. |
 | `scheduleParams.frequency` | 데이터 흐름이 데이터를 수집하는 빈도입니다. 허용되는 값은 `once`, `minute`, `hour`, `day` 또는 `week`입니다. |
-| `scheduleParams.interval` | 간격은 두 개의 연속 흐름 실행 사이의 기간을 지정합니다. 간격 값은 0이 아닌 정수여야 합니다. 빈도가 `once`(으)로 설정된 경우 간격이 필요하지 않으며 다른 빈도 값의 경우 `15`보다 크거나 같아야 합니다. |
+| `scheduleParams.interval` | 간격은 두 개의 연속 흐름 실행 사이의 기간을 지정합니다. 간격 값은 0이 아닌 정수여야 합니다. 각 주파수에 대해 허용되는 최소 간격 값은 다음과 같습니다.<ul><li>**한 번**: 해당 없음</li><li>**분**: 15</li><li>**시간**: 1</li><li>**일**: 1</li><li>**주**: 1</li></ul> |
 
 **응답**
 
