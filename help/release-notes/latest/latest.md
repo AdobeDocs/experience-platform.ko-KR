@@ -31,7 +31,7 @@ Experience Platform의 기존 기능 및 설명서에 대한 업데이트:
 
 Federated Audience Composition을 통해 기업은 다양한 사용 사례에서 더 나은 애플리케이션을 위해 데이터를 구성할 수 있습니다. Adobe Real-time Customer Data Platform 및/또는 Adobe Journey Optimizer 사용자는 이 새로운 접근 방식을 통해 기존 데이터 웨어하우스에서 직접 데이터 세트를 페더레이션하여 하나의 시스템에 Adobe Experience Platform 대상 및 속성을 모두 만들고 보강할 수 있습니다.
 
-자세한 내용은 [Federated Audience Composition 설명서](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)를 참조하십시오.
+자세한 내용은 [Federated Audience Composition 설명서](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)를 참조하십시오.
 
 ## 고급 데이터 수명주기 관리 {#advanced-data-lifecycle-management}
 
