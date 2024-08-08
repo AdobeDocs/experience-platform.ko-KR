@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Source 커넥터 개요
 description: Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: 8541af0e2c0a2f5709f1621877ca204b0d3d64bd
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1548'
 ht-degree: 2%
 
 ---
@@ -26,13 +26,26 @@ Experience Platform을 사용하면 다양한 소스에서 수집한 데이터�
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
+## 고급 엔터프라이즈 소스 {#advanced-enterprise-sources}
+
+다음 소스는 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
+
+- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE 스트리밍]{type=Positive}
+- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE 일괄 처리]{type=Informative}
+- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE 스트리밍]{type=Positive}
+- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE 일괄 처리]{type=Informative}
+- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE 일괄 처리]{type=Informative}
+- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE 스트리밍]{type=Positive}
+- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE 스트리밍]{type=Positive}
+- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE 일괄 처리]{type=Informative}
+
 ## Adobe이 빌드한 소스 및 파트너가 빌드한 소스 {#adobe-and-partner-built-sources}
 
 Experience Platform 소스 카탈로그의 일부 커넥터는 Adobe에서 빌드하고 유지 관리하는 반면, 다른 커넥터는 [소스 SDK](/help/sources/sources-sdk/overview.md)를 사용하여 파트너 회사에서 빌드하고 유지 관리합니다. 파트너가 소스를 만들고 유지 관리하는 경우 파트너가 빌드한 각 커넥터에 대한 설명서 페이지 맨 위의 메모가 호출됩니다. 예를 들어 [Amazon S3 커넥터](/help/sources/connectors/cloud-storage/s3.md)는 Adobe에서 만들고 [RainFocus 커넥터](/help/sources/connectors/analytics/rainfocus.md)는 RainFocus 팀에서 만들고 유지 관리합니다.
 
 파트너가 작성 및 유지 관리하는 커넥터의 경우 파트너 팀이 커넥터 문제를 해결해야 할 수 있습니다(설명서 페이지의 메모에 제공된 연락 방법). Adobe 작성 및 유지 관리되는 커넥터와 관련된 문제는 Adobe 담당자 또는 고객 지원 센터에 문의하십시오.
 
-## 소스 유형
+## 소스 카테고리
 
 Experience Platform의 소스는 다음 카테고리로 그룹화됩니다.
 
@@ -75,15 +88,12 @@ Experience Platform은 서드파티 분석 플랫폼에서 데이터를 수집�
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE 스트리밍]{type=Positive}
 - [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE 스트리밍]{type=Positive}
 - [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE 스트리밍]{type=Positive}
 - [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE 일괄 처리]{type=Informative}
 
@@ -116,14 +126,11 @@ Experience Platform은 서드파티 고객 성공 애플리케이션에서 데�
 
 Experience Platform은 타사 데이터베이스에서 데이터를 수집하는 기능을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE 일괄 처리]{type=Informative}
@@ -133,8 +140,6 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하는
 - [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE 일괄 처리]{type=Informative}
-- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE 스트리밍]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE 일괄 처리]{type=Informative}
 
 ### 데이터 및 ID 파트너 {#data-partner}
