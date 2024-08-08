@@ -3,9 +3,9 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
+source-git-commit: 14c534abe51a43d45f8709657a6049a463f35045
 workflow-type: tm+mt
-source-wordcount: '3975'
+source-wordcount: '4024'
 ht-degree: 11%
 
 ---
@@ -30,6 +30,11 @@ ht-degree: 11%
 대상을 대상으로 활성화하려면 대상에 [연결됨](./connect-destination.md)이(가) 있어야 합니다. 아직 수행하지 않았다면 [대상 카탈로그](../catalog/overview.md)(으)로 이동하여 지원되는 대상을 탐색하고 사용할 대상을 구성합니다.
 
 ## 내보내기에 지원되는 파일 형식 {#supported-file-formats-export}
+
+>[!CONTEXTUALHELP]
+>id="legacy_dataflow_needs_schedule_end_date"
+>title="이 데이터 흐름의 종료 날짜 업데이트"
+>abstract="이 대상에 대한 최근 업데이트로 인해 이제 데이터 흐름에 종료 날짜가 필요합니다. Adobe이 기본 종료 날짜를 2025년 3월 1일로 설정했습니다. 원하는 종료 날짜로 업데이트하십시오. 그렇지 않으면 기본 날짜에 데이터 내보내기가 중지됩니다."
 
 대상을 내보낼 때 다음 파일 형식이 지원됩니다.
 
