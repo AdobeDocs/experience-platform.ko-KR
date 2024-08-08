@@ -5,7 +5,7 @@ title: 샌드박스 관리 API 엔드포인트
 description: 샌드박스 API의 /sandboxes 끝점을 사용하면 Adobe Experience Platform에서 샌드박스를 프로그래밍 방식으로 관리할 수 있습니다.
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c15b24990835746a51a50a3e7e7b6a85701c0eb9
 workflow-type: tm+mt
 source-wordcount: '1474'
 ht-degree: 3%
@@ -42,7 +42,6 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **응답**
