@@ -3,9 +3,9 @@ keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침
 title: ID 서비스 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1591'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,10 @@ ht-degree: 1%
 ### ID 네임스페이스 수집
 
 2023년 3월 31일부터 Identity Service는 신규 고객에 대한 Adobe Analytics ID(AAID) 수집을 차단합니다. 이 ID는 일반적으로 [Adobe Analytics 소스](../sources/connectors/adobe-applications/analytics.md) 및 [Adobe Audience Manager 소스](../sources//connectors/adobe-applications/audience-manager.md)를 통해 수집되며 ECID가 동일한 웹 브라우저를 나타내므로 중복됩니다. 이 기본 구성을 변경하려면 Adobe 계정 팀에 문의하십시오.
+
+## 성능 가드레일 {#performance-guardrails}
+
+ID 서비스는 들어오는 데이터를 지속적으로 모니터링하여 규모에 맞게 높은 성능과 안정성을 보장합니다. 그러나 경험 이벤트 데이터가 짧은 기간에 유입되면 성능 저하 및 지연 시간이 발생할 수 있습니다. Adobe은 이러한 성능 저하의 원인이 아닙니다.
 
 ## 생산 능력의 ID 그래프가 업데이트될 때의 삭제 논리 이해 {#deletion-logic}
 
