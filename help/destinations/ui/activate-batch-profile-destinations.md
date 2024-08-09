@@ -3,9 +3,9 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
+source-git-commit: dab3b432cac4ad416576f9d3d35e679d9483c816
 workflow-type: tm+mt
-source-wordcount: '4112'
+source-wordcount: '4077'
 ht-degree: 10%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
 >title="이 데이터 흐름의 종료 날짜 업데이트"
->abstract="이 대상에 대한 최근 업데이트로 인해 이제 데이터 흐름에 종료 날짜가 필요합니다. Adobe이 기본 종료 날짜를 2025년 3월 1일로 설정했습니다. 원하는 종료 날짜로 업데이트하십시오. 그렇지 않으면 기본 날짜에 데이터 내보내기가 중지됩니다."
+>abstract="이 데이터 흐름의 종료 날짜 업데이트"
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
