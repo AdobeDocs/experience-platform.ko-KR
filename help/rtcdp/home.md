@@ -4,9 +4,9 @@ description: Adobe Real-Time CDP을 시작하고 가 제공하는 다양한 기�
 solution: Real-Time Customer Data Platform
 product: Real Time CDP
 exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
-source-git-commit: c9a954d2a78abcea67e68e5ae9563e6db1ae706c
+source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1175'
 ht-degree: 3%
 
 ---
@@ -20,6 +20,12 @@ ht-degree: 3%
 Real-Time CDP 제품 및 설명서의 최신 개선 사항을 살펴보십시오. 기능, 개선 사항, 해결 사항의 종합 목록은 [릴리스 정보](/help/release-notes/latest/latest.md)에서 자세히 확인할 수 있습니다.  월별 릴리스 정보의 [설명서 업데이트 섹션](/help/release-notes/latest/latest.md#documentation-updates)을 방문하여 설명서의 최신 변경 사항을 최신 상태로 유지하십시오.
 
 >[!BEGINTABS]
+
+>[!TAB 페더레이션 대상 구성]
+
+Federated Audience Composition을 통해 기업은 다양한 사용 사례에서 더 나은 애플리케이션을 위해 데이터를 구성할 수 있습니다. Adobe Real-time Customer Data Platform 및/또는 Adobe Journey Optimizer 사용자는 이 새로운 접근 방식을 통해 기존 데이터 웨어하우스에서 직접 데이터 세트를 페더레이션하여 하나의 시스템에 Adobe Experience Platform 대상 및 속성을 모두 만들고 보강할 수 있습니다.
+
+[![이미지](assets/do-not-localize/learn-more-button.svg)](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)
 
 >[!TAB 사용 사례 플레이북]
 
