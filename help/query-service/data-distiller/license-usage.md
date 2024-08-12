@@ -2,9 +2,9 @@
 title: 일괄 쿼리 라이선스 사용 모니터링
 description: Adobe Experience Platform UI는 조직의 Data Distiller 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: 010780b7d7f998c38fdd5344457409ed97f982fa
+source-git-commit: 971c462a18a2a3ff3c98936c99b54a0d03b7c488
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->**[!UICONTROL 시간 계산] 데이터는 제한과 함께 사용할 수 있습니다**: 시간 계산 사용에 대해 표시된 데이터는 2023년 9월 15일부터 시작됩니다.
+>[!UICONTROL 계산 시간] 사용에 대해 표시된 데이터는 2023년 9월 15일부터 시작되거나 계약 연간 갱신일 중 나중에 발생하는 날짜부터 시작됩니다.
 
 ![시간 계산 지표가 강조 표시된 라이선스 사용 대시보드입니다.](../images/data-distiller/compute-hours.png)
 
