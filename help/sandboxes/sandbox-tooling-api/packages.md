@@ -2,10 +2,10 @@
 title: 샌드박스 도구 패키지 API 끝점
 description: 샌드박스 도구 API의 /packages 끝점을 사용하면 Adobe Experience Platform에서 패키지를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
+source-git-commit: f81e15ccfd89e2d0cb450f596743341264187f52
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 6%
+source-wordcount: '1621'
+ht-degree: 8%
 
 ---
 
@@ -138,8 +138,23 @@ curl -X PUT \
 | --- | --- | --- | --- |
 | `id` | 업데이트할 패키지의 ID입니다. | 문자열 | 예 |
 | `action` | 패키지에 아티팩트를 추가하려면 작업 값이 **ADD**&#x200B;여야 합니다. 이 작업은 **PARTIAL** 패키지 형식에서만 지원됩니다. | 문자열 | 예 |
-| `artifacts` | 패키지에 추가될 아티팩트 목록입니다. 목록이 **null**&#x200B;이거나 **empty**&#x200B;인 경우 패키지에 변경 내용이 없습니다. 아티팩트는 패키지에 추가되기 전에 중복 제거됩니다. | 배열 | 아니요 |
+| `artifacts` | 패키지에 추가될 아티팩트 목록입니다. 목록이 **null**&#x200B;이거나 **empty**&#x200B;인 경우 패키지에 변경 내용이 없습니다. 아티팩트는 패키지에 추가되기 전에 중복 제거됩니다. 지원되는 객체의 전체 목록은 아래 표를 참조하십시오. | 배열 | 아니요 |
 | `expiry` | 패키지의 만료 날짜를 정의하는 타임스탬프. 페이로드에 만료가 지정되지 않은 경우 기본값은 PUT API가 호출된 시간으로부터 90일입니다. 응답 만료 필드는 epoch UTC 시간이 됩니다. | 문자열(UTC 타임스탬프 형식) | 아니요 |
+
+현재 지원되는 아티팩트 유형은 다음과 같습니다.
+
+| 아티팩트 | 플랫폼 | 오브젝트 | 부분 흐름 | 전체 샌드박스 |
+| --- | --- | --- | --- | --- |
+| `JOURNEY` | Adobe Journey Optimizer | 여정 | 예 | 아니요 |
+| `ID_NAMESPACE` | 고객 데이터 플랫폼 | ID | 예 | 예 |
+| `REGISTRY_DATATYPE` | 고객 데이터 플랫폼 | 데이터 유형 | 예 | 예 |
+| `REGISTRY_CLASS` | 고객 데이터 플랫폼 | 클래스 | 예 | 예 |
+| `REGISTRY_MIXIN` | 고객 데이터 플랫폼 | 필드 그룹 | 예 | 예 |
+| `REGISTRY_SCHEMA` | 고객 데이터 플랫폼 | 스키마 | 예 | 예 |
+| `CATALOG_DATASET` | 고객 데이터 플랫폼 | 데이터 세트 | 예 | 예 |
+| `DULE_CONSENT_POLICY` | 고객 데이터 플랫폼 | 동의 및 거버넌스 정책 | 예 | 예 |
+| `PROFILE_SEGMENT` | 고객 데이터 플랫폼 | 대상자 | 예 | 예 |
+| `FLOW` | 고객 데이터 플랫폼 | 소스 데이터 흐름 | 예 | 예 |
 
 **응답**
 

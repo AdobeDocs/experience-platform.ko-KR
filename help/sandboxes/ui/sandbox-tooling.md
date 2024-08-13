@@ -2,7 +2,7 @@
 title: 샌드박스 도구
 description: 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져옵니다.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
+source-git-commit: ac013f4a1b0f8053963771b66d0bd80111f7d215
 workflow-type: tm+mt
 source-wordcount: '2314'
 ht-degree: 7%
