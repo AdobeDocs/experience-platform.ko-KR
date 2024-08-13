@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 세트 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
 workflow-type: tm+mt
-source-wordcount: '3080'
+source-wordcount: '3111'
 ht-degree: 3%
 
 ---
@@ -92,6 +92,10 @@ ht-degree: 3%
 ![선택한 데이터 세트에 대해 줄임표 및 미리 보기 데이터 세트 옵션이 강조 표시된 데이터 세트 작업 영역의 찾아보기 탭입니다.](../images/datasets/user-guide/preview-dataset-option.png)
 
 그러면 데이터 세트에 대한 스키마의 계층적 보기가 오른쪽에 표시되는 미리보기 창이 열립니다.
+
+>[!NOTE]
+>
+>보기 왼쪽의 스키마 다이어그램에는 데이터가 포함된 필드만 표시됩니다. 데이터가 없는 필드는 UI를 간소화하고 관련 정보에 집중할 수 있도록 자동으로 숨겨집니다.
 
 ![데이터 집합에 대한 구조 및 샘플 값에 대한 정보가 포함된 데이터 집합 미리 보기 대화 상자가 표시됩니다.](../images/datasets/user-guide/preview-dataset.png)
 
