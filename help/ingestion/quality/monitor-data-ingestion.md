@@ -11,7 +11,7 @@ ht-degree: 4%
 
 ---
 
-# 데이터 수집 모니터링
+# 데이터 수집 모니터링하기
 
 데이터 수집을 사용하면 데이터를 Adobe Experience Platform에 수집할 수 있습니다. 다양한 파일 형식(예: CSV)을 사용하여 데이터를 삽입할 수 있는 일괄 처리 수집이나 스트리밍 끝점을 사용하여 실시간으로 [!DNL Platform]에 데이터를 수집할 수 있는 스트리밍 수집을 사용할 수 있습니다.
 
@@ -24,7 +24,7 @@ ht-degree: 4%
 >title="수집 속도"
 >abstract="초당 정상적으로 처리된 이벤트 수입니다."
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=ko-KR" text="UI에서 소스의 데이터 흐름 모니터링"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=ko" text="UI에서 소스의 데이터 흐름 모니터링"
 
 >[!TIP]
 >

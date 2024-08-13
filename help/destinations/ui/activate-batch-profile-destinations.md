@@ -6,7 +6,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: dab3b432cac4ad416576f9d3d35e679d9483c816
 workflow-type: tm+mt
 source-wordcount: '4077'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -29,17 +29,17 @@ ht-degree: 10%
 
 대상을 대상으로 활성화하려면 대상에 [연결됨](./connect-destination.md)이(가) 있어야 합니다. 아직 수행하지 않았다면 [대상 카탈로그](../catalog/overview.md)(으)로 이동하여 지원되는 대상을 탐색하고 사용할 대상을 구성합니다.
 
-## 내보내기에 지원되는 파일 형식 {#supported-file-formats-export}
+## 내보내기에 대해 지원되는 파일 포맷 {#supported-file-formats-export}
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
->title="이 데이터 흐름의 종료 날짜 업데이트"
->abstract="이 데이터 흐름의 종료 날짜 업데이트"
+>title="이 데이터 흐름의 종료 일자 업데이트"
+>abstract="이 데이터 흐름의 종료 일자 업데이트"
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
->title="이 데이터 흐름 본문의 종료 날짜 업데이트"
->abstract="이 대상에 대한 최근 업데이트로 인해 이제 데이터 흐름에 종료 날짜가 필요합니다. Adobe이 기본 종료 날짜를 2025년 3월 1일로 설정했습니다. 원하는 종료 날짜로 업데이트하십시오. 그렇지 않으면 기본 날짜에 데이터 내보내기가 중지됩니다."
+>title="이 데이터 흐름 본문의 종료 일자 업데이트"
+>abstract="최근 이 대상에 대한 업데이트로 인해 이제 데이터 흐름에 종료 일자가 필요합니다. Adobe는 기본 종료 일자를 2025년 3월 1일로 설정했습니다. 원하는 종료 일자로 업데이트하지 않으면 기본 일자에 데이터 내보내기가 중단됩니다."
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template"
@@ -126,7 +126,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 >id="platform_destinations_activate_exportoptions"
 >title="파일 내보내기 옵션"
 >abstract="**전체 파일 내보내기**&#x200B;를 선택하여 대상자 조건에 적합한 모든 프로필의 전체 스냅샷을 내보냅니다. **증분 파일 내보내기**&#x200B;를 선택하여 마지막 내보내기 이후 대상자 조건에 적합한 프로필만 내보냅니다. <br>첫 번째 증분 파일 내보내기에는 채우기 역할을 하는 대상자에 적합한 모든 프로필이 포함됩니다. 향후 증분 파일에는 첫 번째 증분 파일 내보내기 이후 대상자 조건에 적합한 프로필만 포함됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko-KR#export-incremental-files" text="증분 파일 내보내기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=ko#export-incremental-files" text="증분 파일 내보내기"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
