@@ -4,9 +4,9 @@ title: 라이선스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3e465803b6c8fe11cef1633c0f0624465086c2a3
+source-git-commit: 090b870dcfb16e59831f1e03eb46b22da4f24f0f
 workflow-type: tm+mt
-source-wordcount: '2328'
+source-wordcount: '2429'
 ht-degree: 6%
 
 ---
@@ -91,6 +91,16 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 요약 탭이 나타납니다. [!UICONTROL 요약] 및 [!UICONTROL 세부 정보] 탭에서 사용할 수 있는 세분화된 예측을 사용하여 효율적인 라이선스 사용을 위한 올바른 의사 결정을 보장할 수 있습니다.
 
 ![예측된 사용 열이 강조 표시된 플랫폼 제품의 요약 보기입니다.](../images/license-usage/summary-predicted-usage.png)
+
+예측된 사용의 비율은 다음과 같이 결정됩니다.
+
+- 하한과 상한이 크게 다른 경우 범위로 표시됩니다(예: 32% - 35%).
+- 하한과 상한이 거의 동일하고 0이 아닌 경우 근사값(예: ~34%)으로 표시됩니다.
+- 하한과 상한이 거의 동일하고 0이면 정확히 0%로 표시됩니다.
+
+>[!NOTE]
+>
+이 컨텍스트에서 &quot;거의 같음&quot;은 값이 소수점 이하 두 자리로 통계적으로 중요함을 의미합니다(예: 하한 0.342와 상한 0.344는 모두 34%로 반올림됨).
 
 예측된 사용 기능은 다음 지표를 지원합니다.
 
