@@ -3,9 +3,9 @@ title: 대상 API 엔드포인트
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 대상 끝점을 사용하여 프로그래밍 방식으로 조직의 대상을 만들고, 관리하고, 업데이트합니다.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1406'
 ht-degree: 2%
 
 ---
@@ -207,10 +207,6 @@ POST /audiences
 
 **요청**
 
->[!BEGINTABS]
-
->[!TAB 플랫폼 생성 대상]
-
 +++ 플랫폼 생성 대상자 만들기에 대한 샘플 요청
 
 ```shell
@@ -222,7 +218,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
         "name": "People who ordered in the last 30 days",
-        "profileInstanceId": "ups",
+        "profileInstanceId": "AEPSegments",
         "description": "Last 30 days",
         "type": "SegmentDefinition",
         "expression": {
@@ -250,60 +246,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 +++
 
->[!TAB 외부에서 생성된 대상]
-
-+++ 외부에서 생성된 대상자 만들기에 대한 샘플 요청
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/audiences
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
- -d '{
-        "audienceId":"test-external-audience-id",
-        "name":"externalAudience",
-        "namespace":"aam",
-        "description":"Last 30 days",
-        "type":"ExternalSegment",
-        "originName":"CUSTOM_UPLOAD",
-        "lifecycleState":"published",
-        "datasetId":"6254cf3c97f8e31b639fb14d",
-        "labels":[
-            "core/C1"
-        ],
-        "linkedAudienceRef":{
-            "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
-        }
-    }'
-```
-
-| 속성 | 설명 |
-| -------- | ----------- | 
-| `audienceId` | 대상자에 대해 사용자가 제공한 ID입니다. |
-| `name` | 대상자의 이름입니다. |
-| `namespace` | 대상자를 위한 네임스페이스입니다. |
-| `description` | 대상자에 대한 설명. |
-| `type` | 대상자가 플랫폼에서 생성되었는지 또는 외부에서 생성된 대상자인지 여부를 표시하는 필드입니다. 가능한 값은 `SegmentDefinition` 및 `ExternalSegment`입니다. `SegmentDefinition`은(는) 플랫폼에서 생성된 대상을 참조하지만 `ExternalSegment`은(는) 플랫폼에서 생성되지 않은 대상을 참조합니다. |
-| `originName` | 대상자의 기원 이름입니다. 외부에서 생성된 대상자의 경우 기본값은 `CUSTOM_UPLOAD`입니다. 기타 지원되는 값은 `REAL_TIME_CUSTOMER_PROFILE`, `CUSTOM_UPLOAD`, `AUDIENCE_ORCHESTRATION` 및 `AUDIENCE_MATCH`입니다. |
-| `lifecycleState` | 만들려는 대상의 초기 상태를 결정하는 선택적 필드입니다. 지원되는 값은 `draft`, `published` 및 `inactive`입니다. |
-| `datasetId` | 대상을 구성하는 데이터를 찾을 수 있는 데이터 세트의 ID입니다. |
-| `labels` | 대상과 관련된 객체 수준 데이터 사용 및 속성 기반 액세스 제어 레이블입니다. |
-| `audienceMeta` | 외부에서 생성된 대상자에 속하는 메타데이터입니다. |
-| `linkedAudienceRef` | 다른 대상 관련 시스템에 대한 식별자를 포함하는 객체입니다. 여기에는 다음이 포함될 수 있습니다. <ul><li>`flowId`: 이 ID는 대상 데이터를 가져오는 데 사용된 데이터 흐름에 대상을 연결하는 데 사용됩니다. 필요한 ID에 대한 자세한 내용은 [데이터 흐름 만들기](../../sources/tutorials/api/collect/cloud-storage.md)에서 확인할 수 있습니다.</li><li>`aoWorkflowId`: 이 ID는 대상자를 관련 Audience Orchestration 구성에 연결하는 데 사용됩니다.&lt;/li/> <li>`payloadFieldGroupRef`: 이 ID는 대상자의 구조를 설명하는 XDM 필드 그룹 스키마를 참조하는 데 사용됩니다. 이 필드의 값에 대한 자세한 내용은 [XDM 필드 그룹 끝점 안내서](../../xdm/api/field-groups.md)에서 확인할 수 있습니다.</li><li>`audienceFolderId`: 이 ID는 대상자의 Adobe Audience Manager에 있는 폴더 ID를 참조하는 데 사용됩니다. 이 API에 대한 자세한 내용은 [Adobe Audience Manager API 안내서](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API)를 참조하세요.</ul> |
-
-+++
-
->[!ENDTABS]
-
 **응답**
 
 성공적인 응답은 새로 생성된 대상자에 대한 정보와 함께 HTTP 상태 200을 반환합니다.
-
->[!BEGINTABS]
-
->[!TAB 플랫폼 생성 대상]
 
 +++플랫폼 생성 대상자를 만들 때의 샘플 응답입니다.
 
@@ -373,46 +318,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 +++
 
->[!TAB 외부에서 생성된 대상]
-
-+++외부에서 생성된 대상자를 만들 때 샘플 응답.
-
-```json
-{
-   "id": "322f9f62-cd27-11ec-9d64-0242ac120002",
-   "audienceId": "test-external-audience-id",
-   "name": "externalAudience",
-   "namespace": "aam",
-   "imsOrgId": "{ORG_ID}",
-   "sandbox":{
-      "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-      "sandboxName": "prod",
-      "type": "production",
-      "default": true
-   },
-   "isSystem": false,
-   "description": "Last 30 days",
-   "type": "ExternalSegment",
-   "originName": "CUSTOM_UPLOAD",
-   "lifecycleState": "published",
-   "createdBy": "{CREATED_BY_ID}",
-   "datasetId": "6254cf3c97f8e31b639fb14d",
-   "labels": [
-      "core/C1"
-   ],
-   "linkedAudienceRef": {
-      "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
-   },
-   "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
-   "creationTime": 1650251290000,
-   "updateEpoch": 1650251290,
-   "updateTime": 1650251290000,
-   "createEpoch": 1650251290
-}
-```
-
-+++
-
 ## 지정된 대상자 조회 {#get}
 
 `/audiences` 끝점에 대한 GET 요청을 만들고 요청 경로에서 검색하려는 대상의 ID를 제공하여 특정 대상에 대한 자세한 정보를 조회할 수 있습니다.
@@ -443,11 +348,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 **응답**
 
-성공적인 응답은 지정된 대상에 대한 정보와 함께 HTTP 상태 200을 반환합니다. 대상이 Adobe Experience Platform으로 생성되는지 또는 외부 소스로 생성되는지에 따라 응답이 달라집니다.
-
->[!BEGINTABS]
-
->[!TAB 플랫폼 생성 대상]
+성공적인 응답은 지정된 대상에 대한 정보와 함께 HTTP 상태 200을 반환합니다.
 
 +++플랫폼 생성 대상자를 검색할 때의 샘플 응답입니다.
 
@@ -516,161 +417,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 +++
 
->[!TAB 외부에서 생성된 대상]
-
-+++외부에서 생성된 대상자를 검색할 때의 샘플 응답입니다.
-
-```json
-{
-    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "audienceId": "test-external-audience-id",
-    "name": "externalAudience",
-    "namespace": "aam",
-    "imsOrgId": "{ORG_ID}",
-    "sandbox": {
-        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "isSystem": false,
-    "description": "Last 30 days",
-    "type": "ExternalSegment",
-    "lifecycleState": "active",
-    "createdBy": "{CREATED_BY_ID}",
-    "datasetId": "6254cf3c97f8e31b639fb14d",
-    "labels": [
-        "core/C1"
-    ],
-    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
-    "creationTime": 1650251290000,
-    "updateEpoch": 1650251290,
-    "updateTime": 1650251290000,
-    "createEpoch": 1650251290
-}
-```
-
-+++
-
->[!ENDTABS]
-
-## 대상의 필드 업데이트 {#update-field}
-
-`/audiences` 끝점에 대한 PATCH 요청을 만들고 요청 경로에 업데이트하려는 대상자의 ID를 제공하여 특정 대상의 필드를 업데이트할 수 있습니다.
-
-**API 형식**
-
-```http
-PATCH /audiences/{AUDIENCE_ID}
-```
-
-| 매개변수 | 설명 |
-| --------- | ----------- |
-| `{AUDIENCE_ID}` | 업데이트할 대상자의 ID입니다. 이 필드는 `id` 필드이며 `audienceId` 필드는 **이(가) 아닙니다**. |
-
-**요청**
-
-+++대상의 필드를 업데이트하는 샘플 요청입니다.
-
-```shell
-curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '
-     [
-        {
-            "op": "add",
-            "path": "/expression",
-            "value": {
-                "type": "PQL",
-                "format": "pql/text",
-                "value": "workAddress.country = \"CA\""
-            }
-        }
-      ]'
-```
-
-| 속성 | 설명 |
-| -------- | ----------- |
-| `op` | 대상을 업데이트하는 경우 이 값은 항상 `add`입니다. |
-| `path` | 업데이트할 필드의 경로입니다. |
-| `value` | 필드를 업데이트할 값입니다. |
-
-+++
-
-**응답**
-
-성공적인 응답은 새로 업데이트된 대상에 대한 정보와 함께 HTTP 상태 200을 반환합니다.
-
-+++대상의 필드를 업데이트할 때의 샘플 응답입니다.
-
-```json
-{
-    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "profileInstanceId": "ups",
-    "imsOrgId": "{ORG_ID}",
-    "sandbox": {
-        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "name": "People who ordered in the last 30 days",
-    "description": "Last 30 days",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "workAddress.country = \"CA\""
-    },
-    "mergePolicyId": "ef006bbe-750e-4e81-85f0-0c6902192dcc",
-    "evaluationInfo": {
-        "batch": {
-          "enabled": false
-        },
-        "continuous": {
-          "enabled": true
-        },
-        "synchronous": {
-          "enabled": false
-        }
-    },
-    "dataGovernancePolicy": {
-      "excludeOptOut": true
-    },
-    "creationTime": 1650374572000,
-    "updateEpoch": 1650374573,
-    "updateTime": 1650374573000,
-    "createEpoch": 1650374572,
-    "_etag": "\"33120d7c-0000-0200-0000-625eb7ad0000\"",
-    "dependents": [],
-    "definedOn": [
-        {
-          "meta:resourceType": "unions",
-          "meta:containerId": "tenant",
-          "$ref": "https://ns.adobe.com/xdm/context/profile__union"
-        }
-    ],
-    "dependencies": [],
-    "type": "SegmentDefinition",
-    "overridePerformanceWarnings": false,
-    "createdBy": "{CREATED_BY_ID}",
-    "lifecycleState": "active",
-    "labels": [
-      "core/C1"
-    ],
-    "namespace": "AEPSegments"
-}
-```
-
-+++
-
 ## 대상자 업데이트 {#put}
 
 `/audiences` 끝점에 대한 PUT 요청을 만들고 요청 경로에 업데이트하려는 대상자의 ID를 제공하여 특정 대상을 업데이트(덮어쓰기)할 수 있습니다.
@@ -697,11 +443,11 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-    "audienceId": "test-external-audience-id",
-    "name": "New external audience",
-    "namespace": "aam",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
     "description": "Last 30 days",
-    "type": "ExternalSegment",
+    "type": "SegmentDefinition",
     "lifecycleState": "published",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -732,9 +478,9 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 ```json
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
-    "audienceId": "test-external-audience-id",
-    "name": "New external audience",
-    "namespace": "aam",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
@@ -743,7 +489,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
         "default": true
     },
     "description": "Last 30 days",
-    "type": "ExternalSegment",
+    "type": "SegmentDefinition",
     "lifecycleState": "published",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
