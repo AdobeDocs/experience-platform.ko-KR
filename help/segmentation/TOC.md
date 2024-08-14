@@ -5,10 +5,10 @@ breadcrumb-title: Segmentation Service 안내서
 user-guide-description: Adobe Experience Platform에서 생성한 세그먼트 정의 또는 외부 소스를 사용하여 실시간 고객 프로필 데이터에서 대상자를 빌드하십시오.
 feature: Segments
 role: User
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 40%
+source-wordcount: '194'
+ht-degree: 43%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 40%
    - [대상자 포털](ui/audience-portal.md)
    - [대상자 구성](ui/audience-composition.md)
    - [세그먼트 빌더](ui/segment-builder.md)
-   - [페더레이션 대상 구성(제한된 가용성)](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+   - [페더레이션 대상 구성(제한된 가용성)](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)
    - [계정 대상자](ui/account-audiences.md)
    - [유사 대상자](ui/lookalike-audiences.md)
    - [잠재 고객 대상자](ui/prospect-audience.md)
@@ -73,6 +73,7 @@ ht-degree: 40%
    - [외부 대상 가져오기 및 사용](tutorials/using-external-audiences.md)
    - [데이터를 내보낼 데이터 세트 만들기](tutorials/create-dataset-export-segment.md)
    - [세그먼트에 대한 데이터 사용 규정 준수 적용](tutorials/governance.md)
+- [자격 기준 업데이트](./eligibility-criteria-update.md)
 - [자주 묻는 질문](./faq.md)
 - [API 참조](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [플랫폼 릴리스 정보](https://experienceleague.adobe.com/ko/docs/experience-platform/release-notes/latest)
