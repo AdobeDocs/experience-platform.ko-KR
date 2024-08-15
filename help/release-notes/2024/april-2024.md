@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 정보
 description: Adobe Experience Platform의 2024년 4월 릴리스 정보입니다.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 17%
@@ -74,7 +74,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | 기능 | 설명 |
 | ----------- | ----------- |
 | 이제 Destination SDK의 중첩된 고객 데이터 필드에 `isRequired` 매개 변수를 사용할 수 있습니다. | 이제 Destination SDK에서 대상을 구성할 때 [필요에 따라 중첩된 고객 데이터 필드를 설정](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields)할 수 있습니다. 이렇게 하면 대상을 설정하는 사용자는 해당 필드에 대한 값을 선택할 때까지 활성화 플로우를 진행할 수 없습니다. |
-| Web SDK를 사용하여 Adobe Target 대상을 설정할 때 Edge 세그멘테이션은 더 이상 필수 요구 사항이 아닙니다 | 이전에는 Web SDK를 사용하여 [Adobe Target 대상](/help/destinations/catalog/personalization/adobe-target-connection.md)을 구성할 때 개인화 및 Edge 세그멘테이션을 위해 데이터 스트림을 사용하도록 설정해야 했습니다. 에지 세분화 [에 대해 데이터 스트림을 사용하도록 설정해야 하는 요구 사항이 이제 제거되었습니다](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). 이 통합 패턴은 Real-Time CDP에서 Adobe Target을 사용할 때 개인화 사용 사례의 하위 집합에서만 혜택을 받을 수 있습니다. [통합 유형에서 사용하도록 설정된 사용 사례](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters)에 대해 자세히 알아보십시오. |
+| Web SDK를 사용하여 Adobe Target 대상을 설정할 때 Edge 세그멘테이션은 더 이상 필수 요구 사항이 아닙니다 | 이전에는 Web SDK를 사용하여 [Adobe Target 대상](/help/destinations/catalog/personalization/adobe-target-connection.md)을 구성할 때 개인화 및 Edge 세그멘테이션을 위해 데이터 스트림을 사용하도록 설정해야 했습니다. 에지 세분화 [에 대해 데이터 스트림을 사용하도록 설정해야 하는 요구 사항이 이제 제거되었습니다](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). 이 통합 패턴은 Real-Time CDP에서 Adobe Target을 사용할 때 개인화 사용 사례의 하위 집합에서만 혜택을 받을 수 있습니다. [통합 유형에서 사용하도록 설정된 사용 사례](/help/destinations/catalog/personalization/adobe-target-connection.md#supported-use-cases)에 대해 자세히 알아보십시오. |
 | [!BADGE Beta]{type=Informative} 활성화 흐름에서 여러 대상 및 데이터 세트를 제거합니다. | 이제 대상 활성화 플로우에서 여러 대상 및 데이터 세트를 선택하고 제거할 수 있습니다. 자세한 내용은 [대상 세부 정보](../../destinations/ui/destination-details-page.md#bulk-remove) 및 [데이터 세트 내보내기](../../destinations/ui/export-datasets.md) 설명서를 참조하십시오. |
 
 {style="table-layout:auto"}

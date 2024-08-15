@@ -3,7 +3,7 @@ title: Edge 개인화 대상에 대한 대상자 활성화
 description: 동일 페이지 및 다음 페이지 개인화 사용 사례를 위해 Adobe Experience Platform에서 Edge 개인화 대상으로 대상을 활성화하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 2%
@@ -47,7 +47,7 @@ Adobe Target 및 사용자 지정 개인화 대상에 대상 및 프로필 속�
 
 ## 사용 사례 {#use-cases}
 
-Adobe Target과 같은 Adobe 개인화 솔루션 또는 고유한 개인화 파트너 플랫폼(예: [!DNL Optimizely], [!DNL Pega])과 독점 시스템(예: 사내 CMS)을 사용하여 [사용자 지정 Personalization](../catalog/personalization/custom-personalization.md) 대상을 통해 보다 심층적인 고객 개인화 경험을 제공합니다. 이 모든 것은 Experience Platform Edge Network 데이터 수집 및 세그멘테이션 기능을 활용합니다.
+Adobe Target과 같은 Adobe 개인화 솔루션 또는 자체 개인화 파트너 플랫폼(예: [!DNL Optimizely], [!DNL Pega])과 독점 시스템(예: 사내 CMS)을 사용하여 [사용자 지정 Personalization](../catalog/personalization/custom-personalization.md) 대상을 통해 더 심층적인 고객 개인화 환경을 제공합니다. 이 모든 것은 Experience Platform Edge Network 데이터 수집 및 세그멘테이션 기능을 활용합니다.
 
 아래 설명된 사용 사례에는 사이트 개인화 및 타깃팅된 온사이트 광고가 모두 포함됩니다.
 
@@ -112,7 +112,7 @@ Adobe Target과 같은 Adobe 개인화 솔루션 또는 고유한 개인화 파�
 구성할 대상에 따라 다음 문서에서 대상별 사전 요구 사항 및 관련 정보를 참조하십시오.
 
 * [Adobe Target 연결](../catalog/personalization/adobe-target-connection.md#parameters)
-* [사용자 지정 개인화 연결](../catalog/personalization/custom-personalization.md##parameters)
+* [사용자 지정 개인화 연결](../catalog/personalization/custom-personalization.md#parameters)
 
 ## 대상 선택 {#select-destination}
 
