@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM 시스템 문제 해결 안내서
 description: 일반적인 API 오류를 해결하는 단계를 포함하여 XDM(Experience Data Model)에 대해 자주 묻는 질문에 대한 답변을 찾아보십시오.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 83d3d31b2d24fd01876ff7b0f1c03a5670ed3845
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '2446'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 0%
 ## FAQ
 
 다음은 XDM 시스템 및 [!DNL Schema Registry] API 사용에 대한 FAQ 응답 목록입니다.
+
+## 스키마 기본 사항
+
+이 섹션에서는 XDM 시스템의 스키마 구조, 필드 사용 및 식별에 대한 기본적인 질문에 대한 답변을 찾을 수 있습니다.
 
 ### 스키마에 필드를 추가하려면 어떻게 합니까?
 
@@ -39,15 +43,59 @@ ht-degree: 0%
 
 자세한 내용은 [!DNL Schema Registry] API 안내서의 [리소스 식별](api/getting-started.md#resource-identification) 섹션을 참조하십시오.
 
-### 스키마가 언제 변경 내용 중단을 방지하기 시작합니까?
-
-데이터 집합을 만드는 데 사용된 적이 없거나 [[!DNL Real-Time Customer Profile]](../profile/home.md)에서 사용할 수 있도록 설정된 적이 없는 한 스키마에 변경 내용을 적용할 수 있습니다. 데이터 집합 만들기에 스키마를 사용하거나 [!DNL Real-Time Customer Profile]에서 사용할 수 있도록 설정하면 [스키마 진화](schema/composition.md#evolution)의 규칙이 시스템에 의해 엄격하게 적용됩니다.
-
 ### 긴 필드 유형의 최대 크기는 얼마입니까?
 
 Long 필드 형식은 최대 크기가 53(+1)비트인 정수로 -9007199254740992비트와 9007199254740992 사이의 잠재적 범위를 제공합니다. 이는 JSON의 JavaScript 구현이 긴 정수를 나타내는 방법의 제한 때문입니다.
 
 필드 형식에 대한 자세한 내용은 [XDM 필드 형식 제약 조건](./schema/field-constraints.md)에 대한 문서를 참조하십시오.
+
+### meta:AltId란 무엇이며 어떻게 검색할 수 있습니까?
+
+`meta:altId`은(는) 스키마의 고유 식별자입니다. `meta:altId`은(는) API 호출에 사용할 사용하기 쉬운 참조 ID를 제공합니다. 이 ID는 JSON URI 형식처럼 사용될 때마다 인코딩/디코딩될 필요가 없습니다.
+<!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
+
+<!-- ### How can I generate a sample payload for a schema? -->
+
+<!-- No Answer available.  -->
+<!-- INCOMPLETE ... -->
+
+### 데이터 유형을 만들기 위한 샘플 JSON 표현식을 얻을 수 있습니까?
+
+스키마 레지스트리 API와 Platform UI를 모두 사용하여 데이터 유형을 만들 수 있습니다. 다음 방법에 대한 지침은 설명서를 참조하십시오.
+
+- [API를 사용하여 데이터 유형 만들기](./api/data-types.md#create)
+- [UI를 사용하여 데이터 유형 만들기](./ui/resources/data-types.md#create)
+
+### 맵 데이터 유형에 대한 사용 제한 사항은 무엇입니까?
+
+XDM에서는 이 데이터 유형의 사용에 대해 다음과 같은 제한 사항을 적용합니다.
+
+- 맵 유형은 유형 개체여야 합니다.
+- 맵 유형에는 속성이 정의되지 않아야 합니다(즉, &quot;빈&quot; 개체를 정의함).
+- 맵 유형에는 맵 내에 배치할 수 있는 값을 설명하는 additionalProperties.type 필드가 문자열 또는 정수로 포함되어야 합니다.
+- 다중 엔티티 세그먼테이션은 맵 키를 기준으로만 정의할 수 있으며 값을 기준으로 정의할 수는 없습니다.
+- 계정 대상자에 대해서는 맵이 지원되지 않습니다.
+
+자세한 내용은 [맵 개체에 대한 사용 제한](./ui/fields/map.md#restrictions)을 참조하세요.
+
+>[!NOTE]
+>
+>다중 수준 맵 또는 맵 맵은 지원되지 않습니다.
+
+<!-- You cannot create a complex map object. However, you can define map fields in the Schema Editor. See the guide on [defining map fields in the UI](./ui/fields/map.md) for more information. -->
+
+<!-- ### How do I create a complex map object using APIs? -->
+
+<!-- You cannot create a complex map object. -->
+
+<!-- ### How can I manage schema inheritance in Adobe Experience Platform? -->
+
+<!-- No Answer available.  -->
+<!-- INCOMPLETE ... -->
+
+## 스키마 Identity Management
+
+이 섹션에서는 스키마 내에서 ID를 정의하고 관리하는 것과 관련된 일반적인 질문에 대한 답변을 제공합니다.
 
 ### 스키마에 대한 ID를 정의하려면 어떻게 해야 합니까?
 
@@ -55,7 +103,7 @@ Long 필드 형식은 최대 크기가 53(+1)비트인 정수로 -90071992547409
 
 필드는 API 또는 사용자 인터페이스를 사용하여 ID로 표시할 수 있습니다.
 
-#### API에서 ID 정의
+### API에서 ID 정의
 
 API에서 ID는 ID 설명자를 만들어 설정합니다. ID 설명자는 스키마의 특정 속성이 고유 식별자라는 신호를 보냅니다.
 
@@ -63,7 +111,7 @@ ID 설명자는 /descriptors 끝점에 대한 POST 요청으로 만들어집니�
 
 API에서 ID 설명자를 만드는 방법에 대한 자세한 내용은 [!DNL Schema Registry] 개발자 가이드의 [설명자](api/descriptors.md) 섹션에 있는 문서를 참조하십시오.
 
-#### UI에서 ID 정의
+### UI에서 ID 정의
 
 스키마 편집기에서 스키마를 연 상태에서 ID로 표시할 편집기의 **[!UICONTROL 구조]** 섹션에서 필드를 선택합니다. 오른쪽의 **[!UICONTROL 필드 속성]**&#x200B;에서 **[!UICONTROL ID]** 확인란을 선택합니다.
 
@@ -73,22 +121,49 @@ UI에서 ID를 관리하는 방법에 대한 자세한 내용은 스키마 편�
 
 스키마에 0이나 그 중 하나가 있을 수 있으므로 기본 ID는 선택 사항입니다. 그러나 [!DNL Real-Time Customer Profile]에서 스키마를 사용하려면 스키마에 기본 ID가 있어야 합니다. 자세한 내용은 스키마 편집기 자습서의 [id](./tutorials/create-schema-ui.md#identity-field) 섹션을 참조하십시오.
 
+## 스키마 프로필 지원
+
+이 섹션에서는 실시간 고객 프로필에 사용할 스키마를 활성화하는 방법에 대한 지침을 제공합니다.
+
 ### [!DNL Real-Time Customer Profile]에서 사용할 스키마를 활성화하려면 어떻게 해야 합니까?
 
 스키마는 스키마의 `meta:immutableTags` 특성 내에 &quot;유니온&quot; 태그를 추가하여 [[!DNL Real-Time Customer Profile]](../profile/home.md)에서 사용할 수 있도록 설정되었습니다. API 또는 사용자 인터페이스를 사용하여 [!DNL Profile]에 사용할 스키마를 활성화할 수 있습니다.
 
-#### API를 사용하여 [!DNL Profile]에 대한 기존 스키마 사용
+### API를 사용하여 [!DNL Profile]에 대한 기존 스키마 사용
 
 PATCH을 업데이트하고 `meta:immutableTags` 특성을 &quot;union&quot; 값을 포함하는 배열로 추가하도록 요청하십시오. 업데이트가 성공하면 이제 유니온 태그가 포함된 업데이트된 스키마가 응답에 표시됩니다.
 
 API를 사용하여 [!DNL Real-Time Customer Profile]에서 사용할 스키마를 활성화하는 방법에 대한 자세한 내용은 [!DNL Schema Registry] 개발자 가이드의 [유니온](./api/unions.md) 문서를 참조하십시오.
 
-#### UI를 사용하여 [!DNL Profile]에 대한 기존 스키마 활성화
+### UI를 사용하여 [!DNL Profile]에 대한 기존 스키마 활성화
 
 [!DNL Experience Platform]의 왼쪽 탐색에서 **[!UICONTROL 스키마]**&#x200B;를 선택하고 스키마 목록에서 활성화하려는 스키마 이름을 선택합니다. 그런 다음 편집기 오른쪽의 **[!UICONTROL 스키마 속성]**&#x200B;에서 **[!UICONTROL 프로필]**&#x200B;을 선택하여 켜십시오.
 
-
 자세한 내용은 [!UICONTROL 스키마 편집기] 자습서에서 [실시간 고객 프로필에서 사용](./tutorials/create-schema-ui.md#profile)에 대한 섹션을 참조하십시오.
+
+### Adobe Analytics 데이터를 소스로 가져오면 자동으로 생성된 스키마가 프로필에 대해 활성화됩니까?
+
+실시간 고객 프로필에 대해 스키마가 자동으로 활성화되지 않습니다. 프로필에 대해 활성화된 스키마를 기준으로 프로필에 대한 데이터 세트를 명시적으로 활성화해야 합니다. 실시간 고객 프로필에서 사용할 데이터 세트를 활성화하는 데 필요한 [단계 및 요구 사항](../catalog/datasets/user-guide.md#enable-profile)에 대해 알아보려면 설명서를 참조하십시오.
+
+### 프로필 활성화 스키마를 삭제할 수 있습니까?
+
+실시간 고객 프로필에 대해 활성화된 스키마는 삭제할 수 없습니다. 프로필에 대해 스키마를 활성화하면 비활성화하거나 삭제할 수 없으며 스키마에서 필드를 제거할 수 없습니다. 따라서 프로필에 대해 활성화하기 전에 스키마 구성을 신중하게 계획하고 확인하는 것이 중요합니다. 그러나 프로필 지원 데이터 세트를 삭제할 수 있습니다. 정보를 찾을 수 있는 위치: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+
+>[!IMPORTANT]
+>
+>프로필 활성화 스키마를 제거하려면 XDM 플랫폼 지원 팀의 도움이 필요하며 다음 단계를 수행해야 합니다.
+>
+> 1. 스키마와 연결된 모든 데이터 세트 삭제 (프로필에 대해 활성화됨)
+> 2. 샌드박스에서 프로필 내보내기 스냅숏을 삭제합니다(XDM 플랫폼 지원 팀의 도움이 필요함).
+> 3. 샌드박스에서 스키마 강제 삭제(XDM 플랫폼 지원 팀에서만 수행할 수 있음)
+
+## 스키마 수정 및 제한 사항
+
+이 섹션에서는 스키마 수정 규칙 및 변경 내용 손상 방지에 대한 설명을 제공합니다.
+
+### 스키마가 언제 변경 내용 중단을 방지하기 시작합니까?
+
+데이터 집합을 만드는 데 사용된 적이 없거나 [[!DNL Real-Time Customer Profile]](../profile/home.md)에서 사용할 수 있도록 설정된 적이 없는 한 스키마에 변경 내용을 적용할 수 있습니다. 데이터 집합 만들기에 스키마를 사용하거나 [!DNL Real-Time Customer Profile]에서 사용할 수 있도록 설정하면 [스키마 진화](schema/composition.md#evolution)의 규칙이 시스템에 의해 엄격하게 적용됩니다.
 
 ### 유니온 스키마를 직접 편집할 수 있습니까?
 
@@ -99,6 +174,10 @@ XDM의 유니온에 대한 자세한 내용은 [!DNL Schema Registry] API 안내
 ### 데이터를 스키마로 수집하려면 데이터 파일의 형식을 어떻게 지정해야 합니까?
 
 [!DNL Experience Platform]은(는) [!DNL Parquet] 또는 JSON 형식의 데이터 파일을 허용합니다. 이러한 파일의 내용은 데이터 세트에서 참조하는 스키마를 준수해야 합니다. 데이터 파일 수집 모범 사례에 대한 자세한 내용은 [일괄 처리 수집 개요](../ingestion/home.md)를 참조하십시오.
+
+### 스키마를 읽기 전용 스키마로 변환하려면 어떻게 해야 합니까?
+
+현재 스키마를 읽기 전용으로 변환할 수 없습니다.
 
 ## 오류 및 문제 해결
 
@@ -127,14 +206,14 @@ XDM의 유니온에 대한 자세한 내용은 [!DNL Schema Registry] API 안내
 >
 >검색 중인 리소스 유형에 따라 이 오류는 다음 `type`개의 URI를 사용할 수 있습니다.
 >
->* `http://ns.adobe.com/aep/errors/XDM-1010-404`
->* `http://ns.adobe.com/aep/errors/XDM-1011-404`
->* `http://ns.adobe.com/aep/errors/XDM-1012-404`
->* `http://ns.adobe.com/aep/errors/XDM-1013-404`
->* `http://ns.adobe.com/aep/errors/XDM-1014-404`
->* `http://ns.adobe.com/aep/errors/XDM-1015-404`
->* `http://ns.adobe.com/aep/errors/XDM-1016-404`
->* `http://ns.adobe.com/aep/errors/XDM-1017-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1010-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1011-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1012-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1013-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1014-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1015-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1016-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
 API에서 조회 경로를 구성하는 방법에 대한 자세한 내용은 [!DNL Schema Registry] 개발자 가이드의 [컨테이너](./api/getting-started.md#container) 및 [리소스 식별](api/getting-started.md#resource-identification) 섹션을 참조하십시오.
 
@@ -182,17 +261,17 @@ API에서 조회 경로를 구성하는 방법에 대한 자세한 내용은 [!D
 >
 >네임스페이스 오류의 특정 특성에 따라 이 오류는 다른 메시지 세부 정보와 함께 다음 `type`개의 URI를 사용할 수 있습니다.
 >
->* `http://ns.adobe.com/aep/errors/XDM-1020-400`
->* `http://ns.adobe.com/aep/errors/XDM-1021-400`
->* `http://ns.adobe.com/aep/errors/XDM-1022-400`
->* `http://ns.adobe.com/aep/errors/XDM-1023-400`
->* `http://ns.adobe.com/aep/errors/XDM-1024-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1020-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1021-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1022-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1023-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
 XDM 리소스에 대한 적절한 데이터 구조의 자세한 예는 스키마 레지스트리 API 안내서에서 확인할 수 있습니다.
 
-* [사용자 정의 클래스 만들기](./api/classes.md#create)
-* [사용자 정의 필드 그룹 만들기](./api/field-groups.md#create)
-* [사용자 지정 데이터 유형 만들기](./api/data-types.md#create)
+- [사용자 정의 클래스 만들기](./api/classes.md#create)
+- [사용자 정의 필드 그룹 만들기](./api/field-groups.md#create)
+- [사용자 지정 데이터 유형 만들기](./api/data-types.md#create)
 
 ### 잘못된 Accept 헤더
 
@@ -219,10 +298,10 @@ XDM 리소스에 대한 적절한 데이터 구조의 자세한 예는 스키마
 >
 >사용 중인 끝점에 따라 이 오류는 다음 `type`개의 URI를 사용할 수 있습니다.
 >
->* `http://ns.adobe.com/aep/errors/XDM-1006-400`
->* `http://ns.adobe.com/aep/errors/XDM-1007-400`
->* `http://ns.adobe.com/aep/errors/XDM-1008-400`
->* `http://ns.adobe.com/aep/errors/XDM-1009-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1006-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1007-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1008-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1009-400`
 
 다른 API 요청에 대해 호환되는 Accept 헤더 목록은 [스키마 레지스트리 개발자 안내서](./api/overview.md)의 해당 섹션을 참조하십시오.
 
