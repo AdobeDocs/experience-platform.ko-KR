@@ -123,7 +123,7 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_clientcredentialstype"
 >title="클라이언트 자격 증명 유형"
->abstract="**인코딩된 본문 형식**&#x200B;을 선택하여 요청 본문에 클라이언트 ID와 클라이언트 암호를 포함하거나, **기본 인증**&#x200B;을 선택하여 인증 헤더에 클라이언트 ID와 클라이언트 암호를 포함할 수 있습니다. 설명서의 예 보기"
+>abstract="**인코딩된 본문 형식**&#x200B;을 선택하여 요청 본문에 클라이언트 ID와 클라이언트 암호를 포함하거나 **기본 인증**&#x200B;을 선택하여 인증 헤더에 클라이언트 ID와 클라이언트 암호를 포함할 수 있습니다. 설명서의 예 보기"
 
 #### 전달자 토큰 인증 {#bearer-token-authentication}
 

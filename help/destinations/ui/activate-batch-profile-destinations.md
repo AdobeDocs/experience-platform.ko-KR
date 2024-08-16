@@ -6,7 +6,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: dab3b432cac4ad416576f9d3d35e679d9483c816
 workflow-type: tm+mt
 source-wordcount: '4077'
-ht-degree: 12%
+ht-degree: 13%
 
 ---
 
@@ -48,8 +48,8 @@ ht-degree: 12%
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template_preview"
->title="데이터 세트 폴더 경로 미리 보기"
->abstract="이 창에서 추가한 매크로를 기반으로 저장소 위치에 생성되는 폴더 구조를 미리 봅니다."
+>title="데이터 세트 폴더 경로 미리보기"
+>abstract="이 창에 추가한 매크로를 기반으로 스토리지 위치에서 생성된 폴더 구조를 미리보기합니다."
 
 대상을 내보낼 때 다음 파일 형식이 지원됩니다.
 

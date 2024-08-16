@@ -30,7 +30,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 대상자 포털을 열려면 세분화 섹션 내에서 **[!UICONTROL 찾아보기]** 탭을 선택합니다.
 
-## 대상 목록 {#list}
+## 대상자 목록 {#list}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
@@ -343,7 +343,7 @@ UI 또는 API를 사용하여 예약된 평가에 대해 대상을 활성화할 
 
 ### 페더레이션된 대상자 구성 {#fac}
 
-대상 구성 및 세그먼트 정의 외에 Adobe Federated Audience Composition을 사용하여 기본 데이터를 복사하지 않고 Enterprise 데이터 세트에서 새 대상을 작성하고 이러한 대상을 Adobe Experience Platform Audience Portal에 저장할 수 있습니다. Enterprise Data Warehouse에서 페더레이션된 구성된 대상 데이터를 활용하여 Adobe Experience Platform의 기존 대상을 강화할 수도 있습니다. [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)에 대한 안내서를 읽어 보십시오.
+대상 구성 및 세그먼트 정의 외에 Adobe Federated Audience Composition을 사용하여 기본 데이터를 복사하지 않고 Enterprise 데이터 세트에서 새 대상을 작성하고 이러한 대상을 Adobe Experience Platform Audience Portal에 저장할 수 있습니다. Enterprise Data Warehouse에서 페더레이션된 구성된 대상 데이터를 활용하여 Adobe Experience Platform의 기존 대상을 강화할 수도 있습니다. [Federated Audience Composition](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)에 대한 안내서를 읽어 보십시오.
 
 ![조직의 Federated Audience Composition에서 만든 대상 목록입니다.](../images/ui/overview/federated-audience-composition.png)
 
