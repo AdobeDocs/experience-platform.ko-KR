@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 세트 UI 안내서
 description: Adobe Experience Platform 사용자 인터페이스에서 데이터 세트로 작업할 때 일반적인 작업을 수행하는 방법을 알아봅니다.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
+source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
 workflow-type: tm+mt
-source-wordcount: '3111'
+source-wordcount: '3203'
 ht-degree: 3%
 
 ---
@@ -38,6 +38,22 @@ ht-degree: 3%
 >id="platform_datasets_browse_daysRemaining"
 >title="데이터 세트 만료"
 >abstract="이 열은 대상 데이터 세트가 자동으로 만료되기 전에 남은 일 수를 나타냅니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_datalakeretention"
+>title="데이터 기록 보존"
+>abstract="각 데이터 세트에 대한 현재 보존 정책을 표시합니다. 이 값은 각 데이터 세트의 보존 설정에서 수정할 수 있습니다. ExperienceEvent 데이터 세트에 대한 보존 시간만 설정할 수 있습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_profileretention"
+>title="프로필 유지"
+>abstract="각 데이터 세트에 대한 현재 보존 정책을 표시합니다. 이 값은 각 데이터 세트의 보존 설정에서 수정할 수 있습니다. ExperienceEvent 데이터 세트에 대한 보존 시간만 설정할 수 있습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_datalakesettings_datasetretention"
+>title="데이터 세트 유지"
+>abstract="데이터 레이크 보존은 다른 서비스에서 데이터가 저장되는 기간과 삭제되어야 하는 시기에 대한 규칙을 설정합니다. 이를 통해 규정 준수, 스토리지 비용 관리, 데이터 품질 유지 등의 이점을 누릴 수 있습니다."
+
 
 [!DNL Experience Platform] UI의 왼쪽 탐색에서 **[!UICONTROL 데이터 세트]**&#x200B;를 선택하여 **[!UICONTROL 데이터 세트]** 대시보드를 엽니다. 대시보드에는 조직에서 사용 가능한 모든 데이터 세트가 나열됩니다. 목록에 있는 각 데이터 세트에 대해 이름, 데이터 세트가 준수하는 스키마, 최근 수집 실행 상태 등 세부 정보가 표시됩니다.
 
