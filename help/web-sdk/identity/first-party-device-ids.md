@@ -2,7 +2,7 @@
 title: Web SDK의 자사 디바이스 ID
 description: Adobe Experience Platform Web SDK에 대한 자사 디바이스 ID(FPID)를 구성하는 방법에 대해 알아봅니다.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 9f10d48357b7fb28dc54375a4d077d0a1961a746
+source-git-commit: b35a4316ca4ef82e545a7718f1b986f978003a0e
 workflow-type: tm+mt
 source-wordcount: '1990'
 ht-degree: 0%
@@ -77,7 +77,7 @@ Adobe Experience Cloud 사용 방법에 대한 자세한 내용은 [자사 쿠�
 
 * 서버측 스크립팅 언어를 사용하여 쿠키 생성
 * 사이트의 하위 도메인 또는 다른 끝점에 대한 API 요청에 대한 응답으로 쿠키를 설정합니다.
-* CMS를 사용하여 쿠키 생성
+* CMS을 사용하여 쿠키 생성
 * CDN을 사용하여 쿠키 생성
 
 >[!IMPORTANT]
@@ -153,7 +153,7 @@ Platform Edge Network이 FPID 쿠키의 값을 읽도록 선택하는 경우 `HT
       {
         "id": "123e4567-e89b-42d3-9456-426614174000",
         "authenticatedState": "ambiguous",
-        "primary": true
+        "primary": false
       }
     ],
     "EMAIL": [
