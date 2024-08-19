@@ -3,9 +3,9 @@ title: 사용자 에이전트 클라이언트 힌트
 description: 사용자 에이전트 클라이언트 힌트가 Web SDK에서 작동하는 방식을 알아봅니다. 클라이언트 힌트를 사용하면 웹 사이트 소유자가 사용자 에이전트 문자열에서 사용할 수 있는 동일한 정보의 대부분에 액세스할 수 있지만 보다 개인정보 보호에 특화되었습니다.
 keywords: 사용자 에이전트;클라이언트 힌트; 문자열; 사용자 에이전트 문자열; 낮은 엔트로피; 높은 엔트로피
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1245'
 ht-degree: 3%
 
 ---
@@ -98,13 +98,16 @@ Adobe Experience Cloud 솔루션은 다양한 방식으로 사용자 에이전�
 
 높은 엔트로피 클라이언트 힌트는 플랫폼 버전, 아키텍처, 모델, 비트(64비트 또는 32비트 플랫폼) 또는 전체 운영 체제 버전과 같은 클라이언트 디바이스에 대한 보다 자세한 정보입니다. 이 정보는 잠재적으로 지문 검사에 사용될 수 있습니다.
 
-| HTTP 헤더 | JavaScript | 기본적으로 사용자 에이전트에 포함됨 | 기본적으로 클라이언트 힌트에 포함됨 |
-|---|---|---|---|
-| `Sec-CH-UA-Platform-Version` | `platformVersion` | 예 | 아니요 |
-| `Sec-CH-UA-Arc` | `architecture` | 예 | 아니요 |
-| `Sec-CH-UA-Model` | `model` | 예 | 아니요 |
-| `Sec-CH-UA-Bitness` | `Bitness` | 예 | 아니요 |
-| `Sec-CH-UA-Full-Version-List` | `fullVersionList` | 예 | 아니요 |
+| 속성 | 설명 | HTTP 헤더 | XDM 경로 | 예 | 기본적으로 사용자 에이전트에 포함됨 | 기본적으로 클라이언트 힌트에 포함됨 |
+| --- | --- | --- | --- | --- |---|---|
+| 운영 체제 버전 | 운영 체제의 버전입니다. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | 예 | 아니요 |
+| 아키텍처 | 기본 CPU 아키텍처. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | 예 | 아니요 |
+| 장치 모델 | 사용된 디바이스의 이름입니다. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | 예 | 아니요 |
+| 비트니스 | 기본 CPU 아키텍처가 지원하는 비트 수입니다. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | 예 | 아니요 |
+| 브라우저 공급업체 | 브라우저를 만든 회사입니다. 낮은 엔트로피 힌트 `Sec-CH-UA`도 이 요소를 수집합니다. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` | 예 | 아니요 |
+| 브라우저 이름 | 사용된 브라우저입니다. 낮은 엔트로피 힌트 `Sec-CH-UA`도 이 요소를 수집합니다. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | 예 | 아니요 |
+| 브라우저 버전 | 브라우저의 중요 버전입니다. 낮은 엔트로피 힌트 `Sec-CH-UA`도 이 요소를 수집합니다. 정확한 브라우저 버전은 자동으로 수집되지 않습니다. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | 예 | 아니요 |
+
 
 높은 엔트로피 클라이언트 힌트는 Web SDK에서 기본적으로 비활성화되어 있습니다. 이를 활성화하려면 높은 엔트로피 클라이언트 힌트를 요청하도록 Web SDK를 수동으로 구성해야 합니다.
 

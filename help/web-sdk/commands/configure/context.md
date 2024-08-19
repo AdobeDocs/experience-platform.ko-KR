@@ -2,9 +2,9 @@
 title: 컨텍스트
 description: 장치, 환경 또는 위치 데이터를 자동으로 수집합니다.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '915'
 ht-degree: 7%
 
 ---
@@ -89,21 +89,25 @@ ht-degree: 7%
 | 환경 | 데이터가 수집된 환경입니다. 항상 `browser`(으)로 설정됩니다. | `xdm.implementationDetails.environment` | `browser` |
 
 
-### 높은 엔트로피 클라이언트 힌트
+### 높은 엔트로피 클라이언트 힌트 {#high-entropy-client-hints}
+
+>[!TIP]
+>
+>구성 방법에 대한 자세한 내용은 [사용자 에이전트 클라이언트 힌트](../../use-cases/client-hints.md)에 대한 설명서를 참조하십시오.
 
 `"highEntropyUserAgentHints"` 키워드는 사용자 장치에 대한 자세한 정보를 수집합니다. 이 데이터는 Adobe으로 전송된 요청의 HTTP 헤더에 포함됩니다. 데이터가 Edge 네트워크 내에 도달하면 XDM 개체가 해당 XDM 경로를 채웁니다. `sendEvent` 호출에서 각 XDM 경로를 설정하면 HTTP 헤더 값보다 우선합니다.
 
 [데이터 스트림을 구성](/help/datastreams/configure.md)할 때 장치 조회를 사용하는 경우 장치 조회 값을 위해 데이터를 지울 수 있습니다. 일부 클라이언트 힌트 필드와 장치 조회 필드가 동일한 히트에 있을 수 없습니다.
 
-| 차원 | 설명 | HTTP 헤더 | XDM 경로 | 예제 값 |
+| 속성 | 설명 | HTTP 헤더 | XDM 경로 | 예 |
 | --- | --- | --- | --- | --- |
-| 운영 체제 버전 | 운영 체제의 버전입니다. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | |
-| 아키텍처 | 기본 CPU 아키텍처. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | |
-| 장치 모델 | 사용된 디바이스의 이름입니다. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | |
-| 비트니스 | 기본 CPU 아키텍처가 지원하는 비트 수입니다. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | |
-| 브라우저 공급업체 | 브라우저를 만든 회사입니다. 낮은 엔트로피 힌트 `Sec-CH-UA`도 이 요소를 수집합니다. | `Sec-CH-UA-Full-Version-List` | | |
-| 브라우저 이름 | 사용된 브라우저입니다. 낮은 엔트로피 힌트 `Sec-CH-UA`도 이 요소를 수집합니다. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | |
-| 브라우저 버전 | 브라우저의 중요 버전입니다. 낮은 엔트로피 힌트 `Sec-CH-UA`도 이 요소를 수집합니다. 정확한 브라우저 버전은 자동으로 수집되지 않습니다. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | |
+| 운영 체제 버전 | 운영 체제의 버전입니다. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` |
+| 아키텍처 | 기본 CPU 아키텍처. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` |
+| 장치 모델 | 사용된 디바이스의 이름입니다. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` |
+| 비트니스 | 기본 CPU 아키텍처가 지원하는 비트 수입니다. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` |
+| 브라우저 공급업체 | 브라우저를 만든 회사입니다. 낮은 엔트로피 힌트 `Sec-CH-UA`도 이 요소를 수집합니다. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` |
+| 브라우저 이름 | 사용된 브라우저입니다. 낮은 엔트로피 힌트 `Sec-CH-UA`도 이 요소를 수집합니다. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
+| 브라우저 버전 | 브라우저의 중요 버전입니다. 낮은 엔트로피 힌트 `Sec-CH-UA`도 이 요소를 수집합니다. 정확한 브라우저 버전은 자동으로 수집되지 않습니다. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
 {style="table-layout:auto"}
 
