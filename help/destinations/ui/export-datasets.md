@@ -3,9 +3,9 @@ title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 938e4875318f07b296fc884487ca1c664be659ef
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1836'
 ht-degree: 4%
 
 ---
@@ -56,10 +56,10 @@ Experience Platform API를 사용하여 데이터 세트를 내보낼 수도 있
   <tr>
     <td>Customer Journey Analytics</td>
     <td>모두</td>
-    <td> 소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 생성된 프로필 및 경험 이벤트 데이터 세트입니다.  <br> <p> <b>가용성에 대한 참고 사항:</b> 클라우드로 데이터 세트를 내보내는 기능은 릴리스의 제한된 테스트 단계에 있으며 사용자 환경에서 아직 사용하지 못할 수 있습니다. 이 메모는 기능을 일반적으로 사용할 수 있을 때 제거됩니다. Customer Journey Analytics 릴리스 프로세스에 대한 정보는 <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Customer Journey Analytics 기능 릴리스</a>를 참조하십시오. </p> </td>
+    <td> 소스, Web SDK, Mobile SDK, Analytics Data Connector 및 Audience Manager을 통해 데이터를 수집하거나 수집한 후 Experience Platform UI에서 생성된 프로필 및 경험 이벤트 데이터 세트입니다.</td>
   </tr>
   <tr>
-    <td>데이터 Distiller</td>
+    <td>Data Distiller</td>
     <td>Data Distiller (추가 기능)</td>
     <td>쿼리 서비스를 통해 만들어진 파생 데이터 세트입니다.</td>
   </tr>
@@ -215,7 +215,7 @@ Experience Platform은 지정한 저장소 위치에 내보낸 데이터 세트 
 
    >[!NOTE]
    >
-   >이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
+이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
 
    ![오른쪽 레일에서 데이터 집합 제거 컨트롤을 표시하는 데이터 집합 제거 대화 상자.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
