@@ -2,9 +2,9 @@
 title: ECID 액세스
 description: 데이터 준비 또는 태그에서 Experience Cloud ID에 액세스하는 방법 알아보기
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: e01dfcf3cccea589083a23171f4b8d9ecad58233
+source-git-commit: e53ae6053a4b00e7e75242b95496c6795953005a
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '283'
 ht-degree: 1%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 1%
 [데이터 수집을 위한 데이터 준비](../../../../datastreams/data-prep.md)(권장) 또는 태그를 통해 ECID에 액세스할 수 있습니다.
 
 ## 데이터 준비를 통해 ECID에 액세스(기본 방법) {#accessing-ecid-data-prep}
+
+이 메서드는 [데이터 수집을 위한 데이터 준비](../../../../datastreams/data-prep.md)를 사용하여 `ECID`에 대한 사용자 지정 매핑을 구성합니다.
+
+이 기능을 사용하는 방법에 대해 알아보려면 [데이터 수집을 위한 데이터 준비](../../../../datastreams/data-prep.md) 설명서를 참조하십시오.
 
 ID 맵에 ECID를 보유하는 것 외에도 사용자 지정 XDM 필드에서 ECID를 설정하려면 `source`을(를) 다음 경로로 설정합니다.
 
