@@ -2,7 +2,7 @@
 title: 개인화에 Web SDK와 함께 Adobe Target 사용
 description: Adobe Target을 사용하여 Experience Platform Web SDK를 사용하여 개인화된 콘텐츠를 렌더링하는 방법에 대해 알아봅니다
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
+source-git-commit: 116db0808835c548c21635148b81b3e884b5cebd
 workflow-type: tm+mt
 source-wordcount: '1364'
 ht-degree: 1%
@@ -197,17 +197,16 @@ alloy("sendEvent",
 ```js
 alloy("sendEvent", {
     "renderDecisions": true,
+    "xdm": { /* Experience Event XDM data */ },
     "data": {
-        "xdm": { // Experience Event XDM data },
-            "__adobe": {
-                "target": {
-                    " __save": true|false,
-                    //defaults to true if omitted 
-                    "profile.gender": "female",
-                    "profile.age": 30,
-                    "entity.name": "T-shirt",
-                    "entity.id": "1234"
-                }
+        "__adobe": {
+            "target": {
+                " __save": true|false,
+                //defaults to true if omitted
+                "profile.gender": "female",
+                "profile.age": 30,
+                "entity.name": "T-shirt",
+                "entity.id": "1234"
             }
         }
     }
