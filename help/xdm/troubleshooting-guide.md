@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM 시스템 문제 해결 안내서
 description: 일반적인 API 오류를 해결하는 단계를 포함하여 XDM(Experience Data Model)에 대해 자주 묻는 질문에 대한 답변을 찾아보십시오.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 83d3d31b2d24fd01876ff7b0f1c03a5670ed3845
+source-git-commit: ae98a185fdfad5b6ba787e78ad17296928216d08
 workflow-type: tm+mt
-source-wordcount: '2446'
+source-wordcount: '2390'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Long 필드 형식은 최대 크기가 53(+1)비트인 정수로 -90071992547409
 
 필드 형식에 대한 자세한 내용은 [XDM 필드 형식 제약 조건](./schema/field-constraints.md)에 대한 문서를 참조하십시오.
 
-### meta:AltId란 무엇이며 어떻게 검색할 수 있습니까?
+### meta:AltId란?
 
 `meta:altId`은(는) 스키마의 고유 식별자입니다. `meta:altId`은(는) API 호출에 사용할 사용하기 쉬운 참조 ID를 제공합니다. 이 ID는 JSON URI 형식처럼 사용될 때마다 인코딩/디코딩될 필요가 없습니다.
 <!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
@@ -58,13 +58,6 @@ Long 필드 형식은 최대 크기가 53(+1)비트인 정수로 -90071992547409
 
 <!-- No Answer available.  -->
 <!-- INCOMPLETE ... -->
-
-### 데이터 유형을 만들기 위한 샘플 JSON 표현식을 얻을 수 있습니까?
-
-스키마 레지스트리 API와 Platform UI를 모두 사용하여 데이터 유형을 만들 수 있습니다. 다음 방법에 대한 지침은 설명서를 참조하십시오.
-
-- [API를 사용하여 데이터 유형 만들기](./api/data-types.md#create)
-- [UI를 사용하여 데이터 유형 만들기](./ui/resources/data-types.md#create)
 
 ### 맵 데이터 유형에 대한 사용 제한 사항은 무엇입니까?
 
