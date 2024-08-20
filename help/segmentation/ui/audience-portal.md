@@ -2,9 +2,9 @@
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
+source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
 workflow-type: tm+mt
-source-wordcount: '3826'
+source-wordcount: '4125'
 ht-degree: 3%
 
 ---
@@ -254,17 +254,39 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 **[!UICONTROL 속성 편집]**&#x200B;을 선택하면 이름, 설명 및 태그와 같은 대상자의 기본 세부 정보를 편집할 수 있습니다.
 
-![](../images/ui/audience-portal/audience-details-edit-properties.png)
+![대상 세부 정보 페이지에서 속성 편집 단추가 강조 표시됩니다.](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### 대상자 합계 {#audience-total}
 
-**[!UICONTROL 대상자 합계]** 섹션에는 대상자에 적합한 총 프로필 수가 표시됩니다.
+플랫폼에서 생성한 대상 및 컴포지션의 경우 **[!UICONTROL 대상 합계]** 섹션에는 해당 대상에 적합한 총 프로필 수가 표시됩니다.
 
 >[!NOTE]
 >
 >내보내기 작업이 완료된 후 대상 총 개수를 업데이트하는 데 최대 30분이 걸릴 수 있습니다.
 
 예상 값은 해당 날짜의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다. 프로필 스토어에 엔티티가 100만 개 미만인 경우 전체 데이터 세트가 사용됩니다. 엔티티가 1~2천만 개인 경우 100만 엔티티가 사용되며, 엔티티가 2,000만 개를 초과하는 경우 전체 엔티티의 5%가 사용됩니다. 예상 값 생성에 대한 자세한 내용은 대상 만들기 자습서의 [예상 값 생성 섹션](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)에서 확인할 수 있습니다.
+
+### 수집 세부 정보 {#ingestion-details}
+
+원본이 **[!UICONTROL 사용자 지정 업로드]**&#x200B;인 대상의 경우 **[!UICONTROL 수집 세부 정보]** 섹션에는 프로필 총계와 외부에서 생성된 대상자가 수집된 데이터 세트에 대한 세부 정보가 모두 표시됩니다.
+
+![대상자 세부 정보 페이지에 대한 수집 세부 정보 섹션이 표시됩니다.](../images/ui/audience-portal/audience-details-ingestion-details.png)
+
+| 속성 | 설명 |
+| -------- | ----------- |
+| 프로필 개수 | 대상자에 적합한 총 프로필 수입니다. |
+| 데이터 세트 이름 | 대상자가 수집된 데이터 세트의 이름입니다. 데이터 세트에 대한 자세한 내용을 보려면 데이터 세트 이름을 선택할 수 있습니다. 데이터 세트에 대한 자세한 내용은 [데이터 세트 UI 안내서](../../catalog/datasets/user-guide.md)를 참조하세요. |
+| 데이터 세트 일괄 처리 | 대상자가 수집된 데이터 세트의 ID입니다. 배치에 대한 자세한 내용을 보려면 배치의 ID를 선택할 수 있습니다. 배치에 대해 자세히 알아보려면 [데이터 수집 모니터링 가이드](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)를 읽어 보십시오. |
+| 프로필 일괄 처리 | 플랫폼에서 프로필을 만든 배치의 ID입니다. 배치에 대한 자세한 내용을 보려면 배치의 ID를 선택할 수 있습니다. 배치에 대해 자세히 알아보려면 [데이터 수집 모니터링 가이드](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)를 읽어 보십시오. |
+| 스키마 | 대상자가 속한 스키마의 이름입니다. 스키마 이름을 선택하여 스키마 구조에 대한 정보를 보고 데이터 사용 레이블을 적용할 수 있습니다. 자세한 내용은 [스키마 가이드의 데이터 사용 레이블 관리](../../xdm/tutorials/labels.md)를 참조하십시오. |
+| 레코드 수집됨 | 데이터 세트에 수집된 레코드 수입니다. |
+| 레코드 실패 | 데이터 세트에 수집할 수 없는 레코드 수입니다. |
+| 새 프로필 조각 | 생성된 새 프로필 수입니다. |
+| 기존 프로필 조각 | 업데이트된 기존 프로필의 수입니다. |
+
+>[!NOTE]
+>
+>데이터 사용 레이블을 스키마에 적용하는 것이 좋습니다. 대상자에 데이터 사용 레이블을 직접 적용할 수 **없습니다**.
 
 ### 활성화된 대상 {#activated-destinations}
 
