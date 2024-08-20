@@ -3,7 +3,7 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: dab3b432cac4ad416576f9d3d35e679d9483c816
+source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
 workflow-type: tm+mt
 source-wordcount: '4077'
 ht-degree: 13%
@@ -346,7 +346,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
         "id": "johndoe_1@example.com"
       },
       {
-        "id": "johndoe_2@example.com"
+        "id": "doejohn_1@example.com"
       }
     ]
   },
@@ -377,10 +377,10 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_1@example.com"
+        "id": "johndoe_2@example.com"
       },
       {
-        "id": "johndoe_2@example.com"
+        "id": "doejohn_2@example.com"
       }
     ]
   },
@@ -420,8 +420,8 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
 | 이메일* | personalEmail | 이름 | 성 |
 |---|---|---|---|
-| johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
+| doejohn_2@example.com | johndoe@example.com | John | D |
 
 ### 중복 제거 사용 사례 3: 단일 프로필 속성에 따른 중복 제거 {#deduplication-use-case-3}
 
