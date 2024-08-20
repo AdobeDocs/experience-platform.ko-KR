@@ -5,9 +5,9 @@ title: 스키마 편집기를 사용하여 스키마 만들기
 type: Tutorial
 description: 이 튜토리얼에서는 Experience Platform 내의 스키마 편집기를 사용하여 스키마를 만드는 단계를 설명합니다.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '4813'
+source-wordcount: '4922'
 ht-degree: 1%
 
 ---
@@ -46,14 +46,23 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 
 ![[!UICONTROL 스키마 만들기]가 강조 표시된 [!UICONTROL 스키마] 작업 영역 [!UICONTROL 찾아보기] 탭](../images/tutorials/create-schema/create-schema-button.png)
 
+[!UICONTROL 스키마 만들기] 대화 상자가 나타납니다. 이 대화 상자에서 필드와 필드 그룹을 추가하여 스키마를 수동으로 만들도록 선택하거나 CSV 파일을 업로드하고 ML 알고리즘을 사용하여 스키마를 생성할 수 있습니다. 대화 상자에서 스키마 생성 워크플로우를 선택합니다.
+
+![워크플로 옵션이 있는 스키마 만들기 대화 상자 및 강조 표시된 항목을 선택합니다.](../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### 수동 또는 ML 지원 스키마 만들기 {#manual-or-assisted}
+
+ML 알고리즘을 사용하여 업로드된 파일을 기반으로 스키마 구조를 추천하는 방법은 [머신 러닝 지원 스키마 만들기 안내서](../ui/ml-assisted-schema-creation.md)를 참조하십시오. 이 UI 안내서는 수동 만들기 워크플로에 중점을 둡니다.
+
+### 기본 클래스 선택 {#choose-a-class}
+
 [!UICONTROL 스키마 만들기] 워크플로가 나타납니다. 그런 다음 스키마의 기본 클래스를 선택합니다. [!UICONTROL XDM 개인 프로필] 및 [!UICONTROL XDM ExperienceEvent]의 핵심 클래스 또는 [!UICONTROL 기타] 클래스가 목적에 맞지 않으면 선택할 수 있습니다. [!UICONTROL 기타] 클래스 옵션을 사용하면 [새 클래스를 만들거나](#create-new-class) 기존 다른 클래스에서 선택할 수 있습니다.
 
-이러한 클래스에 대한 자세한 내용은 [XDM 개별 프로필](../classes/individual-profile.md) 및 [XDM ExperienceEvent](../classes/experienceevent.md) 설명서를 참조하십시오. 이 자습서에서는 **[!UICONTROL XDM 개별 프로필]**, **[!UICONTROL 다음]**&#x200B;을 선택하십시오.
-
-<!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
-
+이러한 클래스에 대한 자세한 내용은 [[!UICONTROL XDM 개별 프로필]](../classes/individual-profile.md) 및 [[!UICONTROL XDM ExperienceEvent]](../classes/experienceevent.md) 설명서를 참조하십시오. 이 자습서에서는 **[!UICONTROL XDM 개별 프로필]**, **[!UICONTROL 다음]**&#x200B;을 선택하십시오.
 
 ![XDM 개별 프로필 ] 옵션 및 [!UICONTROL 다음]이 강조 표시된 [!UICONTROL 스키마 만들기] 워크플로우입니다.](../images/tutorials/create-schema/individual-profile-base-class.png)[!UICONTROL 
+
+### 이름 및 검토 {#name-and-review}
 
 클래스를 선택하면 [!UICONTROL 이름 및 검토] 섹션이 나타납니다. 이 섹션에서는 스키마를 식별하기 위한 이름과 설명을 제공합니다. 스키마의 이름을 결정할 때 고려해야 할 몇 가지 중요한 사항이 있습니다.
 
@@ -68,6 +77,8 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 [!DNL Schema
 텍스트 필드에 사용자에게 친숙한 [!UICONTROL 스키마 표시 이름]을(를) 입력하십시오. 그런 다음 스키마를 식별하는 데 도움이 되는 적절한 설명을 입력합니다. 스키마 구조를 검토하고 설정이 마음에 들면 **[!UICONTROL 완료]**&#x200B;를 선택하여 스키마를 만듭니다.
 
 [!UICONTROL 스키마 표시 이름], [!UICONTROL 설명] 및 [!UICONTROL 마침]이 강조 표시된 [!UICONTROL 스키마 만들기] 워크플로의 [!UICONTROL 이름 및 검토] 섹션.](../images/ui/resources/schemas/name-and-review.png)![
+
+### 스키마 구성 {#compose-your-schema}
 
 [!DNL Schema Editor]이(가) 나타납니다. 스키마를 구성할 캔버스입니다. 편집기에 도착하면 캔버스의 **[!UICONTROL 구조]** 섹션에 선택한 기본 클래스에 포함된 표준 필드와 함께 자체 제목이 지정된 스키마가 자동으로 만들어집니다. 스키마에 할당된 클래스는 **[!UICONTROL 컴포지션]** 섹션의 **[!UICONTROL 클래스]** 아래에 나열됩니다.
 

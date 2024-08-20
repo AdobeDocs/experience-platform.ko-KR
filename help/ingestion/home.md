@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 수집 개요
 description: 이 문서에서는 각 개요 설명서에 대한 링크를 통해 데이터를 Platform에 수집하는 3가지 주요 방법을 소개합니다.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: cde8db1f75cf83451e240f32a877b9d6d26a0e18
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,12 @@ Adobe Experience Platform은 마케터가 고객의 행동을 더 잘 이해할 
 Source 연결은 다른 Adobe 애플리케이션(Adobe Analytics 및 Adobe Audience Manager 등), 타사 클라우드 저장소 소스(예: [!DNL Azure Blob], [!DNL Amazon] S3, FTP 서버 및 SFTP 서버), 타사 CRM 시스템(예: [!DNL Microsoft Dynamics] 및 [!DNL Salesforce])에서 데이터를 수집하도록 구성할 수 있습니다.
 
 자세한 내용은 [소스 개요](../sources/home.md)를 참조하십시오.
+
+### ML 지원 스키마 만들기 {#ml-assisted-schema-creation}
+
+이제 새로운 데이터 소스를 빠르게 통합하기 위해 머신 러닝 알고리즘을 사용하여 샘플 데이터에서 스키마를 생성할 수 있습니다. 이러한 자동화는 정확한 스키마 생성을 단순화하고 오류를 줄이며 데이터 수집에서 분석 및 통찰력에 이르는 프로세스의 속도를 높입니다.
+
+이 워크플로에 대한 자세한 내용은 [ML 지원 스키마 만들기 안내서](../xdm/ui/ml-assisted-schema-creation.md)를 참조하십시오.
 
 ## 다음 단계 및 추가 리소스
 

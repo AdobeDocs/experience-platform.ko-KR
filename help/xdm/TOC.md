@@ -5,9 +5,9 @@ breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: Experience Platform 내의 경험 데이터 모델(XDM) 시스템 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법을 알아봅니다.
 feature: Schemas
 role: Developer
-source-git-commit: 948a86f78ca6a6305adaf3232ca98a5437d701a6
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '637'
 ht-degree: 45%
 
 ---
@@ -205,6 +205,7 @@ ht-degree: 45%
       * [관계 필드](./ui/fields/relationship.md)
       * [필수 필드](./ui/fields/required.md)
    * [필드 기반 워크플로](./ui/field-based-workflows.md)
+   * [머신 러닝 지원 스키마 생성](./ui/ml-assisted-schema-creation.md)
    * [샘플 XDM 데이터 생성](./ui/sample.md)
    * [XDM 스키마 내보내기](./ui/export.md)
 * 스키마 레지스트리 API {#api}

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법의 기본 사항에 대해 알아봅니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '3736'
-ht-degree: 2%
+source-wordcount: '3861'
+ht-degree: 1%
 
 ---
 
@@ -29,13 +29,23 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->이 섹션에서는 UI에서 새 스키마를 수동으로 만드는 방법을 다룹니다. CSV 데이터를 플랫폼으로 수집하는 경우 직접 스키마를 수동으로 만들지 않아도 해당 데이터를 AI가 생성한 권장 사항에 의해 생성된 XDM 스키마에 매핑](../../../ingestion/tutorials/map-csv/recommendations.md)(현재 베타 버전)하도록 [선택할 수 있습니다.
+>이 섹션에서는 UI에서 새 스키마를 수동으로 만드는 방법을 다룹니다. CSV 데이터를 플랫폼으로 수집하는 경우 ML(기계 학습) 알고리즘을 사용하여 **샘플 CSV 데이터에서 스키마를 생성**&#x200B;할 수 있습니다. 이 워크플로는 데이터 형식과 일치하며 CSV 파일의 구조 및 콘텐츠를 기반으로 새 스키마를 자동으로 만듭니다. 이 워크플로에 대한 자세한 내용은 [ML 지원 스키마 만들기 안내서](../ml-assisted-schema-creation.md)를 참조하십시오.
 
 [!UICONTROL 스키마] 작업 영역의 오른쪽 상단에서 **[!UICONTROL 스키마 만들기]**&#x200B;를 선택합니다.
 
 ![[!UICONTROL 스키마 만들기]가 강조 표시된 스키마 작업 영역](../../images/ui/resources/schemas/create-schema.png)
 
-[!UICONTROL 스키마 만들기] 워크플로가 나타납니다. **[!UICONTROL 개인 프로필]**, **[!UICONTROL 경험 이벤트]** 또는 **[!UICONTROL 기타]**&#x200B;를 선택한 후 **[!UICONTROL 다음]**&#x200B;을 선택하여 스키마의 기본 클래스를 선택하여 선택을 확인할 수 있습니다. 이러한 클래스에 대한 자세한 내용은 [XDM 개별 프로필](../../classes/individual-profile.md) 및 [XDM ExperienceEvent](../../classes/experienceevent.md) 설명서를 참조하십시오.
+[!UICONTROL 스키마 만들기] 대화 상자가 나타납니다. 이 대화 상자에서 필드와 필드 그룹을 추가하여 스키마를 수동으로 만들도록 선택하거나 CSV 파일을 업로드하고 ML 알고리즘을 사용하여 스키마를 생성할 수 있습니다. 대화 상자에서 스키마 생성 워크플로우를 선택합니다.
+
+![워크플로 옵션이 있는 스키마 만들기 대화 상자 및 강조 표시된 항목을 선택합니다.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### 수동 또는 ML 지원 스키마 만들기 {#manual-or-assisted}
+
+ML 알고리즘을 사용하여 csv 파일을 기반으로 스키마 구조를 추천하는 방법은 [머신 러닝 지원 스키마 만들기 안내서](../ml-assisted-schema-creation.md)를 참조하십시오. 이 UI 안내서는 수동 만들기 워크플로에 중점을 둡니다.
+
+### 수동 스키마 생성 {#manual-creation}
+
+[!UICONTROL 스키마 만들기] 워크플로가 나타납니다. **[!UICONTROL 개인 프로필]**, **[!UICONTROL 경험 이벤트]** 또는 **[!UICONTROL 기타]**&#x200B;를 선택한 후 **[!UICONTROL 다음]**&#x200B;을 선택하여 스키마의 기본 클래스를 선택하여 선택을 확인할 수 있습니다. 이러한 클래스에 대한 자세한 내용은 [[!UICONTROL XDM 개별 프로필]](../../classes/individual-profile.md) 및 [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) 설명서를 참조하십시오.
 
 ![세 개의 클래스 옵션과 [!UICONTROL 다음]이 강조 표시된 [!UICONTROL 스키마 만들기] 워크플로입니다.](../../images/ui/resources/schemas/schema-class-options.png)
 

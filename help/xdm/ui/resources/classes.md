@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 클래스 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 클래스를 만들고 편집하는 방법을 알아봅니다.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1560'
 ht-degree: 5%
 
 ---
@@ -60,7 +60,15 @@ Platform UI에서 클래스를 만드는 방법에는 두 가지가 있습니다
 
 ### 클래스 만들기 또는 편집 {#create-or-edit}
 
-또는 **[!UICONTROL 스키마 만들기]**&#x200B;를 선택하면 [!UICONTROL 스키마 만들기] 워크플로가 나타납니다. [!UICONTROL 스키마 세부 정보] 섹션에서 **[!UICONTROL 기타]**&#x200B;를 선택합니다. 사용 가능한 클래스 목록이 나타납니다. 여기에서 새 클래스의 기반이 되는 기존 클래스를 찾아보고 필터링할 수 있습니다.
+또는 스키마를 수동으로 만들도록 선택하는 경우 해당 워크플로우의 일부로 기존 클래스를 만들거나 편집할 수 있습니다. 표시되는 [!UICONTROL 스키마 만들기] 대화 상자에서 **[!UICONTROL 스키마 만들기]**, **[!UICONTROL 수동]**&#x200B;을 차례로 선택합니다.
+
+>[!NOTE]
+>
+>ML 지원 스키마 생성 워크플로우를 사용하는 경우, 파일을 업로드하고 ML 알고리즘을 사용하여 권장 스키마를 생성할 수 있습니다. 해당 스키마 생성 워크플로우에서는 스키마에 대한 기본 클래스를 지정할 필요가 없습니다. ML에서 csv 파일을 기반으로 스키마 구조를 권장하는 방법에 대해 알아보려면 [기계 학습 지원 스키마 만들기 안내서](../ml-assisted-schema-creation.md)를 참조하십시오.
+
+![워크플로 옵션이 있는 스키마 만들기 대화 상자 및 강조 표시된 항목을 선택합니다.](../../images/ui/resources/classes/manually-create-a-schema.png)
+
+스키마 생성 워크플로가 나타납니다. [!UICONTROL 스키마 세부 정보] 섹션에서 **[!UICONTROL 기타]**&#x200B;를 선택합니다. 사용 가능한 클래스 목록이 나타납니다. 여기에서 새 클래스의 기반이 되는 기존 클래스를 찾아보고 필터링할 수 있습니다.
 
 >[!NOTE]
 >

@@ -5,9 +5,9 @@ title: CSV 파일을 기존 XDM 스키마에 매핑
 type: Tutorial
 description: 이 자습서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 CSV 파일을 기존 XDM 스키마에 매핑하는 방법을 다룹니다.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '1018'
 ht-degree: 1%
 
 ---
@@ -121,3 +121,7 @@ CSV 파일이 매핑되고 만들어지면 이 파일을 통해 수집되는 데
 ## 다음 단계
 
 이 자습서에 따라 플랫 CSV 파일을 XDM 스키마에 매핑하고 [!DNL Platform]에 수집했습니다. 이제 [!DNL Real-Time Customer Profile]과(와) 같은 다운스트림 [!DNL Platform] 서비스에서 이 데이터를 사용할 수 있습니다. 자세한 내용은 [[!DNL Real-Time Customer Profile]](../../../profile/home.md)에 대한 개요를 참조하십시오.
+
+>[!TIP]
+>
+>ML(기계 학습) 알고리즘을 사용하여 스키마 작업 영역의 **샘플 데이터에서 스키마를 생성**&#x200B;할 수도 있습니다. 이 워크플로우는 파일의 구조 및 콘텐츠를 기반으로 새 스키마를 자동으로 만들어 스키마가 데이터의 형식과 일치하도록 합니다. 이를 통해 복잡한 대규모 데이터 세트의 구조, 필드 및 데이터 유형을 정의할 때 시간을 절약하고 정확도를 높일 수 있습니다. 이 워크플로에 대한 자세한 내용은 [ML 지원 스키마 만들기 안내서](../../../xdm/ui/ml-assisted-schema-creation.md)를 참조하십시오.

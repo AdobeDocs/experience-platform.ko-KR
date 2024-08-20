@@ -2,9 +2,9 @@
 title: AI가 생성한 Recommendations을 사용하여 XDM 스키마에 CSV 파일 매핑
 description: 이 튜토리얼에서는 AI가 생성한 권장 사항을 사용하여 CSV 파일을 XDM 스키마에 매핑하는 방법을 다룹니다.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: cbebee894d68f60f82e1154f41dcecc76c706a3b
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1172'
 ht-degree: 1%
 
 ---
@@ -101,3 +101,5 @@ CSV 필드는 ML 모델을 사용하여 기존 XDM 필드 그룹에 자동으로
 이 안내서에서는 AI가 생성한 권장 사항을 사용하여 XDM 스키마에 CSV 파일을 매핑하여 일괄 수집을 통해 해당 데이터를 플랫폼으로 가져오는 방법에 대해 설명합니다.
 
 기존 스키마에 CSV 파일 매핑에 대한 단계는 [기존 스키마 매핑 워크플로](./existing-schema.md)를 참조하십시오. 미리 만들어진 소스 연결을 통해 실시간으로 플랫폼으로 데이터를 스트리밍하는 방법에 대한 자세한 내용은 [소스 개요](../../../sources/home.md)를 참조하십시오.
+
+ML(기계 학습) 알고리즘을 사용하여 **샘플 CSV 데이터에서 스키마를 생성**&#x200B;할 수도 있습니다. 이 워크플로우는 CSV 파일의 구조 및 콘텐츠를 기반으로 새 스키마를 자동으로 만듭니다. 새로 만든 이 스키마는 데이터의 형식과 일치하여 시간을 절약하고 복잡한 대규모 데이터 세트의 구조, 필드 및 데이터 유형을 정의할 때 정확도를 높입니다. 이 워크플로에 대한 자세한 내용은 [ML 지원 스키마 만들기 안내서](../../../xdm/ui/ml-assisted-schema-creation.md)를 참조하십시오.
