@@ -2,9 +2,9 @@
 title: ID 서비스에서 삭제
 description: 이 문서에서는 Experience Platform에서 ID 데이터를 삭제하는 데 사용할 수 있는 다양한 메커니즘에 대한 개요를 제공하고 ID 그래프가 영향을 받는 방법에 대한 명확한 설명을 제공합니다.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1198'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ID 그래프는 실시간 고객 프로필에서 고객 속성 및 행동에 대
 
 * [ID 서비스](../home.md): 장치 및 시스템 간에 ID를 연결하여 개별 고객 및 개별 고객의 행동을 더 잘 볼 수 있습니다.
    * [ID 그래프](./identity-graph-viewer.md): ID 그래프는 특정 고객에 대한 서로 다른 ID 간의 관계 맵으로, 고객이 서로 다른 채널에서 브랜드와 상호 작용하는 방식을 시각적으로 보여 줍니다.
-   * [ID 네임스페이스](./namespaces.md): ID 네임스페이스는 ID와 관련된 컨텍스트의 지표 역할을 하는 ID 서비스의 구성 요소입니다. 예를 들어 &quot;name<span>@email.com&quot; 값을 이메일 주소로 구별하거나 &quot;443522&quot; 값을 숫자 CRM ID로 구별합니다.
+   * [ID 네임스페이스](./namespaces.md): ID 네임스페이스는 ID와 관련된 컨텍스트의 지표 역할을 하는 ID 서비스의 구성 요소입니다. 예를 들어 &quot;name<span>@email.com&quot; 값을 이메일 주소로 구별하거나 &quot;443522&quot; 값을 숫자 CRMID로 구별합니다.
 * [카탈로그 서비스](../../catalog/home.md): 데이터 레이크 내의 데이터 계보, 메타데이터, 파일 설명, 디렉터리 및 데이터 집합을 살펴봅니다.
 * [데이터 위생](../../hygiene/home.md): 자동화된 데이터 세트 만료를 예약하거나 하나의 데이터 세트 또는 모든 데이터 세트에서 개별 레코드를 삭제하여 저장된 소비자 데이터를 관리합니다.
 * [Adobe Experience Platform Privacy Service](../../privacy-service/home.md): Adobe Experience Cloud 애플리케이션에서 개인 데이터에 액세스하거나, 판매를 거부하거나, 삭제하기 위한 고객 요청을 관리합니다.

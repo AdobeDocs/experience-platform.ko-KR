@@ -3,9 +3,9 @@ title: ID 그래프 연결 규칙 구성 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: e3568aa925661f4f519daf6572fd2df40b163cb5
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1357'
 ht-degree: 2%
 
 ---
@@ -76,6 +76,7 @@ ID 설정 도구를 사용하여 고유한 네임스페이스를 지정하고 �
 >
 >* 사전 구현 프로세스 중에 시스템이 Experience Platform에게 전송할 인증된 이벤트에 항상 CRMID와 같은 개인 식별자가 포함되어 있는지 확인해야 합니다.
 >* 구현 중에 우선 순위가 가장 높은 고유한 네임스페이스가 항상 모든 프로필에 있는지 확인해야 합니다. 모든 프로필에 우선 순위가 가장 높은 고유한 네임스페이스가 포함되어 있는지 확인하여 해결된 그래프 시나리오의 예는 [부록](#appendix)을 참조하십시오.
+>* [Adobe Analytics 소스 커넥터](../../sources/tutorials/ui/create/adobe-applications/analytics.md)를 사용하여 데이터를 수집하는 경우 ID 서비스가 AAID를 차단하므로 ECID에 AAID보다 높은 우선 순위를 지정해야 합니다. ECID 우선 순위를 지정하여 Identity Service에 인증되지 않은 이벤트를 AAID 대신 ECID에 저장하도록 지시할 수 있습니다.
 
 이 시점에는 다음 항목이 있어야 합니다.
 

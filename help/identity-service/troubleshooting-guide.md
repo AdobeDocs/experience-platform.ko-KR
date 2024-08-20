@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ID 서비스 문제 해결 안내서
 description: 이 문서에서는 Adobe Experience Platform ID 서비스에 대해 자주 묻는 질문에 대한 답변과 일반적인 오류에 대한 문제 해결 안내서를 제공합니다.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '2166'
+source-wordcount: '2165'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ID 데이터는 개인을 식별하는 데 사용할 수 있는 모든 데이터
 
 ## 알려진 ID 및 익명 ID
 
-알려진 ID는 단독으로 또는 다른 정보와 함께 사용하여 개인을 식별, 연락 또는 위치를 파악할 수 있는 ID 값을 의미합니다. 알려진 ID들의 예들은 이메일 주소들, 전화 번호들, 및 CRM ID들을 포함할 수 있다.
+알려진 ID는 단독으로 또는 다른 정보와 함께 사용하여 개인을 식별, 연락 또는 위치를 파악할 수 있는 ID 값을 의미합니다. 알려진 ID들의 예들은 이메일 주소들, 전화 번호들, 및 CRMID들을 포함할 수 있다.
 
 익명 ID는 개인(예: 쿠키 ID)을 식별, 연락 또는 찾기 위해 자체 또는 다른 정보와 함께 사용할 수 없는 ID 값을 의미합니다.
 

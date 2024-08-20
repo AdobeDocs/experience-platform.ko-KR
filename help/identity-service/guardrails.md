@@ -3,9 +3,9 @@ keywords: Experience Platform;ID;ID 서비스;문제 해결;보호 기능;지침
 title: ID 서비스 보호 기능
 description: 이 문서에서는 ID 그래프 사용을 최적화하는 데 도움이 되는 ID 서비스 데이터의 사용 및 속도 제한에 대한 정보를 제공합니다.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1585'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ ID 서비스는 들어오는 데이터를 지속적으로 모니터링하여 규
 
 프로덕션 샌드박스에 다음이 포함된 경우 Adobe 계정 팀에 문의하여 ID 유형 변경을 요청하십시오.
 
-* 개인 식별자(예: CRM ID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.
+* 개인 식별자(예: CRMID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.
 * 쿠키/장치 식별자가 교차 장치 ID 유형으로 구성된 사용자 지정 네임스페이스입니다.
 
 이 기능을 사용할 수 있게 되면 50개 ID의 제한을 초과하는 그래프는 최대 50개 ID로 줄어듭니다. Real-Time CDP B2C Edition의 경우, 이전에 세분화 및 활성화에서 이들 프로필이 무시되었으므로 대상에 대해 자격을 부여하는 프로필 수가 최소한으로 증가할 수 있습니다.
@@ -106,7 +106,7 @@ ID 서비스는 들어오는 데이터를 지속적으로 모니터링하여 규
 
 #### 실시간 고객 프로필 및 WebSDK: 기본 ID 삭제
 
-CRM ID에 대해 인증된 이벤트를 유지하려면 기본 ID를 ECID에서 CRM ID로 변경하는 것이 좋습니다. 이 변경 사항을 구현하는 방법에 대한 단계는 다음 문서를 참조하십시오.
+CRMID에 대해 인증된 이벤트를 유지하려면 기본 ID를 ECID에서 CRMID로 변경하는 것이 좋습니다. 이 변경 사항을 구현하는 방법에 대한 단계는 다음 문서를 참조하십시오.
 
 * [Experience Platform 태그에 대한 ID 맵을 구성합니다](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Experience Platform Web SDK의 ID 데이터](../web-sdk/identity/overview.md#using-identitymap)
@@ -149,7 +149,7 @@ CRM ID에 대해 인증된 이벤트를 유지하려면 기본 ID를 ECID에서 
 
 >[!TAB 그래프 출력]
 
-ECID:35577을 삭제하면 CRM ID:60013 및 CRM ID:25212을 현재 삭제된 ECID:35577과 연결한 에지도 삭제됩니다. 이 삭제 프로세스를 수행하면 그래프가 두 개의 더 작은 그래프로 분할됩니다.
+ECID:35577을 삭제하면 CRMID:60013 및 CRMID:25212을 현재 삭제된 ECID:35577과 연결한 에지도 삭제됩니다. 이 삭제 프로세스를 수행하면 그래프가 두 개의 더 작은 그래프로 분할됩니다.
 
 ![](./images/guardrails/after-split.png)
 
@@ -176,7 +176,7 @@ ECID:35577을 삭제하면 CRM ID:60013 및 CRM ID:25212을 현재 삭제된 ECI
 
 따라서 ID 서비스는 ID 그래프에서 가장 오래된 ID만 삭제합니다(이 경우 ECID:35577). ECID:35577을 삭제하면 다음 항목도 삭제됩니다.
 
-* CRM ID: 60013과 현재 삭제된 ECID:35577 간의 링크로 인해 그래프 분할 시나리오가 발생합니다.
+* CRMID:60013과 현재 삭제된 ECID:35577 간의 링크로 인해 그래프 분할 시나리오가 발생합니다.
 * IDFA: 32110, IDFA: 02383 및 `(...)`(으)로 표시되는 나머지 ID입니다. 이러한 ID는 개별적으로 다른 ID와 연결되어 있지 않으므로 그래프로 표시할 수 없으므로 삭제됩니다.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
