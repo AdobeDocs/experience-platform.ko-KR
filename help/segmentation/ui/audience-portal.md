@@ -2,9 +2,9 @@
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
+source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
 workflow-type: tm+mt
-source-wordcount: '4125'
+source-wordcount: '4162'
 ht-degree: 3%
 
 ---
@@ -386,6 +386,10 @@ UI 또는 API를 사용하여 예약된 평가에 대해 대상을 활성화할 
 >[!NOTE]
 >
 >외부 생성 대상 **은(는) CSV 형식이어야 하며**&#x200B;최대 **이(가) 25열이며 1GB 미만입니다.**
+>
+>또한 **첫 행이나 CSV의 관련 열에 공백이나 대시를 사용할 수**&#x200B;없습니다.
+>
+>예를 들어 첫 번째 행의 값은 &quot;FirstName&quot; 또는 &quot;First_Name&quot;일 수 있지만 &quot;First Name&quot; 또는 &quot;First-Name&quot;일 수 없습니다.
 
 가져올 CSV 파일을 선택하면 이 외부에서 생성된 대상자에 대한 샘플 데이터 목록이 표시됩니다. 샘플 데이터가 올바른지 확인한 후 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
