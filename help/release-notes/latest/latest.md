@@ -1,11 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 8월
 description: Adobe Experience Platform에 대한 2024년 8월 릴리스 정보입니다.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 019d950e992e6e1ea3264fbc1f141a8bb6bc357a
+source-git-commit: f3004071f7e023cc3ddc8b5a4c8fefd5636fd9a8
 workflow-type: tm+mt
-source-wordcount: '1037'
-ht-degree: 26%
+source-wordcount: '1086'
+ht-degree: 24%
 
 ---
 
@@ -34,12 +33,12 @@ Experience Platform의 기존 기능 및 설명서에 대한 업데이트:
 | 기능 | 설명 |
 | ----------- | ----------- |
 | 이제 필요 시 파일을 일괄 처리 대상으로 내보낼 수 있습니다. | 이제 모든 고객이 주문형 파일을 일괄 처리 대상으로 내보낼 수 있습니다. 자세한 내용은 [전용 설명서](../../destinations/ui/export-file-now.md)를 참조하세요. |
-| [예약 단계](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)에서 내보낸 여러 대상에 대한 내보내기 일정을 편집합니다. | 이제 모든 고객이 대상 활성화 워크플로의 예약 단계에서 내보낸 여러 대상에 대한 내보내기 일정을 직접 편집할 수 있는 옵션을 사용할 수 있습니다. ![예약 단계에서 일정 편집 옵션을 강조 표시하는 Experience Platform 사용자 인터페이스 이미지.](../2024/assets/august/edit-schedule.png){width="250" align="center" zoomable="yes"} |
-| [예약 단계](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)에서 내보낸 여러 대상에 대한 파일 이름을 편집합니다. | 이제 모든 고객이 대상 활성화 워크플로의 예약 단계에서 내보낸 여러 파일의 이름을 직접 편집할 수 있는 옵션을 사용할 수 있습니다. ![예약 단계에서 파일 이름 편집 옵션을 강조 표시하는 Experience Platform 사용자 인터페이스의 이미지입니다.](../2024/assets/august/edit-file-name.png){width="250" align="center" zoomable="yes"} |
-| [대상 세부 정보](../../destinations/ui/destination-details-page.md#bulk-remove) 페이지의 데이터 흐름에서 여러 대상을 제거하십시오. | 이제 모든 고객이 **[!UICONTROL 대상 세부 정보]** 페이지의 기존 데이터 흐름에서 여러 대상을 제거하는 옵션을 사용할 수 있습니다. ![대상 세부 정보 페이지에서 대상 제거 옵션을 강조 표시하는 Experience Platform 사용자 인터페이스 이미지.](../2024/assets/august/bulk-remove-audiences.png){width="250" align="center" zoomable="yes"} |
-| [대상 세부 정보](../../destinations/ui/destination-details-page.md#bulk-export) 페이지에서 요청 시 여러 파일을 일괄 처리 대상으로 내보냅니다. | 이제 모든 고객이 **[!UICONTROL 대상 세부 정보]** 페이지에서 여러 파일을 요청 시 배치 대상으로 내보내는 옵션을 사용할 수 있습니다. ![대상 세부 정보 페이지에서 지금 파일 내보내기 옵션을 강조 표시하는 Experience Platform 사용자 인터페이스 이미지.](../2024/assets/august/bulk-export-file-now.png){width="250" align="center" zoomable="yes"} |
-| [대상 세부 정보](../../destinations/ui/destination-details-page.md#bulk-edit-file-names) 페이지에서 내보낸 여러 대상에 대한 파일 이름을 편집합니다. | 이제 **[!UICONTROL 대상 세부 정보]** 페이지에서 내보낸 여러 파일의 이름을 직접 편집할 수 있습니다. ![대상 세부 정보 페이지에서 파일 이름 편집 옵션을 강조 표시하는 Experience Platform 사용자 인터페이스 이미지.](../2024/assets/august/edit-file-name-destination-details.png){width="250" align="center" zoomable="yes"} |
-| [대상 세부 정보](../../destinations/ui/export-datasets.md#remove-dataset) 페이지의 데이터 흐름에서 여러 데이터 세트를 제거하십시오. | 이제 모든 고객이 데이터 흐름에서 여러 데이터 세트를 제거하는 옵션을 사용할 수 있습니다. ![대상 세부 정보 페이지에서 데이터 세트 제거 옵션을 강조 표시하는 Experience Platform 사용자 인터페이스 이미지입니다.](../2024/assets/august/bulk-remove-datasets.png){width="250" align="center" zoomable="yes"} |
+| [예약 단계](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)에서 내보낸 여러 대상에 대한 내보내기 일정을 편집합니다. | 이제 모든 고객이 대상 활성화 워크플로의 예약 단계에서 내보낸 여러 대상에 대한 내보내기 일정을 직접 편집할 수 있는 옵션을 사용할 수 있습니다. ![예약 단계에서 일정 편집 옵션을 강조 표시하는 Experience Platform 사용자 인터페이스의 이미지입니다.](../2024/assets/august/edit-schedule.png "예약 단계에서 일정 옵션을 편집합니다."){width="250" align="center" zoomable="yes"} |
+| [예약 단계](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)에서 내보낸 여러 대상에 대한 파일 이름을 편집합니다. | 이제 모든 고객이 대상 활성화 워크플로의 예약 단계에서 내보낸 여러 파일의 이름을 직접 편집할 수 있는 옵션을 사용할 수 있습니다. ![예약 단계에서 파일 이름 편집 옵션을 강조 표시하는 Experience Platform 사용자 인터페이스의 이미지입니다.](../2024/assets/august/edit-file-name.png "예약 단계에서 파일 이름 옵션을 편집합니다."){width="250" align="center" zoomable="yes"} |
+| [대상 세부 정보](../../destinations/ui/destination-details-page.md#bulk-remove) 페이지의 데이터 흐름에서 여러 대상을 제거하십시오. | 이제 모든 고객이 **[!UICONTROL 대상 세부 정보]** 페이지의 기존 데이터 흐름에서 여러 대상을 제거하는 옵션을 사용할 수 있습니다. ![대상 세부 정보 페이지에서 대상 제거 옵션을 강조 표시하는 Experience Platform 사용자 인터페이스 이미지.](../2024/assets/august/bulk-remove-audiences.png "대상 세부 정보 페이지에서 대상 제거 옵션을 선택하십시오."){width="250" align="center" zoomable="yes"} |
+| [대상 세부 정보](../../destinations/ui/destination-details-page.md#bulk-export) 페이지에서 요청 시 여러 파일을 일괄 처리 대상으로 내보냅니다. | 이제 모든 고객이 **[!UICONTROL 대상 세부 정보]** 페이지에서 여러 파일을 요청 시 배치 대상으로 내보내는 옵션을 사용할 수 있습니다. ![대상 세부 정보 페이지에서 지금 파일 내보내기 옵션을 강조 표시하는 Experience Platform 사용자 인터페이스 이미지입니다.](../2024/assets/august/bulk-export-file-now.png "대상 세부 정보 페이지의 지금 파일 내보내기 옵션."){width="250" align="center" zoomable="yes"} |
+| [대상 세부 정보](../../destinations/ui/destination-details-page.md#bulk-edit-file-names) 페이지에서 내보낸 여러 대상에 대한 파일 이름을 편집합니다. | 이제 **[!UICONTROL 대상 세부 정보]** 페이지에서 내보낸 여러 파일의 이름을 직접 편집할 수 있습니다. ![대상 세부 정보 페이지에서 파일 이름 편집 옵션을 강조 표시하는 Experience Platform 사용자 인터페이스 이미지.](../2024/assets/august/edit-file-name-destination-details.png "대상 세부 정보 페이지의 파일 이름 편집 옵션입니다."){width="250" align="center" zoomable="yes"} |
+| [대상 세부 정보](../../destinations/ui/export-datasets.md#remove-dataset) 페이지의 데이터 흐름에서 여러 데이터 세트를 제거하십시오. | 이제 모든 고객이 데이터 흐름에서 여러 데이터 세트를 제거하는 옵션을 사용할 수 있습니다. ![대상 세부 정보 페이지에서 데이터 세트 제거 옵션을 강조 표시하는 Experience Platform 사용자 인터페이스 이미지입니다.](../2024/assets/august/bulk-remove-datasets.png "대상 세부 정보 페이지에서 데이터 세트 제거 옵션을 선택하십시오."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 

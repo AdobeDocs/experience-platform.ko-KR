@@ -3,20 +3,15 @@ title: Experience Platform UI를 사용하여 주문형 파일을 배치 대상�
 type: Tutorial
 description: Experience Platform UI를 사용하여 주문형 파일을 일괄 처리 대상으로 내보내는 방법을 알아봅니다.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 97ae720fa4d081fcf8d6b84c81a2131e55b9b1b5
+source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 8%
+source-wordcount: '690'
+ht-degree: 9%
 
 ---
 
 
 # Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기
-
->[!IMPORTANT]
->
->Adobe Experience Platform의 **[!UICONTROL 지금 파일 내보내기]** 옵션이 현재 Beta에 있습니다. 설명서 및 기능은 변경될 수 있습니다.
->이 기능에 액세스하려면 Adobe 담당자에게 문의하십시오.
 
 >[!IMPORTANT]
 > 
