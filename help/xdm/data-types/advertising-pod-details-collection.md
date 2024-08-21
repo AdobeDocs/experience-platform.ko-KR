@@ -2,7 +2,7 @@
 title: Advertising Pod 세부 정보 수집 데이터 유형
 description: Advertising Pod Details Collection XDM(경험 데이터 모델) 데이터 유형에 대해 알아봅니다.
 exl-id: 401c393f-aeda-4ecd-89f4-458833190ced
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 8%
@@ -16,7 +16,9 @@ ht-degree: 8%
 ![Advertising Pod 세부 정보 수집 데이터 형식의 다이어그램입니다.](../images/data-types/advertising-pod-details-collection.png)
 
 | 표시 이름 | 속성 | 데이터 유형 | 필수 여부 | 설명 |
-|-----------------------------------------|-----------------|-----------|--------------------------------------------------------------------|
+|-----------------------------------------|-----------------|-----------|----------|---------------------------------------------------------|
 | [!UICONTROL Pod의 광고 위치] | `index` | 정수 | 예 | 상위 광고 브레이크 시작 내에 있는 광고의 색인입니다. |
 | [!UICONTROL Pod 알기 쉬운 이름] | `friendlyName` | 문자열 | 아니요 | 쉽게 이해할 수 있는 광고 브레이크 이름입니다. |
 | [!UICONTROL Pod 오프셋] | `offset` | 정수 | 예 | 콘텐츠 내부의 광고 브레이크 오프셋(초). |
+
+{style="table-layout:auto"}

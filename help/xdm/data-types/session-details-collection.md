@@ -2,10 +2,10 @@
 title: 세션 세부 정보 수집 데이터 유형
 description: 세션 세부 정보 수집 XDM(Experience Data Model) 데이터 유형에 대해 알아봅니다.
 exl-id: ffe6bcf7-61e1-4f7a-ba95-7fcb78683cc9
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 15%
+source-wordcount: '857'
+ht-degree: 16%
 
 ---
 
@@ -31,7 +31,6 @@ ht-degree: 15%
 | [[!UICONTROL 브로드캐스트 콘텐츠 형식]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-type) | `contentType` | 문자열 | 예 | 스트림 배달의 [!UICONTROL 브로드캐스트 콘텐츠 형식]. [!UICONTROL 스트림 유형]당 사용 가능한 값은 다음과 같습니다.<br>오디오: &quot;song&quot;, &quot;podcast&quot;, &quot;audiobook&quot; 및 &quot;radio&quot;;<br>비디오: &quot;VoD&quot;, &quot;Live&quot;, &quot;Linear&quot;, &quot;UGC&quot; 및 &quot;DVoD&quot;.<br>고객은 이 매개 변수에 대한 사용자 지정 값을 제공할 수 있습니다. |
 | [[!UICONTROL 브로드캐스트 네트워크]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#network) | `network` | 문자열 | 아니요 | 네트워크/채널 이름. |
 | [[!UICONTROL 콘텐츠 채널]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-channel) | `channel` | 문자열 | 예 | [!UICONTROL 콘텐츠 채널]은(는) 콘텐츠가 재생된 배포 채널입니다. |
-| [[!UICONTROL 컨텐츠 완료]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-complete) | `isCompleted` | 부울 | 아니요 | [!UICONTROL 콘텐츠 완료]은(는) 시간 미디어 에셋이 완료될 때까지 관찰되었는지 여부를 나타냅니다. 이 이벤트가 뷰어가 전체 비디오를 시청했음을 의미하지는 않습니다. 뷰어는 앞으로 건너뛸 수도 있습니다. |
 | [!UICONTROL 콘텐츠 배달 네트워크] | `cdn` | 문자열 | 아니요 | 재생된 콘텐츠의 [!UICONTROL 콘텐츠 배달 네트워크]. |
 | [[!UICONTROL 콘텐츠 ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-id) | `name` | 문자열 | 예 | [!UICONTROL 콘텐츠 ID]은(는) 콘텐츠의 고유 식별자입니다. 다른 업계 또는 CMS ID에 다시 연결하는 데 사용할 수 있습니다. |
 | [[!UICONTROL 콘텐츠 이름]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-name-(variable)) | `friendlyName` | 문자열 | 아니요 | [!UICONTROL 콘텐츠 이름]은(는) 콘텐츠의 &quot;친숙한&quot;(사람이 읽을 수 있음) 이름입니다. |
@@ -45,7 +44,6 @@ ht-degree: 15%
 | [[!UICONTROL 장르]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#genre) | `genre` | 문자열 | 아니요 | 콘텐츠 생성자가 정의한 콘텐츠 유형 또는 그룹입니다. 값은 변수 구현에서 쉼표로 구분해야 합니다. |
 | [[!UICONTROL 승인된 미디어]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#authorized) | `authorized` | 문자열 | 아니요 | Adobe 인증을 통해 사용자에게 권한이 부여되었는지 확인합니다. |
 | [[!UICONTROL 미디어 콘텐츠 길이]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-length-(variable)) | `length` | 정수 | 예 | [!UICONTROL 미디어 콘텐츠 길이]에 클립 길이/런타임이 포함되어 있습니다. 이는 사용되는 콘텐츠의 최대 길이(또는 기간)입니다(초). |
-| [[!UICONTROL 미디어 시작]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#media-starts) | `isViewed` | 부울 | 아니요 | 미디어에 대한 로드 이벤트입니다. 이는 뷰어가 재생 버튼을 선택할 때 발생합니다. 이 이벤트는 프리롤 광고, 버퍼링, 오류 등이 있는 경우에도 계산됩니다. |
 | [[!UICONTROL MVPD 식별자]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#mvpd) | `mvpd` | 문자열 | 아니요 | Adobe 인증을 통해 제공된 멀티채널 MVPD(비디오 프로그래밍 디스트리뷰터) 식별자. |
 | [[!UICONTROL 게시자]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#publisher) | `publisher` | 문자열 | 아니요 | 오디오 콘텐츠 게시자의 이름입니다. |
 | [[!UICONTROL 라디오 방송국]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#station) | `station` | 문자열 | 아니요 | 오디오가 재생되는 라디오 방송국 이름. |
@@ -60,10 +58,3 @@ ht-degree: 15%
 | [[!UICONTROL 버전]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#sdk-version) | `appVersion` | 문자열 | 아니요 | 플레이어에서 사용하는 SDK 버전입니다. 플레이어에 적합한 사용자 정의 값을 가질 수 있습니다. |
 
 {style="table-layout:auto"}
-
-<!-- This is required for sessionStart. 
-Q) How do I indicate that?
-Q) Do you know where to link for:
-Ad Load Type
-Content Delivery Network
- -->

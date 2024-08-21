@@ -2,7 +2,7 @@
 title: Advertising 세부 정보 수집 데이터 유형
 description: Advertising 세부 정보 수집 XDM(경험 데이터 모델) 데이터 유형에 대해 알아봅니다.
 exl-id: 3f6bf1f9-c728-46af-804a-cb41eb29951b
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 14%
@@ -22,7 +22,7 @@ ht-degree: 14%
 >각 디스플레이 이름에는 해당 오디오 및 비디오 매개 변수에 대한 추가 정보를 볼 수 있는 링크가 포함되어 있습니다. 연결된 페이지에는 Adobe, 구현 값, 네트워크 매개 변수, 보고 및 중요 고려 사항으로 수집된 비디오 및 데이터에 대한 세부 사항이 포함되어 있습니다.
 
 | 표시 이름 | 속성 | 데이터 유형 | 필수 여부 | 설명 |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------------------------------------------------------------------------------------------------------------------------------|
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------|-----------------------------------------------------------------------------------------------------------------------|
 | [[!UICONTROL 광고 광고주]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#advertiser) | `advertiser` | 문자열 | 아니요 | 광고에서 다루고 있는 제품의 회사 또는 브랜드입니다. |
 | [[!UICONTROL 광고 캠페인]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#campaign-id) | `campaignID` | 문자열 | 아니요 | 광고 캠페인의 ID입니다. |
 | [[!UICONTROL 광고 크리에이티브 ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#creative-id) | `creativeID` | 문자열 | 아니요 | 광고 크리에이티브 ID. |
@@ -33,3 +33,5 @@ ht-degree: 14%
 | [[!UICONTROL 광고 배치 ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#placement-id) | `placementID` | 문자열 | 아니요 | 광고의 배치 ID입니다. |
 | [[!UICONTROL 광고 플레이어 이름]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-player-name) | `playerName` | 문자열 | 예 | 광고 렌더링 책임 플레이어 이름. |
 | [[!UICONTROL 광고 사이트 ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#site-id) | `siteID` | 문자열 | 아니요 | 광고 사이트의 ID입니다. |
+
+{style="table-layout:auto"}

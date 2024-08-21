@@ -1,14 +1,19 @@
 ---
 title: 머신 러닝 지원 스키마 생성
 description: Experience Platform 사용자 인터페이스에서 스키마를 만드는 방법을 알아봅니다.
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+badgeBeta: label="Beta" type="Informative"
+source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 1%
+source-wordcount: '996'
+ht-degree: 2%
 
 ---
 
 # 머신 러닝 지원 스키마 생성
+
+>[!AVAILABILITY]
+>
+>* 머신 러닝 지원 스키마 생성은 현재 베타 단계입니다. 설명서 및 기능은 변경될 수 있습니다.
 
 ML 알고리즘을 사용하여 샘플 데이터에서 스키마를 생성합니다. 이 프로세스는 복잡한 대규모 데이터 세트의 구조, 필드 및 데이터 유형을 정의할 때 시간을 절약하고 정확도를 높입니다.
 
