@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 8월
 description: Adobe Experience Platform에 대한 2024년 8월 릴리스 정보입니다.
-source-git-commit: 6d8c785a1e876ed6a729efbe01ad8fb4507bda0d
+source-git-commit: d6eb2050cdc3d51cf8ff4189c6b9f78469f14fa9
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1037'
 ht-degree: 26%
 
 ---
@@ -56,7 +56,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 {style="table-layout:auto"}
 
-<!-- To learn more, read the [ML-assisted schema creation overview](../../xdm/ui/ml-assisted-schema-creation.md)  -->
+자세한 내용은 [ML 지원 스키마 만들기 개요](../../xdm/ui/ml-assisted-schema-creation.md)를 참조하세요.
 
 Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
