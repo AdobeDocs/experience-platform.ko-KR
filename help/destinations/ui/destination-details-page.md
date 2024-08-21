@@ -3,9 +3,9 @@ keywords: 대상;대상;대상 세부 사항 페이지;대상 세부 사항 페�
 title: 대상 세부 사항 보기
 description: 개별 대상에 대한 세부 정보 페이지에서는 대상 세부 정보에 대한 개요를 제공합니다. 대상 세부 사항에는 대상 이름, ID, 대상에 매핑된 대상자 및 활성화를 편집하고 데이터 흐름을 활성화 및 비활성화하는 컨트롤이 포함됩니다.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9ebdf6e675ddfe03f43b56ed10f625a7d000a662
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1310'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 
    ![대상 찾아보기](../assets/ui/details-page/browse-destinations.png)
 
-2. 왼쪽 상단의 필터 아이콘 ![Filter-icon](/help/images/icons/filter.png)을(를) 선택하여 정렬 패널을 시작합니다. 정렬 패널에서는 모든 대상의 목록을 제공합니다. 목록에서 두 개 이상의 대상을 선택하여 선택한 대상과 연관된 데이터 흐름의 필터링된 선택을 확인할 수 있습니다.
+2. 왼쪽 상단의 필터 아이콘 ![Filter-icon](../../images/icons/filter.png)을(를) 선택하여 정렬 패널을 시작합니다. 정렬 패널에서는 모든 대상의 목록을 제공합니다. 목록에서 두 개 이상의 대상을 선택하여 선택한 대상과 연관된 데이터 흐름의 필터링된 선택을 확인할 수 있습니다.
 
    ![대상 필터링](../assets/ui/details-page/filter-destinations.png)
 
@@ -103,33 +103,52 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 
 파일 기반 대상으로 데이터 흐름이 실행되는 경우 **[!UICONTROL 처리 기간]**&#x200B;은(는) 내보내는 데이터의 크기와 시스템 로드에 따라 다릅니다. 파일 기반 대상으로 실행되는 데이터 흐름은 대상자별로 분류되어 있습니다.
 
-![파일 기반 대상에 대해 처리 시간 열이 강조 표시된 데이터 흐름 실행 페이지.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+![파일 기반 대상에 대해 처리 시간 열이 강조 표시된 데이터 흐름 실행 페이지.](../assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
 자세한 내용은 모니터링 설명서에서 [배치(파일 기반) 대상에 대한 데이터 흐름 실행](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations)을 참조하십시오.
 
 ## [!UICONTROL 활성화 데이터] {#activation-data}
 
-[!UICONTROL 활성화 데이터] 탭에는 시작 날짜와 종료 날짜(해당하는 경우)를 포함하여 대상에 매핑된 대상자의 목록과 데이터 내보내기를 위한 기타 관련 정보(내보내기 유형, 일정 및 빈도)가 표시됩니다. 특정 대상에 대한 세부 정보를 보려면 목록에서 해당 이름을 선택합니다.
+**[!UICONTROL 활성화 데이터]** 탭에는 시작 날짜와 종료 날짜(해당하는 경우)를 포함하여 대상에 매핑된 대상자의 목록과 데이터 내보내기를 위한 기타 관련 정보(내보내기 유형, 일정 및 빈도)가 표시됩니다. 특정 대상에 대한 세부 정보를 보려면 목록에서 해당 이름을 선택합니다.
 
 >[!TIP]
 >
 >대상에 매핑된 특성 및 ID에 대한 세부 정보를 보고 편집하려면 [오른쪽 레일](#right-rail)에서 **[!UICONTROL 대상 활성화]**&#x200B;를 선택하십시오.
 
+>[!BEGINSHADEBOX]
+
+파일 기반 대상에 대한 **[!UICONTROL 활성화 데이터]** 탭입니다.
+
 ![활성화 데이터 보기 일괄 처리 대상](../assets/ui/details-page/activation-data-batch.png)
+
+>[!ENDSHADEBOX]
+
+
+>[!BEGINSHADEBOX]
+
+스트리밍 대상의 **[!UICONTROL 활성화 데이터]** 탭입니다.
 
 ![활성화 데이터 보기 스트리밍 대상](../assets/ui/details-page/activation-data-streaming.png)
 
-### [!BADGE Beta]{type=Informative} 활성화 흐름에서 여러 대상 제거 {#bulk-remove}
+>[!ENDSHADEBOX]
 
->[!NOTE]
->
-이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
+### 활성화된 대상자 필터링 {#filter-audiences}
+
+대상에 활성화된 대상자 목록을 필터링하려면 검색 상자에 대상자 이름을 입력합니다. 대상자 목록은 검색 결과와 함께 자동으로 업데이트됩니다.
+
+![대상자를 필터링할 검색 상자입니다.](../assets/ui/details-page/filter-audiences.png)
+
+### 활성화 흐름에서 여러 대상 제거 {#bulk-remove}
 
 기존 활성화 흐름에서 여러 대상을 제거하려면 대상을 선택한 다음 **[!UICONTROL 대상 제거]**&#x200B;를 선택하십시오.
 
 ![대상자 제거 옵션을 강조 표시하는 활성화 데이터 화면입니다.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### 주문형 여러 파일을 배치 대상으로 내보내기 {#bulk-export}
+### [!BADGE Beta]{type=Informative} 요청 시 여러 파일을 일괄 처리 대상으로 내보냅니다. {#bulk-export}
+
+>[!NOTE]
+>
+이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
 
 **[!UICONTROL 활성화 데이터]** 페이지에서 [필요 시 여러 파일을 내보내기](../ui/export-file-now.md)할 수 있습니다. 이렇게 하려면 파일을 온디맨드로 내보낼 대상을 선택하고 **[!UICONTROL 지금 파일 내보내기]** 컨트롤을 선택하여 선택한 각 대상에 대한 파일을 배치 대상으로 전달하는 일회성 내보내기를 트리거합니다.
 
@@ -144,3 +163,9 @@ Adobe Experience Platform 사용자 인터페이스에서 대상의 속성 및 �
 >[!NOTE]
 >
 대상자의 세부 정보 페이지 탐색에 대한 자세한 내용은 [대상자 포털 개요](../../segmentation/ui/audience-portal.md#segment-details)를 참조하세요.
+
+### 배치 대상으로 내보낸 여러 대상에 대한 파일 이름 편집 {#bulk-edit-file-names}
+
+내보낸 여러 대상자의 파일 이름을 동시에 편집하려면 원하는 대상자를 선택한 다음 **[!UICONTROL 파일 이름 편집]**&#x200B;을 선택합니다. 파일 이름을 정의하거나 편집하는 방법에 대한 자세한 내용은 [파일 이름을 구성하는 방법](../ui/activate-batch-profile-destinations.md#configure-file-names) 섹션을 참조하십시오.
+
+![여러 대상에 대한 파일 이름을 편집하는 옵션을 강조 표시하는 활성화 데이터 화면입니다.](../assets/ui/details-page/bulk-edit-file-name.png)

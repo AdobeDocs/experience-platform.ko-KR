@@ -3,9 +3,9 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
+source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
 workflow-type: tm+mt
-source-wordcount: '4077'
+source-wordcount: '4202'
 ht-degree: 13%
 
 ---
@@ -110,6 +110,10 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
 ![예약 단계에서 강조 표시된 예약 컨트롤을 편집합니다.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
+여러 일정을 동시에 편집하려면 화면 왼쪽에 있는 확인란을 사용하여 대상자를 선택한 다음 **[!UICONTROL 일정 편집]**&#x200B;을 선택합니다. 그러면 구성한 일정이 선택한 대상에 대해 내보낸 모든 파일에 적용됩니다.
+
+![선택한 여러 대상에 대한 일정 편집 옵션을 표시하는 Experience Platform 사용자 인터페이스 이미지.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+
 >[!TIP]
 >
 >**[!UICONTROL 활성화 데이터]** 페이지에서 기존 활성화 흐름에 대한 대상 활성화 일정을 편집할 수 있습니다. 자세한 내용은 [활성화 일정 일괄 편집](../ui/destination-details-page.md#bulk-edit-schedule)에 대한 설명서를 참조하십시오.
@@ -200,7 +204,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
 4. **[!UICONTROL 만들기]**&#x200B;를 선택하여 일정을 저장합니다.
 
-### 파일 이름 구성
+### 파일 이름 구성 {#configure-file-names}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
@@ -234,6 +238,10 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 | **[!UICONTROL 샌드박스 이름]** | 대상을 내보내는 데 사용하는 샌드박스의 ID입니다. |
 
 {style="table-layout:auto"}
+
+여러 파일 이름을 동시에 편집하려면 화면 왼쪽에 있는 확인란을 사용하여 대상자를 선택한 다음 **[!UICONTROL 파일 이름 편집]**&#x200B;을 선택합니다. 그러면 사용자가 구성한 파일 이름 옵션이 선택한 대상에 대해 내보낸 모든 파일에 적용됩니다.
+
+![선택한 여러 대상에 대한 파일 이름 편집 옵션을 보여 주는 Experience Platform 사용자 인터페이스의 이미지](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 **[!UICONTROL 변경 내용 적용]**&#x200B;을 선택하여 선택 내용을 확인합니다.
 

@@ -1,16 +1,17 @@
 ---
-title: (Beta) Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기
+title: Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기
 type: Tutorial
 description: Experience Platform UI를 사용하여 주문형 파일을 일괄 처리 대상으로 내보내는 방법을 알아봅니다.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 64833e29d062225bc774a14ae60b102b293bb5c4
+source-git-commit: 97ae720fa4d081fcf8d6b84c81a2131e55b9b1b5
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '720'
 ht-degree: 8%
 
 ---
 
-# (Beta) Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기
+
+# Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기
 
 >[!IMPORTANT]
 >
