@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 8월
 description: Adobe Experience Platform에 대한 2024년 8월 릴리스 정보입니다.
-source-git-commit: a44b7d5351168094041438c357dc47328975f70d
+source-git-commit: ab26566cb7f2586d709147686180625db4e920ec
 workflow-type: tm+mt
-source-wordcount: '1086'
-ht-degree: 24%
+source-wordcount: '1300'
+ht-degree: 21%
 
 ---
 
@@ -18,11 +18,28 @@ ht-degree: 24%
 
 Experience Platform의 기존 기능 및 설명서에 대한 업데이트:
 
+- [속성 기반 액세스 제어](#abac)
 - [대상](#destinations)
 - [경험 데이터 모델 (XDM)](#xdm)
 - [ID 서비스](#identity-service)
 - [Segmentation Service](#segmentation)
 - [소스](#sources)
+
+## 속성 기반 액세스 제어 {#abac}
+
+속성 기반 액세스 제어는 Adobe Experience Platform의 기능으로, 개인 정보를 중요하게 생각하는 브랜드에게 사용자 액세스를 더 유연하게 관리할 수 있습니다. 스키마 필드 및 세그먼트와 같은 개별 객체를 사용자 역할에 할당할 수 있습니다. 이 기능을 사용하면 조직의 특정 Platform 사용자에 대해 개별 객체에 대한 액세스 권한을 부여하거나 취소할 수 있습니다.
+
+속성 기반 액세스 제어를 통해 조직 관리자는 모든 플랫폼 워크플로 및 리소스에서 중요한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 지정된 유형의 데이터에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.
+
+**새로운 기능**
+
+| 기능 업데이트 | 설명 |
+| --- | --- |
+| 새 권한 관리자 기능 | 이제 [권한 관리자](../../access-control/abac/permission-manager/overview.md)를 사용하여 간단한 쿼리를 사용하여 보고서를 생성할 수 있습니다. 이렇게 하면 액세스 관리를 이해하고 여러 워크플로우 및 세부 기간 수준에서 액세스 권한을 확인하는 데 걸리는 시간을 절약할 수 있습니다. 사용자 및 역할에 대한 보고서를 만드는 방법에 대한 자세한 내용은 [권한 관리자 사용 안내서](../../access-control/abac/permission-manager/permissions.md)를 참조하세요. ![왼쪽 탐색 메뉴에서 사용 권한 관리자를 강조 표시하는 이미지 Experience Platform 사용자 인터페이스입니다.사용자 인터페이스의 ](assets/august/permission-manager-rn.png "권한 관리자"){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+특성 기반 액세스 제어에 대한 자세한 내용은 [특성 기반 액세스 제어 개요](../../access-control/abac/overview.md)를 참조하십시오. 특성 기반 액세스 제어 워크플로에 대한 포괄적인 지침을 보려면 [특성 기반 액세스 제어 전체 안내서](../../access-control/abac/end-to-end-guide.md)를 읽어 보십시오.
 
 ## 대상 {#destinations}
 
