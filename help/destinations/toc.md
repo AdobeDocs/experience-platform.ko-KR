@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 029cd5bdf58a143f765b37190428b817825317b0
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1247'
 ht-degree: 5%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 5%
       * [LiveRamp 식별자를 기반으로 조정된 대상에 대상 활성화](./ui/activate-curated-destinations.md)
       * [대상에 대한 잠재 고객 활성화](./ui/activate-prospect-audiences.md)
       * [대상에 대한 계정 대상자 활성화](./ui/activate-account-audiences.md)
-      * [(Beta) Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기](./ui/export-file-now.md)
+      * [Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기](./ui/export-file-now.md)
       * [Experience Platform UI를 사용하여 데이터 세트 내보내기](./ui/export-datasets.md)
       * [(Beta) 새 Beta 클라우드 스토리지 대상에서 마지막 선별 시간 XDM 속성 사용](./ui/activate-last-qualification-time.md)
       * [(Beta) 계산된 필드를 사용하여 플랫 스키마 파일에서 배열 내보내기](/help/destinations/ui/export-arrays-calculated-fields.md)
