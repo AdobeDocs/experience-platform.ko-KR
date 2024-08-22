@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 8월
 description: Adobe Experience Platform에 대한 2024년 8월 릴리스 정보입니다.
-source-git-commit: d01e16938485f6648cc02ce1674e0e9e84d78147
+source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
 workflow-type: tm+mt
-source-wordcount: '1300'
+source-wordcount: '1352'
 ht-degree: 21%
 
 ---
@@ -43,9 +43,18 @@ Experience Platform의 기존 기능 및 설명서에 대한 업데이트:
 
 ## 대상 {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
-**새로운 기능 또는 업데이트된 기능**
+**새로운 대상 또는 업데이트된 대상** {#new-updated-destinations}
+
+| 대상 | 설명 |
+| ----------- | ----------- |
+| [브레이즈](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL 중단]은(는) 대시보드 및 REST 끝점에 대한 다양한 인스턴스를 관리합니다. [!UICONTROL 중단] 고객은 제공된 인스턴스에 따라 올바른 REST 끝점을 사용해야 합니다. 이 릴리스에는 [!UICONTROL Braze]에 연결할 때 선택할 수 있는 새로운 US-07 끝점이 추가됩니다. |
+
+{style="table-layout:auto"}
+
+**새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
+
 
 | 기능 | 설명 |
 | ----------- | ----------- |
