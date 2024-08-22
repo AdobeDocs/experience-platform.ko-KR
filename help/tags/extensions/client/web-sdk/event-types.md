@@ -3,9 +3,9 @@ title: Adobe Experience Platform 웹 SDK 확장의 이벤트 유형
 description: Adobe Experience Platform Launch의 Adobe Experience Platform Web SDK 확장에서 제공하는 이벤트 유형을 사용하는 방법에 대해 알아봅니다.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
@@ -260,3 +260,14 @@ if (propositions) {
   // them in some other way.
 }
 ```
+
+## [!UICONTROL 규칙 집합 항목 구독] {#subscribe-ruleset-items}
+
+**[!UICONTROL 규칙 집합 항목 구독]** 이벤트 유형을 사용하면 표면에 대해 Adobe Journey Optimizer 콘텐츠 카드에 가입할 수 있습니다. 규칙 세트가 평가될 때마다 이 명령에 제공된 콜백은 콘텐츠 카드 데이터를 보유하는 제안에 따라 결과 개체를 수신합니다.
+
+![규칙 집합 항목 가입 이벤트 유형을 보여 주는 Experience Platform 태그 사용자 인터페이스의 이미지](assets/subscribe-ruleset-items.png)
+
+이 이벤트 유형은 다음과 같은 구성 가능한 속성을 지원합니다.
+
+* **[!UICONTROL 스키마]**: 콘텐츠 카드를 구독하려는 스키마 배열입니다. 수동으로 또는 데이터 요소를 제공하여 스키마를 입력할 수 있습니다.
+* **[!UICONTROL 표면]**: 콘텐츠 카드를 구독하려는 표면 배열입니다. 수동으로 또는 데이터 요소를 제공하여 서피스를 입력할 수 있습니다.
