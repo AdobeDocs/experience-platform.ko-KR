@@ -2,9 +2,9 @@
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
+source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
 workflow-type: tm+mt
-source-wordcount: '4162'
+source-wordcount: '4250'
 ht-degree: 3%
 
 ---
@@ -161,6 +161,18 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 #### 폴더 {#folders}
 
 더 나은 대상자 관리를 위해 폴더 내에 대상자를 배치할 수 있습니다.
+
+대상을 저장할 폴더를 만들려면 **[!UICONTROL 폴더 만들기]**&#x200B;를 선택하세요.
+
+![폴더 만들기 단추가 강조 표시되어 있습니다.](../images/ui/audience-portal/create-folder.png)
+
+>[!NOTE]
+>
+>다른 폴더에 있는 경우에만 폴더를 만들 수 있습니다. 왼쪽 탐색 모음에서 **[!UICONTROL 모든 대상]**&#x200B;을 선택한 경우 **폴더를 만들 수 없음**&#x200B;을 의미합니다.
+
+새로 만든 폴더의 이름을 지정할 수 있는 팝오버가 표시됩니다. 폴더 이름을 지정한 후 **[!UICONTROL 저장]**&#x200B;을 선택하여 폴더 만들기를 완료합니다. **must** 이름은 상위 폴더에 대해 고유해야 합니다.
+
+![폴더 만들기 대화 상자의 저장 단추가 강조 표시됩니다.](../images/ui/audience-portal/create-folder-dialog.png)
 
 대상을 폴더로 이동하려면 이동할 대상의 **[!UICONTROL 폴더로 이동]**&#x200B;을 선택합니다.
 
