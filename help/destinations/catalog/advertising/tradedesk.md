@@ -3,9 +3,9 @@ keywords: 광고, 무역데스크, 광고 무역데스크
 title: 트레이드 데스크 연결
 description: Trade Desk는 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에 걸쳐 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있는 셀프서비스 플랫폼입니다.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 916c56cf8fa25c40c061b3bddc57ba2fa59cbbb1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '778'
 ht-degree: 3%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 3%
 
 ## 개요 {#overview}
 
-[!DNL The Trade Desk] 대상은 [!DNL The Trade Desk](으)로 프로필 데이터를 전송하는 데 도움이 됩니다.
+이 대상 커넥터를 사용하여 [!DNL The Trade Desk](으)로 프로필 데이터를 보냅니다. 이 커넥터는 [!DNL The Trade Desk] 자사 끝점으로 데이터를 보냅니다. Adobe Experience Platform과 [!DNL The Trade Desk] 간의 통합은 [!DNL The Trade Desk] 타사 끝점으로 데이터 내보내기를 지원하지 않습니다.
 
 [!DNL The Trade Desk]은(는) 광고 구매자가 디스플레이, 비디오 및 모바일 인벤토리 소스에 걸쳐 리타겟팅 및 대상자 타겟팅 디지털 캠페인을 실행할 수 있는 셀프서비스 플랫폼입니다.
 
-[!DNL Trade Desk]에 프로필 데이터를 보내려면 먼저 대상에 연결해야 합니다.
+[!DNL Trade Desk]에 프로필 데이터를 보내려면 먼저 이 페이지의 다음 섹션에 설명된 대로 대상에 연결해야 합니다.
 
 ## 사용 사례 {#use-cases}
 
@@ -62,7 +62,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->[!DNL The Trade Desk]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 설정한 ID 동기화를 플랫폼으로 이월합니다.
+>[!DNL The Trade Desk]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL The Trade Desk] 통합을 설정한 경우 설정한 ID 동기화를 플랫폼으로 이월합니다.
 
 ## 대상에 연결 {#connect}
 
@@ -79,7 +79,7 @@ ht-degree: 3%
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL 계정 ID]**: [!DNL Trade Desk] [!UICONTROL 계정 ID].
-* **[!UICONTROL 서버 위치]**: 사용할 지역 서버를 [!DNL Trade Desk] 담당자에게 문의하십시오. 선택할 수 있는 지역 서버는 다음과 같습니다.
+* **[!UICONTROL 서버 위치]**: 사용할 지역 서버를 [!DNL Trade Desk] 담당자에게 문의하십시오. 다음은 선택할 수 있는 사용 가능한 지역 서버입니다.
    * **[!UICONTROL 유럽]**
    * **[!UICONTROL 싱가포르]**
    * **[!UICONTROL 도쿄]**
@@ -104,7 +104,7 @@ ht-degree: 3%
 
 [대상 일정](../../ui/activate-segment-streaming-destinations.md#scheduling) 단계에서는 대상을 대상 플랫폼의 해당 ID 또는 친숙한 이름에 수동으로 매핑해야 합니다.
 
-세그먼트를 매핑할 때는 쉽게 사용할 수 있도록 Platform 대상 이름 또는 더 짧은 형식을 사용하는 것이 좋습니다. 그러나 대상의 대상 ID 또는 이름은 Platform 계정의 대상 ID와 일치할 필요가 없습니다. 매핑 필드에 삽입하는 모든 값은 대상에 의해 반영됩니다.
+Adobe 대상을 매핑할 때는 쉽게 사용할 수 있도록 Platform 대상 이름 또는 더 짧은 형식을 사용하는 것이 좋습니다. 그러나 대상의 대상 ID 또는 이름은 Platform 계정의 대상 ID와 일치할 필요가 없습니다. 매핑 필드에 삽입하는 모든 값은 대상에 의해 반영됩니다.
 
 여러 장치 매핑(쿠키 ID, [!DNL IDFA], [!DNL GAID])을 사용하는 경우 세 매핑 모두에 대해 동일한 매핑 값을 사용해야 합니다. [!DNL The Trade Desk]은(는) 장치 수준 분류와 함께 모든 세그먼트를 단일 세그먼트로 집계합니다.
 

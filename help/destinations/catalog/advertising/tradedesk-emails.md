@@ -3,9 +3,9 @@ title: (Beta) 트레이드 데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타기팅 및 억제에 대한 프로필을 트레이드 데스크 계정에 활성화합니다.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 3c645ccf5b9dd17e4c3cc1267b60a9c4f1131668
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1148'
 ht-degree: 5%
 
 ---
@@ -25,6 +25,8 @@ ht-degree: 5%
 ## 개요 {#overview}
 
 이 문서는 CRM 데이터를 기반으로 대상 타기팅 및 제외를 위해 [!DNL Trade Desk] 계정에 대한 프로필을 활성화하는 데 도움이 되도록 설계되었습니다.
+
+이 커넥터는 [!DNL The Trade Desk] 자사 끝점으로 데이터를 보냅니다. Adobe Experience Platform과 [!DNL The Trade Desk] 간의 통합은 [!DNL The Trade Desk] 타사 끝점으로 데이터 내보내기를 지원하지 않습니다.
 
 [!DNL The Trade Desk(TTD)]은(는) 언제든지 이메일 주소의 업로드 파일을 직접 처리하지 않으며 [!DNL The Trade Desk]은(는) 원시(해시되지 않은) 이메일을 저장하지 않습니다.
 
@@ -138,9 +140,9 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대해 
 
 ## 데이터 내보내기 유효성 검사 {#validate}
 
-데이터가 Experience Platform에서 [!DNL The Trade Desk](으)로 올바르게 내보내졌는지 확인하려면 [!DNL The Trade Desk] DMP(데이터 관리 플랫폼)의 1PD 데이터 타일 Adobe 아래에서 대상을 찾으십시오. [!DNL Trade Desk] UI 내에서 해당 ID를 찾는 단계는 다음과 같습니다.
+데이터가 Experience Platform에서 [!DNL The Trade Desk](으)로 올바르게 내보내졌는지 확인하려면 [!DNL The Trade Desk] 데이터 관리 플랫폼(DMP)의 Adobe 1PD 데이터 타일 아래에서 대상을 찾으십시오. [!DNL Trade Desk] UI 내에서 해당 ID를 찾는 단계는 다음과 같습니다.
 
-1. 먼저 **[!UICONTROL 데이터]** 탭을 클릭하고 **[!UICONTROL 자사]**&#x200B;을 검토합니다.
+1. 먼저 **[!UICONTROL 데이터]** 탭을 선택하고 **[!UICONTROL 자사]** 섹션을 검토합니다.
 2. 페이지를 아래로 스크롤하면 **[!UICONTROL 가져온 데이터]**&#x200B;에서 **[!UICONTROL Adobe 1PD 타일]**&#x200B;을 찾을 수 있습니다.
 3. **[!UICONTROL Adobe 1PD]** 타일을 클릭하면 광고주의 [!DNL Trade Desk] 대상에 활성화된 모든 대상이 나열됩니다. 검색 기능을 사용할 수도 있습니다.
 4. [!DNL Trade Desk] UI에서 Experience Platform의 세그먼트 ID #이 세그먼트 이름으로 표시됩니다.
