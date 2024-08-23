@@ -2,9 +2,9 @@
 title: 그래프 구성 안내서
 description: ID 그래프 연결 규칙 및 ID 데이터 작업 시 발생할 수 있는 일반적인 그래프 시나리오에 대해 알아봅니다.
 badge: Beta
-source-git-commit: a1f12f266b74bd88fbb1c1a095bb6f6eb565612b
+source-git-commit: 90faa4079d8a58898774c1fbbae2adae01f7e0a2
 workflow-type: tm+mt
-source-wordcount: '2757'
+source-wordcount: '2749'
 ht-degree: 6%
 
 ---
@@ -478,7 +478,7 @@ loginID: ID_C, ECID: 111
 
 | 사용된 네임스페이스 | 웹 동작 수집 방법 |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics 소스 커넥터 **참고:** 기본적으로 AAID는 ID 서비스에서 차단되므로 Analytics 소스를 사용할 때 AAID보다 ECID에 우선 순위를 더 두어야 합니다. 자세한 내용은 [구현 가이드](configuration.md#ingest-your-data)를 참조하십시오. |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics 소스 커넥터. <br> **참고:** 기본적으로 AAID는 ID 서비스에서 차단되므로 Analytics 원본을 사용할 때 ECID에 AAID보다 우선 순위를 높여야 합니다. 자세한 내용은 [구현 가이드](configuration.md#ingest-your-data)를 참조하십시오.</br> |
 
 **이벤트:**
 
@@ -488,11 +488,11 @@ loginID: ID_C, ECID: 111
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID: ID_A
 CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111, AAID: AAA
+loginID: ID_A, ECID: 111
 CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
 CRMID: Summer, loginID: ID_C
 CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222, AAID: BBB
+loginID: ID_C, ECID: 222
 ```
 
 **알고리즘 구성:**
@@ -532,7 +532,7 @@ loginID: ID_C, ECID: 222, AAID: BBB
 
 >[!TAB 여러 사용자 그래프: 공유 장치 1]
 
-다음은 `{ECID:111, AAID:AAA}`이(가) `{loginID:ID_A}` 및 `{loginID:ID_C}`에 모두 연결된 다중 사용자 공유 장치 시나리오입니다. 이 경우, 이전에 설정된 링크는 최근에 설정된 링크를 위해 제거됩니다.
+다음은 `{ECID:111}`이(가) `{loginID:ID_A}`과(와) `{loginID:ID_C}`에 모두 연결되어 있는 다중 사용자 공유 장치 시나리오입니다. 이 경우, 이전에 설정된 링크는 최근에 설정된 링크를 위해 제거됩니다.
 
 ![여러 사용자 공유 장치 그래프 시나리오입니다.](../images/graph-examples/complex_shared_device_one.png)
 
@@ -634,9 +634,9 @@ CRMID: Summer, Phone_SHA256: 111-1111
 
 >[!ENDTABS]
 
-## 다른 Adobe 애플리케이션에서의 사용
+## 다른 Adobe Commerce에서의 사용
 
-이 섹션의 그래프 구성 예에서는 Real-time Customer Data Platform, Adobe Journey Optimizer 및 Adobe Commerce의 사용 사례를 간략하게 설명합니다. 아래 예제는 두 가지 사용자 유형을 사용하는 소매 고객을 대상으로 합니다.
+이 섹션의 그래프 구성 예는 Adobe Commerce의 사용 사례를 요약합니다. 아래 예제는 두 가지 사용자 유형을 사용하는 소매 고객을 대상으로 합니다.
 
 * 등록된 사용자(계정을 만든 사용자)
 * 게스트 사용자(이메일 주소만 있는 사용자)
