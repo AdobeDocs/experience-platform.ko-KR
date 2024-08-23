@@ -1,10 +1,9 @@
 ---
 title: Adobe Experience Platform 웹 SDK FAQ
 description: Adobe Experience Platform Web SDK에 대해 자주 묻는 질문에 대한 답변을 받아 보십시오.
-exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: cd2ac132c77d5d2e90c0f881d7b89a3c339fed6f
+source-git-commit: ed22c76b2805f1baab2ae3c82e1133e1fd8c9f72
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2033'
 ht-degree: 1%
 
 ---
@@ -172,33 +171,9 @@ Web SDK를 사용하는 경우 Edge Network은 위의 쿠키 중 하나 이상�
 
 ## Adobe Experience Platform Web SDK는 어떤 브라우저를 지원합니까?
 
-Adobe Experience Platform Web SDK는 최신 버전의 Google Chrome, Safari, Firefox, Internet Explorer 11 및 Microsoft Edge Chromium에서 최적으로 작동되도록 설계되었습니다. 이전 버전의 브라우저에서 특정 기능을 사용하는 데 문제가 있을 수 있습니다.
+Adobe Experience Platform Web SDK는 최신 버전의 Google Chrome, Safari, Firefox 및 Microsoft Edge Chromium에서 최적으로 작동되도록 설계되었습니다. 이전 버전의 브라우저나 더 이상 사용되지 않는 브라우저(예: Internet Explorer)에서 특정 기능을 사용하는 데 문제가 있을 수 있습니다.
 
 ## Adobe Experience Platform Web SDK에 대한 자세한 내용은 어디에서 확인할 수 있습니까?
 
 * [설명서](/help/web-sdk/home.md)
 * [Source 코드](https://github.com/adobe/alloy)
-
-### Internet Explorer 지원 {#support-internet-explore}
-
-이 SDK는 비동기 작업의 완료를 통신하는 방법인 약속을 사용합니다. SDK에서 사용하는 [Promise](https://developer.mozilla.org/ko-KR/docs/Web/JavaScript/Reference/Global_Objects/Promise) 구현은 [!DNL Internet Explorer]을(를) 제외한 모든 대상 브라우저에서 기본적으로 지원됩니다. [!DNL Internet Explorer]에서 SDK를 사용하려면 `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill)가 있어야 합니다.
-
-`window.Promise`을(를) 이미 채웠는지 확인하려면 다음을 수행하십시오.
-
-1. [!DNL Internet Explorer]에서 웹 사이트를 엽니다.
-1. 브라우저의 디버깅 콘솔을 엽니다.
-1. 콘솔에 `window.Promise`을(를) 입력한 다음 Enter 키를 누릅니다.
-
-`undefined` 이외의 항목이 나타나면 이미 `window.Promise`을(를) 채운 것 같습니다. 위의 설치 지침을 완료한 후 웹 사이트를 로드하여 `window.Promise`이(가) 폴리필되었는지 확인하는 다른 방법입니다. SDK에서 약속에 대해 언급하는 동안 오류가 발생하면 `window.Promise`을(를) 채우지 않았을 수 있습니다.
-
-`window.Promise`을(를) 폴리필해야 한다고 결정한 경우 이전에 제공된 기본 코드 위에 다음 스크립트 태그를 포함하십시오.
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
-```
-
-이 태그는 `window.Promise`이(가) 올바른 Promise 구현인지 확인하는 스크립트를 로드합니다.
-
->[!NOTE]
->
->다른 Promise 구현을 로드하도록 선택한 경우 `Promise.prototype.finally`을(를) 지원하는지 확인하십시오.
