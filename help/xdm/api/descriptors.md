@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 끝점을 사용하면 경험 애플리케이션 내에서 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 44355aa2ddf03b20aca64c6675414b73682bc2b5
+source-git-commit: 866e00459c66ea4678cd98d119a7451fd8e78253
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1920'
 ht-degree: 1%
 
 ---
@@ -291,7 +291,7 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->스키마에 적용할 수 있는 최대 설명자 수는 4000개입니다.
+>조직의 샌드박스에 적용할 수 있는 최대 설명자 수는 4000개입니다.
 
 다음 섹션에서는 각 유형의 설명자를 정의하는 데 필요한 필드를 포함하여 사용 가능한 설명자 유형에 대한 개요를 제공합니다.
 
