@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 8월
 description: Adobe Experience Platform에 대한 2024년 8월 릴리스 정보입니다.
-source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
+source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1502'
 ht-degree: 21%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 21%
 Experience Platform의 기존 기능 및 설명서에 대한 업데이트:
 
 - [속성 기반 액세스 제어](#abac)
+- [데이터 수집](#data-ingestion)
 - [대상](#destinations)
 - [경험 데이터 모델 (XDM)](#xdm)
 - [ID 서비스](#identity-service)
@@ -40,6 +41,19 @@ Experience Platform의 기존 기능 및 설명서에 대한 업데이트:
 {style="table-layout:auto"}
 
 특성 기반 액세스 제어에 대한 자세한 내용은 [특성 기반 액세스 제어 개요](../../access-control/abac/overview.md)를 참조하십시오. 특성 기반 액세스 제어 워크플로에 대한 포괄적인 지침을 보려면 [특성 기반 액세스 제어 전체 안내서](../../access-control/abac/end-to-end-guide.md)를 읽어 보십시오.
+
+## 데이터 수집 (8월 23일 업데이트됨) {#data-ingestion}
+
+Adobe Experience Platform은 데이터의 모든 유형과 지연 시간을 수집할 수 있는 다양한 기능 세트를 제공합니다. Adobe에서 구축한 소스, 데이터 통합 파트너 또는 Adobe Experience Platform UI를 사용하여 일괄 처리 또는 스트리밍 API로 수집할 수 있습니다.
+
+**일괄 처리 데이터 수집에서 날짜 형식 처리 업데이트**
+
+이 릴리스는 일괄 데이터 수집에서 *날짜 형식 처리* 문제를 해결합니다. 이전에는 클라이언트가 `Date`(으)로 삽입한 날짜 필드를 `DateTime` 형식으로 변환했습니다. 즉, 시간대가 필드에 자동으로 추가되었으며 `Date` 형식을 선호하거나 필요로 하는 사용자에게 문제가 발생했습니다. 앞으로 시간대는 `Date` 유형 필드에 자동으로 추가되지 않습니다. 이 업데이트를 통해 내보낸 데이터 형식이 고객이 요청한 해당 필드의 프로필에 표시된 형식과 일치하게 됩니다.
+
+릴리스 전 `Date`개 필드: `"birthDate": "2018-01-12T00:00:00Z"`
+릴리스 이후 `Date`개 필드: `"birthDate": "2018-01-12"`
+
+[일괄 처리 수집](/help/ingestion/batch-ingestion/overview.md)에 대해 자세히 알아보세요.
 
 ## 대상 {#destinations}
 
