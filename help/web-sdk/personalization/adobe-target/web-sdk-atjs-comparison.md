@@ -3,7 +3,7 @@ title: at.js와 Experience Platform Web SDK 비교
 description: at.js 기능을 Experience Platform Web SDK와 비교하는 방법에 대해 알아봅니다
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;의사 결정 범위;코드 조각 사전 숨김;vec;양식 기반 경험 작성기;xdm;대상;의사 결정;범위;스키마;시스템 다이어그램;다이어그램
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
+source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
 workflow-type: tm+mt
 source-wordcount: '2182'
 ht-degree: 2%
@@ -183,7 +183,7 @@ Experience Platform Web SDK는 웹 SDK에서 실행한 오퍼와 함께 알림�
 }
 ```
 
-[추가 정보](../rendering-personalization-content.md)
+[자세히 알아보기](../rendering-personalization-content.md)
 
 ## 페이지 로드 타겟 오퍼를 요청하고 자동으로 렌더링하지 않는 방법
 
@@ -262,7 +262,7 @@ alloy("sendEvent", {
   });
 ```
 
-[추가 정보](../rendering-personalization-content.md#manually-rendering-content)
+[자세히 알아보기](../rendering-personalization-content.md#manually-rendering-content)
 
 
 ## 특정 양식 기반 Target mbox를 요청하는 방법
@@ -421,7 +421,7 @@ alloy("sendEvent", {
 });
 ```
 
-[추가 정보](../rendering-personalization-content.md#manually-rendering-content)
+[자세히 알아보기](../rendering-personalization-content.md#manually-rendering-content)
 
 ## Target 활동을 적용하는 방법
 
@@ -539,19 +539,20 @@ alloy("sendEvent", {
         break;  
       }
     }
-      // Send a "decisioning.propositionDisplay" event signaling that the proposition has been rendered.
+    // Send a "decisioning.propositionDisplay" event signaling that the proposition has been rendered.
     alloy("sendEvent", {
-      xdm: {
-        eventType: "decisioning.propositionDisplay",
-        _experience: {
-          decisioning: {
-            propositions: [
-              {
-                id: discountProposition.id,
-                scope: discountProposition.scope,
-                scopeDetails: discountProposition.scopeDetails
-              }
-            ]
+      "xdm": {
+        "eventType": "decisioning.propositionDisplay",
+        "_experience": {
+          "decisioning": {
+            "propositions": [{
+              "id": id,
+              "scope": scope,
+              "scopeDetails": scopeDetails
+            }],
+            "propositionEventType": {
+              "display": 1
+            }
           }
         }
       }
@@ -607,7 +608,7 @@ alloy("sendEvent", {
 });
 ```
 
-[추가 정보](../rendering-personalization-content.md#manually-rendering-content)
+[자세히 알아보기](../rendering-personalization-content.md#manually-rendering-content)
 
 **예 3 - 작업을 수행한 후 실행된 이벤트 추적**
 
@@ -686,7 +687,7 @@ alloy("sendEvent", {
 });
 ```
 
-[추가 정보](./spa-implementation.md#implementing-xdm-views)
+[자세히 알아보기](./spa-implementation.md#implementing-xdm-views)
 
 ## 응답 토큰 활용 방법
 
@@ -750,7 +751,7 @@ alloy("sendEvent", {
   });
 ```
 
-[추가 정보](./accessing-response-tokens.md)
+[자세히 알아보기](./accessing-response-tokens.md)
 
 ## 플리커를 관리하는 방법
 

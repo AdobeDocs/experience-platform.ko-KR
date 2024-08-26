@@ -3,7 +3,7 @@ title: Web SDK 및 Edge Network 서버 API를 사용한 하이브리드 개인�
 description: 이 문서에서는 Server API와 함께 웹 SDK를 사용하여 웹 속성에 하이브리드 개인화를 배포하는 방법을 보여 줍니다.
 keywords: 개인화, 하이브리드, 서버 api, 서버측, 하이브리드 구현,
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
+source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 2%
@@ -260,20 +260,21 @@ function sendDisplayEvent(decision) {
     const { id, scope, scopeDetails = {} } = decision;
 
     alloy("sendEvent", {
-        xdm: {
-            eventType: "decisioning.propositionDisplay",
-            _experience: {
-                decisioning: {
-                    propositions: [
-                        {
-                            id: id,
-                            scope: scope,
-                            scopeDetails: scopeDetails,
-                        },
-                    ],
-                },
-            },
-        },
+        "xdm": {
+            "eventType": "decisioning.propositionDisplay",
+            "_experience": {
+                "decisioning": {
+                    "propositions": [{
+                        "id": id,
+                        "scope": scope,
+                        "scopeDetails": scopeDetails
+                    }],
+                    "propositionEventType": {
+                        "display": 1
+                    }
+                }
+            }
+        }
     });
 }
 ```
