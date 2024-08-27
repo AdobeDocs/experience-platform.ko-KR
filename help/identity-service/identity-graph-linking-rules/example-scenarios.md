@@ -3,9 +3,9 @@ title: ID 그래프 연결 규칙으로 해결된 고객 시나리오 예
 description: ID 그래프 연결 규칙으로 해결되는 고객 시나리오의 예제에 대해 알아봅니다.
 badge: Beta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: be6fdb7e23ed4769ab4ee7ef72532296f020f4a4
+source-git-commit: 04b04807196bb5902e398403612429eae0de3988
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '448'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->이 기능은 아직 사용할 수 없습니다. ID 그래프 연결 규칙에 대한 베타 프로그램은 개발 샌드박스에서 7월에 시작될 예정입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
+>ID 그래프 연결 규칙은 현재 Beta 버전입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오. 기능 및 설명서는 변경될 수 있습니다.
 
 이 문서에서는 ID 그래프 연결 규칙을 구성할 때 고려할 수 있는 예제 시나리오를 간략하게 설명합니다.
 

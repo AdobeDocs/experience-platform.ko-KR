@@ -3,9 +3,9 @@ title: ID 설정 UI
 description: ID 설정 사용자 인터페이스를 사용하는 방법을 알아봅니다.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 04b04807196bb5902e398403612429eae0de3988
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ ID 설정 페이지는 [!UICONTROL 개인 네임스페이스] 및 [!UICONTROL �
 
 ![[마침]이 강조 표시된 유효성 검사 페이지입니다.](../images/rules/finish.png)
 
-새 설정이 이미 수집된 ID 그래프 및 경험 이벤트 프로필 조각의 기존 링크에 영향을 주지 않는다는 경고가 표시됩니다. 또한 새 설정이 시스템에 반영되기까지 최대 6시간이 소요된다는 알림이 표시됩니다. 확인하려면 샌드박스 이름을 입력한 다음 **[!UICONTROL 확인]**&#x200B;을 선택합니다.
+기존 그래프는 설정을 저장한 후 **그래프가 업데이트된 경우에만 그래프 알고리즘의 영향을 받고**, 실시간 고객 프로필의 이벤트 조각의 기본 ID는 네임스페이스 우선 순위를 변경한 후에도 업데이트되지 않는다는 경고 메시지가 나타납니다. 또한 새 설정이 적용되는 데 최대 **6시간**&#x200B;이 소요된다는 알림이 표시됩니다. 확인하려면 샌드박스 이름을 입력한 다음 **[!UICONTROL 확인]**&#x200B;을 선택합니다.
 
 ![구성이 처리되기 전에 6시간 지연에 대한 경고를 표시하는 확인 창입니다.](../images/rules/confirm-settings.png)
 
