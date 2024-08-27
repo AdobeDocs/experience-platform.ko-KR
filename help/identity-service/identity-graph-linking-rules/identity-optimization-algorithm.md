@@ -3,7 +3,7 @@ title: ID 최적화 알고리즘
 description: ID 서비스의 ID 최적화 알고리즘에 대해 알아봅니다.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 84ad4a5f522b04430ee304f1a812da25e26f6954
+source-git-commit: d3b43c5fa90b67bcba6015d521b78998d50cc3d7
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 1%
