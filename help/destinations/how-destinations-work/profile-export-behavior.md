@@ -2,9 +2,9 @@
 title: 프로필 내보내기 동작
 description: Experience Platform 대상에서 지원되는 다양한 통합 패턴 간에 프로필 내보내기 동작이 어떻게 다른지 알아봅니다.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
 workflow-type: tm+mt
-source-wordcount: '2931'
+source-wordcount: '2930'
 ht-degree: 0%
 
 ---
@@ -145,9 +145,11 @@ Experience Platform에서 [파일 기반 대상](/help/destinations/destination-
 
 ### 증분 파일 내보내기 {#incremental-file-exports}
 
-프로필의 모든 업데이트가 증분 파일 내보내기에 포함할 프로필을 평가하는 것은 아닙니다. 예를 들어 프로필에 속성을 추가하거나 제거한 경우 내보내기에 프로필이 포함되지 않습니다. `segmentMembership` 특성이 변경된 프로필만 내보낸 파일에 포함됩니다. 즉, 프로필이 대상자의 일부가 되거나 대상에서 제거된 경우에만 증분 파일 내보내기에 포함됩니다.
+프로필의 모든 업데이트가 증분 파일 내보내기에 포함할 프로필을 평가하는 것은 아닙니다. 예를 들어 프로필에 속성을 추가하거나 제거한 경우 내보내기에 프로필이 포함되지 않습니다.
 
-마찬가지로 새 ID(새 전자 메일 주소, 전화 번호, ECID 등)가 [ID 그래프](/help/identity-service/features/identity-graph-viewer.md)의 프로필에 추가되는 경우, 이는 새 증분 파일 내보내기에 프로필을 포함시켜야 하는 이유를 나타내지 않습니다.
+그러나 프로필의 `segmentMembership` 특성이 변경되면 프로필이 내보낸 파일에 포함됩니다. 즉, 프로필이 대상의 일부가 되거나 대상에서 제거되면 증분 파일 내보내기에 포함됩니다.
+
+마찬가지로 새 ID(새 전자 메일 주소, 전화 번호, ECID 등)가 [ID 그래프](/help/identity-service/features/identity-graph-viewer.md)의 프로필에 추가되면 새 증분 파일 내보내기에 포함되도록 프로필이 트리거됩니다.
 
 새 대상이 대상 매핑에 추가되는 경우 자격 요건 및 다른 세그먼트에 대한 내보내기에 영향을 주지 않습니다. 내보내기 예약은 대상자별로 개별적으로 구성되며 대상이 동일한 대상 데이터 흐름에 추가된 경우에도 파일은 모든 세그먼트에 대해 별도로 내보내집니다.
 
@@ -157,10 +159,10 @@ Experience Platform에서 [파일 기반 대상](/help/destinations/destination-
 
 ![선택한 여러 특성이 있는 내보내기 설정입니다.](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
 
-* 프로필이 세그먼트에 적합하거나 적합하지 않을 때 증분 파일 내보내기에 프로필이 포함됩니다.
-* 새 전화 번호가 ID 그래프에 추가되면 증분 파일 내보내기에 프로필이 *포함되지 않음*&#x200B;됩니다.
-* 프로필에서 `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address`과(와) 같은 매핑된 XDM 필드의 값이 업데이트되면 증분 파일 내보내기에 프로필이 *not*&#x200B;이(가) 포함됩니다.
-* 대상 활성화 워크플로에서 `segmentMembership.status` XDM 필드가 매핑될 때마다 대상을 종료하는 프로필이 `exited` 상태의 내보낸 증분 파일에도 포함됩니다.
+* *is* 프로필이 세그먼트에 적합하거나 적합하지 않을 때 증분 파일 내보내기에 포함됩니다.
+* 새 전화 번호가 ID 그래프에 추가되면 증분 파일 내보내기에 프로필 *is*&#x200B;이(가) 포함됩니다.
+* `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address`과(와) 같은 매핑된 XDM 필드의 값이 프로필에서 업데이트될 때 *프로필이 증분 파일 내보내기에 포함되지 않습니다*.
+* 대상 활성화 워크플로에서 `segmentMembership.status` XDM 필드가 매핑될 때마다 대상 *을(를) 종료하는 프로필도 내보낸 증분 파일에 `exited` 상태로 포함*&#x200B;됩니다.
 
 >[!ENDSHADEBOX]
 
@@ -184,7 +186,7 @@ Experience Platform에서 [파일 기반 대상](/help/destinations/destination-
 
 | 대상 내보내기를 결정하는 사항 | 내보낸 파일에 포함된 내용 |
 |---------|----------|
-| <ul><li>UI 또는 API에 설정된 내보내기 일정에 따라 대상 내보내기의 시작이 결정됩니다.</li><li>프로필의 대상 멤버십에 대한 변경 사항(세그먼트에서 적격 또는 부적격)이 발생하면 증분 내보내기에 포함할 프로필이 적합합니다. 프로필 *do not*&#x200B;에 대한 특성 또는 ID 맵의 변경 사항은 증분 내보내기에 포함할 프로필을 검증합니다.</li></ul> | <p>내보내기를 위해 선택한 각 XDM 속성에 대한 최신 정보와 함께 대상 멤버십이 변경된 프로필입니다.</p><p>매핑 단계에서 `segmentMembership.status` XDM 필드를 선택한 경우 종료된 상태의 프로필이 대상 내보내기에 포함됩니다.</p> |
+| <ul><li>UI 또는 API에 설정된 내보내기 일정에 따라 대상 내보내기의 시작이 결정됩니다.</li><li>프로필의 대상 멤버십이 세그먼트에 적합한지 또는 부적합한지 여부에 관계없이, 또는 ID 맵의 변경 사항이 증분 내보내기에 포함될 프로필을 적합하게 합니다. *do not* 프로필에 대한 특성을 변경하면 증분 내보내기에 포함되는 프로필이 자격을 갖습니다.</li></ul> | <p>내보내기를 위해 선택한 각 XDM 속성에 대한 최신 정보와 함께 대상 멤버십이 변경된 프로필입니다.</p><p>매핑 단계에서 `segmentMembership.status` XDM 필드를 선택한 경우 종료된 상태의 프로필이 대상 내보내기에 포함됩니다.</p> |
 
 {style="table-layout:fixed"}
 
