@@ -3,7 +3,7 @@ title: ID 최적화 알고리즘
 description: ID 서비스의 ID 최적화 알고리즘에 대해 알아봅니다.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 8762ea655399fbc82c63c87310337b8e875bd5bc
+source-git-commit: 84ad4a5f522b04430ee304f1a812da25e26f6954
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 1%
@@ -68,7 +68,7 @@ ID 서비스의 네임스페이스에는 암시적 상대적 중요도 순서가
 * 위 순서에 따라 그래프가 다시 설정됩니다. 링크를 추가하는 것이 제한 제한을 위반하는 경우(예: 그래프에 고유한 네임스페이스가 있는 두 개 이상의 ID가 포함됨) 링크가 제거됩니다.
 * 그러면 결과 그래프는 사용자가 구성한 고유한 네임스페이스 제약 조건을 준수합니다.
 
-![ID 최적화 알고리즘을 시각화하는 다이어그램입니다.](../images/ido.png)
+![ID 최적화 알고리즘을 시각화하는 다이어그램입니다.](../images/ido_algorithm.png)
 
 ## ID 최적화 알고리즘에 대한 예제 시나리오
 
