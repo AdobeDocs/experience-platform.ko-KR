@@ -100,7 +100,7 @@ Adobe Target에서 사용자에게 다음이 있는지 확인합니다.
 >id="platform_destinations_target_datastream"
 >title="데이터스트림 ID 정보"
 >abstract="이 옵션은 대상자에 포함될 데이터 수집 데이터스트림을 결정합니다. 드롭다운 메뉴에 Target 구성이 활성화된 데이터스트림만 표시됩니다. 에지 세분화를 사용하려면 데이터스트림 ID를 선택해야 합니다. 없음을 선택하면 에지 세분화를 사용하는 모든 사용 사례가 비활성화됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=ko#parameters" text="데이터스트림 선택에 대해 자세히 알아보기"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="데이터스트림 선택에 대해 자세히 알아보기"
 
 >[!IMPORTANT]
 > 

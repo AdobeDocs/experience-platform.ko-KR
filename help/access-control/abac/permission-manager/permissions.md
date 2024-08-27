@@ -4,7 +4,7 @@ description: 보고서를 생성하고 액세스 권한을 확인하는 Adobe Ex
 source-git-commit: 3f2a899705d2c05b12300b6d5b0b860ad2c05bfd
 workflow-type: tm+mt
 source-wordcount: '612'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -16,12 +16,12 @@ ht-degree: 1%
 
 [!UICONTROL 권한 관리자]에서 간단한 쿼리를 사용하여 액세스 관리를 이해하고 여러 워크플로우 및 세부 기간 수준에서 액세스 권한을 확인하는 데 걸리는 시간을 절약할 수 있는 간결한 보고서를 만드십시오. [!UICONTROL 권한 관리자]를 사용하여 사용자 그룹에 속하고 지정된 액세스 권한을 가진 사용자와 특정 레이블을 가진 역할을 찾을 수 있습니다.
 
-## 지정된 사용자 그룹 내에서 사용자 검색 수행 {#search-users}
+## 지정된 사용자 그룹 내 사용자 검색 {#search-users}
 
 >[!CONTEXTUALHELP]
 >id="platform_permission_manager"
 >title="권한 관리자"
->abstract="페이지의 드롭다운 선택기를 사용하여 사용자 및 역할에 대해 서로 다른 세부 기간 수준의 액세스 수준 보고서를 가져옵니다."
+>abstract="페이지의 드롭다운 선택기를 사용하여 사용자 및 역할에 대해 다양한 세부 수준의 액세스 수준 보고서를 받습니다."
 <!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
 
 드롭다운을 사용하여 **[!UICONTROL 사용자]** 특성을 선택합니다.

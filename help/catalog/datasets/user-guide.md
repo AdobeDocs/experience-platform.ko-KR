@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
 workflow-type: tm+mt
 source-wordcount: '3203'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
@@ -41,18 +41,18 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_datalakeretention"
->title="데이터 기록 보존"
->abstract="각 데이터 세트에 대한 현재 보존 정책을 표시합니다. 이 값은 각 데이터 세트의 보존 설정에서 수정할 수 있습니다. ExperienceEvent 데이터 세트에 대한 보존 시간만 설정할 수 있습니다."
+>title="데이터 레이크 보존"
+>abstract="각 데이터 세트에 대한 현재 보존 정책을 보여 줍니다. 이 값은 각 데이터 세트의 보존 설정에서 수정할 수 있습니다. ExperienceEvent 데이터 세트에 대해서만 보존 시간을 설정할 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_profileretention"
->title="프로필 유지"
->abstract="각 데이터 세트에 대한 현재 보존 정책을 표시합니다. 이 값은 각 데이터 세트의 보존 설정에서 수정할 수 있습니다. ExperienceEvent 데이터 세트에 대한 보존 시간만 설정할 수 있습니다."
+>title="프로필 보존"
+>abstract="각 데이터 세트에 대한 현재 보존 정책을 보여 줍니다. 이 값은 각 데이터 세트의 보존 설정에서 수정할 수 있습니다. ExperienceEvent 데이터 세트에 대해서만 보존 시간을 설정할 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_datalakesettings_datasetretention"
->title="데이터 세트 유지"
->abstract="데이터 레이크 보존은 다른 서비스에서 데이터가 저장되는 기간과 삭제되어야 하는 시기에 대한 규칙을 설정합니다. 이를 통해 규정 준수, 스토리지 비용 관리, 데이터 품질 유지 등의 이점을 누릴 수 있습니다."
+>title="데이터 세트 보존"
+>abstract="데이터 레이크 보존은 다양한 서비스에서 데이터를 저장하는 기간과 데이터를 삭제해야 하는 시점에 대한 규칙을 설정합니다. 이를 통해 규정을 준수하고 저장 비용을 관리하고 데이터 품질을 유지할 수 있습니다."
 
 
 [!DNL Experience Platform] UI의 왼쪽 탐색에서 **[!UICONTROL 데이터 세트]**&#x200B;를 선택하여 **[!UICONTROL 데이터 세트]** 대시보드를 엽니다. 대시보드에는 조직에서 사용 가능한 모든 데이터 세트가 나열됩니다. 목록에 있는 각 데이터 세트에 대해 이름, 데이터 세트가 준수하는 스키마, 최근 수집 실행 상태 등 세부 정보가 표시됩니다.
