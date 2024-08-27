@@ -2,9 +2,9 @@
 title: 스키마에 대한 데이터 사용 레이블 관리
 description: Adobe Experience Platform UI에서 XDM(Experience Data Model) 스키마 필드에 데이터 사용 레이블을 추가하는 방법을 알아봅니다.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 37395e5762c8d54e6fca5c3502bdbf56f5b5472c
+source-git-commit: 22233d2bda488aa223555f85215be31d007eaa37
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '804'
 ht-degree: 8%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience 
 
 스키마 필드에 적용되는 레이블은 해당 특정 필드에 포함된 데이터에 적용되는 사용 정책을 나타냅니다.
 
-레이블은 개별 스키마 및 해당 스키마 내의 필드에 적용되는 데 적용할 수 있습니다. 레이블이 스키마에 직접 적용되면 해당 레이블은 해당 스키마를 기반으로 하는 모든 기존 및 향후 데이터 세트에 전파됩니다.
+레이블은 개별 스키마 및 해당 스키마 내의 필드에 적용할 수 있습니다. 레이블이 스키마에 직접 적용되면 해당 레이블은 해당 스키마를 기반으로 하는 모든 기존 및 향후 데이터 세트에 전파됩니다.
 
 또한 한 스키마에 추가하는 필드 레이블은 공유 클래스 또는 필드 그룹의 동일한 필드를 사용하는 다른 모든 스키마로 전파됩니다. 이렇게 하면 유사한 필드에 대한 사용 규칙이 전체 데이터 모델에서 일관되도록 할 수 있습니다.
 

@@ -5,7 +5,7 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 19%
@@ -27,11 +27,11 @@ ht-degree: 19%
       - [개요](data-distiller/derived-datasets/overview.md)
       - [SQL을 사용하여 파생 데이터 세트 만들기](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [십분위수 기반 파생 데이터 세트 만들기](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - 확장 앱 보고에 대한 사용자 지정 가능한 인사이트 {#customizable-insights}
-      - [개요](data-distiller/customizable-insights/overview.md)
-      - [쿼리 프로 모드](data-distiller/customizable-insights/query-pro-mode.md)
-      - [가속화된 쿼리 보내기](data-distiller/customizable-insights/send-accelerated-queries.md)
-      - [Reporting insights 데이터 모델 안내서](data-distiller/customizable-insights/reporting-insights-data-model.md)
+   - 확장 앱 보고 {#sql-insights}에 대한 SQL Insights
+      - [개요](data-distiller/sql-insights/overview.md)
+      - [쿼리 프로 모드](data-distiller/sql-insights/query-pro-mode.md)
+      - [가속화된 쿼리 보내기](data-distiller/sql-insights/send-accelerated-queries.md)
+      - [Reporting insights 데이터 모델 안내서](data-distiller/sql-insights/reporting-insights-data-model.md)
    - AI/ML 기능 파이프라인 {#ml-feature-pipelines}
       - [개요](data-distiller/ml-feature-pipelines/overview.md)
       - [Jupyter Notebooks 연결](data-distiller/ml-feature-pipelines/establish-connection.md)

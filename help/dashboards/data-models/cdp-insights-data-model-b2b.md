@@ -4,7 +4,7 @@ description: Real-time Customer Data Platform Insights 데이터 모델(B2B 에�
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: e94343e61e98f69fa28ecd61aec9267460a7f616
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
@@ -20,7 +20,7 @@ B2B 에디션용 Real-time Customer Data Platform 인사이트 데이터 모델�
 >이 기능은 Real-Time CDP Prime 및 Ultimate 패키지를 구입한 고객이 사용할 수 있습니다. 자세한 내용은 사용 가능한 [Real-Time CDP 버전](../../rtcdp/overview.md#rtcdp-editions)에 대한 설명서를 참조하거나 Adobe 담당자에게 문의하십시오.
 
 <!-- 
-See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
+See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
  -->
 
 ## 전제 조건

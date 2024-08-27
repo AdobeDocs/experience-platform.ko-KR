@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 10월
 description: Adobe Experience Platform의 2022년 10월 릴리스 정보.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 29%
@@ -101,7 +101,7 @@ Platform의 XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/h
 | 기능 | 설명 |
 | --- | --- |
 | Platform UI를 통해 쿼리 모니터링 | 쿼리 서비스 [!UICONTROL 예약된 쿼리] 탭에서는 UI를 통해 모든 쿼리 작업의 상태를 보다 잘 볼 수 있습니다. 이제 [!UICONTROL 예약된 쿼리] 탭에서 쿼리 실행 상태에 대한 중요한 정보(오류 메시지 및 실패 시 코드 포함)를 찾을 수 있습니다. UI를 통해 상태를 기반으로 이러한 쿼리에 대한 경고를 구독할 수도 있습니다. 이 기능에 대한 자세한 내용은 [쿼리 모니터링 문서](../../query-service/ui/monitor-queries.md)를 참조하세요. |
-| 쿼리 가속화된 보고 통찰력 데이터 모델 | Data Distiller SKU의 일부로, 쿼리 가속 스토어를 사용하면 데이터에서 중요한 통찰력을 얻는 데 필요한 시간과 처리 능력을 줄일 수 있습니다. 쿼리 가속 저장소를 사용하면 사용자 지정 데이터 모델을 구축하거나 기존 Adobe Real-time Customer Data Platform 데이터 모델에서 확장하여 보고 통찰력과 시각화를 향상시킬 수 있습니다. 이 기능에 대한 자세한 내용은 [쿼리 가속 저장소 보고 인사이트 문서](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md)를 참조하세요. |
+| 쿼리 가속화된 보고 통찰력 데이터 모델 | Data Distiller SKU의 일부로, 쿼리 가속 스토어를 사용하면 데이터에서 중요한 통찰력을 얻는 데 필요한 시간과 처리 능력을 줄일 수 있습니다. 쿼리 가속 저장소를 사용하면 사용자 지정 데이터 모델을 구축하거나 기존 Adobe Real-time Customer Data Platform 데이터 모델에서 확장하여 보고 통찰력과 시각화를 향상시킬 수 있습니다. 이 기능에 대한 자세한 내용은 [쿼리 가속 저장소 보고 인사이트 문서](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md)를 참조하세요. |
 
 {style="table-layout:auto"}
 

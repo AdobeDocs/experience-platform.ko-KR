@@ -4,7 +4,7 @@ description: Real-time Customer Data Platform Insights 데이터 모델(B2C 버�
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform Insights 데이터 모델 B2C 에디션
 
-[B2C 에디션](../../rtcdp/overview.md#rtcdp-b2c)용 Real-time Customer Data Platform 인사이트 데이터 모델은 다양한 프로필, 대상 및 세그멘테이션 위젯에 대한 인사이트를 제공하는 데이터 모델과 SQL을 노출합니다. 이러한 SQL 쿼리 템플릿을 사용자 정의하여 마케팅 및 주요 성능 지표(KPI) 사용 사례에 대한 Real-Time CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 인사이트를 사용자 정의 대시보드에 대한 사용자 정의 위젯으로 사용할 수 있습니다. [가속화된 저장소 데이터 및 사용자 정의 대시보드와 함께 사용할 수 있도록 쿼리 서비스를 통해 보고 인사이트 데이터 모델을 만드는 방법](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md)을 알아보려면 쿼리 가속화된 저장소 보고 인사이트 설명서를 참조하십시오.
+[B2C 에디션](../../rtcdp/overview.md#rtcdp-b2c)용 Real-time Customer Data Platform 인사이트 데이터 모델은 다양한 프로필, 대상 및 세그멘테이션 위젯에 대한 인사이트를 제공하는 데이터 모델과 SQL을 노출합니다. 이러한 SQL 쿼리 템플릿을 사용자 정의하여 마케팅 및 주요 성능 지표(KPI) 사용 사례에 대한 Real-Time CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 인사이트를 사용자 정의 대시보드에 대한 사용자 정의 위젯으로 사용할 수 있습니다. [가속화된 저장소 데이터 및 사용자 정의 대시보드와 함께 사용할 수 있도록 쿼리 서비스를 통해 보고 인사이트 데이터 모델을 만드는 방법](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md)을 알아보려면 쿼리 가속화된 저장소 보고 인사이트 설명서를 참조하십시오.
 
 >[!NOTE]
 >

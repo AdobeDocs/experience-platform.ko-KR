@@ -2,7 +2,7 @@
 title: 사용자 지정 대시보드
 description: 맞춤형 위젯을 만들고, 추가하고, 편집하여 주요 지표를 시각화할 수 있는 사용자 정의 대시보드를 만들고 관리하는 방법을 알아봅니다.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2ddfa221ecdebad81343516935e81691021e1fbc
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -37,7 +37,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ![대시보드 만들기 대화 상자](./images/user-defined-dashboards/create-dashboard-dialog.png)
 
-Data Distiller SKU를 구매한 사용자에게는 사용자 지정 SQL 쿼리를 사용하여 인사이트를 만들 수 있는 옵션이 있습니다. 이 워크플로에 대한 지침은 [사용자 지정 가능한 인사이트 만들기 안내서](./data-distiller/customizable-insights/overview.md)를 참조하십시오.
+Data Distiller SKU를 구매한 사용자에게는 사용자 지정 SQL 쿼리를 사용하여 인사이트를 만들 수 있는 옵션이 있습니다. 이 워크플로에 대한 지침은 [SQL 인사이트 생성 안내서](./data-distiller/sql-insights/overview.md)를 참조하십시오.
 
 새로 생성된 빈 대시보드가 뷰의 왼쪽 상단 모서리에 선택한 이름과 함께 나타납니다.
 

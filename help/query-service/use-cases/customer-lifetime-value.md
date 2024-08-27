@@ -2,7 +2,7 @@
 title: 데이터 신호를 추적하여 고객 생애 가치 생성
 description: 이 안내서에서는 Data Distiller 및 Real-time Customer Data Platform과 함께 사용자 정의 대시보드를 사용하여 고객 생애 가치를 측정하고 시각화하는 방법에 대한 전체적인 데모를 제공합니다.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -47,7 +47,7 @@ CLV를 설정하는 첫 번째 단계는 사용자 작업에서 캡처한 데이
 
 ## Insights 데이터 모델 확장 및 업데이트 예약 {#extend-data-model-and-set-refresh-schedule}
 
-그런 다음 사용자 지정 데이터 모델을 구축하거나 기존 Adobe Real-Time CDP 데이터 모델을 확장하여 CLV 보고 통찰력에 참여해야 합니다. [가속화된 저장소 데이터 및 사용자 정의 대시보드와 함께 사용할 수 있도록 쿼리 서비스를 통해 보고 인사이트 데이터 모델을 빌드](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model)하는 방법에 대해 알아보려면 설명서를 참조하세요. 이 자습서에서는 다음 단계를 다룹니다.
+그런 다음 사용자 지정 데이터 모델을 구축하거나 기존 Adobe Real-Time CDP 데이터 모델을 확장하여 CLV 보고 통찰력에 참여해야 합니다. [가속화된 저장소 데이터 및 사용자 정의 대시보드와 함께 사용할 수 있도록 쿼리 서비스를 통해 보고 인사이트 데이터 모델을 빌드](../data-distiller/sql-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model)하는 방법에 대해 알아보려면 설명서를 참조하세요. 이 자습서에서는 다음 단계를 다룹니다.
 
 * Data Distiller을 사용하여 보고 통찰력에 대한 모델을 만듭니다.
 * 테이블, 관계를 만들고 데이터를 채웁니다.

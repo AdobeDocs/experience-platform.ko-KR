@@ -2,7 +2,7 @@
 title: 쿼리 서비스 패키징
 description: 다음 문서에서는 쿼리 서비스에 사용할 수 있는 기능 및 제품의 패키지 구성에 대해 간략히 설명하고 애드혹 쿼리와 배치 쿼리의 차이점을 조명합니다.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 1e18a60478e2755f49d37d4d3bf4bd3ca6dbf23b
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 2%
@@ -67,9 +67,9 @@ Experience Platform에 대한 액세스 제어는 제품 프로필이 사용 권
 
 {style="table-layout:auto"}
 
-### 관련 사용자 정의 가능한 Insights 권한 {#customizable-insights-permissions}
+### 관련 SQL Insights 권한 {#sql-insights-permissions}
 
-대시보드 내에 Data Distiller [사용자 지정 가능한 인사이트](./data-distiller/customizable-insights/overview.md)를 만들려면 Admin Console 내에서 다음 권한 **을(를) 사용하도록 설정해야 합니다**.
+대시보드 내에 Data Distiller [SQL Insights](./data-distiller/sql-insights/overview.md)를 만들려면 Admin Console 내에 다음 권한 **을(를) 활성화해야**&#x200B;합니다.
 
 | 사용 권한 | 함수 |
 |---|---|
