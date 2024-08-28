@@ -2,10 +2,10 @@
 description: 파일 기반 대상으로 데이터를 활성화할 때 파일 서식 옵션을 구성하는 방법에 대해 알아봅니다
 title: 파일 기반 대상에 대한 파일 서식 옵션 구성
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
+source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 19%
+source-wordcount: '1228'
+ht-degree: 17%
 
 ---
 
@@ -68,17 +68,21 @@ UI에서 선택한 각 내용과 함께 내보낸 CSV 파일의 아래 예를 �
 >title="인용 부호"
 >abstract="내보낸 문자열에서 큰따옴표를 제거하려면 이 옵션을 사용하십시오. 각 선택 항목에 대한 예제는 설명서를 참조하십시오."
 
-내보낸 문자열에서 큰따옴표를 제거하려면 이 옵션을 사용하십시오. 사용 가능한 옵션은 다음과 같습니다.
+이 옵션을 사용하여 내보낸 문자열 내에서 큰따옴표를 제거하거나 유지할지 여부를 제어합니다.
+
+사용 가능한 옵션은 다음과 같습니다.
 
 * **[!UICONTROL Null 문자(\0000)]**. 내보낸 CSV 파일에서 큰따옴표를 제거하려면 이 옵션을 사용합니다.
-* **[!UICONTROL 큰따옴표(&quot;)]**. 내보낸 CSV 파일에 큰 따옴표를 유지하려면 이 옵션을 사용합니다.
+* **[!UICONTROL 큰따옴표(&quot;)]**. 문자열 값에 구분 기호 또는 큰따옴표가 포함되어 있을 때 이 옵션을 사용합니다. 이 옵션은 내보낸 CSV 파일에 구분 기호 또는 큰따옴표를 유지하는 데 도움이 되므로 어느 값이 어느 필드에 해당하는지 올바르게 식별할 수 있습니다.
 
 #### 예시
 
+입력 값 `Anna,"Doe,John"`을(를) 고려하십시오.
+
 UI에서 선택한 각 내용이 포함된 내보낸 CSV 파일의 콘텐츠 아래 예를 봅니다.
 
-* **[!UICONTROL Null 문자(\0000)]**&#x200B;이(가) 선택된 출력 예: `Test,John,LastName`
-* **[!UICONTROL 큰따옴표(&quot;)]**&#x200B;이(가) 선택된 출력 예: `"Test","John","LastName"`
+* **[!UICONTROL Null 문자(\0000)]**&#x200B;이(가) 선택된 출력 예: `Anna,Doe,John`
+* **[!UICONTROL 큰따옴표(&quot;)]**&#x200B;이(가) 선택된 출력 예: `Anna,"Doe,John"`
 
 ### 문자 이스케이프 {#escape-character}
 
