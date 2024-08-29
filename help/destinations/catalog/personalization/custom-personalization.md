@@ -3,9 +3,9 @@ keywords: 사용자 정의 개인화; 대상; experience platform 사용자 정�
 title: 사용자 지정 개인화 연결
 description: 이 대상은 Adobe Experience Platform에서 대상 정보를 검색할 수 있는 방법을 통해 사이트에서 실행 중인 외부 개인화, 콘텐츠 관리 시스템, 광고 서버 및 기타 애플리케이션을 제공합니다. 이 대상은 사용자 프로필 대상 멤버십을 기반으로 실시간 개인화를 제공합니다.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 182176aa2e588aa356d5fea23b49f17bc8a50314
+source-git-commit: 0f70e072402bca055b96195ded91816810759fc2
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '962'
 ht-degree: 9%
 
 ---
@@ -35,7 +35,11 @@ ht-degree: 9%
 
 ## 전제 조건 {#prerequisites}
 
-이 통합은 [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) 또는 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)에서 제공됩니다. 이 대상을 사용하려면 다음 SDK 중 하나를 사용해야 합니다.
+이 대상은 구현에 따라 다음 데이터 수집 방법 중 하나를 사용해야 합니다.
+
+* 웹 사이트에서 데이터를 수집하려면 [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)를 사용하십시오.
+* 모바일 애플리케이션에서 데이터를 수집하려면 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)를 사용하십시오.
+* [Web SDK](/help/web-sdk/home.md) 또는 [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)를 사용하지 않거나 프로필 특성을 기반으로 Edge Network 환경을 개인화하려는 경우 [User Server API](../../../server-api/overview.md)를 사용하십시오.
 
 >[!IMPORTANT]
 >
