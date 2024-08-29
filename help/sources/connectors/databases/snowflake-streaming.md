@@ -5,9 +5,9 @@ badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
+source-git-commit: e8ab39ce085a95eac898f65667706b71bdadd350
 workflow-type: tm+mt
-source-wordcount: '710'
+source-wordcount: '791'
 ht-degree: 1%
 
 ---
@@ -33,13 +33,19 @@ Experience Platform은 [!DNL Snowflake] 데이터베이스에서 데이터를 �
 
 다음 섹션에서는 [!DNL Snowflake] 데이터베이스에서 Experience Platform으로 데이터를 스트리밍하기 전에 완료해야 하는 필수 조건 단계에 대해 설명합니다.
 
+### IP 주소 허용 목록 업데이트
+
+소스 커넥터로 작업하려면 먼저 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources) 페이지를 참조하세요.
+
+아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Amazon Redshift]을(를) 플랫폼에 연결하는 방법에 대한 정보를 제공합니다.
+
 ### 필요한 자격 증명 수집
 
 [!DNL Flow Service]이(가) [!DNL Snowflake]과(와) 연결하려면 다음 연결 속성을 제공해야 합니다.
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| `account` | [!DNL Snowflake] 계정과 연결된 전체 계정 이름. 정규화된 [!DNL Snowflake] 계정 이름에는 계정 이름, 지역 및 클라우드 플랫폼이 포함됩니다. 예, `cj12345.east-us-2.azure`. 계정 이름에 대한 자세한 내용은 이 [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>)을(를) 참조하세요. |
+| `account` | `snowflakecomputing.com` 접미사가 추가된 [!DNL Snowflake] 계정의 전체 계정 식별자(계정 이름 또는 계정 로케이터)입니다. 계정 식별자는 다양한 형식일 수 있습니다. <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com(예: `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com (예: `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com (예: `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> 자세한 내용은 [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>)을(를) 참조하십시오. |
 | `warehouse` | [!DNL Snowflake] 웨어하우스에서 응용 프로그램의 쿼리 실행 프로세스를 관리합니다. 각 [!DNL Snowflake] 웨어하우스는 서로 독립적이며 데이터를 플랫폼으로 가져올 때 개별적으로 액세스해야 합니다. |
 | `database` | [!DNL Snowflake] 데이터베이스에 플랫폼에 가져올 데이터가 있습니다. |
 | `username` | [!DNL Snowflake] 계정의 사용자 이름입니다. |
@@ -47,6 +53,7 @@ Experience Platform은 [!DNL Snowflake] 데이터베이스에서 데이터를 �
 | `role` | (선택 사항) 지정된 연결에 대해 사용자에게 제공할 수 있는 사용자 정의 역할입니다. 지정하지 않으면 이 값은 기본적으로 `public`(으)로 설정됩니다. |
 | `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL Snowflake]의 연결 사양 ID는 `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`입니다. |
 
+{style="table-layout:auto"}
 
 ### 역할 설정 구성 {#configure-role-settings}
 

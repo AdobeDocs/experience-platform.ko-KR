@@ -4,9 +4,9 @@ type: Tutorial
 description: Snwoflake 데이터베이스에서 Experience Platform으로 데이터를 스트리밍하는 방법에 대해 알아봅니다
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: f39ee3af176e3d9b8ad04bfad81793db0ebe71a7
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1648'
 ht-degree: 3%
 
 ---
@@ -54,7 +54,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 
 | 자격 증명 | 설명 |
 | --- | --- |
-| 계정 | [!DNL Snowflake] 계정의 이름입니다. |
+| 계정 | [!DNL Snowflake] 계정의 이름입니다. 계정 이름에 대한 규칙은 [[!DNL Snowflake Streaming] 인증 안내서](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials)를 참조하십시오. |
 | 웨어하우스 | [!DNL Snowflake] 웨어하우스 이름. 웨어하우스는 [!DNL Snowflake]에서 쿼리 실행을 관리합니다. 각 [!DNL Snowflake] 웨어하우스는 서로 독립적이므로 데이터를 Experience Platform 상태로 가져오려면 개별적으로 액세스해야 합니다. |
 | 데이터베이스 | [!DNL Snowflake] 데이터베이스의 이름입니다. 데이터베이스에는 Experience Platform 대상으로 가져올 데이터가 포함되어 있습니다. |
 | 스키마 | (선택 사항) [!DNL Snowflake] 계정과 연결된 데이터베이스 스키마입니다. |
@@ -78,7 +78,9 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 
 >[!IMPORTANT]
 >
->스트리밍 데이터 흐름을 만들려면 소스 테이블에 타임스탬프 열이 있어야 합니다. 타임스탬프는 Experience Platform이 데이터가 수집되는 시기와 증분 데이터가 스트리밍되는 시기를 아는 데 필요합니다. 기존 연결에 대한 타임스탬프 열을 소급하여 추가하고 새 데이터 흐름을 만들 수 있습니다.
+>* 스트리밍 데이터 흐름을 만들려면 소스 테이블에 타임스탬프 열이 있어야 합니다. 타임스탬프는 Experience Platform이 데이터가 수집되는 시기와 증분 데이터가 스트리밍되는 시기를 아는 데 필요합니다. 기존 연결에 대한 타임스탬프 열을 소급하여 추가하고 새 데이터 흐름을 만들 수 있습니다.
+>
+>* 샘플 원본 데이터 파일의 데이터 필드의 대/소문자가 식별자에 대한 대/소문자 확인에 대한 [!DNL Snowflake]의 지침을 따르는지 확인하십시오. 자세한 내용은 [[!DNL Snowflake] 식별자 케이스](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing)의 문서를 참조하십시오.
 
 [!UICONTROL 데이터 선택] 단계가 나타납니다. 이 단계에서는 Experience Platform으로 가져올 데이터를 선택하고, 타임스탬프와 시간대를 구성하고, 원시 데이터 수집을 위한 샘플 소스 데이터 파일을 제공해야 합니다.
 
