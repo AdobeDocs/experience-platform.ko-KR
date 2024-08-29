@@ -1,9 +1,10 @@
 ---
 title: 속성 기반 액세스 제어 권한 관리자
 description: 보고서를 생성하고 액세스 권한을 확인하는 Adobe Experience Platform의 권한 관리자를 사용하는 방법을 알아봅니다.
-source-git-commit: 3f2a899705d2c05b12300b6d5b0b860ad2c05bfd
+exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
+source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '603'
 ht-degree: 7%
 
 ---
@@ -40,7 +41,7 @@ ht-degree: 7%
 
 >[!INFO]
 >
->[!UICONTROL 리소스], [!UICONTROL 작업] 및 [!UICONTROL 샌드박스]는 필수 필드가 아닙니다. 각 보고서에 대해 하나의 [!UICONTROL 리소스]만 선택할 수 있습니다. 제거할 선택 항목 옆의 **&#39;x&#39;**&#x200B;을(를) 선택하여 작업 또는 샌드박스를 추가한 후 제거할 수 있습니다.
+>[!UICONTROL 리소스], [!UICONTROL 작업] 및 [!UICONTROL 샌드박스]는 필수 필드가 아닙니다. 제거할 선택 항목 옆의 **&#39;x&#39;**&#x200B;을(를) 선택하여 작업 또는 샌드박스를 추가한 후 제거할 수 있습니다.
 
 ![리소스, 작업, 샌드박스 드롭다운 및 강조 표시된 결과 표시](../../images/permission-manager/users-additional-attributes-select.png)
 
