@@ -2,10 +2,10 @@
 title: Adobe Experience Platform의 AI Assistant 개요
 description: AI 어시스턴트, 그 미묘한 차이와 사용 사례, 그리고 이를 사용하여 Adobe Experience Platform 및 Real-Time Customer Data Platform을 통해 워크플로를 가속화하는 방법에 대해 알아봅니다.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: d950e7ef524dfb487176e51ef25e98c0b5fe8b6c
+source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 7%
+source-wordcount: '915'
+ht-degree: 8%
 
 ---
 
@@ -55,7 +55,7 @@ AI Assistant를 쿼리하기 전에 고려해야 할 두 가지 유형의 질문
 
 {style="table-layout:auto"}
 
-### 운영 통찰력 {#operational-insights}
+### 운영 인사이트 {#operational-insights}
 
 >[!IMPORTANT]
 >
@@ -71,13 +71,13 @@ AI Assistant를 쿼리하기 전에 고려해야 할 두 가지 유형의 질문
 
 | 도메인 | 지원되는 메타데이터 | 지원되지 않는 메타데이터 |
 | --- | --- | --- |
-| 속성 | <ul><li>속성 이름 조회</li><li>속성 - 스키마 관계</li><li>속성 - 데이터 세트 관계</li><li>속성 - 대상 관계</li><li>속성 - 대상 관계</li></ul> | <ul><li>Attribute 클래스</li><li>감사</li><li>사용 중단 상태</li><li>레이블</li><li>속성에 저장된 값</li></ul> |
-| 대상자 | <ul><li>대상자 수</li><li>대상자 유형(스트리밍 또는 일괄 처리)</li><li>생성/수정 날짜</li><li>활성화 상태</li><li>프로필 개수</li><li>중복 대상자</li><li>대상 정의 조회</li><li>대상 - 속성 관계</li><li>대상자 - 데이터 세트 관계</li><li>대상 - 대상 관계</li><li>InSegment 규칙</li><li>조회 이름 지정</li><li>이름 및 ID 조회 | <ul><li>대상 겹침</li><li>대상자 활성화</li><li>대상자 - 캠페인 관계</li><li>감사</li><li>만들기/수정</li><li>레이블</li><li>프로필 자격 트렌드</li></ul> |
+| 속성 | <ul><li>속성 이름 검색</li><li>속성 - 스키마 관계</li><li>속성 - 데이터 세트 관계</li><li>속성 - 대상 관계</li><li>속성 - 대상 관계</li></ul> | <ul><li>Attribute 클래스</li><li>감사</li><li>사용 중단 상태</li><li>레이블</li><li>속성에 저장된 값</li></ul> |
+| 대상자 | <ul><li>대상자 수</li><li>대상자 유형(스트리밍 또는 일괄 처리)</li><li>생성/수정 날짜</li><li>활성화 상태</li><li>프로필 개수</li><li>중복 대상자</li><li>대상 정의 검색</li><li>대상 - 대상 관계</li><li>대상 - 속성 관계</li><li>대상자 - 데이터 세트 관계</li><li>대상 - 대상 관계</li><li>이름 검색</li><li>이름 및 ID 검색 | <ul><li>대상 겹침</li><li>대상자 활성화</li><li>대상자 - 캠페인 관계</li><li>감사</li><li>만들기/수정</li><li>레이블</li><li>프로필 자격 트렌드</li></ul> |
 | 데이터 흐름 | <ul><li>데이터 흐름 카운트</li><li>데이터 흐름 상태</li><li>데이터 흐름 - 데이터 세트 관계</li><li>데이터 흐름 - 소스 관계</li></ul> | <ul><li>생성/수정</li><li>데이터 흐름 일괄 처리 관계</li><li>프로필 개수 수집</li></ul> |
-| 데이터 세트 | <ul><li>데이터 세트 수</li><li>프로필 활성화 상태</li><li>생성/수정 날짜</li><li>데이터 세트 - 스키마 관계</li><li>데이터 세트 - 대상 관계</li><li>데이터 세트 - 속성 관계</li><li>데이터 세트 - 데이터 흐름 관계</li><li>조회 이름 지정 </li><li>이름 및 ID 조회</li></ul> | <ul><li>감사</li><li>제작자</li><li>데이터 세트 - 일괄 처리 관계</li><li>데이터 세트 생성/수정</li><li>데이터 세트 크기</li><li>프로필 수</li><li>행 수</li><li>값 조회</li></ul> |
+| 데이터 세트 | <ul><li>데이터 세트 수</li><li>프로필 활성화 상태</li><li>생성/수정 날짜</li><li>데이터 세트 - 스키마 관계</li><li>데이터 세트 - 대상 관계</li><li>데이터 세트 - 속성 관계</li><li>데이터 세트 - 데이터 흐름 관계</li><li>이름 검색 </li><li>이름 및 ID 검색</li></ul> | <ul><li>감사</li><li>제작자</li><li>데이터 세트 - 일괄 처리 관계</li><li>데이터 세트 생성/수정</li><li>데이터 세트 크기</li><li>프로필 수</li><li>행 수</li><li>값 검색</li></ul> |
 | 대상 | <ul><li>구성된 대상 카운트</li><li>대상 - 대상 관계</li><li>대상 속성 관계</li></ul> | <ul><li>계정 설정</li><li>계정 자격 증명 정보</li><li>고유 프로필 활성화됨</li></ul> |
-| 여정 | <ul><li>카운트</li><li>조회 이름 지정</li><li>이름 및 ID 조회</li><li>여정 상태</li><li>트리거된 상태(대상자 대 이벤트)</li><li>생성/수정 날짜</li><li>반복 빈도</li></ul> | <ul><li>속성 - 여정 관계</li><li>감사</li><li>생성/수정</li><li>제작자</li><li>이벤트</li><li>여정 - 데이터 세트</li><li>여정 - 스키마</li><li>오퍼</li><li>프로필 자격 트렌드</li><li>단계 이벤트</li></ul> |
-| 스키마 | <ul><li>스키마 카운트</li><li>생성/수정 날짜</li><li>스키마 - 속성 관계</li><li>스키마 - 데이터 세트 관계</li><li>스키마 - 대상 관계</li><li>프로필 활성화 상태</li><li>조회 이름 지정</li><li>이름 및 ID 조회</li></ul> | <ul><li>감사</li><li>생성/수정</li><li>제작자</li><li>필드 그룹</li><li>ID</li><li>ID 네임스페이스</li><li>레이블</li><li>프로필 수</li></ul> |
+| 여정 | <ul><li>카운트</li><li>이름 검색</li><li>이름 및 ID 검색</li><li>여정 상태</li><li>트리거된 상태(대상자 대 이벤트)</li><li>생성/수정 날짜</li><li>반복 빈도</li></ul> | <ul><li>속성 - 여정 관계</li><li>감사</li><li>생성/수정</li><li>제작자</li><li>이벤트</li><li>여정 - 데이터 세트</li><li>여정 - 스키마</li><li>오퍼</li><li>프로필 자격 트렌드</li><li>단계 이벤트</li></ul> |
+| 스키마 | <ul><li>스키마 카운트</li><li>생성/수정 날짜</li><li>스키마 - 속성 관계</li><li>스키마 - 데이터 세트 관계</li><li>스키마 - 대상 관계</li><li>프로필 활성화 상태</li><li>이름 검색</li><li>이름 및 ID 검색</li></ul> | <ul><li>감사</li><li>생성/수정</li><li>제작자</li><li>필드 그룹</li><li>ID</li><li>ID 네임스페이스</li><li>레이블</li><li>프로필 수</li></ul> |
 | 소스 | <ul><li>계정 수</li><li>계정 상태</li><li>각 계정에 대한 활성/비활성 데이터 흐름</li><li>Source 커넥터 - 데이터 흐름 관계</li><li>Source 계정 - 데이터 흐름 관계</li></ul> | <ul><li>계정 자격 증명 정보</li><li>계정 설정</li><li>데이터 수집 지표</li><li>프로필 수</li><li>Source - 일괄 처리 관계</li></ul> |
 
 {style="table-layout:auto"}

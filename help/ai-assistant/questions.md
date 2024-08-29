@@ -2,7 +2,7 @@
 title: AI Assistant 질문 안내서
 description: AI Assistant를 쿼리할 때 사용할 수 있는 예제 질문에 대해 알려면 이 문서를 참조하십시오.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 196a39edd493dcc8296f4b6d2904393dd6f6cdd4
+source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
 workflow-type: tm+mt
 source-wordcount: '1524'
 ht-degree: 1%
@@ -33,6 +33,8 @@ AI Assistant를 쿼리할 때 사용할 수 있는 예제 질문 세트는에 �
 ## 엔티티별 운영 통찰력 및 제품 지식 질문{#objects-questions}
 
 다음 질문은 데이터 개체별로 그룹화되어 [운영 인사이트](./home.md#operational-insights) 또는 [제품 지식](./home.md#product-knowledge) 중 하나로 분류됩니다.
+
+![](./images/prompt.png)
 
 * **대상 - Operational insights**
    * 다른 대상을 사용하는 대상
@@ -121,7 +123,7 @@ AI Assistant에 질문을 할 때 따라야 할 모범 사례에 대한 자세�
 
 +++지원되지 않는 질문의 예를 보려면 선택
 
-### 운영 통찰력
+### 운영 인사이트
 
 * 이 샌드박스에 있는 몇 개의 프로필이 캘리포니아에 거주합니까? (**참고**: 유사한 질문의 경우 요청에 대해 충분한 컨텍스트를 제공하기 위해 특정 기준을 제공해야 합니다. 이 경우 특정 기준은 &quot;캘리포니아에서 라이브입니다.)
 * 이 프로필 {PROFILE_INFO/ATTRIBUTE_VALUE}이(가) 속한 세그먼트는 무엇입니까?
