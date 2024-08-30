@@ -2,10 +2,10 @@
 title: Amazon S3 연결
 description: Amazon Web Services(AWS) S3 스토리지에 대한 실시간 아웃바운드 연결을 생성하여 Adobe Experience Platform의 CSV 데이터 파일을 정기적으로 자체 S3 버킷으로 내보냅니다.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 17%
+source-wordcount: '1499'
+ht-degree: 16%
 
 ---
 
@@ -109,7 +109,7 @@ Experience Platform이 데이터를 Amazon S3 속성으로 내보내도록 Amazo
 
 Adobe와 계정 키 및 비밀 키를 공유하지 않으려면 이 인증 유형을 사용합니다. 대신 Experience Platform은 역할 기반 액세스를 사용하여 Amazon S3 위치에 연결합니다.
 
-이렇게 하려면 AWS 콘솔에서 Amazon S3 버킷에 쓸 수 있는 [올바른 필수 권한](#required-s3-permission)이 있는 Adobe의 가설 사용자를 만들어야 합니다. Adobe 계정 **[!UICONTROL 670664943635]**&#x200B;을(를) 사용하여 AWS에서 **[!UICONTROL 신뢰할 수 있는 엔터티]**&#x200B;을(를) 만듭니다. 자세한 내용은 [역할 만들기에 대한 AWS 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html)를 참조하세요.
+이렇게 하려면 AWS 콘솔에서 Amazon S3 버킷에 쓸 수 있는 [올바른 필수 권한](#minimum-permissions-iam-user)이 있는 Adobe의 가설 사용자를 만들어야 합니다. Adobe 계정 **[!UICONTROL 670664943635]**&#x200B;을(를) 사용하여 AWS에서 **[!UICONTROL 신뢰할 수 있는 엔터티]**&#x200B;을(를) 만듭니다. 자세한 내용은 [역할 만들기에 대한 AWS 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html)를 참조하세요.
 
 * **[!DNL Role]**: Adobe 사용자에 대해 AWS에서 만든 역할의 ARN을 붙여 넣습니다. 패턴은 `arn:aws:iam::800873819705:role/destinations-role-customer`과(와) 유사합니다.
 * **[!UICONTROL 암호화 키]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
@@ -162,6 +162,38 @@ Adobe와 계정 키 및 비밀 키를 공유하지 않으려면 이 인증 유�
 * `s3:ListBucket`
 * `s3:PutObject`
 * `s3:ListMultipartUploadParts`
+
+#### IAM에서 지정한 역할 인증에 필요한 최소 권한 {#minimum-permissions-iam-user}
+
+고객으로 IAM 역할을 구성할 때 역할과 연결된 권한 정책에 버킷의 대상 폴더에 필요한 작업과 버킷의 루트에 대한 `s3:ListBucket` 작업이 포함되어 있는지 확인하십시오. 아래에서는 이 인증 유형에 대한 최소 권한 정책의 예를 봅니다.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:GetBucketLocation",
+                "s3:ListMultipartUploadParts"
+            ],
+            "Resource": "arn:aws:s3:::bucket/folder/*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Resource": "arn:aws:s3:::bucket"
+        }
+    ]
+}  
+```
 
 <!--
 
