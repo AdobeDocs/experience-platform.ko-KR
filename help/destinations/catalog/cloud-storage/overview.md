@@ -3,10 +3,10 @@ keywords: 클라우드 스토리지 대상;클라우드 스토리지
 title: 클라우드 스토리지 대상 개요
 description: Adobe Experience Platform은 대상을 Amazon S3, AWS Kinesis, Azure Event Hubs 또는 SFTP 클라우드 스토리지 위치에 데이터 파일로 전달할 수 있습니다.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 6%
+source-wordcount: '453'
+ht-degree: 5%
 
 ---
 
@@ -62,6 +62,13 @@ Adobe Experience Platform은 다음 클라우드 스토리지 대상으로 데�
 
 입력: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
 저장소 위치의 폴더 경로: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+**추가 매크로**
+
+위의 예제와 유사하게 추가 매크로를 사용하여 폴더 위치에 사용자 지정 폴더 구조를 만들 수 있습니다.
+
+* `%DATETIME%` 또는 `%TIMESTAMP%`을(를) 통해 파일의 내보내기 시간을 기준으로 사용자 지정 폴더 이름을 추가할 수 있습니다. 첫 번째 매크로의 형식은 `MMDDYYYY_HHMMSS`이고 두 번째 매크로의 UNIX 10자리 형식입니다.
+* 대상 데이터 흐름의 이름을 기반으로 사용자 지정 폴더를 추가하려면 `%DESTINATION_NAME%`.
 
 ## 데이터 내보내기 유형 {#export-type}
 
