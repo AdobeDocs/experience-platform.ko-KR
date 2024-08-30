@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 8월
-description: Adobe Experience Platform에 대한 2024년 8월 릴리스 정보입니다.
-source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
+description: Adobe Experience Platform의 2024년 8월 릴리스 정보.
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: d9e9275db1989df22b13b4f000dde645f40d5744
 workflow-type: tm+mt
 source-wordcount: '1502'
-ht-degree: 21%
+ht-degree: 22%
 
 ---
 
