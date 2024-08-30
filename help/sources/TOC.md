@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
+source-git-commit: b18f93078d3cdbd0498b5b282236ac9b7bad153c
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1043'
 ht-degree: 30%
 
 ---
@@ -28,7 +28,6 @@ ht-degree: 30%
       - 필드 매핑 {#mapping}
          - [Analytics 필드 매핑](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager 필드 매핑](connectors/adobe-applications/mapping/audience-manager.md)
-         - [대상 필드 매핑](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engage 필드 매핑](connectors/adobe-applications/mapping/marketo.md)
          - [Microsoft Dynamics 필드 매핑](connectors/adobe-applications/mapping/dynamics.md)
          - [Salesforce 필드 매핑](connectors/adobe-applications/mapping/salesforce.md)
@@ -291,7 +290,7 @@ ht-degree: 30%
          - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure 테이블 스토리지](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
-         - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
+         - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
