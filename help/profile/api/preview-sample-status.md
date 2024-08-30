@@ -4,7 +4,7 @@ title: 샘플 상태 미리 보기(프로필 미리 보기) API 끝점
 description: Real-Time Customer Profile API의 샘플 상태 미리보기 엔드포인트를 사용하면 프로필 데이터의 최근 성공 샘플을 미리 보고, 데이터 세트 및 ID별로 프로필 분포를 나열하고, 데이터 세트 중복, ID 중복 및 연결되지 않은 프로필을 보여주는 보고서를 생성할 수 있습니다.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 49196473f304585193e87393f8dc5dc37be7e4d9
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 1%
@@ -84,7 +84,7 @@ curl -X GET \
     "status": true,
     "submissionTimestamp": "2020-08-01 17:57:57.0"
   },
-  "cosmosDocCount": "\"300803\"",
+  "docCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
   "streamingDriven": "\"false\"",
@@ -101,7 +101,7 @@ curl -X GET \
 |---|---|
 | `numRowsToRead` | 샘플에서 병합된 총 프로필 수입니다. |
 | `sampleJobRunning` | 샘플 작업이 진행 중일 때 `true`을(를) 반환하는 부울 값입니다. 일괄 처리 파일이 업로드된 시점부터 실제로 프로필 저장소에 추가될 때까지의 지연 시간을 투명하게 제공합니다. |
-| `cosmosDocCount` | Cosmos의 총 문서 개수. |
+| `docCount` | 데이터베이스의 총 문서 수입니다. |
 | `totalFragmentCount` | 프로필 저장소의 총 프로필 조각 수입니다. |
 | `lastSuccessfulBatchTimestamp` | 마지막으로 성공한 일괄 처리 수집 타임스탬프. |
 | `streamingDriven` | *이 필드는 더 이상 사용되지 않으며 응답에 대한 중요도가 없습니다.* |
