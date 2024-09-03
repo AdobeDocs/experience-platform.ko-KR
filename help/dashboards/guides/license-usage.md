@@ -4,9 +4,9 @@ title: 라이선스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 41c2d8e28536a140136c7eb20c2a4c3dc343f5fa
+source-git-commit: 3ea67d5bcdaeefd26cd95b89c60d21bef34ecd53
 workflow-type: tm+mt
-source-wordcount: '2466'
+source-wordcount: '2646'
 ht-degree: 6%
 
 ---
@@ -17,13 +17,15 @@ ht-degree: 6%
 >id="platform_dashboards_licenseUsage"
 >title="라이선스 사용 대시보드"
 >abstract="라이선스 사용 대시보드는 구매한 Adobe Experience Platform 제품에 대한 인사이트를 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 계약된 라이선스 금액 등 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_licenseUsage_prediction"
+>id="platform_licenseusage"
 >title="라이선스 사용 대시보드"
 >abstract="라이선스 사용 대시보드는 구매한 Adobe Experience Platform 제품에 대한 인사이트를 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 계약된 라이선스 금액 등 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=ko" text="데이터 세트 만료"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="익명 프로필 데이터 만료"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
 
 Adobe Experience Platform [!UICONTROL 라이선스 사용] 대시보드를 통해 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있습니다. 여기에 표시되는 정보는 Platform 인스턴스의 일별 스냅샷 중에 캡처됩니다.
 
@@ -73,6 +75,20 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 각 제품이 다양한 지표를 추적할 수 있으므로 테이블은 각 제품에 대한 기본 지표를 나타냅니다.
 
 ### [!BADGE Beta]{type=Informative} 예상 사용 {#predicted-usage}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_prediction"
+>title="예상 사용량"
+abstract="예측은 지난 6-7개월 동안의 사용량을 기반으로 하며 매월 15일에 생성됩니다. 라이센스 사용 예측은 과거 사용을 기반으로 한 근사치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe으로 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다. 사용량을 줄이기 위해 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성할 수 있습니다."
+additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
+additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
+
+[!CONTEXTUALHELP]
+id="platform_licenseusage_prediction"
+title="예상 사용량"
+abstract="예측은 지난 6-7개월 동안의 사용량을 기반으로 하며 매월 15일에 생성됩니다. 라이센스 사용 예측은 과거 사용을 기반으로 한 근사치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe으로 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다. 사용량을 줄이기 위해 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성할 수 있습니다."
+additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
+additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
 
 >[!AVAILABILITY]
 >
