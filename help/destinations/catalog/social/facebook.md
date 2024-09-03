@@ -3,10 +3,10 @@ keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;메
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 한 대상자 타겟팅, 개인화 및 억제에 대한 Facebook 캠페인을 위한 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 742801c31a0371feb42df2c98b3a4ddb63ae2f48
 workflow-type: tm+mt
-source-wordcount: '1952'
-ht-degree: 7%
+source-wordcount: '1985'
+ht-degree: 6%
 
 ---
 
@@ -80,7 +80,7 @@ Adobe Experience Platform UI의 ![Facebook 대상.](../../assets/catalog/social/
   >[!IMPORTANT]
   >
   > Adobe Experience Cloud에 대한 권한을 구성할 때는 **캠페인 관리** 권한을 활성화해야 합니다. [!DNL Adobe Experience Platform] 통합에는 권한이 필요합니다.
-* [!DNL Facebook Custom Audiences] 서비스 약관을 읽고 서명합니다. 이렇게 하려면 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`(으)로 이동하십시오. 여기서 `accountID`은(는) 내 [!DNL Facebook Ad Account ID]입니다.
+* [!DNL Facebook Custom Audiences] 서비스 약관을 읽고 서명합니다. 이렇게 하려면 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`(으)로 이동하십시오. 여기서 `accountID`은(는) 내 [!DNL Facebook Ad Account ID]입니다. 서비스 약관에 서명할 때 `business_id=206617933627973` 섹션이 URL에 있는지 확인하십시오.
   >[!IMPORTANT]
   >
   >[!DNL Facebook Custom Audiences] 서비스 약관에 서명할 때 Facebook API에서 인증하는 데 사용한 것과 동일한 사용자 계정을 사용해야 합니다.
@@ -251,4 +251,10 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 이 오류는 고객이 새로 만든 계정을 사용하고 있으며 [!DNL Facebook] 권한이 아직 활성화되지 않은 경우에 발생합니다.
 
+>[!IMPORTANT]
+>
+>[계정 필수 구성 요소](#facebook-account-prerequisites) 섹션의 URL 템플릿에 표시된 대로 `business ID 206617933627973`에서 [!DNL Facebook Custom Audience Terms of Service]을(를) 수락해야 합니다.
+
 [Facebook 계정 필수 구성 요소](#facebook-account-prerequisites)의 단계를 수행한 후 `400 Bad Request` 오류 메시지를 받은 경우 [!DNL Facebook] 권한이 적용될 수 있도록 며칠 동안 허용하십시오.
+
+
