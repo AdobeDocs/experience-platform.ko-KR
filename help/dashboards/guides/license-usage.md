@@ -4,10 +4,10 @@ title: 라이선스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3ea67d5bcdaeefd26cd95b89c60d21bef34ecd53
+source-git-commit: f9b7275a9cf066db8192be6a5b5528e19d18c313
 workflow-type: tm+mt
-source-wordcount: '2646'
-ht-degree: 6%
+source-wordcount: '2664'
+ht-degree: 5%
 
 ---
 
@@ -66,7 +66,7 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 | **[!UICONTROL 라이선스 금액]** | 제품 라이선스 계약에 합의된 기본 지표의 최대 금액에 대해 계약된 값입니다. |
 | **[!UICONTROL 사용]** | 사용된 기본 지표의 양입니다. 이 값은 프로덕션 또는 개발의 모든 샌드박스에서 해당 지표의 총 사용량을 제공합니다. |
 | **[!UICONTROL 사용량 %]** | 라이선스 금액에 따라 사용되는 기본 지표의 비율입니다. |
-| **[!UICONTROL 예측 사용]** | (**Beta**) 라이선스 금액에 따라 기본 지표의 예상 사용 비율입니다. |
+| **[!UICONTROL 예측 사용]** | 라이선스 금액에 따른 기본 지표의 예상 사용 비율입니다. |
 
 >[!NOTE]
 >
@@ -74,31 +74,27 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 
 각 제품이 다양한 지표를 추적할 수 있으므로 테이블은 각 제품에 대한 기본 지표를 나타냅니다.
 
-### [!BADGE Beta]{type=Informative} 예상 사용 {#predicted-usage}
+### 예상 사용량 {#predicted-usage}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="예상 사용량"
-abstract="예측은 지난 6-7개월 동안의 사용량을 기반으로 하며 매월 15일에 생성됩니다. 라이센스 사용 예측은 과거 사용을 기반으로 한 근사치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe으로 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다. 사용량을 줄이기 위해 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성할 수 있습니다."
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
+>abstract="예측은 지난 6-7개월 동안의 사용량을 기반으로 하며 매월 15일에 생성됩니다. 사용량이 {startDate}에서 {endDate} 사이의 예상 값에 도달해야 합니다. 데이터가 {collectionDate}에 마지막으로 수집되었습니다. 라이센스 사용 예측은 과거 사용을 기반으로 한 근사치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe으로 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다. 사용량을 줄이기 위해 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성할 수 있습니다."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
 
-[!CONTEXTUALHELP]
-id="platform_licenseusage_prediction"
-title="예상 사용량"
-abstract="예측은 지난 6-7개월 동안의 사용량을 기반으로 하며 매월 15일에 생성됩니다. 라이센스 사용 예측은 과거 사용을 기반으로 한 근사치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe으로 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다. 사용량을 줄이기 위해 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성할 수 있습니다."
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
-
->[!AVAILABILITY]
->
-향후 라이선스 사용을 예측하는 기능은 현재 베타 버전입니다. 설명서 및 기능은 변경될 수 있습니다.
+>[!CONTEXTUALHELP]
+>id="platform_licenseusage_prediction"
+>title="예상 사용량"
+>abstract="예측은 지난 6-7개월 동안의 사용량을 기반으로 하며 매월 15일에 생성됩니다. 사용량이 {startDate}에서 {endDate} 사이의 예상 값에 도달해야 합니다. 데이터가 {collectionDate}에 마지막으로 수집되었습니다. 라이센스 사용 예측은 과거 사용을 기반으로 한 근사치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe으로 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다. 사용량을 줄이기 위해 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성할 수 있습니다."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
 
 통찰력 있는 사용 예측에 따라 라이센스 리소스를 사전 예방적으로 관리 및 최적화합니다. [!UICONTROL 예상 사용량] 열은 구입한 모든 제품에 대해 모든 프로덕션 및 개발 샌드박스에서 샌드박스 수준에서 향후 라이선스 사용량을 정확하게 예측합니다. 이 경고 기능은 이달 15일까지의 사용량을 기반으로 향후 6주 동안의 라이선스 사용량을 예측합니다. 예측은 하한값과 상한값으로 제공됩니다.
 
 >[!IMPORTANT]
 >
-예측은 월별로 새로 고쳐집니다. 새로 고침 날짜가 정보 아이콘(![이 정보 아이콘)에 포함되어 있습니다.열 제목 위에 ](../images/license-usage/info-icon.png)) 있습니다.
+>예측은 월별로 새로 고쳐집니다. 새로 고침 날짜가 정보 아이콘(![이 정보 아이콘)에 포함되어 있습니다.열 제목 위에 ](../images/license-usage/info-icon.png)) 있습니다.
 
 제품 권한 사용 요약을 보려면 [!UICONTROL 개요] 목록에서 제품을 선택하십시오.
 
@@ -108,7 +104,7 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 >[!NOTE]
 >
-라이센스 사용 예측은 과거 사용을 기반으로 한 근사치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe으로 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다.
+>라이센스 사용 예측은 과거 사용을 기반으로 한 근사치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe으로 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다.
 
 ![예측된 사용 열이 강조 표시된 플랫폼 제품의 요약 보기입니다.](../images/license-usage/summary-predicted-usage.png)
 
@@ -120,7 +116,7 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 >[!NOTE]
 >
-이 컨텍스트에서 &quot;거의 같음&quot;은 값이 소수점 이하 두 자리로 통계적으로 중요함을 의미합니다(예: 하한 0.342와 상한 0.344는 모두 34%로 반올림됨).
+>이 컨텍스트에서 &quot;거의 같음&quot;은 값이 소수점 이하 두 자리로 통계적으로 중요함을 의미합니다(예: 하한 0.342와 상한 0.344는 모두 34%로 반올림됨).
 
 예측된 사용 기능은 다음 지표를 지원합니다.
 
@@ -136,23 +132,23 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 ![해당 제품에 사용 가능한 모든 지표를 표시하는 Platform 제품의 요약 보기입니다.](../images/license-usage/summary-tab.png)
 
-요약 탭의 테이블에는 [!UICONTROL 지표] 열이 포함되어 있습니다. 사람이 인식할 수 있는 이러한 설명은 해당 유형에 사용되는 모든 지표를 나타냅니다 of 샌드박스.
+요약 탭의 테이블에는 [!UICONTROL 지표] 열이 포함되어 있습니다. 사람이 인식할 수 있는 이러한 설명은 해당 유형의 샌드박스에 사용되는 모든 지표를 나타냅니다.
 
 ### 샌드박스 선택 {#select-sandbox}
 
-프로덕션 및 개발 샌드박스 유형 간에 보기를 변경하려면 다음을 수행합니다. select [!UICONTROL 프로덕션 샌드박스] 또는 [!UICONTROL 개발 샌드박스]. 선택한 샌드박스 유형 is 샌드박스 이름 옆에 있는 라디오 단추로 표시됩니다.
+프로덕션 및 개발 샌드박스 유형 간의 보기를 변경하려면 [!UICONTROL 프로덕션 샌드박스] 또는 [!UICONTROL 개발 샌드박스]를 선택하십시오. 선택한 샌드박스 유형은 샌드박스 이름 옆에 있는 라디오 버튼으로 표시됩니다.
 
-샌드박스에 대한 소비 보고는 동일한 유형의 모든 샌드박스에 대해 누적됩니다. In 즉, [!UICONTROL 프로덕션] 또는 [!UICONTROL 개발]을 선택하면 각각 모든 프로덕션 또는 개발 샌드박스에 대한 사용량 보고서가 제공됩니다.
+샌드박스에 대한 소비 보고는 동일한 유형의 모든 샌드박스에 대해 누적됩니다. 즉, [!UICONTROL 프로덕션] 또는 [!UICONTROL 개발]을 선택하면 각각 모든 프로덕션 또는 개발 샌드박스에 대한 사용량 보고서가 제공됩니다.
 
 ![프로덕션 샌드박스 및 개발 샌드박스가 강조 표시된 플랫폼 제품의 요약 보기입니다.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
-라이선스 사용 대시보드를 볼 수 있는 권한은 샌드박스 수준에서 지정해야 합니다. 각 개별 샌드박스에 권한을 추가하여 대시보드 내에서 볼 수 있습니다. 이 제한은 향후 릴리스에서 해결될 예정입니다. 당분간은 다음 해결 방법을 사용할 수 있습니다.
+>라이선스 사용 대시보드를 볼 수 있는 권한은 샌드박스 수준에서 지정해야 합니다. 각 개별 샌드박스에 권한을 추가하여 대시보드 내에서 볼 수 있습니다. 이 제한은 향후 릴리스에서 해결될 예정입니다. 당분간은 다음 해결 방법을 사용할 수 있습니다.
 >
-1. Adobe Admin Console에서 제품 프로필을 만듭니다.
-2. 샌드박스 범주의 권한 아래에 라이선스 사용 대시보드에서 보려는 모든 샌드박스를 추가합니다.
-3. 사용자 대시보드 권한 범주 아래에 &quot;라이선스 사용량 대시보드 보기&quot; 권한을 추가합니다.
+>1. Adobe Admin Console에서 제품 프로필을 만듭니다.
+>2. 샌드박스 범주의 권한 아래에 라이선스 사용 대시보드에서 보려는 모든 샌드박스를 추가합니다.
+>3. 사용자 대시보드 권한 범주 아래에 &quot;라이선스 사용량 대시보드 보기&quot; 권한을 추가합니다.
 
 ## [!UICONTROL 세부 정보] 탭 {#details-tab}
 
@@ -213,7 +209,7 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 >[!TIP]
 >
-판매 주문에서 라이선스 권한을 확인하여 &#39;스토리지 허용량&#39;과 같은 지표를 계산할 수 있습니다.<br>예:<ul><li>저장 허용 = 계약에 포함된 &quot;승인된 프로필&quot; 수 X 평균 프로필 풍부도</li></ul>
+>판매 주문에서 라이선스 권한을 확인하여 &#39;스토리지 허용량&#39;과 같은 지표를 계산할 수 있습니다.<br>예:<ul><li>저장 허용 = 계약에 포함된 &quot;승인된 프로필&quot; 수 X 평균 프로필 풍부도</li></ul>
 
 이러한 지표의 사용 가능 여부 및 이러한 각 지표의 특정 정의는 조직이 구입한 라이선스에 따라 다릅니다. 각 지표에 대한 자세한 정의는 해당 제품 설명 설명서를 참조하십시오.
 
@@ -228,7 +224,7 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 >[!WARNING]
 >
-라이선스 사용 대시보드는 조직에 대해 프로비저닝된 최신 라이선스에 대해서만 보고합니다. 조직에 대해 프로비저닝된 최신 라이센스가 위의 표에 표시되지 않으면 라이센스 사용 대시보드가 제대로 표시되지 않을 수 있습니다. 향후 릴리스를 위해 단일 조직에서 추가 라이선스 및 여러 라이선스를 지원할 예정입니다.
+>라이선스 사용 대시보드는 조직에 대해 프로비저닝된 최신 라이선스에 대해서만 보고합니다. 조직에 대해 프로비저닝된 최신 라이센스가 위의 표에 표시되지 않으면 라이센스 사용 대시보드가 제대로 표시되지 않을 수 있습니다. 향후 릴리스를 위해 단일 조직에서 추가 라이선스 및 여러 라이선스를 지원할 예정입니다.
 
 ## 다음 단계
 
