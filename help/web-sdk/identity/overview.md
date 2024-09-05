@@ -2,7 +2,7 @@
 title: 웹 SDK의 ID 데이터
 description: Adobe Experience Platform Web SDK를 사용하여 Adobe Experience Cloud ID(ECID)를 검색하고 관리하는 방법에 대해 알아봅니다.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
+source-git-commit: 3b0fa672c4befd8e17632e62b0eeb13b6b17bfb4
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%
@@ -146,7 +146,7 @@ ID 배열의 각 ID 개체에는 다음 속성이 포함되어 있습니다.
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
 | `id` | 문자열 | **(필수)** 특정 네임스페이스에 대해 설정할 ID입니다. |
-| `authenticationState` | 문자열 | **(필수)** ID의 인증 상태입니다. 가능한 값은 `ambiguous`, `authenticated` 및 `loggedOut`입니다. |
+| `authenticatedState` | 문자열 | **(필수)** ID의 인증 상태입니다. 가능한 값은 `ambiguous`, `authenticated` 및 `loggedOut`입니다. |
 | `primary` | 부울 | 이 ID를 프로필의 기본 조각으로 사용할지 여부를 결정합니다. 기본적으로 ECID는 사용자의 기본 식별자로 설정됩니다. 생략하면 이 값의 기본값은 `false`입니다. |
 
 `identityMap` 필드를 사용하여 장치 또는 사용자를 식별하면 [!DNL ID Service API]에서 [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) 메서드를 사용하는 것과 동일한 결과가 발생합니다. 자세한 내용은 [ID 서비스 API 설명서](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html)를 참조하세요.
