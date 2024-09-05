@@ -4,14 +4,19 @@ title: 라이선스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: c512cce90eaee407a3b101cbf819685f21760a91
+source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
 workflow-type: tm+mt
-source-wordcount: '2626'
+source-wordcount: '2641'
 ht-degree: 6%
 
 ---
 
 # 라이선스 사용 대시보드 {#license-usage-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="testy-mctestface"
+>title="표시되지 않아야 하는 테스트 대화 상자"
+>abstract="{date}에서 개체 {name}을(를) 보고 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
