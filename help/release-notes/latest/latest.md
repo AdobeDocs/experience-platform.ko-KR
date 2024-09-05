@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2024년 8월
 description: Adobe Experience Platform의 2024년 8월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d9e9275db1989df22b13b4f000dde645f40d5744
+source-git-commit: 4fecb47084a522b4eb9808dc317e0d70e7ef42c6
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 22%
+source-wordcount: '1562'
+ht-degree: 21%
 
 ---
 
@@ -132,6 +132,12 @@ ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-
 Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 쉽게 설정할 수 있는 RESTful API 및 대화형 UI를 제공합니다. 이러한 소스 연결을 통해 외부 스토리지 시스템 및 CRM 서비스에 인증 및 연결하고, 수집 실행 시간을 설정하고, 데이터 수집 처리량을 관리할 수 있습니다.
 
 Experience Platform의 소스를 사용하여 Adobe 애플리케이션이나 타사 데이터 소스에서 데이터를 수집합니다.
+
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| Adobe Analytics 소스 커넥터 업데이트 | Analytics Source Connector는 전적으로 Adobe에서 관리하므로 데이터 세트 활동 페이지에 배치에 대한 정보가 표시되지 않습니다. 수집된 레코드 관련 지표를 보고 데이터가 이동하는지 모니터링할 수 있습니다. 자세한 내용은 Analytics 데이터에 대한 [소스 연결 만들기에 대한 안내서](../../sources/tutorials/ui/create/adobe-applications/analytics.md)를 참조하십시오. |
 
 **업데이트된 설명서**
 

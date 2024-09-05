@@ -2,10 +2,10 @@
 title: UI에서 Adobe Analytics Source 연결 만들기
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
+source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
 workflow-type: tm+mt
-source-wordcount: '2755'
-ht-degree: 4%
+source-wordcount: '2577'
+ht-degree: 3%
 
 ---
 
@@ -301,7 +301,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![조직의 기존 Adobe Analytics 데이터 흐름 목록입니다.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-[!UICONTROL 데이터 집합 활동] 페이지에서는 Analytics에서 Experience Platform으로 전송되는 데이터의 진행 상황에 대한 정보를 제공합니다. 인터페이스는 수집된 레코드 수, 수집된 배치 수 및 실패한 배치 수와 같은 지표를 표시합니다.
+[!UICONTROL 데이터 집합 활동] 페이지에서는 Analytics에서 Experience Platform으로 전송되는 데이터의 진행 상황에 대한 정보를 제공합니다. 인터페이스에는 이전 달의 총 레코드, 지난 7일 동안의 수집된 총 레코드 및 이전 달의 데이터 크기와 같은 지표가 표시됩니다.
 
 소스는 두 개의 데이터 세트 흐름을 인스턴스화합니다. 한 흐름은 채우기 데이터를 나타내고 다른 흐름은 라이브 데이터에 대한 것입니다. 채우기 데이터는 실시간 고객 프로필로 수집되도록 구성되지 않지만 분석 및 데이터 과학 사용 사례를 위해 데이터 레이크로 전송됩니다.
 
@@ -309,35 +309,9 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![Adobe Analytics 데이터에 대한 지정된 대상 데이터 집합에 대한 데이터 집합 활동 페이지입니다.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-+++기존 모니터링 인터페이스를 사용하여 개별 배치 보기
-
-데이터 세트 활동 페이지에 개별 배치 목록이 표시되지 않습니다. 개별 배치 목록을 보려면 데이터 세트 활동 인터페이스에서 차트를 선택합니다.
-
-![차트가 선택된 데이터 집합 활동 페이지입니다.](../../../../images/tutorials/create/analytics/select-chart.png)
-
-모니터링 대시보드로 이동합니다. 그런 다음 **[!UICONTROL ONLY INGEST FAILURES: YES]**&#x200B;를 선택하여 필터를 지우고 개별 배치 목록을 봅니다.
-
-![오류 필터가 선택된 모니터링 대시보드입니다.](../../../../images/tutorials/create/analytics/clear-filter.png)
-
-인터페이스는 해당 지표에 대한 정보를 포함하여 개별 배치 목록으로 업데이트합니다.
-
-![배치 데이터의 레거시 모니터링 페이지입니다.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
-
-| 지표 | 설명 |
-| --- | --- |
-| 배치 ID | 지정된 일괄 처리의 ID. 이 값은 내부적으로 생성됩니다. |
-| 데이터 세트 이름 | Analytics 데이터에 사용된 특정 데이터 세트의 이름. |
-| 소스 | 수집된 데이터의 소스. |
-| 업데이트된 기능 | 가장 최근 플로우 실행 반복의 날짜입니다. |
-| 데이터 세트의 레코드 | 데이터 집합에 있는 총 레코드 수입니다. **참고**: 이 매개 변수는 가끔 `in-progress` 상태를 표시합니다. 이 상태는 레코드 수집 프로세스가 아직 완료되지 않았음을 나타냅니다. |
-| 새 프로필 조각 | 수집된 새 프로필 조각의 총 수입니다. |
-| 기존 프로필 조각 | 기존 프로필 조각의 총 수입니다. |
-| ID 레코드 결합됨 | 수집 후 함께 결합된 총 ID 레코드 수입니다. |
-| 프로필의 레코드 | 실시간 고객 프로필에 수집된 총 레코드 수입니다. |
-
-{style="table-layout:auto"}
-
-+++
+>[!NOTE]
+>
+>Analytics 소스 커넥터는 전적으로 Adobe에 의해 관리되므로 데이터 세트 활동 페이지에는 배치에 대한 정보가 표시되지 않습니다. 수집된 레코드 관련 지표를 보고 데이터가 이동하는지 모니터링할 수 있습니다.
 
 ## 다음 단계 및 추가 리소스
 
