@@ -3,9 +3,9 @@ title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
+source-git-commit: e95c0e509931f141ff72c1defacebe5a29756157
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1845'
 ht-degree: 4%
 
 ---
@@ -234,6 +234,7 @@ Experience Platform은 지정한 저장소 위치에 내보낸 데이터 세트 
 데이터 세트 내보내기의 일반 가용성 릴리스에 대한 다음 제한 사항을 염두에 두십시오.
 
 * 현재는 증분 파일만 내보낼 수 있으며 데이터 세트 내보내기에 대한 종료 날짜를 선택할 수 없습니다.
+* Experience Platform은 작은 데이터 세트의 경우에도 여러 파일을 내보낼 수 있습니다. 데이터 세트 내보내기는 시스템 간 통합을 위해 설계되었으며 성능에 최적화되었기 때문에 내보낸 파일 수를 사용자 지정할 수 없습니다.
 * 내보낸 파일 이름은 현재 사용자 지정할 수 없습니다.
 * API를 통해 생성된 데이터 세트는 현재 내보내기에 사용할 수 없습니다.
 * 현재 UI가 대상으로 내보내는 데이터 세트를 삭제할 수 있도록 차단하지 않습니다. 대상으로 내보내는 데이터 세트는 삭제하지 마십시오. 데이터 집합을 삭제하기 전에 대상 데이터 흐름에서 [데이터 집합을 제거](#remove-dataset)합니다.
