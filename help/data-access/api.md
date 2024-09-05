@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Access API 안내서
 description: Data Access API는 개발자에게 Experience Platform 내에서 수집된 데이터 세트의 검색 가능성과 액세스 가능성에 초점을 맞춘 RESTful 인터페이스를 제공하여 Adobe Experience Platform을 지원합니다.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 4%
@@ -243,4 +243,4 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## 데이터 수집 이벤트 구독 {#subscribe-to-data-ingestion-events}
 
-[Adobe Developer Console](https://developer.adobe.com/console/)을 통해 가치가 높은 특정 이벤트에 가입할 수 있습니다. 예를 들어 데이터 수집 이벤트에 가입하여 잠재적인 지연 및 실패를 알릴 수 있습니다. 자세한 내용은 [데이터 수집 알림 구독](../ingestion/quality/subscribe-events.md)에 대한 자습서를 참조하십시오.
+[Adobe Developer Console](https://developer.adobe.com/console/)을 통해 가치가 높은 특정 이벤트에 가입할 수 있습니다. 예를 들어 데이터 수집 이벤트에 가입하여 잠재적인 지연 및 실패를 알릴 수 있습니다. 자세한 내용은 [Adobe 이벤트 알림 구독](../observability/alerts/subscribe.md)에 대한 자습서를 참조하십시오.

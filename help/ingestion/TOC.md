@@ -5,10 +5,10 @@ breadcrumb-title: Data Ingestion 안내서
 user-guide-description: 일괄 처리 또는 스트리밍 통합 기능을 통해 데이터를 Experience Platform으로 가져올 수 있습니다.
 feature: Data Ingestion
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 18%
+source-wordcount: '142'
+ht-degree: 19%
 
 ---
 
@@ -44,7 +44,6 @@ ht-degree: 18%
    - [오류 진단 검색](quality/error-diagnostics.md)
    - [실패한 일괄 처리 검색](quality/retrieve-failed-batches.md)
    - [스트리밍 수집 유효성 검사](quality/streaming-validation.md)
-   - [데이터 수집 알림](quality/subscribe-events.md)
 - [데이터 수집 보호](guardrails.md)
 - [Source 커넥터](source-connectors.md)
 - [일괄 처리 수집 API 참조](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)

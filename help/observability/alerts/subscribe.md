@@ -4,9 +4,9 @@ title: Adobe I/O 이벤트 알림 구독
 description: 이 문서에서는 Adobe Experience Platform 서비스에 대한 Adobe I/O 이벤트 알림을 구독하는 방법에 대한 단계를 제공합니다. 사용 가능한 이벤트 유형에 대한 참조 정보가 제공되며 적용 가능한 각  [!DNL Platform] 서비스에 대해 반환된 이벤트 데이터를 해석하는 방법에 대한 추가 설명서 링크도 함께 제공됩니다.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 06ea57d41269e98ddd984c898f41c478ddefc618
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '767'
 ht-degree: 1%
 
 ---
@@ -98,7 +98,6 @@ ht-degree: 1%
 이 자습서에 따라 [!DNL Experience Platform] 및/또는 [!DNL Privacy Service]에 대한 [!DNL I/O Event] 알림을 받을 웹후크를 등록했습니다. 사용 가능한 이벤트 및 각 서비스에 대한 알림 페이로드를 해석하는 방법에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [[!DNL Privacy Service] 알림](../../privacy-service/privacy-events.md)
-* [[!DNL Data Ingestion] 알림](../../ingestion/quality/subscribe-events.md)
 * [[!DNL Flow Service]개(원본) 알림](../../sources/notifications.md)
 
 [!DNL Experience Platform] 및 [!DNL Privacy Service]에서 활동을 모니터링하는 방법에 대한 자세한 내용은 [[!DNL Observability Insights] 개요](../home.md)를 참조하십시오.

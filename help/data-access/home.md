@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 데이터 액세스 개요
 description: Data Access는 수집된 플랫폼 데이터 세트의 검색 가능성과 액세스 가능성에 중점을 둔 도구를 사용자에게 제공하여 Adobe Experience Platform을 지원합니다.
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
@@ -29,4 +29,4 @@ Data Science Workspace의 레시피 및 모델 개발을 위해 [!DNL Python] �
 
 ## 데이터 수집 이벤트 구독
 
-[!DNL Platform]은(는) 특정 고가치 이벤트를 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)을(를) 통해 구독할 수 있도록 합니다. 예를 들어 데이터 수집 이벤트에 가입하여 잠재적인 지연 및 실패를 알릴 수 있습니다. 자세한 내용은 [데이터 수집 알림 구독](../ingestion/quality/subscribe-events.md)에 대한 자습서를 참조하십시오.
+[!DNL Platform]은(는) 특정 고가치 이벤트를 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)을(를) 통해 구독할 수 있도록 합니다. 예를 들어 데이터 수집 이벤트에 가입하여 잠재적인 지연 및 실패를 알릴 수 있습니다. 자세한 내용은 [Adobe 이벤트 알림 구독](../observability/alerts/subscribe.md)에 대한 자습서를 참조하십시오.
