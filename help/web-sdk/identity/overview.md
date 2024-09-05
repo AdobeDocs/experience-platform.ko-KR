@@ -2,33 +2,43 @@
 title: 웹 SDK의 ID 데이터
 description: Adobe Experience Platform Web SDK를 사용하여 Adobe Experience Cloud ID(ECID)를 검색하고 관리하는 방법에 대해 알아봅니다.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
+source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
 
+
 # 웹 SDK의 ID 데이터
 
-Adobe Experience Platform Web SDK는 [ECID(Adobe Experience Cloud ID)](../../identity-service/features/ecid.md)를 사용하여 방문자 행동을 추적합니다. ECID를 사용하면 각 디바이스에 여러 세션에서 지속될 수 있는 고유 식별자가 있는지 확인하여 웹 세션 도중 및 여러 세션에서 발생한 모든 히트를 특정 디바이스에 연결할 수 있습니다.
+Adobe Experience Platform Web SDK는 [ECID(Adobe Experience Cloud ID)](../../identity-service/features/ecid.md)를 사용하여 방문자 행동을 추적합니다. [!DNL ECIDs]을(를) 사용하면 각 디바이스에 여러 세션에서 지속될 수 있는 고유 식별자가 있는지 확인하여 웹 세션 중 및 여러 세션에서 발생하는 모든 히트를 특정 디바이스에 연결할 수 있습니다.
 
-이 문서에서는 Platform Web SDK를 사용하여 ECID를 관리하는 방법에 대한 개요를 제공합니다.
+이 문서에서는 웹 SDK를 사용하여 [!DNL ECIDs]을(를) 관리하는 방법에 대한 개요를 제공합니다.
 
-## SDK를 사용한 ECID 추적
+## Web SDK를 사용하여 ECID 추적 {#tracking-ecids-we-sdk}
 
-Platform Web SDK는 쿠키를 사용하여 ECID를 할당하고 추적하며, 이러한 쿠키가 생성되는 방식을 구성하는 데 사용 가능한 여러 메서드를 사용합니다.
+Web SDK는 쿠키를 사용하여 [!DNL ECIDs]을(를) 할당하고 추적하며, 이러한 쿠키가 생성되는 방식을 구성하는 데 사용 가능한 여러 메서드를 사용합니다.
 
-새 사용자가 웹 사이트에 도달하면 Adobe Experience Cloud Identity Service에서 해당 사용자에 대한 장치 ID 쿠키 설정을 시도합니다. 처음 방문하는 사용자의 경우 ECID가 생성되고 Adobe Experience Platform Edge Network의 첫 번째 응답에서 반환됩니다. 반복 방문자의 경우 ECID가 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` 쿠키에서 검색되어 Edge Network에 의해 페이로드에 추가됩니다.
+새 사용자가 웹 사이트에 도달하면 [Adobe Experience Cloud Identity 서비스](../../identity-service/home.md)에서 해당 사용자에 대한 장치 ID 쿠키를 설정하려고 시도합니다.
 
-ECID가 포함된 쿠키가 설정되면 Web SDK에서 생성한 각 후속 요청에는 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` 쿠키에 인코딩된 ECID가 포함됩니다.
+* 처음 방문하는 사용자의 경우 [!DNL ECID]이(가) 생성되어 Experience Platform Edge Network의 첫 번째 응답에서 반환됩니다.
+* 재방문자의 경우 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` 쿠키에서 [!DNL ECID]을(를) 검색하고 Edge Network이 요청 페이로드에 추가합니다.
 
-장치 식별을 위해 쿠키를 사용하는 경우 Edge Network과 상호 작용하는 두 가지 옵션이 있습니다.
+[!DNL ECID]이(가) 포함된 쿠키가 설정되면 Web SDK에서 생성한 각 후속 요청에는 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` 쿠키에 인코딩된 [!DNL ECID]이(가) 포함됩니다.
 
-1. 데이터를 Edge Network 도메인 `adobedc.net`(으)로 직접 보냅니다. 이 메서드를 [타사 데이터 수집](#third-party)이라고 합니다.
+장치 식별을 위해 쿠키를 사용하는 경우 Edge Network과 상호 작용하는 두 가지 방법이 있습니다.
+
 1. `adobedc.net`을(를) 가리키는 자체 도메인에 CNAME을 만듭니다. 이 메서드를 [자사 데이터 수집](#first-party)이라고 합니다.
+1. 데이터를 Edge Network 도메인 `adobedc.net`(으)로 직접 보냅니다. 이 메서드를 [타사 데이터 수집](#third-party)이라고 합니다.
 
 아래 섹션에 설명된 대로 사용하도록 선택하는 데이터 수집 방법은 전체 브라우저에서 쿠키 수명에 직접적인 영향을 줍니다.
+
+### 자사 데이터 수집 {#first-party}
+
+자사 데이터 수집에는 `adobedc.net`을(를) 가리키는 자체 도메인에서 `CNAME`을(를) 통해 쿠키를 설정하는 작업이 포함됩니다.
+
+브라우저에서 사이트 소유 끝점에 의해 설정된 쿠키와 유사한 방식으로 `CNAME` 끝점에 의해 설정된 쿠키를 오랫동안 처리했지만, 브라우저에 의해 구현된 최근 변경 사항으로 인해 `CNAME` 쿠키가 처리되는 방식이 구분되었습니다. 현재 기본적으로 자사 `CNAME` 쿠키를 차단하는 브라우저가 없지만 일부 브라우저에서는 `CNAME`을(를) 사용하여 설정된 쿠키 수명을 7일로 제한합니다.
 
 ### 타사 데이터 수집 {#third-party}
 
@@ -38,23 +48,17 @@ ECID가 포함된 쿠키가 설정되면 Web SDK에서 생성한 각 후속 요�
 
 또한 서드파티 데이터 수집을 사용하는 경우 일부 광고 차단기는 트래픽을 제한하여 데이터 수집 엔드포인트를 완전히 Adobe 합니다.
 
-### 자사 데이터 수집 {#first-party}
-
-자사 데이터 수집에는 `adobedc.net`을(를) 가리키는 자체 도메인에서 CNAME을 통해 쿠키를 설정하는 작업이 포함됩니다.
-
-브라우저는 오랫동안 사이트 소유 엔드포인트에서 설정한 쿠키와 유사한 방식으로 CNAME 엔드포인트에서 설정한 쿠키를 처리했지만, 브라우저에 의해 구현된 최근 변경 사항은 CNAME 쿠키가 처리되는 방법에서 차이를 만들었습니다. 현재 기본적으로 자사 CNAME 쿠키를 차단하는 브라우저는 없지만, 일부 브라우저에서는 CNAME을 사용하여 설정된 쿠키 수명을 7일로 제한합니다.
-
 ### 쿠키 수명이 Adobe Experience Cloud 애플리케이션에 미치는 영향 {#lifespans}
 
-자사 데이터 수집 또는 타사 데이터 수집 선택 여부에 관계없이 쿠키가 지속될 수 있는 시간은 Adobe Analytics 및 Customer Journey Analytics의 방문자 수에 직접적인 영향을 줍니다. 또한 사이트에서 Adobe Target 또는 Offer decisioning을 사용할 때 최종 사용자가 일관되지 않은 개인화 경험을 경험할 수 있습니다.
+자사 데이터 수집을 선택하는지 또는 서드파티 데이터 수집을 선택하는지에 관계없이, 쿠키가 지속될 수 있는 시간은 [Adobe Analytics](https://experienceleague.adobe.com/ko/docs/analytics) 및 [Customer Journey Analytics](https://experienceleague.adobe.com/ko/docs/customer-journey-analytics)의 방문자 수에 직접적인 영향을 줍니다. 또한 사이트에서 [Adobe Target](https://experienceleague.adobe.com/en/docs/target) 또는 [Offer decisioning](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision)을(를) 사용하면 최종 사용자에게 일관되지 않은 개인화 경험이 있을 수 있습니다.
 
 예를 들어 사용자가 지난 7일 동안 항목을 3번 본 경우 항목을 홈 페이지로 홍보하는 개인화 경험을 만든 상황을 생각해 보겠습니다.
 
 최종 사용자가 일주일에 세 번 사이트를 방문한 후 7일 동안 사이트로 돌아오지 않는 경우, 해당 사용자는 브라우저 정책(사이트를 방문했을 때 사용 중인 브라우저에 따라)에 의해 쿠키가 삭제되었을 수 있으므로 사이트로 돌아올 때 새 사용자로 간주될 수 있습니다. 이 경우 Analytics 도구는 7일 조금 전에 방문자가 사이트를 방문했더라도 해당 방문자를 새 사용자로 취급합니다. 또한 사용자를 위해 경험을 개인화하려는 노력이 다시 시작됩니다.
 
-### 자사 디바이스 ID
+### 자사 디바이스 ID(FPID) {#fpid}
 
-위에 설명된 대로 쿠키 수명의 효과를 고려하기 위해 대신 자체 디바이스 식별자를 설정하고 관리하도록 선택할 수 있습니다. 자세한 내용은 [자사 장치 ID](./first-party-device-ids.md)의 안내서를 참조하십시오.
+위에 설명된 대로 쿠키 수명의 효과를 고려하기 위해 대신 고유한 장치 식별자를 설정하고 관리하도록 선택할 수 있습니다. 자세한 내용은 [자사 장치 ID](./first-party-device-ids.md)의 안내서를 참조하십시오.
 
 ## 현재 사용자의 ECID 및 지역 검색 {#retrieve-ecid}
 
@@ -147,7 +151,7 @@ ID 배열의 각 ID 개체에는 다음 속성이 포함되어 있습니다.
 
 `identityMap` 필드를 사용하여 장치 또는 사용자를 식별하면 [!DNL ID Service API]에서 [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) 메서드를 사용하는 것과 동일한 결과가 발생합니다. 자세한 내용은 [ID 서비스 API 설명서](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html)를 참조하세요.
 
-## 방문자 API에서 ECID로 마이그레이션
+## 방문자 API에서 ECID로 마이그레이션 {#migrating-visitor-api-ecid}
 
 방문자 API를 사용하여에서 마이그레이션할 때 기존 AMCV 쿠키를 마이그레이션할 수도 있습니다. ECID 마이그레이션을 사용하려면 구성에서 `idMigrationEnabled` 매개 변수를 설정하십시오. ID 마이그레이션을 통해 다음과 같은 사용 사례를 사용할 수 있습니다.
 
