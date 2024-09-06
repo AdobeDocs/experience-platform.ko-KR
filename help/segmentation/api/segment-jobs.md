@@ -4,9 +4,9 @@ title: 세그먼트 작업 API 엔드포인트
 description: Adobe Experience Platform Segmentation Service API의 세그먼트 작업 끝점을 사용하면 조직의 세그먼트 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: f22246dec74c20459e5ac53bedc16cb6e4fba56e
+source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
 workflow-type: tm+mt
-source-wordcount: '1655'
+source-wordcount: '1648'
 ht-degree: 2%
 
 ---
@@ -922,18 +922,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
 
 **응답**
 
-성공적인 응답은 다음 정보와 함께 HTTP 상태 204를 반환합니다.
-
-+++ 세그먼트 작업을 삭제할 때 표시되는 샘플 응답입니다.
-
-```json
-{
-    "status": true,
-    "message": "Segment job with id 'd3b4a50d-dfea-43eb-9fca-557ea53771fd' has been marked for cancelling"
-}
-```
-
-+++
+성공적인 응답은 빈 응답 본문과 함께 HTTP 상태 204를 반환합니다.
 
 ## 다음 단계
 

@@ -4,10 +4,10 @@ title: 세그먼트 정의 API 엔드포인트
 description: Adobe Experience Platform Segmentation Service API의 세그먼트 정의 엔드포인트를 사용하면 조직의 세그먼트 정의를 프로그래밍 방식으로 관리할 수 있습니다.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
 workflow-type: tm+mt
-source-wordcount: '1328'
-ht-degree: 3%
+source-wordcount: '1472'
+ht-degree: 2%
 
 ---
 
@@ -176,6 +176,61 @@ POST /segment/definitions
 
 **요청**
 
+새 세그먼트 정의를 만들 때 `pql/text` 또는 `pql/json` 형식으로 만들 수 있습니다.
+
+>[!BEGINTABS]
+
+>[!TAB pql/text 사용]
+
++++ 세그먼트 정의를 만드는 샘플 요청입니다.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People who ordered in the last 30 days",
+        "description": "Last 30 days",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "workAddress.country = \"US\""
+        },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        }
+    }'
+```
+
+| 속성 | 설명 |
+| -------- | ----------- |
+| `name` | 세그먼트 정의를 참조할 고유한 이름. |
+| `description` | (선택 사항) 생성 중인 세그먼트 정의에 대한 설명입니다. |
+| `expression` | 세그먼트 정의에 대한 필드 정보를 포함하는 엔티티입니다. |
+| `expression.type` | 표현식 유형을 지정합니다. 현재는 &quot;PQL&quot;만 지원됩니다. |
+| `expression.format` | 값의 식 구조를 나타냅니다. 지원되는 값은 `pql/text` 및 `pql/json`입니다. |
+| `expression.value` | `expression.format`에 표시된 형식을 준수하는 식입니다. |
+| `evaluationInfo` | (선택 사항) 생성 중인 세그먼트 정의 유형입니다. 일괄 처리 세그먼트를 만들려면 `evaluationInfo.batch.enabled`을(를) true로 설정하십시오. 스트리밍 세그먼트를 만들려면 `evaluationInfo.continuous.enabled`을(를) true로 설정하십시오. 가장자리 세그먼트를 만들려면 `evaluationInfo.synchronous.enabled`을(를) true로 설정하십시오. 비워 두면 세그먼트 정의가 **일괄 처리** 세그먼트로 만들어집니다. |
+| `schema` | 세그먼트의 엔티티와 연결된 스키마입니다. `id` 또는 `name` 필드로 구성됩니다. |
+
++++
+
+>[!TAB pql/json 사용]
+
 +++ 세그먼트 정의를 만드는 샘플 요청입니다.
 
 ```shell
@@ -191,8 +246,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
         "description": "Last 30 days",
         "expression": {
             "type": "PQL",
-            "format": "pql/text",
-            "value": "workAddress.country = \"US\""
+            "format": "pql/json",
+            "value": "{\"nodeType\":\"fnApply\",\"fnName\":\"=\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"a\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}},{\"nodeType\":\"fieldLookup\",\"fieldName\":\"b\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}}]}"
         },
         "evaluationInfo": {
             "batch": {
@@ -215,15 +270,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | 속성 | 설명 |
 | -------- | ----------- |
 | `name` | 세그먼트 정의를 참조할 고유한 이름. |
-| `description` | (선택 사항.) 생성 중인 세그먼트 정의에 대한 설명입니다. |
-| `evaluationInfo` | (선택 사항.) 생성 중인 세그먼트 정의 유형입니다. 일괄 처리 세그먼트를 만들려면 `evaluationInfo.batch.enabled`을(를) true로 설정하십시오. 스트리밍 세그먼트를 만들려면 `evaluationInfo.continuous.enabled`을(를) true로 설정하십시오. 가장자리 세그먼트를 만들려면 `evaluationInfo.synchronous.enabled`을(를) true로 설정하십시오. 비워 두면 세그먼트 정의가 **일괄 처리** 세그먼트로 만들어집니다. |
+| `description` | (선택 사항) 생성 중인 세그먼트 정의에 대한 설명입니다. |
+| `evaluationInfo` | (선택 사항) 생성 중인 세그먼트 정의 유형입니다. 일괄 처리 세그먼트를 만들려면 `evaluationInfo.batch.enabled`을(를) true로 설정하십시오. 스트리밍 세그먼트를 만들려면 `evaluationInfo.continuous.enabled`을(를) true로 설정하십시오. 가장자리 세그먼트를 만들려면 `evaluationInfo.synchronous.enabled`을(를) true로 설정하십시오. 비워 두면 세그먼트 정의가 **일괄 처리** 세그먼트로 만들어집니다. |
 | `schema` | 세그먼트의 엔티티와 연결된 스키마입니다. `id` 또는 `name` 필드로 구성됩니다. |
 | `expression` | 세그먼트 정의에 대한 필드 정보를 포함하는 엔티티입니다. |
 | `expression.type` | 표현식 유형을 지정합니다. 현재는 &quot;PQL&quot;만 지원됩니다. |
-| `expression.format` | 값의 식 구조를 나타냅니다. 현재 지원되는 형식은 다음과 같습니다. <ul><li>`pql/text`: 게시된 PQL 문법에 따른 세그먼트 정의의 텍스트 표현입니다.  예: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | 값의 식 구조를 나타냅니다. |
 | `expression.value` | `expression.format`에 표시된 형식을 준수하는 식입니다. |
 
 +++
+
+>[!ENDTABS]
 
 **응답**
 
