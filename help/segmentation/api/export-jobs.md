@@ -4,9 +4,9 @@ title: 세그먼트 내보내기 작업 API 끝점
 description: 내보내기 작업은 대상 세그먼트 구성원을 데이터 세트로 지속하는 데 사용되는 비동기 프로세스입니다. Adobe Experience Platform Segmentation Service API에서 /export/jobs 끝점을 사용하여 내보내기 작업을 프로그래밍 방식으로 검색, 생성 및 취소할 수 있습니다.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1678'
 ht-degree: 1%
 
 ---
@@ -33,20 +33,26 @@ ht-degree: 1%
 
 ```http
 GET /export/jobs
-GET /export/jobs?limit={LIMIT}
-GET /export/jobs?offset={OFFSET}
-GET /export/jobs?status={STATUS}
+GET /export/jobs?{QUERY_PARAMETERS}
 ```
 
-| 매개변수 | 설명 |
-| --------- | ----------- |
-| `{LIMIT}` | 반환된 내보내기 작업 수를 지정합니다. |
-| `{OFFSET}` | 결과 페이지의 오프셋을 지정합니다. |
-| `{STATUS}` | 상태를 기반으로 결과를 필터링합니다. 지원되는 값은 &quot;NEW&quot;, &quot;SUCCEEDED&quot; 및 &quot;FAILED&quot;입니다. |
+**쿼리 매개 변수**
+
++++ 사용 가능한 쿼리 매개 변수 목록입니다.
+
+| 매개변수 | 설명 | 예 |
+| --------- | ----------- | ------- |
+| `limit` | 반환된 내보내기 작업 수를 지정합니다. | `limit=10` |
+| `offset` | 결과 페이지의 오프셋을 지정합니다. | `offset=1540974701302_96` |
+| `status` | 상태를 기반으로 결과를 필터링합니다. 지원되는 값은 &quot;NEW&quot;, &quot;SUCCEEDED&quot; 및 &quot;FAILED&quot;입니다. | `status=NEW` |
+
++++
 
 **요청**
 
 다음 요청은 조직 내에서 마지막 두 개의 내보내기 작업을 검색합니다.
+
++++ 내보내기 작업을 검색하는 샘플 요청입니다.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
@@ -56,9 +62,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **응답**
 
 다음 응답은 요청 경로에 제공된 쿼리 매개 변수를 기반으로 성공적으로 완료된 내보내기 작업 목록과 함께 HTTP 상태 200을 반환합니다.
+
++++ 내보내기 작업을 검색할 때의 샘플 응답입니다.
 
 ```json
 {
@@ -207,6 +217,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
 | `page` | 요청한 내보내기 작업의 페이지 매김에 대한 정보입니다. |
 | `link.next` | 내보내기 작업의 다음 페이지에 대한 링크입니다. |
 
++++
+
 ## 새 내보내기 작업 만들기 {#create}
 
 `/export/jobs` 끝점에 대한 POST 요청을 수행하여 새 내보내기 작업을 만들 수 있습니다.
@@ -220,6 +232,8 @@ POST /export/jobs
 **요청**
 
 다음 요청은 페이로드에 제공된 매개 변수로 구성된 새 내보내기 작업을 만듭니다.
+
++++ 내보내기 작업 생성에 대한 샘플 요청입니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
@@ -290,9 +304,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `schema.name` | **(필수)** 데이터를 내보낼 데이터 세트와 연결된 스키마 이름입니다. |
 | `evaluationInfo.segmentation` | *(선택 사항)* 제공되지 않을 경우 기본값은 `false`인 부울 값입니다. `true` 값은 내보내기 작업에서 세그먼테이션을 수행해야 함을 나타냅니다. |
 
++++
+
 **응답**
 
 성공한 응답은 새로 생성된 내보내기 작업의 세부 정보와 함께 HTTP 상태 200을 반환합니다.
+
++++ 내보내기 작업 생성 시 샘플 응답.
 
 ```json
 {
@@ -380,6 +398,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
     }
 ```
 
++++
+
 ## 특정 내보내기 작업 검색 {#get}
 
 `/export/jobs` 끝점에 대한 GET 요청을 만들고 요청 경로에 검색할 내보내기 작업의 ID를 제공하여 특정 내보내기 작업에 대한 자세한 정보를 검색할 수 있습니다.
@@ -396,6 +416,8 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 **요청**
 
++++ 내보내기 작업을 검색하는 샘플 요청입니다.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -404,9 +426,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **응답**
 
 성공한 응답은 지정된 내보내기 작업에 대한 자세한 정보와 함께 HTTP 상태 200을 반환합니다.
+
++++ 내보내기 작업을 검색할 때의 샘플 응답입니다.
 
 ```json
 {
@@ -476,6 +502,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
 | `metrics.profileExportTime` | 프로필을 내보내는 데 걸린 시간을 나타내는 필드. |
 | `totalExportedProfileCounter` | 모든 배치에서 내보낸 총 프로필 수입니다. |
 
++++
+
 ## 특정 내보내기 작업 취소 또는 삭제 {#delete}
 
 `/export/jobs` 끝점에 DELETE 요청을 하고 요청 경로에 삭제할 내보내기 작업의 ID를 제공하여 지정된 내보내기 작업의 삭제를 요청할 수 있습니다.
@@ -492,6 +520,8 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 **요청**
 
++++ 내보내기 작업 삭제에 대한 샘플 요청입니다.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -499,6 +529,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **응답**
 

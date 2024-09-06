@@ -4,9 +4,9 @@ title: API 끝점 미리 보기 및 예상
 description: 세그먼트 정의가 개발되면 Adobe Experience Platform 내의 예상 및 미리 보기 도구를 사용하여 요약 수준 정보를 보고 예상 대상을 격리할 수 있습니다.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1016'
 ht-degree: 2%
 
 ---
@@ -62,6 +62,8 @@ POST /preview
 
 **요청**
 
++++ 미리보기 만들기에 대한 샘플 요청입니다.
+
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/preview \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -85,9 +87,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateModel` | 프로필 데이터의 기반이 되는 [!DNL Experience Data Model](XDM) 스키마 클래스의 이름입니다. |
 | `graphType` | 클러스터를 가져올 그래프 유형입니다. 지원되는 값은 `none`(ID 결합을 수행하지 않음) 및 `pdg`(개인 ID 그래프를 기반으로 ID 결합을 수행)입니다. |
 
++++
+
 **응답**
 
 성공한 응답은 새로 만든 미리보기에 대한 세부 정보와 함께 HTTP 상태 201(생성됨)을 반환합니다.
+
++++ 미리보기를 만들 때 샘플 응답.
 
 ```json
 {
@@ -103,6 +109,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `state` | 미리보기 작업의 현재 상태입니다. 처음 생성될 때 &quot;NEW&quot; 상태가 됩니다. 그런 다음 처리가 완료될 때까지 &quot;RUNNING&quot; 상태가 되고 이 시점에서 &quot;RESULT_READY&quot; 또는 &quot;FAILED&quot;가 됩니다. |
 | `previewId` | 다음 섹션에 설명된 대로 예상 또는 미리보기를 볼 때 조회 목적으로 사용되는 미리보기 작업의 ID입니다. |
+
++++
 
 ## 특정 미리보기 결과 검색 {#get-preview}
 
@@ -120,6 +128,8 @@ GET /preview/{PREVIEW_ID}
 
 **요청**
 
++++ 미리보기를 검색하기 위한 샘플 요청입니다.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -128,7 +138,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **응답**
+
++++ 미리보기를 검색할 때의 샘플 응답입니다.
 
 성공한 응답은 지정된 미리 보기에 대한 자세한 정보와 함께 HTTP 상태 200을 반환합니다.
 
@@ -181,6 +195,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 | -------- | ----------- |
 | `results` | 관련 ID와 함께 엔티티 ID 목록입니다. 제공된 링크는 [프로필 액세스 API 끝점](../../profile/api/entities.md)을 사용하여 지정된 엔터티를 조회하는 데 사용할 수 있습니다. |
 
++++
+
 ## 특정 예상 작업의 결과 검색 {#get-estimate}
 
 미리 보기 작업을 만든 후에는 `/estimate` 끝점에 대한 GET 요청 경로에서 `previewId`을(를) 사용하여 예상 대상 크기, 신뢰 구간 및 오류 표준 편차를 포함한 세그먼트 정의에 대한 통계 정보를 볼 수 있습니다.
@@ -199,6 +215,8 @@ GET /estimate/{PREVIEW_ID}
 
 다음 요청은 특정 예상 작업의 결과를 검색합니다.
 
++++ 예상 작업을 검색하는 샘플 요청입니다.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -207,9 +225,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **응답**
 
 성공적인 응답은 예상 작업의 세부 정보와 함께 HTTP 상태 200을 반환합니다.
+
++++ 예상 작업을 검색할 때의 샘플 응답입니다.
 
 ```json
 {
@@ -243,9 +265,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `estimatedNamespaceDistribution` | 세그먼트 내의 프로필 수를 ID 네임스페이스별로 분류한 오브젝트 배열입니다. 하나의 프로필이 여러 네임스페이스와 연결될 수 있으므로 네임스페이스별 총 프로필 수(각 네임스페이스에 대해 표시된 값을 함께 추가)는 프로필 수 지표보다 높을 수 있습니다. 예를 들어 고객이 둘 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 네임스페이스가 해당 개별 고객과 연결됩니다. |
+| `estimatedNamespaceDistribution` | 세그먼트 정의 내의 프로필 수를 ID 네임스페이스별로 분류한 오브젝트 배열입니다. 하나의 프로필이 여러 네임스페이스와 연결될 수 있으므로 네임스페이스별 총 프로필 수(각 네임스페이스에 대해 표시된 값을 함께 추가)는 프로필 수 지표보다 높을 수 있습니다. 예를 들어 고객이 둘 이상의 채널에서 브랜드와 상호 작용하는 경우 여러 네임스페이스가 해당 개별 고객과 연결됩니다. |
 | `state` | 미리보기 작업의 현재 상태입니다. 처리가 완료될 때까지 상태는 &quot;RUNNING&quot;이 되며, 이 시점에서 상태는 &quot;RESULT_READY&quot; 또는 &quot;FAILED&quot;가 됩니다. |
 | `_links.preview` | `state`이(가) &quot;RESULT_READY&quot;이면 이 필드에 예상 값을 볼 수 있는 URL이 제공됩니다. |
+
++++
 
 ## 다음 단계
 

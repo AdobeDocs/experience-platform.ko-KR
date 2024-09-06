@@ -4,9 +4,9 @@ title: 세그먼트 작업 API 엔드포인트
 description: Adobe Experience Platform Segmentation Service API의 세그먼트 작업 끝점을 사용하면 조직의 세그먼트 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f22246dec74c20459e5ac53bedc16cb6e4fba56e
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1655'
 ht-degree: 2%
 
 ---
@@ -36,6 +36,8 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 
 **쿼리 매개 변수**
 
++++ 사용 가능한 쿼리 매개 변수 목록입니다.
+
 | 매개변수 | 설명 | 예 |
 | --------- | ----------- | ------- |
 | `start` | 반환된 세그먼트 작업의 시작 오프셋을 지정합니다. | `start=1` |
@@ -44,7 +46,11 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `sort` | 반환된 세그먼트 작업의 순서를 지정합니다. `[attributeName]:[desc|asc]` 형식으로 작성되었습니다. | `sort=creationTime:desc` |
 | `property` | 작업을 필터링하고 지정된 필터와 정확히 일치하는 항목을 가져옵니다. 다음 형식 중 하나로 쓸 수 있습니다. <ul><li>`[jsonObjectPath]==[value]` - 개체 키 필터링</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - 배열에서 필터링</li></ul> | `property=segments~segmentId==workInUS` |
 
++++
+
 **요청**
+
++++ 세그먼트 작업 목록을 보기 위한 샘플 요청입니다.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDED \
@@ -54,17 +60,23 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **응답**
 
 성공적인 응답은 지정된 조직에 대한 세그먼트 작업 목록이 JSON인 HTTP 상태 200을 반환합니다. 하지만 세그먼트 작업 내의 세그먼트 정의 수에 따라 응답이 달라집니다.
 
-**세그먼트 작업에서 1500개 이하의 세그먼트 정의**
+>[!BEGINTABS]
+
+>[!TAB 세그먼트 작업에서 1500개 이하의 세그먼트 정의]
 
 세그먼트 작업에서 1500개 미만의 세그먼트 정의가 실행되고 있는 경우 모든 세그먼트 정의의 전체 목록이 `children.segments` 특성 내에 표시됩니다.
 
 >[!NOTE]
 >
 >다음 응답은 공백으로 잘렸으며, 반환된 첫 번째 작업만 표시합니다.
+
++++ 세그먼트 작업 목록을 검색할 때의 샘플 응답입니다.
 
 ```json
 {
@@ -166,13 +178,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 }
 ```
 
-**1500개 이상의 세그먼트 정의**
++++
+
+>[!TAB 1500개 이상의 세그먼트 정의]
 
 세그먼트 작업에서 1500개가 넘는 세그먼트 정의가 실행되고 있는 경우 `children.segments` 특성에는 모든 세그먼트 정의가 평가되고 있음을 나타내는 `*`이(가) 표시됩니다.
 
 >[!NOTE]
 >
 >다음 응답은 공백으로 잘렸으며, 반환된 첫 번째 작업만 표시합니다.
+
++++ 세그먼트 작업 목록을 볼 때의 샘플 응답입니다.
 
 ```json
 {
@@ -276,6 +292,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `metrics.segmentProfileByStatusCounter` | 각 상태에 대한 프로필 수입니다. 다음 세 가지 상태가 지원됩니다. <ul><li>&quot;실현됨&quot; - 세그먼트 정의에 적합한 프로필 수입니다.</li><li>&quot;종료됨&quot; - 세그먼트 정의에 더 이상 존재하지 않는 프로필 수입니다.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | 병합 정책별 병합된 총 프로필 수입니다. |
 
++++
+
+>[!ENDTABS]
+
 ## 새 세그먼트 작업 만들기 {#create}
 
 `/segment/jobs` 끝점에 대한 POST 요청을 만들고 본문에 새 대상을 만들 세그먼트 정의의 ID를 포함하여 새 세그먼트 작업을 만들 수 있습니다.
@@ -288,9 +308,13 @@ POST /segment/jobs
 
 새 세그먼트 작업을 만들 때 세그먼트 작업 내의 세그먼트 정의 수에 따라 요청 및 응답이 달라집니다.
 
-**세그먼트 작업에서 1500개 이하의 세그먼트 정의**
+>[!BEGINTABS]
+
+>[!TAB 세그먼트 작업에서 1500개 이하의 세그먼트]
 
 **요청**
+
++++새 세그먼트 작업 생성에 대한 샘플 요청
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -302,6 +326,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
  -d '[
     {
         "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e"
+    },
+    {
+        "segmentId": "07d39471-05d1-4083-a310-d96978fd7c85"
     }
  ]'
 ```
@@ -310,9 +337,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | -------- | ----------- |
 | `segmentId` | 세그먼트 작업을 생성할 세그먼트 정의의 ID입니다. 이러한 세그먼트 정의는 다른 병합 정책에 속할 수 있습니다. 세그먼트 정의에 대한 자세한 내용은 [세그먼트 정의 끝점 안내서](./segment-definitions.md)를 참조하십시오. |
 
++++
+
 **응답**
 
 성공적인 응답은 새로 생성된 세그먼트 작업에 대한 정보와 함께 HTTP 상태 200을 반환합니다.
+
++++ 새 세그먼트 작업을 만들 때 샘플 응답.
 
 ```json
 {
@@ -335,6 +366,22 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
             "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e",
             "segment": {
                 "id": "7863c010-e092-41c8-ae5e-9e533186752e",
+                "expression": {
+                    "type": "PQL",
+                    "format": "pql/json",
+                    "value": "workAddress.country = \"US\""
+                },
+                "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
+                "mergePolicy": {
+                    "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
+                    "version": 1
+                }
+            }
+        },
+        {
+            "segmentId": "07d39471-05d1-4083-a310-d96978fd7c85",
+            "segment": {
+                "id": "07d39471-05d1-4083-a310-d96978fd7c85",
                 "expression": {
                     "type": "PQL",
                     "format": "pql/json",
@@ -411,13 +458,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `segments.segment.id` | 제공한 세그먼트 정의의 ID입니다. |
 | `segments.segment.expression` | PQL으로 작성된 세그먼트 정의의 표현식에 대한 정보를 포함하는 객체입니다. |
 
-**1500개 이상의 세그먼트 정의**
++++
+
+>[!TAB 세그먼트 작업에 1500개가 넘는 세그먼트 정의]
 
 **요청**
 
 >[!NOTE]
 >
 >1500개가 넘는 세그먼트 정의로 세그먼트 작업을 만들 수 있지만 **권장되지 않습니다**.
+
++++ 세그먼트 작업 생성에 대한 샘플 요청입니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -443,9 +494,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `schema.name` | 세그먼트 정의에 대한 스키마의 이름입니다. |
 | `segments.segmentId` | 1500개가 넘는 세그먼트로 세그먼트 작업을 실행하는 경우 모든 세그먼트로 세그먼테이션 작업을 실행함을 나타내려면 `*`을(를) 세그먼트 ID로 전달해야 합니다. |
 
++++
+
 **응답**
 
 성공적인 응답은 새로 생성된 세그먼트 작업의 세부 정보와 함께 HTTP 상태 200을 반환합니다.
+
++++ 세그먼트 작업을 생성할 때 샘플 응답.
 
 ```json
 {
@@ -530,6 +585,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `segments` | 이 세그먼트 작업이 실행 중인 세그먼트 정의에 대한 정보를 포함하는 개체입니다. |
 | `segments.segment.id` | `*`은(는) 조직 내의 모든 세그먼트 정의에 대해 이 세그먼트 작업이 실행되고 있음을 의미합니다. |
 
++++
+
+>[!ENDTABS]
+
+
 ## 특정 세그먼트 작업 검색 {#get}
 
 `/segment/jobs` 끝점에 대한 GET 요청을 만들고 요청 경로에 검색할 세그먼트 작업의 ID를 제공하여 특정 세그먼트 작업에 대한 자세한 정보를 검색할 수 있습니다.
@@ -546,6 +606,8 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 **요청**
 
++++ 세그먼트 작업 검색에 대한 샘플 요청입니다.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -554,13 +616,19 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **응답**
 
 성공한 응답은 지정된 세그먼트 작업에 대한 자세한 정보와 함께 HTTP 상태 200을 반환합니다.  하지만 응답은 세그먼트 작업 내의 세그먼트 정의 수에 따라 달라집니다.
 
-**세그먼트 작업에서 1500개 이하의 세그먼트 정의**
+>[!BEGINTABS]
+
+>[!TAB 세그먼트 작업에서 1500개 이하의 세그먼트 정의]
 
 세그먼트 작업에서 1500개 미만의 세그먼트 정의가 실행되고 있는 경우 모든 세그먼트 정의의 전체 목록이 `children.segments` 특성 내에 표시됩니다.
+
++++ 세그먼트 작업 검색을 위한 샘플 응답입니다.
 
 ```json
 {
@@ -622,9 +690,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 }
 ```
 
-**1500개 이상의 세그먼트 정의**
++++
+
+>[!TAB 1500개 이상의 세그먼트 정의]
 
 세그먼트 작업에서 1500개가 넘는 세그먼트 정의가 실행되고 있는 경우 `children.segments` 특성에는 모든 세그먼트 정의가 평가되고 있음을 나타내는 `*`이(가) 표시됩니다.
+
++++ 세그먼트 작업 검색을 위한 샘플 응답입니다.
 
 ```json
 {
@@ -711,6 +783,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 | `segments.segment.expression` | PQL으로 작성된 세그먼트 정의의 표현식에 대한 정보를 포함하는 객체입니다. |
 | `metrics` | 세그먼트 작업에 대한 진단 정보를 포함하는 개체입니다. |
 
++++
+
+>[!ENDTABS]
+
 ## 세그먼트 작업 일괄 검색 {#bulk-get}
 
 `/segment/jobs/bulk-get` 끝점에 대한 POST 요청을 만들고 요청 본문에 세그먼트 작업의 `id` 값을 제공하여 여러 세그먼트 작업에 대한 자세한 정보를 검색할 수 있습니다.
@@ -722,6 +798,8 @@ POST /segment/jobs/bulk-get
 ```
 
 **요청**
+
++++ 대량 검색 끝점 사용에 대한 샘플 요청입니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
@@ -742,6 +820,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
     }'
 ```
 
++++
+
 **응답**
 
 성공적인 응답은 요청된 세그먼트 작업과 함께 HTTP 상태 207을 반환합니다. 그러나 `children.segments` 특성의 값은 세그먼트 작업이 1500개가 넘는 세그먼트 정의에 대해 실행 중인지 여부에 따라 다릅니다.
@@ -749,6 +829,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 >[!NOTE]
 >
 >다음 응답은 공간에 대해 잘렸으며, 각 세그먼트 작업의 일부 세부 정보만 표시합니다. 전체 응답에는 요청된 세그먼트 작업에 대한 전체 세부 정보가 나열됩니다.
+
++++ 대량으로 get 응답을 사용할 때의 샘플 응답입니다.
 
 ```json
 {
@@ -804,6 +886,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 | `segments.segment.id` | 세그먼트 정의의 ID입니다. |
 | `segments.segment.expression` | PQL으로 작성된 세그먼트 정의의 표현식에 대한 정보를 포함하는 객체입니다. |
 
++++
+
 ## 특정 세그먼트 작업 취소 또는 삭제 {#delete}
 
 `/segment/jobs` 끝점에 DELETE 요청을 하고 요청 경로에 삭제할 세그먼트 작업의 ID를 제공하여 특정 세그먼트 작업을 삭제할 수 있습니다.
@@ -824,6 +908,8 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 **요청**
 
++++ 세그먼트 작업 삭제에 대한 샘플 요청입니다.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -832,9 +918,13 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **응답**
 
 성공적인 응답은 다음 정보와 함께 HTTP 상태 204를 반환합니다.
+
++++ 세그먼트 작업을 삭제할 때 표시되는 샘플 응답입니다.
 
 ```json
 {
@@ -842,6 +932,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
     "message": "Segment job with id 'd3b4a50d-dfea-43eb-9fca-557ea53771fd' has been marked for cancelling"
 }
 ```
+
++++
 
 ## 다음 단계
 

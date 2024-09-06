@@ -4,9 +4,9 @@ title: 세그먼트 정의 API 엔드포인트
 description: Adobe Experience Platform Segmentation Service API의 세그먼트 정의 엔드포인트를 사용하면 조직의 세그먼트 정의를 프로그래밍 방식으로 관리할 수 있습니다.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1328'
 ht-degree: 3%
 
 ---
@@ -36,17 +36,23 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 **쿼리 매개 변수**
 
++++ 사용 가능한 쿼리 매개 변수 목록입니다.
+
 | 매개변수 | 설명 | 예 |
 | --------- | ----------- | ------- |
 | `start` | 반환된 세그먼트 정의에 대한 시작 오프셋을 지정합니다. | `start=4` |
 | `limit` | 페이지당 반환되는 세그먼트 정의 수를 지정합니다. | `limit=20` |
 | `page` | 세그먼트 정의 결과가 시작될 페이지를 지정합니다. | `page=5` |
-| `sort` | 결과를 정렬할 필드를 지정합니다. `[attributeName]:[desc|asc]` 형식으로 작성되었습니다. | `sort=updateTime:desc` |
+| `sort` | 결과를 정렬할 필드를 지정합니다. `[attributeName]:[desc/asc]` 형식으로 작성되었습니다. | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | 세그먼트 정의가 스트리밍을 사용하는지 여부를 지정합니다. | `evaluationInfo.continuous.enabled=true` |
+
++++
 
 **요청**
 
 다음 요청은 조직 내에 게시된 마지막 두 개의 세그먼트 정의를 검색합니다.
+
++++ 세그먼트 정의 목록을 검색하는 샘플 요청입니다.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
@@ -56,9 +62,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **응답**
 
 성공적인 응답은 지정된 조직에 대한 세그먼트 정의 목록이 JSON인 HTTP 상태 200을 반환합니다.
+
++++ 세그먼트 정의 목록을 검색할 때의 샘플 응답입니다.
 
 ```json
 {
@@ -148,6 +158,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 }
 ```
 
++++
+
 ## 새 세그먼트 정의 만들기 {#create}
 
 `/segment/definitions` 끝점에 대한 POST 요청을 수행하여 새 세그먼트 정의를 만들 수 있습니다.
@@ -163,6 +175,8 @@ POST /segment/definitions
 ```
 
 **요청**
+
++++ 세그먼트 정의를 만드는 샘플 요청입니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
@@ -209,15 +223,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.format` | 값의 식 구조를 나타냅니다. 현재 지원되는 형식은 다음과 같습니다. <ul><li>`pql/text`: 게시된 PQL 문법에 따른 세그먼트 정의의 텍스트 표현입니다.  예: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | `expression.format`에 표시된 형식을 준수하는 식입니다. |
 
-<!-- >[!NOTE]
->
->A segment definition expression may also reference a computed attribute. To learn more, please refer to the [computed attribute API endpoint guide](../../profile/computed-attributes/ca-api.md)
->
->Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change. -->
++++
 
 **응답**
 
 성공적인 응답은 새로 생성된 세그먼트 정의에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
+
++++ 세그먼트 정의를 생성할 때 샘플 응답.
 
 ```json
 {
@@ -265,6 +277,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `id` | 새로 생성된 세그먼트 정의에 대한 시스템 생성 ID입니다. |
 | `evaluationInfo` | 세그먼트 정의가 받게 될 평가 유형을 나타내는 개체입니다. 일괄 처리, 스트리밍(연속이라고도 함) 또는 Edge(동기화라고도 함) 세그멘테이션일 수 있습니다. |
 
++++
+
 ## 특정 세그먼트 정의 검색 {#get}
 
 `/segment/definitions` 끝점에 대한 GET 요청을 만들고 요청 경로에서 검색하려는 세그먼트 정의의 ID를 제공하여 특정 세그먼트 정의에 대한 자세한 정보를 검색할 수 있습니다.
@@ -281,6 +295,8 @@ GET /segment/definitions/{SEGMENT_ID}
 
 **요청**
 
++++ 세그먼트 정의를 검색하기 위한 샘플 요청입니다.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -289,9 +305,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **응답**
 
 성공적인 응답은 지정된 세그먼트 정의에 대한 자세한 정보와 함께 HTTP 상태 200을 반환합니다.
+
++++ 세그먼트 정의를 검색할 때의 샘플 응답입니다.
 
 ```json
 {
@@ -346,6 +366,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 | `description` | 사람이 인식할 수 있는 정의 설명. |
 | `evaluationInfo` | 세그먼트 정의가 받게 될 평가, 일괄 처리, 스트리밍(연속이라고도 함) 또는 에지(동기화라고도 함) 유형을 나타내는 개체입니다. |
 
++++
+
 ## 세그먼트 정의 벌크 검색 {#bulk-get}
 
 `/segment/definitions/bulk-get` 끝점에 대한 POST 요청을 만들고 요청 본문에 세그먼트 정의의 `id` 값을 제공하여 지정된 여러 세그먼트 정의에 대한 자세한 정보를 검색할 수 있습니다.
@@ -357,6 +379,8 @@ POST /segment/definitions/bulk-get
 ```
 
 **요청**
+
++++ 대량으로 끝점 가져오기를 사용할 때의 샘플 요청입니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-get \
@@ -377,9 +401,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
     }'
 ```
 
++++
+
 **응답**
 
 성공적인 응답은 요청된 세그먼트 정의와 함께 HTTP 상태 207을 반환합니다.
+
++++ 대량으로 끝점 가져오기를 사용할 때의 샘플 응답입니다.
 
 ```json
 {
@@ -477,6 +505,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 | `description` | 사람이 인식할 수 있는 정의 설명. |
 | `evaluationInfo` | 세그먼트 정의가 받게 될 평가, 일괄 처리, 스트리밍(연속이라고도 함) 또는 에지(동기화라고도 함) 유형을 나타내는 개체입니다. |
 
++++
+
 ## 특정 세그먼트 정의 삭제 {#delete}
 
 `/segment/definitions` 끝점에 대한 DELETE 요청을 만들고 요청 경로에 삭제할 세그먼트 정의의 ID를 제공하여 특정 세그먼트 정의의 삭제를 요청할 수 있습니다.
@@ -497,6 +527,8 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 **요청**
 
++++ 세그먼트 정의 삭제에 대한 샘플 요청입니다.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -504,6 +536,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **응답**
 
@@ -526,6 +560,8 @@ PATCH /segment/definitions/{SEGMENT_ID}
 **요청**
 
 다음 요청은 작업 주소 국가를 미국에서 캐나다로 업데이트합니다.
+
++++ 세그먼트 정의를 업데이트하기 위한 샘플 요청입니다.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -555,9 +591,13 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 }'
 ```
 
++++
+
 **응답**
 
-성공적인 응답은 새로 업데이트된 세그먼트 정의에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다. 작업 주소 국가가 미국 (미국)에서 캐나다 (CA)로 어떻게 업데이트되었는지 확인합니다.
+성공적인 응답은 새로 업데이트된 세그먼트 정의에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
+
++++ 세그먼트 정의를 업데이트할 때의 샘플 응답입니다.
 
 ```json
 {
@@ -600,6 +640,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 }
 ```
 
++++
+
 ## 세그먼트 정의 변환
 
 `/segment/conversion` 끝점에 POST 요청을 하여 `pql/text`에서 `pql/json` 또는 `pql/json` 사이의 세그먼트 정의를 `pql/text`(으)로 변환할 수 있습니다.
@@ -613,6 +655,8 @@ POST /segment/conversion
 **요청**
 
 다음 요청은 세그먼트 정의의 형식을 `pql/text`에서 `pql/json`(으)로 변경합니다.
+
++++ 세그먼트 정의를 변환하는 샘플 요청입니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
@@ -637,9 +681,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
     }'
 ```
 
++++
+
 **응답**
 
 성공적인 응답은 새로 변환된 세그먼트 정의에 대한 세부 정보와 함께 HTTP 상태 200을 반환합니다.
+
++++ 세그먼트 정의를 변환할 때의 샘플 응답입니다.
 
 ```json
 {
@@ -658,6 +706,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
     }
 }
 ```
+
++++
 
 ## 다음 단계
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Edge 세그멘테이션 UI 안내서
 description: 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화하면서 에지 세분화를 사용하여 에지에서 즉시 플랫폼의 세그먼트 정의를 평가하는 방법을 알아봅니다.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
+source-git-commit: 057db1432493a8443eb91b0fc371d0bdffb3de86
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 0%
+source-wordcount: '569'
+ht-degree: 1%
 
 ---
 
@@ -34,22 +34,15 @@ Edge 세그멘테이션은 Adobe Experience Platform의 세그먼트를 즉시 [
 >
 >쿼리가 다음 표의 쿼리 유형과 일치하는 경우, 가장자리 세분화를 사용하여 자동으로 평가됩니다. 시스템은 쿼리 표현식을 기반으로 이 기능을 자동으로 결정합니다.
 
-| 쿼리 유형 | 세부 정보 | 예 | PQL 예 |
-| ---------- | ------- | ------- | ----------- |
-| 단일 이벤트 | 시간 제한 없이 들어오는 단일 이벤트를 참조하는 모든 세그먼트 정의. | 장바구니에 항목을 추가한 사람. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
-| 단일 프로필 | 단일 프로필 전용 속성을 참조하는 모든 세그먼트 정의 | 미국에 사는 사람들. | `homeAddress.countryCode = "US"` |
-| 프로필을 참조하는 단일 이벤트 | 하나 이상의 프로필 속성 및 시간 제한 없이 수신되는 단일 이벤트를 참조하는 모든 세그먼트 정의. | 홈페이지를 방문한 미국 거주자. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")])` |
-| 프로필 속성을 사용하여 단일 이벤트 무효화 | 무효화된 단일 수신 이벤트와 하나 이상의 프로필 속성을 참조하는 세그먼트 정의 | 미국에 거주하고 **없음**&#x200B;을 보유한 사용자가 홈 페이지를 방문했습니다. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
-| 기간 내 단일 이벤트 | 설정된 기간 내의 단일 수신 이벤트를 참조하는 모든 세그먼트 정의. | 지난 24시간 동안 홈페이지를 방문한 사람. | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)])` |
-| 24시간 미만의 상대 시간 창 내에 프로필 속성이 있는 단일 이벤트 | 하나 이상의 프로필 속성을 가진 단일 수신 이벤트를 참조하고 24시간 미만의 상대 시간 창 내에서 발생하는 모든 세그먼트 정의입니다. | 지난 24시간 동안 홈페이지를 방문한 미국 거주자. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)])` |
-| 기간 내에 프로필 속성이 있는 단일 이벤트가 무효화됨 | 일정 기간 내에 하나 이상의 프로필 속성 및 차단된 단일 수신 이벤트를 참조하는 모든 세그먼트 정의. | 미국에 거주하고 **없음**&#x200B;을 받은 사람이 지난 24시간 동안 홈 페이지를 방문했습니다. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]))` |
-| 24시간 기간 내 빈도 이벤트 | 24시간의 기간 내에서 특정 횟수로 발생하는 이벤트를 참조하는 세그먼트 정의입니다. | 지난 24시간 동안 홈 페이지를 **최소**&#x200B;번 방문한 사용자입니다. | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| 24시간 기간 내에 프로필 속성이 있는 빈도 이벤트 | 하나 이상의 프로필 속성을 참조하는 세그먼트 정의와 24시간의 기간 내에서 특정 횟수만큼 발생하는 이벤트. | 지난 24시간 동안 **최소**&#x200B;번 홈 페이지를 방문한 미국 사용자입니다. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| 24시간 기간 내에 프로필로 빈도 이벤트를 무효화했습니다. | 하나 이상의 프로필 속성을 참조하는 세그먼트 정의와 24시간의 기간 내에서 특정 횟수만큼 발생하는 차단된 이벤트입니다. | 지난 24시간 동안 홈 페이지를 5번 이상 방문하지 않은 사용자 **명**. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
-| 24시간의 시간 프로필 내에 여러 개의 수신 히트 | 24시간의 기간 내에 발생하는 여러 이벤트를 참조하는 모든 세그먼트 정의. | **또는** 홈 페이지를 방문한 사용자가 지난 24시간 내에 체크아웃 페이지를 방문했습니다. | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| 24시간 기간 내에 프로필이 있는 여러 이벤트 | 24시간의 기간 내에 발생하는 하나 이상의 프로필 속성 및 여러 이벤트를 참조하는 모든 세그먼트 정의. | **및** 홈 페이지를 방문한 미국에서 온 사람들이 지난 24시간 내에 체크아웃 페이지를 방문했습니다. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| 세그먼트 | 하나 이상의 일괄 처리 또는 스트리밍 세그먼트를 포함하는 모든 세그먼트 정의입니다. | 미국에 거주하며 &quot;기존 세그먼트&quot; 세그먼트에 있는 사람. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
-| 맵을 참조하는 쿼리 | 속성 맵을 참조하는 모든 세그먼트 정의입니다. | 외부 세그먼트 데이터를 기반으로 장바구니에 추가한 사람입니다. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
+| 쿼리 유형 | 세부 정보 |
+| ---------- | ------- |
+| 단일 이벤트 | 시간 제한 없이 들어오는 단일 이벤트를 참조하는 모든 세그먼트 정의. |
+| 상대 기간 내의 단일 이벤트 | 단일 수신 이벤트를 참조하는 모든 세그먼트 정의. |
+| 시간 창이 있는 단일 이벤트 | 시간 창이 있는 단일 수신 이벤트를 참조하는 모든 세그먼트 정의. |
+| 프로필만 | 프로필 속성만 참조하는 모든 세그먼트 정의. |
+| 24시간 미만의 상대 시간 창 내에 프로필 속성이 있는 단일 이벤트 | 하나 이상의 프로필 속성을 가진 단일 수신 이벤트를 참조하고 24시간 미만의 상대 시간 창 내에서 발생하는 모든 세그먼트 정의입니다. |
+| 세그먼트 | 하나 이상의 일괄 처리 또는 스트리밍 세그먼트를 포함하는 모든 세그먼트 정의입니다. **참고:** 세그먼트의 세그먼트가 사용되는 경우 **24시간마다**&#x200B;프로필의 자격이 상실됩니다. |
+| 프로필 속성이 있는 여러 이벤트 | 지난 24시간 내에 **여러 이벤트를 참조하고**(선택 사항) 하나 이상의 프로필 특성이 있는 세그먼트 정의입니다. |
 
 다음 시나리오에서 세그먼트 정의가 에지 세분화에 대해 **활성화되지** 않습니다.
 

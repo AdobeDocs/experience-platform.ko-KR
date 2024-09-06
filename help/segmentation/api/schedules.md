@@ -4,9 +4,9 @@ title: 예약 API 끝점
 description: 예약은 하루에 한 번 배치 세분화 작업을 자동으로 실행하는 데 사용할 수 있는 도구입니다.
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2104'
 ht-degree: 2%
 
 ---
@@ -29,18 +29,25 @@ ht-degree: 2%
 
 ```http
 GET /config/schedules
-GET /config/schedules?start={START}
-GET /config/schedules?limit={LIMIT}
+GET /config/schedules?{QUERY_PARAMETERS}
 ```
 
-| 매개변수 | 설명 |
-| --------- | ----------- |
-| `{START}` | 오프셋을 시작할 페이지를 지정합니다. 기본적으로 이 값은 0이 됩니다. |
-| `{LIMIT}` | 반환되는 일정 수를 지정합니다. 기본적으로 이 값은 100이 됩니다. |
+**쿼리 매개 변수**
+
++++ 사용 가능한 쿼리 매개 변수 목록입니다.
+
+| 매개변수 | 설명 | 예 |
+| --------- | ----------- | ------- |
+| `start` | 오프셋을 시작할 페이지를 지정합니다. 기본적으로 이 값은 0이 됩니다. | `start=5` |
+| `limit` | 반환되는 일정 수를 지정합니다. 기본적으로 이 값은 100이 됩니다. | `limit=20` |
+
++++
 
 **요청**
 
 다음 요청은 조직 내에 게시된 마지막 10개의 일정을 검색합니다.
+
++++ 일정 목록을 검색하는 샘플 요청입니다.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
@@ -50,6 +57,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **응답**
 
 성공적인 응답은 지정된 조직에 대한 일정 목록이 JSON인 HTTP 상태 200을 반환합니다.
@@ -57,6 +66,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 >[!NOTE]
 >
 >다음 응답은 공간에 대해 잘렸으며, 반환된 첫 번째 예약만 표시합니다.
+
++++ 일정 목록을 검색할 때의 샘플 응답입니다.
 
 ```json
 {
@@ -102,6 +113,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 | `children.schedule` | 작업 일정을 포함하는 문자열입니다. 작업은 하루에 한 번만 실행되도록 예약할 수 있습니다. 즉, 24시간 동안 작업을 두 번 이상 실행하도록 예약할 수 없습니다. cron 일정에 대한 자세한 내용은 [cron 식 형식](#appendix)의 부록을 참조하십시오. 이 예에서 &quot;0 0 1 * *&quot;는 이 일정이 매일 오전 1시에 실행됨을 의미합니다. |
 | `children.state` | 일정 상태를 포함하는 문자열입니다. 지원되는 두 가지 상태는 &quot;활성&quot; 및 &quot;비활성&quot;입니다. 기본적으로 상태는 &quot;비활성&quot;으로 설정됩니다. |
 
++++
+
 ## 새 일정 만들기 {#create}
 
 `/config/schedules` 끝점에 대한 POST 요청을 수행하여 새 일정을 만들 수 있습니다.
@@ -113,6 +126,8 @@ POST /config/schedules
 ```
 
 **요청**
+
++++ 일정 만들기에 대한 샘플 요청입니다.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -144,9 +159,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `schedule` | *선택 사항입니다.* 작업 일정이 포함된 문자열입니다. 작업은 하루에 한 번만 실행되도록 예약할 수 있습니다. 즉, 24시간 동안 작업을 두 번 이상 실행하도록 예약할 수 없습니다. cron 일정에 대한 자세한 내용은 [cron 식 형식](#appendix)의 부록을 참조하십시오. 이 예에서 &quot;0 0 1 * *&quot;는 이 일정이 매일 오전 1시에 실행됨을 의미합니다. <br><br>이 문자열을 제공하지 않으면 시스템에서 생성한 일정이 자동으로 생성됩니다. |
 | `state` | *선택 사항입니다.* 일정 상태를 포함하는 문자열입니다. 지원되는 두 가지 상태는 &quot;활성&quot; 및 &quot;비활성&quot;입니다. 기본적으로 상태는 &quot;비활성&quot;으로 설정됩니다. |
 
++++
+
 **응답**
 
 성공한 응답은 새로 만든 일정의 세부 정보와 함께 HTTP 상태 200을 반환합니다.
+
++++ 일정을 만들 때 샘플 응답.
 
 ```json
 {
@@ -172,6 +191,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 }
 ```
 
++++
+
 ## 특정 일정 검색 {#get}
 
 `/config/schedules` 끝점에 대한 GET 요청을 만들고 요청 경로에서 검색하려는 일정의 ID를 제공하여 특정 일정에 대한 자세한 정보를 검색할 수 있습니다.
@@ -188,6 +209,8 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **요청**
 
++++ 일정을 검색하기 위한 샘플 요청입니다.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -196,9 +219,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **응답**
 
 성공한 응답은 지정된 일정에 대한 자세한 정보와 함께 HTTP 상태 200을 반환합니다.
+
++++ 일정을 검색할 때의 샘플 응답입니다.
 
 ```json
 {
@@ -233,15 +260,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
 | `schedule` | 작업 일정을 포함하는 문자열입니다. 작업은 하루에 한 번만 실행되도록 예약할 수 있습니다. 즉, 24시간 동안 작업을 두 번 이상 실행하도록 예약할 수 없습니다. cron 일정에 대한 자세한 내용은 [cron 식 형식](#appendix)의 부록을 참조하십시오. 이 예에서 &quot;0 0 1 * *&quot;는 이 일정이 매일 오전 1시에 실행됨을 의미합니다. |
 | `state` | 일정 상태를 포함하는 문자열입니다. 지원되는 두 가지 상태는 `active` 및 `inactive`입니다. 기본적으로 상태는 `inactive`(으)로 설정됩니다. |
 
++++
+
 ## 특정 일정에 대한 세부 정보 업데이트 {#update}
 
 `/config/schedules` 끝점에 대한 PATCH 요청을 수행하고 업데이트하려는 일정의 ID를 요청 경로에 제공하여 특정 일정을 업데이트할 수 있습니다.
 
 PATCH 요청을 사용하면 개별 일정에 대해 [상태](#update-state) 또는 [cron 일정](#update-schedule)을 업데이트할 수 있습니다.
-
-### 일정 상태 업데이트 {#update-state}
-
-JSON 패치 작업을 사용하여 스케줄의 상태를 업데이트할 수 있습니다. 상태를 업데이트하려면 `path` 속성을 `/state`(으)로 선언하고 `value`을(를) `active` 또는 `inactive`(으)로 설정합니다. JSON 패치에 대한 자세한 내용은 [JSON 패치](https://datatracker.ietf.org/doc/html/rfc6902) 설명서를 참조하십시오.
 
 **API 형식**
 
@@ -253,7 +278,15 @@ PATCH /config/schedules/{SCHEDULE_ID}
 | --------- | ----------- |
 | `{SCHEDULE_ID}` | 업데이트할 일정의 `id` 값입니다. |
 
+>[!BEGINTABS]
+
+>[!TAB 일정 상태 업데이트]
+
+JSON 패치 작업을 사용하여 스케줄의 상태를 업데이트할 수 있습니다. 상태를 업데이트하려면 `path` 속성을 `/state`(으)로 선언하고 `value`을(를) `active` 또는 `inactive`(으)로 설정합니다. JSON 패치에 대한 자세한 내용은 [JSON 패치](https://datatracker.ietf.org/doc/html/rfc6902) 설명서를 참조하십시오.
+
 **요청**
+
++++ 일정 상태를 업데이트하기 위한 샘플 요청입니다.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -271,6 +304,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 ]'
 ```
 
++++
+
 | 속성 | 설명 |
 | -------- | ----------- |
 | `path` | 패치할 값의 경로입니다. 이 경우 일정의 상태를 업데이트하는 중이므로 `path`의 값을 &quot;/state&quot;로 설정해야 합니다. |
@@ -280,21 +315,15 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 성공적인 응답은 HTTP 상태 204(콘텐츠 없음)를 반환합니다.
 
-### cron 일정 업데이트 {#update-schedule}
+>[!TAB cron 일정 업데이트]
 
 JSON 패치 작업을 사용하여 cron 일정을 업데이트할 수 있습니다. 일정을 업데이트하려면 `path` 속성을 `/schedule`(으)로 선언하고 `value`을(를) 올바른 크론 일정으로 설정합니다. JSON 패치에 대한 자세한 내용은 [JSON 패치](https://datatracker.ietf.org/doc/html/rfc6902) 설명서를 참조하십시오. cron 일정에 대한 자세한 내용은 [cron 식 형식](#appendix)의 부록을 참조하십시오.
 
-**API 형식**
-
-```http
-PATCH /config/schedules/{SCHEDULE_ID}
-```
-
-| 매개변수 | 설명 |
-| --------- | ----------- |
-| `{SCHEDULE_ID}` | 업데이트할 일정의 `id` 값입니다. |
+>[!ENDTABS]
 
 **요청**
+
++++ 일정을 업데이트하기 위한 샘플 요청입니다.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -317,6 +346,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | `path` | 업데이트할 값의 경로입니다. 이 경우 cron 일정을 업데이트하고 있으므로 `path`의 값을 `/schedule`(으)로 설정해야 합니다. |
 | `value` | cron schedule의 업데이트된 값. 이 값은 cron schedule 형식이어야 합니다. 이 예에서는 일정이 매월 2일에 실행됩니다. |
 
++++
+
 **응답**
 
 성공적인 응답은 HTTP 상태 204(콘텐츠 없음)를 반환합니다.
@@ -337,6 +368,8 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 **요청**
 
++++ 일정 삭제에 대한 샘플 요청입니다.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -344,6 +377,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **응답**
 
