@@ -2,10 +2,10 @@
 title: 데이터스트림 만들기 및 구성
 description: 클라이언트측 Web SDK 통합 기능을 다른 Adobe 제품 및 서드파티 대상과 연결하는 방법에 대해 알아봅니다.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 43d97ea4d850a36d350894d70a082464a21e449d
+source-git-commit: f99370a9bff156b5cf9ecf286a1f8bc09eccc06a
 workflow-type: tm+mt
-source-wordcount: '2753'
-ht-degree: 53%
+source-wordcount: '2813'
+ht-degree: 51%
 
 ---
 
@@ -189,7 +189,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 | --- | --- |
 | [!UICONTROL 속성 토큰] | [!DNL Target]에서는 고객이 속성을 사용하여 권한을 제어할 수 있습니다. 속성에 대한 자세한 내용은 [!DNL Target] 설명서의 [Enterprise 권한 구성](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html)에 대한 안내서를 참조하십시오.<br><br>속성 토큰은 [!UICONTROL 설정] > [!UICONTROL 속성]의 Adobe Target UI에서 찾을 수 있습니다. |
 | [!UICONTROL 대상 환경 ID] | [Adobe Target의 환경](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html)을 사용하여 모든 단계의 개발을 통해 구현을 관리할 수 있습니다. 이 설정은 이 데이터스트림과 함께 사용하려는 환경을 지정합니다.<br><br>각 `dev`, `stage` 및 `prod` 데이터스트림 환경에 대해서는 다르게 설정하여 작업을 단순하게 유지할 수 있습니다. 단, Adobe Target 환경이 이미 정의되어 있는 경우 해당 환경을 사용할 수 있습니다. |
-| [!UICONTROL Target 서드파티 ID 네임스페이스] | 이 데이터스트림에 사용하려는 `mbox3rdPartyId`에 대한 ID 네임스페이스. 자세한 내용은 [Web SDK를 사용하여 `mbox3rdPartyId` 구현](../web-sdk/personalization/adobe-target/using-mbox-3rdpartyid.md) 안내서를 참조하십시오. |
+| [!UICONTROL Target 서드파티 ID 네임스페이스] | 이 데이터스트림에 사용하려는 `mbox3rdPartyId`에 대한 ID 네임스페이스. Adobe Target과 [!DNL Customer Attributes] 통합을 사용하거나 `thirdPartyId`을(를) 사용하여 [Adobe Target 프로필 API](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/profile-apis/profiles-api)를 통해 프로필을 업데이트하거나 만드는 경우 원하는 네임스페이스 값을 제공해야 합니다. 고객 특성 파일 업로드나 프로필 업데이트 API 호출에 사용된 `customerID` 또는 `thirdPartyId`을(를) 전송하려면 XDM 스키마의 `IdentityMap` 섹션에서 이 네임스페이스를 사용해야 합니다.  자세한 내용은 [Web SDK를 사용하여 `mbox3rdPartyId` 구현](../web-sdk/personalization/adobe-target/using-mbox-3rdpartyid.md) 안내서를 참조하십시오. |
 | [!UICONTROL 속성 토큰 재정의] | 이 섹션에서는 기본 속성 토큰을 재정의하는 데 사용할 수 있는 추가 속성 토큰을 정의할 수 있습니다. |
 
 ### [!UICONTROL 이벤트 전달] 설정
