@@ -2,9 +2,9 @@
 title: 데이터스트림 만들기 및 구성
 description: 클라이언트측 Web SDK 통합 기능을 다른 Adobe 제품 및 서드파티 대상과 연결하는 방법에 대해 알아봅니다.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f99370a9bff156b5cf9ecf286a1f8bc09eccc06a
+source-git-commit: b87cb25ac791bebbf865f8513f2b4b482a1531bc
 workflow-type: tm+mt
-source-wordcount: '2813'
+source-wordcount: '2817'
 ht-degree: 51%
 
 ---
@@ -49,7 +49,7 @@ Experience Platform에서 사용할 데이터 스트림을 구성하고 Web SDK�
 | 설정 | 설명 |
 | --- | --- |
 | [!UICONTROL 지역 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대한 지리적 위치 조회를 활성화합니다. 사용 가능한 옵션은 다음과 같습니다. <ul><li>**국가**: `xdm.placeContext.geo.countryCode` 채우기</li><li>**우편 번호**: `xdm.placeContext.geo.postalCode`을 채웁니다.</li><li>**시/도**: `xdm.placeContext.geo.stateProvince`을(를) 채웁니다.</li><li>**DMA**: `xdm.placeContext.geo.dmaID` 채우기</li><li>**구/군/시**: `xdm.placeContext.geo.city`을(를) 채웁니다</li><li>**위도**: `xdm.placeContext.geo._schema.latitude`을(를) 채웁니다.</li><li>**경도**: `xdm.placeContext.geo._schema.longitude` 채우기</li></ul>**[!UICONTROL 도시]**, **[!UICONTROL 위도]** 또는 **[!UICONTROL 경도]**&#x200B;를 선택하면 선택한 다른 옵션에 관계없이 소수점 이하 두 자리까지 좌표가 제공됩니다. 이는 도시 수준의 세부 기간으로 간주됩니다.<br> <br>옵션을 선택하지 않으면 지리적 위치 조회가 비활성화됩니다. 지리적 위치는 [!UICONTROL IP 난독화] 전에 발생하므로 [!UICONTROL IP 난독화] 설정의 영향을 받지 않습니다. |
-| [!UICONTROL 네트워크 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대한 네트워크 조회를 활성화합니다. 사용 가능한 옵션은 다음과 같습니다. <ul><li>**통신사**: `xdm.environment.carrier`을(를) 채웁니다.</li><li>**도메인**: `xdm.environment.domain`을 채웁니다.</li><li>**ISP**: `xdm.environment.ISP`을 채웁니다.</li></ul> |
+| [!UICONTROL 네트워크 조회] | 방문자의 IP 주소를 기반으로 선택한 옵션에 대한 네트워크 조회를 활성화합니다. 사용 가능한 옵션은 다음과 같습니다. <ul><li>**이동통신사**: `xdm.environment.carrier`을(를) 채웁니다.</li><li>**도메인**: `xdm.environment.domain`을 채웁니다.</li><li>**ISP**: `xdm.environment.ISP`을 채웁니다.</li><li>**연결 형식**: `xdm.environment.connectionType`을(를) 채웁니다.</li></ul> |
 
 데이터 수집을 위해 위의 필드 중 하나를 사용하도록 설정하는 경우 웹 SDK를 구성할 때 [`context`](/help/web-sdk/commands/configure/context.md) 배열 속성을 올바르게 설정했는지 확인하십시오.
 
