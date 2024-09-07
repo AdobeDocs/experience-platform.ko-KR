@@ -4,9 +4,9 @@ title: 세그먼트 정의 API 엔드포인트
 description: Adobe Experience Platform Segmentation Service API의 세그먼트 정의 엔드포인트를 사용하면 조직의 세그먼트 정의를 프로그래밍 방식으로 관리할 수 있습니다.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
+source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1519'
 ht-degree: 2%
 
 ---
@@ -458,6 +458,10 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
     }'
 ```
 
+| 속성 | 설명 |
+| -------- | ----------- |
+| `ids` | 검색할 세그먼트 정의의 ID를 나타내는 개체가 포함된 배열입니다. |
+
 +++
 
 **응답**
@@ -617,6 +621,10 @@ PATCH /segment/definitions/{SEGMENT_ID}
 **요청**
 
 다음 요청은 작업 주소 국가를 미국에서 캐나다로 업데이트합니다.
+
+>[!NOTE]
+>
+>이 API 호출 **은(는) 세그먼트 정의의 콘텐츠를 대체**&#x200B;하므로 유지하려는 필드가 요청 본문의 일부로 **모두**&#x200B;되어 있는지 확인하십시오.
 
 +++ 세그먼트 정의를 업데이트하기 위한 샘플 요청입니다.
 
