@@ -2,7 +2,8 @@
 title: ID 그래프 연결 규칙 문제 해결 설명서
 description: ID 그래프 연결 규칙의 일반적인 문제를 해결하는 방법을 알아봅니다.
 badge: Beta
-source-git-commit: cb0e229ac68f53d33b83d54df4062469252f06a3
+exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
+source-git-commit: 56e2e359812fcbfd011505ad917403d6f5317b4a
 workflow-type: tm+mt
 source-wordcount: '2019'
 ht-degree: 0%
