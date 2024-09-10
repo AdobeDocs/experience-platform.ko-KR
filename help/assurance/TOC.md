@@ -5,10 +5,10 @@ breadcrumb-title: Assurance 안내서
 user-guide-description: Adobe Experience Platform Assurance를 사용하면 모바일 애플리케이션 내에서 데이터를 수집하거나 경험을 제공하는 방식을 검사하고, 증명하고, 시뮬레이션하고, 검증할 수 있습니다.
 feature: Assurance
 role: Developer
-source-git-commit: 3c2d7fafb2d4385c8631c6737c5753f3b669e203
+source-git-commit: 0209c873438a3bda1b0df6434f49735c2d3e150b
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 91%
+source-wordcount: '67'
+ht-degree: 97%
 
 ---
 
@@ -27,7 +27,6 @@ ht-degree: 91%
    - [푸시 디버그 보기](./views/push-debug-view.md)
    - [유효성 검사 요약](./views/validation-summary.md)
    - [Adobe Analytics](./views/adobe-analytics.md)
-   - [Analytics 이벤트 2.0 (Beta)](./views/adobe-analytics-edge.md)
    - [스트리밍 미디어용 Adobe Analytics](./views/adobe-analytics-streaming-media.md)
 - 튜토리얼 {#tutorials}
    - [Assurance 구현](./tutorials/implement-assurance.md)
