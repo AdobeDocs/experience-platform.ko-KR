@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
 workflow-type: tm+mt
-source-wordcount: '3743'
-ht-degree: 6%
+source-wordcount: '4767'
+ht-degree: 5%
 
 ---
 
@@ -212,6 +212,90 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 이제 count 함수가 추가되었습니다. 이제 count 함수와 함수 값을 선택할 수 있습니다. 아래 예제는 최소 한 번의 클릭이 있는 이벤트를 포함하는 것입니다.
 
 ![계산 함수 목록이 표시되고 강조 표시됩니다.](../images/ui/segment-builder/select-count.png)
+
+### 시간 제한 {#time-constraints}
+
+시간 제한을 사용하면 시간 기반 속성, 이벤트 및 이벤트 간 시퀀스에 시간 제한을 적용할 수 있습니다.
+
+>[!IMPORTANT]
+>
+>2024년 6월 이전에 &quot;이번 달&quot; 또는 &quot;올해&quot; 시간 제한을 사용하여 세그먼트 정의를 만든 경우 세그먼트 정의를 다시 저장해야 합니다. 2024년 6월 이전의 경우, &quot;이번 달&quot;은 30일, &quot;올해&quot;는 365일을 기준으로 하였다.
+
+사용 가능한 시간 제한 목록은 다음과 같습니다.
+
++++ 사용 가능한 시간 제한
+
+>[!NOTE]
+>
+>모든 시간 제한은 UTC를 기반으로 합니다.
+>
+>또한 [!UICONTROL 연도 무시] 확인란이 활성화된 경우 해당 연도는 세그먼트 정의 평가의 일부로 **비교되지 않습니다**.
+
+| 시간 제한 | 설명 | 연도 무시를 활성화할 수 있습니다 | 예 |
+| --------------- | ----------- | ------------------- | ------- |
+| 오늘 | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트가 오늘 발생합니다. | 예 | ![사용 중인 &quot;오늘&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| 어제 | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트가 어제 발생했습니다. | 예 | ![사용 중인 &quot;어제&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| 이번 달 | 비교 중인 특성 또는 이벤트는 **반드시**&#x200B;이 달력에 발생합니다. | 예 | ![사용 중인 &quot;이번 달&quot; 시간 제한의 예입니다.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| 올해 | 비교 중인 특성 또는 이벤트는 **must**&#x200B;이(가) 이번 연도에 발생합니다. | 아니요 | ![사용 중인 &quot;올해&quot; 시간 제한의 예입니다.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| 사용자 정의 날짜 | 비교 중인 특성 또는 이벤트는 해당 날짜에 **필수**&#x200B;됩니다. | 예 | ![사용 중인 &quot;사용자 지정 날짜&quot; 시간 제한의 예입니다.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| 마지막 | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트는 선택한 마지막 기간 내에 발생합니다. 이 기간은 평가 시간까지 **포함**&#x200B;됩니다. | 아니요 | ![사용 중인 &quot;마지막&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| 출처(대상) | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트는 선택한 두 날짜 내에 발생합니다. 이 기간은 두 날짜의 **포함**&#x200B;입니다. | 예, 사용자 정의 날짜인 경우 | ![사용 중인 &quot;From to&quot;의 예입니다.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| 다음 기간 동안 | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트는 선택한 월 또는 연도 내에 발생합니다. 월을 선택한 경우 속성 또는 이벤트가 발생한 월과 연도를 모두 선택해야 합니다.  연도를 선택한 경우 속성 또는 이벤트가 발생한 연도를 선택하면 됩니다. 월을 선택하면 [!UICONTROL 연도 무시] 확인란도 활성화할 수 있습니다. | 예 | ![사용 중인 &quot;During&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| 다음 범위 내(+/-) | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트는 선택한 날짜로부터 일, 주, 월 또는 년 이내에 발생합니다. 이 기간은 두 날짜의 **포함**&#x200B;입니다. 선택한 날짜는 오늘, 어제 또는 선택한 다른 사용자 지정 날짜일 수 있습니다. | 예 | ![사용 중인 &quot;Within&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| 다음 이전 | 비교 중인 특성 또는 이벤트는 선택한 날짜 이전에 **반드시**&#x200B;해야 합니다. 선택한 날짜는 선택한 사용자 지정 날짜이거나 일, 주, 월 또는 년 전 중에서 선택할 수 있습니다. | 예 | ![사용 중인 &quot;Before&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| 다음 이후 | **must**&#x200B;와(과) 비교되는 특성 또는 이벤트는 선택한 날짜 이후에 발생합니다. 선택한 날짜는 선택한 사용자 지정 날짜이거나 일, 주, 월 또는 년 전 중에서 선택할 수 있습니다. | 예 | ![사용 중인 &quot;After&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| 롤링 범위 | 비교되는 특성 또는 이벤트는 두 상대적 날짜 사이에 발생해야 합니다. 날짜는 초, 분, 시간, 일, 주, 월 또는 년 단위로 표시될 수 있습니다. | 아니요 | ![사용되는 &quot;롤링 범위&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| 다음에서 | 비교되는 속성 또는 이벤트는 선택한 다음 기간 내에 발생해야 합니다. 선택한 기간에는 분, 시간, 일, 주, 월 및 년이 포함됩니다. | 아니요 | ![사용 중인 &quot;다음 시간 내&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| 존재함 | 속성이 존재합니다. | 아니요 | ![사용 중인 &quot;존재&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| 존재하지 않음 | 속성이 존재하지 않습니다. | 아니요 | ![사용 중인 &quot;존재하지 않음&quot; 시간 제약 조건의 예입니다.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+
++++
+
+이벤트에 시간 제한을 적용하는 경우 캔버스 수준, 카드 수준 또는 이벤트 간에 적용할 수 있습니다.
+
+#### 캔버스 수준 제한
+
+캔버스 수준 시간 제한을 적용하려면 이벤트의 타임라인 위에 나타나는 시계 아이콘을 선택합니다.
+
+![캔버스 수준 시간 제약 조건 선택기가 강조 표시되어 있습니다.](../images/ui/segment-builder/time-constraints/canvas-level.png)
+
+캔버스 수준에서 시간 제한을 적용하면 대상의 **모두**&#x200B;개 이벤트에 시간 제한이 적용됩니다.
+
+#### 카드 수준 제한
+
+카드 수준 제한을 적용하려면 시간 제한을 적용할 카드를 선택한 다음 줄임표 아이콘을 선택하고 **[!UICONTROL 시간 규칙을 적용]**&#x200B;합니다. **[!UICONTROL 이벤트 규칙]** 컨테이너 내에서 시간 제한을 선택할 수 있습니다.
+
+![카드 수준 시간 제약 조건 선택기가 강조 표시되어 있습니다.](../images/ui/segment-builder/time-constraints/card-level.png)
+
+카드 수준에서 시간 제한을 적용하면 대상의 **지정된** 이벤트에 시간 제한이 적용됩니다.
+
+#### 이벤트 간 제한
+
+이벤트 간에 시간 제한을 적용하려면 시간 제한을 적용할 두 이벤트 간의 시계 아이콘을 선택합니다.
+
+![이벤트 사이의 시간 제약 조건 선택기가 강조 표시됩니다.](../images/ui/segment-builder/time-constraints/between-event.png)
+
+이벤트 사이에 시간 제한을 적용할 때 시간 제한이 이벤트 **사이**&#x200B;에 적용됩니다.
+
+이 작업에 사용할 수 있는 시간 제약 조건 목록은 시간 제약 조건의 기본 목록과 다르며, 다음과 같습니다.
+
++++ 사용 가능한 시간 제한
+
+| 시간 제한 | 설명 |
+| --------------- | ----------- |
+| 다음 이후 | 후자 이벤트 **은(는) 이전 이벤트 다음에 적어도**&#x200B;을(를) 수행해야 합니다. |
+| 다음 범위 내 | 두 이벤트 **must**&#x200B;은(는) 시간 제약 조건 내에 나열된 기간 동안 발생합니다. |
+
+>[!NOTE]
+>
+>&quot;After&quot; 시간 제한을 사용할 때 후자의 이벤트는 시간 제한 내에 나열된 시간보다 많이 발생할 수 있습니다. >
+>예를 들어, 페이지 보기 이벤트와 체크아웃 이벤트가 있고, 이 두 이벤트 사이에 &quot;1시간 후&quot; 시간 제한을 두는 경우, 페이지 보기 이벤트 2시간 후에 체크아웃 이벤트가 있는 세그먼트 정의가 유효합니다.
+>
+>추가로, 이 두 시간 제약들은 서로 협력하여 사용될 수 있다.
+>
+>예를 들어, 페이지 보기 이벤트와 체크아웃 이벤트가 있고 &quot;1시간 후&quot;와 &quot;24시간 내&quot; 시간 제한을 모두 두는 경우, 페이지 보기 이벤트 12시간 후에 체크아웃 이벤트가 있는 세그먼트 정의는 유효하지만, 페이지 보기 이벤트 36시간 후에 체크아웃 이벤트가 있는 세그먼트 정의는 유효하지 않습니다.
+
++++
 
 ## 컨테이너
 
