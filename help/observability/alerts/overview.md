@@ -4,9 +4,9 @@ title: 경고 개요
 description: 경고 규칙이 정의되는 구조를 포함하여 Adobe Experience Platform에서의 다양한 경고에 대해 알아봅니다.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 829d7da1dc53486eba1cdceddb7888b578e1c137
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '793'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->비프로덕션 샌드박스에서 경고는 지원되지 않습니다. 경고를 구독하려면 프로덕션 샌드박스를 사용 중인지 확인해야 합니다. 샌드박스가 재설정되면 모든 구독 경고가 재설정됩니다. 샌드박스가 삭제되면 모든 구독 경고가 마찬가지로 지워집니다.
+>경고는 프로덕션 및 개발 샌드박스 모두에서 지원되므로 모든 샌드박스에서 경고에 가입할 수 있습니다. 샌드박스가 재설정되면 모든 구독 경고도 재설정되고 샌드박스가 삭제되면 모든 구독 경고가 삭제됩니다.
 
 Adobe Experience Platform을 사용하면 Adobe Experience Platform 활동과 관련된 이벤트 기반 경고를 구독할 수 있습니다. 경고는 작업이 완료되었는지, 워크플로우 내의 특정 마일스톤에 도달했는지 또는 오류가 발생했는지 확인하기 위해 [[!DNL Observability Insights] API](../api/overview.md)를 폴링하지 않아도 됩니다.
 
