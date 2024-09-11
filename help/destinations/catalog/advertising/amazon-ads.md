@@ -3,9 +3,9 @@ title: Amazon 광고
 description: Amazon Ads는 등록된 판매자, 공급업체, 서적 공급업체, Kindle Direct Publishing(KDP) 작성자, 앱 개발자 및/또는 에이전시에 대한 광고 목표를 달성하는 데 도움이 되는 다양한 옵션을 제공합니다. Amazon Ads와 Adobe Experience Platform의 통합은 ADSP(Amazon DSP)를 비롯한 Amazon Ads 제품에 턴키 통합을 제공합니다. Adobe Experience Platform의 Amazon 광고 대상을 사용하면 Amazon DSP에서 타깃팅 및 활성화를 위해 광고주 대상을 정의할 수 있습니다.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 8e34e5488ab80cd1f3c8086bf7c16d3f22527540
+source-git-commit: 56971631eb7ab2ef3dd2dcf077ee3b52f131ffe7
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1761'
 ht-degree: 2%
 
 ---
@@ -97,7 +97,7 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 >[!NOTE]
 >
->대상 구성을 저장한 후에는 Amazon 계정을 통해 다시 인증하더라도 [!DNL Amazon Ads] 광고주 ID를 변경할 수 없습니다. 다른 [!DNL Amazon Ads] 광고주 ID를 사용하려면 새 대상 연결을 만들어야 합니다.
+>대상 구성을 저장한 후에는 Amazon 계정을 통해 다시 인증하더라도 [!DNL Amazon Ads] 광고주 ID를 변경할 수 없습니다. 다른 [!DNL Amazon Ads] 광고주 ID를 사용하려면 새 대상 연결을 만들어야 합니다. 이미 ADSP와의 통합을 통해 설정된 광고주가 해당 대상을 AMC 또는 다른 ADSP 계정으로 전달하려면 새 대상 플로우를 생성해야 합니다.
 
 * **[!UICONTROL 광고주 지역]**: 광고주가 호스팅되는 적절한 지역을 선택하십시오. 각 지역에서 지원하는 마켓플레이스에 대한 자세한 내용은 [Amazon 광고 설명서](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)를 참조하세요.
 
@@ -129,6 +129,7 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 * 해시된 이메일 주소를 매핑하려면 `Email_LC_SHA256` ID 네임스페이스를 원본 필드로 선택하십시오.
 * 해시된 전화 번호를 매핑하려면 `Phone_SHA256` ID 네임스페이스를 원본 필드로 선택하십시오.
 * 해시되지 않은 이메일 주소 또는 전화번호를 매핑하려면 해당 ID 네임스페이스를 소스 필드로 선택하고 `Apply Transformation` 옵션을 선택하여 활성화 시 Platform이 ID를 해시하도록 합니다.
+* *2024년 9월 릴리스부터 새로 만들기*: Amazon 광고에서는 ID 확인 프로세스를 용이하게 하기 위해 `countryCode` 값이 포함된 필드를 2자 ISO 형식으로 매핑해야 합니다(예: US, GB, MX, CA 등). `countryCode` 매핑이 없는 연결은 ID 일치율에 부정적인 영향을 줍니다.
 
 [!DNL Amazon Ads] 커넥터의 대상 구성에서 지정된 대상 필드를 한 번만 선택합니다.  예를 들어 비즈니스 이메일을 제출하는 경우 동일한 대상 구성에서 개인 이메일을 매핑할 수도 없습니다.
 
@@ -148,7 +149,7 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 왼쪽 스키마 브라우저에서 **[!UICONTROL Advertiser Uploaded]** > **[!UICONTROL aep_audiences]**&#x200B;에서 대상을 찾습니다. 그런 다음 AMC SQL 편집기에서 다음 절을 사용하여 대상자를 쿼리할 수 있습니다.
 
-`select count(user_id) from aep_audiences where audienceId = '1234567'`
+`select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
 ![Amazon Marketing Cloud 대상 만들기 유효성 검사](../../assets/catalog/advertising/amazon_ads_image_5.png)
 
@@ -171,6 +172,7 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
+| 2024년 5월 | 기능 및 설명서 업데이트 | `countryCode` 매개 변수를 Amazon 광고로 내보내는 매핑 옵션을 추가했습니다. [매핑 단계](#map)에서 `countryCode`을(를) 사용하여 Amazon과의 ID 일치율을 개선하세요. |
 | 2024년 3월 | 기능 및 설명서 업데이트 | [!DNL Amazon Marketing Cloud](AMC)에서 사용할 대상을 내보내는 옵션이 추가되었습니다. |
 | 2023년 5월 | 기능 및 설명서 업데이트 | <ul><li>[대상 연결 워크플로](#destination-details)에서 광고주 영역 선택에 대한 지원을 추가했습니다.</li><li>광고주 지역 선택 사항의 추가를 반영하도록 설명서를 업데이트했습니다. 올바른 광고주 지역 선택에 대한 자세한 내용은 [Amazon 설명서](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)를 참조하세요.</li></ul> |
 | 2023년 3월 | 초기 릴리스 | 초기 대상 릴리스 및 설명서가 게시되었습니다. |
