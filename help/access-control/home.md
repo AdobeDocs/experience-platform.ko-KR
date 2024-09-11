@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 액세스 제어 개요
 description: Adobe Experience Platform에 대한 액세스 제어는 Adobe Admin Console을 통해 제공됩니다. 이 기능은 사용 권한 및 샌드박스를 사용자와 연결하는 Admin Console의 제품 프로필을 활용합니다.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 734a34e9acf80300c28ca14587198fb7eaf83c17
+source-git-commit: 5d5c57dfb9e4abda6b1bca96147a95d063bc17c6
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1787'
 ht-degree: 1%
 
 ---
@@ -116,7 +116,11 @@ Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 
 | [!DNL Identity Management] | [!UICONTROL ID 네임스페이스 관리] | ID 네임스페이스를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
 | [!DNL Identity Management] | [!UICONTROL ID 네임스페이스 보기] | ID 네임스페이스에 대한 읽기 전용 액세스 권한. |
 | [!DNL Identity Management] | [!UICONTROL ID 그래프 보기] | ID 그래프에 대한 읽기 전용 액세스 권한. |
-| [!DNL Profile Management] | [!UICONTROL 프로필 관리] | 고객 프로필에 사용되는 데이터 세트를 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. 사용 가능한 프로필에 대한 읽기 전용 액세스 권한. |
+| [!DNL Intelligent Services] | [!UICONTROL Attribution AI 보기] | Attribution AI 설정 및 인사이트에 대한 읽기 전용 액세스 권한. |
+| [!DNL Intelligent Services] | [!UICONTROL Attribution AI 관리] | Attribution AI 모델을 읽고, 만들고, 편집하고, 삭제할 수 있는 액세스 권한. |
+| [!DNL Intelligent Services] | [!UICONTROL 고객 AI 보기] | 고객 AI 모델을 읽거나 볼 수 있는 액세스 권한. |
+| [!DNL Intelligent Services] | [!UICONTROL 고객 AI 관리] | 고객 AI 모델을 생성, 업데이트, 삭제, 활성화 또는 비활성화할 수 있는 액세스 권한. |
+| [!DNL Profile Management] | [!UICONTROL 프로필 관리] | 여러 소스에서 데이터를 수집하고 개별 고객을 위한 강력한 프로필을 빌드하며 데이터 레이크 및 실시간 고객 프로필 데이터 저장소에 프로필 활성화 데이터를 저장합니다. |
 | [!DNL Profile Management] | [!UICONTROL 프로필 보기] | 사용 가능한 프로필에 대한 읽기 전용 액세스 권한. |
 | [!DNL Profile Management] | [!UICONTROL 세그먼트 관리] | 세그먼트 읽기, 만들기, 편집 및 삭제 액세스 권한. |
 | [!DNL Profile Management] | [!UICONTROL 세그먼트 보기] | 사용 가능한 세그먼트에 대한 읽기 전용 액세스 권한. |
