@@ -3,9 +3,9 @@ title: 대상 API 엔드포인트
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 대상 끝점을 사용하여 프로그래밍 방식으로 조직의 대상을 만들고, 관리하고, 업데이트합니다.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
+source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1438'
 ht-degree: 2%
 
 ---
@@ -30,6 +30,10 @@ ht-degree: 2%
 GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
+
+>[!NOTE]
+>
+>쿼리 매개 변수 없이 이 끝점을 사용하는 경우 비활성 대상은 **반환되지 않습니다**. 그러나 이 끝점을 `property=audienceId` 쿼리 매개 변수와 함께 사용하면 비활성 대상 **will**&#x200B;이(가) 반환됩니다.
 
 대상자 목록을 검색할 때 다음 쿼리 매개 변수를 사용할 수 있습니다.
 
