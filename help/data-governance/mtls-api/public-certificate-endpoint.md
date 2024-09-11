@@ -2,7 +2,8 @@
 title: 공개 인증서 끝점
 description: MTLS 서비스 API의 /public-certificate 종단점을 사용하여 공개 인증서를 검색하는 방법을 알아봅니다.
 role: Developer
-source-git-commit: ce02c1a15d4e87c130de5e6133edda6b66cc2196
+exl-id: 8369c783-e595-476f-9546-801cf4f10f71
+source-git-commit: 754044621cdaf1445f809bceaa3e865261eb16f0
 workflow-type: tm+mt
 source-wordcount: '358'
 ht-degree: 2%
@@ -51,7 +52,7 @@ GET /v1/certificate/public-certificate
 +++샘플 요청
 
 ```shell
-curl -X GET https://experience.adobe.io/data/core/mtls/v1/certificate/public-certificate
+curl -X GET https://platform.adobe.io/data/core/mtls/v1/certificate/public-certificate
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -111,4 +112,3 @@ curl -X GET https://experience.adobe.io/data/core/mtls/v1/certificate/public-cer
 <!-- To test this API call, navigate to the [MTLS API reference page]() to interact with the Experience Platform API endpoints. -->
 
 <!-- Add link after developer page is live -->
-
