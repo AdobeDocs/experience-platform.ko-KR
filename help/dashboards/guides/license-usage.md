@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
 workflow-type: tm+mt
 source-wordcount: '2641'
-ht-degree: 6%
+ht-degree: 12%
 
 ---
 
@@ -22,15 +22,15 @@ ht-degree: 6%
 >id="platform_dashboards_licenseUsage"
 >title="라이선스 사용 대시보드"
 >abstract="라이선스 사용 대시보드는 구매한 Adobe Experience Platform 제품에 대한 인사이트를 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 계약된 라이선스 금액 등 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage"
 >title="라이선스 사용 대시보드"
 >abstract="라이선스 사용 대시보드는 구매한 Adobe Experience Platform 제품에 대한 인사이트를 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 계약된 라이선스 금액 등 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
 
 Adobe Experience Platform [!UICONTROL 라이선스 사용] 대시보드를 통해 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있습니다. 여기에 표시되는 정보는 Platform 인스턴스의 일별 스냅샷 중에 캡처됩니다.
 
@@ -84,16 +84,16 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="예상 사용량"
->abstract="예측은 지난 6-7개월 동안의 사용량을 기반으로 하며 매월 15일에 생성됩니다. 라이센스 사용 예측은 과거 사용을 기반으로 한 근사치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe으로 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다. 사용량을 줄이기 위해 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
+>abstract="예측은 지난 6~7개월 동안의 사용량을 기반으로 하며 매월 15일에 생성됩니다. 라이선스 사용량 예측은 과거 사용량을 기반으로 한 추정치입니다. 귀하는 조직의 실제 사용량을 파악하고 사용량이 Adobe와 조직의 라이선스 범위를 벗어나지 않도록 할 책임이 있습니다. 사용량을 줄이려면 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="예상 사용량"
->abstract="예측은 지난 6-7개월 동안의 사용량을 기반으로 하며 매월 15일에 생성됩니다. 라이센스 사용 예측은 과거 사용을 기반으로 한 근사치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe으로 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다. 사용량을 줄이기 위해 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
+>abstract="예측은 지난 6~7개월 동안의 사용량을 기반으로 하며 매월 15일에 생성됩니다. 라이선스 사용량 예측은 과거 사용량을 기반으로 한 추정치입니다. 귀하는 조직의 실제 사용량을 파악하고 사용량이 Adobe와 조직의 라이선스 범위를 벗어나지 않도록 할 책임이 있습니다. 사용량을 줄이려면 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
 
 통찰력 있는 사용 예측에 따라 라이센스 리소스를 사전 예방적으로 관리 및 최적화합니다. [!UICONTROL 예상 사용량] 열은 구입한 모든 제품에 대해 모든 프로덕션 및 개발 샌드박스에서 샌드박스 수준에서 향후 라이선스 사용량을 정확하게 예측합니다. 이 경고 기능은 이달 15일까지의 사용량을 기반으로 향후 6주 동안의 라이선스 사용량을 예측합니다. 예측은 하한값과 상한값으로 제공됩니다.
 
@@ -109,7 +109,7 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 
 >[!NOTE]
 >
->라이센스 사용 예측은 과거 사용을 기반으로 한 근사치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe으로 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다.
+>라이선스 사용량 예측은 과거 사용량을 기반으로 한 추정치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe으로 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다.
 
 ![예측된 사용 열이 강조 표시된 플랫폼 제품의 요약 보기입니다.](../images/license-usage/summary-predicted-usage.png)
 

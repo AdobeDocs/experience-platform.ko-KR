@@ -8,7 +8,7 @@ exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 source-git-commit: b4545943abbb68d36a64935feb4466d075331504
 workflow-type: tm+mt
 source-wordcount: '617'
-ht-degree: 7%
+ht-degree: 13%
 
 ---
 
@@ -57,7 +57,7 @@ UI에서 암호화된 데이터 수집으로 작업하기 전에 다음 Experien
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_encryptionKeyId"
 >title="암호화 키 ID"
->abstract="소스 데이터를 암호화하는 데 사용된 암호화 키에 해당하는 암호화 키 ID를 입력하십시오."
+>abstract="소스 데이터를 암호화하는 데 사용된 암호화 키와 일치하는 암호화 키 ID를 제공합니다."
 
 * Platform UI에서 소스 작업 영역으로 이동한 다음 상단 헤더에서 [!UICONTROL 키 쌍]을 선택합니다.
 * 조직의 기존 암호화 키 쌍 목록을 표시하는 페이지로 이동합니다. 이 페이지에서는 해당 키의 제목, ID, 유형, 암호화 알고리즘, 만료 및 상태에 대한 정보를 제공합니다. 새 키 쌍을 만들려면 **[!UICONTROL 키 만들기]**&#x200B;를 선택합니다.
@@ -67,8 +67,8 @@ UI에서 암호화된 데이터 수집으로 작업하기 전에 다음 Experien
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_signVerificationKeyId"
->title="서명 확인 키 ID"
->abstract="서명되고 암호화된 소스 데이터에 해당하는 서명 확인 키 ID를 제공합니다."
+>title="서명 인증 키 ID"
+>abstract="귀하의 서명이 들어간 암호화 소스 데이터에 해당하는 서명 인증 키 ID를 제공합니다."
 
 ## 암호화된 데이터 수집 {#ingest-encrypted-data}
 
