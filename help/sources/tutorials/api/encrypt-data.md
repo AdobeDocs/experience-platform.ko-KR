@@ -2,9 +2,9 @@
 title: 암호화된 데이터 수집
 description: API를 사용하여 클라우드 스토리지 일괄 처리 소스를 통해 암호화된 파일을 수집하는 방법에 대해 알아봅니다.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
+source-git-commit: 9a5599473f874d86e2b3c8449d1f4d0cf54b672c
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1806'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 암호화된 데이터 수집 프로세스는 다음과 같습니다.
 
-1. [Experience Platform API를 사용하여 암호화 키 쌍을 만듭니다](#create-encryption-key-pair). 암호화 키 쌍은 개인 키(private key)와 공개 키(public key)로 구성된다. 만든 후에는 해당 공개 키 ID 및 만료 시간과 함께 공개 키를 복사하거나 다운로드할 수 있습니다. 이 프로세스 중에 개인 키는 Experience Platform이 보안 저장소에 저장합니다. **참고:** 응답의 공개 키는 Base64로 인코딩되어 있으므로 사용하기 전에 해독해야 합니다.
+1. [Experience Platform API를 사용하여 암호화 키 쌍을 만듭니다](#create-encryption-key-pair). 암호화 키 쌍은 개인 키(private key)와 공개 키(public key)로 구성된다. 만든 후에는 해당 공개 키 ID 및 만료 시간과 함께 공개 키를 복사하거나 다운로드할 수 있습니다. 이 프로세스 중에 개인 키는 Experience Platform이 보안 저장소에 저장합니다. **참고:** 응답의 공개 키는 Base64로 인코딩되며 사용하기 전에 디코딩해야 합니다.
 2. 공개 키를 사용하여 수집할 데이터 파일을 암호화합니다.
 3. 암호화된 파일을 클라우드 저장소에 저장합니다.
 4. 암호화된 파일이 준비되면 [클라우드 저장소 원본의 원본 연결 및 데이터 흐름을 만듭니다](#create-a-dataflow-for-encrypted-data). 흐름 만들기 단계에서 `encryption` 매개 변수를 제공하고 공개 키 ID를 포함해야 합니다.
@@ -64,6 +64,10 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 
 ## 암호화 키 쌍 만들기 {#create-encryption-key-pair}
 
+>[!IMPORTANT]
+>
+>암호화 키는 특정 샌드박스에 한정됩니다. 따라서 조직 내의 다른 샌드박스에서 암호화된 데이터를 수집하려면 새 암호화 키를 만들어야 합니다.
+
 암호화된 데이터를 Experience Platform으로 수집하는 첫 번째 단계는 [!DNL Connectors] API의 `/encryption/keys` 끝점에 POST을 요청하여 암호화 키 쌍을 만드는 것입니다.
 
 **API 형식**
@@ -87,6 +91,7 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-encryption",
       "encryptionAlgorithm": "PGP",
       "params": {
           "passPhrase": "{{PASSPHRASE}}"
@@ -96,6 +101,7 @@ curl -X POST \
 
 | 매개변수 | 설명 |
 | --- | --- |
+| `name` | 암호화 키 쌍의 이름입니다. |
 | `encryptionAlgorithm` | 사용 중인 암호화 알고리즘의 유형입니다. 지원되는 암호화 유형은 `PGP` 및 `GPG`입니다. |
 | `params.passPhrase` | 암호는 암호화 키에 대한 추가 보호 계층을 제공합니다. 생성 시 Experience Platform은 암호를 공개 키와 다른 보안 저장소에 저장합니다. 비어 있지 않은 문자열을 암호로 제공해야 합니다. |
 
@@ -153,13 +159,15 @@ curl -X GET \
 
 +++예제 응답 보기
 
-성공적인 응답은 암호화 알고리즘, 공개 키, 공개 키 ID 및 키의 해당 만료 시간을 반환합니다.
+성공적인 응답은 암호화 알고리즘, 이름, 공개 키, 공개 키 ID, 키 유형 및 키의 해당 만료 시간을 반환합니다.
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -194,13 +202,15 @@ curl -X GET \
 
 +++예제 응답 보기
 
-성공적인 응답은 암호화 알고리즘, 공개 키, 공개 키 ID 및 키의 해당 만료 시간을 반환합니다.
+성공적인 응답은 암호화 알고리즘, 이름, 공개 키, 공개 키 ID, 키 유형 및 키의 해당 만료 시간을 반환합니다.
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -236,8 +246,12 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-sign-verification-keys"
       "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
-      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}},
+      "params": {
+          "passPhrase": {{PASS_PHRASE}}
+      }
     }'
 ```
 
@@ -261,6 +275,48 @@ curl -X POST \
 | 속성 | 설명 |
 | --- | --- |
 | `publicKeyId` | 이 공개 키 ID는 고객이 관리하는 키를 Experience Platform과 공유하는 것에 대한 응답으로 반환됩니다. 서명 및 암호화된 데이터에 대한 데이터 흐름을 만들 때 이 공개 키 ID를 서명 확인 키 ID로 제공할 수 있습니다. |
+
++++
+
+### 고객 관리 키 쌍 검색
+
+고객 관리 키를 검색하려면 `/customer-keys` 끝점에 대한 GET 요청을 만드십시오.
+
+**API 형식**
+
+```http
+GET /data/foundation/connectors/encryption/customer-keys
+```
+
+**요청**
+
++++예제 요청 보기
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**응답**
+
++++예제 응답 보기
+
+```json
+[
+    {
+        "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+        "name": "{NAME}",
+        "publicKeyId": "{PUBLIC_KEY_ID}",
+        "publicKey": "{PUBLIC_KEY}",
+        "keyType": "{KEY_TYPE}",
+    }
+]
+```
 
 +++
 
