@@ -1,16 +1,16 @@
 ---
-title: ID 그래프 연결 규칙 구성 안내서
+title: ID 그래프 연결 규칙에 대한 구현 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 3d96e057123a4dd0b4f6f34a64a93c756b583c9b
+source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1361'
 ht-degree: 2%
 
 ---
 
-# ID 그래프 연결 규칙 구성 안내서
+# ID 그래프 연결 규칙에 대한 구현 안내서
 
 >[!AVAILABILITY]
 >
@@ -102,7 +102,7 @@ ID 설정 도구를 사용하여 고유한 네임스페이스를 지정하고 �
 
 ID 설정 및 고유한 네임스페이스를 구현할 때 참조할 수 있는 추가 정보는 이 섹션 을 참조하십시오.
 
-### 공유 장치 시나리오 {#shared-device-scenario}
+### 단일 사용자 네임스페이스 요구 사항 {#single-person-namespace-requirement}
 
 개인을 나타내는 모든 프로필에서 단일 네임스페이스가 사용되도록 해야 합니다. 이렇게 하면 Identity Service가 주어진 그래프에서 적절한 개인 식별자를 감지할 수 있습니다.
 
