@@ -3,9 +3,9 @@ title: ID 최적화 알고리즘
 description: ID 서비스의 ID 최적화 알고리즘에 대해 알아봅니다.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: d3b43c5fa90b67bcba6015d521b78998d50cc3d7
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1531'
 ht-degree: 1%
 
 ---
@@ -162,7 +162,9 @@ ECID는 인증되지 않은(익명) 이벤트를 저장하는 반면 CRMID는 �
 ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [ID 그래프 연결 규칙 개요](./overview.md)
+* [구현 안내서](./implementation-guide.md)
+* [그래프 구성의 예](./example-configurations.md)
+* [문제 해결 및 FAQ](./troubleshooting.md)
 * [네임스페이스 우선 순위](./namespace-priority.md)
-* [ID 그래프 연결 규칙을 구성하기 위한 예제 시나리오](./example-scenarios.md)
-* [ID 연결 논리](../features/identity-linking-logic.md)
-* [ID 서비스 및 실시간 고객 프로필](../identity-and-profile.md)
+* [그래프 시뮬레이션 UI](./graph-simulation.md)
+* [ID 설정 UI](./identity-settings-ui.md)

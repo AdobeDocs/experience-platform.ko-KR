@@ -1,15 +1,16 @@
 ---
-title: 그래프 구성 안내서
+title: 그래프 구성의 예
 description: ID 그래프 연결 규칙 및 ID 데이터 작업 시 발생할 수 있는 일반적인 그래프 시나리오에 대해 알아봅니다.
 badge: Beta
-source-git-commit: 90faa4079d8a58898774c1fbbae2adae01f7e0a2
+exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '2749'
+source-wordcount: '2786'
 ht-degree: 6%
 
 ---
 
-# 그래프 구성 안내서
+# 그래프 구성의 예
 
 >[!AVAILABILITY]
 >
@@ -19,6 +20,7 @@ ht-degree: 6%
 >
 >* &quot;CRMID&quot; 및 &quot;loginID&quot;는 사용자 정의 네임스페이스입니다. 이 문서에서 &quot;CRMID&quot;는 개인 식별자이고 &quot;loginID&quot;는 지정된 사용자와 연관된 로그인 식별자입니다.
 >* 이 문서에 설명된 예제 그래프 시나리오를 시뮬레이션하려면 먼저 ID 기호가 &quot;CRMID&quot;인 네임스페이스와 ID 기호가 &quot;loginID&quot;인 네임스페이스를 두 개 사용자 정의 생성해야 합니다. ID 기호는 대/소문자를 구분합니다.
+
 
 이 문서에서는 ID 그래프 연결 규칙 및 ID 데이터 작업 시 발생할 수 있는 일반적인 시나리오의 그래프 구성 예제에 대해 간략히 설명합니다.
 
@@ -478,7 +480,7 @@ loginID: ID_C, ECID: 111
 
 | 사용된 네임스페이스 | 웹 동작 수집 방법 |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics 소스 커넥터. <br> **참고:** 기본적으로 AAID는 ID 서비스에서 차단되므로 Analytics 원본을 사용할 때 ECID에 AAID보다 우선 순위를 높여야 합니다. 자세한 내용은 [구현 가이드](configuration.md#ingest-your-data)를 참조하십시오.</br> |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics 소스 커넥터. <br> **참고:** 기본적으로 AAID는 ID 서비스에서 차단되므로 Analytics 원본을 사용할 때 ECID에 AAID보다 우선 순위를 높여야 합니다. 자세한 내용은 [구현 가이드](./implementation-guide.md#ingest-your-data)를 참조하십시오.</br> |
 
 **이벤트:**
 
@@ -756,3 +758,15 @@ CRMID: Tom, ECID: 111
 ```
 
 >[!ENDTABS]
+
+## 다음 단계
+
+ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참조하십시오.
+
+* [ID 그래프 연결 규칙 개요](./overview.md)
+* [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
+* [구현 안내서](./implementation-guide.md)
+* [문제 해결 및 FAQ](./troubleshooting.md)
+* [네임스페이스 우선 순위](./namespace-priority.md)
+* [그래프 시뮬레이션 UI](./graph-simulation.md)
+* [ID 설정 UI](./identity-settings-ui.md)

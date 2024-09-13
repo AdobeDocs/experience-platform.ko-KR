@@ -3,9 +3,9 @@ title: 그래프 시뮬레이션 UI 안내서
 description: ID 서비스 UI에서 그래프 시뮬레이션을 사용하는 방법을 알아봅니다.
 badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1443'
 ht-degree: 1%
 
 ---
@@ -172,8 +172,10 @@ Adobe Experience Platform UI에서 [!DNL Graph Simulation]에 액세스할 수 �
 
 이 문서를 읽으면 이제 [!DNL Graph Simulation] 도구를 사용하여 특정 규칙 및 구성 집합이 있는 경우 ID 데이터가 처리되는 방식을 더 잘 이해할 수 있습니다. 자세한 내용은 다음 문서를 참조하십시오.
 
-* [ID 그래프 연결 규칙](./overview.md)
-* [구성 안내서](./configuration.md)
+* [ID 그래프 연결 규칙 개요](./overview.md)
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
+* [구현 안내서](./implementation-guide.md)
+* [문제 해결 및 FAQ](./troubleshooting.md)
+* [그래프 구성의 예](./example-configurations.md)
 * [네임스페이스 우선 순위](./namespace-priority.md)
-* [그래프 구성 예](./example-configurations.md)
+* [ID 설정 UI](./identity-settings-ui.md)

@@ -3,9 +3,9 @@ title: ID 설정 UI
 description: ID 설정 사용자 인터페이스를 사용하는 방법을 알아봅니다.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 04b04807196bb5902e398403612429eae0de3988
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -24,8 +24,10 @@ UI에서 ID 설정을 구성하는 방법을 배우려면 이 안내서를 참�
 
 ID 설정 작업을 시작하기 전에 다음 문서를 참조하십시오.
 
-* [ID 그래프 연결 규칙 구성 안내서](./configuration.md)
+* [ID 그래프 연결 규칙](./overview.md)
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
+* [구현 안내서](./implementation-guide.md)
+* [그래프 구성의 예](./example-configurations.md)
 * [네임스페이스 우선 순위](./namespace-priority.md)
 * [그래프 시뮬레이션](./graph-simulation.md)
 
@@ -61,4 +63,12 @@ ID 설정 페이지는 [!UICONTROL 개인 네임스페이스] 및 [!UICONTROL �
 
 ## 다음 단계
 
-이제 네임스페이스 우선 순위를 구성하고 ID 설정 UI 페이지를 사용하여 고유한 네임스페이스를 지정했습니다. 자세한 내용은 [ID 그래프 연결 규칙 개요](./overview.md)를 참조하십시오.
+ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참조하십시오.
+
+* [ID 그래프 연결 규칙 개요](./overview.md)
+* [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
+* [구현 안내서](./implementation-guide.md)
+* [그래프 구성의 예](./example-configurations.md)
+* [문제 해결 및 FAQ](./troubleshooting.md)
+* [네임스페이스 우선 순위](./namespace-priority.md)
+* [그래프 시뮬레이션 UI](./graph-simulation.md)

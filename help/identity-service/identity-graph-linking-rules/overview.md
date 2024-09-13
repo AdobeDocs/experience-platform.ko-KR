@@ -1,11 +1,11 @@
 ---
-title: ID 그래프 연결 규칙 개요
-description: Identity Service의 Identity Graph 연결 규칙에 대해 알아봅니다.
+title: ID 그래프 연결 규칙
+description: ID 서비스의 ID 그래프 연결 규칙에 대해 알아봅니다.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1581'
 ht-degree: 1%
 
 ---
@@ -16,17 +16,19 @@ ht-degree: 1%
 >
 >ID 그래프 연결 규칙은 현재 Beta 버전입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오. 기능 및 설명서는 변경될 수 있습니다.
 
-## 목차
+Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용하면 데이터가 완벽하게 수집되고 병합된 모든 프로필이 CRMID와 같은 개인 식별자를 통해 단일 개별 사용자를 나타낸다고 쉽게 가정할 수 있습니다. 그러나 특정 데이터가 서로 다른 여러 프로필을 하나의 프로필로 병합하려고 할 수 있는 시나리오가 있습니다(&quot;그래프 축소&quot;). 이러한 원치 않는 병합을 방지하기 위해 ID 그래프 연결 규칙을 통해 제공된 구성을 사용하고 사용자를 위한 정확한 개인화를 허용할 수 있습니다.
 
-* [개요](./overview.md)
+## 시작하기
+
+다음 문서는 ID 그래프 연결 규칙을 이해하는 데 필수적입니다.
+
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
+* [구현 안내서](./implementation-guide.md)
+* [그래프 구성의 예](./example-configurations.md)
+* [문제 해결 및 FAQ](./troubleshooting.md)
 * [네임스페이스 우선 순위](./namespace-priority.md)
 * [그래프 시뮬레이션 UI](./graph-simulation.md)
 * [ID 설정 UI](./identity-settings-ui.md)
-* [그래프 구성 예](./configuration.md)
-* [예제 시나리오](./example-scenarios.md)
-
-Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용하면 데이터가 완벽하게 수집되고 병합된 모든 프로필이 CRMID와 같은 개인 식별자를 통해 단일 개별 사용자를 나타낸다고 쉽게 가정할 수 있습니다. 그러나 특정 데이터가 서로 다른 여러 프로필을 하나의 프로필로 병합하려고 할 수 있는 시나리오가 있습니다(&quot;그래프 축소&quot;). 이러한 원치 않는 병합을 방지하기 위해 ID 그래프 연결 규칙을 통해 제공된 구성을 사용하고 사용자를 위한 정확한 개인화를 허용할 수 있습니다.
 
 ## 그래프 축소가 발생할 수 있는 예시 시나리오
 
@@ -34,7 +36,7 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
 * **잘못된 전자 메일 및 전화 번호**: 잘못된 전자 메일 및 전화 번호는 전자 메일의 경우 &quot;test<span>@test.com&quot;, 전화 번호의 경우 &quot;+1-111-111-1111&quot;과 같은 잘못된 연락처 정보를 등록하는 최종 사용자를 나타냅니다.
 * **잘못되거나 잘못된 ID 값**: 잘못되거나 잘못된 ID 값이 CRMID를 병합할 수 있는 고유하지 않은 ID 값을 참조합니다. 예를 들어 IDFA에는 36자(영숫자 32자와 하이픈 4개)가 필요하지만 ID 값이 &quot;user_null&quot;인 IDFA를 수집할 수 있는 시나리오가 있습니다. 마찬가지로 전화번호는 숫자 문자만 지원하지만 ID 값이 &quot;지정되지 않음&quot;인 전화 네임스페이스가 수집될 수 있습니다.
 
-ID 그래프 연결 규칙의 사용 사례 시나리오에 대한 자세한 내용은 [예제 시나리오](./example-scenarios.md)의 문서를 참조하십시오.
+ID 그래프 연결 규칙의 사용 사례 시나리오에 대한 자세한 내용은 [예제 시나리오](#example-scenarios)의 섹션을 참조하십시오.
 
 ## ID 그래프 연결 규칙 {#identity-graph-linking-rules}
 
@@ -94,10 +96,63 @@ CRMID가 고유한 네임스페이스로 구성된 경우 ID 최적화 알고리
 
 자세한 내용은 [네임스페이스 우선 순위](./namespace-priority.md)에 대한 안내서를 참조하십시오.
 
+## ID 그래프 연결 규칙으로 해결된 고객 시나리오 예 {#example-scenarios}
+
+이 섹션에서는 ID 그래프 연결 규칙을 구성할 때 고려할 수 있는 예제 시나리오를 간략하게 설명합니다.
+
+### 공유 장치
+
+단일 디바이스에서 여러 로그인이 발생할 수 있는 인스턴스가 있습니다.
+
+| 공유 장치 | 설명 |
+| --- | --- |
+| 패밀리 컴퓨터 및 태블릿 | 남편과 아내 모두 각자의 은행 계좌에 로그인합니다. |
+| 공용 키오스크 | 공항 여행객이 수하물을 체크인하고 탑승권을 인쇄하는 데 고객 충성도 ID를 사용하여 로그온합니다. |
+| 콜 센터 | 콜센터 직원은 고객 지원 센터에 문의하는 고객을 대신하여 단일 디바이스에 로그인하여 문제를 해결합니다. |
+
+![일부 공통 공유 장치의 다이어그램입니다.](../images/identity-settings/shared-devices.png)
+
+이러한 경우 제한이 활성화되지 않은 그래프 측면에서 단일 ECID가 여러 CRMID에 연결됩니다.
+
+ID 그래프 연결 규칙을 사용하여 다음을 수행할 수 있습니다.
+
+* 로그인에 사용되는 ID를 고유 식별자로 구성합니다. 예를 들어 CRMID 네임스페이스가 있는 하나의 ID만 저장하도록 그래프를 제한하여 해당 CRMID를 공유 장치의 고유 식별자로 정의할 수 있습니다.
+   * 이렇게 하면 CRMID가 ECID에 의해 병합되지 않도록 할 수 있습니다.
+
+### 잘못된 이메일/전화 시나리오
+
+등록할 때 전화번호 및/또는 이메일 주소로 가짜 값을 제공하는 사용자의 경우도 있습니다. 이러한 경우 제한이 활성화되지 않으면 전화/이메일 관련 ID가 여러 다른 CRMID에 연결됩니다.
+
+![잘못된 전자 메일 또는 전화 시나리오를 나타내는 다이어그램입니다.](../images/identity-settings/invalid-email-phone.png)
+
+ID 그래프 연결 규칙을 사용하여 다음을 수행할 수 있습니다.
+
+* CRMID, 전화 번호 또는 이메일 주소를 고유 식별자로 구성하여 한 사람을 계정과 연결된 하나의 CRMID, 전화 번호 및/또는 이메일 주소로 제한합니다.
+
+### 잘못되거나 잘못된 ID 값
+
+네임스페이스에 관계없이 시스템에 고유하지 않고 잘못된 ID 값이 수집되는 경우가 있습니다. 해당 예는 다음과 같습니다.
+
+* ID 값이 &quot;user_null&quot;인 IDFA 네임스페이스.
+   * IDFA ID 값에는 36자(영숫자 32자, 하이픈 4개)가 있어야 합니다.
+* ID 값이 &quot;지정되지 않음&quot;인 전화번호 네임스페이스.
+   * 전화번호에는 알파벳 문자가 없어야 합니다.
+
+이러한 ID를 사용하면 여러 CRMID가 &#39;잘못된&#39; ID와 함께 병합되는 다음과 같은 그래프가 생성될 수 있습니다.
+
+![ID 값이 잘못되었거나 잘못된 ID 데이터의 그래프 예입니다.](../images/identity-settings/bad-data.png)
+
+ID 그래프 연결 규칙을 사용하면 이러한 유형의 데이터로 인해 원하지 않는 프로필이 축소되는 것을 방지하기 위해 CRMID를 고유 식별자로 구성할 수 있습니다.
+
+
 ## 다음 단계
 
 ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
-* [ID 최적화 알고리즘](./identity-optimization-algorithm.md).
-* [네임스페이스 우선 순위](./namespace-priority.md).
-* [ID 그래프 연결 규칙을 구성하는 예제 시나리오](./example-scenarios.md).
+* [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
+* [구현 안내서](./implementation-guide.md)
+* [그래프 구성의 예](./example-configurations.md)
+* [문제 해결 및 FAQ](./troubleshooting.md)
+* [네임스페이스 우선 순위](./namespace-priority.md)
+* [그래프 시뮬레이션 UI](./graph-simulation.md)
+* [ID 설정 UI](./identity-settings-ui.md)
