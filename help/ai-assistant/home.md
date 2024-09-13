@@ -2,14 +2,18 @@
 title: Adobe Experience Platform의 AI Assistant 개요
 description: AI 어시스턴트, 그 미묘한 차이와 사용 사례, 그리고 이를 사용하여 Adobe Experience Platform 및 Real-Time Customer Data Platform을 통해 워크플로를 가속화하는 방법에 대해 알아봅니다.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
+source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '927'
 ht-degree: 8%
 
 ---
 
 # Adobe Experience Platform의 AI 지원
+
+다음 비디오는 AI Assistant에 대한 이해를 돕기 위한 것입니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 Adobe Experience Platform의 AI Assistant에 대해 알아보려면 이 문서를 참조하십시오.
 

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform의 AI 지원
 description: AI Assistant를 사용하여 Experience Platform 및 Real-time Customer Data Platform 개념과 객체에 대한 사용 정보를 탐색하고 이해하는 방법에 대해 알아봅니다.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 94245fe25828025b60ea57ddebede2b3ccf890eb
+source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1505'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # AI Assistant UI 안내서
 
 Adobe Experience Platform UI에서 AI Assistant를 사용하는 방법을 알려면 이 안내서를 참조하십시오.
-
-다음 비디오는 AI Assistant에 대한 이해를 돕기 위한 것입니다.
-
->[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 ## Experience Platform UI에서 AI 지원에 액세스
 
@@ -85,7 +81,7 @@ AI Assistant가 **[!UICONTROL 관련 제안]**&#x200B;에서 제공하는 제안
 
 +++
 
-### 운영 통찰력 {#operational-insights}
+### 운영 인사이트 {#operational-insights}
 
 AI Assistant가 작동 인사이트에 대한 질문에 충분히 응답하려면 활성 샌드박스 상태에 있어야 합니다.
 
