@@ -8,7 +8,7 @@ exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 source-git-commit: b4545943abbb68d36a64935feb4466d075331504
 workflow-type: tm+mt
 source-wordcount: '617'
-ht-degree: 13%
+ht-degree: 15%
 
 ---
 
@@ -63,7 +63,7 @@ UI에서 암호화된 데이터 수집으로 작업하기 전에 다음 Experien
 * 조직의 기존 암호화 키 쌍 목록을 표시하는 페이지로 이동합니다. 이 페이지에서는 해당 키의 제목, ID, 유형, 암호화 알고리즘, 만료 및 상태에 대한 정보를 제공합니다. 새 키 쌍을 만들려면 **[!UICONTROL 키 만들기]**&#x200B;를 선택합니다.
 * 그런 다음 만들려는 키 유형을 선택합니다. 암호화 키를 만들려면 **[!UICONTROL 암호화 키]**&#x200B;를 선택한 다음 암호화 키의 제목과 암호를 입력하십시오. 암호는 암호화 키에 대한 추가 보호 계층입니다. 생성 시 Experience Platform은 암호를 공개 키와 다른 보안 저장소에 저장합니다. 비어 있지 않은 문자열을 암호로 제공해야 합니다.
 
-### 서명 확인 키 만들기 {#create-a-sign-verification-key}
+### 서명 인증 키 만들기 {#create-a-sign-verification-key}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_signVerificationKeyId"

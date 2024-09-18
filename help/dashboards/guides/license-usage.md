@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
 workflow-type: tm+mt
 source-wordcount: '2641'
-ht-degree: 12%
+ht-degree: 13%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 12%
 
 >[!CONTEXTUALHELP]
 >id="testy-mctestface"
->title="표시되지 않아야 하는 테스트 대화 상자"
->abstract="{date}에서 개체 {name}을(를) 보고 있습니다."
+>title="표시되면 안 되는 테스트 대화 상자"
+>abstract="{date}에 {name} 오브젝트를 조회 중입니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"

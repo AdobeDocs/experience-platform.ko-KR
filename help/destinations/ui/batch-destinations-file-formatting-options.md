@@ -41,7 +41,7 @@ Experience Platform UI를 사용하여 내보낸 파일에 대한 다양한 파�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_delimiter"
 >title="구분 기호"
->abstract="이 컨트롤을 사용하여 각 필드 및 값에 대한 구분 기호를 설정합니다. 각 선택 항목에 대한 예제는 설명서를 참조하십시오."
+>abstract="이 컨트롤을 사용하여 각 필드 및 값에 대한 구분자를 설정합니다. 각 선택 항목에 대한 예제는 설명서를 참조하십시오."
 
 이 컨트롤을 사용하여 내보낸 CSV 파일의 각 필드 및 값에 대한 구분 기호를 설정합니다. 사용 가능한 옵션은 다음과 같습니다.
 
