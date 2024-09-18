@@ -4,9 +4,9 @@ title: 라이선스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
+source-git-commit: b1de61b2e7d0dedf2da8ef8ffb02fe5c15e82fb2
 workflow-type: tm+mt
-source-wordcount: '2641'
+source-wordcount: '2720'
 ht-degree: 13%
 
 ---
@@ -17,6 +17,16 @@ ht-degree: 13%
 >id="testy-mctestface"
 >title="표시되면 안 되는 테스트 대화 상자"
 >abstract="{date}에 {name} 오브젝트를 조회 중입니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_core"
+>title="핵심 제품 표"
+>abstract="표에 나열된 핵심 제품에는 샌드박스 수준에서 자체 지표, 사용 추적 및 드릴스루 보기가 있습니다. 이러한 핵심 제품은 추적을 위한 주요 지표를 제공하며 모든 추가 기능이 이러한 지표에 포함됩니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_addons"
+>title="추가 기능 테이블"
+>abstract="추가 기능 표에는 라이선스 금액이 핵심 제품에서 지원하는 지표와 결합된 제품이 나열되어 있습니다. 이러한 추가 기능에는 별도의 지표가 없지만 연결된 핵심 제품의 사용 추적을 개선합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
