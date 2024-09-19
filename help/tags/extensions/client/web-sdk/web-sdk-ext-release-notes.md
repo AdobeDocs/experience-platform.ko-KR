@@ -1,17 +1,25 @@
 ---
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
-source-git-commit: 73a82825dd6c9ae97db76018df5462ab20c7d15e
+exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
+source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
 workflow-type: tm+mt
-source-wordcount: '2258'
-ht-degree: 23%
+source-wordcount: '2291'
+ht-degree: 28%
 
 ---
-
 
 # Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md)를 참조하십시오.
+
+## 버전 2.26.1 - 2024년 9월 19일
+
+**수정 사항 및 개선 사항**
+
+- 웹 SDK를 로컬로 실행할 때 쿠키가 올바르게 작성되지 않는 문제를 해결했습니다.
+
+Adobe Experience Platform Web SDK 버전 2.23.0을 포함합니다.
 
 ## 버전 2.26.0 - 2024년 8월 22일
 
@@ -27,7 +35,7 @@ ht-degree: 23%
 
 Adobe Experience Platform Web SDK 버전 2.22.0을 포함합니다.
 
-## 버전 2.25.0 - 2024년 7월 18일
+## 버전 2.25.0 - 2024년 7월 18일 금요일
 
 **새로운 기능**
 
@@ -36,7 +44,7 @@ Adobe Experience Platform Web SDK 버전 2.22.0을 포함합니다.
 
 Adobe Experience Platform Web SDK 버전 2.21.1을 포함합니다.
 
-## 버전 2.24.0 - 2024년 6월 5일
+## 버전 2.24.0 - 2024년 6월 5일 목요일
 
 **수정 사항 및 개선 사항**
 
@@ -47,7 +55,7 @@ Adobe Experience Platform Web SDK 버전 2.21.1을 포함합니다.
 
 Adobe Experience Platform Web SDK 버전 2.20.0을 포함합니다.
 
-## 버전 2.23.1 - 2024년 5월 28일
+## 버전 2.23.1 - 2024년 5월 28일 수요일
 
 **새로운 기능**
 
@@ -62,7 +70,7 @@ Adobe Experience Platform Web SDK 버전 2.20.0을 포함합니다.
 - [변수 업데이트](action-types.md#update-variable) 작업에서 데이터 요소를 검색할 때 발생하는 오류를 수정했습니다.
 - `sendEvent` 작업에 사용하도록 권장된 이벤트 유형에서 [!UICONTROL Media] 이벤트 유형을 제거했습니다.
 
-## 버전 2.22.0 - 2024년 5월 3일
+## 버전 2.22.0 - 2024년 5월 3일 토요일
 
 **새로운 기능**
 
@@ -71,7 +79,7 @@ Adobe Experience Platform Web SDK 버전 2.20.0을 포함합니다.
 
 Adobe Experience Platform Web SDK 버전 2.19.2를 포함합니다.
 
-## 버전 2.21.4 - 2024년 1월 10일
+## 버전 2.21.4 - 2024년 1월 10일 목요일
 
 **수정 사항 및 개선 사항**
 
@@ -80,7 +88,7 @@ Adobe Experience Platform Web SDK 버전 2.19.2를 포함합니다.
 
 Adobe Experience Platform Web SDK 버전 2.19.2를 포함합니다.
 
-## 버전 2.21.3 - 2023년 11월 10일
+## 버전 2.21.3 - 2023년 11월 10일 토요일
 
 Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
@@ -88,7 +96,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
 - `Send event complete` 이벤트에서 사용할 수 있는 제안 배열이 항상 비어 있는 문제가 해결되었습니다.
 
-## 버전 2.21.2 - 2023년 11월 1일
+## 버전 2.21.2 - 2023년 11월 1일 목요일
 
 **새로운 기능**
 
@@ -114,7 +122,7 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 
 - 저장된 데이터 스트림 재정의 설정의 유효성 검사를 개선했습니다.
 
-## 버전 2.20.0 - 2023년 7월 31일
+## 버전 2.20.0 - 2023년 7월 31일 화요일
 
 **새로운 기능**
 
@@ -125,11 +133,11 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 - SDK 구성에서 `datastreamId`을(를) 위해 더 이상 사용되지 않는 `edgeConfigId`입니다.
 - 데이터 스트림 구성에 대한 여러 사용자 경험 개선 사항이 사용자 인터페이스를 무시합니다.
 
-## 버전 2.19.0 - 2023년 6월 21일
+## 버전 2.19.0 - 2023년 6월 21일 목요일
 
 - 이제 **[!UICONTROL 변수]** 데이터 요소와 **[!UICONTROL 변수 업데이트]** 작업을 일반적으로 사용할 수 있습니다.
 
-## 버전 2.18.0 - 2023년 5월 18일
+## 버전 2.18.0 - 2023년 5월 18일 금요일
 
 - Adobe Experience Platform Web SDK 버전 2.17.0을 포함합니다.
 
@@ -162,14 +170,14 @@ Adobe Experience Platform Web SDK 버전 2.19.1을 포함합니다.
 - 스키마가 하나만 있을 때 XDM 개체 데이터 요소가 작동하지 않는 문제를 수정했습니다.
 - Adobe Experience Platform Web SDK 버전 2.15.0을 포함합니다.
 
-## 버전 2.15.1 - 2023년 1월 26일
+## 버전 2.15.1 - 2023년 1월 26일 금요일
 
 - 데이터스트림에 액세스할 수 없는 사용자가 확장 구성을 편집할 수 없는 문제를 해결했습니다.
 - `sendEvent` 작업에서 표면에 대한 지원을 추가했습니다.
 
 Adobe Experience Platform Web SDK 버전 2.14.0을 포함합니다.
 
-## 버전 2.14.1 - 2022년 10월 13일
+## 버전 2.14.1 - 2022년 10월 13일 금요일
 
 - 웹 SDK가 Experience Cloud ID 서비스의 ID를 준수하지 않는 문제가 해결되었습니다.
 
@@ -183,13 +191,13 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.13.1을 포함합�
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.13.0을 포함합니다.
 
-## 버전 2.13.0 - 2022년 6월 29일
+## 버전 2.13.0 - 2022년 6월 29일 목요일
 
 - XDM 개체 데이터 요소에서 eVar와 같은 숫자 속성의 정렬 순서를 수정했습니다.
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.12.0을 포함합니다.
 
-## 버전 2.12.0 - 2022년 6월 13일
+## 버전 2.12.0 - 2022년 6월 13일 화요일
 
 - 확장 설정에 정의된 샌드박스를 기반으로 네임스페이스 옵션을 채우도록 `identityMap` 데이터 요소를 업데이트했습니다.
 - 도메인 간 ID 공유를 허용하기 위해 **[!UICONTROL ID로 리디렉션]** 작업이 추가되었습니다.
@@ -199,7 +207,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.12.0을 포함합�
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.11.0을 포함합니다.
 
-## 버전 2.11.2 - 2022년 5월 3일
+## 버전 2.11.2 - 2022년 5월 3일 수요일
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.10.1을 포함합니다.
 
@@ -222,11 +230,11 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.10.0을 포함합�
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.9.0을 포함합니다.
 
-## 버전 2.9.0 - 2022년 1월 19일
+## 버전 2.9.0 - 2022년 1월 19일 목요일
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.8.0을 포함합니다.
 
-## 버전 2.8.0 - 2021년 10월 26일
+## 버전 2.8.0 - 2021년 10월 26일 수요일
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.7.0을 포함합니다.
 
@@ -254,7 +262,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.2를 포함합�
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.1을 포함합니다.
 
-## 버전 2.6.0 - 2021년 7월 27일
+## 버전 2.6.0 - 2021년 7월 27일 수요일
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.0을 포함합니다.
 
@@ -265,7 +273,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.0을 포함합�
 - 수신된 결정 이벤트 유형은 더 이상 사용되지 않습니다. 대신 이벤트 전송 완료 이벤트 유형을 사용하십시오.
 - 사용자 인터페이스 및 오류 처리가 전반적으로 개선되었습니다.
 
-## 버전 2.5.0 - 2021년 6월 1일
+## 버전 2.5.0 - 2021년 6월 1일 수요일
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.5.0을 포함합니다.
 
@@ -284,7 +292,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.4.0을 포함합�
 - 사용자의 액세스 토큰이 잘못되었거나 잘못 제공된 경우 XDM 개체 데이터 요소 UI에 더 나은 오류가 표시됩니다.
 - XDM 개체 데이터 요소를 볼 때 브라우저 개발자 콘솔에 표시되는 교차 원본 오류(확장 작업에 영향을 주지 않음)가 수정되었습니다.
 
-## 버전 2.3.0 - 2020년 11월 4일
+## 버전 2.3.0 - 2020년 11월 4일 목요일
 
 Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합니다.
 
@@ -292,7 +300,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 - XDM 개체 데이터 요소 유형으로 XDM 스키마를 검색하는 기능이 추가되었습니다.
 - XDM 데이터 개체의 후속 변경 내용이 요청에 반영되지 않도록 이벤트 보내기 작업 유형 내에 XDM 데이터 복제가 추가되었습니다.
 
-## 버전 2.2.0 - 2020년 10월 1일
+## 버전 2.2.0 - 2020년 10월 1일 금요일
 
 - 고객이 샌드박스 스키마에서 XDM 개체를 만들려고 했을 때 인증 문제가 발생했습니다. Platform을 호출하는 API는 이제 환경을 인식하므로 사용자가 편집할 수 있는 액세스 권한이 있는 스키마만 표시됩니다.
 - `identityMap` 데이터 요소를 사용할 때 이제 네임스페이스가 드롭다운에 미리 채워지므로 수동으로 채우지 않아도 됩니다.
@@ -312,11 +320,11 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 - `setConsent` 작업에서 ID 맵 전달을 지원합니다.
 - XDM 개체 데이터 요소에서 Platform 샌드박스 선택을 지원합니다.
 
-## 버전 1.0.0 - 2020년 5월 26일
+## 버전 1.0.0 - 2020년 5월 26일 수요일
 
 - 구성 서비스에서 환경 선택을 지원합니다.
 
-## 버전 0.1.2 - 2020년 5월 4일
+## 버전 0.1.2 - 2020년 5월 4일 화요일
 
 - `configId`가 `edgeConfigId`로 이름이 변경되었습니다.
 - `viewStart`가 `renderDecisions`로 이름이 변경된 경우 기본적으로 false로 설정됩니다. true로 설정하면 개인화 오퍼를 가져와서 자동으로 렌더링됩니다.
@@ -347,17 +355,17 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
 - 잘못된 명령을 실행하면 콘솔에 유효한 명령 이름 목록이 기록됨
 - 타사 쿠키 지원을 태그 확장으로 전환하는 확인란이 추가되었습니다. 이 확인란을 선택하면 demdex.net 호출이 비활성화됨
 
-## 버전 0.0.5 - 2019년 12월 20일
+## 버전 0.0.5 - 2019년 12월 20일 토요일
 
 - 태그 확장에 Activity Tracker 구성 추가
 - 이벤트 명령에 EventType 및 EventMergeId 표시
 - 태그 확장에 onBeforeEventSend 구성 추가
 - 태그 확장에 edgeBasePath 구성 추가
 
-## 버전 0.0.3 - 2019년 11월 25일
+## 버전 0.0.3 - 2019년 11월 25일 화요일
 
 - 이벤트 보내기 작업의 새 병합 ID 및 유형 필드입니다. 병합 ID는 XDM 스키마에서 `xdm.eventMergeID`에 매핑되고 유형은 XDM 스키마에서 `xdm.eventType`에 매핑됩니다.
 
-## 버전 0.0.2 - 2019년 11월 18일
+## 버전 0.0.2 - 2019년 11월 18일 화요일
 
 - 초기 릴리스
