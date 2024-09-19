@@ -1,17 +1,17 @@
 ---
-title: Adobe Experience Platform 릴리스 노트 2024년 2월
+title: Adobe Experience Platform 릴리스 정보 2024년 2월
 description: Adobe Experience Platform의 2024년 2월 릴리스 정보.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
 source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1244'
-ht-degree: 21%
+ht-degree: 100%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 일자: 2024년 2월 21일 목요일**
+**릴리스 일자: 2024년 2월 21일**
 
 Experience Platform의 기존 기능 업데이트:
 
@@ -24,17 +24,17 @@ Experience Platform의 기존 기능 업데이트:
 
 ## 경고 {#alerts}
 
-Experience Platform을 사용하면 다양한 플랫폼 활동에 대한 이벤트 기반 경고를 구독할 수 있습니다. Platform 사용자 인터페이스의 [!UICONTROL 경고] 탭을 통해 다양한 경고 규칙을 구독할 수 있으며 UI 자체 내에서 또는 이메일 알림을 통해 경고 메시지를 수신하도록 선택할 수 있습니다.
+Experience Platform을 사용하면 다양한 플랫폼 활동에 대한 이벤트 기반 경고를 구독할 수 있습니다. 플랫폼 사용자 인터페이스의 [!UICONTROL 경고] 탭을 통해 다양한 경고 규칙을 구독할 수 있으며, UI 자체 또는 이메일 알림을 통해 알림 메시지를 받도록 선택할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 경고 내역 탭 | Experience Platform 관리자는 경고 구독자 관리 기능을 사용하여 Adobe 사용자 ID, 외부 이메일 주소 또는 이메일 그룹 목록에 경고를 할당할 수 있습니다. 기록 탭에 대한 자세한 내용은 [경고 UI 설명서](../../observability/alerts/ui.md)를 참조하십시오. |
+| 경고 내역 탭 | Experience Platform 관리자는 경고 구독자 관리 기능을 사용하여 Adobe 사용자 ID, 외부 이메일 주소 또는 이메일 그룹 목록에 경고를 할당할 수 있습니다. [경고 UI 설명서](../../observability/alerts/ui.md)에서 내역 탭에 대한 자세한 내용을 확인할 수 있습니다. |
 
 {style="table-layout:auto"}
 
-경고에 대한 자세한 내용은 [[!DNL Observability Insights] 개요](../../observability/home.md)를 참조하세요.
+경고에 대해 자세히 알아보려면 [[!DNL Observability Insights] 개요 ](../../observability/home.md)를 참조하십시오.
 
 ## 데이터 수집 {#data-collection}
 
@@ -44,7 +44,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 기능 | 설명 |
 | --- | --- |
-| [Web SDK에서 웹 인앱 메시지 지원](../../web-sdk/personalization/web-in-app-messaging.md) | 이제 Adobe Experience Platform Web SDK가 Adobe Journey Optimizer 캠페인에 대한 웹 인앱 메시지 구성을 지원합니다. |
+| [Web SDK에서 웹 인앱 메시지 지원](../../web-sdk/personalization/web-in-app-messaging.md) | 이제 Adobe Experience Platform Web SDK는 Adobe Journey Optimizer 캠페인을 위한 웹 인앱 메시지 구성을 지원합니다. |
 
 {style="table-layout:auto"}
 
@@ -66,15 +66,15 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 ## 대상 {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 대상** {#new-destinations}
 
 | 대상 | 설명 |
 | ----------- | ----------- |
-| [Gainsight PX 연결](../../destinations/catalog/analytics/gainsight-px.md) | Gainsight PX는 제품 팀이 사용자가 제품을 사용하는 방법을 이해하고 피드백을 수집하며 제품 연습과 같은 인앱 참여를 만들어 사용자 온보딩 및 제품 채택을 유도할 수 있는 제품 경험 플랫폼입니다. |
-| [Mailchimp 태그 연결](../../destinations/catalog/email-marketing/mailchimp-tags.md) | Mailchimp는 인기 있는 마케팅 자동화 플랫폼 및 이메일 마케팅 서비스입니다. Mailchimp 태그 커넥터를 사용하여 연락처를 구성, 레이블 지정 또는 분류할 수 있습니다. |
-| [SAP Commerce 연결](../../destinations/catalog/ecommerce/sap-commerce.md) | SAP Commerce은 B2B 및 B2C 기업을 위한 클라우드 기반의 전자 상거래 플랫폼 솔루션으로 SAP Customer Experience 포트폴리오의 일부로 제공됩니다. 이 대상을 사용하여 기존 Experience Platform 대상에서 SAP Commerce 내의 고객 세부 정보를 업데이트할 수 있습니다. |
+| [Gainsight PX 연결](../../destinations/catalog/analytics/gainsight-px.md) | Gainsight PX는 제품 팀이 사용자가 제품을 어떻게 사용하는지 파악하고, 피드백을 수집하며, 제품 안내와 같은 인앱 참여를 만들어 사용자 온보딩 및 제품 채택을 촉진할 수 있는 제품 경험 플랫폼입니다. |
+| [Mailchimp 태그 연결](../../destinations/catalog/email-marketing/mailchimp-tags.md) | Mailchimp는 널리 사용되는 마케팅 자동화 플랫폼이자 이메일 마케팅 서비스입니다. Mailchimp 태그 커넥터를 사용하여 연락처를 구조화, 라벨링 또는 분류할 수 있습니다. |
+| [SAP Commerce 연결](../../destinations/catalog/ecommerce/sap-commerce.md) | SAP Commerce는 B2B 및 B2C 기업을 위한 클라우드 기반 전자 상거래 플랫폼 솔루션으로, SAP 고객 경험 포트폴리오의 일부로 제공됩니다. 이 대상을 사용하여 기존 Experience Platform 대상자의 SAP Commerce 내 고객 세부 정보를 업데이트할 수 있습니다. |
 
 {style="table-layout:auto"}
 
@@ -82,12 +82,12 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| 일반적으로 사용할 수 있는 계정 대상자 활성화 | Real-time Customer Data Platform의 [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) 에디션을 구매하는 회사는 이제 특정 대상에 대해 계정 대상을 활성화하는 기능을 일반적으로 사용할 수 있습니다. 지원되는 대상을 포함한 전체 정보를 얻으려면 [계정 대상자 활성화](/help/destinations/ui/activate-account-audiences.md)에 대한 자습서를 읽어 보십시오. |
-| Google 대상에 대한 Digital Markets Act 동의 시행 도구 | Google은 유럽 연합([EU 사용자 동의 정책](https://www.google.com/about/company/user-consent-policy/))의 [디지털 시장법](https://digital-markets-act.ec.europa.eu/index_en)(DMA)에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [고객 일치](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) 및 [디스플레이 및 비디오 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)에 대한 변경 사항을 출시합니다. 이러한 동의 요건 변경의 시행은 2024년 3월 6일부터 시행될 예정이다. <br/><br/> EU 사용자 동의 정책을 준수하고 EEA(유럽 경제 지역)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너인 Adobe은 유럽 연합의 DMA에 따라 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.<br/><br/>Adobe Privacy &amp; Security Shield를 구매하고 동의 안 된 프로필을 필터링하도록 [동의 정책](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.<br/><br/>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../segmentation/ui/segment-builder.md) 내의 [세그먼트 정의](../../segmentation/home.md#segment-definitions) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다. |
-| [!BADGE Beta]{type=Informative} 일괄 처리 대상에 대한 매핑 필드 순서 바꾸기 | 이제 [매핑](../../destinations/ui/activate-batch-profile-destinations.md#mapping) 단계에서 매핑 필드를 끌어다 놓아 CSV 내보내기의 열 순서를 변경할 수 있습니다. UI에서 매핑된 필드의 순서는 내보낸 CSV 파일의 열 순서에 따라 위에서 아래로 반영되며, 맨 위 행은 CSV 파일의 가장 왼쪽 열입니다. <br/><br/> 이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
-| 배치 대상에 대해 [!BADGE Beta]{type=Informative} 미리 선택된 기본 내보내기 일정 | 이제 Experience Platform이 각 파일 내보내기에 대한 기본 일정을 자동으로 설정합니다. 기본 일정을 수정하는 방법을 알아보려면 [대상 내보내기 예약](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)에 대한 설명서를 참조하세요. <br/><br/> 이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
-| 일괄 처리 대상에 대한 [!BADGE Beta]{type=Informative} 대상자 활성화 일정 벌크 편집 | 이제 [활성화 데이터](../../destinations/ui/destination-details-page.md#bulk-edit-schedule) 페이지에서 여러 대상의 활성화 일정을 일괄적으로 편집할 수 있습니다. <br/><br/> 이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
-| [!BADGE Beta]{type=Informative} 일괄 내보내기 파일을 요청 시 일괄처리 대상으로 일괄 내보내기 | 이제 [요청 시 파일 내보내기](../../destinations/ui/export-file-now.md) 기능을 통해 대상을 일괄 배치 대상으로 내보낼 수 있습니다. <br/><br/> 이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오. |
+| 일반적으로 사용 가능한 계정 대상자 활성화 | 특정 대상에 대한 계정 대상자 활성화 기능은 이제 일반적으로 Real-Time CDP의 [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) 버전을 구매하는 기업에서 사용할 수 있습니다. [계정 대상자 활성화](/help/destinations/ui/activate-account-audiences.md)에 대한 튜토리얼을 읽고 지원 대상을 포함한 전체 정보를 확인하십시오. |
+| Google 대상을 위한 디지털 시장법 동의 시행 도구 | Google은 유럽연합에서 [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en)(DMA)에 정의된 규정 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [고객 일치 타겟팅](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), [디스플레이 및 비디오 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)에 대한 변경 사항을 출시합니다([EU 사용자 동의 정책](https://www.google.com/about/company/user-consent-policy/)). 이러한 동의 요구 사항 변경 사항은 2024년 3월 6일부터 시행될 예정입니다. <br/><br/> EU 사용자 동의 정책을 준수하고 유럽 경제 지역(EEA) 사용자를 위한 대상자 목록을 계속 생성하려면 광고주와 파트너가 대상자 데이터를 업로드할 때 최종 사용자 동의를 전달해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.<br/><br/>Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하는 [동의 정책](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을 구성한 고객은 별다른 조치를 취할 필요가 없습니다.<br/><br/>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용하려면 [세그먼트 빌더](../../segmentation/ui/segment-builder.md) 내에서 [세그먼트 정의](../../segmentation/home.md#segment-definitions) 기능을 사용하여 동의하지 않는 프로필을 필터링해야 합니다. |
+| [!BADGE Beta]{type=Informative} 배치 대상에 대한 매핑 필드 재정렬 | 이제 [매핑](../../destinations/ui/activate-batch-profile-destinations.md#mapping) 단계에서 매핑 필드를 드래그 앤 드롭하여 CSV 내보내기의 열의 순서를 변경할 수 있습니다. UI에서 매핑된 필드의 순서는 내보낸 CSV 파일의 열 순서를 위에서 아래로 반영하며, 맨 위 행은 CSV 파일에서 가장 왼쪽에 있는 열입니다. <br/><br/> 이 기능은 Beta 버전으로 일부 고객만 사용할 수 있습니다. 이 기능에 액세스하려면 Adobe 담당자에게 문의하십시오. |
+| [!BADGE Beta]{type=Informative} 배치 대상에 대해 미리 선택된 기본 내보내기 예약 | 이제 Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동으로 설정합니다. 기본 일정을 수정하는 방법은 [대상자 내보내기 예약](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)에 대한 설명서를 참조하십시오. <br/><br/> 이 기능은 Beta 버전으로 일부 고객만 사용할 수 있습니다. 이 기능에 액세스하려면 Adobe 담당자에게 문의하십시오. |
+| [!BADGE Beta]{type=Informative} 배치 대상에 대한 대상자 활성화 예약 일괄 편집 | 이제 [활성화 데이터](../../destinations/ui/destination-details-page.md#bulk-edit-schedule) 페이지에서 여러 대상자의 활성화 예약을 일괄로 편집할 수 있습니다. <br/><br/> 이 기능은 Beta 버전으로 일부 고객만 사용할 수 있습니다. 이 기능에 액세스하려면 Adobe 담당자에게 문의하십시오. |
+| [!BADGE Beta]{type=Informative} 배치 대상으로 온디맨드 파일 일괄 내보내기 | 이제 [온디맨드 파일 내보내기](../../destinations/ui/export-file-now.md) 기능을 통해 대상자를 배치 대상으로 일괄 내보낼 수 있습니다. <br/><br/> 이 기능은 Beta 버전으로 일부 고객만 사용할 수 있습니다. 이 기능에 액세스하려면 Adobe 담당자에게 문의하십시오. |
 
 {style="table-layout:auto"}
 
@@ -95,13 +95,13 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 ## 샌드박스 {#sandboxes}
 
-Adobe Experience Platform은 글로벌 규모로 디지털 경험 애플리케이션을 강화하기 위해 빌드되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하는 경우가 많으며, 운영 규정 준수를 보장하면서 이러한 애플리케이션의 개발, 테스트 및 구축 요건을 충족해야 합니다. 이러한 요구 사항을 해결하기 위해 Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 샌드박스를 제공합니다.
+Adobe Experience Platform은 전 세계적으로 디지털 체험 애플리케이션을 풍부하게 제공하기 위해 구축되었습니다. 기업은 여러 디지털 경험 애플리케이션을 동시에 실행하는 경우가 많으며, 운영 규정 준수를 보장하면서 이러한 애플리케이션의 개발, 테스트 및 배포를 처리해야 합니다. 이러한 필요를 처리하기 위해 Experience Platform은 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하는 샌드박스를 제공합니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
 | 기능 | 설명 |
 | --- | --- |
-| 샌드박스 도구 | 이제 동의 및 거버넌스 규칙에 대한 오브젝트 유형을 지원하는 것 외에도 샌드박스 도구를 사용하여 통합 프로필이 활성화되지 않은 스키마를 가져오고, 세그먼트를 가져올 때 타겟 샌드박스에서 누락된 속성이 있는지 확인하고, 기본적으로 기존 병합 정책을 사용합니다. 이러한 기능에 대한 자세한 내용은 [샌드박스 도구 UI 안내서](../../sandboxes/ui/sandbox-tooling.md)를 참조하십시오. |
+| 샌드박스 도구 | 이제 동의 및 거버넌스 규칙을 위해 오브젝트 유형을 지원하는 것 외에도 샌드박스 도구를 사용하여 통합 프로필이 활성화되지 않은 상태에서 스키마를 가져오고, 세그먼트를 가져올 때 대상 샌드박스에서 누락된 속성이 있는지 확인한 다음 기존 병합 정책을 사용하도록 기본 설정할 수 있습니다. 이들 기능에 대한 자세한 내용은 [샌드박스 도구 UI 안내서](../../sandboxes/ui/sandbox-tooling.md)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -115,7 +115,7 @@ Adobe Experience Platform은 글로벌 규모로 디지털 경험 애플리케�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 계정 대상자 | 이제 계정 대상을 일반적으로 사용할 수 있습니다! 이제 계정 세분화를 사용하여 Real-Time Customer Platform의 B2B 및 B2P 에디션 모두에서 사람 기반 대상자에서 계정 기반 대상자로 마케팅 세분화 환경을 완전히 쉽고 정교하게 만들 수 있습니다. 이 릴리스에서는 사용자 기반 대상을 계정 기반 대상의 술어로 사용하고, 검색 기능을 추가하고, 사용자 지정 엔티티의 사용을 지원하고, 데이터 거버넌스를 준수할 수 있습니다. 이 기능에 대한 자세한 내용은 [계정 대상 개요](../../segmentation/ui/account-audiences.md)를 참조하십시오. |
+| 계정 대상자 | 이제 계정 대상자를 일반적으로 사용할 수 있습니다! 이제 계정 세분화를 사용하여 B2B 및 B2P 버전의 Real-Time Customer Platform에서 사람 기반 대상자부터 계정 기반 대상자까지 마케팅 세분화 경험의 편리함과 정교함을 완벽히 구현할 수 있습니다. 이 릴리스를 통해 사람 기반 대상자를 계정 기반 대상자에 대한 예측 기준으로 사용할 수 있고, 검색 기능을 추가하고, 사용자 정의 엔티티의 사용을 지원하며, 데이터 거버넌스를 준수할 수 있습니다. 이 기능에 대한 자세한 내용은 [계정 대상자 개요](../../segmentation/ui/account-audiences.md)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -127,7 +127,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Acxiom] 소스 | [[!DNL Acxiom Prospecting Data Import] source](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)을(를) 사용하여 [!DNL Acxiom] Prospect Service에서 데이터를 검색하고 Experience Platform에 매핑합니다. |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom] 소스 | [[!DNL Acxiom Prospecting Data Import] 소스](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)를 사용하여 [!DNL Acxiom] 잠재 고객 서비스에서 데이터를 검색하고 Experience Platform에 매핑합니다. |
 
 {style="table-layout:auto"}
 
