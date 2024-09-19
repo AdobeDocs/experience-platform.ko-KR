@@ -2,9 +2,9 @@
 title: 웹 SDK의 ID 데이터
 description: Adobe Experience Platform Web SDK를 사용하여 Adobe Experience Cloud ID(ECID)를 검색하고 관리하는 방법에 대해 알아봅니다.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 3b0fa672c4befd8e17632e62b0eeb13b6b17bfb4
+source-git-commit: c99831cf2bb1b862d65851701b38c6d3dfe99000
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK는 [ECID(Adobe Experience Cloud ID)](../../identity-service/features/ecid.md)를 사용하여 방문자 행동을 추적합니다. [!DNL ECIDs]을(를) 사용하면 각 디바이스에 여러 세션에서 지속될 수 있는 고유 식별자가 있는지 확인하여 웹 세션 중 및 여러 세션에서 발생하는 모든 히트를 특정 디바이스에 연결할 수 있습니다.
 
-이 문서에서는 웹 SDK를 사용하여 [!DNL ECIDs]을(를) 관리하는 방법에 대한 개요를 제공합니다.
+이 문서에서는 웹 SDK를 사용하여 [!DNL ECIDs] 및 [!DNL CORE IDs]을(를) 관리하는 방법에 대한 개요를 제공합니다.
 
-## Web SDK를 사용하여 ECID 추적 {#tracking-ecids-we-sdk}
+## Web SDK를 사용하여 ECID 추적 {#tracking-ecids-web-sdk}
 
 Web SDK는 쿠키를 사용하여 [!DNL ECIDs]을(를) 할당하고 추적하며, 이러한 쿠키가 생성되는 방식을 구성하는 데 사용 가능한 여러 메서드를 사용합니다.
 
@@ -33,6 +33,12 @@ Web SDK는 쿠키를 사용하여 [!DNL ECIDs]을(를) 할당하고 추적하며
 1. 데이터를 Edge Network 도메인 `adobedc.net`(으)로 직접 보냅니다. 이 메서드를 [타사 데이터 수집](#third-party)이라고 합니다.
 
 아래 섹션에 설명된 대로 사용하도록 선택하는 데이터 수집 방법은 전체 브라우저에서 쿠키 수명에 직접적인 영향을 줍니다.
+
+## Web SDK를 사용한 코어 ID 추적 {#tracking-coreid-web-sdk}
+
+서드파티 쿠키가 활성화된 Google Chrome을 사용할 때 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Edge Network이 설정되어 있지 않으면 첫 번째 쿠키 요청은 demdex 쿠키를 설정하는 `demdex.net` 도메인을 거칩니다. 이 쿠키에는 [!DNL CORE ID]이(가) 포함되어 있습니다. [!DNL ECID]과(와) 다른 고유한 사용자 ID입니다.
+
+구현에 따라 [액세스 [!DNL CORE ID]](#retrieve-coreid)할 수 있습니다.
 
 ### 자사 데이터 수집 {#first-party}
 
@@ -84,7 +90,6 @@ xdm.identityMap.ECID[0].id
 
 ### `getIdentity()` 명령을 통해 [!DNL ECID] 검색 {#retrieve-ecid-getidentity}
 
-
 >[!IMPORTANT]
 >
 >클라이언트측에서 [!DNL ECID]이(가) 필요한 경우에만 `getIdentity()` 명령을 통해 ECID를 검색해야 합니다. ECID를 XDM 필드에만 매핑하려면 대신 [데이터 수집을 위한 데이터 준비](#retrieve-ecid-data-prep)를 사용하십시오.
@@ -107,6 +112,17 @@ alloy("getIdentity")
     // "error" will be an error object with additional information.
   });
 ```
+
+## 현재 사용자의 코어 ID 검색 {#retrieve-coreid}
+
+사용자에 대한 CORE ID를 검색하려면 아래와 같이 [`getIdentity()`](../commands/getidentity.md) 명령을 사용할 수 있습니다.
+
+```js
+alloy("getIdentity",{
+  "namespaces": ["CORE"]
+});
+```
+
 
 ## `identityMap` 사용 중 {#using-identitymap}
 
