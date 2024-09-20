@@ -3,10 +3,10 @@ title: 흐름 서비스 API를 사용하여 Google BigQuery 기본 연결 만들
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Google BigQuery에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 1fa79b31b5a257ebb3cbd60246b757d8a4a63d7c
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 1%
+source-wordcount: '523'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Google BigQuery]에 대한 기본 연결을 만드는 단계를 안내합니다.
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Google BigQuery]에 대한 기본 연결을 만드는 방법에 대해 알아보려면 이 안내서를 읽어 보십시오.
 
 ## 시작하기
 
@@ -31,18 +31,7 @@ ht-degree: 1%
 
 ### 필요한 자격 증명 수집
 
-[!DNL Flow Service]이(가) [!DNL Google BigQuery]을(를) 플랫폼에 연결하려면 다음 OAuth 2.0 인증 값을 제공해야 합니다.
-
-| 자격 증명 | 설명 |
-| ---------- | ----------- |
-| `project` | 쿼리할 기본 [!DNL Google BigQuery] 프로젝트의 프로젝트 ID. |
-| `clientID` | 새로 고침 토큰을 생성하는 데 사용되는 ID 값입니다. |
-| `clientSecret` | 새로 고침 토큰을 생성하는 데 사용되는 비밀 값. |
-| `refreshToken` | [!DNL Google BigQuery]에 대한 액세스를 승인하는 데 사용되는 [!DNL Google]에서 얻은 새로 고침 토큰입니다. |
-| `largeResultsDataSetId` | 대용량 결과 집합을 지원하는 데 필요한 미리 만들어진 [!DNL Google BigQuery] 데이터 집합 ID입니다. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL Google BigQuery]의 연결 사양 ID는 `3c9b37f8-13a6-43d8-bad3-b863b941fedd`입니다. |
-
-이러한 값에 대한 자세한 내용은 이 [[!DNL Google BigQuery] 문서](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing)를 참조하세요.
+필요한 자격 증명을 수집하는 자세한 단계는 [[!DNL Google BigQuery] 인증 안내서](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials)를 참조하십시오.
 
 ### Platform API 사용
 
@@ -60,9 +49,13 @@ Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용�
 POST /connections
 ```
 
+>[!BEGINTABS]
+
+>[!TAB 기본 인증 사용]
+
 **요청**
 
-다음 요청은 [!DNL Google BigQuery]에 대한 기본 연결을 만듭니다.
+다음 요청은 기본 인증을 사용하여 [!DNL Google BigQuery]에 대한 기본 연결을 만듭니다.
 
 ```shell
 curl -X POST \
@@ -73,8 +66,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Google BigQuery connection",
-        "description": "Google BigQuery connection",
+        "name": "Google BigQuery connection with basic authentication",
+        "description": "Google BigQuery connection with basic authentication",
         "auth": {
             "specName": "Basic Authentication",
             "type": "OAuth2.0",
@@ -110,6 +103,59 @@ curl -X POST \
     "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
 }
 ```
+
+>[!TAB 서비스 인증 사용]
+
+
+**요청**
+
+다음 요청은 서비스 인증을 사용하여 [!DNL Google BigQuery]에 대한 기본 연결을 만듭니다.
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Google BigQuery base connection with service account",
+        "description": "Google BigQuery connection with service account",
+        "auth": {
+            "specName": "Service Authentication",
+            "params": {
+                    "projectId": "{PROJECT_ID}",
+                    "keyFileContent": "{KEY_FILE_CONTENT},
+                    "largeResultsDataSetId": "{LARGE_RESULTS_DATASET_ID}"
+                }
+        },
+        "connectionSpec": {
+            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+            "version": "1.0"
+        }
+    }'
+```
+
+| 속성 | 설명 |
+| --------- | ----------- |
+| `auth.params.projectId` | 쿼리할 기본 [!DNL Google BigQuery] 프로젝트의 프로젝트 ID. 에 대해. |
+| `auth.params.keyFileContent` | 서비스 계정을 인증하는 데 사용되는 키 파일입니다. [!DNL Base64]에서 키 파일 콘텐츠를 인코딩해야 합니다. |
+| `auth.params.largeResultsDataSetId` | (선택 사항) 큰 결과 집합에 대한 지원을 사용하도록 설정하는 데 필요한 미리 만들어진 [!DNL Google BigQuery] 데이터 집합 ID입니다. |
+
+**응답**
+
+응답이 성공하면 고유 식별자(`id`)를 포함하여 새로 만든 연결의 세부 정보가 반환됩니다. 이 ID는 다음 자습서에서 데이터를 탐색하는 데 필요합니다.
+
+```json
+{
+    "id": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
+}
+```
+
+>[!ENDTABS]
+
 
 ## 다음 단계
 

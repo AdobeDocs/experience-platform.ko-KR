@@ -3,20 +3,20 @@ title: UI에서 Google Big Query Source 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Google Big Query 소스 연결을 만드는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 55aaaa39659566de81bb161d704b6f8212e29a8b
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 2%
+source-wordcount: '526'
+ht-degree: 1%
 
 ---
 
-# UI에서 [!DNL Google Big Query] 소스 연결 만들기
+# UI에서 [!DNL Google BigQuery] 소스 연결 만들기
 
 >[!IMPORTANT]
 >
 >[!DNL Google BigQuery] 원본은 Real-time Customer Data Platform Ultimate를 구입한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
 
-Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 Platform 사용자 인터페이스를 사용하여 [!DNL Google Big Query] 소스 연결을 만드는 단계를 제공합니다.
+사용자 인터페이스를 사용하여 [!DNL Google BigQuery] 계정을 Adobe Experience Platform에 연결하는 방법에 대해 알아보려면 이 자습서를 참조하십시오.
 
 ## 시작하기
 
@@ -31,26 +31,19 @@ Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 
 
 ### 필요한 자격 증명 수집
 
-플랫폼에서 [!DNL Google BigQuery] 계정에 액세스하려면 다음 OAuth 2.0 인증 값을 제공해야 합니다.
-
-| 자격 증명 | 설명 |
-| ---------- | ----------- |
-| `project` | 쿼리할 기본 [!DNL Google BigQuery] 프로젝트의 프로젝트 ID. |
-| `clientID` | 새로 고침 토큰을 생성하는 데 사용되는 ID 값입니다. |
-| `clientSecret` | 새로 고침 토큰을 생성하는 데 사용되는 비밀 값. |
-| `refreshToken` | [!DNL Google BigQuery]에 대한 액세스를 승인하는 데 사용되는 [!DNL Google]에서 얻은 새로 고침 토큰입니다. |
-
-이러한 값에 대한 자세한 내용은 [이 [!DNL Google BigQuery] 문서](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing)를 참조하세요.
+필요한 자격 증명을 수집하는 자세한 단계는 [[!DNL Google BigQuery] 인증 안내서](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials)를 참조하십시오.
 
 ## Google BigQuery 계정 연결
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
-
-화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 창을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
+Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다. 화면 왼쪽에 있는 카탈로그에서 적절한 카테고리를 선택할 수 있습니다. 또는 검색 창을 사용하여 작업할 특정 소스를 찾을 수 있습니다.
 
 [!UICONTROL 데이터베이스] 범주에서 **[!UICONTROL Google BigQuery]**&#x200B;을 선택한 다음 **[!UICONTROL 데이터 추가]**&#x200B;를 선택합니다.
 
-![](../../../../images/tutorials/create/google-big-query/catalog.png)
+>[!TIP]
+>
+>지정된 소스에 아직 인증된 계정이 없는 경우 소스 카탈로그의 소스에 **[!UICONTROL 설정]** 옵션이 표시됩니다. 인증된 계정이 있으면 이 옵션이 **[!UICONTROL 데이터 추가]**(으)로 변경됩니다.
+
+![Google BigQuery가 있는 소스 카탈로그를 선택했습니다.](../../../../images/tutorials/create/google-big-query/catalog.png)
 
 **[!UICONTROL Google Big Query에 연결]** 페이지가 나타납니다. 이 페이지에서 새 자격 증명 또는 기존 자격 증명을 사용할 수 있습니다.
 
@@ -58,13 +51,29 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 
 기존 계정에 연결하려면 연결할 [!DNL Google BigQuery] 계정을 선택한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 계속하십시오.
 
-![](../../../../images/tutorials/create/google-big-query/existing.png)
+![기존 계정 목록이 표시되는 기존 계정 페이지입니다.](../../../../images/tutorials/create/google-big-query/existing.png)
 
 ### 새 계정
 
-새 자격 증명을 사용하는 경우 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택하십시오. 표시되는 입력 양식에서 이름, 선택적 설명 및 [!DNL Google BigQuery] 자격 증명을 제공합니다. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택한 다음 새 연결을 설정할 수 있는 시간을 허용하세요.
+새 계정을 만드는 경우 **[!UICONTROL 새 계정]**&#x200B;을(를) 선택한 다음 새 [!DNL Google BigQuery] 계정에 대한 이름과 선택적 설명을 입력하십시오.
 
-![](../../../../images/tutorials/create/google-big-query/new.png)
+![원본 워크플로의 새 계정 인터페이스입니다.](../../../../images/tutorials/create/google-big-query/new.png)
+
+>[!BEGINTABS]
+
+>[!TAB 기본 인증 사용]
+
+기본 인증을 사용하려면 **[!UICONTROL 기본 인증]**&#x200B;을 선택하고 [프로젝트, 클라이언트 ID, 클라이언트 암호, 새로 고침 토큰 및 (선택 사항) 대용량 결과 데이터 세트 ID](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials)에 대한 값을 제공하십시오. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하고 연결을 설정할 수 있도록 잠시 기다립니다.
+
+![기본 인증을 선택하는 새 계정 인터페이스입니다.](../../../../images/tutorials/create/google-big-query/basic_auth.png)
+
+>[!TAB 서비스 인증 사용]
+
+서비스 인증을 사용하려면 **[!UICONTROL 서비스 인증]**&#x200B;을 선택하고 [프로젝트 ID, 키 파일 콘텐츠 및 (선택 사항) 대용량 결과 데이터 세트 ID](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials)에 대한 값을 제공하십시오. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하고 연결을 설정할 수 있도록 잠시 기다립니다.
+
+![서비스 인증을 선택하는 새 계정 인터페이스입니다.](../../../../images/tutorials/create/google-big-query/service_auth.png)
+
+>[!ENDTABS]
 
 ## 다음 단계
 
