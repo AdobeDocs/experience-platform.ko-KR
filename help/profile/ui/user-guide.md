@@ -3,9 +3,9 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 실시간 고객 프로필 UI 안내서
 description: 실시간 고객 프로파일은 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 다양한 채널의 데이터를 취합하여 각 개별 고객을 전체적으로 파악할 수 있도록 합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하기 위한 안내서 역할을 합니다.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
+source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
 workflow-type: tm+mt
-source-wordcount: '2155'
+source-wordcount: '2212'
 ht-degree: 0%
 
 ---
@@ -127,6 +127,11 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 프로필]**&#x200B;
 ![ID 값과 일치하는 프로필이 강조 표시됩니다.](../images/user-guide/filtered-identity-value.png)
 
 ## 프로필 세부 정보 보기 {#profile-detail}
+
+>[!CONTEXTUALHELP]
+>id="platform_errors_uplib_201001_404"
+>title="엔티티를 찾을 수 없음"
+>abstract="즉, Platform이 요청한 엔티티를 찾을 수 없습니다. 이 오류를 해결하려면 다음 솔루션 중 하나를 시도해 보십시오.<ul><li>액세스하려는 엔티티의 URL에 올바른 프로필 ID가 나열되어 있는지 확인합니다.</li><li>액세스하려는 엔티티에 대한 올바른 조직 및 샌드박스 조합이 있는지 확인합니다.</li></ul>"
 
 **[!UICONTROL 프로필 ID]**&#x200B;을(를) 선택하면 **[!UICONTROL 세부 정보]** 탭이 열립니다. **[!UICONTROL 세부 정보]** 탭에 표시되는 프로필 정보가 여러 프로필 조각에서 병합되어 개별 고객에 대한 단일 보기로 형성되었습니다. 여기에는 기본 속성, 연결된 ID 및 채널 환경 설정 등 고객 세부 정보가 포함됩니다.
 
