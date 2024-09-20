@@ -4,10 +4,10 @@ title: 실시간 고객 프로필 API 안내서
 description: 실시간 고객 프로필 API를 통해 개발자는 프로필 보기, 병합 정책 만들기 및 업데이트, 프로필 데이터 내보내기 또는 샘플, 더 이상 필요하지 않거나 오류로 추가된 프로필 데이터 삭제 등을 포함하여 프로필 데이터를 탐색하고 작업할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: cb276c55c010aa7ccc936947ad87bf74239d6e99
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 1%
+source-wordcount: '860'
+ht-degree: 2%
 
 ---
 
@@ -21,11 +21,7 @@ ht-degree: 1%
 
 [!DNL Experience Platform] UI에서 [!DNL Real-Time Customer Profile] 데이터를 사용하는 방법에 대한 지침은 [프로필 사용 안내서](../ui/user-guide.md)를 참조하세요.
 
-## [!BADGE Beta]{type=Informative} 계산된 특성 {#computed-attributes}
-
->[!IMPORTANT]
->
-계산된 속성 기능은 Beta 버전이며 모든 사용자가 사용할 수 없습니다. 설명서 및 기능은 변경될 수 있습니다.
+## 계산된 속성 {#computed-attributes}
 
 계산된 속성은 이벤트 수준 데이터를 프로필 수준 속성으로 집계하는 데 사용되는 함수입니다. 이러한 함수는 세그먼테이션, 활성화 및 개인화에서 사용할 수 있도록 자동으로 계산됩니다.
 
