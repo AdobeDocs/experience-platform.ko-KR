@@ -1,11 +1,11 @@
 ---
-title: Experience Platform 사용자 인터페이스를 사용하여 Salesforce 계정을 연결합니다.
+title: Experience Platform 사용자 인터페이스를 사용하여 Salesforce 계정 연결
 description: 사용자 인터페이스를 사용하여 Salesforce 계정을 연결하고 CRM 데이터를 Experience Platform 상태로 만드는 방법을 알아봅니다.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 3%
+source-wordcount: '935'
+ht-degree: 2%
 
 ---
 
@@ -118,6 +118,12 @@ OAuth2 클라이언트 자격 증명의 경우 **[!UICONTROL OAuth2 클라이언
 ![Salesforce 계정 생성을 위한 OAuth 인터페이스입니다.](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
+
+### 샘플 데이터의 미리 보기 건너뛰기 {#skip-preview-of-sample-data}
+
+데이터 선택 단계에서 큰 테이블 또는 데이터 파일을 수집할 때 시간 초과가 발생할 수 있습니다. 샘플 데이터가 없어도 데이터 미리 보기를 건너뛰어 시간 초과를 우회하고 스키마를 볼 수 있습니다. 데이터 미리 보기를 건너뛰려면 **[!UICONTROL 샘플 데이터 미리 보기 건너뛰기]** 전환을 사용하도록 설정하십시오.
+
+워크플로우의 나머지 부분은 그대로 유지됩니다. 유일한 주의 사항은 데이터 미리보기를 건너뛰면 매핑 단계에서 계산된 필드 및 필수 필드의 자동 유효성 검사를 방지할 수 있으므로 매핑 중에 이러한 필드의 유효성을 수동으로 검사해야 한다는 것입니다.
 
 ## 다음 단계
 

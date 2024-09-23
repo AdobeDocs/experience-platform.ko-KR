@@ -3,9 +3,9 @@ title: UI에서 Google Big Query Source 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Google Big Query 소스 연결을 만드는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: 55aaaa39659566de81bb161d704b6f8212e29a8b
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '620'
 ht-degree: 1%
 
 ---
@@ -74,6 +74,12 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 ![서비스 인증을 선택하는 새 계정 인터페이스입니다.](../../../../images/tutorials/create/google-big-query/service_auth.png)
 
 >[!ENDTABS]
+
+### 샘플 데이터의 미리 보기 건너뛰기 {#skip-preview-of-sample-data}
+
+데이터 선택 단계에서 큰 테이블 또는 데이터 파일을 수집할 때 시간 초과가 발생할 수 있습니다. 샘플 데이터가 없어도 데이터 미리 보기를 건너뛰어 시간 초과를 우회하고 스키마를 볼 수 있습니다. 데이터 미리 보기를 건너뛰려면 **[!UICONTROL 샘플 데이터 미리 보기 건너뛰기]** 전환을 사용하도록 설정하십시오.
+
+워크플로우의 나머지 부분은 그대로 유지됩니다. 유일한 주의 사항은 데이터 미리보기를 건너뛰면 매핑 단계에서 계산된 필드 및 필수 필드의 자동 유효성 검사를 방지할 수 있으므로 매핑 중에 이러한 필드의 유효성을 수동으로 검사해야 한다는 것입니다.
 
 ## 다음 단계
 
