@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스에 Power BI 연결
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스와 Power BI을 연결하는 단계를 안내합니다.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
+source-git-commit: 2b76b99d1e22d75faf8d758edd6cf08acdec7c21
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -24,16 +24,6 @@ ht-degree: 0%
 > [!DNL Power BI] 데스크톱 응용 프로그램은 Windows 장치에서 **전용**&#x200B;입니다.
 
 [!DNL Power BI]을(를) Experience Platform에 연결하는 데 필요한 자격 증명을 획득하려면 Platform UI에서 쿼리 작업 영역에 액세스할 수 있어야 합니다. 현재 쿼리 작업 영역에 대한 액세스 권한이 없는 경우 조직 관리자에게 문의하십시오.
-
-[!DNL Power BI]을(를) 설치한 후 PostgreSQL용 .NET 드라이버 패키지인 `Npgsql`을(를) 설치해야 합니다. Npgsql에 대한 자세한 내용은 [Npgsql 설명서](https://www.npgsql.org/doc/index.html)를 참조하십시오.
-
->[!IMPORTANT]
->
->새 버전의 경우 오류가 발생하므로 v4.0.10 이하를 다운로드해야 합니다.
-
-사용자 지정 설치 화면의 &quot;[!DNL Npgsql GAC Installation]&quot;에서 **[!DNL Will be installed on local hard drive]**&#x200B;을(를) 선택합니다.
-
-Npgsql이 제대로 설치되었는지 확인하려면 다음 단계를 진행하기 전에 컴퓨터를 다시 시작하십시오.
 
 ## 쿼리 서비스에 [!DNL Power BI] 연결 {#connect-power-bi}
 
