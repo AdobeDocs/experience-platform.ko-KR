@@ -2,10 +2,10 @@
 title: 감사 로그 개요
 description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어떤 작업을 수행했는지 확인하는 방법에 대해 알아봅니다.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7ae5e9dc79b4e1f08d2bf98876b02db1967ccbe1
 workflow-type: tm+mt
-source-wordcount: '1291'
-ht-degree: 36%
+source-wordcount: '1350'
+ht-degree: 35%
 
 ---
 
@@ -133,6 +133,22 @@ UI의 감사 이벤트에 사용할 수 있는 필터는 다음과 같습니다.
 표시되는 대화 상자에서 원하는 형식(**[!UICONTROL CSV]** 또는 **[!UICONTROL JSON]**)을 선택한 다음 **[!UICONTROL 다운로드]**&#x200B;를 선택합니다. 브라우저가 생성된 파일을 다운로드하여 시스템에 저장합니다.
 
 ![강조 표시된 [!UICONTROL 다운로드]의 파일 형식 선택 대화 상자.](../../images/audit-logs/select-download-format.png)
+
+## 경고 활성화 {#enable-alerts}
+
+감사 경고를 활성화하여 다음 규칙에 대한 알림을 받을 수 있습니다.
+
+* 대상자 만들기
+* 대상자 업데이트
+* 대상 삭제
+* 데이터 세트 만들기
+* 데이터 세트 업데이트
+* 데이터 세트 삭제
+* 스키마 만들기
+* 스키마 업데이트
+* 스키마 삭제
+
+목록에서 원하는 경고를 선택하여 알림을 수신합니다. 경고에 대한 자세한 내용은 [UI를 사용하여 경고 구독](../../../observability/alerts/ui.md)에 대한 안내서를 참조하십시오.
 
 ## API에서 감사 로그 관리
 
