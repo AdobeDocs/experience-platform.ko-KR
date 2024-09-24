@@ -4,9 +4,9 @@ title: 라이선스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b1de61b2e7d0dedf2da8ef8ffb02fe5c15e82fb2
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '2702'
 ht-degree: 13%
 
 ---
@@ -205,7 +205,6 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 | [!UICONTROL Audience Activation 크기] | 1년 동안 파일 기반 대상에 활성화된 프로필의 총 크기입니다. 참고: 여기에는 스트리밍 대상을 통해 전송된 프로필이 포함되지 않습니다. |
 | [!UICONTROL 대응 가능 대상] | 비즈니스 대상 권한 및 소비자 대상 권한의 합계. 소비자 대상은 판매 주문에서 &quot;소비자 대상&quot;으로 식별되는 개인 프로필 수로 정의됩니다. 비즈니스 대상자는 판매 주문에서 &quot;비즈니스 대상자&quot;로 식별되는 비즈니스 개인 프로필 수로 정의됩니다. |
 | [!UICONTROL 임시 쿼리 서비스 사용자 팩] | 승인된 동시 쿼리 서비스 사용자 권한을 5명의 추가 동시 쿼리 서비스 사용자와 한 팩당 동시에 실행되는 임시 쿼리를 한 개 더 증가시키는 추가 기능입니다. 여러 추가 Ad Hoc Query 사용자 팩에 라이센스가 부여될 수 있습니다. |
-| [!UICONTROL 평균 프로필 풍부도] | 특정 시점에 Hub Profile Service에 저장된 모든 프로덕션 데이터의 합계를 인증된 비즈니스 사용자 프로필의 5배로 나눈 값입니다. [!UICONTROL 평균 프로필 풍부도]은(는) 공유 기능입니다. |
 | [!UICONTROL 사용 가능한 CJA 행] | Customer Journey Analytics 내에서 분석에 사용할 수 있는 일일 평균 데이터 행입니다. |
 | [!UICONTROL 계산된 특성] | 집계된 프로필 동작 데이터의 총 수입니다. 집계된 프로필 행동 데이터는 프로필 속성으로 변환되고 개인 프로필 또는 비즈니스 개인 프로필에 포함될 수 있는 경험 이벤트를 기반으로 합니다. |
 | [!UICONTROL 소비자 대상] | 판매 주문에서 &quot;소비자 대상&quot;으로 식별된 개인 프로필 수입니다. |
@@ -216,9 +215,10 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 | [!UICONTROL 유사 대상] | 기존 소비자 대상을 모델링하여 해당 기존 소비자 대상과 유사한 개인 프로필을 식별하여 생성된 대상의 수입니다. |
 | [!UICONTROL AMM 모델 수] | 투자를 기반으로 지정된 결과를 측정 및/또는 예측하는 데 사용되는 머신 러닝 모델(내장 Adobe Mix Modeler)의 개수입니다. |
 | [!UICONTROL 샌드박스 수] | Adobe Experience Platform 격리 데이터 및 작업에 액세스하는 Adobe On-demand Service 인스턴스 내의 논리 구분 개수입니다. |
-| [!UICONTROL Pack의 프로필 풍부성 아니요] | 각 추가 프로필 풍부도 팩에 대해 프로필당 인증 평균 프로필 풍부도가 25KB 증가했습니다. |
+| [!UICONTROL Pack의 프로필 풍부성 아니요] | 승인된 총 데이터 볼륨에서 각 추가 프로필 풍부도 팩의 프로필당 25KB 증가. |
 | [!UICONTROL 쿼리 서비스 계산 시간] | 일괄 처리 쿼리가 실행될 때 쿼리 서비스 엔진이 데이터를 읽고 처리하고 데이터 레이크에 다시 쓰는 데 걸린 시간을 측정한 것입니다. |
 | [!UICONTROL 팩 중 스트리밍 세분화 없음] | 새 데이터가 스트리밍 플로우를 통해 세분화 서비스로 들어감에 따라 팩은 개인 프로필의 세그먼트 멤버십을 업데이트합니다. 세그먼트 멤버십은 이전 동작을 고려하지 않고 현재 개인 프로필 속성과 현재 이벤트의 값을 기반으로 평가됩니다. 스트리밍 세분화는 공유 기능입니다. |
+| [!UICONTROL 총 데이터 볼륨] | Adobe Experience Platform 프로필 서비스가 참여 워크플로우에서 사용할 수 있는 총 데이터 양입니다. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 

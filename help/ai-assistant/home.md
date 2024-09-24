@@ -2,10 +2,10 @@
 title: Adobe Experience Platform의 AI Assistant 개요
 description: AI 어시스턴트, 그 미묘한 차이와 사용 사례, 그리고 이를 사용하여 Adobe Experience Platform 및 Real-Time Customer Data Platform을 통해 워크플로를 가속화하는 방법에 대해 알아봅니다.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 8%
+source-wordcount: '926'
+ht-degree: 15%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 Adobe Experience Platform의 AI Assistant에 대해 알아보려면 이 문서를 참조하십시오.
 
-Adobe Experience Platform의 AI Assistant는 Adobe 애플리케이션에서 워크플로를 가속화하는 데 사용할 수 있는 대화형 경험입니다. AI Assistant를 사용하여 제품 지식을 보다 잘 이해하고, 문제를 해결하거나, 정보를 검색하고, 운영 통찰력을 찾을 수 있습니다. AI Assistant는 Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer 및 Customer Journey Analytics을 지원합니다.
+Adobe Experience Platform의 AI 어시스턴트는 Adobe 애플리케이션에서 워크플로를 가속화하는 데 사용할 수 있는 대화형 환경입니다. AI 어시스턴트를 사용하여 제품 지식을 더 잘 이해하고, 문제를 해결하거나, 정보를 검색하여 운영 인사이트를 얻을 수 있습니다. AI 어시스턴트는 Experience Platform, Real-Time CDP, Adobe Journey Optimizer 및 Customer Journey Analytics를 지원합니다.
 
 ![처음 사용자 경험이 트리거된 AI Assistant 인터페이스입니다.](./images/ai-assistant-full.png)
 
@@ -53,7 +53,7 @@ AI Assistant를 쿼리하기 전에 고려해야 할 두 가지 유형의 질문
 
 | 제품 지식 | 예시 |
 | --- | --- |
-| 뾰족한 학습 | <ul><li>ID와 기본 또는 외래 키 간의 차이점은 무엇입니까?</li><li>프로필 풍부성은 어떻게 계산됩니까?</li></ul> |
+| 뾰족한 학습 | <ul><li>ID와 기본 또는 외래 키 간의 차이점은 무엇입니까?</li><li>유사 대상자란 무엇입니까?</li></ul> |
 | 검색 열기 | <ul><li>이 데이터 세트를 내보내려면 어떻게 해야 합니까?</li><li>의료 서비스 고객을 위한 스키마가 있습니까?</li></ul> |
 | 문제 해결 | <ul><li>프로필에 대해 Adobe 소유의 스키마를 켤 수 없는 이유는 무엇입니까?</li><li>세그먼트를 삭제할 수 없는 이유</li></ul> |
 
@@ -67,7 +67,7 @@ AI Assistant를 쿼리하기 전에 고려해야 할 두 가지 유형의 질문
 
 운영 인사이트는 카운트, 조회 및 계보 영향을 포함하여 AI 비서가 메타 데이터 개체(속성, 대상, 데이터 흐름, 데이터 세트, 대상, 여정, 스키마 및 소스)에 대해 생성하는 답변을 말합니다. 샌드박스 내의 데이터는 보지 않습니다.
 
-* 보유한 데이터 세트는 몇 개입니까?
+* 데이터 세트가 얼마나 많이 있습니까?
 * 사용된 적이 없는 스키마 속성 수는 몇 개입니까?
 * 활성화된 대상은 무엇입니까?
 

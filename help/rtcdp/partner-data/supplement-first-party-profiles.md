@@ -3,10 +3,10 @@ title: 파트너가 제공한 속성으로 자사 프로필 보완
 description: 신뢰할 수 있는 데이터 파트너의 속성으로 자사 프로필을 보완하여 데이터 기반을 개선하고 고객층에 대한 새로운 인사이트를 얻고 대상자 최적화를 개선하는 방법에 대해 알아봅니다.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
+source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 79%
+source-wordcount: '1257'
+ht-degree: 77%
 
 ---
 
@@ -41,7 +41,7 @@ Adobe은 한 가지 방법으로 모든 요구 사항을 충족할 수 있는 �
 
 >[!WARNING]
 >
->Real-Time CDP에 수집된 파트너가 제공한 추가 속성은 *평균 프로필 풍부도*&#x200B;에 영향을 미칩니다. 프로필 풍부도에 대한 자세한 내용은 [Real-Time Customer Data Platform 제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html)을 참조하십시오.
+>Real-Time CDP에 수집된 추가 파트너 제공 특성은 *총 데이터 볼륨*&#x200B;에 영향을 줍니다. 총 데이터 볼륨에 대한 자세한 내용은 [Real-time Customer Data Platform 제품 설명](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html)을 참조하세요.
 
 ## 비디오 워크스루 {#video-walkthrough}
 
