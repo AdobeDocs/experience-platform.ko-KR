@@ -1,12 +1,10 @@
 ---
 title: UI를 사용하여 Snowflake 데이터베이스에서 Experience Platform으로 데이터 스트리밍
-type: Tutorial
 description: Snwoflake 데이터베이스에서 Experience Platform으로 데이터를 스트리밍하는 방법에 대해 알아봅니다
-badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: f39ee3af176e3d9b8ad04bfad81793db0ebe71a7
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1647'
 ht-degree: 3%
 
 ---
