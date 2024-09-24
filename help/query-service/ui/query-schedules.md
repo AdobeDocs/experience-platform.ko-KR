@@ -2,9 +2,9 @@
 title: 쿼리 일정
 description: Adobe Experience Platform UI를 통해 예약된 쿼리 실행을 자동화하고, 쿼리 일정을 삭제 또는 비활성화하고, 사용 가능한 예약 옵션을 활용하는 방법을 알아봅니다.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '2051'
 ht-degree: 0%
 
 ---
@@ -141,7 +141,28 @@ ht-degree: 0%
 
 예약된 해당 쿼리에 대한 쿼리 실행 목록이 나타납니다.
 
+### 작업 수준에서 시간 계산 {#compute-hours}
+
+CTAS/ITAS 일괄 처리 쿼리에 대해 쿼리 실행 수준에서 소비된 계산 시간을 추적합니다. 이 기능은 컴퓨팅 사용에 대한 통찰력을 제공하여 리소스 할당을 최적화하고 쿼리 성능을 개선하는 데 도움이 됩니다.
+
+>[!AVAILABILITY]
+>
+>시간 계산 기능은 [Data Distiller SKU](../data-distiller/overview.md)를 구매한 사용자에게만 제공됩니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
+
 ![예약된 쿼리에 대해 쿼리 실행 목록이 강조 표시된 예약된 쿼리 작업 영역의 세부 정보 섹션입니다.](../images/ui/query-schedules/list-of-scheduled-runs.png)
+
+다음 표에서는 예약된 쿼리 실행을 나열하는 세부 정보 섹션에서 사용할 수 있는 각 열에 대한 설명을 제공합니다.
+
+| 열 제목 | 설명 |
+|---------------------|----------------------------------|
+| [!UICONTROL 쿼리 실행 ID] | 예약된 쿼리의 개별 실행을 추적하고 참조할 수 있도록 각 쿼리 실행에 대한 고유 식별자를 표시합니다. |
+| [!UICONTROL 쿼리 실행 시작] | 각 실행이 시작된 시기를 모니터링하는 데 도움이 되도록 쿼리 실행의 시작 날짜 및 시간을 나타냅니다. |
+| [!UICONTROL 쿼리 실행 완료] | 쿼리 실행의 완료 날짜 및 시간을 표시하여 실행 기간 및 상태에 대한 통찰력을 제공합니다. |
+| [!UICONTROL 상태] | 결과를 빠르게 평가하기 위해 쿼리 실행의 현재 상태(예: `Completed,` `Running,` 또는 `Failed,`)를 표시합니다. |
+| [!UICONTROL 데이터 세트] | 쿼리 실행에 사용된 데이터 세트를 나열하여 실행에 관련된 데이터 소스를 표시합니다. |
+| [!UICONTROL 시간 계산] | 각 쿼리 실행에 사용된 계산 시간을 시간 단위로 표시합니다. 리소스 사용을 추적하고 쿼리 성능을 최적화하는 데 도움이 됩니다. |
+
+{style="table-layout:auto"}
 
 UI를 통해 모든 쿼리 작업의 상태를 모니터링하는 방법에 대한 자세한 내용은 [예약된 쿼리 모니터링 안내서](./monitor-queries.md#inline-actions)를 참조하십시오.
 
