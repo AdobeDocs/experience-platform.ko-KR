@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 준비 매핑 기능
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 5a4e0b3c97d315262ded35ca5bfada3612ed6db4
+source-git-commit: 1e06fa2f8a5685cf5debcc3b5279d7efab9af0c8
 workflow-type: tm+mt
-source-wordcount: '5805'
+source-wordcount: '6024'
 ht-degree: 2%
 
 ---
@@ -47,8 +47,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| concat | 주어진 문자열을 연결합니다. | <ul><li>STRING: 연결할 문자열입니다.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;안녕하세요, &quot;, &quot;저기&quot;, &quot;!&quot;) | `"Hi, there!"` |
-| 터지다 | 정규식을 기준으로 문자열을 분할하고 부분 배열을 반환합니다. 선택적으로 regex를 포함하여 문자열을 분할할 수 있습니다. 기본적으로 분할은 &quot;,&quot;로 확인됩니다. 다음 구분 기호 **** 는 로 `+, ?, ^, \|, ., [, (, {, ), *, $, \` 이스케이프`\`해야 합니다. 여러 문자를 구분 기호로 포함하는 경우 구분 기호는 다중 문자 구분 기호로 처리됩니다. | <ul><li>문자열: **필수** 분할해야 하는 문자열입니다.</li><li>REGEX: *선택 사항* 문자열을 분할하는 데 사용할 수 있는 정규식입니다.</li></ul> | explode(문자열, 정규 표현식) | explode(&quot;안녕하세요!&quot;, &quot;) | `["Hi,", "there"]` |
+| concat | 지정된 문자열을 연결합니다. | <ul><li>STRING: 연결할 문자열입니다.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;안녕하세요, &quot;, &quot;저기&quot;, &quot;!&quot;) | `"Hi, there!"` |
+| 분해 | 정규 표현식을 기준으로 문자열을 분할하고 부분 배열을 반환합니다. 문자열을 분할하도록 regex를 선택적으로 포함할 수 있습니다. 기본적으로 분할은 &quot;,&quot;로 확인됩니다. `\`(으)로 이스케이프 처리해야 하는 구분 기호 **필요**: `+, ?, ^, \|, ., [, (, {, ), *, $, \` 구분 기호로 여러 문자를 포함하는 경우 구분 기호는 여러 문자 구분 기호로 처리됩니다. | <ul><li>문자열: **필수** 분할해야 하는 문자열입니다.</li><li>REGEX: *선택 사항* 문자열을 분할하는 데 사용할 수 있는 정규식입니다.</li></ul> | explode(문자열, 정규 표현식) | explode(&quot;안녕하세요!&quot;, &quot;) | `["Hi,", "there"]` |
 | instr | 하위 문자열의 위치/인덱스를 반환합니다. | <ul><li>입력: **필수** 검색 중인 문자열입니다.</li><li>하위 문자열: **필수** 문자열 내에서 검색 중인 하위 문자열입니다.</li><li>START_POSITION: *선택 사항* 문자열에서 찾기 시작할 위치입니다.</li><li>발생 횟수: *선택 사항* 시작 위치에서 찾을 n번째 발생 횟수입니다. 기본적으로 1입니다. </li></ul> | instr(INPUT, SUBSTRING, START_POSITION, OCCURRENCE) | instr(&quot;adobe.com&quot;, &quot;com&quot;) | 6 |
 | replacestr | 원래 문자열에 있는 경우 검색 문자열을 대체합니다. | <ul><li>입력: **필수** 입력 문자열입니다.</li><li>TO_FIND: **필수** 입력 내에서 조회할 문자열입니다.</li><li>TO_REPLACE: **필수** &quot;TO_FIND&quot; 내의 값을 대체할 문자열입니다.</li></ul> | replacestr(INPUT, TO_FIND, TO_REPLACE) | replacetr(&quot;문자열 re test&quot;, &quot;re&quot;, &quot;replace&quot;) | &quot;문자열 바꾸기 테스트입니다.&quot; |
 | substr | 주어진 길이의 하위 문자열을 반환합니다. | <ul><li>입력: **필수** 입력 문자열입니다.</li><li>START_INDEX: **필수** 하위 문자열이 시작되는 입력 문자열의 인덱스입니다.</li><li>LENGTH: **필수** 하위 문자열의 길이입니다.</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr(&quot;하위 문자열 테스트임&quot;, 7, 8) | &quot; a 하위&quot; |
@@ -63,7 +63,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | ltrim | 문자열의 시작에서 공백을 제거합니다. | <ul><li>문자열: **필수** 공백을 제거할 문자열입니다.</li></ul> | ltrim(STRING) | ltrim(&quot; hello&quot;) | &quot;hello&quot; |
 | rtrim | 문자열 끝에서 공백을 제거합니다. | <ul><li>문자열: **필수** 공백을 제거할 문자열입니다.</li></ul> | rtrim(STRING) | rtrim(&quot;hello &quot;) | &quot;hello&quot; |
 | trim | 문자열의 시작과 끝에서 공백을 제거합니다. | <ul><li>문자열: **필수** 공백을 제거할 문자열입니다.</li></ul> | trim(STRING) | trim(&quot; hello &quot;) | &quot;hello&quot; |
-| 같음 | 두 문자열을 비교하여 동일한지 확인합니다. 이 함수는 대/소문자를 구분합니다. | <ul><li>STRING1: **필수** 비교할 첫 번째 문자열입니다.</li><li>STRING2: **필수** 비교할 두 번째 문자열입니다.</li></ul> | 문자열1&#x200B;.같음(STRING2) | &quot;string1&quot;입니다.같음(&quot;STRING1&quot;) | 거짓 |
+| 같음 | 두 문자열을 비교하여 동일한지 확인합니다. 이 함수는 대/소문자를 구분합니다. | <ul><li>STRING1: **필수** 비교할 첫 번째 문자열입니다.</li><li>STRING2: **필수** 비교할 두 번째 문자열입니다.</li></ul> | 문자열1&#x200B;.equals(&#x200B;STRING2) | &quot;string1&quot;. &#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
 | equalsIgnoreCase | 두 문자열을 비교하여 동일한지 확인합니다. 이 함수는 **대/소문자를 구분하지 않습니다**. | <ul><li>STRING1: **필수** 비교할 첫 번째 문자열입니다.</li><li>STRING2: **필수** 비교할 두 번째 문자열입니다.</li></ul> | 문자열1&#x200B;.equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;. &#x200B;equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
 
 {style="table-layout:auto"}
@@ -178,6 +178,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | size_of | 입력 크기를 반환합니다. | <ul><li>입력: **필수** 크기를 찾으려는 개체입니다.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | 이 함수는 전체 입력 배열의 모든 요소를 프로필의 배열 끝에 추가하는 데 사용합니다. 이 함수는 업데이트 중에 **전용**&#x200B;입니다. 삽입 컨텍스트에서 사용되는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>배열: **필수** 프로필에 배열을 추가하는 배열입니다.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | 이 함수는 배열에서 요소를 바꾸는 데 사용합니다. 이 함수는 업데이트 중에 **전용**&#x200B;입니다. 삽입 컨텍스트에서 사용되는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>배열: **필수** 프로필에서 배열을 바꿀 배열입니다.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+| [!BADGE Beta]{type=Informative} array_to_string | 지정된 구분 기호를 사용하여 배열에 있는 요소의 문자열 표현을 조인합니다. 배열이 다차원이면 결합되기 전에 평면화됩니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-calculated-fields.md)를 참조하세요. | <ul><li>구분 기호: **필수** 배열에서 요소를 연결하는 데 사용되는 구분 기호입니다.</li><li>배열: **필수** 병합할 배열입니다(병합한 후).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | &quot;Hello;world&quot; |
+| [!BADGE Beta]{type=Informative} filterArray* | 술어를 기반으로 해당 배열을 필터링합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-calculated-fields.md)를 참조하세요. | <ul><li>배열: **필수** 필터링할 배열</li><li>조건자: **필수** 특정 배열의 각 요소에 적용할 조건자입니다. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7] |
+| [!BADGE Beta]{type=Informative} transformArray* | 조건자를 기반으로 특정 배열을 변환합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-calculated-fields.md)를 참조하세요. | <ul><li>배열: **필수** 변환할 배열입니다.</li><li>조건자: **필수** 특정 배열의 각 요소에 적용할 조건자입니다. | transformArray(ARRAY, PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
+| [!BADGE Beta]{type=Informative} flattenArray* | 지정된 (다차원) 배열을 1차원 배열로 병합합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-calculated-fields.md)를 참조하세요. | <ul><li>배열: **필수** 병합할 배열입니다.</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 
@@ -203,8 +207,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 함수 | 설명 | 매개 변수 | 구문 | 표현식 | 샘플 출력 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| decode | 키와 키 값 쌍의 목록이 배열로 병합되면 이 함수는 키가 있는 경우 값을 반환하고 배열에 있는 경우 기본값을 반환합니다. | <ul><li>키: **필수** 일치시킬 키입니다.</li><li>OPTIONS: **필수** 키/값 쌍의 병합된 배열입니다. 원할 경우 끝에 기본값을 입력할 수 있습니다.</li></ul> | 디코딩 (키, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | 주어진 stateCode가 &quot;ca&quot;, &quot;California&quot;인 경우.<br>주어진 stateCode가 &quot;pa&quot;, &quot;Pennsylvania&quot;인 경우.<br>stateCode가 &quot;N/A&quot;와 일치하지 않으면 &quot;N/A&quot;입니다. |
-| 이프 | 주어진 부울 표현식을 평가하고 결과를 기반으로 지정된 값을 반환합니다. | <ul><li>식: **필수** 계산 중인 부울 식입니다.</li><li>TRUE_VALUE: **필수** 식이 true로 평가되는 경우 반환되는 값입니다.</li><li>FALSE_VALUE: **필수** 식이 false로 평가되는 경우 반환되는 값입니다.</li></ul> | iif (표현식, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;s&quot;), &quot;true&quot;, &quot;false&quot;) | &quot;True&quot; |
+| decode | 키와 키 값 쌍의 목록이 배열로 병합되면 이 함수는 키가 있는 경우 값을 반환하고 배열에 있는 경우 기본값을 반환합니다. | <ul><li>키: **필수** 일치시킬 키입니다.</li><li>OPTIONS: **필수** 키/값 쌍의 병합된 배열입니다. 원할 경우 끝에 기본값을 입력할 수 있습니다.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | 지정된 stateCode가 &quot;ca&quot;, &quot;California&quot;인 경우<br>제공된 상태 코드가 &quot;pa&quot;, &quot;Pennsylvania&quot;인 경우.<br>stateCode가 다음과 일치하지 않으면 &quot;N/A&quot;입니다. |
+| iif | 주어진 부울 표현식을 평가하고 결과를 기반으로 지정된 값을 반환합니다. | <ul><li>식: **필수** 계산 중인 부울 식입니다.</li><li>TRUE_VALUE: **필수** 식이 true로 평가되는 경우 반환되는 값입니다.</li><li>FALSE_VALUE: **필수** 식이 false로 평가되는 경우 반환되는 값입니다.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
 {style="table-layout:auto"}
 
@@ -278,9 +282,9 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | 사용자 에이전트 문자열에서 운영 체제 이름을 추출합니다. | <ul><li>USER_AGENT: **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
 | ua_os_version_major | 사용자 에이전트 문자열에서 운영 체제의 주요 버전을 추출합니다. | <ul><li>USER_AGENT: **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major&#x200B;s(&quot;Mozilla/5.0(iPhone, CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
-| ua_os_version | 사용자 에이전트 문자열에서 운영 체제 버전을 추출합니다. | <ul><li>USER_AGENT: **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_os_version(USER_AGENT) | ua_os_version(&quot;Mozilla/5.0 (iPhone; CPU 아이폰 OS 5_1_1 맥 OS X와 좋아요) AppleWebKit / 534.46 (KHTML, Gecko와 좋아요) 버전 / 5.1 모바일 / 9B206 사파리 / 7534.48.3 &quot;) | 5.1.1 |
-| ua_os_name_version | 사용자 에이전트 문자열에서 운영 체제 이름과 버전을 추출합니다. | <ul><li>USER_AGENT: **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 아이폰 OS 5.1.1 |
-| ua_agent_version | 사용자 에이전트 문자열 문자열에서 에이전트 버전을 추출합니다. | <ul><li>USER_AGENT: **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
+| ua_os_version | 사용자 에이전트 문자열에서 운영 체제 버전을 추출합니다. | <ul><li>USER_AGENT: **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
+| ua_os_name_version | 사용자 에이전트 문자열에서 운영 체제 이름과 버전을 추출합니다. | <ul><li>USER_AGENT: **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
+| ua_agent_version | 사용자 에이전트 문자열에서 에이전트 버전을 추출합니다. | <ul><li>USER_AGENT: **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
 | ua_agent_version_major | 사용자 에이전트 문자열에서 에이전트 이름과 주요 버전을 추출합니다. | <ul><li>USER_AGENT: **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_agent_version_major&#x200B;(USER_AGENT) | ua_agent_version_major&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
 | ua_agent_name | 사용자 에이전트 문자열에서 에이전트 이름을 추출합니다. | <ul><li>USER_AGENT: **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | 사용자 에이전트 문자열에서 장치 클래스를 추출합니다. | <ul><li>USER_AGENT: **필수** 사용자 에이전트 문자열입니다.</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0(iPhone, Mac OS X와 같은 CPU iPhone OS 5_1_1) AppleWebKit/534.46(KHTML, Gecko) 버전/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 휴대폰 |
