@@ -4,9 +4,9 @@ title: 사용 사례 플레이북 시작
 description: 사용 사례 플레이북 기능을 시작하는 방법에 대해 알아봅니다.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '989'
 ht-degree: 14%
 
 ---
@@ -105,11 +105,11 @@ SMS 채널 표면을 만들려면 먼저 SMS API 자격 증명을 만들고 기�
 
 ### 푸시 채널 표면
 
-앱 표면이 Experience Platform 또는 데이터 컬렉션 인터페이스에서 구성되었는지 확인합니다. 이는 데이터 수집 환경에서 앱 표면이 어떻게 보이는지 설명합니다.
+채널 구성이 Experience Platform 또는 데이터 컬렉션 인터페이스에서 구성되었는지 확인합니다. 이는 데이터 수집 환경에서 채널 구성이 어떻게 표시되는지 보여 줍니다.
 
-<!-- ![App surfaces in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
+<!-- ![Channel configurations in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
-그런 다음 앱 표면 구성에서 확인한 채널, 플랫폼 및 앱을 선택합니다. 푸시 채널 표면을 만들려면 **제출**&#x200B;을 선택합니다.
+그런 다음 채널 구성에서 확인한 채널, 플랫폼 및 앱을 선택합니다. 푸시 채널 표면을 만들려면 **제출**&#x200B;을 선택합니다.
 
 [푸시 채널 표면을 설정하는 방법](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html)에 대한 설명서를 읽어 보십시오.
 
