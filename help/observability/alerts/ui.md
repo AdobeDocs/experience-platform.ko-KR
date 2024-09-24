@@ -4,10 +4,10 @@ title: 경고 UI 안내서
 description: Experience Platform 사용자 인터페이스에서 경고를 관리하는 방법을 알아봅니다.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 9004a2203996f0fd64833a03f211232ebf14e3e4
+source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 0%
+source-wordcount: '797'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 Adobe Experi
 
 ![왼쪽 탐색에서 [!UICONTROL 경고]를 강조 표시하는 경고 페이지](../images/alerts/ui/workspace.png)
 
-## 경고 규칙 관리
+## 경고 규칙 관리 {#manage-rules}
 
 **[!UICONTROL 찾아보기]** 탭에는 경고를 트리거할 수 있는 사용 가능한 규칙이 나열됩니다.
 
@@ -37,7 +37,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 Adobe Experi
 
 ![선택한 줄임표가 드롭다운 메뉴를 표시합니다.](../images/alerts/ui/disable-subscribe.png)
 
-## 경고 구독자 관리
+## 경고 구독자 관리 {#manage-subscribers}
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 Adobe Experi
 
 ![받은 경고 알림의 전자 메일 예입니다.](../images/alerts/ui/manage-alert-subscribers-email.png)
 
-## 이메일 경고 활성화
+## 이메일 경고 활성화 {#enable-email}
 
 경고 알림은 이메일로 직접 전달될 수 있습니다.
 
@@ -85,7 +85,35 @@ Adobe Experience Platform 사용자 인터페이스를 사용하면 Adobe Experi
 
 구독한 모든 경고는 이제 Adobe ID 계정에 연결된 이메일 주소로 전달됩니다.
 
-## 경고 내역 보기
+## 경고 임계값 사용자 지정 {#alert-threshold}
+
+다음 경고 유형에 대해 경고 임계값을 사용자 정의할 수 있습니다.
+
+| 경고 유형 | 사용자 지정 매개 변수 |
+|---|---|
+| 세그먼트 작업 지연 | 지연 임계값 |
+| 세그먼트 내보내기 지연 | 지연 임계값 |
+| 대상 플로우 실행 지연 | 지연 임계값 |
+| ID 서비스 흐름 실행 지연 | 지연 임계값 |
+| 프로필 흐름 실행 지연 | 지연 임계값 |
+| 소스 플로우 실행 지연 | 지연 임계값 |
+| 쿼리 실행 지연 | 지연 임계값 |
+| 활성화 건너뛰기 비율 초과 | 오류 임계값 |
+| 소스 수집 오류율 초과 | 오류 임계값 |
+
+규칙 이름 옆의 생략 부호(**...**)를 선택하면 드롭다운에 컨트롤이 표시됩니다. **[!UICONTROL 편집]**&#x200B;을 선택합니다.
+
+![선택한 규칙에 대해 [!UICONTROL 편집] 옵션이 강조 표시되어 있습니다.](../images/alerts/ui/threshold-edit.png)
+
+**[!UICONTROL 경고 사용자 지정]** 페이지가 나타납니다. 임계값을 원하는 분으로 업데이트한 다음 **[!UICONTROL 확인]**&#x200B;을 선택합니다.
+
+![경고 페이지에서 [!UICONTROL 임계값] 및 [!UICONTROL 확인] 옵션을 강조 표시합니다.](../images/alerts/ui/threshold-update.png)
+
+**[!UICONTROL 알림]** 페이지로 돌아갔습니다. 경보에 대한 임계값 설정을 보려면 목록에서 규칙을 선택합니다. 상태 및 심각도와 같은 세부 사항을 포함하여 경고에 대한 임계값 설정을 오른쪽 레일에서 볼 수 있습니다.
+
+![오른쪽 레일 및 강조 표시의 세부 정보를 표시하는 강조 표시된 경고 [!UICONTROL 임계값].](../images/alerts/ui/threshold-view.png)
+
+## 경고 내역 보기 {#alert-history}
 
 **[!UICONTROL 기록]** 탭에는 경고를 트리거한 규칙, 트리거된 날짜 및 해결된 날짜(해당되는 경우)를 포함하여 조직에 대해 받은 경고의 기록이 표시됩니다.
 
