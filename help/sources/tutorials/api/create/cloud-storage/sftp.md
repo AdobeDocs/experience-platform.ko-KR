@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 SFTP 기본 연결 만들기
 description: Flow Service API를 사용하여 Adobe Experience Platform을 SFTP(Secure File Transfer Protocol) 서버에 연결하는 방법에 대해 알아봅니다.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
+source-git-commit: 919e2c34bf8b9b4646936fe8bfbd4ee33d44407a
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '753'
 ht-degree: 2%
 
 ---
@@ -30,19 +30,7 @@ ht-degree: 2%
 
 ### 필요한 자격 증명 수집
 
-[!DNL Flow Service]이(가) [!DNL SFTP]에 연결하려면 다음 연결 속성에 대한 값을 제공해야 합니다.
-
-| 자격 증명 | 설명 |
-| ---------- | ----------- |
-| `host` | [!DNL SFTP] 서버와 연결된 이름 또는 IP 주소입니다. |
-| `port` | 연결 중인 SFTP 서버 포트입니다. 지정하지 않으면 기본값은 `22`입니다. |
-| `username` | [!DNL SFTP] 서버에 액세스할 수 있는 사용자 이름입니다. |
-| `password` | [!DNL SFTP] 서버의 암호입니다. |
-| `privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류되어야 합니다. |
-| `passPhrase` | 키 파일 또는 키 콘텐츠가 암호로 보호되어 있는 경우 개인 키를 해독하기 위한 암호나 암호입니다. `privateKeyContent`이(가) 암호로 보호된 경우 이 매개 변수는 개인 키 콘텐츠의 암호와 함께 값으로 사용해야 합니다. |
-| `maxConcurrentConnections` | 이 매개 변수를 사용하면 SFTP 서버에 연결할 때 플랫폼이 생성하는 동시 연결 수에 대한 최대 제한을 지정할 수 있습니다. 이 값을 SFTP에서 설정한 제한보다 작게 설정해야 합니다. **참고**: 기존 SFTP 계정에 대해 이 설정을 사용하면 향후 데이터 흐름에만 영향을 주고 기존 데이터 흐름에는 영향을 주지 않습니다. |
-| `folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. [!DNL SFTP] 원본, 폴더 경로를 제공하여 선택한 하위 폴더에 대한 사용자 액세스를 지정할 수 있습니다. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL SFTP]의 연결 사양 ID는 `b7bf2577-4520-42c9-bae9-cad01560f7bc`입니다. |
+인증 자격 증명을 검색하는 방법에 대한 자세한 단계는 [[!DNL SFTP] 인증 안내서](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials)를 참조하십시오.
 
 ### Platform API 사용
 
@@ -95,7 +83,8 @@ curl -X POST \
               "userName": "{USERNAME}",
               "password": "{PASSWORD}",
               "maxConcurrentConnections": 5,
-              "folderPath": "acme/business/customers/holidaySales"
+              "folderPath": "acme/business/customers/holidaySales",
+              "disableChunking": "true"
           }
       },
       "connectionSpec": {
@@ -113,6 +102,7 @@ curl -X POST \
 | `auth.params.password` | SFTP 서버와 연결된 암호입니다. |
 | `auth.params.maxConcurrentConnections` | 플랫폼을 SFTP에 연결할 때 지정된 최대 동시 연결 수입니다. 활성화된 경우 이 값을 1 이상으로 설정해야 합니다. |
 | `auth.params.folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. |
+| `auth.params.disableChunking` | SFTP 서버가 청크를 지원하는지 여부를 확인하는 데 사용되는 부울 값입니다. |
 | `connectionSpec.id` | SFTP 서버 연결 사양 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++
@@ -154,7 +144,8 @@ curl -X POST \
               "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
               "passPhrase": "{PASSPHRASE}",
               "maxConcurrentConnections": 5,
-              "folderPath": "acme/business/customers/holidaySales"
+              "folderPath": "acme/business/customers/holidaySales",
+              "disableChunking": "true"
           }
       },
       "connectionSpec": {
@@ -173,6 +164,7 @@ curl -X POST \
 | `auth.params.passPhrase` | 키 파일 또는 키 콘텐츠가 암호로 보호되어 있는 경우 개인 키를 해독하기 위한 암호나 암호입니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수는 PrivateKeyContent의 암호와 함께 값으로 사용해야 합니다. |
 | `auth.params.maxConcurrentConnections` | 플랫폼을 SFTP에 연결할 때 지정된 최대 동시 연결 수입니다. 활성화된 경우 이 값을 1 이상으로 설정해야 합니다. |
 | `auth.params.folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. |
+| `auth.params.disableChunking` | SFTP 서버가 청크를 지원하는지 여부를 확인하는 데 사용되는 부울 값입니다. |
 | `connectionSpec.id` | [!DNL SFTP] 서버 연결 사양 ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++

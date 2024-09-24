@@ -4,41 +4,49 @@ solution: Experience Platform
 title: SFTP Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 SFTP 서버를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 6c22f8243269bb304b12a4e4978ed141ed092c67
+source-git-commit: 52c1c8e6bc332bd6ee579cad52a7343007615efd
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '1228'
 ht-degree: 0%
 
 ---
 
 # SFTP 커넥터
 
->[!IMPORTANT]
+Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
+
+[!DNL SFTP] 계정을 Experience Platform에 연결하기 위해 완료해야 하는 필수 구성 요소 단계는 이 문서를 참조하십시오.
+
+>[!TIP]
 >
->Adobe Experience Platform이 연결하는 [!DNL SFTP] 서버는 청킹을 지원할 수 있어야 합니다. 즉, 단일 파일에 여러 번 연결됩니다. [!DNL SFTP] 서버에서 청킹을 지원하지 않으면 파일 수집을 방해하는 오류가 발생할 수 있습니다.
+>연결하기 전에 SFTP 서버 구성에서 키보드 대화형 인증을 비활성화해야 합니다. 이 설정을 비활성화하면 서비스나 프로그램을 통해 입력하는 것이 아니라 암호를 수동으로 입력할 수 있습니다.
 
-Adobe Experience Platform은 AWS, [!DNL Google Cloud Platform] 및 [!DNL Azure]과(와) 같은 클라우드 공급업체에 기본 연결을 제공하므로 이러한 시스템에서 데이터를 가져올 수 있습니다.
+## 전제 조건 {#prerequisites}
 
-클라우드 저장소 소스는 다운로드, 포맷 또는 업로드 없이도 자신의 데이터를 [!DNL Platform](으)로 가져올 수 있습니다. 수집된 데이터는 XDM JSON, XDM Parquet 또는 구분된 형식으로 지정할 수 있습니다. 프로세스의 모든 단계는 소스 워크플로우에 통합됩니다. [!DNL Platform]을(를) 사용하면 일괄 처리를 통해 FTP 또는 SFTP 서버에서 데이터를 가져올 수 있습니다.
+[!DNL SFTP] 원본을 Experience Platform에 연결하기 위해 완료해야 하는 필수 구성 요소 단계는 이 섹션을 참조하십시오.
 
-## IP 주소 허용 목록
+### IP 주소 허용 목록
 
 소스 커넥터로 작업하려면 먼저 IP 주소 목록을 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다. 자세한 내용은 [IP 주소 허용 목록](../../ip-address-allow-list.md) 페이지를 참조하세요.
 
-## 파일 및 디렉터리에 대한 이름 지정 제약 조건
+### 파일 및 디렉터리에 대한 이름 지정 제약 조건
 
 다음은 클라우드 저장소 파일 또는 디렉터리의 이름을 지정할 때 고려해야 하는 제한 사항 목록입니다.
 
-- 디렉터리 및 파일 구성 요소 이름은 255자를 초과할 수 없습니다.
-- 디렉터리 및 파일 이름은 슬래시(`/`)로 끝날 수 없습니다. 제공되면 자동으로 제거됩니다.
-- 다음 예약된 URL 문자는 올바르게 이스케이프해야 합니다. `! ' ( ) ; @ & = + $ , % # [ ]`
-- `" \ / : | < > * ?` 문자는 사용할 수 없습니다.
-- 잘못된 URL 경로 문자는 허용되지 않습니다. `\uE000` 같은 코드 포인트는 NTFS 파일 이름에서 사용할 수 있지만 올바른 유니코드 문자가 아닙니다. 또한 제어 문자(0x00 ~ 0x1F, \u0081 등)와 같은 일부 ASCII 또는 유니코드 문자도 사용할 수 없습니다. HTTP/1.1의 유니코드 문자열을 제어하는 규칙에 대해서는 [RFC 2616, 섹션 2.2: 기본 규칙](https://www.ietf.org/rfc/rfc2616.txt) 및 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)을 참조하십시오.
-- LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, 점 문자(.) 및 점 문자(..) 두 개를 사용할 수 없습니다.
+* 디렉터리 및 파일 구성 요소 이름은 255자를 초과할 수 없습니다.
+* 디렉터리 및 파일 이름은 슬래시(`/`)로 끝날 수 없습니다. 제공되면 자동으로 제거됩니다.
+* 다음 예약된 URL 문자는 올바르게 이스케이프해야 합니다. `! ' ( ) ; @ & = + $ , % # [ ]`
+* `" \ / : | < > * ?` 문자는 사용할 수 없습니다.
+* 잘못된 URL 경로 문자는 허용되지 않습니다. `\uE000` 같은 코드 포인트는 NTFS 파일 이름에서 사용할 수 있지만 올바른 유니코드 문자가 아닙니다. 또한 제어 문자(0x00 ~ 0x1F, \u0081 등)와 같은 일부 ASCII 또는 유니코드 문자도 사용할 수 없습니다. HTTP/1.1의 유니코드 문자열을 제어하는 규칙에 대해서는 [RFC 2616, 섹션 2.2: 기본 규칙](https://www.ietf.org/rfc/rfc2616.txt) 및 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)을 참조하십시오.
+* LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, 점 문자(.) 및 점 문자(..) 두 개를 사용할 수 없습니다.
 
-## [!DNL SFTP]에 대한 Base64 인코딩 OpenSSH 개인 키 설정
+### [!DNL SFTP]에 대한 Base64 인코딩 OpenSSH 개인 키 설정
 
 [!DNL SFTP] 원본은 [!DNL Base64] 인코딩된 OpenSSH 개인 키를 사용하여 인증을 지원합니다. Base64로 인코딩된 OpenSSH 개인 키를 생성하고 [!DNL SFTP]을(를) 플랫폼에 연결하는 방법에 대한 자세한 내용은 아래 단계를 참조하십시오.
+
+>[!BEGINTABS]
+
+>[!TAB Windows]
 
 ### 사용자 [!DNL Windows]명
 
@@ -92,6 +100,8 @@ C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\
 
 위의 명령은 지정한 파일 경로에 [!DNL Base64] 인코딩 개인 키를 저장합니다. 그런 다음 해당 개인 키를 사용하여 [!DNL SFTP]을(를) 인증하고 플랫폼에 연결할 수 있습니다.
 
+>[!TAB Mac]
+
 ### 사용자 [!DNL Mac]명
 
 [!DNL Mac]을(를) 사용하는 경우 **터미널**&#x200B;을(를) 열고 다음 명령을 실행하여 개인 키를 생성합니다. 이 경우 개인 키는 `/Documents/id_rsa`에 저장됩니다.
@@ -142,21 +152,59 @@ cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 more ~/.ssh/authorized_keys
 ```
 
-## SFTP를 [!DNL Platform]에 연결
+>[!ENDTABS]
 
->[!IMPORTANT]
->
->연결하기 전에 SFTP 서버 구성에서 키보드 대화형 인증을 비활성화해야 합니다. 이 설정을 비활성화하면 서비스나 프로그램을 통해 입력하는 것이 아니라 암호를 수동으로 입력할 수 있습니다. 키보드 대화형 인증에 대한 자세한 내용은 [구성 요소 Pro 문서](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication)를 참조하십시오.
+### 필요한 자격 증명 수집 {#credentials}
 
-아래 설명서는 API 또는 사용자 인터페이스를 사용하여 SFTP 서버를 [!DNL Platform]에 연결하는 방법에 대한 정보를 제공합니다.
+[!DNL SFTP] 서버를 Experience Platform에 연결하려면 다음 자격 증명에 대한 값을 제공해야 합니다.
+
+>[!BEGINTABS]
+
+>[!TAB 기본 인증]
+
+기본 인증을 사용하여 [!DNL SFTP] 서버를 인증하려면 다음 자격 증명에 적절한 값을 제공하십시오.
+
+| 자격 증명 | 설명 |
+| ---------- | ----------- |
+| `host` | [!DNL SFTP] 서버와 연결된 이름 또는 IP 주소입니다. |
+| `port` | 연결 중인 [!DNL SFTP] 서버 포트입니다. 지정하지 않으면 기본값은 `22`입니다. |
+| `username` | [!DNL SFTP] 서버에 액세스할 수 있는 사용자 이름입니다. |
+| `password` | [!DNL SFTP] 서버의 암호입니다. |
+| `maxConcurrentConnections` | 이 매개 변수를 사용하면 SFTP 서버에 연결할 때 플랫폼이 생성하는 동시 연결 수에 대한 최대 제한을 지정할 수 있습니다. 이 값을 SFTP에서 설정한 제한보다 작게 설정해야 합니다. **참고**: 기존 SFTP 계정에 대해 이 설정을 사용하면 향후 데이터 흐름에만 영향을 주고 기존 데이터 흐름에는 영향을 주지 않습니다. |
+| `folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. [!DNL SFTP] 원본, 폴더 경로를 제공하여 선택한 하위 폴더에 대한 사용자 액세스를 지정할 수 있습니다. |
+| `disableChunking` | 데이터를 수집하는 동안 [!DNL SFTP] 원본은 먼저 파일 길이를 검색하고 파일을 여러 부분으로 나눈 다음 병렬로 읽을 수 있습니다. 이 값을 활성화하거나 비활성화하여 [!DNL SFTP] 서버가 파일 길이를 검색할 수 있는지 또는 특정 오프셋에서 데이터를 읽을 수 있는지 여부를 지정할 수 있습니다. |
+| `connectionSpec.id` | (API 전용) 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL SFTP]의 연결 사양 ID는 `b7bf2577-4520-42c9-bae9-cad01560f7bc`입니다. |
+
+>[!TAB SSH 공개 키 인증]
+
+SSH 공개 키 인증을 사용하여 [!DNL SFTP] 서버를 인증하려면 다음 자격 증명에 적절한 값을 제공하십시오.
+
+| 자격 증명 | 설명 |
+| ---------- | ----------- |
+| `host` | [!DNL SFTP] 서버와 연결된 이름 또는 IP 주소입니다. |
+| `port` | 연결 중인 [!DNL SFTP] 서버 포트입니다. 지정하지 않으면 기본값은 `22`입니다. |
+| `username` | [!DNL SFTP] 서버에 액세스할 수 있는 사용자 이름입니다. |
+| `password` | [!DNL SFTP] 서버의 암호입니다. |
+| `privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류되어야 합니다. |
+| `passPhrase` | 키 파일 또는 키 콘텐츠가 암호로 보호되어 있는 경우 개인 키를 해독하기 위한 암호나 암호입니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수는 PrivateKeyContent의 암호와 함께 값으로 사용해야 합니다. |
+| `maxConcurrentConnections` | 이 매개 변수를 사용하면 SFTP 서버에 연결할 때 플랫폼이 생성하는 동시 연결 수에 대한 최대 제한을 지정할 수 있습니다. 이 값을 SFTP에서 설정한 제한보다 작게 설정해야 합니다. **참고**: 기존 SFTP 계정에 대해 이 설정을 사용하면 향후 데이터 흐름에만 영향을 주고 기존 데이터 흐름에는 영향을 주지 않습니다. |
+| `folderPath` | 액세스 권한을 제공할 폴더의 경로입니다. [!DNL SFTP] 원본, 폴더 경로를 제공하여 선택한 하위 폴더에 대한 사용자 액세스를 지정할 수 있습니다. |
+| `disableChunking` | 데이터를 수집하는 동안 [!DNL SFTP] 원본은 먼저 파일 길이를 검색하고 파일을 여러 부분으로 나눈 다음 병렬로 읽을 수 있습니다. 이 값을 활성화하거나 비활성화하여 [!DNL SFTP] 서버가 파일 길이를 검색할 수 있는지 또는 특정 오프셋에서 데이터를 읽을 수 있는지 여부를 지정할 수 있습니다. |
+| `connectionSpec.id` | (API 전용) 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. [!DNL SFTP]의 연결 사양 ID는 `b7bf2577-4520-42c9-bae9-cad01560f7bc`입니다. |
+
+>[!ENDTABS]
+
+## SFTP를 Experience Platform에 연결
+
+아래 설명서는 API 또는 사용자 인터페이스를 사용하여 SFTP 서버를 Experience Platform에 연결하는 방법에 대한 정보를 제공합니다.
 
 ### API 사용
 
-- [흐름 서비스 API를 사용하여 SFTP 기본 연결 만들기](../../tutorials/api/create/cloud-storage/sftp.md)
-- [흐름 서비스 API를 사용하여 클라우드 스토리지 소스의 데이터 구조 및 콘텐츠 탐색](../../tutorials/api/explore/cloud-storage.md)
-- [흐름 서비스 API를 사용하여 클라우드 스토리지 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/cloud-storage.md)
+* [흐름 서비스 API를 사용하여 SFTP 기본 연결 만들기](../../tutorials/api/create/cloud-storage/sftp.md)
+* [흐름 서비스 API를 사용하여 클라우드 스토리지 소스의 데이터 구조 및 콘텐츠 탐색](../../tutorials/api/explore/cloud-storage.md)
+* [흐름 서비스 API를 사용하여 클라우드 스토리지 소스에 대한 데이터 흐름 만들기](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI 사용
 
-- [UI에서 SFTP 소스 연결 만들기](../../tutorials/ui/create/cloud-storage/sftp.md)
-- [UI에서 클라우드 스토리지 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+* [UI에서 SFTP 소스 연결 만들기](../../tutorials/ui/create/cloud-storage/sftp.md)
+* [UI에서 클라우드 스토리지 연결을 위한 데이터 흐름 만들기](../../tutorials/ui/dataflow/batch/cloud-storage.md)

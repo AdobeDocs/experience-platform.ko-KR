@@ -2,9 +2,9 @@
 title: UI에서 SFTP Source 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 SFTP 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
+source-git-commit: 9cd1232c9257d27b80ed57c26658b1e4058535e8
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '662'
 ht-degree: 1%
 
 ---
@@ -30,20 +30,7 @@ ht-degree: 1%
 
 ### 필요한 자격 증명 수집
 
-[!DNL SFTP]에 연결하려면 다음 연결 속성에 대한 값을 제공해야 합니다.
-
-| 자격 증명 | 설명 |
-| ---------- | ----------- |
-| `host` | [!DNL SFTP] 서버와 연결된 이름 또는 IP 주소입니다. |
-| `port` | 연결 중인 [!DNL SFTP] 서버 포트입니다. 지정하지 않으면 기본값은 `22`입니다. |
-| `username` | [!DNL SFTP] 서버에 액세스할 수 있는 사용자 이름입니다. |
-| `password` | [!DNL SFTP] 서버의 암호입니다. |
-| `privateKeyContent` | Base64로 인코딩된 SSH 개인 키 콘텐츠입니다. OpenSSH 키 유형은 RSA 또는 DSA로 분류되어야 합니다. |
-| `passPhrase` | 키 파일 또는 키 콘텐츠가 암호로 보호되어 있는 경우 개인 키를 해독하기 위한 암호나 암호입니다. PrivateKeyContent가 암호로 보호된 경우 이 매개 변수는 PrivateKeyContent의 암호와 함께 값으로 사용해야 합니다. |
-| `maxConcurrentConnections` | 이 매개 변수를 사용하면 SFTP 서버에 연결할 때 플랫폼이 생성하는 동시 연결 수에 대한 최대 제한을 지정할 수 있습니다. 이 값을 SFTP에서 설정한 제한보다 작게 설정해야 합니다. **참고**: 기존 SFTP 계정에 대해 이 설정을 사용하면 향후 데이터 흐름에만 영향을 주고 기존 데이터 흐름에는 영향을 주지 않습니다. |
-| 폴더 경로 | 액세스 권한을 제공할 폴더의 경로입니다. [!DNL SFTP] 원본, 폴더 경로를 제공하여 선택한 하위 폴더에 대한 사용자 액세스를 지정할 수 있습니다. |
-
-필요한 자격 증명을 수집했으면 아래 단계에 따라 플랫폼에 연결할 새 [!DNL SFTP] 계정을 만들 수 있습니다.
+인증 자격 증명을 검색하는 방법에 대한 자세한 단계는 [[!DNL SFTP] 인증 안내서](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials)를 참조하십시오.
 
 ## [!DNL SFTP] 서버에 연결
 
@@ -81,13 +68,32 @@ Platform UI의 왼쪽 탐색 막대에서 **[!UICONTROL 소스]**&#x200B;를 선
 
 >[!TAB 기본 인증]
 
-기본 인증을 사용하려면 **[!UICONTROL 암호]**&#x200B;를 선택한 다음 사용자 이름 및 암호와 함께 연결할 호스트 및 포트 값을 제공하십시오. 이 단계에서 액세스 권한을 제공할 하위 폴더의 경로를 지정할 수도 있습니다. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택합니다.
+기본 인증을 사용하려면 **[!UICONTROL 암호]**&#x200B;를 선택한 후 다음 자격 증명에 적절한 값을 입력하십시오.
+
+* 호스트
+* 포트
+* 사용자 이름
+* 암호
+
+이 단계에서는 최대 동시 연결을 구성하고, 폴더 경로를 정의하고, [!DNL SFTP] 서버에 대한 청크를 활성화하거나 비활성화할 수도 있습니다. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하고 연결을 설정할 수 있도록 잠시 기다립니다.
+
+인증에 대한 자세한 내용은 [필요한 자격 증명 수집 [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials)에 대한 안내서를 참조하십시오.
 
 ![기본 인증을 사용하는 SFTP 원본에 대한 새 계정 화면](../../../../images/tutorials/create/sftp/password.png)
 
 >[!TAB SSH 공개 키 인증]
 
-SSH 공개 키 기반 자격 증명을 사용하려면 **[!UICONTROL SSH 공개 키]**&#x200B;를 선택한 다음 호스트 및 포트 값과 개인 키 콘텐츠 및 암호 조합을 제공합니다. 이 단계에서 액세스 권한을 제공할 하위 폴더의 경로를 지정할 수도 있습니다. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택합니다.
+SSH 공개 키 기반 자격 증명을 사용하려면 **[!UICONTROL SSH 공개 키]**&#x200B;를 선택한 후 다음 자격 증명에 적절한 값을 입력하십시오.
+
+* 호스트
+* 포트
+* 사용자 이름
+* 비공개 키 콘텐츠
+* 암호구
+
+이 단계에서는 최대 동시 연결을 구성하고, 폴더 경로를 정의하고, [!DNL SFTP] 서버에 대한 청크를 활성화하거나 비활성화할 수도 있습니다. 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택하고 연결을 설정할 수 있도록 잠시 기다립니다.
+
+인증에 대한 자세한 내용은 [필요한 자격 증명 수집 [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials)에 대한 안내서를 참조하십시오.
 
 ![SSH 공개 키를 사용하는 SFTP 원본에 대한 새 계정 화면입니다.](../../../../images/tutorials/create/sftp/ssh.png)
 
