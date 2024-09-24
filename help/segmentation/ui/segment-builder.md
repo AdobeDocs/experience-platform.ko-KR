@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
+source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
 workflow-type: tm+mt
-source-wordcount: '4767'
+source-wordcount: '4717'
 ht-degree: 5%
 
 ---
@@ -111,8 +111,6 @@ ht-degree: 5%
 
 ![폴더 계층 구조가 대상에 대해 작동하는 방식을 보여 주는 이미지입니다.](../images/ui/segment-builder/audience-folder-structure.png)
 
-[Lucene의 검색 구문](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)을 사용하는 검색 창을 사용하여 대상자를 검색할 수도 있습니다. **[!UICONTROL 대상]** 탭에서 최상위 폴더를 선택하면 해당 폴더에서 검색할 수 있는 검색 창이 나타납니다. 전체 단어를 입력하면 검색 결과만 채워집니다. 예를 들어 `Online Shoppers`(이)라는 대상자를 찾으려면 검색 창에서 &quot;온라인&quot;을 입력하십시오. &quot;Online&quot;이라는 단어를 모두 입력하면 &quot;Online&quot;이라는 단어가 포함된 검색 결과가 나타납니다.
-
 ## 규칙 빌더 캔버스 {#rule-builder-canvas}
 
 >[!IMPORTANT]
@@ -158,6 +156,11 @@ ht-degree: 5%
 ![최대 값 수에 도달했음을 나타내는 경고가 표시됩니다.](../images/ui/segment-builder/maximum-values.png)
 
 ### 대상자 추가
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_addaudiences"
+>title="업데이트 검색"
+>abstract="기존 검색 시스템이 통합 검색을 사용하도록 업데이트되었습니다. 통합 검색을 사용하면 대상자를 보다 쉽고 강력하게 검색하여 세그먼트 멤버십을 찾을 수 있습니다."
 
 **[!UICONTROL 대상]** 탭에서 대상을 규칙 빌더 캔버스로 끌어다 놓아 새 세그먼트 정의에서 대상 멤버십을 참조할 수 있습니다. 이렇게 하면 새 세그먼트 정의 규칙에 속성으로 대상 멤버십을 포함하거나 제외할 수 있습니다.
 
