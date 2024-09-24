@@ -5,10 +5,10 @@ title: 스키마 편집기를 사용하여 두 스키마 간의 관계 정의
 description: 이 문서에서는 Experience Platform 사용자 인터페이스에서 스키마 편집기를 사용하여 두 스키마 간의 관계를 정의하는 자습서를 제공합니다.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
 workflow-type: tm+mt
-source-wordcount: '1158'
-ht-degree: 10%
+source-wordcount: '1376'
+ht-degree: 9%
 
 ---
 
@@ -109,19 +109,49 @@ Adobe Experience Platform에서는 다양한 채널에서 고객과 브랜드와
 
 >[!NOTE]
 >
->아래 단계에서는 캔버스에서 오른쪽 레일 컨트롤을 사용하여 관계 필드를 정의하는 방법을 다룹니다. Real-Time CDP B2B 에디션에 액세스할 수 있는 경우 다대일 관계를 만들 때와 마찬가지로 [동일한 대화 상자](./relationship-b2b.md#relationship-field)를 사용하여 일대일 관계를 정의할 수도 있습니다.
+>관계는 문자열 또는 문자열 배열 필드에서만 지원됩니다.
 
-캔버스에서 `preferredHotel` 필드를 선택한 다음 **[!UICONTROL 관계]** 확인란이 나타날 때까지 **[!UICONTROL 필드 속성]** 아래로 스크롤합니다. 확인란을 선택하여 관계 필드를 구성하는 데 필요한 매개 변수를 표시합니다.
+캔버스에서 `preferredHotel` 필드를 선택한 다음 **[!UICONTROL 필드 속성]** 사이드바에서 **[!UICONTROL 관계 추가]**&#x200B;를 선택하십시오.
 
-![](../images/tutorials/relationship/relationship-checkbox.png)
+![필드 속성 사이드바에서 관계 추가가 강조 표시된 스키마 편집기.](../images/tutorials/relationship/add-relationship.png)
 
-**[!UICONTROL 참조 스키마]**&#x200B;에 대한 드롭다운을 선택하고 관계에 대한 참조 스키마를 선택합니다(이 예제에서는 &quot;[!DNL Hotels]&quot;). **[!UICONTROL 참조 ID 네임스페이스]**&#x200B;에서 참조 스키마 ID 필드의 네임스페이스를 선택합니다(이 경우 &quot;[!DNL Hotel ID]&quot;). 완료되면 **[!UICONTROL 적용]**&#x200B;을 선택합니다.
+[!UICONTROL 관계 추가] 대화 상자가 나타납니다. 이 대화 상자에서 관계 필드 구성에 필요한 매개 변수를 설정할 수 있습니다. Real-Time CDP B2C 사용자의 경우 **전용**&#x200B;에서 원본 스키마와 참조 스키마 간의 일대일 관계를 설정할 수 있습니다.
 
-![](../images/tutorials/relationship/reference-schema-id-namespace.png)
+>[!NOTE]
+>
+>Real-Time CDP B2B 에디션에 액세스할 수 있는 경우 캔버스의 오른쪽 레일 컨트롤을 사용하여 관계 필드를 정의하고 [동일한 대화 상자](./relationship-b2b.md#relationship-field)를 사용하여 다대일 관계를 만들 수 있습니다.
+
+![관계 추가 대화 상자](../images/tutorials/relationship/add-relationship-dialog.png)
+
+**[!UICONTROL 참조 스키마]**&#x200B;에 대한 드롭다운을 사용하고 관계에 대한 참조 스키마를 선택합니다(이 예제에서는 &quot;[!DNL Hotels]&quot;).
+
+>[!NOTE]
+>
+>기본 ID가 포함된 스키마만 참조 스키마 드롭다운 메뉴에 포함됩니다. 이 안전 조치는 아직 제대로 구성되지 않은 스키마와의 관계를 실수로 생성하는 것을 방지합니다.
+
+참조 스키마의 ID 네임스페이스(이 경우 &quot;[!DNL Hotel ID]&quot;)는 **[!UICONTROL 참조 ID 네임스페이스]** 아래에 자동으로 채워집니다. 완료되면 **[!UICONTROL 적용]**&#x200B;을 선택합니다.
+
+![관계 매개 변수가 구성되어 있고 적용 이 강조 표시된 관계 추가 대화 상자.](../images/tutorials/relationship/apply-relationship.png)
 
 이제 `preferredHotel` 필드가 캔버스에서 관계로 강조 표시되어 참조 스키마의 이름을 표시합니다. 변경 내용을 저장하고 워크플로우를 완료하려면 **[!UICONTROL 저장]**&#x200B;을 선택하십시오.
 
-![](../images/tutorials/relationship/relationship-save.png)
+![관계 참조와 [저장]이 강조 표시된 스키마 편집기입니다.](../images/tutorials/relationship/relationship-save.png)
+
+### 기존 관계 필드 편집 {#edit-relationship}
+
+참조 스키마를 변경하려면 기존 관계가 있는 필드를 선택한 다음 **[!UICONTROL 필드 속성]** 사이드바에서 **[!UICONTROL 관계 편집]**&#x200B;을 선택하십시오.
+
+![편집 관계가 강조 표시된 스키마 편집기입니다.](../images/tutorials/relationship/edit-relationship.png)
+
+[!UICONTROL 관계 편집] 대화 상자가 나타납니다. 여기에서 [관계 필드 정의](#relationship-field)에 설명된 프로세스를 따르거나 관계를 삭제할 수 있습니다. 참조 스키마에 대한 관계를 제거하려면 **[!UICONTROL 관계 삭제]**&#x200B;를 선택하십시오.
+
+![관계 편집 대화 상자](../images/tutorials/relationship/edit-relationship-dialog.png)
+
+## 관계 필터링 및 검색 {#filter-and-search}
+
+[!UICONTROL 스키마] 작업 영역의 [!UICONTROL 관계] 탭에서 스키마 내의 특정 관계를 필터링하고 검색할 수 있습니다. 이 보기를 사용하여 관계를 빠르게 찾고 관리할 수 있습니다. 필터링 옵션에 대한 자세한 지침은 [스키마 리소스 탐색](../ui/explore.md#lookup)에 대한 문서를 참조하십시오.
+
+![스키마 작업 영역의 관계 탭입니다.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## 다음 단계
 

@@ -2,10 +2,10 @@
 title: Real-time Customer Data Platform B2B 에디션에서 두 스키마 간의 관계 정의
 description: Adobe Real-time Customer Data Platform B2B 에디션에서 두 스키마 간의 다대일 관계를 정의하는 방법을 알아봅니다.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 15%
+source-wordcount: '1769'
+ht-degree: 12%
 
 ---
 
@@ -65,19 +65,19 @@ Adobe Real-time Customer Data Platform B2B 에디션은 [계정](../classes/b2b/
 
 참조용으로 다음 섹션에서는 관계가 정의되기 전에 이 자습서에서 사용되는 각 스키마의 구조를 설명합니다. 스키마 구조에서 기본 ID가 정의된 위치와 기본 ID가 사용하는 사용자 정의 네임스페이스를 참고하십시오.
 
-### [!DNL Opportunities] 스키마
+### 영업 기회 스키마
 
 소스 스키마 &quot;[!DNL Opportunities]&quot;이(가) [!UICONTROL XDM 비즈니스 영업 기회] 클래스를 기반으로 합니다. 클래스에서 제공하는 필드 중 하나(`opportunityKey`)가 스키마의 식별자 역할을 합니다. 특히 `opportunityKey` 개체 아래의 `sourceKey` 필드는 [!DNL B2B Opportunity](이)라는 사용자 지정 네임스페이스에서 스키마의 기본 ID로 설정됩니다.
 
-**[!UICONTROL 스키마 속성]**&#x200B;에서 볼 수 있듯이 이 스키마는 [!DNL Real-Time Customer Profile]에서 사용할 수 있도록 설정되었습니다.
+**[!UICONTROL 필드 속성]**&#x200B;에서 볼 수 있듯이 이 스키마는 [!DNL Real-Time Customer Profile]에서 사용할 수 있도록 설정되었습니다.
 
-![기회 스키마](../images/tutorials/relationship-b2b/opportunities.png)
+![스키마 편집기에서 opportunityKey 개체와 Enable for profile 토글이 강조 표시된 Opportunities 스키마.](../images/tutorials/relationship-b2b/opportunities.png)
 
 ### [!DNL Accounts] 스키마
 
 참조 스키마 &quot;[!DNL Accounts]&quot;은(는) [!UICONTROL XDM 계정] 클래스를 기반으로 합니다. 루트 수준 `accountKey` 필드에는 [!DNL B2B Account]이라는 사용자 지정 네임스페이스에서 기본 ID 역할을 하는 `sourceKey`이(가) 포함되어 있습니다. 이 스키마는 프로필에서도 사용할 수 있도록 설정되었습니다.
 
-![계정 스키마](../images/tutorials/relationship-b2b/accounts.png)
+![AccountKey 개체와 Enable for profile 토글이 강조 표시된 스키마 편집기의 Accounts 스키마.](../images/tutorials/relationship-b2b/accounts.png)
 
 ## 소스 스키마에 대한 관계 필드 정의 {#relationship-field}
 
@@ -97,29 +97,64 @@ Adobe Real-time Customer Data Platform B2B 에디션은 [계정](../classes/b2b/
 >
 >현재 소스 스키마에서 참조 스키마까지 다대일 및 일대일 관계만 정의할 수 있습니다. 일대다 관계의 경우 &quot;다&quot;를 나타내는 관계 필드를 스키마에 정의해야 합니다.
 
-관계 필드를 설정하려면 캔버스 내에서 해당 필드 옆에 있는 화살표 아이콘(![화살표 아이콘](/help/images/icons/alias.png))을 선택하십시오. [!DNL Opportunities] 스키마의 경우 계정과 다대일 관계를 설정하는 것이 목표이므로 `accountKey.sourceKey` 필드입니다.
+관계 필드를 설정하려면 캔버스 내에서 해당 필드를 선택한 다음 [!UICONTROL 스키마 속성] 사이드바에서 **[!UICONTROL 관계 추가]**&#x200B;를 선택하십시오. [!DNL Opportunities] 스키마의 경우 계정과 다대일 관계를 설정하는 것이 목표이므로 `accountKey.sourceKey` 필드입니다.
 
-![관계 단추](../images/tutorials/relationship-b2b/relationship-button.png)
+![sourceKey 필드 및 관계 추가가 강조 표시된 스키마 편집기입니다.](../images/tutorials/relationship-b2b/add-relationship.png)
 
-관계에 대한 세부 사항을 지정할 수 있는 대화 상자가 나타납니다. 관계 유형이 **[!UICONTROL 다대일]**(으)로 자동 설정됩니다.
+[!UICONTROL 관계 추가] 대화 상자가 나타납니다. 이 대화 상자를 사용하여 관계 세부 사항을 지정합니다. 관계 유형은 기본적으로 **[!UICONTROL 다대일]**(으)로 설정됩니다.
 
-![관계 대화 상자](../images/tutorials/relationship-b2b/relationship-dialog.png)
+![다대일 스키마 관계가 강조 표시된 관계 추가 대화 상자입니다.](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-**[!UICONTROL 참조 스키마]**&#x200B;에서 검색 창을 사용하여 참조 스키마의 이름을 찾습니다. 참조 스키마의 이름을 강조 표시하면 **[!UICONTROL 참조 ID 네임스페이스]** 필드가 자동으로 스키마 기본 ID의 네임스페이스로 업데이트됩니다.
+**[!UICONTROL 참조 스키마]**&#x200B;에서 검색 창 또는 드롭다운 메뉴를 사용하여 참조 스키마의 이름을 찾습니다. 참조 스키마의 이름을 강조 표시하면 **[!UICONTROL 참조 ID 네임스페이스]** 필드가 참조 스키마의 기본 ID의 네임스페이스로 자동 업데이트됩니다.
 
-![참조 스키마](../images/tutorials/relationship-b2b/reference-schema.png)
+>[!NOTE]
+>
+>사용 가능한 참조 스키마 목록은 적합한 스키마만 포함하도록 필터링됩니다. 스키마 **must**&#x200B;에 할당된 기본 ID가 있으며 B2B 클래스 또는 개별 프로필 클래스여야 합니다. 잠재 고객 클래스 스키마에는 관계가 있을 수 없습니다.
 
-**[!UICONTROL 현재 스키마의 관계 이름]** 및 **[!UICONTROL 참조 스키마의 관계 이름]**&#x200B;에서 소스 및 참조 스키마 컨텍스트의 관계에 대해 알기 쉬운 이름을 각각 지정하십시오. 완료되면 **[!UICONTROL 저장]**&#x200B;을 선택하여 변경 내용을 적용하고 스키마를 저장합니다.
+![참조 스키마 및 참조 ID 네임스페이스 필드가 강조 표시된 관계 추가 대화 상자입니다.](../images/tutorials/relationship-b2b/reference-schema.png)
 
-![관계 이름](../images/tutorials/relationship-b2b/relationship-name.png)
+**[!UICONTROL 현재 스키마의 관계 이름]** 및 **[!UICONTROL 참조 스키마의 관계 이름]**&#x200B;에서 소스 및 참조 스키마 컨텍스트의 관계에 대해 알기 쉬운 이름을 각각 지정하십시오. 완료되면 **[!UICONTROL 적용]**&#x200B;을 선택하여 변경 내용을 확인하고 관계를 저장합니다.
 
-이제 관계 필드가 이전에 제공한 친숙한 이름으로 표시되어 캔버스가 다시 나타납니다. 쉽게 참조할 수 있도록 왼쪽 레일 아래에 관계 이름도 나열됩니다.
+>[!NOTE]
+>
+>관계 이름은 35자 이하여야 합니다.
 
-![관계 적용됨](../images/tutorials/relationship-b2b/relationship-applied.png)
+![관계 이름 필드가 강조 표시된 관계 추가 대화 상자입니다.](../images/tutorials/relationship-b2b/relationship-name.png)
+
+이제 관계 필드가 이전에 제공한 친숙한 이름으로 표시되어 캔버스가 다시 나타납니다. 쉽게 참조할 수 있도록 왼쪽 레일에 관계 이름도 나열됩니다.
+
+![새 관계 이름이 적용된 스키마 편집기입니다.](../images/tutorials/relationship-b2b/relationship-applied.png)
 
 참조 스키마의 구조를 보면 스키마의 기본 ID 필드 옆에 관계 마커가 나타나고 왼쪽 레일에 표시됩니다.
 
-![대상 스키마 관계 마커](../images/tutorials/relationship-b2b/destination-relationship.png)
+![스키마 편집기에서 새 관계 마커가 강조 표시된 대상 스키마입니다.](../images/tutorials/relationship-b2b/destination-relationship.png)
+
+## B2B 스키마 관계 편집 {#edit-schema-relationship}
+
+스키마 관계가 설정되면 소스 스키마에서 관계 필드를 선택한 후 **[!UICONTROL 관계 편집]**&#x200B;을 선택합니다.
+
+>[!NOTE]
+>
+>연결된 관계를 모두 보려면 참조 스키마에서 기본 ID 필드를 선택한 다음 [!UICONTROL 관계 보기]를 선택하십시오.
+>![관계 필드가 선택되고 관계 보기가 강조 표시된 스키마 편집기.](../images/tutorials/relationship-b2b/view-relationships.png "관계 필드가 선택되어 있고 관계 보기가 강조 표시된 스키마 편집기입니다."){width="100" zoomable="yes"}
+
+![관계 필드와 관계 편집이 강조 표시된 스키마 편집기입니다.](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
+
+[!UICONTROL 관계 편집] 대화 상자가 나타납니다. 이 대화 상자에서 참조 스키마 및 관계 이름을 변경하거나 관계를 삭제할 수 있습니다. 다대일 관계 유형은 변경할 수 없습니다.
+
+![관계 편집 대화 상자](../images/tutorials/relationship-b2b/edit-b2b-relationship-dialog.png)
+
+데이터 무결성을 유지하고 세그먼테이션 및 기타 프로세스에서 중단을 방지하려면 연결된 데이터 세트와의 스키마 관계를 관리할 때 다음 지침을 고려하십시오.
+
+* 스키마가 데이터 세트와 연결된 경우 세그먼테이션에 부정적인 영향을 줄 수 있으므로 관계를 직접 삭제하지 마십시오. 대신 관계를 제거하기 전에 연결된 데이터 세트를 삭제하십시오.
+* 기존 관계를 먼저 삭제하지 않으면 참조 스키마를 변경할 수 없습니다. 그러나 연결된 데이터 세트와의 관계를 삭제하면 의도하지 않은 결과가 발생할 수 있으므로 주의해서 이 작업을 수행해야 합니다.
+* 기존 연결된 데이터 세트를 사용하여 스키마에 새 관계를 추가하는 것은 의도한 대로 작동하지 않을 수 있으며 잠재적인 충돌을 초래할 수 있습니다.
+
+## 관계 필터링 및 검색 {#filter-and-search}
+
+[!UICONTROL 스키마] 작업 영역의 [!UICONTROL 관계] 탭에서 스키마 내의 특정 관계를 필터링하고 검색할 수 있습니다. 이 보기를 사용하여 관계를 빠르게 찾고 관리할 수 있습니다. 필터링 옵션에 대한 자세한 지침은 [스키마 리소스 탐색](../ui/explore.md#lookup)에 대한 문서를 참조하십시오.
+
+![스키마 작업 영역의 관계 탭입니다.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## 다음 단계
 

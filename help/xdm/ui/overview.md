@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스키마 UI 개요
 description: 이 개요에서는 Experience Platform의 스키마 작업 영역의 주요 기능을 다룹니다.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 16d6090bc71dbdc9ab42db98eafa0ea5afb5967b
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '307'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform 사용자 인터페이스의 [!UICONTROL 스키마] �
 
 Platform UI의 작업 영역에 액세스하려면 왼쪽 레일에서 **[!UICONTROL 스키마]**&#x200B;를 선택하십시오.
 
-![](../images/ui/overview/schemas-tab.png)
+![플랫폼 UI 왼쪽 탐색에서 스키마가 강조 표시된 스키마 작업 영역입니다.](../images/ui/overview/schemas-tab.png)
 
 ## 시작하기
 
