@@ -3,7 +3,7 @@ title: 그래프 구성의 예
 description: ID 그래프 연결 규칙 및 ID 데이터 작업 시 발생할 수 있는 일반적인 그래프 시나리오에 대해 알아봅니다.
 badge: Beta
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: 6ad4709d8d361c16c22eddeef5f7ccdd1f4b2fb3
 workflow-type: tm+mt
 source-wordcount: '2786'
 ht-degree: 6%
@@ -767,6 +767,6 @@ ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
 * [구현 안내서](./implementation-guide.md)
 * [문제 해결 및 FAQ](./troubleshooting.md)
-* [네임스페이스 우선 순위](./namespace-priority.md)
+* [네임스페이스 우선순위](./namespace-priority.md)
 * [그래프 시뮬레이션 UI](./graph-simulation.md)
 * [ID 설정 UI](./identity-settings-ui.md)

@@ -2,9 +2,9 @@
 title: UI에서 Adobe Analytics Source 연결 만들기
 description: UI에서 Adobe Analytics 소스 연결을 만들어 소비자 데이터를 Adobe Experience Platform으로 가져오는 방법을 알아봅니다.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
+source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2672'
 ht-degree: 3%
 
 ---
@@ -312,6 +312,13 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 >[!NOTE]
 >
 >Analytics 소스 커넥터는 전적으로 Adobe에 의해 관리되므로 데이터 세트 활동 페이지에는 배치에 대한 정보가 표시되지 않습니다. 수집된 레코드 관련 지표를 보고 데이터가 이동하는지 모니터링할 수 있습니다.
+
+## 데이터 흐름 삭제 {#delete-dataflow}
+
+Analytics 데이터 흐름을 삭제하려면 소스 작업 영역의 상단 헤더에서 **[!UICONTROL 데이터 흐름]**&#x200B;을 선택하십시오. 데이터 흐름 페이지를 사용하여 삭제하려는 Analytics 데이터 흐름을 찾은 다음 그 옆에 있는 생략 부호(`...`)를 선택합니다. 그런 다음 드롭다운 메뉴를 사용하여 **[!UICONTROL 삭제]**&#x200B;를 선택합니다.
+
+* 라이브 Analytics 데이터 흐름을 삭제하면 기본 데이터 세트도 삭제됩니다.
+* 채우기 분석 데이터 흐름을 삭제해도 기본 데이터 세트는 삭제되지 않지만, 해당 보고서 세트에 대한 채우기 프로세스는 중지됩니다. 채우기 데이터 흐름을 삭제하는 경우 수집된 데이터는 데이터 세트를 통해 계속 볼 수 있습니다.
 
 ## 다음 단계 및 추가 리소스
 
