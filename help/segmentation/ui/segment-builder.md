@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
+source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
-source-wordcount: '4717'
+source-wordcount: '4784'
 ht-degree: 5%
 
 ---
@@ -98,6 +98,11 @@ ht-degree: 5%
 | 여러 보고서 세트 | 친숙한 이름 설명자는 일반 변수에 포함되지 않습니다. <br><br>**예:** eVar2 | <ul><li>여러 설명자가 있는 필드는 일반으로 표시됩니다. 즉, UI에 친숙한 이름이 표시되지 않습니다.</li><li>쿼리는 eVar이 포함된 모든 데이터 세트의 데이터를 사용할 수 있으며, 이로 인해 혼합 또는 잘못된 결과가 발생할 수 있습니다.</li></ul> | 쿼리는 여러 데이터 세트에서 올바르게 결합된 결과를 사용합니다. |
 
 ### 대상자
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentBuilder_b2b_decomposition"
+>title="복합 평가"
+>abstract="다음 표현은 너무 복잡하여 한 명의 대상자로 표현할 수 없습니다. 동일한 세그먼트 정의에서 B2B 규칙과 사용자 기반 이벤트를 모두 사용하려면 아래 단계를 따르십시오.<ol><li>사용자 기반 이벤트만 참조하는 세그먼트 정의를 만들고 고유한 세그먼트 정의로 저장합니다.</li><li>새 세그먼트 정의에서 B2B-규칙을 참조하면서 이전에 만든 세그먼트 정의를 가져옵니다.</li></ol>"
 
 >[!NOTE]
 >
