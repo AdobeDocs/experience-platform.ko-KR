@@ -2,9 +2,9 @@
 title: Query Pro 모드 개요
 description: Adobe Experience Platform UI에서 SQL 쿼리를 사용하여 사용자 정의 대시보드용 차트를 생성하는 방법에 대해 알아봅니다.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1212'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,26 @@ UI 요소에 대한 자세한 내용은 [쿼리 편집기 사용 안내서](../.
 위젯의 그래프 또는 차트 유형을 변경하려면 [!UICONTROL 표시] 드롭다운에서 사용 가능한 옵션을 선택하십시오. 옵션에는 [!UICONTROL 줄], [!UICONTROL 도넛], [!UICONTROL 큰 숫자] 및 [!UICONTROL 막대]가 있습니다. 선택하면 위젯의 현재 설정에 대한 미리보기 시각화가 생성됩니다.
 
 ![위젯 미리 보기가 강조 표시된 위젯 작성기입니다.](../../images/sql-insights/widget-preview.png)
+
+## 고급 테이블 속성 {#advanced-attributes}
+
+테이블의 모든 열에 대해 자동 정렬 기능을 적용하려면 **[!UICONTROL 편집]**&#x200B;을 선택하여 전체 대시보드를 편집하세요.
+
+![편집이 강조 표시된 사용자 지정 대시보드입니다.](../../images/query-pro-mode/advanced-edit-dashboard.png)
+
+열 정렬을 추가할 테이블 차트에서 줄임표(`...`)를 선택한 다음 **[!UICONTROL 편집]**&#x200B;을 선택합니다.
+
+![편집 이 강조 표시된 줄임표 메뉴를 보여 주는 표입니다.](../../images/query-pro-mode/advanced-table-edit.png)
+
+열을 정렬하려면 **[!UICONTROL 정렬 가능]** 상자를 선택합니다.
+
+![정렬 가능한 확인란이 강조 표시된 테이블 편집 페이지입니다.](../../images/query-pro-mode/advanced-table-sortable.png)
+
+속성 아이콘(![속성 아이콘)을 선택합니다.](/help/images/icons/properties.png)) 오른쪽 레일에서 [!UICONTROL 속성] 패널을 엽니다. **[!UICONTROL 속성]** 패널에서 드롭다운을 사용하여 **[!UICONTROL 기본 정렬]** 열을 선택한 다음 드롭다운을 사용하여 **[!UICONTROL 정렬 방향]**&#x200B;을 선택합니다. 마지막으로 **[!UICONTROL 저장 후 닫기]**&#x200B;를 선택합니다.
+
+![속성 아이콘, 기본 정렬, 정렬 방향 및 저장 및 닫기가 강조 표시된 위젯 작성기입니다.](../../images/query-pro-mode/advanced-table-properties.png)
+
+정렬, 열 크기 조정 및 페이지 매김 기능 사용에 대한 자세한 내용은 [자세히 보기](./view-more.md)를 참조하세요.
 
 ## 위젯 속성 {#properties}
 
