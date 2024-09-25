@@ -4,9 +4,9 @@ title: 라이선스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
 workflow-type: tm+mt
-source-wordcount: '2702'
+source-wordcount: '2739'
 ht-degree: 13%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 13%
 
 Adobe Experience Platform [!UICONTROL 라이선스 사용] 대시보드를 통해 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있습니다. 여기에 표시되는 정보는 Platform 인스턴스의 일별 스냅샷 중에 캡처됩니다.
 
-라이선스 사용 보고서는 라이선스 사용 지표에 비해 높은 수준의 세부기간을 제공합니다. 대시보드는 구매한 각 제품에 대한 사용 지표, 모든 프로덕션 또는 개발 샌드박스의 통합된 지표 사용 및 특정 샌드박스의 사용 지표를 제공합니다. 사용 지표를 사용하여 Real-time Customer Data Platform, Adobe Journey Optimizer 및 Customer Journey Analytics Experience Platform 애플리케이션을 추적할 수 있습니다.
+라이선스 사용 보고서는 라이선스 사용 지표에 비해 높은 수준의 세부기간을 제공합니다. 대시보드는 구매한 각 제품(및 관련 추가 기능)에 대한 사용 지표, 모든 프로덕션 또는 개발 샌드박스에서 지표의 통합 사용 및 특정 샌드박스의 사용 지표를 제공합니다. 사용 지표를 사용하여 Real-time Customer Data Platform, Adobe Journey Optimizer 및 Customer Journey Analytics Experience Platform 애플리케이션을 추적할 수 있습니다.
 
 이 안내서에서는 UI에서 라이선스 사용 대시보드에 액세스하고 작업하는 방법에 대해 간략하게 설명하고 대시보드에 표시된 시각화에 대한 자세한 정보를 제공합니다.
 
@@ -52,7 +52,7 @@ Adobe Experience Platform [!UICONTROL 라이선스 사용] 대시보드를 통�
 
 ## [!UICONTROL 라이선스 사용량] 대시보드 데이터
 
-[!UICONTROL 라이선스 사용량] 대시보드에는 구입한 모든 Experience Platform 제품 목록이 표시됩니다. 이 목록에서 연결된 모든 샌드박스에서 Experience Platform을 위한 조직의 라이선스 관련 데이터의 스냅샷을 찾을 수 있습니다.
+[!UICONTROL 라이선스 사용량] 대시보드에는 구입한 모든 Experience Platform 제품 목록과 해당 제품에 대한 추가 기능이 표시됩니다. 이 대시보드에서 연결된 모든 샌드박스에서 Experience Platform을 위한 조직의 라이선스 관련 데이터의 스냅샷을 찾을 수 있습니다.
 
 이 대시보드의 데이터는 스냅샷이 생성된 특정 시점에 나타나는 것과 동일하게 표시됩니다. 즉, 스냅샷은 데이터의 근사치나 샘플이 아니며 대시보드가 실시간으로 업데이트되지 않는다.
 
@@ -72,12 +72,16 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 
 ## [!UICONTROL 개요] 탭 {#overview-tab}
 
-이 대시보드에는 추가 기능을 포함하여 사용 허가된 모든 Adobe Experience Platform 제품이 표 형식으로 표시됩니다. 이 표에서는 사용 가능한 모든 프로필에서 라이선스 사용에 대한 주요 정보를 제공합니다.
+[!UICONTROL 라이선스 사용량] 대시보드에는 두 개의 별도 테이블이 표시됩니다. **핵심 제품** 및 **추가 기능**.
+
+- **[!UICONTROL 핵심 제품] 표**: 이 표에는 조직에서 라이선스를 부여한 기본 Adobe Experience Platform 제품이 나열됩니다. 각 핵심 제품에는 샌드박스 수준에서 자체 지표, 사용 추적 및 드릴스루 보기가 있습니다. 이러한 핵심 제품은 추적을 위한 주요 지표를 제공하며 모든 추가 기능이 이러한 지표에 포함됩니다.
+
+- **[!UICONTROL 추가 기능] 테이블**: 이 테이블에는 라이선스 금액이 핵심 제품에서 지원하는 지표와 결합된 추가 제품이 나열됩니다. 추가 기능에는 별도의 지표가 없지만 연결된 핵심 제품의 사용 추적을 개선합니다.
 
 | 열 이름 | 설명 |
 |---|---|
 | **[!UICONTROL 제품]** | 조직에서 라이선스를 부여한 Adobe 솔루션입니다. |
-| **[!UICONTROL 기본 지표]** | 해당 제품에 대한 내에서 추적하는 데 사용되는 기본 지표입니다. |
+| **[!UICONTROL 기본 지표]** | 해당 제품 내에서 추적하는 데 사용되는 기본 지표입니다. |
 | **[!UICONTROL 라이선스 금액]** | 제품 라이선스 계약에 합의된 기본 지표의 최대 금액에 대해 계약된 값입니다. |
 | **[!UICONTROL 사용]** | 사용된 기본 지표의 양입니다. 이 값은 프로덕션 또는 개발의 모든 샌드박스에서 해당 지표의 총 사용량을 제공합니다. |
 | **[!UICONTROL 사용량 %]** | 라이선스 금액에 따라 사용되는 기본 지표의 비율입니다. |
@@ -85,9 +89,9 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 
 >[!NOTE]
 >
->추가 기능의 결과로 [!UICONTROL 라이선스 금액]에 추가된 항목이 기본 제품(예: Real-time Customer Data Platform, Adobe Journey Optimizer, Customer Journey Analytics)의 [!UICONTROL 라이선스 금액] 위에 추가됩니다. 해당 라이선스 금액의 사용(추가 기능 이후)은 기본 제품을 통해 추적됩니다. 예를 들어, 샌드박스 5개를 한 팩씩 구매하면 기본 제품 수량에 5개의 수량이 추가됩니다. 이 경우 추가 기능에 [!UICONTROL 라이선스 양]이(가) 1개로 표시되며, 이 추가 기능의 사용은 기본 제품을 통해 추적되므로 &quot;비어 있음&quot;입니다.
+>추가 기능의 라이선스 금액은 핵심 제품의 [!UICONTROL 라이선스 금액]에 포함되어 있습니다. 예를 들어, 추가 기능으로 샌드박스 5개 팩 1개를 구매하면 기본 제품 금액에 금액이 추가됩니다. 추가 기능 테이블에는 추가 기능에 해당하는 [!UICONTROL 라이선스 양]이 표시되지만 실제 사용량은 기본 제품을 통해 추적됩니다.
 
-각 제품이 다양한 지표를 추적할 수 있으므로 테이블은 각 제품에 대한 기본 지표를 나타냅니다.
+각 제품이 다양한 지표를 추적할 수 있으므로 표는 각 제품에 대한 기본 지표를 나타냅니다.
 
 ### 예상 사용량 {#predicted-usage}
 
@@ -111,8 +115,9 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 >
 >예측은 월별로 새로 고쳐집니다. 새로 고침 날짜가 정보 아이콘(![이 정보 아이콘)에 포함되어 있습니다.열 제목 위에 ](../images/license-usage/info-icon.png)) 있습니다.
 
-제품 권한 사용 요약을 보려면 [!UICONTROL 개요] 목록에서 제품을 선택하십시오.
+제품의 권한 사용 요약을 보려면 [!UICONTROL 핵심 제품] 테이블에서 제품을 선택하십시오.
 
+<!-- update image ... -->
 ![제품 및 예상 사용 열이 강조 표시된 [!UICONTROL 라이선스 사용량] [!UICONTROL 개요].](../images/license-usage/product-predicted-usage.png)
 
 요약 탭이 나타납니다. [!UICONTROL 요약] 및 [!UICONTROL 세부 정보] 탭에서 사용할 수 있는 세분화된 예측을 사용하여 효율적인 라이선스 사용을 위한 올바른 의사 결정을 보장할 수 있습니다.
@@ -121,6 +126,7 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 >
 >라이선스 사용량 예측은 과거 사용량을 기반으로 한 추정치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe으로 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다.
 
+<!-- update image ... -->
 ![예측된 사용 열이 강조 표시된 플랫폼 제품의 요약 보기입니다.](../images/license-usage/summary-predicted-usage.png)
 
 예측된 사용의 비율은 다음과 같이 결정됩니다.
@@ -229,7 +235,7 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 이러한 지표의 사용 가능 여부 및 이러한 각 지표의 특정 정의는 조직이 구입한 라이선스에 따라 다릅니다. 각 지표에 대한 자세한 정의는 해당 제품 설명 설명서를 참조하십시오.
 
 | 라이선스 | 제품 설명 |
-|---|---|
+| --- | --- |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD 표준</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, 앱 서비스 및 지능형 서비스](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT 고객 데이터 플랫폼: PRFL에서 10M로 업그레이드</li><li>RT CUSTOMER DATA PLATFORM: PRFL ~ 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
