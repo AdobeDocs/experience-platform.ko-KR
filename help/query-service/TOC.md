@@ -5,10 +5,10 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: a7796a93d588b4e41c668f1a0f60bffbcb291550
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 19%
+source-wordcount: '325'
+ht-degree: 23%
 
 ---
 
@@ -39,6 +39,7 @@ ht-degree: 19%
       - [ML용 엔지니어 기능](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [ML 환경으로 데이터 내보내기](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML 데이터 파이프라인 강화 통합 워크플로](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- [데이터 Distiller 하이퍼큐브](hypercubes.md)
 - 예 {#use-cases}
    - [개요](use-cases/overview.md)
    - [찾아보기 중단됨](use-cases/abandoned-browse.md)
@@ -48,8 +49,8 @@ ht-degree: 19%
    - [동의 분석](use-cases/consent-analysis.md)
    - [고객 생애 가치](use-cases/customer-lifetime-value.md)
    - [데이터 탐색](./use-cases/data-exploration.md)
-   - [십분위수 기반 파생 데이터 세트](use-cases/deciles-use-case.md)
-   - [유사 항목 일치](use-cases/fuzzy-match.md)
+   - [십분위 기반 파생 데이터 세트](use-cases/deciles-use-case.md)
+   - [퍼지 매치](use-cases/fuzzy-match.md)
    - [사용자의 페이지 보기 나열](use-cases/list-visitor-sessions.md)
    - [페이지 보기별로 방문자 나열](use-cases/visitors-by-number-of-page-views.md)
    - [성향 점수](use-cases/propensity-score.md)

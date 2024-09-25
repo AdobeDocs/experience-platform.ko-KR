@@ -3,7 +3,7 @@ keywords: Experience Platform;쿼리 서비스;쿼리 서비스;중첩된 데이
 title: BI 도구에 사용할 중첩된 데이터 구조 평면화
 description: 이 문서에서는 쿼리 서비스에서 타사 BI 도구를 사용할 때 세션 중에 모든 테이블 및 뷰에 대한 XDM 스키마를 병합하는 방법을 설명합니다.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 0%
@@ -56,7 +56,7 @@ prod:all?FLATTEN
 
 이 안내서에 사용된 예제 스키마는 표준 필드 그룹 [!UICONTROL Commerce 세부 정보]를 사용합니다. 이 스키마는 `commerce` 개체 구조 및 `productListItems` 배열을 사용합니다. [!UICONTROL Commerce 세부 정보] 필드 그룹](../../xdm/field-groups/event/commerce-details.md)에 대한 [자세한 내용은 XDM 설명서를 참조하세요. 스키마 구조의 표현은 아래 이미지에서 볼 수 있습니다.
 
-![`commerce` 및 `productListItems` 구조를 포함하는 Commerce 세부 정보 필드 그룹의 스키마 다이어그램입니다.](../images/essential-concepts/commerce-details.png)
+![`commerce` 및 `productListItems` 구조를 포함하는 Commerce 세부 정보 필드 그룹의 스키마 다이어그램입니다.](../images/key-concepts/commerce-details.png)
 
 BI 도구가 중첩된 데이터 구조를 지원하지 않는 경우 중첩된 필드에 직렬화된 값(예: 예제 스키마의 `commerce` 및 `productListItems`)이 포함되어 있으면 중첩된 필드를 참조하기 어려울 수 있습니다. 이러한 값은 인코딩된 단일 `commerce` 문자열 필드의 일부로 나타날 수 있으며 실제로 사용할 수 없습니다.
 

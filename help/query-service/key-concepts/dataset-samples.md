@@ -2,10 +2,10 @@
 title: 데이터 세트 샘플
 description: 쿼리 서비스 샘플 데이터 세트를 사용하면 쿼리 정확도 비용으로 처리 시간을 크게 단축하면서 빅 데이터에 대한 탐색 쿼리를 수행할 수 있습니다. 이 안내서에서는 대략적인 쿼리 처리를 위해 샘플을 관리하는 방법에 대한 정보를 제공합니다
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 28fe8ec5a589b8d181ba2f888d50fa9d2d7d4996
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 0%
+source-wordcount: '632'
+ht-degree: 1%
 
 ---
 
@@ -17,12 +17,13 @@ Adobe Experience Platform 쿼리 서비스는 대략적인 쿼리 처리 기능�
 
 대략적인 쿼리 처리를 위한 샘플을 관리할 수 있도록 쿼리 서비스는 데이터 세트 샘플에 대해 다음 작업을 지원합니다.
 
-- [균일한 무작위 데이터 세트 샘플을 만듭니다.](#create-a-sample)
-- [선택적으로 필터 조건 지정](##optional-filter-criteria)
-- [ADLS 테이블에 대한 샘플 목록을 봅니다.](#view-list-of-samples)
-- [샘플 데이터 세트를 직접 쿼리합니다.](#query-sample-datasets)
-- [샘플을 삭제합니다.](#delete-a-sample)
-- 원래 ADLS 테이블을 삭제하면 연결된 샘플이 삭제됩니다.
+- [데이터 세트 샘플](#dataset-samples)
+   - [시작하기 {#get-started}](#getting-started-get-started)
+   - [단일 무작위 데이터 집합 샘플 {#create-a-sample} 만들기](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [필요한 경우 필터 조건 {#optional-filter-criteria}을(를) 지정하십시오.](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [{#view-list-of-samples} 샘플 목록 보기](#view-the-list-of-samples-view-list-of-samples)
+   - [샘플 데이터 집합 {#query-sample-datasets} 쿼리](#query-the-sample-dataset-query-sample-datasets)
+   - [데이터 집합 샘플 {#delete-a-sample} 삭제](#delete-dataset-samples-delete-a-sample)
 
 ## 시작하기 {#get-started}
 
@@ -32,7 +33,7 @@ Adobe Experience Platform 쿼리 서비스는 대략적인 쿼리 처리 기능�
 >
 >Platform에 로그인할 때마다 세션 플래그를 활성화해야 합니다.
 
-![SET aqp=true;&#39; 명령이 강조 표시된 쿼리 편집기입니다.](../images/essential-concepts/set-session-flag.png)
+![SET aqp=true;&#39; 명령이 강조 표시된 쿼리 편집기입니다.](../images/key-concepts/set-session-flag.png)
 
 ## 균일한 무작위 데이터 세트 샘플 만들기 {#create-a-sample}
 
