@@ -3,10 +3,10 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 21fd5957da8914be8b4abfad5c78d1929f76d6f6
+source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '4202'
-ht-degree: 13%
+source-wordcount: '4095'
+ht-degree: 11%
 
 ---
 
@@ -30,26 +30,6 @@ ht-degree: 13%
 대상을 대상으로 활성화하려면 대상에 [연결됨](./connect-destination.md)이(가) 있어야 합니다. 아직 수행하지 않았다면 [대상 카탈로그](../catalog/overview.md)(으)로 이동하여 지원되는 대상을 탐색하고 사용할 대상을 구성합니다.
 
 ## 내보내기에 대해 지원되는 파일 포맷 {#supported-file-formats-export}
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_header"
->title="이 데이터 흐름의 종료 일자 업데이트"
->abstract="이 데이터 흐름의 종료 일자 업데이트"
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_body"
->title="이 데이터 흐름 본문의 종료 일자 업데이트"
->abstract="최근 이 대상에 대한 업데이트로 인해 이제 데이터 흐름에 종료 일자가 필요합니다. Adobe는 기본 종료 일자를 2025년 5월 1일로 설정했습니다. 원하는 종료 일자로 업데이트하지 않으면 기본 일자에 데이터 내보내기가 중단됩니다."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template"
->title="폴더 경로 편집"
->abstract="제공된 여러 매크로를 사용하여 데이터 세트를 내보내는 폴더 경로를 사용자 정의합니다."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template_preview"
->title="데이터 세트 폴더 경로 미리보기"
->abstract="이 창에 추가한 매크로를 기반으로 스토리지 위치에서 생성된 폴더 구조를 미리보기합니다."
 
 대상을 내보낼 때 다음 파일 형식이 지원됩니다.
 
@@ -290,7 +270,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
    >[!NOTE]
    >
-   >이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 대한 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
+   >이 기능은 베타 버전이며 일부 고객만 사용할 수 있습니다. 이 기능에 액세스하려면 Adobe 담당자에게 문의하십시오.
 
    ![끌어다 놓기로 매핑 필드를 다시 정렬하는 방법을 보여 주는 기록입니다.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 

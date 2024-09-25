@@ -4,10 +4,10 @@ title: 흐름 서비스 API를 사용하여 데이터 세트 내보내기
 description: 흐름 서비스 API를 사용하여 데이터 세트를 내보내기 하여 대상을 선택하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
+source-git-commit: 22a752e28fe3cc4cb3337b456e80ef1b273f6a71
 workflow-type: tm+mt
-source-wordcount: '3524'
-ht-degree: 4%
+source-wordcount: '5107'
+ht-degree: 3%
 
 ---
 
@@ -16,6 +16,19 @@ ht-degree: 4%
 >[!AVAILABILITY]
 >
 >* 이 기능은 Real-Time CDP Prime 및 Ultimate 패키지, Adobe Journey Optimizer 또는 Customer Journey Analytics을 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
+
+>[!IMPORTANT]
+>
+>**작업 항목**: [2024년 9월 Experience Platform 릴리스](/help/release-notes/latest/latest.md#destinations)에서는 데이터 세트 데이터 흐름 내보내기에 대한 `endTime` 날짜를 설정하는 옵션을 도입했습니다. Adobe은 또한 9월 릴리스 *전에*&#x200B;생성된 모든 데이터 세트 내보내기 데이터 흐름에 대한 기본 종료 날짜를 2025년 5월 1일로 도입하고 있습니다. 이러한 데이터 흐름의 경우 종료 날짜 이전에 데이터 흐름의 종료 날짜를 수동으로 업데이트해야 합니다. 그렇지 않으면 해당 날짜의 내보내기를 중지해야 합니다. Experience Platform UI를 사용하여 5월 1일에 중지하도록 설정할 데이터 흐름을 확인하십시오.
+>
+>마찬가지로, `endTime` 날짜를 지정하지 않고 만든 데이터 흐름의 경우 이 값은 기본적으로 만든 시간으로부터 6개월 후의 종료 시간으로 설정됩니다.
+
+<!--
+
+>You can retrieve a list of such dataflows by performing the following API call: `https://platform.adobe.io/data/foundation/flowservice/flows?property=scheduleParams.endTime==UNIXTIMESTAMPTHATWEWILLUSE`
+>
+
+-->
 
 이 문서에서는 [!DNL Flow Service API]을(를) 사용하여 [데이터 세트](/help/catalog/datasets/overview.md)를 Adobe Experience Platform에서 선호하는 클라우드 저장소 위치(예: [!DNL Amazon S3], SFTP 위치 또는 [!DNL Google Cloud Storage])로 내보내는 데 필요한 워크플로에 대해 설명합니다.
 
@@ -49,7 +62,7 @@ ht-degree: 4%
 이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Adobe Experience Platform에 성공적으로 수집된 모든 데이터는 [!DNL Data Lake] 내에서 데이터 세트로 유지됩니다. 데이터 세트는 스키마(열) 및 필드(행)를 포함하는 데이터 수집을 위한 저장소 및 관리 구조입니다. 데이터 세트에는 저장하는 데이터의 다양한 측면을 설명하는 메타데이터도 포함됩니다.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform]은(는) 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
+   * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform]은(는) 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하는 가상 샌드박스를 제공합니다.
 
 다음 섹션에서는 데이터 세트를 Platform의 클라우드 스토리지 대상으로 내보내기 위해 알아야 하는 추가 정보를 제공합니다.
 
@@ -1955,13 +1968,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
         "interval": 3, // also supports 6, 9, 12 hour increments
-        "timeUnit": "hour", // also supports "day" for daily increments. Use "interval": 1 when you select "timeUnit": "day"
-        "startTime": 1675901210 // UNIX timestamp start time (in seconds)
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
 
+아래 표에는 데이터 집합 내보내기에 대한 내보내기 시간, 빈도, 위치 등을 사용자 지정할 수 있는 `scheduleParams` 섹션의 모든 매개 변수에 대한 설명이 나와 있습니다.
+
+| 매개변수 | 설명 |
+|---------|----------|
+| `exportMode` | `"DAILY_FULL_EXPORT"` 또는 `"FIRST_FULL_THEN_INCREMENTAL"`을(를) 선택하십시오. 두 옵션에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서에서 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)를 참조하십시오. 사용 가능한 세 가지 내보내기 옵션은 <br>입니다. **전체 파일 - 한 번**: `"DAILY_FULL_EXPORT"`은(는) 데이터 집합의 일회성 전체 내보내기를 위해서만 `timeUnit`:`day` 및 `interval`:`0`과(와) 함께 사용할 수 있습니다. 데이터 세트의 일일 전체 내보내기는 지원되지 않습니다. 일별 내보내기가 필요한 경우 증분 내보내기 옵션을 사용합니다. <br> **매일 증분 내보내기**: 매일 증분 내보내기를 사용하려면 `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, `interval`:`1`을(를) 선택하십시오. <br> **증분 시간별 내보내기**: 시간별 증분 내보내기를 사용하려면 `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, `interval` :`3`,`6`,`9` 또는 `12`을(를) 선택합니다. |
+| `timeUnit` | 데이터 집합 파일을 내보내려는 빈도에 따라 `day` 또는 `hour`을(를) 선택하십시오. |
+| `interval` | `timeUnit`이(가) 요일인 경우 `1`을(를) 선택하고 시간 단위가 `hour`인 경우 `3`,`6`,`9`,`12`을(를) 선택합니다. |
+| `startTime` | 데이터 세트 내보내기가 시작되어야 하는 UNIX 단위 날짜 및 시간입니다. |
+| `endTime` | 데이터 세트 내보내기가 종료되어야 하는 UNIX 단위 날짜 및 시간입니다. |
+| `foldernameTemplate` | 내보낸 파일이 저장될 저장소 위치에 예상 폴더 이름 구조를 지정합니다. <ul><li><code>DATASET_ID</code> = <span>데이터 집합에 대한 고유 식별자입니다.</span></li><li><code>대상</code> = <span>대상 이름입니다.</span></li><li><code>날짜/시간</code> = <span>yyyyMMdd_HHmmss.</span> 형식의 날짜 및 시간입니다.</li><li><code>EXPORT_TIME</code> = <span>데이터 내보내기 예약 시간(형식: `exportTime=YYYYMMDDHHMM`.</span>)</li><li><code>대상_인스턴스_이름</code> = <span>대상의 특정 인스턴스 이름.</span></li><li><code>대상_인스턴스_ID</code> = <span>대상 인스턴스의 고유 식별자입니다.</span></li><li><code>샌드박스 이름</code> = <span>샌드박스 환경의 이름입니다.</span></li><li><code>조직 이름</code> = <span>조직 이름</span></li></ul> |
+
+{style="table-layout:auto"}
 +++
 
 **응답**
@@ -2008,12 +2037,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+아래 표에는 데이터 집합 내보내기에 대한 내보내기 시간, 빈도, 위치 등을 사용자 지정할 수 있는 `scheduleParams` 섹션의 모든 매개 변수에 대한 설명이 나와 있습니다.
+
+| 매개변수 | 설명 |
+|---------|----------|
+| `exportMode` | `"DAILY_FULL_EXPORT"` 또는 `"FIRST_FULL_THEN_INCREMENTAL"`을(를) 선택하십시오. 두 옵션에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서에서 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)를 참조하십시오. 사용 가능한 세 가지 내보내기 옵션은 <br>입니다. **전체 파일 - 한 번**: `"DAILY_FULL_EXPORT"`은(는) 데이터 집합의 일회성 전체 내보내기를 위해서만 `timeUnit`:`day` 및 `interval`:`0`과(와) 함께 사용할 수 있습니다. 데이터 세트의 일일 전체 내보내기는 지원되지 않습니다. 일별 내보내기가 필요한 경우 증분 내보내기 옵션을 사용합니다. <br> **매일 증분 내보내기**: 매일 증분 내보내기를 사용하려면 `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, `interval`:`1`을(를) 선택하십시오. <br> **증분 시간별 내보내기**: 시간별 증분 내보내기를 사용하려면 `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, `interval` :`3`,`6`,`9` 또는 `12`을(를) 선택합니다. |
+| `timeUnit` | 데이터 집합 파일을 내보내려는 빈도에 따라 `day` 또는 `hour`을(를) 선택하십시오. |
+| `interval` | `timeUnit`이(가) 요일인 경우 `1`을(를) 선택하고 시간 단위가 `hour`인 경우 `3`,`6`,`9`,`12`을(를) 선택합니다. |
+| `startTime` | 데이터 세트 내보내기가 시작되어야 하는 UNIX 단위 날짜 및 시간입니다. |
+| `endTime` | 데이터 세트 내보내기가 종료되어야 하는 UNIX 단위 날짜 및 시간입니다. |
+| `foldernameTemplate` | 내보낸 파일이 저장될 저장소 위치에 예상 폴더 이름 구조를 지정합니다. <ul><li><code>DATASET_ID</code> = <span>데이터 집합에 대한 고유 식별자입니다.</span></li><li><code>대상</code> = <span>대상 이름입니다.</span></li><li><code>날짜/시간</code> = <span>yyyyMMdd_HHmmss.</span> 형식의 날짜 및 시간입니다.</li><li><code>EXPORT_TIME</code> = <span>데이터 내보내기 예약 시간(형식: `exportTime=YYYYMMDDHHMM`.</span>)</li><li><code>대상_인스턴스_이름</code> = <span>대상의 특정 인스턴스 이름.</span></li><li><code>대상_인스턴스_ID</code> = <span>대상 인스턴스의 고유 식별자입니다.</span></li><li><code>샌드박스 이름</code> = <span>샌드박스 환경의 이름입니다.</span></li><li><code>조직 이름</code> = <span>조직 이름</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2061,12 +2107,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+아래 표에는 데이터 집합 내보내기에 대한 내보내기 시간, 빈도, 위치 등을 사용자 지정할 수 있는 `scheduleParams` 섹션의 모든 매개 변수에 대한 설명이 나와 있습니다.
+
+| 매개변수 | 설명 |
+|---------|----------|
+| `exportMode` | `"DAILY_FULL_EXPORT"` 또는 `"FIRST_FULL_THEN_INCREMENTAL"`을(를) 선택하십시오. 두 옵션에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서에서 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)를 참조하십시오. 사용 가능한 세 가지 내보내기 옵션은 <br>입니다. **전체 파일 - 한 번**: `"DAILY_FULL_EXPORT"`은(는) 데이터 집합의 일회성 전체 내보내기를 위해서만 `timeUnit`:`day` 및 `interval`:`0`과(와) 함께 사용할 수 있습니다. 데이터 세트의 일일 전체 내보내기는 지원되지 않습니다. 일별 내보내기가 필요한 경우 증분 내보내기 옵션을 사용합니다. <br> **매일 증분 내보내기**: 매일 증분 내보내기를 사용하려면 `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, `interval`:`1`을(를) 선택하십시오. <br> **증분 시간별 내보내기**: 시간별 증분 내보내기를 사용하려면 `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, `interval` :`3`,`6`,`9` 또는 `12`을(를) 선택합니다. |
+| `timeUnit` | 데이터 집합 파일을 내보내려는 빈도에 따라 `day` 또는 `hour`을(를) 선택하십시오. |
+| `interval` | `timeUnit`이(가) 요일인 경우 `1`을(를) 선택하고 시간 단위가 `hour`인 경우 `3`,`6`,`9`,`12`을(를) 선택합니다. |
+| `startTime` | 데이터 세트 내보내기가 시작되어야 하는 UNIX 단위 날짜 및 시간입니다. |
+| `endTime` | 데이터 세트 내보내기가 종료되어야 하는 UNIX 단위 날짜 및 시간입니다. |
+| `foldernameTemplate` | 내보낸 파일이 저장될 저장소 위치에 예상 폴더 이름 구조를 지정합니다. <ul><li><code>DATASET_ID</code> = <span>데이터 집합에 대한 고유 식별자입니다.</span></li><li><code>대상</code> = <span>대상 이름입니다.</span></li><li><code>날짜/시간</code> = <span>yyyyMMdd_HHmmss.</span> 형식의 날짜 및 시간입니다.</li><li><code>EXPORT_TIME</code> = <span>데이터 내보내기 예약 시간(형식: `exportTime=YYYYMMDDHHMM`.</span>)</li><li><code>대상_인스턴스_이름</code> = <span>대상의 특정 인스턴스 이름.</span></li><li><code>대상_인스턴스_ID</code> = <span>대상 인스턴스의 고유 식별자입니다.</span></li><li><code>샌드박스 이름</code> = <span>샌드박스 환경의 이름입니다.</span></li><li><code>조직 이름</code> = <span>조직 이름</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2114,13 +2177,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
 
+아래 표에는 데이터 집합 내보내기에 대한 내보내기 시간, 빈도, 위치 등을 사용자 지정할 수 있는 `scheduleParams` 섹션의 모든 매개 변수에 대한 설명이 나와 있습니다.
+
+| 매개변수 | 설명 |
+|---------|----------|
+| `exportMode` | `"DAILY_FULL_EXPORT"` 또는 `"FIRST_FULL_THEN_INCREMENTAL"`을(를) 선택하십시오. 두 옵션에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서에서 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)를 참조하십시오. 사용 가능한 세 가지 내보내기 옵션은 <br>입니다. **전체 파일 - 한 번**: `"DAILY_FULL_EXPORT"`은(는) 데이터 집합의 일회성 전체 내보내기를 위해서만 `timeUnit`:`day` 및 `interval`:`0`과(와) 함께 사용할 수 있습니다. 데이터 세트의 일일 전체 내보내기는 지원되지 않습니다. 일별 내보내기가 필요한 경우 증분 내보내기 옵션을 사용합니다. <br> **매일 증분 내보내기**: 매일 증분 내보내기를 사용하려면 `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, `interval`:`1`을(를) 선택하십시오. <br> **증분 시간별 내보내기**: 시간별 증분 내보내기를 사용하려면 `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, `interval` :`3`,`6`,`9` 또는 `12`을(를) 선택합니다. |
+| `timeUnit` | 데이터 집합 파일을 내보내려는 빈도에 따라 `day` 또는 `hour`을(를) 선택하십시오. |
+| `interval` | `timeUnit`이(가) 요일인 경우 `1`을(를) 선택하고 시간 단위가 `hour`인 경우 `3`,`6`,`9`,`12`을(를) 선택합니다. |
+| `startTime` | 데이터 세트 내보내기가 시작되어야 하는 UNIX 단위 날짜 및 시간입니다. |
+| `endTime` | 데이터 세트 내보내기가 종료되어야 하는 UNIX 단위 날짜 및 시간입니다. |
+| `foldernameTemplate` | 내보낸 파일이 저장될 저장소 위치에 예상 폴더 이름 구조를 지정합니다. <ul><li><code>DATASET_ID</code> = <span>데이터 집합에 대한 고유 식별자입니다.</span></li><li><code>대상</code> = <span>대상 이름입니다.</span></li><li><code>날짜/시간</code> = <span>yyyyMMdd_HHmmss.</span> 형식의 날짜 및 시간입니다.</li><li><code>EXPORT_TIME</code> = <span>데이터 내보내기 예약 시간(형식: `exportTime=YYYYMMDDHHMM`.</span>)</li><li><code>대상_인스턴스_이름</code> = <span>대상의 특정 인스턴스 이름.</span></li><li><code>대상_인스턴스_ID</code> = <span>대상 인스턴스의 고유 식별자입니다.</span></li><li><code>샌드박스 이름</code> = <span>샌드박스 환경의 이름입니다.</span></li><li><code>조직 이름</code> = <span>조직 이름</span></li></ul> |
+
+{style="table-layout:auto"}
 +++
 
 **응답**
@@ -2167,12 +2246,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+아래 표에는 데이터 집합 내보내기에 대한 내보내기 시간, 빈도, 위치 등을 사용자 지정할 수 있는 `scheduleParams` 섹션의 모든 매개 변수에 대한 설명이 나와 있습니다.
+
+| 매개변수 | 설명 |
+|---------|----------|
+| `exportMode` | `"DAILY_FULL_EXPORT"` 또는 `"FIRST_FULL_THEN_INCREMENTAL"`을(를) 선택하십시오. 두 옵션에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서에서 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)를 참조하십시오. 사용 가능한 세 가지 내보내기 옵션은 <br>입니다. **전체 파일 - 한 번**: `"DAILY_FULL_EXPORT"`은(는) 데이터 집합의 일회성 전체 내보내기를 위해서만 `timeUnit`:`day` 및 `interval`:`0`과(와) 함께 사용할 수 있습니다. 데이터 세트의 일일 전체 내보내기는 지원되지 않습니다. 일별 내보내기가 필요한 경우 증분 내보내기 옵션을 사용합니다. <br> **매일 증분 내보내기**: 매일 증분 내보내기를 사용하려면 `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, `interval`:`1`을(를) 선택하십시오. <br> **증분 시간별 내보내기**: 시간별 증분 내보내기를 사용하려면 `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, `interval` :`3`,`6`,`9` 또는 `12`을(를) 선택합니다. |
+| `timeUnit` | 데이터 집합 파일을 내보내려는 빈도에 따라 `day` 또는 `hour`을(를) 선택하십시오. |
+| `interval` | `timeUnit`이(가) 요일인 경우 `1`을(를) 선택하고 시간 단위가 `hour`인 경우 `3`,`6`,`9`,`12`을(를) 선택합니다. |
+| `startTime` | 데이터 세트 내보내기가 시작되어야 하는 UNIX 단위 날짜 및 시간입니다. |
+| `endTime` | 데이터 세트 내보내기가 종료되어야 하는 UNIX 단위 날짜 및 시간입니다. |
+| `foldernameTemplate` | 내보낸 파일이 저장될 저장소 위치에 예상 폴더 이름 구조를 지정합니다. <ul><li><code>DATASET_ID</code> = <span>데이터 집합에 대한 고유 식별자입니다.</span></li><li><code>대상</code> = <span>대상 이름입니다.</span></li><li><code>날짜/시간</code> = <span>yyyyMMdd_HHmmss.</span> 형식의 날짜 및 시간입니다.</li><li><code>EXPORT_TIME</code> = <span>데이터 내보내기 예약 시간(형식: `exportTime=YYYYMMDDHHMM`.</span>)</li><li><code>대상_인스턴스_이름</code> = <span>대상의 특정 인스턴스 이름.</span></li><li><code>대상_인스턴스_ID</code> = <span>대상 인스턴스의 고유 식별자입니다.</span></li><li><code>샌드박스 이름</code> = <span>샌드박스 환경의 이름입니다.</span></li><li><code>조직 이름</code> = <span>조직 이름</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2220,12 +2316,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+아래 표에는 데이터 집합 내보내기에 대한 내보내기 시간, 빈도, 위치 등을 사용자 지정할 수 있는 `scheduleParams` 섹션의 모든 매개 변수에 대한 설명이 나와 있습니다.
+
+| 매개변수 | 설명 |
+|---------|----------|
+| `exportMode` | `"DAILY_FULL_EXPORT"` 또는 `"FIRST_FULL_THEN_INCREMENTAL"`을(를) 선택하십시오. 두 옵션에 대한 자세한 내용은 일괄 처리 대상 활성화 자습서에서 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files)를 참조하십시오. 사용 가능한 세 가지 내보내기 옵션은 <br>입니다. **전체 파일 - 한 번**: `"DAILY_FULL_EXPORT"`은(는) 데이터 집합의 일회성 전체 내보내기를 위해서만 `timeUnit`:`day` 및 `interval`:`0`과(와) 함께 사용할 수 있습니다. 데이터 세트의 일일 전체 내보내기는 지원되지 않습니다. 일별 내보내기가 필요한 경우 증분 내보내기 옵션을 사용합니다. <br> **매일 증분 내보내기**: 매일 증분 내보내기를 사용하려면 `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, `interval`:`1`을(를) 선택하십시오. <br> **증분 시간별 내보내기**: 시간별 증분 내보내기를 사용하려면 `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, `interval` :`3`,`6`,`9` 또는 `12`을(를) 선택합니다. |
+| `timeUnit` | 데이터 집합 파일을 내보내려는 빈도에 따라 `day` 또는 `hour`을(를) 선택하십시오. |
+| `interval` | `timeUnit`이(가) 요일인 경우 `1`을(를) 선택하고 시간 단위가 `hour`인 경우 `3`,`6`,`9`,`12`을(를) 선택합니다. |
+| `startTime` | 데이터 세트 내보내기가 시작되어야 하는 UNIX 단위 날짜 및 시간입니다. |
+| `endTime` | 데이터 세트 내보내기가 종료되어야 하는 UNIX 단위 날짜 및 시간입니다. |
+| `foldernameTemplate` | 내보낸 파일이 저장될 저장소 위치에 예상 폴더 이름 구조를 지정합니다. <ul><li><code>DATASET_ID</code> = <span>데이터 집합에 대한 고유 식별자입니다.</span></li><li><code>대상</code> = <span>대상 이름입니다.</span></li><li><code>날짜/시간</code> = <span>yyyyMMdd_HHmmss.</span> 형식의 날짜 및 시간입니다.</li><li><code>EXPORT_TIME</code> = <span>데이터 내보내기 예약 시간(형식: `exportTime=YYYYMMDDHHMM`.</span>)</li><li><code>대상_인스턴스_이름</code> = <span>대상의 특정 인스턴스 이름.</span></li><li><code>대상_인스턴스_ID</code> = <span>대상 인스턴스의 고유 식별자입니다.</span></li><li><code>샌드박스 이름</code> = <span>샌드박스 환경의 이름입니다.</span></li><li><code>조직 이름</code> = <span>조직 이름</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2345,10 +2458,15 @@ Experience Platform은 지정한 저장소 위치에 내보낸 데이터 세트 
 
 * 압축된 JSON 파일을 내보낼 때 내보낸 파일 형식은 `json.gz`입니다.
 * 압축된 Parquet 파일을 내보낼 때 내보낸 파일 형식은 `gz.parquet`입니다.
+* JSON 파일은 압축 모드에서만 내보낼 수 있습니다.
 
 ## API 오류 처리 {#api-error-handling}
 
 이 자습서의 API 끝점은 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 오류 응답 해석에 대한 자세한 내용은 플랫폼 문제 해결 안내서의 [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+
+## 자주 묻는 질문 {#faq}
+
+데이터 세트 내보내기에 대한 [자주 묻는 질문 목록](/help/destinations/ui/export-datasets.md#faq)을 봅니다.
 
 ## 다음 단계 {#next-steps}
 
