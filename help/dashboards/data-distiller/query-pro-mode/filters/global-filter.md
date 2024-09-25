@@ -2,7 +2,7 @@
 title: 글로벌 필터 만들기
 description: 사용자 지정 전역 적용 필터를 사용하여 데이터 인사이트를 필터링하는 방법을 알아봅니다.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5dd821383e1b1a7bd4998a6cf14a941bfdf3f26c
+source-git-commit: 581eb2a33f9bdfddc89c9d8dbf9fca8eb3725b1d
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -66,4 +66,3 @@ ht-degree: 0%
 사용자 지정 전역 필터를 모두 지우려면 [!UICONTROL 필터] 대화 상자에서 **[!UICONTROL 모두 지우기]**&#x200B;를 선택하십시오.
 
 ![모두 지우기가 강조 표시된 필터 대화 상자입니다.](../../../images/query-pro-mode/clear-all.png)
-
