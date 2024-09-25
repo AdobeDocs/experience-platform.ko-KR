@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2024년 9월
 description: Adobe Experience Platform에 대한 2024년 9월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 50b0387dacb3e995d9c88206ef968ddc53edb14c
+source-git-commit: 0cb134fe6b0a87571e01ada7946c4bbb7d4c346b
 workflow-type: tm+mt
-source-wordcount: '1823'
-ht-degree: 29%
+source-wordcount: '1975'
+ht-degree: 27%
 
 ---
 
@@ -112,6 +112,12 @@ XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 �
 
 Adobe Experience Platform ID 서비스를 사용하여 여러 디바이스 및 시스템에 걸쳐 ID를 연결하여 고객과 고객의 행동을 종합적으로 파악할 수 있으므로, 실시간으로 효과적인 개인 디지털 환경을 제공할 수 있습니다.
 
+**업데이트된 기능**
+
+| 기능 | 설명 |
+| --- | --- |
+| ID 그래프 연결 규칙의 제한된 가용성 | ID 그래프 연결 규칙은 사용자의 정확한 개인화를 보장하기 위해 사용할 수 있는 Identity Service의 도구 세트입니다. <ul><li>이제 [ID 최적화 알고리즘](../../identity-service/identity-graph-linking-rules/identity-optimization-algorithm.md)을 사용하여 ID 그래프가 한 사람을 대표하는지 확인할 수 있으므로 실시간 고객 프로필에서 원치 않는 ID 병합을 방지할 수 있습니다.</li><li>[네임스페이스 우선 순위](../../identity-service/identity-graph-linking-rules/namespace-priority.md)을(를) 구성하여 각 네임스페이스의 중요도를 정의하고 프로필이 형성되고 세그먼트화되는 방식에 영향을 줍니다.</li><li>UI의 [그래프 시뮬레이션 도구](../../identity-service/identity-graph-linking-rules/graph-simulation.md)를 사용하여 다양한 구성을 가진 ID 그래프를 시뮬레이션하십시오.</li><li>[ID 설정 인터페이스](../../identity-service/identity-graph-linking-rules/identity-settings-ui.md)를 사용하여 고유한 네임스페이스를 지정하고 조직의 모든 네임스페이스에 대한 우선 순위를 설정하십시오.</li><li>그래프 데이터와 관련된 지표 및 트렌드는 [ID 대시보드](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs)를 참조하세요.</li></ul> ID 그래프 연결 규칙을 시도하려면 Adobe 계정 팀에 문의하여 개발 샌드박스에 액세스하십시오. |
+
 **업데이트된 설명서**
 
 | 기능 | 설명 |
@@ -131,7 +137,7 @@ ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-
 
 | 기능 | 설명 |
 | --- | --- |
-| 데이터 Distiller 대상 | Experience Platform의 Data Distiller에서 SQL 대상 확장을 사용하여 대상을 쉽게 만들고, 관리하고, 활성화합니다. 프로필에 원시 데이터가 필요 없이 데이터 레이크에서 직접 SQL 명령으로 대상 세그먼트를 정의합니다. 유연하고 데이터 중심적인 이 접근 방식을 사용하여 타깃팅 전략을 구체화하고 대상자를 파일 기반 대상에 자동으로 동기화합니다. 워크플로우를 간소화하고, 고객 관리를 최적화하고, 데이터의 모든 잠재력을 최대한 활용합니다. 대상 전략을 향상시키려면 SQL 대상 확장 사용에 대한 [안내서](../../query-service/home.md)를 읽어 보십시오. |
+| 데이터 Distiller 대상 | Experience Platform의 Data Distiller에서 SQL 대상 확장을 사용하여 대상을 쉽게 만들고, 관리하고, 활성화합니다. 프로필에 원시 데이터가 필요 없이 데이터 레이크에서 직접 SQL 명령으로 대상 세그먼트를 정의합니다. 유연하고 데이터 중심적인 이 접근 방식을 사용하여 타깃팅 전략을 구체화하고 대상자를 파일 기반 대상에 자동으로 동기화합니다. 워크플로우를 간소화하고, 고객 관리를 최적화하고, 데이터의 모든 잠재력을 최대한 활용합니다. 대상 전략을 향상시키려면 SQL 대상 확장 사용에 대한 [안내서](../../query-service/data-distiller-audiences/overview.md)를 읽어 보십시오. |
 | 데이터 Distiller 통계 - 하이퍼큐브 | 하이퍼큐브로 빅데이터 분석을 최적화합니다. 기록 데이터를 다시 처리하지 않고도 고유 카운트 및 다차원 분석과 같은 복잡한 계산을 처리할 수 있습니다. 정확성과 효율성을 유지하면서 점진적으로 데이터를 업데이트하고 워크플로우를 간소화하며 처리 시간을 단축합니다. 의사 결정을 전환하는 빠르고 확장 가능하며 비용 효율적인 통찰력을 얻으십시오. 고급 분석을 잠금 해제하려면 [하이퍼큐브 사용 가이드](../../query-service/hypercubes.md)를 살펴보십시오. |
 | 쿼리 편집기 개체 브라우저 | 쿼리 편집기의 새 개체 브라우저를 사용하여 쿼리 효율성을 높입니다. 데이터 세트를 빠르게 검색, 필터링 및 액세스하여 쿼리를 더 빠르게 작성하고 세분화할 수 있습니다. 실시간 스키마 업데이트 및 인스턴트 테이블 메타데이터를 통해 워크플로우를 간소화하고, 탐색 시간을 줄이고, 쿼리 환경을 개선할 수 있습니다. 데이터의 잠재력을 최대한 활용하고 분석을 최적화합니다. 자세한 내용은 개체 브라우저 사용에 대한 [안내서](../../query-service/ui/user-guide.md#object-browser)를 참조하십시오. |
 | 시간 계산 | 예약된 쿼리에 대해 새로 표시되는 연산 시간 지표를 통해 리소스 사용을 제어할 수 있습니다. 쿼리 실행 수준에서 완료 시간을 보고 CTAS/ITAS 배치 쿼리에 대한 리소스 사용을 모니터링하고 최적화합니다. 각 쿼리 실행에 대한 시작 시간, 완료 상태 및 계산 시간을 추적합니다. 성능 미세 조정 및 비용 절감 쿼리 효율성을 최대화하는 방법에 대한 자세한 내용은 [시간 계산 가이드](../../query-service/ui/query-schedules.md#compute-hours-at-job-level)를 참조하십시오. |
