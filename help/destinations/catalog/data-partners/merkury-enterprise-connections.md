@@ -1,13 +1,14 @@
 ---
 title: Merkury Enterprise 연결 대상
 description: Adobe Experience Platform UI를 사용하여 Merkury Enterprise Connections 대상 연결을 만드는 방법을 알아봅니다.
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1375'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
-
 
 # Merkury Enterprise 연결 대상
 
@@ -17,7 +18,7 @@ ht-degree: 3%
 
 ## 개요
 
-[!DNL Merkury Enterprise Connections] 대상을 사용하여 대상자를 [!DNL Merkury]에 안전하게 전달하십시오. [!DNL Merkury]은(는) 마케터에게 개인 기반 대상을 쉽게 일치시키고 [!DNL Merkury]의 80개 이상의 프리미엄 주소 지정 가능한 TV/CTV, 게시자 및 광고 기술 연결로 배달할 수 있도록 합니다. [!DNL Merkury]은(는) 2억 6,800만 명 이상의 미국 성인 소비자 ID 그래프에서 제공됩니다.
+[!DNL Merkury Enterprise Connections] 대상을 사용하여 대상자를 [!DNL Merkury]로 안전하게 전달합니다. [!DNL Merkury]은(는) 마케터에게 개인 기반 대상을 쉽게 일치시키고 [!DNL Merkury]의 80개 이상의 프리미엄 주소 지정 가능한 TV/CTV, 게시자 및 광고 기술 연결로 배달할 수 있도록 합니다. [!DNL Merkury]는 2억 6,800만 명 이상의 미국 성인 소비자 아이덴티티 그래프를 기반으로 운영됩니다.
 
 ![수집 및 활성화를 포함하여 Merkury와 Experience Platform 간의 연결을 보여 주는 다이어그램](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
 
@@ -60,7 +61,7 @@ ht-degree: 3%
 
 | **대상자** | **지원됨** | **설명 원본** |
 |---|---|---|      
-| Segmentation Service | ✓ 덧신 | Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home)을(를) 통해 생성된 대상입니다. |
+| Segmentation Service | ✓ 덧신 | Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/ko/docs/experience-platform/segmentation/home)을(를) 통해 생성된 대상입니다. |
 | 사용자 정의 업로드 | X | 대상 [[가져옴]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)을(를) CSV 파일에서 Experience Platform으로 가져옵니다. |
 
 {style="table-layout:auto"}

@@ -1,13 +1,14 @@
 ---
 title: Merkury Enterprise ID 대상
 description: Adobe Experience Platform UI를 사용하여 Merkury Enterprise ID 대상 연결을 만드는 방법을 알아봅니다.
-source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: a5452183-289c-49c3-9574-e09b0153dc00
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1469'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # Merkury Enterprise ID 대상
 
@@ -17,7 +18,7 @@ ht-degree: 2%
 
 ## 개요
 
-[!DNL Merkury Enterprise Identity] 대상을 사용하여 보다 정확하고 포괄적이며 통찰력 있는 소비자 프로필을 빌드합니다. 향상된 프로필 데이터를 통해 마케터는 더 나은 통찰력, 세그먼트 및 모델을 제공할 수 있으므로 보다 정확한 타겟팅 및 예측 모델링을 수행할 수 있습니다.
+[!DNL Merkury Enterprise Identity] 대상을 사용하여 보다 정확하고 포괄적이며 인사이트를 갖춘 소비자 프로필을 구축할 수 있습니다. 향상된 프로필 데이터를 통해 마케터는 더 나은 통찰력, 세그먼트 및 모델을 제공할 수 있으므로 보다 정확한 타겟팅 및 예측 모델링을 수행할 수 있습니다.
 
 ![수집 및 활성화를 포함하여 Merkury와 Experience Platform 간의 연결을 보여 주는 다이어그램](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
 
@@ -67,7 +68,7 @@ ht-degree: 2%
 
 | **대상자** | **지원됨** | **설명** | **원본** |
 |---|---|---|---|
-| Segmentation Service | ✓ 덧신 | Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home)을(를) 통해 생성된 대상입니다. |
+| Segmentation Service | ✓ 덧신 | Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/ko/docs/experience-platform/segmentation/home)을(를) 통해 생성된 대상입니다. |
 | 사용자 정의 업로드 | x | 대상 [[가져옴]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)을(를) CSV 파일에서 Experience Platform으로 가져옵니다. |
 
 {style="table-layout:auto"}
@@ -78,7 +79,7 @@ ht-degree: 2%
 
 | **대상자** | **지원됨** | **설명 원본** |
 |---|---|---|      
-| Segmentation Service | ✓ 덧신 | Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home)을(를) 통해 생성된 대상입니다. |
+| Segmentation Service | ✓ 덧신 | Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/ko/docs/experience-platform/segmentation/home)을(를) 통해 생성된 대상입니다. |
 | 사용자 정의 업로드 | X | 대상 [[가져옴]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)을(를) CSV 파일에서 Experience Platform으로 가져옵니다. |
 
 {style="table-layout:auto"}
