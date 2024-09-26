@@ -6,7 +6,7 @@ exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
 workflow-type: tm+mt
 source-wordcount: '2212'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -130,8 +130,8 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 프로필]**&#x200B;
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
->title="엔티티를 찾을 수 없음"
->abstract="즉, Platform이 요청한 엔티티를 찾을 수 없습니다. 이 오류를 해결하려면 다음 솔루션 중 하나를 시도해 보십시오.<ul><li>액세스하려는 엔티티의 URL에 올바른 프로필 ID가 나열되어 있는지 확인합니다.</li><li>액세스하려는 엔티티에 대한 올바른 조직 및 샌드박스 조합이 있는지 확인합니다.</li></ul>"
+>title="엔티티 찾을 수 없음"
+>abstract="이는 플랫폼이 요청된 엔티티를 찾을 수 없음을 의미합니다. 이 오류를 해결하려면 다음 솔루션 중 하나를 시도해 보십시오.<ul><li>접근하려는 엔티티의 URL에 올바른 프로필 ID가 나열되어 있는지 확인합니다.</li><li>액세스하려는 엔티티에 대한 올바른 조직 및 샌드박스 조합이 있는지 확인합니다.</li></ul>"
 
 **[!UICONTROL 프로필 ID]**&#x200B;을(를) 선택하면 **[!UICONTROL 세부 정보]** 탭이 열립니다. **[!UICONTROL 세부 정보]** 탭에 표시되는 프로필 정보가 여러 프로필 조각에서 병합되어 개별 고객에 대한 단일 보기로 형성되었습니다. 여기에는 기본 속성, 연결된 ID 및 채널 환경 설정 등 고객 세부 정보가 포함됩니다.
 
