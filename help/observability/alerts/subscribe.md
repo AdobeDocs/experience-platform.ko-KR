@@ -4,9 +4,9 @@ title: Adobe I/O 이벤트 알림 구독
 description: 이 문서에서는 Adobe Experience Platform 서비스에 대한 Adobe I/O 이벤트 알림을 구독하는 방법에 대한 단계를 제공합니다. 사용 가능한 이벤트 유형에 대한 참조 정보가 제공되며 적용 가능한 각  [!DNL Platform] 서비스에 대해 반환된 이벤트 데이터를 해석하는 방법에 대한 추가 설명서 링크도 함께 제공됩니다.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
+source-git-commit: 8e6301c5f834465acff99b4cd668017581c1dfa9
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '781'
 ht-degree: 1%
 
 ---
@@ -64,6 +64,10 @@ ht-degree: 1%
 >
 >* [플랫폼 알림](./rules.md)
 >* [Privacy Service 알림](../../privacy-service/privacy-events.md)
+
+>[!IMPORTANT]
+>
+>Edge 관련 경고는 현재 beta 버전이며 일부 베타 고객만 사용할 수 있습니다.
 
 ![](../images/notifications/choose-event-subscriptions.png)
 
