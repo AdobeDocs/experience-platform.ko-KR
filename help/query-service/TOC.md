@@ -5,9 +5,9 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: bdd3d37baa05c8da3213f425657a00fef6afecb8
+source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '339'
 ht-degree: 22%
 
 ---
@@ -41,7 +41,6 @@ ht-degree: 22%
       - [AI/ML 데이터 파이프라인 강화 통합 워크플로](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - 데이터 Distiller 대상 {#data-distiller-audiences}
    - [SQL을 사용하여 외부 대상 작성](data-distiller-audiences/overview.md)
-- [데이터 DISTILLER 하이퍼큐브](hypercubes.md)
 - 예 {#use-cases}
    - [개요](use-cases/overview.md)
    - [찾아보기 중단됨](use-cases/abandoned-browse.md)
@@ -70,6 +69,8 @@ ht-degree: 22%
    - [데이터 중복 제거](key-concepts/deduplication.md)
    - [데이터 세트 샘플](key-concepts/dataset-samples.md)
    - [데이터 세트 통계 계산](key-concepts/dataset-statistics.md)
+- 데이터 Distiller Hypercubes {#hypercubes}
+   - [하이퍼큐브를 통한 효율적인 빅 데이터 분석](hypercubes/overview.md)
 - 클라이언트를 쿼리 서비스 {#clients}에 연결
    - [클라이언트 연결 개요](clients/overview.md)
    - [SSL 모드](./clients/ssl-modes.md)
