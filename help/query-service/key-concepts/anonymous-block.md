@@ -2,9 +2,9 @@
 title: 쿼리 서비스의 익명 블록
 description: 익명 블록은 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문으로, 쿼리 시퀀스를 효율적으로 실행할 수 있습니다
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 9193ba821409806cd7b4667c5de73a0cf2660c66
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -44,9 +44,7 @@ $$;
 
 아래 예에서 `SET`은(는) 지정한 로컬 변수에서 `SELECT` 쿼리 결과를 유지합니다. 변수의 범위가 익명 블록으로 지정됩니다.
 
-스냅숏 ID가 로컬 변수(`@current_sid`)로 저장됩니다. 그런 다음 다음 쿼리에서 동일한 데이터 세트/테이블의 SNAPSHOT을 기반으로 결과를 반환하는 데 사용됩니다.
-
-데이터베이스 스냅숏은 SQL Server 데이터베이스의 읽기 전용 정적 보기입니다. [스냅숏 절에 대한 자세한 정보](../sql/syntax.md#SNAPSHOT-clause)는 SQL 구문 설명서를 참조하세요.
+스냅숏 ID가 로컬 변수(`@current_sid`)로 저장됩니다. 그런 다음 다음 쿼리에서 동일한 데이터 세트/테이블의 SNAPSHOT을 기반으로 결과를 반환하는 데 사용됩니다. [스냅숏 절에 대한 자세한 정보](../sql/syntax.md#SNAPSHOT-clause)는 SQL 구문 설명서를 참조하세요.
 
 ```SQL
 $$ BEGIN                                             

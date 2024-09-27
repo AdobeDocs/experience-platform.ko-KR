@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문에 대해 자세히 설명합니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: d2cb7c3d1968a33300d480e63c4cb007df3cce7b
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '4305'
+source-wordcount: '4291'
 ht-degree: 2%
 
 ---
@@ -707,11 +707,7 @@ select inline(productListItems) from source_dataset limit 10;
 | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;)) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;) | 3 | 12 |
 
-## [!DNL Spark] SQL 명령
-
-아래 하위 섹션에서는 쿼리 서비스에서 지원하는 Spark SQL 명령을 다룹니다.
-
-### 설정
+## 설정
 
 `SET` 명령은 속성을 설정하고 기존 속성 값을 반환하거나 기존 속성을 모두 나열합니다. 기존 속성 키에 대한 값이 제공되면 이전 값이 재정의됩니다.
 

@@ -2,9 +2,9 @@
 title: 쿼리 서비스의 증분 로드
 description: 증분 로드 기능은 익명 블록 및 스냅샷 기능을 모두 사용하여 일치하는 데이터를 무시하면서 데이터 레이크에서 데이터 웨어하우스로 데이터를 이동하는 거의 실시간 솔루션을 제공합니다.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -125,10 +125,6 @@ ht-degree: 0%
 이 논리는 모든 테이블에 적용하여 증분 로드를 수행할 수 있습니다.
 
 ## 만료된 스냅샷
-
->[!IMPORTANT]
->
->스냅숏 메타데이터가 **2**&#x200B;일 후에 만료됩니다. 만료된 스냅샷은 위에 제공된 스크립트의 논리를 무효화합니다.
 
 만료된 스냅샷 ID 문제를 해결하려면 익명 블록의 시작 부분에 다음 명령을 삽입합니다. 다음 코드 행은 메타데이터에서 사용 가능한 가장 빠른 `snapshot_id`을(를) 사용하여 `@from_snapshot_id`을(를) 재정의합니다.
 
