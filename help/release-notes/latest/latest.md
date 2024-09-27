@@ -11,7 +11,7 @@ ht-degree: 84%
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2024년 9월 24일**
+**릴리스 일자: 2024년 9월 24일**
 
 Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 
@@ -52,9 +52,9 @@ Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대
 | 기능 | 설명 |
 | --- | --- |
 | 라이선스 사용 추가 기능 표 | 라이선스 사용에 대한 세부 가시성을 확보하고 핵심 제품 및 추가 기능에 대한 전용 테이블을 사용하여 플랫폼 리소스를 관리합니다. 샌드박스 수준의 드릴스루 보기를 사용하여 각 핵심 제품에 대한 주요 지표를 추적 및 분석합니다. 추가 기능 지표는 핵심 제품 지표와 원활하게 통합되므로 사용량에 대한 포괄적인 보기를 제공합니다. 가시성이 향상되어 라이선스 관리를 최적화하고 리소스를 조직의 요구 사항에 맞게 조정할 수 있습니다. 자세한 내용은 [[!UICONTROL 라이선스 사용] 대시보드 가이드](../../dashboards/guides/license-usage.md#overview-tab)를 참조하세요. |
-| 쿼리 프로 모드 - 전역 필터 업그레이드 | 쿼리 프로 모드의 새로운 날짜 필터로 분석을 개선하십시오. SQL 쿼리에서 동적 날짜 매개변수를 사용하여 인사이트를 구체화하고 특정 시간대별로 데이터를 필터링하십시오. 직관적인 UI로 사전 설정이나 사용자 지정 날짜 범위를 선택해 대시보드가 모든 사용자에게 높은 관련성을 유지할 수 있도록 하십시오. 워크플로를 단순화하고, 정확성을 유지하며, 시의적절한 결정을 내려보십시오. 자세한 내용은 [날짜 필터 생성 가이드](../../dashboards/data-distiller/query-pro-mode/filters/global-filter.md)를 참조하시기 바랍니다. |
-| 쿼리 프로 모드 - 드릴 스루 | 쿼리 프로 모드의 드릴 스루 기능으로 더욱 깊은 인사이트를 얻고 높은 수준의 차트에서 상세한 대시보드까지 원활하게 탐색해 보십시오. 이 기능을 사용해 요약에서 심층 분석으로 간편하게 이동하고 추세, 고객 행동, KPI를 살펴볼 수 있습니다. 자동 필터 패스 스루 및 여러 수준의 드릴 스루를 통해 데이터의 일관성이 유지되므로 원활한 탐색이 가능합니다. 업무 흐름을 단순화하고, 맥락을 유지하고, 의사 결정을 가속화해 보십시오. 더 자세한 내용은 [드릴 스루 생성에 대한 단계별 가이드](../../dashboards/data-distiller/query-pro-mode/drill-through.md)를 읽어보시기 바랍니다. |
-| 쿼리 프로 모드 - 고급 테이블 속성 | 쿼리 프로 모드의 고급 테이블 속성을 사용하면 데이터 시각화 간소화, 워크플로 효율성 강화, 데이터 명확성 개선이 가능합니다. 사용자 정의 대시보드에서 바로 표에 자동 정렬, 크기 조정 및 페이지 매김을 추가해 보십시오. 주요 데이터의 우선순위를 정해 열을 정렬하고, 최적의 가독성을 위해 크기를 조정하고, SQL 쿼리를 수정하지 않고도 대용량 데이터 세트를 원활하게 탐색할 수 있습니다. 이러한 기능들을 통합하고 데이터 인사이트를 강화하는 방법에 대해서는 &#39;[자세히 보기](../../dashboards/data-distiller/query-pro-mode/view-more.md)&#39; 가이드를 읽어보시기 바랍니다. |
+| 쿼리 프로 모드 - 전역 필터 업그레이드 | 쿼리 프로 모드의 새로운 날짜 필터로 분석을 개선하십시오. SQL 쿼리에서 동적 날짜 매개변수를 사용하여 인사이트를 구체화하고 특정 시간대별로 데이터를 필터링하십시오. 직관적인 UI로 사전 설정이나 사용자 정의 날짜 범위를 선택하여 대시보드가 모든 사용자에게 높은 관련성을 유지할 수 있도록 하십시오. 워크플로를 단순화하고, 정확성을 유지하며, 시의적절한 결정을 내려보십시오. 자세한 내용은 [날짜 필터 생성 안내서](../../dashboards/data-distiller/query-pro-mode/filters/global-filter.md)를 참조하십시오. |
+| 쿼리 프로 모드 - 드릴 스루 | 쿼리 프로 모드의 드릴 스루 기능으로 더욱 깊은 인사이트를 얻고 높은 수준의 차트에서 상세한 대시보드까지 원활하게 탐색해 보십시오. 이 기능을 사용해 요약에서 심층 분석으로 간편하게 이동하고 추세, 고객 행동, KPI를 살펴볼 수 있습니다. 자동 필터 패스 스루 및 여러 수준의 드릴 스루를 통해 데이터의 일관성이 유지되므로 원활한 탐색이 가능합니다. 업무 흐름을 단순화하고, 맥락을 유지하고, 의사 결정을 가속화해 보십시오. 자세한 내용은 [드릴 스루 생성에 대한 단계별 안내서](../../dashboards/data-distiller/query-pro-mode/drill-through.md)를 읽어 보십시오. |
+| 쿼리 프로 모드 - 고급 테이블 속성 | 쿼리 프로 모드의 고급 테이블 속성을 사용하면 데이터 시각화 간소화, 워크플로 효율성 강화, 데이터 명확성 개선이 가능합니다. 사용자 정의 대시보드에서 바로 표에 자동 정렬, 크기 조정 및 페이지 매김을 추가해 보십시오. 주요 데이터의 우선순위를 정해 열을 정렬하고, 최적의 가독성을 위해 크기를 조정하고, SQL 쿼리를 수정하지 않고도 대용량 데이터 세트를 원활하게 탐색할 수 있습니다. 이러한 기능들을 통합하고 데이터 인사이트를 강화하는 방법에 대해서는 &#39;[더 보기](../../dashboards/data-distiller/query-pro-mode/view-more.md)&#39; 안내서를 읽어 보십시오. |
 | 총 데이터 볼륨 | 평균 프로필 풍부도 지표가 &quot;총 데이터 볼륨&quot; 지표로 대체되었습니다. 총 데이터 볼륨은 참여 및 개인화 워크플로를 위해 실시간 고객 프로필과 함께 사용할 수 있는 총 데이터 양을 의미합니다. 이 변경 내용에 대한 자세한 내용은 [전체 데이터 볼륨 가이드](../../landing/license-usage-and-guardrails/total-data-volume.md)에서 확인할 수 있습니다. |
 
 {style="table-layout:auto"}
@@ -105,11 +105,11 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 
 | 기능 | 설명 |
 | --- | --- |
-| 스키마 편집기 개선 사항 | 스키마 편집기에서 업데이트된 관계 워크플로를 통해 스키마 관계를 제어해 보십시오. Experience Platform UI에서 직접 기존 관계를 쉽게 업데이트하거나 제거할 수 있으므로 스키마 관리를 보다 원활하고 직관적으로 만들 수 있게 되었습니다. 세분화 및 기타 주요 프로세스 전반에 걸쳐 빈틈 없는 데이터 무결성을 보장하면서도 참조 스키마를 조정하고 관계 이름을 확실하게 변경할 수 있습니다. 스키마 관계를 효율적으로 관리하는 방법에 대한 더 자세한 내용은 [UI에서 관계 필드 정의하기](../../xdm/tutorials/relationship-ui.md#create-a-relationship-field-group)와 [B2B 관계](../../xdm/tutorials/relationship-b2b.md#edit-a-b2b-schema-relationship)에 대한 가이드에서 확인하실 수 있습니다. |
+| 스키마 편집기 개선 사항 | 스키마 편집기에서 업데이트된 관계 워크플로를 통해 스키마 관계를 제어해 보십시오. Experience Platform UI에서 직접 기존 관계를 쉽게 업데이트하거나 제거할 수 있으므로 스키마 관리를 보다 원활하고 직관적으로 만들 수 있게 되었습니다. 세분화 및 기타 주요 프로세스 전반에 걸쳐 빈틈 없는 데이터 무결성을 보장하면서도 참조 스키마를 조정하고 관계 이름을 확실하게 변경할 수 있습니다. 스키마 관계를 효율적으로 관리하는 방법에 대한 자세한 내용은 [UI에서 관계 필드 정의하기](../../xdm/tutorials/relationship-ui.md#create-a-relationship-field-group)와 [B2B 관계](../../xdm/tutorials/relationship-b2b.md#edit-a-b2b-schema-relationship)에 대한 안내서에서 확인할 수 있습니다. |
 
 {style="table-layout:auto"}
 
-XDM에 대한 더 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
+XDM에 대한 자세한 내용은 [XDM 시스템 개요](../../xdm/home.md)를 참조하십시오.
 
 ## ID 서비스 {#identity-service}
 
@@ -125,8 +125,8 @@ Adobe Experience Platform ID 서비스를 사용하여 여러 디바이스 및 �
 
 | 기능 | 설명 |
 | --- | --- |
-| 아이덴티티 그래프 연결 규칙에 대한 문제 해결 가이드 | 아이덴티티 그래프 연결 규칙에 대한 새로운 [문제 해결 가이드](../../identity-service/identity-graph-linking-rules/troubleshooting.md)를 읽고 아이덴티티 그래프 연결 규칙 사용에서 발생 가능한 일반적 문제 해결에 활용할 수 있는 접근 방식과 디버깅 솔루션에 대해 알아보십시오. |
-| 아이덴티티 그래프 연결 규칙에 대한 FAQ | 네임스페이스 우선순위, ID 최적화 알고리즘 및 아이덴티티 그래프 연결 규칙의 다른 패싯, 관련 자주 묻는 질문에 대한 답변 목록을 보려면 새로운 [아이덴티티 그래프 연결 규칙 FAQ](../../identity-service/identity-graph-linking-rules/troubleshooting.md#frequently-asked-questions)를 읽어보시기 바랍니다. |
+| 아이덴티티 그래프 연결 규칙에 대한 문제 해결 안내서 | 아이덴티티 그래프 연결 규칙에 대한 새로운 [문제 해결 안내서](../../identity-service/identity-graph-linking-rules/troubleshooting.md)를 읽고 아이덴티티 그래프 연결 규칙 사용에서 발생 가능한 일반적 문제 해결에 활용할 수 있는 접근 방식과 디버깅 솔루션에 대해 알아보십시오. |
+| 아이덴티티 그래프 연결 규칙에 대한 FAQ | 네임스페이스 우선순위, ID 최적화 알고리즘 및 아이덴티티 그래프 연결 규칙의 다른 패싯, 관련 자주 묻는 질문에 대한 답변 목록을 보려면 새로운 [아이덴티티 그래프 연결 규칙 FAQ](../../identity-service/identity-graph-linking-rules/troubleshooting.md#frequently-asked-questions)를 읽어 보십시오. |
 
 {style="table-layout:auto"}
 
@@ -140,10 +140,10 @@ ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-
 
 | 기능 | 설명 |
 | --- | --- |
-| Data Distiller 대상자 | Experience Platform의 Data Distiller에서 SQL 대상자 확장 기능을 활용해 손쉽게 대상자를 만들고, 관리하고, 활성화할 수 있습니다. 데이터 레이크에서 바로 SQL 명령을 사용해 대상 세그먼트를 정의하므로 프로필에서 원시 데이터를 사용할 필요가 없습니다. 이와 같은 유연한 데이터 기반 접근 방식으로 타기팅 전략을 강화하고 자동으로 대상자를 파일 기반 대상에 동기화하십시오. 워크플로를 간소화하고, 고객 관리를 최적화하고, 데이터 잠재력을 최대한 활용하십시오. [SQL 대상자 확장 기능을 사용하는 방법에 대한 가이드](../../query-service/data-distiller-audiences/overview.md)를 읽고 대상자 전략을 한층 업그레이드하십시오. |
-| Data Distiller 통계 - 하이퍼큐브 | 하이퍼큐브를 사용해 빅데이터 분석을 최적화하십시오. 내역 데이터를 다시 처리하지 않으면서도 고유 개수 및 다차원 분석 등의 같은 복잡한 계산을 처리할 수 있습니다. 정확성과 효율성을 유지하는 동시에 점진적으로 데이터를 업데이트하고, 워크플로를 간소화하고, 처리 시간을 단축하십시오. 더 빠르면서도 확장 가능하며 비용 효율적인 인사이트를 얻어 의사 결정 과정을 혁신해 보십시오. [하이퍼큐브 사용 가이드](../../query-service/hypercubes/overview.md)를 살펴보고 고급 분석 기능을 활용해 보십시오. |
-| 쿼리 편집기 오브젝트 브라우저 | 쿼리 편집기에서 새로운 오브젝트 브라우저를 사용해 쿼리 효율성을 높여 보십시오. 빠르게 데이터 세트를 검색하고, 필터링하고, 데이터 세트에 액세스하여 쿼리를 더 빠르게 작성하고 구체화할 수 있습니다. 실시간 스키마 업데이트와 즉각적인 테이블 메타데이터를 활용하면 워크플로를 간소화하고, 탐색 시간을 줄이고, 쿼리 경험을 개선할 수 있습니다. 데이터 잠재력을 최대한 활용하고 분석을 최적화하십시오. 더 자세한 내용은 [오브젝트 브라우저 사용 가이드](../../query-service/ui/user-guide.md#object-browser)를 읽어보시기 바랍니다. |
-| 컴퓨팅 시간 | 예약된 쿼리에 대해 컴퓨팅 시간 지표를 볼 수 있게 되었으므로 리소스 사용 제어가 용이해졌습니다. 쿼리 실행 수준에서 컴퓨팅 시간을 확인하여 CTAS/ITAS 배치 쿼리에 대한 리소스 사용을 모니터링하고 최적화하십시오. 각 쿼리 실행에 대한 추적 시작 시간, 완료 상태, 컴퓨팅 시간을 추적할 수 있습니다. 성능을 세부 조정하고 손쉽게 비용을 절감해 보십시오. [컴퓨팅 시간에 대한 가이드](../../query-service/ui/query-schedules.md#compute-hours-at-job-level)를 읽고 쿼리 효율성 극대화 방법에 대한 정보를 확인해 보시기 바랍니다. |
+| Data Distiller 대상자 | Experience Platform의 Data Distiller에서 SQL 대상자 확장 기능을 활용해 손쉽게 대상자를 만들고, 관리하고, 활성화할 수 있습니다. 데이터 레이크에서 바로 SQL 명령을 사용해 대상자 세그먼트를 정의하므로 프로필에서 원시 데이터를 사용할 필요가 없습니다. 이와 같은 유연한 데이터 기반 접근 방식으로 타겟팅 전략을 강화하고 자동으로 대상자를 파일 기반 대상에 동기화하십시오. 워크플로를 간소화하고, 대상자 관리를 최적화하고, 데이터 잠재력을 최대로 활용하십시오. [SQL 대상자 확장 기능을 사용하는 방법에 대한 안내서](../../query-service/data-distiller-audiences/overview.md)를 읽고 대상자 전략을 한층 업그레이드하십시오. |
+| Data Distiller 통계 - 하이퍼큐브 | 하이퍼큐브를 사용해 빅데이터 분석을 최적화하십시오. 내역 데이터를 다시 처리하지 않으면서도 고유 개수 및 다차원 분석 등의 같은 복잡한 계산을 처리할 수 있습니다. 정확성과 효율성을 유지하는 동시에 점진적으로 데이터를 업데이트하고, 워크플로를 간소화하고, 처리 시간을 단축하십시오. 더 빠르면서도 확장 가능하며 비용 효율적인 인사이트를 얻어 의사 결정 과정을 혁신해 보십시오. [하이퍼큐브 사용 안내서](../../query-service/hypercubes/overview.md)를 살펴보고 고급 분석 기능을 활용해 보십시오. |
+| 쿼리 편집기 오브젝트 브라우저 | 쿼리 편집기에서 새로운 오브젝트 브라우저를 사용해 쿼리 효율성을 높여 보십시오. 빠르게 데이터 세트를 검색하고, 필터링하고, 데이터 세트에 액세스하여 쿼리를 더 빠르게 작성하고 구체화할 수 있습니다. 실시간 스키마 업데이트와 즉각적인 테이블 메타데이터를 활용하면 워크플로를 간소화하고, 탐색 시간을 줄이고, 쿼리 경험을 개선할 수 있습니다. 데이터 잠재력을 최대로 활용하고 분석을 최적화하십시오. 자세한 내용은 [오브젝트 브라우저 사용 안내서](../../query-service/ui/user-guide.md#object-browser)를 읽어 보십시오. |
+| 컴퓨팅 시간 | 예약된 쿼리에 대해 컴퓨팅 시간 지표를 볼 수 있게 되었으므로 리소스 사용 제어가 용이해졌습니다. 쿼리 실행 수준에서 컴퓨팅 시간을 확인하여 CTAS/ITAS 배치 쿼리에 대한 리소스 사용을 모니터링하고 최적화하십시오. 각 쿼리 실행에 대한 추적 시작 시간, 완료 상태, 컴퓨팅 시간을 추적할 수 있습니다. 성능을 세부 조정하고 손쉽게 비용을 절감해 보십시오. [컴퓨팅 시간에 대한 안내서](../../query-service/ui/query-schedules.md#compute-hours-at-job-level)를 읽고 쿼리 효율성 극대화 방법에 대한 정보를 확인해 보십시오. |
 
 {style="table-layout:auto"}
 
@@ -162,7 +162,7 @@ ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-
 
 {style="table-layout:auto"}
 
-[!DNL Segmentation Service]에 대한 자세한 내용은 [세분화 개요](../../segmentation/home.md)를 참조하시기 바랍니다.
+[!DNL Segmentation Service]에 대한 자세한 내용은 [세분화 개요](../../segmentation/home.md)를 참조하십시오.
 
 ## 소스 {#sources}
 
@@ -174,9 +174,9 @@ Experience Platform의 소스를 사용하여 Adobe 애플리케이션 또는 �
 
 | 기능 | 설명 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} UI에서 암호화된 데이터 수집 기능 지원 | 이제 Experience Platform 사용자 인터페이스의 소스 작업 영역을 사용해 클라우드 스토리지 배치 소스에서 암호화된 데이터를 수집할 수 있습니다. 자세한 내용은 [UI에서 암호화된 데이터 수집](../../sources/tutorials/ui/encryped-ingestion.md)을 읽어보시기 바랍니다. |
+| [!BADGE Beta]{type=Informative} UI에서 암호화된 데이터 수집 기능 지원 | 이제 Experience Platform 사용자 인터페이스의 소스 작업 영역을 사용해 클라우드 스토리지 배치 소스에서 암호화된 데이터를 수집할 수 있습니다. 자세한 내용은 [UI에서 암호화된 데이터 수집](../../sources/tutorials/ui/encryped-ingestion.md)을 읽어 보십시오. |
 | [!DNL Snowflake Streaming] 소스의 일반 가용성 | 이제 [!DNL Snowflake Streaming] 소스는 GA 상태입니다. 이 소스를 사용하여 사용자의 [!DNL Snowflake] 계정을 Experience Platform으로 스트리밍할 수 있습니다. 자세한 내용은 [[!DNL Snowflake Streaming] 개요](../../sources/connectors/databases/snowflake-streaming.md)를 참조하십시오. |
-| [!DNL Google BigQuery]에서 서비스 계정 인증 지원 | 이제 서비스 계정 인증을 사용하여 Experience Platform에 [!DNL Google BigQuery] 계정을 추가할 수 있습니다. 자세한 내용은 [[!DNL Google BigQuery] 개요](../../sources/connectors/databases/bigquery.md#generate-your-google-bigquery-credentials)를 읽어 보시기 바랍니다. <br> ![예약 단계에서 예약 및 폴더 편집 옵션이 강조 표시된 Experience Platform 사용자 인터페이스 이미지.](../2024/assets/september/service_auth.png "Google BigQuery에 대한 서비스 인증."){width="250" align="center" zoomable="yes"} |
+| [!DNL Google BigQuery]에서 서비스 계정 인증 지원 | 이제 서비스 계정 인증을 사용하여 Experience Platform에 [!DNL Google BigQuery] 계정을 추가할 수 있습니다. 자세한 내용은 [[!DNL Google BigQuery] 개요](../../sources/connectors/databases/bigquery.md#generate-your-google-bigquery-credentials)를 읽어 보십시오. <br> ![예약 단계에서 예약 및 폴더 편집 옵션이 강조 표시된 Experience Platform 사용자 인터페이스 이미지.](../2024/assets/september/service_auth.png "Google BigQuery에 대한 서비스 인증."){width="250" align="center" zoomable="yes"} |
 | 샘플 데이터 미리보기 건너뛰기 지원 | 이제 다음과 같은 소스로 소스 연결을 만들 때 데이터 미리보기를 건너뛰도록 선택할 수 있습니다. <ul><li>[[!DNL Google BigQuery]](../../sources/tutorials/ui/create/databases/bigquery.md#skip-preview-of-sample-data)</li><li>[[!DNL Salesforce]](../../sources/tutorials/ui/create/crm/salesforce.md#skip-preview-of-sample-data)</li><li>[[!DNL Snowflake]](../../sources/tutorials/ui/create/databases/snowflake.md#skip-preview-of-sample-data)</li></ul> 데이터 미리보기를 건너뛰어 대량의 배치 데이터 수집 시 발생할 수 있는 시간 초과를 피할 수 있습니다. 이 경우 계산된 필드 및 필수 필드의 자동 유효성 검사가 수행되지 않을 수 있습니다. 데이터 미리보기 건너뛰기를 선택하면 매핑하는 동안 계산된 필드 및 필수 필드의 유효성을 수동 검사해야 할 수 있습니다. |
 | [!DNL SFTP]에서의 청크화 비활성화 지원 | 이제 [!DNL SFTP] 소스에서 청크화를 비활성화할 수 있는 설정 구성이 가능합니다. 자세한 내용은 [[!DNL SFTP] 개요](../../sources/connectors/cloud-storage/sftp.md)를 참조하십시오. |
 
