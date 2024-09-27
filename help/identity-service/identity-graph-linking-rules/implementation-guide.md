@@ -3,9 +3,9 @@ title: ID 그래프 연결 규칙에 대한 구현 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1e9d16c53100c1ee930cf4bf5e9a9a5b6bd9c347
+source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1546'
 ht-degree: 2%
 
 ---
@@ -168,6 +168,8 @@ ID 설정 도구를 사용하여 고유한 네임스페이스를 지정하고 �
 ## 그래프 유효성 검사 {#validate}
 
 전체 ID 수 및 그래프 수 트렌드, 네임스페이스별 ID 수 및 그래프 크기별 그래프 수 등 ID 그래프의 상태에 대한 통찰력을 얻으려면 ID 대시보드를 사용하십시오. ID 대시보드를 사용하여 둘 이상의 ID가 있는 그래프의 트렌드를 네임스페이스별로 정리하여 볼 수도 있습니다.
+
+자세한 정보를 확인하고 축소된 그래프가 없는지 확인하려면 줄임표(`...`)를 선택한 다음 **[!UICONTROL 자세히 보기]**&#x200B;를 선택하십시오.
 
 ## 부록 {#appendix}
 

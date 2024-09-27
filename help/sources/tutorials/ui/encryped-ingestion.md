@@ -3,9 +3,9 @@ title: 소스 UI Workspace에서 암호화된 데이터 수집
 description: 소스 UI 작업 영역에서 암호화된 데이터를 수집하는 방법을 알아봅니다.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
+source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1456'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->소스 UI에서 암호화된 데이터 수집에 대한 지원은 베타 버전이며 조직에서 사용하지 못할 수 있습니다. 기능 및 설명서는 변경될 수 있습니다.
+>소스 UI에서 암호화된 데이터 수집에 대한 지원은 베타 버전입니다. 기능 및 설명서는 변경될 수 있습니다.
 
 클라우드 스토리지 배치 소스를 사용하여 암호화된 데이터 파일 및 폴더를 Adobe Experience Platform으로 수집할 수 있습니다. 암호화된 데이터 수집을 통해 비대칭 암호화 메커니즘을 활용하여 배치 데이터를 안전하게 Experience Platform으로 전송할 수 있습니다. 지원되는 비대칭 암호화 메커니즘은 PGP 및 GPG입니다.
 

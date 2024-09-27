@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 준비를 사용하여 데이터 형식 처리
 description: 이 문서는 데이터 준비에서 다양한 데이터 유형을 처리하는 방법에 대한 개요를 제공합니다.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '626'
 ht-degree: 8%
 
 ---
@@ -75,6 +75,10 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 > 데이터 준비에서는 문자열을 가능한 한 날짜로 변환하려고 합니다. 그러나 이러한 전환은 바람직하지 않은 결과를 초래할 수 있습니다. 예를 들어 문자열 값 &quot;12112020&quot;은 &quot;MMdyyyy&quot; 패턴과 일치하지만 사용자가 &quot;ddMMyyyy&quot; 패턴으로 읽을 날짜를 지정했을 수 있습니다. 따라서 사용자는 문자열의 날짜 형식을 명시적으로 언급해야 합니다.
 
 ### 날짜/시간 형식 문자열 {#format}
+
+>[!TIP]
+>
+>현재, 날짜 값이 `2024-05-05 20:39:00.005` PST 형식인 경우 일괄 처리 수집의 날짜 함수는 밀리초를 제거합니다. 밀리초를 유지하려면 다음 형식을 사용하십시오. `2024-05-05 20:39:00.005-0800`
 
 다음 표는 형식 문자열에 대해 정의된 패턴 문자를 보여 줍니다. 문자는 대/소문자를 구분합니다.
 
