@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
+source-git-commit: 5e2e8996ee48d7816d78fc9cacf6ba102f7ae66f
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1253'
 ht-degree: 5%
 
 ---
@@ -77,6 +77,7 @@ ht-degree: 5%
       * [Bing Ads UET(Universal Event Tracking) 확장](./catalog/advertising/bing-ads.md)
       * [분기 확장](./catalog/advertising/branch.md)
       * [(Beta) 크리테오 연결](./catalog/advertising/criteo.md)
+      * [Demandbase 연결](./catalog/advertising/demandbase.md)
       * [DoubleClick Floodlight(Beta) 확장](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook 픽셀 확장](./catalog/advertising/facebook-pixel.md)
       * [Flashtalk OneTag 확장](./catalog/advertising/flashtalking.md)
