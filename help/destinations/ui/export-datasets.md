@@ -6,7 +6,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
 source-wordcount: '2573'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -137,7 +137,7 @@ Experience Platform 카탈로그의 일부 파일 기반 대상은 대상 활성
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="데이터 세트의 파일 내보내기 옵션"
->abstract="**증분 파일 내보내기**&#x200B;를 선택하여 마지막 내보내기 이후 데이터 세트에 추가된 데이터만 내보냅니다. <br>첫 번째 증분 파일 내보내기에는 채우기 역할을 하는 데이터 세트의 모든 데이터가 포함됩니다. 이후 증분 파일에는 첫 번째 내보내기 이후 데이터 세트에 추가된 데이터만 포함됩니다. <br> **전체 파일 내보내기**&#x200B;를 선택하여 내보낼 때마다 각 데이터 세트의 전체 멤버십을 내보냅니다. "
+>abstract="**증분 파일 내보내기**&#x200B;를 선택하여 마지막 내보내기 이후 데이터 세트에 추가된 데이터만 내보냅니다. <br>첫 번째 증분 파일 내보내기에는 채우기 역할을 하는 데이터 세트의 모든 데이터가 포함됩니다. 향후 증분 파일에는 첫 번째 내보내기 이후 데이터 세트에 추가된 데이터만 포함됩니다. <br> 각 내보내기 작업에서 각 데이터 세트의 전체 멤버십을 내보내려면 **전체 파일 내보내기**&#x200B;를 선택합니다. "
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"

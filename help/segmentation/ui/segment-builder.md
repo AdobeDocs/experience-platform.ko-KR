@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
 source-wordcount: '4784'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -101,8 +101,8 @@ ht-degree: 5%
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentBuilder_b2b_decomposition"
->title="복합 평가"
->abstract="다음 표현은 너무 복잡하여 한 명의 대상자로 표현할 수 없습니다. 동일한 세그먼트 정의에서 B2B 규칙과 사용자 기반 이벤트를 모두 사용하려면 아래 단계를 따르십시오.<ol><li>사용자 기반 이벤트만 참조하는 세그먼트 정의를 만들고 고유한 세그먼트 정의로 저장합니다.</li><li>새 세그먼트 정의에서 B2B-규칙을 참조하면서 이전에 만든 세그먼트 정의를 가져옵니다.</li></ol>"
+>title="복잡한 평가"
+>abstract="다음 표현식은 단일 대상자로 표현하기에는 너무 복잡합니다. 동일한 세그먼트 정의에서 B2B 규칙과 사람 기반 이벤트를 모두 사용하려면 아래 단계를 따르십시오.<ol><li>사람 기반 이벤트만 참조하는 세그먼트 정의를 만든 다음 이를 별도의 세그먼트 정의로 저장합니다.</li><li>새로운 세그먼트 정의에서 B2B 규칙을 참조하면서 이전에 생성한 세그먼트 정의를 가져옵니다.</li></ol>"
 
 >[!NOTE]
 >
@@ -165,7 +165,7 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_addaudiences"
 >title="업데이트 검색"
->abstract="기존 검색 시스템이 통합 검색을 사용하도록 업데이트되었습니다. 통합 검색을 사용하면 대상자를 보다 쉽고 강력하게 검색하여 세그먼트 멤버십을 찾을 수 있습니다."
+>abstract="기존 검색 시스템이 통합 검색을 사용하도록 업데이트되었습니다. 통합 검색을 사용하면 세그먼트 멤버십에 대한 대상자를 보다 쉽고 강력하게 검색할 수 있습니다."
 
 **[!UICONTROL 대상]** 탭에서 대상을 규칙 빌더 캔버스로 끌어다 놓아 새 세그먼트 정의에서 대상 멤버십을 참조할 수 있습니다. 이렇게 하면 새 세그먼트 정의 규칙에 속성으로 대상 멤버십을 포함하거나 제외할 수 있습니다.
 
