@@ -3,7 +3,8 @@ title: Demandbase 연결
 description: 이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대한 계정 대상을 활성화하십시오. DemandBase의 DSP(B2B Demand Side Platform)를 통해 대상 계정의 관련 담당자 및 역할에 광고를 게재합니다. 마케팅 및 판매의 다른 다운스트림 사용 사례에 대해 Demandbase 타사 데이터를 사용하여 대상 계정을 보강할 수도 있습니다.
 badgeB2B: label="B2B 버전" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-source-git-commit: 5c694dfab7e53cf8a78500e3ecd086a3986b9b91
+last-substantial-update: 2024-09-30T00:00:00Z
+source-git-commit: 92abae6bc63c13f1103364ae82cc9c04459ce00f
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 3%

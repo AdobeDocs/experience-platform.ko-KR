@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1686'
 ht-degree: 2%
 
 ---
@@ -178,7 +178,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --- | --- | --- | --- |
 | 최대 [개인 사용자 지정 대상 수](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | 성능 보호 | Destination SDK을 사용하여 최대 5개의 개인 사용자 지정 스트리밍 또는 일괄 처리 대상을 만들 수 있습니다. 이러한 대상을 5개 이상 만들어야 하는 경우 사용자 정의 지원 담당자에게 문의하십시오. |
-| Destination SDK에 대한 프로필 내보내기 정책 | <ul><li>`maxBatchAgeInSecs`(최소 1.800 및 최대 3.600)</li><li>`maxNumEventsInBatch`(최소 1.000, 최대 10.000)</li></ul> | 시스템 강제 보호 | 대상에 대해 [구성 가능한 집계](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 옵션을 사용할 때는 API 기반 대상으로 HTTP 메시지를 보내는 빈도와 메시지에 포함할 프로필 수를 결정하는 최소값과 최대값을 염두에 두십시오. |
+| Destination SDK에 대한 프로필 내보내기 정책 | <ul><li>`maxBatchAgeInSecs`(최소 1,800 및 최대 3,600)</li><li>`maxNumEventsInBatch`(최소 1,000개 및 최대 10,000개)</li></ul> | 시스템 강제 보호 | 대상에 대해 [구성 가능한 집계](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 옵션을 사용할 때는 API 기반 대상으로 HTTP 메시지를 보내는 빈도와 메시지에 포함할 프로필 수를 결정하는 최소값과 최대값을 염두에 두십시오. |
 
 {style="table-layout:auto"}
 

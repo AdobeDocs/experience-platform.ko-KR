@@ -2,7 +2,7 @@
 description: 대상에 대한 HTTP 요청을 그룹화하고 일괄 처리하는 방법을 결정하는 집계 정책을 설정하는 방법에 대해 알아봅니다.
 title: 집계 정책
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 2%
@@ -109,8 +109,8 @@ Destination SDK을 사용하여 실시간(스트리밍) 대상을 작성할 때 
 |---------|----------|------|
 | `aggregationType` | 문자열 | 대상에서 사용해야 하는 집계 정책 유형을 나타냅니다. 지원되는 집계 유형: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `configurableAggregation.splitUserById` | 부울 | 대상에 대한 호출을 ID로 분할해야 하는 경우 이 플래그를 사용합니다. 서버에서 지정된 ID 네임스페이스에 대해 호출당 하나의 ID만 허용하는 경우 이 플래그를 `true`(으)로 설정하십시오. |
-| `configurableAggregation.maxBatchAgeInSecs` | 정수 | `maxNumEventsInBatch`과(와) 함께 사용되는 이 매개 변수는 끝점에 API 호출을 보낼 때까지 Experience Platform이 대기하는 시간을 결정합니다. <ul><li>최소값(초): 1800</li><li>최대값(초): 3600</li></ul> 예를 들어 두 매개 변수에 모두 최대값을 사용하는 경우 Experience Platform은 API 호출을 수행하기 전에 10000개의 적격 프로필이 있을 때까지 3600초 또는 API를 대기합니다. |
-| `configurableAggregation.maxNumEventsInBatch` | 정수 | `maxBatchAgeInSecs`과(와) 함께 사용되는 이 매개 변수는 API 호출에서 집계해야 하는 정규화된 프로필 수를 결정합니다. <ul><li>최소값: 1000</li><li>최대값: 10000</li></ul> 예를 들어 두 매개 변수에 모두 최대값을 사용하는 경우 Experience Platform은 API 호출을 수행하기 전에 10000개의 적격 프로필이 있을 때까지 3600초 또는 API를 대기합니다. |
+| `configurableAggregation.maxBatchAgeInSecs` | 정수 | `maxNumEventsInBatch`과(와) 함께 사용되는 이 매개 변수는 끝점에 API 호출을 보낼 때까지 Experience Platform이 대기하는 시간을 결정합니다. <ul><li>최소값(초): 1,800</li><li>최대값(초): 3,600</li></ul> 예를 들어 두 매개 변수에 모두 최대값을 사용하는 경우 Experience Platform은 API 호출을 수행하기 전에 10000개의 적격 프로필이 있을 때까지 3,600초 또는 API를 먼저 호출합니다. |
+| `configurableAggregation.maxNumEventsInBatch` | 정수 | `maxBatchAgeInSecs`과(와) 함께 사용되는 이 매개 변수는 API 호출에서 집계해야 하는 정규화된 프로필 수를 결정합니다. <ul><li>최소값: 1,000</li><li>최대값: 10,000</li></ul> 예를 들어 두 매개 변수에 모두 최대값을 사용하는 경우 Experience Platform은 API 호출을 수행하기 전에 3,600초 또는 10,000개의 적격 프로필이 있을 때까지 기다리며, 둘 중 먼저 발생하는 작업이 수행됩니다. |
 | `configurableAggregation.aggregationKey` | - | 아래 설명된 매개 변수를 기반으로 대상에 매핑된 내보낸 프로필을 집계할 수 있습니다. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | 부울 | 대상으로 내보낸 프로필을 대상 ID로 그룹화하려면 이 매개 변수를 `true`(으)로 설정하십시오. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | 부울 | 대상 ID 및 대상 상태별로 대상으로 내보낸 프로필을 그룹화하려면 이 매개 변수와 `includeSegmentId`을(를) 모두 `true`(으)로 설정하십시오. |
