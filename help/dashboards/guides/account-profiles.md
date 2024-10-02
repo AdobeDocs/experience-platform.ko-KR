@@ -2,14 +2,14 @@
 title: 계정 프로필 대시보드
 description: Adobe Experience Platform은 조직의 B2B 계정 프로필에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1827'
 ht-degree: 1%
 
 ---
 
-# [!UICONTROL 계정 프로필] 대시보드
+# 계정 프로필 대시보드
 
 Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중에 캡처된 계정 프로필에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다. 이 안내서에서는 UI에서 [!UICONTROL 계정 프로필] 대시보드에 액세스하고 작업하는 방법을 간략하게 설명하고 대시보드에 표시된 시각화에 대한 자세한 정보를 제공합니다.
 
@@ -64,6 +64,11 @@ Platform UI에서 [!UICONTROL 계정 프로필] 대시보드로 이동하려면 
 [!UICONTROL 세부 정보] 탭에 표시되는 계정 프로필 정보가 여러 프로필 조각에서 병합되어 개별 계정에 대한 단일 보기를 형성했습니다. Platform UI의 계정 프로필 보기 기능에 대한 자세한 내용은 [Adobe Real-time Customer Data Platform에서 계정 프로필 찾아보기](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles)에 대한 설명서를 참조하십시오.
 
 ## 표준 위젯 {#standard-widgets}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_accountprofiles_customersperaccountoverview"
+>title="계정당 고객 개요"
+>abstract="이 드릴스루 위젯은 B2B 데이터의 구조에 대한 통찰력을 제공합니다. 연결된 고객 프로필이 없거나 연결된 고객 프로필이 하나 이상 있는 계정 프로필 수를 식별하는 데 도움이 됩니다.<ul><li>직접 고객: `personComponents` 경로를 통해 계정에 직접 연결된 고객 프로필입니다.</li><li>간접 고객: `Account-Person` 경로를 통해 계정에 연결된 고객 프로필입니다.</li></ul>"
 
 Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 사용할 수 있는 표준 위젯을 제공합니다.
 
