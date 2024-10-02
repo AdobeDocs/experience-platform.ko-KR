@@ -3,9 +3,9 @@ title: ID 그래프 연결 규칙에 대한 구현 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
+source-git-commit: 0bb99a359e7331f2235cd5385dcf546ab4c2b494
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1635'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->ID 그래프 연결 규칙은 현재 Beta 버전입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오. 기능 및 설명서는 변경될 수 있습니다.
+>ID 그래프 연결 규칙은 현재 제한적 가용성입니다. 개발 샌드박스의 기능에 액세스하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
 
 Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 때 참조할 수 있는 단계별 안내서는 이 문서를 참조하십시오.
 
@@ -61,8 +61,67 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 
 ### XDM 경험 이벤트
 
-* 사전 구현 프로세스 중에 시스템이 Experience Platform에게 전송할 인증된 이벤트에 항상 CRMID와 같은 개인 식별자가 포함되어 있는지 확인해야 합니다.
-* XDM 경험 이벤트를 사용하여 이벤트를 전송할 때 빈 문자열을 ID 값으로 보내지 마십시오. 이렇게 하면 시스템 오류가 발생합니다.
+사전 구현 프로세스 중에 시스템이 Experience Platform에게 전송할 인증된 이벤트에 항상 CRMID와 같은 개인 식별자가 포함되어 있는지 확인해야 합니다.
+
+>[!BEGINTABS]
+
+>개인 ID가 있는 [!TAB 인증된 이벤트]
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ]
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+>[!TAB 개인 식별자가 없는 인증된 이벤트]
+
+
+```json
+{
+    "_id": "test_id"
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "62486695051193343923965772747993477018",
+                "primary": false
+            }
+        ]
+    },
+    "timestamp": "2024-09-24T15:02:32+00:00",
+    "web": {
+        "webPageDetails": {
+            "URL": "https://business.adobe.com/",
+            "name": "Adobe Business"
+        }
+    }
+}
+```
+
+
+>[!ENDTABS]
+
+XDM 경험 이벤트를 사용하여 이벤트를 전송할 때 빈 문자열을 ID 값으로 보내지 마십시오. 네임스페이스 우선 순위가 가장 높은 네임스페이스의 ID 값이 빈 문자열인 경우 실시간 고객 프로필에서 레코드가 무시됩니다. 이 설정은 ID로 표시된 필드뿐만 아니라 두 identityMap에도 적용됩니다.
 
 +++빈 문자열이 있는 페이로드의 예를 보려면 선택
 
@@ -170,6 +229,12 @@ ID 설정 도구를 사용하여 고유한 네임스페이스를 지정하고 �
 전체 ID 수 및 그래프 수 트렌드, 네임스페이스별 ID 수 및 그래프 크기별 그래프 수 등 ID 그래프의 상태에 대한 통찰력을 얻으려면 ID 대시보드를 사용하십시오. ID 대시보드를 사용하여 둘 이상의 ID가 있는 그래프의 트렌드를 네임스페이스별로 정리하여 볼 수도 있습니다.
 
 자세한 정보를 확인하고 축소된 그래프가 없는지 확인하려면 줄임표(`...`)를 선택한 다음 **[!UICONTROL 자세히 보기]**&#x200B;를 선택하십시오.
+
+![ID 서비스 UI 작업 영역의 ID 대시보드입니다.](../images/implementation/identity_dashboard.png)
+
+축소된 그래프에 대한 정보를 보려면 나타나는 창을 사용합니다. 이 예에서는 이메일과 전화기가 모두 고유 네임스페이스로 표시되므로 샌드박스에 축소된 그래프가 없습니다.
+
+![여러 ID가 있는 그래프의 팝업 창](../images/implementation/graphs.png)
 
 ## 부록 {#appendix}
 

@@ -1,11 +1,10 @@
 ---
 title: ID 최적화 알고리즘
 description: ID 서비스의 ID 최적화 알고리즘에 대해 알아봅니다.
-badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->ID 그래프 연결 규칙은 현재 Beta 버전입니다. 기여도 기준에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오. 기능 및 설명서는 변경될 수 있습니다.
+>ID 그래프 연결 규칙은 현재 제한적 가용성입니다. 개발 샌드박스의 기능에 액세스하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
 
 ID 최적화 알고리즘은 ID 그래프가 단일 사용자를 나타내도록 도와주는 ID 서비스에 대한 그래프 알고리즘으로, 실시간 고객 프로필에서 원치 않는 ID 병합을 방지합니다.
 
@@ -41,7 +40,7 @@ ID 최적화 알고리즘을 사용하여 ID 서비스에서 개인 엔티티를
 >
 >* 개인 식별자이며 샌드박스에서 ID 그래프를 생성하는 데 사용되는 모든 네임스페이스는 고유 네임스페이스로 표시되어야 합니다. 그렇지 않으면 원하지 않는 연결 결과가 표시될 수 있습니다.
 
-### 네임스페이스 우선 순위 {#namespace-priority}
+### 네임스페이스 우선순위 {#namespace-priority}
 
 네임스페이스 우선 순위는 ID 최적화 알고리즘이 링크를 제거하는 방법을 결정합니다.
 
@@ -165,6 +164,6 @@ ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참
 * [구현 안내서](./implementation-guide.md)
 * [그래프 구성의 예](./example-configurations.md)
 * [문제 해결 및 FAQ](./troubleshooting.md)
-* [네임스페이스 우선 순위](./namespace-priority.md)
+* [네임스페이스 우선순위](./namespace-priority.md)
 * [그래프 시뮬레이션 UI](./graph-simulation.md)
 * [ID 설정 UI](./identity-settings-ui.md)
