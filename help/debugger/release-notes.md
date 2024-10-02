@@ -4,14 +4,20 @@ description: Adobe Experience Platform Debugger에 대한 최신 릴리스 정�
 keywords: Debugger;experience Platform Debugger 확장 기능;chrome;확장 기능;릴리스 정보
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 877e38154f6959d50bd0620290c2dce9decfc2b5
-workflow-type: ht
-source-wordcount: '781'
-ht-degree: 100%
+source-git-commit: e82cd0b24504f807f7511aae1f5a0c9d77a40f74
+workflow-type: tm+mt
+source-wordcount: '801'
+ht-degree: 98%
 
 ---
 
 # Adobe Experience Platform Debugger 릴리스 정보
+
+## 버전 1.6.2 - 2024년 10월 1일 수요일
+
+### 수정 사항 및 개선 사항
+
+* 디버거가 모든 CSP 오류에 너무 민감한 문제를 해결했습니다
 
 ## 버전 1.6.1 - 2024년 7월 25일
 
