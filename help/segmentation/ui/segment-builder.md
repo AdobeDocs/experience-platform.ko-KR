@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
+source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
-source-wordcount: '4784'
+source-wordcount: '4955'
 ht-degree: 7%
 
 ---
@@ -28,6 +28,19 @@ ht-degree: 7%
 >abstract="세그먼트 대상을 구성하는 세 가지 필드 유형은 속성, 이벤트와 대상자입니다. 속성을 통해 XDM 개별 프로필 클래스에 속한 프로필 속성을 사용하고, 이벤트를 통해 XDM ExperienceEvent 데이터 요소로 인해 발생하는 작업 또는 이벤트를 기반으로 대상자를 만들고, 대상자를 통해 외부 소스에서 가져온 대상자를 사용할 수 있습니다."
 
 세그먼트 정의의 기본 구성 요소는 속성 및 이벤트입니다. 또한 기존 대상자에 포함된 속성 및 이벤트를 새 정의의 구성 요소로 사용할 수 있습니다.
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_summarydata"
+>title="요약 데이터"
+>abstract="요약 데이터는 프로필 특성에 대해서만 나타나며 이벤트 또는 대상 특성에 대해서는 <b>나타나지 않습니다</b>.<br/><br/>다음 상황에서는 프로필 특성에 대한 요약 데이터가 표시되지 않을 수 있습니다. <ol><li>속성 값 중 일부는 100자를 초과합니다.</li><li>속성에 대한 고유 값이 3000개가 넘습니다.</li></ol>"
+
+>[!NOTE]
+>
+>속성의 정보 버블을 선택하면 필드의 요약 데이터라고도 하는 값 분포를 볼 수 있습니다. 특성 탭에서 사용할 수 있는 **전용**&#x200B;이며 이벤트 또는 대상 탭에서 사용할 수 없습니다.
+>
+>요약 데이터는 속성이 다음 기준을 충족하면 나타납니다. 속성의 모든 값은 100자 이하이며 속성에 대한 고유 값은 3000자 이하여야 합니다.
+>
+>그러나 관계를 통해 프로필에 연결된 다중 엔터티 데이터인 경우 특성에는 요약 데이터가 **없습니다**. 예를 들어 사용자 지정 스키마 `Vehicle`이(가) 있는 경우 `Vehicle` 스키마 내의 **속성**&#x200B;에 요약 데이터가 **없음**&#x200B;됩니다.
 
 이러한 기본 구성표는 [!DNL Segment Builder] 작업 영역의 왼쪽에 있는 **[!UICONTROL 필드]** 섹션에서 확인할 수 있습니다. **[!UICONTROL 필드]**&#x200B;에는 각 기본 빌딩 블록에 대한 탭이 있습니다. &quot;[!UICONTROL 특성]&quot;, &quot;[!UICONTROL 이벤트]&quot; 및 &quot;[!UICONTROL 대상]&quot;.
 
