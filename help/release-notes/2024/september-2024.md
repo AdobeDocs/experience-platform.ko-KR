@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform 릴리스 정보 2024년 9월
 description: Adobe Experience Platform의 2024년 9월 릴리스 정보입니다.
-source-git-commit: a342f38f09b84ef720d6135bc555844df12ee251
+source-git-commit: 33d1305aef7c763e7b0bd8c6db6a1a9417cc2a9d
 workflow-type: tm+mt
 source-wordcount: '2199'
 ht-degree: 82%
@@ -14,15 +14,15 @@ ht-degree: 82%
 
 Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 
-- [경고 {#alerts}](#alerts)
-- [대시보드 {#dashboards}](#dashboards)
-- [데이터 준비 {#data-prep}](#data-prep)
-- [대상 {#destinations}](#destinations)
-- [XDM(경험 데이터 모델) {#xdm}](#xdm)
-- [ID 서비스 {#identity-service}](#identity-service)
-- [쿼리 서비스 {#query-service}](#query-service)
-- [세분화 서비스 {#segmentation-service}](#segmentation-service)
-- [소스 {#sources}](#sources)
+- [경고](#alerts)
+- [대시보드](#dashboards)
+- [데이터 준비](#data-prep)
+- [대상](#destinations)
+- [경험 데이터 모델 (XDM)](#xdm)
+- [ID 서비스](#identity-service)
+- [쿼리 서비스](#query-service)
+- [Segmentation Service](#segmentation-service)
+- [소스](#sources)
 
 ## 경고 {#alerts}
 
