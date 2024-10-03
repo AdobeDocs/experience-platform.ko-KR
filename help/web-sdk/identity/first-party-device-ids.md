@@ -2,9 +2,9 @@
 title: Web SDK의 자사 디바이스 ID
 description: Adobe Experience Platform Web SDK에서 자사 디바이스 ID(FPID)를 구성하는 방법에 대해 알아봅니다.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
+source-git-commit: 04ef39cbfc614369cb15f4d947474b491c34ef33
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '2055'
 ht-degree: 0%
 
 ---
@@ -219,6 +219,16 @@ Edge Network이 [!DNL FPID] 쿠키의 값을 읽도록 선택하는 경우 `HTTP
     }
 }
 ```
+
+## 자체 도메인에서 FPID 설정 {#setting-fpid-domain}
+
+ID 맵에서 [!DNL FPID]을(를) 설정하는 것 외에도 자사 데이터 컬렉션 [!DNL CNAME]이(가) 구성되어 있는 경우 자체 도메인에 [!DNL FPID] 쿠키를 설정할 수 있습니다.
+
+[!DNL CNAME]을(를) 사용하여 자사 데이터 수집을 사용하도록 설정하면 데이터 수집 끝점에 대한 요청 시 도메인에 대한 모든 쿠키가 전송됩니다.
+
+Adobe의 데이터 수집 목적과 관련이 없는 모든 쿠키가 삭제됩니다. [!DNL FPID]의 경우 데이터 스트림 구성에서 [!DNL FPID] 쿠키의 이름을 지정할 수 있습니다. 이렇게 하면 Edge Network이 ID 맵에서 [!DNL FPID]을(를) 찾는 대신 [!DNL FPID] 쿠키의 내용을 읽게 됩니다.
+
+이 기능을 사용하려면 특정 하위 도메인 대신 도메인의 최상위 수준에서 [!DNL FPID]을(를) 설정해야 합니다. 하위 Edge Network에 설정하면 쿠키 값이 도메인으로 전송되지 않으며 [!DNL FPID] 솔루션이 의도한 대로 작동하지 않습니다.
 
 ## 계층 {#id-hierarchy}
 
