@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 웹 SDK 확장의 데이터 요소 유형
 description: Adobe Experience Platform 웹 SDK 태그 확장에서 제공하는 다양한 데이터 요소 유형에 대해 알아봅니다.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: fbca8a47c500e89d82cf636e8cb639f2bb59c2e6
+source-git-commit: e34a9ee5b1a09ff3391e5b0e981215fefbc157fc
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 5%
