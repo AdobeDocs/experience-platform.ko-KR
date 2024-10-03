@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;스트리밍 연결;스트리밍
 title: 흐름 서비스 API를 사용하여 HTTP API 스트리밍 연결 만들기
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 원시 데이터와 XDM 데이터 모두에 대해 HTTP API 소스를 사용하여 스트리밍 연결을 만드는 방법에 대한 단계를 제공합니다
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 84ffbb86e8973c2795d19122d3866e980949759d
+source-git-commit: 6ea5eaf28f260f974d168db2bed9bc95fcfa52af
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1646'
 ht-degree: 3%
 
 ---
@@ -470,9 +470,9 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB 변환 없음]
+>[!TAB XDM]
 
-다음 요청은 데이터 변환 없이 HTTP API에 대한 스트리밍 데이터 흐름을 만듭니다.
+다음 요청은 XDM 데이터에 대한 스트리밍 데이터 흐름을 만듭니다.
 
 ```shell
 curl -X POST \
@@ -498,9 +498,9 @@ curl -X POST \
     }'
 ```
 
->[!TAB 변형 사용]
+>[!TAB 원시]
 
-다음 요청은 데이터에 적용된 매핑 변환을 사용하여 HTTP API에 대한 스트리밍 데이터 흐름을 만듭니다.
+다음 요청은 원시 데이터에 대한 스트리밍 데이터 흐름을 만듭니다.
 
 변환을 사용하여 데이터 흐름을 만들 때 `name` 매개 변수를 변경할 수 없습니다. 이 값은 항상 `Mapping`(으)로 설정해야 합니다.
 
@@ -559,7 +559,7 @@ curl -X POST \
 }
 ```
 
-## Platform에 수집할 Post 데이터 {#ingest-data}
+## 플랫폼에 수집할 게시물 데이터 {#ingest-data}
 
 >[!NOTE]
 >
