@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 편집기 UI 안내서
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서, Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 이를 통해 개발 목적으로 대화형 쿼리를 실행하고 비대화형 쿼리를 실행하여 Experience Platform의 데이터 세트를 채울 수 있습니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 7ba9eb6891657e7f3d7ebbd41314b7973e31ea61
+source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
 workflow-type: tm+mt
-source-wordcount: '2802'
+source-wordcount: '2821'
 ht-degree: 0%
 
 ---
@@ -102,6 +102,10 @@ Query Service의 개념과 기능에 대한 자세한 내용은 [Query Service �
 ### 결과 개수 {#result-count}
 
 쿼리 편집기에는 최대 50,000개의 행 출력이 있습니다. 쿼리 편집기 콘솔에서 한 번에 표시되는 행 수를 선택할 수 있습니다. 콘솔에 표시되는 행 수를 변경하려면 **[!UICONTROL 결과 개수]** 드롭다운을 선택하고 50개, 100개, 150개, 300개 및 500개 옵션 중에서 선택합니다.
+
+>[!NOTE]
+>
+>Platform UI는 최대 500개의 행만 지원할 수 있으므로 500개를 초과하는 LIMIT 값 전달은 무시됩니다.
 
 ![결과 개수 드롭다운이 강조 표시된 쿼리 편집기.](../images/ui/query-editor/result-count.png)
 
