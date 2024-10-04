@@ -1,17 +1,17 @@
 ---
-title: Adobe Experience Platform 릴리스 정보
+title: Adobe Experience Platform 릴리스 노트 2023년 8월
 description: Adobe Experience Platform에 대한 2023년 8월 릴리스 정보입니다.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1739'
-ht-degree: 35%
+source-wordcount: '1741'
+ht-degree: 42%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2023년 8월 23일 목요일**
+**릴리스 일자: 2023년 8월 23일 목요일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
@@ -46,9 +46,9 @@ Experience Platform을 기반으로 구축된 Real-time Customer Data Platform([
 
 ## 속성 기반 액세스 제어 {#abac}
 
-속성 기반 액세스 제어는 Adobe Experience Platform의 기능으로, 개인 정보 보호를 고려한 브랜드에게 사용자 액세스를 더 유연하게 관리할 수 있습니다. 스키마 필드 및 세그먼트와 같은 개별 객체를 사용자 역할에 할당할 수 있습니다. 이 기능을 사용하면 조직의 특정 Platform 사용자에 대해 개별 객체에 대한 액세스 권한을 부여하거나 취소할 수 있습니다.
+속성 기반 액세스 제어는 개인 정보 보호를 중시하는 브랜드가 사용자 액세스를 더욱 유연하게 관리할 수 있도록 하는 Adobe Experience Platform의 기능입니다. 스키마 필드 및 세그먼트와 같은 개별 오브젝트를 사용자 역할에 할당할 수 있습니다. 이 기능을 사용하면 조직 내 특정 플랫폼 사용자에 대한 개별 오브젝트에 액세스를 허용하거나 취소할 수 있습니다.
 
-조직 관리자는 속성 기반 액세스 제어를 통해 모든 플랫폼 워크플로 및 리소스에서 중요한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 지정된 유형의 데이터에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.
+조직의 관리자는 속성 기반 액세스 제어를 통해 모든 플랫폼 워크플로와 리소스에서 민감한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 정의 유형의 데이터에 대한 액세스를 제어할 수 있습니다. 관리자는 특정 필드에만 액세스할 수 있는 사용자 역할과 필드에 해당하는 데이터를 정의할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
@@ -58,7 +58,7 @@ Experience Platform을 기반으로 구축된 Real-time Customer Data Platform([
 
 {style="table-layout:auto"}
 
-특성 기반 액세스 제어에 대한 자세한 내용은 [특성 기반 액세스 제어 개요](../../access-control/abac/overview.md)를 참조하십시오. 특성 기반 액세스 제어 워크플로에 대한 포괄적인 지침을 보려면 [특성 기반 액세스 제어 전체 안내서](../../access-control/abac/end-to-end-guide.md)를 읽어 보십시오.
+속성 기반 액세스 제어에 대한 자세한 내용은 [속성 기반 액세스 제어 개요](../../access-control/abac/overview.md)를 참조하십시오. 속성 기반 액세스 제어 워크플로에 대한 종합적인 안내서는 [속성 기반 액세스 제어 통합 안내서](../../access-control/abac/end-to-end-guide.md)를 참조하십시오.
 
 ## 대시보드 {#dashboards}
 
@@ -116,7 +116,7 @@ Adobe Experience Platform은 데이터의 모든 유형과 지연 시간을 수�
 
 ## 대상 {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
 
