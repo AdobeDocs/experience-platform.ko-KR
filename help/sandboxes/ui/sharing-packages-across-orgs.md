@@ -2,9 +2,9 @@
 title: 샌드박스 도구를 사용하여 조직 간 패키지 공유
 description: Adobe Experience Platform에서 샌드박스 도구 를 사용하여 여러 조직 간에 패키지를 공유하는 방법을 알아봅니다.
 badge: Beta
-source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
+source-git-commit: 0e280972feb990221272d272aa2a9e3852beb5e8
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 ![파트너 조직 탭과 파트너 조직 관리가 강조 표시된 샌드박스 UI입니다.](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
-[!UICONTROL 파트너 관리 패키지] 대화 상자에서 조직 ID를 **[!UICONTROL 조직 ID 입력]**&#x200B;에 입력하고 Enter 키를 누릅니다. 조직 ID는 아래의 **[!UICONTROL 선택한 조직 ID]** 섹션에 표시됩니다. ID를 추가한 후 **[!UICONTROL 확인]**&#x200B;을 선택합니다.
+[!UICONTROL 파트너 관리 패키지] 대화 상자에서 조직 ID를 **[!UICONTROL 조직 ID 입력]**&#x200B;에 입력하고 Enter 키(Windows) 또는 Return 키(Mac)를 누릅니다. 조직 ID는 아래의 **[!UICONTROL 선택한 조직 ID]** 섹션에 표시됩니다. ID를 추가한 후 **[!UICONTROL 확인]**&#x200B;을 선택합니다.
 
 >[!TIP]
 >
