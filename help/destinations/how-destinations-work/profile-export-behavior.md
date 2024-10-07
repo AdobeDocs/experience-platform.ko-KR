@@ -2,9 +2,9 @@
 title: 프로필 내보내기 동작
 description: Experience Platform 대상에서 지원되는 다양한 통합 패턴 간에 프로필 내보내기 동작이 어떻게 다른지 알아봅니다.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
+source-git-commit: 6c2d10cffa30d9feb4d342014ea1b712094bb673
 workflow-type: tm+mt
-source-wordcount: '2930'
+source-wordcount: '2939'
 ht-degree: 0%
 
 ---
@@ -192,7 +192,7 @@ Experience Platform에서 [파일 기반 대상](/help/destinations/destination-
 
 >[!TIP]
 >
->다시 말해서 프로필에 대한 속성 값 또는 ID 맵의 변경 사항은 증분 파일 내보내기에 포함할 프로필을 검증하지 않습니다.
+>다시 말해서 프로필에 대한 ID 맵을 변경하면 증분 파일 내보내기에 포함될 수 있습니다. 특성 값을 *변경하지 마십시오*. 특성 값을 변경하면 증분 파일 내보내기에 포함될 수 있습니다.
 
 ## 다음 단계 {#next-steps}
 
