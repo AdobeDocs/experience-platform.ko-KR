@@ -2,7 +2,7 @@
 title: SQL Insights
 description: Data Distiller을 사용하여 SQL Insights 대시보드를 개발하는 사용 사례, 필수 기능 및 필수 단계에 대해 알아봅니다. Data Distiller 내의 SQL Insights 기능을 통해 투명성을 높이고 프로필, 대상, 캠페인, 여정, 권한 및 동의와 같은 다양한 차원에서 운영 통찰력을 얻는 방법에 대해 알아봅니다.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 3435ddd4b235c1c66cd29c75b779bcca607a5d4f
+source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 맞춤형 보고 데이터 모델을 만들어 Data Distiller의 SQL Insights를 통해 보다 심층적인 통찰력을 추출하고 전략을 최적화하며 특정 비즈니스 요구 사항을 충족하도록 분석을 조정할 수 있습니다. SQL Insights 기능을 사용하면 프로필, 대상, 캠페인, 여정, 권한 및 동의와 같은 차원 전반에서 Adobe Experience Platform 데이터의 투명성을 높이고 운영 통찰력을 얻을 수 있습니다. 이 기능은 조직의 보고 데이터 모델을 특정 비즈니스 요구에 맞게 조정할 수 있는 다목적 적응형 솔루션을 제공합니다.
 
-[SQL Insights 시각화](../../../dashboards/data-distiller/overview.md)를 위해 [쿼리 프로 모드](../../../dashboards/data-distiller/query-pro-mode/overview.md)를 사용하여 사용자 지정 SQL 쿼리를 사용하여 복잡한 분석을 수행하고 데이터를 쉽게 해석 가능한 차트로 변환할 수 있습니다. Query pro 모드를 사용하면 대시보드에서 맞춤형 인사이트와 시각화를 만들고 인사이트를 CSV 파일로 다운로드하여 기술 대상과 기술 이외의 대상 모두에 맞출 수 있습니다.
+[SQL Insights 시각화](../../../dashboards/data-distiller/sql-insights/overview.md)를 위해 [쿼리 프로 모드](../../../dashboards/data-distiller/query-pro-mode/overview.md)를 사용하여 사용자 지정 SQL 쿼리를 사용하여 복잡한 분석을 수행하고 데이터를 쉽게 해석 가능한 차트로 변환할 수 있습니다. Query pro 모드를 사용하면 대시보드에서 맞춤형 인사이트와 시각화를 만들고 인사이트를 CSV 파일로 다운로드하여 기술 대상과 기술 이외의 대상 모두에 맞출 수 있습니다.
 
 이 문서에서는 Data Distiller을 사용하여 SQL 인사이트 대시보드를 개발하는 데 필요한 사용 사례, 필수 기능 및 단계를 다룹니다.
 

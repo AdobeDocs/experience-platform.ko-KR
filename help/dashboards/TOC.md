@@ -5,10 +5,10 @@ breadcrumb-title: 대시보드 안내서
 user-guide-description: 맞춤화가 가능한 대시보드를 통해 Experience Platform에서 데이터를 시각화하는 방법을 알아봅니다.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 18d768f296d1f7087d05208fdff317b2fd9770af
+source-git-commit: 06e319a6f7e2294a9c5daea0f41e89a09d93efd2
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 36%
+source-wordcount: '134'
+ht-degree: 35%
 
 ---
 
@@ -21,7 +21,6 @@ ht-degree: 36%
 * [대시보드](user-defined-dashboards.md)
 * [대시보드를 다운로드하여 PDF](download.md)
 * 데이터 Distiller {#data-distiller}
-   * [개요](data-distiller/overview.md)
    * 확장 앱 보고에 대한 SQl Insights {#sql-insights}
       * [개요](data-distiller/sql-insights/overview.md)
    * 쿼리 pro 모드 {#query-pro-mode}

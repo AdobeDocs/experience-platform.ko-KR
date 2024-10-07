@@ -2,7 +2,7 @@
 title: 더 보기
 description: SQL 분석 데이터를 보는 다양한 옵션에 대해 알아봅니다. 사용자 지정 대시보드에서 분석 표의 결과를 보거나 처리된 데이터를 CSV 형식으로 다운로드할 수 있습니다.
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
+source-git-commit: 1ef8208ccde2f44b6c5188bd5b9a57ff876da30f
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 1%
@@ -41,7 +41,7 @@ SQL을 통해 쿼리 프로 모드를 사용하여 작성된 모든 차트에 �
 
 >[!NOTE]
 >
->[!UICONTROL 오름차순 정렬] 및 [!UICONTROL 내림차순 정렬] 옵션은 [정렬 기능](../overview.md/#advanced-attributes)(으)로 구성된 열에 대해서만 표시됩니다.
+>[!UICONTROL 오름차순 정렬] 및 [!UICONTROL 내림차순 정렬] 옵션은 [정렬 기능](./overview.md#advanced-attributes)(으)로 구성된 열에 대해서만 표시됩니다.
 
 ![오름차순 정렬 및 내림차순 정렬 옵션을 강조 표시하는 테이블 열 드롭다운입니다.](../../images/query-pro-mode/advanced-sort-dropdown.png)
 
