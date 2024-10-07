@@ -1,11 +1,10 @@
 ---
 title: ID 그래프 연결 규칙에 대한 구현 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
-badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 35ccc39fdfef31ca1f59e2e11f0d3d762e423635
+source-git-commit: 5d1bcaa84875e55595996253fb72cf768af16e05
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1634'
 ht-degree: 2%
 
 ---
