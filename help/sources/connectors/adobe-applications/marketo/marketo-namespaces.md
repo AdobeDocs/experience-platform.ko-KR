@@ -2,28 +2,32 @@
 title: B2B 네임스페이스 및 스키마
 description: 이 문서에서는 B2B 소스 커넥터를 만들 때 필요한 사용자 지정 네임스페이스에 대한 개요를 제공합니다.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 5e8bb04ca18159eab98b2f7f0bba8cb1488a1f26
+source-git-commit: ebbed5c6ff7037b138588a79a05e6ef13d1856d7
 workflow-type: tm+mt
-source-wordcount: '1620'
+source-wordcount: '1651'
 ht-degree: 11%
 
 ---
 
 # B2B 네임스페이스 및 스키마
 
+>[!AVAILABILITY]
+>
+>B2B 스키마가 [실시간 고객 프로필](../../../../profile/home.md)에 적합하도록 하려면 [Adobe Real-time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md)에 액세스할 수 있어야 합니다.
+
 >[!NOTE]
 >
 >Adobe Experience Platform UI의 템플릿을 사용하여 B2B 및 B2C 데이터에 대한 에셋을 신속하게 만들 수 있습니다. 자세한 내용은 [Platform UI에서 템플릿 사용](../../../tutorials/ui/templates.md)에 대한 안내서를 참조하십시오.
 
-이 문서에서는 B2B 소스에서 사용할 네임스페이스 및 스키마에 대한 기본 설정에 대한 정보를 제공합니다. 이 문서에서는 B2B 네임스페이스 및 스키마를 생성하는 데 필요한 Postman 자동화 유틸리티 설정에 대한 세부 정보도 제공합니다.
-
->[!IMPORTANT]
->
->B2B 스키마가 [실시간 고객 프로필](../../../../profile/home.md)에 참여하려면 [Adobe Real-time Customer Data Platform B2B 에디션](../../../../rtcdp/b2b-overview.md)에 액세스할 수 있어야 합니다.
+B2B 소스에서 사용할 네임스페이스 및 스키마의 기본 설정에 대한 자세한 내용은 이 문서를 참조하십시오. 이 문서에서는 B2B 네임스페이스 및 스키마를 생성하는 데 필요한 Postman 자동화 유틸리티 설정에 대한 세부 정보도 제공합니다.
 
 ## B2B 네임스페이스 및 스키마 자동 생성 유틸리티 설정
 
-B2B 네임스페이스 및 스키마 자동 생성 유틸리티를 사용하는 첫 번째 단계는 플랫폼 개발자 콘솔 및 [!DNL Postman] 환경을 설정하는 것입니다.
+>[!IMPORTANT]
+>
+>서비스 계정(JWT) 자격 증명은 더 이상 사용되지 않습니다. 2025년 1월 27일 이전에 애플리케이션 또는 통합을 새로운 OAuth 서버 간 자격 증명으로 마이그레이션해야 합니다. [JWT 자격 증명을 OAuth 서버 간 자격 증명으로 마이그레이션하는 방법](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)에 대한 자세한 단계는 다음 설명서를 참조하십시오.
+
+B2B 네임스페이스 및 스키마 자동 생성 유틸리티를 지원하도록 [!DNL Postman] 환경을 설정하는 방법에 대한 필수 구성 요소 정보는 다음 설명서를 참조하십시오.
 
 - 이 [GitHub 저장소](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility)에서 네임스페이스와 스키마 자동 생성 유틸리티 컬렉션 및 환경을 다운로드할 수 있습니다.
 - 필요한 헤더에 대한 값을 수집하고 샘플 API 호출을 읽는 방법에 대한 세부 정보를 포함하여 Platform API 사용에 대한 자세한 내용은 [Platform API 시작하기](../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
@@ -37,12 +41,10 @@ Platform 개발자 콘솔과 [!DNL Postman]을(를) 설정하면 이제 [!DNL Po
 | 변수 | 설명 | 예 |
 | --- | --- | --- |
 | `CLIENT_SECRET` | `{ACCESS_TOKEN}`을(를) 생성하는 데 사용되는 고유 식별자입니다. `{CLIENT_SECRET}`을(를) 검색하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../../landing/api-authentication.md)에 대한 자습서를 참조하십시오. | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | JSON 웹 토큰(JWT)은 {ACCESS_TOKEN}을(를) 생성하는 데 사용되는 인증 자격 증명입니다. `{JWT_TOKEN}`을(를) 생성하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../../landing/api-authentication.md)에 대한 자습서를 참조하십시오. | `{JWT_TOKEN}` |
 | `API_KEY` | Experience Platform API 호출을 인증하는 데 사용되는 고유 식별자입니다. `{API_KEY}`을(를) 검색하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../../landing/api-authentication.md)에 대한 자습서를 참조하십시오. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `ACCESS_TOKEN` | Experience Platform API 호출을 완료하는 데 필요한 인증 토큰입니다. `{ACCESS_TOKEN}`을(를) 검색하는 방법에 대한 자세한 내용은 [Experience Platform API 인증 및 액세스](../../../../landing/api-authentication.md)에 대한 자습서를 참조하십시오. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | [!DNL Marketo]과(와) 관련하여 이 값은 고정되어 있으며 항상 `ent_dataservices_sdk`(으)로 설정되어 있습니다. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | `global` 컨테이너에는 모든 표준 Adobe 및 Experience Platform 파트너가 제공한 클래스, 스키마 필드 그룹, 데이터 형식 및 스키마가 들어 있습니다. [!DNL Marketo]과(와) 관련하여 이 값은 고정되어 있으며 항상 `global`(으)로 설정됩니다. | `global` |
-| `PRIVATE_KEY` | Experience Platform API에 대한 [!DNL Postman] 인스턴스를 인증하는 데 사용되는 자격 증명입니다. {PRIVATE_KEY}을(를) 검색하는 방법에 대한 지침은 개발자 콘솔 설정 및 [개발자 콘솔 설정 및 [!DNL Postman]](../../../../landing/postman.md)에 대한 자습서를 참조하십시오. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Adobe I/O에 통합하는 데 사용되는 자격 증명입니다. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | IMS(Identity Management System)는 Adobe 서비스에 인증을 위한 프레임워크를 제공합니다. [!DNL Marketo]과(와) 관련하여 이 값은 고정되어 있으며 항상 `ims-na1.adobelogin.com`(으)로 설정됩니다. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | 제품 및 서비스를 소유하거나 라이선스를 부여하고 해당 구성원에 대한 액세스를 허용할 수 있는 법인 엔티티입니다. `{ORG_ID}` 정보를 검색하는 방법에 대한 지침은 [개발자 콘솔 설정 및 [!DNL Postman]](../../../../landing/postman.md)에 대한 자습서를 참조하십시오. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
@@ -58,11 +60,11 @@ Platform 개발자 콘솔과 [!DNL Postman]을(를) 설정하면 이제 [!DNL Po
 
 [!DNL Postman] 인터페이스에서 자동 생성기 유틸리티의 루트 폴더를 선택한 다음 상단 헤더에서 **[!DNL Run]**&#x200B;을(를) 선택합니다.
 
-![루트 폴더](../images/marketo/root-folder.png)
+![Postman UI에 있는 네임스페이스 및 스키마 생성기의 루트 폴더입니다. 상단 메뉴 모음에 &quot;실행&quot;이 강조 표시되어 있습니다.](../images/marketo/root_folder.png)
 
 [!DNL Runner] 인터페이스가 나타납니다. 여기에서 모든 확인란이 선택되었는지 확인한 다음 **[!DNL Run Namespaces and Schemas Autogeneration Utility]**&#x200B;을(를) 선택하십시오.
 
-![run-generator](../images/marketo/run-generator.png)
+![네임스페이스 및 스키마 컬렉션에서 여러 개의 요청이 확인되고 오른쪽에 &quot;네임스페이스 및 스키마 실행&quot; 단추가 강조 표시된 Postman UI의 러너 인터페이스입니다.](../images/marketo/run_generator.png)
 
 요청이 성공하면 B2B에 필요한 네임스페이스와 스키마가 만들어집니다.
 
