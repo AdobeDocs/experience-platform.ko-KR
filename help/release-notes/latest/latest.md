@@ -3,9 +3,9 @@ title: Adobe Experience Platform 릴리스 정보 2024년 9월
 description: Adobe Experience Platform의 2024년 9월 릴리스 정보입니다.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 33d1305aef7c763e7b0bd8c6db6a1a9417cc2a9d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2199'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -76,7 +76,7 @@ Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대
 
 ## 대상 {#destinations}
 
-**업데이트 날짜: 2024년 9월 30일**
+**업데이트 일자: 2024년 9월 30일**
 
 [!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
@@ -85,7 +85,7 @@ Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대
 | 대상 | 설명 |
 | --- | --- |
 | [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) | 2024년 9월 릴리스에서는 `countryCode` 매개변수를 Amazon Ads로 내보내는 매핑 옵션을 추가했습니다. [매핑 단계](/help/destinations/catalog/advertising/amazon-ads.md#map)에서 `countryCode`를 사용하여 Amazon의 신원 일치율을 개선해 보십시오. |
-| [[!BADGE B2B]{type=Informative} Demandbase](/help/destinations/catalog/advertising/demandbase.md) | 이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대한 계정 대상을 활성화하십시오. DemandBase의 DSP(B2B Demand Side Platform)를 통해 대상 계정의 관련 담당자 및 역할에 광고를 게재합니다. 마케팅 및 판매의 다른 다운스트림 사용 사례에 대해 Demandbase 타사 데이터를 사용하여 대상 계정을 보강할 수도 있습니다. |
+| [[!BADGE B2B]{type=Informative} Demandbase](/help/destinations/catalog/advertising/demandbase.md) | 이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대한 계정 대상자를 활성화할 수 있습니다. DemandBase의 B2B Demand Side Platform(DSP)을 통해 대상 계정의 관련 페르소나와 역할에 광고를 게재하십시오. 대상 계정은 마케팅과 판매의 다른 다운스트림 사용 사례를 위해 Demandbase 서드파티 데이터로 강화할 수도 있습니다. |
 
 {style="table-layout:auto"}
 
