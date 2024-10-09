@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 도움말의 샌드박스
 breadcrumb-title: 샌드박스 안내서
 user-guide-description: 개발, 테스트 및 애플리케이션 배포를 위해 샌드박스가 작동하는 방식과 플랫폼 인스턴스를 가상 환경으로 분할하는 방식을 살펴보십시오.
 feature: Sandboxes
-source-git-commit: 06f9846c2b58071827a1c1d5360eb49ba6b1c34a
+source-git-commit: 868800de5dc6dde6654ff5256c91bddc2997b11b
 workflow-type: tm+mt
 source-wordcount: '74'
-ht-degree: 68%
+ht-degree: 66%
 
 ---
 
