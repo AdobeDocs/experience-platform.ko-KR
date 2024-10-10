@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 제품 목록 항목 데이터 유형
 description: 제품 목록 항목 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba6c6eb2c6b0fc1dfc4e7440fd16a85bc7b46457
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 18%
+source-wordcount: '338'
+ht-degree: 20%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 18%
 | `discountAmount` | [!UICONTROL 이중] | 상품을 할인한 경우, 이는 상품에 대한 정가와 특별가의 차이를 나타낸다. |
 | `name` | [!UICONTROL 문자열] | 해당 제품 조회를 위해 사용자에게 제시된 제품별 디스플레이 이름. |
 | `priceTotal` | [!UICONTROL 이중] | 제품 라인 항목의 전체 가격. |
-| `product` | [!UICONTROL 문자열](URI) | 제품 자체를 캡처하는 XDM 스키마의 URI `$id`입니다. |
+| `product` | [!UICONTROL 문자열](URI) | 제품 자체의 XDM 식별자. |
 | `productAddMethod` | [!UICONTROL 문자열] | 방문자가 목록에 제품 항목을 추가하는 데 사용한 메서드입니다. |
 | `productImageUrl` | [!UICONTROL 문자열] | 제품의 기본 이미지에 대한 URL. |
 | `quantity` | [!UICONTROL 정수] | 제품이 필요하다고 고객이 표시한 단위 수. |
