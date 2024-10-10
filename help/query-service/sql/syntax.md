@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 서비스의 SQL 구문
 description: 이 문서에서는 Adobe Experience Platform 쿼리 서비스에서 지원하는 SQL 구문에 대해 자세히 설명합니다.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: 654a8b6a3f961514ef96eaec879697cde36f8b1b
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4265'
 ht-degree: 2%
 
 ---
@@ -577,7 +577,7 @@ SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
 
 ### 실패 시 대체 스냅샷 해결 {#resolve-fallback-snapshot-on-failure}
 
-`resolve_fallback_snapshot_on_failure` 옵션은 만료된 스냅숏 ID 문제를 해결하는 데 사용됩니다. 스냅샷 메타데이터는 2일 후에 만료되며 만료된 스냅샷은 스크립트 논리를 무효화할 수 있습니다. 이는 익명 블록을 사용할 때 문제가 될 수 있습니다.
+`resolve_fallback_snapshot_on_failure` 옵션은 만료된 스냅숏 ID 문제를 해결하는 데 사용됩니다.
 
 이전 스냅숏 ID로 스냅숏을 재정의하려면 `resolve_fallback_snapshot_on_failure` 옵션을 true로 설정하십시오.
 

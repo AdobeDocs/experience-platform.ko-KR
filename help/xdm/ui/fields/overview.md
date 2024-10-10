@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI에서 XDM 필드 정의
 description: Experience Platform 사용자 인터페이스에서 XDM 필드를 정의하는 방법을 알아봅니다.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 89519918aa830dc09365fa80449099229dc475d5
+source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 1%
+source-wordcount: '1607'
+ht-degree: 2%
 
 ---
 
@@ -88,8 +88,7 @@ UI에서 새 XDM 필드를 정의하려면 먼저 [!DNL Schema Editor] 내에서
 
 | 필드 속성 | 호환 가능한 유형 | 설명 |
 | --- | --- | --- |
-| [!UICONTROL 맵 값 형식] | [!UICONTROL 맵] | [!UICONTROL Type] 드롭다운 옵션에서 맵 값을 선택한 경우에만 [!UICONTROL 맵 값 형식] 속성이 UI에 표시됩니다. 맵의 문자열 및 정수 값 유형 중에서 선택할 수 있습니다.<br>![유형 및 맵 값 유형 필드가 강조 표시된 스키마 편집기입니다.](../../images/ui/fields/overview/map-type.png "유형 및 맵 값 유형 필드가 강조 표시된 스키마 편집기입니다."){width="100" zoomable="yes"}<br>참고: API를 통해 만든 String 또는 Integer 형식이 아닌 맵 데이터 형식은 &#39;[!UICONTROL Complex]&#39; 데이터 형식으로 표시됩니다. UI를 통해 &#39;[!UICONTROL Complex]&#39; 데이터 형식을 만들 수 없습니다. |
-| [!UICONTROL 기본값] | [!UICONTROL 문자열], [!UICONTROL 이중], [!UICONTROL 긴], [!UICONTROL 정수], [!UICONTROL 짧은], [!UICONTROL 바이트], [!UICONTROL 부울] | 수집 중에 다른 값이 제공되지 않는 경우 이 필드에 할당되는 기본값입니다. 이 값은 필드에서 선택한 유형을 준수해야 합니다.<br><br>기본값은 시간이 지남에 따라 변경될 수 있으므로 수집 시 데이터 집합에 저장되지 않습니다. 스키마에 설정된 기본값은 다운스트림 플랫폼 서비스 및 애플리케이션이 데이터 세트에서 데이터를 읽을 때 추론합니다. 예를 들어 Query Service를 사용하여 데이터를 쿼리할 때 특성에 NULL 값이 있지만 스키마 수준에서 기본값이 `5`(으)로 설정되어 있으면 Query Service에서 NULL 대신 `5`을(를) 반환해야 합니다. 이 동작은 현재 모든 AEP 서비스에서 균일하지 않습니다. |
+| [!UICONTROL 맵 값 형식] | [!UICONTROL 맵] | [!UICONTROL Type] 드롭다운 옵션에서 맵 값을 선택한 경우에만 [!UICONTROL 맵 값 형식] 속성이 UI에 표시됩니다. 맵의 문자열 및 정수 값 유형 중에서 선택할 수 있습니다.<br>![유형 및 맵 값 유형 필드가 강조 표시된 스키마 편집기.](../../images/ui/fields/overview/map-type.png "유형 및 맵 값 유형 필드가 강조 표시된 스키마 편집기."){width="100" zoomable="yes"}<br>참고: API를 통해 만든 String 또는 Integer 형식이 아닌 맵 데이터 형식은 &#39;[!UICONTROL Complex]&#39; 데이터 형식으로 표시됩니다. UI를 통해 &#39;[!UICONTROL Complex]&#39; 데이터 형식을 만들 수 없습니다. |
 | [!UICONTROL 패턴] | [!UICONTROL 문자열] | 수집 중에 수락하려면 이 필드의 값이 준수해야 하는 [정규 표현식](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)입니다. |
 | [!UICONTROL 형식] | [!UICONTROL 문자열] | 값이 준수해야 하는 문자열의 사전 정의된 형식 목록에서 선택합니다. 사용 가능한 형식은 다음과 같습니다. <ul><li>[[!UICONTROL 날짜-시간]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL 전자 메일]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL 호스트 이름]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL 최소 길이] | [!UICONTROL 문자열] | 수집 중에 값을 수락하기 위해 문자열에 포함해야 하는 최소 문자 수입니다. |
