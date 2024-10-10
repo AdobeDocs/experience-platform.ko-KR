@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 준비 매핑 기능
 description: 이 문서에서는 데이터 준비에 사용되는 매핑 기능을 소개합니다.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 1e06fa2f8a5685cf5debcc3b5279d7efab9af0c8
+source-git-commit: 830aa01828785a9ae4dea71078ee418fc510253c
 workflow-type: tm+mt
-source-wordcount: '6024'
+source-wordcount: '6028'
 ht-degree: 2%
 
 ---
@@ -178,10 +178,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | size_of | 입력 크기를 반환합니다. | <ul><li>입력: **필수** 크기를 찾으려는 개체입니다.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | 이 함수는 전체 입력 배열의 모든 요소를 프로필의 배열 끝에 추가하는 데 사용합니다. 이 함수는 업데이트 중에 **전용**&#x200B;입니다. 삽입 컨텍스트에서 사용되는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>배열: **필수** 프로필에 배열을 추가하는 배열입니다.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | 이 함수는 배열에서 요소를 바꾸는 데 사용합니다. 이 함수는 업데이트 중에 **전용**&#x200B;입니다. 삽입 컨텍스트에서 사용되는 경우 이 함수는 입력을 그대로 반환합니다. | <ul><li>배열: **필수** 프로필에서 배열을 바꿀 배열입니다.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
-| [!BADGE Beta]{type=Informative} array_to_string | 지정된 구분 기호를 사용하여 배열에 있는 요소의 문자열 표현을 조인합니다. 배열이 다차원이면 결합되기 전에 평면화됩니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-calculated-fields.md)를 참조하세요. | <ul><li>구분 기호: **필수** 배열에서 요소를 연결하는 데 사용되는 구분 기호입니다.</li><li>배열: **필수** 병합할 배열입니다(병합한 후).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | &quot;Hello;world&quot; |
-| [!BADGE Beta]{type=Informative} filterArray* | 술어를 기반으로 해당 배열을 필터링합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-calculated-fields.md)를 참조하세요. | <ul><li>배열: **필수** 필터링할 배열</li><li>조건자: **필수** 특정 배열의 각 요소에 적용할 조건자입니다. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7] |
-| [!BADGE Beta]{type=Informative} transformArray* | 조건자를 기반으로 특정 배열을 변환합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-calculated-fields.md)를 참조하세요. | <ul><li>배열: **필수** 변환할 배열입니다.</li><li>조건자: **필수** 특정 배열의 각 요소에 적용할 조건자입니다. | transformArray(ARRAY, PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
-| [!BADGE Beta]{type=Informative} flattenArray* | 지정된 (다차원) 배열을 1차원 배열로 병합합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-calculated-fields.md)를 참조하세요. | <ul><li>배열: **필수** 병합할 배열입니다.</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
+| [!BADGE 대상만]{type=Informative} array_to_string | 지정된 구분 기호를 사용하여 배열에 있는 요소의 문자열 표현을 조인합니다. 배열이 다차원이면 결합되기 전에 평면화됩니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-calculated-fields.md)를 참조하세요. | <ul><li>구분 기호: **필수** 배열에서 요소를 연결하는 데 사용되는 구분 기호입니다.</li><li>배열: **필수** 병합할 배열입니다(병합한 후).</li></ul> | array_to_string(SEPARATOR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | &quot;Hello;world&quot; |
+| [!BADGE 대상만]{type=Informative} filterArray* | 술어를 기반으로 해당 배열을 필터링합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-calculated-fields.md)를 참조하세요. | <ul><li>배열: **필수** 필터링할 배열</li><li>조건자: **필수** 특정 배열의 각 요소에 적용할 조건자입니다. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7] |
+| [!BADGE 대상만]{type=Informative} transformArray* | 조건자를 기반으로 특정 배열을 변환합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-calculated-fields.md)를 참조하세요. | <ul><li>배열: **필수** 변환할 배열입니다.</li><li>조건자: **필수** 특정 배열의 각 요소에 적용할 조건자입니다. | transformArray(ARRAY, PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
+| [!BADGE 대상만]{type=Informative} flattenArray* | 지정된 (다차원) 배열을 1차원 배열로 병합합니다. **참고**: 이 함수는 대상에서 사용됩니다. 자세한 내용은 [설명서](../destinations/ui/export-arrays-calculated-fields.md)를 참조하세요. | <ul><li>배열: **필수** 병합할 배열입니다.</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 
