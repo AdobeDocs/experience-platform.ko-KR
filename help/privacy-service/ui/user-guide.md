@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service UI의 개인 정보 작업 관리
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 요청을 조정하고 모니터링하는 방법에 대해 알아봅니다.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 341cc4cb150717f08b2e59412ef58fbd6f7b3450
+source-git-commit: 25c173e22f2aa4922aed89f7c9721e2303d5d4b9
 workflow-type: tm+mt
-source-wordcount: '1728'
-ht-degree: 12%
+source-wordcount: '1765'
+ht-degree: 11%
 
 ---
 
@@ -37,25 +37,35 @@ ht-degree: 12%
 [!DNL Privacy Service]은(는) 여러 개인 정보 보호 규정에 대한 작업 요청을 지원합니다. 다음 표에는 UI에 표시되는 지원되는 규정 및 해당 레이블이 나열되어 있습니다.
 
 | UI 레이블 | 규정 |
-| --- | --- |
-| [!UICONTROL APA_AUS] | [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL CPA] | [!DNL Colorado Privacy Act] |
-| [!UICONTROL CCPA] | [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPRA_USA] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA] | [!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL FDBR_USA] | [!DNL Florida Digital Bill of Rights] |
-| [!UICONTROL GDPR] | 유럽 연합의 [!DNL General Data Protection Regulation] |
-| [!UICONTROL HIPAA_AUS] | [!DNL Health Insurance Portability and Accountability Act] |
-| [!UICONTROL LGPD_BRA] | 브라질의 [!DNL Lei Geral de Proteção de Dados] |
-| [!UICONTROL MHMDA] | [!DNL Washington My Health My Data Act] |
-| [!UICONTROL NZPA_NZL] | 뉴질랜드 [!DNL Privacy Act] |
-| [!UICONTROL OCPA_USA] | [!DNL Oregon Consumer Privacy Act] |
-| [!UICONTROL PDPA_THA] | 태국 [!DNL Personal Data Protection Act] |
-| [!UICONTROL TDPSA_USA] | [!DNL Texas Data Privacy and Security Act] |
-| [!UICONTROL UCPA] | [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA] | [!DNL Virginia Consumer Data Protection Act] |
+|-------------------------------------|------------------------|
+| [!UICONTROL APA_AUS(오스트레일리아)] | [!DNL Australia Privacy Act] |
+| [!UICONTROL CCPA(캘리포니아)] | [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPA_USA(콜로라도)] | [!DNL Colorado Privacy Act] |
+| [!UICONTROL CPRA_USA(캘리포니아)] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL CTDPA_USA(Connecticut)] | [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL FDBR_USA(플로리다)] | [!DNL Florida Digital Bill of Rights] |
+| [!UICONTROL GDPR(유럽 연합)] | 유럽 연합의 [!DNL General Data Protection Regulation] |
+| [!UICONTROL HIPPA_USA(미국)] | [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL ICDPA_USA](Iowa) | [!DNL Iowa Consumer Data Protection Act] |
+| [!UICONTROL LGPD_BRA(브라질)] | 브라질의 &quot;[!DNL General Data Protection Law]&quot; [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MHMDA_USA(워싱턴)] | [!DNL Washington My Health My Data Act] |
+| [!UICONTROL MCDPA_USA(몬타나)] | [!DNL Montana Consumer Data Privacy Act] |
+| [!UICONTROL NDPA_USA(네브래스카)] | [!DNL Nebraska Data Protection Act] |
+| [!UICONTROL NZPA_NZL(뉴질랜드)] | 뉴질랜드 [!DNL Privacy Act] |
+| [!UICONTROL NHPA_USA(뉴햄프셔)] | [!DNL New Hampshire Data Privacy Act] |
+| [!UICONTROL NJDPA_USA(뉴저지)] | [!DNL New Jersey Data Protection Act] |
+| [!UICONTROL OCPA USA(오레곤)] | [!DNL Oregon Consumer Privacy Act] |
+| [!UICONTROL PDPA_THA(태국)] | 태국 [!DNL Personal Data Protection Act] |
+| [!UICONTROL TDPSA USA(텍사스)] | [!DNL Texas Data Privacy and Security Act] |
+| [!UICONTROL UCPA_USA(유타)] | [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_USA(버지니아)] | [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
+
+<!-- 
+Waiting:
+| **[!UICONTROL PIPA_KOR]**  ?        | South Korea [!DNL Personal Information Privacy Act] |
+ -->
 
 >[!NOTE]
 >
