@@ -3,9 +3,9 @@ title: 계산된 필드를 사용하여 배열을 문자열로 내보내기
 type: Tutorial
 description: 계산된 필드를 사용하여 배열을 Real-Time CDP에서 클라우드 스토리지 대상으로 문자열로 내보내는 방법을 알아봅니다.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6fec0432f71e58d0e17ac75121fb1028644016e1
+source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1520'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ## Platform의 배열 및 기타 개체 유형 {#arrays-strings-other-objects}
 
-Experience Platform에서 [XDM 스키마](/help/xdm/home.md)를 사용하여 다른 필드 유형을 관리할 수 있습니다. 이전에는 Experience Platform에서 벗어난 문자열과 같은 간단한 키-값 쌍 유형 필드를 원하는 대상으로 내보낼 수 있었습니다. 이전에 내보내기에 지원되는 이러한 필드의 예는 `personalEmail.address`:`johndoe@acme.org`입니다.
+Experience Platform에서 [XDM 스키마](/help/xdm/home.md)를 사용하여 다른 필드 유형을 관리할 수 있습니다. 배열 내보내기에 대한 지원이 추가되기 전에 Experience Platform 문자열과 같은 간단한 키-값 쌍 유형 필드를 원하는 대상으로 내보낼 수 있습니다. 이전에 내보내기에 지원되는 이러한 필드의 예는 `personalEmail.address`:`johndoe@acme.org`입니다.
 
 Experience Platform의 다른 필드 유형에는 배열 필드가 포함됩니다. [Experience Platform UI에서 배열 필드 관리](/help/xdm/ui/fields/array.md)에 대해 자세히 알아보십시오. 이전에 지원된 필드 형식 외에도 이제 `array_to_string` 함수를 사용하여 문자열로 연결된 아래 예제와 같은 배열 개체를 내보낼 수 있습니다.
 
@@ -146,15 +146,6 @@ First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### 병합된 배열을 내보내는 `flattenArray` 함수
-
-내보낸 다차원 배열을 병합하려면 `flattenArray` 함수를 사용하십시오. 이 함수를 위에서 설명한 `array_to_string` 함수와 결합할 수 있습니다.
-
-위에서 `organizations` 배열 개체를 계속 사용하면 `array_to_string('_', flattenArray(organizations))`과(와) 같은 함수를 작성할 수 있습니다. `array_to_string` 함수는 기본적으로 입력 배열을 문자열로 병합합니다.
-
-결과 출력은 위에서 설명한 `array_to_string` 함수와 동일합니다.
-
-
 ### 필터링된 배열을 내보내는 `filterArray` 함수
 
 `filterArray` 함수를 사용하여 내보낸 배열의 요소를 필터링합니다. 이 함수를 위에서 설명한 `array_to_string` 함수와 결합할 수 있습니다.
@@ -210,6 +201,14 @@ John,Doe, johndoe@acme.org, "isMarketing"
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
+
+### 병합된 배열을 내보내는 `flattenArray` 함수
+
+내보낸 다차원 배열을 병합하려면 `flattenArray` 함수를 사용하십시오. 이 함수를 위에서 설명한 `array_to_string` 함수와 결합할 수 있습니다.
+
+위에서 `organizations` 배열 개체를 계속 사용하면 `array_to_string('_', flattenArray(organizations))`과(와) 같은 함수를 작성할 수 있습니다. `array_to_string` 함수는 기본적으로 입력 배열을 문자열로 병합합니다.
+
+결과 출력은 위에서 설명한 `array_to_string` 함수와 동일합니다.
 
 ### 배열을 내보내는 `coalesce` 함수 {#coalesce-function-export-arrays}
 
