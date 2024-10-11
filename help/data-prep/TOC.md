@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: 데이터 준비 안내서
-user-guide-description: Adobe Experience Platform으로 수집할 데이터를 준비하고 데이터 준비를 통해 데이터를 매핑, 변환 및 검증하는 방법을 알아보십시오.
+user-guide-description: Adobe Experience Platform으로 수집할 데이터를 준비하고 데이터 준비를 통해 데이터를 매핑, 변환 및 검증하는 방법에 대해 알아봅니다.
 feature: Data Prep
 role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1

@@ -1,7 +1,7 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;cdp;rtcdp
 title: Real-time Customer Data Platform 시작하기
-description: Adobe Real-Time Customer Data Platform 구현을 설정할 때 이 샘플 시나리오를 예로 사용하십시오.
+description: Adobe Real-Time Customer Data Platform 구현을 설정할 때 이 샘플 시나리오를 예로 사용합니다.
 feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9

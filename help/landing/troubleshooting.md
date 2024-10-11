@@ -2,9 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;API 오류 코드;API 오류 코드;오류 코드 API;오류 코드 API;API 요청 오류;API 문제 해결;API 오류
 solution: Experience Platform
 title: Adobe Experience Platform FAQ 및 문제 해결 안내서
-description: 자주 묻는 질문에 대한 답변과 Adobe Experience Platform에서 일반적인 오류를 해결하기 위한 안내서를 확인하십시오.
-landing-page-description: 자주 묻는 질문에 대한 답변과 Adobe Experience Platform에서 일반적인 오류를 해결하기 위한 안내서를 확인하십시오.
-short-description: 자주 묻는 질문에 대한 답변과 Experience Platform에서 일반적인 오류를 해결하기 위한 안내서를 확인하십시오.
+description: 자주 묻는 질문에 대한 답변과 Adobe Experience Platform에서 일반적인 오류를 해결하기 위한 안내서를 확인합니다.
+landing-page-description: 자주 묻는 질문에 대한 답변과 Adobe Experience Platform에서 일반적인 오류를 해결하기 위한 안내서를 확인합니다.
+short-description: 자주 묻는 질문에 대한 답변과 Experience Platform에서 일반적인 오류를 해결하기 위한 안내서를 확인합니다.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
