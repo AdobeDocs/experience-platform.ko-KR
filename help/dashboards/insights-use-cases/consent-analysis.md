@@ -2,7 +2,7 @@
 title: 동의 분석 및 추적
 description: 사용자 동의가 시간 경과에 따라 어떻게 트렌드되는지 추적하기 위해 동의 분석 대시보드를 작성하는 방법을 알아봅니다.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -90,7 +90,7 @@ Adobe은 프로필, 대상 및 대상 대시보드에서 자동으로 사용할 
 
 ![전자 메일 대상자에 동의한 사용자가 강조 표시된 대상자 중복 보고서입니다.](../images/insights-use-cases/consent-analysis/additional-audience-overlap-reports.png)
 
-## 대상자 크기 트렌드 {#audience-size-trends}
+## 대상자 크기 추세 {#audience-size-trends}
 
 동의 기반 대상자를 만들면 대상자를 만든 날짜로부터 최대 12개월 동안 자동으로 트렌드가 표시됩니다. 고객 동의의 완전한 기능 트렌드를 보려면 다음 위젯을 [!UICONTROL 세그먼트] [!UICONTROL 개요] 페이지에 추가하십시오. 이러한 통찰력은 시간이 지남에 따라 동의가 어떻게 변경되는지 추적하는 강력한 수단을 제공합니다. 심지어 동의에 긍정적 또는 부정적인 영향을 줄 수 있는 동시에 실행하는 모든 캠페인과도 상호 연관됩니다. 이러한 위젯에 대해 제공되는 설명은 동의 사용 사례에 적용됩니다.
 
@@ -112,13 +112,13 @@ Adobe은 프로필, 대상 및 대상 대시보드에서 자동으로 사용할 
 
 사용자 정의 대시보드를 사용하여 나만의 위젯을 빌드할 수도 있습니다. 고유한 위젯을 빌드하면 Adobe Real-Time CDP 내에서 직접 필터 등을 추가할 수 있는 유연성과 함께 위젯 유형을 완벽하게 제어할 수 있습니다.
 
-예를 들어 시간이 지남에 따라 각 동의 환경 설정이 어떻게 변경되었는지 확인할 수 있도록 동일한 차트에서 여러 동의 대상자의 트렌드를 추적하려는 경우. 이러한 유형의 시각화는 최소 단계 및 1회 설정에서 사용자 정의 대시보드를 사용하여 가능합니다. 먼저 왼쪽 탐색에서 **[!UICONTROL 대시보드]**&#x200B;를 선택합니다. [!UICONTROL 대시보드] 작업 영역이 나타납니다. **[!UICONTROL 대시보드 만들기]**&#x200B;를 선택합니다. [대시보드 및 사용자 지정 위젯을 만드는 방법](../user-defined-dashboards.md)에 대한 전체 지침은 사용자 정의 대시보드 안내서에서 확인할 수 있습니다.
+예를 들어 시간이 지남에 따라 각 동의 환경 설정이 어떻게 변경되었는지 확인할 수 있도록 동일한 차트에서 여러 동의 대상자의 트렌드를 추적하려는 경우. 이러한 유형의 시각화는 최소 단계 및 1회 설정에서 사용자 정의 대시보드를 사용하여 가능합니다. 먼저 왼쪽 탐색에서 **[!UICONTROL 대시보드]**&#x200B;를 선택합니다. [!UICONTROL 대시보드] 작업 영역이 나타납니다. **[!UICONTROL 대시보드 만들기]**&#x200B;를 선택합니다. [대시보드 및 사용자 지정 위젯을 만드는 방법](../standard-dashboards.md)에 대한 전체 지침은 사용자 정의 대시보드 안내서에서 확인할 수 있습니다.
 
-![대시보드가 있는 대시보드 작업 영역 및 대시보드 만들기 강조 표시됨](../images/user-defined-dashboards/create-dashboard.png)
+![대시보드가 있는 대시보드 작업 영역 및 대시보드 만들기 강조 표시됨](../images/standard-dashboards/create-dashboard.png)
 
-위젯 작성기에서 [데이터 모델을 선택](../user-defined-dashboards.md#select-data-model)하면 `CDPInsights`을(를) 선택한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오. [!UICONTROL 테이블 선택] 대화 상자가 나타납니다.
+위젯 작성기에서 [데이터 모델을 선택](../standard-dashboards.md#select-data-model)하면 `CDPInsights`을(를) 선택한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오. [!UICONTROL 테이블 선택] 대화 상자가 나타납니다.
 
-![CDPInsights 모델이 강조 표시된 데이터 모델 선택 대화 상자입니다.](../images/user-defined-dashboards/select-data-model-dialog.png)
+![CDPInsights 모델이 강조 표시된 데이터 모델 선택 대화 상자입니다.](../images/standard-dashboards/select-data-model-dialog.png)
 
 다음 보기는 왼쪽 레일에 사용 가능한 테이블 목록을 표시합니다. `adwh_fact_profile_by_segment_and_namespace_trendlines`을(를) 선택합니다.
 
@@ -126,16 +126,16 @@ Adobe은 프로필, 대상 및 대상 대시보드에서 자동으로 사용할 
 
 위젯 작성기가 선택한 테이블의 데이터로 채워지면 아래 단계를 수행합니다.
 
-- [`[!UICONTROL date]`에 대해 [!UICONTROL 특성]](../user-defined-dashboards.md#add-filter-attributes)을(를) 검색한 다음 + 아이콘을 사용하여 드롭다운 메뉴에서 X축에 `[!UICONTROL date]` 특성을 추가하십시오.
-  ![추가 아이콘과 드롭다운 메뉴가 강조 표시된 위젯 작성기입니다.](../images/user-defined-dashboards/attributes-dropdown.png)
+- [`[!UICONTROL date]`에 대해 [!UICONTROL 특성]](../standard-dashboards.md#add-filter-attributes)을(를) 검색한 다음 + 아이콘을 사용하여 드롭다운 메뉴에서 X축에 `[!UICONTROL date]` 특성을 추가하십시오.
+  ![추가 아이콘과 드롭다운 메뉴가 강조 표시된 위젯 작성기입니다.](../images/standard-dashboards/attributes-dropdown.png)
 - [!UICONTROL 특성]에서 `[!UICONTROL count_of_profiles]`을(를) 검색한 다음 + 아이콘을 사용하여 드롭다운 메뉴에서 Y축에 `[!UICONTROL count_of_profiles]` 특성을 추가합니다.
 - [!UICONTROL Y축] 필드에서 `...`(줄임표) 아이콘을 선택한 다음 드롭다운 메뉴에서 [!UICONTROL SUM] 집계 함수를 선택합니다.
   ![데이터 모델, 테이블, Y축 드롭다운 메뉴 및 SUM 기능이 강조 표시된 위젯 작성기 동의 트렌드 위젯입니다. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - [!UICONTROL 표시] 드롭다운 메뉴를 선택하고 차트 종류를 [!UICONTROL 줄](으)로 변경하십시오.
 - [!UICONTROL 특성]에서 `[!UICONTROL segment_name]`을(를) 검색한 다음 + 아이콘을 사용하여 드롭다운 메뉴에서 `segment_name`을(를) [!UICONTROL 필터](으)로 추가합니다. [!UICONTROL 필터: Segment_name] 대화 상자가 나타납니다. 동의와 관련하여 이전에 만든 대상자를 선택합니다. 이 예제에서는 **[!UICONTROL 통화에 동의한 사용자]**, **[!UICONTROL SMS에 동의한 사용자]**, **[!UICONTROL 전자 메일에 동의한 사용자]**, **[!UICONTROL 적용]**&#x200B;을 선택합니다.
 - `[!UICONTROL segment_name]`에 대해 [!UICONTROL 특성]을(를) 검색한 다음 + 아이콘을 선택하여 드롭다운 메뉴에서 `segment_name`을(를) [!UICONTROL 색상](으)로 추가합니다.
-- [[!UICONTROL 속성] 패널](../user-defined-dashboards.md#widget-properties)을 열고 적절한 [!UICONTROL 위젯 제목] 및 [!UICONTROL 축 레이블]을(를) 제공하세요.
-  ![속성 아이콘과 위젯 제목이 강조 표시된 위젯 작성기입니다.](../images/user-defined-dashboards/properties-panel.png)
+- [[!UICONTROL 속성] 패널](../standard-dashboards.md#widget-properties)을 열고 적절한 [!UICONTROL 위젯 제목] 및 [!UICONTROL 축 레이블]을(를) 제공하세요.
+  ![속성 아이콘과 위젯 제목이 강조 표시된 위젯 작성기입니다.](../images/standard-dashboards/properties-panel.png)
 - 설정을 확인하려면 **[!UICONTROL 저장 후 닫기]**&#x200B;를 선택하세요.
 
 >[!TIP]

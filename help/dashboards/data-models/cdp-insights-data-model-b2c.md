@@ -4,7 +4,7 @@ description: Real-time Customer Data Platform Insights 데이터 모델(B2C 버�
 badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 전제 조건
 
-이 안내서를 사용하려면 [사용자 정의 대시보드 기능](../user-defined-dashboards.md)에 대한 작업 이해가 필요합니다. 이 안내서를 계속하기 전에 설명서를 읽어 보십시오.
+이 안내서를 사용하려면 [사용자 정의 대시보드 기능](../standard-dashboards.md)에 대한 작업 이해가 필요합니다. 이 안내서를 계속하기 전에 설명서를 읽어 보십시오.
 
 ## Real-Time CDP 인사이트 보고서 및 사용 사례
 

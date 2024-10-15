@@ -3,7 +3,7 @@ title: 가속화된 쿼리 끝점
 description: 상태 비저장 방식으로 쿼리 가속 저장소에 액세스하여 집계된 데이터를 기반으로 결과를 빠르게 반환하는 방법을 알아봅니다. 이 문서에서는 쿼리 서비스 가속 쿼리 끝점에 대한 샘플 HTTP 요청 및 응답을 제공합니다.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # 가속화된 쿼리 끝점
 
-Data Distiller SKU의 일부로 [쿼리 서비스 API](https://developer.adobe.com/experience-platform-apis/references/query-service/)를 사용하면 상태 비저장 쿼리를 가속 스토어에 만들 수 있습니다. 반환된 결과는 집계된 데이터를 기반으로 합니다. 결과의 지연 시간이 줄어 보다 대화식 정보 교환이 가능합니다. 가속화된 쿼리 API는 [사용자 정의 대시보드](../../dashboards/user-defined-dashboards.md)를 제공하는 데에도 사용됩니다.
+Data Distiller SKU의 일부로 [쿼리 서비스 API](https://developer.adobe.com/experience-platform-apis/references/query-service/)를 사용하면 상태 비저장 쿼리를 가속 스토어에 만들 수 있습니다. 반환된 결과는 집계된 데이터를 기반으로 합니다. 결과의 지연 시간이 줄어 보다 대화식 정보 교환이 가능합니다. 가속화된 쿼리 API는 [사용자 정의 대시보드](../../dashboards/standard-dashboards.md)를 제공하는 데에도 사용됩니다.
 
 이 안내서를 계속하기 전에 쿼리 서비스 API를 성공적으로 사용하려면 [쿼리 서비스 API 안내서](./getting-started.md)를 읽고 이해했는지 확인하십시오.
 

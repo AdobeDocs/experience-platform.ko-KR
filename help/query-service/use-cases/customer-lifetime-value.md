@@ -2,7 +2,7 @@
 title: 데이터 신호를 추적하여 고객 생애 가치 생성
 description: 이 안내서에서는 Data Distiller 및 Real-time Customer Data Platform과 함께 사용자 정의 대시보드를 사용하여 고객 생애 가치를 측정하고 시각화하는 방법에 대한 전체적인 데모를 제공합니다.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -62,7 +62,7 @@ CLV를 설정하는 첫 번째 단계는 사용자 작업에서 캡처한 데이
 
 ## 통찰력을 캡처할 대시보드 구축 {#build-a-custom-dashboard}
 
-사용자 정의 데이터 모델을 만들었으므로 이제 사용자 정의 쿼리 및 사용자 정의 대시보드를 사용하여 데이터를 시각화할 준비가 되었습니다. [사용자 지정 대시보드를 빌드](../../dashboards/user-defined-dashboards.md)하는 방법에 대한 전체 지침은 사용자 정의 대시보드 개요 를 참조하십시오. UI 안내서에는 다음에 대한 세부 사항이 포함되어 있습니다.
+사용자 정의 데이터 모델을 만들었으므로 이제 사용자 정의 쿼리 및 사용자 정의 대시보드를 사용하여 데이터를 시각화할 준비가 되었습니다. [사용자 지정 대시보드를 빌드](../../dashboards/standard-dashboards.md)하는 방법에 대한 전체 지침은 사용자 정의 대시보드 개요 를 참조하십시오. UI 안내서에는 다음에 대한 세부 사항이 포함되어 있습니다.
 
 * 위젯을 만드는 방법.
 * 위젯 작성기를 사용하는 방법.

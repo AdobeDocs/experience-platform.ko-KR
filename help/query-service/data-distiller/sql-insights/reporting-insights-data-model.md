@@ -2,7 +2,7 @@
 title: Query Accelerated Store 보고 인사이트 안내서
 description: 가속화된 스토어 데이터 및 사용자 정의 대시보드와 함께 사용할 수 있도록 쿼리 서비스를 통해 보고 인사이트 데이터 모델을 구축하는 방법에 대해 알아봅니다.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Adobe Experience Platform의 Real-Time CDP 데이터 모델은 프로필, 대상
 
 ## 전제 조건
 
-이 자습서에서는 사용자 정의 대시보드를 사용하여 Platform UI 내에서 사용자 정의 데이터 모델의 데이터를 시각화합니다. 이 기능에 대한 자세한 내용은 [사용자 정의 대시보드 설명서](../../../dashboards/user-defined-dashboards.md)를 참조하세요.
+이 자습서에서는 사용자 정의 대시보드를 사용하여 Platform UI 내에서 사용자 정의 데이터 모델의 데이터를 시각화합니다. 이 기능에 대한 자세한 내용은 [사용자 정의 대시보드 설명서](../../../dashboards/standard-dashboards.md)를 참조하세요.
 
 ## 시작하기
 
@@ -228,4 +228,4 @@ LIMIT  5000
 
 ![새 보고 통찰력 데이터 모델에서 만들어진 대상 및 대상 위젯별 일치 횟수입니다.](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
 
-사용자 지정 데이터 모델은 사용자 정의 대시보드 작업 영역의 사용 가능한 데이터 모델 목록에서 찾을 수 있습니다. 사용자 지정 데이터 모델을 활용하는 방법에 대한 지침은 [사용자 정의 대시보드 안내서](../../../dashboards/user-defined-dashboards.md)를 참조하세요.
+사용자 지정 데이터 모델은 사용자 정의 대시보드 작업 영역의 사용 가능한 데이터 모델 목록에서 찾을 수 있습니다. 사용자 지정 데이터 모델을 활용하는 방법에 대한 지침은 [사용자 정의 대시보드 안내서](../../../dashboards/standard-dashboards.md)를 참조하세요.

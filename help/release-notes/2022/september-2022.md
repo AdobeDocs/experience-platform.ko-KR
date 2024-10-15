@@ -2,16 +2,16 @@
 title: Adobe Experience Platform 릴리스 노트 2022년 9월
 description: Adobe Experience Platform에 대한 2022년 9월 릴리스 정보입니다.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '2762'
-ht-degree: 18%
+ht-degree: 25%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2022년 9월 28일 목요일**
+**릴리스 일자: 2022년 9월 28일 목요일**
 
 Adobe Experience Platform의 새로운 기능:
 
@@ -35,16 +35,16 @@ Adobe Experience Platform의 기존 기능 업데이트:
 >
 >특성 기반 액세스 제어는 2022년 10월부터 활성화됩니다. 얼리 어답터를 원하는 경우 Adobe 담당자에게 문의하십시오.
 
-속성 기반 액세스 제어는 Adobe Experience Platform의 기능으로, 개인 정보 보호를 고려한 브랜드에게 사용자 액세스를 더 유연하게 관리할 수 있습니다. 스키마 필드 및 세그먼트와 같은 개별 객체를 사용자 역할에 할당할 수 있습니다. 이 기능을 사용하면 조직의 특정 Platform 사용자에 대해 개별 객체에 대한 액세스 권한을 부여하거나 취소할 수 있습니다.
+속성 기반 액세스 제어는 개인 정보 보호를 중시하는 브랜드가 사용자 액세스를 더욱 유연하게 관리할 수 있도록 하는 Adobe Experience Platform의 기능입니다. 스키마 필드 및 세그먼트와 같은 개별 오브젝트를 사용자 역할에 할당할 수 있습니다. 이 기능을 사용하면 조직 내 특정 플랫폼 사용자에 대한 개별 오브젝트에 액세스를 허용하거나 취소할 수 있습니다.
 
-조직 관리자는 속성 기반 액세스 제어를 통해 모든 플랫폼 워크플로 및 리소스에서 중요한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 지정된 유형의 데이터에 대한 사용자의 액세스를 제어할 수 있습니다. 관리자는 특정 필드 및 해당 필드에 해당하는 데이터에만 액세스할 수 있는 사용자 역할을 정의할 수 있습니다.
+조직의 관리자는 속성 기반 액세스 제어를 통해 모든 플랫폼 워크플로와 리소스에서 민감한 개인 데이터(SPD), 개인 식별 정보(PII) 및 기타 사용자 정의 유형의 데이터에 대한 액세스를 제어할 수 있습니다. 관리자는 특정 필드에만 액세스할 수 있는 사용자 역할과 필드에 해당하는 데이터를 정의할 수 있습니다.
 
 | 기능 | 설명 |
 | --- | --- |
 | 속성 기반 액세스 제어 | 특성 기반 액세스 제어를 사용하면 XDM(Experience Data Model) 스키마 필드 및 세그먼트에 조직 또는 데이터 사용 범위를 정의하는 레이블로 레이블을 지정할 수 있습니다. 또한 관리자는 사용자 및 역할 관리 인터페이스를 사용하여 XDM 스키마 필드 및 세그먼트에 적용되는 액세스 정책을 정의하여 사용자 또는 사용자 그룹(내부, 외부 또는 타사 사용자)에 부여된 액세스를 더 잘 관리할 수 있습니다. 자세한 내용은 [특성 기반 액세스 제어 개요](../../access-control/abac/overview.md)를 참조하십시오. |
 | 권한 | 권한은 관리자가 사용자 역할과 액세스 정책을 정의하여 제품 애플리케이션 내의 기능 및 개체에 대한 액세스 권한을 관리할 수 있는 Experience Cloud 영역입니다. 권한을 통해 역할을 만들고 관리하며, 이러한 역할에 대해 원하는 리소스 권한을 할당하고, 레이블을 활용하고 특정 Platform 리소스에 액세스할 수 있는 사용자 역할을 정의하는 정책을 작성할 수 있습니다. 또한 권한을 사용하여 레이블, 샌드박스 및 특정 역할과 연관된 사용자를 관리할 수 있습니다. 자세한 내용은 [권한 UI 안내서](../../access-control/abac/ui/browse.md)를 참조하십시오. |
 
-특성 기반 액세스 제어에 대한 자세한 내용은 [특성 기반 액세스 제어 개요](../../access-control/abac/overview.md)를 참조하십시오. 특성 기반 액세스 제어 워크플로에 대한 포괄적인 지침을 보려면 [특성 기반 액세스 제어 전체 안내서](../../access-control/abac/end-to-end-guide.md)를 읽어 보십시오.
+속성 기반 액세스 제어에 대한 자세한 내용은 [속성 기반 액세스 제어 개요](../../access-control/abac/overview.md)를 참조하십시오. 속성 기반 액세스 제어 워크플로에 대한 종합적인 안내서는 [속성 기반 액세스 제어 통합 안내서](../../access-control/abac/end-to-end-guide.md)를 참조하십시오.
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
@@ -93,7 +93,7 @@ Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터�
 | 기능 | 설명 |
 | --- | --- |
 | 사용 중 레이블 | 위젯 라이브러리에서 볼 때 사용 중 레이블은 대시보드에 기존 위젯이 있는지 쉽게 식별합니다. 이렇게 하면 원하는 경우 동일한 위젯을 두 번 이상 추가할 수 있지만 중복을 쉽게 방지할 수 있습니다. |
-| 사용자 정의 대시보드 | 사용자 정의 대시보드를 사용하면 사용자 정의 대시보드를 작성하고 관리할 수 있으므로 신속하게 통찰력을 얻고 시각화를 맞춤화할 수 있습니다. 사용자 정의 대시보드를 사용하여 맞춤형 위젯을 만들고, 추가하고, 편집하여 조직과 관련된 주요 지표를 시각화할 수 있습니다. 자세한 내용은 [기능 안내서](../../dashboards/user-defined-dashboards.md)를 읽어 보십시오. |
+| 사용자 정의 대시보드 | 사용자 정의 대시보드를 사용하면 사용자 정의 대시보드를 작성하고 관리할 수 있으므로 신속하게 통찰력을 얻고 시각화를 맞춤화할 수 있습니다. 사용자 정의 대시보드를 사용하여 맞춤형 위젯을 만들고, 추가하고, 편집하여 조직과 관련된 주요 지표를 시각화할 수 있습니다. 자세한 내용은 [기능 안내서](../../dashboards/standard-dashboards.md)를 읽어 보십시오. |
 | Customer Data Platform Insights 데이터 모델 | CDP(Customer Data Platform) Insights 데이터 모델 기능은 다양한 프로필, 대상 및 세그멘테이션 위젯에 대한 통찰력을 제공하는 데이터 모델 및 SQL을 노출합니다. 이러한 SQL 쿼리 템플릿을 사용자 정의하여 마케팅 및 주요 성능 지표 사용 사례에 대한 CDP 보고서를 만들 수 있습니다. 그런 다음 이러한 인사이트를 사용자 정의 대시보드에 대한 사용자 정의 위젯으로 사용할 수 있습니다. 자세한 내용은 [CDP Insights 데이터 모델 기능 안내서](../../dashboards/data-models/cdp-insights-data-model-b2c.md)를 참조하십시오. |
 | 대상 중복 보고서 위젯 | 이 위젯은 [!UICONTROL 프로필] 및 [!UICONTROL 세그먼트] 대시보드 모두에서 사용할 수 있습니다. 이 보고서는 선택한 세그먼트에 대해 가장 높거나 가장 낮은 오버랩 비율로 순위가 매겨진 대상자 목록을 제공합니다. [!UICONTROL 프로필] 대시보드에서 사용 가능한 모든 세그먼트의 병합 정책으로 대상자를 필터링하고 볼 수 있습니다. [!UICONTROL 세그먼트] 대시보드를 사용하면 특정 세그먼트별로 대상 겹침을 필터링할 수 있습니다.<br>이 분석을 사용하여 새로운 고성능 세그먼트를 작성하고 동일한 대상자를 다른 대상으로 보내지 마십시오. 또한 이 보고서는 숨겨진 인사이트를 식별하여 세그먼테이션을 개선하거나 추적할 고유한 프로필을 찾는 데 도움이 됩니다. 자세한 내용은 해당 [프로필](../../dashboards/guides/profiles.md#audience-overlap-report) 및 [세그먼트](../../dashboards/guides/audiences.md#audience-overlap-report) 위젯 안내서를 참조하십시오. |
 
@@ -107,9 +107,9 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 기능 | 설명 |
 | --- | --- |
-| Platform UI에서 왼쪽 탐색 통합 | 이전에 데이터 수집 UI에 독점적이었던 모든 기능(태그, 이벤트 전달 및 데이터스트림 포함)은 이제 Experience Platform에서 왼쪽 탐색을 통해 범주 **[!UICONTROL 데이터 수집]**&#x200B;에서 사용할 수 있습니다. 이렇게 하면 Platform에서 데이터 수집 기능으로 작업할 때 UI 간을 전환할 필요가 없습니다. |
+| Platform UI에서 왼쪽 탐색 통합 | 이전에 데이터 수집 UI에 독점적이었던 모든 기능(태그, 이벤트 전달 및 데이터스트림 포함)은 이제 Experience Platform에서 왼쪽 탐색을 통해 범주 **[!UICONTROL 데이터 수집]**&#x200B;에서 사용할 수 있습니다. 이렇게 하면 Platform에서 데이터 수집 기능을 사용할 때 UI를 전환할 필요가 없습니다. |
 | 태그 및 이벤트 전달의 사용자 속성 | 태그 및 이벤트 전달에 사용 가능한 [!UICONTROL 속성]을 나열할 때 이제 나열된 각 속성이 마지막으로 업데이트된 시간과 업데이트를 수행한 사용자를 표시합니다. |
-| 이벤트 전달용 [[!DNL Snap Conversions API] 확장](https://exchange.adobe.com/apps/ec/108550) | 이제 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장을 사용하여 [!DNL Snapchat Conversions API]에 데이터를 보낼 수 있습니다. API 인증 및 사용 방법에 대한 자세한 내용은 [[!DNL Snapchat Marketing API] 설명서](https://marketingapi.snapchat.com/docs/conversion.html)를 참조하세요. |
+| 이벤트 전달용 [[!DNL Snap Conversions API] 확장](https://exchange.adobe.com/apps/ec/108550) | 이제 [이벤트 전달](../../tags/ui/event-forwarding/overview.md) 확장을 사용하여 [!DNL Snapchat Conversions API]에 데이터를 보낼 수 있습니다. API 인증 및 사용 방법에 대한 자세한 내용은 이 [[!DNL Snapchat Marketing API] 설명서](https://marketingapi.snapchat.com/docs/conversion.html)를 참조하십시오. |
 | Web SDK의 [사용자 에이전트 클라이언트 힌트](/help/web-sdk/use-cases/client-hints.md) | 이제 Web SDK가 [사용자 에이전트 클라이언트 힌트](https://developer.chrome.com/docs/privacy-sandbox/user-agent/)를 지원합니다. 클라이언트 힌트를 사용하면 웹 사이트 소유자가 [!DNL User-Agent] 문자열에서 사용할 수 있는 동일한 정보의 대부분에 액세스할 수 있지만 보다 개인정보 보호에 특화되었습니다. |
 | [웹 SDK 페이지별 마이그레이션](../../web-sdk/home.md#migrating-to-web-sdk) | 이제 기존 웹 속성을 다른 Experience Cloud 라이브러리(예: [!DNL at.js])에서 웹 SDK로 한 번에 한 페이지씩 마이그레이션할 수 있습니다. 이렇게 하면 모든 페이지를 한 번에 마이그레이션할 필요 없이 웹 SDK 마이그레이션에 대한 단계별 접근 방식이 활성화됩니다. |
 | [[!DNL Adobe Journey Optimizer] 데이터스트림 지원](../../datastreams/overview.md#aep) | 이제 데이터 스트림에 대한 Adobe Experience Platform 서비스에서 [!DNL Adobe Journey Optimizer]을(를) 지원합니다. 이 옵션을 사용하면 [!DNL Adobe Journey Optimizer]에서 웹 및 앱 기반 인바운드 채널을 사용할 수 있습니다. |
@@ -120,7 +120,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능**
 
@@ -139,7 +139,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 {style="table-layout:auto"}
 
-**새 설명서 또는 업데이트된 설명서**
+**새로운 설명서 또는 업데이트된 설명서**
 
 | 설명서 | 설명 |
 | ----------- | ----------- |
@@ -208,7 +208,7 @@ ID 서비스에 대한 자세한 내용은 [ID 서비스 개요](../../identity-
 
 ## 쿼리 서비스 {#query-service}
 
-쿼리 서비스를 사용하면 표준 SQL로 Adobe Experience Platform [!DNL Data Lake]에서 데이터를 쿼리할 수 있습니다. [!DNL Data Lake]의 데이터 세트에 참여하고 쿼리 결과를 보고 또는 Data Science Workspace에 사용하거나 실시간 고객 프로필에 수집하기 위한 새 데이터 세트로 캡처할 수 있습니다.
+쿼리 서비스를 사용하면 표준 SQL로 Adobe Experience Platform [!DNL Data Lake]에서 데이터를 쿼리할 수 있습니다. [!DNL Data Lake]의 데이터 세트에 참여하고 쿼리 결과를 보고 또는 데이터 과학 작업 영역에 사용하거나 실시간 고객 프로필에 수집하기 위한 새 데이터 세트로 캡처할 수 있습니다.
 
 **업데이트된 기능**
 

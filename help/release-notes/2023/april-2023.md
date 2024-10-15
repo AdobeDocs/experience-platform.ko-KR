@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 정보 2023년 4월
 description: Adobe Experience Platform의 2023년 4월 릴리스 정보입니다.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '2038'
 ht-degree: 98%
@@ -37,7 +37,7 @@ Adobe Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터�
 
 | 기능 | 설명 |
 | --- | --- |
-| 사용자 정의 대시보드 | 이제 위젯 인사이트에서 **내역 데이터를 필터링**&#x200B;하고 최근 데이터 또는 사용자 정의 분석 기간을 사용할 수 있습니다. 자세한 내용은 [사용자 정의 대시보드 안내서](../../dashboards/user-defined-dashboards.md#filter-historical-data)를 참조하십시오.<br>이제 **기존 위젯을 복제**&#x200B;할 수도 있습니다. 복제본을 사용자 정의하고 해당 속성을 편집하면 고유한 새 위젯을 만들 때 처음부터 다시 시작하지 않아도 됩니다. 자세한 내용은 [위젯 복제 안내서](../../dashboards/user-defined-dashboards.md#duplicate-a-widget)를 참조하십시오. |
+| 사용자 정의 대시보드 | 이제 위젯 인사이트에서 **내역 데이터를 필터링**&#x200B;하고 최근 데이터 또는 사용자 정의 분석 기간을 사용할 수 있습니다. 자세한 내용은 [사용자 정의 대시보드 안내서](../../dashboards/standard-dashboards.md#filter-historical-data)를 참조하십시오.<br>이제 **기존 위젯을 복제**&#x200B;할 수도 있습니다. 복제본을 사용자 정의하고 해당 속성을 편집하면 고유한 새 위젯을 만들 때 처음부터 다시 시작하지 않아도 됩니다. 자세한 내용은 [위젯 복제 안내서](../../dashboards/standard-dashboards.md#duplicate-a-widget)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -75,7 +75,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 ## 대상 {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 대상** {#new-destinations}
 

@@ -5,9 +5,9 @@ breadcrumb-title: 대시보드 안내서
 user-guide-description: 맞춤화가 가능한 대시보드를 통해 Experience Platform에서 데이터를 시각화하는 방법을 알아봅니다.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 06e319a6f7e2294a9c5daea0f41e89a09d93efd2
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '128'
 ht-degree: 35%
 
 ---
@@ -18,21 +18,18 @@ ht-degree: 35%
 * [대시보드 개요](home.md)
 * [대시보드 액세스 권한](permissions.md)
 * [대시보드 인벤토리](inventory.md)
-* [대시보드](user-defined-dashboards.md)
+* [표준 대시보드](standard-dashboards.md)
 * [대시보드를 다운로드하여 PDF](download.md)
-* 데이터 Distiller {#data-distiller}
-   * 확장 앱 보고에 대한 SQl Insights {#sql-insights}
-      * [개요](data-distiller/sql-insights/overview.md)
-   * 쿼리 pro 모드 {#query-pro-mode}
-      * [개요](data-distiller/query-pro-mode/overview.md)
-      * 필터 {#filters}
-         * [날짜 필터](data-distiller/query-pro-mode/filters/date-filter.md)
-         * [전역 필터](data-distiller/query-pro-mode/filters/global-filter.md)
-      * [드릴스루](data-distiller/query-pro-mode/drill-through.md)
-      * [더 보기](data-distiller/query-pro-mode/view-more.md)
-      * [SQL 보기](data-distiller/query-pro-mode/view-sql.md)
-      * [CSV로 다운로드](data-distiller/query-pro-mode/download-csv.md)
-      * [PDF으로 내보내기](data-distiller/query-pro-mode/export-pdf.md)
+* SQL Insights: 쿼리 pro 모드 {#sql-insights-query-pro-mode}
+   * [개요](sql-insights-query-pro-mode/overview.md)
+   * 필터 {#filters}
+      * [날짜 필터](sql-insights-query-pro-mode/filters/date-filter.md)
+      * [전역 필터](sql-insights-query-pro-mode/filters/global-filter.md)
+   * [드릴스루](sql-insights-query-pro-mode/drill-through.md)
+   * [더 보기](sql-insights-query-pro-mode/view-more.md)
+   * [SQL 보기](sql-insights-query-pro-mode/view-sql.md)
+   * [CSV로 다운로드](sql-insights-query-pro-mode/download-csv.md)
+   * [PDF으로 내보내기](sql-insights-query-pro-mode/export-pdf.md)
 * 사용 가능한 대시보드 {#guides}
    * [프로필](guides/profiles.md)
    * [계정 프로필](guides/account-profiles.md)
