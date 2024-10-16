@@ -5,9 +5,9 @@ title: 흐름 서비스 API를 사용하여 데이터 랜딩 영역을 Adobe Exp
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 데이터 랜딩 영역에 연결하는 방법을 알아봅니다.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 0089aa0d6b765645840e6954c3957282c2ad972b
+source-git-commit: 521bfd29405d30c0e35c4095b1ba2bf29f840e8a
 workflow-type: tm+mt
-source-wordcount: '1300'
+source-wordcount: '1326'
 ht-degree: 3%
 
 ---
@@ -121,6 +121,106 @@ curl -X GET \
 | `SASToken` | 랜딩 영역에 대한 공유 액세스 서명 토큰입니다. 이 문자열에는 요청을 승인하는 데 필요한 모든 정보가 포함되어 있습니다. |
 | `SASUri` | 랜딩 영역에 대한 공유 액세스 서명 URI입니다. 이 문자열은 인증 중인 랜딩 영역에 대한 URI와 해당 SAS 토큰의 조합입니다. |
 | `expiryDate` | SAS 토큰이 만료되는 날짜. 데이터 랜딩 영역에 데이터를 업로드하기 위해 애플리케이션에서 계속 사용하려면 만료일 전에 토큰을 새로 고쳐야 합니다. 명시된 만료 날짜 이전에 토큰을 수동으로 새로 고치지 않는 경우, GET 자격 증명 호출이 수행될 때 자동으로 새로 고침되고 새 토큰을 제공합니다. |
+
+### API를 사용하여 필수 필드 검색
+
+토큰을 생성한 후에는 아래 요청 예제를 사용하여 필수 필드를 프로그래밍 방식으로 검색할 수 있습니다.
+
+>[!BEGINTABS]
+
+>[!TAB Python]
+
+```py
+import requests
+ 
+# API endpoint
+url = "https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone"
+ 
+headers = {
+    "Authorization": "{TOKEN}",
+    "Content-Type": "application/json",
+    "x-gw-ims-org-id": "{ORG_ID}",
+    "x-api-key": "{API_KEY}"
+}
+ 
+# Send GET request to the API
+response = requests.get(url, headers=headers)
+ 
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the response as JSON (if applicable)
+    data = response.json()
+ 
+    # Print or work with the fetched data 
+    print(" Sas Token:", data['SASToken'])
+    print(" Container Name:",  data['containerName'])
+    print("\n")
+ 
+else:
+    # Print an error message if the request failed
+    print(f"Failed to fetch data. Status code: {response.status_code}")
+    print(f"Response: {response.text}")
+```
+
+>[!TAB Java]
+
+
+```java
+package org.example;
+ 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+ 
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+ 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+ 
+public class Main {
+    public static void main(String[] args) {
+ 
+        ObjectMapper objectMapper = new ObjectMapper();
+ 
+        try {
+ 
+            DefaultHttpClient httpClient = new DefaultHttpClient();
+            HttpGet getRequest = new HttpGet(
+                "https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone");
+            getRequest.addHeader("accept", "application/json");
+            getRequest.addHeader("Authorization","<TOKEN>");
+            getRequest.addHeader("Content-Type", "application/json");
+            getRequest.addHeader("x-gw-ims-org-id", "<ORG_ID>");
+            getRequest.addHeader("x-api-key", "<API_KEY>");
+ 
+            HttpResponse response = httpClient.execute(getRequest);
+ 
+            if (response.getStatusLine().getStatusCode() != 200) {
+                throw new RuntimeException("Failed : HTTP error code : "
+                    + response.getStatusLine().getStatusCode());
+            }
+ 
+            final JsonNode jsonResponse = objectMapper.readTree(response.getEntity().getContent());
+ 
+            System.out.println("\nOutput from API Response .... \n");
+            System.out.printf("ContainerName: %s%n", jsonResponse.at("/containerName").textValue());
+            System.out.printf("SASToken: %s%n", jsonResponse.at("/SASToken").textValue());
+ 
+            httpClient.getConnectionManager().shutdown();
+ 
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+>[!ENDTABS]
 
 
 ## [!DNL Data Landing Zone] 자격 증명 업데이트
