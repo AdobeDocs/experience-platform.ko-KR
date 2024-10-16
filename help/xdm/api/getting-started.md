@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 스키마 레지스트리 API 시작하기
 description: 이 문서에서는 스키마 레지스트리 API를 호출하기 전에 알아야 하는 핵심 개념에 대해 소개합니다.
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: '1361'
 ht-degree: 5%
 
 ---
@@ -254,6 +254,7 @@ URI를 보다 REST 친화적으로 만들기 위해 스키마에는 `meta:altId`
 * 필드 개체의 이름에는 영숫자, 대시 또는 밑줄 문자가 포함될 수 있지만 **밑줄로 시작할 수 없습니다**.
    * **수정:** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`
    * **올바르지 않음:** `_fieldName`
+* 필드 이름은 대소문자를 구분하지 않으며 스키마의 동일한 수준에서 다른 이름을 가져야 합니다.
 * field 객체의 이름에는 camelCase가 선호됩니다. 예: `fieldName`
 * 필드에는 제목 대/소문자로 작성된 `title`이(가) 포함되어야 합니다. 예: `Field Name`
 * 필드에는 `type`이(가) 필요합니다.
