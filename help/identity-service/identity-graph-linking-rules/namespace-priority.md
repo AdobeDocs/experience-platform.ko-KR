@@ -2,7 +2,7 @@
 title: 네임스페이스 우선순위
 description: ID 서비스의 네임스페이스 우선 순위에 대해 알아봅니다.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: aae82bc84eff7584098ddb35a481d7349ff837c4
 workflow-type: tm+mt
 source-wordcount: '1605'
 ht-degree: 2%
@@ -185,4 +185,4 @@ XDM 스키마에 대한 자세한 내용은 [스키마 개요](../../xdm/home.md
 
 ### Adobe Target
 
-Adobe Target에 대한 일괄 처리 및 스트리밍 세분화만 활성화할 수 있습니다.
+Adobe Target에서 공유 장치 시나리오에 대해 예기치 않은 사용자 타깃팅을 발생시킬 수 있습니다.
