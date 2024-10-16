@@ -2,9 +2,9 @@
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
+source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
 workflow-type: tm+mt
-source-wordcount: '4250'
+source-wordcount: '4298'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
    - [세그먼트 빌더를 사용하여 대상자 만들기](#segment-builder)
    - [대상 구성을 사용하여 대상 만들기](#audience-composition)
    - [Federated Audience Composition을 사용하여 기존 Data Warehouse의 데이터를 사용하여 대상을 만듭니다](#fac)(제한된 가용성)
-- [외부에서 생성된 대상 가져오기](#import-audience)
+- [외부에서 생성된 대상자 가져오기](#import-audience)
 
 대상자 포털을 열려면 세분화 섹션 내에서 **[!UICONTROL 찾아보기]** 탭을 선택합니다.
 
@@ -208,7 +208,12 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 ![대상 검색 페이지에 사용 가능한 필터가 표시되고 강조 표시됩니다.](../images/ui/audience-portal/filter-audiences.png)
 
-#### 대량 작업 {#bulk-actions}
+#### 일괄 액션 {#bulk-actions}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="유연한 대상 평가 제한"
+>abstract="유연한 단일 대상 평가 실행에서 최대 20개의 대상을 평가할 수 있습니다.<br/><br/>또한 평가 작업이 가능한 한 빨리 실행되는 동안 온디맨드 평가 <b>할 수 없음</b>이(가) 다른 온디맨드 또는 일괄 처리 평가와 동시에 실행되기 때문에 시스템 지연이 발생할 수 있습니다."
 
 또한 최대 25개의 서로 다른 대상을 선택하고 이러한 대상에 대해 다양한 작업을 수행할 수 있습니다. 이러한 작업에는 [폴더로 이동](#folders), [태그 편집 또는 적용](#tags), [액세스 레이블 적용](../../access-control/abac/ui/labels.md) 및 [삭제](#browse)이 포함됩니다.
 
