@@ -6,7 +6,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
 workflow-type: tm+mt
 source-wordcount: '1556'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="어레이 내보내기 지원"
->abstract="<p>**계산된 필드 추가** 컨트롤을 사용하여 int, 문자열, 부울 및 개체 값의 배열을 Experience Platform에서 원하는 클라우드 저장소 대상으로 내보냅니다.</p><p> 배열은 `array_to_string` 함수를 사용하여 문자열로 내보내야 합니다. 이 설명서에서 다양한 예제 및 지원되는 함수를 확인하십시오.</p>"
+>title="배열 내보내기 지원"
+>abstract="<p>**계산된 필드 추가** 제어를 사용하여 정수, 문자열, 부울 및 오브젝트 값의 배열을 Experience Platform에서 원하는 클라우드 스토리지 대상으로 내보냅니다.</p><p> 배열은 `array_to_string` 함수를 사용하여 문자열로 내보내야 합니다. 다양한 예제와 기타 지원되는 기능에 대한 설명서를 살펴보십시오.</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="예시"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="알려진 제한 사항"
 

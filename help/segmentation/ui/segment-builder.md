@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
 source-wordcount: '4955'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_summarydata"
 >title="요약 데이터"
->abstract="요약 데이터는 프로필 특성에 대해서만 나타나며 이벤트 또는 대상 특성에 대해서는 <b>나타나지 않습니다</b>.<br/><br/>다음 상황에서는 프로필 특성에 대한 요약 데이터가 표시되지 않을 수 있습니다. <ol><li>속성 값 중 일부는 100자를 초과합니다.</li><li>속성에 대한 고유 값이 3000개가 넘습니다.</li></ol>"
+>abstract="요약 데이터는 프로필 속성에 대해서만 나타나고 이벤트나 대상자 속성에는 나타나지 <b></b>않습니다.<br/><br/>다음과 같은 상황에서는 프로필 속성에 대한 요약 데이터가 나타나지 않을 수 있습니다. <ol><li>일부 속성 값의 문자 길이가 100자를 초과합니다.</li><li>속성에 대한 고유 값이 3000개를 초과합니다.</li></ol>"
 
 >[!NOTE]
 >
