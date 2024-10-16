@@ -2,9 +2,9 @@
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
+source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
-source-wordcount: '4298'
+source-wordcount: '4320'
 ht-degree: 3%
 
 ---
@@ -286,6 +286,10 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 ### 수집 세부 정보 {#ingestion-details}
 
 원본이 **[!UICONTROL 사용자 지정 업로드]**&#x200B;인 대상의 경우 **[!UICONTROL 수집 세부 정보]** 섹션에는 프로필 총계와 외부에서 생성된 대상자가 수집된 데이터 세트에 대한 세부 정보가 모두 표시됩니다.
+
+>[!NOTE]
+>
+>대상자의 프로필 카운트가 완전히 업데이트되려면 내보내기 작업 후 최대 30분이 걸릴 수 있습니다.
 
 ![대상자 세부 정보 페이지에 대한 수집 세부 정보 섹션이 표시됩니다.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
