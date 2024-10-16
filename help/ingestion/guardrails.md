@@ -3,9 +3,9 @@ keywords: Experience Platform;문제 해결;보호 기능;지침;
 title: 데이터 수집 보호
 description: Adobe Experience Platform에서의 데이터 수집을 위한 보호 기능에 대해 알아봅니다.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 9c3f7f522ce6451e1d312a0221cc34287d3e8ae3
+source-git-commit: b8f64793b7f869e50c33ead3a5f02f3a8af51ff4
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 0%
 | 프로필에 일괄 처리 수집 | <ul><li>레코드 클래스의 최대 크기는 100KB(하드)입니다.</li><li>ExperienceEvent 클래스의 최대 크기는 10KB(하드)입니다.</li></ul> | |
 | 하루에 수집된 프로필 또는 ExperienceEvent 배치 수 | **하루에 수집할 수 있는 프로필 또는 ExperienceEvent 일괄 처리의 최대 수는 90개입니다.** 이는 매일 수집된 프로필 및 ExperienceEvent 배치의 합계가 90개를 초과할 수 없음을 의미합니다. 추가 배치를 수집하면 시스템 성능에 영향을 줍니다. | 이는 소프트 제한입니다. 소프트 제한을 넘어설 수 있지만 소프트 제한은 시스템 성능에 대한 권장 지침을 제공합니다. |
 | 암호화된 데이터 수집 | 단일 암호화 파일의 최대 지원 크기는 1GB입니다. 예를 들어 단일 데이터 흐름 실행에서 2GB 이상의 데이터를 수집할 수 있지만 데이터 흐름 실행의 개별 파일이 1GB를 초과할 수는 없습니다. | 암호화된 데이터를 수집하는 과정은 일반 데이터 수집보다 시간이 더 오래 걸릴 수 있다. 자세한 내용은 [암호화된 데이터 수집 API 안내서](../sources/tutorials/api/encrypt-data.md)를 참조하십시오. |
+| 일괄 처리 수집 업데이트 | 업데이트 일괄 처리 수집은 일반 일괄 처리보다 최대 10배 느릴 수 있으므로, 효율적인 런타임과 샌드박스에서 다른 일괄 처리가 처리되지 않도록 **업데이트 일괄 처리를 2백만 개 기록 미만으로 유지**&#x200B;해야 합니다. | 200만 개의 레코드를 초과하는 일괄 처리를 수집할 수 있지만 작은 샌드박스의 한계로 인해 수집 시간이 상당히 길어집니다. |
 
 {style="table-layout:auto"}
 
