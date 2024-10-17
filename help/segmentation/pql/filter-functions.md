@@ -3,9 +3,9 @@ solution: Experience Platform
 title: PQL 필터 함수
 description: 필터 함수는 Profile Query Language(PQL)의 배열 내에서 데이터를 필터링하는 데 사용됩니다.
 exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 7c282594e66c8c7700471a94947448fd91596814
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '211'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 ## 필터
 
-`[]`(filter) 함수를 사용하면 필터를 배열에 적용하고 지정된 조건과 일치하는 배열의 하위 집합을 반환할 수 있습니다.
+`[]`(filter) 함수를 사용하면 필터를 배열에 적용하고 지정된 조건과 일치하는 배열의 하위 집합을 반환할 수 있습니다. 따라서 이 함수는 배열을 반환합니다.
 
 **형식**
 

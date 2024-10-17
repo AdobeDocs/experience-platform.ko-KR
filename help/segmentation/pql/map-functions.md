@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQL 맵 함수
 description: Profile Query Language(PQL)는 맵과의 상호 작용을 용이하게 하는 기능을 제공합니다.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 6%
+source-wordcount: '169'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 ## 다운로드
 
-`get` 함수는 특정 키에 대한 맵의 값을 검색하는 데 사용됩니다.
+`get` 함수는 특정 키에 대한 맵 값을 개체로 검색하는 데 사용됩니다.
 
 **형식**
 
@@ -34,7 +34,7 @@ identityMap.get("example@example.com")
 
 ## 키
 
-`keys` 함수는 특정 맵의 모든 키를 검색하는 데 사용됩니다.
+`keys` 함수는 특정 맵의 모든 키를 배열 또는 목록으로 검색하는 데 사용됩니다.
 
 **형식**
 
@@ -52,7 +52,7 @@ identityMap.keys()
 
 ## 값
 
-`values` 함수는 지정된 맵의 모든 값을 검색하는 데 사용됩니다.
+`values` 함수는 특정 맵의 모든 값을 배열 또는 목록으로 검색하는 데 사용됩니다.
 
 **형식**
 

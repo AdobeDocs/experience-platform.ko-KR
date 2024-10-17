@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PAL 산술 함수
 description: 산술 함수는 Profile Query Language(PQL)의 값에 대한 기본 계산을 수행하는 데 사용됩니다.
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 4%
+source-wordcount: '258'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 ## 이벤트가 복제되지 않도록 하면서 현재 이벤트 변수에
 
-`+`(추가) 함수는 두 인수 표현식의 합계를 찾는 데 사용됩니다.
+`+`(추가) 함수는 두 인수 표현식의 합을 숫자로 찾는 데 사용됩니다.
 
 **형식**
 
@@ -34,7 +34,7 @@ product1.price + product2.price
 
 ## 곱하기
 
-`*`(곱하기) 함수는 두 인수 표현식의 곱을 찾는 데 사용됩니다.
+`*`(곱하기) 함수는 숫자로 두 인수 표현식의 곱을 찾는 데 사용됩니다.
 
 **형식**
 
@@ -52,7 +52,7 @@ product.inventory * product.price
 
 ## 빼기
 
-`-`(빼기) 함수는 두 인수 표현식의 차이를 찾는 데 사용됩니다.
+`-`(빼기) 함수는 두 인수 표현식의 차이를 숫자로 찾는 데 사용합니다.
 
 **형식**
 
@@ -70,7 +70,7 @@ product1.price - product2.price
 
 ## 나누기
 
-`/`(나눗셈) 함수는 두 인수 표현식의 몫을 찾는 데 사용됩니다.
+`/`(나눗셈) 함수는 숫자로 두 인수 표현식의 몫을 찾는 데 사용됩니다.
 
 **형식**
 
@@ -88,7 +88,7 @@ totalProduct.price / totalProduct.sold
 
 ## 나머지
 
-`%`(modulo/remainder) 함수는 두 인수 표현식을 나눈 후 나머지를 찾는 데 사용됩니다.
+`%`(modulo/remainder) 함수는 두 인수 표현식을 숫자로 나눈 후 나머지를 찾는 데 사용됩니다.
 
 **형식**
 

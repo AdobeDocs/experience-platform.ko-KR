@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQL 개체 함수
 description: Profile Query Language(PQL)는 개체와의 상호 작용을 더 간단하게 하는 기능을 제공합니다.
 exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 9%
+source-wordcount: '127'
+ht-degree: 8%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 9%
 
 ## null임
 
-`isNull` 함수는 개체 참조가 없는지 확인합니다.
+`isNull` 함수는 개체 참조가 부울로 존재하지 않은지 확인합니다.
 
 **형식**
 
@@ -34,7 +34,7 @@ person.homeAddress.isNull()
 
 ## null이 아님
 
-`isNotNull` 함수는 개체 참조가 있는지 확인합니다.
+`isNotNull` 함수는 개체 참조가 부울로 존재하는지 확인합니다.
 
 **형식**
 

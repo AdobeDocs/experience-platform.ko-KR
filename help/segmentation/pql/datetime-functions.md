@@ -3,9 +3,9 @@ solution: Experience Platform
 title: PQL 날짜 및 시간 함수
 description: 날짜 및 시간 함수는 Profile Query Language(PQL) 내의 값에 대한 날짜 및 시간 작업을 수행하는 데 사용됩니다.
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '496'
 ht-degree: 2%
 
 ---
@@ -124,7 +124,7 @@ product.sale.getDayOfMonth() <= 15
 
 ## 발생
 
-`occurs` 함수는 특정 타임스탬프 함수를 고정 기간과 비교합니다.
+`occurs` 함수는 특정 타임스탬프 함수를 고정된 기간(부울)과 비교합니다.
 
 **형식**
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: PQL 부울 함수
 description: 부울 함수는 Profile Query Language(PQL)의 다른 요소에 대해 부울 로직을 수행하는 데 사용됩니다.
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '248'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 ## 및
 
-`and` 함수는 논리 결합을 만드는 데 사용됩니다.
+`and` 함수는 논리 결합을 부울로 만드는 데 사용됩니다.
 
 **형식**
 
@@ -34,7 +34,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## 또는
 
-`or` 함수는 논리 분리를 만드는 데 사용됩니다.
+`or` 함수를 사용하여 논리 분리를 부울로 만듭니다.
 
 **형식**
 
@@ -71,7 +71,7 @@ not (homeAddress.countryISO = "CA")
 
 ## If
 
-`if` 함수는 지정된 조건이 true인지 여부에 따라 식을 확인하는 데 사용됩니다.
+`if` 함수는 지정된 조건이 부울로서 true인지에 따라 식을 확인하는 데 사용됩니다.
 
 **형식**
 

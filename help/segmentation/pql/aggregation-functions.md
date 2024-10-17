@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQL 집계 함수
 description: 집계 함수는 Profile Query Language(PQL) 배열 내에서 여러 값을 함께 그룹화하여 단일 요약 값을 구성하는 데 사용됩니다.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 6%
+source-wordcount: '242'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 ## 횟수
 
-`count` 함수는 특정 배열의 요소 수를 반환합니다.
+`count` 함수는 특정 배열 내의 요소 수를 숫자로 반환합니다.
 
 **형식**
 
@@ -34,7 +34,7 @@ orders.count()
 
 ## 합계
 
-`sum` 함수는 배열에서 선택한 모든 값의 합계를 반환합니다.
+`sum` 함수는 배열에서 선택한 모든 값의 합계를 숫자로 반환합니다.
 
 **형식**
 
@@ -52,7 +52,7 @@ orders.sum(order.price)
 
 ## 평균
 
-`average` 함수는 배열에서 선택한 모든 값의 산술 평균을 반환합니다.
+`average` 함수는 배열에서 선택한 모든 값의 산술 평균을 숫자로 반환합니다.
 
 **형식**
 
@@ -70,7 +70,7 @@ orders.average(order.price)
 
 ## 최소
 
-`min` 함수는 배열에서 선택한 모든 값 중 가장 작은 값을 반환합니다.
+`min` 함수는 배열에서 선택한 모든 값 중 가장 작은 값을 숫자로 반환합니다.
 
 **형식**
 
@@ -88,7 +88,7 @@ orders.min(order.price)
 
 ## 최대
 
-`max` 함수는 배열에서 선택한 모든 값 중 가장 큰 값을 반환합니다.
+`max` 함수는 배열에서 선택한 모든 값 중 가장 큰 값을 숫자로 반환합니다.
 
 **형식**
 

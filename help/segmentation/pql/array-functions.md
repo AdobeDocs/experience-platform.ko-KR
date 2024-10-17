@@ -3,9 +3,9 @@ solution: Experience Platform
 title: PQL 함수 배열, 목록 및 설정
 description: Profile Query Language(PQL)는 배열, 목록 및 문자열과 보다 쉽게 상호 작용할 수 있도록 함수를 제공합니다.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '820'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 ## 안에 있음
 
-`in` 함수는 항목이 배열의 멤버인지 또는 목록의 멤버인지 확인하는 데 사용합니다.
+`in` 함수는 항목이 배열의 멤버인지 또는 부울의 멤버인지 확인하는 데 사용합니다.
 
 **형식**
 
@@ -34,7 +34,7 @@ person.birthMonth in [3, 6, 9]
 
 ## 안에 없음
 
-`notIn` 함수는 항목이 배열 또는 목록의 멤버가 아닌지 확인하는 데 사용됩니다.
+`notIn` 함수는 항목이 배열의 멤버인지 또는 목록의 멤버가 아닌지 부울로 확인하는 데 사용합니다.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## 교차
 
-`intersects` 함수는 두 배열 또는 목록에 하나 이상의 공통 멤버가 있는지 확인하는 데 사용됩니다.
+`intersects` 함수는 두 배열 또는 목록에 부울로 최소 하나 이상의 공통 멤버가 있는지 확인하는 데 사용됩니다.
 
 **형식**
 
@@ -74,7 +74,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## 교집합
 
-`intersection` 함수는 두 배열 또는 목록의 공통 멤버를 확인하는 데 사용됩니다.
+`intersection` 함수는 두 배열 또는 목록의 공통 멤버를 목록으로 확인하는 데 사용됩니다.
 
 **형식**
 
@@ -92,7 +92,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## 하위 집합
 
-`subsetOf` 함수는 특정 배열(배열 A)이 다른 배열(배열 B)의 하위 집합인지 확인하는 데 사용됩니다. 즉, 배열 A의 모든 요소는 배열 B의 요소이다.
+`subsetOf` 함수는 특정 배열(배열 A)이 다른 배열(배열 B)의 하위 집합인지 확인하는 데 사용됩니다. 즉, 배열 A의 모든 요소는 부울로서 배열 B의 요소이다.
 
 **형식**
 
@@ -110,7 +110,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## 상위 집합
 
-`supersetOf` 함수는 특정 배열(배열 A)이 다른 배열(배열 B)의 상위 집합인지 확인하는 데 사용합니다. 즉, 배열 A는 배열 B의 모든 요소를 포함합니다.
+`supersetOf` 함수는 특정 배열(배열 A)이 다른 배열(배열 B)의 상위 집합인지 확인하는 데 사용합니다. 즉, 배열 A는 배열 B의 모든 요소를 부울로 포함합니다.
 
 **형식**
 
@@ -128,7 +128,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## 다음을 포함
 
-`includes` 함수는 배열 또는 목록에 지정된 항목이 포함되어 있는지 확인하는 데 사용됩니다.
+`includes` 함수는 배열 또는 목록에 지정된 항목이 부울로 포함되어 있는지 확인하는 데 사용합니다.
 
 **형식**
 
@@ -146,7 +146,7 @@ person.favoriteColors.includes("red")
 
 ## 고유
 
-`distinct` 함수는 배열 또는 목록에서 중복 값을 제거하는 데 사용됩니다.
+`distinct` 함수는 배열 또는 목록에서 배열로 중복 값을 제거하는 데 사용됩니다.
 
 **형식**
 
@@ -164,12 +164,12 @@ person.orders.storeId.distinct().count() > 1
 
 ## 그룹화 기준
 
-`groupBy` 함수는 식 값을 기준으로 배열 또는 목록의 값을 그룹으로 분할하는 데 사용합니다.
+`groupBy` 함수는 그룹화 식의 고유한 값에서 배열 식의 분할인 배열로의 맵으로 식의 값을 기반으로 배열 또는 목록의 값을 그룹으로 분할하는 데 사용됩니다.
 
 **형식**
 
 ```sql
-{ARRAY}.groupBy({EXPRESSION)
+{ARRAY}.groupBy({EXPRESSION})
 ```
 
 | 인수 | 설명 |
@@ -182,12 +182,12 @@ person.orders.storeId.distinct().count() > 1
 다음 PQL 쿼리는 주문이 배치된 저장소의 모든 주문을 그룹화합니다.
 
 ```sql
-orders.groupBy(storeId)
+xEvent[type="order"].groupBy(storeId)
 ```
 
 ## 필터
 
-`filter` 함수는 식을 기반으로 배열 또는 목록을 필터링하는 데 사용됩니다.
+`filter` 함수는 입력에 따라 배열 또는 목록으로 식을 기반으로 배열 또는 목록을 필터링하는 데 사용합니다.
 
 **형식**
 
@@ -210,7 +210,7 @@ person.filter(age >= 21)
 
 ## 맵
 
-`map` 함수는 특정 배열의 각 항목에 식을 적용하여 새 배열을 만드는 데 사용합니다.
+`map` 함수는 특정 배열의 각 항목에 식을 배열로 적용하여 새 배열을 만드는 데 사용합니다.
 
 **형식**
 
@@ -228,7 +228,7 @@ numbers.map(square)
 
 ## 배열의 첫 `n` {#first-n}
 
-`topN` 함수는 특정 수식에 따라 오름차순으로 정렬되면 배열에서 첫 번째 `N` 항목을 반환하는 데 사용됩니다.
+`topN` 함수는 특정 수식을 배열로 기준으로 오름차순으로 정렬되는 경우 배열에서 첫 번째 `N` 항목을 반환하는 데 사용됩니다.
 
 **형식**
 
@@ -252,7 +252,7 @@ orders.topN(price, 5)
 
 ## 배열의 마지막 `n`
 
-`bottomN` 함수는 특정 수식에 따라 내림차순으로 정렬되면 배열에서 마지막 `N` 항목을 반환하는 데 사용됩니다.
+`bottomN` 함수는 특정 수식을 배열로 기준으로 오름차순으로 정렬되는 경우 배열에서 마지막 `N` 항목을 반환하는 데 사용됩니다.
 
 **형식**
 
@@ -276,7 +276,7 @@ orders.bottomN(price, 5)
 
 ## 첫 번째 항목
 
-`head` 함수는 배열 또는 목록의 첫 번째 항목을 반환하는 데 사용됩니다.
+`head` 함수는 배열 또는 목록의 첫 번째 항목을 개체로 반환하는 데 사용됩니다.
 
 **형식**
 
