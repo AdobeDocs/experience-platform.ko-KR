@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 지표 API 끝점
 description: Observability Insights API를 사용하여 Experience Platform에서 Observability 지표를 검색하는 방법에 대해 알아봅니다.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 39eda018611d0244eaff908e924afa93dc46e14d
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1278'
 ht-degree: 3%
 
 ---
@@ -56,8 +56,7 @@ curl -X POST \
                 "groupBy": true
               }
             ],
-            "aggregator": "sum",
-            "downsample": "sum"
+            "aggregator": "sum"
           },
           {
             "name": "timeseries.ingestion.dataset.dailysize",
@@ -79,12 +78,11 @@ curl -X POST \
 | --- | --- |
 | `start` | 지표 데이터를 검색할 가장 빠른 날짜/시간입니다. |
 | `end` | 지표 데이터를 검색할 최신 날짜/시간입니다. |
-| `granularity` | 지표 데이터를 나눌 시간 간격을 나타내는 선택 필드입니다. 예를 들어 값 `DAY`은(는) `start`과(와) `end` 날짜 사이의 각 날에 대한 지표를 반환하지만 값 `MONTH`은(는) 대신 월별 지표 결과를 그룹화합니다. 이 필드를 사용할 때 데이터를 그룹화할 집계 함수를 나타내려면 해당 `downsample` 속성도 제공해야 합니다. |
+| `granularity` | 지표 데이터를 나눌 시간 간격을 나타내는 선택 필드입니다. 예를 들어 값 `DAY`은(는) `start`과(와) `end` 날짜 사이의 각 날에 대한 지표를 반환하지만 값 `MONTH`은(는) 대신 월별 지표 결과를 그룹화합니다. |
 | `metrics` | 검색할 각 지표에 대해 하나씩 객체의 배열입니다. |
 | `name` | Observability Insights에서 인식하는 지표의 이름입니다. 허용되는 지표 이름의 전체 목록은 [부록](#available-metrics)을 참조하십시오. |
 | `filters` | 특정 데이터 세트별로 지표를 필터링할 수 있는 선택 필드입니다. 필드는 객체 배열(각 필터에 대해 하나씩)이며, 각 객체에는 다음 속성이 포함됩니다. <ul><li>`name`: 지표를 필터링할 엔터티의 유형입니다. 현재 `dataSets`만 지원됩니다.</li><li>`value`: 하나 이상의 데이터 세트의 ID입니다. 여러 데이터 세트 ID를 하나의 문자열로 제공할 수 있습니다. 각 ID는 세로 막대 문자(`\|`)로 구분됩니다.</li><li>`groupBy`: true로 설정하면 해당 `value`이(가) 지표 결과를 별도로 반환해야 하는 여러 데이터 세트를 나타냅니다. false로 설정하면 해당 데이터 세트에 대한 지표 결과가 함께 그룹화됩니다.</li></ul> |
-| `aggregator` | 여러 시계열 레코드를 단일 결과로 그룹화하는 데 사용해야 하는 집계 함수를 지정합니다. 사용 가능한 집계자에 대한 자세한 내용은 [OpenTSDB 설명서](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators)를 참조하세요. |
-| `downsample` | 필드를 간격 (또는 &quot;버킷&quot;)으로 정렬하여 지표 데이터의 샘플링 속도를 줄이는 집계 함수를 지정할 수 있는 선택 필드입니다. 다운샘플링의 간격은 `granularity` 속성에 의해 결정됩니다. 다운샘플링에 대한 자세한 내용은 [OpenTSDB 설명서](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators)를 참조하세요. |
+| `aggregator` | 여러 시계열 레코드를 단일 결과로 그룹화하는 데 사용해야 하는 집계 함수를 지정합니다. 현재 지원되는 집계자는 지표 정의에 따른 최소, 최대, 합계 및 평균입니다. |
 
 {style="table-layout:auto"}
 
@@ -221,8 +219,7 @@ curl -X POST \
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | [!DNL Identity Service]이(가) 한 데이터 세트 또는 모든 데이터 세트에 대해 해당 데이터 소스에 쓴 레코드 수입니다. | 데이터 세트 ID |
 | timeseries.identity.dataset.recordfailed.count | [!DNL Identity Service]이(가) 한 데이터 세트 또는 모든 데이터 세트에 대해 실패한 레코드 수입니다. | 데이터 세트 ID |
-| timeseries.identity.dataset.namespacecode.recordfailed.count | 네임스페이스에서 실패한 ID 레코드 수. | 네임스페이스 ID(**필수**) |
-| timeseries.identity.dataset.namespacecode.recordskipped.count | 네임스페이스에서 건너뛴 ID 레코드 수입니다. | 네임스페이스 ID(**필수**) |
+| timeseries.identity.dataset.namespacecode.recordskipped.count | 건너뛴 ID 레코드 수입니다. | 조직 ID |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | 조직의 ID 그래프에 저장된 고유 ID 수입니다. | N/A |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | 네임스페이스의 ID 그래프에 저장된 고유 ID 수입니다. | 네임스페이스 ID(**필수**) |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | 특정 그래프 강도(&quot;알 수 없음&quot;, &quot;약함&quot; 또는 &quot;강함&quot;)에 대해 조직의 ID 그래프에 저장된 고유한 ID 수입니다. | 그래프 강도(**필수**) |
