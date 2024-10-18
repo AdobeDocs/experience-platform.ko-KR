@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 편집기 UI 안내서
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서, Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 이를 통해 개발 목적으로 대화형 쿼리를 실행하고 비대화형 쿼리를 실행하여 Experience Platform의 데이터 세트를 채울 수 있습니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: f68dd020b05d1eaf6d873b9cdc2a40007ad60c84
+source-git-commit: e66f3540d22a441089916183538921ea5654b312
 workflow-type: tm+mt
-source-wordcount: '2845'
+source-wordcount: '2843'
 ht-degree: 0%
 
 ---
@@ -200,12 +200,12 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >실행되지 않는 쿼리는 로그에 저장되지 않습니다. 쿼리 서비스에서 쿼리를 사용할 수 있으려면 쿼리를 실행하거나 쿼리 편집기에 저장해야 합니다.
 
-### [!BADGE Beta]{type=Informative} 개체 브라우저 {#object-browser}
+### [!BADGE 제한된 가용성]{type=Informative} 개체 브라우저 {#object-browser}
 
 >[!AVAILABILITY]
 >
 데이터 세트 탐색 레일은 Data Distiller 고객만 사용할 수 있습니다. Platform UI에 왼쪽 데이터 세트 탐색 레일이 포함되어 있지 않을 수 있습니다. 이 문서의 다른 이미지는 데이터 세트 탐색 레일을 반영하지 않을 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.<br>
-개체 브라우저는 현재 베타 버전이며 **제한된 릴리스**&#x200B;에서만 사용할 수 있습니다. 조기 릴리스 액세스 권한을 얻으려면 Adobe 담당자에게 문의하십시오.
+개체 브라우저는 현재 **제한된 릴리스**&#x200B;에서만 사용할 수 있습니다. 조기 릴리스 액세스 권한을 얻으려면 Adobe 담당자에게 문의하십시오.
 
 개체 브라우저를 사용하여 데이터 세트를 쉽게 검색하고 필터링할 수 있습니다. 개체 브라우저는 데이터 세트가 많은 대규모 환경에서 테이블 및 데이터 세트를 검색하는 데 소요되는 시간을 줄입니다. 관련 데이터 및 메타데이터에 대한 액세스 간소화를 통해 쿼리 작성에 더 많은 집중할 수 있으며 탐색에는 더 적은 시간을 할애할 수 있습니다.
 
