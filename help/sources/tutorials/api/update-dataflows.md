@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;홈;인기 항목;흐름 서비스;데이터 흐름 업데이트
-solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 데이터 흐름 업데이트
-type: Tutorial
-description: 이 자습서에서는 흐름 서비스 API를 사용하여 이름, 설명 및 일정을 포함하여 데이터 흐름을 업데이트하는 단계를 다룹니다.
+description: 흐름 서비스 API를 사용하여 이름, 설명 및 일정을 포함한 데이터 흐름 방법을 알아봅니다.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '656'
 ht-degree: 2%
 
 ---
@@ -15,6 +12,10 @@ ht-degree: 2%
 # 흐름 서비스 API를 사용하여 데이터 흐름 업데이트
 
 이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 기본 정보, 일정 및 매핑 세트를 포함하여 데이터 흐름을 업데이트하는 단계를 다룹니다.
+
+>[!TIP]
+>
+>소스 연결 및 대상 연결을 단일 데이터 흐름에 매핑해야 합니다. 변경 사항은 해당 데이터 흐름에 반영되지 않으므로 소스 및 타겟 연결을 별도로 업데이트해서는 안 됩니다. 사용 사례에서 소스 및 타겟 연결을 업데이트해야 하는 경우 새 소스 및 타겟 연결 쌍과 새 데이터 흐름을 만들어야 합니다.
 
 ## 시작하기
 
@@ -49,11 +50,11 @@ GET /flows/{FLOW_ID}
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **응답**

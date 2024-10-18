@@ -1,22 +1,23 @@
 ---
-keywords: Experience Platform;홈;인기 항목;흐름 서비스;계정 업데이트
-solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 계정 업데이트
-type: Tutorial
 description: 이 튜토리얼에서는 흐름 서비스 API를 사용하여 계정의 세부 정보 및 자격 증명을 업데이트하는 단계를 설명합니다.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '539'
 ht-degree: 2%
 
 ---
 
 # 흐름 서비스 API를 사용하여 계정 업데이트
 
-경우에 따라 기존 소스 연결의 세부 정보를 업데이트해야 할 수도 있습니다. [!DNL Flow Service]은(는) 이름, 설명 및 자격 증명을 포함하여 기존 일괄 처리 또는 스트리밍 연결의 세부 정보를 추가, 편집 및 삭제할 수 있는 기능을 제공합니다.
+경우에 따라 기존 기본 연결의 세부 정보를 업데이트해야 할 수도 있습니다. [!DNL Flow Service]은(는) 이름, 설명 및 자격 증명을 포함하여 기존 일괄 처리 또는 스트리밍 연결의 세부 정보를 추가, 편집 및 삭제할 수 있는 기능을 제공합니다.
 
 이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 연결의 세부 정보 및 자격 증명을 업데이트하는 단계를 다룹니다.
+
+>[!TIP]
+>
+>업데이트가 필요한 경우에는 새 기본 연결을 만들 필요가 없습니다. 기본 연결에 대한 모든 변경 사항은 관련 데이터 흐름에 반영됩니다.
 
 ## 시작하기
 
