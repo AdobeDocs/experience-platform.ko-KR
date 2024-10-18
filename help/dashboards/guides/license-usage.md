@@ -4,10 +4,10 @@ title: 라이선스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
+source-git-commit: 80380fb1287d710460ad2c75d73ea5c2c38f5ebd
 workflow-type: tm+mt
-source-wordcount: '2738'
-ht-degree: 16%
+source-wordcount: '2855'
+ht-degree: 15%
 
 ---
 
@@ -117,7 +117,6 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 
 제품의 권한 사용 요약을 보려면 [!UICONTROL 핵심 제품] 테이블에서 제품을 선택하십시오.
 
-<!-- update image ... -->
 ![제품 및 예상 사용 열이 강조 표시된 [!UICONTROL 라이선스 사용량] [!UICONTROL 개요].](../images/license-usage/product-predicted-usage.png)
 
 요약 탭이 나타납니다. [!UICONTROL 요약] 및 [!UICONTROL 세부 정보] 탭에서 사용할 수 있는 세분화된 예측을 사용하여 효율적인 라이선스 사용을 위한 올바른 의사 결정을 보장할 수 있습니다.
@@ -126,7 +125,6 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 >
 >라이선스 사용량 예측은 과거 사용량을 기반으로 한 추정치입니다. 조직의 실제 사용을 이해하고 사용이 Adobe으로 조직의 라이선스 범위를 벗어나지 않도록 해야 합니다.
 
-<!-- update image ... -->
 ![예측된 사용 열이 강조 표시된 플랫폼 제품의 요약 보기입니다.](../images/license-usage/summary-predicted-usage.png)
 
 예측된 사용의 비율은 다음과 같이 결정됩니다.
@@ -142,10 +140,9 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 예측된 사용 기능은 다음 지표를 지원합니다.
 
 - [!UICONTROL 대응 가능 대상]
-- [!UICONTROL 평균 프로필 풍부도]
 - [!UICONTROL 시간 계산]
 - [!UICONTROL 고객 여정 대상 행 수]
-- [!UICONTROL 전체 저장소]
+- [!UICONTROL 총 데이터 볼륨]
 
 ## [!UICONTROL 요약] 탭 {#summary-tab}
 
@@ -204,6 +201,10 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 
 ## 사용 가능한 지표 {#available-metrics}
 
+>[!IMPORTANT]
+>
+>8월 20일부터 &#39;[!UICONTROL 평균 프로필 풍부도]&#39; 및 &#39;[!UICONTROL 총 저장소]&#39;에 대한 사용 권한이 있는 고객은 라이선스 사용 대시보드에서 &#39;[!UICONTROL 총 데이터 볼륨]&#39;을(를) 대신 보았습니다. 고객 권한은 변경되지 않았으며 추적 지표의 단순화만 있었습니다. [!UICONTROL 총 데이터 볼륨]은(는) 참여 및 개인화 워크플로에 대한 Adobe Experience Platform 프로필 서비스에서 사용할 수 있는 데이터를 나타냅니다. 이 간소화된 지표는 프로필 서비스 사용에 대한 관리 및 측정을 개선했습니다. 고객은 이러한 변경에 대한 자세한 내용을 확인하기 위해 Adobe 담당자에게 문의하는 것이 좋습니다.
+
 라이선스 사용 대시보드는 조직의 여러 제품에 적용할 수 있는 몇 가지 고유한 지표에 대해 보고합니다. 사용 가능한 지표는 다음과 같습니다.
 
 | 지표 | 설명 |
@@ -211,6 +212,7 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 | [!UICONTROL Audience Activation 크기] | 1년 동안 파일 기반 대상에 활성화된 프로필의 총 크기입니다. 참고: 여기에는 스트리밍 대상을 통해 전송된 프로필이 포함되지 않습니다. |
 | [!UICONTROL 대응 가능 대상] | 비즈니스 대상 권한 및 소비자 대상 권한의 합계. 소비자 대상은 판매 주문에서 &quot;소비자 대상&quot;으로 식별되는 개인 프로필 수로 정의됩니다. 비즈니스 대상자는 판매 주문에서 &quot;비즈니스 대상자&quot;로 식별되는 비즈니스 개인 프로필 수로 정의됩니다. |
 | [!UICONTROL 임시 쿼리 서비스 사용자 팩] | 승인된 동시 쿼리 서비스 사용자 권한을 5명의 추가 동시 쿼리 서비스 사용자와 한 팩당 동시에 실행되는 임시 쿼리를 한 개 더 증가시키는 추가 기능입니다. 여러 추가 Ad Hoc Query 사용자 팩에 라이센스가 부여될 수 있습니다. |
+| [!UICONTROL 평균 프로필 풍부도] | **사용되지 않음** - 특정 시점에 Hub Profile Service에 저장된 모든 프로덕션 데이터의 합계를 인증된 비즈니스 사용자 프로필의 5배로 나눈 값입니다. [!UICONTROL 평균 프로필 풍부도]은(는) 공유 기능입니다. |
 | [!UICONTROL 사용 가능한 CJA 행] | Customer Journey Analytics 내에서 분석에 사용할 수 있는 일일 평균 데이터 행입니다. |
 | [!UICONTROL 계산된 특성] | 집계된 프로필 동작 데이터의 총 수입니다. 집계된 프로필 행동 데이터는 프로필 속성으로 변환되고 개인 프로필 또는 비즈니스 개인 프로필에 포함될 수 있는 경험 이벤트를 기반으로 합니다. |
 | [!UICONTROL 소비자 대상] | 판매 주문에서 &quot;소비자 대상&quot;으로 식별된 개인 프로필 수입니다. |
