@@ -2,9 +2,9 @@
 title: ID 그래프 연결 규칙 문제 해결 설명서
 description: ID 그래프 연결 규칙의 일반적인 문제를 해결하는 방법을 알아봅니다.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: b50633a8518f32051549158b23dfc503db255a82
 workflow-type: tm+mt
-source-wordcount: '3247'
+source-wordcount: '3335'
 ht-degree: 0%
 
 ---
@@ -59,8 +59,8 @@ ID 그래프 연결 규칙의 컨텍스트 내에서, 들어오는 이벤트에 
 
 두 가지 가정을 사용하여 다음 이벤트를 고려하십시오.
 
-* 필드 이름 CRMID는 CRMID 네임스페이스와 ID로 표시됩니다.
-* 네임스페이스 CRMID는 고유한 네임스페이스로 정의됩니다.
+1. 필드 이름 CRMID는 CRMID 네임스페이스와 ID로 표시됩니다.
+2. 네임스페이스 CRMID는 고유한 네임스페이스로 정의됩니다.
 
 다음 이벤트는 수집이 실패했음을 나타내는 오류 메시지를 반환합니다.
 
@@ -123,6 +123,24 @@ ID 그래프 연결 규칙의 컨텍스트 내에서, 들어오는 이벤트에 
 >
 >두 ID가 정확히 동일하고 이벤트를 스트리밍을 통해 수집하는 경우 ID 및 프로필 모두에서 ID의 중복을 제거합니다.
 
+### 사후 인증 ExperienceEvents는 잘못된 인증된 프로필로 인한 것입니다.
+
+네임스페이스 우선 순위는 이벤트 조각이 기본 ID를 결정하는 방법에 중요한 역할을 합니다.
+
+* 지정된 샌드박스에 대해 [ID 설정](./identity-settings-ui.md)을(를) 구성하고 저장하면 프로필에서 [네임스페이스 우선 순위](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events)을(를) 사용하여 기본 ID를 결정합니다. identityMap의 경우 프로필에서 더 이상 `primary=true` 플래그를 사용하지 않습니다.
+* 프로필에서 더 이상 이 플래그를 참조하지 않지만 Experience Platform의 다른 서비스에서는 `primary=true` 플래그를 계속 사용할 수 있습니다.
+
+[인증된 사용자 이벤트](implementation-guide.md#ingest-your-data)를 사용자 네임스페이스에 연결하려면 인증된 모든 이벤트에는 사용자 네임스페이스(CRMID)가 포함되어야 합니다. 즉, 사용자가 로그인한 후에도 인증된 모든 이벤트에 개인 네임스페이스가 계속 존재해야 합니다.
+
+프로필 뷰어에서 프로필을 조회할 때 `primary=true`개의 &#39;이벤트&#39; 플래그가 계속 표시될 수 있습니다. 그러나 이 작업은 무시되며 프로필에서 사용되지 않습니다.
+
+AAID는 기본적으로 차단됩니다. 따라서 [Adobe Analytics 소스 커넥터](../../sources/tutorials/ui/create/adobe-applications/analytics.md)를 사용하는 경우 인증되지 않은 이벤트가 ECID의 기본 ID를 갖도록 ECID가 ECID보다 높은 우선 순위를 갖도록 해야 합니다.
+
+**문제 해결 단계**
+
+1. 인증된 이벤트에 사용자와 쿠키 네임스페이스가 모두 포함되어 있는지 확인하려면 [ID 서비스에 수집되지 않는 데이터에 대한 오류 문제 해결](#my-identities-are-not-getting-ingested-into-identity-service)의 섹션에 설명된 단계를 읽어 보십시오.
+2. 인증된 이벤트에 사용자 네임스페이스의 기본 ID(예: CRMID)가 있는지 확인하려면 비결합 병합 정책(개인 그래프를 사용하지 않는 병합 정책)을 사용하여 프로필 뷰어에서 사용자 네임스페이스를 검색합니다. 이 검색은 개인 네임스페이스와 연결된 이벤트만 반환합니다.
+
 ### 내 경험 이벤트 조각이 프로필에 수집되지 않습니다. {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
 
 다음을 포함하되 이에 국한되지 않는 다양한 이유로 경험 이벤트 조각이 프로필에 수집되지 않는 이유가 있습니다.
@@ -171,29 +189,11 @@ ID 그래프 연결 규칙의 컨텍스트 내에서, 들어오는 이벤트에 
 * 한 ID는 identityMap에서 전송되고 다른 ID는 ID 설명자에서 전송됩니다. **참고**: XDM(Experience Data Model) 스키마에서 ID 설명자는 ID로 표시된 필드입니다.
 * CRMID는 identityMap을 통해 전송됩니다. CRMID를 필드로 보내는 경우 WHERE 절에서 `key='Email'`을(를) 제거하십시오.
 
-### 내 경험 이벤트 조각이 수집되지만 프로필에 &quot;잘못된&quot; 기본 ID가 있습니다.
-
-네임스페이스 우선 순위는 이벤트 조각이 기본 ID를 결정하는 방법에 중요한 역할을 합니다.
-
-* 지정된 샌드박스에 대해 [ID 설정](./identity-settings-ui.md)을(를) 구성하고 저장하면 프로필에서 [네임스페이스 우선 순위](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events)을(를) 사용하여 기본 ID를 결정합니다. identityMap의 경우 프로필에서 더 이상 `primary=true` 플래그를 사용하지 않습니다.
-* 프로필에서 더 이상 이 플래그를 참조하지 않지만 Experience Platform의 다른 서비스에서는 `primary=true` 플래그를 계속 사용할 수 있습니다.
-
-[인증된 사용자 이벤트](implementation-guide.md#ingest-your-data)를 사용자 네임스페이스에 연결하려면 인증된 모든 이벤트에는 사용자 네임스페이스(CRMID)가 포함되어야 합니다. 즉, 사용자가 로그인한 후에도 인증된 모든 이벤트에 개인 네임스페이스가 계속 존재해야 합니다.
-
-프로필 뷰어에서 프로필을 조회할 때 `primary=true`개의 &#39;이벤트&#39; 플래그가 계속 표시될 수 있습니다. 그러나 이 작업은 무시되며 프로필에서 사용되지 않습니다.
-
-AAID는 기본적으로 차단됩니다. 따라서 [Adobe Analytics 소스 커넥터](../../sources/tutorials/ui/create/adobe-applications/analytics.md)를 사용하는 경우 인증되지 않은 이벤트가 ECID의 기본 ID를 갖도록 ECID가 ECID보다 높은 우선 순위를 갖도록 해야 합니다.
-
-**문제 해결 단계**
-
-* 인증된 이벤트에 사용자와 쿠키 네임스페이스가 모두 포함되어 있는지 확인하려면 [ID 서비스에 수집되지 않는 데이터에 대한 오류 문제 해결](#my-identities-are-not-getting-ingested-into-identity-service)의 섹션에 설명된 단계를 읽어 보십시오.
-* 인증된 이벤트에 사용자 네임스페이스의 기본 ID(예: CRMID)가 있는지 확인하려면 비결합 병합 정책(개인 그래프를 사용하지 않는 병합 정책)을 사용하여 프로필 뷰어에서 사용자 네임스페이스를 검색합니다. 이 검색은 개인 네임스페이스와 연결된 이벤트만 반환합니다.
-
 ## 그래프 동작 관련 문제 {#graph-behavior-related-issues}
 
 이 섹션에서는 ID 그래프의 작동 방식과 관련하여 발생할 수 있는 일반적인 문제에 대해 간략히 설명합니다.
 
-### ID가 &#39;잘못된&#39; 사용자에게 연결되었습니다.
+### 인증되지 않은 ExperienceEvents가 잘못된 인증된 프로필에 첨부되고 있습니다.
 
 ID 최적화 알고리즘에서 [가장 최근에 설정된 링크를 적용하고 가장 오래된 링크를 제거합니다](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). 따라서 이 기능을 활성화하면 ECID가 한 개인에서 다른 개인으로 다시 할당(다시 연결)될 수 있습니다. 시간이 지남에 따라 ID가 연결되는 방식을 이해하려면 아래 단계를 따르십시오.
 
@@ -209,11 +209,11 @@ ID 최적화 알고리즘에서 [가장 최근에 설정된 링크를 적용하�
 
 먼저 다음 정보를 수집해야 합니다.
 
-* 전송된 쿠키 네임스페이스(예: ECID)와 개인 네임스페이스(예: CRMID)의 ID 심볼(namespaceCode)입니다.
-   * 웹 SDK 구현의 경우 일반적으로 identityMap에 포함된 네임스페이스입니다.
-   * Analytics 소스 커넥터 구현의 경우 identityMap에 포함된 쿠키 식별자입니다. 개인 식별자는 ID로 표시된 eVar 필드입니다.
-* 이벤트가 전송된 데이터 세트(dataset_name)입니다.
-* 조회할 쿠키 네임스페이스의 ID 값(identity_value).
+1. 전송된 쿠키 네임스페이스(예: ECID)와 개인 네임스페이스(예: CRMID)의 ID 심볼(namespaceCode)입니다.
+1.1. 웹 SDK 구현의 경우 일반적으로 identityMap에 포함된 네임스페이스입니다.
+1.2. Analytics 소스 커넥터 구현의 경우 idMap에 포함된 쿠키 식별자입니다. 개인 식별자는 ID로 표시된 eVar 필드입니다.
+2. 이벤트가 전송된 데이터 세트(dataset_name)입니다.
+3. 조회할 쿠키 네임스페이스의 ID 값(identity_value).
 
 ID 기호(namespaceCode)는 대/소문자를 구분합니다. identityMap에서 주어진 데이터 세트에 대한 모든 ID 기호를 검색하려면 다음 쿼리를 실행합니다.
 
@@ -241,7 +241,7 @@ SELECT distinct explode(*)FROM (SELECT map_keys(identityMap) FROM dataset_name)
 
 >[!ENDTABS]
 
-그런 다음 다음 다음 쿼리를 실행하여 쿠키 네임스페이스의 연결을 타임스탬프 순서로 검사합니다.
+이제 여러 개인 ID에 연결된 쿠키 값을 식별했으므로 결과에서 쿠키 값을 가져와 다음 쿼리에서 사용하여 해당 쿠키 값이 다른 개인 ID에 연결된 시기를 시간순으로 확인합니다.
 
 >[!BEGINTABS]
 
@@ -368,6 +368,13 @@ ID 및 그래프 수 등 ID 그래프의 상태에 대한 통찰력에 ID 대시
    * 예를 들어 작업 간에 대기 조건이 있고 대기 기간 동안 ECID가 전송되는 경우 다른 프로필이 타겟팅될 수 있습니다.
    * 이 기능을 사용하면 ECID가 더 이상 하나의 프로필에 항상 연결되어 있지 않습니다.
    * CRMID(개인 네임스페이스)로 여정을 시작하는 것이 좋습니다.
+
+>[!TIP]
+>
+>여정은 고유하지 않은 네임스페이스가 다른 사용자에게 다시 할당될 수 있으므로 고유한 네임스페이스가 있는 프로필을 조회해야 합니다.
+>
+>* ECID 및 고유하지 않은 이메일/전화 네임스페이스는 한 사람에서 다른 사람으로 이동할 수 있습니다.
+>* 여정에게 대기 조건이 있고 이러한 고유하지 않은 네임스페이스를 사용하여 여정에서 프로필을 조정하는 경우 여정 메시지가 잘못된 사람에게 전송될 수 있습니다.
 
 ## 네임스페이스 우선순위
 
