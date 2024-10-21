@@ -2,9 +2,9 @@
 title: ID 서비스 구현 안내서
 description: ID 서비스에서 ID 그래프를 작성하는 데 사용하기 전에 Adobe Experience Platform에 제공된 데이터를 처리하는 방법에 대해 알아봅니다.
 exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 4ba25ed684ff126ab1c4f1a33e6503f0342e8720
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,7 @@ ID 필드를 사용하면 공통 PII 데이터를 공유하는 경우 ID를 연�
 >
 >* 배열 및 맵 유형 필드는 지원되지 않으며 ID 필드로 표시하고 레이블 지정할 수 없습니다.
 >* 결과 ID의 네임스페이스는 필드에 레이블이 지정될 때 제공됩니다.
+>* 이 필드가 배열 개체에 없으면 필드를 ID로 표시할 수 있습니다.
 
 자세한 내용은 [UI에서 ID 필드 정의](../xdm/ui/fields/identity.md)에 대한 안내서를 참조하십시오.
 
