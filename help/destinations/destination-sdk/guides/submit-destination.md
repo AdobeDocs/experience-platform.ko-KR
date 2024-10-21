@@ -2,9 +2,9 @@
 description: 이 페이지에서는 Destination SDK을 사용하여 작성된 제품화된 대상을 검토하기 위해 제출해야 하는 모든 정보를 제공합니다.
 title: Destination SDK에서 작성된 제품화된 대상을 검토하기 위해 제출
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
+source-git-commit: 756c14c67e349a9ca906c027a07766e952485525
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 0%
 * 대상이 해결하는 사용 사례에 대한 설명입니다. 새 대상 구성을 제출하는 경우에만 필요합니다.
 * 대상을 제출하는 이유에 대한 설명입니다. 기존 대상 구성을 업데이트하는 경우에만 필요합니다.
 * 테스트 대상 API 끝점을 사용하여 대상에 대한 HTTP 호출을 수행한 후 결과를 테스트합니다. 대상 엔드포인트에 대한 API 호출 및 대상 엔드포인트에서 수신된 API 응답을 Adobe과 공유하십시오.
+* 대상에 연결하고 활성화 단계를 진행하는 사용자의 경험을 보여 주는 화면 레코딩입니다.
 * 파일 기반 대상에 대한 추가 요구 사항:
    * 테스트 API를 사용하여 [샘플 프로필로 파일 기반 대상을 테스트](../testing-api/batch-destinations/file-based-destination-testing-api.md)한 후 요청 및 응답 샘플을 공유합니다.
    * 대상에서 생성하여 저장소 위치로 내보낸 샘플 파일을 첨부합니다.
