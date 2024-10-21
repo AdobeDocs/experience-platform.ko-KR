@@ -4,9 +4,9 @@ description: 규칙을 기반으로 다양한 Experience Cloud 서비스로 데�
 hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
-source-git-commit: 86416dc11f92a774cda5d95365d3981a637a5595
+source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 1%
 
    ![동적 구성 규칙을 표시하는 데이터스트림 사용자 인터페이스의 이미지](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. **[!UICONTROL 구성]** 섹션에서 데이터를 각 서비스로 전송할지 여부에 따라 각 규칙에 대해 활성화하거나 비활성화할 서비스를 전환합니다. 토글을 끄면 규칙이 비활성화되고 *모든 데이터*&#x200B;가 업스트림 서비스로 전송됩니다.
+1. **[!UICONTROL 구성]** 섹션에서 데이터를 각 서비스로 전송할지 여부에 따라 각 규칙에 대해 활성화하거나 비활성화할 서비스를 전환합니다. 토글을 끄면 서비스 라우팅이 비활성화되고 *데이터가 업스트림 서비스로 전송되지 않습니다*.
 
    ![동적 구성 규칙을 표시하는 데이터스트림 사용자 인터페이스의 이미지](assets/configure-dynamic-datastream/enable-service.png)
 
