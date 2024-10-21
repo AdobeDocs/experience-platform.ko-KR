@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 개인 정보 보호 규정 개요
 description: 이 문서에서는 Adobe Experience Cloud에서 지원하는 다양한 개인 정보 보호 규정에 대한 개요를 제공합니다.
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 6b0ac184d8859b770f69b4758fa1cfae006dd755
+source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 | MCDPA(몬탄나) | [[!DNL The Montana Consumer Data Privacy Act]](https://legiscan.com/MT/text/SB384/id/2791095)은(는) 거주자에게 비즈니스가 수집, 공유 및 판매하는 개인 데이터와 사용 목적을 알 수 있는 권한을 제공합니다. 또한 소비자에게 수집된 데이터를 수정, 삭제 또는 복사할 수 있는 권한을 부여합니다. 이 법은 50,000명 이상의 몬타나 소비자의 데이터를 처리하는 기업에 적용된다. 동법은 생체 및 유전 정보를 포함한 민감한 개인 데이터의 보호를 강조하고 있다. |
 | NDPA(네브래스카) | [[!DNL Nebraska Data Protection Act]](https://nebraskalegislature.gov/FloorDocs/108/PDF/Slip/LB1074.pdf)은(는) Nebraskans에게 액세스, 수정, 삭제 및 판매 중지 등 개인 데이터에 대한 권한을 제공합니다. 이 법은 개인정보 처리와 판매에 따른 수익을 위하여 특정한 기준에 해당하는 사업자에 대하여 적용한다. 또한 기업이 합리적인 데이터 보안 관행을 구현하도록 하고, 과징금이 부과되기 전에 규정 준수 문제 해결을 위한 30일 의무적인 치유 기간을 제공합니다. |
 | 뉴질랜드 [!DNL Privacy Act] | [뉴질랜드 [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/)에서는 기관이 뉴질랜드 시민과 조직의 개인 정보를 수집, 사용, 공개, 저장 및 액세스하는 방법을 제어합니다. 2020년, 이 법의 최신 버전은 이러한 개인 정보 보호법에 대한 중요한 업데이트를 도입했습니다. 이 업데이트에는 새로운 위반, 벌금, 데이터 위반에 대한 필수 알림 및 개인정보 보호 관리자의 권한 증대가 포함됩니다. |
-| NHDPA(뉴햄프셔) | [[!DNL New Hampshire Data Privacy Act]](https://gencourt.state.nh.us/bill_status/billinfo.aspx?id=865&amp;inflect=1)은(는) 데이터 액세스, 삭제 및 이동성과 관련된 소비자 권한을 설정하여 New Hampshire 거주자의 개인 정보를 보호합니다. 조직은 데이터 수집 및 공유 사례를 공개해야 하며, 소비자가 데이터 판매를 옵트아웃할 수 있도록 합니다. 이 법은 특정 데이터 처리 임계값을 충족하는 사업자에 적용됩니다. |
+| NHDPA(뉴햄프셔) | [[!DNL New Hampshire Privacy Act]](https://gencourt.state.nh.us/bill_status/billinfo.aspx?id=865&amp;inflect=1)은(는) 데이터 액세스, 삭제 및 이동성과 관련된 소비자 권한을 설정하여 New Hampshire 거주자의 개인 정보를 보호합니다. 조직은 데이터 수집 및 공유 사례를 공개해야 하며, 소비자가 데이터 판매를 옵트아웃할 수 있도록 합니다. 이 법은 특정 데이터 처리 임계값을 충족하는 사업자에 적용됩니다. |
 | NJDPA(뉴저지) | [[!DNL New Jersey Data Protection Act]](https://pub.njleg.state.nj.us/Bills/2022/S0500/332_R6.PDF)은(는) 정보를 액세스, 수정 및 삭제할 수 있는 권한을 제공하여 New Jersey 거주자에게 개인 데이터에 대한 제어 권한을 부여합니다. 여기에는 데이터 판매 및 타깃팅된 광고를 위한 옵트아웃 메커니즘이 포함되어 있습니다. 이 법안은 많은 양의 소비자 데이터를 처리하고 데이터 사용의 투명성을 의무화하는 비즈니스를 포함합니다. |
 | OCPA(오레곤) | [[!DNL Oregon Consumer Privacy Act]](https://olis.oregonlegislature.gov/liz/2023R1/Downloads/PublicTestimonyDocument/59856#:~:text=The%20Act%20requires%20controllers%20to,data%3B%20and%20%E2%80%A2%20Contact%20information.)(OCPA)은(는) 오레곤 거주자에게 개인 데이터에 대한 기본 권한을 제공하고 이러한 데이터를 처리하는 기업에 의무를 부과합니다. 소비자는 데이터를 알고, 수정하고, 삭제하고, 사본을 얻을 수 있는 권리가 있으며 타깃팅된 광고 또는 판매에 대한 데이터 처리를 거부할 수 있습니다. 이 법에서는 중요한 데이터에 대한 보호를 강화하고 지정된 목적 이상의 데이터 처리에 동의해야 하며 데이터 관리자의 포괄적인 개인 정보 보호 고지를 의무화합니다. |
 | PDPA(태국) | [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act)은(는) 태국 데이터 소유자를 불법 수집, 사용 또는 개인 데이터 공개로부터 보호하기 위해 도입되었습니다. 유럽 연합의 GDPR에서 영감을 얻어, 이 규정은 태국 시민에게 저장된 개인 데이터에 대한 액세스 또는 삭제를 요청할 수 있는 권리를 부여합니다. |

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 개인 정보 보호 규정 용어
 description: 이 문서에서는 Adobe Experience Cloud에서 지원하는 개인 정보 보호 규정 관련 주요 용어에 대한 정의를 제공합니다.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: c4ca3dc975b13e2dce2e12784480e53bd0c4ee02
+source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
 workflow-type: tm+mt
 source-wordcount: '2301'
 ht-degree: 0%
@@ -113,7 +113,7 @@ ht-degree: 0%
 
 **[!DNL Nebraska Data Protection Act]**: 네브라스카에 개인 데이터 액세스, 수정, 삭제 및 판매 거부 권한을 제공하는 개인 정보 보호 법입니다. 특정 데이터 처리 및 매출 임계값을 충족하는 비즈니스에 적용됩니다. 또한 NDPA는 사업체가 합리적인 데이터 보안 조치를 이행하도록 하고, 위반 사항을 해결하기 위해 30일 치유기간을 제공한 후 페널티를 적용한다.
 
-**[!DNL New Hampshire Data Privacy Act]**: 이 규정은 뉴햄프셔 주민의 데이터에 대한 액세스, 삭제 및 전송 권한을 부여하여 개인 데이터를 보호합니다. 기업이 데이터 수집 및 공유 관행을 공개하도록 의무화하고 소비자가 데이터 판매를 거부할 수 있도록 한다. NHDPA는 지정된 데이터 처리 임계값을 충족하는 회사에 적용됩니다.
+**[!DNL New Hampshire Privacy Act]**: 이 규정은 뉴햄프셔 주민의 데이터에 대한 액세스, 삭제 및 전송 권한을 부여하여 개인 데이터를 보호합니다. 기업이 데이터 수집 및 공유 관행을 공개하도록 의무화하고 소비자가 데이터 판매를 거부할 수 있도록 한다. NHDPA는 지정된 데이터 처리 임계값을 충족하는 회사에 적용됩니다.
 
 **[!DNL New Jersey Data Protection Act]**: 뉴저지 주민들에게 개인 데이터에 대한 액세스, 수정 및 삭제 권한을 제공하는 포괄적인 주 개인 정보 보호 법입니다. 여기에는 데이터 판매 및 타겟 광고를 위한 옵트아웃 메커니즘이 포함되어 있습니다. NJDPA는 대량의 소비자 데이터를 처리하는 기업에 적용되며, 기업이 개인 정보를 처리하는 방식의 투명성이 요구된다.
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service UI의 개인 정보 작업 관리
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 요청을 조정하고 모니터링하는 방법에 대해 알아봅니다.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 25c173e22f2aa4922aed89f7c9721e2303d5d4b9
+source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
 workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 11%
@@ -52,7 +52,7 @@ ht-degree: 11%
 | [!UICONTROL MCDPA_USA(몬타나)] | [!DNL Montana Consumer Data Privacy Act] |
 | [!UICONTROL NDPA_USA(네브래스카)] | [!DNL Nebraska Data Protection Act] |
 | [!UICONTROL NZPA_NZL(뉴질랜드)] | 뉴질랜드 [!DNL Privacy Act] |
-| [!UICONTROL NHPA_USA(뉴햄프셔)] | [!DNL New Hampshire Data Privacy Act] |
+| [!UICONTROL NHPA_USA(뉴햄프셔)] | [!DNL New Hampshire Privacy Act] |
 | [!UICONTROL NJDPA_USA(뉴저지)] | [!DNL New Jersey Data Protection Act] |
 | [!UICONTROL OCPA USA(오레곤)] | [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA(태국)] | 태국 [!DNL Personal Data Protection Act] |
