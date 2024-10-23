@@ -176,7 +176,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="대상자 원본"
->abstract="원래 대상자의 고객 데이터를 수집하는 방법을 선택합니다. 사용자가 세그먼트에 타겟팅되면 데이터가 Facebook에 표시됩니다."
+>abstract="원래 대상자의 고객 데이터를 수집하는 방법을 선택합니다. 사용자가 세그먼트에 타기팅되면 데이터가 Facebook에 표시됩니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

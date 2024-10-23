@@ -5,7 +5,7 @@ exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
 source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
 source-wordcount: '4320'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -212,8 +212,8 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="유연한 대상 평가 제한"
->abstract="유연한 단일 대상 평가 실행에서 최대 20개의 대상을 평가할 수 있습니다.<br/><br/>또한 평가 작업이 가능한 한 빨리 실행되는 동안 온디맨드 평가 <b>할 수 없음</b>이(가) 다른 온디맨드 또는 일괄 처리 평가와 동시에 실행되기 때문에 시스템 지연이 발생할 수 있습니다."
+>title="유연한 대상자 평가 제한"
+>abstract="유연한 대상자 평가를 한 번 실행하여 최대 20개의 대상자를 평가할 수 있습니다.<br/><br/>또한, 평가 작업은 가능한 한 빨리 실행되지만 온디맨드 평가는 다른 온디맨드 또는 일괄 평가와 동시에 실행할 수 <b>없기</b> 때문에 시스템 지연이 발생할 수 있습니다."
 
 또한 최대 25개의 서로 다른 대상을 선택하고 이러한 대상에 대해 다양한 작업을 수행할 수 있습니다. 이러한 작업에는 [폴더로 이동](#folders), [태그 편집 또는 적용](#tags), [액세스 레이블 적용](../../access-control/abac/ui/labels.md) 및 [삭제](#browse)이 포함됩니다.
 

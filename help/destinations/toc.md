@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: 대상 안내서
-user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
+user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 등에 대해 알려진 데이터와 알 수 없는 데이터를 활성화합니다.
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
