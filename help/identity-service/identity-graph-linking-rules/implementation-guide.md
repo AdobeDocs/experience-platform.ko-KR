@@ -2,9 +2,9 @@
 title: ID 그래프 연결 규칙에 대한 구현 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 5d1bcaa84875e55595996253fb72cf768af16e05
+source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
 workflow-type: tm+mt
-source-wordcount: '1634'
+source-wordcount: '1668'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 1. [구현을 위한 전체 사전 요구 사항](#prerequisites-for-implementation)
 2. [필요한 ID 네임스페이스 만들기](#namespace)
 3. [그래프 시뮬레이션 도구를 사용하여 ID 최적화 알고리즘을 숙지하십시오](#graph-simulation)
-4. [ID 설정 도구를 사용하여 고유한 네임스페이스를 지정하고 네임스페이스에 대한 우선 순위 등급을 구성합니다](#identity-settings)
+4. [ID 설정 UI를 사용하여 고유한 네임스페이스를 지정하고 네임스페이스에 대한 우선 순위 등급을 구성합니다](#identity-settings)
 5. [XDM(경험 데이터 모델) 스키마 만들기](#schema)
 6. [데이터 세트 만들기](#dataset)
 7. [데이터를 Experience Platform으로 수집](#ingest)
@@ -183,9 +183,13 @@ ID 서비스 구현 프로세스의 첫 번째 단계는 Experience Platform 계
 
 ## ID 설정 구성 {#identity-settings}
 
-그래프의 동작 방식을 보다 잘 이해했으면 Identity Service UI 작업 영역의 [ID 설정 도구](./identity-settings-ui.md)로 이동합니다.
+그래프의 동작 방식을 보다 잘 이해했으면 Identity Service UI 작업 영역에서 [ID 설정 UI](./identity-settings-ui.md)로 이동합니다. ID 설정 UI에 액세스하려면 왼쪽 탐색에서 **[!UICONTROL ID]**&#x200B;를 선택한 다음 **[!UICONTROL 설정]**&#x200B;을 선택하십시오.
 
-ID 설정 도구를 사용하여 고유한 네임스페이스를 지정하고 우선 순위별로 네임스페이스를 구성합니다. 설정 적용이 끝나면 새 설정이 ID 서비스에 반영되기까지 최소 6시간이 걸리기 때문에 데이터 수집을 진행하려면 최소 6시간 이상 기다려야 합니다.
+![설정 단추가 강조 표시된 ID 찾아보기 페이지입니다.](../images/implementation/settings.png)
+
+ID 설정 UI를 사용하여 고유한 네임스페이스를 지정하고 우선 순위별로 네임스페이스를 구성합니다. 설정 적용이 끝나면 새 설정이 ID 서비스에 반영되기까지 최소 6시간이 걸리기 때문에 데이터 수집을 진행하려면 최소 6시간 이상 기다려야 합니다.
+
+자세한 내용은 [ID 설정 UI 안내서](./identity-settings-ui.md)를 참조하십시오.
 
 ## XDM 스키마 만들기 {#schema}
 

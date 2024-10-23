@@ -2,7 +2,7 @@
 title: ID 그래프 연결 규칙
 description: ID 서비스의 ID 그래프 연결 규칙에 대해 알아봅니다.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: 5092421ed8d0ff61fb3ed7f0849d2271f1fa144c
 workflow-type: tm+mt
 source-wordcount: '1424'
 ht-degree: 2%
@@ -98,11 +98,11 @@ ID 설정 UI 작업 영역을 사용하여 네임스페이스를 고유하도록
 
 다음 시나리오를 고려하십시오.
 
-* Scott은 태블릿을 사용하고 Google Chrome 브라우저를 열어 nike<span>.com으로 이동한 다음 로그인하여 새 농구화를 찾습니다.
+* Scott은 태블릿을 사용하고 자신의 Google Chrome 브라우저를 열어 acme<span>.com으로 이동한 다음 로그인하여 새 농구화를 찾습니다.
    * 이 시나리오에서는 배후에 다음 ID를 기록합니다.
       * 브라우저의 사용을 나타내는 ECID 네임스페이스 및 값입니다
       * 인증된 사용자(Scott이 사용자 이름 및 암호 조합으로 로그인함)를 나타내는 CRMID 네임스페이스 및 값입니다.
-* 그런 다음 아들 피터는 같은 태블릿을 사용하고 Google Chrome을 사용하여 nike<span>.com으로 이동하며 자신의 계정으로 로그인하여 축구 장비를 찾습니다.
+* 그런 다음 아들 피터는 같은 태블릿을 사용하고 Google Chrome을 사용하여 acme<span>.com으로 이동하며 자신의 계정으로 로그인하여 축구 장비를 찾습니다.
    * 이 시나리오에서는 배후에 다음 ID를 기록합니다.
       * 브라우저를 나타내는 동일한 ECID 네임스페이스 및 값입니다.
       * 인증된 사용자를 나타내는 새 CRMID 네임스페이스 및 값입니다.
