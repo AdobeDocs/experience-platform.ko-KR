@@ -2,7 +2,7 @@
 title: 흐름 서비스 엔티티 API의 초안 만들기
 description: 흐름 서비스 API를 사용하여 기본 연결, 소스 연결, 타겟 연결 및 데이터 흐름의 초안을 만드는 방법을 알아봅니다
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
-source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
+source-git-commit: 9c40f6254b548027d271e5831bd1b03aec98df77
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 3%
@@ -589,7 +589,7 @@ POST /connections?mode=draft
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  'https://platform.adobe.io/data/foundation/flowservice/connections?mode=draft' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
