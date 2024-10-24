@@ -2,9 +2,9 @@
 title: 네임스페이스 우선순위
 description: ID 서비스의 네임스페이스 우선 순위에 대해 알아봅니다.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1689'
 ht-degree: 2%
 
 ---
@@ -109,11 +109,11 @@ ID는 실제 개체를 나타냅니다. ID 그래프에 표시되는 객체는 �
 
 | 사용자 작업(경험 이벤트) | 인증 상태 | 데이터 소스 | 이벤트의 네임스페이스 | 기본 ID 네임스페이스 |
 | --- | --- | --- | --- | --- |
-| 신용 카드 오퍼 페이지 보기 | 인증되지 않음(익명) | Web SDK | {ECID} | ECID |
-| 도움말 페이지 보기 | 인증되지 않음 | Mobile SDK | {ECID, IDFA} | IDFA |
-| 당좌 예금 잔액 조회 | Authenticated | Web SDK | {CRMID, ECID} | CRMID |
-| 주택 융자에 등록 | Authenticated | Analytics 소스 커넥터 | {CRMID, ECID, AAID} | CRMID |
-| $1,000를 수표에서 저축으로 전송 | Authenticated | Mobile SDK | {CRMID, GAID, ECID} | CRMID |
+| 신용 카드 오퍼 페이지 보기 | 인증되지 않음(익명) | Web SDK | `{ECID}` | ECID |
+| 도움말 페이지 보기 | 인증되지 않음 | Mobile SDK | `{ECID, IDFA}` | IDFA |
+| 당좌 예금 잔액 조회 | Authenticated | Web SDK | `{CRMID, ECID}` | CRMID |
+| 주택 융자에 등록 | Authenticated | Analytics 소스 커넥터 | `{CRMID, ECID, AAID}` | CRMID |
+| $1,000를 수표에서 저축으로 전송 | Authenticated | Mobile SDK | `{CRMID, GAID, ECID}` | CRMID |
 
 {style="table-layout:auto"}
 

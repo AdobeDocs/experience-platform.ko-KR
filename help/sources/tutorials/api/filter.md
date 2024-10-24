@@ -2,7 +2,7 @@
 title: 흐름 서비스 API를 사용하여 Source에 대한 행 수준 데이터 필터링
 description: 이 자습서에서는 흐름 서비스 API를 사용하여 소스 수준에서 데이터를 필터링하는 방법에 대한 단계를 다룹니다
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 544bb7b5aff437fd49c30ac3d6261f103a609cac
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 4%
@@ -687,12 +687,12 @@ curl -X GET \
 **API 형식**
 
 ```http
-GET /sourceConnections/{SOURCE_CONNECTION_ID}
+PATCH /sourceConnections/{SOURCE_CONNECTION_ID}
 ```
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{SOURCE_CONNECTION_ID}` | 검색할 소스 연결의 ID입니다. |
+| `{SOURCE_CONNECTION_ID}` | 업데이트하려는 소스 연결의 ID |
 
 +++요청
 
