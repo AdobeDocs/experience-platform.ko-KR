@@ -3,9 +3,9 @@ keywords: 클라우드 스토리지 대상;클라우드 스토리지
 title: 클라우드 스토리지 대상 개요
 description: Adobe Experience Platform은 대상을 Amazon S3, AWS Kinesis, Azure Event Hubs 또는 SFTP 클라우드 스토리지 위치에 데이터 파일로 전달할 수 있습니다.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
+source-git-commit: 2e21e62de624c5e7e9fac4d36dbf41b46198062a
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '463'
 ht-degree: 5%
 
 ---
@@ -40,7 +40,7 @@ Adobe Experience Platform은 다음 클라우드 스토리지 대상으로 데�
 
 >[!NOTE]
 >
-> 이 섹션에 설명된 기능은 현재 [Amazon S3](amazon-s3.md) 대상에서만 사용할 수 있습니다.
+> 이 섹션에서 설명하는 기능은 모든 클라우드 스토리지 대상에 사용할 수 있습니다. 그러나 [Amazon S3](amazon-s3.md) 대상은 현재 `%SEGMENT_ID%` 및 `%SEGMENT_NAME%` 매크로만 지원합니다.
 
 저장소 위치의 대상 파일별로 사용자 지정 폴더를 만들려면 폴더 경로 입력 필드의 매크로를 사용할 수 있습니다. 아래와 같이 입력 필드의 끝에 매크로를 삽입합니다.
 
