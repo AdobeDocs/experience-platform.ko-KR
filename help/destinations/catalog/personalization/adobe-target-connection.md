@@ -3,9 +3,9 @@ keywords: target 개인화, 대상, experience platform 대상, adobe target 대
 title: Adobe Target 연결
 description: Adobe Target은 웹 사이트, 모바일 앱 등을 통해 모든 인바운드 고객 상호 작용에서 실시간 AI 기반 개인화 및 실험 기능을 제공하는 애플리케이션입니다.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: dae0cb108c62b078d0c7dd5bec466091d4937c53
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1768'
 ht-degree: 9%
 
 ---
@@ -126,7 +126,8 @@ Adobe Experience Platform은 자동으로 회사의 Adobe Target 인스턴스에
 
   >[!IMPORTANT]
   >
-  >데이터 스트림 ID는 각 Adobe Target 대상 연결에 대해 고유합니다. 동일한 대상을 여러 데이터스트림에 매핑해야 하는 경우에는 각 데이터스트림 ID에 대해 [새 대상 연결을 만들고](../../ui/connect-destination.md)다음 [대상 활성화 흐름](#activate)을 거쳐야 합니다.
+  >데이터 스트림 ID는 각 Adobe Target 대상 연결에 대해 고유합니다. 여러 Adobe Target 대상 연결에 동일한 데이터 스트림 ID를 사용할 수 없습니다.
+  >동일한 대상을 여러 데이터스트림에 매핑해야 하는 경우에는 각 데이터스트림 ID에 대해 [새 대상 연결을 만들고](../../ui/connect-destination.md)다음 [대상 활성화 흐름](#activate)을 거쳐야 합니다.
 
    * **[!UICONTROL 없음]**: Adobe Target 개인화를 구성해야 하지만 [Web SDK Experience Platform](/help/web-sdk/home.md)을 구현할 수 없는 경우 이 옵션을 선택하십시오. 이 옵션을 사용하는 경우 Experience Platform에서 Target으로 내보낸 대상은 다음 세션 개인화만 지원하며 에지 세분화는 비활성화됩니다. 구현 유형별 사용 가능한 사용 사례를 비교하려면 [지원되는 사용 사례](#supported-use-cases) 섹션의 표를 참조하십시오.
 
