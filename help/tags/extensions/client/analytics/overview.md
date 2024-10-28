@@ -2,10 +2,10 @@
 title: Adobe Analytics 확장 개요
 description: Adobe Experience Platform의 Adobe Analytics 태그 확장 기능에 대해 알아봅니다.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 764a9a29df0be6064d36f952d2e8a61acfa9bd33
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 81%
+source-wordcount: '2331'
+ht-degree: 74%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Analytics 확장 구성 및 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -289,7 +289,19 @@ Analytics 확장은 다음 작업을 제공합니다.
 
 ### 변수 설정 {#set-variables}
 
-중요: &quot;변수 설정&quot; 작업을 사용하면 비콘이 전송되지 않습니다. 비콘 보내기 작업을 사용해야 합니다.
+>[!IMPORTANT]
+>
+>변수 설정 작업으로 비콘을 보낼 수 없습니다. 비콘을 보내려면 &quot;비콘 보내기&quot; 작업을 선택해야 합니다.
+
+**변수 설정**&#x200B;에서 두 개의 다른 보기 중 하나를 선택할 수 있습니다.
+
+>[!BEGINTABS]
+
+>[!TAB 개별 특성 제공]
+
+이 보기에서 `eVars`, `Props`, `Events` 등의 다른 변수를 지정할 수 있습니다.
+
+![추가 특성이 나열된 Adobe Analytics 양식 보기 페이지입니다.](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVar
 
@@ -319,6 +331,25 @@ Analytics 확장은 다음 작업을 제공합니다.
 1. (선택 사항) [이벤트 일련화](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html)에 사용되는 데이터 요소를 선택하거나 지정합니다.
 1. (선택 사항) 더 많은 이벤트를 설정하려면 **[!UICONTROL 이벤트 추가]**&#x200B;를 선택하십시오.
 1. **[!UICONTROL 변경 내용 유지]**&#x200B;를 선택합니다.
+
+>[!TAB JSON 보기]
+
+이 보기에서 **변수 설정** 작업의 JSON 버전을 보고 편집할 수 있습니다.
+
+![Adobe Analytics 확장에서 JSON 형식으로 현재 설정된 변수 구성을 나타내는 보기입니다.](../../../images/adobe_analytics_extension_json_view.png)
+
+#### JSON
+
+**변수 설정** 작업에서 JSON 보기를 사용하여 JSON 데이터를 업로드, 복사 또는 다운로드하고 장치에 저장합니다.
+
+그러나 다음과 같은 몇 가지 제한 사항이 있습니다.
+
+* **사용자 지정 코드**: 사용자 지정 코드를 사용하여 변수를 채우는 경우 JSON 보기에 표시되지 않습니다. 대신 JSON을 보거나, 복사하거나, 다운로드할 때 사용자 지정 코드를 통해 수정된 사항이 포함되지 않는다는 경고가 표시됩니다.
+* **URL 특성에서 복사**: URL에서 값을 복사할 수 없습니다. 이 제한을 나타내는 경고가 표시됩니다.
+* **사용되지 않는 변수**: 사용되지 않거나 사용되지 않는 변수가 JSON 보기에 표시되고 사용되지 않는 변수가 설정되었음을 알리는 경고가 표시됩니다.
+* **데이터 요소**: 데이터 요소가 JSON 보기에 표시됩니다. JSON 데이터가 다른 태그 속성에 복사되는 경우 해당 데이터 요소가 정의되지 않을 수 있으므로 실행될 때 올바르게 확인되지 않습니다.
+
+>[!ENDTABS]
 
 #### 계층
 
