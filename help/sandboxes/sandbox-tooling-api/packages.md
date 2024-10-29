@@ -2,9 +2,9 @@
 title: 샌드박스 도구 패키지 API 끝점
 description: 샌드박스 도구 API의 /packages 끝점을 사용하면 Adobe Experience Platform에서 패키지를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: f81e15ccfd89e2d0cb450f596743341264187f52
+source-git-commit: 1e271a88890f41f66aad93d96dbef23a09d33077
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '2541'
 ht-degree: 8%
 
 ---
@@ -58,7 +58,7 @@ curl -X POST \
 | `name` | 패키지의 이름입니다. | 문자열 | 예 |
 | `description` | 패키지에 대한 자세한 내용을 제공하는 설명입니다. | 문자열 | 아니요 |
 | `packageType` | 패키지에 특정 아티팩트를 포함하고 있음을 나타내는 패키지 형식은 **PARTIAL**&#x200B;입니다. | 문자열 | 예 |
-| `sourceSandbox` | 패키지의 소스 샌드박스. | 문자열 | 아니요 |
+| `sourceSandbox` | 패키지의 소스 샌드박스. | 오브젝트 | 아니요 |
 | `expiry` | 패키지의 만료 날짜를 정의하는 타임스탬프. 기본값은 생성일로부터 90일입니다. 응답 만료 필드는 epoch UTC 시간이 됩니다. | 문자열(UTC 타임스탬프 형식) | 아니요 |
 | `artifacts` | 패키지로 내보낼 아티팩트 목록입니다. `packageType`이(가) `FULL`인 경우 `artifacts` 값은 **null** 또는 **empty**&#x200B;여야 합니다. | 배열 | 아니요 |
 
@@ -200,7 +200,6 @@ curl -X PUT \
 
 패키지에서 아티팩트를 삭제하려면 `id`을(를) 제공하고 `action`에 대한 **DELETE**&#x200B;을(를) 포함해야 합니다.
 
-
 **API 형식**
 
 ```http
@@ -308,7 +307,7 @@ curl -X PUT \
 | `id` | 업데이트할 패키지의 ID입니다. | 문자열 | 예 |
 | `action` | 패키지의 메타데이터 필드를 업데이트하려면 작업 값이 **UPDATE**&#x200B;여야 합니다. 이 작업은 **PARTIAL** 패키지 형식에서만 지원됩니다. | 문자열 | 예 |
 | `name` | 업데이트된 패키지 이름. 중복 패키지 이름은 허용되지 않습니다. | 배열 | 예 |
-| `sourceSandbox` | Source 샌드박스는 요청 헤더에 지정된 것과 동일한 조직에 속해야 합니다. | 문자열 | 예 |
+| `sourceSandbox` | Source 샌드박스는 요청 헤더에 지정된 것과 동일한 조직에 속해야 합니다. | 오브젝트 | 예 |
 
 **응답**
 
@@ -356,7 +355,7 @@ DELETE /packages/{PACKAGE_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| {PACKAGE_ID} | 삭제할 패키지의 ID입니다. |
+| `{PACKAGE_ID}` | 삭제할 패키지의 ID입니다. |
 
 **요청**
 
@@ -392,7 +391,7 @@ GET /packages/{PACKAGE_ID}/export
 
 | 매개변수 | 설명 |
 | --- | --- |
-| {PACKAGE_ID} | 게시하려는 패키지의 ID입니다. |
+| `{PACKAGE_ID}` | 게시하려는 패키지의 ID입니다. |
 
 **요청**
 
@@ -441,7 +440,7 @@ GET /packages/{PACKAGE_ID}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| {PACKAGE_ID} | 조회할 패키지의 ID입니다. |
+| `{PACKAGE_ID}` | 조회할 패키지의 ID입니다. |
 
 **요청**
 
@@ -508,7 +507,7 @@ GET /packages/?{QUERY_PARAMS}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| {QUERY_PARAMS} | 결과를 필터링 기준으로 사용할 선택적 쿼리 매개 변수입니다. 자세한 내용은 [쿼리 매개 변수](./appendix.md)의 섹션을 참조하십시오. |
+| `{QUERY_PARAMS}` | 결과를 필터링 기준으로 사용할 선택적 쿼리 매개 변수입니다. 자세한 내용은 [쿼리 매개 변수](./appendix.md)의 섹션을 참조하십시오. |
 
 **요청**
 
@@ -613,7 +612,7 @@ GET /packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName
 
 | 매개변수 | 설명 |
 | --- | --- |
-| {PACKAGE_ID} | 조회할 패키지의 ID입니다. |
+| `{PACKAGE_ID}` | 조회할 패키지의 ID입니다. |
 
 **요청**
 
@@ -632,7 +631,7 @@ curl -X GET \
 
 충돌은 응답에서 반환됩니다. 응답에는 원래 패키지와 `alternatives` 조각이 순위별로 정렬된 배열로 표시됩니다.
 
-응답 보기+++
++++응답 보기
 
 ```json
 [
@@ -826,7 +825,7 @@ POST /packages/{PACKAGE_ID}/children
 
 | 매개변수 | 설명 |
 | --- | --- |
-| {PACKAGE_ID} | 패키지의 ID입니다. |
+| `{PACKAGE_ID}` | 패키지의 ID입니다. |
 
 **요청**
 
@@ -905,7 +904,7 @@ GET /packages/preflight/{packageId}?targetSandbox=<sandbox_name
 
 | 매개변수 | 설명 |
 | --- | --- |
-| {PACKAGE_ID} | 가져오려는 패키지의 ID입니다. |
+| `{PACKAGE_ID}` | 가져오려는 패키지의 ID입니다. |
 
 **요청**
 
@@ -924,7 +923,7 @@ curl -X GET \
 
 성공적인 응답은 필요한 권한 목록, 누락된 권한, 아티팩트 유형 및 생성 허용 여부에 대한 결정 등 타겟 샌드박스에 대한 리소스 권한을 반환합니다.
 
-응답 보기+++
++++응답 보기
 
 ```json
 {
@@ -1053,7 +1052,7 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| {QUERY_PARAMS} | 결과를 필터링 기준으로 사용할 선택적 쿼리 매개 변수입니다. 자세한 내용은 [쿼리 매개 변수](./appendix.md)의 섹션을 참조하십시오. |
+| `{QUERY_PARAMS}` | 결과를 필터링 기준으로 사용할 선택적 쿼리 매개 변수입니다. 자세한 내용은 [쿼리 매개 변수](./appendix.md)의 섹션을 참조하십시오. |
 
 **요청**
 
@@ -1150,5 +1149,867 @@ curl -X GET \
             "createdBy": "{CREATED_BY}"
         }
     ]
+}
+```
+
+## 조직 간 패키지 공유 {#org-linking}
+
+샌드박스 도구 API의 `/handshake` 끝점을 사용하면 다른 조직과 협력하여 패키지를 공유할 수 있습니다.
+
+### 공유 요청 보내기 {#send-request}
+
+`/handshake/bulkCreate` 끝점에 POST 요청을 하여 공유 승인을 위한 요청을 대상 파트너 조직에 보냅니다. 비공개 패키지를 공유하려면 먼저 이 작업이 필요합니다.
+
+**API 형식**
+
+```http
+POST /handshake/bulkCreate
+```
+
+**요청**
+
+다음 요청은 대상 파트너 조직과 소스 조직 간에 공유 승인을 시작합니다.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/exim/handshake/bulkCreate \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "targetIMSOrgIds":["acme@AdobeOrg"],
+      "sourceIMSDetails":{
+        "id":"acme@AdobeOrg",
+        "name":"acme_org"
+      } 
+  }' 
+```
+
+| 속성 | 설명 | 유형 | 필수 여부 |
+| --- | --- | --- | --- |
+| `targetIMSOrgIds` | 공유 요청을 보낼 대상 조직의 목록입니다. | 배열 | 예 |
+| `sourceIMSDetails` | 소스 조직에 대한 세부 정보. | 오브젝트 | 예 |
+
+**응답**
+
+성공적인 응답이 공유 요청에 대한 세부 정보를 반환합니다.
+
+```json
+{
+    "successfulRequests": {
+        "acme@AdobeOrg": {
+            "id": "{ID}",
+            "version": 0,
+            "createdDate": 1724938816798,
+            "modifiedDate": 1724938816798,
+            "createdBy": "{CREATED_BY}",
+            "modifiedBy": "{MODIFIED_BY}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "sourceRegion": "va6",
+            "sourceIMSOrgName": "{SOURCE_NAME}",
+            "status": "APPROVAL_PENDING",
+            "createdByName": "{CREATED_BY}",
+            "modifiedByName": "{MODIFIED_BY}",
+            "modifiedByIMSOrgId": "{ORG_ID}",
+            "statusHistory": "[{\"actionTakenBy\":\"acme@98ff67fa661fdf6549420b.e\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724938816885}]",
+            "linkingId": "{LINKIND_ID}"
+        }
+    },
+    "failedRequests": {}
+}
+```
+
+### 수신된 공유 요청 승인 {#approve-requests}
+
+`/handshake/action` 끝점에 대한 POST 요청을 만들어 대상 파트너 조직의 공유 요청을 승인합니다. 승인 후 소스 파트너 조직은 비공개 패키지를 공유할 수 있습니다.
+
+**API 형식**
+
+```http
+POST /handshake/action
+```
+
+**요청**
+
+다음 요청은 대상 파트너 조직의 공유 요청을 승인합니다.
+
+```shell
+curl -X POST  \
+  https://platform.adobe.io/data/foundation/exim/handshake/action \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "linkingID":"{LINKING_ID}",
+      "status":"APPROVED",
+      "reason":"Done",
+      "targetIMSOrgDetails":{
+          "id":"acme@AdobeOrg",
+          "name":"acme",
+          "region":"va7"
+      }
+  }'
+```
+
+| 속성 | 설명 | 유형 | 필수 여부 |
+| --- | --- | --- | --- |
+| `linkingID` | 응답 중인 공유 요청의 ID입니다. | 문자열 | 예 |
+| `status` | 공유 요청에 대해 수행되는 작업입니다. | 문자열 | 예 |
+| `reason` | 작업이 수행되는 이유입니다. | 문자열 | 예 |
+| `targetIMSOrgDetails` | ID 값이 대상 조직의 **ID**, 이름 값이 대상 조직의 **NAME**, 지역 값이 대상 조직 **REGION**&#x200B;인 대상 조직에 대한 세부 정보입니다. | 오브젝트 | 예 |
+
+**응답**
+
+성공적인 응답은 승인된 공유 요청에 대한 세부 정보를 반환합니다.
+
+```json
+{
+    "id": "{ID}",
+    "version": 1,
+    "createdDate": 1726737474000,
+    "modifiedDate": 1726737541731,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "sourceIMSOrgId": "{ORG_ID}",
+    "targetIMSOrgId": "{TARGET_ID}",
+    "sourceRegion": "va7",
+    "targetRegion": "va7",
+    "sourceOrgName": "{SOURCE_ORG}",
+    "targetOrgName": "{TARGET_ORG}",
+    "status": "APPROVED",
+    "createdByName": "{CREATED_BY}",
+    "modifiedByIMSOrgId": "{MODIFIED_BY}",
+    "statusHistory": "[{\"actionTakenBy\":\"{ACTION_BY}\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"acme@AdobeOrg\",\"action\":\"INITIATED\",\"actionTimeStamp\":1726737474450,\"reason\":null},{\"actionTakenBy\":null,\"actionTakenByName\":null,\"actionTakenByImsOrgID\":\"745F37C35E4B776E0A49421B@AdobeOrg\",\"action\":\"APPROVED\",\"actionTimeStamp\":1726737541818,\"reason\":\"Done\"}]",
+    "linkingId": "{LINKING_ID}"
+}
+```
+
+### 나가는/들어오는 공유 요청 나열 {#outgoing-and-incoming-requests}
+
+`handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING` 끝점에 GET 요청을 하여 나가는 공유 요청과 들어오는 공유 요청을 나열합니다.
+
+**API 형식**
+
+```http
+POST handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
+```
+
+| 매개변수 | 수락됨/기본값 |
+| --- | --- |
+| `property` | 상태 등 필터링 기준으로 사용할 속성을 지정합니다. 상태에 사용할 수 있는 값은 `APPROVED`, `REJECTED` 및 `IN_PROGRESS`입니다. |
+| `start` | 시작의 기본값은 `0`입니다. |
+| `limit` | 제한의 기본값은 `20`입니다. |
+| `orderBy` | 레코드를 오름차순 또는 내림차순으로 정렬합니다. |
+| `requestType` | `INCOMING` 또는 `OUTGOING`을(를) 허용합니다. |
+
+**요청**
+
+다음 요청은 나가는 모든 공유 요청과 들어오는 공유 요청의 목록을 반환합니다.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id:{ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+```
+
+**응답**
+
+성공적인 응답은 발신 및 수신 공유 요청 목록과 세부 정보를 반환합니다.
+
+```json
+{
+    "totalElements": 1,
+    "currentPage": 0,
+    "totalPages": 1,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "data": [
+        {
+            "id": "{ID}",
+            "version": 1,
+            "createdDate": 1724929446000,
+            "modifiedDate": 1724929617000,
+            "modifiedBy": "{MODIFIED_BY}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "sourceRegion": "va7",
+            "targetRegion": "va6",
+             "sourceOrgName": "{SOURCE_ORG}",
+            "targetOrgName": "{TARGET_ORG}",
+            "status": "APPROVED",
+            "createdByName": "{CREATED_BY}",
+            "modifiedByName": "{MODIFIED_BY}",
+            "modifiedByIMSOrgId": "{MODIFIED_BY}",
+            "statusHistory": "[{\"actionTakenBy\":\"{ACTION_BY}\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724929442467,\"reason\":null},{\"actionTakenBy\":null,\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"APPROVED\",\"actionTimeStamp\":1724929617531,\"reason\":\"Done\"}]",
+            "linkingId": "{LINKING_ID}"
+        }
+    ],
+    "nextPage": null,
+    "pageSize": null
+}
+```
+
+## 패키지 전송
+
+샌드박스 도구 API의 `/transfer` 끝점을 사용하여 새 패키지 공유 요청을 가져오고 만듭니다.
+
+### 새 공유 요청 {#share-request}
+
+패키지 ID 및 대상 조직의 ID를 제공하는 동안 `/transfer` 끝점에 대한 POST 요청을 만들어 게시된 원본 조직의 패키지를 가져와 대상 조직과 공유합니다.
+
+**API 형식**
+
+```http
+POST /transfer
+```
+
+**요청**
+
+다음 요청은 소스 조직 패키지를 가져와 타겟 조직과 공유합니다.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/exim/transfer/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "packageId": "{PACKAGE_ID}",
+      "targets": [
+          {
+              "imsOrgId": "{TARGET_IMS_ORG}"
+          }
+      ]
+  }'
+```
+
+| 속성 | 설명 | 유형 | 필수 여부 |
+| --- | --- | --- | --- |
+| `packageId` | 공유할 패키지의 ID입니다. | 문자열 | 예 |
+| `targets` | 패키지화할 공유 조직 목록입니다. | 배열 | 예 |
+
+**응답**
+
+성공적인 응답은 요청된 패키지의 세부 정보와 공유 상태를 반환합니다.
+
+```json
+[
+    {
+        "id": "{ID}",
+        "version": 0,
+        "createdDate": 1726480559313,
+        "modifiedDate": 1726480559313,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "sourceIMSOrgId": "{ORG_ID}",
+        "targetIMSOrgId": "{TARGET_ID}",
+        "packageId": "{PACKAGE_ID}",
+        "status": "PENDING",
+        "initiatedBy": "acme@3ec9197a65a86f34494221.e",
+        "transferDetails": {
+            "messages": [
+                "Fetched Package",
+                "Fetched Manifest"
+            ],
+            "additionalMetadata": null
+        },
+        "requestType": "PRIVATE"
+    }
+]
+```
+
+### ID로 공유 요청 가져오기 {#fetch-transfer-by-id}
+
+전송 ID를 제공하는 동안 `/transfer/{TRANSFER_ID}` 끝점에 대한 GET 요청을 수행하여 공유 요청의 세부 정보를 가져옵니다.
+
+**API 형식**
+
+```http
+GET /transfer/{TRANSFER_ID}
+```
+
+| 매개변수 | 설명 |
+| --- | --- |
+| `{TRANSFER_ID}` | 가져오려는 전송 ID입니다. |
+
+**요청**
+
+다음 요청은 ID가 {TRANSFER_ID}인 전송을 가져옵니다.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/transfer/0c843180a64c445ca1beece339abc04b \
+  -H 'x-api-key: {API__KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
+**응답**
+
+성공 응답이 공유 요청의 세부 정보를 반환합니다.
+
+```json
+{
+    "id": "{ID}",
+    "sourceIMSOrgId": "{ORG_ID}",
+    "sourceOrgName": "{SOURCE_ORG}",
+    "targetIMSOrgId": "{TARGET_ID}",
+    "targetOrgName": "{TARGET_ORG}",
+    "packageId": "{PACKAGE_ID}",
+    "packageName": "{PACKAGE_NAME}",
+    "status": "COMPLETED",
+    "initiatedBy": "{INITIATED_BY}",
+    "createdDate": 1724442856000,
+    "transferDetails": {
+        "messages": [
+            "Fetched Package",
+            "Fetched Manifest",
+            "Tenant Identified",
+            "Fetched Sandbox Id",
+            "Fetched Blob Files",
+            "Message Published to Kafka",
+            "Completed Transfer"
+        ],
+        "additionalMetadata": null
+    },
+    "requestType": "PRIVATE"
+}
+```
+
+### 공유 목록 가져오기 {#transfers-list}
+
+`/transfer/list?{QUERY_PARAMETERS}` 끝점에 대한 GET 요청을 만들고 필요에 따라 쿼리 매개 변수를 변경하여 전송 요청 목록을 가져옵니다.
+
+**API 형식**
+
+```http
+GET `/transfer/list?{QUERY_PARAMETERS}`
+```
+
+| 매개변수 | 수락됨/기본값 |
+| --- | --- |
+| `property` | 상태 등 필터링 기준으로 사용할 속성을 지정합니다. 상태에 사용할 수 있는 값은 `COMPLETED`, `PENDING`, `IN_PROGRESS`, `FAILED`입니다. |
+| `start` | 시작의 기본값은 `0`입니다. |
+| `limit` | 제한의 기본값은 `20`입니다. |
+| `orderBy` | 순서 지정은 `createdDate` 필드만 허용합니다. |
+
+**요청**
+
+다음 요청은 제공된 검색 매개 변수에서 전송 요청 목록을 가져옵니다.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/transfer/list?property=status==COMPLETED&start=0&limit=2&orderBy=-createdDate \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
+**응답**
+
+성공적인 응답은 제공된 검색 매개 변수에서 모든 전송 요청 목록을 반환합니다.
+
+```json
+{
+    "totalElements": 43,
+    "currentPage": 0,
+    "totalPages": 22,
+    "hasPreviousPage": false,
+    "hasNextPage": true,
+    "data": [
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_ORG}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_ORG}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "{PACKAGE_NAME}",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1726129077000,
+            "createdDate": 1726129062000,
+            "transferDetails": {
+                "messages": [
+                    "Fetched Package",
+                    "Fetched Manifest",
+                    "Tenant Identified",
+                    "Fetched Sandbox Id",
+                    "Fetched Blob Files",
+                    "Message Published to Kafka",
+                    "Completed Transfer",
+                    "Finished with status: COMPLETED"
+                ],
+                "additionalMetadata": null
+            },
+            "requestType": "PRIVATE"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_ORG}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_ORG}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "{PACKAGE_NAME}",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1726066046000,
+            "createdDate": 1726065936000,
+            "transferDetails": {
+                "messages": [
+                    "Fetched Package",
+                    "Fetched Manifest",
+                    "Tenant Identified",
+                    "Fetched Sandbox Id",
+                    "Fetched Blob Files",
+                    "Message Published to Kafka",
+                    "Completed Transfer",
+                    "Finished with status: COMPLETED"
+                ],
+                "additionalMetadata": null
+            },
+            "requestType": "PRIVATE"
+        }
+    ],
+    "nextPage": null,
+    "pageSize": null
+}
+```
+
+### 패키지 가용성을 비공개에서 공개로 업데이트 {#update-availability}
+
+`/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC` 끝점에 대한 GET 요청을 수행하여 패키지를 private에서 public으로 변경합니다. 기본적으로 패키지는 비공개 가용성으로 생성됩니다.
+
+**요청**
+
+다음 요청은 패키지 가용성을 private에서 public으로 변경합니다.
+
+```shell
+curl -X GET \
+  http://platform.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-type: application/json' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -d '{
+      "id":"{ID}",
+      "action":"UPDATE",
+      "packageVisibility":"PUBLIC"
+  }'
+```
+
+| 속성 | 설명 | 유형 | 필수 여부 |
+| --- | --- | --- | --- |
+| `id` | 업데이트할 패키지의 ID입니다. | 문자열 | 예 |
+| `action` | 공개 수준을 업데이트하려면 작업 값이 **UPDATE**&#x200B;여야 합니다. | 문자열 | 예 |
+| `packageVisbility` | 가시성을 업데이트하려면 packageVisibility 값이 **PUBLIC**&#x200B;이어야 합니다. | 문자열 | 예 |
+
+**응답**
+
+성공적인 응답은 패키지에 대한 세부 정보와 해당 가시성을 반환합니다.
+
+```json
+{
+    "id": "{ID}",
+    "version": 7,
+    "createdDate": 1729624618000,
+    "modifiedDate": 1729658596340,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "name": "acme",
+    "imsOrgId": "{ORG_ID}",
+    "packageType": "PARTIAL",
+    "expiry": 1737434596325,
+    "status": "PUBLISH_FAILED",
+    "packageVisibility": "PUBLIC",
+    "artifactsList": [
+        {
+            "id": "{ID}",
+            "type": "PROFILE_SEGMENT",
+            "found": false,
+            "count": 0,
+            "title": "Acme Profile Segment"
+        }
+    ],
+    "schemaMapping": {},
+    "sourceSandbox": {
+        "name": "acme-sandbox",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    }
+}
+```
+
+### 공개 패키지 가져오기 요청 {#pull-public-package}
+
+`/transfer/pullRequest` 끝점에 대한 POST 요청을 수행하여 공개 가능한 원본 조직에서 패키지를 가져옵니다.
+
+**API 형식**
+
+```http
+POST /transfer/pullRequest
+```
+
+**요청**
+
+다음 요청은 패키지를 가져오고 해당 가용성을 public으로 설정합니다.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/exim/transfer/pullRequest \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "imsOrgId": "{ORG_ID}",
+      "packageId": "{PACKAGE_ID}"
+  }'
+```
+
+| 속성 | 설명 | 유형 | 필수 여부 |
+| --- | --- | --- | --- |
+| `imsOrgId` | 패키지의 소스 조직 ID입니다. | 문자열 | 예 |
+| `packageId` | 가져올 패키지의 ID입니다. | 문자열 | 예 |
+
+**응답**
+
+성공한 응답은 가져온 공개 패키지에 대한 세부 정보를 반환합니다.
+
+```json
+{
+    "id": "{ID}",
+    "version": 0,
+    "createdDate": 1729658890425,
+    "modifiedDate": 1729658890425,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "sourceIMSOrgId": "{ORG_ID}",
+    "targetIMSOrgId": "{TARGET_ID}",
+    "packageId": "{PACKAGE_ID}",
+    "status": "PENDING",
+    "initiatedBy": "{INITIATED_BY}",
+    "pipelineMessageId": "{MESSAGE_ID}",
+    "requestType": "PUBLIC"
+}
+```
+
+### 공개 패키지 나열 {#list-public-packages}
+
+`/transfer/list?{QUERY_PARAMS}` 끝점에 대한 GET 요청을 만들어 공개 가능한 패키지 목록을 가져옵니다.
+
+**API 형식**
+
+```http
+GET /transfer/list?{QUERY_PARAMS}
+```
+
+| 매개변수 | 수락됨/기본값 |
+| --- | --- |
+| `property` | 상태 등 필터링 기준으로 사용할 속성을 지정합니다. 상태에 사용할 수 있는 값은 `COMPLETED` 및 `FAILED`입니다. |
+| `start` | 시작의 기본값은 `0`입니다. |
+| `limit` | 제한의 기본값은 `20`입니다. |
+| `orderBy` | 순서 지정은 `createdDate` 필드만 허용합니다. |
+| `requestType` | `PUBLIC` 또는 `PRIVATE`을(를) 허용합니다. |
+
+**요청**
+
+다음 요청은 공개 가용성이 있는 패키지 목록을 가져옵니다.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC&orderby=-createdDate \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+```
+
+**응답**
+
+성공적인 응답은 공개 패키지 목록과 세부 정보를 반환합니다.
+
++++응답 보기
+
+```json
+{
+    "totalElements": 14,
+    "currentPage": 0,
+    "totalPages": 1,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "data": [
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_ORG}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public package demo",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729359318000,
+            "createdDate": 1729359316000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public package demo",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729359284000,
+            "createdDate": 1729359283000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Test Private Flow Final",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284462000,
+            "createdDate": 1729275962000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOUCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Fest",
+            "status": "FAILED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284104000,
+            "createdDate": 1729253854000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "PublicPackageSharing",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284835000,
+            "createdDate": 1729253556000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "PublicPackageSharing",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284835000,
+            "createdDate": 1729253556000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "PublicPackageSharing",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284835000,
+            "createdDate": 1729253556000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package Audit Test",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284667000,
+            "createdDate": 1729253421000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package Audit Test",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284957000,
+            "createdDate": 1729253143000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package Audit Test",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284562000,
+            "createdDate": 1729252975000,
+            "requestType": "PUBLIC"
+        },
+        {
+               "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Private Package Test 1",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284262000,
+            "createdDate": 1729229755000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Demo Package 1016",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284784000,
+            "createdDate": 1729208888000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package test 1",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284934000,
+            "createdDate": 1729153097000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package test 1",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284912000,
+            "createdDate": 1729153043000,
+            "requestType": "PUBLIC"
+        }
+    ],
+    "nextPage": null,
+    "pageSize": null
+}
+```
+
++++
+
+## 패키지 페이로드 복사(#package-payload)
+
+요청 경로에 패키지의 해당 ID를 포함하는 `/packages/payload` 끝점에 GET 요청을 만들어 공개 패키지의 페이로드를 복사할 수 있습니다.
+
+**API 형식**
+
+```http
+GET /packages/payload/{PACKAGE_ID}
+```
+
+| 매개변수 | 설명 |
+| --- | --- |
+| `{PACKAGE_ID}` | 복사할 패키지의 ID입니다. |
+
+**요청**
+
+다음 요청은 ID가 {PACKAGE_ID}인 패키지의 페이로드를 가져옵니다.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/packages/payload/{PACKAGE_ID} \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "imsOrgId": "{ORG_ID}",
+      "packageId": "{PACKAGE_ID}"
+  }'
+```
+
+| 속성 | 설명 | 유형 | 필수 여부 |
+| --- | --- | --- | --- |
+| `imsOrdId` | 패키지가 속한 조직의 ID입니다. | 문자열 | 예 |
+| `packageId` | 요청하는 페이로드의 패키지 ID입니다. | 문자열 | 예 |
+
+**응답**
+
+성공적인 응답은 패키지의 페이로드를 반환합니다.
+
+```json
+{
+    "imsOrgId": "{ORG_ID}",
+    "packageId": "{PACKAGE_ID}"
 }
 ```
