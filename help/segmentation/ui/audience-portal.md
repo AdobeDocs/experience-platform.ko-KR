@@ -2,9 +2,9 @@
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
+source-git-commit: 0378cc313445ff22d1d2d003c9ae248d791b3707
 workflow-type: tm+mt
-source-wordcount: '4320'
+source-wordcount: '4530'
 ht-degree: 4%
 
 ---
@@ -208,22 +208,47 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 ![대상 검색 페이지에 사용 가능한 필터가 표시되고 강조 표시됩니다.](../images/ui/audience-portal/filter-audiences.png)
 
-#### 일괄 액션 {#bulk-actions}
+### 일괄 액션 {#bulk-actions}
 
->[!CONTEXTUALHELP]
->id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="유연한 대상자 평가 제한"
->abstract="유연한 대상자 평가를 한 번 실행하여 최대 20개의 대상자를 평가할 수 있습니다.<br/><br/>또한, 평가 작업은 가능한 한 빨리 실행되지만 온디맨드 평가는 다른 온디맨드 또는 일괄 평가와 동시에 실행할 수 <b>없기</b> 때문에 시스템 지연이 발생할 수 있습니다."
+또한 최대 25개의 서로 다른 대상을 선택하고 이러한 대상에 대해 다양한 작업을 수행할 수 있습니다. 이러한 작업에는 [폴더로 이동](#folders), [태그 편집 또는 적용](#tags), [대상 평가](#flexible-audience-evaluation), [액세스 레이블 적용](../../access-control/abac/ui/labels.md) 및 [삭제](#browse)가 포함됩니다.
 
-또한 최대 25개의 서로 다른 대상을 선택하고 이러한 대상에 대해 다양한 작업을 수행할 수 있습니다. 이러한 작업에는 [폴더로 이동](#folders), [태그 편집 또는 적용](#tags), [액세스 레이블 적용](../../access-control/abac/ui/labels.md) 및 [삭제](#browse)이 포함됩니다.
+![일괄 작업에 사용 가능한 옵션이 표시됩니다.](../images/ui/audience-portal/bulk-actions.png)
 
-![일괄 작업에 사용 가능한 옵션이 강조 표시됩니다.](../images/ui/audience-portal/bulk-actions.png)
-
-이러한 대상자에게 일괄 작업을 적용할 때 다음 조건이 적용됩니다.
+일괄 작업을 대상에 적용할 때 다음 조건이 적용됩니다.
 
 - 다른 페이지에서 대상을 **선택할 수**&#x200B;있습니다.
 - 대상 활성화에서 사용 중인 대상을 **삭제할 수 없습니다**.
 - 필터를 선택하면 선택한 대상이 **원래대로**&#x200B;됩니다.
+
+#### [!BADGE 제한된 가용성]{type=Informative} 유연한 대상 평가 {#flexible-audience-evaluation}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="유연한 대상자 평가 제한"
+abstract="유연한 대상자 평가를 한 번 실행하여 최대 20개의 대상자를 평가할 수 있습니다.<br/><br/>또한, 평가 작업은 가능한 한 빨리 실행되지만 온디맨드 평가는 다른 온디맨드 또는 일괄 평가와 동시에 실행할 수 <b>없기</b> 때문에 시스템 지연이 발생할 수 있습니다."
+
+유연한 대상 평가를 통해 필요에 따라 세분화 작업을 실행할 수 있습니다. 평가하려는 대상을 선택하고 **[!UICONTROL 대상 평가]**&#x200B;를 선택합니다.
+
+>[!IMPORTANT]
+>
+유연한 대상 평가를 위해 대상을 선택할 때 다음 조건이 적용됩니다.
+>
+- 모든 대상 **must**&#x200B;에 &quot;세분화 서비스&quot; 원본이 있습니다.
+- 모든 대상 **must**&#x200B;은(는) 일괄 처리 세분화를 사용하여 평가됩니다.
+- 모든 대상 **은(는) 사용자 기반 대상이어야 합니다**.
+- 최대 20개의 대상만 선택할 수 있습니다.
+
+![유연한 대상 평가를 사용할 대상을 선택했습니다.](../images/ui/audience-portal/evaluate-audiences.png)
+
+**[!UICONTROL 요청 시 대상 평가]** 팝오버가 표시되어 요청 시 세그먼트 작업으로 평가할 대상 목록을 표시합니다. 대상자가 요청 시 평가를 받을 수 없는 경우 평가 작업에서 자동으로 제거됩니다. 나열된 대상이 평가하려는 대상인지 확인합니다.
+
+![유연한 대상 평가를 사용하여 평가할 수 있는 대상이 표시됩니다.](../images/ui/audience-portal/evaluate-audiences-modal.png)
+
+올바른 대상이 나열되는지 확인한 후 요청을 계속 진행하면 유연한 대상 평가가 시작됩니다.
+
+>[!NOTE]
+>
+[세그먼트 평가 후](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)에 이미 활성화되도록 설정된 대상에 대해 유연한 대상 평가를 실행하면 이전의 모든 일일 활성화 작업에 관계없이 유연한 대상 평가 작업이 완료되는 즉시 대상이 활성화됩니다.
 
 ## 대상자 세부 정보 {#audience-details}
 
@@ -279,7 +304,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 >[!NOTE]
 >
->내보내기 작업이 완료된 후 대상 총 개수를 업데이트하는 데 최대 30분이 걸릴 수 있습니다.
+내보내기 작업이 완료된 후 대상 총 개수를 업데이트하는 데 최대 30분이 걸릴 수 있습니다.
 
 예상 값은 해당 날짜의 샘플 데이터의 샘플 크기를 사용하여 생성됩니다. 프로필 스토어에 엔티티가 100만 개 미만인 경우 전체 데이터 세트가 사용됩니다. 엔티티가 1~2천만 개인 경우 100만 엔티티가 사용되며, 엔티티가 2,000만 개를 초과하는 경우 전체 엔티티의 5%가 사용됩니다. 예상 값 생성에 대한 자세한 내용은 대상 만들기 자습서의 [예상 값 생성 섹션](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)에서 확인할 수 있습니다.
 
@@ -289,7 +314,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 >[!NOTE]
 >
->대상자의 프로필 카운트가 완전히 업데이트되려면 내보내기 작업 후 최대 30분이 걸릴 수 있습니다.
+대상자의 프로필 카운트가 완전히 업데이트되려면 내보내기 작업 후 최대 30분이 걸릴 수 있습니다.
 
 ![대상자 세부 정보 페이지에 대한 수집 세부 정보 섹션이 표시됩니다.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
@@ -307,7 +332,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 >[!NOTE]
 >
->데이터 사용 레이블을 스키마에 적용하는 것이 좋습니다. 대상자에 데이터 사용 레이블을 직접 적용할 수 **없습니다**.
+데이터 사용 레이블을 스키마에 적용하는 것이 좋습니다. 대상자에 데이터 사용 레이블을 직접 적용할 수 **없습니다**.
 
 ### 활성화된 대상 {#activated-destinations}
 
@@ -315,7 +340,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 >[!NOTE]
 >
-> 대상은 [!DNL Adobe Real-Time Customer Data Platform]에서 사용할 수 있는 기능이며 외부 플랫폼으로 데이터를 내보낼 수 있습니다. 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오. 대상에 대한 세그먼트를 활성화하는 방법에 대해 알아보려면 [활성화 개요](../../destinations/ui/activation-overview.md)를 참조하세요.
+대상은 [!DNL Adobe Real-Time Customer Data Platform]에서 사용할 수 있는 기능이며 외부 플랫폼으로 데이터를 내보낼 수 있습니다. 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오. 대상에 대한 세그먼트를 활성화하는 방법에 대해 알아보려면 [활성화 개요](../../destinations/ui/activation-overview.md)를 참조하세요.
 
 ### 프로필 샘플 {#profile-samples}
 
@@ -341,10 +366,10 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 
 ## 예약된 세분화 {#scheduled-segmentation}
 
->[!CONTEXTUALHELP]
->id="platform_segments_browse_addallsegmentstoschedule"
->title="예약에 모든 대상자 추가"
->abstract="활성화하여 매일 예약된 업데이트에서 배치 세분화를 사용하여 평가된 모든 대상자를 포함합니다. 비활성화하여 예약된 업데이트에서 모든 대상자를 제거합니다."
+[!CONTEXTUALHELP]
+id="platform_segments_browse_addallsegmentstoschedule"
+title="예약에 모든 대상자 추가"
+abstract="활성화하여 매일 예약된 업데이트에서 배치 세분화를 사용하여 평가된 모든 대상자를 포함합니다. 비활성화하여 예약된 업데이트에서 모든 대상자를 제거합니다."
 
 대상자가 만들어지면 온디맨드 또는 예약된(연속) 평가를 통해 대상자를 평가할 수 있습니다. 평가는 해당 대상을 만들기 위해 세그먼트 작업을 통해 [!DNL Real-Time Customer Profile] 데이터를 이동하는 것을 의미합니다. 대상자가 만들어지면 [!DNL Experience Platform] API를 사용하여 내보낼 수 있도록 대상자가 저장되고 저장됩니다.
 
@@ -356,7 +381,7 @@ UI 또는 API를 사용하여 예약된 평가에 대해 대상을 활성화할 
 
 >[!NOTE]
 >
->[!DNL XDM Individual Profile]에 대해 최대 5개의 병합 정책으로 샌드박스에 대해 예약된 평가를 사용할 수 있습니다. 조직에서 단일 샌드박스 환경 내에 [!DNL XDM Individual Profile]에 대해 5개 이상의 병합 정책을 사용하는 경우 예약된 평가를 사용할 수 없습니다.
+[!DNL XDM Individual Profile]에 대해 최대 5개의 병합 정책으로 샌드박스에 대해 예약된 평가를 사용할 수 있습니다. 조직에서 단일 샌드박스 환경 내에 [!DNL XDM Individual Profile]에 대해 5개 이상의 병합 정책을 사용하는 경우 예약된 평가를 사용할 수 없습니다.
 
 현재 API를 통해서만 일정을 만들 수 있습니다. API를 사용하여 일정을 만들고, 편집하고, 작업하는 자세한 단계는 세분화 결과를 평가하고 액세스하는 튜토리얼, 특히 API를 사용하여 [예약된 평가에 대한 섹션](../tutorials/evaluate-a-segment.md#scheduled-evaluation)을(를) 따르십시오.
 
@@ -370,7 +395,7 @@ UI 또는 API를 사용하여 예약된 평가에 대해 대상을 활성화할 
 
 대상자를 작성할지 규칙을 작성할지 선택할 수 있는 팝오버가 표시됩니다.
 
-![만들 수 있는 두 가지 유형의 대상을 표시하는 팝오버입니다.](../images/ui/audience-portal/create-audience-type.png)
+![두 형식을 표시하는 팝오버 of 만들 수 있는 대상자입니다.](../images/ui/audience-portal/create-audience-type.png)
 
 ### 대상자 구성 {#audience-composition}
 
@@ -394,7 +419,7 @@ UI 또는 API를 사용하여 예약된 평가에 대해 대상을 활성화할 
 
 >[!IMPORTANT]
 >
->외부에서 생성된 대상자를 가져오려면 **사용자에게 다음 권한이 있어야**&#x200B;합니다. [!UICONTROL 세그먼트 보기], [!UICONTROL 세그먼트 관리] 및 [!UICONTROL 대상자 가져오기]. 이러한 권한에 대한 자세한 내용은 [액세스 제어 개요](../../access-control/home.md#permissions)를 참조하십시오.
+외부에서 생성된 대상자를 가져오려면 **사용자에게 다음 권한이 있어야**&#x200B;합니다. [!UICONTROL 세그먼트 보기], [!UICONTROL 세그먼트 관리] 및 [!UICONTROL 대상자 가져오기]. 이러한 권한에 대한 자세한 내용은 [액세스 제어 개요](../../access-control/home.md#permissions)를 참조하십시오.
 
 **[!UICONTROL 대상자 가져오기]**&#x200B;를 선택하여 외부에서 생성된 대상자를 가져올 수 있습니다.
 
@@ -406,11 +431,11 @@ UI 또는 API를 사용하여 예약된 평가에 대해 대상을 활성화할 
 
 >[!NOTE]
 >
->외부 생성 대상 **은(는) CSV 형식이어야 하며**&#x200B;최대 **이(가) 25열이며 1GB 미만입니다.**
+외부 생성 대상 **은(는) CSV 형식이어야 하며**&#x200B;최대 **이(가) 25열이며 1GB 미만입니다.**
 >
->또한 **첫 행이나 CSV의 관련 열에 공백이나 대시를 사용할 수**&#x200B;없습니다.
+또한 **첫 행이나 CSV의 관련 열에 공백이나 대시를 사용할 수**&#x200B;없습니다.
 >
->예를 들어 첫 번째 행의 값은 &quot;FirstName&quot; 또는 &quot;First_Name&quot;일 수 있지만 &quot;First Name&quot; 또는 &quot;First-Name&quot;일 수 없습니다.
+예를 들어 첫 번째 행의 값은 &quot;FirstName&quot; 또는 &quot;First_Name&quot;일 수 있지만 &quot;First Name&quot; 또는 &quot;First-Name&quot;일 수 없습니다.
 
 가져올 CSV 파일을 선택하면 이 외부에서 생성된 대상자에 대한 샘플 데이터 목록이 표시됩니다. 샘플 데이터가 올바른지 확인한 후 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 
@@ -426,10 +451,10 @@ ID를 제공하거나 병합 정책을 정의하거나 열 데이터 유형을 �
 
 >[!NOTE]
 >
->사용자 지정 외부 대상 ID를 사용하는 경우 다음 지침을 준수해야 합니다.
+사용자 지정 외부 대상 ID를 사용하는 경우 다음 지침을 준수해야 합니다.
 >
-> - **must**&#x200B;은(는) 문자(a-z 또는 A-Z), 밑줄(_) 또는 달러 기호($)로 시작합니다.
-> - 모든 후속 문자는 영숫자(a-z, A-Z, 0-9), 밑줄(_) 또는 달러 기호($)일 수 있습니다.
+- **must**&#x200B;은(는) 문자(a-z 또는 A-Z), 밑줄(_) 또는 달러 기호($)로 시작합니다.
+- 모든 후속 문자는 영숫자(a-z, A-Z, 0-9), 밑줄(_) 또는 달러 기호($)일 수 있습니다.
 
 대상자 세부 정보를 입력한 후 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
 
@@ -443,11 +468,11 @@ ID를 제공하거나 병합 정책을 정의하거나 열 데이터 유형을 �
 
 >[!IMPORTANT]
 >
->기본적으로 외부에서 생성된 대상에는 30일의 데이터 만료가 있습니다. 대상이 어떤 식으로든 업데이트되거나 수정되면 데이터 만료가 재설정됩니다.
+기본적으로 외부에서 생성된 대상에는 30일의 데이터 만료가 있습니다. 대상이 어떤 식으로든 업데이트되거나 수정되면 데이터 만료가 재설정됩니다.
 >
->또한 외부에서 생성된 대상자에 중요한 정보 및/또는 의료 관련 정보가 포함되어 있는 경우 **반드시**&#x200B;필요한 데이터 사용 레이블을 적용한 후에 대상에 활성화해야 합니다. 외부에서 생성된 대상의 변수는 실시간 고객 프로필 내부가 아닌 데이터 레이크에 저장되므로 CSV 파일 내에 동의 데이터를 **포함하지 않음**&#x200B;해야 합니다.
+또한 외부에서 생성된 대상자에 중요한 정보 및/또는 의료 관련 정보가 포함되어 있는 경우 **반드시**&#x200B;필요한 데이터 사용 레이블을 적용한 후에 대상에 활성화해야 합니다. 외부에서 생성된 대상의 변수는 실시간 고객 프로필 내부가 아닌 데이터 레이크에 저장되므로 CSV 파일 내에 동의 데이터를 **포함하지 않음**&#x200B;해야 합니다.
 >
->데이터 사용 레이블 적용에 대한 자세한 내용은 [레이블 관리](../../access-control/abac/ui/labels.md)에 대한 설명서를 참조하십시오. 일반적으로 플랫폼의 데이터 사용 레이블에 대해 알아보려면 [데이터 사용 레이블 개요](../../data-governance/labels/overview.md)를 읽어 보십시오. 외부에서 생성된 대상자에서 동의가 작동하는 방식에 대한 자세한 내용은 [대상자 FAQ](../faq.md#consent)를 참조하십시오.
+데이터 사용 레이블 적용에 대한 자세한 내용은 [레이블 관리](../../access-control/abac/ui/labels.md)에 대한 설명서를 참조하십시오. 일반적으로 플랫폼의 데이터 사용 레이블에 대해 알아보려면 [데이터 사용 레이블 개요](../../data-governance/labels/overview.md)를 읽어 보십시오. 외부에서 생성된 대상자에서 동의가 작동하는 방식에 대한 자세한 내용은 [대상자 FAQ](../faq.md#consent)를 참조하십시오.
 
 ## 다음 단계
 
