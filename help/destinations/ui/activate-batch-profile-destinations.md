@@ -3,9 +3,9 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
 workflow-type: tm+mt
-source-wordcount: '4095'
+source-wordcount: '4151'
 ht-degree: 11%
 
 ---
@@ -133,11 +133,11 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
 2. **[!UICONTROL 시간]** 토글을 사용하여 대상 평가 직후에 내보내기를 수행할지 또는 지정된 시간에 예약된 일정에 따라 내보내기를 수행할지 여부를 선택합니다. **[!UICONTROL 예약됨]** 옵션을 선택할 때 선택기를 사용하여 내보내기를 수행할 시간을 [!DNL UTC] 형식으로 선택할 수 있습니다.
 
-   >[!NOTE]
-   >
-   >아래 설명된 **[!UICONTROL 세그먼트 평가 후]** 옵션은 Beta 고객을 선택하는 경우에만 사용할 수 있습니다.
+   **[!UICONTROL 세그먼트 평가 후]** 옵션을 사용하여 일일 플랫폼 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행합니다. 이 옵션을 사용하면 활성화 작업이 실행될 때 최신 프로필을 대상으로 내보냅니다. 이로 인해 작업에 따라 대상을 하루에 여러 번 내보낼 수 있습니다.
 
-   **[!UICONTROL 세그먼트 평가 후]** 옵션을 사용하여 일일 플랫폼 일괄 처리 세분화 작업이 완료된 후 즉시 활성화 작업을 실행합니다. 이 옵션을 사용하면 활성화 작업이 실행될 때 최신 프로필을 대상으로 내보냅니다.
+   >[!IMPORTANT]
+   >
+   >세그먼트 평가 후 이미 활성화되도록 설정된 대상에 대해 [유연한 대상 평가](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation)를 실행하면 이전의 모든 일일 활성화 작업에 관계없이 유연한 대상 평가 작업이 완료되는 즉시 대상이 활성화됩니다. 이로 인해 사용자의 작업에 따라 하루에 여러 번 대상을 내보낼 수 있습니다.
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
