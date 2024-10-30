@@ -5,10 +5,10 @@ breadcrumb-title: 대시보드 안내서
 user-guide-description: 맞춤화가 가능한 대시보드를 통해 Experience Platform에서 데이터를 시각화하는 방법을 알아봅니다.
 feature: Dashboards
 role: Developer,User
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cb3cc06a31c0390d9b1f152c2186da3847647f64
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 35%
+source-wordcount: '142'
+ht-degree: 41%
 
 ---
 
@@ -22,6 +22,12 @@ ht-degree: 35%
 * [대시보드를 다운로드하여 PDF](download.md)
 * SQL Insights: 쿼리 pro 모드 {#sql-insights-query-pro-mode}
    * [개요](sql-insights-query-pro-mode/overview.md)
+   * 데이터 Distiller 템플릿 {#templates}
+      * [개요](sql-insights-query-pro-mode/templates/overview.md)
+      * [고급 대상자 오버랩](sql-insights-query-pro-mode/templates/overlaps.md)
+      * [대상자 비교](sql-insights-query-pro-mode/templates/comparison.md)
+      * [대상자 추세](sql-insights-query-pro-mode/templates/trends.md)
+      * [대상자 ID 중복](sql-insights-query-pro-mode/templates/identity-overlaps.md)
    * 필터 {#filters}
       * [날짜 필터](sql-insights-query-pro-mode/filters/date-filter.md)
       * [전역 필터](sql-insights-query-pro-mode/filters/global-filter.md)
@@ -51,7 +57,7 @@ ht-degree: 35%
 * 인사이트 사용 사례 {#insights-use-cases}
    * [동의 분석](insights-use-cases/consent-analysis.md)
 * 사용 가능한 데이터 모델 {#data-models}
-   * [Real-time Customer Data Platform Insights 데이터 모델 B2B 에디션](data-models/cdp-insights-data-model-b2b.md)
+   * [Real-time Customer Data Platform Insights 데이터 모델 B2B edition](data-models/cdp-insights-data-model-b2b.md)
    * [Real-time Customer Data Platform Insights 데이터 모델 B2C 에디션](data-models/cdp-insights-data-model-b2c.md)
 * 응용 프로그램 통합 {#integrations}
    * [Power BI](integrations/power-bi.md)

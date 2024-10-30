@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 노트 2024년 10월
 description: Adobe Experience Platform의 2024년 10월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a381bdc45ee9c3c7ffb32bb7a7ec43a1233d1556
+source-git-commit: 5fc786058a187b161a147a8bd361d19c5f35105d
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 40%
+source-wordcount: '1159'
+ht-degree: 34%
 
 ---
 
@@ -15,29 +15,30 @@ ht-degree: 40%
 
 Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 
-- [데이터 수집](#data-collection)
-- [대상](#destinations)
-- [Segmentation Service](#segmentation-service)
-- [샌드박스](#sandboxes)
-- [소스](#sources)
+- [대시보드 {#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
+- [데이터 수집 {#collection}](#data-collection-collection)
+- [대상 {#destinations}](#destinations-destinations)
+- [세분화 서비스 {#segmentation-service}](#segmentation-service-segmentation-service)
+- [샌드박스 {#sandboxes}](#sandboxes-sandboxes)
+- [소스 {#sources}](#sources-sources)
 
-<!-- ## Dashboards {#dashboards}
+## 대시보드 {#dashboards}
 
-Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
+Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대한 중요한 인사이트를 볼 수 있는 여러 대시보드를 제공합니다.
 
-**New or updated features**
+**새로운 기능 또는 업데이트된 기능**
 
-| Feature | Description |
+| 기능 | 설명 |
 | --- | --- |
-| Data Distiller Templates | Explore multiple templates to gain structured insights into audience data. Use dashboards like **Advanced [!UICONTROL Audience Overlaps]**, **[!UICONTROL Audience Comparison]**, **[!UICONTROL Audience Trends]**, and **[!UICONTROL Audience Identity Overlaps]** to make data-driven decisions, optimize segmentation, and enhance engagement strategies. See the [Data Distiller Templates guide](../../dashboards/sql-insights-query-pro-mode/templates/overview.md) for more details. |
-| Advanced Audience Overlaps | Quickly analyze audience intersections for specific audiences or view all overlaps to uncover valuable insights across your entire audience set. Use these insights to refine segmentation, reduce redundant messaging, and create more targeted campaigns for improved marketing efficiency. See the [Advanced Audience Overlaps guide](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md) for more details. |
-| Audience Comparison enhancements | View a side-by-side comparison of key metrics between different audience groups using the **Audience Comparison** dashboard. With this dashboard you can select specific time frames and KPIs, such as audience size and identity composition, to make more informed decisions about audience segmentation and targeting strategies. Read the [Audience Comparison guide](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md) for more information. |
-| Audience Trends Visualization | Analyze audience metrics over time with the **[!UICONTROL Audience Trends]** dashboard. Visualize trends for audience size, number of identities, and number of single identity profiles to help you monitor audience evolution, measure growth, and refine your engagement strategies. See the [Audience Trends guide](../../dashboards/sql-insights-query-pro-mode/templates/trends.md) for more details. |
-| Identity Overlaps Analysis | Analyze identity overlaps in selected audiences with the **[!UICONTROL Audience Identity Overlaps]** dashboard. View identity trends and breakdowns to understand how different identity types relate within your audience, enhancing identity stitching and improving customer segmentation accuracy. Refer to the [Audience Identity Overlaps guide](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md) for more details. |
+| 데이터 Distiller 템플릿 | 여러 템플릿을 탐색하여 대상 데이터에 대한 구조화된 통찰력을 얻을 수 있습니다. **고급 [!UICONTROL 대상 중복]**, **[!UICONTROL 대상 비교]**, **[!UICONTROL 대상 트렌드]** 및 **[!UICONTROL 대상 ID 중복]**&#x200B;과 같은 대시보드를 사용하여 데이터 기반 결정을 내리고, 세그먼테이션을 최적화하고, 참여 전략을 향상시킵니다. 자세한 내용은 [데이터 Distiller 템플릿 안내서](../../dashboards/sql-insights-query-pro-mode/templates/overview.md)를 참조하세요. |
+| 고급 대상자 오버랩 | 특정 대상에 대한 대상 교차를 빠르게 분석하거나 모든 중복을 확인하여 전체 대상 세트에서 귀중한 통찰력을 찾아냅니다. 이러한 통찰력을 사용하여 세그먼테이션을 세분화하고, 중복 메시지를 줄이고, 더 많은 타겟팅 캠페인을 만들어 마케팅 효율성을 높일 수 있습니다. 자세한 내용은 [고급 대상 중복 가이드](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)를 참조하십시오. |
+| 대상 비교 개선 사항 | **대상 비교** 대시보드를 사용하여 서로 다른 대상 그룹 간의 주요 지표를 나란히 비교합니다. 이 대시보드를 사용하여 대상 크기 및 ID 구성과 같은 특정 시간대 및 KPI를 선택하여 대상 세분화 및 타기팅 전략에 대해 보다 현명한 결정을 내릴 수 있습니다. 자세한 내용은 [대상 비교 안내서](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)를 참조하십시오. |
+| 대상 트렌드 시각화 | **[!UICONTROL 대상 트렌드]** 대시보드를 사용하여 시간에 따른 대상 지표를 분석합니다. 대상 크기, ID 수 및 단일 ID 프로필 수에 대한 트렌드를 시각화하여 대상 진화를 모니터링하고, 성장을 측정하고, 참여 전략을 구체화하는 데 도움이 됩니다. 자세한 내용은 [대상 트렌드 가이드](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)를 참조하세요. |
+| ID 중복 분석 | 선택한 대상에서 ID가 **[!UICONTROL 대상 ID 중복]** 대시보드와 겹치도록 분석합니다. ID 트렌드 및 분류를 보고 다양한 ID 유형이 대상 내에서 어떻게 관련되는지 이해함으로써 ID 결합을 향상시키고 고객 세그멘테이션의 정확도를 향상시킵니다. 자세한 내용은 [대상 ID 중복 가이드](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
-For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md). -->
+액세스 권한을 부여하고 사용자 정의 위젯을 만드는 방법을 포함해 대시보드에 대한 자세한 내용은 [대시보드 개요](../../dashboards/home.md)를 읽어 보십시오.
 
 ## 데이터 수집 {#collection}
 
