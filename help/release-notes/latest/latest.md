@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2024년 10월
 description: Adobe Experience Platform의 2024년 10월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5fc786058a187b161a147a8bd361d19c5f35105d
+source-git-commit: f30a124a40928abf69366d311131e353c2779191
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 34%
@@ -15,12 +15,12 @@ ht-degree: 34%
 
 Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 
-- [대시보드 {#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
-- [데이터 수집 {#collection}](#data-collection-collection)
-- [대상 {#destinations}](#destinations-destinations)
-- [세분화 서비스 {#segmentation-service}](#segmentation-service-segmentation-service)
-- [샌드박스 {#sandboxes}](#sandboxes-sandboxes)
-- [소스 {#sources}](#sources-sources)
+- [대시보드](#dashboards)
+- [데이터 수집](#data-collection-)
+- [대상](#destinations)
+- [Segmentation Service](#segmentation-service)
+- [샌드박스](#sandboxes)
+- [소스](#sources)
 
 ## 대시보드 {#dashboards}
 
@@ -40,7 +40,7 @@ Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대
 
 액세스 권한을 부여하고 사용자 정의 위젯을 만드는 방법을 포함해 대시보드에 대한 자세한 내용은 [대시보드 개요](../../dashboards/home.md)를 읽어 보십시오.
 
-## 데이터 수집 {#collection}
+## 데이터 수집 {#data-collection}
 
 Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수집하여 Adobe 또는 비 Adobe 대상으로 보강, 변환 및 배포가 가능한 Experience Platform Edge Network로 보낼 수 있는 기술 제품군을 제공합니다.
 

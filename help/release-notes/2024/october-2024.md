@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2024년 10월
 description: Adobe Experience Platform의 2024년 10월 릴리스 정보.
-source-git-commit: 5fc786058a187b161a147a8bd361d19c5f35105d
+source-git-commit: f30a124a40928abf69366d311131e353c2779191
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 34%
@@ -14,12 +14,12 @@ ht-degree: 34%
 
 Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 
-- [대시보드 {#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
-- [데이터 수집 {#collection}](#data-collection-collection)
-- [대상 {#destinations}](#destinations-destinations)
-- [세분화 서비스 {#segmentation-service}](#segmentation-service-segmentation-service)
-- [샌드박스 {#sandboxes}](#sandboxes-sandboxes)
-- [소스 {#sources}](#sources-sources)
+- [대시보드](#dashboards)
+- [데이터 수집](#data-collection-)
+- [대상](#destinations)
+- [Segmentation Service](#segmentation-service)
+- [샌드박스](#sandboxes)
+- [소스](#sources)
 
 ## 대시보드 {#dashboards}
 
