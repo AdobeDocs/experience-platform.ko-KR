@@ -2,10 +2,10 @@
 title: 확장 개발 시작
 description: Adobe Experience Platform에서 나만의 태그 확장 개발을 시작하십시오.
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 077d3ac5a34f052ef6293927d67e3cc8afb27563
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 71%
+source-wordcount: '510'
+ht-degree: 68%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
 
 확장을 시작하고 실행 및 빌드하기 위해 Adobe 엔지니어가 제공하는 오픈 소스 스캐폴딩 도구를 사용하여 확장 패키지에 필요한 파일 및 파일 구조를 만들 예정이므로 실제 코드 작성만 하면 됩니다.
 
@@ -40,9 +40,13 @@ npx @adobe/reactor-scaffold
 스캐폴드 툴은 다음과 같이 몇 가지 초기 구성 옵션을 묻습니다.
 
 * 표시 이름 - 표시되는 확장 이름
+* 플랫폼 - 확장을 웹, 모바일 또는 에지용으로 개발할지 여부를 지정합니다.
 * 버전 - 확장 버전
 * 설명 - 확장의 용도에 대한 간략한 설명입니다.
 * 작성자 - 확장 작성자 이름
+
+>[!NOTE]
+> 모바일 확장의 경우 Android 및 iOS 애플리케이션의 구조에 대해 몇 가지 질문이 표시됩니다.
 
 스캐폴드 도구는 확장 구조를 생성하기 위한 옵션을 제공합니다.
 
@@ -52,8 +56,10 @@ npx @adobe/reactor-scaffold
 예를 들어, 사용자의 브라우저가 Chrome이거나, iPad를 사용하고 있거나, 사용자가 특정 도메인에 속해 있는지를 반환할 수 있습니다.
 * [작업 유형](./web/action-types.md): 이벤트가 발생할 때 수행할 작업입니다. 예를 들어, 분석 비콘을 전송하거나, 오퍼를 표시하거나, 쿠키를 저장하거나, 지원 채팅을 여는 작업이 이에 해당합니다.
 * [데이터 요소 유형](./web/data-element-types.md): 데이터 요소 유형은 데이터의 일부를 검색합니다. 이러한 데이터는 로컬 저장소, 쿠키, DOM 요소 또는 사용자 지정 위치에 있을 수 있습니다.
-* [공유 모듈](./web/shared.md): 공유 모듈은 확장이 다른 확장과 통신할 수 있는 메커니즘입니다.
+* [공유 모듈](./web/shared.md)(웹 전용): 공유 모듈은 확장이 다른 확장과 통신할 수 있는 메커니즘입니다.
 * [보기](./web/views.md): 각 이벤트, 조건, 작업 또는 데이터 요소 유형마다 사용자가 설정 가능한 보기를 제공할 수 있습니다.
+* Exchange URL(웹 및 Edge만 해당): 확장이 Adobe의 공개 카탈로그에 게시되는 경우 여기에서 목록 URL을 제공하십시오.
+* 아이콘 경로: 확장에 대한 아이콘 파일의 경로입니다.
 
 >[!NOTE]
 >

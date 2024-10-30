@@ -2,10 +2,10 @@
 title: 확장에 대한 엔드 투 엔드 테스트 업로드 및 구현
 description: Adobe Experience Platform에서 확장을 확인, 업로드 및 테스트하는 방법을 알아봅니다.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
+source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
 workflow-type: tm+mt
-source-wordcount: '2362'
-ht-degree: 23%
+source-wordcount: '2345'
+ht-degree: 22%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 23%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform에서 태그 확장을 테스트하려면 태그 API 및/또는 명령줄 도구를 사용하여 확장 패키지를 업로드합니다. 그런 다음 Platform UI 또는 데이터 수집 UI를 사용하여 확장 패키지를 속성에 설치하고 태그 라이브러리 및 빌드 내에서 해당 기능을 수행합니다.
 
@@ -61,14 +61,16 @@ npx @adobe/reactor-uploader
 
 `npx`을(를) 사용하면 npm 패키지를 컴퓨터에 실제로 설치하지 않고도 다운로드하여 실행할 수 있습니다. 이는 Uploader를 실행하는 가장 간단한 방법입니다.
 
-Uploader에서 몇 가지 정보를 입력해야 합니다. 기술 계정 ID, API 키 및 기타 정보 비트는 Adobe I/O 콘솔에서 검색할 수 있습니다. I/O 콘솔에서 [통합 페이지](https://console.adobe.io/integrations)(으)로 이동합니다. 드롭다운에서 올바른 조직을 선택하고 올바른 통합을 찾은 다음 **[!UICONTROL 보기]**&#x200B;를 선택합니다.
+>[!NOTE]
+> 기본적으로 업로더는 서버 간 Oauth 흐름에 대해 Adobe I/O 자격 증명을 예상합니다. 기존 `jwt-auth` 자격 증명
+> 2025년 1월 1일에 사용이 중단될 때까지 `npx @adobe/reactor-uploader@v5.2.0`을(를) 실행하여 사용할 수 있습니다. 필요한 매개 변수
+> `jwt-auth` 버전을 실행하려면 [여기](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452)에 있습니다.
 
-- 개인 키의 경로가 무엇입니까? /path/to/private.key입니다. 이는 위 2단계에서 개인 키를 저장한 위치입니다.
-- 조직 ID란 무엇입니까? 이전에 열어 둔 I/O 콘솔 개요 페이지에서 이 내용을 복사하여 붙여넣습니다.
-- 기술 계정 ID란 무엇입니까? I/O 콘솔에서 이 파일을 복사하여 붙여넣습니다.
-- API 키란 무엇입니까? I/O 콘솔에서 이 파일을 복사하여 붙여넣습니다.
-- 클라이언트 암호란 무엇입니까? I/O 콘솔에서 이 파일을 복사하여 붙여넣습니다.
-- 업로드할 extension_package의 경로는 무엇입니까? /path/to/extension_package.zip입니다. .zip 패키지가 들어 있는 디렉토리 내에서 업로더를 호출하는 경우 경로를 입력하는 대신 목록에서 선택하기만 하면 됩니다.
+업로더에서는 몇 가지 정보만 입력해야 합니다. Adobe I/O 콘솔에서 `clientId` 및 `clientSecret`을(를) 검색할 수 있습니다. I/O 콘솔에서 [통합 페이지](https://console.adobe.io/integrations)(으)로 이동합니다. 드롭다운에서 올바른 조직을 선택하고 올바른 통합을 찾은 다음 **[!UICONTROL 보기]**&#x200B;를 선택합니다.
+
+- `clientId`은(는) 무엇입니까? I/O 콘솔에서 이 파일을 복사하여 붙여넣습니다.
+- `clientSecret`은(는) 무엇입니까? I/O 콘솔에서 이 파일을 복사하여 붙여넣습니다.
+- .zip 패키지가 들어 있는 디렉토리 내에서 업로더를 호출하는 경우 경로를 입력하는 대신 목록에서 선택하기만 하면 됩니다.
 
 그러면 확장 패키지가 업로드되고 업로더에서 extension_package의 ID를 제공합니다.
 
@@ -79,6 +81,8 @@ Uploader에서 몇 가지 정보를 입력해야 합니다. 기술 계정 ID, AP
 >[!NOTE]
 >
 >업로더를 자주 실행하는 경우에는 이러한 모든 정보를 매번 입력하는 것이 번거로울 수 있습니다. 이러한 매개 변수를 명령줄에서 인수로 전달할 수도 있습니다. 자세한 내용은 NPM 문서의 [명령줄 인수 섹션](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments)을 참조하십시오.
+
+API를 사용하여 확장 업로드를 직접 관리하려면 API 문서에서 확장 패키지를 [만들기](../../api/endpoints/extension-packages.md/#create) 또는 [업데이트](../../api/endpoints/extension-packages.md#update)하는 예제 호출을 참조하십시오.
 
 ## 개발 속성 만들기 {#property}
 
