@@ -2,16 +2,25 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
+source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
 workflow-type: tm+mt
-source-wordcount: '2291'
-ht-degree: 28%
+source-wordcount: '2332'
+ht-degree: 27%
 
 ---
 
 # Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md)를 참조하십시오.
+
+## 버전 2.27.0 - 2024년 10월 31일 금요일
+
+**새로운 기능**
+
+- [데이터스트림 재정의](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides)에 Experience Cloud 솔루션 및 Adobe Experience Platform 서비스를 비활성화하는 설정이 포함됩니다.
+- 이제 미디어 세션에 대해 [데이터 스트림 무시](../web-sdk/web-sdk-extension-configuration.md)를 만들 수 있습니다.
+
+Adobe Experience Platform Web SDK 버전 2.24.0을 포함합니다.
 
 ## 버전 2.26.1 - 2024년 9월 19일
 
