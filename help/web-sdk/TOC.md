@@ -6,7 +6,7 @@ breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
 role: Developer
-source-git-commit: 02ae1fce01895d83d9c68248397e5288613ffe58
+source-git-commit: 7231d3a5ad9553707392c32004d02e355e3c919f
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 23%
@@ -76,7 +76,6 @@ ht-degree: 23%
    * [개인화된 콘텐츠 렌더링](personalization/rendering-personalization-content.md)
    * [하이브리드 구현을 통한 Personalization](personalization/hybrid-personalization.md)
    * [플리커 관리](personalization/manage-flicker.md)
-   * [후크 모니터링](monitoring-hooks.md)
    * Adobe Target {#adobe-target}
       * [개요](personalization/adobe-target/target-overview.md)
       * [단일 페이지 애플리케이션 구현](personalization/adobe-target/spa-implementation.md)
@@ -109,6 +108,6 @@ ht-degree: 23%
    * [디버깅 메서드](use-cases/debugging.md)
    * [여러 웹 SDK 인스턴스 사용](use-cases/multiple-instances.md)
    * [상단 및 하단 페이지 이벤트 구성](use-cases/top-bottom-page-events.md)
-
+* [후크 모니터링](monitoring-hooks.md)
 * [자주 묻는 질문](faq.md)
 * [리소스](resources.md)
