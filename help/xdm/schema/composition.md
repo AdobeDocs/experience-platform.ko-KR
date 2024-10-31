@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 스키마 컴포지션 기본 사항
 description: XDM(Experience Data Model) 스키마와 Adobe Experience Platform에서 스키마를 구성하기 위한 빌딩 블록, 원칙 및 모범 사례에 대해 알아봅니다.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
+source-git-commit: 595d9bd6a0aa0c9f1059e485c54e89ce02b7ec68
 workflow-type: tm+mt
-source-wordcount: '4293'
-ht-degree: 8%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -223,6 +223,10 @@ Experience Platform은 많은 표준 Adobe 필드 그룹을 포함하며 공급�
 
 사용 가능한 표준 XDM 필드 그룹의 최신 목록을 보려면 [공식 XDM 저장소](https://github.com/adobe/xdm/tree/master/components/fieldgroups)를 참조하세요. 또는 UI에서 리소스를 보려면 [XDM 구성 요소 탐색](../ui/explore.md)에 대한 안내서를 참조할 수 있습니다.
 
+>[!NOTE]
+>
+> 표준 XDM 필드 그룹은 항상 진화하고 일부 필드 그룹은 더 이상 사용되지 않습니다. 더 이상 사용되지 않는 필드 그룹의 최신 업데이트 목록은 공식 XDM 저장소의 [더 이상 사용되지 않는 필드 그룹 섹션](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated)을 참조하세요.
+
 ### 데이터 유형 {#data-type}
 
 데이터 형식은 기본 리터럴 필드와 같은 방식으로 클래스나 스키마에서 참조 필드 형식으로 사용됩니다. 중요한 차이점은 데이터 유형이 필드 그룹과 동일한 방식으로 여러 하위 필드를 정의할 수 있다는 것입니다. 두 요소의 주요 차이점은 데이터 유형을 필드의 &quot;데이터 유형&quot;으로 추가하여 스키마의 모든 위치에 포함할 수 있다는 것입니다. 필드 그룹은 특정 클래스와만 호환되지만 데이터 형식은 모든 상위 클래스 또는 필드 그룹에 포함될 수 있습니다.
@@ -238,6 +242,10 @@ Experience Platform은 [!DNL Schema Registry]의 일부로 여러 가지 공통 
 ![전체 이름 개체 및 특성이 강조 표시된 개인을 위한 스키마 편집기의 다이어그램입니다.](../images/schema-composition/data-type.png)
 
 사용 가능한 표준 XDM 데이터 형식의 최신 목록을 보려면 [공식 XDM 저장소](https://github.com/adobe/xdm/tree/master/components/datatypes)를 참조하십시오. 또는 UI에서 리소스를 보려면 [XDM 구성 요소 탐색](../ui/explore.md)에 대한 안내서를 참조할 수 있습니다.
+
+>[!NOTE]
+>
+> 표준 XDM 데이터 유형은 항상 발전하며 일부 데이터 유형은 더 이상 사용되지 않습니다. 더 이상 사용되지 않는 데이터 형식에 대한 최신 업데이트 목록은 공식 XDM 저장소의 [더 이상 사용되지 않는 데이터 형식 섹션](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated)을 참조하세요.
 
 ### 필드 {#field}
 
