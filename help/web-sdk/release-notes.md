@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f31d250cfbe42680ee6f4d1334bf04a2ee8643a1
+source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2042'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 
 - 미디어 세션을 시작할 때 [데이터 스트림 무시](../datastreams/overrides.md)가 지원됩니다.
 
-- 렌더링 성공 모니터링 후크에서 Adobe Target 응답 토큰에 대한 지원이 추가되었습니다.
+- [`onContentRendering`](monitoring-hooks.md#onContentRendering)모니터링 후크에서 Adobe Target 응답 토큰에 대한 지원을 추가했습니다.
 
 **수정 사항 및 개선 사항**
 

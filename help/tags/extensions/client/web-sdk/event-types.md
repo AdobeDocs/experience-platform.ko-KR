@@ -3,9 +3,9 @@ title: Adobe Experience Platform 웹 SDK 확장의 이벤트 유형
 description: Adobe Experience Platform Launch의 Adobe Experience Platform Web SDK 확장에서 제공하는 이벤트 유형을 사용하는 방법에 대해 알아봅니다.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
+source-git-commit: b37bf09e3ec16f29d6acee3bca71463fa2c876ce
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1490'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,34 @@ ht-degree: 0%
 # 이벤트 유형
 
 이 페이지에서는 Adobe Experience Platform Web SDK 태그 확장에서 제공하는 Adobe Experience Platform 이벤트 유형에 대해 설명합니다. [규칙 작성](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=ko-KR)에 사용되며 [`xdm` 개체의 `eventType` 필드와 혼동하면 안 됩니다](/help/web-sdk/commands/sendevent/xdm.md).
+
+## 후크 트리거 모니터링 {#monitoring-hook-triggered}
+
+Adobe Experience Platform Web SDK에는 다양한 시스템 이벤트를 모니터링하는 데 사용할 수 있는 모니터링 후크가 포함되어 있습니다. 이러한 도구는 고유한 디버깅 도구를 개발하고 Web SDK 로그를 캡처하는 데 유용합니다.
+
+각 모니터링 후크 이벤트에 포함된 매개 변수에 대한 자세한 내용은 [Web SDK 모니터링 후크 설명서](../../../../web-sdk/monitoring-hooks.md)를 참조하십시오.
+
+![모니터링 후크 이벤트 유형을 표시하는 사용자 인터페이스 이미지 태그 지정](assets/monitoring-hook-triggered.png)
+
+Web SDK 태그 확장은 다음 모니터링 후크를 지원합니다.
+
+* **[!UICONTROL onInstanceCreated]**: 이 모니터링 후크 이벤트는 새 웹 SDK 인스턴스를 성공적으로 만든 경우 트리거됩니다.
+* **[!UICONTROL onInstanceConfigured]**: 이 모니터링 후크 이벤트는 [`configure`](../../../../web-sdk/commands/configure/overview.md) 명령이 정상적으로 확인될 때 웹 SDK에 의해 트리거됩니다.
+* **[!UICONTROL onBeforeCommand]**: 이 모니터링 후크 이벤트는 다른 명령이 실행되기 전에 Web SDK에 의해 트리거됩니다. 이 모니터링 후크를 사용하여 특정 명령의 구성 옵션을 검색할 수 있습니다.
+* **[!UICONTROL onCommandResolved]**: 이 모니터링 후크 이벤트는 명령 약속을 해결하기 전에 트리거됩니다. 이 함수를 사용하여 명령 옵션과 결과를 확인할 수 있습니다.
+* **[!UICONTROL onCommandRejected]**: 이 모니터링 후크 이벤트는 명령 약속이 거부되고 오류 원인에 대한 정보가 포함되어 있을 때 트리거됩니다.
+* **[!UICONTROL onBeforeNetworkRequest]**: 이 모니터링 후크 이벤트는 네트워크 요청이 실행되기 전에 트리거됩니다.
+* **[!UICONTROL onNetworkResponse]**: 이 모니터링 후크 이벤트는 브라우저가 응답을 받을 때 트리거됩니다.
+* **[!UICONTROL onNetworkError]**: 이 모니터링 후크 이벤트는 네트워크 요청이 실패할 때 트리거됩니다.
+* **[!UICONTROL onBeforeLog]**: 이 모니터링 후크 이벤트는 Web SDK가 콘솔에 모든 항목을 기록하기 전에 트리거됩니다.
+* **[!UICONTROL onContentRendering]**: 이 모니터링 후크 이벤트는 `personalization` 구성 요소에 의해 트리거되며 개인화 콘텐츠의 렌더링을 디버깅하는 데 도움이 됩니다. 이 이벤트는 다음과 같이 다른 상태를 가질 수 있습니다.
+   * `rendering-started`: 웹 SDK에서 제안을 렌더링하려고 함을 나타냅니다. Web SDK에서 결정 범위나 보기를 렌더링하기 전에 `data` 개체에서 `personalization` 구성 요소와 범위 이름으로 렌더링하려는 제안을 볼 수 있습니다.
+   * `no-offers`: 요청된 매개 변수에 대해 페이로드가 수신되지 않았음을 나타냅니다.
+   * `rendering-failed`: 웹 SDK에서 제안을 렌더링하지 못했음을 나타냅니다.
+   * `rendering-succeeded`: 결정 범위에 대한 렌더링이 완료되었음을 나타냅니다.
+   * `rendering-redirect`: 웹 SDK에서 리디렉션 제안을 실행함을 나타냅니다.
+* **[!UICONTROL onContentHiding]**: 이 모니터링 후크 이벤트는 사전 숨김 스타일이 적용되거나 제거될 때 트리거됩니다.
+
 
 ## [!UICONTROL 이벤트 보내기 완료]
 
