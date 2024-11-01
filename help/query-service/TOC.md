@@ -5,9 +5,9 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: 3583f6e0ac72e4f813abd87949cb640d0b20b6e2
+source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '357'
 ht-degree: 22%
 
 ---
@@ -39,6 +39,16 @@ ht-degree: 22%
       - [ML용 엔지니어 기능](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [ML 환경으로 데이터 내보내기](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML 데이터 파이프라인 강화 통합 워크플로](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- 데이터 Distiller 통계 {#advanced-statistics}
+   - [개요](advanced-statistics/overview.md)
+   - [기능 엔지니어링](advanced-statistics/feature-engineering.md)
+   - [모델](advanced-statistics/models.md)
+모델 {#implement-models} 구현
+      - [모델 구현](advanced-statistics/implement-models/implement-models.md)
+      - [회귀](advanced-statistics/implement-models/regression.md)
+      - [분류](advanced-statistics/implement-models/classification.md)
+      - [클러스터링](advanced-statistics/implement-models/clustering.md)
+   - [기능 변환](advanced-statistics/feature-transformation.md)
 - 데이터 Distiller 대상 {#data-distiller-audiences}
    - [SQL을 사용하여 외부 대상 작성](data-distiller-audiences/overview.md)
 - 예 {#use-cases}
