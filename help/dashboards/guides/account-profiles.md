@@ -2,10 +2,10 @@
 title: 계정 프로필 대시보드
 description: Adobe Experience Platform은 조직의 B2B 계정 프로필에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
+source-git-commit: 442fcee17cbe38a9e1608324581ebedee4ba7fe6
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 5%
+source-wordcount: '2362'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform UI(사용자 인터페이스)는 일별 스냅샷 중�
 
 ## 시작하기
 
-B2B [!UICONTROL 계정 프로필] 대시보드에 액세스하려면 [Adobe Real-time Customer Data Platform B2B 에디션](../../rtcdp/b2b-overview.md)에 대한 권한이 있어야 합니다.
+B2B [!UICONTROL 계정 프로필] 대시보드에 액세스하려면 [Adobe Real-time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md)에 대한 권한이 있어야 합니다.
 
 ## 계정 프로필 데이터 {#data}
 
@@ -79,6 +79,10 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 사용 가능한 각 표준 위젯에 대해 자세히 알아보려면 다음 목록에서 위젯의 이름을 선택합니다.
 
 * [계정 프로필 추가됨](#account-profiles-added)
+* [계정당 고객 개요](#customers-per-account-overview)
+   * [계정당 영업 기회 개요](#opportunities-per-account-overview)
+   * [계정당 영업 기회 세부 정보](#opportunities-per-account-detail)
+   * [계정당 고객 세부 정보](#customers-per-account-detail)
 * [업종별 신규 계정](#accounts-by-industry)
 * [유형별 새 계정](#accounts-by-type)
 * [개인 역할별 새로운 기회](#opportunities-by-person-role)
@@ -94,6 +98,52 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 [!UICONTROL 추가된 계정 프로필] 위젯은 선 그래프를 사용하여 일정 기간 동안 매일 추가된 계정 프로필의 수를 표시합니다. 대시보드 맨 위에 있는 글로벌 날짜 필터를 사용하여 분석 기간을 결정합니다. 날짜 필터를 제공하지 않으면 기본 비헤이비어에 오늘 이전 연도에 추가된 계정 프로필이 나열됩니다. 결과는 추가된 계정 프로필 수의 트렌드를 유추하는 데 사용할 수 있습니다.
 
 ![계정 프로필이 위젯을 추가했습니다.](../images/account-profiles/account-profiles-added.png)
+
+### 계정당 고객 개요 {#customers-per-account-overview}
+
+[!UICONTROL 계정당 고객 개요] 차트는 고객 유형에 따라 계정 요약을 제공합니다. 직접 또는 간접 고객 또는 없는 고객이 있는 것으로 계정을 분류하는 4행 테이블이 표시됩니다. 각 카테고리에 대한 총 계정 수를 제공합니다. 이 차트는 직접 고객 및 간접 고객이 있는 계정의 분포를 식별하는 데 도움이 됩니다.
+
+직접 고객은 `personComponents` 경로를 통해 계정에 직접 연결된 고객 프로필입니다. 이 관계는 보다 간단하며 고객과 계정 간의 직접적이고 명시적인 연결을 포함합니다.
+
+간접 고객은 `Account-Person` 경로를 통해 계정에 연결된 고객 프로필입니다. 이 관계는 단순하지 않으며 일반적으로 다른 계정이나 관계를 통해 고객과 계정 간에 중간 엔티티 또는 더 복잡한 연결을 포함합니다.
+
+![계정당 고객 개요 위젯.](../images/account-profiles/customers-per-account-overview-widget.png)
+
+자세한 인사이트에 액세스하려면 [!UICONTROL 계정당 고객 개요] 차트에서 타원(**..**)을 선택하고 드롭다운 메뉴에서 **[!UICONTROL 드릴스루]**&#x200B;를 선택하십시오.
+
+![타원 드롭다운 메뉴와 드릴스루가 강조 표시된 계정당 고객 개요 위젯.](../images/account-profiles/customers-per-account-overview-dropdown.png)
+
+드릴스루 보기가 나타납니다. 다음으로 사용 가능한 드릴스루 차트를 탐색하여 B2B 데이터의 구조를 보다 깊이 이해할 수 있습니다. 이 드릴스루 차트를 사용하여 고객 프로필이 연결되어 있지 않거나 연결된 고객 프로필이 하나 이상 있는 계정 프로필 수를 식별할 수 있습니다. 또한 이를 사용하여 계정과 연계된 직접 또는 간접 고객 수를 식별할 수 있습니다.
+
+* [[!UICONTROL 계정당 고객 세부 정보]](#customers-per-account-detail)
+* [[!UICONTROL 기회당 계정 개요]](#accounts-per-opportunity-overview)
+* [[!UICONTROL 계정당 기회 세부 정보]](#accounts-per-opportunity-detail)
+
+### [!UICONTROL 대시보드 보기 간 이동] {#dashboard-view-navigation}
+
+드릴스루와 계정 프로필 대시보드 간에 전환하려면 폴더 아이콘(![폴더 아이콘)을 선택합니다.](../images/account-profiles/folder-icon.png)) 다음에 드롭다운 메뉴의 올바른 보기가 옵니다.
+
+![탐색 드롭다운 메뉴가 강조 표시된 계정 프로필 대시보드의 드릴스루 보기입니다.](../images/account-profiles/navigation-dropdown.png)
+
+Platform UI의 드릴스루에 대한 자세한 내용은 [드릴스루 가이드](../sql-insights-query-pro-mode/drill-through.md)를 참조하십시오.
+
+#### [!UICONTROL 계정당 고객 세부 정보] {#customers-per-account-detail}
+
+[!UICONTROL 계정당 고객 세부 정보] 차트는 다른 고객 유형과 연결된 계정 수에 대한 세부 정보를 제공합니다. 고객 유형(직접 또는 간접)별 계정 수 및 이와 연관된 고객 범위를 자세히 설명하는 3열 테이블이 표시됩니다. 이 차트를 통해 다양한 고객 범주에 고객이 어떻게 분포되어 있는지, 그리고 각 고객과 연관된 총 계정 수를 파악할 수 있습니다.
+
+![계정당 고객 세부 정보 위젯입니다.](../images/account-profiles/customers-per-account-detail.png)
+
+#### [!UICONTROL 계정당 기회 개요] {#opportunities-per-account-overview}
+
+[!UICONTROL 계정당 기회 개요] 차트는 기회가 있거나 없는 계정에 대한 요약을 제공합니다. 이 2 행 테이블을 사용하면 영업 기회와 연관된 계정의 수를 빠르게 파악할 수 있으므로 여러 계정의 영업 기회 계약에 대한 스냅샷을 얻을 수 있습니다.
+
+![계정당 기회 개요 위젯.](../images/account-profiles/opportunities-per-account-overview.png)
+
+#### [!UICONTROL 계정당 기회 세부 정보] {#opportunities-per-account-detail}
+
+[!UICONTROL 계정 세부 정보당 기회] 차트는 보유한 기회의 수에 따라 계정에 대한 자세한 분류를 제공합니다. 이 표에는 1-10개의 영업 기회 또는 100개 이상의 영업 기회와 같이 영업 기회 수 범위별로 그룹화된 계정의 수가 표시됩니다. 이 차트는 관리되고 있는 영업 기회에 따라 계정이 어떻게 분배되는지 식별하는 데 도움이 됩니다.
+
+![계정 세부 정보 위젯당 기회.](../images/account-profiles/opportunities-per-account-detail.png)
 
 ### 업종별 신규 계정 {#accounts-by-industry}
 
@@ -185,4 +235,4 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 
 ## 다음 단계
 
-이 문서를 팔로우하면 이제 [!UICONTROL 계정 프로필] 대시보드를 찾는 방법과 사용 가능한 위젯에 표시되는 지표를 이해할 수 있습니다. Experience Platform UI에서 B2B 데이터의 일부로 계정 프로필을 사용하는 작업에 대한 자세한 내용은 Adobe Real-Time CDP, B2B 에디션의 [계정 프로필 개요](../../rtcdp/accounts/account-profile-overview.md)를 참조하십시오.
+이 문서를 팔로우하면 이제 [!UICONTROL 계정 프로필] 대시보드를 찾는 방법과 사용 가능한 위젯에 표시되는 지표를 이해할 수 있습니다. Experience Platform UI에서 B2B 데이터의 일부로 계정 프로필을 사용하는 작업에 대한 자세한 내용은 B2B edition Adobe Real-Time CDP의 [계정 프로필 개요](../../rtcdp/accounts/account-profile-overview.md)를 참조하십시오.
