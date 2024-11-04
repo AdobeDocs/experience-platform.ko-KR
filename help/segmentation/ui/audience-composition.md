@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e17403f0529c5b94869d3bd4e860c798db620d31
+source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '1952'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 0%
 
 ## [!UICONTROL 제외] {#exclude-block}
 
-**[!UICONTROL Exclude]** 블록 형식을 사용하면 지정된 하위 대상 또는 특성을 더 큰 새 대상에서 제외할 수 있습니다.
+**[!UICONTROL 제외]** 블록 형식을 사용하면 지정된 하위 대상이나 특성을 더 큰 새 대상에서 제외할 수 있습니다.
 
 **[!UICONTROL Exclude]** 블록을 추가하려면 **+** 아이콘을 선택한 다음 **[!UICONTROL Exclude]** 아이콘을 선택하십시오.
 
