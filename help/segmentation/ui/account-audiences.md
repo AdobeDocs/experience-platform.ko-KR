@@ -1,13 +1,13 @@
 ---
 title: 계정 대상자
 description: 계정 대상자를 만들고 사용하여 다운스트림 대상의 계정 프로필을 타겟팅하는 방법을 알아봅니다.
-badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 27%
+source-wordcount: '1518'
+ht-degree: 21%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 27%
 
 >[!AVAILABILITY]
 >
->계정 대상은 [B2B Edition of Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) 및 [B2P Edition of Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p)에서만 사용할 수 있습니다.
+>계정 대상은 [B2B edition of Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) 및 [B2P Edition of Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p)에서만 사용할 수 있습니다.
 
 Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 기반 대상에서 계정 기반 대상으로의 마케팅 세분화 경험을 전체적으로 쉽고 정교하게 만들 수 있습니다.
 
@@ -66,6 +66,39 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 ![세그먼트 빌더 내의 대상자 탭이 강조 표시되어 있습니다.](../images/ui/account-audiences/audiences.png)
 
 세그먼트 빌더 사용에 대한 자세한 내용은 [세그먼트 빌더 UI 안내서](./segment-builder.md)를 참조하십시오.
+
+### 관계 설정 {#relationships}
+
+계정 대상자의 경우 기본적으로 세그먼트 빌더 UI에 계정과 사용자 간의 직접 관계가 표시됩니다. 그러나 계정 대상자에 대해서는 다른 관계 유형을 사용할 수 있습니다.
+
+대체 관계 유형을 사용하려면 ![설정 아이콘](../../images/icons/settings.png)을 선택하세요.
+
+![필드 섹션에 설정 아이콘이 강조 표시되어 있습니다.](../images/ui/account-audiences/select-settings.png)
+
+[!UICONTROL 설정] 탭의 **[!UICONTROL 필드 관계]** 섹션에서 **[!UICONTROL 관계 선택기 표시]**&#x200B;를 선택합니다.
+
+![설정 탭의 필드 관계 섹션에서 관계 선택기 표시 토글이 선택됩니다.](../images/ui/account-audiences/show-relation-selectors.png)
+
+![설정 아이콘](../../images/icons/settings.png)을 다시 선택하여 [!UICONTROL 필드] 탭으로 돌아갑니다. 이제 **[!UICONTROL 관계 설정]** 섹션을 볼 수 있습니다. 이를 통해 계정과 사용자 연결 방법 및 사용자가 영업 기회에 연결되는 방법을 설정할 수 있습니다.
+
+![관계 설정 섹션이 강조 표시되어 계정을 개인에 연결하는 방법과 개인을 기회에 연결하는 방법에 대한 옵션을 표시합니다.](../images/ui/account-audiences/establish-relationships.png)
+
+계정을 개인에게 연결할 때 다음 옵션 중에서 선택할 수 있습니다.
+
+| 옵션 | 설명 |
+| ------ | ----------- |
+| 직접 관계 | 계정과 사용자 간의 직접 연결. 개인 스키마의 `personComponents` 배열에서 `accountID` 값의 배열을 통해 각 사용자가 연결되는 계정을 지정합니다. 이 경로가 가장 자주 사용됩니다. |
+| 계정-사용자 관계 | `accountPersonRelation` 개체로 정의된 계정과 사용자 간의 관계입니다. 이 경로를 사용하면 각 사용자가 여러 계정에 연결할 수도 있습니다. 조직이 소스 데이터에서 명시적 관계 테이블을 정의한 경우 사용됩니다. |
+| 영업 기회-사용자 관계 | `opportunityPersonRelation` 개체로 정의된 영업 기회와 사용자 간의 관계입니다. 이는 기회-개인에서 기회로 이동하여 사용자와 계정을 연결합니다. 여기에서 개인이 기회에 연결된 회사를 설명할 수 있습니다. |
+
+영업 기회를 개인에게 연결할 때 다음 옵션 중에서 선택할 수 있습니다.
+
+| 옵션 | 설명 |
+| ------ | ----------- |
+| 계정 | 거래처와 영업 기회 간의 직접적인 연결입니다. 계정 대상에서 이를 사용하면 이 경로는 회사의 모든 사람을 기회에 연결합니다. |
+| 영업 기회-사용자 관계 | 영업 기회 및 개인 간의 관계(영업 기회-개인 오브젝트의 기반). 이 경로는 특정 영업 기회와 관련된 것으로 확인된 사람만 해당 영업 기회에 연결합니다. |
+
+원하는 관계를 설정한 후 필요한 사람-대상을 세그먼트 정의에 추가할 수 있습니다.
 
 ## 대상자 활성화 {#activate}
 
