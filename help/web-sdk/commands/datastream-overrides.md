@@ -2,10 +2,10 @@
 title: 데이터 스트림 구성 재정의
 description: Web SDK를 통해 데이터 스트림 재정의를 구성하는 방법에 대해 알아봅니다.
 exl-id: 8e327892-9520-43f5-abf4-d65a5ca34e6d
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 2b8ca4bc1d5cf896820a5de95dcdfcd15edc2392
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 14%
+source-wordcount: '1159'
+ht-degree: 10%
 
 ---
 
@@ -24,19 +24,14 @@ ht-degree: 14%
 1. 먼저 데이터 스트림 UI 내의 [데이터 스트림 구성 페이지](../../datastreams/configure.md)에서 데이터 스트림 구성 재정의를 정의해야 합니다. 재정의를 구성하는 방법에 대한 지침은 [데이터스트림 구성 재정의](../../datastreams/overrides.md#configure-overrides) 설명서를 참조하십시오.
 2. UI에서 데이터 스트림 재정의를 구성한 후에는 다음 방법 중 하나로 재정의를 Edge Network에 보내야 합니다.
    * 웹 SDK를 통해 [태그 확장](#tag-extension).
-   * `sendEvent` 또는 `configure` 웹 SDK 명령을 통해.
-   * Mobile SDK `sendEvent` 명령을 통해.
+   * [`sendEvent`](../commands/sendevent/overview.md) 또는 [`configure`](../commands/configure/overview.md) 웹 SDK 명령을 통해.
+   * Mobile SDK [`sendEvent`](https://developer.adobe.com/client-sdks/home/getting-started/track-events/#send-events-to-edge-network) 명령을 통해.
 
 웹 SDK 구성과 특정 명령(예: [`sendEvent`](sendevent/overview.md))에서 모두 재정의를 설정하면 특정 명령의 재정의가 우선합니다.
 
-## 개체 속성
-
-이 개체 내에서 다음 속성을 사용할 수 있습니다.
-
-* **데이터스트림 재정의**: 다른 데이터스트림으로 호출을 보냅니다. 이 값을 설정하는 경우 데이터 스트림 구성이 필요한 다른 재정의는 여기에 설정된 데이터 스트림에서 구성해야 합니다.
-* **타사 ID 동기화 컨테이너**: Adobe Audience Manager의 대상 타사 ID 동기화 컨테이너에 대한 ID입니다. 이 필드를 사용하기 전에 데이터 스트림의 설정에서 타사 ID 컨테이너 재정의를 구성해야 합니다.
-* **대상 속성 토큰**: Adobe Target의 대상 속성에 대한 토큰입니다. 이 필드를 사용하기 전에 데이터 스트림의 설정에서 Target 속성 토큰 재정의를 구성해야 합니다.
-* **보고서 세트**: Adobe Analytics에서 재정의할 보고서 세트 ID. 이 필드를 사용하기 전에 데이터 스트림의 설정에서 보고서 세트 재정의를 구성해야 합니다.
+>[!NOTE]
+>
+>Experience Cloud 서비스를 *비활성화*&#x200B;하도록 구성을 재정의하려면 데이터 스트림 구성에서 서비스가 먼저 *활성화*&#x200B;되었는지 확인해야 합니다. 데이터 스트림에 서비스를 추가하는 방법에 대한 자세한 내용은 [데이터 스트림을 구성](../../datastreams/configure.md#add-services)하는 방법에 대한 설명서를 참조하십시오.
 
 ## 웹 SDK 태그 확장을 통해 Edge Network에 데이터스트림 재정의 전송 {#tag-extension}
 
@@ -87,87 +82,143 @@ Web SDK를 사용하는 경우 `edgeConfigOverrides` 명령을 통해 Edge Netwo
 
 ### 웹 SDK `sendEvent` 명령을 통해 구성 재정의 보내기 {#send-event}
 
-아래 예의 `sendEvent` 명령에서 구성 재정의는 다음과 같습니다.
+아래 예제는 `sendEvent` 호출에서 지원되는 모든 동적 데이터스트림 구성 옵션을 보여 줍니다.
 
-```js {line-numbers="true" highlight="5-25"}
+데이터 스트림 구성에 지원되는 모든 서비스가 활성화되어 있으면 아래 샘플은 이 설정을 무시하고 모든 서비스를 비활성화합니다(각 서비스의 `enabled: false` 설정 참조).
+
+```js
 alloy("sendEvent", {
-  xdm: {
-    /* ... */
-  },
+  renderDecisions: true,
   edgeConfigOverrides: {
-    datastreamId: "{DATASTREAM_ID}"
+    datastreamId: "bfa8fe21-6157-42d3-b47a-78310920b39d",
     com_adobe_experience_platform: {
+      enabled: false,
       datasets: {
         event: {
-          datasetId: "SampleEventDatasetIdOverride"
-        }
-      }
+          datasetId: "64b6f949a8a6891ca8a28911",
+        },
+      },
+      com_adobe_edge_ode: {
+        enabled: false,
+      },
+      com_adobe_edge_segmentation: {
+        enabled: false,
+      },
+      com_adobe_edge_destinations: {
+        enabled: false,
+      },
+      com_adobe_edge_ajo: {
+        enabled: false,
+      },
     },
     com_adobe_analytics: {
-      reportSuites: [
-        "MyFirstOverrideReportSuite",
-        "MySecondOverrideReportSuite",
-        "MyThirdOverrideReportSuite"
-        ]
+      enabled: false,
+      reportSuites: ["ujslconfigoverrides3"],
     },
     com_adobe_identity: {
-      idSyncContainerId: "1234567"
+      idSyncContainerId: 34374,
     },
     com_adobe_target: {
-      propertyToken: "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    }
-  }
+      enabled: false,
+      propertyToken: "f3fd55e1-a06d-8650-9aa5-c8356c6e2223",
+    },
+    com_adobe_audience_manager: {
+      enabled: false,
+    },
+    com_adobe_launch_ssf: {
+      enabled: false,
+    },
+  },
 });
 ```
 
 | 매개변수 | 설명 |
 |---|---|
+| `renderDecisions` |  |
 | `edgeConfigOverrides.datastreamId` | 이 매개변수를 사용하면 단일 요청이 `configure` 명령에서 정의한 데이터스트림과 다른 데이터스트림으로 이동할 수 있습니다. |
+| `edgeConfigOverrides.com_adobe_experience_platform` | Experience Platform 서비스에 대한 동적 데이터스트림 구성을 정의합니다. |
+| `edgeConfigOverrides.com_adobe_experience_platform.enabled` | 이벤트를 Experience Platform 서비스로 전송할지 여부를 정의합니다. |
+| `edgeConfigOverrides.com_adobe_experience_platform.datasets` | 이벤트에 사용되는 데이터 세트를 정의합니다. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ode.enabled` | 이벤트가 Offer decisioning 서비스로 전송되는지 여부를 정의합니다. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_segmentation.enabled` | 이벤트가 에지 세분화 서비스로 전송되는지 여부를 정의합니다. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_destinations.enabled` | 이벤트 데이터가 Edge 대상으로 전송되는지 여부를 정의합니다. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ajo.enabled` | 이벤트 데이터가 Adobe Journey Optimizer 서비스로 전송되는지 여부를 정의합니다. |
+| `com_adobe_analytics.enabled` | 이벤트 데이터가 Adobe Analytics으로 전송되는지 여부를 정의합니다. |
 | `com_adobe_analytics.reportSuites[]` | Analytics 데이터를 전송할 보고서 세트를 결정하는 문자열 배열입니다. |
-| `com_adobe_identity.idSyncContainerId` | Audience Manager 시 사용할 서드파티 ID 동기화 컨테이너입니다. |
+| `com_adobe_identity.idSyncContainerId` | Audience Manager 시 사용할 서드파티 ID 동기화 컨테이너입니다. 이 ID 동기화 컨테이너가 작동하려면 `com_adobe_audience_manager.enabled`을(를) `true`(으)로 설정해야 합니다. 그렇지 않으면 Audience Manager 서비스가 비활성화됩니다. |
+| `com_adobe_target.enabled` | 이벤트 데이터가 Adobe Target으로 전송되는지 여부를 정의합니다. |
 | `com_adobe_target.propertyToken` | Adobe Target 대상 속성에 대한 토큰입니다. |
+| `com_adobe_audience_manager.enabled` | 이벤트 데이터가 Audience Manager 서비스로 전송되는지 여부를 정의합니다. |
+| `com_adobe_launch_ssf` | 이벤트 데이터가 서버측 전달로 전송되는지 여부를 정의합니다. |
 
 ### 웹 SDK `configure` 명령을 통해 구성 재정의 보내기 {#send-configure}
 
 아래 예의 `configure` 명령에서 구성 재정의는 다음과 같습니다.
 
-```js {line-numbers="true" highlight="8-30"}
+데이터 스트림 구성에 지원되는 모든 서비스가 활성화되어 있으면 아래 샘플은 이 설정을 무시하고 모든 서비스를 비활성화합니다(각 서비스의 `enabled: false` 설정 참조).
+
+```js
 alloy("configure", {
-  defaultConsent: "in",
-  edgeDomain: "etc",
-  edgeBasePath: "ee",
-  datastreamId: "{DATASTREAM_ID}",
-  orgId: "org",
-  debugEnabled: true,
+  orgId: "97D1F3F459CE0AD80A495CBE@AdobeOrg",
+  datastreamId: "db9c70a1-6f11-4563-b0e9-b5964ab3a858",
   edgeConfigOverrides: {
-    "com_adobe_experience_platform": {
-      "datasets": {
-        "event": {
-          datasetId: "SampleProfileDatasetIdOverride"
-        }
-      }
+    com_adobe_experience_platform: {
+      enabled: false,
+      datasets: {
+        event: {
+          datasetId: "64b6f930753dd41ca8d4fd77",
+        },
+      },
+      com_adobe_edge_ode: {
+        enabled: false,
+      },
+      com_adobe_edge_segmentation: {
+        enabled: false,
+      },
+      com_adobe_edge_destinations: {
+        enabled: false,
+      },
+      com_adobe_edge_ajo: {
+        enabled: false,
+      },
     },
-    "com_adobe_analytics": {
-      "reportSuites": [
-        "MyFirstOverrideReportSuite",
-        "MySecondOverrideReportSuite",
-        "MyThirdOverrideReportSuite"
-      ]
+    com_adobe_analytics: {
+      enabled: false,
+      reportSuites: ["ujslconfigoverrides2"],
     },
-    "com_adobe_identity": {
-      "idSyncContainerId": "1234567"
+    com_adobe_identity: {
+      idSyncContainerId: 34373,
     },
-    "com_adobe_target": {
-      "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    }
+    com_adobe_target: {
+      enabled: false,
+      propertyToken: "01dbc634-07c1-d8f9-ca69-b489a5ac5e94",
+    },
+    com_adobe_audience_manager: {
+      enabled: false,
+    },
+    com_adobe_launch_ssf: {
+      enabled: false,
+    },
   },
-  onBeforeEventSend: function() { /* … */ });
-};
+});
 ```
 
 | 매개변수 | 설명 |
 |---|---|
+| `orgId` | Adobe 계정에 해당하는 IMS 조직 ID. |
 | `edgeConfigOverrides.datastreamId` | 이 매개변수를 사용하면 단일 요청이 `configure` 명령에서 정의한 데이터스트림과 다른 데이터스트림으로 이동할 수 있습니다. |
+| `edgeConfigOverrides.com_adobe_experience_platform` | Experience Platform 서비스에 대한 동적 데이터스트림 구성을 정의합니다. |
+| `edgeConfigOverrides.com_adobe_experience_platform.enabled` | 이벤트를 Experience Platform 서비스로 전송할지 여부를 정의합니다. |
+| `edgeConfigOverrides.com_adobe_experience_platform.datasets` | 이벤트에 사용되는 데이터 세트를 정의합니다. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ode.enabled` | 이벤트가 Offer decisioning 서비스로 전송되는지 여부를 정의합니다. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_segmentation.enabled` | 이벤트가 에지 세분화 서비스로 전송되는지 여부를 정의합니다. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_destinations.enabled` | 이벤트 데이터가 Edge 대상으로 전송되는지 여부를 정의합니다. |
+| `edgeConfigOverrides.com_adobe_experience_platform.com_adobe_edge_ajo.enabled` | 이벤트 데이터가 Adobe Journey Optimizer 서비스로 전송되는지 여부를 정의합니다. |
+| `com_adobe_analytics.enabled` | 이벤트 데이터가 Adobe Analytics으로 전송되는지 여부를 정의합니다. |
 | `com_adobe_analytics.reportSuites[]` | Analytics 데이터를 전송할 보고서 세트를 결정하는 문자열 배열입니다. |
-| `com_adobe_identity.idSyncContainerId` | Audience Manager 시 사용할 서드파티 ID 동기화 컨테이너입니다. |
+| `com_adobe_identity.idSyncContainerId` | Audience Manager 시 사용할 서드파티 ID 동기화 컨테이너입니다. 이 ID 동기화 컨테이너가 작동하려면 `com_adobe_audience_manager.enabled`을(를) `true`(으)로 설정해야 합니다. 그렇지 않으면 Audience Manager 서비스가 비활성화됩니다. |
+| `com_adobe_target.enabled` | 이벤트 데이터가 Adobe Target으로 전송되는지 여부를 정의합니다. |
 | `com_adobe_target.propertyToken` | Adobe Target 대상 속성에 대한 토큰입니다. |
+| `com_adobe_audience_manager.enabled` | 이벤트 데이터가 Audience Manager 서비스로 전송되는지 여부를 정의합니다. |
+| `com_adobe_launch_ssf` | 이벤트 데이터가 서버측 전달로 전송되는지 여부를 정의합니다. |
+
