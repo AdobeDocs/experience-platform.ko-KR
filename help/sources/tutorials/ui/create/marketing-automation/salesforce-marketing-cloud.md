@@ -1,10 +1,10 @@
 ---
-title: Salesforce Marketing Cloud 계정을 UI를 통해 Experience Platform에 연결
+title: UI를 통해 Salesforce Marketing Cloud 계정을 Experience Platform에 연결
 description: UI를 통해 Salesforce Marketing Cloud 계정을 Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '517'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->사용자 지정 개체 수집은 현재 [!DNL Salesforce Marketing Cloud] 원본 통합에서 지원되지 않습니다.
+>[!DNL Salesforce Marketing Cloud] 원본은 2025년 5월 말에 사용되지 않습니다. 또는 [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) 소스를 사용할 수도 있습니다.
 
 이 자습서에서는 UI를 통해 [!DNL Salesforce Marketing Cloud] 계정을 Adobe Experience Platform에 연결하는 방법에 대한 단계를 제공합니다.
 
@@ -42,6 +42,10 @@ ht-degree: 2%
 
 ## [!DNL Salesforce Marketing Cloud] 계정 연결
 
+>[!IMPORTANT]
+>
+>사용자 지정 개체 수집은 현재 [!DNL Salesforce Marketing Cloud] 원본 통합에서 지원되지 않습니다.
+
 Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그]에는 Experience Platform에서 지원하는 다양한 소스가 표시됩니다.
 
 범주 목록에서 적절한 범주를 선택할 수 있습니다. 검색 창을 사용하여 특정 소스를 필터링할 수도 있습니다.
@@ -50,7 +54,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 
 ![Salesforce Marketing Cloud 원본이 있는 원본 카탈로그를 선택했습니다.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-**[!UICONTROL Salesforce Marketing Cloud에 연결]** 페이지가 나타납니다. 이 페이지에서 새 계정을 만들거나 기존 계정을 사용할 수 있습니다.
+**[!UICONTROL Salesforce에 연결]** Marketing Cloud이 나타납니다. 이 페이지에서 새 계정을 만들거나 기존 계정을 사용할 수 있습니다.
 
 ### 새 계정
 
@@ -58,13 +62,13 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 
 완료되면 **[!UICONTROL 소스에 연결]**&#x200B;을 선택한 다음 새 연결을 설정할 수 있는 시간을 허용하세요.
 
-![Salesforce Marketing Cloud에 대한 새 계정을 인증할 수 있는 새 계정 인터페이스입니다.](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
+![Salesforce Marketing Cloud의 새 계정을 인증할 수 있는 새 계정 인터페이스입니다.](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
 
 ### 기존 계정
 
 기존 계정이 이미 있는 경우 **[!UICONTROL 기존 계정]**&#x200B;을 선택한 다음 표시되는 목록에서 사용할 계정을 선택하십시오.
 
-![기존 Salesforce Marketing Cloud 계정 목록에서 선택할 수 있는 기존 계정 인터페이스입니다.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
+![기존 Salesforce Marketing Cloud 계정 목록에서 선택할 수 있는 기존 계정 인터페이스](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
 
 ## 다음 단계
 

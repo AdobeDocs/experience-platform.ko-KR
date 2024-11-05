@@ -4,14 +4,18 @@ title: Oracle 서비스 Cloud Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Oracle Service Cloud를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
 
 # Oracle 서비스 클라우드 소스
+
+>[!IMPORTANT]
+>
+>[!DNL Oracle Service Cloud] 원본은 2025년 5월 말에 사용되지 않습니다. 또는 [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) 소스를 사용할 수도 있습니다.
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 

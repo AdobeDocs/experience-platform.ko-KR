@@ -5,18 +5,18 @@ title: UI에서 Couchbase Source 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Couchbase 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 1%
+source-wordcount: '465'
+ht-degree: 2%
 
 ---
 
 # UI에서 [!DNL Couchbase] 소스 연결 만들기
 
->[!NOTE]
+>[!IMPORTANT]
 >
-> [!DNL Couchbase] 커넥터가 Beta 버전입니다. 베타 레이블 커넥터 사용에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
+>[!DNL Couchbase] 원본은 2025년 5월 말에 사용되지 않습니다. 또는 [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) 소스를 사용할 수도 있습니다.
 
 [!DNL Adobe Experience Platform]의 Source 커넥터는 일정에 따라 외부에서 가져온 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 [!DNL Platform] 사용자 인터페이스를 사용하여 [!DNL Couchbase] 소스 커넥터를 만드는 단계를 제공합니다.
 

@@ -5,18 +5,18 @@ title: 흐름 서비스 API를 사용하여 Couchbase 연결 만들기
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 Couchbase를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '449'
 ht-degree: 5%
 
 ---
 
 # [!DNL Flow Service] API를 사용하여 [!DNL Couchbase] 기본 연결 만들기
 
->[!NOTE]
+>[!IMPORTANT]
 >
->[!DNL Couchbase] 커넥터가 Beta 버전입니다. 베타 레이블 커넥터 사용에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
+>[!DNL Couchbase] 원본은 2025년 5월 말에 사용되지 않습니다. 또는 [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) 소스를 사용할 수도 있습니다.
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 

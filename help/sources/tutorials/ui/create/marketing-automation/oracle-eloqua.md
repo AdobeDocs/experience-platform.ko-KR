@@ -2,14 +2,18 @@
 title: Platform UI를 사용하여 Oracle Eloqua 소스 연결 만들기
 description: Platform UI를 사용하여 Adobe Experience Platform을 Oracle Eloqua에 연결하는 방법을 알아봅니다.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '531'
 ht-degree: 2%
 
 ---
 
 # 플랫폼 UI를 사용하여 [!DNL Oracle Eloqua] 소스 연결 만들기
+
+>[!IMPORTANT]
+>
+>[!DNL Oracle Eloqua] 원본은 2025년 5월 말에 사용되지 않습니다. 또는 [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) 소스를 사용할 수도 있습니다.
 
 이 자습서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 [!DNL Oracle Eloqua] 소스 연결을 만드는 단계를 제공합니다.
 
