@@ -2,9 +2,9 @@
 title: 계정 프로필 대시보드
 description: Adobe Experience Platform은 조직의 B2B 계정 프로필에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 442fcee17cbe38a9e1608324581ebedee4ba7fe6
+source-git-commit: a0b762cb89f45313724187ce36b80b2f3d0548eb
 workflow-type: tm+mt
-source-wordcount: '2362'
+source-wordcount: '2397'
 ht-degree: 4%
 
 ---
@@ -100,6 +100,10 @@ Adobe은 계정 프로필과 관련된 다양한 지표를 시각화하는 데 �
 ![계정 프로필이 위젯을 추가했습니다.](../images/account-profiles/account-profiles-added.png)
 
 ### 계정당 고객 개요 {#customers-per-account-overview}
+
+>[!NOTE]
+>
+>[!UICONTROL 계정당 고객 개요] 인사이트 및 드릴스루 차트([!UICONTROL 계정당 고객 세부 정보], [!UICONTROL 계정당 기회 개요], [!UICONTROL 계정당 기회 세부 정보])는 설정했을 수 있는 전역 날짜 필터의 영향을 받지 않습니다.
 
 [!UICONTROL 계정당 고객 개요] 차트는 고객 유형에 따라 계정 요약을 제공합니다. 직접 또는 간접 고객 또는 없는 고객이 있는 것으로 계정을 분류하는 4행 테이블이 표시됩니다. 각 카테고리에 대한 총 계정 수를 제공합니다. 이 차트는 직접 고객 및 간접 고객이 있는 계정의 분포를 식별하는 데 도움이 됩니다.
 

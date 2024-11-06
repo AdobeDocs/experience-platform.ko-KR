@@ -2,9 +2,9 @@
 title: 클러스터링 알고리즘
 description: 고급 통계 모델을 구현하는 데 도움이 되는 주요 매개 변수, 설명 및 예제 코드를 사용하여 다양한 클러스터링 알고리즘을 구성하고 최적화하는 방법에 대해 알아봅니다.
 role: Developer
-source-git-commit: 4d4e9ae527deb149f02edb39716851e995c23d21
+source-git-commit: 4ee7ce2468c1ea5f0960349c288d406f43a8bb91
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '874'
 ht-degree: 4%
 
 ---
@@ -112,7 +112,7 @@ Create MODEL modelname OPTIONS(
 
 **매개 변수**
 
-| 매개변수 | 설명 | 기본 값 | 가능한 값 |                                                                                                                                                                  | 기본 값 | 가능한 값 |
+| 매개변수 | 설명 | 기본 값 | 가능한 값 |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------|
 | `MAX_ITER` | 알고리즘이 실행하는 최대 반복 횟수입니다. | 20 | (>= 0) |
 | `OPTIMIZER` | LDA 모델 추정에 사용되는 최적화 도구 또는 추론 알고리즘. 지원되는 옵션은 `"online"`(Online Variational Bayes) 및 `"em"`(Expected-Maximation)입니다. | &quot;online&quot; | `online`, `em` |
@@ -127,6 +127,8 @@ Create MODEL modelname OPTIONS(
 | `SUBSAMPLING_RATE` | `online` 최적기의 경우: `(0, 1]` 범위에서 미니 일괄 처리 그라디언트 하상의 각 반복에 샘플링 및 사용된 말뭉치의 비율입니다. | 0.05 | `(0, 1]` |
 | `TOPIC_CONCENTRATION` | 용어에 따른 주제 분포에 배치된 이전 항목의 농도 매개 변수(&quot;beta&quot; 또는 &quot;eta&quot;). | 자동 | (>= 0) |
 | `TOPIC_DISTRIBUTION_COL` | 각 문서에 대한 주제 혼합 분포의 예상치가 포함된 출력 열입니다. | 설정되지 않음 | 모든 문자열 |
+
+{style="table-layout:auto"}
 
 **예**
 
