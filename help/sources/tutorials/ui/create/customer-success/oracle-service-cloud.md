@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;Oracle 서비스 클라우드;or
 title: UI에서 Oracle 서비스 클라우드 Source 연결 만들기
 description: Adobe Experience Platform UI를 사용하여 Oracle 서비스 클라우드 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
-source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
+source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '488'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Oracle Service Cloud] 원본은 2025년 5월 말에 사용되지 않습니다. 또는 [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) 소스를 사용할 수도 있습니다.
+>[!DNL Oracle Service Cloud] 원본은 2025년 5월 말에 사용되지 않습니다. [!DNL Oracle Service Cloud] 원본 대신 [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)을(를) 사용할 수 있습니다.
 
 이 자습서에서는 Adobe Experience Platform 사용자 인터페이스를 사용하여 Oracle 서비스 클라우드 소스 연결을 만드는 단계를 제공합니다.
 

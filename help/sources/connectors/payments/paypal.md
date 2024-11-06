@@ -4,9 +4,9 @@ solution: Experience Platform
 title: PayPal Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 PayPal을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: c70a9b91-b883-4e58-9ec5-6fc9b2163efd
-source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
+source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL PayPal] 원본은 2025년 5월 말에 사용되지 않습니다. 또는 [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) 소스를 사용할 수도 있습니다.
+>[!DNL PayPal] 원본은 2025년 5월 말에 사용되지 않습니다. [!DNL PayPal] 원본 대신 [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)을(를) 사용할 수 있습니다.
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
