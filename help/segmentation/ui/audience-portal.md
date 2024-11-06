@@ -2,9 +2,9 @@
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 0378cc313445ff22d1d2d003c9ae248d791b3707
+source-git-commit: a48df00b61fd5736cfb6fd29c60cf73a02342451
 workflow-type: tm+mt
-source-wordcount: '4530'
+source-wordcount: '4547'
 ht-degree: 4%
 
 ---
@@ -244,7 +244,7 @@ abstract="유연한 대상자 평가를 한 번 실행하여 최대 20개의 대
 
 ![유연한 대상 평가를 사용하여 평가할 수 있는 대상이 표시됩니다.](../images/ui/audience-portal/evaluate-audiences-modal.png)
 
-올바른 대상이 나열되는지 확인한 후 요청을 계속 진행하면 유연한 대상 평가가 시작됩니다.
+올바른 대상이 나열되는지 확인한 후 요청을 진행할 수 있으며 유연한 대상 평가가 시작됩니다. [평가 작업 모니터링 보기](../../dataflows/ui/monitor-audiences.md#evaluation-job-details)에서 이 대상 평가의 상태를 볼 수 있습니다.
 
 >[!NOTE]
 >
