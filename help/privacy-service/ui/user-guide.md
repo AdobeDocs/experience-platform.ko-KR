@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service UI의 개인 정보 작업 관리
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 요청을 조정하고 모니터링하는 방법에 대해 알아봅니다.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
+source-git-commit: c870b6be603073d6dd909b272c619deb5b246f05
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1770'
 ht-degree: 11%
 
 ---
@@ -43,6 +43,7 @@ ht-degree: 11%
 | [!UICONTROL CPA_USA(콜로라도)] | [!DNL Colorado Privacy Act] |
 | [!UICONTROL CPRA_USA(캘리포니아)] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA_USA(Connecticut)] | [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL DPDPA_USA(Delaware)] | [!DNL Delaware Personal Data Privacy Act] |
 | [!UICONTROL FDBR_USA(플로리다)] | [!DNL Florida Digital Bill of Rights] |
 | [!UICONTROL GDPR(유럽 연합)] | 유럽 연합의 [!DNL General Data Protection Regulation] |
 | [!UICONTROL HIPPA_USA(미국)] | [!DNL Health Insurance Portability and Accountability Act] |
@@ -56,6 +57,7 @@ ht-degree: 11%
 | [!UICONTROL NJDPA_USA(뉴저지)] | [!DNL New Jersey Data Protection Act] |
 | [!UICONTROL OCPA USA(오레곤)] | [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA(태국)] | 태국 [!DNL Personal Data Protection Act] |
+| [!UICONTROL QL25_CAN(퀘벡)] | [!DNL Quebec Law 25] |
 | [!UICONTROL TDPSA USA(텍사스)] | [!DNL Texas Data Privacy and Security Act] |
 | [!UICONTROL UCPA_USA(유타)] | [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA(버지니아)] | [!DNL Virginia Consumer Data Protection Act] |
