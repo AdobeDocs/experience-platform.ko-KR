@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 Salesforce Marketing Cloud 기본 연결 만들기
 description: 흐름 서비스 API를 사용하여 Experience Platform에 대해 Salesforce Marketing Cloud 계정을 인증하는 방법을 알아봅니다.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '500'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->[!DNL Salesforce Marketing Cloud] 원본은 2025년 5월 말에 사용되지 않습니다. [!DNL Salesforce Marketing Cloud] 원본 대신 [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)을(를) 사용할 수 있습니다.
+>[!DNL Salesforce Marketing Cloud] 원본은 2025년 5월 말에 사용되지 않습니다.
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 

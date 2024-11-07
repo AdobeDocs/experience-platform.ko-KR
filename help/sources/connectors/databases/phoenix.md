@@ -3,9 +3,9 @@ title: 피닉스 Source 개요
 description: API 또는 사용자 인터페이스를 사용하여 Phoenix 계정을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Phoenix] 원본은 2025년 5월 말에 사용되지 않습니다. [!DNL Phoenix] 원본 대신 [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)을(를) 사용할 수 있습니다.
+>[!DNL Phoenix] 원본은 2025년 5월 말에 사용되지 않습니다.
 
 Adobe Experience Platform 소스는 [[!DNL Phoenix]](https://phoenix.apache.org/index.html) 같은 타사 데이터베이스에서의 데이터 수집을 지원합니다. 이 문서에서는 [!DNL Flow Service] API 또는 Experience Platform 사용자 인터페이스를 통해 [!DNL Phoenix] 계정에 연결하기 전에 필수 구성 요소 정보를 제공합니다.
 

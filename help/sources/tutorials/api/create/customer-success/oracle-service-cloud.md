@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;Oracle 서비스 클라우드;or
 title: 흐름 서비스 API를 사용하여 Oracle 서비스 Cloud Source 연결 만들기
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Oracle 서비스 클라우드에 연결하는 방법을 알아봅니다.
 exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '522'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->[!DNL Oracle Service Cloud] 원본은 2025년 5월 말에 사용되지 않습니다. [!DNL Oracle Service Cloud] 원본 대신 [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)을(를) 사용할 수 있습니다.
+>[!DNL Oracle Service Cloud] 원본은 2025년 5월 말에 사용되지 않습니다.
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
