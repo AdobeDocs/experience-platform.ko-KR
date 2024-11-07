@@ -2,9 +2,9 @@
 title: Edge Network 서버 API에 대한 성능 보호
 description: 최적의 성능 보호 내에서 서버 API를 사용하는 방법에 대해 알아봅니다.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 316efe577274b389bd1bf50e896ad6ef53e44b7b
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '569'
 ht-degree: 2%
 
 ---
@@ -21,6 +21,8 @@ Adobe은 사용 제한 초과로 인한 성능 저하의 책임이 없습니다.
 >[!IMPORTANT]
 >
 >이 보호 기능 페이지 외에 실제 사용 제한에 대해 판매 주문에서 라이선스 자격 및 해당 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을(를) 확인하십시오.
+
+이 페이지에 설명된 모든 성능 보호는 IMS 조직 수준에서 적용됩니다. 여러 IMS 조직이 구성된 사용자의 경우 각 조직에는 개별적으로 아래의 성능 보호가 적용됩니다. [!DNL IMS Organizations]에 대한 자세한 내용은 [Experience Platform 용어집](../landing/glossary.md)을 참조하세요.
 
 ## 정의
 
