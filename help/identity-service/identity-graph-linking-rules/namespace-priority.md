@@ -2,9 +2,9 @@
 title: 네임스페이스 우선순위
 description: ID 서비스의 네임스페이스 우선 순위에 대해 알아봅니다.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
+source-git-commit: a2a60f429836e26179f68a40fce91a90d73d8eee
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1788'
 ht-degree: 2%
 
 ---
@@ -177,6 +177,15 @@ XDM 스키마에 대한 자세한 내용은 [스키마 개요](../../xdm/home.md
 이 구성은 인증된 이벤트를 사용해서만 점수를 계산하는 결과를 초래합니다.
 
 자세한 내용은 [Attribution AI](../../intelligent-services/attribution-ai/overview.md) 및 [고객 AI](../../intelligent-services/customer-ai/overview.md)의 문서를 참조하십시오.
+
+### 파트너가 빌드한 대상
+
+공유 장치와 관련된 프로필에 대한 업데이트된 대상 실격 결과는 다운스트림 대상으로 전송되지 않을 수 있습니다. 이는 다음과 같은 드문 특정 상황에서 발생할 수 있습니다.
+
+* 대상 자격은 익명 활동만 기반으로 합니다.
+* 여러 프로필에 대한 로그인은 짧은 기간에 이루어집니다.
+
+파트너가 만든 대상에 대한 자세한 내용은 [대상 개요](../../destinations/home.md#adobe-built-and-partner-built-destinations)를 참조하십시오.
 
 ### Privacy Service
 
