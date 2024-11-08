@@ -2,9 +2,9 @@
 title: 샌드박스 도구 패키지 API 끝점
 description: 샌드박스 도구 API의 /packages 끝점을 사용하면 Adobe Experience Platform에서 패키지를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 1e271a88890f41f66aad93d96dbef23a09d33077
+source-git-commit: e029380dd970195d1254ee3ea1cd68ba2574bbd3
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '2543'
 ht-degree: 8%
 
 ---
@@ -1595,7 +1595,13 @@ curl -X GET \
 
 ### 패키지 가용성을 비공개에서 공개로 업데이트 {#update-availability}
 
-`/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC` 끝점에 대한 GET 요청을 수행하여 패키지를 private에서 public으로 변경합니다. 기본적으로 패키지는 비공개 가용성으로 생성됩니다.
+`/packages/update` 끝점에 대한 GET 요청을 수행하여 패키지를 private에서 public으로 변경합니다. 기본적으로 패키지는 비공개 가용성으로 생성됩니다.
+
+**API 형식**
+
+```http
+GET `/packages/update`
+```
 
 **요청**
 
@@ -1603,7 +1609,7 @@ curl -X GET \
 
 ```shell
 curl -X GET \
-  http://platform.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
+  http://platform.adobe.io/data/foundation/exim/packages/update \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
