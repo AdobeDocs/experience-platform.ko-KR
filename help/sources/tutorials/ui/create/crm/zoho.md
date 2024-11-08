@@ -5,7 +5,7 @@ title: UI에서 Zoho CRM Source 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 Zoho CRM 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # UI에서 [!DNL Zoho CRM] 소스 연결 만들기
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Zoho CRM] 원본은 2025년 6월 말에 사용되지 않습니다.
 

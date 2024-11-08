@@ -4,7 +4,7 @@ title: Oracle 서비스 Cloud Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Oracle Service Cloud를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Oracle 서비스 클라우드 소스
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Oracle Service Cloud] 원본은 2025년 5월 말에 사용되지 않습니다.
 

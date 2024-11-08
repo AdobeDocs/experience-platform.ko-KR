@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Couchbase Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Couchbase를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!DNL Couchbase] 커넥터
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Couchbase] 원본은 2025년 5월 말에 사용되지 않습니다.
 

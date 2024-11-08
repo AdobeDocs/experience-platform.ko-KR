@@ -2,7 +2,7 @@
 title: Experience Platform 사용자 인터페이스를 사용하여 Phoenix 계정 연결
 description: 사용자 인터페이스를 사용하여 Phoenix 계정을 연결하고 Phoenix 데이터베이스의 데이터를 Experience Platform으로 가져오는 방법에 대해 알아봅니다.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # UI를 사용하여 [!DNL Phoenix] 계정을 Experience Platform에 연결
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Phoenix] 원본은 2025년 5월 말에 사용되지 않습니다.
 

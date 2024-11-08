@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Zoho CRM Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Zoho CRM을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!DNL Zoho CRM]
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Zoho CRM] 원본은 2025년 6월 말에 사용되지 않습니다.
 

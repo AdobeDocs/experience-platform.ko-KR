@@ -5,7 +5,7 @@ title: 흐름 서비스 API를 사용하여 Zoho CRM 기본 연결 만들기
 type: Tutorial
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Zoho CRM에 연결하는 방법을 알아봅니다.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # [!DNL Flow Service] API를 사용하여 [!DNL Zoho CRM] 기본 연결 만들기
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Zoho CRM] 원본은 2025년 6월 말에 사용되지 않습니다.
 

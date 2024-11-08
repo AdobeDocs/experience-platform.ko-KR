@@ -2,7 +2,7 @@
 title: 흐름 서비스 API를 사용하여 Phoenix Base 연결 만들기
 description: 흐름 서비스 API를 사용하여 Phoenix 데이터베이스를 Adobe Experience Platform에 연결하는 방법에 대해 알아봅니다.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # [!DNL Flow Service] API를 사용하여 [!DNL Phoenix] 기본 연결 만들기
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Phoenix] 원본은 2025년 5월 말에 사용되지 않습니다.
 

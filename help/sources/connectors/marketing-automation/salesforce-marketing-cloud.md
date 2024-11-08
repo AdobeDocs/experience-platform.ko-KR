@@ -4,7 +4,7 @@ title: Salesforce Marketing Cloud Source 개요
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce Marketing Cloud을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!DNL Salesforce Marketing Cloud]
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Salesforce Marketing Cloud] 원본은 2025년 5월 말에 사용되지 않습니다.
 
