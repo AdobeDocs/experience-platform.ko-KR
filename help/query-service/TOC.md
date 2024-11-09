@@ -5,9 +5,9 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
+source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '366'
 ht-degree: 22%
 
 ---
@@ -104,7 +104,7 @@ ht-degree: 22%
    - [예약된 쿼리 모니터링](ui/monitor-queries.md)
    - [자격 증명 안내서](ui/credentials.md)
    - [쿼리 결과에서 출력 데이터 세트 생성](ui/create-datasets.md)
-- 쿼리 서비스 API 끝점 {#api}
+- 쿼리 서비스 API {#api}
    - [시작하기](api/getting-started.md)
    - [쿼리](api/queries.md)
    - [연결 매개변수](api/connection-parameters.md)
@@ -113,6 +113,11 @@ ht-degree: 22%
    - [쿼리 템플릿](api/query-templates.md)
    - [가속화된 쿼리](api/accelerated-queries.md)
    - [경고 구독](api/alert-subscriptions.md)
+- 쿼리 서비스 인증 API {#auth-api}
+   - [개요](auth-api/overview.md)
+   - [시작하기](auth-api/getting-started.md)
+   - [액세스](auth-api/ip-access.md)
+   - [유효성 검사](auth-api/validate.md)
 - 데이터 거버넌스 {#data-governance}
    - [개요](data-governance/overview.md)
    - [감사 로그 안내서](data-governance/audit-log-guide.md)
