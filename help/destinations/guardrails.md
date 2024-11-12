@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
+source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
 workflow-type: tm+mt
-source-wordcount: '1686'
-ht-degree: 2%
+source-wordcount: '1715'
+ht-degree: 1%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 2%
 | 대상에 매핑된 최대 속성 수 | 50 | 성능 보호 | 여러 대상 및 대상 유형의 경우 내보내기 위해 매핑할 프로필 속성 및 ID를 선택할 수 있습니다. 최적의 성능을 위해 데이터 흐름에서 대상에 최대 50개의 속성을 매핑해야 합니다. |
 | 최대 대상 수 | 10 | 시스템 강제 보호 | 데이터를 연결하고 활성화할 수 있는 대상을 최대 100개까지 만들 수 있습니다. *샌드박스당*. [Edge 개인화 대상(사용자 지정 개인화)](#edge-destinations-activation)은(는) 100개의 권장 대상 중 최대 10개를 구성할 수 있습니다. |
 | 대상에 활성화된 데이터 유형 | ID 및 ID 맵을 포함한 프로필 데이터 | 시스템 강제 보호 | 현재 *프로필 레코드 특성*&#x200B;을(를) 대상으로 내보낼 수만 있습니다. 이벤트 데이터를 설명하는 XDM 속성은 현재 내보내기에서 지원되지 않습니다. |
-| 대상에 활성화된 데이터 유형 - 배열 및 맵 속성 지원 | 사용할 수 없음 | 시스템 강제 보호 | 현재 *배열 또는 매핑 특성*&#x200B;을(를) 대상으로 내보내는 것은 **할 수 없습니다**. 스트리밍 및 파일 기반 활성화에서 모두 내보내는 [ID 맵](/help/xdm/field-groups/profile/identitymap.md)은(는) 이 규칙에서 예외입니다. |
+| 대상에 활성화된 데이터 유형 - 배열 및 맵 속성 지원 | 부분적으로 사용 가능하 | 시스템 강제 보호 | 배열 특성을 [파일 기반 대상](/help/destinations/destination-types.md#file-based)(으)로 내보낼 수 있습니다. 배열을 대상 파일의 문자열로 병합하려면 `array_to_string` 함수를 사용해야 합니다. 기능에 대해 [자세히 읽어보세요](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality). <br><br> 현재 *맵 특성*&#x200B;을(를) 대상으로 내보내는 것은 **불가능합니다**. 스트리밍 및 파일 기반 활성화에서 모두 내보내는 [ID 맵](/help/xdm/field-groups/profile/identitymap.md)은(는) 이 규칙에서 예외입니다. |
 
 {style="table-layout:auto"}
 
