@@ -2,7 +2,7 @@
 title: propositions 적용
 description: 이미 sendEvent로 렌더링된 제안을 다시 렌더링합니다.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -46,7 +46,7 @@ ht-degree: 0%
 * **`viewName`**: 단일 페이지 응용 프로그램에서 렌더링할 보기의 이름입니다. 이러한 결정에 대한 표시 알림이 캐시되며 `personalization.includePendingDisplayNotifications`을(를) 사용하여 후속 `sendEvent` 명령에 포함될 수 있습니다.
 
 ```js
-alloy("applyPropositiions",{
+alloy("applyPropositions",{
   "propositions": [],
   "metadata": {},
   "viewName": ""
