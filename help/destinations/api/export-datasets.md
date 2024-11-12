@@ -4,9 +4,9 @@ title: 흐름 서비스 API를 사용하여 데이터 세트 내보내기
 description: 흐름 서비스 API를 사용하여 데이터 세트를 내보내기 하여 대상을 선택하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 22a752e28fe3cc4cb3337b456e80ef1b273f6a71
+source-git-commit: c32d2801fe38183225d24f38284b42e3d78e2631
 workflow-type: tm+mt
-source-wordcount: '5107'
+source-wordcount: '5138'
 ht-degree: 3%
 
 ---
@@ -1163,9 +1163,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 다음으로 데이터 세트에 대한 내보내기 매개 변수를 저장하는 타겟 연결을 만들어야 합니다. 내보내기 매개 변수에는 위치, 파일 형식, 압축 및 기타 세부 사항이 포함됩니다. 각 대상 유형에 대해 지원되는 속성을 이해하려면 대상의 연결 사양에 제공된 `targetSpec` 속성을 참조하십시오. 지원되는 모든 대상의 `targetSpec` 속성을 보려면 아래 탭을 참조하십시오.
 
->[!WARNING]
+>[!IMPORTANT]
 >
->JSON 파일로 내보내기는 압축 모드에서만 지원됩니다. [!DNL Parquet] 파일로 내보내기는 압축 및 압축 해제 모드에서 지원됩니다.
+>JSON 파일로 내보내기는 압축 모드에서만 지원됩니다. [!DNL Parquet] 파일로 내보내기는 압축 모드와 압축 해제 모드 모두에서 지원됩니다.
+>
+>내보낸 JSON 파일의 형식은 NDJSON이며, 이는 빅 데이터 생태계의 표준 교환 형식입니다. Adobe은 NDJSON 호환 클라이언트를 사용하여 내보낸 파일을 읽는 것을 권장합니다.
 
 >[!BEGINTABS]
 

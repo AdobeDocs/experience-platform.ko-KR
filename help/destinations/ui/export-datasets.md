@@ -3,9 +3,9 @@ title: 클라우드 스토리지 대상으로 데이터 세트 내보내기
 type: Tutorial
 description: Adobe Experience Platform에서 선호하는 클라우드 스토리지 위치로 데이터 세트를 내보내는 방법을 알아봅니다.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: 74dcaff91a264062feec262784e056a296072fd7
 workflow-type: tm+mt
-source-wordcount: '2573'
+source-wordcount: '2603'
 ht-degree: 8%
 
 ---
@@ -238,7 +238,7 @@ Experience Platform은 지정한 저장소 위치에 내보낸 데이터 세트 
 
 압축할 때 두 파일 유형 간의 파일 형식 차이를 확인합니다.
 
-* 압축된 JSON 파일을 내보낼 때 내보낸 파일 형식은 `json.gz`입니다.
+* 압축된 JSON 파일을 내보낼 때 내보낸 파일 형식은 `json.gz`입니다. 내보낸 JSON의 형식은 NDJSON이며, 이 형식은 빅 데이터 생태계의 표준 교환 형식입니다. Adobe은 NDJSON 호환 클라이언트를 사용하여 내보낸 파일을 읽는 것을 권장합니다.
 * 압축된 Parquet 파일을 내보낼 때 내보낸 파일 형식은 `gz.parquet`입니다.
 
 JSON 파일로 내보내기는 압축 모드에서 *지원됩니다*. Parquet 파일로 내보내기는 압축 및 압축되지 않은 모드에서 지원됩니다.
