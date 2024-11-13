@@ -3,14 +3,19 @@ keywords: Experience Platform, 보안, ip 액세스, QS-Auth, API 안내서, 쿼
 title: IP 액세스 끝점
 description: IP 액세스 API 끝점을 사용하여 쿼리 서비스의 샌드박스 액세스에 대한 IP 범위를 관리하는 방법을 알아봅니다.
 role: Developer
-source-git-commit: 23e5260133f0f16ac30d14346c227a21f251b7e1
+exl-id: fc15ab50-c125-4f00-a311-81fd41697c7d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 2%
+source-wordcount: '422'
+ht-degree: 3%
 
 ---
 
 # IP 액세스 끝점
+
+>[!AVAILABILITY]
+>
+>이 기능은 Data Distiller 추가 기능을 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 
 지정된 Query Service 샌드박스 내에서 데이터 액세스를 보호하려면 IP 액세스 끝점을 사용하여 허용된 IP 범위를 관리합니다. 이 API를 사용하여 조직의 ID와 연결된 IP 범위를 가져오거나 구성하거나 삭제할 수 있습니다.
 
@@ -163,4 +168,3 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/security/ip-acces
   ]
 }
 ```
-

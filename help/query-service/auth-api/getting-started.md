@@ -3,14 +3,19 @@ keywords: Experience Platform, 쿼리 서비스, IP 액세스 제어, 인증, AP
 title: 쿼리 서비스 권한 부여 API 안내서
 description: Adobe Experience Platform의 쿼리 서비스 내에서 보안 데이터 액세스를 위해 권한 부여 및 IP 범위 제한을 시작하는 방법을 알아봅니다.
 role: Developer
-source-git-commit: eb6558c2cc3faebb2cb14f49f7517227d57f7162
+exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 4%
+source-wordcount: '482'
+ht-degree: 6%
 
 ---
 
 # 쿼리 서비스 권한 부여 API 안내서
+
+>[!AVAILABILITY]
+>
+>이 기능은 Data Distiller 추가 기능을 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 
 Query Service Authorization API는 Adobe Experience Platform의 SQL 인터페이스를 통해 데이터 액세스를 더 강력하게 제어할 수 있도록 조직에 제공합니다. 이 API를 사용하여 IP 제한을 정의하고, 지정된 네트워크에 대한 데이터 액세스를 제한하며, 보안 모니터링을 강화할 수 있습니다.
 
