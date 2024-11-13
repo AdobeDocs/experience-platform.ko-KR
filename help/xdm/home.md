@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM 시스템 개요
 description: 표준화와 상호 운용성은 Adobe Experience Platform의 핵심 개념입니다. Adobe을 기반으로 하는 XDM(Experience Data Model)은 고객 경험 데이터를 표준화하고 고객 경험 관리를 위한 스키마를 정의하는 작업입니다.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 48caa318f0e951979db4fd2c94624a73311422d6
+source-git-commit: 442df54080b08b7fc3888e8bd5c7bd3e8f301240
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2124'
 ht-degree: 4%
 
 ---
@@ -128,6 +128,10 @@ Real-Time Customer Profile은 타깃팅되고 개인화된 경험 관리를 위�
 자세한 내용은 [실시간 고객 프로필 개요](../profile/home.md)를 참조하십시오.
 
 ### 데이터 과학 작업 영역 {#data-science-workspace}
+
+>[!NOTE]
+>
+>Data Science Workspace은 더 이상 구입할 수 없습니다. 이 설명서는 Data Science Workspace에 대한 이전 권한이 있는 기존 고객을 대상으로 합니다.
 
 Adobe Experience Platform Data Science Workspace은 머신 러닝 및 인공 지능을 사용하여 Experience Platform 내에 저장된 데이터에서 통찰력을 얻습니다. 데이터 과학 Workspace을 사용하면 데이터 과학자가 고객 및 활동에 대한 [!UICONTROL XDM 개별 프로필] 및 [!UICONTROL XDM ExperienceEvent] 데이터를 기반으로 레시피를 빌드할 수 있습니다. 이러한 레시피는 개인이 인식하고 사용할 가능성이 높은 구매 성향 및 추천 오퍼와 같은 예측을 용이하게 합니다.
 
