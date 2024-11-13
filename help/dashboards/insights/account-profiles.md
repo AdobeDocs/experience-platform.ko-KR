@@ -1,13 +1,13 @@
 ---
 title: 계정 프로필 통찰력
 description: 계정 프로필 인사이트를 제공하는 SQL을 살펴보고 이러한 쿼리를 사용하여 고객 및 고객 경험을 추가로 살펴보는 사용자 지정 인사이트를 생성하십시오.
-badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f9ef0e25dac1715bbb6d73db52d6368c543bf7ec
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 1%
+source-wordcount: '773'
+ht-degree: 0%
 
 ---
 
@@ -281,10 +281,232 @@ ORDER BY  d.date_key limit 5000;
 
 +++
 
+## 계정당 고객 개요 {#customers-per-account-overview}
+
+>[!NOTE]
+>
+>[!UICONTROL 계정당 고객 개요] 차트에는 [!UICONTROL 계정당 고객 세부 정보], [!UICONTROL 계정당 기회 개요] 및 [!UICONTROL 계정당 기회 세부 정보]의 세 가지 드릴스루 인사이트가 포함됩니다. 이러한 드릴스루는 카테고리(예: 직접 및 간접 고객)와 범위(예: 고객 및 기회 수 범위)별로 고객 및 기회 수를 분류하여 보다 세분화된 통찰력을 제공합니다. 이러한 차트는 사용자가 설정했을 수 있는 글로벌 날짜 필터의 영향을 받지 않습니다.
+
+이 통찰력에 의해 답변된 질문:
+
+- 직간접 고객 유무에 따른 계좌의 분포는 어떠한가?
+
++++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
+
+```sql
+WITH LatestDate AS (SELECT MAX(inserted_date) AS max_inserted_date FROM adwh_b2b_account_person_association),
+     CategorizedData AS (
+         SELECT CASE 
+                    WHEN is_direct = 'true' AND person_count = 0 THEN 'Accounts without Direct Customers' 
+                    WHEN is_direct = 'false' AND person_count = 0 THEN 'Accounts without Indirect Customers' 
+                    WHEN is_direct = 'true' AND person_count > 0 THEN 'Accounts with Direct Customers' 
+                    WHEN is_direct = 'false' AND person_count > 0 THEN 'Accounts with Indirect Customers' 
+                END AS Account_Category, 
+                account_count 
+         FROM adwh_b2b_account_person_association 
+         WHERE inserted_date = (SELECT max_inserted_date FROM LatestDate)
+     ),
+     AggregatedData AS (
+         SELECT Account_Category, SUM(account_count) AS Accounts 
+         FROM CategorizedData 
+         GROUP BY Account_Category
+     ),
+     AllCategories AS (
+         SELECT 'Accounts without Direct Customers' AS Account_Category 
+         UNION ALL SELECT 'Accounts without Indirect Customers' 
+         UNION ALL SELECT 'Accounts with Direct Customers' 
+         UNION ALL SELECT 'Accounts with Indirect Customers'
+     )
+SELECT ac.Account_Category AS Account_Category, COALESCE(ad.Accounts, 0) AS Accounts 
+FROM AllCategories ac 
+LEFT JOIN AggregatedData ad ON ac.Account_Category = ad.Account_Category 
+ORDER BY ac.Account_Category;
+```
+
++++
+
+## 계정당 고객 세부 정보 {#customers-per-account-detail}
+
+>[!NOTE]
+>
+>이 인사이트는 글로벌 날짜 필터의 영향을 받지 않습니다.
+
+이 통찰력에 의해 답변된 질문:
+
+- 직접 또는 간접 고객 범위가 다른 계정은 몇 개입니까?
+
++++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
+
+```sql
+WITH customer_ranges AS (
+    SELECT 'Direct Customer' AS customer_type, '1-10 Customers' AS person_range 
+    UNION ALL
+    SELECT 'Direct Customer', '11-100 Customers' 
+    UNION ALL
+    SELECT 'Direct Customer', '101-1000 Customers' 
+    UNION ALL
+    SELECT 'Direct Customer', '1000+ Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '1-10 Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '11-100 Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '101-1000 Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '1000+ Customers'
+)
+SELECT 
+    cr.customer_type, 
+    cr.person_range, 
+    COALESCE(SUM(ap.account_count), 0) AS Accounts
+FROM customer_ranges cr
+LEFT JOIN (
+    SELECT 
+        CASE 
+            WHEN is_direct = 'true' THEN 'Direct Customer' 
+            ELSE 'Indirect Customer' 
+        END AS customer_type,
+        CASE 
+            WHEN person_count BETWEEN 1 AND 10 THEN '1-10 Customers' 
+            WHEN person_count BETWEEN 11 AND 100 THEN '11-100 Customers' 
+            WHEN person_count BETWEEN 101 AND 1000 THEN '101-1000 Customers' 
+            WHEN person_count > 1000 THEN '1000+ Customers' 
+        END AS person_range,
+        SUM(account_count) AS account_count
+    FROM adwh_b2b_account_person_association 
+    WHERE inserted_date = (SELECT MAX(inserted_date) FROM adwh_b2b_account_person_association) 
+    GROUP BY 
+        CASE 
+            WHEN is_direct = 'true' THEN 'Direct Customer' 
+            ELSE 'Indirect Customer' 
+        END,
+        CASE 
+            WHEN person_count BETWEEN 1 AND 10 THEN '1-10 Customers' 
+            WHEN person_count BETWEEN 11 AND 100 THEN '11-100 Customers' 
+            WHEN person_count BETWEEN 101 AND 1000 THEN '101-1000 Customers' 
+            WHEN person_count > 1000 THEN '1000+ Customers' 
+        END
+) ap ON cr.customer_type = ap.customer_type AND cr.person_range = ap.person_range
+GROUP BY cr.customer_type, cr.person_range
+ORDER BY cr.customer_type, 
+    CASE cr.person_range 
+        WHEN '1-10 Customers' THEN 1 
+        WHEN '11-100 Customers' THEN 2 
+        WHEN '101-1000 Customers' THEN 3 
+        WHEN '1000+ Customers' THEN 4 
+    END;
+```
+
++++
+
+## 계정당 영업 기회 개요 {#opportunities-per-account-overview}
+
+>[!NOTE]
+>
+>이 인사이트는 글로벌 날짜 필터의 영향을 받지 않습니다.
+
+이 통찰력에 의해 답변된 질문:
+
+- 관련 영업 기회가 있는지 여부에 따른 계정 분포는 무엇입니까?
+
++++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
+
+```sql
+WITH LatestDate AS (
+    SELECT MAX(inserted_date) AS max_inserted_date 
+    FROM adwh_b2b_account_opportunity_association
+),
+CategorizedData AS (
+    SELECT 
+        CASE 
+            WHEN opportunity_count = 0 THEN 'Accounts without Opportunities'
+            WHEN opportunity_count > 0 THEN 'Accounts with Opportunities'
+        END AS Opportunity_Category, 
+        account_count 
+    FROM adwh_b2b_account_opportunity_association 
+    WHERE inserted_date = (SELECT max_inserted_date FROM LatestDate)
+),
+AggregatedData AS (
+    SELECT 
+        Opportunity_Category,
+        SUM(account_count) AS Accounts 
+    FROM CategorizedData 
+    GROUP BY Opportunity_Category
+),
+AllCategories AS (
+    SELECT 'Accounts without Opportunities' AS Opportunity_Category 
+    UNION ALL 
+    SELECT 'Accounts with Opportunities'
+)
+SELECT 
+    ac.Opportunity_Category AS Opportunity_Category, 
+    COALESCE(ad.Accounts, 0) AS Accounts 
+FROM AllCategories ac 
+LEFT JOIN AggregatedData ad 
+    ON ac.Opportunity_Category = ad.Opportunity_Category 
+ORDER BY ac.Opportunity_Category;
+```
+
++++
+
+## 계정당 영업 기회 세부 정보 {#opportunities-per-account-detail}
+
+>[!NOTE]
+>
+>이 인사이트는 글로벌 날짜 필터의 영향을 받지 않습니다.
+
+이 통찰력에 의해 답변된 질문:
+
+- 몇 개의 고객이 서로 다른 범위의 연계 기회를 가지고 있습니까?
+
++++이 통찰력을 생성하는 SQL을 표시하려면 선택합니다.
+
+```sql
+WITH opportunity_ranges AS (
+    SELECT '1-10 Opportunities' AS opportunity_range 
+    UNION ALL 
+    SELECT '11-50 Opportunities' 
+    UNION ALL 
+    SELECT '51-100 Opportunities' 
+    UNION ALL 
+    SELECT '100+ Opportunities'
+)
+SELECT opportunity_ranges.opportunity_range AS OPPORTUNITIES, 
+       COALESCE(SUM(accounts.total_accounts), 0) AS ACCOUNTS 
+FROM opportunity_ranges 
+LEFT JOIN (
+    SELECT 
+        CASE 
+            WHEN opportunity_count BETWEEN 1 AND 10 THEN '1-10 Opportunities' 
+            WHEN opportunity_count BETWEEN 11 AND 50 THEN '11-50 Opportunities' 
+            WHEN opportunity_count BETWEEN 51 AND 100 THEN '51-100 Opportunities' 
+            WHEN opportunity_count > 100 THEN '100+ Opportunities' 
+        END AS opportunity_range, 
+        SUM(account_count) AS total_accounts 
+    FROM adwh_b2b_account_opportunity_association 
+    WHERE inserted_date = (SELECT MAX(inserted_date) FROM adwh_b2b_account_opportunity_association) 
+      AND opportunity_count > 0 
+    GROUP BY 
+        CASE 
+            WHEN opportunity_count BETWEEN 1 AND 10 THEN '1-10 Opportunities' 
+            WHEN opportunity_count BETWEEN 11 AND 50 THEN '11-50 Opportunities' 
+            WHEN opportunity_count BETWEEN 51 AND 100 THEN '51-100 Opportunities' 
+            WHEN opportunity_count > 100 THEN '100+ Opportunities' 
+        END
+) AS accounts ON opportunity_ranges.opportunity_range = accounts.opportunity_range 
+GROUP BY opportunity_ranges.opportunity_range 
+ORDER BY CASE opportunity_ranges.opportunity_range 
+            WHEN '1-10 Opportunities' THEN 1 
+            WHEN '11-50 Opportunities' THEN 2 
+            WHEN '51-100 Opportunities' THEN 3 
+            WHEN '100+ Opportunities' THEN 4 
+        END;
+```
+
++++
+
 ## 다음 단계
 
-이제 이 문서를 읽고 계정 프로필 대시보드 인사이트를 생성하는 SQL과 이 분석이 해결하는 일반적인 질문을 이해합니다. 이제 SQL을 편집하고 반복하여 고유한 인사이트를 생성할 수 있습니다.
-
-<!-- Add link above Learn how to [generate insights with SQL](). after April release -->
+이제 이 문서를 읽고 계정 프로필 대시보드 인사이트를 생성하는 SQL과 이 분석이 해결하는 일반적인 질문을 이해합니다. 이제 SQL을 편집하고 반복하여 고유한 인사이트를 생성할 수 있습니다. SQL로 사용자 지정 인사이트를 생성하는 방법에 대해 알아보려면 [Query Pro 모드 개요](../sql-insights-query-pro-mode/overview.md)를 참조하세요.
 
 [프로필](./profiles.md), [대상](./audiences.md) 및 [대상](./destinations.md) 대시보드에 대한 인사이트를 생성하는 SQL을 읽고 이해할 수도 있습니다.
