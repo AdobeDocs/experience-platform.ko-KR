@@ -2,24 +2,22 @@
 title: 데이터스트림에 대한 보트 탐지 구성
 description: 사람 트래픽과 사람 트래픽을 구분하기 위해 데이터스트림에 대한 봇 탐지를 구성하는 방법에 대해 알아봅니다.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: ff95e5e105f7b3e1213eab90456b9fa9000918d3
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
 
 # 데이터스트림에 대한 보트 탐지 구성
 
-자동화된 프로그램, 웹 스크레이퍼, 스파이더, 스크립팅된 스캐너와 같은 비인간 엔티티에서 발생하는 트래픽은 인간 방문자에서 발생하는 이벤트를 식별하는 것을 더 어렵게 할 수 있습니다. 이 유형의 트래픽은 중요한 비즈니스 지표에 부정적인 영향을 주어 잘못된 트래픽 보고를 초래할 수 있습니다.
+자동화된 프로그램, 웹 스크레이퍼, 스파이더 및 스크립팅된 스캐너로부터의 비사람 트래픽은 사람 방문자로부터 발생하는 이벤트를 식별하는 것을 어렵게 할 수 있습니다. 이 유형의 트래픽은 중요한 비즈니스 지표에 부정적인 영향을 주어 잘못된 트래픽 보고를 초래할 수 있습니다.
 
 보트 검색을 사용하면 [Web SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) 및 [[!DNL Server API]](../server-api/overview.md)에서 생성된 이벤트를 알려진 스파이더 및 보트에서 생성된 이벤트로 식별할 수 있습니다.
 
-데이터스트림에 대한 보트 감지를 구성하여 보트 이벤트로 분류하려는 특정 IP 주소, IP 범위 및 요청 헤더를 식별할 수 있습니다.
+데이터스트림에 대한 보트 감지를 구성하여 특정 IP 주소, IP 범위 및 요청 헤더를 식별하여 보트 이벤트로 분류할 수 있습니다. 이렇게 하면 사이트 또는 모바일 애플리케이션에서 사용자 활동을 보다 정확하게 측정할 수 있습니다.
 
-보트 트래픽을 식별하면 사이트 또는 모바일 애플리케이션에서 사용자 활동을 보다 정확하게 측정할 수 있습니다.
-
-Edge Network에 대한 요청이 보트 탐지 규칙과 일치하는 경우 XDM 스키마는 아래와 같이 보트 점수로 업데이트됩니다(항상 1로 설정됨).
+Edge Network에 대한 요청이 보트 감지 규칙과 일치하는 경우, XDM 스키마는 아래와 같이 보트 점수로 업데이트됩니다(항상 1로 설정됨).
 
 ```json
 {
@@ -66,9 +64,12 @@ Edge Network에 대한 요청이 보트 탐지 규칙과 일치하는 경우 XDM
 
 ### IAB/ABC International Spiders and Bots List 사용 {#iab-list}
 
-[IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)은(는) 검색 엔진 크롤러, 모니터링 도구 및 분석 횟수에 표시하지 않을 수 있는 기타 비인적 트래픽과 같은 자동화된 트래픽을 식별하는 데 도움이 되는 업계 표준 타사 인터넷 스파이더 및 보트 목록입니다.
+[IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)은(는) 타사의 산업 표준 인터넷 스파이더 및 보트 목록입니다. 이 목록은 검색 엔진 크롤러, 모니터링 도구 및 분석 횟수에 포함하지 않으려는 기타 비인적 트래픽과 같은 자동화된 트래픽을 식별하는 데 도움이 됩니다.
 
-[!DNL IAB/ABC International Spiders and Bots List]을(를) 사용하도록 데이터 스트림을 구성하려면 **[!UICONTROL 이 데이터 스트림에 대한 보트 감지를 위해 IAB/ABC International Spiders and Bots List 사용]** 옵션을 전환한 다음 저장 을 선택하여 보트 감지 설정을 데이터 스트림에 적용합니다.
+IAB/ABC International Spiders and Bots List를 사용하도록 데이터 스트림을 구성하려면 다음을 수행하십시오.
+
+1. **[!UICONTROL 이 데이터 스트림에서 보트 감지를 위해 IAB/ABC International Spiders and Bots List 사용]** 옵션을 전환합니다.
+2. 보트 검색 설정을 데이터 스트림에 적용하려면 **[!UICONTROL 저장]**&#x200B;을 선택하십시오.
 
 ![IAB 스파이더 및 보트 목록을 사용할 수 있습니다.](assets/bot-detection/bot-detection-list.png)
 

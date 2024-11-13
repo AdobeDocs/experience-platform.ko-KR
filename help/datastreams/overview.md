@@ -2,16 +2,18 @@
 title: 데이터스트림 개요
 description: 데이터스트림을 통해 클라이언트측 Experience Platform SDK 통합을 Adobe 제품 및 서드파티 대상과 연결하는 방법에 대해 알아봅니다.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 77%
+source-wordcount: '712'
+ht-degree: 70%
 
 ---
 
 # 데이터스트림 개요
 
-데이터스트림은 Adobe Experience Platform Web 및 Mobile SDK 구현 시 서버측 구성을 나타냅니다. SDK의 [`configure`](/help/web-sdk/commands/configure/overview.md) 명령은 클라이언트에서 처리해야 하는 항목을 제어하는 반면(`edgeDomain` 등), 데이터스트림은 SDK에 대한 다른 모든 구성을 처리합니다. Adobe Experience Platform Edge Network로 요청이 전송되면 `datastreamId`는 데이터스트림을 참조하는 데 사용됩니다. 이를 통해 웹 사이트에서 코드를 변경하지 않고도 서버측 구성을 업데이트할 수 있습니다.
+데이터 스트림은 Adobe Experience Platform 웹 및 Mobile SDK에 대한 서버측 구성을 나타냅니다. SDK의 [`configure`](/help/web-sdk/commands/configure/overview.md) 명령은 클라이언트측 설정(예: `edgeDomain`)을 처리하는 동안 데이터스트림은 다른 모든 구성을 관리합니다.
+
+Edge Network에 요청을 보낼 때 `datastreamId`은(는) 데이터가 전송되는 데이터 스트림을 참조합니다. 이렇게 하면 웹 사이트의 코드를 변경하지 않고 서버측 구성을 업데이트할 수 있습니다.
 
 Adobe Experience Platform UI 또는 데이터 수집 UI 내의 왼쪽 탐색 영역에서 **[!UICONTROL 데이터스트림]**&#x200B;을 선택하여 데이터스트림을 만들고 관리할 수 있습니다.
 
@@ -27,7 +29,7 @@ UI에서 데이터스트림을 구성하는 방법에 대한 자세한 내용은
 
 기업 데이터 관리 정책 및 규제 요구 사항으로 인해 민감한 고객 데이터의 수집, 처리 및 사용 방법에 대한 제한 사항이 늘고 있습니다. 여기에는 건강 보험 이동성 및 책임법(HIPAA)과 같은 규정에 적용되는 개인건강정보(PHI)의 수집, 처리 및 사용이 포함됩니다.
 
-데이터스트림은 민감한 데이터를 안전하게 처리할 수 있는 세 가지 방법을 제공합니다.
+데이터스트림은 중요한 데이터를 안전하게 처리하는 데 도움이 되는 세 가지 방법을 제공합니다.
 
 * [향상된 암호화](#encryption)
 * [데이터 거버넌스](#governance)
