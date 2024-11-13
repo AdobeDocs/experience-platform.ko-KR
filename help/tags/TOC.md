@@ -6,7 +6,7 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
 workflow-type: tm+mt
 source-wordcount: '778'
 ht-degree: 35%
@@ -261,7 +261,7 @@ ht-degree: 35%
    * [지원되는 브라우저](./extension-dev/browsers.md)
    * 제출 프로세스 {#submit}
       * [개요](./extension-dev/submit/overview.md)
-      * [회사 설정](./extension-dev/submit/setup.md)
+      * [조직 설정](./extension-dev/submit/setup.md)
       * [사용자 액세스 권한 부여](./extension-dev/submit/access.md)
       * [확장 개발](./extension-dev/submit/develop.md)
       * [Exchange 목록 만들기](./extension-dev/submit/create-listing.md)

@@ -1,14 +1,15 @@
 ---
 title: 확장 패키지 Zip 파일 만들기
 description: 확장 패키지 zip 파일을 준비하는 방법에 대해 알아봅니다.
-source-git-commit: 92e519e0662c3c3521bfe5ca814b37464e55c7e1
+exl-id: e66ff29a-1130-4e44-aca2-92a5398e5651
+source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 45%
 
 ---
 
-# 확장 패키지 zip 파일을 만듭니다.
+# 확장 패키지 zip 파일 만들기
 
 >[!NOTE]
 >
