@@ -3,13 +3,13 @@ title: Zeta 마케팅 플랫폼
 description: ZMP(Zeta Marketing Platform)는 인텔리전스(독점 데이터 및 AI)를 기반으로 고객을 보다 효율적으로 확보, 성장 및 유지할 수 있도록 지원하는 클라우드 기반 시스템입니다.
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
+source-git-commit: 0c3c192105146dd949e9b11f8925bf4f9d7c15c0
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 1%
 
 ---
-
 
 # Zeta 마케팅 플랫폼 {#zeta-marketing-platform}
 
@@ -31,17 +31,17 @@ Adobe Experience Platform에서 사용할 수 있는 Zeta Marketing Platform 커
 
 ### 광고가 있는 타겟 사용자 {#use-case-target-users}
 
-광고주는 DSP(제타 Demand Side Platform)를 통해 특정 대상 내의 사용자를 타겟팅하는 것을 목표로 합니다. 이러한 사용자는 브랜드와 상호 작용합니다. Zeta DSP에 대한 자세한 내용을 보려면 [여기](https://knowledgebase.zetaglobal.com/programmatic-user-guide/)를 클릭하세요.
+광고주는 DSP(제타 Demand Side Platform)를 통해 특정 대상 내의 사용자를 타겟팅하는 것을 목표로 합니다. 이러한 사용자는 브랜드와 상호 작용합니다. Zeta DSP에 대한 자세한 내용을 보려면 [여기](https://knowledgebase.zetaglobal.com/pug/)를 클릭하세요.
 
 ## 전제 조건 {#prerequisites}
 
 ### Zeta Marketing Platform 사전 요구 사항
 
-* Zeta Marketing Platform 대상에 대한 새 연결을 설정하기 전에 Zeta Marketing Platform 계정에 빈 고객 목록을 만들어야 합니다. 이러한 고객 목록 중 하나를 보낼 Adobe Experience Platform 대상을 받을 지정된 대상으로 선택해야 합니다. [여기](https://knowledgebase.zetaglobal.com/zmp/creating-audiences#CreatingAudiences-CreatingaCustomerList)의 지침을 따라 ZMP에서 빈 고객 목록을 만들 수 있습니다.
+* Zeta Marketing Platform 대상에 대한 새 연결을 설정하기 전에 Zeta Marketing Platform 계정에 빈 고객 목록을 만들어야 합니다. 이러한 고객 목록 중 하나를 보낼 Adobe Experience Platform 대상을 받을 지정된 대상으로 선택해야 합니다. [여기](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList)의 지침을 따라 ZMP에서 빈 고객 목록을 만들 수 있습니다.
 * Adobe Experience Platform에서는 특정 ZMP 대상 인스턴스에 대해 여러 대상을 활성화할 수 있지만 각 ZMP 대상 인스턴스는 하나의 Experience Platform 대상만 수신해야 합니다. Experience Platform에서 여러 대상을 처리하려면 각 대상에 대해 추가 ZMP 대상 인스턴스를 생성하고 드롭다운에서 다른 고객 목록을 선택하십시오. 이 방법을 사용하면 대상 ZMP 대상을 덮어쓰지 않습니다. 자세한 내용은 [대상 세부 정보 채우기](#destination-details)를 참조하십시오.
 * 다음 자격 증명을 사용하여 대상을 구성합니다.
    * 사용자 이름: **api**
-   * 암호: ZMP REST API 키. ZMP 계정에 로그인하고 **설정** > **통합** > **키 및 앱** 섹션으로 이동하여 REST API 키를 찾을 수 있습니다. 자세한 내용은 [ZMP 설명서](https://knowledgebase.zetaglobal.com/zmp/integrations)를 참조하세요.
+   * 암호: ZMP REST API 키. ZMP 계정에 로그인하고 **설정** > **통합** > **키 및 앱** 섹션으로 이동하여 REST API 키를 찾을 수 있습니다. 자세한 내용은 [ZMP 설명서](https://knowledgebase.zetaglobal.com/kb/integrations)를 참조하세요.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -94,7 +94,7 @@ Adobe Experience Platform에서 사용할 수 있는 Zeta Marketing Platform 커
 대상에 인증하려면 필수 필드를 입력한 다음 **[!UICONTROL 대상에 연결]**&#x200B;을(를) 선택하십시오.
 
 * **[!UICONTROL 사용자 이름]**: `api`
-* **[!UICONTROL 암호]**: ZMP REST API 키입니다. ZMP 계정에 로그인하고 **설정** > **통합** > **키 및 앱** 섹션으로 이동하여 REST API 키를 찾을 수 있습니다. 자세한 내용은 [ZMP 설명서](https://knowledgebase.zetaglobal.com/zmp/integrations)를 참조하세요.
+* **[!UICONTROL 암호]**: ZMP REST API 키입니다. ZMP 계정에 로그인하고 **설정** > **통합** > **키 및 앱** 섹션으로 이동하여 REST API 키를 찾을 수 있습니다. 자세한 내용은 [ZMP 설명서](https://knowledgebase.zetaglobal.com/kb/integrations)를 참조하세요.
 
 ### 대상 세부 정보 입력 {#destination-details}
 
@@ -103,7 +103,7 @@ Adobe Experience Platform에서 사용할 수 있는 Zeta Marketing Platform 커
 ![ZMP 구성을 보여 주는 이미지](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL ZMP 계정 사이트 Id]**: 대상자를 보낼 ZMP **사이트 Id**. **설정** > **통합** > **키 및 앱** 섹션으로 이동하여 사이트 ID를 볼 수 있습니다. 자세한 내용은 [여기](https://knowledgebase.zetaglobal.com/zmp/integrations)를 참조하세요.
+* **[!UICONTROL ZMP 계정 사이트 Id]**: 대상자를 보낼 ZMP **사이트 Id**. **설정** > **통합** > **키 및 앱** 섹션으로 이동하여 사이트 ID를 볼 수 있습니다. 자세한 내용은 [여기](https://knowledgebase.zetaglobal.com/kb/integrations)를 참조하세요.
 * **[!UICONTROL ZMP 세그먼트]**: ZMP 사이트 ID 계정의 고객 목록 세그먼트로, Platform 대상자로 업데이트하려는 세그먼트.
 
 ### 경고 활성화 {#enable-alerts}
@@ -152,4 +152,4 @@ Experience Platform에서 활성화된 각 대상자 구성원은 ZMP의 **대�
 
 ## 추가 리소스 {#additional-resources}
 
-* [Zeta 기술 자료](https://knowledgebase.zetaglobal.com/zmp/)
+* [Zeta 기술 자료](https://knowledgebase.zetaglobal.com/kb/)
