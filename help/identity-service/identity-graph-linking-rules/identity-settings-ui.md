@@ -2,7 +2,7 @@
 title: ID 설정 UI
 description: ID 설정 사용자 인터페이스를 사용하는 방법을 알아봅니다.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 32229555a8bad3632bde974e3d97772a8cb21b71
+source-git-commit: ee0f6d6dbbbdf55a1a0f10038b785e48f2b41474
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 1%
