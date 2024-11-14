@@ -4,9 +4,9 @@ title: Experience Platform API 인증 및 액세스
 type: Tutorial
 description: 이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
+source-git-commit: a6da449725d0274ccacc6f6512c9ad395366b689
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2383'
 ht-degree: 2%
 
 ---
@@ -67,6 +67,10 @@ Adobe Developer Console에서 통합을 만들기 전에 계정에 Adobe Admin C
 >[Privacy Service API 안내서](../privacy-service/api/getting-started.md)에서 이 문서를 팔로우하는 경우 이제 해당 안내서로 돌아가서 [!DNL Privacy Service]에 고유한 액세스 자격 증명을 생성할 수 있습니다.
 
 [!DNL Admin Console]을(를) 통해 개발자 및 사용자에게 플랫폼에 대한 액세스 권한을 부여한 후 다음 단계는 Adobe Developer Console에서 `{ORG_ID}` 및 `{API_KEY}` 자격 증명을 생성하는 것입니다. 이러한 자격 증명은 한 번만 생성하면 되며 향후 Platform API 호출에서 재사용할 수 있습니다.
+
+>[!TIP]
+>
+>Developer Console으로 이동하는 대신 API 참조 설명서 페이지에서 직접 Platform API로 작업하는 데 필요한 모든 인증 자격 증명을 가져올 수 있습니다. 기능에 대해 [자세히 읽어보세요](#get-credentials-functionality).
 
 ### 프로젝트에 Experience Platform 추가 {#add-platform-to-project}
 
@@ -149,6 +153,26 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 >[!TIP]
 >
 Postman 환경 및 컬렉션을 사용하여 액세스 토큰을 생성할 수도 있습니다. 자세한 내용은 [Postman을 사용하여 API 호출 인증 및 테스트](#use-postman)에 대한 섹션을 참조하십시오.
+
+## API 참조 설명서에서 직접 인증 자격 증명을 만들고 검색합니다. {#get-credentials-functionality}
+
+2024년 11월 Experience Platform 릴리스부터 [!UICONTROL Developer Console](으)로 이동할 필요 없이 API 참조 페이지에서 직접 Experience Platform API를 사용하기 위한 자격 증명을 가져올 수 있습니다. [흐름 서비스 API - 대상 페이지](https://developer.adobe.com/experience-platform-apis/references/destinations/)에서 아래 예제를 보십시오.
+
+![API 참조 페이지 상단에 강조 표시된 자격 증명 가져오기 기능입니다.](././images/api-authentication/get-credentials-highlighted.png)
+
+Platform API를 호출하기 위한 자격 증명을 가져오려면 Experience Platform API 참조 페이지로 이동한 다음 페이지 맨 위에서 **[!UICONTROL 로그인]**&#x200B;을 선택합니다. **[!UICONTROL 개인 계정]** 또는 **[!UICONTROL 회사 또는 학교 계정]**&#x200B;으로 로그인하세요.
+
+로그인 후 **[!UICONTROL 새 자격 증명 만들기]**&#x200B;를 선택하여 Platform API에 액세스할 수 있는 새 자격 증명 집합을 만듭니다.
+
+![Platform API에 액세스하기 위해 새 자격 증명을 만듭니다.](././images/api-authentication/create-credentials.gif)
+
+그런 다음 드롭다운 선택기를 사용하여 자격 증명 창을 열고, 액세스 토큰을 생성하고, API 키 및 조직 ID를 가져옵니다. Platform API 작업을 시작하려면 API 참조 페이지의 [**[!UICONTROL 시도]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) 블록에 자격 증명을 복사하세요.
+
+![드롭다운 선택기를 사용하여 자격 증명을 보고 액세스 토큰을 생성합니다.](././images/api-authentication/view-copy-credentials.gif)
+
+>[!TIP]
+>
+페이지 상단 자격 증명 블록은 Experience Platform API 참조 설명서에서 다른 엔드포인트 페이지 사이를 이동할 때 계속 표시됩니다.
 
 ## [!BADGE 사용되지 않음]{type=negative} JSON 웹 토큰(JWT) 생성 {#jwt}
 
