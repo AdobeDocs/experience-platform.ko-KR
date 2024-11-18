@@ -1,16 +1,14 @@
 ---
 title: Magnite 배치 대상
 description: 이 대상을 사용하여 Adobe CDP 대상자를 Magnite 스트리밍 플랫폼에 일괄적으로 전달하십시오.
-badgeBeta: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
+last-substantial-update: 2024-11-18T00:00:00Z
+exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
+source-git-commit: 57e6dc4252c031d993592b963efc089f8427ce25
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1680'
 ht-degree: 1%
 
 ---
-
 
 # Magnite: 배치 연결 {#magnite-streaming-batch}
 
@@ -31,8 +29,6 @@ Magnite에 대한 자세한 내용은 아래를 계속 읽어 보십시오. 배�
 실시간 대상에 대한 자세한 내용은 대신 [이 설명서 페이지](magnite-streaming.md)를 참조하세요.
 
 >[!IMPORTANT]
->
->이 대상 커넥터는 베타 버전이며 일부 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
 >
 >대상 커넥터 및 문서 페이지는 [!DNL Magnite] 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청이 있으면 `adobe-tech@magnite.com`(으)로 직접 연락하십시오.
 
@@ -116,13 +112,17 @@ Adobe 경험 카탈로그에서 Magnite: 배치 대상을 찾습니다. 추가 �
 미래.
 * **[!UICONTROL 설명]**: 이 항목을 식별하는 데 도움이 되는 설명입니다
 향후 대상 연결/인스턴스.
-* **[!UICONTROL 원본 파트너의 이름]**: Magnite Streaming의 플랫폼에서 원본으로 사용할 이름입니다.
+* **[!UICONTROL 회사 이름]**: 고객/회사 이름. 지원되는 [!DNL Magnite Streaming] 클라이언트만 선택할 수 있습니다.
+
+>[!NOTE]
+>
+>회사 이름은 Magnite로 구성하고 [대상에 인증](#authenticate) 단계에서 설정한 Amazon S3 게재 버킷의 이름과 일치하는 문자열이어야 합니다. 지원되는 문자에는 &#39;a-z&#39;, &#39;A-Z&#39;, &#39;0-9&#39;, &#39;-&#39;(대시) 또는 &#39;_&#39;(밑줄)이 포함됩니다.
 
 ![대상 구성 인증 필드를 채웠습니다](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
 >[!NOTE]
 >
->여러 ID 유형(GAID, IDFA 등)을 전송하려는 경우 배치 대상을 사용하는 경우 각각에 대해 새 대상 연결/인스턴스가 필요합니다. 자세한 내용은 Magnite 계정 담당자에게 문의하십시오.
+>배치 대상을 사용하여 여러 ID 유형(GAID, IDFA 등)을 전송하려는 경우 각각에 대해 새 대상 연결/인스턴스가 필요합니다. 자세한 내용은 Magnite 계정 담당자에게 문의하십시오.
 
 그런 다음 **[!UICONTROL 다음]**&#x200B;을 선택하여 계속할 수 있습니다.
 
@@ -158,7 +158,7 @@ Adobe 경험 카탈로그에서 Magnite: 배치 대상을 찾습니다. 추가 �
 
 >[!NOTE]
 >
->여러 ID 유형(GAID, IDFA 등)을 전송/매핑하려는 경우 배치 대상을 사용하는 경우 각각에 대해 새 대상 연결/인스턴스가 필요합니다. 자세한 내용은 Magnite 계정 담당자에게 문의하십시오.
+>배치 대상을 사용하여 여러 ID 유형(GAID, IDFA 등)을 전송/매핑하려는 경우 각각에 대해 새 대상 연결/인스턴스가 필요합니다. 자세한 내용은 Magnite 계정 담당자에게 문의하십시오.
 
 
 &quot;각 대상에 대한 파일 이름 및 내보내기 일정 구성&quot; 화면에서 이제 각 대상에 대해 시작 날짜(필수), 종료 날짜(선택 사항) 및 매핑 ID(필수)를 구성해야 합니다.
