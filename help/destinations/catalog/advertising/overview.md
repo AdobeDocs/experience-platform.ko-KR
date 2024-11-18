@@ -2,10 +2,9 @@
 keywords: 광고 대상;대상;플랫폼 대상
 title: Advertising 대상 개요
 description: 'Adobe Experience Platform을 타사 광고 플랫폼(예: DSP, 광고 네트워크, SSP)에 연결하고 이러한 플랫폼에 익명 대상을 공유합니다.'
-exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
+source-git-commit: 07e01847c6e24564682161e88122948d200ab733
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '274'
 ht-degree: 1%
 
 ---
@@ -35,6 +34,8 @@ Adobe Experience Platform을 수요 측 플랫폼(DSP), 공급 측 플랫폼(SSP
 * [Google Ad Manager 연결](google-ad-manager.md)
 * [(Beta) Google Ad Manager 360 연결](google-ad-manager-360-connection.md)
 * [Google Customer Match 연결](google-customer-match.md)
+* [Magnite Batch 연결](magnite-batch.md)
+* [Magnite 스트리밍 실시간 연결](magnite-streaming.md)
 * [Microsoft Bing 연결](bing.md)
 * [Pinterest 고객 목록 연결](pinterest.md)
 * [PubMatic Connect 대상](pubmatic.md)

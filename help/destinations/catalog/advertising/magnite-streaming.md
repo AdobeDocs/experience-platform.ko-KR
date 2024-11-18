@@ -1,18 +1,16 @@
 ---
 title: Magnite 실시간 대상 연결
 description: 이 대상을 사용하여 Adobe CDP 대상자를 Magnite 스트리밍 플랫폼에 실시간으로 전달하십시오.
-badgeBeta: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
+last-substantial-update: 2024-11-18T00:00:00Z
+exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
+source-git-commit: da05db9376893bdbe8f0aa291f19a507e4a73d4f
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1317'
 ht-degree: 1%
 
 ---
 
-
-# (Beta) Magnite: 실시간 대상 연결
+# Magnite: 실시간 대상 연결
 
 ## 개요 {#overview}
 
@@ -28,8 +26,6 @@ Adobe Experience Platform의 [!DNL Magnite: Real-Time] 및 [Magnite: Batch](/hel
 참고: 실시간 대상을 사용하는 경우 [!DNL Magnite Streaming]이(가) 실시간으로 대상을 받지만 Magnite는 해당 플랫폼에 실시간 대상자를 일시적으로 저장할 수 있으며 2일 이내에 시스템에서 제거됩니다. 따라서 Magnite: Real-Time 대상을 사용하려면 *또한* Magnite: Batch 대상을 사용해야 합니다. Real-Time 대상에 대해 활성화하는 각 대상도 Batch 대상에 대해 활성화해야 합니다.
 
 >[!IMPORTANT]
->
->이 대상 커넥터는 베타 버전이며 일부 고객만 사용할 수 있습니다. 액세스 권한을 요청하려면 Adobe 담당자에게 문의하십시오.
 >
 >대상 커넥터 및 문서 페이지는 [!DNL Magnite] 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청이 있으면 `adobe-tech@magnite.com`(으)로 직접 연락하십시오.
 
@@ -101,7 +97,11 @@ Adobe Experience Platform에서 [!DNL Magnite] 대상을 사용하려면 먼저 
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 원본 파트너의 이름]**: 고객/회사 이름. 지원되는 [!DNL Magnite Streaming] 클라이언트만 선택할 수 있습니다.
+* **[!UICONTROL 회사 이름]**: 고객/회사 이름. 지원되는 [!DNL Magnite Streaming] 클라이언트만 선택할 수 있습니다.
+
+>[!NOTE]
+>
+>회사 이름은 Magnite로 구성하고 [대상에 인증](#authenticate) 단계에서 설정한 Amazon S3 게재 버킷의 이름과 일치하는 문자열이어야 합니다. 지원되는 문자에는 &#39;a-z&#39;, &#39;A-Z&#39;, &#39;0-9&#39;, &#39;-&#39;(대시) 또는 &#39;_&#39;(밑줄)이 포함됩니다.
 
 ![대상 구성 인증 필드를 채웠습니다](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 
