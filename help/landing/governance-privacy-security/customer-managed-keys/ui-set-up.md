@@ -1,8 +1,10 @@
 ---
 title: Platform UI를 사용하여 고객 관리 키 설정 및 구성
 description: Azure 테넌트로 CMK 앱을 설정하고 암호화 키 ID를 Adobe Experience Platform으로 보내는 방법에 대해 알아봅니다.
+role: Developer
+feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '1090'
 ht-degree: 0%

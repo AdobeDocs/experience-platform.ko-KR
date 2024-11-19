@@ -3,8 +3,10 @@ keywords: Experience Platform;홈;IAB;IAB 2.0;동의;동의
 solution: Experience Platform
 title: IAB TCF 2.0 동의 데이터 캡처를 위한 데이터 세트 만들기
 description: 이 문서에서는 IAB TCF 2.0 동의 데이터를 수집하기 위한 두 개의 필수 데이터 세트를 설정하는 단계를 제공합니다.
+role: Developer
+feature: Consent, Schemas, Datasets
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
 workflow-type: tm+mt
 source-wordcount: '1674'
 ht-degree: 0%

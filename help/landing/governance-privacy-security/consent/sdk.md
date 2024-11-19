@@ -1,8 +1,10 @@
 ---
 title: Adobe Experience Platform Web SDK를 사용하여 고객 동의 데이터 처리
 description: Adobe Experience Platform Web SDK를 통합하여 Adobe Experience Platform에서 고객 동의 데이터를 처리하는 방법에 대해 알아봅니다.
+role: Developer
+feature: Consent, Web SDK
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 0%

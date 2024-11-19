@@ -1,7 +1,8 @@
 ---
 title: Privacy Console 개요
 description: Adobe Experience Platform UI에서 개인 정보 보호 관련 워크플로우를 모니터링하는 방법을 알아봅니다.
-source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
+feature: Privacy
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 4%

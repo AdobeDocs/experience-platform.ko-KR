@@ -3,8 +3,10 @@ keywords: Experience Platform;홈;IAB;IAB 2.0;동의;동의
 solution: Experience Platform
 title: Experience Platform에서 IAB TCF 2.0 지원
 description: Adobe Experience Platform에서 세그먼트를 대상으로 활성화할 때 고객 동의 선택 사항을 전달하도록 데이터 작업 및 스키마를 구성하는 방법에 대해 알아보십시오.
+role: Developer
+feature: Consent
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '2492'
 ht-degree: 0%

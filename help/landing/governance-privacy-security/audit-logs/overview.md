@@ -1,11 +1,13 @@
 ---
 title: 감사 로그 개요
 description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어떤 작업을 수행했는지 확인하는 방법에 대해 알아봅니다.
+role: Admin,Developer
+feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7ae5e9dc79b4e1f08d2bf98876b02db1967ccbe1
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '1350'
-ht-degree: 35%
+ht-degree: 36%
 
 ---
 
@@ -140,7 +142,7 @@ UI의 감사 이벤트에 사용할 수 있는 필터는 다음과 같습니다.
 
 * 대상자 만들기
 * 대상자 업데이트
-* 대상 삭제
+* 대상자 삭제
 * 데이터 세트 만들기
 * 데이터 세트 업데이트
 * 데이터 세트 삭제

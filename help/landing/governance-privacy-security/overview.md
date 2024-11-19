@@ -3,8 +3,9 @@ keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: 거버넌스, 개인 정보 보호 및 보안 개요
 description: Adobe Experience Platform은 비즈니스 사례, 법적 의무 및 개발 프로세스를 준수하기 위해 수집된 경험 데이터를 자신 있게 제어할 수 있는 몇 가지 서비스와 도구를 제공합니다.
+feature: Data Governance,Privacy
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 7%
@@ -20,7 +21,7 @@ Experience Platform은 비즈니스 사례, 법적 의무 및 개발 프로세�
 이 서비스는 다음 세 가지 도메인으로 분류할 수 있습니다.
 
 * [데이터 거버넌스](#governance)
-* [개인정보 보호](#privacy)
+* [개인 정보 보호](#privacy)
 * [보안](#security)
 
 ## 데이터 거버넌스 {#governance}
@@ -41,7 +42,7 @@ Adobe Experience Platform 데이터 거버넌스는 플랫폼 서비스로서 �
 
 서비스에 대한 자세한 내용은 [카탈로그 서비스 개요](../../catalog/home.md)를 참조하세요. Experience Platform에서 데이터 세트를 관리하는 방법을 알아보려면 [데이터 세트 개요](../../catalog/datasets/overview.md)를 참조하세요.
 
-## 개인정보 보호 {#privacy}
+## 개인 정보 보호 {#privacy}
 
 개인 정보는 비즈니스, 입법자 및 고객에게 중요한 문제입니다. 고객으로부터 수집된 개인 데이터는 거의 모든 Experience Platform 워크플로의 핵심이므로 Platform은 이러한 이니셔티브를 지원하는 서비스를 제공합니다.
 

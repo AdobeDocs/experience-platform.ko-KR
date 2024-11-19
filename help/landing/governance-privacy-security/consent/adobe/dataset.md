@@ -3,8 +3,10 @@ keywords: Experience Platform;홈;인기 있는 주제
 solution: Experience Platform
 title: 동의 및 환경 설정 데이터를 캡처하도록 데이터 세트 구성
 description: Adobe Experience Platform에서 동의 및 환경 설정 데이터를 캡처하도록 XDM(경험 데이터 모델) 스키마 및 데이터 세트를 구성하는 방법에 대해 알아봅니다.
+role: Developer
+feature: Consent, Schemas, Datasets
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 3f559601b50293723f601960dbd56fddf0285148
+source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 0%

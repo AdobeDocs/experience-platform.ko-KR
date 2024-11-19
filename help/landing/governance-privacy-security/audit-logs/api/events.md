@@ -1,8 +1,10 @@
 ---
 title: 감사 이벤트 API 끝점
 description: 감사 쿼리 API를 사용하여 Experience Platform에서 감사 이벤트를 검색하는 방법에 대해 알아봅니다.
+role: Developer
+feature: Audits, API
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
-source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 1%

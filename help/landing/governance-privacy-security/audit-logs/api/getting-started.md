@@ -1,8 +1,10 @@
 ---
 title: 감사 쿼리 API 시작
 description: 감사 쿼리 API를 사용하면 다양한 Adobe Experience Platform 기능에 대한 지표 데이터를 검색할 수 있습니다. 이 문서에서는 감사 쿼리 API를 호출하기 전에 알아야 하는 핵심 개념에 대해 소개합니다.
+role: Developer
+feature: Audits, API
 exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
-source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 11%

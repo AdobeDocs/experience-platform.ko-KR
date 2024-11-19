@@ -3,8 +3,10 @@ solution: Experience Platform
 title: Experience Platform API 인증 및 액세스
 type: Tutorial
 description: 이 문서에서는 Experience Platform API를 호출하기 위해 Adobe Experience Platform 개발자 계정에 액세스할 수 있는 단계별 자습서를 제공합니다.
+role: Developer
+feature: API
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: a6da449725d0274ccacc6f6512c9ad395366b689
+source-git-commit: 48c75f88d6862fa602e43929b72a6eac27d20e07
 workflow-type: tm+mt
 source-wordcount: '2383'
 ht-degree: 2%
