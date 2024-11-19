@@ -2,7 +2,7 @@
 title: propositions 적용
 description: 이미 sendEvent로 렌더링된 제안을 다시 렌더링합니다.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 이 명령은 다음 필드를 지원합니다.
 
 * **제안**: 다시 렌더링할 제안 개체의 배열입니다.
-* **보기 이름**: 렌더링할 보기의 이름입니다. 이러한 결정에 대한 표시 알림은 캐시되며 `personalization.includePendingDisplayNotifications` 옵션을 사용하여 후속 `sendEvent` 명령에 포함될 수 있습니다.
+* **보기 이름**: 렌더링할 보기의 이름입니다. 이러한 결정에 대한 표시 알림은 캐시되며 `personalization.includeRenderedPropositions` 옵션을 사용하여 후속 `sendEvent` 명령에 포함될 수 있습니다.
 * **메타데이터**: HTML 오퍼를 적용할 수 있는 방법을 결정하는 개체입니다. 여기에는 다음 속성이 포함됩니다.
    * 범위
    * 선택기
@@ -43,7 +43,7 @@ ht-degree: 0%
 * **`metadata`**: HTML 오퍼가 적용되는 방법을 결정합니다. 키가 범위 또는 표면이고 값이 `selector` 및 `actionType` 키를 포함하는 개체인 맵입니다.
    * `selector`: HTML을 적용할 위치의 CSS 선택기가 포함된 문자열입니다.
    * `actionType`: HTML 시 수행할 작업입니다. 유효한 값은 `setHtml`, `replaceHtml` 및 `appendHtml`입니다.
-* **`viewName`**: 단일 페이지 응용 프로그램에서 렌더링할 보기의 이름입니다. 이러한 결정에 대한 표시 알림이 캐시되며 `personalization.includePendingDisplayNotifications`을(를) 사용하여 후속 `sendEvent` 명령에 포함될 수 있습니다.
+* **`viewName`**: 단일 페이지 응용 프로그램에서 렌더링할 보기의 이름입니다. 이러한 결정에 대한 표시 알림이 캐시되며 `personalization.includeRenderedPropositions`을(를) 사용하여 후속 `sendEvent` 명령에 포함될 수 있습니다.
 
 ```js
 alloy("applyPropositions",{

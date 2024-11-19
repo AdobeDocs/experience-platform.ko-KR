@@ -2,7 +2,7 @@
 title: Web SDK에서 디스플레이 이벤트 관리
 description: 이 문서에서는 디스플레이 이벤트의 정의와 Web SDK에서 이 이벤트를 사용하는 방법에 대해 설명합니다.
 exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Web SDK를 사용하면 두 가지 방법으로 디스플레이 이벤트를 전
 개인화된 콘텐츠가 페이지에서 렌더링된 후 디스플레이 이벤트를 자동으로 보내려면 다음 매개 변수를 구성해야 합니다.
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: true` 또는 지정되지 않음
+* `personalization.sendDisplayEvent: true` 또는 지정되지 않음
 
 Web SDK는 `sendEvent` 호출의 결과로 개인화가 렌더링되면 바로 디스플레이 이벤트를 보냅니다.
 
@@ -50,9 +50,9 @@ Web SDK는 `sendEvent` 호출의 결과로 개인화가 렌더링되면 바로 �
 자동으로 렌더링된 제안에 대한 표시 이벤트를 보내려면 `sendEvent` 호출에서 다음 매개 변수를 구성해야 합니다.
 
 * `renderDecisions: true`
-* 페이지 조회수의 맨 위에 대한 `personalization.sendDisplayNotifications: false`
+* 페이지 조회수의 맨 위에 대한 `personalization.sendDisplayEvent: false`
 
-디스플레이 이벤트를 보내려면 `personalization.includePendingDisplayNotifications: true`(으)로 `sendEvent`에 전화
+디스플레이 이벤트를 보내려면 `personalization.includeRenderedPropositions: true`(으)로 `sendEvent`에 전화
 
 ### 수동으로 렌더링된 제안에 대한 디스플레이 이벤트 보내기 {#manually-rendered-propositions}
 
