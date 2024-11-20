@@ -3,9 +3,9 @@ keywords: 플랫폼;대상;대상 작업 영역;작업 영역;ui;대상 ui;카�
 title: 대상 작업 영역
 description: 대상 작업 영역은 개요, 카탈로그, 찾아보기, 계정 및 시스템 보기의 5개 섹션으로 구성되어 있습니다. 아래 섹션에 설명되어 있습니다.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1233'
 ht-degree: 0%
 
 ---
@@ -77,11 +77,11 @@ Adobe Experience Platform의 왼쪽 탐색 모음에서 **[!UICONTROL 대상]**&
 
 | 요소 | 설명 |
 |---|---|
-| [!UICONTROL 플랫폼] | 연결을 설정한 대상. |
+| [!UICONTROL 대상] | 연결을 설정한 대상 커넥터입니다. |
 | [!UICONTROL 연결 유형] | 저장소 버킷 또는 대상에 대한 계정 연결 유형을 나타냅니다. 대상에 따라 인증 옵션은 다음과 같습니다. <ul><li>이메일 마케팅 대상의 경우: S3, FTP 또는 Azure Blob일 수 있습니다.</li><li>실시간 광고 대상: 서버 간</li><li>Amazon S3 클라우드 스토리지 대상의 경우: 액세스 키 </li><li>SFTP 클라우드 스토리지 대상의 경우: SFTP에 대한 기본 인증</li><li>OAuth 1 또는 OAuth 2 인증</li><li>전달자 토큰 인증</li></ul> |
-| [!UICONTROL 사용자 이름] | [대상 연결 마법사](../catalog/email-marketing/overview.md#connect-destination)에서 선택한 사용자 이름입니다. |
-| [!UICONTROL 대상] | 대상에 대해 만들어진 기본 정보와 연결된 성공한 고유 대상 데이터 흐름 수를 나타냅니다. |
-| [!UICONTROL 인증됨] | 이 대상에 대한 연결이 승인된 날짜입니다. |
+| [!UICONTROL 사용자 이름] | [대상 연결 워크플로](../catalog/email-marketing/overview.md#connect-destination)에서 선택한 사용자 이름입니다. |
+| [!UICONTROL 연결] | 대상에 대해 만들어진 기본 정보와 연결된 성공한 고유 대상 데이터 흐름 수를 나타냅니다. |
+| [!UICONTROL 인증 날짜] | 이 대상에 대한 연결이 승인된 날짜입니다. |
 
 {style="table-layout:auto"}
 
