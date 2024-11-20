@@ -2,18 +2,14 @@
 title: 스키마에 대한 데이터 사용 레이블 관리
 description: Adobe Experience Platform UI에서 XDM(Experience Data Model) 스키마 필드에 데이터 사용 레이블을 추가하는 방법을 알아봅니다.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 22233d2bda488aa223555f85215be31d007eaa37
+source-git-commit: ac6af3e90c417d1c97860394ce8afb07a0a7917d
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '766'
 ht-degree: 8%
 
 ---
 
 # 스키마에 대한 데이터 사용 레이블 관리
-
->[!IMPORTANT]
->
->스키마 기반 레이블 지정은 [특성 기반 액세스 제어](../../access-control/abac/overview.md)의 일부입니다. 현재 미국 기반 의료 서비스 고객의 제한된 릴리스에서 사용할 수 있습니다. 이 기능은 완전히 출시되면 모든 Adobe Real-time Customer Data Platform 고객이 사용할 수 있습니다.
 
 Adobe Experience Platform으로 가져오는 모든 데이터는 XDM(Experience Data Model) 스키마의 제한을 받습니다. 이 데이터에는 조직 규정이나 법적 규정에 따른 사용 제한이 적용될 수 있습니다. 이 문제를 해결하기 위해 플랫폼에서 [데이터 사용 레이블](../../data-governance/labels/overview.md)을 사용하여 특정 데이터 세트와 필드의 사용을 제한할 수 있습니다.
 
