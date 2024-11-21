@@ -4,9 +4,9 @@ title: 속성 기반 액세스 제어 엔드투엔드 안내서
 description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 전체 안내서를 제공합니다
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 9c415b7721eeceff75d46463853f22dd3310cb9a
+source-git-commit: b9ce27b6feb0300464507a21510f40900677c3be
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1762'
 ht-degree: 18%
 
 ---
@@ -156,6 +156,10 @@ Platform UI에 대한 권한 작업 영역이 표시되어 **[!UICONTROL 역할]
 ![선택 중인 RHD 레이블 및 저장을 보여 주는 이미지](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
 
 **[!UICONTROL 인슐린 &lt;50]**(으)로 위의 단계를 반복합니다.
+
+>[!NOTE]
+>
+> [개체 수준 액세스 제어](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access)를 사용하여 [!UICONTROL 권한] 작업 영역에서 만든 레이블(예: 위의 세그먼트 레이블)을 Adobe Journey Optimizer의 다양한 개체에 할당합니다.&quot;
 
 ## 액세스 제어 정책 활성화 {#policy}
 
