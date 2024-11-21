@@ -5,7 +5,7 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 22%
@@ -113,7 +113,7 @@ ht-degree: 22%
    - [쿼리 템플릿](api/query-templates.md)
    - [가속화된 쿼리](api/accelerated-queries.md)
    - [경고 구독](api/alert-subscriptions.md)
-- 쿼리 서비스 인증 API {#auth-api}
+- Data Distiller 인증 API {#auth-api}
    - [개요](auth-api/overview.md)
    - [시작하기](auth-api/getting-started.md)
    - [액세스](auth-api/ip-access.md)

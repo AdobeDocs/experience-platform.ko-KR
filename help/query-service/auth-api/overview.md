@@ -1,22 +1,22 @@
 ---
-title: 쿼리 서비스 권한 부여 API 안내서
-description: Query Service 권한 부여 API를 사용하여 SQL을 통한 보안 연결에 네트워크 기반 IP 제한을 적용하는 방법에 대해 알아봅니다. 이 API를 사용하여 Adobe Experience Platform 데이터에 대한 데이터 액세스 제어를 강화합니다.
+title: Data Distiller Authorization API 안내서
+description: Data Distiller 인증 API를 사용하여 SQL을 통한 보안 연결에 네트워크 기반 IP 제한을 적용하는 방법에 대해 알아봅니다. 이 API를 사용하여 Adobe Experience Platform 데이터에 대한 데이터 액세스 제어를 강화합니다.
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 2%
 
 ---
 
-# 쿼리 서비스 권한 부여 API 안내서
+# Data Distiller Authorization API 안내서
 
 >[!AVAILABILITY]
 >
 >이 기능은 Data Distiller 추가 기능을 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 
-Query Service Authorization API를 사용하여 IP 기반 제한을 적용합니다. 이러한 측정값을 적용하면 승인된 네트워크와 클라이언트 컴퓨터만 Adobe Experience Platform의 SQL을 통해 데이터에 액세스할 수 있습니다. 이러한 제어 기능을 통해 엄격한 보안 표준을 충족하는 동시에 실시간 액세스 모니터링 및 경고 기능을 제공할 수 있습니다.
+Data Distiller Authorization API를 사용하여 IP 기반 제한을 적용합니다. 이러한 측정값을 적용하면 승인된 네트워크와 클라이언트 컴퓨터만 Adobe Experience Platform의 SQL을 통해 데이터에 액세스할 수 있습니다. 이러한 제어 기능을 통해 엄격한 보안 표준을 충족하는 동시에 실시간 액세스 모니터링 및 경고 기능을 제공할 수 있습니다.
 
 이 API를 사용하면 SQL 인터페이스를 통해 데이터에 액세스하기 위한 IP 제한을 구성, 적용 및 모니터링할 수 있습니다. 이 문서에서는 API의 핵심 기능, 엔드포인트 기능 및 향후 기능에 대한 높은 수준의 개요를 제공합니다.
 
@@ -39,4 +39,4 @@ Query Service Authorization API를 사용하여 IP 기반 제한을 적용합니
 
 ## 다음 단계
 
-필수 헤더 및 API 호출 규칙을 포함한 필수 설정 단계에 대해 [시작 안내서](./getting-started.md)를 검토하여 쿼리 서비스 권한 부여 API를 시작합니다. 그런 다음 보안 데이터 액세스를 구성하고 관리하기 위해 [IP 액세스](./ip-access.md) 및 [IP 유효성 검사](./validate.md)에서 끝점별 안내서를 살펴보십시오.
+필수 헤더 및 API 호출 규칙을 포함한 필수 설정 단계에 대해 [시작 안내서](./getting-started.md)를 검토하여 Data Distiller 인증 API를 시작하십시오. 그런 다음 보안 데이터 액세스를 구성하고 관리하기 위해 [IP 액세스](./ip-access.md) 및 [IP 유효성 검사](./validate.md)에서 끝점별 안내서를 살펴보십시오.

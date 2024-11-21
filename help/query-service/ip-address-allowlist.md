@@ -3,7 +3,7 @@ keywords: IP 주소, IP 범위, 허용 목록 허용 목록에 추가하다, 쿼
 title: 허용 목록에 추가하다 쿼리 서비스용 IP 주소
 description: 이 페이지에서는 Query 서비스에 안전하게 액세스하기 위해 허용 목록에 추가하다에 추가할 수 있는 업데이트된 IP 범위를 제공합니다.
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
-source-git-commit: e6c148b943c68bff5330c7ff021ffa88ba131639
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Adobe은 지역에 따라 다음 지역별 IP 범위를 허용 목록에 추가�
 
 ## IP 기반 제한 설정 {#set-ip-restrictions}
 
-[쿼리 서비스 권한 부여 API 안내서](./auth-api/overview.md)를 사용하여 IP 기반 제한을 설정하십시오. 이러한 IP 기반 제한 사항을 사용하면 승인된 네트워크 및 클라이언트 컴퓨터만 Adobe Experience Platform의 SQL을 통해 데이터에 액세스할 수 있습니다. 실시간 액세스 추적 및 경고 기능을 사용하여 높은 보안 표준을 준수하도록 IP 제한을 구성, 적용 및 모니터링하는 방법에 대해 알아봅니다.
+[Data Distiller 권한 부여 API 안내서](./auth-api/overview.md)를 사용하여 IP 기반 제한을 설정하십시오. 이러한 IP 기반 제한 사항을 사용하면 승인된 네트워크 및 클라이언트 컴퓨터만 Adobe Experience Platform의 SQL을 통해 데이터에 액세스할 수 있습니다. 실시간 액세스 추적 및 경고 기능을 사용하여 높은 보안 표준을 준수하도록 IP 제한을 구성, 적용 및 모니터링하는 방법에 대해 알아봅니다.
 
 * [시작 안내서](./auth-api/getting-started.md)
 * [IP 액세스 끝점 안내서](./auth-api/ip-access.md)

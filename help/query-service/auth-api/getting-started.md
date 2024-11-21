@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform, 쿼리 서비스, IP 액세스 제어, 인증, API, 시작하기
-title: 쿼리 서비스 권한 부여 API 안내서
+title: Data Distiller Authorization API 안내서
 description: Adobe Experience Platform의 쿼리 서비스 내에서 보안 데이터 액세스를 위해 권한 부여 및 IP 범위 제한을 시작하는 방법을 알아봅니다.
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 6%
+source-wordcount: '485'
+ht-degree: 5%
 
 ---
 
-# 쿼리 서비스 권한 부여 API 안내서
+# Data Distiller Authorization API 시작
 
 >[!AVAILABILITY]
 >
 >이 기능은 Data Distiller 추가 기능을 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 
-Query Service Authorization API는 Adobe Experience Platform의 SQL 인터페이스를 통해 데이터 액세스를 더 강력하게 제어할 수 있도록 조직에 제공합니다. 이 API를 사용하여 IP 제한을 정의하고, 지정된 네트워크에 대한 데이터 액세스를 제한하며, 보안 모니터링을 강화할 수 있습니다.
+Data Distiller Authorization API는 Adobe Experience Platform의 SQL 인터페이스를 통해 조직에 데이터 액세스를 더 강력하게 제어할 수 있도록 합니다. 이 API를 사용하여 IP 제한을 정의하고, 지정된 네트워크에 대한 데이터 액세스를 제한하며, 보안 모니터링을 강화할 수 있습니다.
 
-이 안내서에서는 쿼리 서비스 권한 부여 API를 호출하는 데 필요한 권한 부여 자격 증명 및 권한을 설정하는 방법에 대해 설명합니다.
+이 안내서에서는 Data Distiller 인증 API를 호출하는 데 필요한 인증 자격 증명 및 권한을 설정하는 방법에 대해 간략하게 설명합니다.
 
 ## 시작하기 {#getting-started}
 
-다음 섹션에서는 필요한 인증 값을 준비하고 쿼리 서비스 인증 API에 대한 첫 번째 요청을 수행하는 방법에 대한 정보를 제공합니다.
+다음 섹션에서는 필요한 인증 값을 준비하고 Data Distiller 인증 API에 대한 첫 번째 요청을 수행하는 방법에 대한 정보를 제공합니다.
 
 ### 필요한 권한 {#required-permissions}
 
@@ -41,7 +41,7 @@ Query Service에서 보안 데이터 액세스 제한을 사용하려면 **[!UIC
 
 ### 필수 헤더에 대한 값 수집 {#gather-values-for-required-headers}
 
-쿼리 서비스 권한 부여 API를 호출하려면 API 호출의 필수 헤더에 대한 값을 제공하는 [Platform API 인증 자습서](../../landing/api-authentication.md)를 완료해야 합니다. 각 요청에 다음 헤더를 포함합니다.
+Data Distiller 권한 부여 API를 호출하려면 API 호출의 필수 헤더에 대한 값을 제공하는 [Platform API 인증 자습서](../../landing/api-authentication.md)를 완료해야 합니다. 각 요청에 다음 헤더를 포함합니다.
 
 - **인증**: `Bearer {ACCESS_TOKEN}`
 - **x-api-key**: `{API_KEY}`
