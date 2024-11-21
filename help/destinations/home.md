@@ -2,10 +2,10 @@
 title: 대상 개요
 description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과 미리 빌드된 통합입니다. Adobe Experience Platform의 대상 을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 6dd6190f1b006ffb3346eea6dc917ce52e0aa1c6
+source-git-commit: 6d97f132788a249e0bf5c293e34d9d529325f099
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 4%
+source-wordcount: '1231'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 ![대상 개요 배너.](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]**&#x200B;는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 교차 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+**[!DNL Destinations]**&#x200B;는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -115,3 +115,13 @@ Adobe Experience Platform의 속성 기반 액세스 제어를 통해 관리자�
 * [대상 데이터를 스트리밍 대상 내보내기 대상으로 활성화](./ui/activate-segment-streaming-destinations.md#review)
 * [대상자 데이터를 스트리밍 프로필 내보내기 대상으로 활성화](./ui/activate-streaming-profile-destinations.md#review)
 * [대상자 데이터를 활성화하여 프로필 내보내기 대상 일괄 처리](./ui/activate-batch-profile-destinations.md#review)
+
+## 사용 약관 {#terms-and-conditions}
+
+Beta(&quot;Beta&quot;)로 레이블이 지정된 대상을 사용함으로써, 귀하는 이로써 Beta이 어떠한 종류의 보증도 없이 ***&quot;있는 그대로&quot; 제공된다는 것을 인정합니다***.
+
+Adobe은 Beta을 유지, 수정, 업데이트, 변경, 수정 또는 지원할 의무가 없습니다. 이러한 Beta 및/또는 동봉된 자료의 올바른 기능이나 성능에 어떤 식으로든 의존하지 말고 정보 자료를 사용하는 것이 좋습니다. Beta은 Adobe 기밀 정보로 간주됩니다.
+
+사용자가 Adobe에 제공한 &quot;피드백&quot;(Beta 사용 중 발생하는 문제나 결함, 제안, 개선 사항 및 권장 사항을 포함하지만 이에 국한되지 않는 Beta 관련 정보)은 이에 따라 해당 피드백에 대한 모든 권한, 제목 및 관심을 포함하는 Adobe에 할당됩니다.
+
+진행 중 피드백을 제출하거나 지원 티켓을 만들어 제안을 공유하거나 버그를 보고하면 기능 개선 사항을 확인할 수 있습니다.
