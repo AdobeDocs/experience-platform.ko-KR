@@ -2,10 +2,10 @@
 title: SFTP 호스트
 description: Adobe Experience Platform에서 태그를 구성하여 보안 및 자체 호스팅되는 SFTP 서버에 라이브러리 빌드를 전달하는 방법에 대해 알아봅니다.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85bd78928b1b503bbb6bbc44075ed0f66e046a4c
 workflow-type: tm+mt
 source-wordcount: '811'
-ht-degree: 5%
+ht-degree: 11%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform을 사용하면 호스팅하는 보안 SFTP 서버에 태그 라이브러리 빌드를 전달할 수 있으므로, 빌드의 저장 및 관리 방법을 보다 세밀하게 제어할 수 있습니다. 이 안내서에서는 Experience Platform UI 또는 데이터 수집 UI의 태그 속성에 대해 SFTP 호스트를 설정하는 방법을 다룹니다.
 
@@ -70,7 +70,7 @@ SFTP 서버에 공개/개인 키 쌍이 설치되어 있어야 합니다. 이러
 | [!UICONTROL 심볼릭 링크 사용 안 함] | 기본적으로 모든 SFTP 호스트는 기호 링크(symlink)를 사용하여 서버에 저장된 라이브러리 [빌드](../builds.md)를 참조합니다. 그러나 모든 서버가 symlink의 사용을 지원하는 것은 아닙니다. 이 옵션을 선택하면 호스트가 심볼릭 링크를 사용하는 대신 복사 작업을 사용하여 빌드 에셋을 직접 업데이트합니다. |
 | [!UICONTROL SFTP 서버 URL] | 서버의 URL 기본 경로입니다. |
 | [!UICONTROL 경로] | 이 호스트의 기본 서버 URL에 추가할 경로입니다. |
-| [!UICONTROL 포트] | 포트는 다음 중 하나여야 합니다.<ul><li>`21`</li><li>`22`</li><li>`80`</li><li>`200-299`</li><li>`443`</li><li>`2000-2999`</li><li>`4343`</li><li>`8080`</li><li>`8888`</li></ul>보안 모범 사례로서 Adobe는 발신 트래픽에 사용할 수 있는 포트 수를 제한합니다. 선택한 포트는 일반적으로 회사 방화벽을 통해 허용되며 일부 범위의 유연성을 포함합니다. |
+| [!UICONTROL 포트] | 포트는 다음 중 하나여야 합니다.<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>보안 모범 사례로서 Adobe는 발신 트래픽에 사용할 수 있는 포트 수를 제한합니다. 선택한 포트는 일반적으로 회사 방화벽을 통해 허용되며 일부 범위의 유연성을 포함합니다. |
 | [!UICONTROL 사용자 이름] | 서버에 액세스할 때 사용할 사용자 이름입니다. |
 | [!UICONTROL 암호화된 개인 키] | [이전 단계](#access-key)에서 만든 암호화된 개인 키입니다. |
 
