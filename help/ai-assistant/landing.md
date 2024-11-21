@@ -3,9 +3,10 @@ title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant 시작
 hide: true
 hidefromtoc: true
-source-git-commit: 4db38ebceaa7ac4ac46b2ac122b5869e6b28cab3
+exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
+source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '549'
 ht-degree: 4%
 
 ---
@@ -23,15 +24,15 @@ AI 어시스턴트는 Experience Platform, Real-Time CDP, Adobe Journey Optimize
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png"></a>
+    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>데이터 개체 이해</strong><br/>데이터 개체의 상태, 사용 및 연결 영향에 대한 더 나은 보기를 위해 데이터 개체에 대한 작동 인사이트를 검색합니다.</div>
     </td>
     <td>
-    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png"></a>
+    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>학습 향상</strong><br/>워크플로를 중단하지 않고 제품 지식을 검색, 문제 해결 및 이해도를 높이십시오.</div>
     </td>
     <td>
-    <a href="./access.md"><img src="./assets/landing/ai-access.png"></a>
+    <a href="./access.md"><img src="./assets/landing/ai-access.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>사용자의 사용량에 따라 사용 권한 적용</strong><br/>팀원의 역할에 따라 액세스 권한을 부여하고 취소합니다.</div>
     </td>
   </tr>
@@ -41,6 +42,7 @@ AI 어시스턴트는 Experience Platform, Real-Time CDP, Adobe Journey Optimize
     <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
+
 
 ## 새로운 기능
 
@@ -118,6 +120,14 @@ AI Assistant 사용 사례 예제는 다음을 참조하십시오.
 >[!ENDTABS]
 
 ## 추가 리소스
+
+>[!BEGINSHADEBOX]
+
+**AI Assistant 보안 팩트시트 읽기**
+
+AI Assistant에 대한 자세한 내용은 Adobe Experience Platform의 [AI Assistant 보안 팩트시트](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf)를 참조하십시오.
+
+>[!ENDSHADEBOX]
 
 아래 링크를 탐색하여 AI Assistant 사용 사례, 기능 등에 대해 자세히 알아보십시오.
 

@@ -2,9 +2,9 @@
 title: Experience Platform에서 AI Assistant 액세스
 description: Experience Cloud UI에서 AI Assistant에 액세스하는 방법을 알아봅니다.
 exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
-source-git-commit: 706a20e70aa20adb0f4a554d0ec35518811ea9a1
+source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,12 @@ AI Assistant에 대한 액세스는 다음 매개 변수에 의해 제어됩니�
 필요한 권한이 있으면 사용 중인 애플리케이션 상단 헤더에 있는 AI Assistant 아이콘을 선택하여 AI Assistant에 액세스할 수 있습니다.
 
 처음 사용자 경험이 있는 ![AI 길잡이](./images/ai-assistant.png)
+
+## AI Assistant 액세스
+
+다음 비디오를 통해 조직 및 사용자를 위한 AI Assistant 액세스를 구성하는 방법에 대해 알아보십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 ## 다음 단계
 
