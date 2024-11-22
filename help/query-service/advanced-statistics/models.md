@@ -2,9 +2,10 @@
 title: 모델
 description: Data Distiller SQL 확장 기능으로 라이프사이클 관리 모델링 모델 버전 관리, 평가 및 예측과 같은 주요 프로세스를 포함하여 SQL을 사용하여 고급 통계 모델을 생성, 교육 및 관리하여 데이터에서 실행 가능한 통찰력을 도출하는 방법에 대해 알아봅니다.
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: c609a55a-dbfd-4632-8405-55e99d1e0bd8
+source-git-commit: 6a61900b19543f110c47e30f4d321d0016b65262
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1229'
 ht-degree: 1%
 
 ---
@@ -76,19 +77,33 @@ SQL을 사용하여 교육에 사용되는 데이터 세트를 참조합니다.
 
 ## 모델 업데이트 {#update}
 
-새로운 기능 엔지니어링 변환을 적용하고 알고리즘 유형 및 레이블 열과 같은 옵션을 구성하여 기존 머신 러닝 모델을 업데이트하는 방법에 대해 알아봅니다. 아래 SQL에서는 각 업데이트로 모델의 버전 번호를 늘리고 향후 평가 또는 예측 단계에서 모델을 재사용할 수 있도록 변경 사항이 추적되는 방법을 보여 줍니다.
+새로운 기능 엔지니어링 변환을 적용하고 알고리즘 유형 및 레이블 열과 같은 옵션을 구성하여 기존 머신 러닝 모델을 업데이트하는 방법에 대해 알아봅니다. 각 업데이트에서는 마지막 버전에서 증분된 새로운 버전의 모델을 만듭니다. 이렇게 하면 변경 사항이 추적되고 모델이 향후 평가 또는 예측 단계에서 재사용될 수 있습니다.
+
+다음 예제에서는 새 변형 및 옵션을 사용하여 모델을 업데이트하는 방법을 보여 줍니다.
 
 ```sql
-UPDATE model <model_alias> transform( one_hot_encoder(NAME) ohe_name, string_indexer(gender) gendersi) options ( type = 'LogisticRegression', label = <label-COLUMN>, ) ASSELECT col1,
-       col2,
-       col3
-FROM   training-dataset.
+UPDATE MODEL <model_alias> TRANSFORM (vector_assembler(array(current_customers, previous_customers)) features)  OPTIONS(MODEL_TYPE='logistic_reg', LABEL='churn_rate')  AS SELECT * FROM churn_with_rate ORDER BY period;
 ```
 
-모델 버전을 관리하고 변형을 효과적으로 적용하는 방법을 이해할 수 있도록 다음 참고 사항에서는 모델 업데이트 워크플로의 주요 구성 요소 및 옵션에 대해 설명합니다.
+**예**
 
-- `UPDATE model <model_alias>`: update 명령은 버전 관리를 처리하고 각 업데이트로 모델의 버전 번호를 늘립니다.
-- `version`: 새 버전의 모델을 만들기 위해 업데이트하는 동안에만 사용되는 선택적 키워드입니다.
+버전 관리 프로세스를 이해하는 데 도움이 되도록 다음 명령을 고려하십시오.
+
+```sql
+UPDATE MODEL model_vdqbrja OPTIONS(MODEL_TYPE='logistic_reg', LABEL='Survived') AS SELECT * FROM titanic_e2e_dnd;
+```
+
+이 명령이 실행되면 아래 표와 같이 모델에 새 버전이 생깁니다.
+
+| 업데이트된 모델 ID | 업데이트된 모델 | 새 버전 |
+|--------------------------------------------|---------------|-------------|
+| a8f6a254-8f28-42ec-8b26-94edeb4698e8 | model_vdqbrja | 2 |
+
+다음 주석은 모델 업데이트 워크플로우의 주요 구성 요소 및 옵션에 대해 설명합니다.
+
+- `UPDATE model <model_alias>`: update 명령은 버전 관리를 처리하고 마지막 버전에서 증가한 새 모델 버전을 만듭니다.
+- `version`: 새 버전을 만들도록 명시적으로 지정하는 업데이트 중에만 사용되는 선택적 키워드입니다. 생략하면 버전이 자동으로 증가합니다.
+
 
 ## 모델 평가 {#evaluate-model}
 

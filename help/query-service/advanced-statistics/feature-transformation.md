@@ -2,9 +2,10 @@
 title: 기능 변환 기법
 description: 통계 모델 교육을 위한 데이터를 준비하는 데이터 변환, 인코딩 및 기능 스케일링과 같은 필수 사전 처리 기술에 대해 알아봅니다. 모델 성능과 정확도를 향상시키기 위해 결측치 처리 및 범주형 데이터 변환의 중요성에 대해 다룹니다.
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: ed7fa9b7-f74e-481b-afba-8690ce50c777
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '3437'
+source-wordcount: '3450'
 ht-degree: 8%
 
 ---
@@ -55,14 +56,14 @@ CREATE model modelname options(model_type='logistic_reg', label='rating') AS SEL
 
 `CREATE MODEL` 문에서 사용자 지정 데이터 사전 처리를 정의하려면 `TRANSFORM` 절을 사용 가능한 변환 함수와 함께 사용합니다. 이러한 수동 사전 처리 기능은 `TRANSFORM` 절 외부에서 사용할 수도 있습니다. 아래 [변환기 섹션](#available-transformations)에서 설명한 모든 변환을 사용하여 데이터를 수동으로 사전 처리할 수 있습니다.
 
-### 주요 특성
+### 주요 특성 {#key-characteristics}
 
 다음은 전처리 함수를 정의할 때 고려할 기능 변환의 주요 특성입니다.
 
 - **구문**: `TRANSFORM(functionName(colName, parameters) <aliasNAME>)`
    - 별칭 이름은 구문에서 필수입니다. 별칭 이름을 제공해야 합니다. 그렇지 않으면 쿼리가 실패합니다.
 
-- **매개 변수**: 매개 변수는 위치 인수입니다. 즉, 각 매개 변수는 특정 값만 사용할 수 있습니다. 어떤 함수가 어떤 인수를 사용하는지에 대한 자세한 내용은 관련 설명서를 참조하십시오.
+- **매개 변수**: 매개 변수는 위치 인수입니다. 즉, 각 매개 변수는 특정 값만 사용할 수 있으며 사용자 지정 값이 제공된 경우 앞에 오는 모든 매개 변수를 지정해야 합니다. 어떤 함수가 어떤 인수를 사용하는지에 대한 자세한 내용은 관련 설명서를 참조하십시오.
 
 - **변환기 연결**: 한 변환기의 출력이 다른 변환기에 대한 입력이 될 수 있습니다.
 
@@ -180,7 +181,7 @@ transform(string_imputer(name, 'unknown_name') as name_imputed)
 | 1 | ml_unknown |
 | 2 | 앨리스 |
 
-#### 부울 컴퓨터 {#imputer}
+#### 부울 컴퓨터 {#boolean-imputer}
 
 **부울 컴퓨터** 변환기가 부울 열에 대한 데이터 집합에서 누락된 값을 완료합니다. 입력 및 출력 열은 `Boolean` 형식이어야 합니다.
 

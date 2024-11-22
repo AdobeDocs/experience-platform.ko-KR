@@ -2,9 +2,10 @@
 title: 기능 엔지니어링 SQL 확장
 description: 고급 통계 모델링을 위해 데이터를 사전 처리하는 데이터 Distiller 기능 엔지니어링 SQL 확장에 대해 알아봅니다. 사용 가능한 기능 추출, 변환 및 선택 기술에 대해 설명합니다.
 role: Developer
-source-git-commit: 1fcfb5c41750e853daaf036ceaae3527b805391c
+exl-id: 622c8ef3-9651-46b3-ad22-021a93190149
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '735'
 ht-degree: 1%
 
 ---
@@ -41,9 +42,10 @@ SQL Transformer 확장을 사용하여 데이터 사전 처리를 단순화하�
 
 다음은 데이터 사전 처리 워크플로를 개선하기 위해 다양한 데이터 유형을 처리하는 도구 목록입니다.
 
-- **[숫자 컴퓨터](./feature-transformation.md#numeric-imputer)**: 숫자 열의 누락된 값을
-- **[문자열 컴퓨터](./feature-transformation.md#string-imputer)**: 누락된 문자열 값을 지정된 값으로 바꾸기
-- **[벡터 어셈블러](./feature-transformation.md#vector-assembler)**: 여러 열을 단일 벡터 열로 결합합니다.
+- **[숫자 컴퓨터](./feature-transformation.md#numeric-imputer)**: 숫자 열의 누락된 값을 평균이나 중위수와 같은 지정된 값으로 채웁니다.
+- **[문자열 Imputer](./feature-transformation.md#string-imputer)**: 누락된 문자열 값을 열에서 가장 빈번한 문자열과 같이 지정된 값으로 바꿉니다.
+- **[벡터 어셈블러](./feature-transformation.md#vector-assembler)**: 여러 열을 단일 벡터 열로 결합하여 머신 러닝 모델에 사용할 데이터를 준비합니다.
+- **[부울 컴퓨터](./feature-transformation.md#boolean-imputer)**: 누락된 부울 값을 `true` 또는 `false`과(와) 같이 지정된 값으로 채웁니다.
 
 #### 숫자 변환기
 
@@ -88,7 +90,7 @@ Use a clustering algorithm to group data points into distinct clusters based on 
 
 ## OPTIONS 절 구현 {#options-clause}
 
-모델을 정의할 때 `OPTIONS` 절을 사용하여 알고리즘과 해당 매개 변수를 지정합니다. `K-Means`과(와) 같이 사용 중인 알고리즘을 나타내는 `type` 매개 변수를 설정하는 것부터 시작합니다. 그런 다음 `OPTIONS` 절의 관련 매개 변수를 키-값 쌍으로 정의하여 모델을 미세 조정합니다. 일부 매개 변수는 위치적일 수 있으며 사용자 지정 값이 제공된 경우 앞선 모든 매개 변수를 지정해야 한다는 것을 이해합니다. 특정 매개변수를 사용자 정의하지 않도록 선택하면 기본 설정이 적용됩니다. 각 매개 변수의 함수 및 기본값을 이해하려면 관련 설명서를 참조하십시오.
+모델을 정의할 때 `OPTIONS` 절을 사용하여 알고리즘과 해당 매개 변수를 지정합니다. `K-Means`과(와) 같이 사용 중인 알고리즘을 나타내는 `type` 매개 변수를 설정하는 것부터 시작합니다. 그런 다음 `OPTIONS` 절의 관련 매개 변수를 키-값 쌍으로 정의하여 모델을 미세 조정합니다. 특정 매개변수를 사용자 정의하지 않도록 선택하면 기본 설정이 적용됩니다. 각 매개 변수의 함수 및 기본값을 이해하려면 관련 설명서를 참조하십시오.
 
 ### 다음 단계
 
