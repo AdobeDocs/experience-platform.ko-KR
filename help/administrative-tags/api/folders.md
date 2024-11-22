@@ -3,7 +3,7 @@ title: 폴더 끝점
 description: Adobe Experience Platform API를 사용하여 폴더를 만들고, 업데이트하고, 관리하고, 삭제하는 방법에 대해 알아봅니다.
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: 78aa48701abaadea963b25e390aa96d7b31386f4
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 4%
@@ -31,7 +31,7 @@ ht-degree: 4%
 **API 형식**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
+GET /folders/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 ```
 
 | 매개변수 | 설명 |
@@ -44,7 +44,7 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 +++모든 최상위 데이터 세트 폴더를 나열하는 샘플 요청
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/root/subfolders
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/root/subfolders
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -118,7 +118,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/root/subfo
 **API 형식**
 
 ```http
-POST /folder/{FOLDER_TYPE}
+POST /folders/{FOLDER_TYPE}
 ```
 
 | 매개변수 | 설명 |
@@ -130,7 +130,7 @@ POST /folder/{FOLDER_TYPE}
 +++새 폴더를 만들기 위한 샘플 요청입니다.
 
 ```shell
-curl -X POST https://experience.adobe.io/unifiedfolders/folder/dataset
+curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -190,7 +190,7 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folder/dataset
 **API 형식**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
+GET /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | 매개변수 | 설명 |
@@ -203,7 +203,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++특정 폴더를 검색하기 위한 샘플 요청
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -261,7 +261,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 **API 형식**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
+GET /folders/{FOLDER_TYPE}/{FOLDER_ID}/validate
 ```
 
 | 매개변수 | 설명 |
@@ -274,7 +274,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 +++특정 폴더의 유효성을 검사하는 샘플 요청
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -321,7 +321,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 **API 형식**
 
 ```http
-PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
+PATCH /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | 매개변수 | 설명 |
@@ -334,7 +334,7 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++특정 폴더를 업데이트하기 위한 샘플 요청
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -383,7 +383,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 ***API 형식**
 
 ```http
-DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
+DELETE /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | 매개변수 | 설명 |
@@ -396,7 +396,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++특정 폴더 삭제에 대한 샘플 요청
 
 ```shell
-curl -X DELETE https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X DELETE https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
