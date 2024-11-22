@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Data Access API 안내서
 description: Data Access API는 개발자에게 Experience Platform 내에서 수집된 데이터 세트의 검색 가능성과 액세스 가능성에 초점을 맞춘 RESTful 인터페이스를 제공하여 Adobe Experience Platform을 지원합니다.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '566'
 ht-degree: 4%
 
 ---
@@ -23,7 +23,7 @@ Data Access API는 [!DNL Experience Platform] 내에서 수집된 데이터 세�
 
 ## API 사양 참조
 
-OpenAPI 참조 설명서는 [여기](https://developer.adobe.com/experience-platform-apis/references/data-access/)에서 찾을 수 있습니다.
+보다 쉬운 통합, 테스트 및 탐색을 위해 표준화되고 기계가 읽을 수 있는 형식을 보려면 [데이터 액세스 OpenAPI 참조 설명서](https://developer.adobe.com/experience-platform-apis/references/data-access/)를 참조하세요.
 
 ## 용어 {#terminology}
 

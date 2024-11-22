@@ -4,9 +4,9 @@ title: Data Distiller Authorization API 안내서
 description: Adobe Experience Platform의 쿼리 서비스 내에서 보안 데이터 액세스를 위해 권한 부여 및 IP 범위 제한을 시작하는 방법을 알아봅니다.
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '507'
 ht-degree: 5%
 
 ---
@@ -66,3 +66,5 @@ Data Distiller 권한 부여 API를 호출하려면 API 호출의 필수 헤더�
 각 API 호출 예는 요청의 형식을 지정하고 응답을 해석하는 방법을 보여 주므로 Query Service에서 데이터에 안전하게 액세스할 수 있습니다.
 
 IP 제한 구성 및 유효성 검사에 대한 특정 지침은 [IP 액세스 끝점 설명서](./ip-access.md) 및 [IP 유효성 검사 끝점 설명서](./validate.md)를 참조하세요.
+
+보다 쉬운 통합, 테스트 및 탐색을 위해 표준화되고 기계가 읽을 수 있는 형식을 보려면 [데이터 Distiller Authorization OpenAPI 참조 설명서](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/)를 참조하세요.
