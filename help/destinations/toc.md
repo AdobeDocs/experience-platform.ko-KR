@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 07e01847c6e24564682161e88122948d200ab733
+source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1257'
 ht-degree: 5%
 
 ---
@@ -42,6 +42,7 @@ ht-degree: 5%
       * [스트리밍 프로필 내보내기 대상에 대상자 활성화](./ui/activate-streaming-profile-destinations.md)
       * [프로필 내보내기 대상을 일괄 처리하도록 대상자 활성화](./ui/activate-batch-profile-destinations.md)
       * [Edge 개인화 대상에 대한 대상자 활성화](./ui/activate-edge-personalization-destinations.md)
+      * [에지에서 실시간으로 프로필 속성 조회](./ui/activate-edge-profile-lookup.md)
       * [LiveRamp 식별자를 기반으로 조정된 대상에 대상 활성화](./ui/activate-curated-destinations.md)
       * [대상에 대한 잠재 고객 활성화](./ui/activate-prospect-audiences.md)
       * [대상에 대한 계정 대상자 활성화](./ui/activate-account-audiences.md)

@@ -2,7 +2,7 @@
 title: Edge Network 서버 API에 대한 성능 보호
 description: 최적의 성능 보호 내에서 서버 API를 사용하는 방법에 대해 알아봅니다.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 316efe577274b389bd1bf50e896ad6ef53e44b7b
+source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 2%
@@ -58,7 +58,6 @@ Adobe은 사용 제한 초과로 인한 성능 저하의 책임이 없습니다.
 | --- | --- |
 | `/v2/interact` | 4000 |
 | `/v2/collect` | 6000 |
-
 
 ### HTTP 요청 크기 제한
 
