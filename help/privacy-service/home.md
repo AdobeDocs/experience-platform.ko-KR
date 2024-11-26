@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service 개요
 description: Privacy Service을 통해 Experience Cloud 데이터 운영에서 법적 개인정보 보호 규정을 자동으로 준수하는 방법에 대해 알아봅니다.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 19b33ddf2fc3f8d889d370eedfc732ac54178dcd
+source-git-commit: 61a5b4fd7af68e7379b456ddd37218d183e76256
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1660'
 ht-degree: 5%
 
 ---
@@ -68,6 +68,14 @@ Privacy Service에 허용되는 ID 정보 유형에 대한 자세한 내용은 [
 
 비즈니스의 개인 정보 보호 요구 사항을 결정하고 Privacy Service에 전송할 ID 값을 결정했으면 개인 정보 보호 요청을 시작할 수 있습니다. Privacy Service을 사용하여 API 또는 UI를 통해 개인 정보 요청을 전송합니다.
 
+#### 액세스 요청 파일 세부 정보 {#access-requests}
+
+성공적인 액세스 요청에 대한 응답으로 여러 파일이 포함된 **다운로드 URL**&#x200B;이(가) 있습니다. 데이터가 요청된 각 Adobe 애플리케이션에 대해 하나의 파일이 제공됩니다. 각 애플리케이션의 파일 형식은 애플리케이션의 데이터 구조에 따라 다를 수 있습니다.
+
+#### 요청 삭제 - 다운로드 URL 없음 {#delete-requests}
+
+검색 중인 고객 데이터가 없으므로 **삭제 요청**&#x200B;에 대한 응답에 **다운로드 URL이 없음**&#x200B;이(가) 있습니다.
+
 >[!IMPORTANT]
 >
 >아래 섹션에서는 API 또는 UI에서 일반적인 개인 정보 요청을 하는 방법을 다루는 설명서에 대한 링크를 제공합니다. 그러나 사용 중인 [!DNL Experience Cloud] 응용 프로그램에 따라 요청 페이로드에서 보내야 하는 필드가 이 안내서에 표시된 예와 다를 수 있습니다.
@@ -97,6 +105,10 @@ Privacy Service UI가 있는 그래픽 인터페이스를 사용하여 개인 �
 | PRIVACY SERVICE UI | Privacy Service UI 모니터링 대시보드를 사용하여 모든 활성 요청의 상태를 시각적으로 볼 수 있습니다. 자세한 내용은 [Privacy Service 사용 안내서](ui/overview.md)를 참조하세요. |
 | PRIVACY SERVICE API | Privacy Service API에서 제공하는 조회 끝점을 사용하여 개인 정보 작업 상태를 프로그래밍 방식으로 모니터링할 수 있습니다. API 사용 방법에 대한 자세한 단계는 [Privacy Service API 안내서](./api/overview.md)를 참조하십시오. |
 | [!DNL Privacy Events] | [!DNL Privacy Events]은(는) 구성된 웹후크로 전송되는 Adobe I/O 이벤트를 사용하여 효율적인 작업 요청 자동화를 용이하게 합니다. Privacy Service API를 폴링하여 작업이 완료되었는지 또는 워크플로우 내의 특정 이정표에 도달했는지 확인할 필요가 줄어들거나 없어집니다. 자세한 내용은 [개인 정보 보호 이벤트 구독](./privacy-events.md)에 대한 자습서를 참조하십시오. |
+
+#### 존재하지 않는 사용자에 대한 응답 {#non-existing-users}
+
+액세스 또는 삭제 요청을 제출할 때 사용자 데이터를 찾을 수 없는 경우에도 호출이 성공적으로 완료된 경우 응답은 항상 `success`을(를) 반환합니다. 즉, 데이터가 존재하지 않더라도 데이터를 검색하거나 삭제하지 않고 액세스 또는 삭제를 완료할 수 있습니다.
 
 ## 다음 단계
 
