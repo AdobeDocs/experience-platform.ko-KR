@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Assurance
 breadcrumb-title: Assurance 안내서
-user-guide-description: Adobe Experience Platform Assurance를 사용하면 모바일 애플리케이션 내에서 데이터를 수집하거나 경험을 제공하는 방식을 검사하고, 증명하고, 시뮬레이션하고, 검증할 수 있습니다.
+user-guide-description: Adobe Experience Platform Assurance를 사용하면 모바일 애플리케이션 내에서 데이터를 수집하거나 경험을 제공하는 방식을 검사하고, 교정하고, 시뮬레이션하고, 검증할 수 있습니다.
 feature: Assurance
 role: Developer
 source-git-commit: 0209c873438a3bda1b0df6434f49735c2d3e150b
