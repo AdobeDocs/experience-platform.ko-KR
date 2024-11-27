@@ -5,7 +5,7 @@ title: UI에서 PayPal Source 연결 만들기
 type: Tutorial
 description: Adobe Experience Platform UI를 사용하여 PayPal 소스 연결을 만드는 방법을 알아봅니다.
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!WARNING]
 >
->[!DNL PayPal] 원본은 2025년 5월 말에 사용되지 않습니다.
+>[!DNL PayPal] 원본은 2025년 6월 말에 사용되지 않습니다.
 
 Adobe Experience Platform의 Source 커넥터는 일정에 따라 외부 소스 데이터를 수집하는 기능을 제공합니다. 이 자습서에서는 Platform 사용자 인터페이스를 사용하여 [!DNL PayPal] 소스 커넥터를 만드는 단계를 제공합니다.
 

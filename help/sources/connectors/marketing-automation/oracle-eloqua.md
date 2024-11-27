@@ -2,7 +2,7 @@
 title: Oracle Eloqua 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Oracle Eloqua를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->[!DNL Oracle Eloqua] 원본은 2025년 5월 말에 사용되지 않습니다.
+>[!DNL Oracle Eloqua] 원본은 2025년 6월 말에 사용되지 않습니다.
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 [!DNL Platform] 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 

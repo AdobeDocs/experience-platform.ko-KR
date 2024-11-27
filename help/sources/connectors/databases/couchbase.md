@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Couchbase Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Couchbase를 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->[!DNL Couchbase] 원본은 2025년 5월 말에 사용되지 않습니다.
+>[!DNL Couchbase] 원본은 2025년 6월 말에 사용되지 않습니다.
 
 Adobe Experience Platform은 [!DNL Microsoft], MySQL 및 [!DNL Azure]과(와) 같은 데이터베이스 공급자에 대한 기본 연결을 제공하므로 이러한 시스템에서 데이터를 가져올 수 있습니다. 관계형, NoSQL 또는 데이터 웨어하우스를 비롯한 다양한 유형의 타사 데이터베이스가 지원됩니다. 데이터베이스 공급자 지원에 [!DNL Couchbase]이(가) 포함됩니다.
 

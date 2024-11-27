@@ -2,7 +2,7 @@
 title: UI를 통해 Salesforce Marketing Cloud 계정을 Experience Platform에 연결
 description: UI를 통해 Salesforce Marketing Cloud 계정을 Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!WARNING]
 >
->[!DNL Salesforce Marketing Cloud] 원본은 2025년 5월 말에 사용되지 않습니다.
+>[!DNL Salesforce Marketing Cloud] 원본은 2025년 6월 말에 사용되지 않습니다.
 
 이 자습서에서는 UI를 통해 [!DNL Salesforce Marketing Cloud] 계정을 Adobe Experience Platform에 연결하는 방법에 대한 단계를 제공합니다.
 
