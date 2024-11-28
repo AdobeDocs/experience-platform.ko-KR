@@ -2,10 +2,10 @@
 title: 외부 Source 시스템 감사 속성 데이터 유형
 description: 외부 Source 시스템 감사 속성 경험 데이터 모델(XDM) 데이터 유형에 대해 알아봅니다.
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 03735e7099ffb2cfd44fc7fffd35e3a4a858e3ba
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 20%
+source-wordcount: '186'
+ht-degree: 18%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 20%
 | `lastActivityDate` | 날짜/시간 | 소스 시스템의 마지막 활동 날짜입니다. |
 | `lastReferencedDate` | 날짜/시간 | 소스 시스템에 대해 마지막으로 참조된 날짜입니다. |
 | `lastUpdatedBy` | 문자열 | 이 레코드를 마지막으로 업데이트한 사람의 이름입니다. |
-| `lastUpdatedDate` | 날짜/시간 | 소스 시스템의 마지막 업데이트 날짜. |
+| `lastUpdatedDate` | 날짜/시간 | 소스 시스템의 마지막 업데이트 날짜. 이 값은 [특성 병합 정책](../../profile/api/merge-policies.md#attribute-merge)에서 병합 충돌 시 우선 순위를 결정하는 데 사용됩니다. |
 | `lastViewedDate` | 날짜/시간 | 소스 시스템의 마지막 조회 날짜입니다. |
 
 {style="table-layout:auto"}
