@@ -5,9 +5,9 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 83d15e8d6488a400a87f111ec97f06401431b339
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '369'
 ht-degree: 22%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 22%
       - [ML용 엔지니어 기능](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [ML 환경으로 데이터 내보내기](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML 데이터 파이프라인 강화 통합 워크플로](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- 데이터 Distiller 통계 {#advanced-statistics}
+- 데이터 Distiller 통계 및 머신 러닝 {#advanced-statistics}
    - [개요](advanced-statistics/overview.md)
    - [기능 엔지니어링](advanced-statistics/feature-engineering.md)
    - [모델](advanced-statistics/models.md)

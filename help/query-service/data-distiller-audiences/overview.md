@@ -1,9 +1,10 @@
 ---
 title: SQL을 사용하여 대상 작성
 description: Adobe Experience Platform의 Data Distiller에서 SQL 대상 확장을 사용하여 SQL 명령을 사용하여 대상을 만들고, 관리하고, 게시하는 방법에 대해 알아봅니다. 이 안내서에서는 프로필 만들기, 업데이트 및 삭제, 데이터 기반 대상 정의 사용 등 대상 라이프사이클의 모든 측면을 다룹니다.
-source-git-commit: b790dc0a485011022ac637f9d9c55f21c882d5fc
+exl-id: c35757c1-898e-4d65-aeca-4f7113173473
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1164'
 ht-degree: 1%
 
 ---
@@ -125,7 +126,7 @@ SQL 확장을 사용하여 생성된 대상은 대상 작업 영역의 데이터
 
 ![Adobe Experience Platform의 대상 작업 영역으로서, 데이터 Distiller 대상이 자동으로 게시되고 사용할 준비가 되었습니다.](../images/data-distiller/sql-audiences/audiences.png)
 
-## 대상에 대상 활성화 {#activate-audiences}
+## 대상자를 대상으로 활성화 {#activate-audiences}
 
 대상을 [!DNL Amazon S3], [!DNL SFTP] 또는 [!DNL Azure Blob]과(와) 같은 파일 기반 대상으로 타깃팅하여 활성화하십시오. 보강된 대상 속성을 필요에 따라 세분화하고 필터링할 수 있습니다.
 
@@ -209,4 +210,4 @@ Data Distiller 대상은 현재 Adobe Journey Optimizer에서 사용할 수 없�
 
 - **대상 평가 살펴보기**: Adobe Experience Platform의 [대상 평가 방법에 대해 알아보기](../../segmentation/home.md#evaluate-segments): 실시간 업데이트를 위한 스트리밍 세분화, 예약된 처리나 온디맨드 처리를 위한 일괄 세분화 및 Edge Network에서 즉각적인 평가를 위한 에지 세분화.
 - **대상과 통합**: Platform Destinations UI를 사용하여 [필요 시 파일을 일괄 처리 대상으로 내보내기](../../destinations/ui/export-file-now.md)하는 방법에 대한 안내서를 읽어 보십시오.
-- **대상 성능 검토**: SQL 정의 대상이 다양한 채널에서 어떻게 작동하는지 분석합니다. 데이터 인사이트를 사용하여 대상 정의 및 타깃팅 전략을 조정하고 개선합니다. [대상 인사이트](../../dashboards/insights/audiences.md)의 문서를 읽고 Adobe Real-time Customer Data Platform의 대상 인사이트에 대한 SQL 쿼리에 액세스하고 조정하는 방법을 알아보십시오. 그런 다음 대상 대시보드를 사용자 정의하여 이러한 인사이트를 효과적으로 시각화하고 사용하여 보다 나은 의사 결정을 위해 고유한 인사이트를 만들고 원시 데이터를 실행 가능한 정보로 변환할 수 있습니다.
+- **대상 성능 검토**: SQL 정의 대상이 다양한 채널에서 어떻게 작동하는지 분석합니다. 데이터 인사이트를 사용하여 대상 정의 및 타깃팅 전략을 조정하고 개선합니다. [대상 인사이트](../../dashboards/insights/audiences.md)의 문서를 읽고 Adobe Real-Time CDP의 대상 인사이트에 대한 SQL 쿼리에 액세스하고 조정하는 방법을 알아보십시오. 그런 다음 대상 대시보드를 사용자 정의하여 이러한 인사이트를 효과적으로 시각화하고 사용하여 보다 나은 의사 결정을 위해 고유한 인사이트를 만들고 원시 데이터를 실행 가능한 정보로 변환할 수 있습니다.

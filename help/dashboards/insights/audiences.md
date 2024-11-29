@@ -2,16 +2,16 @@
 title: Audiences 인사이트
 description: 대상 인사이트를 제공하는 SQL을 살펴보고 이러한 쿼리를 사용하여 사용자 지정 인사이트를 생성하면 Adobe Experience Platform에서 대상 데이터를 추가로 탐색할 수 있습니다.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1122'
 ht-degree: 3%
 
 ---
 
 # Audiences 인사이트
 
-데이터 모델 분석을 통해 얻은 인사이트를 통해 Adobe Real-time Customer Data Platform 데이터에 보다 쉽게 액세스하고, 이해할 수 있으며, 의사 결정에 영향을 줄 수 있습니다.
+데이터 모델 분석을 통해 얻은 인사이트를 통해 Adobe Real-Time CDP 데이터에 보다 쉽게 액세스하고, 이해할 수 있으며, 의사 결정에 영향을 줄 수 있습니다.
 
 대상자를 지원하는 SQL에 액세스하여 대상자 인사이트를 파악한 다음 고유한 인사이트를 생성하여 대상자를 구성하는 ID 및 프로필을 추가로 살펴봅니다. 기존 Real-Time CDP 데이터 모델 SQL을 영감으로 사용하여 원시 데이터를 새로운 실행 가능한 통찰력으로 변환하여 고유한 비즈니스 요구 사항에 맞는 쿼리를 만듭니다.
 

@@ -4,16 +4,16 @@ description: 계정 프로필 인사이트를 제공하는 SQL을 살펴보고 �
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: f9ef0e25dac1715bbb6d73db52d6368c543bf7ec
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
 
 # 계정 프로필 인사이트
 
-[계정 프로필](../../rtcdp/accounts/account-profile-overview.md)은(는) 여러 마케팅 채널 및 조직 시스템을 포함하여 다양한 소스의 계정 정보를 통합하는 데 사용됩니다. 이러한 통합 보기를 통해 고객 계정을 포괄적으로 이해하고 B2B 마케팅 캠페인을 향상시킬 수 있습니다. 데이터 모델 분석을 통해 얻은 인사이트를 통해 Adobe Real-time Customer Data Platform B2B 데이터에 보다 쉽게 액세스하고, 이해할 수 있으며, 의사 결정에 영향을 줄 수 있습니다.
+[계정 프로필](../../rtcdp/accounts/account-profile-overview.md)은(는) 여러 마케팅 채널 및 조직 시스템을 포함하여 다양한 소스의 계정 정보를 통합하는 데 사용됩니다. 이러한 통합 보기를 통해 고객 계정을 포괄적으로 이해하고 B2B 마케팅 캠페인을 향상시킬 수 있습니다. 데이터 모델 분석을 통해 얻은 인사이트를 통해 Adobe Real-Time CDP B2B 데이터에 보다 쉽게 액세스하고, 이해할 수 있으며, 의사 결정에 영향을 줄 수 있습니다.
 
 통찰력을 향상시키는 SQL에 액세스하여 B2B 데이터를 더 잘 이해하고, 사용자 지정이 가능한 자신만의 통찰력을 생성하여 고객 계정 정보를 더 자세히 살펴볼 수 있습니다. 기존 Real-Time CDP 데이터 모델 SQL을 영감으로 사용하여 원시 데이터를 새로운 실행 가능한 통찰력으로 변환하여 고유한 비즈니스 요구 사항에 맞는 쿼리를 만듭니다.
 
