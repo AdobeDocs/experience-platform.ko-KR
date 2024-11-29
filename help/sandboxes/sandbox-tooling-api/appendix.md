@@ -2,9 +2,9 @@
 title: 샌드박스 도구 API 안내서 부록
 description: 이 문서에서는 샌드박스 도구 API 작업과 관련된 추가 정보를 제공합니다.
 exl-id: fdfa019d-ce0e-456b-b591-7d96d1115e02
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 955c6946786e9425bdb99d623595420a6d13747e
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '188'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,9 @@ ht-degree: 1%
 | `limit` | 응답에서 반환할 최대 레코드 수입니다. 기본 제한은 20입니다. |
 | `start` | 하위 세트 항목 목록이 시작되어야 하는 시작입니다. |
 | `targetSandbox` | 아티팩트를 가져올 샌드박스 이름을 나타냅니다. |
-| `jobType` | 작업 유형. 이 값은 NEW, RESUME 및 ROLLBACK이 될 수 있습니다. |
-| `jobStatus` | 작업의 상태입니다. 이 값은 PENDING, IN_PROGRESS, SUCCESS, FAILED 및 CANCELLED일 수 있습니다. |
-| `requestType` | 요청 유형. 이 값은 내보내기, 가져오기 및 복사입니다. |
-| `expiryPeriod ` | 이 사용자가 지정한 기간은 패키지가 게시된 시점부터 패키지 만료 날짜(일)를 정의합니다. 이 값은 음수가 아니어야 합니다. 기본값은 업데이트 또는 게시 API가 호출된 시점부터 90일입니다. |
+| `jobType` | 작업 유형. 이 값은 `NEW`, `RESUME` 또는 `ROLLBACK`일 수 있습니다. |
+| `jobStatus` | 작업의 상태입니다. 이 값은 `PENDING`, `IN_PROGRESS`, `SUCCESS`, `FAILED` 또는 `CANCELLED`일 수 있습니다. |
+| `requestType` | 요청 유형. 이 값은 `EXPORT`, `IMPORT` 또는 `COPY`일 수 있습니다. |
+| `expiryPeriod` | 이 사용자가 지정한 기간은 패키지가 게시된 시점부터 패키지 만료 날짜(일)를 정의합니다. 이 값은 음수가 아니어야 합니다. 기본값은 업데이트 또는 게시 API가 호출된 시점부터 90일입니다. |
+| `packageType` | 패키지의 유형입니다. 이 값은 `PARTIAL` 또는 `FULL`일 수 있습니다. |
+| `status` | 패키지의 상태입니다. 이 값은 `DRAFT`, `PUBLISHED`, `PUBLISH_IN_PROGRESS` 또는 `PUBLISH_FAILED`일 수 있습니다. |
