@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 금융 서비스 산업 데이터 모델 ERD
 description: 은행, 금융 서비스 및 보험(BFSI) 산업에 대한 표준화된 데이터 모델을 설명하는 엔티티 관계 다이어그램(ERD)을 봅니다. 이 데이터 모델은 Adobe Experience Platform에서 사용하기 위해 XDM(Experience Data Model)과 호환됩니다.
 exl-id: 2e8f6b2a-10e7-4394-b45f-c03db0f25400
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%
@@ -21,12 +21,12 @@ ht-degree: 0%
 다음 범례를 사용하여 이 ERD를 해석하십시오.
 
 * 에 표시된 각 엔터티는 기본 [XDM(경험 데이터 모델) 클래스](../composition.md#class)를 기반으로 합니다.
-* 지정된 엔터티의 경우 **bold**&#x200B;로 표시된 각 행은 필드 그룹 또는 데이터 형식을 나타내며 아래에 제공된 관련 필드가 굵게 표시되지 않은 텍스트로 표시됩니다.
+* 상위 필드 아래에 들여쓴 필드는 상위 필드 그룹에 속하는 하위 필드 또는 하위 필드를 나타냅니다.
 * 지정된 엔티티에 대한 가장 중요한 필드는 빨간색으로 강조 표시됩니다.
 * 개별 고객을 식별하는 데 사용할 수 있는 모든 속성은 &quot;ID&quot;로 표시되며, 이러한 속성 중 하나는 &quot;기본 ID&quot;로 표시됩니다.
 * 쿠키 기반 이벤트는 트랜잭션을 수행한 개인이나 개인을 결정할 수 없는 경우가 많기 때문에 엔티티 관계는 종속되지 않는 것으로 표시됩니다.
 
-![](../../images/industries/financial.png)
+![금융 산업 데이터 모델에 대한 ERD 예](../../images/industries/financial.png)
 
 >[!NOTE]
 >
