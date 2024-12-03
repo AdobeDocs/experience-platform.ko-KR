@@ -4,10 +4,10 @@ description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어�
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f6e413d2d8b644775b6714739113174f5d9cb0d9
 workflow-type: tm+mt
-source-wordcount: '1350'
-ht-degree: 36%
+source-wordcount: '1388'
+ht-degree: 35%
 
 ---
 
@@ -31,6 +31,10 @@ ht-degree: 36%
 Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명성과 가시성을 높이기 위해 &quot;감사 로그&quot; 형식으로 다양한 서비스 및 기능에 대한 사용자 활동을 감사할 수 있습니다. 이러한 로그는 플랫폼의 문제 해결에 도움이 될 수 있는 감사 추적을 형성하며, 기업이 기업 데이터 관리 정책 및 규제 요구 사항을 효과적으로 준수하는 데 도움이 됩니다.
 
 기본적으로 감사 로그는 **누가**&#x200B;이(가) **무엇을** 작업하고 **언제**&#x200B;했는지 알려 줍니다. 로그에 기록된 각 작업에는 작업 유형, 날짜 및 시간, 작업을 수행한 사용자의 이메일 ID 및 작업 유형과 관련된 추가 속성을 나타내는 메타데이터가 포함됩니다.
+
+>[!NOTE]
+>
+> **역할** 리소스 내의 **사용자 추가** 및 **사용자 제거** 작업에 대한 메타데이터에는 작업을 수행한 사용자의 전자 메일 ID가 포함되지 않습니다. 대신 로그에 시스템 생성 이메일 ID(system@adobe.com)가 표시됩니다.
 
 이 문서에서는 UI 또는 API에서 보고 관리하는 방법을 포함하여 플랫폼의 감사 로그를 다룹니다.
 
