@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant를 시작합니다.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
+source-git-commit: 830daf12b1ae9718a16308d16774f4357f431f6c
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '581'
 ht-degree: 1%
 
 ---
@@ -29,15 +29,10 @@ AI Assistant는 Experience Platform, Real-Time CDP, Adobe Journey Optimizer 및 
     <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>학습 향상</strong><br/>워크플로를 중단하지 않고 제품 지식을 검색, 문제 해결 및 이해도를 높이십시오.</div>
     </td>
-    <td>
-    <a href="./access.md"><img src="./assets/landing/ai-access.png" style="width:" 100%;max-height: 100%"></a>
-    <div><strong>사용자의 사용량에 따라 사용 권한 적용</strong><br/>팀원의 역할에 따라 액세스 권한을 부여하고 취소합니다.</div>
-    </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -84,11 +79,23 @@ AI Assistant에 대한 개요는 다음 비디오를 참조하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
+자세한 내용은 [AI Assistant UI 안내서](ui-guide.md)를 참조하십시오.
+
 ### AI Assistant 액세스
 
 다음 비디오를 통해 조직 및 사용자를 위한 AI Assistant 액세스를 구성하는 방법에 대해 알아보십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
+
+자세한 내용은 [AI Assistant 액세스 가이드](access.md)를 참조하십시오.
+
+### AI Assistant 제품 지식을 사용하여 온보딩 시간 단축
+
+다음 비디오를 통해 AI Assistant 제품 지식을 사용하여 온보딩 시간을 줄이는 방법에 대해 알아보십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+
+자세한 내용은 AI Assistant의 [제품 정보](home.md#product-knowledge)를 참조하십시오.
 
 ### AI Assistant를 사용하여 대상자 정리 해제
 
