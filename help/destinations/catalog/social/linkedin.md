@@ -3,9 +3,9 @@ keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin;
 title: Linkedin 일치하는 대상 연결
 description: 해시된 이메일을 기반으로 대상 타겟팅, 개인화 및 억제에 대한 LinkedIn 캠페인용 프로필을 활성화합니다.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 74d7c48042b0d2b938705b588c185f3c3f96f1cd
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1095'
 ht-degree: 4%
 
 ---
@@ -149,7 +149,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 ## 내보낸 데이터 {#exported-data}
 
-활성화가 성공하면 [!DNL LinkedIn] 사용자 지정 대상자가 [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login)에서 프로그래밍 방식으로 만들어집니다. 사용자가 활성화된 대상자에 대해 자격이 부여되거나 자격을 상실하면 대상자 멤버십이 추가 및 제거됩니다.
+활성화가 성공하면 [!DNL LinkedIn] 사용자 지정 대상자가 [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login)에서 프로그래밍 방식으로 만들어집니다. 사용자가 활성화된 대상에 대해 자격이 부여되거나 자격을 상실함에 따라 대상 멤버십이 조정됩니다.
 
 >[!TIP]
 >

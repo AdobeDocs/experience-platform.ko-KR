@@ -2,12 +2,12 @@
 title: 대상에 대한 계정 대상자 활성화
 type: Tutorial
 description: 대상에 대한 계정 대상을 활성화하는 방법을 알아봅니다
-badgeB2B: label="B2B 버전" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 지원되는 대상 {#supported-destinations}
 
-**[!UICONTROL 연결]** > **[!UICONTROL 대상]**(으)로 이동한 다음 **[!UICONTROL 카탈로그]** 탭을 선택합니다. **[!UICONTROL 데이터 형식]** 필터를 사용하고 **[!UICONTROL 계정]**&#x200B;을 선택하여 계정 대상의 활성화를 지원하는 대상을 확인하십시오. 현재, 계정 대상을 내보내는 작업은 특정 클라우드 저장소 대상([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob 저장소](/help/destinations/catalog/cloud-storage/azure-blob.md), [데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md) 및 [SFTP](/help/destinations/catalog/cloud-storage/sftp.md))과 [(회사) LinkedIn에서 일치하는 대상](/help/destinations/catalog/social/linkedin.md) 대상에만 사용할 수 있습니다.
+**[!UICONTROL 연결]** > **[!UICONTROL 대상]**(으)로 이동한 다음 **[!UICONTROL 카탈로그]** 탭을 선택합니다. **[!UICONTROL 데이터 형식]** 필터를 사용하고 **[!UICONTROL 계정]**&#x200B;을 선택하여 계정 대상의 활성화를 지원하는 대상을 확인하십시오. 현재 계정 대상 내보내기는 특정 클라우드 저장소 대상([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob 저장소](/help/destinations/catalog/cloud-storage/azure-blob.md), [데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md) 및 [SFTP](/help/destinations/catalog/cloud-storage/sftp.md))과 [Demandbase](/help/destinations/catalog/advertising/demandbase.md) 및 [(회사) LinkedIn이 대상 ](/help/destinations/catalog/social/linkedin-b2b.md) 스트리밍 대상에만 사용할 수 있습니다.
 
 계정 대상을 지원하는 ![대상.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 >
 >계정 대상을 내보낼 수 있는 대상은 카드 오른쪽 상단에 아래에 강조 표시된 대상과 유사한 아이콘으로 표시되거나, 데이터 유형 필터를 사용하여 [페이지에 더 위에 표시된 대로](#supported-destinations) 계정 대상을 내보낼 수 있는 대상만 표시할 수 있습니다.
 
-![강조 표시된 프로필 대상을 내보낼 수 있는 Amazon S3 대상 페이지입니다.](/help/destinations/assets/ui/activate-account-audiences/amazon-s3-icon-activate-account-audiences.png)
+![강조 표시된 프로필 대상을 내보낼 수 있는 Demandbase 대상 페이지입니다.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
 
 1. **[!UICONTROL 데이터 형식 계정]**&#x200B;을 선택한 후 데이터 집합을 내보낼 대상 연결을 선택한 후 **[!UICONTROL 다음]**&#x200B;을 선택합니다.
 

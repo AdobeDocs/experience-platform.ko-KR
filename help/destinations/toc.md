@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1262'
 ht-degree: 5%
 
 ---
@@ -201,6 +201,7 @@ ht-degree: 5%
    * 소셜 대상{#social}
       * [소셜 대상 개요](./catalog/social/overview.md)
       * [Facebook 연결](./catalog/social/facebook.md)
+      * [(회사) LinkedIn 일치 대상 연결](./catalog/social/linkedin-b2b.md)
       * [LinkedIn 일치하는 대상 연결](./catalog/social/linkedin.md)
       * [TikTok 연결](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] 연결](./catalog/social/twitter.md)
