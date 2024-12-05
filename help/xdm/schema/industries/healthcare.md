@@ -2,7 +2,7 @@
 title: 의료 산업 데이터 모델 ERD
 description: 의료 산업에 대한 표준화된 데이터 모델을 설명하는 ERD(엔티티 관계 다이어그램)를 봅니다. 이 데이터 모델은 Adobe Experience Platform에서 사용하기 위해 XDM(Experience Data Model)과 호환됩니다.
 exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
-source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
+source-git-commit: 8f026501cf5c8087cc512ac374163908cebd17c6
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 0%
