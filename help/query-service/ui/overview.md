@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 쿼리 서비스 UI 안내서
 description: Adobe Experience Platform Query Service는 쿼리를 작성하여 실행하고, 이전에 실행한 쿼리를 보고, 조직 내에서 사용자가 저장한 쿼리에 액세스하는 데 사용할 수 있는 사용자 인터페이스를 제공합니다.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: ab611e33c82bf5b727b855877ee8f686f90bbfff
+source-git-commit: 3b36148aee490554672ee9e76db4e03c430dfae6
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 1%
@@ -175,3 +175,4 @@ Platform UI의 템플릿에 대한 자세한 내용은 [쿼리 템플릿](./quer
 ## 다음 단계
 
 [!DNL Platform]의 쿼리 서비스 사용자 인터페이스에 익숙해졌으므로 쿼리 편집기에 액세스하여 조직의 다른 사용자와 공유할 자체 쿼리 프로젝트를 만들 수 있습니다. 쿼리 편집기에서 쿼리를 작성 및 실행하는 방법에 대한 자세한 내용은 [쿼리 편집기 사용 안내서](./user-guide.md)를 참조하십시오.
+
