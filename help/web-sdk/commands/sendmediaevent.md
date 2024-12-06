@@ -2,7 +2,7 @@
 title: sendMediaEvent
 description: sendMediaEvent 명령을 사용하여 웹 SDK에서 미디어 세션을 추적하는 방법에 대해 알아봅니다.
 exl-id: a38626fd-4810-40a0-8893-e98136634fac
-source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
+source-git-commit: 877e12f1d53bb4a8d7c2564490d4e8f3e9e34e34
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
@@ -626,7 +626,7 @@ sessionPromise.then(sessionID => {
 
 ### 상태 업데이트 {#state-updates}
 
-`media.stateUpdate` 이벤트 유형은 플레이어 상태가 변경될 때 추적하는 데 사용됩니다. 플레이어 상태가 변경되면 이 이벤트를 전송해야 합니다.
+`media.statesUpdate` 이벤트 유형은 플레이어 상태가 변경될 때 추적하는 데 사용됩니다. 플레이어 상태가 변경되면 이 이벤트를 전송해야 합니다.
 
 >[!BEGINTABS]
 
@@ -636,7 +636,7 @@ sessionPromise.then(sessionID => {
 alloy("sendMediaEvent", {
     playerId: "movie-test",
     xdm: {
-        eventType: "media.stateUpdate",
+        eventType: "media.statesUpdate",
         mediaCollection: {
             statesStart: [{
                     name: "mute"
