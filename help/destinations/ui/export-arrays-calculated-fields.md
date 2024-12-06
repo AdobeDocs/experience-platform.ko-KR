@@ -3,7 +3,7 @@ title: 계산된 필드를 사용하여 배열을 문자열로 내보내기
 type: Tutorial
 description: 계산된 필드를 사용하여 배열을 Real-Time CDP에서 클라우드 스토리지 대상으로 문자열로 내보내는 방법을 알아봅니다.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 7%
@@ -21,7 +21,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->* 계산된 필드를 통해 배열을 내보내는 기능은 일반적으로 사용할 수 있습니다.
+>계산된 필드를 통해 배열을 내보내는 기능은 일반적으로 사용할 수 있습니다.
 
 계산된 필드를 통해 배열을 Real-Time CDP에서 [클라우드 저장소 대상](/help/destinations/catalog/cloud-storage/overview.md)으로 문자열로 내보내는 방법에 대해 알아봅니다. 이 기능을 통해 활성화되는 사용 사례를 이해하려면 이 문서 를 참조하십시오.
 
