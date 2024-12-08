@@ -2,7 +2,7 @@
 title: 의료 산업 데이터 모델 ERD
 description: 의료 산업에 대한 표준화된 데이터 모델을 설명하는 ERD(엔티티 관계 다이어그램)를 봅니다. 이 데이터 모델은 Adobe Experience Platform에서 사용하기 위해 XDM(Experience Data Model)과 호환됩니다.
 exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
-source-git-commit: 8f026501cf5c8087cc512ac374163908cebd17c6
+source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 0%
@@ -42,3 +42,4 @@ ht-degree: 0%
 | 고객이 보험 회사에 대해 알게 된 방법을 이해하기 위해 다양한 채널을 통해 보험 마케팅을 추적하여 의료 플랜의 등록 및 계정 생성을 개선합니다. | <ul><li>**[[!UICONTROL XDM 개별 프로필]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL 의료 서비스 구성원 세부 정보]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL 지불인]](../../classes/payer.md)**</li><li>**[[!UICONTROL 계획]](../../classes/plan.md)**:<ul><li>[[!UICONTROL 의료 서비스 플랜 세부 정보]](../../field-groups/plan/healthcare-plan-details.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL 웹 세부 정보]](../../field-groups/event/web-details.md)</li><li>[[!UICONTROL Advertising 세부 정보]](../../field-groups/event/advertising-details.md)</li></ul></li></ul> |
 | 의료 보험 가입의 실패를 피하십시오. | <ul><li>**[[!UICONTROL XDM 개별 프로필]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL 의료 서비스 구성원 세부 정보]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL 계획]](../../classes/plan.md)**:<ul><li>[[!UICONTROL 의료 서비스 플랜 세부 정보]](../../field-groups/plan/healthcare-plan-details.md)</li></ul></li></ul> |
 | DTC(고객 직접 방문) 광고를 사용하여 공급자에게 약물 정보를 홍보합니다. | <ul><li>**[[!UICONTROL XDM 개별 프로필]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL 의료 서비스 구성원 세부 정보]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL 약물]](../../classes/medication.md)**:<ul><li>[[!UICONTROL 의료 의약품]](../../field-groups/medication/healthcare-medication.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL 웹 세부 정보]](../../field-groups/event/web-details.md)</li><li>[[!UICONTROL Advertising 세부 정보]](../../field-groups/event/advertising-details.md)</li></ul></li></ul> |
+
