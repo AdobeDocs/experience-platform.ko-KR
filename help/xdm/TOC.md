@@ -5,10 +5,10 @@ breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: Experience Platform 내의 경험 데이터 모델(XDM) 시스템 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법을 알아봅니다.
 feature: Schemas
 role: Developer
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: d2baf74bb5fd87045f5d25b2996911c7bce36f36
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 45%
+source-wordcount: '719'
+ht-degree: 42%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 45%
 * [XDM 시스템 개요](home.md)
 * 스키마 {#schema}
    * [스키마 컴포지션 기본 사항](schema/composition.md)
-   * [데이터 모델링 모범 사례](schema/best-practices.md)
+   * [데이터 모델링을 위한 모범 사례](schema/best-practices.md)
    * [중요한 개인 데이터](./schema/sensitive-and-personal-data.md)
    * [XDM 필드 유형 제약 조건](schema/field-constraints.md)
    * [XDM의 이름 간격](./schema/namespaces.md)
@@ -29,6 +29,53 @@ ht-degree: 45%
       * [헬스 케어](./schema/industries/healthcare.md)
       * [통신](./schema/industries/telecom.md)
       * [여행 및 호스피탈리티](./schema/industries/travel-hospitality.md)
+   * 의료 서비스 데이터 모델 V2 {#health-care-data-model-v2}
+      * [의료 V2](./schema/industries/healthcare-v2.md)
+      * 클래스 {#health-care-classes}
+         * [위치](./classes/location.md)
+      * 필드 그룹 {#health-care-v2-field-groups}
+         * XDM 개별 프로필 {#health-care-v2-profile}
+            * [의료 계정](./field-groups/profile/healthcare-account.md)
+            * [의료 서비스 플랜](./field-groups/profile/healthcare-care-plan.md)
+            * [의료 서비스 목표](./field-groups/profile/healthcare-goal.md)
+            * [의료 기관](./field-groups/profile/healthcare-organization.md)
+            * [의료 환자](./field-groups/profile/healthcare-patient.md)
+            * [의료 전문가](./field-groups/profile/healthcare-practioner.md)
+            * [의료 서비스 일정](./field-groups/profile/healthcare-schedule.md)
+         * XDM 경험 이벤트 {#health-care-v2-event}
+            * [의료 예방 접종](./field-groups/event/healthcare-immunization.md)
+         * 위치 {#health-care-v2-location}
+            * [의료 서비스 위치](./field-groups/location/healthcare-location.md)
+         * 약물 {#health-care-v2-medication}
+            * [의료 의약품 조제](./field-groups/medication/healthcare-medication-dispense.md)
+            * [의료 서비스 제공 요청](./field-groups/medication/healthcare-medication-request.md)
+            * [헬스케어 의약품](./field-groups/medication/healthcare-medication-v2.md)
+         * 플랜 {#health-care-v2-plans}
+            * [의료 서비스 범위](./field-groups/plan/healthcare-coverage.md)
+      * 데이터 형식 {#health-care-v2-data-types}
+         * [주소](./data-types/healthcare/address.md)
+         * [주석](./data-types/healthcare/annotation.md)
+         * [가용성](./data-types/healthcare/availability.md)
+         * [코드화 가능한 개념](./data-types/healthcare/codeable-concept.md)
+         * [코드 가능 참조](./data-types/healthcare/codeable-reference.md)
+         * [코딩](./data-types/healthcare/coding.md)
+         * [연락처](./data-types/healthcare/contact-point.md)
+         * [용량](./data-types/healthcare/dosage.md)
+         * [기간](./data-types/healthcare/duration.md)
+         * [확장 연락처 세부 정보](./data-types/healthcare/extended-contact-detail.md)
+         * [사람 이름](./data-types/healthcare/human-name.md)
+         * [식별자](./data-types/healthcare/identifier.md)
+         * [Money](./data-types/healthcare/money.md)
+         * [기간](./data-types/healthcare/period.md)
+         * [개인](./data-types/healthcare/person.md)
+         * [수량](./data-types/healthcare/quantity.md)
+         * [범위](./data-types/healthcare/range.md)
+         * [비율](./data-types/healthcare/ratio.md)
+         * [참조](./data-types/healthcare/reference.md)
+         * [반복](./data-types/healthcare/repeat.md)
+         * [단순 수량](./data-types/healthcare/simple-quantity.md)
+         * [시간](./data-types/healthcare/timing.md)
+         * [가상 서비스](./data-types/healthcare/virtual-service-detail.md)
    * [XDM 필드 사전](schema/field-dictionary.md)
 * 클래스 {#classes}
    * [XDM 개별 프로필](./classes/individual-profile.md)
@@ -54,9 +101,9 @@ ht-degree: 45%
    * XDM 개별 프로필 {#profile}
       * [동의 및 환경 설정](./field-groups/profile/consents.md)
       * [인구 통계 세부 정보](./field-groups/profile/demographic-details.md)
+      * [의료 서비스 멤버 세부 정보](./field-groups/profile/healthcare-member-details.md)
       * [IAB TCF 2.0 동의](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
-      * [의료 서비스 멤버 세부 정보](./field-groups/profile/healthcare-member-details.md)
       * [고객 충성도 세부 정보](./field-groups/profile/loyalty-details.md)
       * [개인 연락처 세부 정보](./field-groups/profile/personal-contact-details.md)
       * [프로필 파트너 보강(샘플)](./field-groups/profile/profile-partner-enrichment.md)
@@ -236,7 +283,7 @@ ht-degree: 45%
    * [API에서 XDM 필드 사용 중단](tutorials/field-deprecation-api.md)
    * [UI에서 스키마 관계 정의](tutorials/relationship-ui.md)
    * [API에서 스키마 관계 정의](tutorials/relationship-api.md)
-   * [Real-Time CDP B2B 에디션에서 스키마 관계 정의](tutorials/relationship-b2b.md)
+   * [Real-Time CDP B2B edition에서 스키마 관계 정의](tutorials/relationship-b2b.md)
    * [스키마에 대한 데이터 사용 레이블 관리](tutorials/labels.md)
    * [애드혹 스키마 만들기](tutorials/ad-hoc.md)
 * [문제 해결 안내서](troubleshooting-guide.md)
