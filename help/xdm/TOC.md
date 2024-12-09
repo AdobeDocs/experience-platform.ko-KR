@@ -5,10 +5,10 @@ breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: Experience Platform 내의 경험 데이터 모델(XDM) 시스템 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법을 알아봅니다.
 feature: Schemas
 role: Developer
-source-git-commit: d2baf74bb5fd87045f5d25b2996911c7bce36f36
+source-git-commit: 670b8ed3abd0e6e9ab35a15ae47a524a2528eb44
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 42%
+source-wordcount: '705'
+ht-degree: 44%
 
 ---
 
@@ -29,30 +29,30 @@ ht-degree: 42%
       * [헬스 케어](./schema/industries/healthcare.md)
       * [통신](./schema/industries/telecom.md)
       * [여행 및 호스피탈리티](./schema/industries/travel-hospitality.md)
-   * 의료 서비스 데이터 모델 V2 {#health-care-data-model-v2}
-      * [의료 V2](./schema/industries/healthcare-v2.md)
-      * 클래스 {#health-care-classes}
+   * 의료 데이터 모델 V2 {#healthcare}
+      * [의료 V2](./schema/healthcare-v2.md)
+      * 클래스 {#classes}
          * [위치](./classes/location.md)
-      * 필드 그룹 {#health-care-v2-field-groups}
-         * XDM 개별 프로필 {#health-care-v2-profile}
-            * [의료 계정](./field-groups/profile/healthcare-account.md)
-            * [의료 서비스 플랜](./field-groups/profile/healthcare-care-plan.md)
-            * [의료 서비스 목표](./field-groups/profile/healthcare-goal.md)
-            * [의료 기관](./field-groups/profile/healthcare-organization.md)
-            * [의료 환자](./field-groups/profile/healthcare-patient.md)
-            * [의료 전문가](./field-groups/profile/healthcare-practioner.md)
-            * [의료 서비스 일정](./field-groups/profile/healthcare-schedule.md)
-         * XDM 경험 이벤트 {#health-care-v2-event}
-            * [의료 예방 접종](./field-groups/event/healthcare-immunization.md)
-         * 위치 {#health-care-v2-location}
-            * [의료 서비스 위치](./field-groups/location/healthcare-location.md)
-         * 약물 {#health-care-v2-medication}
-            * [의료 의약품 조제](./field-groups/medication/healthcare-medication-dispense.md)
-            * [의료 서비스 제공 요청](./field-groups/medication/healthcare-medication-request.md)
-            * [헬스케어 의약품](./field-groups/medication/healthcare-medication-v2.md)
-         * 플랜 {#health-care-v2-plans}
-            * [의료 서비스 범위](./field-groups/plan/healthcare-coverage.md)
-      * 데이터 형식 {#health-care-v2-data-types}
+      * 필드 그룹 {#field-groups}
+         * XDM 개별 프로필 {#profile}
+            * [계정](./field-groups/profile/healthcare-account.md)
+            * [지원 플랜](./field-groups/profile/healthcare-care-plan.md)
+            * [목표](./field-groups/profile/healthcare-goal.md)
+            * [조직](./field-groups/profile/healthcare-organization.md)
+            * [환자](./field-groups/profile/healthcare-patient.md)
+            * [실무자](./field-groups/profile/healthcare-practioner.md)
+            * [예약](./field-groups/profile/healthcare-schedule.md)
+         * XDM 경험 이벤트 {#event}
+            * [예방 접종](./field-groups/event/healthcare-immunization.md)
+         * 위치 {#location}
+            * [위치](./field-groups/location/healthcare-location.md)
+         * 약물 {#medication}
+            * [의약품 조제](./field-groups/medication/healthcare-medication-dispense.md)
+            * [투약 요청](./field-groups/medication/healthcare-medication-request.md)
+            * [약물](./field-groups/medication/healthcare-medication-v2.md)
+         * 플랜 {#plan}
+            * [적용 범위](./field-groups/plan/healthcare-coverage.md)
+      * 데이터 형식 {#data-types}
          * [주소](./data-types/healthcare/address.md)
          * [주석](./data-types/healthcare/annotation.md)
          * [가용성](./data-types/healthcare/availability.md)
