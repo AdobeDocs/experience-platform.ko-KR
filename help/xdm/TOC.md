@@ -5,9 +5,9 @@ breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: Experience Platform 내의 경험 데이터 모델(XDM) 시스템 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법을 알아봅니다.
 feature: Schemas
 role: Developer
-source-git-commit: 670b8ed3abd0e6e9ab35a15ae47a524a2528eb44
+source-git-commit: 3071d16b6b98040ea3f2e3a34efffae517253b8e
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '696'
 ht-degree: 44%
 
 ---
@@ -30,52 +30,47 @@ ht-degree: 44%
       * [통신](./schema/industries/telecom.md)
       * [여행 및 호스피탈리티](./schema/industries/travel-hospitality.md)
    * 의료 데이터 모델 V2 {#healthcare}
-      * [의료 V2](./schema/healthcare-v2.md)
+      * [의료 V2](./schema/healthcare/healthcare-v2.md)
       * 클래스 {#classes}
-         * [위치](./classes/location.md)
+         * [위치](./schema/healthcare/classes/location.md)
       * 필드 그룹 {#field-groups}
-         * XDM 개별 프로필 {#profile}
-            * [계정](./field-groups/profile/healthcare-account.md)
-            * [지원 플랜](./field-groups/profile/healthcare-care-plan.md)
-            * [목표](./field-groups/profile/healthcare-goal.md)
-            * [조직](./field-groups/profile/healthcare-organization.md)
-            * [환자](./field-groups/profile/healthcare-patient.md)
-            * [실무자](./field-groups/profile/healthcare-practioner.md)
-            * [예약](./field-groups/profile/healthcare-schedule.md)
-         * XDM 경험 이벤트 {#event}
-            * [예방 접종](./field-groups/event/healthcare-immunization.md)
-         * 위치 {#location}
-            * [위치](./field-groups/location/healthcare-location.md)
-         * 약물 {#medication}
-            * [의약품 조제](./field-groups/medication/healthcare-medication-dispense.md)
-            * [투약 요청](./field-groups/medication/healthcare-medication-request.md)
-            * [약물](./field-groups/medication/healthcare-medication-v2.md)
-         * 플랜 {#plan}
-            * [적용 범위](./field-groups/plan/healthcare-coverage.md)
+         * [계정](./schema/healthcare/field-groups/account.md)
+         * [지원 플랜](./schema/healthcare/field-groups/care-plan.md)
+         * [적용 범위](./schema/healthcare/field-groups/coverage.md)
+         * [목표](./schema/healthcare/field-groups/goal.md)
+         * [예방 접종](./schema/healthcare/field-groups/immunization.md)
+         * [위치](./schema/healthcare/field-groups/location.md)
+         * [약물](./schema/healthcare/field-groups/medication.md)
+         * [의약품 조제](./schema/healthcare/field-groups/medication-dispense.md)
+         * [투약 요청](./schema/healthcare/field-groups/medication-request.md)
+         * [조직](./schema/healthcare/field-groups/organization.md)
+         * [환자](./schema/healthcare/field-groups/patient.md)
+         * [실무자](./schema/healthcare/field-groups/practioner.md)
+         * [일정](./schema/healthcare/field-groups/schedule.md)
       * 데이터 형식 {#data-types}
-         * [주소](./data-types/healthcare/address.md)
-         * [주석](./data-types/healthcare/annotation.md)
-         * [가용성](./data-types/healthcare/availability.md)
-         * [코드화 가능한 개념](./data-types/healthcare/codeable-concept.md)
-         * [코드 가능 참조](./data-types/healthcare/codeable-reference.md)
-         * [코딩](./data-types/healthcare/coding.md)
-         * [연락처](./data-types/healthcare/contact-point.md)
-         * [용량](./data-types/healthcare/dosage.md)
-         * [기간](./data-types/healthcare/duration.md)
-         * [확장 연락처 세부 정보](./data-types/healthcare/extended-contact-detail.md)
-         * [사람 이름](./data-types/healthcare/human-name.md)
-         * [식별자](./data-types/healthcare/identifier.md)
-         * [Money](./data-types/healthcare/money.md)
-         * [기간](./data-types/healthcare/period.md)
-         * [개인](./data-types/healthcare/person.md)
-         * [수량](./data-types/healthcare/quantity.md)
-         * [범위](./data-types/healthcare/range.md)
-         * [비율](./data-types/healthcare/ratio.md)
-         * [참조](./data-types/healthcare/reference.md)
-         * [반복](./data-types/healthcare/repeat.md)
-         * [단순 수량](./data-types/healthcare/simple-quantity.md)
-         * [시간](./data-types/healthcare/timing.md)
-         * [가상 서비스](./data-types/healthcare/virtual-service-detail.md)
+         * [주소](./schema/healthcare/data-types/address.md)
+         * [주석](./schema/healthcare/data-types/annotation.md)
+         * [가용성](./schema/healthcare/data-types/availability.md)
+         * [코드화 가능한 개념](./schema/healthcare/data-types/codeable-concept.md)
+         * [코드 가능 참조](./schema/healthcare/data-types/codeable-reference.md)
+         * [코딩](./schema/healthcare/data-types/coding.md)
+         * [연락처](./schema/healthcare/data-types/contact-point.md)
+         * [용량](./schema/healthcare/data-types/dosage.md)
+         * [기간](./schema/healthcare/data-types/duration.md)
+         * [확장 연락처 세부 정보](./schema/healthcare/data-types/extended-contact-detail.md)
+         * [사람 이름](./schema/healthcare/data-types/human-name.md)
+         * [식별자](./schema/healthcare/data-types/identifier.md)
+         * [Money](./schema/healthcare/data-types/money.md)
+         * [기간](./schema/healthcare/data-types/period.md)
+         * [개인](./schema/healthcare/data-types/person.md)
+         * [수량](./schema/healthcare/data-types/quantity.md)
+         * [범위](./schema/healthcare/data-types/range.md)
+         * [비율](./schema/healthcare/data-types/ratio.md)
+         * [참조](./schema/healthcare/data-types/reference.md)
+         * [반복](./schema/healthcare/data-types/repeat.md)
+         * [단순 수량](./schema/healthcare/data-types/simple-quantity.md)
+         * [시간](./schema/healthcare/data-types/timing.md)
+         * [가상 서비스](./schema/healthcare/data-types/virtual-service-detail.md)
    * [XDM 필드 사전](schema/field-dictionary.md)
 * 클래스 {#classes}
    * [XDM 개별 프로필](./classes/individual-profile.md)
