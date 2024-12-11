@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법의 기본 사항에 대해 알아봅니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
+source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '4056'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 [!UICONTROL 스키마 만들기] 대화 상자가 나타납니다. 이 대화 상자에서 필드와 필드 그룹을 추가하여 스키마를 수동으로 만들도록 선택하거나 CSV 파일을 업로드하고 ML 알고리즘을 사용하여 스키마를 생성할 수 있습니다. 대화 상자에서 스키마 생성 워크플로우를 선택합니다.
 
-![워크플로 옵션이 있는 스키마 만들기 대화 상자 및 강조 표시된 항목을 선택합니다.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+![워크플로 옵션이 있는 스키마 만들기 대화 상자 및 강조 표시된 항목을 선택합니다.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
 ### [!BADGE Beta]{type=Informative} 수동 또는 ML 지원 스키마 만들기 {#manual-or-assisted}
 
@@ -49,15 +49,35 @@ ML 알고리즘을 사용하여 csv 파일을 기반으로 스키마 구조를 �
 
 ![세 개의 클래스 옵션과 [!UICONTROL 다음]이 강조 표시된 [!UICONTROL 스키마 만들기] 워크플로입니다.](../../images/ui/resources/schemas/schema-class-options.png)
 
+**[!UICONTROL 기타]**&#x200B;를 선택하면 사용 가능한 클래스 목록이 나타납니다. 여기에서 기존 클래스를 찾아보고 필터링할 수 있습니다.
+
+![[!UICONTROL 스키마 세부 정보] 섹션에서 강조 표시된 [!UICONTROL 기타]을(를) 사용하는 [!UICONTROL 스키마 만들기] 워크플로우입니다.](../../images/ui/resources/schemas/other-schema-details.png)
+
+사용자 정의 클래스인지 또는 표준 클래스인지에 따라 클래스를 필터링하려면 라디오 단추를 선택합니다. 업계를 기반으로 사용 가능한 결과를 필터링하거나 검색 필드를 사용하여 특정 클래스를 검색할 수도 있습니다.
+
+![검색 창, [!UICONTROL 사용자 지정] 및 [!UICONTROL 업종]이 강조 표시된 [!UICONTROL 스키마 만들기] 워크플로입니다.](../../images/ui/resources/schemas/filter-and-search.png)
+
+적절한 클래스를 결정하는 데 도움이 되도록 각 클래스에 대한 정보 및 미리보기 아이콘이 있습니다. 정보 아이콘(![정보 아이콘.](/help/images/icons/info.png)) 클래스와 연결된 산업에 대한 설명을 제공하는 대화 상자를 엽니다.
+
+![선택한 클래스의 정보 아이콘 및 도구 설명이 강조 표시되었습니다.](../../images/ui/resources/schemas/class-info.png)
+
+미리 보기 아이콘(![미리 보기 아이콘.](/help/images/icons/preview.png)) 스키마 다이어그램과 해당 속성이 포함된 클래스에 대한 미리 보기 대화 상자를 엽니다.
+
+![스키마 다이어그램과 클래스 속성을 사용하여 선택한 클래스를 미리 봅니다.](../../images/ui/resources/schemas/class-preview.png)
+
+행을 선택하여 클래스를 선택한 다음 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 선택을 확인합니다.
+
+![사용 가능한 클래스 테이블에서 클래스를 선택하고 [!UICONTROL 다음]을(를) 강조 표시한 상태로 [!UICONTROL 스키마 만들기] 워크플로입니다.](../../images/ui/resources/schemas/select-class.png)
+
 클래스를 선택하면 [!UICONTROL 이름 및 검토] 섹션이 나타납니다. 이 섹션에서는 스키마를 식별하기 위한 이름과 설명을 제공합니다. &#x200B;선택한 클래스와 스키마 구조를 검토하고 확인할 수 있도록 스키마의 기본 구조(클래스에서 제공)가 캔버스에 표시됩니다.
 
 텍스트 필드에 사용자에게 친숙한 [!UICONTROL 스키마 표시 이름]을(를) 입력하십시오. 그런 다음 스키마를 식별하는 데 도움이 되는 적절한 설명을 입력합니다. 스키마 구조를 검토하고 설정이 마음에 들면 **[!UICONTROL 완료]**&#x200B;를 선택하여 스키마를 만듭니다.
 
 [!UICONTROL 스키마 표시 이름], [!UICONTROL 설명] 및 [!UICONTROL 마침]이 강조 표시된 [!UICONTROL 스키마 만들기] 워크플로의 [!UICONTROL 이름 및 검토] 섹션.](../../images/ui/resources/schemas/name-and-review.png)![
 
-[!UICONTROL 스키마] [!UICONTROL 찾아보기] 탭이 나타납니다. 최근에 만든 스키마가 이제 스키마 라이브러리에 나열되며 [!DNL Schema Editor]에서 편집할 수 있습니다.
+스키마 구조가 캔버스에 표시된 스키마 편집기가 나타납니다. 원하는 경우 이제 [클래스에 필드를 추가](../../ui/resources/classes.md#add-fields)할 수 있습니다.
 
-![최근에 만든 스키마를 표시하는 스키마 작업 영역 찾아보기 탭입니다.](../../images/ui/resources/schemas/example-schema.png)
+![스키마 구조가 캔버스에 표시된 스키마 편집기.](../../images/ui/resources/schemas/edit.png)
 
 ## 기존 스키마 편집 {#edit}
 
