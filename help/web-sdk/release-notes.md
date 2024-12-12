@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 노트;
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 정보;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+source-git-commit: 3a50468a7596b9ba870920a8188ae50b40aaef69
 workflow-type: tm+mt
-source-wordcount: '2042'
+source-wordcount: '2085'
 ht-degree: 5%
 
 ---
@@ -13,8 +13,14 @@ ht-degree: 5%
 
 # 릴리스 정보
 
-이 문서에서는 Adobe Experience Platform Web SDK에 대한 릴리스 정보를 다룹니다.
-Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확장 릴리스 노트](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)를 참조하십시오.
+이 문서에서는 Adobe Experience Platform Web SDK의 릴리스 정보를 다룹니다.
+웹 SDK 태그 확장에 대한 최신 릴리스 노트는 [웹 SDK 태그 확장 릴리스 노트](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)를 참조하십시오.
+
+## 버전 2.24.1 - 2024년 12월 6일 토요일
+
+**수정 및 개선 사항**
+
+- 일부 고객 통합에서 오류를 발생하는 [Adobe Experience Platform 규칙 엔진](https://github.com/adobe/aepsdk-rulesengine-typescript/)과(와) 관련된 종속성 문제를 해결했습니다. 이제 웹 SDK에 [Adobe Experience Platform 규칙 엔진](https://github.com/adobe/aepsdk-rulesengine-typescript/) 버전 2.0.3 이상이 필요합니다.
 
 ## 버전 2.24.0 - 2024년 10월 31일 금요일
 
@@ -44,7 +50,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 
 **수정 사항 및 개선 사항**
 
-- 웹 SDK를 로컬로 실행할 때 쿠키가 올바르게 작성되지 않는 문제를 해결했습니다.
+- 웹 SDK을 로컬로 실행할 때 쿠키가 올바르게 작성되지 않는 문제를 해결했습니다.
 
 ## 버전 2.22.0 - 2024년 8월 22일
 
@@ -127,7 +133,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 
 **수정 사항 및 개선 사항**
 
-- 이제 Web SDK가 [Data Integration Library(DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ko-KR)과(와) 유사한 Audience Manager 쿠키 대상 값을 인코딩합니다.
+- 이제 웹 SDK이 [Data Integration Library(DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=ko-KR)과(와) 유사한 Audience Manager 쿠키 대상 값을 인코딩합니다.
 
 ## 버전 2.16.0 - 2023년 4월 25일
 
@@ -167,7 +173,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 
 **새로운 기능**
 
-- [페이지 전체 마이그레이션](home.md#migrating-to-web-sdk)에 대한 지원을 추가했습니다. 이제 방문자가 at.js와 Web SDK 페이지 간을 이동할 때 Adobe Target 프로필이 유지됩니다.
+- [페이지 전체 마이그레이션](home.md#migrating-to-web-sdk)에 대한 지원을 추가했습니다. 이제 Adobe Target 프로필은 방문자가 at.js와 웹 SDK 페이지 간을 이동할 때 보존됩니다.
 - [높은 엔트로피 사용자 에이전트 클라이언트 힌트](/help/web-sdk/use-cases/client-hints.md)에 대한 구성 가능한 지원이 추가되었습니다.
 - [`applyResponse`](/help/web-sdk/commands/applyresponse.md) 명령에 대한 지원을 추가했습니다. 이렇게 하면 [Edge Network 서버 API](../server-api/overview.md)를 통해 하이브리드 개인화가 가능합니다.
 - 이제 QA 모드 링크가 여러 페이지에서 작동합니다.
@@ -257,7 +263,7 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 
 ## 버전 2.4.0 - 2021년 3월
 
-- 이제 SDK를 [NPM 패키지](/help/web-sdk/install/npm.md)(으)로 설치할 수 있습니다.
+- 이제 SDK을 [NPM 패키지](/help/web-sdk/install/npm.md)(으)로 설치할 수 있습니다.
 - [기본 동의를 구성](/help/web-sdk/commands/configure/defaultconsent.md)할 때 `out` 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
 - 이제 [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) 콜백을 사용하여 이벤트가 전송되지 않도록 할 수 있습니다.
 - 이제 렌더링하거나 클릭하는 개인화된 콘텐츠에 대한 이벤트를 보낼 때 `meta.personalization` 대신 XDM 스키마 필드 그룹을 사용합니다.
@@ -277,12 +283,12 @@ Web SDK 태그 확장에 대한 최신 릴리스 노트는 [Web SDK 태그 확�
 - 버그 수정: `documentUnloading`이(가) `true`(으)로 설정되었거나 링크 클릭이 자동으로 추적되는 경우 `sendBeacon`이(가) 사용되지 않습니다.
 - 버그 수정: 앵커 요소에 HTML 콘텐츠가 포함된 경우 링크가 자동으로 추적되지 않습니다.
 - 버그 수정: 읽기 전용 `message` 속성이 포함된 특정 브라우저 오류가 적절하게 처리되지 않아 다른 오류가 고객에게 노출되었습니다.
-- 버그 수정: iframe의 HTML 페이지가 상위 창의 HTML 페이지가 아닌 다른 하위 도메인에서 온 경우 iframe 내에서 SDK를 실행하면 오류가 발생합니다.
+- 버그 수정: iframe의 HTML 페이지가 상위 창의 HTML 페이지와 다른 하위 도메인에서 온 경우 iframe 내에서 SDK을 실행하면 오류가 발생합니다.
 
 ## 버전 2.2.0 - 2020년 10월
 
-- 버그 수정: `idMigrationEnabled`이(가) `true`일 때 옵트인 개체가 웹 SDK에서 호출을 하지 못하도록 차단했습니다.
-- 버그 수정: 웹 SDK에서 개인화 오퍼를 반환해야 하는 요청을 인식하도록 하여 깜박이는 문제를 방지합니다.
+- 버그 수정: `idMigrationEnabled`이(가) `true`일 때 옵트인 개체가 웹 SDK에서 호출을 하지 못하도록 차단하고 있습니다.
+- 버그 수정: 웹 SDK에서 깜박이는 문제를 방지하기 위해 개인화 오퍼를 반환해야 하는 요청을 인식하도록 합니다.
 
 ## 버전 2.1.0 - 2020년 8월
 
