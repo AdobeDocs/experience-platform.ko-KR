@@ -4,9 +4,9 @@ title: 라이선스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 37192addffea094cb2d2f3b0201bb128c912e762
+source-git-commit: 5d40af5c0645e9e4ee44f0c0c2133f3b3153bcb1
 workflow-type: tm+mt
-source-wordcount: '2867'
+source-wordcount: '2908'
 ht-degree: 15%
 
 ---
@@ -41,6 +41,11 @@ ht-degree: 15%
 >abstract="라이선스 사용 대시보드는 구매한 Adobe Experience Platform 제품에 대한 인사이트를 제공합니다. 대시보드 개요에는 각 기본 지표에 대한 사용량과 계약된 라이선스 금액 등 제품에 대한 기본 지표가 표시됩니다. 세부 정보 작업 영역에는 특정 샌드박스 내에 있는 각 제품에 대한 지표의 분류가 표시됩니다."
 >additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="자동화된 데이터 세트 만료 일정"
 >additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_computehours"
+>title="예측된 계산 시간"
+>abstract="사용 금액이 라이센스 금액에 도달할 수 있습니다. 계산 시간을 평가하거나 줄이려면 쿼리 > 로그로 이동하여 쿼리 기록을 검토하십시오. 쿼리 작업 영역에 액세스할 수 있는 권한이 없는 경우 관리자에게 문의하십시오."
 
 Adobe Experience Platform [!UICONTROL 라이선스 사용] 대시보드를 통해 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있습니다. 여기에 표시되는 정보는 Platform 인스턴스의 일별 스냅샷 중에 캡처됩니다.
 
@@ -84,7 +89,7 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 | **[!UICONTROL 기본 지표]** | 해당 제품 내에서 추적하는 데 사용되는 기본 지표입니다. |
 | **[!UICONTROL 라이선스 금액]** | 제품 라이선스 계약에 합의된 기본 지표의 최대 금액에 대해 계약된 값입니다. |
 | **[!UICONTROL 사용]** | 사용된 기본 지표의 양입니다. 이 값은 프로덕션 또는 개발의 모든 샌드박스에서 해당 지표의 총 사용량을 제공합니다. |
-| **[!UICONTROL 사용량 %]** | 라이센스 금액에 따라 사용된 기본 지표 비율입니다. |
+| **[!UICONTROL 사용량 %]** | 라이선스 금액에 따라 사용되는 기본 지표의 비율입니다. |
 | **[!UICONTROL 예측 사용]** | 라이선스 금액에 따른 기본 지표의 예상 사용 비율입니다. |
 
 >[!NOTE]
@@ -170,7 +175,7 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 
 ## [!UICONTROL 세부 정보] 탭 {#details-tab}
 
-특정 샌드박스&#x200B;**에서 특정 사용 지표를 보려면**&#x200B;세부 정보] 탭 으로 [!UICONTROL 이동합니다. [!UICONTROL 세부 정보] 탭에는 프로덕션 또는 개발 샌드박스 내에서 사용 가능한 모든 샌드박스가 표시됩니다.
+**특정 샌드박스에서 특정 사용 지표**&#x200B;를 보려면 [!UICONTROL 세부 정보] 탭으로 이동하십시오. [!UICONTROL 세부 정보] 탭에는 프로덕션 또는 개발 샌드박스 내에서 사용 가능한 모든 샌드박스가 표시됩니다.
 
 ![라이선스 사용 대시보드의 세부 정보 탭입니다.](../images/license-usage/details-tab.png)
 
@@ -180,22 +185,22 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 
 각 시각화 위젯에는 다음과 같은 측면이 포함되어 있습니다.
 
-- 시간 경과에 따른 지표 변화를 추적하는 선 그래프
-- 선 그래프 키
+- 시간 경과에 따른 지표 변경을 추적하는 선 그래프
+- 선 그래프의 키
 - 샌드박스 이름
-- 선 그래프 기간 조정을 위한 드롭다운 메뉴
+- 선 그래프의 기간을 조정하는 드롭다운 메뉴
 
-선 그래프는 조직의 사용량 수를 조직의 라이선스에서 사용할 수 있는 총계와 비교하고 총 사용량의 백분율을 제공합니다.
+꺾은선형 그래프는 조직의 사용 번호를 조직의 라이선스와 함께 사용할 수 있는 합계와 비교하고 총 사용의 백분율을 제공합니다.
 
-![지표 시각화.](../images/license-usage/visualization.png)
+![지표의 시각화.](../images/license-usage/visualization.png)
 
-분석의 전환 확인 기간은 드롭다운 메뉴에서 조정할 수 있습니다. 지난 30일의 기본값
+분석 전환 확인 기간은 드롭다운 메뉴에서 조정할 수 있습니다. 지난 30일의 기본값
 
-날짜 범위 선택하려면 날짜 범위 드롭다운을 사용하여 대시보드에 표시할 기간 선택할 수 있습니다. 최근 30일의 기본값을 포함하여 여러 옵션을 사용할 수 있습니다.
+날짜 범위를 선택하려면 날짜 범위 드롭다운을 사용하여 대시보드에 표시할 기간을 선택할 수 있습니다. 최근 30일의 기본값을 포함하여 여러 옵션을 사용할 수 있습니다.
 
-![날짜 범위 드롭다운이 강조 표시된 시각화 대화 상자.](../images/license-usage/date-range.png)
+![날짜 범위 드롭다운이 강조 표시된 시각화 대화 상자입니다.](../images/license-usage/date-range.png)
 
-사용자 지정 날짜를&#x200B;]**선택하여**[!UICONTROL &#x200B;표시되는 기간 아이콘을 선택할 수도 있습니다.
+**[!UICONTROL 사용자 지정 날짜]**&#x200B;를 선택하여 표시되는 기간을 선택할 수도 있습니다.
 
 ![사용자 지정 날짜 범위 옵션이 강조 표시된 라이선스 사용 대시보드 개요 탭](../images/license-usage/custom-date-range.png)
 
@@ -214,7 +219,7 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 | [!UICONTROL 임시 쿼리 서비스 사용자 팩] | 승인된 동시 쿼리 서비스 사용자 권한을 5명의 추가 동시 쿼리 서비스 사용자와 한 팩당 동시에 실행되는 임시 쿼리를 한 개 더 증가시키는 추가 기능입니다. 여러 추가 Ad Hoc Query 사용자 팩에 라이센스가 부여될 수 있습니다. |
 | [!UICONTROL 평균 프로필 풍부도] | **사용되지 않음** - 특정 시점에 Hub Profile Service에 저장된 모든 프로덕션 데이터의 합계를 인증된 비즈니스 사용자 프로필의 5배로 나눈 값입니다. [!UICONTROL 평균 프로필 풍부도]은(는) 공유 기능입니다. |
 | [!UICONTROL 사용 가능한 CJA 행] | Customer Journey Analytics 내에서 분석에 사용할 수 있는 일일 평균 데이터 행입니다. |
-| [!UICONTROL 계산된 특성] | 집계된 프로필 행동 데이터의 총 수입니다. 집계된 프로필 행동 데이터는 프로필 속성으로 변환되고 개인 프로필 또는 비즈니스 개인 프로필에 포함될 수 있는 경험 이벤트를 기반으로 합니다. |
+| [!UICONTROL 계산된 특성] | 집계된 프로필 동작 데이터의 총 수입니다. 집계된 프로필 행동 데이터는 프로필 속성으로 변환되고 개인 프로필 또는 비즈니스 개인 프로필에 포함될 수 있는 경험 이벤트를 기반으로 합니다. |
 | [!UICONTROL 소비자 대상] | 판매 주문에서 &quot;소비자 대상&quot;으로 식별된 개인 프로필 수입니다. |
 | [!UICONTROL 데이터 내보내기 크기] | 1년 동안 데이터 세트 활성화를 통해 전송된 데이터의 양입니다. |
 | [!UICONTROL 데이터 내보내기] | 1년 동안 Adobe이 아닌 솔루션으로 (직접 또는 간접적으로) 내보낼 수 있는 데이터 세트의 총 크기입니다. |
@@ -226,15 +231,15 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 | [!UICONTROL Pack의 프로필 풍부성 아니요] | 승인된 총 데이터 볼륨에서 각 추가 프로필 풍부도 팩의 프로필당 25KB 증가. |
 | [!UICONTROL 쿼리 서비스 계산 시간] | 일괄 처리 쿼리가 실행될 때 쿼리 서비스 엔진이 데이터를 읽고 처리하고 데이터 레이크에 다시 쓰는 데 걸린 시간을 측정한 것입니다. |
 | [!UICONTROL 팩 중 스트리밍 세분화 없음] | 새 데이터가 스트리밍 플로우를 통해 세분화 서비스로 들어감에 따라 팩은 개인 프로필의 세그먼트 멤버십을 업데이트합니다. 세그먼트 멤버십은 이전 동작을 고려하지 않고 현재 개인 프로필 속성과 현재 이벤트의 값을 기반으로 평가됩니다. 스트리밍 세분화는 공유 기능입니다. |
-| [!UICONTROL 총 데이터 볼륨] | Adobe Experience Platform 프로필 서비스가 참여 워크플로우에서 사용할 수 있는 총 데이터 양입니다. 자세한 내용은 Total Data Volume](../../landing/license-usage-and-guardrails/total-data-volume.md)에 대해 자주 묻는 질문(FAQ)을 [참조하십시오. |
+| [!UICONTROL 총 데이터 볼륨] | Adobe Experience Platform 프로필 서비스가 참여 워크플로우에서 사용할 수 있는 총 데이터 양입니다. 자세한 내용은 총 데이터 볼륨에 대한 [자주 묻는 질문](../../landing/license-usage-and-guardrails/total-data-volume.md)을 참조하세요. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
 >[!TIP]
 >
->판매 주문에서 라이선스 자격을 확인하여 &#39;스토리지 허용량&#39;과 같은 메트릭을 계산할 수 있습니다.<br>예를 들어<ul><li>스토리지 허용량 = 계약의 &quot;승인된 프로필&quot; 수 X 평균 프로필 풍부도</li></ul>
+>판매 주문에서 라이선스 권한을 확인하여 &#39;스토리지 허용량&#39;과 같은 지표를 계산할 수 있습니다.<br>예:<ul><li>저장 허용 = 계약에 포함된 &quot;승인된 프로필&quot; 수 X 평균 프로필 풍부도</li></ul>
 
-이러한 메트릭의 가용성과 각 메트릭의 특정 정의는 조직에서 구매한 라이선스에 따라 다릅니다. 각 지표에 대한 자세한 정의는 해당 제품 설명 문서를 참조하십시오.
+이러한 지표의 사용 가능 여부 및 이러한 각 지표의 특정 정의는 조직이 구입한 라이선스에 따라 다릅니다. 각 지표에 대한 자세한 정의는 해당 제품 설명 설명서를 참조하십시오.
 
 | 라이선스 | 제품 설명 |
 | --- | --- |
@@ -243,7 +248,7 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT 고객 데이터 플랫폼: PRFL에서 10M로 업그레이드</li><li>RT CUSTOMER DATA PLATFORM: PRFL ~ 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD 활성화</li><li>AEP:OD 활성화 PRFL ~ 10M</li><li>AEP:OD 활성화 PRFL 최대 50M</li></ul> | [Adobe Experience Platform 활성화](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform 인텔리전스](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>AJO PRIME STARTER:OD 실행</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>Real-Time CDP 실행:OD 프로필 오케스트레이션</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/kr/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>AJO PRIME STARTER:OD 펼치기</li><li>AJO ULTIMATE STARTER:OD 펼치기</li><li>Real-Time CDP 실행:OD 프로필 오케스트레이션</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/kr/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >
@@ -251,6 +256,6 @@ Platform UI 내의 라이선스 사용 대시보드로 이동하려면 왼쪽 �
 
 ## 다음 단계
 
-이 문서를 읽은 후에는 라이선스 사용량 대시보드를 찾아 구매한 각 제품, 모든 프로덕션 또는 개발 샌드박스 및 특정 샌드박스에 대한 사용량 메트릭을 볼 수 있습니다. 조직에서 구매한 라이선스에 따라 조직에서 사용할 수 있는 메트릭에 대한 자세한 정보를 찾을 수 있습니다.
+이 문서를 읽고 나면 구입한 각 제품, 모든 프로덕션 또는 개발 샌드박스 및 특정 샌드박스에 대한 라이선스 사용량 대시보드를 찾고 사용량 지표를 볼 수 있습니다. 조직에서 구입한 라이선스에 따라 조직에서 사용 가능한 지표에 대한 자세한 내용을 찾을 수 있습니다.
 
 Experience Platform UI에서 사용할 수 있는 다른 기능에 대한 자세한 내용은 [플랫폼 UI 안내서](../../landing/ui-guide.md)를 참조하세요.
