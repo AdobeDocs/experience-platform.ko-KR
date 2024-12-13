@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant를 시작합니다.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 830daf12b1ae9718a16308d16774f4357f431f6c
+source-git-commit: 86edf0c8eeca5b3d2be5776664c397fcf5028e29
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '688'
 ht-degree: 1%
 
 ---
@@ -77,31 +77,57 @@ AI Assistant를 사용하여 Experience Platform 내에서 타겟 대상을 생�
 
 AI Assistant에 대한 개요는 다음 비디오를 참조하십시오.
 
++++AI Assistant 개요 비디오를 보려면 선택
+
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 자세한 내용은 [AI Assistant UI 안내서](ui-guide.md)를 참조하십시오.
+
++++
 
 ### AI Assistant 액세스
 
 다음 비디오를 통해 조직 및 사용자를 위한 AI Assistant 액세스를 구성하는 방법에 대해 알아보십시오.
 
++++AI Assistant에 액세스하는 방법에 대한 비디오를 보려면 선택
+
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 자세한 내용은 [AI Assistant 액세스 가이드](access.md)를 참조하십시오.
+
++++
 
 ### AI Assistant 제품 지식을 사용하여 온보딩 시간 단축
 
 다음 비디오를 통해 AI Assistant 제품 지식을 사용하여 온보딩 시간을 줄이는 방법에 대해 알아보십시오.
 
++++AI Assistant를 사용하여 온보딩 시간을 줄이는 방법에 대한 비디오를 보려면 선택
+
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 자세한 내용은 AI Assistant의 [제품 정보](home.md#product-knowledge)를 참조하십시오.
+
++++
 
 ### AI Assistant를 사용하여 대상자 정리 해제
 
 다음 비디오를 시청하여 AI Assistant를 사용하여 대상자를 깔끔하게 정리하고 마케팅 작업을 최적화하는 방법에 대해 알아보십시오.
 
++++AI Assistant를 사용하여 대상자를 깔끔하게 정리하는 방법에 대한 비디오를 보려면 선택
+
 >[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
+
++++
+
+### 검색 기능 패널을 사용하여 시작하는 데 도움이 됩니다
+
+다음 비디오를 통해 AI Assistant의 검색 기능 패널과 이를 사용하여 AI Assistant를 시작하는 방법에 대해 알아보십시오
+
++++검색 기능에 대한 비디오를 보려면 선택
+
+>[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
+
++++
 
 ## AI Assistant 사용 사례 라이브러리
 
@@ -133,6 +159,10 @@ AI Assistant 사용 사례 예제는 다음을 참조하십시오.
 AI Assistant에 대한 자세한 내용은 Adobe Experience Platform의 [AI Assistant 보안 팩트시트](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf)를 참조하십시오.
 
 >[!ENDSHADEBOX]
+
+AI Assistant의 보안 기능에 대한 자세한 내용은 다음 비디오를 시청하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 아래 링크를 탐색하여 AI Assistant 사용 사례, 기능 등에 대해 자세히 알아보십시오.
 
