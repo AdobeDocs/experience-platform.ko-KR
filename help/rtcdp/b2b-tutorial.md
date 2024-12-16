@@ -1,21 +1,21 @@
 ---
-keywords: RTCDP;CDP;B2B 에디션;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;b2b;cdp
+keywords: RTCDP;CDP;B2B edition;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;b2b;cdp
 solution: Experience Platform
-title: Real-time Customer Data Platform B2B 에디션 시작하기
-description: Adobe Real-time Customer Data Platform B2B 에디션 구현을 설정할 때 이 샘플 시나리오를 예로 사용하십시오.
+title: Real-time Customer Data Platform B2B edition 시작하기
+description: Adobe Real-time Customer Data Platform B2B edition 구현을 설정할 때 이 샘플 시나리오를 예로 사용하십시오.
 feature: Get Started, B2B
-badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
+source-git-commit: 90323c32833b0d8a2b4feb88b8eb851bc767c2f8
 workflow-type: tm+mt
 source-wordcount: '1174'
 ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B 에디션 시작하기
+# Real-time Customer Data Platform B2B edition 시작하기
 
-이 문서에서는 주요 개념을 설명하는 예제 사용 사례를 사용하여 Real-time Customer Data Platform(CDP) B2B 에디션을 시작하기 위한 높은 수준의 통합 워크플로우를 제공합니다.
+이 문서에서는 주요 개념을 설명하는 예제 사용 사례를 사용하여 Real-time Customer Data Platform(CDP) B2B edition을 시작하기 위한 높은 수준의 종단 간 워크플로우를 제공합니다.
 
 기술 회사 Bodea는 새로운 제품에 대한 이메일 및 LinkedIn 광고 캠페인으로 고객을 효과적으로 타겟팅하기 위해 서로 다른 사일로 데이터 소스의 사용자와 계정 데이터를 결합하려고 합니다. Bodea는 Marketo Engage을 마케팅 자동화 플랫폼으로 사용하며 고객 데이터가 포함된 여러 CRM에서 B2B별 대상을 세그먼트화해야 합니다.
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 이 자습서 워크플로우는 데모의 일부로서 여러 Adobe Experience Platform 서비스를 사용합니다. 다음을 따라가려면 다음 서비스를 잘 이해하는 것이 좋습니다.
 
-- [경험 데이터 양식(XDM)](../xdm/home.md)
+- [경험 데이터 모델 (XDM)](../xdm/home.md)
 - [소스](../sources/home.md)
 - [세그먼테이션](../segmentation/home.md)
 - [대상](../destinations/home.md)
@@ -58,7 +58,7 @@ Real-Time Customer Profile은 서로 다른 소스의 데이터를 병합하여 
 
 ## 데이터를 Experience Platform에 수집
 
-다음으로 Bodea 마케터는 [Marketo Engage 커넥터](../sources/connectors/adobe-applications/marketo/marketo.md)를 사용하여 다운스트림 서비스에서 사용할 데이터를 Platform으로 수집합니다. Real-Time CDP B2B 에디션에 대해 승인된 소스 중 하나를 사용하여 데이터를 수집할 수도 있습니다.
+다음으로 Bodea 마케터는 [Marketo Engage 커넥터](../sources/connectors/adobe-applications/marketo/marketo.md)를 사용하여 다운스트림 서비스에서 사용할 데이터를 Platform으로 수집합니다. Real-Time CDP B2B edition에 대해 승인된 소스 중 하나를 사용하여 데이터를 수집할 수도 있습니다.
 
 >[!NOTE]
 > 
@@ -86,7 +86,7 @@ Bodea 마케터는 모든 필드 그룹이 적절하게 매핑되었는지 확�
 
 >[!NOTE]
 > 
->데이터를 평가할 대상을 만드는 방법에 대한 지침은 [세그먼트 빌더 UI 안내서](../segmentation/ui/segment-builder.md)를 참조하세요. 자세한 B2B 세그멘테이션 사용 사례는 [Real-Time CDP B2B 에디션의 세그멘테이션 개요](./segmentation/b2b.md)를 참조하십시오.
+>데이터를 평가할 대상을 만드는 방법에 대한 지침은 [세그먼트 빌더 UI 안내서](../segmentation/ui/segment-builder.md)를 참조하세요. 자세한 B2B 세그멘테이션 사용 사례는 [Real-Time CDP B2B edition에 대한 세그멘테이션 개요](./segmentation/b2b.md)를 참조하십시오.
 
 세그먼트 빌더를 사용하면 실시간 고객 프로필 데이터에서 마케팅 가능한 대상을 만들고 속성, 이벤트 및 정의한 기존 대상의 조합을 기반으로 예상 대상의 예상 예상 크기를 볼 수 있습니다.
 
@@ -106,4 +106,4 @@ Bodea 마케터는 대상자를 Marketo 대상으로 활성화하여 대상자�
 
 ## 다음 단계
 
-이 자습서를 따라 Real-Time CDP B2B 에디션에서 사용하는 다양한 Adobe Experience Platform 서비스를 성공적으로 활용했습니다. 따라서 B2B 데이터를 여러 채널에서 참여할 수 있는 실행 가능한 대상으로 수집, 세그먼트화, 평가 및 내보내는 방법을 배웠습니다.
+이 자습서를 따라 Real-Time CDP B2B edition에서 사용하는 다양한 Adobe Experience Platform 서비스를 성공적으로 활용했습니다. 따라서 B2B 데이터를 여러 채널에서 참여할 수 있는 실행 가능한 대상으로 수집, 세그먼트화, 평가 및 내보내는 방법을 배웠습니다.
