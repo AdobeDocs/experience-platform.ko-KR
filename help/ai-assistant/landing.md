@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant를 시작합니다.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 26232fbf67418e0a75fe489b6e34890058cd4d81
+source-git-commit: 4d89ac33843acd536fbadc85a07bee90a50e6407
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '657'
 ht-degree: 1%
 
 ---
@@ -88,6 +88,14 @@ AI Assistant에 대한 개요는 다음 비디오를 참조하십시오.
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 자세한 내용은 [AI Assistant 액세스 가이드](access.md)를 참조하십시오.
+
+### AI Assistant의 제품 지식 이해
+
+다음 비디오를 통해 AI Assistant의 제품 지식에 대해 알아보십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
+
+자세한 내용은 AI Assistant의 [제품 정보](home.md#product-knowledge)를 참조하십시오.
 
 ### AI Assistant 제품 지식을 사용하여 온보딩 시간 단축
 
