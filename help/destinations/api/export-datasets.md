@@ -4,7 +4,7 @@ title: 흐름 서비스 API를 사용하여 데이터 세트 내보내기
 description: 흐름 서비스 API를 사용하여 데이터 세트를 내보내기 하여 대상을 선택하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: c32d2801fe38183225d24f38284b42e3d78e2631
+source-git-commit: 3bce663866e7a6e8288444121331fc931a74076a
 workflow-type: tm+mt
 source-wordcount: '5138'
 ht-degree: 3%
@@ -38,7 +38,7 @@ ht-degree: 3%
 
 ## 내보내기에 사용 가능한 데이터 세트 {#datasets-to-export}
 
-내보낼 수 있는 데이터 세트는 Experience Platform 애플리케이션(Real-Time CDP, Adobe Journey Optimizer), 계층(Prime 또는 Ultimate) 및 구입한 모든 추가 기능(예: Data Distiller)에 따라 다릅니다.
+내보낼 수 있는 데이터 세트는 Experience Platform 애플리케이션(Real-Time CDP, Adobe Journey Optimizer), 계층(Prime 또는 Ultimate) 및 구매한 모든 추가 기능에 따라 다릅니다(예: Data Distiller).
 
 내보낼 수 있는 데이터 세트를 이해하려면 UI 자습서 페이지의 [표](/help/destinations/ui/export-datasets.md#datasets-to-export)를 참조하십시오.
 
@@ -996,7 +996,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "name": "Data Landing Zone(DLZ) Base Connection"
+  "name": "Data Landing Zone Base Connection",
+  "connectionSpec": {
+    "id": "3567r537-2a7b-4583-ac39-ed38d4b848e8",
+    "version": "1.0"
+  }
 }'
 ```
 
