@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
+source-git-commit: cc9c6f476a2b50e09cc14df915fc4dfa851a3bb9
 workflow-type: tm+mt
-source-wordcount: '1262'
+source-wordcount: '1267'
 ht-degree: 5%
 
 ---
@@ -175,6 +175,8 @@ ht-degree: 5%
       * [SendGrid 연결](./catalog/email-marketing/sendgrid.md)
    * 태그 확장 {#launch-extensions}
       * [태그 확장 개요](./catalog/launch-extensions/overview.md)
+   * 마케팅 자동화 {#marketing-automation}
+      * [RainFocus 참석자 프로필](/help/destinations/catalog/marketing-automation/rainfocus.md)
    * 모바일 참여 대상 {#mobile-engagement}
       * [모바일 참여 대상 개요](./catalog/mobile-engagement/overview.md)
       * [비행선 속성 연결](./catalog/mobile-engagement/airship-attributes.md)
