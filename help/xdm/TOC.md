@@ -5,9 +5,9 @@ breadcrumb-title: 경험 데이터 모델(XDM) 안내서
 user-guide-description: Experience Platform 내의 경험 데이터 모델(XDM) 시스템 개요를 살펴보고 클래스 및 스키마 필드 그룹을 사용하여 경험 데이터를 표준화하는 방법을 알아봅니다.
 feature: Schemas
 role: Developer
-source-git-commit: 3071d16b6b98040ea3f2e3a34efffae517253b8e
+source-git-commit: 25d74df335e3d7930b7f3a4f4836bd20556780ed
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 44%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 44%
          * [위치](./schema/healthcare/classes/location.md)
       * 필드 그룹 {#field-groups}
          * [계정](./schema/healthcare/field-groups/account.md)
+         * [약속](./schema/healthcare/field-groups/appointment.md)
          * [지원 플랜](./schema/healthcare/field-groups/care-plan.md)
          * [적용 범위](./schema/healthcare/field-groups/coverage.md)
          * [목표](./schema/healthcare/field-groups/goal.md)
@@ -190,7 +191,7 @@ ht-degree: 44%
    * [지역 모습](./data-types/geo-shape.md)
    * [지리적 인터랙션 세부 정보](./data-types/geo-interaction-details.md)
    * [지역](./data-types/geo.md)
-   * [신원](./data-types/identity.md)
+   * [ID](./data-types/identity.md)
    * [구현 세부 정보](./data-types/implementation-details.md)
    * [노출 횟수](./data-types/impressions.md)
    * [내부 사이트 검색](./data-types/internal-site-search.md)

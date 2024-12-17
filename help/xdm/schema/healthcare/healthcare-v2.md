@@ -5,9 +5,9 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: 8eaff2361e76a7856b3371156ed9fe5c542fec28
+source-git-commit: 8520be2a000edfd2d92bfbc6ebed41b1536fffc1
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '554'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,9 @@ ht-degree: 3%
 | **예방접종**: 예방접종 프로세스 촉진, 환자 예방접종 기록 관리 및 EMR과 백신 관리 시스템 통합. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[예방 접종](./field-groups/immunization.md)</li></ul></li><li>**[XDM 개별 프로필](../../classes/individual-profile.md)**:<ul><li>[의약품 분배](./field-groups/medication-dispense.md)</li><li>[약물 요청](./field-groups/medication-request.md)</li><li>[환자](./field-groups/patient.md)</li></ul></li><li>**[위치](./classes/location.md)**:<ul><li>[위치](./field-groups/location.md)</li></ul><li>**[약물](../../classes/medication.md)**:<ul><li>[약물](./field-groups/medication.md)</li><li>[의약품 분배](./field-groups/medication-dispense.md)</li><li>[약물 요청](./field-groups/medication-request.md)</li></ul></li><li>**[공급자](../../classes/provider.md)**:<ul><li>[의약품 분배](./field-groups/medication-dispense.md)</li><li>[약물 요청](./field-groups/medication-request.md)</li></ul></li></ul> |
 | **사후 관리 준수**: 환자와 간병인이 치료 계획을 완료하고 송금 비율을 줄일 수 있도록 동기를 부여합니다. | <ul><li>**[XDM 개별 프로필](../../classes/individual-profile.md)**:<ul><li>[의료 서비스 플랜](./field-groups/care-plan.md)</li><li>[목표](./field-groups/goal.md)</li><li>[환자](./field-groups/patient.md)</li></ul></li><li>**[위치](./classes/location.md)**:<ul><li>[위치](./field-groups/location.md)</li></ul><li>**[공급자](../../classes/provider.md)**:<ul><li>[목표](./field-groups/goal.md)</li></ul></li></ul> |
 | **보험에 대한 소비자 경험**: 보험에 가입하는 소비자 간의 디지털 획득 및 경험을 개선합니다. 해당 예는 다음과 같습니다. <li> 일반 정보(플랜, 플랜 이름/계층, 메디케이드 또는 웰빙 프로그램 등)가 포함된 페이지에 액세스하는 사람들에게 홍보 이메일 또는 타깃팅된 서드파티 광고를 보내기 위한 소비자 행동 이해</li><li> 심장 건강 및 백신 정보를 찾는 사람들에게 브랜드 경각심을 조성하기 위해 심장 건강에 대한 백신 관련 정보를 보내거나 백신 예약 요청을 보냅니다. </li> | <ul><li>**[XDM 개별 프로필](../../classes/individual-profile.md)**:<ul><li>[계정](./field-groups/account.md)</li><li>[의약품 분배](./field-groups/medication-dispense.md)</li><li>[약물 요청](./field-groups/medication-request.md)</li><li>[환자](./field-groups/patient.md)</li></ul></li><li>**[위치](./classes/location.md)**:<ul><li>[위치](./field-groups/location.md)</li></ul><li>**[약물](../../classes/medication.md)**:<ul><li>[약물](./field-groups/medication.md)</li><li>[의약품 분배](./field-groups/medication-dispense.md)</li><li>[약물 요청](./field-groups/medication-request.md)</li></ul></li><li>**[공급자](../../classes/provider.md)**:<ul><li>[계정](./field-groups/account.md)</li><li>[의약품 분배](./field-groups/medication-dispense.md)</li><li>[약물 요청](./field-groups/medication-request.md)</li></ul><li>**[계획](../../classes/plan.md)**:<ul><li>[목표](./field-groups/coverage.md)</li></ul></li></ul> |
-| **공급자 환경 개선**: EMR 시스템의 공급자 데이터를 사용하여 약속 가용성, 위치 및 특수성에 따라 대체 공급자를 제안합니다. <br> <br>공급자 검색을 개선하여 원하는 가용성의 결과를 표시하고, 선택한 공급자가 지불 네트워크에 포함되어 있는지 확인하고, 예상 비용을 제공합니다. | <ul><li>**[XDM 개별 프로필](../../classes/individual-profile.md)**:<ul><li>[조직](./field-groups/organization.md)</li><li>[환자](./field-groups/patient.md)</li><li>[실무자](./field-groups/practioner.md)</li><li>[일정](./field-groups/schedule.md)</li></ul></li><li>**[위치](./classes/location.md)**:<ul><li>[위치](./field-groups/location.md)</li></ul><li>**[공급자](../../classes/provider.md)**:<ul><li>[조직](./field-groups/organization.md)</li><li>[실무자](./field-groups/practioner.md)</li><li>[일정](./field-groups/schedule.md)</li></ul></li></ul> |
+| **공급자 환경 개선**: EMR 시스템의 공급자 데이터를 사용하여 약속 가용성, 위치 및 특수성에 따라 대체 공급자를 제안합니다. <br> <br>공급자 검색을 개선하여 원하는 가용성의 결과를 표시하고, 선택한 공급자가 지불 네트워크에 포함되어 있는지 확인하고, 예상 비용을 제공합니다. | <ul><li>**[XDM 개별 프로필](../../classes/individual-profile.md)**:<ul><li>[약속](./field-groups/appointment.md)</li><li>[조직](./field-groups/organization.md)</li><li>[환자](./field-groups/patient.md)</li><li>[실무자](./field-groups/practioner.md)</li><li>[일정](./field-groups/schedule.md)</li></ul></li><li>**[위치](./classes/location.md)**:<ul><li>[위치](./field-groups/location.md)</li></ul><li>**[공급자](../../classes/provider.md)**:<ul><li>[약속](./field-groups/appointment.md)</li><li>[조직](./field-groups/organization.md)</li><li>[실무자](./field-groups/practioner.md)</li><li>[일정](./field-groups/schedule.md)</li></ul></li></ul> |
+
+{style="table-layout:auto"}
 
 ## 데이터 유형 {#data-types}
 
