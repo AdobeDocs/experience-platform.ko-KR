@@ -4,9 +4,9 @@ title: 흐름 서비스 API를 사용하여 데이터 세트 내보내기
 description: 흐름 서비스 API를 사용하여 데이터 세트를 내보내기 하여 대상을 선택하는 방법을 알아봅니다.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 3bce663866e7a6e8288444121331fc931a74076a
+source-git-commit: 6f8922f972546d8cceeba63e1bb4d1a75f7ef5c3
 workflow-type: tm+mt
-source-wordcount: '5138'
+source-wordcount: '5146'
 ht-degree: 3%
 
 ---
@@ -2469,6 +2469,10 @@ Experience Platform은 지정한 저장소 위치에 내보낸 데이터 세트 
 ## API 오류 처리 {#api-error-handling}
 
 이 자습서의 API 끝점은 일반적인 Experience Platform API 오류 메시지 원칙을 따릅니다. 오류 응답 해석에 대한 자세한 내용은 플랫폼 문제 해결 안내서의 [API 상태 코드](/help/landing/troubleshooting.md#api-status-codes) 및 [요청 헤더 오류](/help/landing/troubleshooting.md#request-header-errors)를 참조하십시오.
+
+## 알려진 제한 사항 {#known-limitations}
+
+데이터 집합 내보내기에 대한 [알려진 제한 사항](/help/destinations/ui/export-datasets.md#known-limitations)을 봅니다.
 
 ## 자주 묻는 질문 {#faq}
 
