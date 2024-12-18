@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform의 AI 어시스턴트 안내서
 user-guide-description: AI 어시스턴트를 사용하여 Adobe Experience Platform 및 Real-Time Customer Data Platform을 통해 워크플로를 가속화하는 방법을 알아봅니다.
 description: 이 문서에는 Adobe Experience Platform의 AI Assistant 목차 목록이 있습니다.
 role: Admin,User,Developer,Leader
-source-git-commit: 3d16118367c4eab1aea61efd943fe0773b756a98
+source-git-commit: ed09335f7b703be49ed08448ed03ed7bc91831f1
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 28%
+source-wordcount: '102'
+ht-degree: 27%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 28%
 * [FAQ](faq.md)
 * 새 기능 {#new-features}
    * [Alpha 및 Beta의 AI Assistant 기능](./new-features/alpha-beta.md)
+   * [고객 지원을 위한 AI Assistant](./new-features/customer-support.md)
    * [주요 변경 사항 모니터링 및 대상 예측](./new-features/audience-forecasting.md)
    * [자연어 추정](./new-features/natural-language.md)
    * [대상자 생성을 위한 XDM 필드 검색](./new-features/xdm-field-discovery.md)
