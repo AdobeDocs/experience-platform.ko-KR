@@ -4,7 +4,8 @@ description: 약속 스키마 필드 그룹에 대해 알아봅니다.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 2a58f6f1663e95c1c7576cd4909fa937b41ae099
+exl-id: 8224a2ee-51ac-4512-b0e4-5f1ab6bfddc4
+source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
 workflow-type: tm+mt
 source-wordcount: '1227'
 ht-degree: 5%
@@ -120,3 +121,4 @@ ht-degree: 5%
 | [!UICONTROL n번째 주] | `nthWeekOfMonth` | [[!UICONTROL 코딩]](../data-types/coding.md) | 약속이 재개되어야 하는 월의 n번째 주를 나타냅니다. |
 | [!UICONTROL 날짜] | `dayOfMonth` | 정수 | 약속이 해당 월의 특정 날짜에 발생해야 함을 나타냅니다. |
 | [!UICONTROL 월 간격] | `monthInterval` | 정수 | 되풀이 약속이 n개월마다 발생함을 나타냅니다. |
+
