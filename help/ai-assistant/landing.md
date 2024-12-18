@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant를 시작합니다.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 4d89ac33843acd536fbadc85a07bee90a50e6407
+source-git-commit: 38ce83fe0d1c5c558a2e03e0057ac4996097409b
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '712'
 ht-degree: 1%
 
 ---
@@ -66,6 +66,14 @@ AI Assistant의 자연어 추정 기능을 사용하여 대상 크기를 예측�
 AI Assistant를 사용하여 Experience Platform 내에서 타겟 대상을 생성하는 데 사용할 수 있는 XDM(Experience Data Model) 필드를 검색할 수 있습니다.
 
 [![이미지](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
+
+>[!TAB 고객 지원을 위한 AI 지원]
+
+### 고객 지원을 위한 AI Assistant
+
+고객 지원용 AI Assistant를 사용하면 워크플로를 종료하지 않고도 문제를 원활하게 해결할 수 있습니다. 이제 필요한 경우 지원 관리자는 고객 지원용 AI Assistant를 사용하여 AI Assistant와의 상호 작용에 대한 컨텍스트 및 세션 세부 사항과 함께 고객 지원 티켓을 생성할 수 있습니다.
+
+[![이미지](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
 >[!ENDTABS]
 

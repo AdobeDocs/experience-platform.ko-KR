@@ -2,7 +2,8 @@
 title: 고객 지원을 위한 AI Assistant
 description: AI Assistant를 사용하여 문제 해결 및 고객 지원 티켓 제출 프로세스를 간소화하는 방법에 대해 알아봅니다.
 badge: Alpha
-source-git-commit: 746c40902a052f99db28a629a8e9c4da0559037f
+exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
+source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -36,7 +37,7 @@ ht-degree: 0%
 * 정확하고 라이선싱 중심의 정보를 제공하는 **제품 법률 문서**.
    * 질문 예:
       * &quot;Adobe Experience Platform 활성화에서 배치 세분화 작업의 제한은 얼마입니까?&quot;
-&quot;Adobe Experience Platform 활성화의 평균 프로필 풍부성 제한은 얼마입니까?&quot;
+      * &quot;Adobe Experience Platform 활성화의 평균 프로필 풍부성 제한은 얼마입니까?&quot;
 
 ## 지원 사례 만들기
 
