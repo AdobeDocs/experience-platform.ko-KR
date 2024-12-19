@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 액세스 제어 권한을 편집하려면 제품 프로필 선택
 description: 이 문서에서는 액세스 제어 작업 영역을 탐색하는 데 필요한 단계를 설명합니다. Adobe Admin Console을 통해 Experience Platform에 대한 액세스 제어를 구성하려면 Experience Platform에 대한 구독이 있는 조직의 관리자여야 합니다.
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ca204a6bdbf867268e774d5db6f8e5941d38f0ae
 workflow-type: tm+mt
 source-wordcount: '302'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -30,3 +30,4 @@ Adobe Experience Platform용 액세스 제어 작업 영역이 표시되어 **[!
 ## 다음 단계
 
 액세스 제어 작업 영역을 탐색했으면 다음 단계로 이동하여 [새 제품 프로필을 만듭니다](create-profile.md)
+
