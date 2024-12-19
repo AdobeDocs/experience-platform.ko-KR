@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 개인 정보 보호 규정 FAQ
 description: 이 문서에서는 지원되는 법적 개인 정보 보호 규정 및 Adobe Experience Cloud에서의 구현에 대한 FAQ에 대한 답변을 제공합니다.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: d643b2aeadd4080fa89d6a7b0f84a9f6882d7b89
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1606'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ GDPR과 같은 많은 규제의 경우 민감한 개인 데이터를 처리하�
 | 규정 | 응답할 일정 | 참고 |
 | --- | --- | --- |
 | CCPA(캘리포니아) | 45일 | |
-| GDPR(유럽 연합) | 30일 | 요청이 복잡하거나 동일한 데이터 주체에서 많은 요청을 한 경우 요청을 60일까지 연장할 수 있습니다. |
+| GDPR(유럽 연합) | 30일 | |
 | LGPD(브라질) | 15일 | |
 | PDPA(태국) | 30일 | 기업이 준법 기간 내에 데이터 주체의 요청에 응답할 수 없는 경우 회사는 데이터 주체에 대한 서면 응답 요청을 이행할 수 없었던 날로부터 30일을 추가로 가지게 됩니다. |
 
