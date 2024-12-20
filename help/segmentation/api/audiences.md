@@ -3,9 +3,9 @@ title: 대상 API 엔드포인트
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 대상 끝점을 사용하여 프로그래밍 방식으로 조직의 대상을 만들고, 관리하고, 업데이트합니다.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1452'
 ht-degree: 2%
 
 ---
@@ -45,6 +45,7 @@ GET /audiences?{QUERY_PARAMETERS}
 | `property` | **정확히**&#x200B;이(가) 특성 값과 일치하는 대상을 지정할 수 있는 필터입니다. `property=` 형식으로 작성되었습니다. | `property=audienceId==test-audience-id` |
 | `name` | 제공된 값에 대해 이름이 **포함**&#x200B;된 대상을 지정할 수 있는 필터입니다. 이 값은 대/소문자를 구분하지 않습니다. | `name=Sample` |
 | `description` | 제공된 값을 **포함**&#x200B;하는 설명의 대상을 지정할 수 있는 필터입니다. 이 값은 대/소문자를 구분하지 않습니다. | `description=Test Description` |
+| `entityType` | 찾고 있는 대상 유형을 지정할 수 있는 필터입니다. | `entityType=_xdm.context.account` |
 
 **요청**
 

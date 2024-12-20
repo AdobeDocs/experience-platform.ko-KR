@@ -4,9 +4,9 @@ description: 계정 대상자를 만들고 사용하여 다운스트림 대상�
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1495'
 ht-degree: 21%
 
 ---
@@ -195,10 +195,6 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 >abstract="대상자가 제한 조건을 위반했습니다. 자세한 내용은 링크된 문서를 읽어 보시기 바랍니다."
 
 계정 대상을 사용할 때 대상 **은(는) 다음 제한을 준수해야**&#x200B;합니다.
-
->[!NOTE]
->
->다음 목록은 계정 대상에 대한 **default** 제약 조건을 보여 줍니다. 이러한 값 **은(는) 조직 관리자가 구현한 설정에 따라**&#x200B;번 변경될 수 있습니다.
 
 - 경험 이벤트에 대한 최대 전환 확인 기간은 **30일**&#x200B;입니다.
 - 중첩된 컨테이너의 최대 깊이는 **5**&#x200B;입니다.
