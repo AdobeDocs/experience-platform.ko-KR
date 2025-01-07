@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant를 시작합니다.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 38ce83fe0d1c5c558a2e03e0057ac4996097409b
+source-git-commit: 9a8b1527f932e8b0091af7fb999ed638e28de2d0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -125,6 +125,20 @@ AI Assistant에 대한 개요는 다음 비디오를 참조하십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
 
+### AI Assistant를 사용하여 응답의 유효성 확인
+
+다음 비디오를 통해 AI Assistant를 사용하여 응답을 확인하고 검증하는 방법에 대해 알아보십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441738/?learn=on)
+
+자세한 내용은 [AI Assistant 답변 확인](ui-guide.md#verify-operational-insights-responses)에 대한 설명서를 참조하십시오.
+
+### 영향 분석에 AI Assistant 사용
+
+다음 비디오를 시청하여 데이터 개체가 변경되기 전에 AI Assistant를 사용하여 보다 효과적인 영향 분석을 실행하는 방법에 대해 알아보십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441680/?learn=on)
+
 ## AI Assistant 사용 사례 라이브러리
 
 >[!BEGINTABS]
@@ -136,6 +150,7 @@ AI Assistant 사용 사례 예제는 다음을 참조하십시오.
 * [팀의 새 구성원에 대한 온보딩 시간 단축](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
 * [대상자를 정리하고 마케팅 작업을 최적화합니다](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [종속성 확인 및 데이터 업데이트 중 위험 최소화](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [종속성(초)을 확인하여 데이터 업데이트 중 위험을 최소화합니다](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 
 >[!TAB 추가 비디오 콘텐츠]
 
