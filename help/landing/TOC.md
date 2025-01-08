@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: 안내서, 설명서 및 튜토리얼을 통해 Experience Platform이 개인화된 경험을 실시간으로 고객에게 전달하는 방법에 대해 알아봅니다.
-source-git-commit: dde5c1367706d015308ebea687d7f2a41947fb20
+source-git-commit: 37a94874d2c104c753b0f1efbae20c1cce0b29f3
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 24%
+source-wordcount: '288'
+ht-degree: 25%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 24%
       * IAB TCF 2.0 {#iab}
          * [개요](./governance-privacy-security/consent/iab/overview.md)
          * [동의 및 환경 설정 데이터를 캡처하도록 데이터 세트 구성](./governance-privacy-security/consent/iab/dataset.md)
-      * [동의 및 환경 설정 데이터를 처리하기 위해 Platform Web SDK를 통합](./governance-privacy-security/consent/sdk.md)
+      * [동의 및 환경 설정 데이터를 처리하기 위해 Platform Web SDK을 통합](./governance-privacy-security/consent/sdk.md)
    * 감사 로그 {#audit-logs}
       * [개요](./governance-privacy-security/audit-logs/overview.md)
       * 감사 쿼리 API {#audit-api}
@@ -71,6 +71,8 @@ ht-degree: 24%
       * [Azure Key Vault 구성](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
       * [API를 사용하여 CMK 설정](./governance-privacy-security/customer-managed-keys/api-set-up.md)
       * [UI를 사용하여 CMK 설정](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
+   * 키 관리 서비스 {#key-management-service}
+      * [키 관리 서비스](./governance-privacy-security/key-management-service/overview.md)
 * 라이선스 사용 및 보호 기능 {#license}
    * [데이터 관리 라이선스 권한 부여 모범 사례](./license-usage-and-guardrails/data-management-best-practices.md)
    * [라이선스 사용 대시보드](./license-usage-and-guardrails/license-usage-dashboard.md)

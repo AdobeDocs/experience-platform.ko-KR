@@ -4,9 +4,9 @@ description: Adobe Experience Platform에 저장된 데이터에 대한 자체 �
 role: Developer
 feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f2737355ca0652f434bd5f86acc65139f767e56f
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # Adobe Experience Platform의 고객 관리 키
 
 Adobe Experience Platform에 저장된 데이터는 시스템 수준 키를 사용하여 사용하지 않을 때 암호화됩니다. 플랫폼 위에 구축된 애플리케이션을 사용하는 경우 자체 암호화 키를 대신 사용하도록 선택할 수 있으므로 데이터 보안을 보다 세밀하게 제어할 수 있습니다.
+
+>[!AVAILABILITY]
+>
+>Experience Platform 구현이 Amazon Web Services(AWS)에서 실행되는 경우 플랫폼 데이터 암호화에 KMS(키 관리 서비스)를 사용할 수 있습니다. 현재 AWS에서 실행 중인 Experience Platform은 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요. AWS KMS의 암호화 키 생성 및 관리에 대한 자세한 내용은 [AWS KMS 데이터 암호화 안내서](../key-management-service/overview.md)를 참조하세요.
 
 >[!NOTE]
 >
