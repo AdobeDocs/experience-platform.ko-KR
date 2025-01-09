@@ -3,10 +3,10 @@ title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 대상자를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 5362690047be6dd1f2d8f6f18d633e0a903807d2
+source-git-commit: cc7c8c14fe5ee4bb9001cae84d28a385a3b4b448
 workflow-type: tm+mt
-source-wordcount: '1592'
-ht-degree: 4%
+source-wordcount: '1956'
+ht-degree: 2%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 4%
 
 ## 개요 {#overview}
 
-[!DNL Data Landing Zone]은 Adobe Experience Platform에 의해 프로비저닝된 [!DNL Azure Blob] 스토리지 인터페이스로, 이를 통해 안전한 클라우드 기반 파일 스토리지 시설에 액세스하여 Platform에서 파일을 내보낼 수 있습니다. 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너에 액세스할 수 있으며 모든 컨테이너의 총 데이터 볼륨은 Platform 제품 및 서비스 라이선스와 함께 제공되는 총 데이터로 제한됩니다. [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] 및 [!DNL Real-Time Customer Data Platform]과(와) 같은 플랫폼과 해당 애플리케이션의 모든 고객에게 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너가 제공됩니다. [!DNL Azure Storage Explorer] 또는 명령줄 인터페이스를 통해 컨테이너에 파일을 읽고 쓸 수 있습니다.
-
-[!DNL Data Landing Zone]은(는) SAS 기반 인증을 지원하며, 전송 중이거나 사용하지 않는 표준 [!DNL Azure Blob] 저장소 보안 메커니즘을 통해 데이터를 보호합니다. SAS는 [공유 액세스 서명](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers)을 의미합니다.
-
-SAS 기반 인증을 사용하면 공용 인터넷 연결을 통해 [!DNL Data Landing Zone] 컨테이너에 안전하게 액세스할 수 있습니다. [!DNL Data Landing Zone] 컨테이너에 액세스하는 데 필요한 네트워크 변경 내용이 없습니다. 따라서 네트워크에 대한 허용 목록 또는 교차 지역 설정을 구성할 필요가 없습니다.
+[!DNL Data Landing Zone]은(는) Adobe Experience Platform에서 프로비저닝한 클라우드 스토리지 인터페이스로, 플랫폼 밖으로 파일을 내보낼 수 있는 안전한 클라우드 기반 파일 스토리지 기능에 대한 액세스 권한을 부여합니다. 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너에 액세스할 수 있으며 모든 컨테이너의 총 데이터 볼륨은 Platform 제품 및 서비스 라이선스와 함께 제공되는 총 데이터로 제한됩니다. [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] 및 [!DNL Real-Time Customer Data Platform]과(와) 같은 플랫폼과 해당 애플리케이션의 모든 고객에게 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너가 제공됩니다.
 
 플랫폼은 [!DNL Data Landing Zone] 컨테이너에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을 적용합니다. 모든 파일은 7일 후에 삭제됩니다.
+
+[!DNL Data Landing Zone] 대상 커넥터는 Azure 또는 Amazon 웹 서비스 클라우드 지원을 사용하는 고객에게 제공됩니다. 인증 메커니즘은 대상이 프로비저닝된 클라우드에 따라 다르며, 대상 및 해당 사용 사례에 대한 다른 모든 것은 동일합니다. [Azure Blob에 제공된 데이터 랜딩 영역 인증] 및 [AWS에 제공된 데이터 랜딩 영역 인증](#authenticate-dlz-aws) 섹션에서 두 가지 다른 인증 메커니즘에 대해 자세히 알아보십시오.
+
+![클라우드 지원에 따라 데이터 랜딩 영역 대상의 구현이 어떻게 다른지를 보여 주는 다이어그램입니다.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png)
 
 ## API 또는 UI를 통해 [!UICONTROL 데이터 랜딩 영역] 저장소에 연결합니다. {#connect-api-or-ui}
 
@@ -67,9 +67,17 @@ SAS 기반 인증을 사용하면 공용 인터넷 연결을 통해 [!DNL Data L
 
 *데이터 세트*&#x200B;를 내보낼 때 Platform은 사용자가 제공한 저장소 위치에 `.parquet` 또는 `.json` 파일을 만듭니다. 파일에 대한 자세한 내용은 데이터 세트 내보내기 자습서에서 [데이터 세트 내보내기에 성공했는지 확인](../../ui/export-datasets.md#verify) 섹션을 참조하십시오.
 
-## 전제 조건 {#prerequisites}
+## Azure Blob에 프로비저닝된 데이터 랜딩 영역 인증 {#authenticate-dlz-azure}
 
-[!DNL Data Landing Zone] 대상을 사용하려면 먼저 다음 필수 구성 요소를 충족해야 합니다.
+>[!AVAILABILITY]
+>
+>이 섹션은 Microsoft Azure에서 실행되는 Experience Platform 구현에 적용됩니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
+
+[!DNL Azure Storage Explorer] 또는 명령줄 인터페이스를 통해 컨테이너에 파일을 읽고 쓸 수 있습니다.
+
+[!DNL Data Landing Zone]은(는) SAS 기반 인증을 지원하며, 전송 중이거나 사용하지 않는 표준 [!DNL Azure Blob] 저장소 보안 메커니즘을 통해 데이터를 보호합니다. SAS는 [공유 액세스 서명](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers)을 의미합니다.
+
+SAS 기반 인증을 사용하면 공용 인터넷 연결을 통해 [!DNL Data Landing Zone] 컨테이너에 안전하게 액세스할 수 있습니다. [!DNL Data Landing Zone] 컨테이너에 액세스하는 데 필요한 네트워크 변경 내용이 없습니다. 따라서 네트워크에 대한 허용 목록 또는 교차 지역 설정을 구성할 필요가 없습니다.
 
 ### [!DNL Data Landing Zone] 컨테이너를 [!DNL Azure Storage Explorer]에 연결
 
@@ -197,6 +205,76 @@ curl -X POST \
 ![Azure UI에서 강조 표시된 DLZ 사용자 컨테이너의 요약입니다.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
 [!DNL Data Landing Zone] 컨테이너를 [!DNL Azure Storage Explorer]에 연결하면 이제 Experience Platform에서 [!DNL Data Landing Zone] 컨테이너로 파일을 내보낼 수 있습니다. 파일을 내보내려면 아래 섹션에 설명된 대로 Experience Platform UI에서 [!DNL Data Landing Zone] 대상에 대한 연결을 설정해야 합니다.
+
+## AWS에서 프로비저닝한 데이터 랜딩 영역 인증 {#authenticate-dlz-aws}
+
+>[!AVAILABILITY]
+>
+>이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. 현재 AWS에서 실행 중인 Experience Platform은 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
+
+AWS에 프로비저닝된 데이터 랜딩 영역 인스턴스에 대한 자격 증명을 가져오려면 아래 작업을 수행하십시오. 그런 다음 원하는 클라이언트를 사용하여 데이터 랜딩 영역 인스턴스에 연결합니다.
+
+>[!BEGINSHADEBOX]
+
+### [!DNL Data Landing Zone]에 대한 자격 증명을 검색합니다. {#retrieve-dlz-credentials-aws}
+
+[!DNL Data Landing Zone] 자격 증명을 검색하려면 플랫폼 API를 사용해야 합니다. 자격 증명을 검색하기 위한 API 호출에 대해서는 아래에 설명되어 있습니다. 헤더에 필요한 값을 가져오는 방법에 대한 자세한 내용은 [Adobe Experience Platform API 시작하기](/help/landing/api-guide.md) 안내서를 참조하십시오.
+
+**API 형식**
+
+```http
+GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
+```
+
+| 쿼리 매개변수 | 설명 |
+| --- | --- |
+| `dlz_destination` | `dlz_destination` 형식을 사용하면 API에서 랜딩 영역 대상 컨테이너와 사용 가능한 다른 형식의 컨테이너를 구별할 수 있습니다. |
+
+{style="table-layout:auto"}
+
+**요청**
+
+다음 요청 예제는 기존 랜딩 영역에 대한 자격 증명을 검색합니다.
+
+```shell
+curl --request GET \
+  --url 'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination' \
+  --header 'Authorization: Bearer ***' \
+  --header 'Content-Type: application/json' \
+  --header 'x-api-key: your_api_key' \
+  --header 'x-gw-ims-org-id: yourorg@AdobeOrg'
+```
+
+**응답**
+
+다음 응답은 현재 `awsAccessKeyId`, `awsSecretAccessKey` 및 기타 정보를 포함하여 랜딩 영역에 대한 자격 증명 정보를 반환합니다.
+
+```json
+{
+    "credentials": {
+        "awsAccessKeyId": "ABCDW3MEC6HE2T73ZVKP",
+        "awsSecretAccessKey": "A1B2Zdxj6y4xfR0QZGtf/phj/hNMAbOGtzM/JNeE",
+        "awsSessionToken": "***"
+    },
+    "dlzPath": {
+        "bucketName": "your-bucket-name",
+        "dlzFolder": "dlz-destination"
+    },
+    "dlzProvider": "Amazon S3",
+    "expiryTime": 1734494017
+}
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `credentials` | 이 개체에는 Experience Platform이 파일을 프로비전된 데이터 랜딩 영역 위치로 내보내는 데 사용하는 `awsAccessKeyId`, `awsSecretAccessKey` 및 `awsSessionToken`이(가) 포함됩니다. |
+| `dlzPath` | 이 개체에는 내보낸 파일이 저장되는 Adobe 프로비저닝 AWS 위치의 경로가 포함됩니다. |
+| `dlzProvider` | Amazon S3에서 프로비저닝한 데이터 랜딩 영역임을 나타냅니다. |
+| `expiryTime` | 위의 개체에 있는 자격 증명이 만료되는 시기를 나타냅니다. 다시 호출하여 새로 고칠 수 있습니다. |
+
+{style="table-layout:auto"}
+
+>[!ENDSHADEBOX]
 
 ## 대상에 연결 {#connect}
 
