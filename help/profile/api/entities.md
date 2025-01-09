@@ -5,10 +5,10 @@ type: Documentation
 description: Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터에 액세스할 수 있습니다. 이 안내서에서는 프로필 API를 사용하여 "프로필"로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 9f9823a23c488e63b8b938cb885f050849836e36
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 1%
+source-wordcount: '2181'
+ht-degree: 3%
 
 ---
 
@@ -20,11 +20,13 @@ Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페
 
 이 가이드에 사용된 API 끝점은 [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)의 일부입니다. 계속하기 전에 [시작 안내서](getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 [!DNL Experience Platform] API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
-## ID별 프로필 데이터 액세스
+## 엔티티 검색 {#retrieve-entity}
 
-`/access/entities` 끝점에 대한 GET 요청을 만들고 엔터티의 ID를 일련의 쿼리 매개 변수로 제공하여 [!DNL Profile] 엔터티에 액세스할 수 있습니다. 이 ID는 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
+필요한 쿼리 매개 변수와 함께 `/access/entities` 끝점에 대한 GET 요청을 만들어 프로필 엔터티 또는 해당 시계열 데이터를 검색할 수 있습니다.
 
-요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다. 부록의 [쿼리 매개 변수](#query-parameters) 섹션에 올바른 매개 변수의 전체 목록이 제공됩니다.
+>[!BEGINTABS]
+
+>[!TAB 프로필 엔터티]
 
 **API 형식**
 
@@ -32,20 +34,37 @@ Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페
 GET /access/entities?{QUERY_PARAMETERS}
 ```
 
+요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다.
+
+프로필 엔터티에 액세스하려면 **다음 쿼리 매개 변수를 제공해야 합니다**.
+
+- `schema.name`: 엔터티의 XDM 스키마 이름입니다. 이 사용 사례에서는 `schema.name=_xdm.context.profile`입니다.
+- `entityId`: 검색하려는 엔터티의 ID입니다.
+- `entityIdNS`: 검색하려는 엔터티의 네임스페이스입니다. `entityId`이(가) XID가 **아님**&#x200B;인 경우 이 값을 제공해야 합니다.
+
+부록의 [쿼리 매개 변수](#query-parameters) 섹션에 올바른 매개 변수의 전체 목록이 제공됩니다.
+
 **요청**
 
 다음 요청은 ID를 사용하여 고객의 이메일과 이름을 검색합니다.
 
++++ ID를 사용하여 엔티티를 검색하기 위한 샘플 요청
+
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email&fields=identities,person.name,workEmail' \
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email&fields=identities,person.name,workEmail' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **응답**
+
+성공적인 응답은 요청된 엔터티와 함께 HTTP 상태 200을 반환합니다.
+
++++ 요청된 엔터티가 포함된 샘플 응답
 
 ```json
 {
@@ -69,7 +88,7 @@ curl -X GET \
                     }
                 },
                 {
-                    "id": "janesmith@example.com",
+                    "id": "johnsmith@example.com",
                     "namespace": {
                         "code": "email"
                     }
@@ -114,13 +133,305 @@ curl -X GET \
 }
 ```
 
++++
+
 >[!NOTE]
 >
 >관련 그래프가 50개가 넘는 ID를 연결하는 경우 이 서비스는 HTTP 상태 422와 &quot;관련 ID가 너무 많습니다&quot;라는 메시지를 반환합니다. 이 오류가 표시되면 쿼리 매개 변수를 더 추가하여 검색 범위를 좁히는 것이 좋습니다.
 
-## ID 목록으로 프로필 데이터 액세스
+>[!TAB 시계열 이벤트]
 
-`/access/entities` 끝점에 대한 POST 요청을 만들고 페이로드에 ID를 제공하여 여러 프로필 엔터티에 ID로 액세스할 수 있습니다. 이러한 ID는 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
+**API 형식**
+
+```http
+GET /access/entities?{QUERY_PARAMETERS}
+```
+
+요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다.
+
+시계열 이벤트 데이터에 액세스하려면 **다음 쿼리 매개 변수를 제공해야 합니다**.
+
+- `schema.name`: 엔터티의 XDM 스키마 이름입니다. 이 사용 사례에서는 이 값이 `schema.name=_xdm.context.experienceevent`입니다.
+- `relatedSchema.name`: 관련 스키마의 이름입니다. 스키마 이름이 경험 이벤트이므로 이 **은(는) `relatedSchema.name=_xdm.context.profile`이어야 합니다**.
+- `relatedEntityId`: 관련 엔터티의 ID입니다.
+- `relatedEntityIdNS`: 관련 엔터티의 네임스페이스입니다. `relatedEntityId`이(가) XID가 **아님**&#x200B;인 경우 이 값을 제공해야 합니다.
+
+부록의 [쿼리 매개 변수](#query-parameters) 섹션에 올바른 매개 변수의 전체 목록이 제공됩니다.
+
+**요청**
+
+다음 요청은 ID별로 프로필 엔터티를 찾고 엔터티와 연결된 모든 시계열 이벤트에 대한 속성 `endUserIDs`, `web` 및 `channel`의 값을 검색합니다.
+
++++ 엔티티와 연결된 시계열 이벤트를 검색하기 위한 샘플 요청
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**응답**
+
+성공적인 응답은 요청 쿼리 매개 변수에 지정된 시계열 이벤트 및 관련 필드의 페이지가 매겨진 목록과 함께 HTTP 상태 200을 반환합니다.
+
+>[!NOTE]
+>
+>요청에서 1개(`limit=1`)의 제한을 지정했으므로 아래 응답의 `count`은(는) 1이며 하나의 엔터티만 반환됩니다.
+
++++ 요청된 시계열 이벤트 데이터를 포함하는 샘플 응답
+
+```json
+{
+    "_page": {
+        "orderby": "timestamp",
+        "start": "c8d11988-6b56-4571-a123-b6ce74236036",
+        "count": 1,
+        "next": "c8d11988-6b56-4571-a123-b6ce74236037"
+    },
+    "children": [
+        {
+            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
+            "entityId": "c8d11988-6b56-4571-a123-b6ce74236036",
+            "timestamp": 1531260476000,
+            "entity": {
+                "endUserIDs": {
+                    "_experience": {
+                        "ecid": {
+                            "id": "89149270342662559642753730269986316900",
+                            "namespace": {
+                                "code": "ecid"
+                            }
+                        }
+                    }
+                },
+                "channel": {
+                    "_type": "web"
+                },
+                "web": {
+                    "webPageDetails": {
+                        "name": "Fernie Snow",
+                        "pageViews": {
+                            "value": 1
+                        }
+                    }
+                }
+            },
+            "lastModifiedAt": "2018-08-21T06:49:02Z"
+        }
+    ],
+    "_links": {
+        "next": {
+            "href": "/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1"
+        }
+    }
+}
+```
+
++++
+
+>[!TAB B2B 계정]
+
+**API 형식**
+
+```http
+GET /access/entities?{QUERY_PARAMETERS}
+```
+
+요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다.
+
+B2B 계정 데이터에 액세스하려면 **다음 쿼리 매개 변수를 제공해야 합니다**.
+
+- `schema.name`: 엔터티의 XDM 스키마 이름입니다. 이 사용 사례에서는 이 값이 `schema.name=_xdm.context.account`입니다.
+- `entityId`: 검색하려는 엔터티의 ID입니다.
+- `entityIdNS`: 검색하려는 엔터티의 네임스페이스입니다. `entityId`이(가) XID가 **아님**&#x200B;인 경우 이 값을 제공해야 합니다.
+
+부록의 [쿼리 매개 변수](#query-parameters) 섹션에 올바른 매개 변수의 전체 목록이 제공됩니다.
+
+**요청**
+
++++ B2B 계정 검색에 대한 샘플 요청
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.account&entityIdNs=b2b_account&entityId=2334262' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**응답**
+
+성공적인 응답은 요청된 엔터티와 함께 HTTP 상태 200을 반환합니다.
+
++++ 요청된 엔터티가 포함된 샘플 응답
+
+```json
+{
+    "GuQ-AUFjgjaeIw": {
+        "entityId": "GuQ-AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "{SOURCE_ID}",
+                    "sourceKey": "{SOURCE_KEY}",
+                    "sourceInstanceID": "{SOURCE_INSTANCE_ID}",
+                    "sourceType": "{SOURCE_TYPE}"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_account": [
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    },
+                    {
+                        "id": "{SOURCE_ID}"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    }
+}
+```
+
++++
+
+>[!TAB B2B 영업 기회]
+
+**API 형식**
+
+```http
+GET /access/entities?{QUERY_PARAMETERS}
+```
+
+요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다.
+
+B2B 영업 기회 엔터티에 액세스하려면 **다음 쿼리 매개 변수를 제공해야 합니다**.
+
+- `schema.name`: 엔터티의 XDM 스키마 이름입니다. 이 사용 사례에서는 `schema.name=_xdm.context.opportunity`입니다.
+- `entityId`: 검색하려는 엔터티의 ID입니다.
+- `entityIdNS`: 검색하려는 엔터티의 네임스페이스입니다. `entityId`이(가) XID가 **아님**&#x200B;인 경우 이 값을 제공해야 합니다.
+
+부록의 [쿼리 매개 변수](#query-parameters) 섹션에 올바른 매개 변수의 전체 목록이 제공됩니다.
+
+**요청**
+
++++ B2B 영업 기회 엔터티 검색에 대한 샘플 요청
+
+```shell
+curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.opportunity&entityIdNs=b2b_opportunity&entityId=2334262' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**응답**
+
+성공적인 응답은 요청된 엔터티와 함께 HTTP 상태 200을 반환합니다.
+
++++ 요청된 엔터티가 포함된 샘플 응답
+
+```json
+{
+  "Ggw_AUFjgjaeIw": {
+        "entityId": "Ggw_AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    },
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    }
+}
+```
+
++++
+
+>[!ENDTABS]
+
+## 여러 엔티티 검색 {#retrieve-entities}
+
+`/access/entities` 끝점에 대한 POST 요청을 만들고 페이로드에 ID를 제공하여 여러 프로필 엔터티 또는 시계열 이벤트를 검색할 수 있습니다.
+
+>[!BEGINTABS]
+
+>[!TAB 프로필 엔터티]
 
 **API 형식**
 
@@ -132,9 +443,10 @@ POST /access/entities
 
 다음 요청은 ID 목록으로 여러 고객의 이름과 이메일 주소를 검색합니다.
 
++++여러 엔티티를 검색하기 위한 샘플 요청
+
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/access/entities \
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -174,26 +486,29 @@ curl -X POST \
             "endTime": 1539838510
         },
         "limit": 10,
-        "orderby": "-timestamp",
-        "withCA": true
+        "orderby": "-timestamp"
       }'
 ```
 
-| 속성 | 설명 |
-|---|---|
-| `schema.name` | ***(필수)*** 엔터티가 속한 XDM 스키마의 이름입니다. |
-| `fields` | 문자열 배열로 반환될 XDM 필드. 기본적으로 모든 필드가 반환됩니다. |
-| `identities` | ***(필수)*** 액세스하려는 엔터티의 ID 목록이 포함된 배열입니다. |
-| `identities.entityId` | 액세스하려는 엔티티의 ID입니다. |
-| `identities.entityIdNS.code` | 액세스하려는 엔티티 ID의 네임스페이스입니다. |
-| `timeFilter.startTime` | 시간 범위 필터의 시작 시간이 포함됩니다. 밀리초 단위여야 합니다. 지정하지 않은 경우 기본값은 사용 가능한 시간의 시작입니다. |
-| `timeFilter.endTime` | 시간 범위 필터의 종료 시간, 제외됨. 밀리초 단위여야 합니다. 지정하지 않은 경우 기본값은 사용 가능한 시간의 끝입니다. |
-| `limit` | 반환할 레코드 수입니다. 반환된 경험 이벤트 수만 적용됩니다. 기본값: 1,000. |
-| `orderby` | `(+/-)timestamp`(으)로 기록되고 기본값은 `+timestamp`인 타임스탬프별 검색된 경험 이벤트의 정렬 순서입니다. |
-| `withCA` | 조회를 위해 계산된 속성을 활성화하는 기능 플래그. 기본값: false. |
+| 속성 | 유형 | 설명 |
+| -------- |----- | ----------- |
+| `schema.name` | 문자열 | **(필수)** 엔터티가 속한 XDM 스키마의 이름입니다. |
+| `fields` | 배열 | 문자열 배열로 반환될 XDM 필드. 기본적으로 모든 필드가 반환됩니다. |
+| `identities` | 배열 | **(필수)** 액세스하려는 엔터티의 ID 목록이 포함된 배열입니다. |
+| `identities.entityId` | 문자열 | 액세스하려는 엔티티의 ID입니다. |
+| `identities.entityIdNS.code` | 문자열 | 액세스하려는 엔티티 ID의 네임스페이스입니다. |
+| `timeFilter.startTime` | 정수 | 프로필 엔티티를 필터링할 시작 시간(밀리초)을 지정합니다. 기본적으로 이 값은 사용 가능한 시간의 시작으로 설정됩니다. |
+| `timeFilter.endTime` | 정수 | 프로필 엔티티를 필터링할 종료 시간(밀리초)을 지정합니다. 기본적으로 이 값은 사용 가능한 시간의 끝으로 설정됩니다. |
+| `limit` | 정수 | 반환할 최대 레코드 수입니다. 기본적으로 이 값은 1000으로 설정됩니다. |
+| `orderby` | 문자열 | `(+/-)timestamp`(으)로 기록되고 기본값은 `+timestamp`인 타임스탬프별 검색된 경험 이벤트의 정렬 순서입니다. |
+
++++
 
 **응답**
-성공적인 응답은 요청 본문에 지정된 엔티티의 요청된 필드를 반환합니다.
+
+성공적인 응답은 요청 본문에 지정된 엔티티의 요청된 필드가 있는 HTTP 상태 200을 반환합니다.
+
++++ 요청된 엔터티가 포함된 샘플 응답
 
 ```json
 {
@@ -332,171 +647,9 @@ curl -X POST \
 }
 ```
 
-## ID별로 프로필에 대한 시계열 이벤트에 액세스
++++
 
-`/access/entities` 끝점에 대한 GET 요청을 수행하여 연결된 프로필 엔터티의 ID로 시계열 이벤트에 액세스할 수 있습니다. 이 ID는 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
-
-요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다. 부록의 [쿼리 매개 변수](#query-parameters) 섹션에 올바른 매개 변수의 전체 목록이 제공됩니다.
-
-**API 형식**
-
-```http
-GET /access/entities?{QUERY_PARAMETERS}
-```
-
-**요청**
-
-다음 요청은 ID별로 프로필 엔터티를 찾고 엔터티와 연결된 모든 시계열 이벤트에 대한 속성 `endUserIDs`, `web` 및 `channel`의 값을 검색합니다.
-
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**응답**
-
-성공적인 응답은 요청 쿼리 매개 변수에 지정된 시계열 이벤트 및 관련 필드의 페이지가 매겨진 목록을 반환합니다.
-
->[!NOTE]
->
->요청에서 1개(`limit=1`)의 제한을 지정했으므로 아래 응답의 `count`은(는) 1이며 하나의 엔터티만 반환됩니다.
-
-```json
-{
-    "_page": {
-        "orderby": "timestamp",
-        "start": "c8d11988-6b56-4571-a123-b6ce74236036",
-        "count": 1,
-        "next": "c8d11988-6b56-4571-a123-b6ce74236037"
-    },
-    "children": [
-        {
-            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
-            "entityId": "c8d11988-6b56-4571-a123-b6ce74236036",
-            "timestamp": 1531260476000,
-            "entity": {
-                "endUserIDs": {
-                    "_experience": {
-                        "ecid": {
-                            "id": "89149270342662559642753730269986316900",
-                            "namespace": {
-                                "code": "ecid"
-                            }
-                        }
-                    }
-                },
-                "channel": {
-                    "_type": "web"
-                },
-                "web": {
-                    "webPageDetails": {
-                        "name": "Fernie Snow",
-                        "pageViews": {
-                            "value": 1
-                        }
-                    }
-                }
-            },
-            "lastModifiedAt": "2018-08-21T06:49:02Z"
-        }
-    ],
-    "_links": {
-        "next": {
-            "href": "/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1"
-        }
-    }
-}
-```
-
-### 후속 결과 페이지 액세스
-
-시계열 이벤트를 검색할 때 결과에 페이지가 매겨집니다. 후속 결과 페이지가 있으면 `_page.next` 속성에 ID가 포함됩니다. 또한 `_links.next.href` 속성은 다음 페이지를 검색하기 위한 요청 URI를 제공합니다. 결과를 검색하려면 `/access/entities` 끝점에 대해 다른 GET 요청을 수행하되, `/entities`을(를) 제공된 URI의 값으로 바꾸어야 합니다.
-
->[!NOTE]
->
->요청 경로에서 `/entities/`을(를) 실수로 반복하지 않도록 하십시오. `/access/entities?start=...`과(와) 같은 한 번만 표시됩니다.
-
-**API 형식**
-
-```http
-GET /access/{NEXT_URI}
-```
-
-| 매개변수 | 설명 |
-|---|---|
-| `{NEXT_URI}` | `_links.next.href`에서 가져온 URI 값입니다. |
-
-**요청**
-
-다음 요청은 `_links.next.href` URI를 요청 경로로 사용하여 다음 결과 페이지를 검색합니다.
-
-```shell
-curl -X GET \
-  'https://platform.adobe.io/data/core/ups/access/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**응답**
-
-성공적인 응답은 다음 결과 페이지를 반환합니다. 이 응답에는 `_page.next` 및 `_links.next.href`의 빈 문자열 값이 나타내는 후속 결과 페이지가 없습니다.
-
-```json
-{
-    "_page": {
-        "orderby": "timestamp",
-        "start": "c8d11988-6b56-4571-a123-b6ce74236037",
-        "count": 1,
-        "next": ""
-    },
-    "children": [
-        {
-            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
-            "entityId": "c8d11988-6b56-4571-a123-b6ce74236037",
-            "timestamp": 1531260477000,
-            "entity": {
-                "endUserIDs": {
-                    "_experience": {
-                        "ecid": {
-                            "id": "89149270342662559642753730269986316900",
-                            "namespace": {
-                                "code": "ecid"
-                            }
-                        }
-                    }
-                },
-                "channel": {
-                    "_type": "web"
-                },
-                "web": {
-                    "webPageDetails": {
-                        "name": "Fernie Snow",
-                        "pageViews": {
-                            "value": 1
-                        }
-                    }
-                }
-            },
-            "lastModifiedAt": "2018-08-21T06:50:01Z"
-        }
-    ],
-    "_links": {
-        "next": {
-            "href": ""
-        }
-    }
-}
-```
-
-## ID별로 여러 프로필에 대한 시계열 이벤트에 액세스
-
-`/access/entities` 끝점에 대한 POST 요청을 만들고 페이로드에 프로필 ID를 제공하여 연결된 여러 프로필에서 시계열 이벤트에 액세스할 수 있습니다. 이러한 ID는 각각 ID 값(`entityId`)과 ID 네임스페이스(`entityIdNS`)로 구성됩니다.
+>[!TAB 시계열 이벤트]
 
 **API 형식**
 
@@ -508,9 +661,10 @@ POST /access/entities
 
 다음 요청은 프로필 ID 목록과 연결된 시계열 이벤트에 대한 사용자 ID, 현지 시간 및 국가 코드를 검색합니다.
 
++++ 시계열 데이터 검색에 대한 샘플 요청
+
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/access/entities \
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -541,26 +695,29 @@ curl -X POST \
         "startTime": 11539838505
         "endTime": 1539838510
     },
-    "limit": 10
+    "limit": 10,
+    "orderby": "-timestamp"
 }'
 ```
 
-| 속성 | 설명 |
-|---|---|
-| `schema.name` | **(필수)** 검색할 엔터티의 XDM 스키마 |
-| `relatedSchema.name` | `schema.name`이(가) `_xdm.context.experienceevent`인 경우 이 값은 시계열 이벤트와 관련된 프로필 엔터티의 스키마를 지정해야 합니다. |
-| `identities` | **(필수)** 연결된 시계열 이벤트를 검색할 프로필 배열 목록입니다. 배열의 각 항목은 1) ID 값과 네임스페이스로 구성된 정규화된 ID를 사용하거나 2) XID를 제공하는 두 가지 방법 중 하나로 설정됩니다. |
-| `fields` | 지정된 필드 집합에 반환된 데이터를 격리합니다. 이 옵션을 사용하여 검색된 데이터에 포함된 스키마 필드를 필터링합니다. 예: personalEmail,person.name,person.gender |
-| `mergePolicyId` | 반환된 데이터를 제어하는 데 사용할 병합 정책을 식별합니다. 서비스 호출에 지정되지 않은 경우 해당 스키마에 대한 조직의 기본값이 사용됩니다. 기본 병합 정책이 구성되지 않은 경우 기본값은 프로필 병합 및 ID 결합 없음을 의미합니다. |
-| `orderby` | `(+/-)timestamp`(으)로 기록되고 기본값은 `+timestamp`인 타임스탬프별 검색된 경험 이벤트의 정렬 순서입니다. |
-| `timeFilter.startTime` | 시계열 개체를 필터링할 시작 시간(밀리초)을 지정합니다. |
-| `timeFilter.endTime` | 시계열 오브젝트를 필터링할 종료 시간(밀리초)을 지정합니다. |
-| `limit` | 반환할 최대 개체 수를 지정하는 숫자 값입니다. 기본값: 1000 |
-| `withCA` | 조회를 위해 계산된 속성을 활성화하는 기능 플래그. 기본값: false |
+| 속성 | 유형 | 설명 |
+| -------- | ---- | ----------- |
+| `schema.name` | 문자열 | **(필수)** 엔터티가 속한 XDM 스키마의 이름입니다. |
+| `relatedSchema.name` | 문자열 | `schema.name`이(가) `_xdm.context.experienceevent`인 경우 이 값은 시계열 이벤트와 관련된 프로필 엔터티의 스키마를 지정해야 합니다. |
+| `identities` | 배열 | **(필수)** 연결된 시계열 이벤트를 검색할 프로필 배열 목록입니다. 배열의 각 항목은 다음 두 가지 방법 중 하나로 설정됩니다. <ol><li>ID 값과 네임스페이스로 구성된 정규화된 ID 사용</li><li>XID 제공</li></ol> |
+| `fields` | 문자열 | 문자열 배열로 반환될 XDM 필드. 기본적으로 모든 필드가 반환됩니다. |
+| `orderby` | 문자열 | `(+/-)timestamp`(으)로 기록되고 기본값은 `+timestamp`인 타임스탬프별 검색된 경험 이벤트의 정렬 순서입니다. |
+| `timeFilter.startTime` | 정수 | 시계열 개체를 필터링할 시작 시간(밀리초)을 지정합니다. 기본적으로 이 값은 사용 가능한 시간의 시작으로 설정됩니다. |
+| `timeFilter.endTime` | 정수 | 시계열 오브젝트를 필터링할 종료 시간(밀리초)을 지정합니다. 기본적으로 이 값은 사용 가능한 시간의 끝으로 설정됩니다. |
+| `limit` | 정수 | 반환할 최대 레코드 수입니다. 기본적으로 이 값은 1,000으로 설정됩니다. |
+
++++
 
 **응답**
 
-성공적인 응답은 요청에 지정된 여러 프로필과 연결된 시계열 이벤트의 페이지가 매겨진 목록을 반환합니다.
+성공적인 응답은 요청에 지정된 여러 프로필과 연결된 시계열 이벤트의 페이지 매김된 목록과 함께 HTTP 상태 200을 반환합니다.
+
++++ 시계열 이벤트를 포함하는 샘플 응답
 
 ```json
 {
@@ -768,110 +925,625 @@ curl -X POST \
 }`
 ```
 
-이 예제 응답에서 첫 번째로 나열된 프로필(&quot;GkouAW-yD9aoRCPhRYROJ-TetAFW&quot;)은 `_links.next.payload`에 대한 값을 제공합니다. 즉, 이 프로필에 대한 추가 결과 페이지가 있습니다. 추가 결과에 액세스하는 방법에 대한 자세한 내용은 [추가 결과 액세스](#access-additional-results)에 대한 다음 섹션을 참조하십시오.
++++
 
-### 추가 결과 액세스 {#access-additional-results}
+>[!NOTE]
+>
+>이 예제 응답에서 첫 번째로 나열된 프로필(&quot;GkouAW-yD9aoRCPhRYROJ-TetAFW&quot;)은 `_links.next.payload`에 대한 값을 제공합니다. 즉, 이 프로필에 대한 추가 결과 페이지가 있습니다.
+>
+>이러한 결과에 액세스하려면 나열된 페이로드를 요청 본문으로 사용하여 `/access/entities` 끝점에 대한 추가 POST 요청을 수행할 수 있습니다.
 
-시계열 이벤트를 검색할 때 반환되는 결과가 많을 수 있으므로 결과의 페이지가 매겨지는 경우가 많습니다. 특정 프로필에 대한 후속 결과 페이지가 있으면 해당 프로필의 `_links.next.payload` 값에 페이로드 개체가 포함됩니다.
-
-요청 본문에서 이 페이로드를 사용하여 `access/entities` 끝점에 대한 추가 POST 요청을 수행하여 해당 프로필에 대한 시계열 데이터의 후속 페이지를 검색할 수 있습니다.
-
-## 여러 스키마 엔티티의 시계열 이벤트에 액세스
-
-관계 설명자를 통해 연결된 여러 엔티티에 액세스할 수 있습니다. 다음 예제 API 호출은 두 스키마 간의 관계가 이미 정의되어 있다고 가정합니다. 관계 설명자에 대한 자세한 내용은 [!DNL Schema Registry] API 개발자 안내서 [설명자 끝점 안내서](../../xdm/api/descriptors.md)를 참조하십시오.
-
-액세스할 데이터를 지정하기 위해 요청 경로에 쿼리 매개 변수를 포함할 수 있습니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다. 부록의 [쿼리 매개 변수](#query-parameters) 섹션에 올바른 매개 변수의 전체 목록이 제공됩니다.
+>[!TAB B2B 계정]
 
 **API 형식**
 
 ```http
-GET /access/entities?{QUERY_PARAMETERS}
+POST /access/entities
 ```
 
 **요청**
 
-다음 요청은 다른 스키마에서 정보에 액세스하기 위해 이전에 설정된 관계 설명자가 포함된 엔티티를 검색합니다.
+다음 요청은 요청된 B2B 계정을 검색합니다.
+
++++여러 엔티티를 검색하기 위한 샘플 요청
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/access/entities?relatedSchema.name=_xdm.context.profile&schema.name=_xdm.context.experienceevent&relatedEntityId=GkouAW-2Xkftzer3bBtHiW8GkaFL \
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "schema":{
+            "name":"_xdm.context.account"
+        },
+        "identities": [
+            {
+                "entityId": "2334262",
+                "entityIdNS": {
+                    "code":"b2b_account"
+                }
+            },
+            {
+                "entityId": "2334263",
+                "entityIdNS": {
+                    "code":"b2b_account"
+                }
+            },
+            {
+                "entityId": "2334264",
+                "entityIdNS": {
+                    "code":"b2b_account"
+                }
+            }
+        ]
+    }'
 ```
+
+| 속성 | 유형 | 설명 |
+| -------- |----- | ----------- |
+| `schema.name` | 문자열 | **(필수)** 엔터티가 속한 XDM 스키마의 이름입니다. |
+| `identities` | 배열 | **(필수)** 액세스하려는 엔터티의 ID 목록이 포함된 배열입니다. |
+| `identities.entityId` | 문자열 | 액세스하려는 엔티티의 ID입니다. |
+| `identities.entityIdNS.code` | 문자열 | 액세스하려는 엔티티 ID의 네임스페이스입니다. |
+
++++
 
 **응답**
 
-성공적인 응답은 여러 엔티티와 연관된 시계열 이벤트의 페이지가 매겨진 목록을 반환합니다.
+성공적인 응답은 요청된 엔티티와 함께 HTTP 상태 200을 반환합니다.
+
++++ 요청된 엔터티가 포함된 샘플 응답
+
+```json
+{
+    "GuQ-AUFjgjeeIw": {
+        "requestedIdentity": {
+            "entityId": "2334263",
+            "entityIdNS": {
+                "code": "b2b_account"
+            }
+        },
+        "entityId": "GuQ-AUFjgjeeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_account": [
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    },
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "GuQ-AUFjgjaeIw": {
+        "requestedIdentity": {
+            "entityId": "2334262",
+            "entityIdNS": {
+                "code": "b2b_account"
+            }
+        },
+        "entityId": "GuQ-AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_account": [
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    },
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "GuQ-AUFjgjmeIw": {
+        "requestedIdentity": {
+            "entityId": "2334265",
+            "entityIdNS": {
+                "code": "b2b_account"
+            }
+        },
+        "entityId": "GuQ-AUFjgjmeIw",
+        "mergePolicy": {
+            "id": "a6150f47-a94f-4c9d-bfa0-958a370020ee"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334265",
+            "identityMap": {
+            "b2b_account": [
+                {
+                    "id": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                },
+                {
+                    "id": "2334265"
+                }
+            ]
+        },
+        "isDeleted": false,
+        "accountKey": {
+            "sourceID": "2334265",
+            "sourceKey": "2334265",
+            "sourceInstanceID": "2334265",
+            "sourceType": "Random"
+        }
+    }
+}
+```
+
++++
+
+>[!TAB B2B 영업 기회]
+
+**API 형식**
+
+```http
+POST /access/entities
+```
+
+**요청**
+
+다음 요청은 요청된 B2B 기회를 검색합니다.
+
++++ 여러 엔티티를 검색하기 위한 샘플 요청
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "schema":{
+            "name":"_xdm.context.opportunity"
+        },
+        "identities": [
+            {
+                "entityId": "2334262",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            },
+            {
+                "entityId": "2334263",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            },
+            {
+                "entityId": "2334264",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            },
+            {
+                "entityId": "2334265",
+                "entityIdNS": {
+                    "code":"b2b_opportunity"
+                }
+            }
+        ]
+    }'
+```
+
+| 속성 | 유형 | 설명 |
+| -------- |----- | ----------- |
+| `schema.name` | 문자열 | **(필수)** 엔터티가 속한 XDM 스키마의 이름입니다. |
+| `identities` | 배열 | **(필수)** 액세스하려는 엔터티의 ID 목록이 포함된 배열입니다. |
+| `identities.entityId` | 문자열 | 액세스하려는 엔티티의 ID입니다. |
+| `identities.entityIdNS.code` | 문자열 | 액세스하려는 엔티티 ID의 네임스페이스입니다. |
+
++++
+
+**응답**
+
+성공적인 응답은 요청된 엔티티와 함께 HTTP 상태 200을 반환합니다.
+
++++ 요청된 엔터티가 포함된 샘플 응답
+
+```json
+{
+    "Ggw_AUFjgjaeIw": {
+        "requestedIdentity": {
+            "entityId": "2334262",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjaeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    },
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "Ggw_AUFjgjieIw": {
+        "requestedIdentity": {
+            "entityId": "2334264",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjieIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0041c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334264",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "2334264"
+                    },
+                    {
+                        "id": "0041c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334264",
+                "sourceKey": "2334264",
+                "sourceInstanceID": "2334264",
+                "sourceType": "Salesforce"
+            }
+        }
+    },
+    "Ggw_AUFjgjeeIw": {
+        "requestedIdentity": {
+            "entityId": "2334263",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjeeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334262",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "0043c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    },
+                    {
+                        "id": "2334263"
+                    },
+                    {
+                        "id": "2334262"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            }
+        }
+    },
+    "Ggw_AUFjgjmeIw": {
+        "requestedIdentity": {
+            "entityId": "2334265",
+            "entityIdNS": {
+                "code": "b2b_opportunity"
+            }
+        },
+        "entityId": "Ggw_AUFjgjmeIw",
+        "mergePolicy": {
+            "id": "162824be-07f5-4cd0-aa85-2ff3c8f6c775"
+        },
+        "sources": [
+            "er_m_attr"
+        ],
+        "entity": {
+            "_id": "id1",
+            "extSourceSystemAudit": {
+                "lastReferencedDate": "2024-03-09 12:21:43.0",
+                "lastActivityDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedDate": "2024-03-09 12:21:43.0",
+                "lastUpdatedBy": "{USER_ID}",
+                "externalKey": {
+                    "sourceID": "00394S0001xpG6xABE",
+                    "sourceKey": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce",
+                    "sourceInstanceID": "00DC0000000Q35nMAC",
+                    "sourceType": "Salesforce"
+                },
+                "lastViewedDate": "2024-03-09 12:21:43.0",
+                "createdDate": "2024-03-09 12:21:43.0"
+            },
+            "accountID": "2334265",
+            "identityMap": {
+                "b2b_opportunity": [
+                    {
+                        "id": "2334265"
+                    },
+                    {
+                        "id": "0054c329201xpG6xAAE@00DC0000000Q35nWIN.Salesforce"
+                    }
+                ]
+            },
+            "isDeleted": false,
+            "opportunityKey": {
+                "sourceID": "2334262",
+                "sourceKey": "2334262",
+                "sourceInstanceID": "2334262",
+                "sourceType": "Random"
+            },
+            "accountKey": {
+                "sourceID": "2334265",
+                "sourceKey": "2334265",
+                "sourceInstanceID": "2334265",
+                "sourceType": "Random"
+            }
+        }
+    }
+}
+```
+
++++
+
+>[!ENDTABS]
+
+### 후속 결과 페이지 액세스
+
+시계열 이벤트를 검색할 때 결과에 페이지가 매겨집니다. 후속 결과 페이지가 있으면 `_page.next` 속성에 ID가 포함됩니다. 또한 `_links.next.href` 속성은 다음 페이지를 검색하기 위한 요청 URI를 제공합니다. 결과를 검색하려면 `/access/entities` 끝점에 대해 다른 GET 요청을 만들고 `/entities`을(를) 제공된 URI의 값으로 바꾸십시오.
+
+>[!NOTE]
+>
+>요청 경로에서 `/entities/`을(를) 실수로 반복하지 마십시오. `/access/entities?start=...`과(와) 같은 한 번만 표시됩니다.
+
+**API 형식**
+
+```http
+GET /access/{NEXT_URI}
+```
+
+| 매개변수 | 설명 |
+|---|---|
+| `{NEXT_URI}` | `_links.next.href`에서 가져온 URI 값입니다. |
+
+**요청**
+
+다음 요청은 `_links.next.href` URI를 요청 경로로 사용하여 다음 결과 페이지를 검색합니다.
+
++++ 결과의 다음 페이지에 액세스하기 위한 샘플 요청
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/core/ups/access/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**응답**
+
+성공적인 응답은 다음 결과 페이지를 반환합니다. 이 응답에는 `_page.next` 및 `_links.next.href`의 빈 문자열 값이 나타내는 후속 결과 페이지가 없습니다.
+
++++ 엔티티의 다음 페이지를 포함하는 샘플 응답
 
 ```json
 {
     "_page": {
         "orderby": "timestamp",
-        "start": "cb10369f-a47b-4e65-afb4-06e1ad78a648",
+        "start": "c8d11988-6b56-4571-a123-b6ce74236037",
         "count": 1,
         "next": ""
     },
     "children": [
         {
-            "relatedEntityId": "GkouAW-2Xkftzer3bBtHiW8GkaFL",
-            "entityId": "cb10369f-a47b-4e65-afb4-06e1ad78a648",
-            "timestamp": 1564614939000,
+            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
+            "entityId": "c8d11988-6b56-4571-a123-b6ce74236037",
+            "timestamp": 1531260477000,
             "entity": {
-                "environment": {
-                    "browserDetails": {}
-                },
-                "identityMap": {
-                    "CRMId": [
-                        {
-                            "id": "78520026455138218785449796480922109723",
-                            "primary": true
-                        }
-                    ]
-                },
-
-                "commerce": {
-                    "productViews": {
-                        "value": 1
-                    }
-                },
-                "productListItems": [
-                    {
-                        "name": "Red shoe",
-                        "quantity": 85,
-                        "storesAvailableIn": [
-                            "da6dced5-9574-4dda-89b5-9dc106903f80",
-                            "981bb433-2ee5-4db0-a19a-449ec9dbf39f"
-                        ],
-                        "SKU": "8f998279-797b-4da2-9e60-88bf73a9f15a",
-                        "priceTotal": 934.8
-                    }
-                ],
-                "_id": "cb10369f-a47b-4e65-afb4-06e1ad78a648",
-                "commerce": {
-                    "order": {}
-                },
-                "placeContext": {
-                    "geo": {
-                        "_schema": {}
-                    }
-                },
-                "device": {},
-                "timestamp": "2019-07-31T23:15:39Z",
-                "_experience": {
-                    "profile": {
-                        "identityNamespaces": {
-                            "/productListItems[*]/SKU": {
-                                "namespace": {
-                                    "code": "ECID"
-                                }
+                "endUserIDs": {
+                    "_experience": {
+                        "ecid": {
+                            "id": "89149270342662559642753730269986316900",
+                            "namespace": {
+                                "code": "ecid"
                             }
+                        }
+                    }
+                },
+                "channel": {
+                    "_type": "web"
+                },
+                "web": {
+                    "webPageDetails": {
+                        "name": "Fernie Snow",
+                        "pageViews": {
+                            "value": 1
                         }
                     }
                 }
             },
-            "lastModifiedAt": "2019-10-10T00:14:19Z"
+            "lastModifiedAt": "2018-08-21T06:50:01Z"
         }
     ],
     "_links": {
@@ -882,9 +1554,46 @@ curl -X GET \
 }
 ```
 
-### 후속 결과 페이지 액세스
++++
 
-시계열 이벤트를 검색할 때 결과에 페이지가 매겨집니다. 후속 결과 페이지가 있으면 `_page.next` 속성에 ID가 포함됩니다. 또한 `_links.next.href` 속성은 `access/entities` 끝점에 대한 추가 GET 요청을 수행하여 후속 페이지를 검색하기 위한 요청 URI를 제공합니다.
+## 엔티티 삭제 {#delete-entity}
+
+필요한 쿼리 매개 변수와 함께 `/access/entities` 끝점에 대한 DELETE 요청을 만들어 프로필 저장소에서 엔터티를 삭제할 수 있습니다.
+
+**API 형식**
+
+```http
+DELETE /access/entities?{QUERY_PARAMETERS}
+```
+
+요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다.
+
+엔터티를 삭제하려면 **다음 쿼리 매개 변수를 제공해야**&#x200B;합니다.
+
+- `schema.name`: 엔터티의 XDM 스키마 이름입니다. 이 사용 사례에서는 **만**&#x200B;에서 `schema.name=_xdm.context.profile`을(를) 사용할 수 있습니다.
+- `entityId`: 검색하려는 엔터티의 ID입니다.
+- `entityIdNS`: 검색하려는 엔터티의 네임스페이스입니다. `entityId`이(가) XID가 **아님**&#x200B;인 경우 이 값을 제공해야 합니다.
+- `mergePolicyId`: 엔터티의 병합 정책 ID입니다. 병합 정책에는 ID 결합 및 키-값 XDM 개체 병합에 대한 정보가 포함되어 있습니다. 이 값을 제공하지 않으면 기본 병합 정책이 사용됩니다.
+
+**요청**
+
+다음 요청은 지정된 엔티티를 삭제합니다.
+
++++ 엔티티 삭제에 대한 샘플 요청
+
+```shell
+curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**응답**
+
+성공적인 응답은 빈 응답 본문과 함께 HTTP 상태 202를 반환합니다.
 
 ## 다음 단계
 
@@ -899,18 +1608,17 @@ curl -X GET \
 다음 매개 변수는 `/access/entities` 끝점에 대한 GET 요청 경로에 사용됩니다. 액세스하려는 프로필 엔티티를 식별하고 응답에서 반환되는 데이터를 필터링합니다. 필수 매개 변수에는 레이블이 지정되고 나머지는 선택 사항입니다.
 
 | 매개변수 | 설명 | 예 |
-|---|---|---|
-| `schema.name` | **(필수)** 검색할 엔터티의 XDM 스키마 | `schema.name=_xdm.context.experienceevent` |
-| `relatedSchema.name` | `schema.name`이(가) &quot;_xdm.context.experienceevent&quot;인 경우 이 값은 시계열 이벤트와 관련된 프로필 엔터티에 대한 스키마를 지정해야 합니다. | `relatedSchema.name=_xdm.context.profile` |
-| `entityId` | **(필수)** 엔터티의 ID입니다. 이 매개 변수의 값이 XID가 아닌 경우 ID 네임스페이스 매개 변수도 제공해야 합니다(아래 `entityIdNS` 참조). | `entityId=janedoe@example.com` |
-| `entityIdNS` | `entityId`이(가) XID로 제공되지 않으면 이 필드에 ID 네임스페이스를 지정해야 합니다. | `entityIdNE=email` |
-| `relatedEntityId` | `schema.name`이(가) &quot;_xdm.context.experienceevent&quot;인 경우 이 값은 관련 프로필 엔티티의 ID 네임스페이스를 지정해야 합니다. 이 값은 `entityId`과(와) 동일한 규칙을 따릅니다. | `relatedEntityId=69935279872410346619186588147492736556` |
+| --------- | ----------- | ------- |
+| `schema.name` | **(필수)** 엔터티의 XDM 스키마 이름입니다. | `schema.name=_xdm.context.experienceevent` |
+| `relatedSchema.name` | `schema.name`이(가) `_xdm.context.experienceevent`인 경우 이 값 **must**&#x200B;은(는) 시계열 이벤트와 관련된 프로필 엔터티의 스키마를 지정합니다. | `relatedSchema.name=_xdm.context.profile` |
+| `entityId` | **(필수)** 엔터티의 ID입니다. 이 매개 변수의 값이 XID가 아닌 경우 ID 네임스페이스 매개 변수(`entityIdNS`)도 제공해야 합니다. | `entityId=janedoe@example.com` |
+| `entityIdNS` | `entityId`이(가) XID로 제공되지 않으면 이 필드 **은(는) ID 네임스페이스를 지정해야 합니다**. | `entityIdNS=email` |
+| `relatedEntityId` | `schema.name`이(가) `_xdm.context.experienceevent`인 경우 이 값 **은(는) 관련 프로필 엔터티의 ID를 지정해야 합니다**. 이 값은 `entityId`과(와) 동일한 규칙을 따릅니다. | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | `schema.name`이(가) &quot;_xdm.context.experienceevent&quot;인 경우 이 값은 `relatedEntityId`에 지정된 엔터티의 ID 네임스페이스를 지정해야 합니다. | `relatedEntityIdNS=CRMID` |
-| `fields` | 응답에서 반환된 데이터를 필터링합니다. 검색할 데이터에 포함할 스키마 필드 값을 지정하려면 이 옵션을 사용합니다. 여러 필드의 경우, 공백 없이 쉼표로 값을 구분하십시오. | `fields=personalEmail,person.name,person.gender` |
-| `mergePolicyId` | 반환된 데이터를 제어하는 데 사용할 병합 정책을 식별합니다. 호출에 지정되지 않은 경우 해당 스키마에 대한 조직의 기본값이 사용됩니다. 기본 병합 정책이 구성되지 않은 경우 기본값은 프로필 병합 및 ID 결합 없음을 의미합니다. | `mergePoilcyId=5aa6885fcf70a301dabdfa4a` |
-| `orderBy` | `(+/-)timestamp`(으)로 기록되고 기본값은 `+timestamp`인 타임스탬프별 검색된 경험 이벤트의 정렬 순서입니다. | `orderby=-timestamp` |
-| `startTime` | 시계열 개체를 필터링할 시작 시간(밀리초)을 지정합니다. | `startTime=1539838505` |
-| `endTime` | 시계열 오브젝트를 필터링할 종료 시간(밀리초)을 지정합니다. | `endTime=1539838510` |
-| `limit` | 반환할 최대 개체 수를 지정하는 숫자 값입니다. 기본값: 1000 | `limit=100` |
-| `property` | 속성 값으로 필터링합니다. 다음 평가자를 지원합니다. =, !=, &lt;, &lt;=, >, >=. 최대 3개의 속성이 지원되며 경험 이벤트에만 사용할 수 있습니다. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
-| `withCA` | 조회를 위해 계산된 속성을 활성화하는 기능 플래그. 기본값: false | `withCA=true` |
+| `fields` | 응답에서 반환된 데이터를 필터링합니다. 검색할 데이터에 포함할 스키마 필드 값을 지정하려면 이 옵션을 사용합니다. 여러 필드의 경우 공백 없이 쉼표로 값을 구분하십시오. | `fields=personalEmail,person.name,person.gender` |
+| `mergePolicyId` | 반환된 데이터를 제어하는 데 사용할 병합 정책을 식별합니다. 호출에 지정되지 않은 경우 해당 스키마에 대한 조직의 기본값이 사용됩니다. 기본 병합 정책이 구성되지 않은 경우 기본값은 프로필 병합 및 ID 결합 없음을 의미합니다. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
+| `orderBy` | 타임스탬프별로 검색된 엔티티의 정렬 순서. `(+/-)timestamp`(으)로 작성되었으며 기본값은 `+timestamp`입니다. | `orderby=-timestamp` |
+| `startTime` | 엔티티를 필터링할 시작 시간(밀리초)을 지정합니다. | `startTime=1539838505` |
+| `endTime` | 엔티티를 필터링할 종료 시간(밀리초)을 지정합니다. | `endTime=1539838510` |
+| `limit` | 반환할 최대 엔티티 수를 지정합니다. 기본적으로 이 값은 1000으로 설정됩니다. | `limit=100` |
+| `property` | 속성 값으로 필터링합니다. 이 쿼리 매개변수는 다음 평가자를 지원합니다. =, !=, &lt;, &lt;=, >, >=. 최대 3개의 속성이 지원되는 경험 이벤트에서만 사용할 수 있습니다. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
