@@ -4,9 +4,9 @@ description: 소스 연결 및 데이터 흐름을 만들어 Snowflake 인스턴
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
+source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '816'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,10 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> [!DNL Snowflake] 스트리밍 소스는 Real-time Customer Data Platform Ultimate를 구매한 사용자에게 API에서 사용할 수 있습니다.
+>* [!DNL Snowflake] 스트리밍 소스는 Real-Time CDP Ultimate을 구매한 사용자에게 API에서 사용할 수 있습니다.
+>
+>* 이제 Amazon Web Services(AWS)에서 Adobe Experience Platform을 실행할 때 [!DNL Snowflake] 스트리밍 소스를 사용할 수 있습니다. 현재 AWS에서 실행 중인 Experience Platform은 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../landing/multi-cloud.md)를 참조하세요.
+
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 

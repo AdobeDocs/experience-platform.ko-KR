@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Marketo Engage 커넥터
 description: 이 문서에서는 인증, 매핑 및 데이터 지연에 대한 정보를 포함하여 Marketo Engage 소스 커넥터에 대한 개요를 제공합니다.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 0c695e11e7d7c14ef7e047cd007668e1099bf127
+source-git-commit: 37e23b060c34c628b2be80256cffd1480c899ce7
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '728'
 ht-degree: 1%
 
 ---
 
 # [!DNL Marketo Engage] 커넥터
+
+>[!IMPORTANT]
+>
+>이제 Amazon Web Services(AWS)에서 Adobe Experience Platform을 실행할 때 [!DNL Marketo Engage] 소스를 사용할 수 있습니다. 현재 AWS에서 실행 중인 Experience Platform은 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../../landing/multi-cloud.md)를 참조하세요.
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
@@ -21,7 +25,7 @@ Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수�
 
 >[!IMPORTANT]
 >
->[실시간 고객 프로필](../../../../profile/home.md)을(를) 사용하여 세분화하기 위해 모든 Marketo 데이터 세트를 사용하려면 [Adobe Real-time Customer Data Platform B2B 에디션](../../../../rtcdp/b2b-overview.md)에 액세스할 수 있어야 합니다. Real-Time CDP B2B 에디션이 없어도 Marketo 소스를 사용하여 세분화를 위해 사람 및 활동 데이터 세트의 데이터를 실시간 고객 프로필로 가져올 수 있습니다.
+>[실시간 고객 프로필](../../../../profile/home.md)을(를) 사용하여 세분화하기 위해 모든 Marketo 데이터 세트를 사용하려면 [Adobe Real-time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md)에 액세스할 수 있어야 합니다. Real-Time CDP B2B edition이 없어도 Marketo 소스를 사용하여 세분화를 위해 사람 및 활동 데이터 세트의 데이터를 실시간 고객 프로필로 가져올 수 있습니다.
 
 이 문서에서는 커넥터를 인증하는 방법, [!DNL Marketo Engage] 필드를 XDM(Experience Data Model)에 매핑하는 방법, 커넥터의 데이터 지연 시간 등 [!DNL Marketo Engage] 소스 커넥터에 대한 개요를 제공합니다.
 
