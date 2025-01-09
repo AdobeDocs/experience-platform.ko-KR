@@ -2,9 +2,9 @@
 title: Adobe Experience Platform의 AI 지원
 description: AI Assistant를 사용하여 Experience Platform 및 Real-time Customer Data Platform 개념과 객체에 대한 사용 정보를 탐색하고 이해하는 방법에 대해 알아봅니다.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
+source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1759'
 ht-degree: 0%
 
 ---
@@ -75,10 +75,6 @@ AI Assistant는 인터페이스를 업데이트하며 초기 응답을 확증하
 
 ![AI Assistant에서 개념 질문에 대해 제공하는 인용의 드롭다운 메뉴.](./images/citations.png)
 
-AI Assistant가 **[!UICONTROL 관련 제안]**&#x200B;에서 제공하는 제안을 사용하여 원래 질문과 관련된 주제를 자세히 살펴볼 수도 있습니다.
-
-![AI 도우미가 제공하는 제안 목록입니다.](./images/related-suggestions.png)
-
 +++
 
 ### 운영 인사이트 {#operational-insights}
@@ -127,9 +123,9 @@ Operational Insights 질문에 대한 답변을 받은 후 **[!UICONTROL 원본 
 
 +++
 
-### 자동 완성 사용 {#use-auto-complete}
+### 엔티티 자동 완성 사용 {#use-entity-auto-complete}
 
-자동 완성 기능을 사용하여 샌드박스에 있는 데이터 객체 목록을 수신할 수 있습니다. 자동 완성 권장 사항은 대상자, 스키마, 데이터 세트, 소스 및 대상 도메인에서 사용할 수 있습니다.
+자동 완성 기능을 사용하여 샌드박스에 있는 데이터 객체 목록을 수신할 수 있습니다. 자동 완성 권장 사항은 대상자, 스키마, 데이터 세트, 여정, 소스 및 대상 도메인에서 사용할 수 있습니다.
 
 +++자동 완성의 예를 보려면 선택
 
@@ -176,6 +172,44 @@ AI Assistant의 검색 기능 기능을 사용하여 AI Assistant가 지원하�
 그런 다음 범주를 선택한 다음 제공된 목록에서 프롬프트를 선택합니다. 이 기능을 사용하면 AI Assistant가 답할 수 있는 질문 유형을 더 잘 이해할 수 있습니다. 자유 텍스트나 [자동 완성](#use-auto-complete)을 사용하여 샌드박스와 관련된 특정 세부 정보로 기존 프롬프트를 업데이트할 수도 있습니다.
 
 ![AI 도우미가 검색 기능을 확인하는 메시지를 표시합니다.](./images/prompt.png)
+
++++
+
+### 질문 자동 완성 사용 {#use-question-autocomplete}
+
+AI Assistant의 질문 자동 완성 기능을 사용하여 AI Assistant의 권장 사항 목록에서 질문을 선택할 수 있습니다.
+
++++질문 자동 완성의 예를 보려면 선택
+
+제안된 질문 패널을 보려면 입력 상자에 7자 이상을 입력합니다. 그런 다음 나타나는 메뉴에서 본인과 관련된 질문을 선택합니다.
+
+![AI Assistant의 제안 질문이 있는 팝업 패널](./images/suggested_questions.png)
+
+제안된 질문에 운영 통찰력이 포함된 일부 인스턴스에서 자리 표시자를 업데이트해야 할 수 있습니다. 예를 들어, AI Assistant의 제안에 자리 표시자가 포함된 경우 데이터 세트 또는 대상의 특정 이름을 추가해야 할 수 있습니다.
+
+![자리 표시자가 포함된 AI 길잡이의 제안](./images/placeholder.png)
+
+자리 표시자는 파란색으로 강조 표시됩니다. 값 업데이트를 시작할 자리 표시자를 선택합니다. 숫자 자리 표시자에 대한 최상의 결과를 얻으려면 텍스트 대신 숫자를 사용해야 합니다. 엔티티 자동 완성 기능을 사용하여 자리 표시자 값을 업데이트할 수도 있습니다. 자리 표시자가 비어 있는 질문은 보낼 수 없습니다.
+
+**참고**: 기본적으로 제안 사항을 사용할 수 있습니다. 기능을 비활성화하려면 **[!UICONTROL 아이디어 제안]** 토글을 선택하십시오.
+
+![업데이트된 자리 표시자와 함께 AI 길잡이의 제안.](./images/updated_placeholder.png)
+
++++
+
+### 관련 제안 사용 {#use-related-suggestions}
+
+모든 AI Assistant 응답의 관련 제안 섹션을 사용하여 대화를 계속할 수 있습니다.
+
++++관련 제안의 예를 보려면 선택
+
+AI Assistant의 모든 응답과 함께 관련 제안이 반환됩니다. 대화를 계속하려면 관련 제안 섹션에서 제안 사항을 선택하십시오.
+
+![AI Assistant의 관련 제안 목록입니다.](./images/related_suggestions.png)
+
+해당 자동 완성의 자리 표시자와 마찬가지로 쿼리를 제출하려면 관련 제안에 포함된 자리 표시자를 업데이트해야 합니다.
+
+![자리 표시자와 관련된 제안의 쿼리가 업데이트되었습니다.](./images/related_suggestions_placeholder.png)
 
 +++
 
