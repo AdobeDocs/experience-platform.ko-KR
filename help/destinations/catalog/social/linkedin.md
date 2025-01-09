@@ -3,10 +3,10 @@ keywords: linkedin 연결;linkedin 연결;linkedin 대상;linkedin;
 title: Linkedin 일치하는 대상 연결
 description: 해시된 이메일을 기반으로 대상 타겟팅, 개인화 및 억제에 대한 LinkedIn 캠페인용 프로필을 활성화합니다.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 74d7c48042b0d2b938705b588c185f3c3f96f1cd
+source-git-commit: 4f82aab78e74cb7cdd76b603a1e182fbd7fe627c
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 4%
+source-wordcount: '1201'
+ht-degree: 3%
 
 ---
 
@@ -118,6 +118,22 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 2. **[!UICONTROL 대상에 연결]**을 선택합니다.
    ![LinkedIn 인증](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. linkedIn 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
+
+### 인증 자격 증명 새로 고침 {#refresh-authentication-credentials}
+
+LinkedIn 토큰은 60일마다 만료됩니다. 토큰이 만료되면 대상으로의 데이터 내보내기가 더 이상 작동하지 않습니다. 이러한 상황을 방지하려면 다음 단계를 수행하여 다시 인증하십시오.
+
+1. **[!UICONTROL 대상]** > **[!UICONTROL 계정]**(으)로 이동
+2. (선택 사항) 페이지에서 사용할 수 있는 필터를 사용하여 LinkedIn 계정만 표시합니다.
+   ![LinkedIn 계정만 표시하도록 필터링](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
+3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**을 선택합니다.
+   ![세부 정보 편집 컨트롤 선택](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png)
+4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**을 선택하고 LinkedIn 자격 증명으로 다시 인증합니다.
+   ![다시 연결 OAuth 옵션이 있는 모달 창](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>인증 자격 증명이 새로 고쳐지고 만료 시간이 60일로 재설정됩니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
 

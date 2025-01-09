@@ -2,10 +2,10 @@
 title: Pinterest 고객 목록 연결
 description: 고객 목록, 사이트를 방문한 사람 또는 Pinterest에서 콘텐츠와 이미 상호 작용한 사람에서 대상을 만듭니다.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 8a48ce4185f8044b8563d0435dcec17030b90830
+source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 4%
+source-wordcount: '828'
+ht-degree: 3%
 
 ---
 
@@ -67,11 +67,27 @@ ht-degree: 4%
 
 ### 연결 매개변수 {#parameters}
 
-[이 대상을 설정](../../ui/connect-destination.md)하는 동안 다음 정보를 제공해야 합니다.
+이 대상을 [설정](../../ui/connect-destination.md)할 때 다음 정보를 제공해야 합니다.
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
 * **[!UICONTROL 광고 계정 ID]**: Pinterest 광고주 ID.
+
+### 인증 자격 증명 새로 고침 {#refresh-authentication-credentials}
+
+Pinterest 토큰은 30일마다 만료됩니다. 토큰이 만료되면 대상으로의 데이터 내보내기가 더 이상 작동하지 않습니다. 이러한 상황을 방지하려면 다음 단계를 수행하여 다시 인증하십시오.
+
+1. **[!UICONTROL 대상]** > **[!UICONTROL 계정]**(으)로 이동
+2. (선택 사항) 페이지에서 사용할 수 있는 필터를 사용하여 Pinterest 계정만 표시합니다.
+   ![Pinterest 계정만 표시하도록 필터링](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
+3. 새로 고침할 계정을 선택하고 줄임표를 선택한 다음 **[!UICONTROL 세부 정보 편집]**을 선택합니다.
+   ![세부 정보 편집 컨트롤 선택](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png)
+4. 모달 창에서 **[!UICONTROL OAuth 다시 연결]**을 선택하고 Pinterest 자격 증명으로 다시 인증합니다.
+   ![다시 연결 OAuth 옵션이 있는 모달 창](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>인증 자격 증명이 새로 고쳐지고 만료 시간이 30일로 재설정됩니다.
 
 ### 경고 활성화 {#enable-alerts}
 
