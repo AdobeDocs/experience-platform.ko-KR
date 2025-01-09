@@ -3,18 +3,14 @@ keywords: Experience Platform;홈;인기 항목; 경고
 description: 데이터 흐름을 만들 때 경고에 가입하여 흐름 실행의 상태, 성공 또는 실패와 관련된 경고 메시지를 받을 수 있습니다.
 title: UI에서 컨텍스트 내 경고 구독
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
+source-git-commit: 0165aa60ca865c6d1cf269b16068dffa9349214c
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '819'
 ht-degree: 7%
 
 ---
 
 # UI에서 소스 데이터 흐름에 대한 경고 구독
-
->[!NOTE]
->
->비프로덕션 샌드박스에서 경고는 지원되지 않습니다. 경고를 구독하려면 프로덕션 샌드박스를 사용 중인지 확인해야 합니다.
 
 Adobe Experience Platform을 사용하면 Adobe Experience Platform 활동과 관련된 이벤트 기반 경고를 구독할 수 있습니다. 경고는 작업이 완료되었는지, 워크플로우 내의 특정 마일스톤에 도달했는지 또는 오류가 발생했는지 확인하기 위해 [[!DNL Observability Insights] API](../../../observability/api/overview.md)를 폴링하지 않아도 됩니다.
 
