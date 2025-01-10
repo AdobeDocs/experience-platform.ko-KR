@@ -1,16 +1,16 @@
 ---
-title: 계산된 필드를 사용하여 배열을 문자열로 내보내기
+title: Real-Time CDP에서 클라우드 스토리지 대상으로 어레이 개체 내보내기
 type: Tutorial
 description: 계산된 필드를 사용하여 배열을 Real-Time CDP에서 클라우드 스토리지 대상으로 문자열로 내보내는 방법을 알아봅니다.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
+source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
-source-wordcount: '1556'
-ht-degree: 7%
+source-wordcount: '1622'
+ht-degree: 5%
 
 ---
 
-# 계산된 필드를 사용하여 배열을 문자열로 내보내기{#use-calculated-fields-to-export-arrays-as-strings}
+# Real-Time CDP에서 클라우드 스토리지 대상으로 어레이 개체 내보내기 {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
@@ -21,22 +21,16 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->계산된 필드를 통해 배열을 내보내는 기능은 일반적으로 사용할 수 있습니다.
+>배열을 클라우드 스토리지 대상으로 내보내는 기능은 일반적으로 사용할 수 있습니다.
 
-계산된 필드를 통해 배열을 Real-Time CDP에서 [클라우드 저장소 대상](/help/destinations/catalog/cloud-storage/overview.md)으로 문자열로 내보내는 방법에 대해 알아봅니다. 이 기능을 통해 활성화되는 사용 사례를 이해하려면 이 문서 를 참조하십시오.
+Real-Time CDP에서 [클라우드 저장소 대상](/help/destinations/catalog/cloud-storage/overview.md)(으)로 배열을 내보내는 방법을 알아봅니다. 내보내기 워크플로우, 이 기능에서 활성화된 사용 사례 및 알려진 제한 사항을 이해하려면 이 문서 를 참조하십시오.
 
-계산된 필드에 대한 광범위한 정보(이것이 무엇이며 왜 중요한지)를 얻을 수 있습니다. 데이터 준비의 계산된 필드에 대한 소개와 사용 가능한 모든 함수에 대한 자세한 내용은 아래 링크된 페이지를 참조하십시오.
+배열은 현재 `array_to_string` 함수를 사용하여 문자열로 내보내야 합니다.
+
+배열을 내보내려면 [배열의 개별 요소를 내보내는 중&#x200B;](#index-based-array-access)*이 아니면 내보내기 워크플로*&#x200B;의 매핑 단계에서 계산된 필드 기능을 사용해야 합니다. 계산된 필드에 대한 자세한 내용은 아래 링크된 페이지를 참조하십시오. 여기에는 데이터 준비의 계산된 필드에 대한 소개와 사용 가능한 모든 함수에 대한 추가 정보가 포함됩니다.
 
 * [UI 안내서 및 개요](/help/data-prep/ui/mapping.md#calculated-fields)
 * [데이터 준비 기능](/help/data-prep/functions.md)
-
-<!--
-
->[!IMPORTANT]
->
->Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
-
--->
 
 ## Platform의 배열 및 기타 개체 유형 {#arrays-strings-other-objects}
 
@@ -259,6 +253,10 @@ johndoe@acme.org,"5"
 ```
 
 ### 인덱스 기반 스토리지 액세스 {#index-based-array-access}
+
+>[!IMPORTANT]
+>
+>이 페이지에 설명된 다른 함수와 달리 배열의 개별 요소를 내보내려면 *UI에서&#x200B;**[!UICONTROL 계산된 필드]**컨트롤을 사용할 필요가 없습니다*.
 
 배열의 인덱스에 액세스하여 배열에서 단일 항목을 내보낼 수 있습니다. 예를 들어, `size_of` 함수에 대한 위의 예제와 유사하게 고객이 특정 제품을 처음 구매한 경우에만 액세스하고 내보내려고 하는 경우 `purchaseTime[0]`을(를) 사용하여 타임스탬프의 첫 번째 요소를 내보내고, `purchaseTime[1]`을(를) 사용하여 타임스탬프의 두 번째 요소를 내보내고, `purchaseTime[2]`을(를) 사용하여 타임스탬프의 세 번째 요소를 내보낼 수 있습니다.
 

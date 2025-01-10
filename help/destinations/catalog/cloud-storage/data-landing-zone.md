@@ -3,9 +3,9 @@ title: 데이터 랜딩 영역 대상
 description: 데이터 랜딩 영역에 연결하여 대상자를 활성화하고 데이터 세트를 내보내는 방법을 알아봅니다.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cc7c8c14fe5ee4bb9001cae84d28a385a3b4b448
+source-git-commit: 5f932f3de2b875d77904582dfb320e0b6ce17afd
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1968'
 ht-degree: 2%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 2%
 
 플랫폼은 [!DNL Data Landing Zone] 컨테이너에 업로드된 모든 파일에 엄격한 7일 TTL(time-to-live)을 적용합니다. 모든 파일은 7일 후에 삭제됩니다.
 
-[!DNL Data Landing Zone] 대상 커넥터는 Azure 또는 Amazon 웹 서비스 클라우드 지원을 사용하는 고객에게 제공됩니다. 인증 메커니즘은 대상이 프로비저닝된 클라우드에 따라 다르며, 대상 및 해당 사용 사례에 대한 다른 모든 것은 동일합니다. [Azure Blob에 제공된 데이터 랜딩 영역 인증] 및 [AWS에 제공된 데이터 랜딩 영역 인증](#authenticate-dlz-aws) 섹션에서 두 가지 다른 인증 메커니즘에 대해 자세히 알아보십시오.
+[!DNL Data Landing Zone] 대상 커넥터는 Azure 또는 Amazon 웹 서비스 클라우드 지원을 사용하는 고객에게 제공됩니다. 인증 메커니즘은 대상이 프로비저닝된 클라우드에 따라 다르며, 대상 및 해당 사용 사례에 대한 다른 모든 것은 동일합니다. [Azure Blob에 제공된 데이터 랜딩 영역 인증](#authenticate-dlz-azure) 및 [AWS에 제공된 데이터 랜딩 영역 인증](#authenticate-dlz-aws) 섹션에서 두 가지 다른 인증 메커니즘에 대해 자세히 알아보십시오.
 
-![클라우드 지원에 따라 데이터 랜딩 영역 대상의 구현이 어떻게 다른지를 보여 주는 다이어그램입니다.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png)
+![클라우드 지원에 따라 데이터 랜딩 영역 대상의 구현이 어떻게 다른지를 보여 주는 다이어그램입니다.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png "클라우드 지원을 통한 데이터 랜딩 영역 대상 구현"){zoomable="yes"}
 
 ## API 또는 UI를 통해 [!UICONTROL 데이터 랜딩 영역] 저장소에 연결합니다. {#connect-api-or-ui}
 
@@ -77,7 +77,7 @@ ht-degree: 2%
 
 [!DNL Data Landing Zone]은(는) SAS 기반 인증을 지원하며, 전송 중이거나 사용하지 않는 표준 [!DNL Azure Blob] 저장소 보안 메커니즘을 통해 데이터를 보호합니다. SAS는 [공유 액세스 서명](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers)을 의미합니다.
 
-SAS 기반 인증을 사용하면 공용 인터넷 연결을 통해 [!DNL Data Landing Zone] 컨테이너에 안전하게 액세스할 수 있습니다. [!DNL Data Landing Zone] 컨테이너에 액세스하는 데 필요한 네트워크 변경 내용이 없습니다. 따라서 네트워크에 대한 허용 목록 또는 교차 지역 설정을 구성할 필요가 없습니다.
+공용 인터넷 연결을 통해 데이터를 보호하려면 SAS 기반 인증을 사용하여 [!DNL Data Landing Zone] 컨테이너에 안전하게 액세스하십시오. [!DNL Data Landing Zone] 컨테이너에 액세스하는 데 필요한 네트워크 변경 내용이 없습니다. 따라서 네트워크에 대한 허용 목록 또는 교차 지역 설정을 구성할 필요가 없습니다.
 
 ### [!DNL Data Landing Zone] 컨테이너를 [!DNL Azure Storage Explorer]에 연결
 
@@ -212,7 +212,7 @@ curl -X POST \
 >
 >이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. 현재 AWS에서 실행 중인 Experience Platform은 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
 
-AWS에 프로비저닝된 데이터 랜딩 영역 인스턴스에 대한 자격 증명을 가져오려면 아래 작업을 수행하십시오. 그런 다음 원하는 클라이언트를 사용하여 데이터 랜딩 영역 인스턴스에 연결합니다.
+AWS에서 프로비전된 [!DNL Data Landing Zone] 인스턴스에 대한 자격 증명을 가져오려면 아래 작업을 수행하십시오. 그런 다음 원하는 클라이언트를 사용하여 [!DNL Data Landing Zone] 인스턴스에 연결합니다.
 
 >[!BEGINSHADEBOX]
 
@@ -228,7 +228,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
 
 | 쿼리 매개변수 | 설명 |
 | --- | --- |
-| `dlz_destination` | `dlz_destination` 형식을 사용하면 API에서 랜딩 영역 대상 컨테이너와 사용 가능한 다른 형식의 컨테이너를 구별할 수 있습니다. |
+| `dlz_destination` | `dlz_destination` 쿼리 매개 변수를 추가하여 [!DNL Data Landing Zone] *대상* 유형의 컨테이너 자격 증명을 검색하도록 지정하십시오. 데이터 랜딩 영역 *소스*&#x200B;에 대한 자격 증명을 연결하고 검색하려면 [소스 설명서](/help/sources/connectors/cloud-storage/data-landing-zone.md)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -270,7 +270,7 @@ curl --request GET \
 | `credentials` | 이 개체에는 Experience Platform이 파일을 프로비전된 데이터 랜딩 영역 위치로 내보내는 데 사용하는 `awsAccessKeyId`, `awsSecretAccessKey` 및 `awsSessionToken`이(가) 포함됩니다. |
 | `dlzPath` | 이 개체에는 내보낸 파일이 저장되는 Adobe 프로비저닝 AWS 위치의 경로가 포함됩니다. |
 | `dlzProvider` | Amazon S3에서 프로비저닝한 데이터 랜딩 영역임을 나타냅니다. |
-| `expiryTime` | 위의 개체에 있는 자격 증명이 만료되는 시기를 나타냅니다. 다시 호출하여 새로 고칠 수 있습니다. |
+| `expiryTime` | `credentials` 개체의 자격 증명이 만료되는 시기를 나타냅니다. 인증서를 새로 고치려면 요청을 다시 수행합니다. |
 
 {style="table-layout:auto"}
 
