@@ -3,11 +3,11 @@ title: Real-Time CDP B2B에서 계정 일치로 리드
 type: Documentation
 description: Experience Platform CDP B2B의 리드-계정 일치 기능에 대한 개요 및 추가 정보입니다.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 4ba609e777716b1b38f5b143587e5476d851e344
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '408'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 3%
 - 리소스 낭비 감소
 - 판매 주기 단축
 
-계정 기반 마케팅은 알려진 사람들과 익명의 웹 방문자들을 판매 계정에 연결하는 기능을 제공합니다. 이를 통해 마케팅 팀은 고객 여정 초기에 타겟 계정의 잠재적 리드와 참여하여 전환 가능성을 높일 수 있습니다. 알려진 개인 레코드에는 일반적으로 다음 정보의 일부 또는 전체가 포함됩니다.
+계정 기반 마케팅은 알려진 고객을 판매 계정에 연결하는 기능을 제공합니다. 이를 통해 마케팅 팀은 고객 여정 초기에 타겟 계정의 잠재적 리드와 참여하여 전환 가능성을 높일 수 있습니다. 알려진 개인 레코드에는 일반적으로 다음 정보의 일부 또는 전체가 포함됩니다.
 
 - 개인 이름
 - 이메일 주소
@@ -33,30 +33,6 @@ ht-degree: 3%
 - 회사 웹 사이트
 - 직위
 - 위치
-
-리드-계정 일치를 사용하면 알려진 사용자 프로필을 계정 프로필에 가입할 수 있습니다. 그런 다음 계정, 기회 등과 같은 B2B 컨텍스트에서 데이터를 세그먼트화하고 타깃팅할 수 있습니다. 개인 프로필은 다음 세 가지 카테고리로 분류될 수 있습니다.
-
-- **계정 사용자 프로필:** 개인 프로필이 데이터 원본의 관계를 통해 하나 이상의 계정 프로필에 이미 연결되어 있습니다. 이는 하나 이상의 연락처 조각이 있음을 의미합니다.
-
->[!NOTE]
->
-> 리드-계정 일치 작업을 실행할 때 계정 사용자 프로필이 일치하지 않습니다.
-
-- **알려진 사용자 프로필:** 사용자 프로필이 계정 프로필과 연결되어 있지 않으며 다음 사용자 프로필 특성 중 하나 이상에 값이 있습니다.
-
-   - 이메일 주소
-   - 회사명
-   - 회사 웹 사이트
-
-- **익명 사용자 프로필:** 사용자 프로필이 계정 프로필과 연결되어 있지 않으며 다음 사용자 프로필 특성 중 값이 있는 프로필은 없습니다.
-
-   - 이메일 주소
-   - 회사명
-   - 회사 웹 사이트
-
->[!NOTE]
->
-> 개인 프로필은 여러 계정 프로필과 관련될 수 있습니다. 그러나 계정 일치 프로세스에 대한 리드는 최상의 일치에만 일치합니다. 더 광범위한 일치 항목 세트가 필요한 경우 리드를 관련 계정 기능과 일치하는 계정에 연결합니다.
 
 ## 작동 방식 {#how-it-works}
 
