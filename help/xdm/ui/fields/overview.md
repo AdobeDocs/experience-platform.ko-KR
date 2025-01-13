@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 XDM 필드 정의
 description: Experience Platform 사용자 인터페이스에서 XDM 필드를 정의하는 방법을 알아봅니다.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
+source-git-commit: 0360d0eb9f4a01e12ce8619e8d2c5bac9301631f
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1606'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,7 @@ UI에서 새 XDM 필드를 정의하려면 먼저 [!DNL Schema Editor] 내에서
 
 | 필드 속성 | 설명 |
 | --- | --- |
-| [!UICONTROL 필드 이름] | 필드에 대한 고유한 설명적인 이름. 스키마가 저장된 후에는 필드 이름을 변경할 수 없습니다. 이 값은 코드 및 다른 다운스트림 응용 프로그램에서 필드를 식별하고 참조하는 데 사용됩니다<br><br>이름은 camelCase로 작성해야 합니다. 영숫자, 대시 또는 밑줄 문자가 포함될 수 있지만 **밑줄로 시작할 수 없습니다**.<ul><li>**수정**: `fieldName`</li><li>**허용:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**잘못됨**: `_fieldName`</li></ul> |
+| [!UICONTROL 필드 이름] | 필드에 대한 고유한 설명적인 이름. 스키마가 저장된 후에는 필드 이름을 변경할 수 없습니다. 이 값은 코드 및 다른 다운스트림 응용 프로그램에서 필드를 식별하고 참조하는 데 사용됩니다<br><br>이름은 camelCase로 작성해야 합니다. 영숫자 또는 밑줄 문자가 포함될 수 있지만 **밑줄로 시작할 수 없습니다**.<ul><li>**수정**: `fieldName`</li><li>**허용:** `field_name2`, `fieldName_3`</li><li>**잘못됨**: `_fieldName`</li></ul> |
 | [!UICONTROL 표시 이름] | 필드의 표시 이름입니다. 스키마 편집기 캔버스 내의 필드를 나타내는 데 사용할 이름입니다. [표시 이름 전환](../resources/schemas.md#display-name-toggle)을 사용하여 필드 이름을 표시 이름으로 변경할 수 있습니다. |
 | [!UICONTROL 유형] | 필드에 포함될 데이터의 유형입니다. 이 드롭다운 메뉴에서 XDM에서 지원하는 [표준 스칼라 유형](../../schema/field-constraints.md) 중 하나 또는 [!DNL Schema Registry]에서 이전에 정의한 다중 필드 [데이터 유형](../resources/data-types.md) 중 하나를 선택할 수 있습니다.<br>참고: 맵 데이터 형식을 선택하면 [!UICONTROL 맵 값 형식] 속성이 나타납니다.<br><br>또한 **[!UICONTROL 고급 형식 검색]**&#x200B;을 선택하여 기존 데이터 형식을 검색 및 필터링하고 원하는 형식을 쉽게 찾을 수 있습니다. |
 | [!UICONTROL 맵 값 형식] | 이 값은 필드의 데이터 형식으로 [!UICONTROL 맵]을(를) 선택하는 경우 필요합니다. 맵에 사용할 수 있는 값은 [!UICONTROL 문자열] 및 [!UICONTROL 정수]입니다. 사용 가능한 옵션의 드롭다운 목록에서 값을 선택합니다.<br>[유형별 필드 속성에 대한 자세한 내용](#type-specific-properties)은 필드 정의 개요를 참조하세요. |
