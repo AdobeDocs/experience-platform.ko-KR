@@ -1,12 +1,10 @@
 ---
-keywords: Experience Platform;홈;인기 있는 주제
-solution: Experience Platform
 title: 데이터 랜딩 영역 Source
 description: 데이터 랜딩 영역을 Adobe Experience Platform에 연결하는 방법 알아보기
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: ecef17ed454c7b1f30543278bba6b0e3b70399da
+source-git-commit: 1530d7b9815688ab58fb6349ef77e92124741883
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '1178'
 ht-degree: 0%
 
 ---
@@ -111,11 +109,11 @@ curl -v -X PUT \
 
 ### Python을 사용하여 파일 업로드
 
-다음 예제에서는 [!DNL Microsoft's] Python v12 SDK를 사용하여 파일을 [!DNL Data Landing Zone]에 업로드합니다.
+다음 예제에서는 [!DNL Microsoft's] Python v12 SDK을 사용하여 파일을 [!DNL Data Landing Zone]에 업로드합니다.
 
 >[!TIP]
 >
->아래 예제에서는 전체 SAS URI를 사용하여 [!DNL Azure Blob] 컨테이너에 연결하지만 다른 방법 및 작업을 사용하여 인증할 수 있습니다. 자세한 내용은 Python v12 SDK에 대한 이 [[!DNL Microsoft] 문서](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)를 참조하십시오.
+>아래 예제에서는 전체 SAS URI를 사용하여 [!DNL Azure Blob] 컨테이너에 연결하지만 다른 방법 및 작업을 사용하여 인증할 수 있습니다. 자세한 내용은 Python v12 SDK](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python)의 이 [[!DNL Microsoft] 문서를 참조하십시오.
 
 ```py
 import os
@@ -153,7 +151,149 @@ set srcFilePath=<PATH TO LOCAL FILE(S); WORKS WITH WILDCARD PATTERNS>
 azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 ```
 
-## [!DNL Data Landing Zone]을(를) [!DNL Platform]에 연결
+## Amazon Web Services에서 Experience Platform을 위한 [!DNL Data Landing Zone] 소스 설정 {#aws}
+
+>[!AVAILABILITY]
+>
+>이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. 현재 AWS에서 실행 중인 Experience Platform은 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
+
+Amazon Web Services(AWS)에서 Experience Platform을 위해 [!DNL Data Landing Zone] 계정을 설정하는 방법에 대해 알아보려면 아래 단계를 따르십시오.
+
+### AWS CLI 설정 및 작업 수행
+
+- [최신 버전의 AWS CLI를 설치 또는 업데이트](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)하는 방법에 대한 안내서를 참조하십시오.
+
+### 임시 자격 증명으로 AWS CLI 구성
+
+AWS `configure` 명령을 사용하여 액세스 키 및 세션 토큰으로 CLI를 설정합니다.
+
+```shell
+aws configure
+```
+
+메시지가 표시되면 다음 값을 입력합니다.
+
+- AWS 액세스 키 ID: `{YOUR_ACCESS_KEY_ID}`
+- AWS 암호 액세스 키: `{YOUR_SECRET_ACCESS_KEY}`
+- 기본 영역 이름: `{YOUR_REGION}`(예: `us-west-2`)
+- 기본 출력 형식: `json`
+
+그런 다음 세션 토큰을 설정합니다.
+
+```shell
+aws configure set aws_session_token your-session-token
+```
+
+### [!DNL Amazon S3]의 파일 작업
+
+>[!BEGINTABS]
+
+>[!TAB Amazon S3에 파일 업로드]
+
+템플릿:
+
+```shell
+aws s3 cp local-file-path s3://bucketName/dlzFolder/remote-file-Name
+```
+
+예:
+
+```shell
+aws s3 cp example.txt s3://bucketName/dlzFolder/example.txt
+```
+
+
+>[!TAB Amazon S3에서 파일 다운로드]
+
+템플릿:
+
+```shell
+aws s3 cp s3://bucketName/dlzFolder/remote-file local-file-path
+```
+
+예:
+
+```shell
+aws s3 cp s3://bucketName/dlzFolder/example.txt example.txt
+```
+
+>[!ENDTABS]
+
+### [!DNL Data Landing Zone] 자격 증명을 사용하여 AWS 콘솔에 로그인합니다.
+
+#### 자격 증명 추출
+
+먼저 다음을 얻어야 합니다.
+
+- `awsAccessKeyId`
+- `awsSecretAccessKey`
+- `awsSessionToken`
+
+#### 로그인 토큰 생성
+
+그런 다음 추출된 자격 증명을 사용하여 세션을 생성하고 AWS Federation 끝점을 사용하여 로그인 토큰을 생성합니다.
+
+```py
+import json
+import requests
+ 
+# Example DLZ response with credentials
+response_json = '''{
+    "credentials": {
+        "awsAccessKeyId": "your-access-key",
+        "awsSecretAccessKey": "your-secret-key",
+        "awsSessionToken": "your-session-token"
+    }
+}'''
+ 
+# Parse credentials
+response_data = json.loads(response_json)
+aws_access_key_id = response_data['credentials']['awsAccessKeyId']
+aws_secret_access_key = response_data['credentials']['awsSecretAccessKey']
+aws_session_token = response_data['credentials']['awsSessionToken']
+ 
+# Create session dictionary
+session = {
+    'sessionId': aws_access_key_id,
+    'sessionKey': aws_secret_access_key,
+    'sessionToken': aws_session_token
+}
+ 
+# Generate the sign-in token
+signin_token_url = "https://signin.aws.amazon.com/federation"
+signin_token_payload = {
+    "Action": "getSigninToken",
+    "Session": json.dumps(session)
+}
+signin_token_response = requests.post(signin_token_url, data=signin_token_payload)
+signin_token = signin_token_response.json()['SigninToken']
+```
+
+#### AWS 콘솔 로그인 URL 구성
+
+로그인 토큰이 있으면 AWS 콘솔에 로그인하고 원하는 [!DNL Amazon S3] 버킷을 직접 가리키는 URL을 만들 수 있습니다.
+
+```py
+from urllib.parse import quote
+ 
+# Define the S3 bucket and folder path you want to access
+bucket_name = "your-bucket-name"
+bucket_path = "your-bucket-folder"
+ 
+# Construct the destination URL
+destination_url = f"https://s3.console.aws.amazon.com/s3/buckets/{bucket_name}?prefix={bucket_path}/&tab=objects"
+ 
+# Create the final sign-in URL
+signin_url = f"https://signin.aws.amazon.com/federation?Action=login&Issuer=YourAppName&Destination={quote(destination_url)}&SigninToken={signin_token}"
+ 
+print(f"Sign-in URL: {signin_url}")
+```
+
+#### AWS 콘솔 액세스
+
+마지막으로 생성된 URL로 이동하여 [!DNL Amazon S3] 버킷 내의 특정 폴더에 대한 액세스를 제공하는 [!DNL Data Landing Zone] 자격 증명으로 AWS 콘솔에 직접 로그인합니다. 로그인 URL을 사용하면 해당 폴더로 바로 이동되므로 허가된 데이터만 보고 관리할 수 있습니다.
+
+## [!DNL Data Landing Zone]을(를) Experience Platform에 연결
 
 아래 설명서는 API 또는 사용자 인터페이스를 사용하여 [!DNL Data Landing Zone] 컨테이너에서 Adobe Experience Platform으로 데이터를 가져오는 방법에 대한 정보를 제공합니다.
 

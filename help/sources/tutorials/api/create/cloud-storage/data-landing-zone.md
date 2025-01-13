@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;홈;인기 있는 주제;
-solution: Experience Platform
 title: 흐름 서비스 API를 사용하여 데이터 랜딩 영역을 Adobe Experience Platform에 연결
-type: Tutorial
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 데이터 랜딩 영역에 연결하는 방법을 알아봅니다.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 521bfd29405d30c0e35c4095b1ba2bf29f840e8a
+source-git-commit: 527e62e5fb90bc32ef3788f261e0a24b680f29c0
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1375'
 ht-degree: 3%
 
 ---
@@ -29,9 +26,9 @@ ht-degree: 3%
 * [소스](../../../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
 * [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-다음 절에서는 [!DNL Flow Service] API를 사용하여 [!DNL Data Landing Zone] 원본 연결을 만들기 위해 알아야 할 추가 정보를 제공합니다.
-
 또한 이 자습서에서는 [Platform API 시작하기](../../../../../landing/api-guide.md)에 대한 안내서를 읽고 Platform API를 인증하고 설명서에 제공된 예제 호출을 해석하는 방법을 알아봐야 합니다.
+
+다음 절에서는 [!DNL Flow Service] API를 사용하여 [!DNL Data Landing Zone] 원본 연결을 만들기 위해 알아야 할 추가 정보를 제공합니다.
 
 ## 사용 가능한 랜딩 영역 검색
 
@@ -63,7 +60,11 @@ curl -X GET \
 
 **응답**
 
-다음 응답은 해당 `containerName` 및 `containerTTL`을(를) 포함하여 랜딩 영역에 대한 정보를 반환합니다.
+공급자에 따라 성공적인 요청은 다음을 반환합니다.
+
+>[!BEGINTABS]
+
+>[!TAB Azure의 응답]
 
 ```json
 {
@@ -76,6 +77,26 @@ curl -X GET \
 | --- | --- |
 | `containerName` | 검색한 랜딩 영역의 이름입니다. |
 | `containerTTL` | 랜딩 영역 내의 데이터에 적용되는 만료 시간(일)입니다. 지정된 랜딩 영역 내의 모든 항목이 7일 후에 삭제됩니다. |
+
+
+>[!TAB AWS의 응답]
+
+```json
+{
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "dlz-adf-connectors"
+  },
+  "dataTTL": {
+    "timeUnit": "days",
+    "timeQuantity": 7
+  },
+  "dlzProvider": "Amazon S3"
+}
+```
+
+>[!ENDTABS]
+
 
 ## [!DNL Data Landing Zone] 자격 증명 검색
 
@@ -103,7 +124,11 @@ curl -X GET \
 
 **응답**
 
-다음 응답은 현재 `SASToken`, `SASUri`, `storageAccountName` 및 만료 날짜를 포함하여 데이터 랜딩 영역에 대한 자격 증명 정보를 반환합니다.
+공급자에 따라 성공적인 요청은 다음을 반환합니다.
+
+>[!BEGINTABS]
+
+>[!TAB Azure의 응답]
 
 ```json
 {
@@ -117,10 +142,43 @@ curl -X GET \
 
 | 속성 | 설명 |
 | --- | --- |
-| `containerName` | 랜딩 영역의 이름입니다. |
-| `SASToken` | 랜딩 영역에 대한 공유 액세스 서명 토큰입니다. 이 문자열에는 요청을 승인하는 데 필요한 모든 정보가 포함되어 있습니다. |
-| `SASUri` | 랜딩 영역에 대한 공유 액세스 서명 URI입니다. 이 문자열은 인증 중인 랜딩 영역에 대한 URI와 해당 SAS 토큰의 조합입니다. |
-| `expiryDate` | SAS 토큰이 만료되는 날짜. 데이터 랜딩 영역에 데이터를 업로드하기 위해 애플리케이션에서 계속 사용하려면 만료일 전에 토큰을 새로 고쳐야 합니다. 명시된 만료 날짜 이전에 토큰을 수동으로 새로 고치지 않는 경우, GET 자격 증명 호출이 수행될 때 자동으로 새로 고침되고 새 토큰을 제공합니다. |
+| `containerName` | [!DNL Data Landing Zone]의 이름입니다. |
+| `SASToken` | [!DNL Data Landing Zone]에 대한 공유 액세스 서명 토큰입니다. 이 문자열에는 요청을 승인하는 데 필요한 모든 정보가 포함되어 있습니다. |
+| `storageAccountName` | 저장소 계정의 이름입니다. |
+| `SASUri` | [!DNL Data Landing Zone]에 대한 공유 액세스 서명 URI입니다. 이 문자열은 인증 중인 [!DNL Data Landing Zone]에 대한 URI와 해당 SAS 토큰의 조합입니다. |
+| `expiryDate` | SAS 토큰이 만료되는 날짜. 응용 프로그램에서 토큰을 사용하여 [!DNL Data Landing Zone]에 데이터를 업로드하려면 만료 날짜 전에 토큰을 새로 고쳐야 합니다. 명시된 만료 날짜 이전에 토큰을 수동으로 새로 고치지 않는 경우, GET 자격 증명 호출이 수행될 때 자동으로 새로 고침되고 새 토큰을 제공합니다. |
+
+>[!TAB AWS의 응답]
+
+```json
+{
+  "credentials": {
+    "clientId": "example-client-id",
+    "awsAccessKeyId": "example-access-key-id",
+    "awsSecretAccessKey": "example-secret-access-key",
+    "awsSessionToken": "example-session-token"
+  },
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "user_drop_zone"
+  },
+  "dlzProvider": "Amazon S3",
+  "expiryTime": 1735689599
+}
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `credentials.clientId` | AWS에서 [!DNL Data Landing Zone]의 클라이언트 ID입니다. |
+| `credentials.awsAccessKeyId` | AWS [!DNL Data Landing Zone]의 액세스 키 ID입니다. |
+| `credentials.awsSecretAccessKey` | AWS에서 [!DNL Data Landing Zone]의 비밀 액세스 키입니다. |
+| `credentials.awsSessionToken` | AWS 세션 토큰. |
+| `dlzPath.bucketName` | AWS 버킷의 이름입니다. |
+| `dlzPath.dlzFolder` | 액세스 중인 [!DNL Data Landing Zone] 폴더입니다. |
+| `dlzProvider` | 사용 중인 [!DNL Data Landing Zone] 공급자입니다. Amazon의 경우 [!DNL Amazon S3]이(가) 됩니다. |
+| `expiryTime` | 만료 시간(unix 시간)입니다. |
+
+>[!ENDTABS]
 
 ### API를 사용하여 필수 필드 검색
 
