@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 동작 API 끝점
 description: 스키마 레지스트리 API의 /behaviors 끝점을 사용하면 전역 컨테이너에서 사용 가능한 모든 동작을 검색할 수 있습니다.
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 2%
@@ -28,7 +28,7 @@ XDM(Experience Data Model)에서 동작은 스키마가 설명하는 데이터�
 
 ## 시작하기
 
-이 가이드에 사용된 끝점은 [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
+이 가이드에 사용된 끝점은 [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)의 일부입니다. 계속하기 전에 [시작 안내서](./getting-started.md)를 검토하여 관련 문서에 대한 링크, 이 문서의 샘플 API 호출 읽기 지침 및 Experience Platform API를 성공적으로 호출하는 데 필요한 필수 헤더에 대한 중요 정보를 확인하십시오.
 
 ## 비헤이비어 목록 검색 {#list}
 

@@ -1,9 +1,9 @@
 ---
-title: 스트리밍 SDK API용 설명서 셀프서비스 템플릿
+title: SDK API 스트리밍을 위한 설명서 셀프서비스 템플릿
 description: 흐름 서비스 API를 사용하여 스트리밍 데이터를 소스에서 Adobe Experience Platform으로 가져오는 방법에 대해 알아봅니다.
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 1%
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 ### *YOURSOURCE*&#x200B;을(를) Webhook과 통합
 
-*Streaming SDK에서 Experience Platform과 통신하려면 소스에서 웹후크를 지원할 수 있어야 합니다. 이 단원에서는 YOURSOURCE를 Webhook과 통합하기 위해 사용자가 따라야 할 단계를 제공해야 합니다.*
+*스트리밍 SDK에서 Experience Platform과 통신하려면 소스에서 웹후크를 지원해야 합니다. 이 단원에서는 YOURSOURCE를 Webhook과 통합하기 위해 사용자가 따라야 할 단계를 제공해야 합니다.*
 
 ## [!DNL Flow Service] API를 사용하여 *YOURSOURCE*&#x200B;을(를) 플랫폼에 연결
 
@@ -117,7 +117,7 @@ curl -X POST \
 
 ### 타겟 데이터 세트 만들기 {#target-dataset}
 
-[카탈로그 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)에 대한 POST 요청을 수행하고 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
+[카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하고 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
 
 대상 데이터 집합을 만드는 방법에 대한 자세한 단계는 [API를 사용하여 데이터 집합 만들기](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html)에 대한 자습서를 참조하십시오.
 

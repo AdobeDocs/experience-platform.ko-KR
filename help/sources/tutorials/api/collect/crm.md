@@ -5,7 +5,7 @@ title: 흐름 서비스 API를 사용하여 CRM 소스의 데이터 흐름 만�
 type: Tutorial
 description: 이 튜토리얼에서는 소스 커넥터 및 API를 사용하여 타사 CRM 시스템에서 데이터를 검색하고 이를 플랫폼으로 가져오는 단계를 설명합니다.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 2%
@@ -135,7 +135,7 @@ curl -X POST \
 
 ## 타겟 데이터 세트 만들기 {#target-dataset}
 
-[카탈로그 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)에 대한 POST 요청을 수행하고 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
+[카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하고 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
 
 대상 데이터 집합을 만드는 방법에 대한 자세한 단계는 [API를 사용하여 데이터 집합 만들기](../../../../catalog/api/create-dataset.md)에 대한 자습서를 참조하십시오.
 
@@ -198,7 +198,7 @@ curl -X POST \
 
 소스 데이터를 타겟 데이터 세트에 수집하려면 먼저 타겟 데이터 세트가 준수하는 타겟 스키마에 매핑해야 합니다.
 
-매핑 세트를 만들려면 대상 XDM 스키마 `$id`과(와) 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml)의 `mappingSets` 끝점에 POST 요청을 하십시오.
+매핑 세트를 만들려면 대상 XDM 스키마 `$id`과(와) 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)의 `mappingSets` 끝점에 POST 요청을 하십시오.
 
 **API 형식**
 
@@ -656,7 +656,7 @@ curl -X POST \
 | `sourceConnectionIds` | 이전 단계에서 [원본 연결 ID](#source)을(를) 검색했습니다. |
 | `targetConnectionIds` | 이전 단계에서 [대상 연결 ID](#target-connection)을(를) 검색했습니다. |
 | `transformations.params.mappingId` | [매핑 ID](#mapping)이(가) 이전 단계에서 검색되었습니다. |
-| `transformations.params.deltaColum` | 새 데이터와 기존 데이터를 구분하는 데 사용되는 지정된 열입니다. 증분 데이터는 선택한 열의 타임스탬프를 기반으로 수집됩니다. `deltaColumn`에 지원되는 형식은 `yyyy-MM-dd HH:mm:ss`입니다. Microsoft Dynamics를 사용하는 경우 `deltaColumn`에 지원되는 형식은 `yyyy-MM-ddTHH:mm:ssZ`입니다. |
+| `transformations.params.deltaColum` | 새 데이터와 기존 데이터를 구분하는 데 사용되는 지정된 열입니다. 증분 데이터는 선택한 열의 타임스탬프를 기반으로 수집됩니다. `deltaColumn`에 지원되는 형식은 `yyyy-MM-dd HH:mm:ss`입니다. Microsoft Dynamics을 사용하는 경우 `deltaColumn`에 지원되는 형식은 `yyyy-MM-ddTHH:mm:ssZ`입니다. |
 | `transformations.params.mappingId` | 데이터베이스와 연계된 매핑 ID. |
 | `scheduleParams.startTime` | epoch 시간 내 데이터 흐름의 시작 시간입니다. |
 | `scheduleParams.frequency` | 데이터 흐름이 데이터를 수집하는 빈도입니다. 허용되는 값은 `once`, `minute`, `hour`, `day` 또는 `week`입니다. |

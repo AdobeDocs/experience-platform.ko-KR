@@ -5,7 +5,7 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '2265'
 ht-degree: 1%
@@ -596,7 +596,7 @@ curl -X POST \
 
 ### 타겟 데이터 세트 만들기 {#target-dataset}
 
-[카탈로그 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)에 대한 POST 요청을 수행하고 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
+[카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하고 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
 
 대상 데이터 집합을 만드는 방법에 대한 자세한 단계는 [API를 사용하여 데이터 집합 만들기](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html)에 대한 자습서를 참조하십시오.
 

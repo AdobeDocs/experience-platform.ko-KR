@@ -2,7 +2,7 @@
 title: 암호 엔드포인트
 description: Reactor API에서 /secrets 끝점을 호출하는 방법을 알아봅니다.
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 4%
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 ## 시작하기
 
-이 가이드에 사용된 끝점은 [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)의 일부입니다. 계속하기 전에 [시작 안내서](../getting-started.md)에서 API 인증 방법에 대한 중요한 정보를 검토하십시오.
+이 가이드에 사용된 끝점은 [Reactor API](https://developer.adobe.com/experience-platform-apis/references/reactor/)의 일부입니다. 계속하기 전에 [시작 안내서](../getting-started.md)에서 API 인증 방법에 대한 중요한 정보를 검토하십시오.
 
 ## 속성에 대한 암호 목록 검색 {#list-property}
 

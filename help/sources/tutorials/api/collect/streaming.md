@@ -5,7 +5,7 @@ title: 흐름 서비스 API를 사용하여 원시 데이터에 대한 스트리
 type: Tutorial
 description: 이 튜토리얼에서는 소스 커넥터 및 API를 사용하여 스트리밍 데이터를 검색하고 이를 플랫폼으로 가져오는 단계를 다룹니다.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 39b5a2b76c28033b9e98dcefc4cdcaa9964f4d2e
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 2%
@@ -265,7 +265,7 @@ curl -X POST \
 
 소스 데이터를 타겟 데이터 세트에 수집하려면 먼저 타겟 데이터 세트가 준수하는 타겟 스키마에 매핑해야 합니다.
 
-매핑 세트를 만들려면 대상 XDM 스키마 `$id`과(와) 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml)의 `mappingSets` 끝점에 POST 요청을 하십시오.
+매핑 세트를 만들려면 대상 XDM 스키마 `$id`과(와) 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)의 `mappingSets` 끝점에 POST 요청을 하십시오.
 
 **API 형식**
 
@@ -482,7 +482,7 @@ curl -X POST \
 }
 ```
 
-## 수집용 Post 데이터
+## 수집을 위한 게시물 데이터
 
 수집을 위해 보낼 수 있는 원시 또는 XDM 호환 json의 예는 아래 샘플 페이로드를 참조하십시오.
 

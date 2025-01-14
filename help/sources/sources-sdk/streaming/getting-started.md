@@ -1,22 +1,22 @@
 ---
-title: 셀프서비스 소스 시작하기(Streaming SDK)
-description: 이 문서에서는 셀프서비스 소스(Streaming SDK)를 사용하여 새 소스를 만들기 전에 알아야 하는 전제 조건 정보에 대해 소개합니다.
+title: 셀프서비스 소스 시작하기(스트리밍 SDK)
+description: 이 문서에서는 셀프서비스 소스(스트리밍 SDK)를 사용하여 새 소스를 만들기 전에 알아야 하는 전제 조건 정보에 대해 소개합니다.
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 12%
 
 ---
 
-# 셀프서비스 소스 시작하기(Streaming SDK)
+# 셀프서비스 소스 시작하기(스트리밍 SDK)
 
 >[!NOTE]
 >
->Streaming SDK는 베타 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions)를 참조하십시오.
+>SDK 스트리밍은 베타 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../home.md#terms-and-conditions)를 참조하십시오.
 
-셀프서비스 소스(Streaming SDK)를 사용하면 자체 소스를 통합하여 스트리밍 데이터를 Adobe Experience Platform으로 가져올 수 있습니다. 이 문서에서는 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)을(를) 호출하기 전에 알아야 하는 핵심 개념에 대해 소개합니다.
+셀프서비스 소스(스트리밍 SDK)를 사용하면 자체 소스를 통합하여 스트리밍 데이터를 Adobe Experience Platform으로 가져올 수 있습니다. 이 문서에서는 [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)을(를) 호출하기 전에 알아야 하는 핵심 개념에 대해 소개합니다.
 
 ## 고급 프로세스
 
@@ -47,7 +47,7 @@ Experience Platform에서 소스를 구성하는 단계별 프로세스는 아�
 >
 >Experience Platform과 통합 중인 소스는 업데이트를 전송하려면 끝점을 구독할 수 있는 웹후크를 지원할 수 있어야 합니다.
 
-셀프서비스 소스(Streaming SDK)를 사용하려면 Adobe Experience Platform 소스로 프로비저닝된 샌드박스 조직에 대한 액세스 권한이 있는지 확인해야 합니다.
+셀프서비스 소스(스트리밍 SDK)를 사용하려면 Adobe Experience Platform 소스로 프로비저닝된 샌드박스 조직에 대한 액세스 권한이 있는지 확인해야 합니다.
 
 또한 이 안내서에서는 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
@@ -56,7 +56,7 @@ Experience Platform에서 소스를 구성하는 단계별 프로세스는 아�
 
 ## 샘플 API 호출 읽기
 
-Self-Service Sources(Streaming SDK) 및 [!DNL Flow Service] API 설명서는 요청 형식을 지정하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)에 대한 섹션을 참조하십시오.
+셀프 서비스 소스(스트리밍 SDK) 및 [!DNL Flow Service] API 설명서는 요청을 포맷하는 방법을 보여 주는 예제 API 호출을 제공합니다. 여기에는 경로, 필수 헤더 및 적절한 형식의 요청 페이로드가 포함됩니다. API 응답에서 반환되는 샘플 JSON도 제공됩니다. 샘플 API 호출에 대한 설명서에 사용된 규칙에 대한 자세한 내용은 Experience Platform 문제 해결 안내서의 [예제 API 호출을 읽는 방법](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)에 대한 섹션을 참조하십시오.
 
 ## 필수 헤더에 대한 값 수집
 
@@ -80,4 +80,4 @@ Platform API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/
 
 ## 다음 단계
 
-셀프 서비스 소스(Streaming SDK)를 사용하여 새 소스를 만들려면 [새 소스 만들기](./create.md)에 대한 자습서를 참조하십시오.
+셀프 서비스 소스(스트리밍 SDK)를 사용하여 새 소스를 만들려면 [새 소스 만들기](./create.md)에 대한 자습서를 참조하십시오.

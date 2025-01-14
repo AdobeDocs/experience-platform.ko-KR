@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '531'
 ht-degree: 5%
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2019년 9월 10일 수요일**
+**릴리스 일자: 2019년 9월 10일 수요일**
 
 Adobe Experience Platform의 기존 기능 업데이트:
 
@@ -48,7 +48,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]은(는) [!DNL Experience
 
 **알려진 문제**
 
-* 현재 [!DNL Service Gallery]에서 기존 서비스를 삭제할 수 있는 방법이 없습니다. 그동안 API 호출을 통해 기존 서비스를 삭제하려면 [Sensei 기계 학습 API 참조](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)를 참조하십시오.
+* 현재 [!DNL Service Gallery]에서 기존 서비스를 삭제할 수 있는 방법이 없습니다. 그동안 API 호출을 통해 기존 서비스를 삭제하려면 [Sensei 기계 학습 API 참조](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)를 참조하십시오.
 * [!DNL Service Gallery]에는 서비스의 교육 및 채점 실행을 필터링하기 위한 페이지 매김이 지원되지 않습니다.
 * [!DNL Service Gallery]을(를) 통해 예약된 교육 또는 채점 실행을 구성할 때 빈도를 시간별로 설정하면 일정이 적용되지 않습니다.
 

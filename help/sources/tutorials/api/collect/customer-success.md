@@ -5,7 +5,7 @@ title: 흐름 서비스 API를 사용하여 고객 성공 소스에 대한 데�
 type: Tutorial
 description: 이 튜토리얼에서는 고객 성공 시스템에서 데이터를 검색하고 소스 커넥터 및 API를 사용하여 이 데이터를 플랫폼으로 수집하는 단계를 설명합니다.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1258'
 ht-degree: 2%
@@ -144,7 +144,7 @@ curl -X POST \
 
 ## 타겟 데이터 세트 만들기 {#target-dataset}
 
-[카탈로그 서비스 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)에 대한 POST 요청을 수행하고 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
+[카탈로그 서비스 API](https://developer.adobe.com/experience-platform-apis/references/catalog/)에 대한 POST 요청을 수행하고 페이로드 내에 대상 스키마의 ID를 제공하여 대상 데이터 집합을 만들 수 있습니다.
 
 대상 데이터 집합을 만드는 방법에 대한 자세한 단계는 [API를 사용하여 데이터 집합 만들기](../../../../catalog/api/create-dataset.md)에 대한 자습서를 참조하십시오.
 
@@ -210,7 +210,7 @@ curl -X POST \
 
 소스 데이터를 타겟 데이터 세트에 수집하려면 먼저 타겟 데이터 세트가 준수하는 타겟 스키마에 매핑해야 합니다.
 
-매핑 세트를 만들려면 대상 XDM 스키마 `$id`과(와) 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml)의 `mappingSets` 끝점에 POST 요청을 하십시오.
+매핑 세트를 만들려면 대상 XDM 스키마 `$id`과(와) 만들려는 매핑 세트의 세부 정보를 제공하는 동안 [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/)의 `mappingSets` 끝점에 POST 요청을 하십시오.
 
 **API 형식**
 
