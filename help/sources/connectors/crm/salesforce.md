@@ -2,9 +2,9 @@
 title: Salesforce Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
+source-git-commit: f62e13e97cc82fef759d06b94337f4cc25d4fb10
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1533'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,6 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >이제 Amazon Web Services(AWS)에서 Adobe Experience Platform을 실행할 때 [!DNL Salesforce] 소스를 사용할 수 있습니다. 현재 AWS에서 실행 중인 Experience Platform은 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../landing/multi-cloud.md)를 참조하세요.
-
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
@@ -50,6 +49,8 @@ Experience Platform은 서드파티 CRM 시스템에서 데이터 수집을 지�
 
 Platform 개발자 콘솔과 [!DNL Postman]을(를) 설정하면 이제 [!DNL Postman] 환경에 적절한 환경 값을 적용할 수 있습니다.
 
++++변수 테이블 안내서 보기
+
 다음 표에는 예제 값과 [!DNL Postman] 환경 채우기에 대한 추가 정보가 포함되어 있습니다.
 
 | 변수 | 설명 | 예 |
@@ -73,6 +74,8 @@ Platform 개발자 콘솔과 [!DNL Postman]을(를) 설정하면 이제 [!DNL Po
 | `has_msi` | [!DNL Marketo Sales Insight]을(를) 구독하는지 여부를 나타내는 부울 값입니다. | `false` |
 
 {style="table-layout:auto"}
+
++++
 
 ### 스크립트 실행
 
@@ -124,7 +127,7 @@ openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 4. [!DNL Enable OAuth Settings]에 대해 상자를 사용하도록 설정합니다.
 5. 콜백 URL을 설정합니다. JWT에는 사용되지 않으므로 `https://localhost`을(를) 사용할 수 있습니다.
 6. [!DNL Use Digital Signatures]에 대해 상자를 사용하도록 설정합니다.
-7. 이전에 만든 cert.perm 파일을 업로드합니다.
+7. 이전에 만든 cert.pem 파일을 업로드합니다.
 
 #### 필요한 권한 추가
 
