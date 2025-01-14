@@ -1,12 +1,12 @@
 ---
 keywords: google 고객 일치;Google 고객 일치;Google 고객 일치
 title: Google Customer Match 연결
-description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑, Gmail 및 YouTube과 같은 Google의 소유 및 운영되는 속성에서 고객에게 연락하고 다시 연결할 수 있습니다.
+description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑 및 Gmail과 같이 Google이 소유하고 운영하는 속성에서 고객에게 연락하고 다시 연결할 수 있습니다.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
+source-git-commit: bbf48bb3478e90c1502083d0ea97e3cc0aef1bb9
 workflow-type: tm+mt
-source-wordcount: '2100'
-ht-degree: 2%
+source-wordcount: '2140'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +22,11 @@ ht-degree: 2%
 ><br/>
 >Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/ui/segment-builder.md)에서 [세그먼트 정의](../../../segmentation/home.md#segment-definitions) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
 
-[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en)을(를) 사용하면 온라인 및 오프라인 데이터를 사용하여 [!DNL Search], [!DNL Shopping], [!DNL Gmail] 및 [!DNL YouTube]과(와) 같은 Google의 소유 및 운영되는 속성에서 고객에게 연락하고 다시 연결할 수 있습니다.
+[[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en)을(를) 사용하면 온라인 및 오프라인 데이터를 사용하여 [!DNL Search], [!DNL Shopping] 및 [!DNL Gmail]과(와) 같은 Google의 소유 및 운영되는 속성에서 고객에게 연락하고 고객과 다시 연결할 수 있습니다.
+
+>[!TIP]
+>
+>[!DNL YouTube] 인벤토리를 사용하는 고객에게 연결하려면 Google Audience Partner API를 사용하는 [Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) 대상을 사용합니다.
 
 ![Adobe Experience Platform UI의 Google Customer Match 대상.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
@@ -35,6 +39,10 @@ ht-degree: 2%
 운동복 브랜드는 [!DNL Google Search] 및 [!DNL Google Shopping]을(를) 통해 기존 고객에게 연락하여 과거 구매 및 검색 기록을 기반으로 오퍼와 항목을 개인화하려고 합니다. 의류 브랜드는 자체 CRM에서 Experience Platform으로 이메일 주소를 수집하고 자체 오프라인 데이터에서 대상을 구축할 수 있습니다. 그런 다음 이 대상자를 [!DNL Search] 및 [!DNL Shopping]에서 사용할 [!DNL Google Customer Match](으)로 보내 광고 지출을 최적화할 수 있습니다.
 
 ### 사용 사례 #2
+
+>[!TIP]
+>
+>[!DNL YouTube] 인벤토리에서 이 사용 사례를 실행하려면 Google Audience Partner API를 사용하는 새로운 [Google Customer Match + DV360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) 대상을 사용합니다.
 
 한 저명한 기술 회사가 새 전화기를 출시했다. 이 새로운 폰 모델을 홍보하기 위해, 그들은 이전 폰 모델을 소유한 고객들에게 이 폰의 새로운 기능과 기능성에 대한 인지도를 높이고자 한다.
 
@@ -222,7 +230,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!IMPORTANT]
 >
-> 2024년 10월부터 Adobe은 스트리밍 대상에 대한 보고 정확도를 높이기 위한 업데이트를 롤아웃합니다. 이러한 향상된 기능을 통해 Experience Platform과 대상 플랫폼 보고 간의 정렬 성능이 향상되었습니다.
+> Adobe는 2024년 10월부터 스트리밍 대상에 대한 보고 정확도를 높이기 위한 업데이트를 출시할 예정입니다. 이러한 향상된 기능을 통해 Experience Platform과 대상 플랫폼 보고 간의 정렬 성능이 향상되었습니다.
 >
 > 이 업데이트 이전에는 **[!UICONTROL ID 실패]**&#x200B;에 모든 활성화 다시 시도가 포함되었습니다. 이 업데이트 후에는 마지막 활성화 재시도만 총 횟수에 포함됩니다.
 >
