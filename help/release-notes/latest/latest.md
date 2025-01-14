@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
 workflow-type: tm+mt
 source-wordcount: '852'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!TIP]
 >
->이제 새로운 [AI Assistant 제품 설명서](../../ai-assistant/landing.md)를 사용할 수 있습니다. 이 페이지를 모든 AI 어시스턴트 관련 리소스의 허브로 사용해 보십시오.
+>이제 새로운 [AI 어시스턴트 제품 설명서](../../ai-assistant/landing.md)를 사용할 수 있습니다. 이 페이지를 모든 AI 어시스턴트 관련 리소스의 허브로 사용해 보십시오.
 
 **릴리스 날짜: 2024년 11월 26일**
 
