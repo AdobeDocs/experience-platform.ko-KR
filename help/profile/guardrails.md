@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 기능의 최적 사용을 보장하기 위해 프로필 데이터 및 세분화에 대한 성능 및 시스템 적용 가드레일에 대해 알아봅니다.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 6962bb0ba4968ed4860e95819ac2e949bf744d79
+source-git-commit: 22daff3f422cd4ec5bbf5c77583e24dac6c53c76
 workflow-type: tm+mt
-source-wordcount: '2461'
+source-wordcount: '2472'
 ht-degree: 2%
 
 ---
@@ -67,7 +67,7 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 | 다중 엔티티 관계에 사용되는 ID 필드의 JSON 깊이 | 4 | 성능 보호 | 다중 엔티티 관계에 사용되는 ID 필드에 대한 권장 최대 JSON 깊이는 4입니다. 즉, 많이 중첩된 스키마에서 4개 수준 이상 깊게 중첩된 필드를 관계의 ID 필드로 사용하면 안 됩니다. |
 | 프로필 조각의 배열 카디널리티 | &lt;=500 | 성능 보호 | 프로필 조각(시간에 구애받지 않는 데이터)에서 최적의 배열 카디널리티는 &lt;=500입니다. |
 | ExperienceEvent의 배열 카디널리티 | &lt;=10 | 성능 보호 | ExperienceEvent(시계열 데이터)에서 최적의 배열 카디널리티는 10 미만입니다. |
-| 개별 프로필 ID 그래프의 ID 수 | 50 | 시스템 강제 보호 | **개별 프로필에 대한 ID 그래프의 최대 ID 수는 50개입니다.** ID가 50개를 초과하는 프로필은 세분화, 내보내기 및 조회에서 제외됩니다. |
+| 개별 프로필 ID 그래프의 ID 수 | 50 | 시스템 강제 보호 | **개별 프로필에 대한 ID 그래프의 최대 ID 수는 50개입니다.** ID가 50개를 초과하는 프로필은 세분화, 내보내기 및 조회에서 제외됩니다. 자세한 내용은 [ID 삭제 논리 이해](../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated)에 대한 안내서를 참조하십시오. |
 
 {style="table-layout:auto"}
 
