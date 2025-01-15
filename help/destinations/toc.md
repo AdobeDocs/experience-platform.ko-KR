@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: cc9c6f476a2b50e09cc14df915fc4dfa851a3bb9
+source-git-commit: c5543997747daa336b0a5bb40c46aa720e8bcadd
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1273'
 ht-degree: 5%
 
 ---
@@ -64,6 +64,7 @@ ht-degree: 5%
       * [Adobe 대상 개요](./catalog/adobe/overview.md)
       * [Experience Cloud Audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage 연결](./catalog/adobe/marketo-engage.md)
+      * [(Beta) Marketo Engage 사용자 동기화 연결](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate 연결](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform 대상 공유](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Federated Audience Composition 연결(제한된 가용성)](https://www.adobe.com/go/destinations-federated-audience-composition)
