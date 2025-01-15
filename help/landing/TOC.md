@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: 안내서, 설명서 및 튜토리얼을 통해 Experience Platform이 개인화된 경험을 실시간으로 고객에게 전달하는 방법에 대해 알아봅니다.
-source-git-commit: b3fe3f50c133a819921aef05ee5b00af16b7f58f
+source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '304'
 ht-degree: 24%
 
 ---
@@ -69,11 +69,13 @@ ht-degree: 24%
    * [데이터 암호화](./governance-privacy-security/encryption.md)
    * 고객 관리 키 {#customer-managed-keys}
       * [고객 관리 키](./governance-privacy-security/customer-managed-keys/overview.md)
-      * [Azure Key Vault 구성](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
-      * [API를 사용하여 CMK 설정](./governance-privacy-security/customer-managed-keys/api-set-up.md)
-      * [UI를 사용하여 CMK 설정](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
-   * 키 관리 서비스 {#key-management-service}
-      * [키 관리 서비스](./governance-privacy-security/key-management-service/overview.md)
+      * Azure {#azure}
+         * [Azure Key Vault 구성](./governance-privacy-security/customer-managed-keys/azure/azure-key-vault-config.md)
+         * [API를 사용하여 CMK 설정](./governance-privacy-security/customer-managed-keys/azure/api-set-up.md)
+         * [UI를 사용하여 CMK 설정](./governance-privacy-security/customer-managed-keys/azure/ui-set-up.md)
+      * Amazon Web Services {#aws}
+         * [CMK용 AWS KMS 구성](./governance-privacy-security/customer-managed-keys/aws/configure-kms.md)
+         * [UI를 사용하여 AWS에서 CMK를 설정합니다.](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
 * 라이선스 사용 및 보호 기능 {#license}
    * [데이터 관리 라이선스 권한 부여 모범 사례](./license-usage-and-guardrails/data-management-best-practices.md)
    * [라이선스 사용 대시보드](./license-usage-and-guardrails/license-usage-dashboard.md)
