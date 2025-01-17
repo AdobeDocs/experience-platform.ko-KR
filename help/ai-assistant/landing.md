@@ -1,8 +1,9 @@
 ---
 title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant를 시작합니다.
+feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 9a8b1527f932e8b0091af7fb999ed638e28de2d0
+source-git-commit: 3c100042ab828e10326d314fcaa00278cc8eb694
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
