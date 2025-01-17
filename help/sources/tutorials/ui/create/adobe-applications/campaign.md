@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: Platform UI를 사용하여 Adobe Campaign Managed Cloud Services 소스 연결 만들기
 description: Platform UI를 사용하여 Adobe Experience Platform을 Adobe Campaign Managed Cloud Services에 연결하는 방법을 알아봅니다.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1185'
 ht-degree: 6%
 
 ---
@@ -101,6 +101,8 @@ Platform은 선택한 대상 스키마 또는 데이터 세트를 기반으로 �
 >[!IMPORTANT]
 >
 >소스 필드를 대상 XDM 필드에 매핑할 때 지정된 기본 ID 필드를 해당 대상 XDM 필드에 매핑해야 합니다.
+>
+>각 대상자에 대해 Adobe Campaign에 매핑할 필드를 최대 20개까지 추가할 수 있습니다. Campaign 탐색기의 관리 > 플랫폼 > 옵션 폴더에서 `NmsCdp_Aep_Sources_Max_Columns` 옵션의 값을 업데이트하여 이 제한을 변경할 수 있습니다.
 
 원본 데이터가 성공적으로 매핑되면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
 
