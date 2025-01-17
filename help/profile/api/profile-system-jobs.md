@@ -5,9 +5,9 @@ type: Documentation
 description: Adobe Experience Platform을 사용하면 더 이상 필요하지 않거나 오류로 추가된 실시간 고객 프로필 데이터를 제거하기 위해 프로필 스토어에서 데이터 세트 또는 배치를 삭제할 수 있습니다. 이를 위해서는 프로필 API를 사용하여 프로필 시스템 작업을 생성하거나 요청을 삭제해야 합니다.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 3664d3d1f6433bce4678ab8b17c008c064d8e943
+source-git-commit: 16778d0edbad4539a4ff5084a2f22ca5f08e83ec
 workflow-type: tm+mt
-source-wordcount: '1977'
+source-wordcount: '2020'
 ht-degree: 2%
 
 ---
@@ -64,6 +64,8 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 >[!TAB Microsoft Azure]
 
++++ 시스템 작업을 보기 위한 샘플 요청입니다.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -72,11 +74,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 >[!TAB Amazon Web Services(AWS)]
 
 >[!IMPORTANT]
 >
 >AWS에서 이 끝점을 사용할 때 **must**&#x200B;에서 `x-sandbox-name` 요청 헤더 대신 `x-sandbox-id` 요청 헤더를 사용합니다.
+
++++ 시스템 작업을 보기 위한 샘플 요청입니다.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
@@ -85,6 +91,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-id: {SANDBOX_ID}' \
 ```
+
++++
 
 >[!ENDTABS]
 
@@ -133,8 +141,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 }
 ```
 
-+++
-
 | 속성 | 설명 |
 | -------- | ----------- |
 | `_page.count` | 총 요청 수입니다. 이 응답은 공백으로 잘렸습니다. |
@@ -142,6 +148,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
 | `jobType` | 생성 중인 작업 유형입니다. 이 경우 항상 `"DELETE"`을(를) 반환합니다. |
 | `status` | 삭제 요청의 상태입니다. 가능한 값은 `"NEW"`, `"PROCESSING"`, `"COMPLETED"` 및 `"ERROR"`입니다. |
 | `metrics` | 처리된 레코드 수(`"recordsProcessed"`)와 요청이 처리된 시간(초) 또는 요청이 완료되는 데 걸린 시간(`"timeTakenInSec"`)을 포함하는 개체입니다. |
+
++++
 
 >[!TAB Amazon Web Services(AWS)]
 
@@ -222,6 +230,8 @@ POST /system/jobs
 
 >[!TAB Microsoft Azure]
 
++++ 데이터 세트 삭제에 대한 샘플 요청입니다.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -235,6 +245,8 @@ curl -X POST \
       }'
 ```
 
++++
+
 | 속성 | 설명 |
 | -------- | ----------- |
 | `dataSetId` | 삭제할 데이터 세트의 ID입니다. |
@@ -244,6 +256,8 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >AWS에서 이 끝점을 사용할 때 **must**&#x200B;에서 `x-sandbox-name` 요청 헤더 대신 `x-sandbox-id` 요청 헤더를 사용합니다.
+
++++ 데이터 세트 삭제에 대한 샘플 요청입니다.
 
 ```shell
 curl -X POST \
@@ -257,6 +271,8 @@ curl -X POST \
         "dataSetId": "5c802d3cd83fc114b741c4b5"
       }'
 ```
+
++++
 
 | 속성 | 설명 |
 | -------- | ----------- |
@@ -290,12 +306,12 @@ curl -X POST \
 }
 ```
 
-+++
-
 | 속성 | 설명 |
 | -------- | ----------- |
 | `id` | 시스템에서 생성한 삭제 요청에 대한 읽기 전용 ID입니다. |
 | `dataSetId` | POST 요청에 지정된 데이터 세트의 ID입니다. |
+
++++
 
 >[!TAB Amazon Web Services(AWS)]
 
@@ -322,14 +338,14 @@ curl -X POST \
 }
 ```
 
-+++
-
 | 속성 | 설명 |
 | -------- | ----------- |
 | `requestId` | 시스템 작업의 ID입니다. |
 | `requestType` | 시스템 작업 유형입니다. 가능한 값은 `BACKFILL_TTL`, `DELETE_EE_BATCH` 및 `TRUNCATE_DATASET`입니다. |
 | `status` | 시스템 작업의 상태입니다. 가능한 값은 `NEW`, `SUCCESS`, `ERROR`, `FAILED` 및 `IN-PROGRESS`입니다. |
 | `properties` | 시스템 작업의 배치 및/또는 데이터 세트 ID를 포함하는 객체입니다. |
+
++++
 
 >[!ENDTABS]
 
@@ -359,6 +375,8 @@ POST /system/jobs
 
 >[!TAB Microsoft Azure]
 
++++ 배치 삭제에 대한 샘플 요청입니다.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -373,6 +391,8 @@ curl -X POST \
       }'
 ```
 
++++
+
 | 속성 | 설명 |
 | -------- | ----------- |
 | `datasetId` | 삭제하려는 배치에 대한 데이터 세트 ID입니다. |
@@ -383,6 +403,8 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >AWS에서 이 끝점을 사용할 때 **must**&#x200B;에서 `x-sandbox-name` 요청 헤더 대신 `x-sandbox-id` 요청 헤더를 사용합니다.
+
++++ 배치 삭제에 대한 샘플 요청입니다.
 
 ```shell
 curl -X POST \
@@ -398,13 +420,14 @@ curl -X POST \
       }'
 ```
 
++++
+
 | 속성 | 설명 |
 | -------- | ----------- |
 | `datasetId` | 삭제하려는 배치에 대한 데이터 세트 ID입니다. |
 | `batchId` | 삭제하려는 일괄 처리의 ID입니다. |
 
 >[!ENDTABS]
-
 
 **응답**
 
@@ -417,6 +440,8 @@ curl -X POST \
 >[!TAB Microsoft Azure]
 
 성공적인 응답은 요청에 대한 고유한 시스템 생성 읽기 전용 ID를 포함하여 새로 생성된 삭제 요청의 세부 정보를 반환합니다. 요청을 검색하고 상태를 확인하는 데 사용할 수 있습니다. 생성 시 요청의 `"status"`은(는) 처리를 시작할 때까지 `"NEW"`입니다. 응답의 `"batchId"` 값은 요청에서 보낸 `"batchId"` 값과 일치해야 합니다.
+
++++ 삭제 요청 생성에 대한 성공적인 응답입니다.
 
 ```json
 {
@@ -436,6 +461,8 @@ curl -X POST \
 | `id` | 시스템에서 생성한 삭제 요청에 대한 읽기 전용 ID입니다. |
 | `datasetId` | 지정된 데이터 세트의 ID입니다. |
 | `batchId` | POST 요청에 지정된 일괄 처리의 ID입니다. |
+
++++
 
 >[!TAB Amazon Web Services(AWS)]
 
@@ -462,14 +489,14 @@ curl -X POST \
 }
 ```
 
-+++
-
 | 속성 | 설명 |
 | -------- | ----------- |
 | `requestId` | 시스템 작업의 ID입니다. |
 | `requestType` | 시스템 작업 유형입니다. 가능한 값은 `BACKFILL_TTL`, `DELETE_EE_BATCH` 및 `TRUNCATE_DATASET`입니다. |
 | `status` | 시스템 작업의 상태입니다. 가능한 값은 `NEW`, `SUCCESS`, `ERROR`, `FAILED` 및 `IN-PROGRESS`입니다. |
 | `properties` | 시스템 작업의 배치 및/또는 데이터 세트 ID를 포함하는 객체입니다. |
+
++++
 
 >[!ENDTABS]
 
@@ -517,13 +544,17 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 >[!TAB Microsoft Azure]
 
++++ 프로필 작업을 보기 위한 샘플 요청입니다.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 >[!TAB Amazon Web Services(AWS)]
 
@@ -531,13 +562,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >
 >AWS에서 이 끝점을 사용할 때 **must**&#x200B;에서 `x-sandbox-name` 요청 헤더 대신 `x-sandbox-id` 요청 헤더를 사용합니다.
 
++++ 프로필 작업을 보기 위한 샘플 요청입니다.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
+
++++
 
 >[!ENDTABS]
 
@@ -553,6 +588,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >[!TAB Microsoft Azure]
 
 응답은 업데이트된 상태를 포함하여 삭제 요청의 세부 정보를 제공합니다. 응답의 삭제 요청 ID(`"id"` 값)는 요청 경로에서 보낸 ID와 일치해야 합니다.
+
++++ 삭제 요청 보기에 대한 성공적인 응답입니다.
 
 ```json
 {
@@ -572,6 +609,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 | `jobType` | 만들어지는 작업 유형입니다. 이 경우 항상 `"DELETE"`을(를) 반환합니다. |
 | `status` | 삭제 요청의 상태입니다. 가능한 값은 `NEW`, `PROCESSING`, `COMPLETED` 및 `ERROR`입니다. |
 | `metrics` | 처리된 레코드 수(`"recordsProcessed"`)와 요청이 처리된 시간(초) 또는 요청이 완료되는 데 걸린 시간(`"timeTakenInSec"`)을 포함하는 배열입니다. |
+
++++
 
 >[!TAB Amazon Web Services(AWS)]
 
@@ -598,14 +637,14 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 }
 ```
 
-+++
-
 | 속성 | 설명 |
 | -------- | ----------- |
 | `requestId` | 시스템 작업의 ID입니다. |
 | `requestType` | 시스템 작업 유형입니다. 가능한 값은 `BACKFILL_TTL`, `DELETE_EE_BATCH` 및 `TRUNCATE_DATASET`입니다. |
 | `status` | 시스템 작업의 상태입니다. 가능한 값은 `NEW`, `SUCCESS`, `ERROR`, `FAILED` 및 `IN-PROGRESS`입니다. |
 | `properties` | 시스템 작업의 배치 및/또는 데이터 세트 ID를 포함하는 객체입니다. |
+
++++
 
 >[!ENDTABS]
 
@@ -626,45 +665,18 @@ DELETE /system/jobs/{DELETE_REQUEST_ID}
 ```
 
 | 매개변수 | 설명 |
-|---|---|
+| --------- | ----------- |
 | {DELETE_REQUEST_ID} | 제거할 삭제 요청의 ID입니다. |
 
 **요청**
 
->[!IMPORTANT]
->
->다음 요청은 Azure와 AWS 인스턴스 간에 다릅니다.
-
->[!BEGINTABS]
-
->[!TAB Microsoft Azure]
-
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
+curl -X POST https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
->[!TAB Amazon Web Services(AWS)]
-
->[!IMPORTANT]
->
->AWS에서 이 끝점을 사용할 때 **must**&#x200B;에서 `x-sandbox-name` 요청 헤더 대신 `x-sandbox-id` 요청 헤더를 사용합니다.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
-```
-
->[!ENDTABS]
-
 
 **응답**
 
