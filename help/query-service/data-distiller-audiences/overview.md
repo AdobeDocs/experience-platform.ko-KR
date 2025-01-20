@@ -2,7 +2,7 @@
 title: SQL을 사용하여 대상 작성
 description: Adobe Experience Platform의 Data Distiller에서 SQL 대상 확장을 사용하여 SQL 명령을 사용하여 대상을 만들고, 관리하고, 게시하는 방법에 대해 알아봅니다. 이 안내서에서는 프로필 만들기, 업데이트 및 삭제, 데이터 기반 대상 정의 사용 등 대상 라이프사이클의 모든 측면을 다룹니다.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: 7db055f598e3fa7d5a50214a0cfa86e28e5bfe47
+source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 1%
@@ -44,7 +44,7 @@ AS (select_query)
 | `schema` | 선택 사항입니다. 쿼리로 만든 데이터 세트에 대한 XDM 스키마를 정의합니다. |
 | `table_name` | 테이블 및 대상자의 이름입니다. |
 | `primary_identity` | 대상자의 기본 ID 열을 지정합니다. |
-| `identity_namespace` | ID 네임스페이스. 기존 네임스페이스를 사용하거나 새 네임스페이스를 만들 수 있습니다. 사용 가능한 네임스페이스를 보려면 `SHOW NAMESPACE` 명령을 사용하십시오. 새 네임스페이스를 만들려면 `CREATE NAMESPACE`을(를) 사용합니다. 예: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
+| `identity_namespace` | ID 네임스페이스. 기존 네임스페이스를 사용하거나 새 네임스페이스를 만들 수 있습니다. 사용 가능한 네임스페이스를 보려면 `SHOW NAMESPACES` 명령을 사용하십시오. 새 네임스페이스를 만들려면 `CREATE NAMESPACE`을(를) 사용합니다. 예: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')`. |
 | `select_query` | 대상을 정의하는 SELECT 문입니다. SELECT 쿼리의 구문은 [SELECT 쿼리](../sql/syntax.md#select-queries) 섹션에 있습니다. |
 
 {style="table-layout:auto"}
