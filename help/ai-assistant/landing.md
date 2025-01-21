@@ -3,7 +3,7 @@ title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant를 시작합니다.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 676466184e84dabfeb52947c3d3a777032ca728f
+source-git-commit: fcda4dc3ecdd4ae9272f1cc65cabb20b6236c71a
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 1%
@@ -31,7 +31,7 @@ AI Assistant는 Experience Platform, Real-Time CDP, Adobe Journey Optimizer 및 
     <div><strong>학습 향상</strong><br/>워크플로를 중단하지 않고 제품 지식을 검색, 문제 해결 및 이해도를 높이십시오.</div>
     </td>
     <td>
-    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"><a>
+    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
     <div><strong>AI Assistant 비디오 재생 목록 방문</strong><br/>AI Assistant를 통해 해결할 수 있는 다양한 어려움과 사용 사례에 대해 알아봅니다.</div>
     </td>
   </tr>
