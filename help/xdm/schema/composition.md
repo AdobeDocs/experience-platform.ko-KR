@@ -6,8 +6,8 @@ description: XDM(Experience Data Model) 스키마와 Adobe Experience Platform�
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 source-git-commit: 595d9bd6a0aa0c9f1059e485c54e89ce02b7ec68
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '4365'
+ht-degree: 8%
 
 ---
 
@@ -48,7 +48,7 @@ Experience Platform에 사용하기 위한 데이터는 다음 두 가지 동작
 
 레코드와 시계열 스키마 모두에 ID 맵(`xdm:identityMap`)이 포함되어 있습니다. 이 필드에는 다음 섹션에 설명된 대로 &quot;ID&quot;로 표시된 필드에서 가져온 주체의 ID 표현이 포함되어 있습니다.
 
-### [!UICONTROL 신원] {#identity}
+### [!UICONTROL ID] {#identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
@@ -175,7 +175,7 @@ Experience Platform은 표준 빌딩 블록이 결합되어 스키마를 만드�
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class_industries"
 >title="업체 유형"
->abstract="비즈니스에 대한 관련 업종을 선택하면 머신 러닝 모델이 업계 표준에 맞는 표준 필드 그룹과 소스 필드를 보다 정확하게 매핑하여 더 나은 데이터 구성을 제공할 수 있습니다. 이를 통해 데이터 통합이 업계별 요구사항에 맞게 조정되고 보다 정확하고 관련성이 높은 데이터 인사이트를 얻을 수 있습니다."
+>abstract="비즈니스에 대한 관련 업종을 선택하면 머신 러닝 모델이 업계 표준에 맞는 표준 필드 그룹과 소스 필드를 보다 정확하게 매핑하여 더 나은 데이터 구성을 제공할 수 있습니다. 이를 통해 데이터 통합이 업계별 요구 사항에 맞게 조정되고 보다 정확하고 관련성이 높은 데이터 인사이트를 얻을 수 있습니다."
 
 스키마 작성은 클래스를 할당하는 것부터 시작됩니다. 클래스는 스키마에 포함될 데이터의 동작 측면(레코드 또는 시계열)을 정의합니다. 이 외에도 클래스는 해당 클래스를 기반으로 하는 모든 스키마가 포함해야 하는 가장 적은 수의 공통 속성을 설명하고 여러 호환되는 데이터 세트가 병합될 수 있는 방법을 제공합니다.
 

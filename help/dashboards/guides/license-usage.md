@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 7605ccef8553fc775ea5496c73971f92ed4c06ab
 workflow-type: tm+mt
 source-wordcount: '2947'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
@@ -46,13 +46,13 @@ ht-degree: 17%
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="예상 컴퓨팅 시간"
 >abstract="사용량이 사용 허가된 양에 도달했을 수 있습니다. 컴퓨팅 시간을 측정하거나 줄이려면 쿼리 > 로그로 이동하여 쿼리 기록을 검토하십시오. 쿼리 작업 영역에 액세스할 수 있는 권한이 없다면 귀사의 관리자에게 문의하십시오."
->additional-url="https://experience.adobe.com/#/platform/query/log" text="쿼리 로그 작업 영역"
+>additional-url="https://experience.adobe.com/#/platform/query/log" text="로그 작업 영역 쿼리"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
->title="예상 대응 가능 대상"
+>title="주소 지정 가능한 예상 대상자"
 >abstract="사용량이 사용 허가된 양에 도달했을 수 있습니다. 사용량을 줄이려면 샌드박스 및 데이터 세트에 대한 데이터 세트 또는 익명 프로필 데이터 만료를 구성하십시오."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations" text="경험 이벤트 만료"
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/profile/event-expirations" text="경험 이벤트 만료"
 >additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/profile/pseudonymous-profiles" text="익명 프로필 데이터 만료"
 
 Adobe Experience Platform [!UICONTROL 라이선스 사용] 대시보드를 통해 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있습니다. 여기에 표시되는 정보는 Platform 인스턴스의 일별 스냅샷 중에 캡처됩니다.

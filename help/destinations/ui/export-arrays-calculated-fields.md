@@ -1,16 +1,16 @@
 ---
-title: Real-Time CDP에서 클라우드 스토리지 대상으로 어레이 개체 내보내기
+title: Real-Time CDP에서 클라우드 스토리지 대상으로 배열 오브젝트를 내보냅니다.
 type: Tutorial
 description: 계산된 필드를 사용하여 배열을 Real-Time CDP에서 클라우드 스토리지 대상으로 문자열로 내보내는 방법을 알아봅니다.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
 source-wordcount: '1622'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
-# Real-Time CDP에서 클라우드 스토리지 대상으로 어레이 개체 내보내기 {#export-arrays-cloud-storage}
+# Real-Time CDP에서 클라우드 스토리지 대상으로 배열 오브젝트를 내보냅니다. {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
