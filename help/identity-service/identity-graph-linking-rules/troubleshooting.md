@@ -2,14 +2,14 @@
 title: ID 그래프 연결 규칙 문제 해결 설명서
 description: ID 그래프 연결 규칙의 일반적인 문제를 해결하는 방법을 알아봅니다.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
 workflow-type: tm+mt
-source-wordcount: '3335'
+source-wordcount: '3286'
 ht-degree: 0%
 
 ---
 
-# 아이덴티티 그래프 연결 규칙에 대한 문제 해결 안내서
+# ID 그래프 연결 규칙에 대한 문제 해결 안내서
 
 >[!AVAILABILITY]
 >
@@ -149,12 +149,8 @@ AAID는 기본적으로 차단됩니다. 따라서 [Adobe Analytics 소스 커�
 * [프로필에서 유효성 검사 오류가 발생했을 수 있습니다](../../xdm/classes/experienceevent.md).
    * 예를 들어 경험 이벤트에는 `_id`과(와) `timestamp`이(가) 모두 포함되어야 합니다.
    * 또한 `_id`은(는) 각 이벤트(레코드)에 대해 고유해야 합니다.
-* 우선 순위가 가장 높은 네임스페이스는 빈 문자열입니다.
 
-네임스페이스 우선 순위의 컨텍스트에서 프로필은 다음을 거부합니다.
-
-* 네임스페이스 우선 순위가 가장 높은 두 개 이상의 ID가 포함된 모든 이벤트입니다. 예를 들어 GAID가 고유 네임스페이스로 표시되지 않고 GAID 네임스페이스와 다른 ID 값이 있는 두 개의 ID가 모두 들어 있는 경우 프로필은 이벤트를 저장하지 않습니다.
-* 우선 순위가 가장 높은 네임스페이스가 빈 문자열인 모든 이벤트입니다.
+네임스페이스 우선 순위의 컨텍스트에서 프로필은 가장 높은 네임스페이스 우선 순위를 가진 두 개 이상의 ID가 포함된 모든 이벤트를 거부합니다. 예를 들어 GAID가 고유 네임스페이스로 표시되지 않고 GAID 네임스페이스와 다른 ID 값이 있는 두 개의 ID가 모두 들어 있는 경우 프로필은 이벤트를 저장하지 않습니다.
 
 **문제 해결 단계**
 
@@ -175,16 +171,7 @@ AAID는 기본적으로 차단됩니다. 따라서 [Adobe Analytics 소스 커�
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-다음 쿼리를 실행하여 빈 문자열이 있는 가장 높은 네임스페이스로 인해 프로필에 대한 수집이 발생하지 않는지 확인할 수도 있습니다.
-
-```sql
-  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
-  FROM (SELECT key, explode(value), * 
-  FROM (SELECT explode(identityMap), * 
-  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
-```
-
-이 두 쿼리는 다음과 같이 가정합니다.
+이러한 쿼리는 다음을 가정합니다.
 
 * 한 ID는 identityMap에서 전송되고 다른 ID는 ID 설명자에서 전송됩니다. **참고**: XDM(Experience Data Model) 스키마에서 ID 설명자는 ID로 표시된 필드입니다.
 * CRMID는 identityMap을 통해 전송됩니다. CRMID를 필드로 보내는 경우 WHERE 절에서 `key='Email'`을(를) 제거하십시오.

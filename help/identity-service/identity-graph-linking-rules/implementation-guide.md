@@ -2,9 +2,9 @@
 title: ID 그래프 연결 규칙에 대한 구현 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
+source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1585'
 ht-degree: 2%
 
 ---
@@ -119,31 +119,6 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 
 
 >[!ENDTABS]
-
-XDM 경험 이벤트를 사용하여 이벤트를 전송할 때 빈 문자열을 ID 값으로 보내지 마십시오. 네임스페이스 우선 순위가 가장 높은 네임스페이스의 ID 값이 빈 문자열인 경우 실시간 고객 프로필에서 레코드가 무시됩니다. 이 설정은 ID로 표시된 필드뿐만 아니라 두 identityMap에도 적용됩니다.
-
-+++빈 문자열이 있는 페이로드의 예를 보려면 선택
-
-다음 예제에서는 `Phone`의 ID 값이 빈 문자열로 제출되었으므로 오류를 반환합니다.
-
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ],
-        "Phone": [
-            {
-                "id": "",
-                "primary": true
-            }
-        ]
-    }
-```
-
-+++
 
 XDM 경험 이벤트를 사용하여 이벤트를 전송할 때 정규화된 ID가 있는지 확인해야 합니다.
 
