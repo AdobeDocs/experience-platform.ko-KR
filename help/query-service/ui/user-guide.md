@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 편집기 UI 안내서
 description: 쿼리 편집기는 Adobe Experience Platform 쿼리 서비스에서 제공하는 대화형 도구로서, Experience Platform 사용자 인터페이스 내에서 고객 경험 데이터에 대한 쿼리를 작성, 유효성 검사 및 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 이를 통해 개발 목적으로 대화형 쿼리를 실행하고 비대화형 쿼리를 실행하여 Experience Platform의 데이터 세트를 채울 수 있습니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e66f3540d22a441089916183538921ea5654b312
+source-git-commit: 4c11a35ce914cd0b1aa0084368f5a5929f883963
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '2807'
 ht-degree: 0%
 
 ---
@@ -217,12 +217,9 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 객체 브라우저에 표시되는 스키마는 관찰 가능한 스키마입니다. 즉, 변경 사항이 즉시 표시되므로 이를 사용하여 변경 사항 및 업데이트를 실시간으로 모니터링할 수 있습니다. 관찰 가능한 스키마는 데이터 동기화를 확인하고 디버깅 또는 분석 작업을 지원하는 데 도움이 됩니다.
 
-#### 현재 제한 사항 {#current-limitations}
+#### 현재 제한 사항 {#current-limitation}
 
-다음은 현재 제한 사항 목록입니다.
-
-- 순차적 쿼리 실행: 한 번에 하나의 쿼리만 실행할 수 있습니다. 쿼리가 진행 중이면 쿼리가 순차적으로 처리되므로 왼쪽 탐색에서 추가 테이블을 열 수 없습니다.
-- 쿼리 로그의 추가 행: 로그에 &quot;SHOW TABLES&quot;라는 레이블이 지정된 불필요한 쿼리가 발생할 수 있습니다. 이러한 기능은 향후 릴리스에서 제거됩니다.
+시스템은 쿼리를 순차적으로 처리합니다. 즉, 한 번에 하나의 쿼리만 실행할 수 있습니다. 쿼리가 진행되는 동안에는 왼쪽 탐색에서 추가 테이블에 액세스할 수 없습니다.
 
 #### 테이블 메타데이터 액세스 {#table-metadata}
 

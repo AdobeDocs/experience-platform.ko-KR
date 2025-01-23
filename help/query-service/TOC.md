@@ -5,10 +5,10 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: 83d15e8d6488a400a87f111ec97f06401431b339
+source-git-commit: c3065710e5f50541b074fc493df07130221d8078
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 22%
+source-wordcount: '382'
+ht-degree: 21%
 
 ---
 
@@ -43,12 +43,14 @@ ht-degree: 22%
    - [개요](advanced-statistics/overview.md)
    - [기능 엔지니어링](advanced-statistics/feature-engineering.md)
    - [모델](advanced-statistics/models.md)
+   - [기능 변환](advanced-statistics/feature-transformation.md)
 모델 {#implement-models} 구현
       - [모델 구현](advanced-statistics/implement-models/implement-models.md)
       - [회귀](advanced-statistics/implement-models/regression.md)
       - [분류](advanced-statistics/implement-models/classification.md)
       - [클러스터링](advanced-statistics/implement-models/clustering.md)
-   - [기능 변환](advanced-statistics/feature-transformation.md)
+예제 {#examples}
+      - [SQL 기반 로지스틱 회귀 분석을 사용하여 고객 이탈 예측](advanced-statistics/examples/predict-customer-churn.md)
 - 데이터 Distiller 대상 {#data-distiller-audiences}
    - [SQL을 사용하여 외부 대상 작성](data-distiller-audiences/overview.md)
 - 예 {#use-cases}
@@ -64,6 +66,7 @@ ht-degree: 22%
    - [퍼지 매치](use-cases/fuzzy-match.md)
    - [사용자의 페이지 보기 나열](use-cases/list-visitor-sessions.md)
    - [페이지 보기별로 방문자 나열](use-cases/visitors-by-number-of-page-views.md)
+   - [SQL을 사용하여 고객 이탈 예측](use-cases/predict-customer-churn-stub.md)
    - [성향 점수](use-cases/propensity-score.md)
    - [고차 함수로 유사한 레코드 검색](use-cases/retrieve-similar-records.md)
    - [분석 데이터에서 머천다이징 변수 반환 및 사용](use-cases/merchandising-variables.md)
