@@ -2,7 +2,7 @@
 title: ID 그래프 연결 규칙 문제 해결 설명서
 description: ID 그래프 연결 규칙의 일반적인 문제를 해결하는 방법을 알아봅니다.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
+source-git-commit: 4d9954dd61b56125ae1e828432c8cc359806d280
 workflow-type: tm+mt
 source-wordcount: '3286'
 ht-degree: 0%
@@ -171,7 +171,7 @@ AAID는 기본적으로 차단됩니다. 따라서 [Adobe Analytics 소스 커�
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-이러한 쿼리는 다음을 가정합니다.
+이 쿼리는 다음을 가정합니다.
 
 * 한 ID는 identityMap에서 전송되고 다른 ID는 ID 설명자에서 전송됩니다. **참고**: XDM(Experience Data Model) 스키마에서 ID 설명자는 ID로 표시된 필드입니다.
 * CRMID는 identityMap을 통해 전송됩니다. CRMID를 필드로 보내는 경우 WHERE 절에서 `key='Email'`을(를) 제거하십시오.
