@@ -5,9 +5,9 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: c3065710e5f50541b074fc493df07130221d8078
+source-git-commit: 20869e76976ff3868f1d4dbc7c6d97b58682e5c3
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '397'
 ht-degree: 21%
 
 ---
@@ -50,6 +50,7 @@ ht-degree: 21%
       - [분류](advanced-statistics/implement-models/classification.md)
       - [클러스터링](advanced-statistics/implement-models/clustering.md)
 예제 {#examples}
+      - [통계 및 머신 러닝을 사용한 보트 필터링](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [SQL 기반 로지스틱 회귀 분석을 사용하여 고객 이탈 예측](advanced-statistics/examples/predict-customer-churn.md)
 - 데이터 Distiller 대상 {#data-distiller-audiences}
    - [SQL을 사용하여 외부 대상 작성](data-distiller-audiences/overview.md)
@@ -58,6 +59,7 @@ ht-degree: 21%
    - [찾아보기 중단됨](use-cases/abandoned-browse.md)
    - [속성 분석](use-cases/attribution-analysis.md)
    - [보트 필터링](use-cases/bot-filtering.md)
+   - [통계 및 머신 러닝 소개를 사용한 보트 필터링](use-cases/statistics-and-ml-bot-filtering-stub.md)
    - [이벤트의 트렌드 보고서 만들기](use-cases/trended-report-of-events.md)
    - [동의 분석](use-cases/consent-analysis.md)
    - [고객 생애 가치](use-cases/customer-lifetime-value.md)
