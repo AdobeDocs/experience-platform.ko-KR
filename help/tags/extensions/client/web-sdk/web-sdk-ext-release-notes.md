@@ -2,16 +2,29 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
+source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
 workflow-type: tm+mt
-source-wordcount: '2332'
-ht-degree: 27%
+source-wordcount: '2413'
+ht-degree: 26%
 
 ---
 
 # Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 
-이 문서에서는 Adobe Experience Platform 웹 SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md)를 참조하십시오.
+이 문서에서는 Adobe Experience Platform Web SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md)를 참조하십시오.
+
+## 버전 2.28.0 - 2024년 1월 23일 수요일
+
+**수정 사항 및 개선 사항**
+
+- Audience Manager을 활성화하지 않으면 ID 동기화 컨테이너 재정의를 설정할 수 없는 문제를 수정했습니다.
+- 최신 버전으로 업그레이드할 때 데이터 스트림 구성 무시가 비활성화되는 문제를 해결했습니다.
+- 사용자가 Target 자동 클릭 컬렉션 설정을 저장할 수 없는 문제를 해결했습니다.
+
+**새로운 기능**
+
+- XDM 오브젝트에서 기술 이름과 표시 이름 간을 전환하는 새 기능이 추가되었습니다.
+- Adobe Experience Platform Web SDK의 [버전 2.25.0](../../../../web-sdk/release-notes.md#2-25-0)을 포함합니다.
 
 ## 버전 2.27.0 - 2024년 10월 31일 금요일
 
@@ -26,7 +39,7 @@ Adobe Experience Platform Web SDK 버전 2.24.0을 포함합니다.
 
 **수정 사항 및 개선 사항**
 
-- 웹 SDK를 로컬로 실행할 때 쿠키가 올바르게 작성되지 않는 문제를 해결했습니다.
+- 웹 SDK을 로컬로 실행할 때 쿠키가 올바르게 작성되지 않는 문제를 해결했습니다.
 
 Adobe Experience Platform Web SDK 버전 2.23.0을 포함합니다.
 
@@ -188,9 +201,9 @@ Adobe Experience Platform Web SDK 버전 2.14.0을 포함합니다.
 
 ## 버전 2.14.1 - 2022년 10월 13일 금요일
 
-- 웹 SDK가 Experience Cloud ID 서비스의 ID를 준수하지 않는 문제가 해결되었습니다.
+- 웹 SDK에서 Experience Cloud ID 서비스의 ID를 승인하지 않는 문제가 해결되었습니다.
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.13.1을 포함합니다.
+Adobe Experience Platform Web SDK 라이브러리 버전 2.13.1을 포함합니다.
 
 ## 버전 2.14.0 - 2022년 9월 28일
 
@@ -204,7 +217,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.13.0을 포함합�
 
 - XDM 개체 데이터 요소에서 eVar와 같은 숫자 속성의 정렬 순서를 수정했습니다.
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.12.0을 포함합니다.
+Adobe Experience Platform Web SDK 라이브러리 버전 2.12.0을 포함합니다.
 
 ## 버전 2.12.0 - 2022년 6월 13일 화요일
 
@@ -218,7 +231,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.11.0을 포함합�
 
 ## 버전 2.11.2 - 2022년 5월 3일 수요일
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.10.1을 포함합니다.
+Adobe Experience Platform Web SDK 라이브러리 버전 2.10.1을 포함합니다.
 
 ## 버전 2.11.1 - 2022년 4월 22일
 
@@ -237,27 +250,27 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.10.0을 포함합�
 
 - 업데이트된 Adobe Target VEC 편집기에서 작동하도록 구성 페이지에서 복사할 수 있는 코드 조각 사전 숨김을 업데이트합니다.
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.9.0을 포함합니다.
+Adobe Experience Platform Web SDK 라이브러리의 버전 2.9.0을 포함합니다.
 
 ## 버전 2.9.0 - 2022년 1월 19일 목요일
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.8.0을 포함합니다.
+Adobe Experience Platform Web SDK 라이브러리의 버전 2.8.0을 포함합니다.
 
 ## 버전 2.8.0 - 2021년 10월 26일 수요일
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.7.0을 포함합니다.
+Adobe Experience Platform Web SDK 라이브러리의 버전 2.7.0을 포함합니다.
 
 - `inferences` 및 `destinations`을(를) 포함하여 Edge Network 완료 보내기 이벤트에서 이벤트의 추가 정보를 사용할 수 있습니다. 이러한 기능은 현재 Beta의 일부로 롤아웃되고 있으므로 이러한 속성의 형식이 변경될 수 있습니다.
 
 ## 버전 2.7.3 - 2021년 9월 7일
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.4를 포함합니다.
+Adobe Experience Platform Web SDK 라이브러리의 버전 2.6.4를 포함합니다.
 
 - `container.buildInfo.environment.`에 대한 사용 중단 경고가 더 이상 없습니다.
 
 ## 버전 2.7.0 - 2021년 8월 16일
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.3을 포함합니다.
+Adobe Experience Platform Web SDK 라이브러리의 버전 2.6.3을 포함합니다.
 
 - ID 맵 데이터 요소 유형을 사용할 때 ID가 채워지지 않은 문자열로 확인되는 식별자는 이제 ID 맵에서 자동으로 제거됩니다.
 - XDM 개체 데이터 요소 유형을 사용하여 데이터 요소를 저장하려고 할 때 스키마를 선택하지 않았을 때 발생하는 오류를 해결했습니다.
@@ -265,15 +278,15 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.3을 포함합�
 
 ## 버전 2.6.2 - 2021년 8월 4일
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.2를 포함합니다.
+Adobe Experience Platform Web SDK 라이브러리의 버전 2.6.2를 포함합니다.
 
 ## 버전 2.6.1 - 2021년 7월 29일
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.1을 포함합니다.
+Adobe Experience Platform Web SDK 라이브러리의 버전 2.6.1을 포함합니다.
 
 ## 버전 2.6.0 - 2021년 7월 27일 수요일
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.0을 포함합니다.
+Adobe Experience Platform Web SDK 라이브러리의 버전 2.6.0을 포함합니다.
 
 - &quot;에지 구성&quot;이라는 용어를 사용하는 레이블, 설명 및 오류 메시지가 &quot;데이터스트림&quot;이라는 용어를 사용하여 최신 Adobe Experience Platform 용어에 맞게 변경되었습니다.
 - 확장 구성 보기에서 많은 수의 데이터스트림 및 데이터스트림 환경을 처리하기 위한 지원이 추가되었습니다.
@@ -284,7 +297,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.6.0을 포함합�
 
 ## 버전 2.5.0 - 2021년 6월 1일 수요일
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.5.0을 포함합니다.
+Adobe Experience Platform Web SDK 라이브러리의 버전 2.5.0을 포함합니다.
 
 - 이벤트 보내기 작업에 `data` 필드를 추가했습니다. 향후 설명서에서는 특정 시나리오에서 이 기능을 사용하는 방법을 설명합니다.
 - XDM 개체 데이터 요소 보기에서 사용자가 Adobe Experience Platform 샌드박스에 액세스할 수 있지만 조직의 기본값으로 구성된 샌드박스에 액세스할 수 없는 경우 오류가 발생하는 문제가 수정되었습니다.
@@ -292,7 +305,7 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.5.0을 포함합�
 
 ## 버전 2.4.0 - 2021년 3월 9일
 
-Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.4.0을 포함합니다.
+Adobe Experience Platform Web SDK 라이브러리의 버전 2.4.0을 포함합니다.
 
 - 이벤트 작업 UI 보내기에 [&quot;문서 언로딩&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) 확인란이 추가되었습니다.
 - [기본 동의를 구성](/help/web-sdk/commands/configure/defaultconsent.md)할 때 `out` 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
@@ -341,13 +354,13 @@ Adobe Experience Platform 웹 SDK 라이브러리의 버전 2.3.0을 포함합�
    - `getDecisions` 명령이 제거되었습니다.
    - `scopes` 옵션이 `sendEvent` 명령에 추가되었습니다. 결정은 `sendEvent`에서 확인된 약속에서 반환됩니다.
    - 페이지/보기 전체 오퍼를 반환하는 내장 `__view__` 범위가 추가되었습니다. (예: Target의 VEC 오퍼)
-`renderDecisions`가 false로 설정된 경우에만 `sendEvent` 명령에서 이러한 결과가 반환됩니다.
+`renderDecisions`이(가) false로 설정된 경우에만 `sendEvent` 명령에서 이러한 결과가 반환됩니다.
    - 결정을 사용할 수 있을 때 발생하는 `Decisions Received` 이벤트가 추가되었습니다.
 - 단일 서버 호출에 여러 개인화 알림이 결합되었습니다.
 - 데이터 요소가 참조될 때마다 재설정되는 이벤트 병합 ID의 문제가 해결되었습니다.
 - `setCustomerIds` 작업 이름이 `syncIdentity`로 변경되었습니다.
 - `getIdentity` 명령이 추가되었습니다. 현재는 사용자 지정 코드를 통해서만 사용할 수 있습니다.
-- `_satellite`을(를) 사용하여 디버그를 활성화하면 Adobe Experience Platform Web SDK에서 디버깅이 활성화됩니다.
+- `_satellite`을(를) 사용하여 디버그를 활성화하면 Adobe Experience Platform 웹 SDK에서 디버깅이 활성화됩니다.
 - XDM 개체에 입력 값(부울, 숫자 및 소수점)에 대한 지원이 추가되었습니다.
 
 ## 버전 0.0.10 - 2020년 3월 16일
