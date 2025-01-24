@@ -2,10 +2,10 @@
 title: 그래프 시뮬레이션 UI 안내서
 description: ID 서비스 UI에서 그래프 시뮬레이션을 사용하는 방법을 알아봅니다.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 1%
+source-wordcount: '1489'
+ht-degree: 4%
 
 ---
 
@@ -50,6 +50,12 @@ Adobe Experience Platform UI에서 [!DNL Graph Simulation]에 액세스할 수 �
 >[!ENDTABS]
 
 ## 이벤트 추가 {#add-events}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="이벤트 추가"
+>abstract="그래프를 시뮬레이션하여 ID 서비스가 ID를 연결하는 방식과 ID 최적화 알고리즘이 작동하는 방식을 파악하십시오."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="데이터 사용 레이블 개요"
 
 시작하려면 **[!UICONTROL 이벤트 추가]**&#x200B;를 선택하세요.
 
@@ -126,6 +132,16 @@ Adobe Experience Platform UI에서 [!DNL Graph Simulation]에 액세스할 수 �
 ![이벤트 삭제 아이콘을 선택했습니다.](../images/graph-simulation/delete.png)
 
 ## 알고리즘 구성 {#configure-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_algorithmconfiguration"
+>title="알고리즘 구성"
+>abstract="수집한 ID에 맞게 고유한 네임스페이스와 네임스페이스 우선순위를 구성하십시오."
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="알고리즘 구성"
+>abstract="네임스페이스 우선순위는 ID 그래프에서 링크가 제거되는 방식을 결정합니다."
 
 >[!IMPORTANT]
 >

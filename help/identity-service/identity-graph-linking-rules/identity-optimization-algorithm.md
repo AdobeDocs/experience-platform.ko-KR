@@ -2,9 +2,9 @@
 title: ID 최적화 알고리즘
 description: ID 서비스의 ID 최적화 알고리즘에 대해 알아봅니다.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1560'
 ht-degree: 1%
 
 ---
@@ -22,6 +22,11 @@ ID 최적화 알고리즘은 ID 그래프가 단일 사용자를 나타내도록
 고유한 네임스페이스 및 네임스페이스 우선 순위에 대한 자세한 내용은 이 섹션을 참조하십시오. 이 두 개념은 신원 최적화 알고리즘이 요구하는 입력 파라미터 역할을 한다.
 
 ### 고유 네임스페이스 {#unique-namespace}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_uniquenamespace"
+>title="알고리즘 구성"
+>abstract="그래프에는 고유한 네임스페이스를 가진 두 개의 ID가 있을 수 없습니다. 그래프가 이 제한을 초과하려고 하면 가장 최근 링크가 유지되고 가장 오래된 링크가 제거됩니다."
 
 고유한 네임스페이스는 그래프 축소가 발생할 경우 제거되는 링크를 결정합니다.
 
