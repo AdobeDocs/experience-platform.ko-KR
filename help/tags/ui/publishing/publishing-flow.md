@@ -2,18 +2,23 @@
 title: 게시 플로우
 description: Adobe Experience Platform에서 라이브러리를 만들고 빌드를 테스트하고 프로덕션용으로 승인하는 프로세스에 대해 알아봅니다.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
-source-wordcount: '1490'
-ht-degree: 33%
+source-wordcount: '1509'
+ht-degree: 36%
 
 ---
 
-# 게시 플로우
+# 게시 플로우 {#publishing-flow}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_publishing_flow"
+>title="게시 플로우"
+>abstract="개발, 승인 및 Publish 권한을 포함하여 게시 플로우에 필요한 사용자 권한 수준을 이해합니다."
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform의 태그 게시 플로우는 라이브러리를 만들고 빌드를 테스트하고 프로덕션용으로 승인하는 프로세스를 의미합니다.
 
@@ -29,7 +34,7 @@ Adobe Experience Platform의 태그 게시 플로우는 라이브러리를 만�
 * **[!UICONTROL 승인]**: 스테이징용으로 빌드하고 스테이징된 빌드를 승인하는 기능이 포함됩니다.
 * **[!UICONTROL Publish]**: 승인된 라이브러리를 게시하는 기능이 포함됩니다.
 
-권리는 포함되지 않습니다. 한 사람이 처음부터 끝까지 작업 과정을 수행하려면 주어진 속성 내에 있는 세 개의 권한을 모두 부여 받아야 합니다.
+권리는 포함되지 않습니다. 한 사람이 처음부터 끝까지 워크플로를 수행하려면 주어진 속성 내에 있는 세 개의 권한을 모두 부여 받아야 합니다.
 
 태그 권한 관리에 대한 자세한 내용은 [사용자 권한 안내서](../administration/user-permissions.md)를 참조하세요.
 
