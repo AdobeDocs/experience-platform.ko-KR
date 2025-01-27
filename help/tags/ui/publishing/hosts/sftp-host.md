@@ -2,9 +2,9 @@
 title: SFTP 호스트
 description: Adobe Experience Platform에서 태그를 구성하여 보안 및 자체 호스팅되는 SFTP 서버에 라이브러리 빌드를 전달하는 방법에 대해 알아봅니다.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 85bd78928b1b503bbb6bbc44075ed0f66e046a4c
+source-git-commit: b3c3bf0a39a30e8c9baf81ec20945497acef5465
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '810'
 ht-degree: 11%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 11%
 >
 >Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
-Adobe Experience Platform을 사용하면 호스팅하는 보안 SFTP 서버에 태그 라이브러리 빌드를 전달할 수 있으므로, 빌드의 저장 및 관리 방법을 보다 세밀하게 제어할 수 있습니다. 이 안내서에서는 Experience Platform UI 또는 데이터 수집 UI의 태그 속성에 대해 SFTP 호스트를 설정하는 방법을 다룹니다.
+Experience Platform을 사용하면 호스팅하는 보안 SFTP 서버에 태그 라이브러리 빌드를 전달하여 빌드의 저장 및 관리 방법을 보다 세밀하게 제어할 수 있습니다. 이 안내서에서는 Experience Platform UI 또는 데이터 수집 UI의 태그 속성에 대해 SFTP 호스트를 설정하는 방법을 다룹니다.
 
 >[!NOTE]
 >
