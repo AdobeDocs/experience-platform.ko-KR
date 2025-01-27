@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 정보;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
+source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
 workflow-type: tm+mt
 source-wordcount: '2149'
 ht-degree: 5%
@@ -16,13 +16,13 @@ ht-degree: 5%
 이 문서에서는 Adobe Experience Platform Web SDK의 릴리스 정보를 다룹니다.
 웹 SDK 태그 확장에 대한 최신 릴리스 노트는 [웹 SDK 태그 확장 릴리스 노트](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)를 참조하십시오.
 
-## 버전 2.25.0 - 2024년 1월 23일 수요일 {#2-25-0}
+## 버전 2.25.0 - 2025년 1월 23일 금요일
 
 **수정 및 개선 사항**
 
 - `setDebug` 명령에 옵션 유효성 검사가 추가되었습니다.
 - 클릭 컬렉션을 사용하지 않도록 설정할 때 `onBeforeLinkClickSend` 함수 또는 다운로드 링크 한정자를 구성할 때 경고가 추가되었습니다.
-- 렌더링된 제안이 디스플레이 알림에 포함되지 않던 문제가 해결되었습니다.
+- 렌더링된 제안이 디스플레이 알림에 포함되지 않던 문제를 수정했습니다.
 
 **새로운 기능**
 
