@@ -2,20 +2,15 @@
 title: 콘텐츠 API 엔드포인트
 description: Privacy Service API를 사용하여 액세스 데이터를 검색하는 방법에 대해 알아봅니다.
 role: Developer
-badgePrivateBeta: label="Private Beta" type="Informative"
 exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
-source-git-commit: e3a453ad166fe244b82bd1f90e669579fcf09d17
+source-git-commit: ac54398ae8e9e06ea3581baf867ab1cf650042a2
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
 
 # 컨텐츠 엔드포인트
-
->[!IMPORTANT]
->
->`/content` 끝점은 현재 베타 버전이며 조직에서 아직 액세스할 수 없습니다. 기능 및 설명서는 변경될 수 있습니다.
 
 `/content` 끝점을 사용하여 고객에 대한 *액세스 정보*(개인 정보 보호 주체가 올바르게 액세스를 요청할 수 있는 정보)를 안전하게 검색할 수 있습니다. `/jobs/{JOB_ID}` GET 요청에 대한 응답에 제공된 다운로드 URL이 Adobe 서비스 끝점을 가리킵니다. 그런 다음 `/jobs/:JOB_ID/content`에 GET 요청을 하여 고객 데이터를 JSON 형식으로 반환할 수 있습니다. 이 액세스 방법은 보안을 강화하기 위해 인증 및 액세스 제어의 여러 계층을 구현합니다.
 
