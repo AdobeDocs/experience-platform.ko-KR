@@ -3,9 +3,9 @@ keywords: 대상;experience cloud 솔루션;target;target 대상;ad cloud;advert
 title: Adobe 대상 개요
 description: 광고 타겟팅, 개인화, 마케팅 자동화 등을 위해 플랫폼의 데이터를 다른 Adobe Experience Cloud 솔루션에 연결하여 고객 경험을 관리합니다.
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '229'
 ht-degree: 7%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 7%
 * [(Beta) Experience Cloud 대상](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage 연결](/help/destinations/catalog/adobe/marketo-engage.md)
 * [Marketo Measure Ultimate 연결](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
-* [Federated Audience Composition 연결](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}(제한된 가용성)
+* [페더레이션 대상 컴포지션 연결](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"}
 
 ### 확장
 

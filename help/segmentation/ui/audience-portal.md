@@ -2,9 +2,9 @@
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
+source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
 workflow-type: tm+mt
-source-wordcount: '4571'
+source-wordcount: '4569'
 ht-degree: 4%
 
 ---
@@ -25,7 +25,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 - [대상자 만들기](#create-audience)
    - [세그먼트 빌더를 사용하여 대상자 만들기](#segment-builder)
    - [대상 구성을 사용하여 대상 만들기](#audience-composition)
-   - [Federated Audience Composition을 사용하여 기존 Data Warehouse의 데이터를 사용하여 대상을 만듭니다](#fac)(제한된 가용성)
+   - [기존 Data Warehouse의 데이터를 사용하여 대상을 만들려면 Federated Audience Composition을 사용하십시오](#fac)
 - [외부에서 생성된 대상자 가져오기](#import-audience)
 
 대상자 포털을 열려면 세분화 섹션 내에서 **[!UICONTROL 찾아보기]** 탭을 선택합니다.
