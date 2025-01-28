@@ -3,9 +3,9 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
+source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
 workflow-type: tm+mt
-source-wordcount: '4395'
+source-wordcount: '4387'
 ht-degree: 11%
 
 ---
@@ -439,25 +439,32 @@ Adobe은 모든 프로필 레코드가 고유하게 식별되도록 [!DNL CRM ID
 
 * **결정론적 선택**: 여러 프로필에 동일한 중복 제거 키와 동일한 참조 타임스탬프가 있는 경우 중복 제거 논리에서 선택한 다른 열의 값을 정렬하여 내보낼 프로필을 결정합니다(배열, 맵 또는 개체와 같은 복잡한 형식 제외). 정렬된 값은 사전식 순서로 평가되고, 첫 번째 프로파일이 선택된다.
 
-* **예제 시나리오**:\
-  중복 제거 키가 `Email` 열인 다음 데이터를 고려하십시오.\
-  |전자 메일*|이름|성|타임스탬프|\
-  |—|—|—|—|\
-  |test1@test.com|John|Morris|2024-10-12T09:50|\
-  |test1@test.com|John|Doe|2024-10-12T09:50|\
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+* **예제 시나리오**
 
-  중복 제거 후 내보내기 파일에는 다음이 포함됩니다.\
-  |전자 메일*|이름|성|타임스탬프|\
-  |—|—|—|—|\
-  |test1@test.com|John|Doe|2024-10-12T09:50|\
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+중복 제거 키가 `Email` 열인 다음 데이터를 고려하십시오.
 
-  **설명**: `test1@test.com`의 경우 두 프로필이 동일한 중복 제거 키와 타임스탬프를 공유합니다. 알고리즘에서는 `first_name` 및 `last_name` 열 값을 사전순으로 정렬합니다. 이름이 같기 때문에 이 연결은 `last_name` 열을 사용하여 확인됩니다. 여기서 &quot;Doe&quot;는 &quot;Morris&quot; 앞에 옵니다.
+| 이메일* | first_name | last_name | 타임스탬프 |
+|---|---|---|---|  
+| `test1@test.com` | John | 모리스 | 2024-10-12T09:50 |
+| `test1@test.com` | John | Do | 2024-10-12T09:50 |
+| `test2@test.com` | 프랭크 | Smith | 2024-10-12T09:50 |
 
-* **안정성 향상**: 이 업데이트된 중복 제거 프로세스를 통해 좌표가 같은 연속 실행은 항상 동일한 결과를 만들어 일관성을 향상시킬 수 있습니다.
+{style="table-layout:auto"}
 
-### [!BADGE Beta]{type=Informative} 계산된 필드를 통해 배열 내보내기 {#export-arrays-calculated-fields}
+중복 제거 후 내보내기 파일에는 다음이 포함됩니다.
+
+| 이메일* | first_name | last_name | 타임스탬프 |
+|---|---|---|---|  
+| `test1@test.com` | John | Do | 2024-10-12T09:50 |
+| `test2@test.com` | 프랭크 | Smith | 2024-10-12T09:50 |
+
+{style="table-layout:auto"}
+
+**설명**: `test1@test.com`의 경우 두 프로필이 동일한 중복 제거 키와 타임스탬프를 공유합니다. 알고리즘에서는 `first_name` 및 `last_name` 열 값을 사전순으로 정렬합니다. 이름이 같기 때문에 이 연결은 `last_name` 열을 사용하여 확인됩니다. 여기서 &quot;Doe&quot;는 &quot;Morris&quot; 앞에 옵니다.
+
+**안정성 향상**: 이 업데이트된 중복 제거 프로세스를 통해 좌표가 같은 연속 실행은 항상 동일한 결과를 만들어 일관성을 향상시킬 수 있습니다.
+
+### 계산된 필드를 통해 배열 내보내기 {#export-arrays-calculated-fields}
 
 Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 어레이 개체를 내보낼 수 있습니다. [배열 및 계산된 필드 내보내기](/help/destinations/ui/export-arrays-calculated-fields.md)에 대해 자세히 알아보고 기능에 액세스하려면 Adobe 담당자에게 문의하십시오.
 
@@ -474,10 +481,10 @@ Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 
 
 >[!NOTE]
 >
-클라우드 스토리지 대상의 경우 기본적으로 다음 속성이 매핑에 추가됩니다.
+>클라우드 스토리지 대상의 경우 기본적으로 다음 속성이 매핑에 추가됩니다.
 >
-* `segmentMembership.seg_namespace.seg_id.status`
-* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+>* `segmentMembership.seg_namespace.seg_id.status`
+>* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
 
 파일 내보내기는 `segmentMembership.seg_namespace.seg_id.status`의 선택 여부에 따라 다음과 같이 달라집니다.
 
@@ -500,9 +507,9 @@ Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 
 
 >[!IMPORTANT]
 > 
-카탈로그의 모든 클라우드 저장소 대상은 이 섹션에 설명된 **[!UICONTROL 특성 선택]** 단계를 대체하는 개선된 [[!UICONTROL 매핑] 단계](#mapping)를 볼 수 있습니다.
+>카탈로그의 모든 클라우드 저장소 대상은 이 섹션에 설명된 **[!UICONTROL 특성 선택]** 단계를 대체하는 개선된 [[!UICONTROL 매핑] 단계](#mapping)를 볼 수 있습니다.
 >
-이 **[!UICONTROL 특성 선택]** 단계는 Adobe Campaign, Oracle Responsys, Oracle Eloqua 및 Salesforce Marketing Cloud 이메일 마케팅 대상에 대해 계속 표시됩니다.
+>이 **[!UICONTROL 특성 선택]** 단계는 Adobe Campaign, Oracle Responsys, Oracle Eloqua 및 Salesforce Marketing Cloud 이메일 마케팅 대상에 대해 계속 표시됩니다.
 
 프로필 기반 대상의 경우 대상 대상으로 전송할 프로필 속성을 선택해야 합니다.
 
@@ -522,15 +529,15 @@ Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 
 
 >[!NOTE]
 >
-Adobe Experience Platform은 스키마에서 일반적으로 사용되는 네 가지 권장 특성으로 선택을 미리 채웁니다. `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
+> Adobe Experience Platform은 스키마에서 일반적으로 사용되는 네 가지 권장 특성으로 선택을 미리 채웁니다. `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![대상자 활성화 워크플로의 매핑 단계에서 미리 채워진 권장 특성을 표시하는 이미지입니다.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-알려진 제한으로 인해 현재 **[!UICONTROL 필드 선택]** 창을 사용하여 `segmentMembership.seg_namespace.seg_id.status`을(를) 파일 내보내기에 추가할 수 없습니다. 대신 아래와 같이 `xdm: segmentMembership.seg_namespace.seg_id.status` 값을 스키마 필드에 수동으로 붙여넣어야 합니다.
+>알려진 제한으로 인해 현재 **[!UICONTROL 필드 선택]** 창을 사용하여 `segmentMembership.seg_namespace.seg_id.status`을(를) 파일 내보내기에 추가할 수 없습니다. 대신 아래와 같이 `xdm: segmentMembership.seg_namespace.seg_id.status` 값을 스키마 필드에 수동으로 붙여넣어야 합니다.
 >
-![활성화 워크플로의 매핑 단계에서 대상 멤버십 해결 방법을 보여 주는 화면 기록입니다.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![활성화 워크플로의 매핑 단계에서 대상 멤버십 해결 방법을 보여 주는 화면 기록입니다.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 파일 내보내기는 `segmentMembership.seg_namespace.seg_id.status`의 선택 여부에 따라 다음과 같이 달라집니다.
 * `segmentMembership.seg_namespace.seg_id.status` 필드를 선택하면 내보낸 파일에는 초기 전체 스냅숏에 **[!UICONTROL Active]** 구성원이 포함되고 후속 증분 내보내기에 **[!UICONTROL Active]** 및 **[!UICONTROL Expired]** 구성원이 포함됩니다.
@@ -538,14 +545,14 @@ Adobe Experience Platform은 스키마에서 일반적으로 사용되는 네 �
 
 ## 보강 속성 선택 {#select-enrichment-attributes}
 
-[!CONTEXTUALHELP]
-id="platform_destinations_activate_exclude_enrichment_attributes"
-title="보강 속성 제외"
-abstract="모든 속성을 제외하고 선택한 사용자 정의 업로드된 대상자의 프로필을 대상으로 내보내려면 이 옵션을 활성화합니다."
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exclude_enrichment_attributes"
+>title="보강 속성 제외"
+>abstract="모든 속성을 제외하고 선택한 사용자 정의 업로드된 대상자의 프로필을 대상으로 내보내려면 이 옵션을 활성화합니다."
 
 >[!IMPORTANT]
 >
-이 단계는 [대상자 선택](#select-audiences) 단계 동안 **[!UICONTROL 사용자 지정 업로드]**&#x200B;대상자를 선택한 경우에만 표시됩니다.
+>이 단계는 [대상자 선택](#select-audiences) 단계 동안 **[!UICONTROL 사용자 지정 업로드]**&#x200B;대상자를 선택한 경우에만 표시됩니다.
 
 데이터 보강 속성은 **[!UICONTROL 사용자 지정 업로드]**(으)로 Experience Platform에서 수집된 사용자 지정 업로드 대상자에 해당합니다. 이 단계에서는 선택한 각 외부 대상에 대해 대상으로 내보낼 속성을 선택할 수 있습니다.
 
@@ -572,12 +579,12 @@ abstract="모든 속성을 제외하고 선택한 사용자 정의 업로드된 
 
 >[!NOTE]
 > 
-데이터 사용 레이블이 전체 데이터 세트가 아닌 데이터 세트 내의 특정 필드에 적용된 경우 다음 조건에서 활성화에 대한 해당 필드 수준 레이블을 적용합니다.
+>데이터 사용 레이블이 전체 데이터 세트가 아닌 데이터 세트 내의 특정 필드에 적용된 경우 다음 조건에서 활성화에 대한 해당 필드 수준 레이블을 적용합니다.
 >
-* 필드는 대상 정의에 사용됩니다.
-* 필드는 대상 대상에 대한 예상 속성으로 구성됩니다.
+>* 필드는 대상 정의에 사용됩니다.
+>* 필드는 대상 대상에 대한 예상 속성으로 구성됩니다.
 >
-예를 들어 `person.name.firstName` 필드에 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있는 경우 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은 [Adobe Experience Platform의 데이터 거버넌스](../../rtcdp/privacy/data-governance-overview.md#destinations)를 참조하십시오.
+> 예를 들어 `person.name.firstName` 필드에 대상의 마케팅 작업과 충돌하는 특정 데이터 사용 레이블이 있는 경우 검토 단계에서 데이터 사용 정책 위반이 표시됩니다. 자세한 내용은 [Adobe Experience Platform의 데이터 거버넌스](../../rtcdp/privacy/data-governance-overview.md#destinations)를 참조하십시오.
 
 **[!UICONTROL 검토]** 페이지에서 선택한 항목에 대한 요약을 볼 수 있습니다. 흐름을 중단하려면 **[!UICONTROL 취소]**&#x200B;를 선택하고, 설정을 수정하려면 **[!UICONTROL 뒤로]**&#x200B;를 선택하고, 선택을 확인하고 데이터를 대상으로 보내려면 **[!UICONTROL 완료]**&#x200B;를 선택하십시오.
 
@@ -585,10 +592,10 @@ abstract="모든 속성을 제외하고 선택한 사용자 정의 업로드된 
 
 ### 동의 정책 평가 {#consent-policy-evaluation}
 
-[!CONTEXTUALHELP]
-id="platform_governance_policies_viewApplicableConsentPolicies"
-title="해당 동의 정책 보기"
-abstract="조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;를 구매한 경우 **[!UICONTROL 해당 동의 정책 보기]**&#x200B;를 선택하여 적용된 동의 정책을 조회하고 그 결과로 활성화에 포함된 프로필 수를 확인합니다. 기업이 위에서 언급한 SKU에 액세스할 수 없는 경우 이 컨트롤은 비활성화됩니다."
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="해당 동의 정책 보기"
+>abstract="조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;를 구매한 경우 **[!UICONTROL 해당 동의 정책 보기]**&#x200B;를 선택하여 적용된 동의 정책을 조회하고 그 결과로 활성화에 포함된 프로필 수를 확인합니다. 기업이 위에서 언급한 SKU에 액세스할 수 없는 경우 이 컨트롤은 비활성화됩니다."
 
 조직에서 **Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;를 구매한 경우 **[!UICONTROL 해당 동의 정책 보기]**&#x200B;를 선택하여 적용된 동의 정책을 조회하고 그 결과로 활성화에 포함된 프로필 수를 확인합니다. 자세한 내용은 [동의 정책 평가](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)를 참조하세요.
 
