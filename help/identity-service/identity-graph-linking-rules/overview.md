@@ -2,9 +2,9 @@
 title: ID 그래프 연결 규칙
 description: ID 서비스의 ID 그래프 연결 규칙에 대해 알아봅니다.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 42c2b2afff49422a539d573280e9bc3f30369c3f
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1436'
 ht-degree: 3%
 
 ---
@@ -29,17 +29,16 @@ Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용�
 * [그래프 시뮬레이션 UI](./graph-simulation.md)
 * [ID 설정 UI](./identity-settings-ui.md)
 
-## 그래프 축소가 발생할 수 있는 예시 시나리오 {#example-scenarios-where-graph-collapse-could-happen}
-
-이 섹션에서는 ID 그래프 연결 규칙을 구성할 때 고려할 수 있는 예제 시나리오를 간략하게 설명합니다.
-
-### 공유 장치 {#shared-device}
+## 그래프 축소 시나리오 {#graph-collapse-scenarios}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
 >title="그래프 축소 시나리오"
 >abstract="그래프가 “축소”되거나 여러 개인 엔티티를 나타내는 데에는 다양한 이유가 있습니다."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/overview" text="자세히 알아보기"
+
+이 섹션에서는 ID 그래프 연결 규칙을 구성할 때 고려할 수 있는 예제 시나리오를 간략하게 설명합니다.
+
+### 공유 장치
 
 단일 디바이스에서 여러 로그인이 발생할 수 있는 인스턴스가 있습니다.
 

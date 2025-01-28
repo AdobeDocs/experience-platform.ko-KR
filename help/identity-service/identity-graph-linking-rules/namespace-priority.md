@@ -2,10 +2,10 @@
 title: 네임스페이스 우선순위
 description: ID 서비스의 네임스페이스 우선 순위에 대해 알아봅니다.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1804'
-ht-degree: 3%
+source-wordcount: '1801'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,6 @@ ht-degree: 3%
 >id="platform_identities_namespacepriority"
 >title="네임스페이스 우선 순위"
 >abstract="네임스페이스 우선순위는 ID 그래프에서 링크가 제거되는 방식을 결정합니다."
->additional-url="http://www.adobe.com/go/identity-namespace-priority" text="자세히 알아보기"
 
 >[!AVAILABILITY]
 >

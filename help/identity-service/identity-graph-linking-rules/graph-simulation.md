@@ -2,9 +2,9 @@
 title: 그래프 시뮬레이션 UI 안내서
 description: ID 서비스 UI에서 그래프 시뮬레이션을 사용하는 방법을 알아봅니다.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1461'
+source-wordcount: '1458'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 2%
 >id="platform_identities_graphsimulation"
 >title="그래프 시뮬레이션"
 >abstract="그래프를 시뮬레이션하여 ID 서비스가 ID를 연결하는 방식과 ID 최적화 알고리즘이 작동하는 방식을 파악하십시오."
->additional-url="http://www.adobe.com/go/identity-graph-simulation" text="자세히 알아보기"
 
 >[!AVAILABILITY]
 >

@@ -2,10 +2,10 @@
 title: ID 최적화 알고리즘
 description: ID 서비스의 ID 최적화 알고리즘에 대해 알아봅니다.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1563'
-ht-degree: 2%
+source-wordcount: '1560'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,6 @@ ht-degree: 2%
 >id="platform_identities_uniquenamespace"
 >title="고유 네임스페이스"
 >abstract="그래프에는 고유한 네임스페이스를 가진 두 개의 ID가 있을 수 없습니다. 그래프가 이 제한을 초과하려고 하면 가장 최근 링크가 유지되고 가장 오래된 링크가 제거됩니다."
->additional-url="http://www.adobe.com/go/identity-ido-algo" text="자세히 알아보기"
 
 >[!AVAILABILITY]
 >

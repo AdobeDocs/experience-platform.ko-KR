@@ -2,9 +2,9 @@
 title: ID 서비스 연결 논리
 description: ID 서비스에서 다양한 ID를 연결하여 고객에 대한 포괄적인 보기를 만드는 방법에 대해 알아봅니다.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 627b2e5ecde28b26e7d4717e13713c38c3c09651
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '968'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 2%
 >id="platform_identities_simulatedgraph"
 >title="시뮬레이션된 그래프"
 >abstract="ID 네임스페이스와 ID 값이 일치하면 ID가 연결됩니다."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-linking-logic" text="자세히 알아보기"
 
 ID 네임스페이스와 ID 값이 일치하면 두 ID 간의 링크가 설정됩니다.
 
