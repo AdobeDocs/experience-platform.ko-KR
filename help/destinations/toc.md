@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: e916488be3d10e47193e66c1f9516cb5da93c3a7
 workflow-type: tm+mt
-source-wordcount: '1271'
+source-wordcount: '1270'
 ht-degree: 5%
 
 ---
@@ -103,7 +103,7 @@ ht-degree: 5%
       * [PubMatic 연결](./catalog/advertising/pubmatic.md)
       * [Snapchat Ads 연결](./catalog/advertising/snap-inc.md)
       * [트레이드 데스크 연결](./catalog/advertising/tradedesk.md)
-      * [(Beta) 트레이드 데스크 CRM 연결](./catalog/advertising/tradedesk-emails.md)
+      * [트레이드 데스크 CRM 연결](./catalog/advertising/tradedesk-emails.md)
       * [Twitter 범용 웹 사이트 태그 확장](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX 연결](./catalog/advertising/datax.md)
    * Analytics 대상 {#analytics}

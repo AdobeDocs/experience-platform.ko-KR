@@ -1,30 +1,28 @@
 ---
-title: (Beta) 트레이드 데스크 - CRM 연결
+title: 트레이드 데스크 - CRM 연결
 description: CRM 데이터를 기반으로 대상 타기팅 및 억제에 대한 프로필을 트레이드 데스크 계정에 활성화합니다.
-last-substantial-update: 2023-01-25T00:00:00Z
+last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 3c645ccf5b9dd17e4c3cc1267b60a9c4f1131668
+source-git-commit: a189a86749996c0ee7b6146bcd030d8495745e12
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1117'
 ht-degree: 5%
 
 ---
 
-# (Beta) [!DNL Trade Desk] - CRM 연결
+# [!DNL Trade Desk] - CRM 연결
 
 >[!IMPORTANT]
->
->Platform의 [!DNL The Trade Desk - CRM] 대상이 현재 Beta 상태입니다. 설명서 및 기능은 변경될 수 있습니다.
 >
 >EUID(유럽 통합 ID)가 출시되면서 이제 두 개의 [!DNL The Trade Desk - CRM] 대상이 [대상 카탈로그](/help/destinations/catalog/overview.md)에 표시됩니다.
 >* EU에서 소스 데이터를 제공하는 경우 **[!DNL The Trade Desk - CRM (EU)]** 대상을 사용하십시오.
 >* APAC 또는 NAMER 지역에서 소스 데이터를 제공하는 경우 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 대상을 사용하십시오.
 >
->Experience Platform의 두 대상 모두 현재 베타 버전입니다. 이 대상 커넥터 및 설명서 페이지는 *[!DNL Trade Desk]* 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 [!DNL Trade Desk] 담당자에게 문의하십시오. 문서와 기능은 변경될 수 있습니다.
+>이 대상 커넥터 및 설명서 페이지는 *[!DNL Trade Desk]* 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 [!DNL Trade Desk] 담당자에게 문의하십시오.
 
 ## 개요 {#overview}
 
-이 문서는 CRM 데이터를 기반으로 대상 타기팅 및 제외를 위해 [!DNL Trade Desk] 계정에 대한 프로필을 활성화하는 데 도움이 되도록 설계되었습니다.
+CRM 데이터를 기반으로 대상 타기팅 및 제외를 위해 [!DNL Trade Desk] 계정에 프로필을 활성화하는 방법을 이해합니다.
 
 이 커넥터는 [!DNL The Trade Desk] 자사 끝점으로 데이터를 보냅니다. Adobe Experience Platform과 [!DNL The Trade Desk] 간의 통합은 [!DNL The Trade Desk] 타사 끝점으로 데이터 내보내기를 지원하지 않습니다.
 
@@ -36,7 +34,9 @@ ht-degree: 5%
 
 ## 전제 조건 {#prerequisites}
 
-[!DNL The Trade Desk]에 대한 대상을 활성화하려면 먼저 [!DNL The Trade Desk] 계정 관리자에게 문의하여 CRM 온보딩 계약에 서명해야 합니다. 그러면 [!DNL The Trade Desk]에서 권한을 부여하고 광고주 ID를 공유하여 대상을 구성합니다.
+>[!IMPORTANT]
+>
+>트레이드 데스크에 대상자를 활성화하려면 먼저 [!DNL Trade Desk] 계정 관리자에게 문의하여 CRM 온보딩 계약에 서명해야 합니다. [!DNL The Trade Desk]에서 UID2/EUID를 사용할 수 있도록 설정하고 대상을 구성하는 데 도움이 되는 기타 세부 정보를 공유합니다.
 
 ## ID 일치 요구 사항 {#id-matching-requirements}
 
