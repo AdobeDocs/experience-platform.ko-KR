@@ -2,14 +2,20 @@
 title: 그래프 구성의 예
 description: ID 그래프 연결 규칙 및 ID 데이터 작업 시 발생할 수 있는 일반적인 그래프 시나리오에 대해 알아봅니다.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '2783'
+source-wordcount: '2799'
 ht-degree: 6%
 
 ---
 
-# 그래프 구성의 예
+# 그래프 구성의 예 {#examples-of-graph-configurations}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_algorithmconfiguration"
+>title="알고리즘 구성"
+>abstract="수집한 ID에 맞게 고유한 네임스페이스와 네임스페이스 우선순위를 구성하십시오."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/example-configurations" text="자세히 알아보기"
 
 >[!AVAILABILITY]
 >

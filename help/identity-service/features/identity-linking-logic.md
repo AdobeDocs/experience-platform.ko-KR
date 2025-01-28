@@ -2,14 +2,20 @@
 title: ID 서비스 연결 논리
 description: ID 서비스에서 다양한 ID를 연결하여 고객에 대한 포괄적인 보기를 만드는 방법에 대해 알아봅니다.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
+source-git-commit: 627b2e5ecde28b26e7d4717e13713c38c3c09651
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '971'
 ht-degree: 2%
 
 ---
 
-# ID 서비스 연결 논리
+# ID 서비스 연결 논리 {#identity-service-linking-logic}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_simulatedgraph"
+>title="시뮬레이션된 그래프"
+>abstract="ID 네임스페이스와 ID 값이 일치하면 ID가 연결됩니다."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-linking-logic" text="자세히 알아보기"
 
 ID 네임스페이스와 ID 값이 일치하면 두 ID 간의 링크가 설정됩니다.
 
@@ -29,12 +35,7 @@ ID는 실제 엔티티를 나타냅니다. 두 ID 사이에 링크가 설정되�
 | 최종 사용자는 Google Chrome을 사용하여 로그인한 다음 Firefox를 사용하여 로그인합니다. | CRMID는 두 개의 다른 ECID에 연결됩니다. | 사용자(CRMID)가 2개의 웹 브라우저에 연결되어 있습니다(**참고**: 각 브라우저에는 고유한 ECID가 있음). |
 | 데이터 엔지니어는 ID로 표시된 두 개의 필드(CRMID 및 이메일)가 포함된 CRM 레코드를 수집합니다. | CRMID와 이메일이 연결되어 있습니다. | 개인(CRMID)은 이메일 주소와 연결됩니다. |
 
-## ID 서비스 연결 논리 이해 {#identity-linking-logic}
-
->[!CONTEXTUALHELP]
->id="platform_identities_simulatedgraph"
->title="시뮬레이션된 그래프"
->abstract="ID 네임스페이스와 ID 값이 일치하면 ID가 연결됩니다."
+## ID 서비스 연결 논리 이해
 
 ID는 ID 네임스페이스와 ID 값으로 구성됩니다.
 

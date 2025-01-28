@@ -2,14 +2,20 @@
 title: 그래프 시뮬레이션 UI 안내서
 description: ID 서비스 UI에서 그래프 시뮬레이션을 사용하는 방법을 알아봅니다.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1484'
-ht-degree: 4%
+source-wordcount: '1461'
+ht-degree: 2%
 
 ---
 
-# [!DNL Graph Simulation] UI 안내서
+# [!DNL Graph Simulation] UI 안내서 {#graph-simulation}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="그래프 시뮬레이션"
+>abstract="그래프를 시뮬레이션하여 ID 서비스가 ID를 연결하는 방식과 ID 최적화 알고리즘이 작동하는 방식을 파악하십시오."
+>additional-url="http://www.adobe.com/go/identity-graph-simulation" text="자세히 알아보기"
 
 >[!AVAILABILITY]
 >
@@ -50,12 +56,6 @@ Adobe Experience Platform UI에서 [!DNL Graph Simulation]에 액세스할 수 �
 >[!ENDTABS]
 
 ## 이벤트 추가 {#add-events}
-
->[!CONTEXTUALHELP]
->id="platform_identities_graphsimulation"
->title="그래프 시뮬레이션"
->abstract="그래프를 시뮬레이션하여 ID 서비스가 ID를 연결하는 방식과 ID 최적화 알고리즘이 작동하는 방식을 파악하십시오."
->text="Learn more in documentation"
 
 시작하려면 **[!UICONTROL 이벤트 추가]**&#x200B;를 선택하세요.
 
@@ -132,16 +132,6 @@ Adobe Experience Platform UI에서 [!DNL Graph Simulation]에 액세스할 수 �
 ![이벤트 삭제 아이콘을 선택했습니다.](../images/graph-simulation/delete.png)
 
 ## 알고리즘 구성 {#configure-algorithm}
-
->[!CONTEXTUALHELP]
->id="platform_identities_algorithmconfiguration"
->title="알고리즘 구성"
->abstract="수집한 ID에 맞게 고유한 네임스페이스와 네임스페이스 우선순위를 구성하십시오."
-
->[!CONTEXTUALHELP]
->id="platform_identities_namespacepriority"
->title="네임스페이스 우선 순위"
->abstract="네임스페이스 우선순위는 ID 그래프에서 링크가 제거되는 방식을 결정합니다."
 
 >[!IMPORTANT]
 >

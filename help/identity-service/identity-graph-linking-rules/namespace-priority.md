@@ -2,14 +2,20 @@
 title: 네임스페이스 우선순위
 description: ID 서비스의 네임스페이스 우선 순위에 대해 알아봅니다.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 3efbb9614f08a74ad33eb1fbb4861c34c762b66b
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 2%
+source-wordcount: '1804'
+ht-degree: 3%
 
 ---
 
-# 네임스페이스 우선순위
+# 네임스페이스 우선순위 {#namespace-priority}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="네임스페이스 우선 순위"
+>abstract="네임스페이스 우선순위는 ID 그래프에서 링크가 제거되는 방식을 결정합니다."
+>additional-url="http://www.adobe.com/go/identity-namespace-priority" text="자세히 알아보기"
 
 >[!AVAILABILITY]
 >
@@ -155,7 +161,7 @@ ID 설정이 활성화된 경우 계산된 속성은 네임스페이스 우선 �
 
 ### 데이터 레이크
 
-데이터 레이크에 대한 데이터 수집은 [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) 및 스키마에 구성된 기본 ID 설정을 계속 적용합니다.
+데이터 레이크에 대한 데이터 수집은 [웹 SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) 및 스키마에 구성된 기본 ID 설정을 계속 적용합니다.
 
 데이터 레이크는 네임스페이스 우선 순위를 기반으로 기본 ID를 결정하지 않습니다. 예를 들어 Adobe Customer Journey Analytics은 Customer Journey Analytics이 데이터 레이크의 데이터를 소비하므로 네임스페이스 우선 순위가 활성화된 후에도(예: 새 연결에 데이터 세트 추가) ID 맵에서 값을 계속 사용합니다.
 
