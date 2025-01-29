@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 개인 데이터 유형
 description: XDM(개인 경험 데이터 모델) 데이터 유형에 대해 알아봅니다.
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '322'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 [!UICONTROL Person]은(는) 개별 사용자를 설명하는 표준 경험 데이터 모델(XDM) 데이터 형식입니다. 이 데이터 유형은 고객, 연락처 또는 소유자와 같은 다양한 역할을 수행하는 사람을 나타낼 수 있습니다.
 
-<img src="../images/data-types/person.PNG" width="500" /><br />
+![개인 이미지](../images/data-types/person.PNG){width=500}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

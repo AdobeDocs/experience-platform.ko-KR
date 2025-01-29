@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 웹 페이지 세부 정보 데이터 유형
 description: 웹 페이지 세부 사항 XDM(Experience Data Model) 데이터 유형에 대해 알아봅니다.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '386'
 ht-degree: 11%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 11%
 
 데이터 유형은 단일 페이지 웹 애플리케이션(SPA)의 전체 페이지 세부 사항 및 초기 페이지 로드를 위한 것입니다. 새 페이지 로드를 트리거하지 않는 로드된 페이지에서 발생하는 상호 작용의 경우 [웹 상호 작용](./web-interaction.md) 데이터 형식을 참조하십시오.
 
-<img src="../images/data-types/web-page-details.PNG" width="500" /><br />
+![웹 페이지 세부 정보](../images/data-types/web-page-details.PNG){width="500"}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

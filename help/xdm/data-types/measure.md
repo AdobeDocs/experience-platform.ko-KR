@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 측정값 데이터 유형
 description: XDM(측정 경험 데이터 모델) 데이터 유형에 대해 알아봅니다.
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '208'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 [!UICONTROL 측정값]은(는) 특정 지표의 구체적인 수량 가능한 데이터 포인트를 포함하는 표준 경험 데이터 모델(XDM) 데이터 형식입니다. 측정값은 고유 식별자와 값으로 구성됩니다.
 
-<img src="../images/data-types/measure.PNG" width="500" /><br />
+![이미지 측정](../images/data-types/measure.PNG){width=500}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

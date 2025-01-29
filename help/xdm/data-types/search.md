@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 데이터 유형 검색
 description: XDM(검색 경험 데이터 모델) 데이터 유형에 대해 알아봅니다.
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 11%
+source-wordcount: '164'
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 11%
 
 [!UICONTROL Search]은(는) 웹 검색 활동에 대한 정보가 포함된 표준 XDM(경험 데이터 모델) 데이터 형식입니다.
 
-<img src="../images/data-types/search.PNG" width="500" /><br />
+![이미지 검색](../images/data-types/search.PNG){width=500}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 애플리케이션 데이터 유형
 description: XDM(애플리케이션 경험 데이터 모델) 데이터 유형에 대해 알아봅니다.
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '420'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 [!UICONTROL Application]은(는) 응용 프로그램에서 생성된 상호 작용과 관련된 세부 정보를 설명하는 표준 XDM(경험 데이터 모델) 데이터 형식입니다. 애플리케이션은 최종 사용자가 설치, 실행, 종료 또는 제거할 수 있는 모바일 또는 데스크탑 애플리케이션과 같은 소프트웨어 경험을 의미합니다. 이 데이터 유형의 속성은 챗봇, 브라우저 기반 플러그인 또는 애플리케이션에 적용되지 않는 기타 경험과 같은 에이전트를 설명하기 위한 것이 아닙니다.
 
-<img src="../images/data-types/application.PNG" width="500" /><br />
+![응용 프로그램 이미지](../images/data-types/application.PNG){width=500}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 결제 항목 데이터 유형
 description: 결제 항목 경험 데이터 모델(XDM) 데이터 유형에 대해 알아봅니다.
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 15%
+source-wordcount: '144'
+ht-degree: 14%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 15%
 
 [!UICONTROL 결제 항목]은(는) 결제 유형, 금액 및 관련 통화를 정의하는 주문과 관련된 결제를 설명하는 표준 경험 데이터 모델(XDM) 데이터 형식입니다.
 
-<img src="../images/data-types/payment-item.PNG" width="400" /><br />
+![결제 항목 이미지](../images/data-types/payment-item.PNG){width=400}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

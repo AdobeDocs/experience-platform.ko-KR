@@ -6,9 +6,9 @@ title: Attribution AI 오류 문제 해결
 description: Attribution AI에서 일반적인 오류에 대한 답변을 찾아보십시오.
 type: Documentation
 exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Google Chrome의 시크릿 모드 보안 설정의 업데이트로 인해 Google Chrome의 시크릿 모드에서 로드 오류가 발생합니다. experience.adobe.com 을 신뢰할 수 있는 도메인으로 만들기 위해 Chrome과 함께 문제가 활발하게 진행되고 있습니다.
 
-<img src="./images/faq/error.PNG" width="500" /><br />
+![오류 이미지](./images/faq/error.PNG){width=500}
 
 ### 권장 수정 사항
 
