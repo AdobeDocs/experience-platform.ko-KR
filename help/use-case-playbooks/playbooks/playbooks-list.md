@@ -4,9 +4,9 @@ title: Real-time Customer Data Platform 및 Adobe Journey Optimizer에 사용 �
 description: Real-time Customer Data Platform 및 Adobe Journey Optimizer의 모든 플레이북 목록입니다.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 5b1209ed96c78810b6bd7489825b19496d8b0b6a
+source-git-commit: 0cfe3e87ae4f9e8dc9ad53e9acb096efb590b72d
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '955'
 ht-degree: 2%
 
 ---
@@ -65,9 +65,9 @@ Real-time Customer Data Platform 및 Adobe Journey Optimizer에서 검색하고 
 
 | 플레이북 이름 | 설명 |
 | ------------- | ----------- |
-| 구매하지 않은 검색: 상품—활성화 | 제품을 장바구니에 추가한 후 웹 사이트 또는 앱을 떠난 후 팬을 재타겟팅합니다. |
-| 포기한 찾아보기: 제품 - 활성화용 | 장바구니에 제품을 추가한 후 웹 사이트 또는 앱을 떠난 쇼핑객을 재타겟팅합니다. |
-| 포기한 검색: 예약 - 활성화 | 고객이 웹 사이트 또는 앱을 떠난 후 장바구니에 새 예약을 추가한 후 고객을 재타겟팅합니다. |
+| 구매하지 않은 검색: 상품—활성화 | 제품을 탐색한 후 웹 사이트 또는 앱을 떠난 후 팬을 재타겟팅합니다. |
+| 포기한 찾아보기: 제품 - 활성화용 | 구매자가 제품을 탐색한 후 웹 사이트 또는 앱을 떠난 후 재타겟팅합니다. |
+| 포기한 검색: 예약 - 활성화 | 잠재적인 예약을 탐색한 후 웹 사이트 또는 앱을 떠난 고객을 재타겟팅합니다. |
 | 포기한 장바구니: 상품 - 활성화용 | 스포츠 상품을 장바구니에 추가한 후 웹 사이트 또는 앱을 떠난 후 팬을 재타겟팅합니다. |
 | 포기한 장바구니: 제품 - 활성화용 | 장바구니에 제품을 추가한 후 웹 사이트 또는 앱을 떠난 쇼핑객을 재타겟팅합니다. |
 | 포기한 장바구니: 예약 - 활성화 | 고객이 웹 사이트 또는 앱을 떠난 후 장바구니에 새 예약을 추가한 후 고객을 재타겟팅합니다. |
