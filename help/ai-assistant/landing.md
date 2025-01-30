@@ -3,9 +3,9 @@ title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant를 시작합니다.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 8022195e755df92b7ceacea52214f81593994e2a
+source-git-commit: 96e138cc12fdedaa73e3aaf69341806271413680
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '851'
 ht-degree: 1%
 
 ---
@@ -144,6 +144,14 @@ AI Assistant에 대한 개요는 다음 비디오를 참조하십시오.
 다음 비디오를 시청하여 데이터 개체가 변경되기 전에 AI Assistant를 사용하여 보다 효과적인 영향 분석을 실행하는 방법에 대해 알아보십시오.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441680/?learn=on)
+
+### 고객 지원을 위해 AI Assistant 사용
+
+다음 비디오를 시청하여 고객 지원에서 AI Assistant를 사용하여 워크플로를 종료하지 않고 문제를 원활하게 해결하는 방법에 대해 알아보십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+
+자세한 내용은 [고객 지원을 위해 AI Assistant 사용](./new-features/customer-support.md)에 대한 설명서를 참조하십시오.
 
 ## AI Assistant 사용 사례 라이브러리
 
