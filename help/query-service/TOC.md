@@ -5,9 +5,9 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: 20869e76976ff3868f1d4dbc7c6d97b58682e5c3
+source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '402'
 ht-degree: 21%
 
 ---
@@ -23,6 +23,7 @@ ht-degree: 21%
 - 데이터 Distiller {#data-distiller}
    - [개요](data-distiller/overview.md)
    - [라이선스 사용](data-distiller/license-usage.md)
+   - [값을 극대화하기 위한 주요 팁](data-distiller/top-tips-to-maximize-value.md)
    - 파생 데이터 세트 {#derived-datasets}
       - [개요](data-distiller/derived-datasets/overview.md)
       - [SQL을 사용하여 파생 데이터 세트 만들기](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -44,12 +45,12 @@ ht-degree: 21%
    - [기능 엔지니어링](advanced-statistics/feature-engineering.md)
    - [모델](advanced-statistics/models.md)
    - [기능 변환](advanced-statistics/feature-transformation.md)
-모델 {#implement-models} 구현
+   - {#implement-models} 모델 구현
       - [모델 구현](advanced-statistics/implement-models/implement-models.md)
       - [회귀](advanced-statistics/implement-models/regression.md)
       - [분류](advanced-statistics/implement-models/classification.md)
       - [클러스터링](advanced-statistics/implement-models/clustering.md)
-예제 {#examples}
+   - 예 {#examples}
       - [통계 및 머신 러닝을 사용한 보트 필터링](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [SQL 기반 로지스틱 회귀 분석을 사용하여 고객 이탈 예측](advanced-statistics/examples/predict-customer-churn.md)
 - 데이터 Distiller 대상 {#data-distiller-audiences}
