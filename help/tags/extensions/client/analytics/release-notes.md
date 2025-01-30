@@ -2,10 +2,10 @@
 title: Adobe Analytics 확장 기능 릴리스 노트
 description: Adobe Experience Platform의 Adobe Analytics 태그 확장 기능에 대한 최신 릴리스 정보입니다.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: c783906b20db2b86d58aea7b3a94bde007c0a465
+source-git-commit: 5f4e157a39bf927b3821931d55f968862b2ed16d
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 68%
+source-wordcount: '1524'
+ht-degree: 65%
 
 ---
 
@@ -17,6 +17,14 @@ ht-degree: 68%
 >
 >Analytics 태그 확장(종종 [AppMeasurement JavaScript 라이브러리](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ko-KR) 업데이트에 대한 응답으로 업데이트되는 경우). 아래 언급된 특정 버전에 대한 자세한 내용은 [AppMeasurement 릴리스 정보](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=ko-KR)를 참조하세요.
 
+## 2024년 10월 28일
+
+**Adobe Analytics 확장 1.9.6**
+
+**기능**:
+
+* 사용자가 [변수 설정 작업](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables)의 JSON 버전을 보고 편집할 수 있는 새 기능이 추가되었습니다. Adobe 웹 SDK 확장 기능에는 JSON을 제공하여 [분석 변수를 채우기](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types)하는 작업도 포함됩니다. 마이그레이션 중인 고객은 AA 확장에서 웹 SDK 확장으로 JSON 데이터를 복사함으로써 각 변수를 수동으로 추가하는 대신 여러 설정을 한 번에 쉽게 전송할 수 있습니다.
+
 ## 2024년 8월 12일
 
 **Adobe Analytics 확장 1.9.5**
@@ -25,7 +33,7 @@ ht-degree: 68%
 
 * [AppMeasurement을 v2.27.0](https://github.com/adobe/appmeasurement/releases/tag/v2.27.0)(으)로 업그레이드했습니다.
 
-## 2024년 3월 4일
+## 2024년 3월 4일 화요일
 
 **Adobe Analytics 확장 1.9.4**
 
@@ -42,7 +50,7 @@ ht-degree: 68%
 * [AppMeasurement을 v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0)(으)로 업그레이드했습니다.
 
 
-## 2023년 7월 19일
+## 2023년 7월 19일 목요일
 
 **Adobe Analytics 확장 1.9.2**
 
@@ -65,7 +73,7 @@ ht-degree: 68%
 * AppMeasurement v2.23.0으로 업그레이드되었습니다.
 * 이제 확장은 최신 버전의 AppMeasurement에서 지원하는 높은 엔트로피 [사용자 에이전트 클라이언트 힌트](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)를 수집할 수 있습니다.
 
-## 2022년 2월 28일
+## 2022년 2월 28일 화요일
 
 **Adobe Analytics 확장 1.9.0**
 
@@ -73,7 +81,7 @@ ht-degree: 68%
 
 * AppMeasurement에서 일부 디버그 문을 제거했습니다.
 
-## 2021년 11월 29일 화요일
+## 2021년 11월 29일
 
 **Adobe Analytics 확장 1.8.8**
 
