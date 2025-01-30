@@ -2,9 +2,9 @@
 title: 샌드박스 도구를 사용하여 객체 구성 백업
 description: 샌드박스를 안전하게 재설정하고 버전 관리 지원을 추가하려면 샌드박스 도구 패키지를 사용하여 객체 구성(또는 메타데이터)을 백업합니다. 백업 패키지는 특히 개발 반복 시 스키마, 데이터 세트 및 대상자와 같은 중요한 구성의 손실을 방지합니다.
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: 2a700788d9b59bcdb4195e34d77eccd278803d42
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1166'
 ht-degree: 3%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 샌드박스를 안전하게 재설정하고 버전 관리 지원을 추가하려면 샌드박스 도구 패키지를 사용하여 객체 구성(또는 메타데이터)을 백업합니다. 백업 패키지는 특히 개발 반복 시 스키마, 데이터 세트 및 대상자와 같은 중요한 구성의 손실을 방지합니다.
 
-![샌드박스 도구의 이점을 보여 주는 개요](../images/use-cases/tooling-overview.png)
+![샌드박스 도구의 이점을 보여 주는 개요](../images/use-cases/tooling-overview.png){zoomable="yes"}
 
 ## 이 사용 사례를 고려하는 이유 {#why-this-use-case}
 

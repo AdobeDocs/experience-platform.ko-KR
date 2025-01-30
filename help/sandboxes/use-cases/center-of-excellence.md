@@ -1,10 +1,11 @@
 ---
 title: 샌드박스 툴링을 사용하여 전문가 중심 활성화
 description: 여러 샌드박스 간에 모범 사례를 표준화하는 "골든 샌드박스" 패키지를 만들어 샌드박스 도구를 사용하여 모범 사례를 활성화합니다.
-source-git-commit: f0cbee2663682f0afae6d7e4b174f250fcb3df53
+exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '881'
+ht-degree: 7%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 여러 샌드박스 간에 모범 사례를 표준화하는 &quot;골든 샌드박스&quot; 패키지를 만들어 샌드박스 도구를 사용하여 모범 사례를 활성화합니다.
 
-![다른 조직에 패키지 내보내기 개요](../images/use-cases/packages-across-orgs.png)
+![다른 조직에 패키지 내보내기 개요](../images/use-cases/packages-across-orgs.png){zoomable="yes"}
 
 ## 이 사용 사례를 고려하는 이유 {#why-this-use-case}
 
