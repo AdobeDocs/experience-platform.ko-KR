@@ -2,10 +2,10 @@
 title: Adobe Target v2 확장 개요
 description: Adobe Experience Platform의 Adobe Target v2 태그 확장 기능에 대해 알아봅니다.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 5b88692117c984cd6331e7886d5bf0846309acee
 workflow-type: tm+mt
-source-wordcount: '1318'
-ht-degree: 58%
+source-wordcount: '1351'
+ht-degree: 60%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
 이 확장을 사용하여 규칙을 작성할 때 사용할 수 있는 옵션에 대한 정보를 보려면 이 참조를 사용하십시오.
 
@@ -71,9 +71,11 @@ Target 확장은 규칙의 Then 부분에서 다음 작업을 제공합니다.
 
 ### 온디바이스 의사 결정으로 Target 로드
 
-규칙 컨텍스트에서 [온디바이스 의사 결정](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html)을 사용하도록 설정한 Target을 로드하는 것이 적절할 수 있는 태그 규칙에 이 작업을 추가합니다. 온디바이스 의사 결정이 활성화된 at.js 라이브러리가 페이지에 로드됩니다. 대부분의 구현에서 사이트의 모든 페이지에 Target을 로드해야 합니다. Adobe은 Target 호출 앞에 온디바이스 의사 결정 작업이 있는 경우에만 Target 로드를 사용하는 것을 권장합니다. 그렇지 않으면 Analytics 호출이 지연되는 것과 같은 문제가 발생할 수 있습니다.
+규칙 컨텍스트에서 [온디바이스 의사 결정](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html)을 사용하도록 설정한 Target을 로드하는 것이 적절할 수 있는 태그 규칙에 이 작업을 추가합니다. 온디바이스 의사 결정이 활성화된 at.js 라이브러리가 페이지에 로드됩니다. 대부분의 구현에서 사이트의 모든 페이지에 Target을 로드해야 합니다. Adobe Target 호출 앞에 가 있는 경우에만 디바이스에서 의사 결정 작업과 함께 Target 로드를 사용하는 것이 좋습니다. 그렇지 않으면 Analytics 호출이 지연되는 것과 같은 문제가 발생할 수 있습니다.
 
-구성이 필요하지 않습니다.
+>[!IMPORTANT]
+>
+>페이지 로드 요청이 이미 구성된 경우에만 온디바이스 의사 결정에 사용하십시오. 이 작업을 규칙에 추가하면 온디바이스 의사 결정 규칙 엔진이 포함되므로 최종 Launch 번들의 크기가 증가합니다.
 
 ### 모든 요청에 매개 변수 추가
 
