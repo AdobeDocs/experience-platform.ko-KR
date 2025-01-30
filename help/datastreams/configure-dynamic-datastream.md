@@ -4,13 +4,13 @@ description: 규칙을 기반으로 다양한 Experience Cloud 서비스로 데�
 hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
-source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
+exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
+source-git-commit: 39e65f1f74b95fffffb3c5400ce1b7e60aa81bad
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
-
 
 # 동적 데이터 스트림 구성 만들기
 
@@ -30,6 +30,14 @@ ht-degree: 1%
 * 데이터 스트림에 Experience Cloud 서비스를 *최소*&#x200B;개 추가해야 합니다. 자세한 내용은 데이터스트림에 [서비스를 추가](configure.md#add-services)하는 방법에 대한 설명서를 참조하십시오.
 
 데이터 스트림을 만들고 Experience Cloud 서비스를 추가한 후 [동적 구성을 만들](#create-dynamic-configuration)수 있습니다.
+
+## 동적 데이터스트림 구성 및 데이터스트림 구성 재정의 {#dynamic-versus-overrides}
+
+동적 데이터 스트림 구성 및 [데이터 스트림 구성 재정의](overrides.md)는 함께 사용할 수 없는 기능입니다.
+
+즉, 동적 데이터스트림 구성을 데이터스트림 구성 재정의와 함께 사용할 수 없습니다. 둘 중 하나를 선택해야 합니다.
+
+동적 데이터스트림 구성 및 데이터스트림 구성 재정의를 모두 활성화하면 구성 재정의가 우선하며 동적 데이터스트림 구성 규칙이 무시됩니다.
 
 ## 동적 데이터 스트림 구성 만들기 {#create-dynamic-configuration}
 
