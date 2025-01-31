@@ -1,16 +1,16 @@
 ---
 title: Amazon 광고
 description: Amazon Ads는 등록된 판매자, 공급업체, 서적 공급업체, Kindle Direct Publishing(KDP) 작성자, 앱 개발자 및/또는 에이전시에 대한 광고 목표를 달성하는 데 도움이 되는 다양한 옵션을 제공합니다. Amazon Ads와 Adobe Experience Platform의 통합은 ADSP(Amazon DSP)를 비롯한 Amazon Ads 제품에 턴키 통합을 제공합니다. Adobe Experience Platform의 Amazon 광고 대상을 사용하면 Amazon DSP에서 타깃팅 및 활성화를 위해 광고주 대상을 정의할 수 있습니다.
-last-substantial-update: 2024-09-20T00:00:00Z
+last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: 8543f76565f22b8cdfb0be71a1332696bc079ec7
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1837'
 ht-degree: 2%
 
 ---
 
-# (Beta) Amazon 광고 연결 {#amazon-ads}
+# Amazon 광고 연결 {#amazon-ads}
 
 ## 개요 {#overview}
 
@@ -24,7 +24,7 @@ AMC는 Amazon 소유 및 운영되는 속성에서 디스플레이, 비디오, �
 
 >[!IMPORTANT]
 >
->이 대상 커넥터 및 설명서 페이지는 *[!DNL Amazon Ads]* 팀에서 만들고 유지 관리합니다. 현재 베타 제품이며 기능은 변경될 수 있습니다. 문의 사항이나 업데이트 요청은 *`amc-support@amazon.com`.*&#x200B;에서 직접 문의하십시오.
+>이 대상 커넥터 및 설명서 페이지는 *[!DNL Amazon Ads]* 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청은 *`amc-support@amazon.com`.*&#x200B;에서 직접 문의하십시오.
 
 ## 사용 사례 {#use-cases}
 
@@ -85,8 +85,6 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 연결할 광고주 계정을 먼저 선택한 [!DNL Amazon Ads] 연결 인터페이스로 이동합니다. 연결하면 선택한 광고주 계정의 ID가 제공된 새 연결로 Adobe Experience Platform으로 다시 리디렉션됩니다. 계속하려면 대상 구성 화면에서 적절한 광고주 계정을 선택하십시오.
 
-* **[!UICONTROL 전달자 토큰]**: 대상에 인증하려면 전달자 토큰을 입력하십시오.
-
 ### 대상 세부 정보 입력 {#destination-details}
 
 대상에 대한 세부 정보를 구성하려면 아래의 필수 및 선택 필드를 채우십시오. UI에서 필드 옆에 있는 별표는 필드가 필수임을 나타냅니다.
@@ -101,9 +99,13 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 * **[!UICONTROL 광고주 지역]**: 광고주가 호스팅되는 적절한 지역을 선택하십시오. 각 지역에서 지원하는 마켓플레이스에 대한 자세한 내용은 [Amazon 광고 설명서](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)를 참조하세요.
 
+>[!IMPORTANT]
+>
+>**[!UICONTROL Amazon 광고 동의 신호]**&#x200B;를 포함하는 업데이트가 2025년 2월 7일까지 진행되도록 예약되었습니다.
 
+* **[!UICONTROL Amazon 광고 동의 신호]**: 이 연결을 통해 전송된 모든 데이터가 개인 데이터를 광고 목적으로 사용하도록 동의했는지 확인합니다. &quot;승인됨&quot;은 Amazon이 광고에 고객의 개인 데이터를 사용하는 것에 대한 동의를 나타냅니다. 허용되는 값은 &quot;GRANTED&quot; 및 &quot;DENIED&quot;입니다. &quot;거부됨&quot;을 사용하는 연결을 통해 전송된 모든 레코드는 Amazon 광고 내에서 더 이상 사용할 수 없도록 거부됩니다.
 
-![새 대상 구성](../../assets/catalog/advertising/amazon_ads_image_4.png)
+![새 대상 구성](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -124,7 +126,7 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 [!DNL Amazon Ads] 연결은 ID 일치를 위해 해시된 이메일 주소와 해시된 전화 번호를 지원합니다. 아래 스크린샷은 [!DNL Amazon Ads] 연결과 호환되는 예제 일치를 제공합니다.
 
-![Amazon 광고 매핑 Adobe](../../assets/catalog/advertising/amazon_ads_image_2.png)
+![Amazon 광고 매핑 Adobe](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png)
 
 * 해시된 이메일 주소를 매핑하려면 `Email_LC_SHA256` ID 네임스페이스를 원본 필드로 선택하십시오.
 * 해시된 전화 번호를 매핑하려면 `Phone_SHA256` ID 네임스페이스를 원본 필드로 선택하십시오.
@@ -143,7 +145,7 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 **[!UICONTROL 광고주 ID]** > **[!UICONTROL 대상]** > **[!UICONTROL 광고주 대상]**(으)로 이동합니다. 대상자가 만들어졌고 최소 대상자 구성원 수를 충족하면 `Active` 상태가 표시됩니다. 대상자 크기 및 도달에 대한 자세한 내용은 Amazon DSP 사용자 인터페이스 오른쪽에 있는 예측 도달 패널에서 확인할 수 있습니다.
 
-![Amazon DSP 대상 만들기 유효성 검사](../../assets/catalog/advertising/amazon_ads_image_3.png)
+![Amazon DSP 대상 만들기 유효성 검사](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
 [!DNL Amazon Marketing Cloud]**의**
 
@@ -151,8 +153,7 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![Amazon Marketing Cloud 대상 만들기 유효성 검사](../../assets/catalog/advertising/amazon_ads_image_5.png)
-
+![Amazon Marketing Cloud 대상 만들기 유효성 검사](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## 데이터 사용 및 관리 {#data-usage-governance}
 
@@ -172,7 +173,8 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
-| 2024년 5월 | 기능 및 설명서 업데이트 | `countryCode` 매개 변수를 Amazon 광고로 내보내는 매핑 옵션을 추가했습니다. [매핑 단계](#map)에서 `countryCode`을(를) 사용하여 Amazon과의 ID 일치율을 개선하세요. |
+| 2025년 2월 | 데이터 흐름을 내보내고 대상을 Beta에서 일반적으로 사용할 수 있도록 승격하기 위해 **[!UICONTROL Amazon 광고 동의 신호]**&#x200B;를 추가하는 요구 사항이 추가되었습니다. |
+| 2024년 5월 | 기능 및 설명서 업데이트 | `countryCode` 매개 변수를 Amazon 광고로 내보내는 매핑 옵션을 추가했습니다. [매핑 단계](#map)에서 `countryCode`를 사용하여 Amazon의 ID 일치율을 개선해 보십시오. |
 | 2024년 3월 | 기능 및 설명서 업데이트 | [!DNL Amazon Marketing Cloud](AMC)에서 사용할 대상을 내보내는 옵션이 추가되었습니다. |
 | 2023년 5월 | 기능 및 설명서 업데이트 | <ul><li>[대상 연결 워크플로](#destination-details)에서 광고주 영역 선택에 대한 지원을 추가했습니다.</li><li>광고주 지역 선택 사항의 추가를 반영하도록 설명서를 업데이트했습니다. 올바른 광고주 지역 선택에 대한 자세한 내용은 [Amazon 설명서](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)를 참조하세요.</li></ul> |
 | 2023년 3월 | 초기 릴리스 | 초기 대상 릴리스 및 설명서가 게시되었습니다. |
