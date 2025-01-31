@@ -6,7 +6,7 @@ breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
 role: Developer
-source-git-commit: 7231d3a5ad9553707392c32004d02e355e3c919f
+source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 23%
@@ -22,11 +22,11 @@ ht-degree: 23%
    * [개요](install/overview.md)
    * [태그 확장을 사용하여 웹 SDK 설치](install/extension.md)
    * [JavaScript 라이브러리를 사용하여 웹 SDK 설치](install/library.md)
-   * [NPM 패키지를 사용하여 Web SDK 설치](install/npm.md)
+   * [NPM 패키지를 사용하여 웹 SDK 설치](install/npm.md)
 * 명령 {#commands}
    * {#configure} 구성
       * [개요](commands/configure/overview.md)
-      * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
+      * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [클릭콜렉션활성화됨](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)
       * [컨텍스트](commands/configure/context.md)
@@ -81,7 +81,7 @@ ht-degree: 23%
       * [단일 페이지 애플리케이션 구현](personalization/adobe-target/spa-implementation.md)
       * [응답 토큰 액세스](personalization/adobe-target/accessing-response-tokens.md)
       * [mbox 타사 ID 사용](personalization/adobe-target/using-mbox-3rdpartyid.md)
-      * [at.js 라이브러리와 Web SDK 비교](personalization/adobe-target/web-sdk-atjs-comparison.md)
+      * [at.js 라이브러리와 웹 SDK 비교](personalization/adobe-target/web-sdk-atjs-comparison.md)
       * A4T(Analytics for Target) 로깅 {#a4t}
          * [개요](personalization/adobe-target/analytics-logging/overview.md)
          * [클라이언트측 로깅](personalization/adobe-target/analytics-logging/client-side.md)
@@ -91,7 +91,7 @@ ht-degree: 23%
    * Adobe Journey Optimizer {#ajo}
       * [개요](personalization/ajo/overview.md)
       * [단일 페이지 애플리케이션 구현](personalization/ajo/web-spa-implementation.md)
-      * [Web SDK에서 웹 인앱 메시지 지원 구성](personalization/web-in-app-messaging.md)
+      * [웹 SDK에서 웹 인앱 메시지 지원 구성](personalization/web-in-app-messaging.md)
 
 * 동의 {#consent}
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
@@ -101,7 +101,7 @@ ht-degree: 23%
 
 * 사용 사례 {#use-cases}
    * [개요](use-cases/overview.md)
-   * [웹 SDK를 사용하여 Adobe Analytics에 데이터 보내기](use-cases/adobe-analytics.md)
+   * [웹 SDK을 사용하여 Adobe Analytics에 데이터 보내기](use-cases/adobe-analytics.md)
    * [사용자 에이전트 클라이언트 힌트](use-cases/client-hints.md)
    * [상거래 데이터 수집](use-cases/collect-commerce-data.md)
    * [CSP 구성](use-cases/configuring-a-csp.md)
