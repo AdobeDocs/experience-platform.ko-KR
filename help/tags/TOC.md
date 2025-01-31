@@ -6,9 +6,9 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
+source-git-commit: 1b2f8e5a9cc85887efe9d623baa346956ae5d93d
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '775'
 ht-degree: 35%
 
 ---
@@ -84,7 +84,7 @@ ht-degree: 35%
          * [개요](./extensions/client/product-string/overview.md)
          * [릴리스 정보](./extensions/client/product-string/release-notes.md)
       * [Adobe Analytics 제품 문자열 빌더](https://exchange.adobe.com/apps/ec/101461)
-      * [Adobe Experience Platform Web SDK를 통한 Adobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
+      * [Adobe Experience Platform Web SDK을 통한 Adobe Analytics](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [개요](./extensions/client/audience-manager/overview.md)
       * Adobe 클라이언트 데이터 레이어 {#client-data-layer}
@@ -105,9 +105,9 @@ ht-degree: 35%
          * [작업 유형](./extensions/client/web-sdk/action-types.md)
          * [데이터 요소 유형](./extensions/client/web-sdk/data-element-types.md)
          * [ECID 액세스](./extensions/client/web-sdk/accessing-the-ecid.md)
-         * [Web SDK 플러그인](./extensions/client/web-sdk/web-sdk-plugins.md)
-         * [Web SDK 확장 릴리스 노트](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
-         * [Web SDK 플러그인 릴리스 노트](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
+         * [웹 SDK 플러그인](./extensions/client/web-sdk/web-sdk-plugins.md)
+         * [웹 SDK 확장 릴리스 노트](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+         * [웹 SDK 플러그인 릴리스 노트](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * Adobe Experience Manager 자산 통찰력 {#asset-insights}
          * [개요](./extensions/client/asset-insights/overview.md)
          * [릴리스 정보](./extensions/client/asset-insights/release-notes.md)
@@ -206,9 +206,8 @@ ht-degree: 35%
       * [비디오 재생](https://exchange.adobe.com/apps/ec/108937)
       * [웹 바이탈](https://exchange.adobe.com/apps/ec/106769)
       * [XDM 작성기](https://exchange.adobe.com/apps/ec/106062)
-      * [Yahoo 점](https://exchange.adobe.com/apps/ec/106062)
       * [Yext 전환 추적](https://exchange.adobe.com/apps/ec/103174)
-      * [[!DNL Youtube] 재생](https://exchange.adobe.com/apps/ec/103174)
+      * [[!DNL Youtube] 재생](https://exchange.adobe.com/apps/ec/104160)
       * [!DNL YouTube] 비디오 추적 {#youtube}
          * [개요](./extensions/client/youtube/overview.md)
          * [릴리스 정보](./extensions/client/youtube/release-notes.md)
