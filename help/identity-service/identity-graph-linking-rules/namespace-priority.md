@@ -14,7 +14,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
 >title="네임스페이스 우선 순위"
->abstract="네임스페이스 우선순위는 ID 그래프에서 링크가 제거되는 방식을 결정합니다."
+>abstract="네임스페이스 우선순위는 링크가 아이덴티티 그래프에서 제거되는 방식을 결정합니다."
 
 >[!AVAILABILITY]
 >
