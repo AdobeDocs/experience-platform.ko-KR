@@ -2,7 +2,7 @@
 title: autoCollectPropositionInteractions
 description: 링크 데이터를 자동으로 수집하도록 Experience Platform 웹 SDK을 구성하는 방법에 대해 알아봅니다.
 exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
-source-git-commit: 405f161dee633b7230be944cd17093616826e27f
+source-git-commit: 55c656e7fd08e98b75c20f0688a6697baf533291
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 1%
@@ -123,11 +123,11 @@ alloy("sendEvent", {
 ## 웹 SDK 태그 확장을 통해 자동 제안 및 상호 작용 클릭 추적 활성화 {#tag-extension}
 
 1. Adobe ID 자격 증명을 사용하여 [experience.adobe.com](https://experience.adobe.com)에 로그인합니다.
-2. **데이터 수집** > **태그**(으)로 이동합니다.
-3. 원하는 태그 속성을 선택합니다.
-4. **확장**(으)로 이동한 다음 Adobe Experience Platform Web SDK 카드에서 **구성**&#x200B;을 선택합니다.
-5. **[!UICONTROL 데이터 수집]** 섹션까지 아래로 스크롤한 다음 **제안 및 상호 작용 링크 추적 활성화** 확인란을 선택하십시오.
-6. **저장**&#x200B;을 선택한 다음 변경 내용을 게시합니다.
+1. **데이터 수집** > **태그**(으)로 이동합니다.
+1. 원하는 태그 속성을 선택합니다.
+1. **확장**(으)로 이동한 다음 Adobe Experience Platform Web SDK 카드에서 **구성**&#x200B;을 선택합니다.
+1. **[!UICONTROL 데이터 수집]** 섹션까지 아래로 스크롤한 다음 **제안 및 상호 작용 링크 추적 활성화** 확인란을 선택하십시오.
+1. **저장**&#x200B;을 선택한 다음 변경 내용을 게시합니다.
 
 ## 웹 SDK JavaScript 라이브러리를 통해 자동 제안 및 상호 작용 링크 추적 활성화 {#library}
 
