@@ -3,9 +3,9 @@ title: 고객 지원을 위한 AI Assistant
 description: AI Assistant를 사용하여 문제 해결 및 고객 지원 티켓 제출 프로세스를 간소화하는 방법에 대해 알아봅니다.
 badge: Alpha
 exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
-source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
+source-git-commit: e224716f8fba59529c5d7634d4b4a3013a0986a3
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -56,3 +56,8 @@ ht-degree: 0%
    * &quot;티켓 E-67890에 대한 최신 정보는 무엇입니까?&quot;
 
 고객 지원을 위한 AI Assistant에 액세스하려면 Adobe 계정 팀에 문의하십시오.
+
+자세한 내용은 다음 비디오를 통해 고객 지원용 AI Assistant를 사용하여 워크플로를 종료하지 않고 문제를 해결하는 방법에 대해 알아보십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+
