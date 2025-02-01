@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 위치 컨텍스트 데이터 유형
 description: 위치 컨텍스트 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '162'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 [!UICONTROL 위치 컨텍스트]은(는) 관심 영역 정보 및 지리적 좌표를 포함하여 관찰된 이벤트의 위치를 설명하는 표준 XDM 데이터 형식입니다.
 
-<img src="../images/data-types/place-context.png" width="500" /><br />
+![](../images/data-types/place-context.png){width=500}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

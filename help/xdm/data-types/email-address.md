@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 이메일 주소 데이터 유형
 description: 이메일 주소 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL 전자 메일 주소]은(는) 전자 메일 주소의 세부 정보를 설명하는 표준 XDM(Experience Data Model) 데이터 형식입니다.
 
-<img src="../images/data-types/email-address.png" width="450" /><br />
+![](../images/data-types/email-address.png){width=450}
 
 | 속성 | 설명 |
 | --- | --- |

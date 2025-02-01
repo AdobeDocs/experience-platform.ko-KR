@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 환경 세부 정보 스키마 필드 그룹
 description: ExperienceEvent 환경 세부 사항 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '191'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 [!UICONTROL 환경 세부 정보]은(는) 장치 세부 정보, 브라우저 정보, 현지 시간 및 기타 지리적 정보 등 경험 이벤트와 관련된 환경 세부 정보를 캡처하는 데 사용되는 [[!DNL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)의 표준 스키마 필드 그룹입니다.
 
-<img src="../../images/field-groups/environment-details.png" width="500" /><br />
+![](../../images/field-groups/environment-details.png){width=500}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

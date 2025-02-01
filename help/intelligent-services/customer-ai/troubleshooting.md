@@ -6,9 +6,9 @@ title: 고객 AI 오류 문제 해결
 description: 고객 AI에서 일반적인 오류에 대한 답변을 찾아보십시오.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1755'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 **[!UICONTROL 실패]** 또는 **[!UICONTROL 교육 문제]**&#x200B;가 표시되는 경우 실행 상태를 선택하여 사이드 패널을 열 수 있습니다. 사이드 패널에는 **[!UICONTROL 마지막 실행 상태]** 및 **[!UICONTROL 마지막 실행 세부 정보]**&#x200B;가 있습니다. **[!UICONTROL 마지막 실행 세부 정보]**&#x200B;에는 실행이 실패한 이유에 대한 정보가 포함되어 있습니다. 고객 AI가 오류에 대한 세부 정보를 제공할 수 없는 경우 제공된 오류 코드로 지원 센터에 문의하십시오.
 
-<img src="./images/errors/last-run-details.png" width="300" /><br />
+![](./images/errors/last-run-details.png){width=300}
 
 ## Chrome 시크릿 내에서 고객 AI에 액세스할 수 없음
 
@@ -39,7 +39,7 @@ Google Chrome의 시크릿 모드 보안 설정의 업데이트로 인해 Google
 
 오류 &quot;[!UICONTROL 모델 품질이 좋지 않습니다. 수정된 구성 ]&quot;을(를) 사용하여 새 앱을 만드는 것이 좋습니다. 아래의 권장 단계에 따라 문제를 해결하십시오.
 
-<img src="./images/errors/model-quality.png" width="300" /><br />
+![](./images/errors/model-quality.png){width=300}
 
 ### 권장 수정 사항
 

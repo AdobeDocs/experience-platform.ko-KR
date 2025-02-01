@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 장치 데이터 유형
 description: 장치 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 18%
+source-wordcount: '307'
+ht-degree: 17%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 18%
 
 [!UICONTROL 장치]은(는) 식별된 장치를 설명하는 표준 XDM 데이터 형식입니다. 디바이스는 일반적으로 쿠키를 통해 세션에서 추적할 수 있는 애플리케이션 또는 브라우저 인스턴스입니다.
 
-<img src="../images/data-types/device.png" width="450" /><br />
+![](../images/data-types/device.png){width=450}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 브라우저 세부 정보 데이터 유형
 description: 브라우저 세부 정보 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '242'
 ht-degree: 27%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 27%
 
 [!UICONTROL 브라우저 세부 정보]은(는) 브라우저 또는 응용 프로그램과 관련된 세부 정보를 설명하는 표준 XDM 데이터 형식입니다.
 
-<img src="../images/data-types/browser-details.png" width="450" /><br />
+![](../images/data-types/browser-details.png){width=450}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

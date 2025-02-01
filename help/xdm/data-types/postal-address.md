@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 우편 주소 데이터 유형
 description: 우편 주소 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '315'
 ht-degree: 23%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 23%
 
 [!UICONTROL 우편 주소]은(는) 우편 주소의 세부 정보를 설명하는 표준 XDM 데이터 형식입니다.
 
-<img src="../images/data-types/postal-address.png" width="450" /><br />
+![](../images/data-types/postal-address.png){width=450}
 
 | 속성 | 설명 |
 | --- | --- |

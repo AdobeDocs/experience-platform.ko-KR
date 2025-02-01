@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼트 멤버십 세부 정보 스키마 필드 그룹
 description: 세그먼트 멤버십 세부 정보 스키마 필드 그룹에 대해 알아봅니다.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '402'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 >
 >`segmentMembership` 필드는 이 필드 그룹을 사용하여 프로필 스키마에 수동으로 추가해야 하지만 이 필드를 수동으로 채우거나 업데이트해서는 안 됩니다. 세분화 작업이 수행되면 각 프로필에 대한 `segmentMembership` 맵이 자동으로 업데이트됩니다.
 
-<img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
+![프로필 세분화](../../images/data-types/profile-segmentation.png){width=400}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

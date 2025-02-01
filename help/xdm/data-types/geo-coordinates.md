@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 지리적 좌표 데이터 유형
 description: 지역 좌표 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 13%
+source-wordcount: '124'
+ht-degree: 12%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 13%
 
 [!UICONTROL 지리적 좌표]는 위치의 지리적 좌표를 설명하는 표준 XDM 데이터 형식입니다. 이 데이터 형식은 [schema.org](https://schema.org/GeoCoordinates)에 설명된 공개 사양을 기반으로 합니다.
 
-<img src="../images/data-types/geo-coordinates.png" width="400" /><br />
+![](../images/data-types/geo-coordinates.png){width=400}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

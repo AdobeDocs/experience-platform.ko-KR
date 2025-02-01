@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 비콘 데이터 유형
 description: XDM 개별 프로필 클래스에 대해 알아봅니다.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '235'
 ht-degree: 17%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 17%
 
 [!UICONTROL Beacon]은 모바일 장치가 범위 내에 있을 때 모바일 응용 프로그램에 ID 정보를 전달하는 무선 장치를 설명하는 표준 XDM 데이터 형식입니다.
 
-<img src="../images/data-types/beacon.png" width="450" /><br />
+![](../images/data-types/beacon.png){width=450}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

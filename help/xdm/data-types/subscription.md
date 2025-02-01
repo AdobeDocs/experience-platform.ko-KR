@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 구독 데이터 유형
 description: 구독 경험 데이터 모델(XDM) 데이터 유형에 대해 알아봅니다.
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '390'
 ht-degree: 28%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 28%
 
 [!UICONTROL 구독]은(는) 시간이나 사용에 따라 사용되는 소프트웨어, 서비스 또는 제품에 대해 라이선스가 부여된 권한을 설명하는 표준 XDM(Experience Data Model) 데이터 형식입니다.
 
-<img src="../images/data-types/subscription-data-type.png" width="500" /><br />
+![](../images/data-types/subscription-data-type.png){width=500}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

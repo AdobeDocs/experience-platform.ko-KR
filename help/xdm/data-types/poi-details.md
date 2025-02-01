@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 관심 영역 세부 정보 데이터 유형
 description: 관심 영역 세부 정보 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '182'
 ht-degree: 15%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 15%
 
 [!UICONTROL 관심 영역 세부 정보]은(는) 이벤트가 관찰된 지리적 관련 데이터를 설명하는 표준 XDM 데이터 형식입니다.
 
-<img src="../images/data-types/poi-details.png" width="550" /><br />
+![](../images/data-types/poi-details.png){width=550}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

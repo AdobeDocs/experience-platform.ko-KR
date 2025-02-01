@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 지역 셰이프 데이터 유형
 description: 지역 셰이프 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: 50b9d783-a555-45eb-b154-7dc71389e224
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '240'
 ht-degree: 6%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 [!UICONTROL 지역 셰이프]는 지역 셰이프를 설명하는 표준 XDM 데이터 형식입니다. 이 데이터 형식은 [schema.org](https://schema.org/GeoShape)에 설명된 공개 사양을 기반으로 합니다.
 
-<img src="../images/data-types/geo-shape.png" width="500" /><br />
+![](../images/data-types/geo-shape.png){width=500}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service UI의 개인 정보 작업 관리
 description: Privacy Service 사용자 인터페이스를 사용하여 다양한 Experience Cloud 애플리케이션에서 개인 정보 요청을 조정하고 모니터링하는 방법에 대해 알아봅니다.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: c870b6be603073d6dd909b272c619deb5b246f05
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1770'
+source-wordcount: '1786'
 ht-degree: 11%
 
 ---
@@ -159,29 +159,29 @@ Waiting:
 
 **[!UICONTROL 요청 만들기]** 대화 상자가 열리고 현재 선택한 규정 유형에 대한 개인 정보 작업 요청을 제출하는 데 사용할 수 있는 옵션이 표시됩니다.
 
-<img src="../images/user-guide/request-builder.png" width="500" /><br/>
+![](../images/user-guide/request-builder.png){width=500}
 
 목록에서 요청의 **[!UICONTROL 작업 유형]**(&quot;삭제&quot; 또는 &quot;액세스&quot;) 및 사용 가능한 제품을 하나 이상 선택하십시오.
 
 Privacy Service은 개인 데이터에 대한 두 종류의 작업 요청을 지원합니다. [!UICONTROL 액세스](읽기) 및/또는 [!UICONTROL 삭제]. 조회 대상과 관련된 상품에 있는 모든 정보를 제공받도록 요청하거나 조회 대상과 관련된 모든 정보를 삭제하도록 요청할 수 있습니다.
 
-<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
+![](../images/user-guide/type-and-products.png){width=500}
 
 **[!UICONTROL 네임스페이스 유형]**&#x200B;에서 [!DNL Privacy Service](으)로 전송되는 고객 ID에 적합한 네임스페이스 유형을 선택합니다.
 
-<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+![](../images/user-guide/namespace-type.png){width=500}
 
 표준 네임스페이스 유형을 사용하는 경우 드롭다운 메뉴에서 네임스페이스(이메일, ECID 또는 AAID)를 선택한 다음 오른쪽에 있는 텍스트 상자에 ID 값을 입력하고 각 ID에 대해 **\&lt;enter>**&#x200B;을 눌러 목록에 추가합니다.
 
-<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+![](../images/user-guide/standard-namespace.png){width=500}
 
 사용자 지정 네임스페이스 유형을 사용하는 경우, 아래 ID 값을 제공하기 전에 네임스페이스를 수동으로 입력해야 합니다.
 
-<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+![](../images/user-guide/custom-namespace.png){width=500}
 
 완료되면 **[!UICONTROL 만들기]**&#x200B;를 선택합니다.
 
-<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
+![](../images/user-guide/request-builder-create.png){width=500}
 
 대화 상자가 사라지고 새 작업(또는 작업)이 현재 처리 상태와 함께 작업 요청 위젯에 나열됩니다.
 
@@ -195,12 +195,12 @@ Privacy Service은 개인 데이터에 대한 두 종류의 작업 요청을 지
 
 JSON 파일을 드래그하여 놓을 수 있는 창을 제공하는 **[!UICONTROL JSON 업로드]** 대화 상자가 나타납니다.
 
-<img src="../images/user-guide/upload-json.png" width="500" /><br/>
+![](../images/user-guide/upload-json.png){width=500}
 
 업로드할 JSON 파일이 없는 경우 **[!UICONTROL Adobe-GDPR-Request.json 다운로드]**&#x200B;를 선택하여 데이터 주체에서 수집한 값에 따라 채울 수 있는 템플릿을 다운로드합니다.
 
 
-<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
+![](../images/user-guide/privacy-template.png){width=500}
 
 
 컴퓨터에서 JSON 파일을 찾아 대화 상자 창으로 드래그합니다. 업로드가 성공적으로 수행되면 대화 상자에 파일 이름이 표시됩니다. 필요에 따라 JSON 파일을 대화 상자로 끌어다 놓아 계속 추가할 수 있습니다.

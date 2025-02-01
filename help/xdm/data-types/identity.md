@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ID 데이터 유형
 description: ID XDM 데이터 유형에 대해 알아봅니다.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '264'
 ht-degree: 11%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 11%
 
 [!UICONTROL ID]은(는) 디지털 경험과 상호 작용하는 사용자를 명확하게 구분하는 데 사용되는 표준 XDM 데이터 형식입니다. ID 공급자가 ID를 설정합니다. ID 공급자 자체는 `namespace` 특성에서 참조됩니다. 각 `namespace` 내에서 ID는 고유합니다.
 
-<img src="../images/data-types/identity.png" width="550" /><br />
+![](../images/data-types/identity.png){width=550}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |

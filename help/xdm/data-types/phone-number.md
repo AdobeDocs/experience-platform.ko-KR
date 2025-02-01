@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 전화번호 데이터 유형
 description: 전화번호 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '189'
 ht-degree: 16%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 16%
 
 [!UICONTROL 전화 번호]은(는) 전화 번호의 세부 정보를 설명하는 표준 XDM 데이터 형식입니다.
 
-<img src="../images/data-types/phone-number.png" width="600" /><br />
+![](../images/data-types/phone-number.png){width=600}
 
 | 속성 | 설명 |
 | --- | --- |

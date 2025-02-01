@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 지역 데이터 유형
 description: 지역 XDM 데이터 유형에 대해 알아봅니다.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 35%
+source-wordcount: '176'
+ht-degree: 34%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 35%
 
 [!UICONTROL 지역]은 이벤트가 관찰된 지역을 설명하는 표준 XDM 데이터 형식입니다.
 
-<img src="../images/data-types/geo.png" width="400" /><br />
+![](../images/data-types/geo.png){width=400}
 
 | 속성 | 데이터 유형 | 설명 |
 | --- | --- | --- |
