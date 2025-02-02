@@ -2,10 +2,10 @@
 title: 빠른 시작 안내서
 description: Adobe Experience Platform에서 태그를 빠르게 시작하고 실행하는 방법에 대해 알아봅니다.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
+source-git-commit: 8c881d99554a8694da79bdc29ad30ebbc870db20
 workflow-type: tm+mt
 source-wordcount: '1521'
-ht-degree: 41%
+ht-degree: 44%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../term-updates.md)를 참조하십시오.
 
 태그는 Adobe Experience Platform의 차세대 태그 관리 기술입니다. Adobe 고객이 자신의 사이트에 배포할 수 있는 자체 통합을 빌드할 수 있는 개방적이고 지속 가능한 에코시스템을 지원하도록 완전히 새로 빌드되었습니다. UI를 통해 수행할 수 있는 것은 무엇이든 API를 통해 프로그래밍 방식으로 수행할 수도 있는 API 최초 애플리케이션입니다.
 
@@ -128,12 +128,12 @@ Platform의 태그가 진정으로 고유한 이유는 이러한 확장을 누�
 
 이러한 모든 권한을 한 개인에게 할당할 수 있습니다.
 
-게시 프로세스 중에 사용할 수 있는 여러 상태 및 옵션에 대한 자세한 내용은 [승인 작업 과정](../ui/publishing/publishing-flow.md)을 참조하십시오.
+게시 프로세스 중에 사용할 수 있는 여러 상태 및 옵션에 대한 자세한 내용은 [승인 워크플로](../ui/publishing/publishing-flow.md)를 참조하십시오.
 
 ## 추가 리소스
 
 태그에 대한 자세한 내용은 다음 리소스를 참조하십시오.
 
-* **[데이터 수집 커뮤니티](https://forums.adobe.com/community/experience-cloud/platform/launch)**: 질문 및 답변하고, 아이디어를 제출하고, 다른 사람의 아이디어를 투표할 수 있습니다. Adobe ID으로 로그인합니다.
+* **[데이터 수집 커뮤니티](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: 질문 및 답변하고, 아이디어를 제출하고, 다른 사람의 아이디어를 투표할 수 있습니다. Adobe ID으로 로그인합니다.
 * **[개발자 문서](../api/overview.md)**: 태그 개발자 커뮤니티에 참여하여 확장을 빌드하거나 태그 API를 사용합니다
-* **[Tutorials 개요](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**: 이 문서에서는 Android 앱의 이벤트 전달 및 Mobile SDK를 포함한 태그 개념을 소개합니다.
+* **[Tutorials 개요](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**: 이 문서에서는 Android 앱의 이벤트 전달 및 Mobile SDK을 포함한 태그 개념을 소개합니다.
