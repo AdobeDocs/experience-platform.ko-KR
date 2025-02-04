@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 관리 레이블
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 레이블을 관리하는 방법에 대한 정보를 제공합니다
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 5810a7778d86db2720a0372ace33278348d1ffdf
+source-git-commit: 71a2e91b6c23021aa11c19d84096d6b23f0de112
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 10%
+source-wordcount: '247'
+ht-degree: 24%
 
 ---
 
@@ -24,6 +24,12 @@ ht-degree: 10%
 >id="platform_abac_labelusage"
 >title="레이블 사용"
 >abstract="사용자 정의 레이블을 사용하여 데이터에 데이터 거버넌스 및 액세스 제어 구성을 적용할 수 있습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_labels_about_create"
+>title="새 레이블 만들기"
+>abstract="조직의 요구 사항에 맞게 고유한 사용자 정의 레이블을 만들 수 있습니다. 사용자 정의 레이블을 사용하여 데이터 거버넌스와 액세스 제어 구성을 모두 데이터에 적용할 수 있습니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="사용자 정의 레이블 관리"
 
 >[!NOTE]
 >

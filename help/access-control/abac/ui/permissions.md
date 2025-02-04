@@ -3,14 +3,20 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 역할 권한 관리
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 역할에 대한 권한을 구성하는 방법에 대해 설명합니다
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 0c275dc18dac101455f77aa58d33f0808122b77f
+source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 1%
+source-wordcount: '1608'
+ht-degree: 4%
 
 ---
 
-# 역할에 대한 권한 관리
+# 역할에 대한 권한 관리 {#manage-role-permissions}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="역할이란 무엇입니까?"
+>abstract="역할은 관리자, 전문가 또는 최종 사용자가 조직의 리소스에 액세스할 수 있는 권한을 정의합니다. Platform 인스턴스와 상호 작용하는 사용자를 분류하며 액세스 제어 정책의 기본 구성단위입니다. 역할에는 주어진 권한 집합이 있으며 조직의 멤버들은 필요한 보기 또는 쓰기 액세스 범위에 따라 하나 이상의 역할에 할당될 수 있습니다."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ko" text="역할 관리"
 
 >[!IMPORTANT]
 >
@@ -41,7 +47,14 @@ UI의 역할에 사용할 수 있는 필터는 다음과 같습니다.
 
 ![선택한 필터에 강조 표시된 X 및 모든 선택 항목 지우기를 사용하는 권한 UI의 역할 대시보드.](../../images/flac-ui/flac-clear-filters.png)
 
-## 역할 세부 정보
+## 역할 세부 정보 {#role-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="역할 개요"
+>abstract="역할 개요 대화 상자에는 주어진 역할이 액세스할 수 있는 리소스 및 샌드박스를 비롯한 역할 세부 사항이 표시됩니다. 역할 작업 공간 내에서 해당 탭으로 이동하여 역할에 대한 레이블, 사용자, 사용자 그룹 및 API 자격 증명을 관리할 수 있습니다."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="역할에 대한 레이블 관리"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="역할에 대한 사용자 관리"
 
 **[!UICONTROL 역할]** 탭에서 역할을 선택하면 해당 역할의 [!UICONTROL 세부 정보] 대시보드가 열립니다.
 
