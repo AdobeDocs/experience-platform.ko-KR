@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법의 기본 사항에 대해 알아봅니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
+source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
 workflow-type: tm+mt
-source-wordcount: '4056'
+source-wordcount: '4072'
 ht-degree: 1%
 
 ---
@@ -354,7 +354,7 @@ abstract="스키마가 프로필용으로 활성화되면 이 스키마에서 �
 >
 스키마의 필드에 대한 표시 이름을 변경하면 이러한 변경 사항은 해당 스키마를 기반으로 하는 기존 데이터 세트에 즉시 반영됩니다.
 
-스키마 필드의 표시 이름을 편집하려면 캔버스에서 필드를 선택합니다. 오른쪽 레일에서 **[!UICONTROL 표시 이름]**&#x200B;에 새 이름을 입력하십시오.
+**[!UICONTROL 필드 표시 이름 표시]**&#x200B;에서 전환하여 필드 이름을 표시 이름으로 변경합니다. 스키마 필드의 표시 이름을 편집하려면 캔버스에서 필드를 선택합니다. 오른쪽 레일에서 **[!UICONTROL 표시 이름]**&#x200B;에 새 이름을 입력하십시오.
 
 ![](../../images/ui/resources/schemas/display-name.png)
 
