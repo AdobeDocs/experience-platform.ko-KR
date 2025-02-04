@@ -2,9 +2,9 @@
 title: 데이터 랜딩 영역 Source
 description: 데이터 랜딩 영역을 Adobe Experience Platform에 연결하는 방법 알아보기
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 1530d7b9815688ab58fb6349ef77e92124741883
+source-git-commit: b9a409db2f1aee852faf9038a25236b78f76d4dd
 workflow-type: tm+mt
-source-wordcount: '1178'
+source-wordcount: '1282'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,15 @@ ht-degree: 0%
 
 [!DNL Data Landing Zone]은(는) SAS 기반 인증을 지원하며, 전송 중이거나 사용하지 않는 표준 [!DNL Azure Blob] 저장소 보안 메커니즘을 통해 데이터를 보호합니다. SAS 기반 인증을 사용하면 공용 인터넷 연결을 통해 [!DNL Data Landing Zone] 컨테이너에 안전하게 액세스할 수 있습니다. [!DNL Data Landing Zone] 컨테이너에 액세스하는 데 필요한 네트워크 변경 내용이 없습니다. 따라서 네트워크에 대한 허용 목록 또는 교차 지역 설정을 구성할 필요가 없습니다. Experience Platform은 [!DNL Data Landing Zone] 컨테이너에 업로드된 모든 파일 및 폴더에 엄격한 7일 만료 시간을 적용합니다. 모든 파일과 폴더는 7일 후에 삭제됩니다.
 
+## Azure에서 Experience Platform을 위해 [!DNL Data Landing Zone] 소스 설정 {#azure}
+
+Azure에서 Experience Platform을 위해 [!DNL Data Landing Zone] 계정을 설정하는 방법을 알아보려면 아래 단계를 참조하세요.
+
 >[!NOTE]
 >
 >[!DNL Azure Data Factory]에서 [!DNL Data Landing Zone]에 액세스하려면 Experience Platform에서 제공한 [SAS 자격 증명](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials)을(를) 사용하여 [!DNL Data Landing Zone]에 연결된 서비스를 만들어야 합니다. 연결된 서비스를 만든 후에는 기본 루트 경로 대신 컨테이너 경로를 선택하여 [!DNL Data Landing Zone]을(를) 탐색할 수 있습니다.
 
-## 파일 및 디렉터리에 대한 이름 지정 제약 조건
+### 파일 및 디렉터리에 대한 이름 지정 제약 조건
 
 다음은 클라우드 저장소 파일 또는 디렉터리의 이름을 지정할 때 고려해야 하는 제약 조건 목록입니다.
 
@@ -34,17 +38,17 @@ ht-degree: 0%
 - 잘못된 URL 경로 문자는 허용되지 않습니다. `\uE000` 같은 코드 포인트는 NTFS 파일 이름에서 사용할 수 있지만 올바른 유니코드 문자가 아닙니다. 또한 컨트롤 문자(예: `0x00` ~ `0x1F`, `\u0081` 등)와 같은 일부 ASCII 또는 유니코드 문자도 사용할 수 없습니다. HTTP/1.1의 유니코드 문자열을 제어하는 규칙에 대해서는 [RFC 2616, 섹션 2.2: 기본 규칙](https://www.ietf.org/rfc/rfc2616.txt) 및 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)을 참조하십시오.
 - LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, 점 문자(.) 및 점 문자(..) 두 개를 사용할 수 없습니다.
 
-## 데이터 랜딩 영역의 콘텐츠 관리{#manage-the-contents-of-your-data-landing-zone}
+### 데이터 랜딩 영역의 콘텐츠 관리{#manage-the-contents-of-your-data-landing-zone}
 
 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/)을(를) 사용하여 [!DNL Data Landing Zone] 컨테이너의 콘텐츠를 관리할 수 있습니다.
 
 [!DNL Azure Storage Explorer] UI의 왼쪽 탐색에서 연결 아이콘을 선택합니다. 연결할 수 있는 옵션을 제공하는 **리소스 선택** 창이 나타납니다. [!DNL Data Landing Zone]에 연결하려면 **[!DNL Blob container]**&#x200B;을(를) 선택하십시오.
 
-![리소스 선택](../../images/tutorials/create/dlz/select-resource.png)
+![Azure 탐색기에서 리소스 작업 영역을 선택합니다.](../../images/tutorials/create/dlz/select-resource.png)
 
 다음으로 연결 방법으로 **SAS(공유 액세스 서명 URL)**&#x200B;을(를) 선택한 후 **다음**&#x200B;을(를) 선택합니다.
 
-![select-connection-method](../../images/tutorials/create/dlz/select-connection-method.png)
+![공유 액세스 서명이 선택된 Azure Explorer의 연결 선택 방법입니다.](../../images/tutorials/create/dlz/select-connection-method.png)
 
 연결 방법을 선택한 후 [!DNL Data Landing Zone] 컨테이너에 해당하는 **표시 이름** 및 **[!DNL Blob]컨테이너 SAS URL**&#x200B;을(를) 제공해야 합니다.
 
@@ -54,19 +58,19 @@ ht-degree: 0%
 
 [!DNL Data Landing Zone] SAS URL을 입력한 다음 **다음**&#x200B;을(를) 선택하십시오.
 
-![연결 정보 입력](../../images/tutorials/create/dlz/enter-connection-info.png)
+![표시 이름 및 SAS URL이 입력되는 Azure 탐색기의 연결 정보 작업 영역입니다.](../../images/tutorials/create/dlz/enter-connection-info.png)
 
 [!DNL Blob] 끝점 및 사용 권한에 대한 정보를 포함하여 설정에 대한 개요를 제공하는 **요약** 창이 나타납니다. 준비가 되면 **연결**&#x200B;을 선택합니다.
 
-![요약](../../images/tutorials/create/dlz/summary.png)
+![리소스 연결 설정을 다시 가져오는 Azure 탐색기 요약 작업 영역입니다.](../../images/tutorials/create/dlz/summary.png)
 
 연결에 성공하면 [!DNL Azure Storage Explorer] UI가 [!DNL Data Landing Zone] 컨테이너로 업데이트됩니다.
 
-![dlz-user-container](../../images/tutorials/create/dlz/dlz-user-container.png)
+![Azure 탐색기의 데이터 랜딩 영역 탐색 작업 영역입니다.](../../images/tutorials/create/dlz/dlz-user-container.png)
 
 [!DNL Data Landing Zone] 컨테이너가 [!DNL Azure Storage Explorer]에 연결되어 있으므로 이제 [!DNL Data Landing Zone] 컨테이너에 파일을 업로드할 수 있습니다. 업로드하려면 **업로드**&#x200B;를 선택한 다음 **파일 업로드**&#x200B;를 선택하십시오.
 
-![업로드](../../images/tutorials/create/dlz/upload.png)
+![Azure Explorer의 파일 업로드 작업 영역입니다.](../../images/tutorials/create/dlz/upload.png)
 
 업로드할 파일을 선택했으면 업로드할 [!DNL Blob] 유형과 원하는 대상 디렉터리를 확인해야 합니다. 완료되면 **업로드**&#x200B;를 선택합니다.
 
@@ -75,9 +79,9 @@ ht-degree: 0%
 | [!DNL Blob] 차단 | 블록 [!DNL Blobs]은(는) 대량의 데이터를 효율적인 방식으로 업로드하도록 최적화되었습니다. [!DNL Blobs] 블록은 [!DNL Data Landing Zone]의 기본 옵션입니다. |
 | [!DNL Blob] 추가 | [!DNL Blobs] 추가는 파일 끝에 데이터를 추가하도록 최적화되었습니다. |
 
-![업로드 파일](../../images/tutorials/create/dlz/upload-files.png)
+![선택한 파일, Blob 유형 및 대상 범주가 표시되는 Azure 탐색기의 업로드 파일 창입니다.](../../images/tutorials/create/dlz/upload-files.png)
 
-## 명령줄 인터페이스를 사용하여 [!DNL Data Landing Zone]에 파일 업로드
+### 명령줄 인터페이스를 사용하여 [!DNL Data Landing Zone]에 파일 업로드
 
 장치의 명령줄 인터페이스를 사용하여 [!DNL Data Landing Zone]에 대한 업로드 파일에 액세스할 수도 있습니다.
 
