@@ -1,8 +1,8 @@
 ---
 title: 웹 SDK의 ID 데이터
-description: Adobe Experience Platform Web SDK를 사용하여 Adobe Experience Cloud ID(ECID)를 검색하고 관리하는 방법에 대해 알아봅니다.
+description: Adobe Experience Platform Web SDK을 사용하여 Adobe Experience Cloud ID(ECID)를 검색하고 관리하는 방법에 대해 알아봅니다.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: c99831cf2bb1b862d65851701b38c6d3dfe99000
+source-git-commit: 3724c43090e37d21384e9dfe45e60ee2eec68a81
 workflow-type: tm+mt
 source-wordcount: '1554'
 ht-degree: 0%
@@ -12,20 +12,20 @@ ht-degree: 0%
 
 # 웹 SDK의 ID 데이터
 
-Adobe Experience Platform Web SDK는 [ECID(Adobe Experience Cloud ID)](../../identity-service/features/ecid.md)를 사용하여 방문자 행동을 추적합니다. [!DNL ECIDs]을(를) 사용하면 각 디바이스에 여러 세션에서 지속될 수 있는 고유 식별자가 있는지 확인하여 웹 세션 중 및 여러 세션에서 발생하는 모든 히트를 특정 디바이스에 연결할 수 있습니다.
+Adobe Experience Platform Web SDK은 [Adobe Experience Cloud ID(ECID)](../../identity-service/features/ecid.md)를 사용하여 방문자 행동을 추적합니다. [!DNL ECIDs]을(를) 사용하면 각 디바이스에 여러 세션에서 지속될 수 있는 고유 식별자가 있는지 확인하여 웹 세션 중 및 여러 세션에서 발생하는 모든 히트를 특정 디바이스에 연결할 수 있습니다.
 
-이 문서에서는 웹 SDK를 사용하여 [!DNL ECIDs] 및 [!DNL CORE IDs]을(를) 관리하는 방법에 대한 개요를 제공합니다.
+이 문서에서는 웹 SDK을 사용하여 [!DNL ECIDs] 및 [!DNL CORE IDs]을(를) 관리하는 방법에 대한 개요를 제공합니다.
 
-## Web SDK를 사용하여 ECID 추적 {#tracking-ecids-web-sdk}
+## 웹 SDK을 사용하여 ECID 추적 {#tracking-ecids-web-sdk}
 
-Web SDK는 쿠키를 사용하여 [!DNL ECIDs]을(를) 할당하고 추적하며, 이러한 쿠키가 생성되는 방식을 구성하는 데 사용 가능한 여러 메서드를 사용합니다.
+웹 SDK은 쿠키를 사용하여 [!DNL ECIDs]을(를) 할당하고 추적하며, 이러한 쿠키가 생성되는 방식을 구성하는 데 사용 가능한 여러 메서드를 사용합니다.
 
 새 사용자가 웹 사이트에 도달하면 [Adobe Experience Cloud Identity 서비스](../../identity-service/home.md)에서 해당 사용자에 대한 장치 ID 쿠키를 설정하려고 시도합니다.
 
 * 처음 방문하는 사용자의 경우 [!DNL ECID]이(가) 생성되어 Experience Platform Edge Network의 첫 번째 응답에서 반환됩니다.
 * 재방문자의 경우 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` 쿠키에서 [!DNL ECID]을(를) 검색하고 Edge Network이 요청 페이로드에 추가합니다.
 
-[!DNL ECID]이(가) 포함된 쿠키가 설정되면 Web SDK에서 생성한 각 후속 요청에는 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` 쿠키에 인코딩된 [!DNL ECID]이(가) 포함됩니다.
+[!DNL ECID]을(를) 포함하는 쿠키가 설정되면 웹 SDK에서 생성한 각 후속 요청에는 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` 쿠키에 인코딩된 [!DNL ECID]이(가) 포함됩니다.
 
 장치 식별을 위해 쿠키를 사용하는 경우 Edge Network과 상호 작용하는 두 가지 방법이 있습니다.
 
@@ -34,7 +34,7 @@ Web SDK는 쿠키를 사용하여 [!DNL ECIDs]을(를) 할당하고 추적하며
 
 아래 섹션에 설명된 대로 사용하도록 선택하는 데이터 수집 방법은 전체 브라우저에서 쿠키 수명에 직접적인 영향을 줍니다.
 
-## Web SDK를 사용한 코어 ID 추적 {#tracking-coreid-web-sdk}
+## 웹 SDK을 사용하여 코어 ID 추적 {#tracking-coreid-web-sdk}
 
 서드파티 쿠키가 활성화된 Google Chrome을 사용할 때 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Edge Network이 설정되어 있지 않으면 첫 번째 쿠키 요청은 demdex 쿠키를 설정하는 `demdex.net` 도메인을 거칩니다. 이 쿠키에는 [!DNL CORE ID]이(가) 포함되어 있습니다. [!DNL ECID]과(와) 다른 고유한 사용자 ID입니다.
 
@@ -171,9 +171,9 @@ ID 배열의 각 ID 개체에는 다음 속성이 포함되어 있습니다.
 
 방문자 API를 사용하여에서 마이그레이션할 때 기존 AMCV 쿠키를 마이그레이션할 수도 있습니다. ECID 마이그레이션을 사용하려면 구성에서 `idMigrationEnabled` 매개 변수를 설정하십시오. ID 마이그레이션을 통해 다음과 같은 사용 사례를 사용할 수 있습니다.
 
-* 도메인의 일부 페이지가 방문자 API를 사용하고 다른 페이지가 이 SDK를 사용하는 경우. 이 경우를 지원하기 위해 SDK는 기존 AMCV 쿠키를 읽고 기존 ECID로 새 쿠키를 기록합니다. 또한 SDK는 AMCV 쿠키를 기록하여 SDK로 계측된 페이지에서 ECID를 먼저 획득하는 경우 방문자 API로 계측된 후속 페이지가 동일한 ECID를 갖도록 합니다.
-* 방문자 API가 있는 페이지에서 Adobe Experience Platform Web SDK가 설정된 경우. 이 경우를 지원하기 위해 AMCV 쿠키가 설정되지 않은 경우 SDK는 페이지에서 방문자 API를 찾아 호출하여 ECID를 가져옵니다.
-* 전체 사이트에서 Adobe Experience Platform Web SDK를 사용하고 있고 방문자 API가 없는 경우 반환된 방문자 정보가 유지되도록 ECID를 마이그레이션하는 것이 유용합니다. 대부분의 방문자 쿠키가 마이그레이션되도록 SDK를 `idMigrationEnabled`과(와) 함께 배포한 후 설정을 끌 수 있습니다.
+* 도메인의 일부 페이지가 방문자 API를 사용하고 다른 페이지가 이 SDK을 사용하는 경우 이 경우를 지원하기 위해 SDK은 기존 AMCV 쿠키를 읽고 기존 ECID로 새 쿠키를 기록합니다. 또한 SDK은 AMCV 쿠키를 기록하므로 SDK으로 계측된 페이지에서 ECID를 먼저 획득하는 경우 방문자 API로 계측된 후속 페이지가 동일한 ECID를 갖게 됩니다.
+* 방문자 API가 있는 페이지에서 Adobe Experience Platform Web SDK이 설정된 경우. 이 경우를 지원하기 위해 AMCV 쿠키가 설정되지 않은 경우 SDK은 페이지에서 방문자 API를 검색하고 호출하여 ECID를 가져옵니다.
+* 전체 사이트에서 Adobe Experience Platform Web SDK을 사용하고 있고 방문자 API가 없는 경우 반환된 방문자 정보가 유지되도록 ECID를 마이그레이션하는 것이 유용합니다. SDK이 `idMigrationEnabled`과(와) 함께 배포되어 대부분의 방문자 쿠키가 마이그레이션된 후 설정을 끌 수 있습니다.
 
 ### 마이그레이션할 트레이트 업데이트
 
@@ -181,4 +181,4 @@ XDM 형식의 데이터를 Audience Manager으로 보낼 때 마이그레이션 
 
 ## 이벤트 전달에 사용
 
-현재 [이벤트 전달](../../tags/ui/event-forwarding/overview.md)이 활성화되어 있고 `appmeasurement.js` 및 `visitor.js`을(를) 사용 중인 경우 이벤트 전달 기능을 활성화 상태로 유지할 수 있으며 이로 인해 문제가 발생하지 않습니다. 백 엔드에서 Adobe은 모든 AAM 세그먼트를 가져와 Analytics 호출에 추가합니다. Analytics에 대한 호출에 이러한 세그먼트가 포함되어 있는 경우 Analytics는 Audience Manager을 호출하여 데이터를 전달하지 않으므로 이중 데이터 수집은 없습니다. 동일한 세그멘테이션 종단점이 백엔드에서 호출되므로 Web SDK를 사용할 때도 위치 힌트가 필요하지 않습니다.
+현재 [이벤트 전달](../../tags/ui/event-forwarding/overview.md)이 활성화되어 있고 `appmeasurement.js` 및 `visitor.js`을(를) 사용 중인 경우 이벤트 전달 기능을 활성화 상태로 유지할 수 있으며 이로 인해 문제가 발생하지 않습니다. 백 엔드에서 Adobe은 모든 AAM 세그먼트를 가져와 Analytics 호출에 추가합니다. Analytics에 대한 호출에 이러한 세그먼트가 포함되어 있는 경우 Analytics는 Audience Manager을 호출하여 데이터를 전달하지 않으므로 이중 데이터 수집은 없습니다. 동일한 세그멘테이션 종단점이 백엔드에서 호출되므로 웹 SDK을 사용할 때도 위치 힌트가 필요하지 않습니다.
