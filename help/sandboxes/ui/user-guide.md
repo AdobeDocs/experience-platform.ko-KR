@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 샌드박스 UI 안내서
 description: 이 문서에서는 Adobe Experience Platform 사용자 인터페이스에서 샌드박스와 관련된 다양한 작업을 수행하는 방법에 대한 단계를 설명합니다.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: f8c39d2cc12e77ebdc974f931880cdf0d6367591
+source-git-commit: b9b00f41f146b34a1326c4c2ac104c022a416dc9
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1115'
 ht-degree: 4%
 
 ---
@@ -82,6 +82,7 @@ Experience Platform에서 샌드박스를 사용하는 방법에 대한 빠른 �
 >* Adobe Audience Manager 또는 Audience Core Service와 공유하는 양방향성 세그먼트에 사용되는 사용자가 만든 프로덕션 샌드박스는 경고 메시지 후에 재설정할 수 있습니다.
 >* 샌드박스 재설정을 시작하기 전에 관련 대상 데이터가 제대로 정리되도록 컴포지션을 수동으로 삭제해야 합니다.
 >* 샌드박스 ID는 재설정이 완료되면 변경됩니다.
+>* [Journey Optimizer B2B edition](https://experienceleague.adobe.com/ko/docs/journey-optimizer-b2b/user/guide-overview)의 경우 샌드박스 재설정이 **현재 지원되지 않습니다**. Journey Optimizer B2B edition에 매핑된 샌드박스를 재설정하거나 삭제하면 Journey Optimizer B2B edition의 데이터가 영구적으로 손실될 수 있으며 새 Journey Optimizer B2B edition 인스턴스를 프로비저닝해야 할 수 있습니다.
 
 ### 대상 구성 삭제
 
