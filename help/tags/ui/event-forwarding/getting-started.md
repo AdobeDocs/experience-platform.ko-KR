@@ -3,10 +3,10 @@ title: 이벤트 전달 시작
 description: Adobe Experience Platform에서 이벤트 전달 사용을 시작하려면 이 단계별 자습서를 따르십시오.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 0a95d09eb1ce59e45d52372c4b08725c009001c3
+source-git-commit: e9f98e1f94aa6ae2ecf29940912d296813611d4c
 workflow-type: tm+mt
 source-wordcount: '887'
-ht-degree: 21%
+ht-degree: 26%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->이벤트 전달은 Adobe Real-time Customer Data Platform Connections, Prime 또는 Ultimate 제품의 일부로 포함된 유료 기능입니다.
+>이벤트 전달은 Adobe Real-time Customer Data Platform 연결, Prime 또는 Ultimate 오퍼링의 일부로 포함된 유료 기능입니다.
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform에서 이벤트 전달을 사용하려면 다음 세 가지 옵션 중 하나 이상을 사용하여 Adobe Experience Platform Edge Network에게 데이터를 보내야 합니다.
 
@@ -27,15 +27,15 @@ Adobe Experience Platform에서 이벤트 전달을 사용하려면 다음 세 �
 * [Edge Network Server API](/help/server-api/overview.md)
 
 >[!NOTE]
->Platform Web SDK 및 Platform Mobile SDK는 Adobe Experience Platform의 태그를 통해 배포할 필요가 없습니다. 그러나 태그를 사용하여 이러한 SDK를 배포하는 것이 좋습니다.
+>Platform Web SDK 및 Platform Mobile SDK은 Adobe Experience Platform의 태그를 통해 배포할 필요가 없습니다. 그러나 태그를 사용하여 이러한 SDK를 배포하는 것이 좋습니다.
 
 Edge 네트워크로 데이터를 전송하면 Adobe 솔루션을 전환하여 데이터를 보낼 수 있습니다. Adobe이 아닌 솔루션으로 데이터를 전송하려면 이벤트 전달 시 해당 설정을 지정합니다.
 
 ## 전제 조건
 
-* Adobe Real-Time CDP Connections, Prime 또는 Ultimate(Adobe 계정 팀에 문의하여 가격 책정)
+* Adobe Real-Time CDP Connections, Prime 또는 Ultimate(가격 책정은 Adobe 계정 팀에 문의)
 * Adobe Experience Platform의 이벤트 전달
-* Adobe Experience Platform Web SDK, Mobile SDK 또는 Edge Network 서버 API로 데이터를 Edge Network에 전송하도록 구성
+* Adobe Experience Platform Web SDK, Mobile SDK 또는 Edge Network에게 데이터를 보내도록 구성된 Edge Network 서버 API
 * XDM(Experience Data Model)에 데이터 매핑 (태그를 사용하여 이 매핑을 수행할 수 있음)
 
 ## XDM 스키마 만들기
@@ -82,7 +82,7 @@ Adobe Experience Platform에서 데이터 스트림을 생성하려면 이벤트
 
 1. **[!UICONTROL 저장]**&#x200B;을 선택합니다.
 
-## 이벤트 전달 활성화
+## 이벤트 전달 활성화 {#enable-event-forwarding}
 
 그런 다음 Edge Network을 구성하여 이벤트 전달 및 다른 Adobe 제품으로 데이터를 전송합니다.
 
@@ -100,17 +100,17 @@ Adobe Experience Platform에서 데이터 스트림을 생성하려면 이벤트
 
 구성한 후 새 속성에 대한 환경 ID를 메모하십시오.
 
-## 이전에 만든 데이터 스트림으로 데이터를 전송하도록 Platform Web SDK 확장을 구성합니다
+## 이전에 만든 데이터 스트림으로 데이터를 전송하도록 Platform 웹 SDK 확장 구성
 
-**[!UICONTROL Tags]** 작업 영역에서 속성을 만든 다음 **[!UICONTROL 확장]**(으)로 이동한 다음 카탈로그에서 Experience Platform Web SDK 확장을 선택하여 구성하고 설치하십시오.
+**[!UICONTROL Tags]** 작업 영역에서 속성을 만든 다음 **[!UICONTROL 확장]**(으)로 이동한 다음 카탈로그에서 Web SDK 확장 Experience Platform을 선택하여 구성하고 설치합니다.
 
-구성 옵션에 대한 자세한 내용은 [Web SDK 확장 설명서](../../extensions/client/web-sdk/overview.md)를 참조하십시오.
+구성 옵션에 대한 자세한 내용은 [웹 SDK 확장 설명서](../../extensions/client/web-sdk/overview.md)를 참조하십시오.
 
-## Platform Web SDK로 데이터를 전송하는 태그 규칙 만들기
+## Platform Web SDK으로 데이터를 전송하는 태그 규칙 만들기
 
 위에서 설명한 사항이 적용되면 이벤트 전달 및 태그를 사용하지만 페이지에서 하나의 요청만 있으면 되는 데이터 정의, 규칙 등을 빌드합니다.
 
-Platform Web SDK 확장 기능 및 &quot;이벤트 보내기&quot; 작업 유형을 사용하여 페이지 로드 규칙을 만듭니다.
+Platform 웹 SDK 확장 및 &quot;이벤트 보내기&quot; 작업 유형을 사용하여 페이지 로드 규칙을 만듭니다.
 
 1. **[!UICONTROL 규칙]** 탭을 연 다음 **[!UICONTROL 새 규칙 만들기]**&#x200B;를 선택합니다.
 
