@@ -2,9 +2,10 @@
 title: Snapchat Conversions API 확장 개요
 description: Snapchat 변환을 사용하여 서버측 이벤트 데이터를 Snap으로 전송합니다.
 last-substantial-update: 2025-01-20T00:00:00Z
-source-git-commit: 79e19b12dd39208827c215094b6c8ec9163d6624
+exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
+source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '964'
 ht-degree: 2%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 2%
 
 전환 API를 사용하려면 **[!DNL Snapchat]** [비즈니스 관리자](https://business.snapchat.com/) 계정이 필요합니다. Business Manager는 광고주가 비즈니스 및 외부 파트너와 **[!DNL Snapchat]**&#x200B;의 마케팅 활동을 통합할 수 있도록 지원합니다. Business Manager 계정이 없는 경우 계정 만들기에 대한 **[!DNL Snapchat]** [도움말 센터 문서](https://businesshelp.snapchat.com/s/article/get-started?language=en_US)를 참조하십시오.
 
-Snapchat 광고 관리자에서 **[!DNL Snap Pixel]**(https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US)을 설정해야 하며 `Pixel ID`을(를) 볼 수 있는 액세스 권한이 있어야 합니다. `Pixel ID`은(는) **[!UICONTROL 이벤트 관리자]**(https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) 섹션에서 찾을 수 있습니다.
+Snapchat Ads 관리자에서 [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US)을(를) 설정해야 하며 `Pixel ID`을(를) 볼 수 있는 액세스 권한이 있어야 합니다. `Pixel ID`은(는) [!UICONTROL [이벤트 관리자]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) 섹션에서 찾을 수 있습니다.
 
 오래 지속되는 정적 API 토큰이 필요합니다. 이 토큰을 얻으려면 [[!DNL Snapchat] 전환 API 설명서](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token)를 참조하십시오.
 
@@ -190,7 +191,7 @@ Snapchat 광고 관리자에서 **[!DNL Snap Pixel]**(https://businesshelp.snapc
 
 ![활성화된 규칙을 표시하는 이미지](../../../images/extensions/server/snap/enabled_rule.png)
 
-이제 이러한 변경 사항을 속성에 게시할 수 있습니다. 자세한 내용은 [게시 흐름](/help/tags/ui/publishing/overview.md)(https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview)에 대한 설명서를 참조하십시오.
+이제 이러한 변경 사항을 속성에 게시할 수 있습니다. 자세한 내용은 [게시 흐름](/help/tags/ui/publishing/overview.md)에 대한 설명서를 참조하십시오.
 
 ## 문제 해결 {#troubleshoot}
 
