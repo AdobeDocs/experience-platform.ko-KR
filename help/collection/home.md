@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 데이터 수집 개요
 description: Adobe Experience Platform에서 고객 경험에 대한 데이터를 수집하는 것과 관련된 다양한 기술에 대해 알아봅니다.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b8332686043311c4dd3afeff12300fbd2827498c
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '472'
 ht-degree: 4%
 
 ---
@@ -31,18 +31,18 @@ Adobe Experience Platform은 클라이언트측 소스에서 고객 경험 데�
 * [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)
 * [Edge Network Server API](../server-api/overview.md)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
-* [Experience Platform 보증](../assurance/home.md)
+* [Assurance Experience Platform](../assurance/home.md)
 
 
 이 안내서에서는 데이터 수집에 대한 높은 수준의 소개를 제공하고, 플랫폼 Edge Network을 통해 Adobe Experience Cloud 제품 및 Adobe이 아닌 애플리케이션으로 데이터를 전송하는 작동 방법을 제공합니다.
 
 ## 태그, Web SDK 및 Mobile SDK
 
-Platform Web SDK 및 Platform Mobile SDK는 모든 Adobe 제품 라이브러리를 축소하고 웹 및 모바일 플랫폼용 단일 개발 키트로 각각 압축합니다. 원시 코드를 사용하거나 데이터 수집 UI 또는 Adobe Experience Platform UI를 통해 [태그](../tags/home.md)를 사용하여 구현할 수 있습니다.
+Platform Web SDK 및 Platform Mobile SDK은 모든 Adobe 제품 라이브러리를 웹 및 모바일 플랫폼용 단일 개발 키트로 각각 축소 및 압축합니다. 원시 코드를 사용하거나 데이터 수집 UI 또는 Adobe Experience Platform UI를 통해 [태그](../tags/home.md)를 사용하여 구현할 수 있습니다.
 
 이러한 라이브러리를 압축하면 데이터 수집 속도가 빨라지고 클라이언트측 장치에서 플랫폼 Edge Network으로 단일 스트림으로 작업을 통합할 수 있습니다.
 
-![태그, Web SDK, Mobile SDK](./images/home/tags-sdks.png)
+![태그, 웹 SDK, 모바일 SDK](./images/home/tags-sdks.png)
 
 ## 플랫폼 Edge Network 및 데이터스트림 {#edge}
 
@@ -52,10 +52,6 @@ Platform Web SDK 및 Platform Mobile SDK는 모든 Adobe 제품 라이브러리�
 
 ![데이터스트림 및 Adobe 솔루션](./images/home/adobe-solutions.png)
 
->[!NOTE]
->
->플랫폼 Edge Network에 대한 자세한 소개는 다음 [대화형 제품 둘러보기](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1)를 참조하세요.
-
 ## 이벤트 전달
 
 [이벤트 전달](../tags/ui/event-forwarding/overview.md)을(를) 사용하면 Experience Platform 데이터스트림을 탭하여 클라이언트 장치에 타사 코드를 추가하지 않고 Adobe이 아닌 모든 대상으로 매우 짧은 대기 시간으로 데이터를 변환, 강화 및 전송할 수 있습니다.
@@ -64,7 +60,7 @@ Platform Web SDK 및 Platform Mobile SDK는 모든 Adobe 제품 라이브러리�
 
 >[!NOTE]
 >
->이벤트 전달은 Adobe Real-time Customer Data Platform Connections, Prime 또는 Ultimate 제품의 일부로 포함된 유료 기능입니다.
+>이벤트 전달은 Adobe Real-time Customer Data Platform 연결, Prime 또는 Ultimate 오퍼링의 일부로 포함된 유료 기능입니다.
 
 ## 다음 단계
 
