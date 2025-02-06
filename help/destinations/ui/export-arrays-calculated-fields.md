@@ -3,10 +3,10 @@ title: Real-Time CDP에서 클라우드 스토리지 대상으로 배열 오브�
 type: Tutorial
 description: 계산된 필드를 사용하여 배열을 Real-Time CDP에서 클라우드 스토리지 대상으로 문자열로 내보내는 방법을 알아봅니다.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
+source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 7%
+source-wordcount: '1698'
+ht-degree: 6%
 
 ---
 
@@ -72,6 +72,11 @@ organizations = [{
 ## 계산된 필드를 내보내는 방법 {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_maps_objects"
+>title="계층적 출력 스키마 활성화"
+>abstract="<p> 배열, 맵 및 개체를 JSON 또는 Parquet 파일로 내보내려면 이 설정 **on**&#x200B;을(를) 전환하십시오.</p><p>이 토글이 꺼지면 대상을 활성화할 때 계산된 필드 옵션을 사용할 수 있지만 배열, 맵 및 개체를 JSON 또는 Parquet 파일로 내보낼 수 없습니다</p>"
+
+>[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="계층적 출력 스키마 활성화"
 >abstract="배열과 같은 계층적 구조를 내보내려면 토글합니다."
@@ -79,7 +84,7 @@ organizations = [{
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="계산된 필드 추가 비활성화됨"
->abstract="대상에 연결할 때 평면 구조를 내보내도록 선택했기 때문에 이 컨트롤이 비활성화되었습니다."
+>abstract="이 대상 연결을 설정할 때 **배열, 맵, 개체 내보내기** 토글 *켜짐*&#x200B;을(를) 선택했으므로 이 컨트롤을 사용할 수 없습니다. 계산된 필드와 내에서 사용할 수 있는 함수를 사용하려면 **배열, 맵, 개체 내보내기** 토글 *해제*&#x200B;를 사용하여 새 대상 연결을 설정하십시오."
 
 클라우드 저장소 대상에 대한 활성화 워크플로의 매핑 단계에서 **[!UICONTROL 계산된 필드 추가]**&#x200B;를 선택합니다.
 
