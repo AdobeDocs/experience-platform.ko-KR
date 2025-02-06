@@ -3,9 +3,9 @@ title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant를 시작합니다.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 96e138cc12fdedaa73e3aaf69341806271413680
+source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '899'
 ht-degree: 1%
 
 ---
@@ -111,6 +111,14 @@ AI Assistant에 대한 개요는 다음 비디오를 참조하십시오.
 
 자세한 내용은 AI Assistant의 [제품 정보](home.md#product-knowledge)를 참조하십시오.
 
+### AI Assistant의 운영 통찰력
+
+다음 비디오를 시청하여 AI Assistant를 사용하여 운영 인사이트를 검색하고 데이터 객체에 대한 포괄적인 보기를 얻는 방법에 대해 알아보십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+
+자세한 내용은 AI Assistant의 [작동 인사이트](home.md#operational-insights)를 참조하십시오.
+
 ### AI Assistant 제품 지식을 사용하여 온보딩 시간 단축
 
 다음 비디오를 통해 AI Assistant 제품 지식을 사용하여 온보딩 시간을 줄이는 방법에 대해 알아보십시오.
@@ -165,6 +173,7 @@ AI Assistant 사용 사례 예제는 다음을 참조하십시오.
 * [대상자를 정리하고 마케팅 작업을 최적화합니다](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [종속성 확인 및 데이터 업데이트 중 위험 최소화](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 * [새로운 기능을 더 빨리 검색하고 배포하세요](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125)
+* [AI Assistant를 통해 고객 지원 혁신](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
 
 >[!TAB 추가 비디오 콘텐츠]
 

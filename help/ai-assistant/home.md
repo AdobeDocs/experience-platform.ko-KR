@@ -2,10 +2,10 @@
 title: Adobe Experience Platform의 AI Assistant 개요
 description: AI 어시스턴트, 그 미묘한 차이와 사용 사례, 그리고 이를 사용하여 Adobe Experience Platform 및 Real-Time Customer Data Platform을 통해 워크플로를 가속화하는 방법에 대해 알아봅니다.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 1910ac68be2c154467d250a614d0d13d62ef6875
+source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 15%
+source-wordcount: '950'
+ht-degree: 14%
 
 ---
 
@@ -91,6 +91,10 @@ AI Assistant 제품 지식에 대한 추가 정보는 다음 비디오를 시청
 {style="table-layout:auto"}
 
 운영 통찰력 질문에 대한 답변이 UI의 현재 상태를 반영하지 않을 수 있습니다. 이러한 질문을 뒷받침하는 데이터는 24시간마다 한 번씩 업데이트됩니다. 예를 들어 사용자가 낮에 Real-Time CDP에서 수행하는 변경 사항은 밤에 데이터 스토어와 동기화된 다음 아침에 사용자 질문에 대해 사용할 수 있게 됩니다. 객체와 관련된 특정 데이터를 조회하려면 샌드박스에 로그인해야 합니다.
+
+AI Assistant 작동 인사이트에 대한 추가 정보는 다음 비디오를 시청하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### 기능 범위 {#feature-scope}
 
