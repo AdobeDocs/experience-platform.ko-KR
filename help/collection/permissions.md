@@ -1,20 +1,20 @@
 ---
-title: Experience Platform의 데이터 수집에 대한 권한 관리
+title: Experience Platform에서 데이터 수집을 위한 권한 관리
 description: Adobe Experience Platform에서 권한을 관리하고 데이터 수집 기능에 대한 액세스를 제어하는 방법에 대한 높은 수준의 개요입니다.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
 source-wordcount: '1356'
-ht-degree: 25%
+ht-degree: 28%
 
 ---
 
-# Experience Platform의 데이터 수집에 대한 권한 관리 {#permission-management}
+# Experience Platform에서 데이터 수집을 위한 권한 관리 {#permission-management}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_permissions"
 >title="권한"
->abstract="Adobe Experience Platform 내에서 데이터스트림, 스키마, ID 및 샌드박스 작업에 필요한 주요 권한을 이해합니다."
+>abstract="Adobe Experience Platform에서 데이터스트림, 스키마, ID 및 샌드박스 작업에 필요한 주요 권한에 대해 알아봅니다."
 
 [Adobe Experience Platform의 데이터 수집](./home.md)은(는) 데이터를 수집하고 전송하기 위해 함께 작동하는 여러 가지 기술로 구성되어 있습니다. 이러한 기술에 대한 액세스는 Adobe Admin Console의 세분화된 역할 기반 권한을 통해 제어됩니다.
 

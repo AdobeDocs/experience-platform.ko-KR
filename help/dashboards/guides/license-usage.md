@@ -26,7 +26,7 @@ ht-degree: 18%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_addons"
 >title="추가 기능 테이블"
->abstract="추가 기능 테이블에는 라이선스 금액이 핵심 제품에서 지원하는 지표와 결합된 제품이 나열되어 있습니다. 이러한 추가 기능에는 별도의 지표가 없지만, 연결된 핵심 제품의 사용 추적을 향상시킵니다."
+>abstract="추가 기능 테이블에는 라이선스 금액이 핵심 제품에서 지원하는 지표와 결합된 제품이 나열되어 있습니다. 이러한 추가 기능에는 별도의 지표가 없지만 연결된 핵심 제품의 사용 추적을 향상시킵니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"

@@ -5,7 +5,7 @@ exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
 source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
 source-wordcount: '1509'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 36%
 >[!CONTEXTUALHELP]
 >id="platform_tags_publishing_flow"
 >title="게시 플로우"
->abstract="개발, 승인 및 Publish 권한을 포함하여 게시 플로우에 필요한 사용자 권한 수준을 이해합니다."
+>abstract="개발, 승인, 게시 권한을 포함하여 게시 흐름에 필요한 사용자 권한 수준에 대해 알아봅니다."
 
 >[!NOTE]
 >

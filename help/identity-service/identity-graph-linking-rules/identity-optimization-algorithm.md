@@ -5,7 +5,7 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
 source-wordcount: '1560'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
->title="고유 네임스페이스"
+>title="고유한 네임스페이스"
 >abstract="그래프는 고유한 네임스페이스로 두 개의 ID를 가질 수 없습니다. 그래프가 제한을 초과하려고 하면 가장 최근의 링크가 유지되고 가장 오래된 링크가 제거됩니다."
 
 >[!AVAILABILITY]
