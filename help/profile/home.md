@@ -2,7 +2,7 @@
 title: 실시간 고객 프로필 개요
 description: Real-Time Customer Profile은 다양한 소스의 데이터를 병합하고 개별 고객 프로필 및 관련 시계열 이벤트의 형태로 해당 데이터에 대한 액세스를 제공합니다. 이 기능을 통해 마케터는 여러 채널에서 대상자와 일관되고, 관련성이 높은 경험을 제공할 수 있습니다.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 1%
