@@ -38,19 +38,19 @@ ht-degree: 3%
 
 또한 라이브러리에 리소스를 추가하고 테스트를 위해 웹 사이트에 빌드를 설치하는 방법을 포함하여 태그 및 이벤트 전달을 위한 게시 플로우에 대해 잘 알고 있어야 합니다. 자세한 내용은 [게시 개요](../publishing/overview.md)를 참조하십시오.
 
-## 보안 생성 {#create}
+## 시크릿 생성 {#create}
 
 >[!CONTEXTUALHELP]
 >id="platform_eventforwarding_secrets_environments"
->title="비밀 환경"
->abstract="비밀을 이벤트 전달에 사용하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성에 환경이 생성되지 않은 경우 계속하기 전에 환경을 구성해야 합니다."
+>title="시크릿 환경"
+>abstract="시크릿을 이벤트 전달에 사용하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성에 환경이 생성되지 않은 경우 계속하기 전에 환경을 구성해야 합니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=ko" text="환경 개요"
 
 암호를 만들려면 왼쪽 탐색에서 **[!UICONTROL 이벤트 전달]**&#x200B;을 선택한 다음 암호를 추가할 이벤트 전달 속성을 엽니다. 그런 다음 왼쪽 탐색에서 **[!UICONTROL 암호]**&#x200B;를 선택한 다음 **[!UICONTROL 새 암호 만들기]**&#x200B;를 선택합니다.
 
 ![새 암호 만들기](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
-다음 화면에서는 비밀의 세부 사항을 구성할 수 있습니다. 비밀을 이벤트 전달에 사용하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성에 대해 환경을 만들지 않은 경우 계속하기 전에 환경을 구성하는 방법에 대한 지침을 보려면 [환경](../publishing/environments.md)에 대한 안내서를 참조하십시오.
+다음 화면에서는 비밀의 세부 사항을 구성할 수 있습니다. 시크릿을 이벤트 전달에 사용하려면 기존 환경에 할당해야 합니다. 이벤트 전달 속성에 대해 환경을 만들지 않은 경우 계속하기 전에 환경을 구성하는 방법에 대한 지침을 보려면 [환경](../publishing/environments.md)에 대한 안내서를 참조하십시오.
 
 >[!NOTE]
 >

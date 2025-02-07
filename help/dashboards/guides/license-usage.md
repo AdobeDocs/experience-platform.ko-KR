@@ -21,7 +21,7 @@ ht-degree: 18%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_core"
 >title="핵심 제품 테이블"
->abstract="테이블에 나열된 핵심 제품에는 샌드박스 수준의 자체 지표, 사용 추적 및 드릴 스루 보기가 있습니다. 이러한 핵심 제품은 추적에 대한 주요 지표를 제공하며, 모든 추가 기능은 이러한 지표에 포함됩니다."
+>abstract="테이블에 나열된 핵심 제품에는 샌드박스 수준의 자체 지표, 사용 추적 및 드릴스루 보기가 있습니다. 이러한 핵심 제품은 추적에 대한 주요 지표를 제공하며, 모든 추가 기능은 이러한 지표에 포함됩니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_addons"

@@ -103,11 +103,11 @@ Experience Platform이 데이터를 Amazon S3 속성으로 내보내도록 Amazo
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
 >title="가정된 역할 인증"
->abstract="Adobe와 계정 키 및 비밀 키를 공유하지 않으려면 이 인증 유형을 사용합니다. 대신 Experience Platform은 역할 기반 액세스를 사용하여 Amazon S3 위치에 연결됩니다. Adobe 사용자를 위해 AWS에서 생성한 역할의 ARN을 붙여넣습니다. 패턴은 `arn:aws:iam::800873819705:role/destinations-role-customer`와 유사합니다. "
+>abstract="Adobe와 계정 키 및 시크릿 키를 공유하지 않으려면 이 인증 유형을 사용합니다. 대신 Experience Platform은 역할 기반 액세스를 사용하여 Amazon S3 위치에 연결됩니다. Adobe 사용자를 위해 AWS에서 생성한 역할의 ARN을 붙여넣습니다. 패턴은 `arn:aws:iam::800873819705:role/destinations-role-customer`와 유사합니다. "
 
 ![가정된 역할 인증을 선택할 때 필요한 필드의 이미지](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-Adobe와 계정 키 및 비밀 키를 공유하지 않으려면 이 인증 유형을 사용합니다. 대신 Experience Platform은 역할 기반 액세스를 사용하여 Amazon S3 위치에 연결합니다.
+Adobe와 계정 키 및 시크릿 키를 공유하지 않으려면 이 인증 유형을 사용합니다. 대신 Experience Platform은 역할 기반 액세스를 사용하여 Amazon S3 위치에 연결합니다.
 
 이렇게 하려면 AWS 콘솔에서 Amazon S3 버킷에 쓸 수 있는 [올바른 필수 권한](#minimum-permissions-iam-user)이 있는 Adobe의 가설 사용자를 만들어야 합니다. Adobe 계정 **[!UICONTROL 670664943635]**&#x200B;을(를) 사용하여 AWS에서 **[!UICONTROL 신뢰할 수 있는 엔터티]**&#x200B;을(를) 만듭니다. 자세한 내용은 [역할 만들기에 대한 AWS 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html)를 참조하세요.
 
