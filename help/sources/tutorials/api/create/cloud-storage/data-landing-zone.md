@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 데이터 랜딩 영역을 Adobe Experience Platform에 연결
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 데이터 랜딩 영역에 연결하는 방법을 알아봅니다.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 527e62e5fb90bc32ef3788f261e0a24b680f29c0
+source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1410'
 ht-degree: 3%
 
 ---
@@ -31,6 +31,10 @@ ht-degree: 3%
 다음 절에서는 [!DNL Flow Service] API를 사용하여 [!DNL Data Landing Zone] 원본 연결을 만들기 위해 알아야 할 추가 정보를 제공합니다.
 
 ## 사용 가능한 랜딩 영역 검색
+
+>[!IMPORTANT]
+>
+>[!DNL Data Landing Zone] API를 사용하고 `type=user_drop_zone`을(를) 검색하려면 **[!UICONTROL 소스 관리]** 액세스 제어 권한이 있어야 합니다. 자세한 내용은 [액세스 제어 개요](../../../../../access-control/home.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 API를 사용하여 [!DNL Data Landing Zone]에 액세스하는 첫 번째 단계는 `type=user_drop_zone`을(를) 요청 헤더의 일부로 제공하는 동안 [!DNL Connectors] API의 `/landingzone` 끝점에 GET 요청을 하는 것입니다.
 

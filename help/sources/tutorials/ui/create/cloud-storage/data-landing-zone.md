@@ -2,9 +2,9 @@
 title: UI를 사용하여 데이터 랜딩 영역을 플랫폼에 연결
 description: Platform 사용자 인터페이스를 사용하여 데이터 랜딩 영역 소스 커넥터를 만드는 방법을 알아봅니다.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: cdcce07a5adf08bf9d5e6a08d6bc965d37458a5d
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,10 @@ ht-degree: 0%
 * [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 ## [!DNL Data Landing Zone]에서 플랫폼으로 파일 가져오기
+
+>[!IMPORTANT]
+>
+> 소스에 연결하려면 **[!UICONTROL 소스 보기]** 및 **[!UICONTROL 소스 관리]** 액세스 제어 권한이 필요합니다. [액세스 제어 개요](../../../../../access-control/home.md)를 읽거나 제품 관리자에게 문의하여 필요한 권한을 받으십시오.
 
 Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스합니다. [!UICONTROL 카탈로그] 화면에 계정을 만들 수 있는 다양한 소스가 표시됩니다.
 
