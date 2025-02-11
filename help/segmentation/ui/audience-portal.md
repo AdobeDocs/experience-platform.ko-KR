@@ -2,9 +2,9 @@
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: 9f4facebcd55dc15761db1bf744acfef9ccb15ff
 workflow-type: tm+mt
-source-wordcount: '4569'
+source-wordcount: '4597'
 ht-degree: 4%
 
 ---
@@ -233,6 +233,8 @@ abstract="유연한 대상자 평가를 한 번 실행하여 최대 20개의 대
 >
 유연한 대상 평가를 위해 대상을 선택할 때 다음 조건이 적용됩니다.
 >
+- 하루에 유연한 대상 평가를 **두 번**&#x200B;만 사용할 수 있습니다. 이 제한은 자정(UTC)에 재설정됩니다.
+- 연간 50회의 유연한 대상 평가 실행을 **최대**&#x200B;합니다.
 - 모든 대상 **must**&#x200B;에 &quot;세분화 서비스&quot; 원본이 있습니다.
 - 모든 대상 **must**&#x200B;은(는) 일괄 처리 세분화를 사용하여 평가됩니다.
 - 모든 대상 **은(는) 사용자 기반 대상이어야 합니다**.
