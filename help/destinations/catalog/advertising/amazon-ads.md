@@ -3,9 +3,9 @@ title: Amazon 광고
 description: Amazon Ads는 등록된 판매자, 공급업체, 서적 공급업체, Kindle Direct Publishing(KDP) 작성자, 앱 개발자 및/또는 에이전시에 대한 광고 목표를 달성하는 데 도움이 되는 다양한 옵션을 제공합니다. Amazon Ads와 Adobe Experience Platform의 통합은 ADSP(Amazon DSP)를 비롯한 Amazon Ads 제품에 턴키 통합을 제공합니다. Adobe Experience Platform의 Amazon 광고 대상을 사용하면 Amazon DSP에서 타깃팅 및 활성화를 위해 광고주 대상을 정의할 수 있습니다.
 last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 8543f76565f22b8cdfb0be71a1332696bc079ec7
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1819'
 ht-degree: 2%
 
 ---
@@ -98,10 +98,6 @@ Adobe Experience Platform과의 [!DNL Amazon Ads] 연결을 사용하려면 먼�
 >대상 구성을 저장한 후에는 Amazon 계정을 통해 다시 인증하더라도 [!DNL Amazon Ads] 광고주 ID를 변경할 수 없습니다. 다른 [!DNL Amazon Ads] 광고주 ID를 사용하려면 새 대상 연결을 만들어야 합니다. 이미 ADSP와의 통합을 통해 설정된 광고주가 해당 대상을 AMC 또는 다른 ADSP 계정으로 전달하려면 새 대상 플로우를 생성해야 합니다.
 
 * **[!UICONTROL 광고주 지역]**: 광고주가 호스팅되는 적절한 지역을 선택하십시오. 각 지역에서 지원하는 마켓플레이스에 대한 자세한 내용은 [Amazon 광고 설명서](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints)를 참조하세요.
-
->[!IMPORTANT]
->
->**[!UICONTROL Amazon 광고 동의 신호]**&#x200B;를 포함하는 업데이트가 2025년 2월 7일까지 진행되도록 예약되었습니다.
 
 * **[!UICONTROL Amazon 광고 동의 신호]**: 이 연결을 통해 전송된 모든 데이터가 개인 데이터를 광고 목적으로 사용하도록 동의했는지 확인합니다. &quot;승인됨&quot;은 Amazon이 광고에 고객의 개인 데이터를 사용하는 것에 대한 동의를 나타냅니다. 허용되는 값은 &quot;GRANTED&quot; 및 &quot;DENIED&quot;입니다. &quot;거부됨&quot;을 사용하는 연결을 통해 전송된 모든 레코드는 Amazon 광고 내에서 더 이상 사용할 수 없도록 거부됩니다.
 

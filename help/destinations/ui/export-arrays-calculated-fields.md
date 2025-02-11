@@ -3,10 +3,10 @@ title: Real-Time CDP에서 클라우드 스토리지 대상으로 배열 오브�
 type: Tutorial
 description: 계산된 필드를 사용하여 배열을 Real-Time CDP에서 클라우드 스토리지 대상으로 문자열로 내보내는 방법을 알아봅니다.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1698'
-ht-degree: 6%
+source-wordcount: '1730'
+ht-degree: 5%
 
 ---
 
@@ -73,8 +73,8 @@ organizations = [{
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
->title="계층적 출력 스키마 활성화"
->abstract="<p> 배열, 맵 및 개체를 JSON 또는 Parquet 파일로 내보내려면 이 설정 **on**&#x200B;을(를) 전환하십시오.</p><p>이 토글이 꺼지면 대상을 활성화할 때 계산된 필드 옵션을 사용할 수 있지만 배열, 맵 및 개체를 JSON 또는 Parquet 파일로 내보낼 수 없습니다</p>"
+>title="배열, 맵 및 개체 내보내기"
+>abstract="<p> 배열, 맵 및 개체를 JSON 또는 Parquet 파일로 내보내려면 이 설정 <b>on</b>을(를) 전환하십시오. 매핑 단계의 소스 필드 보기에서 이러한 객체 유형을 선택할 수 있습니다.</p><p>이 토글 <b>끄기</b>를 사용하면 계산된 필드 옵션을 사용하고 대상을 활성화할 때 다양한 데이터 변환 함수를 적용할 수 있습니다. 그러나 배열, 맵 및 개체를 JSON 또는 Parquet 파일로 <i>내보낼 수 없으며, 이를 위해 별도의 대상을 구성해야 합니다.</i></p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
