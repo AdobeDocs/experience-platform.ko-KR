@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;홈;인기 항목;정책 적용;자동 적용;API 기반 적용;데이터 거버넌스
+keywords: Experience Platform;홈;자주 찾는 항목;정책 적용;자동 적용;API 기반 적용;데이터 거버넌스
 solution: Experience Platform
 title: 자동 정책 시행
-description: 이 문서에서는 Experience Platform의 대상에 대한 대상을 활성화할 때 데이터 사용 정책이 자동으로 적용되는 방법에 대해 설명합니다.
+description: 이 문서에서는 Experience Platform에서 대상을 활성화할 때 데이터 사용 정책이 자동으로 적용되는 방법을 다룹니다.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: b0c4a26c2e8bb90a3494fcd6eb76c4d0d7421219
+source-git-commit: f9072a0fc287c8061a3d28972096577317a0a2c9
 workflow-type: tm+mt
-source-wordcount: '2118'
+source-wordcount: '2116'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->전체 데이터 세트가 아닌 데이터 세트 내의 특정 필드에만 적용된 데이터 사용 레이블이 있는 경우 활성화에 대해 이러한 필드 수준 레이블은 다음 조건에서만 적용됩니다.
+>특정 필드에만 적용된 데이터 사용 레이블이 있는 경우 다음 조건 중 하나 이상이 충족되는 경우에만 활성화에 해당 필드 수준 레이블이 적용됩니다.
 >
 >* 필드는 대상자에서 사용됩니다.
 >* 필드는 대상 대상에 대한 예상 속성으로 구성됩니다.
