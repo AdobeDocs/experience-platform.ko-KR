@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 개요
 breadcrumb-title: Experience Platform 개요
 user-guide-description: 안내서, 설명서 및 튜토리얼을 통해 Experience Platform이 개인화된 경험을 실시간으로 고객에게 전달하는 방법에 대해 알아봅니다.
-source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
+source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '309'
 ht-degree: 24%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 24%
 * [플랫폼 개요](home.md)
 * [플랫폼 개요(비디오)](video/platform-overview.md)
 * [멀티 클라우드 개요](multi-cloud.md)
+* [Edge Network 및 허브 비교](./edge-and-hub-comparison.md)
 * [플랫폼 자습서](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [플랫폼 기반의 고객 경험(비디오)](video/customer-experience.md)
 * [플랫폼에서 제공하는 고객 경험의 배경(비디오)](video/customer-experience-bts.md)
@@ -42,7 +43,7 @@ ht-degree: 24%
    * [언어 지원](documentation/language-support.md)
 * 플랫폼 {#ecosystem}에 빌드된 응용 프로그램
    * [개요](application-services.md)
-   * [Adobe Real-time Customer Data Platform(모든 버전)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+   * [Adobe Real-Time Customer Data Platform(모든 버전)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Application and Intelligent Services(비디오)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ko-KR)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=ko)
@@ -52,7 +53,7 @@ ht-degree: 24%
 * 거버넌스, 개인 정보 보호 및 보안 {#governance-privacy-security}
    * [개요](./governance-privacy-security/overview.md)
    * 동의 관리 {#consent}
-      * Adobe 표준 {#adobe}
+      * Adobe standard {#adobe}
          * [개요](./governance-privacy-security/consent/adobe/overview.md)
          * [동의 및 환경 설정 데이터를 캡처하도록 데이터 세트 구성](./governance-privacy-security/consent/adobe/dataset.md)
       * IAB TCF 2.0 {#iab}
