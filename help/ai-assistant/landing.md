@@ -3,10 +3,10 @@ title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant를 시작합니다.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: 49c06a1dfb3431ce8fe416d35a22567ce614107a
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 1%
+source-wordcount: '902'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +41,6 @@ AI Assistant는 Experience Platform, Real-Time CDP, Adobe Journey Optimizer 및 
     <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
-
 
 ## 새로운 기능
 
@@ -82,6 +81,21 @@ AI Assistant를 사용하여 Experience Platform 내에서 타겟 대상을 생�
 [![이미지](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
 >[!ENDTABS]
+
+## AI Assistant의 보안 기능 {#security}
+
+
+AI Assistant의 보안 기능에 대한 자세한 내용은 다음 비디오를 시청하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
+
+>[!BEGINSHADEBOX]
+
+**AI Assistant 보안 팩트시트 읽기**
+
+AI Assistant에 대한 자세한 내용은 Adobe Experience Platform의 [AI Assistant 보안 팩트시트](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf)를 참조하십시오.
+
+>[!ENDSHADEBOX]
 
 ## 비디오 라이브러리
 
@@ -183,20 +197,6 @@ AI Assistant 사용 사례 예제는 다음을 참조하십시오.
 * [대상자를 위한 AI 길잡이 알아보기](https://www.youtube.com/live/DYsyii7ldck)
 
 >[!ENDTABS]
-
-## 추가 리소스
-
->[!BEGINSHADEBOX]
-
-**AI Assistant 보안 팩트시트 읽기**
-
-AI Assistant에 대한 자세한 내용은 Adobe Experience Platform의 [AI Assistant 보안 팩트시트](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf)를 참조하십시오.
-
->[!ENDSHADEBOX]
-
-AI Assistant의 보안 기능에 대한 자세한 내용은 다음 비디오를 시청하십시오.
-
->[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 아래 링크를 탐색하여 AI Assistant 사용 사례, 기능 등에 대해 자세히 알아보십시오.
 
