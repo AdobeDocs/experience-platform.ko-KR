@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI에서 스키마 만들기 및 편집
 description: Experience Platform 사용자 인터페이스에서 스키마를 만들고 편집하는 방법의 기본 사항에 대해 알아봅니다.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
+source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
 workflow-type: tm+mt
 source-wordcount: '4072'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 전제 조건 {#prerequisites}
 
-이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. Experience Platform 에코시스템 내에서 XDM의 역할에 대한 소개는 [XDM 개요](../../home.md)를, 스키마 구성 방법에 대한 개요는 [스키마 구성의 기본 사항](../../schema/composition.md)을 참조하십시오.
+이 안내서에서는 XDM 시스템에 대한 작업 이해가 필요합니다. Experience Platform 에코시스템 내에서 XDM의 역할에 대한 소개는 [XDM 개요](../../home.md)를 참조하고, 스키마가 구성되는 방식에 대한 개요는 스키마 컴포지션의 [기본 사항](../../schema/composition.md)을 참조하십시오.
 
 ## 새 스키마 만들기 {#create}
 
@@ -159,7 +159,7 @@ XDM에서 산업별 데이터 모델링을 위한 모범 사례에 대한 자세
 
 >[!NOTE]
 >
-스키마 편집기 내에서 표준(Adobe 생성) 클래스와 필드 그룹은 자물쇠 아이콘(![자물쇠 아이콘)으로 표시됩니다.](/help/images/icons/lock-closed.png) 질문에 답합니다. 자물쇠는 클래스 또는 필드 그룹 이름 옆의 왼쪽 레일과 시스템 생성 리소스의 일부인 스키마 다이어그램의 필드 옆에 나타납니다.
+스키마 편집기 내에서 표준(Adobe에서 생성한) 클래스와 필드 그룹은 자물쇠 아이콘 ![자물쇠 아이콘으로 표시됩니다.](/help/images/icons/lock-closed.png) 질문에 답합니다. 자물쇠는 클래스 또는 필드 그룹 이름 옆의 왼쪽 레일과 시스템 생성 리소스의 일부인 스키마 다이어그램의 필드 옆에 나타납니다.
 >
 ![자물쇠 아이콘이 강조 표시된 스키마 편집기](../../images/ui/explore/schema-editor-padlock-icon.png)
 
