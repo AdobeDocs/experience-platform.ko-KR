@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
 workflow-type: tm+mt
 source-wordcount: '1608'
-ht-degree: 4%
+ht-degree: 11%
 
 ---
 
@@ -15,14 +15,14 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="역할이란 무엇입니까?"
->abstract="역할은 관리자, 전문가 또는 최종 사용자가 조직의 리소스에 액세스할 수 있는 권한을 정의합니다. Platform 인스턴스와 상호 작용하는 사용자를 분류하며 액세스 제어 정책의 기본 구성단위입니다. 역할에는 주어진 권한 집합이 있으며 조직의 멤버들은 필요한 보기 또는 쓰기 액세스 범위에 따라 하나 이상의 역할에 할당될 수 있습니다."
+>abstract="역할은 관리자, 전문가 또는 최종 사용자가 조직 내 리소스에 접근할 수 있는 권한을 정의합니다. Platform 인스턴스와 상호 작용하는 사용자를 분류하고 액세스 제어 정책의 구성 요소입니다. 역할에는 주어진 권한 집합이 있으며 조직의 멤버들은 필요한 보기 또는 쓰기 액세스 범위에 따라 하나 이상의 역할에 할당될 수 있습니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=ko" text="역할 관리"
 
 >[!IMPORTANT]
 >
 >액세스 컨트롤은 권한 부여에 사용자 ID(사용자에게 할당된 내부 고유 ID)를 사용합니다. 조직이 Adobe ID에서 Business ID로 마이그레이션되면 사용자 ID가 변경되고 액세스 제어가 새로 생성된 사용자 ID를 사용하게 되므로 해당 사용자에 대해 설정된 모든 권한이 손실됩니다. 조직이 Business ID로 마이그레이션되는 경우 Adobe 담당자에게 문의하여 사용자 ID를 Adobe ID에서 Business ID로 마이그레이션하십시오.
 
-권한은 관리자가 사용자 역할과 액세스 정책을 정의하여 제품 애플리케이션 내의 기능 및 개체에 대한 액세스 권한을 관리할 수 있는 Experience Cloud 영역입니다.
+권한은 관리자가 사용자 역할 및 액세스 정책을 정의하여 제품 애플리케이션 내의 기능 및 개체에 대한 액세스 권한을 관리할 수 있는 Experience Cloud 영역입니다.
 
 권한을 통해 역할을 만들고 관리하며, 이러한 역할에 대해 원하는 리소스 권한을 할당할 수 있습니다. 또한 권한을 사용하여 레이블, 샌드박스 및 특정 역할과 연관된 사용자를 관리할 수 있습니다.
 
@@ -52,9 +52,9 @@ UI의 역할에 사용할 수 있는 필터는 다음과 같습니다.
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
 >title="역할 개요"
->abstract="역할 개요 대화 상자에는 주어진 역할이 액세스할 수 있는 리소스 및 샌드박스를 비롯한 역할 세부 사항이 표시됩니다. 역할 작업 공간 내에서 해당 탭으로 이동하여 역할에 대한 레이블, 사용자, 사용자 그룹 및 API 자격 증명을 관리할 수 있습니다."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="역할에 대한 레이블 관리"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="역할에 대한 사용자 관리"
+>abstract="역할 개요 대화 상자에는 지정된 역할에 접근할 수 있는 리소스 및 샌드박스 등 역할의 세부 정보가 표시됩니다. 역할 작업 영역 내의 해당 탭으로 이동하여 역할에 대한 레이블, 사용자, 사용자 그룹 및 API 자격 증명을 관리할 수 있습니다."
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="역할에 대한 레이블 관리"
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="역할에 대한 사용자 관리"
 
 **[!UICONTROL 역할]** 탭에서 역할을 선택하면 해당 역할의 [!UICONTROL 세부 정보] 대시보드가 열립니다.
 

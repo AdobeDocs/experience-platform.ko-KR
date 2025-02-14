@@ -6,7 +6,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
 source-wordcount: '1730'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -34,7 +34,7 @@ Real-Time CDP에서 [클라우드 저장소 대상](/help/destinations/catalog/c
 
 ## Platform의 배열 및 기타 개체 유형 {#arrays-strings-other-objects}
 
-Experience Platform에서 [XDM 스키마](/help/xdm/home.md)를 사용하여 다른 필드 유형을 관리할 수 있습니다. 배열 내보내기에 대한 지원이 추가되기 전에 Experience Platform 문자열과 같은 간단한 키-값 쌍 유형 필드를 원하는 대상으로 내보낼 수 있습니다. 이전에 내보내기에 지원되는 이러한 필드의 예는 `personalEmail.address`:`johndoe@acme.org`입니다.
+Experience Platform에서는 [XDM 스키마](/help/xdm/home.md)를 사용하여 다른 필드 유형을 관리할 수 있습니다. 배열 내보내기에 대한 지원이 추가되기 전에 Experience Platform의 문자열과 같은 간단한 키-값 쌍 유형 필드를 원하는 대상으로 내보낼 수 있습니다. 이전에 내보내기에 지원되는 이러한 필드의 예는 `personalEmail.address`:`johndoe@acme.org`입니다.
 
 Experience Platform의 다른 필드 유형에는 배열 필드가 포함됩니다. [Experience Platform UI에서 배열 필드 관리](/help/xdm/ui/fields/array.md)에 대해 자세히 알아보십시오. 이전에 지원된 필드 형식 외에도 이제 `array_to_string` 함수를 사용하여 문자열로 연결된 아래 예제와 같은 배열 개체를 내보낼 수 있습니다.
 
@@ -84,13 +84,13 @@ organizations = [{
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="계산된 필드 추가 비활성화됨"
->abstract="이 대상 연결을 설정할 때 **배열, 맵, 개체 내보내기** 토글 *켜짐*&#x200B;을(를) 선택했으므로 이 컨트롤을 사용할 수 없습니다. 계산된 필드와 내에서 사용할 수 있는 함수를 사용하려면 **배열, 맵, 개체 내보내기** 토글 *해제*&#x200B;를 사용하여 새 대상 연결을 설정하십시오."
+>abstract="이 대상 연결을 설정할 때 **배열, 맵, 오브젝트 내보내기**&#x200B;를 *켜짐*&#x200B;으로 토글했기 때문에 이 제어가 비활성화됩니다. 계산된 필드와 내부에서 사용할 수 있는 함수를 사용하려면 **배열, 맵, 오브젝트 내보내기**&#x200B;를 *꺼짐*&#x200B;으로 토글하여 새 대상 연결을 설정합니다."
 
 클라우드 저장소 대상에 대한 활성화 워크플로의 매핑 단계에서 **[!UICONTROL 계산된 필드 추가]**&#x200B;를 선택합니다.
 
 ![일괄 활성화 워크플로의 매핑 단계에서 강조 표시된 계산된 필드를 추가합니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
-Experience Platform 외부에서 속성을 내보낼 함수와 필드를 선택할 수 있는 모달 창이 열립니다.
+이렇게 하면 함수와 필드를 선택하여 Experience Platform에서 속성을 내보낼 수 있는 모달 창이 열립니다.
 
 ![아직 함수가 선택되지 않은 계산된 필드 기능의 모달 창.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 

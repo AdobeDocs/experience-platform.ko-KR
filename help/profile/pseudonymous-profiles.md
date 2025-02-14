@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;홈;인기 항목;데이터 세트;데이터 세트;TTL;TTL;TTL;TTL;TTL;TTL;익명;익명 프로필;데이터 만료;만료;
+keywords: Experience Platform;홈;인기 항목;데이터 세트;데이터 세트;TTL;TTL;TTL;TTL;TTL;PSEUDONYMOUS;익명 프로필;데이터 만료;만료;
 solution: Experience Platform
 title: 익명 프로필 데이터 만료
 description: 이 문서에서는 Adobe Experience Platform 내의 익명 프로필에 대한 데이터 만료 구성에 대한 일반적인 지침을 제공합니다.
@@ -7,7 +7,7 @@ exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 9d38fdae0fc65048d02a4337375004edafedd1b6
 workflow-type: tm+mt
 source-wordcount: '1065'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -19,14 +19,14 @@ Adobe Experience Platform에서는 익명 프로필에 대한 데이터 만료 �
 
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile"
->title="익명의 프로필이 뭔데?"
->abstract="익명 프로필은 익명 또는 알 수 없는 ID 네임스페이스가 있는 프로필 또는 지정된 시간 동안 활동이 발생하지 않은 프로필입니다."
+>title="익명 프로필이란 무엇입니까?"
+>abstract="익명 프로필은 익명 또는 알 수 없는 ID 네임스페이스를 가진 프로필이거나 일정 시간 동안 활동이 이루어지지 않은 프로필입니다."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
 >title="익명 프로필 데이터 만료"
->abstract="익명 프로필 데이터 만료는 익명 프로필이 제거되기 전 Adobe Experience Platform에 남아 있는 일 수를 나타냅니다."
+>abstract="익명 프로필 데이터 만료는 익명 프로필이 제거되기 전까지 Adobe Experience Platform에 남아 있는 일수를 나타냅니다."
 
 프로필은 다음 조건을 충족하는 경우 익명 데이터 만료로 간주됩니다.
 

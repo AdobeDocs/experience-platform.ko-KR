@@ -7,7 +7,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
 source-wordcount: '1593'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Experience Platform에서 속성 기반 액세스 제어를 사용하여 �
 
 이 자습서에서는 다음 플랫폼 구성 요소를 이해하고 있어야 합니다.
 
-* [[!DNL Experience Data Model (XDM)] 시스템](../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)] 시스템](../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기 튜토리얼](../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아봅니다.
 * [Adobe Experience Platform 세분화 서비스](../../segmentation/home.md): [!DNL Platform] 내의 세분화 엔진은 고객 동작 및 특성을 기반으로 고객 프로필에서 대상 세그먼트를 만드는 데 사용됩니다.
@@ -66,7 +66,7 @@ Platform UI에 대한 권한 작업 영역이 **[!UICONTROL 개요]** 페이지�
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="레이블이란 무엇입니까?"
->abstract="레이블을 사용하여 해당 데이터에 적용되는 사용 및 액세스 정책에 따라 데이터 세트와 필드를 분류합니다. Platform은 데이터 거버넌스에 적용할 수 있는 다양한 공통 제한 사항을 포함하는 Adobe 정의 <strong>core</strong> 데이터 사용 레이블을 제공합니다. 예를 들어 RHD(규제 상태 데이터)와 같은 중요한 <strong>S</strong> 레이블을 사용하면 PHI(보호 상태 정보)를 참조하는 데이터를 분류할 수 있습니다. 조직의 요구 사항에 맞는 고유한 사용자 정의 레이블을 정의할 수도 있습니다."
+>abstract="레이블을 사용하면 해당 데이터에 적용되는 사용 및 액세스 정책에 따라 데이터 세트 및 필드를 분류할 수 있습니다. Platform은 데이터 거버넌스에 적용할 수 있는 다양한 공통 제한 사항을 다루는 Adobe에서 정의한 여러 <strong>핵심</strong> 데이터 사용 레이블을 제공합니다. 예를 들어 RHD(규제 건강 데이터)와 같은 중요한 <strong>S</strong> 레이블을 사용하면 PHI(개인건강정보)를 참조하는 데이터를 분류할 수 있습니다. 조직의 요구 사항에 맞는 고유한 사용자 정의 레이블을 정의할 수도 있습니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="데이터 사용 레이블 개요"
 
 역할은 Platform 인스턴스와 상호 작용하는 사용자 유형을 분류하는 방법이며 액세스 제어 정책을 작성하는 빌딩 블록입니다. 역할에는 지정된 권한 집합이 있으며, 필요한 액세스 범위에 따라 조직 구성원을 하나 이상의 역할에 할당할 수 있습니다.
