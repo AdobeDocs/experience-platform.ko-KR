@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 있는 주제
 title: Identity 서비스에서 개인 정보 보호 요청 처리
 description: Adobe Experience Platform Privacy Service은 수많은 개인 정보 보호 규정에 명시된 대로 개인 데이터에 액세스하거나, 판매를 거부하거나, 삭제하기 위한 고객 요청을 처리합니다. 이 문서에서는 Identity 서비스에 대한 개인 정보 보호 요청 처리와 관련된 필수 개념을 다룹니다.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: a75a5603eacc1b4625a19adfddbb2f4bb81f66d3
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1000'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,9 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) GDPR(일반 데이터 �
 
 >[!NOTE]
 >
->이 안내서에서는 Experience Platform의 ID 데이터 저장소에 대해 개인 정보 보호 요청을 하는 방법만 다룹니다. Platform 데이터 레이크 또는 [!DNL Real-Time Customer Profile]에 대한 개인 정보 보호 요청을 수행할 계획이라면 이 자습서 외에 [데이터 레이크에서 개인 정보 보호 요청 처리](../catalog/privacy.md)에 대한 안내서 및 [프로필에 대한 개인 정보 보호 요청 처리](../profile/privacy.md)에 대한 안내서를 참조하십시오.
+>이 안내서에서는 Experience Platform의 ID 데이터 저장소에 대해 개인 정보를 요청하는 방법만 다룹니다. Platform 데이터 레이크 또는 [!DNL Real-Time Customer Profile]에 대한 개인 정보 보호 요청을 수행할 계획이라면 이 자습서 외에 [데이터 레이크에서 개인 정보 보호 요청 처리](../catalog/privacy.md)에 대한 안내서 및 [프로필에 대한 개인 정보 보호 요청 처리](../profile/privacy.md)에 대한 안내서를 참조하십시오.
 >
->다른 Adobe Experience Cloud 애플리케이션에 대한 개인 정보 보호 요청을 하는 방법에 대한 단계는 [Privacy Service 문서](../privacy-service/experience-cloud-apps.md)를 참조하십시오.
+>다른 Adobe Experience Cloud 애플리케이션에 대한 개인 정보 보호 요청을 하는 방법에 대한 단계는 [Privacy Service 설명서](../privacy-service/experience-cloud-apps.md)를 참조하십시오.
 
 ## 시작하기
 
@@ -32,7 +32,7 @@ Adobe Experience Platform [!DNL Privacy Service]은(는) GDPR(일반 데이터 �
 
 ## ID 네임스페이스 이해 {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service]은(는) 시스템 및 장치 간에 고객 id 데이터를 브리지합니다. [!DNL Identity Service]은(는) **id 네임스페이스**&#x200B;를 사용하여 ID 값을 원본 시스템에 연결하여 컨텍스트를 제공합니다. 네임스페이스는 이메일 주소(&quot;이메일&quot;)와 같은 일반적인 개념을 나타내거나 Adobe Advertising Cloud ID(&quot;AdCloud&quot;) 또는 Adobe Target ID(&quot;TNTID&quot;)와 같은 특정 애플리케이션과 ID를 연결할 수 있습니다.
+Adobe Experience Platform [!DNL Identity Service]은(는) 시스템 및 장치 간에 고객 id 데이터를 브리지합니다. [!DNL Identity Service]은(는) **id 네임스페이스**&#x200B;를 사용하여 ID 값을 원본 시스템에 연결하여 컨텍스트를 제공합니다. 네임스페이스는 이메일 주소(&quot;이메일&quot;)와 같은 일반 개념을 나타내거나 Adobe Advertising Cloud ID(&quot;AdCloud&quot;) 또는 Adobe Target ID(&quot;TNTID&quot;)와 같은 특정 애플리케이션과 ID를 연결할 수 있습니다.
 
 ID 서비스는 전역 정의(표준) 및 사용자 정의(사용자 정의) ID 네임스페이스 저장소를 유지 관리합니다. 표준 네임스페이스는 모든 조직에서 사용할 수 있으며(예: &quot;이메일&quot; 및 &quot;ECID&quot;), 조직에서는 특정 요구 사항에 맞게 사용자 정의 네임스페이스를 만들 수도 있습니다.
 
@@ -52,7 +52,7 @@ API에서 작업 요청을 만들 때 `userIDs` 내에 제공된 모든 ID는 �
 
 >[!TIP]
 >
->API를 사용하여 사용자 지정 네임스페이스를 삭제하는 경우 표시 이름 대신 ID 기호를 네임스페이스로 지정해야 합니다.
+>GDPR 삭제를 사용하여 ID를 삭제할 때 표시 이름 대신 ID 기호를 네임스페이스로 지정해야 합니다.
 
 ```shell
 curl -X POST \
@@ -96,7 +96,7 @@ curl -X POST \
 
 >[!TIP]
 >
->UI를 사용하여 사용자 지정 네임스페이스를 삭제할 때 표시 이름 대신 ID 기호를 네임스페이스로 지정해야 합니다. 또한 비프로덕션 샌드박스에 대해 UI에서 사용자 정의 네임스페이스를 삭제할 수 없습니다.
+>GDPR 삭제를 사용하여 ID를 삭제할 때 표시 이름 대신 ID 기호를 네임스페이스로 지정해야 합니다.
 
 UI에서 작업 요청을 만들 때 [!DNL Identity Service]에 저장된 데이터에 대한 작업을 처리하려면 **[!UICONTROL 제품]**&#x200B;에서 **[!UICONTROL ID]**&#x200B;을(를) 선택하십시오.
 
