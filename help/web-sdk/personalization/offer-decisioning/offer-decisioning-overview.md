@@ -1,22 +1,18 @@
 ---
-title: Platform Web SDK에서 Offer decisioning 사용
-description: Adobe Experience Platform Web SDK는 Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
-keywords: offer decisioning;의사 결정;Web SDK;Platform Web SDK;개인화된 오퍼;오퍼 게재;오퍼 게재;오퍼 개인화;
+title: Platform Web SDK에서 Offer Decisioning 사용
+description: Adobe Experience Platform Web SDK은 Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. Offer Decisioning UI 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
+keywords: offer decisioning;decisioning;웹 SDK;Platform Web SDK;개인화된 오퍼;오퍼 게재;오퍼 게재;오퍼 개인화;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 22477c11a977059849d9b47871a5c2aef1da4b24
+source-git-commit: b2c3b1160782a81ea66f42e21e494e0a7d90e037
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '791'
 ht-degree: 3%
 
 ---
 
-# Platform Web SDK에서 Offer decisioning 사용
+# Platform Web SDK에서 Offer Decisioning 사용
 
->[!NOTE]
->
->선택한 사용자에 대한 조기 액세스에서 Adobe Experience Platform Web SDK의 Offer decisioning을 사용할 수 있습니다. 일부 조직에서는 이 기능을 사용할 수 없습니다.
-
-Adobe Experience Platform [!DNL Web SDK]은(는) Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. offer decisioning UI(사용자 인터페이스) 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
+Adobe Experience Platform [!DNL Web SDK]은(는) Offer Decisioning에서 관리되는 개인화된 오퍼를 제공하고 렌더링할 수 있습니다. Offer Decisioning UI(사용자 인터페이스) 또는 API를 사용하여 오퍼 및 기타 관련 개체를 만들 수 있습니다.
 
 ## 전제 조건
 
@@ -26,9 +22,9 @@ Adobe Experience Platform [!DNL Web SDK]은(는) Offer Decisioning에서 관리�
 
 ## 용어
 
-offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니다. 자세한 내용을 알고 추가 약관을 보려면 [Offer decisioning 용어집](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)을 참조하세요.
+Offer Decisioning을 사용하여 작업할 때는 다음 용어를 이해하는 것이 중요합니다. 자세한 내용을 알고 추가 약관을 보려면 [Offer Decisioning 용어집](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)을 참조하세요.
 
-* **결정 범위:** Offer decisioning의 경우 결정 범위는 offer decisioning 서비스에서 오퍼를 제안하는 데 사용할 활동 및 배치 ID가 포함된 JSON의 Base64로 인코딩된 문자열입니다.
+* **결정 범위:** Offer Decisioning의 경우 결정 범위는 Offer Decisioning 서비스에서 오퍼를 제안하는 데 사용할 활동 및 배치 ID가 포함된 JSON의 Base64로 인코딩된 문자열입니다.
 
   *결정 범위 JSON:*
 
@@ -55,16 +51,16 @@ offer decisioning 작업 시 다음 용어를 이해하는 것이 중요합니�
 
 * **ID**: 자세한 내용은 [Platform Web SDK에서 ID 서비스를 사용하는 방법](../../identity/overview.md)에 대한 개요를 설명하는 이 설명서를 참조하십시오.
 
-## 활성화 Offer decisioning
+## Offer Decisioning 활성화
 
-offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
+Offer Decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
-1. [데이터 스트림](/help/datastreams/overview.md)에서 Adobe Experience Platform을 사용하도록 설정하고 &quot;Offer decisioning&quot; 상자를 선택합니다.
+1. [데이터스트림](/help/datastreams/overview.md)에서 Adobe Experience Platform을 사용하도록 설정하고 &quot;Offer Decisioning&quot; 상자를 선택합니다.
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. 지침에 따라 [SDK를 설치](/help/web-sdk/install/overview.md)하십시오(SDK는 독립 실행형으로 또는 UI를 통해 설치할 수 있습니다.). 자세한 내용은 [태그 빠른 시작 안내서](/help/tags/quick-start/quick-start.md))를 참조하십시오.
-1. `personalization.decisionScopes`을(를) 사용하여 Offer decisioning에 대한 SDK를 구성합니다. 추가적인 Offer decisioning 관련 단계는 아래에 나와 있습니다.
+1. 지침에 따라 [SDK을 설치](/help/web-sdk/install/overview.md)하십시오(SDK은 독립 실행형으로 또는 UI를 통해 설치할 수 있습니다). 자세한 내용은 [태그 빠른 시작 안내서](/help/tags/quick-start/quick-start.md))를 참조하십시오.
+1. `personalization.decisionScopes`을(를) 사용하여 Offer Decisioning용 SDK을 구성하십시오. 아래에 추가 Offer Decisioning 관련 단계가 나와 있습니다.
 
    * 독립 실행형 SDK 설치
 
@@ -86,7 +82,7 @@ offer decisioning을 활성화하려면 다음 단계를 수행하십시오.
 
       1. [태그 속성 만들기](/help/tags/ui/administration/companies-and-properties.md)
       1. [포함 코드 추가](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. &quot;데이터스트림&quot; 드롭다운에서 구성을 선택하여 생성한 데이터스트림으로 Platform Web SDK 확장을 설치하고 구성합니다. [확장](/help/tags/ui/managing-resources/extensions/overview.md)에 대한 설명서를 참조하세요.
+      1. &quot;데이터스트림&quot; 드롭다운에서 구성을 선택하여 생성한 데이터스트림으로 Platform Web SDK 확장 프로그램을 설치하고 구성합니다. [확장](/help/tags/ui/managing-resources/extensions/overview.md)에 대한 설명서를 참조하세요.
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
