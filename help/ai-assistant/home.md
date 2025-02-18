@@ -2,10 +2,10 @@
 title: Adobe Experience Platform의 AI Assistant 개요
 description: AI 어시스턴트, 그 미묘한 차이와 사용 사례, 그리고 이를 사용하여 Adobe Experience Platform 및 Real-Time Customer Data Platform을 통해 워크플로를 가속화하는 방법에 대해 알아봅니다.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: e90333d09585c8aa0ef176dcfc4717e86364fd54
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 14%
+source-wordcount: '927'
+ht-degree: 15%
 
 ---
 
@@ -49,13 +49,13 @@ AI Assistant를 쿼리하기 전에 고려해야 할 두 가지 유형의 질문
 
 ### 제품 지식 {#product-knowledge}
 
-제품 지식은 Experience League 설명서에 기반을 둔 개념과 주제를 의미합니다. 제품 지식 질문은 다음 하위 그룹에 추가로 지정할 수 있습니다.
+제품 지식은 Experience League 설명서에 나와 있는 개념과 주제를 나타냅니다. 제품 지식 질문은 다음 하위 그룹에 추가로 지정할 수 있습니다.
 
 | 제품 지식 | 예시 |
 | --- | --- |
 | 뾰족한 학습 | <ul><li>ID와 기본 또는 외래 키 간의 차이점은 무엇입니까?</li><li>유사 대상자란 무엇입니까?</li></ul> |
 | 검색 열기 | <ul><li>이 데이터 세트를 내보내려면 어떻게 해야 합니까?</li><li>의료 서비스 고객을 위한 스키마가 있습니까?</li></ul> |
-| 문제 해결 | <ul><li>프로필에 대해 Adobe 소유의 스키마를 켤 수 없는 이유는 무엇입니까?</li><li>세그먼트를 삭제할 수 없는 이유</li></ul> |
+| 문제 해결 | <ul><li>프로필용으로 Adobe에서 소유한 스키마를 켤 수 없는 이유는 무엇입니까?</li><li>세그먼트를 삭제할 수 없는 이유</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -64,10 +64,6 @@ AI Assistant 제품 지식에 대한 추가 정보는 다음 비디오를 시청
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### 운영 인사이트 {#operational-insights}
-
->[!IMPORTANT]
->
->Operational Insights 답변은 Beta 버전입니다. **Operational Insights 보기** 권한에 대한 액세스 권한이 있는 모든 사용자는 Operational Insights 응답에 액세스할 수 있습니다.
 
 운영 인사이트는 카운트, 조회 및 계보 영향을 포함하여 AI 비서가 메타 데이터 개체(속성, 대상, 데이터 흐름, 데이터 세트, 대상, 여정, 스키마 및 소스)에 대해 생성하는 답변을 말합니다. 샌드박스 내의 데이터는 보지 않습니다.
 
@@ -100,7 +96,7 @@ AI Assistant 작동 인사이트에 대한 추가 정보는 다음 비디오를 
 
 현재 AI Assistant의 범위는 다음과 같습니다.
 
-* [제품 지식](./home.md#product-knowledge): AI Assistant는 Experience Platform, Real-time Customer Data Platform 및 Adobe Journey Optimizer에 대한 제품 지식 질문에 답변할 수 있습니다. Customer Journey Analytics을 위해 제품 지식 항목을 자세히 살펴볼 수도 있지만, Customer Journey Analytics UI를 통해서만 가능합니다.
+* [제품 지식](./home.md#product-knowledge): AI Assistant는 Experience Platform, Real-Time Customer Data Platform 및 Adobe Journey Optimizer에 대한 제품 지식 질문에 답변할 수 있습니다. Customer Journey Analytics UI를 통해서만 Customer Journey Analytics에 대한 제품 지식 항목을 살펴볼 수도 있습니다.
 * [작동 인사이트](./home.md#operational-insights): 특성, 대상, 데이터 흐름, 데이터 세트, 대상, 여정, 스키마 및 원본과 같은 데이터 개체에 대한 작동 인사이트에 대한 질문과 함께 AI Assistant에 물을 수 있습니다.
 
 ## 다음 단계

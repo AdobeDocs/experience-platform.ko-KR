@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform의 AI 지원
-description: AI Assistant를 사용하여 Experience Platform 및 Real-time Customer Data Platform 개념과 객체에 대한 사용 정보를 탐색하고 이해하는 방법에 대해 알아봅니다.
+description: AI Assistant를 사용하여 Experience Platform 및 Real-Time Customer Data Platform 개념과 객체에 대한 사용 정보를 탐색하고 이해하는 방법에 대해 알아봅니다.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
+source-git-commit: 4fd40d66ecc2fe7604e157fcd230883c6c48d761
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
@@ -29,17 +29,17 @@ AI Assistant 인터페이스가 나타나고 시작하기 위한 정보가 즉�
 
 >[!NOTE]
 >
->다음 워크플로우는 경험 이벤트 스키마 생성 프로세스를 사용하여 Experience Platform UI 사용 시 AI Assistant를 사용하는 방법을 보여 주는 예제입니다.
+>다음 워크플로우는 경험 이벤트 스키마 생성 프로세스를 사용하여 Experience Platform UI 사용 시 AI Assistant를 사용하는 방법을 보여주는 예입니다.
 
 **이벤트 스키마의 장치 거래**&#x200B;을 만드는 사용 사례를 고려하십시오. 경험 이벤트 스키마 만들기 프로세스 중에 `eventType` 필드가 표시됩니다. &quot;이제 워크플로우를 종료하고 [스키마 구성의 기본 사항](../xdm/schema/composition.md) 설명서를 참조하거나 AI Assistant를 사용하여 AI Assistant에서 권장하는 설명서 링크를 통해 질문에 대한 답변을 검색하고 추가 리소스를 찾을 수 있습니다.&quot;
 
 시작하려면 제공된 텍스트 상자에 질문을 입력합니다. 아래 예에는 &quot;**ExperienceEvent 스키마의 eventType 필드는 무엇입니까?**&quot;라는 질문이 AI 도우미에 제공됩니다.
 
-![Experience Platform을 위한 AI 길잡이 및 다음 질문을 준비했습니다. &quot;ExperienceEvent 스키마의 eventType 필드는 무엇입니까?](./images/question.png)
+![쿼리를 위해 다음 질문이 준비된 Experience Platform용 AI 도우미: &quot;ExperienceEvent 스키마의 eventType 필드는 무엇입니까?](./images/question.png)
 
 그런 다음 AI Assistant는 기술 자료를 쿼리하고 답을 계산합니다. 잠시 후 AI 도우미가 후속 프롬프트로 사용할 수 있는 답변 및 관련 제안을 반환합니다.
 
-![이전 쿼리에 대한 답변이 있는 Experience Platform을 위한 AI 길잡이.](./images/answer.png)
+![이전 쿼리에 대한 답변이 있는 Experience Platform용 AI 길잡이.](./images/answer.png)
 
 AI Assistant로부터 응답을 받은 후 여러 옵션 중에서 선택하여 진행할 방법을 결정할 수 있습니다.
 
@@ -87,7 +87,7 @@ AI Assistant가 작동 인사이트에 대한 질문에 충분히 응답하려�
 
 ![운영 인사이트에 대한 질문입니다.](./images/op-insights-question.png)
 
-그러면 AI Assistant가 데이터 흐름 및 해당 ID를 나열하는 테이블로 응답합니다. 전체 데이터 테이블을 보려면 오른쪽 상단의 확장 아이콘을 선택합니다.
+그러면 AI Assistant가 데이터 흐름 및 해당 ID를 나열하는 테이블로 응답합니다. 다운로드 아이콘(![다운로드 아이콘](/help/images/icons/download.png))을 선택하여 테이블을 CSV 파일로 다운로드합니다. 전체 테이블을 보려면 확장 아이콘(![확장 아이콘](/help/images/icons/expand.png))을 선택하십시오.
 
 ![Operational Insights 답변](./images/op-insights-answer.png)
 
@@ -100,10 +100,6 @@ AI Assistant가 작동 인사이트에 대한 질문에 충분히 응답하려�
 ![AI 도우미가 답변을 계산하는 방법에 대한 설명을 제공합니다.](./images/answer-explained.png)
 
 질문에 대한 필터 및 수정 사항을 제공할 수도 있으며, AI Assistant가 사용자가 포함하는 필터를 기반으로 검색 결과를 렌더링하도록 할 수 있습니다. 예를 들어, AI Assistant에 생성된 날짜 순서로 세그먼트 정의 수 트렌드를 보여 달라고 요청하고, 총 프로필이 0인 세그먼트 정의를 제거하고, 데이터를 표시할 때 정수 대신 월 이름을 사용할 수 있습니다.
-
-**참고:** Operational Insights 답변은 현재 Beta 버전입니다. AI Assistant 사용자 인터페이스에서 툴팁 아이콘을 선택하여 Beta 알림 및 설명서 링크를 확인합니다.
-
-![AI Assistant 도구 설명 아이콘이 선택되었습니다.](./images/op-insights-beta-note.png)
 
 +++
 
