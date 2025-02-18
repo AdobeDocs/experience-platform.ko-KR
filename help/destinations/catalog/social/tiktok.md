@@ -3,9 +3,9 @@ title: TikTok 연결
 description: 광고 캠페인으로 타깃팅할 데이터를 사용하여 TikTok에서 사용자 지정 대상을 작성합니다. 이러한 대상은 웹 사이트를 방문하거나 콘텐츠와 상호 작용한 사람일 수 있습니다. Adobe과 TikTok Ads Manager의 실시간 통합을 사용하여 원하는 대상을 Adobe Experience Platform에서 TikTok으로 빠르고 안전하게 푸시할 수 있습니다.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1077'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ TikTok 대상을 사용하는 방법과 시기를 더 잘 이해할 수 있도�
 
 대상자를 보낼 TikTok Ads Manager 계정에 대해 [!DNL Admin] 또는 [!DNL Operator] 액세스 권한이 있어야 합니다. 자세한 지침은 [TikTok 도움말 센터](https://ads.tiktok.com/help/article/add-users-tiktok-business-center)에서 확인할 수 있습니다.
 
-TikTok Ads Manager 계정으로 데이터를 보내기 전에 `Audience Management`의 광고 계정에 액세스할 수 있는 Adobe Experience Platform 권한을 부여해야 합니다. 이 권한은 [Experience Platform UI에 Ads Manager ID를 입력](#authenticate)하고 TikTok Ads Manager 계정으로 리디렉션된 후 권한을 부여하여 제공할 수 있습니다.
+TikTok Ads Manager 계정으로 데이터를 보내기 전에 `Audience Management`의 광고 계정에 액세스할 수 있는 Adobe Experience Platform 권한을 부여해야 합니다. 이 권한은 [Experience Platform UI에서 광고 관리자 ID를 입력](#authenticate)하고 TikTok 광고 관리자 계정으로 리디렉션된 후 권한을 부여하여 제공할 수 있습니다.
 
 ## 지원되는 ID {#supported-identities}
 
@@ -44,6 +44,18 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. [ID](/help/id
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
 | 전화번호 | SHA256 알고리즘으로 해시된 전화번호 | 일반 텍스트와 SHA256 해시 전화 번호는 모두 Adobe Experience Platform에서 지원되며 E.164 형식이어야 합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
 | 이메일 | SHA256 알고리즘으로 해시된 이메일 주소 | Adobe Experience Platform은 일반 텍스트와 SHA256 해시 이메일 주소를 모두 지원합니다. 소스 필드에 해시되지 않은 특성이 포함된 경우 **[!UICONTROL 변환 적용]** 옵션을 선택하여 [!DNL Platform]이(가) 활성화 시 데이터를 자동으로 해시하도록 하십시오. |
+
+{style="table-layout:auto"}
+
+## 지원되는 대상자 {#supported-audiences}
+
+이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
+
+| 대상자 원본 | 지원됨 | 설명 |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Federated Audience Composition] | ✓ | [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences)을(를) 통해 Experience Platform으로 가져온 대상입니다. |
 
 {style="table-layout:auto"}
 
@@ -68,7 +80,7 @@ TikTok은 아래 표에 설명된 id 활성화를 지원합니다. [ID](/help/id
 
 ### 대상으로 인증 {#authenticate}
 
-대상을 인증하려면 [!DNL TikTok Ads Manager] 계정에 로그인하도록 리디렉션되고 사용자를 대신하여 대상을 관리할 수 있도록 Adobe을 승인합니다.
+대상에 인증하려면 [!DNL TikTok Ads Manager] 계정에 로그인하도록 리디렉션되고 Adobe에서 사용자를 대신하여 대상자를 관리하도록 승인됩니다.
 
 ![TikTok 권한 선택](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "권한 선택을 위한 TikTok UI 이미지")
 
