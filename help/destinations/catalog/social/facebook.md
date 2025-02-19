@@ -1,9 +1,9 @@
 ---
-keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;메신저;facebook 메신저
+keywords: facebook 연결;facebook 연결;facebook 대상;facebook;instagram;messenger;facebook messenger
 title: Facebook 연결
 description: 해시된 이메일을 기반으로 한 대상자 타겟팅, 개인화 및 억제에 대한 Facebook 캠페인을 위한 프로필을 활성화합니다.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '2091'
 ht-degree: 6%
@@ -18,7 +18,7 @@ ht-degree: 6%
 
 [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] 및 [!DNL Messenger]을(를) 포함하여 [!DNL Custom Audiences]에서 지원하는 [!DNL Facebook's] 앱 제품군의 대상 타깃팅에 이 대상을 사용할 수 있습니다. 캠페인을 실행할 앱의 선택은 [!DNL Facebook Ads Manager]의 배치 수준에서 표시됩니다.
 
-Adobe Experience Platform UI의 ![Facebook 대상.](../../assets/catalog/social/facebook/catalog.png)
+![Adobe Experience Platform UI의 Facebook 대상입니다.](../../assets/catalog/social/facebook/catalog.png)
 
 ## 사용 사례
 
@@ -54,8 +54,8 @@ Adobe Experience Platform UI의 ![Facebook 대상.](../../assets/catalog/social/
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -65,22 +65,25 @@ Adobe Experience Platform UI의 ![Facebook 대상.](../../assets/catalog/social/
 
 | 항목 | 유형 | 참고 |
 ---------|----------|---------|
-| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | facebook 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보냅니다. |
+| 내보내기 유형 | **[!UICONTROL 대상자 내보내기]** | Facebook 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 대상자의 모든 구성원을 내보냅니다. |
 | 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 대상자 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
 ## Facebook 계정 사전 요구 사항 {#facebook-account-prerequisites}
 
-대상자를 [!DNL Facebook](으)로 보내려면 먼저 다음 요구 사항을 충족하는지 확인하십시오.
+대상자를 [!DNL Facebook]&#x200B;(으)로 보내려면 먼저 다음 요구 사항을 충족하는지 확인하십시오.
 
 * [!DNL Facebook] 사용자 계정에는 사용 중인 광고 계정을 소유한 [!DNL Facebook Business Account]에 대한 전체 액세스 권한이 있어야 합니다.
 * [!DNL Facebook] 사용자 계정에는 사용할 광고 계정에 대해 **[!DNL Manage campaigns]** 권한이 활성화되어 있어야 합니다.
 * **Adobe Experience Cloud** 비즈니스 계정을 [!DNL Facebook Ad Account]의 광고 파트너로 추가해야 합니다. `business ID=206617933627973` 사용. 자세한 내용은 Facebook 설명서의 [비즈니스 관리자에 파트너 추가](https://www.facebook.com/business/help/1717412048538897)를 참조하십시오.
+
   >[!IMPORTANT]
   >
   > Adobe Experience Cloud에 대한 권한을 구성할 때는 **캠페인 관리** 권한을 활성화해야 합니다. [!DNL Adobe Experience Platform] 통합에는 권한이 필요합니다.
+
 * [!DNL Facebook Custom Audiences] 서비스 약관을 읽고 서명합니다. 이렇게 하려면 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`(으)로 이동하십시오. 여기서 `accountID`은(는) 내 [!DNL Facebook Ad Account ID]입니다. 서비스 약관에 서명할 때 `business_id=206617933627973` 섹션이 URL에 있는지 확인하십시오.
+
   >[!IMPORTANT]
   >
   >[!DNL Facebook Custom Audiences] 서비스 약관에 서명할 때 Facebook API에서 인증하는 데 사용한 것과 동일한 사용자 계정을 사용해야 합니다.
@@ -95,7 +98,7 @@ Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사�
 
 [!DNL Facebook]에서 전화 번호를 활성화하는 방법에는 두 가지가 있습니다.
 
-* **원시 전화 번호 수집**: [!DNL E.164] 형식의 원시 전화 번호를 [!DNL Platform](으)로 수집할 수 있습니다. 활성화 시 자동으로 해시됩니다. 이 옵션을 선택하는 경우 항상 원시 전화 번호를 `Phone_E.164` 네임스페이스로 수집해야 합니다.
+* **원시 전화 번호 수집**: [!DNL E.164] 형식의 원시 전화 번호를 [!DNL Platform]&#x200B;(으)로 수집할 수 있습니다. 활성화 시 자동으로 해시됩니다. 이 옵션을 선택하는 경우 항상 원시 전화 번호를 `Phone_E.164` 네임스페이스로 수집해야 합니다.
 * **해시된 전화번호 수집**: [!DNL Platform]에 수집하기 전에 전화번호를 미리 해시할 수 있습니다. 이 옵션을 선택하는 경우 해시된 전화 번호를 항상 `Phone_SHA256` 네임스페이스로 수집해야 합니다.
 
 >[!NOTE]
@@ -104,7 +107,7 @@ Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사�
 
 ## 이메일 해시 요구 사항 {#email-hashing-requirements}
 
-이메일 주소를 Adobe Experience Platform에 수집하기 전에 해시하거나 Experience Platform에서 이메일 주소를 지우고 [!DNL Platform]이(가) 활성화 시 해시하도록 할 수 있습니다.
+이메일 주소를 Adobe Experience Platform에 수집하기 전에 해시하거나 Experience Platform에서 이메일 주소를 지우고 활성화 시 [!DNL Platform]에게 해시하도록 할 수 있습니다.
 
 Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 자세한 내용은 [일괄 처리 수집 개요](/help/ingestion/batch-ingestion/overview.md) 및 [스트리밍 수집 개요](/help/ingestion/streaming-ingestion/overview.md)를 참조하십시오.
 
@@ -127,7 +130,7 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 ## 사용자 정의 네임스페이스 사용 {#custom-namespaces}
 
-`Extern_ID` 네임스페이스를 사용하여 [!DNL Facebook](으)로 데이터를 보내려면 먼저 [!DNL Facebook Pixel]을(를) 사용하여 자신의 식별자를 동기화해야 합니다. 자세한 내용은 [Facebook 공식 설명서](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)를 참조하세요.
+`Extern_ID` 네임스페이스를 사용하여 [!DNL Facebook]&#x200B;(으)로 데이터를 보내려면 먼저 [!DNL Facebook Pixel]을(를) 사용하여 자신의 식별자를 동기화해야 합니다. 자세한 내용은 [Facebook 공식 설명서](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)를 참조하세요.
 
 ## 대상에 연결 {#connect}
 
@@ -143,14 +146,14 @@ Experience Platform에서 전자 메일 주소를 수집하는 방법에 대한 
 
 >[!NOTE]
 >
->Experience Platform 사용자 인터페이스는 자주 업데이트되며, 이 비디오 녹화 이후에 변경되었을 수 있습니다. 최신 정보는 [대상 구성 자습서](../../ui/connect-destination.md)를 참조하세요.
+>Experience Platform 사용자 인터페이스는 자주 업데이트되며, 이 비디오 녹화 이후 변경되었을 수 있습니다. 최신 정보는 [대상 구성 자습서](../../ui/connect-destination.md)를 참조하세요.
 
 ### 대상으로 인증 {#authenticate}
 
 1. 대상 카탈로그에서 Facebook 대상을 찾고 **[!UICONTROL 설정]**&#x200B;을 선택합니다.
 2. **[!UICONTROL 대상에 연결]**을 선택합니다.
    ![활성화 워크플로에 표시된 Facebook 인증 단계입니다.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
-3. facebook 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
+3. Facebook 자격 증명을 입력하고 **로그인**&#x200B;을 선택합니다.
 
 ### 인증 자격 증명 새로 고침 {#refresh-authentication-credentials}
 
@@ -218,7 +221,7 @@ Facebook 토큰은 60일마다 만료됩니다. 토큰이 만료되면 대상으
 
 **[!UICONTROL 세그먼트 일정]** 단계에서는 [!DNL Facebook Custom Audiences]에 대상자를 보낼 때 [!UICONTROL 대상자 원본]을 제공해야 합니다.
 
-![Facebook 활성화 단계에 표시된 대상 원본 드롭다운입니다.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Facebook 활성화 단계에 표시된 대상자 원본 드롭다운입니다.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### 매핑 예: [!DNL Facebook Custom Audience]에서 대상 데이터 활성화 {#example-facebook}
 
@@ -227,9 +230,9 @@ Facebook 토큰은 60일마다 만료됩니다. 토큰이 만료되면 대상으
 소스 필드 선택:
 
 * 사용 중인 전자 메일 주소가 해시되지 않은 경우 `Email` 네임스페이스를 원본 ID로 선택하십시오.
-* [!DNL Facebook] [전자 메일 해시 요구 사항](#email-hashing-requirements)에 따라 데이터 수집 시 고객 전자 메일 주소를 [!DNL Platform](으)로 해시했다면 `Email_LC_SHA256` 네임스페이스를 원본 ID로 선택하십시오.
+* [!DNL Facebook] [전자 메일 해시 요구 사항](#email-hashing-requirements)에 따라 데이터 수집 시 고객 전자 메일 주소를 [!DNL Platform]&#x200B;(으)로 해시했다면 `Email_LC_SHA256` 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 해시되지 않은 전화 번호로 구성된 경우 `PHONE_E.164` 네임스페이스를 원본 ID로 선택하십시오. [!DNL Platform]이(가) [!DNL Facebook] 요구 사항을 준수하기 위해 전화 번호를 해시합니다.
-* [!DNL Facebook] [전화 번호 해시 요구 사항](#phone-number-hashing-requirements)에 따라 데이터 수집 시 전화 번호를 [!DNL Platform](으)로 해시했다면 `Phone_SHA256` 네임스페이스를 원본 ID로 선택하십시오.
+* [!DNL Facebook] [전화 번호 해시 요구 사항](#phone-number-hashing-requirements)에 따라 데이터 수집 시 전화 번호를 [!DNL Platform]&#x200B;(으)로 해시했다면 `Phone_SHA256` 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 [!DNL Apple] 장치 ID로 구성된 경우 `IDFA` 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 [!DNL Android] 장치 ID로 구성된 경우 `GAID` 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 다른 유형의 식별자로 구성된 경우 `Custom` 네임스페이스를 소스 ID로 선택하십시오.
@@ -255,7 +258,7 @@ Facebook 토큰은 60일마다 만료됩니다. 토큰이 만료되면 대상으
 
 >[!TIP]
 >
->Adobe Experience Platform과 [!DNL Facebook] 간의 통합은 과거 대상 다시 채우기를 지원합니다. 대상에 대해 대상을 활성화하면 기존의 모든 대상 자격이 [!DNL Facebook](으)로 전송됩니다.
+>Adobe Experience Platform과 [!DNL Facebook] 간의 통합은 과거 대상 다시 채우기를 지원합니다. 대상에 대해 대상을 활성화하면 기존의 모든 대상 자격이 [!DNL Facebook]&#x200B;(으)로 전송됩니다.
 
 ## 문제 해결 {#troubleshooting}
 
@@ -271,6 +274,6 @@ Facebook 토큰은 60일마다 만료됩니다. 토큰이 만료되면 대상으
 >
 >[계정 필수 구성 요소](#facebook-account-prerequisites) 섹션의 URL 템플릿에 표시된 대로 `business ID 206617933627973`에서 [!DNL Facebook Custom Audience Terms of Service]을(를) 수락해야 합니다.
 
-[Facebook 계정 필수 구성 요소](#facebook-account-prerequisites)의 단계를 수행한 후 `400 Bad Request` 오류 메시지를 받은 경우 [!DNL Facebook] 권한이 적용될 수 있도록 며칠 동안 허용하십시오.
+[Facebook 계정 필수 구성 요소](#facebook-account-prerequisites)의 단계를 수행한 후 `400 Bad Request` 오류 메시지가 표시되면 [!DNL Facebook] 권한이 적용될 수 있는 기간을 며칠으로 허용하십시오.
 
 

@@ -3,7 +3,7 @@ title: Google Ads Enhanced Conversions 확장
 description: Adobe Experience Platform의 이벤트 전달을 위한 Google Ads Enhanced Conversion 확장에 대해 알아봅니다.
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 [!DNL Google Ads] API를 사용하면 전환 조정 형식으로 자사 고객 데이터를 전송하여 [향상된 전환](https://support.google.com/google-ads/answer/9888656)을 활용할 수 있습니다. Google은 이 추가 데이터를 사용하여 광고 상호 작용에 따른 온라인 전환에 대한 보고를 향상시킵니다.
 
-[[!DNL Google Ads] 향상된 전환 이벤트 전달 확장](https://exchange.adobe.com/apps/ec/108630/google-ads-enhanced-conversions)(이전의 [!DNL Enhanced Conversions] 확장)은 [!DNL Google Ads] API에 대한 향상된 전환을 쉽게 구현할 수 있는 사용자 친화적인 템플릿을 제공합니다.
+[[!DNL Google Ads] 향상된 전환 이벤트 전달 확장](https://exchange.adobe.com/apps/ec/108630/google-ads-enhanced-conversions)&#x200B;(이전의 [!DNL Enhanced Conversions] 확장)은 [!DNL Google Ads] API에 대한 향상된 전환을 쉽게 구현할 수 있는 사용자 친화적인 템플릿을 제공합니다.
 
 >[!IMPORTANT]
 >
@@ -43,11 +43,11 @@ ht-degree: 1%
 
 ## 태그를 사용하여 변환 보내기
 
-웹 사이트에서 전환 이벤트를 보내려면 [!DNL Google Global Site Tag](gtag)을(를) 배포해야 합니다. [!DNL Google Global Site Tag](gtag) 확장을 구성 및 설치하여 태그를 사용하여 이를 수행할 수 있습니다.
+웹 사이트에서 전환 이벤트를 보내려면 [!DNL Google Global Site Tag]&#x200B;(gtag)을(를) 배포해야 합니다. [!DNL Google Global Site Tag]&#x200B;(gtag) 확장을 구성 및 설치하여 태그를 사용하여 이를 수행할 수 있습니다.
 
 ### [!DNL Google Global Site Tag] 확장 구성 및 설치
 
-[!UICONTROL 데이터 수집] UI 또는 Experience Platform UI로 이동하고 왼쪽 탐색에서 **[!UICONTROL 태그]**&#x200B;를 선택합니다. 확장을 설치할 태그 속성을 선택한 다음 왼쪽 탐색에서 **[!UICONTROL 확장]**&#x200B;을 선택합니다. **[!UICONTROL 카탈로그]** 탭에서 [!UICONTROL Google 글로벌 사이트 태그(gtag)] 확장을 찾아 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
+[!UICONTROL 데이터 수집] UI 또는 Experience Platform UI로 이동한 다음 왼쪽 탐색에서 **[!UICONTROL 태그]**&#x200B;를 선택합니다. 확장을 설치할 태그 속성을 선택한 다음 왼쪽 탐색에서 **[!UICONTROL 확장]**&#x200B;을 선택합니다. **[!UICONTROL 카탈로그]** 탭에서 [!UICONTROL Google 글로벌 사이트 태그(gtag)] 확장을 찾아 **[!UICONTROL 설치]**&#x200B;를 선택합니다.
 
 ![[!UICONTROL Google 전역 사이트 태그(gtag)] 확장이 [!UICONTROL 데이터 수집] UI의 [!UICONTROL 확장] 보기에서 선택됩니다.](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
 
@@ -74,6 +74,7 @@ ht-degree: 1%
 1. **[!UICONTROL 이벤트 이름(작업)]**: 값으로 `conversion`을(를) 입력하십시오.
 1. 키가 `transaction_id`이고 값이 [트랜잭션 ID](https://support.google.com/google-ads/answer/6386790) 값을 포함하는 [데이터 요소](../../../ui/managing-resources/data-elements.md)인 새 필드를 추가합니다.
 1. **[!UICONTROL 전환 레이블]**: [!DNL Google Ads] 계정에서 적절한 전환 레이블을 입력합니다. 이 값을 찾으려면 Google Ads에 로그인한 다음 **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Use Google Tag Manager]**(으)로 이동합니다. 전환 레이블은 [!DNL Instructions]에서 찾을 수 있습니다.
+
    >[!IMPORTANT]
    >
    >[!DNL Google Ads] 계정의 태그 설정 영역에 있는 동안 향상된 전환이 활성화되어 있는지 확인하십시오. 이렇게 하려면 서비스 약관을 검토하고 동의한 다음 구현 방법으로 **[!DNL Turn on enhanced conversions]** 및 **[!DNL API]**&#x200B;을(를) 선택합니다.

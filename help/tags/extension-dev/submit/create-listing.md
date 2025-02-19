@@ -2,10 +2,10 @@
 title: 확장에 대한 Exchange 목록 만들기
 description: Adobe Experience Platform의 공개 카탈로그에 확장을 추가하는 방법을 알아봅니다.
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
-source-git-commit: fcc586034317fb31122721fa9754b580c761a1da
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '1193'
-ht-degree: 20%
+ht-degree: 24%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch은 Adobe Experience Platform의 데이터 수집 기술군으로 새롭게 브랜딩되었습니다. 그 결과 제품 설명서에 몇 가지 용어 변경 사항이 적용되었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
+>Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../term-updates.md)를 참조하십시오.
 
 Adobe Experience Platform에는 사용자가 설치할 수 있는 태그 확장을 볼 수 있는 단일 통합 카탈로그가 있습니다. 이 카탈로그는 제품 내에서 사용할 수 있으며 다음 세 가지 유형의 확장을 포함합니다.
 
@@ -37,7 +37,7 @@ Adobe Experience Platform에는 사용자가 설치할 수 있는 태그 확장�
 
 >[!NOTE]
 >
->다음 프로세스에서는 Adobe Exchange 프로그램에서 응용 프로그램 목록을 작성하는 방법에 대해 자세히 설명합니다. Adobe Experience Platform의 다양한 통합 및 확장에 사용되는 용어입니다.
+>다음 프로세스에서는 Adobe Exchange 프로그램에서 애플리케이션 목록을 만드는 방법에 대해 자세히 설명합니다. Adobe Experience Platform의 다양한 통합 및 확장에 사용되는 용어입니다.
 
 ![Experience Cloud App Manager 링크 위치](../images/getting-started/app-mgr-link.png)
 
@@ -45,6 +45,7 @@ Adobe Experience Platform에는 사용자가 설치할 수 있는 태그 확장�
 1. **새 응용 프로그램 만들기** 탭을 선택한 다음 사용자 지정된 솔루션에 대해 **새 앱 만들기**&#x200B;를 선택하거나 적용 가능한 템플릿을 선택하십시오.
 1. 목록 정보를 제공합니다. App Manager에 대한 자세한 내용은 전체 [article](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931)을(를) 확인하십시오. 목록 정보는 확장의 기능 및 유용한 이유에 대해 매우 명확해야 합니다. 목록은 앱의 마케팅 공간으로 작동합니다. 명확한 설명, 사이트의 랜딩 페이지에 대한 링크, 도움말 문서에 대한 링크 또는 지원 이메일 주소 등을 사용하여 여기에서 확장을 홍보합니다. 확장 보기의 공간이 제한적이지만 Exchange 목록은 확장과 회사를 모두 홍보할 수 있는 기회를 제공합니다. 다음은 확장 기능의 프로모션을 개선하기 위한 제안입니다.
    - **앱 아이콘** - Exchange 목록의 아이콘에 적합한 크기로, png의 경우 512 x 512 또는 jpg의 1:1 종횡비여야 합니다.
+
      >[!NOTE]
      >
      >확장 코드에서 사용되는 것과 다른 파일 형식입니다. 확장 자체에는 svg 파일이 [아이콘](../manifest.md)으로 포함됩니다.
@@ -54,8 +55,8 @@ Adobe Experience Platform에는 사용자가 설치할 수 있는 태그 확장�
    - **구성 지침** - 고객에게 Adobe Experience Platform 확장을 구성하는 방법을 알려 줍니다. 속성에 확장을 설치한 직후에 [구성 보기](../configuration.md)가 나타날 때 필요한 설정과 다음 단계를 이해하는지 확인합니다.
    - **태그** - 목록을 편집하는 첫 번째 페이지에서 &#39;사용자 지정 태그&#39; 필드에 &quot;Launch&quot;라는 단어를 포함해야 합니다. 그러면 Exchange 마켓플레이스의 태그 검색에 목록이 표시됩니다.
      ![](../images/getting-started/custom-tags.jpg)
-   - **샌드박스** - Adobe 솔루션에 대한 액세스는 완전한 버전의 Adobe Experience Platform에 액세스할 수 있는 샌드박스 계정을 통해 이루어집니다. 이러한 샌드박스 계정은 애플리케이션 목록을 만들 때 요청할 수 있습니다. **연결** 섹션에서 만든 응용 프로그램(태그 확장)에 적용할 수 있는 특정 연결을 선택하고 **저장**&#x200B;을 누르면 필요한 경우 샌드박스 요청이 생성됩니다.
-1. 목록을 제출합니다. Adobe Exchange 팀이 애플리케이션을 검토하고 업데이트가 필요한 경우 피드백을 제공합니다. 목록을 제출할 때 **즉시 게시** 확인란을 선택하면 승인 즉시 게시됩니다. 나중에 애플리케이션을 게시하려면 확인란을 선택하지 않은 상태로 둡니다. 확장 목록이 승인되면 앱(확장) 목록 페이지의 확장 목록 옆에 파란색 **Publish** 단추가 표시됩니다.
+   - **샌드박스** - Adobe 솔루션에 대한 액세스는 완전한 기능의 Adobe Experience Platform 버전에 액세스할 수 있는 샌드박스 계정을 통해 이루어집니다. 이러한 샌드박스 계정은 애플리케이션 목록을 만들 때 요청할 수 있습니다. **연결** 섹션에서 만든 응용 프로그램(태그 확장)에 적용할 수 있는 특정 연결을 선택하고 **저장**&#x200B;을 누르면 필요한 경우 샌드박스 요청이 생성됩니다.
+1. 목록을 제출합니다. Adobe Exchange 팀이 애플리케이션을 검토하고 업데이트가 필요한 경우 피드백을 제공합니다. 목록을 제출할 때 **즉시 게시** 확인란을 선택하면 승인 즉시 게시됩니다. 나중에 애플리케이션을 게시하려면 확인란을 선택하지 않은 상태로 둡니다. 확장 목록이 승인되면 앱(확장) 목록 페이지의 확장 목록 옆에 파란색 **게시** 단추가 나타납니다.
 
 ### 유효한 목록 만들기
 

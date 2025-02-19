@@ -2,7 +2,7 @@
 title: Splunk 확장 개요
 description: Adobe Experience Platform의 이벤트 전달을 위한 Splunk 확장에 대해 알아봅니다.
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 1%
@@ -38,6 +38,7 @@ Splunk는 전달자 토큰을 인증 메커니즘으로 사용하여 Splunk 이�
 
 * [이벤트 수집기 토큰](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token_on_Splunk_Cloud_Platform). 토큰은 일반적으로 다음과 같은 UUIDv4 형식입니다. `12345678-1234-1234-1234-1234567890AB`.
 * 조직의 Splunk 플랫폼 인스턴스 주소 및 포트입니다. 플랫폼 인스턴스 주소 및 포트는 일반적으로 `mysplunkserver.example.com:443` 형식을 갖습니다.
+
   >[!IMPORTANT]
   >
   > 이벤트 전달 내에서 참조된 splunk 끝점은 `443` 포트만 사용해야 합니다. 비표준 포트는 현재 이벤트 전달 구현에서 지원되지 않습니다.
@@ -94,4 +95,4 @@ UI에 Splunk 이벤트 수집기 확장을 설치하려면 **이벤트 전달**(
 
 * [Splunk Web에서 HTTP 이벤트 수집기 설정 및 사용](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
 * [토큰을 사용하여 인증 설정](https://docs.splunk.com/Documentation/Splunk/8.2.5/Security/Setupauthenticationwithtokens#Prerequisites_for_activating_tokens)
-* [HTTP 이벤트 수집기 문제 해결](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector)(또한 [가능한 오류 코드 ](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector#Possible_error_codes)의 표준 목록)
+* [HTTP 이벤트 수집기 문제 해결](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector)&#x200B;(또한 [가능한 오류 코드 ](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector#Possible_error_codes)의 표준 목록)
