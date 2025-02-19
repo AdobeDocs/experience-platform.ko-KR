@@ -2,30 +2,32 @@
 keywords: Experience Platform;홈;인기 항목;필터;필터;데이터 필터링;데이터 필터링;날짜 범위
 solution: Experience Platform
 title: 쿼리 매개 변수를 사용하여 카탈로그 데이터 필터링
-description: 카탈로그 서비스 API를 사용하면 요청 쿼리 매개 변수를 사용하여 응답 데이터를 필터링할 수 있습니다. 카탈로그에 대한 모범 사례의 일부는 API에 대한 로드를 줄이고 전체 성능을 개선하는 데 도움이 되므로 모든 API 호출에 필터를 사용하는 것입니다.
+description: 쿼리 매개 변수를 사용하여 카탈로그 서비스 API의 응답 데이터를 필터링하고 필요한 정보만 검색합니다. API 호출에 필터를 적용하여 로드를 줄이고 성능을 향상시켜 보다 빠르고 효율적인 데이터 검색을 보장합니다.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 75099d39fbdb9488105a9254bbbcca9b12349238
+source-git-commit: 14ecb971af3f6cdcc605caa05ef6609ecb9b38fd
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: '2339'
 ht-degree: 1%
 
 ---
 
 # 쿼리 매개 변수를 사용하여 [!DNL Catalog] 데이터 필터링
 
-[!DNL Catalog Service] API를 사용하면 요청 쿼리 매개 변수를 사용하여 응답 데이터를 필터링할 수 있습니다. [!DNL Catalog]에 대한 모범 사례의 일부는 API에 대한 로드를 줄이고 전체 성능을 개선하는 데 도움이 되므로 모든 API 호출에 필터를 사용하는 것입니다.
+성능을 개선하고 적절한 결과를 검색하려면 쿼리 매개 변수를 사용하여 [!DNL Catalog Service] API 응답 데이터를 필터링하십시오.
 
-이 문서에서는 API에서 [!DNL Catalog] 개체를 필터링하는 가장 일반적인 방법에 대해 설명합니다. [!DNL Catalog] API와 상호 작용하는 방법에 대한 자세한 내용은 [카탈로그 개발자 안내서](getting-started.md)를 읽는 동안 이 문서를 참조하는 것이 좋습니다. [!DNL Catalog Service]에 대한 일반적인 정보는 [[!DNL Catalog] 개요](../home.md)를 참조하십시오.
+API의 [!DNL Catalog] 개체에 대한 일반적인 필터링 방법에 대해 알아봅니다. API 상호 작용에 대한 자세한 내용은 [카탈로그 개발자 안내서](getting-started.md)와 함께 이 문서를 사용하십시오. 일반 [!DNL Catalog Service]에 대한 자세한 내용은 [[!DNL Catalog] 개요](../home.md)를 참조하십시오.
 
-## 반환되는 오브젝트 제한
+## 반환되는 오브젝트 제한 {#limit-returned-objects}
 
-`limit` 쿼리 매개 변수는 응답에서 반환되는 개체 수를 제한합니다. 구성된 제한에 따라 [!DNL Catalog] 응답이 자동으로 측정됩니다.
+`limit` 쿼리 매개 변수는 응답에서 반환되는 개체 수를 제한합니다. [!DNL Catalog]개의 응답이 사전 정의된 제한을 따릅니다.
 
-* `limit` 매개 변수를 지정하지 않으면 응답 페이로드당 최대 개체 수는 20개입니다.
+* `limit` 매개 변수를 지정하지 않으면 응답당 최대 개체 수는 20개입니다.
 * 데이터 세트 쿼리의 경우 `properties` 쿼리 매개 변수를 사용하여 `observableSchema`을(를) 요청하면 반환되는 최대 데이터 세트 수는 20개입니다.
-* 다른 모든 카탈로그 쿼리에 대한 전역 제한은 100개입니다.
-* `limit` 매개 변수가 잘못되면 `limit=0`을(를) 포함하여 적절한 범위의 윤곽을 나타내는 400개 수준의 오류 응답이 발생합니다.
-* 쿼리 매개 변수로 전달된 제한 또는 오프셋은 헤더로 전달된 제한보다 우선합니다.
+* 사용자 토큰의 경우 최대 한도는 1입니다.
+* 서비스 토큰의 경우 최대 제한은 20개입니다.
+* 다른 카탈로그 쿼리에 대한 전역 제한은 100개입니다.
+* `limit` 값이 잘못되면 `limit=0`을(를) 포함하여 적절한 범위를 지정하는 400개 수준의 오류 응답이 발생합니다.
+* 쿼리 매개 변수로 전달된 제한 또는 오프셋은 헤더에 있는 제한보다 우선합니다.
 
 **API 형식**
 
@@ -35,8 +37,8 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | 매개변수 | 설명 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 검색할 [!DNL Catalog] 개체의 형식입니다. 유효한 오브젝트는 다음과 같습니다. <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
-| `{LIMIT}` | 반환할 개체 수를 나타내는 정수로, 1개에서 100개까지 지정할 수 있습니다. |
+| `{OBJECT_TYPE}` | 검색할 [!DNL Catalog] 개체의 형식입니다. 유효한 개체: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{LIMIT}` | 반환할 개체 수를 지정하는 정수(범위: 1~100). |
 
 **요청**
 
@@ -73,7 +75,7 @@ curl -X GET \
 }
 ```
 
-## 표시된 속성 제한
+## 표시된 속성 제한 {#limit-displayed-properties}
 
 `limit` 매개 변수를 사용하여 반환된 개체 수를 필터링하는 경우에도 반환된 개체 자체에는 실제로 필요한 것보다 더 많은 정보가 포함될 수 있습니다. 시스템의 로드를 추가로 줄이려면 필요한 속성만 포함하도록 응답을 필터링하는 것이 좋습니다.
 
@@ -158,7 +160,7 @@ curl -X GET \
 >
 >각 데이터 집합에 대한 `schemaRef` 속성에서 버전 번호는 스키마의 최신 부 버전을 나타냅니다. 자세한 내용은 XDM API 안내서의 [스키마 버전 관리](../../xdm/api/getting-started.md#versioning)에 대한 섹션을 참조하십시오.
 
-## 응답 목록의 오프셋 시작 인덱스
+## 응답 목록의 오프셋 시작 인덱스 {#offset-starting-index}
 
 `start` 쿼리 매개 변수는 0부터 시작하는 번호 매기기를 사용하여 지정된 번호만큼 응답 목록을 앞으로 오프셋합니다. 예를 들어 `start=2`은(는) 나열된 세 번째 개체에서 시작할 응답을 오프셋합니다.
 
@@ -455,6 +457,10 @@ curl -X GET \
 * [단순 필터 사용](#using-simple-filters): 특정 속성이 특정 값과 일치하는지 여부를 기준으로 필터링합니다.
 * [속성 매개 변수 사용](#using-the-property-parameter): 조건식을 사용하여 속성이 있는지 여부 또는 속성 값이 지정된 다른 값 또는 정규 표현식과 일치하는지, 근사화하는지 또는 비교하는지 여부를 기준으로 필터링합니다.
 
+>[!NOTE]
+>
+>카탈로그 개체의 모든 특성을 사용하여 카탈로그 서비스 API에서 결과를 필터링할 수 있습니다.
+
 ### 단순 필터 사용 {#using-simple-filters}
 
 단순 필터를 사용하면 특정 속성 값을 기준으로 응답을 필터링할 수 있습니다. 단순 필터는 `{PROPERTY_NAME}={VALUE}` 형식을 사용합니다.
@@ -524,6 +530,22 @@ curl -X GET \
 
 `property` 쿼리 매개 변수는 간단한 필터보다 속성 기반 필터링에 더 많은 유연성을 제공합니다. `property` 매개 변수는 속성에 특정 값이 있는지 여부에 따라 필터링할 뿐만 아니라 다른 비교 연산자(예: &quot;extenda&quot;(`>`) 및 &quot;less-than&quot;(`<`))와 정규식을 사용하여 속성 값으로 필터링할 수 있습니다. 또한 속성의 값에 관계없이 속성의 존재 여부에 따라 필터링할 수도 있습니다.
 
+앰퍼샌드(`&`)를 사용하여 여러 필터를 결합하고 단일 요청에서 쿼리를 구체화합니다. 여러 필드를 기준으로 필터링하면 기본적으로 `AND` 관계가 적용됩니다.
+
+>[!NOTE]
+>
+>단일 쿼리에 여러 `property` 매개 변수를 결합하는 경우 하나 이상의 매개 변수가 `id` 또는 `created` 필드에 적용되어야 합니다. 다음 쿼리는 `id`이(가) `abc123` **이고** `name`이(가) `test`이(가) 아닌 개체를 반환합니다.
+>
+>```http
+>GET /datasets?property=id==abc123&property=name!=test
+>```
+
+동일한 필드에 여러 개의 `property` 매개 변수를 사용하는 경우 마지막으로 지정한 매개 변수만 적용됩니다.
+
+>[!IMPORTANT]
+>
+>한 번에 여러 필드를 필터링하는 데 단일 `property` 매개 변수를 사용할 수 **없습니다**. 각 필드에는 고유한 `property` 매개 변수가 있어야 합니다. 다음 예제(`property=id>abc,name==myDataset`)는 **단일 `property` 매개 변수** 내에서 `id` 및 `name`에 조건을 적용하려고 하므로 **허용되지 않습니다**.
+
 `property` 매개 변수는 모든 수준의 개체 속성을 사용할 수 있습니다. `sampleKey`은(는) `?properties=subItem.sampleKey`을(를) 사용하여 필터링하는 데 사용할 수 있습니다.
 
 ```json
@@ -562,6 +584,8 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 | &lt;= | 속성 값이 지정된 양보다 작거나 같은 개체만 반환합니다. | `property=version<=1.0.0` |
 | > | 속성 값이 지정된 양보다 큰(하지만 같지 않은) 개체만 반환합니다. | `property=version>1.0.0` |
 | >= | 속성 값이 지정된 양보다 크거나 같은 개체만 반환합니다. | `property=version>=1.0.0` |
+| * | 와일드카드는 모든 문자열 속성에 적용되며 문자 시퀀스와 일치합니다. 리터럴 별표를 이스케이프하려면 `**`을(를) 사용하십시오. | `property=name==te*st` |
+| 및 | 여러 `property` 매개 변수를 `AND` 관계에 결합합니다. | `property=id==abc&property=name!=test` |
 
 >[!NOTE]
 >
@@ -619,12 +643,38 @@ curl -X GET \
 }
 ```
 
-## 여러 필터 결합
+## 속성 매개 변수로 배열 필터링 {#filter-arrays}
 
-앰퍼샌드(`&`)를 사용하여 하나의 요청에 여러 필터를 결합할 수 있습니다. 요청에 추가 조건이 추가되면 AND 관계가 간주됩니다.
+배열 속성을 기반으로 결과를 필터링할 때 특정 값을 포함하거나 제외하려면 같음 및 같지 않음 연산자를 사용하십시오.
+
+### 같음 필터 {#equality-filters}
+
+배열 필드를 여러 값으로 필터링하려면 각 값에 대해 별도의 속성 매개 변수를 사용합니다. 같음 필터를 사용하여 지정된 값과 일치하는 배열 데이터의 항목만 반환합니다.
+
+>[!NOTE]
+>
+>여러 필드를 필터링할 때 `id` 또는 `created`을(를) 포함하는 요구 사항은 배열 필드 내에서 여러 값을 필터링할 때 **적용되지 않습니다**.
+
+아래 예제 쿼리는 `val1`과(와) `val2`을(를) 모두 포함하는 배열의 결과만 반환합니다.
 
 **API 형식**
 
 ```http
-GET /{OBJECT_TYPE}?{FILTER_1}={VALUE}&{FILTER_2}={VALUE}&{FILTER_3}={VALUE}
+GET /{OBJECT_TYPE}?property=arrayField=val1&property=arrayField=val2
 ```
+
+### 부등식 필터 {#inequality-filters}
+
+배열 필드에 부등식 연산자(`!=`)를 사용하여 배열에 지정된 값이 들어 있는 데이터의 모든 항목을 제외합니다.
+
+**API 형식**
+
+```http
+GET /{OBJECT_TYPE}?property=arrayField!=val1&property=arrayField!=val2
+```
+
+이 쿼리는 arrayField에 `val1` 또는 `val2`이(가) 없는 문서를 반환합니다.
+
+### 같음 및 같지 않음 필터 제한 {#equality-inequality-limitations}
+
+단일 쿼리의 동일한 필드에 같음(`=`)과 같지 않음(`!=`)을 모두 적용할 수 없습니다.
