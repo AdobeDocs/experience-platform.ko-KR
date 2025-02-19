@@ -3,14 +3,20 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 사용자 관리
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 사용자 및 사용자 그룹을 관리하는 방법에 대한 정보를 제공합니다
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: d410e7ea635471f2bbc93c9d332ad7e2f619d054
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 0%
+source-wordcount: '285'
+ht-degree: 1%
 
 ---
 
-# 사용자 관리
+# 사용자 관리 {#manage-users}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_users_about"
+>title="사용자란?"
+>abstract="사용자는 Experience Platform에 액세스할 수 있는 개인입니다. 조직의 리소스에 대한 개별 사용자의 액세스는 역할을 통해 관리됩니다."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="역할 관리"
 
 사용자 세부 정보 및 할당된 역할을 보려면 **[!UICONTROL 사용자]** 탭을 선택하십시오.
 

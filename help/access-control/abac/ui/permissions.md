@@ -3,10 +3,10 @@ keywords: Experience Platform;홈;인기 항목;액세스 제어;속성 기반 �
 title: 속성 기반 액세스 제어 역할 권한 관리
 description: 이 문서에서는 Adobe Experience Cloud의 권한 인터페이스를 통해 역할에 대한 권한을 구성하는 방법에 대해 설명합니다
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 11%
+source-wordcount: '1699'
+ht-degree: 10%
 
 ---
 
@@ -120,6 +120,12 @@ UI의 역할에 사용할 수 있는 필터는 다음과 같습니다.
 
 ## 역할에 대한 API 자격 증명 관리 {#manage-api-credentials-for-role}
 
+>[!CONTEXTUALHELP]
+>id="platform_permissions_apicredentials_about"
+>title="API 자격 증명이란 무엇입니까?"
+>abstract="API 자격 증명은 사용자 및 개발자에게 Platform API에 대한 액세스 권한을 부여하는 역할에 할당됩니다. Platform API를 사용하면 계산된 속성 구성, 데이터/엔티티 액세스, 데이터 내보내기, 불필요한 데이터 또는 배치 삭제 등과 같은 데이터에 대한 기본 CRUD(만들기, 읽기, 업데이트, 삭제) 작업을 프로그래밍 방식으로 수행할 수 있습니다."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Platform API 안내서"
+
 >[!IMPORTANT]
 >
 > [!UICONTROL 권한]에서 API 자격 증명을 사용하고 관리하려면 사용자에게 시스템 관리자 권한이 있어야 합니다.
@@ -148,7 +154,13 @@ Experience Platform API를 사용자 또는 개발자로 사용하려면 시스�
 
 **[!UICONTROL API 자격 증명]** 탭으로 돌아갑니다.
 
-## 역할에 대한 사용자 그룹 관리
+## 역할에 대한 사용자 그룹 관리 {#manage-user-groups}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_usergroups_about"
+>title="사용자 그룹이란?"
+>abstract="사용자 그룹은 동일한 기능에 대한 액세스 권한을 공유하는 여러 사용자의 컬렉션입니다. 조직 내의 리소스에 대한 액세스는 사용자 그룹에 할당된 역할을 통해 관리됩니다."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="역할 관리"
 
 사용자 그룹은 함께 그룹화된 여러 사용자이며 동일한 기능을 실행할 수 있는 액세스 권한이 있습니다.
 
