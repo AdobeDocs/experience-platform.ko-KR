@@ -4,7 +4,7 @@ description: Amazon Web Services(AWS) S3 스토리지에 대한 실시간 아웃
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1498'
 ht-degree: 16%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 16%
 | 릴리스 월 | 업데이트 유형 | 설명 |
 |---|---|---|
 | 2024년 1월 | 기능 및 설명서 업데이트 | 이제 Amazon S3 대상 커넥터가 새로운 가정된 역할 인증 유형을 지원합니다. 자세한 내용은 [인증 섹션](#assumed-role-authentication)을 참조하세요. |
-| 2023년 7월 | 기능 및 설명서 업데이트 | 2023년 7월 Experience Platform 릴리스를 통해 [!DNL Amazon S3] 대상은 아래 나열된 새로운 기능을 제공합니다. <br><ul><li>[데이터 집합 내보내기 지원](/help/destinations/ui/export-datasets.md)</li><li>추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>[향상된 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능.</li><li>[내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
+| 2023년 7월 | 기능 및 설명서 업데이트 | 2023년 7월 Experience Platform 릴리스에서는 [!DNL Amazon S3] 대상이 아래 나열된 새로운 기능을 제공합니다. <br><ul><li>[데이터 집합 내보내기 지원](/help/destinations/ui/export-datasets.md)</li><li>추가 [파일 이름 지정 옵션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>[향상된 매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)를 통해 내보낸 파일에서 사용자 정의 파일 헤더를 설정하는 기능.</li><li>[내보낸 CSV 데이터 파일의 형식을 사용자 지정하는 기능](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -36,8 +36,8 @@ ht-degree: 16%
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -89,7 +89,7 @@ ht-degree: 16%
 
 #### 액세스 키 및 비밀 키 인증
 
-Experience Platform이 데이터를 Amazon S3 속성으로 내보내도록 Amazon S3 액세스 키 및 비밀 키를 입력하려는 경우 이 인증 방법을 사용하십시오.
+Amazon S3 액세스 키와 비밀 키를 입력하여 Experience Platform에서 데이터를 Amazon S3 속성으로 내보낼 수 있도록 하려는 경우 이 인증 방법을 사용합니다.
 
 ![액세스 키 및 비밀 키 인증을 선택할 때 필요한 필드의 이미지입니다.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
@@ -109,9 +109,9 @@ Experience Platform이 데이터를 Amazon S3 속성으로 내보내도록 Amazo
 
 Adobe와 계정 키 및 시크릿 키를 공유하지 않으려면 이 인증 유형을 사용합니다. 대신 Experience Platform은 역할 기반 액세스를 사용하여 Amazon S3 위치에 연결합니다.
 
-이렇게 하려면 AWS 콘솔에서 Amazon S3 버킷에 쓸 수 있는 [올바른 필수 권한](#minimum-permissions-iam-user)이 있는 Adobe의 가설 사용자를 만들어야 합니다. Adobe 계정 **[!UICONTROL 670664943635]**&#x200B;을(를) 사용하여 AWS에서 **[!UICONTROL 신뢰할 수 있는 엔터티]**&#x200B;을(를) 만듭니다. 자세한 내용은 [역할 만들기에 대한 AWS 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html)를 참조하세요.
+이렇게 하려면 AWS 콘솔에서 Amazon S3 버킷에 쓸 수 있는 [올바른 필수 권한](#minimum-permissions-iam-user)이 있는 Adobe의 가정 사용자를 만들어야 합니다. Adobe 계정 **[!UICONTROL 670664943635]**&#x200B;을(를) 사용하여 AWS에서 **[!UICONTROL 신뢰할 수 있는 엔터티]**&#x200B;를 만듭니다. 자세한 내용은 [역할 만들기에 대한 AWS 설명서](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html)를 참조하세요.
 
-* **[!DNL Role]**: Adobe 사용자에 대해 AWS에서 만든 역할의 ARN을 붙여 넣습니다. 패턴은 `arn:aws:iam::800873819705:role/destinations-role-customer`과(와) 유사합니다.
+* **[!DNL Role]**: Adobe 사용자를 위해 AWS에서 만든 역할의 ARN을 붙여 넣습니다. 패턴은 `arn:aws:iam::800873819705:role/destinations-role-customer`과(와) 유사합니다.
 * **[!UICONTROL 암호화 키]**: 필요한 경우 RSA 형식의 공개 키를 첨부하여 내보낸 파일에 암호화를 추가할 수 있습니다. 아래 이미지에서 올바른 형식의 암호화 키의 예를 봅니다.
 
 ### 대상 세부 정보 입력 {#destination-details}
@@ -119,7 +119,7 @@ Adobe와 계정 키 및 시크릿 키를 공유하지 않으려면 이 인증 �
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
 >title="버킷 이름"
->abstract="이름은 3~63자 사이여야 합니다. 글자나 숫자로 시작하고 끝나야 합니다. 소문자, 숫자 또는 하이픈( - )만 포함해야 합니다. 형식은 IP 주소(예: 192.100.1.1)로 지정하면 안 됩니다."
+>abstract="이름은 3~63자 사이여야 합니다. 글자나 숫자로 시작하고 끝나야 합니다. 소문자, 숫자 또는 하이픈( - )만 포함해야 합니다. IP 주소(예: 192.100.1.1)로 포맷해서는 안 됩니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"
@@ -133,8 +133,8 @@ Adobe와 계정 키 및 시크릿 키를 공유하지 않으려면 이 인증 �
 * **[!UICONTROL 설명]**: 이 대상에 대한 설명을 입력하십시오.
 * **[!UICONTROL 버킷 이름]**: 이 대상에서 사용할 [!DNL Amazon S3] 버킷의 이름을 입력하십시오.
 * **[!UICONTROL 폴더 경로]**: 내보낸 파일을 호스팅할 대상 폴더의 경로를 입력하십시오.
-* **[!UICONTROL 파일 형식]**: 내보낸 파일에 사용할 형식 Experience Platform을 선택하십시오. [!UICONTROL CSV] 옵션을 선택할 때 [파일 서식 옵션을 구성](../../ui/batch-destinations-file-formatting-options.md)할 수도 있습니다.
-* Experience Platform **[!UICONTROL 압축 형식]**: 내보낸 파일에 사용할 압축 형식을 선택합니다.
+* **[!UICONTROL 파일 형식]**: 내보낸 파일에 Experience Platform에서 사용할 형식을 선택하십시오. [!UICONTROL CSV] 옵션을 선택할 때 [파일 서식 옵션을 구성](../../ui/batch-destinations-file-formatting-options.md)할 수도 있습니다.
+* **[!UICONTROL 압축 형식]**: Experience Platform에서 내보낸 파일에 사용할 압축 형식을 선택합니다.
 * **[!UICONTROL 매니페스트 파일 포함]**: 내보내기 위치, 내보내기 크기 등에 대한 정보가 포함된 매니페스트 JSON 파일을 내보내기에 포함하려면 이 옵션을 켜십시오. 매니페스트의 이름은 `manifest-<<destinationId>>-<<dataflowRunId>>.json` 형식을 사용하여 지정합니다. [샘플 매니페스트 파일](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json)을(를) 봅니다. 매니페스트 파일에는 다음 필드가 포함되어 있습니다.
    * `flowRunId`: 내보낸 파일을 생성한 [데이터 흐름 실행](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
    * `scheduledTime`: 파일을 내보낸 시간(UTC)입니다.
