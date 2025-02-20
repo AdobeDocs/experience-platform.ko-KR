@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
+source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
 workflow-type: tm+mt
-source-wordcount: '1952'
-ht-degree: 0%
+source-wordcount: '2228'
+ht-degree: 1%
 
 ---
 
@@ -36,7 +36,17 @@ ht-degree: 0%
 
 ## [!UICONTROL 대상자] {#audience-block}
 
-**[!UICONTROL 대상]** 블록 형식을 사용하면 더 큰 새 대상을 구성할 하위 대상을 추가할 수 있습니다. 기본적으로 **[!UICONTROL 대상]** 블록은 컴포지션 캔버스의 맨 위에 포함됩니다.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_audience"
+>title="대상자 차단"
+>abstract="대상 블록을 사용하면 새 대상을 구성하는 데 사용할 하위 대상을 지정할 수 있습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_merge_types"
+>title="병합 유형"
+>abstract="병합 유형에 따라 선택한 하위 대상의 결합 방법이 결정됩니다. 지원되는 값에는 유니온, 교차 및 제외 겹침이 포함됩니다."
+
+**[!UICONTROL 대상]** 블록 형식을 사용하면 더 큰 새 대상을 구성하는 데 사용할 하위 대상을 추가할 수 있습니다. 기본적으로 **[!UICONTROL 대상]** 블록은 컴포지션 캔버스의 맨 위에 포함됩니다.
 
 **[!UICONTROL 대상]** 블록을 선택하면 오른쪽 레일에 대상 레이블을 지정하고, 블록에 대상을 추가하고, 대상 블록에 대한 사용자 지정 규칙을 작성하는 컨트롤이 표시됩니다.
 
@@ -88,6 +98,16 @@ ht-degree: 0%
 
 ## [!UICONTROL 제외] {#exclude-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude"
+>title="블록 제외"
+>abstract="제외 블록을 사용하면 지정된 대상자 또는 속성을 컴포지션에서 제외할 수 있습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_type"
+>title="제외 유형"
+>abstract="특정 대상에 속하는 프로필을 제외(대상별로 제외)하거나 특정 특성에 따라 프로필을 제외(특성별로 제외)할 수 있습니다."
+
 **[!UICONTROL 제외]** 블록 형식을 사용하면 지정된 하위 대상이나 특성을 더 큰 새 대상에서 제외할 수 있습니다.
 
 **[!UICONTROL Exclude]** 블록을 추가하려면 **+** 아이콘을 선택한 다음 **[!UICONTROL Exclude]** 아이콘을 선택하십시오.
@@ -127,6 +147,26 @@ ht-degree: 0%
 >특성별로 제외할 때는 제외할 **one** 값만 지정할 수 있습니다. 쉼표나 세미콜론과 같은 모든 종류의 구분 기호를 사용하면 해당 정확한 값만 제외됩니다. 예를 들어 값을 `red, blue`(으)로 설정하면 특성에서 용어 `red, blue`이(가) 제외되지만 **not**&#x200B;은(는) 용어 `red` 또는 `blue`이(가) 제외됩니다.
 
 ## [!UICONTROL 강화] {#enrich-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich"
+>title="블록 강화"
+>abstract="강화 블록을 사용하면 Adobe Experience Platform 데이터 세트에서 오는 추가 속성으로 대상자를 강화할 수 있습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_dataset"
+>title="보강 데이터 세트"
+>abstract="데이터 보강 데이터 세트에는 컴포지션과 연결할 데이터가 포함되어 있습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_criteria"
+>title="보강 기준"
+>abstract="데이터 보강 기준에는 Source 조인 키 및 데이터 보강 데이터 세트 조인 키가 포함됩니다. 이 두 키는 소스 데이터 세트와 데이터 보강 데이터 세트를 조정합니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_attributes"
+>title="보강 속성"
+>abstract="데이터 보강 속성은 컴포지션과 연결하려는 속성입니다."
 
 >[!IMPORTANT]
 >
@@ -206,6 +246,16 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL 순위] {#rank-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_ranking"
+>title="등급 블록"
+>abstract="등급 블록을 사용하면 특정 속성에 따라 프로필의 등급을 지정하고 컴포지션에 포함할 수 있습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rank_profilelimit_text"
+>title="프로필 제한 추가"
+>abstract="프로필 제한 추가 토글을 사용하여 등급 프로세스의 일부로 포함할 최대 프로필 수를 지정할 수 있습니다."
+
 **[!UICONTROL Rank]** 블록 형식을 사용하면 지정된 특성을 기준으로 프로필의 등급을 매기고 정렬하고 이러한 등급 프로필을 컴포지션에 포함할 수 있습니다.
 
 **[!UICONTROL Rank]** 블록을 추가하려면 **+** 아이콘을 선택한 다음 **[!UICONTROL Rank]**&#x200B;을(를) 선택하십시오.
@@ -231,6 +281,21 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 ![프로필 제한 추가 토글이 강조 표시되어 반환된 프로필 수를 제한할 수 있습니다.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL 분할] {#split-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split"
+>title="블록 분할"
+>abstract="분할 블록을 사용하면 컴포지션을 여러 경로로 분할할 수 있습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_type"
+>title="분할 유형"
+>abstract="컴포지션을 비율 분할 또는 속성 분할로 분할할 수 있습니다. 비율 분할 은 프로필을 여러 경로로 무작위로 분할합니다. 속성 분할을 사용하면 지정된 속성에 따라 프로필을 분할할 수 있습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_otherprofiles_text"
+>title="기타 프로필"
+>abstract="기타 프로파일 토글을 사용하면 다른 경로의 지정된 조건과 일치하지 않는 나머지 프로파일을 사용하여 추가 경로를 만들 수 있습니다."
 
 **[!UICONTROL 분할]** 블록 형식을 사용하면 새 대상을 다양한 하위 대상으로 분할할 수 있습니다. 백분율이나 속성에 따라 이 대상을 분할할 수 있습니다. 대상을 하위 대상으로 분할할 때 이 분할은 **지속되지 않습니다**. 즉, 프로필이 각 평가에 대해 서로 다른 하위 대상에 있을 수 있습니다.
 
@@ -272,13 +337,13 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >
 >대상 구성을 게시할 때 Real-Time CDP 대상 또는 Adobe Journey Optimizer 채널과 같은 다운스트림 서비스에서 사용하기 위해 대상 구성을 평가하고 활성화하는 데 최대 48시간이 걸릴 수 있습니다.
 
-컴포지션을 만든 후 **[!UICONTROL Publish]**&#x200B;을(를) 선택하여 저장하고 게시할 수 있습니다.
+컴포지션을 만든 후 **[!UICONTROL 게시]**&#x200B;를 선택하여 저장하고 게시할 수 있습니다.
 
-![Publish 단추가 강조 표시되어 컴포지션을 저장하고 게시하는 방법을 보여 줍니다.](../images/ui/audience-composition/publish.png)
+![게시 단추가 강조 표시되어 컴포지션을 저장하고 게시하는 방법을 보여 줍니다.](../images/ui/audience-composition/publish.png)
 
 대상자를 만드는 동안 오류가 발생하면 문제를 해결하는 방법을 알려주는 경고가 표시됩니다.
 
-![Publish 단추가 강조 표시되어 컴포지션을 저장하고 게시하는 방법을 보여 줍니다.](../images/ui/audience-composition/audience-alert.png)
+![게시 단추가 강조 표시되어 컴포지션을 저장하고 게시하는 방법을 보여 줍니다.](../images/ui/audience-composition/audience-alert.png)
 
 ## 다음 단계
 
