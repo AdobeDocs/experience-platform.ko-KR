@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: e2dfa2ee23d854ff3a8ecba4a1cf3e4a1e72f0f7
+source-git-commit: f6fb88cbc89d419e3dbb39c9cc8958f9455b2953
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1268'
 ht-degree: 5%
 
 ---
@@ -78,7 +78,7 @@ ht-degree: 5%
       * [Awin Advertiser Mastertag 확장](./catalog/advertising/awin-mastertag.md)
       * [Bing Ads UET(Universal Event Tracking) 확장](./catalog/advertising/bing-ads.md)
       * [분기 확장](./catalog/advertising/branch.md)
-      * [(Beta) 크리테오 연결](./catalog/advertising/criteo.md)
+      * [크리테오 연결](./catalog/advertising/criteo.md)
       * [Demandbase 연결](./catalog/advertising/demandbase.md)
       * [DoubleClick Floodlight(Beta) 확장](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook 픽셀 확장](./catalog/advertising/facebook-pixel.md)
@@ -110,7 +110,7 @@ ht-degree: 5%
       * [Analytics 대상 개요](./catalog/analytics/overview.md)
       * [Adform 웹 사이트 추적 확장](./catalog/analytics/adform.md)
       * [Adobe Analytics 확장](./catalog/analytics/adobe-analytics.md)
-      * [오디오 및 비디오용 Adobe Medium 분석 확장](./catalog/analytics/adobe-video-analytics.md)
+      * [Adobe Media Analytics for Audio 및 Video 확장](./catalog/analytics/adobe-video-analytics.md)
       * [Clicktale 확장](./catalog/analytics/clicktale.md)
       * [Contentsquare 확장](./catalog/analytics/contentsquare.md)
       * [Decibel 확장](./catalog/analytics/decibel.md)
@@ -169,7 +169,7 @@ ht-degree: 5%
       * [Mailchimp 태그](./catalog/email-marketing/mailchimp-tags.md)
       * [(API) Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(파일) Oracle Eloqua 연결](./catalog/email-marketing/oracle-eloqua.md)
-      * [Responsys 연결 oracle](./catalog/email-marketing/oracle-responsys.md)
+      * [Oracle Responsys 연결](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Salesforce Marketing Cloud 연결](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
       * [(파일) Salesforce Marketing Cloud 연결](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
@@ -204,7 +204,7 @@ ht-degree: 5%
    * 소셜 대상{#social}
       * [소셜 대상 개요](./catalog/social/overview.md)
       * [Facebook 연결](./catalog/social/facebook.md)
-      * [(회사) LinkedIn 일치 대상 연결](./catalog/social/linkedin-b2b.md)
+      * [(회사) LinkedIn Matched Audiences 연결](./catalog/social/linkedin-b2b.md)
       * [LinkedIn 일치하는 대상 연결](./catalog/social/linkedin.md)
       * [TikTok 연결](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] 연결](./catalog/social/twitter.md)
@@ -228,7 +228,7 @@ ht-degree: 5%
 * Destination SDK {#destination-sdk}
    * [개요](./destination-sdk/overview.md)
    * [통합 사전 요구 사항](./destination-sdk/integration-prerequisites.md)
-   * [Destination SDK 시작](./destination-sdk/getting-started.md)
+   * [Destination SDK 시작하기](./destination-sdk/getting-started.md)
    * [용어집](/help/destinations/destination-sdk/glossary.md)
    * 기능 {#functionality}
       * [구성 옵션](./destination-sdk/functionality/configuration-options.md)
