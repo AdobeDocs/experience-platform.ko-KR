@@ -3,7 +3,7 @@ title: 잠재 고객 프로필
 description: 잠재 고객 프로필을 만들고 사용하여 서드파티 정보를 사용하는 알 수 없는 고객에 대한 정보를 수집하는 방법을 알아봅니다.
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 1%
@@ -62,4 +62,4 @@ Experience Platform에서 잠재 고객 프로필 기능을 다른 플랫폼 기
 
 ## 다음 단계
 
-이제 이 안내서를 읽고 Adobe Experience Platform에서 잠재 고객 프로필을 사용하는 방법을 이해합니다. 이러한 잠재 고객 프로필을 대상자에서 사용하는 방법을 알아보려면 [잠재 고객 대상 안내서](../../segmentation/ui/prospect-audience.md)를 읽어 보십시오.
+이제 이 안내서를 읽고 Adobe Experience Platform에서 잠재 고객 프로필을 사용하는 방법을 이해합니다. 이러한 잠재 고객 프로필을 대상자에서 사용하는 방법을 알아보려면 [잠재 고객 대상 안내서](../../segmentation/types/prospect-audiences.md)를 읽어 보십시오.

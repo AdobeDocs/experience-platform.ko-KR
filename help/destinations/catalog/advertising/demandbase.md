@@ -1,30 +1,30 @@
 ---
 title: Demandbase 연결
-description: 이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대한 계정 대상을 활성화하십시오. DemandBase의 DSP(B2B Demand Side Platform)를 통해 대상 계정의 관련 담당자 및 역할에 광고를 게재합니다. 마케팅 및 판매의 다른 다운스트림 사용 사례에 대해 Demandbase 타사 데이터를 사용하여 대상 계정을 보강할 수도 있습니다.
-badgeB2B: label="B2B 버전" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+description: 이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대한 계정 대상자를 활성화할 수 있습니다. DemandBase의 B2B Demand Side Platform(DSP)을 통해 대상 계정의 관련 페르소나와 역할에 광고를 게재하십시오. 대상 계정은 마케팅과 판매의 다른 다운스트림 사용 사례를 위해 Demandbase 서드파티 데이터로 강화할 수도 있습니다.
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
-source-git-commit: 92abae6bc63c13f1103364ae82cc9c04459ce00f
+exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
+source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923
 workflow-type: tm+mt
 source-wordcount: '696'
-ht-degree: 3%
+ht-degree: 17%
 
 ---
-
 
 # Demandbase 연결 {#demandbase}
 
 >[!AVAILABILITY]
 >
->>Real-time Customer Data Platform의 [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) 에디션을 구매하는 회사는 Demandbase 대상에 대한 계정 대상을 활성화할 수 있습니다.
+>>Real-Time Customer Data Platform의 [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) 에디션을 구매하는 회사는 Demandbase 대상에 대한 계정 대상을 활성화할 수 있습니다.
 
-[계정 대상자](/help/segmentation/ui/account-audiences.md)를 기반으로 대상자 타깃팅, 개인화 및 제외를 위한 Demandbase 캠페인에 대한 프로필을 활성화합니다.
+[계정 대상자](/help/segmentation/types/account-audiences.md)를 기반으로 대상자 타깃팅, 개인화 및 제외를 위한 Demandbase 캠페인에 대한 프로필을 활성화합니다.
 
 ## 활용 사례 {#use-case}
 
-이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대한 계정 대상을 활성화하십시오. DemandBase의 DSP(B2B Demand Side Platform)를 통해 대상 계정의 관련 담당자 및 역할에 광고를 게재합니다. 마케팅 및 판매의 다른 다운스트림 사용 사례에 대해 Demandbase 타사 데이터를 사용하여 대상 계정을 보강할 수도 있습니다.
+이 대상을 사용하여 Account-Based Marketing(ABM) 사용 사례에 대한 계정 대상자를 활성화할 수 있습니다. DemandBase의 B2B Demand Side Platform(DSP)을 통해 대상 계정의 관련 페르소나와 역할에 광고를 게재하십시오. 대상 계정은 마케팅과 판매의 다른 다운스트림 사용 사례를 위해 Demandbase 서드파티 데이터로 강화할 수도 있습니다.
 
-예를 들어, Demandbase의 애드테크 DSP을 활용하여 주요 계정 내에서 특정 담당자 또는 역할을 타겟팅하거나 구매 그룹을 생성하고 늘릴 수 있습니다. Demandbase 대상을 사용하여 계정을 효과적으로 타기팅하는 다른 사용 사례를 살펴보십시오.
+예를 들어, Demandbase의 광고 기술 DSP을 활용하여 주요 계정 내에서 특정 담당자 또는 역할을 타겟팅하거나 구매 그룹을 생성하고 늘릴 수 있습니다. Demandbase 대상을 사용하여 계정을 효과적으로 타기팅하는 다른 사용 사례를 살펴보십시오.
 
 또한 이 통합을 통해 실시간 계정 정보 조회를 사용하여 웹 사이트 경험을 개인화하여 참여를 최적화할 수 있습니다.
 
@@ -34,7 +34,7 @@ ht-degree: 3%
 
 | 대상자 원본 | 지원됨 | 설명 |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
 | 사용자 정의 업로드 | X | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/overview.md#import-audience). |
 
 {style="table-layout:auto"}
@@ -55,7 +55,7 @@ ht-degree: 3%
 계정 대상을 Demandbase로 내보내려면 다음이 필요합니다.
 
 1. Demandbase 계정입니다.
-2. Demandbase API 토큰. Demandbase에서 사용자와 함께 API 토큰을 생성할 수 있습니다. 토큰을 생성하려면 Demandbase 계정에 로그인한 후 [내 프로필 > API 토큰](https://web.demandbase.com/o/ad/at)(으)로 이동합니다.
+2. Demandbase API 토큰. Demandbase에서 사용자와 함께 API 토큰을 생성할 수 있습니다. 토큰을 생성하려면 Demandbase 계정에 로그인한 후 [내 프로필 > API 토큰](https://web.demandbase.com/o/ad/at)&#x200B;(으)로 이동합니다.
 
 ## 대상에 연결 {#connect}
 
@@ -97,4 +97,4 @@ ht-degree: 3%
 ## 추가 참고 사항 및 중요한 설명선 {#additional-notes}
 
 * 같은 이름의 계정 대상이 이전에 Demandbase에 활성화되었을 경우 Demandbase 대상에 대한 다른 데이터 흐름을 통해 다시 활성화할 수 없습니다.
-* 대상을 Demandbase로 내보냈는데 Experience Platform에서 내보내기가 성공했지만 모든 데이터가 Demandbase에 도달하지 않은 경우 Demandbase 측에서 API 제한이 발생할 수 있습니다. 자세한 내용은 해당 담당자에게 문의하십시오.
+* Demandbase로 대상을 내보내고 Experience Platform에서 성공적으로 내보냈지만 모든 데이터가 Demandbase에 도달하지 않은 경우 Demandbase 측에서 API 제한이 발생할 수 있습니다. 자세한 내용은 해당 담당자에게 문의하십시오.

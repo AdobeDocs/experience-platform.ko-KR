@@ -1,25 +1,25 @@
 ---
-keywords: 프로필;실시간 고객 프로필;문제 해결;가드레일;지침;제한;엔티티;기본 엔티티;차원 엔티티;RTCDP;CDP;B2B 에디션;Real-time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;b2b;cdp;
-title: Real-time Customer Data Platform B2B 에디션의 기본 보호 기능
+keywords: 프로필;실시간 고객 프로필;문제 해결;가드레일;지침;제한;엔티티;기본 엔티티;차원 엔티티;RTCDP;CDP;B2B edition;Real-Time Customer Data Platform;실시간 고객 데이터 플랫폼;실시간 cdp;b2b;cdp;
+title: Real-Time Customer Data Platform B2B edition의 기본 보호
 type: Documentation
-description: Adobe Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다. 이 문서에서는 Adobe Real-time Customer Data Platform B2B 에디션을 사용하여 최적의 시스템 성능을 위해 데이터를 모델링하는 데 도움이 되는 기본 사용 및 속도 제한을 제공합니다.
-badgeB2B: label="B2B 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+description: Adobe Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다. 이 문서에서는 Adobe Real-Time Customer Data Platform B2B edition을 사용하여 최적의 시스템 성능을 위해 데이터를 모델링하는 데 도움이 되는 기본 사용 및 속도 제한을 제공합니다.
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: bc399f3af0524232671af780ea1380f1a71a5b7e
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 2%
 
 ---
 
-# Real-time Customer Data Platform B2B 에디션의 기본 보호 기능
+# Real-Time Customer Data Platform B2B edition의 기본 보호
 
 >[!NOTE]
 >
->이 문서에 설명된 제한 사항은 Real-time Customer Data Platform B2B 에디션에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B 에디션의 전체 기본 제한 목록의 경우 이러한 제한을 [실시간 고객 프로필 데이터 설명서](../profile/guardrails.md)에 요약된 일반적인 Adobe Experience Platform 제한과 결합하십시오.
+>이 문서에 설명된 제한 사항은 Real-Time Customer Data Platform B2B edition에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B edition에 대한 전체 기본 제한 목록의 경우 이러한 제한을 [실시간 고객 프로필 데이터 설명서](../profile/guardrails.md)에 요약된 일반적인 Adobe Experience Platform 제한과 결합하십시오.
 
-Real-time Customer Data Platform B2B 에디션을 사용하면 행동 통찰력 및 고객 속성을 기반으로 개인화된 크로스 채널 경험을 실시간 고객 프로필 및 계정 프로필의 형태로 제공할 수 있습니다. 프로필에 대한 이러한 새로운 접근 방식을 지원하기 위해 Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다.
+Real-Time Customer Data Platform B2B edition을 사용하면 행동 통찰력 및 고객 속성을 기반으로 개인화된 크로스 채널 경험을 실시간 고객 프로필 및 계정 프로필의 형태로 제공할 수 있습니다. 프로필에 대한 이러한 새로운 접근 방식을 지원하기 위해 Experience Platform은 기존의 관계형 데이터 모델과 다른 고도로 비정규화된 하이브리드 데이터 모델을 사용합니다.
 
 >[!IMPORTANT]
 >
@@ -37,7 +37,7 @@ Real-time Customer Data Platform B2B 에디션을 사용하면 행동 통찰력 
 
 | 보호 유형 | 설명 |
 | -------------- | ----------- |
-| **성능 보호(소프트 제한)** | 성능 보호는 사용 사례의 범위와 관련된 사용 제한입니다. 성능 가드레일을 초과하면 성능 저하 및 지연이 발생할 수 있습니다. Adobe은 이러한 성능 저하의 원인이 아닙니다. 성능 가드레일을 지속적으로 초과하는 고객은 성능 저하를 방지하기 위해 추가 용량의 라이센스를 선택할 수 있습니다. |
+| **성능 보호(소프트 제한)** | 성능 보호는 사용 사례의 범위와 관련된 사용 제한입니다. 성능 가드레일을 초과하면 성능 저하 및 지연이 발생할 수 있습니다. Adobe은 이러한 성능 저하에 대한 책임이 없습니다. 성능 가드레일을 지속적으로 초과하는 고객은 성능 저하를 방지하기 위해 추가 용량의 라이센스를 선택할 수 있습니다. |
 | **시스템 적용 보호 기능(하드 제한)** | 시스템에서 적용되는 가드레일은 Real-Time CDP UI 또는 API에 의해 적용됩니다. 이는 UI 및 API가 귀하를 차단하거나 오류를 반환하므로 초과할 수 없는 제한입니다. |
 
 >[!INFO]
@@ -52,11 +52,11 @@ Real-time Customer Data Platform B2B 에디션을 사용하면 행동 통찰력 
 
 >[!NOTE]
 >
->이 섹션에 설명된 데이터 모델 제한은 Real-time Customer Data Platform B2B 에디션에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B 에디션의 전체 기본 제한 목록의 경우 이러한 제한을 [실시간 고객 프로필 데이터 설명서](../profile/guardrails.md)에 요약된 일반적인 Adobe Experience Platform 제한과 결합하십시오.
+>이 섹션에 설명된 데이터 모델 제한은 Real-Time Customer Data Platform B2B edition에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B edition에 대한 전체 기본 제한 목록의 경우 이러한 제한을 [실시간 고객 프로필 데이터 설명서](../profile/guardrails.md)에 요약된 일반적인 Adobe Experience Platform 제한과 결합하십시오.
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --------- | ----- | ---------- | ----------- |
-| Real-Time CDP B2B 에디션 표준 XDM 클래스 데이터 세트 | 60 | 성능 보호 | Real-Time CDP B2B 에디션에서 제공하는 표준 Experience Data Model(XDM) 클래스를 활용하는 데이터 세트는 최대 60개가 권장됩니다. B2B 사용 사례에 대한 표준 XDM 클래스의 전체 목록은 Real-Time CDP B2B 에디션 설명서의 [스키마](schemas/b2b.md)를 참조하십시오. <br/><br/>*참고: Experience Platform의 비정규화된 하이브리드 데이터 모델의 특성으로 인해 대부분의 고객은 이 한도를 초과하지 않습니다. 데이터를 모델링하는 방법에 대한 질문이 있거나 사용자 지정 제한에 대한 자세한 내용은 고객 지원 센터에 문의하십시오.* |
+| Real-Time CDP B2B edition 표준 XDM 클래스 데이터 세트 | 60 | 성능 보호 | Real-Time CDP B2B edition에서 제공하는 표준 Experience Data Model(XDM) 클래스를 활용하는 최대 60개의 데이터 세트가 권장됩니다. B2B 사용 사례에 대한 표준 XDM 클래스의 전체 목록이 필요하면 Real-Time CDP B2B edition 설명서의 [스키마](schemas/b2b.md)를 참조하십시오. <br/><br/>*참고: Experience Platform의 비정규화된 하이브리드 데이터 모델의 특성으로 인해 대부분의 고객은 이 한도를 초과하지 않습니다. 데이터를 모델링하는 방법에 대한 질문이 있거나 사용자 지정 제한에 대한 자세한 내용은 고객 지원 센터에 문의하십시오.* |
 | ID 그래프의 개별 계정에 대한 ID 수 | 50 | 성능 보호 | 개별 계정에 대한 ID 그래프의 최대 ID 수는 50개입니다. ID가 50개를 초과하는 프로필은 세그먼테이션, 내보내기 및 조회에서 제외됩니다. |
 | 기존 다중 엔티티 관계 | 20 | 성능 보호 | 기본 엔티티와 차원 엔티티 간에 최대 20개의 다중 엔티티 관계가 정의되는 것이 좋습니다. 기존 관계가 제거되거나 비활성화될 때까지 추가 관계 매핑을 수행하지 마십시오. |
 | XDM 클래스당 다대일 관계 | 2 | 성능 보호 | XDM 클래스당 최대 2개의 다대일 관계가 정의되는 것이 좋습니다. 기존 관계를 제거하거나 비활성화할 때까지 추가 관계를 만들지 마십시오. 두 스키마 간의 관계를 만드는 방법에 대한 단계는 [B2B 스키마 관계 정의](../xdm/tutorials/relationship-b2b.md)에 대한 자습서를 참조하십시오. |
@@ -65,7 +65,7 @@ Real-time Customer Data Platform B2B 에디션을 사용하면 행동 통찰력 
 
 >[!NOTE]
 >
->이 섹션에 설명된 데이터 모델 제한은 Real-time Customer Data Platform B2B 에디션에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B 에디션의 전체 기본 제한 목록의 경우 이러한 제한을 [실시간 고객 프로필 데이터 설명서](../profile/guardrails.md)에 요약된 일반적인 Adobe Experience Platform 제한과 결합하십시오.
+>이 섹션에 설명된 데이터 모델 제한은 Real-Time Customer Data Platform B2B edition에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B edition에 대한 전체 기본 제한 목록의 경우 이러한 제한을 [실시간 고객 프로필 데이터 설명서](../profile/guardrails.md)에 요약된 일반적인 Adobe Experience Platform 제한과 결합하십시오.
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --------- | ----- | ---------- | ----------- |
@@ -86,7 +86,7 @@ Real-time Customer Data Platform B2B 에디션을 사용하면 행동 통찰력 
 
 >[!NOTE]
 >
->이 섹션에 설명된 데이터 크기 제한은 Real-time Customer Data Platform B2B 에디션에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B 에디션의 전체 기본 제한 목록의 경우 이러한 제한을 [실시간 고객 프로필 데이터 설명서](../profile/guardrails.md)에 요약된 일반적인 Adobe Experience Platform 제한과 결합하십시오.
+>이 섹션에 설명된 데이터 크기 제한은 Real-Time Customer Data Platform B2B edition에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B edition에 대한 전체 기본 제한 목록의 경우 이러한 제한을 [실시간 고객 프로필 데이터 설명서](../profile/guardrails.md)에 요약된 일반적인 Adobe Experience Platform 제한과 결합하십시오.
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --------- | ----- | ---------- | ----------- |
@@ -96,7 +96,7 @@ Real-time Customer Data Platform B2B 에디션을 사용하면 행동 통찰력 
 
 >[!NOTE]
 >
->이 섹션에 설명된 데이터 크기 제한은 Real-time Customer Data Platform B2B 에디션에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B 에디션의 전체 기본 제한 목록의 경우 이러한 제한을 [실시간 고객 프로필 데이터 설명서](../profile/guardrails.md)에 요약된 일반적인 Adobe Experience Platform 제한과 결합하십시오.
+>이 섹션에 설명된 데이터 크기 제한은 Real-Time Customer Data Platform B2B edition에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B edition에 대한 전체 기본 제한 목록의 경우 이러한 제한을 [실시간 고객 프로필 데이터 설명서](../profile/guardrails.md)에 요약된 일반적인 Adobe Experience Platform 제한과 결합하십시오.
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --------- | ----- | ---------- | ----------- |
@@ -106,11 +106,11 @@ Real-time Customer Data Platform B2B 에디션을 사용하면 행동 통찰력 
 
 ## 세그먼테이션 보호
 
-이 섹션에 설명된 보호 기능은 대상이 대상에 매핑되고 활성화되는 것뿐만 아니라 Experience Platform 내에서 조직이 만들 수 있는 대상의 수와 특성에 대한 내용입니다.
+이 섹션에 설명된 보호 기능은 조직이 Experience Platform 내에서 만들 수 있는 대상의 수와 특성뿐만 아니라 대상을 대상에 매핑하고 활성화하는 방법에 대해 설명합니다.
 
 >[!NOTE]
 >
->이 섹션에 설명된 세그먼테이션 제한은 Real-time Customer Data Platform B2B 에디션에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B 에디션의 전체 기본 제한 목록의 경우 이러한 제한을 [실시간 고객 프로필 데이터 설명서](../profile/guardrails.md)에 요약된 일반적인 Adobe Experience Platform 제한과 결합하십시오.
+>이 섹션에 설명된 세그먼테이션 제한은 Real-Time Customer Data Platform B2B edition에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B edition에 대한 전체 기본 제한 목록의 경우 이러한 제한을 [실시간 고객 프로필 데이터 설명서](../profile/guardrails.md)에 요약된 일반적인 Adobe Experience Platform 제한과 결합하십시오.
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --------- | ----- | ---------- | ----------- |
@@ -118,7 +118,7 @@ Real-time Customer Data Platform B2B 에디션을 사용하면 행동 통찰력 
 
 ## 다음 단계
 
-이 문서에 설명된 제한 사항은 Real-time Customer Data Platform B2B 에디션에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B 에디션의 전체 기본 제한 목록의 경우 이러한 제한을 [실시간 고객 프로필 데이터 설명서](../profile/guardrails.md)에 요약된 일반적인 Adobe Experience Platform 제한과 결합하십시오.
+이 문서에 설명된 제한 사항은 Real-Time Customer Data Platform B2B edition에서 활성화한 변경 사항을 나타냅니다. Real-Time CDP B2B edition에 대한 전체 기본 제한 목록의 경우 이러한 제한을 [실시간 고객 프로필 데이터 설명서](../profile/guardrails.md)에 요약된 일반적인 Adobe Experience Platform 제한과 결합하십시오.
 
 ## 부록
 
@@ -138,7 +138,7 @@ Real-time Customer Data Platform B2B 에디션을 사용하면 행동 통찰력 
 
 #### Dimension 엔티티
 
-프로필 데이터를 유지 관리하는 프로필 데이터 저장소는 관계형 저장소가 아니지만, 프로필에서는 단순하고 직관적인 방식으로 대상자를 만들 수 있도록 작은 차원 엔티티와의 통합을 허용합니다. 이 통합을 [다중 엔티티 세그멘테이션](../segmentation/multi-entity-segmentation.md)이라고 합니다.
+프로필 데이터를 유지 관리하는 프로필 데이터 저장소는 관계형 저장소가 아니지만, 프로필에서는 단순하고 직관적인 방식으로 대상자를 만들 수 있도록 작은 차원 엔티티와의 통합을 허용합니다. 이 통합을 [다중 엔티티 세그멘테이션](../segmentation/tutorials/multi-entity-segmentation.md)이라고 합니다.
 
 또한 조직은 상점, 제품 또는 속성과 같이 개인 이외의 항목을 설명하는 XDM 클래스를 정의할 수도 있습니다. 이러한 [!DNL XDM Individual Profile]이 아닌 스키마를 &quot;차원 엔터티&quot;(&quot;조회 엔터티&quot;라고도 함)라고 하며 시계열 데이터를 포함하지 않습니다. 차원 엔터티를 나타내는 스키마는 [스키마 관계](../xdm/tutorials/relationship-ui.md)을 사용하여 프로필 엔터티에 연결됩니다.
 

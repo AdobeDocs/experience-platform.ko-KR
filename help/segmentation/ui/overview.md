@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 UI 안내서
 description: Adobe Experience Platform UI에서 대상 및 세그먼트 정의를 만들고 관리하는 방법을 알아봅니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
+source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
 workflow-type: tm+mt
 source-wordcount: '1043'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service]을(를) 사용하면 개인(예: 고객, 잠재 고객, 사용자 또는 조직)과 관련된 [!DNL Experience Platform]에 저장된 데이터를 더 작은 그룹으로 분할할 수 있습니다.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): [!DNL Platform](으)로 수집되는 서로 다른 데이터 소스의 ID를 연결하여 고객 프로필을 만들 수 있습니다.
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): [!DNL Platform]&#x200B;(으)로 수집되는 서로 다른 데이터 소스의 ID를 연결하여 고객 프로필을 만들 수 있습니다.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다. 세그먼테이션을 최대한 활용하려면 [데이터 모델링 모범 사례](../../xdm/schema/best-practices.md)에 따라 데이터가 프로필 및 이벤트로 수집되는지 확인하십시오.
 
 또한 이 문서에서 사용되는 다음 주요 용어를 이해하고 그 차이점을 이해해야 합니다.
@@ -92,15 +92,15 @@ Audience Portal에 대한 자세한 내용은 [Audience Portal 개요](./audienc
 
 ## 페더레이션된 대상자 구성 {#fac}
 
-대상 구성 및 세그먼트 정의 외에 Adobe Federated Audience Composition을 사용하여 기본 데이터를 복사하지 않고 Enterprise 데이터 세트에서 새 대상을 작성하고 이러한 대상을 Adobe Experience Platform Audience Portal에 저장할 수 있습니다. Enterprise Data Warehouse에서 페더레이션된 구성된 대상 데이터를 활용하여 Adobe Experience Platform의 기존 대상을 강화할 수도 있습니다. [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)에 대한 안내서를 읽어 보십시오.
+대상 구성 및 세그먼트 정의 외에 Adobe Federated Audience Composition을 사용하여 기본 데이터를 복사하지 않고 Enterprise 데이터 세트에서 새 대상을 작성하고 이러한 대상을 Adobe Experience Platform Audience Portal에 저장할 수 있습니다. Enterprise Data Warehouse에서 페더레이션된 구성된 대상 데이터를 활용하여 Adobe Experience Platform의 기존 대상을 강화할 수도 있습니다. [Federated Audience Composition](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)에 대한 안내서를 읽어 보십시오.
 
 ![조직의 Federated Audience Composition에서 만든 대상 목록입니다.](../images/ui/overview/federated-audience-composition.png)
 
 ## 스트리밍 세분화 {#streaming-segmentation}
 
-스트리밍 세분화는 데이터 풍부성에 중점을 두고 거의 실시간으로 [!DNL Platform]에서 세분화를 수행하는 기능입니다. 스트리밍 세분화를 사용하면 데이터가 [!DNL Platform](으)로 들어오는 동안 세분화 자격이 적용되므로 세분화 작업을 예약하고 실행할 필요가 줄어듭니다.
+스트리밍 세분화는 데이터 풍부성에 중점을 두고 거의 실시간으로 [!DNL Platform]에서 세분화를 수행하는 기능입니다. 스트리밍 세분화를 사용하면 데이터가 [!DNL Platform]&#x200B;(으)로 들어오는 동안 세분화 자격이 적용되므로 세분화 작업을 예약하고 실행할 필요가 줄어듭니다.
 
-스트리밍 세분화에 대한 자세한 내용은 [스트리밍 세분화 사용 안내서](./streaming-segmentation.md)를 참조하세요.
+스트리밍 세분화에 대한 자세한 내용은 [스트리밍 세분화 사용 안내서](../methods/streaming-segmentation.md)를 참조하세요.
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ Audience Portal에 대한 자세한 내용은 [Audience Portal 개요](./audienc
 
 Edge 세그멘테이션은 가장자리에 있는 Platform의 대상자를 즉시 평가하는 기능으로, 동일한 페이지와 다음 페이지 개인화 사용 사례를 활성화합니다.
 
-에지 세분화에 대한 자세한 내용은 [에지 세분화 UI 안내서](./edge-segmentation.md)를 참조하세요.
+에지 세분화에 대한 자세한 내용은 [에지 세분화 UI 안내서](../methods/edge-segmentation.md)를 참조하세요.
 
 ## 정책 위반
 

@@ -3,7 +3,7 @@ title: 대상에 대한 잠재 고객 활성화
 type: Tutorial
 description: 잠재 고객을 대상으로 활성화하는 방법을 알아봅니다
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 13%
@@ -16,7 +16,7 @@ ht-degree: 13%
 >
 >이 기능은 Real-Time CDP Prime 및 Ultimate 패키지를 구입한 고객이 사용할 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
 
-이 문서에서는 Adobe Experience Platform에서 선호하는 대상으로 [잠재 고객](/help/segmentation/ui/prospect-audience.md)을(를) 내보내는 데 필요한 워크플로에 대해 설명합니다.
+이 문서에서는 Adobe Experience Platform에서 선호하는 대상으로 [잠재 고객](/help/segmentation/types/prospect-audiences.md)을(를) 내보내는 데 필요한 워크플로에 대해 설명합니다.
 
 ## 지원되는 대상 {#supported-destinations}
 
@@ -26,7 +26,7 @@ ht-degree: 13%
 
 ## 전제 조건 {#prerequisites}
 
-* 다운스트림 대상으로 활성화하려면 먼저 [잠재 고객 프로필](/help/profile/ui/prospect-profile.md)을 수집하고 [잠재 고객 대상](/help/segmentation/ui/prospect-audience.md)을 만들어야 합니다.
+* 다운스트림 대상으로 활성화하려면 먼저 [잠재 고객 프로필](/help/profile/ui/prospect-profile.md)을 수집하고 [잠재 고객 대상](/help/segmentation/types/prospect-audiences.md)을 만들어야 합니다.
 * 대상에 잠재 고객을 활성화하려면 대상에 성공적으로 연결해야 합니다. 아직 수행하지 않았다면 [대상 카탈로그](../catalog/overview.md)(으)로 이동하여 지원되는 대상을 탐색하고 사용할 대상을 구성합니다. 자세한 내용은 [대상에 연결](./connect-destination.md)에 대한 UI 자습서를 참조하십시오.
 
 ### 필요한 권한 {#permissions}

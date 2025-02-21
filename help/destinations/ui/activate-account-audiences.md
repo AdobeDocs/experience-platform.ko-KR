@@ -5,7 +5,7 @@ description: 대상에 대한 계정 대상을 활성화하는 방법을 알아�
 badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P 버전" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Real-time Customer Data Platform의 [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) 에디션을 구매하는 회사는 계정 대상자를 대상으로 활성화하는 기능을 사용할 수 있습니다.
+>Real-Time Customer Data Platform의 [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) 에디션을 구매하는 회사는 계정 대상자를 대상으로 활성화하는 기능을 사용할 수 있습니다.
 
-이 문서에서는 [계정 대상자](/help/segmentation/ui/account-audiences.md)를 Adobe Experience Platform에서 원하는 대상으로 내보내는 데 필요한 워크플로에 대해 설명합니다.
+이 문서에서는 [계정 대상자](/help/segmentation/types/account-audiences.md)를 Adobe Experience Platform에서 원하는 대상으로 내보내는 데 필요한 워크플로에 대해 설명합니다.
 
 ## 지원되는 대상 {#supported-destinations}
 
-**[!UICONTROL 연결]** > **[!UICONTROL 대상]**(으)로 이동한 다음 **[!UICONTROL 카탈로그]** 탭을 선택합니다. **[!UICONTROL 데이터 형식]** 필터를 사용하고 **[!UICONTROL 계정]**&#x200B;을 선택하여 계정 대상의 활성화를 지원하는 대상을 확인하십시오. 현재 계정 대상 내보내기는 특정 클라우드 저장소 대상([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob 저장소](/help/destinations/catalog/cloud-storage/azure-blob.md), [데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md) 및 [SFTP](/help/destinations/catalog/cloud-storage/sftp.md))과 [Demandbase](/help/destinations/catalog/advertising/demandbase.md) 및 [(회사) LinkedIn이 대상 ](/help/destinations/catalog/social/linkedin-b2b.md) 스트리밍 대상에만 사용할 수 있습니다.
+**[!UICONTROL 연결]** > **[!UICONTROL 대상]**(으)로 이동한 다음 **[!UICONTROL 카탈로그]** 탭을 선택합니다. **[!UICONTROL 데이터 형식]** 필터를 사용하고 **[!UICONTROL 계정]**&#x200B;을 선택하여 계정 대상의 활성화를 지원하는 대상을 확인하십시오. 현재 계정 대상 내보내기는 특정 클라우드 저장소 대상([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob 저장소](/help/destinations/catalog/cloud-storage/azure-blob.md), [데이터 랜딩 영역](/help/destinations/catalog/cloud-storage/data-landing-zone.md) 및 [SFTP](/help/destinations/catalog/cloud-storage/sftp.md))과 [Demandbase](/help/destinations/catalog/advertising/demandbase.md) 및 [(회사) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md) 스트리밍 대상에만 사용할 수 있습니다.
 
 계정 대상을 지원하는 ![대상.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ## 전제 조건 {#prerequisites}
 
-* 다운스트림 대상으로 활성화하려면 먼저 [계정 프로필](/help/rtcdp/accounts/account-profile-overview.md)을(를) 수집하고 [계정 대상자](/help/segmentation/ui/account-audiences.md)를 만들어야 합니다.
+* 다운스트림 대상으로 활성화하려면 먼저 [계정 프로필](/help/rtcdp/accounts/account-profile-overview.md)을(를) 수집하고 [계정 대상자](/help/segmentation/types/account-audiences.md)를 만들어야 합니다.
 * 대상에 계정 대상을 활성화하려면 대상에 성공적으로 연결해야 합니다. 아직 수행하지 않았다면 [대상 카탈로그](../catalog/overview.md)(으)로 이동하여 지원되는 대상을 탐색하고 사용할 대상을 구성합니다. 자세한 내용은 [대상에 연결](./connect-destination.md)에 대한 UI 자습서를 참조하십시오.
 
 ### 필요한 권한 {#permissions}
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 ## 예약 및 다음 단계
 
-계정 대상을 내보내는 활성화 워크플로의 나머지 부분에 대해서는 파일 기반 대상으로 데이터 활성화에 대한 자습서를 참조하십시오. [대상자 내보내기 예약 단계](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)에서 계속합니다. **[!UICONTROL (회사) LinkedIn 일치 대상]** 대상으로 계정 대상을 활성화하는 경우 스트리밍 대상 활성화에 대한 자습서를 읽어 보십시오. [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)에서 계속합니다.
+계정 대상을 내보내는 활성화 워크플로의 나머지 부분에 대해서는 파일 기반 대상으로 데이터 활성화에 대한 자습서를 참조하십시오. [대상자 내보내기 예약 단계](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)에서 계속합니다. **[!UICONTROL (회사) LinkedIn Matched Audiences]** 대상으로 계정 대상을 활성화하는 경우 스트리밍 대상 활성화에 대한 자습서를 읽어 보십시오. [매핑 단계](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)에서 계속합니다.
 
 >[!NOTE]
 >
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 계정 대상을 활성화하는 기능의 일반 가용성 릴리스에 대한 다음의 중요한 콜아웃 및 알려진 제한을 참조하십시오.
 
-### **[!UICONTROL (회사) LinkedIn 일치 대상]** 대상에 대한 계정 대상을 활성화할 때 매핑 단계에서 필요한 매핑 쌍 {#required-mappings}
+### 계정 대상을 **[!UICONTROL (회사) LinkedIn 일치하는 대상]** 대상으로 활성화할 때 매핑 단계에서 필요한 매핑 쌍 {#required-mappings}
 
 **[!UICONTROL (회사) LinkedIn Matched Audiences]** 대상으로 계정 대상을 활성화할 때 데이터를 성공적으로 내보내려면 다음 두 매핑 쌍이 필요합니다.
 

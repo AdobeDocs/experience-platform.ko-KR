@@ -3,7 +3,7 @@ keywords: 대상;대상;대상 유형
 title: 대상 유형 및 범주
 description: Adobe Experience Platform의 다양한 유형과 범주에 대해 알아봅니다.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 1%
@@ -41,11 +41,11 @@ Adobe Experience Platform의 **[!UICONTROL 프로필 내보내기]**, **[!UICONT
 
 >[!IMPORTANT]
 >
->고급 엔터프라이즈 대상 또는 스트리밍 프로필 내보내기 대상은 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객만 사용할 수 있습니다.
+>고급 엔터프라이즈 대상 또는 스트리밍 프로필 내보내기 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객만 사용할 수 있습니다.
 
-고급 엔터프라이즈 대상 Data Connectors를 사용하여 데이터 동기화, 분석 및 추가적인 프로필 보강 사용 사례를 위해 Adobe Real-time Customer Data Platform 프로필을 거의 실시간으로 내부 시스템이나 다른 서드파티 시스템에 전달합니다.
+고급 엔터프라이즈 대상 Data Connectors를 사용하여 데이터 동기화, 분석 및 추가적인 프로필 보강 사용 사례를 위해 Adobe Real-Time Customer Data Platform 프로필을 거의 실시간으로 내부 시스템이나 다른 서드파티 시스템에 전달합니다.
 
-이러한 대상은 대상자 및 프로필 데이터를 Experience Platform 데이터 스트림으로 수신합니다.
+이러한 대상은 대상 및 프로필 데이터를 Experience Platform 데이터 스트림으로 수신합니다.
 
 고급 엔터프라이즈 대상에는 다음이 포함됩니다.
 
@@ -59,7 +59,7 @@ Adobe Experience Platform의 **[!UICONTROL 프로필 내보내기]**, **[!UICONT
 
 ## 스트리밍 대상자 내보내기 대상 {#streaming-destinations}
 
-대상자 내보내기 대상은 Experience Platform 대상자 데이터를 받습니다. 이러한 대상은 대상 ID 또는 사용자 ID를 사용합니다. Advertising 및 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) 또는 [Facebook](catalog/social/facebook.md)과(와) 같은 소셜 대상의 예입니다.
+대상자 내보내기 대상은 Experience Platform 대상자 데이터를 받습니다. 이러한 대상은 대상 ID 또는 사용자 ID를 사용합니다. Advertising 및 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) 또는 [Facebook](catalog/social/facebook.md)과 같은 소셜 대상이 이러한 대상의 예입니다.
 
 ## Edge 개인화 대상 {#edge-personalization-destinations}
 
@@ -81,7 +81,7 @@ Experience Platform에서 다양한 대상으로 세 가지 유형의 대상을 
 * 계정 대상자
 * 잠재 고객 대상자
 
-[다양한 대상 유형](/help/segmentation/ui/account-audiences.md#terminology)에 대해 자세히 알아보세요.
+[다양한 대상 유형](/help/segmentation/types/account-audiences.md#terminology)에 대해 자세히 알아보세요.
 
 대상 카드의 기호는 각 대상으로 내보낼 수 있는 대상 유형을 보여 줍니다.
 

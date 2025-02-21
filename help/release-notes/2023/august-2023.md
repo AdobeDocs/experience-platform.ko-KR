@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2023년 8월
 description: Adobe Experience Platform에 대한 2023년 8월 릴리스 정보입니다.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1741'
 ht-degree: 42%
@@ -29,7 +29,7 @@ Adobe Experience Platform의 기존 기능 업데이트:
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
-Experience Platform을 기반으로 구축된 Real-time Customer Data Platform([!DNL Real-Time CDP])은 기업이 알려진 데이터와 알 수 없는 데이터를 통합하여 고객 여정 전반에 걸쳐 지능적인 의사 결정으로 고객 프로필을 활성화할 수 있도록 지원합니다.
+Experience Platform을 기반으로 구축된 Real-Time Customer Data Platform([!DNL Real-Time CDP])은 기업이 알려진 데이터와 알 수 없는 데이터를 통합하여 고객 여정 전반에 걸쳐 지능적인 의사 결정으로 고객 프로필을 활성화할 수 있도록 지원합니다.
 
 [!DNL Real-Time CDP]는 여러 기업의 데이터 소스를 결합하여 실시간으로 고객 프로필을 생성합니다. 이러한 프로필에서 구축된 세그먼트는 다운스트림 대상으로 전송되어 모든 채널과 디바이스에서 일대일로 개인 설정된 고객 경험을 제공할 수 있습니다.
 
@@ -116,7 +116,7 @@ Adobe Experience Platform은 데이터의 모든 유형과 지연 시간을 수�
 
 ## 대상 {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 기능 또는 업데이트된 기능** {#destinations-new-updated-functionality}
 
@@ -156,7 +156,7 @@ Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 �
 
 | 기능 | 설명 |
 | --- | --- |
-| ID 그래프 제한 변경 | 9월 말까지 ID 그래프가 그래프당 50개의 ID로 변경되고 최신 ID가 수집됩니다. 따라서 가장 오래된 ID는 수집 타임스탬프 및 ID 유형에 따라 삭제되며 쿠키 ID 유형이 먼저 삭제됩니다. 현재 ID 그래프의 ID 제한은 그래프당 150개이며 이 제한에 도달하면 그래프가 더 이상 업데이트되지 않습니다. 프로덕션 샌드박스에 다음이 포함된 경우 계정 담당자에게 문의하여 ID 유형 변경을 요청하십시오. <ul><li>개인 식별자(예: CRM ID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.</li><li>쿠키/장치 식별자가 교차 장치 ID 유형으로 구성된 사용자 지정 네임스페이스입니다.</li></ul> Adobe 엔지니어링에서 이러한 요청을 수동으로 처리합니다. 자세한 내용은 ID 서비스 데이터에 대한 [보호 기능](../../identity-service/guardrails.md)을 참조하세요. |
+| ID 그래프 제한 변경 | 9월 말까지 ID 그래프가 그래프당 50개의 ID로 변경되고 최신 ID가 수집됩니다. 따라서 가장 오래된 ID는 수집 타임스탬프 및 ID 유형에 따라 삭제되며 쿠키 ID 유형이 먼저 삭제됩니다. 현재 ID 그래프의 ID 제한은 그래프당 150개이며 이 제한에 도달하면 그래프가 더 이상 업데이트되지 않습니다. 프로덕션 샌드박스에 다음이 포함된 경우 계정 담당자에게 문의하여 ID 유형 변경을 요청하십시오. <ul><li>개인 식별자(예: CRM ID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.</li><li>쿠키/장치 식별자가 교차 장치 ID 유형으로 구성된 사용자 지정 네임스페이스입니다.</li></ul> Adobe 엔지니어링 팀에서 이러한 요청을 수동으로 처리합니다. 자세한 내용은 ID 서비스 데이터에 대한 [보호 기능](../../identity-service/guardrails.md)을 참조하세요. |
 
 자세한 내용은 [ID 서비스 개요](../../identity-service/home.md)를 참조하십시오.
 
@@ -168,7 +168,7 @@ Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 �
 
 | 기능 | 설명 |
 | --- | --- |
-| 유사 대상(제한된 가용성) | 유사 대상은 각 대상에 대한 지능적인 통찰력을 제공하며 머신 러닝 기반 통찰력을 활용하여 마케팅 캠페인을 통해 고부가가치 고객을 식별하고 타깃팅합니다. 유사 대상을 사용하면 성과가 좋은 대상과 유사한 고객을 타겟팅하거나 이전에 전환된 대상과 유사한 고객을 타겟팅하는 확장된 대상을 만들 수 있습니다. 유사 대상에 대한 자세한 내용은 [유사 대상 개요](../../segmentation/ui/lookalike-audiences.md)를 참조하십시오. |
+| 유사 대상(제한된 가용성) | 유사 대상은 각 대상에 대한 지능적인 통찰력을 제공하며 머신 러닝 기반 통찰력을 활용하여 마케팅 캠페인을 통해 고부가가치 고객을 식별하고 타깃팅합니다. 유사 대상을 사용하면 성과가 좋은 대상과 유사한 고객을 타겟팅하거나 이전에 전환된 대상과 유사한 고객을 타겟팅하는 확장된 대상을 만들 수 있습니다. 유사 대상에 대한 자세한 내용은 [유사 대상 개요](../../segmentation/types/account-audiences.md)를 참조하십시오. |
 
 {style="table-layout:auto"}
 

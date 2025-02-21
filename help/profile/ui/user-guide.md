@@ -3,7 +3,7 @@ keywords: Experience Platform;프로필;실시간 고객 프로필;문제 해결
 title: 실시간 고객 프로필 UI 안내서
 description: 실시간 고객 프로파일은 온라인, 오프라인, CRM 및 서드파티 데이터를 비롯한 다양한 채널의 데이터를 취합하여 각 개별 고객을 전체적으로 파악할 수 있도록 합니다. 이 문서는 Adobe Experience Platform 사용자 인터페이스에서 실시간 고객 프로필과 상호 작용하기 위한 안내서 역할을 합니다.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '2212'
 ht-degree: 3%
@@ -19,7 +19,7 @@ ht-degree: 3%
 이 UI 안내서를 사용하려면 [!DNL Real-Time Customer Profiles] 관리와 관련된 다양한 [!DNL Experience Platform] 서비스를 이해해야 합니다. 이 안내서를 읽거나 UI에서 작업하기 전에 다음 서비스에 대한 설명서를 검토하십시오.
 
 * [[!DNL Real-Time Customer Profile] 개요](../home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-* [[!DNL Identity Service]](../../identity-service/home.md): 서로 다른 데이터 원본의 ID를 [!DNL Platform](으)로 수집할 때 브리징하여 [!DNL Real-Time Customer Profile]을(를) 사용하도록 설정합니다.
+* [[!DNL Identity Service]](../../identity-service/home.md): 서로 다른 데이터 원본의 ID를 [!DNL Platform]&#x200B;(으)로 수집할 때 브리징하여 [!DNL Real-Time Customer Profile]을(를) 사용하도록 설정합니다.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 
 ## [!UICONTROL 개요]
@@ -171,11 +171,11 @@ Edge 프로필에 대한 자세한 내용은 [Edge 프로필 설명서](../edge-
 
 **[!UICONTROL 대상 멤버십]** 탭에는 현재 개별 고객 프로필이 속한 대상의 이름과 설명이 포함된 목록이 표시됩니다. 이 목록은 프로필이 대상에서 정규화되거나 만료될 때 자동으로 업데이트됩니다. 프로필이 현재 자격이 있는 총 대상자 수가 탭 오른쪽에 표시됩니다.
 
-Experience Platform의 세그먼테이션에 대한 자세한 내용은 [Adobe Experience Platform 세그먼테이션 서비스 설명서](../../segmentation/home.md)를 참조하세요.
+Experience Platform의 세그멘테이션에 대한 자세한 내용은 [Adobes Experience Platform 세그멘테이션 서비스 설명서](../../segmentation/home.md)를 참조하세요.
 
 ![대상자 멤버십 탭이 강조 표시되어 있습니다. 프로필의 대상자 멤버십 세부 정보가 표시됩니다.](../images/user-guide/audience-membership.png)
 
-Edge에서 사용할 수 있는 프로필의 대상 멤버십을 보려면 데이터 위치 선택기에서 **[!UICONTROL Edge]**&#x200B;을(를) 선택하십시오. 에지 세분화에 대한 자세한 내용은 [에지 세분화 가이드](../../segmentation/ui/edge-segmentation.md)를 참조하세요.
+Edge에서 사용할 수 있는 프로필의 대상 멤버십을 보려면 데이터 위치 선택기에서 **[!UICONTROL Edge]**&#x200B;을(를) 선택하십시오. 에지 세분화에 대한 자세한 내용은 [에지 세분화 가이드](../../segmentation/methods/edge-segmentation.md)를 참조하세요.
 
 ![대상 멤버십 탭의 데이터 위치 선택기가 강조 표시됩니다.](../images/user-guide/audience-membership-select.png)
 
@@ -189,7 +189,7 @@ Edge에서 사용할 수 있는 프로필의 대상 멤버십을 보려면 데�
 
 ## 유니온 스키마 {#union-schema}
 
-기본 **[!UICONTROL 프로필]** 메뉴에서 **[!UICONTROL 유니온 스키마]** 탭을 선택하여 수집된 데이터에 사용 가능한 유니온 스키마를 확인합니다. 유니온 스키마는 [!DNL Real-Time Customer Profile]에서 사용할 수 있도록 스키마가 활성화된 동일한 클래스의 모든 [!DNL Experience Data Model](XDM) 필드의 통합입니다.
+기본 **[!UICONTROL 프로필]** 메뉴에서 **[!UICONTROL 유니온 스키마]** 탭을 선택하여 수집된 데이터에 사용 가능한 유니온 스키마를 확인합니다. 유니온 스키마는 [!DNL Real-Time Customer Profile]에서 사용할 수 있도록 스키마가 활성화된 동일한 클래스의 모든 [!DNL Experience Data Model]&#x200B;(XDM) 필드의 통합입니다.
 
 유니온 스키마에 대한 자세한 내용은 [유니온 스키마 UI 안내서](union-schema.md)를 참조하십시오.
 

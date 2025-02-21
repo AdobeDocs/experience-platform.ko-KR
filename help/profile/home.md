@@ -2,7 +2,7 @@
 title: 실시간 고객 프로필 개요
 description: Real-Time Customer Profile은 다양한 소스의 데이터를 병합하고 개별 고객 프로필 및 관련 시계열 이벤트의 형태로 해당 데이터에 대한 액세스를 제공합니다. 이 기능을 통해 마케터는 여러 채널에서 대상자와 일관되고, 관련성이 높은 경험을 제공할 수 있습니다.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
+source-git-commit: fc53d1b32eb3fc0251f307d5b2f076b1153a2931
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Adobe Experience Platform을 사용하면 고객이 언제 어디서 브랜드�
 
 ### 프로필 엔티티 구성
 
-실시간 고객 프로필은 **기본 엔터티**&#x200B;라는 기본 엔터티와 다양한 지원 엔터티로 구성됩니다. Experience Platform 컨텍스트에서 기본 엔터티는 일반적으로 개별 사용자의 트레이트, 동작 및 대상 멤버십으로 구성된 **프로필 엔터티**&#x200B;입니다. 다른 엔티티를 사용하면 세그먼테이션 엔진이 프로필의 기본 엔티티 외부의 데이터를 활용할 수 있으며, 여기에는 다음이 포함됩니다.
+실시간 고객 프로필은 **기본 엔터티**&#x200B;라는 기본 엔터티와 다양한 지원 엔터티로 구성됩니다. Experience Platform에서 기본 엔터티는 일반적으로 개별 사용자의 트레이트, 동작 및 대상 멤버십으로 구성된 **프로필 엔터티**&#x200B;입니다. 다른 엔티티를 사용하면 세그먼테이션 엔진이 프로필의 기본 엔티티 외부의 데이터를 활용할 수 있으며, 여기에는 다음이 포함됩니다.
 
 - **차원 엔터티**: 이벤트 또는 프로필 레코드 간에 공유된 정보에 대한 데이터 모델링 프로세스를 단순화하는 데 사용되는 엔터티입니다. 이를 조회 엔티티 또는 분류 엔티티라고도 합니다.
 - **B2B 엔터티**: Business-to-Business 계정 및 기회와 프로필의 관계를 설명하는 엔터티입니다.
@@ -49,7 +49,7 @@ Dimension 및 B2B 엔터티가 **스키마 관계**&#x200B;를 통해 기본 엔
 
 ### 프로필 보호 기능
 
-Experience Platform은 실시간 고객 프로필에서 지원하지 않는 [XDM(경험 데이터 모델) 스키마](../xdm/home.md)를 만들지 않도록 하는 데 도움이 되는 일련의 가드레일을 제공합니다. 여기에는 성능 저하를 초래할 수 있는 소프트 제한과 오류 및 시스템 손상을 초래할 수 있는 하드 제한이 포함됩니다. 지침 목록 및 사용 사례 예시 등 자세한 내용은 [프로필 보호](guardrails.md) 설명서를 참조하십시오.
+Experience Platform에서는 실시간 고객 프로필에서 지원하지 않는 [XDM(경험 데이터 모델) 스키마](../xdm/home.md)를 만들지 않도록 하는 데 도움이 되는 일련의 보호 기능을 제공합니다. 여기에는 성능 저하를 초래할 수 있는 소프트 제한과 오류 및 시스템 손상을 초래할 수 있는 하드 제한이 포함됩니다. 지침 목록 및 사용 사례 예시 등 자세한 내용은 [프로필 보호](guardrails.md) 설명서를 참조하십시오.
 
 ### 프로필 대시보드 {#profile-dashboard}
 
@@ -65,7 +65,7 @@ Experience Platform UI는 일별 스냅샷 중에 캡처한 대로 실시간 고
 
 ### 레코드 데이터 {#record-data}
 
-프로필은 많은 속성(레코드 데이터라고도 함)으로 구성된 주제, 조직 또는 개인의 표현입니다. 예를 들어, 제품 프로필에는 SKU 및 설명이 포함될 수 있지만, 개인 프로필에는 이름, 성 및 이메일 주소와 같은 정보가 포함됩니다. [!DNL Experience Platform]을(를) 사용하여 비즈니스와 관련된 특정 데이터를 사용하도록 프로필을 사용자 지정할 수 있습니다. 표준 [!DNL Experience Data Model](XDM) 클래스 [!DNL XDM Individual Profile]은(는) 고객 레코드 데이터를 설명할 때 스키마를 구축하는 기본 클래스이며, 플랫폼 서비스 간의 여러 상호 작용에 필수적인 데이터를 제공합니다. [!DNL Experience Platform]의 스키마 작업에 대한 자세한 내용은 [XDM 시스템 개요](../xdm/home.md)를 읽는 것부터 시작하십시오.
+프로필은 많은 속성(레코드 데이터라고도 함)으로 구성된 주제, 조직 또는 개인의 표현입니다. 예를 들어, 제품 프로필에는 SKU 및 설명이 포함될 수 있지만, 개인 프로필에는 이름, 성 및 이메일 주소와 같은 정보가 포함됩니다. [!DNL Experience Platform]을(를) 사용하여 비즈니스와 관련된 특정 데이터를 사용하도록 프로필을 사용자 지정할 수 있습니다. 표준 [!DNL Experience Data Model]&#x200B;(XDM) 클래스 [!DNL XDM Individual Profile]은(는) 고객 레코드 데이터를 설명할 때 스키마를 구축하는 기본 클래스이며, 플랫폼 서비스 간의 여러 상호 작용에 필수적인 데이터를 제공합니다. [!DNL Experience Platform]의 스키마 작업에 대한 자세한 내용은 [XDM 시스템 개요](../xdm/home.md)를 읽는 것부터 시작하십시오.
 
 ### 시계열 이벤트 {#time-series-events}
 
@@ -81,7 +81,7 @@ Experience Platform UI는 일별 스냅샷 중에 캡처한 대로 실시간 고
 
 여러 데이터 세트의 데이터가 충돌하는 경우 병합 정책에 따라 데이터를 처리하는 방법과 사용할 값이 결정됩니다. RESTful API 또는 사용자 인터페이스를 통해 새 병합 정책을 만들고 기존 정책을 관리하며 조직의 기본 병합 정책을 설정할 수 있습니다.
 
-병합 정책 및 Experience Platform 내 역할에 대해 자세히 알아보려면 [병합 정책 개요](merge-policies/overview.md)를 읽어 보십시오.
+Experience Platform 내의 병합 정책 및 역할에 대해 자세히 알아보려면 [병합 정책 개요](merge-policies/overview.md)를 읽어 보십시오.
 
 ### 유니온 스키마 {#profile-fragments-and-union-schemas}
 
@@ -111,7 +111,7 @@ Adobe Experience Platform [!DNL Segmentation Service]은(는) 개별 고객을 �
 
 >[!NOTE]
 >
->[!DNL Analytics Cloud], [!DNL Marketing Cloud] 및 [!DNL Advertising Cloud]을(를) 포함하여 Adobe 솔루션을 통해 수집된 데이터는 [!DNL Experience Platform]에 흐르고 [!DNL Profile]에 수집됩니다.
+>[!DNL Analytics Cloud], [!DNL Marketing Cloud] 및 [!DNL Advertising Cloud]을(를) 포함하여 Adobe 솔루션을 통해 수집된 데이터는 [!DNL Experience Platform]&#x200B;(으)로 흘러 [!DNL Profile]&#x200B;(으)로 수집됩니다.
 
 ### 프로필 수집 지표
 
@@ -135,8 +135,8 @@ Adobe Experience Platform [!DNL Segmentation Service]은(는) 개별 고객을 �
 
 ### 옵트아웃 및 데이터 개인 정보 보호 요청 처리
 
-[!DNL Experience Platform]을(를) 통해 고객은 [!DNL Real-Time Customer Profile] 내의 데이터 사용 및 저장과 관련된 옵트아웃 요청을 보낼 수 있습니다. 옵트아웃 요청을 처리하는 방법에 대한 자세한 내용은 [옵트아웃 요청 준수](../segmentation/consents.md)에 대한 설명서를 참조하십시오.
+[!DNL Experience Platform]을(를) 통해 고객은 [!DNL Real-Time Customer Profile] 내의 데이터 사용 및 저장과 관련된 옵트아웃 요청을 보낼 수 있습니다. 옵트아웃 요청을 처리하는 방법에 대한 자세한 내용은 [옵트아웃 요청 준수](../segmentation/tutorials/consents.md)에 대한 설명서를 참조하십시오.
 
 ## 다음 단계 및 추가 리소스
 
-Experience Platform UI 또는 프로필 API를 사용하여 실시간 고객 프로필 데이터를 사용하는 방법에 대한 자세한 내용은 각각 [프로필 UI 안내서](ui/user-guide.md) 또는 [API 개발자 안내서](api/overview.md)를 참조하세요.
+Experience Platform UI 또는 프로필 API를 사용하여 실시간 고객 프로필 데이터를 사용하는 방법에 대한 자세한 내용은 각각 [프로필 UI 안내서](ui/user-guide.md) 또는 [API 개발자 안내서](api/overview.md)를 참조하십시오.

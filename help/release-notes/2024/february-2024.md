@@ -2,8 +2,8 @@
 title: Adobe Experience Platform 릴리스 정보 2024년 2월
 description: Adobe Experience Platform의 2024년 2월 릴리스 정보.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
-workflow-type: ht
+source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 100%
 
@@ -83,7 +83,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 | 기능 | 설명 |
 | ----------- | ----------- |
 | 일반적으로 사용 가능한 계정 대상자 활성화 | 특정 대상에 대한 계정 대상자 활성화 기능은 이제 일반적으로 Real-Time CDP의 [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) 및 [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) 버전을 구매하는 기업에서 사용할 수 있습니다. [계정 대상자 활성화](/help/destinations/ui/activate-account-audiences.md)에 대한 튜토리얼을 읽고 지원 대상을 포함한 전체 정보를 확인하십시오. |
-| Google 대상을 위한 디지털 시장법 동의 시행 도구 | Google은 유럽연합에서 [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en)(DMA)에 정의된 규정 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [고객 일치 타겟팅](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), [디스플레이 및 비디오 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)에 대한 변경 사항을 출시합니다([EU 사용자 동의 정책](https://www.google.com/about/company/user-consent-policy/)). 이러한 동의 요구 사항 변경 사항은 2024년 3월 6일부터 시행될 예정입니다. <br/><br/> EU 사용자 동의 정책을 준수하고 유럽 경제 지역(EEA) 사용자를 위한 대상자 목록을 계속 생성하려면 광고주와 파트너가 대상자 데이터를 업로드할 때 최종 사용자 동의를 전달해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.<br/><br/>Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하는 [동의 정책](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을 구성한 고객은 별다른 조치를 취할 필요가 없습니다.<br/><br/>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용하려면 [세그먼트 빌더](../../segmentation/ui/segment-builder.md) 내에서 [세그먼트 정의](../../segmentation/home.md#segment-definitions) 기능을 사용하여 동의하지 않는 프로필을 필터링해야 합니다. |
+| Google 대상을 위한 디지털 시장법 동의 시행 도구 | Google은 유럽연합에서 [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en)&#x200B;(DMA)에 정의된 규정 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [고객 일치 타겟팅](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), [디스플레이 및 비디오 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)에 대한 변경 사항을 출시합니다([EU 사용자 동의 정책](https://www.google.com/about/company/user-consent-policy/)). 이러한 동의 요구 사항 변경 사항은 2024년 3월 6일부터 시행될 예정입니다. <br/><br/> EU 사용자 동의 정책을 준수하고 유럽 경제 지역(EEA) 사용자를 위한 대상자 목록을 계속 생성하려면 광고주와 파트너가 대상자 데이터를 업로드할 때 최종 사용자 동의를 전달해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.<br/><br/>Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하는 [동의 정책](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을 구성한 고객은 별다른 조치를 취할 필요가 없습니다.<br/><br/>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용하려면 [세그먼트 빌더](../../segmentation/ui/segment-builder.md) 내에서 [세그먼트 정의](../../segmentation/home.md#segment-definitions) 기능을 사용하여 동의하지 않는 프로필을 필터링해야 합니다. |
 | [!BADGE Beta]{type=Informative} 배치 대상에 대한 매핑 필드 재정렬 | 이제 [매핑](../../destinations/ui/activate-batch-profile-destinations.md#mapping) 단계에서 매핑 필드를 드래그 앤 드롭하여 CSV 내보내기의 열의 순서를 변경할 수 있습니다. UI에서 매핑된 필드의 순서는 내보낸 CSV 파일의 열 순서를 위에서 아래로 반영하며, 맨 위 행은 CSV 파일에서 가장 왼쪽에 있는 열입니다. <br/><br/> 이 기능은 Beta 버전으로 일부 고객만 사용할 수 있습니다. 이 기능에 액세스하려면 Adobe 담당자에게 문의하십시오. |
 | [!BADGE Beta]{type=Informative} 배치 대상에 대해 미리 선택된 기본 내보내기 예약 | 이제 Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동으로 설정합니다. 기본 일정을 수정하는 방법은 [대상자 내보내기 예약](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)에 대한 설명서를 참조하십시오. <br/><br/> 이 기능은 Beta 버전으로 일부 고객만 사용할 수 있습니다. 이 기능에 액세스하려면 Adobe 담당자에게 문의하십시오. |
 | [!BADGE Beta]{type=Informative} 배치 대상에 대한 대상자 활성화 예약 일괄 편집 | 이제 [활성화 데이터](../../destinations/ui/destination-details-page.md#bulk-edit-schedule) 페이지에서 여러 대상자의 활성화 예약을 일괄로 편집할 수 있습니다. <br/><br/> 이 기능은 Beta 버전으로 일부 고객만 사용할 수 있습니다. 이 기능에 액세스하려면 Adobe 담당자에게 문의하십시오. |
@@ -115,7 +115,7 @@ Adobe Experience Platform은 전 세계적으로 디지털 체험 애플리케�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 계정 대상자 | 이제 계정 대상자를 일반적으로 사용할 수 있습니다! 이제 계정 세분화를 사용하여 B2B 및 B2P 버전의 Real-Time Customer Platform에서 사람 기반 대상자부터 계정 기반 대상자까지 마케팅 세분화 경험의 편리함과 정교함을 완벽히 구현할 수 있습니다. 이 릴리스를 통해 사람 기반 대상자를 계정 기반 대상자에 대한 예측 기준으로 사용할 수 있고, 검색 기능을 추가하고, 사용자 정의 엔티티의 사용을 지원하며, 데이터 거버넌스를 준수할 수 있습니다. 이 기능에 대한 자세한 내용은 [계정 대상자 개요](../../segmentation/ui/account-audiences.md)를 참조하십시오. |
+| 계정 대상자 | 이제 계정 대상자를 일반적으로 사용할 수 있습니다! 이제 계정 세분화를 사용하여 B2B 및 B2P 버전의 Real-Time Customer Platform에서 사람 기반 대상자부터 계정 기반 대상자까지 마케팅 세분화 경험의 편리함과 정교함을 완벽히 구현할 수 있습니다. 이 릴리스를 통해 사람 기반 대상자를 계정 기반 대상자에 대한 예측 기준으로 사용할 수 있고, 검색 기능을 추가하고, 사용자 정의 엔티티의 사용을 지원하며, 데이터 거버넌스를 준수할 수 있습니다. 이 기능에 대한 자세한 내용은 [계정 대상자 개요](../../segmentation/types/account-audiences.md)를 참조하십시오. |
 
 {style="table-layout:auto"}
 

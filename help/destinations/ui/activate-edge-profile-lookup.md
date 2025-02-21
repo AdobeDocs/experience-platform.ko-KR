@@ -2,13 +2,13 @@
 title: 실시간으로 에지 프로필 속성 조회
 description: 사용자 지정 Personalization 대상 및 Edge Network API를 사용하여 실시간으로 에지 프로필 속성을 조회하는 방법을 알아봅니다
 type: Tutorial
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
+source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 3%
 
 ---
-
 
 # 에지에서 실시간으로 프로필 속성 조회
 
@@ -27,14 +27,14 @@ Adobe Experience Platform은 [실시간 고객 프로필](../../profile/home.md)
 
 이 페이지에 설명된 사용 사례를 구성할 때는 다음 Platform 구성 요소를 사용합니다.
 
-* [데이터스트림](../../datastreams/overview.md): 데이터스트림은 Web SDK에서 들어오는 이벤트 데이터를 수신하고 Edge 프로필 데이터로 응답합니다.
+* [데이터스트림](../../datastreams/overview.md): 데이터스트림은 Web SDK에서 들어오는 이벤트 데이터를 수신하고 에지 프로필 데이터로 응답합니다.
 * [병합 정책](../../segmentation/ui/segment-builder.md#merge-policies): Edge 프로필에서 올바른 프로필 데이터를 사용하도록 [!UICONTROL Active-On-Edge] 병합 정책을 만듭니다.
-* [사용자 지정 Personalization 연결](../catalog/personalization/custom-personalization.md): 프로필 특성을 Edge Network에게 보내는 새 사용자 지정 개인화 연결을 구성합니다.
+* [사용자 지정 Personalization 연결](../catalog/personalization/custom-personalization.md): 프로필 특성을 Edge Network에 전송하는 새 사용자 지정 개인화 연결을 구성합니다.
 * [Edge Network API](../../server-api/overview.md): Edge Network API [대화형 데이터 수집](../../server-api/interactive-data-collection.md) 기능을 사용하여 Edge 프로필에서 프로필 특성을 빠르게 검색합니다.
 
 ## 성능 가드레일 {#guardrails}
 
-Edge 프로필 조회 사용 사례는 아래 표에 설명된 특정 성능 가드레일의 영향을 받습니다. Edge Network API 가드레일에 대한 자세한 내용은 가드레일 [설명서 페이지](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)를 참조하십시오.
+Edge 프로필 조회 사용 사례는 아래 표에 설명된 특정 성능 가드레일의 영향을 받습니다. Edge Network API 보호 기능에 대한 자세한 내용은 보호 기능 [설명서 페이지](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)를 참조하십시오.
 
 | Edge Network 서비스 | Edge 세그멘테이션 | 초당 요청 수 |
 |---------|----------|---------|
@@ -61,7 +61,7 @@ Edge 프로필 조회 사용 사례는 아래 표에 설명된 특정 성능 가
 
 Edge에서 프로필 속성을 조회하려면 Edge 평가를 위해 대상을 구성해야 합니다.
 
-활성화하려는 대상에 [Active-on-Edge 병합 정책](../../segmentation/ui/segment-builder.md#merge-policies)이(가) 기본값으로 설정되어 있는지 확인하십시오. [!DNL Active-On-Edge] 병합 정책을 사용하면 대상이 [Edge](../../segmentation/ui/edge-segmentation.md)에서 지속적으로 평가되고 실시간 개인화 사용 사례에 사용할 수 있습니다.
+활성화하려는 대상에 [Active-on-Edge 병합 정책](../../segmentation/ui/segment-builder.md#merge-policies)이(가) 기본값으로 설정되어 있는지 확인하십시오. [!DNL Active-On-Edge] 병합 정책을 사용하면 대상이 [Edge](../../segmentation/methods/edge-segmentation.md)에서 지속적으로 평가되고 실시간 개인화 사용 사례에 사용할 수 있습니다.
 
 [병합 정책 만들기](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)에 대한 지침을 따르고 **[!UICONTROL Active-On-Edge 병합 정책]** 전환을 사용하도록 설정해야 합니다.
 
@@ -71,7 +71,7 @@ Edge에서 프로필 속성을 조회하려면 Edge 평가를 위해 대상을 �
 
 ## 3단계: Edge Network에 프로필 속성 데이터 보내기{#configure-custom-personalization-connection}
 
-속성 및 대상 멤버십 데이터를 포함하여 에지 프로필을 실시간으로 조회하려면 Edge Network에서 데이터를 사용할 수 있어야 합니다. 이를 위해 속성이 있는 **[!UICONTROL 사용자 지정 Personalization]** 대상에 대한 연결을 만들고 Edge 프로필에서 조회할 특성을 포함하여 대상을 활성화해야 합니다.
+속성 및 대상 멤버십 데이터를 포함하여 에지 프로필을 실시간으로 조회하려면 Edge Network에서 데이터를 사용할 수 있도록 해야 합니다. 이를 위해 속성이 있는 **[!UICONTROL 사용자 지정 Personalization]** 대상에 대한 연결을 만들고 Edge 프로필에서 조회할 특성을 포함하여 대상을 활성화해야 합니다.
 
 +++ 특성 연결을 사용하여 사용자 지정 Personalization 구성
 
@@ -85,7 +85,7 @@ Edge에서 프로필 속성을 조회하려면 Edge 평가를 위해 대상을 �
 
 +++속성을 사용하여 사용자 지정 Personalization 연결에 대상 활성화
 
-**[!UICONTROL 특성이 있는 사용자 지정 Personalization]** 연결을 만든 후에는 이제 Edge Network에게 프로필 데이터를 보낼 준비가 되었습니다.
+특성이 있는 **[!UICONTROL 사용자 지정 Personalization]** 연결을 만든 후에는 이제 Edge Network에 프로필 데이터를 보낼 준비가 되었습니다.
 
 >[!IMPORTANT]
 > 
@@ -95,7 +95,7 @@ Edge에서 프로필 속성을 조회하려면 Edge 평가를 위해 대상을 �
 
 1. **[!UICONTROL 연결 > 대상]**(으)로 이동하여 **[!UICONTROL 카탈로그]** 탭을 선택합니다.
 
-   ![Experience Platform UI에서 강조 표시된 대상 카탈로그 탭.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
+   ![Experience Platform UI에서 강조 표시된 대상 카탈로그 탭](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
 1. **[!UICONTROL 특성이 있는 사용자 지정 Personalization]** 대상 카드를 찾은 다음 아래 그림과 같이 **[!UICONTROL 대상 활성화]**&#x200B;를 선택합니다.
 
@@ -111,7 +111,7 @@ Edge에서 프로필 속성을 조회하려면 Edge 평가를 위해 대상을 �
 
    * **[!UICONTROL 세그먼테이션 서비스]**: 세그먼테이션 서비스에 의해 Experience Platform 내에서 생성된 대상입니다. 자세한 내용은 [세그먼테이션 설명서](../../segmentation/ui/overview.md)를 참조하세요.
    * **[!UICONTROL 사용자 지정 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드되는 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/overview.md#import-audience)에 대한 설명서를 참조하십시오.
-   * [!DNL Audience Manager]과(와) 같은 다른 Adobe 솔루션에서 가져온 다른 유형의 대상입니다.
+   * 다른 Adobe 솔루션에서 가져온 다른 유형의 대상(예: [!DNL Audience Manager]).
 
      ![여러 대상이 강조 표시된 활성화 워크플로의 대상 선택 단계입니다.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
@@ -129,7 +129,7 @@ Edge에서 프로필 속성을 조회하려면 Edge 평가를 위해 대상을 �
 
 프로필 특성 매핑을 마치면 **[!UICONTROL 다음]**&#x200B;을(를) 선택합니다.
 
-**[!UICONTROL 검토]** 페이지에서 선택한 항목에 대한 요약을 볼 수 있습니다. 흐름을 중단하려면 **[!UICONTROL 취소]**&#x200B;를 선택하고, 설정을 수정하려면 **[!UICONTROL 뒤로]**&#x200B;를 선택하고, 선택을 확인하고 Edge Network 데이터를 프로필로 보내려면 **[!UICONTROL 완료]**&#x200B;를 선택하십시오.
+**[!UICONTROL 검토]** 페이지에서 선택한 항목에 대한 요약을 볼 수 있습니다. 흐름을 중단하려면 **[!UICONTROL 취소]**&#x200B;를 선택하고, 설정을 수정하려면 **[!UICONTROL 뒤로]**&#x200B;를 선택하고, 선택을 확인하고 Edge Network으로 프로필 데이터를 보내려면 **[!UICONTROL 완료]**&#x200B;를 선택하십시오.
 
 ![검토 단계의 선택 요약입니다.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
@@ -160,7 +160,7 @@ Edge에서 프로필 속성을 조회하려면 Edge 평가를 위해 대상을 �
 
 ## 4단계: 모서리에서 프로필 속성 조회 {#configure-edge-profile-lookup}
 
-이제 [데이터 스트림 구성](#create-datastream)을 완료하고 [특성 대상 연결이 있는 새 사용자 지정 Personalization을 만들었으며](#configure-destination), 이 연결을 사용하여 [Edge Network 특성을 보내기](#activate-audiences)합니다.
+이제 [데이터 스트림 구성](#create-datastream)을 완료하고 [특성 대상 연결이 있는 새 사용자 지정 Personalization을 만들었습니다](#configure-destination). 그리고 이 연결을 사용하여 [프로필 특성을 보냅니다](#activate-audiences). 그러면 Edge Network을 조회할 수 있습니다.
 
 다음 단계는 Edge 프로필에서 프로필 속성을 검색하도록 개인화 솔루션을 구성하는 것입니다.
 

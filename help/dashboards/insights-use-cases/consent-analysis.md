@@ -2,7 +2,7 @@
 title: 동의 분석 및 추적
 description: 사용자 동의가 시간 경과에 따라 어떻게 트렌드되는지 추적하기 위해 동의 분석 대시보드를 작성하는 방법을 알아봅니다.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 동의 분석 및 추적
 
-오늘날의 마케팅 환경에서는 고객 동의 환경 설정을 이해하고 존중해야 합니다. Adobe Real-time Customer Data Platform은 마케터가 고객 동의를 분석하여 신뢰를 구축하고, 개인 정보 보호 규정을 준수하며, 보다 개인화된 경험을 제공할 수 있는 기능을 제공합니다.
+오늘날의 마케팅 환경에서는 고객 동의 환경 설정을 이해하고 존중해야 합니다. Adobe Real-Time Customer Data Platform은 마케터가 고객 동의를 분석하여 신뢰를 구축하고, 개인 정보 보호 규정을 준수하며, 보다 개인화된 경험을 제공할 수 있는 기능을 제공합니다.
 
 이 문서에서는 Real-Time CDP 데이터에 대한 다양한 마케팅 사용 사례에 대한 동의 대시보드를 작성하는 방법에 대해 자세히 설명합니다. 특히 비즈니스 요구에 적합한 속성으로 대상자를 만든 다음 Adobe Experience Platform UI에서 사전 구성된 위젯을 사용하여 인사이트를 소비하는 방법에 중점을 둡니다. 사용자 정의 대시보드 기능을 사용하여 사용자 정의 위젯을 빌드하는 다른 방법도 제공됩니다.
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 동의한 대상자 만들기 {#create-consent-audiences}
 
-동의 대시보드를 작성하려면 먼저 연락하는 데 동의한 모든 프로필의 대상자를 만들어야 합니다. Real-time Customer Data Platform 세그먼트 빌더로 이동하려면 Platform UI의 왼쪽 탐색에서 **[!UICONTROL 대상]**&#x200B;을 선택합니다. [!UICONTROL 대상] 대시보드의 [!UICONTROL 고객] 탭에서 보기의 오른쪽 상단에 있는 **[!UICONTROL 대상 만들기]**&#x200B;를 선택한 다음 **[!UICONTROL 규칙 작성]**&#x200B;을 선택합니다.
+동의 대시보드를 작성하려면 먼저 연락하는 데 동의한 모든 프로필의 대상자를 만들어야 합니다. Real-Time Customer Data Platform 세그먼트 빌더로 이동하려면 Platform UI의 왼쪽 탐색에서 **[!UICONTROL 대상]**&#x200B;을 선택합니다. [!UICONTROL 대상] 대시보드의 [!UICONTROL 고객] 탭에서 보기의 오른쪽 상단에 있는 **[!UICONTROL 대상 만들기]**&#x200B;를 선택한 다음 **[!UICONTROL 규칙 작성]**&#x200B;을 선택합니다.
 
 [!UICONTROL 고객], [!UICONTROL 대상자] 및 [!UICONTROL 세그먼트 만들기]가 강조 표시된 [!UICONTROL 대상자] 대시보드.](../images/insights-use-cases/consent-analysis/create-audience.png)![
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 >
 >Adobe 권장 필드 그룹과 다른 속성에서 사용자 동의를 유지 관리한 경우 아래에 표시된 속성 대신 해당 속성을 선택해야 합니다.
 
-자세한 내용은 [세그먼테이션의 동의 처리](../../segmentation/consents.md#handling-consent-in-segmentation) 문서에서 확인할 수 있습니다.
+자세한 내용은 [세그먼테이션의 동의 처리](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation) 문서에서 확인할 수 있습니다.
 
 ![[!UICONTROL 동의 및 환경 설정] 특성 폴더가 강조 표시된 세그먼트 빌더입니다.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 ## 인사이트 사용 {#consume-insights}
 
-Adobe은 프로필, 대상 및 대상 대시보드에서 자동으로 사용할 수 있는 다양한 통찰력을 만들었습니다. 그러면 만든 모든 대상자는 사전 구성된 이러한 통찰력과 함께 자동으로 사용할 수 있습니다. [프로필](../guides/profiles.md#standard-widgets), [대상](../guides/audiences.md#standard-widgets) 및 [대상](../guides/destinations.md) 대시보드에서 사용할 수 있는 인사이트 목록은 표준 위젯 설명서를 참조하십시오.
+Adobe은 프로필, 대상 및 대상 대시보드에서 자동으로 사용할 수 있는 다양한 인사이트를 만들었습니다. 그러면 만든 모든 대상자는 사전 구성된 이러한 통찰력과 함께 자동으로 사용할 수 있습니다. [프로필](../guides/profiles.md#standard-widgets), [대상](../guides/audiences.md#standard-widgets) 및 [대상](../guides/destinations.md) 대시보드에서 사용할 수 있는 인사이트 목록은 표준 위젯 설명서를 참조하십시오.
 
 ## 대상자 오버랩 {#audience-overlap}
 
@@ -104,7 +104,7 @@ Adobe은 프로필, 대상 및 대상 대시보드에서 자동으로 사용할 
 
 ## 대상 개요 대시보드 {#audiences-overview-dashboard}
 
-&quot;SMS에 동의한 사용자&quot;와 같은 동의 관련 대상을 만든 후 대상 개요 대시보드에 적절한 위젯을 추가하여 대상에 대한 주요 개인화된 동의 정보를 볼 수 있습니다. [!UICONTROL 대상] [!UICONTROL 개요](으)로 이동하고 위젯 라이브러리에서 선택한 위젯을 추가합니다. 대시보드 보기에 추가된 모든 위젯의 크기를 조정하고 [!UICONTROL 대시보드 수정] 기능을 사용하여 이동할 수 있습니다. 개인화된 보기에는 시간 경과에 따른 트렌드(최대 12개월), 다른 대상과의 겹침, 대상자의 ID 구성과 같은 인사이트가 포함될 수 있습니다. 예제 보기가 아래에 표시되어 있습니다.
+&quot;SMS에 동의한 사용자&quot;와 같은 동의 관련 대상을 만든 후 대상 개요 대시보드에 적절한 위젯을 추가하여 대상에 대한 주요 개인화된 동의 정보를 볼 수 있습니다. [!UICONTROL 대상] [!UICONTROL 개요]&#x200B;(으)로 이동하고 위젯 라이브러리에서 선택한 위젯을 추가합니다. 대시보드 보기에 추가된 모든 위젯의 크기를 조정하고 [!UICONTROL 대시보드 수정] 기능을 사용하여 이동할 수 있습니다. 개인화된 보기에는 시간 경과에 따른 트렌드(최대 12개월), 다른 대상과의 겹침, 대상자의 ID 구성과 같은 인사이트가 포함될 수 있습니다. 예제 보기가 아래에 표시되어 있습니다.
 
 ![SMS 대상자에 동의하는 사용자가 있는 대상자 대시보드는 전역 대상자 드롭다운 메뉴에서 강조 표시됩니다.](../images/insights-use-cases/consent-analysis/audience-dashboard-user-consent-to-sms.png)
 
@@ -131,9 +131,9 @@ Adobe은 프로필, 대상 및 대상 대시보드에서 자동으로 사용할 
 - [!UICONTROL 특성]에서 `[!UICONTROL count_of_profiles]`을(를) 검색한 다음 + 아이콘을 사용하여 드롭다운 메뉴에서 Y축에 `[!UICONTROL count_of_profiles]` 특성을 추가합니다.
 - [!UICONTROL Y축] 필드에서 `...`(줄임표) 아이콘을 선택한 다음 드롭다운 메뉴에서 [!UICONTROL SUM] 집계 함수를 선택합니다.
   ![데이터 모델, 테이블, Y축 드롭다운 메뉴 및 SUM 기능이 강조 표시된 위젯 작성기 동의 트렌드 위젯입니다. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
-- [!UICONTROL 표시] 드롭다운 메뉴를 선택하고 차트 종류를 [!UICONTROL 줄](으)로 변경하십시오.
-- [!UICONTROL 특성]에서 `[!UICONTROL segment_name]`을(를) 검색한 다음 + 아이콘을 사용하여 드롭다운 메뉴에서 `segment_name`을(를) [!UICONTROL 필터](으)로 추가합니다. [!UICONTROL 필터: Segment_name] 대화 상자가 나타납니다. 동의와 관련하여 이전에 만든 대상자를 선택합니다. 이 예제에서는 **[!UICONTROL 통화에 동의한 사용자]**, **[!UICONTROL SMS에 동의한 사용자]**, **[!UICONTROL 전자 메일에 동의한 사용자]**, **[!UICONTROL 적용]**&#x200B;을 선택합니다.
-- `[!UICONTROL segment_name]`에 대해 [!UICONTROL 특성]을(를) 검색한 다음 + 아이콘을 선택하여 드롭다운 메뉴에서 `segment_name`을(를) [!UICONTROL 색상](으)로 추가합니다.
+- [!UICONTROL 표시] 드롭다운 메뉴를 선택하고 차트 종류를 [!UICONTROL 줄]&#x200B;(으)로 변경하십시오.
+- [!UICONTROL 특성]에서 `[!UICONTROL segment_name]`을(를) 검색한 다음 + 아이콘을 사용하여 드롭다운 메뉴에서 `segment_name`을(를) [!UICONTROL 필터]&#x200B;(으)로 추가합니다. [!UICONTROL 필터: Segment_name] 대화 상자가 나타납니다. 동의와 관련하여 이전에 만든 대상자를 선택합니다. 이 예제에서는 **[!UICONTROL 통화에 동의한 사용자]**, **[!UICONTROL SMS에 동의한 사용자]**, **[!UICONTROL 전자 메일에 동의한 사용자]**, **[!UICONTROL 적용]**&#x200B;을 선택합니다.
+- `[!UICONTROL segment_name]`에 대해 [!UICONTROL 특성]을(를) 검색한 다음 + 아이콘을 선택하여 드롭다운 메뉴에서 `segment_name`을(를) [!UICONTROL 색상]&#x200B;(으)로 추가합니다.
 - [[!UICONTROL 속성] 패널](../standard-dashboards.md#widget-properties)을 열고 적절한 [!UICONTROL 위젯 제목] 및 [!UICONTROL 축 레이블]을(를) 제공하세요.
   ![속성 아이콘과 위젯 제목이 강조 표시된 위젯 작성기입니다.](../images/standard-dashboards/properties-panel.png)
 - 설정을 확인하려면 **[!UICONTROL 저장 후 닫기]**&#x200B;를 선택하세요.
@@ -155,7 +155,7 @@ Adobe은 프로필, 대상 및 대상 대시보드에서 자동으로 사용할 
 
 >[!NOTE]
 >
->**Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield** 고객의 경우 이 대시보드가 **동의 정책의 추적을 반영하지 않습니다**. 사용 가능한 추적에는 생성 및 활성화된 정책의 수와 대상 멤버십에 미치는 영향이 포함됩니다.
+>**Adobe Healthcare Shield** 또는 **Adobe Privacy &amp; Security Shield**&#x200B;의 고객의 경우 이 대시보드가 **동의 정책의 추적을 반영하지 않습니다**. 사용 가능한 추적에는 생성 및 활성화된 정책의 수와 대상 멤버십에 미치는 영향이 포함됩니다.
 
 ## 다음 단계
 

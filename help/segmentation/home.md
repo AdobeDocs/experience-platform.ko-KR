@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 개요
 description: Adobe Experience Platform 세분화 서비스 및 플랫폼 생태계에서 수행하는 역할에 대해 알아봅니다.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1665'
 ht-degree: 13%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform [!DNL Segmentation Service]에서는 [!DNL Real-Time C
 
 세그먼테이션은 프로필 하위 집합이 공유하는 특정 속성 또는 동작을 프로필 스토어와 정의하여 마케팅 가능한 사용자 그룹과 고객 기반을 구분하는 프로세스입니다. 예를 들어 &quot;운동화 구입하는 것을 잊었습니까?&quot;라는 이메일 캠페인에서 지난 30일 내에 운동화를 찾았지만 구입을 완료하지 않은 모든 사용자를 대상으로 할 수 있습니다.
 
-대상자가 개념적으로 정의되면 [!DNL Experience Platform]에 작성됩니다. 일반적으로 대상자는 마케터 또는 대상 전문가가 구축하지만, 일부 조직에서는 마케팅 부서가 데이터 분석가와 공동 작업을 통해 대상자를 생성하는 것을 선호합니다. [!DNL Platform](으)로 전송되는 데이터를 검토할 때 데이터 분석가는 대상자의 규칙이나 조건을 작성하는 데 사용할 필드와 값을 선택하여 세그먼트 정의를 만들거나 대상 구성을 사용하여 대상을 구성하여 두 가지 방법으로 대상을 만들 수 있습니다.
+대상자가 개념적으로 정의되면 [!DNL Experience Platform]에 작성됩니다. 일반적으로 대상자는 마케터 또는 대상 전문가가 구축하지만, 일부 조직에서는 마케팅 부서가 데이터 분석가와 공동 작업을 통해 대상자를 생성하는 것을 선호합니다. [!DNL Platform]&#x200B;(으)로 전송되는 데이터를 검토할 때 데이터 분석가는 대상자의 규칙이나 조건을 작성하는 데 사용할 필드와 값을 선택하여 세그먼트 정의를 만들거나 대상 구성을 사용하여 대상을 구성하여 두 가지 방법으로 대상을 만들 수 있습니다.
 
 ## 대상자 만들기
 
@@ -40,15 +40,15 @@ Adobe Experience Platform [!DNL Segmentation Service]에서는 [!DNL Real-Time C
 
 ### 세그먼트 정의
 
-API를 사용하여 생성하든 [!DNL Segment Builder]을(를) 사용하여 생성하든 세그먼트 정의는 궁극적으로 [!DNL Profile Query Language](PQL)을 사용하여 정의됩니다. 여기에서 개념 세그먼트 정의가 기준을 충족하는 프로필을 검색하도록 빌드된 언어로 설명됩니다. 자세한 내용은 [PQL 개요](./pql/overview.md)를 참조하세요.
+API를 사용하여 생성하든 [!DNL Segment Builder]을(를) 사용하여 생성하든 세그먼트 정의는 궁극적으로 [!DNL Profile Query Language]&#x200B;(PQL)을 사용하여 정의됩니다. 여기에서 개념 세그먼트 정의가 기준을 충족하는 프로필을 검색하도록 빌드된 언어로 설명됩니다. 자세한 내용은 [PQL 개요](./pql/overview.md)를 참조하세요.
 
-[!DNL Segment Builder]([!DNL Segmentation Service]의 UI 구현)에서 세그먼트를 만들고 사용하는 방법에 대한 자세한 내용은 [세그먼트 빌더 안내서](./ui/segment-builder.md)를 참조하세요.
+[!DNL Segment Builder]&#x200B;([!DNL Segmentation Service]의 UI 구현)에서 세그먼트를 만들고 사용하는 방법에 대한 자세한 내용은 [세그먼트 빌더 안내서](./ui/segment-builder.md)를 참조하세요.
 
 API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세한 내용은 [API를 사용하여 세그먼트 정의 만들기](./tutorials/create-a-segment.md)에 대한 자습서를 참조하십시오.
 
 >[!NOTE]
 >
->스키마가 확장되는 경우 모든 향후 업로드는 그에 따라 새로 추가된 필드를 업데이트해야 합니다. [!DNL Experience Data Model](XDM) 사용자 지정에 대한 자세한 내용은 [스키마 편집기 튜토리얼](../xdm/tutorials/create-schema-ui.md)을(를) 참조하십시오.
+>스키마가 확장되는 경우 모든 향후 업로드는 그에 따라 새로 추가된 필드를 업데이트해야 합니다. [!DNL Experience Data Model]&#x200B;(XDM) 사용자 지정에 대한 자세한 내용은 [스키마 편집기 튜토리얼](../xdm/tutorials/create-schema-ui.md)을(를) 참조하십시오.
 >
 >또한 데이터 세트에서 경험 이벤트 만료 값이 활성화되면 생성된 세그먼트 정의의 멤버십에 영향을 줄 수 있습니다. 이 기능이 세분화에 미치는 영향에 대한 자세한 내용은 [경험 이벤트 만료](../profile/event-expirations.md)에 대한 안내서를 참조하십시오.
 
@@ -67,15 +67,14 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >id="platform_segments_evaluation_streaming"
 >title="스트리밍 평가"
 >abstract="스트리밍 세분화는 사용자 활동에 대응하여 대상자를 업데이트하는 진행형 데이터 선택 프로세스입니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=ko" text="스트리밍 세분화를 통해 거의 실시간으로 이벤트 평가"
 
 현재 Platform은 대상자를 평가하는 세 가지 방식(스트리밍 세분화, 배치 세분화, 에지 세분화)을 지원합니다.
 
 ### 스트리밍 세분화 {#streaming}
 
-스트리밍 세분화는 사용자 활동에 대응하여 대상자를 업데이트하는 진행형 데이터 선택 프로세스입니다. 대상을 빌드하고 저장하면 [!DNL Real-Time Customer Profile](으)로 들어오는 데이터에 대해 세그먼트 정의가 적용됩니다. 대상에 대한 추가 및 제거는 정기적으로 처리되므로 대상 대상의 관련성이 유지됩니다.
+스트리밍 세분화는 사용자 활동에 대응하여 대상자를 업데이트하는 진행형 데이터 선택 프로세스입니다. 대상을 빌드하고 저장하면 [!DNL Real-Time Customer Profile]&#x200B;(으)로 들어오는 데이터에 대해 세그먼트 정의가 적용됩니다. 대상에 대한 추가 및 제거는 정기적으로 처리되므로 대상 대상의 관련성이 유지됩니다.
 
-스트리밍 세분화에 대한 자세한 내용은 [스트리밍 세분화 설명서](./api/streaming-segmentation.md)를 참조하세요.
+스트리밍 세분화에 대한 자세한 내용은 [스트리밍 세분화 설명서](./methods/streaming-segmentation.md)를 참조하세요.
 
 ### 배치 세분화 {#batch}
 
@@ -94,11 +93,10 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >id="platform_segments_evaluation_edge"
 >title="에지 평가"
 >abstract="에지 세분화는 Edge Network에서 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지의 개인화 사용 사례를 활성화하는 기능입니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=ko" text="에지 세분화 UI 안내서"
 
-Edge 세그멘테이션은 Edge Network에서 [즉시 ](../web-sdk/home.md)플랫폼의 세그먼트를 평가하는 기능으로, 동일한 페이지와 다음 페이지 개인화 사용 사례를 활성화합니다.
+Edge 세그멘테이션은 Edge Network](../landing/edge-and-hub-comparison.md)에서 플랫폼의 세그먼트를 즉시 [평가하는 기능으로, 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
 
-Edge 세그멘테이션에 대한 자세한 내용은 [API 설명서](./api/edge-segmentation.md) 또는 [UI 설명서](./ui/edge-segmentation.md)를 참조하십시오.
+Edge 세그멘테이션에 대한 자세한 내용은 [API 설명서](./methods/edge-segmentation.md) 또는 [UI 설명서](./methods/edge-segmentation.md)를 참조하십시오.
 
 ## 세그먼테이션 결과 액세스
 
@@ -165,7 +163,7 @@ API 또는 [!DNL Segment Builder]을(를) 통해 세그먼트 정의를 작성�
 
 ### 다중 엔티티 세그멘테이션 {#multi-entity}
 
-고급 다중 엔터티 세분화 기능을 사용하면 제품, 스토어 또는 &quot;차원&quot; 엔터티라고도 하는 기타 비사용자를 기반으로 하는 추가 데이터로 [!DNL Real-Time Customer Profile] 데이터를 확장할 수 있습니다. 따라서 [!DNL Segmentation Service]은(는) [!DNL Profile] 데이터 저장소의 기본인 것처럼 세그먼트 정의 중에 추가 필드에 액세스할 수 있습니다. 다중 엔티티 세그먼테이션은 고유한 비즈니스 요구 사항과 관련된 데이터를 기반으로 대상자를 식별할 때 유연성을 제공합니다. 사용 사례 및 워크플로와 같은 자세한 내용은 [다중 엔터티 세분화 가이드](multi-entity-segmentation.md)를 참조하세요.
+고급 다중 엔터티 세분화 기능을 사용하면 제품, 스토어 또는 &quot;차원&quot; 엔터티라고도 하는 기타 비사용자를 기반으로 하는 추가 데이터로 [!DNL Real-Time Customer Profile] 데이터를 확장할 수 있습니다. 따라서 [!DNL Segmentation Service]은(는) [!DNL Profile] 데이터 저장소의 기본인 것처럼 세그먼트 정의 중에 추가 필드에 액세스할 수 있습니다. 다중 엔티티 세그먼테이션은 고유한 비즈니스 요구 사항과 관련된 데이터를 기반으로 대상자를 식별할 때 유연성을 제공합니다. 사용 사례 및 워크플로와 같은 자세한 내용은 [다중 엔터티 세분화 가이드](./tutorials/multi-entity-segmentation.md)를 참조하세요.
 
 ## [!DNL Segmentation Service] 데이터 형식
 

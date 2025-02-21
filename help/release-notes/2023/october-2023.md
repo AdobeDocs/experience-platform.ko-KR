@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2023년 10월
 description: Adobe Experience Platform의 2023년 10월 릴리스 정보입니다.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 39%
@@ -11,7 +11,7 @@ ht-degree: 39%
 
 # Adobe Experience Platform 릴리스 정보
 
-**릴리스 날짜: 2023년 10월 25일**
+**릴리스 일자: 2023년 10월 25일 목요일**
 
 Experience Platform의 기존 기능 업데이트:
 
@@ -44,8 +44,8 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 유형 | 기능 | 설명 |
 | --- | --- | --- |
-| 확장 | [!DNL Meta] 전환 API 개선 사항 | [메타 전환 API](/help/tags/extensions/server/meta/overview.md) 확장에 대한 세 가지 개선 사항이 있습니다. <ul><li>[[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe)과(와) 통합: Conversions API와 Adobe 통합을 위해 PixelID와 액세스 토큰을 공유할 수 있도록 함으로써 원활한 로그인 환경을 만듭니다.</li><li>[[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq)과(와) 통합: 원하는 작업을 완료할 가능성이 높은 사람에게 광고를 게재하고 작업을 게재된 광고에 다시 연결할 수 있습니다.</li><li>[[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha)과(와) 통합: CIP 필드에 LiveRamp의 RampID를 전달할 수 있으므로 파트너 또는 메타와 직접 PII를 공유할 필요가 없습니다. </li></ul> |
-| 확장 | [!DNL LinkedIn] 전환 API | [[!DNL LinkedIn] 전환 API](../../tags/extensions/server/linkedin/overview.md) 확장을 사용하면 Experience Platform 이벤트 데이터를 LinkedIn에 전달하여 LinkedIn 마케팅 캠페인의 효과를 평가할 수 있습니다. |
+| 확장 | [!DNL Meta] 전환 API 개선 사항 | [메타 전환 API](/help/tags/extensions/server/meta/overview.md) 확장에 대한 세 가지 개선 사항이 있습니다. <ul><li>[[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe)과(와) 통합: Adobe과의 전환 API 통합을 위해 pixelID 및 액세스 토큰을 공유할 수 있도록 하여 원활한 로그인 환경을 만듭니다.</li><li>[[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq)과(와) 통합: 원하는 작업을 완료할 가능성이 높은 사람에게 광고를 게재하고 작업을 게재된 광고에 다시 연결할 수 있습니다.</li><li>[[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha)과(와) 통합: CIP 필드에 LiveRamp의 RampID를 전달할 수 있으므로 파트너 또는 메타와 직접 PII를 공유할 필요가 없습니다. </li></ul> |
+| 확장 | [!DNL LinkedIn] 전환 API | [[!DNL LinkedIn] 전환 API](../../tags/extensions/server/linkedin/overview.md) 확장을 사용하면 Experience Platform 이벤트 데이터를 LinkedIn으로 전달하여 LinkedIn 마케팅 캠페인의 효과를 평가할 수 있습니다. |
 | Secret | [!DNL LinkedIn] OAuth 2 암호 | [[!DNL LinkedIn] OAuth 2 암호](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2)를 사용하면 이벤트 전달 시 서버-서버 상호 작용을 [!DNL LinkedIn]에 보낼 수 있습니다. |
 | 이벤트 전달 | 태그 및 이벤트 전달 업데이트 | 플랫폼에서 [Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) 및 [Event Forwarding](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) 성능을 유지하기 위해 성공하거나 실패한 가장 최근 개발 및 단계 빌드만 유지됩니다. 더 이상 사용되지 않는 모든 빌드는 제거됩니다. 또한 제한과 속도 제한은 API를 많이 사용하는 몇 가지가 다른 사용자의 API 성능을 저하시키지 않도록 구현되었습니다. |
 | 확장 | 요소, 규칙 및 확장 | [요소, 규칙 및 확장](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html)이(가) 이제 라이브러리 출력에서 정렬되어 동일한 라이브러리의 여러 빌드와 배포 간에 더 일관성을 유지할 수 있습니다. |
@@ -54,7 +54,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 ## 대상 {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 대상 또는 업데이트된 대상** {#new-updated-destinations}
 
@@ -70,7 +70,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 | 기능 | 설명 |
 | ----------- | ----------- |
 | (Beta) 계산된 필드에서 함수 해싱 지원 | 이제 [배열 내보내기](../../destinations/ui/export-arrays-calculated-fields.md) 또는 배열에서 요소에 대한 특정 함수 외에 추가 [해시 함수](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions)를 사용하여 내보낸 파일의 특성을 해시할 수 있습니다. 지원되는 해시 함수는 `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`입니다. |
-| (제한된 GA) 특정 대상에 대해 계정 대상자 활성화 | Real-Time CDP B2B 고객은 이제 특정 대상에 대해 [계정 대상자](../../segmentation/ui/account-audiences.md)를 활성화할 수 있습니다. 이 기능에 대한 자세한 내용은 [계정 대상자 활성화 자습서](/help/destinations/ui/activate-account-audiences.md)를 참조하십시오. |
+| (제한된 GA) 특정 대상에 대해 계정 대상자 활성화 | Real-Time CDP B2B 고객은 이제 특정 대상에 대해 [계정 대상자](../../segmentation/types/account-audiences.md)를 활성화할 수 있습니다. 이 기능에 대한 자세한 내용은 [계정 대상자 활성화 자습서](/help/destinations/ui/activate-account-audiences.md)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Adobe Experience Platform은 전 세계적으로 디지털 체험 애플리케�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 계정 대상자 (제한된 GA) | 이제 Real-time Customer Data Platform B2B edition에서 계정 세분화를 사용하여 사람 기반 대상에서 계정 기반 대상으로의 마케팅 세분화 경험을 전체적으로 쉽고 정교하게 할 수 있습니다. 이 기능에 대한 자세한 내용은 [계정 대상자 개요](../../segmentation/ui/account-audiences.md)를 참조하십시오. |
+| 계정 대상자 (제한된 GA) | 이제 Real-Time Customer Data Platform B2B edition에서 계정 세분화를 사용하여 사람 기반 대상에서 계정 기반 대상으로의 마케팅 세분화 경험을 전체적으로 쉽고 정교하게 할 수 있습니다. 이 기능에 대한 자세한 내용은 [계정 대상자 개요](../../segmentation/types/account-audiences.md)를 참조하십시오. |
 
 세분화 서비스에 대한 자세한 내용은 [세분화 서비스 개요](../../segmentation/home.md)를 참조하세요.
 

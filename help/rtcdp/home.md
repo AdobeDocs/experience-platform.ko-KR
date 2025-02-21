@@ -4,16 +4,16 @@ description: Adobe Real-Time CDP을 시작하고 가 제공하는 다양한 기�
 solution: Real-Time Customer Data Platform
 product: Real Time CDP
 exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
-source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1175'
-ht-degree: 3%
+ht-degree: 15%
 
 ---
 
 # Adobe [!DNL Real-Time CDP] 설명서 {#rtcdp-documentation}
 
-모든 채널 및 디바이스에서 실시간으로 개인화된 고객 경험을 제공하는 데 사용할 수 있는 고객 프로필을 만들기 위해 Adobe Real-time Customer Data Platform(Real-Time CDP)를 사용하여 여러 엔터프라이즈 소스로부터의 알려진 데이터와 익명 데이터를 통합합니다. 자세한 내용은 [Real-Time CDP 개요](/help/rtcdp/overview.md)를 참조하십시오.
+모든 채널 및 디바이스에서 실시간으로 개인화된 고객 경험을 제공하는 데 사용할 수 있는 고객 프로필을 만들기 위해 Adobe Real-Time Customer Data Platform(Real-Time CDP)를 사용하여 여러 엔터프라이즈 소스로부터의 알려진 데이터와 익명 데이터를 통합합니다. 자세한 내용은 [Real-Time CDP 개요](/help/rtcdp/overview.md)를 참조하십시오.
 
 ## 새로운 기능 {#whats-new}
 
@@ -21,15 +21,15 @@ Real-Time CDP 제품 및 설명서의 최신 개선 사항을 살펴보십시오
 
 >[!BEGINTABS]
 
->[!TAB 페더레이션 대상 구성]
+>[!TAB 페더레이션된 대상자 구성]
 
-Federated Audience Composition을 통해 기업은 다양한 사용 사례에서 더 나은 애플리케이션을 위해 데이터를 구성할 수 있습니다. Adobe Real-time Customer Data Platform 및/또는 Adobe Journey Optimizer 사용자는 이 새로운 접근 방식을 통해 기존 데이터 웨어하우스에서 직접 데이터 세트를 페더레이션하여 하나의 시스템에 Adobe Experience Platform 대상 및 속성을 모두 만들고 보강할 수 있습니다.
+페더레이션된 대상자 구성을 통해 기업은 다양한 사용 사례에서 데이터를 더 잘 적용할 수 있습니다. 이 새로운 접근 방식을 사용하면 Adobe Real-Time CDP 및/또는 Adobe Journey Optimizer 사용자로서 기존 데이터 웨어하우스에서 직접 데이터 세트를 페더레이션하여 Adobe Experience Platform 대상자와 속성을 모두 하나의 시스템에 만들고 강화할 수 있습니다.
 
 [![이미지](assets/do-not-localize/learn-more-button.svg)](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/home)
 
 >[!TAB 사용 사례 플레이북]
 
-이제 모든 Real-Time CDP 및 Adobe Journey Optimizer 고객이 [!UICONTROL 사용 사례 플레이북] 기능을 일반적으로 사용할 수 있습니다. [!UICONTROL 사용 사례 플레이북]은(는) Real-time Customer Data Platform 또는 Adobe Journey Optimizer으로 시작할 때 사용자가 문제를 해결하는 데 도움이 되도록 설계되었습니다. 어디서부터 시작할지 또는 원하는 사용 사례에 적합한 에셋을 제작하는 방법을 잘 모를 때 사용 사례 플레이북을 통해 영감을 얻고 다른 에셋을 제작하여 준비가 되면 프로덕션 환경에 테스트하고 가져올 수 있습니다.
+이제 모든 Real-Time CDP 및 Adobe Journey Optimizer 고객이 [!UICONTROL 사용 사례 플레이북] 기능을 사용할 수 있습니다. [!UICONTROL 사용 사례 플레이북]은 Real-Time CDP 또는 Adobe Journey Optimizer로 시작할 때 사용자가 겪을 수 있는 어려움을 극복할 수 있도록 지원하게 설계되었습니다. 어디서부터 시작해야 할지, 원하는 사용 사례에 적합한 자산을 어떻게 생성해야 할지 불분명한 경우, 사용 사례 플레이북이 영감을 제공하고 테스트할 수 있는 다양한 자산을 만들어 준비가 되면 프로덕션 환경으로 가져올 수 있도록 도와줍니다.
 
 [![이미지](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
 
@@ -47,7 +47,7 @@ Federated Audience Composition을 통해 기업은 다양한 사용 사례에서
 
 >[!TAB 데이터 내보내기]
 
-이제 데이터 세트 내보내기 기능을 일반적으로 사용할 수 있습니다. [구매한 Experience Platform 앱을 기반으로 내보낼 수 있는 데이터 세트](../destinations/ui/export-datasets.md#datasets-to-export)를 확인하고, [데이터 세트 내보내기 보호](/help/destinations/guardrails.md#dataset-exports)를 확인하십시오.
+이제 데이터 세트 내보내기 기능을 일반적으로 사용할 수 있습니다. 구입한 Experience Platform 앱을 기반으로 내보낼 수 있는 [데이터 세트](../destinations/ui/export-datasets.md#datasets-to-export)를 확인하고 데이터 세트 내보내기 [보호 기능](/help/destinations/guardrails.md#dataset-exports)을 확인하세요.
 
 [![이미지](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
 
@@ -136,7 +136,7 @@ Adobe Real-Time CDP의 4가지 핵심 축이 엔터프라이즈 사용 사례를
     </td>
     <td>
       <img src="assets/do-not-localize/icon-cloud.svg" width="35px"><br/>
-      <strong>클라우드 및 AI/ML 기능</strong><br/>AI 및 ML 기능은 여러 대시보드의 모든 단계에서 사용자를 지원합니다. 일부 강조점은 아래 영역을 포함합니다. <br/> <a href="/help/segmentation/ui/lookalike-audiences.md">유사 대상</a> - <a href="/help/rtcdp/segmentation/customer-ai.md">고객 AI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md">관련 계정</a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md">예측 리드 및 계정 점수</a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md">리드-계정 일치</a>
+      <strong>클라우드 및 AI/ML 기능</strong><br/>AI 및 ML 기능은 여러 대시보드의 모든 단계에서 사용자를 지원합니다. 일부 강조점은 아래 영역을 포함합니다. <br/> <a href="/help/segmentation/types/account-audiences.md">유사 대상</a> - <a href="/help/rtcdp/segmentation/customer-ai.md">고객 AI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md">관련 계정</a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md">예측 리드 및 계정 점수</a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md">리드-계정 일치</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-learn.svg" width="35px"><br/>
@@ -144,7 +144,7 @@ Adobe Real-Time CDP의 4가지 핵심 축이 엔터프라이즈 사용 사례를
     </td>
     <td>
       <img src="assets/do-not-localize/icon-code.svg" width="35px"><br/>
-      <strong>개발자</strong><br/>Real-Time CDP에서 제공하는 다양한 API 및 SDK를 사용하여 데이터 수집을 설정하고 프로필을 관리하며 대상자를 만드는 등의 작업을 수행합니다. <br/><a href="/help/landing/api-authentication.md">API 인증 및 시작</a> - <a href="https://developer.adobe.com/experience-platform-apis/">전체 API 참조</a> - <a href="/help/destinations/destination-sdk/overview.md">Destination SDK</a> - <a href="/help/sources/sources-sdk/overview.md">소스 SDK</a> - <a href="https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/">Mobile SDK</a>
+      <strong>개발자</strong><br/>Real-Time CDP에서 제공하는 다양한 API 및 SDK를 사용하여 데이터 수집을 설정하고 프로필을 관리하며 대상자를 만드는 등의 작업을 수행합니다. <br/><a href="/help/landing/api-authentication.md">API 인증 및 시작</a> - <a href="https://developer.adobe.com/experience-platform-apis/">전체 API 참조</a> - <a href="/help/destinations/destination-sdk/overview.md">Destination SDK</a> - <a href="/help/sources/sources-sdk/overview.md">소스 SDK</a> - <a href="https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/">모바일 SDK</a>
     </td>
   </tr>
 </table>
@@ -203,12 +203,12 @@ Adobe Real-Time CDP의 4가지 핵심 축이 엔터프라이즈 사용 사례를
 
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=en" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">제품 설명 Real-Time CDP B2C 에디션</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B 에디션</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B 에디션</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">보안 개요(PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=ko-KR" target="_blank">구현 블루프린트</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html" target="_blank">용어집</a>
+<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=en" target="_blank">자습서</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">제품 설명 Real-Time CDP B2C 에디션</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">보안 개요(PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=ko-KR" target="_blank">구현 블루프린트</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html" target="_blank">용어집</a>
 </td>
 <td><strong>Adobe Experience Platform</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=ko" target="_blank">설명서</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API 참조 - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank">과정: Experience Platform 소개</a></a>
+<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=ko" target="_blank">설명서</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API 참조 - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank">강의: Experience Platform 소개</a></a>
 </td>
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>최신 정보를 얻고, 커뮤니티에 기여하고, Adobe Real-Time CDP 환경을 개선하세요!</b><br/>Real-time Customer Data Platform 커뮤니티에서 동료 실무자와 기능을 논의하십시오. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">지금 커뮤니티에 가입하세요!</a></td></tr></table>
+<b>최신 정보를 얻고, 커뮤니티에 기여하고, Adobe Real-Time CDP 환경을 개선하세요!</b><br/>Real-Time Customer Data Platform 커뮤니티에서 동료 실무자와 기능을 논의하십시오. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">지금 커뮤니티에 가입하세요!</a></td></tr></table>

@@ -3,7 +3,7 @@ title: 서드파티 쿠키에 의존하지 않고 새로운 고객 참여 및 �
 description: 서드파티 쿠키에 의존하지 않고 잠재 고객 발굴 사용 사례를 통해 신규 고객을 유치하고 확보하는 방법을 알아봅니다.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 85%
@@ -14,7 +14,7 @@ ht-degree: 85%
 
 >[!AVAILABILITY]
 >
->* 이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate에 라이선스를 부여한 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
+>* 이 기능은 Real-Time CDP(앱 서비스), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate 라이선스가 있는 고객이 사용할 수 있습니다. 이 패키지에 대한 자세한 내용은 [제품 설명](https://helpx.adobe.com/legal/product-descriptions.html)을 참조하고 Adobe 담당자에게 문의하십시오.
 
 Real-Time CDP에서 서드파티 데이터 지원을 사용하여 데이터 파트너의 잠재 고객 프로필로 프로필 기반을 확장하고 데이터 파트너와 협력하여 신규 고객에게 도달하거나 확보할 수 있습니다.
 
@@ -24,7 +24,7 @@ Real-Time CDP에서 서드파티 데이터 지원을 사용하여 데이터 파�
 
 브랜드는 서드파티 쿠키에 의존하지 않고, 제한된 예산, 투명성 및 광고 지출 수익률에 대한 높은 요구 없이 단계별로 최고의 고객 확보 사용 사례를 책임감 있게 실행하는 어려운 문제에 동시에 직면하고 있습니다.
 
-Adobe Real-time Customer Data Platform은 브랜드가 DMP(데이터 관리 플랫폼)에서 지원하는 사용 사례를 쿠키 없는 대안으로 안전하게 전환하고 셀프서비스 세분화, 대상자 큐레이션 및 활성화를 완전히 정교화하고 강력하게 단일 시스템으로 구현하는 방식으로 수행할 수 있도록 지원할 수 있습니다. 특허 받은 데이터 거버넌스 및 동의 프레임워크를 통해 책임감 있는 데이터 사용에 대한 Adobe의 확고한 초점은 그대로 유지합니다.
+Adobe Real-Time Customer Data Platform은 브랜드가 데이터 관리 플랫폼(DMP)에서 지원하는 사용 사례를 쿠키 없는 대안으로 안전하게 전환하고 셀프서비스 세분화, 대상 큐레이션 및 활성화를 통한 전체 정교화와 기능을 단일 시스템으로 전달하는 방식으로 수행할 수 있도록 지원합니다. 특허 받은 데이터 거버넌스 및 동의 프레임워크를 통해 책임감 있는 데이터 사용에 대한 Adobe의 확고한 초점은 그대로 유지됩니다.
 
 예를 들어 잠재 고객을 사용자 또는 알려진 고객으로 끌어들이기 위해 캠페인을 실행해야 하는 경우 이 사용 사례에 설명된 단계를 따릅니다.
 
@@ -71,7 +71,7 @@ Adobe Real-time Customer Data Platform은 브랜드가 DMP(데이터 관리 플�
 * [데이터 세트](/help/catalog/datasets/overview.md)
 * [소스](/help/sources/home.md)
 * [잠재 고객 프로필](/help/profile/ui/prospect-profile.md)
-* [잠재 고객 대상자](/help/segmentation/ui/prospect-audience.md)
+* [잠재 고객 대상자](/help/segmentation/types/prospect-audiences.md)
 * [대상](/help/destinations/home.md)
 
 ### 파트너의 라이선스 서드파티 프로필 세부 정보 {#license-profiles-from-partner}
@@ -213,7 +213,7 @@ Real-Time CDP의 세분화 기능을 사용하여 잠재 고객 프로필에서 
 * 배치 프로필 평가 전용
 * 시계열 이벤트를 기반으로 하는 대상자 구축 지원 안 함
 
-[잠재 고객](/help/segmentation/ui/prospect-audience.md)에 대해 자세히 알아보세요.
+[잠재 고객](/help/segmentation/types/prospect-audiences.md)에 대해 자세히 알아보세요.
 
 ### 잠재 고객 프로필을 대상으로 활성화 {#activate-to-destinations}
 
