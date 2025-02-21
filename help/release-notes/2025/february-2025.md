@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2025년 2월
 description: Adobe Experience Platform의 2025년 2월 릴리스 정보.
-source-git-commit: b29c63942b00fdf597ebfd3ab105519a6b05a476
+source-git-commit: 8786ac8ab42d2b9e0c43000bbc6604462ea06f64
 workflow-type: tm+mt
-source-wordcount: '1378'
-ht-degree: 21%
+source-wordcount: '1481'
+ht-degree: 20%
 
 ---
 
@@ -73,7 +73,7 @@ Adobe Experience Platform의 AI 어시스턴트는 Adobe 애플리케이션에�
 
 자세한 내용은 [데이터 준비 개요](../../data-prep/home.md)를 참조하십시오.
 
-## 대상 {#destinations}
+## 대상(업데이트 날짜: 2월 20일) {#destinations}
 
 [!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
@@ -96,6 +96,7 @@ Adobe Experience Platform의 AI 어시스턴트는 Adobe 애플리케이션에�
 | 액세스 레이블을 사용하여 대상 데이터 흐름에 대한 사용자 액세스 관리 | 이제 Real-Time CDP의 [[!UICONTROL 특성 기반 액세스 제어]](/help/access-control/abac/overview.md) 기능의 일부로 [대상 데이터 흐름](/help/dataflows/ui/monitor-destinations.md)에 액세스 레이블을 적용할 수 있습니다. 이렇게 하면 조직의 일부 사용자만 특정 대상 데이터 흐름에 액세스할 수 있습니다. <br> **중요**: Experience Platform 사용자 인터페이스 상단의 검색 상자를 사용하여 대상 데이터 흐름을 검색할 때 사용자 액세스 레이블에서 볼 수 없도록 제한하는 대상 데이터 흐름이 결과에 포함될 수 있습니다. 이 동작은 향후 업데이트에서 수정될 예정입니다. |
 | [Marketo Engage 연결](/help/destinations/catalog/adobe/marketo-engage.md)에 대한 [대상 수준 보고](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) | 이제 이 대상의 데이터 흐름에 속하는 각 대상에 대해 대상 수준에서 분류된 활성화, 제외 또는 실패한 ID에 대한 정보를 [볼 수 있습니다](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations). |
 | [TikTok](/help/destinations/catalog/social/tiktok.md) 및 [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) 연결에 대한 외부 대상 지원 | [사용자 지정 업로드](../../segmentation/ui/audience-portal.md#import-audience) 및 [통합 대상 구성](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences)에서 이러한 대상에 대해 외부 대상을 활성화할 수 있습니다. |
+| 배열, 맵 및 개체를 클라우드 스토리지 대상으로 내보내기 | 클라우드 저장소 대상에 연결할 때 새로운 **[!UICONTROL 배열 내보내기, 맵, 개체]** 전환을 사용하면 복잡한 개체를 새로 내보내 대상을 선택할 수 있습니다. 기능에 대해 [자세히 알아보십시오](/help/destinations/ui/export-arrays-calculated-fields.md). |
 
 {style="table-layout:auto"}
 
@@ -103,6 +104,10 @@ Adobe Experience Platform의 AI 어시스턴트는 Adobe 애플리케이션에�
 
 - Destination SDK 테스트 도구의 문제가 수정되었습니다. 프로필 생성에 사용된 스키마에 `No format` 선택기가 있는 데이터 형식이 포함된 경우 지원되지 않는 형식으로 인해 일부 고객 또는 파트너에서 [샘플 프로필 생성 도구](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)에 문제가 발생했습니다.
 - 흐름 서비스 API를 사용하여 대상의 `targetConnection` 사양을 업데이트할 때 발생하는 문제가 해결되었습니다. 경우에 따라 PATCH 작업이 POST 작업과 유사하게 동작하여 기존 데이터 흐름이 손상됩니다. 이제 이 문제가 해결되었으며 모든 고객은 흐름 서비스 API를 사용하여 `targetConnection` 사양을 업데이트할 수 있습니다. [자세히 보기](/help/destinations/api/edit-destination.md#patch-target-connection).
+- 프로필을 파일 기반 대상으로 내보낼 때 중복 제거를 사용하면 여러 프로필에서 동일한 중복 제거 키와 동일한 참조 타임스탬프를 공유할 때 하나의 프로필만 내보내집니다. 이 릴리스에는 중복 제거 프로세스에 대한 업데이트가 포함되어 있으므로 동일한 좌표를 가진 후속 실행에서 항상 동일한 결과를 생성하여 일관성이 향상됩니다. [자세히 보기](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
+
+자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
+
 
 ## 소스 {#sources}
 

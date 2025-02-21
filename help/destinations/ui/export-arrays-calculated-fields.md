@@ -1,42 +1,38 @@
 ---
-title: Real-Time CDP에서 클라우드 스토리지 대상으로 배열 오브젝트를 내보냅니다.
+title: Real-Time CDP에서 클라우드 스토리지 대상으로 배열, 맵 및 개체 내보내기
 type: Tutorial
-description: 계산된 필드를 사용하여 배열을 Real-Time CDP에서 클라우드 스토리지 대상으로 문자열로 내보내는 방법을 알아봅니다.
+description: Real-Time CDP에서 클라우드 스토리지 대상으로 배열, 맵 및 개체를 내보내는 방법에 대해 알아봅니다.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
+source-git-commit: 6122ddc078101c26061e8662de3fcdcb1cb65992
 workflow-type: tm+mt
-source-wordcount: '1730'
-ht-degree: 13%
+source-wordcount: '884'
+ht-degree: 7%
 
 ---
 
-# Real-Time CDP에서 클라우드 스토리지 대상으로 배열 오브젝트를 내보냅니다. {#export-arrays-cloud-storage}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_export_arrays_flat_files"
->title="배열 내보내기 지원"
->abstract="<p>**계산된 필드 추가** 제어를 사용하여 정수, 문자열, 부울 및 오브젝트 값의 배열을 Experience Platform에서 원하는 클라우드 스토리지 대상으로 내보냅니다.</p><p> 배열은 `array_to_string` 함수를 사용하여 문자열로 내보내야 합니다. 다양한 예제와 기타 지원되는 기능에 대한 설명서를 살펴보십시오.</p>"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="예시"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="알려진 제한 사항"
+# Real-Time CDP에서 클라우드 스토리지 대상으로 배열, 맵 및 개체 내보내기 {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
->배열을 클라우드 스토리지 대상으로 내보내는 기능은 일반적으로 사용할 수 있습니다.
+>배열을 클라우드 저장소 대상으로 내보내는 기능은 일반적으로 [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md) 대상에 사용할 수 있습니다.
 
 Real-Time CDP에서 [클라우드 저장소 대상](/help/destinations/catalog/cloud-storage/overview.md)(으)로 배열을 내보내는 방법을 알아봅니다. 내보내기 워크플로우, 이 기능에서 활성화된 사용 사례 및 알려진 제한 사항을 이해하려면 이 문서 를 참조하십시오.
 
-배열은 현재 `array_to_string` 함수를 사용하여 문자열로 내보내야 합니다.
+Experience Platform에서 배열, 맵 및 기타 개체 유형을 내보내는 방법에 대해 알고 싶은 경우 이 페이지를 방문하십시오.
 
-배열을 내보내려면 [배열의 개별 요소를 내보내는 중&#x200B;](#index-based-array-access)*이 아니면 내보내기 워크플로*&#x200B;의 매핑 단계에서 계산된 필드 기능을 사용해야 합니다. 계산된 필드에 대한 자세한 내용은 아래 링크된 페이지를 참조하십시오. 여기에는 데이터 준비의 계산된 필드에 대한 소개와 사용 가능한 모든 함수에 대한 추가 정보가 포함됩니다.
+## 맨 앞까지 내림표
 
-* [UI 안내서 및 개요](/help/data-prep/ui/mapping.md#calculated-fields)
-* [데이터 준비 기능](/help/data-prep/functions.md)
+이 섹션에서 기능에 대한 가장 중요한 정보를 얻고 아래에서 문서의 다른 섹션으로 이동하여 자세한 내용을 확인하십시오.
+
+* 배열, 맵 및 개체를 내보내는 기능은 **배열, 맵, 개체 내보내기** 토글 선택에 따라 다릅니다. 자세한 내용은 [페이지의 아래쪽에서](#export-arrays-maps-objects-toggle)를 참조하세요.
+* `JSON` 및 `Parquet` 파일에서 배열, 맵 및 개체를 클라우드 저장소 대상으로만 내보낼 수 있습니다. 사용자 및 잠재 고객은 지원되지만 계정 대상은 지원되지 않습니다.
+* 배열, 맵 및 개체를 CSV 파일로 *할 수*&#x200B;있지만 계산 필드 기능을 사용하고 `array_to_string` 함수를 사용하여 문자열로 연결하기만 하면 됩니다.
 
 ## Platform의 배열 및 기타 개체 유형 {#arrays-strings-other-objects}
 
 Experience Platform에서는 [XDM 스키마](/help/xdm/home.md)를 사용하여 다른 필드 유형을 관리할 수 있습니다. 배열 내보내기에 대한 지원이 추가되기 전에 Experience Platform의 문자열과 같은 간단한 키-값 쌍 유형 필드를 원하는 대상으로 내보낼 수 있습니다. 이전에 내보내기에 지원되는 이러한 필드의 예는 `personalEmail.address`:`johndoe@acme.org`입니다.
 
-Experience Platform의 다른 필드 유형에는 배열 필드가 포함됩니다. [Experience Platform UI에서 배열 필드 관리](/help/xdm/ui/fields/array.md)에 대해 자세히 알아보십시오. 이전에 지원된 필드 형식 외에도 이제 `array_to_string` 함수를 사용하여 문자열로 연결된 아래 예제와 같은 배열 개체를 내보낼 수 있습니다.
+Experience Platform의 다른 필드 유형에는 배열 필드가 포함됩니다. [Experience Platform UI에서 배열 필드 관리](/help/xdm/ui/fields/array.md)에 대해 자세히 알아보십시오. 이제 아래 예와 같은 배열 개체를 내보낼 수 있습니다.
 
 ```
 organizations = [{
@@ -59,253 +55,90 @@ organizations = [{
 
 다양한 함수를 사용하여 배열 요소에 액세스하고, 배열을 변환 및 필터링하고, 배열 요소를 문자열로 결합하는 방법 등에 대한 자세한 내용은 아래 [광범위한 예제](#examples)를 참조하십시오.
 
-## 알려진 제한 사항 {#known-limitations}
-
-현재 이 기능에 적용되는 알려진 다음 제한 사항을 참고하십시오.
-
-* 계층 구조 스키마 *을(를) 사용하여 JSON 또는 Parquet 파일*&#x200B;로 내보내기는 현재 지원되지 않습니다. `array_to_string` 함수를 사용하여 배열을 CSV, JSON 및 Parquet 파일 *만 문자열로* 내보낼 수 있습니다.
+어레이 외에도 Experience Platform의 맵과 개체를 원하는 클라우드 스토리지 대상으로 내보낼 수도 있습니다. Experience Platform의 [맵](/help/xdm/ui/fields/map.md) 및 [개체](/help/xdm/ui/fields/object.md)에 대해 자세히 알아보십시오.
 
 ## 전제 조건 {#prerequisites}
 
-원하는 클라우드 저장소 대상에 [연결](/help/destinations/ui/connect-destination.md)하고, 클라우드 저장소 대상에 대한 [활성화 단계](/help/destinations/ui/activate-batch-profile-destinations.md)를 진행하고 [매핑](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 단계로 이동하십시오.
+원하는 클라우드 저장소 대상에 [연결](/help/destinations/ui/connect-destination.md)하고, 클라우드 저장소 대상에 대한 [활성화 단계](/help/destinations/ui/activate-batch-profile-destinations.md)를 진행하고 [매핑](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 단계로 이동하십시오. 원하는 클라우드 대상에 연결할 때 **[!UICONTROL 배열, 맵, 개체 내보내기]** 토글을 선택해야 합니다. 자세한 내용은 아래 섹션을 참조하십시오.
 
-## 계산된 필드를 내보내는 방법 {#how-to-export-calculated-fields}
+## 배열 내보내기, 맵, 개체 전환 {#export-arrays-maps-objects-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
 >title="배열, 맵 및 오브젝트 내보내기"
->abstract="<p> 배열, 맵 및 오브젝트를 JSON 또는 Parquet 파일로 내보낼 수 있도록 설정을 <b>켜짐</b>으로 토글합니다. 매핑 단계의 소스 필드 보기에서 이들 오브젝트 유형을 선택할 수 있습니다.</p><p>이 설정을 <b>꺼짐</b>으로 토글하여 계산된 필드 옵션을 사용하고 대상자를 활성화할 때 다양한 데이터 변환 기능을 적용할 수 있습니다. 단, 배열, 맵, 오브젝트를 JSON이나 Parquet 파일로 내보낼 수는 <i>없으며</i> 해당 목적에 대한 별도의 대상을 구성해야 합니다.</p>"
+>abstract="<p> 배열, 맵 및 오브젝트를 JSON 또는 Parquet 파일로 내보낼 수 있도록 설정을 <b>켜짐</b>으로 토글합니다. 매핑 단계의 소스 필드 보기에서 이러한 객체 유형을 선택할 수 있습니다. 토글이 켜져 있으면 매핑 단계에서 계산된 필드 옵션을 사용할 수 없습니다.</p><p>이 토글 <b>끄기</b>를 사용하면 계산된 필드 옵션을 사용하고 대상을 활성화할 때 다양한 데이터 변환 함수를 적용할 수 있습니다. 단, 배열, 맵, 오브젝트를 JSON이나 Parquet 파일로 내보낼 수는 <i>없으며</i> 해당 목적에 대한 별도의 대상을 구성해야 합니다.</p>"
 
->[!CONTEXTUALHELP]
->id="platform_destinations_export_arrays_control"
->title="계층적 출력 스키마 활성화"
->abstract="배열과 같은 계층적 구조를 내보내려면 토글합니다."
+클라우드 저장소 대상에 연결할 때 **[!UICONTROL 배열 내보내기, 맵, 개체]** 토글을 설정하거나 해제할 수 있습니다.
 
->[!CONTEXTUALHELP]
->id="platform_destinations_export_arrays_calculated_field_disabled"
->title="계산된 필드 추가 비활성화됨"
->abstract="이 대상 연결을 설정할 때 **배열, 맵, 오브젝트 내보내기**&#x200B;를 *켜짐*&#x200B;으로 토글했기 때문에 이 제어가 비활성화됩니다. 계산된 필드와 내부에서 사용할 수 있는 함수를 사용하려면 **배열, 맵, 오브젝트 내보내기**&#x200B;를 *꺼짐*&#x200B;으로 토글하여 새 대상 연결을 설정합니다."
+![배열, 맵, 개체 내보내기는 팝오버를 강조 표시하고 켜기 또는 끄기 설정으로 전환됩니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
-클라우드 저장소 대상에 대한 활성화 워크플로의 매핑 단계에서 **[!UICONTROL 계산된 필드 추가]**&#x200B;를 선택합니다.
+배열, 맵 및 오브젝트를 JSON 또는 Parquet 파일로 내보낼 수 있도록 설정을 **켜짐**&#x200B;으로 토글합니다. 대상을 클라우드 저장소 대상으로 활성화할 때 [매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)의 원본 필드 보기에서 이러한 개체 유형을 선택할 수 있습니다. 그러나 이 설정을에 두고, [계산된 필드] 옵션을 사용하여 활성화 시 데이터를 변환할 수 없습니다.
 
-![일괄 활성화 워크플로의 매핑 단계에서 강조 표시된 계산된 필드를 추가합니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+이 토글 **끄기**&#x200B;를 사용하면 계산된 필드 옵션을 사용하고 대상을 활성화할 때 다양한 데이터 변환 함수를 적용할 수 있습니다. 그러나 배열, 맵 및 개체를 JSON 또는 Parquet 파일로 내보낼 수 없으며 이를 위해 별도의 대상을 구성해야 합니다.
 
-이렇게 하면 함수와 필드를 선택하여 Experience Platform에서 속성을 내보낼 수 있는 모달 창이 열립니다.
+## 배열, 맵, 개체 내보내기 *켜짐* 전환 {#export-arrays-maps-objects-toggle-on}
 
-![아직 함수가 선택되지 않은 계산된 필드 기능의 모달 창.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+이 설정을 켜면 활성화 워크플로의 매핑 단계에서 소스 필드 선택기를 통해 전체 개체(예: `person.name`) 및 배열을 선택하여 내보낼 수 있습니다.
 
-예를 들어 아래 표시된 대로 `organizations` 필드에서 `array_to_string` 함수를 사용하여 조직 배열을 CSV 파일의 문자열로 내보냅니다. [이 예제와 다른 예제에 대한 자세한 내용은 아래에서 ](#array-to-string-function-export-arrays)을(를) 참조하십시오.
+![활성화 워크플로의 매핑 단계에서 원본 필드 선택기를 통해 개체를 선택합니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif)
 
-![배열-문자열 함수가 선택된 계산된 필드 기능의 모달 창입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+이 옵션을 선택하면 사용자 인터페이스에서 계산된 필드를 사용할 수 없게 되며 아래와 같이 **[!UICONTROL 계산된 필드 추가]** 컨트롤이 비활성화됩니다. 데이터 변환에 계산된 필드를 사용하려면 토글을 해제하여 대상 연결을 설정하십시오.
 
-계산된 필드를 유지하고 매핑 단계로 돌아가려면 **[!UICONTROL 저장]**&#x200B;을(를) 선택하십시오.
+![계산된 필드 컨트롤이 비활성화되었습니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/calculated-fields-disabled.png)
 
-![Array-to-string 함수가 선택되고 Save 컨트롤이 강조 표시된 계산된 필드 기능의 모달 창.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+## 배열, 맵, 개체 내보내기 *끄기* {#export-arrays-maps-objects-toggle-off}
 
-워크플로우의 매핑 단계로 돌아가서 내보낸 파일의 이 필드에 사용할 열 머리글 값으로 **[!UICONTROL 대상 필드]**&#x200B;을(를) 채웁니다.
+이 옵션을 *off*(으)로 설정하면 계산된 필드 옵션을 사용하고 대상을 활성화할 때 다양한 데이터 변환 함수를 적용할 수 있습니다. 그러나 배열, 맵 및 개체를 JSON 또는 Parquet 파일로 내보낼 수 없으며 이를 위해 별도의 대상을 구성해야 합니다.
 
-대상 필드가 강조 표시된 매핑 단계 ![1}](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+계산된 필드 기능을 사용하여 배열, 맵 및 개체를 CSV 파일로 *할 수*&#x200B;있으며 `array_to_string` 함수를 사용하여 문자열로 연결합니다. 해당 함수 사용에 대해 [자세히 읽어보세요](#array-to-string-function-export-arrays).
 
-![대상 필드 선택](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
+[클라우드 저장소 대상으로 내보낸 데이터에 변환을 수행](/help/destinations/ui/data-transformations-calculated-fields.md)하기 위해 계산된 필드를 사용하여 작업하는 방법에 대해 자세히 알아보십시오.
 
-준비가 되면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하여 활성화 워크플로의 다음 단계로 진행합니다.
+## 내보낸 샘플 파일 {#sample-exported-files}
 
-대상 필드가 강조 표시되고 대상 값이 채워진 ![매핑 단계.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+이 기능을 사용하면 데이터가 Experience Platform의 구조를 유지하는 Parquet 및 JSON 파일을 내보낼 수 있습니다. 내보낸 JSON 파일의 아래를 봅니다.
 
-## 지원되는 함수 샘플을 사용하여 배열을 내보냅니다. {#supported-functions}
++++ 내보낸 JSON 파일을 보려면 을 선택합니다.
 
-파일 기반 대상으로 데이터를 활성화할 때 문서화된 모든 [데이터 준비 기능](/help/data-prep/functions.md)이 지원됩니다.
-
-어레이 내보내기 처리와 관련된 아래 기능은 예제와 함께 설명되어 있습니다.
-
-* `array_to_string`
-* `flattenArray`
-* `filterArray`
-* `transformArray`
-* `coalesce`
-* `size_of`
-* `iif`
-* `index-based array access`
-* `add_to_array`
-* `to_array`
-* `first`
-* `last`
-
-## 배열을 내보내는 데 사용되는 함수의 예 {#examples}
-
-위에 나열된 함수 중 일부는 아래 섹션의 예제 및 추가 정보를 참조하십시오. 나열된 나머지 함수는 데이터 준비 섹션의 [일반 함수 설명서](/help/data-prep/functions.md)를 참조하십시오.
-
-### 배열을 내보내는 `array_to_string` 함수 {#array-to-string-function-export-arrays}
-
-`array_to_string` 함수를 사용하여 `_` 또는 `|`과 같은 원하는 구분 기호를 사용하여 배열의 요소를 문자열로 연결합니다.
-
-예를 들어 `array_to_string('_',organizations)` 구문을 사용하여 매핑 스크린샷에 표시된 대로 아래의 다음 XDM 필드를 결합할 수 있습니다.
-
-* `organizations` 배열
-* `person.name.firstName` 문자열
-* `person.name.lastName` 문자열
-* `personalEmail.address` 문자열
-
-![array_to_string 함수를 포함하는 매핑 예](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-array-to-string-function.png)
-
-이 경우 출력 파일은 다음과 같습니다. 배열의 요소가 `_` 문자를 사용하여 단일 문자열로 연결되는 방식을 확인합니다.
-
-```
-First_Name,Last_Name,Personal_Email,Organization
-John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
+```json
+{
+  "person_name_firstName": "John",
+  "person_name_lastName": "Smith",
+  "_acmeinc_customer_hs_main_address_scalar": "Oak Avenue No 12",
+  "_acmeinc_customer_hs_locations_array": [
+    "home address 12",
+    "office address 12"
+  ],
+  "_acmeinc_customer_hs_date_array": [
+    "2024-11-14",
+    "2024-11-15"
+  ],
+  "_acmeinc_customer_hs_customer_obj_emails_array0": "john.smith@example.com",
+  "_acmeinc_customer_hs_customer_obj": {
+    "emails_array": [
+      "john.smith@example.com",
+      "j.smith@example.com"
+    ],
+    "name_scalar": "John Smith"
+  },
+  "_acmeinc_customer_hs_addresses_array_obj": [
+    {
+      "is_primary": true,
+      "streetName_scalar": "Maple Street",
+      "streetNo_int": 12
+    },
+    {
+      "is_primary": false,
+      "streetName_scalar": "Pine Road",
+      "streetNo_int": 45
+    }
+  ],
+  "_acmeinc_customer_hs_addresses_array_obj0": {
+    "is_primary": true,
+    "streetName_scalar": "Maple Street",
+    "streetNo_int": 12
+  }
+}
 ```
 
-### 필터링된 배열을 내보내는 `filterArray` 함수
-
-`filterArray` 함수를 사용하여 내보낸 배열의 요소를 필터링합니다. 이 함수를 위에서 설명한 `array_to_string` 함수와 결합할 수 있습니다.
-
-위에서 `organizations` 배열 개체를 계속 사용하면 `array_to_string('_', filterArray(organizations, org -> org.founded > 2021))`과(와) 같은 함수를 작성하여 2021년 또는 그 이상 최근 연도의 `founded` 값을 가진 조직을 반환할 수 있습니다.
-
-![filterArray 함수의 예입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
-
-이 경우 출력 파일은 다음과 같습니다. 기준을 충족하는 배열의 두 요소가 `_` 문자를 사용하여 단일 문자열로 연결되는 방식을 확인합니다.
-
-```
-John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
-```
-
-### 변환된 배열을 내보내는 `transformArray` 함수
-
-`transformArray` 함수를 사용하여 내보낸 배열의 요소를 변환합니다. 이 함수를 위에서 설명한 `array_to_string` 함수와 결합할 수 있습니다.
-
-위에서 `organizations` 배열 개체를 계속 사용하면 `array_to_string('_', transformArray(organizations, org -> ucase(org.orgName)))`과(와) 같은 함수를 작성하여 모든 대문자로 변환된 조직의 이름을 반환할 수 있습니다.
-
-![transformArray 함수의 예입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/transform-array-function.png)
-
-이 경우 출력 파일은 다음과 같습니다. 배열의 세 요소가 `_` 문자를 사용하여 어떻게 변환되고 단일 문자열로 연결되는지 확인하십시오.
-
-```
-John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
-```
-
-### 배열을 내보내는 `iif` 함수 {#iif-function-export-arrays}
-
-특정 조건에서 배열의 요소를 내보내려면 `iif` 함수를 사용하십시오. 예를 들어 위에서 `organizations` 배열 개체를 계속 사용하면 `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`과(와) 같은 간단한 조건부 함수를 작성할 수 있습니다.
-
-![iif 함수를 포함하는 매핑 예입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
-
-이 경우 출력 파일은 다음과 같습니다. 이 경우 배열의 첫 번째 요소는 마케팅이므로 개인은 마케팅 부서의 구성원입니다.
-
-```
-`First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
-John,Doe, johndoe@acme.org, "isMarketing"
-```
-
-### 배열을 내보내는 `add_to_array` 함수 {#add-to-array-function-export-arrays}
-
-`add_to_array` 함수를 사용하여 내보낸 배열에 요소를 추가합니다. 이 함수를 위에서 설명한 `array_to_string` 함수와 결합할 수 있습니다.
-
-위에서 `organizations` 배열 개체를 계속 사용하면 `source: array_to_string('_', add_to_array(organizations,"2023"))`과(와) 같은 함수를 작성하여 개인이 2023년에 멤버로 속한 조직을 반환할 수 있습니다.
-
-![add_to_array 함수를 포함하는 매핑 예](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
-
-이 경우 출력 파일은 다음과 같습니다. 배열의 세 요소가 `_` 문자를 사용하여 단일 문자열로 연결되고 문자열 끝에 2023도 추가되는 방식을 확인합니다.
-
-```
-`First_Name,Last_Name,Personal_Email,Organization_Member_2023
-John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
-```
-
-### 병합된 배열을 내보내는 `flattenArray` 함수
-
-내보낸 다차원 배열을 병합하려면 `flattenArray` 함수를 사용하십시오. 이 함수를 위에서 설명한 `array_to_string` 함수와 결합할 수 있습니다.
-
-위에서 `organizations` 배열 개체를 계속 사용하면 `array_to_string('_', flattenArray(organizations))`과(와) 같은 함수를 작성할 수 있습니다. `array_to_string` 함수는 기본적으로 입력 배열을 문자열로 병합합니다.
-
-결과 출력은 위에서 설명한 `array_to_string` 함수와 동일합니다.
-
-### 배열을 내보내는 `coalesce` 함수 {#coalesce-function-export-arrays}
-
-`coalesce` 함수를 사용하여 배열의 null이 아닌 첫 번째 요소에 액세스하고 문자열로 내보냅니다.
-
-예를 들어 `coalesce(subscriptions.hasPromotion)` 구문을 사용하여 아래 매핑 스크린샷에 표시된 대로 다음 XDM 필드를 결합하여 배열에서 `false`의 첫 번째 `true` 값을 반환할 수 있습니다.
-
-* `"subscriptions.hasPromotion": [null, true, null, false, true]` 배열
-* `person.name.firstName` 문자열
-* `person.name.lastName` 문자열
-* `personalEmail.address` 문자열
-
-![병합 함수를 포함하는 매핑 예입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
-
-이 경우 출력 파일은 다음과 같습니다. 배열에서 null이 아닌 첫 번째 `true` 값을 파일에서 내보내는 방식을 확인합니다.
-
-```
-First_Name,Last_Name,hasPromotion
-John,Doe,true
-```
-
-### 배열을 내보내는 `size_of` 함수 {#sizeof-function-export-arrays}
-
-배열에 있는 요소의 수를 나타내려면 `size_of` 함수를 사용하십시오. 예를 들어, 타임스탬프가 여러 개인 `purchaseTime` 배열 개체가 있는 경우 `size_of` 함수를 사용하여 개인이 얼마나 많은 개별 구매를 했는지 나타낼 수 있습니다.
-
-예를 들어 매핑 스크린샷에 표시된 대로 아래에 있는 다음 XDM 필드를 결합할 수 있습니다.
-
-* 고객이 5개의 개별 구매 시간을 나타내는 `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` 배열
-* `personalEmail.address` 문자열
-
-![size_of 함수를 포함하는 매핑 예](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
-
-이 경우 출력 파일은 다음과 같습니다. 두 번째 열은 고객이 별도로 구매한 횟수에 해당하는 배열의 요소 수를 어떻게 표시하는지 확인합니다.
-
-```
-`Personal_Email,Times_Purchased
-johndoe@acme.org,"5"
-```
-
-### 인덱스 기반 스토리지 액세스 {#index-based-array-access}
-
->[!IMPORTANT]
->
->이 페이지에 설명된 다른 함수와 달리 배열의 개별 요소를 내보내려면 *UI에서&#x200B;**[!UICONTROL 계산된 필드]**컨트롤을 사용할 필요가 없습니다*.
-
-배열의 인덱스에 액세스하여 배열에서 단일 항목을 내보낼 수 있습니다. 예를 들어, `size_of` 함수에 대한 위의 예제와 유사하게 고객이 특정 제품을 처음 구매한 경우에만 액세스하고 내보내려고 하는 경우 `purchaseTime[0]`을(를) 사용하여 타임스탬프의 첫 번째 요소를 내보내고, `purchaseTime[1]`을(를) 사용하여 타임스탬프의 두 번째 요소를 내보내고, `purchaseTime[2]`을(를) 사용하여 타임스탬프의 세 번째 요소를 내보낼 수 있습니다.
-
-![배열의 요소에 액세스하는 방법을 보여 주는 매핑 예입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
-
-이 경우 출력 파일은 아래와 같이 표시되며 고객이 처음 구매한 항목을 내보냅니다.
-
-```
-`Personal_Email,First_Purchase
-johndoe@acme.org,"1538097126"
-```
-
-### 배열을 내보내는 `first` 및 `last` 함수 {#first-and-last-functions-export-arrays}
-
-`first` 및 `last` 함수를 사용하여 배열의 첫 번째 또는 마지막 요소를 내보냅니다. 예를 들어 이전 예제의 여러 타임스탬프가 있는 `purchaseTime` 배열 개체를 계속 사용하면 이러한 개체를 사용하여 한 사람이 만든 첫 번째 또는 마지막 구매 시간을 내보내는 함수에 사용할 수 있습니다.
-
-![첫 번째 함수와 마지막 함수를 포함하는 매핑 예입니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
-
-이 경우 출력 파일은 아래와 같이 표시되며 고객이 구매한 처음과 마지막 시간을 내보냅니다.
-
-```
-`Personal_Email,First_Purchase, Last_Purchase
-johndoe@acme.org,"1538097126","1664327526"
-```
-
-<!--
-
-### Hashing functions {#hashing-functions}
-
-In addition to the functions specific for exporting arrays or elements from an array, you can use hashing functions to hash attributes in the exported files. For example, if you have any personally identifiable information in attributes, you can hash those fields when exporting them. 
-
-You can hash string values directly, for example `md5(personalEmail.address)`. If desired, you can also hash individual elements of array fields, assuming elements in the array are strings, like this: `md5(purchaseTime[0])`
-
-The supported hashing functions are:
-
-|Function | Sample expression |
-|---------|----------|
-| `sha1` | `sha1(organizations[0])` |
-| `sha256` | `sha256(organizations[0])` |
-| `sha512` | `sha512(organizations[0])` |
-| `hash` | `hash("crc32", organizations[0], "UTF-8")` |
-| `md5` |  `md5(organizations[0], "UTF-8")` |
-| `crc32` | `crc32(organizations[0])` |
-
-{style="table-layout:auto"}
-
--->
++++
