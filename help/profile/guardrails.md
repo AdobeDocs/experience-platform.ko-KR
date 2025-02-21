@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 기능의 최적 사용을 보장하기 위해 프로필 데이터 및 세분화에 대한 성능 및 시스템 적용 가드레일에 대해 알아봅니다.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
+source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
 workflow-type: tm+mt
-source-wordcount: '2511'
+source-wordcount: '2523'
 ht-degree: 2%
 
 ---
@@ -118,7 +118,7 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 
 | 가드레일 | 제한 | 제한 유형 | 설명 |
 | --------- | ----- | ---------- | ----------- |
-| 샌드박스당 대상 | 4000 | 성능 보호 | 샌드박스당 최대 4000개의 **활성** 대상을 가질 수 있습니다. 각 **개별** 샌드박스에 대상이 4000개 미만이면 조직당 4000개 이상의 샌드박스를 가질 수 있습니다. 여기에는 일괄 처리, 스트리밍 및 에지 대상이 포함됩니다. 추가 대상을 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. 세그먼트 빌더를 통해 [대상자 만들기](/help/segmentation/ui/segment-builder.md)에 대해 자세히 알아보세요. |
+| 샌드박스당 대상 | 4000 | 성능 보호 | 샌드박스당 최대 4000개의 **활성** 대상을 가질 수 있습니다. 각 **개별** 샌드박스에 4000개 미만의 대상이 있는 한 조직당 4000개 이상의 대상을 가질 수 있습니다. 여기에는 일괄 처리, 스트리밍 및 에지 대상이 포함됩니다. 추가 대상을 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. 세그먼트 빌더를 통해 [대상자 만들기](/help/segmentation/ui/segment-builder.md)에 대해 자세히 알아보세요. |
 | 샌드박스당 Edge 대상 | 150 | 성능 보호 | 샌드박스당 최대 150개의 **활성** Edge 대상을 가질 수 있습니다. 각 **개별** 샌드박스에 150개 미만의 Edge 대상이 있는 한 조직당 150개 이상의 Edge 대상을 가질 수 있습니다. 추가 Edge 대상을 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. [Edge 대상](/help/segmentation/methods/edge-segmentation.md)에 대해 자세히 알아보세요. |
 | 모든 샌드박스에서 Edge 처리량 | 1500RPS | 성능 보호 | Edge 세그멘테이션은 Adobe Experience Platform Edge Network으로 들어오는 초당 1500개의 인바운드 이벤트의 최대 값을 지원합니다. Edge 세그먼테이션은 Adobe Experience Platform Edge Network에 들어간 후 인바운드 이벤트를 처리하는 데 최대 350밀리초가 걸릴 수 있습니다. [Edge 대상](/help/segmentation/methods/edge-segmentation.md)에 대해 자세히 알아보세요. |
 | 샌드박스당 스트리밍 대상 | 500 | 성능 보호 | 샌드박스당 최대 500개의 **활성** 스트리밍 대상을 가질 수 있습니다. 각 **개별** 샌드박스에 500개 미만의 스트리밍 대상이 있는 한 조직당 500개 이상의 스트리밍 대상을 가질 수 있습니다. 여기에는 스트리밍 대상과 에지 대상이 모두 포함됩니다. 스트리밍 대상을 추가로 만들려고 하면 시스템 성능에 영향을 줄 수 있습니다. [스트리밍 대상](/help/segmentation/methods/streaming-segmentation.md)에 대해 자세히 알아보세요. |
@@ -162,7 +162,7 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 
 프로필 데이터를 유지 관리하는 프로필 데이터 저장소는 관계형 저장소가 아니지만, 프로필에서는 단순하고 직관적인 방식으로 대상자를 만들 수 있도록 작은 차원 엔티티와의 통합을 허용합니다. 이 통합을 [다중 엔티티 세그멘테이션](../segmentation/tutorials/multi-entity-segmentation.md)이라고 합니다.
 
-또한 조직은 상점, 제품 또는 속성과 같이 개인 이외의 항목을 설명하는 XDM 클래스를 정의할 수도 있습니다. 이러한 [!DNL XDM Individual Profile]이 아닌 스키마를 &quot;차원 엔터티&quot;(&quot;조회 엔터티&quot;라고도 함)라고 하며 시계열 데이터를 포함하지 않습니다. 차원 엔터티를 나타내는 스키마는 [스키마 관계](../xdm/tutorials/relationship-ui.md)을 사용하여 프로필 엔터티에 연결됩니다.
+또한 조직은 상점, 제품 또는 속성과 같이 개인 이외의 항목을 설명하는 XDM 클래스를 정의할 수도 있습니다. XDM 개별 프로필 클래스 이외의 XDM 클래스를 사용하여 모델링되는 이러한 스키마는 &quot;차원 엔티티&quot;(&quot;조회 엔티티&quot;라고도 함)라고 하며 시계열 데이터를 포함하지 않습니다. 차원 엔터티를 나타내는 스키마는 [스키마 관계](../xdm/tutorials/relationship-ui.md)을 사용하여 프로필 엔터티에 연결됩니다.
 
 Dimension 엔티티는 다중 엔티티 세그먼트 정의를 지원 및 간소화하는 조회 데이터를 제공하며 세그먼테이션 엔진이 최적의 처리를 위해 전체 데이터 세트를 메모리에 로드할 수 있을 만큼 작아야 합니다(빠른 포인트 조회).
 
