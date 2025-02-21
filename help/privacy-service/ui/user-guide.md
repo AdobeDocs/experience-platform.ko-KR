@@ -11,20 +11,20 @@ ht-degree: 11%
 
 ---
 
-# Privacy Service UI에서 개인 정보 작업 관리 {#user-guide}
+# Privacy Service UI에서 개인정보 작업 관리 {#user-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
->title="데이터 주체 개인 정보 보호 요청 이행"
->abstract="<h2>설명</h2><p>Adobe Experience Platform Privacy Service를 사용하면 법적 개인 정보 보호 규정에 따라 개인 데이터에 액세스하거나 삭제하려는 고객을 대신하여 개인 정보 보호 요청을 생성하고 관리할 수 있습니다.</p>"
+>title="데이터 주체 개인정보 보호 요청 이행"
+>abstract="<h2>설명</h2><p>Adobe Experience Platform Privacy Service를 사용하면 법적 개인정보 보호 규정에 따라 개인 데이터에 액세스하거나 삭제하려는 고객을 대신하여 개인정보 보호 요청을 생성하고 관리할 수 있습니다.</p>"
 
 이 문서에서는 [!DNL Privacy Service] 사용자 인터페이스를 사용하여 개인 정보 요청을 만들고 관리하는 단계를 제공합니다.
 
 >[!IMPORTANT]
 >
->Privacy Service은 데이터 주체 및 소비자 권한 요청용으로만 사용됩니다. 데이터 정리 또는 유지 관리를 위한 다른 Privacy Service 사용은 지원되지 않거나 허용되지 않습니다. Adobe은 적시에 이를 이행할 법적 의무가 있다. 따라서 프로덕션 전용 환경이며 유효한 개인 정보 보호 요청에 대한 불필요한 백로그를 만들기 때문에 Privacy Service에 대한 로드 테스트는 허용되지 않습니다.
+>Privacy Service은 데이터 주체 및 소비자 권한 요청만을 위한 것입니다. 데이터 정리 또는 유지 관리를 위한 다른 Privacy Service 사용은 지원되지 않거나 허용되지 않습니다. Adobe은 적시에 이를 이행할 법적 의무가 있습니다. 따라서 Privacy Service은 프로덕션 전용 환경이며 유효한 개인 정보 보호 요청에 대한 불필요한 백로그를 만들기 때문에 에 대한 로드 테스트가 허용되지 않습니다.
 >
->이제 서비스 남용을 방지하기 위해 엄격한 일일 업로드 제한이 적용됩니다. 시스템을 남용하는 것으로 확인된 사용자는 서비스에 액세스할 수 없게 됩니다. 그런 다음 후속 회의가 그들과 함께 개최되어 그들의 행동에 대해 이야기하고 Privacy Service에 허용되는 사용에 대해 논의합니다.
+>이제 서비스 남용을 방지하기 위해 엄격한 일일 업로드 제한이 적용됩니다. 시스템을 남용하는 것으로 확인된 사용자는 서비스에 액세스할 수 없게 됩니다. 그런 다음 후속 회의가 그들과 함께 개최되어 그들의 행동에 대해 이야기하고 Privacy Service의 허용 가능한 사용에 대해 논의합니다.
 
 ## [!DNL Privacy Service] UI 대시보드 찾아보기
 
@@ -47,7 +47,7 @@ ht-degree: 11%
 | [!UICONTROL FDBR_USA(플로리다)] | [!DNL Florida Digital Bill of Rights] |
 | [!UICONTROL GDPR(유럽 연합)] | 유럽 연합의 [!DNL General Data Protection Regulation] |
 | [!UICONTROL HIPPA_USA(미국)] | [!DNL Health Insurance Portability and Accountability Act] |
-| [!UICONTROL ICDPA_USA](Iowa) | [!DNL Iowa Consumer Data Protection Act] |
+| [!UICONTROL ICDPA_USA]&#x200B;(Iowa) | [!DNL Iowa Consumer Data Protection Act] |
 | [!UICONTROL LGPD_BRA(브라질)] | 브라질의 &quot;[!DNL General Data Protection Law]&quot; [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL MHMDA_USA(워싱턴)] | [!DNL Washington My Health My Data Act] |
 | [!UICONTROL MCDPA_USA(몬타나)] | [!DNL Montana Consumer Data Privacy Act] |
@@ -75,7 +75,7 @@ Waiting:
 
 각 규정 유형에 대한 직무는 별도로 추적된다. 규정 유형 간에 전환하려면 **[!UICONTROL 규정 유형]** 드롭다운 메뉴를 선택하고 목록에서 원하는 규정을 선택하십시오.
 
-![규정 유형 드롭다운이 있는 Privacy Service 콘솔입니다.](../images/user-guide/regulation.png)
+![규정 유형 드롭다운이 있는 Privacy Service 콘솔.](../images/user-guide/regulation.png)
 
 규정 유형을 변경하면 대시보드가 업데이트되어 선택한 규정에 적용되는 모든 작업, 필터, 위젯 및 작업 생성 대화 상자가 표시됩니다.
 
@@ -109,7 +109,7 @@ Waiting:
 >
 >이전에 생성된 작업의 데이터는 완료 날짜 후 30일 동안만 액세스할 수 있습니다.
 
-[!UICONTROL 작업 요청] 제목 아래의 검색 표시줄에 키워드를 입력하여 목록을 필터링할 수 있습니다. 이 목록은 입력할 때 자동으로 필터링되며, 검색어와 일치하는 값이 포함된 요청을 표시합니다. 검색 필드는 개인 정보 작업 ID를 UI에서 현재 렌더링/로드된 작업에 일치하는 &quot;빠른&quot; 검색을 수행합니다. 제출된 모든 작업에 대한 포괄적인 검색은 아닙니다. 대신 로드된 결과에 적용되는 필터입니다. Privacy Service API를 사용하여 [특정 규정, 날짜 범위 또는 단일 작업에 따라 작업을 반환하십시오](../api/privacy-jobs.md#list).
+[!UICONTROL 작업 요청] 제목 아래의 검색 표시줄에 키워드를 입력하여 목록을 필터링할 수 있습니다. 이 목록은 입력할 때 자동으로 필터링되며, 검색어와 일치하는 값이 포함된 요청을 표시합니다. 검색 필드는 개인 정보 작업 ID를 UI에서 현재 렌더링/로드된 작업에 일치하는 &quot;빠른&quot; 검색을 수행합니다. 제출된 모든 작업에 대한 포괄적인 검색은 아닙니다. 대신 로드된 결과에 적용되는 필터입니다. Privacy Service API를 사용하여 [특정 규정, 날짜 범위 또는 단일 작업에 따라 작업을 반환](../api/privacy-jobs.md#list)할 수 있습니다.
 
 >[!TIP]
 >
@@ -163,11 +163,11 @@ Waiting:
 
 목록에서 요청의 **[!UICONTROL 작업 유형]**(&quot;삭제&quot; 또는 &quot;액세스&quot;) 및 사용 가능한 제품을 하나 이상 선택하십시오.
 
-Privacy Service은 개인 데이터에 대한 두 종류의 작업 요청을 지원합니다. [!UICONTROL 액세스](읽기) 및/또는 [!UICONTROL 삭제]. 조회 대상과 관련된 상품에 있는 모든 정보를 제공받도록 요청하거나 조회 대상과 관련된 모든 정보를 삭제하도록 요청할 수 있습니다.
+Privacy Service에서는 개인 데이터에 대한 두 종류의 작업 요청을 지원합니다. [!UICONTROL 액세스]&#x200B;(읽기) 및/또는 [!UICONTROL 삭제]. 조회 대상과 관련된 상품에 있는 모든 정보를 제공받도록 요청하거나 조회 대상과 관련된 모든 정보를 삭제하도록 요청할 수 있습니다.
 
 ![](../images/user-guide/type-and-products.png){width=500}
 
-**[!UICONTROL 네임스페이스 유형]**&#x200B;에서 [!DNL Privacy Service](으)로 전송되는 고객 ID에 적합한 네임스페이스 유형을 선택합니다.
+**[!UICONTROL 네임스페이스 유형]**&#x200B;에서 [!DNL Privacy Service]&#x200B;(으)로 전송되는 고객 ID에 적합한 네임스페이스 유형을 선택합니다.
 
 ![](../images/user-guide/namespace-type.png){width=500}
 
