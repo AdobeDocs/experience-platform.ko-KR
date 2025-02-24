@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
+source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
 workflow-type: tm+mt
-source-wordcount: '2228'
+source-wordcount: '2342'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
 >title="대상자 차단"
->abstract="대상 블록을 사용하면 새 대상을 구성하는 데 사용할 하위 대상을 지정할 수 있습니다."
+>abstract="대상 블록을 사용하면 새 대상을 구성하는 데 사용할 하위 대상을 추가할 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
@@ -83,6 +83,11 @@ ht-degree: 1%
 | [!UICONTROL 중복 제외] | 대상자가 결합되어 **one에서 공유되는 대상자만**&#x200B;이(가) 모두 추가되지 않습니다. 이것은 XOR 연산과 같은 결과가 될 것이다. |
 
 ### [!UICONTROL 규칙 작성] {#build-rule}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rule_builder"
+>title="세그먼트 빌더"
+>abstract="세그먼트 빌더 를 사용하여 컴포지션에 대한 사용자 지정 규칙을 추가할 수 있습니다."
 
 대상 블록에 사용자 지정 규칙을 추가하려면 **[!UICONTROL 규칙 빌드]**&#x200B;를 선택하십시오.
 
@@ -134,7 +139,12 @@ ht-degree: 1%
 
 ### 속성별 제외 {#exclude-attribute}
 
-특성별로 제외하는 경우 **[!UICONTROL 제외 규칙]** 섹션 내에서 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택하여 제외할 특성을 선택할 수 있습니다.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_attribute"
+>title="속성별 제외"
+>abstract="속성별로 제외할 경우, 선택한 속성에 따라 특정 프로필이 컴포지션에 표시되지 않도록 제외할 수 있습니다."
+
+특성별로 제외하는 경우 **[!UICONTROL 제외 규칙]** 섹션 내에서 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택하여 제외할 특성을 선택할 수 있습니다. 속성을 제외하면 이 속성을 포함하는 모든 프로필을 결과 대상자에서 제외할 수 있습니다.
 
 ![특성 섹션이 강조 표시되어 제외할 특성을 선택할 위치를 표시합니다.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -307,6 +317,16 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ### 백분율로 분할 {#split-percentage}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_percentage"
+>title="백분율로 분할"
+>abstract="제공된 경로의 수와 백분율에 따라 대상을 여러 대상으로 무작위로 분할할 수 있습니다."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_persistent"
+>title="영구 분할"
+>abstract="이 옵션을 활성화하고 분할을 지속할 ID 네임스페이스를 선택하여 분할 비율을 지속으로 설정할 수 있습니다."
+
 백분율로 분할할 경우 대상은 제공된 경로 수와 백분율에 따라 무작위로 분할됩니다.
 
 예를 들어 각각 프로필의 비율이 다른 세 개의 경로가 있을 수 있습니다.
@@ -331,7 +351,12 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ![다른 프로필 토글이 강조 표시됩니다.](../images/ui/audience-composition/split-other-profiles.png)
 
-## 대상자 게시
+## 대상자 게시 {#publish}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_publish"
+>title="게시"
+>abstract="컴포지션을 게시하여 Adobe Experience Platform에서 최종 대상자를 만들 수 있습니다."
 
 >[!IMPORTANT]
 >
