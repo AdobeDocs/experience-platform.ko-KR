@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2025년 2월
 description: Adobe Experience Platform의 2025년 2월 릴리스 정보.
-source-git-commit: 8786ac8ab42d2b9e0c43000bbc6604462ea06f64
+source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
 workflow-type: tm+mt
-source-wordcount: '1481'
-ht-degree: 20%
+source-wordcount: '1542'
+ht-degree: 19%
 
 ---
 
@@ -38,14 +38,13 @@ Adobe Experience Platform의 AI 어시스턴트는 Adobe 애플리케이션에�
 
 | 기능 | 설명 |
 | --- | --- |
+| 운영 통찰력의 일반 가용성 | AI Assistant의 작동 인사이트는 이제 GA에 있습니다. 운영 인사이트는 카운트, 조회 및 계보 영향을 포함하여 메타데이터 개체(속성, 대상, 데이터 흐름, 데이터 세트, 대상, 여정, 스키마 및 소스)에 대해 AI Assistant가 생성하는 답변을 말합니다. Operational insights는 샌드박스 내의 데이터를 보지 않습니다. 자세한 내용은 [AI Assistant UI 안내서](../../ai-assistant/ui-guide.md)를 참조하십시오. |
 | 질문 자동 완성 지원 | 이제 AI Assistant에 질문을 입력할 때 AI Assistant가 제공하는 추천 질문 목록에서 선택할 수 있습니다. 이 기능을 사용하여 AI Assistant를 사용하여 워크플로를 더욱 가속화할 수 있습니다. 자세한 내용은 [AI Assistant에서 질문 자동 완성 사용](../../ai-assistant/ui-guide.md#use-question-autocomplete)에 대한 안내서를 참조하십시오. |
 | 데이터 세트 가시성 지원 | 이제 AI Assistant를 사용하여 스토리지 크기 및 행 수 등 특정 데이터 세트 지표에 대한 질문에 답변할 수 있습니다. 데이터 가시성 질문은 특정 기간별로 쿼리를 필터링하는 데 사용할 수 있는 한정자를 지원합니다. 자세한 내용은 [AI Assistant 질문 가이드](../../ai-assistant/questions.md)를 참조하십시오. |
 
 {style="table-layout:auto"}
 
 자세한 내용은 [AI Assistant 개요](../../ai-assistant/home.md)를 참조하십시오.
-
-<!-- | General availability of operational insights | Operational insights in AI Assistant are now in GA. Operational insights refer to answers AI Assistant generates about your metadata objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. Operational insights does not look at any data within the sandbox. For more information, read the [AI Assistant UI guide](../../ai-assistant/ui-guide.md). | -->
 
 ## 카탈로그 서비스 {#catalog-service}
 
