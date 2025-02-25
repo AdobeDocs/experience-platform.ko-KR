@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Analytics Source 커넥터에 대한 매핑 필드
 description: Analytics Source Connector를 사용하여 Adobe Analytics 필드를 XDM 필드에 매핑합니다.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
+source-git-commit: 15d63db308ea9d2daf7660b463785d04ff94e296
 workflow-type: tm+mt
-source-wordcount: '2388'
+source-wordcount: '2415'
 ht-degree: 8%
 
 ---
@@ -186,7 +186,9 @@ ADC에서 제공되는 선택 필드는 변환해야 하며 XDM에서 Adobe Anal
 
 ## 고급 매핑 필드
 
-선택 필드(&quot;게시물 값&quot;이라고 함)에는 Adobe이 처리 규칙, VISTA 규칙 및 조회 테이블을 사용하여 값을 조정한 후의 데이터가 포함됩니다. 대부분의 게시물 값에는 사전 처리된 대응 항목이 있습니다. 조직은 사전 처리된 필드, 사후 처리된 필드 또는 둘 다를 사용할지 여부를 결정할 수 있습니다.
+선택 필드(&quot;게시물 값&quot;이라고 함)에는 Adobe이 처리 규칙, VISTA 규칙 및 조회 테이블을 사용하여 값을 조정한 후의 데이터가 포함됩니다. 대부분의 게시물 값에는 사전 처리된 대응 항목이 있습니다.
+
+Analytics 소스 커넥터는 사전 처리된 데이터를 Experience Platform의 데이터 세트로 전송합니다. 변환을 사용하여 이 데이터를 후처리된 해당 데이터로 변환할 수 있습니다. 쿼리 서비스를 사용하여 이러한 변환을 수행하는 방법에 대한 자세한 내용은 쿼리 서비스 사용 안내서의 [Adobe 정의 함수](/help/query-service/sql/adobe-defined-functions.md)를 참조하십시오.
 
 쿼리 서비스를 사용하여 이러한 변환을 수행하는 방법에 대한 자세한 내용은 쿼리 서비스 사용 안내서의 [Adobe 정의 함수](/help/query-service/sql/adobe-defined-functions.md)를 참조하십시오.
 
