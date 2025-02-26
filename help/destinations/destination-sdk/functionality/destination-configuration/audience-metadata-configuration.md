@@ -2,9 +2,9 @@
 description: Destination SDK으로 빌드된 대상에 대한 대상 메타데이터 설정을 구성하는 방법에 대해 알아봅니다.
 title: 대상 메타데이터 구성
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
+source-git-commit: 804370a778a4334603f3235df94edaa91b650223
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '406'
 ht-degree: 3%
 
 ---
@@ -15,9 +15,9 @@ Experience Platform에서 대상으로 데이터를 내보낼 때 Experience Pla
 
 Destination SDK은 대상 플랫폼에서 대상을 프로그래밍 방식으로 생성, 업데이트 또는 삭제하는 데 사용할 수 있는 도구를 제공합니다.
 
-이 구성 요소가 Destination SDK으로 만든 통합에 어떻게 적합한지 이해하려면 [구성 옵션](../configuration-options.md) 설명서에서 다이어그램을 참조하거나 [Destination SDK을 사용하여 스트리밍 대상을 구성하는 방법](../../guides/configure-destination-instructions.md#create-destination-configuration)에 대한 안내서를 참조하십시오.
+이 구성 요소가 Destination SDK으로 만든 통합에 어디에 맞는지 이해하려면 [구성 옵션](../configuration-options.md) 설명서에서 다이어그램을 참조하거나 [Destination SDK을 사용하여 스트리밍 대상을 구성하는 방법](../../guides/configure-destination-instructions.md#create-destination-configuration)에 대한 안내서를 참조하십시오.
 
-`/authoring/audience-templates` 끝점을 통해 대상 메타데이터 템플릿을 구성할 수 있습니다. 대상 메타데이터 구성을 만든 후 `/authoring/destinations` 끝점을 사용하여 `audienceMetadataConfig` 섹션을 구성할 수 있습니다. 이 섹션에서는 대상 템플릿에 매핑해야 하는 대상 메타데이터를 대상에 알려줍니다.
+`/authoring/audience-templates` 끝점을 통해 대상 메타데이터 템플릿을 구성할 수 있습니다. 대상 메타데이터 구성을 만든 후 `/authoring/destinations` 끝점을 사용하여 `segmentMappingConfig` 및 `audienceMetadataConfig` 섹션을 구성할 수 있습니다. 이 섹션에서는 대상 템플릿에 매핑해야 하는 대상 메타데이터를 대상에 알려줍니다.
 
 이 페이지에 표시된 구성 요소를 구성할 수 있는 자세한 API 호출 예는 다음 API 참조 페이지를 참조하십시오.
 
@@ -44,10 +44,12 @@ Destination SDK은 대상 플랫폼에서 대상을 프로그래밍 방식으로
 대상 메타데이터 구성을 생성할 때 아래 표에 설명된 매개 변수를 사용하여 대상 매핑 설정을 구성할 수 있습니다.
 
 ```json
-  "audienceMetadataConfig":{
+"segmentMappingConfig": {
    "mapExperiencePlatformSegmentName":false,
    "mapExperiencePlatformSegmentId":false,
    "mapUserInput":false,
+ },
+"audienceMetadataConfig":{
    "audienceTemplateId":"YOUR_AUDIENCE_TEMPLATE_ID"
 }
 ```
