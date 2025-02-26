@@ -6,7 +6,7 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 77432a559009d29711a8afa4ca6d8f6ea11d70cf
+source-git-commit: 5e3f1517b321cab756305cd61ad5f1def93d3de7
 workflow-type: tm+mt
 source-wordcount: '776'
 ht-degree: 35%
@@ -90,7 +90,7 @@ ht-degree: 35%
       * Adobe 클라이언트 데이터 레이어 {#client-data-layer}
          * [개요](./extensions/client/client-data-layer/overview.md)
          * [릴리스 정보](./extensions/client/client-data-layer/release-notes.md)
-      * Adobe Content Analytics {#contentanalytics}
+      * Adobe Content Analytics {#content-analytics}
          * [개요](./extensions/client/content-analytics/overview.md)
       * Adobe ContextHub {#contexthub}
          * [개요](./extensions/client/contexthub/overview.md)
