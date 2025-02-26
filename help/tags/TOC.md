@@ -6,9 +6,9 @@ user-guide-description: 고객 경험을 향상시키기 위해 분석, 마케�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 18690a72c8a84c6426677b3e8993d8453a8e7cf1
+source-git-commit: 77432a559009d29711a8afa4ca6d8f6ea11d70cf
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '776'
 ht-degree: 35%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 35%
    * 태그 확장(클라이언트측) {#client}
       * [개요](./extensions/client/overview.md)
       * [액세스 가능한 사이트 속도 지표](https://exchange.adobe.com/apps/ec/103053)
-      * [Activity Map 사용자 지정](https://exchange.adobe.com/apps/ec/101531)
+      * [Activity Map 사용자 지정 도구](https://exchange.adobe.com/apps/ec/101531)
       * [작업 페이지 새로 고침](https://exchange.adobe.com/apps/ec/102848)
       * [Adform 웹 사이트 추적](https://exchange.adobe.com/apps/ec/103195)
       * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
@@ -90,6 +90,8 @@ ht-degree: 35%
       * Adobe 클라이언트 데이터 레이어 {#client-data-layer}
          * [개요](./extensions/client/client-data-layer/overview.md)
          * [릴리스 정보](./extensions/client/client-data-layer/release-notes.md)
+      * Adobe Content Analytics {#contentanalytics}
+         * [개요](./extensions/client/content-analytics/overview.md)
       * Adobe ContextHub {#contexthub}
          * [개요](./extensions/client/contexthub/overview.md)
       * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
@@ -112,13 +114,13 @@ ht-degree: 35%
          * [개요](./extensions/client/asset-insights/overview.md)
          * [릴리스 정보](./extensions/client/asset-insights/release-notes.md)
       * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
-      * 오디오 및 비디오용 Adobe Medium 분석 {#media-analytics}
+      * 오디오 및 비디오용 Adobe Media Analytics {#media-analytics}
          * [개요](./extensions/client/media-analytics/overview.md)
          * [릴리스 정보](./extensions/client/media-analytics/release-notes.md)
-      * Adobe Medium Analytics(3.x SDK) {#media-analytics-3x}
+      * Adobe Media Analytics(3.x SDK) {#media-analytics-3x}
          * [개요](./extensions/client/media-analytics-3x/overview.md)
          * [릴리스 정보](./extensions/client/media-analytics-3x/release-notes.md)
-      * Adobe 개인 정보 {#privacy}
+      * Adobe 개인 정보 보호 {#privacy}
          * [개요](./extensions/client/privacy/overview.md)
       * [Adobe 보고서 세트 선택기](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
@@ -220,7 +222,7 @@ ht-degree: 35%
          * [개요](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [개요](./extensions/server/braze/overview.md)
-      * [Google Analytics용 클라우드 커넥터](https://exchange.adobe.com/apps/ec/106542)
+      * Google Analytics용 [Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
       * 코어 {#core}
          * [개요](./extensions/server/core/overview.md)
       * [Epsilon 이벤트 API](https://exchange.adobe.com/apps/ec/109127)
