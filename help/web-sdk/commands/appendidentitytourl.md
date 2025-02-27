@@ -2,7 +2,7 @@
 title: appendIdentityToUrl
 description: 앱, 웹 및 도메인 간에 개인화된 경험을 보다 정확하게 전달합니다.
 exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
-source-git-commit: 153c5bae42c027c25a38a8b63070249d1b1a8f01
+source-git-commit: 7c262e5819f8e3488c5ddd5a0221d1c52c28c029
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 0%
@@ -28,7 +28,7 @@ URL에 ID 추가는 Adobe Experience Platform 데이터 수집 태그 인터페�
 1. 원하는 태그 속성을 선택합니다.
 1. **[!UICONTROL 규칙]**(으)로 이동한 다음 원하는 규칙을 선택합니다.
 1. [!UICONTROL 작업]에서 기존 작업을 선택하거나 작업을 만드십시오.
-1. [!UICONTROL 확장] 드롭다운 필드를 **[!UICONTROL Adobe Experience Platform Web SDK]**(으)로 설정하고 [!UICONTROL 작업 유형]을(를) **[!UICONTROL ID로 리디렉션]**(으)로 설정합니다.
+1. [!UICONTROL 확장] 드롭다운 필드를 **[!UICONTROL Adobe Experience Platform Web SDK]**(으)로 설정하고 [!UICONTROL 작업 유형]을(를) **[!UICONTROL ID를 사용하여 리디렉션]**(으)로 설정합니다.
 1. **[!UICONTROL 변경 내용 유지]**&#x200B;를 클릭한 다음 게시 워크플로우를 실행하십시오.
 
 이 명령은 일반적으로 클릭을 수신하고 원하는 도메인을 확인하는 특정 규칙과 함께 사용됩니다.
@@ -65,7 +65,7 @@ URL에 ID 추가는 Adobe Experience Platform 데이터 수집 태그 인터페�
 
 URL에 ID를 추가합니다.
 
-* **[!UICONTROL 확장]**: Adobe Experience Platform 웹 SDK
+* **[!UICONTROL 확장]**: Adobe Experience Platform Web SDK
 * **[!UICONTROL 작업 유형]**: ID를 사용하여 리디렉션
 
 ![규칙 작업](../assets/id-sharing-action-configuration.png)
@@ -77,7 +77,11 @@ URL에 ID를 추가합니다.
 URL을 매개 변수로 사용하여 `appendIdentityToUrl` 명령을 실행합니다. 이 메서드는 식별자가 추가된 URL을 쿼리 문자열로 반환합니다.
 
 ```js
-alloy("appendIdentityToUrl",document.location);
+alloy("appendIdentityToUrl",
+  {
+    url: document.location.href
+  }
+);
 ```
 
 페이지에서 받은 모든 클릭에 대한 이벤트 리스너를 추가하고 URL이 원하는 도메인과 일치하는지 확인할 수 있습니다. 이 경우 ID를 URL에 추가하고 사용자를 리디렉션합니다.
