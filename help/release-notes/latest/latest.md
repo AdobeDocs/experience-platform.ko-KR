@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 릴리스 정보 2025년 2월
 description: Adobe Experience Platform의 2025년 2월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '1542'
-ht-degree: 94%
+source-wordcount: '1645'
+ht-degree: 91%
 
 ---
 
@@ -24,6 +24,7 @@ Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 - [데이터 준비](#data-prep)
 - [대상](#destinations)
 - [소스](#sources)
+- [Segmentation Service](#segmentation)
 - [설명서 업데이트](#documentation-updates)
    - [Edge 네트워크와 허브 비교](#edge)
    - [소스용 Flow Service API 기능 확장](#flow-service)
@@ -107,6 +108,18 @@ Adobe Experience Platform의 AI 어시스턴트는 Adobe 애플리케이션에�
 - 프로필을 파일 기반 대상으로 내보낼 때 중복 제거를 사용하면 여러 프로필에서 동일한 중복 제거 키와 동일한 참조 타임스탬프를 공유할 때 하나의 프로필만 내보내집니다. 이 릴리스에는 중복 제거 프로세스에 대한 업데이트가 포함되어 있으므로 동일한 좌표를 가진 후속 실행에서 항상 동일한 결과를 생성하여 일관성이 향상됩니다. [자세히 보기](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
 
 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
+
+## Segmentation Service {#segmentation-service}
+
+[!DNL Segmentation Service]는 고객 기반 내에서 마케팅 가능한 사용자 그룹을 구분하는 기준을 설명하여 프로필의 특정 하위 집합을 정의합니다. 세그먼트는 기록 데이터(예: 인구 통계 정보) 또는 고객과 브랜드의 상호 작용을 나타내는 시계열 이벤트를 기반으로 할 수 있습니다.
+
+**새로운 기능 또는 업데이트된 기능**
+
+| 기능 | 설명 |
+| ------- | ----------- |
+| 영구 분할 | 이제 대상자 작성에서 영구 분할을 지원합니다. ID 네임스페이스를 분할 블록에 추가하여 프로필로 분할할 때 분할 대상이 일정하게 유지되도록 할 수 있습니다. 이 기능에 대한 자세한 내용은 [대상자 구성 설명서](../../segmentation/ui/audience-composition.md)를 참조하세요. |
+
+[!DNL Segmentation Service]에 대한 자세한 내용은 [세분화 개요](../../segmentation/home.md)를 참조하십시오.
 
 ## 소스 {#sources}
 

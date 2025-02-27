@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '2342'
+source-wordcount: '2313'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 1%
 
 대상 블록에 대상을 추가하려면 **[!UICONTROL 대상 추가]**&#x200B;를 선택합니다.
 
-![대상자 추가 단추가 강조 표시됩니다.](../images/ui/audience-composition/add-audience.png)
+![대상자 추가 단추가 강조 표시됩니다.](../images/ui/audience-composition/select-add-audience.png)
 
 >[!IMPORTANT]
 >
@@ -91,7 +91,7 @@ ht-degree: 1%
 
 대상 블록에 사용자 지정 규칙을 추가하려면 **[!UICONTROL 규칙 빌드]**&#x200B;를 선택하십시오.
 
-![빌드 규칙 단추가 강조 표시되어 있습니다.](../images/ui/audience-composition/build-rule.png)
+![빌드 규칙 단추가 강조 표시되어 있습니다.](../images/ui/audience-composition/select-build-rule.png)
 
 세그먼트 빌더 가 나타납니다. 세그먼트 빌더를 사용하여 대상자가 따라야 할 사용자 지정 규칙을 만들 수 있습니다. 세그먼트 빌더 사용에 대한 자세한 내용은 [세그먼트 빌더 안내서](./segment-builder.md)를 참조하세요.
 
@@ -196,7 +196,7 @@ ht-degree: 1%
 
 **[!UICONTROL 데이터 집합 선택]** 팝오버가 나타납니다. 데이터 강화를 위해 추가할 데이터 세트를 선택한 다음 데이터 강화를 위해 데이터 세트를 추가하려면 **[!UICONTROL 선택]**&#x200B;합니다.
 
-![선택한 데이터 집합을 선택했습니다.](../images/ui/audience-composition/enrich-dataset-selected.png)
+![선택한 데이터 집합을 선택했습니다.](../images/ui/audience-composition/select-dataset.png)
 
 >[!IMPORTANT]
 >
@@ -212,27 +212,21 @@ ht-degree: 1%
 
 **[!UICONTROL Source 가입 키]**&#x200B;를 선택하려면 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택하십시오.
 
-![[!UICONTROL Source 조인 키]에 대한 필터 아이콘이 강조 표시되어 있습니다.](../images/ui/audience-composition/enrich-select-source-join-key.png)
-
 **[!UICONTROL 프로필 특성 선택]** 팝오버가 나타납니다. 소스 조인 키로 사용할 프로필 특성을 선택한 다음 **[!UICONTROL Select]**&#x200B;을(를) 선택하여 해당 특성을 소스 조인 키로 선택합니다.
 
-![원본 조인 키로 사용할 특성이 강조 표시됩니다.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+![원본 조인 키로 사용할 특성이 강조 표시됩니다.](../images/ui/audience-composition/select-source-join-key.png)
 
 **[!UICONTROL 데이터 보강 데이터 집합 조인 키]**&#x200B;를 선택하려면 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택하십시오.
 
-![데이터 보강 데이터 집합 조인 키]에 대한 필터 아이콘이 강조 표시되어 있습니다.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)[!UICONTROL 
-
 **[!UICONTROL 데이터 보강 특성]** 팝오버가 나타납니다. 데이터 보강 데이터 세트 조인 키로 사용할 특성을 선택한 다음 **[!UICONTROL Select]**&#x200B;을(를) 선택하여 데이터 보강 데이터 세트 조인 키로 해당 특성을 선택합니다.
 
-![데이터 보강 데이터 집합 조인 키로 사용할 특성이 강조 표시됩니다.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+![데이터 보강 데이터 집합 조인 키로 사용할 특성이 강조 표시됩니다.](../images/ui/audience-composition/select-enrichment-dataset-join-key.png)
 
 조인 키를 모두 추가했으므로 **[!UICONTROL 데이터 보강 특성]** 섹션이 나타납니다. 이제 대상자를 향상시킬 특성을 추가할 수 있습니다. 이러한 특성을 추가하려면 **[!UICONTROL 특성 추가]**&#x200B;를 선택하십시오.
 
-![특성 추가] 단추가 강조 표시되어 있습니다.](../images/ui/audience-composition/enrich-select-add-attribute.png)[!UICONTROL 
-
 **[!UICONTROL 데이터 보강 특성]** 팝오버가 나타납니다. 데이터 집합에서 특성을 선택하여 대상자를 강화한 다음 **[!UICONTROL 선택]**&#x200B;하여 대상자에 특성을 추가할 수 있습니다.
 
-![추가하려는 데이터 보강 특성이 강조 표시됩니다.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+![추가하려는 데이터 보강 특성이 강조 표시됩니다.](../images/ui/audience-composition/select-enrichment-attribute.png)
 
 <!-- ## [!UICONTROL Join] {#join-block}
 
@@ -282,13 +276,13 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 프로필 속성 목록이 나타납니다. 이 팝오버에서는 대상 순위를 지정할 속성 유형을 선택할 수 있습니다. **[!UICONTROL 선택]**&#x200B;을(를) 선택하여 등급 블록에 추가하십시오. 선택한 특성은 **만**&#x200B;일 수 있습니다.
 
-![특성 목록이 표시됩니다.](../images/ui/audience-composition/select-attribute-rank.png)
+![특성 목록이 표시됩니다.](../images/ui/audience-composition/rank-attribute.png)
 
 속성을 선택한 후 등급 지정 순서를 선택할 수 있습니다. 오름차순(가장 낮은 순에서 가장 높은 순까지) 또는 내림차순(가장 높은 순에서 가장 낮은 순까지)입니다.
 
 또한 **[!UICONTROL 프로필 제한 추가]** 전환을 활성화하여 반환되는 프로필 수를 제한할 수 있습니다. 이 토글이 활성화되면 **[!UICONTROL 포함된 프로필]** 필드 내에서 반환되는 최대 프로필 수를 설정할 수 있습니다.
 
-![프로필 제한 추가 토글이 강조 표시되어 반환된 프로필 수를 제한할 수 있습니다.](../images/ui/audience-composition/add-profile-limit.png)
+![프로필 제한 추가 토글이 강조 표시되어 반환된 프로필 수를 제한할 수 있습니다.](../images/ui/audience-composition/add-profile-limit-rank.png)
 
 ## [!UICONTROL 분할] {#split-block}
 
@@ -307,7 +301,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >title="기타 프로필"
 >abstract="기타 프로파일 토글을 사용하면 다른 경로의 지정된 조건과 일치하지 않는 나머지 프로파일을 사용하여 추가 경로를 만들 수 있습니다."
 
-**[!UICONTROL 분할]** 블록 형식을 사용하면 새 대상을 다양한 하위 대상으로 분할할 수 있습니다. 백분율이나 속성에 따라 이 대상을 분할할 수 있습니다. 대상을 하위 대상으로 분할할 때 이 분할은 **지속되지 않습니다**. 즉, 프로필이 각 평가에 대해 서로 다른 하위 대상에 있을 수 있습니다.
+**[!UICONTROL 분할]** 블록 형식을 사용하면 새 대상을 다양한 하위 대상으로 분할할 수 있습니다. 백분율이나 속성에 따라 이 대상을 분할할 수 있습니다.
 
 **[!UICONTROL 분할]** 블록을 추가하려면 **+** 아이콘을 선택한 다음 **[!UICONTROL 분할]**&#x200B;을 선택하십시오.
 
@@ -325,23 +319,25 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
 >title="영구 분할"
->abstract="이 옵션을 활성화하고 분할을 지속할 ID 네임스페이스를 선택하여 분할 비율을 지속으로 설정할 수 있습니다."
+>abstract="이 옵션을 활성화하고 ID 네임스페이스를 선택하여 백분율로 분할을 지속할 수 있습니다."
 
 백분율로 분할할 경우 대상은 제공된 경로 수와 백분율에 따라 무작위로 분할됩니다.
 
-예를 들어 각각 프로필의 비율이 다른 세 개의 경로가 있을 수 있습니다.
+![분할율이 강조 표시됩니다.](../images/ui/audience-composition/split-by-percentage.png)
 
-![저장된 대상자 수와 백분율 분석이 표시됩니다.](../images/ui/audience-composition/percentages.png)
+또는 ID를 제공하여 백분율 기반 분할을 지속되도록 할 수도 있습니다. 사용 가능한 ID 유형에는 조직에서 사용할 수 있는 모든 ID 네임스페이스가 포함됩니다.
+
+![ID로 분할 확인란이 강조 표시되어 있습니다. 또한 분할할 ID로 선택할 수 있는 드롭다운이 강조 표시됩니다.](../images/ui/audience-composition/split-by-identity.png)
 
 ### 속성으로 분할 {#split-attribute}
 
 속성별로 분할하면 제공된 속성을 기준으로 대상자가 분할됩니다. 분할할 특성을 선택하려면 **[!UICONTROL 분할]** 블록을 선택한 다음 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택합니다.
 
-![필터 단추를 선택하여 특성별로 필터링하는 방법을 표시합니다.](../images/ui/audience-composition/select-split-attribute.png)
+![필터 단추를 선택하여 특성별로 필터링하는 방법을 표시합니다.](../images/ui/audience-composition/split-by-attribute.png)
 
 프로필 속성 목록이 나타납니다. 특성 유형을 선택한 다음 **[!UICONTROL Select]**&#x200B;을(를) 선택하여 분할 블록에 추가합니다.
 
-![특성 목록이 표시됩니다.](../images/ui/audience-composition/select-attribute-exclude.png)
+![특성 목록이 표시됩니다.](../images/ui/audience-composition/select-attribute.png)
 
 특성을 선택한 후 **[!UICONTROL 값]** 필드 내에 값을 추가하여 어떤 프로필이 어떤 하위 대상에 속할지 선택할 수 있습니다.
 
