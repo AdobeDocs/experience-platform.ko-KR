@@ -2,10 +2,10 @@
 title: 데이터 수집을 위한 데이터 준비
 description: Adobe Experience Platform Web 및 Mobile SDK용 데이터스트림 구성 시 데이터를 Experience Data Model(XDM) 이벤트 스키마에 매핑하는 방법에 대해 알아봅니다.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: e90bd5abe502a7638ae54fca5eb0f051a925a2d8
 workflow-type: tm+mt
-source-wordcount: '1183'
-ht-degree: 60%
+source-wordcount: '1199'
+ht-degree: 59%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 60%
 
 데이터 준비는 [Experience Data Model(XDM)](../xdm/home.md)과의 데이터를 매핑, 변환 및 확인할 수 있는 Adobe Experience Platform 서비스입니다. Platform 지원 [데이터스트림](./overview.md)을 구성할 때 데이터 준비 기능을 사용하여 소스 데이터를 Platform Edge Network로 전송 시 XDM에 매핑할 수 있습니다.
 
-웹 페이지에서 전송된 모든 데이터는 XDM으로 Experience Platform에 도착해야 합니다. 3가지 방법으로 페이지 내 데이터 레이어의 데이터를 Experience Platform이 수락하는 XDM으로 변환할 수 있습니다.
+웹 페이지에서 전송된 모든 데이터는 Experience Platform에 XDM으로 도착해야 합니다. 3가지 방법으로 페이지 내 데이터 레이어의 데이터를 Experience Platform에서 허용하는 XDM으로 변환할 수 있습니다.
 
 1. 웹 페이지 자체에서 데이터 레이어를 XDM으로 다시 포맷합니다.
 2. 태그 기본 데이터 요소 기능을 사용하여 웹 페이지의 기존 데이터 레이어 형식을 XDM으로 다시 지정합니다.
@@ -25,7 +25,7 @@ ht-degree: 60%
 
 데이터 수집을 위한 데이터 준비가 유용한 두 가지 사용 사례가 있습니다.
 
-1. 웹 사이트에는 잘 구성되고, 관리되고, 유지되는 데이터 레이어가 있으며 JavaScript 조작을 사용하여 페이지의 XDM으로 변환하는 대신(태그 데이터 요소를 통해 또는 수동으로 JavaScript 조작을 통해) Edge Network으로 직접 전송하는 기본 설정이 있습니다.
+1. 웹 사이트에는 잘 구성되고, 관리되고, 유지되는 데이터 레이어가 있으며, JavaScript 조작을 사용하여 페이지에서 XDM으로 변환하는 대신(태그 데이터 요소를 통해 또는 수동으로 JavaScript 조작을 통해) Edge Network으로 직접 전송하는 것이 좋습니다.
 2. 태그 이외의 태그 지정 시스템이 사이트에 배포됩니다.
 
 ## WebSDK를 통해 Edge Network에 기존 데이터 레이어 보내기 {#send-datalayer-via-websdk}
@@ -166,6 +166,10 @@ XDM 오브젝트 데이터 요소에서 속성을 캡처하려면 동일한 규�
 
 * 수동 프로세스를 통해 이 데이터 스트림에 대한 [매핑 규칙을 만듭니다](#create-mapping).
 * 기존 데이터스트림에서 [매핑 규칙을 가져옵니다](#import-mapping).
+
+>[!IMPORTANT]
+>
+>데이터 준비 매핑은 `identityMap` XDM 페이로드를 무시하며, 이는 Real-Time CDP 대상에 대한 프로필 일치에 더 영향을 줄 수 있습니다.
 
 ### 매핑 규칙 만들기 {#create-mapping}
 
