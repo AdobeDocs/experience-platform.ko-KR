@@ -5,14 +5,18 @@ type: Documentation
 description: Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 실시간 고객 프로필 데이터에 액세스할 수 있습니다. 이 안내서에서는 프로필 API를 사용하여 "프로필"로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 9f9823a23c488e63b8b938cb885f050849836e36
+source-git-commit: efebf8e341b17fdd71586827753eadfe1c2cfa15
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '1706'
 ht-degree: 3%
 
 ---
 
 # 엔티티 끝점(프로필 액세스)
+
+>[!IMPORTANT]
+>
+>프로필 액세스 API를 사용한 ExperienceEvent 조회는 더 이상 사용되지 않습니다. ExperienceEvents 조회가 필요한 사용 사례에 대해 계산된 속성과 같은 기능을 사용하십시오. 이 변경 사항에 대한 자세한 내용은 Adobe 고객 지원 센터에 문의하십시오.
 
 Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페이스를 사용하여 [!DNL Real-Time Customer Profile] 데이터에 액세스할 수 있습니다. 이 안내서에서는 API를 사용하여 &quot;프로필&quot;로 더 일반적으로 알려진 엔티티에 액세스하는 방법을 간략하게 설명합니다. [!DNL Platform] UI를 사용하여 프로필에 액세스하는 방법에 대한 자세한 내용은 [프로필 사용 안내서](../ui/user-guide.md)를 참조하십시오.
 
@@ -22,7 +26,7 @@ Adobe Experience Platform을 사용하면 RESTful API 또는 사용자 인터페
 
 ## 엔티티 검색 {#retrieve-entity}
 
-필요한 쿼리 매개 변수와 함께 `/access/entities` 끝점에 대한 GET 요청을 만들어 프로필 엔터티 또는 해당 시계열 데이터를 검색할 수 있습니다.
+필요한 쿼리 매개 변수와 함께 `/access/entities` 끝점에 대한 GET 요청을 만들어 프로필 엔터티를 검색할 수 있습니다.
 
 >[!BEGINTABS]
 
@@ -138,100 +142,6 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 >[!NOTE]
 >
 >관련 그래프가 50개가 넘는 ID를 연결하는 경우 이 서비스는 HTTP 상태 422와 &quot;관련 ID가 너무 많습니다&quot;라는 메시지를 반환합니다. 이 오류가 표시되면 쿼리 매개 변수를 더 추가하여 검색 범위를 좁히는 것이 좋습니다.
-
->[!TAB 시계열 이벤트]
-
-**API 형식**
-
-```http
-GET /access/entities?{QUERY_PARAMETERS}
-```
-
-요청 경로에 제공된 쿼리 매개 변수는 액세스할 데이터를 지정합니다. 앰퍼샌드(&amp;)로 구분된 여러 매개 변수를 포함할 수 있습니다.
-
-시계열 이벤트 데이터에 액세스하려면 **다음 쿼리 매개 변수를 제공해야 합니다**.
-
-- `schema.name`: 엔터티의 XDM 스키마 이름입니다. 이 사용 사례에서는 이 값이 `schema.name=_xdm.context.experienceevent`입니다.
-- `relatedSchema.name`: 관련 스키마의 이름입니다. 스키마 이름이 경험 이벤트이므로 이 **은(는) `relatedSchema.name=_xdm.context.profile`이어야 합니다**.
-- `relatedEntityId`: 관련 엔터티의 ID입니다.
-- `relatedEntityIdNS`: 관련 엔터티의 네임스페이스입니다. `relatedEntityId`이(가) XID가 **아님**&#x200B;인 경우 이 값을 제공해야 합니다.
-
-부록의 [쿼리 매개 변수](#query-parameters) 섹션에 올바른 매개 변수의 전체 목록이 제공됩니다.
-
-**요청**
-
-다음 요청은 ID별로 프로필 엔터티를 찾고 엔터티와 연결된 모든 시계열 이벤트에 대한 속성 `endUserIDs`, `web` 및 `channel`의 값을 검색합니다.
-
-+++ 엔티티와 연결된 시계열 이벤트를 검색하기 위한 샘플 요청
-
-```shell
-curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-+++
-
-**응답**
-
-성공적인 응답은 요청 쿼리 매개 변수에 지정된 시계열 이벤트 및 관련 필드의 페이지가 매겨진 목록과 함께 HTTP 상태 200을 반환합니다.
-
->[!NOTE]
->
->요청에서 1개(`limit=1`)의 제한을 지정했으므로 아래 응답의 `count`은(는) 1이며 하나의 엔터티만 반환됩니다.
-
-+++ 요청된 시계열 이벤트 데이터를 포함하는 샘플 응답
-
-```json
-{
-    "_page": {
-        "orderby": "timestamp",
-        "start": "c8d11988-6b56-4571-a123-b6ce74236036",
-        "count": 1,
-        "next": "c8d11988-6b56-4571-a123-b6ce74236037"
-    },
-    "children": [
-        {
-            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
-            "entityId": "c8d11988-6b56-4571-a123-b6ce74236036",
-            "timestamp": 1531260476000,
-            "entity": {
-                "endUserIDs": {
-                    "_experience": {
-                        "ecid": {
-                            "id": "89149270342662559642753730269986316900",
-                            "namespace": {
-                                "code": "ecid"
-                            }
-                        }
-                    }
-                },
-                "channel": {
-                    "_type": "web"
-                },
-                "web": {
-                    "webPageDetails": {
-                        "name": "Fernie Snow",
-                        "pageViews": {
-                            "value": 1
-                        }
-                    }
-                }
-            },
-            "lastModifiedAt": "2018-08-21T06:49:02Z"
-        }
-    ],
-    "_links": {
-        "next": {
-            "href": "/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1"
-        }
-    }
-}
-```
-
-+++
 
 >[!TAB B2B 계정]
 
@@ -427,7 +337,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 
 ## 여러 엔티티 검색 {#retrieve-entities}
 
-`/access/entities` 끝점에 대한 POST 요청을 만들고 페이로드에 ID를 제공하여 여러 프로필 엔터티 또는 시계열 이벤트를 검색할 수 있습니다.
+`/access/entities` 끝점에 대한 POST 요청을 만들고 페이로드에 ID를 제공하여 여러 프로필 엔터티를 검색할 수 있습니다.
 
 >[!BEGINTABS]
 
@@ -648,290 +558,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
 ```
 
 +++
-
->[!TAB 시계열 이벤트]
-
-**API 형식**
-
-```http
-POST /access/entities
-```
-
-**요청**
-
-다음 요청은 프로필 ID 목록과 연결된 시계열 이벤트에 대한 사용자 ID, 현지 시간 및 국가 코드를 검색합니다.
-
-+++ 시계열 데이터 검색에 대한 샘플 요청
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-    "schema": {
-        "name": "_xdm.context.experienceevent"
-    },
-    "relatedSchema": {
-        "name": "_xdm.context.profile"
-    },
-    "identities": [
-        {
-            "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW"
-        }
-        {
-            "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY"
-        }
-    ],
-    "fields": [
-        "endUserIDs",
-        "placeContext.localTime",
-        "placeContext.geo.countryCode"
-    ],
-    
-    "timeFilter": {
-        "startTime": 11539838505
-        "endTime": 1539838510
-    },
-    "limit": 10,
-    "orderby": "-timestamp"
-}'
-```
-
-| 속성 | 유형 | 설명 |
-| -------- | ---- | ----------- |
-| `schema.name` | 문자열 | **(필수)** 엔터티가 속한 XDM 스키마의 이름입니다. |
-| `relatedSchema.name` | 문자열 | `schema.name`이(가) `_xdm.context.experienceevent`인 경우 이 값은 시계열 이벤트와 관련된 프로필 엔터티의 스키마를 지정해야 합니다. |
-| `identities` | 배열 | **(필수)** 연결된 시계열 이벤트를 검색할 프로필 배열 목록입니다. 배열의 각 항목은 다음 두 가지 방법 중 하나로 설정됩니다. <ol><li>ID 값과 네임스페이스로 구성된 정규화된 ID 사용</li><li>XID 제공</li></ol> |
-| `fields` | 문자열 | 문자열 배열로 반환될 XDM 필드. 기본적으로 모든 필드가 반환됩니다. |
-| `orderby` | 문자열 | `(+/-)timestamp`(으)로 기록되고 기본값은 `+timestamp`인 타임스탬프별 검색된 경험 이벤트의 정렬 순서입니다. |
-| `timeFilter.startTime` | 정수 | 시계열 개체를 필터링할 시작 시간(밀리초)을 지정합니다. 기본적으로 이 값은 사용 가능한 시간의 시작으로 설정됩니다. |
-| `timeFilter.endTime` | 정수 | 시계열 오브젝트를 필터링할 종료 시간(밀리초)을 지정합니다. 기본적으로 이 값은 사용 가능한 시간의 끝으로 설정됩니다. |
-| `limit` | 정수 | 반환할 최대 레코드 수입니다. 기본적으로 이 값은 1,000으로 설정됩니다. |
-
-+++
-
-**응답**
-
-성공적인 응답은 요청에 지정된 여러 프로필과 연결된 시계열 이벤트의 페이지 매김된 목록과 함께 HTTP 상태 200을 반환합니다.
-
-+++ 시계열 이벤트를 포함하는 샘플 응답
-
-```json
-{
-    "GkouAW-yD9aoRCPhRYROJ-TetAFW": {
-        "_page": {
-            "orderby": "timestamp",
-            "start": "ee0fa8eb-f09c-4d72-a432-fea7f189cfcd",
-            "count": 10,
-            "next": "40cb2fb3-78cd-49d3-806f-9bdb22748226"
-        },
-        "children": [
-            {
-                "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                "entityId": "ee0fa8eb-f09c-4d72-a432-fea7f189cfcd",
-                "timestamp": 1537275882000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "67971860962043911970658021809222795905",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "50353446361742744826197433431642033796",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a00003314-2fd9c00000000026",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-18T13:04:42Z",
-                        "geo": {
-                            "countryCode": "MX"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:35:01Z"
-            },
-            {
-                "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                "entityId": "a9e137b4-1348-4878-8167-e308af523d8b",
-                "timestamp": 1537275889000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "67971860962043911970658021809222795905",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "50353446361742744826197433431642033796",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a00003314-2fd9c00000000026",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-18T13:04:49Z",
-                        "geo": {
-                            "countryCode": "MX"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:35:01Z"
-            }
-        ],
-        "_links": {
-            "next": {
-                "href": "/entities",
-                "payload": {
-                    "schema": {
-                        "name": "_xdm.context.experienceevent"
-                    },
-                    "relatedSchema": {
-                        "name": "_xdm.context.profile"
-                    },
-                    "timeFilter": {
-                        "startTime": 1537275882000
-                    },
-                    "fields": [
-                        "endUserIDs",
-                        "placeContext.localTime",
-                        "placeContext.geo.countryCode"
-                    ],
-                    "identities": [
-                        {
-                            "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                            "start": "40cb2fb3-78cd-49d3-806f-9bdb22748226"
-                        }
-                    ],
-                    "limit": 10
-                }
-            }
-        }
-    },
-    "GkouAW-2u-7iWt5vQ9u2wm40JOZY": {
-        "_page": {
-            "orderby": "timestamp",
-            "start": "2746d0db-fa64-4e29-b67e-324bec638816",
-            "count": 9,
-            "next": ""
-        },
-        "children": [
-            {
-                "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY",
-                "entityId": "2746d0db-fa64-4e29-b67e-324bec638816",
-                "timestamp": 1537559483000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "76436745599328540420034822220063618863",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "48593470048917738786405847327596263131",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a80007451-03da600000000028",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-21T19:51:23Z",
-                        "geo": {
-                            "countryCode": "US"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:34:58Z"
-            },
-            {
-                "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY",
-                "entityId": "9bf337a1-3256-431e-a38c-5c0d42d121d1",
-                "timestamp": 1537559486000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "76436745599328540420034822220063618863",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "48593470048917738786405847327596263131",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a80007451-03da600000000028",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-21T19:51:26Z",
-                        "geo": {
-                            "countryCode": "US"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:34:58Z"
-            }
-        ],
-        "_links": {
-            "next": {
-                "href": ""
-            }
-        }
-    }
-}`
-```
-
-+++
-
->[!NOTE]
->
->이 예제 응답에서 첫 번째로 나열된 프로필(&quot;GkouAW-yD9aoRCPhRYROJ-TetAFW&quot;)은 `_links.next.payload`에 대한 값을 제공합니다. 즉, 이 프로필에 대한 추가 결과 페이지가 있습니다.
->
->이러한 결과에 액세스하려면 나열된 페이로드를 요청 본문으로 사용하여 `/access/entities` 끝점에 대한 추가 POST 요청을 수행할 수 있습니다.
 
 >[!TAB B2B 계정]
 
@@ -1609,7 +1235,7 @@ curl -X DELETE 'https://platform.adobe.io/data/core/ups/access/entities?schema.n
 
 | 매개변수 | 설명 | 예 |
 | --------- | ----------- | ------- |
-| `schema.name` | **(필수)** 엔터티의 XDM 스키마 이름입니다. | `schema.name=_xdm.context.experienceevent` |
+| `schema.name` | **(필수)** 엔터티의 XDM 스키마 이름입니다. | `schema.name=_xdm.context.profile` |
 | `relatedSchema.name` | `schema.name`이(가) `_xdm.context.experienceevent`인 경우 이 값 **must**&#x200B;은(는) 시계열 이벤트와 관련된 프로필 엔터티의 스키마를 지정합니다. | `relatedSchema.name=_xdm.context.profile` |
 | `entityId` | **(필수)** 엔터티의 ID입니다. 이 매개 변수의 값이 XID가 아닌 경우 ID 네임스페이스 매개 변수(`entityIdNS`)도 제공해야 합니다. | `entityId=janedoe@example.com` |
 | `entityIdNS` | `entityId`이(가) XID로 제공되지 않으면 이 필드 **은(는) ID 네임스페이스를 지정해야 합니다**. | `entityIdNS=email` |
