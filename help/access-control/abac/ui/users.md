@@ -6,7 +6,7 @@ exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '285'
-ht-degree: 1%
+ht-degree: 11%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_users_about"
->title="사용자란?"
+>title="사용자란 무엇입니까?"
 >abstract="사용자는 Experience Platform에 액세스할 수 있는 개인입니다. 조직의 리소스에 대한 개별 사용자의 액세스는 역할을 통해 관리됩니다."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="역할 관리"
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/abac/permissions-ui/roles" text="역할 관리"
 
 사용자 세부 정보 및 할당된 역할을 보려면 **[!UICONTROL 사용자]** 탭을 선택하십시오.
 

@@ -6,7 +6,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 6122ddc078101c26061e8662de3fcdcb1cb65992
 workflow-type: tm+mt
 source-wordcount: '884'
-ht-degree: 7%
+ht-degree: 15%
 
 ---
 
@@ -61,12 +61,12 @@ organizations = [{
 
 원하는 클라우드 저장소 대상에 [연결](/help/destinations/ui/connect-destination.md)하고, 클라우드 저장소 대상에 대한 [활성화 단계](/help/destinations/ui/activate-batch-profile-destinations.md)를 진행하고 [매핑](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 단계로 이동하십시오. 원하는 클라우드 대상에 연결할 때 **[!UICONTROL 배열, 맵, 개체 내보내기]** 토글을 선택해야 합니다. 자세한 내용은 아래 섹션을 참조하십시오.
 
-## 배열 내보내기, 맵, 개체 전환 {#export-arrays-maps-objects-toggle}
+## 배열, 맵 및 오브젝트 토글 내보내기 {#export-arrays-maps-objects-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
 >title="배열, 맵 및 오브젝트 내보내기"
->abstract="<p> 배열, 맵 및 오브젝트를 JSON 또는 Parquet 파일로 내보낼 수 있도록 설정을 <b>켜짐</b>으로 토글합니다. 매핑 단계의 소스 필드 보기에서 이러한 객체 유형을 선택할 수 있습니다. 토글이 켜져 있으면 매핑 단계에서 계산된 필드 옵션을 사용할 수 없습니다.</p><p>이 토글 <b>끄기</b>를 사용하면 계산된 필드 옵션을 사용하고 대상을 활성화할 때 다양한 데이터 변환 함수를 적용할 수 있습니다. 단, 배열, 맵, 오브젝트를 JSON이나 Parquet 파일로 내보낼 수는 <i>없으며</i> 해당 목적에 대한 별도의 대상을 구성해야 합니다.</p>"
+>abstract="<p> 배열, 맵 및 오브젝트를 JSON 또는 Parquet 파일로 내보낼 수 있도록 설정을 <b>켜짐</b>으로 토글합니다. 매핑 단계의 소스 필드 보기에서 이들 오브젝트 유형을 선택할 수 있습니다. 토글을 켜면 매핑 단계에서 계산된 필드 옵션을 사용할 수 없습니다.</p><p>이 설정을 <b>꺼짐</b>으로 토글하여 계산된 필드 옵션을 사용하고 대상자를 활성화할 때 다양한 데이터 변환 기능을 적용할 수 있습니다. 단, 배열, 맵, 오브젝트를 JSON이나 Parquet 파일로 내보낼 수는 <i>없으며</i> 해당 목적에 대한 별도의 대상을 구성해야 합니다.</p>"
 
 클라우드 저장소 대상에 연결할 때 **[!UICONTROL 배열 내보내기, 맵, 개체]** 토글을 설정하거나 해제할 수 있습니다.
 
@@ -74,7 +74,7 @@ organizations = [{
 
 배열, 맵 및 오브젝트를 JSON 또는 Parquet 파일로 내보낼 수 있도록 설정을 **켜짐**&#x200B;으로 토글합니다. 대상을 클라우드 저장소 대상으로 활성화할 때 [매핑 단계](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)의 원본 필드 보기에서 이러한 개체 유형을 선택할 수 있습니다. 그러나 이 설정을에 두고, [계산된 필드] 옵션을 사용하여 활성화 시 데이터를 변환할 수 없습니다.
 
-이 토글 **끄기**&#x200B;를 사용하면 계산된 필드 옵션을 사용하고 대상을 활성화할 때 다양한 데이터 변환 함수를 적용할 수 있습니다. 그러나 배열, 맵 및 개체를 JSON 또는 Parquet 파일로 내보낼 수 없으며 이를 위해 별도의 대상을 구성해야 합니다.
+이 설정을 **꺼짐**&#x200B;으로 토글하여 계산된 필드 옵션을 사용하고 대상자를 활성화할 때 다양한 데이터 변환 기능을 적용할 수 있습니다. 그러나 배열, 맵 및 개체를 JSON 또는 Parquet 파일로 내보낼 수 없으며 이를 위해 별도의 대상을 구성해야 합니다.
 
 ## 배열, 맵, 개체 내보내기 *켜짐* 전환 {#export-arrays-maps-objects-toggle-on}
 

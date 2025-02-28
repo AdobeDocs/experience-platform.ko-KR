@@ -6,7 +6,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
 source-wordcount: '2313'
-ht-degree: 1%
+ht-degree: 11%
 
 ---
 
@@ -38,13 +38,13 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
->title="대상자 차단"
+>title="대상자 블록"
 >abstract="대상 블록을 사용하면 새 대상을 구성하는 데 사용할 하위 대상을 추가할 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
 >title="병합 유형"
->abstract="병합 유형에 따라 선택한 하위 대상의 결합 방법이 결정됩니다. 지원되는 값에는 유니온, 교차 및 제외 겹침이 포함됩니다."
+>abstract="병합 유형은 선택한 하위 대상자가 결합되는 방식을 결정합니다. 지원되는 값에는 합집합, 교집합, 중첩 제외가 있습니다."
 
 **[!UICONTROL 대상]** 블록 형식을 사용하면 더 큰 새 대상을 구성하는 데 사용할 하위 대상을 추가할 수 있습니다. 기본적으로 **[!UICONTROL 대상]** 블록은 컴포지션 캔버스의 맨 위에 포함됩니다.
 
@@ -106,12 +106,12 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude"
 >title="블록 제외"
->abstract="제외 블록을 사용하면 지정된 대상자 또는 속성을 컴포지션에서 제외할 수 있습니다."
+>abstract="블록 제외를 사용하면 지정된 대상자 또는 속성을 구성에서 제외할 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude_type"
 >title="제외 유형"
->abstract="특정 대상에 속하는 프로필을 제외(대상별로 제외)하거나 특정 특성에 따라 프로필을 제외(특성별로 제외)할 수 있습니다."
+>abstract="특정 대상자에 속하는 프로필을 제외(대상자별 제외)하거나, 특정 속성을 기준으로 프로필을 제외(속성별 제외)할 수 있습니다."
 
 **[!UICONTROL 제외]** 블록 형식을 사용하면 지정된 하위 대상이나 특성을 더 큰 새 대상에서 제외할 수 있습니다.
 
@@ -160,23 +160,23 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich"
->title="블록 강화"
->abstract="강화 블록을 사용하면 Adobe Experience Platform 데이터 세트에서 오는 추가 속성으로 대상자를 강화할 수 있습니다."
+>title="블록 보강"
+>abstract="블록 보강을 사용하여 Adobe Experience Platform 데이터 세트에서 제공되는 추가 속성으로 대상자를 보강합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_dataset"
 >title="보강 데이터 세트"
->abstract="데이터 보강 데이터 세트에는 컴포지션과 연결할 데이터가 포함되어 있습니다."
+>abstract="보강 데이터 세트에는 구성과 연관시키려는 데이터가 포함되어 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich_criteria"
 >title="보강 기준"
->abstract="데이터 보강 기준에는 Source 조인 키 및 데이터 보강 데이터 세트 조인 키가 포함됩니다. 이 두 키는 소스 데이터 세트와 데이터 보강 데이터 세트를 조정합니다."
+>abstract="보강 기준에는 소스 조인 키와 보강 데이터 세트 조인 키가 포함됩니다. 이 두 가지 키는 소스 데이터 세트와 보강 데이터 세트를 조정합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_enrich_attributes"
 >title="보강 속성"
->abstract="데이터 보강 속성은 컴포지션과 연결하려는 속성입니다."
+>abstract="보강 속성은 구성과 연관시키고자 하는 속성입니다."
 
 >[!IMPORTANT]
 >
@@ -252,13 +252,13 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_ranking"
->title="등급 블록"
->abstract="등급 블록을 사용하면 특정 속성에 따라 프로필의 등급을 지정하고 컴포지션에 포함할 수 있습니다."
+>title="블록 순위"
+>abstract="블록 순위를 통해 특정 속성을 기반으로 프로필의 순위를 지정하고 구성에 포함할 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_rank_profilelimit_text"
 >title="프로필 제한 추가"
->abstract="프로필 제한 추가 토글을 사용하여 등급 프로세스의 일부로 포함할 최대 프로필 수를 지정할 수 있습니다."
+>abstract="프로필 제한 추가 토글을 사용하면 순위 지정 프로세스에 포함할 최대 프로필 수를 지정할 수 있습니다."
 
 **[!UICONTROL Rank]** 블록 형식을 사용하면 지정된 특성을 기준으로 프로필의 등급을 매기고 정렬하고 이러한 등급 프로필을 컴포지션에 포함할 수 있습니다.
 
@@ -288,18 +288,18 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split"
->title="블록 분할"
->abstract="분할 블록을 사용하면 컴포지션을 여러 경로로 분할할 수 있습니다."
+>title="분할 블록"
+>abstract="분할 블록을 사용하면 구성을 여러 경로로 나눌 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_type"
 >title="분할 유형"
->abstract="컴포지션을 비율 분할 또는 속성 분할로 분할할 수 있습니다. 비율 분할 은 프로필을 여러 경로로 무작위로 분할합니다. 속성 분할을 사용하면 지정된 속성에 따라 프로필을 분할할 수 있습니다."
+>abstract="구성을 백분율 분할이나 속성 분할로 나눌 수 있습니다. 백분율 분할은 프로필을 여러 경로로 임의 분할합니다. 속성 분할을 사용하면 지정된 속성을 기준으로 프로필을 분할할 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="기타 프로필"
->abstract="기타 프로파일 토글을 사용하면 다른 경로의 지정된 조건과 일치하지 않는 나머지 프로파일을 사용하여 추가 경로를 만들 수 있습니다."
+>abstract="기타 프로필 토글을 사용하면 다른 경로의 지정된 조건과 일치하지 않는 나머지 프로필을 사용하여 추가 경로를 만들 수 있습니다."
 
 **[!UICONTROL 분할]** 블록 형식을 사용하면 새 대상을 다양한 하위 대상으로 분할할 수 있습니다. 백분율이나 속성에 따라 이 대상을 분할할 수 있습니다.
 

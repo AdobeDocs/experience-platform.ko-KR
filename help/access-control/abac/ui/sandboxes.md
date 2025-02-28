@@ -6,7 +6,7 @@ exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
 source-wordcount: '259'
-ht-degree: 1%
+ht-degree: 17%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_sandboxes_about"
->title="샌드박스란?"
->abstract="샌드박스는 플랫폼의 단일 인스턴스 내에 있는 가상 파티션입니다. 샌드박스 내에서 수행되는 모든 콘텐츠 및 작업은 해당 샌드박스로 제한되며 다른 샌드박스에는 영향을 주지 않습니다. 샌드박스에 대한 액세스는 역할을 통해 관리됩니다."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home" text="샌드박스 개요"
+>title="샌드박스란 무엇입니까?"
+>abstract="샌드박스는 플랫폼의 단일 인스턴스 내 가상 파티션입니다. 샌드박스 내에서 수행되는 모든 콘텐츠와 작업은 해당 샌드박스에만 국한되며 다른 샌드박스에 영향을 미치지 않습니다. 샌드박스에 대한 액세스는 역할을 통해 관리됩니다."
+>additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/sandbox/home" text="샌드박스 개요"
 
 샌드박스는 단일 Experience Platform 인스턴스 내의 가상 파티션으로, 디지털 경험 애플리케이션의 개발 프로세스와 매끄럽게 통합할 수 있습니다. 샌드박스 내에서 수행되는 모든 콘텐츠 및 작업은 해당 샌드박스로만 제한되고 다른 샌드박스에는 영향을 주지 않습니다. 샌드박스에 대한 자세한 내용은 [샌드박스 개요](../../../sandboxes/home.md)를 참조하십시오.
 

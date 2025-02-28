@@ -1,20 +1,21 @@
 ---
-title: 계산된 필드를 사용하여 클라우드 스토리지 대상으로 내보낸 데이터에 대한 변환 수행
+title: 계산된 필드를 사용하여 클라우드 스토리지 대상으로 내보낸 데이터에 대한 변환을 수행합니다.
 type: Tutorial
 description: 계산된 필드 기능을 사용하여 클라우드 스토리지 대상으로 내보낸 데이터에 대한 변환을 수행하는 방법을 이해합니다
-source-git-commit: 6122ddc078101c26061e8662de3fcdcb1cb65992
+exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
+source-git-commit: 9ce451f54f180aa6ee1831ba08e178ba1a8c8e2f
 workflow-type: tm+mt
 source-wordcount: '1600'
-ht-degree: 3%
+ht-degree: 8%
 
 ---
 
-# 계산된 필드를 사용하여 클라우드 스토리지 대상으로 내보낸 데이터에 대한 변환 수행 {#data-transformation-calculated-fields}
+# 계산된 필드를 사용하여 클라우드 스토리지 대상으로 내보낸 데이터에 대한 변환을 수행합니다. {#data-transformation-calculated-fields}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="계산된 필드 추가"
->abstract="<p>클라우드 저장소 대상으로 내보낸 데이터에 대해 다양한 데이터 변환을 수행하려면 **계산된 필드 추가** 컨트롤을 사용하십시오. 예를 들어 데이터에 해싱을 적용하고 배열을 문자열로 연결하는 등의 작업을 수행할 수 있습니다."
+>abstract="<p>**계산된 필드 추가** 컨트롤을 사용하여 클라우드 스토리지 대상으로 내보낸 데이터에 다양한 데이터 변환을 수행합니다. 예를 들어 데이터에 해싱을 적용하고 배열을 문자열로 연결하는 등의 작업이 가능합니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="예시"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="알려진 제한 사항"
 
@@ -34,12 +35,12 @@ ht-degree: 3%
 1. 원하는 클라우드 저장소 대상에 [연결](/help/destinations/ui/connect-destination.md)합니다. 원하는 클라우드 대상에 연결할 때 **[!UICONTROL 배열, 맵, 개체 내보내기]** [옵션 해제](/help/destinations/ui/export-arrays-calculated-fields.md##export-arrays-maps-objects-toggle)를 전환하십시오.
 2. 클라우드 저장소 대상에 대한 [활성화 단계](/help/destinations/ui/activate-batch-profile-destinations.md)를 진행하고 [매핑](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 단계로 이동하십시오.
 
-## 계산된 필드를 사용하여 작업하는 방법 {#how-to-export-calculated-fields}
+## 계산된 필드로 작업하는 방법 {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="계층적 출력 스키마 활성화"
->abstract="배열, 맵 및 개체를 JSON 또는 Parquet 파일로 내보낼 수 있도록 하려면 이 설정을 켜거나 끕니다."
+>abstract="배열, 맵 및 오브젝트를 JSON 또는 Parquet 파일로 내보낼 수 있도록 설정을 켜짐으로 토글합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
