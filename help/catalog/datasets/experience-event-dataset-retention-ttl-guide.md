@@ -1,9 +1,10 @@
 ---
 title: TTL을 사용하여 데이터 레이크에서 경험 이벤트 데이터 세트 유지 관리
 description: Adobe Experience Platform API의 TTL(Time-To-Live) 구성을 사용하여 데이터 레이크에서 경험 이벤트 데이터 세트 보존을 평가, 설정 및 관리하는 방법을 알아봅니다. 이 안내서에서는 TTL 행 수준 만료가 데이터 보존 정책을 지원하고, 스토리지 효율성을 최적화하고, 효과적인 데이터 수명주기 관리를 보장하는 방법을 설명합니다. 또한 TTL을 효과적으로 적용하는 데 도움이 되는 사용 사례와 모범 사례를 제공합니다.
-source-git-commit: 74b6e5f10f7532745180760adf1d96bc57e7b590
+exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
+source-git-commit: affaeb0869423292a44eb7ada8343482bb163ca6
 workflow-type: tm+mt
-source-wordcount: '2106'
+source-wordcount: '2196'
 ht-degree: 0%
 
 ---
@@ -28,6 +29,12 @@ TTL은 시간이 지남에 따라 관련성을 잃는 시간에 민감한 데이
 - 관련이 없는 데이터를 최소화하여 쿼리 성능을 개선합니다.
 - 관련 정보만 유지하여 데이터 위생을 유지합니다.
 - 데이터 보존을 최적화하여 비즈니스 목표를 지원합니다.
+
+>[!NOTE]
+>
+>경험 이벤트 데이터 세트 유지 는 데이터 레이크에 저장된 이벤트 데이터에 적용됩니다. Real-Time Customer Data Platform에서 보존을 관리하는 경우 데이터 레이크 보존 설정과 함께 [경험 이벤트 만료](../../profile/event-expirations.md) 및 [익명 프로필 만료](../../profile/pseudonymous-profiles.md)을 사용하는 것이 좋습니다.
+>
+>TTL 구성은 권한을 기반으로 저장소를 최적화하는 데 도움이 됩니다. 프로필 저장소 데이터(Real-Time CDP에서 사용)는 30일 후에 부실 상태로 간주되어 제거될 수 있지만 데이터 레이크의 동일한 이벤트 데이터는 analytics 및 Data Distiller 사용 사례에 대해 12~13개월(또는 자격 기준에 따라 더 오래) 동안 사용할 수 있습니다.
 
 ### 업계 사례 {#industry-example}
 
@@ -121,7 +128,7 @@ curl -X GET \
                 "rowExpiration": {
                     "defaultValue": "P12M",
                     "maxValue": "P12M",
-                    "minValue": "P7D"
+                    "minValue": "P30D"
                 }
             },
             "adobe_unifiedProfile": {  
@@ -254,7 +261,7 @@ curl -X PATCH \
 | `extensions` | 데이터 세트와 관련된 추가 메타데이터에 대한 컨테이너입니다. |
 | `extensions.adobe_lakeHouse` | 행 수준 만료 구성을 포함하여 스토리지 아키텍처 관련 설정 지정 |
 | `rowExpiration` | 개체에는 데이터 세트의 보존 기간을 정의하는 TTL 설정이 포함되어 있습니다. |
-| `rowExpiration.ttlValue` | 데이터 세트의 레코드가 자동으로 제거되기 전 기간을 정의합니다. ISO-8601 기간 형식을 사용합니다(예: 3개월 동안 `P3M`, 1주 동안 `P7D`). |
+| `rowExpiration.ttlValue` | 데이터 세트의 레코드가 자동으로 제거되기 전 기간을 정의합니다. ISO-8601 기간 형식을 사용합니다(예: 3개월 동안 `P3M`, 1주 동안 `P30D`). |
 | `rowExpiration.valueStatus` | 문자열은 TTL 설정이 기본 시스템 값인지 또는 사용자가 설정한 사용자 지정 값인지를 나타냅니다. 가능한 값은 `default`, `custom`입니다. |
 | `rowExpiration.setBy` | TTL 설정을 마지막으로 수정한 사람을 지정합니다. 가능한 값은 `user`(수동으로 설정됨) 또는 `service`(자동으로 할당됨)입니다. |
 | `rowExpiration.updated` | 마지막 TTL 업데이트의 타임스탬프입니다. 이 값은 TTL 설정이 마지막으로 수정된 시기를 나타냅니다. |
@@ -418,4 +425,3 @@ XDM ExperienceEvent 클래스를 사용하여 만든 데이터 세트에 보존 
 - 보존 작업: [데이터 수명 주기 UI 안내서](../../hygiene/ui/dataset-expiration.md)를 통해 플랫폼 UI에서 데이터 세트 만료를 예약 및 자동화하거나 데이터 세트 보존 구성을 확인하고 만료된 레코드가 삭제되는지 확인하는 방법을 알아봅니다.
 - [데이터 집합 만료 API 끝점 안내서](../../hygiene/api/dataset-expiration.md): 행뿐만 아니라 전체 데이터 집합을 삭제하는 방법을 알아봅니다. 효율적인 데이터 보존을 위해 API를 사용하여 데이터 세트 만료를 예약, 관리 및 자동화하는 방법에 대해 알아봅니다.
 - [데이터 사용 정책 개요](../../data-governance/policies/overview.md): 데이터 보존 전략을 더 광범위한 규정 준수 요구 사항 및 마케팅 사용 제한 사항에 맞추는 방법에 대해 알아봅니다.
-
