@@ -3,9 +3,9 @@ title: Moengage 연결
 description: Moengage는 소비자와 브랜드 간의 고객 중심 상호 작용을 실시간으로 향상시키는 고객 참여 플랫폼입니다.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1036'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Adobe을 사용하면 통합이 매우 간단하고 직관적입니다. Adobe �
 
 ## 전제 조건 {#prerequisites}
 
-Adobe Experience Platform 데이터를 [!DNL Moengage](으)로 보내려면 먼저 다음 전제 조건을 참고하십시오.
+Adobe Experience Platform 데이터를 [!DNL Moengage]&#x200B;(으)로 보내려면 먼저 다음 전제 조건을 참고하십시오.
 
 * Adobe Experience Platform에서 MoEngage 대상을 사용하려면 먼저 사용자가 [!DNL Moengage] 계정에 액세스할 수 있어야 합니다. MoEngage 계정에 등록하거나 로그인하려면 다음 페이지를 방문하십시오. https://app.moengage.com
 
@@ -50,8 +50,8 @@ Adobe Experience Platform 데이터를 [!DNL Moengage](으)로 보내려면 먼�
 
 | 항목 | 유형 | 참고 |
 ---------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | [!DNL Moengage](으)로 내보낸 사용자 지정 특성과 함께 식별자(user_id, anonymous_id)로 세그먼트(대상자)의 모든 멤버를 내보냅니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+| 내보내기 유형 | **[!UICONTROL 프로필 기반]** | [!DNL Moengage]&#x200B;(으)로 내보낸 사용자 지정 특성과 함께 식별자(user_id, anonymous_id)로 세그먼트(대상자)의 모든 멤버를 내보냅니다. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필이 업데이트되는 즉시 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -100,7 +100,7 @@ Adobe Experience Platform 데이터를 [!DNL Moengage](으)로 보내려면 먼�
 
 대상 데이터를 [!DNL Adobe Experience Platform]에서 [!DNL Moengage] 대상으로 올바르게 보내려면 필드 매핑 단계를 거쳐야 합니다.
 
-매핑은 [!DNL Platform] 계정의 [!DNL Experience Data Model](XDM) 스키마 필드와 대상 대상의 해당 필드 필드 사이에 링크를 만드는 것으로 구성됩니다.
+매핑은 [!DNL Platform] 계정의 [!DNL Experience Data Model]&#x200B;(XDM) 스키마 필드와 대상 대상의 해당 필드 필드 사이에 링크를 만드는 것으로 구성됩니다.
 
 XDM 필드를 [!DNL Moengage] 대상 필드에 올바르게 매핑하려면 다음 단계를 따르십시오.
 
@@ -129,7 +129,7 @@ XDM 필드를 [!DNL Moengage] 대상 필드에 올바르게 매핑하려면 다�
 
 [!UICONTROL 대상 필드 선택] 창에서 다음 두 범주의 대상 필드 중에서 선택할 수 있습니다.
 * [!UICONTROL ID 네임스페이스 선택]: 이 옵션을 사용하여 [!DNL Platform] ID 네임스페이스를 [!DNL Moengage] ID 네임스페이스에 매핑합니다.
-* [!UICONTROL 사용자 지정 특성 선택]: 이 옵션을 사용하여 XDM 특성을 [!DNL Moengage] 계정에 정의한 사용자 지정 [!DNL Moengage] 특성에 매핑합니다. <br> 이 옵션을 사용하여 기존 XDM 특성의 이름을 [!DNL Moengage](으)로 바꿀 수도 있습니다. 예를 들어 `lastName` XDM 특성을 [!DNL Moengage]의 사용자 지정 `Last_Name` 특성에 매핑하면 [!DNL Moengage]에 `Last_Name` 특성이 아직 존재하지 않는 경우 이 특성을 만들고 `lastName` XDM 특성을 매핑합니다.
+* [!UICONTROL 사용자 지정 특성 선택]: 이 옵션을 사용하여 XDM 특성을 [!DNL Moengage] 계정에 정의한 사용자 지정 [!DNL Moengage] 특성에 매핑합니다. <br> 이 옵션을 사용하여 기존 XDM 특성의 이름을 [!DNL Moengage]&#x200B;(으)로 바꿀 수도 있습니다. 예를 들어 `lastName` XDM 특성을 [!DNL Moengage]의 사용자 지정 `Last_Name` 특성에 매핑하면 [!DNL Moengage]에 `Last_Name` 특성이 아직 존재하지 않는 경우 이 특성을 만들고 `lastName` XDM 특성을 매핑합니다.
 
 ![대상 매핑 필드 이동](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
 
@@ -143,7 +143,10 @@ XDM 필드를 [!DNL Moengage] 대상 필드에 올바르게 매핑하려면 다�
 
 ## 내보낸 데이터/데이터 내보내기 유효성 검사 {#exported-data}
 
-데이터를 [!DNL Moengage] 대상으로 내보냈는지 확인하려면 [!DNL Moengage] 계정의 사용자 프로필로 이동하십시오. AEP Segment 라는 사용자 속성이 표시됩니다.
+데이터를 [!DNL Moengage] 대상으로 내보냈는지 확인하려면 [!DNL Moengage] 계정의 사용자 프로필로 이동하십시오. 여기서는 자동으로 만들어진 `AEPSegments` 사용자 특성과 Adobe Experience Platform의 이전 단계에서 매핑된 다른 사용자 지정 특성을 찾아야 합니다.
+
+`AEPSegments`은(는) [!DNL Moengage]의 배열 형식 특성입니다. 이 목록에는 사용자가 Experience Platform에서 연결된 모든 Adobe 대상 이름이 나열됩니다.
+
 
 ![Moengage 대상 매핑 완료](../../assets/catalog/mobile-engagement/moengage/validation.png)
 
