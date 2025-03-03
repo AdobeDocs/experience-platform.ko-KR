@@ -1,14 +1,15 @@
 ---
 title: PubMatic Connect
 description: PubMatic은 미래의 프로그램 방식의 디지털 마케팅 공급망을 제공하여 고객 가치를 극대화합니다. PubMatic Connect는 플랫폼 기술과 전용 서비스를 결합하여 인벤토리와 데이터를 패키지하고 처리하는 방법을 개선합니다.
-last-substantial-update: 2023-12-14T00:00:00Z
+last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 2041c06e660e24f63d4c44adc0e8f3082bb007ae
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '1056'
 ht-degree: 2%
 
 ---
+
 
 # PubMatic Connect 대상 {#pubmatic-connect}
 
@@ -16,11 +17,21 @@ ht-degree: 2%
 
 [!DNL PubMatic Connect]을(를) 사용하여 미래의 프로그래밍 방식 디지털 마케팅 공급망을 제공하여 고객 가치를 극대화하십시오. [!DNL PubMatic Connect]은(는) 플랫폼 기술과 전용 서비스를 결합하여 인벤토리와 데이터를 패키지하고 처리하는 방법을 향상시킵니다.
 
-이 대상을 사용하여 대상 데이터를 [!DNL PubMatic Connect] 플랫폼으로 보냅니다.
+PubMatic Connect 플랫폼으로 대상 데이터를 보낼 수 있는 두 가지 대상이 있습니다. 기능은 약간 다릅니다.
+
+1. PubMatic Connect
+
+   초기 활성화 동안 이 대상은 PubMatic 플랫폼에서 대상을 자동으로 등록하고 내부 Adobe Experience Platform ID를 사용하여 매핑합니다.
+
+2. PubMatic Connect(사용자 지정 대상 ID 매핑)
+
+   이 대상은 활성화 워크플로 중에 매핑 ID를 수동으로 추가하도록 선택할 수 있습니다. PubMatic 플랫폼에서 기존 대상에게 데이터를 보내야 하거나 사용자 지정 &#39;Source 대상 ID&#39;가 필요한 경우 이 대상을 사용합니다.
+
+![대상 카탈로그에 있는 두 PubMatic 커넥터의 나란히 표시합니다.](/help/destinations/assets/catalog/advertising/pubmatic/two-pubmatic-connectors-side-by-side.png)
 
 >[!IMPORTANT]
 >
->대상 커넥터 및 문서 페이지는 [!DNL PubMatic] 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청이 있으면 `support@pubmatic.com`(으)로 직접 문의하십시오.
+> 대상 커넥터 및 문서 페이지는 [!DNL PubMatic] 팀에서 만들고 유지 관리합니다. 문의 사항이나 업데이트 요청이 있으면 `support@pubmatic.com`(으)로 직접 문의하십시오.
 
 ## 사용 사례 {#use-cases}
 
@@ -28,7 +39,7 @@ ht-degree: 2%
 
 ### 모바일, 웹 및 CTV 플랫폼에서 사용자 타겟팅 {#targeting}
 
-게시자 또는 데이터 공급자는 다양한 식별자를 사용하여 Adobe Experience Platform에서 [!DNL PubMatic Connect](으)로 대상을 모바일, 웹 및 CTV 플랫폼의 타겟 사용자로 보내려고 합니다.
+게시자 또는 데이터 공급자는 다양한 식별자를 사용하여 Adobe Experience Platform에서 [!DNL PubMatic Connect]&#x200B;(으)로 대상을 모바일, 웹 및 CTV 플랫폼의 타겟 사용자로 보내려고 합니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -39,7 +50,7 @@ ht-degree: 2%
 [!DNL PubMatic Connect]은(는) 아래 표에 설명된 ID 활성화를 지원합니다. [ID](/help/identity-service/features/namespaces.md)에 대해 자세히 알아보세요.
 
 | 대상 ID | 설명 | 고려 사항 |
-| --------------- | ------ | --- |
+| --------------- | ------------------------ | ------------------------------------------------------------------------------- |
 | GAID | GOOGLE ADVERTISING ID | 소스 ID가 GAID 네임스페이스인 경우 GAID 대상 ID를 선택합니다. |
 | IDFA | 광고주용 Apple ID | 소스 ID가 IDFA 네임스페이스인 경우 IDFA 대상 ID를 선택합니다. |
 | extern_id | 사용자 지정 사용자 ID | 소스 ID가 사용자 지정 네임스페이스인 경우 이 대상 ID를 선택합니다. |
@@ -51,9 +62,9 @@ ht-degree: 2%
 이 섹션에서는 이 대상으로 내보낼 수 있는 대상자 유형을 설명합니다.
 
 | 대상자 원본 | 지원됨 | 설명 |
-| --- | --------- | ------ |
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| --------------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -62,9 +73,9 @@ ht-degree: 2%
 대상 내보내기 유형 및 빈도에 대한 자세한 내용은 아래 표를 참조하십시오.
 
 | 항목 | 유형 | 참고 |
-| --- | --- | --- |
+| ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 내보내기 유형 | **[!UICONTROL 세그먼트 내보내기]** | PubMatic Connect 대상에 사용된 식별자(이름, 전화번호 또는 기타)를 사용하여 세그먼트의 모든 멤버(대상자)를 내보내고 있습니다. |
-| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. Experience Platform 평가를 기반으로 프로필이 세그먼트에서 업데이트되면 커넥터는 업데이트 다운스트림을 대상 플랫폼으로 전송합니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
+| 내보내기 빈도 | **[!UICONTROL 스트리밍]** | 스트리밍 대상은 &quot;항상&quot; API 기반 연결입니다. 세그먼트 평가를 기반으로 Experience Platform에서 프로필을 업데이트하면 커넥터가 업데이트 다운스트림을 대상 플랫폼으로 보냅니다. [스트리밍 대상](/help/destinations/destination-types.md#streaming-destinations)에 대해 자세히 알아보세요. |
 
 {style="table-layout:auto"}
 
@@ -128,6 +139,12 @@ ht-degree: 2%
 - 첫 번째 단계에서 선택한 식별자와 일치하는 [!DNL PubMatic UID] 형식 번호를 선택합니다.
 
 ![특성 및 ID 매핑](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
+
+### 대상자 예약
+
+PubMatic Connect(사용자 지정 대상 ID 매핑) 대상을 사용하는 경우, PubMatic 플랫폼의 &#39;Source 대상 ID&#39;에 해당하는 각 대상에 매핑 ID를 제공해야 합니다.
+
+![대상 예약](../..//assets/catalog/advertising/pubmatic/audience-scheduling-mapping-id.png)
 
 ## 내보낸 데이터/데이터 내보내기 유효성 검사 {#exported-data}
 
