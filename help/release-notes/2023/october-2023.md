@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2023년 10월
 description: Adobe Experience Platform의 2023년 10월 릴리스 정보입니다.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 39%
@@ -69,7 +69,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| (Beta) 계산된 필드에서 함수 해싱 지원 | 이제 [배열 내보내기](../../destinations/ui/export-arrays-calculated-fields.md) 또는 배열에서 요소에 대한 특정 함수 외에 추가 [해시 함수](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions)를 사용하여 내보낸 파일의 특성을 해시할 수 있습니다. 지원되는 해시 함수는 `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`입니다. |
+| (Beta) 계산된 필드에서 함수 해싱 지원 | 이제 [배열 내보내기](../../destinations/ui/export-arrays-maps-objects.md) 또는 배열에서 요소에 대한 특정 함수 외에 추가 [해시 함수](../../destinations/ui/export-arrays-maps-objects.md#hashing-functions)를 사용하여 내보낸 파일의 특성을 해시할 수 있습니다. 지원되는 해시 함수는 `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`입니다. |
 | (제한된 GA) 특정 대상에 대해 계정 대상자 활성화 | Real-Time CDP B2B 고객은 이제 특정 대상에 대해 [계정 대상자](../../segmentation/types/account-audiences.md)를 활성화할 수 있습니다. 이 기능에 대한 자세한 내용은 [계정 대상자 활성화 자습서](/help/destinations/ui/activate-account-audiences.md)를 참조하십시오. |
 
 {style="table-layout:auto"}

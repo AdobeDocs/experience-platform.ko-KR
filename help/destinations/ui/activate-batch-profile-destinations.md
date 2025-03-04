@@ -3,10 +3,10 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
-source-wordcount: '4387'
-ht-degree: 11%
+source-wordcount: '4374'
+ht-degree: 12%
 
 ---
 
@@ -65,7 +65,7 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 
 * **[!UICONTROL 세그먼테이션 서비스]**: 세그먼테이션 서비스에 의해 Experience Platform 내에서 생성된 대상입니다. 자세한 내용은 [세그먼테이션 설명서](../../segmentation/ui/overview.md)를 참조하세요.
 * **[!UICONTROL 사용자 지정 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드되는 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience)에 대한 설명서를 참조하십시오.
-* [!DNL Audience Manager]과(와) 같은 다른 Adobe 솔루션에서 가져온 다른 유형의 대상입니다.
+* 다른 Adobe 솔루션에서 가져온 다른 유형의 대상(예: [!DNL Audience Manager]).
 
 ![활성화할 대상을 하나 이상 선택할 때 표시되는 확인란입니다.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
@@ -142,7 +142,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
    ![일괄 처리 대상에 대한 활성화 흐름에서 세그먼트 후 평가 옵션을 강조 표시하는 이미지.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-고정된 시간에 활성화 작업을 실행하려면 **[!UICONTROL 예약됨]** 옵션을 사용하십시오. 이 옵션을 사용하면 매일 동시에 Experience Platform 프로필 데이터를 내보낼 수 있습니다. 그러나 활성화 작업이 시작되기 전에 배치 세분화 작업이 완료되었는지 여부에 따라 내보내는 프로필이 최신 상태가 아닐 수 있습니다.
+고정된 시간에 활성화 작업을 실행하려면 **[!UICONTROL 예약됨]** 옵션을 사용하십시오. 이 옵션을 사용하면 Experience Platform 프로필 데이터를 매일 같은 시간에 내보낼 수 있습니다. 그러나 활성화 작업이 시작되기 전에 배치 세분화 작업이 완료되었는지 여부에 따라 내보내는 프로필이 최신 상태가 아닐 수 있습니다.
 
    ![일괄 처리 대상에 대한 활성화 흐름에서 예약된 옵션을 강조 표시하고 시간 선택기를 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -214,7 +214,7 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 | **[!UICONTROL 사용자 지정 텍스트]** | 파일 이름에 추가할 사용자 지정 텍스트입니다. |
 | **[!UICONTROL 대상 ID]** | 대상자를 내보내는 데 사용하는 대상 데이터 흐름의 ID입니다. |
 | **[!UICONTROL 대상 이름]** | 대상을 내보내는 데 사용하는 대상 데이터 흐름의 이름입니다. |
-| **[!UICONTROL 조직 이름]** | Experience Platform 내 조직 이름. |
+| **[!UICONTROL 조직 이름]** | Experience Platform 내의 조직 이름입니다. |
 | **[!UICONTROL 샌드박스 이름]** | 대상을 내보내는 데 사용하는 샌드박스의 ID입니다. |
 
 {style="table-layout:auto"}
@@ -308,8 +308,8 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 
 [!DNL Platform]에서 중복 제거 키를 사용하는 방법에는 세 가지가 있습니다.
 
-* 단일 ID 네임스페이스를 [!UICONTROL 중복 제거 키](으)로 사용
-* [!DNL XDM] 프로필의 단일 프로필 특성을 [!UICONTROL 중복 제거 키](으)로 사용
+* 단일 ID 네임스페이스를 [!UICONTROL 중복 제거 키]&#x200B;(으)로 사용
+* [!DNL XDM] 프로필의 단일 프로필 특성을 [!UICONTROL 중복 제거 키]&#x200B;(으)로 사용
 * [!DNL XDM] 프로필의 두 프로필 특성 조합을 복합 키로 사용
 
 >[!IMPORTANT]
@@ -429,11 +429,11 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 | johndoe@example.com | D | John |
 | johndoe@example.com | Do | John |
 
-Adobe은 모든 프로필 레코드가 고유하게 식별되도록 [!DNL CRM ID] 또는 전자 메일 주소와 같은 id 네임스페이스를 중복 제거 키로 선택할 것을 권장합니다.
+Adobe에서는 모든 프로필 레코드가 고유하게 식별되도록 [!DNL CRM ID] 또는 이메일 주소와 같은 id 네임스페이스를 중복 제거 키로 선택할 것을 권장합니다.
 
 ### 타임스탬프가 동일한 프로필에 대한 중복 제거 동작 {#deduplication-same-timestamp}
 
-프로필을 파일 기반 대상으로 내보낼 때 중복 제거를 사용하면 여러 프로필에서 동일한 중복 제거 키와 동일한 참조 타임스탬프를 공유할 때 하나의 프로필만 내보내집니다. 이 타임스탬프는 프로필의 대상 멤버십 또는 ID 그래프가 마지막으로 업데이트된 순간을 나타냅니다. 프로필을 업데이트하고 내보내는 방법에 대한 자세한 내용은 [프로필 내보내기 동작](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) 문서를 참조하십시오.
+프로필을 파일 기반 대상으로 내보낼 때 중복 제거는 여러 프로필이 동일한 중복 제거 키와 동일한 참조 타임스탬프를 공유하는 경우 단 하나의 프로필만 내보내도록 할 수 있습니다. 이 타임스탬프는 프로필의 대상 멤버십 또는 ID 그래프가 마지막으로 업데이트된 순간을 나타냅니다. 프로필을 업데이트하고 내보내는 방법에 대한 자세한 내용은 [프로필 내보내기 동작](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2) 문서를 참조하십시오.
 
 #### 주요 고려 사항
 
@@ -464,9 +464,9 @@ Adobe은 모든 프로필 레코드가 고유하게 식별되도록 [!DNL CRM ID
 
 **안정성 향상**: 이 업데이트된 중복 제거 프로세스를 통해 좌표가 같은 연속 실행은 항상 동일한 결과를 만들어 일관성을 향상시킬 수 있습니다.
 
-### 계산된 필드를 통해 배열 내보내기 {#export-arrays-calculated-fields}
+### 계산된 필드를 통해 데이터 변환 수행 {#calculated-fields}
 
-Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 어레이 개체를 내보낼 수 있습니다. [배열 및 계산된 필드 내보내기](/help/destinations/ui/export-arrays-calculated-fields.md)에 대해 자세히 알아보고 기능에 액세스하려면 Adobe 담당자에게 문의하십시오.
+[계산된 필드](/help/destinations/ui/data-transformations-calculated-fields.md) 컨트롤을 사용하여 파일 기반 대상으로 내보낸 데이터에 대해 다양한 데이터 변환을 수행할 수 있습니다.
 
 ### 알려진 제한 사항 {#known-limitations}
 
@@ -501,7 +501,7 @@ Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 
 
 임시 해결 방법으로 Beta 실행 중에 내보낸 파일에 ID 네임스페이스를 추가해야 하는 경우 다음 중 하나를 수행할 수 있습니다.
 * 내보내기에 ID 네임스페이스를 포함하려는 데이터 흐름에 레거시 클라우드 스토리지 대상을 사용합니다
-* ID를 Experience Platform에 속성으로 업로드한 다음 클라우드 스토리지 대상으로 내보냅니다.
+* ID를 속성으로 Experience Platform에 업로드한 다음 클라우드 스토리지 대상으로 내보냅니다.
 
 ## 프로필 속성 선택 {#select-attributes}
 
@@ -554,7 +554,7 @@ Beta 고객은 Experience Platform에서 클라우드 스토리지 대상으로 
 >
 >이 단계는 [대상자 선택](#select-audiences) 단계 동안 **[!UICONTROL 사용자 지정 업로드]**&#x200B;대상자를 선택한 경우에만 표시됩니다.
 
-데이터 보강 속성은 **[!UICONTROL 사용자 지정 업로드]**(으)로 Experience Platform에서 수집된 사용자 지정 업로드 대상자에 해당합니다. 이 단계에서는 선택한 각 외부 대상에 대해 대상으로 내보낼 속성을 선택할 수 있습니다.
+데이터 보강 속성은 **[!UICONTROL 사용자 지정 업로드]**(으)로 Experience Platform에서 수집된 사용자 지정 업로드된 대상에 해당합니다. 이 단계에서는 선택한 각 외부 대상에 대해 대상으로 내보낼 속성을 선택할 수 있습니다.
 
 데이터 보강 특성 선택 단계를 보여 주는 ![UI 이미지입니다.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes-step.png)
 

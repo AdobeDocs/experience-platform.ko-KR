@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2023년 9월
 description: Adobe Experience Platform에 대한 2023년 9월 릴리스 정보입니다.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '2265'
 ht-degree: 30%
@@ -69,7 +69,7 @@ Adobe Experience Platform은 클라이언트측 고객 경험 데이터를 수�
 
 | 유형 | 기능 | 설명 |
 | --- | --- | --- |
-| 데이터스트림 | 장치 조회 지원 | 이제 데이터 스트림을 구성할 때 수집할 디바이스 조회 정보 수준을 선택할 수 있습니다. 장치 조회 정보에는 페이지와 상호 작용하는 데 사용되는 장치, 하드웨어, 운영 체제 및 브라우저에 대한 데이터가 포함됩니다. <br> 디바이스 조회 정보를 사용자 에이전트 및 클라이언트 힌트와 함께 수집할 수 없습니다. 디바이스 정보를 수집하도록 선택하면 사용자 에이전트 및 클라이언트 힌트 수집이 비활성화되고, 그 반대의 경우도 마찬가지입니다. 모든 장치 조회 정보가 `xdm:device` 필드 그룹에 저장됩니다. [데이터스트림 구성](../../datastreams/configure.md#geolocation-device-lookup)에 대한 설명서에서 자세히 알아보세요. |
+| 데이터 스트림 | 장치 조회 지원 | 이제 데이터 스트림을 구성할 때 수집할 디바이스 조회 정보 수준을 선택할 수 있습니다. 장치 조회 정보에는 페이지와 상호 작용하는 데 사용되는 장치, 하드웨어, 운영 체제 및 브라우저에 대한 데이터가 포함됩니다. <br> 디바이스 조회 정보를 사용자 에이전트 및 클라이언트 힌트와 함께 수집할 수 없습니다. 디바이스 정보를 수집하도록 선택하면 사용자 에이전트 및 클라이언트 힌트 수집이 비활성화되고, 그 반대의 경우도 마찬가지입니다. 모든 장치 조회 정보가 `xdm:device` 필드 그룹에 저장됩니다. [데이터스트림 구성](../../datastreams/configure.md#geolocation-device-lookup)에 대한 설명서에서 자세히 알아보세요. |
 | 확장 | [!DNL TikTok] 웹 이벤트 API 확장 | [[!DNL TikTok] 웹 이벤트 API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) 확장을 사용하면 Adobe Experience Platform Edge Network에서 캡처한 데이터를 활용하고 [!DNL TikTok] 웹 이벤트 API를 사용하여 서버측 이벤트 형식으로 [!DNL TikTok]에 보낼 수 있습니다. |
 
 {style="table-layout:auto"}
@@ -107,7 +107,7 @@ Experience Platform은 소비자 레코드 및 데이터 세트에 대한 프로
 
 ## 대상 {#destinations}
 
-[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
+[!DNL Destinations]는 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있는 대상 플랫폼과 사전 설치된 통합입니다. 대상을 사용해 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타기팅 광고 및 기타 많은 사용 사례를 위해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 
 **새로운 대상 또는 업데이트된 대상** {#new-updated-destinations}
 
@@ -116,7 +116,7 @@ Experience Platform은 소비자 레코드 및 데이터 세트에 대한 프로
 | [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | 새로운 기능 | 모바일, 웹, 디스플레이 및 연결된 TV 미디어에서 이전에 [!DNL LiveRamp]에 온보딩된 대상을 프리미엄 게시자로 활성화합니다. <br> [LiveRamp - Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md) 연결을 통해 대상자를 [!DNL LiveRamp] 계정에 온보딩한 후 새 [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) 연결을 사용하여 대상자를 다운스트림 대상으로 활성화합니다. |
 | [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | 새로운 기능 | [[!DNL HubSpot]](https://www.hubspot.com)은(는) 마케팅, 판매, 콘텐츠 관리 및 고객 서비스에 연결하는 데 필요한 모든 소프트웨어, 통합 및 리소스가 포함된 CRM 플랫폼입니다. 이를 통해 하나의 CRM 플랫폼에서 데이터, 팀 및 고객을 연결할 수 있습니다. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | 업데이트된 기능 | [!DNL Dynamics 365]의 기본 솔루션 내에서 만들어지지 않은 사용자 지정 필드에 대한 [!DNL Dynamics 365] 사용자 지정 필드 접두사에 대한 지원을 추가했습니다. [대상 세부 정보를 채우기](#destination-details) 단계에서 새 입력 필드 **[!UICONTROL 사용자 지정 접두사]**&#x200B;을(를) 추가했습니다. |
-| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | 업데이트된 기능 | 이제 Experience Cloud 대상 을 일반적으로 사용할 수 있습니다. 이 대상을 사용하여 Real-Time CDP에서 Audience Manager 및 Adobe Analytics으로 대상을 활성화합니다. Adobe Analytics에 대상을 보내려면 Audience Manager 라이선스가 필요합니다. |
+| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | 업데이트된 기능 | 이제 Experience Cloud 대상 대상을 일반적으로 사용할 수 있습니다. 이 대상을 사용하여 Real-Time CDP에서 Audience Manager 및 Adobe Analytics으로 대상을 활성화합니다. 대상을 Adobe Analytics으로 보내려면 Audience Manager 라이선스가 필요합니다. |
 
 {style="table-layout:auto"}
 
@@ -133,8 +133,8 @@ Add these to release notes as they go out
 
 | 기능 | 설명 |
 | ----------- | ----------- |
-| Real-Time CDP의 데이터 내보내기 | 이제 [데이터 세트 내보내기](../../destinations/ui/export-datasets.md) 기능을 일반적으로 사용할 수 있습니다. [구매한 Experience Platform 앱을 기반으로 내보낼 수 있는 데이터 세트](../../destinations/ui/export-datasets.md#datasets-to-export)를 확인하고, [데이터 세트 내보내기 보호](/help/destinations/guardrails.md#dataset-exports)를 확인하십시오. |
-| (Beta) 배열 유형 개체 내보내기 지원 | 기본 값(문자열, int 또는 부울 값) 배열을 클라우드 스토리지 대상에 플랫 스키마 파일로 내보냅니다. [설명서](../../destinations/ui/export-arrays-calculated-fields.md)의 기능에 대해 자세히 알아보세요. |
+| Real-Time CDP의 데이터 내보내기 | 이제 [데이터 세트 내보내기](../../destinations/ui/export-datasets.md) 기능을 일반적으로 사용할 수 있습니다. 구입한 Experience Platform 앱을 기반으로 내보낼 수 있는 [데이터 세트](../../destinations/ui/export-datasets.md#datasets-to-export)를 확인하고 데이터 세트 내보내기 [보호 기능](/help/destinations/guardrails.md#dataset-exports)을 확인하세요. |
+| (Beta) 배열 유형 개체 내보내기 지원 | 기본 값(문자열, int 또는 부울 값) 배열을 클라우드 스토리지 대상에 플랫 스키마 파일로 내보냅니다. [설명서](../../destinations/ui/export-arrays-maps-objects.md)의 기능에 대해 자세히 알아보세요. |
 | Destination SDK의 동적 드롭다운 선택기 | 이제 Destination SDK을 통해 대상을 만들 때 [동적 드롭다운 선택기](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors)를 사용하여 드롭다운 선택기의 필드를 API에서 검색한 값으로 채울 수 있습니다. |
 
 **수정 사항 및 개선 사항** {#destinations-fixes-and-enhancements}
@@ -153,7 +153,7 @@ XDM은 Adobe Experience Platform으로 가져오는 데이터에 대한 공통 �
 | 기능 | 설명 |
 | --- | --- |
 | 스키마 편집기에 추가된 빠른 작업 | 스키마 편집기의 캔버스에 새로운 빠른 작업이 추가되었습니다. 이제 JSON 구조를 복사하거나 편집기에서 직접 스키마를 삭제할 수 있습니다.<br>![스키마 편집기의 빠른 작업](../2023/assets/schema-editor-copy-json.png "더 많은 내용이 포함된 스키마 편집기 및 JSON에 복사 강조 표시됨."){width="100" zoomable="yes"} |
-| 사용자 지정 또는 표준 작성자별로 XDM 리소스 필터링 | 이제 사용 가능한 스키마, 필드 그룹, 데이터 형식 및 클래스 목록이 해당 생성 방법에 따라 사전 필터링됩니다. 따라서 리소스가 사용자 지정 빌드되었는지 또는 Adobe에 의해 만들어졌는지 여부에 따라 리소스를 필터링할 수 있습니다.<br>![스키마 작업 영역의 표준 및 사용자 지정 필터입니다.](../2023/assets/standard-and-custom-classes.png "표준 및 사용자 지정 필터가 강조 표시된 스키마 작업 영역입니다."){width="100" zoomable="yes"} <br> 자세한 내용은 [리소스 만들기 및 편집 설명서](../../xdm/ui/resources/classes.md#filter.md)를 참조하십시오. |
+| 사용자 지정 또는 표준 작성자별로 XDM 리소스 필터링 | 이제 사용 가능한 스키마, 필드 그룹, 데이터 형식 및 클래스 목록이 해당 생성 방법에 따라 사전 필터링됩니다. 이를 통해 리소스가 사용자 지정 빌드되었는지 또는 Adobe에서 만들었는지에 따라 필터링할 수 있습니다.<br>![스키마 작업 영역의 표준 및 사용자 지정 필터입니다.](../2023/assets/standard-and-custom-classes.png "표준 및 사용자 지정 필터가 강조 표시된 스키마 작업 영역입니다."){width="100" zoomable="yes"} <br> 자세한 내용은 [리소스 만들기 및 편집 설명서](../../xdm/ui/resources/classes.md#filter.md)를 참조하십시오. |
 
 **업데이트된 기능**
 
@@ -191,7 +191,7 @@ Adobe Experience Platform ID 서비스는 여러 디바이스 및 시스템에 �
 | 기능 | 설명 |
 | --- | --- |
 | ID 서비스 UI 개선 사항 | Experience Platform UI에서 향상된 사용자 정의 네임스페이스 만들기 도구를 사용하여 사용자 정의 네임스페이스 및 해당 ID 유형을 보다 효율적으로 관리할 수 있습니다. 향상된 ID 서비스 UI는 다음과 같은 기능을 제공합니다. <ul><li>컨텍스트 경험: ID 네임스페이스 및 ID 유형에 대한 시각적 큐, 명확성 및 컨텍스트입니다.</li><li>정확성: 더 이상 중복 ID 이름이 없어 오류 처리가 향상됩니다.</li><li>검색 기능: 제품 내 대화 상자에서 문서에 액세스합니다.</li></ul> 자세한 내용은 [사용자 지정 네임스페이스 만들기](../../identity-service/features/namespaces.md#create-namespaces)에 대한 안내서를 참조하십시오. |
-| ID 그래프 제한 변경 | ID 그래프 제한이 150개의 ID에서 50개의 ID로 변경되었습니다. 새 ID가 전체 그래프에 수집되면 수집 타임스탬프와 ID 유형에 따라 가장 오래된 ID가 삭제됩니다. 쿠키 ID 유형은 삭제 우선 순위가 지정됩니다. 프로덕션 샌드박스에 다음이 포함된 경우 Adobe 계정 팀에 문의하여 ID 유형 변경을 요청하십시오. <ul><li>개인 식별자(예: CRM ID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.</li><li>쿠키/장치 식별자가 교차 장치 ID 유형으로 구성된 사용자 지정 네임스페이스입니다.</li></ul> Adobe 엔지니어링에서 이러한 요청을 수동으로 처리합니다. 자세한 내용은 [ID 서비스 데이터 보호](../../identity-service/guardrails.md)를 읽고 [데이터 관리 라이선스 권한 부여 모범 사례](../../landing/license-usage-and-guardrails/data-management-best-practices.md)를 참조하세요. |
+| ID 그래프 제한 변경 | ID 그래프 제한이 150개의 ID에서 50개의 ID로 변경되었습니다. 새 ID가 전체 그래프에 수집되면 수집 타임스탬프와 ID 유형에 따라 가장 오래된 ID가 삭제됩니다. 쿠키 ID 유형은 삭제 우선 순위가 지정됩니다. 프로덕션 샌드박스에 다음이 포함된 경우 Adobe 계정 팀에 문의하여 ID 유형 변경을 요청하십시오. <ul><li>개인 식별자(예: CRM ID)가 쿠키/장치 ID 유형으로 구성되는 사용자 정의 네임스페이스입니다.</li><li>쿠키/장치 식별자가 교차 장치 ID 유형으로 구성된 사용자 지정 네임스페이스입니다.</li></ul> Adobe 엔지니어링 팀에서 이러한 요청을 수동으로 처리합니다. 자세한 내용은 [ID 서비스 데이터 보호](../../identity-service/guardrails.md)를 읽고 [데이터 관리 라이선스 권한 부여 모범 사례](../../landing/license-usage-and-guardrails/data-management-best-practices.md)를 참조하세요. |
 
 {style="table-layout:auto"}
 
@@ -233,7 +233,7 @@ Experience Platform은 다양한 데이터 공급자에 대한 소스 연결을 
 
 | 기능 | 설명 |
 | --- | --- |
-| 셀프 서비스 원본의 `offset` 페이지 매김에 대한 새 매개 변수(일괄 처리 SDK) | 이제 `offset` 페이지 매김 사용 시 소스에 대해 `endConditionName` 및 `endConditionValue`을(를) 지정할 수 있습니다. 이러한 매개 변수를 사용하면 다음 HTTP 요청에서 페이지 매김 루프를 종료하는 조건을 나타낼 수 있습니다. 자세한 내용은 [Self-Service Sources(Batch SDK)에 대한 페이지 매김 안내서](../../sources/sources-sdk/config/sourcespec.md#pagination)를 참조하십시오. |
+| 셀프 서비스 원본의 `offset` 페이지 매김에 대한 새 매개 변수(일괄 처리 SDK) | 이제 `offset` 페이지 매김 사용 시 소스에 대해 `endConditionName` 및 `endConditionValue`을(를) 지정할 수 있습니다. 이러한 매개 변수를 사용하면 다음 HTTP 요청에서 페이지 매김 루프를 종료하는 조건을 나타낼 수 있습니다. 자세한 내용은 [셀프 서비스 소스에 대한 페이지 매김 안내서(일괄 SDK)](../../sources/sources-sdk/config/sourcespec.md#pagination)를 참조하십시오. |
 
 {style="table-layout:auto"}
 

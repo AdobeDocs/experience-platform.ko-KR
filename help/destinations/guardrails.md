@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 818d751996cb84440f620ada50c6e6ec33cff40d
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1666'
 ht-degree: 2%
@@ -53,7 +53,7 @@ ht-degree: 2%
 | 대상에 매핑된 최대 속성 수 | 50 | 성능 보호 | 여러 대상 및 대상 유형의 경우 내보내기 위해 매핑할 프로필 속성 및 ID를 선택할 수 있습니다. 최적의 성능을 위해 데이터 흐름에서 대상에 최대 50개의 속성을 매핑해야 합니다. |
 | 최대 대상 수 | 10 | 시스템 강제 보호 | 데이터를 연결하고 활성화할 수 있는 대상을 최대 100개까지 만들 수 있습니다. *샌드박스당*. [Edge 개인화 대상(사용자 지정 개인화)](#edge-destinations-activation)은(는) 100개의 권장 대상 중 최대 10개를 구성할 수 있습니다. |
 | 대상에 활성화된 데이터 유형 | ID 및 ID 맵을 포함한 프로필 데이터 | 시스템 강제 보호 | 현재 *프로필 레코드 특성*&#x200B;을(를) 대상으로 내보낼 수만 있습니다. 이벤트 데이터를 설명하는 XDM 속성은 현재 내보내기에서 지원되지 않습니다. |
-| 대상에 활성화된 데이터 유형 - 배열 및 맵 속성 지원 | 부분적으로 사용 가능하 | 시스템 강제 보호 | 배열 특성을 [파일 기반 대상](/help/destinations/destination-types.md#file-based)(으)로 내보낼 수 있습니다. 기능에 대해 [자세히 알아보십시오](/help/destinations/ui/export-arrays-calculated-fields.md). |
+| 대상에 활성화된 데이터 유형 - 배열 및 맵 속성 지원 | 부분적으로 사용 가능하 | 시스템 강제 보호 | 배열 특성을 [파일 기반 대상](/help/destinations/destination-types.md#file-based)(으)로 내보낼 수 있습니다. 기능에 대해 [자세히 알아보십시오](/help/destinations/ui/export-arrays-maps-objects.md). |
 
 {style="table-layout:auto"}
 
