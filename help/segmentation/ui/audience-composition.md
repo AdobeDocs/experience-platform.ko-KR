@@ -3,14 +3,24 @@ solution: Experience Platform
 title: 대상 UI 안내서
 description: Adobe Experience Platform UI의 대상 구성은 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 영역을 제공합니다. 작업 영역에서는 조직의 대상을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
+source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
 workflow-type: tm+mt
-source-wordcount: '2313'
+source-wordcount: '2344'
 ht-degree: 11%
 
 ---
 
 # 대상 구성 UI 안내서
+
+>[!AVAILABILITY]
+>
+>이 기능을 사용하려면 다음 권한이 있어야 합니다.
+>
+>- 세그먼트 관리
+>- 프로필 관리
+>- 병합 정책 관리
+>
+>플랫폼 내 권한에 대한 자세한 내용은 [액세스 제어 개요](../../access-control/home.md#permissions)를 참조하십시오.
 
 >[!NOTE]
 >
