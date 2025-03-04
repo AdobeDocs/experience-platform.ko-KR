@@ -2,18 +2,14 @@
 title: Adobe Experience Platform 릴리스 정보 2025년 2월
 description: Adobe Experience Platform의 2025년 2월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: e8c1d7d3b5cc205b9258b4fec5dc7fa68d0d3b27
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1628'
 ht-degree: 97%
 
 ---
 
 # Adobe Experience Platform 릴리스 정보
-
->[!TIP]
->
->이번 릴리스에는 페더레이션된 대상자 구성 추가 기능이 개선된 상태로 포함되어 있습니다. 자세한 내용은 [페더레이션된 대상자 구성 릴리스 정보](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/release-notes)를 참조하십시오.
 
 **릴리스 일자: 2025년 2월 18일**
 
@@ -23,6 +19,7 @@ Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 - [카탈로그 서비스](#catalog-service)
 - [데이터 준비](#data-prep)
 - [대상](#destinations)
+- [페더레이션 대상 구성](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/release-notes){target="_blank"}
 - [소스](#sources)
 - [Segmentation Service](#segmentation)
 - [설명서 업데이트](#documentation-updates)
