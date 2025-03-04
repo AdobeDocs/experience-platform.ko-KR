@@ -3,7 +3,7 @@ title: Adobe Experience Platform 릴리스 정보 2024년 2월
 description: Adobe Experience Platform의 2024년 2월 릴리스 정보.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
 source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1244'
 ht-degree: 100%
 
