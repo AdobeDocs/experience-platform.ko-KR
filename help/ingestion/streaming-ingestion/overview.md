@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 스트리밍 수집 개요
 description: Adobe Experience Platform용 스트리밍 수집은 클라이언트 및 서버측 장치에서 실시간으로 Experience Platform으로 데이터를 전송하는 방법을 사용자에게 제공합니다.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
+source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # 스트리밍 수집 개요
 
-Adobe Experience Platform용 스트리밍 수집은 클라이언트 및 서버측 장치에서 실시간으로 [!DNL Experience Platform](으)로 데이터를 전송하는 방법을 제공합니다.
+Adobe Experience Platform용 스트리밍 수집은 클라이언트 및 서버측 장치에서 실시간으로 [!DNL Experience Platform]&#x200B;(으)로 데이터를 전송하는 방법을 제공합니다.
 
 ## 스트리밍 수집으로 무엇을 할 수 있습니까?
 
@@ -35,7 +35,7 @@ Adobe Experience Platform을 사용하면 각 개별 고객에 대해 [!DNL Real
 
 [!DNL Profile] 및 [!DNL Identity Service]에 대한 데이터 집합을 사용하는 방법에 대한 자세한 내용은 [데이터 집합 구성 가이드](../../profile/tutorials/dataset-configuration.md)를 참조하십시오.
 
-## Experience Platform 스트리밍 수집의 예상 대기 시간은 어떻게 됩니까?
+## Experience Platform에서 스트리밍 수집의 예상 대기 시간은 어떻게 됩니까?
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ Adobe Experience Platform을 사용하면 각 개별 고객에 대해 [!DNL Real
 | RPS 제한 | 참고 |
 | --- | --- |
 | 초당 요청 1000개 | `/collection/batch` 끝점을 사용할 때 여러 메시지가 포함될 수 있습니다. |
-| 10000에 개별 메시지 표시 | `/collection/batch` 끝점을 사용할 때 메시지를 더 적은 실제 요청으로 그룹화할 수 있습니다. |
+| 10000에 개별 메시지 표시 | `/collection/` 끝점을 사용할 때 메시지를 더 적은 실제 요청으로 그룹화할 수 있습니다. |
 
 >[!IMPORTANT]
 >
@@ -61,4 +61,4 @@ Adobe Experience Platform을 사용하면 각 개별 고객에 대해 [!DNL Real
 
 ## Adobe Experience Platform 확장
 
-Adobe Experience Platform 확장을 사용하여 새 스트리밍 연결을 만들 수 있습니다. [!DNL Experience Platform] 확장은 실시간 수집을 위해 [!DNL Experience Data Model](XDM) 형식의 비콘을 [!DNL Experience Platform](으)로 보내는 작업을 제공합니다. 자세한 내용은 [Experience Platform 확장](../../tags/extensions/client/web-sdk/overview.md) 설명서를 참조하십시오.
+Adobe Experience Platform 확장을 사용하여 새 스트리밍 연결을 만들 수 있습니다. [!DNL Experience Platform] 확장은 실시간 수집을 위해 [!DNL Experience Data Model]&#x200B;(XDM) 형식의 비콘을 [!DNL Experience Platform]&#x200B;(으)로 보내는 작업을 제공합니다. 자세한 내용은 [Experience Platform 확장](../../tags/extensions/client/web-sdk/overview.md) 설명서를 참조하십시오.
