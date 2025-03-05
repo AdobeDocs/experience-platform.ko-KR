@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 릴리스 노트
 description: Adobe Experience Platform Web SDK에 대한 최신 릴리스 정보입니다.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;릴리스 정보;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2285'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,18 @@ ht-degree: 5%
 
 이 문서에서는 Adobe Experience Platform Web SDK의 릴리스 정보를 다룹니다.
 웹 SDK 태그 확장에 대한 최신 릴리스 노트는 [웹 SDK 태그 확장 릴리스 노트](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)를 참조하십시오.
+
+## 버전 2.26.0 - 2025년 3월 5일
+
+**새로운 기능**
+
+- 이제 웹 SDK NPM 패키지를 사용하여 사용자 지정 웹 SDK 빌드를 만들고 필요한 라이브러리 구성 요소만 선택할 수 있습니다. 이로 인해 라이브러리 크기가 줄어들고 로드 시간이 최적화됩니다. [NPM 패키지를 사용하여 사용자 지정 웹 SDK 빌드를 만드는 방법](install/create-custom-build.md)에 대한 설명서를 참조하십시오.
+- 이제 [`getIdentity`](commands/getidentity.md) 명령이 `kndctr` ID 쿠키에서 직접 ECID를 자동으로 읽습니다. `ECID` 네임스페이스로 `getIdentity`을(를) 호출하고 ID 쿠키가 이미 있는 경우 Web SDK에서 더 이상 Edge Network에 ID 가져오기 요청을 하지 않습니다. 이제 쿠키에서 ID를 읽습니다.
+
+**수정 사항 및 개선 사항**
+
+- `collect` 호출이 전송된 후 `getIdentity` 명령이 ID를 반환하지 않는 문제가 해결되었습니다.
+- 개인화 리디렉션으로 인해 리디렉션이 발생하기 전에 콘텐츠가 깜박거리는 문제가 해결되었습니다.
 
 ## 버전 2.25.0 - 2025년 1월 23일 금요일
 
@@ -45,7 +57,7 @@ ht-degree: 5%
 **수정 사항 및 개선 사항**
 
 - 여러 인앱 메시지가 반환되면 우선 순위가 가장 높은 메시지만 표시됩니다. 다른 항목은 억제된 것으로 기록됩니다.
-- 빈 데이터 스트림 재정의는 더 이상 Edge Network에 전송되지 않으므로 서버측 라우팅 구성과의 잠재적 충돌을 줄일 수 있습니다.
+- 빈 데이터 스트림 재정의는 더 이상 Edge Network으로 전송되지 않으므로 서버측 라우팅 구성과의 잠재적 충돌을 줄일 수 있습니다.
 - 다른 Adobe SDK와 맞추기 위해 다음 로깅 메시지 구성 요소 이름의 이름을 변경했습니다.
    - `DecisioningEngine` 이름이 `RulesEngine`(으)로 바뀌었습니다.
    - `LegacyMediaAnalytics` 이름이 `MediaAnalyticsBridge`(으)로 바뀌었습니다.
@@ -172,13 +184,13 @@ ht-degree: 5%
 **수정 사항 및 개선 사항**
 
 - [!DNL at.js]이(가) 아닌 대체 위치에 코드가 주입된 Adobe Target VEC 사용자 지정 코드 작업 문제를 수정했습니다.
-- 일부 경계 사례에서 Edge Network 요청에 대해 &quot;referer&quot; 헤더가 제대로 설정되지 않는 문제가 해결되었습니다.
+- 일부 경계 사례에서 &quot;referer&quot; 헤더가 Edge Network에 대한 요청에 대해 제대로 설정되지 않는 문제가 해결되었습니다.
 - [사용자 에이전트 클라이언트 힌트](/help/web-sdk/use-cases/client-hints.md) 속성을 잘못된 유형으로 설정할 수 있는 문제를 해결했습니다.
 - `placeContext.localTime`이(가) 스키마와 일치하지 않는 문제를 해결했습니다.
 
 ## 버전 2.13.1 - 2022년 10월 13일 금요일
 
-- 구성 후 window.Visitor가 정의된 경우 방문자 마이그레이션이 작동하지 않는 문제를 해결했습니다. 이는 Adobe 태그로 실행할 때 특히 문제가 됩니다.
+- 구성 후 window.Visitor가 정의된 경우 방문자 마이그레이션이 작동하지 않는 문제를 해결했습니다. 이 문제는 Adobe 태그로 실행할 때 특히 발생합니다.
 - 일부 환경에서 `device.screenWidth` 및 `device.screenHeight`이(가) 문자열로 채워지는 문제를 해결했습니다.
 
 ## 버전 2.13.0 - 2022년 9월 28일
@@ -187,7 +199,7 @@ ht-degree: 5%
 
 - [페이지 전체 마이그레이션](home.md#migrating-to-web-sdk)에 대한 지원을 추가했습니다. 이제 Adobe Target 프로필은 방문자가 at.js와 웹 SDK 페이지 간을 이동할 때 보존됩니다.
 - [높은 엔트로피 사용자 에이전트 클라이언트 힌트](/help/web-sdk/use-cases/client-hints.md)에 대한 구성 가능한 지원이 추가되었습니다.
-- [`applyResponse`](/help/web-sdk/commands/applyresponse.md) 명령에 대한 지원을 추가했습니다. 이렇게 하면 [Edge Network 서버 API](../server-api/overview.md)를 통해 하이브리드 개인화가 가능합니다.
+- [`applyResponse`](/help/web-sdk/commands/applyresponse.md) 명령에 대한 지원을 추가했습니다. 이렇게 하면 [Edge Network Server API](../server-api/overview.md)를 통해 하이브리드 개인화가 가능합니다.
 - 이제 QA 모드 링크가 여러 페이지에서 작동합니다.
 
 **수정 사항 및 개선 사항**
@@ -200,7 +212,7 @@ ht-degree: 5%
 
 ## 버전 2.12.0 - 2022년 6월 29일 목요일
 
-- `cluster` Edge Network 위치 힌트를 URL의 일부로 사용하도록 쿠키에 대한 요청을 변경하십시오. 이렇게 하면 중간 세션에서 위치를 변경하는(예: VPN을 통해 또는 모바일 장치로 운전하는 등) 사용자가 동일한 에지에 도달하고 동일한 개인화 프로필을 갖게 됩니다.
+- `cluster` 쿠키 위치 힌트를 URL의 일부로 사용하도록 Edge Network에 대한 요청을 변경하십시오. 이렇게 하면 중간 세션에서 위치를 변경하는(예: VPN을 통해 또는 모바일 장치로 운전하는 등) 사용자가 동일한 에지에 도달하고 동일한 개인화 프로필을 갖게 됩니다.
 - getLibraryInfo 명령 응답에서 구성된 함수를 문자열 변환합니다.
 
 ## 버전 2.11.0 - 2022년 6월 13일 화요일
@@ -240,7 +252,7 @@ ht-degree: 5%
 
 - 개인화를 위해 섀도 DOM 선택기를 지원합니다.
 - 개인화 이벤트 유형 이름이 변경되었습니다. (`display` 및 `click`이(가) `decisioning.propositionDisplay` 및 `decisioning.propositionInteract`이(가) 됨)
-- 스크립트가 한 번만 실행되더라도 인라인 스크립트 태그가 있는 HTML 오퍼가 스크립트 태그를 페이지에 두 번 추가하는 문제를 해결했습니다.
+- 스크립트가 한 번만 실행되는데도 인라인 스크립트 태그가 있는 HTML 오퍼가 스크립트 태그를 페이지에 두 번 추가하던 문제를 수정했습니다.
 
 ## 버전 2.7.0 - 2021년 10월 26일 수요일
 
@@ -248,7 +260,7 @@ ht-degree: 5%
 
 ## 버전 2.6.4 - 2021년 9월 7일
 
-- `head` 요소에 적용된 HTML 설정 Adobe Target 작업이 전체 `head` 콘텐츠를 바꾸는 문제가 해결되었습니다. 이제 `head` 요소에 적용된 HTML 설정 작업이 HTML 추가로 변경되었습니다.
+- `head` 요소에 적용된 HTML Adobe Target 설정 작업이 전체 `head` 콘텐츠를 바꾸는 문제가 해결되었습니다. 이제 `head` 요소에 적용된 HTML 설정 작업이 HTML을 추가하도록 변경되었습니다.
 
 ## 버전 2.6.3 - 2021년 8월 16일
 
@@ -293,9 +305,9 @@ ht-degree: 5%
 - 단일 페이지 애플리케이션에 대한 개인화 지원이 추가되었습니다.
 - `window.console` API를 덮어쓸 수 있는 다른 페이지 내 JavaScript 코드와의 호환성을 개선했습니다.
 - 버그 수정: `documentUnloading`이(가) `true`(으)로 설정되었거나 링크 클릭이 자동으로 추적되는 경우 `sendBeacon`이(가) 사용되지 않습니다.
-- 버그 수정: 앵커 요소에 HTML 콘텐츠가 포함된 경우 링크가 자동으로 추적되지 않습니다.
+- 버그 수정: 앵커 요소에 HTML 콘텐츠가 포함되어 있으면 링크가 자동으로 추적되지 않습니다.
 - 버그 수정: 읽기 전용 `message` 속성이 포함된 특정 브라우저 오류가 적절하게 처리되지 않아 다른 오류가 고객에게 노출되었습니다.
-- 버그 수정: iframe의 HTML 페이지가 상위 창의 HTML 페이지와 다른 하위 도메인에서 온 경우 iframe 내에서 SDK을 실행하면 오류가 발생합니다.
+- 버그 수정: iframe의 SDK 페이지가 상위 창의 HTML 페이지와 다른 하위 도메인에서 온 경우 iframe 내에서 HTML을 실행하면 오류가 발생합니다.
 
 ## 버전 2.2.0 - 2020년 10월
 

@@ -2,16 +2,29 @@
 title: Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 description: Adobe Experience Platform 웹 SDK 태그 확장
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2413'
-ht-degree: 26%
+source-wordcount: '2580'
+ht-degree: 24%
 
 ---
 
 # Adobe Experience Platform 웹 SDK 확장 릴리스 노트
 
 이 문서에서는 Adobe Experience Platform Web SDK 태그 확장에 대한 릴리스 정보를 다룹니다. SDK 자체에 대한 최신 릴리스 노트는 [Platform Web SDK 릴리스 노트](/help/web-sdk/release-notes.md)를 참조하십시오.
+
+## 버전 2.29.0 - 2025년 3월 5일
+
+**새로운 기능**
+
+- 이제 사용자 지정 웹 SDK 빌드를 만들고 태그 확장 사용자 인터페이스에서 필요한 구성 요소를 선택할 수 있습니다. 이렇게 하면 사용되지 않는 구성 요소를 제외하여 빌드가 작아질 수 있습니다. [사용자 지정 웹 SDK 빌드 만들기](web-sdk-extension-configuration.md#custom-build)에 대한 설명서를 참조하세요.
+- Adobe Experience Platform Web SDK의 [버전 2.26.0](../../../../web-sdk/release-notes.md#2-26-0)을 포함합니다.
+
+**수정 사항 및 개선 사항**
+
+- [변수 업데이트](action-types.md#update-variable) 작업에서 누락된 데이터 요소를 정상적으로 처리하는 기능이 추가되었습니다. 이전에는 누락된 데이터 요소로 변수 업데이트 작업을 편집하면 오류 메시지가 표시되었습니다. 이제 다른 데이터 요소를 선택할 수 있으며 변수 업데이트 작업에 대한 모든 설정이 계속 적용됩니다. 데이터 요소는 삭제되거나 태그 속성이 중복되는 경우 누락될 수 있습니다.
+- [ID로 리디렉션](action-types.md#redirect-with-identity) 작업으로 새 탭을 열 수 있도록 지원을 추가했습니다. 이제 작업을 사용할 때 브라우저를 리디렉션할 때 앵커 태그의 `target` 특성이 사용됩니다.
+- 구성 재정의에서 Adobe Audience Manager을 비활성화할 수 없는 문제를 해결했습니다.
 
 ## 버전 2.28.0 - 2025년 1월 23일 금요일
 
@@ -30,7 +43,7 @@ ht-degree: 26%
 
 **새로운 기능**
 
-- [데이터스트림 재정의](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides)에 Experience Cloud 솔루션 및 Adobe Experience Platform 서비스를 비활성화하는 설정이 포함됩니다.
+- [데이터스트림 재정의](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides)에 이제 Experience Cloud 솔루션 및 Adobe Experience Platform 서비스를 비활성화하는 설정이 포함됩니다.
 - 이제 미디어 세션에 대해 [데이터 스트림 무시](../web-sdk/web-sdk-extension-configuration.md)를 만들 수 있습니다.
 
 Adobe Experience Platform Web SDK 버전 2.24.0을 포함합니다.
@@ -260,7 +273,7 @@ Adobe Experience Platform Web SDK 라이브러리의 버전 2.8.0을 포함합�
 
 Adobe Experience Platform Web SDK 라이브러리의 버전 2.7.0을 포함합니다.
 
-- `inferences` 및 `destinations`을(를) 포함하여 Edge Network 완료 보내기 이벤트에서 이벤트의 추가 정보를 사용할 수 있습니다. 이러한 기능은 현재 Beta의 일부로 롤아웃되고 있으므로 이러한 속성의 형식이 변경될 수 있습니다.
+- `inferences` 및 `destinations`을(를) 포함하여 이벤트 완료 보내기 이벤트에서 Edge Network의 추가 정보를 사용할 수 있습니다. 이러한 기능은 현재 Beta의 일부로 롤아웃되고 있으므로 이러한 속성의 형식이 변경될 수 있습니다.
 
 ## 버전 2.7.3 - 2021년 9월 7일
 
@@ -310,7 +323,7 @@ Adobe Experience Platform Web SDK 라이브러리의 버전 2.4.0을 포함합�
 - 이벤트 작업 UI 보내기에 [&quot;문서 언로딩&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) 확인란이 추가되었습니다.
 - [기본 동의를 구성](/help/web-sdk/commands/configure/defaultconsent.md)할 때 `out` 옵션에 대한 지원이 추가되었습니다. 이 옵션은 동의를 받을 때까지 모든 이벤트를 삭제합니다(기존 `pending` 옵션은 이벤트를 큐에 넣고 동의를 받으면 전송합니다).
 - 기본 동의 필드에 도구 설명을 추가했습니다.
-- [`setConsent`](/help/web-sdk/commands/setconsent.md) 명령을 사용할 때 Adobe의 동의 2.0 표준에 대한 지원이 추가되었습니다.
+- [`setConsent`](/help/web-sdk/commands/setconsent.md) 명령을 사용할 때 Adobe의 Consent 2.0 표준에 대한 지원이 추가되었습니다.
 - 사용자의 액세스 토큰이 잘못되었거나 잘못 제공된 경우 XDM 개체 데이터 요소 UI에 더 나은 오류가 표시됩니다.
 - XDM 개체 데이터 요소를 볼 때 브라우저 개발자 콘솔에 표시되는 교차 원본 오류(확장 작업에 영향을 주지 않음)가 수정되었습니다.
 
