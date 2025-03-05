@@ -6,10 +6,10 @@ breadcrumb-title: Web SDK 안내서
 user-guide-description: Edge 네트워크를 통해 Experience Cloud 서비스와 상호 작용할 수 있습니다.
 feature: Web SDK
 role: Developer
-source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
+source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 23%
+source-wordcount: '239'
+ht-degree: 22%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 23%
    * [태그 확장을 사용하여 웹 SDK 설치](install/extension.md)
    * [JavaScript 라이브러리를 사용하여 웹 SDK 설치](install/library.md)
    * [NPM 패키지를 사용하여 웹 SDK 설치](install/npm.md)
+   * [NPM 패키지를 사용하여 사용자 지정 웹 SDK 빌드 만들기](install/create-custom-build.md)
 * 명령 {#commands}
    * {#configure} 구성
       * [개요](commands/configure/overview.md)
@@ -86,7 +87,7 @@ ht-degree: 23%
          * [개요](personalization/adobe-target/analytics-logging/overview.md)
          * [클라이언트측 로깅](personalization/adobe-target/analytics-logging/client-side.md)
          * [서버측 로깅](personalization/adobe-target/analytics-logging/server-side.md)
-   * Offer decisioning {#offer-decisioning}
+   * Offer Decisioning {#offer-decisioning}
       * [개요](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [개요](personalization/ajo/overview.md)
