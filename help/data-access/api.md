@@ -2,9 +2,9 @@
 keywords: Experience Platform;홈;인기 항목;데이터 액세스;python sdk;spark sdk;데이터 액세스 api;내보내기;내보내기
 solution: Experience Platform
 title: Data Access API 안내서
-description: Data Access API는 개발자에게 Experience Platform 내에서 수집된 데이터 세트의 검색 가능성과 액세스 가능성에 초점을 맞춘 RESTful 인터페이스를 제공하여 Adobe Experience Platform을 지원합니다.
+description: Data Access API는 개발자에게 Experience Platform 내에서 수집된 데이터 세트의 검색 가능성과 액세스 가능성에 중점을 둔 RESTful 인터페이스를 제공하여 Adobe Experience Platform을 지원합니다.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: 78dbb735bad70e2115cbbaabb6cf74bf38983460
 workflow-type: tm+mt
 source-wordcount: '566'
 ht-degree: 4%
@@ -154,7 +154,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `data.name` | 파일 이름(예: `profiles.csv`)입니다. |
+| `data.name` | 파일 이름(예: `profiles.parquet`)입니다. |
 | `data.length` | 파일 크기(바이트)입니다. |
 | `data._links.self.href` | 파일을 다운로드할 URL입니다. |
 
@@ -201,7 +201,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `data.name` | 파일 이름(예: `profiles.csv`)입니다. |
+| `data.name` | 파일 이름(예: `profiles.parquet`)입니다. |
 | `data._links.self.href` | 파일을 다운로드할 URL입니다. |
 
 ## 파일의 내용에 액세스 {#access-file-contents}
@@ -231,7 +231,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | 속성 | 설명 |
 | -------- | ----------- |
 | `{FILE_ID}` | 데이터 세트 내 파일의 ID입니다. |
-| `{FILE_NAME}` | 파일의 전체 이름(예: `profiles.csv`)입니다. |
+| `{FILE_NAME}` | 파일의 전체 이름(예: `profiles.parquet`)입니다. |
 
 **응답**
 
