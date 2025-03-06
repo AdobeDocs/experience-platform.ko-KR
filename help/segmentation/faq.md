@@ -2,9 +2,9 @@
 title: 대상 FAQ
 description: 대상자 및 기타 세분화 관련 개념에 대한 FAQ에 대한 답변을 살펴보십시오.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
 workflow-type: tm+mt
-source-wordcount: '4830'
+source-wordcount: '4832'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ Adobe Experience Platform [!DNL Segmentation Service]에서는 [!DNL Real-Time C
 
 ### 외부에서 생성된 대상자를 활성화할 수 있는 곳은 어디입니까?
 
-외부에서 생성된 대상자는 어떤 대상에든 매핑될 수 있으며 Adobe Journey Optimizer 캠페인에서 사용할 수 있습니다.
+외부에서 생성된 대상자는 모든 대상에 매핑될 수 있으며 Adobe Journey Optimizer 캠페인 및 여정에서 사용할 수 있습니다.
 
 ### 외부에서 생성된 대상자를 삭제할 수 있습니까?
 
@@ -308,12 +308,12 @@ Audience Portal에서 빠른 작업 메뉴를 열고 &quot;[!UICONTROL 비활성
 
 또한 다음 제한 사항(?)도 참조하십시오 다음 블록을 사용할 때 적용:
 
-- 블록 분할
+- 분할 블록
    - 이 블록은 **문자열** 데이터 형식만 지원합니다. 분할 블록은 날짜 또는 부울 데이터 형식을 지원하지 **않습니다**.
    - 또한 이 블록은 데이터 보강 특성을 지원하지 **않습니다**.
 - 블록 제외
    - 이 블록은 날짜 또는 부울 데이터 형식을 지원하지 **않습니다**.
-- 등급 블록
+- 블록 순위
    - 이 블록은 데이터 보강 특성을 **지원하지 않습니다**.
 
 대상 구성 사용에 대한 자세한 내용은 [대상 구성 UI 안내서](./ui/audience-composition.md)를 참조하십시오.
