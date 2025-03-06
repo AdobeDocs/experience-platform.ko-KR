@@ -2,18 +2,14 @@
 title: 쿼리 로그
 description: 쿼리가 실행될 때마다 쿼리 로그가 자동으로 생성되며 UI를 통해 문제 해결에 도움을 줄 수 있습니다. 이 문서에서는 UI의 쿼리 서비스 로그 섹션을 사용하고 탐색하는 방법에 대해 간략하게 설명합니다.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '948'
 ht-degree: 0%
 
 ---
 
 # 쿼리 로그
-
->[!IMPORTANT]
->
->특정 쿼리 로그 기능은 현재 제한된 릴리스에 있으며 일부 고객은 사용할 수 없습니다. 편집 아이콘이 없으면 UI가 약간 다르게 표시될 수 있습니다. 또한 쿼리 이름을 선택하는 프로세스는 [!UICONTROL 쿼리 로그 세부 정보] 보기 대신 쿼리 편집기로 이동할 수 있습니다.
 
 Adobe Experience Platform은 API 및 UI를 통해 발생하는 모든 쿼리 이벤트의 로그를 유지 관리합니다. 이 정보는 쿼리 서비스 UI의 [!UICONTROL 로그] 탭에서 사용할 수 있습니다.
 
@@ -52,10 +48,6 @@ Adobe Experience Platform은 API 및 UI를 통해 발생하는 모든 쿼리 이
 >[!UICONTROL CTAS로 실행] 옵션은 SELECT 쿼리에만 사용할 수 있습니다.
 
 ![행이 선택된 쿼리 로그 작업 영역, CTAS로 실행, 쿼리 삭제 및 SQL 복사 아이콘이 강조 표시되어 있습니다.](../images/ui/query-log/edit-output-dataset.png)
-
->[!IMPORTANT]
->
->특정 쿼리 로그 기능은 현재 제한된 릴리스에 있으며 일부 고객은 사용할 수 없습니다.
 
 [!UICONTROL 이름] 열에서 쿼리 템플릿 이름을 선택하여 [!UICONTROL 쿼리 로그 세부 정보] 보기로 바로 이동할 수도 있습니다.
 

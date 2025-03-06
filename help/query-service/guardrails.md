@@ -3,9 +3,9 @@ keywords: Experience Platform;쿼리;쿼리 서비스;문제 해결;보호 기�
 title: 쿼리 서비스 보호
 description: 이 문서에서는 쿼리 사용을 최적화하는 데 도움이 되는 쿼리 서비스 데이터의 사용 제한에 대한 정보를 제공합니다.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 23c7a4590b365a49edb066567b6ebe2ac08c67e8
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1168'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 * **일괄 처리 쿼리**: 데이터를 정리하고, 모양을 만들고, 조작하고, 보강하기 위해 `INSERT TABLE AS SELECT` 및 `CREATE TABLE AS SELECT` 쿼리를 실행합니다. 이 쿼리의 결과 **은(는) 데이터 레이크에 저장**&#x200B;됩니다. 이 기능의 소비량을 측정하기 위한 지표는 계산 시간입니다.
 
-* **쿼리 서비스 사용자**: Customer Journey Analytics, Adobe Real-time Customer Data Platform 및/또는 Adobe Journey Optimizer에 대해 현재 라이선스 내에서 제공된 쿼리 서비스 사용자를 Data Distiller에서도 사용할 수 있습니다. 쿼리 서비스 사용자는 기능 간에 공유됩니다.
+* **쿼리 서비스 사용자**: Customer Journey Analytics, Adobe Real-Time Customer Data Platform 및/또는 Adobe Journey Optimizer에 대한 현재 라이선스에서 제공된 쿼리 서비스 사용자를 Data Distiller에서도 사용할 수 있습니다. 쿼리 서비스 사용자는 기능 간에 공유됩니다.
 
 * **임시 사용자**: 임시 사용자는 임시 쿼리를 실행하는 사용자입니다.
 
@@ -35,15 +35,13 @@ ht-degree: 1%
 
 * **보고 API**: 데이터 가져오기 호출을 위한 API(내부 또는 외부)입니다. 확장 보고 데이터 모델은 Real-Time CDP 대시보드 데이터 모델과 같은 Adobe Experience Platform의 기본 보고 데이터 모델에서 파생됩니다.
 
-아래 그림은 쿼리 서비스 기능이 현재 어떻게 패키지화되고 라이선스가 부여되는지 요약한 것입니다.
-
 ## 보호 유형
 
 이 문서에는 두 가지 유형의 기본 제한이 있습니다.
 
 | 보호 유형 | 설명 |
 |----------|---------|
-| **성능 보호(소프트 제한)** | 성능 보호는 사용 사례의 범위와 관련된 사용 제한입니다. 성능 가드레일을 초과하면 성능 저하 및 지연이 발생할 수 있습니다. Adobe은 이러한 성능 저하의 원인이 아닙니다. 성능 가드레일을 지속적으로 초과하는 고객은 성능 저하를 방지하기 위해 추가 용량의 라이센스를 선택할 수 있습니다. |
+| **성능 보호(소프트 제한)** | 성능 보호는 사용 사례의 범위와 관련된 사용 제한입니다. 성능 가드레일을 초과하면 성능 저하 및 지연이 발생할 수 있습니다. Adobe은 이러한 성능 저하에 대한 책임이 없습니다. 성능 가드레일을 지속적으로 초과하는 고객은 성능 저하를 방지하기 위해 추가 용량의 라이센스를 선택할 수 있습니다. |
 | **시스템 적용 보호 기능(하드 제한)** | 시스템에서 적용되는 가드레일은 Real-Time CDP UI 또는 API에 의해 적용됩니다. 이는 UI 및 API가 귀하를 차단하거나 오류를 반환하므로 초과할 수 없는 제한입니다. |
 
 {style="table-layout:auto"}
@@ -105,6 +103,6 @@ Real-Time CDP 제품 설명 문서의 기타 Experience Platform 서비스 보�
 
 * [Real-Time CDP 보호 기능](/help/rtcdp/guardrails/overview.md)
 * 다양한 Experience Platform 서비스에 대한 [전체 지연 다이어그램](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams).
-* [Real-time Customer Data Platform(B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2C 에디션 - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2P - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform(B2B - Prime 및 Ultimate 패키지)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

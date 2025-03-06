@@ -2,9 +2,9 @@
 title: 쿼리 일정
 description: Adobe Experience Platform UI를 통해 예약된 쿼리 실행을 자동화하고, 쿼리 일정을 삭제 또는 비활성화하고, 사용 가능한 예약 옵션을 활용하는 방법을 알아봅니다.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2027'
 ht-degree: 0%
 
 ---
@@ -118,10 +118,6 @@ ht-degree: 0%
 경고 규칙이 정의되는 구조를 포함하여 Adobe Experience Platform의 경고에 대한 개요는 [경고 개요](../../observability/alerts/overview.md)를 참조하십시오. Adobe Experience Platform UI에서 경고 및 경고 규칙을 관리하는 방법에 대한 지침은 [경고 UI 안내서](../../observability/alerts/ui.md)를 참조하십시오.
 
 ### 예약된 매개 변수가 있는 쿼리에 대해 매개 변수 설정 {#set-parameters}
-
->[!IMPORTANT]
->
->매개 변수가 있는 쿼리 UI 기능은 현재 **제한된 릴리스 전용**&#x200B;에서 사용할 수 있으며 일부 고객은 사용할 수 없습니다. 매개 변수가 있는 쿼리에 대한 액세스 권한이 없는 경우 [일정 삭제 또는 비활성화](#delete-schedule) 섹션을 계속하십시오.
 
 매개 변수가 있는 쿼리에 대해 예약된 쿼리를 만드는 경우 이제 이러한 쿼리 실행에 대한 매개 변수 값을 설정해야 합니다.
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 쿼리 편집기 UI 안내서
 description: 쿼리 편집기는 Adobe Experience Platform Query Service에서 제공하는 대화형 도구로서, Experience Platform 사용자 인터페이스에서 고객 경험 데이터에 대한 쿼리를 작성하고, 유효성을 검사하고, 실행할 수 있습니다. 쿼리 편집기는 분석 및 데이터 탐색을 위한 쿼리 개발을 지원하며, 이를 통해 개발 목적으로 대화형 쿼리를 실행하고 비대화형 쿼리를 실행하여 Experience Platform의 데이터 세트를 채울 수 있습니다.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e1ecdb5d701093d9c73b6a05dad9a4dd848e0083
+source-git-commit: ae189e2f6d303043e32e6ca658161bcdf4c28dc6
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2682'
 ht-degree: 0%
 
 ---
@@ -192,12 +192,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >실행되지 않는 쿼리는 로그에 저장되지 않습니다. 쿼리 서비스에서 쿼리를 사용할 수 있으려면 쿼리를 실행하거나 쿼리 편집기에 저장해야 합니다.
 
-### [!BADGE 제한된 가용성]{type=Informative} 개체 브라우저 {#object-browser}
-
->[!AVAILABILITY]
->
-데이터 세트 탐색 레일은 Data Distiller 고객만 사용할 수 있습니다. Platform UI에 왼쪽 데이터 세트 탐색 레일이 포함되어 있지 않을 수 있습니다. 이 문서의 다른 이미지는 데이터 세트 탐색 레일을 반영하지 않을 수 있습니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.<br>
-개체 브라우저는 현재 **제한된 릴리스**&#x200B;에서만 사용할 수 있습니다. 조기 릴리스 액세스 권한을 얻으려면 Adobe 담당자에게 문의하십시오.
+### 개체 브라우저 {#object-browser}
 
 개체 브라우저를 사용하여 데이터 세트를 쉽게 검색하고 필터링할 수 있습니다. 개체 브라우저는 데이터 세트가 많은 대규모 환경에서 테이블 및 데이터 세트를 검색하는 데 소요되는 시간을 줄입니다. 관련 데이터 및 메타데이터에 대한 액세스 간소화를 통해 쿼리 작성에 더 많은 집중할 수 있으며 탐색에는 더 적은 시간을 할애할 수 있습니다.
 
@@ -221,7 +216,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 #### 하위 표 탐색
 
-하위 테이블 또는 연결된 테이블을 탐색하려면 목록에서 테이블 이름 옆에 있는 드롭다운 화살표를 선택합니다. 이렇게 하면 테이블이 확장되어 연결된 자식 테이블이 표시되고, 데이터 구조를 명확하게 볼 수 있으므로 쿼리 구성이 더욱 복잡해집니다. 필드 이름 옆의 아이콘은 열의 데이터 유형, to 복잡한 쿼리 중에 이를 식별하는 데 도움이 됩니다.
+하위 테이블 또는 연결된 테이블을 탐색하려면 목록에서 테이블 이름 옆에 있는 드롭다운 화살표를 선택합니다. 이렇게 하면 테이블이 확장되어 연결된 자식 테이블이 표시되고, 데이터 구조를 명확하게 볼 수 있으므로 쿼리 구성이 더욱 복잡해집니다. 필드 이름 옆에 있는 아이콘은 복잡한 쿼리 중에 열의 데이터 유형을 식별하는 데 도움이 됩니다.
 
 ![필터링된 테이블 목록이 표시된 쿼리 편집기입니다.](../images/ui/query-editor/child-table-list.png)
 
@@ -237,7 +232,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 >[!NOTE]
 >
-콘솔에는 쿼리 실행으로 인해 발생한 오류만 표시됩니다. 쿼리가 실행되기 전에 발생하는 쿼리 유효성 검사 오류는 표시되지 않습니다.
+>콘솔에는 쿼리 실행으로 인해 발생한 오류만 표시됩니다. 쿼리가 실행되기 전에 발생하는 쿼리 유효성 검사 오류는 표시되지 않습니다.
 
 ### 쿼리 결과 {#query-results}
 
@@ -257,7 +252,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 >[!NOTE]
 >
-비디오에 표시된 UI는 오래되었지만 워크플로우에 사용된 로직은 그대로 유지됩니다.
+>비디오에 표시된 UI는 오래되었지만 워크플로우에 사용된 로직은 그대로 유지됩니다.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
