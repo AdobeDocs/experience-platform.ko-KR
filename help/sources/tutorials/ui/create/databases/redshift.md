@@ -3,9 +3,9 @@ title: Ui를 사용하여 AWS Redshift를 Experience Platform에 연결
 description: 소스 UI를 사용하여 AWS Redshift 계정을 Experience Platform에 연결하는 방법을 알아봅니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: dd9aee1ac887637d4761188d6dbcf55ad5bde407
+source-git-commit: 8533aa3527bfb74a77f5b15dacf9ecfe622477d5
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 >
 >[!DNL AWS Redshift] 소스는 Real-Time Customer Data Platform Ultimate을 구매한 사용자가 소스 카탈로그에서 사용할 수 있습니다.
 
-사용자 인터페이스를 사용하여 [!DNL AWS Redshift] 계정을 Adobe Experience Platform에 연결하는 방법에 대해 알아보려면 이 안내서를 참조하십시오.
+UI의 소스 작업 영역을 사용하여 [!DNL AWS Redshift] 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 안내서를 참조하십시오.
 
 ## 시작하기
 
