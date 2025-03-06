@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 설명자 API 끝점
 description: 스키마 레지스트리 API의 /descriptors 끝점을 사용하면 경험 애플리케이션 내에서 XDM 설명자를 프로그래밍 방식으로 관리할 수 있습니다.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 866e00459c66ea4678cd98d119a7451fd8e78253
+source-git-commit: d6015125e3e29bdd6a6c505b5f5ad555bd17a0e0
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: '2192'
 ht-degree: 1%
 
 ---
@@ -195,7 +195,7 @@ curl -X POST \
 
 ## 설명자 업데이트 {#put}
 
-PUT 요청의 경로에 해당 `@id`을(를) 포함하여 설명자를 업데이트할 수 있습니다.
+PUT 요청의 경로에 `@id`을(를) 포함하여 설명자를 업데이트할 수 있습니다.
 
 **API 형식**
 
@@ -211,11 +211,11 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **요청**
 
-이 요청은 본질적으로 설명자를 재작성하므로 요청 본문에는 해당 유형의 설명자를 정의하는 데 필요한 모든 필드가 포함되어야 합니다. 즉, 설명자를 업데이트(PUT)하기 위한 요청 페이로드는 같은 유형의 설명자를 [생성(POST)하기 위한 페이로드와 동일합니다](#create).
+이 요청은 본질적으로 설명자를 재작성하므로 요청 본문에는 해당 유형의 설명자를 정의하는 데 필요한 모든 필드가 포함되어야 합니다. 다시 말해, 설명자를 업데이트(PUT)하기 위한 요청 페이로드는 같은 유형의 설명자를 [생성(POST)하기 위한 페이로드와 동일합니다](#create).
 
 >[!IMPORTANT]
 >
->POST 요청을 사용하여 설명자를 만드는 경우와 마찬가지로, 각 설명자 유형에는 고유한 필드가 PUT 요청 페이로드에서 전송되어야 합니다. 설명자의 전체 목록과 설명자를 정의하는 데 필요한 필드는 [부록](#defining-descriptors)을 참조하세요.
+>POST 요청을 사용하여 설명자를 만드는 경우와 마찬가지로, 각 설명자 유형에는 고유한 필드를 PUT 요청 페이로드에서 전송해야 합니다. 설명자의 전체 목록과 설명자를 정의하는 데 필요한 필드는 [부록](#defining-descriptors)을 참조하세요.
 
 다음 예제에서는 다른 `xdm:sourceProperty`(`mobile phone`)을(를) 참조하도록 ID 설명자를 업데이트하고 `xdm:namespace`을(를) `Phone`(으)로 변경합니다.
 
@@ -364,12 +364,12 @@ ID 설명자는 &quot;[!UICONTROL sourceSchema]&quot;의 &quot;[!UICONTROL sourc
 | `xdm:sourceProperty` | 세부 정보를 수정할 특정 속성의 경로입니다. 경로는 슬래시(`/`)로 시작하고 슬래시로 끝나지 않아야 합니다. 경로에 `properties`을(를) 포함하지 마십시오(예: `/properties/personalEmail/properties/address` 대신 `/personalEmail/address` 사용). |
 | `xdm:title` | 이 필드에 표시할 새 제목(제목 대/소문자로 작성됨)입니다. |
 | `xdm:description` | 제목과 함께 선택적 설명을 추가할 수 있습니다. |
-| `meta:enum` | `xdm:sourceProperty`에 표시된 필드가 문자열 필드인 경우 `meta:enum`을(를) 사용하여 세분화 UI에서 필드에 대해 제안된 값을 추가할 수 있습니다. `meta:enum`은(는) 열거형을 선언하거나 XDM 필드에 대한 데이터 유효성 검사를 제공하지 않습니다.<br><br>Adobe에서 정의한 코어 XDM 필드에만 사용해야 합니다. 원본 속성이 조직에서 정의한 사용자 지정 필드인 경우 대신 필드의 상위 리소스에 대한 PATCH 요청을 통해 직접 필드의 `meta:enum` 속성을 편집해야 합니다. |
+| `meta:enum` | `xdm:sourceProperty`에 표시된 필드가 문자열 필드인 경우 `meta:enum`을(를) 사용하여 세분화 UI에서 필드에 대해 제안된 값을 추가할 수 있습니다. `meta:enum`은(는) 열거형을 선언하거나 XDM 필드에 대한 데이터 유효성 검사를 제공하지 않습니다.<br><br>Adobe에서 정의한 코어 XDM 필드에만 사용해야 합니다. 소스 속성이 조직에서 정의한 사용자 지정 필드인 경우 대신 필드의 상위 리소스에 대한 PATCH 요청을 통해 직접 필드의 `meta:enum` 속성을 편집해야 합니다. |
 | `meta:excludeMetaEnum` | `xdm:sourceProperty`이(가) 나타내는 필드가 `meta:enum` 필드 아래에 제공된 기존의 제안 값이 있는 문자열 필드인 경우 이 개체를 알기 쉬운 이름 설명자에 포함시켜 세분화에서 이러한 값의 일부 또는 모두를 제외할 수 있습니다. 항목을 제외하려면 각 항목의 키 및 값이 필드의 원래 `meta:enum`에 포함된 값과 일치해야 합니다. |
 
 {style="table-layout:auto"}
 
-#### 관계 설명자
+#### 관계 설명자 {#relationship-descriptor}
 
 관계 설명자는 `sourceProperty` 및 `destinationProperty`에 설명된 속성을 기준으로 서로 다른 두 스키마 간의 관계를 설명합니다. 자세한 내용은 [두 스키마 간의 관계 정의](../tutorials/relationship-api.md)에 대한 자습서를 참조하십시오.
 
@@ -389,13 +389,49 @@ ID 설명자는 &quot;[!UICONTROL sourceSchema]&quot;의 &quot;[!UICONTROL sourc
 
 | 속성 | 설명 |
 | --- | --- |
-| `@type` | 정의 중인 설명자 유형. 관계 설명자의 경우 이 값을 `xdm:descriptorOneToOne`(으)로 설정해야 합니다. |
+| `@type` | 정의 중인 설명자 유형. 관계 설명자의 경우 Real-Time CDP B2B edition에 대한 액세스 권한이 없는 경우 이 값을 `xdm:descriptorOneToOne`(으)로 설정해야 합니다. B2B edition을 사용하면 `xdm:descriptorOneToOne` 또는 [`xdm:descriptorRelationship`](#b2b-relationship-descriptor)을(를) 사용할 수 있습니다. |
 | `xdm:sourceSchema` | 설명자가 정의되는 스키마의 `$id` URI입니다. |
 | `xdm:sourceVersion` | 소스 스키마의 주 버전. |
-| `xdm:sourceProperty` | 관계가 정의되는 소스 스키마의 필드 경로. &quot;/&quot;로 시작하고 1로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;). |
+| `xdm:sourceProperty` | 관계가 정의되는 소스 스키마의 필드 경로. &quot;/&quot;로 시작하고 &quot;/&quot;로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;). |
 | `xdm:destinationSchema` | 이 설명자가 관계를 정의하는 참조 스키마의 `$id` URI입니다. |
 | `xdm:destinationVersion` | 참조 스키마의 주 버전. |
-| `xdm:destinationProperty` | 참조 스키마 내의 대상 필드에 대한 선택적 경로입니다. 이 속성을 생략하면 일치하는 참조 ID 설명자가 포함된 모든 필드에서 대상 필드를 유추합니다(아래 참조). |
+| `xdm:destinationProperty` | (선택 사항) 참조 스키마 내의 대상 필드 경로입니다. 이 속성을 생략하면 일치하는 참조 ID 설명자가 포함된 모든 필드에서 대상 필드를 유추합니다(아래 참조). |
+
+{style="table-layout:auto"}
+
+##### B2B 관계 설명자 {#B2B-relationship-descriptor}
+
+Real-Time CDP B2B edition에서는 다대일 관계를 허용하는 스키마 간의 관계를 정의하는 대체 방법을 도입했습니다. 이 새 관계는 `@type: xdm:descriptorRelationship` 형식이어야 하며 페이로드에 `@type: xdm:descriptorOneToOne` 관계보다 많은 필드가 포함되어야 합니다. 자세한 내용은 [B2B edition에 대한 스키마 관계 정의](../tutorials/relationship-b2b.md)에 대한 자습서를 참조하십시오.
+
+```json
+{
+   "@type": "xdm:descriptorRelationship",
+   "xdm:sourceSchema" : "https://ns.adobe.com/{TENANT_ID}/schemas/9f2b2f225ac642570a110d8fd70800ac0c0573d52974fa9a",
+   "xdm:sourceVersion" : 1,
+   "xdm:sourceProperty" : "/person-ref",
+   "xdm:destinationSchema" : "https://ns.adobe.com/{TENANT_ID/schemas/628427680e6b09f1f5a8f63ba302ee5ce12afba8de31acd7",
+   "xdm:destinationVersion" : 1,
+   "xdm:destinationProperty": "/personId",
+   "xdm:destinationNamespace" : "People", 
+   "xdm:destinationToSourceTitle" : "Opportunity Roles",
+   "xdm:sourceToDestinationTitle" : "People",
+   "xdm:cardinality": "M:1"
+}
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `@type` | 정의 중인 설명자 유형. 다음 필드가 있는 경우 값을 `xdm:descriptorRelationship`(으)로 설정해야 합니다. 추가 유형에 대한 자세한 내용은 [관계 설명자](#relationship-descriptor) 섹션을 참조하십시오. |
+| `xdm:sourceSchema` | 설명자가 정의되는 스키마의 `$id` URI입니다. |
+| `xdm:sourceVersion` | 소스 스키마의 주 버전. |
+| `xdm:sourceProperty` | 관계가 정의되는 소스 스키마의 필드 경로. &quot;/&quot;로 시작하고 &quot;/&quot;로 끝나지 않아야 합니다. 경로에 &quot;속성&quot;을 포함하지 마십시오(예: &quot;/properties/personalEmail/properties/address&quot; 대신 &quot;/personalEmail/address&quot;). |
+| `xdm:destinationSchema` | 이 설명자가 관계를 정의하는 참조 스키마의 `$id` URI입니다. |
+| `xdm:destinationVersion` | 참조 스키마의 주 버전. |
+| `xdm:destinationProperty` | (선택 사항) 참조 스키마 내의 대상 필드에 대한 경로로, 스키마의 기본 ID여야 합니다. 이 속성을 생략하면 일치하는 참조 ID 설명자가 포함된 모든 필드에서 대상 필드를 유추합니다(아래 참조). |
+| `xdm:destinationNamespace` | 참조 스키마에서 기본 ID의 네임스페이스입니다. |
+| `xdm:destinationToSourceTitle` | 참조 스키마에서 소스 스키마로의 관계 표시 이름. |
+| `xdm:sourceToDestinationTitle` | 소스 스키마에서 참조 스키마로의 관계 표시 이름. |
+| `xdm:cardinality` | 스키마 간의 조인 관계입니다. 다대일 관계를 참조하여 이 값을 `M:1`(으)로 설정해야 합니다. |
 
 {style="table-layout:auto"}
 
