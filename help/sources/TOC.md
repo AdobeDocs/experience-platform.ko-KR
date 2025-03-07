@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: b18f93078d3cdbd0498b5b282236ac9b7bad153c
+source-git-commit: b900ef8cbbab78071d462484f088e17eb20fe9b6
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1047'
 ht-degree: 30%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 30%
       - [Zoho CRM 커넥터](connectors/crm/zoho.md)
    - 고객 성공 {#customer-success}
       - [Oracle 서비스 클라우드](connectors/customer-success/oracle-service-cloud.md)
-      - [Salesforce 서비스 클라우드 커넥터](connectors/customer-success/salesforce-service-cloud.md)
+      - [Salesforce Service Cloud 커넥터](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow 커넥터](connectors/customer-success/servicenow.md)
       - [Zendesk 커넥터](connectors/customer-success/zendesk.md)
    - 데이터베이스 {#databases}
@@ -76,7 +76,7 @@ ht-degree: 30%
       - [Azure HDInsights 커넥터의 Apache Hive](connectors/databases/hive.md)
       - [Azure HDInsights 커넥터의 Apache Spark](connectors/databases/spark.md)
       - [Azure Data Explorer 커넥터](connectors/databases/data-explorer.md)
-      - [Azure synapse 분석 커넥터](connectors/databases/synapse-analytics.md)
+      - [Azure Synapse Analytics 커넥터](connectors/databases/synapse-analytics.md)
       - [Azure 테이블 스토리지 커넥터](connectors/databases/ats.md)
       - [Couchbase 커넥터](connectors/databases/couchbase.md)
       - [Google BigQuery 커넥터](connectors/databases/bigquery.md)
@@ -91,7 +91,7 @@ ht-degree: 30%
       - [PostgreSQL 커넥터](connectors/databases/postgres.md)
       - [Snowflake 스트리밍 커넥터](connectors/databases/snowflake-streaming.md)
       - [Snowflake 커넥터](connectors/databases/snowflake.md)
-      - [Teradata 밴티지 커넥터](connectors/databases/teradata-vantage.md)
+      - [Teradata Vantage 커넥터](connectors/databases/teradata-vantage.md)
    - 데이터 및 ID 파트너 {#data-partner}
       - [Acxiom 데이터 수집](connectors/data-partners/acxiom-data-ingestion.md)
       - [Acxiom 예상 데이터 가져오기](connectors/data-partners/acxiom-prospecting-data-import.md)
@@ -190,7 +190,7 @@ ht-degree: 30%
          - [MailChimp 캠페인](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp 멤버](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
-         - [NetSuite 활동 oracle](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
+         - [Oracle NetSuite 활동](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite 엔티티](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
@@ -306,6 +306,8 @@ ht-degree: 30%
       - 데이터 및 ID 파트너 {#data-partner}
          - [Acxiom 데이터 수집](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Acxiom 예상 데이터 가져오기](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [봄보라 의도](tutorials/ui/create/data-partners/bombora.md)
+         - [Demandbase 의도](tutorials/ui/create/data-partners/demandbase.md)
          - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
       - 전자 상거래 {#ecommerce}
          - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
@@ -321,7 +323,7 @@ ht-degree: 30%
          - [Mailchimp 캠페인](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp 멤버](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
-         - [NetSuite 활동 oracle](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
+         - [Oracle NetSuite 활동](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite 엔티티](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
@@ -359,14 +361,14 @@ ht-degree: 30%
    - [데이터 흐름 삭제](tutorials/ui/delete.md)
    - [소스 알림 구독](tutorials/ui/alerts.md)
    - [데이터 흐름을 초안으로 저장](tutorials/ui/draft.md)
-- 셀프 서비스 소스(일괄 처리 SDK) {#sdk}
+- 셀프 서비스 소스(일괄 SDK) {#sdk}
    - [개요](sources-sdk/overview.md)
    - 연결 사양 {#config} 구성
       - [구성 옵션](sources-sdk/config/config.md)
       - [인증 사양 구성](sources-sdk/config/authspec.md)
       - [소스 사양 구성](sources-sdk/config/sourcespec.md)
       - [탐색 사양 구성](sources-sdk/config/explorespec.md)
-   - 셀프 서비스 소스(일괄 처리 SDK) API 안내서 {#self-serve-api}
+   - 셀프 서비스 소스(일괄 SDK) API 안내서 {#self-serve-api}
       - [셀프서비스 소스(일괄 SDK) API 개요](sources-sdk/api/api-overview.md)
       - [시작하기](sources-sdk/api/getting-started.md)
       - [연결 사양 만들기](sources-sdk/api/create.md)
@@ -379,13 +381,13 @@ ht-degree: 30%
       - [로컬 환경에서 텍스트 편집기를 사용하여 소스 설명서 페이지를 만듭니다](sources-sdk/documentation/text-editor.md)
       - [설명서 셀프서비스 API 템플릿](sources-sdk/documentation/template.md)
       - [설명서 셀프서비스 UI 템플릿](sources-sdk/documentation/ui-template.md)
-   - Streaming SDK {#streaming-sdk}
-      - [셀프서비스 소스(Streaming SDK) 시작](sources-sdk/streaming/getting-started.md)
+   - 스트리밍 SDK {#streaming-sdk}
+      - [셀프서비스 소스(스트리밍 SDK) 시작](sources-sdk/streaming/getting-started.md)
       - [스트리밍 소스에 대한 연결 사양 만들기](sources-sdk/streaming/create.md)
       - [스트리밍 소스에 대한 연결 사양 업데이트](sources-sdk/streaming/update-connection-specs.md)
       - [스트리밍 흐름 사양 업데이트](sources-sdk/streaming/update-flow-specs.md)
       - [확인을 위해 연결 사양 테스트 및 제출](sources-sdk/streaming/submit.md)
-      - [소스 문서화(Streaming SDK)](sources-sdk/streaming/document-streaming.md)
+      - [소스 문서화(스트리밍 SDK)](sources-sdk/streaming/document-streaming.md)
       - [설명서 셀프서비스 API 스트리밍 템플릿](sources-sdk/streaming/streaming-template-api.md)
       - [설명서 셀프서비스 UI 스트리밍 템플릿](sources-sdk/streaming/streaming-template-ui.md)
 - 오류 메시지 {#errors}
