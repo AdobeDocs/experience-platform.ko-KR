@@ -94,7 +94,7 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >id="platform_segments_evaluation_edge"
 >title="에지 평가"
 >abstract="에지 세분화는 Edge Network에서 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지의 개인화 사용 사례를 활성화하는 기능입니다."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="Edge 세그멘테이션 안내서"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="에지 세분화 안내서"
 
 Edge 세그멘테이션은 Edge Network](../landing/edge-and-hub-comparison.md)에서 플랫폼의 세그먼트를 즉시 [평가하는 기능으로, 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
 

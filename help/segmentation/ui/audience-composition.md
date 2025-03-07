@@ -6,7 +6,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
 workflow-type: tm+mt
 source-wordcount: '2344'
-ht-degree: 11%
+ht-degree: 16%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
 >title="대상자 블록"
->abstract="대상 블록을 사용하면 새 대상을 구성하는 데 사용할 하위 대상을 추가할 수 있습니다."
+>abstract="대상자 블록을 사용하면 새로운 대상자를 구성하는 데 사용할 하위 대상자를 추가할 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
@@ -97,7 +97,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_rule_builder"
 >title="세그먼트 빌더"
->abstract="세그먼트 빌더 를 사용하여 컴포지션에 대한 사용자 지정 규칙을 추가할 수 있습니다."
+>abstract="세그먼트 빌더를 사용하면 컴포지션에 대한 사용자 정의 규칙을 추가할 수 있습니다."
 
 대상 블록에 사용자 지정 규칙을 추가하려면 **[!UICONTROL 규칙 빌드]**&#x200B;를 선택하십시오.
 
@@ -152,7 +152,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_exclude_attribute"
 >title="속성별 제외"
->abstract="속성별로 제외할 경우, 선택한 속성에 따라 특정 프로필이 컴포지션에 표시되지 않도록 제외할 수 있습니다."
+>abstract="속성별로 제외하면 선택한 속성에 따라 특정 프로필이 컴포지션에 나타나지 않도록 제외할 수 있습니다."
 
 특성별로 제외하는 경우 **[!UICONTROL 제외 규칙]** 섹션 내에서 ![필터](/help/images/icons/project-edit.png) 아이콘을 선택하여 제외할 특성을 선택할 수 있습니다. 속성을 제외하면 이 속성을 포함하는 모든 프로필을 결과 대상자에서 제외할 수 있습니다.
 
@@ -319,17 +319,17 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 대상을 분할할 때 백분율로 분할하거나 속성별로 분할할 수 있습니다.
 
-### 백분율로 분할 {#split-percentage}
+### 백분율 분할 {#split-percentage}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_percentage"
->title="백분율로 분할"
->abstract="제공된 경로의 수와 백분율에 따라 대상을 여러 대상으로 무작위로 분할할 수 있습니다."
+>title="백분율 분할"
+>abstract="제공된 경로 수와 백분율에 따라 대상 고객을 무작위로 여러 대상자로 분할할 수 있습니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
->title="영구 분할"
->abstract="이 옵션을 활성화하고 ID 네임스페이스를 선택하여 백분율로 분할을 지속할 수 있습니다."
+>title="분할 지속"
+>abstract="이 옵션을 활성화하고 ID 네임스페이스를 선택하면 분할 비율을 지속적으로 적용할 수 있습니다."
 
 백분율로 분할할 경우 대상은 제공된 경로 수와 백분율에 따라 무작위로 분할됩니다.
 

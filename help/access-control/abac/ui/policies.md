@@ -189,7 +189,7 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
 >title="정책이란 무엇입니까?"
->abstract="정책은 속성을 함께 가져와서 허용되는 작업과 허용되지 않는 작업을 설정하는 문입니다. 모든 조직에는 레이블을 기반으로 특정 오브젝트에 대한 액세스를 제어하기 위해 활성화해야 하는 기본 정책이 있습니다. 리소스에 적용된 레이블은 사용자에게 레이블에 해당하는 역할이 할당된 경우가 아니라면 액세스를 거부합니다. 기본 정책은 편집하거나 삭제할 수 없지만, 활성화하거나 비활성화할 수는 있습니다."
+>abstract="정책은 속성을 함께 가져와서 허용되는 작업과 허용되지 않는 작업을 설정하는 문입니다. 모든 조직에는 레이블을 기반으로 특정 오브젝트에 대한 액세스를 제어하기 위해 활성화해야 하는 기본 정책이 있습니다. 리소스에 적용된 레이블은 사용자에게 레이블에 해당하는 역할이 할당된 경우가 아니라면 액세스를 거부합니다. 기본 정책은 편집하거나 삭제할 수 없지만 활성화하거나 비활성화할 수는 있습니다."
 >additional-url="https://experienceleague.adobe.com/ko/docs/experience-platform/access-control/abac/permissions-ui/labels" text="레이블 관리"
 
 기존 정책을 활성화하려면 **[!UICONTROL 정책]** 탭에서 정책을 선택합니다.
