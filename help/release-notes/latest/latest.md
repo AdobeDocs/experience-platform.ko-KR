@@ -3,9 +3,9 @@ title: Adobe Experience Platform 릴리스 정보 2025년 2월
 description: Adobe Experience Platform의 2025년 2월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: e8c1d7d3b5cc205b9258b4fec5dc7fa68d0d3b27
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1628'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 - [카탈로그 서비스](#catalog-service)
 - [데이터 준비](#data-prep)
 - [대상](#destinations)
-- [페더레이션 대상 구성](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/release-notes){target="_blank"}
+- [페더레이션된 대상자 구성](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/release-notes){target="_blank"}
 - [소스](#sources)
 - [Segmentation Service](#segmentation)
 - [설명서 업데이트](#documentation-updates)
@@ -114,7 +114,7 @@ Adobe Experience Platform의 AI 어시스턴트는 Adobe 애플리케이션에�
 
 | 기능 | 설명 |
 | ------- | ----------- |
-| 영구 분할 | 이제 대상자 작성에서 영구 분할을 지원합니다. ID 네임스페이스를 분할 블록에 추가하여 프로필로 분할할 때 분할 대상이 일정하게 유지되도록 할 수 있습니다. 이 기능에 대한 자세한 내용은 [대상자 구성 설명서](../../segmentation/ui/audience-composition.md)를 참조하세요. |
+| 분할 지속 | 이제 대상자 구성에서 분할 지속이 지원됩니다. 프로필별 분할 시 분할 블록에 ID 네임스페이스를 추가하여 분할된 대상자 그룹을 일정하게 유지할 수 있습니다. 이 기능에 대한 자세한 내용은 [대상자 구성 설명서](../../segmentation/ui/audience-composition.md)에서 확인할 수 있습니다. |
 
 [!DNL Segmentation Service]에 대한 자세한 내용은 [세분화 개요](../../segmentation/home.md)를 참조하십시오.
 
