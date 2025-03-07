@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: 데이터 활성화 기본 사용 및 속도 제한에 대해 자세히 알아보십시오.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1718'
 ht-degree: 2%
 
 ---
@@ -76,6 +76,7 @@ ht-degree: 2%
 | 활성화 빈도 | 3, 6, 8 또는 12시간마다 일일 전체 내보내기 또는 빈번한 증분 내보내기 | 시스템 강제 보호 | 일괄 내보내기의 빈도 증가에 대한 자세한 내용은 [전체 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 및 [증분 파일 내보내기](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 설명서 섹션을 참조하십시오. |
 | 지정된 시간에 내보낼 수 있는 최대 대상 수 | 100 | 성능 보호 | 최대 100개의 대상을 대상 데이터 흐름을 일괄 처리하는 것이 좋습니다. |
 | 활성화할 파일당 최대 행(레코드) 수 | 500만 | 시스템 강제 보호 | Adobe Experience Platform은 내보낸 파일을 파일당 5백만 개의 레코드(행)로 자동으로 분할합니다. 각 행은 하나의 프로필을 나타냅니다. 분할 파일 이름에는 파일이 더 큰 내보내기의 일부임을 나타내는 숫자가 추가됩니다(예: `filename.csv`, `filename_2.csv`, `filename_3.csv`). 자세한 내용은 일괄 처리 대상 활성화 자습서의 [예약 섹션](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)을 참조하세요. |
+| 데이터 흐름에서 활성화할 최대 사용자 지정 업로드 대상자 수 | 10 | 시스템 강제 보호 | [사용자 지정 업로드 대상자](/help/segmentation/ui/audience-portal.md#import-audience)를 활성화하여 파일 기반 대상을 일괄 처리할 때 데이터 흐름에서 활성화할 수 있는 대상자는 10명으로 제한됩니다. [사용자 지정 업로드 대상을 파일 기반 대상으로 활성화](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences)하는 워크플로에 대해 자세히 알아보십시오. |
 
 {style="table-layout:auto"}
 

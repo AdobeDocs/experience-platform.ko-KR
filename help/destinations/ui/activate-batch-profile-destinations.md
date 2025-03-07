@@ -3,9 +3,9 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '4374'
+source-wordcount: '4405'
 ht-degree: 12%
 
 ---
@@ -64,18 +64,18 @@ CSV 파일을 내보내면 내보낸 파일을 구성하는 방법 측면에서 
 출처에 따라 여러 유형의 대상 중에서 선택할 수 있습니다.
 
 * **[!UICONTROL 세그먼테이션 서비스]**: 세그먼테이션 서비스에 의해 Experience Platform 내에서 생성된 대상입니다. 자세한 내용은 [세그먼테이션 설명서](../../segmentation/ui/overview.md)를 참조하세요.
-* **[!UICONTROL 사용자 지정 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드되는 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience)에 대한 설명서를 참조하십시오.
+* **[!UICONTROL 사용자 지정 업로드]**: Experience Platform 외부에서 생성되어 CSV 파일로 플랫폼에 업로드되는 대상자입니다. 외부 대상자에 대한 자세한 내용은 [대상자 가져오기](../../segmentation/ui/audience-portal.md#import-audience)에 대한 설명서를 참조하십시오. **[!UICONTROL 사용자 지정 업로드]**&#x200B;에서 대상을 선택하면 [데이터 보강 특성 선택](#select-enrichment-attributes) 단계가 자동으로 활성화됩니다.
 * 다른 Adobe 솔루션에서 가져온 다른 유형의 대상(예: [!DNL Audience Manager]).
+
+>[!IMPORTANT]
+>
+>파일 기반 대상을 일괄 처리할 수 있도록 사용자 지정 업로드 대상을 활성화할 때 데이터 흐름에서 활성화할 수 있는 해당 대상은 10개로 제한됩니다.
 
 ![활성화할 대상을 하나 이상 선택할 때 표시되는 확인란입니다.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
->**[!UICONTROL 사용자 지정 업로드]**&#x200B;에서 대상을 선택하면 [데이터 보강 특성 선택](#select-enrichment-attributes) 단계가 자동으로 활성화됩니다.
-
->[!TIP]
->
->**[!UICONTROL 활성화 데이터]** 페이지에서 기존 활성화 흐름에서 대상을 제거할 수 있습니다. 자세한 내용은 [전용 설명서](../ui/destination-details-page.md#bulk-remove)를 참조하세요.
+>기존 활성화 흐름에서 대상을 제거하려면 **[!UICONTROL 활성화 데이터]** 페이지를 사용하십시오. 자세한 내용은 [활성화 흐름에서 여러 대상을 제거](../ui/destination-details-page.md#bulk-remove)하는 방법에 대한 섹션을 참조하십시오.
 
 ## 대상자 내보내기 예약 {#scheduling}
 
