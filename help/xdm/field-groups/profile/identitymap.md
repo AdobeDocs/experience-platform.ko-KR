@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;스키마;스키마;XDM;개별 �
 title: IdentityMap 스키마 필드 그룹
 description: XDM 개별 프로필 클래스에 대해 알아봅니다.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: cfa3e5c6811f148376a2d2012f5687be6fad2299
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >여러 스키마 필드 그룹의 이름이 변경되었습니다. 자세한 내용은 [필드 그룹 이름 업데이트](../name-updates.md)에 대한 문서를 참조하십시오.
 
-[!UICONTROL IdentityMap]은(는) [[!DNL XDM Individual Profile] 클래스](../../classes/individual-profile.md)의 표준 스키마 필드 그룹입니다. 필드 그룹은 네임스페이스로 입력된 사용자 ID 세트가 포함된 단일 맵 필드를 제공합니다.
+[!UICONTROL IdentityMap]은(는) [[!UICONTROL XDM ExperienceEvent] 클래스](../../classes/experienceevent.md)의 표준 스키마 필드 그룹이며 [[!UICONTROL XDM 개별 프로필] 클래스](../../classes/individual-profile.md)의 호환 필드 그룹입니다. 필드 그룹은 네임스페이스로 입력된 사용자 ID 세트가 포함된 단일 맵 필드를 제공합니다.
 
 ![[!UICONTROL IdentityMap] 스키마 필드 그룹의 다이어그램](../../images/field-groups/identitymap.png)
 
