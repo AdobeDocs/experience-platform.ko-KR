@@ -3,9 +3,9 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: Platform UI를 사용하여 Adobe Campaign Managed Cloud Services 소스 연결 만들기
 description: Platform UI를 사용하여 Adobe Experience Platform을 Adobe Campaign Managed Cloud Services에 연결하는 방법을 알아봅니다.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
+source-git-commit: 67f42c155bf34f2b8adc3b08536bb3310bb77390
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1233'
 ht-degree: 6%
 
 ---
@@ -16,10 +16,10 @@ ht-degree: 6%
 
 ## 시작하기
 
-이 안내서를 사용하려면 다음 Experience Platform 구성 요소에 대해 이해하고 있어야 합니다.
+이 안내서를 사용하려면 Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [소스](../../../../home.md): Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)] 시스템](../../../../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../../../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기 튜토리얼](../../../../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아봅니다.
 * [샌드박스](../../../../../sandboxes/home.md): 플랫폼은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
@@ -136,6 +136,12 @@ Platform은 선택한 대상 스키마 또는 데이터 세트를 기반으로 �
 이 페이지에서는 데이터 흐름의 메타데이터 설명을 업데이트하고, 부분 수집 및 오류 진단을 활성화하고, 새 데이터를 데이터 집합에 추가할 수 있는 인터페이스도 제공합니다.
 
 ![선택한 데이터 집합의 수집 속도를 나타내는 그래프가 있는 인터페이스입니다.](../../../../images/tutorials/create/campaign/dataset-activity.png)
+
+
+>[!IMPORTANT]
+>
+>이전 이벤트 로그를 Adobe Campaign Managed Cloud Services 소스로 채울 수 없습니다. 다시 채우기가 필요한 경우 사용자 지정 워크플로 또는 사용자 지정 구현을 사용하여 데이터를 Amazon S3 또는 Azure Blob으로 내보내거나 Amazon S3 또는 Azure Blob에서 Adobe Experience Platform 데이터 세트로 데이터를 내보냅니다.
+
 
 ## 다음 단계
 
