@@ -2,9 +2,9 @@
 title: Experience Platform에서 AI Assistant 액세스
 description: Experience Cloud UI에서 AI Assistant에 액세스하는 방법을 알아봅니다.
 exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
-source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
+source-git-commit: b26a1f12c9ea07d4dd077f1f3c1578e6c69866a7
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,34 @@ AI Assistant에 대한 액세스는 다음 매개 변수에 의해 제어됩니�
    * 관리자는 해당 역할에 **AI Assistant 사용**&#x200B;을 추가하고 해당 역할에 사용자를 추가하여 조직의 AI Assistant에 액세스할 수 있도록 할 수 있습니다.
    * 관리자는 해당 역할에 **View Operational Insights**&#x200B;를 추가하고 해당 역할에 사용자를 추가하여 AI Assistant의 Operational Insights 기능을 사용할 수 있습니다. Operational Insights 는 현재 Beta 버전입니다.
 
-![지정된 역할에 포함된 AI Assistant 사용 및 Operational Insights 보기 권한이 있는 권한 UI 페이지입니다.](./images/permissions.png)
+[권한 UI](../access-control/abac/ui/roles.md)를 사용하여 Experience Platform 및 Journey Optimizer에서 AI Assistant를 사용할 수 있는 권한을 부여합니다. Customer Journey Analytics에서 AI Assistant에 액세스하는 방법에 대한 자세한 내용 [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant)에서 설명서를 읽어 보십시오.
 
-권한 UI를 사용하여 Experience Platform 및 Journey Optimizer에서 AI Assistant를 사용할 수 있는 권한을 부여합니다. Customer Journey Analytics에서 AI Assistant에 액세스하는 방법에 대한 자세한 내용 [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant)에서 설명서를 읽어 보십시오.
+![지정된 역할에 포함된 AI Assistant 사용 및 Operational Insights 보기 권한이 있는 권한 UI 페이지입니다.](./images/access/access-permissions.png)
+
+AI Assistant에 액세스할 수 없는 이유는 두 가지가 있습니다.
+
+1. AI Assistant를 사용할 수 있는 법적 자격이 없는 조직을 사용하고 있습니다.
+2. 관리자가 AI Assistant를 사용할 수 있는 적절한 권한을 부여하지 않았습니다.
+
+>[!BEGINTABS]
+
+>[!TAB 조직에서 AI 도우미를 사용할 수 없습니다]
+
+AI Assistant를 사용할 수 있는 법적 자격이 없는 조직을 사용하는 경우 다음과 같은 메시지가 표시됩니다. 이 시나리오에서는 Adobe 계정 팀에 연락하여 액세스를 해결해야 합니다.
+
+![조직에서 AI 도우미를 사용할 수 없는 경우 Experience Platform UI에 표시되는 팝업 메시지입니다.](./images/access/modal-one.png)
+
+>[!TAB 권한이 없습니다]
+
+귀사에서 AI Assistant를 합법적으로 사용할 수 있는 자격이 있지만 기능에 액세스할 수 없는 경우 Experience Platform UI에 다음과 같은 메시지가 표시됩니다. 이 시나리오는 기능에 액세스할 수 있는 충분한 권한이 없으며 관리자에게 문의하여 권한을 해결해야 함을 의미합니다.
+
+![AI Assistant에 필요한 권한이 없는 경우 Experience Platform UI에 표시되는 팝업 메시지입니다.](./images/access/modal-two.png)
+
+>[!ENDTABS]
 
 필요한 권한이 있으면 사용 중인 애플리케이션 상단 헤더에 있는 AI Assistant 아이콘을 선택하여 AI Assistant에 액세스할 수 있습니다.
 
-처음 사용자 경험이 있는 ![AI 길잡이](./images/ai-assistant.png)
+처음 사용자 경험이 있는 ![AI 길잡이](./images/access/access-home.png)
 
 ## AI Assistant 액세스
 
