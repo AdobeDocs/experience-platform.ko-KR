@@ -2,9 +2,9 @@
 title: 그래프 시뮬레이션 UI 안내서
 description: ID 서비스 UI에서 그래프 시뮬레이션을 사용하는 방법을 알아봅니다.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 5c7a47916e6e79881842279794bc72e0e5bd32d3
+source-git-commit: 31d4c895294e779ef39639710fad0e517fa03cf2
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1504'
 ht-degree: 3%
 
 ---
@@ -23,6 +23,10 @@ ht-degree: 3%
 >* [!DNL Graph Simulation] 도구에 액세스하려면 **ID 그래프 보기** 권한으로 계정을 프로비저닝해야 합니다. 자세한 내용은 특성 기반 액세스 제어의 사용 권한에 대한 [안내서](../../access-control/abac/ui/permissions.md)를 참조하십시오.
 
 [!DNL Graph Simulation]은(는) 특정 조합의 ID가 지정된 ID에서 ID 그래프가 작동하는 방식과 [ID 최적화 알고리즘](./identity-optimization-algorithm.md)을 구성하는 방법을 시뮬레이션하는 데 사용할 수 있는 ID 서비스 UI의 도구입니다.
+
+ID 서비스 UI 작업 영역에서 [!DNL Graph Simulation] 인터페이스를 사용하는 방법에 대한 자세한 내용은 다음 비디오를 시청하십시오.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 ID 그래프 동작 및 그래프 알고리즘의 작동 방식을 더 잘 이해하기 위해 [!DNL Graph Simulation]을(를) 사용하는 방법에 대해 알아보려면 이 문서를 참조하십시오.
 
