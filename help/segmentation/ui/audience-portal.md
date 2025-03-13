@@ -2,7 +2,7 @@
 title: 대상 포털 개요
 description: Audience Portal을 사용하여 Adobe Experience Platform 내에서 대상을 보고, 관리하고, 만드는 방법을 알아봅니다.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
+source-git-commit: 5220fa9be3f567d72f864d35596f6b219f15fb9d
 workflow-type: tm+mt
 source-wordcount: '4609'
 ht-degree: 4%
@@ -114,7 +114,7 @@ Audience Portal에서 다음 작업을 수행할 수 있습니다.
 | 상태 | 설명 |
 | ------ | ----------- |
 | [!UICONTROL 실현됨] | 마지막 일괄 처리 세그먼트 작업이 실행된 이후 지난 24시간 동안 대상에 대해 **적격**&#x200B;된 프로필 수입니다. |
-| [!UICONTROL 기존] | 마지막 일괄 처리 세그먼트 작업이 실행된 이후 지난 24시간 동안 대상자에 **남아**&#x200B;된 프로필의 수입니다. 이 필드는 **calculated**&#x200B;이며 `segmentMembership` 개체에 표시되지 않습니다. |
+| [!UICONTROL 기존] | 마지막 일괄 처리 세그먼트 작업이 실행된 이후 지난 24시간 동안 대상자에 **남아**&#x200B;된 프로필의 수입니다. 이 필드는 **calculated**&#x200B;이며 [`segmentMembership` 개체에 표시되지 않습니다](../../xdm/field-groups/profile/segmentation.md). |
 | [!UICONTROL 종료] | 마지막 일괄 처리 세그먼트 작업이 실행된 이후 지난 24시간 동안 대상자를 **종료**&#x200B;한 프로필 수입니다. |
 
 표시할 필드를 선택한 후 표시된 열의 너비를 다시 조정할 수도 있습니다. 열 사이의 영역을 드래그하거나 크기를 조정할 열의 ![화살표 아이콘](/help/images/icons/chevron-down.png)을 선택한 다음 **[!UICONTROL 열 크기 조정]**&#x200B;을 선택하여 이 작업을 수행할 수 있습니다.
