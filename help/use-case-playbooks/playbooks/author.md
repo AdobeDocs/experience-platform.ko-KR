@@ -4,14 +4,15 @@ title: AI Assistant를 사용하여 나만의 플레이북을 작성하고 공�
 description: 사용 사례 플레이북을 만들고 공유하는 방법
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: f76db5c8d397c6c7b006c70147c054dc0a67be04
+source-git-commit: aa1e155fb8d71497958d0de1f6c10cf47e58dbf0
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1113'
 ht-degree: 0%
 
 ---
 
-# 나만의 플레이북을 작성하고 공유하세요.
+
+# 나만의 플레이북 작성 및 공유(Beta)
 
 Adobe Experience Platform의 AI Assistant에서 제공하는 [!DNL Playbook Authoring Framework]을(를) 사용하면 Adobe Experience Platform 내에서 플레이북을 효율적으로 만들고, 관리하고, 공유할 수 있습니다.
 

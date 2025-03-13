@@ -5,7 +5,7 @@ breadcrumb-title: Adobe Experience Platform 사용 사례 플레이북
 user-guide-description: Adobe Experience Platform의 플레이북을 사용하여 자산을 생성하고 다양한 마케팅 사용 사례를 시작합니다.
 feature: Playbooks
 role: User
-source-git-commit: f05da67504038a2090b78667c4ae12e6c9de6768
+source-git-commit: ddf8d931ff2f669825fb8b1c43ebf14d3dbbef08
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 58%
@@ -26,3 +26,4 @@ ht-degree: 58%
    * [플레이북 인스턴스 만들기, 공유 및 재사용](/help/use-case-playbooks/playbooks/create-share-reuse.md)
    * [사용 사례 플레이북의 데이터 인식 개요](/help/use-case-playbooks/playbooks/data-awareness.md)
    * [문제 해결 및 알려진 제한 사항](/help/use-case-playbooks/playbooks/troubleshooting.md)
+
