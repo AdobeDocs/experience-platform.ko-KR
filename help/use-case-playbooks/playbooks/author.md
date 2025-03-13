@@ -1,19 +1,19 @@
 ---
 solution: Experience Platform
-title: 사용 사례에 대한 AI 지원 - 자체 플레이북을 작성하고 공유합니다.
+title: AI Assistant를 사용하여 나만의 플레이북을 작성하고 공유하는 방법을 알아봅니다.
 description: 사용 사례 플레이북을 만들고 공유하는 방법
 role: User
-source-git-commit: f813db7599409a8fc048480f7803ed86c9f397fe
+exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
+source-git-commit: f76db5c8d397c6c7b006c70147c054dc0a67be04
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
 
-
 # 나만의 플레이북을 작성하고 공유하세요.
 
-Adobe의 AI Assistant를 기반으로 하는 **플레이북 작성 프레임워크**&#x200B;를 사용하면 Adobe Experience Platform 내에서 플레이북을 효율적으로 만들고, 관리하고, 공유할 수 있습니다.
+Adobe Experience Platform의 AI Assistant에서 제공하는 [!DNL Playbook Authoring Framework]을(를) 사용하면 Adobe Experience Platform 내에서 플레이북을 효율적으로 만들고, 관리하고, 공유할 수 있습니다.
 
 프레임워크는 다음 3단계 프로세스를 따릅니다.
 
@@ -23,35 +23,33 @@ Adobe의 AI Assistant를 기반으로 하는 **플레이북 작성 프레임워�
 
 3. **플레이북 배포**: 다른 조직에서 플레이북을 공유합니다. 예를 들어 ACME의 독일 마르테크 우수센터는 &#39;황금&#39; 플레이북을 만들어 태국, 호주 등의 지역 단체에 배포할 수 있다. 마케팅 사용 사례를 표준화하는 데 도움이 됩니다.
 
-## Adobe의 AI Assistant를 사용하여 플레이북 만들기
+## 플레이북 만들기
+
+AI Assistant를 사용하거나 수동으로 두 가지 방법으로 플레이북을 만들 수 있습니다. 다음 섹션을 읽고 방법을 알아보십시오.
 
 ### 플레이북 개요
 
-Adobe의 AI Assistant를 사용하거나 수동으로 플레이북을 만들 수 있습니다.
+다음 단계에 따라 AI Assistant를 사용하여 플레이북을 만듭니다.
 
-다음 단계에 따라 Adobe의 AI Assistant를 사용하여 플레이북을 만듭니다.
-
-1. 왼쪽 탐색 창에서 **플레이북**&#x200B;을 선택합니다.
+왼쪽 탐색 패널에서 **[!UICONTROL 플레이북]**&#x200B;을 선택합니다.
 
 UI의 왼쪽 탐색 창에 강조 표시된 ![&quot;플레이북&quot;.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
-1. **새 플레이북**&#x200B;을 선택한 다음 **AI Assistant를 사용하여 플레이북 생성**&#x200B;을 선택합니다.
+**[!UICONTROL 새 플레이북]**&#x200B;을 선택한 다음 **AI Assistant를 사용하여 플레이북 생성**&#x200B;을 선택합니다.
 
-![새 플레이북 단추를 선택하십시오.](/help/use-case-playbooks/assets/playbooks/authoring/new-playbook.png)
+![&quot;AI Assistant를 사용하여 플레이북 생성&quot;이 선택된 플레이북 인터페이스입니다.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
-![강조 표시된 &quot;AI 도우미를 사용하여 플레이북 생성&quot; 단추를 선택하십시오.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
-
-1. 프롬프트 필드에서 사용 사례를 설명합니다.
+프롬프트 필드에서 사용 사례를 설명합니다.
 
 **예**: &quot;운동화를 열람했지만 구입을 완료하지 않은 ACME 고객을 참여시키십시오.&quot;
 
-![AI Assistant를 사용하여 플레이북 생성 단추를 선택합니다.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
+![Webform 영역이 강조 표시된 플레이북 인터페이스입니다.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
-1. 플레이북 메타데이터를 만들려면 **생성**&#x200B;을 선택하십시오.
+플레이북 메타데이터를 만들려면 **[!UICONTROL 생성]**&#x200B;을 선택하십시오.
 
 ![플레이북 생성 단추가 강조 표시된 프롬프트 영역입니다.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
-1. 생성된 제목, 설명 및 메타데이터를 필요에 따라 수정하려면 **[!UICONTROL 편집]**&#x200B;을(를) 선택하십시오.
+생성된 제목, 설명 및 메타데이터를 필요에 따라 수정하려면 **[!UICONTROL 편집]**&#x200B;을(를) 선택하십시오.
 
 ![&quot;편집&quot; 단추가 강조 표시된 생성된 플레이북입니다.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
@@ -61,17 +59,15 @@ UI의 왼쪽 탐색 창에 강조 표시된 ![&quot;플레이북&quot;.](/help/u
 * **타겟 대상자**
 * **마케팅 채널**
 
-![[편집] 단추가 강조 표시된 플레이북 세부 정보 섹션.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
+![&quot;편집&quot; 단추가 강조 표시된 플레이북 세부 정보 섹션입니다.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
-메타데이터가 생성되면 **여정 맵 편집** 단추를 선택하여 필요에 따라 여정 맵의 단계를 조정합니다.
+메타데이터가 생성되면 **[!UICONTROL 여정 맵 편집]**&#x200B;을(를) 선택하여 필요에 따라 여정 맵의 단계를 조정합니다.
 
 ![여정 맵 단추를 편집합니다.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
 ![플레이북 메타데이터를 캡처하면 여정 맵을 편집합니다.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 
-그런 다음 계속 진행하여 플레이북을 기술 에셋과 연결합니다.
-
-플레이북을 수동으로 만들려면 **플레이북 수동으로 만들기**&#x200B;를 선택하십시오.
+그런 다음 계속 진행하여 플레이북을 기술 에셋과 연결합니다. 플레이북을 수동으로 만들려면 **[!UICONTROL 플레이북 수동으로 만들기]**&#x200B;를 선택하십시오.
 
 ![플레이북을 수동으로 만들기](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
 
@@ -83,9 +79,9 @@ UI의 왼쪽 탐색 창에 강조 표시된 ![&quot;플레이북&quot;.](/help/u
 
 >[!NOTE]
 >
-> Real-Time Customer Data Platform에 대한 지원은 향후 릴리스에 추가될 예정입니다.
+> Real-Time CDP에 대한 지원은 향후 릴리스에 추가될 예정입니다.
 
-![&quot;기술 자산&quot; 탭과 &quot;필수 제품 추가&quot; 버튼이 강조 표시되었습니다.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![&quot;기술 자산&quot; 탭과 &quot;필수 제품 추가&quot; 단추가 강조 표시되어 있습니다.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
 아래 이미지에 표시된 대로 이 플레이북을 여정과 연결하려면 **[!UICONTROL 자산 선택]**&#x200B;을 선택하십시오. 그런 다음 **플레이북 게시**&#x200B;를 선택하여 플레이북을 완료합니다.
 
@@ -162,4 +158,4 @@ AI 어시스턴트는 &#39;프로젝트 이름&#39;이나 &#39;배경&#39;과 �
 
 ## 다음 단계
 
-이제 Adobe의 AI Assistant를 사용하여 플레이북을 만들고 게시하는 방법에 대해 알아보았으므로, 사용 가능한 플레이북을 시작하고 [플레이북 목록](/help/use-case-playbooks/playbooks/choose.md)에서 사용 사례에 적합한 플레이북을 선택하는 방법에 대해 알아보십시오.
+이제 AI Assistant를 사용하여 플레이북을 만들고 게시하는 방법에 대해 알아보았으므로, 사용 가능한 플레이북을 시작하고 [플레이북 목록](/help/use-case-playbooks/playbooks/choose.md)에서 사용 사례에 적합한 플레이북을 선택하는 방법에 대해 알아보십시오.
