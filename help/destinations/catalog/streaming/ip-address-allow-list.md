@@ -2,11 +2,11 @@
 keywords: IP 주소, IP 범위, 허용 목록, 스트리밍 대상 허용 목록 허용 목록에 추가하다
 title: 허용 목록에 추가하다 스트리밍 대상의 IP 주소
 type: Documentation
-description: 이 페이지에서는 Experience Platform에서 HTTP REST API 끝점, Amazon Kinesis 또는 Azure Event Hubs 인스턴스로 데이터를 안전하게 내보내기 위해 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
+description: 이 페이지에서는 Experience Platform에서 HTTP REST API 끝점, Amazon Kinesis 또는 Azure Event Hubs 인스턴스로 데이터를 안전하게 내보내도록 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: ccb0f80334241afd3f8d8b6ce2833cfd39b223ac
+source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ ht-degree: 0%
 
 Experience Platform에서 이러한 대상으로의 아웃바운드 트래픽은 항상 이 페이지에 나열된 IP를 통해 이동합니다.
 
-이 페이지에서는 데이터를 HTTP 끝점, [!DNL Amazon Kinesis] 또는 [!DNL Azure Event Hubs] 인스턴스로 안전하게 내보내기 위해 허용 목록에 추가하다 Experience Platform에 추가할 수 있는 IP 범위를 제공합니다. 이 기능은 HTTP 끝점이 엔터프라이즈 방화벽 뒤에 있거나 회사 보안 및 규정 준수 표준에서 IP 범위 목록을 허용 목록에추가된으로 유지해야 하는 경우에 특히 유용합니다.
+이 페이지에서는 Experience Platform에서 HTTP 끝점, [!DNL Amazon Kinesis] 또는 [!DNL Azure Event Hubs] 인스턴스로 데이터를 안전하게 내보내기 위해 허용 목록에 추가하다에 추가할 수 있는 IP 범위를 제공합니다. 이 기능은 HTTP 끝점이 엔터프라이즈 방화벽 뒤에 있거나 회사 보안 및 규정 준수 표준에서 IP 범위 목록을 허용 목록에추가된으로 유지해야 하는 경우에 특히 유용합니다.
 
 네트워크 방화벽을 통해 네트워크 액세스 제어를 정의할 수 있습니다. 적절한 IP 범위를 지정하여 데이터 전송 서비스에 트래픽을 허용할 수 있습니다.
 
-Adobe은 이 페이지에서 위에서 언급한 대상으로 작업하기 전에 다음 IP 범위를 허용 목록에 추가하다에 추가할 것을 권장합니다. 지역에 따른 IP 범위를 허용 목록에 추가하다에 추가하지 않으면 이러한 스트리밍 대상을 사용할 때 오류나 성능이 저하될 수 있습니다.
+Adobe은 이 페이지에서 위에 언급된 대상으로 작업하기 전에 다음 IP 범위를 허용 목록에 추가하다에 추가할 것을 권장합니다. 지역에 따른 IP 범위를 허용 목록에 추가하다에 추가하지 않으면 이러한 스트리밍 대상을 사용할 때 오류나 성능이 저하될 수 있습니다.
 
 ## VA7: 미국 및 아메리카 고객 {#us-americas}
 
@@ -57,6 +57,12 @@ Adobe은 이 페이지에서 위에서 언급한 대상으로 작업하기 전�
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
+
+## VA6: AWS에서 실행하는 미국 및 아메리카 고객 {#aws}
+
+아래 IP 범위는 Amazon Web Services(AWS)에서 실행 중인 Experience Platform 고객에게 적용됩니다. 자세한 내용은 [Experience Platform Multi-Cloud 개요](../../../landing/multi-cloud.md)를 참조하십시오.
+
+`66.117.18.0/24`
 
 ## NLD2: EMEA 고객 {#emea}
 
