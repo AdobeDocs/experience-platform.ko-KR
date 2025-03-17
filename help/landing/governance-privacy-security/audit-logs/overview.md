@@ -4,7 +4,7 @@ description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어�
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
+source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
 workflow-type: tm+mt
 source-wordcount: '1466'
 ht-degree: 32%
@@ -89,7 +89,7 @@ Platform UI의 **[!UICONTROL 감사]** 작업 영역에서 다양한 Experience 
 
 감사 로그는 365일 동안 유지되며 그 후에는 시스템에서 삭제됩니다. 365일 이상의 데이터가 필요한 경우 내부 정책 요구 사항을 충족하도록 정기적으로 로그를 내보내야 합니다.
 
-감사 로그를 요청하는 방법은 허용 가능한 기간 및 액세스 권한이 있는 레코드 수를 변경합니다. [로그를 내보내면](#export-audit-logs)365일(90일 간격)에서 최대 1000개의 레코드로 돌아갈 수 있습니다. Experience Platform의 [활동 로그 UI](#filter-audit-logs)에 지난 90일에서 최대 1000개의 레코드가 표시됩니다.
+감사 로그를 요청하는 방법은 허용 가능한 기간 및 액세스 권한이 있는 레코드 수를 변경합니다. [로그를 내보내면](#export-audit-logs)365일(90일 간격)에서 최대 10,000개의 레코드로 돌아갈 수 있습니다. Experience Platform의 [활동 로그 UI](#filter-audit-logs)에 지난 90일에서 최대 1000개의 레코드가 표시됩니다.
 
 오른쪽 레일에서 세부 정보를 보려면 목록에서 이벤트를 선택하십시오.
 
