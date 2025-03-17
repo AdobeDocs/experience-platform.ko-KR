@@ -4,9 +4,9 @@ title: 허용 목록에 추가하다 스트리밍 대상의 IP 주소
 type: Documentation
 description: 이 페이지에서는 Experience Platform에서 HTTP REST API 끝점, Amazon Kinesis 또는 Azure Event Hubs 인스턴스로 데이터를 안전하게 내보내도록 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 118b0b5e6a1936b644da4153fe7bfeb872ae137e
+source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -57,12 +57,12 @@ Adobe은 이 페이지에서 위에 언급된 대상으로 작업하기 전에 �
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
+<!-- 
+## VA6: US and Americas customers running on AWS {#aws}
 
-## VA6: AWS에서 실행하는 미국 및 아메리카 고객 {#aws}
+The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
 
-아래 IP 범위는 Amazon Web Services(AWS)에서 실행 중인 Experience Platform 고객에게 적용됩니다. 자세한 내용은 [Experience Platform Multi-Cloud 개요](../../../landing/multi-cloud.md)를 참조하십시오.
-
-`66.117.18.0/24`
+`66.117.18.0/24` -->
 
 ## NLD2: EMEA 고객 {#emea}
 
