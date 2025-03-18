@@ -3,10 +3,10 @@ title: Real-Time CDP에서 클라우드 스토리지 대상으로 배열, 맵 �
 type: Tutorial
 description: Real-Time CDP에서 클라우드 스토리지 대상으로 배열, 맵 및 개체를 내보내는 방법에 대해 알아봅니다.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
 workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 15%
+source-wordcount: '862'
+ht-degree: 16%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->배열을 클라우드 저장소 대상으로 내보내는 기능은 일반적으로 [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md) 대상에 사용할 수 있습니다.
+>배열 및 기타 복잡한 개체를 클라우드 저장소 대상으로 내보내는 기능은 일반적으로 [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md) 대상에 사용할 수 있습니다.
 
-Real-Time CDP에서 [클라우드 저장소 대상](/help/destinations/catalog/cloud-storage/overview.md)(으)로 배열을 내보내는 방법을 알아봅니다. 내보내기 워크플로우, 이 기능에서 활성화된 사용 사례 및 알려진 제한 사항을 이해하려면 이 문서 를 참조하십시오.
+Real-Time CDP에서 [클라우드 저장소 대상](/help/destinations/catalog/cloud-storage/overview.md)(으)로 배열, 맵 및 개체를 내보내는 방법에 대해 알아봅니다. 내보내기 워크플로우, 이 기능에서 활성화된 사용 사례 및 알려진 제한 사항을 이해하려면 이 문서 를 참조하십시오.
 
 Experience Platform에서 배열, 맵 및 기타 개체 유형을 내보내는 방법에 대해 알고 싶은 경우 이 페이지를 방문하십시오.
 
@@ -52,8 +52,6 @@ organizations = [{
   latestInteraction: "2024-09-08"
 }]
 ```
-
-다양한 함수를 사용하여 배열 요소에 액세스하고, 배열을 변환 및 필터링하고, 배열 요소를 문자열로 결합하는 방법 등에 대한 자세한 내용은 아래 [광범위한 예제](#examples)를 참조하십시오.
 
 어레이 외에도 Experience Platform의 맵과 개체를 원하는 클라우드 스토리지 대상으로 내보낼 수도 있습니다. Experience Platform의 [맵](/help/xdm/ui/fields/map.md) 및 [개체](/help/xdm/ui/fields/object.md)에 대해 자세히 알아보십시오.
 
