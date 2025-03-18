@@ -2,7 +2,7 @@
 title: 네임스페이스 우선순위
 description: ID 서비스의 네임스페이스 우선 순위에 대해 알아봅니다.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 3%
@@ -82,7 +82,7 @@ ID는 실제 개체를 나타냅니다. ID 그래프에 표시되는 객체는 �
 * 지정된 샌드박스에 대한 ID 설정을 구성하면 경험 이벤트에 대한 기본 ID가 구성에서 가장 높은 네임스페이스 우선 순위에 따라 결정됩니다.
    * 이는 체험 행사가 그 자체로 역동적이기 때문이다. ID 맵에는 3개 이상의 ID가 포함될 수 있으며 네임스페이스 우선 순위는 가장 중요한 네임스페이스가 경험 이벤트에 연결되어 있도록 합니다.
 * 따라서 다음 구성 **은(는) 더 이상 실시간 고객 프로필에서 사용되지 않습니다**:
-   * 웹 SDK, Mobile SDK 또는 Edge Network 서버 API를 사용하여 identityMap에서 ID를 전송할 때 기본 ID 구성(`primary=true`)이 사용됩니다(ID 네임스페이스 및 ID 값은 프로필에서 계속 사용됨). **참고**: 데이터 레이크 저장소 또는 Adobe Target과 같은 실시간 고객 프로필 외부의 서비스는 기본 ID 구성(`primary=true`)을 계속 사용합니다.
+   * 웹 SDK, Mobile SDK 또는 Edge Network Server API를 사용하여 identityMap에서 ID를 전송할 때 기본 ID 구성(`primary=true`)이 사용됩니다(ID 네임스페이스 및 ID 값은 프로필에서 계속 사용됨). **참고**: 데이터 레이크 저장소 또는 Adobe Target과 같은 실시간 고객 프로필 외부의 서비스는 기본 ID 구성(`primary=true`)을 계속 사용합니다.
    * XDM 경험 이벤트 클래스 스키마에서 기본 ID로 표시된 모든 필드.
    * Adobe Analytics 소스 커넥터(ECID 또는 AAID)의 기본 기본 ID 설정.
 * 반면 **네임스페이스 우선 순위는 프로필 레코드의 기본 ID를 결정하지 않습니다**.
@@ -162,7 +162,7 @@ ID 설정이 활성화된 경우 계산된 속성은 네임스페이스 우선 �
 
 데이터 레이크에 대한 데이터 수집은 [웹 SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) 및 스키마에 구성된 기본 ID 설정을 계속 적용합니다.
 
-데이터 레이크는 네임스페이스 우선 순위를 기반으로 기본 ID를 결정하지 않습니다. 예를 들어 Adobe Customer Journey Analytics은 Customer Journey Analytics이 데이터 레이크의 데이터를 소비하므로 네임스페이스 우선 순위가 활성화된 후에도(예: 새 연결에 데이터 세트 추가) ID 맵에서 값을 계속 사용합니다.
+데이터 레이크는 네임스페이스 우선 순위를 기반으로 기본 ID를 결정하지 않습니다. 예를 들어 Adobe Customer Journey Analytics은 데이터 레이크의 데이터를 사용하므로 네임스페이스 우선 순위가 활성화된 후에도(예: 새 연결에 데이터 세트 추가) Customer Journey Analytics은 ID 맵에서 값을 계속 사용합니다.
 
 ### XDM(경험 데이터 모델) 스키마
 
@@ -179,7 +179,7 @@ XDM 스키마에 대한 자세한 내용은 [스키마 개요](../../xdm/home.md
 
 이 구성은 인증된 이벤트를 사용해서만 점수를 계산하는 결과를 초래합니다.
 
-자세한 내용은 [Attribution AI](../../intelligent-services/attribution-ai/overview.md) 및 [고객 AI](../../intelligent-services/customer-ai/overview.md)의 문서를 참조하십시오.
+자세한 내용은 [Attribution AI](../../intelligent-services/attribution-ai/overview.md) 및 [Customer AI](../../intelligent-services/customer-ai/overview.md)에 대한 문서를 참조하십시오.
 
 ### 파트너가 빌드한 대상
 

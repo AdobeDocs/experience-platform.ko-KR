@@ -2,7 +2,7 @@
 title: 그래프 구성의 예
 description: ID 그래프 연결 규칙 및 ID 데이터 작업 시 발생할 수 있는 일반적인 그래프 시나리오에 대해 알아봅니다.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '2796'
 ht-degree: 6%
