@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Data Distiller으로 가치를 극대화하는 주요 팁 - OS656
 description: 실시간 고객 프로필 데이터를 보강하고 행동 통찰력을 사용하여 타깃팅된 대상자를 빌드하여 Adobe Experience Platform Data Distiller으로 가치를 극대화하는 방법에 대해 알아봅니다. 이 리소스에는 고객 세분화를 위해 최신성, 빈도, 통화(RFM) 모델을 적용하는 방법을 보여 주는 샘플 데이터 세트와 사례 연구가 포함되어 있습니다.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: fac4ca20f15bdfd765b73fde9db8dd7e2fc1a149
+source-git-commit: cfa8395e68ed828be5095a979d5bf0ea6e9a9ae9
 workflow-type: tm+mt
-source-wordcount: '3657'
+source-wordcount: '3658'
 ht-degree: 0%
 
 ---
@@ -438,15 +438,15 @@ RFM 속성을 저장하고 기본 ID를 할당하기 위해 빈 데이터 세트
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
-    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email', -- Primary identity field using the 'Email' namespace
-    days_since_last_purchase INTEGER, -- Days since the last purchase
-    orders INTEGER, -- Total number of orders
-    total_revenue DECIMAL(18, 2), -- Total revenue with two decimal precision
-    recency INTEGER, -- Recency score
-    frequency INTEGER, -- Frequency score
-    monetization INTEGER, -- Monetary score
-    rfm_model TEXT -- RFM segment classification
-) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email',
+    days_since_last_purchase INTEGER,
+    orders INTEGER,
+    total_revenue DECIMAL(18, 2),
+    recency INTEGER,
+    frequency INTEGER,
+    monetization INTEGER,
+    rfm_model TEXT
+) WITH (LABEL = 'PROFILE');
 
 INSERT INTO adls_rfm_profile
 SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
@@ -578,28 +578,9 @@ WITH (
 );
 ```
 
-#### 대상자 삽입 {#insert-an-audience}
+#### 빈 대상 데이터 세트 만들기 {#create-empty-audience-dataset}
 
-기존 대상자에 프로필을 추가하려면 `INSERT INTO` 명령을 사용합니다. 이렇게 하면 개별 프로필 또는 전체 대상을 기존 대상 데이터 세트에 추가할 수 있습니다.
-
-```sql
--- Insert profiles into the audience dataset
-INSERT INTO AUDIENCE adls_rfm_audience 
-SELECT 
-    _{TENANT_ID}.userId, 
-    _{TENANT_ID}.days_since_last_purchase, 
-    _{TENANT_ID}.orders, 
-    _{TENANT_ID}.total_revenue, 
-    _{TENANT_ID}.recency, 
-    _{TENANT_ID}.frequency, 
-    _{TENANT_ID}.monetization 
-FROM adls_rfm_profile 
-WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
-```
-
-#### 대상자에 프로필 추가 {#add-profiles-to-audience}
-
-다음 SQL 명령을 사용하여 대상자를 만들고 채웁니다.
+프로필을 추가하기 전에 대상 레코드를 저장할 빈 데이터 세트를 만듭니다.
 
 ```sql
 -- Create an empty audience dataset
@@ -620,11 +601,28 @@ SELECT
 WHERE FALSE;
 ```
 
+#### 기존 대상자에 프로필 삽입 {#insert-an-audience}
+
+기존 대상자에 프로필을 추가하려면 INSERT INTO 명령을 사용합니다. 이렇게 하면 개별 프로필 또는 전체 대상 세그먼트를 기존 대상 데이터 세트에 추가할 수 있습니다.
+
+```sql
+-- Insert profiles into the audience dataset
+INSERT INTO AUDIENCE adls_rfm_audience 
+SELECT 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
+FROM adls_rfm_profile 
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+```
+
 #### 대상자 삭제 {#delete-an-audience}
 
-기존 대상자를 삭제하려면 `DROP AUDIENCE` 명령을 사용하십시오. 대상이 없는 경우 `IF EXISTS`을(를) 지정하지 않으면 예외가 발생합니다.
-
-다음 SQL 명령을 사용하여 대상을 삭제합니다.
+기존 대상을 삭제하려면 DROP AUDIENCE 명령을 사용합니다. 대상이 없는 경우 IF EXISTS를 지정하지 않으면 예외가 발생합니다.
 
 ```sql
 DROP AUDIENCE IF EXISTS adls_rfm_audience;
