@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Data Distiller으로 가치를 극대화하는 주요 팁 - OS656
 description: 실시간 고객 프로필 데이터를 보강하고 행동 통찰력을 사용하여 타깃팅된 대상자를 빌드하여 Adobe Experience Platform Data Distiller으로 가치를 극대화하는 방법에 대해 알아봅니다. 이 리소스에는 고객 세분화를 위해 최신성, 빈도, 통화(RFM) 모델을 적용하는 방법을 보여 주는 샘플 데이터 세트와 사례 연구가 포함되어 있습니다.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
+source-git-commit: fac4ca20f15bdfd765b73fde9db8dd7e2fc1a149
 workflow-type: tm+mt
 source-wordcount: '3657'
 ht-degree: 0%
@@ -328,11 +328,11 @@ AS
 RFM 점수가 계산되면 고객은 다음 6개의 우선 순위 세그먼트로 분류될 수 있습니다.
 
 1. `Core`: 최신성, 빈도 및 통화 가치가 높은 우수 고객(최신성 = 1, 빈도 = 1, 통화 = 1).
-2. `Loyal`: 일관되지만 상위 지출자가 아닌 빈번한 고객(빈도 = 1).
-3. `Whales`: 최신성 및 빈도에 관계없이 최고 지출자(통화 = 1).
-4. `Promising`: 자주 사용하지만 더 적은 지출자(빈도 = 1, 2, 3; 통화 = 2, 3, 4).
-5. `Rookies`: 빈도가 낮은 새 고객(최신성 = 1, 빈도 = 4).
-6. `Slipping`: 활동이 감소한 이전 단골 고객(최신성 = 2, 3, 4, 빈도 = 4).
+1. `Loyal`: 일관되지만 상위 지출자가 아닌 빈번한 고객(빈도 = 1).
+1. `Whales`: 최신성 및 빈도에 관계없이 최고 지출자(통화 = 1).
+1. `Promising`: 자주 사용하지만 더 적은 지출자(빈도 = 1, 2, 3; 통화 = 2, 3, 4).
+1. `Rookies`: 빈도가 낮은 새 고객(최신성 = 1, 빈도 = 4).
+1. `Slipping`: 활동이 감소한 이전 단골 고객(최신성 = 2, 3, 4, 빈도 = 4).
 
 액세스 및 재사용을 간소화하려면 RFM 세그먼트, 점수 및 값을 저장하는 `VIEW`을(를) 만드십시오.
 
