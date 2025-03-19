@@ -1,17 +1,15 @@
 ---
-title: Adobe Experience Platform Data Distiller으로 가치를 극대화하는 주요 팁
+title: Adobe Experience Platform Data Distiller으로 가치를 극대화하는 주요 팁 - OS656
 description: 실시간 고객 프로필 데이터를 보강하고 행동 통찰력을 사용하여 타깃팅된 대상자를 빌드하여 Adobe Experience Platform Data Distiller으로 가치를 극대화하는 방법에 대해 알아봅니다. 이 리소스에는 고객 세분화를 위해 최신성, 빈도, 통화(RFM) 모델을 적용하는 방법을 보여 주는 샘플 데이터 세트와 사례 연구가 포함되어 있습니다.
-hide: true
-hidefromtoc: true
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: c7a6a37679541dc37bdfed33b72d2396db7ce054
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '3506'
+source-wordcount: '3657'
 ht-degree: 0%
 
 ---
 
-# Adobe Experience Platform Data Distiller으로 가치를 극대화하는 주요 팁
+# Adobe Experience Platform Data Distiller으로 가치를 극대화하는 주요 팁 - OS656
 
 이 페이지에는 Adobe Summit 세션 &quot;OS656 - Adobe Experience Platform Data Distiller으로 가치를 극대화하기 위한 주요 팁&quot;에서 학습한 내용을 적용할 수 있는 샘플 데이터 세트가 포함되어 있습니다. 실시간 고객 프로필 데이터를 강화하여 Adobe Real-Time Customer Data Platform 및 Journey Optimizer의 구현을 가속화하는 방법에 대해 알아봅니다. 이러한 풍부한 기능은 고객 행동 패턴에 대한 심층적인 통찰력을 활용하여 경험 전달 및 최적화를 위한 대상을 구축합니다.
 
@@ -53,7 +51,7 @@ CSV 파일을 Adobe Experience Platform에 업로드하려면 다음 단계를 �
 
 #### CSV 파일에서 데이터 세트 만들기 {#create-a-dataset}
 
-Experience Platform UI에서 왼쪽 탐색 레일에서 **[!UICONTROL 워크플로]**&#x200B;를 선택하고 사용 가능한 옵션에서 **[!UICONTROL CSV 파일에서 데이터 세트 만들기]**&#x200B;를 선택합니다. 새 사이드바가 화면 오른쪽에 나타납니다. **[!UICONTROL 시작]**&#x200B;을 선택하십시오.
+Experience Platform UI의 왼쪽 탐색 레일에서 **[!UICONTROL 데이터 세트]**&#x200B;를 선택한 다음 **[!UICONTROL 데이터 세트 만들기]**&#x200B;를 선택합니다. 그런 다음 사용 가능한 옵션에서 **[!UICONTROL CSV 파일에서 데이터 집합 만들기]**&#x200B;를 선택합니다.
 
 [!UICONTROL 데이터 집합 구성] 패널이 나타납니다. **[!UICONTROL 이름]** 필드에서 데이터 세트 이름을 &quot;luma_web_data&quot;로 입력하고 **[!UICONTROL 다음]**&#x200B;을(를) 선택합니다.
 
@@ -135,7 +133,7 @@ RFM 모형은 완료된 구매를 기준으로 최신성, 빈도수, 통화가�
 이 첫 번째 쿼리는 취소와 연결된 null이 아닌 모든 구매 ID를 선택하고 `GROUP BY`을(를) 사용하여 집계합니다. 결과 구매 ID는 데이터 세트에서 제외해야 합니다.
 
 ```sql
-CREATE OR replace VIEW orders_cancelled
+CREATE VIEW orders_cancelled
 AS
   SELECT purchase_id
   FROM   luma_web_data
@@ -241,7 +239,7 @@ GROUP BY userid;
 쿼리 효율성 및 재사용 가능성을 높이려면 집계된 RFM 값을 저장할 `VIEW`을(를) 만드십시오.
 
 ```sql
-CREATE OR replace VIEW rfm_values
+CREATE VIEW rfm_values
 AS
   SELECT userid,
          DATEDIFF(current_date, MAX(purchase_date)) AS days_since_last_purchase,
@@ -258,7 +256,7 @@ AS
 다시 한 번 가장 좋은 방법은 간단한 탐색 쿼리를 실행하여 보기에서 데이터를 검사하는 것입니다. 다음 문을 사용하십시오.
 
 ```sql
-SELECT * FROM RFM_Values;
+SELECT * FROM rfm_values;
 ```
 
 다음 스크린샷은 각 사용자에 대해 계산된 RFM 값을 표시하는 쿼리의 샘플 결과를 보여 줍니다. 결과는 `CREATE VIEW` 쿼리의 보기 ID에 해당합니다.
@@ -289,7 +287,7 @@ SELECT userid,
        NTILE(4)
          OVER (
            ORDER BY total_revenue DESC)                AS monetization
-FROM   rfm_val ues; 
+FROM rfm_values; 
 ```
 
 결과는 아래 이미지와 같습니다.
@@ -320,6 +318,10 @@ AS
              ORDER BY total_revenue DESC)                AS monetization
   FROM   rfm_values;
 ```
+
+결과는 다음 이미지와 비슷하게 보이지만 보기 ID는 다릅니다.
+
+![&#39;rfm_scores&#39; 보기에 대한 쿼리 결과 대화 상자입니다.](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
 
 #### 모델 RFM 세그먼트 {#model-rfm-segments}
 
@@ -398,7 +400,7 @@ SELECT * FROM rfm_model_segment;
 
 ### 4단계: SQL을 사용하여 RFM 데이터를 실시간 고객 프로필로 일괄 수집 {#sql-batch-ingest-rfm-data}
 
-는 RFM이 풍부한 고객 데이터를 실시간 고객 프로필로 일괄 수집합니다. 먼저 프로필이 활성화된 데이터 세트를 만들고 SQL을 사용하여 변환된 데이터를 삽입합니다.
+그런 다음 RFM이 풍부한 고객 데이터를 실시간 고객 프로필로 일괄 수집합니다. 먼저 프로필이 활성화된 데이터 세트를 만들고 SQL을 사용하여 변환된 데이터를 삽입합니다.
 
 #### RFM 속성을 저장할 파생 데이터 세트 만들기 {#create-a-derived-dataset}
 
@@ -426,7 +428,13 @@ RFM 속성을 저장하고 기본 ID를 할당하기 위해 빈 데이터 세트
 >
 >ID 필드 정의 및 ID 네임스페이스 작업에 대한 자세한 내용은 [ID 서비스 설명서](../../identity-service/home.md) 또는 [Adobe Experience Platform UI에서 ID 필드 정의](../../xdm/ui/fields/identity.md)에 대한 안내서를 참조하십시오.
 
-다음 SQL은 RFM 속성을 저장하는 프로필 사용 테이블을 만듭니다
+쿼리 편집기는 순차적 실행을 지원하기 때문에 단일 세션에 테이블 만들기 및 데이터 삽입 쿼리를 포함할 수 있습니다. 다음 SQL은 먼저 RFM 속성을 저장할 프로필 사용 테이블을 만듭니다. 그런 다음 `rfm_model_segment`에서 RFM이 풍부한 고객 데이터를 `adls_rfm_profile` 테이블에 삽입하여 실시간 고객 프로필 수집에 필요한 테넌트별 네임스페이스로 각 레코드를 구조화합니다.
+
+쿼리 편집기는 순차적 실행을 지원하기 때문에 단일 세션에서 테이블 만들기 및 데이터 삽입 쿼리를 실행할 수 있습니다. 다음 SQL은 먼저 RFM 속성을 저장할 프로필 사용 테이블을 만듭니다. 그런 다음 `rfm_model_segment`에서 RFM이 풍부한 고객 데이터를 `adls_rfm_profile` 테이블에 삽입하여 각 레코드가 테넌트별 네임스페이스(`_{TENANT_ID}`) 아래에 올바르게 구성되도록 합니다. 이 네임스페이스는 실시간 고객 프로필 수집 및 정확한 ID 해결에 필수적입니다.
+
+>[!IMPORTANT]
+>
+>`_{TENANT_ID}`을(를) 조직의 테넌트 네임스페이스로 바꾸십시오. 이 네임스페이스는 조직에 고유하며 수집된 모든 데이터가 Adobe Experience Platform에 올바르게 할당되도록 합니다.
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
@@ -439,15 +447,20 @@ CREATE TABLE IF NOT EXISTS adls_rfm_profile (
     monetization INTEGER, -- Monetary score
     rfm_model TEXT -- RFM segment classification
 ) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+
+INSERT INTO adls_rfm_profile
+SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
+              frequency, monetization, rfm_model) _{TENANT_ID}
+FROM rfm_model_segment;
 ```
 
 이 쿼리의 결과는 이 플레이북의 이전 데이터 세트 생성과 유사하지만 다른 ID를 사용합니다.
 
-데이터 세트를 만든 후 데이터 세트 > 찾아보기 > `adls_rfm_profile`(으)로 이동하여 데이터 세트가 비어 있는지 확인합니다.
+데이터 세트를 만든 후 **[!UICONTROL 데이터 세트]** > **[!UICONTROL 찾아보기]** > `adls_rfm_profile`(으)로 이동하여 데이터 세트가 비어 있는지 확인합니다.
 
 ![&#39;adls_rfm_profile&#39; 데이터 집합에 대한 세부 정보가 표시되고 프로필 사용 토글이 강조 표시된 데이터 집합 작업 영역입니다.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
-**[!UICONTROL 스키마]** > **[!UICONTROL 찾아보기]** > `adls_rfm_profile`(으)로 이동하여 새로 만든 데이터 집합과 사용자 지정 필드 그룹의 XDM 개별 프로필 스키마 다이어그램을 볼 수도 있습니다.
+**[!UICONTROL 스키마]** > **[!UICONTROL 찾아보기]** > `adls_rfm_profile`(으)로 이동하여 새로 만든 데이터 집합과 해당 사용자 지정 필드 그룹의 XDM 개별 프로필 스키마 다이어그램을 볼 수도 있습니다.
 
 ![스키마 캔버스에 &#39;adls_rfm_profile&#39; 다이어그램이 표시된 XDM 작업 영역입니다.](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
 
@@ -464,7 +477,7 @@ CREATE TABLE IF NOT EXISTS adls_rfm_profile (
 ```sql
 INSERT INTO adls_rfm_profile
 SELECT Struct(userid, days_since_last_purchase, orders, total_revenue, recency,
-              frequency, monetization, rfm_model) _pfreportingonprod
+              frequency, monetization, rfm_model) _{TENANT_ID}
 FROM   rfm_model_segment; 
 ```
 
@@ -490,10 +503,10 @@ SQL을 저장한 후 **[!UICONTROL 템플릿]** 탭으로 이동하여 저장된
 
 [!UICONTROL 일정 세부 정보] 보기가 나타납니다. 여기에서 다음 세부 정보를 입력하여 일정을 구성합니다.
 
-- **[!UICONTROL 실행 빈도]**: **연간**
-- **[!UICONTROL 실행 일]**: **4월 30일**
-- **[!UICONTROL 실행 시간 예약]**: **오후 11시(UTC)**
-- **[!UICONTROL 일정 기간]**: **4월 1일 - 2024년 5월 31일**
+- **[!UICONTROL 실행 빈도]**: **주별**
+- **[!UICONTROL 실행 일]**: **월요일 및 화요일**
+- **[!UICONTROL 실행 시간 예약]**: **오전 10:10 UTC**
+- **[!UICONTROL 일정 기간]**: **2025년 3월 17일 - 4월 30일**
 
 **[!UICONTROL 저장]**&#x200B;을 선택하여 일정을 확인합니다.
 
@@ -518,11 +531,11 @@ SQL을 저장한 후 **[!UICONTROL 템플릿]** 탭으로 이동하여 저장된
 
 `CREATE AUDIENCE AS SELECT` 명령을 사용하여 새 대상을 정의합니다. 만든 대상은 데이터 집합에 저장되고 **[!UICONTROL 데이터 Distiller]**&#x200B;의 **[!UICONTROL 대상]** 작업 영역에 등록됩니다.
 
-SQL 확장을 사용하여 만든 대상은 [!UICONTROL 대상] 작업 영역의 [!UICONTROL 데이터 Distiller] 원본 아래에 자동으로 등록됩니다. [!UICONTROL 대상] UI에서 필요에 따라 대상을 보고, 관리하고, 활성화할 수 있습니다.
+SQL 확장을 사용하여 만든 대상은 [!UICONTROL 대상] 작업 영역의 [!UICONTROL 데이터 Distiller] 원본 아래에 자동으로 등록됩니다. [대상 포털](../../segmentation/ui/audience-portal.md)에서 필요에 따라 대상을 보고, 관리하고, 활성화할 수 있습니다.
 
-![사용 가능한 대상을 표시하는 대상 작업 영역입니다.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
+![사용 가능한 대상을 표시하는 대상 포털입니다.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
-![필터 사이드바와 데이터 Distiller이 선택된 사용 가능한 대상을 표시하는 대상 작업 영역입니다.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
+![필터 사이드바와 데이터 Distiller이 선택된 사용 가능한 대상을 표시하는 대상 포털입니다.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
 
 SQL 대상에 대한 자세한 내용은 [데이터 Distiller 대상 설명서](../data-distiller-audiences/overview.md)를 참조하세요. UI에서 대상을 관리하는 방법을 알아보려면 [대상 포털 개요](../../segmentation/ui/audience-portal.md#audience-list)를 참조하십시오.
 
@@ -534,19 +547,19 @@ SQL 대상에 대한 자세한 내용은 [데이터 Distiller 대상 설명서](
 -- Define an audience for best customers based on RFM scores
 CREATE AUDIENCE rfm_best_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 
 -- Define an audience that includes all customers
 CREATE AUDIENCE rfm_all_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
@@ -555,33 +568,33 @@ WITH (
 -- Define an audience for core customers based on email identity
 CREATE AUDIENCE rfm_core_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = Email
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 ```
 
 #### 대상자 삽입 {#insert-an-audience}
 
-기존 대상자에 프로필을 추가하려면 `INSERT INTO` 명령을 사용합니다. 이렇게 하면 개별 프로필 또는 전체 대상 세그먼트를 기존 대상 데이터 세트에 추가할 수 있습니다.
+기존 대상자에 프로필을 추가하려면 `INSERT INTO` 명령을 사용합니다. 이렇게 하면 개별 프로필 또는 전체 대상을 기존 대상 데이터 세트에 추가할 수 있습니다.
 
 ```sql
 -- Insert profiles into the audience dataset
 INSERT INTO AUDIENCE adls_rfm_audience 
 SELECT 
-    _pfreportingonprod.userId, 
-    _pfreportingonprod.days_since_last_purchase, 
-    _pfreportingonprod.orders, 
-    _pfreportingonprod.total_revenue, 
-    _pfreportingonprod.recency, 
-    _pfreportingonprod.frequency, 
-    _pfreportingonprod.monetization 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
 FROM adls_rfm_profile 
-WHERE _pfreportingonprod.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
 ```
 
 #### 대상자에 프로필 추가 {#add-profiles-to-audience}

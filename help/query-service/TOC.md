@@ -5,9 +5,9 @@ breadcrumb-title: 쿼리 서비스 안내서
 user-guide-description: 표준 SQL을 사용하여 Experience Platform의 데이터 레이크 내에서 데이터를 쿼리합니다.
 feature: Queries
 role: User,Developer
-source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '400'
 ht-degree: 21%
 
 ---
@@ -23,7 +23,6 @@ ht-degree: 21%
 - 데이터 Distiller {#data-distiller}
    - [개요](data-distiller/overview.md)
    - [라이선스 사용](data-distiller/license-usage.md)
-   - [값을 극대화하기 위한 주요 팁](data-distiller/top-tips-to-maximize-value.md)
    - 파생 데이터 세트 {#derived-datasets}
       - [개요](data-distiller/derived-datasets/overview.md)
       - [SQL을 사용하여 파생 데이터 세트 만들기](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -40,6 +39,7 @@ ht-degree: 21%
       - [ML용 엔지니어 기능](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [ML 환경으로 데이터 내보내기](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML 데이터 파이프라인 강화 통합 워크플로](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+   - [Summit 2025 세션](data-distiller/top-tips-to-maximize-value.md)
 - 데이터 Distiller 통계 및 머신 러닝 {#advanced-statistics}
    - [개요](advanced-statistics/overview.md)
    - [기능 엔지니어링](advanced-statistics/feature-engineering.md)
