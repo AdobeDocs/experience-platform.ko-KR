@@ -3,10 +3,11 @@ title: Ui를 사용하여 Demandbase 의도를 Experience Platform에 연결
 description: Demandbase Intent를 Experience Platform에 연결하는 방법 알아보기
 hide: true
 hidefromtoc: true
-source-git-commit: 81a615b9826ed69bb050cae9c074a4e457ba128a
+exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
+source-git-commit: 911aad600dd2618ba98d2ccee737aaedea4f2735
 workflow-type: tm+mt
 source-wordcount: '365'
-ht-degree: 11%
+ht-degree: 36%
 
 ---
 
@@ -43,13 +44,13 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 >[!CONTEXTUALHELP]
 >id="platform_sources_demandbase_domain"
 >title="도메인 소스"
->abstract="Adobe에서는 XDM accountOrganization.website를 사용하지만 각 웹 사이트에 대해 사용자 지정 필드를 사용하는 고객이 있을 수 있습니다. 따라서 도메인 소스가 Experience Platform 계정에 대한 Demandbase 계정 레코드와 일치하는 도메인/웹 사이트 필드인지 확인해야 합니다."
+>abstract="Adobe는 XDM accountOrganization.website를 사용하지만, 일부 고객은 각 웹 사이트에 대해 사용자 정의 필드를 사용할 수 있습니다. 따라서 도메인 소스가 Demandbase 계정 기록과 Experience Platform 계정을 일치시킬 수 있는 도메인/웹 사이트 필드인지 확인해야 합니다."
 
 ## 데이터 흐름 예약 {#schedule-dataflow}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_demandbase_schedule"
->title="데이터 흐름 예약"
->abstract="Demandbase는 매주 월요일 오전 오후 5시(UTC)에 데이터를 삭제합니다. 따라서 오후 5시(UTC) 이후에 수집 시작 시간을 구성해야 합니다. 또한 Adobe에 파일을 삭제할 때 Demandbase가 일정을 변경할 수 있으므로 수집 시간을 확인해야 합니다."
+>title="데이터 흐름 일정 예약"
+>abstract="Demandbase는 매주 월요일 오후 5시(UTC)에 데이터를 전송합니다. 따라서 데이터 수집 시작 시간을 5시(UTC) 이후로 설정해야 합니다. 또한 Bombora가 파일을 Adobe에 전송할 때 일정을 변경할 수 있으므로, 데이터 수집 시간을 Demandbase에 확인해야 합니다."
 
 ## 데이터 흐름 검토 {#review-dataflow}
