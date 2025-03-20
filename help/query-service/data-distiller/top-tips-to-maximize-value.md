@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Data Distiller으로 가치를 극대화하는 주요 팁 - OS656
 description: 실시간 고객 프로필 데이터를 보강하고 행동 통찰력을 사용하여 타깃팅된 대상자를 빌드하여 Adobe Experience Platform Data Distiller으로 가치를 극대화하는 방법에 대해 알아봅니다. 이 리소스에는 고객 세분화를 위해 최신성, 빈도, 통화(RFM) 모델을 적용하는 방법을 보여 주는 샘플 데이터 세트와 사례 연구가 포함되어 있습니다.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: cfa8395e68ed828be5095a979d5bf0ea6e9a9ae9
+source-git-commit: 30db967fc94d8f5b9ded22ce81da3d51001610af
 workflow-type: tm+mt
-source-wordcount: '3658'
+source-wordcount: '3704'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,16 @@ Luma 사례 연구를 통해 사용자 행동 데이터를 분석하고 구매 �
 ## 사전 요구 사항
 
 이 사용 사례를 실행하려면 [Data Distiller](./overview.md)에 대해 Adobe Experience Platform 인스턴스에 라이선스를 부여해야 합니다. 자세한 내용은 Adobe 담당자에게 문의하십시오.
+
+쿼리를 실행하는 데 필요한 **조직의 테넌트 ID**&#x200B;도 알고 있어야 합니다. 테넌트 ID는 Experience Platform에 로그인할 때 @ 기호 바로 뒤에 표시되는 URL의 첫 번째 부분입니다.
+
+예를 들면 다음 URL의 경우
+
+```http
+https://experience.adobe.com/#/@pfreportingonprod/sname:prod/platform/home
+```
+
+테넌트 ID는 `pfreportingonprod`입니다.
 
 ## RFM 모델 개요 {#rfm-overview}
 
