@@ -2,14 +2,19 @@
 title: ID 그래프 연결 규칙
 description: ID 서비스의 ID 그래프 연결 규칙에 대해 알아봅니다.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 5%
+source-wordcount: '1476'
+ht-degree: 4%
 
 ---
 
-# ID 그래프 연결 규칙 개요
+# ID 그래프 연결 규칙 개요 {#identity-graph-linking-rules-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_overview"
+>title="ID 그래프 연결 규칙"
+>abstract="이러한 원치 않는 병합을 방지하기 위해 ID 그래프 연결 규칙을 통해 제공된 구성을 사용하고 사용자를 위한 정확한 개인화를 허용할 수 있습니다."
 
 >[!AVAILABILITY]
 >

@@ -2,9 +2,9 @@
 title: ID 그래프 연결 규칙에 대한 구현 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1725'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,12 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 
 [Adobe Analytics 소스 커넥터](../../sources/tutorials/ui/create/adobe-applications/analytics.md)를 사용하여 데이터를 수집하는 경우 ID 서비스에서 AAID를 차단하므로 ECID에 AAID(Adobe Analytics ID)보다 높은 우선 순위를 지정해야 합니다. ECID 우선 순위를 지정하여 실시간 고객 프로필에서 인증되지 않은 이벤트를 AAID 대신 ECID에 저장하도록 지시할 수 있습니다.
 
-### XDM 경험 이벤트
+### XDM 경험 이벤트 {#xdm-experience-events}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_xdm"
+>title="단일 개인 ID가 있는지 확인합니다"
+>abstract="사전 구현 프로세스 중에 시스템에서 Experience Platform으로 보낼 인증된 이벤트에 항상 CRMID와 같은 **single** 개인 식별자가 포함되어 있는지 확인해야 합니다."
 
 사전 구현 프로세스 중에 시스템에서 Experience Platform으로 전송할 인증된 이벤트에는 항상 CRMID와 같은 개인 식별자가 포함되어 있는지 확인합니다.
 
