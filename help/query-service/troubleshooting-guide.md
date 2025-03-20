@@ -4,24 +4,24 @@ solution: Experience Platform
 title: Query Service 및 Data Distiller FAQ
 description: 이 문서에는 쿼리 서비스 및 Data Distiller과 관련된 일반적인 질문과 대답이 포함되어 있습니다. 주제에는 데이터 내보내기, 서드파티 도구 및 PSQL 오류가 포함됩니다.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
-source-wordcount: '5055'
+source-wordcount: '5024'
 ht-degree: 0%
 
 ---
 
 # Query Service 및 Data Distiller FAQ
 
-이 문서는 쿼리 서비스 및 Data Distiller에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 또한 데이터 유효성 검사를 위해 &quot;쿼리&quot; 제품을 사용하거나 변환된 데이터를 데이터 레이크로 다시 쓰는 동안 일반적으로 표시되는 오류 코드가 포함됩니다. 질문과 기타 Adobe Experience Platform 서비스 문제 해결에 대해서는 [Experience Platform 문제 해결 가이드](../landing/troubleshooting.md)를 참조하십시오.
+이 문서는 쿼리 서비스 및 Data Distiller에 대해 자주 묻는 질문에 대한 답변을 제공합니다. 또한 데이터 유효성 검사를 위해 &quot;쿼리&quot; 제품을 사용하거나 변환된 데이터를 데이터 레이크로 다시 쓰는 동안 일반적으로 표시되는 오류 코드가 포함됩니다. 질문과 기타 Adobe Experience Platform 서비스 문제를 해결하려면 [Experience Platform 문제 해결 가이드](../landing/troubleshooting.md)를 참조하십시오.
 
 Adobe Experience Platform 내에서 쿼리 서비스와 Data Distiller이 함께 작동하는 방식을 명확히 하기 위해 두 가지 기본 질문이 있습니다.
 
-## Query Service와 Data Distiller 사이에는 어떤 관계가 있습니까?
+## 쿼리 서비스와 Data Distiller 간의 관계는 무엇입니까?
 
-Query Service 및 Data Distiller 는 특정 데이터 쿼리 기능을 제공하는 별개의 상호 보완적인 구성 요소입니다. Query Service 데이터 레이크를 변경하지 않고 수집된 데이터를 탐색, 유효성 검사 및 실험할 수 있는 광고 임시 쿼리를 위해 설계되었습니다. 반면, 데이터 디스틸러(Data Distiller)는 데이터를 변환하고 보강하는 배치 쿼리에 중점을 두며, 그 결과는 나중에 사용할 수 있도록 데이터 레이크에 다시 저장됩니다. Data Distiller의 일괄 처리 쿼리를 예약, 모니터링 및 관리할 수 있으므로 Query Service만으로는 수행할 수 없는 심층적인 데이터 처리 및 조작을 지원할 수 있습니다.
+Query Service 및 Data Distiller은 특정 데이터 쿼리 기능을 제공하는 별개의 보조 구성 요소입니다. Query Service는 Ad Hoc 쿼리가 데이터 레이크를 변경하지 않고 수집된 데이터를 탐색, 유효성 검사 및 실험하도록 설계되었습니다. 반면 Data Distiller은 향후 사용을 위해 데이터 레이크에 다시 저장된 결과를 통해 데이터를 변환하고 보강하는 일괄 쿼리에 중점을 둡니다. Data Distiller의 일괄 처리 쿼리는 쿼리 서비스만으로는 원활하게 수행할 수 없는 보다 심층적인 데이터 처리 및 조작을 지원하여 예약, 모니터링 및 관리할 수 있습니다.
 
-Query Service는 신속한 통찰력을 제공하는 반면, Data Distiller는 심층적이고 지속적인 데이터 변환을 가능하게 합니다.
+Query Service 를 함께 사용하면 신속한 통찰력을 얻을 수 있으며, Data Distiller 를 사용하면 보다 심층적이고 지속적인 데이터 변환을 수행할 수 있습니다.
 
 ## 쿼리 서비스와 Data Distiller의 차이점은 무엇입니까?
 
@@ -65,7 +65,7 @@ FAQ에 대한 다음 답변 목록은 다음 카테고리로 구분됩니다.
 ### 쿼리 서비스 API에 [!DNL Postman]을(를) 사용할 수 있습니까?
 
 +++답변
-예. [!DNL Postman](무료 타사 애플리케이션)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. Adobe Developer Console에서 프로젝트를 설정하고 [!DNL Postman]에서 사용하는 데 필요한 모든 자격 증명을 얻는 방법에 대한 단계별 지침은 [[!DNL Postman] 설치 가이드](https://video.tv.adobe.com/v/28832)를 참조하세요. [시작, 실행 및 공유에 대한 지침 [!DNL Postman] 컬렉션](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)에 대해서는 공식 설명서를 참조하세요.
+예. [!DNL Postman]&#x200B;(무료 타사 애플리케이션)을 사용하여 모든 Adobe API 서비스를 시각화하고 상호 작용할 수 있습니다. Adobe Developer Console에서 프로젝트를 설정하고 [!DNL Postman]에서 사용하는 데 필요한 모든 자격 증명을 얻는 방법에 대한 단계별 지침은 [[!DNL Postman] 설치 가이드](https://video.tv.adobe.com/v/28832)를 참조하세요. [시작, 실행 및 공유에 대한 지침 [!DNL Postman] 컬렉션](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)에 대해서는 공식 설명서를 참조하세요.
 +++
 
 ### UI를 통해 쿼리에서 반환되는 최대 행 수에 제한이 있습니까?
@@ -84,17 +84,6 @@ FAQ에 대한 다음 답변 목록은 다음 카테고리로 구분됩니다.
 
 +++답변
 아니. 데이터 크기에는 제한이 없지만 대화형 세션에서 10분의 쿼리 시간 제한이 있습니다. 쿼리가 배치 CTAS로 실행되는 경우 10분 시간 초과는 적용되지 않습니다. 자세한 내용은 [대화형 쿼리 실행](./best-practices/writing-queries.md#interactive-query-execution)에 대한 지침을 참조하십시오.
-+++
-
-### SELECT 쿼리의 출력 행 수에 대한 제한을 무시하려면 어떻게 해야 합니까?
-
-+++답변
-출력 행 제한을 무시하려면 쿼리에 &quot;LIMIT 0&quot;을 적용합니다. 예:
-
-```sql
-SELECT * FROM customers LIMIT 0;
-```
-
 +++
 
 ### 10분 후에 쿼리가 시간 초과되는 것을 방지하려면 어떻게 해야 합니까?
@@ -129,13 +118,13 @@ SELECT * FROM customers LIMIT 0;
 - Experience Platform에 로그인한 후 UI의 왼쪽 탐색에서 **[!UICONTROL 데이터 세트]**&#x200B;를 선택하여 [!UICONTROL 데이터 세트] 대시보드로 이동합니다.
 - 데이터 세트 [!UICONTROL 찾아보기] 탭이 열립니다. 검색 창을 사용하여 사용 가능한 옵션을 구체화할 수 있습니다. 표시된 목록에서 데이터 세트를 선택합니다.
 
-![검색 막대와 데이터 세트가 강조 표시된 Platform UI의 데이터 세트 대시보드입니다.](./images/troubleshooting/dataset-selection.png)
+![검색 창과 데이터 세트가 강조 표시된 Platform UI의 데이터 세트 대시보드.](./images/troubleshooting/dataset-selection.png)
 
-- [!UICONTROL 데이터 세트 활동] 화면이 나타납니다. 선택한 **[!UICONTROL 데이터 세트에서 평면화된 데이터의 XDM 스키마 표 형식으로 보기 대화 상자를 열려면 미리 보기 데이터 세트]** 선택합니다. 자세한 내용은 데이터 세트 설명서 미리 보기에서 [확인할 수 있습니다.](../catalog/datasets/user-guide.md#preview-a-dataset)
+- [!UICONTROL 데이터 세트 활동] 화면이 나타납니다. **[!UICONTROL 데이터 집합 미리 보기]**&#x200B;를 선택하여 XDM 스키마의 대화 상자를 열고 선택한 데이터 집합에서 병합된 데이터를 테이블 형식으로 표시합니다. 자세한 내용은 [데이터 집합 문서 미리 보기](../catalog/datasets/user-guide.md#preview-a-dataset)에서 확인할 수 있습니다.
 
-![미리 보기 데이터 세트가 강조 표시된 데이터 세트 대시보드의 데이터 세트 활동 탭.](./images/troubleshooting/dataset-preview.png)
+![미리 보기 데이터 세트가 강조 표시된 데이터 세트 대시보드의 데이터 세트 활동 탭입니다.](./images/troubleshooting/dataset-preview.png)
 
-- 스키마에서 필드를 선택하여 해당 내용을 평평한 열에 표시합니다. 열 이름은 페이지 오른쪽의 콘텐츠 위에 표시됩니다. 이 데이터 세트를 쿼리하는 데 사용할 이 이름을 복사해야 합니다.
+- 스키마에서 필드를 선택하여 해당 내용을 병합된 열에 표시합니다. 열 이름은 페이지 오른쪽의 콘텐츠 위에 표시됩니다. 이 데이터 세트를 쿼리하는 데 사용할 이 이름을 복사해야 합니다.
 
 ![병합된 데이터의 XDM 스키마 및 테이블 형식 보기입니다. 중첩된 데이터 집합의 열 이름이 UI에서 강조 표시됩니다.](./images/troubleshooting/column-name.png)
 
@@ -153,7 +142,7 @@ SELECT * FROM customers LIMIT 0;
 +++답변
 매우 작은 데이터 세트에서 쿼리가 오래 걸린 경우 고객 지원 센터에 문의하십시오.
 
-처리하는 동안 쿼리가 중단되는 원인은 여러 가지가 있을 수 있습니다. 정확한 원인 파악을 위해서는 사례별로 심층적인 분석이 필요하다. [Adobe 고객 지원 센터에 문의](#customer-support)하여 이 프로세스를 진행하십시오.
+처리하는 동안 쿼리가 중단되는 원인은 여러 가지가 있을 수 있습니다. 정확한 원인 파악을 위해서는 사례별로 심층적인 분석이 필요하다. 이 프로세스를 수행하려면 [Adobe 고객 지원 센터에 문의](#customer-support)하십시오.
 +++
 
 ### Adobe 고객 지원 센터에 문의하려면 어떻게 해야 합니까? {#customer-support}
@@ -161,17 +150,17 @@ SELECT * FROM customers LIMIT 0;
 +++답변
 [Adobe 고객 지원 전화 번호 전체 목록](https://helpx.adobe.com/ca/contact/phone.html)은 Adobe 도움말 페이지에서 사용할 수 있습니다. 또는 다음 단계를 완료하여 온라인으로 도움말을 찾을 수 있습니다.
 
-- 웹 브라우저에서 [https://www.adobe.com/](https://www.adobe.com/kr)(으)로 이동합니다.
+- 웹 브라우저에서 [https://www.adobe.com/](https://www.adobe.com/kr)&#x200B;(으)로 이동합니다.
 - 위쪽 탐색 모음 오른쪽에서 **[!UICONTROL 로그인]**&#x200B;을 선택합니다.
 
-![Adobe 웹 사이트에서 로그인이 강조 표시되어 있습니다.](./images/troubleshooting/adobe-sign-in.png)
+![로그인이 강조 표시된 Adobe 웹 사이트입니다.](./images/troubleshooting/adobe-sign-in.png)
 
 - Adobe 라이선스에 등록된 Adobe ID 및 암호를 사용합니다.
 - 위쪽 탐색 모음에서 **[!UICONTROL 도움말 및 지원]**&#x200B;을 선택하십시오.
 
 ![도움말 및 지원, 엔터프라이즈 지원 및 문의하기 등이 강조 표시된 상단 탐색 모음 드롭다운 메뉴.](./images/troubleshooting/help-and-support.png)
 
-[!UICONTROL 도움말 및 지원] 섹션이 포함된 드롭다운 배너가 나타납니다. Adobe 고객 지원 가상 도우미를 열려면 **[!UICONTROL 문의하기]**&#x200B;를 선택하고, 대규모 조직을 위한 전용 도움말은 **[!UICONTROL 엔터프라이즈 지원]**을 선택하십시오.
+[!UICONTROL 도움말 및 지원] 섹션이 포함된 드롭다운 배너가 나타납니다. **[!UICONTROL 문의하기]**&#x200B;를 선택하여 Adobe 고객 지원 가상 도우미를 열거나, 대규모 조직을 위한 전용 도움말에 대해 **[!UICONTROL 엔터프라이즈 지원]**을 선택하십시오.
 +++
 
 ### 이전 작업이 성공적으로 완료되지 않은 경우 후속 작업을 실행하지 않고 순차적 일련의 작업을 구현하려면 어떻게 해야 합니까?
@@ -202,7 +191,7 @@ SELECT * FROM customers LIMIT 0;
 +++답변
 특정 쿼리에 대한 오류 로그를 검색하려면 먼저 쿼리 서비스 API를 사용하여 쿼리 로그 세부 정보를 가져와야 합니다. HTTP 응답에는 쿼리 오류를 조사하는 데 필요한 쿼리 ID가 포함되어 있습니다.
 
-여러 쿼리를 검색하려면 GET 명령을 사용하십시오. API를 호출하는 방법에 대한 정보는 [샘플 API 호출 설명서](./api/queries.md#sample-api-calls)를 참조하십시오.
+GET 명령을 사용하여 여러 쿼리를 검색합니다. API를 호출하는 방법에 대한 정보는 [샘플 API 호출 설명서](./api/queries.md#sample-api-calls)를 참조하십시오.
 
 응답에서 조사할 쿼리를 식별하고 해당 `id` 값을 사용하여 다른 GET 요청을 만듭니다. 전체 지침은 [ID로 쿼리 검색](./api/queries.md#retrieve-a-query-by-id)에서 찾을 수 있습니다.
 
@@ -268,7 +257,7 @@ AS SELECT '1' as _id,
 ### 매일 시스템에 들어오는 새 데이터를 빠르게 처리하려면 어떻게 해야 합니까?
 
 +++답변
-이 [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) 절은 스냅샷 ID를 기반으로 테이블의 데이터를 점진적으로 읽는 데 사용할 수 있습니다. 이는 마지막 로드 실행 이후 생성되거나 수정된 데이터 세트 정보만 처리하는 증분 로드](./key-concepts/incremental-load.md) 설계 패턴과 함께 [사용하기에 이상적입니다. 그 결과, 처리 효율을 증가시키고 스트리밍 및 배치 데이터 처리와 함께 사용할 수 있다.
+[`SNAPSHOT`](./sql/syntax.md#snapshot-clause) 절을 사용하여 스냅숏 ID를 기반으로 테이블의 데이터를 증분 읽는 데 사용할 수 있습니다. 마지막 로드 실행 이후 만들어지거나 수정된 데이터 세트의 정보만 처리하는 [증분 로드](./key-concepts/incremental-load.md) 디자인 패턴에 사용하기에 이상적입니다. 그 결과, 처리 효율을 증가시키고 스트리밍 및 배치 데이터 처리와 함께 사용할 수 있다.
 +++
 
 ### 프로필 UI에 표시된 숫자와 프로필 내보내기 데이터 세트에서 계산된 숫자 간에 차이가 있는 이유는 무엇입니까?
@@ -301,16 +290,16 @@ SELECT count(1) FROM myTableName
 이 기능은 현재 진행 중입니다. 기능이 릴리스될 준비가 되면 [릴리스 정보](../release-notes/latest/latest.md) 및 Platform UI 대화 상자를 통해 세부 정보를 사용할 수 있습니다.
 +++
 
-### Query Service는 어떤 도우미 기능을 지원합니까?
+### 쿼리 서비스에서 지원하는 도우미 함수는 무엇입니까?
 
 +++답변
-Query Service는 SQL 기능을 확장하기 위해 몇 가지 기본 제공 SQL 도우미 함수를 제공합니다. Query Service](./sql/spark-sql-functions.md)에서 지원하는 SQL 함수의 [전체 목록은 문서를 참조하십시오.
+Query Service는 SQL 기능을 확장하기 위한 몇 가지 기본 제공 SQL 도우미 함수를 제공합니다. 쿼리 서비스에서 지원하는 [SQL 함수](./sql/spark-sql-functions.md)의 전체 목록은 문서를 참조하세요.
 +++
 
-### 모든 기본 [!DNL Spark SQL] 함수가 지원됩니까, 아니면 사용자가 Adobe Systems 에서 제공하는 래퍼 [!DNL Spark SQL] 함수만 사용하도록 제한됩니까?
+### 모든 네이티브 [!DNL Spark SQL] 함수가 지원됩니까, 아니면 사용자가 Adobe에서 제공하는 래퍼 [!DNL Spark SQL] 함수로만 제한됩니까?
 
 +++답변
-아직까지 모든 오픈 소스 [!DNL Spark SQL] 함수가 데이터 레이크 데이터에서 테스트된 것은 아닙니다. 테스트 및 확인이 완료되면 지원 목록에 추가됩니다. 특정 함수를 확인하려면 [지원되는 [!DNL Spark SQL] 함수](./sql/spark-sql-functions.md) 목록을 참조하십시오.
+아직 데이터 레이크 데이터에 대해 모든 오픈 소스 [!DNL Spark SQL] 기능을 테스트한 것은 아닙니다. 테스트 및 확인이 완료되면 지원 목록에 추가됩니다. 특정 함수를 확인하려면 [지원되는 [!DNL Spark SQL] 함수](./sql/spark-sql-functions.md) 목록을 참조하십시오.
 +++
 
 ### 사용자가 다른 쿼리에서 사용할 수 있는 UDF(사용자 정의 함수)를 직접 정의할 수 있습니까?
@@ -436,7 +425,7 @@ SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
 
 >[!NOTE]
 >
-> 날짜 문자열&#x200B;**은 포맷 `yyyy-mm-ddTHH24:MM:SS`형식이어야 합니다**.
+> 날짜 문자열 **은(는) `yyyy-mm-ddTHH24:MM:SS` 형식이어야 합니다**.
 
 타임스탬프 필터를 사용하는 예는 아래에서 볼 수 있습니다.
 
@@ -485,7 +474,7 @@ WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
 
 `NOT IN`을(를) 사용하는 대신 `NOT EXISTS` 또는 `LEFT OUTER JOIN`을(를) 사용할 수 있습니다.
 
-예를 들어 다음과 같은 테이블을 만든 경우:
+예를 들어 다음 테이블을 만든 경우:
 
 ```sql
 CREATE TABLE T1 (ID INT)
@@ -497,7 +486,7 @@ INSERT INTO T2 VALUES (1)
 INSERT INTO T2 VALUES (2)
 ```
 
-연산자를 `NOT EXISTS` 사용하는 경우 다음 쿼리를 사용하여 연산자를 `NOT IN` 사용하여 복제할 수 있습니다.
+`NOT EXISTS` 연산자를 사용하는 경우 다음 쿼리를 사용하여 `NOT IN` 연산자를 사용하여 복제할 수 있습니다.
 
 ```sql
 SELECT ID FROM T1
@@ -505,7 +494,7 @@ WHERE NOT EXISTS
 (SELECT ID FROM T2 WHERE T1.ID = T2.ID)
 ```
 
-또는 연산자를 `LEFT OUTER JOIN` 사용하는 경우 다음 쿼리를 사용하여 연산자를 `NOT IN` 사용하여 복제할 수 있습니다.
+또는 `LEFT OUTER JOIN` 연산자를 사용하는 경우 다음 쿼리를 사용하여 `NOT IN` 연산자를 사용하여 복제할 수 있습니다.
 
 ```sql
 SELECT T1.ID FROM T1
@@ -515,13 +504,13 @@ WHERE T2.ID IS NULL
 
 +++
 
-### UI에 표시된 이름좋아요 이중 밑줄이 있는 CTAS 쿼리를 사용하여 데이터 세트 만들 수 있습니까? 예: `test_table_001`.
+### UI에 표시되는 것과 같이 더블 밑줄 이름이 있는 CTAS 쿼리를 사용하여 데이터 세트를 만들 수 있습니까? 예: `test_table_001`.
 
 +++답변
-아니요, 이는 Query Service를 포함한 모든 Adobe Systems 서비스에 적용되는 Experience Platform 전반에 걸친 의도적인 제한 사항입니다. 두 개의 밑줄이 있는 이름은 스키마 및 데이터 세트 이름으로 허용되지만 데이터 세트의 테이블 이름에는 밑줄이 하나만 포함될 수 있습니다.
+아니요. 이는 쿼리 서비스를 포함한 모든 Adobe 서비스에 적용되는 Experience Platform 전반에 걸친 의도적인 제한입니다. 밑줄이 두 개인 이름은 스키마 및 데이터 세트 이름으로 사용할 수 있지만 데이터 세트의 테이블 이름에는 단일 밑줄만 포함할 수 있습니다.
 +++
 
-### 한 번에 실행할 수 있는 동시 쿼리 수는 몇 개입니까?
+### 한 번에 몇 개의 동시 쿼리를 실행할 수 있습니까?
 
 +++답변
 일괄 처리 쿼리가 백 엔드 작업으로 실행되므로 쿼리 동시 실행 제한은 없습니다. 그러나 쿼리 시간 초과 제한은 24시간으로 설정됩니다.
@@ -533,7 +522,7 @@ WHERE T2.ID IS NULL
 쿼리 활동 및 상태를 확인할 수 있는 모니터링 및 경고 기능이 있습니다. 자세한 내용은 [쿼리 서비스 감사 로그 통합](./data-governance/audit-log-guide.md) 및 [쿼리 로그](./ui/overview.md#log) 문서를 참조하십시오.
 +++
 
-### 업데이트를 롤백할 방법이 있습니까? 예를 들어 데이터가 다시 Platform에 기록될 때 오류가 발생하거나 일부 계산을 다시 구성해야 하는 경우 해당 시나리오를 어떻게 처리해야 합니까?
+### 업데이트를 롤백할 방법이 있습니까? 예를 들어, 오류가 있거나 데이터를 다시 Platform에 쓸 때 일부 계산을 다시 구성해야 하는 경우 해당 시나리오를 어떻게 처리해야 합니까?
 
 +++답변
 현재 당사는 이러한 방식의 롤백이나 업데이트를 지원하지 않습니다.
@@ -545,7 +534,7 @@ WHERE T2.ID IS NULL
 시스템은 데이터베이스가 아니기 때문에 인덱스가 없지만 데이터 저장소에 연결된 다른 최적화가 있습니다. 쿼리를 조정하는 데 다음 옵션을 사용할 수 있습니다.
 
 - 시계열 데이터를 기반으로 하는 시간 기반 필터.
-- struct 데이터 형식에 대한 푸시다운이 최적화되었습니다.
+- 구조 데이터 유형에 대한 푸시 다운이 최적화되었습니다.
 - 어레이 및 맵 데이터 유형에 최적화된 비용 및 메모리 푸시 다운
 - 스냅샷을 사용한 증분 처리
 - 지속된 데이터 형식.
@@ -578,13 +567,13 @@ WHERE T2.ID IS NULL
 
 - 쿼리 서비스는 속성 기반 액세스 제어를 지원합니다. 열/리프 수준 및/또는 구조 수준에서 데이터에 대한 액세스를 제한할 수 있습니다. 속성 기반 액세스 제어에 대한 자세한 내용은 설명서를 참조하십시오.
 
-### 서드파티 클라이언트와의 연결에 대한 SSL 모드를 지정할 수 있습니까? 예를 들어 Power BI에 &#39;verify-full&#39;을 사용할 수 있습니까?
+### 서드파티 클라이언트와의 연결에 대한 SSL 모드를 지정할 수 있습니까? 예를 들어 Power BI에서 &#39;verify-full&#39;을 사용할 수 있습니까?
 
 +++답변
 예. SSL 모드가 지원됩니다. 사용 가능한 여러 SSL 모드와 제공 가능한 보호 수준에 대한 분류는 [SSL 모드 설명서](./clients/ssl-modes.md)를 참조하십시오.
 +++
 
-### Power BI 클라이언트에서 쿼리 서비스로의 모든 연결에 TLS 1.2를 사용합니까?
+### Power BI 클라이언트에서 쿼리 서비스에 연결하는 모든 연결에 TLS 1.2를 사용합니까?
 
 +++답변
 예. 전송 중인 데이터는 항상 HTTPS를 준수합니다. 현재 지원되는 버전은 TLS1.2입니다.
@@ -608,7 +597,7 @@ WHERE T2.ID IS NULL
 아니요. 쿼리 서비스는 &quot;INSERT OVERWRITE INTO&quot; 명령을 지원하지 않습니다.
 +++
 
-### 라이선스 사용량 대시보드의 사용량 데이터는 Data Distiller Compute Hours에 대해 얼마나 자주 업데이트됩니까?
+### 라이선스 사용 대시보드의 사용 데이터가 데이터 Distiller 컴퓨팅 시간에 대해 얼마나 자주 업데이트됩니까?
 
 +++답변
 Data Distiller 컴퓨터 사용 시간에 대한 라이선스 사용 대시보드는 6시간마다 하루에 4번 업데이트됩니다.
@@ -637,16 +626,16 @@ Data Distiller 컴퓨터 사용 시간에 대한 라이선스 사용 대시보�
 ### 컴퓨팅 시간이란 무엇입니까?
 
 +++답변\
-계산 시간은 일괄 처리 쿼리가 실행될 때 Query Service 엔진이 데이터를 읽고, 처리하고, 데이터 레이크에 다시 쓰는 데 걸리는 시간을 측정 한 것입니다.
+계산 시간은 일괄 처리 쿼리가 실행될 때 쿼리 서비스 엔진이 데이터를 읽고, 처리하고, 데이터 레이크에 다시 쓰는 데 걸린 시간을 측정한 것입니다.
 +++
 
-### 컴퓨팅 시간은 어떻게 측정되나요?
+### 컴퓨팅 시간은 어떻게 측정됩니까?
 
 +++답변\
-계산 시간은 승인된 모든 샌드박스에서 누적되어 측정됩니다.
+컴퓨팅 시간은 인증된 모든 샌드박스에서 누적하여 측정됩니다.
 +++
 
-### 동일한 쿼리를 연속적으로 실행할 때 컴퓨팅 시간 소비 균일 변동이 발생하는 이유는 무엇인가요?
+### 동일한 쿼리를 연속적으로 실행해도 가끔 연산 시간 소비의 변동이 발생하는 이유는 무엇입니까?
 
 +++답변\
 쿼리의 계산 시간은 여러 요인으로 인해 변동될 수 있습니다. 여기에는 처리된 데이터 볼륨, SQL 쿼리 내의 변환 작업의 복잡성 등이 포함됩니다. 쿼리 서비스는 각 쿼리에 대해 위의 매개 변수를 기반으로 클러스터의 크기를 조정하며, 이로 인해 계산 시간이 다를 수 있습니다.
@@ -738,7 +727,7 @@ INSERT INTO QUERIES를 ITAS 쿼리라고 합니다. CREATE TABLE 쿼리를 CTAS 
 
 ## 타사 도구 {#third-party-tools}
 
-이 섹션에는 PSQL 및 Power BI과 같은 타사 도구 사용에 대한 정보가 포함되어 있습니다.
+이 섹션에는 PSQL 및 Power BI과 같은 서드파티 도구 사용에 대한 정보가 포함되어 있습니다.
 
 ### 쿼리 서비스를 서드파티 도구에 연결할 수 있습니까?
 
@@ -778,13 +767,13 @@ PSQL 또는 [!DNL Postgres] 클라이언트 호환 타사 SQL 편집기는 쿼�
 
 대시보드의 응답 시간을 향상시키려면 Query Service와 BI 도구 간에 Business Intelligence(BI) 서버를 캐싱 레이어로 구현해야 합니다. 일반적으로 대부분의 BI 도구에는 서버를 위한 추가 기능이 있습니다.
 
-캐시 서버 계층을 추가하는 목적은 쿼리 서비스의 데이터를 캐시하고 대시보드에 활용하여 응답 속도를 높이는 것입니다. 이는 실행되는 쿼리의 결과가 매일 BI 서버에서 캐시되기 때문에 가능합니다. 그런 다음 캐싱 서버는 대기 시간을 줄이기 위해 동일한 쿼리를 가진 모든 사용자 에게 이러한 결과를 제공합니다. 이 설정에 대한 설명을 위해 사용 중인 유틸리티 또는 서드파티 도구 설명서를 참조하십시오.
+캐시 서버 계층을 추가하는 목적은 쿼리 서비스의 데이터를 캐시하고 대시보드에 활용하여 응답 속도를 높이는 것입니다. 이는 실행되는 쿼리의 결과가 매일 BI 서버에서 캐시되기 때문에 가능합니다. 그런 다음 캐싱 서버는 동일한 쿼리가 있는 모든 사용자에 대해 이러한 결과를 제공하여 지연을 줄입니다. 이 설정에 대한 자세한 내용은 사용 중인 유틸리티 또는 서드파티 도구의 설명서를 참조하십시오.
 +++
 
-### pgAdmin 연결 도구 를 사용하여 Query Service에 액세스할 수 있습니까?
+### pgAdmin 연결 도구를 사용하여 쿼리 서비스에 액세스할 수 있습니까?
 
 +++답변
-아니요, pgAdmin 연결은 지원되지 않습니다. [사용 가능한 서드파티 클라이언트 목록과 이를 Query Service](./clients/overview.md)에 연결하는 방법에 대한 지침은 설명서에서 찾을 수 있습니다.
+아니요. pgAdmin 연결은 지원되지 않습니다. [사용 가능한 타사 클라이언트 목록 및 쿼리 서비스에 연결하는 방법에 대한 지침](./clients/overview.md)은 문서에서 찾을 수 있습니다.
 +++
 
 ## PostgreSQL API 오류 {#postgresql-api-errors}
@@ -805,8 +794,8 @@ PSQL 또는 [!DNL Postgres] 클라이언트 호환 타사 SQL 편집기는 쿼�
 | **58000** | 쿼리 | 시스템 오류 | 내부 시스템 오류 |
 | **0A000** | 쿼리/명령 | 지원되지 않음 | 쿼리/명령의 기능/기능은 지원되지 않습니다 |
 | **42501** | 테이블 삭제 쿼리 | 쿼리 서비스에서 만들지 않은 테이블 삭제 | 삭제 중인 테이블은 쿼리 서비스에서 `CREATE TABLE` 문을 사용하여 만들지 않았습니다. |
-| **42501** | 테이블 삭제 쿼리 | 인증된 사용자 이름이 테이블을 생성하지 않음 | 삭제되는 테이블이 현재 로그인한 사용자 에 의해 작성되지 않았습니다 |
-| **재질 보기 42P01** | DROP TABLE 쿼리 | 테이블을 찾을 수 없음 | 쿼리에 지정된 테이블을 찾을 수 없습니다. |
+| **42501** | 테이블 삭제 쿼리 | 인증된 사용자가 생성하지 않은 테이블 | 삭제 중인 테이블은 현재 로그인한 사용자가 만들지 않았습니다. |
+| **42P01** | 테이블 삭제 쿼리 | 테이블을 찾을 수 없음 | 쿼리에 지정된 테이블을 찾을 수 없습니다. |
 | **42P12** | 테이블 삭제 쿼리 | `dbName`에 대한 테이블이 없습니다. `dbName`을(를) 확인하십시오. | 현재 데이터베이스에 테이블이 없습니다. |
 
 ### 테이블에서 history_meta() 메서드를 사용할 때 58000 오류 코드를 수신한 이유는 무엇입니까?
