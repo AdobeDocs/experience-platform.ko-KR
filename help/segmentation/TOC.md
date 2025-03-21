@@ -5,9 +5,9 @@ breadcrumb-title: Segmentation Service 안내서
 user-guide-description: Adobe Experience Platform에서 생성한 세그먼트 정의 또는 외부 소스를 사용하여 실시간 고객 프로필 데이터에서 대상자를 빌드합니다.
 feature: Segments
 role: User
-source-git-commit: be480fee733eb786c5488a9a10d04a62ef845566
+source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '203'
 ht-degree: 40%
 
 ---
@@ -45,6 +45,7 @@ ht-degree: 40%
    - [배치 세분화](methods/batch-segmentation.md)
    - [스트리밍 세분화](methods/streaming-segmentation.md)
    - [에지 세분화](methods/edge-segmentation.md)
+   - [유연한 대상 평가](methods/flexible-audience-evaluation.md)
 - 대상 유형 {#types}
    - [개요](types/overview.md)
    - [사용자 대상](types/people-audiences.md)
