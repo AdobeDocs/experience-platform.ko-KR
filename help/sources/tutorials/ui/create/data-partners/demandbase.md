@@ -44,7 +44,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 >[!CONTEXTUALHELP]
 >id="platform_sources_demandbase_domain"
 >title="도메인 소스"
->abstract="Adobe는 XDM accountOrganization.website를 사용하지만, 일부 고객은 각 웹 사이트에 대해 사용자 정의 필드를 사용할 수 있습니다. 따라서 도메인 소스가 Demandbase 계정 기록과 Experience Platform 계정을 일치시킬 수 있는 도메인/웹 사이트 필드인지 확인해야 합니다."
+>abstract="Adobe는 XDM accountOrganization.website를 사용하지만 일부 고객은 각 웹 사이트에 대해 사용자 정의 필드를 사용할 수 있습니다. 따라서 도메인 소스가 Demandbase 계정 기록과 Experience Platform 계정을 일치시킬 수 있는 도메인/웹 사이트 필드인지 확인해야 합니다."
 
 ## 데이터 흐름 예약 {#schedule-dataflow}
 
