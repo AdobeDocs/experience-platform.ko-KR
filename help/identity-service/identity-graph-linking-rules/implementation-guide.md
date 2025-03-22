@@ -2,9 +2,9 @@
 title: ID 그래프 연결 규칙에 대한 구현 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
+source-git-commit: 2dadb3a0a79f4d187dd096177130802f511a6917
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1778'
 ht-degree: 2%
 
 ---
@@ -65,11 +65,16 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 >title="단일 개인 ID가 있는지 확인합니다"
 >abstract="사전 구현 프로세스 중에 시스템에서 Experience Platform으로 보낼 인증된 이벤트에 항상 CRMID와 같은 **single** 개인 식별자가 포함되어 있는지 확인해야 합니다."
 
-사전 구현 프로세스 중에 시스템에서 Experience Platform으로 전송할 인증된 이벤트에는 항상 CRMID와 같은 개인 식별자가 포함되어 있는지 확인합니다.
+사전 구현 프로세스 중에 시스템에서 Experience Platform으로 보낼 인증된 이벤트에 항상 CRMID와 같은 **single** 개인 식별자가 포함되어 있는지 확인해야 합니다.
+
+* (권장) 한 명의 개인 ID를 사용하는 인증된 이벤트입니다.
+* (권장되지 않음) 두 개의 개인 식별자가 있는 인증된 이벤트입니다.
+* (권장되지 않음) 개인 식별자가 없는 인증된 이벤트입니다.
+
 
 >[!BEGINTABS]
 
->개인 ID가 있는 [!TAB 인증된 이벤트]
+>[!TAB 한 명의 개인 ID가 있는 인증된 이벤트]
 
 ```json
 {
@@ -98,8 +103,57 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 }
 ```
 
->[!TAB 개인 식별자가 없는 인증된 이벤트]
+>[!TAB 개인 식별자가 두 개인 ]인 인증된 이벤트
 
+시스템에서 2명의 개인 식별자를 전송하는 경우 구현이 1명의 개인 네임스페이스 요구 사항에 실패할 수 있습니다. 예를 들어 웹 SDK 구현의 identityMap에 CRMID, customerID 및 ECID 네임스페이스가 포함되어 있으면 모든 단일 이벤트에 CRMID와 customerID가 모두 포함될 수 있습니다.
+
+가장 좋은 방법은 다음과 유사한 페이로드를 전송하는 것입니다.
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ],
+      "customerID": [
+          {
+            "id": "Jane",
+            "primary": false
+          }
+      ],
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+단, 2명의 개인 식별자를 보낼 수 있지만 구현이나 데이터 오류로 인해 원하지 않는 그래프 붕괴가 방지될 수는 없습니다. 다음 시나리오를 고려하십시오.
+
+* `timestamp1` = John이 로그인하면 -> 시스템에서 `CRMID: John, ECID: 111`을(를) 캡처합니다. 그러나 이 이벤트 페이로드에는 `customerID: John`이(가) 없습니다.
+* `timestamp2` = Jane 로그인 -> 시스템이 `customerID: Jane, ECID: 111`을(를) 캡처합니다. 그러나 이 이벤트 페이로드에는 `CRMID: Jane`이(가) 없습니다.
+
+따라서 인증된 이벤트가 있는 한 명의 개인 식별자만 보내는 것이 좋습니다.
+
+그래프 시뮬레이션에서 이 수집은 다음과 같을 수 있습니다.
+
+![예제 그래프가 있는 그래프 시뮬레이션 UI입니다.](../images/implementation/example-graph.png)
+
+>[!TAB 개인 식별자가 없는 인증된 이벤트]
 
 ```json
 {
@@ -122,27 +176,7 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 }
 ```
 
-
 >[!ENDTABS]
-
-사전 구현 프로세스 중에 시스템에서 Experience Platform으로 보낼 인증된 이벤트에 항상 CRMID와 같은 **single** 개인 식별자가 포함되어 있는지 확인해야 합니다.
-
-* (권장) 한 명의 개인 ID를 사용하는 인증된 이벤트입니다.
-* (권장되지 않음) 두 개의 개인 식별자가 있는 인증된 이벤트입니다.
-* (권장되지 않음) 개인 식별자가 없는 인증된 이벤트입니다.
-
-시스템에서 2명의 개인 식별자를 전송하는 경우 구현이 1명의 개인 네임스페이스 요구 사항에 실패할 수 있습니다. 예를 들어, webSDK 구현의 identityMap에 CRMID, customerID 및 ECID 네임스페이스가 포함되어 있으면 디바이스를 공유하는 두 명의 개인이 서로 다른 네임스페이스와 잘못 연결될 수 있습니다.
-
-ID 서비스 내에서 이 구현은 다음과 같을 수 있습니다.
-
-* `timestamp1` = John이 로그인하면 -> 시스템에서 `CRMID: John, ECID: 111`을(를) 캡처합니다.
-* `timestamp2` = Jane 로그인 -> 시스템이 `customerID: Jane, ECID: 111`을(를) 캡처합니다.
-
-+++그래프 시뮬레이션에서 구현의 모양 보기
-
-![예제 그래프가 있는 그래프 시뮬레이션 UI입니다.](../images/implementation/example-graph.png)
-
-+++
 
 ## 권한 설정 {#set-permissions}
 

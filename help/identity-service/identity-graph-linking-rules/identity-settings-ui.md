@@ -2,9 +2,9 @@
 title: ID 설정 UI
 description: ID 설정 사용자 인터페이스를 사용하는 방법을 알아봅니다.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '641'
 ht-degree: 3%
 
 ---
@@ -13,9 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* ID 그래프 연결 규칙은 현재 제한적 가용성입니다. 개발 샌드박스의 기능에 액세스하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
->
->* UI의 ID 설정에 액세스하려면 계정에 **ID 그래프 보기** 권한이 있어야 합니다. 자세한 내용은 특성 기반 액세스 제어의 사용 권한에 대한 [안내서](../../access-control/abac/ui/permissions.md)를 참조하십시오.
+>ID 그래프 연결 규칙은 현재 제한적 가용성입니다. 개발 샌드박스의 기능에 액세스하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
 
 ID 설정은 고유한 네임스페이스를 지정하고 네임스페이스 우선 순위를 구성하는 데 사용할 수 있는 Adobe Experience Platform ID 서비스 UI의 기능입니다.
 
@@ -31,6 +29,15 @@ ID 설정 작업을 시작하기 전에 다음 문서를 참조하십시오.
 * [그래프 구성의 예](./example-configurations.md)
 * [네임스페이스 우선순위](./namespace-priority.md)
 * [그래프 시뮬레이션](./graph-simulation.md)
+
+### 권한 설정 {#set-permissions}
+
+다음으로, 계정이 다음 권한으로 프로비저닝되었는지 확인해야 합니다.
+
+* **[!UICONTROL ID 설정 보기]**: ID 네임스페이스 찾아보기 페이지에서 고유한 네임스페이스 및 네임스페이스 우선 순위를 볼 수 있도록 이 권한을 적용합니다.
+* **[!UICONTROL ID 설정 편집]**: ID 설정을 편집하고 저장하려면 이 권한을 적용하세요.
+
+이러한 권한이 없는 경우 관리자에게 문의하십시오. 자세한 내용은 [사용 권한 안내서](../../access-control/abac/ui/permissions.md)를 참조하십시오.
 
 ## ID 설정 구성
 
