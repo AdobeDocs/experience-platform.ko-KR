@@ -2,10 +2,10 @@
 title: SFTP 호스트
 description: Adobe Experience Platform에서 태그를 구성하여 보안 및 자체 호스팅되는 SFTP 서버에 라이브러리 빌드를 전달하는 방법에 대해 알아봅니다.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: b3c3bf0a39a30e8c9baf81ec20945497acef5465
+source-git-commit: 5b362d28eb3be5e2a45464390c694f7ae59f899c
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 11%
+source-wordcount: '875'
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 11%
 >
 >Adobe Experience Platform Launch는 Adobe Experience Platform의 데이터 수집 기술로 새롭게 브랜딩되었습니다. 그 결과로 제품 설명서 전반에서 몇 가지 용어 변경이 있었습니다. 용어 변경에 대한 통합 참고 자료는 다음 [문서](../../../term-updates.md)를 참조하십시오.
 
-Experience Platform을 사용하면 호스팅하는 보안 SFTP 서버에 태그 라이브러리 빌드를 전달하여 빌드의 저장 및 관리 방법을 보다 세밀하게 제어할 수 있습니다. 이 안내서에서는 Experience Platform UI 또는 데이터 수집 UI의 태그 속성에 대해 SFTP 호스트를 설정하는 방법을 다룹니다.
+Experience Platform을 사용하면 호스팅하는 보안 SFTP 서버에 태그 라이브러리 빌드를 전달할 수 있으므로, 빌드의 저장 및 관리 방법을 보다 세밀하게 제어할 수 있습니다. 이 안내서에서는 Experience Platform UI 또는 데이터 수집 UI에서 태그 속성에 대한 SFTP 호스트를 설정하는 방법을 다룹니다.
 
 >[!NOTE]
 >
@@ -36,6 +36,22 @@ SFTP 서버에 공개/개인 키 쌍이 설치되어 있어야 합니다. 이러
 개인 키는 공개 키를 암호화하는 데 사용됩니다. SFTP 호스트 생성 프로세스 중에 개인 키를 제공해야 합니다. 공개 키 암호화에 대한 지침은 Reactor API 안내서의 [암호 값](../../../api/guides/encrypting-values.md)에 대한 섹션을 참조하십시오. 특정 키가 필요한지 알지 못하는 경우에는 프로덕션 환경의 GPG 키를 사용하십시오. 마지막으로, 모든 컴퓨터에서 개인 키를 암호화할 수 있으므로 이 단계를 완료하기 위해 서버에 GPG를 설치할 필요가 없습니다.
 
 ### 허용 목록에 추가하다 플랫폼 IP 주소
+
+>[!IMPORTANT]
+>
+> 2025년 6월 23일, Adobe Launch는 SFTP 호스트 유형 및 콜백 API 기능을 지원하는 데 사용되는 외부 IP 주소를 업데이트하고 있습니다. 이러한 기능을 계속 사용하려면 방화벽 규칙이 새 IP 주소에서 트래픽을 허용하는지 확인하십시오.
+>
+> 중단 없이 액세스를 유지하려면 지금 새 IP를 추가하고 2025년 6월 23일 이후에 이전 IP를 제거하는 것이 좋습니다.
+>
+>**이전 IP 주소:**
+> * `184.72.239.68`
+> * `23.20.85.113`
+> * `54.226.193.184`
+>
+>**새 IP 주소:**
+> * `34.227.138.75 `
+> * `44.194.43.191`
+> * `3.215.163.18`
 
 플랫폼이 SFTP 서버에 연결할 수 있도록 하기 위해 회사 방화벽 내에서 사용할 IP 주소 집합을 승인해야 할 수 있습니다. 이러한 IP 주소는 다음과 같습니다.
 
