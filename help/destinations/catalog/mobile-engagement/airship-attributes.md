@@ -3,20 +3,28 @@ keywords: 비행선 속성;비행선 목적지
 title: 비행선 속성 연결
 description: Airship 내에서 타깃팅할 대상 속성으로 Adobe 대상 데이터를 Airship에 원활하게 전달합니다.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 453884612e787439ea58f312d8080622ee0441f7
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1150'
 ht-degree: 2%
 
 ---
 
 # [!DNL Airship Attributes] 연결 {#airship-attributes-destination}
 
+>[!IMPORTANT]
+>
+>* 2025년 3월 25일부터 대상 카탈로그에서 두 개의 [!DNL Airship Attributes] 카드를 나란히 볼 수 있습니다. 이는 대상 서비스에 대한 내부 업그레이드 때문입니다. 기존 [!DNL Airship Attributes] 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) 비행선 특성]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL 비행선 특성]**&#x200B;인 새 카드를 사용할 수 있습니다.
+>* 새 활성화 데이터 흐름을 보려면 카탈로그의 **[!UICONTROL 비행선 특성]** 연결을 사용하십시오. **[!UICONTROL (더 이상 사용되지 않는) 비행선 특성]** 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 조치가 필요하지 않습니다.
+>* [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다.
+>   * 흐름 사양 ID: `a862e0be-966e-4e5a-80d3-1bb566461986`
+>   * 연결 사양 ID: `594bc002-4a47-49b7-8a98-ac0d21045502`
+
 ## 개요 {#overview}
 
 [!DNL Airship]은(는) 선도적인 고객 참여 플랫폼으로, 고객 라이프사이클의 모든 단계에서 사용자에게 의미 있고 개인화된 옴니채널 메시지를 제공할 수 있습니다.
 
-이 통합은 타깃팅 또는 트리거를 위해 Adobe 프로필 데이터를 [특성](https://docs.airship.com/guides/audience/attributes/)(으)로 [!DNL Airship]에 전달합니다.
+이 통합은 타깃팅 또는 트리거를 위해 Adobe 프로필 데이터를 [특성](https://docs.airship.com/guides/audience/attributes/)&#x200B;(으)로 [!DNL Airship]에 전달합니다.
 
 [!DNL Airship]에 대한 자세한 내용은 [비행선 문서](https://docs.airship.com)를 참조하세요.
 
@@ -26,7 +34,7 @@ ht-degree: 2%
 
 ## 전제 조건 {#prerequisites}
 
-대상자를 [!DNL Airship](으)로 보내려면 먼저 다음을 수행해야 합니다.
+대상자를 [!DNL Airship]&#x200B;(으)로 보내려면 먼저 다음을 수행해야 합니다.
 
 * [!DNL Airship] 프로젝트에서 특성을 사용하도록 설정합니다.
 * 인증을 위한 전달자 토큰을 생성합니다.
@@ -41,8 +49,8 @@ ht-degree: 2%
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -83,7 +91,7 @@ Adobe Experience Platform 프로필 속성은 [!DNL Airship] 속성과 유사하
 
 ### 사용 사례 #2
 
-Adobe Experience Platform의 특성을 활용하여 [!DNL Airship] 프로필을 더욱 강화하고 SDK 또는 [!DNL Airship] 예측 데이터와 결합하십시오. 예를 들어, 소매업체는 충성도 상태 및 위치 데이터(플랫폼의 속성)와 이탈할 것으로 예상되는 [!DNL Airship] 데이터로 대상자를 만들어 NV의 Las Vegas에 거주하고 이탈 가능성이 높은 Gold 충성도 상태의 사용자에게 타깃팅된 메시지를 보낼 수 있습니다.
+Adobe Experience Platform의 특성을 활용하여 [!DNL Airship] 프로필을 더욱 보강하고 SDK 또는 [!DNL Airship] 예측 데이터와 결합합니다. 예를 들어, 소매업체는 충성도 상태 및 위치 데이터(플랫폼의 속성)와 이탈할 것으로 예상되는 [!DNL Airship] 데이터로 대상자를 만들어 NV의 Las Vegas에 거주하고 이탈 가능성이 높은 Gold 충성도 상태의 사용자에게 타깃팅된 메시지를 보낼 수 있습니다.
 
 ## 대상에 연결 {#connect}
 
@@ -131,7 +139,7 @@ Adobe Experience Platform의 특성을 활용하여 [!DNL Airship] 프로필을 
 채널, 즉 디바이스에 매핑해야 하는 식별자의 경우 소스를 기반으로 적절한 채널에 매핑합니다. 다음 이미지는 두 개의 매핑이 생성되는 방식을 보여 줍니다.
 
 * [!DNL Airship] iOS 채널에 대한 IDFA iOS Advertising ID
-* `fullName` 특성을 [!DNL Airship] &quot;Full Name&quot; 특성으로 Adobe
+* [!DNL Airship] &quot;Full Name&quot; 특성에 대한 Adobe `fullName` 특성
 
 >[!NOTE]
 >
