@@ -5,10 +5,10 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: b900ef8cbbab78071d462484f088e17eb20fe9b6
+source-git-commit: 3ada2136e712abd1dad956cd579d6877b3e729c9
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 30%
+source-wordcount: '1059'
+ht-degree: 29%
 
 ---
 
@@ -236,6 +236,7 @@ ht-degree: 30%
    - [데이터 흐름 삭제](tutorials/api/delete-dataflows.md)
    - [암호화된 데이터 수집](tutorials/api/encrypt-data.md)
    - [데이터 흐름을 초안으로 저장](tutorials/api/draft.md)
+   - [데이터 흐름에 액세스 레이블 적용](tutorials/api/labels.md)
 - UI 튜토리얼 {#ui-tutorials}
    - 원본 연결 {#create} 만들기
       - Adobe 응용 프로그램 {#adobe-applications}
@@ -361,6 +362,7 @@ ht-degree: 30%
    - [데이터 흐름 삭제](tutorials/ui/delete.md)
    - [소스 알림 구독](tutorials/ui/alerts.md)
    - [데이터 흐름을 초안으로 저장](tutorials/ui/draft.md)
+   - [데이터 흐름에 액세스 레이블 적용](tutorials/ui/labels.md)
 - 셀프 서비스 소스(일괄 SDK) {#sdk}
    - [개요](sources-sdk/overview.md)
    - 연결 사양 {#config} 구성
