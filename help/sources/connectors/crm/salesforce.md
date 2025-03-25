@@ -2,9 +2,9 @@
 title: Salesforce Source 커넥터 개요
 description: API 또는 사용자 인터페이스를 사용하여 Salesforce을 Adobe Experience Platform에 연결하는 방법을 알아봅니다.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 77941e08df893fab6dfdaf987c56c4d5a3fd4757
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1581'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->이제 Amazon Web Services(AWS)에서 Adobe Experience Platform을 실행할 때 [!DNL Salesforce] 소스를 사용할 수 있습니다. 현재 AWS에서 실행 중인 Experience Platform은 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../landing/multi-cloud.md)를 참조하세요.
+>이제 Amazon Web Services(AWS)에서 Adobe Experience Platform을 실행할 때 [!DNL Salesforce] 소스를 사용할 수 있습니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../landing/multi-cloud.md)를 참조하세요.
 
 Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 
 Experience Platform은 서드파티 CRM 시스템에서 데이터 수집을 지원합니다. CRM 공급자에 대한 지원에는 [!DNL Salesforce]이(가) 포함됩니다.
 
-## Azure에서 Experience Platform을 위해 [!DNL Salesforce] 소스 설정 {#azure}
+## Azure에서 Experience Platform에 대한 [!DNL Salesforce] 소스 설정 {#azure}
 
-Azure에서 Experience Platform을 위해 [!DNL Salesforce] 계정을 설정하는 방법을 알아보려면 아래 단계를 참조하세요.
+Azure에서 Experience Platform에 대한 [!DNL Salesforce] 계정을 설정하는 방법을 알아보려면 아래 단계를 참조하세요.
 
 ### IP 주소 허용 목록
 
@@ -95,13 +95,13 @@ Platform 개발자 콘솔과 [!DNL Postman]을(를) 설정하면 이제 [!DNL Po
 
 요청이 성공하면 Beta 사양에 따라 B2B 네임스페이스 및 스키마가 만들어집니다.
 
-## Amazon Web Services에서 Experience Platform을 위한 [!DNL Salesforce] 소스 설정 {#aws}
+## Amazon Web Services에서 Experience Platform에 대한 [!DNL Salesforce] 소스 설정 {#aws}
 
 >[!AVAILABILITY]
 >
->이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. 현재 AWS에서 실행 중인 Experience Platform은 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../landing/multi-cloud.md)를 참조하세요.
+>이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../../landing/multi-cloud.md)를 참조하세요.
 
-Amazon Web Services(AWS)에서 Experience Platform을 위해 [!DNL Salesforce] 계정을 설정하는 방법에 대해 알아보려면 아래 단계를 따르십시오.
+Amazon Web Services(AWS)에서 Experience Platform에 대한 [!DNL Salesforce] 계정을 설정하는 방법에 대해 알아보려면 아래 단계를 따르십시오.
 
 ### 전제 조건
 
@@ -111,11 +111,9 @@ Amazon Web Services(AWS)에서 Experience Platform을 위해 [!DNL Salesforce] �
 - JWT_BEARER OAuth 흐름을 활성화하는 데 사용할 수 있는 [!DNL Salesforce Connected App].
 - [!DNL Salesforce]에서 데이터에 액세스하는 데 필요한 권한입니다.
 
-[!DNL Salesforce] 계정을 Amazon Web Services(AWS)의 Experience Platform에 연결하려면 다음 IP 주소를 허용 목록에 추가하다에 추가해야 합니다.
+### 허용 목록에 추가하다 AWS에서 연결을 위한 IP 주소
 
-- `34.193.63.59`
-- `44.217.93.240`
-- `44.194.79.229`
+AWS에서 Experience Platform에 소스를 연결하기 전에 지역별 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 자세한 내용은 [AWS의 Experience Platform에 연결하기 위한 IP 주소 허용 목록에 추가](../../ip-address-allow-list.md)에 대한 안내서를 참조하십시오.
 
 ### [!DNL Salesforce Connected App] 만들기
 
@@ -126,7 +124,7 @@ openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 ```
 
 1. [!DNL Salesforce] 대시보드에서 설정(![설정 아이콘)을 선택합니다.](/help/images/icons/settings.png))을(를) 선택한 다음 **[!DNL Setup]**&#x200B;을(를) 선택합니다.
-2. [!DNL App Manager](으)로 이동한 다음 **[!DNL New Connection App]**&#x200B;을(를) 선택합니다.
+2. [!DNL App Manager]&#x200B;(으)로 이동한 다음 **[!DNL New Connection App]**&#x200B;을(를) 선택합니다.
 3. 앱 이름을 입력하고 나머지 필드는 자동으로 채울 수 있도록 합니다.
 4. [!DNL Enable OAuth Settings]에 대해 상자를 사용하도록 설정합니다.
 5. 콜백 URL을 설정합니다. JWT에는 사용되지 않으므로 `https://localhost`을(를) 사용할 수 있습니다.
@@ -147,8 +145,8 @@ openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 
 **[!DNL Save]**, **[!DNL Continue]**, **[!DNL Manage Customer Details]**&#x200B;을(를) 차례로 선택합니다. 소비자 세부 정보 패널을 사용하여 다음을 검색할 수 있습니다.
 
-- **소비자 키**: Experience Platform에 [!DNL Salesforce] 계정을 인증할 때 나중에 이 소비자 키를 클라이언트 ID로 사용합니다.
-- **소비자 암호**: 나중에 Experience Platform을 위해 [!DNL Salesforce] 계정을 인증할 때 이 소비자 암호를 클라이언트 ID로 사용합니다.
+- **소비자 키**: 나중에 [!DNL Salesforce] 계정을 Experience Platform에 인증할 때 이 소비자 키를 클라이언트 ID로 사용합니다.
+- **소비자 암호**: 나중에 Experience Platform에 [!DNL Salesforce] 계정을 인증할 때 이 소비자 암호를 클라이언트 ID로 사용합니다.
 
 ### 연결된 앱에 [!DNL Salesforce] 사용자 인증
 
@@ -269,7 +267,7 @@ public class Main {
 
 ## 다음 단계
 
-[!DNL Salesforce] 계정에 대한 필수 구성 요소 설정을 완료했으면 계속해서 [!DNL Salesforce] 계정을 연결하여 CRM 데이터를 Experience Platform 및 수집할 수 있습니다. 자세한 내용은 아래 설명서를 참조하십시오.
+[!DNL Salesforce] 계정에 대한 필수 구성 요소 설정을 완료했으면 계속해서 [!DNL Salesforce] 계정을 Experience Platform에 연결하고 CRM 데이터를 수집할 수 있습니다. 자세한 내용은 아래 설명서를 참조하십시오.
 
 ### API를 사용하여 [!DNL Salesforce]을(를) 플랫폼에 연결
 

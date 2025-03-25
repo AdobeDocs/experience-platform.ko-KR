@@ -2,9 +2,9 @@
 title: 데이터 랜딩 영역 Source
 description: 데이터 랜딩 영역을 Adobe Experience Platform에 연결하는 방법 알아보기
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '1316'
+source-wordcount: '1362'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 [!DNL Data Landing Zone]은(는) Adobe Experience Platform에서 프로비저닝한 [!DNL Azure Blob] 저장소 인터페이스로서, 파일을 플랫폼으로 가져올 수 있는 안전한 클라우드 기반 파일 저장소 기능에 액세스할 수 있도록 허용합니다. 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너에 액세스할 수 있으며 모든 컨테이너의 총 데이터 볼륨은 Platform 제품 및 서비스 라이선스와 함께 제공되는 총 데이터로 제한됩니다. Experience Platform의 모든 고객은 샌드박스당 하나의 [!DNL Data Landing Zone] 컨테이너로 프로비저닝됩니다. [!DNL Azure Storage Explorer] 또는 명령줄 인터페이스를 통해 컨테이너에 파일을 읽고 쓸 수 있습니다.
 
-[!DNL Data Landing Zone]은(는) SAS 기반 인증을 지원하며, 전송 중이거나 사용하지 않는 표준 [!DNL Azure Blob] 저장소 보안 메커니즘을 통해 데이터를 보호합니다. SAS 기반 인증을 사용하면 공용 인터넷 연결을 통해 [!DNL Data Landing Zone] 컨테이너에 안전하게 액세스할 수 있습니다. [!DNL Data Landing Zone] 컨테이너에 액세스하는 데 필요한 네트워크 변경 내용이 없습니다. 따라서 네트워크에 대한 허용 목록 또는 교차 지역 설정을 구성할 필요가 없습니다. Experience Platform은 [!DNL Data Landing Zone] 컨테이너에 업로드된 모든 파일 및 폴더에 엄격한 7일 만료 시간을 적용합니다. 모든 파일과 폴더는 7일 후에 삭제됩니다.
+[!DNL Data Landing Zone]은(는) SAS 기반 인증을 지원하며, 전송 중이거나 사용하지 않는 표준 [!DNL Azure Blob] 저장소 보안 메커니즘을 통해 데이터를 보호합니다. SAS 기반 인증을 사용하면 공용 인터넷 연결을 통해 [!DNL Data Landing Zone] 컨테이너에 안전하게 액세스할 수 있습니다. [!DNL Data Landing Zone] 컨테이너에 액세스하는 데 필요한 네트워크 변경 내용이 없습니다. 따라서 네트워크에 대한 허용 목록 또는 교차 지역 설정을 구성할 필요가 없습니다. Experience Platform에서는 [!DNL Data Landing Zone] 컨테이너에 업로드된 모든 파일 및 폴더에 대해 엄격한 7일 만료 시간을 적용합니다. 모든 파일과 폴더는 7일 후에 삭제됩니다.
 
-## Azure에서 Experience Platform을 위해 [!DNL Data Landing Zone] 소스 설정 {#azure}
+## Azure에서 Experience Platform에 대한 [!DNL Data Landing Zone] 소스 설정 {#azure}
 
-Azure에서 Experience Platform을 위해 [!DNL Data Landing Zone] 계정을 설정하는 방법을 알아보려면 아래 단계를 참조하세요.
+Azure에서 Experience Platform에 대한 [!DNL Data Landing Zone] 계정을 설정하는 방법을 알아보려면 아래 단계를 참조하세요.
 
 >[!NOTE]
 >
@@ -155,13 +155,17 @@ set srcFilePath=<PATH TO LOCAL FILE(S); WORKS WITH WILDCARD PATTERNS>
 azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 ```
 
-## Amazon Web Services에서 Experience Platform을 위한 [!DNL Data Landing Zone] 소스 설정 {#aws}
+## Amazon Web Services에서 Experience Platform에 대한 [!DNL Data Landing Zone] 소스 설정 {#aws}
 
 >[!AVAILABILITY]
 >
->이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. 현재 AWS에서 실행 중인 Experience Platform은 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
+>이 섹션은 Amazon Web Services(AWS)에서 실행되는 Experience Platform 구현에 적용됩니다. AWS에서 실행되는 Experience Platform은 현재 제한된 수의 고객이 사용할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud)를 참조하세요.
 
-Amazon Web Services(AWS)에서 Experience Platform을 위해 [!DNL Data Landing Zone] 계정을 설정하는 방법에 대해 알아보려면 아래 단계를 따르십시오.
+Amazon Web Services(AWS)에서 Experience Platform에 대한 [!DNL Data Landing Zone] 계정을 설정하는 방법에 대해 알아보려면 아래 단계를 따르십시오.
+
+### 허용 목록에 추가하다 AWS에서 연결을 위한 IP 주소
+
+AWS에서 Experience Platform에 소스를 연결하기 전에 지역별 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 자세한 내용은 [AWS의 Experience Platform에 연결하기 위한 IP 주소 허용 목록에 추가](../../ip-address-allow-list.md)에 대한 안내서를 참조하십시오.
 
 ### AWS CLI 설정 및 작업 수행
 
@@ -297,7 +301,7 @@ print(f"Sign-in URL: {signin_url}")
 
 마지막으로 생성된 URL로 이동하여 [!DNL Amazon S3] 버킷 내의 특정 폴더에 대한 액세스를 제공하는 [!DNL Data Landing Zone] 자격 증명으로 AWS 콘솔에 직접 로그인합니다. 로그인 URL을 사용하면 해당 폴더로 바로 이동되므로 허가된 데이터만 보고 관리할 수 있습니다.
 
-## [!DNL Data Landing Zone]을(를) Experience Platform에 연결
+## Experience Platform에 [!DNL Data Landing Zone] 연결
 
 >[!IMPORTANT]
 >

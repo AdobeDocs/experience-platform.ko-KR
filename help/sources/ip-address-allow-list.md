@@ -1,27 +1,29 @@
 ---
-description: Adobe Experience Platform 소스를 성공적으로 사용하기 위해 허용 목록에 추가해야 하는 IP 주소에 대해 알아봅니다.
-title: 소스에 대한 IP 주소 허용 목록
+description: Adobe Experience Platform 소스를 성공적으로 사용하기 위해 허용 목록에 추가하다에 추가해야 하는 IP 주소에 대해 알아봅니다.
+title: 허용 목록에 추가하다 소스에 대한 IP 주소
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: bb0e84ff26027e92d617b7fd0b85979dff501a7d
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
-# IP 주소 허용 목록
+# 허용 목록에 추가하다 IP 주소
 
-네트워크 방화벽을 통해 네트워크 액세스 제어를 정의할 수 있습니다. 적절한 소스 IP 범위를 지정하면 데이터 전송 서비스에 대한 트래픽이 흐르도록 할 수 있습니다. 소스 커넥터를 사용하기 전에 다음 IP 주소를 허용 목록에 추가해야 합니다. 지역별 IP 주소를 허용 목록에 추가하지 않으면 소스 사용 시 오류가 발생하거나 성능이 저하될 수 있습니다.
+네트워크 방화벽을 통해 네트워크 액세스 제어를 정의할 수 있습니다. 적절한 소스 IP 범위를 지정하면 데이터 전송 서비스에 대한 트래픽이 흐르도록 할 수 있습니다. 소스 커넥터를 사용하기 전에 다음 IP 주소를 허용 목록에 추가하다에 추가해야 합니다. 영역별 IP 주소를 허용 목록에 추가하다에 추가하지 않으면 소스를 사용할 때 오류나 성능이 저하될 수 있습니다.
 
-## 배치 소스에 대한 IP 주소 허용 목록 {#batch}
+## 허용 목록에 추가하다 [!DNL Azure] Experience Platform에 연결하는 소스용 IP 주소 {#azure}
 
-배치 소스의 데이터 전송 서비스에 대한 트래픽 흐름을 허용하려면 허용 목록에 다음 IP 주소를 추가해야 합니다.
+### [!DNL Azure]에서 Experience Platform의 일괄 처리 소스 {#batch}
+
+배치 소스의 데이터 전송 서비스에 대한 트래픽 흐름을 허용하려면 다음 IP 주소를 허용 목록에 추가하다에 추가해야 합니다.
 
 >[!BEGINTABS]
 
 >[!TAB VA7: 북미]
 
-### VA7: 북미
+#### VA7: 북미
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -48,7 +50,7 @@ ht-degree: 0%
 
 >[!TAB NLD2: 유럽]
 
-### NLD2: 유럽
+#### NLD2: 유럽
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -60,7 +62,7 @@ ht-degree: 0%
 
 >[!TAB AUS5: 오스트레일리아]
 
-### AUS5: 오스트레일리아
+#### AUS5: 오스트레일리아
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
@@ -75,7 +77,7 @@ ht-degree: 0%
 
 >[!TAB CAN2: 캐나다]
 
-### CAN2: 캐나다
+#### CAN2: 캐나다
 
 - `13.71.175.80/28`
 - `20.38.147.224/28`
@@ -88,7 +90,7 @@ ht-degree: 0%
 
 >[!TAB IND2: 인도]
 
-### IND2: 인도
+#### IND2: 인도
 
 - `20.43.121.48/28`
 - `20.192.42.0/24`
@@ -102,15 +104,15 @@ ht-degree: 0%
 
 >[!ENDTABS]
 
-## 스트리밍 소스에 대한 IP 주소 허용 목록 {#streaming}
+### [!DNL Azure]의 Experience Platform 스트리밍 소스 {#streaming}
 
-[[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) 및 [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md)과(와) 같은 스트리밍 소스의 데이터 전송 서비스에 대한 트래픽 흐름을 허용하려면 다음 IP 주소를 허용 목록에 추가해야 합니다.
+[[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) 및 [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md)과(와) 같은 스트리밍 소스의 데이터 전송 서비스에 대한 트래픽 흐름을 허용하려면 다음 IP 주소를 허용 목록에 추가하다에 추가해야 합니다.
 
 >[!BEGINTABS]
 
 >[!TAB VA7: 북미]
 
-### VA7: 북미
+#### VA7: 북미
 
 - `52.254.106.240/28`
 - `52.254.107.144/28`
@@ -137,7 +139,7 @@ ht-degree: 0%
 
 >[!TAB NLD2: 유럽]
 
-### NLD2: 유럽
+#### NLD2: 유럽
 
 - `51.138.17.0/28`
 - `51.138.16.176/28`
@@ -164,7 +166,7 @@ ht-degree: 0%
 
 >[!TAB AUS5: 오스트레일리아]
 
-### AUS5: 오스트레일리아
+#### AUS5: 오스트레일리아
 
 - `20.40.188.194`
 - `20.53.206.128`
@@ -194,7 +196,7 @@ ht-degree: 0%
 
 >[!TAB CAN2: 캐나다]
 
-### CAN2: 캐나다
+#### CAN2: 캐나다
 
 - `20.200.70.240/28`
 - `20.200.94.116`
@@ -224,7 +226,7 @@ ht-degree: 0%
 
 >[!TAB GBR9: 영국]
 
-### GBR9: 영국
+#### GBR9: 영국
 
 - `20.254.2.128/28`
 - `20.26.131.71`
@@ -254,7 +256,7 @@ ht-degree: 0%
 
 >[!TAB IND2: 인도]
 
-### IND2: 인도
+#### IND2: 인도
 
 - `4.224.74.0/28`
 - `20.244.79.80/28`
@@ -285,3 +287,9 @@ ht-degree: 0%
 - `4.188.4.138`
 
 >[!ENDTABS]
+
+## [!DNL Amazon Web Services]의 Experience Platform에 대한 소스 연결을 위한 IP 주소 허용 목록(AWS) {#aws}
+
+AWS의 Experience에 소스를 연결하려면 다음 허용 목록에 추가하다에 IP 주소를 추가해야 합니다.
+
+- `66.117.18.0/24`
