@@ -5,9 +5,9 @@ breadcrumb-title: 소스 커넥터 안내서
 user-guide-description: 다양한 소스에서 데이터를 수집합니다. 이미 수집된 데이터를 구조화하고, 레이블을 지정하고, 개선하는 방법을 알아봅니다.
 feature: Sources
 role: Developer
-source-git-commit: 86f17ed4dc012481c2b4a7f1a40b492bfac5e137
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1063'
 ht-degree: 29%
 
 ---
@@ -96,6 +96,7 @@ ht-degree: 29%
       - [Acxiom 데이터 수집](connectors/data-partners/acxiom-data-ingestion.md)
       - [Acxiom 예상 데이터 가져오기](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [봄보라 의도](connectors/data-partners/bombora.md)
+      - [Demandbase 의도](connectors/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
    - 전자 상거래 {#ecommerce}
       - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)

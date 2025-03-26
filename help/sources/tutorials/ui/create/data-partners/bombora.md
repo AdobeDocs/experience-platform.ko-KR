@@ -2,10 +2,10 @@
 title: Ui를 사용하여 Bombora 인텐트를 Experience Platform에 연결
 description: Bombora Intent를 Experience Platform에 연결하는 방법 알아보기
 exl-id: 76a4fed5-b2d5-46d5-9245-b52792a7d323
-source-git-commit: 9f6f84d16c30c1e32184007ebc2a401db5f8b9ac
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 4%
+source-wordcount: '955'
+ht-degree: 5%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 4%
 * [Real-Time CDP B2B edition](../../../../../rtcdp/b2b-overview.md): Real-Time CDP B2B edition은 B2B 서비스 모델에서 작동하는 마케터용으로 특별히 빌드되었습니다. 여러 소스의 데이터를 함께 가져와서 사람 및 계정 프로필의 단일 보기로 결합합니다. 마케터는 이 통합 데이터를 통해 특정 대상자를 정확하게 타겟팅하고 사용 가능한 모든 채널에서 해당 대상자를 참여시킬 수 있습니다.
 * [소스](../../../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
 * [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+
+### 전제 조건
+
+인증 자격 증명을 검색하는 방법에 대한 자세한 내용은 [[!DNL Bombora Intent] 개요](../../../../connectors/data-partners/bombora.md)를 참조하십시오.
 
 ## 소스 카탈로그 탐색
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Source 커넥터 개요
 description: Adobe Experience Platform을 사용하면 외부 소스에서 데이터를 수집할 수 있으며 Platform 서비스를 사용하여 들어오는 데이터를 구조화하고, 레이블을 지정하고, 향상시킬 수 있습니다. Adobe 애플리케이션, 클라우드 기반 스토리지, 데이터베이스 및 기타 여러 소스와 같은 다양한 소스에서 데이터를 수집할 수 있습니다.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8541af0e2c0a2f5709f1621877ca204b0d3d64bd
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1552'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Experience Platform을 사용하면 다양한 소스에서 수집한 데이터�
 
 ## 고급 엔터프라이즈 소스 {#advanced-enterprise-sources}
 
-다음 소스는 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
+다음 소스는 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) 고객만 사용할 수 있습니다.
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE 스트리밍]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE 일괄 처리]{type=Informative}
@@ -39,11 +39,11 @@ Experience Platform을 사용하면 다양한 소스에서 수집한 데이터�
 - [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE 스트리밍]{type=Positive}
 - [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE 일괄 처리]{type=Informative}
 
-## Adobe이 빌드한 소스 및 파트너가 빌드한 소스 {#adobe-and-partner-built-sources}
+## Adobe이 빌드하고 파트너가 빌드한 소스 {#adobe-and-partner-built-sources}
 
 Experience Platform 소스 카탈로그의 일부 커넥터는 Adobe에서 빌드하고 유지 관리하는 반면, 다른 커넥터는 [소스 SDK](/help/sources/sources-sdk/overview.md)를 사용하여 파트너 회사에서 빌드하고 유지 관리합니다. 파트너가 소스를 만들고 유지 관리하는 경우 파트너가 빌드한 각 커넥터에 대한 설명서 페이지 맨 위의 메모가 호출됩니다. 예를 들어 [Amazon S3 커넥터](/help/sources/connectors/cloud-storage/s3.md)는 Adobe에서 만들고 [RainFocus 커넥터](/help/sources/connectors/analytics/rainfocus.md)는 RainFocus 팀에서 만들고 유지 관리합니다.
 
-파트너가 작성 및 유지 관리하는 커넥터의 경우 파트너 팀이 커넥터 문제를 해결해야 할 수 있습니다(설명서 페이지의 메모에 제공된 연락 방법). Adobe 작성 및 유지 관리되는 커넥터와 관련된 문제는 Adobe 담당자 또는 고객 지원 센터에 문의하십시오.
+파트너가 작성 및 유지 관리하는 커넥터의 경우 파트너 팀이 커넥터 문제를 해결해야 할 수 있습니다(설명서 페이지의 메모에 제공된 연락 방법). Adobe 작성 및 유지 관리 커넥터와 관련된 문제는 Adobe 담당자 또는 고객 지원 센터에 문의하십시오.
 
 ## 소스 카테고리
 
@@ -76,7 +76,7 @@ Experience Platform은 서드파티 광고 시스템에서 데이터를 수집�
 
 ### Analytics {#analytics}
 
-Experience Platform은 서드파티 분석 플랫폼에서 데이터를 수집하는 기능을 지원합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
+Experience Platform은 타사 분석 플랫폼에서 데이터를 수집하는 기능을 지원합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE 스트리밍]{type=Positive}
@@ -99,13 +99,13 @@ Experience Platform은 서드파티 분석 플랫폼에서 데이터를 수집�
 
 ### 동의 및 환경 설정 {#consent}
 
-Experience Platform은 서드파티 동의 및 환경 설정 관리 플랫폼에서 데이터를 수집하는 기능을 지원합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
+Experience Platform은 서드파티 동의 및 환경 설정 관리 플랫폼에서 데이터를 수집할 수 있도록 지원합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) [!BADGE 일괄 처리]{type=Informative}
 
 ### CRM(고객 관계 관리) {#customer-relationship-management}
 
-CRM 시스템은 고객 관계를 구축하고 충성도를 창출하며 고객 유지를 촉진하는 데 도움이 되는 데이터를 제공합니다. Experience Platform은 [!DNL Microsoft Dynamics 365] 및 [!DNL Salesforce]에서 CRM 데이터를 수집하는 기능을 지원합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
+CRM 시스템은 고객 관계를 구축하고 충성도를 창출하며 고객 유지를 촉진하는 데 도움이 되는 데이터를 제공합니다. Experience Platform에서는 [!DNL Microsoft Dynamics 365] 및 [!DNL Salesforce]에서 CRM 데이터를 수집할 수 있습니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE 일괄 처리]{type=Informative}
@@ -115,7 +115,7 @@ CRM 시스템은 고객 관계를 구축하고 충성도를 창출하며 고객 
 
 ### 고객 성공 {#customer-success}
 
-Experience Platform은 서드파티 고객 성공 애플리케이션에서 데이터를 수집하는 데 대한 지원을 제공합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
+Experience Platform은 타사 고객 성공 애플리케이션에서 데이터를 수집하는 데 대한 지원을 제공합니다. 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE 일괄 처리]{type=Informative}
@@ -144,15 +144,17 @@ Experience Platform은 타사 데이터베이스에서 데이터를 수집하는
 
 ### 데이터 및 ID 파트너 {#data-partner}
 
-Experience Platform은 타사 데이터베이스에서 데이터를 수집하는 기능을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+Experience Platform은 데이터 및 id 파트너로부터 데이터 수집을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE 일괄 처리]{type=Informative}
+- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE 일괄 처리]{type=Informative}
+- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE 일괄 처리]{type=Informative}
 
 ### 전자 상거래 {#ecommerce}
 
-Experience Platform은 서드파티 전자 상거래 시스템에서 데이터를 수집하는 기능을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+Experience Platform은 서드파티 eCommerce 시스템에서 데이터 수집을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE 일괄 처리]{type=Informative}
@@ -160,13 +162,13 @@ Experience Platform은 서드파티 전자 상거래 시스템에서 데이터�
 
 ### 로컬 시스템 {#local-system}
 
-Experience Platform은 로컬 시스템에서 데이터를 수집할 수 있도록 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+Experience Platform은 로컬 시스템에서 데이터 수집을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [로컬 파일 업로드](connectors/local-system/local-file-upload.md)
 
 ### 마케팅 자동화 {#marketing-automation}
 
-Experience Platform은 서드파티 마케팅 자동화 시스템에서 데이터를 수집하는 기능을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+Experience Platform은 서드파티 마케팅 자동화 시스템에서 데이터 수집을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE 스트리밍]{type=Positive}
 - [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE 스트리밍]{type=Positive}
@@ -197,7 +199,7 @@ Experience Platform은 스트리밍 소스에서 데이터 수집을 지원합�
 
 ### 프로토콜 {#protocols}
 
-Experience Platform은 타사 프로토콜 시스템에서 데이터를 수집하는 기능을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
+Experience Platform은 서드파티 프로토콜 시스템에서 데이터 수집을 지원합니다. 특정 소스 커넥터에 대한 자세한 내용은 다음 관련 문서를 참조하십시오.
 
 - [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE 일괄 처리]{type=Informative}
 - [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE 일괄 처리]{type=Informative}
@@ -238,8 +240,8 @@ Adobe Experience Platform의 속성 기반 액세스 제어를 통해 관리자�
 
 Beta(&quot;Beta&quot;)로 레이블이 지정된 소스를 사용함으로써 귀하는 Beta이 어떠한 종류의 보증도 없이 ***&quot;있는 그대로&quot; 제공된다는 것을 인정합니다***.
 
-Adobe은 Beta을 유지, 수정, 업데이트, 변경, 수정 또는 지원할 의무가 없습니다. 이러한 Beta 및/또는 동봉된 자료의 올바른 기능이나 성능에 어떤 식으로든 의존하지 말고 정보 자료를 사용하는 것이 좋습니다. Beta은 Adobe 기밀 정보로 간주됩니다.
+Adobe은 Beta을 유지, 수정, 업데이트, 변경, 수정 또는 지원할 의무가 없습니다. 이러한 Beta 및/또는 동봉된 자료의 올바른 기능이나 성능에 어떤 식으로든 의존하지 말고 정보 자료를 사용하는 것이 좋습니다. Beta은 Adobe의 기밀 정보로 간주됩니다.
 
-사용자가 Adobe에 제공한 &quot;피드백&quot;(Beta 사용 중 발생하는 문제나 결함, 제안, 개선 사항 및 권장 사항을 포함하지만 이에 국한되지 않는 Beta 관련 정보)은 이에 따라 해당 피드백에 대한 모든 권한, 제목 및 관심을 포함하는 Adobe에 할당됩니다.
+귀하가 Adobe에 제공한 &quot;피드백&quot;(Beta 사용 중 발생하는 문제 또는 결함, 제안, 개선 사항 및 권장 사항을 포함하되 이에 제한되지 않는 Beta 관련 정보)은 해당 피드백에 대한 모든 권한, 제목 및 관심을 포함하여 Adobe에 할당됩니다.
 
 진행 중 피드백을 제출하거나 지원 티켓을 만들어 제안을 공유하거나 버그를 보고하면 기능 개선 사항을 확인할 수 있습니다.
