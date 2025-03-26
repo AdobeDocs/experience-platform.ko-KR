@@ -1,10 +1,10 @@
 ---
 keywords: 세그먼테이션, 세그먼테이션 rtcdp, 실시간 고객 데이터 플랫폼 세그먼테이션
-title: Real-time Customer Data Platform의 세그먼테이션 서비스
-description: Adobe Real-time Customer Data Platform은 Adobe Experience Platform을 기반으로 구축되었으며 다양한 Experience Platform 서비스 및 기능을 활용합니다. 세분화 서비스를 사용하면 고객을 유사한 트레이트를 가진 더 작은 그룹으로 나누어 맞춤형 마케팅을 제공할 수 있습니다.
+title: Real-Time Customer Data Platform의 세그먼테이션 서비스
+description: Adobe Real-Time Customer Data Platform은 Adobe Experience Platform을 기반으로 구축되었으며 다양한 Experience Platform 서비스 및 기능을 활용합니다. 세분화 서비스를 사용하면 고객을 유사한 트레이트를 가진 더 작은 그룹으로 나누어 맞춤형 마케팅을 제공할 수 있습니다.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 96c5df4f172815d3b1904ab6614b1ce02d11dbaf
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!DNL Real-Time Customer Data Platform]의 [!DNL Segmentation Service]
 
-[!DNL Adobe Real-Time Customer Data Platform](Real-Time CDP)을(를) 사용하면 여러 소스에서 데이터를 가져와서 고객을 위해 조정되고 일관된 경험을 제공할 수 있습니다. Adobe Experience Platform의 일부인 [!DNL Segmentation Service]을(를) 사용하여 적절한 개인화된 마케팅 캠페인을 제공할 수 있습니다.
+[!DNL Adobe Real-Time Customer Data Platform]&#x200B;(Real-Time CDP)을(를) 사용하면 여러 소스에서 데이터를 가져와서 고객을 위해 조정되고 일관된 경험을 제공할 수 있습니다. Adobe Experience Platform의 일부인 [!DNL Segmentation Service]을(를) 사용하여 적절한 개인화된 마케팅 캠페인을 제공할 수 있습니다.
 
 Real-Time CDP은 Adobe Experience Platform을 기반으로 구축되었으며 많은 [!DNL Experience Platform] 서비스 및 기능을 사용합니다. [!DNL Segmentation Service]을(를) 사용하면 고객을 트레이트가 비슷한 더 작은 그룹으로 나누어 맞춤형 마케팅을 제공할 수 있습니다.
 
@@ -21,13 +21,13 @@ Real-Time CDP은 Adobe Experience Platform을 기반으로 구축되었으며 �
 
 세그먼테이션은 프로필 하위 집합이 공유하는 특정 속성 또는 동작을 프로필 스토어와 정의하여 마케팅 가능한 사용자 그룹과 고객 기반을 구분하는 프로세스입니다. 예를 들어 &quot;운동화 구입하는 것을 잊었습니까?&quot;라는 이메일 캠페인에서 지난 30일 내에 운동화를 찾았지만 구입을 완료하지 않은 모든 사용자를 대상으로 할 수 있습니다. 다양한 세그먼트 정의를 사용하면 다양한 대상에 집중할 수 있으므로 보다 사용자 지정된 마케팅 경험을 제공할 수 있습니다.
 
-## [!DNL Segment Builder]
+## [!DNL Audience Builder]
 
-[!DNL Platform]을(를) 사용하면 세그먼트 정의를 쉽게 만들고 액세스할 수 있을 뿐만 아니라 다양한 기본 구성 요소를 사용하여 대상자를 특성화할 수 있습니다. 세그먼트 빌더 사용 방법에 대한 자세한 내용은 [세그먼트 빌더 안내서](./segment-builder-guide.md)를 참조하십시오.
+[!DNL Platform]을(를) 사용하면 세그먼트 정의를 쉽게 만들고 액세스할 수 있을 뿐만 아니라 다양한 기본 구성 요소를 사용하여 대상자를 특성화할 수 있습니다. 대상 빌더 사용 방법에 대한 자세한 내용은 [대상 빌더 안내서](./audience-builder.md)를 참조하십시오.
 
 ## 고객 AI
 
-Real-time Customer Data Platform에 포함된 고객 AI는 설명이 포함된 개별 수준에서 고객 예측을 생성할 수 있는 기능을 제공합니다.
+Real-Time Customer Data Platform에 포함된 고객 AI는 설명이 포함된 개별 수준에서 고객 예측을 생성할 수 있는 기능을 제공합니다.
 
 영향력 있는 요소를 통해 Customer AI는 고객이 무엇을 할 수 있고 왜 하는지 알려 줄 수 있습니다. 또한 Customer AI 예측 및 통찰력을 활용하여 가장 적절한 오퍼와 메시지를 제공함으로써 고객 경험을 개인화할 수 있습니다. 고객 AI는 다음을 지원할 수 있습니다.
 

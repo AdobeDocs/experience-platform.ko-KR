@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 안내서
 user-guide-description: 여러 엔터프라이즈 소스에서 알려진 데이터와 익명의 데이터를 결합하여 고객 프로필을 생성하고, 이들 프로필에서 대상자를 생성하며, 이들 대상자를 서드파티 대상으로 활성화할 수 있습니다.
 role: Admin
-source-git-commit: 9327cf8545caa306acd8077d089041d50a30e556
+source-git-commit: 4c2431148f584f2ffd5de20b8880a6b4a10ff95e
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 67%
@@ -35,7 +35,7 @@ ht-degree: 67%
    * [관리 개요](administration/admin-overview.md)
 * 대상 및 세분화 {#segmentation}
    * [세분화 개요](segmentation/segmentation-overview.md)
-   * [세그먼트 빌더 안내서](segmentation/segment-builder-guide.md)
+   * [Audience Builder 안내서](segmentation/audience-builder.md)
    * [Real-Time CDP B2B 에디션의 세분화](segmentation/b2b.md)
    * [고객 AI](segmentation/customer-ai.md)
 * 데이터 세트 {#datasets}
@@ -47,7 +47,7 @@ ht-degree: 67%
 * 보호 기능 {#guardrails}
    * [Real-Time CDP 보호 개요](guardrails/overview.md)
    * [데이터 수집을 위한 보호 기능](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
-   * [[!DNL Edge Network Server API]에 대한 보호 기능](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+   *  [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}에 대한 [보호 기능
    * [데이터 및 세분화에 대한 보호 [!DNL Real-Time Customer Profile] 보호](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=ko){target="_blank"}
    * [데이터 [!DNL Identity Service] 보호 기능](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
    * [다음에 대한 보호 기능 [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
