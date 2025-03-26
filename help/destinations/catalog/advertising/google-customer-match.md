@@ -3,10 +3,10 @@ keywords: google 고객 일치;Google 고객 일치;Google 고객 일치
 title: Google Customer Match 연결
 description: Google Customer Match를 사용하면 온라인 및 오프라인 데이터를 사용하여 검색, 쇼핑 및 Gmail과 같이 Google이 소유하고 운영하는 속성에서 고객에게 연락하고 다시 연결할 수 있습니다.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: bbf48bb3478e90c1502083d0ea97e3cc0aef1bb9
+source-git-commit: 38c1020a7e7ff556ed16963239a30bf906ff79e7
 workflow-type: tm+mt
-source-wordcount: '2140'
-ht-degree: 3%
+source-wordcount: '2046'
+ht-degree: 2%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
-> Google은 유럽 연합([EU 사용자 동의 정책](https://www.google.com/about/company/user-consent-policy/))의 [디지털 시장법](https://digital-markets-act.ec.europa.eu/index_en)(DMA)에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [고객 일치](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) 및 [디스플레이 및 비디오 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)에 대한 변경 사항을 출시합니다. 동의 요구 사항에 대한 이러한 변경 사항의 시행은 2024년 3월 6일부터 시작됩니다.
+> Google은 유럽 연합([EU 사용자 동의 정책](https://www.google.com/about/company/user-consent-policy/))의 [디지털 시장법](https://digital-markets-act.ec.europa.eu/index_en)&#x200B;(DMA)에 정의된 준수 및 동의 관련 요구 사항을 지원하기 위해 [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [고객 일치](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) 및 [디스플레이 및 비디오 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)에 대한 변경 사항을 출시합니다. 동의 요구 사항에 대한 이러한 변경 사항의 시행은 2024년 3월 6일부터 시작됩니다.
 ><br/>
 >EU 사용자 동의 정책을 준수하고 유럽 경제 영역(EEA)의 사용자에 대한 대상 목록을 계속 만들려면 광고주와 파트너는 대상 데이터를 업로드할 때 최종 사용자 동의를 전달하는지 확인해야 합니다. Google 파트너로서 Adobe는 유럽연합의 DMA에 따른 이러한 동의 요구 사항을 준수하는 데 필요한 도구를 제공합니다.
 ><br/>
->Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 조치를 취할 필요가 없습니다.
+>Adobe Privacy &amp; Security Shield를 구매하고 동의하지 않은 프로필을 필터링하도록 [동의 정책](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)을(를) 구성한 고객은 별도의 조치를 취할 필요가 없습니다.
 ><br/>
->Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/ui/segment-builder.md)에서 [세그먼트 정의](../../../segmentation/home.md#segment-definitions) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
+>Adobe Privacy &amp; Security Shield를 구매하지 않은 고객은 [세그먼트 빌더](../../../segmentation/ui/segment-builder.md) 내의 [세그먼트 정의](../../../segmentation/home.md#segment-definitions) 기능을 사용하여 동의하지 않은 프로필을 필터링해야 기존 Real-Time CDP Google 대상을 중단 없이 계속 사용할 수 있습니다.
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en)을(를) 사용하면 온라인 및 오프라인 데이터를 사용하여 [!DNL Search], [!DNL Shopping] 및 [!DNL Gmail]과(와) 같은 Google의 소유 및 운영되는 속성에서 고객에게 연락하고 고객과 다시 연결할 수 있습니다.
 
@@ -36,7 +36,7 @@ ht-degree: 3%
 
 ### 사용 사례 #1
 
-운동복 브랜드는 [!DNL Google Search] 및 [!DNL Google Shopping]을(를) 통해 기존 고객에게 연락하여 과거 구매 및 검색 기록을 기반으로 오퍼와 항목을 개인화하려고 합니다. 의류 브랜드는 자체 CRM에서 Experience Platform으로 이메일 주소를 수집하고 자체 오프라인 데이터에서 대상을 구축할 수 있습니다. 그런 다음 이 대상자를 [!DNL Search] 및 [!DNL Shopping]에서 사용할 [!DNL Google Customer Match](으)로 보내 광고 지출을 최적화할 수 있습니다.
+운동복 브랜드는 [!DNL Google Search] 및 [!DNL Google Shopping]을(를) 통해 기존 고객에게 연락하여 과거 구매 및 검색 기록을 기반으로 오퍼와 항목을 개인화하려고 합니다. 의류 브랜드는 자체 CRM에서 Experience Platform으로 이메일 주소를 수집하고 자체 오프라인 데이터에서 대상을 구축할 수 있습니다. 그런 다음 이 대상자를 [!DNL Search] 및 [!DNL Shopping]에서 사용할 [!DNL Google Customer Match]&#x200B;(으)로 보내 광고 지출을 최적화할 수 있습니다.
 
 ### 사용 사례 #2
 
@@ -46,7 +46,7 @@ ht-degree: 3%
 
 한 저명한 기술 회사가 새 전화기를 출시했다. 이 새로운 폰 모델을 홍보하기 위해, 그들은 이전 폰 모델을 소유한 고객들에게 이 폰의 새로운 기능과 기능성에 대한 인지도를 높이고자 한다.
 
-릴리스를 홍보하기 위해 이메일 주소를 식별자로 사용하여 CRM 데이터베이스의 이메일 주소를 Experience Platform에 업로드합니다. 대상은 이전 휴대폰 모델을 소유한 고객을 기반으로 만들어집니다. 그러면 대상자가 [!DNL Google Customer Match](으)로 전송되므로 이 회사는 현재 고객, 이전 휴대폰 모델을 보유한 고객 및 [!DNL YouTube]의 유사한 고객을 타깃팅할 수 있습니다.
+릴리스를 홍보하기 위해 CRM 데이터베이스의 이메일 주소를 식별자로 사용하여 Experience Platform에 업로드합니다. 대상은 이전 휴대폰 모델을 소유한 고객을 기반으로 만들어집니다. 그러면 대상자가 [!DNL Google Customer Match]&#x200B;(으)로 전송되므로 이 회사는 현재 고객, 이전 휴대폰 모델을 보유한 고객 및 [!DNL YouTube]의 유사한 고객을 타깃팅할 수 있습니다.
 
 ## [!DNL Google Customer Match] 대상에 대한 데이터 거버넌스 {#data-governance}
 
@@ -72,8 +72,8 @@ Experience Platform의 일부 대상에는 대상 플랫폼으로 보내거나 �
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -110,7 +110,7 @@ Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사�
 
 [!DNL Google Customer Match]에서 전화 번호를 활성화하는 방법에는 두 가지가 있습니다.
 
-* **원시 전화 번호 수집**: [!DNL E.164] 형식의 원시 전화 번호를 [!DNL Platform](으)로 수집할 수 있으며 활성화 시 자동으로 해시됩니다. 이 옵션을 선택하는 경우 항상 원시 전화 번호를 `Phone_E.164` 네임스페이스로 수집해야 합니다.
+* **원시 전화 번호 수집**: [!DNL E.164] 형식의 원시 전화 번호를 [!DNL Platform]&#x200B;(으)로 수집할 수 있으며 활성화 시 자동으로 해시됩니다. 이 옵션을 선택하는 경우 항상 원시 전화 번호를 `Phone_E.164` 네임스페이스로 수집해야 합니다.
 * **해시된 전화번호 수집**: [!DNL Platform]에 수집하기 전에 전화번호를 미리 해시할 수 있습니다. 이 옵션을 선택하는 경우 해시된 전화 번호를 항상 `PHONE_SHA256_E.164` 네임스페이스로 수집해야 합니다.
 
 >[!NOTE]
@@ -119,7 +119,7 @@ Adobe Experience Platform에 수집하는 ID 유형에 따라 해당 요구 사�
 
 ### 이메일 해시 요구 사항 {#hashing-requirements}
 
-이메일 주소를 Adobe Experience Platform에 수집하기 전에 해시하거나 Experience Platform에서 이메일 주소를 지우고 [!DNL Platform]이(가) 활성화 시 해시하도록 할 수 있습니다.
+이메일 주소를 Adobe Experience Platform에 수집하기 전에 해시하거나 Experience Platform에서 이메일 주소를 지우고 활성화 시 [!DNL Platform]에게 해시하도록 할 수 있습니다.
 
 Google의 해시 요구 사항 및 기타 활성화 제한 사항에 대한 자세한 내용은 Google 설명서의 다음 섹션을 참조하십시오.
 
@@ -202,9 +202,9 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 소스 필드 선택:
 
 * 사용 중인 전자 메일 주소가 해시되지 않은 경우 `Email` 네임스페이스를 원본 ID로 선택하십시오.
-* [!DNL Google Customer Match] [전자 메일 해시 요구 사항](#hashing-requirements)에 따라 데이터 수집 시 고객 전자 메일 주소를 [!DNL Platform](으)로 해시했다면 `Email_LC_SHA256` 네임스페이스를 원본 ID로 선택하십시오.
+* [!DNL Google Customer Match] [전자 메일 해시 요구 사항](#hashing-requirements)에 따라 데이터 수집 시 고객 전자 메일 주소를 [!DNL Platform]&#x200B;(으)로 해시했다면 `Email_LC_SHA256` 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 해시되지 않은 전화 번호로 구성된 경우 `PHONE_E.164` 네임스페이스를 원본 ID로 선택하십시오. [!DNL Platform]이(가) [!DNL Google Customer Match] 요구 사항을 준수하기 위해 전화 번호를 해시합니다.
-* [!DNL Facebook] [전화 번호 해시 요구 사항](#phone-number-hashing-requirements)에 따라 데이터 수집 시 전화 번호를 [!DNL Platform](으)로 해시했다면 `Phone_SHA256_E.164` 네임스페이스를 원본 ID로 선택하십시오.
+* [!DNL Facebook] [전화 번호 해시 요구 사항](#phone-number-hashing-requirements)에 따라 데이터 수집 시 전화 번호를 [!DNL Platform]&#x200B;(으)로 해시했다면 `Phone_SHA256_E.164` 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 [!DNL Apple] 장치 ID로 구성된 경우 `IDFA` 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 [!DNL Android] 장치 ID로 구성된 경우 `GAID` 네임스페이스를 원본 ID로 선택하십시오.
 * 데이터가 다른 유형의 식별자로 구성된 경우 `Custom` 네임스페이스를 소스 ID로 선택하십시오.
@@ -227,16 +227,6 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 ## 대상 모니터링 {#monitor-destination}
 
 대상에 연결하고 대상 데이터 흐름을 설정한 후 Real-Time CDP의 [모니터링 기능](/help/dataflows/ui/monitor-destinations.md)을 사용하여 각 데이터 흐름 실행에서 대상에 활성화된 프로필 레코드에 대한 광범위한 정보를 얻을 수 있습니다.
-
->[!IMPORTANT]
->
-> Adobe는 2024년 10월부터 스트리밍 대상에 대한 보고 정확도를 높이기 위한 업데이트를 출시할 예정입니다. 이러한 향상된 기능을 통해 Experience Platform과 대상 플랫폼 보고 간의 정렬 성능이 향상되었습니다.
->
-> 이 업데이트 이전에는 **[!UICONTROL ID 실패]**&#x200B;에 모든 활성화 다시 시도가 포함되었습니다. 이 업데이트 후에는 마지막 활성화 재시도만 총 횟수에 포함됩니다.
->
-> 이 개선 사항은 현재 [Google Customer Match 대상](google-customer-match.md)에 적용되지만 점차 다른 Experience Platform 스트리밍 대상으로 롤아웃됩니다.
-> 이 개선 사항에 따라 이 대상의 사용자는 **[!UICONTROL ID 실패]** 수가 예상대로 감소할 수 있습니다.
-
 
 ## 대상자 활성화가 성공했는지 확인 {#verify-activation}
 

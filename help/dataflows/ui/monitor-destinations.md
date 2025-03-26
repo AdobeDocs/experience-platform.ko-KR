@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI에서 대상에 대한 데이터 흐름 모니터링
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
+source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
 workflow-type: tm+mt
-source-wordcount: '3637'
-ht-degree: 10%
+source-wordcount: '3620'
+ht-degree: 9%
 
 ---
 
@@ -97,12 +97,12 @@ ID는 프로필의 다양한 측면을 나타냅니다. 예를 들어 프로필�
 
   >[!IMPORTANT]
   >
-  > Adobe는 2024년 10월부터 스트리밍 대상에 대한 보고 정확도를 높이기 위한 업데이트를 출시할 예정입니다. 이 향상된 기능을 통해 Experience Platform 보고와 대상 플랫폼 보고 간의 정렬 성능이 향상되었습니다.
+  > 2025년 3월부터 Adobe은 스트리밍 대상에 대한 보고 정확도를 높이기 위해 업데이트를 롤아웃합니다. 이 향상된 기능을 통해 Experience Platform의 보고와 대상 플랫폼 간의 정렬 성능이 향상되었습니다.
   >
   > 이 업데이트 이전에는 **[!UICONTROL ID 실패]**&#x200B;에 모든 활성화 다시 시도가 포함되었습니다. 이 업데이트 후에는 마지막 활성화 재시도만 총 횟수에 포함됩니다.
   > 
-  > 이 개선 사항은 현재 [Google Customer Match 대상](../../destinations/catalog/advertising/google-customer-match.md)에 적용되지만 점차 다른 Experience Platform 스트리밍 대상으로 롤아웃됩니다.
-  > 이러한 개선 사항에 따라 [Google 고객 일치 타기팅 대상](../../destinations/catalog/advertising/google-customer-match.md)을 사용하는 사용자에게는 **[!UICONTROL ID 실패]** 수가 감소한 것으로 표시될 수 있습니다.
+  > 이 개선 사항은 모든 스트리밍 대상에 적용됩니다.
+  > 이 개선 사항에 따라 스트리밍 대상의 사용자는 **[!UICONTROL ID 실패]** 수가 예상대로 감소할 수 있습니다.
 
 
 - **[!UICONTROL 활성화 비율]**: 성공적으로 활성화된 수신 ID의 비율입니다. 다음 수식은 이 값이 계산되는 방법을 보여 줍니다.
