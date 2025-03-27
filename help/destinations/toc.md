@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 26125b0496b8b08443e9a1ccb13a384bf33ab4be
+source-git-commit: 9b9cecc9e1a6e5979fa8eb454cef677b8995f1b6
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1276'
 ht-degree: 5%
 
 ---
@@ -139,6 +139,7 @@ ht-degree: 5%
       * [데이터 랜딩 구역](./catalog/cloud-storage/data-landing-zone.md)
       * [Google 클라우드 스토리지](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP 연결](./catalog/cloud-storage/sftp.md)
+      * [Snowflake 연결](./catalog/cloud-storage/snowflake.md)
       * [허용 목록에 추가하다 파일 기반 클라우드용 IP 주소 스토리지 대상](./catalog/cloud-storage/ip-address-allow-list.md)
    * CRM(고객 관계 관리) 대상 {#crm}
       * [Hubspot 연결](./catalog/crm/hubspot.md)
