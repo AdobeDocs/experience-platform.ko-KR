@@ -2,10 +2,10 @@
 title: ID 그래프 연결 규칙에 대한 구현 안내서
 description: ID 그래프 연결 규칙 구성을 사용하여 데이터를 구현할 때 따라야 할 권장 단계에 대해 알아봅니다.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 2dadb3a0a79f4d187dd096177130802f511a6917
+source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
 workflow-type: tm+mt
-source-wordcount: '1778'
-ht-degree: 2%
+source-wordcount: '1819'
+ht-degree: 6%
 
 ---
 
@@ -62,15 +62,14 @@ Adobe Experience Platform ID 서비스를 사용하여 데이터를 구현할 �
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_xdm"
->title="단일 개인 ID가 있는지 확인합니다"
->abstract="사전 구현 프로세스 중에 시스템에서 Experience Platform으로 보낼 인증된 이벤트에 항상 CRMID와 같은 **single** 개인 식별자가 포함되어 있는지 확인해야 합니다."
+>title="단일 개인 식별자가 있는지 확인"
+>abstract="구현 전 프로세스 동안, 시스템이 Experience Platform으로 전송하는 인증된 이벤트에 항상 CRMID와 같은 **단일** 개인 식별자가 포함되어 있는지 확인해야 합니다."
 
-사전 구현 프로세스 중에 시스템에서 Experience Platform으로 보낼 인증된 이벤트에 항상 CRMID와 같은 **single** 개인 식별자가 포함되어 있는지 확인해야 합니다.
+구현 전 프로세스 동안, 시스템이 Experience Platform으로 전송하는 인증된 이벤트에 항상 CRMID와 같은 **단일** 개인 식별자가 포함되어 있는지 확인해야 합니다.
 
-* (권장) 한 명의 개인 ID를 사용하는 인증된 이벤트입니다.
-* (권장되지 않음) 두 개의 개인 식별자가 있는 인증된 이벤트입니다.
-* (권장되지 않음) 개인 식별자가 없는 인증된 이벤트입니다.
-
+* (권장) 한 개의 고유 개인 ID가 있는 인증된 이벤트입니다.
+* (권장되지 않음) 두 개의 고유한 개인 식별자가 있는 인증된 이벤트입니다. 고유 개인 식별자가 두 개 이상 있는 경우 원하지 않는 그래프 축소가 발생할 수 있습니다.
+* (권장되지 않음) 고유한 개인 식별자가 없는 인증된 이벤트입니다. 고유한 개인 식별자가 없는 경우 인증되지 않은 이벤트와 인증된 이벤트가 ECID에 대해 저장됩니다.
 
 >[!BEGINTABS]
 
@@ -291,7 +290,7 @@ ID 설정 및 고유한 네임스페이스를 구현할 때 참조할 수 있는
 
 ID 그래프 연결 규칙에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
-* [ID 그래프 연결 규칙 개요](./overview.md)
+* [아이덴티티 그래프 연결 규칙 개요](./overview.md)
 * [ID 최적화 알고리즘](./identity-optimization-algorithm.md)
 * [그래프 구성의 예](./example-configurations.md)
 * [문제 해결 및 FAQ](./troubleshooting.md)
