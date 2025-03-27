@@ -1,22 +1,36 @@
 ---
-title: Real-Time CDP에서 클라우드 스토리지 대상으로 배열, 맵 및 개체 내보내기
+title: Real-Time CDP에서 배열, 맵 및 개체 내보내기
 type: Tutorial
 description: Real-Time CDP에서 클라우드 스토리지 대상으로 배열, 맵 및 개체를 내보내는 방법에 대해 알아봅니다.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
+source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 16%
+source-wordcount: '1095'
+ht-degree: 13%
 
 ---
 
-# Real-Time CDP에서 클라우드 스토리지 대상으로 배열, 맵 및 개체 내보내기 {#export-arrays-cloud-storage}
+# Real-Time CDP에서 배열, 맵 및 개체 내보내기 {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
 >배열 및 기타 복잡한 개체를 클라우드 저장소 대상으로 내보내는 기능은 일반적으로 [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md) 대상에 사용할 수 있습니다.
+>
+>또한 맵 유형 필드를 [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 대상으로 내보낼 수 있습니다.
 
-Real-Time CDP에서 [클라우드 저장소 대상](/help/destinations/catalog/cloud-storage/overview.md)(으)로 배열, 맵 및 개체를 내보내는 방법에 대해 알아봅니다. 내보내기 워크플로우, 이 기능에서 활성화된 사용 사례 및 알려진 제한 사항을 이해하려면 이 문서 를 참조하십시오.
+
+Real-Time CDP에서 [클라우드 저장소 대상](/help/destinations/catalog/cloud-storage/overview.md)(으)로 배열, 맵 및 개체를 내보내는 방법에 대해 알아봅니다. 또한 맵 유형 필드를 [엔터프라이즈 대상](/help/destinations/destination-types.md#advanced-enterprise-destinations) 및 제한된 [에지 개인화 대상](/help/destinations/destination-types.md#edge-personalization-destinations)(으)로 내보낼 수 있습니다. 내보내기 워크플로우, 이 기능에서 활성화된 사용 사례 및 알려진 제한 사항을 이해하려면 이 문서 를 참조하십시오. 대상 유형별로 사용할 수 있는 기능을 이해하려면 아래 표를 참조하십시오.
+
+| 대상 유형 | 배열, 맵 및 기타 사용자 지정 개체 내보내기 기능 |
+|---|---|
+| Adobe 작성 클라우드 스토리지 대상(Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, 데이터 랜딩 영역, Google 클라우드 스토리지, SFTP) | 예. 대상 연결을 설정할 때 배열, 맵 및 개체의 내보내기 활성화 토글이 켜져 있습니다. |
+| 파일 기반 이메일 마케팅 대상(Adobe Campaign, Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | 아니요 |
+| 기존 사용자 지정 파트너가 빌드한 클라우드 스토리지 대상(Destination SDK을 통해 빌드한 사용자 지정 파일 기반 대상) | 아니요 |
+| 엔터프라이즈 대상(Amazon Kinesis, Azure Event Hubs, HTTP API) | 부분적으로요 활성화 워크플로의 매핑 단계에서 맵 유형 개체를 선택하고 내보낼 수 있습니다. |
+| 스트리밍 대상(예: Facebook, Braze, Google Customer Match 등) | 아니요 |
+| Edge 개인화 대상(Adobe Target) | 부분적으로요 활성화 워크플로의 매핑 단계에서 맵 유형 개체를 선택하고 내보낼 수 있습니다. |
+
+{style="table-layout:auto"}
 
 Experience Platform에서 배열, 맵 및 기타 개체 유형을 내보내는 방법에 대해 알고 싶은 경우 이 페이지를 방문하십시오.
 
@@ -24,9 +38,9 @@ Experience Platform에서 배열, 맵 및 기타 개체 유형을 내보내는 �
 
 이 섹션에서 기능에 대한 가장 중요한 정보를 얻고 아래에서 문서의 다른 섹션으로 이동하여 자세한 내용을 확인하십시오.
 
-* 배열, 맵 및 개체를 내보내는 기능은 **배열, 맵, 개체 내보내기** 토글 선택에 따라 다릅니다. 자세한 내용은 [페이지의 아래쪽에서](#export-arrays-maps-objects-toggle)를 참조하세요.
-* `JSON` 및 `Parquet` 파일에서 배열, 맵 및 개체를 클라우드 저장소 대상으로만 내보낼 수 있습니다. 사용자 및 잠재 고객은 지원되지만 계정 대상은 지원되지 않습니다.
-* 배열, 맵 및 개체를 CSV 파일로 *할 수*&#x200B;있지만 계산 필드 기능을 사용하고 `array_to_string` 함수를 사용하여 문자열로 연결하기만 하면 됩니다.
+* 클라우드 저장소 대상의 경우 배열, 맵 및 개체를 내보내는 기능은 **배열, 맵, 개체 내보내기** 토글 선택에 따라 다릅니다. 자세한 내용은 [페이지의 아래쪽에서](#export-arrays-maps-objects-toggle)를 참조하세요.
+* 배열, 맵 및 개체를 `JSON` 및 `Parquet` 파일의 클라우드 저장소 대상으로 내보낼 수 있습니다. Enterprise 및 Edge 개인화 대상의 경우 내보낸 데이터 형식은 `JSON`입니다. 사용자 및 잠재 고객은 지원되지만 계정 대상은 지원되지 않습니다.
+* 파일 기반 클라우드 저장소 대상의 경우 배열, 맵 및 개체를 CSV 파일로 *할 수*&#x200B;있지만 계산된 필드 기능을 사용하고 `array_to_string` 함수를 사용하여 문자열로 연결하기만 하면 됩니다.
 
 ## Platform의 배열 및 기타 개체 유형 {#arrays-strings-other-objects}
 
@@ -59,6 +73,10 @@ organizations = [{
 
 원하는 클라우드 저장소 대상에 [연결](/help/destinations/ui/connect-destination.md)하고, 클라우드 저장소 대상에 대한 [활성화 단계](/help/destinations/ui/activate-batch-profile-destinations.md)를 진행하고 [매핑](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 단계로 이동하십시오. 원하는 클라우드 대상에 연결할 때 **[!UICONTROL 배열, 맵, 개체 내보내기]** 토글을 선택해야 합니다. 자세한 내용은 아래 섹션을 참조하십시오.
 
+>[!NOTE]
+>
+>엔터프라이즈 및 에지 개인화 대상의 경우 **[!UICONTROL 배열, 맵, 개체 내보내기]** 토글을 선택하지 않아도 맵 유형 필드에 대한 내보내기 지원을 사용할 수 있습니다. 이러한 유형의 대상에 연결하는 경우 이 토글을 사용하거나 사용할 수 없습니다.
+
 ## 배열, 맵 및 오브젝트 토글 내보내기 {#export-arrays-maps-objects-toggle}
 
 >[!CONTEXTUALHELP]
@@ -66,7 +84,7 @@ organizations = [{
 >title="배열, 맵 및 오브젝트 내보내기"
 >abstract="<p> 배열, 맵 및 오브젝트를 JSON 또는 Parquet 파일로 내보낼 수 있도록 설정을 <b>켜짐</b>으로 토글합니다. 매핑 단계의 소스 필드 보기에서 이들 오브젝트 유형을 선택할 수 있습니다. 토글을 켜면 매핑 단계에서 계산된 필드 옵션을 사용할 수 없습니다.</p><p>이 설정을 <b>꺼짐</b>으로 토글하여 계산된 필드 옵션을 사용하고 대상자를 활성화할 때 다양한 데이터 변환 기능을 적용할 수 있습니다. 단, 배열, 맵, 오브젝트를 JSON이나 Parquet 파일로 내보낼 수는 <i>없으며</i> 해당 목적에 대한 별도의 대상을 구성해야 합니다.</p>"
 
-클라우드 저장소 대상에 연결할 때 **[!UICONTROL 배열 내보내기, 맵, 개체]** 토글을 설정하거나 해제할 수 있습니다.
+파일 기반 클라우드 저장소 대상에 연결할 때 **[!UICONTROL 배열 내보내기, 맵, 개체]** 토글을 설정하거나 해제할 수 있습니다.
 
 ![배열, 맵, 개체 내보내기는 팝오버를 강조 표시하고 켜기 또는 끄기 설정으로 전환됩니다.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
