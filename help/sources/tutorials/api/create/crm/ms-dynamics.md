@@ -2,9 +2,9 @@
 title: 흐름 서비스 API를 사용하여 Microsoft Dynamics 기본 연결 만들기
 description: 흐름 서비스 API를 사용하여 Microsoft Dynamics 계정에 플랫폼을 연결하는 방법을 알아봅니다.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: bda26fa4ecf4f54cb36ffbedf6a9aa13faf7a09d
+source-git-commit: 4e119056c0ab89cfc79eeb46e6f870c89356dc7d
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1330'
 ht-degree: 3%
 
 ---
@@ -264,6 +264,44 @@ curl -X GET \
 
 +++
 
+### 기본 키를 사용하여 데이터 탐색 최적화
+
+>[!NOTE]
+>
+>최적화에 대한 기본 키 접근 방식을 사용할 때는 비조회 속성만 사용할 수 있습니다.
+
+`primaryKey`을(를) 쿼리 매개 변수의 일부로 제공하여 탐색 쿼리를 최적화할 수 있습니다. `primaryKey`을(를) 쿼리 매개 변수로 포함할 때 [!DNL Dynamics] 테이블의 기본 키를 지정해야 합니다.
+
+**API 형식**
+
+```http
+GET /connections/{BASE_CONNECTION_ID}/explore?preview=true&object={OBJECT}&objectType={OBJECT_TYPE}&previewCount=10&primaryKey={PRIMARY_KEY}
+```
+
+| 쿼리 매개변수 | 설명 |
+| --- | --- |
+| `{BASE_CONNECTION_ID}` | 기본 연결의 ID입니다. 이 ID를 사용하여 소스의 콘텐츠와 구조를 살펴보십시오. |
+| `preview` | 데이터 미리 보기를 활성화하는 부울 값. |
+| `{OBJECT}` | 탐색할 [!DNL Dynamics] 개체입니다. |
+| `{OBJECT_TYPE}` | 개체의 형식입니다. |
+| `previewCount` | 반환된 미리보기를 특정 수의 레코드로만 제한하는 제한 사항입니다. |
+| `{PRIMARY_KEY}` | 미리보기를 위해 검색 중인 테이블의 기본 키입니다. |
+
+**요청**
+
++++요청 예제를 보려면 선택
+
+```shell
+curl -X GET \
+  'https://platform-stage.adobe.io/data/foundation/flowservice/connections/dd668808-25da-493f-8782-f3433b976d1e/explore?preview=true&object=lead&objectType=table&previewCount=10&primaryKey=leadid' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
++++
 
 ## 테이블 구조 검사
 
@@ -581,6 +619,74 @@ curl -X POST \
 ```
 
 +++
+
+### 기본 키를 사용하여 데이터 흐름 최적화
+
+기본 키를 요청 본문 매개 변수의 일부로 지정하여 [!DNL Dynamics] 데이터 흐름을 최적화할 수도 있습니다.
+
+**API 형식**
+
+```http
+POST /sourceConnections
+```
+
+**요청**
+
+다음 요청은 기본 키를 `contactid`(으)로 지정하는 동안 [!DNL Dynamics] 원본 연결을 만듭니다.
+
++++요청 예제를 보려면 선택
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Dynamics Source Connection",
+      "description": "Dynamics Source Connection",
+      "baseConnectionId": "dd668808-25da-493f-8782-f3433b976d1e",
+      "data": {
+          "format": "tabular"
+      },
+      "params": {
+          "tableName": "contact",
+          "primaryKey": "contactid"
+      },
+      "connectionSpec": {
+          "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+          "version": "1.0"
+      }
+  }'
+```
+
+| 속성 | 설명 |
+| --- | --- |
+| `baseConnectionId` | 기본 연결의 ID입니다. |
+| `data.format` | 데이터의 형식입니다. |
+| `params.tableName` | [!DNL Dynamics]의 테이블 이름입니다. |
+| `params.primaryKey` | 쿼리를 최적화할 테이블의 기본 키입니다. |
+| `connectionSpec.id` | [!DNL Dynamics] 원본에 해당하는 연결 사양 ID입니다. |
+
++++
+
+**응답**
+
+성공한 응답은 새로 생성된 소스 연결 ID와 해당 etag를 반환합니다.
+
++++응답 예를 보려면 선택
+
+```json
+{
+    "id": "e566bab3-1b58-428c-b751-86b8cc79a3b4",
+    "etag": "\"82009592-0000-0200-0000-678121030000\""
+}
+```
+
++++
+
 
 ## 다음 단계
 
