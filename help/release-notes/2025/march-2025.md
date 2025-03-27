@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform 릴리스 노트 2025년 3월
 description: Adobe Experience Platform의 2025년 3월 릴리스 정보.
-source-git-commit: f0efd73830eac85936cb134ebb40dcd0f79aec52
+exl-id: 3da1c912-2581-4afa-bd21-0b8303531dcd
+source-git-commit: 16056a35624b4a053e9f50acef0ec3f63254a065
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 25%
+source-wordcount: '1227'
+ht-degree: 24%
 
 ---
 
@@ -44,6 +45,8 @@ Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대
 
 | 대상 | 설명 |
 | --- | --- |
+| [Demandbase People 연결](/help/destinations/catalog/advertising/demandbase-people.md) | 대상 타기팅, 개인화 및 제외를 위해 Demandbase 캠페인에 대한 프로필을 활성화하려면 [!DNL Demandbase People] 연결을 사용하십시오. |
+| [Bombora 계정 연결](/help/destinations/catalog/advertising/bombora.md) | [계정 대상자](/help/segmentation/types/account-audiences.md)를 기반으로 대상자 타겟팅, 개인화 및 억제에 대한 Bombora 캠페인에 대한 프로필을 활성화하려면 [!DNL Bombora] 연결을 사용하십시오. |
 | [비행선 특성](/help/destinations/catalog/mobile-engagement/airship-attributes.md) 업그레이드 | 2025년 3월 25일부터 대상 카탈로그에서 두 개의 **[!UICONTROL 비행선 특성]** 카드를 나란히 볼 수 있습니다. 이는 대상 서비스에 대한 내부 업그레이드 때문입니다. 기존 **[!UICONTROL 비행선 특성]** 대상 커넥터의 이름이 **[!UICONTROL (더 이상 사용되지 않음) 비행선 특성]**(으)로 변경되었으며 이제 이름이 **[!UICONTROL 비행선 특성]**&#x200B;인 새 카드를 사용할 수 있습니다. <br> 카탈로그에서 새 활성화 데이터 흐름에 **[!UICONTROL 비행선 특성]** 연결을 사용합니다. [!DNL (Deprecated) Airship Attributes] 대상에 대한 활성 데이터 흐름이 있는 경우 자동으로 업데이트되므로 사용자의 작업이 필요하지 않습니다. <br> [흐름 서비스 API](https://developer.adobe.com/experience-platform-apis/references/destinations/)를 통해 데이터 흐름을 만드는 경우 [!DNL flow spec ID] 및 [!DNL connection spec ID]을(를) 다음 값으로 업데이트해야 합니다. <ul><li> 흐름 사양 ID: `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> 연결 사양 ID: `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
 
 {style="table-layout:auto"}
