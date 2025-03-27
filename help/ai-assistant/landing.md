@@ -3,9 +3,9 @@ title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant를 시작합니다.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: b26a1f12c9ea07d4dd077f1f3c1578e6c69866a7
+source-git-commit: a34c3cae803c9e70530dbd382fbec2ece17fc71a
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1095'
 ht-degree: 0%
 
 ---
@@ -97,11 +97,9 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 
 >[!ENDSHADEBOX] -->
 
-## 비디오 라이브러리
+## 기본 사항 이해
 
-다음 비디오를 통해 AI Assistant 기능 및 사용 사례에 대한 지식을 더욱 확장하십시오.
-
-### 기본 사항 이해
+다음 비디오를 통해 AI Assistant의 몇 가지 기본 측면에 대해 알아보십시오.
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -252,7 +250,9 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-### 사용 사례 라이브러리
+## 사용 사례 라이브러리
+
+다음 비디오를 통해 AI Assistant 사용 사례에 대해 알아보십시오.
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -416,7 +416,7 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-## AI Assistant 사용 사례 라이브러리
+## 추가 사용 사례
 
 >[!BEGINTABS]
 
@@ -439,6 +439,14 @@ AI Assistant 사용 사례 예제는 다음을 참조하십시오.
 * [AI Assistant를 통해 운영 인사이트 잠금 해제](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
+
+### AI Assistant를 통해 생산성 향상
+
+AI Assistant를 사용하여 생산성을 높이는 방법에 대한 실습 안내서는 다음 사항을 참조하십시오.
+
+* [AI Assistant를 사용하여 생산성을 높입니다.](./assets/landing/ai-assistant-lab-workbook.pdf)
+
+## 다음 단계
 
 아래 링크를 탐색하여 AI Assistant 사용 사례, 기능 등에 대해 자세히 알아보십시오.
 
