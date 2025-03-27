@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Real-Time CDP 기능의 최적 사용을 보장하기 위해 프로필 데이터 및 세분화에 대한 성능 및 시스템 적용 가드레일에 대해 알아봅니다.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
+source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
 workflow-type: tm+mt
-source-wordcount: '2523'
+source-wordcount: '2611'
 ht-degree: 2%
 
 ---
@@ -127,6 +127,9 @@ Adobe Experience Platform을 사용하면 행동 통찰력 및 고객 속성을 
 | 샌드박스당 계정 대상자 | 50 | 시스템 강제 보호 | 샌드박스에서 최대 50개의 계정 대상을 만들 수 있습니다. 샌드박스에서 대상 50개에 도달하면 새 계정 대상을 만들 때 **[!UICONTROL 대상 만들기]** 컨트롤이 비활성화됩니다. [계정 대상자](/help/segmentation/types/account-audiences.md)에 대해 자세히 알아보세요. |
 | 샌드박스당 게시된 컴포지션 | 10 | 성능 보호 | 샌드박스에 최대 10개의 컴포지션이 게시될 수 있습니다. UI 가이드의 [대상 구성에 대해 자세히 알아보세요](/help/segmentation/ui/audience-composition.md). |
 | 최대 대상자 크기 | 30% | 성능 보호 | 대상자의 권장 최대 멤버십은 시스템 총 프로필 수의 30%입니다. 프로필의 30% 이상이 멤버이거나 큰 대상이 여러 개인 대상을 만드는 것은 가능하지만 시스템 성능에 영향을 줍니다. |
+| 유연한 대상 평가 실행 | 연간 50개(프로덕션 샌드박스)<br/>연간 100개(개발 샌드박스) | 시스템 강제 보호 | **프로덕션** 샌드박스당 연간 최대 50개의 유연한 대상 평가 실행이 있습니다. **개발** 샌드박스당 연간 최대 100개의 유연한 대상 평가 실행이 있습니다. |
+| 유연한 대상 평가 실행 | 일별 2개 | 시스템 강제 보호 | 샌드박스당 하루에 최대 2회의 실행이 있습니다. |
+| 유연한 대상 평가 실행당 대상 | 20 | 시스템 강제 보호 | 유연한 대상 평가 실행당 최대 20개의 대상을 가질 수 있습니다. |
 
 {style="table-layout:auto"}
 

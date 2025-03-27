@@ -1,13 +1,13 @@
 ---
 title: 대상자 평가 방법
 description: Adobe Experience Platform에서 사용할 수 있는 다양한 유형의 평가 방법에 대해 알아봅니다.
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 5%
+source-wordcount: '241'
+ht-degree: 4%
 
 ---
-
 
 # 대상자 평가 방법
 
@@ -18,6 +18,10 @@ Adobe Experience Platform은 프로필을 대상자로 세그먼트화하는 다
 일괄 세분화는 프로필 데이터를 한 번에 이동하여 해당 대상자를 만드는 데 사용할 수 있는 세분화 평가 방법입니다. 일괄 세분화를 사용하여 세분화되고 풍부한 대상자를 만들어 대규모 프로필 그룹을 타깃팅할 수 있습니다.
 
 일괄 처리 세분화에 대한 자세한 내용은 [일괄 처리 세분화 개요](./batch-segmentation.md)를 참조하십시오.
+
+### 유연한 대상 평가
+
+유연한 대상 평가를 통해 배치 세분화 작업을 온디맨드로 실행할 수 있습니다. 자세한 내용은 [유연한 대상 평가 가이드](./flexible-audience-evaluation.md)를 참조하십시오.
 
 ## 스트리밍 세분화
 

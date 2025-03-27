@@ -2,12 +2,10 @@
 title: 유연한 대상 평가 안내서
 description: 유연한 대상 평가를 사용하여 요청 시 일괄 처리 세분화 작업을 실행하는 방법에 대해 알아봅니다.
 role: Developer, User
-hide: true
-hidefromtoc: true
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 6%
+source-wordcount: '996'
+ht-degree: 5%
 
 ---
 
@@ -32,6 +30,10 @@ ht-degree: 6%
 - 모든 대상 **must**&#x200B;은(는) 일괄 처리 세분화를 사용하여 평가됩니다.
 - 모든 대상 **은(는) 사용자 기반 대상이어야 합니다**.
 - 유연한 대상 평가 실행당 최대 20개의 대상자만 선택할 수 있습니다.
+
+>[!NOTE]
+>
+>연간 유연한 대상 평가 실행을 *구입할 수*&#x200B;있습니다. 자세한 내용은 Adobe 고객 지원 센터에 문의하십시오.
 
 ## 액세스 {#access}
 
@@ -308,11 +310,17 @@ Experience Platform UI에서 유연한 대상 평가를 실행하려면 **[!UICO
 
 >[!NOTE]
 >
->유연한 대상 평가를 실행하는 경우 빈도를 **[!UICONTROL 세그먼트 평가 후]**(으)로 설정해야 합니다. [세그먼트 평가 후](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)에 이미 활성화되도록 설정된 대상에 대해 유연한 대상 평가를 실행하면 이전의 모든 일일 활성화 작업에 관계없이 유연한 대상 평가 작업이 완료되는 즉시 대상이 활성화됩니다.
+>세그먼트 작업의 상태는 모니터링 대시보드 내에서 &quot;큐에 있음&quot; 상태로 보고될 수 있습니다. `/segment/jobs` 끝점에 대한 GET 요청을 만들고 요청 경로에 세그먼트 작업의 ID를 제공하여 세그먼트 작업의 최신 상태를 볼 수 있습니다. 이 엔드포인트 사용에 대한 자세한 내용은 API 탭에서 확인할 수 있습니다.
+>
+>유연한 대상 평가를 실행하고 평가를 통해 대상을 대상으로 활성화하려는 경우 빈도를 **[!UICONTROL 세그먼트 평가 후]**(으)로 설정해야 합니다. [세그먼트 평가 후](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)에 이미 활성화되도록 설정된 대상에 대해 유연한 대상 평가를 실행하면 이전의 모든 일일 활성화 작업에 관계없이 유연한 대상 평가 작업이 완료되는 즉시 대상이 활성화됩니다.
 
 >[!ENDTABS]
 
-## 다음 단계 {#next-steps}
+## 비디오 {#video}
+
+다음 비디오에서는 Experience Platform에서 유연한 대상 평가에 액세스하고 사용하는 방법을 보여 줍니다.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## 자주 묻는 질문 {#faq}
 

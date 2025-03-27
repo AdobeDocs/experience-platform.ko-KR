@@ -4,9 +4,9 @@ title: 세그먼트 작업 API 엔드포인트
 description: Adobe Experience Platform Segmentation Service API의 세그먼트 작업 끝점을 사용하면 조직의 세그먼트 작업을 프로그래밍 방식으로 관리할 수 있습니다.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1232'
 ht-degree: 2%
 
 ---
@@ -64,13 +64,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **응답**
 
-성공적인 응답은 지정된 조직에 대한 세그먼트 작업 목록이 JSON인 HTTP 상태 200을 반환합니다. 하지만 세그먼트 작업 내의 세그먼트 정의 수에 따라 응답이 달라집니다.
-
->[!BEGINTABS]
-
->[!TAB 세그먼트 작업에서 1500개 이하의 세그먼트 정의]
-
-세그먼트 작업에서 1500개 미만의 세그먼트 정의가 실행되고 있는 경우 모든 세그먼트 정의의 전체 목록이 `children.segments` 특성 내에 표시됩니다.
+성공적인 응답은 지정된 조직에 대한 세그먼트 작업 목록이 JSON인 HTTP 상태 200을 반환합니다. 모든 세그먼트 정의의 전체 목록이 `children.segments` 특성 내에 표시됩니다.
 
 >[!NOTE]
 >
@@ -178,105 +172,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 }
 ```
 
-+++
-
->[!TAB 1500개 이상의 세그먼트 정의]
-
-세그먼트 작업에서 1500개가 넘는 세그먼트 정의가 실행되고 있는 경우 `children.segments` 특성에는 모든 세그먼트 정의가 평가되고 있음을 나타내는 `*`이(가) 표시됩니다.
-
->[!NOTE]
->
->다음 응답은 공백으로 잘렸으며, 반환된 첫 번째 작업만 표시합니다.
-
-+++ 세그먼트 작업 목록을 볼 때의 샘플 응답입니다.
-
-```json
-{
-    "_page": {
-        "totalCount": 14,
-        "pageSize": 14
-    },
-    "children": [
-        {
-            "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-            "sandbox": {
-                "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-                "sandboxName": "prod",
-                "type": "production",
-                "default": true
-            },
-            "profileInstanceId": "ups",
-            "source": "scheduler",
-            "status": "SUCCEEDED",
-            "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-            "computeJobId": 8811,
-            "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-            "segments": [
-                {
-                    "segmentId": "*",
-                }
-            ],
-            "metrics": {
-                "totalTime": {
-                    "startTimeInMs": 1573203617195,
-                    "endTimeInMs": 1573204395655,
-                    "totalTimeInMs": 778460
-                },
-                "profileSegmentationTime": {
-                    "startTimeInMs": 1573204266727,
-                    "endTimeInMs": 1573204395655,
-                    "totalTimeInMs": 128928
-                },
-                "totalProfiles": 13146432,
-                "segmentedProfileCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
-                },
-                "segmentedProfileByNamespaceCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
-                        "tenantiduserobjid":1033,
-                        "campaign_profile_mscom_mkt_prod2":1033
-                    }
-                },
-                "segmentedProfileByStatusCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
-                        "exited":144646,
-                        "realized":2056
-                    }
-                },
-                "totalProfilesByMergePolicy":{
-                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-                }
-            },
-            "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-            "schema": {
-                "name": "_xdm.context.profile"
-            },
-            "properties": {
-                "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-                "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-            },
-            "_links": {
-                "cancel": {
-                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-                    "method": "DELETE"
-                },
-                "checkStatus": {
-                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-                    "method": "GET"
-                }
-            },
-            "updateTime": 1573204395000,
-            "creationTime": 1573203600535,
-            "updateEpoch": 1573204395
-        }
-    ],
-    "_links": {
-        "next": {}
-    }
-}
-```
-
 | 속성 | 설명 |
 | -------- | ----------- |
 | `id` | 세그먼트 작업에 대해 시스템에서 생성한 읽기 전용 식별자입니다. |
@@ -294,23 +189,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 +++
 
->[!ENDTABS]
-
 ## 새 세그먼트 작업 만들기 {#create}
 
-`/segment/jobs` 끝점에 대한 POST 요청을 만들고 본문에 새 대상을 만들 세그먼트 정의의 ID를 포함하여 새 세그먼트 작업을 만들 수 있습니다.
+`/segment/jobs` 끝점에 대한 POST 요청을 만들고 세그먼트 정의의 ID를 요청 본문에 포함하여 새 세그먼트 작업을 만들 수 있습니다.
 
 **API 형식**
 
 ```http
 POST /segment/jobs
 ```
-
-새 세그먼트 작업을 만들 때 세그먼트 작업 내의 세그먼트 정의 수에 따라 요청 및 응답이 달라집니다.
-
->[!BEGINTABS]
-
->[!TAB 세그먼트 작업에서 1500개 이하의 세그먼트]
 
 **요청**
 
@@ -335,7 +222,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | 속성 | 설명 |
 | -------- | ----------- |
-| `segmentId` | 세그먼트 작업을 생성할 세그먼트 정의의 ID입니다. 이러한 세그먼트 정의는 다른 병합 정책에 속할 수 있습니다. 세그먼트 정의에 대한 자세한 내용은 [세그먼트 정의 끝점 안내서](./segment-definitions.md)를 참조하십시오. |
+| `segmentId` | 평가할 세그먼트 정의의 ID입니다. 이러한 세그먼트 정의는 다른 병합 정책에 속할 수 있습니다. 세그먼트 정의에 대한 자세한 내용은 [세그먼트 정의 끝점 안내서](./segment-definitions.md)를 참조하십시오. |
 
 +++
 
@@ -460,136 +347,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 +++
 
->[!TAB 세그먼트 작업에 1500개가 넘는 세그먼트 정의]
-
-**요청**
-
->[!NOTE]
->
->1500개가 넘는 세그먼트 정의로 세그먼트 작업을 만들 수 있지만 **권장되지 않습니다**.
-
-+++ 세그먼트 작업 생성에 대한 샘플 요청입니다.
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '{
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ]
- }'
-```
-
-| 속성 | 설명 |
-| -------- | ----------- |
-| `schema.name` | 세그먼트 정의에 대한 스키마의 이름입니다. |
-| `segments.segmentId` | 1500개가 넘는 세그먼트로 세그먼트 작업을 실행하는 경우 모든 세그먼트로 세그먼테이션 작업을 실행함을 나타내려면 `*`을(를) 세그먼트 ID로 전달해야 합니다. |
-
-+++
-
-**응답**
-
-성공적인 응답은 새로 생성된 세그먼트 작업의 세부 정보와 함께 HTTP 상태 200을 반환합니다.
-
-+++ 세그먼트 작업을 생성할 때 샘플 응답.
-
-```json
-{
-    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "profileInstanceId": "ups",
-    "source": "scheduler",
-    "status": "PROCESSING",
-    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-    "computeJobId": 8811,
-    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ],
-    "metrics": {
-        "totalTime": {
-            "startTimeInMs": 1573203617195,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 778460
-        },
-        "profileSegmentationTime": {
-            "startTimeInMs": 1573204266727,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 128928
-        },
-        "segmentedProfileCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":1033
-        },
-        "segmentedProfileByNamespaceCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "tenantiduserobjid":1033,
-                "campaign_profile_mscom_mkt_prod2":1033
-            }
-        },
-        "segmentedProfileByStatusCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "exited":144646,
-                "realized":2056
-            }
-        },
-        "totalProfiles":13146432,
-        "totalProfilesByMergePolicy":{
-            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-        }
-    },
-    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "properties": {
-        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-    },
-    "_links": {
-        "cancel": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "DELETE"
-        },
-        "checkStatus": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "GET"
-        }
-    },
-    "updateTime": 1573204395000,
-    "creationTime": 1573203600535,
-    "updateEpoch": 1573204395
-}
-```
-
-| 속성 | 설명 |
-| -------- | ----------- |
-| `id` | 새로 생성된 세그먼트 작업에 대한 시스템에서 생성한 읽기 전용 식별자입니다. |
-| `status` | 세그먼트 작업의 현재 상태입니다. 세그먼트 작업을 새로 만들었으므로 상태는 항상 `NEW`입니다. |
-| `segments` | 이 세그먼트 작업이 실행 중인 세그먼트 정의에 대한 정보를 포함하는 개체입니다. |
-| `segments.segment.id` | `*`은(는) 조직 내의 모든 세그먼트 정의에 대해 이 세그먼트 작업이 실행되고 있음을 의미합니다. |
-
-+++
-
->[!ENDTABS]
-
-
 ## 특정 세그먼트 작업 검색 {#get}
 
 `/segment/jobs` 끝점에 대한 GET 요청을 만들고 요청 경로에 검색할 세그먼트 작업의 ID를 제공하여 특정 세그먼트 작업에 대한 자세한 정보를 검색할 수 있습니다.
@@ -620,13 +377,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **응답**
 
-성공한 응답은 지정된 세그먼트 작업에 대한 자세한 정보와 함께 HTTP 상태 200을 반환합니다.  하지만 응답은 세그먼트 작업 내의 세그먼트 정의 수에 따라 달라집니다.
-
->[!BEGINTABS]
-
->[!TAB 세그먼트 작업에서 1500개 이하의 세그먼트 정의]
-
-세그먼트 작업에서 1500개 미만의 세그먼트 정의가 실행되고 있는 경우 모든 세그먼트 정의의 전체 목록이 `children.segments` 특성 내에 표시됩니다.
+성공한 응답은 지정된 세그먼트 작업에 대한 자세한 정보와 함께 HTTP 상태 200을 반환합니다. 모든 세그먼트 정의의 전체 목록이 `children.segments` 특성 내에 표시됩니다.
 
 +++ 세그먼트 작업 검색을 위한 샘플 응답입니다.
 
@@ -690,90 +441,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 }
 ```
 
-+++
-
->[!TAB 1500개 이상의 세그먼트 정의]
-
-세그먼트 작업에서 1500개가 넘는 세그먼트 정의가 실행되고 있는 경우 `children.segments` 특성에는 모든 세그먼트 정의가 평가되고 있음을 나타내는 `*`이(가) 표시됩니다.
-
-+++ 세그먼트 작업 검색을 위한 샘플 응답입니다.
-
-```json
-{
-    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "profileInstanceId": "ups",
-    "source": "scheduler",
-    "status": "SUCCEEDED",
-    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-    "computeJobId": 8811,
-    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ],
-    "metrics": {
-        "totalTime": {
-            "startTimeInMs": 1573203617195,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 778460
-        },
-        "profileSegmentationTime": {
-            "startTimeInMs": 1573204266727,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 128928
-        },
-        "segmentedProfileCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":1033
-        },
-        "segmentedProfileByNamespaceCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "tenantiduserobjid":1033,
-                "campaign_profile_mscom_mkt_prod2":1033
-            }
-        },
-        "segmentedProfileByStatusCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "exited":144646,
-                "realized":2056
-            }
-        },
-        "totalProfiles":13146432,
-        "totalProfilesByMergePolicy":{
-            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-        }
-    },
-    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "properties": {
-        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-    },
-    "_links": {
-        "cancel": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "DELETE"
-        },
-        "checkStatus": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "GET"
-        }
-    },
-    "updateTime": 1573204395000,
-    "creationTime": 1573203600535,
-    "updateEpoch": 1573204395
-}
-```
-
 | 속성 | 설명 |
 | -------- | ----------- |
 | `id` | 세그먼트 작업에 대해 시스템에서 생성한 읽기 전용 식별자입니다. |
@@ -824,7 +491,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **응답**
 
-성공적인 응답은 요청된 세그먼트 작업과 함께 HTTP 상태 207을 반환합니다. 그러나 `children.segments` 특성의 값은 세그먼트 작업이 1500개가 넘는 세그먼트 정의에 대해 실행 중인지 여부에 따라 다릅니다.
+성공적인 응답은 요청된 세그먼트 작업과 함께 HTTP 상태 207을 반환합니다.
 
 >[!NOTE]
 >
@@ -867,7 +534,20 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
             "status": "SUCCEEDED",
             "segments": [
                 {
-                    "segmentId": "*"
+                    "segmentId": "30230300-d78c-48ad-8012-c5563a007069",
+                    "segment": {
+                        "id": "30230300-d78c-48ad-8012-c5563a007069",
+                        "expression": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": "{PQL_EXPRESSION}"
+                        },
+                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicy": {
+                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "version": 1
+                        }
+                    }
                 }
             ],
             "updateTime": 1573204395000,
@@ -890,7 +570,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 ## 특정 세그먼트 작업 취소 또는 삭제 {#delete}
 
-`/segment/jobs` 끝점에 DELETE 요청을 하고 요청 경로에 삭제할 세그먼트 작업의 ID를 제공하여 특정 세그먼트 작업을 삭제할 수 있습니다.
+`/segment/jobs` 끝점에 대한 DELETE 요청을 만들고 요청 경로에 삭제할 세그먼트 작업의 ID를 제공하여 특정 세그먼트 작업을 삭제할 수 있습니다.
 
 >[!NOTE]
 >
