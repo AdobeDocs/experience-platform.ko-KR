@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 3월
 description: Adobe Experience Platform의 2025년 3월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b96e1186669c77530a10f1f177c1d99947c27f3b
+source-git-commit: 445bf302baadf478a39b0c11a31ccfe25d5dd726
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 25%
@@ -16,6 +16,7 @@ ht-degree: 25%
 Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 
 - [Adobe Experience Platform 릴리스 정보](#adobe-experience-platform-release-notes)
+
    - [대시보드](#dashboards)
    - [대상](#destinations)
    - [Segmentation Service](#segmentation-service)
