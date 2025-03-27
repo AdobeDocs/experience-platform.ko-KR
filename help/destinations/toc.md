@@ -5,9 +5,9 @@ user-guide-description: 크로스 채널 마케팅 캠페인, 이메일 캠페�
 description: 이 문서에는 Adobe Experience Platform 대상의 목차가 나열되어 있습니다
 feature: Destinations
 role: Admin,User
-source-git-commit: 9b9cecc9e1a6e5979fa8eb454cef677b8995f1b6
+source-git-commit: 9b41ec996c254840952ae3c45dfdddd8ac172085
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1278'
 ht-degree: 5%
 
 ---
@@ -78,6 +78,7 @@ ht-degree: 5%
       * [Awin 광고주 전환 태그 확장](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag 확장](./catalog/advertising/awin-mastertag.md)
       * [Bing Ads UET(Universal Event Tracking) 확장](./catalog/advertising/bing-ads.md)
+      * [봄보라 접속](./catalog/advertising/bombora.md)
       * [분기 확장](./catalog/advertising/branch.md)
       * [크리테오 연결](./catalog/advertising/criteo.md)
       * [Demandbase 연결](./catalog/advertising/demandbase.md)
