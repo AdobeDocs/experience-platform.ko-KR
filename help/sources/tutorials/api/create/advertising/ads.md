@@ -1,56 +1,40 @@
 ---
-title: 흐름 서비스 API를 사용하여 Google Ads Base 연결 만들기
+title: API를 사용하여 Google 광고를 Experience Platform에 연결
 description: 흐름 서비스 API를 사용하여 Adobe Experience Platform을 Google 광고에 연결하는 방법을 알아봅니다.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
+source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 3%
+source-wordcount: '457'
+ht-degree: 1%
 
 ---
 
-# [!DNL Flow Service] API를 사용하여 Google 광고 기본 연결 만들기
-
->[!WARNING]
->
->[!DNL Google Ads] 원본을 일시적으로 사용할 수 없습니다. Adobe이 이 소스의 문제를 해결하기 위해 노력하고 있습니다.
+# [!DNL Flow Service] API를 사용하여 [!DNL Google Ads]을(를) Experience Platform에 연결
 
 >[!NOTE]
 >
->Google Ads 소스는 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
+>[!DNL Google Ads] 원본이 Beta 버전입니다. 베타 레이블 소스를 사용하는 방법에 대한 자세한 내용은 [소스 개요](../../../../home.md#terms-and-conditions)를 참조하십시오.
 
 기본 연결은 소스와 Adobe Experience Platform 간의 인증된 연결을 나타냅니다.
 
-이 자습서에서는 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)를 사용하여 Google Ads에 대한 기본 연결을 만드는 단계를 안내합니다.
+[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/)를 사용하여 [!DNL Google Ads] 계정을 Adobe Experience Platform에 연결하는 방법을 알아보려면 이 자습서를 참조하십시오.
 
 ## 시작하기
 
-이 안내서를 사용하려면 Adobe Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
+이 안내서를 사용하려면 Experience Platform의 다음 구성 요소에 대해 이해하고 있어야 합니다.
 
 * [소스](../../../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
 * [샌드박스](../../../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 [!DNL Flow Service] API를 사용하여 Google Ads에 성공적으로 연결하기 위해 알아야 하는 추가 정보를 제공합니다.
-
-### 필요한 자격 증명 수집
-
-[!DNL Flow Service]이(가) Google Ads와 연결하려면 다음 연결 속성에 대한 값을 제공해야 합니다.
-
-| 자격 증명 | 설명 |
-| ---------- | ----------- |
-| `clientCustomerId` | 클라이언트 고객 ID는 Google Ads API로 관리하려는 Google Ads 클라이언트 계정에 해당하는 계정 번호입니다. 이 ID는 `123-456-7890`의 템플릿을 따릅니다. |
-| `loginCustomerId` | 로그인 고객 ID는 Google Ads Manager 계정에 해당하는 계정 번호이며 특정 운영 고객으로부터 보고서 데이터를 가져오는 데 사용됩니다. 로그인 고객 ID에 대한 자세한 내용은 [Google Ads API 설명서](https://developers.google.com/search-ads/reporting/concepts/login-customer-id)를 참조하세요. |
-| `developerToken` | 개발자 토큰을 사용하면 Google Ads API에 액세스할 수 있습니다. 동일한 개발자 토큰을 사용하여 모든 Google Ads 계정에 대해 요청할 수 있습니다. [관리자 계정에 로그인](https://ads.google.com/home/tools/manager-accounts/)한 다음 [!DNL API Center] 페이지로 이동하여 개발자 토큰을 검색하십시오. |
-| `refreshToken` | 새로 고침 토큰은 [!DNL OAuth2] 인증의 일부입니다. 이 토큰을 사용하면 액세스 토큰이 만료된 후 다시 생성할 수 있습니다. |
-| `clientId` | 클라이언트 ID는 [!DNL OAuth2] 인증의 일부로 클라이언트 암호와 함께 사용됩니다. 클라이언트 ID와 클라이언트 암호를 사용하면 Google에 대한 애플리케이션을 식별하여 애플리케이션이 계정을 대신하여 작동할 수 있습니다. |
-| `clientSecret` | 클라이언트 암호는 [!DNL OAuth2] 인증의 일부로 클라이언트 ID와 함께 사용됩니다. 클라이언트 ID와 클라이언트 암호를 사용하면 Google에 대한 애플리케이션을 식별하여 애플리케이션이 계정을 대신하여 작동할 수 있습니다. |
-| `connectionSpec.id` | 연결 사양은 기본 및 소스 연결 만들기와 관련된 인증 사양을 포함하여 소스의 커넥터 속성을 반환합니다. Google 광고의 연결 사양 ID는 `d771e9c1-4f26-40dc-8617-ce58c4b53702`입니다. |
-
-[Google 광고 시작에 대한 자세한 내용](https://developers.google.com/google-ads/api/docs/first-call/overview)은 API 개요 문서를 참조하십시오.
+다음 섹션에서는 [!DNL Flow Service] API를 사용하여 [!DNL Google Ads]에 성공적으로 연결하기 위해 알아야 할 추가 정보를 제공합니다.
 
 ### Platform API 사용
 
 Platform API를 성공적으로 호출하는 방법에 대한 자세한 내용은 [Platform API 시작](../../../../../landing/api-guide.md)에 대한 안내서를 참조하십시오.
+
+### 필요한 자격 증명 수집
+
+인증에 대한 자세한 내용은 [[!DNL Google Ads] 원본 개요](../../../../connectors/advertising/ads.md)를 참조하세요.
 
 ## 기본 연결 만들기
 
@@ -85,10 +69,11 @@ curl -X POST \
               "clientCustomerID": "{CLIENT_CUSTOMER_ID}",
               "loginCustomerID": "{LOGIN_CUSTOMER_ID}",
               "developerToken": "{DEVELOPER_TOKEN}",
-              "authenticationType": "{AUTHENTICATION_TYPE}"
+              "refreshToken": "{REFRESH_TOKEN}",
               "clientId": "{CLIENT_ID}",
               "clientSecret": "{CLIENT_SECRET}",
-              "refreshToken": "{REFRESH_TOKEN}"
+              "googleAdsApiVersion": "v17"
+
           }
       },
       "connectionSpec": {
@@ -100,13 +85,14 @@ curl -X POST \
 
 | 속성 | 설명 |
 | --------- | ----------- |
-| `auth.params.clientCustomerID` | Google 광고 계정의 클라이언트 고객 ID입니다. |
-| `auth.params.loginCustomerID` | Google Ads Manager 계정에 해당하는 로그인 고객 ID입니다. |
-| `auth.params.developerToken` | Google Ads 계정의 개발자 토큰. |
-| `auth.params.refreshToken` | Google Ads 계정의 새로 고침 토큰입니다. |
-| `auth.params.clientID` | Google 광고 계정의 클라이언트 ID입니다. |
-| `auth.params.clientSecret` | Google 광고 계정의 클라이언트 암호입니다. |
-| `connectionSpec.id` | Google 광고 연결 사양 ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `auth.params.clientCustomerID` | [!DNL Google Ads] 계정의 클라이언트 고객 ID. |
+| `auth.params.loginCustomerID` | [!DNL Google Ads] 관리자 계정에 해당하는 로그인 고객 ID. |
+| `auth.params.developerToken` | [!DNL Google Ads] 계정의 개발자 토큰입니다. |
+| `auth.params.refreshToken` | [!DNL Google Ads] 계정의 새로 고침 토큰입니다. |
+| `auth.params.clientID` | [!DNL Google Ads] 계정의 클라이언트 ID. |
+| `auth.params.clientSecret` | [!DNL Google Ads] 계정의 클라이언트 암호입니다. |
+| `auth.params.googleAdsApiVersion` | 사용 중인 [!DNL Google Ads] API 버전입니다. Experience Platform에서 지원되는 최신 버전은 `v17`입니다. |
+| `connectionSpec.id` | [!DNL Google Ads] 연결 사양 ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **응답**
 
@@ -119,9 +105,9 @@ curl -X POST \
 }
 ```
 
-## 다음 단계
+## 데이터 흐름을 만들어 광고 데이터 수집
 
-이 자습서에 따라 [!DNL Flow Service] API를 사용하여 Google Ads 기본 연결을 만들었습니다. 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다.
+이 자습서에 따라 [!DNL Flow Service] API를 사용하여 [!DNL Google Ads] 기본 연결을 만들고 [!DNL Google Ads] 계정을 Experience Platform에 연결했습니다. 다음 자습서에서 이 기본 연결 ID를 사용할 수 있습니다.
 
 * [ [!DNL Flow Service] API를 사용하여 데이터 표의 구조와 내용을 살펴봅니다.](../../explore/tabular.md)
 * [ [!DNL Flow Service] API를 사용하여 광고 데이터를 플랫폼으로 가져오기 위한 데이터 흐름을 만듭니다.](../../collect/advertising.md)
