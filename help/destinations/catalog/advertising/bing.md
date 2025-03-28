@@ -16,7 +16,7 @@ ht-degree: 10%
 
 [!DNL Microsoft Bing] 대상을 사용하여 [!DNL Display Advertising], [!DNL Search] 및 [!DNL Native]을(를) 포함하여 전체 [!DNL Microsoft Advertising Network]에 프로필 데이터를 보냅니다.
 
-[!DNL Microsoft Bing] 대상은 Microsoft에서 *[!DNL Custom Audiences]*&#x200B;을(를) 만듭니다. [Microsoft Advertising 설명서](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500)에 나열된 대로 [!DNL Microsoft Search Network] 및 [!DNL Audience Network]([!DNL Native] /[!DNL Display] /[!DNL Programmatic])에서 모두 사용할 수 있습니다.
+[!DNL Microsoft Bing] 대상은 Microsoft에서 *[!DNL Custom Audiences]*&#x200B;을(를) 만듭니다. [Microsoft Advertising 설명서](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500)에 나열된 대로 [!DNL Microsoft Search Network] 및 [!DNL Audience Network]&#x200B;([!DNL Native] /[!DNL Display] /[!DNL Programmatic])에서 모두 사용할 수 있습니다.
 
 [!DNL Microsoft Bing]에 프로필 데이터를 보내려면 먼저 대상에 연결해야 합니다.
 
@@ -28,7 +28,7 @@ ht-degree: 10%
 
 [!DNL Microsoft Bing]은(는) 아래 표에 표시된 ID를 기반으로 대상자 활성화를 지원합니다. [ID](/help/identity-service/features/namespaces.md)에 대해 자세히 알아보세요.
 
-| 신원 | 설명 |
+| ID | 설명 |
 |---|---|
 | 하녀 | MICROSOFT ADVERTISING ID |
 
@@ -40,8 +40,8 @@ ht-degree: 10%
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->[!DNL Microsoft Bing]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Microsoft Bing] 통합을 설정한 경우 설정한 ID 동기화를 플랫폼으로 이월합니다.
+>[!DNL Microsoft Bing]을(를) 사용하여 첫 번째 대상을 만들려고 하는데 이전에 Experience Cloud ID 서비스에서 [ID 동기화 기능](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)을(를) 활성화하지 않은 경우(Adobe Audience Manager 또는 기타 응용 프로그램 사용) Adobe Consulting 또는 고객 지원 센터에 연락하여 ID 동기화를 활성화하십시오. 이전에 Audience Manager에서 [!DNL Microsoft Bing] 통합을 설정한 경우 설정한 ID 동기화가 플랫폼으로 이월됩니다.
 
 대상을 구성할 때는 다음 정보를 제공해야 합니다.
 
@@ -82,7 +82,7 @@ ht-degree: 10%
 
 * **[!UICONTROL 이름]**: 나중에 이 대상을 인식할 수 있는 이름입니다.
 * **[!UICONTROL 설명]**: 나중에 이 대상을 식별하는 데 도움이 되는 설명입니다.
-* **[!UICONTROL 계정 ID]**: 내 [!DNL Bing Ads Customer ID](CID). CID는 정수입니다. [!DNL Microsoft Advertising]에 로그인할 때 URL에 있습니다.
+* **[!UICONTROL 계정 ID]**: 내 [!DNL Bing Ads Customer ID]&#x200B;(CID). CID는 정수입니다. [!DNL Microsoft Advertising]에 로그인할 때 URL에 있습니다.
 
 ### 경고 활성화 {#enable-alerts}
 
@@ -95,7 +95,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="ID 매핑"
->abstract="선택한 대상자를 매핑할 숫자 Bing 세그먼트 ID를 입력합니다. 제공된 [!UICONTROL 매핑 ID] 가 Bing 대상의 대상자 ID와 일치하지 않는 경우 Bing 계정에 예상되는 대상자 데이터가 표시되지 않습니다."
+>abstract="선택한 대상자를 매핑할 숫자 Bing 세그먼트 ID를 입력합니다. 제공된 [!UICONTROL 매핑 ID]가 Bing 대상의 대상자 ID와 일치하지 않는 경우 Bing 계정에 예상되는 대상자 데이터가 표시되지 않습니다."
 
 >[!IMPORTANT]
 > 

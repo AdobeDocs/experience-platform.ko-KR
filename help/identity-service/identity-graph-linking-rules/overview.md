@@ -5,22 +5,22 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
-# ID 그래프 연결 규칙 개요 {#identity-graph-linking-rules-overview}
+# 아이덴티티 그래프 연결 규칙 개요 {#identity-graph-linking-rules-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
->title="ID 그래프 연결 규칙"
->abstract="이러한 원치 않는 병합을 방지하기 위해 ID 그래프 연결 규칙을 통해 제공된 구성을 사용하고 사용자를 위한 정확한 개인화를 허용할 수 있습니다."
+>title="아이덴티티 그래프 연결 규칙"
+>abstract="이러한 원치 않는 병합을 방지하려면 아이덴티티 그래프 연결 규칙을 통해 제공되는 구성을 사용하여 사용자에게 정확한 개인화를 제공할 수 있습니다."
 
 >[!AVAILABILITY]
 >
 >ID 그래프 연결 규칙은 현재 제한적 가용성입니다. 개발 샌드박스의 기능에 액세스하는 방법에 대한 자세한 내용은 Adobe 계정 팀에 문의하십시오.
 
-Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용하면 데이터가 완벽하게 수집되고 병합된 모든 프로필이 CRMID와 같은 개인 식별자를 통해 단일 개별 사용자를 나타낸다고 쉽게 가정할 수 있습니다. 그러나 특정 데이터가 서로 다른 여러 프로필을 하나의 프로필로 병합하려고 할 수 있는 시나리오가 있습니다(&quot;그래프 축소&quot;). 이러한 원치 않는 병합을 방지하기 위해 ID 그래프 연결 규칙을 통해 제공된 구성을 사용하고 사용자를 위한 정확한 개인화를 허용할 수 있습니다.
+Adobe Experience Platform ID 서비스 및 실시간 고객 프로필을 사용하면 데이터가 완벽하게 수집되고 병합된 모든 프로필이 CRMID와 같은 개인 식별자를 통해 단일 개별 사용자를 나타낸다고 쉽게 가정할 수 있습니다. 그러나 특정 데이터가 서로 다른 여러 프로필을 하나의 프로필로 병합하려고 할 수 있는 시나리오가 있습니다(&quot;그래프 축소&quot;). 이러한 원치 않는 병합을 방지하려면 아이덴티티 그래프 연결 규칙을 통해 제공되는 구성을 사용하여 사용자에게 정확한 개인화를 제공할 수 있습니다.
 
 ID 그래프 연결 규칙 사용에 대한 자세한 내용은 다음 비디오를 시청하십시오.
 
@@ -91,7 +91,7 @@ ID 그래프 연결 규칙을 사용하여 다음을 수행할 수 있습니다.
 
 ID 그래프 연결 규칙을 사용하면 이러한 유형의 데이터로 인해 원하지 않는 프로필이 축소되는 것을 방지하기 위해 CRMID를 고유 식별자로 구성할 수 있습니다.
 
-## ID 그래프 연결 규칙 {#identity-graph-linking-rules}
+## 아이덴티티 그래프 연결 규칙 {#identity-graph-linking-rules}
 
 ID 그래프 연결 규칙을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 
