@@ -2,15 +2,19 @@
 title: 유연한 대상 평가 안내서
 description: 유연한 대상 평가를 사용하여 요청 시 일괄 처리 세분화 작업을 실행하는 방법에 대해 알아봅니다.
 role: Developer, User
-source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
+exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
+source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1049'
 ht-degree: 5%
 
 ---
 
-
 # 유연한 대상 평가 안내서
+
+>[!AVAILABILITY]
+>
+>유연한 대상 평가는 [!DNL Microsoft Azure]에서 실행 중인 Experience Platform 인스턴스에서 **만**&#x200B;할 수 있습니다. 지원되는 Experience Platform 인프라에 대한 자세한 내용은 [Experience Platform 멀티 클라우드 개요](../../landing/multi-cloud.md)를 참조하세요.
 
 유연한 대상 평가를 통해 배치 세분화 작업을 온디맨드로 실행할 수 있습니다. 유연한 대상 평가를 통해 애드혹 캠페인 시작, 정시 커뮤니케이션 또는 기타 시간에 민감한 활동을 실행할 수 있습니다.
 
@@ -33,7 +37,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->연간 유연한 대상 평가 실행을 *구입할 수*&#x200B;있습니다. 자세한 내용은 Adobe 고객 지원 센터에 문의하십시오.
+>연간 유연한 대상 평가 실행을 추가로 구매할 수 있습니다. 자세한 내용은 Adobe 고객 지원 센터에 문의하십시오.
 
 ## 액세스 {#access}
 
@@ -326,6 +330,14 @@ Experience Platform UI에서 유연한 대상 평가를 실행하려면 **[!UICO
 
 다음 섹션에는 유연한 대상 평가와 관련된 FAQ가 나열되어 있습니다.
 
+### 유연한 대상 평가를 사용하여 대상자를 얼마나 빨리 활성화할 수 있습니까?
+
++++ 답변
+
+대상을 만든 후 즉시 유연한 대상 평가를 사용하여 대상을 활성화할 수 있습니다.
+
++++
+
 ### 유연한 대상 평가로 예약을 실행할 수 있습니까?
 
 +++ 답변
@@ -373,4 +385,3 @@ Experience Platform UI에서 유연한 대상 평가를 실행하려면 **[!UICO
 API 또는 UI 카운트를 사용하여 최대 한도에 대해 생성된 유연한 대상 평가 실행. 그러나 매일 밤 실행되는 일일 일괄 처리 세분화 작업 실행은 이 제한에 **영향을 주지**&#x200B;않습니다.
 
 +++
-
