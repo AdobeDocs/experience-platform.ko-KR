@@ -3,7 +3,7 @@ keywords: Experience Platform;홈;인기 항목;소스;커넥터;소스 커넥�
 title: 셀프서비스 소스에 대한 인증 사양 구성(일괄 SDK)
 description: 이 문서에서는 셀프서비스 소스(일괄 SDK)를 사용하기 위해 준비해야 하는 구성에 대한 개요를 제공합니다.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 984de21c134d2fc94ef7dc5f5e449f7a39732bc6
+source-git-commit: 8517532f991413a239e0da890bf53b1bf5b621f0
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 3%

@@ -1,9 +1,8 @@
 ---
 title: 액세스 레이블을 적용하여 UI의 소스 데이터 흐름에 대한 사용자 액세스 관리
 description: Experience Platform UI를 사용하여 액세스 레이블을 적용하고 소스 데이터 흐름에 대한 사용자 액세스를 관리하는 방법을 알아봅니다.
-hide: true
-hidefromtoc: true
-source-git-commit: 80fb60abdf33eb2a7ca691a9a48a811c632b34fc
+exl-id: 7aab9706-2f43-43c7-9878-1959d5a8a6b0
+source-git-commit: f57fa04e668fa9c61b9b15778e74969edffae0fa
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 2%
