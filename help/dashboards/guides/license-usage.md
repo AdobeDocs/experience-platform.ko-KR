@@ -4,10 +4,10 @@ title: 라이선스 사용 대시보드
 description: Adobe Experience Platform은 조직의 라이선스 사용에 대한 중요한 정보를 볼 수 있는 대시보드를 제공합니다.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 03b35ecf940f9b1cb40d8b1243ff530f38bcdcd4
+source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
 workflow-type: tm+mt
-source-wordcount: '3367'
-ht-degree: 16%
+source-wordcount: '3408'
+ht-degree: 15%
 
 ---
 
@@ -144,11 +144,11 @@ Platform UI에 대한 일반적인 개요는 [Experience Platform UI 안내서](
 
 [!UICONTROL 라이선스 사용량] 대시보드에는 구입한 모든 Experience Platform 제품 목록과 해당 제품에 대한 추가 기능이 표시됩니다. 이 대시보드에서 연결된 모든 샌드박스에서 Experience Platform에 대한 조직의 라이선스 관련 데이터의 스냅샷을 찾을 수 있습니다.
 
-이 대시보드의 데이터는 스냅샷이 생성된 특정 시점에 나타나는 것과 동일하게 표시됩니다. 즉, 스냅샷은 데이터의 근사치나 샘플이 아니며 실시간으로 대시보드가 업데이트되지 않는다.
+이 대시보드의 데이터는 스냅샷이 생성된 특정 시점에 표시된 것과 동일하게 표시됩니다. 근사치나 샘플이 아니라 대시보드가 실시간으로 업데이트되지 않는다.
 
 >[!NOTE]
 >
->스냅숏을 만든 이후 데이터에 대한 변경 또는 업데이트는 다음 스냅숏을 만들 때까지 대시보드에 반영되지 않습니다.
+>대시보드의 대부분의 지표는 Platform 인스턴스의 스냅샷을 기반으로 하여 매일 업데이트됩니다. [!UICONTROL 사용 가능한 CJA 행]은(는) 예외이며 매월 업데이트됩니다. [!UICONTROL Adhoc Query Service 사용자 팩], [!UICONTROL Profile Richness No of Packs], [!UICONTROL Streaming Segmentation No of Packs]와 같이 &quot;팩&quot;으로 레이블이 지정된 지표는 추가 기능 오퍼에 대한 라이선스 권한을 반영하며 지속적인 사용을 추적하지 않습니다. 스냅샷 이후에 변경한 내용은 다음 스냅샷을 생성할 때까지 표시되지 않습니다.
 
 ## 라이선스 사용 대시보드 살펴보기 {#explore}
 
