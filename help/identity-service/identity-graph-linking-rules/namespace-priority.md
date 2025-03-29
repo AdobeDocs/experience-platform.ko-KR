@@ -2,7 +2,7 @@
 title: 네임스페이스 우선순위
 description: ID 서비스의 네임스페이스 우선 순위에 대해 알아봅니다.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 8157eaf3d79523995fd50d02234e7873cffcea14
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 3%
@@ -73,11 +73,11 @@ ID는 실제 개체를 나타냅니다. ID 그래프에 표시되는 객체는 �
 
 ![네임스페이스 우선 순위 응용 프로그램 범위의 다이어그램](../images/namespace-priority/application-scope.png)
 
-### ID 서비스: ID 최적화 알고리즘
+## ID 서비스: ID 최적화 알고리즘
 
 비교적 복잡한 그래프 구조의 경우, 네임스페이스 우선 순위는 그래프 축소 시나리오가 발생할 때 올바른 링크가 제거되도록 하는 데 중요한 역할을 합니다. 자세한 내용은 [ID 최적화 알고리즘 개요](../identity-graph-linking-rules/identity-optimization-algorithm.md)를 참조하세요.
 
-### 실시간 고객 프로필: 경험 이벤트에 대한 기본 ID 결정
+## 실시간 고객 프로필: 경험 이벤트에 대한 기본 ID 결정
 
 * 지정된 샌드박스에 대한 ID 설정을 구성하면 경험 이벤트에 대한 기본 ID가 구성에서 가장 높은 네임스페이스 우선 순위에 따라 결정됩니다.
    * 이는 체험 행사가 그 자체로 역동적이기 때문이다. ID 맵에는 3개 이상의 ID가 포함될 수 있으며 네임스페이스 우선 순위는 가장 중요한 네임스페이스가 경험 이벤트에 연결되어 있도록 합니다.
@@ -122,7 +122,7 @@ ID는 실제 개체를 나타냅니다. ID 그래프에 표시되는 객체는 �
 
 {style="table-layout:auto"}
 
-### 세그먼테이션 서비스: 세그먼트 멤버십 메타데이터 저장소
+## 세그먼테이션 서비스: 세그먼트 멤버십 메타데이터 저장소
 
 ![세그먼트 멤버십 저장소 다이어그램](../images/namespace-priority/segment-membership-storage.png)
 
@@ -139,7 +139,7 @@ ID는 실제 개체를 나타냅니다. ID 그래프에 표시되는 객체는 �
 
 John과 Jane이 장치를 공유하는 경우 ECID(웹 브라우저)가 한 사람에서 다른 사람으로 이동합니다. 단, 이는 John과 Jane에 대해 저장된 세그먼트 멤버십 정보에 영향을 주지 않습니다.
 
-세그먼트 자격 기준이 ECID에 대해 저장된 익명 이벤트만을 기반으로 하는 경우 Jane은 해당 세그먼트에 대한 자격을 갖습니다
+세그먼트 자격 기준이 ECID에 대해 저장된 익명 이벤트만을 기반으로 하는 경우 Jane은 해당 세그먼트에 대한 자격을 갖습니다.
 
 ## 기타 Experience Platform 서비스에 대한 영향 {#implications}
 

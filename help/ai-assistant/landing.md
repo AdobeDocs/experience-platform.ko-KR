@@ -3,9 +3,9 @@ title: Adobe Experience Platform 제품 설명서의 AI Assistant
 description: Adobe Experience Platform에서 AI Assistant를 시작합니다.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: a34c3cae803c9e70530dbd382fbec2ece17fc71a
+source-git-commit: eb62627e81f361d21026cba368802ebace4a8dde
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -441,6 +441,10 @@ AI Assistant 사용 사례 예제는 다음을 참조하십시오.
 >[!ENDTABS]
 
 ### AI Assistant를 통해 생산성 향상
+
+>[!NOTE]
+>
+>이 통합 문서는 2025년 3월 31일에 마지막으로 업데이트되었습니다. 이후 일부 기능이 발전하거나 확장되었을 수 있다. 또한 이 안내서에서 참조하는 몇 가지 기능이 아직 초기 액세스 상태일 수 있습니다. 환경에서 아직 사용할 수 없는 문제가 발생했으며 이에 대한 탐색에 관심이 있는 경우 Adobe 계정 팀에 연락하여 조기 액세스를 요청하십시오.
 
 AI Assistant를 사용하여 생산성을 높이는 방법에 대한 실습 안내서는 다음 사항을 참조하십시오.
 
