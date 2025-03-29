@@ -2,9 +2,10 @@
 title: Demandbase 의도
 description: Experience Platform의 Demandbase Intent 소스에 대해 알아봅니다.
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
+exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
+source-git-commit: 78aae71ff48fc710aaaabf4ef71f6e50d2a8c12e
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1465'
 ht-degree: 1%
 
 ---
@@ -84,7 +85,7 @@ Experience Platform의 [!DNL Demandbase]은(는) [!DNL Google Cloud Storage]에 
 
 ## UI에서 [!DNL Demandbase] 계정을 Experience Platform에 연결
 
-[!DNL Demandbase]에 대한 필수 구성 요소 설정을 완료했으므로 이제 [UI를 사용하여 [!DNL Demandbase] 계정을 Experience Platform에 연결]로 진행할 수 있습니다. 필수 구성 요소 설정을 완료했으면 [계정을 Experience Platform에 연결 [!DNL Demandbase] 에 대한 자습서를 읽고 통합을 시작하십시오.](../../tutorials/ui/create/data-partners/demandbase.md)
+필수 구성 요소 설정을 완료했으면 [Experience Platform에  [!DNL Demandbase] 계정 연결](../../tutorials/ui/create/data-partners/demandbase.md)에 대한 자습서를 읽고 통합을 시작하십시오.
 
 ## 자주 묻는 질문 {#faq}
 
