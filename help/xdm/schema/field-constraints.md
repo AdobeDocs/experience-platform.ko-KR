@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;홈;인기 주제;스키마;스키마;필드 그룹;필드 그룹;필드 그룹;필드 그룹;필드 그룹;데이터 유형;데이터 유형;데이터 유형;데이터 유형;스키마 디자인;데이터 유형;데이터 유형;데이터 유형;데이터 유형;스키마;스키마;스키마 디자인;스키마;맵;맵;
+keywords: Experience Platform;홈;인기 항목;스키마;스키마;필드 그룹;필드 그룹;필드 그룹;필드 그룹;데이터 유형;데이터 유형;데이터 유형;데이터 유형;스키마 디자인;데이터 유형;데이터 유형;데이터 유형;데이터 유형;스키마;스키마;스키마;스키마 디자인;맵;맵;
 solution: Experience Platform
 title: XDM 필드 유형 제한
 description: 매핑할 수 있는 다른 일련화 형식과 API에서 고유한 필드 유형을 정의하는 방법을 포함하여 XDM(Experience Data Model)의 필드 유형 제약 조건에 대한 참조입니다.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
+source-git-commit: ca8859c7b71d1b0aad30880ff066d2b4b33b0a35
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 1%
@@ -130,7 +130,7 @@ XDM은 JSON 스키마 위에 구축되므로 XDM 필드는 해당 유형을 정�
       <td>[!UICONTROL 부울]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{"type": "string"}</pre>
+{"type": "boolean"}</pre>
       </td>
       <td><code>true</code></td>
     </tr>
