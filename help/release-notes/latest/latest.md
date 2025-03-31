@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 릴리스 노트 2025년 3월
 description: Adobe Experience Platform의 2025년 3월 릴리스 정보.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 16056a35624b4a053e9f50acef0ec3f63254a065
+source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1250'
 ht-degree: 24%
 
 ---
@@ -19,6 +19,7 @@ Adobe Experience Platform의 기존 기능 및 설명서 업데이트:
 
    - [대시보드](#dashboards)
    - [대상](#destinations)
+   - [페더레이션된 대상자 구성](#federated-audience-composition)
    - [Segmentation Service](#segmentation-service)
    - [소스](#sources)
 
@@ -62,6 +63,10 @@ Experience Platform은 일일 스냅샷 중에 캡처된 조직 데이터에 대
 {style="table-layout:auto"}
 
 자세한 내용은 [대상 개요](../../destinations/home.md)를 참조하십시오.
+
+## 페더레이션된 대상자 구성 {#federated-audience-composition}
+
+Federated Audience Composition의 최신 업데이트에 대한 자세한 내용은 여기에서 [전용 릴리스 노트](https://experienceleague.adobe.com/ko/docs/federated-audience-composition/using/release-notes)를 읽어 보십시오.
 
 ## Segmentation Service {#segmentation-service}
 
