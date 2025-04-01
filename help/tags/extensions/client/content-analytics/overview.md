@@ -1,12 +1,10 @@
 ---
 title: Adobe Content Analytics 확장 개요
 description: Adobe Experience Platform의 Adobe Content Analytics 태그 확장 기능에 대해 알아봅니다.
-hide: true
-hidefromtoc: true
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 80bfaeb7fec229e77c83230a01b75a200cf37e29
+source-git-commit: 5f852b69b0eb0a5e6a9119f14eb9e1f51c8a2e33
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -78,7 +76,8 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 1. **[!UICONTROL 경험 포함]**&#x200B;을 사용하도록 설정합니다.
 1. 선택 사항입니다. 웹 사이트에서 콘텐츠가 렌더링되는 방식에 대한 매개 변수를 지정합니다. 매개 변수는 **[!UICONTROL 도메인 정규식]**&#x200B;과(와) **[!UICONTROL 쿼리 매개 변수]**&#x200B;의 0개 이상의 조합입니다.
    1. **[!UICONTROL 도메인 정규식]**(예: `^(?!.*\b(store|help|admin)\b)`)을 입력하십시오.
-   1. `outdoors, patio, kitchen`과(와) 같이 쉼표로 구분된 **[!UICONTROL 쿼리 매개 변수]** 목록을 지정하십시오.
+   1. **[!UICONTROL 쿼리 매개 변수]**&#x200B;의 쉼표로 구분된 목록을 지정하십시오(예: `outdoors, patio, kitchen`).
+![닫기](./assets/CrossSize300.svg)를 사용하여 개별 매개 변수를 삭제하거나 **[!UICONTROL 모두 지우기]**&#x200B;를 사용하여 모든 매개 변수를 삭제합니다.
 1. 도메인 정규식과 쿼리 매개 변수의 조합을 제거하려면 **[!UICONTROL 제거]**&#x200B;를 선택하십시오.
 1. 정규 표현식과 쿼리 매개 변수의 다른 조합을 추가하려면 **[!UICONTROL 정규 표현식 추가]**&#x200B;를 선택합니다.
 
