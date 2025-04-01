@@ -5,7 +5,7 @@ title: 임시 활성화 API를 통해 대상을 일괄 대상으로 활성화
 description: 이 문서에서는 활성화 전에 수행되는 세분화 작업을 포함하여 임시 활성화 API를 통해 대상을 활성화하기 위한 전체적인 워크플로를 보여 줍니다.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
+source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Beta 단계를 완료하면 이제 모든 Experience Platform 고객에게 [!DNL ad-hoc activation API]을(를) 일반적으로 사용할 수 있습니다(GA). GA 버전에서 API가 버전 2로 업그레이드되었습니다. API에 더 이상 내보내기 ID가 필요하지 않으므로 4단계([최신 대상 내보내기 작업 ID 가져오기](#segment-export-id))는 더 이상 필요하지 않습니다.
+>Beta 단계를 완료하면 이제 모든 Experience Platform 고객이 [!DNL ad-hoc activation API]을(를) GA(일반 출시)할 수 있습니다. GA 버전에서 API가 버전 2로 업그레이드되었습니다. API에 더 이상 내보내기 ID가 필요하지 않으므로 4단계([최신 대상 내보내기 작업 ID 가져오기](#segment-export-id))는 더 이상 필요하지 않습니다.
 >
 >자세한 내용은 이 자습서의 아래 [임시 활성화 작업 실행](#activation-job)을 참조하십시오.
 
@@ -30,13 +30,11 @@ ht-degree: 0%
 
 ![ad-hoc-activation](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
-
-
 ## 사용 사례 {#use-cases}
 
-### Flash 판매 또는 프로모션
+### 플래시 판매 또는 프로모션
 
-온라인 소매업체는 제한적인 플래시 세일을 준비하고 있으며 고객에게 빠른 공지로 알리기를 원합니다. 마케팅 팀은 Experience Platform 애드혹 활성화 API를 통해 온디맨드로 대상자를 내보내고 프로모션 이메일을 신속하게 고객 기반으로 전송할 수 있습니다.
+온라인 retailer은 제한된 플래시 세일을 준비하고 있으며 고객에게 짧은 시간에 알리기를 원합니다. 마케팅 팀은 Experience Platform 임시 활성화 API를 통해 온디맨드로 대상자를 내보내고 프로모션 이메일을 신속하게 고객 기반으로 전송할 수 있습니다.
 
 ### 최신 이벤트 또는 속보
 
@@ -63,24 +61,24 @@ Adobe Experience Platform은 예약된 세분화 작업을 24시간마다 한 �
 Adobe Experience Platform API를 호출하려면 먼저 다음 전제 조건을 충족하는지 확인하십시오.
 
 * Adobe Experience Platform에 액세스할 수 있는 조직 계정이 있습니다.
-* Experience Platform 계정에 Adobe Experience Platform API 제품 프로필에 대해 `developer` 및 `user` 역할이 활성화되어 있습니다. [Admin Console](../../access-control/home.md) 관리자에게 문의하여 계정에 대해 이러한 역할을 사용하도록 설정하십시오.
-* Adobe ID이 있습니다. Adobe ID이 없는 경우 [Adobe Developer Console](https://developer.adobe.com/console)(으)로 이동하여 새 계정을 만드십시오.
+* Experience Platform 계정에 Adobe Experience Platform API 제품 프로필에 대해 `developer` 및 `user` 역할이 활성화되어 있습니다. 계정에 대해 이러한 역할을 활성화하려면 [Admin Console](../../access-control/home.md) 관리자에게 문의하십시오.
+* Adobe ID이 있습니다. Adobe ID이 없는 경우 [Adobe Developer Console](https://developer.adobe.com/console)&#x200B;(으)로 이동하여 새 계정을 만드십시오.
 
 ## 2단계: 자격 증명 수집 {#credentials}
 
-Platform API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 필요한 각 헤더의 값이 제공됩니다.
+Platform API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 자습서를 완료하면 아래와 같이 모든 Experience Platform API 호출에서 필요한 각 헤더에 대한 값이 제공됩니다.
 
 * 인증: 전달자 `{ACCESS_TOKEN}`
 * x-api 키: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Experience Platform의 리소스는 특정 가상 샌드박스로 격리될 수 있습니다. Platform API에 대한 요청에서 작업이 수행될 샌드박스의 이름과 ID를 지정할 수 있습니다. 이러한 매개 변수는 선택 사항입니다.
+Experience Platform의 리소스는 특정 가상 샌드박스로 분리될 수 있습니다. Platform API에 대한 요청에서 작업이 수행될 샌드박스의 이름과 ID를 지정할 수 있습니다. 이러한 매개 변수는 선택 사항입니다.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하세요.
+>Experience Platform의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 미디어 유형 헤더가 필요합니다.
 
@@ -126,7 +124,7 @@ Adobe Experience Platform은 예약된 세분화 작업을 24시간마다 한 �
 
 >[!IMPORTANT]
 >
->다음 일회성 제한 사항에 유의하십시오. 임시 활성화 작업을 실행하기 전에 [3단계 - 플랫폼 UI에서 활성화 흐름 만들기](#activation-flow)에서 설정한 일정에 따라 대상이 처음 활성화된 순간부터 최소 20분이 경과되었는지 확인하십시오.
+>다음 1회 제한 사항에 유의하십시오. 임시 활성화 작업을 실행하기 전에 [3단계 - 플랫폼 UI에서 활성화 흐름 만들기](#activation-flow)에서 설정한 일정에 따라 대상이 처음 활성화된 순간부터 최소 1시간이 경과되었는지 확인하십시오.
 
 임시 활성화 작업을 실행하기 전에 대상에 대해 예약된 대상 내보내기 작업이 완료되었는지 확인하십시오. 활성화 흐름의 상태를 모니터링하는 방법에 대한 자세한 내용은 [대상 데이터 흐름 모니터링](../../dataflows/ui/monitor-destinations.md)을 참조하십시오. 예를 들어 활성화 데이터 흐름에서 **[!UICONTROL 처리 중]** 상태가 표시되면 임시 활성화 작업을 실행하여 전체 파일을 내보내기 전에 완료될 때까지 기다리십시오.
 

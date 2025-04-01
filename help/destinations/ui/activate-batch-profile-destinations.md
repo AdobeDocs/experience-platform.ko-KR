@@ -3,10 +3,10 @@ title: 프로필 내보내기 대상을 일괄 처리하도록 대상자 활성�
 type: Tutorial
 description: 배치 프로필 기반 대상으로 보내어 Adobe Experience Platform에 있는 대상자를 활성화하는 방법을 알아봅니다.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
+source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
 workflow-type: tm+mt
-source-wordcount: '4405'
-ht-degree: 12%
+source-wordcount: '4452'
+ht-degree: 11%
 
 ---
 
@@ -145,6 +145,10 @@ Experience Platform은 각 파일 내보내기에 대한 기본 일정을 자동
 고정된 시간에 활성화 작업을 실행하려면 **[!UICONTROL 예약됨]** 옵션을 사용하십시오. 이 옵션을 사용하면 Experience Platform 프로필 데이터를 매일 같은 시간에 내보낼 수 있습니다. 그러나 활성화 작업이 시작되기 전에 배치 세분화 작업이 완료되었는지 여부에 따라 내보내는 프로필이 최신 상태가 아닐 수 있습니다.
 
    ![일괄 처리 대상에 대한 활성화 흐름에서 예약된 옵션을 강조 표시하고 시간 선택기를 표시하는 이미지](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
+
+   >[!IMPORTANT]
+   >
+   >지난 24시간 내에 만들어지고 [일괄 처리 세분화](../../segmentation/methods/batch-segmentation.md)를 통해 평가된 대상을 매핑할 때 일별 내보내기 일정을 설정하여 빨라도 다음 날 시작하세요. 이렇게 하면 일일 일괄 처리 평가 작업이 먼저 실행되고 전체 대상 데이터를 내보내게 됩니다.
 
 3. 내보내기를 수행할 날짜 또는 간격을 선택하려면 **[!UICONTROL 날짜]** 선택기를 사용하십시오. 일별 내보내기의 경우 가장 좋은 방법은 다운스트림 플랫폼의 캠페인 기간에 맞춰 시작 및 종료 날짜를 설정하는 것입니다.
 

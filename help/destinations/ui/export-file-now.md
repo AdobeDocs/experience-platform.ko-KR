@@ -1,9 +1,9 @@
 ---
 title: Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내기
 type: Tutorial
-description: Experience Platform UI를 사용하여 주문형 파일을 일괄 처리 대상으로 내보내는 방법을 알아봅니다.
+description: Experience Platform UI를 사용하여 주문형 파일을 배치 대상으로 내보내는 방법을 알아봅니다.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: d3bd76f5b36b6a6afcb67fe923eb8e4f3d7a9415
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 9%
@@ -28,7 +28,7 @@ ht-degree: 9%
 
 **[!UICONTROL 지금 파일 내보내기]** 컨트롤을 사용하면 이전에 예약된 대상자의 현재 내보내기 일정을 중단하지 않고 전체 파일을 내보낼 수 있습니다. 이 내보내기는 이전에 예약한 내보내기 외에 추가로 수행되며 대상자의 내보내기 빈도는 변경되지 않습니다. 파일 내보내기가 즉시 트리거되어 Experience Platform 세분화 실행에서 최신 결과를 선택합니다.
 
-이 용도로 Experience Platform API를 사용할 수도 있습니다. 임시 활성화 API를 통해 [주문형 대상을 일괄 대상으로 활성화](/help/destinations/api/ad-hoc-activation-api.md)하는 방법을 읽어 보십시오.
+이러한 목적으로 Experience Platform API를 사용할 수도 있습니다. 임시 활성화 API를 통해 [주문형 대상을 일괄 대상으로 활성화](/help/destinations/api/ad-hoc-activation-api.md)하는 방법을 읽어 보십시오.
 
 ## 전제 조건 {#prerequisites}
 
@@ -63,7 +63,7 @@ ht-degree: 9%
 **[!UICONTROL 지금 파일 내보내기]** 컨트롤을 사용할 때는 다음 사항을 고려해야 합니다.
 
 * **[!UICONTROL 지금 파일 내보내기]**&#x200B;는 배치 활성화 데이터 흐름의 일정이 현재 날짜와 겹치는 대상자에 대해서만 작동합니다. 여기에는 종료 날짜(**[!UICONTROL Once]**&#x200B;의 내보내기 빈도)가 없거나 종료 날짜가 아직 지나지 않은 일정이 있는 대상자가 포함됩니다.
-* 기존 데이터 흐름에 대상을 추가할 때 **[!UICONTROL 지금 파일 내보내기]** 컨트롤을 사용할 때까지 최소 15분 정도 기다리십시오.
+* 기존 데이터 흐름에 대상을 추가할 때 **[!UICONTROL 지금 파일 내보내기]** 컨트롤을 사용하기 전에 **1시간**&#x200B;이상 기다리십시오.
 * 대상자의 병합 정책을 변경하거나 새 병합 정책을 사용하는 대상자를 만드는 경우 **[!UICONTROL 지금 파일 내보내기]** 컨트롤을 사용할 때까지 24시간 대기하십시오.
 
 ## UI 오류 메시지 {#ui-error-messages}
