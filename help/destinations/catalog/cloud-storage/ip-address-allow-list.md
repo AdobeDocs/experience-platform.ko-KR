@@ -3,9 +3,9 @@ title: 파일 기반 클라우드 스토리지 대상에 대한 IP 주소 허용
 type: Documentation
 description: 이 페이지에서는 Experience Platform에서 클라우드 스토리지 대상으로 데이터를 안전하게 내보내기 위해 허용 목록에 추가할 수 있는 IP 범위를 제공합니다.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
+source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '299'
 ht-degree: 1%
 
 ---
@@ -40,14 +40,14 @@ Adobe에서는 클라우드 스토리지 대상 연결을 사용하기 전에 �
 ## 모든 고객에 필요 {#all-customers}
 
 * `52.247.108.70`
-<!-- 
-## US customers running on AWS {#aws}
 
-The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
+## AWS에서 실행 중인 미국 고객 {#aws}
+
+아래 IP 범위는 Amazon Web Services(AWS)에서 실행 중인 Experience Platform 고객에게 적용됩니다. 자세한 내용은 [Experience Platform Multi-Cloud 개요](../../../landing/multi-cloud.md)를 참조하십시오.
 
 >[!NOTE]
 >
->This IP range is not supported for customers running on AWS who use file-based destinations to export data to Amazon S3. -->
+>이 IP 범위는 AWS에서 실행 중인 고객 중 파일 기반 대상을 사용하여 데이터를 Amazon S3로 내보내는 고객에게는 지원되지 않습니다.
 
 * `66.117.18.0/24`
 
