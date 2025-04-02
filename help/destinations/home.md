@@ -2,9 +2,9 @@
 title: 대상 개요
 description: 대상은 Adobe Experience Platform에서 데이터를 원활하게 활성화할 수 있도록 대상 플랫폼과 미리 빌드된 통합입니다. Adobe Experience Platform의 대상 을 사용하여 크로스 채널 마케팅 캠페인, 이메일 캠페인, 타겟팅 광고 및 기타 다양한 사용 사례에 대해 알려진 데이터와 알 수 없는 데이터를 활성화할 수 있습니다.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 6d97f132788a249e0bf5c293e34d9d529325f099
+source-git-commit: 8d57694ffe0ac962b988ebcf9f35fbb7bf816c04
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1359'
 ht-degree: 3%
 
 ---
@@ -45,13 +45,13 @@ Platform의 핵심 기능 중 하나는 자사 데이터를 수집하고 비즈�
 
 ## 대상 유형 및 범주 {#types-and-categories}
 
-Experience Platform을 사용하면 다양한 유형의 대상에 대한 데이터를 활성화하여 활성화 사용 사례를 충족할 수 있습니다. 대상은 API 기반 통합에서 파일 수신 시스템과의 통합, 프로필 조회 대상 등에 이르기까지 다양합니다. 사용 가능한 모든 대상에 대한 자세한 내용은 [대상 유형 및 범주 개요](./destination-types.md)를 참조하십시오.
+Experience Platform을 사용하면 다양한 유형의 대상에 데이터를 활성화하여 활성화 사용 사례를 충족할 수 있습니다. 대상은 API 기반 통합에서 파일 수신 시스템과의 통합, 프로필 조회 대상 등에 이르기까지 다양합니다. 사용 가능한 모든 대상에 대한 자세한 내용은 [대상 유형 및 범주 개요](./destination-types.md)를 참조하십시오.
 
 ## Adobe이 빌드한 대상 및 파트너가 빌드한 대상 {#adobe-and-partner-built-destinations}
 
-Experience Platform 대상 카탈로그의 일부 커넥터는 Adobe에서 빌드하고 유지 관리하는 반면, 다른 커넥터는 [Destination SDK](/help/destinations/destination-sdk/overview.md)을(를) 사용하여 파트너 회사에서 빌드하고 유지 관리합니다. 파트너가 대상을 만들고 유지 관리하는 경우 각 파트너가 빌드한 커넥터에 대한 설명서 페이지 맨 위의 참고 사항이 호출됩니다. 예를 들어 [Amazon S3 커넥터](/help/destinations/catalog/cloud-storage/amazon-s3.md)는 Adobe에서 만드는 반면 [TikTok 커넥터](/help/destinations/catalog/social/tiktok.md)는 TikTok 팀에서 만들고 유지 관리합니다.
+Experience Platform 대상 카탈로그의 일부 커넥터는 Adobe에서 빌드하고 유지 관리하는 반면, 다른 커넥터는 [Destination SDK](/help/destinations/destination-sdk/overview.md)을(를) 사용하여 파트너 회사에서 빌드하고 유지 관리합니다. 파트너가 대상을 만들고 유지 관리하는 경우 각 파트너가 빌드한 커넥터에 대한 설명서 페이지 맨 위의 참고 사항이 호출됩니다. 예를 들어 [Amazon S3 커넥터](/help/destinations/catalog/cloud-storage/amazon-s3.md)는 Adobe에서 만들고 [TikTok 커넥터](/help/destinations/catalog/social/tiktok.md)는 TikTok 팀에서 만들고 유지 관리합니다.
 
-파트너가 작성 및 유지 관리하는 커넥터의 경우 파트너 팀이 커넥터 문제를 해결해야 할 수 있습니다(설명서 페이지의 메모에 제공된 연락 방법). Adobe 작성 및 유지 관리되는 커넥터와 관련된 문제는 Adobe 담당자 또는 고객 지원 센터에 문의하십시오.
+파트너가 작성 및 유지 관리하는 커넥터의 경우 파트너 팀이 커넥터 문제를 해결해야 할 수 있습니다(설명서 페이지의 메모에 제공된 연락 방법). Adobe 작성 및 유지 관리 커넥터와 관련된 문제는 Adobe 담당자 또는 고객 지원 센터에 문의하십시오.
 
 ## 대상 및 액세스 제어 {#access-controls}
 
@@ -84,13 +84,21 @@ Adobe Experience Platform의 속성 기반 액세스 제어를 통해 관리자�
 
 대상이 특성 기반 액세스 컨트롤로 작동하는 방법에 대한 자세한 내용은 [특성 기반 액세스 컨트롤 개요](../access-control/abac/overview.md#destinations)를 참조하십시오.
 
+## 대상에서 프로필 제거 {#profile-removal}
+
+대상에 대해 활성화된 대상자에서 프로필이 제거되면 해당 프로필도 대상 플랫폼의 해당 대상자에서 제거됩니다. 예를 들어 이전에 LinkedIn으로 활성화된 대상에서 프로필이 제거되면 연결된 [!UICONTROL LinkedIn과 일치하는 대상]에서 해당 프로필이 제거됩니다.
+
+대상에서 프로필 제거(세그먼테이션 해제라고도 함)는 세그먼테이션과 동일한 케이던스에서 발생합니다. Experience Platform의 대상에서 프로필이 제거되자마자 대상에 대해 다음으로 예약된 데이터 흐름은 해당 변경 사항을 반영하고 대상 대상에서 프로필을 제거합니다.
+
+대상 플랫폼에서 프로필 제거가 적용되는 실제 속도는 대상의 수집 및 처리 행동에 따라 달라질 수 있습니다.
+
 ## 대상 모니터링 {#destinations-monitoring}
 
 대상에 대한 연결을 설정하고 활성화 워크플로를 완료한 후 수신 시스템으로 데이터 내보내기를 모니터링할 수 있습니다. 자세한 내용은 UI의 대상에 대한 데이터 흐름 모니터링에 대한 [안내서](/help/dataflows/ui/monitor-destinations.md)를 참조하십시오.
 
 ![대상 모니터링 페이지 예입니다.](./assets/overview/monitoring-page-example.png)
 
-데이터가 대상으로 성공적으로 전달되고 있는지 확인할 수도 있습니다. 카탈로그의 대부분의 대상 문서 페이지에는 Experience Platform에서 데이터를 성공적으로 가져왔음을 대상 플랫폼에서 확인하는 방법을 나타내는 *데이터 내보내기 유효성 검사*&#x200B;이(가) 있습니다. [Amazon 광고 대상](/help/destinations/catalog/advertising/amazon-ads.md#exported-data)에 대한 이 섹션의 예를 봅니다.
+데이터가 대상으로 성공적으로 전달되고 있는지 확인할 수도 있습니다. 카탈로그의 대부분의 대상 설명서 페이지에는 Experience Platform에서 데이터를 성공적으로 가져왔음을 대상 플랫폼에서 확인하는 방법을 나타내는 *데이터 내보내기 유효성 검사*&#x200B;이(가) 있습니다. [Amazon 광고 대상](/help/destinations/catalog/advertising/amazon-ads.md#exported-data)에 대한 이 섹션의 예를 봅니다.
 
 ## 대상으로 데이터 활성화에 대한 데이터 거버넌스 제한 사항 {#data-governance}
 
@@ -120,8 +128,8 @@ Adobe Experience Platform의 속성 기반 액세스 제어를 통해 관리자�
 
 Beta(&quot;Beta&quot;)로 레이블이 지정된 대상을 사용함으로써, 귀하는 이로써 Beta이 어떠한 종류의 보증도 없이 ***&quot;있는 그대로&quot; 제공된다는 것을 인정합니다***.
 
-Adobe은 Beta을 유지, 수정, 업데이트, 변경, 수정 또는 지원할 의무가 없습니다. 이러한 Beta 및/또는 동봉된 자료의 올바른 기능이나 성능에 어떤 식으로든 의존하지 말고 정보 자료를 사용하는 것이 좋습니다. Beta은 Adobe 기밀 정보로 간주됩니다.
+Adobe은 Beta을 유지, 수정, 업데이트, 변경, 수정 또는 지원할 의무가 없습니다. 이러한 Beta 및/또는 동봉된 자료의 올바른 기능이나 성능에 어떤 식으로든 의존하지 말고 정보 자료를 사용하는 것이 좋습니다. Beta은 Adobe의 기밀 정보로 간주됩니다.
 
-사용자가 Adobe에 제공한 &quot;피드백&quot;(Beta 사용 중 발생하는 문제나 결함, 제안, 개선 사항 및 권장 사항을 포함하지만 이에 국한되지 않는 Beta 관련 정보)은 이에 따라 해당 피드백에 대한 모든 권한, 제목 및 관심을 포함하는 Adobe에 할당됩니다.
+귀하가 Adobe에 제공한 &quot;피드백&quot;(Beta 사용 중 발생하는 문제 또는 결함, 제안, 개선 사항 및 권장 사항을 포함하되 이에 제한되지 않는 Beta 관련 정보)은 해당 피드백에 대한 모든 권한, 제목 및 관심을 포함하여 Adobe에 할당됩니다.
 
 진행 중 피드백을 제출하거나 지원 티켓을 만들어 제안을 공유하거나 버그를 보고하면 기능 개선 사항을 확인할 수 있습니다.
