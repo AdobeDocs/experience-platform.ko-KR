@@ -1,12 +1,12 @@
 ---
 keywords: 스트리밍; HTTP 대상
 title: HTTP API 연결
-description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 서드파티 HTTP 끝점으로 전송하여 자체 분석을 실행하거나 Experience Platform 외부로 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
+description: Adobe Experience Platform의 HTTP API 대상을 사용하여 프로필 데이터를 서드파티 HTTP 끝점으로 전송하여 자체 분석을 실행하거나 Experience Platform에서 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: fffeb2221c4e25bae8386419de1646c89aa93a06
+source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
 workflow-type: tm+mt
-source-wordcount: '2664'
+source-wordcount: '2701'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
-> 이 대상은 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
+> 이 대상은 [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 고객에게만 제공됩니다.
 
 HTTP API 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데 도움이 되는 [!DNL Adobe Experience Platform] 스트리밍 대상입니다.
 
@@ -25,7 +25,7 @@ HTTP API 대상은 프로필 데이터를 타사 HTTP 끝점으로 보내는 데
 
 ## 사용 사례 {#use-cases}
 
-HTTP API 대상을 사용하면 XDM 프로필 데이터 및 대상을 일반 HTTP 종단점으로 내보낼 수 있습니다. 여기에서 자체 분석을 실행하거나 Experience Platform 외부로 내보낸 프로필 데이터에 대해 필요한 다른 작업을 수행할 수 있습니다.
+HTTP API 대상을 사용하면 XDM 프로필 데이터 및 대상을 일반 HTTP 종단점으로 내보낼 수 있습니다. 여기에서 자체 분석을 실행하거나 Experience Platform에서 내보낸 프로필 데이터에 대해 필요할 수 있는 다른 작업을 수행할 수 있습니다.
 
 HTTP 끝점은 고객의 자체 시스템 또는 타사 솔루션이 될 수 있습니다.
 
@@ -35,8 +35,8 @@ HTTP 끝점은 고객의 자체 시스템 또는 타사 솔루션이 될 수 있
 
 | 대상자 원본 | 지원됨 | 설명 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ 덧신 | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
-| 사용자 정의 업로드 | ✓ 덧신 | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
+| [!DNL Segmentation Service] | ✓ | Experience Platform [세그먼테이션 서비스](../../../segmentation/home.md)를 통해 생성된 대상입니다. |
+| 사용자 정의 업로드 | ✓ | CSV 파일에서 Experience Platform으로 대상 [가져옴](../../../segmentation/ui/audience-portal.md#import-audience). |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ HTTP 끝점은 고객의 자체 시스템 또는 타사 솔루션이 될 수 있
 
 ## 전제 조건 {#prerequisites}
 
-HTTP API 대상을 사용하여 데이터를 Experience Platform 밖으로 내보내려면 다음 사전 요구 사항을 충족해야 합니다.
+HTTP API 대상을 사용하여 Experience Platform에서 데이터를 내보내려면 다음 사전 요구 사항을 충족해야 합니다.
 
 * REST API를 지원하는 HTTP 끝점이 있어야 합니다.
 * HTTP 끝점은 Experience Platform 프로필 스키마를 지원해야 합니다. HTTP API 대상에서는 서드파티 페이로드 스키마로의 변환이 지원되지 않습니다. Experience Platform 출력 스키마의 예는 [내보낸 데이터](#exported-data) 섹션을 참조하십시오.
@@ -61,11 +61,11 @@ HTTP API 대상을 사용하여 데이터를 Experience Platform 밖으로 내�
 
 >[!TIP]
 >
-> [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md)을 사용하여 통합을 설정하고 Experience Platform 프로필 데이터를 HTTP 끝점으로 보낼 수도 있습니다.
+> [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md)을(를) 사용하여 통합을 설정하고 Experience Platform 프로필 데이터를 HTTP 끝점으로 보낼 수도 있습니다.
 
 ## mTLS 프로토콜 지원 및 인증서 {#mtls-protocol-support}
 
-[!DNL Mutual Transport Layer Security]([!DNL mTLS])을(를) 사용하여 HTTP API 대상 연결에 대한 아웃바운드 연결에서 보안을 강화할 수 있습니다.
+[!DNL Mutual Transport Layer Security]&#x200B;([!DNL mTLS])을(를) 사용하여 HTTP API 대상 연결에 대한 아웃바운드 연결에서 보안을 강화할 수 있습니다.
 
 [!DNL mTLS]은(는) 정보를 공유하는 두 당사자가 데이터를 공유하기 전에 자신의 소유자임을 확인하는 상호 인증을 위한 종단간 보안 방법입니다. [!DNL mTLS]은(는) [!DNL TLS]과(와) 비교하여 추가 단계를 포함합니다. 이 단계에서 서버는 클라이언트의 인증서를 요청하고 마지막에 확인합니다.
 
@@ -73,7 +73,7 @@ HTTP API 대상을 사용하여 데이터를 Experience Platform 밖으로 내�
 
 ### 인증서 다운로드 {#certificate}
 
-[!DNL Common Name](CN) 및 [!DNL Subject Alternative Names](SAN)을 확인하여 추가 타사 유효성 검사를 수행하려면 아래 인증서를 다운로드할 수 있습니다.
+[!DNL Common Name]&#x200B;(CN) 및 [!DNL Subject Alternative Names]&#x200B;(SAN)을 확인하여 추가 타사 유효성 검사를 수행하려면 아래 인증서를 다운로드할 수 있습니다.
 
 * [HTTP API mTLS 공개 인증서](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
 
@@ -81,7 +81,7 @@ MTLS 끝점에 GET 요청을 하여 공개 인증서를 안전하게 검색할 �
 
 ## 허용 목록에 추가하다 IP 주소 {#ip-address-allowlist}
 
-고객의 보안 및 규정 준수 요구 사항을 충족하기 위해 Experience Platform은 HTTP API 대상에 대해 허용 목록에 추가하다할 수 있는 정적 IP 목록을 제공합니다. 허용 목록에 추가하다 허용 목록에 추가하다 스트리밍 대상에 대한 [IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md)에서 IP에 대한 전체 목록을 참조하십시오.
+고객 보안 및 규정 준수 요구 사항을 충족하기 위해 Experience Platform에서는 HTTP API 대상에 대해 허용 목록에 추가하다할 수 있는 정적 IP 목록을 제공합니다. 허용 목록에 추가하다 허용 목록에 추가하다 스트리밍 대상에 대한 [IP 주소](/help/destinations/catalog/streaming/ip-address-allow-list.md)에서 IP에 대한 전체 목록을 참조하십시오.
 
 ## 지원되는 인증 유형 {#supported-authentication-types}
 
@@ -159,6 +159,10 @@ HTTP 끝점에 연결할 **[!UICONTROL OAuth 2 클라이언트 자격 증명]** 
 
 ![클라이언트 자격 증명 인증과 함께 OAuth 2를 사용하여 HTTP API 대상에 연결할 수 있는 UI 화면의 이미지](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
+>[!WARNING]
+> 
+>[!UICONTROL OAuth 2 클라이언트 자격 증명] 인증을 사용할 때 [!UICONTROL 액세스 토큰 URL]에는 최대 하나의 쿼리 매개 변수를 사용할 수 있습니다. 쿼리 매개 변수가 더 많은 [!UICONTROL 액세스 토큰 URL]을(를) 추가하면 끝점에 연결할 때 문제가 발생할 수 있습니다.
+
 * **[!UICONTROL 액세스 토큰 URL]**: 액세스 토큰을 발행하고 선택적으로 토큰을 새로 고치는 사용자 측의 URL입니다.
 * **[!UICONTROL 클라이언트 ID]**: 시스템이 Adobe Experience Platform에 할당하는 [!DNL client ID].
 * **[!UICONTROL 클라이언트 암호]**: 시스템이 Adobe Experience Platform에 할당하는 [!DNL client secret].
@@ -222,11 +226,11 @@ HTTP 끝점에 연결할 **[!UICONTROL OAuth 2 클라이언트 자격 증명]** 
 
 ### 대상 속성 {#attributes}
 
-Adobe [[!UICONTROL 특성 선택]](../../ui/activate-streaming-profile-destinations.md#select-attributes) 단계에서 [공용 구조체 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다.
+Adobe [[!UICONTROL 특성 선택]](../../ui/activate-streaming-profile-destinations.md#select-attributes) 단계에서는 [유니온 스키마](../../../profile/home.md#profile-fragments-and-union-schemas)에서 고유 식별자를 선택하는 것이 좋습니다. 대상으로 내보낼 고유 식별자 및 기타 XDM 필드를 선택합니다.
 
 ## 프로필 내보내기 동작 {#profile-export-behavior}
 
-Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 프로필에 대한 관련 업데이트가 발생한 경우에만 데이터를 API 끝점으로 내보내도록 HTTP API 대상에 대한 프로필 내보내기 동작을 최적화합니다. 프로필은 다음과 같은 경우 대상으로 내보내집니다.
+Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 프로필에 대한 관련 업데이트가 발생한 경우에만 데이터를 API 종단점으로 내보내도록 HTTP API 대상에 대한 프로필 내보내기 동작을 최적화합니다. 프로필은 다음과 같은 경우 대상으로 내보내집니다.
 
 * 프로필 업데이트는 대상에 매핑된 대상자 중 하나 이상에 대한 대상자 멤버십 변경에 따라 결정되었습니다. 예를 들어 프로필이 대상에 매핑된 대상자 중 하나에 대해 자격이 있거나 대상에 매핑된 대상자 중 하나를 종료했습니다.
 * 프로필 업데이트는 [ID 맵](/help/xdm/field-groups/profile/identitymap.md)의 변경 내용으로 결정됩니다. 예를 들어 대상에 매핑된 대상자 중 하나에 대해 이미 자격이 있는 프로필이 ID 맵 특성에 새 ID를 추가했습니다.
@@ -242,7 +246,7 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 | 대상 내보내기를 결정하는 사항 | 대상 내보내기에 포함된 사항 |
 |---------|----------|
-| <ul><li>매핑된 속성 및 대상은 대상 내보내기에 대한 큐 역할을 합니다. 즉, 매핑된 대상이 상태를 `null`에서 `realized`(으)로 또는 `realized`에서 `exiting`(으)로 변경하거나 매핑된 특성을 업데이트하면 대상 내보내기가 시작됩니다.</li><li>ID는 현재 HTTP API 대상에 매핑될 수 없으므로 주어진 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>`segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 대상이 포함되어 있습니다. 이 경우 자격 또는 대상 종료 이벤트 후 프로필의 상태가 변경되었습니다. 프로필이 자격을 갖춘 매핑되지 않은 다른 대상자가 활성화 데이터 흐름에서 매핑된 대상자와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 대상 내보내기의 일부가 될 수 있습니다. </li><li>`identityMap` 개체의 모든 ID도 포함됩니다. 현재 Experience Platform은 HTTP API 대상에서 ID 매핑을 지원하지 않습니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
+| <ul><li>매핑된 속성 및 대상은 대상 내보내기에 대한 큐 역할을 합니다. 즉, 매핑된 대상이 상태를 `null`에서 `realized`(으)로 또는 `realized`에서 `exiting`(으)로 변경하거나 매핑된 특성을 업데이트하면 대상 내보내기가 시작됩니다.</li><li>ID는 현재 HTTP API 대상에 매핑될 수 없으므로 주어진 프로필의 ID를 변경하면 대상 내보내기도 결정됩니다.</li><li>속성에 대한 변경 사항은 동일한 값인지 여부에 관계없이 속성에 대한 모든 업데이트로 정의됩니다. 즉, 값 자체가 변경되지 않았더라도 속성에 대한 덮어쓰기를 변경 사항으로 간주합니다.</li></ul> | <ul><li>`segmentMembership` 개체에는 활성화 데이터 흐름에서 매핑된 대상이 포함되어 있습니다. 이 경우 자격 또는 대상 종료 이벤트 후 프로필의 상태가 변경되었습니다. 프로필이 자격을 갖춘 매핑되지 않은 다른 대상자가 활성화 데이터 흐름에서 매핑된 대상자와 동일한 [병합 정책](/help/profile/merge-policies/overview.md)에 속하는 경우 대상 내보내기의 일부가 될 수 있습니다. </li><li>`identityMap` 개체의 모든 ID도 포함됩니다. 현재 Experience Platform에서는 HTTP API 대상에서 ID 매핑을 지원하지 않습니다.</li><li>매핑된 속성만 대상 내보내기에 포함됩니다.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -256,7 +260,7 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 ## 내역 데이터 채우기 {#historical-data-backfill}
 
-기존 대상에 새 대상을 추가하거나 새 대상을 만들고 대상에 대상을 매핑하면 Experience Platform은 이전 대상 자격 데이터를 대상에 내보냅니다. 대상에 대상을 추가하기 전에 대상 *이전*&#x200B;에 대해 자격이 있는 프로필은 약 1시간 내에 대상으로 내보냅니다.
+기존 대상에 새 대상을 추가하거나 새 대상을 만들고 대상에 대상을 매핑하면 Experience Platform에서 이전 대상 자격 데이터를 대상으로 내보냅니다. 대상에 대상을 추가하기 전에 대상 *이전*&#x200B;에 대해 자격이 있는 프로필은 약 1시간 내에 대상으로 내보냅니다.
 
 ## 내보낸 데이터 {#exported-data}
 
@@ -358,6 +362,6 @@ Experience Platform은 대상 자격 또는 기타 중요한 이벤트 후에 �
 
 ## 제한 및 재시도 정책 {#limits-retry-policy}
 
-시간의 95%에서 Experience Platform은 HTTP 대상에 대한 각 데이터 흐름의 초당 요청 수가 10,000개 미만인 상태로 성공적으로 전송된 메시지에 대해 10분 미만의 처리량 지연 시간을 제공하려고 합니다.
+그 중 95% 동안 Experience Platform은 HTTP 대상에 대한 각 데이터 흐름의 초당 요청 수가 10,000개 미만인 상태로 성공적으로 전송된 메시지에 대해 10분 미만의 처리량 지연 시간을 제공하려고 합니다.
 
-HTTP API 대상에 대한 요청이 실패한 경우 Experience Platform은 실패한 요청을 저장하고 두 번 다시 시도하여 요청을 엔드포인트에 보냅니다.
+HTTP API 대상에 대한 요청이 실패한 경우 Experience Platform은 실패한 요청을 저장하고 두 번 재시도하여 요청을 엔드포인트에 전송합니다.
