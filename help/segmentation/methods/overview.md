@@ -2,9 +2,9 @@
 title: 대상자 평가 방법
 description: Adobe Experience Platform에서 사용할 수 있는 다양한 유형의 평가 방법에 대해 알아봅니다.
 exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '242'
 ht-degree: 4%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform은 프로필을 대상자로 세그먼트화하는 다
 
 ## 스트리밍 세분화
 
-스트리밍 세그멘테이션은 데이터 풍부성에 초점을 맞추면서 거의 실시간으로 대상을 평가하는 데 사용할 수 있는 세그멘테이션 평가 방법입니다. 스트리밍 세분화를 사용하여 스트리밍 데이터가 플랫폼에 들어올 때 데이터를 빠르게 세분화할 수 있습니다.
+스트리밍 세그멘테이션은 데이터 풍부성에 초점을 맞추면서 거의 실시간으로 대상을 평가하는 데 사용할 수 있는 세그멘테이션 평가 방법입니다. 스트리밍 세그먼테이션을 사용하여 Experience Platform에 도착하는 스트리밍 데이터를 빠르게 세그먼트화할 수 있습니다.
 
 스트리밍 세분화에 대한 자세한 내용은 [스트리밍 세분화 개요](./streaming-segmentation.md)를 참조하세요.
 

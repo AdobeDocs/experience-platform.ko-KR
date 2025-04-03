@@ -3,9 +3,9 @@ title: 잠재 고객
 description: 타사 정보를 사용하여 알 수 없는 고객을 타깃팅하기 위해 잠재 고객을 만들고 사용하는 방법을 알아봅니다.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '393'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,7 @@ Audience Portal 이 표시되고 조직에 대한 모든 Prospect Audiences 목�
 
 ## 제안된 사용 사례 {#use-cases}
 
-Experience Platform에서 Prospect Audiences 기능을 다른 Platform 기능과 함께 사용하는 방법에 대해 알아보려면 다음 사용 사례 설명서를 참조하십시오.
+Experience Platform에서 Prospect Audiences 기능을 다른 Experience Platform 기능과 함께 사용하는 방법을 알아보려면 다음 사용 사례 설명서를 참조하십시오.
 
 - [전망 기능을 통해 신규 고객 참여 및 확보](../../rtcdp/partner-data/prospecting.md)
 

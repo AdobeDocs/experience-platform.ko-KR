@@ -1,11 +1,11 @@
 ---
 title: 세그먼테이션 서비스 API 안내서
-description: 개발자는 세그멘테이션 서비스 API를 사용하여 Adobe Experience Platform의 세그멘테이션 작업을 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아보십시오.
+description: 개발자는 세그멘테이션 서비스 API를 사용하여 Adobe Experience Platform의 세그멘테이션 작업을 프로그래밍 방식으로 관리할 수 있습니다. 이 안내서를 따라 API를 사용하여 주요 작업을 수행하는 방법에 대해 알아봅니다.
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '557'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platform [!DNL Segmentation Service]을(를) 사용하면 [!DNL
 
 ## 대상자
 
-대상자는 유사한 행동 및/또는 특성을 공유하는 사람들의 컬렉션입니다. Platform을 사용하거나 외부 소스에서 생성할 수 있습니다. `/audiences` 끝점을 사용하여 모든 대상을 검색하거나, 새 대상을 만들거나, 특정 대상의 세부 정보를 검색하거나, 특정 대상을 업데이트하거나, 특정 대상을 삭제할 수 있습니다.
+대상자는 유사한 행동 및/또는 특성을 공유하는 사람들의 컬렉션입니다. Experience Platform을 사용하거나 외부 소스에서 이러한 매개 변수를 생성할 수 있습니다. `/audiences` 끝점을 사용하여 모든 대상을 검색하거나, 새 대상을 만들거나, 특정 대상의 세부 정보를 검색하거나, 특정 대상을 업데이트하거나, 특정 대상을 삭제할 수 있습니다.
 
 이 끝점 사용에 대한 자세한 내용은 [대상 끝점 안내서](./audiences.md)를 참조하십시오.
 
@@ -62,4 +62,4 @@ Adobe Experience Platform [!DNL Segmentation Service]을(를) 사용하면 [!DNL
 
 ## 다음 단계
 
-[!DNL Segmentation Service] API를 시작하려면 다양한 끝점 안내서에서 서비스의 다양한 끝점을 호출하는 방법에 대한 자세한 단계를 검토하십시오. [!DNL Platform] UI를 사용하여 세그먼트를 사용하는 방법에 대한 자세한 내용은 [세그먼테이션 사용 안내서](../ui/overview.md)를 참조하세요.
+[!DNL Segmentation Service] API를 시작하려면 다양한 끝점 안내서에서 서비스의 다양한 끝점을 호출하는 방법에 대한 자세한 단계를 검토하십시오. [!DNL Experience Platform] UI를 사용하여 세그먼트를 사용하는 방법에 대한 자세한 내용은 [세그먼테이션 사용 안내서](../ui/overview.md)를 참조하세요.

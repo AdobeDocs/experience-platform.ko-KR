@@ -4,9 +4,9 @@ description: 계정 대상자를 만들고 사용하여 다운스트림 대상�
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P 버전" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1495'
 ht-degree: 21%
 
 ---
@@ -53,7 +53,7 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 
 ![계정 대상자 찾아보기 페이지에서 [!UICONTROL 대상자 만들기] 단추가 강조 표시됩니다.](../images/types/account/select-create-audience.png)
 
-세그먼트 빌더 가 나타납니다. 계정 속성 및 대상은 왼쪽 탐색 모음에 표시됩니다. [!UICONTROL 특성] 탭에서 플랫폼에서 만든 특성과 사용자 지정 특성을 모두 추가할 수 있습니다.
+세그먼트 빌더 가 나타납니다. 계정 속성 및 대상은 왼쪽 탐색 모음에 표시됩니다. [!UICONTROL 특성] 탭에서 Experience Platform에서 만든 특성과 사용자 지정 특성을 모두 추가할 수 있습니다.
 
 ![세그먼트 빌더가 표시됩니다. 특성과 대상만 표시됩니다.](../images/types/account/segment-builder.png)
 
@@ -116,7 +116,7 @@ Adobe Experience Platform을 사용하면 계정 세분화를 통해 사용자 �
 
 ## 다음 단계 {#next-steps}
 
-이제 이 안내서를 읽고 Adobe Experience Platform에서 계정 대상을 만들고 사용하는 방법을 더 잘 이해할 수 있습니다. 플랫폼에서 다른 유형의 대상을 사용하는 방법에 대해 알아보려면 [대상 유형 개요](./overview.md)를 읽어 보십시오.
+이제 이 안내서를 읽고 Adobe Experience Platform에서 계정 대상을 만들고 사용하는 방법을 더 잘 이해할 수 있습니다. Experience Platform에서 다른 유형의 대상을 사용하는 방법에 대해 알아보려면 [대상 유형 개요](./overview.md)를 읽어 보십시오.
 
 ## 부록 {#appendix}
 

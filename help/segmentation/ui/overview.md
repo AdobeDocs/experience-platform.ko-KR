@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼테이션 서비스 UI 안내서
 description: Adobe Experience Platform UI에서 대상 및 세그먼트 정의를 만들고 관리하는 방법을 알아봅니다.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1046'
 ht-degree: 2%
 
 ---
@@ -20,12 +20,12 @@ ht-degree: 2%
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service]을(를) 사용하면 개인(예: 고객, 잠재 고객, 사용자 또는 조직)과 관련된 [!DNL Experience Platform]에 저장된 데이터를 더 작은 그룹으로 분할할 수 있습니다.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
-- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): [!DNL Platform]&#x200B;(으)로 수집되는 서로 다른 데이터 소스의 ID를 연결하여 고객 프로필을 만들 수 있습니다.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다. 세그먼테이션을 최대한 활용하려면 [데이터 모델링 모범 사례](../../xdm/schema/best-practices.md)에 따라 데이터가 프로필 및 이벤트로 수집되는지 확인하십시오.
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): [!DNL Experience Platform]&#x200B;(으)로 수집되는 서로 다른 데이터 소스의 ID를 연결하여 고객 프로필을 만들 수 있습니다.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다. 세그먼테이션을 최대한 활용하려면 [데이터 모델링 모범 사례](../../xdm/schema/best-practices.md)에 따라 데이터가 프로필 및 이벤트로 수집되는지 확인하십시오.
 
 또한 이 문서에서 사용되는 다음 주요 용어를 이해하고 그 차이점을 이해해야 합니다.
 
-- **대상**: 유사한 비헤이비어 및/또는 특성을 공유하는 사람들의 컬렉션입니다. 이 인물 컬렉션은 세그먼트 정의(플랫폼 생성 대상), 대상자 구성을 사용하여 Adobe Experience Platform에서 생성하거나, 사용자 지정 업로드(외부 생성 대상)와 같은 외부 소스에서 생성할 수 있습니다.
+- **대상**: 유사한 비헤이비어 및/또는 특성을 공유하는 사람들의 컬렉션입니다. 이 인물 컬렉션은 세그먼트 정의(Experience-Platform 생성 대상), 대상 구성을 사용하여 Adobe Experience Platform에서 생성하거나, 사용자 지정 업로드(외부 생성 대상)와 같은 외부 소스에서 생성할 수 있습니다.
 - **세그먼트 정의**: Adobe Experience Platform에서 대상 대상의 주요 특성 또는 동작을 설명하는 데 사용하는 규칙입니다.
 - **세그먼트**: 프로필을 대상자로 분리하는 작업입니다.
 
@@ -35,7 +35,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 대상]**&#x200B;을
 
 >[!NOTE]
 >
->Platform을 처음 사용하는 조직에 아직 활성 프로필 데이터 세트 또는 병합 정책을 만들지 않은 경우 [!UICONTROL 대상] 대시보드가 표시되지 않습니다. 대신 [!UICONTROL 개요] 탭에 대상자를 시작하는 데 도움이 되는 링크와 설명서가 표시됩니다.
+>조직이 Experience Platform을 처음 사용하고 아직 활성 프로필 데이터 세트 또는 병합 정책을 만들지 않은 경우 [!UICONTROL 대상] 대시보드가 표시되지 않습니다. 대신 [!UICONTROL 개요] 탭에 대상자를 시작하는 데 도움이 되는 링크와 설명서가 표시됩니다.
 
 ### [!UICONTROL 대상자] 대시보드 {#segments-dashboard}
 
@@ -49,7 +49,7 @@ Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 대상]**&#x200B;을
 
 대상 포털을 보려면 **[!UICONTROL 찾아보기]** 탭을 선택하십시오. Audience Portal은 조직 및 샌드박스에 속하는 모든 Audiences 목록을 제공하며 프로필 수, 원본, 생성 날짜, 마지막 수정 날짜, 태그 및 분류와 같은 세부 정보를 포함합니다.
 
-또한 대상 포털을 사용하면 세그먼트 빌더 또는 대상 구성을 사용하여 새 대상을 만들 수 있을 뿐만 아니라 외부에서 생성된 대상을 Platform으로 가져올 수 있습니다.
+또한 대상 포털을 사용하면 세그먼트 빌더 또는 대상 구성을 사용하여 새 대상을 만들 수 있을 뿐만 아니라 외부에서 생성된 대상을 Experience Platform으로 가져올 수 있습니다.
 
 Audience Portal에 대한 자세한 내용은 [Audience Portal 개요](./audience-portal.md)를 참조하십시오.
 
@@ -98,7 +98,7 @@ Audience Portal에 대한 자세한 내용은 [Audience Portal 개요](./audienc
 
 ## 스트리밍 세분화 {#streaming-segmentation}
 
-스트리밍 세분화는 데이터 풍부성에 중점을 두고 거의 실시간으로 [!DNL Platform]에서 세분화를 수행하는 기능입니다. 스트리밍 세분화를 사용하면 데이터가 [!DNL Platform]&#x200B;(으)로 들어오는 동안 세분화 자격이 적용되므로 세분화 작업을 예약하고 실행할 필요가 줄어듭니다.
+스트리밍 세분화는 데이터 풍부성에 중점을 두고 거의 실시간으로 [!DNL Experience Platform]에서 세분화를 수행하는 기능입니다. 스트리밍 세분화를 사용하면 데이터가 [!DNL Experience Platform]&#x200B;(으)로 들어오는 동안 세분화 자격이 적용되므로 세분화 작업을 예약하고 실행할 필요가 줄어듭니다.
 
 스트리밍 세분화에 대한 자세한 내용은 [스트리밍 세분화 사용 안내서](../methods/streaming-segmentation.md)를 참조하세요.
 
@@ -108,7 +108,7 @@ Audience Portal에 대한 자세한 내용은 [Audience Portal 개요](./audienc
 
 ## 에지 세분화 {#edge-segmentation}
 
-Edge 세그멘테이션은 가장자리에 있는 Platform의 대상자를 즉시 평가하는 기능으로, 동일한 페이지와 다음 페이지 개인화 사용 사례를 활성화합니다.
+Edge 세그멘테이션은 에지에서 Experience Platform의 대상을 즉시 평가하는 기능으로, 동일한 페이지와 다음 페이지 개인화 사용 사례를 활성화합니다.
 
 에지 세분화에 대한 자세한 내용은 [에지 세분화 UI 안내서](../methods/edge-segmentation.md)를 참조하세요.
 

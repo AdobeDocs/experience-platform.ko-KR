@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세분화 서비스에서 지원되는 데이터 유형
 description: 모든 XDM(Experience Data Model) 데이터 유형은 Adobe 세그멘테이션 서비스 내에서 지원됩니다. 세그먼트 정의를 구성하는 규칙은 다음 데이터 유형에 의해 컨텍스트화됩니다.
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '480'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 3%
 
 ## 경험 이벤트
 
-[!DNL XDM ExperienceEvents]은(는) Adobe Experience Platform 스키마로서 [!DNL Platform] 통합 응용 프로그램과의 명시적 및 암시적 고객 상호 작용을 기록합니다. 여기에는 상호 작용이 발생한 시점의 시스템 스냅숏이 포함됩니다. [!DNL ExperienceEvents]은(는) 팩트 레코드입니다. 따라서 세그먼트 정의 중에 사용할 수 있는 데이터 소스입니다.
+[!DNL XDM ExperienceEvents]은(는) Adobe Experience Platform 스키마로서 Experience-Platform 통합 애플리케이션과의 명시적 및 암시적 고객 상호 작용을 기록하며, 상호 작용이 발생한 시점의 시스템 스냅숏을 포함합니다. [!DNL ExperienceEvents]은(는) 팩트 레코드입니다. 따라서 세그먼트 정의 중에 사용할 수 있는 데이터 소스입니다.
 
 아래 표에서 볼 수 있듯이 이벤트 데이터는 이벤트 행동을 개선하고 이벤트 속성을 지정하는 데 도움이 되는 키워드를 사용하여 렌더링됩니다.
 
@@ -52,11 +52,11 @@ ht-degree: 3%
 
 외부 대상은 새 세그먼트 정의에 해당 속성 규칙을 추가하여 새 세그먼트 정의의 구성 요소로 사용할 수도 있습니다.
 
-현재 Adobe Audience Manager만 외부 대상으로 지원되며 향후 추가 소스가 활성화됩니다. 플랫폼과 함께 Adobe Audience Manager 대상 사용에 대한 자세한 내용은 Adobe Audience Manager 설명서의 [대상 공유 안내서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)에서 확인할 수 있습니다.
+현재 Adobe Audience Manager만 외부 대상으로 지원되며 향후 추가 소스가 활성화됩니다. Experience Platform과 함께 Adobe Audience Manager 대상 사용에 대한 자세한 내용은 Adobe Audience Manager 설명서의 [대상 공유 안내서](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)에서 확인할 수 있습니다.
 
 ### 세그먼트 정의 공유
 
-플랫폼에서 만든 세그먼트 정의는 다른 [Adobe Experience Cloud 핵심 서비스](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ko-KR) 내에서 사용할 수 있습니다. 이 기능을 활성화하려면 솔루션 설계자나 컨설턴트에게 문의해야 합니다.
+Experience Platform에서 만든 세그먼트 정의는 다른 [Adobe Experience Cloud 핵심 서비스](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=ko-KR) 내에서 사용할 수 있습니다. 이 기능을 활성화하려면 솔루션 설계자나 컨설턴트에게 문의해야 합니다.
 
 ## 기타 데이터 유형
 

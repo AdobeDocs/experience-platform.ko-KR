@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 유사 대상
 description: 유사 대상을 사용하여 Adobe Experience Platform에서 새로운 고부가가치 대상을 타깃팅하는 방법에 대해 알아봅니다.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2193'
 ht-degree: 9%
 
 ---
@@ -33,7 +33,7 @@ Adobe Experience Platform에서 유사 대상은 각 대상에 대한 지능적�
 
 유사 인사이트를 사용하려면 기본 대상 **은(는) 다음 자격 조건을 충족해야 합니다**.
 
-- 기본 대상 **은(는) 플랫폼 내에 만들어야**&#x200B;합니다.
+- 기본 대상 **은(는) Experience Platform 내에 만들어야**&#x200B;합니다.
    - 외부에서 생성된 대상은 유사 인사이트에 적합하지 **않습니다**.
 - 기본 대상 **은(는) 기본 병합 정책을 사용해야 합니다**.
 - 기본 대상 **은(는) 데이터 거버넌스에 의해 제한된 필드를 사용하지 않아야**&#x200B;합니다.

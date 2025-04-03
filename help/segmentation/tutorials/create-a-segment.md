@@ -4,9 +4,9 @@ title: 세분화 서비스 API를 사용하여 세그먼트 정의 만들기
 type: Tutorial
 description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트 정의를 개발, 테스트, 미리 보기 및 저장하는 방법을 배우려면 이 자습서를 따르십시오.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1067'
 ht-degree: 6%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 6%
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 원본의 집계된 데이터를 기반으로 통합된 실시간 소비자 프로필을 제공합니다.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): 실시간 고객 프로필 데이터의 세그먼트 정의나 기타 외부 소스를 사용하여 대상자를 만들 수 있습니다.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다. 세그먼테이션을 최대한 활용하려면 [데이터 모델링 모범 사례](../../xdm/schema/best-practices.md)에 따라 데이터가 프로필 및 이벤트로 수집되는지 확인하십시오.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): [!DNL Experience Platform]에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다. 세그먼테이션을 최대한 활용하려면 [데이터 모델링 모범 사례](../../xdm/schema/best-practices.md)에 따라 데이터가 프로필 및 이벤트로 수집되는지 확인하십시오.
 
-다음 섹션에서는 [!DNL Platform] API를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Experience Platform] API를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
@@ -33,19 +33,19 @@ ht-degree: 6%
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - 인증: 전달자 `{ACCESS_TOKEN}`
 - x-api 키: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
+>[!DNL Experience Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -53,7 +53,7 @@ ht-degree: 6%
 
 ## 세그먼트 정의 개발
 
-세그먼테이션의 첫 번째 단계는 세그먼트 정의를 정의하는 것입니다. 세그먼트 정의는 [!DNL Profile Query Language](PQL)로 작성된 쿼리를 캡슐화하는 개체입니다. 이 개체를 PQL 술어라고도 합니다. PQL 조건자는 [!DNL Real-Time Customer Profile]에 제공한 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트 정의에 대한 규칙을 정의합니다. PQL 쿼리 작성에 대한 자세한 내용은 [PQL 안내서](../pql/overview.md)를 참조하십시오.
+세그먼테이션의 첫 번째 단계는 세그먼트 정의를 정의하는 것입니다. 세그먼트 정의는 [!DNL Profile Query Language]&#x200B;(PQL)로 작성된 쿼리를 캡슐화하는 개체입니다. 이 개체를 PQL 술어라고도 합니다. PQL 조건자는 [!DNL Real-Time Customer Profile]에 제공한 레코드 또는 시계열 데이터와 관련된 조건을 기반으로 세그먼트 정의에 대한 규칙을 정의합니다. PQL 쿼리 작성에 대한 자세한 내용은 [PQL 안내서](../pql/overview.md)를 참조하십시오.
 
 [!DNL Segmentation] API의 `/segment/definitions` 끝점에 대한 POST 요청을 수행하여 새 세그먼트 정의를 만들 수 있습니다. 다음 예제에서는 세그먼트 정의를 성공적으로 정의하는 데 필요한 정보를 포함하여 정의 요청의 형식을 지정하는 방법을 간략하게 설명합니다.
 
@@ -72,7 +72,7 @@ ht-degree: 6%
 
 ### 예상 생성 방법
 
-실시간 고객 프로필에 대해 활성화된 데이터가 Platform으로 수집되면 프로필 데이터 저장소 내에 저장됩니다. 프로필 스토어로 레코드를 수집하면 총 프로필 수가 5% 이상 증가하거나 감소하면 샘플링 작업이 트리거되어 수를 업데이트합니다. 프로필 수가 5% 이상 변경되지 않으면 샘플링 작업이 매주 자동으로 실행됩니다.
+실시간 고객 프로필에 대해 활성화된 데이터가 Experience Platform에 수집되면 프로필 데이터 저장소 내에 저장됩니다. 프로필 스토어로 레코드를 수집하면 총 프로필 수가 5% 이상 증가하거나 감소하면 샘플링 작업이 트리거되어 수를 업데이트합니다. 프로필 수가 5% 이상 변경되지 않으면 샘플링 작업이 매주 자동으로 실행됩니다.
 
 샘플이 트리거되는 방법은 사용 중인 수집 유형에 따라 다릅니다.
 

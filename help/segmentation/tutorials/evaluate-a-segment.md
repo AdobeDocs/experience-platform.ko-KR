@@ -4,7 +4,7 @@ title: 세그먼트 결과 평가 및 액세스
 type: Tutorial
 description: Adobe Experience Platform 세그멘테이션 서비스 API를 사용하여 세그먼트 정의를 평가하고 세그멘테이션 결과에 액세스하는 방법에 대해 알아보려면 이 자습서를 따르십시오.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '1594'
 ht-degree: 1%
@@ -22,23 +22,23 @@ ht-degree: 1%
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계한 데이터를 기반으로 통합 고객 프로필을 실시간으로 제공합니다.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): [!DNL Real-Time Customer Profile] 데이터에서 대상을 만들 수 있습니다.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 플랫폼이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다. 세그먼테이션을 최대한 활용하려면 [데이터 모델링 모범 사례](../../xdm/schema/best-practices.md)에 따라 데이터가 프로필 및 이벤트로 수집되는지 확인하십시오.
-- [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+- [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
 ### 필수 헤더
 
-또한 이 자습서에서는 [!DNL Platform]개의 API를 성공적으로 호출하려면 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+또한 이 자습서에서는 [!DNL Experience Platform]개의 API를 성공적으로 호출하려면 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - 인증: 전달자 `{ACCESS_TOKEN}`
 - x-api 키: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Platform] API에 대한 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Experience Platform] API에 대한 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
+>[!DNL Experience Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
 모든 POST, PUT 및 PATCH 요청에는 추가 헤더가 필요합니다.
 
@@ -68,7 +68,7 @@ ht-degree: 1%
 
 ### 일정 활성화
 
-기본적으로, 만들기(POST) 요청 본문에서 `state` 속성이 `active`(으)로 설정되어 있지 않으면 만들 때 일정이 비활성화됩니다. `/config/schedules` 끝점에 대한 PATCH 요청을 만들고 경로에 일정 ID를 포함하여 일정을 활성화(`state`을(를) `active`(으)로 설정)할 수 있습니다.
+기본적으로 POST(만들기) 요청 본문에서 `state` 속성이 `active`(으)로 설정되어 있지 않으면 만들 때 일정이 비활성화됩니다. `/config/schedules` 끝점에 PATCH 요청을 하고 경로에 일정 ID를 포함하여 일정을 활성화(`state`을(를) `active`(으)로 설정)할 수 있습니다.
 
 이 끝점을 사용하는 방법에 대한 자세한 내용은 [일정 끝점 안내서](../api/schedules.md#update-state)를 참조하십시오.
 
@@ -98,7 +98,7 @@ ht-degree: 1%
 
 ## 세그먼트 작업 결과 해석
 
-세그먼트 작업이 성공적으로 실행되면 세그먼트 정의에 포함된 각 프로필에 대해 `segmentMembership` 맵이 업데이트됩니다. `segmentMembership`은(는) [!DNL Platform]에 수집되는 미리 평가된 대상도 모두 저장하여 [!DNL Adobe Audience Manager]과(와) 같은 다른 솔루션과의 통합을 허용합니다.
+세그먼트 작업이 성공적으로 실행되면 세그먼트 정의에 포함된 각 프로필에 대해 `segmentMembership` 맵이 업데이트됩니다. `segmentMembership`은(는) [!DNL Experience Platform]에 수집되는 미리 평가된 대상도 모두 저장하여 [!DNL Adobe Audience Manager]과(와) 같은 다른 솔루션과의 통합을 허용합니다.
 
 다음 예제에서는 각 개별 프로필 레코드에 대해 `segmentMembership` 특성이 어떻게 표시되는지 보여 줍니다.
 
@@ -159,7 +159,7 @@ ht-degree: 1%
 
 대상을 내보낼 때는 먼저 대상 데이터 세트를 만들어야 합니다. 내보내기가 성공하도록 데이터 세트를 올바르게 구성해야 합니다.
 
-주요 고려 사항 중 하나는 데이터 집합의 기반이 되는 스키마(아래 API 샘플 요청의 `schemaRef.id`)입니다. 세그먼트 정의를 내보내려면 데이터 세트가 [!DNL XDM Individual Profile Union Schema](`https://ns.adobe.com/xdm/context/profile__union`)을(를) 기반으로 해야 합니다. 유니온 스키마는 동일한 클래스를 공유하는 스키마의 필드를 집계하는 시스템 생성 읽기 전용 스키마입니다(이 경우 XDM 개별 프로필 클래스). 유니온 보기 스키마에 대한 자세한 내용은 스키마 레지스트리 개발자 안내서](../../xdm/api/getting-started.md)의 [실시간 고객 프로필 섹션을 참조하십시오.
+주요 고려 사항 중 하나는 데이터 집합의 기반이 되는 스키마(아래 API 샘플 요청의 `schemaRef.id`)입니다. 세그먼트 정의를 내보내려면 데이터 세트가 [!DNL XDM Individual Profile Union Schema]&#x200B;(`https://ns.adobe.com/xdm/context/profile__union`)을(를) 기반으로 해야 합니다. 유니온 스키마는 동일한 클래스를 공유하는 스키마의 필드를 집계하는 시스템 생성 읽기 전용 스키마입니다(이 경우 XDM 개별 프로필 클래스). 유니온 보기 스키마에 대한 자세한 내용은 스키마 레지스트리 개발자 안내서](../../xdm/api/getting-started.md)의 [실시간 고객 프로필 섹션을 참조하십시오.
 
 필요한 데이터 세트를 만드는 방법에는 두 가지가 있습니다.
 
@@ -218,7 +218,7 @@ curl -X POST \
 
 ### 내보내기 진행 상황 모니터링
 
-내보내기 작업을 처리할 때 `/export/jobs` 끝점에 대한 GET 요청을 만들고 경로에 내보내기 작업의 `id`을(를) 포함하여 상태를 모니터링할 수 있습니다. `status` 필드가 &quot;SUCCEEDED&quot; 값을 반환하면 내보내기 작업이 완료됩니다.
+내보내기 작업을 처리할 때 `/export/jobs` 끝점에 GET 요청을 만들고 경로에 내보내기 작업의 `id`을(를) 포함하여 상태를 모니터링할 수 있습니다. `status` 필드가 &quot;SUCCEEDED&quot; 값을 반환하면 내보내기 작업이 완료됩니다.
 
 이 끝점 사용에 대한 자세한 내용은 [내보내기 작업 끝점 안내서](../api/export-jobs.md#get)에서 확인할 수 있습니다.
 

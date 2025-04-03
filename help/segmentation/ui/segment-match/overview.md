@@ -2,18 +2,18 @@
 keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼트 일치;세그먼트 일치
 solution: Experience Platform
 title: 세그먼트 일치 개요
-description: 세그먼트 일치 는 두 명 이상의 Platform 사용자가 안전하고 관리되며 개인 정보 보호 친화적인 방식으로 세그먼트 데이터를 교환할 수 있는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
+description: 세그먼트 일치 는 두 명 이상의 Experience Platform 사용자가 안전하고 관리되며 개인 정보 보호 친화적인 방식으로 세그먼트 데이터를 교환할 수 있는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1968'
-ht-degree: 2%
+source-wordcount: '1978'
+ht-degree: 3%
 
 ---
 
 # [!DNL Segment Match] 개요
 
-Adobe Experience Platform 세그먼트 일치는 두 명 이상의 Platform 사용자가 안전하고 관리되며 개인 정보 보호 친화적인 방식으로 세그먼트 데이터를 교환할 수 있는 세그먼트 공유 서비스입니다. [!DNL Segment Match]은(는) Platform 개인 정보 보호 표준과 해시된 이메일, 해시된 전화번호, IDFA 및 GAID와 같은 장치 식별자 등의 개인 식별자를 사용합니다.
+Adobe Experience Platform 세그먼트 일치 는 두 명 이상의 Experience Platform 사용자가 안전하고 통제되며 개인 정보 보호 방식으로 세그먼트 데이터를 교환할 수 있는 세그먼트 공유 서비스입니다. [!DNL Segment Match]은(는) Experience Platform 개인 정보 보호 표준과 해시된 이메일, 해시된 전화번호, IDFA 및 GAID와 같은 장치 식별자 등의 개인 식별자를 사용합니다.
 
 [!DNL Segment Match]을(를) 사용하여 다음을 수행할 수 있습니다.
 
@@ -44,8 +44,8 @@ ID 네임스페이스는 [Adobe Experience Platform ID 서비스](../../../ident
 
 | 네임스페이스 | 설명 |
 | --------- | ----------- |
-| 이메일(SHA256, 소문자) | 사전 해시된 이메일 주소를 위한 네임스페이스입니다. 이 네임스페이스에 제공된 값은 SHA256으로 해싱하기 전에 소문자로 변환됩니다. 전자 메일 주소가 정규화되기 전에 선행 및 후행 공백을 잘라내야 합니다. 이 설정은 소급하여 변경할 수 없습니다. 플랫폼은 [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support)과(와) [데이터 준비](../../../data-prep/functions.md#hashing)를 통해 데이터 수집 시 해싱을 지원하는 두 가지 방법을 제공합니다. |
-| 전화(SHA256_E.164) | SHA256과 E.164 형식을 모두 사용하여 해시해야 하는 원시 전화 번호를 나타내는 네임스페이스입니다. |
+| 이메일(SHA256, 소문자) | 사전 해시된 이메일 주소를 위한 네임스페이스입니다. 이 네임스페이스에 제공된 값은 SHA256으로 해싱하기 전에 소문자로 변환됩니다. 전자 메일 주소가 정규화되기 전에 선행 및 후행 공백을 잘라내야 합니다. 이 설정은 소급하여 변경할 수 없습니다. Experience Platform은 데이터 수집 시 해싱을 지원하는 두 가지 방법을 제공합니다([`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) 및 [데이터 준비](../../../data-prep/functions.md#hashing)). |
+| 전화(SHA256_E.164) | SHA256과 E.164 포맷을 모두 사용하여 해시해야 하는 원시 전화번호를 나타내는 네임스페이스입니다. |
 | ECID | ECID(Experience Cloud ID) 값을 나타내는 네임스페이스입니다. 이 네임스페이스는 &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; 별칭으로도 참조할 수 있습니다. 자세한 내용은 [ECID 개요](../../../identity-service/features/ecid.md)를 참조하십시오. |
 | Apple IDFA (광고주용 ID) | 광고주용 Apple ID를 나타내는 네임스페이스입니다. 자세한 내용은 [관심 기반 광고](https://support.apple.com/en-us/HT202074)에 대한 다음 문서를 참조하십시오. |
 | Google Ad ID | Google Advertising ID를 나타내는 네임스페이스입니다. 자세한 내용은 [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en)에 대한 다음 문서를 참조하십시오. |
@@ -64,7 +64,7 @@ ID 네임스페이스는 [Adobe Experience Platform ID 서비스](../../../ident
 
 마지막으로 설정해야 하는 전제 조건은 데이터 공유를 방지하기 위해 새 데이터 사용 레이블을 구성하는 것입니다. 데이터 사용 레이블을 통해 [!DNL Segment Match]에서 공유할 수 있는 데이터를 관리할 수 있습니다.
 
-데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트와 필드를 분류할 수 있습니다. 레이블은 언제든지 적용할 수 있으므로 데이터를 제어하는 방법을 유연하게 선택할 수 있습니다. 우수 사례는 데이터가 Experience Platform에 수집되는 즉시 또는 데이터를 플랫폼에서 사용할 수 있게 되는 즉시 데이터에 레이블을 지정하는 것을 장려합니다.
+데이터 사용 레이블을 사용하면 해당 데이터에 적용되는 사용 정책에 따라 데이터 세트와 필드를 분류할 수 있습니다. 레이블은 언제든지 적용할 수 있으므로 데이터를 제어하는 방법을 유연하게 선택할 수 있습니다. 우수 사례는 데이터가 Experience Platform에 수집되는 즉시 또는 데이터가 Experience Platform에서 사용할 수 있게 되는 즉시 데이터에 레이블을 지정하는 것을 권장합니다.
 
 [!DNL Segment Match]은(는) [!DNL Segment Match] 파트너 공유 프로세스에서 제외되도록 모든 데이터 세트 또는 특성에 수동으로 추가할 수 있는 [!DNL Segment Match]과(와) 관련된 계약 레이블인 C11 레이블을 사용합니다. C11 레이블은 [!DNL Segment Match] 프로세스에서 사용하지 않아야 하는 데이터를 나타냅니다. [!DNL Segment Match]에서 제외할 데이터 세트 및/또는 필드를 결정하고 그에 따라 C11 레이블을 추가하면 해당 레이블은 [!DNL Segment Match] 워크플로우에 의해 자동으로 적용됩니다. [!DNL Segment Match]은(는) [!UICONTROL 데이터 공유 제한] 핵심 정책을 자동으로 사용합니다. 데이터 세트에 데이터 사용 레이블을 적용하는 방법에 대한 특정 지침은 [UI에서 데이터 사용 레이블 관리](../../../data-governance/labels/user-guide.md)에 대한 자습서를 참조하십시오.
 
@@ -87,7 +87,7 @@ ID 데이터 및 네임스페이스, 동의 구성 및 데이터 사용 레이�
 
 ### 파트너 관리
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 세그먼트]**&#x200B;를 선택한 다음 상단 헤더에서 **[!UICONTROL 피드]**&#x200B;를 선택합니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 세그먼트]**&#x200B;를 선택한 다음 상단 헤더에서 **[!UICONTROL 피드]**&#x200B;를 선택합니다.
 
 ![segments-feed.png](./images/segments-feed.png)
 
@@ -95,7 +95,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 세그먼트]**&#x200B;를 선�
 
 ![manage-partners.png](./images/manage-partners.png)
 
-두 파트너 간의 연결은 사용자가 자신의 플랫폼 조직을 샌드박스 수준에서 연결해주는 셀프서비스 방식으로 작용하는 &#39;양방향 핸드셰이크&#39;다. 연결은 계약이 설정되었고 플랫폼이 귀하와 파트너 간의 서비스 공유를 용이하게 할 수 있음을 플랫폼에 알리는 데 필요합니다.
+두 파트너 간의 연결은 사용자가 Experience Platform 조직을 샌드박스 수준에서 함께 연결하는 셀프서비스 방식 역할을 하는 &#39;양방향 핸드셰이크&#39;다. 연결은 Experience Platform에 계약이 설정되었고 Experience Platform이 귀하와 파트너 간의 서비스 공유를 용이하게 할 수 있음을 알리는 데 필요합니다.
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 세그먼트]**&#x200B;를 선�
 >abstract="제한된 마케팅 사용 사례는 공유된 세그먼트가 데이터 거버넌스 제한에 따라 적절하게 사용되도록 지침을 파트너에게 제공할 수 있습니다."
 >text="Learn more in documentation"
 
-**피드**&#x200B;는 데이터(세그먼트) 그룹, 데이터를 노출하거나 사용하는 방법에 대한 규칙, 데이터가 파트너의 데이터와 일치하는 방식을 결정하는 구성입니다. 피드는 독립적으로 관리하고 [!DNL Segment Match]을(를) 통해 다른 Platform 사용자와 교환할 수 있습니다.
+**피드**&#x200B;는 데이터(세그먼트) 그룹, 데이터를 노출하거나 사용하는 방법에 대한 규칙, 데이터가 파트너의 데이터와 일치하는 방식을 결정하는 구성입니다. 피드는 독립적으로 관리하고 [!DNL Segment Match]을(를) 통해 다른 Experience Platform 사용자와 교환할 수 있습니다.
 
 새 피드를 만들려면 [!UICONTROL 피드] 대시보드에서 **[!UICONTROL 피드 만들기]**&#x200B;를 선택하십시오.
 
@@ -191,7 +191,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 세그먼트]**&#x200B;를 선�
 
 ### 수신 피드 수락
 
-들어오는 피드를 보려면 [!UICONTROL 피드] 페이지의 헤더에서 **[!UICONTROL 받음]**&#x200B;을 선택한 다음 목록에서 보려는 피드를 선택하십시오. 피드를 수락하려면 **[!UICONTROL 프로필에 대해 사용]**&#x200B;을 선택하고 [!UICONTROL 보류 중]에서 [!UICONTROL 사용](으)로 상태를 업데이트할 수 있도록 잠시 기다려 주십시오.
+들어오는 피드를 보려면 [!UICONTROL 피드] 페이지의 헤더에서 **[!UICONTROL 받음]**&#x200B;을 선택한 다음 목록에서 보려는 피드를 선택하십시오. 피드를 수락하려면 **[!UICONTROL 프로필에 대해 사용]**&#x200B;을 선택하고 [!UICONTROL 보류 중]에서 [!UICONTROL 사용]&#x200B;(으)로 상태를 업데이트할 수 있도록 잠시 기다려 주십시오.
 
 ![received.png](./images/received.png)
 

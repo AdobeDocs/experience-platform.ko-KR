@@ -4,7 +4,7 @@ title: API를 사용하여 대상 세그먼트에 데이터 사용 규정 준수
 type: Tutorial
 description: 이 튜토리얼에서는 API를 사용하여 데이터 사용 준수 세그먼트 정의를 적용하는 단계를 다룹니다.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 6%
@@ -19,16 +19,16 @@ ht-degree: 6%
 
 이 자습서에서는 [!DNL Adobe Experience Platform]의 다음 구성 요소를 이해하고 있어야 합니다.
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile]은(는) 제네릭 조회 엔터티 저장소이며 [!DNL Platform] 내의 [!DNL Experience Data Model (XDM)] 데이터를 관리하는 데 사용됩니다. 프로필은 다양한 엔터프라이즈 데이터 에셋에서 데이터를 병합하고 통합 프레젠테이션의 해당 데이터에 대한 액세스를 제공합니다.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile]은(는) 제네릭 조회 엔터티 저장소이며 [!DNL Experience Platform] 내의 [!DNL Experience Data Model (XDM)] 데이터를 관리하는 데 사용됩니다. 프로필은 다양한 엔터프라이즈 데이터 에셋에서 데이터를 병합하고 통합 프레젠테이션의 해당 데이터에 대한 액세스를 제공합니다.
    - [병합 정책](../../profile/api/merge-policies.md): 특정 조건에서 통합 보기에 병합할 수 있는 데이터를 결정하기 위해 [!DNL Real-Time Customer Profile]에서 사용하는 규칙입니다. 데이터 거버넌스 목적을 위해 병합 정책을 구성할 수 있습니다.
 - [[!DNL Segmentation]](../home.md): [!DNL Real-Time Customer Profile]이(가) 프로필 스토어에 포함된 큰 개인 그룹을 유사한 트레이트를 공유하고 마케팅 전략에 유사하게 반응하는 작은 그룹으로 나누는 방법입니다.
 - [데이터 거버넌스](../../data-governance/home.md): 데이터 거버넌스는 다음 구성 요소를 사용하여 데이터 사용 레이블 지정 및 적용을 위한 인프라를 제공합니다.
    - [데이터 사용 레이블](../../data-governance/labels/user-guide.md): 각 데이터를 처리하는 민감도 수준으로 데이터 세트와 필드를 설명하는 데 사용되는 레이블입니다.
    - [데이터 사용 정책](../../data-governance/policies/overview.md): 특정 데이터 사용 레이블로 분류된 데이터에 대해 허용되는 마케팅 작업을 나타내는 구성
    - [정책 적용](../../data-governance/enforcement/overview.md): 데이터 사용 정책을 적용하고 정책 위반을 구성하는 데이터 작업을 방지할 수 있습니다.
-- [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+- [샌드박스](../../sandboxes/home.md): [!DNL Experience Platform]에서는 단일 [!DNL Experience Platform] 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 응용 프로그램을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-다음 섹션에서는 [!DNL Platform] API를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다.
+다음 섹션에서는 [!DNL Experience Platform] API를 성공적으로 호출하기 위해 알아야 하는 추가 정보를 제공합니다.
 
 ### 샘플 API 호출 읽기
 
@@ -36,19 +36,19 @@ ht-degree: 6%
 
 ### 필수 헤더에 대한 값 수집
 
-[!DNL Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
+[!DNL Experience Platform] API를 호출하려면 먼저 [인증 자습서](https://www.adobe.com/go/platform-api-authentication-en)를 완료해야 합니다. 인증 튜토리얼을 완료하면 아래와 같이 모든 [!DNL Experience Platform] API 호출의 필수 헤더 각각에 대한 값이 제공됩니다.
 
 - 인증: 전달자 `{ACCESS_TOKEN}`
 - x-api 키: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
+[!DNL Experience Platform]의 모든 리소스는 특정 가상 샌드박스로 격리되어 있습니다. [!DNL Experience Platform] API에 대한 모든 요청에는 작업이 수행될 샌드박스의 이름을 지정하는 헤더가 필요합니다.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
+>[!DNL Experience Platform]의 샌드박스에 대한 자세한 내용은 [샌드박스 개요 설명서](../../sandboxes/home.md)를 참조하십시오.
 
 페이로드(POST, PUT, PATCH)가 포함된 모든 요청에는 추가 헤더가 필요합니다.
 
@@ -124,7 +124,7 @@ curl -X GET \
 
 ## 병합 정책에서 소스 데이터 세트 찾기 {#datasets}
 
-병합 정책에는 소스 데이터 세트에 대한 정보가 포함되며 이 정보에는 데이터 사용 레이블이 포함됩니다. [!DNL Profile] API에 대한 GET 요청에 병합 정책 ID를 제공하여 병합 정책의 세부 정보를 조회할 수 있습니다. 병합 정책에 대한 자세한 내용은 [병합 정책 끝점 안내서](../../profile/api/merge-policies.md)를 참조하십시오.
+병합 정책에는 소스 데이터 세트에 대한 정보가 포함되며 이 정보에는 데이터 사용 레이블이 포함됩니다. GET 요청의 병합 정책 ID를 [!DNL Profile] API에 제공하여 병합 정책의 세부 정보를 조회할 수 있습니다. 병합 정책에 대한 자세한 내용은 [병합 정책 끝점 안내서](../../profile/api/merge-policies.md)를 참조하십시오.
 
 **API 형식**
 
@@ -187,7 +187,7 @@ curl -X GET \
 
 병합 정책의 원본 데이터 세트의 ID를 얻으면 [정책 서비스 API](https://www.adobe.io/experience-platform-apis/references/policy-service/)를 사용하여 특정 마케팅 작업에 대해 해당 데이터 세트를 평가하여 데이터 사용 정책 위반을 확인할 수 있습니다.
 
-데이터 세트를 평가하려면 아래 예와 같이 POST 본문 내에 데이터 세트 ID를 제공하면서 요청 경로에 마케팅 작업의 이름을 제공해야 합니다.
+데이터 세트를 평가하려면 아래 예와 같이 요청 본문 내에 데이터 세트 ID를 제공하면서 POST 요청의 경로에 마케팅 작업의 이름을 제공해야 합니다.
 
 **API 형식**
 

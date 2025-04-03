@@ -3,9 +3,9 @@ title: 대상 API 엔드포인트
 description: Adobe Experience Platform 세그멘테이션 서비스 API의 대상 끝점을 사용하여 프로그래밍 방식으로 조직의 대상을 만들고, 관리하고, 업데이트합니다.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
+source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1592'
 ht-degree: 2%
 
 ---
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `name` | 대상자의 이름입니다. |
 | `namespace` | 대상자를 위한 네임스페이스입니다. |
 | `description` | 대상자에 대한 설명. |
-| `type` | 대상자가 플랫폼에서 생성되었는지 또는 외부에서 생성된 대상자인지 여부를 표시하는 시스템 생성 필드입니다. 가능한 값은 `SegmentDefinition` 및 `ExternalSegment`입니다. `SegmentDefinition`은(는) 플랫폼에서 생성된 대상을 참조하지만 `ExternalSegment`은(는) 플랫폼에서 생성되지 않은 대상을 참조합니다. |
+| `type` | 대상자가 플랫폼에서 생성되었는지 또는 외부에서 생성된 대상자인지 여부를 표시하는 시스템 생성 필드입니다. 가능한 값은 `SegmentDefinition` 및 `ExternalSegment`입니다. `SegmentDefinition`은(는) Experience Platform에서 생성된 대상을 참조하고 `ExternalSegment`은(는) Experience Platform에서 생성되지 않은 대상을 참조합니다. |
 | `expression` | 대상의 PQL 표현식이 포함된 객체입니다. |
 | `lifecycleState` | 대상의 상태입니다. 가능한 값은 `draft`, `published` 및 `inactive`입니다. `draft`은(는) 대상을 만들 때, `published`은(는) 대상을 게시할 때, `inactive`은(는) 대상이 더 이상 활성화되지 않을 때를 나타냅니다. |
 | `datasetId` | 대상 데이터를 찾을 수 있는 데이터 세트의 ID입니다. |
@@ -482,7 +482,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 **응답**
 
-성공적인 응답은 새로 업데이트된 대상자의 세부 정보와 함께 HTTP 상태 200을 반환합니다. 대상자에 대한 세부 정보는 플랫폼 생성 대상자인지 또는 외부에서 생성된 대상자인지에 따라 달라집니다.
+성공적인 응답은 새로 업데이트된 대상자의 세부 정보와 함께 HTTP 상태 200을 반환합니다. 대상의 세부 사항은 Experience Platform 생성 대상인지 또는 외부에서 생성된 대상인지에 따라 다릅니다.
 
 +++전체 대상을 업데이트할 때의 샘플 응답입니다.
 
@@ -490,7 +490,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -565,7 +565,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-41
 {
     "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {

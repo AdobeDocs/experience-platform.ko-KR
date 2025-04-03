@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 세그먼트 빌더 UI 안내서
 description: Adobe Experience Platform UI의 세그먼트 빌더는 프로필 데이터 요소와 상호 작용할 수 있는 풍부한 작업 공간을 제공합니다. 작업 공간에서는 데이터 속성을 표시하는 데 사용되는 드래그 앤 드롭 타일과 같은 규칙을 작성하고 편집할 수 있는 직관적인 컨트롤을 제공합니다.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dc36c5e2eb109d1728f2290ee61e69f458929ba7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '4976'
-ht-degree: 8%
+source-wordcount: '4980'
+ht-degree: 7%
 
 ---
 
@@ -76,11 +76,11 @@ ht-degree: 8%
 
 단일 또는 여러 Adobe Analytics 보고서 세트의 데이터를 세그멘테이션 내의 이벤트로 사용할 수 있습니다.
 
-단일 Analytics 보고서 세트의 데이터를 사용하는 경우 Platform이 설명자와 친숙한 이름을 eVar에 자동으로 추가하므로 [!DNL Segment Builder] 내에서 해당 필드를 더 쉽게 찾을 수 있습니다.
+단일 Analytics 보고서 세트의 데이터를 사용하는 경우 Experience Platform이 설명자와 친숙한 이름을 eVar에 자동으로 추가하므로 [!DNL Segment Builder] 내에서 해당 필드를 더 쉽게 찾을 수 있습니다.
 
 ![일반 변수(eVar)가 사용자에게 친숙한 이름으로 매핑되는 방법을 보여 주는 이미지입니다.](../images/ui/segment-builder/single-report-suite.png)
 
-여러 Analytics 보고서 세트의 데이터를 사용하는 경우 Platform **cannot**&#x200B;에서 설명자나 친숙한 이름을 eVar에 자동으로 추가할 수 없습니다. 따라서 Analytics 보고서 세트의 데이터를 사용하기 전에 XDM 필드에 매핑해야 합니다. Analytics 변수를 XDM에 매핑하는 방법에 대한 자세한 내용은 [Adobe Analytics 소스 연결 안내서](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping)를 참조하십시오.
+여러 Analytics 보고서 세트의 데이터를 사용할 때 Experience Platform **cannot**&#x200B;은(는) 설명자나 친숙한 이름을 eVar에 자동으로 추가합니다. 따라서 Analytics 보고서 세트의 데이터를 사용하기 전에 XDM 필드에 매핑해야 합니다. Analytics 변수를 XDM에 매핑하는 방법에 대한 자세한 내용은 [Adobe Analytics 소스 연결 안내서](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping)를 참조하십시오.
 
 예를 들어 다음 변수를 가진 두 개의 보고서 세트가 있는 상황을 생각해 보십시오.
 
@@ -119,7 +119,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->플랫폼 내에서 만든 대상의 경우 **동일한** 병합 정책이 있는 대상만 표시됩니다.
+>Experience Platform 내에서 만든 대상의 경우 **같은** 병합 정책이 있는 대상만 표시됩니다.
 
 **[!UICONTROL 대상]** 탭에는 [!DNL Experience Platform] 내에 만들어진 대상뿐만 아니라 Adobe Audience Manager 또는 Customer Journey Analytics과 같은 외부 소스에서 가져온 모든 대상도 나열됩니다.
 
@@ -182,7 +182,7 @@ ht-degree: 8%
 
 **[!UICONTROL 대상]** 탭에서 대상을 규칙 빌더 캔버스로 끌어다 놓아 새 세그먼트 정의에서 대상 멤버십을 참조할 수 있습니다. 이렇게 하면 새 세그먼트 정의 규칙에 속성으로 대상 멤버십을 포함하거나 제외할 수 있습니다.
 
-[!DNL Segment Builder]을(를) 사용하여 만든 [!DNL Platform]개의 대상에 대해 해당 대상에 대한 세그먼트 정의에 사용된 규칙 세트로 대상을 변환할 수 있는 옵션이 제공됩니다. 이 변환은 규칙 논리의 사본을 만들어 원본 세그먼트 정의에 영향을 주지 않고 수정할 수 있습니다. 세그먼트 정의를 규칙 논리로 변환하기 전에 최근 변경 사항을 저장했는지 확인하십시오.
+[!DNL Segment Builder]을(를) 사용하여 만든 [!DNL Experience Platform]개의 대상에 대해 해당 대상에 대한 세그먼트 정의에 사용된 규칙 세트로 대상을 변환할 수 있는 옵션이 제공됩니다. 이 변환은 규칙 논리의 사본을 만들어 원본 세그먼트 정의에 영향을 주지 않고 수정할 수 있습니다. 세그먼트 정의를 규칙 논리로 변환하기 전에 최근 변경 사항을 저장했는지 확인하십시오.
 
 >[!NOTE]
 >
@@ -349,11 +349,11 @@ Events 컨테이너 내에 이벤트를 배치한 후 [!UICONTROL 최소 1] 단�
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="병합 정책"
->abstract="병합 정책은 서로 다른 데이터 세트의 병합을 활성화하여 프로필을 형성합니다. 플랫폼에서 기본 병합 정책이 제공되었거나 또는 [프로필]에서 새로운 기본 병합 정책을 생성할 수 있습니다. 이 대상자에 대해 마케팅 목적에 부합하는 병합 정책을 선택하십시오."
+>abstract="병합 정책은 서로 다른 데이터 세트의 병합을 활성화하여 프로필을 형성합니다. Experience Platform에서 기본 병합 정책을 제공했거나 프로필에서 새 기본 병합 정책을 만들 수 있습니다. 이 대상자에 대해 마케팅 목적에 부합하는 병합 정책을 선택하십시오."
 
-[!DNL Experience Platform]을(를) 사용하면 여러 소스에서 데이터를 모아 각 개별 고객에 대한 전체 보기를 볼 수 있도록 결합할 수 있습니다. 이 데이터를 함께 가져올 때 병합 정책은 [!DNL Platform]이(가) 데이터 우선 순위 지정 방법과 어떤 데이터를 결합하여 프로필을 만들 것인지 결정하는 데 사용하는 규칙입니다.
+[!DNL Experience Platform]을(를) 사용하면 여러 소스에서 데이터를 모아 각 개별 고객에 대한 전체 보기를 볼 수 있도록 결합할 수 있습니다. 이 데이터를 함께 가져올 때 병합 정책은 [!DNL Experience Platform]이(가) 데이터 우선 순위 지정 방법과 어떤 데이터를 결합하여 프로필을 만들 것인지 결정하는 데 사용하는 규칙입니다.
 
-이 대상자의 마케팅 목적에 맞는 병합 정책을 선택하거나 [!DNL Platform]에서 제공한 기본 병합 정책을 사용할 수 있습니다. 고유한 기본 병합 정책 만들기를 포함하여 조직에 고유한 여러 병합 정책을 만들 수 있습니다. 조직의 병합 정책을 만드는 방법에 대한 단계별 지침은 [병합 정책 개요](../../profile/merge-policies/overview.md)를 읽는 것부터 시작하십시오.
+이 대상자의 마케팅 목적에 맞는 병합 정책을 선택하거나 [!DNL Experience Platform]에서 제공한 기본 병합 정책을 사용할 수 있습니다. 고유한 기본 병합 정책 만들기를 포함하여 조직에 고유한 여러 병합 정책을 만들 수 있습니다. 조직의 병합 정책을 만드는 방법에 대한 단계별 지침은 [병합 정책 개요](../../profile/merge-policies/overview.md)를 읽는 것부터 시작하십시오.
 
 세그먼트 정의에 대한 병합 정책을 선택하려면 **[!UICONTROL 필드]** 탭에서 톱니바퀴 아이콘을 선택한 다음, **[!UICONTROL 병합 정책]** 드롭다운 메뉴를 사용하여 사용할 병합 정책을 선택하십시오.
 

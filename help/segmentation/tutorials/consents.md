@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 세그먼트 정의의 동의 준수
 description: 세분화 작업에서 개인 데이터 수집 및 공유에 대한 고객 동의 환경 설정을 준수하는 방법에 대해 알아봅니다.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: bf0e5065e771b748ee9d6ae3c431e76f08552983
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 고객 동의 값을 준수하려면 관련된 다양한 [!DNL Adobe Experience Platform] 서비스를 이해해야 합니다. 이 자습서를 시작하기 전에 다음 서비스를 잘 알고 있는지 확인하십시오.
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 플랫폼이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): 여러 소스에서 집계한 데이터를 기반으로 통합 고객 프로필을 실시간으로 제공합니다.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): [!DNL Real-Time Customer Profile] 데이터에서 대상을 만들 수 있습니다.
 
@@ -75,7 +75,7 @@ UI에서 세그먼트 정의를 작성할 때 **[!UICONTROL 특성]**&#x200B;에
 
 이 자습서를 따라 Experience Platform에서 세그먼트 정의를 작성할 때 고객 동의 및 환경 설정을 적용하는 방법을 보다 잘 이해할 수 있습니다.
 
-Platform에서의 동의 관리에 대한 자세한 내용은 다음 설명서를 참조하십시오.
+Experience Platform에서의 동의 관리에 대한 자세한 내용은 다음 설명서를 참조하십시오.
 
 * [Adobe 표준을 사용한 동의 처리](../../landing/governance-privacy-security/consent/adobe/overview.md)
 * [IAB TCF 2.0 표준을 사용한 동의 처리](../../landing/governance-privacy-security/consent/iab/overview.md)

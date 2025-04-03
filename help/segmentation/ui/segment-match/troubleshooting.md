@@ -2,11 +2,11 @@
 keywords: Experience Platform;홈;인기 항목;세그먼테이션;세그먼테이션;세그먼트 일치;세그먼트 일치
 solution: Experience Platform
 title: 세그먼트 일치 FAQ
-description: 세그먼트 일치 는 두 명 이상의 Platform 사용자가 안전하고 관리되며 개인 정보 보호 친화적인 방식으로 세그먼트 데이터를 교환할 수 있는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
+description: 세그먼트 일치 는 두 명 이상의 Experience Platform 사용자가 안전하고 관리되며 개인 정보 보호 친화적인 방식으로 세그먼트 데이터를 교환할 수 있는 Adobe Experience Platform의 세그먼트 공유 서비스입니다.
 exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 이 안내서는 Adobe Experience Platform 세그먼트 일치와 관련하여 자주 묻는 개인 정보 및 법적 질문에 대한 답변을 제공합니다.
 
-## 예상 중복 동안 어떤 데이터가 공유되며 Adobe을 통해 이러한 지표를 안전하게 얻을 수 있습니까?
+## 예상 겹침 동안 공유되는 데이터는 무엇이며, Adobe은 이러한 지표를 안전하게 얻을 수 있도록 어떻게 보장할 수 있습니까?
 
 ![overlap-report.png](./images/overlap-report.png)
 

@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: 세그먼테이션 서비스 개요
-description: Adobe Experience Platform 세분화 서비스 및 플랫폼 생태계에서 수행하는 역할에 대해 알아봅니다.
+description: Adobe Experience Platform 세분화 서비스 및 Experience Platform 생태계에서 수행하는 역할에 대해 알아봅니다.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 13%
+source-wordcount: '1679'
+ht-degree: 9%
 
 ---
 
 # [!DNL Segmentation Service] 개요
 
-Adobe Experience Platform [!DNL Segmentation Service]에서는 [!DNL Real-Time Customer Profile] 데이터의 세그먼트 정의나 다른 소스를 통해 대상자를 만들 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 대상자는 [!DNL Platform]을 통해 중앙 집중식으로 구성 및 유지 관리되고 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
+Adobe Experience Platform [!DNL Segmentation Service]에서는 [!DNL Real-Time Customer Profile] 데이터의 세그먼트 정의나 다른 소스를 통해 대상자를 만들 수 있는 사용자 인터페이스와 RESTful API를 제공합니다. 이러한 대상자는 [!DNL Experience Platform]을 통해 중앙 집중식으로 구성 및 유지 관리되고 모든 Adobe 솔루션에서 쉽게 액세스할 수 있습니다.
 
 이 문서에서는 [!DNL Segmentation Service] 및 Adobe Experience Platform에서 수행하는 역할에 대한 개요를 제공합니다.
 
@@ -20,7 +20,7 @@ Adobe Experience Platform [!DNL Segmentation Service]에서는 [!DNL Real-Time C
 
 이 문서 전체에서 사용되는 다음 주요 용어를 이해해야 합니다.
 
-- **대상**: 유사한 비헤이비어 및/또는 특성을 공유하는 사람들의 컬렉션입니다. 이 사람 컬렉션은 Adobe Experience Platform에서 세그먼트 정의(플랫폼 생성 대상)를 사용하여 생성하거나 외부 소스(외부 생성 대상)에서 생성할 수 있습니다.
+- **대상**: 유사한 비헤이비어 및/또는 특성을 공유하는 사람들의 컬렉션입니다. 이 사람 컬렉션은 Adobe Experience Platform에서 세그먼트 정의(Experience-Platform 생성 대상)를 사용하여 생성하거나 외부 소스(외부에서 생성된 대상)에서 생성할 수 있습니다.
 - **세그먼트 정의**: Adobe Experience Platform에서 대상 대상의 주요 특성 또는 동작을 설명하는 데 사용하는 규칙 집합입니다.
 - **세그먼트**: 프로필을 대상자로 분리하는 작업입니다.
 
@@ -28,15 +28,15 @@ Adobe Experience Platform [!DNL Segmentation Service]에서는 [!DNL Real-Time C
 
 세그먼테이션은 프로필 하위 집합이 공유하는 특정 속성 또는 동작을 프로필 스토어와 정의하여 마케팅 가능한 사용자 그룹과 고객 기반을 구분하는 프로세스입니다. 예를 들어 &quot;운동화 구입하는 것을 잊었습니까?&quot;라는 이메일 캠페인에서 지난 30일 내에 운동화를 찾았지만 구입을 완료하지 않은 모든 사용자를 대상으로 할 수 있습니다.
 
-대상자가 개념적으로 정의되면 [!DNL Experience Platform]에 작성됩니다. 일반적으로 대상자는 마케터 또는 대상 전문가가 구축하지만, 일부 조직에서는 마케팅 부서가 데이터 분석가와 공동 작업을 통해 대상자를 생성하는 것을 선호합니다. [!DNL Platform]&#x200B;(으)로 전송되는 데이터를 검토할 때 데이터 분석가는 대상자의 규칙이나 조건을 작성하는 데 사용할 필드와 값을 선택하여 세그먼트 정의를 만들거나 대상 구성을 사용하여 대상을 구성하여 두 가지 방법으로 대상을 만들 수 있습니다.
+대상자가 개념적으로 정의되면 [!DNL Experience Platform]에 작성됩니다. 일반적으로 대상자는 마케터 또는 대상 전문가가 구축하지만, 일부 조직에서는 마케팅 부서가 데이터 분석가와 공동 작업을 통해 대상자를 생성하는 것을 선호합니다. [!DNL Experience Platform]&#x200B;(으)로 전송되는 데이터를 검토할 때 데이터 분석가는 대상자의 규칙이나 조건을 작성하는 데 사용할 필드와 값을 선택하여 세그먼트 정의를 만들거나 대상 구성을 사용하여 대상을 구성하여 두 가지 방법으로 대상을 만들 수 있습니다.
 
 ## 대상자 만들기
 
-대상자는 Adobe Experience Platform에서 대상자로 직접 구성 또는 플랫폼에서 파생된 세그먼트 정의를 통한 두 가지 방식으로 생성할 수 있습니다.
+컴포지션, 세그먼트 정의, 페더레이션 데이터 및 Data Distiller을 포함하여 Adobe Experience Platform에서 다양한 방식으로 대상을 만들 수 있습니다.
 
 ### 대상자 구성
 
-플랫폼에서 대상을 직접 작성할 때 대상 작성을 사용할 수 있습니다. 대상 구성을 사용하여 대상을 만드는 방법에 대해 알아보려면 [대상 구성 가이드](./ui/audience-composition.md)를 참조하십시오.
+Experience Platform에서 대상을 직접 작성할 때 대상 작성을 사용할 수 있습니다. 대상 구성을 사용하여 대상을 만드는 방법에 대해 알아보려면 [대상 구성 가이드](./ui/audience-composition.md)를 참조하십시오.
 
 ### 세그먼트 정의
 
@@ -61,7 +61,7 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="평가 방법"
->abstract="현재 Platform은 대상자를 평가하는 세 가지 방식(스트리밍 세분화, 배치 세분화, 에지 세분화)을 지원합니다."
+>abstract="Experience Platform은 현재 스트리밍 세분화, 배치 세분화 및 에지 세분화라는 세 가지 대상자 평가 방법을 지원합니다."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -69,7 +69,7 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >abstract="스트리밍 세분화는 사용자 활동에 대응하여 대상자를 업데이트하는 진행형 데이터 선택 프로세스입니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="스트리밍 세분화를 통해 거의 실시간으로 이벤트 평가"
 
-현재 Platform은 대상자를 평가하는 세 가지 방식(스트리밍 세분화, 배치 세분화, 에지 세분화)을 지원합니다.
+Experience Platform은 현재 스트리밍 세분화, 배치 세분화 및 에지 세분화라는 세 가지 대상자 평가 방법을 지원합니다.
 
 ### 스트리밍 세분화 {#streaming}
 
@@ -93,12 +93,12 @@ API를 사용하여 세그먼트 정의를 작성하는 방법에 대한 자세�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="에지 평가"
->abstract="에지 세분화는 Edge Network에서 Platform의 세그먼트를 즉시 평가하여 동일한 페이지와 다음 페이지의 개인화 사용 사례를 활성화하는 기능입니다."
+>abstract="Edge 세그멘테이션은 Edge Network에서 Experience Platform의 세그먼트를 즉시 평가하는 기능으로, 동일한 페이지 및 다음 페이지 개인화 사용 사례를 가능하게 합니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="에지 세분화 안내서"
 
-Edge 세그멘테이션은 Edge Network](../landing/edge-and-hub-comparison.md)에서 플랫폼의 세그먼트를 즉시 [평가하는 기능으로, 동일한 페이지 및 다음 페이지 개인화 사용 사례를 활성화합니다.
+Edge 세그멘테이션은 Experience Platform의 세그먼트를 Edge Network](../landing/edge-and-hub-comparison.md)에서 즉시 [평가하는 기능으로, 동일한 페이지와 다음 페이지 개인화 사용 사례를 가능하게 합니다.
 
-Edge 세그멘테이션에 대한 자세한 내용은 [API 설명서](./methods/edge-segmentation.md) 또는 [UI 설명서](./methods/edge-segmentation.md)를 참조하십시오.
+Edge 세그멘테이션에 대한 자세한 내용은 [Edge 세그멘테이션 개요](./methods/edge-segmentation.md)를 참조하십시오.
 
 ## 세그먼테이션 결과 액세스
 
@@ -122,7 +122,7 @@ API 또는 [!DNL Segment Builder]을(를) 통해 세그먼트 정의를 작성�
 
 병합 정책은 특정 조건에서 데이터의 우선 순위를 지정하고 통합 보기에 결합하는 방법을 결정하기 위해 [!DNL Profile]에서 사용하는 규칙입니다.
 
-병합 정책이 정의되지 않으면 기본 [!DNL Platform] 병합 정책이 사용됩니다. 조직 고유의 병합 정책을 사용하려는 경우 자체 정책을 만들어 조직의 기본값으로 표시할 수 있습니다.
+병합 정책이 정의되지 않으면 기본 [!DNL Experience Platform] 병합 정책이 사용됩니다. 조직 고유의 병합 정책을 사용하려는 경우 자체 정책을 만들어 조직의 기본값으로 표시할 수 있습니다.
 
 병합 정책에 대한 자세한 내용은 [병합 정책 안내서](../profile/api/merge-policies.md)를 참조하십시오.
 
@@ -137,6 +137,7 @@ API 또는 [!DNL Segment Builder]을(를) 통해 세그먼트 정의를 작성�
 ## 고급 세그먼테이션 기능
 
 [스트리밍 데이터 수집](../ingestion/streaming-ingestion/overview.md)을(를) 다음 고급 세분화 기능과 결합하여 지속적으로 대상을 생성하도록 세그먼트 정의를 구성할 수 있습니다.
+
 - [순차적인 세분화](#sequential)
 - [동적 세분화](#dynamic)
 - [다중 엔티티 세그멘테이션](#multi-entity)
