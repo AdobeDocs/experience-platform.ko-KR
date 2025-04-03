@@ -2,9 +2,9 @@
 title: 샌드박스 도구
 description: 샌드박스 간에 샌드박스 구성을 원활하게 내보내고 가져옵니다.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 85476ea8a667cf3e74cd7a24da07d81c635e1628
+source-git-commit: 3cedf019cff7ef0aa06da1242798a533196f9b2a
 workflow-type: tm+mt
-source-wordcount: '2431'
+source-wordcount: '2485'
 ht-degree: 7%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 7%
 
 샌드박스 도구 기능을 사용하면 [!DNL Adobe Real-Time Customer Data Platform] 및 [!DNL Adobe Journey Optimizer] 개체를 패키지로 내보낼 수 있습니다.
 
-### Real-time Customer Data Platform 개체 {#real-time-cdp-objects}
+### 실시간 고객 데이터 플랫폼 개체 {#real-time-cdp-objects}
 
 아래 표에는 현재 샌드박스 도구에 지원되는 [!DNL Adobe Real-Time Customer Data Platform]개 개체가 나열되어 있습니다.
 
@@ -60,6 +60,7 @@ ht-degree: 7%
 | [!DNL Adobe Journey Optimizer] | 여정 | 전체 여정을 패키지에 추가하면 대상, 스키마, 이벤트, 작업 등 여정이 종속된 대부분의 오브젝트가 복사됩니다. |
 | [!DNL Adobe Journey Optimizer] | 콘텐츠 템플릿 | 컨텐츠 템플릿은 여정 객체의 종속 객체로 복사할 수 있습니다. 독립형 템플릿을 사용하면 Journey Optimizer 캠페인 및 여정 전반에서 사용자 정의 콘텐츠를 쉽게 재사용할 수 있습니다. |
 | [!DNL Adobe Journey Optimizer] | 조각 | 조각을 여정 개체의 종속 개체로 복사할 수 있습니다. 조각은 Journey Optimizer 캠페인 및 여정 간 하나 이상의 이메일에서 참조할 수 있는 재사용 가능한 구성 요소입니다. |
+| [!DNL Adobe Journey Optimizer] | 캠페인 | 프로필, 대상자, 스키마, 인라인 메시지 및 종속 오브젝트와 관련된 모든 항목과 함께 캠페인을 복사할 수 있습니다. 의사 결정 항목, 데이터 사용 레이블 및 언어 설정과 같은 일부 항목은 복사되지 않습니다. 복사할 수 없는 전체 개체 목록은 [다른 샌드박스로 개체 내보내기](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) 안내서를 참조하십시오. |
 
 서피스(예: 사전 설정)는 복사되지 않습니다. 시스템은 메시지 유형 및 표면 이름을 기반으로 대상 샌드박스에서 가장 가까운 일치 항목을 자동으로 선택합니다. 대상 샌드박스에 서피스가 없는 경우 서피스 복사가 실패하여 메시지에 설정할 수 있는 서피스가 필요하므로 메시지 복사가 실패합니다. 이 경우 복사가 작동하려면 메시지의 오른쪽 채널에 대해 적어도 하나의 서피스를 만들어야 합니다.
 
@@ -114,13 +115,13 @@ ht-degree: 7%
 
 드롭다운에서 선택한 패키지를 표시하는 ![[!UICONTROL 패키지에 추가] 대화 상자를 표시합니다.](../images/ui/sandbox-tooling/add-to-existing-package.png)
 
-패키지에 추가된 오브젝트 목록이 나열됩니다. 패키지를 게시하여 샌드박스로 가져올 수 있도록 하려면 **[!UICONTROL Publish]**&#x200B;을(를) 선택하십시오.
+패키지에 추가된 오브젝트 목록이 나열됩니다. 패키지를 게시하여 샌드박스로 가져올 수 있도록 하려면 **[!UICONTROL 게시]**&#x200B;를 선택하십시오.
 
-![패키지의 개체 목록으로서 [!UICONTROL Publish] 옵션을 강조 표시합니다.](../images/ui/sandbox-tooling/publish-package.png)
+![패키지의 개체 목록으로서 [!UICONTROL 게시] 옵션을 강조 표시합니다.](../images/ui/sandbox-tooling/publish-package.png)
 
-패키지 게시를 확인하려면 **[!UICONTROL Publish]**&#x200B;을(를) 선택하십시오.
+패키지 게시를 확인하려면 **[!UICONTROL 게시]**&#x200B;를 선택하십시오.
 
-![Publish 패키지 확인 대화 상자에서 [!UICONTROL Publish] 옵션을 강조 표시합니다.](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![패키지 게시 확인 대화 상자에서 [!UICONTROL 게시] 옵션을 강조 표시합니다.](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 >[!NOTE]
 >
@@ -174,7 +175,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->현재는 전체 샌드박스를 내보내거나 가져올 때 Real-time Customer Data Platform 개체만 지원됩니다. 현재 여정과 같은 Adobe Journey Optimizer 개체는 지원되지 않습니다.
+>현재 Real-time Customer Data Platform 개체만 전체 샌드박스를 내보내거나 가져올 수 있습니다. 현재 여정과 같은 Adobe Journey Optimizer 개체는 지원되지 않습니다.
 
 지원되는 모든 오브젝트 유형을 전체 샌드박스 패키지로 내보낸 다음 다양한 샌드박스에서 패키지를 가져와 오브젝트 구성을 복제할 수 있습니다. 예를 들어 이 기능을 사용하여 다음을 수행할 수 있습니다.
 
@@ -191,7 +192,7 @@ ht-degree: 7%
 
 ![완료된 필드를 표시하고 [!UICONTROL 만들기]를 강조 표시하는 [!UICONTROL 패키지 만들기] 대화 상자.](../images/ui/sandbox-tooling/create-package-dialog.png)
 
-패키지가 생성되었습니다. 패키지를 게시하려면 **[!UICONTROL Publish]**&#x200B;을(를) 선택하십시오.
+패키지가 생성되었습니다. 패키지를 게시하려면 **[!UICONTROL 게시]**&#x200B;를 선택하십시오.
 
 ![새로 게시된 패키지를 강조 표시하는 샌드박스 패키지 목록.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
@@ -263,4 +264,4 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 이 문서에서는 Experience Platform UI 내에서 샌드박스 도구 기능을 사용하는 방법을 보여 줍니다. 샌드박스에 대한 자세한 내용은 [샌드박스 사용 안내서](../ui/user-guide.md)를 참조하십시오.
 
-샌드박스 API를 사용하여 다른 작업을 수행하는 단계는 [샌드박스 개발자 안내서](../api/getting-started.md)를 참조하십시오. Experience Platform의 샌드박스에 대한 높은 수준의 개요는 [개요 설명서](../home.md)를 참조하세요.
+샌드박스 API를 사용하여 다른 작업을 수행하는 단계는 [샌드박스 개발자 안내서](../api/getting-started.md)를 참조하십시오. Experience Platform의 샌드박스에 대한 높은 수준의 개요는 [개요 설명서](../home.md)를 참조하십시오.
