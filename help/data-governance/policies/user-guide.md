@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI의 데이터 사용 정책 관리
 description: Adobe Experience Platform 데이터 거버넌스는 데이터 사용 정책을 만들고 관리할 수 있는 사용자 인터페이스를 제공합니다. 이 문서에서는 Experience Platform 사용자 인터페이스의 정책 작업 영역에서 수행할 수 있는 작업에 대한 개요를 제공합니다.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 16%
+source-wordcount: '1769'
+ht-degree: 15%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
 >title="프로필 데이터에 고객 동의 통합 및 시행"
->abstract="<h2>설명</h2><p>플랫폼을 사용하면 고객으로부터 수집한 동의 데이터를 해당 프로필에 통합할 수 있습니다. 그런 다음 동의 정책을 설정하여 특정 대상에 대해 활성화된 세그먼트에 이 데이터를 포함할 수 있는지 여부를 결정할 수 있습니다.</p>"
+>abstract="<h2>설명</h2><p>Experience Platform을 사용하면 고객으로부터 수집한 동의 데이터를 각각의 프로필에 통합할 수 있습니다. 그런 다음 동의 정책을 설정하여 특정 대상에 대해 활성화된 세그먼트에 이 데이터를 포함할 수 있는지 여부를 결정할 수 있습니다.</p>"
 
 이 문서에서는 Adobe Experience Platform UI에서 **[!UICONTROL 정책]** 작업 영역을 사용하여 데이터 사용 정책을 만들고 관리하는 방법을 다룹니다.
 
@@ -163,7 +163,7 @@ ht-degree: 16%
 
 ![](../images/policies/name-and-save.png)
 
-이제 동의 정책이 만들어졌으며 기본적으로 동의 상태는 [!UICONTROL 사용 안 함](으)로 설정됩니다. 정책을 즉시 사용하려면 오른쪽 레일에서 **[!UICONTROL 상태]** 전환을 선택하십시오.
+이제 동의 정책이 만들어졌으며 기본적으로 동의 상태는 [!UICONTROL 사용 안 함]&#x200B;(으)로 설정됩니다. 정책을 즉시 사용하려면 오른쪽 레일에서 **[!UICONTROL 상태]** 전환을 선택하십시오.
 
 ![](../images/policies/enable-consent-policy.png)
 
@@ -203,7 +203,7 @@ ht-degree: 16%
 
 >[!NOTE]
 >
->조직에서 정의한 사용자 지정 마케팅 작업만 편집할 수 있습니다. Adobe이 정의한 마케팅 액션은 변경하거나 삭제할 수 없습니다.
+>조직에서 정의한 사용자 지정 마케팅 작업만 편집할 수 있습니다. Adobe에서 정의한 마케팅 액션은 변경하거나 삭제할 수 없습니다.
 
 **[!UICONTROL 정책]** 작업 영역에서 **[!UICONTROL 마케팅 작업]** 탭을 선택하여 Adobe 및 조직에서 정의한 사용 가능한 마케팅 작업 목록을 확인합니다. 목록에서 사용자 지정 마케팅 작업을 선택한 다음 오른쪽 섹션에 제공된 필드를 사용하여 마케팅 작업의 세부 정보를 편집합니다.
 

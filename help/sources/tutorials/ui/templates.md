@@ -1,12 +1,12 @@
 ---
 description: Adobe Experience Platform UI에서 템플릿을 사용하여 B2B 데이터에 대한 데이터 수집 프로세스를 가속화하는 방법을 알아봅니다.
 title: UI에서 템플릿을 사용하여 소스 데이터 흐름 만들기
-badge1: "Beta"
+badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2241'
-ht-degree: 10%
+source-wordcount: '2250'
+ht-degree: 9%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Platform UI의 소스용 템플릿"
+>title="Experience Platform UI의 소스 템플릿"
 >abstract="템플릿에는 소스에서 Experience Platform으로 데이터를 가져올 때 사용할 수 있는 스키마, 데이터 세트, ID, 매핑 규칙, ID 네임스페이스 및 데이터 흐름과 같은 자동으로 생성된 자산이 포함됩니다. 사용 사례에 적합한 맞춤화를 위해 자동 생성된 자산을 업데이트할 수 있습니다."
 
 >[!IMPORTANT]
@@ -27,7 +27,7 @@ ht-degree: 10%
 >
 >설명서 및 기능은 변경될 수 있습니다.
 
-Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 데 사용할 수 있는 사전 구성된 템플릿을 제공합니다. 템플릿에는 소스에서 Experience Platform으로 데이터를 가져올 때 사용할 수 있는 스키마, 데이터 세트, ID, 매핑 규칙, ID 네임스페이스 및 데이터 흐름과 같은 자동 생성된 에셋이 포함됩니다.
+Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 데 사용할 수 있는 사전 구성된 템플릿을 제공합니다. 템플릿에는 소스에서 Experience Platform으로 데이터를 가져올 때 사용할 수 있는 스키마, 데이터 세트, ID, 매핑 규칙, ID 네임스페이스 및 데이터 흐름과 같이 자동으로 생성된 에셋이 포함됩니다.
 
 템플릿을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 
@@ -35,17 +35,17 @@ Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 �
 * 수동 데이터 수집 프로세스 중에 발생할 수 있는 오류를 최소화합니다.
 * 사용 사례에 맞게 언제든지 자동 생성된 에셋을 업데이트합니다.
 
-다음 튜토리얼에서는 Platform UI에서 템플릿을 사용하는 방법에 대한 단계를 제공합니다.
+다음 튜토리얼에서는 Experience Platform UI에서 템플릿을 사용하는 방법에 대한 단계를 제공합니다.
 
 ## 시작하기
 
-이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 Experience Platform의 다음 구성 요소를 이해하고 있어야 합니다.
 
-* [소스](../../home.md): Experience Platform을 사용하면 플랫폼 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 개선하는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
-* [[!DNL Experience Data Model (XDM)] 시스템](../../../xdm/home.md): Experience Platform이 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
-* [샌드박스](../../../sandboxes/home.md): Experience Platform은 단일 플랫폼 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
+* [소스](../../home.md): Experience Platform을 사용하면 Experience Platform 서비스를 사용하여 들어오는 데이터를 구조화하고 레이블을 지정하고 향상시키는 기능을 제공하는 동시에 다양한 소스에서 데이터를 수집할 수 있습니다.
+* [[!DNL Experience Data Model (XDM)] 시스템](../../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
+* [샌드박스](../../../sandboxes/home.md): Experience Platform은 단일 Experience Platform 인스턴스를 별도의 가상 환경으로 분할하여 디지털 경험 애플리케이션을 개발하고 발전시키는 데 도움이 되는 가상 샌드박스를 제공합니다.
 
-## 플랫폼 UI에서 템플릿 사용 {#use-templates-in-the-platform-ui}
+## Experience Platform UI에서 템플릿 사용 {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
@@ -53,13 +53,13 @@ Adobe Experience Platform은 데이터 수집 프로세스를 가속화하는 �
 >abstract="사용 사례에 적합한 비즈니스 유형을 선택합니다. 액세스 권한은 Real-Time Customer Data Platform 구독 계정에 따라 달라질 수 있습니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#?lang=ko" text="Real-Time CDP 개요"
 
-Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스하고 Experience Platform에서 사용할 수 있는 소스 카탈로그를 확인합니다.
+Experience Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하여 [!UICONTROL 소스] 작업 영역에 액세스하고 Experience Platform에서 사용할 수 있는 소스 카탈로그를 확인합니다.
 
 *[!UICONTROL 범주]* 메뉴를 사용하여 범주별로 원본을 필터링하세요. 또는 검색 막대에 소스 이름을 입력하여 카탈로그에서 특정 소스를 찾습니다.
 
 [!UICONTROL Adobe 응용 프로그램] 범주로 이동하여 [!DNL Marketo Engage] 원본 카드를 확인한 다음 [!UICONTROL 데이터 추가]를 선택하여 시작합니다.
 
-![Marketo Engage 원본이 강조 표시된 원본 작업 영역의 카탈로그입니다.](../../images/tutorials/templates/catalog.png)
+![Marketo Engage 소스가 강조 표시된 소스 작업 영역의 카탈로그입니다.](../../images/tutorials/templates/catalog.png)
 
 템플릿을 찾아보거나 기존 스키마 및 데이터 세트를 사용할 수 있는 옵션이 표시되는 팝업 창이 나타납니다.
 
@@ -237,7 +237,7 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 >
 >![원본 작업 영역의 데이터 흐름 카탈로그에 있는 기존 데이터 흐름의 목록입니다.](../../images/tutorials/templates/dataflows.png)
 
-### 데이터 흐름 Publish
+### 데이터 흐름 게시
 
 소스 워크플로우를 통해 게시 프로세스를 시작합니다. [!UICONTROL 데이터 흐름 업데이트]를 선택하면 워크플로의 *[!UICONTROL 데이터 추가]* 단계로 이동합니다. 계속하려면 **[!UICONTROL 다음]**&#x200B;을(를) 선택하십시오.
 
@@ -267,8 +267,8 @@ Platform UI의 왼쪽 탐색에서 **[!UICONTROL 소스]**&#x200B;를 선택하�
 
 템플릿은 Adobe Experience Platform 경고에서 지원되며, 알림 패널을 사용하여 에셋 상태에 대한 업데이트를 받고 검토 페이지로 다시 이동할 수 있습니다.
 
-Platform UI의 상단 헤더에 있는 알림 아이콘을 선택한 다음 상태 경고를 선택하여 검토하려는 에셋을 확인합니다.
+Experience Platform UI의 상단 헤더에 있는 알림 아이콘을 선택한 다음 상태 경고를 선택하여 검토하려는 에셋을 확인합니다.
 
-![실패한 데이터 흐름을 알리는 알림이 강조 표시된 플랫폼 UI의 알림 패널.](../../images/tutorials/templates/notifications.png)
+![실패한 데이터 흐름을 알리는 알림이 강조 표시된 Experience Platform UI의 알림 패널.](../../images/tutorials/templates/notifications.png)
 
-템플릿의 경고 설정을 업데이트하여 데이터 흐름 상태에서 이메일과 플랫폼 내 알림을 모두 수신할 수 있습니다. 경고 구성에 대한 자세한 내용은 [소스 데이터 흐름에 대한 경고를 구독하는 방법](../ui/alerts.md)에 대한 안내서를 참조하십시오.
+템플릿의 경고 설정을 업데이트하여 데이터 흐름 상태에서 이메일과 Experience Platform 내 알림을 모두 수신할 수 있습니다. 경고 구성에 대한 자세한 내용은 [소스 데이터 흐름에 대한 경고를 구독하는 방법](../ui/alerts.md)에 대한 안내서를 참조하십시오.

@@ -4,31 +4,31 @@ title: 속성 기반 액세스 제어 엔드투엔드 안내서
 description: 이 문서에서는 Adobe Experience Platform의 속성 기반 액세스 제어에 대한 전체 안내서를 제공합니다
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1593'
-ht-degree: 7%
+source-wordcount: '1603'
+ht-degree: 5%
 
 ---
 
 # 속성 기반 액세스 제어 엔드투엔드 가이드
 
-Adobe Experience Platform에서 속성 기반 액세스 제어를 사용하여 개인 정보 보호를 중요하게 생각하는 자신과 다른 다중 브랜드 고객에게 사용자 액세스를 더 유연하게 관리할 수 있도록 합니다. 스키마 필드 및 대상자와 같은 개별 객체에 대한 액세스는 객체의 속성 및 역할에 따른 정책으로 부여될 수 있습니다. 이 기능을 사용하면 조직 내 특정 플랫폼 사용자에 대한 개별 오브젝트에 액세스를 허용하거나 취소할 수 있습니다.
+Adobe Experience Platform에서 속성 기반 액세스 제어를 사용하여 개인 정보 보호를 중요하게 생각하는 자신과 다른 다중 브랜드 고객에게 사용자 액세스를 더 유연하게 관리할 수 있도록 합니다. 스키마 필드 및 대상자와 같은 개별 객체에 대한 액세스는 객체의 속성 및 역할에 따른 정책으로 부여될 수 있습니다. 이 기능을 사용하면 조직의 특정 Experience Platform 사용자에 대해 개별 객체에 대한 액세스 권한을 부여하거나 취소할 수 있습니다.
 
 이 기능을 사용하면 조직 또는 데이터 사용 범위를 정의하는 레이블을 사용하여 스키마 필드, 대상 등을 분류할 수 있습니다. Adobe Journey Optimizer의 여정, 오퍼 및 기타 개체에 동일한 레이블을 적용할 수 있습니다. 이와 동시에 관리자는 XDM(Experience Data Model) 스키마 필드를 둘러싼 액세스 정책을 정의하고 이러한 필드에 액세스할 수 있는 사용자 또는 그룹(내부, 외부 또는 타사 사용자)을 더 잘 관리할 수 있습니다.
 
 >[!NOTE]
 >
->이 문서는 액세스 제어 정책의 사용 사례를 중점적으로 다룹니다. 플랫폼 사용자가 액세스할 수 있는 데이터가 아닌 데이터의 **사용**&#x200B;을 제어하는 정책을 설정하는 경우 대신 [데이터 거버넌스](../../data-governance/e2e.md)에 대한 전체 안내서를 참조하십시오.
+>이 문서는 액세스 제어 정책의 사용 사례를 중점적으로 다룹니다. Experience Platform 사용자가 액세스할 수 있는 데이터가 아닌 **사용**&#x200B;을 제어하는 정책을 설정하는 경우 대신 [데이터 거버넌스](../../data-governance/e2e.md)에 대한 전체 안내서를 참조하십시오.
 
 ## 시작하기
 
-이 자습서에서는 다음 플랫폼 구성 요소를 이해하고 있어야 합니다.
+이 자습서에서는 다음 Experience Platform 구성 요소를 이해하고 있어야 합니다.
 
 * [[!DNL Experience Data Model (XDM)] 시스템](../../xdm/home.md): Experience Platform에서 고객 경험 데이터를 구성하는 표준화된 프레임워크입니다.
    * [스키마 컴포지션의 기본 사항](../../xdm/schema/composition.md): 스키마 컴포지션의 주요 원칙 및 모범 사례를 포함하여 XDM 스키마의 기본 구성 요소에 대해 알아봅니다.
    * [스키마 편집기 튜토리얼](../../xdm/tutorials/create-schema-ui.md): 스키마 편집기 UI를 사용하여 사용자 지정 스키마를 만드는 방법을 알아봅니다.
-* [Adobe Experience Platform 세분화 서비스](../../segmentation/home.md): [!DNL Platform] 내의 세분화 엔진은 고객 동작 및 특성을 기반으로 고객 프로필에서 대상 세그먼트를 만드는 데 사용됩니다.
+* [Adobe Experience Platform 세분화 서비스](../../segmentation/home.md): [!DNL Experience Platform] 내의 세분화 엔진은 고객 동작 및 특성을 기반으로 고객 프로필에서 대상 세그먼트를 만드는 데 사용됩니다.
 
 ### 사용 사례 개요
 
@@ -55,21 +55,21 @@ Adobe Experience Platform에서 속성 기반 액세스 제어를 사용하여 �
 
 관리자 권한이 없는 경우 시스템 관리자에게 문의하여 액세스 권한을 받으십시오.
 
-관리자 권한이 있으면 [Adobe Experience Cloud](https://experience.adobe.com/)(으)로 이동하여 Adobe 자격 증명을 사용하여 로그인하십시오. 로그인하면 관리자 권한이 있는 조직의 **[!UICONTROL 개요]** 페이지가 나타납니다. 이 페이지에는 조직이 구독한 제품과 함께 사용자 및 관리자를 조직에 추가할 수 있는 다른 컨트롤이 표시됩니다. **[!UICONTROL 권한]**&#x200B;을 선택하여 Platform 통합을 위한 작업 영역을 엽니다.
+관리자 권한이 있으면 [Adobe Experience Cloud](https://experience.adobe.com/)&#x200B;(으)로 이동하여 Adobe 자격 증명을 사용하여 로그인하십시오. 로그인하면 관리자 권한이 있는 조직의 **[!UICONTROL 개요]** 페이지가 나타납니다. 이 페이지에는 조직이 구독한 제품과 함께 사용자 및 관리자를 조직에 추가할 수 있는 다른 컨트롤이 표시됩니다. Experience Platform 통합을 위한 작업 영역을 열려면 **[!UICONTROL 권한]**&#x200B;을 선택하십시오.
 
 ![Adobe Experience Cloud에서 선택 중인 권한 제품을 보여 주는 이미지](../images/flac-ui/flac-select-product.png)
 
-Platform UI에 대한 권한 작업 영역이 **[!UICONTROL 개요]** 페이지에 열립니다.
+Experience Platform UI에 대한 권한 작업 영역이 표시되어 **[!UICONTROL 개요]** 페이지에 열립니다.
 
 ## 역할에 레이블 적용 {#label-roles}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="레이블이란 무엇입니까?"
->abstract="레이블을 사용하면 해당 데이터에 적용되는 사용 및 액세스 정책에 따라 데이터 세트 및 필드를 분류할 수 있습니다. Platform은 데이터 거버넌스에 적용할 수 있는 다양한 공통 제한 사항을 다루는 Adobe에서 정의한 여러 <strong>핵심</strong> 데이터 사용 레이블을 제공합니다. 예를 들어 RHD(규제 건강 데이터)와 같은 중요한 <strong>S</strong> 레이블을 사용하면 PHI(개인건강정보)를 참조하는 데이터를 분류할 수 있습니다. 조직의 요구 사항에 맞는 고유한 사용자 정의 레이블을 정의할 수도 있습니다."
+>abstract="레이블을 사용하면 해당 데이터에 적용되는 사용 및 액세스 정책에 따라 데이터 세트 및 필드를 분류할 수 있습니다. Adobe Experience Platform은 데이터 거버넌스에 적용할 수 있는 광범위한 일반적인 제한 사항을 포함하는 여러 Adobe 정의 <strong>core</strong> 데이터 사용 레이블을 제공합니다. 예를 들어 RHD(규제 건강 데이터)와 같은 중요한 <strong>S</strong> 레이블을 사용하면 PHI(개인건강정보)를 참조하는 데이터를 분류할 수 있습니다. 조직의 요구 사항에 맞는 고유한 사용자 정의 레이블을 정의할 수도 있습니다."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="데이터 사용 레이블 개요"
 
-역할은 Platform 인스턴스와 상호 작용하는 사용자 유형을 분류하는 방법이며 액세스 제어 정책을 작성하는 빌딩 블록입니다. 역할에는 지정된 권한 집합이 있으며, 필요한 액세스 범위에 따라 조직 구성원을 하나 이상의 역할에 할당할 수 있습니다.
+역할은 Experience Platform 인스턴스와 상호 작용하는 사용자 유형을 분류하는 방법이며 액세스 제어 정책을 작성하는 빌딩 블록입니다. 역할에는 지정된 권한 집합이 있으며, 필요한 액세스 범위에 따라 조직 구성원을 하나 이상의 역할에 할당할 수 있습니다.
 
 시작하려면 왼쪽 탐색에서 **[!UICONTROL 역할]**&#x200B;을 선택한 다음 **[!UICONTROL ACME 비즈니스 그룹]**&#x200B;을 선택하십시오.
 
@@ -144,7 +144,7 @@ Platform UI에 대한 권한 작업 영역이 **[!UICONTROL 개요]** 페이지�
 
 ## 액세스 제어 정책 활성화 {#policy}
 
-기본 액세스 제어 정책은 레이블을 활용하여 특정 플랫폼 리소스에 액세스할 수 있는 사용자 역할을 정의합니다. 이 예에서는 스키마 필드에 해당 레이블이 있는 역할에 없는 사용자의 경우 모든 샌드박스에서 스키마 필드 및 대상에 대한 액세스가 거부됩니다.
+기본 액세스 제어 정책은 레이블을 활용하여 특정 Experience Platform 리소스에 액세스할 수 있는 사용자 역할을 정의합니다. 이 예에서는 스키마 필드에 해당 레이블이 있는 역할에 없는 사용자의 경우 모든 샌드박스에서 스키마 필드 및 대상에 대한 액세스가 거부됩니다.
 
 액세스 제어 정책을 활성화하려면 왼쪽 탐색에서 [!UICONTROL 권한]을 선택한 다음 **[!UICONTROL 정책]**&#x200B;을 선택하십시오.
 
@@ -192,7 +192,7 @@ Platform UI에 대한 권한 작업 영역이 **[!UICONTROL 개요]** 페이지�
 >title="Edit conditions"
 >abstract="Apply conditional statements to your policy to configure user access to certain resources. Select match all to require users to have roles with the same labels as a resource to be permitted access. Select match any to require users to have a role with just one label matching a label on a resource. Labels can either be defined as core or custom labels, with core labels representing labels created and provided by Adobe and custom labels representing labels that you created for your organization."
 
-Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
+Access control policies leverage labels to define which user roles have access to specific Experience Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
 
 >[!NOTE]
 >
@@ -218,7 +218,7 @@ The table below shows the conditions available when creating a policy:
 | The following being true| When 'Permit access to' is set, access will be permitted if the user meets the selected criteria. |
 | Matches any| The user has a label that matches any label applied to a resource. |
 | Matches all| The user has all labels that matches all labels applied to a resource. |
-| Core label| A core label is an Adobe-defined label that is available in all Platform instances.|
+| Core label| A core label is an Adobe-defined label that is available in all Experience Platform instances.|
 | Custom label| A custom label is a label that has been created by your organization.|
 
 Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Add resource]**.

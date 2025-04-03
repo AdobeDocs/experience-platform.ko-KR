@@ -4,10 +4,10 @@ description: 감사 로그를 통해 Adobe Experience Platform에서 누가 어�
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 32%
+source-wordcount: '1476'
+ht-degree: 27%
 
 ---
 
@@ -16,19 +16,19 @@ ht-degree: 32%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="상위 액션"
->abstract="이 위젯은 선택한 기간 내에 Experience Platform에서 수행된 상위 액션을 보여 줍니다. Platform에서 기록된 작업의 전체 목록을 보려면 왼쪽 탐색에서 **감사**&#x200B;를 선택합니다."
+>abstract="이 위젯은 선택한 기간 내에 Experience Platform에서 수행된 상위 액션을 보여 줍니다. Experience Platform에서 기록된 작업의 전체 목록을 보려면 왼쪽 탐색에서 **감사**&#x200B;를 선택하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="상위 사용자"
->abstract="이 위젯은 선택한 기간 내에 Experience Platform에서 가장 많은 작업을 수행한 사용자를 보여 줍니다. Platform에서 기록된 작업의 전체 목록을 보려면 왼쪽 탐색에서 **감사**&#x200B;를 선택합니다."
+>abstract="이 위젯은 선택한 기간 내에 Experience Platform에서 가장 많은 작업을 수행한 사용자를 보여 줍니다. Experience Platform에서 기록된 작업의 전체 목록을 보려면 왼쪽 탐색에서 **감사**&#x200B;를 선택하십시오."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Platform에서 사용자 활동 모니터링"
->abstract="<h2>설명</h2><p>“감사 로그” 형식으로 다양한 Platform 서비스 및 기능에 대한 사용자 활동을 모니터링할 수 있습니다. 이들 로그는 <b>누가</b> <b>언제</b> <b>어떤</b> 작업을 수행했는지 기록하는 감사 추적을 형성합니다. 이들 로그는 Platform의 문제 해결에 도움이 되며 기업 데이터 관리 정책 및 규제 요구 사항을 효과적으로 준수하는 데 도움이 됩니다.</p>"
+>title="Experience Platform에서 사용자 활동 모니터링"
+>abstract="<h2>설명</h2><p>감사 로그 형식으로 다양한 Experience Platform 서비스 및 기능에 대한 사용자 활동을 모니터링할 수 있습니다. 이들 로그는 <b>누가</b> <b>언제</b> <b>어떤</b> 작업을 수행했는지 기록하는 감사 추적을 형성합니다. 감사 로그는 Experience Platform의 문제를 해결하는 데 도움이 되며 기업이 기업 데이터 관리 정책 및 규제 요구 사항을 효과적으로 준수하는 데 도움이 됩니다.</p>"
 
-Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명성과 가시성을 높이기 위해 &quot;감사 로그&quot; 형식으로 다양한 서비스 및 기능에 대한 사용자 활동을 감사할 수 있습니다. 이러한 로그는 플랫폼의 문제 해결에 도움이 될 수 있는 감사 추적을 형성하며, 기업이 기업 데이터 관리 정책 및 규제 요구 사항을 효과적으로 준수하는 데 도움이 됩니다.
+Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명성과 가시성을 높이기 위해 &quot;감사 로그&quot; 형식으로 다양한 서비스 및 기능에 대한 사용자 활동을 감사할 수 있습니다. 이러한 로그는 Experience Platform의 문제 해결에 도움이 될 수 있는 감사 추적을 형성하며, 기업이 기업 데이터 관리 정책 및 규제 요구 사항을 효과적으로 준수하는 데 도움이 됩니다.
 
 기본적으로 감사 로그는 **누가**&#x200B;이(가) **무엇을** 작업하고 **언제**&#x200B;했는지 알려 줍니다. 로그에 기록된 각 작업에는 작업 유형, 날짜 및 시간, 작업을 수행한 사용자의 이메일 ID 및 작업 유형과 관련된 추가 속성을 나타내는 메타데이터가 포함됩니다.
 
@@ -36,7 +36,7 @@ Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명
 >
 > **역할** 리소스 내의 **사용자 추가** 및 **사용자 제거** 작업에 대한 메타데이터에는 작업을 수행한 사용자의 전자 메일 ID가 포함되지 않습니다. 대신 로그에 시스템 생성 이메일 ID(system@adobe.com)가 표시됩니다.
 
-이 문서에서는 UI 또는 API에서 보고 관리하는 방법을 포함하여 플랫폼의 감사 로그를 다룹니다.
+이 문서에서는 UI 또는 API에서 보고 관리하는 방법을 포함하여 Experience Platform의 감사 로그를 다룹니다.
 
 ## 감사 로그로 캡처된 이벤트 유형 {#category}
 
@@ -74,7 +74,7 @@ Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명
 
 조직에서 이 기능을 활성화하면 활동이 발생할 때 감사 로그가 자동으로 수집됩니다. 로그 수집을 수동으로 활성화할 필요가 없습니다.
 
-감사 로그를 보고 내보내려면 **[!UICONTROL 사용자 활동 로그 보기]** 액세스 제어 권한이 부여되어야 합니다([!UICONTROL 데이터 거버넌스] 범주 아래에 있음). Platform 기능에 대한 개별 권한을 관리하는 방법을 알아보려면 [액세스 제어 설명서](../../../access-control/home.md)를 참조하십시오.
+감사 로그를 보고 내보내려면 **[!UICONTROL 사용자 활동 로그 보기]** 액세스 제어 권한이 부여되어야 합니다([!UICONTROL 데이터 거버넌스] 범주 아래에 있음). Experience Platform 기능에 대한 개별 권한을 관리하는 방법을 알아보려면 [액세스 제어 문서](../../../access-control/home.md)를 참조하십시오.
 
 ## UI에서 감사 로그 관리 {#managing-audit-logs-in-the-ui}
 
@@ -83,7 +83,7 @@ Adobe Experience Platform에서는 시스템에서 수행되는 활동의 투명
 >title="지침"
 >abstract="<ul><li>왼쪽 탐색 영역에서 <b>감사</b>를 선택합니다. 감사 작업 영역에는 기록된 로그 목록이 기본적으로 가장 최근 항목 순으로 정렬되어 표시됩니다.</li>   <li> 참고: 감사 로그는 365일 동안 유지되며 그 후에는 시스템에서 삭제됩니다. 따라서 최대 365일 동안만 돌아갈 수 있습니다. 365일 이상 지난 데이터를 다시 확인해야 하는 경우 내부 정책 요구 사항을 충족하도록 정기적으로 로그를 내보내야 합니다. </li><li>오른쪽 레일에서 세부 정보를 보려면 목록에서 이벤트를 선택하십시오. </li><li>깔때기 아이콘을 선택하여 필터 컨트롤 목록을 표시하면 결과 범위를 좁힐 수 있습니다. 선택한 필터에 관계없이 마지막 1000개의 레코드만 표시됩니다. </li><li>현재 감사 로그 목록을 내보내려면 **로그 다운로드**&#x200B;를 선택합니다.</li><li>이 기능에 대한 자세한 내용은 Experience League의 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=ko">감사 로그 개요</a>를 참조하십시오.</li></ul>"
 
-Platform UI의 **[!UICONTROL 감사]** 작업 영역에서 다양한 Experience Platform 기능에 대한 감사 로그를 볼 수 있습니다. 작업 공간에는 기본적으로 가장 최근에서 가장 최근으로 정렬된 기록된 로그 목록이 표시됩니다.
+Experience Platform UI의 **[!UICONTROL 감사]** 작업 영역에서 다양한 Experience Platform 기능에 대한 감사 로그를 볼 수 있습니다. 작업 공간에는 기본적으로 가장 최근에서 가장 최근으로 정렬된 기록된 로그 목록이 표시됩니다.
 
 ![왼쪽 메뉴에서 감사를 강조 표시하는 감사 대시보드입니다.](../../images/audit-logs/audits.png)
 
@@ -171,7 +171,7 @@ Adobe Admin Console의 활동에 대한 감사 로그를 관리하는 방법에 
 
 ## 다음 단계 및 추가 리소스
 
-이 안내서에서는 Experience Platform에서 감사 로그를 관리하는 방법을 다룹니다. 플랫폼 활동을 모니터링하는 방법에 대한 자세한 내용은 [Observability Insights](../../../observability/home.md) 및 [데이터 수집 모니터링](../../../ingestion/quality/monitor-data-ingestion.md)에 대한 설명서를 참조하십시오.
+이 안내서에서는 Experience Platform에서 감사 로그를 관리하는 방법을 다룹니다. Experience Platform 활동을 모니터링하는 방법에 대한 자세한 내용은 [Observability Insights](../../../observability/home.md) 및 [데이터 수집 모니터링](../../../ingestion/quality/monitor-data-ingestion.md)에 대한 설명서를 참조하십시오.
 
 Experience Platform의 감사 로그에 대한 이해를 강화하려면 다음 비디오를 시청하십시오.
 
