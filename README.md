@@ -1,8 +1,8 @@
 ---
-source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
+source-git-commit: 67adfddf57d3b10bb80688cf0f0a109a704f4fa5
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 95%
+source-wordcount: '351'
+ht-degree: 98%
 
 ---
 # 콘텐츠 기여
@@ -31,27 +31,13 @@ Adobe는 Adobe 커뮤니티와 설명서 팀이 아닌 Adobe 직원들의 내용
 
 Adobe 커뮤니티 멤버가 문서를 만들거나 주요 변경 사항을 제출하려는 경우 GitHub 저장소의 **문제** 탭을 클릭하여 문제를 제출하십시오. 이렇게 제출하면 설명서 팀과의 대화가 시작됩니다. 새 내용을 게시하려면 작가(또는 다른 Adobe 직원)와 협력해야 합니다.
 
-<!--
-If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
--->
-
-### Adobe 직원의 주요 변경 사항 또는 새로운 문서
-
-Adobe Experience Cloud 솔루션에 대한 제품 팀의 테크니컬 라이터, 프로그램 관리자 또는 개발자이고 기술 문서에 기여하거나 기술 문서를 작성하는 것이 본인의 직무인 경우 개인 저장소(`https://git.corp.adobe.com/AdobeDocs`)를 사용해야 합니다. 자세한 내용은 [내부 공동 작업 안내서](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html)를 참조하십시오.
-
-<!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
-
-## Experience Platform 설명서 팀에 문의
-
-위에서 언급한 바와 같이 Adobe 커뮤니티 멤버는 적절한 작가에게 할당될 문제를 제출할 수 있습니다. Adobe 직원인 경우 문제를 제출하거나 Experience Platform 설명서 팀에 직접 문의할 수 있습니다. 특정 Experience Platform 영역의 리드 작성자를 찾으려면 [Adobe Experience Platform 설명서 위키](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+설명서)를 참조하세요.
-
 ## 도구 및 설정
 
 ### GitHub UI
 
 커뮤니티 기여자는 기본 편집에 GitHub UI를 사용하거나 저장소를 포크하여 주요 콘텐츠를 제공할 수 있습니다.
 
-자세한 내용은 [Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)를 참조하십시오.
+자세한 내용은 [Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ko)를 참조하십시오.
 
 ### Markdown
 
